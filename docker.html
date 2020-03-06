@@ -1,0 +1,145 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js">
+<link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+
+</head><body>
+<h1 id="ccss17githubio" data-line="0" class="code-line"><a href="https://ccss17.github.io" data-href="https://ccss17.github.io">ccss17.github.io</a></h1>
+<h1 id="docker-%EB%A9%94%EB%AA%A8" data-line="2" class="code-line">Docker 메모</h1>
+<h2 id="%EC%8B%9C%EC%9E%91" data-line="4" class="code-line">시작</h2>
+<ul>
+<li data-line="6" class="code-line">
+<p data-line="6" class="code-line"><code>ubuntu 18.04</code> 시작</p>
+<pre><code data-line="8" class="code-line language-shell"><div>docker run -it --name gbc ubuntu:18.04 /bin/bash
+</div></code></pre>
+</li>
+<li data-line="12" class="code-line">
+<p data-line="12" class="code-line"><code>ubuntu 18.04</code> 시작(privileged mode)</p>
+<pre><code data-line="14" class="code-line language-shell"><div>docker run -it --privileged --name gbc -w /root ubuntu:18.04 /usr/bin/zsh
+</div></code></pre>
+</li>
+<li data-line="18" class="code-line">
+<p data-line="18" class="code-line"><code>gdb</code> 실습환경 시작(privileged mode)</p>
+<pre><code data-line="20" class="code-line language-shell"><div>docker run -it --privileged --name gbc -w /root ccss17/security-tutorial
+</div></code></pre>
+</li>
+<li data-line="24" class="code-line">
+<p data-line="24" class="code-line"><code>tensorflow</code> 시작</p>
+<pre><code data-line="26" class="code-line language-shell"><div>docker run -it -p 8888:8888 --name tf -v ${HOME}/repo/testrepo/tftest:/tf -u $(id -u):$(id -g) tensorflow/tensorflow:latest
+</div></code></pre>
+</li>
+<li data-line="30" class="code-line">
+<p data-line="30" class="code-line"><code>pytorch notebook</code> 시작</p>
+<pre><code data-line="32" class="code-line language-shell"><div>docker run -d --name torch-notebook -p 8888:8888 -p 6006:6006 -v $PWD:/workspace ccss17/torch-notebook
+</div></code></pre>
+<p data-line="36" class="code-line">또는 윈도우에서 경로지정을 위하여 다음과 같이 실행할 수 있다.</p>
+<pre><code data-line="38" class="code-line language-shell"><div>docker run -d --name torch-notebook -p 8888:8888 -p 6006:6006 -v d:\repo\torch-test:/workspace ccss17/torch-notebook
+</div></code></pre>
+</li>
+</ul>
+<h2 id="%EA%B4%80%EB%A6%AC" data-line="42" class="code-line">관리</h2>
+<ul>
+<li data-line="44" class="code-line">
+<p data-line="44" class="code-line">실행중인 컨테이너 중지</p>
+<pre><code data-line="46" class="code-line language-shell"><div><span class="hljs-meta">#</span><span class="bash"> 그냥 컨테이너 내부 쉘에서 <span class="hljs-built_in">exit</span> 입력 </span>
+exit
+</div></code></pre>
+<p data-line="51" class="code-line">또는 로컬 쉘에서 다음 명령어 입력</p>
+<pre><code data-line="53" class="code-line language-shell"><div>docker stop &lt;container&gt;
+</div></code></pre>
+</li>
+<li data-line="57" class="code-line">
+<p data-line="57" class="code-line">중지된 컨테이너 재시작</p>
+<pre><code data-line="59" class="code-line language-shell"><div>docker start -ai &lt;container&gt;
+</div></code></pre>
+</li>
+<li data-line="63" class="code-line">
+<p data-line="63" class="code-line">변경된 컨테이너로부터 이미지 생성</p>
+<pre><code data-line="65" class="code-line language-shell"><div>docker commit &lt;컨테이너&gt; &lt;새이미지이름&gt;
+</div></code></pre>
+<ul>
+<li data-line="69" class="code-line">중지된 컨테이너로부터 이미지 생성하고 privileged mode 로 시작하기 위해 사용할 수도 있음.</li>
+</ul>
+</li>
+<li data-line="71" class="code-line">
+<p data-line="71" class="code-line"><code>docker exec [OPTIONS] CONTAINER COMMAND [ARG...]</code> : 실행중인 컨테이너에 명령 실행</p>
+<ul>
+<li data-line="73" class="code-line">
+<p data-line="73" class="code-line"><code>-d</code> : 백그라운드로 실행한다.</p>
+</li>
+<li data-line="75" class="code-line">
+<p data-line="75" class="code-line"><code>-it</code> : <code>STDIN</code> 을 유지시키고 <code>pseudo-TTY</code> 를 허가하여 키보드 상호작용이 필요할 때 사용한다.</p>
+</li>
+<li data-line="77" class="code-line">
+<p data-line="77" class="code-line"><code>--privileged</code> : 상승된 권한으로 실행한다. <code>ASLR</code> 을 꺼야하는 상황 등에서 유용하다.</p>
+</li>
+<li data-line="79" class="code-line">
+<p data-line="79" class="code-line"><code>-w</code> : 명령어가 실행될 위치를 지정한다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="%EC%83%81%ED%83%9C" data-line="83" class="code-line">상태</h2>
+<ul>
+<li data-line="85" class="code-line">
+<p data-line="85" class="code-line">이미지 상태 보기</p>
+<pre><code data-line="87" class="code-line language-shell"><div>docker images 
+</div></code></pre>
+</li>
+<li data-line="91" class="code-line">
+<p data-line="91" class="code-line">실행 중인 컨테이너 상태 보기</p>
+<pre><code data-line="93" class="code-line language-shell"><div>docker ps 
+</div></code></pre>
+</li>
+<li data-line="97" class="code-line">
+<p data-line="97" class="code-line">중지된 컨테이너를 포함한 모든 컨테이너 상태 보기</p>
+<pre><code data-line="99" class="code-line language-shell"><div>docker ps -a
+</div></code></pre>
+</li>
+</ul>
+<h2 id="%EC%82%AD%EC%A0%9C" data-line="103" class="code-line">삭제</h2>
+<ul>
+<li data-line="105" class="code-line">
+<p data-line="105" class="code-line">컨테이너 삭제</p>
+<pre><code data-line="107" class="code-line language-shell"><div>docker rm container
+</div></code></pre>
+</li>
+<li data-line="111" class="code-line">
+<p data-line="111" class="code-line">중지된 컨테이너 모두 삭제</p>
+<pre><code data-line="113" class="code-line language-shell"><div>docker rm -v $(docker ps -a -q -f status=exited)
+</div></code></pre>
+</li>
+</ul>
+<h2 id="%EB%B9%8C%EB%93%9C" data-line="117" class="code-line">빌드</h2>
+<ul>
+<li data-line="119" class="code-line">
+<p data-line="119" class="code-line">이미지 생성</p>
+<pre><code data-line="121" class="code-line language-shell"><div>docker build -t username/image .
+</div></code></pre>
+<pre><code data-line="125" class="code-line language-shell"><div>docker build -t app .
+</div></code></pre>
+</li>
+<li data-line="129" class="code-line">
+<p data-line="129" class="code-line">이미지 이름 변경</p>
+<ul>
+<li data-line="131" class="code-line">
+<p data-line="131" class="code-line"><code>app</code> 에서 <code>username/image:1</code> 으로 (<code>버전 == 1</code>)</p>
+<pre><code data-line="133" class="code-line language-shell"><div>docker tag app username/image:1
+</div></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="%EA%B3%B5%EC%9C%A0" data-line="137" class="code-line">공유</h2>
+<ul>
+<li data-line="139" class="code-line">
+<p data-line="139" class="code-line">이미지 푸쉬</p>
+<pre><code data-line="141" class="code-line language-shell"><div>docker login
+docker push username/image
+</div></code></pre>
+</li>
+</ul>
+
+</body></html>
