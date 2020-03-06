@@ -15,6 +15,8 @@
 | \Gamma  | \gamma  |\Zeta |\zeta |\Eta|\Iota|
 | $\Phi$| $\varphi$ | $\Psi$ |$\psi$|$\Omega$|$\omega$|
 | \Phi  | \varphi  |\Psi |\psi |\Omega|\omega|
+| $\varepsilon$|
+| \varepsilon  |
 
 ### Calculus
 
