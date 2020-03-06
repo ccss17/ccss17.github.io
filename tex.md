@@ -33,6 +33,8 @@
 |  \supseteq  |\in |\ni |\notin|\ne  | \le  |
 |  $\ge$ | $\cdot$ |$\cdots$ |$\dots$ |$\vdots$ |$\ddots$ |
 | \ge |\cdot |\cdots |\dots |\vdots |\ddots |
+|  $\neq$ |
+| \neq |
 
 ### Binary Operators
 
