@@ -1,10 +1,16 @@
-# 여러가지 메모 (게시용X)
+# 여러가지 메모 
 
-# My Tex Math Cheat Sheet
+게시용으로 작성되지 않음. 
+
+공부한 거를 안 까먹으려고 메모한 것들임.
+
+## Tex 수학기호 메모
 
 - https://ccss17.github.io/tex.html
 
-# 수학 메모 (Math Memo)
+---
+
+## 수학 메모
 
 - [수학 정의들과 간단한 예시 메모](https://ccss17.github.io/math.html)
 
@@ -40,7 +46,7 @@
 
 - [미적분 메모](https://ccss17.github.io/calculus.html)
 
-### 선형대수학 메모 (Linear Algebra Memo)
+### 선형대수학 메모
 
 - [1장 : 선형대수학에서의 선형방정식](https://ccss17.github.io/la.html)
 
@@ -48,26 +54,28 @@
 
 - [3장 : 행렬식](https://ccss17.github.io/la3.html)
 
-# 인공지능 메모 (AI Study Memo)
+---
+
+## 인공지능 메모 
 
 - https://ccss17.github.io/ai.html
 
-# Makefile 메모 (Makefile Memo)
+## Makefile 메모 
 
 - https://ccss17.github.io/makefile.html
 
-# git 메모 (git Memo)
+## git 메모 
 
 - https://ccss17.github.io/git.html
 
-# docker 메모 (docker Memo)
+## docker 메모 
 
 - https://ccss17.github.io/docker.html
 
-# 정신지도규칙 메모 (데카르트)
+## 정신지도규칙 메모 (데카르트)
 
 - https://ccss17.github.io/descartes.html
 
-# 철학 메모 (데카르트)
+## 철학 메모 (데카르트)
 
 - https://ccss17.github.io/philosophy.html
