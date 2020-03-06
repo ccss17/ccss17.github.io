@@ -1,19 +1,4 @@
----
-layout: home
----
 # 여러가지 메모 (게시용X)
-
-{% katex %}
-c = \pm\sqrt{a^2 + b^2}
-{% endkatex %}
-
-{% katex display %}
-c = \pm\sqrt{a^2 + b^2}
-{% endkatex %}
-
-{% katexmm %}
-This is a mixed environment where you can have normal text and $c = \pm\sqrt{a^2 + b^2}$ fenced math. \$!
-{% endkatexmm %}
 
 # My Tex Math Cheat Sheet
 
