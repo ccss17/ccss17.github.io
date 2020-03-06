@@ -1,14 +1,26 @@
 <!doctype html><html><head><meta charset="utf-8">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
 <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+<link rel="stylesheet" href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
+<style>
+  body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+  }
+</style>
+
 
 </head><body>
-<h1 id="ccss17githubio" data-line="0" class="code-line"><a href="https://ccss17.github.io" data-href="https://ccss17.github.io">ccss17.github.io</a></h1>
-<h1 id="makefile-memo" data-line="2" class="code-line">Makefile Memo</h1>
-<h2 id="%ED%8A%9C%ED%86%A0%EB%A6%AC%EC%96%BC" data-line="4" class="code-line">튜토리얼</h2>
+<article class="markdown-body">
+<h1 id="ccss17githubio-1" data-line="0" class="code-line"><a href="https://ccss17.github.io" data-href="https://ccss17.github.io">ccss17.github.io</a></h1>
+<h1 id="makefile-memo-1" data-line="2" class="code-line">Makefile Memo</h1>
+<h2 id="ed8a9ced86a0eba6acec96bc-1" data-line="4" class="code-line">튜토리얼</h2>
 <ul>
 <li data-line="6" class="code-line">
 <p data-line="6" class="code-line"><a href="https://makefiletutorial.com/" data-href="https://makefiletutorial.com/">https://makefiletutorial.com/</a> : Command line arguments and override (Section 6.7)</p>
@@ -17,7 +29,7 @@
 <p data-line="8" class="code-line"><a href="http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/" data-href="http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/">http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/</a></p>
 </li>
 </ul>
-<h2 id="%EC%9D%BC%EB%B0%98-%EA%B7%9C%EC%B9%99" data-line="10" class="code-line">일반 규칙</h2>
+<h2 id="ec9dbcebb098-eab79cecb999-1" data-line="10" class="code-line">일반 규칙</h2>
 <ul>
 <li data-line="12" class="code-line">
 <p data-line="12" class="code-line"><code>Makefile</code> 은 수 개의 규칙으로 구성되는데 규칙의 일반적 문법은 다음과 같다.</p>
@@ -76,13 +88,13 @@ clean:
 </ul>
 </li>
 </ul>
-<h2 id="%EC%B6%95%EC%95%BD%EA%B7%9C%EC%B9%99" data-line="61" class="code-line">축약규칙</h2>
+<h2 id="ecb695ec95bdeab79cecb999-1" data-line="61" class="code-line">축약규칙</h2>
 <ul>
 <li data-line="63" class="code-line">위 예제의 <code>Makefile</code> 은 다음과 같이 축약할 수 있다.</li>
 </ul>
 <pre><code data-line="65" class="code-line language-make"><code><div>some_file:; touch some_file
 </div></code></code></pre>
-<h2 id="phony" data-line="69" class="code-line">PHONY</h2>
+<h2 id="phony-1" data-line="69" class="code-line">PHONY</h2>
 <ul>
 <li data-line="71" class="code-line">
 <p data-line="71" class="code-line"><code>.PHONY</code> : <code>targets</code> 이 실제 파일 이름이 아니라는 것을 명시한다.</p>
@@ -108,7 +120,7 @@ clean:; rm -f one
 </ul>
 </li>
 </ul>
-<h2 id="%EB%B3%80%EC%88%98" data-line="94" class="code-line">변수</h2>
+<h2 id="ebb380ec8898-1" data-line="94" class="code-line">변수</h2>
 <ul>
 <li data-line="96" class="code-line">
 <p data-line="96" class="code-line">문자열을 변수에 저장하고 <code>${}</code> 나 <code>$()</code> 로 사용할 수 있다.</p>
@@ -132,7 +144,7 @@ clean:
 </ul>
 </li>
 </ul>
-<h3 id="%EB%B3%80%EC%88%98-%ED%95%A0%EB%8B%B9" data-line="115" class="code-line">변수 할당</h3>
+<h3 id="ebb380ec8898-ed95a0eb8bb9-1" data-line="115" class="code-line">변수 할당</h3>
 <ul>
 <li data-line="117" class="code-line">
 <p data-line="117" class="code-line"><code>var = value</code> : 지연된 할당으로써 변수가 사용될 때 그 값들이 재귀적으로 할당된다.</p>
@@ -297,7 +309,7 @@ all: ; echo $(bar)
 </ul>
 </li>
 </ul>
-<h2 id="%ED%95%A8%EC%B6%95-%EA%B7%9C%EC%B9%99" data-line="284" class="code-line">함축 규칙</h2>
+<h2 id="ed95a8ecb695-eab79cecb999-1" data-line="284" class="code-line">함축 규칙</h2>
 <ul>
 <li data-line="286" class="code-line">
 <p data-line="286" class="code-line"><code>Makefile</code> 은 다음과 같이 함축 규칙을 지원한다.</p>
@@ -316,7 +328,7 @@ clean:
 </div></code></code></pre>
 </li>
 </ul>
-<h2 id="%ED%8A%B9%EC%88%98-%EB%AC%B8%EC%9E%90" data-line="303" class="code-line">특수 문자</h2>
+<h2 id="ed8ab9ec8898-ebacb8ec9e90-1" data-line="303" class="code-line">특수 문자</h2>
 <ul>
 <li data-line="305" class="code-line">
 <p data-line="305" class="code-line">와일드카드 <code>*</code> : 와일드카드 <code>*</code> 는 <code>targets</code>, <code>prerequisites</code>, <code>commands</code> 에서 사용 가능하다.</p>
@@ -365,7 +377,7 @@ clean:
 <p data-line="345" class="code-line"><code>$^</code> 는 규칙의 <code>:</code> 오른쪽 부분이다.</p>
 </li>
 </ul>
-<h2 id="%EB%8B%A4%EC%A4%91-%ED%83%80%EA%B2%9F" data-line="347" class="code-line">다중 타겟</h2>
+<h2 id="eb8ba4eca491-ed8380eab29f-1" data-line="347" class="code-line">다중 타겟</h2>
 <ul>
 <li data-line="349" class="code-line">
 <p data-line="349" class="code-line"><code>targets</code> 에 여러 파일이 선언되어 사용할 수도 있다.</p>
@@ -401,7 +413,7 @@ f1.o:
 </ul>
 </li>
 </ul>
-<h2 id="vpath" data-line="383" class="code-line">vpath</h2>
+<h2 id="vpath-1" data-line="383" class="code-line">vpath</h2>
 <ul>
 <li data-line="385" class="code-line">
 <p data-line="385" class="code-line"><code>vpath</code> : <code>prerequisites</code> 를 찾는 경로를 현재 디렉토리와 더불어서 추가한다.</p>
@@ -436,7 +448,7 @@ blah.h:
 </ul>
 </li>
 </ul>
-<h2 id="static-pattern-rules" data-line="412" class="code-line">Static Pattern Rules</h2>
+<h2 id="static-pattern-rules-1" data-line="412" class="code-line">Static Pattern Rules</h2>
 <ul>
 <li data-line="414" class="code-line">
 <p data-line="414" class="code-line">static pattern : 패턴에 맞는 <code>targets</code> 을 자동으로 <code>prerequisites</code> 으로 변환해주는 규칙이다.</p>
@@ -461,7 +473,7 @@ bar.o: bar.c
 </ul>
 </li>
 </ul>
-<h2 id="static-pattern-rules-and-filter" data-line="436" class="code-line">Static Pattern Rules and Filter</h2>
+<h2 id="static-pattern-rules-and-filter-1" data-line="436" class="code-line">Static Pattern Rules and Filter</h2>
 <ul>
 <li data-line="438" class="code-line">
 <p data-line="438" class="code-line">static pattern with Filter : static pattern 의 <code>targets</code> 을 패턴으로 필터링해서 매칭되지 않는 <code>target</code> 은 규칙에 적용시키지 않는 규칙이다.</p>
@@ -492,7 +504,7 @@ $(filter %.o $(objects)): %.o: %.c
 </ul>
 </li>
 </ul>
-<h2 id="double-colon" data-line="471" class="code-line">Double-Colon</h2>
+<h2 id="double-colon-1" data-line="471" class="code-line">Double-Colon</h2>
 <ul>
 <li data-line="473" class="code-line">
 <p data-line="473" class="code-line">Double-Colon : (이 규칙은 흔히 쓰이지 않음) Double-Colon 으로 시작되는 규칙이 여러번 정의되어도 그것들을 모두 실행하게 해준다.</p>
@@ -510,8 +522,8 @@ blah::
 </ul>
 </li>
 </ul>
-<h1 id="%EB%AA%85%EB%A0%B9-%EC%8B%A4%ED%96%89-%EA%B4%80%EB%A0%A8" data-line="487" class="code-line">명령 실행 관련</h1>
-<h2 id="command-echoingsilencing" data-line="489" class="code-line">Command Echoing/Silencing</h2>
+<h1 id="ebaa85eba0b9-ec8ba4ed9689-eab480eba0a8-1" data-line="487" class="code-line">명령 실행 관련</h1>
+<h2 id="command-echoingsilencing-1" data-line="489" class="code-line">Command Echoing/Silencing</h2>
 <ul>
 <li data-line="491" class="code-line">
 <p data-line="491" class="code-line">Command Echoing/Silencing : 명령어 앞에 <code>@</code> 를 붙히면 명령어가 출력되지 않는다.</p>
@@ -535,7 +547,7 @@ hello again
 </ul>
 </li>
 </ul>
-<h2 id="command-execution" data-line="512" class="code-line">Command Execution</h2>
+<h2 id="command-execution-1" data-line="512" class="code-line">Command Execution</h2>
 <ul>
 <li data-line="514" class="code-line">
 <p data-line="514" class="code-line">Command Execution : 각각의 명령어는 항상 새로운 쉘에서 실행되는 것과 같다.</p>
@@ -567,7 +579,7 @@ echo `pwd`
 </ul>
 </li>
 </ul>
-<h2 id="default-shell" data-line="543" class="code-line">Default Shell</h2>
+<h2 id="default-shell-1" data-line="543" class="code-line">Default Shell</h2>
 <ul>
 <li data-line="545" class="code-line">
 <p data-line="545" class="code-line">Default Shell : <code>make</code> 가 명령어를 실행하는 기본 쉘은 <code>/bin/sh</code> 인데 <code>SHELL</code> 변수를 바꿈으로써 기본 쉘을 변경할 수 있다.</p>
@@ -586,7 +598,7 @@ all:
 </ul>
 </li>
 </ul>
-<h2 id="deleteonerror" data-line="562" class="code-line">DELETE_ON_ERROR</h2>
+<h2 id="deleteonerror-1" data-line="562" class="code-line">DELETE_ON_ERROR</h2>
 <ul>
 <li data-line="564" class="code-line">
 <p data-line="564" class="code-line"><code>DELETE_ON_ERROR</code> : <code>make</code> 는 규칙이 <code>nonzero</code> 종료 코드를 반환하면 전체 실행을 중단하는데, <code>.DELETE_ON_ERROR</code> 가 설정되면 이때 <code>nonzero</code> 반환값을 반환한 규칙의 <code>target</code> 파일을 삭제한다.</p>
@@ -614,7 +626,7 @@ one:
 </ul>
 </li>
 </ul>
-<h2 id="%EC%97%90%EB%9F%AC-%EC%B2%98%EB%A6%AC" data-line="589" class="code-line">에러 처리</h2>
+<h2 id="ec9790eb9fac-ecb298eba6ac-1" data-line="589" class="code-line">에러 처리</h2>
 <ul>
 <li data-line="591" class="code-line">
 <p data-line="591" class="code-line"><code>-k</code> 옵션 : <code>make</code> 를 이 옵션으로 실행하면 에러가 발생해도 실행을 중단하지 않고 끝까지 실행한다.</p>
@@ -654,7 +666,7 @@ one:
 </ul>
 </li>
 </ul>
-<h1 id="recursive-make" data-line="625" class="code-line">Recursive make</h1>
+<h1 id="recursive-make-1" data-line="625" class="code-line">Recursive make</h1>
 <ul>
 <li data-line="627" class="code-line">
 <p data-line="627" class="code-line"><code>make -C &lt;directory&gt;</code> : <code>&lt;directory&gt;</code> 를 <code>make</code> 한다.</p>
@@ -713,4 +725,5 @@ all:
 </li>
 </ul>
 
+</article>
 </body></html>

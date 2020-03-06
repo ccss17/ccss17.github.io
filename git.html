@@ -1,17 +1,29 @@
 <!doctype html><html><head><meta charset="utf-8">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
 <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+<link rel="stylesheet" href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
+<style>
+  body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+  }
+</style>
+
 
 </head><body>
-<h1 id="ccss17githubio" data-line="0" class="code-line"><a href="https://ccss17.github.io" data-href="https://ccss17.github.io">ccss17.github.io</a></h1>
-<h1 id="git-%EB%A9%94%EB%AA%A8" data-line="2" class="code-line">git 메모</h1>
+<article class="markdown-body">
+<h1 id="ccss17githubio-1" data-line="0" class="code-line"><a href="https://ccss17.github.io" data-href="https://ccss17.github.io">ccss17.github.io</a></h1>
+<h1 id="git-eba994ebaaa8-1" data-line="2" class="code-line">git 메모</h1>
 <p data-line="4" class="code-line"><a href="https://git-scm.com/book/en/v2" data-href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></p>
-<h1 id="version-control" data-line="6" class="code-line">Version Control</h1>
+<h1 id="version-control-1" data-line="6" class="code-line">Version Control</h1>
 <p data-line="8" class="code-line">VSC(Version Control System) 이란 파일의 변화를 추적하여 기록하는 프로그램이다. 이것을 사용하면 몇 가지 장점이 있는데 파일들을 버전으로 관리하여 복원할 때 편리하고 버전들을 쉽게 비교할 수 있다는 것이다.</p>
-<h1 id="git" data-line="10" class="code-line">git</h1>
+<h1 id="git-1" data-line="10" class="code-line">git</h1>
 <ul>
 <li data-line="12" class="code-line">
 <p data-line="12" class="code-line">여러 VSC 프로그램이 있지만 git 이 그것들과 다른 점이 있다.</p>
@@ -25,7 +37,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="git-%EC%9D%B4-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EC%84%B8-%EA%B0%80%EC%A7%80-%EC%83%81%ED%83%9C" data-line="18" class="code-line">git 이 파일을 관리하는 세 가지 상태</h2>
+<h2 id="git-ec9db4-ed8c8cec9dbcec9d84-eab480eba6aced9598eb8a94-ec84b8-eab080eca780-ec8381ed839c-1" data-line="18" class="code-line">git 이 파일을 관리하는 세 가지 상태</h2>
 <ul>
 <li data-line="20" class="code-line">
 <p data-line="20" class="code-line">git 은 modified, staged, committed 라는 3 가지 상태로 파일을 관리한다.</p>
@@ -42,7 +54,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="git-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%9D%98-%EC%84%B8-%EA%B0%80%EC%A7%80-%EC%98%81%EC%97%AD" data-line="28" class="code-line">git 프로젝트의 세 가지 영역</h2>
+<h2 id="git-ed9484eba19ceca09ded8ab8ec9d98-ec84b8-eab080eca780-ec9881ec97ad-1" data-line="28" class="code-line">git 프로젝트의 세 가지 영역</h2>
 <ul>
 <li data-line="30" class="code-line">이 세 가지 상태는 프로젝트를 working tree, staging area, git database 라는 세 가지 영역으로 나눈다.</li>
 </ul>
@@ -64,7 +76,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="git-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B8%B0%EB%B3%B8-%EC%9E%91%EC%97%85-%ED%9D%90%EB%A6%84" data-line="44" class="code-line">git 프로젝트 기본 작업 흐름</h2>
+<h2 id="git-ed9484eba19ceca09ded8ab8-eab8b0ebb3b8-ec9e91ec9785-ed9d90eba684-1" data-line="44" class="code-line">git 프로젝트 기본 작업 흐름</h2>
 <ol>
 <li data-line="46" class="code-line">
 <p data-line="46" class="code-line">working tree 의 파일을 수정한다.</p>
@@ -76,8 +88,8 @@
 <p data-line="50" class="code-line">커밋하여 git database 에 스냅샷으로 남긴다. 또 하나의 버전을 생선한 것이다.</p>
 </li>
 </ol>
-<h1 id="git-%EC%82%AC%EC%9A%A9%EB%B2%95" data-line="52" class="code-line">git 사용법</h1>
-<h2 id="%EC%84%A4%EC%B9%98-%ED%9B%84-%EC%B4%88%EA%B8%B0-%EC%84%A4%EC%A0%95" data-line="54" class="code-line">설치 후 초기 설정</h2>
+<h1 id="git-ec82acec9aa9ebb295-1" data-line="52" class="code-line">git 사용법</h1>
+<h2 id="ec84a4ecb998-ed9b84-ecb488eab8b0-ec84a4eca095-1" data-line="54" class="code-line">설치 후 초기 설정</h2>
 <p data-line="56" class="code-line">git 을 설치한 후 가장 먼저 <code>user.name</code> 과 <code>user.email</code> 을 설정해주어야 한다. 커밋할 때 매번 이 정보가 사용되어야 하기 때문이다.</p>
 <pre><code data-line="58" class="code-line language-shell"><div>git config --global user.name "NAME"
 git config --global user.email "EMAIL"
@@ -86,8 +98,8 @@ git config --global user.email "EMAIL"
 <li data-line="63" class="code-line"><code>git config --list</code> : 설정들을 확인한다.</li>
 </ul>
 <hr>
-<h1 id="%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-%EA%B4%80%EB%A6%AC" data-line="67" class="code-line">레포지토리 관리</h1>
-<h3 id="%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-%EC%83%9D%EC%84%B1" data-line="69" class="code-line">레포지토리 생성</h3>
+<h1 id="eba088ed8faceca780ed86a0eba6ac-eab480eba6ac-1" data-line="67" class="code-line">레포지토리 관리</h1>
+<h3 id="eba088ed8faceca780ed86a0eba6ac-ec839dec84b1-1" data-line="69" class="code-line">레포지토리 생성</h3>
 <ul>
 <li data-line="71" class="code-line">
 <p data-line="71" class="code-line"><code>git init</code> : 레포지토리를 <code>git</code> 프로젝트로 초기화한다.</p>
@@ -101,7 +113,7 @@ git init
 </ul>
 </li>
 </ul>
-<h3 id="%ED%8C%8C%EC%9D%BC-staging-%ED%95%98%EA%B8%B0" data-line="80" class="code-line">파일 staging 하기</h3>
+<h3 id="ed8c8cec9dbc-staging-ed9598eab8b0-1" data-line="80" class="code-line">파일 staging 하기</h3>
 <ul>
 <li data-line="82" class="code-line">
 <p data-line="82" class="code-line"><code>git add &lt;file&gt;</code> : 파일을 git 이 추적하도록 한다.</p>
@@ -118,7 +130,7 @@ git add *.c
 </ul>
 </li>
 </ul>
-<h3 id="%EC%BB%A4%EB%B0%8B-%ED%95%98%EA%B8%B0" data-line="93" class="code-line">커밋 하기</h3>
+<h3 id="ecbba4ebb08b-ed9598eab8b0-1" data-line="93" class="code-line">커밋 하기</h3>
 <ul>
 <li data-line="95" class="code-line">
 <p data-line="95" class="code-line"><code>git commit -m 'init'</code> : 커밋을 하여 staging 된 파일들의 스냅샷을 찍고 데이터베이스에 하나의 버전으로 저장한다.</p>
@@ -127,7 +139,7 @@ git add *.c
 <p data-line="97" class="code-line"><code>git commit -a -m 'init'</code> : <code>-a</code> 옵션에 따라 <code>git</code> 이 스테이징 과정을 건너뛰고 모든 파일을 커밋한다.</p>
 </li>
 </ul>
-<h3 id="%EC%B6%94%EC%A0%81-%EA%B8%88%EC%A7%80%ED%95%98%EA%B8%B0" data-line="99" class="code-line">추적 금지하기</h3>
+<h3 id="ecb694eca081-eab888eca780ed9598eab8b0-1" data-line="99" class="code-line">추적 금지하기</h3>
 <ul>
 <li data-line="101" class="code-line">
 <p data-line="101" class="code-line"><code>.gitignore</code> : 이 파일에 파일 이름을 넣으면 <code>git</code> 이 변경사항을 더 이상 추적하지 않는다.</p>
@@ -149,7 +161,7 @@ doc/**/*.pdf
 </div></code></pre>
 </li>
 </ul>
-<h2 id="%ED%8C%8C%EC%9D%BC-%EC%82%AD%EC%A0%9C" data-line="120" class="code-line">파일 삭제</h2>
+<h2 id="ed8c8cec9dbc-ec82adeca09c-1" data-line="120" class="code-line">파일 삭제</h2>
 <ul>
 <li data-line="122" class="code-line">
 <p data-line="122" class="code-line"><code>git rm &lt;file&gt;</code> : 파일을 삭제하고 파일의 삭제를 스테이징한다.</p>
@@ -165,8 +177,8 @@ doc/**/*.pdf
 </li>
 </ul>
 <hr>
-<h1 id="%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-%EB%B6%84%EC%84%9D" data-line="132" class="code-line">레포지토리 분석</h1>
-<h3 id="%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-%EC%83%81%ED%83%9C-%EB%B3%B4%EA%B8%B0" data-line="134" class="code-line">레포지토리 상태 보기</h3>
+<h1 id="eba088ed8faceca780ed86a0eba6ac-ebb684ec849d-1" data-line="132" class="code-line">레포지토리 분석</h1>
+<h3 id="eba088ed8faceca780ed86a0eba6ac-ec8381ed839c-ebb3b4eab8b0-1" data-line="134" class="code-line">레포지토리 상태 보기</h3>
 <ul>
 <li data-line="136" class="code-line">
 <p data-line="136" class="code-line"><code>git status</code> : 파일들이 추적되고 있는지 추적되고 있지 않은지, 또는 커밋이 된 상태인지를 볼 수 있다.</p>
@@ -175,7 +187,7 @@ doc/**/*.pdf
 <p data-line="138" class="code-line"><code>git status -s</code> : 상태를 간단히 출력한다.</p>
 </li>
 </ul>
-<h2 id="%EB%B3%80%EA%B2%BD-%EC%82%AC%ED%95%AD-%EB%B9%84%EA%B5%90%ED%95%98%EA%B8%B0" data-line="140" class="code-line">변경 사항 비교하기</h2>
+<h2 id="ebb380eab2bd-ec82aced95ad-ebb984eab590ed9598eab8b0-1" data-line="140" class="code-line">변경 사항 비교하기</h2>
 <ul>
 <li data-line="142" class="code-line">
 <p data-line="142" class="code-line"><code>git diff</code> : 아직 스테이징 되지 않은 파일의 변경사항을 마지막 커밋과 비교하여 출력한다.</p>
@@ -187,7 +199,7 @@ doc/**/*.pdf
 <p data-line="146" class="code-line"><code>git diff --cached</code> : <code>git diff --staged</code> 와 동일하다.</p>
 </li>
 </ul>
-<h2 id="%EC%BB%A4%EB%B0%8B-%EA%B8%B0%EB%A1%9D-%EB%B3%B4%EA%B8%B0" data-line="148" class="code-line">커밋 기록 보기</h2>
+<h2 id="ecbba4ebb08b-eab8b0eba19d-ebb3b4eab8b0-1" data-line="148" class="code-line">커밋 기록 보기</h2>
 <ul>
 <li data-line="150" class="code-line">
 <p data-line="150" class="code-line"><code>git log</code> : 커멋 기록을 출력한다.</p>
@@ -229,8 +241,8 @@ doc/**/*.pdf
 </li>
 </ul>
 <hr>
-<h1 id="%EC%9B%90%EA%B2%A9-%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC" data-line="176" class="code-line">원격 레포지토리</h1>
-<h3 id="%EC%9B%90%EA%B2%A9-%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0" data-line="178" class="code-line">원격 레포지토리 가져오기</h3>
+<h1 id="ec9b90eab2a9-eba088ed8faceca780ed86a0eba6ac-1" data-line="176" class="code-line">원격 레포지토리</h1>
+<h3 id="ec9b90eab2a9-eba088ed8faceca780ed86a0eba6ac-eab080eca0b8ec98a4eab8b0-1" data-line="178" class="code-line">원격 레포지토리 가져오기</h3>
 <ul>
 <li data-line="180" class="code-line">
 <p data-line="180" class="code-line"><code>git clone &lt;URL&gt;</code> : 원격 레포지토리를 가져오기 위하여 다음 명령어를 입력한다.</p>
@@ -246,7 +258,7 @@ doc/**/*.pdf
 </ul>
 </li>
 </ul>
-<h3 id="%EC%9B%90%EA%B2%A9-%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EA%B4%80%EB%A6%AC" data-line="190" class="code-line">원격 레포지토리 리스트 관리</h3>
+<h3 id="ec9b90eab2a9-eba088ed8faceca780ed86a0eba6ac-eba6acec8aa4ed8ab8-eab480eba6ac-1" data-line="190" class="code-line">원격 레포지토리 리스트 관리</h3>
 <ul>
 <li data-line="192" class="code-line">
 <p data-line="192" class="code-line"><code>git remote -v</code> : 원격 레포지토리들을 본다.</p>
@@ -298,7 +310,7 @@ origin    git@github.com:mojombo/grit.git (push)
 </ul>
 </li>
 </ul>
-<h3 id="%EC%9B%90%EA%B2%A9-%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC%EB%A1%9C%EB%B6%80%ED%84%B0-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%98%EA%B8%B0" data-line="228" class="code-line">원격 레포지토리로부터 업데이트하기</h3>
+<h3 id="ec9b90eab2a9-eba088ed8faceca780ed86a0eba6aceba19cebb680ed84b0-ec9785eb8db0ec9db4ed8ab8ed9598eab8b0-1" data-line="228" class="code-line">원격 레포지토리로부터 업데이트하기</h3>
 <ul>
 <li data-line="230" class="code-line">
 <p data-line="230" class="code-line"><code>git fetch &lt;remote&gt;</code> : 원격 레포지토리의 변경사항을 가져온다.</p>
@@ -318,7 +330,7 @@ origin    git@github.com:mojombo/grit.git (push)
 </ul>
 </li>
 </ul>
-<h3 id="%EC%9B%90%EA%B2%A9-%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC%EB%A5%BC-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8%ED%95%98%EA%B8%B0" data-line="240" class="code-line">원격 레포지토리를 업데이트하기</h3>
+<h3 id="ec9b90eab2a9-eba088ed8faceca780ed86a0eba6aceba5bc-ec9785eb8db0ec9db4ed8ab8ed9598eab8b0-1" data-line="240" class="code-line">원격 레포지토리를 업데이트하기</h3>
 <ul>
 <li data-line="242" class="code-line">
 <p data-line="242" class="code-line"><code>git push &lt;remote&gt; &lt;branch&gt;</code> : 원격 레포지토리로 변경사항을 업데이트한다.</p>
@@ -333,9 +345,9 @@ origin    git@github.com:mojombo/grit.git (push)
 </li>
 </ul>
 <hr>
-<h1 id="%EB%B3%B5%EC%9B%90%ED%95%98%EA%B8%B0" data-line="250" class="code-line">복원하기</h1>
+<h1 id="ebb3b5ec9b90ed9598eab8b0-1" data-line="250" class="code-line">복원하기</h1>
 <p data-line="252" class="code-line"><strong>이 명령어들은 <code>git</code> 이 재복원을 지원하지 않는 몇 안되는 기능들이니 아주 조심히 사용해야 한다. 더 이상의 재복원은 없다.</strong></p>
-<h3 id="%EB%A7%88%EC%A7%80%EB%A7%89-%EC%BB%A4%EB%B0%8B-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0" data-line="254" class="code-line">마지막 커밋 수정하기</h3>
+<h3 id="eba788eca780eba789-ecbba4ebb08b-ec8898eca095ed9598eab8b0-1" data-line="254" class="code-line">마지막 커밋 수정하기</h3>
 <ul>
 <li data-line="256" class="code-line">
 <p data-line="256" class="code-line"><code>git commit --amend</code> : 스테이징된 파일을 마지막 커밋에 포함시킨다.</p>
@@ -344,7 +356,7 @@ origin    git@github.com:mojombo/grit.git (push)
 </ul>
 </li>
 </ul>
-<h3 id="%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%A7%95%EB%90%9C-%ED%8C%8C%EC%9D%BC%EC%9D%84-%EB%82%B4%EB%A6%AC%EA%B8%B0" data-line="260" class="code-line">스테이징된 파일을 내리기</h3>
+<h3 id="ec8aa4ed858cec9db4eca795eb909c-ed8c8cec9dbcec9d84-eb82b4eba6aceab8b0-1" data-line="260" class="code-line">스테이징된 파일을 내리기</h3>
 <ul>
 <li data-line="262" class="code-line">
 <p data-line="262" class="code-line"><code>git reset HEAD &lt;file&gt;</code> : 스테이징된 파일을 언스테이징한다.</p>
@@ -353,7 +365,7 @@ origin    git@github.com:mojombo/grit.git (push)
 </ul>
 </li>
 </ul>
-<h3 id="%ED%8C%8C%EC%9D%BC-%EB%B3%B5%EC%9B%90%ED%95%98%EA%B8%B0" data-line="266" class="code-line">파일 복원하기</h3>
+<h3 id="ed8c8cec9dbc-ebb3b5ec9b90ed9598eab8b0-1" data-line="266" class="code-line">파일 복원하기</h3>
 <ul>
 <li data-line="268" class="code-line">
 <p data-line="268" class="code-line"><code>git restore &lt;file&gt;</code> : 스테이징되지 않은 변경된 파일을 마지막 커밋 버전으로 복원한다.</p>
@@ -368,7 +380,7 @@ origin    git@github.com:mojombo/grit.git (push)
 </li>
 </ul>
 <hr>
-<h1 id="tagging" data-line="276" class="code-line">Tagging</h1>
+<h1 id="tagging-1" data-line="276" class="code-line">Tagging</h1>
 <p data-line="278" class="code-line"><code>git</code> 특정 커밋에 태그를 부여해서 릴리즈 포인트를 정한다.</p>
 <ul>
 <li data-line="280" class="code-line">
@@ -378,10 +390,10 @@ origin    git@github.com:mojombo/grit.git (push)
 </ul>
 </li>
 </ul>
-<h2 id="%ED%83%9C%EA%B7%B8-%EC%83%9D%EC%84%B1" data-line="284" class="code-line">태그 생성</h2>
+<h2 id="ed839ceab7b8-ec839dec84b1-1" data-line="284" class="code-line">태그 생성</h2>
 <p data-line="286" class="code-line"><code>git</code> 은 <code>lightweight</code> 태그와 <code>annotated</code> 태그를 지원한다. <code>lightweight</code> 는 단순히 특정 커밋을 가르키는 포인터 역할을 하지만, <code>annotated</code> 태그는 태그 이름, 이메일, 태그 메시지 등을 포함하며 GPG 로 사인되어 커밋 오브젝트에 포함된다.</p>
 <p data-line="288" class="code-line">일반적으로 <code>annotated</code> 태그를 다는 것이 좋다. 하지만 임시적인 태그를 달거나 별도의 이유로 추가 정보를 저장하기 싫다면 <code>lightweight</code> 도 써도 좋다.</p>
-<h3 id="%EB%A7%88%EC%A7%80%EB%A7%89-%EC%BB%A4%EB%B0%8B%EC%97%90-annotated-%ED%83%9C%EA%B7%B8-%EB%B6%80%EC%97%AC" data-line="290" class="code-line">마지막 커밋에 annotated 태그 부여</h3>
+<h3 id="eba788eca780eba789-ecbba4ebb08bec9790-annotated-ed839ceab7b8-ebb680ec97ac-1" data-line="290" class="code-line">마지막 커밋에 annotated 태그 부여</h3>
 <ul>
 <li data-line="292" class="code-line">
 <p data-line="292" class="code-line"><code>git tag -a &lt;VERSION&gt; -m &quot;MESSAGE&quot;</code> : <code>annotated</code> 태그를 생성한다.</p>
@@ -401,7 +413,7 @@ origin    git@github.com:mojombo/grit.git (push)
 <p data-line="300" class="code-line"><code>git show v1.4</code> : <code>1.4</code> 태그의 정보와 그것에 딸린 커밋 정보를 본다.</p>
 </li>
 </ul>
-<h3 id="%EB%A7%88%EC%A7%80%EB%A7%89-%EC%BB%A4%EB%B0%8B%EC%97%90-lightweight-%ED%83%9C%EA%B7%B8-%EB%B6%80%EC%97%AC" data-line="302" class="code-line">마지막 커밋에 lightweight 태그 부여</h3>
+<h3 id="eba788eca780eba789-ecbba4ebb08bec9790-lightweight-ed839ceab7b8-ebb680ec97ac-1" data-line="302" class="code-line">마지막 커밋에 lightweight 태그 부여</h3>
 <ul>
 <li data-line="304" class="code-line">
 <p data-line="304" class="code-line"><code>git tag &lt;VERSION&gt;</code> : <code>lightweight</code> 태그를 생성한다.</p>
@@ -418,7 +430,7 @@ origin    git@github.com:mojombo/grit.git (push)
 </ul>
 </li>
 </ul>
-<h3 id="%ED%8A%B9%EC%A0%95-%EC%BB%A4%EB%B0%8B%EC%97%90-lightweight-%ED%83%9C%EA%B7%B8-%EB%B6%80%EC%97%AC" data-line="312" class="code-line">특정 커밋에 lightweight 태그 부여</h3>
+<h3 id="ed8ab9eca095-ecbba4ebb08bec9790-lightweight-ed839ceab7b8-ebb680ec97ac-1" data-line="312" class="code-line">특정 커밋에 lightweight 태그 부여</h3>
 <ul>
 <li data-line="314" class="code-line">
 <p data-line="314" class="code-line"><code>git tag -a &lt;VERSION&gt; &lt;COMMIT&gt;</code> : 특정 커밋에 <code>annotated</code> 태그를 생성한다.</p>
@@ -432,7 +444,7 @@ origin    git@github.com:mojombo/grit.git (push)
 </ul>
 </li>
 </ul>
-<h3 id="%ED%8A%B9%EC%A0%95-%EB%B2%84%EC%A0%84%EC%9D%98-%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-%EC%82%B4%ED%8E%B4%EB%B3%B4%EA%B8%B0" data-line="320" class="code-line">특정 버전의 레포지토리 살펴보기 `</h3>
+<h3 id="ed8ab9eca095-ebb284eca084ec9d98-eba088ed8faceca780ed86a0eba6ac-ec82b4ed8eb4ebb3b4eab8b0-1" data-line="320" class="code-line">특정 버전의 레포지토리 살펴보기 `</h3>
 <ul>
 <li data-line="322" class="code-line">
 <p data-line="322" class="code-line"><code>git checkout &lt;VERSION&gt;</code> : 특정 버전일 때의 시점으로 레포지토리를 바꾼다.</p>
@@ -448,7 +460,7 @@ origin    git@github.com:mojombo/grit.git (push)
 </ul>
 </li>
 </ul>
-<h3 id="%EC%9B%90%EA%B2%A9-%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%97%90-%ED%83%9C%EA%B7%B8-%EA%B3%B5%EC%9C%A0" data-line="332" class="code-line">원격 레포지토리에 태그 공유</h3>
+<h3 id="ec9b90eab2a9-eba088ed8faceca780ed86a0eba6acec9790-ed839ceab7b8-eab3b5ec9ca0-2" data-line="332" class="code-line">원격 레포지토리에 태그 공유</h3>
 <p data-line="334" class="code-line"><code>git push</code> 는 원격 레포에 태그까지 공유해주지는 않는다. 따라서 명시적으로 태그를 <code>push</code> 해주어야 한다.</p>
 <ul>
 <li data-line="336" class="code-line">
@@ -464,7 +476,7 @@ origin    git@github.com:mojombo/grit.git (push)
 </ul>
 </li>
 </ul>
-<h3 id="ec9b90eab2a9-eba088ed8faceca780ed86a0eba6acec9790-ed839ceab7b8-eab3b5ec9ca0-1" data-line="344" class="code-line">원격 레포지토리에 태그 공유</h3>
+<h3 id="ec9b90eab2a9-eba088ed8faceca780ed86a0eba6acec9790-ed839ceab7b8-eab3b5ec9ca0-3" data-line="344" class="code-line">원격 레포지토리에 태그 공유</h3>
 <ul>
 <li data-line="346" class="code-line">
 <p data-line="346" class="code-line"><code>git tag -d &lt;VERSION&gt;</code> : 특정 태그를 삭제한다.</p>
@@ -482,20 +494,20 @@ origin    git@github.com:mojombo/grit.git (push)
 </li>
 </ul>
 <hr>
-<h1 id="branching" data-line="356" class="code-line">Branching</h1>
+<h1 id="branching-1" data-line="356" class="code-line">Branching</h1>
 <p data-line="358" class="code-line">프로젝트를 개발할 때 확실하게 정해진 파일들을 수정하지 않은 채 개발적이고 실험적인 내용들을 추가하며 파일들을 수정해야 한다. 그런데 이 작업은 매우 귀찮다. 원본 프로젝트를 복사하여 훼손되지 않도록 백업한 후 복사본을 고치는 과정을 반복해야 하기 때문이다.</p>
 <p data-line="360" class="code-line">이 작업을 자동화해주기 위하여 <code>git</code> 은 브랜치 기능을 제공한다. <code>git</code> 은 메인 프로젝트를 곧 바로 수정하지 말고 브랜치를 만들어서 실험적이고 개발적인 아이디어를 반영한 후 메인 프로젝트로 병합하라고 권장한다. 즉 브랜치를 만들고 병합하는 작업 과정을 자주 하라고 권장하는 것이다.</p>
 <p data-line="362" class="code-line"><code>git</code> 이 제공하는 브랜치 기능을 잘 이해하면 당신의 개발 과정이 아주 강력하고 안정적으로 완전히 변할 것이다.</p>
-<h2 id="about-git-branching" data-line="364" class="code-line">About Git Branching</h2>
+<h2 id="about-git-branching-1" data-line="364" class="code-line">About Git Branching</h2>
 <p data-line="366" class="code-line">먼저 <code>git</code> 이 다른 VCS 와는 달리 각각의 커밋들을 파일의 변경기록으로 저장하는 것이 아니라 레포지토리의 전체 스냅샷으로 저장하는 것을 기억하자. 당신이 커밋을 하면 커밋 오브젝트는 스테이징된 파일들, 커미터의 이름과 이메일, 그리고 부모 커밋들을 포인팅 한다.</p>
 <p data-line="368" class="code-line">스테이징된 파일들 각각의 체크섬 해쉬값이 커밋에 저장되는데 이것을 <code>blobs</code> 오브젝트라 한다. 또한 <code>git</code> 은 디렉토리들의 체크섬을 계산하여 그 해쉬값을 <code>tree</code> 오브젝트로 저장한다. <code>tree</code> 오브젝트는 그 디렉토리에 저장되어있는 <code>blobs</code> 들의 리스트 정보를 지니고 있는 것이다. 그러면 <code>git</code> 은 최종적으로 메타데이터(날짜, 작성자 등)와 루트 디렉토리의 <code>tree</code> 오브젝트를 가르키는 <code>commit</code> 오브젝트를 만들며 커밋을 완료한다. 이 <code>commit</code> 오브젝트가 지금까지 해오던 커밋의 실체인 것이다.</p>
-<h2 id="%EC%98%88%EC%8B%9C" data-line="370" class="code-line">예시</h2>
+<h2 id="ec9888ec8b9c-1" data-line="370" class="code-line">예시</h2>
 <p data-line="372" class="code-line">만약 3 개의 파일을 만든 후 스테이징 하고 커밋했다고 하자. 그러면 이 시점에서 5 개의 오브젝트가 생성된다. 3 개의 <code>blobs</code> 오브젝트와 루트 디렉토리를 가르키는 1 개의 <code>tree</code> 오브젝트, 그리고 1 개의 <code>commit</code> 오브젝트가 그것이다. 다음 그림이 지금 상황을 시각적으로 보여준다.</p>
 <p data-line="374" class="code-line"><img src="https://git-scm.com/book/en/v2/images/commit-and-tree.png" alt="" class="loading" id="image-hash-5c9b312d08f9aeb928dfd665e1fd76e78a97b6ee90c4e136b7565523b28ec46b"></p>
 <p data-line="376" class="code-line">그리고 변경사항을 커밋할 때마다 커밋은 부모 커밋, 즉 이전 커밋을 다음과 같이 포인팅한다.</p>
 <p data-line="378" class="code-line"><img src="https://git-scm.com/book/en/v2/images/commits-and-parents.png" alt="" class="loading" id="image-hash-9bc2822e57aaa68ea5a15506e83854984de4ddacf529a05889c52b7575699392"></p>
 <p data-line="380" class="code-line"><code>git</code> 은 <code>master</code> 라는 기본 브랜치를 갖고 있다. <code>master</code> 브랜치는 항상 마지막 커밋을 포인팅한다. 즉 커밋을 할 때마다 자동으로 마지막 커밋으로 포인팅을 변경해주는 것이다.</p>
-<h2 id="%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%83%9D%EC%84%B1" data-line="382" class="code-line">브랜치 생성</h2>
+<h2 id="ebb88ceb9e9cecb998-ec839dec84b1-1" data-line="382" class="code-line">브랜치 생성</h2>
 <p data-line="384" class="code-line"><code>branch</code> 를 생성한다는 것은 새로운 포인터를 만든다는 것이다.</p>
 <ul>
 <li data-line="386" class="code-line">
@@ -524,7 +536,7 @@ origin    git@github.com:mojombo/grit.git (push)
 <ul>
 <li data-line="402" class="code-line"><code>git log --oneline --decorate</code> : 현재 어떤 브랜치에 상주하고 있는지 확인한다.</li>
 </ul>
-<h2 id="%EB%B8%8C%EB%9E%9C%EC%B9%98-%EC%9D%B4%EC%A3%BC" data-line="404" class="code-line">브랜치 이주</h2>
+<h2 id="ebb88ceb9e9cecb998-ec9db4eca3bc-1" data-line="404" class="code-line">브랜치 이주</h2>
 <ul>
 <li data-line="406" class="code-line">
 <p data-line="406" class="code-line"><code>git checkout &lt;name&gt;</code> : 브랜치를 이주한다.</p>
@@ -554,7 +566,7 @@ origin    git@github.com:mojombo/grit.git (push)
 <ul>
 <li data-line="438" class="code-line"><code>git log --oneline --decorate --graph --all</code> : 브랜치 상황을 그래프로 시각적으로 보여준다.</li>
 </ul>
-<h2 id="branching-management" data-line="440" class="code-line">Branching Management</h2>
+<h2 id="branching-management-1" data-line="440" class="code-line">Branching Management</h2>
 <ul>
 <li data-line="442" class="code-line">
 <p data-line="442" class="code-line"><code>git checkout -b &lt;name&gt;</code> : 브랜치 생성과 동시에 이주한다.</p>
@@ -587,7 +599,7 @@ origin    git@github.com:mojombo/grit.git (push)
 <p data-line="460" class="code-line"><code>git branch -D &lt;name&gt;</code> : 병합되지 않은 브랜치도 강제로 삭제한다.</p>
 </li>
 </ul>
-<h2 id="%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8-%EB%B8%8C%EB%9E%9C%EC%B9%AD%EA%B3%BC-%EB%B3%91%ED%95%A9-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4-%EC%98%88%EC%8B%9C" data-line="462" class="code-line">기본적인 브랜칭과 병합 시나리오 예시</h2>
+<h2 id="eab8b0ebb3b8eca081ec9db8-ebb88ceb9e9cecb9adeab3bc-ebb391ed95a9-ec8b9ceb8298eba6acec98a4-ec9888ec8b9c-1" data-line="462" class="code-line">기본적인 브랜칭과 병합 시나리오 예시</h2>
 <pre><code data-line="464" class="code-line language-shell"><div>git checkout -b iss53
 <span class="hljs-meta">#</span><span class="bash"> branch[iss53] modify files and commit</span>
 git checkout master
@@ -607,7 +619,7 @@ git branch -d iss53
 <p data-line="482" class="code-line">현재 상황:</p>
 <p data-line="484" class="code-line"><img src="https://git-scm.com/book/en/v2/images/basic-branching-1.png" alt="" class="loading" id="image-hash-4832db8179d07df8201a69763c8addece6f1e4abd0ba4850816a2250203b3b5b"></p>
 <p data-line="486" class="code-line">이제 웹개발자가 유저의 이슈를 받고 그 이슈를 <code>#53</code> 라 이름지었다고 하자. 그는 이 이슈를 해결하기 위하여 새로운 브랜치를 생성하고 이주한다.</p>
-<h4 id="iss53-%EC%9D%84-%ED%95%B4%EA%B2%B0%ED%95%98%EB%9F%AC-%EA%B0%80%EA%B8%B0" data-line="488" class="code-line">iss53 을 해결하러 가기</h4>
+<h4 id="iss53-ec9d84-ed95b4eab2b0ed9598eb9fac-eab080eab8b0-1" data-line="488" class="code-line">iss53 을 해결하러 가기</h4>
 <pre><code data-line="490" class="code-line language-shell"><div>git checkout -b iss53
 </div></code></pre>
 <p data-line="494" class="code-line">현재 상황:</p>
@@ -617,7 +629,7 @@ git branch -d iss53
 </div></code></pre>
 <p data-line="505" class="code-line">현재 상황:</p>
 <p data-line="507" class="code-line"><img src="https://git-scm.com/book/en/v2/images/basic-branching-3.png" alt="" class="loading" id="image-hash-fba9877de04a8c9d09fe81f8bd433e9eeb5463248f6e217a267ea156d7ec28d2"></p>
-<h4 id="%EA%B8%89%ED%9E%88-%ED%95%B4%EA%B2%B0%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%97%90%EB%9F%AC-hotfix-%EB%A5%BC-%EB%B3%B4%EA%B3%A0%EB%B0%9B%EC%95%84%EC%84%9C-%EA%B7%B8%EA%B2%83%EB%B6%80%ED%84%B0-%ED%95%B4%EA%B2%B0%ED%95%98%EB%9F%AC-%ED%95%98%EA%B8%B0" data-line="509" class="code-line">급히 해결해야 하는 에러 hotfix 를 보고받아서 그것부터 해결하러 하기</h4>
+<h4 id="eab889ed9e88-ed95b4eab2b0ed95b4ec95bc-ed9598eb8a94-ec9790eb9fac-hotfix-eba5bc-ebb3b4eab3a0ebb09bec9584ec849c-eab7b8eab283ebb680ed84b0-ed95b4eab2b0ed9598eb9fac-ed9598eab8b0-1" data-line="509" class="code-line">급히 해결해야 하는 에러 hotfix 를 보고받아서 그것부터 해결하러 하기</h4>
 <p data-line="511" class="code-line">그런데 웹개발자가 지금 즉시 해결해야만 하는 매우 급한 에러인 <code>hotfix</code> 를 보고받아서 <code>master</code> 브랜치로 되돌아가야 한다. 그런데 <code>git</code> 은 브랜치를 변경하기 전에 커밋되지 않은 파일들이 있다면 브랜치 변경을 허용하지 않기 때문에 모두 다 커밋이 완료된 상태여야 한다. (하지만 <code>Stashing</code> 을 사용하면 가능하기는 하다!)</p>
 <pre><code data-line="513" class="code-line language-shell"><div>git checkout master
 </div></code></pre>
@@ -633,7 +645,7 @@ git merge hotfix
 <p data-line="534" class="code-line">이때 <strong>Fast-forward</strong> 로 병합을 진행하는데 변경된 커밋이 단순히 <code>master</code> 브랜치의 커밋의 앞에 있는 커밋이기 때문이다. 그래서 <code>git</code> 은 단순히 <code>HEAD</code> 포인터와 <code>master</code> 브랜치의 포인터를 앞으로 옮길 뿐이다. 실질적인 병합 과정이라고 할 것도 없는 이 병합을 <strong>Fast-forward</strong> 라 한다.</p>
 <p data-line="536" class="code-line">현재 상황:</p>
 <p data-line="538" class="code-line"><img src="https://git-scm.com/book/en/v2/images/basic-branching-5.png" alt="" class="loading" id="image-hash-a22326256ffb4589c33248f417d29d56e05900df06486cef127c612b09c59ae6"></p>
-<h4 id="%EB%8B%A4%EC%8B%9C-iss53-%EB%A1%9C-%EB%90%98%EB%8F%8C%EC%95%84%EC%99%80%EC%84%9C-%EC%9E%91%EC%97%85%ED%95%98%EA%B8%B0" data-line="540" class="code-line">다시 iss53 로 되돌아와서 작업하기</h4>
+<h4 id="eb8ba4ec8b9c-iss53-eba19c-eb9098eb8f8cec9584ec9980ec849c-ec9e91ec9785ed9598eab8b0-1" data-line="540" class="code-line">다시 iss53 로 되돌아와서 작업하기</h4>
 <p data-line="542" class="code-line">이제 웹개발자는 다시 <code>#53</code> 이슈로 되돌아가서 하던 일을 마무리 하려 한다. 그런데 <code>hotfix</code> 브랜치는 더 이상 필요 없으니 먼저 삭제를 한 후 <code>#53</code> 이슈를 해결하러 돌아가자.</p>
 <pre><code data-line="544" class="code-line language-shell"><div>git branch -d hotfix # hotfix 를 삭제한다. 
 git checkout iss53
@@ -653,7 +665,7 @@ git merge iss53
 <p data-line="572" class="code-line">이제 최종적으로 필요없어진 <code>iss53</code> 브랜치도 삭제해준다.</p>
 <pre><code data-line="574" class="code-line language-shell"><div>git branch -d iss53
 </div></code></pre>
-<h2 id="%EB%B3%91%ED%95%A9-%EC%B6%A9%EB%8F%8C" data-line="578" class="code-line">병합 충돌</h2>
+<h2 id="ebb391ed95a9-ecb6a9eb8f8c-1" data-line="578" class="code-line">병합 충돌</h2>
 <p data-line="580" class="code-line">병합 충돌이란 두 커밋이 동일한 파일을 다른 내용으로 수정하여 병합할 수 없는 상황을 말한다. 위 상황에서 만약 병합 충돌이 일어났다면 어떻게 해야 할까?</p>
 <pre><code data-line="582" class="code-line language-shell"><div><span class="hljs-meta">$</span><span class="bash"> git merge iss53</span>
 Auto-merging index.html
@@ -686,7 +698,7 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 </div></code></pre>
 <p data-line="621" class="code-line">충돌 영역은 <code>=======</code> 로 구분되어 <code>HEAD</code> 가 가르키는 브랜치의 변경사항과 <code>iss53</code> 브랜치의 변경사항을 비교하여 보여준다. 당신은 두 변경사항 중 하나를 택하거나 둘 다 택하여 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> 와 <code>=======</code>, 그리고 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 를 없애주어야 한다.</p>
 <p data-line="623" class="code-line">그러고 나서 커밋하면 최종적으로 <code>merge commit</code> 이 생성되며 병합이 완료된다!</p>
-<h2 id="%EC%9B%90%EA%B2%A9-%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC%EC%9D%98-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EA%B4%80%EB%A6%AC-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4" data-line="625" class="code-line">원격 레포지토리의 브랜치 관리 시나리오</h2>
+<h2 id="ec9b90eab2a9-eba088ed8faceca780ed86a0eba6acec9d98-ebb88ceb9e9cecb998-eab480eba6ac-ec8b9ceb8298eba6acec98a4-1" data-line="625" class="code-line">원격 레포지토리의 브랜치 관리 시나리오</h2>
 <ul>
 <li data-line="627" class="code-line">
 <p data-line="627" class="code-line">Remote references : 브랜치, 태그 등을 포함한 원격 레포지토리의 레퍼런스를 뜻한다.</p>
@@ -722,7 +734,7 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 <p data-line="655" class="code-line">현재상황 :</p>
 <p data-line="657" class="code-line"><img src="https://git-scm.com/book/en/v2/images/remote-branches-3.png" alt="" class="loading" id="image-hash-95e3d456cf5436b426a756c1e6cf589e4ab41aa396cbc262b701f3902fe0d35f"></p>
 <p data-line="659" class="code-line">그러면 위와 같이 <code>origin/master</code> 가 업데이트되어 새로운 커밋을 가르키게 되었다.</p>
-<h2 id="%EB%8B%A4%EC%A4%91-%EC%9B%90%EA%B2%A9-%EB%A0%88%ED%8F%AC%EC%A7%80%ED%86%A0%EB%A6%AC-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EA%B4%80%EB%A6%AC-%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4" data-line="661" class="code-line">다중 원격 레포지토리 브랜치 관리 시나리오</h2>
+<h2 id="eb8ba4eca491-ec9b90eab2a9-eba088ed8faceca780ed86a0eba6ac-ebb88ceb9e9cecb998-eab480eba6ac-ec8b9ceb8298eba6acec98a4-1" data-line="661" class="code-line">다중 원격 레포지토리 브랜치 관리 시나리오</h2>
 <p data-line="663" class="code-line">이제 당신의 소규모 팀이 개인적으로 사용하는 또 다른 서버 <code>git.team1.ourcompany.com</code> 이라는 원격 레포지토리를 <code>git remote add teamone git://git.team1.ourcompany.com</code> 를 통하여 추가했다고 하자.</p>
 <p data-line="665" class="code-line">현재상황 :</p>
 <p data-line="667" class="code-line"><img src="https://git-scm.com/book/en/v2/images/remote-branches-4.png" alt="" class="loading" id="image-hash-aa78d0cbf8f3e16093192ff4fe27e9703f77dab2f825b2558722252da11089f5"></p>
@@ -811,8 +823,8 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 </ul>
 </li>
 </ul>
-<h1 id="%EA%B8%B0%ED%83%80" data-line="739" class="code-line">기타</h1>
-<h2 id="%EC%9E%90%EB%8F%99-%EB%A1%9C%EA%B7%B8%EC%9D%B8" data-line="741" class="code-line">자동 로그인</h2>
+<h1 id="eab8b0ed8380-1" data-line="739" class="code-line">기타</h1>
+<h2 id="ec9e90eb8f99-eba19ceab7b8ec9db8-1" data-line="741" class="code-line">자동 로그인</h2>
 <ul>
 <li data-line="743" class="code-line">
 <p data-line="743" class="code-line"><code>git config --global credential.helper cache</code> : 원격 레포지토리의 아이디와 비밀번호를 임시적으로 저장한다.</p>
@@ -822,4 +834,5 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 </li>
 </ul>
 
+</article>
 </body></html>
