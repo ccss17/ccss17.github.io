@@ -20,6 +20,7 @@ def section(title, file):
 
 str = f'''\
 ## 수학 메모
+{section('논리학 ', 'logic')}
 {section('수학 메모1', 'math')}
 {section('수학 메모2', 'math2')}
 {section('수학 메모3', 'math3')}
@@ -35,4 +36,4 @@ str = f'''\
 '''
 
 clipboard.copy(str)
-print('수학 정의 섹션이 클립보드에 복사됨')
+print('수학 정의 섹션들이 클립보드에 복사됨')

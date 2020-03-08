@@ -16,11 +16,43 @@
 
 ---
 
+## 인공지능 메모 
+
+- https://ccss17.github.io/ai.html
+
+## Makefile 메모 
+
+- https://ccss17.github.io/makefile.html
+
+## git 메모 
+
+- https://ccss17.github.io/git.html
+
+## docker 메모 
+
+- https://ccss17.github.io/docker.html
+
+## 정신지도규칙 메모 (데카르트)
+
+- https://ccss17.github.io/descartes.html
+
+## 철학 메모
+
+- https://ccss17.github.io/philosophy.html
+
+---
+
 ## 수학 메모
+
+- [논리학 ](https://ccss17.github.io/logic.html)
+    
+  - 명제(proposition), 예시, 예시, 예시, 조건(condition), 예시, 진리집합(truth set), 예시, 추론(inference), 인지 심리학, 논리학, 통계학, 인공지능, 논증, 논리학, 동일률, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 모순율, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 배중률, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 예시, 비형식 논리학, 진리값, 형식 논리학, 표준 논리(Standard logic), 비표준 논리(Non-standard logic), 다치 논리(many-valued logic), 퍼지 논리(fuzzy logic), 직관주의 논리(intuitionistic logic), 양상 논리(modal logic), 메타 논리(Meta logic), 계산가능성 이론(회귀함수 이론), 모형이론, 증명이론, 집합론, 귀납(induction), 귀납 추론의 한계, 귀납추론의 필요성, 완전귀납, 불완전귀납, 귀납 추론의 종류, 인과적 귀납법, 연역(deduction), 연역논증 규칙, 삼단논법, 예시, 정언 논리, 현대 논리학, 명제 논리, 1차 술어논리, 양상 논리, 귀납논증, 연역논증, 귀납논증, 연역논증, 귀납논증, 연역논증
+    
+    
 
 - [수학 메모1](https://ccss17.github.io/math.html)
     
-  - 자연대상, 수학, 수학, 정의(definition), 공리(axiom), 증명(proof), 정리(theorem), 수학기초론, 예시, 예시, 집합론, 집합, 원소, 집합 표현법, 원소나열법, 예시, 조건제시법, 예시, 벤다이어그램, 집합의 분류, 유한집합, 무한집합, 공집합, 부분집합, 예시, 서로 같은 집합, 진부분집합, 부분집합의 개수, 집합 $A$ 의 부분집합의 개수, 집합 $A$ 의 진부분집합의 개수, 특정 원소 $m$ 개를 원소로 갖는 부분집합의 개수, 특정 원소 $l$ 개를 원소로 갖지 않는 부분집합의 개수, 집합의 연산, 합집합(union), 교집합(intersection), 서로소(disjoint), 여집합(complement), 차집합(difference set), 집합의 연산 법칙, 합집합의 교환법칙(commutative law), 합집합의 결합법칙(associative law), 교집합의 교환법칙, 교집합의 결합법칙, 유한집합의 원소의 개수, 명제(proposition), 예시, 예시, 예시, 조건(condition), 예시, 진리집합(truth set), 예시, 추론(inference), 인지 심리학, 논리학, 통계학, 인공지능, 논증, 논리학, 동일률, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 모순율, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 배중률, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 예시, 비형식 논리학, 진리값, 형식 논리학, 표준 논리(Standard logic), 비표준 논리(Non-standard logic), 다치 논리(many-valued logic), 퍼지 논리(fuzzy logic), 직관주의 논리(intuitionistic logic), 양상 논리(modal logic), 메타 논리(Meta logic), 계산가능성 이론(회귀함수 이론), 모형이론, 증명이론, 집합론, 귀납(induction), 귀납 추론의 한계, 귀납추론의 필요성, 완전귀납, 불완전귀납, 귀납 추론의 종류, 인과적 귀납법, 연역(deduction), 연역논증 규칙, 삼단논법, 예시, 정언 논리, 현대 논리학, 명제 논리, 1차 술어논리, 양상 논리, 귀납논증, 연역논증, 귀납논증, 연역논증, 귀납논증, 연역논증, 수리 논리학, 명제와 조건의 부정, 예시, 명제 $p \to q$, $P \subset Q$ 이면 명제 $p \to q$ 는 참이다., $P \not \subset Q$ 이면 명제 $p \to q$ 는 거짓이다., 명제 $p \to q$ 의 부정, 예시, 조건부 명제의 참, 거짓, 명제의 역(converse), 명제의 대우(contraposition), 수학에서의 증명, 직접증명법, 간접증명법, 대우를 이용한 증명법(proof by contraposition), 귀류법, 수학적 귀납법(mathematical induction), 충분조건(sufficiency), 예시, 필요조건(necessity), 예시, 필요충분조건(necessity and sufficiency), 수리 논리학의 논증, 의미론적으로 타당한 논증, 타당한 논증 예시, 타당하지 않는 논증 예시, 구문론적으로 타당한 논증, 증명, 메타 정리, 논리 체계의 건전성, 논리 체계의 완전성, 논리 체계의 일관성(무모순성), 콤팩트성, 전제1, 전제2, 전제3, 전제4, 결론1, 결론2
+  - 자연대상, 수학, 수학, 정의(definition), 공리(axiom), 증명(proof), 정리(theorem), 수학기초론, 예시, 예시, 집합론, 집합, 원소, 집합 표현법, 원소나열법, 예시, 조건제시법, 예시, 벤다이어그램, 집합의 분류, 유한집합, 무한집합, 공집합, 부분집합, 예시, 서로 같은 집합, 진부분집합, 부분집합의 개수, 집합 $A$ 의 부분집합의 개수, 집합 $A$ 의 진부분집합의 개수, 특정 원소 $m$ 개를 원소로 갖는 부분집합의 개수, 특정 원소 $l$ 개를 원소로 갖지 않는 부분집합의 개수, 집합의 연산, 합집합(union), 교집합(intersection), 서로소(disjoint), 여집합(complement), 차집합(difference set), 집합의 연산 법칙, 합집합의 교환법칙(commutative law), 합집합의 결합법칙(associative law), 교집합의 교환법칙, 교집합의 결합법칙, 유한집합의 원소의 개수, 수리 논리학, 명제와 조건의 부정, 예시, 명제 $p \to q$, $P \subset Q$ 이면 명제 $p \to q$ 는 참이다., $P \not \subset Q$ 이면 명제 $p \to q$ 는 거짓이다., 명제 $p \to q$ 의 부정, 예시, 조건부 명제의 참, 거짓, 명제의 역(converse), 명제의 대우(contraposition), 수학에서의 증명, 직접증명법, 간접증명법, 대우를 이용한 증명법(proof by contraposition), 귀류법, 수학적 귀납법(mathematical induction), 충분조건(sufficiency), 예시, 필요조건(necessity), 예시, 필요충분조건(necessity and sufficiency), 수리 논리학의 논증, 의미론적으로 타당한 논증, 타당한 논증 예시, 타당하지 않는 논증 예시, 구문론적으로 타당한 논증, 증명, 메타 정리, 논리 체계의 건전성, 논리 체계의 완전성, 논리 체계의 일관성(무모순성), 콤팩트성, 전제1, 전제2, 전제3, 전제4, 결론1, 결론2
     
     
 
@@ -57,7 +89,7 @@
 
 - [적분 메모](https://ccss17.github.io/calculus3.html)
     
-  - 적분(integral), 부정적분(indefinite integral, antiderivative), 적분용어, 적분상수(integral constant), 피적분함수(integrand), 적분변수, 부정적분과 미분의 관계, $n$ 차 단항 함수 $y=x^n$ 의 부정적분, $1$ 의 부정적분, 함수의 실수배, 합, 차의 부정적분, 정적분(definte integral), 부정적분과 정적분의 관계
+  - 적분(integral), 부정적분(indefinite integral, antiderivative), 적분용어, 적분상수(integral constant), 피적분함수(integrand), 적분변수, 부정적분과 미분의 관계, $n$ 차 단항 함수 $y=x^n$ 의 부정적분, $1$ 의 부정적분, 함수의 실수배, 합, 차의 부정적분, 정적분(definte integral), 부정적분과 정적분의 관계, 정적분의 성질, 절대값 기호를 포함한 함수의 정적분, 정적분의 기하적 의미, 짝함수의 정적분, 홀함수의 정적분, 주기함수의 정적분
     
     
 ### 선형대수학 메모
@@ -79,32 +111,3 @@
   - $2 \times 2$ 행렬 $A$ 의 행렬식, $3 \times 3$ 행렬 $A$ 의 행렬식, $1 \times 1$ 행렬 $A$ 의 행렬식, $n \times n$ 행렬의 행렬식, 예시, 행렬식 표기법, 여인수(cofactor), 예시,  $3$ 행에 관한 여인수 전개,  $7$ 열에 관한 여인수 전개, 예시, **Theorem 3** 행연산과 행렬식의 관계, $\det A$ 의 값, 예시, **Theorem 6** 행렬식의 곱, 행렬식 함수의 선형성, $A_i(b)$, 크래머의 공식(Cramer's rule)
     
     
-
-  - $2 \times 2$ 행렬 $A$ 의 행렬식, $3 \times 3$ 행렬 $A$ 의 행렬식, $1 \times 1$ 행렬 $A$ 의 행렬식, $n \times n$ 행렬의 행렬식, 예시, 행렬식 표기법, 여인수(cofactor), 예시,  $3$ 행에 관한 여인수 전개,  $7$ 열에 관한 여인수 전개, 예시, **Theorem 3** 행연산과 행렬식의 관계, $\det A$ 의 값, 예시, **Theorem 6** 행렬식의 곱, 행렬식 함수의 선형성, $A_i(b)$, 크래머의 공식(Cramer's rule)
-    
-    
-
-
-## 인공지능 메모 
-
-- https://ccss17.github.io/ai.html
-
-## Makefile 메모 
-
-- https://ccss17.github.io/makefile.html
-
-## git 메모 
-
-- https://ccss17.github.io/git.html
-
-## docker 메모 
-
-- https://ccss17.github.io/docker.html
-
-## 정신지도규칙 메모 (데카르트)
-
-- https://ccss17.github.io/descartes.html
-
-## 철학 메모 (데카르트)
-
-- https://ccss17.github.io/philosophy.html

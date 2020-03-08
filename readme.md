@@ -16,6 +16,32 @@
 
 ---
 
+## 인공지능 메모 
+
+- https://ccss17.github.io/ai.html
+
+## Makefile 메모 
+
+- https://ccss17.github.io/makefile.html
+
+## git 메모 
+
+- https://ccss17.github.io/git.html
+
+## docker 메모 
+
+- https://ccss17.github.io/docker.html
+
+## 정신지도규칙 메모 (데카르트)
+
+- https://ccss17.github.io/descartes.html
+
+## 철학 메모
+
+- https://ccss17.github.io/philosophy.html
+
+---
+
 ## 수학 메모
 
 - [수학 메모1](https://ccss17.github.io/math.html)
@@ -81,30 +107,3 @@
     
 
   - $2 \times 2$ 행렬 $A$ 의 행렬식, $3 \times 3$ 행렬 $A$ 의 행렬식, $1 \times 1$ 행렬 $A$ 의 행렬식, $n \times n$ 행렬의 행렬식, 예시, 행렬식 표기법, 여인수(cofactor), 예시,  $3$ 행에 관한 여인수 전개,  $7$ 열에 관한 여인수 전개, 예시, **Theorem 3** 행연산과 행렬식의 관계, $\det A$ 의 값, 예시, **Theorem 6** 행렬식의 곱, 행렬식 함수의 선형성, $A_i(b)$, 크래머의 공식(Cramer's rule)
-    
-    
-
-
-## 인공지능 메모 
-
-- https://ccss17.github.io/ai.html
-
-## Makefile 메모 
-
-- https://ccss17.github.io/makefile.html
-
-## git 메모 
-
-- https://ccss17.github.io/git.html
-
-## docker 메모 
-
-- https://ccss17.github.io/docker.html
-
-## 정신지도규칙 메모 (데카르트)
-
-- https://ccss17.github.io/descartes.html
-
-## 철학 메모 (데카르트)
-
-- https://ccss17.github.io/philosophy.html
