@@ -43,19 +43,19 @@
 
 - [극한 메모](https://ccss17.github.io/calculus.html)
     
-  - 미적분학(Calculus), 극한(limit), 함수의 수렴(convergence), $\epsilon-\delta$ 논법으로 정의하는 함수의 수렴, 함수의 발산(divergence), $\epsilon-\delta$ 논법으로 정의하는 함수의 발산, 우극한과 좌극한, 우극한, 좌극한, 극한값이 존재하는 조건, 함수의 극한의 성질, 상수에 관한 무한대의 성질, 부정형(indeterminate form), 부정형 극한, $\infty - \infty$, $\frac{\infty}{\infty}$, $\frac{0}{0}$, $\infty \times 0$, 함수의 극한의 대소 관계, 미정계수의 결정, 함수의 연속(continuity), 함수의 불연속(discontinuity), 연속함수, 폐구간에서의 연속함수, 다항함수, 유리함수, 무리함수, 가우스함수, 합성함수, 연속함수의 성질, 최대-최소 정리, 사이값의 정리(intermediate value theorem)
+  - 극한(limit), 함수의 수렴(convergence), $\epsilon-\delta$ 논법으로 정의하는 함수의 수렴, 함수의 발산(divergence), $\epsilon-\delta$ 논법으로 정의하는 함수의 발산, 우극한과 좌극한, 우극한, 좌극한, 극한값이 존재하는 조건, 함수의 극한의 성질, 상수에 관한 무한대의 성질, 부정형(indeterminate form), 부정형 극한, $\infty - \infty$, $\frac{\infty}{\infty}$, $\frac{0}{0}$, $\infty \times 0$, 함수의 극한의 대소 관계, 미정계수의 결정, 함수의 연속(continuity), 함수의 불연속(discontinuity), 연속함수, 폐구간에서의 연속함수, 다항함수, 유리함수, 무리함수, 가우스함수, 합성함수, 연속함수의 성질, 최대-최소 정리, 사이값의 정리(intermediate value theorem)
     
     
 
 - [미분 메모](https://ccss17.github.io/calculus2.html)
     
-  - 미분, 증분, 평균변화율(average rate of change), $0 \to 2$, 미분계수(derivative) 또는 순간변화율(instantaneous rate of change), 미분 가능한 함수, 미분가능성과 함수의 연속, 도함수(derivatives, derived function, derivative of a function), $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수, 상수 함수 $y = c$ 의 도함수, 상수배 함수 $y =cf(x)$ 의 도함수, 합차 함수 $y=f(x)\pm g(x)$ 의 도함수, 곱 함수 $y=f(x)g(x)$ 의 도함수, 합성함수 $y=g(f(x))$ 의 도함수, 제곱 함수 $y = \{f(x)\} ^{n}$ 의 도함수, 역함수의 도함수, 이계도함수(second order derivatives), 접선의 방정식, 롤의 정리, 함수 $f(x)$ 가 상수함수가 아닌 경우, 평균값 정리, 평균값 정리의 따름정리, 함수의 증가, 함수의 감소, 함수의 증가의 판정, 함수의 감소의 판정, 함수의 극대와 극소, 함수의 극대(local maximum), 함수의 극소(local minimum), 극값(extreme values), 함수의 극대와 극소의 판정, 함수의 극대 판정, 함수의 극소 판정, 이계도함수를 이용한 함수의 극대와 극소의 판정, 극값을 찾는 법, 함수의 최대값-최소값, 함수의 최대값, 함수의 최소값
+  - 미적분학(Calculus), 미분, 증분, 평균변화율(average rate of change), $0 \to 2$, 미분계수(derivative) 또는 순간변화율(instantaneous rate of change), 미분 가능한 함수, 미분가능성과 함수의 연속, 도함수(derivatives, derived function, derivative of a function), $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수, 상수 함수 $y = c$ 의 도함수, 상수배 함수 $y =cf(x)$ 의 도함수, 합차 함수 $y=f(x)\pm g(x)$ 의 도함수, 곱 함수 $y=f(x)g(x)$ 의 도함수, 합성함수 $y=g(f(x))$ 의 도함수, 제곱 함수 $y = \{f(x)\} ^{n}$ 의 도함수, 역함수의 도함수, 이계도함수(second order derivatives), 접선의 방정식, 실근의 근사값 구하기(뉴턴의 방법), 롤의 정리, 함수 $f(x)$ 가 상수함수가 아닌 경우, 평균값 정리, 평균값 정리의 따름정리, 함수의 증가, 함수의 감소, 함수의 증가의 판정, 함수의 감소의 판정, 함수의 극대와 극소, 함수의 극대(local maximum), 함수의 극소(local minimum), 극값(extreme values), 함수의 극대와 극소의 판정, 함수의 극대 판정, 함수의 극소 판정, 이계도함수를 이용한 함수의 극대와 극소의 판정, 극값을 찾는 법, 함수의 최대값-최소값, 함수의 최대값, 함수의 최소값
     
     
 
 - [적분 메모](https://ccss17.github.io/calculus3.html)
     
-  - 적분
+  - 적분(integral), 부정적분(indefinite integral, antiderivative), 적분용어, 적분상수(integral constant), 피적분함수(integrand), 적분변수, 부정적분과 미분의 관계, $n$ 차 단항 함수 $y=x^n$ 의 부정적분, $1$ 의 부정적분, 함수의 실수배, 합, 차의 부정적분, 정적분(definte integral), 부정적분과 정적분의 관계
     
     
 ### 선형대수학 메모
@@ -74,6 +74,10 @@
 
 - [3장 : 행렬식](https://ccss17.github.io/la3.html)
     
+  - $2 \times 2$ 행렬 $A$ 의 행렬식, $3 \times 3$ 행렬 $A$ 의 행렬식, $1 \times 1$ 행렬 $A$ 의 행렬식, $n \times n$ 행렬의 행렬식, 예시, 행렬식 표기법, 여인수(cofactor), 예시,  $3$ 행에 관한 여인수 전개,  $7$ 열에 관한 여인수 전개, 예시, **Theorem 3** 행연산과 행렬식의 관계, $\det A$ 의 값, 예시, **Theorem 6** 행렬식의 곱, 행렬식 함수의 선형성, $A_i(b)$, 크래머의 공식(Cramer's rule)
+    
+    
+
   - $2 \times 2$ 행렬 $A$ 의 행렬식, $3 \times 3$ 행렬 $A$ 의 행렬식, $1 \times 1$ 행렬 $A$ 의 행렬식, $n \times n$ 행렬의 행렬식, 예시, 행렬식 표기법, 여인수(cofactor), 예시,  $3$ 행에 관한 여인수 전개,  $7$ 열에 관한 여인수 전개, 예시, **Theorem 3** 행연산과 행렬식의 관계, $\det A$ 의 값, 예시, **Theorem 6** 행렬식의 곱, 행렬식 함수의 선형성, $A_i(b)$, 크래머의 공식(Cramer's rule)
     
     
