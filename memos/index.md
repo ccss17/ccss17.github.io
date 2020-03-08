@@ -8,6 +8,8 @@
 
 공부한 거를 안 까먹으려고 메모한 것들임.
 
+**http://github.com/ccss17/ccss17.github.io** 에서 관리합니다. 
+
 ## Tex 수학기호 메모
 
 - https://ccss17.github.io/tex.html
