@@ -89,7 +89,7 @@
 
 - [적분 메모](https://ccss17.github.io/calculus3.html)
     
-  - 적분(integral), 부정적분(indefinite integral, antiderivative), 적분용어, 적분상수(integral constant), 피적분함수(integrand), 적분변수, 부정적분과 미분의 관계, $n$ 차 단항 함수 $y=x^n$ 의 부정적분, $1$ 의 부정적분, 함수의 실수배, 합, 차의 부정적분, 정적분(definte integral), 부정적분과 정적분의 관계, 정적분의 성질, 절대값 기호를 포함한 함수의 정적분, 정적분의 기하적 의미, 짝함수의 정적분, 홀함수의 정적분, 주기함수의 정적분
+  - 적분(integral), 부정적분(indefinite integral, antiderivative), 적분용어, 적분상수(integral constant), 피적분함수(integrand), 적분변수, 부정적분과 미분의 관계, $n$ 차 단항 함수 $y=x^n$ 의 부정적분, $1$ 의 부정적분, 함수의 실수배, 합, 차의 부정적분, 함수 $f'(g(x))g'(x)$ 의 부정적분, 정적분(definte integral), 부정적분과 정적분의 관계, 정적분의 성질, 절대값 기호를 포함한 함수의 정적분, 정적분의 기하적 의미, 짝함수의 정적분, 홀함수의 정적분, 주기함수의 정적분, 정적분으로 나타내어진 함수, 정적분과 미분의 관계, 곡선과 $x$ 축 사이의 넓이
     
     
 ### 선형대수학 메모

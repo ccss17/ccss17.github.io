@@ -18,7 +18,7 @@ def section(title, file):
     
     '''
 
-str = f'''\
+math_sections = f'''\
 ## 수학 메모
 {section('논리학 ', 'logic')}
 {section('수학 메모1', 'math')}
@@ -35,5 +35,14 @@ str = f'''\
 {section('3장 : 행렬식', 'la3')}
 '''
 
-clipboard.copy(str)
-print('수학 정의 섹션들이 클립보드에 복사됨')
+# clipboard.copy(math_sections)
+# print('수학 정의 섹션들이 클립보드에 복사됨')
+
+with open('memos/index.md', encoding='utf-8') as f:
+    index = f.read()
+math = index.find("## 수학 메모")
+index = index[:math] + math_sections
+with open('memos/index.md', 'w', encoding='utf-8') as f:
+    f.write(index)
+with open('readme.md', 'w', encoding='utf-8') as f:
+    f.write(index)

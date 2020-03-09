@@ -82,9 +82,17 @@
 
 - 미분계수(derivative) 또는 순간변화율(instantaneous rate of change) : 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $a+\Delta x$ 까지 변할 때의 평균변화율 $\frac{\Delta y}{\Delta x}$ 에서 $\Delta x \to 0$ 일 때의 극한값, 즉
 
-  $$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(a+\Delta x)-f(a)}{\Delta x} $$
+  $$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(a+\Delta x)-f(a)}{\Delta x} = f'(a) $$
 
   가 존재할 때, 이 극한값을 함수 $y=f(x)$ 의 $x=a$ 에서의 미분계수(또는 순간변화율) 이라 한다. 
+
+  - $x-a=\Delta x$ 로 $\Delta x$ 를 풀어서 다음과 같이 나타낼 수도 있다. 
+
+    $$ \lim_{x \to a} \frac{f(x)-f(a)}{x-a} = f'(a) $$
+
+  - 종종 $\Delta x$ 를 $h$ 로 두어 다음과 같이 나타내기도 한다. 
+
+    $$ \lim_{h \to 0} \frac{\Delta y}{h} = \lim_{h \to 0} \frac{f(a+h)-f(a)}{h} = f'(a)$$
 
   - 기호로 $f'(a)$ 로 나타내고 다음의 기호로도 나타낸다. 
 
@@ -102,7 +110,7 @@
 
     - 다시 말해 $x$ 가 $a$ 에서 $b$ 까지 변할 때의 변화량은 어떤 양 $a$ 만큼 변했을 때 $y$ 가 $\frac{\Delta y}{\Delta x}a$ 만큼 변한 셈이라는 뜻이다. 
 
-  - 미분계수 $f'(a)$ 란 극한값이다. 
+  - 미분계수 $f'(a)$ 란 결국에 평균변화량의 **"극한값"** 이다. 
 
   - 미분계수 $f'(a)$ 란 해석기하적으로 곡선 $y=f(x)$ 위의 점 $(a, f(a))$ 에서의 접선의 기울기를 의미한다. 
 
