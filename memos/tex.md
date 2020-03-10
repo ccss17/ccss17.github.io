@@ -83,8 +83,9 @@
 |infty| \forall |\exists |\overline{AB}|\overrightarrow{AB}|
 |$\overleftrightarrow{AB}$|$\overleftarrow{AB}$| ${}_{n}P_{r}$ | ${}_{n}C_{r}$ | ${}_{n}\Pi_{r}$
 |\overleftrightarrow{AB}|\overleftarrow{AB}| {}\_{n}P_{r} | {}\_{n}C_{r} |{}\_{n}\Pi_{r}
-|$25\degree$|
-|25\degree|
+|$25\degree$|$0.\overline{153}$|$0.\dot{1}5 \dot{3}$|
+|25\degree|0.\overline{153}|0.\dot{1}5 \dot{3}|
+    
 
 - (f \circ g)(x) 
 

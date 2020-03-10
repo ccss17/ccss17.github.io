@@ -28,6 +28,7 @@ math_sections = f'''\
 {section('극한 메모', 'calculus')}
 {section('미분 메모', 'calculus2')}
 {section('적분 메모', 'calculus3')}
+{section('미분2 메모', 'calculus4')}
 ### 선형대수학 메모
 {section('1장 : 선형방정식', 'la')}
 {section('2장 : 행렬 대수', 'la2')}
