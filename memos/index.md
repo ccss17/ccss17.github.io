@@ -46,7 +46,7 @@
 
 - [논리학 ](https://ccss17.github.io/logic.html)
     
-  - 명제(proposition), 예시, 예시, 예시, 조건(condition), 예시, 진리집합(truth set), 예시, 추론(inference), 인지 심리학, 논리학, 통계학, 인공지능, 논증, 논리학, 동일률, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 모순율, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 배중률, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 예시, 비형식 논리학, 진리값, 형식 논리학, 표준 논리(Standard logic), 비표준 논리(Non-standard logic), 다치 논리(many-valued logic), 퍼지 논리(fuzzy logic), 직관주의 논리(intuitionistic logic), 양상 논리(modal logic), 메타 논리(Meta logic), 계산가능성 이론(회귀함수 이론), 모형이론, 증명이론, 집합론, 귀납(induction), 귀납 추론의 한계, 귀납추론의 필요성, 완전귀납, 불완전귀납, 귀납 추론의 종류, 인과적 귀납법, 연역(deduction), 연역논증 규칙, 삼단논법, 예시, 정언 논리, 현대 논리학, 명제 논리, 1차 술어논리, 양상 논리, 귀납논증, 연역논증, 귀납논증, 연역논증, 귀납논증, 연역논증
+  - 언어, 단어, 문장, 사고 전달의 최소단위, 명제(proposition), 예시, 예시, 예시, 조건(condition), 예시, 진리집합(truth set), 예시, 추리, 추론(inference), 인지 심리학, 논리학, 통계학, 인공지능, 논증, 논리학, 동일률, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 모순율, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 배중률, 명제 $P$ 에 대하여 다음 명제논리가 항상 참임을 뜻하는 법칙이다, 예시, 비형식 논리학, 진리값, 형식 논리학, 표준 논리(Standard logic), 비표준 논리(Non-standard logic), 다치 논리(many-valued logic), 퍼지 논리(fuzzy logic), 직관주의 논리(intuitionistic logic), 양상 논리(modal logic), 메타 논리(Meta logic), 계산가능성 이론(회귀함수 이론), 모형이론, 증명이론, 집합론, 귀납(induction), 귀납 추론의 한계, 귀납추론의 필요성, 완전귀납, 불완전귀납, 귀납 추론의 종류, 인과적 귀납법, 연역(deduction), 연역논증 규칙, 삼단논법, 예시, 정언 논리, 현대 논리학, 명제 논리, 1차 술어논리, 양상 논리, 귀납논증, 연역논증, 귀납논증, 연역논증, 귀납논증, 연역논증
     
     
 
@@ -58,7 +58,7 @@
 
 - [수학 메모2](https://ccss17.github.io/math2.html)
     
-  - 양, 수, 값, 이항연산(binary operation), 등호($=$), 덧셈($+$), 뺄셈($-$), 곱셈($\times$), 나눗셈($\div$), 비(비율), $b$ 에 대한 $a$ 의 비는 $a, 두 수 $a$ 와 $b$ 의 비는 $a, $1, 비례식, 비례식이란 두 개의 비 $a : b$ 와 $c, 가비의 비, 약수, 배수, 공약수, 최대공약수, 공배수, 최소공배수, 소수, 서로소, 역연산, 항등원, 역원(inverse element), 거듭제곱, 자연수, 정수, 유리수, 무리수, 실수, 허수, 복소수, 컬레복소수, 사원수, 수열(sequence) : 자연수 전체 집합 $\aleph$ 에서 실수 전체 집합 $\Re$ 로의 함수 $f, 유한수열, 등차수열(arithmetic sequence), 둥차중항, 조화수열(harmonic progression), 예시, 등비수열(geometric sequence), 등비중항, 급수, 합의 기호 $\sum$, 부분합, 곱의 기호 $\prod$, 멱급수(power series), 유한급수의 성질, 등차수열의 합, 등비수열의 합, 수열의 귀납적 정의, 점화식, 수학적 귀납법을 수열에 사용한 예시, 제곱, 거듭제곱, 지수($exponent$), 자연수 지수의 정의, 0 또는 음의 정수인 지수의 정의, 지수가 유리수인 지수의 정의, 지수가 정수 일 때의 지수법칙, 지수가 유리수 일 때의 지수법칙, 지수가 실수 일 때의 지수법칙, 제곱근(square root), 거듭제곱근, 거듭제곱근의 성질, $\sqrt[n]{a}\sqrt[n]{b}=\sqrt[n]{ab}$, 지수함수, 지수방정식(exponential equation), 예시, 지수부등식(exponential inequality), 예시, 로그($logarithm$), $a > 0$, $a \neq 1$, $N > 0$, 예시, 로그의 성질, 로그의 성질(2), 상용로그, 로그함수, 예시, 로그방정식(logarithm equation), 예시, 로그부등식(logarithm inequality), 예시
+  - 양, 수, 값, 이항연산(binary operation), 등호($=$), 덧셈($+$), 뺄셈($-$), 곱셈($\times$), 나눗셈($\div$), 비(비율), $b$ 에 대한 $a$ 의 비는 $a, 두 수 $a$ 와 $b$ 의 비는 $a, $1, 비례식, 비례식이란 두 개의 비 $a : b$ 와 $c, 가비의 비, 약수, 배수, 공약수, 최대공약수, 공배수, 소수(decimal), 유한소수(finite decimal), 유한소수(infinite decimal), 순환소수, 최소공배수, 소수(prime number), 서로소, 역연산, 항등원, 역원(inverse element), 거듭제곱, 자연수, 정수, 유리수, 무리수, 실수, 허수, 복소수, 컬레복소수, 사원수, 수열(sequence) : 자연수 전체 집합 $\aleph$ 에서 실수 전체 집합 $\Re$ 로의 함수 $f, 유한수열, 등차수열(arithmetic sequence), 둥차중항, 조화수열(harmonic progression), 예시, 등비수열(geometric sequence), 등비중항, 합의 기호 $\sum$, 급수(series), 유한급수(finite series), 무한급수(infinite series), 부분합(partial sum), 급수의 성질, 곱의 기호 $\prod$, 멱급수(power series), 유한급수의 성질, 등차수열의 합, 등비수열의 합, 수열의 귀납적 정의, 점화식, 수학적 귀납법을 수열에 사용한 예시, 제곱, 거듭제곱, 지수($exponent$), 자연수 지수의 정의, 0 또는 음의 정수인 지수의 정의, 지수가 유리수인 지수의 정의, 지수가 정수 일 때의 지수법칙, 지수가 유리수 일 때의 지수법칙, 지수가 실수 일 때의 지수법칙, 제곱근(square root), 거듭제곱근, 거듭제곱근의 성질, $\sqrt[n]{a}\sqrt[n]{b}=\sqrt[n]{ab}$, 지수함수, 지수방정식(exponential equation), 예시, 지수부등식(exponential inequality), 예시, 로그($logarithm$), $a > 0$, $a \neq 1$, $N > 0$, 로그의 성질, 로그의 성질(2), 상용로그, 로그함수, 예시, 로그방정식(logarithm equation), 로그부등식(logarithm inequality)
     
     
 
@@ -77,7 +77,7 @@
 
 - [극한 메모](https://ccss17.github.io/calculus.html)
     
-  - 극한(limit), 함수의 수렴(convergence), $\epsilon-\delta$ 논법으로 정의하는 함수의 수렴, 함수의 발산(divergence), $\epsilon-\delta$ 논법으로 정의하는 함수의 발산, 우극한과 좌극한, 우극한, 좌극한, 극한값이 존재하는 조건, 함수의 극한의 성질, 상수에 관한 무한대의 성질, 부정형(indeterminate form), 부정형 극한, $\infty - \infty$, $\frac{\infty}{\infty}$, $\frac{0}{0}$, $\infty \times 0$, 함수의 극한의 대소 관계, 미정계수의 결정, 함수의 연속(continuity), 함수의 불연속(discontinuity), 연속함수, 폐구간에서의 연속함수, 다항함수, 유리함수, 무리함수, 가우스함수, 합성함수, 연속함수의 성질, 최대-최소 정리, 사이값의 정리(intermediate value theorem)
+  - 극한(limit), 무한소(infinitesimal), 무한대, 수열의 수렴(convergence), 수열의 발산(divergence), 등비수열의 극한, 등비수열의 수렴 조건, $r^n$ 을 포함한 수열의 극한, 급수의 수렴, 급수의 발산, 급수와 수열의 극한의 관계, 등비급수(geometric series), 등비급수의 수렴과 발산, 등비급수 수렴 조건, 등비급수를 순환소수에 활용하기, 등비급수를 도형에 활용하기, 함수의 수렴(convergence), 함수의 발산(divergence), $\epsilon-\delta$ 논법으로 정의하는 수열의 수렴, $\epsilon-\delta$ 논법으로 정의하는 함수의 수렴, $\epsilon-\delta$ 논법으로 정의하는 함수의 발산, 우극한과 좌극한, 우극한, 좌극한, 극한값이 존재하는 조건, 수열의 극한의 성질, 함수의 극한의 성질, 상수에 관한 무한대의 성질, 부정형(indeterminate form), 부정형 극한, $\infty - \infty$, $\frac{\infty}{\infty}$, $\frac{0}{0}$, $\infty \times 0$, 함수의 극한의 대소 관계, 미정계수의 결정, 함수의 연속(continuity), 함수의 불연속(discontinuity), 연속함수, 폐구간에서의 연속함수, 다항함수, 유리함수, 무리함수, 가우스함수, 합성함수, 연속함수의 성질, 최대-최소 정리, 사이값의 정리(intermediate value theorem)
     
     
 
@@ -89,7 +89,13 @@
 
 - [적분 메모](https://ccss17.github.io/calculus3.html)
     
-  - 적분(integral), 부정적분(indefinite integral, antiderivative), 적분용어, 적분상수(integral constant), 피적분함수(integrand), 적분변수, 부정적분과 미분의 관계, $n$ 차 단항 함수 $y=x^n$ 의 부정적분, $1$ 의 부정적분, 함수의 실수배, 합, 차의 부정적분, 함수 $f'(g(x))g'(x)$ 의 부정적분, 정적분(definte integral), 부정적분과 정적분의 관계, 정적분의 성질, 절대값 기호를 포함한 함수의 정적분, 정적분의 기하적 의미, 짝함수의 정적분, 홀함수의 정적분, 주기함수의 정적분, 정적분으로 나타내어진 함수, 정적분과 미분의 관계, 곡선과 $x$ 축 사이의 넓이
+  - 적분(integral), 부정적분(indefinite integral, antiderivative), 적분용어, 적분상수(integral constant), 피적분함수(integrand), 적분변수, 부정적분과 미분의 관계, $n$ 차 단항 함수 $y=x^n$ 의 부정적분, $1$ 의 부정적분, 함수의 실수배, 합, 차의 부정적분, 함수 $f'(g(x))g'(x)$ 의 부정적분, 곱의 미분의 역연산을 이용한 부정적분, 정적분(definte integral), 부정적분과 정적분의 관계, 정적분의 성질, 절대값 기호를 포함한 함수의 정적분, 정적분의 기하적 의미, 짝함수의 정적분, 홀함수의 정적분, 주기함수의 정적분, 정적분으로 나타내어진 함수, 정적분과 미분의 관계, 곡선과 $x$ 축 사이의 넓이
+    
+    
+
+- [미분2 메모](https://ccss17.github.io/calculus4.html)
+    
+  - 지수함수 $y=a ^{x}(a>0, a \neq 1)$ 의 극한, 로그함수 $y= \log_{a} x(a>0, a \neq 1)$ 의 극한, 무리수 $e$, 자연로그, 무리수 $e$ 를 이용한 지수함수와 로그함수의 극한
     
     
 ### 선형대수학 메모
