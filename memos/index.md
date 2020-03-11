@@ -2,13 +2,15 @@
 
 # 여러가지 메모 
 
-게시용으로 작성되지 않음. 
+게시용으로 작성되지 않았습니다.
 
-그래서 개인적으로만 사용하는 용어들 및 개인적인 생각들이 종종 포함되어 있음. 
+그래서 개인적으로만 사용하는 용어들 및 개인적인 생각들이 종종 포함되어 있습니다.
 
-공부한 거를 안 까먹으려고 메모한 것들임.
+공부한 거를 안 까먹으려고 메모한 것들입니다.
 
 **http://github.com/ccss17/ccss17.github.io** 에서 관리합니다. 
+
+---
 
 ## Tex 수학기호 메모
 
@@ -16,31 +18,31 @@
 
 ---
 
-## 인공지능 메모 
+### 인공지능 메모 
 
 - https://ccss17.github.io/ai.html
 
-## Makefile 메모 
+### Makefile 메모 
 
 - https://ccss17.github.io/makefile.html
 
-## git 메모 
+### git 메모 
 
 - https://ccss17.github.io/git.html
 
-## docker 메모 
+### docker 메모 
 
 - https://ccss17.github.io/docker.html
 
-## 정신지도규칙 메모 (데카르트)
-
-- https://ccss17.github.io/descartes.html
+---
 
 ## 철학 메모
 
 - https://ccss17.github.io/philosophy.html
 
----
+## 정신지도규칙 메모 (데카르트)
+
+- https://ccss17.github.io/descartes.html
 
 ## 수학 메모
 
@@ -58,7 +60,7 @@
 
 - [수학 메모2](https://ccss17.github.io/math2.html)
     
-  - 양, 수, 값, 이항연산(binary operation), 등호($=$), 덧셈($+$), 뺄셈($-$), 곱셈($\times$), 나눗셈($\div$), 비(비율), $b$ 에 대한 $a$ 의 비는 $a, 두 수 $a$ 와 $b$ 의 비는 $a, $1, 비례식, 비례식이란 두 개의 비 $a : b$ 와 $c, 가비의 비, 약수, 배수, 공약수, 최대공약수, 공배수, 소수(decimal), 유한소수(finite decimal), 유한소수(infinite decimal), 순환소수, 최소공배수, 소수(prime number), 서로소, 역연산, 항등원, 역원(inverse element), 거듭제곱, 자연수, 정수, 유리수, 무리수, 실수, 허수, 복소수, 컬레복소수, 사원수, 수열(sequence) : 자연수 전체 집합 $\aleph$ 에서 실수 전체 집합 $\Re$ 로의 함수 $f, 유한수열, 등차수열(arithmetic sequence), 둥차중항, 조화수열(harmonic progression), 예시, 등비수열(geometric sequence), 등비중항, 합의 기호 $\sum$, 급수(series), 유한급수(finite series), 무한급수(infinite series), 부분합(partial sum), 급수의 성질, 곱의 기호 $\prod$, 멱급수(power series), 유한급수의 성질, 등차수열의 합, 등비수열의 합, 수열의 귀납적 정의, 점화식, 수학적 귀납법을 수열에 사용한 예시, 제곱, 거듭제곱, 지수($exponent$), 자연수 지수의 정의, 0 또는 음의 정수인 지수의 정의, 지수가 유리수인 지수의 정의, 지수가 정수 일 때의 지수법칙, 지수가 유리수 일 때의 지수법칙, 지수가 실수 일 때의 지수법칙, 제곱근(square root), 거듭제곱근, 거듭제곱근의 성질, $\sqrt[n]{a}\sqrt[n]{b}=\sqrt[n]{ab}$, 지수함수, 지수방정식(exponential equation), 예시, 지수부등식(exponential inequality), 예시, 로그($logarithm$), $a > 0$, $a \neq 1$, $N > 0$, 로그의 성질, 로그의 성질(2), 상용로그, 로그함수, 예시, 로그방정식(logarithm equation), 로그부등식(logarithm inequality)
+  - 양, 수, 값, 이항연산(binary operation), 등호($=$), 덧셈($+$), 뺄셈($-$), 곱셈($\times$), 나눗셈($\div$), 비(비율), $b$ 에 대한 $a$ 의 비는 $a, 두 수 $a$ 와 $b$ 의 비는 $a, $1, 비례식, 비례식이란 두 개의 비 $a : b$ 와 $c, 가비의 비, 약수, 배수, 공약수, 최대공약수, 공배수, 소수(decimal), 유한소수(finite decimal), 유한소수(infinite decimal), 순환소수, 최소공배수, 소수(prime number), 서로소, 역연산, 항등원, 역원(inverse element), 거듭제곱, 자연수(natural number), 정수(integer), 유리수(rational number), 무리수(irrational number), 실수(real number), 허수(imaginary number), 복소수(complex number), 컬레복소수, 사원수(quaternion), 초월수(transcendental number), 수열(sequence) : 자연수 전체 집합 $\aleph$ 에서 실수 전체 집합 $\Re$ 로의 함수 $f, 유한수열, 등차수열(arithmetic sequence), 둥차중항, 조화수열(harmonic progression), 등비수열(geometric sequence), 등비중항, 합의 기호 $\sum$, 급수(series), 유한급수(finite series), 무한급수(infinite series), 부분합(partial sum), 급수의 성질, 곱의 기호 $\prod$, 멱급수(power series), 유한급수의 성질, 등차수열의 합, 등비수열의 합, 수열의 귀납적 정의, 점화식, 수열에 사용된 수학적 귀납법, 제곱, 거듭제곱, 지수($exponent$), 자연수 지수의 정의, 0 또는 음의 정수인 지수의 정의, 지수가 유리수인 지수의 정의, 지수가 정수 일 때의 지수법칙, 지수가 유리수 일 때의 지수법칙, 지수가 실수 일 때의 지수법칙, 제곱근(square root), 거듭제곱근, 거듭제곱근의 성질, $\sqrt[n]{a}\sqrt[n]{b}=\sqrt[n]{ab}$, 지수함수, 지수방정식(exponential equation), 지수부등식(exponential inequality), 로그($logarithm$), 로그의 성질, 로그의 성질(2), 상용로그, 로그함수, 로그방정식(logarithm equation), 로그부등식(logarithm inequality)
     
     
 
@@ -95,7 +97,7 @@
 
 - [미분2 메모](https://ccss17.github.io/calculus4.html)
     
-  - 지수함수 $y=a ^{x}(a>0, a \neq 1)$ 의 극한, 로그함수 $y= \log_{a} x(a>0, a \neq 1)$ 의 극한, 무리수 $e$, 자연로그, 무리수 $e$ 를 이용한 지수함수와 로그함수의 극한
+  - 지수함수 $y=a ^{x}(a>0, a \neq 1)$ 의 극한, 로그함수 $y= \log_{a} x(a>0, a \neq 1)$ 의 극한, 무리수 $e$, 자연로그, 무리수 $e$ 를 이용한 지수함수와 로그함수의 극한, 지수함수의 도함수, 로그함수의 도함수
     
     
 ### 선형대수학 메모

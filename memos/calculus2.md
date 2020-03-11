@@ -227,6 +227,12 @@
 
     $$ f'(x) = \lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x} $$
 
+    $\Delta x$ 를 간단하게 $h$ 로 바꾸고 
+
+    $$ f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} $$
+
+    로 표기하기도 한다. 
+
     - 미분계수란 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $a+\Delta x$ 까지 변할 때의 평균변화율 $\frac{\Delta y}{\Delta x}$ 에서 $\Delta x \to 0$ 일 때의 극한값, 즉
 
       $$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(a+\Delta x)-f(a)}{\Delta x} $$
