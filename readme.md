@@ -72,7 +72,7 @@
 
 - [수학 메모4](https://ccss17.github.io/math4.html)
     
-  - 점, 선, 직선, 선분, 면, 둘레(경계), 도형, 반직선, 각, 각도, 가장 큰 각, 육십분법, 호도법($Radian$), 직각, 예각, 둔각, 다각형, 삼각형, 사각형, 넓이(면적), 원, 지름, 반지름, 원주, 원주율($\pi$), 원의 넓이, 호($arc$), 원호($circular arc$), 부채꼴($circular sector$), 반원, 육십분법, 호도법($Radian$), 새로운 원주율($\tau$), 삼각법(trigonometry), 삼각비(trigonometric ratio), 밑변, 빗변, 높이, 사인($sine$), 코사인($cosine$), 탄젠트($tangent$), 코시컨트($cosecant$), 시컨트($secant$), 코탄젠트($cotangent$), 단위원(Unit circle), 삼각함수(trigonometric functions), 삼각함수의 단위원을 통한 정의, 사인함수($sin\theta$), 코사인함수($cos\theta$), 탄젠트함수($tan\theta$), 코시컨트함수($csc\theta$), 시컨트함수($sec\theta$), 코탄젠트함수($cot\theta$), 삼각방정식, 예시, 삼각부등식, 예시, 삼각형과 삼각함수와의 관계, 사인법칙(Law of sines), 코사인법칙(Law of cosines), 삼각형의 넓이와 삼각함수와의 관계, 사각형의 넓이, 평행사변형의 넓이, 자료(data, 데이터), 질적 자료(qualitative data, 정성적 자료), 양적 자료(quantitative data, 정량적 자료), 정보(information), 지식(knowledge), 통계학, 평균, 이산수학(discrete mathematics), 예시, 시행(experiment), 사건(event), 독립사건(independent), 예시, 종속사건(dependent), 경우의 수, 합의 법칙, 예시, 예시, 곱의 법칙, 계승(factorial), 순열(비복원추출, permutation), 중복순열(복원추출), 조합(combination), 확률, 확률의 덧셈, 확률의 곱, 변량, 계급, 도수, 도수분포표, 히스토그램, 상대도수, 편차, 분산, 표준편차
+  - 점, 선, 직선, 선분, 면, 둘레(경계), 도형, 반직선, 각, 각도, 가장 큰 각, 육십분법, 호도법($Radian$), 직각, 예각, 둔각, 다각형, 삼각형, 사각형, 넓이(면적), 원, 지름, 반지름, 원주, 원주율($\pi$), 원의 넓이, 호($arc$), 원호($circular arc$), 부채꼴($circular sector$), 부채꼴의 호의 길이, 부채꼴의 넓이, 반원, 육십분법, 호도법($Radian$), 새로운 원주율($\tau$), 삼각법(trigonometry), 삼각비(trigonometric ratio), 밑변, 빗변, 높이, 사인($sine$), 코사인($cosine$), 탄젠트($tangent$), 코시컨트($cosecant$), 시컨트($secant$), 코탄젠트($cotangent$), 단위원(Unit circle), 삼각함수(trigonometric functions), 삼각함수의 단위원을 통한 정의, 사인함수($sin\theta$), 코사인함수($cos\theta$), 탄젠트함수($tan\theta$), 코시컨트함수($csc\theta$), 시컨트함수($sec\theta$), 코탄젠트함수($cot\theta$), 삼각함수의 특수각, 삼각방정식, 삼각부등식, 삼각형과 삼각함수와의 관계, 사인법칙(Law of sines), 코사인법칙(Law of cosines), 삼각형의 넓이와 삼각함수와의 관계, 사각형의 넓이, 평행사변형의 넓이, 삼각함수의 덧셈정리, 배각의 공식, 반각의 공식, 자료(data, 데이터), 질적 자료(qualitative data, 정성적 자료), 양적 자료(quantitative data, 정량적 자료), 정보(information), 지식(knowledge), 통계학, 평균, 이산수학(discrete mathematics), 시행(experiment), 사건(event), 독립사건(independent), 종속사건(dependent), 경우의 수, 합의 법칙, 곱의 법칙, 계승(factorial), 순열(비복원추출, permutation), 중복순열(복원추출), 조합(combination), 확률, 확률의 덧셈, 확률의 곱, 변량, 계급, 도수, 도수분포표, 히스토그램, 상대도수, 편차, 분산, 표준편차
     
     
 ### 미적분 메모
@@ -85,7 +85,7 @@
 
 - [미분 메모](https://ccss17.github.io/calculus2.html)
     
-  - 미적분학(Calculus), 미분, 증분, 평균변화율(average rate of change), $0 \to 2$, 미분계수(derivative) 또는 순간변화율(instantaneous rate of change), 미분 가능한 함수, 미분가능성과 함수의 연속, 도함수(derivatives, derived function, derivative of a function), $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수, 상수 함수 $y = c$ 의 도함수, 상수배 함수 $y =cf(x)$ 의 도함수, 합차 함수 $y=f(x)\pm g(x)$ 의 도함수, 곱 함수 $y=f(x)g(x)$ 의 도함수, 합성함수 $y=g(f(x))$ 의 도함수, 제곱 함수 $y = \{f(x)\} ^{n}$ 의 도함수, 역함수의 도함수, 이계도함수(second order derivatives), 접선의 방정식, 실근의 근사값 구하기(뉴턴의 방법), 롤의 정리, 함수 $f(x)$ 가 상수함수가 아닌 경우, 평균값 정리, 평균값 정리의 따름정리, 함수의 증가, 함수의 감소, 함수의 증가의 판정, 함수의 감소의 판정, 함수의 극대와 극소, 함수의 극대(local maximum), 함수의 극소(local minimum), 극값(extreme values), 함수의 극대와 극소의 판정, 함수의 극대 판정, 함수의 극소 판정, 이계도함수를 이용한 함수의 극대와 극소의 판정, 극값을 찾는 법, 함수의 최대값-최소값, 함수의 최대값, 함수의 최소값
+  - 미적분학(Calculus), 미분, 증분, 평균변화율(average rate of change), $0 \to 2$, 미분계수(derivative) 또는 순간변화율(instantaneous rate of change), 미분 가능한 함수, 미분가능성과 함수의 연속, 도함수(derivatives, derived function, derivative of a function), $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수, 상수 함수 $y = c$ 의 도함수, 상수배 함수 $y =cf(x)$ 의 도함수, 합차 함수 $y=f(x)\pm g(x)$ 의 도함수, 곱 함수 $y=f(x)g(x)$ 의 도함수, 합성함수 $y=g(f(x))$ 의 도함수, 제곱 함수 $y = \{f(x)\} ^{n}$ 의 도함수, 몫 함수 $y = \frac{1}{f(x)}$ 의 미분법, 분수 함수 $y = \frac{f(x)}{g(x)}$ 의 미분법, 역함수의 도함수, 이계도함수(second order derivatives), 접선의 방정식, 실근의 근사값 구하기(뉴턴의 방법), 롤의 정리, 함수 $f(x)$ 가 상수함수가 아닌 경우, 평균값 정리, 평균값 정리의 따름정리, 함수의 증가, 함수의 감소, 함수의 증가의 판정, 함수의 감소의 판정, 함수의 극대와 극소, 함수의 극대(local maximum), 함수의 극소(local minimum), 극값(extreme values), 함수의 극대와 극소의 판정, 함수의 극대 판정, 함수의 극소 판정, 이계도함수를 이용한 함수의 극대와 극소의 판정, 극값을 찾는 법, 함수의 최대값-최소값, 함수의 최대값, 함수의 최소값
     
     
 
@@ -97,7 +97,7 @@
 
 - [미분2 메모](https://ccss17.github.io/calculus4.html)
     
-  - 지수함수 $y=a ^{x}(a>0, a \neq 1)$ 의 극한, 로그함수 $y= \log_{a} x(a>0, a \neq 1)$ 의 극한, 무리수 $e$, 자연로그, 무리수 $e$ 를 이용한 지수함수와 로그함수의 극한, 지수함수의 도함수, 로그함수의 도함수
+  - 지수함수 $y=a ^{x}(a>0, a \neq 1)$ 의 극한, 로그함수 $y= \log_{a} x(a>0, a \neq 1)$ 의 극한, 무리수 $e$, 자연로그, 무리수 $e$ 를 이용한 지수함수와 로그함수의 극한, 지수함수의 도함수, 로그함수의 도함수, 삼각함수의 극한, 함수 $\frac{\sin x}{x}, \frac{\tan x}{x}$ 의 극한, 함수 $y = \sin x$ 의 도함수, 함수 $y = \cos x$ 의 도함수, 함수 $y = \tan x$ 의 도함수, 함수 $y = \sec x$ 의 도함수, 함수 $y = \csc x$ 의 도함수, 함수 $y = \cot x$ 의 도함수
     
     
 ### 선형대수학 메모

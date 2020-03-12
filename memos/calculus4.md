@@ -240,7 +240,7 @@
 
         이다. 
 
-# 지수함수와 로그함수의 미분 
+## 지수함수와 로그함수의 미분 
 
 - 지수함수의 도함수 : 지수함수 $y=a ^{x}$ 의 도함수는 다음과 같다. 
 
@@ -260,7 +260,7 @@
 
     이다. 
 
-- 로그함수의 도함수 : 로그함수 $y = \log_{a} x$ 의 도함수는 다음과 같다. 
+- 로그함수의 도함수 : 로그함수 $y = \log_{a} x(a>0, a \neq 1)$ 의 도함수는 다음과 같다. 
 
   $$ y' = \frac{1}{x \ln a} $$
 
@@ -281,3 +281,205 @@
       $$ \therefore y' = \frac{1}{x\ln a} $$
 
       이다. 
+  
+  - 그러므로 밑이 $e$ 일 때, 즉 $a=e$ 일 때 자연로그함수 $y = \ln x$ 의 도함수는 
+
+    $$ y' = \frac{1}{x} $$
+
+    이다. 
+
+# 삼각함수의 극한
+
+- 삼각함수의 극한 : 임의의 실수 $a$ 에 대하여 삼각함수의 극한은 다음과 같다. 
+
+  - $\lim_{x \to a} \sin x = \sin a$
+
+  - $\lim_{x \to a} \cos x = \cos a$
+
+  - $\lim_{x \to a} \tan x = \tan a$ (단, $a \neq n \pi  + \frac{\pi }{2}$, $n$ 은 정수)
+
+    - 증명 
+      
+      $\sin, \cos, \tan$ 함수에서 알 수 있듯이 삼각함수는 연속함수이다. 즉, 임의의 실수 $a$ 에 대하여 $x \to a$ 에서의 극한값은 $x=a$ 에서의 함수값과 같으므로 
+
+        $$ \lim_{x \to a} \sin x = a, \lim_{x \to a} \cos x = a $$
+      
+      이다.
+      
+      그런데 $\tan$ 함수는 임의의 정수 $n$ 에 대하여 $x= (\frac{1 }{2} + n)\pi$ 에 대하여 불연속이고 나머지 구간에서는 연속이다. 그러므로 $a \neq (\frac{1}{2}+n) \pi$ 인 임의의 실수 $a$ 에 대하여 $x \to a$ 일 때 극한값이 $x=a$ 에서의 함수값과 같으므로 
+
+        $$ \lim_{x \to a} \tan x = a $$
+      
+      이다.
+      
+      $a = (\frac{1}{2}+n) \pi$ 인 임의의 실수 $a$ 에서는 
+
+      $$ \lim_{x \to a-} \tan x = \infty , \lim_{x \to a+} \tan x = - \infty $$
+
+      가 되어 극한값이 존재하지 않는다.
+
+- 함수 $\frac{\sin x}{x}, \frac{\tan x}{x}$ 의 극한 : $x$ 가 라디안일 때 다음이 성립한다. 
+
+  - $\lim_{x \to 0} \frac{\sin x}{x} = 1$
+
+    - 증명 
+
+      중심각 $\theta$ 를 갖는 부채꼴과 부채꼴에 내접한 삼각형, 외접한 삼각형의 넓이의 관계 부등식으로부터 부채꼴의 중심각이 $0$ 에 한없이 가까워질 때 세 넓이가 같아지는 것(샌드위치 정리)을 이용하여 
+
+        $$ \lim_{x \to 0} \frac{\sin x}{x} = 1 $$
+
+      를 증명할 수 있다. 하지만 단순하게 $y = \frac{\sin x}{x}$ (단, $x \neq 0$) 그래프를 그려보자.
+
+        ![desmos-graph(4)](https://user-images.githubusercontent.com/16812446/76512654-6b866d80-6498-11ea-8e90-9c0e89854eb6.png)
+      
+      그러면 그래프가 위와 같은데, 물론 $x=0$ 에서 함수값은 정의되지 않지만 $x \to 0$ 에서의 극한값은 $1$ 이기 때문에
+      
+        $$ \therefore  \lim_{x \to 0} \frac{\sin x}{x} = 1 $$
+      
+      임을 알 수 있다. 
+
+  - $\lim_{x \to 0} \frac{\tan x}{x} = 1$
+
+    - 증명 
+
+      $$ \lim_{x \to 0} \frac{\tan x}{x} = \lim_{x \to 0} \frac{\sin x}{x \cos x} = \lim_{x \to 0} (\frac{\sin x}{x} \circ \frac{1}{\cos x}) $$
+
+      $$ = \lim_{x \to 0} \frac{\sin x}{x} \circ \lim_{x \to 0} \frac{1}{\cos x} = 1 \circ 1 = 1 $$
+
+      그러므로 
+
+      $$ \therefore \lim_{x \to 0} \tan x = 1 $$
+
+      이다. 다음 그래프 $y=\frac{\tan x}{x}$ 에서도 $x \to 0 \Rightarrow \tan x \to 1$ 임을 확인할 수 있다. 물론 다음 그래프도 $x=0$ 에서 함수값은 정의되어있지 않다. 
+
+      ![desmos-graph(5)](https://user-images.githubusercontent.com/16812446/76512834-b56f5380-6498-11ea-8ebb-40991579d7e4.png)
+
+  - $\lim_{x \to 0} \frac{\cos x}{x}$ 는 발산한다. 
+
+    - 증명 
+
+      $$ \lim_{x \to 0+} \cos x = 1, \lim_{x \to 0+} \frac{1}{x} = \infty $$
+
+      이므로
+
+      $$ \lim_{x \to 0+} \frac{\cos x}{x} = \infty $$
+
+      인데 반해 
+
+      $$ \lim_{x \to 0-} \cos x = 1, \lim_{x \to 0-} \frac{1}{x} = -\infty $$
+
+      이므로
+
+      $$ \lim_{x \to 0-} \frac{\cos x}{x} = -\infty $$
+
+      이다. 
+
+      즉, $\frac{\cos x}{x}$ 는 $x=0$ 에서 우극한과 좌극한이 같지 않다. 따라서 $x=0$ 에서 극한값은 존재하지 않는다. 함수 $y = \frac{\cos x}{x}$ 의 그래프는 다음과 같다. 
+
+      ![desmos-graph(6)](https://user-images.githubusercontent.com/16812446/76513437-a4731200-6499-11ea-87ae-a6646df7cc60.png)
+
+# 삼각함수의 도함수 
+
+- 함수 $y = \sin x$ 의 도함수 : $y' = \cos x$ 이다. 
+
+  - 증명 
+
+    삼각함수 $y = \sin x$ 의 도함수는 도함수의 정의에 의하여 
+
+      $$ y' = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = \lim_{h \to 0} \frac{\sin (x+h)-\sin x}{h} $$
+
+      이다. 이때 사인함수의 덧셈정리에 의하여 
+
+      $$ = \lim_{h \to 0} \frac{\sin x\cos h + \cos x \sin h -\sin x}{h} $$
+
+      $$ = \lim_{h \to 0} \frac{\sin x(\cos h -1) + \cos x \sin h }{h} $$
+
+      $$ = \sin x \lim_{h \to 0} \frac{(\cos h - 1)}{h} + \cos x \lim_{h \to 0} \frac{\sin h}{h} $$
+
+      이다. 그런데 $\lim_{x \to 0} \frac{\sin x}{x} = 1$ 이므로 
+
+      $$ = \sin x \times 0 + \cos x \times 1 $$
+
+      이다. 따라서 최종적으로 
+
+      $$ \therefore (\sin x)' = \cos x $$
+
+      이다. 
+
+- 함수 $y = \cos x$ 의 도함수 : $y' = -\sin x$ 이다. 
+
+  - 증명 
+
+    삼각함수 $y = \cos x$ 의 도함수는 도함수의 정의에 의하여 
+
+      $$ y' = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = \lim_{h \to 0} \frac{\cos (x+h)-\cos x}{h} $$
+
+      이다. 이때 코사인함수의 덧셈정리에 의하여 
+
+      $$ = \lim_{h \to 0} \frac{\cos x\cos h - \sin x \sin h -\cos x}{h} $$
+
+      $$ = \lim_{h \to 0} \frac{\cos x(\cos h -1) - \sin x \sin h }{h} $$
+
+      $$ = \cos x \lim_{h \to 0} \frac{(\cos h - 1)}{h} - \sin x \lim_{h \to 0} \frac{\sin h}{h} $$
+
+      이다. 그런데 $\lim_{x \to 0} \frac{\sin x}{x} = 1$ 이므로 
+
+      $$ = \cos x \times 0 - \sin x \times 1 $$
+
+      이다. 따라서 최종적으로 
+
+      $$ \therefore (\cos x)' = -\sin x $$
+
+      이다. 
+
+- 함수 $y = \tan x$ 의 도함수 : $y' = \sec ^{2} x$ 이다. 
+
+  - 증명 
+
+    $\tan x = \frac{\sin x}{\cos x}$ 이므로 몫의 미분을 사용하면 
+
+      $$ (\tan x)' = (\frac{\sin x}{\cos x})' = \frac{(\sin x)'\cos x - \sin x(\cos x)'}{\cos ^{2}x} $$
+
+- 함수 $y = \sec x$ 의 도함수 : $y' = \sec x \tan x$ 이다. 
+
+  - 증명 
+
+    $\sec x = \frac{1}{\cos x}$ 이므로 몫의 미분을 사용하면 
+
+      $$ (\sec x)' = (\frac{1}{\cos x})' = -\frac{(\cos x)'}{\cos ^{2}x}= \frac{\sin x}{\cos ^{2}x} = \frac{1}{\cos x} \circ \frac{\sin x}{\cos x} $$
+    
+    이다. 따라서 최종적으로 
+
+      $$ \therefore  (\sec x)' = \sec x \tan x $$
+    
+    이다.
+
+- 함수 $y = \csc x$ 의 도함수 : $y' = -\csc x \cot x$ 이다. 
+
+  - 증명 
+
+    $\csc x = \frac{1}{\sin x}$ 이므로 몫의 미분을 사용하면 
+
+      $$ (\csc x)' = (\frac{1}{\sin x})' = -\frac{(\sin x)'}{\sin ^{2}x}= -\frac{\cos x}{\sin ^{2}x} = -\frac{1}{\sin x} \circ \frac{\cos x}{\sin x} $$
+    
+    이다. 따라서 최종적으로 
+
+      $$ \therefore  (\csc x)' = - \csc x \cot x $$
+    
+    이다.
+
+- 함수 $y = \cot x$ 의 도함수 : $y' = -\csc ^{2} x$ 이다. 
+
+  - 증명 
+
+    $\cot x = \frac{\cos x }{\sin x}$ 이므로 분수함수 미분을 사용하면 
+
+      $$ (\cot x)' = (\frac{\cos x}{\sin x})' = \frac{(\cos x)'\sin x - \cos x(\sin x)'}{\sin ^{2}x} = \frac{-\sin ^{2} x - \cos ^{2} x}{\sin ^{2}x} = -\frac{1}{\sin ^{2}x} $$
+    
+    이다. 따라서 최종적으로 
+
+      $$ \therefore  (\cot x)' = - \csc ^{2}x $$
+    
+    이다.
+
+## 복잡한 함수의 도함수 

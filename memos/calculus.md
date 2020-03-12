@@ -798,13 +798,15 @@
         
         이다. 
 
-  2. 함수 $h(x)$ 에 대하여 $f(x) \leq h(x) \leq g(x)$ 이고 $\alpha = \beta$ 이면 
+  2. 샌드위치 정리 : 함수 $h(x)$ 에 대하여 $f(x) \leq h(x) \leq g(x)$ 이고 $\alpha = \beta$ 이면 
   
       $$\lim_{x \to a} h(x) = \alpha$$
     
       이다. 
 
-      - 함수 $h(x)$ 가 $f(x)\leq h(x)\leq g(x)$ 를 만족시키면 정의역 $x$ 가 $a$ 에 한없이 가까워질 때 극한의 대소관계에 따라 
+      - 증명
+      
+        함수 $h(x)$ 가 $f(x)\leq h(x)\leq g(x)$ 를 만족시키면 정의역 $x$ 가 $a$ 에 한없이 가까워질 때 극한의 대소관계에 따라 
 
         $$ \alpha \leq \lim_{x \to a} h(x) \leq \beta $$
 

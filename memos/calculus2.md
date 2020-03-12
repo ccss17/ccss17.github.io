@@ -257,71 +257,75 @@
 
 - $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $y' = f'(x) = nx ^{n-1}$ 
 
-  - ($n$ 은 자연수)
+  - 증명 
 
-  $$ f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = \lim_{x \to 0} \frac{(x+h)^n-x^n}{h} $$
+    $$ f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = \lim_{x \to 0} \frac{(x+h)^n-x^n}{h} $$
 
-  $$ = \lim_{h \to 0} \frac{\{(x+h)-x\}\{(x+h)^{n-1}+(x+h)^{n-2}x+\dots+(x+h)x ^{n-2}+x ^{n-1}\}}{h} $$
+    $$ = \lim_{h \to 0} \frac{\{(x+h)-x\}\{(x+h)^{n-1}+(x+h)^{n-2}x+\dots+(x+h)x ^{n-2}+x ^{n-1}\}}{h} $$
 
-  $$ = \lim_{h \to 0} \{(x+h)^{n-1}+(x+h)^{n-2}x+\dots+(x+h)x ^{n-2}+x ^{n-1}\} $$
+    $$ = \lim_{h \to 0} \{(x+h)^{n-1}+(x+h)^{n-2}x+\dots+(x+h)x ^{n-2}+x ^{n-1}\} $$
 
-  $$ = \sum_{k=1}^{n}x ^{n-1} = nx ^{n-1} $$
+    $$ = \sum_{k=1}^{n}x ^{n-1} = nx ^{n-1} $$
 
   - $x^n$ 이 계속해서 $nx ^{n-1}$ 만큼 변화한다는 것이다. 
 
 - 상수 함수 $y = c$ 의 도함수 : $y'=0$ 
 
-  - ($c$ 는 상수) 
+  - 증명
 
-  $$ f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = \lim_{h \to 0} \frac{c-c}{h} = 0 $$
+    $$ f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = \lim_{h \to 0} \frac{c-c}{h} = 0 $$
 
-  또는
+    또는
 
-  $$ f(x) = c \times x ^{0} $$
+    $$ f(x) = c \times x ^{0} $$
 
-  에서 
+    에서 
 
-  $$ f'(x) = c \times 0 \times x ^{-1} = 0$$
+    $$ f'(x) = c \times 0 \times x ^{-1} = 0$$
 
   - 상수함수는 변하지 않고 일정하기 때문에 그것의 변화량을 보여주는 도함수가 $0$ 인 것을 직관적으로 이해할 수 있다. 
 
 - 상수배 함수 $y =cf(x)$ 의 도함수 : $y' = cf'(x)$
 
-  - ($c$ 는 상수) 
+  - 증명
 
-  $$ \{cf(x)\}' = \lim_{h \to 0} \frac{cf(x+h)-cf(x)}{h} = c \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = cf'(x) $$
+    $$ \{cf(x)\}' = \lim_{h \to 0} \frac{cf(x+h)-cf(x)}{h} = c \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = cf'(x) $$
 
   - 어떤 함수에 실수배를 하면 그 변화율이 정확히 실수배 된다는 것을 것을 알 수 있다. 
 
 - 합차 함수 $y=f(x)\pm g(x)$ 의 도함수 : $y'=f'(x)\pm g'(x)$
 
-  $$ \{f(x)+g(x)\}' = \lim_{h \to 0} \frac{\{f(x+h)+g(x+h)\}-\{f(x)+g(x)\}}{h} $$
+  - 증명
 
-  $$ = \lim_{h \to 0} \frac{\{f(x+h)-f(x)\}-\{g(x+h)-g(x)\}}{h} $$
+    $$ \{f(x)+g(x)\}' = \lim_{h \to 0} \frac{\{f(x+h)+g(x+h)\}-\{f(x)+g(x)\}}{h} $$
 
-  $$ = \lim_{h \to 0} \frac{\{f(x+h)-f(x)\}}{h} + \lim_{h \to 0} \frac{\{g(x+h)-g(x)\}}{h} $$
+    $$ = \lim_{h \to 0} \frac{\{f(x+h)-f(x)\}-\{g(x+h)-g(x)\}}{h} $$
 
-  $$ = f'(x)+g'(x) $$
+    $$ = \lim_{h \to 0} \frac{\{f(x+h)-f(x)\}}{h} + \lim_{h \to 0} \frac{\{g(x+h)-g(x)\}}{h} $$
+
+    $$ = f'(x)+g'(x) $$
 
   - 이를 통해 함수의 합과 차의 도함수는 각각의 함수의 도함수를 합과 차와 동일하다는 것을 알 수 있다. 
 
 - 곱 함수 $y=f(x)g(x)$ 의 도함수 : $y'=f'(x)g(x)+f(x)g'(x)$
 
-  $$ \{f(x)g(x)\}' = \lim_{h \to 0} \frac{f (x+h)g (x+h)-f(x)g(x)}{h} $$
+  - 증명
 
-  $$ = \lim_{h \to 0} \frac{f(x+h)g(x+h) - f(x)g (x+h)+f(x)g (x+h) - f(x)g(x)}{h} $$
+    $$ \{f(x)g(x)\}' = \lim_{h \to 0} \frac{f (x+h)g (x+h)-f(x)g(x)}{h} $$
 
-  $$ = \lim_{h \to 0} \frac{\{f (x+h)-f(x)\}g(x+h)+f(x) \{g (x+h)-g(x)\}}{h} $$
+    $$ = \lim_{h \to 0} \frac{f(x+h)g(x+h) - f(x)g (x+h)+f(x)g (x+h) - f(x)g(x)}{h} $$
 
-  $$ = \lim_{h \to 0} \frac{f (x+h)-f(x)}{h} \lim_{h \to 0} g (x+h) + \lim_{h \to 0} f(x) \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} $$
+    $$ = \lim_{h \to 0} \frac{\{f (x+h)-f(x)\}g(x+h)+f(x) \{g (x+h)-g(x)\}}{h} $$
 
-  $$ = f'(x)g(x) + f(x)g'(x) $$
+    $$ = \lim_{h \to 0} \frac{f (x+h)-f(x)}{h} \lim_{h \to 0} g (x+h) + \lim_{h \to 0} f(x) \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} $$
+
+    $$ = f'(x)g(x) + f(x)g'(x) $$
 
 - 합성함수 $y=g(f(x))$ 의 도함수 : $y' = g'(f(x))f'(x)$
 
   - 증명 
 
-    미분계수의 정의에 의하여 
+    도함수의 정의에 의하여 
 
     $$ \{f(g(x))\}' = \lim_{h \to 0} \frac{f(g(x+h)-f(g(x)))}{h} $$
 
@@ -339,7 +343,7 @@
 
     에서 최종적으로 
 
-    $$ = f'(g(x))g'(x) $$
+    $$ \therefore y' = f'(g(x))g'(x) $$
 
     을 얻는다. 
 
@@ -370,6 +374,44 @@
       $$                    = (k+1)f'(x)\{f(x)\} ^{k}$$
 
       이다. 그러므로 만약 $n=k$ 일 때 가정이 성립한다고 하면 $n=k+1$ 일 때도 성립한다. 그런데 $n=2$ 인 경우 가정이 반드시 참이라는 것이 이미 증명되어 있다. 따라서 $3$ 도 참일 것이고 $4$ 도 참일 것이고 임의의 자연수 $n$ 이 참이라는 것이 $n-1$ 이 참이라는 것으로부터 증명될 것이다. 또 이 $n-1$ 이 참이라는 것은 최초의 $2$ 가 참이라는 것으로부터 증명된다. 
+
+- 몫 함수 $y = \frac{1}{f(x)}$ 의 미분법 : 몫 함수 $y = \frac{1}{f(x)}(f(x) \neq 0)$ 의 도함수는 다음과 같다. 
+
+  $$ \{\frac{1}{g(x)}\}' = - \frac{g'(x)}{\{g(x)\}^{2}} $$
+
+  - 증명 
+
+    함수 $f(x)$ 가 미분가능하고 $f(x) \neq 0$ 일 때 $y = \frac{1}{f(x)}$ 의 도함수는 도함수의 정의에 의하여 
+
+      $$ y' = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = \lim_{h \to 0} \frac{\frac{1}{f(x+h)} - \frac{1}{f(x)}}{h} = \lim_{h \to 0} \frac{-\frac{f(x+h)-f(x)}{f(x+h)f(x)}}{\frac{h}{1}} $$
+
+      $$ = -\lim_{h \to 0} \frac{f(x+h)-f(x)}{hf(x+h)f(x)} = - \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} \circ \frac{1}{f(x+h)f(x)} $$
+
+      $$= - \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} \circ \lim_{h \to 0}  \frac{1}{f(x+h)f(x)} = - f'(x) \circ \frac{1}{\{f (x)\} ^{2}}$$
+    
+    이다. 따라서 최종적으로 
+
+      $$ y' = -\frac{f'(x)}{\{f(x)\}^{2}} $$
+    
+    이다. 
+
+- 분수 함수 $y = \frac{f(x)}{g(x)}$ 의 미분법 : 몫 함수 $y = \frac{f(x)}{g(x)}(g(x) \neq 0)$ 의 도함수는 다음과 같다. 
+
+  $$ \{\frac{f(x)}{g(x)}\}' = \frac{f'(x)g(x)-f(x)g'(x)}{\{g(x)\} ^{2}} $$
+
+  - 증명 
+
+    두 함수 $f(x),g(x)(g(x) \neq 0)$ 가 미분가능하다고 할 때 분수함수의 도함수를 구해보자. 이때 곱의 미분법을 사용하면
+
+    $$ y' = \{\frac{f(x)}{g(x)}\}' = \{f(x) \circ \frac{1}{g(x)}\}' = f'(x) \circ \frac{1}{g(x)} + f(x) \circ \{\frac{1}{g(x)}\}' $$
+
+    이고 몫의 미분을 사용하면 
+
+    $$ = \frac{f'(x)}{g(x)} - f(x) \circ \frac{g'(x)}{\{g(x)\} ^{2}} $$
+
+    이므로 최종적으로 
+
+    $$ \therefore y' = \frac{f'(x)g(x) - f(x)g'(x)}{\{g(x)\} ^{2}} $$
 
 - 역함수의 도함수 : 직선의 방정식 $f(x)$ 위의 점 $(a, b)$ 과 점 $(c, d)$ 로 정의된 기울기 $f'(a) = \frac{d-b}{c-a}$ 이다.
 
