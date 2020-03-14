@@ -341,8 +341,12 @@
     $$ = \lim_{h \to 0} \frac{f (x+h)-f(x)}{h} \lim_{h \to 0} g (x+h) + \lim_{h \to 0} f(x) \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} $$
 
     $$ = f'(x)g(x) + f(x)g'(x) $$
+  
+#### 연쇄법칙(Chain Rule)
 
-- 합성함수 $y=g(f(x))$ 의 도함수 : $y' = g'(f(x))f'(x)$
+- 합성함수 $y=g(f(x))$ 의 도함수(연쇄법칙, Chain Rule) : $y' = g'(f(x))f'(x)$
+
+  - 여러 개의 함수를 미분할 때 고리로 연결된 것처럼 연속적으로 작용한다는 형상에서 착안하여 합성함수의 미분법을 연쇄법칙(Chain Rule) 이라고도 한다. 
 
   - 증명 
 
