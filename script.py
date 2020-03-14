@@ -13,9 +13,7 @@ def section(title, file):
     return f'''
 - [{title}](https://ccss17.github.io/{file}.html)
     
-  - {get_definitions('memos/'+file+'.md')}
-    
-    '''
+  - {get_definitions('memos/'+file+'.md')}'''
 
 math_sections = f'''\
 ## 수학 메모
@@ -24,11 +22,13 @@ math_sections = f'''\
 {section('수학 메모2', 'math2')}
 {section('수학 메모3', 'math3')}
 {section('수학 메모4', 'math4')}
+
 ### 미적분 메모
 {section('극한 메모', 'calculus')}
 {section('미분 메모', 'calculus2')}
 {section('적분 메모', 'calculus3')}
 {section('미분2 메모', 'calculus4')}
+
 ### 선형대수학 메모
 {section('1장 : 선형방정식', 'la')}
 {section('2장 : 행렬 대수', 'la2')}
