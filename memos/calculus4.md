@@ -602,4 +602,117 @@
   
   - 예시 
 
-    함수 $y=x ^{\sin x}(x>0)$ 의 도함수를 구해보자.
+    함수 $f(x) = x ^{\sin x}(x>0)$ 의 도함수를 구해보자.
+
+    함수 $f(x)$ 의 함수값은 항상 양수이니 양변에 자연로그를 취하면 
+
+      $$ y = x ^{\sin x} $$
+
+    에서 
+
+      $$ \ln y = \ln x ^{\sin x} $$
+
+    이다. 이때 양변을 $x$ 에 대하여 미분하면 
+
+      $$ \frac{y'}{y} = (\sin x)'\ln x + \sin x(\ln x)' = \cos x \circ \ln x + \sin x \circ \frac{1}{x} $$
+
+      $$ y' = y(\cos x \circ \ln x + \sin x \circ \frac{1}{x}) $$
+
+    에서 
+
+    $$ \therefore y' = x ^{\sin x}(\cos x \circ \ln x + \frac{\sin x}{x}) $$
+
+    이다. 
+
+- 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 실수일 때, $y' = f'(x) = nx ^{n-1}$ 
+
+  - 증명 
+
+    우리는 앞서 정수 $n$ 에 대하여 $n$차 단항 함수 $y = x ^{n}$ 의 도함수가 $y' = n x ^{n-1}$ 임을 알아보았었다. 이제 로그미분법으로 $n$ 이 실수일 때 함수 $y= x ^{n}$ 의 도함수를 구해보자.
+
+    $y = x ^{n}$ 의 양변의 절대값에 자연로그를 취하면 
+
+    $$ \ln |y| = \ln |x ^{n}| $$
+
+    $$ \ln |y| = n\ln |x| $$
+
+    이다. 이때 양변을 $x$ 에 대하여 미분하면 
+
+    $$ \frac{y'}{y} = n \circ \frac{1}{x} $$
+
+    $$ y' = y \circ n \circ \frac{1}{x} $$
+
+    $$ y' = x ^{n} \circ n \circ \frac{1}{x} $$
+
+    에서 
+
+    $$ \therefore y' = n x ^{n-1} $$
+
+    이다. 
+  
+  - 예시 
+
+    $y = x ^{\sqrt[]{3}}$ 의 도함수는 $y' = \sqrt[]{3} x ^{\sqrt[]{3}-1}$ 이다. 
+
+  - 예시 
+
+    $y = x ^e$ 의 도함수는 $y'=ex^{e-1}$ 이다.
+
+## 매개변수로 나타낸 함수의 미분 
+
+- 매개변수(parameter)로 나타낸 함수 : 두 변수 $x, y$ 사이의 관계를 변수 $t$ 를 매개로 
+
+    $$ x = f(t), y = g(t) $$
+  
+  꼴로 나타낼 때, 변수 $t$ 를 매개변수라 하고 위 식을 매개변수로 나타낸 함수라 한다. 
+
+- 매개변수로 나타낸 함수의 미분법 : 두 함수 $x=f(t),y=g(t)$ 에서 $f(t),g(t)$ 가 각각 $t$ 에 대하여 미분가능하고 $f'(t) \neq 0$ 일 때 
+
+  $$ \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{g'(t)}{f'(t)} $$
+
+  - 증명 
+
+    두 함수 $x=f(t), y=g(t)$ 가 각각 $t$ 에 대하여 미분가능하고 $f'(t) \neq 0$ 라고하자. 그러면 $x = f(t)$ 의 역함수가 존재하고 $t$ 는 $x$ 에 대한 함수이므로 $y=g(t)$ 도 $x$ 에 대한 함수로 볼 수 있다. 또 매개변수 $t$ 의 증분 $\Delta t$ 에 대한 $x$ 의 증분을 $\Delta x$, $y$ 의 증분을 $\Delta y$ 라 하자.
+
+    그러면 $x$ 가 $t$ 에 대해서 미분가능하기 때문에 
+    
+    $$ \lim_{\Delta x \to 0}  \frac{\Delta t}{\Delta x} $$
+
+    의 값이 존재한다. 그런데 분모가 $0$ 에 한없이 다가가는데도 그 값이 존재하므로 분자도 $0$ 에 다가간다. 따라서
+
+    $$ \Delta x \to 0 \Rightarrow \Delta t \to 0 $$
+
+    이다. 또 이것으로 도함수의 정의에 의한 $x$ 에 대한 $y$ 의 미분
+
+    $$ \frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} $$
+
+    을
+
+    $$ \lim_{\Delta t \to 0} \frac{\frac{\Delta y}{\Delta t}}{\frac{\Delta x}{\Delta t}} $$
+
+    로 쓸 수 있다. 즉,
+
+    $$ \frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta t \to 0} \frac{\frac{\Delta y}{\Delta t}}{\frac{\Delta x}{\Delta t}} $$
+
+
+    이다. 이때
+
+    $$ \Delta x = f(t+\Delta t) - f(t), \Delta y = g(t+\Delta t) - g(t) $$
+
+    이므로 
+
+    $$ \lim_{\Delta t \to 0} \frac{\frac{\Delta y}{\Delta t}}{\frac{\Delta x}{\Delta t}} = \frac{\lim_{\Delta t \to 0} \frac{\Delta y}{\Delta t}}{\lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t}} = \frac{\lim_{\Delta t \to 0} \frac{g(t+\Delta t) - g(t)}{\Delta t} }{\lim_{\Delta t \to 0} \frac{f(t+\Delta t)-f(t)}{\Delta t}} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{g'(t)}{f'(t)} $$
+
+    이다. 그러므로 
+
+    $$ \therefore \frac{dy}{dx} = \frac{g'(t)}{f'(t)} $$
+
+    이다.
+  
+  - 예시 
+
+    매개변수로 나타낸 함수 $x=\frac{1+t}{1-t}, y=\frac{3t}{1+t}$ 에서 $\frac{dy}{dx}$ 를 구하자. 
+
+    $$\frac{dx}{dt}=\frac{1-t+(1+t)}{(1-t)^2}=\frac{2}{(1-t)^2}, \frac{dy}{dt}=\frac{3(1+t)-3t}{(1+t)^2}=\frac{3}{(1+t)^2}$$
+
+    $$ \therefore \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{\frac{3}{(1+t)^{2}}}{\frac{2}{(1-t)^2}} = \frac{3(1-t)^2}{2(1+t)^2} $$

@@ -216,6 +216,8 @@
 
   - 도함수를 기호로 $f'(x)$ 로 나타내고 다음의 기호로도 나타낸다. 
 
+    $$ f'(x) = \lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x} = y' = \frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} $$
+
     - 뉴턴의 미분 기호
 
       - $$y'$$
@@ -246,7 +248,7 @@
 
   - 즉 도함수는 다음과 같다. 
 
-    $$ f'(x) = \lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x} $$
+    $$ f'(x) = \lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}  $$
 
     $\Delta x$ 를 간단하게 $h$ 로 바꾸고 
 
@@ -276,7 +278,7 @@
   
 ## 여러가지 함수의 도함수 
 
-- $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $y' = f'(x) = nx ^{n-1}$ 
+- $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 정수일 때, $y' = f'(x) = nx ^{n-1}$ 
 
   - 증명 
 
