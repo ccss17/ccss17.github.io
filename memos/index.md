@@ -84,6 +84,10 @@
     
   - 지수함수 $y=a ^{x}(a>0, a \neq 1)$ 의 극한, 로그함수 $y= \log_{a} x(a>0, a \neq 1)$ 의 극한, 무리수 $e$, 자연로그, 무리수 $e$ 를 이용한 지수함수와 로그함수의 극한, 지수함수 $y=a ^{x}$ 의 도함수, $y = e ^{x}$ 의 도함수, 로그함수 $y = \log_{a} x$ 의 도함수, 자연로그함수 $y = \ln x$ 의 도함수, 로그함수 $y = \ln |x|$ 의 도함수, 로그함수 $y = \log_{a} |x|$ 의 도함수, 삼각함수의 극한, 함수 $\frac{\sin x}{x}, \frac{\tan x}{x}$ 의 극한, 함수 $y = \sin x$ 의 도함수, 함수 $y = \cos x$ 의 도함수, 함수 $y = \tan x$ 의 도함수, 함수 $y = \sec x$ 의 도함수, 함수 $y = \csc x$ 의 도함수, 함수 $y = \cot x$ 의 도함수, 로그함수 $y = \ln |f(x)|$ 의 도함수, 로그함수 $y = \log_{a} |f(x)|(a>0, a \neq 1)$ 의 도함수, 로그미분법, 함수 $y = x ^{n}$ 의 도함수, 매개변수(parameter)로 나타낸 함수, 매개변수로 나타낸 함수의 미분법, 음함수의 미분, 역함수의 도함수, 이계도함수(second order derivatives), 고계도함수(higher order derivatives), 삼계도 함수, $n$ 계도 함수, 곡선의 오목과 볼록의 판정, 변곡점(inflection point), 변곡점의 판정, 점근선(asymptote), 수직점근선(vertical asymptote), 수평점근선(horizontal asymptote), 사선점근선(oblique asymptote), 곡선의 추적, 테일러 전개(Taylor's Expansion), 매끄러운 함수(smooth function), 테일러 급수(Taylor's Series), 매클로린 급수(Maclaurin Series), $n$차 테일러 다항식(nth Taylor Polynomial)
 
+- [적분2 메모](https://ccss17.github.io/calculus5.html)
+    
+  - 
+
 ### 선형대수학 메모
 
 - [1장 : 선형방정식](https://ccss17.github.io/la.html)

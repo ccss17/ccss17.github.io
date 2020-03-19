@@ -43,6 +43,7 @@ def update():
 {math_section('미분 메모', 'calculus2')}
 {math_section('적분 메모', 'calculus3')}
 {math_section('미분2 메모', 'calculus4')}
+{math_section('적분2 메모', 'calculus5')}
 
 ### 선형대수학 메모
 {math_section('1장 : 선형방정식', 'la')}

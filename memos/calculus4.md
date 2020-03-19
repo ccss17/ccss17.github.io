@@ -1139,4 +1139,14 @@
     
     보라색이 $T_3(x) = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}$ 이다.
     
+    ![desmos-graph(4)](https://user-images.githubusercontent.com/16812446/77071308-25e51a00-6a2f-11ea-88eb-9032f9ec39b9.png)
+
+    위 그래프에서 빨간색이 원래 함수 $f(x)=e^x$ 이다.
+
+    파란색이 $T_4(x) = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}$, 
+    
+    초록색이 $T_5(x) = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!}$, 
+    
+    보라색이 $T_6(x) = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!}+\frac{x^6}{6!}$ 이다.
+
     $n$차 테일러 다항식이 점차 원래 함수 $f(x)=e ^{x}$ 로 근사되는 것을 알 수 있다. 
