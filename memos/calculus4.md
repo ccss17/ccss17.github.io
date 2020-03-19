@@ -1007,7 +1007,7 @@
 
   라는 다항함수로 표현할 수 있고, 이를 $a$ 에서 $f(x)$ 의 테일러 급수라 한다. 
 
-- 매클로린 급수(Maclaurin Series) : 테일러 급수에서 $a=0$ 일 때, 즉 
+- [매클로린 급수(Maclaurin Series)](#Maclaurin-Series) : 테일러 급수에서 $a=0$ 일 때, 즉 
 
   $$ f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x ^{2} + \dots + \frac{f ^{(n)}(0)}{n!}x ^{n} + \dots $$
 
