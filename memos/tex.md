@@ -220,6 +220,10 @@ $$
 \int_0^\infty f(x)dx
 $$
 
+\int_{a}^{x}(-1)(-f'(t))dt = f(x) - f(a) = \bigg[ -(x-t)f'(t)-\frac{(x-t)^2}{2}f''(x) - \frac{(x-t)^3}{6}f'''(t)- \dots \bigg] ^{x} _a 
+
+$$ \int_{a}^{x}(-1)(-f'(t))dt = f(x) - f(a) = \bigg[ -(x-t)f'(t)-\frac{(x-t)^2}{2}f''(x) - \frac{(x-t)^3}{6}f'''(t)- \dots \bigg] ^{x} _a $$
+
 ---
 
 ## 8. Matrics
