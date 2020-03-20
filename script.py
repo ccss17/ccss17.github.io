@@ -14,13 +14,13 @@ def math_section(title, file):
     return f'''
 - [{title}](https://ccss17.github.io/{file}.html)
     
-  - {get_definitions('memos/'+file+'.md')}'''
+  ###### {get_definitions('memos/'+file+'.md')}'''
 
 def get_theorem():
     with open('memos/all.md', encoding='utf-8') as f:
         content = f.read()
     definitions = re.findall(THEOREM_PATTERN, content)
-    definitions = '\n\n'.join(('- '+definition[14:-11] for definition in definitions))
+    definitions = '\n\n'.join(('- ##### '+definition[14:-11] for definition in definitions))
     return definitions
 
 def update():
