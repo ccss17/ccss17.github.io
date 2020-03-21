@@ -25,14 +25,9 @@ def sections(title, file, get):
 def update():
     theorems = f'''\
 ## 생각 메모
-
-## [생각 메모](https://ccss17.github.io/all.html)
-
 {sections('기초적인 것에 관련된 메모', 'all', get_theorem)}
 {sections('생각에 관련된 메모', 'all2', get_theorem)}
 {sections('역사에 관련된 메모', 'all3', get_theorem)}
-
-
 '''
     math_sections = f'''\
 ## 수학 메모
@@ -58,9 +53,6 @@ def update():
 
     with open('memos/index.md', encoding='utf-8') as f:
         index = f.read()
-    # all = index.find("## 생각 메모")
-    # index = index[:all] + theorems
-    # index += math_sections
     math = index.find("## 수학 메모")
     index = index[:math] + math_sections
     index += theorems
@@ -68,10 +60,7 @@ def update():
         f.write(index)
     with open('readme.md', 'w', encoding='utf-8') as f:
         f.write(index)
-    print('생각 정리와 수학 정의 섹션들이 index.md 와 readme.md 에 업데이트됨')
-
-def main():
-    update()
 
 if __name__ == '__main__':
-    main()
+    update()
+    print('생각 정리와 수학 정의 섹션들이 index.md 와 readme.md 에 업데이트됨')
