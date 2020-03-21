@@ -1,54 +1,58 @@
 import re
 
-DEF_PATTERN = '- .+ :'
-THEOREM_PATTERN = '### \*\*<center>.+</center>\*\*'
-
 def get_definitions(file):
+    DEF_PATTERN = '- .+ :'
     with open(file, encoding='utf-8') as f:
         content = f.read()
     definitions = re.findall(DEF_PATTERN, content)
     definitions = ', '.join((definition[2:-2] for definition in definitions))
+    return '  ###### ' + definitions
+
+def get_theorem(file):
+    THEOREM_PATTERN = '### \*\*<center>.+</center>\*\*'
+    with open(file, encoding='utf-8') as f:
+        content = f.read()
+    definitions = re.findall(THEOREM_PATTERN, content)
+    definitions = '\n\n'.join(('  - ##### '+definition[14:-11] for definition in definitions))
     return definitions
 
-def math_section(title, file):
+def sections(title, file, get):
     return f'''
 - [{title}](https://ccss17.github.io/{file}.html)
     
-  ###### {get_definitions('memos/'+file+'.md')}'''
-
-def get_theorem():
-    with open('memos/all.md', encoding='utf-8') as f:
-        content = f.read()
-    definitions = re.findall(THEOREM_PATTERN, content)
-    definitions = '\n\n'.join(('- ##### '+definition[14:-11] for definition in definitions))
-    return definitions
+{get('memos/'+file+'.md')}'''
 
 def update():
     theorems = f'''\
+## 생각 메모
+
 ## [생각 메모](https://ccss17.github.io/all.html)
 
-{get_theorem()}
+{sections('기초적인 것에 관련된 메모', 'all', get_theorem)}
+{sections('생각에 관련된 메모', 'all2', get_theorem)}
+{sections('역사에 관련된 메모', 'all3', get_theorem)}
+
 
 '''
     math_sections = f'''\
 ## 수학 메모
-{math_section('논리학 ', 'logic')}
-{math_section('수학 메모1', 'math')}
-{math_section('수학 메모2', 'math2')}
-{math_section('수학 메모3', 'math3')}
-{math_section('수학 메모4', 'math4')}
+{sections('논리학 ', 'logic', get_definitions)}
+{sections('수학 메모1', 'math', get_definitions)}
+{sections('수학 메모2', 'math2', get_definitions)}
+{sections('수학 메모3', 'math3', get_definitions)}
+{sections('수학 메모4', 'math4', get_definitions)}
 
 ### 미적분 메모
-{math_section('극한 메모', 'calculus')}
-{math_section('미분 메모', 'calculus2')}
-{math_section('적분 메모', 'calculus3')}
-{math_section('미분2 메모', 'calculus4')}
-{math_section('적분2 메모', 'calculus5')}
+{sections('극한 메모', 'calculus', get_definitions)}
+{sections('미분 메모', 'calculus2', get_definitions)}
+{sections('적분 메모', 'calculus3', get_definitions)}
+{sections('미분2 메모', 'calculus4', get_definitions)}
+{sections('적분2 메모', 'calculus5', get_definitions)}
 
 ### 선형대수학 메모
-{math_section('1장 : 선형방정식', 'la')}
-{math_section('2장 : 행렬 대수', 'la2')}
-{math_section('3장 : 행렬식', 'la3')}
+{sections('1장 : 선형방정식', 'la', get_definitions)}
+{sections('2장 : 행렬 대수', 'la2', get_definitions)}
+{sections('3장 : 행렬식', 'la3', get_definitions)}
 
 '''
 
