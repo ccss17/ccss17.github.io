@@ -272,7 +272,7 @@
   
   - 정적분의 값 $F(b)-F(a)$ 를 $[f(x)] ^{b}_a$ 로 나타내면 
 
-    $$ \int_{a}^{b}f(x) dx = [F(x)] ^{b} _{a} = F(b) -F(a) $$
+    $$ \int_{a}^{b}f(x) dx = \bigg[F(x) \bigg] ^{b} _{a} = F(b) -F(a) $$
 
     이다. 
 
