@@ -478,6 +478,12 @@
 
   - $a^x \div a^y = \frac{a^x}{a^y} = a^{x-y}$
 
+    - 그러므로 $x = 0, y = b$ 일 때 
+
+      $$ \frac{1}{a ^{b}} = a ^{-b} $$
+
+      이다. 
+
   - $(a^x)^y = a^{xy}$
 
   - $(ab)^x=a^xb^x$
