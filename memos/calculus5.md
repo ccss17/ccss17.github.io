@@ -472,4 +472,165 @@
 
   이다.
 
-  -
+  - 증명 
+
+    폐구간 $[a, b]$ 에서 연속인 함수 $f(x)$ 의 한 부정적분을 $F(x)$ 라 하면 
+
+    $$ \int_{a}^{b}f(x)dx = \bigg[F(x)\bigg]^{b} _{a} = F(b) - F(a) $$
+
+    이다. 
+    
+    한편 $x$ 를 $t$ 에 대하여 미분가능한 함수 $x=g(t)$ 로 치환하면 치환적분법에 의하여 
+
+    $$ \int_{}^{}f(x)dx = \int_{}^{}f(g(t))g'(t)dx = F(g(t))+C $$
+
+    이다. 이때 $x=g(t)$ 가 적분구간에서 일대일대응이므로 
+
+    $$ a=g(\alpha), b=g(\beta) $$
+
+    를 만족하는 $\alpha, \beta$ 는 유일하게 결정된다. 따라서 적분구간 $[a,b]$ 를 $[\alpha, \beta]$ 로 바꿀 수 있다. 그러면 치환적분법으로 얻은 부정적분을 적분구간 $[\alpha, \beta]$ 에 대하여 정적분해보면 
+
+    $$ \int_{\alpha }^{\beta }f(g(t))g'(t)dt = \bigg[F(g(t))\bigg]^{\beta }_{\alpha } = F(g(\beta )) - F(g(\alpha )) = F(b)-F(a) $$
+
+    이다. 그러므로 
+
+    $$ \int_{a}^{b}f(x)dx = F(b) - F(a) = \int_{\alpha }^{\beta }f(g(t))g'(t)dt $$
+
+    에서 
+
+    $$ \therefore  \int_{a}^{b}f(x)dx = \int_{\alpha }^{\beta }f(g(t))g'(t)dt $$
+
+    이다.
+
+  - 예시 
+
+    $$ \int_{0}^{4}\sqrt[]{2x+1}dx $$
+
+    에서 $t = (2x+1)$ 로 두면 $x = \frac{t-1}{2}$ 에서 $\frac{dx}{dt}=\frac{1}{2}$ 이다. 따라서 
+
+    $$ dx = \frac{1}{2}dt $$
+
+    이다. 또한 $x=0 \to t=1, x=4 \to t=9$ 이므로 
+
+    $$ \int_{0}^{4}\sqrt[]{2x+1}dx = \int_{1}^{9}\sqrt[]{t} \frac{1}{2}dt = \frac{1}{2} \int_{1}^{9}t ^{\frac{1}{2}}dt = \frac{1}{2}\bigg[\frac{2}{3}t ^{\frac{3}{2}}\bigg]^{9}_{1} =\frac{1}{3}(27-1)=\frac{26}{3} $$
+
+    이다. 
+
+- 부분적분법으로의 정적분 : 폐구간 $[a,b]$ 에서 두 함수 $f(x), g(x)$ 가 미분가능하고 $f'(x), g'(x)$ 가 연속일 때 
+
+  $$ \int_{a}^{b}f(x)g'(x)dx = \bigg[f(x)g(x)\bigg]^{b}_{a}-\int_{a}^{b}f'(x)g(x)dx $$
+  
+  $$ \Leftrightarrow $$
+  
+  $$ \int_{a}^{b}uv'dx = \bigg[uv\bigg]^{b}_{a}-\int_{a}^{b}u'vdx $$
+
+  이다.
+
+  - 증명 
+
+    폐구간 $[a,b]$ 에서 두 함수 $f(x), g(x)$ 가 미분가능하고 $f'(x), g'(x)$ 가 연속일 때 함수의 곱의 미분법에서 
+
+    $$ \{f(x)g(x)\}' = f'(x)g(x)+f(x)g'(x) $$
+
+    이므로 $f(x)g(x)$ 는 $f'(x)g(x)+f(x)g'(x)$ 의 한 부정적분이다. 그러므로 정적분의 정의에 의하여 
+
+    $$ \int_{a}^{b}\{f'(x)g(x)+f(x)g'(x)\}dx = \bigg[f(x)g(x)\bigg]^{b}_{a} $$
+
+    이다. 여기에서 
+
+    $$ \int_{a}^{b}f'(x)g(x)+ \int_{a}^{b} f(x)g'(x)dx = \bigg[f(x)g(x)\bigg]^{b}_{a} $$
+
+    이므로
+
+    $$ \therefore  \int_{a}^{b}f(x)g'(x)= \bigg[f(x)g(x)\bigg]^{b}_{a} - \int_{a}^{b} f'(x)g(x)dx $$
+
+    이다.
+  
+  - 예시 
+
+    $$ \int_{0}^{1}xe ^{x}dx $$
+
+    에서 $u=x, v'=e^x$ 로 두면 
+
+    $$ \int_{a}^{b}uv'dx = \bigg[uv\bigg]^{b}_{a}-\int_{a}^{b}u'vdx $$
+
+    에서 
+
+    $$ \int_{0}^{1}x e ^{x}dx = \bigg[xe^x\bigg]^{1}_{0} - \int_{0}^{1}e^xdx $$
+
+    이다. 따라서 
+
+    $$ \therefore  \int_{0}^{1}x e ^{x}dx = (e - 0) - \bigg[e^x\bigg]^{1}_{0} = e - (e - 1) = 1$$
+
+    이다.
+
+# 속도와 거리 
+
+- 정적분으로 구하는 속도 및 거리 
+
+**구체화 필요**
+
+# 역함수의 부정적분과 정적분 
+
+- 역함수의 부정적분 : 함수 $f(x)$ 의 역함수 $y=f ^{-1}(x)$ 에 대하여 $f ^{-1}(x)$ 의 부정적분은 
+
+  $$ \int_{}^{}f ^{-1}(x)dx = xf ^{-1}(x)-\int_{}^{}f(y)dy $$
+
+  이다. 
+
+  - 증명 
+
+    함수 $f(x)$ 의 역함수 $y= f ^{-1}(x)$ 에 대하여 역함수의 정의에 따라 $f(y)=x$ 이고 역함수 미분법에 의하여 $\{f ^{-1}(x)\}' = \frac{1}{f'(y)}$ 이다.
+
+    그러므로 부분적분법을 이용하여
+
+    $$ \int_{}^{}f ^{-1}(x)dx $$
+
+    에서 $u = f ^{-1}(x), v' = 1$ 로 두면 $u'=\frac{1}{f'(y)}, v=x$ 이므로 
+
+    $$ \int_{}^{}f ^{-1}(x)dx = xf ^{-1}(x) - \int_{}^{}\frac{x}{f'(y)}dx $$
+
+    이다. 이때 $x = f(y)$ 에서 $\frac{dx}{dy}=f'(y)$ 이므로 
+
+    $$ dx = f'(y)dy $$
+
+    이다. 따라서 
+
+    $$ \int_{}^{}f ^{-1}(x)dx = xf ^{-1}(x) - \int_{}^{}\frac{f(y)}{f'(y)}f'(y)dy $$
+
+    이다. 그러므로
+
+    $$ \therefore \int_{}^{}f ^{-1}(x)dx = xf ^{-1}(x) - \int_{}^{}f(y)dy $$
+
+    이다.
+
+- 역함수의 정적분 : 
+
+  **구체화 필요**
+
+# 미분방정식
+
+- 미분방정식(differential equation) : 함수와 그 도함수의 관계를 나타내는 방정식이다. 
+
+  - 예시 
+
+    $$ \frac{dy}{dx} = xy $$
+
+  - 예시 
+
+    $$ y' = xy ^{2}+2xy $$
+  
+  - 예시 
+
+    $$ \frac{f'(x)}{f(x)} = 1 $$
+
+    에서 $y=f(x)$ 로 나타내면 
+
+    $$ \frac{dy}{dx} \circ \frac{1}{y}=1 $$
+
+    이므로 
+
+    $$ \frac{dy}{dx}=y $$
+
+    라는 미분방정식으로 나타낼 수 있다. 
+
