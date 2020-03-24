@@ -268,12 +268,6 @@
 
   - *더 많은 예시는 단지 곱셈공식의 수식을 역방향으로 살펴보면 결국 그것이 인수분해이다.*
 
-- 다항함수(polynomial function) : 다음과 같은 꼴의 함수 $f(x)$ 를 $x$ 에 대한 $n$ 차 다항함수(nth degree polynomial function)라 한다. 
-
-  $$
-  f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n-2} + \dots + a _{0}x ^{0}  (단, a _{n} \neq 0, n 은 자연수, a _{i}(0 \leq i \leq n) 는 상수)
-  $$
-
 ## 부등식
 
 - 부등식(inequality) : 두 수 및 두 식에 대한 크기 비교를 나타내는 식이다.
@@ -370,30 +364,6 @@
 
     **구체화 필요**
   
-- 유리함수(rational function) : 함수 $y=f(x)$ 에서 $f(x)$ 가 $x$ 에 대한 유리식일 때, 이 함수를 유리함수라 한다.
-
-  - $f(x)$ 가 $x$ 에 대한 다항식이면 다항함수(polynomial function)라 하는 것이다. 
-
-  - $f(x)$ 가 $x$ 에 대한 분수식이면 분수함수(fractional function)라 하는 것이다. 
-
-    - 다항함수와 분수함수의 차이점은 다항함수의 정의역이 실수 전체 집합인데 비해 분수함수의 정의역은 분모를 $0$ 이 되게 하는 실수를 제외한 실수 전체 집합이라는 것이다. 
-
-- 유리함수의 그래프 : $y = \frac{ax+b}{cx+d}$(단, $ad-bc \neq 0, c \neq 0$)의 그래프는 함수 $y = \frac{k}{x-p}+q$(단, $k \neq 0$) 의 꼴로 변형할 수 있으므로 다음이 성립한다. 
-
-  - $y = \frac{k}{x}$ 의 그래프를 $x$ 축 방향으로 $p$ 만큼, $y$ 축 방향으로 $q$ 만큼 평행이동한 것이다.
-
-  - 정의역 : $\{x|x \neq p 인 실수\}$, 치역 : $\{y|y \neq q 인 실수\}$
-
-  - 점근선은 두 직선 $x=p, y=q$ 이다.
-
-  - 점 $(p, q)$ 에 대하여 대칭이고, 점 $(p, q)$ 를 지나고 기울기가 $1$ 또는 $-1$ 인 두 직선에 대하여도 대칭인 쌍곡선이다. 
-
-  - 예시 
-  
-    $y = \frac{2}{x}$ 의 그래프이다. $y = \frac{k}{x-p}+q$(단, $k \neq 0$) 의 꼴 유리함수는 이와 같은 꼴에서 $x$ 축으로 $p$ 만큼, $y$ 축으로 $q$ 만큼 평행이동한 것이다.
-
-    ![desmos-graph](https://user-images.githubusercontent.com/16812446/75099281-255d8d00-5603-11ea-98fd-89c968af8de2.png)
-
 ## 무리식 
 
 - 무리식 : 근호 안에 문자를 포함하는 식 중에서 유리식으로 나타낼 수 없는 식이다. 
@@ -401,37 +371,6 @@
   - 예시 
   
     $\sqrt[]{(3-\sqrt[]{10})^2}$ 
-
-- 무리함수 : 함수 $y=f(x)$ 에서 $f(x)$ 가 $x$ 에 대한 무리식일 때, 이 함수를 무리함수라 한다. 
-
-- 무리함수의 그래프 : $y = \sqrt[]{ax+b}+c$(단, $a \neq 0$) 의 그래프는 $y=\sqrt[]{a(x-p)}+c$ 로 변형할 수 있으므로 다음이 성립한다. 
-
-  - $y=\sqrt[]{ax}$ 의 그래프를 $x$ 축의 방향으로 $p$ 만큼, $y$ 축의 방향으로 $q$ 만큼 평행이동한 것이다.
-
-  - 정의역 : $a>0$ 일 때 $\{x|x \geq p 인 실수\}$, $a<0$ 일 때 $\{x|x \leq p 인 실수\}$
-
-    - 즉, 무리함수의 정의역은 근호 안의 식의 값이 $0$ 또는 양수가 되게 하는 모든 실수 집합이다. 
-
-  - 치역 : $\{y|y \geq q 인 실수\}$
-
-  - 점 $(p,q)$ 가 그래프의 시작점이다. 
-
-  - 예시 
-  
-    다음은 $y=\sqrt[]{ax}$ 꼴의 무리함수이다. $y=\sqrt[]{a(x-p)}+q$ 는 이 꼴에서 $x$ 축으로 $p$ 만큼, $y$ 축으로 $q$ 만큼 평행이동한 것이다.
-  
-    - 차례로 $y = \sqrt[]{2x}$ 와 $y = \sqrt[]{-2x}$ 의 그래프이다. 
-
-
-      ![desmos-graph](https://user-images.githubusercontent.com/16812446/75109533-ab132400-5667-11ea-8468-c25c60012256.png) ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/75109563-da299580-5667-11ea-981c-50847527be13.png)
-
-    - 차례로 $y = -\sqrt[]{2x}$ 와 $y = -\sqrt[]{-2x}$ 의 그래프이다. 
-
-      ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/75109568-f3cadd00-5667-11ea-80f9-c5fa4b9a8055.png) ![desmos-graph(4)](https://user-images.githubusercontent.com/16812446/75109577-09d89d80-5668-11ea-829e-5ed51029ae00.png)
-      
-    - 차례로 $y = \sqrt[]{3^2-x^2}$ 와 $y = -\sqrt[]{3^2-x^2}$ 의 그래프이다. 
-
-      ![desmos-graph(5)](https://user-images.githubusercontent.com/16812446/75109648-9c793c80-5668-11ea-8542-9369bc611610.png) ![desmos-graph(6)](https://user-images.githubusercontent.com/16812446/75109660-b87cde00-5668-11ea-897c-4eaf836d5a0b.png)
 
 ## 연립방정식
 
@@ -963,7 +902,11 @@
 
   - 직선 $y=x$에 대하여 대칭이동한 도형의 방정식 : $f(y, x)=0$
 
-### 여러가지 함수 
+# 여러가지 함수 
+
+- 다항함수(polynomial function) : 다음과 같은 꼴의 함수 $f(x)$ 를 $x$ 에 대한 $n$ 차 다항함수(nth degree polynomial function)라 한다. 
+
+  $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n-2} + \dots + a _{0}x ^{0}  (단, a _{n} \neq 0, n 은 자연수, a _{i}(0 \leq i \leq n) 는 상수) $$
 
 - 이차함수 
 
@@ -999,7 +942,6 @@
 
       ![desmos-graph(7)](https://user-images.githubusercontent.com/16812446/75110012-f3ccdc00-566b-11ea-801b-97894c2b66c0.png)
 
-
 - 짝함수(우함수, even function) : $y$ 축에 대하여 대칭인 함수이다.
 
   - 즉, $f(-x) = f(x)$ 가 성립하는 함수이다. 
@@ -1016,7 +958,128 @@
 
 - 매개변수 방정식(parameter equation) : 점 $P(x, y)$ 에 대하여 $x=g(t), y=h(t)$ 이면 함수 $f: \Re \to \Re ^{2}, t \mapsto (x, y)$ 를 생각할 수 있다. 이때 $x=g(t), y=h(t)$ 를 $t$ 를 매개변수로 하는 도형의 매개변수 방정식이라 한다. 
 
-### 특이한 함수 
+## 유리함수
+
+- 유리함수(rational function) : 함수 $y=f(x)$ 에서 $f(x)$ 가 $x$ 에 대한 유리식일 때, 이 함수를 유리함수라 한다.
+
+  - $f(x)$ 가 $x$ 에 대한 다항식이면 다항함수(polynomial function)라 하는 것이다. 
+
+  - $f(x)$ 가 $x$ 에 대한 분수식이면 분수함수(fractional function)라 하는 것이다. 
+
+    - 다항함수와 분수함수의 차이점은 다항함수의 정의역이 실수 전체 집합인데 비해 분수함수의 정의역은 분모를 $0$ 이 되게 하는 실수를 제외한 실수 전체 집합이라는 것이다. 
+
+- 유리함수의 그래프 : $y = \frac{ax+b}{cx+d}$(단, $ad-bc \neq 0, c \neq 0$)의 그래프는 함수 $y = \frac{k}{x-p}+q$(단, $k \neq 0$) 의 꼴로 변형할 수 있으므로 다음이 성립한다. 
+
+  - $y = \frac{k}{x}$ 의 그래프를 $x$ 축 방향으로 $p$ 만큼, $y$ 축 방향으로 $q$ 만큼 평행이동한 것이다.
+
+  - 정의역 : $\{x|x \neq p 인 실수\}$, 치역 : $\{y|y \neq q 인 실수\}$
+
+  - 점근선은 두 직선 $x=p, y=q$ 이다.
+
+  - 점 $(p, q)$ 에 대하여 대칭이고, 점 $(p, q)$ 를 지나고 기울기가 $1$ 또는 $-1$ 인 두 직선에 대하여도 대칭인 쌍곡선이다. 
+
+  - 예시 
+  
+    $y = \frac{2}{x}$ 의 그래프이다. $y = \frac{k}{x-p}+q$(단, $k \neq 0$) 의 꼴 유리함수는 이와 같은 꼴에서 $x$ 축으로 $p$ 만큼, $y$ 축으로 $q$ 만큼 평행이동한 것이다.
+
+    ![desmos-graph](https://user-images.githubusercontent.com/16812446/75099281-255d8d00-5603-11ea-98fd-89c968af8de2.png)
+
+## 무리함수
+
+- 무리함수 : 함수 $y=f(x)$ 에서 $f(x)$ 가 $x$ 에 대한 무리식일 때, 이 함수를 무리함수라 한다. 
+
+- 무리함수의 그래프 : $y = \sqrt[]{ax+b}+c$(단, $a \neq 0$) 의 그래프는 $y=\sqrt[]{a(x-p)}+c$ 로 변형할 수 있으므로 다음이 성립한다. 
+
+  - $y=\sqrt[]{ax}$ 의 그래프를 $x$ 축의 방향으로 $p$ 만큼, $y$ 축의 방향으로 $q$ 만큼 평행이동한 것이다.
+
+  - 정의역 : $a>0$ 일 때 $\{x|x \geq p 인 실수\}$, $a<0$ 일 때 $\{x|x \leq p 인 실수\}$
+
+    - 즉, 무리함수의 정의역은 근호 안의 식의 값이 $0$ 또는 양수가 되게 하는 모든 실수 집합이다. 
+
+  - 치역 : $\{y|y \geq q 인 실수\}$
+
+  - 점 $(p,q)$ 가 그래프의 시작점이다. 
+
+  - 예시 
+  
+    다음은 $y=\sqrt[]{ax}$ 꼴의 무리함수이다. $y=\sqrt[]{a(x-p)}+q$ 는 이 꼴에서 $x$ 축으로 $p$ 만큼, $y$ 축으로 $q$ 만큼 평행이동한 것이다.
+  
+    - 차례로 $y = \sqrt[]{2x}$ 와 $y = \sqrt[]{-2x}$ 의 그래프이다. 
+
+
+      ![desmos-graph](https://user-images.githubusercontent.com/16812446/75109533-ab132400-5667-11ea-8468-c25c60012256.png) ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/75109563-da299580-5667-11ea-981c-50847527be13.png)
+
+    - 차례로 $y = -\sqrt[]{2x}$ 와 $y = -\sqrt[]{-2x}$ 의 그래프이다. 
+
+      ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/75109568-f3cadd00-5667-11ea-80f9-c5fa4b9a8055.png) ![desmos-graph(4)](https://user-images.githubusercontent.com/16812446/75109577-09d89d80-5668-11ea-829e-5ed51029ae00.png)
+      
+    - 차례로 $y = \sqrt[]{3^2-x^2}$ 와 $y = -\sqrt[]{3^2-x^2}$ 의 그래프이다. 
+
+      ![desmos-graph(5)](https://user-images.githubusercontent.com/16812446/75109648-9c793c80-5668-11ea-8542-9369bc611610.png) ![desmos-graph(6)](https://user-images.githubusercontent.com/16812446/75109660-b87cde00-5668-11ea-897c-4eaf836d5a0b.png)
+
+## 지수함수 
+
+- 지수함수 : $a$ 가 $1$ 이 아닌 양수일 때, 임의의 실수 $x$ 에 $a^x$ 를 대응시킨 함수 $y = a^x$ 이다. 
+
+  - 지수함수의 그래프는 $a > 1$ 일 때와 $0 < a < 1$ 일 때 달라진다. 
+
+  - $a > 1$ 일 때, $y = 2^x$
+
+    ![desmos-graph(1)](https://user-images.githubusercontent.com/16812446/73837365-a9b6be80-4854-11ea-8d3b-d1e3d3972bdc.png)
+
+  - $0 < a < 1$ 일 때, $y = (1/2)^x$
+
+    ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/73837415-c652f680-4854-11ea-8eac-410e5f17204b.png)
+
+- 지수방정식(exponential equation) : 지수에 미지수를 포함하고 있는 방정식이다. 
+
+  - 예시 
+  
+    $x^{x+3} = x^{2x-1}$
+
+- 지수부등식(exponential inequality) : 지수에 미지수를 포함하고 있는 부등식이다. 
+
+  - 지수부등식의 밑이 $a$ 일때, 밑의 범위가 $a > 1$ 인지 $0 < a <1$ 인지에 따라 지수의 대수 관계가 바뀌므로 주의해야 한다. 
+
+  - 예시 
+  
+    $2^{x^2-4} \geq 8^x$
+
+## 로그함수
+
+- 로그함수 : $a$ 가 $1$ 이 아닌 양수일 때, 임의의 양의 실수 $x$ 에 $\log_{a} x$ 를 대응시키는 함수 $y = \log_{a} x$ 를 $a$ 를 밑으로 하는 로그함수라 한다. 
+
+  - 로그함수 $y = \log_{a} x(a>0, a \neq 1)$ 은 지수함수 $y = a^x(a>0, a \neq 1)$ 의 역함수이다. 
+
+    - 예시 
+    
+      지수함수 $y = 2^x$ 의 역함수 $x = 2^y$ 를 $y$ 에 대하여 풀면 $y = \log_{2} x$ 이다. 
+
+  - 따라서 로그함수는 지수함수와 직선 $y=x$ 에 대하여 대칭이다. 이에따라 지수함수와 마찬가지로 $a > 1$ 일 때와 $0 < a < 1$ 일 때 달라진다. 
+
+  - $a > 1$ 일 때, $y = \log_{2} x$
+
+    ![desmos-graph(4)](https://user-images.githubusercontent.com/16812446/73849124-b2b38a00-486c-11ea-9385-7b2aff924a78.png)
+
+  - $0 < a < 1$ 일 때, $y = (1/2)^x$
+
+    ![desmos-graph(5)](https://user-images.githubusercontent.com/16812446/73849242-f0b0ae00-486c-11ea-8587-58a29b4e4606.png)
+
+- 로그방정식(logarithm equation) : 로그의 진수($value$) 또는 밑($base$)에 미지수를 포함하고 있는 방정식이다. 
+
+  - 예시 
+  
+    $\log_{2} (x+2) = \log_{2} 2x$
+
+- 로그부등식(logarithm inequality) : 로그의 진수 또는 밑에 미지수를 포함하고 있는 부등식이다. 
+
+  - 로그부등식의 밑이 $a$ 일때, 밑의 범위가 $a > 1$ 인지 $0 < a <1$ 인지에 따라 지수의 대수 관계가 바뀌므로 주의해야 한다. 
+
+  - 예시 
+  
+    $\log_{3} (x^2-2x) > \log_{3} (2-x)+1$
+
+## 특이한 함수 
 
 - 가우스 함수 : 실수 $x$ 에 대하여 $x$ 보다 크지 않은 최대의 정수를 대응시키는 함수이다. 
 

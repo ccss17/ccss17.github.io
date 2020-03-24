@@ -1,7 +1,7 @@
 import re
 
 def get_definitions(file):
-    DEF_PATTERN = '- .+ :'
+    DEF_PATTERN = '\n- .+ :'
     with open(file, encoding='utf-8') as f:
         content = f.read()
     definitions = re.findall(DEF_PATTERN, content)
