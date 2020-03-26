@@ -2,51 +2,29 @@
 
 # 여러가지 메모 
 
-게시용으로 작성되지 않았습니다.
-
-그래서 개인적으로만 사용하는 용어들 및 개인적인 생각들이 종종 포함되어 있습니다.
-
-공부한 거를 안 까먹으려고 메모한 것들입니다.
-
-**http://github.com/ccss17/ccss17.github.io** 에서 관리합니다. 
+##### 게시용으로 작성되지 않았습니다. 그래서 개인적으로만 사용하는 용어들 및 개인적인 생각들이 종종 포함되어 있습니다. 공부한 거를 안 까먹으려고 메모한 것들입니다. **http://github.com/ccss17/ccss17.github.io** 에서 관리합니다. 
 
 ---
 
-## Tex 수학기호 메모
+### [Tex 수학기호 메모](https://ccss17.github.io/tex.html)
 
-- https://ccss17.github.io/tex.html
+### [Makefile 메모](https://ccss17.github.io/makefile.html)
 
----
+### [git 메모](https://ccss17.github.io/git.html)
 
-### 인공지능 메모 
-
-- https://ccss17.github.io/ai.html
-
-### Makefile 메모 
-
-- https://ccss17.github.io/makefile.html
-
-### git 메모 
-
-- https://ccss17.github.io/git.html
-
-### docker 메모 
-
-- https://ccss17.github.io/docker.html
+### [docker 메모](https://ccss17.github.io/docker.html)
 
 ---
 
-## 철학 메모
+### [인공지능 메모](https://ccss17.github.io/ai.html)
 
-- https://ccss17.github.io/philosophy.html
+### [철학 메모](https://ccss17.github.io/philosophy.html)
 
-## 정신지도규칙 메모 (데카르트)
+### [정신지도규칙 메모(데카르트)](https://ccss17.github.io/descartes.html)
 
-- https://ccss17.github.io/descartes.html
+# 수학 메모
 
-## 수학 메모
-
-- [논리학 ](https://ccss17.github.io/logic.html)
+- [논리학](https://ccss17.github.io/logic.html)
     
   ######  언어,  단어,  문장,  사고 전달의 최소단위,  명제(proposition),  조건(condition),  진리집합(truth set),  추리,  추론(inference),  논증,  논리학,  비형식 논리학,  진리값,  형식 논리학,  귀납(induction),  완전귀납,  불완전귀납,  귀납 추론의 종류,  인과적 귀납법,  연역(deduction),  연역논증 규칙,  정언 논리,  현대 논리학
 
@@ -60,13 +38,17 @@
 
 - [수학 메모3](https://ccss17.github.io/math3.html)
     
-  ######  대수학(代數學, Algebra),  수식,  미지수(변수, variable),  방정식(equation),  불능,  항등식,  계수(coefficient),  항,  단항식(monomial),  다항식(polynomial),  차수(degree),  최고차항,  인수,  다항식의 연산에 대한 성질,  일차방정식(선형방정식, linear equation),  이차방정식,  다항방정식,  인수분해,  부등식(inequality),  절대부등식,  조건부등식,  유리식,  분수식,  가분수식,  진분수식,  다항식의 연산,  무리식,  연립방정식(simultaneous equation) 또는 방정식계(system of equations),  대수학의 기본 정리,  $k$중근,  대수학의 기본 정리의 따름 정리,  모델(model ; 모형),  수학적 모델링,  유클리드 공간,  좌표평면(직교 좌표계, rectangular coordinate system),  튜플(tuple),  순서쌍(2-튜플, ordered pair),  이항관계(binary relation),  구간(interval),  폐구간(닫힌구간, closed interval),  개구간(열린구간, open interval),  반열린구간(반개구간 또는 반폐구간, half open interval 또는 half closed interval),  수직선(number line),  좌표(coordinate),  좌표평면(coordinate plane),  절편,  사분면(quadrant),  좌표평면에서의 직선,  직선의 기울기,  거리,  두 점의 거리의 의미,  수직선에서 두 점의 거리,  좌표평면에서 두 점의 거리,  공간 좌표,  3차원 좌표계,  대응,  함수(function) 또는 사상(mapping),  함수의 그래프,  서로 같은 함수,  일대일 함수,  일대일대응,  항등함수,  상수함수,  합성함수(composite function),  역함수(inverse function),  양함수(explicit function),  음함수(implicit function),  초월함수,  직선의 방정식,  원의 방정식,  점의 평행이동,  도형의 평행이동,  대칭,  점의 대칭이동,  도형의 대칭이동,  다항함수(polynomial function),  함수의 최대값,  함수의 최소값,  홀함수(기함수, odd function),  짝함수(우함수, even function),  매개변수 방정식(parameter equation),  유리함수(rational function),  유리함수의 그래프,  무리함수,  무리함수의 그래프,  지수함수,  지수방정식(exponential equation),  지수부등식(exponential inequality),  로그함수,  로그방정식(logarithm equation),  로그부등식(logarithm inequality),  가우스 함수,  주기함수,  뉴턴의 다항식 보간법(polynomial interpolation),  시그모이드 함수(sigmoid function),  표준 시그모이드 함수
+  ######  대수학(代數學, Algebra),  수식,  미지수(변수, variable),  독립변수(independant variable),  종속변수(dependant variable),  방정식(equation),  불능,  항등식,  계수(coefficient),  항,  단항식(monomial),  다항식(polynomial),  차수(degree),  최고차항,  인수,  다항식의 연산에 대한 성질,  일차방정식(선형방정식, linear equation),  이차방정식,  다항방정식,  인수분해,  부등식(inequality),  절대부등식,  조건부등식,  유리식,  분수식,  가분수식,  진분수식,  다항식의 연산,  무리식,  연립방정식(simultaneous equation) 또는 방정식계(system of equations),  대수학의 기본 정리,  $k$중근,  대수학의 기본 정리의 따름 정리,  모델(model ; 모형),  수학적 모델링,  유클리드 공간,  좌표평면(직교 좌표계, rectangular coordinate system),  튜플(tuple),  순서쌍(2-튜플, ordered pair),  이항관계(binary relation),  구간(interval),  폐구간(닫힌구간, closed interval),  개구간(열린구간, open interval),  반열린구간(반개구간 또는 반폐구간, half open interval 또는 half closed interval),  수직선(number line),  좌표(coordinate),  좌표평면(coordinate plane),  절편,  사분면(quadrant),  좌표평면에서의 직선,  직선의 기울기,  거리,  유클리드 거리(Euclidean distance),  두 점의 거리의 의미,  수직선에서 두 점의 거리,  좌표평면에서 두 점의 거리,  공간 좌표,  3차원 좌표계,  대응,  함수(function) 또는 사상(mapping),  정의역(domain),  공역(codomain),  상(image) 또는 함수값,  원상(preimage) 또는 역상(inverse image),  치역(range),  단사함수(injection function) 또는 일대일 함수(one-to-one function),  전사함수(onto function, surjection function),  전단사 함수(bijection, bijective function) 또는 일대일 대응,  서로 같은 함수,  실변수 함수(function of a real variable),  실숫값 함수(real-valued function) 또는 실함수(real function),  복소변수 함수(function of a complex variable),  복소 함수(complex function),  다변수함수(multivariate function),  다변수 실함수,  다변수 복소함수
 
 - [수학 메모4](https://ccss17.github.io/math4.html)
     
   ######  점,  선,  직선,  선분,  면,  둘레(경계),  도형,  반직선,  각,  각도,  육십분법,  호도법($Radian$),  직각,  예각,  둔각,  다각형,  삼각형,  사각형,  넓이(면적),  원,  지름,  반지름,  원주,  원주율($\pi$),  원의 넓이,  호($arc$),  원호($circular arc$),  부채꼴($circular sector$),  부채꼴의 호의 길이,  부채꼴의 넓이,  반원,  육십분법,  호도법($Radian$),  새로운 원주율($\tau$),  삼각법(trigonometry),  삼각비(trigonometric ratio),  사인($sine$),  코사인($cosine$),  탄젠트($tangent$),  코시컨트($cosecant$),  시컨트($secant$),  코탄젠트($cotangent$),  단위원(Unit circle),  삼각함수(trigonometric functions),  삼각함수의 단위원을 통한 정의,  삼각함수의 특수각,  삼각방정식,  삼각부등식,  삼각형과 삼각함수와의 관계,  사인법칙(Law of sines),  코사인법칙(Law of cosines),  삼각형의 넓이와 삼각함수와의 관계,  사각형의 넓이,  평행사변형의 넓이,  삼각함수의 덧셈정리,  배각의 공식,  반각의 공식,  자료(data, 데이터),  정보(information),  지식(knowledge),  통계학,  평균,  이산수학(discrete mathematics),  시행(experiment),  사건(event),  독립사건(independent),  종속사건(dependent),  경우의 수,  합의 법칙,  곱의 법칙,  계승(factorial),  순열(비복원추출, permutation),  중복순열(복원추출),  조합(combination),  확률,  확률의 덧셈,  확률의 곱,  변량,  계급,  도수,  도수분포표,  히스토그램,  상대도수,  편차,  분산,  표준편차
 
-### 미적분 메모
+- [수학 메모5](https://ccss17.github.io/math5.html)
+    
+  ######  함수의 그래프,  직선의 방정식,  원의 방정식,  점의 평행이동,  도형의 평행이동,  대칭,  점의 대칭이동,  도형의 대칭이동,  항등함수,  상수함수,  합성함수(composite function),  역함수(inverse function),  양함수(explicit function),  음함수(implicit function),  초월함수(transcendental function),  다항함수(polynomial function),  함수의 최대값,  함수의 최소값,  홀함수(기함수, odd function),  짝함수(우함수, even function),  매개변수 방정식(parameter equation),  유리함수(rational function),  유리함수의 그래프,  무리함수,  무리함수의 그래프,  지수함수,  지수방정식(exponential equation),  지수부등식(exponential inequality),  로그함수,  로그방정식(logarithm equation),  로그부등식(logarithm inequality),  가우스 함수,  주기함수,  뉴턴의 다항식 보간법(polynomial interpolation),  시그모이드 함수(sigmoid function),  표준 시그모이드 함수,  벡터(vector)
+
+## 미적분 메모
 
 - [극한 메모](https://ccss17.github.io/calculus.html)
     
@@ -88,7 +70,11 @@
     
   ######  $n$ 차 단항 함수 $y=x^n$ 의 부정적분,  지수함수 $y = e^x$ 의 부정적분,  지수함수 $y = a^x$ 의 부정적분,  삼각함수의 부정적분,  함수 $\tan x$ 의 부정적분,  함수 $\cot x$ 의 부정적분,  함수 $\sec x$ 의 부정적분,  함수 $\csc xdx$ 의 부정적분,  적분변수의 치환(역연쇄법칙, anti chain rule),  치환적분법(integration by substitution),  피적분함수가 $f(g(x))g'(x)$ 꼴인 경우,  피적분함수가 $\frac{f'(x)}{f(x)}$ 꼴인 경우,  (분자의 차수) $<$ (분모의 차수) 이고 분모가 인수분해되는 경우,  (분자의 차수) $\geq$ (분모의 차수) 인 경우,  부분적분법(integration by parts),  자연로그함수 $\ln x$ 의 부정적분,  로그함수 $\log_{a} x$ 의 부정적분,  치환적분법으로의 정적분,  부분적분법으로의 정적분,  역함수의 부정적분,  역함수의 정적분,  미분방정식(differential equation)
 
-### 선형대수학 메모
+- [미적분 메모](https://ccss17.github.io/calculus6.html)
+    
+  ######  상미분(ordinary derivative),  편미분(partial derivative)
+
+## 선형대수학 메모
 
 - [1장 : 선형방정식](https://ccss17.github.io/la.html)
     
@@ -102,7 +88,7 @@
     
   ######  $2 \times 2$ 행렬 $A$ 의 행렬식,  $3 \times 3$ 행렬 $A$ 의 행렬식,  $1 \times 1$ 행렬 $A$ 의 행렬식,  $n \times n$ 행렬의 행렬식,  행렬식 표기법,  여인수(cofactor),  **Theorem 3** 행연산과 행렬식의 관계,  $\det A$ 의 값,  **Theorem 6** 행렬식의 곱,  행렬식 함수의 선형성,  $A_i(b)$,  크래머의 공식(Cramer's rule)
 
-## 생각 메모
+# 생각 메모
 
 - [기초적인 것에 관련된 메모](https://ccss17.github.io/all.html)
     
@@ -204,4 +190,4 @@
 
 - [역사에 관련된 메모](https://ccss17.github.io/all3.html)
     
-  - ##### _(정리 3-1)_ $\therefore$ 정리 2-9 에 따라 학자는 학문의 역사부터 공부해야 한다.
+  - ##### _(정리 3-1)_ $\therefore$ 정리 2-9 에 따라 학문의 역사부터 공부해야 한다.

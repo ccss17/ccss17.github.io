@@ -1,3 +1,7 @@
+# [ccss17.github.io](https://ccss17.github.io)
+
+# Math2 Memo
+
 # 수와 연산 
 
 - 양 : 현상, 물체, 또는 물질의 크기이다.

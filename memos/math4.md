@@ -1,3 +1,7 @@
+# [ccss17.github.io](https://ccss17.github.io)
+
+# Math4 Memo
+
 # 도형 
 
 - 점 : (원론) 쪼갤 수 없는 것이다. 
