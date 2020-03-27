@@ -1,5 +1,3 @@
-# https://ccss17.github.io
-
 # 여러가지 메모 
 
 ##### 게시용으로 작성되지 않았습니다. 그래서 개인적으로만 사용하는 용어들 및 개인적인 생각들이 종종 포함되어 있습니다. 공부한 거를 안 까먹으려고 메모한 것들입니다. **http://github.com/ccss17/ccss17.github.io** 에서 관리합니다. 
@@ -42,11 +40,15 @@
 
 - [대수학 메모](https://ccss17.github.io/algebra.html)
     
-  ######  대수학(代數學, Algebra),  대수 구조(algebraic structure),  연산(operation),  $n$ 항 연산(n-ary operation),  영항 연산(0-ary operation),  일항 연산(unary operation) 또는 단항 연산,  이항 연산(binary operation),  삼항 연산(ternary operation),  덧셈에 대한 항등원을 제외한 집합,  "연산이 잘 정의되었다",  집합(set),  마그마(magma),  반군(semi group),  모노이드(monoid),  군(group),  아벨군(abelian group) 또는 가환군(commutative group),  수식,  미지수(변수, variable),  독립변수(independant variable),  종속변수(dependant variable),  방정식(equation),  불능,  항등식,  계수(coefficient),  항,  단항식(monomial),  다항식(polynomial),  차수(degree),  최고차항,  인수,  다항식의 연산에 대한 성질,  일차방정식(선형방정식, linear equation),  이차방정식,  다항방정식,  인수분해,  부등식(inequality),  절대부등식,  조건부등식,  유리식,  분수식,  가분수식,  진분수식,  다항식의 연산,  무리식,  연립방정식(simultaneous equation) 또는 방정식계(system of equations),  대수학의 기본 정리,  $k$중근,  대수학의 기본 정리의 따름 정리,  모델(model ; 모형),  수학적 모델링,  유클리드 공간,  좌표평면(직교 좌표계, rectangular coordinate system),  튜플(tuple),  순서쌍(2-튜플, ordered pair),  이항관계(binary relation),  구간(interval),  폐구간(닫힌구간, closed interval),  개구간(열린구간, open interval),  반열린구간(반개구간 또는 반폐구간, half open interval 또는 half closed interval),  수직선(number line),  좌표(coordinate),  좌표평면(coordinate plane),  절편,  사분면(quadrant),  좌표평면에서의 직선,  직선의 기울기,  거리,  유클리드 거리(Euclidean distance),  두 점의 거리의 의미,  수직선에서 두 점의 거리,  좌표평면에서 두 점의 거리,  공간 좌표,  3차원 좌표계,  대응,  함수(function) 또는 사상(mapping),  정의역(domain),  공역(codomain),  상(image) 또는 함수값,  원상(preimage) 또는 역상(inverse image),  치역(range),  단사함수(injection function) 또는 일대일 함수(one-to-one function),  전사함수(onto function, surjection function),  전단사 함수(bijection, bijective function) 또는 일대일 대응,  서로 같은 함수,  실변수 함수(function of a real variable),  실숫값 함수(real-valued function) 또는 실함수(real function),  복소변수 함수(function of a complex variable),  복소 함수(complex function),  다변수함수(multivariate function),  다변수 실함수,  다변수 복소함수
+  ######  대수학(代數學, Algebra),  추상대수학(abstract algebra),  대수 구조(algebraic structure),  연산(operation),  $n$ 항 연산(n-ary operation),  영항 연산(0-ary operation),  일항 연산(unary operation) 또는 단항 연산,  이항 연산(binary operation),  삼항 연산(ternary operation),  덧셈에 대한 항등원을 제외한 집합,  "연산이 잘 정의되었다",  집합(set),  마그마(magma),  반군(semi group),  모노이드(monoid),  군(group),  아벨군(abelian group) 또는 가환군(commutative group),  수식,  미지수(변수, variable),  독립변수(independant variable),  종속변수(dependant variable),  방정식(equation),  불능,  항등식,  계수(coefficient),  항,  단항식(monomial),  다항식(polynomial),  차수(degree),  최고차항,  인수,  다항식의 연산에 대한 성질,  일차방정식(선형방정식, linear equation),  이차방정식,  다항방정식,  인수분해,  부등식(inequality),  절대부등식,  조건부등식,  유리식,  분수식,  가분수식,  진분수식,  다항식의 연산,  무리식,  연립방정식(simultaneous equation) 또는 방정식계(system of equations),  대수학의 기본 정리,  $k$중근,  대수학의 기본 정리의 따름 정리,  모델(model ; 모형),  수학적 모델링
+
+- [해석학 메모](https://ccss17.github.io/anal.html)
+    
+  ######  해석학,  유클리드 공간,  좌표평면(직교 좌표계, rectangular coordinate system),  튜플(tuple),  순서쌍(2-튜플, ordered pair),  이항관계(binary relation),  구간(interval),  폐구간(닫힌구간, closed interval),  개구간(열린구간, open interval),  반열린구간(반개구간 또는 반폐구간, half open interval 또는 half closed interval),  수직선(number line),  좌표(coordinate),  좌표평면(coordinate plane),  절편,  사분면(quadrant),  좌표평면에서의 직선,  직선의 기울기,  거리,  유클리드 거리(Euclidean distance),  두 점의 거리의 의미,  수직선에서 두 점의 거리,  좌표평면에서 두 점의 거리,  공간 좌표,  3차원 좌표계,  대응,  함수(function) 또는 사상(mapping),  정의역(domain),  공역(codomain),  상(image) 또는 함수값,  원상(preimage) 또는 역상(inverse image),  치역(range),  단사함수(injection function) 또는 일대일 함수(one-to-one function),  전사함수(onto function, surjection function),  전단사 함수(bijection, bijective function) 또는 일대일 대응,  서로 같은 함수,  실변수 함수(function of a real variable),  실숫값 함수(real-valued function) 또는 실함수(real function),  복소변수 함수(function of a complex variable),  복소 함수(complex function),  다변수함수(multivariate function),  다변수 실함수,  다변수 복소함수
 
 - [삼각 함수 메모](https://ccss17.github.io/trig.html)
     
-  ######  점,  선,  직선,  선분,  면,  둘레(경계),  도형,  반직선,  각,  각도,  육십분법,  호도법(Radian),  직각,  예각,  둔각,  다각형,  삼각형,  사각형,  넓이(면적),  원,  지름,  반지름,  원주,  원주율($\pi$),  원의 넓이,  호($arc$),  원호($circular arc$),  부채꼴($circular sector$),  부채꼴의 호의 길이,  부채꼴의 넓이,  반원,  육십분법,  호도법($Radian$),  새로운 원주율($\tau$),  삼각법(trigonometry),  삼각비(trigonometric ratio),  사인($sine$),  코사인($cosine$),  탄젠트($tangent$),  코시컨트($cosecant$),  시컨트($secant$),  코탄젠트($cotangent$),  단위원(Unit circle),  삼각함수(trigonometric functions),  삼각함수의 단위원을 통한 정의,  삼각함수의 특수각,  삼각방정식,  삼각부등식,  삼각형과 삼각함수와의 관계,  사인법칙(Law of sines),  코사인법칙(Law of cosines),  삼각형의 넓이와 삼각함수와의 관계,  사각형의 넓이,  평행사변형의 넓이,  삼각함수의 덧셈정리,  배각의 공식,  반각의 공식
+  ######  점,  선,  직선,  선분,  면,  둘레(경계),  도형,  반직선,  각,  각도,  육십분법,  직각,  예각,  둔각,  다각형,  삼각형,  사각형,  넓이(면적),  원,  지름,  반지름,  원주,  원주율($\pi$),  원의 넓이,  호($arc$),  원호($circular arc$),  부채꼴($circular sector$),  부채꼴의 호의 길이,  부채꼴의 넓이,  반원,  육십분법,  호도법($Radian$),  새로운 원주율($\tau$),  삼각법(trigonometry),  삼각비(trigonometric ratio),  사인($sine$),  코사인($cosine$),  탄젠트($tangent$),  코시컨트($cosecant$),  시컨트($secant$),  코탄젠트($cotangent$),  단위원(Unit circle),  삼각함수(trigonometric functions),  삼각함수의 단위원을 통한 정의,  삼각함수의 특수각,  삼각방정식,  삼각부등식,  삼각형과 삼각함수와의 관계,  사인법칙(Law of sines),  코사인법칙(Law of cosines),  삼각형의 넓이와 삼각함수와의 관계,  사각형의 넓이,  평행사변형의 넓이,  삼각함수의 덧셈정리,  배각의 공식,  반각의 공식
 
 - [그래프 메모](https://ccss17.github.io/graph.html)
     
@@ -84,15 +86,15 @@
 
 ## 선형대수학 메모
 
-- [1장 : 선형방정식](https://ccss17.github.io/la.html)
+- [선형방정식](https://ccss17.github.io/la.html)
     
   ######  선형방정식(linear equation),  선형방정식계(system of linear equations),  선형계의 해(solution),  해집합(solution set),  선형계의 동치(equivalent),  행렬(matrix),  행(row),  열(column),  계수행렬(coefficient matrix),  첨가행렬(augmented matrix),  정방행렬(square matrix),  행렬의 크기,  선형계 풀이법,  기본 행연산,  행 동치(row equivalent),  영이 아닌(nonzero) 행 또는 열,  선행 성분(leading entry),  사다리꼴(echelon form) 행렬,  기약사다리꼴(reduced echelon form) 행렬 ,  추축위치(pivot position),  추축열(pivot column),  기본변수(basic variable),  자유변수(free variable),  선형계의 해,  해집합의 매개변수 표현,  선형계를 푼다,  열벡터(column vector),  영벡터(zero vector),  $\Re^2$,  $\Re^3$ 의 정의,  $\Re^n$ 의 정의,  일차결합(linear combination),  벡터방정식 (vector equation),  모든 벡터의 집합 $Span$,  행렬방정식 $Ax = b$ 의 정의,  행렬방정식의 해의 존재성의 필요충분조건,  항등행렬(identity matrix) 의 정의,  동차선형계(homogeneous),  예시 1,  예시 2,  비동차계의 해집합,  일차 독립(linearly independent),  일차 종속(linearly dependent),  행렬 $A$ 의 열들이 일차 독립이기 위한 필요충분조건,  선형변환 $T$,  선형변환 $T$ 의 정의역(domain),  선형변환 $T$ 의 공역(codomain),  상(image),  선형변환 $T$ 의 치역(range),  행렬변환의 정의,  행렬변환의 표시,  선형(linear),  선형변환 $T$ 가 결정되는 조건,  선형변환 $T$ 에 대한 표준행렬(standard matrix for the linear transformation T),  전사 변환(onto),  일대일 변환(one-to-one)
 
-- [2장 : 행렬 대수](https://ccss17.github.io/la2.html)
+- [행렬 대수](https://ccss17.github.io/la2.html)
     
   ######  $m \times n$ 행렬 표기법,  행렬의 성분의 표기,  대각성분(diagonal entry),  대각행렬(diagonal matrix),  영행렬(zero matrix),  행렬의 동치(equal),  행렬의 곱,  행렬곱 $AB$ 의 $(i, j)$ 성분,  예제,  행렬의 거듭제곱,  행렬의 $0$ 제곱,  전치행렬(transpost),  행렬의 가역성(invertible),  역행렬(inverse),  $2 \times 2$ 행렬 $A$ 의 행렬식(determinant),  예시,  기본행렬(elementary matrix),   $A^{-1}$ 을 구하는 일반적인 방법,  분할행렬,  행렬의 특정 행의 표기,  행렬의 특정 열의 표기,  블록 상삼각행렬(block upper triangular matrix),  블록 하삼각행렬(block lower triangular matrix),  블록 대각행렬(block diagonal matrix),  행렬 $A$ 의 분해(factorization),  LU 분해,  단위하삼각행렬(unit lower triangular matrix),  LU 분해의 유용성,  LU 분해 사전작업,  $\Re ^n$ 의 부분공간의 정의,  열공간(column space),  영공간(null space),  부분공간 $H$ 의 기저(basis) $\Beta$,  좌표(coordinates of x relative to the basis $\Beta$),  좌표벡터(coordinates vector of x relative to $\Beta$),  차원(dimension),  행렬 $A$ 의 계수(rank)
 
-- [3장 : 행렬식](https://ccss17.github.io/la3.html)
+- [행렬식](https://ccss17.github.io/la3.html)
     
   ######  $2 \times 2$ 행렬 $A$ 의 행렬식,  $3 \times 3$ 행렬 $A$ 의 행렬식,  $1 \times 1$ 행렬 $A$ 의 행렬식,  $n \times n$ 행렬의 행렬식,  행렬식 표기법,  여인수(cofactor),  **Theorem 3** 행연산과 행렬식의 관계,  $\det A$ 의 값,  **Theorem 6** 행렬식의 곱,  행렬식 함수의 선형성,  $A_i(b)$,  크래머의 공식(Cramer's rule)
 

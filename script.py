@@ -38,6 +38,7 @@ def update():
 {sections('수학기초론:수리논리학', 'mathmatical_logic', get_definitions)}
 {sections('기초 산술 메모', 'arithmetic', get_definitions)}
 {sections('대수학 메모', 'algebra', get_definitions)}
+{sections('해석학 메모', 'anal', get_definitions)}
 {sections('삼각 함수 메모', 'trig', get_definitions)}
 {sections('그래프 메모', 'graph', get_definitions)}
 {sections('확률,통계 메모', 'prop', get_definitions)}
@@ -51,9 +52,9 @@ def update():
 {sections('미적분 메모', 'calculus6', get_definitions)}
 
 ## 선형대수학 메모
-{sections('1장 : 선형방정식', 'la', get_definitions)}
-{sections('2장 : 행렬 대수', 'la2', get_definitions)}
-{sections('3장 : 행렬식', 'la3', get_definitions)}
+{sections('선형방정식', 'la', get_definitions)}
+{sections('행렬 대수', 'la2', get_definitions)}
+{sections('행렬식', 'la3', get_definitions)}
 
 '''
 
