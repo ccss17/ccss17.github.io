@@ -74,9 +74,9 @@ https://katex.org/docs/support_table.html
 
 ### Large Delimiters
 
-| $\lgroup$| $\rgroup$ |
+| $\lgroup$| $\rgroup$ |$\langle  M, \circ \rangle$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| \lgroup  | \rgroup  |
+| \lgroup  | \rgroup  |\langle  M, \circ \rangle|
 
 ### Misc
 

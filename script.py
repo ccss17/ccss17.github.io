@@ -34,11 +34,13 @@ def update():
     math_sections = f'''\
 {START_SECTION}
 {sections('논리학', 'logic', get_definitions)}
-{sections('수학 메모1', 'math', get_definitions)}
-{sections('수학 메모2', 'math2', get_definitions)}
-{sections('수학 메모3', 'math3', get_definitions)}
-{sections('수학 메모4', 'math4', get_definitions)}
-{sections('수학 메모5', 'math5', get_definitions)}
+{sections('수학기초론:집합론', 'math', get_definitions)}
+{sections('수학기초론:수리논리학', 'mathmatical_logic', get_definitions)}
+{sections('기초 산술 메모', 'arithmetic', get_definitions)}
+{sections('대수학 메모', 'algebra', get_definitions)}
+{sections('삼각 함수 메모', 'trig', get_definitions)}
+{sections('그래프 메모', 'graph', get_definitions)}
+{sections('확률,통계 메모', 'prop', get_definitions)}
 
 ## 미적분 메모
 {sections('극한 메모', 'calculus', get_definitions)}
