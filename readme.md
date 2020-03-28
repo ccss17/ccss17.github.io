@@ -28,7 +28,7 @@
 
 - [수학기초론:집합론](https://ccss17.github.io/math.html)
     
-  ######  자연대상,  수학,  수학,  정의(definition),  공리(axiom),  증명(proof),  정리(theorem),  수학기초론,  집합론,  집합,  원소,  집합 표현법,  집합의 분류,  부분집합,  서로 같은 집합,  진부분집합,  부분집합의 개수,  집합의 연산,  집합의 연산 법칙,  유한집합의 원소의 개수,  곱집합(product set)
+  ######  자연대상,  수학,  수학,  정의(definition),  공리(axiom),  증명(proof),  정리(theorem),  수학기초론,  집합론,  집합,  원소,  집합 표현법,  집합의 분류,  부분집합,  서로 같은 집합,  진부분집합,  부분집합의 개수,  기수(cardinal number),  집합의 연산,  집합의 연산 법칙,  유한집합의 원소의 개수,  곱집합(product set)
 
 - [수학기초론:수리논리학](https://ccss17.github.io/mathmatical_logic.html)
     
@@ -40,7 +40,7 @@
 
 - [대수학 메모](https://ccss17.github.io/algebra.html)
     
-  ######  대수학(代數學, Algebra),  추상대수학(abstract algebra),  대수 구조(algebraic structure),  연산(operation),  $n$ 항 연산(n-ary operation),  영항 연산(0-ary operation),  일항 연산(unary operation) 또는 단항 연산,  이항 연산(binary operation),  삼항 연산(ternary operation),  군론(group theory),  덧셈에 대한 항등원을 제외한 집합,  "연산이 잘 정의되었다",  집합(set),  마그마(magma),  반군(semi group),  모노이드(monoid),  군(group),  아벨군(abelian group) 또는 가환군(commutative group),  순환군(cyclic group),  환(ring),  가환환(commutative ring),  자명환(trivial ring),  단위원(unity),  가역원(invertible element) 또는 단원(unit),  나눗셈환(division ring),  체(field),  체의 확대(field extension),  기수(cardinal number),  유한체(finite field) 또는 갈루아 체(Galois field),  수식,  미지수(변수, variable),  독립변수(independant variable),  종속변수(dependant variable),  방정식(equation),  불능,  항등식,  계수(coefficient),  항,  단항식(monomial),  다항식(polynomial),  차수(degree),  최고차항,  인수,  다항식의 연산에 대한 성질,  일차방정식(선형방정식, linear equation),  이차방정식,  다항방정식,  인수분해,  부등식(inequality),  절대부등식,  조건부등식,  유리식,  분수식,  가분수식,  진분수식,  다항식의 연산,  무리식,  연립방정식(simultaneous equation) 또는 방정식계(system of equations),  대수학의 기본 정리,  $k$중근,  대수학의 기본 정리의 따름 정리,  모델(model ; 모형),  수학적 모델링
+  ######  대수학(代數學, Algebra),  추상대수학(abstract algebra),  대수 구조(algebraic structure),  연산(operation),  $n$ 항 연산(n-ary operation),  영항 연산(0-ary operation),  일항 연산(unary operation) 또는 단항 연산,  이항 연산(binary operation),  삼항 연산(ternary operation),  군론(group theory),  덧셈에 대한 항등원을 제외한 집합,  "연산이 잘 정의되었다",  집합(set),  마그마(magma),  반군(semi group),  모노이드(monoid),  군(group),  아벨군(abelian group) 또는 가환군(commutative group),  순환군(cyclic group),  환(ring),  가환환(commutative ring),  자명환(trivial ring),  단위원(unity),  가역원(invertible element) 또는 단원(unit),  나눗셈환(division ring),  체(field),  체의 확대(field extension),  유한체(finite field) 또는 갈루아 체(Galois field),  벡터공간(Vector Space),  수식,  미지수(변수, variable),  독립변수(independant variable),  종속변수(dependant variable),  방정식(equation),  불능,  항등식,  계수(coefficient),  항,  단항식(monomial),  다항식(polynomial),  차수(degree),  최고차항,  인수,  다항식의 연산에 대한 성질,  일차방정식(선형방정식, linear equation),  이차방정식,  다항방정식,  인수분해,  부등식(inequality),  절대부등식,  조건부등식,  유리식,  분수식,  가분수식,  진분수식,  다항식의 연산,  무리식,  연립방정식(simultaneous equation) 또는 방정식계(system of equations),  대수학의 기본 정리,  $k$중근,  대수학의 기본 정리의 따름 정리,  모델(model ; 모형),  수학적 모델링
 
 - [해석학 메모](https://ccss17.github.io/anal.html)
     
@@ -50,9 +50,9 @@
     
   ######  점,  선,  직선,  선분,  면,  둘레(경계),  도형,  반직선,  각,  각도,  육십분법,  직각,  예각,  둔각,  다각형,  삼각형,  사각형,  넓이(면적),  원,  지름,  반지름,  원주,  원주율($\pi$),  원의 넓이,  호($arc$),  원호($circular arc$),  부채꼴($circular sector$),  부채꼴의 호의 길이,  부채꼴의 넓이,  반원,  육십분법,  호도법($Radian$),  새로운 원주율($\tau$),  삼각법(trigonometry),  삼각비(trigonometric ratio),  사인($sine$),  코사인($cosine$),  탄젠트($tangent$),  코시컨트($cosecant$),  시컨트($secant$),  코탄젠트($cotangent$),  단위원(Unit circle),  삼각함수(trigonometric functions),  삼각함수의 단위원을 통한 정의,  삼각함수의 특수각,  삼각방정식,  삼각부등식,  삼각형과 삼각함수와의 관계,  사인법칙(Law of sines),  코사인법칙(Law of cosines),  삼각형의 넓이와 삼각함수와의 관계,  사각형의 넓이,  평행사변형의 넓이,  삼각함수의 덧셈정리,  배각의 공식,  반각의 공식
 
-- [그래프 메모](https://ccss17.github.io/graph.html)
+- [함수 메모](https://ccss17.github.io/graph.html)
     
-  ######  함수의 그래프,  직선의 방정식,  원의 방정식,  점의 평행이동,  도형의 평행이동,  대칭,  점의 대칭이동,  도형의 대칭이동,  항등함수,  상수함수,  합성함수(composite function),  역함수(inverse function),  양함수(explicit function),  음함수(implicit function),  초월함수(transcendental function),  다항함수(polynomial function),  함수의 최대값,  함수의 최소값,  홀함수(기함수, odd function),  짝함수(우함수, even function),  매개변수 방정식(parameter equation),  유리함수(rational function),  유리함수의 그래프,  무리함수,  무리함수의 그래프,  지수함수,  지수방정식(exponential equation),  지수부등식(exponential inequality),  로그함수,  로그방정식(logarithm equation),  로그부등식(logarithm inequality),  가우스 함수,  주기함수,  뉴턴의 다항식 보간법(polynomial interpolation),  시그모이드 함수(sigmoid function),  표준 시그모이드 함수,  양,  물리량,  비물리량,  스칼라(scala),  벡터(vector),  벡터의 크기,  두 벡터가 같다,  영벡터(zero vector),  역벡터(inverse vector),  단위벡터(unit vector),  평면벡터(plane vector),  공간벡터(space vector),  벡터의 덧셈,  벡터의 뺄셈,  벡터의 실수배(스칼라배),  벡터의 실수배의 결합법칙,  벡터의 실수배의 분배법칙,  위치벡터
+  ######  함수의 그래프,  직선의 방정식,  원의 방정식,  점의 평행이동,  도형의 평행이동,  대칭,  점의 대칭이동,  도형의 대칭이동,  항등함수,  상수함수,  합성함수(composite function),  역함수(inverse function),  양함수(explicit function),  음함수(implicit function),  초월함수(transcendental function),  다항함수(polynomial function),  함수의 최대값,  함수의 최소값,  홀함수(기함수, odd function),  짝함수(우함수, even function),  매개변수 방정식(parameter equation),  유리함수(rational function),  유리함수의 그래프,  무리함수,  무리함수의 그래프,  지수함수,  지수방정식(exponential equation),  지수부등식(exponential inequality),  로그함수,  로그방정식(logarithm equation),  로그부등식(logarithm inequality),  가우스 함수,  주기함수,  뉴턴의 다항식 보간법(polynomial interpolation),  시그모이드 함수(sigmoid function),  표준 시그모이드 함수,  양,  물리량,  비물리량,  스칼라(scala),  벡터(vector),  벡터의 크기,  두 벡터가 같다,  영벡터(zero vector),  역벡터(inverse vector),  단위벡터(unit vector),  평면벡터(plane vector),  공간벡터(space vector),  벡터의 덧셈,  벡터의 뺄셈,  벡터의 실수배(스칼라배),  벡터의 실수배의 성질,  두 벡터의 평행조건,  세 점이 한 직선 위에 있을 조건,  위치벡터,  평면벡터,  평면벡터 성분 표현,  평면벡터의 크기,  평면벡터의 같음,  평면벡터의 연산,  두 점에 대한 평면벡터의 성분,  두 점에 대한 평면벡터의 크기,  두 평면벡터의 평행
 
 - [확률,통계 메모](https://ccss17.github.io/prop.html)
     

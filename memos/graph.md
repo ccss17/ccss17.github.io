@@ -667,17 +667,89 @@
 
 ## 벡터 대수 
 
-- 벡터의 덧셈 : 
+실수에서 했던 연산들을 벡터에 대하여 재정의하고 있는 것이다. 
 
-- 벡터의 뺄셈 : 
+- 벡터의 덧셈 : 벡터의 덧셈은 다음 두 경우로 정의된다. 
 
-- 벡터의 실수배(스칼라배) : 
+  - 삼각형에서의 덧셈 : 두 벡터 $\overrightarrow{u} = \overrightarrow{AB}, \overrightarrow{v} = \overrightarrow{BC}$ 에 대하여 벡터 $\overrightarrow{w} = \overrightarrow{AC}$ 를 두 벡터 $\overrightarrow{u}, \overrightarrow{v}$ 의 합이라 한다.
 
-- 벡터의 실수배의 결합법칙 : 
+    - 이것을 기호로 다음과 같이 나타낸다. 
 
-- 벡터의 실수배의 분배법칙 : 
+      $$ \overrightarrow{u}+\overrightarrow{v}= \overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC} = \overrightarrow{w} $$ 
 
-**구체화 필요**
+    - 그림
+
+      ![캡처](https://user-images.githubusercontent.com/16812446/77826567-90930580-7153-11ea-98d2-da447edd015a.PNG)
+
+  - 평행사변형에서의 덧셈 : 두 벡터 $\overrightarrow{a} = \overrightarrow{AB}, \overrightarrow{b} = \overrightarrow{AC}$ 에 대하여 평행사변형 $ABDC$ 를 만들 때, 벡터 $\overrightarrow{AD}$ 를 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 의 합이라 한다.
+
+    - 이것을 기호로 다음과 같이 나타낸다. 
+
+      $$ \overrightarrow{a}+\overrightarrow{b}= \overrightarrow{AB} + \overrightarrow{AC} = \overrightarrow{AD} $$ 
+  
+    - 그림
+
+      ![](https://i.ytimg.com/vi/gdWfqihMW14/maxresdefault.jpg)
+
+- 벡터 덧셈의 성질 
+
+  임의의 세 벡터 $\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}$ 와 영벡터 $\overrightarrow{0}$ 에 대하여 다음이 성립한다.
+
+  - 교환법칙 : $\overrightarrow{a}+\overrightarrow{b}=\overrightarrow{b}+\overrightarrow{a}$
+
+  - 결합법칙 : $(\overrightarrow{a}+\overrightarrow{b})+\overrightarrow{c}=\overrightarrow{a}+(\overrightarrow{b}+\overrightarrow{c})$
+
+  - 항등원 : $\overrightarrow{a}+\overrightarrow{0}=\overrightarrow{0}+\overrightarrow{a} = \overrightarrow{a}$
+
+  - 역원 : $\overrightarrow{a}+(-\overrightarrow{a})=-\overrightarrow{a}+\overrightarrow{a} = \overrightarrow{0}$
+
+- 벡터의 뺄셈 : 두 벡터 $\overrightarrow{OA}, \overrightarrow{OB}$ 에 대하여 $\overrightarrow{a}$ 와 $\overrightarrow{-b}=\overrightarrow{BO}$ 의 합 
+
+  $$ \overrightarrow{a}+(-\overrightarrow{b}) = \overrightarrow{OA}+\overrightarrow{BO} = \overrightarrow{BO} + \overrightarrow{OA} = \overrightarrow{BA} $$
+
+  를 벡터 $\overrightarrow{a}$ 를 벡터 $\overrightarrow{b}$ 에서 뺀 차라고 한다.
+
+  - 이것을 기호로 다음과 같이 나타낸다. 
+
+    $$ \overrightarrow{a}-\overrightarrow{b}= \overrightarrow{OA} - \overrightarrow{OB} = \overrightarrow{BA} $$ 
+
+  - 그림 
+  
+    ![](https://i.ytimg.com/vi/kOCTTK3Cnto/maxresdefault.jpg)
+  
+- 벡터의 실수배(스칼라배) : 임의의 실수 $k$ 와 벡터 $\overrightarrow{a}$ 의 곱 $k \overrightarrow{a}$ 를 벡터 $\overrightarrow{a}$ 의 실수배라 하고 다음과 같이 정의한다.
+
+  - $\overrightarrow{a} \neq \overrightarrow{0}$ 인 경우 
+
+    - $k>0$ 이면 $k \overrightarrow{a}$ 는 $\overrightarrow{a}$ 와 방향이 같고 크기가 $k |\overrightarrow{a}|$ 인 벡터이다. 
+
+    - $k<0$ 이면 $k \overrightarrow{a}$ 는 $\overrightarrow{a}$ 와 방향이 반대이고 크기가 $|k| |\overrightarrow{a}|$ 인 벡터이다. 
+
+    - $k=0$ 이면 $k \overrightarrow{a} = \overrightarrow{0}$ 이다.
+
+  - $\overrightarrow{a} = \overrightarrow{0}$ 인 경우, 실수 $k$ 에 대하여 $k \overrightarrow{a}=\overrightarrow{0}$ 이다. 
+
+- 벡터의 실수배의 성질 : 두 실수 $k, l$ 과 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 에 대하여 다음이 성립한다.
+
+  - 벡터의 실수배의 결합법칙 : $k(l \overrightarrow{a}) = (kl)\overrightarrow{a}$
+
+  - 벡터의 실수배의 분배법칙 
+  
+    $(k+l) \overrightarrow{a} = k\overrightarrow{a}+l \overrightarrow{a}$
+
+    $k(\overrightarrow{a}+\overrightarrow{b}) = k\overrightarrow{a}+k \overrightarrow{b}$
+
+- 두 벡터의 평행조건 : 다음 두 경우에서 두 벡터는 평행한다고 정의한다. 
+
+  - 영벡터가 아닌 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 와 $0$ 이 아닌 실수 $k$ 에 대하여 
+
+    $$ \overrightarrow{a}//\overrightarrow{b} \Leftrightarrow \overrightarrow{b} = k \overrightarrow{a} $$
+
+- 세 점이 한 직선 위에 있을 조건 : 서로 다른 세점 $A, B, C$ 가 한 직선 위에 존재하기 위한 필요충분조건은 $0$ 이 아닌 실수 $k$ 에 대하여
+
+  $$ \overrightarrow{AC} = k \overrightarrow{AB} $$
+
+  이다.
 
 ## 위치벡터 
 
@@ -686,5 +758,67 @@
   - 점 $O$ 에 대한 점 $A$ 의 위치벡터를 간단하게 점 $A$ 의 위치벡터로 부른다.
 
   - 점 $O$ 의 위치벡터는 $\overrightarrow{0}$ 이다.
+
+  - 두 점 $A, B$ 의 위치벡터가 각각 $\overrightarrow{a}, \overrightarrow{b}$ 일 때 
+
+    $$ \overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} = \overrightarrow{b} - \overrightarrow{a} $$
+
+    이다. 
+
+**구체화 필요**
+
+## 평면벡터 
+
+- 평면벡터 : 위치벡터의 개념을 좌표평면 위로 옮겨서 시점을 원점 $O(0, 0)$ 으로 고정시킨 벡터이다.
+
+  - 종점의 좌표 $2-$튜플을 평면벡터를 대표하는 값으로 삼는다. 
+
+- 평면벡터 성분 표현 : 임의의 평면벡터 $\overrightarrow{a}$ 에 대하여 $\overrightarrow{a} = \overrightarrow{OA}$ 의 종점이 점이 $A(a_1, a_2)$ 일 때, 두 점 $E_1(1, 0), E_2(0, 1)$ 의 위치벡터 $\overrightarrow{e_1}, \overrightarrow{e_2}$ 를 이용하여 벡터 $\overrightarrow{a}$ 를 다음과 같이 나타낼 수 있다. 
+
+  $$ \overrightarrow{a} = \overrightarrow{OA} = \overrightarrow{OA_1} + \overrightarrow{OA_2} = a_1\overrightarrow{e_1} + a_2 \overrightarrow{e_2} $$
+
+  - 이때 두 실수 $a_1, a_2$ 를 평면벡터 $\overrightarrow{a}$ 의 성분이라 한다. 
+
+  - 또 성분만을 이용해서 평면벡터 $\overrightarrow{a}$ 를 두 수의 순서쌍($2-$튜플)
+
+    $$ \overrightarrow{a} = (a_1,a_2) $$
+
+    로 나타낼 수 있다. 
+
+- 평면벡터의 크기 : $\overrightarrow{a} = (a_1,a_2)$  의 크기는 
+
+  $$ |\overrightarrow{a}| = \sqrt[]{a^{2}_{1}+a^{2}_{2}} $$
+
+- 평면벡터의 같음 : $\overrightarrow{a} = (a_1,a_2),\overrightarrow{b} = (b_1,b_2)$  가 같을 조건은
+
+  $$ \overrightarrow{a} = \overrightarrow{b} \Leftrightarrow a_1=b_1, a_2 = b_2 $$
+
+  이다. 
+
+- 평면벡터의 연산 : $\overrightarrow{a} = (a_1,a_2),\overrightarrow{b} = (b_1,b_2)$ 에 대하여
+
+  - 덧셈 : $\overrightarrow{a}+\overrightarrow{b}=(a_1+b_1, a_2+b_2)$
+
+  - 뺄셈 : $\overrightarrow{a}-\overrightarrow{b}=(a_1-b_1, a_2-b_2)$
+
+  - 실수배 : k$\overrightarrow{a}=(ka_1, ka_2)$
+
+- 두 점에 대한 평면벡터의 성분 : 좌표평면 위의 두 점 $A(a_1,a_2),B(b_1,b_2)$ 에 대하여 
+
+  $$ \overrightarrow{AB} = \overrightarrow{OB}-\overrightarrow{OA}=(b_1,a_1, b_2-a_2) $$
+
+  이다. 
+
+- 두 점에 대한 평면벡터의 크기 : 좌표평면 위의 두 점 $A(a_1,a_2),B(b_1,b_2)$ 에 대하여 
+
+  $$ |\overrightarrow{AB}| = \sqrt[]{(b_1-a_1)^{2}+(b_2-a_2)^{2}} $$
+
+  이다. 
+
+- 두 평면벡터의 평행 : 영벡터가 아닌 두 평면벡터 $\overrightarrow{a} = (a_1,a_2),\overrightarrow{b} = (b_1,b_2)$ 에 대하여
+
+  $$ \overrightarrow{a}//\overrightarrow{b} \Leftrightarrow \overrightarrow{b} = k \overrightarrow{a} \Leftrightarrow \begin{cases} b_1 = ka_1 &\text{}\\ b_2=ka_2 &\text{}\\ \end{cases} $$
+
+## 공간벡터 
 
 **구체화 필요**
