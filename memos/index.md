@@ -82,7 +82,7 @@
 
 - [미적분 메모](https://ccss17.github.io/calculus6.html)
     
-  ######  이변수 함수의 극한,  이변수 함수의 극한의 성질,  이변수 함수의 연속,  이변수 합성함수의 연속,  다변수 함수의 극한과 연속,  상미분(ordinary derivative),  $x$ 에 대한 편미분계수,  $y$ 에 대한 편미분계수,  편도함수(partial derivative),  이계 편도함수(second-order partial derivative),  혼합 편미분(mixed derivative),  혼합 편미분 정리(mixed derivative theorem),  이변수 함수의 미분가능성,  이변수 함성함수의 도함수(chain rule),  일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule),  이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule),  이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule),  $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule)
+  ######  이변수 함수의 극한,  이변수 함수의 극한의 성질,  이변수 함수의 연속,  이변수 합성함수의 연속,  다변수 함수의 극한과 연속,  상미분(ordinary derivative),  $x$ 에 대한 편미분계수,  $y$ 에 대한 편미분계수,  편도함수(partial derivative),  편도함수의 기하학적 의미,  이계 편도함수(second-order partial derivative),  혼합 편미분(mixed derivative),  혼합 편미분 정리(mixed derivative theorem),  이변수 함수의 미분가능성,  이변수 함성함수의 도함수(chain rule),  일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule),  이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule),  이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule),  $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule)
 
 ## 선형대수학 메모
 
@@ -201,3 +201,5 @@
 - [역사에 관련된 메모](https://ccss17.github.io/all3.html)
     
   - ##### _(정리 3-1)_ $\therefore$ 정리 2-9 에 따라 어떤 학문을 알기 위해서는 그 역사부터 공부해야 한다.
+
+  - ##### $\therefore$ 인공지능을 알기 위해서는 차례로 수학의 역사와 과학공학의 역사와 컴퓨터공학의 역사와 인공지능의 역사를 알아야 한다.

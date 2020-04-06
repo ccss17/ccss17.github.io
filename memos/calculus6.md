@@ -64,8 +64,6 @@
 
     이다. 
 
-  
-
 # 상미분과 편미분 
 
 실제로 많은 함수들이 하나의 독립 변수에 의존하는 것이 아니라 두 개 이상의 독립 변수에 종속되기 때문에 많은 경우 일변수 함수에 대한 미분을 다변수 함수로 확장한 미분이 필요하다.
@@ -146,6 +144,40 @@
 
     이다.
 
+- 편도함수의 기하학적 의미 : 이변수 함수 $f(x, y)$ 에 대하여 편도함수의 기하학적 의미는 각각 다음과 같다. 
+
+  ![](https://files.mtstatic.com/site_4334/141539/0?Expires=1586041385&Signature=dPDqj~eS7eZze7bEMmPm1T9hgIJ9B7u-kXwlRvJU7tGAXDp0NL~3gLeV0jMmQIRpdi2TJ3RGhKo-qZSaNPM9EkkByS0JUiDYCaSFTPtfcEBMxS6Q0PGVB-0B0M3vExQi2zxo-2tGmjsF1mSsOQ7FDMmcEsASdEyiSY9OUq2Kr3Q_&Key-Pair-Id=APKAJ5Y6AV4GI7A555NA)
+
+  1. $x$ 에 대한 편도함수
+
+      $$ f_x(x, y) = \frac{\partial z}{\partial x} = \lim_{h \to 0} \frac{f(x+h, y)-f(x, y)}{h} $$
+
+      의 기하학적 의미 : 곡면 $f(x, y)$ 와 $x$ 축에 평행한 평면과의 교선의 접선의 기울기이다. 
+
+      - 위 그림의 왼쪽의 그래프의 곡면에서 $xy$ 평면에서 수직으로, $x$ 축과 평행하게 곡면을 자르게 되면 여러 개의 교선을 얻을 수 있다. 
+
+      - 그 교선 중 하나가 왼쪽 그래프의 점 $P$ 가 상주하고 있는 곡선이다.
+
+        - 만약 그 곡선보다 좀 더 오른쪽에서 곡면을 자르면 더 짧은 교선을 얻을 수 있고 더 왼쪽에서 곡면을 자르면 더 긴 교선을 얻을 수 있을 것이다. 
+      
+      - 이 교선에서 어떤 점 $P$ 를 잡아서 접선을 그었을 때 그 접선의 기울기가 편미분계수이다. 
+
+      - 그리고 그 기울기들에 대한 함수가 $x$ 에 대한 편도함수이다. 
+
+  2. $y$ 에 대한 편도함수
+
+      $$ f_y(x, y) = \frac{\partial z}{\partial y} = \lim_{h \to 0} \frac{f(x, y+h)-f(x, y)}{h} $$
+
+      의 기하학적 의미 : 곡면 $f(x, y)$ 와 $y$ 축에 평행한 평면과의 교선의 접선의 기울기
+
+      - 위 그림의 오른쪽의 그래프의 곡면에서 $xy$ 평면에서 수직으로, $y$ 축과 평행하게 곡면을 자르게 되면 여러 개의 교선을 얻을 수 있다. 
+
+      - 그 교선 중 하나가 왼쪽 그래프의 점 $P$ 가 상주하고 있는 곡선이다.
+      
+      - 이 교선에서 어떤 점 $P$ 를 잡아서 접선을 그었을 때 그 접선의 기울기가 편미분계수이다. 
+
+      - 그리고 그 기울기들에 대한 함수가 $y$ 에 대한 편도함수이다. 
+
 ## 여러가지 편도함수 
 
 - 이계 편도함수(second-order partial derivative) : 이변수 함수 $f(x, y)$ 를 두번 미분한 것으로 다음 $4$ 가지 경우로 정의된다. 
@@ -153,10 +185,6 @@
   - $x$ 에 대하여 두번 미분할 경우 
 
     $$ \frac{\partial ^{2} f}{\partial x ^{2}} = \frac{\partial }{\partial x }(\frac{\partial f}{\partial x}) = (f_x)_x = f _{xx} $$
-
-  - $x$ 에 대하여 미분하고 $y$ 에 대하여 미분할 경우
-
-    $$ \frac{\partial ^{2} f}{\partial y \partial x } = \frac{\partial }{\partial y}(\frac{\partial f}{\partial x}) = (f_x)_y = f _{xy} $$
 
   - $y$ 에 대하여 두번 미분할 경우
 
