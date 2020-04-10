@@ -615,29 +615,79 @@
 
     - 이것을 형식언어로 $\overrightarrow{AB}$ 로 표현한다. 
 
-    - 이때 점 $A$ 를 벡터의 시점(initial point), 점 $B$ 를 벡터의 종점(terminal point)이라 한다. 
-
   - 다음과 같이 벡터를 시점과 종점이 아닌 단일 문자로 나타낼 수도 있다. 
 
     $$ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots $$
 
   - **벡터는 행렬과 같이 수와 다른 개념이므로 행렬에서처럼 연산법칙, 항등원, 역원, 단위(수에서 $1$) 등을 새로 정의해야 한다.**
 
-- 벡터의 크기 : 벡터 $\overrightarrow{AB}$ 에서 선분 $AB$ 의 길이를 벡터의 크기라 한다.
+- 벡터의 시점(initial point) : 다음과 같이 점 $A$ 에서 점 $B$ 로 방향이 주어진 선분 $AB$ 를 벡터 $AB$ 에서
 
-  - 형식언어로 $|\overrightarrow{AB}|$ 로 나타낸다. 
+    ![](https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C)
 
-  - 다음과 같이 벡터의 크기를 시점과 종점이 아닌 단일 문자로 나타낼 수도 있다. 
+    점 $A$ 를 벡터의 시점이라 한다. 
 
-    $$ |\overrightarrow{a}|, |\overrightarrow{b}|, |\overrightarrow{c}|, \dots $$
+- 벡터의 종점(terminal point) : 다음과 같이 점 $A$ 에서 점 $B$ 로 방향이 주어진 선분 $AB$ 를 벡터 $AB$ 에서
 
-- 두 벡터가 같다 : 시점과 종점의 위치에 관계 없이 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 의 크기와 방향이 같으면 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 를 같다고 한다.
+    ![](https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C)
 
-  - 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 가 각각 선분 $\overline{AB}, \overleftrightarrow{CD}$ 로 구성되었을 때 이 둘이 같다는 것을
+    점 $B$ 를 벡터의 종점이라 한다. 
 
-    $$ \overrightarrow{a} = \overrightarrow{b} \Leftrightarrow \overrightarrow{AB} = \overrightarrow{CD} $$
+- 스칼라 함수(scalar function) : 실숫값 함수와 같이 어떤 점을 하나의 스칼라에 대응시키는 함수이다.
 
-    로 표현한다. 
+  - 즉 여러 독립변수에 대응하는 하나의 함수 값이 스칼라가 된다. 
+
+  - 지금까지 살펴본 함수들이 스칼라 함수에 해당한다. 
+
+  - 실숫값 함수의 정의처럼 공역이 실수 집합 $\Re$ 인 함수 
+
+    $$ f: X \to \Re $$
+
+    이다. 
+
+  - 예시 
+
+    $$ y = x ^{2}, y = \sin x, y = \ln x \dots $$
+
+- 벡터 함수(vector function) : 어떤 점을 하나의 벡터에 대응시키는 함수이다. 
+
+  - 여러 독립변수를 하나의 함수값, 즉 벡터에 대응시키는 함수이다. 
+
+  - 예시 
+
+    $$ r(t) = \bigg < f(t), g(t), h(t) \bigg > = f(t)i + g(t)j+h(t)k $$
+
+- 장(field) : 공간에서 위치, 시간 등에 따라 그 성질을 다르게 나타내는 물리량이다. 
+
+  - 공간 내 점의 위치와 시간에 따라 다른 값을 가진다.
+
+  - 공간의 모든 점에서 정의되는 물리량이다. 
+
+    - 물리량이므로 스칼라량, 벡터량을 지닌다. 
+
+- 스칼라 장(scalar field) : 공간 내 각 점의 위치, 시간 등에 따라 결정되는 크기를 갖는 스칼라를 나타내는 분포이다.
+
+  - 즉 공간 내 각 점에 물리적으로 스칼라 값을 대응시키는 스칼라 함수이다. 
+
+  - 예시 
+
+    대기의 각 점의 온도, 밀도, 압력 
+  
+  - 예시 
+
+    전하가 있는 공간에서의 전위의 분포 
+
+- 벡터 장(vector field) : 공간 내 각 점의 위치, 시간 등에 따라 결정되는 크기와 방향을 갖는 벡터를 나타내는 분포이다. 
+
+  - 예시 
+
+    속도장, 역장(力場)은 크기 뿐만 아니라 방향을 가지므로 벡터장에 해당한다. 
+
+    - 속도장은 각 점에서 속도 벡터를 대응시킨 것으로 해류 속도장, 풍속 속도장 등이 있다. 
+
+    - 역장은 각 점에서 힘 벡터를 대응시킨 것으로써 중력장, 전기장, 자기장 등이 있다.
+
+      - 일례로 중력장은 중력이 미치는 공간 내 각 점에 중력 벡터를 대응시킨 벡터 함수이다. 
 
 ## 여러가지 벡터 
 
@@ -668,6 +718,34 @@
 ## 벡터 대수 
 
 실수에서 했던 연산들을 벡터에 대하여 재정의하고 있는 것이다. 
+
+- 벡터의 크기 : 벡터 $\overrightarrow{AB}$ 에서 선분 $AB$ 의 길이를 벡터의 크기라 한다.
+
+  - 형식언어로 $|\overrightarrow{AB}|$ 로 나타낸다. 
+
+  - 다음과 같이 벡터의 크기를 시점과 종점이 아닌 단일 문자로 나타낼 수도 있다. 
+
+    $$ |\overrightarrow{a}|, |\overrightarrow{b}|, |\overrightarrow{c}|, \dots $$
+
+- 두 벡터가 같다 : 시점과 종점의 위치에 관계 없이 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 의 크기와 방향이 같으면 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 를 같다고 한다.
+
+  - 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 가 각각 선분 $\overline{AB}, \overleftrightarrow{CD}$ 로 구성되었을 때 이 둘이 같다는 것을
+
+    $$ \overrightarrow{a} = \overrightarrow{b} \Leftrightarrow \overrightarrow{AB} = \overrightarrow{CD} $$
+
+    로 표현한다. 
+  
+  - 예시 
+
+    ![unnamed](https://user-images.githubusercontent.com/16812446/79002706-fd62c280-7b8b-11ea-8a50-45ca181784e1.gif)
+
+    위 세 벡터는 같은 방향과 같은 길이를 지니므로 모두 같다.
+
+    즉, 왼쪽부터 차례로 $\overrightarrow{AB}, \overrightarrow{CD}, \overrightarrow{OP}$ 라고 한다면 
+
+    $$ \overrightarrow{AB}= \overrightarrow{CD}= \overrightarrow{OP} $$
+
+    이다. 
 
 - 벡터의 덧셈 : 벡터의 덧셈은 다음 두 경우로 정의된다. 
 
@@ -801,7 +879,7 @@
 
   - 뺄셈 : $\overrightarrow{a}-\overrightarrow{b}=(a_1-b_1, a_2-b_2)$
 
-  - 실수배 : k$\overrightarrow{a}=(ka_1, ka_2)$
+  - 실수배 : $k\overrightarrow{a}=(ka_1, ka_2)$
 
 - 두 점에 대한 평면벡터의 성분 : 좌표평면 위의 두 점 $A(a_1,a_2),B(b_1,b_2)$ 에 대하여 
 

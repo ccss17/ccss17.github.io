@@ -24,7 +24,7 @@
 
 - [논리학](https://ccss17.github.io/logic.html)
     
-  ######  언어,  단어,  문장,  사고 전달의 최소단위,  명제(proposition),  조건(condition),  진리집합(truth set),  추리,  추론(inference),  논증,  논리학,  비형식 논리학,  진리값,  형식 논리학,  귀납(induction),  완전귀납,  불완전귀납,  귀납 추론의 종류,  인과적 귀납법,  연역(deduction),  연역논증 규칙,  정언 논리,  현대 논리학
+  ######  언어,  단어,  문장,  사고 전달의 최소단위,  명제(proposition),  조건(condition),  진리값,  진리집합(truth set),  추리,  추론(inference),  논증,  논리학,  논리학에서의 올바르다,  연역적으로 건전 타당한(sound and valid) 추론,  귀납적으로 건전한(inductively sound) 추론, 또는 귀납적으로 강한(inductively strong) 추론,  논리학의 기본원리,  비형식 논리학,  형식 논리학,  귀납적으로 건전한(inductively sound) 추론, 또는 귀납적으로 강한(inductively strong) 추론,  논리학의 기본원리,  비형식 논리학,  형식 논리학,  오류론,  설득력 있는 추론,  설득력 없는 추론,  형식적 오류,  비형식적 오류,  유추(analogy),  귀납(induction),  완전귀납,  불완전귀납,  귀납 추론의 종류,  인과적 귀납법,  연역(deduction),  연역논증 규칙,  정언 논리,  현대 논리학
 
 - [수학기초론:집합론](https://ccss17.github.io/math.html)
     
@@ -52,7 +52,7 @@
 
 - [함수 메모](https://ccss17.github.io/graph.html)
     
-  ######  함수의 그래프,  직선의 방정식,  원의 방정식,  점의 평행이동,  도형의 평행이동,  대칭,  점의 대칭이동,  도형의 대칭이동,  항등함수,  상수함수,  합성함수(composite function),  역함수(inverse function),  양함수(explicit function),  음함수(implicit function),  초월함수(transcendental function),  다항함수(polynomial function),  함수의 최대값,  함수의 최소값,  홀함수(기함수, odd function),  짝함수(우함수, even function),  매개변수 방정식(parameter equation),  유리함수(rational function),  유리함수의 그래프,  무리함수,  무리함수의 그래프,  지수함수,  지수방정식(exponential equation),  지수부등식(exponential inequality),  로그함수,  로그방정식(logarithm equation),  로그부등식(logarithm inequality),  가우스 함수,  주기함수,  뉴턴의 다항식 보간법(polynomial interpolation),  시그모이드 함수(sigmoid function),  표준 시그모이드 함수,  양,  물리량,  비물리량,  스칼라(scala),  벡터(vector),  벡터의 크기,  두 벡터가 같다,  영벡터(zero vector),  역벡터(inverse vector),  단위벡터(unit vector),  평면벡터(plane vector),  공간벡터(space vector),  벡터의 덧셈,  벡터의 뺄셈,  벡터의 실수배(스칼라배),  벡터의 실수배의 성질,  두 벡터의 평행조건,  세 점이 한 직선 위에 있을 조건,  위치벡터,  평면벡터,  평면벡터 성분 표현,  평면벡터의 크기,  평면벡터의 같음,  평면벡터의 연산,  두 점에 대한 평면벡터의 성분,  두 점에 대한 평면벡터의 크기,  두 평면벡터의 평행
+  ######  함수의 그래프,  직선의 방정식,  원의 방정식,  점의 평행이동,  도형의 평행이동,  대칭,  점의 대칭이동,  도형의 대칭이동,  항등함수,  상수함수,  합성함수(composite function),  역함수(inverse function),  양함수(explicit function),  음함수(implicit function),  초월함수(transcendental function),  다항함수(polynomial function),  함수의 최대값,  함수의 최소값,  홀함수(기함수, odd function),  짝함수(우함수, even function),  매개변수 방정식(parameter equation),  유리함수(rational function),  유리함수의 그래프,  무리함수,  무리함수의 그래프,  지수함수,  지수방정식(exponential equation),  지수부등식(exponential inequality),  로그함수,  로그방정식(logarithm equation),  로그부등식(logarithm inequality),  가우스 함수,  주기함수,  뉴턴의 다항식 보간법(polynomial interpolation),  시그모이드 함수(sigmoid function),  표준 시그모이드 함수,  양,  물리량,  비물리량,  스칼라(scala),  벡터(vector),  벡터의 시점(initial point),  벡터의 종점(terminal point),  스칼라 함수(scalar function),  벡터 함수(vector function),  장(field),  스칼라 장(scalar field),  벡터 장(vector field),  영벡터(zero vector),  역벡터(inverse vector),  단위벡터(unit vector),  평면벡터(plane vector),  공간벡터(space vector),  벡터의 크기,  두 벡터가 같다,  벡터의 덧셈,  벡터의 뺄셈,  벡터의 실수배(스칼라배),  벡터의 실수배의 성질,  두 벡터의 평행조건,  세 점이 한 직선 위에 있을 조건,  위치벡터,  평면벡터,  평면벡터 성분 표현,  평면벡터의 크기,  평면벡터의 같음,  평면벡터의 연산,  두 점에 대한 평면벡터의 성분,  두 점에 대한 평면벡터의 크기,  두 평면벡터의 평행
 
 - [확률,통계 메모](https://ccss17.github.io/prop.html)
     
@@ -82,7 +82,7 @@
 
 - [미적분 메모](https://ccss17.github.io/calculus6.html)
     
-  ######  이변수 함수의 극한,  이변수 함수의 극한의 성질,  이변수 함수의 연속,  이변수 합성함수의 연속,  다변수 함수의 극한과 연속,  상미분(ordinary derivative),  $x$ 에 대한 편미분계수,  $y$ 에 대한 편미분계수,  편도함수(partial derivative),  편도함수의 기하학적 의미,  이계 편도함수(second-order partial derivative),  혼합 편미분(mixed derivative),  혼합 편미분 정리(mixed derivative theorem),  이변수 함수의 미분가능성,  이변수 함성함수의 도함수(chain rule),  일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule),  이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule),  이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule),  $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule)
+  ######  매개변수 방정식(parametric equations),  매개변수 곡선(parametric curve),  매개변수 구간(parametric interval),  시점(initial point),  종점(terminal point),  이변수 함수의 극한,  이변수 함수의 극한의 성질,  이변수 함수의 연속,  이변수 합성함수의 연속,  다변수 함수의 극한과 연속,  상미분(ordinary derivative),  $x$ 에 대한 편미분계수,  $y$ 에 대한 편미분계수,  편도함수(partial derivative),  편도함수의 기하학적 의미,  이계 편도함수(second-order partial derivative),  혼합 편미분(mixed derivative),  혼합 편미분 정리(mixed derivative theorem),  이변수 함수의 미분가능성,  이변수 함성함수의 도함수(chain rule),  일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule),  이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule),  이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule),  $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule),  표준점(standard poitn) 에 위치한 벡터,  벡터 성분 표기(component form),  벡터의 성분(component),  벡터의 길이(magnitude or length of vector),  영 벡터(zero vector),  벡터 대수 연산,  스칼라배 벡터의 길이,  단위 벡터(unit vector),  표준 단위 벡터(standard unit vector),  벡터의 $i$ 성분(i-component),  벡터의 $j$ 성분(j-component),  벡터의 $k$ 성분(k-component),  벡터의 $i,j,k$ 성분으로의 벡터 표기,  벡터 방향으로의 단위 벡터,  기울기 벡터(gradient vector)
 
 ## 선형대수학 메모
 
