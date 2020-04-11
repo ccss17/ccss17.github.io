@@ -140,6 +140,28 @@
 
   이다. 
 
+  - 기하학적 의미 
+
+    ![캡처](https://user-images.githubusercontent.com/16812446/79021815-7deae880-7bb7-11ea-9ab7-4ed19accc346.PNG)
+
+    https://www.youtube.com/watch?v=ehrGmxqQsjo&t=98s
+
+    위와 같은 곡면의 그래프가 있을 때 $x$ 에 대한 편미분계수 
+
+    $$ \lim_{h \to 0} \frac{f(x_0 + h, y_0)-f(x_0,y_0)}{h} $$
+
+    의 의미는 다음과 같다. 
+
+    먼저 점 $P(x_0, y_0)$ 가 상주하고 있는 교선 위의 또 다른 점 $Q(x_0+h,y_0)$ 를 생각하자. 그러면 점 $P$ 와 점 $Q$ 를 잇는 직선의 기울기는 
+
+    $$ \frac{f(x_0 + h, y_0)-f(x_0,y_0)}{h} $$
+
+    와 같다. $y$ 는 고정되어 있기 때문에 두 점에서의 $y$ 좌표는 $y_0$ 으로 동일하다. 
+
+    이때 $h$ 를 $0$ 에 한없이 가깝게 만들어서 $P$ 와 $Q$ 를 거의 같게 만들면 두 점을 잇는 직선은 곧 곡면의 접선이 되고,
+
+    그때의 기울기는 곧 접선의 기울기가 되는 것이다. 
+
 - $y$ 에 대한 편미분계수 : 이변수 함수 $z = f(x, y)$ 의 점 $(x_0, y_0)$ 에서의 $y$ 에 대한 편미분계수는 
 
   $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \bigg | _{y=y_0} =  \lim_{h \to 0} \frac{f(x_0, y_0+h)-f(x_0,y_0)}{h} $$
@@ -239,6 +261,12 @@
       - 이 교선에서 어떤 점 $P$ 를 잡아서 접선을 그었을 때 그 접선의 기울기가 편미분계수이다. 
 
       - 그리고 그 기울기들에 대한 함수가 $y$ 에 대한 편도함수이다. 
+
+  - 그러면 $x$ 축 방향으로 평행하지도 않고 $y$ 축 방향으로 평행하지도 않고 
+  
+    $x$ 축으로부터 $60 \degree$ 벌어진 단위 벡터 $u$ 의 방향으로 교선을 잘라서 기울기를 구하는 상황도 생각할 수 있다.
+
+    이것을 단위벡터 $u$ 의 방향도함수라 한다. 
 
 ## 여러가지 편도함수 
 
@@ -610,9 +638,21 @@
   
 - 벡터의 $i$ 성분(i-component) : 표준 단위 벡터의 예시에서 스칼라 $v_1$ 을 벡터 $v$ 의 $i$ 성분이라한다.
 
+  - 즉 $i$ 성분은 $(1, 0, 0)$ 또는 $\big < 1, 0, 0 \big >$ 이다.
+  
+  - 또 $i$ 벡터를 $x$ 축 상의 단위벡터라고도 한다. 
+
 - 벡터의 $j$ 성분(j-component) : 표준 단위 벡터의 예시에서 스칼라 $v_2$ 을 벡터 $v$ 의 $j$ 성분이라한다.
 
+  - 즉 $j$ 성분은 $(0, 1, 0)$ 또는 $\big < 0, 1, 0 \big >$ 이다.
+  
+  - 또 $j$ 벡터를 $y$ 축 상의 단위벡터라고도 한다. 
+
 - 벡터의 $k$ 성분(k-component) : 표준 단위 벡터의 예시에서 스칼라 $v_3$ 을 벡터 $v$ 의 $k$ 성분이라한다.
+
+  - 즉 $k$ 성분은 $(0, 0, 1)$ 또는 $\big < 0, 0, 1 \big >$ 이다.
+  
+  - 또 $k$ 벡터를 $z$ 축 상의 단위벡터라고도 한다. 
 
 - 벡터의 $i,j,k$ 성분으로의 벡터 표기 : 점 $P_1(x_1, y_1, z_1)$ 에서 점 $P_2(x_2, y_2, z_2)$ 으로 이어져있는 벡터는 
 
@@ -680,10 +720,397 @@
 
     이다.
 
-## 기울기 벡터 
+# 기울기 벡터와 방향도함수
 
 - 기울기 벡터(gradient vector) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
 
   $$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > $$
 
   이다. 
+
+  - $\frac{\partial f}{\partial x}$ 의 기하학적 의미를 기억하자. 
+
+    ![2v](https://user-images.githubusercontent.com/16812446/78995906-63e0e400-7b7e-11ea-9f1e-76382bc9c548.jpg)
+
+    그것은 위 그림의 왼쪽 그래프와 같이 곡면 $f(x, y)$ 와 $x$ 축에 평행한 평면과의 교선의 접선의 기울기였다. 
+
+    그러한 교선은 수없이 많은데 $y$ 에 따라 점 $P(x_0, y_0)$ 가 상주하고 있는 교선을 얻었다고 하자.
+
+    이제 이 교선에서 $x$ 에 따라 점 $P$ 가 결정되어서 이 $P$ 에서 $x$ 축에 평행한 접선의 기울기가 편미분계수 
+
+    $$ \frac{\partial f}{\partial x} \bigg | _{(x_0, x_0)} $$
+
+    의 의미였다. 
+
+    그리고 그러한 특수한 점 $P(x_0, y_0)$ 을 일반화하여 일반적인 점 $P(x, y)$ 로 만들자. 이 독립변수 $x, y$ 로 결정되는 점 $P$ 에 따른 기울기를 함수로 표현한 것이 
+
+    $$ \frac{\partial f}{\partial x} $$
+
+    의 의미였고 이것을 $x$ 에 관한 편도함수라고 불렀다. 
+  
+  - 그런데 $\frac{\partial f}{\partial x}$ 을 벡터의 관점에서 표현하면 "함수 $f$ 의 표준 단위 벡터 $i$ 방향으로의 변화율" 이라고 표현 할 수 있다. 
+
+    - 표준 단위 벡터 $i$ 는 $\big <1, 0, 0 \big >$ 이었고 이것은 $x$ 축 상의 단위벡터 였다.
+    
+      그런데 $x$ 에 관한 편도함수는 곡면을 $x$ 축과 평행하도록 잘라서 교선을 얻어서 그 위의 기울기를 구하는 것과 같다. 
+
+      또한 편도함수는 도함수의 일종이고 도함수는 함수의 변화율을 나타내는 것임을 기억하자.
+
+      그렇다면 결론적으로 
+      
+      $$\frac{\partial f}{\partial x}$$
+
+      를 "$x$ 축과 평행하도록 교선을 만든다" 고 할 수 있고 
+      
+      이것을 다시 "함수 $f$ 의 벡터 $i$ 방향으로의 변화율" 을 구한다고 표현할 수 있다. 
+  
+  - 그런데 $\frac{\partial f}{\partial x}$ 을 또 다시 방향도함수의 정의에 따라서 "함수 $f$ 의 벡터 $i$ 방향의 방향도함수" 라고도 표현할 수 있다. 
+
+    - 즉 함수 $f$ 의 $x$ 에 대한 편도함수는 방향도함수의 벡터 $i$ 방향으로의 아주 특수한 경우라고 할 수 있다. 
+
+  - 그러면 $\frac{\partial f}{\partial y}$ 도 마찬가지로 방향도함수의 정의에 따라서 "함수 $f$ 의 벡터 $j$ 방향의 방향도함수" 라고도 표현할 수 있다. 
+
+    - 표준 단위 벡터 $j$ 는 $\big <0, 1, 0 \big >$ 이었고 이것은 $y$ 축 상의 단위벡터 였다.
+
+    - 즉 함수 $f$ 의 $y$ 에 대한 편도함수는 방향도함수의 벡터 $j$ 방향으로의 아주 특수한 경우라고 할 수 있다. 
+  
+  - 예시 
+
+    $f(x, y, z) = xy ^{2} + 2x ^{2} + z ^{3}$ 일 때 $\nabla f(1, 2, 3)$ 를 구해보자. 
+
+    먼저 기울기 벡터는 
+
+    $$ \nabla f = \bigg < \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \bigg > $$
+
+    에서 
+
+    $$ = \bigg < y ^{2}+4x, 2xy, 3z ^{2} \bigg > $$
+
+    이다. 그러므로 
+
+    $$ \therefore \nabla f(1, 2, 3) = \big < 8, 4, 27\big > $$
+
+- 방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
+
+  $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} $$
+
+  이다. 
+
+  - 위 정의는 다음 그림과 같이
+
+    ![캡처](https://user-images.githubusercontent.com/16812446/79028349-9a445080-7bca-11ea-8ac9-596994fdd522.PNG)
+
+    https://www.youtube.com/watch?v=ehrGmxqQsjo&t=98s
+
+    단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 의 방향이 $x$ 축과 이루는 각이 $\theta$ 일 때 
+
+    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \cos (\frac{\pi }{2}-\theta) )-f(x, y)}{h} $$
+
+    와 같이 정의된 방향도함수에서 
+
+    $$ \cos \bigg  (\frac{\pi }{2} - \theta \bigg ) = \sin \theta $$
+
+    를 사용하여 간단하게 만든 것이다. 
+    
+    $h$ 는 두 점 $P, Q$ 와의 거리이다. 
+
+    - 위 그래프의 점 $P, Q$ 의 거리를 $h$ 라 하고 두 점을 $xy$ 평면으로 내려 떨어뜨리면
+
+      ![캡처](https://user-images.githubusercontent.com/16812446/79028367-ae884d80-7bca-11ea-9268-0e46b10e1dd6.PNG)
+
+      https://www.youtube.com/watch?v=ehrGmxqQsjo&t=98s
+
+      이와 같이 되는데 기존의 도함수의 정의
+
+      $$ \lim_{h \to 0} \frac{f(x + \Delta x, y + \Delta y )-f(x, y)}{h} $$
+
+      에서 $\Delta x, \Delta y$ 를 푸는 것이 목적이다. 
+
+      단위벡터 $u$ 의 방향이 $x$ 축으로부터 $\theta$ 만큼 벌어져있기 때문에 위 그림처럼 한 각을 $\theta$ 로 하고 밑변과 높이의 길이를 $\Delta x, \Delta y$ 로 하는 직각 삼각형을 생각할 수 있다. 
+
+      이 직각삼각형의 빗변의 길이는 두 점 $P, Q$ 와의 거리와 같으므로 $h$ 이다. 
+
+      이때 이 직각삼각형의 한 각 $\theta$ 에서 $\cos \theta$ 는 $\theta$ 를 기준으로 빗변에 대한 밑변의 비율이기 때문에
+
+      $$ \cos \theta = \frac{\Delta x}{h} $$
+
+      이다. 그러므로 
+
+      $$ \therefore \Delta x = h \cdot \cos \theta $$
+
+      이다. 또한 이 직각삼각형의 한 각 $\theta$ 에서 $\sin \theta$ 는 $\theta$ 를 기준으로 빗변에 대한 높이의 비율이기 때문에
+
+      $$ \sin \theta = \frac{\Delta y}{h} $$
+
+      이다. 그러므로
+
+      $$ \therefore \Delta y = h \cdot \sin \theta $$
+
+      이다.
+
+      따라서 최종적으로 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 의 방향에서 점 $Q$ 가 점 $P$ 에 한없이 다가갈 때, 즉 두 점의 거리 $h$ 가 $0$ 에 한없이 다가갈 때 일반적인 도함수의 정의는
+
+      $$ \lim_{h \to 0} \frac{f(x + \Delta x, y + \Delta y )-f(x, y)}{h} $$
+
+      으로부터
+
+      $$ \therefore  D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} $$
+
+      가 된다.
+
+  - 따라서 $x$ 축과 이루는 각이 $\alpha$ 이고 $y$ 축과 이루는 각이 $\beta$ 일 때 
+
+    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \alpha  , y + h \cos  \beta  )-f(x, y)}{h} $$
+
+    라고 하기도 한다. 
+  
+  - 예시 
+
+    $\theta = 0$ 일 때, 즉 $u = i = \big < 1, 0, 0\big >$ 일 때, 그러니까 단위벡터 $u$ 의 방향이 $x$ 축 일때,
+
+    함수 $f(x, y)$ 의 방향도함수는
+
+    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} $$
+
+    에서
+
+    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h , y )-f(x, y)}{h} $$
+
+    가 된다. 
+
+    이것은 이변수 함수의 $x$ 에 대한 편도함수
+
+    $$ \frac{\partial f}{\partial x} $$
+    
+    의 정의와 같다.
+    
+    그러므로 $x$ 에 대한 편도함수는 방향도함수의 매우 특수한 경우인 것이다. 
+
+  - 예시 
+
+    $\theta = \frac{\pi}{2}$ 일 때, 즉 $u = j = \big < 0, 1, 0\big >$ 일 때, 그러니까 단위벡터 $u$ 의 방향이 $y$ 축일 때,
+
+    함수 $f(x, y)$ 의 방향도함수는
+
+    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} $$
+
+    에서
+
+    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x , y + h )-f(x, y)}{h} $$
+
+    가 된다. 
+
+    이것은 이변수 함수의 $x$ 에 대한 편도함수
+
+    $$ \frac{\partial f}{\partial y} $$
+    
+    의 정의와 같다.
+    
+    그러므로 $y$ 에 대한 편도함수는 방향도함수의 매우 특수한 경우인 것이다. 
+
+- 삼독립변수에 대한 방향도함수 : 삼변수 함수 $f(x, y, z)$ 에 대하여 단위벡터 $u = \big < \cos \alpha , \cos \beta , \cos \gamma  \big >$ (단, $\cos ^{2}\alpha +\cos ^{2}\beta +\cos ^{2}\gamma =1$) 방향으로의 방향도함수는
+
+  $$ D _{u}f(x,y,z) = \lim_{h \to 0} \frac{f(x+h \cos \alpha , y + h \cos \beta , z + h \cos \gamma )-f(x,y,z)}{h} $$
+
+  이다. 
+
+  - 이때 $\alpha$ 는 단위벡터 $u$ 가 $x$ 축과 이루는 각,
+  
+    $\beta$ 는 단위벡터 $u$ 가 $y$ 축과 이루는 각,
+    
+    $\gamma$ 는 단위벡터 $u$ 가 $z$ 축과 이루는 각이다.
+
+  - $\cos ^{2}\alpha +\cos ^{2}\beta +\cos ^{2}\gamma =1$ 의 조건은 단위벡터 $u$ 의 길이 $|u|$ 가 $1$ 임을 보장한다. 
+
+
+  - 즉 $x, y, z$ 의 증분을 각각 다음과 같이 정의한 것이다. 
+
+    $$ \Delta x = h \cos \alpha , \Delta y = y + h \cos \beta , \Delta z= z + h \cos \gamma $$
+
+- 방향도함수의 계산 
+
+**구체화 필요** 
+
+# 선형화
+
+- 선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 근사함수 
+
+  $$ L(x) = f'(a)(x-a) + f(a) $$
+
+  를 함수 $f$ 의 선형화라고 한다.
+
+  - 다음 그래프는 $y = x^2, y = 2x-1$ 이다.
+
+    ![desmos-graph(1)](https://user-images.githubusercontent.com/16812446/79032028-2b70f280-7bde-11ea-84c5-a63f705c0906.png)
+
+    그런데 $x=1$ 지점에서 그래프를 더 확대해보면 다음과 같다. 
+
+    ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/79032042-43e10d00-7bde-11ea-94f6-9056afab3f22.png)
+
+    여기에서 더 확대해보자. 
+
+    ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/79032074-991d1e80-7bde-11ea-9a8f-3e636d9bb31b.png)
+
+    그러면 거의 두 함수를 분간할 수가 없다. 
+
+    이것은 원함수의 임의의 점 $x=a$ 에서의 접선을 그렸을 때 $x=a$ 를 중심으로 그래프를 끝없이 확대해보면 원함수와 접선이 거의 똑같아지는 것을 의미한다.
+
+  - 이 현상을 이용하여 $x=a$ 에서 원래의 함수를 선형 근사시킬 수 있는 방법을 $x=a$ 에서의 접선 
+
+    $$ L(x) = f'(a)(x-a) + f(a) $$
+
+    을 구하는 것이라 할 수 있다. 
+  
+  - 예시 
+
+    $y = \sqrt[]{1+x}$ 을 $x = 0$ 에서 선형근사시켜보면 다음과 같다.
+
+    $$ \sqrt[]{1+x} \approx 1 + \frac{x}{2} $$
+
+- 표준 선형 근사(standard linear approximation) : 선형화의 정의에서 $x=a$ 에서 함수 $f$ 의 함수 $L$ 에 의한 근사
+
+  $$ f(x) \approx L(x) $$
+
+  를 표준 선형 근사라한다.
+
+  - 이때 $x=a$ 를 근사의 중심이라 한다. 
+
+## 미분 
+
+- 미분(differential) : $y = f(x)$ 를 미분가능한 함수이고 미분 $dx$ 가 독립변수일 때 미분 $dy$ 는 
+
+  $$ dy = f'(x)dx $$
+
+  이다. 
+
+  - 가끔 $dy = f'(x)dx$ 를 다음과 같이 미분 $f$ 로도 표현한다.
+
+    $$ df = f'(x)dx $$
+
+  - 미분은 서로 다른 두 개념인 differentiation(미분) 과 differential(미분) 으로 동시에 쓰인다. 전자는 도함수를 얻는다는 뜻의 differentiate 의 명사형이다. 후자 differential 은 원함수의 선형근사함수를 뜻한다.
+
+    가령 함수 $f(x)$ 의 한 점 $a$ 에서의 미분(differential) 은 
+
+    $$ df(\Delta x) = f'(a)\Delta x $$
+
+    로 표현되는 선형근사함수이다. 
+  
+  - 기하학적 의미 
+
+    $x = a, dx = \Delta x$ 로 두자. $x$ 의 증분 $\Delta x$ 는 $x = a$ 에서 $x = a + \Delta x$ 의 거리
+
+    $$ \Delta x = (\Delta x + a) - (a) $$
+
+    로 두자.
+    
+    그러면 우선 $y$ 의 증분 
+
+    $$ \Delta y = f(a + \Delta x) - f(a) $$
+
+    은
+
+    $$ \Delta y = f(a + dx) - f(a) $$
+
+    이다. 한편 $x = a$ 에서 접선은 
+
+    $$ L(x) = f'(a)(x-a) + f(a) $$
+
+    이므로 $x = a$ 근방에서 접선의 변화를 
+
+    $$ \Delta L = L(a + dx) - L(a) $$
+
+    에서
+
+    $$ = f'(a)\{(a+dx)-a\} +f(a) -f(a) $$
+
+    $$ = f'(a)dx $$
+
+    이므로 
+
+    $$ \Delta L = f'(a)dx = dy $$
+
+    이다. 
+
+    이것은 함수 $f$ 의 $x=a$ 에서 선형근사함수 $L(x)$ 의 변화가 $x = a$ 이고 $dx = \Delta x$ 일 때 $dy$ 과 정확히 일치한다는 것이다. 
+  
+  - 예시 
+
+    $y = x ^{5} + 37x$ 에서의 $dy$ 를 찾자. 
+
+    $$ dy = (5x ^{4} + 37)dx $$
+  
+  - 예시 
+
+    합성함수 미분법(Chain Rule) 과 다른 미분법을 함께 사용할 수 있다. 
+
+    $$ d (\tan  2x) = \sec ^{2}(2x)d(2x) $$ 
+
+    에서 
+
+    $$ d(2x) = (2x)'dx = 2dx $$
+
+    이므로
+    
+    $$ d (\tan 2x) = 2 \sec ^{2} 2x dx $$
+
+    이다. 
+
+- 미분의 추정(estimating with differentials) : 함수 $f(x)$ 가 $x = a$ 에서 미분가능할 때 $x = a$ 의 근방 $x = a + dx$ 에서 함수값이 변하는 정도 $f(a + dx)$ 는 근사적으로
+
+  $$ f(a + dx) \approx f(a) + dy $$
+
+  이다. 
+
+  - $y$ 의 증분은 
+
+    $$ \Delta y = f(a + \Delta x) - f(a) $$
+
+    이다. 이때 $dx= \Delta x$ 가 충분히 작으면 $y$ 의 증분 $\Delta y$ 는 미분 $dy$ 와 거의 똑같아진다. 왜냐하면 함수 $f$ 의 접선 $L$ 의 증분 
+
+    $$ \Delta L = f'(a)dx = dy$$
+
+    가 $x = a$ 의 근방에서 함수 $f$ 의 증분 $\Delta y$ 와 거의 똑같아지기 때문이다. 그러므로 $x = a$ 근방에서 
+
+    $$ f'(a)dx = dy \approx \Delta y $$
+
+    라 할 수 있고, 이에 따라
+
+    $$ f(a + dx) = f(a) + \Delta y $$
+
+    를 근사적으로 
+
+    $$ f(a + dx) \approx  f(a) + dy $$
+
+    로 쓸 수 있다. 
+
+  - 예시 
+
+    $7.97 ^{\frac{1}{3}}$ 을 추산해보자. 
+
+    $f(x) = x ^{\frac{1}{3}}$ 의 미분은 
+
+    $$ dy = \frac{1}{3x ^{\frac{2}{3}}}dx $$
+
+    이다. 
+    
+    이때 $a = 8$ 로 둔다면 $7.97$ 을 $x = a$ 근방의 함수 $f$ 의 접선의 함수값으로 생각할 수 있다. 
+
+    그렇다면 $dx = -0.03$ 으로 둘 때 $x = a$ 에서의 함수값 $f(7.97)$ 을 다음과 같이 근사시킬 수 있다. 
+
+    $$ f(7.97) = f(a + dx) \approx f(a) + dy $$
+
+    그러면
+
+    $$ f(a) + dy = f(a) + f'(a)dx $$
+
+    에서 $f'(x) = \frac{1}{3x ^{\frac{2}{3}}}$ 이고 $dx = -0.03$ 으로 두었으므로
+
+    $$ = 8 ^{\frac{1}{3}} + \frac{1}{3(8)^{\frac{2}{3}}}(-0.03) $$
+
+    $$ = 1.9975 $$
+
+    이다. 따라서 
+
+    $$ \therefore  7.97 ^{\frac{1}{3}} \approx 1.9975 $$
+
+    이다.

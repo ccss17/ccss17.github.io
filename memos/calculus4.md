@@ -280,7 +280,7 @@
 
       $$ y' = \lim_{h \to 0} \frac{f(a+h)-f(a)}{h} = \lim_{h \to 0} \frac{\log_{a} (x+h)-\log_{a} x}{h} = \lim_{h \to 0} \frac{1}{h} \log_{a} \frac{x+h}{x} $$
 
-      $$ = \lim_{h \to 0} \frac{1}{x} \circ \frac{x}{h} \log_{a} (1+\frac{h}{x}) = \frac{1}{x} \lim_{h \to 0} \log_{a} (1+\frac{h}{x}) ^{\frac{x}{h}} $$
+      $$ = \lim_{h \to 0} \frac{1}{x} \cdot \frac{x}{h} \log_{a} (1+\frac{h}{x}) = \frac{1}{x} \lim_{h \to 0} \log_{a} (1+\frac{h}{x}) ^{\frac{x}{h}} $$
 
       이때 $\frac{h}{x} = t$ 로 두면 $h \to 0 \Rightarrow t \to 0$ 이므로
 
@@ -332,7 +332,7 @@
 
     로그함수 $y = \ln |x|$ 의 도함수를 이용하여
 
-    $$y' = (\log_{a} |x|)' = (\frac{\ln |x|}{\ln a})' = \frac{(\ln |x|)'}{\ln a} = \frac{1}{x} \circ \frac{1}{\ln a} = \frac{1}{x \ln a}$$
+    $$y' = (\log_{a} |x|)' = (\frac{\ln |x|}{\ln a})' = \frac{(\ln |x|)'}{\ln a} = \frac{1}{x} \cdot \frac{1}{\ln a} = \frac{1}{x \ln a}$$
 
     이다. 그러므로
 
@@ -394,9 +394,9 @@
 
     - 증명 
 
-      $$ \lim_{x \to 0} \frac{\tan x}{x} = \lim_{x \to 0} \frac{\sin x}{x \cos x} = \lim_{x \to 0} (\frac{\sin x}{x} \circ \frac{1}{\cos x}) $$
+      $$ \lim_{x \to 0} \frac{\tan x}{x} = \lim_{x \to 0} \frac{\sin x}{x \cos x} = \lim_{x \to 0} (\frac{\sin x}{x} \cdot \frac{1}{\cos x}) $$
 
-      $$ = \lim_{x \to 0} \frac{\sin x}{x} \circ \lim_{x \to 0} \frac{1}{\cos x} = 1 \circ 1 = 1 $$
+      $$ = \lim_{x \to 0} \frac{\sin x}{x} \cdot \lim_{x \to 0} \frac{1}{\cos x} = 1 \cdot 1 = 1 $$
 
       그러므로 
 
@@ -490,7 +490,9 @@
 
     $\tan x = \frac{\sin x}{\cos x}$ 이므로 몫의 미분을 사용하면 
 
-      $$ (\tan x)' = (\frac{\sin x}{\cos x})' = \frac{(\sin x)'\cos x - \sin x(\cos x)'}{\cos ^{2}x} $$
+    $$ (\tan x)' = (\frac{\sin x}{\cos x})' = \frac{(\sin x)'\cos x - \sin x(\cos x)'}{\cos ^{2}x} $$
+
+    $$ \frac{\cos x \cdot \cos x - \sin x \cdot (- \sin x)}{\cos ^{2}x} = \frac{\cos ^{2}x + \sin ^{2}x}{\cos ^{2}x} = \frac{1}{\cos ^{2}x} = \sec ^{2} x$$
 
 - 함수 $y = \sec x$ 의 도함수 : $y' = \sec x \tan x$ 이다. 
 
@@ -498,9 +500,9 @@
 
     $\sec x = \frac{1}{\cos x}$ 이므로 몫의 미분을 사용하면 
 
-      $$ (\sec x)' = (\frac{1}{\cos x})' = -\frac{(\cos x)'}{\cos ^{2}x}= \frac{\sin x}{\cos ^{2}x} = \frac{1}{\cos x} \circ \frac{\sin x}{\cos x} $$
+      $$ (\sec x)' = (\frac{1}{\cos x})' = -\frac{(\cos x)'}{\cos ^{2}x}= \frac{\sin x}{\cos ^{2}x} = \frac{1}{\cos x} \cdot \frac{\sin x}{\cos x} = \sec x \tan x$$
     
-    이다. 따라서 최종적으로 
+    이다. 따라서 
 
       $$ \therefore  (\sec x)' = \sec x \tan x $$
     
@@ -512,9 +514,9 @@
 
     $\csc x = \frac{1}{\sin x}$ 이므로 몫의 미분을 사용하면 
 
-      $$ (\csc x)' = (\frac{1}{\sin x})' = -\frac{(\sin x)'}{\sin ^{2}x}= -\frac{\cos x}{\sin ^{2}x} = -\frac{1}{\sin x} \circ \frac{\cos x}{\sin x} $$
+      $$ (\csc x)' = (\frac{1}{\sin x})' = -\frac{(\sin x)'}{\sin ^{2}x}= -\frac{\cos x}{\sin ^{2}x} = -\frac{1}{\sin x} \cdot \frac{\cos x}{\sin x} = - \csc x \cot x$$
     
-    이다. 따라서 최종적으로 
+    이다. 따라서 
 
       $$ \therefore  (\csc x)' = - \csc x \cot x $$
     
@@ -526,9 +528,9 @@
 
     $\cot x = \frac{\cos x }{\sin x}$ 이므로 분수함수 미분을 사용하면 
 
-      $$ (\cot x)' = (\frac{\cos x}{\sin x})' = \frac{(\cos x)'\sin x - \cos x(\sin x)'}{\sin ^{2}x} = \frac{-\sin ^{2} x - \cos ^{2} x}{\sin ^{2}x} = -\frac{1}{\sin ^{2}x} $$
+      $$ (\cot x)' = (\frac{\cos x}{\sin x})' = \frac{(\cos x)'\sin x - \cos x(\sin x)'}{\sin ^{2}x} = \frac{-\sin ^{2} x - \cos ^{2} x}{\sin ^{2}x} = -\frac{1}{\sin ^{2}x} = - \csc ^{2}x$$
     
-    이다. 따라서 최종적으로 
+    이다. 따라서 
 
       $$ \therefore  (\cot x)' = - \csc ^{2}x $$
     
@@ -574,7 +576,7 @@
 
     로그함수 $y = \ln |f(x)|$ 의 도함수를 이용하여 로그함수 $y = \log_{a} |f(x)|(a>0, a \neq 1)$ 의 도함수를 구해보자. 
 
-      $$ y' = (\log_{a} |f(x)|)' = (\frac{\ln |f(x)|}{\ln a})' = \frac{(\ln |f(x)|)'}{\ln a} = \frac{f'(x)}{f(x)} \circ \frac{1}{\ln a} = \frac{f'(x)}{f(x)\ln a} $$
+      $$ y' = (\log_{a} |f(x)|)' = (\frac{\ln |f(x)|}{\ln a})' = \frac{(\ln |f(x)|)'}{\ln a} = \frac{f'(x)}{f(x)} \cdot \frac{1}{\ln a} = \frac{f'(x)}{f(x)\ln a} $$
     
     그러므로 
 
@@ -598,7 +600,7 @@
   
   4. $y'$ 에 대하여 정리한다. 
 
-      $$ y' = y \circ \frac{f'(x)}{f(x)} $$
+      $$ y' = y \cdot \frac{f'(x)}{f(x)} $$
   
   - 예시 
 
@@ -614,13 +616,13 @@
 
     이다. 이때 양변을 $x$ 에 대하여 미분하면 
 
-      $$ \frac{y'}{y} = (\sin x)'\ln x + \sin x(\ln x)' = \cos x \circ \ln x + \sin x \circ \frac{1}{x} $$
+      $$ \frac{y'}{y} = (\sin x)'\ln x + \sin x(\ln x)' = \cos x \cdot \ln x + \sin x \cdot \frac{1}{x} $$
 
-      $$ y' = y(\cos x \circ \ln x + \sin x \circ \frac{1}{x}) $$
+      $$ y' = y(\cos x \cdot \ln x + \sin x \cdot \frac{1}{x}) $$
 
     에서 
 
-    $$ \therefore y' = x ^{\sin x}(\cos x \circ \ln x + \frac{\sin x}{x}) $$
+    $$ \therefore y' = x ^{\sin x}(\cos x \cdot \ln x + \frac{\sin x}{x}) $$
 
     이다. 
 
@@ -638,11 +640,11 @@
 
     이다. 이때 양변을 $x$ 에 대하여 미분하면 
 
-    $$ \frac{y'}{y} = n \circ \frac{1}{x} $$
+    $$ \frac{y'}{y} = n \cdot \frac{1}{x} $$
 
-    $$ y' = y \circ n \circ \frac{1}{x} $$
+    $$ y' = y \cdot n \cdot \frac{1}{x} $$
 
-    $$ y' = x ^{n} \circ n \circ \frac{1}{x} $$
+    $$ y' = x ^{n} \cdot n \cdot \frac{1}{x} $$
 
     에서 
 
@@ -729,11 +731,11 @@
 
     에서 
 
-    $$ \frac{d}{dx} x ^{2} = 2x, \frac{d}{dx} y ^{2} = 2y \circ \frac{dy}{dx}, \frac{d}{dx}(1)=0 $$
+    $$ \frac{d}{dx} x ^{2} = 2x, \frac{d}{dx} y ^{2} = 2y \cdot \frac{dy}{dx}, \frac{d}{dx}(1)=0 $$
 
     이므로 
 
-    $$ 2x + 2y \circ \frac{dy}{dx} - 0 = 0 $$
+    $$ 2x + 2y \cdot \frac{dy}{dx} - 0 = 0 $$
 
     이다. 따라서
 
@@ -757,7 +759,7 @@
   
     한편 직선을 $y=x$ 에 대하여 대칭시킨 역함수의 미분계수 $(f^{-1})'(b)$ 는 점 $(b, a)$ 와 점 $(d, c)$ 의 기울기 $(f^{-1})'(b) = \frac{c-a}{d-b}$ 이다. 따라서 함수 $f(x)$ 위의 점 $(a, b)$ 에 대하여 다음의 관계를 갖는다. 
   
-    $$ f'(a) \circ (f ^{-1})'(b) = 1 $$
+    $$ f'(a) \cdot (f ^{-1})'(b) = 1 $$
   
     이제 점 $(a, b)$ 를 그것이 속한 집합으로 회귀시키자. 즉 이것을 일반화하여 함수 $f(x)$ 위의 임의의 점 $(x, y)$ 에서 
   
@@ -765,11 +767,11 @@
   
     > 한편, "그렇다면 어떤 자연 대상을 수로 끌어내릴 수 있는가?" 라는 질문과 "수로 격하된 자연 대상을 어떻게 코드로 자동화 할 수 있는가?" 가 주요한 질문이 될 것이다. 
   
-    $$ f'(x) \circ (f ^{-1})'(y) = 1 $$
+    $$ f'(x) \cdot (f ^{-1})'(y) = 1 $$
   
     가 성립한다. 한편 함수 $f ^{-1}(x)$ 위의 임의의 점 $(x, y)$, 즉 $y=f ^{-1}(x)$ 을 만족하는 $x, y$ 에 대하여서는 
     
-    $$ f'(y) \circ (f ^{-1})'(x) = 1 $$
+    $$ f'(y) \cdot (f ^{-1})'(x) = 1 $$
 
     가 성립하여
 
@@ -797,11 +799,11 @@
 
     함수 $f(x)$ 의 역함수를 $y = f ^{-1}(x)$ 라 하자. 그러면 역함수의 정의에 따라 
 
-    $$ (f \circ f ^{-1})(x) = x \Leftrightarrow f(f ^{-1}(x)) = x $$
+    $$ (f \cdot f ^{-1})(x) = x \Leftrightarrow f(f ^{-1}(x)) = x $$
 
     이고 합성합수의 미분을 적용하면 
 
-    $$ f'(f ^{-1}(x)) \circ \{f ^{-1}(x)\}' = 1 $$
+    $$ f'(f ^{-1}(x)) \cdot \{f ^{-1}(x)\}' = 1 $$
 
     에서 
 
