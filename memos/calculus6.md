@@ -722,11 +722,49 @@
 
 # 기울기 벡터와 방향도함수
 
+- 스칼라장(scalar field) : 공간 상의 모든 점에 스칼라가 대응되어 있는 분포이다.
+
+  - 유클리드 공간 $\Re ^{n}$ 에서 스칼라장은 
+
+    $$ F: A \in \Re ^{n} \to \Re, (a_1, a_2, \dots, a_n) \mapsto a $$
+
+    으로 정의되는 사상(함수) 로써 정의역 $A$ 의 모든 원소 $x \in A$ 에 스칼라(실수), 즉 $F(x)$ 를 대응시킨다. 
+
+  - 예시 
+
+    공간 상의 온도 분포는 스칼라장의 일종이다.
+
+    호수의 수압 분포도 스칼라장의 일종이다. 
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Scalar_field.png/330px-Scalar_field.png)
+
+    위 그림은 스칼라장의 일종으로 색채에 대응하는 숫자를 색으로 표현한 것이다. 
+
 - 기울기 벡터(gradient vector) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
 
   $$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > $$
 
-  이다. 
+  로써 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
+
+  - 다음 그림에서
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Gradient2.svg/450px-Gradient2.svg.png)
+
+    회색의 밝기가 큰 스칼라를 나타낸다. 이때 화살표는 기울기, 즉 스칼라장에서 최대 증가율을 나타낸다.
+
+  - 형렬적 표기로
+
+    $$ \nabla f(x, y) = \begin{bmatrix} \dfrac{\partial f}{\partial x}\\ \\ \dfrac{\partial f}{\partial y} \end{bmatrix} $$
+
+    로 쓸 수 있고 표준 단위 벡터 $i = \big <1, 0 \big >, j = \big < 0, 1\big >$ 를 각각 다음의 행렬로 표기할 수 있다. 
+
+    $$ \begin{bmatrix} 1\\0 \end{bmatrix} , \begin{bmatrix} 0\\1 \end{bmatrix} $$
+
+    이 행렬의 스칼라배로써 
+
+    $$ \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j $$
+
+    의 표기가 나온 것이다.
 
   - $\frac{\partial f}{\partial x}$ 의 기하학적 의미를 기억하자. 
 
@@ -789,6 +827,10 @@
     이다. 그러므로 
 
     $$ \therefore \nabla f(1, 2, 3) = \big < 8, 4, 27\big > $$
+  
+  - 기울기 벡터 값의 의미 
+
+    이러한 기울기 벡터값은 함수의 증가율이 최대가 되는 방향을 가르키는 벡터이다! 
 
 - 방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
 
@@ -933,7 +975,7 @@
 
 # 선형화
 
-- 선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 근사함수 
+- 선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 접선의 방정식
 
   $$ L(x) = f'(a)(x-a) + f(a) $$
 
@@ -1114,3 +1156,107 @@
     $$ \therefore  7.97 ^{\frac{1}{3}} \approx 1.9975 $$
 
     이다.
+
+## 이변수 함수 선형화
+
+- 이변수 함수 선형화 또는 접평면(tangent plane) : $f$ 의 연속인 편도함수들이 존재할 때 점 $P(x_0, y_0, z_0)$ 에서 곡면 $z = f(x, y)$ 에 대한 접평면의 방정식은 
+
+  $$ z - z_0 = f_x(x_0, y_0)(x- x_0) + f_y(x_0, y_0)(y - y_0) $$
+
+  또는 
+
+  $$ L(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y - y_0)
+  $$
+
+  이고 이것은 이변수 함수 $f(x, y)$ 의 선형화이다. 
+
+  - 또한 점 $P(x_0, y_0, z_0)$ 근방에서 
+
+    $$ f(x, y) \approx L(x, y) $$
+
+    이 성립한다.
+    
+    일변수 함수 $f$ 를 $x=a$ 에서 끝없이 확대했을 때 $x=a$ 에서 접선과 거의 똑같아지는 것과 같이 이변수 함수 $f$ 를 끝없이 확대하면 접평면의 방정식과 거의 똑같아지기 때문이다. 
+
+- 이변수 함수 미분 또는 전미분(total differential) : 점 $(x_0, y_0)$ 에서 점 $(x_0 + dx, y_0 + dy)$ 로 움직였을 때의 변화량 
+
+  $$ df = f_x(x_0, y_0)dx + f_y (x_0, y_0)dy $$
+
+  또는
+
+  $$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
+
+  을 함수 $f$ 의 전미분이라 한다. 
+
+  - $y = f(x, y)$ 가 미분가능한 함수이면 점 $(x_0, y_0)$ 에서 편미분계수가 존재한다. 이 점에서 조금 움직인 점 $(x_0+\Delta x, y_0+\Delta y)$ 를 생각할 수 있고 이때의 함수 $f$ 의 변화량
+
+    $$ \Delta f =f(x_0+\Delta x, y_0+\Delta y)- f(x_0, y_0) $$
+
+    을 생각할 수 있다. 
+
+    이때 접평면의 변화량 
+
+    $$ \Delta L = L(x_0 + \Delta x, y_0 + \Delta y) - L(x_0, y_0) $$
+
+    을 접평면의 방정식을 사용하여 풀면
+
+    $$ = f_x(x_0, y_0)\Delta x + f_y(x_0, y_0)\Delta y $$
+
+    이다. 
+
+    이때 $dx, dy$ 는 독립변수이므로 임의의 값을 대입할 수 있다. 또한 우리는 보통
+
+    $$ dx = \Delta x = x - x_0, dy = \Delta y = y - y_0 $$
+
+    으로 정의한다.
+  
+  - 편미분이 변수 하나에 대한 함수의 변화량을 생각했다면 전미분은 모든 변수에 대한 변화량에 따라 함수가 얼마나 변하는지를 측정한다. 
+
+  - 예시 
+
+    반지름이 $r = 1$ 이고 높이가 $h = 5$ 인 원통이 있다고 하자. 이때 반지름과 높이를 변화시켜서 
+
+    $$ dr = +0.03, dh = -0.1 $$
+
+    가 되게 한다고 하자. 이때 부피의 변화량을 구해보자. 
+
+    먼저 부피 $V$ 는 다음과 같은 이변수 함수다.
+
+    $$ V = V(r, h) = \pi r ^{2}h $$
+
+    $V$ 를 선형 근사시키면(전미분하면)
+
+    $$ \Delta V \approx dV = V_r(r_0, h_0)dr + V_h(r_0, h_0)dh $$
+
+    이다.
+
+    $$ V_r = 2 \pi rh, V_h = \pi r ^{2} $$
+
+    이므로
+
+    $$ dV = 2 \pi r_0h_0dr + \pi r_0 ^{2}dh = 2 \pi 1 \cdot 5 \cdot (0.03) + \pi (1) ^{2}(-0.1) = 0.3 \pi - 0.1 \pi = 0.2 \pi \approx 0.63 cm ^{3} $$
+
+    을 얻는다. 
+
+  - 예시 
+
+    $2.5m$ 높이와 $0.5m$ 반지름의 원뿔형 물탱크의 부피가 반지름과 높이의 변화에 얼마나 민감하게 변하는지 조사하려 한다.
+
+    먼저 부피 $V$ 는 
+
+    $$ V = \pi r ^{2} h $$
+
+    이며, 각 변수에 대한 전미분은 다음과 같다. 
+
+    $$ dV = V_r(0.5, 2.5)dr + V_h(0.5,2.5)dh $$
+    
+    $$ =(2 \pi rh)_{(0.5, 2.5)} dr + (\pi r ^{2})_{(0.5,2.5)}dh $$
+
+    $$ = 2.5 \pi dr + 0.25 \pi dh $$
+
+    따라서 반지름 $r$ 의 단위 $1$ 변화는 전체 부피 $V$ 를 $2.5 \pi$ 변하게 하고
+
+    높이 $h$ 의 단위 $1$ 변화는 전체 부피 $V$ 를 $0.25\pi$ 변하게 한다.
+
+    이로보아 반지름이 변할 때 물탱크의 전체 부피가 훨씬 더 민감하게 변한다는 것을 알 수 있다. 
+

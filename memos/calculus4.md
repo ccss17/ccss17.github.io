@@ -1152,3 +1152,139 @@
     보라색이 $T_6(x) = 1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\frac{x^5}{5!}+\frac{x^6}{6!}$ 이다.
 
     $n$차 테일러 다항식이 점차 원래 함수 $f(x)=e ^{x}$ 로 근사되는 것을 알 수 있다. 
+
+# 특수 함수의 미분 
+
+- 시그모이드 함수의 도함수 : 시그모이드 함수
+
+  $$ \zeta _{a} (x) = \frac{1}{1 + \exp(-ax)} $$
+
+  또는 
+
+  $$ \zeta (x) = \frac{1}{1 + e ^{-ax}} $$
+
+  의 도함수는 
+
+  $$ \{\zeta _{a} (x)\}' = a\zeta _{a} (x)\{1 - \zeta _{a} (x)\} $$
+
+  이다.
+
+  - 간단하게 시그모이드 함수 $\zeta (x)$ 를 $s(x)$ 로 표현하여 
+
+    $$ y' = s(x)(1-s(x)) $$
+
+    로 기억해도 좋다. 
+
+  - 증명 
+    
+    $$ \zeta _{a}(x) = \frac{1}{1+e ^{-ax}} $$
+
+    에서 
+
+    $$ u = 1 + e ^{v}, v = -ax $$
+
+    로 두면 $\zeta _{a}(x) = \frac{1}{u}$ 가 되므로 합성함수의 미분
+
+    $$ \frac{d}{dx}\zeta _{a}(x) = \frac{d}{du}\zeta _{a}(x) \cdot \frac{du}{dv} \cdot \frac{dv}{dx} $$
+
+    에서 
+
+    $$ = \frac{d u ^{-1}}{du} \cdot \frac{d}{dv} (1 + e ^{v}) \cdot \frac{d}{dx} (-ax) $$
+
+    $$ = (-1)u ^{-2} \cdot e ^{v} \cdot (-a) $$
+
+    $$ = (1+ e ^{v}) ^{-2} \cdot e ^{-ax} \cdot (a) $$
+
+    $$ = a (1+ e ^{-ax}) ^{-2} \cdot e ^{-ax}$$
+
+    이다. 이것은 곧 
+
+    $$ = a \frac{1}{(1+ e ^{-ax}) ^{2}} e ^{-ax}$$
+
+    $$ = a \frac{1}{(1+ e ^{-ax}) } \frac{e ^{-ax}}{(1+ e ^{-ax})} $$
+
+    $$ = a \frac{1}{(1+ e ^{-ax}) } \bigg \{ \frac{(1+ e ^{-ax})}{(1+ e ^{-ax})} - \frac{1}{(1+ e ^{-ax})}\bigg \}  $$
+
+    $$ = a \frac{1}{(1+ e ^{-ax}) } \bigg \{ 1 - \frac{1}{(1+ e ^{-ax})}\bigg \}  $$
+
+    이므로 시그모이드 함수의 도함수는 
+
+    $$ \therefore \{\zeta _{a}(x)\}' = a \zeta _{a}(x)\{1-\zeta _{a}(x)\} $$
+
+    이다. 
+
+- 표준 시그모이드 함수의 도함수 : 시그모이드 함수의 도함수의 정의로부터 $a=1$ 일 때 
+
+  $$ \{\zeta (x)\}' = \zeta (x) \{1 - \zeta (x)\} $$
+
+  이다. 
+
+  - 표준 시그모이드 함수의 도함수는 
+
+    ![](https://taewanmerepo.github.io/2017/09/sigmoid/differential_sigmoid.jpg)
+
+    와 같이 그려진다. 최대값이 $0.25$ 이다. 
+ 
+- 시그모이드 함수의 이계도함수 : 시그모이드 함수
+
+  $$ \zeta (x) = \frac{1}{1 + \exp(-x)} $$
+
+  또는 
+
+  $$ \zeta (x) = \frac{1}{1 + e ^{-x}} $$
+
+  의 이계도함수는 
+
+  $$ \{\zeta (x)\}'' = a ^{2} \zeta _{a}(x) \{1 - \zeta _{a}(x)\}\{1 - 2 \zeta _{a}(x)\}$$
+
+  이다.
+
+  - 증명 
+
+    시그모이드 함수의 이계도함수
+
+    $$ \frac{d ^{2} \zeta _{a}(x)}{d x ^{2}} $$
+
+    는 시그모이드 함수의 도함수와 곱의 미분법으로 구할 수 있다. 
+
+    $$ \frac{d ^{2} \zeta _{a}(x)}{d x ^{2}} $$
+
+    에서
+
+    $$ \frac{d}{dx} \cdot \frac{d}{dx} \zeta _{a}(x) = \frac{d}{dx} \bigg [ a \zeta _{a}(x)\{1 - \zeta _{a}(x)\} \bigg ] $$
+
+    $$ = a \{\zeta _{a}(x)\}'\{1 - \zeta _{a}(x)\} + a \zeta _{a}(x)\{1-\zeta _{a}(x)\}' $$
+
+    $$ = a \{\zeta _{a}(x)\}'\{1 - \zeta _{a}(x)\} - a \zeta _{a}(x)\{\zeta _{a}(x)\}' $$
+
+    이다. 이때 $a \{\zeta _{a}(x)\}$ 로 묶을 수 있으므로 
+
+    $$ = a \{\zeta _{a}(x)\}'\{1 - 2\zeta _{a}(x)\} $$
+
+    $$ = a \zeta _{a}(x)\{1 - \zeta _{a}(x)\} \{1 - 2\zeta _{a}(x)\} $$
+
+    이다. 
+
+    그러므로 시그모이드 함수의 이계도함수는 
+
+    $$ \{\zeta (x)\}'' = a ^{2} \zeta _{a}(x) \{1 - \zeta _{a}(x)\}\{1 - 2 \zeta _{a}(x)\}$$
+
+    이다. 
+  
+  - 시그모이드 함수는 인공지능에서 활성화 함수의 일종으로 신경망의 표현력을 높일 때 사용된다. 
+
+- ReLU 함수 : ReLU 함수는 다음과 같이 정의된다. 
+
+  $$ \phi (x) = \max (0, x) = \begin{cases} x &(x>0)\text{}\\ 0 &(x \leq 0)\text{}\\ \end{cases} $$
+
+  - ReLU 함수는 인공지능에서 시그모이드 함수와 같이 활성화 함수로 사용된다. 
+
+- ReLU 함수의 도함수 : ReLU 함수의 도함수는 
+
+  $$ \phi ' (x) = \begin{cases} 1 &(x>0)\text{}\\ 0 &(x \leq 0)\text{}\\ \end{cases} $$
+
+  이다. 
+
+  - 인공지능에서 오차역전파를 할 때 표준 시그모이드 함수의 미분의 최대값이 $0.25$ 라서 오차 전파가 어려운 경우가 있다. 이 상황을 기울기 소실(vanishing gradient) 문제라 한다. 
+
+    이때 ReLU 함수를 사용하면 되는데 ReLU 함수의 미분은 $0$ 또는 $1$ 의 값을 갖기 때문이다. 이는 기울기 소실 문제를 해결하는데 도움을 준다. 
