@@ -55,6 +55,7 @@ def update():
 {sections('선형방정식', 'la', get_definitions)}
 {sections('행렬 대수', 'la2', get_definitions)}
 {sections('행렬식', 'la3', get_definitions)}
+{sections('벡터공간', 'la4', get_definitions)}
 
 '''
 
