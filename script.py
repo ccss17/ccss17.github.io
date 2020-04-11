@@ -56,6 +56,7 @@ def update():
 {sections('행렬 대수', 'la2', get_definitions)}
 {sections('행렬식', 'la3', get_definitions)}
 {sections('벡터공간', 'la4', get_definitions)}
+{sections('고유벡터', 'la5', get_definitions)}
 
 '''
 
