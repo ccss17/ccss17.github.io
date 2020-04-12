@@ -74,11 +74,15 @@
 
   - 길이, 넓이, 부피 등이 스칼라량에 속한다. 
 
+  - 그냥 단순히 실수로 생각하면 된다! 
+
   - 예시 
 
     "$A$ 는 $20$ 분을 뛰었다" 에서 $20$ 은 스칼라량이다. 
 
 - 벡터(vector) : 크기와 방향성이 동시에 있는 물리량이다. 
+
+  > 크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. 
 
   - 스칼라량으로는 방향에 대한 정보가 부족하기에 방향에 대한 정보를 덧붙힌 것이 벡터이다. 
 
@@ -633,4 +637,187 @@
     이다.
 
 ## 내적, 외적
+
+- 내적(dot product) : 두 벡터 $u ,v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 두 벡터 $u, v$ 의 내적은 스칼라
+
+  $$ u \cdot v = u_1v_1+u_2v_2+u_3v_3 $$
+
+  이다. 
+
+  - 예시 
+
+    $$ \big < 1, -2, 1\big > \cdot \big < -6, 2, -3\big > = (1)(-6)+(-2)(2)+(-1)(-3) = -7 $$
+
+  - 예시 
+
+    $$ \bigg ( \frac{1}{2}i + 3j + k \bigg ) \cdot (4i-j+2k) = \bigg (\frac{1}{2}\bigg )(4)+(3)(-1)+(1)(2) = 1 $$
+
+- 내적의 성질 : 임의의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다. 
+
+  1. $u \cdot v = v \cdot u$
+
+  2. $(cu)\cdot v = u \cdot (cv) = c(u \cdot v)$
+
+  3. $u \cdot (v + w) = u \cdot v + u \cdot w$
+
+  4. $u \cdot u = |u| ^{2}$
+
+  5. $0 \cdot u = 0$
+
+- 두 벡터의 각도(angle between two vectors) : 영벡터가 아닌 두 벡터 $u, v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 두 벡터 $u ,v$ 가 이루는 각 $\theta$ 는 
+
+  $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) $$
+
+  또는
+
+  $$ \theta = \cos ^{-1} \bigg ( \frac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \bigg ) $$
+
+  이다. 
+
+  - 증명 
+
+    **구체화 필요** 
+
+  - 예시 
+
+    두 벡터 
+
+    $$ u = i - 2j - 2k, v = 6i + 3j + 2k $$
+
+    가 이루는 각을 구해보자.
+
+    $$ u \cdot v = (1)(6)+(-2)(3)+(-2)(2) = -4 $$
+
+    $$ |u| = \sqrt[]{(1)^{2}+(-2)^{2}+(-2)^{2}} = \sqrt[]{9} = 3 $$
+
+    $$ |v| = \sqrt[]{(6)^{2}+(3)^{2}+(2)^{2}} = \sqrt[]{49} = 7 $$
+
+    에서 
+
+    $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) = \cos ^{-1} \bigg ( \frac{-4}{(3)(7)} \bigg ) \approx 100.98 \degree $$
+
+- 벡터의 직교(orthogonal vectors) : 두 벡터 $u, v$ 가 직교하는 조건은
+
+  $$ u \cdot v = 0 $$
+
+  이다. 
+
+  - 두 벡터가 이루는 각이 $90 \degree$ 일 때 직교한다고 한다. 
+
+  - 증명 
+
+    $$ \cos \bigg ( \frac{\pi }{2} \bigg ) = 0 $$
+
+    $$ \cos ^{-1} 0 = \frac{\pi }{2} $$
+
+    이므로 벡터 $u, v$ 가 이루는 각이 $90 \degree = \dfrac{\pi }{2}$ 라면
+
+    $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) $$
+
+    에서 
+
+    $$ \frac{\pi }{2}  = \cos ^{-1} 0 = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) $$
+
+    $$ 0 = \frac{u \cdot v}{|u||v|} $$
+
+    이다. 그러므로
+
+    $$ \therefore u \cdot v = 0 $$
+
+    이다. 
+
+- 외적(cross product) : 벡터 $u, v$ 가 이루는 각이 $\theta$ 이고 벡터 $u, v$ 가 이루는 평면에 수직한 단위 벡터 $n$ 에 대하여 
+
+  벡터 $u, v$ 의 외적은 벡터 
+
+  $$ u \times v = (|u||v| \sin \theta) n $$
+
+  이다. 
+
+  - 내적의 결과가 스칼라인 반면 외적의 결과는 벡터이다. 
+
+    - 이로 인해 외적은 벡터곱(vector product) 이라고 불리기도 한다. 
+
+  - 벡터의 외적 $u \times v$ 는 $u, v$ 에 직교(orthogonal) 한다. 
+
+    ![](https://www.sharetechnote.com/image/EngMath_Matrix_CrossProduct_01.png)
+
+    - 왜냐하면 위 그림과같이 외적이란 벡터 $n$ 의 스칼라배에 불과하기 때문이다. 
+
+    - 위 그림의 빨간선이 벡터 $u, v$ 가 이루는 평면에 직교하는 단위벡터 $n$ 이다! 
+
+
+- 외적의 성질 : 임의의 벡터 $u, v, w$ 와 임의의 스칼라 $r, s$ 에 대하여 다음이 성립한다. 
+
+  1. $(ru) \times (sv) = (rs)(u \times v)$
+
+  2. $u \times (v + w) = u \times v + u \times w$
+
+  3. $v \times u = -(u \times v)$
+
+  4. $(v+w)\times u = v \times u + w \times u$
+
+  5. $0 \times u=0$
+
+  6. $u \times (v \times w) = (u \cdot w)v - (u \cdot v)w$
+
+- 외적의 크기 : 벡터 $u, v$ 의 외적의 크기는 
+
+  $$ |u \times v| = |u||v| \sin \theta $$
+
+  이다. 
+
+  - 증명 
+
+    외적의 정의
+
+    $$ u \times v = (|u||v| \sin \theta) n $$
+
+    에서 $n$ 은 단위벡터이므로 크기가 $1$ 이다. 따라서 외적의 크기는 
+
+    $$ |u \times v| = |u||v| |\sin \theta| |n| $$
+
+    에서
+
+    $$ \therefore  |u \times v| = |u||v| \sin \theta $$
+
+    이다. 
+
+  - 외적의 크기는 벡터 $u, v$ 가 이루는 평행사변형(parallogram)의 크기와 같다. 
+
+    - 증명 
+
+      평행사변형의 밑변이 $|u|$ 이 되고 높이가 $|v||\sin \theta|$ 가 되므로 외적의 크기 
+
+      $$ |u \times v| = |u||v| \sin \theta $$
+
+      는 두 벡터 $u, v$ 가 이루는 평행사변형의 넓이와 같다. 
+
+- 평행 벡터(parallel vectors) : 두 벡터 $u, v$ 가 평행인 것은
+
+  $$ u \times v = 0 $$
+
+  와 동치이다. 
+
+  - 증명 
+    
+    $\sin \theta$ 에서 $\theta$ 가 $0, \pi$ 일 때 $0$ 이므로 두 벡터 $u, v$ 가 평행할 때 
+
+    $$u \times v = 0$$
+
+    이다. 이것의 역도 성립한다.
+
+    - 두 벡터 $u, v$ 중 하나가 영벡터라면 역시 
+    
+      $$u \times v = 0$$
+
+      이다.
+
+  - 즉 $u \times v = 0$ 은 평행일 필요충분조건이다. 
+
+  - 형식언어로
+
+    $$ u // v \Leftrightarrow u \times v $$
+
+    로 표현할 수 있다. 
 
