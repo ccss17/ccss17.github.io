@@ -24,7 +24,7 @@
 
 - [논리학](https://ccss17.github.io/logic.html)
     
-  ######  언어,  단어,  문장,  사고 전달의 최소단위,  명제(proposition),  조건(condition),  진리값,  진리집합(truth set),  추리,  추론(inference),  논증,  논리학,  논리학에서의 올바르다,  연역적으로 건전 타당한(sound and valid) 추론,  귀납적으로 건전한(inductively sound) 추론, 또는 귀납적으로 강한(inductively strong) 추론,  논리학의 기본원리,  비형식 논리학,  형식 논리학,  귀납적으로 건전한(inductively sound) 추론, 또는 귀납적으로 강한(inductively strong) 추론,  논리학의 기본원리,  비형식 논리학,  형식 논리학,  오류론,  설득력 있는 추론,  설득력 없는 추론,  형식적 오류,  비형식적 오류,  유추(analogy),  귀납(induction),  완전귀납,  불완전귀납,  귀납 추론의 종류,  인과적 귀납법,  연역(deduction),  연역논증 규칙,  정언 논리,  현대 논리학
+  ######  언어,  단어,  문장,  사고 전달의 최소단위,  명제(proposition),  조건(condition),  진리값,  진리집합(truth set),  추리,  추론(inference),  논증,  논리학,  논리학에서의 올바르다,  연역적으로 건전 타당한(sound and valid) 추론,  귀납적으로 건전한(inductively sound) 추론, 또는 귀납적으로 강한(inductively strong) 추론,  논리학의 기본원리,  비형식 논리학,  형식 논리학,  오류론,  설득력 있는 추론,  설득력 없는 추론,  형식적 오류,  비형식적 오류,  유추(analogy),  귀납(induction),  완전귀납,  불완전귀납,  귀납 추론의 종류,  인과적 귀납법,  연역(deduction),  연역논증 규칙,  정언 논리,  현대 논리학
 
 - [수학기초론:집합론](https://ccss17.github.io/math.html)
     
@@ -40,7 +40,7 @@
 
 - [추상대수학 메모](https://ccss17.github.io/abstract_algebra.html)
     
-  ######  대수학(代數學, Algebra),  추상대수학(abstract algebra),  대수 구조(algebraic structure),  연산(operation),  $n$ 항 연산(n-ary operation),  영항 연산(0-ary operation),  일항 연산(unary operation) 또는 단항 연산,  이항 연산(binary operation),  삼항 연산(ternary operation),  군론(group theory),  덧셈에 대한 항등원을 제외한 집합,  "연산이 잘 정의되었다",  집합(set),  마그마(magma),  반군(semi group),  모노이드(monoid),  군(group),  아벨군(abelian group) 또는 가환군(commutative group),  순환군(cyclic group),  환(ring),  유사환(pseudo ring),  가환환(commutative ring),  자명환(trivial ring),  단위원(unity),  가역원(invertible element) 또는 단원(unit),  나눗셈환(division ring),  체(field),  체의 확대(field extension),  유한체(finite field) 또는 갈루아 체(Galois field),  벡터공간(Vector Space)
+  ######  대수학(代數學, Algebra),  추상대수학(abstract algebra),  대수 구조(algebraic structure),  연산(operation),  $n$ 항 연산(n-ary operation),  영항 연산(0-ary operation),  일항 연산(unary operation) 또는 단항 연산,  이항 연산(binary operation),  삼항 연산(ternary operation),  군론(group theory),  덧셈에 대한 항등원을 제외한 집합,  "연산이 잘 정의되었다",  집합(set),  마그마(magma),  반군(semi group),  모노이드(monoid),  군(group),  아벨군(abelian group) 또는 가환군(commutative group),  순환군(cyclic group),  환(ring),  유사환(pseudo ring),  가환환(commutative ring),  자명환(trivial ring),  단위원(unity),  가역원(invertible element) 또는 단원(unit),  나눗셈환(division ring),  체(field),  체의 확대(field extension),  유한체(finite field) 또는 갈루아 체(Galois field),  벡터공간(Vector Space),  범주론
 
 - [대수학 메모](https://ccss17.github.io/algebra.html)
     
