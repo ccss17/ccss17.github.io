@@ -37,6 +37,7 @@ def update():
 {sections('수학기초론:집합론', 'math', get_definitions)}
 {sections('수학기초론:수리논리학', 'mathmatical_logic', get_definitions)}
 {sections('기초 산술 메모', 'arithmetic', get_definitions)}
+{sections('추상대수학 메모', 'abstract_algebra', get_definitions)}
 {sections('대수학 메모', 'algebra', get_definitions)}
 {sections('해석학 메모', 'anal', get_definitions)}
 {sections('삼각 함수 메모', 'trig', get_definitions)}
