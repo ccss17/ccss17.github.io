@@ -1,6 +1,6 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-# 선형대수학 메모 
+# 선형대수학 메모 2
 
 # 행렬 대수 
 

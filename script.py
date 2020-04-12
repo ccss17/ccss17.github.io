@@ -40,7 +40,7 @@ def update():
 {sections('대수학 메모', 'algebra', get_definitions)}
 {sections('해석학 메모', 'anal', get_definitions)}
 {sections('삼각 함수 메모', 'trig', get_definitions)}
-{sections('함수 메모', 'graph', get_definitions)}
+{sections('함수 메모', 'function', get_definitions)}
 {sections('확률,통계 메모', 'prop', get_definitions)}
 
 ## 미적분 메모
@@ -49,6 +49,7 @@ def update():
 {sections('적분 메모', 'calculus3', get_definitions)}
 {sections('미분2 메모', 'calculus4', get_definitions)}
 {sections('적분2 메모', 'calculus5', get_definitions)}
+{sections('벡터해석학 메모', 'vector', get_definitions)}
 {sections('미적분 메모', 'calculus6', get_definitions)}
 
 ## 선형대수학 메모
