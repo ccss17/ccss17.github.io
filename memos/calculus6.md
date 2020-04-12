@@ -875,6 +875,18 @@
 
 ## 이변수 함수 선형화
 
+- 접평면(tangent plane) : $3$ 차원 곡면의 한 접점에 존재하는 무수히 많은 접선들이 동시에 상주하고 있는 평면이다.
+
+  ![index](https://user-images.githubusercontent.com/16812446/79077468-ec0ce800-7d3c-11ea-8d57-3c992ab66d6e.jpg)
+
+  - 위 그림과 같이 어떤 곡면에는 접선이 무수히 많고 그 접선들이 상주하는 평면이 곡면의 접평면이다. 
+
+- 법선벡터(normal vector) : 접평면에 직교하는 벡터이다.
+
+  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Surface_normal_illustration.svg/220px-Surface_normal_illustration.svg.png)
+
+  - 즉 법선벡터는 위 그림의 화살표 벡터와 같이 $3$ 차원 곡면의 한 접점에서의 모든 접선과 직교한다.
+
 - 이변수 함수 선형화 또는 접평면(tangent plane) : $f$ 의 연속인 편도함수들이 존재할 때 점 $P(x_0, y_0, z_0)$ 에서 곡면 $z = f(x, y)$ 에 대한 접평면의 방정식은 
 
   $$ z - z_0 = f_x(x_0, y_0)(x- x_0) + f_y(x_0, y_0)(y - y_0) $$

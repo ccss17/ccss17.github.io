@@ -86,11 +86,11 @@
 
 - [벡터해석학 메모](https://ccss17.github.io/vector.html)
     
-  ######  매개변수 방정식(parametric equations),  매개변수 곡선(parametric curve),  매개변수 구간(parametric interval),  시점(initial point),  종점(terminal point),  양,  물리량,  비물리량,  스칼라(scala),  벡터(vector),  벡터의 시점(initial point),  벡터의 종점(terminal point),  스칼라 함수(scalar function),  벡터 함수(vector function),  장(field),  스칼라 장(scalar field),  벡터 장(vector field),  영벡터(zero vector),  역벡터(inverse vector),  단위벡터(unit vector),  평면벡터(plane vector),  공간벡터(space vector),  벡터의 크기,  두 벡터가 같다,  벡터의 덧셈,  벡터의 뺄셈,  벡터의 실수배(스칼라배),  벡터의 실수배의 성질,  두 벡터의 평행조건,  세 점이 한 직선 위에 있을 조건,  위치벡터,  평면벡터,  평면벡터 성분 표현,  평면벡터의 크기,  평면벡터의 같음,  평면벡터의 연산,  두 점에 대한 평면벡터의 성분,  두 점에 대한 평면벡터의 크기,  두 평면벡터의 평행,  표준점(standard poitn) 에 위치한 벡터,  벡터 성분 표기(component form),  벡터의 성분(component),  벡터의 길이(magnitude or length of vector),  영 벡터(zero vector),  벡터 대수 연산,  스칼라배 벡터의 길이,  단위 벡터(unit vector),  표준 단위 벡터(standard unit vector),  벡터의 $i$ 성분(i-component),  벡터의 $j$ 성분(j-component),  벡터의 $k$ 성분(k-component),  벡터의 $i,j,k$ 성분으로의 벡터 표기,  벡터 방향으로의 단위 벡터
+  ######  매개변수 방정식(parametric equations),  매개변수 곡선(parametric curve),  매개변수 구간(parametric interval),  시점(initial point),  종점(terminal point),  양,  물리량,  비물리량,  스칼라(scala),  벡터(vector),  벡터의 시점(initial point),  벡터의 종점(terminal point),  스칼라 함수(scalar function),  벡터 함수(vector function),  장(field),  스칼라 장(scalar field),  벡터 장(vector field),  영벡터(zero vector),  역벡터(inverse vector),  단위벡터(unit vector),  평면벡터(plane vector),  공간벡터(space vector),  벡터의 크기,  두 벡터가 같다,  벡터의 덧셈,  벡터의 뺄셈,  벡터의 실수배(스칼라배),  벡터의 실수배의 성질,  두 벡터의 평행조건,  세 점이 한 직선 위에 있을 조건,  위치벡터,  평면벡터,  평면벡터 성분 표현,  평면벡터의 크기,  평면벡터의 같음,  평면벡터의 연산,  두 점에 대한 평면벡터의 성분,  두 점에 대한 평면벡터의 크기,  두 평면벡터의 평행,  표준점(standard poitn) 에 위치한 벡터,  벡터 성분 표기(component form),  벡터의 성분(component),  영 벡터(zero vector),  벡터의 길이(magnitude or length of vector),  $L_1$ 노름(norm) 거리 또는 맨해튼 거리,  $L_2$ 노름(norm) 거리 또는 유클리드 거리,  $L_p$ 노름,  무한 $L _{\infty }$ 노름,  벡터 대수 연산,  스칼라배 벡터의 길이,  단위 벡터(unit vector),  표준 단위 벡터(standard unit vector),  벡터의 $i$ 성분(i-component),  벡터의 $j$ 성분(j-component),  벡터의 $k$ 성분(k-component),  벡터의 $i,j,k$ 성분으로의 벡터 표기,  벡터 방향으로의 단위 벡터,  내적(inner product),  내적의 성질,  두 벡터의 각도(angle between two vectors),  코사인 유사도(cosine similarity),  벡터의 직교(orthogonal vectors),  외적(outer product),  외적의 성질,  외적의 크기,  평행 벡터(parallel vectors)
 
 - [미적분 메모](https://ccss17.github.io/calculus6.html)
     
-  ######  이변수 함수의 극한,  이변수 함수의 극한의 성질,  이변수 함수의 연속,  이변수 합성함수의 연속,  다변수 함수의 극한과 연속,  상미분(ordinary derivative),  $x$ 에 대한 편미분계수,  $y$ 에 대한 편미분계수,  편도함수(partial derivative),  편도함수의 기하학적 의미,  이계 편도함수(second-order partial derivative),  혼합 편미분(mixed derivative),  혼합 편미분 정리(mixed derivative theorem),  이변수 함수의 미분가능성,  이변수 함성함수의 도함수(chain rule),  일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule),  이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule),  이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule),  $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule),  스칼라장(scalar field),  기울기 벡터(gradient vector),  방향도함수(directional derivative),  삼독립변수에 대한 방향도함수,  선형화(linearization),  표준 선형 근사(standard linear approximation),  미분(differential),  미분의 추정(estimating with differentials),  이변수 함수 선형화 또는 접평면(tangent plane),  이변수 함수 미분 또는 전미분(total differential)
+  ######  이변수 함수의 극한,  이변수 함수의 극한의 성질,  이변수 함수의 연속,  이변수 합성함수의 연속,  다변수 함수의 극한과 연속,  상미분(ordinary derivative),  $x$ 에 대한 편미분계수,  $y$ 에 대한 편미분계수,  편도함수(partial derivative),  편도함수의 기하학적 의미,  이계 편도함수(second-order partial derivative),  혼합 편미분(mixed derivative),  혼합 편미분 정리(mixed derivative theorem),  이변수 함수의 미분가능성,  이변수 함성함수의 도함수(chain rule),  일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule),  이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule),  이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule),  $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule),  스칼라장(scalar field),  기울기 벡터(gradient vector),  방향도함수(directional derivative),  삼독립변수에 대한 방향도함수,  선형화(linearization),  표준 선형 근사(standard linear approximation),  미분(differential),  미분의 추정(estimating with differentials),  접평면(tangent plane),  법선벡터(normal vector),  이변수 함수 선형화 또는 접평면(tangent plane),  이변수 함수 미분 또는 전미분(total differential)
 
 ## 선형대수학 메모
 
@@ -122,8 +122,6 @@
 
 - [기초적인 것에 관련된 메모](https://ccss17.github.io/all.html)
     
-  - ##### _(정리 1-1)_ 기독교의 관점에서 사람이 지식을 얻는 것은 사람에게 달려있는 것이 아니라 하나님에게 달려있다.
-
   - ##### _(정리 1-2)_ 지식의 발전이 요구되는 상황에서 발전되는 지식에 대한 매우 엄밀한 증명의 요구는 비효율적일 수 있다. 
 
   - ##### _(정리 1-3)_ 지식은 세상을 관찰함으로써 획득된다.

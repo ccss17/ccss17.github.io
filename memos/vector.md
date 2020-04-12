@@ -446,6 +446,16 @@
 
 - 벡터의 성분(component) : 벡터 성분 표기에서 $v_1, v_2, v_3$ 을 벡터의 성분이라 한다. 
   
+- 영 벡터(zero vector) : 길이가 $0$ 인 벡터로써 
+
+  $$ \big<0, 0 \big> $$
+
+  또는 
+
+  $$ \big< 0,0,0 \big > $$
+
+  이다. 
+
 - 벡터의 길이(magnitude or length of vector) : $2$ 차원, $3$ 차원일 경우 각각 다음과 같이 정의된다. 
 
   - $2$ 차원 공간에서 정의된 임의의 벡터 $\overrightarrow{PQ}$ 를 표준점에 위치시켜서 그 성분을
@@ -469,16 +479,60 @@
     이다. 
   
   - 벡터 $v$ 의 길이를 $|v|$ 또는 $||v||$ 로 표기한다. 
+
+## 노름 거리
   
-- 영 벡터(zero vector) : 길이가 $0$ 인 벡터로써 
+- $L_1$ 노름(norm) 거리 또는 맨해튼 거리 : 벡터 $a$ 에 대한 $L_1$ 노름은 
 
-  $$ \big<0, 0 \big> $$
-
-  또는 
-
-  $$ \big< 0,0,0 \big > $$
+  $$ ||a|| _{1} = |a_1| + |a_2| + |a_3| + \dots + |a_n| = \sum_{i=1}^{n}|a_i| $$
 
   이다. 
+
+  - 벡터 $a = (4, 3)$ 에 대한 $L_1$ 노름은 오른쪽으로 $4$, 위로 $3$ 움직인 것과 같이 $7$ 이다.
+
+    이처럼 $L_1$ 노름은 
+     
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Manhattan_distance.svg/300px-Manhattan_distance.svg.png)
+
+    와 같이 바둑판 모양으로 움직인 최단거리를 뜻한다. 
+
+- $L_2$ 노름(norm) 거리 또는 유클리드 거리 : 벡터 $a$ 에 대한 $L_2$ 노름은 벡터의 크기에서의 정의와 동일하게 
+
+  $$ ||a|| _{2} = \sqrt[]{\sum_{i=1}^{n}a _ i ^{2}} = \sqrt[]{a_1 ^{2}+a_2 ^{2}+\dots+a_n ^{2}} $$
+
+  이다.
+
+  - $L_2$ 노름은 유클리드 기하학에서 사용하던 거리와 똑같고 
+  
+    우리가 일상생활에서 직관적으로 생각하던 거리와 동일하다!
+
+  - $L_1, L_2$ 노름은 선형회귀 모델의 정규화 항에서 사용된다.
+
+- $L_p$ 노름 : 점 $(x_1, x_2, \dots, x_n)$ 과 점 $(y_1, y_2, \dots, y_n)$ 의 $L_p$ 노름 거리는 다음과 같이 정의된다. 
+
+  $$ \Bigg ( \sqrt[]{\sum_{i=1}^{n}|x_i - y_i| ^{p}} \Bigg ) ^{1/p} $$
+
+  - $L_1$ 노름 거리가 
+
+    $$ \sum_{i=1}^{n}|x_i - y_i| ^{p} $$
+
+    로 정의되고 $L_2$ 노름 거리가 
+
+    $$ \Bigg ( \sqrt[]{\sum_{i=1}^{n}|x_i - y_i| ^{2}} \Bigg ) ^{1/2} $$
+
+    로 정의된 것에서 일반화 된 것이다. 
+
+- 무한 $L _{\infty }$ 노름 : 점 $(x_1, x_2, \dots, x_n)$ 과 점 $(y_1, y_2, \dots, y_n)$ 의 $L _{\infty }$ 노름 거리는 다음과 같이 정의된다. 
+
+    $$ \lim_{p \to \infty}  \Bigg ( \sqrt[]{\sum_{i=1}^{n}|x_i - y_i| ^{p}} \Bigg ) ^{1/p} $$
+
+    또는
+
+    $$ = \max (|x_1 -y_1|, |x_2 - y_2|, \dots, |x_n - y_n|) $$
+
+    - 보통 $L_1$ 노름거리과 $L_2$ 노름거리, 무한 노름거리 외에는 잘 사용되지 않는다. 
+
+    - 무한노름거리는 체비쇼프 거리(chebyshev distance) 거리로도 불린다. 
 
 ## 벡터 대수 연산 
 
@@ -638,11 +692,49 @@
 
 ## 내적, 외적
 
-- 내적(dot product) : 두 벡터 $u ,v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 두 벡터 $u, v$ 의 내적은 스칼라
+- 내적(inner product) : 두 벡터 $u ,v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 두 벡터 $u, v$ 의 내적은 스칼라
 
   $$ u \cdot v = u_1v_1+u_2v_2+u_3v_3 $$
 
   이다. 
+
+  - 내적은 두 벡터 $u, v$ 가 이루는 각에 대한 관계식
+  
+    $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) $$
+
+    을 이용하여 두 벡터의 각이 $\theta$ 일 때 
+
+    $$ u \cdot v = |u||v| \cos \theta $$
+
+    으로 정의할 수도 있다. 
+
+    - 증명  
+
+      $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) $$
+
+      에서 
+
+      $$ \cos \theta = \frac{u \cdot v}{|u||v|} $$
+
+      이므로
+
+      $$ \therefore  u \cdot v = |u||v| \cos \theta $$
+
+      이다.
+
+  - 내적은 두 벡터
+
+    $$ a = \begin{bmatrix} a_1\\a_2\\\vdots \\a_n \end{bmatrix}, b = \begin{bmatrix} b_1\\b_2\\\vdots \\b_n \end{bmatrix} $$
+
+    에 대하여 
+
+    $$ \big< a, b \big > = a_1b_1 + a_2b_2 + \dots + a_n b_n = \sum_{i=1}^{n}a_ib_i $$
+
+    로 표기할 수도 있다. 
+
+    - $\big < \big >$ 기호를 벡터 표기가 아닌 내적 표기로 사용할 수도 있다는 것에 주의하자. 
+
+  - 점곱(dot product), 스칼라곱(scalar product), 영사곱(projection product) 으로도 불린다. 
 
   - 예시 
 
@@ -651,6 +743,16 @@
   - 예시 
 
     $$ \bigg ( \frac{1}{2}i + 3j + k \bigg ) \cdot (4i-j+2k) = \bigg (\frac{1}{2}\bigg )(4)+(3)(-1)+(1)(2) = 1 $$
+
+  - 예시 
+
+    $$ a = \begin{bmatrix} 1\\2\\3 \end{bmatrix}, b=\begin{bmatrix} 4\\5\\6 \end{bmatrix} $$
+
+    에 대한 내적은
+
+    $$ \big < a, b \big > = (1)(4)+(2)(5)+(3)(6)=4+10+18=32 $$
+
+    이다. 
 
 - 내적의 성질 : 임의의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다. 
 
@@ -696,6 +798,70 @@
 
     $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) = \cos ^{-1} \bigg ( \frac{-4}{(3)(7)} \bigg ) \approx 100.98 \degree $$
 
+- 코사인 유사도(cosine similarity) : 영벡터가 아닌 두 벡터 $u, v$ 가 $u = \big < u_1, u_2, \dots, u_n \big >, v = \big  <v_1, v_2, \dots, v_n \big  >$ 일 때, 
+
+  $$ \cos  \theta = \frac{u \cdot v}{|u||v|} $$
+
+  또는 
+
+  $$ \cos  (u, v) = \frac{u \cdot v}{|u||v|} $$
+
+  를 코사인 유사도라고 정의한다.
+
+  - 증명 
+
+    코사인 유사도
+
+    $$ \cos  \theta = \frac{u \cdot v}{|u||v|} $$
+
+    는 두 벡터의 각도
+
+    $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) $$
+
+    에서 
+
+    $$ \therefore  \cos \theta = \frac{u \cdot v}{|u||v|} $$
+
+    와 같이 쉽게 유도된다. 
+
+  - 다음의 기호로도 표기할 수 있다. 
+
+    $$ \cos \theta = \frac{\big < u ,v \big >}{||u|| \cdot  ||v||} = \frac{ \displaystyle \sum_{i=1}^{n}a_ib_i}{ \displaystyle \sqrt[]{\sum_{i=1}^{n}a_i ^{2}} \sqrt[]{\sum_{i=1}^{n}b_i ^{2}}} $$
+
+  - 코사인 유사도는 폐구간 $[-1, 1]$ 에 존재한다. 
+
+    즉 $-1 \leq \cos (u, v) \leq 1$ 이다.
+
+    - 코사인 유사도가 $-1$ 일 때 두 벡터가 서로 반대방향이다.
+
+    - 코사인 유사도가 $0$ 일 때 두 벡터가 직교한다.
+
+    - 코사인 유사도가 $1$ 일 때 두 벡터가 서로 같은 방향으로 평행이 된다. 
+
+  - 이와 같이 코사인 유사도가 높다는 것은 두 벡터가 더 비슷하다는 것이다. 
+
+    > 인공지능이 자연어를 처리할 때 단어와 문장을 벡터로 처리하는데 벡터로 환원된 단어와 문장의 관계성을 파악할 때 코사인 유사도가 사용된다. 코사인 유사도가 높을수록 해당 단어와 문장이 더 가까운 관계라는 것이다. 
+
+    > 벡터 해석학으로 격하된 자연대상은 벡터 해석학의 법칙에 순응하기 때문이다. 
+
+    > 이것은 수학 사상사에서 배웠던 수학적 추상대상물로 환원된 자연대상을 수학의 추상 법칙으로 다룰 수 있다는 것의 논거 및 개별 대상이 될 수 있다. 
+
+  - 예시 
+
+    두 벡터 $a = (1, 2, 3), b = (6, 5, 4)$ 의 코사인 유사도를 구해보자. 
+
+    $$ a \cdot b = (1)(6)+(2)(5)+(3)(4) = 28 $$
+
+    $$ |a| = \sqrt[]{1^2+2^2+3^2} = \sqrt[]{14} $$
+
+    $$ |b| = \sqrt[]{6^2+5^2+4^2} = \sqrt[]{77} $$
+
+    이므로 코사인 유사도 $\cos (a, b)$ 는
+
+    $$ \therefore \cos (a, b) = \frac{28}{\sqrt[]{14} \sqrt[]{77}} = \frac{2 \sqrt[]{22}}{11} \approx 0.8528 $$
+
+    이다. 
+
 - 벡터의 직교(orthogonal vectors) : 두 벡터 $u, v$ 가 직교하는 조건은
 
   $$ u \cdot v = 0 $$
@@ -726,13 +892,15 @@
 
     이다. 
 
-- 외적(cross product) : 벡터 $u, v$ 가 이루는 각이 $\theta$ 이고 벡터 $u, v$ 가 이루는 평면에 수직한 단위 벡터 $n$ 에 대하여 
+- 외적(outer product) : 벡터 $u, v$ 가 이루는 각이 $\theta$ 이고 벡터 $u, v$ 가 이루는 평면에 수직한 단위 벡터 $n$ 에 대하여 
 
   벡터 $u, v$ 의 외적은 벡터 
 
   $$ u \times v = (|u||v| \sin \theta) n $$
 
   이다. 
+
+  - 교차곱(cross product), 벡터곱(vector product), 텐서곱(tensor product) 으로도 불린다. 
 
   - 내적의 결과가 스칼라인 반면 외적의 결과는 벡터이다. 
 
@@ -745,7 +913,6 @@
     - 왜냐하면 위 그림과같이 외적이란 벡터 $n$ 의 스칼라배에 불과하기 때문이다. 
 
     - 위 그림의 빨간선이 벡터 $u, v$ 가 이루는 평면에 직교하는 단위벡터 $n$ 이다! 
-
 
 - 외적의 성질 : 임의의 벡터 $u, v, w$ 와 임의의 스칼라 $r, s$ 에 대하여 다음이 성립한다. 
 
