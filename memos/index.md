@@ -104,7 +104,11 @@
 
 - [고유벡터](https://ccss17.github.io/la5.html)
     
-  ###### 
+  ######  고유벡터(eigenvector),  고윳값(eigenvalue),  고유공간(eigenspace)
+
+- [직교](https://ccss17.github.io/la6.html)
+    
+  ######  내적(inner product) 또는 스칼라곱(dot product),  내적의 성질,  벡터의 크기(length) 또는 노름(norm),  벡터의 크기의 성질,  단위벡터(unit vector),  정규화(normalizatoin),  두 벡터 $u, v$ 사이의 거리(distance),  벡터 $u, v$ 의 직교(orthogonal),  직교집합(orthogonal set)
 
 # 생각 메모
 
