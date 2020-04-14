@@ -24,7 +24,7 @@
 
 - [논리학](https://ccss17.github.io/logic.html)
     
-  ######  언어,  단어,  문장,  사고 전달의 최소단위,  명제(proposition),  조건(condition),  진리값,  진리집합(truth set),  추리,  추론(inference),  논증,  논리학,  논리학에서의 올바르다,  연역적으로 건전 타당한(sound and valid) 추론,  귀납적으로 건전한(inductively sound) 추론, 또는 귀납적으로 강한(inductively strong) 추론,  논리학의 기본원리,  비형식 논리학,  형식 논리학,  오류론,  설득력 있는 추론,  설득력 없는 추론,  형식적 오류,  비형식적 오류,  유추(analogy),  귀납(induction),  완전귀납,  불완전귀납,  귀납 추론의 종류,  인과적 귀납법,  연역(deduction),  연역논증 규칙,  정언 논리,  현대 논리학
+  ######  언어,  단어,  문장,  사고 전달의 최소단위,  명제(proposition),  조건(condition),  진리값,  진리집합(truth set),  추리,  추론(inference),  논증,  논리학,  논리학에서의 올바르다,  연역적으로 건전 타당한(sound and valid) 추론,  귀납적으로 건전한(inductively sound) 추론, 또는 귀납적으로 강한(inductively strong) 추론,  논리학의 기본원리,  비형식 논리학,  형식 논리학,  오류론,  설득력 있는 추론,  설득력 없는 추론,  형식적 오류,  비형식적 오류,  심리적 오류,  유추(analogy),  귀납(induction),  완전귀납,  불완전귀납,  귀납 추론의 종류,  인과적 귀납법,  연역(deduction),  연역논증 규칙,  정언 논리,  현대 논리학
 
 - [수학기초론:집합론](https://ccss17.github.io/math.html)
     
@@ -90,7 +90,7 @@
 
 - [미적분 메모](https://ccss17.github.io/calculus6.html)
     
-  ######  이변수 함수의 극한,  이변수 함수의 극한의 성질,  이변수 함수의 연속,  이변수 합성함수의 연속,  다변수 함수의 극한과 연속,  상미분(ordinary derivative),  $x$ 에 대한 편미분계수,  $y$ 에 대한 편미분계수,  편도함수(partial derivative),  편도함수의 기하학적 의미,  이계 편도함수(second-order partial derivative),  혼합 편미분(mixed derivative),  혼합 편미분 정리(mixed derivative theorem),  이변수 함수의 미분가능성,  이변수 함성함수의 도함수(chain rule),  일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule),  이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule),  이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule),  $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule),  스칼라장(scalar field),  기울기 벡터(gradient vector),  방향도함수(directional derivative),  삼독립변수에 대한 방향도함수,  선형화(linearization),  표준 선형 근사(standard linear approximation),  미분(differential),  미분의 추정(estimating with differentials),  접평면(tangent plane),  법선벡터(normal vector),  이변수 함수 선형화 또는 접평면(tangent plane),  이변수 함수 미분 또는 전미분(total differential)
+  ######  이변수 함수의 극한,  이변수 함수의 극한의 성질,  이변수 함수의 연속,  이변수 합성함수의 연속,  다변수 함수의 극한과 연속,  상미분(ordinary derivative),  $x$ 에 대한 편미분계수,  $y$ 에 대한 편미분계수,  편도함수(partial derivative),  편도함수의 기하학적 의미,  이계 편도함수(second-order partial derivative),  혼합 편미분(mixed derivative),  혼합 편미분 정리(mixed derivative theorem),  이변수 함수의 미분가능성,  이변수 합성함수의 도함수(chain rule) 또는 일독립변수와 이매개변수에 대한 도함수,  일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule),  이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule),  이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule),  $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule),  스칼라장(scalar field),  방향도함수(directional derivative),  기울기 벡터(gradient vector),  기울기 벡터 방향의 단위벡터,  방향도함수의 계산,  삼변수 함수의 방향도함수,  삼변수 함수의 기울기 벡터(gradient vector),  삼변수 함수의 방향도함수 계산,  선형화(linearization),  표준 선형 근사(standard linear approximation),  미분(differential),  미분의 추정(estimating with differentials),  접평면(tangent plane),  법선벡터(normal vector),  이변수 함수 선형화 또는 접평면(tangent plane),  이변수 함수 미분 또는 전미분(total differential)
 
 ## 선형대수학 메모
 

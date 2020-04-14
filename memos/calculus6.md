@@ -288,7 +288,7 @@
 
 **구체화 필요**
 
-- 이변수 함성함수의 도함수(chain rule) : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t)$ 가 미분가능하면
+- 이변수 합성함수의 도함수(chain rule) 또는 일독립변수와 이매개변수에 대한 도함수 : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t)$ 가 미분가능하면
 
   $t$ 에 대한 이변수 합성함수 $w = f(x(t), y(t))$ 는 미분가능하며 그 도함수는 
 
@@ -456,33 +456,85 @@
 
     위 그림은 스칼라장의 일종으로 색채에 대응하는 숫자를 색으로 표현한 것이다. 
 
-- 기울기 벡터(gradient vector) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
+- 방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
 
-  $$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > $$
+  함수 $f$ 의 벡터 $u$ 방향으로의 순간변화율로써
 
-  로써 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
+  $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} $$
 
-  - 다음 그림에서
+  이다. 
 
-    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Gradient2.svg/450px-Gradient2.svg.png)
+  - 위 정의는 다음 그림과 같이
 
-    회색의 밝기가 큰 스칼라를 나타낸다. 이때 화살표는 기울기, 즉 스칼라장에서 최대 증가율을 나타낸다.
+    ![캡처](https://user-images.githubusercontent.com/16812446/79028349-9a445080-7bca-11ea-8ac9-596994fdd522.PNG)
 
-  - 형렬적 표기로
+    https://www.youtube.com/watch?v=ehrGmxqQsjo&t=98s
 
-    $$ \nabla f(x, y) = \begin{bmatrix} \dfrac{\partial f}{\partial x}\\ \\ \dfrac{\partial f}{\partial y} \end{bmatrix} $$
+    단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 의 방향이 $x$ 축과 이루는 각이 $\theta$ 이고 두 점 $P, Q$ 와 의 거리를 $h$ 로 두었을 때
 
-    로 쓸 수 있고 표준 단위 벡터 $i = \big <1, 0 \big >, j = \big < 0, 1\big >$ 를 각각 다음의 행렬로 표기할 수 있다. 
+    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \cos (\frac{\pi }{2}-\theta) )-f(x, y)}{h} $$
 
-    $$ \begin{bmatrix} 1\\0 \end{bmatrix} , \begin{bmatrix} 0\\1 \end{bmatrix} $$
+    와 같이 정의된 방향도함수에서 
 
-    이 행렬의 스칼라배로써 
+    $$ \cos \bigg  (\frac{\pi }{2} - \theta \bigg ) = \sin \theta $$
 
-    $$ \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j $$
+    를 사용하여 간단하게 만든 것이다. 
+  
+  - 증명
 
-    의 표기가 나온 것이다.
+    위 그래프의 점 $P, Q$ 의 거리를 $h$ 라 하고 두 점을 $xy$ 평면으로 내려 떨어뜨리면
 
-  - $\frac{\partial f}{\partial x}$ 의 기하학적 의미를 기억하자. 
+    ![캡처](https://user-images.githubusercontent.com/16812446/79028367-ae884d80-7bca-11ea-9268-0e46b10e1dd6.PNG)
+
+    https://www.youtube.com/watch?v=ehrGmxqQsjo&t=98s
+
+    이와 같이 되는 것을 생각하자. 노란선이 단위 벡터 $u$ 의 방향을 나타내며 지금 우리의 목적은 이 방향으로의 함수 $f$ 의 변화율을 구하는 것이다. 
+    
+    이제 기존의 도함수의 정의
+
+    $$ \lim_{h \to 0} \frac{f(x + \Delta x, y + \Delta y )-f(x, y)}{h} $$
+
+    에서 $\Delta x, \Delta y$ 를 푸는 것이 목적이다. 
+
+    단위벡터 $u$ 의 방향이 $x$ 축으로부터 $\theta$ 만큼 벌어져있기 때문에 위 그림처럼 한 각을 $\theta$ 로 하고 밑변과 높이의 길이를 $\Delta x, \Delta y$ 로 하는 직각 삼각형을 생각할 수 있다. 위 그림에서 빨간색 직각삼각형이 그것이다. 
+
+    이 직각삼각형의 빗변의 길이는 두 점 $P, Q$ 와의 거리와 같으므로 $h$ 이다. 
+
+    이때 이 직각삼각형의 한 각 $\theta$ 에서 $\cos \theta$ 는 $\theta$ 를 기준으로 빗변에 대한 밑변의 비율이기 때문에
+
+    $$ \cos \theta = \frac{\Delta x}{h} $$
+
+    에서
+
+    $$ \therefore \Delta x = h \cdot \cos \theta $$
+
+    이다. 또한 이 직각삼각형의 한 각 $\theta$ 에서 $\sin \theta$ 는 $\theta$ 를 기준으로 빗변에 대한 높이의 비율이기 때문에
+
+    $$ \sin \theta = \frac{\Delta y}{h} $$
+
+    에서
+
+    $$ \therefore \Delta y = h \cdot \sin \theta $$
+
+    이다.
+
+    따라서 최종적으로 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 의 방향에서 점 $Q$ 가 점 $P$ 에 한없이 다가갈 때, 즉 두 점의 거리 $h$ 가 $0$ 에 한없이 다가갈 때 일반적인 도함수의 정의는
+
+    $$ \lim_{h \to 0} \frac{f(x + \Delta x, y + \Delta y )-f(x, y)}{h} $$
+
+    으로부터
+
+    $$ \therefore  D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} $$
+
+    가 된다.
+
+  - 따라서 $x$ 축과 이루는 각이 $\alpha$ 이고 $y$ 축과 이루는 각이 $\beta$ 일 때 
+
+    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \alpha  , y + h \cos  \beta  )-f(x, y)}{h} $$
+
+    라고 하기도 한다. 
+  
+  - $\dfrac{\partial f}{\partial x}$ 의 기하학적 의미를 기억하자. 
 
     ![2v](https://user-images.githubusercontent.com/16812446/78995906-63e0e400-7b7e-11ea-9f1e-76382bc9c548.jpg)
 
@@ -502,7 +554,7 @@
 
     의 의미였고 이것을 $x$ 에 관한 편도함수라고 불렀다. 
   
-  - 그런데 $\frac{\partial f}{\partial x}$ 을 벡터의 관점에서 표현하면 "함수 $f$ 의 표준 단위 벡터 $i$ 방향으로의 변화율" 이라고 표현 할 수 있다. 
+    그런데 $\dfrac{\partial f}{\partial x}$ 을 벡터의 관점에서 표현하면 "함수 $f$ 의 표준 단위 벡터 $i$ 방향으로의 변화율" 이라고 표현 할 수 있다. 
 
     - 표준 단위 벡터 $i$ 는 $\big <1, 0, 0 \big >$ 이었고 이것은 $x$ 축 상의 단위벡터 였다.
     
@@ -518,113 +570,19 @@
       
       이것을 다시 "함수 $f$ 의 벡터 $i$ 방향으로의 변화율" 을 구한다고 표현할 수 있다. 
   
-  - 그런데 $\frac{\partial f}{\partial x}$ 을 또 다시 방향도함수의 정의에 따라서 "함수 $f$ 의 벡터 $i$ 방향의 방향도함수" 라고도 표현할 수 있다. 
+    - 따라서 $\dfrac{\partial f}{\partial x}$ 을 또 다시 방향도함수의 정의에 따라서 "함수 $f$ 의 벡터 $i$ 방향의 방향도함수" 라고도 표현할 수 있다. 
 
-    - 즉 함수 $f$ 의 $x$ 에 대한 편도함수는 방향도함수의 벡터 $i$ 방향으로의 아주 특수한 경우라고 할 수 있다. 
+      즉 함수 $f$ 의 $x$ 에 대한 편도함수는 방향도함수의 벡터 $i$ 방향으로의 아주 특수한 경우라고 할 수 있다. 
 
-  - 그러면 $\frac{\partial f}{\partial y}$ 도 마찬가지로 방향도함수의 정의에 따라서 "함수 $f$ 의 벡터 $j$ 방향의 방향도함수" 라고도 표현할 수 있다. 
+    - 그러면 $\dfrac{\partial f}{\partial y}$ 도 마찬가지로 방향도함수의 정의에 따라서 "함수 $f$ 의 벡터 $j$ 방향의 방향도함수" 라고도 표현할 수 있다. 
 
-    - 표준 단위 벡터 $j$ 는 $\big <0, 1, 0 \big >$ 이었고 이것은 $y$ 축 상의 단위벡터 였다.
+      표준 단위 벡터 $j$ 는 $\big <0, 1, 0 \big >$ 이었고 이것은 $y$ 축 상의 단위벡터 였다.
 
-    - 즉 함수 $f$ 의 $y$ 에 대한 편도함수는 방향도함수의 벡터 $j$ 방향으로의 아주 특수한 경우라고 할 수 있다. 
+      즉 함수 $f$ 의 $y$ 에 대한 편도함수는 방향도함수의 벡터 $j$ 방향으로의 아주 특수한 경우라고 할 수 있다. 
   
   - 예시 
 
-    $f(x, y, z) = xy ^{2} + 2x ^{2} + z ^{3}$ 일 때 $\nabla f(1, 2, 3)$ 를 구해보자. 
-
-    먼저 기울기 벡터는 
-
-    $$ \nabla f = \bigg < \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \bigg > $$
-
-    에서 
-
-    $$ = \bigg < y ^{2}+4x, 2xy, 3z ^{2} \bigg > $$
-
-    이다. 그러므로 
-
-    $$ \therefore \nabla f(1, 2, 3) = \big < 8, 4, 27\big > $$
-  
-  - 기울기 벡터 값의 의미 
-
-    이러한 기울기 벡터값은 함수의 증가율이 최대가 되는 방향을 가르키는 벡터이다! 
-
-- 방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
-
-  $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} $$
-
-  이다. 
-
-  - 위 정의는 다음 그림과 같이
-
-    ![캡처](https://user-images.githubusercontent.com/16812446/79028349-9a445080-7bca-11ea-8ac9-596994fdd522.PNG)
-
-    https://www.youtube.com/watch?v=ehrGmxqQsjo&t=98s
-
-    단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 의 방향이 $x$ 축과 이루는 각이 $\theta$ 일 때 
-
-    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \cos (\frac{\pi }{2}-\theta) )-f(x, y)}{h} $$
-
-    와 같이 정의된 방향도함수에서 
-
-    $$ \cos \bigg  (\frac{\pi }{2} - \theta \bigg ) = \sin \theta $$
-
-    를 사용하여 간단하게 만든 것이다. 
-    
-    $h$ 는 두 점 $P, Q$ 와의 거리이다. 
-
-    - 위 그래프의 점 $P, Q$ 의 거리를 $h$ 라 하고 두 점을 $xy$ 평면으로 내려 떨어뜨리면
-
-      ![캡처](https://user-images.githubusercontent.com/16812446/79028367-ae884d80-7bca-11ea-9268-0e46b10e1dd6.PNG)
-
-      https://www.youtube.com/watch?v=ehrGmxqQsjo&t=98s
-
-      이와 같이 되는데 기존의 도함수의 정의
-
-      $$ \lim_{h \to 0} \frac{f(x + \Delta x, y + \Delta y )-f(x, y)}{h} $$
-
-      에서 $\Delta x, \Delta y$ 를 푸는 것이 목적이다. 
-
-      단위벡터 $u$ 의 방향이 $x$ 축으로부터 $\theta$ 만큼 벌어져있기 때문에 위 그림처럼 한 각을 $\theta$ 로 하고 밑변과 높이의 길이를 $\Delta x, \Delta y$ 로 하는 직각 삼각형을 생각할 수 있다. 
-
-      이 직각삼각형의 빗변의 길이는 두 점 $P, Q$ 와의 거리와 같으므로 $h$ 이다. 
-
-      이때 이 직각삼각형의 한 각 $\theta$ 에서 $\cos \theta$ 는 $\theta$ 를 기준으로 빗변에 대한 밑변의 비율이기 때문에
-
-      $$ \cos \theta = \frac{\Delta x}{h} $$
-
-      이다. 그러므로 
-
-      $$ \therefore \Delta x = h \cdot \cos \theta $$
-
-      이다. 또한 이 직각삼각형의 한 각 $\theta$ 에서 $\sin \theta$ 는 $\theta$ 를 기준으로 빗변에 대한 높이의 비율이기 때문에
-
-      $$ \sin \theta = \frac{\Delta y}{h} $$
-
-      이다. 그러므로
-
-      $$ \therefore \Delta y = h \cdot \sin \theta $$
-
-      이다.
-
-      따라서 최종적으로 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 의 방향에서 점 $Q$ 가 점 $P$ 에 한없이 다가갈 때, 즉 두 점의 거리 $h$ 가 $0$ 에 한없이 다가갈 때 일반적인 도함수의 정의는
-
-      $$ \lim_{h \to 0} \frac{f(x + \Delta x, y + \Delta y )-f(x, y)}{h} $$
-
-      으로부터
-
-      $$ \therefore  D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} $$
-
-      가 된다.
-
-  - 따라서 $x$ 축과 이루는 각이 $\alpha$ 이고 $y$ 축과 이루는 각이 $\beta$ 일 때 
-
-    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \alpha  , y + h \cos  \beta  )-f(x, y)}{h} $$
-
-    라고 하기도 한다. 
-  
-  - 예시 
-
-    $\theta = 0$ 일 때, 즉 $u = i = \big < 1, 0, 0\big >$ 일 때, 그러니까 단위벡터 $u$ 의 방향이 $x$ 축 일때,
+    $\theta = 0$ 일 때, 즉 $u = i = \big < 1, 0\big >$ 일 때, 그러니까 단위벡터 $u$ 의 방향이 $x$ 축 일때,
 
     함수 $f(x, y)$ 의 방향도함수는
 
@@ -646,7 +604,7 @@
 
   - 예시 
 
-    $\theta = \frac{\pi}{2}$ 일 때, 즉 $u = j = \big < 0, 1, 0\big >$ 일 때, 그러니까 단위벡터 $u$ 의 방향이 $y$ 축일 때,
+    $\theta = \frac{\pi}{2}$ 일 때, 즉 $u = j = \big < 0, 1\big >$ 일 때, 그러니까 단위벡터 $u$ 의 방향이 $y$ 축일 때,
 
     함수 $f(x, y)$ 의 방향도함수는
 
@@ -664,9 +622,205 @@
     
     의 정의와 같다.
     
-    그러므로 $y$ 에 대한 편도함수는 방향도함수의 매우 특수한 경우인 것이다. 
+- 기울기 벡터(gradient vector) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
 
-- 삼독립변수에 대한 방향도함수 : 삼변수 함수 $f(x, y, z)$ 에 대하여 단위벡터 $u = \big < \cos \alpha , \cos \beta , \cos \gamma  \big >$ (단, $\cos ^{2}\alpha +\cos ^{2}\beta +\cos ^{2}\gamma =1$) 방향으로의 방향도함수는
+  $$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > $$
+
+  또는 
+
+  $$ \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > $$
+
+  로써 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
+
+  - 기울기 벡터는 함수의 증가율이 최대가 되는 방향을 가르키는 벡터이다.
+
+    - 증명
+
+      방향도함수는 한 지점에서 함수의 무수히 많은 방향으로의 순간변화율을 알려준다. 지금의 목표는 방향도함수 값이 최대가 되는 방향의 단위벡터를 찾는 것이다. 그러면 그 방향으로의 순간변화율이 함수를 가장 많이 변화시키는 방향이 된다. 
+      
+      임의의 방향의 단위 벡터 $v$ 에 대한 이 방향도함수의 계산은 다음과 같았다.
+
+      $$ D _{u}f (x, y) = \nabla f \cdot v $$
+
+      이때 두 벡터 $\nabla f, v$ 가 이루는 각이 $\theta$ 일 때 두 벡터가 이루는 각을 이용한 내적의 계산법에 의하여
+
+      $$ \nabla f \cdot v = |\nabla f||v| \cos \theta $$
+
+      이다. 
+
+      그런데 $\cos \theta$ 는 폐구간 $[-1, 1]$ 에서 정의되므로 방향도함수 값이 최대가 되려면 
+
+      $$ \cos \theta = 1 \to \theta = 0 $$
+
+      이어야 한다. 
+
+      이것은 곧 두 벡터 $\nabla f, v$ 가 이루는 각이 $0$ 일 때, 즉 두 벡터가 똑같을 때 방향도함수 값이 최대가 됨을 뜻한다. 
+
+      다시말해서 임의의 방향으로의 단위벡터 $v$ 가 기울기 벡터 $\nabla f$ 의 방향과 같을 때 방향도함수 값을 최대가 되고, 그 방향으로의 순간변화율이 함수를 가장 많이 변화시킨다. 
+
+      그러므로 기울기 벡터 $\nabla f$ 의 방향이 함수의 증가율이 최대가 되는 방향을 가르킨다. 
+
+  - 다음 그림에서
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Gradient2.svg/450px-Gradient2.svg.png)
+
+    회색의 밝기가 큰 스칼라를 나타낸다. 이때 화살표는 기울기, 즉 스칼라장에서 최대 증가율을 나타낸다.
+
+  - 형렬적 표기로
+
+    $$ \nabla f(x, y) = \begin{bmatrix} \dfrac{\partial f}{\partial x}\\ \\ \dfrac{\partial f}{\partial y} \end{bmatrix} $$
+
+    로 쓸 수 있고 표준 단위 벡터 $i = \big <1, 0 \big >, j = \big < 0, 1\big >$ 를 각각 다음의 행렬로 표기할 수 있다. 
+
+    $$ \begin{bmatrix} 1\\0 \end{bmatrix} , \begin{bmatrix} 0\\1 \end{bmatrix} $$
+
+    이 행렬의 스칼라배로써 
+
+    $$ \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j $$
+
+    의 표기가 나온 것이다.
+
+  - 예시 
+
+    $f(x, y, z) = xy ^{2} + 2x ^{2} + z ^{3}$ 일 때 $\nabla f(1, 2, 3)$ 를 구해보자. 
+
+    먼저 기울기 벡터는 
+
+    $$ \nabla f = \bigg < \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \bigg > $$
+
+    에서 
+
+    $$ = \bigg < y ^{2}+4x, 2xy, 3z ^{2} \bigg > $$
+
+    이다. 그러므로 
+
+    $$ \therefore \nabla f(1, 2, 3) = \big < 8, 4, 27\big > $$
+
+- 기울기 벡터 방향의 단위벡터 : 기울기 벡터 $\nabla f$ 방향으로의 단위벡터는
+
+    $$ \frac{\nabla f}{|\nabla f|} $$
+
+    이다.
+
+  - 증명
+
+    임의의 벡터 $v$ 방향으로의 단위벡터는
+
+    $$ \frac{v}{|v|} $$
+
+    이므로 기울기 벡터 $\nabla f$ 방향으로의 단위벡터는
+
+    $$ \therefore \frac{\nabla f}{|\nabla f|} $$
+
+    이다.
+
+  - 방향도함수에서 최대증가율을 의미하는 기울기벡터를 사용하여 함수가 최대로 변화는 방향을 알고 싶다고 하자.
+  
+    그런데 기울기벡터에는 그것이 단위벡터라는 보장이 없다. 하지만 방향도함수는 단위 벡터를 사용해야 한다. 
+    
+    따라서 기울기 벡터를 단위벡터로 만들어주는 정규화과정을 거쳐야 한다. 
+  
+  - 예시 
+
+    삼변수함수 $f(x,y,z) = x ^{2}yz$ 의 점 $(1, 1, 1)$ 에서 변화율이 최대인 방향을 가르키는 단위벡터 $\overrightarrow{u}$ 를 구하자. 
+
+    먼저 기울기 벡터 
+
+    $$ \nabla f(x, y, z) = \big < 2xyz, x ^{2}z, x ^{2}y \big > $$
+
+    에서
+
+    $$ \therefore \overrightarrow{u} = \frac{\nabla f(1, 1, 1)}{|\nabla f(1, 1, 1)|} = \frac{\big < 2, 1, 1 \big > }{\bigg |\big < 2, 1, 1 \big > \bigg |} = \frac{\big <2, 1, 1 \big >}{\sqrt[]{6}} $$
+
+    이다. 
+
+- 방향도함수의 계산 : 이변수 함수 $z = f(x, y)$ 가 $x, y$ 에 관한 편도함수를 각각 가지면 임의의 단위벡터 $u = \big < \cos \theta, \sin \theta \big >$ 에 대하여 
+
+  $$ D _{u}f(x, y) = f_x(x, y) \cos \theta + f_y(x, y) \sin \theta $$
+
+  또는 
+
+  $$ D _{u}f(x, y) = \frac{\partial f}{\partial x} \cos \theta + \frac{\partial f}{\partial y} \sin \theta $$
+
+  이다. 
+
+  - 이 관계식은 기울기벡터의 정의 
+
+    $$ \text{grad} f = \nabla f =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > $$
+
+    와 단위벡터 $u = \big < \cos \theta, \sin \theta \big >$ 의 내적을 이용하여 더욱 간단하게 
+
+    $$ D _{u}f(x, y) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > \cdot u $$
+
+    으로 표현할 수 있다. 
+
+  - 증명 
+
+    함수 $g(t) = f(x + t \cos \theta, y + t \sin \theta)$ 를 정의하자. 그리고 편의상 $A = x + t \cos \theta, B = y + t \sin \theta$ 로 두자. 그러면 
+
+    $$ g(t) = f(A, B) $$
+
+    이다. 이제 함수 $g(t)$ 를 미분하자. $g(t)$ 는 일독립변수 $t$ 와 이매개변수 $A, B$ 에 대한 합성함수이므로 
+
+    $$ g'(t) = \frac{d}{dt}f(A, B) = \frac{\partial }{\partial A}f(A, B) \frac{dA}{dt} + \frac{\partial }{\partial B}f(A,B)\frac{dB}{dt} $$
+
+    이다. 그런데 
+
+    $$ \frac{dA}{dt} = \frac{d}{dt}(x+t \cos \theta) = \cos \theta$$
+    
+    $$ \frac{dB}{dt} = \frac{d}{dt}(y+t \sin \theta) = \sin \theta$$
+
+    이므로 
+
+    $$ g'(t) = \frac{\partial }{\partial A}f(A, B) \cos \theta + \frac{\partial }{\partial B}f(A,B) \sin \theta $$
+
+    이다. 이때 
+
+    $$ t = 0 \to A = x, B = y $$
+
+    이므로 
+
+    $$ g'(0) = \frac{\partial }{\partial x}f(x, y) \cos \theta + \frac{\partial }{\partial y}f(x,y) \sin \theta $$ (1)
+
+    이다. 
+
+    한편 도함수의 정의에 의한 $g(t)$ 의 도함수
+
+    $$ g'(t) = \lim_{h \to 0} \frac{g(t+h)-g(t)}{h} $$
+
+    에서
+
+    $$ g'(0) = \lim_{h \to 0} \frac{g(h)-g(0)}{h} = \lim_{h \to 0} \frac{f(x + h \cos \theta, y + h \sin \theta)-f(x , y)}{h} $$
+
+    인데 방향도함수의 정의
+    
+    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} $$
+
+    에 의하여 
+
+    $$ g'(0) = D _{u}f(x, y) $$
+
+    이다. 그러므로 (1) 에 의하여 최종적으로 
+
+    $$ \therefore D _{u}f(x, y) = \frac{\partial }{\partial x}f(x, y) \cos \theta + \frac{\partial }{\partial y}f(x,y) \sin \theta $$
+
+    이다. 
+    
+  - 예시 
+
+    이변수 함수 $f(x, y) = x ^{2}y$ 의 점 $(3, 4)$ 에서 벡터 $u = \bigg < \dfrac{1}{\sqrt[]{5}}, \dfrac{2}{\sqrt[]{5}}\bigg >$ 방향으로의 방향도함수는
+
+    $$ f_x(3, 4) = 2xy \bigg  | _{(3, 4)} = 24 $$ 
+    
+    $$ f_y(3, 4) =x ^{2} \bigg  | _{(3, 4)} = 9 $$
+
+    에서 
+
+    $$ \therefore  D_u f(3, 4) = \nabla f \cdot u \bigg | _{(3, 4)} = \frac{24}{\sqrt[]{5}} + \frac{18}{\sqrt[]{5}} = \frac{42}{\sqrt[]{5}} $$
+
+    이다. 
+
+- 삼변수 함수의 방향도함수 : 삼변수 함수 $f(x, y, z)$ 에 대하여 단위벡터 $u = \big < \cos \alpha , \cos \beta , \cos \gamma  \big >$ (단, $\cos ^{2}\alpha +\cos ^{2}\beta +\cos ^{2}\gamma =1$) 방향으로의 방향도함수는
 
   $$ D _{u}f(x,y,z) = \lim_{h \to 0} \frac{f(x+h \cos \alpha , y + h \cos \beta , z + h \cos \gamma )-f(x,y,z)}{h} $$
 
@@ -685,9 +839,21 @@
 
     $$ \Delta x = h \cos \alpha , \Delta y = y + h \cos \beta , \Delta z= z + h \cos \gamma $$
 
-- 방향도함수의 계산 
+- 삼변수 함수의 기울기 벡터(gradient vector) : 스칼라 함수 $w = f(x, y, z)$ 의 기울기는 벡터함수 
 
-**구체화 필요** 
+  $$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j + \frac{\partial f}{\partial z} k=  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\bigg > $$
+
+  또는 
+
+  $$ \nabla f(x, y, z) = \bigg < f_x(x, y, z), f_y(x, y, z), f_z(x, y, z) \bigg > $$
+
+  로써 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
+
+- 삼변수 함수의 방향도함수 계산 : 삼변수 함수 $w = f(x, y, z)$ 가 $x, y, z$ 에 관한 편도함수를 각각 가지면 임의의 단위벡터 $u$ 에 대하여 
+
+  $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\bigg > \cdot u $$
+
+  이다.
 
 # 선형화
 
