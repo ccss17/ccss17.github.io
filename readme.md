@@ -118,7 +118,11 @@
     
   ######  내적(inner product) 또는 스칼라곱(dot product),  내적의 성질,  벡터의 크기(length) 또는 노름(norm),  벡터의 크기의 성질,  단위벡터(unit vector),  정규화(normalizatoin),  두 벡터 $u, v$ 사이의 거리(distance),  벡터 $u, v$ 의 직교(orthogonal),  직교집합(orthogonal set)
 
-# 생각 메모
-- [기초](https://ccss17.github.io/all.html)
-- [생각](https://ccss17.github.io/all2.html)
-- [역사](https://ccss17.github.io/all3.html)
+#### 생각 메모
+
+###### - [기초](https://ccss17.github.io/all.html)
+
+###### - [생각](https://ccss17.github.io/all2.html)
+
+###### - [역사](https://ccss17.github.io/all3.html)
+
