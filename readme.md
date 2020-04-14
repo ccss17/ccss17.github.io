@@ -108,11 +108,11 @@
 
 - [벡터공간](https://ccss17.github.io/la4.html)
     
-  ######  벡터 공간(vector space),  부분 공간(subspaces),  영 부분 공간(zero subspace),  영 공간(null space),  열 공간(colum space),  선형 변환(linear transformation),  선형 변환 $T$ 의 핵(kernel),  선형 변환 $T$ 의 치역(range),  선형 독립(linearly independent),  선형 종속(linearly dependent),  기저(basis),  **Theorem 5** 생성집합이론(Spanning Set Theorem),  유일 표현 정리,  기저 $B$ 에 대한 $x$ 의 좌표,  동형사상(isomorphism),  좌표 사상,  기저 $B$ 보다 많은 벡터를 가지는 집합에 대한 선형종속성,  벡터 공간 $V$ 의 기저들의 벡터 개수 통일성,  유한 차원(finite-dimensional),  차원(dimension),  무한 차원(finite-dimensional),  유한 차원 벡터 공간의 부분 공간의 차원에 대한 정리,  기저 정리,  영공간의 차원,  열공간의 차원,  행공간(row space),  계수(rank),  계수 정리
+  ######  벡터 공간(vector space),  부분 공간(subspaces),  영 부분 공간(zero subspace),  영 공간(null space),  열 공간(colum space),  선형변환(linear transformation),  선형변환 $T$ 의 핵(kernel),  선형변환 $T$ 의 치역(range),  선형 독립(linearly independent),  선형 종속(linearly dependent),  기저(basis),  **Theorem 5** 생성집합이론(Spanning Set Theorem),  유일 표현 정리,  기저 $B$ 에 대한 $x$ 의 좌표,  동형사상(isomorphism),  좌표 사상,  기저 $B$ 보다 많은 벡터를 가지는 집합에 대한 선형종속성,  벡터 공간 $V$ 의 기저들의 벡터 개수 통일성,  유한 차원(finite-dimensional),  차원(dimension),  무한 차원(finite-dimensional),  유한 차원 벡터 공간의 부분 공간의 차원에 대한 정리,  기저 정리,  영공간의 차원,  열공간의 차원,  행공간(row space),  계수(rank),  계수 정리
 
 - [고유벡터](https://ccss17.github.io/la5.html)
     
-  ######  고유벡터(eigenvector),  고윳값(eigenvalue),  고유공간(eigenspace)
+  ######  고유벡터(eigenvector),  고윳값(eigenvalue),  고유벡터와 고유값의 기하학적 의미,  고유공간(eigenspace),  고유방정식(eigenvalue equation)
 
 - [직교](https://ccss17.github.io/la6.html)
     
