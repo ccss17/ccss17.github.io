@@ -27,10 +27,13 @@ def sections(title, file, get):
 def update():
     theorems = f'''\
 # 생각 메모
-{sections('기초적인 것에 관련된 메모', 'all', get_theorem)}
-{sections('생각에 관련된 메모', 'all2', get_theorem)}
-{sections('역사에 관련된 메모', 'all3', get_theorem)}
+- [기초](https://ccss17.github.io/all.html)
+- [생각](https://ccss17.github.io/all2.html)
+- [역사](https://ccss17.github.io/all3.html)
 '''
+# {sections('기초적인 것에 관련된 메모', 'all', get_theorem)}
+# {sections('생각에 관련된 메모', 'all2', get_theorem)}
+# {sections('역사에 관련된 메모', 'all3', get_theorem)}
     math_sections = f'''\
 {START_SECTION}
 {sections('논리학', 'logic', get_definitions)}
