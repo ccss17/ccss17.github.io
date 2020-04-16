@@ -630,15 +630,11 @@
 
   $$ \textcolor{#000066}{\boxed{\text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg >}}  $$
 
-  $$ \colorbox{#99FF99}{\textcolor{#000066}{\text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg >}} $$
+  $$ \colorbox{#99FF99}{\textcolor{#000000}{\boxed{\text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg >}}} $$
 
-  $$ \colorbox{#99FFFF}{\textcolor{#000066}{\text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg >}} $$
+  $$ \colorbox{#99FFFF}{\textcolor{#000066}{\boxed{\text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg >}}} $$
 
-  $$ \colorbox{#CCFFFF}{\textcolor{#000066}{\text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg >}} $$
-
-  $$ \colorbox{#CCFFFF}{\text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg >} $$
-
-  $$ \colorbox{#CCFFE5}{\text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg >} $$
+  $$ \colorbox{#CCFFFF}{ \boxed{\text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg >}} $$
 
   또는 
 
