@@ -49,7 +49,8 @@ def update():
 {sections('해석학 메모', 'anal', get_definitions)}
 {sections('삼각 함수 메모', 'trig', get_definitions)}
 {sections('함수 메모', 'function', get_definitions)}
-{sections('확률,통계 메모', 'prop', get_definitions)}
+{sections('확률 메모', 'prop', get_definitions)}
+{sections('통계 메모', 'stat', get_definitions)}
 
 ## 미적분 메모
 {sections('극한 메모', 'calculus', get_definitions)}

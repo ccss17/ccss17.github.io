@@ -58,9 +58,13 @@
     
   ######  함수의 그래프,  직선의 방정식,  원의 방정식,  점의 평행이동,  도형의 평행이동,  대칭,  점의 대칭이동,  도형의 대칭이동,  항등함수,  상수함수,  합성함수(composite function),  역함수(inverse function),  양함수(explicit function),  음함수(implicit function),  초월함수(transcendental function),  다항함수(polynomial function),  함수의 최대값,  함수의 최소값,  홀함수(기함수, odd function),  짝함수(우함수, even function),  매개변수 방정식(parameter equation),  유리함수(rational function),  유리함수의 그래프,  무리함수,  무리함수의 그래프,  지수함수,  지수방정식(exponential equation),  지수부등식(exponential inequality),  로그함수,  로그방정식(logarithm equation),  로그부등식(logarithm inequality),  가우스 함수,  주기함수,  뉴턴의 다항식 보간법(polynomial interpolation),  시그모이드 함수(sigmoid function),  표준 시그모이드 함수
 
-- [확률,통계 메모](https://ccss17.github.io/prop.html)
+- [확률 메모](https://ccss17.github.io/prop.html)
     
-  ######  자료(data, 데이터),  정보(information),  지식(knowledge),  통계학,  평균,  이산수학(discrete mathematics),  시행(experiment),  사건(event),  독립사건(independent),  종속사건(dependent),  경우의 수,  합의 법칙,  곱의 법칙,  계승(factorial),  순열(비복원추출, permutation),  중복순열(복원추출),  조합(combination),  확률,  확률의 덧셈,  확률의 곱,  변량,  계급,  도수,  도수분포표,  히스토그램,  상대도수,  편차,  분산,  표준편차
+  ######  이산수학(discrete mathematics),  시행(experiment),  표본공간(sample space),  사건(event),  $\backsim$ 사건,  근원사건,  전사건,  공사건,  경우의 수,  합사건(sum event),  곱사건(product event),  배반사건,  여사건(complementary event),  합의 법칙,  곱의 법칙,  계승(factorial),  순열(비복원추출, permutation),  원순열,  중복순열(복원추출),  같은 것이 있는 순열,  조합(combination),  중복조합,  이항정리(binomial theorem),  이항계수,  이항계수의 성질,  확률(probability),  사건의 경우의 수,  수학적 확률(mathematical probability),  통계적 확률,  기하학적 확률,  확률의 성질,  확률의 덧셈,  확률의 곱,  확률의 덧셈정리(addition theorem of probability),  여사건의 확률,  조건부확률(conditional probability),  확률의 곱셈정리,  독립사건(independent),  종속사건(dependent),  독립시행(independent trials),  전확률 공식(total probability),  베이즈 정리(bayes theorem)
+
+- [통계 메모](https://ccss17.github.io/stat.html)
+    
+  ######  통계학(statistics),  자료(data, 데이터),  질적 자료(qualitative data, 정성적 자료),  양적 자료(quantitative data, 정량적 자료),  정보(information),  지식(knowledge),  평균,  변량,  계급,  도수,  도수분포표,  히스토그램,  상대도수,  편차,  분산,  표준편차,  확률변수(random variable),  확률분포,  이산확률변수,  확률질량함수,  확률질량함수의 성질,  기댓값(평균),  분산,  표준편차,  평균,  분산,  표준편차
 
 ## 미적분 메모
 
