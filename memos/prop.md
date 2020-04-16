@@ -332,14 +332,16 @@
 
     을 얻는다.
 
-- $\colorbox{#99FFFF}{\text{원순열(circular permutation)}}$ 원순열(circular permutation) : 서로 다른 $n$ 개를 원형으로 배열하는 것이다. 
+- $\colorbox{#99FFFF}{\text{원순열(circular permutation)}}$ : 서로 다른 $n$ 개를 원형으로 배열하는 경우의 수
 
-  - 즉 원순열은 
-    
-    $$ \colorbox{#99FF99}{\textcolor{#000000}{\boxed{ \frac{{}_{n}P_{n}}{n} = \frac{n!}{n} = (n-1)! }}}$$ 
+- $\boxed{\text{원순열(circular permutation)}}$ : 서로 다른 $n$ 개를 원형으로 배열하는 경우의 수
 
-    이다. 
-  
+  $$ \colorbox{#99FF99}{\textcolor{#000000}{\boxed{ \frac{{}_{n}P_{n}}{n} = \frac{n!}{n} = (n-1)! }}}$$ 
+
+  $$ \boxed{ \frac{{}_{n}P_{n}}{n} = \frac{n!}{n} = (n-1)! }$$ 
+
+  이다. 
+
   - 증명 
 
     **구체화 필요**
