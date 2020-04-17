@@ -4,20 +4,24 @@
 
 # 고윳값과 고유 벡터
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 고유벡터(eigenvector) : $n \times n$ 행렬 $A$ 의 고유 벡터는 어떤 스칼라 $\lambda$ 에 대하여 
 
   $$ Ax = \lambda x $$
 
   를 만족하는 영이 아닌 벡터 $x$ 이다. 
 
+  </blockquote>
+
   - 고유벡터의 정의 $Ax = \lambda x$ 를 $Ax = \lambda E x$ 로 쓰면
 
     $$ (A- \lambda  E) x = 0 $$
-    
+
     을 얻는다. 여기에서 $(A- \lambda  E)$ 의 역행렬이 존재하면 양변에 곱하여
 
     $$ (A- \lambda  E) ^{-1}(A- \lambda  E) x = (A- \lambda  E)^{-1} 0 $$
-    
+
     $$ x = (A- \lambda  E)^{-1} 0 = 0 $$
 
     이 된다. 그러나 $x = 0$ 은 $x$ 가 영이 아닌 벡터라는 정의의 조건에 모순되므로 $(A- \lambda  E)$ 가 역행렬을 갖는다는 가정이 틀렸다는 것을 알 수 있다. 
@@ -27,7 +31,7 @@
     $$ \det (A - \lambda E) = 0 $$
 
     이어야 한다. 
-  
+
   - 예시 
 
     $$ A = \begin{bmatrix} 1&6\\5&2 \end{bmatrix}, u = \begin{bmatrix} 6\\-5 \end{bmatrix}, v = \begin{bmatrix} 3\\-2 \end{bmatrix} $$
@@ -39,14 +43,18 @@
     $$ Av = \begin{bmatrix} 1&6\\5&2 \end{bmatrix}\begin{bmatrix} 3\\-2 \end{bmatrix} = \begin{bmatrix} -9\\11 \end{bmatrix} \neq \lambda \begin{bmatrix} 3\\-2 \end{bmatrix} $$
 
     따라서 $u$ 는 $-4$ 에 대응하는 고유벡터이지만
-    
+
     $v$ 는 $Av$ 가 $v$ 의 스칼라배가 아니므로 고유 벡터가 아니다.
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 고윳값(eigenvalue) : $n \times n$ 행렬 $A$ 에서
 
   $$ Ax = \lambda x $$
 
   의 영이 아닌 해, 즉 자명하지 않은(nontrivial) 해인 벡터 $x$ 가 존재할 때 스칼라 $\lambda$ 를 고윳값이라 한다.
+
+  </blockquote>
 
   - 예시 
 
@@ -74,9 +82,13 @@
 
   > 또 고유값은 어떤 데이터가 특징을 얼마나 잘 설명할 수 있는지 가늠할 때도 사용된다. 기여율이라는 것은 각 주성분, 즉 고유벡터에 대응되는 고유값을 전체 고유값들의 총합을 나눈것으로 주성분이 데이터를 얼마나 잘 설명할 수 있는지 평가할 때 사용된다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 고유벡터와 고유값의 기하학적 의미 : 어떤 행렬에 벡터를 곱하는 선형변환 연산을 했을 때 일반적으로 벡터의 방향이 바뀌지만 
 
   고유벡터로 선형변환을 하면 방향이 바뀌지 않거나 역방향이 된다.
+
+  </blockquote>
 
   - 따라서 고유값은 선형변환 전과 후의 벡터 길이의 비율로 볼 수 있다. 
 
@@ -90,11 +102,15 @@
 
     그러나 벡터 $u, w$ 가 벡터 $c$ 로 선형변환되었다면 방향이 바뀌었으므로 고유벡터가 사용되지 않은 것이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 고유공간(eigenspace) : 행렬 $A$ 를 고윳값에 대하여 정리한 행렬방정식
 
   $$ (A - \lambda I)x = 0 $$
 
   의 해들의 집합은 행렬 $A - \lambda I$ 의 영공간인데, 이 집합을 $\lambda$ 에 대응하는 $A$ 의 고유공간이라 한다. 
+
+  </blockquote>
 
   - 예시 
 
@@ -134,11 +150,15 @@
 
     이 고유공간이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 고유방정식(eigenvalue equation) : 행렬 $A$ 에 대한 $\lambda$ 의 방정식
 
   $$ \det (A - \lambda E) = 0 $$
 
   을 고유방정식이라 한다. 
+
+  </blockquote>
 
   - 예시 
 
@@ -219,3 +239,4 @@
     $$ \therefore x \in  \text{Span}\bigg \{\begin{bmatrix} -4\\1 \end{bmatrix}\bigg \} $$
 
     이다.
+

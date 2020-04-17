@@ -9,7 +9,8 @@ def make_def_boxed(file):
     with open(fname, encoding='utf-8') as f:
         content = f.read()
     
-    wfname = 'memos/'+file+'_test.md'
+    wfname = 'memos/'+file+'.md'
+    # wfname = 'memos/'+file+'_test.md'
     mode = False
     with open(wfname, 'w', encoding='utf-8') as f:
         for i, line in enumerate(content.split('\n')):
@@ -45,7 +46,7 @@ if __name__ == '__main__':
     # make_def_boxed('calculus4')
     # make_def_boxed('calculus5')
     # make_def_boxed('vector')
-    make_def_boxed('calculus6')
+    # make_def_boxed('calculus6')
     # make_def_boxed('la')
     # make_def_boxed('la2')
     # make_def_boxed('la3')

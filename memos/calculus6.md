@@ -4,21 +4,29 @@
 
 # 이변수 함수의 극한 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 이변수 함수의 극한 : 함수 $f(x, y)$ 에서 $(x, y)$ 이 $(x_0, y_0)$ 에 한없이 다가갈 때 함수값이 극한값 $L$ 로 다가가는 것은 
 
   임의의 양수 $\epsilon > 0$ 에 대하여 적당한 양수 $\delta > 0$ 가 존재하여 정의역의 모든 $(x, y)$ 에 대하여 다음을 만족하는 것이다. 
 
     $$ \boxed{ 0 < \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} < \delta \Rightarrow  |f(x, y) - L| < \epsilon } $$
 
+  </blockquote>
+
   - 기호로 다음과 같이 표현한다. 
 
     $$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L $$
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 이변수 함수의 극한의 성질 : 실수 $L, M, k$ 에 대하여 
 
   $$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L\\ \lim_{(x, y) \to (x_0, y_0)} g(x, y) = M $$
 
   일 때 다음이 성립한다. 
+
+  </blockquote>
 
   - 합의 법칙 
 
@@ -52,6 +60,8 @@
 
     (생략)
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 이변수 함수의 연속 : 이변수 함수 $f(x, y)$ 가 점 $(x_0, y_0)$ 에서 연속이라는 것은 다음 조건과 동치이다.
 
   1. $f$ 가 $(x_0, y_0)$ 에서 정의되어 있다. 
@@ -60,15 +70,25 @@
 
   3. $\lim_{(x, y) \to (x_0, y_0)} f(x, y) = f(x_0, y_0)$
 
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 이변수 합성함수의 연속 : 이변수 함수 $f$ 가 $(x_0, y_0)$ 에서 연속이고 일변수 함수 $g$ 가 $x$ 축 상의 점 $f(x_0, y_0)$ 에서 연속일 때,
 
   $h(x, y) = g(f(x, y))$ 로 정의된 이변수 합성함수 $h = g \circ f$ 는 연속이다. 
+
+  </blockquote>
 
   - 예시 
 
     합성함수 $e ^{x-y}, \cos \frac{xy}{x^2+1}, \ln (1+x ^{2}y ^{2})$ 는 개구간 $(-\infty , \infty)$ 에서 연속이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 다변수 함수의 극한과 연속 : 이변수 함수의 극한과 연속의 정의와 비슷하다.
+
+  </blockquote>
 
   - 예시 
 
@@ -82,15 +102,23 @@
 
 실제로 많은 함수들이 하나의 독립 변수에 의존하는 것이 아니라 두 개 이상의 독립 변수에 종속되기 때문에 많은 경우 일변수 함수에 대한 미분을 다변수 함수로 확장한 미분이 필요하다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 상미분(ordinary derivative) : 변수가 하나만 있는 함수에 대한 미분이다.
 
+  </blockquote>
+
   - 지금까지 해오던 미분이 바로 상미분이다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - $x$ 에 대한 편미분계수 : 이변수 함수 $z = f(x, y)$ 의 점 $(x_0, y_0)$ 에서의 $x$ 에 대한 편미분계수는 
 
   $$ \frac{\partial f}{\partial x} \bigg | _{(x_0, y_0)} = \frac{d}{dx}f(x, y_0) \bigg | _{x=x_0} =  \lim_{h \to 0} \frac{f(x_0 + h, y_0)-f(x_0,y_0)}{h} $$
 
   이다. 
+
+  </blockquote>
 
   - 기하학적 의미 
 
@@ -114,11 +142,17 @@
 
     그때의 기울기는 곧 접선의 기울기가 되는 것이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - $y$ 에 대한 편미분계수 : 이변수 함수 $z = f(x, y)$ 의 점 $(x_0, y_0)$ 에서의 $y$ 에 대한 편미분계수는 
 
   $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \bigg | _{y=y_0} =  \lim_{h \to 0} \frac{f(x_0, y_0+h)-f(x_0,y_0)}{h} $$
 
   이다. 
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 편도함수(partial derivative) : 이변수 함수 $z = f(x, y)$ 의 편도함수는 다음과 같이 정의된다.
 
@@ -134,6 +168,8 @@
 
       이다. 
 
+  </blockquote>
+
   - 이변수 함수 $f(x, y)$ 의 편미분할 변수를 제외한 나머지 변수를 상수로 취급하여 미분하면 된다.
 
   - 변수 $x$ 에 대한 다변수 함수 $f(x, y, \dots)$ 의 편미분을 
@@ -147,9 +183,9 @@
       $$ f'_x(x, y, \dots), \frac{\partial f}{\partial x}(x, y, \dots) $$
 
       로 표기할 수도 있다. 
-  
+
   - 예시 
-  
+
     이변수 함수 $f(x) = x ^{3}+x ^{2}y ^{3}-2y ^{2}$ 일 때 
 
     $$ f_x(x, y) = 3x ^{2} + 2xy ^{3} \Rightarrow f_x(2, 1) = 16 $$
@@ -169,7 +205,7 @@
     $$ V = \frac{\pi r ^{2}h}{3} $$
 
     으로써 두 독립변수 $r, h$ 에 의존하는 종속변수이다.
-    
+
     이 $V$ 를 다변수 함수로 보고 $r$ 에 대해 편미분하면
 
     $$ \frac{\partial V}{\partial r} = \frac{2 \pi rh}{3} $$
@@ -179,6 +215,8 @@
     $$ \frac{\partial V}{\partial h} = \frac{\pi r ^{2}}{3} $$
 
     이다.
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 편도함수의 기하학적 의미 : 이변수 함수 $f(x, y)$ 에 대하여 편도함수의 기하학적 의미는 각각 다음과 같다. 
 
@@ -195,7 +233,7 @@
       - 그 교선 중 하나가 왼쪽 그래프의 점 $P$ 가 상주하고 있는 곡선이다.
 
         - 만약 그 곡선보다 좀 더 오른쪽에서 곡면을 자르면 더 짧은 교선을 얻을 수 있고 더 왼쪽에서 곡면을 자르면 더 긴 교선을 얻을 수 있을 것이다. 
-      
+
       - 이 교선에서 어떤 점 $P$ 를 잡아서 접선을 그었을 때 그 접선의 기울기가 편미분계수이다. 
 
       - 그리고 그 기울기들에 대한 함수가 $x$ 에 대한 편도함수이다. 
@@ -209,20 +247,26 @@
       - 위 그림의 오른쪽의 그래프의 곡면에서 $xy$ 평면에서 수직으로, $y$ 축과 평행하게 곡면을 자르게 되면 여러 개의 교선을 얻을 수 있다. 
 
       - 그 교선 중 하나가 왼쪽 그래프의 점 $P$ 가 상주하고 있는 곡선이다.
-      
+
       - 이 교선에서 어떤 점 $P$ 를 잡아서 접선을 그었을 때 그 접선의 기울기가 편미분계수이다. 
 
       - 그리고 그 기울기들에 대한 함수가 $y$ 에 대한 편도함수이다. 
 
+  </blockquote>
+
   - 그러면 $x$ 축 방향으로 평행하지도 않고 $y$ 축 방향으로 평행하지도 않고 
-  
+
     $x$ 축으로부터 $60 \degree$ 벌어진 단위 벡터 $u$ 의 방향으로 교선을 잘라서 기울기를 구하는 상황도 생각할 수 있다.
 
     이것을 단위벡터 $u$ 의 방향도함수라 한다. 
 
 ## 여러가지 편도함수 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 이계 편도함수(second-order partial derivative) : 이변수 함수 $f(x, y)$ 를 두번 미분한 것으로 다음 $4$ 가지 경우로 정의된다. 
+
+  </blockquote>
 
   - $x$ 에 대하여 두번 미분할 경우 
 
@@ -235,7 +279,7 @@
   - $y$ 에 대하여 미분하고 $x$ 에 대하여 미분할 경우
 
     $$ \frac{\partial ^{2} f}{\partial x \partial y } = \frac{\partial }{\partial x}(\frac{\partial f}{\partial y}) = (f_y)_x = f _{yx} $$
-  
+
   - 예시 
 
     이변수 함수 $f(x, y) = x \cos y + y e ^{x}$ 의 이계 편도함수를 각각 구해보자.
@@ -256,7 +300,11 @@
 
     $$ \frac{\partial ^{2}f}{\partial y ^{2}} = \frac{\partial }{\partial y}(\frac{\partial f}{\partial y}) = -x \cos y $$
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 혼합 편미분(mixed derivative) : 이변수 함수 $f(x, y)$ 에 대하여 서로 다른 두 변수에 대한 편미분이다.
+
+  </blockquote>
 
   - 이계 편도함수에서 $x$ 에 대하여 미분하고 $y$ 에 대하여 미분한 경우
 
@@ -268,25 +316,35 @@
 
     를 뜻한다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 혼합 편미분 정리(mixed derivative theorem) : 이변수 함수 $f(x, y)$ 와 그 편미분 $f_x, f_y, f _{xy}, f _{yx}$ 가 점 $(a, b)$ 를 포함하는 개구간에서 정의되어 있고 점 $(a, b)$ 에서 연속이라면 
 
   $$ f _{xy}(a, b) = f _{yx}(a, b) $$
 
   이다.
 
+  </blockquote>
+
   - 예시 
-  
+
     이계 편도함수의 예시에서 이변수 함수 $f(x, y) = x \cos y + y e ^{x}$ 의 혼합 편미분의 변수 순서가 다른 두 결과
-  
+
     $$ \frac{\partial ^{2}f}{\partial y \partial x} = \frac{\partial }{\partial y}(\frac{\partial f}{\partial x}) = -\sin y + e ^{x} $$
 
     $$ \frac{\partial ^{2}f}{\partial x \partial y} = \frac{\partial }{\partial x}(\frac{\partial f}{\partial y}) = -\sin y + e ^{x} $$
 
     가 동일한 것은 우연의 일치가 아니다. 혼합 편미분 정리에 의하여 이 둘이 같은 것이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 이변수 함수의 미분가능성 : 
 
 **구체화 필요**
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 이변수 합성함수의 도함수(chain rule) 또는 일독립변수와 이매개변수에 대한 도함수 : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t)$ 가 미분가능하면
 
@@ -300,14 +358,16 @@
 
   이다. 
 
+  </blockquote>
+
   - 증명 
 
     (생략)**구체화 필요**
-  
+
   - 예시 
 
     $t$ 에 대한 함수 $x = \cos t, y = \sin t$ 에 에 대한 이변수 합성함수 $w = xy$ 의 도함수를 구해보자.
-    
+
     $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w}{\partial y}\frac{dy}{dt} $$
 
     에서 
@@ -334,6 +394,8 @@
 
     이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule) : 삼변수 함수 $w = f(x, y, z)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t), z = z(t)$ 가 미분가능하면
 
   $t$ 에 대한 삼변수 합성함수 $w = f(x(t), y(t), z(t))$ 도 미분가능하며 그 도함수는 
@@ -342,10 +404,12 @@
 
   이다. 
 
+  </blockquote>
+
   - 증명 
 
     (생략)**구체화 필요**
-  
+
   - 예시 
 
     다음과 같이 함수가 주어졌을 때 
@@ -372,6 +436,8 @@
 
     이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule) : 삼변수 함수 $w = f(x, y, z)$ 가 미분가능하고 $r, s$ 에 대한 함수 $x = x(r, s), y = y(r, s), z = z(r, s)$ 가 미분가능하면,
 
   이 $4$ 가지 함수는 모두 미분 가능하고 $w$ 는 $r$ 과 $s$ 에 대하여 각각 다음의 편도함수를 가진다. 
@@ -380,12 +446,14 @@
 
   $$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  s} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  s} + \frac{\partial w}{\partial z}\frac{\partial  z}{\partial  s}$$
 
+  </blockquote>
+
   - 증명 
 
     첫번째 편도함수는 $s$ 를 고정시킴으로써 $r$ 을 일독립변수와 삼매개변수에 대한 함성함수의 도함수의 $t$ 처럼 다룸으로써 얻을 수 있다. 
 
     두번째 편도함수도 $r$ 를 고정시킴으로써 $s$ 을 일독립변수와 삼매개변수에 대한 함성함수의 도함수의 $t$ 처럼 다룸으로써 얻을 수 있다. 
-  
+
   - 예시 
 
     $$ w = x + 2y + z ^{2}, x = \frac{r}{s}, y = r ^{2} + \ln s, z = 2r $$
@@ -401,7 +469,7 @@
     $$ = \frac{1}{s} + 4r + (4r)(2) = \frac{1}{s} + 12r $$
 
     이다. 
-    
+
     그리고
 
     $$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  s} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  s} + \frac{\partial w}{\partial z}\frac{\partial  z}{\partial  s}$$
@@ -412,6 +480,8 @@
 
     이다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule) : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $r, s$ 에 대한 함수 $x = x(r, s), y = y(r, s)$ 가 미분가능하면,
 
   이 $3$ 가지 함수는 모두 미분 가능하고 $w$ 는 $r$ 과 $s$ 에 대하여 각각 다음의 편도함수를 가진다. 
@@ -419,6 +489,10 @@
   $$ \frac{\partial  w}{\partial  r} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  r} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  r} $$
 
   $$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  s} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  s} $$
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
 
@@ -436,9 +510,15 @@
 
   $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}$$
 
+  </blockquote>
+
 # 기울기 벡터와 방향도함수
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 스칼라장(scalar field) : 공간 상의 모든 점에 스칼라가 대응되어 있는 분포이다.
+
+  </blockquote>
 
   - 유클리드 공간 $\Re ^{n}$ 에서 스칼라장은 
 
@@ -456,6 +536,8 @@
 
     위 그림은 스칼라장의 일종으로 색채에 대응하는 숫자를 색으로 표현한 것이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
 
   함수 $f$ 의 벡터 $u$ 방향으로의 순간변화율로써
@@ -463,6 +545,8 @@
   $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h}  $$
 
   이다. 
+
+  </blockquote>
 
   - 위 정의는 다음 그림과 같이
 
@@ -479,7 +563,7 @@
     $$ \cos \bigg  (\frac{\pi }{2} - \theta \bigg ) = \sin \theta $$
 
     를 사용하여 간단하게 만든 것이다. 
-  
+
   - 증명
 
     위 그래프의 점 $P, Q$ 의 거리를 $h$ 라 하고 두 점을 $xy$ 평면으로 내려 떨어뜨리면
@@ -489,7 +573,7 @@
     https://www.youtube.com/watch?v=ehrGmxqQsjo&t=98s
 
     이와 같이 되는 것을 생각하자. 노란선이 단위 벡터 $u$ 의 방향을 나타내며 지금 우리의 목적은 이 방향으로의 함수 $f$ 의 변화율을 구하는 것이다. 
-    
+
     이제 기존의 도함수의 정의
 
     $$ \lim_{h \to 0} \frac{f(x + \Delta x, y + \Delta y )-f(x, y)}{h} $$
@@ -533,7 +617,7 @@
     $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \alpha  , y + h \cos  \beta  )-f(x, y)}{h} $$
 
     라고 하기도 한다. 
-  
+
   - $\dfrac{\partial f}{\partial x}$ 의 기하학적 의미를 기억하자. 
 
     ![2v](https://user-images.githubusercontent.com/16812446/78995906-63e0e400-7b7e-11ea-9f1e-76382bc9c548.jpg)
@@ -553,23 +637,23 @@
     $$ \frac{\partial f}{\partial x} $$
 
     의 의미였고 이것을 $x$ 에 관한 편도함수라고 불렀다. 
-  
+
     그런데 $\dfrac{\partial f}{\partial x}$ 을 벡터의 관점에서 표현하면 "함수 $f$ 의 표준 단위 벡터 $i$ 방향으로의 변화율" 이라고 표현 할 수 있다. 
 
     - 표준 단위 벡터 $i$ 는 $\big <1, 0, 0 \big >$ 이었고 이것은 $x$ 축 상의 단위벡터 였다.
-    
+
       그런데 $x$ 에 관한 편도함수는 곡면을 $x$ 축과 평행하도록 잘라서 교선을 얻어서 그 위의 기울기를 구하는 것과 같다. 
 
       또한 편도함수는 도함수의 일종이고 도함수는 함수의 변화율을 나타내는 것임을 기억하자.
 
       그렇다면 결론적으로 
-      
+
       $$\frac{\partial f}{\partial x}$$
 
       를 "$x$ 축과 평행하도록 교선을 만든다" 고 할 수 있고 
-      
+
       이것을 다시 "함수 $f$ 의 벡터 $i$ 방향으로의 변화율" 을 구한다고 표현할 수 있다. 
-  
+
     - 따라서 $\dfrac{\partial f}{\partial x}$ 을 또 다시 방향도함수의 정의에 따라서 "함수 $f$ 의 벡터 $i$ 방향의 방향도함수" 라고도 표현할 수 있다. 
 
       즉 함수 $f$ 의 $x$ 에 대한 편도함수는 방향도함수의 벡터 $i$ 방향으로의 아주 특수한 경우라고 할 수 있다. 
@@ -579,7 +663,7 @@
       표준 단위 벡터 $j$ 는 $\big <0, 1, 0 \big >$ 이었고 이것은 $y$ 축 상의 단위벡터 였다.
 
       즉 함수 $f$ 의 $y$ 에 대한 편도함수는 방향도함수의 벡터 $j$ 방향으로의 아주 특수한 경우라고 할 수 있다. 
-  
+
   - 예시 
 
     $\theta = 0$ 일 때, 즉 $u = i = \big < 1, 0\big >$ 일 때, 그러니까 단위벡터 $u$ 의 방향이 $x$ 축 일때,
@@ -597,9 +681,9 @@
     이것은 이변수 함수의 $x$ 에 대한 편도함수
 
     $$ \frac{\partial f}{\partial x} $$
-    
+
     의 정의와 같다.
-    
+
     그러므로 $x$ 에 대한 편도함수는 방향도함수의 매우 특수한 경우인 것이다. 
 
   - 예시 
@@ -619,9 +703,11 @@
     이것은 이변수 함수의 $x$ 에 대한 편도함수
 
     $$ \frac{\partial f}{\partial y} $$
-    
+
     의 정의와 같다.
-    
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 기울기 벡터(gradient vector) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
 
   $$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > $$
@@ -629,16 +715,17 @@
   또는 
 
   $$  \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > $$
-  
 
   로써 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
+
+  </blockquote>
 
   - 기울기 벡터는 함수의 증가율이 최대가 되는 방향을 가르키는 벡터이다.
 
     - 증명
 
       방향도함수는 한 지점에서 함수의 무수히 많은 방향으로의 순간변화율을 알려준다. 지금의 목표는 방향도함수 값이 최대가 되는 방향의 단위벡터를 찾는 것이다. 그러면 그 방향으로의 순간변화율이 함수를 가장 많이 변화시키는 방향이 된다. 
-      
+
       임의의 방향의 단위 벡터 $v$ 에 대한 이 방향도함수의 계산은 다음과 같았다.
 
       $$ D _{u}f (x, y) = \nabla f \cdot v $$
@@ -697,11 +784,15 @@
 
     $$ \therefore \nabla f(1, 2, 3) = \big < 8, 4, 27\big > $$
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 기울기 벡터 방향의 단위벡터 : 기울기 벡터 $\nabla f$ 방향으로의 단위벡터는
 
     $$ \frac{\nabla f}{|\nabla f|} $$
 
     이다.
+
+  </blockquote>
 
   - 증명
 
@@ -716,11 +807,11 @@
     이다.
 
   - 방향도함수에서 최대증가율을 의미하는 기울기벡터를 사용하여 함수가 최대로 변화는 방향을 알고 싶다고 하자.
-  
+
     그런데 기울기벡터에는 그것이 단위벡터라는 보장이 없다. 하지만 방향도함수는 단위 벡터를 사용해야 한다. 
-    
+
     따라서 기울기 벡터를 단위벡터로 만들어주는 정규화과정을 거쳐야 한다. 
-  
+
   - 예시 
 
     삼변수함수 $f(x,y,z) = x ^{2}yz$ 의 점 $(1, 1, 1)$ 에서 변화율이 최대인 방향을 가르키는 단위벡터 $\overrightarrow{u}$ 를 구하자. 
@@ -735,6 +826,8 @@
 
     이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 방향도함수의 계산 : 이변수 함수 $z = f(x, y)$ 가 $x, y$ 에 관한 편도함수를 각각 가지면 임의의 단위벡터 $u = \big < \cos \theta, \sin \theta \big >$ 에 대하여 
 
   $$ D _{u}f(x, y) = f_x(x, y) \cos \theta + f_y(x, y) \sin \theta $$
@@ -744,6 +837,8 @@
   $$ D _{u}f(x, y) = \frac{\partial f}{\partial x} \cos \theta + \frac{\partial f}{\partial y} \sin \theta $$
 
   이다. 
+
+  </blockquote>
 
   - 이 관계식은 기울기벡터의 정의 
 
@@ -768,7 +863,7 @@
     이다. 그런데 
 
     $$ \frac{dA}{dt} = \frac{d}{dt}(x+t \cos \theta) = \cos \theta$$
-    
+
     $$ \frac{dB}{dt} = \frac{d}{dt}(y+t \sin \theta) = \sin \theta$$
 
     이므로 
@@ -794,7 +889,7 @@
     $$ g'(0) = \lim_{h \to 0} \frac{g(h)-g(0)}{h} = \lim_{h \to 0} \frac{f(x + h \cos \theta, y + h \sin \theta)-f(x , y)}{h} $$
 
     인데 방향도함수의 정의
-    
+
     $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} $$
 
     에 의하여 
@@ -806,13 +901,13 @@
     $$ \therefore D _{u}f(x, y) = \frac{\partial }{\partial x}f(x, y) \cos \theta + \frac{\partial }{\partial y}f(x,y) \sin \theta $$
 
     이다. 
-    
+
   - 예시 
 
     이변수 함수 $f(x, y) = x ^{2}y$ 의 점 $(3, 4)$ 에서 벡터 $u = \bigg < \dfrac{1}{\sqrt[]{5}}, \dfrac{2}{\sqrt[]{5}}\bigg >$ 방향으로의 방향도함수는
 
     $$ f_x(3, 4) = 2xy \bigg  | _{(3, 4)} = 24 $$ 
-    
+
     $$ f_y(3, 4) =x ^{2} \bigg  | _{(3, 4)} = 9 $$
 
     에서 
@@ -821,24 +916,29 @@
 
     이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 삼변수 함수의 방향도함수 : 삼변수 함수 $f(x, y, z)$ 에 대하여 단위벡터 $u = \big < \cos \alpha , \cos \beta , \cos \gamma  \big >$ (단, $\cos ^{2}\alpha +\cos ^{2}\beta +\cos ^{2}\gamma =1$) 방향으로의 방향도함수는
 
   $$ D _{u}f(x,y,z) = \lim_{h \to 0} \frac{f(x+h \cos \alpha , y + h \cos \beta , z + h \cos \gamma )-f(x,y,z)}{h} $$
 
   이다. 
 
+  </blockquote>
+
   - 이때 $\alpha$ 는 단위벡터 $u$ 가 $x$ 축과 이루는 각,
-  
+
     $\beta$ 는 단위벡터 $u$ 가 $y$ 축과 이루는 각,
-    
+
     $\gamma$ 는 단위벡터 $u$ 가 $z$ 축과 이루는 각이다.
 
   - $\cos ^{2}\alpha +\cos ^{2}\beta +\cos ^{2}\gamma =1$ 의 조건은 단위벡터 $u$ 의 길이 $|u|$ 가 $1$ 임을 보장한다. 
 
-
   - 즉 $x, y, z$ 의 증분을 각각 다음과 같이 정의한 것이다. 
 
     $$ \Delta x = h \cos \alpha , \Delta y = y + h \cos \beta , \Delta z= z + h \cos \gamma $$
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 삼변수 함수의 기울기 벡터(gradient vector) : 스칼라 함수 $w = f(x, y, z)$ 의 기울기는 벡터함수 
 
@@ -850,19 +950,29 @@
 
   로써 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
 
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 삼변수 함수의 방향도함수 계산 : 삼변수 함수 $w = f(x, y, z)$ 가 $x, y, z$ 에 관한 편도함수를 각각 가지면 임의의 단위벡터 $u$ 에 대하여 
 
   $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\bigg > \cdot u $$
 
   이다.
 
+  </blockquote>
+
 # 선형화
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 접선의 방정식
 
   $$ L(x) = f'(a)(x-a) + f(a) $$
 
   를 함수 $f$ 의 선형화라고 한다.
+
+  </blockquote>
 
   - 다음 그래프는 $y = x^2, y = 2x-1$ 이다.
 
@@ -885,12 +995,14 @@
     $$ L(x) = f'(a)(x-a) + f(a) $$
 
     을 구하는 것이라 할 수 있다. 
-  
+
   - 예시 
 
     $y = \sqrt[]{1+x}$ 을 $x = 0$ 에서 선형근사시켜보면 다음과 같다.
 
     $$ \sqrt[]{1+x} \approx 1 + \frac{x}{2} $$
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 표준 선형 근사(standard linear approximation) : 선형화의 정의에서 $x=a$ 에서 함수 $f$ 의 함수 $L$ 에 의한 근사
 
@@ -898,15 +1010,21 @@
 
   를 표준 선형 근사라한다.
 
+  </blockquote>
+
   - 이때 $x=a$ 를 근사의 중심이라 한다. 
 
 ## 미분 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 미분(differential) : $y = f(x)$ 를 미분가능한 함수이고 미분 $dx$ 가 독립변수일 때 미분 $dy$ 는 
 
   $$ dy = f'(x)dx $$
 
   이다. 
+
+  </blockquote>
 
   - 가끔 $dy = f'(x)dx$ 를 다음과 같이 미분 $f$ 로도 표현한다.
 
@@ -919,7 +1037,7 @@
     $$ df(\Delta x) = f'(a)\Delta x $$
 
     로 표현되는 선형근사함수이다. 
-  
+
   - 기하학적 의미 
 
     $x = a, dx = \Delta x$ 로 두자. $x$ 의 증분 $\Delta x$ 는 $x = a$ 에서 $x = a + \Delta x$ 의 거리
@@ -927,7 +1045,7 @@
     $$ \Delta x = (\Delta x + a) - (a) $$
 
     로 두자.
-    
+
     그러면 우선 $y$ 의 증분 
 
     $$ \Delta y = f(a + \Delta x) - f(a) $$
@@ -957,13 +1075,13 @@
     이다. 
 
     이것은 함수 $f$ 의 $x=a$ 에서 선형근사함수 $L(x)$ 의 변화가 $x = a$ 이고 $dx = \Delta x$ 일 때 $dy$ 과 정확히 일치한다는 것이다. 
-  
+
   - 예시 
 
     $y = x ^{5} + 37x$ 에서의 $dy$ 를 찾자. 
 
     $$ dy = (5x ^{4} + 37)dx $$
-  
+
   - 예시 
 
     합성함수 미분법(Chain Rule) 과 다른 미분법을 함께 사용할 수 있다. 
@@ -975,16 +1093,20 @@
     $$ d(2x) = (2x)'dx = 2dx $$
 
     이므로
-    
+
     $$ d (\tan 2x) = 2 \sec ^{2} 2x dx $$
 
     이다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 미분의 추정(estimating with differentials) : 함수 $f(x)$ 가 $x = a$ 에서 미분가능할 때 $x = a$ 의 근방 $x = a + dx$ 에서 함수값이 변하는 정도 $f(a + dx)$ 는 근사적으로
 
   $$ f(a + dx) \approx f(a) + dy $$
 
   이다. 
+
+  </blockquote>
 
   - $y$ 의 증분은 
 
@@ -1017,7 +1139,7 @@
     $$ dy = \frac{1}{3x ^{\frac{2}{3}}}dx $$
 
     이다. 
-    
+
     이때 $a = 8$ 로 둔다면 $7.97$ 을 $x = a$ 근방의 함수 $f$ 의 접선의 함수값으로 생각할 수 있다. 
 
     그렇다면 $dx = -0.03$ 으로 둘 때 $x = a$ 에서의 함수값 $f(7.97)$ 을 다음과 같이 근사시킬 수 있다. 
@@ -1042,17 +1164,27 @@
 
 ## 이변수 함수 선형화
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 접평면(tangent plane) : $3$ 차원 곡면의 한 접점에 존재하는 무수히 많은 접선들이 동시에 상주하고 있는 평면이다.
 
   ![index](https://user-images.githubusercontent.com/16812446/79077468-ec0ce800-7d3c-11ea-8d57-3c992ab66d6e.jpg)
 
+  </blockquote>
+
   - 위 그림과 같이 어떤 곡면에는 접선이 무수히 많고 그 접선들이 상주하는 평면이 곡면의 접평면이다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 법선벡터(normal vector) : 접평면에 직교하는 벡터이다.
 
   ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Surface_normal_illustration.svg/220px-Surface_normal_illustration.svg.png)
 
+  </blockquote>
+
   - 즉 법선벡터는 위 그림의 화살표 벡터와 같이 $3$ 차원 곡면의 한 접점에서의 모든 접선과 직교한다.
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 이변수 함수 선형화 또는 접평면(tangent plane) : $f$ 의 연속인 편도함수들이 존재할 때 점 $P(x_0, y_0, z_0)$ 에서 곡면 $z = f(x, y)$ 에 대한 접평면의 방정식은 
 
@@ -1061,17 +1193,22 @@
   또는 
 
   $$ L(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y - y_0)
+
   $$
 
   이고 이것은 이변수 함수 $f(x, y)$ 의 선형화이다. 
+
+  </blockquote>
 
   - 또한 점 $P(x_0, y_0, z_0)$ 근방에서 
 
     $$ f(x, y) \approx L(x, y) $$
 
     이 성립한다.
-    
+
     일변수 함수 $f$ 를 $x=a$ 에서 끝없이 확대했을 때 $x=a$ 에서 접선과 거의 똑같아지는 것과 같이 이변수 함수 $f$ 를 끝없이 확대하면 접평면의 방정식과 거의 똑같아지기 때문이다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 이변수 함수 미분 또는 전미분(total differential) : 점 $(x_0, y_0)$ 에서 점 $(x_0 + dx, y_0 + dy)$ 로 움직였을 때의 변화량 
 
@@ -1082,6 +1219,8 @@
   $$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
 
   을 함수 $f$ 의 전미분이라 한다. 
+
+  </blockquote>
 
   - $y = f(x, y)$ 가 미분가능한 함수이면 점 $(x_0, y_0)$ 에서 편미분계수가 존재한다. 이 점에서 조금 움직인 점 $(x_0+\Delta x, y_0+\Delta y)$ 를 생각할 수 있고 이때의 함수 $f$ 의 변화량
 
@@ -1104,7 +1243,7 @@
     $$ dx = \Delta x = x - x_0, dy = \Delta y = y - y_0 $$
 
     으로 정의한다.
-  
+
   - 편미분이 변수 하나에 대한 함수의 변화량을 생각했다면 전미분은 모든 변수에 대한 변화량에 따라 함수가 얼마나 변하는지를 측정한다. 
 
   - 예시 
@@ -1144,7 +1283,7 @@
     이며, 각 변수에 대한 전미분은 다음과 같다. 
 
     $$ dV = V_r(0.5, 2.5)dr + V_h(0.5,2.5)dh $$
-    
+
     $$ =(2 \pi rh)_{(0.5, 2.5)} dr + (\pi r ^{2})_{(0.5,2.5)}dh $$
 
     $$ = 2.5 \pi dr + 0.25 \pi dh $$
@@ -1154,3 +1293,4 @@
     높이 $h$ 의 단위 $1$ 변화는 전체 부피 $V$ 를 $0.25\pi$ 변하게 한다.
 
     이로보아 반지름이 변할 때 물탱크의 전체 부피가 훨씬 더 민감하게 변한다는 것을 알 수 있다. 
+

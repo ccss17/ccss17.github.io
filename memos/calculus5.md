@@ -4,6 +4,8 @@
 
 # 여러 가지 함수의 부정적분 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - $n$ 차 단항 함수 $y=x^n$ 의 부정적분 : $n \neq 1$ 인 실수일 때
 
   $$ \int_{}^{}x ^{n} dx = \frac{1}{n+1}x ^{n+1}+C $$
@@ -13,6 +15,8 @@
   $$ \int_{}^{} \frac{1}{x} dx = \ln |x| + C $$
 
   이다. 
+
+  </blockquote>
 
   - 증명 
 
@@ -29,20 +33,26 @@
     $$ \therefore \int_{}^{} \frac{1}{x} dx = \ln |x| + C $$
 
     이다. 
-  
+
   - 예시 
 
     $$ \int_{}^{}\frac{1}{x^2}dx = \int_{}^{}x ^{-2}dx = \frac{1}{-2+1}x ^{-2+1}+C = -\frac{1}{x}+C $$
 
     $$
+
     \int_{}^{}\sqrt[]{x}dx = \int_{}^{}x ^{\frac{1}{2}}dx = \frac{1}{\frac{1}{2}+1}x ^{}
+
     $$
 
 ## 지수함수의 부정적분
-  
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 지수함수 $y = e^x$ 의 부정적분 : 
 
   $$ \int_{}^{}e ^{x}dx=e ^{x}+C $$
+
+  </blockquote>
 
   - 증명 
 
@@ -51,14 +61,18 @@
     $$ \int_{}^{}e ^{x}dx=e ^{x}+C $$
 
     이다.
-  
+
   - 예시 
 
     $$ \int_{}^{}e ^{x+2}dx = \int_{}^{}e ^{2} \circ e ^{x}dx=e ^{2}\int_{}^{}e ^{x}dx = e ^{2} \circ e ^{x}+C = e ^{x+2}+C $$
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 지수함수 $y = a^x$ 의 부정적분 : 
 
   $$ \int_{}^{}a ^{x}dx= \frac{a ^{x}}{\ln a}+C $$
+
+  </blockquote>
 
   - 증명 
 
@@ -71,7 +85,7 @@
     $$ \int_{}^{}a ^{x}dx = \frac{a ^{x}}{\ln a}+C $$
 
     이다.
-  
+
   - 그런데 미분해서 $\ln x, \log_{a} x$ 가 나오는 식이 없으므로 이것들을 적분하면 어떤 식이 나오는지 알 수 없을 것만 같다. 그러나 부분적분법이라는 특수한 적분법으로 적분을 할 수 있게 되었다.
 
   - 예시 
@@ -79,7 +93,9 @@
     $$ \int_{}^{}3 ^{x-2}dx = \int_{}^{}3 ^{x} \circ 3 ^{-2}dx = \frac{1}{9}\int_{}^{}3 ^{x}dx = \frac{3 ^{x}}{9 \ln 3}+C = \frac{3 ^{x-2}}{\ln 3}+C $$
 
 ## 삼각함수의 부정적분
-  
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 삼각함수의 부정적분 : 
 
   $$ \int_{}^{}\sin xdx=-\cos x+C $$
@@ -93,6 +109,8 @@
   $$ \int_{}^{}\sec x \tan xdx=\sec x+C $$
 
   $$ \int_{}^{}\csc x \cot xdx=-\csc x+C $$
+
+  </blockquote>
 
   - 증명
 
@@ -115,14 +133,18 @@
   - 그런데 미분하여 $\tan x$ 가 나오는 식이 없기에 $\tan x$ 를 적분하면 어떤 식이 나오는지 알 수 없을 것 같다. 하지만 치환적분법이라는 특수한 적분법으로 적분을 할 수 있게 된다. 
 
     - $\cot x, \sec x, \csc x$ 의 적분도 치환적분법으로 구한다. 
-  
+
   - 예시 
 
     $$ \int_{}^{}(3 \sin x-\cos x)dx = -3 \cos x-\sin x+C $$
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 함수 $\tan x$ 의 부정적분 : 
 
   $$ \int_{}^{}\tan xdx=- \ln |\cos x|+C $$
+
+  </blockquote>
 
   - 증명 
 
@@ -140,24 +162,40 @@
 
     $$ \therefore \int_{}^{}\tan xdx = - \ln |\cos x|+C $$
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 함수 $\cot x$ 의 부정적분 : 
 
   $$ \int_{}^{}\cot xdx = \ln |\sin x| +C $$
 
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 함수 $\sec x$ 의 부정적분 : 
-  
+
   $$ \int_{}^{}\sec xdx = \ln |\sec x+\tan x|+C $$
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 함수 $\csc xdx$ 의 부정적분 :
 
   $$ \int_{}^{}\csc xdx = -\ln |\csc x+\cot x| $$
 
+  </blockquote>
+
 # 치환적분법 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 적분변수의 치환(역연쇄법칙, anti chain rule) : 적분변수 $x$ 를 새로운 변수 $t$ 로 바꾸는 것이다.
 
+  </blockquote>
+
   - 부연설명
-  
+
     함수 $f(x)$ 에서 변수 $x$ 를 다른 변수 $t$ 에 대한 미분가능한 함수 $x=g(t)$ 로 생각하면
 
     $$ f(x) = f(g(t)), \frac{dx}{dt} = g'(t) $$
@@ -175,13 +213,13 @@
     $$ \therefore \int_{}^{}f(x)dx = \int_{}^{}f(g(t))g'(t)dt $$ $$
 
     가 된다.
-  
+
     - 합성함수의 미분법, 즉 연쇄법칙에서 미분기호를 
 
       $$ \frac{dy}{dx} = \frac{dy}{dt} \circ \frac{dt}{dx} $$
 
       와 같이 분수처럼 계산할 수 있었다.
-    
+
     - $\int_{}^{}$ 안에서 $\frac{dt}{dt}$ 에 대한 곱하기, 약분, 결합법칙을 자유롭게 적용할 수 있다.
 
   - 증명 
@@ -200,7 +238,11 @@
 
     이다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 치환적분법(integration by substitution) : 적분변수의 치환을 이용하여 합성함수 형태의 적분식을 쉬운 적분식으로 변환하여 적분하는 방법이다. 
+
+  </blockquote>
 
   - 부연설명 
 
@@ -209,7 +251,7 @@
     $$ \int_{}^{}f(x)dx = \int_{}^{}f(g(t))g'(t)dt = F(g(t)) + C $$
 
     이다. 
-  
+
   - 예시 
 
     $$ \int_{}^{}(3x+2) ^{2}dx $$
@@ -236,14 +278,18 @@
 
 피적분함수의 형태에 따라 다음의 경우로 나누어 정의한다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 피적분함수가 $f(g(x))g'(x)$ 꼴인 경우 : 함수 $f(x)$ 의 한 부정적분이 $F(x)$ 이고 $g(x) = t$ 라고 하면
 
   $$ \int_{}^{}f(g(x))g'(x)dx = F(t)+C $$
 
   이다.
 
+  </blockquote>
+
   - 증명
-  
+
     $g(x) = t$ 로 놓으면 
 
     $$ g'(x) = \frac{dt}{dx} $$
@@ -253,7 +299,7 @@
     $$ \int_{}^{}f(g(x))g'(x)dx = \int_{}^{}f(t) \frac{dt}{dx} dx$$ 
 
     에서 $dx$ 를 약분하여
-    
+
     $$ =\int_{}^{}f(t)dt = F(t)+C=F(g(x))+C $$
 
     이다.
@@ -294,9 +340,13 @@
 
     이다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 피적분함수가 $\frac{f'(x)}{f(x)}$ 꼴인 경우 : 
 
   $$ \int_{}^{}\frac{f'(x)}{f(x)} = \ln |f(x)|+C $$
+
+  </blockquote>
 
   - 증명 
 
@@ -309,7 +359,7 @@
     $$ \int_{}^{}\frac{f'(x)}{f(x)}dx = \int_{}^{}\frac{1}{t}dt = \ln |t|+C = \ln |f(x)|+C $$
 
     이다. 
-  
+
   - 예시 
 
     $$ \int_{}^{}\frac{x^2}{x^3-4}dx $$
@@ -322,21 +372,33 @@
 
 피적분함수가 $\frac{f'(x)}{f(x)}$ 꼴이 아닌 유리함수의 부정적분은 분모, 분자의 차수에 따라 다음과 같이 구한다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - (분자의 차수) $<$ (분모의 차수) 이고 분모가 인수분해되는 경우 : 피적분함수를 부분분수로 변형하여 부정적분을 구한다.
 
 (**구체화 필요**)
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - (분자의 차수) $\geq$ (분모의 차수) 인 경우 : 분자를 분모로 나누어 몫과 나머지의 꼴로 나타내어 부정적분을 구한다.
 
 (**구체화 필요**)
 
+  </blockquote>
+
 ## 부분적분법 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 부분적분법(integration by parts) : 두 함수 $f(x),g(x)$ 가 미분가능할 때 
 
   $$ \int_{}^{}f(x)g'(x)dx = f(x)g(x)-\int_{}^{}f'(x)g(x)dx \Leftarrow \int_{}^{}uv'dx = uv-\int_{}^{}u'vdx $$
 
   을 활용하여 곱셈 꼴인 함수를 쉽게 적분하는 방법이다. 
+
+  </blockquote>
 
   - 적분상수를 생략한 것은 우변의 적분이 아직 완료되지 않았기 때문이다. 
 
@@ -359,7 +421,7 @@
     $$ \therefore  \int_{}^{}f(x)g'(x)dx = f(x)g(x) - \int_{}^{} f'(x)g(x)dx $$
 
     이다. 
-  
+
   - 예시 
 
     $y = x e ^{x}$ 의 부정적분은 $x, e^x$ 에 대한 미분으로도 구할 수 없고 치환적분법도 사용할 수 없다. 하지만 부분적분법을 사용하여 $f(x) = x, g'(x) = e^x$ 로 두면 $f'(x) = 1, g(x) = e^x$ 이므로 
@@ -376,14 +438,18 @@
 
     이다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 부분적분법의 활용
+
+  </blockquote>
 
   - 피적분함수가 두 함수의 곱의 꼴로 주어지고 치환적분법을 이용하기 어려운 경우 부분적분법을 고려한다.
 
     - 특히 상수도 함수로 함수로 취급할 수도 있다는 것을 알아야 한다. 
 
   - 미분하면 간단해지는 것을 $u = f(x)$, 적분하기 쉬운 것을 $v' = g'(x)$ 로 둔다.
-  
+
     - 보통 로그함수, 다항함수, 삼각함수, 지수함수 순으로 $f(x)$ 를 택하고 남은 함수를 $g'(x)$ 로 택한다. 
 
     - 예시 
@@ -420,9 +486,13 @@
 
       를 최대한 간단하게 할 수 있는 $u, v'$ 를 택하면 된다는 것이다. 그러므로 일반적으로 미분하면 간단해지는 것을 $u$ 로 두고 나머지 것들을 $v'$ 로 택한다. 또한 일반적으로 미분하면 간단해지는 함수의 우선순위는 로그함수, 다항함수, 삼각함수, 지수함수이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 자연로그함수 $\ln x$ 의 부정적분 : 
 
   $$ \int_{}^{}\ln xdx=x \ln x - x +C $$
+
+  </blockquote>
 
   - 증명 
 
@@ -442,9 +512,13 @@
 
     이다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 로그함수 $\log_{a} x$ 의 부정적분 : 
 
   $$ \int_{}^{}\log_{a}  xdx=x \ln x - x +C $$
+
+  </blockquote>
 
   - 증명 
 
@@ -466,11 +540,15 @@
 
 ## 치환적분법, 부분적분법으로의 정적분
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 치환적분법으로의 정적분 : 폐구간 $[a,b]$ 에서 연속인 함수 $f(x)$ 에 대하여 미분가능한 함수 $x=g(t)$ 의 도함수 $g'(t)$ 가 폐구간 $[\alpha, \beta]$ 에서 연속이고 $x=g(t)$ 가 적분 구간에서 일대일대응이며 $a= g(\alpha), b = g(\beta)$ 이면 
 
   $$ \int_{a}^{b}f(x)dx = \int_{\alpha }^{\beta }f(g(t))g'(t)dt $$
 
   이다.
+
+  </blockquote>
 
   - 증명 
 
@@ -479,7 +557,7 @@
     $$ \int_{a}^{b}f(x)dx = \bigg[F(x)\bigg]^{b} _{a} = F(b) - F(a) $$
 
     이다. 
-    
+
     한편 $x$ 를 $t$ 에 대하여 미분가능한 함수 $x=g(t)$ 로 치환하면 치환적분법에 의하여 
 
     $$ \int_{}^{}f(x)dx = \int_{}^{}f(g(t))g'(t)dx = F(g(t))+C $$
@@ -516,15 +594,19 @@
 
     이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 부분적분법으로의 정적분 : 폐구간 $[a,b]$ 에서 두 함수 $f(x), g(x)$ 가 미분가능하고 $f'(x), g'(x)$ 가 연속일 때 
 
   $$ \int_{a}^{b}f(x)g'(x)dx = \bigg[f(x)g(x)\bigg]^{b}_{a}-\int_{a}^{b}f'(x)g(x)dx $$
-  
+
   $$ \Leftrightarrow $$
-  
+
   $$ \int_{a}^{b}uv'dx = \bigg[uv\bigg]^{b}_{a}-\int_{a}^{b}u'vdx $$
 
   이다.
+
+  </blockquote>
 
   - 증명 
 
@@ -545,7 +627,7 @@
     $$ \therefore  \int_{a}^{b}f(x)g'(x)= \bigg[f(x)g(x)\bigg]^{b}_{a} - \int_{a}^{b} f'(x)g(x)dx $$
 
     이다.
-  
+
   - 예시 
 
     $$ \int_{0}^{1}xe ^{x}dx $$
@@ -566,17 +648,25 @@
 
 # 속도와 거리 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 정적분으로 구하는 속도 및 거리 
 
 **구체화 필요**
 
+  </blockquote>
+
 # 역함수의 부정적분과 정적분 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 역함수의 부정적분 : 함수 $f(x)$ 의 역함수 $y=f ^{-1}(x)$ 에 대하여 $f ^{-1}(x)$ 의 부정적분은 
 
   $$ \int_{}^{}f ^{-1}(x)dx = xf ^{-1}(x)-\int_{}^{}f(y)dy $$
 
   이다. 
+
+  </blockquote>
 
   - 증명 
 
@@ -604,13 +694,21 @@
 
     이다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 역함수의 정적분 : 
 
   **구체화 필요**
 
+  </blockquote>
+
 # 미분방정식
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 미분방정식(differential equation) : 함수와 그 도함수의 관계를 나타내는 방정식이다. 
+
+  </blockquote>
 
   - 예시 
 
@@ -619,7 +717,7 @@
   - 예시 
 
     $$ y' = xy ^{2}+2xy $$
-  
+
   - 예시 
 
     $$ \frac{f'(x)}{f(x)} = 1 $$

@@ -6,10 +6,14 @@
 
 ## 벡터 공간과 부분 공간
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 벡터 공간(vector space) : 벡터의 집합이다.
 
+  </blockquote>
+
   - 벡터 공간에는 벡터 덧셈과 벡터 곱셈이 정의되어 있다.
-  
+
   - 임의의 벡터 공간 $V$ 는 $V$ 에 포함된 모든 벡터 $u, v, w$ 와 상수 $c, d$ 에 대하여 다음 $10$ 가지 공리를 만족한다.
 
     - 덧셈에 대한 아벨군
@@ -29,7 +33,7 @@
     - 곱셈 결합법칙 : $c(du) = (cd)u$
 
     - 벡터 덧셈에 대한 분배법칙 : $c(u+v) = cu + cv$
-    
+
     - 스칼라배 덧셈에 대한 분배법칙 : $(c+d)u = cu + du$
 
     - 곱셈 항등원 : $1u = u$
@@ -37,8 +41,10 @@
   - 예시
 
     $n \geq 1$ 에서의 $\Re ^n$ 이 주요한 벡터 공간의 예시이다.
-    
+
     그래서 우리가 자주 다뤘던 $\Re ^2, \Re ^3$ 가 벡터 공간이었던 것이다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 부분 공간(subspaces) : 다음 $3$ 가지 성질을 만족하는 벡터 공간 $V$ 의 부분 집합 $H$ 이다.
 
@@ -52,11 +58,17 @@
 
       - $H$ 에 속한 모든 벡터 $u$ 와 스칼라 $c$ 에 대해서 벡터 $cv$ 는 $H$ 에 속한다.
 
+  </blockquote>
+
   - 이 성질은 벡터 공간 $V$ 의 부분공간 $H$ 가 그 자체로도 벡터 공간이 됨을 보장해준다. 
 
   - 역으로 모든 벡터공간은 자기 자신의 부분공간이거나 더 큰 벡터공간의 부분공간이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 영 부분 공간(zero subspace) : 벡터 공간 $V$ 에 속한 $0$벡터만으로 이루어진 집합이다. 
+
+  </blockquote>
 
   - $V$ 의 부분공간이다.
 
@@ -64,43 +76,67 @@
 
 ### 벡터들의 집합에 의해 생성되는 부분 공간
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - **Theorem 1** 만약 $v_1, \dots, v_p$ 들이 벡터 공간 $V$ 에 속한 벡터들이면 $Span\{v_1, \dots, v_p\}$ 는 $V$ 의 부분공간이다. 
 
+  </blockquote>
+
   - 선형결합(linear combination) 이란 벡터들에 스칼라를 곱한 후 더한 것이고,
-  
+
      $Span\{v_1, \dots, v_p\}$ 는 $v_1, \dots, v_p$ 들의 선형 결합으로 표현할 수 있는 벡터들의 집합이기 때문이다.
 
 ## 영 공간, 열 공간, 선형변환
 
 ### 행렬의 영 공간
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 영 공간(null space) : $m \times n$ 행렬 $A$ 의 영 공간 $Nul A$ 은 동차 방정식 $Ax=0$ 의 해들의 집합이다.
+
+  </blockquote>
 
   - $Nul A = \{x: \forall x \in \Re ^n, Ax = 0\}$
 
   - $Nul A$ 는 선형 변환 $x \mapsto Ax$ 를 통해서 $0$ 으로 보내지는 $\Re ^n$ 에 속한 $x$ 들의 집합니다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - **Theorem 2** $m \times n$ 행렬 $A$ 의 영 공간은 $\Re ^n$ 의 부분공간이다. $n$ 개의 미지수를 가지는 $m$ 개의 방정식인 $Ax = 0$ 의 모든 해의 집합은 $\Re ^n$ 의 부분집합이다. 
+
+  </blockquote>
 
 ### 행렬의 열 공간
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 열 공간(colum space) : $m \times n$ 행렬 $A$ 의 열 공간은 $A$ 의 열들의 선형 결합으로 만들 수 있는 벡터들의 집합이다.
+
+  </blockquote>
 
   - $Col A$ 로 표기한다. 
 
   - 행렬 $A$ 의 열들이 $a_1, \dots, a_n$ 일 때 다음과 같이 정의할 수 있다.
-  
+
     - $Col A = Span\{a_1, \dots, a_n\}$ 이다. 
 
   - $Ax$ 가 행렬 $A$ 의 열들의 선형결합이기 때문에 $Col A$ 에 속하는 벡터를 $Ax$ 로 표현할 수 있고, 이 관점에서 열 공간을 다음과 같이 정의할 수 있다.
-  
+
     - $Col A = \{ b : 어떤 x \in \Re ^n, b = Ax\}$ (단, $x$ 는 $\Re ^n$ 에 속한 임의의 벡터이다)
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - **Theorem 3** $m \times n$ 행렬 $A$ 의 열공간은 $\Re ^m$ 의 부분공간이다.
 
+  </blockquote>
+
 ### 선형 변환의 핵과 치역
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 선형변환(linear transformation) : 벡터 공간 $V$ 에서 벡터 공간 $W$ 로의 선형변환 $T$ 는 $V$ 에 속한 벡터를 $W$ 에 속한 벡터 $T(x)$ 로 할당하는 규칙이다.
+
+  </blockquote>
 
   - 그냥 단순히 벡터에 행렬을 곱해 또 다른 벡터로 만드는 함수라고 생각하면 된다. 
 
@@ -115,7 +151,7 @@
     - 이것이 선형결합을 보존한다는 것이다. 
 
       - 선형 결합이란 $T(u + v) = T(u) + T(v), T(ku) = kT(u)$ 를 뜻한다.
-  
+
   > 인공지능 알고리즘의 신경망에서 파라미터와 가중치를 곱한 다음 그 결과를 모아서 합산하는 과정을 선형 변환으로 볼 수 있다. 
 
   - 예시 
@@ -156,42 +192,54 @@
 
     물론 표준좌표계에서 $b$ 는 $(1, 5)$ 위치에 있다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 선형변환 $T$ 의 핵(kernel) : $T(u)=0$ 이 되는 $V$ 에 속한 벡터 $u$ 들의 집합이다. 
 
+  </blockquote>
+
   - 예시 
-  
+
     동차선형 미분방정식의 모든 해 집합은 선형 변환의 핵이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 선형변환 $T$ 의 치역(range) : $V$ 에 속한 어떤 $x$ 에 대하여 $W$ 에 속한 벡터 $T(x)$ 의 집합이다. 
+
+  </blockquote>
 
   - 만약 $T$ 가 선형 변환이면, 즉 행렬 $A$ 에 대하여 $T(x) = Ax$ 이면 $T$의 핵과 치역은 행렬 $A$ 의 영 공간($Nul A$)과 열 공간($Col A$) 가 된다.
 
   - 예시 
-  
+
     다음 예시는 미분이 선형 변환인 이유를 설명한다. 
-  
+
     $f$ 가 구간 $[a,b]$ 에서 미분가능하고 그 도함수가 연속일 때 이러한 성질을 만족하는 실수 함수 $f$ 로 구성된 벡터공간을 $V$ 라고 하자. $W$ 를 구간 $[a,b]$ 에서 연속인 함수들 $C[a,b]$ 들로 구성된 벡터공간이라 하자. 그리고 $D:V \to W$ 를 $V$ 에 속한 $f$ 를 $f'$ 로 보내는 변환이라 하자. 미적분학으로 다음 두 미분 법칙이 성립함을 증명할 수 있다. 
 
       $$ D(f+g)=D(f)+D(g) $$
 
       $$ D(cf) = cD(f) $$
-    
+
     즉, $D$ 는 선형변환이다. $D$ 의 핵은 $[a,b]$ 상에서 상수함수들의 집합이고 $D$ 의 치역은 $[a,b]$ 상에서 연속인 모든 함수들의 집합이다.
 
 ## 선형 독립 집합; 기저 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 선형 독립(linearly independent) : 다음 조건을 만족하는 벡터 공간 $V$ 에 속한 벡터들 $\{v_1, \dots, v_p\}$ 는 선형 독립이다.
 
   벡터 방정식
-  
+
     $$c_1v_1 + c_2v_2 + \dots + c_pv_p = 0$$(1)
 
   이 유일한 해로써 자명한 해($c_1=0, \dots, c_p=0$) 만을 가진다.
-  
+
+  </blockquote>
+
   - 예시
-  
+
     $\Re ^n$ 에서 벡터 $v$ 하나만 가진 집합은 $v \neq 0$ 일 때 선형 독립이다.
-  
+
   - 예시 
 
     $\Re ^{2}$ 의 두 벡터 
@@ -208,16 +256,20 @@
 
     이므로 두 벡터 $u, v$ 는 선형독립이다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 선형 종속(linearly dependent) : 선형 독립의 정의에서 방정식 (1) 이 자명한 해 이외의 해를 가지면 벡터집합 $[v_1, \dots, v_p]$ 은 선형 종속이다. 
+
+  </blockquote>
 
   - 이때 $v_1, \dots, v_p$ 는 선형종속관계(linearly dependent relation) 을 가진다고 말한다. 
 
   - 예시
-   
+
     하나의 벡터가 다른 벡터의 스칼라배라면 두 벡터는 선형종속이고 그 역도 성립한다. 
 
     영벡터를 포함하는 벡터집합은 선형종속이다. 
-  
+
   - 예시 
 
     $\Re ^{3}$ 의 벡터 
@@ -247,14 +299,20 @@
     에서 한 열에 $-1$ 을 곱하여 다른 열에 더하면 영벡터가 되므로 자명하지 않은 해를 가진다.
 
     따라서 이 열들은 선형종속이다. 
-  
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - **Theorem 4** $v_1 \neq 0$ 인 벡터집합 $\{v_1, \dots, v_p\}$ 이 선형종속이 되는 필요충분조건은 벡터 $v_j(j>1)$ 를 $v_1, \dots, v_{j-1}$  들의 선형결합으로 표현할 수 있는 것이다. 
+
+  </blockquote>
 
   - 예시 
 
     - $C[0,1]$ 를 $0 \leq t \leq 1$ 에서 연속인 함수들의 벡터 공간이라 하자. $C[0,1]$ 안에서 $\sin t$ 와 $\cos t$ 는 서로의 스칼라배가 아니기 때문에 $\{\sin t, \cos t\}$ 는 벡터공간 $C[0,1]$ 에서 선형독립이다. $\because [0,1]$ 에 속한 $t$ 에 대하여 $\cos t=c \sin t$ 를 만족하는 스칼라 $c$ 가 존재하지 않는다.
-  
+
     - 반면 임의의 실수 $t$ 에 대하여 $\sin 2t=2 \sin t \cos t$ 이기 때문에 $\{\sin t \cos t, \sin 2t\}$ 는 선형종속이다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 기저(basis) : $H$ 를 벡터 공간 $V$의 부분공간이라 할 때 다음 두 조건을 만족하는 벡터 집합 $\Beta = \{b_1, \dots, b_p\}$ 는 $H$ 의 기저이다.
 
@@ -262,25 +320,35 @@
 
   2. $\Beta$ 에 속한 벡터들에 의해 생성되는 부분공간이 $H$ 와 일치한다. 즉 $H = Span\{b_1, \dots, b_p\}$ 이 성립한다. 
 
+  </blockquote>
+
   - 예시
 
     - $e_1, \dots, e_n$ 을 $n \times n$ 단위 행렬 $I_n$ 의 열이라 하자. 집합 $\{e_1, \dots, e_n\}$ 은 $\Re ^n$ 의 표준 기저(standard basis) 라 한다.
 
 ### 형성집합정리
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - **Theorem 5** 생성집합이론(Spanning Set Theorem) : $S = \{v_1, \dots, v_p\}$ 를 $V$ 에 속한 집합이라 하고 $H=Span\{v_1,\dots,v_p\}$ 이라 하자.
 
   1. $v_k$ 같은 $S$ 에 속한 벡터들 중 하나가 $S$의 나머지 벡터들의 선형 결합이라면 $v_k$ 를 제외한 $S$ 로 부터 형성되는 집합은 $H$ 를 생성한다.
 
   2. $H \neq 0$ 이면 $S$ 의 어떤 부분 집합은 $H$ 의 기저이다.
-  
+
+  </blockquote>
+
 ## 좌표 시스템
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 유일 표현 정리 : $B = \{b_1, \dots, b_n\}$ 가 벡터 공간 $V$ 의 기저일 때, 
 
   $V$ 에 속한 모든 $x$ 에 대하여 다음 등식을 만족하는 상수 $c_1, \dots, c_n$ 이 유일하게 존재한다.
 
   $$ x = c_1b_1 + \dots+c_nb_n $$
+
+  </blockquote>
 
   - 증명 
 
@@ -304,18 +372,22 @@
 
     이다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 기저 $B$ 에 대한 $x$ 의 좌표 : $B = \{b_1, \dots, b_n\}$ 가 벡터 공간 $V$ 의 기저이고 $x$ 를 $V$ 에 속한 벡터라 할 때 
 
   기저 $B$ 에 대한 $x$ 의 좌표는 다음 식을 만족하는 상수 가중치 $c_1, \dots, c_n$ 이다.
 
   $$ x = c_1b_1 + \dots+c_nb_n $$
 
+  </blockquote>
+
   - 즉, $c_1, \dots, c_n$ 이 $x$ 의 $B$ 좌표이면 $\Re ^{n}$ 에 속한 벡터 
 
     $$ \big [  x \big ] _{B} = \begin{bmatrix} c_1\\\vdots \\c_n \end{bmatrix} $$
 
     는 $x$ 의 $B$ 에 대한 좌표벡터이다. 
-  
+
   - 예시 
 
     $\Re ^{2}$ 에 대한 기저 $B = \{b_1, b_2\}$ 에서
@@ -331,7 +403,7 @@
     $x$ 의 $B$ 좌표계는 $B$ 에 속한 벡터에서 $x$ 를 어떻게 구성하는지 알려주므로 $x$ 를 다음과 같이 구성할 수 있다. 
 
     $$ x = (-2) b_1 + 3 b_2 = (-2)\begin{bmatrix} 1\\0 \end{bmatrix}+3 \begin{bmatrix} 1\\2 \end{bmatrix} = \begin{bmatrix} 1\\6 \end{bmatrix} $$
-  
+
   - 예시 
 
     벡터 $x = \begin{bmatrix} 1\\5 \end{bmatrix}$ 는 
@@ -344,20 +416,28 @@
 
     $$ [x]_{B} =x $$
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 동형사상(isomorphism) : 벡터 공간 $V$ 에서 벡터 공간 $W$ 로의 일대일 선형 변환이다. 
 
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 좌표 사상 : 벡터 공간 $V$ 의 기저 $B = \{b_1, \dots, b_n\}$ 에 대하여 벡터 $x$ 를 $B$ 의 좌표로 변환하는 사상
-  
+
   $$ x \mapsto [x] _{B}$$
 
   이다.
+
+  </blockquote>
 
   - 기저 $B$ 에 대한 $x$ 의 좌표의 예시에서 벡터 $x$ 를 $B$ 에 대한 좌표로 변환하는 좌표 사상을 구체적으로 볼 수 있다. 
 
   - 좌표사상 $x \mapsto [x] _{B}$ 은 $V$ 로부터 $\Re ^{n}$ 으로의 일대일 선형 변환이다. 
 
     - 익숙하지 않은 벡터 공간 $V$ 를 익숙한 $\Re ^{n}$ 의 좌표로 연결시키기 때문이다. 
-  
+
   - 좌표사상은 $V$ 에서 $\Re ^{n}$ 로의 동형 사상의 중요한 예시이다.
 
     - 이로써 $n$ 개의 벡터로 이루어진 기저 $B$ 로 생성된 벡터 공간 $V$ 는 $\Re ^{n}$ 과 동형임을 알 수 있다. 
@@ -370,19 +450,35 @@
 
 ## 벡터 공간의 차원
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 기저 $B$ 보다 많은 벡터를 가지는 집합에 대한 선형종속성 : 벡터 공간 $V$ 가 기저 $B = \{b_1, \dots, b_n\}$ 을 가질 때
 
   $n$ 보다 더 많은 벡터를 가지는 $V$ 에 속한 어떤 집합도 선형 종속이다. 
+
+  </blockquote>
 
   - 증명 
 
     **구체화 필요** 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 벡터 공간 $V$ 의 기저들의 벡터 개수 통일성 : 벡터 공간 $V$ 의 어떤 기저가 $n$ 개의 벡터를 가지면 $V$ 내의 모든 기저가 $n$ 개의 벡터를 가진다. 
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 유한 차원(finite-dimensional) : 유한 개의 벡터로 이루어진 기저 $B$ 로 형성된 벡터 공간 $V$ 을 뜻한다.
 
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 차원(dimension) : 벡터 공간 $V$ 를 형성한 기저 $B$ 의 벡터의 원소의 개수이다.
+
+  </blockquote>
 
   - $\dim V$ 라고 표기한다.
 
@@ -395,7 +491,7 @@
     $$ \dim R ^{n} = n $$
 
     이다. 
-  
+
   - 예시 
 
     표준 다항식 기저 $\{1, t, t^2\}$ 는 
@@ -405,9 +501,9 @@
     임을 보여준다.
 
     일반적으로 $\dim P_n = n+1$ 이고
-    
+
     모든 다항식의 공간 $P$ 는 무한 차원이다. 
-  
+
   - 예시 
 
     $H$ 를 $H = Span \{v_1, v_2\}$ 로 정의하고 
@@ -424,7 +520,13 @@
 
     이다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 무한 차원(finite-dimensional) : 무한 개의 벡터로 이루어진 기저 $B$ 로 형성된 벡터 공간 $V$ 을 뜻한다.
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 유한 차원 벡터 공간의 부분 공간의 차원에 대한 정리 : $H$ 를 유한 차원 벡터 공간 $V$ 의 부분공간이라 하면 
 
@@ -432,33 +534,52 @@
 
   가 성립한다. 
 
+  </blockquote>
+
   - 증명 
 
     **구체화 필요** 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 기저 정리 : $p \geq 1$ 차원 벡터 공간 $V$ 에 대하여,
 
   $p$ 개의 원소를 가진 $V$ 안의 임의의 선형 독립 집합은 $V$ 에 대한 기저이다. 
 
+  </blockquote>
+
   - 증명 
 
     **구체화 필요** 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 영공간의 차원 : $Nul A$ 의 차원은 방정식 $Ax = 0$ 의 자유변수의 개수이다. 
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
 - 열공간의 차원 : $Col A$ 의 차원은 방정식 $Ax = 0$ 의 추축열의 개수이다. 
 
+  </blockquote>
+
 ## 계수
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 행공간(row space) : 행렬의 행벡터들의 선형결합으로 만들 수 있는 집합이다. 
+
+  </blockquote>
 
   - $Row A$ 로 표기하며 
 
     $$ Row A = Col A ^{T}
+
     $$
 
     이다. 
-  
+
   - 예시 
 
     행렬 
@@ -477,17 +598,25 @@
 
     이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 계수(rank) : 행렬 $A$ 의 계수는 $A$ 의 열 공간의 차원
 
   $\dim  Col A$
 
   이다.
 
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 계수 정리 : $m \times n$ 행렬 $A$ 에 대하여 
 
   $$ \text{rank} A + \dim \text{Nul} A = n $$
 
   이 성립한다.
+
+  </blockquote>
 
   - 증명 
 
@@ -498,3 +627,4 @@
 ## 4.8 차분 방정식으로의 응용
 
 ## 4.9 마르코프 연쇄
+

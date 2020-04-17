@@ -6,16 +6,20 @@
 
 ## 내적, 길이, 직교
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 내적(inner product) 또는 스칼라곱(dot product) : $\Re ^{n}$ 공간 상의 두 $n \times 1$ 행렬, 즉 두 벡터 $u, v$ 의 내적은 행렬곱
 
   $$ u ^{T}v $$
 
   이다. 
 
+  </blockquote>
+
   - $u ^{T}$ 는 $u$ 의 전치벡터로써 $1 \times n$ 행렬이 되므로 $n \times 1$ 행렬 $v$ 와 행렬곱 연산을 할 수 있다.
 
     - 또한 행렬곱연산을 했을 시 $1 \times 1$ 행렬이 되며
-    
+
       이것을 간단히 스칼라(단일 실수) 로 표현하기도 한다.
 
   - $u \cdot v$ 로도 표기한다. 
@@ -32,6 +36,8 @@
 
     $$ v \cdot u = v ^{T}u = \begin{bmatrix} 3&2&-3\\ \end{bmatrix} \begin{bmatrix} 2\\-5\\-1 \end{bmatrix} = -1 $$
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 내적의 성질 : $\Re ^{n}$ 공간 상의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다.
 
   1. (교환법칙) $u \cdot v = v \cdot u$
@@ -42,17 +48,23 @@
 
   4. $u \cdot u \geq 0$, 그리고 $u \cdot u = 0 \Leftrightarrow u = 0$
 
+  </blockquote>
+
   - $2, 3$ 을 사용하여
 
     $$ (c_1u_1 + \dots + c_pu_p)\cdot w = c_1(u_1 \cdot w) + \dots + c_p(u_p \cdot w) $$
 
     을 연역할 수 있다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 벡터의 크기(length) 또는 노름(norm) : $\Re ^{n}$ 공간 상의 벡터 $v$ 가 성분 $v_1, \dots, v_n$ 을 가질 때 양수 스칼라
 
   $$ ||v|| = \sqrt[]{v \cdot v} = \sqrt[]{v_1^{2} + v_2 ^{2} + \dots + v_n ^{2}} $$
 
   를 벡터의 크기 또는 노름이라고 정의한다. 
+
+  </blockquote>
 
   - 직선 사이의 크기, 평면 사이의 크기, 공간 사이의 크기를 $n$ 차원에 적용되도록 일반화 한 것이다. 
 
@@ -66,7 +78,11 @@
 
     $\Re ^{3}$ 공간 상의 벡터, 즉 $3$ 차원 공간좌표에서도 마찬가지로 원점에서 $v$ 까지의 길이로 생각할 수 있다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 벡터의 크기의 성질 : 임의의 스칼라 $c$ 와 벡터 $v$ 에 대하여 벡터 $cv$ 의 크기는 $v$ 의 크기 $||v||$ 의 $|c|$ 배이다.
+
+  </blockquote>
 
   - 즉,
 
@@ -78,7 +94,11 @@
 
     이기 때문이다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 단위벡터(unit vector) : 크기가 $1$ 인 벡터이다.
+
+  </blockquote>
 
   - 예시 
 
@@ -86,7 +106,11 @@
 
     $\Re ^{3}$ 공간 상의 벡터 $u = \begin{bmatrix} 0\\1\\0 \end{bmatrix}$ 는 단위벡터이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 정규화(normalizatoin) : 벡터 $v$ 로부터 단위벡터 $u$ 를 얻는 과정이다.
+
+  </blockquote>
 
   - $0$ 이 아닌 벡터 $v$ 를 그 크기로 나누면 $v$ 방향을 향하는 단위벡터를 얻을 수 있다. 
 
@@ -118,11 +142,15 @@
 
     을 얻는다.
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 두 벡터 $u, v$ 사이의 거리(distance) : $\Re ^{n}$ 상의 두 벡터 $u, v$ 의 거리는 벡터 $u - v$ 의 크기
 
   $$ \text{dist}(u, v) = ||u - v|| $$
 
   이다. 
+
+  </blockquote>
 
   - $\Re ^{3}$ 공간 상의 두 벡터 $u = \begin{bmatrix} u_1\\u_2\\u_3 \end{bmatrix}, v = \begin{bmatrix} v_1\\v_2\\v_3 \end{bmatrix}$ 의 거리는 
 
@@ -148,6 +176,8 @@
 
     이다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 벡터 $u, v$ 의 직교(orthogonal) : $\Re ^{n}$ 상의 두 벡터 $u ,v$ 가
 
   $$ u \cdot v = 0 $$
@@ -157,6 +187,8 @@
   $$ ||u + v|| ^{2} = ||u|| ^{2} + ||v||^{2} $$
 
   를 만족하면 서로 직교한다.
+
+  </blockquote>
 
   - 증명 
 
@@ -194,6 +226,11 @@
 
   - 모든 벡터 $v$ 은 $0 ^{T}v = 0$ 이므로 $\Re ^{n}$ 에서 영벡터는 모든 벡터와 직교한다. 
 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+
 - 직교집합(orthogonal set) : $\Re ^{n}$ 공간의 벡터 집합 $S = \{u_1, \dots, u_p\}$ 에서 $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교집합이다. 
 
+  </blockquote>
+
   - 즉, 서로 다른 모든 두 벡터가 직교하는 집합이 직교집합이다. 
+
