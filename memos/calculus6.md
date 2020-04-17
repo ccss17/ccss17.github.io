@@ -4,11 +4,11 @@
 
 # 이변수 함수의 극한 
 
-- $\colorbox{#99FFFF}{\text{이변수 함수의 극한}}$ : 함수 $f(x, y)$ 에서 $(x, y)$ 이 $(x_0, y_0)$ 에 한없이 다가갈 때 함수값이 극한값 $L$ 로 다가가는 것은 
+- 이변수 함수의 극한 : 함수 $f(x, y)$ 에서 $(x, y)$ 이 $(x_0, y_0)$ 에 한없이 다가갈 때 함수값이 극한값 $L$ 로 다가가는 것은 
 
   임의의 양수 $\epsilon > 0$ 에 대하여 적당한 양수 $\delta > 0$ 가 존재하여 정의역의 모든 $(x, y)$ 에 대하여 다음을 만족하는 것이다. 
 
-    $$ \colorbox{#99FF99}{\textcolor{#000000}{\boxed{ 0 < \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} < \delta \Rightarrow  |f(x, y) - L| < \epsilon }}} $$
+    $$ \boxed{ 0 < \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} < \delta \Rightarrow  |f(x, y) - L| < \epsilon } $$
 
   - 기호로 다음과 같이 표현한다. 
 
@@ -22,7 +22,7 @@
 
   - 합의 법칙 
 
-    $$ \colorbox{#99FF99}{\textcolor{#000000}{\boxed{ \lim_{(x, y) \to (x_0, y_0)} (f(x, y)+g(x, y)) = L + M }}}$$
+    $$ \boxed{ \lim_{(x, y) \to (x_0, y_0)} (f(x, y)+g(x, y)) = L + M } $$
 
   - 차의 법칙 
 
@@ -460,7 +460,7 @@
 
   함수 $f$ 의 벡터 $u$ 방향으로의 순간변화율로써
 
-  $$ \colorbox{#99FF99}{\textcolor{#000000}{\boxed{ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} }}} $$
+  $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h}  $$
 
   이다. 
 
@@ -624,11 +624,11 @@
     
 - 기울기 벡터(gradient vector) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
 
-  $$ \colorbox{#99FF99}{\textcolor{#000000}{\boxed{\text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg >}}} $$
+  $$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > $$
 
   또는 
 
-  $$ \colorbox{#99FF99}{\textcolor{#000000}{\boxed{ \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > }}} $$
+  $$  \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > $$
   
 
   로써 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
