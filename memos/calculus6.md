@@ -10,7 +10,7 @@
 
   임의의 양수 $\epsilon > 0$ 에 대하여 적당한 양수 $\delta > 0$ 가 존재하여 정의역의 모든 $(x, y)$ 에 대하여 다음을 만족하는 것이다. 
 
-    $$ \boxed{ 0 < \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} < \delta \Rightarrow  |f(x, y) - L| < \epsilon } $$
+    $$  0 < \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} < \delta \Rightarrow  |f(x, y) - L| < \epsilon $$
 
   </blockquote>
 
@@ -30,7 +30,7 @@
 
   - 합의 법칙 
 
-    $$ \boxed{ \lim_{(x, y) \to (x_0, y_0)} (f(x, y)+g(x, y)) = L + M } $$
+    $$ \lim_{(x, y) \to (x_0, y_0)} (f(x, y)+g(x, y)) = L + M $$
 
   - 차의 법칙 
 
