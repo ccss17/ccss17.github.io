@@ -433,22 +433,15 @@
 - 삼각함수의 특수각 : 삼각함수는 특수한 각에 대하여 다음의 값을 갖는다. 
 
 |  |$0 \degree$ |$\frac{\pi }{6}(30 \degree)$|$\frac{\pi }{4}(45 \degree)$|$\frac{\pi }{3}(60 \degree)$|$\frac{\pi }{2}(90 \degree)$|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| $\sin \theta$  | $0$ | $\frac{1}{2}$ | $\frac{1}{\sqrt[]{2}}$ | $\frac{\sqrt[]{3}}{2}$ | $1$ |
+| $\cos \theta$  | $1$ | $\frac{\sqrt[]{3}}{2}$ | $\frac{1}{\sqrt[]{2}}$ | $\frac{1}{2}$ | $0$ |
+| $\tan \theta$  | $0$ | $\frac{1}{\sqrt[]{3}}$ | $1$ | $\sqrt[]{3}$ | $undefined, \pm \infty$ |
+| $\csc \theta$  | $undefined$ | $2$ | $\sqrt[]{2}$ | $\frac{2}{\sqrt[]{3}}$ | $1$ |
+| $\sec \theta$  | $1$ | $\frac{2}{\sqrt[]{3}}$ | $\sqrt[]{2}$ | $2$ | $undefined$ |
+| $\cot \theta$  | $undefined$ | $\sqrt[]{3}$ | $1$ | $\frac{1}{\sqrt[]{3}}$ | $0$ |
 
   </blockquote>
-
-|:---:|:---:|:---:|:---:|:---:|:---:|
-
-| $\sin \theta$  | $0$ | $\frac{1}{2}$ | $\frac{1}{\sqrt[]{2}}$ | $\frac{\sqrt[]{3}}{2}$ | $1$ |
-
-| $\cos \theta$  | $1$ | $\frac{\sqrt[]{3}}{2}$ | $\frac{1}{\sqrt[]{2}}$ | $\frac{1}{2}$ | $0$ |
-
-| $\tan \theta$  | $0$ | $\frac{1}{\sqrt[]{3}}$ | $1$ | $\sqrt[]{3}$ | $undefined, \pm \infty$ |
-
-| $\csc \theta$  | $undefined$ | $2$ | $\sqrt[]{2}$ | $\frac{2}{\sqrt[]{3}}$ | $1$ |
-
-| $\sec \theta$  | $1$ | $\frac{2}{\sqrt[]{3}}$ | $\sqrt[]{2}$ | $2$ | $undefined$ |
-
-| $\cot \theta$  | $undefined$ | $\sqrt[]{3}$ | $1$ | $\frac{1}{\sqrt[]{3}}$ | $0$ |
 
 ## 삼각함수의 성질 
 
@@ -458,7 +451,7 @@
 
   </blockquote>
 
-  - $\tan \theta = \frac{\sin \theta }{\cos \theta }$
+  - $\tan \theta = \dfrac{\sin \theta }{\cos \theta }$
 
   - $\sin ^2 \theta  + \cos ^2 \theta = 1$
 

@@ -88,17 +88,87 @@
 
   </blockquote>
 
+  - 예시 
+
+    학생들의 수학 점수를 숫자로 환원하여 나열한 것 
+
+    $$ 92, 84, 88, 45, 12, 29, 39, \dots $$
+
+    은 변량이다.
+
+  - 예시 
+
+    각 국가별 행복도를 수치로 환원하여 나열한 것
+
+    $$ 15, 82, 10, 99, 28, \dots $$
+
+    은 변량이다.
+
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 계급 : 변량을 일정한 간격으로 나눈 구간이다. 
 
   </blockquote>
 
+  - 예시 
+
+    학생들의 수학 점수를 나열한 변량 
+
+    $$ 92, 84, 88, 45, 12, 29, 39, \dots $$
+
+    에 대하여 
+    
+    $10$ 점대 $x_1$ 명,
+
+    $20$ 점대 $x_2$ 명,
+
+    $\vdots$
+
+    $80$ 점대 $x _{n-1}$ 명,
+
+    $90$ 점대 $x_n$ 명
+
+    와 같이 일정 구간으로 나눈 것은 계급이라 한다.
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 계급의 크기 : 변량을 나눈 간격이다.
+
+  </blockquote>
+
+  - 예시 
+
+    학생들의 수학 점수를 $0 \backsim 10$, $10 \backsim 20$ 와 같이 나누었다면 
+
+    계급의 크기는 $10$ 이다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 계급값 : 계급을 대표하는 값으로써 계급의 중앙값이다.
+
+  </blockquote>
+
+  - 예시 
+
+    학생들의 수학 점수를 $0 \backsim 10$, $10 \backsim 20$ 와 같이 나누었다면 
+
+    계급값은 각각 $5, 15$ 이다. 
+
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 도수 : 각 계급에 속하는 변량의 개수이다. 
 
   </blockquote>
+
+  - 예시 
+
+    학생들의 수학 점수를 나열한 변량 
+
+    $$ 92, 84, 88, 45, 12, 29, 39$$
+
+    에서 $80$ 점대($80 \backsim 99$) 계급에 속하는 변량의 개수는 $2$ 이므로 
+    
+    도수가 $2$ 이다.
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -108,14 +178,14 @@
 
   - 예시
 
+    학생들에게 책을 멀리 던지라고 시키고 그 거리를 측정하여 변량으로 만든 후 그 변량을 거리에 따라 계급으로 나누었다고 하자.
+    
+    그러면 그 계급에 속하는 도수를 표로 정리하면 다음과 같은 도수분포표가 된다. 
+
     | 거리(m) | 도수(명) |
-
-    |:--:|:--:|
-
-    | 0 ~ 10 | 2 |
-
-    | 10 ~ 20 | 6 |
-
+    |:--:|:--:| 
+    | 0 ~ 10 | 2 | 
+    | 10 ~ 20 | 6 | 
     | 20 ~ 30 | 10 |
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;

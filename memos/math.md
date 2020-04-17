@@ -116,12 +116,6 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
-
----
-
-  </blockquote>
-
 # 수학기초론
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;

@@ -2,9 +2,9 @@
 
 ##### 게시용으로 작성되지 않았습니다. 그래서 개인적으로만 사용하는 용어들 및 개인적인 생각들이 종종 포함되어 있습니다. 공부한 거를 안 까먹으려고 메모한 것들입니다. **http://github.com/ccss17/ccss17.github.io** 에서 관리합니다. 
 
----
+## [Tex 수학기호 메모](https://ccss17.github.io/tex.html)
 
-### [Tex 수학기호 메모](https://ccss17.github.io/tex.html)
+# 컴퓨터 관련 메모
 
 ### [Makefile 메모](https://ccss17.github.io/makefile.html)
 
@@ -12,27 +12,31 @@
 
 ### [docker 메모](https://ccss17.github.io/docker.html)
 
----
+# 철학 메모
 
 ### [인공지능 메모](https://ccss17.github.io/ai.html)
 
 ### [철학 메모](https://ccss17.github.io/philosophy.html)
 
-### [정신지도규칙 메모(데카르트)](https://ccss17.github.io/descartes.html)
+### [정신지도규칙/방법서설 메모(데카르트)](https://ccss17.github.io/descartes.html)
 
 # 수학 메모
+
+## 수학기초론
 
 - [논리학](https://ccss17.github.io/logic.html)
     
   ######  언어,  단어,  문장,  사고 전달의 최소단위,  명제(proposition),  조건(condition),  진리값,  진리집합(truth set),  추리,  추론(inference),  논증,  논리학,  논리학에서의 올바르다,  연역적으로 건전 타당한(sound and valid) 추론,  귀납적으로 건전한(inductively sound) 추론, 또는 귀납적으로 강한(inductively strong) 추론,  논리학의 기본원리,  비형식 논리학,  형식 논리학,  오류론,  설득력 있는 추론,  설득력 없는 추론,  형식적 오류,  비형식적 오류,  심리적 오류,  유추(analogy),  귀납(induction),  완전귀납,  불완전귀납,  귀납 추론의 종류,  인과적 귀납법,  연역(deduction),  연역논증 규칙,  정언 논리,  현대 논리학
 
-- [수학기초론:집합론](https://ccss17.github.io/math.html)
+- [집합론](https://ccss17.github.io/math.html)
     
   ######  자연대상,  수학,  수학,  정의(definition),  공리(axiom),  증명(proof),  정리(theorem),  수학기초론,  집합론,  집합,  원소,  집합 표현법,  집합의 분류,  부분집합,  서로 같은 집합,  진부분집합,  부분집합의 개수,  기수(cardinal number),  집합의 연산,  집합의 연산 법칙,  유한집합의 원소의 개수,  곱집합(product set)
 
-- [수학기초론:수리논리학](https://ccss17.github.io/mathmatical_logic.html)
+- [수리논리학](https://ccss17.github.io/mathmatical_logic.html)
     
   ######  수리 논리학,  명제와 조건의 부정,  명제 $p \to q$,  명제 $p \to q$ 의 부정,  조건부 명제의 참, 거짓,  명제의 역(converse),  명제의 대우(contraposition),  수학에서의 증명,  직접증명법,  간접증명법,  대우를 이용한 증명법(proof by contraposition),  귀류법,  수학적 귀납법(mathematical induction),  충분조건(sufficiency),  필요조건(necessity),  필요충분조건(necessity and sufficiency),  수리 논리학의 논증,  의미론적으로 타당한 논증,  구문론적으로 타당한 논증,  메타 정리
+
+## 산술과 대수학
 
 - [기초 산술 메모](https://ccss17.github.io/arithmetic.html)
     
@@ -46,6 +50,8 @@
     
   ######  수식,  미지수(변수, variable),  독립변수(independant variable),  종속변수(dependant variable),  방정식(equation),  불능,  항등식,  계수(coefficient),  항,  단항식(monomial),  다항식(polynomial),  차수(degree),  최고차항,  인수,  다항식의 연산에 대한 성질,  일차방정식(선형방정식, linear equation),  이차방정식,  다항방정식,  인수분해,  부등식(inequality),  절대부등식,  조건부등식,  유리식,  분수식,  가분수식,  진분수식,  다항식의 연산,  무리식,  연립방정식(simultaneous equation) 또는 방정식계(system of equations),  대수학의 기본 정리,  $k$중근,  대수학의 기본 정리의 따름 정리,  모델(model ; 모형),  수학적 모델링
 
+## 해석학
+
 - [해석학 메모](https://ccss17.github.io/anal.html)
     
   ######  해석학,  유클리드 공간,  좌표평면(직교 좌표계, rectangular coordinate system),  튜플(tuple),  순서쌍(2-튜플, ordered pair),  이항관계(binary relation),  구간(interval),  폐구간(닫힌구간, closed interval),  개구간(열린구간, open interval),  반열린구간(반개구간 또는 반폐구간, half open interval 또는 half closed interval),  수직선(number line),  좌표(coordinate),  좌표평면(coordinate plane),  절편,  사분면(quadrant),  좌표평면에서의 직선,  직선의 기울기,  거리,  유클리드 거리(Euclidean distance),  두 점의 거리의 의미,  수직선에서 두 점의 거리,  좌표평면에서 두 점의 거리,  공간 좌표,  3차원 좌표계,  대응,  함수(function) 또는 사상(mapping),  정의역(domain),  공역(codomain),  상(image) 또는 함수값,  원상(preimage) 또는 역상(inverse image),  치역(range),  단사함수(injection function) 또는 일대일 함수(one-to-one function),  전사함수(onto function, surjection function),  전단사 함수(bijection, bijective function) 또는 일대일 대응,  서로 같은 함수,  실변수 함수(function of a real variable),  실숫값 함수(real-valued function) 또는 실함수(real function),  복소변수 함수(function of a complex variable),  복소 함수(complex function),  다변수함수(multivariate function),  다변수 실함수,  다변수 복소함수
@@ -58,15 +64,21 @@
     
   ######  함수의 그래프,  직선의 방정식,  원의 방정식,  점의 평행이동,  도형의 평행이동,  대칭,  점의 대칭이동,  도형의 대칭이동,  항등함수,  상수함수,  합성함수(composite function),  역함수(inverse function),  양함수(explicit function),  음함수(implicit function),  초월함수(transcendental function),  다항함수(polynomial function),  함수의 최대값,  함수의 최소값,  홀함수(기함수, odd function),  짝함수(우함수, even function),  매개변수 방정식(parameter equation),  유리함수(rational function),  유리함수의 그래프,  무리함수,  무리함수의 그래프,  지수함수,  지수방정식(exponential equation),  지수부등식(exponential inequality),  로그함수,  로그방정식(logarithm equation),  로그부등식(logarithm inequality),  가우스 함수,  주기함수,  뉴턴의 다항식 보간법(polynomial interpolation),  시그모이드 함수(sigmoid function),  표준 시그모이드 함수
 
+## 확률과 통계
+
+- [조합 메모](https://ccss17.github.io/comb.html)
+    
+  ######  이산수학(discrete mathematics),  시행(experiment),  표본공간(sample space),  사건(event),  $\backsim$ 사건,  근원사건(fundamental event),  전사건(whole event),  공사건,  경우의 수,  합사건(sum event),  곱사건(product event),  배반사건,  여사건(complementary event),  합의 법칙(rule of sum),  곱의 법칙(rule of product),  합의 법칙의 역연산,  곱의 법칙의 역연산,  계승(factorial),  순열(비복원추출, permutation) ,  원순열(circular permutation),  중복순열(복원추출)(repeated permutation),  같은 것이 있는 순열,  조합(combination),  중복조합(repeated combination),  이항정리(binomial theorem),  이항계수,  전개식의 일반항,  삼항정리(trinomial theorem) ,  이항계수의 성질
+
 - [확률 메모](https://ccss17.github.io/prop.html)
     
-  ######  이산수학(discrete mathematics),  시행(experiment),  표본공간(sample space),  사건(event),  $\backsim$ 사건,  근원사건,  전사건,  공사건,  경우의 수,  합사건(sum event),  곱사건(product event),  배반사건,  여사건(complementary event),  합의 법칙(rule of sum),  곱의 법칙(rule of product),  합의 법칙의 역연산,  곱의 법칙의 역연산,  계승(factorial),  순열(비복원추출, permutation) ,  원순열(circular permutation),  중복순열(복원추출)(repeated permutation),  같은 것이 있는 순열,  조합(combination),  중복조합(repeated combination),  이항정리(binomial theorem),  이항계수,  전개식의 일반항,  삼항정리(trinomial theorem) ,  이항계수의 성질,  확률(probability),  사건의 경우의 수,  수학적 확률(mathematical probability),  통계적 확률,  기하학적 확률,  확률의 성질,  확률의 덧셈,  확률의 곱,  확률의 덧셈정리(addition theorem of probability),  여사건의 확률,  조건부확률(conditional probability),  확률의 곱셈정리,  독립사건(independent),  종속사건(dependent),  독립시행(independent trials),  전확률 공식(total probability),  베이즈 정리(bayes theorem)
+  ######  확률(probability),  사건의 경우의 수,  수학적 확률(mathematical probability),  통계적 확률,  큰 수의 법칙(law of large number),  기하학적 확률,  확률의 성질,  확률의 덧셈정리(addition theorem of probability),  확률의 곱,  확률의 덧셈정리(addition theorem of probability),  여사건의 확률,  조건부확률(conditional probability),  확률의 곱셈정리,  독립사건(independent),  종속사건(dependent),  독립시행(independent trials),  전확률 공식(total probability),  베이즈 정리(bayes theorem)
 
 - [통계 메모](https://ccss17.github.io/stat.html)
     
-  ######  통계학(statistics),  자료(data, 데이터),  질적 자료(qualitative data, 정성적 자료),  양적 자료(quantitative data, 정량적 자료),  정보(information),  지식(knowledge),  평균,  변량,  계급,  도수,  도수분포표,  히스토그램,  상대도수,  편차,  분산,  표준편차,  확률변수(random variable),  확률분포,  이산확률변수,  확률질량함수,  확률질량함수의 성질,  기댓값(평균),  분산,  표준편차,  평균,  분산,  표준편차
+  ######  통계학(statistics),  자료(data, 데이터),  질적 자료(qualitative data, 정성적 자료),  양적 자료(quantitative data, 정량적 자료),  정보(information),  지식(knowledge),  평균,  변량,  계급,  계급의 크기,  계급값,  도수,  도수분포표,  히스토그램,  상대도수,  편차,  분산,  표준편차,  확률변수(random variable),  확률분포,  이산확률변수,  확률질량함수,  확률질량함수의 성질,  기댓값(평균),  분산,  표준편차,  평균,  분산,  표준편차
 
-## 미적분 메모
+# 미적분 메모
 
 - [극한 메모](https://ccss17.github.io/calculus.html)
     
@@ -96,7 +108,7 @@
     
   ######  이변수 함수의 극한,  이변수 함수의 극한의 성질,  이변수 함수의 연속,  이변수 합성함수의 연속,  다변수 함수의 극한과 연속,  상미분(ordinary derivative),  $x$ 에 대한 편미분계수,  $y$ 에 대한 편미분계수,  편도함수(partial derivative),  편도함수의 기하학적 의미,  이계 편도함수(second-order partial derivative),  혼합 편미분(mixed derivative),  혼합 편미분 정리(mixed derivative theorem),  이변수 함수의 미분가능성,  이변수 합성함수의 도함수(chain rule) 또는 일독립변수와 이매개변수에 대한 도함수,  일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule),  이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule),  이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule),  $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule),  스칼라장(scalar field),  방향도함수(directional derivative),  기울기 벡터(gradient vector),  기울기 벡터 방향의 단위벡터,  방향도함수의 계산,  삼변수 함수의 방향도함수,  삼변수 함수의 기울기 벡터(gradient vector),  삼변수 함수의 방향도함수 계산,  선형화(linearization),  표준 선형 근사(standard linear approximation),  미분(differential),  미분의 추정(estimating with differentials),  접평면(tangent plane),  법선벡터(normal vector),  이변수 함수 선형화 또는 접평면(tangent plane),  이변수 함수 미분 또는 전미분(total differential)
 
-## 선형대수학 메모
+# 선형대수학 메모
 
 - [선형방정식](https://ccss17.github.io/la.html)
     

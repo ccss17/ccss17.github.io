@@ -40,19 +40,28 @@ def update():
 # {sections('역사에 관련된 메모', 'all3', get_theorem)}
     math_sections = f'''\
 {START_SECTION}
+
+## 수학기초론
 {sections('논리학', 'logic', get_definitions)}
-{sections('수학기초론:집합론', 'math', get_definitions)}
-{sections('수학기초론:수리논리학', 'mathmatical_logic', get_definitions)}
+{sections('집합론', 'math', get_definitions)}
+{sections('수리논리학', 'mathmatical_logic', get_definitions)}
+
+## 산술과 대수학
 {sections('기초 산술 메모', 'arithmetic', get_definitions)}
 {sections('추상대수학 메모', 'abstract_algebra', get_definitions)}
 {sections('대수학 메모', 'algebra', get_definitions)}
+
+## 해석학
 {sections('해석학 메모', 'anal', get_definitions)}
 {sections('삼각 함수 메모', 'trig', get_definitions)}
 {sections('함수 메모', 'function', get_definitions)}
+
+## 확률과 통계
+{sections('조합 메모', 'comb', get_definitions)}
 {sections('확률 메모', 'prop', get_definitions)}
 {sections('통계 메모', 'stat', get_definitions)}
 
-## 미적분 메모
+# 미적분 메모
 {sections('극한 메모', 'calculus', get_definitions)}
 {sections('미분 메모', 'calculus2', get_definitions)}
 {sections('적분 메모', 'calculus3', get_definitions)}
@@ -61,7 +70,7 @@ def update():
 {sections('벡터해석학 메모', 'vector', get_definitions)}
 {sections('미적분 메모', 'calculus6', get_definitions)}
 
-## 선형대수학 메모
+# 선형대수학 메모
 {sections('선형방정식', 'la', get_definitions)}
 {sections('행렬 대수', 'la2', get_definitions)}
 {sections('행렬식', 'la3', get_definitions)}
