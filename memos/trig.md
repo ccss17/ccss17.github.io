@@ -2,49 +2,49 @@
 
 # 도형 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 점 : (원론) 쪼갤 수 없는 것이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 선 : (원론) 폭이 없이 길이만 있는 것이다.
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 직선 : 곧게 뻗은 선을 추상화한 개념이다. (원론) 점들이 곧게 있는 것이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 선분 : 양쪽에 끝나는 점이 있는 직선의 부분이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 면 : (원론) 길이와 폭만 있는 것이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 둘레(경계) : 도형의 경계의 길이를 뜻한다. (원론) 어떤 것의 끝이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 도형 : 점(0), 선(1), 면(2), 입체(3), 초입방체(n) 의 집합이다. (원론) 둘레나 둘레들에 둘러싸인 것이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 반직선 : 점 하나에서 시작하여 한 방향으로 무한히 뻗어 나가는 선이다. 
 
@@ -52,7 +52,7 @@
 
 ## 각
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 각 : 같은 끝점을 갖는 두 반직선이 이루는 도형이다. 
 
@@ -60,7 +60,7 @@
 
   - 즉 반직선과 반직선이 맞붙었을 때 꼭짓점(맞붙은 점) 안팎에서 생기는 공간이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 각도 : 각을 이루는 두 반직선이 서로 기운 정도이다. 
 
@@ -70,7 +70,7 @@
 
   - 가장 큰 각 : 두 반직선 사이의 공간을 계속 늘리면 두 반직선이 언젠가 맞닿게 되는데 그때 생긴 각이 가장 큰 각이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 육십분법 : 가장 큰 각을 $360$ 등분하여 얻은 각도를 $1\degree$($1$도) 라 부르는 각 크기 표현 방식이다. 
 
@@ -78,7 +78,7 @@
 
   - 가장 일반적으로 각의 크기를 표현할 때 사용하는 방식이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 직각 : 크기가 $90\degree$ 인 각이다. 
 
@@ -86,7 +86,7 @@
 
   - (원론) 직선에 다른 직선을 세웠을 때 이웃한 각의 크기가 같으면 그 각을 직각이라 부른다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 예각 : 크기가 $0\degree$ 보다 크고 $90\degree$ 보다 작은 각이다. 
 
@@ -94,7 +94,7 @@
 
   - (원론) 직각보다 작은 각이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 둔각 : 크기가 $90\degree$ 보다 크고 $180\degree$ 보다 작은 각이다. 
 
@@ -104,25 +104,25 @@
 
 ## 다각형
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 다각형 : 직선들로 둘러싼 도형이다.
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각형 : 세 개의 직선으로 둘러싼 도형이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 사각형 : 네 개의 직선으로 둘러싼 도형이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 넓이(면적) : 영역의 크기를 추상적으로 표현하는 양이다. 
 
@@ -130,25 +130,25 @@
 
 ## 원 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 원 : (원론) 어떤 선에 둘러싸인 도형이 있어서, 한 점에서 그 도형으로 직선을 그었을 때 직선이 모두 같으면 그 도형을 원이라 한다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 지름 : 원의 중심을 지나는 직선이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 반지름 : 원의 중심으로부터 경계에 이르는 선분이다. 지름의 절반이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 원주 : 원의 둘레를 뜻한다. 
 
@@ -156,7 +156,7 @@
 
   - 원주율의 정의에 따라 원주 $C$ 는 $C=d\pi=2r\pi$ 이다. ($r$ 은 반지름)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 원주율($\pi$) : 원주와 지름의 비율이다. 즉 원의 지름에 대한 원의 둘레의 비율이다. 
 
@@ -170,7 +170,7 @@
 
   - $\pi$ 라 표기하며 정의에 따라 원주를 $C$ 원의 지름을 $d$ 라 하면 $\pi=\frac{C}{d}$ 이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 원의 넓이 : 원의 크기를 나타내며 $r^2\pi$ 이다. ($r$ 은 반지름)
 
@@ -178,19 +178,19 @@
 
 ## 부채꼴 원 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 호($arc$) : 이차원 평면 위의 미분가능한 곡선에서 닫힌 부분이다.
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 원호($circular arc$) : 원둘레의 일부분이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 부채꼴($circular sector$) : 원에서 두 개의 반지름과 하나의 호로 둘러싸인 영역이다. 
 
@@ -198,7 +198,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 부채꼴의 호의 길이 : 원의 반지름을 $r$, 부채꼴의 중심각을 $\theta$ 라 하면 부채꼴의 호의 길이 $l$ 은 $l = r \theta$ 이다. 
 
@@ -218,7 +218,7 @@
 
     이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 부채꼴의 넓이 : 부채꼴의 크기를 나타내며 $\frac{1}{2} r ^{2} \theta$ 이다. 
 
@@ -238,19 +238,19 @@
 
     이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 반원 : 위 그림에서 중심각 $\theta$ 가 $180 \degree$ 인 부채꼴이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 육십분법 : 가장 큰 각을 $360$ 등분하여 얻은 각도를 $1\degree$($1$도) 라 부르는 각 크기 표현 방식이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 호도법($Radian$) : 반지름에 대한 호의 비율을 각으로 표현하는 각 크기 표현 방식이다. 
 
@@ -272,7 +272,7 @@
 
   - 원주율의 단위도 라디안이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 새로운 원주율($\tau$) : 라디안을 사용할 때 현재 사용하고 있는 원주율($\pi$) 가 라디안의 정의와 $\frac{1}{2}$ 차이가 나서 부자연스럽기 때문에 $\pi$ 에 $2$ 를 곱한 값을 사용하자고 주장된 원주율 $\tau$(타우) 이다. 
 
@@ -290,13 +290,13 @@
 
 ## 삼각비 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각법(trigonometry) : 삼각형의 변과 각 사이의 관계에 따른 여러가지 도형을 연구하는 수학의 한 분과이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각비(trigonometric ratio) : 직각삼각형의 두 변의 길이의 비례 관계를 나타내는 값이다. 
 
@@ -310,7 +310,7 @@
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Trigonometry_triangle.svg/225px-Trigonometry_triangle.svg.png)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 주어진 각을 기준으로 직각삼각형의 특정 부분을 칭하는 방법 
 
@@ -322,7 +322,7 @@
 
   - 높이 : 주어진 각을 기준으로 그 각과 마주보는 선분이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 사인($sine$) : 직각 삼각형의 빗변에 대한 높이의 비율이다. 
 
@@ -330,7 +330,7 @@
 
   - 위 그림에서 $\sin A = \frac{a}{h}$ 이다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 코사인($cosine$) : 직각 삼각형의 빗변에 대한 밑변의 비율이다. 
 
@@ -338,7 +338,7 @@
 
   - 위 그림에서 $\cos A = \frac{b}{h}$ 이다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 탄젠트($tangent$) : 직각 삼각형의 밑변에 대한 높이의 비율이다. 
 
@@ -346,7 +346,7 @@
 
   - 위 그림에서 $\tan A = \frac{a}{b}$ 이다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 코시컨트($cosecant$) : 직각 삼각형의 높이에 대한 빗변의 비율이다. 
 
@@ -356,7 +356,7 @@
 
   - 위 그림에서 $\csc A = \frac{h}{a}$ 이다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 시컨트($secant$) : 직각 삼각형의 밑변 대한 빗변의 비율이다. 
 
@@ -366,7 +366,7 @@
 
   - 위 그림에서 $\csc A = \frac{h}{b}$ 이다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 코탄젠트($cotangent$) : 직각 삼각형의 높이에 대한 밑변의 비율이다. 
 
@@ -378,7 +378,7 @@
 
 ## 삼각함수
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 단위원(Unit circle) : 은 반지름의 길이가 $1$ 인 원이다.
 
@@ -386,7 +386,7 @@
 
   - 해석기하학에서는 원점 $(0, 0)$ 을 중심으로 하는 반지름이 $1$ 인 원을 뜻한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각함수(trigonometric functions) : 각의 크기를 삼각비로 나타내는 함수이다.
 
@@ -398,7 +398,7 @@
 
   - 또한 삼각비의 정의역이 $0 \degree < x < 90 \degree$ 인 것에 비해 삼각함수의 정의역은 실수집합이 된다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각함수의 단위원을 통한 정의 : 반지름 $r$ 의 길이가 $1$ 인 단위원 위의 점 A $(x, y)$ 가 있다고 하자. 이때 $x$ 축과 점 $A$ 와 원점을 잇는 직선과의 각을 $\theta$ 라고하면 삼각함수를 다음과 같이 정의할 수 있다. 
 
@@ -428,7 +428,7 @@
 
 ## 삼각함수의 특수각 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각함수의 특수각 : 삼각함수는 특수한 각에 대하여 다음의 값을 갖는다. 
 
@@ -452,7 +452,7 @@
 
 ## 삼각함수의 성질 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각함수 사이의 관계 
 
@@ -502,7 +502,7 @@
 
 임의의 자연수 $n$ 에 대하여 다음이 성립한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - $2n \pi  + \theta$
 
@@ -514,7 +514,7 @@
 
   - $\tan (2n \pi + \theta) = \tan (n \pi + \theta) = \tan \theta$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - $-\theta$
 
@@ -526,7 +526,7 @@
 
   - $\tan (-\theta) = -\tan \theta$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - $\pi \pm \theta$
 
@@ -544,7 +544,7 @@
 
   - $\tan (\pi - \theta) = -\tan \theta$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - $\frac{\pi}{2} \pm \theta$
 
@@ -564,7 +564,7 @@
 
 ## 삼각방정식과 삼각부등식
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각방정식 : 각의 크기에 미지수가 있는 삼각함수를 포함하는 방정식이다. 
 
@@ -574,7 +574,7 @@
 
     $\sin x = \frac{1}{2}$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각부등식 : 각의 크기에 미지수가 있는 삼각함수를 포함하는 부등식이다. 
 
@@ -586,7 +586,7 @@
 
 ## 삼각형과 삼각함수와의 관계 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각형과 삼각함수와의 관계 : 다음의 삼각형이 있을 때 삼각형과 삼각함수와의 일관된 관계가 존재한다. 
 
@@ -594,7 +594,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 사인법칙(Law of sines) : 삼각형 $ABC$ 의 외접원의 반지름의 길이를 $R$ 이라 하면 삼각형 $ABC$ 의 세 변의 길이와 세 각의 크기 사이에 다음 관계가 존재하고 이를 사인법칙이라 한다.
 
@@ -616,7 +616,7 @@
 
   - $c = 2R \sin C$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 코사인법칙(Law of cosines) : 삼각형 $ABC$ 의 세 변의 길이와 세 각의 크기 사이에 다음의 관계가 존재하고 이를 코사인법칙이라 한다. 
 
@@ -634,7 +634,7 @@
 
   - $\cos C = \frac{a^2+b^2-c^2}{2ab}$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각형의 넓이와 삼각함수와의 관계 : 삼각형 $ABC$ 의 넓비를 $S$ 라 하고 삼각형 $ABC$ 의 외접원의 반지름을 $R$, 내접원의 반지름을 $r$ 이라 하면 다음의 관계가 존재한다. 
 
@@ -650,7 +650,7 @@
 
 ### 사각형과 삼각함수와의 관계 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 사각형의 넓이 : 두 대각선 $AC, BD$ 의 길이와 두 대각선이 이루는 각 $\theta$의 크기가 주어진 사각형 $ABCD$ 의 넓이 $S$ 는 다음과 같다.
 
@@ -658,7 +658,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 평행사변형의 넓이 : 이웃하는 두변 $AB, BC$ 의 길이와 그 끼인각 $\theta$ 의 크기가 주어진 평행사변형 $ABCD$ 의 넓이 $S$ 는 다음과 같다.
 
@@ -668,7 +668,7 @@
 
 ## 삼각함수의 덧셈정리 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각함수의 덧셈정리 : 두 각 $\alpha, \beta$ 에 대하여 $\alpha + \beta, \alpha - \beta$ 의 삼각함수를 $\alpha, \beta$ 의 삼각함수로 다음과 같이 나타낼 수 있다.
 
@@ -772,7 +772,7 @@
 
     $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 배각의 공식 : 삼각함수의 덧셈정리로부터 다음의 파생 관계를 얻을 수 있다. 
 
@@ -836,7 +836,7 @@
 
     - 배각의 공식 뿐만 아니라 $3$ 배각의 공식, $4$ 배각의 공식, $n$ 배각의 공식이 존재한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 반각의 공식 : 배각의 공식에서 다음의 파생관계를 얻을 수 있다. 
 
@@ -890,7 +890,7 @@
 
 ## 삼각함수의 합성 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 삼각함수의 합성 
 

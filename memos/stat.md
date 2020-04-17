@@ -2,7 +2,7 @@
 
 # 통계
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 통계학(statistics) : 산술적 방법으로 다량의 데이터를 관찰하고 분석하는 수학의 분야이다. 
 
@@ -28,7 +28,7 @@
 
 ## 기초 용어
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 자료(data, 데이터) : 수, 영상, 단어 등의 형태로 된 의미 단위이다.
 
@@ -36,7 +36,7 @@
 
   - 보통 연구의 바탕이 되는 재료를 뜻하고 자료를 의미있게 정리하면 정보가 된다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 질적 자료(qualitative data, 정성적 자료) : 수치로 측정이 불가능한 자료이다.
 
@@ -46,7 +46,7 @@
 
     전화번호, 성별, 종교분류 등이 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 양적 자료(quantitative data, 정량적 자료) : 수치로 측정이 가능한 자료이다.
 
@@ -56,7 +56,7 @@
 
     온도, 지능지수, 매출액 등이 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 정보(information) : 특정 목적의 의사결정을 위하여 의미있게 자료를 가공한 것이다. 
 
@@ -66,7 +66,7 @@
 
   - 비교적 장기간 사용할 수 있는 정보를 지식으로 취급하기도 한다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 지식(knowledge) : 일반적으로 사용할 수 있는 정보, 또는 어떤 대상에 관하여 알고 있는 이해이다. 
 
@@ -74,7 +74,7 @@
 
 ## 기초 통계학 용어
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 평균 : 주어진 수의 합을 수의 개수로 나눈 값이다. 
 
@@ -82,25 +82,25 @@
 
   - 일반적으로 평균이라고 불리우는 통계학에서는 산술 평균이라 부른다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 변량 : 자료를 수량으로 나타낸 것이다.
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 계급 : 변량을 일정한 간격으로 나눈 구간이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 도수 : 각 계급에 속하는 변량의 개수이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 도수분포표 : 자료를 몇 개의 계급으로 나누고 각 계급의 도수를 정리한 표다.
 
@@ -118,25 +118,25 @@
 
     | 20 ~ 30 | 10 |
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 히스토그램 : 도수분포표의 각 계급의 끝값을 가로축에 표시하고 도수를 세로축에 표시하여 직사각형으로 나타낸 그래프이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 상대도수 : 전체 도수에 대한 각 계급의 도수의 비율이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 편차 : 자료의 한 변량에서 평균을 뺀 값이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 분산 : 편차의 제곱의 합을 전체 변량의 개수로 나눈 값이다.
 
@@ -146,7 +146,7 @@
 
   - $(분산) = \frac{(편차)^2의 총합}{(변량)의 개수}$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 표준편차 : 분산의 양의 제곱근이다.
 
@@ -156,7 +156,7 @@
 
 ## 이산확률변수와 확률분포 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 확률변수(random variable) : 어떤 시행에서 조건에 의해 표본공간의 각 원소(근원사건)에 하나의 실수를 대응시킨 것이다.
 
@@ -168,7 +168,7 @@
 
     확률변수와 이 분야의 개념들은 표본공간 안의 모든 사건들의 확률을 구하여 그 분포를 해석함으로써 다른 사건의 확률을 추정하는 것이 목적이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 확률분포 : 확률변수 $X$ 가 가질 수 있는 모든 값과 $X$ 가 그 값을 취할 확률의 대응 관계(함수)를
 
@@ -176,13 +176,13 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 이산확률변수 : 확률변수 $X$ 가 가질 수 있는 값들이 유한개이거나, 또는 자연수나 정수와 같이 셀 수 있을 때 $X$ 를 이산확률변수라 한다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 확률질량함수 : 이산확률변수 $X$ 가 가질 수 있는 값이 $x_1, x_2, x_3, \dots, x_n$ 일 때
 
@@ -194,7 +194,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 확률질량함수의 성질 : 이산확률변수 $X$ 의 확률질량함수가 $P(X = x_i) = p_i(i = 1, 2, 3, \dots, n)$ 일 때 다음이 성립한다. 
 
@@ -208,7 +208,7 @@
 
 ### 이산확률변수의 기댓값, 분산, 표준편차 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 기댓값(평균) : 이산확률변수 $X$ 의 확률질량함수가 $P(X=x_i) = p_i(i=1,2,3, \dots, n)$ 일 때 기댓값은
 
@@ -218,7 +218,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 분산 : 이산확률변수 $X$ 의 확률질량함수가 $P(X=x_i) = p_i(i=1,2,3, \dots, n)$ 일 때 분산은
 
@@ -228,7 +228,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 표준편차 : 이산확률변수 $X$ 의 확률질량함수가 $P(X=x_i) = p_i(i=1,2,3, \dots, n)$ 일 때 표준편차는
 
@@ -240,7 +240,7 @@
 
 ### 이산확률변수의 기댓값, 분산, 표준편차 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 평균 : 이산확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 평균은 다음 성질을 갖는다. 
 
@@ -248,7 +248,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 분산 : 이산확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 분산은 다음 성질을 갖는다. 
 
@@ -256,7 +256,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 표준편차 : 이산확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 표준편차은 다음 성질을 갖는다. 
 

@@ -1,6 +1,6 @@
 import re
 
-START = '- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>\n\n'
+START = '- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;">\n\n'
 END = '  </blockquote>\n\n'
 
 def make_def_boxed(file):

@@ -4,7 +4,7 @@
 
 # 극한
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 극한(limit) : 사물이 진행하여 도달할 수 있는 최후의 단계나 지점이다. 
 
@@ -22,7 +22,7 @@
 
     - **이것으로보아 자연 대상을 끊임없이 수학적으로 모델링하여 추상화시키면 계속해서 많은 효용이 발생할 것이다.**
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 무한소(infinitesimal) : $0$ 에 한없이 가까워지는 상태를 나타낸다.
 
@@ -30,7 +30,7 @@
 
   - $0$ 과 무한소는 구분 없이 $0$ 으로 표기한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 무한대 : 어떤 실수보다도 더 큰 상태를 뜻한다. 
 
@@ -50,7 +50,7 @@
 
     이 힐베르트의 호텔의 일화는 $\infty + 1 = \infty$ 인 것과 $\infty \times 2 = \infty$ 를 보여준다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 수열의 수렴(convergence) : 수열 $\{a_n\}$ 에서 $n$ 이 한없이 커질 때, $a_n$ 의 값이 일정한 값 $\alpha$ 에 한없이 가까워지면 수열 $\{a_n\}$ 은 $\alpha$ 에 수렴한다고 한다. 
 
@@ -86,13 +86,13 @@
 
     이것을
 
-      $$ \lim_{n \to \infty} (\frac{1}{2})^{n} = 0 $$
+      $$ \lim_{n \to \infty} \bigg (\frac{1}{2}\bigg  )^{n} = 0 $$
 
     로 나타낸다. 
 
   - 위 예시에서 엄밀하게는 $0$ 이 아니라 무한소라 해야 한다. 무한소란 $0$ 에 한없이 가까워지는 상태를 나타낸다. $0$ 과 무한소는 구분 없이 $0$ 으로 표기한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 수열의 발산(divergence) : 수열 $\{a_n\}$ 이 수렴하지 않을 때, 수열 $\{a_n\}$ 은 발산한다고 한다.
 
@@ -136,7 +136,7 @@
 
           일반항이 $a_n = (-1) ^{n-1}$ 의 그래프를 그려보면 $n$ 에 한없이 커질 때 일정한 값에 수렴하지도 않고 무한대로 발산하지도 않는다는 것을 알 수 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 등비수열의 극한 : 등비수열 $\{r^n\}$ 은 공비 $r$ 의 값에 범위에 따라 다음과 같이 수렴 또는 발산한다. 
 
@@ -200,7 +200,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - $r^n$ 을 포함한 수열의 극한 : $r^n$ 을 포함한 수열의 극한은 $r$ 의 값의 범위를 
 
@@ -210,7 +210,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 급수의 수렴 : 급수 $\sum_{n=1}^{\infty} a_n$ 의 부분합 수열 $\{S_n\}$ 이 일정한 값 $S$ 에 수렴할 때, 즉 
 
@@ -230,7 +230,7 @@
 
   - 예시 
 
-    수열 $\{a_n\} = \frac{1}{n(n+1)}$ 의 급수 
+    수열 $\{a_n\} = \dfrac{1}{n(n+1)}$ 의 급수 
 
       $$ \frac{1}{1 \circ 2} + \frac{1}{2 \circ 3} + \dots + \frac{1}{n(n+1)} + \dots $$
 
@@ -250,15 +250,15 @@
 
     따라서 급수는 수렴하고 그 합은 $1$ 이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
-- 급수의 발산 : 급수 $\sum_{n=1}^{\infty} a_n$ 의 부분합 수열 $\{S_n\}$ 이 발산할 때 이 급수는 발산한다고 한다. 
+- 급수의 발산 : 급수 $\displaystyle \sum_{n=1}^{\infty} a_n$ 의 부분합 수열 $\{S_n\}$ 이 발산할 때 이 급수는 발산한다고 한다. 
 
   </blockquote>
 
   - 예시 
 
-    수열 $\{a_n\} = \frac{1}{\sqrt[]{n+1} + \sqrt[]{n}}$ 의 급수 
+    수열 $\{a_n\} = \dfrac{1}{\sqrt[]{n+1} + \sqrt[]{n}}$ 의 급수 
 
       $$ \frac{1}{\sqrt[]{2}+\sqrt[]{1}} + \frac{1}{\sqrt[]{3}+\sqrt[]{2}} + \frac{1}{\sqrt[]{4}+\sqrt[]{3}} + \dots \frac{1}{\sqrt[]{n+1}+\sqrt[]{n}} + \dots $$
 
@@ -278,13 +278,13 @@
 
     따라서 급수는 발산한다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
-- 급수와 수열의 극한의 관계 : 급수 $\sum_{n=1}^{\infty}$ 의 수렴, 발산과 수열 $\{a_n\}$ 의 극한 $\lim_{n \to \infty} a_n$ 사이에 다음의 관계가 존재한다. 
+- 급수와 수열의 극한의 관계 : 급수 $\displaystyle  \sum_{n=1}^{\infty}$ 의 수렴, 발산과 수열 $\{a_n\}$ 의 극한 $\displaystyle  \lim_{n \to \infty} a_n$ 사이에 다음의 관계가 존재한다. 
 
   </blockquote>
 
-  - 급수 $\sum_{n=1}^{\infty}a_n$ 이 수렴하면 $\lim_{n \to \infty} a_n = 0$ 이다. 
+  - 급수 $\displaystyle  \sum_{n=1}^{\infty}a_n$ 이 수렴하면 $\lim_{n \to \infty} a_n = 0$ 이다. 
 
     - 증명 
 
@@ -332,7 +332,7 @@
 
 ## 등비급수 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 등비급수(geometric series) : 첫째항이 $a$ 이고 공비가 $r$ 인 등비수열 $\{ar ^{n-1}\}$ 에서 얻은 급수 
 
@@ -342,9 +342,9 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
-- 등비급수의 수렴과 발산 : 등비급수 $\sum_{n=1}^{\infty}ar ^{n-1}(a \neq 0)$ 은 공비 $r$ 의 값의 범위에 따라 수렴 또는 발산한다. 
+- 등비급수의 수렴과 발산 : 등비급수 $\displaystyle \sum_{n=1}^{\infty}ar ^{n-1}(a \neq 0)$ 은 공비 $r$ 의 값의 범위에 따라 수렴 또는 발산한다. 
 
   1. $|r| < 1$ 일 때, 수렴하고 그 합은 $\frac{a}{1-r}$ 이다. 
 
@@ -362,9 +362,9 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
-- 등비급수 수렴 조건 : 등비급수 $\sum_{n=1}^{\infty} ar ^{n-1}$ 이 수렴하기 위한 조건은 
+- 등비급수 수렴 조건 : 등비급수 $\displaystyle \sum_{n=1}^{\infty} ar ^{n-1}$ 이 수렴하기 위한 조건은 
 
   $$ a=0 \lor -1<r<1 $$
 
@@ -372,7 +372,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 등비급수를 순환소수에 활용하기 : 다음은 등비급수로 순환소수를 분수로 나타내는 알고리즘이다. 
 
@@ -402,7 +402,7 @@
 
     마지막 분수에서 분모 $999 \dots 9$ 의 $9$ 가 $n$ 개 있는 것이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 등비급수를 도형에 활용하기 : 다음은 어떤 알고리즘(규칙)으로 처음 주어진 도형과 닮은 도형을 한없이 만들어 나갈 때, 모든 도형의 넓이의 합이나 길이의 합 같은 문제를 구하는 알고리즘이다. 
 
@@ -416,7 +416,7 @@
 
 # 함수의 극한 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 함수의 수렴(convergence) : 함수 $f(x)$ 에서 $x$ 의 값이 $a$ 가 아니면서 $a$ 에 한없이 가까워질 때, $f(x)$ 의 값이 일정한 값 $L$ 에 한없이 가까워지면 함수 $f(x)$ 는 $L$ 에 수렴한다고 한다.
 
@@ -470,7 +470,7 @@
 
     $f(x)$ 의 그래프를 살펴보면 $x$ 의 값이 한없이 커질 때와 $x$ 값이 음수이면서 그 절대값이 한없이 커질 때 $f(x)$ 값이 $0$ 에 한없이 가까워짐을 알 수 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 함수의 발산(divergence) : 함수가 수렴하지 않으면 발산한다고 하며 발산은 다음의 두 가지 경우로 정의된다. 
 
@@ -530,7 +530,7 @@
 
 ## $\epsilon-\delta$ 논법 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - $\epsilon-\delta$ 논법으로 정의하는 수열의 수렴 : "수열 $\{a_n\}$ 이 $\alpha$ 에 수렴한다" 는 명제 즉, 
 
@@ -600,7 +600,7 @@
 
     이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - $\epsilon-\delta$ 논법으로 정의하는 함수의 수렴 : 함수 $f(x)$ 에 대하여 점 $a$ 에서 함수 $f$ 의 극한은 다음 조건을 만족시키는 실수 $L$ 이다.
 
@@ -696,7 +696,7 @@
 
     따라서 $0 < \delta < 0.05$ 이면 어떠한 $x$ 에 대하여서도 $|f(x) -4| < 0.1$ 을 만족시킬 수 있다. 다시말해 $x$ 와 $2$ 사이의 거리거 $0.05$ 보다 작은 양수이면 $f(x)$ 와 $4$ 사이의 거리가 $0.1$ 보다 작게 된다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - $\epsilon-\delta$ 논법으로 정의하는 함수의 발산 : 함수 $f(x)$ 를 $a$ 를 포함하는 어떤 개구간에서 정의된 함수라 하자. 
 
@@ -718,7 +718,7 @@
 
 ## 극한값이 존재하는 조건 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 우극한과 좌극한 : "$x$ 값이 $a$ 이 아니면서 $a$ 에 한없이 가까워진다"는 것은 "$x$ 값이 $a$ 보다 크면서 $a$ 에 한없이 가까워진다(우극한)"는 것과 "$x$ 값이 $a$ 보다 작으면서 $a$ 에 한없이 가까워지는 것(좌극한)"으로 볼 수 있다.
 
@@ -744,7 +744,7 @@
 
       $$ x \to a- 일 때 f(x) \to M $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 극한값이 존재하는 조건 : $x \to a$ 일 때 함수 $f(x)$ 가 $L$ 로 수렴한다는 것은 우극한과 좌극한이 모두 존재하고 그 값이 $L$ 로 서로 같다는 것이다. 
 
@@ -756,7 +756,7 @@
 
   - 예시
 
-    함수 $f(x) = \frac{|x|}{x}$ 의 그래프는 다음과 같다. 
+    함수 $f(x) = \dfrac{|x|}{x}$ 의 그래프는 다음과 같다. 
 
     ![desmos-graph(7)](https://user-images.githubusercontent.com/16812446/75512984-9acbc200-5a36-11ea-918a-83632f4d86ec.png)
 
@@ -768,39 +768,39 @@
 
 ## 극한의 성질 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 수열의 극한의 성질 : 두 수열 $\{a_n\}, \{b_n\}$ 에서 $\lim_{n \to \infty} \{a_n\} = \alpha, \lim_{n \to \infty} \{b_n\} = \beta$ 일 때 다음의 관계가 생성된다. 
 
   </blockquote>
 
-  - $$\lim_{n \to \infty} ka_n = k \lim_{n \to \infty} a_n = k \alpha$$
+  - $\displaystyle \lim_{n \to \infty} ka_n = k \lim_{n \to \infty} a_n = k \alpha$
 
-  - $$ \lim_{n \to \infty} (a_n \pm b_n) = \lim_{n \to \infty} a_n \pm \lim_{n \to \infty} b_n = \alpha \pm \beta $$
+  - $\displaystyle \lim_{n \to \infty} (a_n \pm b_n) = \lim_{n \to \infty} a_n \pm \lim_{n \to \infty} b_n = \alpha \pm \beta$
 
-  - $$ \lim_{n \to \infty} a_nb_n = \lim_{n \to \infty} a_n \circ \lim_{n \to \infty} b_n = \alpha \beta $$
+  - $\displaystyle  \lim_{n \to \infty} a_nb_n = \lim_{n \to \infty} a_n \circ \lim_{n \to \infty} b_n = \alpha \beta$
 
-  - $$ \lim_{n \to \infty} \frac{a_n}{b_n} = \frac{\lim_{n \to \infty} a_n}{\lim_{n \to \infty} b_n}= \frac{\alpha}{\beta} $$
+  - $\displaystyle  \lim_{n \to \infty} \frac{a_n}{b_n} = \frac{\lim_{n \to \infty} a_n}{\lim_{n \to \infty} b_n}= \frac{\alpha}{\beta}$
 
     - 증명은 고등학교 수학 범위를 벗어난다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 함수의 극한의 성질 : 두 함수 $f(x), g(x)$ 에서 $\lim_{x \to a} f(x) = \alpha, \lim_{x \to a} g(x) = \beta$ 일 때 극한의 정의로부터 다음의 관계가 생성된다. 
 
   </blockquote>
 
-  - $$\lim_{x \to a} kf(x) = k \lim_{x \to a} f(x) = k \alpha$$
+  - $\displaystyle \lim_{x \to a} kf(x) = k \lim_{x \to a} f(x) = k \alpha$
 
-  - $$ \lim_{x \to a} \{f(x) \pm g(x)\} = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) = \alpha \pm \beta $$
+  - $\displaystyle  \lim_{x \to a} \{f(x) \pm g(x)\} = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) = \alpha \pm \beta$
 
-  - $$ \lim_{x \to a} f(x)g(x) = \lim_{x \to a} f(x) \circ \lim_{x \to a} g(x) = \alpha \beta $$
+  - $\displaystyle  \lim_{x \to a} f(x)g(x) = \lim_{x \to a} f(x) \circ \lim_{x \to a} g(x) = \alpha \beta$
 
-  - $$ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)}= \frac{\alpha}{\beta} $$
+  - $\displaystyle  \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)}= \frac{\alpha}{\beta}$
 
     - 증명은 고등학교 수학 범위를 벗어난다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 상수에 관한 무한대의 성질 : - 무한대란 "무한히 커지는 상태"로써 보통의 수처럼 다룰 수 없으나 상수 $c$ 에 대하여 다음의 결과가 나오는 것만큼은 직관적으로 이해할 수 있다.
 
@@ -812,23 +812,23 @@
 
   4. $c \times \infty = -\infty, c \times (-\infty) = \infty$ (단, $c < 0$)
 
-  5. $\frac{c}{\infty} = 0, \frac{c}{-\infty} = 0$
+  5. $\dfrac{c}{\infty} = 0, \dfrac{c}{-\infty} = 0$
 
-  6. $\frac{\infty}{c} = \infty, \frac{-\infty}{c}=-\infty$ (단, $c > 0$)
+  6. $\dfrac{\infty}{c} = \infty, \dfrac{-\infty}{c}=-\infty$ (단, $c > 0$)
 
-  7. $\frac{\infty}{c} = -\infty, \frac{-\infty}{c}=\infty$ (단, $c < 0$)
+  7. $\dfrac{\infty}{c} = -\infty, \dfrac{-\infty}{c}=\infty$ (단, $c < 0$)
 
   </blockquote>
 
 ## 극한값을 구하는 방법
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 부정형(indeterminate form) : 정의되지 않는 형태이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 부정형 극한 : 원소에 따라 극한값이 하나로 정해지지 않는 꼴이다. 
 
@@ -840,7 +840,7 @@
 
       $$ \lim_{x \to \infty} (5x^3 - x^2) = \lim_{x \to \infty} x^3(5 - \frac{1}{x}) = \infty $$
 
-  - $\frac{\infty}{\infty}$ : 분모의 최고차항으로 분모, 분자를 나눈다. 
+  - $\dfrac{\infty}{\infty}$ : 분모의 최고차항으로 분모, 분자를 나눈다. 
 
     - $(분자의 차수) < (분모의 차수)$ 는 $0$ 에 수렴한다. 
 
@@ -902,7 +902,7 @@
 
 ## 극한의 비교 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 함수의 극한의 대소 관계 : 두 함수 $f(x), g(x)$ 에서 $\lim_{x \to a} f(x) = \alpha, \lim_{x \to a} g(x) = \beta$ 일 때, $a$ 에 충분히 가까운 모든 실수 $x$ 에 대하여 다음이 성립한다.
 
@@ -934,13 +934,13 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 미정계수의 결정 : 두 함수 $f(x), g(x)$ 에 대하여 다음이 성립한다. 
 
-  1. $\frac{0}{0}$ 꼴
+  1. $\dfrac{0}{0}$ 꼴
 
-      - $$\lim_{x \to a} \frac{f(x)}{g(x)} = \alpha  (\alpha 는 실수) 일때, \lim_{x \to a} g(x) = 0 이면 \lim_{x \to a} f(x) = 0 이다.$$
+      - $\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)} = \alpha  (\alpha 는 실수) 일때, \lim_{x \to a} g(x) = 0 이면 \lim_{x \to a} f(x) = 0 이다.$
 
         - $\lim_{x \to a} \frac{f(x)}{g(x)}$ 와 $\lim_{x \to a} g(x)$ 가 수렴하는데 $f(x) = \frac{f(x)}{g(x)}g(x)$ 로 나타낼 수 있기 때문에 
 
@@ -964,23 +964,15 @@
 
           을 만족해야 하고 이에 따라 $1+a = 0$ 이다. 그러므로 $a=-1$ 이다. 
 
-      - $$ \lim_{x \to a} \frac{f(x)}{g(x)} = \alpha  (\alpha 는 0 이 아닌 실수) 일때, \lim_{x \to a} f(x) = 0 이면 \lim_{x \to a} g(x) = 0 이다. $$
+      - $\displaystyle  \lim_{x \to a} \frac{f(x)}{g(x)} = \alpha  (\alpha 는 0 이 아닌 실수) 일때, \lim_{x \to a} f(x) = 0 이면 \lim_{x \to a} g(x) = 0 이다.$
 
         - $\lim_{x \to a} \frac{f(x)}{g(x)}$ 와 $\lim_{x \to a} f(x)$ 가 수렴하는데 $g(x) = \frac{g(x)}{f(x)}f(x)$ 로 나타낼 수 있다. 한편 
 
-          $$
-
-          \lim_{x \to a} \frac{f(x)}{g(x)} = \alpha \to \lim_{x \to a} \frac{g(x)}{f(x)} = \frac{1}{\alpha}
-
-          $$
+          $$ \lim_{x \to a} \frac{f(x)}{g(x)} = \alpha \to \lim_{x \to a} \frac{g(x)}{f(x)} = \frac{1}{\alpha} $$
 
           이기 때문에
 
-          $$
-
-          \lim_{x \to a} \{\frac{g(x)}{f(x)}\times f(x)\} = \lim_{x \to a} \frac{g(x)}{f(x)} \times \lim_{x \to a} f(x) = \frac{1}{\alpha} \times 0 = 0
-
-          $$
+          $$ \lim_{x \to a} \{\frac{g(x)}{f(x)}\times f(x)\} = \lim_{x \to a} \frac{g(x)}{f(x)} \times \lim_{x \to a} f(x) = \frac{1}{\alpha} \times 0 = 0 $$
 
           이다. 
 
@@ -994,9 +986,9 @@
 
           이고 이에 따라 $\sqrt[]{3 - 2} - a = 0$ 에서 $a=1$ 이다. 
 
-  2. $\frac{\infty}{\infty}$ 꼴 
+  2. $\dfrac{\infty}{\infty}$ 꼴 
 
-      $\lim_{x \to \infty} \frac{f(x)}{g(x)} = \alpha$ ($\alpha$ 는 $0$ 이 아닌 실수)이고 $f(x), g(x)$ 가 다항함수면 두 함수 $f(x), g(x)$ 의 차수는 같고, 극한값 $\alpha$ 는 분자, 분모의 최고차항의 계수의 비와 같다. 
+      $\displaystyle \lim_{x \to \infty} \frac{f(x)}{g(x)} = \alpha$ ($\alpha$ 는 $0$ 이 아닌 실수)이고 $f(x), g(x)$ 가 다항함수면 두 함수 $f(x), g(x)$ 의 차수는 같고, 극한값 $\alpha$ 는 분자, 분모의 최고차항의 계수의 비와 같다. 
 
       - 만약 분모의 차수가 분자의 차수보다 크면 $0$ 으로 수렴한다. 
 
@@ -1014,9 +1006,9 @@
 
 # 연속함수 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
-- 함수의 연속(continuity) : 함수 $f(x)$ 가 실수 $a$ 에 대하여 $f(x)$ 가 $x=a$ 에서 정의되어 있고 $\lim_{x \to a} f(x)$ 가 존재하며 $\lim_{x \to a} f(x) = f(a)$ 일때 $f(x)$ 는 $x=a$ 에서 연속이라 한다.
+- 함수의 연속(continuity) : 함수 $f(x)$ 가 실수 $a$ 에 대하여 $f(x)$ 가 $x=a$ 에서 정의되어 있고 $\displaystyle \lim_{x \to a} f(x)$ 가 존재하며 $\displaystyle \lim_{x \to a} f(x) = f(a)$ 일때 $f(x)$ 는 $x=a$ 에서 연속이라 한다.
 
   </blockquote>
 
@@ -1066,13 +1058,13 @@
 
     따라서 함수 $f_2, f_3, f_4$ 는 모두 $x=1$ 에서 연속이 아니다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 함수의 불연속(discontinuity) : 함수 $f(x)$ 가 $x=a$ 에서 연속이 아닐 때, $f(x)$ 는 $x=a$ 에서 불연속이라 한다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 연속함수 : 함수 $f(x)$ 가 어떤 구간에 속하는 모든 실수에서 연속일 때, $f(x)$ 는 그 구간에서 연속 또는 그 구간에서 연속함수라 한다.
 
@@ -1092,7 +1084,7 @@
 
     유리함수 $h(x) = \frac{1}{x}$ 는 $x \neq 0$ 인 실수, 즉 개구간 $(-\infty, 0), (0, \infty)$ 에서 연속이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 폐구간에서의 연속함수 : 폐구간 $[a,b]$ 의 경우 $x=a$ 에서는 함수의 우극한만, $x=b$ 에서는 함수의 좌극한만 존재하므로 페구간에서의 연속함수를 다음과 같이 정의한다.
 
@@ -1114,25 +1106,25 @@
 
 ## 여러가지 함수의 연속
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 다항함수의 연속 : 일차함수, 이차함수, $n$차함수 $\to (\infty, -\infty)$ 에서 연속
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 유리함수의 연속 : $y=\frac{f(x)}{g(x)} \to g(x) \neq 0$ 인 점에서 연속
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 무리함수의 연속 : $y=\sqrt[]{f(x)} \to f(x) \geq 0$ 인 구간에서 연속
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 가우스함수의 연속 : $y=[x] \to x \neq n$ ($[x]$ 는 $x$ 보다 크지 않은 최대의 정수) 에서 연속(단, $n$ 은 정수)
 
@@ -1144,7 +1136,7 @@
 
     이므로 가우스함수 $f(x)$ 는 반개구간 $[n, n+1)$ 에서 연속이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 합성함수의 연속 : 두 함수 $f(x), g(x)$ 에 대하여 합성함수 $(f \circ g)(x)$ 는 
 
@@ -1170,7 +1162,7 @@
 
 ## 연속함수의 성질
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 연속함수의 성질 : 두 함수 $f(x), g(x)$ 가 $x=a$ 에서 연속이면 다음 함수도 $x=a$ 에서 연속이다. 
 
@@ -1212,7 +1204,7 @@
 
 ## 최대-최소 정리와 사이값 정리 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 최대-최소 정리 : 함수 $f(x)$ 가 폐구간 $[a,b]$ 에서 연속이면 $f(x)$ 는 이 구간에서 반드시 최대값과 최소값을 갖는다. 
 
@@ -1234,7 +1226,7 @@
 
     - 개구간과 반개구간에서 정의된 연속함수 또는 불연속함수일 경우 최대값과 최소값이 존재할 수도 있고 존재하지 않을 수도 있기 때문에 개별적 상황마다 일일히 최대값과 최소값의 존재를 확인해야한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
 
 - 사이값의 정리(intermediate value theorem) : 함수 $f(x)$ 가 폐구간 $[a,b]$ 에서 연속이고 $f(a) \neq f(b)$ 이면 $f(a)$ 와 $f(b)$ 사이에 있는 임의의 값 $k$ 에 대하여 $f(c) = k$ 인 $c$ 가 $a$ 와 $b$ 사이에 적어도 하나 존재한다. 
 
