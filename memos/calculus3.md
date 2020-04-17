@@ -4,7 +4,7 @@
 
 # 적분
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 적분(integral) : 기하학적으로 곡선과 좌표축으로 둘러싸인 영역의 면적을 구하는 것이다. 
 
@@ -28,7 +28,7 @@
 
   - 미분은 어떤 대상에 대한 변화를 알 수 있게 해주었는데 적분은 그 변화로부터 어떤 현상이 일어날지 예측하게 해주었다. 미적분의 발달은 과학과 기술을 발달하게 하였다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 부정적분(indefinite integral, antiderivative) : 함수 $f(x)$ 에 대하여 $F'(x) = f(x)$ 가 성립할 때 함수 $F(x)$ 를 함수 $f(x)$ 의 부정적분이라 한다. 
 
@@ -86,7 +86,7 @@
 
     ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/76163204-8353ae00-6187-11ea-83c2-1d611dcf608e.png)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 적분용어 : 다음 부정적분식을 생각하자. 
 
@@ -102,7 +102,7 @@
 
     - 적분할 때 적분변수 이외의 미지수는 상수로 취급한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 부정적분과 미분의 관계 : 정의에 따라 부정적분과 미분의 관계는 역연산이다.
 
@@ -144,7 +144,7 @@
 
 ## 부정적분의 계산 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - $n$ 차 단항 함수 $y=x^n$ 의 부정적분 : $n$ 이 음이 아닌 정수일 때, $n$ 차 단항 함수의 부정적분은 
 
@@ -166,7 +166,7 @@
 
     이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - $1$ 의 부정적분 : $\int_{}^{}1dx = x + C$
 
@@ -180,7 +180,7 @@
 
     $$ \int_{}^{}dx $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수의 실수배, 합, 차의 부정적분 : 두 함수 $f(x), g(x)$ 의 부정적분이 존재할 때 
 
@@ -226,7 +226,7 @@
 
       (함수의 합의 부정적분의 증명에서 $+$ 를 $-$ 로 바꾸어 생각하면 바로 증명된다)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수 $f'(g(x))g'(x)$ 의 부정적분 : 함수 $f'(g(x))g'(x)$ 의 부정적분은 다음과 같다. (단, $C$ 는 적분상수)
 
@@ -278,7 +278,7 @@
 
       $$ \int_{}^{}(2x+a) ^{10} dx = \frac{1}{2} \circ \frac{1}{10 + 1}(2x+1) ^{10 + 1} + C = \frac{1}{22}(2x+1) ^{11} + C $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 곱의 미분의 역연산을 이용한 부정적분 : 함수 $f(x), g(x)$ 에 대한 곱함수의 미분법 
 
@@ -300,7 +300,7 @@
 
 ## 정적분 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 정적분(definte integral) : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 함수 $f(x)$ 의 한 부정적분 $F(x)$ 에 대하여 부정적분의 함수값의 차 $F(b)-F(a)$ 를 함수 $f(x)$ 의 $a$ 에서 $b$ 까지의 정적분이라 한다. 
 
@@ -350,7 +350,7 @@
 
       $$ \int_{3}^{2}xdx = [\frac{1}{2}x ^{2}] ^{3} _{2} = \frac{9}{2} - \frac{4}{2} = \frac{5}{2} $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 여러가지 정적분
 
@@ -376,7 +376,7 @@
 
       $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 부정적분과 정적분의 관계 : 정적분은 부정적분이라는 함수로 얻을 수 있는 하나의 값이다.    
 
@@ -388,7 +388,7 @@
 
 ## 정적분의 성질 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 정적분의 성질 : 두 함수 $f(x), g(x)$ 가 임의의 실수 $a, b, c$ 를 포함하는 폐구간에서 연속일 때 다음이 성립한다. 
 
@@ -422,7 +422,7 @@
 
       $$ = \int_{a}^{b}f(x)dx $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 절대값 기호를 포함한 함수의 정적분 : 절대값 기호 안의 식의 값이 $0$ 이 되게 하는 $x$ 값을 경계로 적분 구간을 나누어 계산한다. 
 
@@ -446,7 +446,7 @@
 
 # 구분구적법
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 구분구적법(리만합, Riemann sum) : 어떤 도평의 넓이나 부피를 구할 때, 주어진 도형을 넓이 또는 부피를 쉽게 구할 수 있는 기본 도형으로 나누어서 기본 도형들의 넓이 또는 부피의 합을 구한 후 그 합의 극한값 구하여 기본 도형들의 넓이 또는 부피의 합을 주어진 도형의 넓이 또는 부피로 근사시키는 방법이다.
 
@@ -496,7 +496,7 @@
 
     과도 같다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 정적분과 급수의 합의 관계 : 함수 $f(x)$ 가 폐구간 $[a,b]$ 에서 연속이고 $\Delta x = \frac{b-a}{n}, x_k = a+k \Delta x$ 일 때
 
@@ -506,7 +506,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 정적분으로 급수의 합 구하기 
 
@@ -532,7 +532,7 @@
 
 # 정적분의 계산 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 정적분의 기하적 의미 : 함수 $f(x)$ 가 폐구간 $[a,b]$ 에서 연속이고 $f(x) \geq 0$ 일 때, 정적분
 
@@ -570,7 +570,7 @@
 
     위 그래프에서 가로 곱하기 세로 $3 \times 3$ 는 $9$ 이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 짝함수의 정적분 : $y$ 축에 대칭인 짝함수의 정적분은 다음과 같다. 
 
@@ -630,7 +630,7 @@
 
     $$ \int_{-3}^{3}(x ^{2}+2)dx = 2 \int_{0}^{3}(x ^{2}+2)dx = 2 [ \frac{1}{3}x ^{3} + 2x] ^{3} _{0} = 2 \times (15 - 0) = 30 $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 홀함수의 정적분 : $y=x$ 에 대하여 대칭인 홀함수의 정적분은 다음과 같다. 
 
@@ -694,7 +694,7 @@
 
     $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 주기함수의 정적분 : 주기가 $p$ 인 주기함수의 정적분은 다음과 같은 관계를 갖는다. 
 
@@ -758,7 +758,7 @@
 
 ## 정적분과 미분의 관계 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 정적분으로 나타내어진 함수 : 정적분의 위끝과 아래끝이 상수면 그 연산결과가 수가 되지만 그 둘 중 하나 이상을 적분변수가 아닌 미지수로 둔다면 정적분 연산결과는 수가 아니라 함수가 되는데, 이 함수를 정적분으로 나타내어진 함수라 한다.
 
@@ -774,7 +774,7 @@
 
   - 정적분으로 나타내어진 함수는 일반적으로 미분가능하다. 따라서 미분 연산을 가하여 미분과 정적분의 관계를 알 수 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 정적분과 미분의 관계 : 정적분으로 함수의 미분을 나타내면 다음과 같다. 
 
@@ -828,7 +828,7 @@
 
       에서 두 변수 $x$ 가 일치해야 한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 정적분과 함수의 극한의 관계 
 
@@ -884,7 +884,7 @@
 
 ## 정적분으로 구하는 넓이 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 곡선과 $x$ 축 사이의 넓이 : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $y=f(x)$ 와 $x$축 및 두 직선 $x=a, x=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
 
@@ -898,7 +898,7 @@
 
     **구체화 필요**
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 곡선과 $y$ 축 사이의 넓이 : 함수 $f(y)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $x=f(y)$ 와 $y$축 및 두 직선 $y=a, y=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
 
@@ -912,7 +912,7 @@
 
     **구체화 필요**
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - $x$축으로 둘러싼 두 곡선 사이의 넓이 : 함수 $f(x), g(x)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $y=f(x), y=g(x)$ 와 두 직선 $x=a, x=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
 
@@ -926,7 +926,7 @@
 
     **구체화 필요**
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - $y$축으로 둘러싼 두 곡선 사이의 넓이 : 함수 $f(y), g(y)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $x=f(y), x=g(y)$ 와 두 직선 $x=a, x=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
 
@@ -940,7 +940,7 @@
 
     **구체화 필요**
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수 $y=f(x)$ 와 그 역함수 $y=g(x)$ 로 둘러싼 두 곡선 사이의 넓이 : 곡선 $y=f(x)$ 과 그 역함수 $y=g(x)$ 로 둘러싼 도형의 넓이 $S$ 는 
 

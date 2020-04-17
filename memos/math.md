@@ -2,13 +2,13 @@
 
 # 수학
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 자연대상 : 세상에 존재하는 모든 것들이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 수학 : 자연대상을 단순화하고 추상화시켜 그것의 성질과 관계를 정확하게 다룰 수 있도록 만들고 연구하는 것이다. 
 
@@ -20,7 +20,7 @@
 
   - 수학은 자연대상의 존재와 관계를 추상화시켜 세상의 법을 연구하는 것인데 과거 수학자들이 수학과 현실 세상과의 괴리를 느꼈다는 것은 좀 이상하다. 하디(Hardy, G. H.) 는 이렇게 말했다. "나의 수학에는 지금까지 어느 것 하나 유용한 것이 없다. 나의 수학은 참된 수학, 즉 페르마와 오일러와 가우스와 아벨의 수학이지, 공학 실험실에서 수학이라는 이름으로 불리는 쓰레기를 뜻하지 않는다." 그러나 하디가 연구한 정수의 독특한 성질이 인터넷 뱅킹이나 온라인 결제를 할 때 반드시 필요한 암호화 과정에 유용하게 사용되고 있다. 한편 응용수학 쪽 스탠스를 갖고 있던 푸앵카레는 "예전에는 실제적 응용을 위해 새로운 함수를 만들었으나 요즘 수학자들은 괴상하기 짝이 없는 함수만 만든다." 며 아무리 확대해도 매끄럽게 그려지지 않는 함수를 두고 순수수학자들을 비판했다. 그러나 그 함수는 물리학에서 프랙탈 현상을 연구하는데 유용하게 사용되고 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 수학 : 양(정수론), 구조(대수학), 공간(기하학), 변화(해석학) 등의 개념을 다루는 학문으로써 단순하게는 수와 그 논리에 대하여 연구하는 학문이다. 
 
@@ -30,7 +30,7 @@
 
   - 추상화하는 것은 대상을 단순화하여 문제를 풀기 쉽게 만들기 위함이다. 먼저 자연 대상을 수학적으로 추상화시키면 불변요소와 가변요소를 구분할 수 있는데 불변요소를 제거하여 대상을 단순화 시킬 수 있다. 또한 가변요소라 할지라도 가정법을 사용하여 특정 요소를 불변요소라고 상정하면 가변요소집합을 더 축소할 수 있어 대상을 더욱 단순화 시킬 수 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 정의(definition) : 용어의 뜻을 명확하게 정하여 약속한 것이다. 
 
@@ -40,7 +40,7 @@
 
   - 정의는 대상의 존재성을 보장하지 않는다. 다시 말해 어떤 대상을 특정할 수 있는 조건으로 정의를 내리더라도 그 정의로 특정된 대상이 실제로 존재하지 않을 수도 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 공리(axiom) : 어떤 정리가 속한 분야(기하학, 해석학 등) 의 가장 근본이 되는 것으로 증명 없이 받아들이기로 약속한 명제들이다.
 
@@ -52,7 +52,7 @@
 
     미적분학에서 꼭 필요한 실수 체계의 공리중 하나 '아르키메데스 공리' 는 "임의의 양수를 충분히 $N$ 번 거듭 더하면 $1$ 보다 커지게 할 수 있도록 하는 자연수 $N$ 이 존재한다." 이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 증명(proof) : 정의 또는 이미 참임을 알고 있는 명제로부터 논리학적으로 정당한 방법을 사용하여 어떤 명제가 참임을 논증하는 것이다. 
 
@@ -110,13 +110,13 @@
 
           이때 "$p$ 를 만족하면서 동시에 $q_k$ 를 만족하는 대상은 없다" 는 명제를 $k=1$ 부터 $k=n-1$ 까지 모두 증명하였다면 결국 "$p$ 이면 $q_n$ 이다" 를 증명하게 된 것이다. 이것을 "proof by cases" 라고 하는데 사실 귀류법을 여러번 사용한 것에 불과하다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 정리(theorem) : 참임이 증명된 명제 중에서 기본이 되는 것이나 다른 명제를 증명할 때 이용할 수 있는 명제이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 ---
 
@@ -124,7 +124,7 @@
 
 # 수학기초론
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 수학기초론 : 수학의 명제를 옳다고 판단할 근거가 무엇인지 탐구하여 수학의 기초를 다지는 영역이다. 
 
@@ -148,7 +148,7 @@
 
 ## 집합론 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 집합론 : 추상적 대상들의 모임을 연구하는 학문이다. 
 
@@ -162,7 +162,7 @@
 
   - 공리적 집합론이 형식 언어로 정의되는 것에 비해 소박한 집합론은 자연 언어로 정의된다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 집합 : 어떤 기준에 부합하는 대상들의 모임이다. 
 
@@ -180,7 +180,7 @@
 
     - 대한민국 국적을 가진 사람들의 모임
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 원소 : 집합을 이루고 있는 대상이다. 
 
@@ -196,7 +196,7 @@
 
     로 표현한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 집합 표현법 : 집합은 다음 $3$ 가지 방법으로 표현할 수 있다. 
 
@@ -218,7 +218,7 @@
 
   - 벤다이어그램 : 도형을 통하여 집합을 나타내는 방법이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 집합의 분류 : 집합은 다음과 같이 분류된다. 
 
@@ -234,7 +234,7 @@
 
     - 공집합은 $\emptyset$ 으로 표시한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 부분집합 : 집합 $A$ 의 모든 원소가 집합 $B$ 에 속하면 집합 $A$ 는 집합 $B$ 의 부분집합이다. 
 
@@ -262,7 +262,7 @@
 
     $$ C \not \subset B $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 서로 같은 집합 : 두 집합이 서로 같다는 것은 서로가 서로의 부분집합이라는 것이다. 
 
@@ -270,13 +270,13 @@
 
   - 임의의 두 집합 $A, B$ 가 서로 같다는 것은 $A \subset B$ 와 $B \subset A$ 를 만족한다는 것이고 $A = B$ 로 표현한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 진부분집합 : 두 집합 $A, B$ 에 대하여 $A \subset B$ 이고 $A \neq B$ 이면 $A$ 는 $B$ 의 진부분집합이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 부분집합의 개수 : 집합 $A = \{a_1, a_2, \dots, a_n\}$ 일 때 부분집합의 개수는 다음과 같다. 
 
@@ -292,7 +292,7 @@
 
   - 특정 원소 $l$ 개를 원소로 갖지 않는 부분집합의 개수 : $2^{n - l}(단, l \leq n)$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 기수(cardinal number) : 집합의 크기를 나타내는 수이다. 
 
@@ -302,7 +302,7 @@
 
 ### 집합의 연산 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 집합의 연산 : 전체집합 $U$ 의 두 부분집합 $A, B$ 에 대하여 집합의 연산을 다음과 같이 정의한다. 
 
@@ -318,7 +318,7 @@
 
   - 차집합(difference set) : $A-B = \{x | x \in A 그리고 x \not \in B\}$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 집합의 연산 법칙 : 전체집합 $U$ 의 부분집합 $A, B, C$ 에 대하여 다음이 성립한다. 
 
@@ -344,7 +344,7 @@
 
     - $(A \cup B)^C = A^C \cap B^C$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 유한집합의 원소의 개수 : 세 집합 $A, B, C$ 가 유한집합일 때 원소의 개수는 다음과 같은 관계를 갖는다. 
 
@@ -356,7 +356,7 @@
 
 ### 여러가지 집합
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 곱집합(product set) : 각 집합의 원소를 각 성분으로 하는 순서쌍(tuple)들의 집합이다. 
 

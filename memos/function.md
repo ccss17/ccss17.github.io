@@ -2,7 +2,7 @@
 
 # 도형의 방정식 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수의 그래프 : $x$ 축을 독립변수로 하고 각각의 $x$값에 대응하는 $y$ 값의 모든 순서쌍 $(x, y)$ 을 좌표평면에서 시각적으로 나타낸 것이다. 
 
@@ -18,7 +18,7 @@
 
       ![desmos-graph](https://user-images.githubusercontent.com/16812446/75017426-52f5e980-54d0-11ea-9e69-e8a8e3df403d.png)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 직선의 방정식 : 직선의 방정식은 좌표평면에서 두 점을 곧게 이은 선분을 양 끝으로 무한히 늘린 직선을 나타내는 함수이다. 
 
@@ -36,7 +36,7 @@
 
   - 이로부터 모든 직선의 방정식을 대표하는 일차방정식 $ax + by + c = 0$ 를 얻는다. (단, $a \neq 0 또는 b \neq 0$)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 원의 방정식 : 중심이 $C(a, b)$ 이고 반지름의 길이가 $r(r>0)$ 인 원의 방정식은 $(x-a)^2 + (y-b)^2 = r^2$ 이다. 
 
@@ -44,13 +44,13 @@
 
   - 원이란 중심을 기준으로 일정한 거리에 있는 점들의 모임이다. 이 정의에 따라 중심 $C(a, b)$ 로부터 $r$ 만큼 떨어진 임의의 점 $(x, y)$ 을 피타고라스의 정리를 통하여 $(x-a)^2 + (y-b)^2 = r^2$ 로 표현할 수 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 점의 평행이동 : 좌표평면 위의 한 점 $P(x, y)$ 를 $x$ 축의 방향으로 $a$ 만큼, $y$ 축의 방향으로 $b$ 만큼 평행이동한 점 $Q$ 의 좌표는 $Q(x+a, y+b)$ 이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 도형의 평행이동 : 방정식 $f(x, y) = 0$ 이 나타내는 도형을 $x$ 축의 방향으로 $a$ 만큼, $y$ 축의 방향으로 $b$ 만큼 평행이동한 도형의 방정식은 $f(x-a, y-b) = 0$ 이다. 
 
@@ -66,13 +66,13 @@
 
     한편 도형의 방정식을 일반적으로 $x, y$ 를 통하여 나타내기 때문에 $X, Y$ 를 $x, y$ 를 고쳐 최종적으로 평행이동한 도형의 방정식 $f(x-a, y-b)=0$ 를 얻는다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 대칭 : 중심선을 기준으로 양 측이 동일한 대상이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 점의 대칭이동 : 좌표평면 위의 임의의 한 점 $(x, y)$ 를 대칭이동한 결과는 다음과 같다. 
 
@@ -86,7 +86,7 @@
 
   - 직선 $y=x$에 대하여 대칭이동한 점의 좌표 : $(y, x)$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 도형의 대칭이동 : 도형의 방정식 $f(x, y) = 0$ 이 나타내는 도형을 대칭이동한 결과는 다음과 같다. 
 
@@ -102,7 +102,7 @@
 
 # 여러가지 함수 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 항등함수 : 함수 $f: X \to Y$ 에서 정의역 $X$ 의 각 원소가 자기 자신으로 대응되는 함수를 항등함수라 한다.
 
@@ -114,7 +114,7 @@
 
     - 파이썬 프로그래밍 언어로 정의된 함수 `def f(x): return x` 는 항등함수이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 상수함수 : 함수 $f: X \to Y$ 에서 정의역 $X$ 의 모든 원소가 공역의 단 하나의 원소로 대응되는 함수, 즉 $f(x) = c$ ($c$ 는 상수) 인 함수 $f$ 를 상수함수라 한다. 
 
@@ -124,7 +124,7 @@
 
     $f(x) = 5$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 합성함수(composite function) : 두 함수 $f: X \to Y, g: Y \to Z$ 가 주어졌을 때, 두 함수 $f$ 와 $g$ 를 통하여 집합 $X$ 의 임의의 원소 $x$ 에 집합 $Z$ 의 원소 $g(f(x))$ 를 대응시킨 새로운 함수를 $f$ 와 $g$ 의 합성함수라 한다. 
 
@@ -186,7 +186,7 @@
 
       따라서 결합법칙이 성립한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 역함수(inverse function) : 함수 $f: X \to Y$ 가 일대일대응이면 집합 $Y$ 의 임의의 원소 $y$ 에 $f(x) = y$ 인 집합 $X$ 의 원소 $x$ 를 대응시킨 함수 $f^{-1}: Y \to X$ 이다.
 
@@ -226,7 +226,7 @@
 
     - 함수 $f(x) = y = 3x-2$ 의 역함수는 무엇인가. 함수 $f$ 를 $x$ 에 대하여 풀면 $x = \frac{1}{3}y + \frac{2}{3}$ 이므로 역함수는 $f ^{-1}(x) = \frac{1}{3}x+\frac{2}{3}$ 이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 양함수(explicit function) : 하나의 변수 $y$ 가 다른 한 변수 $x$ 에 대한 식으로 제시된 함수일 때, $y$ 를 $x$ 의 양함수라 한다. 
 
@@ -238,7 +238,7 @@
 
     $y = x + 3$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 음함수(implicit function) : $x$ 에 대한 함수 $y$ 가 두 변수 $x, y$ 의 항을 모두 좌변으로 이항하여 $f(x, y) = 0$ 꼴로 주어질 때 $y$ 를 $x$ 의 음함수라 한다. 
 
@@ -266,7 +266,7 @@
 
     이것들은 모두 폐구간 $[-1, 1]$ 에서 $x$ 에 대한 함수가 된다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 초월함수(transcendental function) : 계수가 유리수인 다항함수의 사칙연산(거듭제곱근 연산을 포함)을 유한번 이내에서 아무리 적용하여도 만들 수 없는 함수이다. 
 
@@ -282,7 +282,7 @@
 
 ## 다항함수 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 다항함수(polynomial function) : 다음과 같은 꼴의 함수 $f(x)$ 를 $x$ 에 대한 $n$ 차 다항함수(nth degree polynomial function)라 한다. 
 
@@ -290,7 +290,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 이차함수 
 
@@ -298,7 +298,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 삼차함수 
 
@@ -306,7 +306,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 사차함수 
 
@@ -314,19 +314,19 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수의 최대값 : 어떤 함수의 모든 함수값 중에서 가장 큰 값을 함수의 최대값이라 한다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수의 최소값 : 어떤 함수의 모든 함수값 중에서 가장 작은 값을 함수의 최소값이라 한다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 이차함수의 최대값과 최소값
 
@@ -334,7 +334,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 홀함수(기함수, odd function) : 원점에 대하여 대칭인 함수이다.
 
@@ -352,7 +352,7 @@
 
       ![desmos-graph(7)](https://user-images.githubusercontent.com/16812446/75110012-f3ccdc00-566b-11ea-801b-97894c2b66c0.png)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 짝함수(우함수, even function) : $y$ 축에 대하여 대칭인 함수이다.
 
@@ -370,7 +370,7 @@
 
     - $y=x^2-x$ 는 짝수차항과 홀수차항이 모두 있기 때문에 홀함수도 아니고 짝함수도 아니다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 매개변수 방정식(parameter equation) : 점 $P(x, y)$ 에 대하여 $x=g(t), y=h(t)$ 이면 함수 $f: \Re \to \Re ^{2}, t \mapsto (x, y)$ 를 생각할 수 있다. 이때 $x=g(t), y=h(t)$ 를 $t$ 를 매개변수로 하는 도형의 매개변수 방정식이라 한다. 
 
@@ -378,7 +378,7 @@
 
 ## 유리함수
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 유리함수(rational function) : 함수 $y=f(x)$ 에서 $f(x)$ 가 $x$ 에 대한 유리식일 때, 이 함수를 유리함수라 한다.
 
@@ -390,7 +390,7 @@
 
     - 다항함수와 분수함수의 차이점은 다항함수의 정의역이 실수 전체 집합인데 비해 분수함수의 정의역은 분모를 $0$ 이 되게 하는 실수를 제외한 실수 전체 집합이라는 것이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 유리함수의 그래프 : $y = \frac{ax+b}{cx+d}$(단, $ad-bc \neq 0, c \neq 0$)의 그래프는 함수 $y = \frac{k}{x-p}+q$(단, $k \neq 0$) 의 꼴로 변형할 수 있으므로 다음이 성립한다. 
 
@@ -412,13 +412,13 @@
 
 ## 무리함수
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 무리함수 : 함수 $y=f(x)$ 에서 $f(x)$ 가 $x$ 에 대한 무리식일 때, 이 함수를 무리함수라 한다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 무리함수의 그래프 : $y = \sqrt[]{ax+b}+c$(단, $a \neq 0$) 의 그래프는 $y=\sqrt[]{a(x-p)}+c$ 로 변형할 수 있으므로 다음이 성립한다. 
 
@@ -452,7 +452,7 @@
 
 ## 지수함수 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 지수함수 : $a$ 가 $1$ 이 아닌 양수일 때, 임의의 실수 $x$ 에 $a^x$ 를 대응시킨 함수 $y = a^x$ 이다. 
 
@@ -478,7 +478,7 @@
 
     ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/73837415-c652f680-4854-11ea-8eac-410e5f17204b.png)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 지수방정식(exponential equation) : 지수에 미지수를 포함하고 있는 방정식이다. 
 
@@ -488,7 +488,7 @@
 
     $x^{x+3} = x^{2x-1}$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 지수부등식(exponential inequality) : 지수에 미지수를 포함하고 있는 부등식이다. 
 
@@ -502,7 +502,7 @@
 
 ## 로그함수
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 로그함수 : $a$ 가 $1$ 이 아닌 양수일 때, 임의의 양의 실수 $x$ 에 $\log_{a} x$ 를 대응시키는 함수 $y = \log_{a} x$ 를 $a$ 를 밑으로 하는 로그함수라 한다. 
 
@@ -524,7 +524,7 @@
 
     ![desmos-graph(5)](https://user-images.githubusercontent.com/16812446/73849242-f0b0ae00-486c-11ea-8587-58a29b4e4606.png)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 로그방정식(logarithm equation) : 로그의 진수($value$) 또는 밑($base$)에 미지수를 포함하고 있는 방정식이다. 
 
@@ -534,7 +534,7 @@
 
     $\log_{2} (x+2) = \log_{2} 2x$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 로그부등식(logarithm inequality) : 로그의 진수 또는 밑에 미지수를 포함하고 있는 부등식이다. 
 
@@ -548,7 +548,7 @@
 
 ## 특별한 함수 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 가우스 함수 : 실수 $x$ 에 대하여 $x$ 보다 크지 않은 최대의 정수를 대응시키는 함수이다. 
 
@@ -564,7 +564,7 @@
 
   - 이 함수를 가우스 함수라 부르는 것은 대한민국을 제외하면 보편적이지 않으니 주의해야 한다. 버림함수 또는 바닥함수라고도 불리운다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 주기함수 : $y = f(x)$ 의 정의역에 속하는 모든 실수 $x$ 에 대하여 $f(x+p) = f(x)$ 를 만족시키는 $0$ 이 아닌 상수 $p$ 가 존재할 때 이 함수를 주기함수라 한다. 
 
@@ -582,7 +582,7 @@
 
     $y = \tan x$ 는 주기가 $\pi$ 인 주기함수이다. 모든 실수 $x$ 에 대하여 관계 $\tan x = \tan(x + \pi)$ 가 성립한다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 뉴턴의 다항식 보간법(polynomial interpolation) : $(n+1)$ 개의 점을 지나는 $n$ 차 다항함수의 정확한 식을 얻는 방법이다.
 
@@ -628,7 +628,7 @@
 
     이제 이 이차함수 $f(x)$ 가 $(4.17, 3)$ 을 지나는 것을 이용하여 마지막 미지수 $a$ 가 $4$ 라는 것을 밝힐 수 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 시그모이드 함수(sigmoid function) : 다음과 같이 표현되는 함수를 시그모이드 함수라 한다. 
 
@@ -648,7 +648,7 @@
 
     - $$x = 0 \to \zeta _a(0) = \frac{1}{2}$$ 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 표준 시그모이드 함수 : $a=1$ 일 때의 시그모이드 함수, 즉
 
@@ -662,7 +662,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 밑이 무리수 $e$ 인 지수함수의 그래프 연구 k
 

@@ -2,7 +2,7 @@
 
 # 수식
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 수식 : 수학적 추상 대상물의 관계를 표현한 형식 언어이다. 
 
@@ -40,7 +40,7 @@
 
     - 부등식 $x + 2 > 3$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 미지수(변수, variable) : 수식에 따라 변하는 값이다. 또는 아직 정해지지 않거나 구해야 하는 수를 뜻한다. 
 
@@ -48,7 +48,7 @@
 
   - 주로 $x, y, z, w$ 를 사용한다. 미지수가 시간일 경우 $t$ 를, 길이일 경우 $l$ 을, 너비(width)일 경우 $w$ 를, 높이일 경우 $h$ 를, 거리일 경우 $d$ 를, 각도일 경우 $\theta$ 를, 반지름일 경우 $r$ 등으로 나타낸다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 독립변수(independant variable) : 독립적으로 변하며 다른 변수에 영향을 주는 변수이다.
 
@@ -62,7 +62,7 @@
 
   - 인공지능에서 특징(feature) 라고 부른다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 종속변수(dependant variable) : 독립변수에 영향을 받아 변하는 변수이다.
 
@@ -72,7 +72,7 @@
 
   - 컴퓨터공학에서 출력을 나타낸다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 방정식(equation) : 미지수의 값에 따라 참이 되기도 하고 거짓이 되기도 하는 등식이다. 
 
@@ -86,7 +86,7 @@
 
     - $x^2 - 5x + 6 = 0$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 불능 : 해가 존재하지 않는 방정식이다.
 
@@ -96,7 +96,7 @@
 
     - $0x = 7$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 항등식 : 등식의 변수가 복소수 범위에서 어떤 값이 되든 항상 참인 등식이다. 
 
@@ -110,7 +110,7 @@
 
     - $\cos x + i\sin x = e^{ix}$ (오일러공식)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 계수(coefficient) : 변수에 곱해진 상수이다. 
 
@@ -120,13 +120,13 @@
 
     $2x^4$ 에서 계수는 $2$ 이고, $x^2$ 에서 계수는 $1$ 이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 항 : 계수와 변수로 이루어진 대수적인 수의 표현방식이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 단항식(monomial) : 수와 문자 간에 곱셈만을 이요해 표현한 식이다.
 
@@ -142,7 +142,7 @@
 
     - $3xy^2$ 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 수식의 분류 
 
@@ -158,7 +158,7 @@
 
 ## 다항식
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 다항식(polynomial) : 단항식들의 덧셈과 뺄셈으로 이루어진 식이다.
 
@@ -168,7 +168,7 @@
 
     $x^2 -2x + 3$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 차수(degree) : 다항식의 항에서 특정 변수를 거듭제곱한 지수를 그 항의 그 변수에 대한 차수라고 한다. 
 
@@ -178,7 +178,7 @@
 
     $x^2 -2x +3$ 에서 항 $x^2$ 의 차수는 $2$ 이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 최고차항 : 가장 높은 차수의 항이다. 
 
@@ -188,7 +188,7 @@
 
     $5x^2 +1x +7$ 에서 최고차항은 $5x^2$ 이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 인수 : 하나의 다항식이 두 개 이상의 단항식이나 다항식의 곱으로 표현될 때, 곱해진 식을 인수라고 한다.
 
@@ -198,7 +198,7 @@
 
     $x^2+(a+b)x+ab = (x+a)(x+b)$ 에서 인수란 $(x+a)$ 와 $(x+b)$ 이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 다항식의 연산에 대한 성질 : $A, B, C$ 를 다항식이라 할 때 다음 법칙이 성립한다.
 
@@ -238,13 +238,13 @@
 
     - **기본연산과 저장과 할당은 매우 추상적이라서 어떤 것으로든 쉽게 구체화될 수 있다는 장점이 있는 것 같다. 가령 로봇의 팔을 드는 것을 어떤 장소에 신호를 주는 것으로 변환한다면 컴퓨터의 "저장" 이라는 추상적 개념을 사용하여 특정 장소에 특정 값을 저장하는 것으로 구현할 수 있는 것이다.**
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 일차방정식(선형방정식, linear equation) : 최고차항의 차수가 $1$ 을 넘지 않는 다항 방정식이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 이차방정식 : 최고차항의 차수가 $2$ 인 다항 방정식이다. 
 
@@ -256,7 +256,7 @@
 
     $$ x = \frac{-b \pm \sqrt[]{b^2-4ac}}{2a} (단, b^2-4ac \ge 0)$$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 다항방정식 : 미지수에 대한 다항식으로만 이루어진 방정식이다. 
 
@@ -266,7 +266,7 @@
 
     $$ \sum_{i=0}^na_ix^i = 0 $$ 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 곱셈공식
 
@@ -298,7 +298,7 @@
 
   - $(a^2+ab+b^2)(a^2-ab+b^2) = a^4+a^2b^2+b^4$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 다항식의 나눗셈
 
@@ -306,7 +306,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 조립제법
 
@@ -314,7 +314,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 다항식의 여러가지 성질
 
@@ -332,7 +332,7 @@
 
     - $f(\alpha)=0$ 이면 $f(x)$ 는 $x-\alpha$ 로 나누어 떨어진다. 즉 $f(x) = (x-\alpha)Q(x)$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 인수분해 : 하나의 다항식을 두 개 이상의 인수들의 곱으로 나타내는 것이다.
 
@@ -346,7 +346,7 @@
 
 ## 부등식
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 부등식(inequality) : 두 수 및 두 식에 대한 크기 비교를 나타내는 식이다.
 
@@ -362,7 +362,7 @@
 
   - $a \le b$ : $a$ 가 $b$ 보다 작거나 같다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 절대부등식 : 모든 변수의 값에 대하여 성립하는 변수 있는 부등식이다.
 
@@ -394,7 +394,7 @@
 
     $$ (\sum_{k=1}^{n}a_k^2)(\sum_{k=1}^{n}b_k^2) \geq (\sum_{k=1}^{n}a_kb_k)^2 (단, 등호는 \frac{b_1}{a_1}=\frac{b_2}{a_2}=\dots=\frac{b_n}{a_n} 일 때 성립) $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 조건부등식 : 특정한 범위의 변수의 값아래에서만 성립하는 변수 있는 부등식이다.
 
@@ -406,7 +406,7 @@
 
 ## 유리식 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 유리식 : 두 다항식 $A, B$ 의 비이다. 
 
@@ -430,7 +430,7 @@
 
     - $\frac{x+1}{x ^{2}+x+1}$ (분수식)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 분수식 : 다항식이 아닌 유리식이다. 
 
@@ -442,19 +442,19 @@
 
     - $\frac{x+1}{x ^{2}+x+1}$ 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 가분수식 : 분자의 차수가 분모의 차수보다 큰 분수식이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 진분수식 : 분자의 차수가 분모의 차수보다 작거나 같은 분수식이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 다항식의 연산 : (너무 직관적이라 일단은 나눗셈에 대하여서만 메모해둠)
 
@@ -474,7 +474,7 @@
 
 ## 무리식 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 무리식 : 근호 안에 문자를 포함하는 식 중에서 유리식으로 나타낼 수 없는 식이다. 
 
@@ -486,7 +486,7 @@
 
 ## 연립방정식
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 연립방정식(simultaneous equation) 또는 방정식계(system of equations) : 2개 이상의 미지수를 포함하는 방정식의 유한 집합이다.
 
@@ -500,7 +500,7 @@
 
 ## 대수학의 기본 정리
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 대수학의 기본 정리 : 복소수 계수의 $n$ 차 방정식은 적어도 하나의 복소수 근을 갖는다. (단, $n$ 은 자연수)
 
@@ -508,19 +508,19 @@
 
   - 가우스가 처음으로 증명하였다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - $k$중근 : $n$차방정식 $f(x)=0$ 의 좌변을 인수분해했을 때 정확히 $k$개의 $(x-\alpha)$ 라는 인수가 있으면, $\alpha$ 를 $f(x)=0$ 의 $k$ 중근이라 한다.
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 대수학의 기본 정리의 따름 정리 : 복소수 계수의 $n$ 차방정식에서 $k$중근을 $k$ 개의 근으로 셀 때, 정확히 $n$ 개의 복소수 근을 갖는다. (단, $k, n$은 자연수이고 $n \geq k$)
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 가우스 기호 
 
@@ -532,7 +532,7 @@
 
 ## 수학적 모델링
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 모델(model ; 모형) : 어떤 대상들의 대표성을 가진 것이다. 
 
@@ -542,7 +542,7 @@
 
     네트워크 모델(OSI 7 Layer), 패션 모델, 분자모델, 경제적 합리적 모델, 비즈니스 모델, 치아 모형
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 수학적 모델링 : 수학을 기반으로 연구 대상의 중요한 특성을 나타낼 모델을 만드는 것이다. 
 
@@ -558,7 +558,7 @@
 
   - 수학적 모델링은 대상을 완전하게 대체할 수는 없다. 가령 중력 모델만으로 실제 물체가 떨어지는 것을 완전히 표현할 수 없는데 그 이유 중 하나는 수식에 공기 저항력이 배제되어 있기 때문이다. 그러나 대상의 불변요소를 고정시키고 최대한 단순화 시켜서 대상을 이해하는데에 많은 도움을 준다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 수학적 모델링의 과정 
 

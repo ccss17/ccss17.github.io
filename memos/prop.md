@@ -2,7 +2,7 @@
 
 # 확률론
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 이산수학(discrete mathematics) : 실수라는 마당(field) 위에서 전개되는 것이 아닌 자연수라는 이산(discrete)적 마당 위에서 전개되는 수학이다. 
 
@@ -48,7 +48,7 @@
 
     - 그러나 그는 또 이렇게 말했다. "모든 사람은 세상을 자기에게 유리한 방식으로 단순화시킨 후 이해하려 하고 그렇게 훼손된 세상을 자기 마음 속에 들여서 현실 세상을 대체하려고 한다."
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 시행(experiment) : 같은 조건에서 반복할 수 있고 그 결과가 우연에 의하여 좌우되는 실험이나 관찰이다.
 
@@ -60,7 +60,7 @@
 
     이 시행은 같은 조건에서 반복할 수 있고 그 결과가 우연에 의하여 좌우되므로 시행이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 표본공간(sample space) : 어떤 시행에서 일어날 수 있는 모든 가능한 결과 전체의 집합이다.
 
@@ -74,7 +74,7 @@
 
     $$ S = \{1,2,3,4\}, A = \{2,4\} $$
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 사건(event) : 시행에서 관찰자가 관심을 갖는 결과의 집합이다. 
 
@@ -88,7 +88,7 @@
 
   - 이 예시와 정의에서 알 수 있듯 사건은 집합으로 나타내고 집합과 매우 유사한 성질을 갖는다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - $\backsim$ 사건 : 어떤 시행에서 $\backsim$ 을 만족하는 결과의 집합이다.
 
@@ -96,7 +96,7 @@
 
   - 즉 표본공간의 부분집합이다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 근원사건 : 어떤 시행에서 얻을 수 있는 사건 중 더 이상 나눌 수 없는 기본적인 사건이다. 
 
@@ -112,7 +112,7 @@
 
     에서 사건 $\{1\}$ 은 원소가 $1$ 인 부분집합이므로 근원사건이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 전사건 : 어떤 시행에서 반드시 일어나는 사건이다.
 
@@ -124,7 +124,7 @@
 
     주사위를 던지는 시행에서 "$6$ 이하의 눈이 나오는 사건" 은 전사건이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 공사건 : 어떤 시행에서 절대 일어날 수 없는 사건이다. 
 
@@ -136,7 +136,7 @@
 
     주사위를 던지는 시행에서 "$7$ 이상의 눈이 나오는 사건" 은 공사건이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 경우의 수 : 어떤 사건이 일어날 수 있는 경우의 가짓수를 수로 표현한 것이다. 
 
@@ -144,7 +144,7 @@
 
 ### 합사건, 곱사건, 여사건 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 합사건(sum event) : 두 사건 $A, B$ 에 대하여 $A$ 또는 $B$ 가 일어나는 사건을 $A$ 와 $B$ 의 합사건이라 한다. 
 
@@ -170,7 +170,7 @@
 
     이다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 곱사건(product event) : 두 사건 $A, B$ 에 대하여 $A, B$ 가 동시에 일어나는 사건을 $A$ 와 $B$ 의 곱사건이라 한다. 
 
@@ -196,7 +196,7 @@
 
     이다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 배반사건 : $A, B$ 가 동시에 일어나지 않을 때 $A$ 와 $B$ 를 배반사건이라 한다. 
 
@@ -228,7 +228,7 @@
 
     이므로 $A$ 와 $B$ 는 배반이 아니다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 여사건(complementary event) : 두 사건 $A, B$ 에 대하여 $A$ 가 일어나지 않는 사건을 $A$ 의 여사건이라 한다.
 
@@ -264,7 +264,7 @@
 
 ## 경우의 수 계산 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 합의 법칙(rule of sum) : 사건 $A_1, A_2, \dots, A_n$ 이 동시에 일어나지 않을 때
 
@@ -292,7 +292,7 @@
 
     주사위 $2$개를 던져서 나온 눈의 수의 합이 $7$ 또는 $8$ 인 경우의 수를 구하기 위해서는 두 독립사건 '주사위의 합이 $7$ 이 될 경우의 수'와 '주사위의 합이 $8$ 이 될 경우의 수'의 경우의 수를 합하면 된다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 곱의 법칙(rule of product) : 사건 $A_1, A_2, \dots, A_n$ 이 연이어 일어날 때
 
@@ -322,7 +322,7 @@
 
     주사위를 $2$ 번 던져 짝수가 나온 후 홀수가 나올 경우의 수는 짝수가 나올 경우의 수 $3$ 가지 ($2, 4, 6$)에 홀수가 나올 경우의 수 $3$ 가지($1, 3, 5$) 를 곱하여 $3 \times 3 = 9$ 이다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 합의 법칙의 역연산 : 사건 $A_1, A_2, \dots, A_n$ 이 동시에 일어나지 않을 때
 
@@ -340,7 +340,7 @@
 
     합의 법칙에서 특정 사건이 일어나는 것을 제거하기 위하여 사용하면 된다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 곱의 법칙의 역연산 : 사건 $A_1, A_2, \dots, A_n$ 이 연이어 일어날 때
 
@@ -358,7 +358,7 @@
 
     합의 법칙에서 특정 사건이 일어나는 것을 제거하기 위하여 사용하면 된다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 계승(factorial) : $1$ 부터 $n$ 까지의 모든 자연수의 곱
 
@@ -378,7 +378,7 @@
 
 ### 순열
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 순열(비복원추출, permutation)  : 서로 다른 $n$ 개에서 중복되지 않게 $r$ 개를 택하여 일렬로 나열하는 것을 $n$ 에서 $r$ 개를 택하는 순열이라 한다. 
 
@@ -442,7 +442,7 @@
 
     을 얻는다. ■ 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 원순열(circular permutation) : 서로 다른 $n$ 개를 원형으로 배열하는 경우의 수
 
@@ -500,7 +500,7 @@
 
     이다. ■ 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 중복순열(복원추출)(repeated permutation) : 서로 다른 $n$ 개에서 중복을 허락하여 $r$ 개를 택하여 일렬로 나열하는 것을 $n$ 개에서 $r$ 개를 택하는 경우의 수 
 
@@ -542,7 +542,7 @@
 
     이다. ■ 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 같은 것이 있는 순열 : $n$ 개 중에 서로 같은 것이 각각 $p$ 개, $q$ 개, $\dots$, $r$ 개씩 있고 $p + q + \dots + r = n$ 일 때 
 
@@ -596,7 +596,7 @@
 
 ### 조합
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 조합(combination) : 서로 다른 $n$ 개에서 순서를 생각하지 않고 중복되지 않게 $r$ 개를 택하는 것을 $n$ 개에서 $r$ 개를 택하는 조합
 
@@ -650,7 +650,7 @@
 
   - 시행에서 사건을 결과의 집합이라 했었는데 사건을 파악하기 위하여 수학 기호로 추상화시켜 표현해야 한다. 이때 동시에 일어나는 사건은 순서가 있는 순서쌍 $(1,1),(3,5)$ 으로 표현한다. 순열도 순서가 있는 사건을 표현해야 하므로 순서쌍으로 표기하면 된다. 반면 조합은 순서가 상관 없기에 시행의 결과를 $\{A,B\} \{A, C\}$ 같이 집합으로 표현하면 된다. 집합은 $\{A,B\}=\{B,A\}$ 이기 때문이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 중복조합(repeated combination) : 서로 다른 $n$ 개에서 순서를 생각하지 않고 중복을 허락하여 $r$ 개를 택하는 경우의 수
 
@@ -704,7 +704,7 @@
 
     이다. ■ 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 순열, 중복순열, 조합, 중복조합의 비교 
 
@@ -753,7 +753,7 @@
 
 ## 이항정리 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 이항정리(binomial theorem) : 자연수 $n$ 에 대하여 $(a + b) ^{n}$ 을 전개하면 
 
@@ -809,7 +809,7 @@
 
     이다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 이항계수 : 이항정리의 정의에서 전개식 $(a+b) ^{n}$ 의 계수들
 
@@ -819,7 +819,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 전개식의 일반항 : 이항정리의 정의에서 전개식 $(a+b) ^{n}$ 의 일반항 
 
@@ -845,7 +845,7 @@
 
     이므로 계수는 $-7000$ 이다. ■ 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 삼항정리(trinomial theorem)  : 자연수 $n$ 에 대하여 $(a + b + c) ^{n}$ 의 전개식에서 $p+q+r = n$ 에 대한 $a ^{p}b ^{q} c ^{r}$ 일반항은
 
@@ -893,7 +893,7 @@
 
     이다. ■ 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 이항계수의 성질 : 이항계수는 다음 성질을 갖는다. 
 
@@ -989,7 +989,7 @@
 
 ## 확률
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 확률(probability) : 모든 경우의 수에 대하여 특정한 사건이 발생하는 경우의 수의 비율이다. 
 
@@ -1011,7 +1011,7 @@
 
   - 사건 $A$ 가 일어나지 않을 확률은 $1 - p$ 이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 사건의 경우의 수 : 사건 $A$ 에 대한 경우의 수를
 
@@ -1027,7 +1027,7 @@
 
     로 나타낸다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 수학적 확률(mathematical probability) : 표본공간 $S$ 안에서 각각의 근원사건이 일어날 가능성이 같을 때
 
@@ -1039,7 +1039,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 통계적 확률 : 같은 시행을 $n$ 번 반복하여 사건 $A$ 가 일어난 횟수를 $r _{n}$ 이라 할 때 
 
@@ -1057,7 +1057,7 @@
 
     이고 이 극한의 수렴값은 수학적 확률과 같아진다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 기하학적 확률 : 영역 $S$ 안에서 각각의 점을 잡을 가능성이 같고 $\text{sum} (A)$ 을 영역 $A$ 의 넓이라고 할 떄
 
@@ -1069,7 +1069,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 확률의 성질 : 전사건 $S$ 과 임의의 사건 $A$ 에 대하여 다음이 성립한다. 
 
@@ -1083,13 +1083,13 @@
 
 ### 확률의 덧셈정리
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 확률의 덧셈 : 두 사건 $A$ 와 $B$ 가 동시에 일어나지 않을 때, 사건 $A$ 와 $B$ 가 발생할 확률을 각각 $p, q$ 라 하면 사건 $A$ 또는 $B$ 가 발생할 확률은 $p + q$ 이다. 
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 확률의 곱 : 두 사건 $A$ 와 $B$ 가 서로 영향을 미치지 않을 때, 사건 $A$ 와 $B$ 가 발생할 확률을 각각 $p, q$ 라 하면 사건 $A$ 또는 $B$ 가 동시에 발생할 확률은 $p \times q$ 이다. 
 
@@ -1097,7 +1097,7 @@
 
   - ???????? "동시에" 라는 말 때문에 혼란이 일어나는 것 같은데 서로 다른 사건을 동시에 일어나게 하는 건 순전히 전체 사건을 정의하는 사람 마음이 아닌가?
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 확률의 덧셈정리(addition theorem of probability) : 표본공간 $S$ 의 부분집합인 두 사건 $A, B$ 에 대하여 
 
@@ -1117,7 +1117,7 @@
 
     **구체화 필요**
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 여사건의 확률 : 표본공간 $S$ 의 부분집합인 사건 $A$ 의 여사건 $A ^{C}$ 가 일어날 확률은 
 
@@ -1133,7 +1133,7 @@
 
 ### 조건부 확률 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 조건부확률(conditional probability) : 확률이 $0$ 이 아닌 사건 $A$ 가 일어났다고 가정할 때
 
@@ -1155,7 +1155,7 @@
 
     **구체화 필요**
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 확률의 곱셈정리 : $P(A) \neq 0, P(B) \neq 0$ 일 때 두 사건 $A, B$ 가 동시에 일어날 확률은 
 
@@ -1171,7 +1171,7 @@
 
 ## 사건의 독립과 종속
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 독립사건(independent) : 두 사건 A 와 B 에서 한 사건의 결과가 다른 사건에 영향을 주지 않을 때 A 와 B 를 독립사건이라 한다. 
 
@@ -1207,7 +1207,7 @@
 
     **구체화 필요**
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 종속사건(dependent) : 두 사건 A 와 B 에서 한 사건의 결과가 다른 사건에 영향을 줄 때 A 와 B 를 종속사건이라 한다. 
 
@@ -1221,7 +1221,7 @@
 
     **구체화 필요**
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 독립시행(independent trials) : 동일한 시행을 반복하여 나타나는 시행의 결과가 서로 독립일 때, 이 시행을 독립시행이라고 한다.
 
@@ -1245,7 +1245,7 @@
 
 ## 전확률 공식과 베이즈 정리 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 전확률 공식(total probability) : 공사건이 아닌 $n$ 개의 사건 $A_1, A_2, \dots, A_n$ 이
 
@@ -1267,7 +1267,7 @@
 
     **구체화 필요**
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 베이즈 정리(bayes theorem) : 전확률 공식의 정의의 전제조건을 만족할 때 사건 $B$ 가 일어났을 때 사건 $A_i$ 의 조건부확률은 
 

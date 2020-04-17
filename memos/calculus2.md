@@ -4,7 +4,7 @@
 
 # 미적분학 Calculus 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 미적분학(Calculus) : 수학의 한 분야로 극한, 함수, 미분, 적분, 무한급수를 다루는 학문이다. 
 
@@ -46,7 +46,7 @@
 
 # 미분
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 미분(derivative) : 특정 함수의 어떤 지점에서의 접선(또는 접평면)을 구하는 연산이다. 
 
@@ -62,7 +62,7 @@
 
     즉 미분은 대상의 움직임을 수학적으로 모델링할 수 있는 문을 열어주었다. 움직임이란  마음의 움직임, 몸의 움직임, 자연현상의 움직임, 분자의 움직임, 뉴런의 움직임, 행성의 움직임, 경제활동의 움직임 등등 모든 움직임 등등 세상 모든 움직임을 다 포함하는 것이다. 이러한 자연적 대상들의 움직임을 수학적으로 모델링하면 수학의 이점이 곧 바로 나타난다. 수학의 이점이란 대상의 특성을 추상화를 통해 단순화함으로써 명확히 밝혀서 볼 수 있게 하는 것이다. 명확히 볼 수 있는 것의 이점은 대상을 자유자재로 다룰 수 있게 된다는 것이다. 또 이러한 능력을 갖게 되는 것의 장점은 자신보다 덜 명확히 보는 사람들에 대한 지배력이 늘어난다는 것이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 증분(increment) : 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $b$ 까지 변할 때, $x$ 의 값의 변화량 $b-a$ 를 $x$ 의 증분, $y$ 값의 변화량 $f(b) - f(a)$ 를 $y$ 의 증분이라 한다. 
 
@@ -70,7 +70,7 @@
 
   - $x$ 의 증분과 $y$ 의 증분을 각각 $\Delta x$, $\Delta y$ 로 표현한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 평균변화율(average rate of change) : 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $b$ 까지 변할 때의 평균변화율은
 
@@ -96,7 +96,7 @@
 
       이다. 이는 $x$ 가 $1$ 변할 때 $y$ 가 평균적으로 $2$ 변했다는 뜻이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 미분계수(derivative) 또는 순간변화율(instantaneous rate of change) : 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $a+\Delta x$ 까지 변할 때의 평균변화율 $\frac{\Delta y}{\Delta x}$ 에서 $\Delta x \to 0$ 일 때의 극한값, 즉
 
@@ -168,7 +168,7 @@
 
 # 미분 가능성
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 미분 가능한 함수 : 함수 $f(x)$ 의 $x=a$ 에서의 미분계수 $f'(a)$ 가 존재할 때, 함수 $f(x)$ 는 $x=a$ 에서 미분가능하다고 한다. 
 
@@ -182,7 +182,7 @@
 
   - 또한 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여, 즉 개구간 $(\infty, -\infty)$ 에서 미분가능할 때, 함수 $f(x)$ 를 미분가능한 함수라고 한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 미분가능성과 함수의 연속 : 함수 $f(x)$ 가 $x=a$ 에서 미분가능하면 $f(x)$ 는 $x=a$ 에서 연속이다.
 
@@ -238,7 +238,7 @@
 
 # 도함수 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 도함수(derivatives, derived function, derivative of a function) : 미분가능한 함수 $y=f(x)$ 의 정의역의 각 원소 $x$ 에 미분계수 $f'(x)$ 를 대응시켜 만든 새로운 함수를 함수 $y=f'(x)$ 의 도함수라 한다. 
 
@@ -316,7 +316,7 @@
 
 ## 여러가지 함수의 도함수 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 정수일 때, $y' = f'(x) = nx ^{n-1}$ 
 
@@ -334,7 +334,7 @@
 
   - $x^n$ 이 계속해서 $nx ^{n-1}$ 만큼 변화한다는 것이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 상수 함수 $y = c$ 의 도함수 : $y'=0$ 
 
@@ -354,7 +354,7 @@
 
   - 상수함수는 변하지 않고 일정하기 때문에 그것의 변화량을 보여주는 도함수가 $0$ 인 것을 직관적으로 이해할 수 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 상수배 함수 $y =cf(x)$ 의 도함수 : $y' = cf'(x)$
 
@@ -366,7 +366,7 @@
 
   - 어떤 함수에 실수배를 하면 그 변화율이 정확히 실수배 된다는 것을 것을 알 수 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 합차 함수 $y=f(x)\pm g(x)$ 의 도함수 : $y'=f'(x)\pm g'(x)$
 
@@ -384,7 +384,7 @@
 
   - 이를 통해 함수의 합과 차의 도함수는 각각의 함수의 도함수를 합과 차와 동일하다는 것을 알 수 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 곱 함수 $y=f(x)g(x)$ 의 도함수 : $y'=f'(x)g(x)+f(x)g'(x)$
 
@@ -404,7 +404,7 @@
 
 #### 연쇄법칙(Chain Rule)
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 합성함수 $y=g(f(x))$ 의 도함수(연쇄법칙, Chain Rule) : $y' = g'(f(x))f'(x)$
 
@@ -538,7 +538,7 @@
 
     이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수 $y=f(x)$ 에 대한 제곱 함수 $y ^{n} = \{f(x)\} ^{n}$ 의 도함수 : 
 
@@ -610,7 +610,7 @@
 
     이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 몫 함수 $y = \frac{1}{f(x)}$ 의 미분법 : 몫 함수 $y = \frac{1}{f(x)}(f(x) \neq 0)$ 의 도함수는 다음과 같다. 
 
@@ -634,7 +634,7 @@
 
     이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 분수 함수 $y = \frac{f(x)}{g(x)}$ 의 미분법 : 몫 함수 $y = \frac{f(x)}{g(x)}(g(x) \neq 0)$ 의 도함수는 다음과 같다. 
 
@@ -658,7 +658,7 @@
 
 ## 도함수의 활용 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 접선의 방정식 : 함수 $f(x)$ 가 $x=a$ 에서 미분가능할 때, 곡선 $y=f(x)$ 위의 점 $(a, f(a))$ 에서의 접선의 기울기가 $f'(a)$ 이므로 이 점에서 접선의 방정식은 다음과 같다. 
 
@@ -666,7 +666,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 접선의 방정식을 특정하는 $2$ 가지 유형 
 
@@ -690,7 +690,7 @@
 
       - $y - f(a) = f'(a)(x-a)$ 로 접선의 방정식을 구한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 매개변수로 나타낸 곡선의 접선의 방정식 
 
@@ -698,7 +698,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 음함수로 나타낸 곡선의 접선의 방정식 
 
@@ -706,7 +706,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 실근의 근사값 구하기(뉴턴의 방법) : 뉴턴은 기하학적 아이디어로 실근의 근사값을 구하는 알고리즘을 고안했고 그 생각을 수학적으로 엄밀하게 정의한 것은 다음과 같다. 
 
@@ -740,7 +740,7 @@
 
 # 롤의 정리, 평균값 정리
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 롤의 정리 : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속이고 개구간 $(a, b)$ 에서 미분가능할 때, $f(a) = f(b)$ 이면 $f'(c) = 0$ 인 $c$ 가 개구간 $(a, b)$ 에 적어도 하나 존재한다. 
 
@@ -788,7 +788,7 @@
 
   - 위에서 단순화 시킨 모든 대상들에서 공통적으로 $f'(c) = 0$ 이 존재한다. 따라서 단순화된 개별적인 대상들을 일반화시켜 롤의 정리로 만든다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 평균값 정리 : 함수가 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속이고 개구간 $(a, b)$ 에서 미분가능하면
 
@@ -828,7 +828,7 @@
 
     인 것을 알 수 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 평균값 정리의 따름정리 : 평균값 정리를 통하여 곧바로 유도할 수 있는 중요한 정리가 있다. 
 
@@ -870,7 +870,7 @@
 
 # 함수의 증가와 감소 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수의 증가 : 함수 $f(x)$ 가 어떤 구간에 속하는 임의의 두 실수 $a, b$ 에 대하여 $a < b$ 일 때 $f(a) < f(b)$ 이면 $f(x)$ 는 이 구간에서 증가한다고 한다. 
 
@@ -892,7 +892,7 @@
 
     가 성립하므로 함수 $f(x) = x^2$ 는 $x=2$ 에서 증가상태에 있다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수의 감소 : 함수 $f(x)$ 가 어떤 구간에 속하는 임의의 두 실수 $a, b$ 에 대하여 $a < b$ 일 때 $f(a) > f(b)$ 이면 $f(x)$ 는 이 구간에서 감소한다고 한다. 
 
@@ -906,7 +906,7 @@
 
     가 성립하면 함수 $f(x)$ 가 $x=a$ 에서 감소상태에 있다고 한다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수의 증가의 판정 : 함수 $f(x)$ 가 어떤 개구간에서 미분가능할 때, 이 구간의 모든 $x$ 에 대하여 $f'(x) > 0$ 이면 $f(x)$ 는 이 구간에서 증가한다.
 
@@ -972,7 +972,7 @@
 
     > 이제 우리는 이 증명으로 증가하는 것을 감소한다거나 감소하는 것을 증가한다는 거짓된 생각, 즉 잘못된 생각을 갖지 않게 되었다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수의 감소의 판정 : 함수 $f(x)$ 가 어떤 개구간에서 미분가능할 때, 이 구간의 모든 $x$ 에 대하여 $f'(x) < 0$ 이면 $f(x)$ 는 이 구간에서 감소한다.
 
@@ -984,7 +984,7 @@
 
 # 함수의 극대와 극소 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수의 극대와 극소 : 함수 $f(x)$ 에서 $x=a$ 를 포함하는 어떤 개구간에 속하는 모든 $x$ 에 대하여 
 
@@ -1004,7 +1004,7 @@
 
     위 함수의 그래프는 왼쪽 뾰족한 부위에 극대값이 있고 오른쪽 밑의 아래로 뾰족한 부분에 극소값이 있는 것이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수의 극대와 극소의 판정 : 미분가능한 함수 $f(x)$ 에 대하여 $f'(a) = 0$ 일 때, $x=a$ 의 좌우에서 
 
@@ -1052,7 +1052,7 @@
 
     - 그 역은 성립하지 않는다. $f'(a) = 0$ 이라고 해서 $f(x)$ 가 $x=a$ 에서 극값을 갖는 것은 아니다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 이계도함수를 이용한 함수의 극대와 극소의 판정 : 함수 $f(x)$ 에 대하여 $f'(x), f''(x)$ 가 존재하고 $f'(x)=0$ 일 때,
 
@@ -1072,7 +1072,7 @@
 
   > 그러므로 수학적 대상들의 관계를 많이 더 많이 밝혀두면 둘수록 특정한 대상에 대한 계산이 훨씬 쉬울 때 그것과 그것과의 관계들을 통하여 결정되는 다른 대상들을 쉽게 알 수 있다. 따라서 대상의 수학적 관계를 최대한 많이 탐구해놓는 것은 많은 효용을 가져다준다. 이렇게 수학적 관계를 밝히는 인간의 사고과정도 자동화시키면 좋을 것이다. 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 극값을 찾는 법 : 극값은 다음과 같이 찾을 수 있다. 
 
@@ -1100,7 +1100,7 @@
 
 # 함수의 최대-최소 
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 함수의 최대값-최소값 : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속이면 이 구간에서 반드시 최대값과 최소값을 갖는다. 
 
@@ -1124,7 +1124,7 @@
 
 ## 함수의 그래프의 활용
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 방정식과 실근과 함수의 그래프 : 함수의 그래프를 이용하여 방정식의 실근의 개수를 알 수 있다. 
 
@@ -1134,7 +1134,7 @@
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;"
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 부등식에의 활용 : 
 
