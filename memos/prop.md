@@ -380,7 +380,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
-- $\boxed{\text{순열(비복원추출, permutation)}}$  : 서로 다른 $n$ 개에서 중복되지 않게 $r$ 개를 택하여 일렬로 나열하는 것을 $n$ 에서 $r$ 개를 택하는 순열이라 한다. 
+- 순열(비복원추출, permutation)  : 서로 다른 $n$ 개에서 중복되지 않게 $r$ 개를 택하여 일렬로 나열하는 것을 $n$ 에서 $r$ 개를 택하는 순열이라 한다. 
 
   </blockquote>
 
@@ -444,7 +444,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
-- $\boxed{\text{원순열(circular permutation)}}$ : 서로 다른 $n$ 개를 원형으로 배열하는 경우의 수
+- 원순열(circular permutation) : 서로 다른 $n$ 개를 원형으로 배열하는 경우의 수
 
   $$ \boxed{ \frac{{}_{n}P_{n}}{n} = \frac{n!}{n} = (n-1)! } $$
 
@@ -502,7 +502,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
-- $\boxed{\text{중복순열(복원추출)(repeated permutation)}}$ : 서로 다른 $n$ 개에서 중복을 허락하여 $r$ 개를 택하여 일렬로 나열하는 것을 $n$ 개에서 $r$ 개를 택하는 경우의 수 
+- 중복순열(복원추출)(repeated permutation) : 서로 다른 $n$ 개에서 중복을 허락하여 $r$ 개를 택하여 일렬로 나열하는 것을 $n$ 개에서 $r$ 개를 택하는 경우의 수 
 
   $$ \boxed{ {}_{n}\Pi_{r} = n \times n \times \dots \times n = n ^{r} } $$
 
@@ -850,7 +850,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;>
 
-- $\boxed{\text{삼항정리(trinomial theorem)}}$  : 자연수 $n$ 에 대하여 $(a + b + c) ^{n}$ 의 전개식에서 $p+q+r = n$ 에 대한 $a ^{p}b ^{q} c ^{r}$ 일반항은
+- 삼항정리(trinomial theorem)  : 자연수 $n$ 에 대하여 $(a + b + c) ^{n}$ 의 전개식에서 $p+q+r = n$ 에 대한 $a ^{p}b ^{q} c ^{r}$ 일반항은
 
   $$ \boxed{ {}_{n}C_{p} \cdot {}_{n-p}C_{q} \cdot {}_{r}C_{r} a ^{p} b ^{q} c ^{r} = \frac{n!}{p!q!r!} {}_{r}C_{r} a ^{p} b ^{q} c ^{r} } $$
 
