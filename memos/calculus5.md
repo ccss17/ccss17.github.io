@@ -600,7 +600,7 @@
 
   $$ \int_{a}^{b}f(x)g'(x)dx = \bigg[f(x)g(x)\bigg]^{b}_{a}-\int_{a}^{b}f'(x)g(x)dx $$
 
-  $$ \Leftrightarrow $$
+  $$ \iff $$
 
   $$ \int_{a}^{b}uv'dx = \bigg[uv\bigg]^{b}_{a}-\int_{a}^{b}u'vdx $$
 

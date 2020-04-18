@@ -62,9 +62,9 @@ https://katex.org/docs/support_table.html
 
 ### Logic
 
-| $\forall$| $\exists$ | $\nexists$ |$\neg$|$\Leftrightarrow$|
+| $\forall$| $\exists$ | $\nexists$ |$\neg$|$\iff$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| \forall  | \exists  |\nexists |\neg |\Leftrightarrow |
+| \forall  | \exists  |\nexists |\neg |\iff |
 | $\lor$| $\land$ | $\Rightarrow$ |$\Leftarrow$|$\top$|
 | \lor  | \land  |\Rightarrow |\Leftarrow |\top|
 | $\bot$| $\models$ | $\perp$ |$\bowtie$|$\dashv$|

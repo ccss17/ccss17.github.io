@@ -246,7 +246,7 @@
 
 - 확률의 덧셈정리(addition theorem of probability) : 표본공간 $S$ 의 부분집합인 두 사건 $A, B$ 에 대하여 
 
-  $$ P(A \cup B) = P(A)+P(B)-P(A \cap B) $$
+  $$ \boxed{ P(A \cup B) = P(A)+P(B)-P(A \cap B) }$$
 
   이다. 
 
@@ -562,7 +562,7 @@
 
   - 매회 시행에서 사건 $A$ 가 일어날 확률을 $p$, 일어나지않을 확률을 $q$ 라 할 때 
 
-    $$ p + q = 1 \Leftrightarrow  q = 1 -p $$
+    $$ p + q = 1 \iff  q = 1 -p $$
 
     이다.
 
@@ -574,7 +574,48 @@
 
   - 예시 
 
-    **구체화 필요**
+    주사위를 던질 때 $4$ 가 나올 확률은 $\dfrac{1}{6}$ 이다. 이때 한번 더 던져서 $4$ 가 나올 확률도 $\dfrac{1}{6}$ 이다. 
+
+    이처럼 동일한 시행을 계속 할 때 시행들이 서로 영향을 주지 않고, 매회 일어나는 사건이 독립이므로 이것은 독립시행이다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 독립시행의 확률 : 매회의 시행에서 사건 $A$ 가 일어날 확률이 $p$ 일 때,
+
+  $n$ 회의 독립시행에서 사건 $A$ 가 $r$ 회 일어날 확률 $P_r$ 은 $q = 1-p, r = 0, 1, 2, \dots, n$ 에 대하여
+
+  $$ P_r = {}_{n}C_{r}p ^{r}(1-p)^{n-r} = {}_{n}C_{r} p ^{r}q ^{n-r} $$
+
+  이다.
+
+  </blockquote>
+
+  - 예시 
+
+    주사위를 $4$ 번 던지는 독립시행에서 $6$ 가 $2$ 번 나올 확률을 구해보자.
+
+    | $1$ 회 | $2$ 회 | $3$ 회 | $4$ 회 | 
+    |:---:|:---:|:---:|:---:|
+    | O  | O  | X | X |
+    | O  | X  | O | X |
+    | O  | X  | X | O |
+    | X  | O  | O | X |
+    | X  | O  | X | O |
+    | X  | X  | O | O |
+
+    먼저 $4$ 번의 독립시행에서 $6$ 가 $2$ 번 나올 경우의 수는 위의 표와 같이
+
+    $$ {}_{4}C_{2} = 6 $$
+
+    이다. 이때 $4$ 가 나올 확률은 $\dfrac{1}{6}$ 이고 $4$ 가 나오지 않을 확률은 $\dfrac{5}{6}$ 이다. 이것은 매회 시행에서 동일하므로 위 표의 각 경우가 일어날 확률은 
+
+    $$ \bigg ( \dfrac{1}{6} \bigg ) ^{2} \times \bigg ( \dfrac{5}{6} \bigg ) ^{2} $$
+
+    이다. 이 사건이 ${}_{4}C_{2} = 6$ 번 일어나므로 구하고자 하는 확률은
+
+    $$ \therefore {}_{4}C_{2} \bigg ( \dfrac{1}{6} \bigg ) ^{2} \bigg ( \dfrac{5}{6} \bigg ) ^{2} $$
+
+    이다. ■ 
 
 ## 전확률 공식과 베이즈 정리 
 
@@ -590,25 +631,111 @@
 
   공사건이 아닌 사건 $B (\subset S)$ 가 일어날 확률 $P(B)$ 는 
 
-  $$ P(B) = \sum_{k=1}^{n}P(A_k)P(B|A_k) = P(A_1)B(B|A_1) +P(A_2)B(B|A_2)+\dots +P(A_n)B(B|A_n) $$
+  $$ \boxed{P(B) = \sum_{k=1}^{n}P(A_k)P(B|A_k) = P(A_1)B(B|A_1) +P(A_2)B(B|A_2)+\dots +P(A_n)B(B|A_n)}  $$
 
   이다. 
 
   </blockquote>
 
+  - 증명
+
+    $i, j = 1, 2, 3, 4, 5, 6$ 과 $i \neq j$, 표본공간 $S$ 에 대하여 다음 두 조건을 만족하는 사건 $A_1, A_2, A_3, A_4, A_5, A_6$ 이 있다고 하자.
+
+    $$ A_i \cap A_j = \emptyset $$
+
+    $$ A_1 \cup A_2 \cup A_3 \cup A_4 \cup A_5 \cup A_6 = S $$
+
+    그러면 사건 $B$ 를 다음 그림과 같이
+
+    $$ B = (B \cap A_1) \cup (B \cap A_2) \cup (B \cap A_3) \cup (B \cap A_4) \cup (B \cap A_5) \cup (B \cap A_6) $$
+
+    로 표현할 수 있다.
+
+    ![TP2](https://user-images.githubusercontent.com/16812446/79624976-954e4680-8160-11ea-9ea5-2088efef9b93.png)
+
+    이때
+
+    $$ B \cap A_1, B \cap A_2, B \cap A_3, B \cap A_4, B \cap A_5, B \cap A_6 $$
+
+    은 서로 배반이므로 확률의 덧셈정리에 의하여
+
+    $$ P(B) = P((B \cap A_1) \cup (B \cap A_2) \cup (B \cap A_3) \cup (B \cap A_4) \cup (B \cap A_5) \cup (B \cap A_6)) $$
+
+    $$ P(B) = P(B \cap A_1)+P(B \cap A_2)+P(B \cap A_3)+P(B \cap A_4)+P(B \cap A_5)+P(B \cap A_6) $$
+
+    이다. 여기에서 확률의 곱셈정리에 의하여
+
+    $$ \therefore  P(B) = P(A)P(B|A_1)+P(A)P(B|A_2)+P(A)P(B|A_3)+P(A)P(B|A_4)+P(A)P(B|A_5)+P(A)P(B|A_6) $$
+
+    이다. ■ 
+
+    이것은 $6$ 개의 사건 뿐만 아니라 $n$ 개의 사건에서도 성립한다. 즉, 
+
+    $$ \therefore  P(B) = \sum_{k=1}^{n}P(A_k)P(B|A_k) = P(A_1)B(B|A_1) +P(A_2)B(B|A_2)+\dots +P(A_n)B(B|A_n) $$
+
+    이 성립한다. ■ 
+  
   - 예시 
 
-    **구체화 필요**
+    $A, B, C$ 세 주머니에 각각 공이 $5$ 개, $3$ 개, $4$ 개 들어있고 각각 검은 공이 $2$ 개, $1$ 개, $2$ 개 들어있다고 하자. 
+
+    이때 주머니를 무작위로 택하여 공을 $1$ 개 꺼냈을 때 검은 공일 확률을 구해보자.
+
+    $A, B, C$ 주머니를 택하는 사건을 각각 $A_1, A_2, A_3$ 이라고 하고 꺼낸 공이 검은 공일 확률을 $B$ 라고 하자. 그러면 확률 $P(B)$ 는 
+
+    $$ \therefore P(B) = P(A_1 \cap B) + P(A_2 \cap B) + P(A_3 \cap B) $$
+
+    $$ = P(A_1)P(B|A_1) + P(A_2)P(B|A_2) + P(A_3)P(B|A_3) $$
+
+    $$ = \dfrac{1}{3} \cdot \dfrac{2}{5} + \dfrac{1}{3} \cdot \dfrac{1}{3} + \dfrac{1}{3} \cdot \dfrac{2}{4} $$
+
+    $$ = \dfrac{37}{90} $$
+
+    이다. ■ 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 베이즈 정리(bayes theorem) : 전확률 공식의 정의의 전제조건을 만족할 때 사건 $B$ 가 일어났을 때 사건 $A_i$ 의 조건부확률은 
 
-  $$ P(A_i|B) = \frac{P(B \cap A_i)}{P(B)} = \frac{P(A_i)P(B|A_i)}{\displaystyle \sum_{k=1}^{n}P(A_k)P(B|A_k)} $$
+  $$ \boxed{P(A_i|B) = \frac{P(B \cap A_i)}{P(B)} = \frac{P(A_i)P(B|A_i)}{\displaystyle \sum_{k=1}^{n}P(A_k)P(B|A_k)}}  $$
 
   이다.
 
   </blockquote>
+
+  - 증명 
+
+    전확률 공식의 정의의 전제조건을 만족할 때 사건 $B$ 가 일어났을 때 사건 $A_i$ 의 조건부확률
+
+    $$ P(A_i|B) $$
+    
+    은 조건부확률 공식에 의해
+
+    $$ P(A_i|B) = \dfrac{P(A_i \cap B)}{P(B)} $$
+
+    이다. 이때 전확률 공식과 확률의 곱셈정리에 의하여
+    
+    $$ \frac{P(B \cap A_i)}{P(B)} = \frac{P(A_i)P(B|A_i)}{\displaystyle \sum_{k=1}^{n}P(A_k)P(B|A_k)} $$
+
+    이다. 
+
+  - 예시 
+
+    $A, B, C$ 세 주머니에 각각 공이 $5$ 개, $3$ 개, $4$ 개 들어있고 각각 검은 공이 $2$ 개, $1$ 개, $2$ 개 들어있다고 하자. 
+
+    이때 검은 공을 꺼냈는데 이것이 주머니 $A$ 에서 나왔을 확률을 구해보자.
+
+    $A, B, C$ 주머니를 택하는 사건을 각각 $A_1, A_2, A_3$ 이라고 하고 꺼낸 공이 검은 공일 확률을 $B$ 라고 하자. 그러면 구하고자 하는 확률은 $P(A_1|B)$ 이므로
+
+    $$ \therefore  P(A_1|B) = \dfrac{P(A_1 \cap B)}{P(B)} = \dfrac{P(A_1)P(B|A_1)}{P(B)} = \dfrac{\dfrac{1}{3} \cdot \dfrac{2}{5}}{\dfrac{37}{90}} = \dfrac{12}{37} $$
+
+    이다. ■ 
+
+    전확률 공식의 예시에서
+
+    $$ \because P(B) = \dfrac{37}{90} $$
+
+    임을 보였기 때문이다. 
 
 ### 몬티홀 문제
 

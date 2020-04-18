@@ -400,11 +400,13 @@
 
   </blockquote>
 
-  - 필요충분조건을 $p \Leftrightarrow q$ 라고 나타낸다. 
+  - 필요충분조건을 $p \iff q$ 라고 나타낸다. 
+
+    - 또한 "if and only if" 로도 나타내고 줄임말로 "$iff$" 로 나타낸다.
 
   - 필요충분조건은 두 명제의 진리집합이 동일함을 뜻하고 두 명제가 동치라는 것을 뜻한다. 
 
-  - 즉, $P \subset Q$ 이면 $p \Rightarrow q$ 이고 $Q \subset P$ 이면 $q \Rightarrow p$ 이므로 $P=Q$ 이며 이것을 $p \Leftrightarrow q$ 라고 표현한다. 
+  - 즉, $P \subset Q$ 이면 $p \Rightarrow q$ 이고 $Q \subset P$ 이면 $q \Rightarrow p$ 이므로 $P=Q$ 이며 이것을 $p \iff q$ 라고 표현한다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -488,7 +490,7 @@
 
     - 명제 논리와 1차 술어논리에서 모형이론적 진리와 증명이론적 진리는 서로 같다는 것이다. 즉 타당한 문장은 증명될 수 있고 증명될 수 있는 명제는 타당하다. 
 
-      $$ \Gamma \models \phi\Leftrightarrow  \Gamma \vdash \phi $$
+      $$ \Gamma \models \phi\iff  \Gamma \vdash \phi $$
 
   - 논리 체계의 일관성(무모순성) : 공집합으로부터 모순이 도출되지 않는다.
 

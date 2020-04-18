@@ -86,15 +86,15 @@
 
   - $0$ 이 아닌 실수 $k$ 에 대하여 비례식은 다음과 같은 관계를 갖는다. 이때 $k$ 를 비례상수라 한다.
 
-    $$a:b=c:d \Leftrightarrow \frac{a}{b}= \frac{c}{d}=k \Leftrightarrow a=bk, c=dk$$
+    $$a:b=c:d \iff \frac{a}{b}= \frac{c}{d}=k \iff a=bk, c=dk$$
 
-    $$\Leftrightarrow \frac{a}{c} = \frac{b}{d} = k \Leftrightarrow a=ck,b=dk $$
+    $$\iff \frac{a}{c} = \frac{b}{d} = k \iff a=ck,b=dk $$
 
   - $0$ 이 아닌 실수 $k$ 에 대하여 세가지 숫자 이상의 비례식은 다음과 같은 관계를 갖는다. 
 
-    $$a:b:c=d:e:f \Leftrightarrow \frac{a}{d}= \frac{b}{e}= \frac{c}{f}=k $$
+    $$a:b:c=d:e:f \iff \frac{a}{d}= \frac{b}{e}= \frac{c}{f}=k $$
 
-    $$\Leftrightarrow a=dk, b=ek, c=fk$$
+    $$\iff a=dk, b=ek, c=fk$$
 
   - 예시
 

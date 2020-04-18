@@ -614,7 +614,7 @@
 
   - 이것을 한정기호와 논리기호를 사용하여 자연어를 격하하면 다음과 같다. 함수 $f(x)$ 에서
 
-    $$\forall \epsilon > 0, \exists \delta > 0, 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon\Leftrightarrow \lim_{x \to a} f(x) = L$$
+    $$\forall \epsilon > 0, \exists \delta > 0, 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon\iff \lim_{x \to a} f(x) = L$$
 
     이다. 
 
@@ -630,11 +630,11 @@
 
     - 그러므로 이제 
 
-      "함수 $f(x)$ 에서 $x$ 의 값이 $a$ 가 아니면서 $a$ 에 한없이 가까워질 때, $f(x)$ 의 값이 일정한 값 $L$ 에 한없이 가까워지면 함수 $f(x)$ 는 $L$ 에 수렴한다. $\Leftrightarrow$ $\lim_{x \to a} f(x) = L$"
+      "함수 $f(x)$ 에서 $x$ 의 값이 $a$ 가 아니면서 $a$ 에 한없이 가까워질 때, $f(x)$ 의 값이 일정한 값 $L$ 에 한없이 가까워지면 함수 $f(x)$ 는 $L$ 에 수렴한다. $\iff$ $\lim_{x \to a} f(x) = L$"
 
       를 
 
-      "함수 $f(x)$ 에서 임의의 양수 $\epsilon$ 에 대하여 $x$ 의 값이 $a$ 가 아니면서 $a$ 에 한없이 가까워질 때, $|f(x) - L| < \epsilon$ 이면 함수 $f(x)$ 는 $L$ 에 수렴한다. $\Leftrightarrow \lim_{x \to a} f(x) = L$"
+      "함수 $f(x)$ 에서 임의의 양수 $\epsilon$ 에 대하여 $x$ 의 값이 $a$ 가 아니면서 $a$ 에 한없이 가까워질 때, $|f(x) - L| < \epsilon$ 이면 함수 $f(x)$ 는 $L$ 에 수렴한다. $\iff \lim_{x \to a} f(x) = L$"
 
       로 재정의할 수 있다. 
 
@@ -642,27 +642,27 @@
 
       이에 따라 
 
-      "함수 $f(x)$ 에서 임의의 양수 $\epsilon$ 에 대하여 $x$ 의 값이 $a$ 가 아니면서 $a$ 에 한없이 가까워질 때, $|f(x) - L| < \epsilon$ 이면 함수 $f(x)$ 는 $L$ 에 수렴한다. $\Leftrightarrow \lim_{x \to a} f(x) = L$"
+      "함수 $f(x)$ 에서 임의의 양수 $\epsilon$ 에 대하여 $x$ 의 값이 $a$ 가 아니면서 $a$ 에 한없이 가까워질 때, $|f(x) - L| < \epsilon$ 이면 함수 $f(x)$ 는 $L$ 에 수렴한다. $\iff \lim_{x \to a} f(x) = L$"
 
       를 
 
-      "$0<|x-a|<\delta$ 일때 $|f(x)-L|< \epsilon$ 이면 함수 $f(x)$ 는 $L$ 에 수렴한다. $\Leftrightarrow \lim_{x \to a} f(x) = L$" 로 재정의할 수 있다. 한편 $p \to q$ 가 참일 때 $p \Rightarrow q$ 로 표기하는 것을 사용하여 최종적으로 
+      "$0<|x-a|<\delta$ 일때 $|f(x)-L|< \epsilon$ 이면 함수 $f(x)$ 는 $L$ 에 수렴한다. $\iff \lim_{x \to a} f(x) = L$" 로 재정의할 수 있다. 한편 $p \to q$ 가 참일 때 $p \Rightarrow q$ 로 표기하는 것을 사용하여 최종적으로 
 
-      $$ 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \Leftrightarrow \lim_{x \to a} f(x) = L $$
+      $$ 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
 
       로 표현할 수 있다. 
 
     - 그런데 임의의 양수 $\epsilon$ 값이 정해진 시점에서 그것에 종속된 함수값 $f(x)$ 이 제한되고 이에따라 함수값을 결정해야 하는 $x$ 도 종속된다. 또한 $x$ 값을 결정해야 하는 $\delta$ 도 $x$ 에 종속되어 있기에 결론적으로 $\delta$ 는 $\epsilon$ 에 종속되어 있다. 따라서 $\delta$ 는 $\epsilon$ 을 임의로 정했던 것과 달리 임의로 정할 수 없고 임의의 $\epsilon$ 값에 대하여 조건을 만족시키는 적절한 $\delta$ 값이 존재하면 된다. 따라서 
 
-      $$ 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \Leftrightarrow \lim_{x \to a} f(x) = L $$
+      $$ 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
 
       에 조건을 명확하게 명시하여
 
-      $$ 함수 f(x) 에서 임의의 양수 \epsilon 와 적당한 양수 \delta 에 대하여 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \Leftrightarrow \lim_{x \to a} f(x) = L $$
+      $$ 함수 f(x) 에서 임의의 양수 \epsilon 와 적당한 양수 \delta 에 대하여 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
 
       와 같이 고칠 수 있다. 이때 "임의의" 를 $Any$ 의 앞글자를 딴 한정기호 $\forall$ 로, "존재한다" 의 $Exist$ 의 앞글자를 딴 한정기호 $\exists$ 로 고치면 최종적으로 
 
-      $$ 함수 f(x) 에서 \forall \epsilon > 0, \exists \delta > 0, 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \Leftrightarrow \lim_{x \to a} f(x) = L $$
+      $$ 함수 f(x) 에서 \forall \epsilon > 0, \exists \delta > 0, 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
 
       로 표현할 수 있다. 
 
@@ -692,7 +692,7 @@
 
     $x$ 와 $2$ 의 거리를 $|x-2|$ 로, $f(x)$ 와 $4$ 의 거리를 $|f(x)-4|$ 로 두면 위 질문을 "$|x-2|<\delta$ 이고 $x \neq 2$ 이면 $|f(x)-4|<0.1$ 인 $\delta$ 값은 얼마인가?" 로 바꿀 수 있다.
 
-    $$|f(x) - 4| < 0.1 \Leftrightarrow |2x - 4| < 0.1 \Leftrightarrow |x-2| <\frac{0.1}{2} = 0.05 $$
+    $$|f(x) - 4| < 0.1 \iff |2x - 4| < 0.1 \iff |x-2| <\frac{0.1}{2} = 0.05 $$
 
     따라서 $0 < \delta < 0.05$ 이면 어떠한 $x$ 에 대하여서도 $|f(x) -4| < 0.1$ 을 만족시킬 수 있다. 다시말해 $x$ 와 $2$ 사이의 거리거 $0.05$ 보다 작은 양수이면 $f(x)$ 와 $4$ 사이의 거리가 $0.1$ 보다 작게 된다. 
 
@@ -748,7 +748,7 @@
 
 - 극한값이 존재하는 조건 : $x \to a$ 일 때 함수 $f(x)$ 가 $L$ 로 수렴한다는 것은 우극한과 좌극한이 모두 존재하고 그 값이 $L$ 로 서로 같다는 것이다. 
 
-  $$ \lim_{x \to a} f(x) = L \Leftrightarrow \lim_{x \to a+} f(x) = \lim_{x \to a-} f(x) = L $$
+  $$ \lim_{x \to a} f(x) = L \iff \lim_{x \to a+} f(x) = \lim_{x \to a-} f(x) = L $$
 
   </blockquote>
 

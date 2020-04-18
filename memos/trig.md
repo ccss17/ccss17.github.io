@@ -469,11 +469,11 @@
 
       $$\sin ^2 \theta  + \cos ^2 \theta = 1 $$
 
-      $$ \Leftrightarrow $$
+      $$ \iff $$
 
       $$\frac{1}{\cos ^{2} \theta}(\sin ^2 \theta  + \cos ^2 \theta) = \frac{1}{\cos ^{2} \theta} $$
 
-      $$ \Leftrightarrow $$
+      $$ \iff $$
 
       $$ \therefore \tan ^{2} \theta + 1 = \sec ^{2} \theta$$
 
@@ -483,11 +483,11 @@
 
       $$\sin ^2 \theta  + \cos ^2 \theta = 1 $$
 
-      $$ \Leftrightarrow $$
+      $$ \iff $$
 
       $$\frac{1}{\sin ^{2} \theta}(\sin ^2 \theta  + \cos ^2 \theta) = \frac{1}{\sin ^{2} \theta} $$
 
-      $$ \Leftrightarrow $$
+      $$ \iff $$
 
       $$ \therefore 1 + \cot ^{2} \theta = \csc ^{2} \theta$$
 
@@ -715,7 +715,7 @@
 
       $$ 2 - 2 \cos (\alpha -\beta ) = 2 - 2(\cos \alpha \cos \beta + \sin \alpha \sin \beta ) $$
 
-      $$ \Leftrightarrow $$
+      $$ \iff $$
 
       $$ \therefore  \cos (\alpha -\beta ) = \cos \alpha \cos \beta + \sin \alpha \sin \beta $$
 
@@ -743,7 +743,7 @@
 
       $$ = \frac{(\sin \alpha\cos \beta  + \cos \alpha \sin \beta )}{(\cos \alpha \cos \beta - \sin \alpha \sin \beta )} \frac{ \div \cos \alpha \cos \beta }{\div \cos \alpha \cos \beta } $$
 
-      $$ \Leftrightarrow $$
+      $$ \iff $$
 
       $$ \therefore \tan (\alpha + \beta ) = \frac{\tan \alpha - \tan \beta }{1 + \tan \alpha \tan \beta } $$
 

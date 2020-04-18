@@ -410,11 +410,11 @@
 
     - $(1) \rightarrow (11) \rightarrow (7) \rightarrow (1)$
 
-    - $(7) \leftrightarrow (8) \leftrightarrow (9)$
+    - $(7) \iff (8) \iff (9)$
 
-    - $(4) \leftrightarrow (5) \leftrightarrow (6)$
+    - $(4) \iff (5) \iff (6)$
 
-    - $(1) \leftrightarrow (12)$
+    - $(1) \iff (12)$
 
   - 예시 
 

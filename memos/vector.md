@@ -338,7 +338,7 @@
 
   - 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 가 각각 선분 $\overline{AB}, \overleftrightarrow{CD}$ 로 구성되었을 때 이 둘이 같다는 것을
 
-    $$ \overrightarrow{a} = \overrightarrow{b} \Leftrightarrow \overrightarrow{AB} = \overrightarrow{CD} $$
+    $$ \overrightarrow{a} = \overrightarrow{b} \iff \overrightarrow{AB} = \overrightarrow{CD} $$
 
     로 표현한다. 
 
@@ -452,7 +452,7 @@
 
   - 영벡터가 아닌 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 와 $0$ 이 아닌 실수 $k$ 에 대하여 
 
-    $$ \overrightarrow{a}//\overrightarrow{b} \Leftrightarrow \overrightarrow{b} = k \overrightarrow{a} $$
+    $$ \overrightarrow{a}//\overrightarrow{b} \iff \overrightarrow{b} = k \overrightarrow{a} $$
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -522,7 +522,7 @@
 
 - 평면벡터의 같음 : $\overrightarrow{a} = (a_1,a_2),\overrightarrow{b} = (b_1,b_2)$  가 같을 조건은
 
-  $$ \overrightarrow{a} = \overrightarrow{b} \Leftrightarrow a_1=b_1, a_2 = b_2 $$
+  $$ \overrightarrow{a} = \overrightarrow{b} \iff a_1=b_1, a_2 = b_2 $$
 
   이다. 
 
@@ -564,7 +564,7 @@
 
 - 두 평면벡터의 평행 : 영벡터가 아닌 두 평면벡터 $\overrightarrow{a} = (a_1,a_2),\overrightarrow{b} = (b_1,b_2)$ 에 대하여
 
-  $$ \overrightarrow{a}//\overrightarrow{b} \Leftrightarrow \overrightarrow{b} = k \overrightarrow{a} \Leftrightarrow \begin{cases} b_1 = ka_1 &\text{}\\ b_2=ka_2 &\text{}\\ \end{cases} $$
+  $$ \overrightarrow{a}//\overrightarrow{b} \iff \overrightarrow{b} = k \overrightarrow{a} \iff \begin{cases} b_1 = ka_1 &\text{}\\ b_2=ka_2 &\text{}\\ \end{cases} $$
 
   </blockquote>
 
@@ -1264,7 +1264,7 @@
 
   - 형식언어로
 
-    $$ u // v \Leftrightarrow u \times v $$
+    $$ u // v \iff u \times v $$
 
     로 표현할 수 있다. 
 

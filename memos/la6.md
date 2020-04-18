@@ -46,7 +46,7 @@
 
   3. (분배법칙) $(cu) \cdot v = c (u \cdot v) = u \cdot(cv)$
 
-  4. $u \cdot u \geq 0$, 그리고 $u \cdot u = 0 \Leftrightarrow u = 0$
+  4. $u \cdot u \geq 0$, 그리고 $u \cdot u = 0 \iff u = 0$
 
   </blockquote>
 
