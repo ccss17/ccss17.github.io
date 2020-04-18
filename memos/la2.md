@@ -316,11 +316,11 @@
 
   - 증명 
 
-    $A$ 가 가역적이라면 각 $b$ 에 대하여 행렬방정식 $Ax=b$ 가 해를 가진다. ($\because x=A^{-1}b$) 또 행렬방정식이 해를 가지기 때문에 $A$ 는 모든 행에 추축위치를 갖는다. 그런데 $A$ 가 정사각행렬이므로 $n$ 개의 추축위치는 반드시 주대각선 위에 있으며, 이는 곧 $A$ 의 $rref$ 가 $I_n$ 이라는 것이다. 즉, $A \backsim I_n$ 이다.
+    $A$ 가 가역적이라면 각 $b$ 에 대하여 행렬방정식 $Ax=b$ 가 해를 가진다. ($\because x=A^{-1}b$) 또 행렬방정식이 해를 가지기 때문에 $A$ 는 모든 행에 추축위치를 갖는다. 그런데 $A$ 가 정사각행렬이므로 $n$ 개의 추축위치는 반드시 주대각선 위에 있으며, 이는 곧 $A$ 의 $rref$ 가 $I_n$ 이라는 것이다. 즉, $A \sim I_n$ 이다.
 
-    반대로 $A \backsim I_n$ 이라고 가정하면 $A$ 를 축약하는 단계가 기본행렬을 왼쪽에 곱하는 것이므로 어떤 기본행렬 $E_1, \dots, E_p$ 가 존재하여 다음을 만족한다.
+    반대로 $A \sim I_n$ 이라고 가정하면 $A$ 를 축약하는 단계가 기본행렬을 왼쪽에 곱하는 것이므로 어떤 기본행렬 $E_1, \dots, E_p$ 가 존재하여 다음을 만족한다.
 
-    $$ A \backsim E_1A \backsim E_2(E_1A) \backsim \dots \backsim E_p(E_{p-1} \dots E_1A) = I_n $$
+    $$ A \sim E_1A \sim E_2(E_1A) \sim \dots \sim E_p(E_{p-1} \dots E_1A) = I_n $$
 
     그러므로 다음이 성립한다.
 
@@ -360,9 +360,9 @@
 
     행렬 $A = \begin{pmatrix}0&1&2\\1&0&3\\4&-3&8\end{pmatrix}$ 의 역행렬이 존재하면 구해보자. 
 
-    $$ \begin{pmatrix} A & I\\ \end{pmatrix} = \begin{pmatrix} 0&1&2&1&0&0\\ 1&0&3&0&1&0\\ 4&-3&8&0&0&1\\ \end{pmatrix} \backsim \begin{pmatrix} 1&0&0&-9/2&7&-3/2\\ 0&1&0&-2&4&-1\\ 0&0&1&3/2&-2&1/2\\ \end{pmatrix} = \begin{pmatrix} I & A^{-1}\\ \end{pmatrix} $$
+    $$ \begin{pmatrix} A & I\\ \end{pmatrix} = \begin{pmatrix} 0&1&2&1&0&0\\ 1&0&3&0&1&0\\ 4&-3&8&0&0&1\\ \end{pmatrix} \sim \begin{pmatrix} 1&0&0&-9/2&7&-3/2\\ 0&1&0&-2&4&-1\\ 0&0&1&3/2&-2&1/2\\ \end{pmatrix} = \begin{pmatrix} I & A^{-1}\\ \end{pmatrix} $$
 
-    $A \backsim I$ 이므로 $A$ 는 가역적이고 역행렬은 다음과 같다.
+    $A \sim I$ 이므로 $A$ 는 가역적이고 역행렬은 다음과 같다.
 
     $$ A^{-1} = \begin{pmatrix} -9/2&7&-3/2\\ -2&4&-1\\ 3/2&-2&1/2\\ \end{pmatrix} $$
 
@@ -422,7 +422,7 @@
 
     $$ A = \begin{pmatrix} 1&0&-2\\3&1&-2\\-5&-1&9 \end{pmatrix} $$
 
-    $$ A \backsim \begin{pmatrix} 1&0&-2\\0&1&4\\0&-1&-1 \end{pmatrix} \backsim \begin{pmatrix} 1&0&-2\\0&1&4\\0&0&3 \end{pmatrix} $$
+    $$ A \sim \begin{pmatrix} 1&0&-2\\0&1&4\\0&-1&-1 \end{pmatrix} \sim \begin{pmatrix} 1&0&-2\\0&1&4\\0&0&3 \end{pmatrix} $$
 
     $A$ 가 세 개의 추축위치를 가지므로 가역행렬 정리 (3) 에 의해 가역적이라고 판단할 수 있다. 
 
@@ -548,9 +548,9 @@
 
     이때 $Ax = b$ 의 해를 구하자. $b = \begin{pmatrix}-9\\5\\7\\11\end{pmatrix}$ 이다. 
 
-    $$ \begin{pmatrix} L & b\\ \end{pmatrix} = \begin{pmatrix} 1&0&0&0&-9\\ -1&1&0&0&5\\ 2&-5&1&0&7\\ -3&8&3&1&11\\ \end{pmatrix} \backsim \begin{pmatrix} 1&0&0&0&-9\\ 0&1&0&0&-4\\ 0&0&1&0&5\\ 0&0&0&1&1\\ \end{pmatrix} = \begin{pmatrix} I & y\\ \end{pmatrix} $$
+    $$ \begin{pmatrix} L & b\\ \end{pmatrix} = \begin{pmatrix} 1&0&0&0&-9\\ -1&1&0&0&5\\ 2&-5&1&0&7\\ -3&8&3&1&11\\ \end{pmatrix} \sim \begin{pmatrix} 1&0&0&0&-9\\ 0&1&0&0&-4\\ 0&0&1&0&5\\ 0&0&0&1&1\\ \end{pmatrix} = \begin{pmatrix} I & y\\ \end{pmatrix} $$
 
-    $$ \begin{pmatrix} U & y\\ \end{pmatrix} = \begin{pmatrix} 3&-7&-2&2&-9\\ 0&-2&-1&2&-4\\ 0&0&-1&1&5\\ 0&0&0&-1&1\\ \end{pmatrix} \backsim \begin{pmatrix} 1&0&0&0&3\\ 0&1&0&0&4\\ 0&0&1&0&-6\\ 0&0&0&1&-1\\ \end{pmatrix}$$ $$x = \begin{pmatrix} 3\\4\\-6\\-1 \end{pmatrix} $$
+    $$ \begin{pmatrix} U & y\\ \end{pmatrix} = \begin{pmatrix} 3&-7&-2&2&-9\\ 0&-2&-1&2&-4\\ 0&0&-1&1&5\\ 0&0&0&-1&1\\ \end{pmatrix} \sim \begin{pmatrix} 1&0&0&0&3\\ 0&1&0&0&4\\ 0&0&1&0&-6\\ 0&0&0&1&-1\\ \end{pmatrix}$$ $$x = \begin{pmatrix} 3\\4\\-6\\-1 \end{pmatrix} $$
 
 ### LU 분해 알고리듬
 
@@ -604,7 +604,7 @@
 
     같은 방법으로 $L$ 을 계산할 수 있다. 그럼 먼저 $A$ 를 $U$ 로 변환하는 행연산 알아내기 위하여 행 축약을 해보자. 
 
-    $$ A = \begin{pmatrix} 2&4&-1&5&-2\\ -4&-5&3&-8&1\\ 2&-5&-4&1&8\\ -6&0&7&-3&1\\ \end{pmatrix} \backsim \begin{pmatrix} 2&4&-1&5&-2\\ 0&3&1&2&-3\\ 0&-9&-3&-4&10\\ 0&12&4&12&-5\\ \end{pmatrix} \backsim \begin{pmatrix} 2&4&-1&5&-2\\ 0&3&1&2&-3\\ 0&0&0&2&1\\ 0&0&0&4&7\\ \end{pmatrix} \backsim \begin{pmatrix} 2&4&-1&5&-2\\ 0&3&1&2&-3\\ 0&0&0&2&1\\ 0&0&0&0&5\\ \end{pmatrix} = U $$
+    $$ A = \begin{pmatrix} 2&4&-1&5&-2\\ -4&-5&3&-8&1\\ 2&-5&-4&1&8\\ -6&0&7&-3&1\\ \end{pmatrix} \sim \begin{pmatrix} 2&4&-1&5&-2\\ 0&3&1&2&-3\\ 0&-9&-3&-4&10\\ 0&12&4&12&-5\\ \end{pmatrix} \sim \begin{pmatrix} 2&4&-1&5&-2\\ 0&3&1&2&-3\\ 0&0&0&2&1\\ 0&0&0&4&7\\ \end{pmatrix} \sim \begin{pmatrix} 2&4&-1&5&-2\\ 0&3&1&2&-3\\ 0&0&0&2&1\\ 0&0&0&0&5\\ \end{pmatrix} = U $$
 
     각각의 열을 사다리꼴의 열로 만드는 행연산을 통하여 다음과 같이 $L$ 을 계산할 수 있다. 
 
@@ -676,7 +676,7 @@
 
     그러므로 첨가행렬 $\begin{bmatrix}A\\b\end{bmatrix}$ 를 다음과 같이 축약하자. 
 
-    $$ \begin{bmatrix} 1&-3&-4&3\\ -4&6&-2&3\\ -3&7&6&-4 \end{bmatrix} \backsim \begin{bmatrix} 1&-3&-4&3\\ 0&-6&-18&15\\ 0&0&0&0 \end{bmatrix} $$
+    $$ \begin{bmatrix} 1&-3&-4&3\\ -4&6&-2&3\\ -3&7&6&-4 \end{bmatrix} \sim \begin{bmatrix} 1&-3&-4&3\\ 0&-6&-18&15\\ 0&0&0&0 \end{bmatrix} $$
 
     이로부터 $Ax = b$ 는 해를 가지며 $b$ 는 $Col A$ 에 속해 있음을 알 수 있다. 
 
@@ -740,7 +740,7 @@
 
     먼저 $Nul A$ 를 구하기 위하여 $Ax = 0$ 의 해를 매개변수 벡터 형식으로 쓰자. 
 
-    $$ \begin{bmatrix} A&0\\ \end{bmatrix} \backsim \begin{bmatrix} 1&-2&0&-1&3&0\\0&0&1&2&-2&0\\0&0&0&0&0&0 \end{bmatrix}, \begin{cases} x_1-2x_2-x_4+3x_5=0 &\text{}\\ x_3+2x_4-2x_5=0 &\text{}\\ 0=0 &\text{}\\ \end{cases} $$
+    $$ \begin{bmatrix} A&0\\ \end{bmatrix} \sim \begin{bmatrix} 1&-2&0&-1&3&0\\0&0&1&2&-2&0\\0&0&0&0&0&0 \end{bmatrix}, \begin{cases} x_1-2x_2-x_4+3x_5=0 &\text{}\\ x_3+2x_4-2x_5=0 &\text{}\\ 0=0 &\text{}\\ \end{cases} $$
 
     이를 통하여 자유변수 $x_2, x_4, x_5$ 를 갖는 일반해 $x_1 = 2x_2 + x_4 - 3x_5$, $x_3 = -2x_4 + 2x_5$ 를 얻을 수 있다. 
 
@@ -816,7 +816,7 @@
 
     먼저 $Nul A$ 를 구하기 위하여 $Ax = 0$ 의 해를 매개변수 벡터 형식으로 쓰자. 
 
-    $$ \begin{bmatrix} A&0\\ \end{bmatrix} \backsim \begin{bmatrix} 1&-2&0&-1&3&0\\0&0&1&2&-2&0\\0&0&0&0&0&0 \end{bmatrix}, \begin{cases} x_1-2x_2-x_4+3x_5=0 &\text{}\\ x_3+2x_4-2x_5=0 &\text{}\\ 0=0 &\text{}\\ \end{cases} $$
+    $$ \begin{bmatrix} A&0\\ \end{bmatrix} \sim \begin{bmatrix} 1&-2&0&-1&3&0\\0&0&1&2&-2&0\\0&0&0&0&0&0 \end{bmatrix}, \begin{cases} x_1-2x_2-x_4+3x_5=0 &\text{}\\ x_3+2x_4-2x_5=0 &\text{}\\ 0=0 &\text{}\\ \end{cases} $$
 
     이를 통하여 자유변수 $x_2, x_4, x_5$ 를 갖는 일반해 $x_1 = 2x_2 + x_4 - 3x_5$, $x_3 = -2x_4 + 2x_5$ 를 얻을 수 있다. 
 
@@ -844,7 +844,7 @@
 
     먼저 $A$ 를 사다리꼴로 축약하자. 
 
-    $$ A \backsim \begin{bmatrix} 2&5&-3&-4&8\\ 4&7&-4&-3&9\\ 6&9&-5&2&4\\ 0&-9&6&5&-6 \end{bmatrix} \backsim \dots \backsim \begin{bmatrix} 2&5&-3&-4&8\\ 0&-3&2&5&-7\\ 0&0&0&4&-6\\ 0&0&0&0&0 \end{bmatrix} $$
+    $$ A \sim \begin{bmatrix} 2&5&-3&-4&8\\ 4&7&-4&-3&9\\ 6&9&-5&2&4\\ 0&-9&6&5&-6 \end{bmatrix} \sim \dots \sim \begin{bmatrix} 2&5&-3&-4&8\\ 0&-3&2&5&-7\\ 0&0&0&4&-6\\ 0&0&0&0&0 \end{bmatrix} $$
 
     행렬 $A$ 가 $3$ 의 추축열을 가지므로 $rank A = 3$ 이다. 
 

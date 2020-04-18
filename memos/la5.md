@@ -122,7 +122,7 @@
 
     이므로 $(A-2I)x = 0$ 의 첨가행렬을 행 축소하여 
 
-    $$ \begin{bmatrix} 2&-1&6&0\\ 2&-1&6&0\\ 2&-1&6&0\\ \end{bmatrix} \backsim \begin{bmatrix} 2&-1&6&0\\ 0&0&0&0\\ 0&0&0&0\\ \end{bmatrix} $$
+    $$ \begin{bmatrix} 2&-1&6&0\\ 2&-1&6&0\\ 2&-1&6&0\\ \end{bmatrix} \sim \begin{bmatrix} 2&-1&6&0\\ 0&0&0&0\\ 0&0&0&0\\ \end{bmatrix} $$
 
     를 얻는다. 그러므로 $x = \begin{bmatrix} x_1\\x_2\\x_3 \end{bmatrix}$ 에서
 
@@ -198,7 +198,7 @@
 
     이므로 첨가행렬을 행축약하여 다음과 같은 기약사다리꼴로 만든다.
 
-    $$ \begin{bmatrix} 4&4&0\\-1&-1&0 \end{bmatrix} \backsim \begin{bmatrix} 1&1&0\\0&0&0 \end{bmatrix} $$
+    $$ \begin{bmatrix} 4&4&0\\-1&-1&0 \end{bmatrix} \sim \begin{bmatrix} 1&1&0\\0&0&0 \end{bmatrix} $$
 
     그러므로 $x = \begin{bmatrix} x_1\\x_2 \end{bmatrix}$ 일 때 기본변수 $x_1$ 와 자유변수 $x_2$ 은 
 
@@ -224,7 +224,7 @@
 
     이므로 첨가행렬을 행축약하여 
 
-    $$ \begin{bmatrix} 1&4&0\\-1&-4&0 \end{bmatrix} \backsim \begin{bmatrix} 1&4&0\\0&0&0 \end{bmatrix} $$
+    $$ \begin{bmatrix} 1&4&0\\-1&-4&0 \end{bmatrix} \sim \begin{bmatrix} 1&4&0\\0&0&0 \end{bmatrix} $$
 
     을 얻는다. 그러므로 $x = \begin{bmatrix} x_1\\x_2 \end{bmatrix}$ 일 때 기본변수 $x_1$ 와 자유변수 $x_2$ 은 
 

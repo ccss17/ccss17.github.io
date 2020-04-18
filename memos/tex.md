@@ -83,8 +83,8 @@ https://katex.org/docs/support_table.html
 | $\aleph$ |$\mathbb{Z}$|$\mathbb{Q}$|$\mathbb{I}$|$\Re$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | \aleph  |\mathbb{Z}|\mathbb{Q}|\mathbb{I}|\Re  |
-|$\infty$|$\nabla$| $\because$| $\therefore$ |$\backsim$|
-|\infty|\nabla  | \because  | \therefore  |\backsim|
+|$\infty$|$\nabla$| $\because$| $\therefore$ |$\sim$|
+|\infty|\nabla  | \because  | \therefore  |\sim|
 |$\infty$|   $\forall$ |$\exists$|$\overline{AB}$|$\overrightarrow{AB}$|
 |infty| \forall |\exists |\overline{AB}|\overrightarrow{AB}|
 |$\overleftrightarrow{AB}$|$\overleftarrow{AB}$| ${}_{n}P_{r}$ | ${}_{n}C_{r}$ | ${}_{n}\Pi_{r}$

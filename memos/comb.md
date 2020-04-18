@@ -90,7 +90,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- $\backsim$ 사건 : 어떤 시행에서 $\backsim$ 을 만족하는 결과의 집합이다.
+- $\sim$ 사건 : 어떤 시행에서 $\sim$ 을 만족하는 결과의 집합이다.
 
   </blockquote>
 

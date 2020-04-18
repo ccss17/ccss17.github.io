@@ -30,21 +30,21 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 명제와 조건의 부정 : 명제 또는 조건 $p$ 에 대하여 "$p 가 아니다$" 를 $p$ 의 부정이라 하고 기호로 $\backsim p$ 로 나타낸다. 
+- 명제와 조건의 부정 : 명제 또는 조건 $p$ 에 대하여 "$p 가 아니다$" 를 $p$ 의 부정이라 하고 기호로 $\sim p$ 로 나타낸다. 
 
   </blockquote>
 
-  - 배중률에 의하여 $p$ 와 $\backsim p$ 의 참, 거짓 관계는 항상 서로 반대된다. 
+  - 배중률에 의하여 $p$ 와 $\sim p$ 의 참, 거짓 관계는 항상 서로 반대된다. 
 
     - 예시 
 
-      명제 $p$ 를 "독도는 한국땅이다." 라고 한다면 $p$ 의 부정 $\backsim p$ 는 "독도는 한국땅이 아니다." 이다. 이때 반드시 두 명제 중 어느 것 하나만 참이고 다른 것은 거짓이다. 
+      명제 $p$ 를 "독도는 한국땅이다." 라고 한다면 $p$ 의 부정 $\sim p$ 는 "독도는 한국땅이 아니다." 이다. 이때 반드시 두 명제 중 어느 것 하나만 참이고 다른 것은 거짓이다. 
 
-  - 전체집합을 $U$, 조건 $p$ 의 진리집합을 $P$ 라 하면 $\backsim p$ 의 진리집합은 $P^C$ 이다. 
+  - 전체집합을 $U$, 조건 $p$ 의 진리집합을 $P$ 라 하면 $\sim p$ 의 진리집합은 $P^C$ 이다. 
 
-  - $\backsim(\backsim p)$ 의 진리집합은 $(P^C)^C = P$ 이다.
+  - $\sim(\sim p)$ 의 진리집합은 $(P^C)^C = P$ 이다.
 
-    - 이에 따라 $\backsim(\backsim p) = p$ 이다. 
+    - 이에 따라 $\sim(\sim p) = p$ 이다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -58,7 +58,7 @@
 
     - $P \subset Q$ 이면 명제 $p \to q$ 는 참이다. : $(P \subset Q) \to (p \to q)$ 
 
-    - $P \not \subset Q$ 이면 명제 $p \to q$ 는 거짓이다. : $(P \not \subset Q) \to \backsim(p \to q)$ 
+    - $P \not \subset Q$ 이면 명제 $p \to q$ 는 거짓이다. : $(P \not \subset Q) \to \sim(p \to q)$ 
 
   - 즉, 가정(조건 $p$)을 만족하는 모든 대상의 모임(집합)이 결론(조건 $q$)을 만족하는 모든 대상의 모임(집합)의 부분집합이라는 뜻이다. 
 
@@ -98,7 +98,7 @@
 
     이때 $P$ 의 원소 $9$ 가 $Q$ 에 속하지 않으므로 $P \not \subset Q$ 이다. 즉 $3$ 의 양의 배수 중 $6$ 의 양의 배수가 아닌 것이 있으므로 $p \to q$ 는 거짓이다. **이처럼 명제 $p \to q$ 가 거짓임을 보일 때 가정 $p$ 를 만족하지만 결론 $q$ 를 만족하지 않는 예(반례, counter example)가 하나라도 있음을 보이면 된다.**
 
-    이 예시로부터 명제 $(P \not \subset Q) \to \backsim(p \to q)$ 는 참임을 알 수 있다. 
+    이 예시로부터 명제 $(P \not \subset Q) \to \sim(p \to q)$ 는 참임을 알 수 있다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -136,7 +136,7 @@
 
     - 전제가 거짓일 경우 $p \to q$ 의 참거짓을 밝힐 수 없으므로 결론이 어떻게 도출되든 관계 없다. 그런데 배중률에 따라 모든 명제는 $T$ 또는 $F$ 값을 가져야 한다. 따라서 이 경우 그냥 $p \to q$ 를 참(공진리)이라고 약속한다.
 
-  - 하지만 위 예시에서 전제가 거짓인 시점에서 우리가 가진 단서는 $\backsim p$ 일 뿐이며 $p \to q$ 를 판명할 논거가 불충분하다. 그래서 엄밀하게는 $p \to q$ 는 결정불가능하다. 이는 형식논리(formal logic)가 배중률(명제는 반드시 참 또는 거짓이다)을 기본원리로 받아들이기 때문에 발생하는 문제다. 
+  - 하지만 위 예시에서 전제가 거짓인 시점에서 우리가 가진 단서는 $\sim p$ 일 뿐이며 $p \to q$ 를 판명할 논거가 불충분하다. 그래서 엄밀하게는 $p \to q$ 는 결정불가능하다. 이는 형식논리(formal logic)가 배중률(명제는 반드시 참 또는 거짓이다)을 기본원리로 받아들이기 때문에 발생하는 문제다. 
 
   - 이 문제는 브라우어의 직관주의 수학(intuitionistic mathematics) 에서도 비판한다. 직관주의 수학은 수학계에서 비주류이긴 하지만 $T, F$ 진리값을 확장한 다치논리가 발전되면 기존 수학에서 더 발전된 수학이 나올 수도 있을 거라는 주장이 있다. 
 
@@ -148,7 +148,7 @@
 
   - 명제 "모든 $x$에 대하여 $p$ 이다." 는 $P=U$ 일 때 참이다. 즉 $p$ 를 참이되게 하는 원소가 모인 진리집합 $P$ 가 전체집합 $U$ 과 동일해야 한다. 
 
-    - 이 명제의 부정은 "어떤 $x$ 에 대하여 $\backsim p$ 이다." 이다.
+    - 이 명제의 부정은 "어떤 $x$ 에 대하여 $\sim p$ 이다." 이다.
 
     - 예시 
 
@@ -160,11 +160,11 @@
 
       명제 "모든 학생은 거짓말쟁이다." 를 부정하려 한다면 모든 학생 중에 거짓말쟁이가 아닌 학생이 하나라도 있다는 것을 보이면 된다. 즉 "어떤 학생은 거짓말쟁이가 아니다" 가 참이라는 것을 증명하면 된다. 
 
-      이것을 일반화하면 "모든 $x$ 에 대하여 $p$ 이다." 라는 명제의 부정이 "어떤 $x$ 에 대하여 $\backsim p$ 이다." 라는 것을 알 수 있다. 
+      이것을 일반화하면 "모든 $x$ 에 대하여 $p$ 이다." 라는 명제의 부정이 "어떤 $x$ 에 대하여 $\sim p$ 이다." 라는 것을 알 수 있다. 
 
   - 명제 "어떤 $x$에 대하여 $p$ 이다." 는 $P\neq \emptyset$ 일 때 참이다. 즉 $p$ 를 참이되게 하는 원소가 모인 진리집합 $P$ 에 최소 $1$ 개 이상의 원소가 있으면 된다. 
 
-    - 이 명제의 부정은 "모든 $x$ 에 대하여 $\backsim p$ 이다." 이다.
+    - 이 명제의 부정은 "모든 $x$ 에 대하여 $\sim p$ 이다." 이다.
 
     - 예시 
 
@@ -176,7 +176,7 @@
 
       명제 "어떤 학생은 거짓말쟁이다." 를 부정하려 한다면 모든 학생이 거짓말쟁이가 아니라는 것을 보이면 된다. 즉 "모든 학생은 거짓말쟁이가 아니다" 가 참이라는 것을 증명하면 된다. 
 
-      이것을 일반화하면 "어떤 $x$ 에 대하여 $p$ 이다." 라는 명제의 부정이 "모든 $x$ 에 대하여 $\backsim p$ 이다." 라는 것을 알 수 있다. 
+      이것을 일반화하면 "어떤 $x$ 에 대하여 $p$ 이다." 라는 명제의 부정이 "모든 $x$ 에 대하여 $\sim p$ 이다." 라는 것을 알 수 있다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -194,23 +194,23 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 명제의 대우(contraposition) : 명제 $p \to q$ 에 대하여 $\backsim q \to \backsim p$ 를 명제의 대우라 한다. 
+- 명제의 대우(contraposition) : 명제 $p \to q$ 에 대하여 $\sim q \to \sim p$ 를 명제의 대우라 한다. 
 
   </blockquote>
 
   - 어떤 명제 $p$ 와 그것의 대우는 항상 똑같은 진리치를 갖는다. 즉 $p$ 가 참이면 그것의 대우도 참이고 거짓이면 그것의 대우도 거짓이다. 다시 말해 명제와 그 대우는 동치이다. 
 
-  - $p \Rightarrow q$, 즉 명제 $p \to q$ 가 참이면 $P \subset Q$ 이다. 또한 이에 따라 $\backsim q \to \backsim p$ 이기에 $Q^C \subset P^C$ 도 참이다. 
+  - $p \Rightarrow q$, 즉 명제 $p \to q$ 가 참이면 $P \subset Q$ 이다. 또한 이에 따라 $\sim q \to \sim p$ 이기에 $Q^C \subset P^C$ 도 참이다. 
 
-  - $p \not \Rightarrow q$, 즉 명제 $p \to q$ 가 거짓이면 $P \not \subset Q$ 이다. 또한 $Q^C \not \subset P^C$ 도 참이며 이에 따라 $\backsim q \not \Rightarrow \backsim p$ 이다. 
+  - $p \not \Rightarrow q$, 즉 명제 $p \to q$ 가 거짓이면 $P \not \subset Q$ 이다. 또한 $Q^C \not \subset P^C$ 도 참이며 이에 따라 $\sim q \not \Rightarrow \sim p$ 이다. 
 
-  - 따라서 명제 $p \to q$ 를 증명할 때 $\backsim q \to \backsim p$ 를 증명해도 된다. 
+  - 따라서 명제 $p \to q$ 를 증명할 때 $\sim q \to \sim p$ 를 증명해도 된다. 
 
   - 예시(삼단논법) 
 
     "참을 깨달은 자는 배움이 있는 자이다. 책임의 소중함을 느끼는 자가 아니라면 겨레를 위해 희생을 각오한 자가 아니다. 진정한 지도자는 겨레를 위해 희생을 각오한 자이다." 로부터 "그러므로 진정한 지도자는 배움이 있는 자이다." 라는 결론이 도출되었다면 보충되어야할 전제가 무엇일까? 
 
-    먼저 전제를 "$a \to b, \backsim c \to \backsim d, e \to d$" 라는 형식언어로 표현할 수 있고 결론을 $e \to b$ 로 표현할 수 있다. 전제와 결론을 선형적으로 정리하면 $e \to d \to c \dots a \to b$ 를 얻는다. 이것으로부터 명제 $c$ 와 $a$ 가 연결되지 않는다는 것을 알 수 있기 때문에 $1$ 차적으로는 보충되어야 할 전제를 $c \to a$ 라고 추측할 수 있다.
+    먼저 전제를 "$a \to b, \sim c \to \sim d, e \to d$" 라는 형식언어로 표현할 수 있고 결론을 $e \to b$ 로 표현할 수 있다. 전제와 결론을 선형적으로 정리하면 $e \to d \to c \dots a \to b$ 를 얻는다. 이것으로부터 명제 $c$ 와 $a$ 가 연결되지 않는다는 것을 알 수 있기 때문에 $1$ 차적으로는 보충되어야 할 전제를 $c \to a$ 라고 추측할 수 있다.
 
     즉 생략되어 보충되어야 할 전제란 "책임의 소중함을 느끼는 자는 참을 깨달은 자이다" 라고 말할 수 있다.
 
@@ -244,7 +244,7 @@
 
         - 이것은 대우명제를 증명하는 것과 같다. 
 
-    4. 조건 $p$ 의 부정을 $\backsim p$ 로 쓰는데 이때 $\backsim(\backsim p)$ 는 $p$ 와 같다.
+    4. 조건 $p$ 의 부정을 $\sim p$ 로 쓰는데 이때 $\sim(\sim p)$ 는 $p$ 와 같다.
 
         - 즉, 어떤 조건의 부정을 부정하면 원래의 조건과 같아진다.
 
@@ -294,7 +294,7 @@
 
   </blockquote>
 
-  - $p \to q$ 를 증명하기 어려울 때 $\backsim q \to \backsim p$ 가 참임을 증명함으로써 원래의 명제를 증명하는 것이다. 
+  - $p \to q$ 를 증명하기 어려울 때 $\sim q \to \sim p$ 가 참임을 증명함으로써 원래의 명제를 증명하는 것이다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 

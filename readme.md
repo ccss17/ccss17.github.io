@@ -68,7 +68,7 @@
 
 - [조합 메모](https://ccss17.github.io/comb.html)
     
-  ######  이산수학(discrete mathematics),  시행(experiment),  표본공간(sample space),  사건(event),  $\backsim$ 사건,  근원사건(fundamental event),  전사건(whole event),  공사건,  경우의 수,  합사건(sum event),  곱사건(product event),  배반사건,  여사건(complementary event),  합의 법칙(rule of sum),  곱의 법칙(rule of product),  합의 법칙의 역연산,  곱의 법칙의 역연산,  계승(factorial),  순열(비복원추출, permutation) ,  원순열(circular permutation),  중복순열(복원추출)(repeated permutation),  같은 것이 있는 순열,  조합(combination),  중복조합(repeated combination),  이항정리(binomial theorem),  이항계수,  전개식의 일반항,  삼항정리(trinomial theorem) ,  이항계수의 성질
+  ######  이산수학(discrete mathematics),  시행(experiment),  표본공간(sample space),  사건(event),  $\sim$ 사건,  근원사건(fundamental event),  전사건(whole event),  공사건,  경우의 수,  합사건(sum event),  곱사건(product event),  배반사건,  여사건(complementary event),  합의 법칙(rule of sum),  곱의 법칙(rule of product),  합의 법칙의 역연산,  곱의 법칙의 역연산,  계승(factorial),  순열(비복원추출, permutation) ,  원순열(circular permutation),  중복순열(복원추출)(repeated permutation),  같은 것이 있는 순열,  조합(combination),  중복조합(repeated combination),  이항정리(binomial theorem),  이항계수,  전개식의 일반항,  삼항정리(trinomial theorem) ,  이항계수의 성질
 
 - [확률 메모](https://ccss17.github.io/prop.html)
     
@@ -76,7 +76,7 @@
 
 - [통계 메모](https://ccss17.github.io/stat.html)
     
-  ######  통계학(statistics),  자료(data, 데이터),  질적 자료(qualitative data, 정성적 자료),  양적 자료(quantitative data, 정량적 자료),  정보(information),  지식(knowledge),  평균,  변량,  계급,  계급의 크기,  계급값,  도수,  도수분포표,  히스토그램,  상대도수,  편차,  분산,  표준편차,  확률변수(random variable),  확률분포,  이산확률변수,  확률질량함수,  확률질량함수의 성질,  기댓값(평균),  분산,  표준편차,  평균,  분산,  표준편차
+  ######  통계학(statistics),  자료(data, 데이터),  질적 자료(qualitative data, 정성적 자료),  양적 자료(quantitative data, 정량적 자료),  정보(information),  지식(knowledge),  변량(variate),  계급(class),  계급의 크기(class interval),  대표값(representative value),  계급값(class mark),  평균(mean),  도수(frequency),  도수분포표(frequency distribution),  히스토그램(histogram),  상대도수(relative frequency),  편차,  분산,  표준편차,  확률변수(random variable),  확률변수로의 확률 표기,  확률분포(probability distribution),  이산확률변수(discrete random variable),  확률질량함수(probability mass function),  확률질량함수의 성질,  기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable),  분산(variance),  표준편차(standard deviation),  평균,  분산,  표준편차
 
 # 미적분 메모
 

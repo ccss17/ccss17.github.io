@@ -560,7 +560,7 @@
 
       $$
 
-      \begin{pmatrix}1 & 2 & 7 \\ -2 & 5 & 4 \\ -5 & 6 & -3\end{pmatrix} \backsim
+      \begin{pmatrix}1 & 2 & 7 \\ -2 & 5 & 4 \\ -5 & 6 & -3\end{pmatrix} \sim
 
       \begin{pmatrix}1 & 0 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 0\end{pmatrix} 
 
@@ -672,7 +672,7 @@
 
     $$
 
-    \begin{pmatrix}1 & 3 & 4 & b_1 \\ -4 & 2 & -6 & b_2 \\ -3 & -2 & -7 & b_3\end{pmatrix} \backsim
+    \begin{pmatrix}1 & 3 & 4 & b_1 \\ -4 & 2 & -6 & b_2 \\ -3 & -2 & -7 & b_3\end{pmatrix} \sim
 
     \begin{pmatrix}1 & 3 & 4 & b_1 \\ 0 & 14 & 10 & b_2 + 4b_1 \\ 0 & 0 & 0 & b_3+3b_1-\frac{1}{2}(b_2+4b_1)\end{pmatrix} 
 
@@ -788,7 +788,7 @@
 
     \end{pmatrix}
 
-    \backsim
+    \sim
 
     \begin{pmatrix}
 
@@ -898,7 +898,7 @@
 
     $\begin{pmatrix} A & b\end{pmatrix}$ 에 행연산을 수행하여 다음을 얻자.
 
-    $$ \begin{pmatrix} 3 & 5 & -4 & 7 \\ -3 &-2 & 4 & -1\\ 6 & 1 & -8 & -4\\ \end{pmatrix} \backsim \begin{pmatrix} 1 & 0 & -\frac{4}{3} & -1 \\ 0 & 1 & 0 & 2\\ 0 & 0 & 0 & 0\\ \end{pmatrix} $$
+    $$ \begin{pmatrix} 3 & 5 & -4 & 7 \\ -3 &-2 & 4 & -1\\ 6 & 1 & -8 & -4\\ \end{pmatrix} \sim \begin{pmatrix} 1 & 0 & -\frac{4}{3} & -1 \\ 0 & 1 & 0 & 2\\ 0 & 0 & 0 & 0\\ \end{pmatrix} $$
 
     $$x_1 - \frac{4}{3}x_3 = -1 $$
 
@@ -982,7 +982,7 @@
 
     그러면 이 벡터방정식의 첨가행렬을 행연산하여 기약사다리꼴을 얻자. 
 
-    $$ \begin{pmatrix} 1&4&2&0\\ 2&5&1&0\\ 3&6&0&0\\ \end{pmatrix} \backsim \begin{pmatrix} 1&0&-2&0\\ 0&1&1&0\\ 0&0&0&0\\ \end{pmatrix} $$
+    $$ \begin{pmatrix} 1&4&2&0\\ 2&5&1&0\\ 3&6&0&0\\ \end{pmatrix} \sim \begin{pmatrix} 1&0&-2&0\\ 0&1&1&0\\ 0&0&0&0\\ \end{pmatrix} $$
 
     기본변수가 $x_1, x_2$ 임을 알 수 있고 $x_3$ 이 자유변수라는 것을 알 수 있다. 그러므로 영이 아닌 값 $x_3$ 마다 자명하지 않은 해 하나가 결정되므로 $v_1, v_2, v_3$ 은 일차 종속이다. 
 
@@ -1158,7 +1158,7 @@
 
     위 행렬방정식의 첨가행렬을 다음과 같이 행 축약하자. 
 
-    $$ \begin{pmatrix} 1 & -3 & 3 \\ 3 & 5 & 2 \\ -1 & 7 & -5 \\ \end{pmatrix} \backsim \begin{pmatrix} 1 & 0 & 1.5 \\ 0 & 1 & -.5 \\ 0 & 0 & 0 \\ \end{pmatrix} $$
+    $$ \begin{pmatrix} 1 & -3 & 3 \\ 3 & 5 & 2 \\ -1 & 7 & -5 \\ \end{pmatrix} \sim \begin{pmatrix} 1 & 0 & 1.5 \\ 0 & 1 & -.5 \\ 0 & 0 & 0 \\ \end{pmatrix} $$
 
     따라서 $x_1 = 1.5, x_2 = -.5$ 이고, $x = \begin{pmatrix}1.5\\-.5\end{pmatrix}$ 이다. ($T$ 에 의한 이 $x$ 의 상은 주어진 벡터 $b$ 이다)
 
