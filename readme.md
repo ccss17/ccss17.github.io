@@ -72,7 +72,7 @@
 
 - [확률 메모](https://ccss17.github.io/prop.html)
     
-  ######  확률(probability),  사건의 경우의 수,  수학적 확률(mathematical probability),  통계적 확률,  큰 수의 법칙(law of large number),  기하학적 확률,  확률의 성질,  확률의 덧셈정리(addition theorem of probability),  확률의 곱,  확률의 덧셈정리(addition theorem of probability),  여사건의 확률,  조건부확률(conditional probability),  확률의 곱셈정리,  독립사건(independent),  종속사건(dependent),  독립시행(independent trials),  전확률 공식(total probability),  베이즈 정리(bayes theorem)
+  ######  확률(probability),  사건의 경우의 수,  수학적 확률(mathematical probability),  통계적 확률,  큰 수의 법칙(law of large number),  기하학적 확률,  확률의 성질,  확률의 덧셈,  확률의 곱,  확률의 덧셈정리(addition theorem of probability),  배반사건의 확률의 덧셈정리,  여사건의 확률,  조건부확률(conditional probability),  확률의 곱셈정리(multiplication theorem of probability),  독립사건(independent),  종속사건(dependent),  독립시행(independent trials),  전확률 공식(total probability),  베이즈 정리(bayes theorem)
 
 - [통계 메모](https://ccss17.github.io/stat.html)
     

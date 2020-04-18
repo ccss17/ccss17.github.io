@@ -4,11 +4,11 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 확률(probability) : 모든 경우의 수에 대하여 특정한 사건이 발생하는 경우의 수의 비율이다. 
+- 확률(probability) : 모든 경우의 수(표본공간)에 대하여 특정한 사건이 발생하는 경우의 수의 비율이다. 
 
   </blockquote>
 
-  - 다시 말해 일정한 조건 아래에서 어떤 사건이 일어날 가능성을 수로 나타낸 것이다.
+  - 다시 말해 전사건(표본공간)의 경우의 수에 대한 어떤 사건이 일어날 경우의 수에 대한 비율이다.
 
   - 사건 $A$ 에 대한 확률을 
 
@@ -226,11 +226,29 @@
 
     이다. ■ 
 
-### 확률의 덧셈정리
+## 확률의 덧셈정리
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 확률의 덧셈정리(addition theorem of probability) : 두 사건 $A$ 와 $B$ 가 동시에 일어나지 않을 때, 사건 $A$ 와 $B$ 가 발생할 확률을 각각 $p, q$ 라 하면 사건 $A$ 또는 $B$ 가 발생할 확률은 $p + q$ 이다. 
+- 확률의 덧셈 : 두 사건 $A$ 와 $B$ 가 동시에 일어나지 않을 때, 사건 $A$ 와 $B$ 가 발생할 확률을 각각 $p, q$ 라 하면 사건 $A$ 또는 $B$ 가 발생할 확률은 $p + q$ 이다. 
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 확률의 곱 : 두 사건 $A$ 와 $B$ 가 서로 영향을 미치지 않을 때, 사건 $A$ 와 $B$ 가 발생할 확률을 각각 $p, q$ 라 하면 사건 $A$ 또는 $B$ 가 동시에 발생할 확률은 $p \times q$ 이다. 
+
+  </blockquote>
+
+  - ???????? "동시에" 라는 말 때문에 혼란이 일어나는 것 같은데 서로 다른 사건을 동시에 일어나게 하는 건 순전히 전체 사건을 정의하는 사람 마음이 아닌가?
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 확률의 덧셈정리(addition theorem of probability) : 표본공간 $S$ 의 부분집합인 두 사건 $A, B$ 에 대하여 
+
+  $$ P(A \cup B) = P(A)+P(B)-P(A \cap B) $$
+
+  이다. 
 
   </blockquote>
 
@@ -252,41 +270,43 @@
 
     을 얻는다. ■ 
 
-    
-
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 확률의 곱 : 두 사건 $A$ 와 $B$ 가 서로 영향을 미치지 않을 때, 사건 $A$ 와 $B$ 가 발생할 확률을 각각 $p, q$ 라 하면 사건 $A$ 또는 $B$ 가 동시에 발생할 확률은 $p \times q$ 이다. 
+- 배반사건의 확률의 덧셈정리 : 두 사건 $A, B$ 가 배반사건이면, 즉 $A \cap B = \emptyset$ 이면 
+
+  $$ \boxed{P(A \cup B) = P(A)+P(B) } $$
+
+  이다.
 
   </blockquote>
-
-  - ???????? "동시에" 라는 말 때문에 혼란이 일어나는 것 같은데 서로 다른 사건을 동시에 일어나게 하는 건 순전히 전체 사건을 정의하는 사람 마음이 아닌가?
-
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
-
-- 확률의 덧셈정리(addition theorem of probability) : 표본공간 $S$ 의 부분집합인 두 사건 $A, B$ 에 대하여 
-
-  $$ P(A \cup B) = P(A)+P(B)-P(A \cap B) $$
-
-  이다. 
-
-  </blockquote>
-
-  - 두 사건 $A, B$ 가 배반사건이면, 즉 $A \cap B = \emptyset$ 이면 
-
-    $$ P(A \cup B) = P(A)+P(B) $$
-
-    이다.
 
   - 증명 
 
-    **구체화 필요**
+    두 사건 $A, B$ 가 배반사건이면 $A \cap B = \emptyset$ 이므로 
+
+    $$ P(A \cap B) = P(\emptyset ) = 0 $$
+
+    이 되어 확률의 덧셈정리
+
+    $$ P(A \cup B) = P(A)+P(B)-P(A \cap B) $$
+
+    에서
+
+    $$ \therefore  P(A \cup B) = P(A)+P(B) $$
+
+    이다. ■ 
+  
+  - 또한 일반적으로 $n$ 개의 사건 $A_1, A_2, \dots, A_n$ 이 서로 배반이면 
+
+    $$ \boxed{P(A_1 \cup A_2 \cup \dots \cup A_n) = P(A_1)+P(A_2)+\dots+P(A_n) } $$
+
+    이다.
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 여사건의 확률 : 표본공간 $S$ 의 부분집합인 사건 $A$ 의 여사건 $A ^{C}$ 가 일어날 확률은 
 
-  $$ P(A ^{C}) = 1 - P(A) $$
+  $$ \boxed{P(A ^{C}) = 1 - P(A)}  $$
 
   이다. 
 
@@ -294,35 +314,117 @@
 
   - 증명 
 
-    **구체화 필요**
+    사건 $A$ 와 사건 $A$ 가 일어나지 않는 여사건 $A ^{C}$ 은 서로 배반이므로 
 
-### 조건부 확률 
+    $$ P(A \cup A ^{C}) = P(A)+P(A ^{C}) $$
+
+    이다. 이때 표본공간 $S$ (전사건) 에 대하여 $A \cup A ^{C} = S$ 이므로
+
+    $$ P(A \cup A ^{C}) = P(S) = 1 $$
+
+    이고 여기에서
+
+    $$ P(A \cup A ^{C}) = P(S) = P(A)+P(A ^{C}) = 1 $$
+
+    이다. 
+
+    그러므로 
+
+    $$ P(A)+P(A ^{C}) = 1 $$
+
+    를 얻고 최종적으로
+
+    $$ \therefore  P(A ^{C}) = 1-P(A)$$
+
+    이다. ■ 
+  
+  - 여사건은 구하고자 하는 사건의 확률을 구하기 어려울 때 이용된다. 
+
+  - 예시 
+
+    남자 $3$ 명과 여자 $4$ 명 중 회장 $2$ 명을 선출하려 할 때 남자가 적어도 $1$ 명 선출될 확률을 구해보자. 
+
+    이 확률은 남자가 선출되지 않는 사건 $A$ 의 여사건 $A ^{C}$ 이다. 
+
+    따라서 사건 $A$ 가 일어날 확률은 $7$ 중에서 $2$ 명을 뽑는 경우의 수에 대한 여자 $4$ 명 중 $2$ 명을 뽑는 경우의 수의 비
+
+    $$ P(A) = \frac{{}_{4}C_{2}}{{}_{7}C_{2}} = \dfrac{2}{7} $$
+
+    이고, 사건 $A$ 의 여사건이 일어날 확률은
+
+    $$ \therefore P(A ^{C}) = 1 - \dfrac{2}{7} = \dfrac{5}{7} $$
+
+    이다. 이것이 남자가 적어도 $1$ 명 선출되는 확률이다. ■ 
+
+## 조건부 확률 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 조건부확률(conditional probability) : 확률이 $0$ 이 아닌 사건 $A$ 가 일어났다고 가정할 때
 
-  사건 $B$ 가 일어날 확률은 사건 $A$ 가 일어났을 때의 사건 $B$ 의 조건부확률이라 한다.
+  사건 $B$ 가 일어날 확률
+  
+  $$ \boxed{P(B|A) = \frac{n(A \cap B)}{n(A)} = \frac{P(A \cap B)}{P(A)}= \dfrac{P(A \cap B)}{P(A \cap B) + P(A \cap B ^{C})}}  $$
+
+  을 사건 $A$ 가 일어났을 때의 사건 $B$ 의 조건부확률이라 한다.
 
   </blockquote>
 
-  - 기호로 $P(B|A)$ 로 나타낸다.
+  - 증명 
 
-  - 조건부 확률의 값은
+    확률이란 표본공간 $S$ 의 원소의 개수, 즉 전사건의 경우의 수에 대한 사건의 경우의 수의 비율이었음을 기억하자. 
 
-    $$ P(B|A) = \frac{n(A \cap B)}{n(A)} = \frac{P(A \cap B)}{P(A)} $$
+    조건부 확률이란 사건 $A$ 가 일어났다는 가정하에 사건 $B$ 가 일어난 확률이므로 새로운 표본공간 $A$ 을 설정하고 $A \cap B$  가 일어날 확률을 구하는 것이다. 
 
-    이다.
+    <img src="https://user-images.githubusercontent.com/16812446/79615178-198ed280-813d-11ea-8b8a-4c3aed37a1d1.png" width="400" height="400">
+
+    따라서 조건부 확률은 사건 $A$ 가 일어날 경우의 수 $n(A)$ 을 새로운 전사건의 경우의 수로 두고, 사건 $B$ 가 일어날 경우의 수의 비를 구하는 것이다.
+    
+    그런데 이때 사건 $A$ 가 반드시 일어나야 하기 때문에 사건 $A$ 에 속하지 않는 사건은 확률에 포함시켜서는 안된다. 따라서 위 그림처럼 $B$ 가 일어날 확률이 아니라 $A \cap B$ 가 일어날 확률을 구해야 한다.
+
+    그러므로 결국 조건부 확률은 $P(B|A) = \dfrac{n(A \cap B)}{n(A)}$ 이다. 그런데 이때 
+
+    $$ P(A) = \dfrac{n(A)}{n(S)}, P(A \cap B) = \dfrac{n(A \cap B)}{n(S)} $$
+
+    이므로 
+
+    $$ \therefore P(B|A) = \dfrac{n(A \cap B)}{n(A)} = \dfrac{\dfrac{n(A \cap B)}{n(S)}}{\dfrac{n(A)}{n(S)}} = \dfrac{P(A \cap B)}{P(A)} $$
+
+    이다. ■ 
+
+    그런데 $P(A) = P(A \cap B) + P(A \cap B ^{C})$ 이므로 
+
+    $$ \therefore \dfrac{P(A \cap B)}{P(A)} = \dfrac{P(A \cap B)}{P(A \cap B) + P(A \cap B ^{C})} $$
+
+    이다. ■ 
+
+  - 표본공간 집합이 $S$ 에서 $A$ 로 바뀌었기 때문에 사건 $B$ 와 $A$ 의 교집합 $A \cap B$ 가 일어날 확률을 구하는 것이 자명하다.
 
   - 사건 $A$ 가 일어나지 않으면 $P(B|A)$ 는 의미가 없기에 $P(A) \neq 0$ 인 경우만 생각하는 것이다. 
 
   - 예시 
 
-    **구체화 필요**
+    $1$ 부터 $100$ 까지 자연수가 적힌 $100$ 장의 카드에서 카드를 한 장 뽑았을 때 $10$ 의 배수의 카드이면서 $4$ 의 배수일 확률을 구해보자.
+
+    뽑은 카드가 $10$ 의 배수일 사건을 $A$, $4$ 의 배수일 사건을 $B$ 라고 하자. 그러면 카드가 $10$ 의 배수이면서 $4$ 의 배수일 사건 $A \cap B$ 은 카드의 수가 $20$ 배수가 나오는 사건이다.
+
+    그러므로 모든 카드를 뽑을 경우의 수 $n(S) = 100$, $20$ 배수가 나오는 카드의 경우의 수 $n(A \cap B) = 5$ 에서 구하고자 하는 확률은
+
+    $$ P(A \cap B) = \dfrac{n(A \cap B)}{n(S)} = \dfrac{5}{100} = \dfrac{1}{20} $$
+
+    이다.
+
+    그런데 이제 $10$ 배수인 카드를 뽑았는데 그 카드가 $4$ 의 배수일 확률을 구해보자. 
+
+    그러면 표본공간이 카드 $100$ 장을 뽑는 경우의 수에서 $10$ 배수인 카드를 뽑는 경우로 바뀌기에 조건부 확률로 구해야 한다. 그러므로 구하고자 하는 확률은
+
+    $$ \therefore  P(B|A) = \dfrac{P(A \cap B)}{P(A)} = \dfrac{\dfrac{5}{100}}{\dfrac{10}{100}} = \dfrac{1}{2} $$
+
+    이다. ■ 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 확률의 곱셈정리 : $P(A) \neq 0, P(B) \neq 0$ 일 때 두 사건 $A, B$ 가 동시에 일어날 확률은 
+- 확률의 곱셈정리(multiplication theorem of probability) : $P(A) \neq 0, P(B) \neq 0$ 일 때 두 사건 $A, B$ 가 동시에 일어날 확률은 
 
   $$ P(A \cap B) = P(A)P(B|A) = P(B)P(A|B) $$
 
@@ -330,19 +432,57 @@
 
   </blockquote>
 
+  - 증명 
+
+    조건부확률
+
+    $$ P(B|A) = \frac{P(A \cap B)}{P(A)}, P(A|B) = \frac{P(A \cap B)}{P(B)} $$
+
+    에서 양변에 각각 $P(A), P(B)$ 를 곱하면
+
+    $$ \therefore  P(A \cap B) = P(A)P(B|A) = P(B)P(A|B) $$
+
+    를 얻는다. ■ 
+
   - 예시 
 
-    **구체화 필요**
+    $50$ 개의 공 중에서 흰 공이 $7$ 개 있다고 하자. 두 사람이 $50$ 개의 공을 무작위로 골랐을 때 둘 다 흰 공을 고를 확률을 구해보자.
+
+    첫번째 사람이 흰공을 고르는 사건을 $A$, 두번째 사람이 흰공을 고르는 사건을 $B$ 라고 하자. 
+
+    그러면 첫번째 사람이 흰공을 고를 확률은 
+
+    $$ P(A) = \dfrac{7}{50} $$
+
+    이다. 이때 첫번째 사람이 흰공을 골랐을 때, 두번째 사람도 흰공을 고를 확률은 
+
+    $$ P(B|A) = \dfrac{7 - 1}{50 - 1} = \dfrac{6}{49} $$
+
+    이다.
+
+    그러므로 두 사람이 모두 흰공을 고를 확률 $P(A \cap B)$ 은 확률의 곱셈정리에 의하여
+
+    $$ \therefore  P(A \cap B) = P(A)P(B|A) = \dfrac{7}{50} \cdot \dfrac{6}{49} = \dfrac{3}{175} $$
+
+    이다. ■ 
 
 ## 사건의 독립과 종속
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 독립사건(independent) : 두 사건 A 와 B 에서 한 사건의 결과가 다른 사건에 영향을 주지 않을 때 A 와 B 를 독립사건이라 한다. 
+- 독립사건(independent) : 두 사건 $A$ 와 $B$ 에서 한 사건의 결과가 다른 사건에 영향을 주지 않을 때, 즉
+
+  $$ P(B|A) = P(B) $$
+
+  또는
+
+  $$ P(A|B) = P(A) $$
+
+  일 때 $A$ 와 $B$ 를 독립사건이라 한다. 
 
   </blockquote>
 
-  - 즉 다음 등식이 성립하면 두 사건 $A, B$ 는 서로 독립이다. 
+  - 다음 등식이 성립하면 두 사건 $A, B$ 는 서로 독립이다. 
 
     $$ P(B|A) = P(B) $$
 
@@ -358,33 +498,61 @@
 
     $$ P(A|B ^{C}) = P(A) $$
 
-  - $P(A) \neq 0, P(B) \neq 0$ 인 두 사건 $A, B$ 가 독립일 필요충분조건은 
+  - $P(A) \neq 0, P(B) \neq 0$ 인 두 사건 $A, B$ 가 독립인 것과 
 
     $$ P(A \cap B) = P(A)P(B) $$
 
-    이다. 
+    인 것은 동치이다. 그러므로 
+
+    $$ P(B|A) = P(B) \iff P(A \cap B) = P(A)P(B) $$
+
+    이다.
 
   - 예시 
 
-    동전을 던지는 사건과 주사위를 던지는 사건 
+    주머니에 공이 $10$ 개가 있고 그 중에서 흰 공이 $3$ 개 있다고 하자. 이때 두 사람이 공을 뽑았을 때 모두 흰공이 나올 확률을 계산해보자.
+    
+    첫번째 사람이 공을 뽑는 사건을 $A$, 두번째 사람이 공을 뽑는 사건을 $B$ 라고 하자.
 
-  - 예시 
+    그런데 두 사람이 흰 공을 뽑으려고 한다면 이것은 첫번째 사람이 공을 뽑고 다시 주머니에 공을 넣는 경우와 공을 넣지 않는 경우를 생각할 수 있다.
 
-    **구체화 필요**
+    만약 첫번째 사람이 공을 뽑고 다시 주머니에 넣으면 공의 개수에 변화가 없으므로 확률 계산에 사용되는 경우의 수도 변함이 없다. 따라서 두번째 사람이 공을 뽑을 때에도 영향을 미치지 않으므로 사건 $A, B$ 는 독립사건이다. 즉, 
+
+    $$ P(A) = \dfrac{3}{10}, P(B|A) = \dfrac{3}{10} $$
+
+    이므로 구하고자 하는 확률 $P(A \cap B)$ 는
+
+    $$ \therefore  P(A \cap B) = P(A)P(B|A) = \dfrac{3}{10} \times \dfrac{3}{10} = \dfrac{9}{100} $$
+
+    이다. ■ 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 종속사건(dependent) : 두 사건 A 와 B 에서 한 사건의 결과가 다른 사건에 영향을 줄 때 A 와 B 를 종속사건이라 한다. 
+- 종속사건(dependent) : 두 사건 $A$ 와 $B$ 에서 한 사건의 결과가 다른 사건에 영향을 줄 때, 즉
+
+  $$ P(B) \neq P(B|A), P(A) \neq P(A|B) $$
+
+  일 때 $A$ 와 $B$ 를 종속사건이라 한다. 
 
   </blockquote>
 
-  - 즉 다음 등식이 성립하면 두 사건 $A, B$ 는 서로 독립이다. 
-
-    $$ P(B) \neq P(B|A), P(A) \neq P(A|B) $$
-
   - 예시 
 
-    **구체화 필요**
+    주머니에 공이 $10$ 개가 있고 그 중에서 흰 공이 $3$ 개 있다고 하자. 이때 두 사람이 공을 뽑았을 때 모두 흰공이 나올 확률을 계산해보자.
+    
+    첫번째 사람이 공을 뽑는 사건을 $A$, 두번째 사람이 공을 뽑는 사건을 $B$ 라고 하자.
+
+    그런데 두 사람이 흰 공을 뽑으려고 한다면 이것은 첫번째 사람이 공을 뽑고 다시 주머니에 공을 넣는 경우와 공을 넣지 않는 경우를 생각할 수 있다.
+
+    만약 첫번째 사람이 공을 뽑고 다시 주머니에 넣지 않으면 공의 개수에 변화가 있으므로 확률 계산에 사용되는 경우의 수도 변한다. 따라서 두번째 사람이 공을 뽑을 때에도 영향을 미치므로 사건 $A, B$ 는 종속사건이다. 즉, 
+
+    $$ P(A) = \dfrac{3}{10}, P(B|A) = \dfrac{2}{9} $$
+
+    이므로 구하고자 하는 확률 $P(A \cap B)$ 는
+
+    $$ \therefore  P(A \cap B) = P(A)P(B|A) = \dfrac{3}{10} \times \dfrac{2}{9} = \dfrac{1}{15} $$
+
+    이다. ■ 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
