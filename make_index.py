@@ -26,13 +26,13 @@ def sections(title, file, get):
 
 def update():
     theorems = f'''\
-#### 생각 메모
+### 생각 메모
 
-###### - [기초](https://ccss17.github.io/all.html)
+##### - [기초](https://ccss17.github.io/all.html)
 
-###### - [생각](https://ccss17.github.io/all2.html)
+##### - [생각](https://ccss17.github.io/all2.html)
 
-###### - [역사](https://ccss17.github.io/all3.html)
+##### - [역사](https://ccss17.github.io/all3.html)
 
 '''
 # {sections('기초적인 것에 관련된 메모', 'all', get_theorem)}
@@ -41,31 +41,54 @@ def update():
     math_sections = f'''\
 {START_SECTION}
 
-## 수학기초론 메모
+### 수학기초론 메모
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
+
 {sections('논리학', 'logic', get_definitions)}
 {sections('집합론', 'math', get_definitions)}
 {sections('수리논리학', 'mathmatical_logic', get_definitions)}
 
-## 산술과 대수학 메모
+</blockquote>
+
+### 산술과 대수학 메모
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 {sections('기초 산술 메모', 'arithmetic', get_definitions)}
 {sections('추상대수학 메모', 'abstract_algebra', get_definitions)}
 {sections('대수학 메모', 'algebra', get_definitions)}
 
-## 해석학 메모
+</blockquote>
+
+### 해석학 메모
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 {sections('해석학 메모', 'anal', get_definitions)}
 {sections('삼각 함수 메모', 'trig', get_definitions)}
 {sections('함수 메모', 'function', get_definitions)}
 
-## 확률 메모
+</blockquote>
+
+### 확률 메모
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 {sections('조합 메모', 'comb', get_definitions)}
 {sections('확률 메모', 'prop', get_definitions)}
 
-# 통계학 메모
+</blockquote>
+
+### 통계학 메모
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 {sections('도수분포의 평균,분산,표준편차', 'stat', get_definitions)}
 {sections('이산확률변수의 평균,분산,표준편차', 'stat2', get_definitions)}
 {sections('이항분포와 연속확률변수의 평균,분산,표준편차', 'stat3', get_definitions)}
 
-# 미적분 메모
+</blockquote>
+
+## 미적분 메모
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 {sections('극한 메모', 'calculus', get_definitions)}
 {sections('미분 메모', 'calculus2', get_definitions)}
 {sections('적분 메모', 'calculus3', get_definitions)}
@@ -74,13 +97,19 @@ def update():
 {sections('벡터해석학 메모', 'vector', get_definitions)}
 {sections('미적분 메모', 'calculus6', get_definitions)}
 
-# 선형대수학 메모
+</blockquote>
+
+## 선형대수학 메모
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 {sections('선형방정식', 'la', get_definitions)}
 {sections('행렬 대수', 'la2', get_definitions)}
 {sections('행렬식', 'la3', get_definitions)}
 {sections('벡터공간', 'la4', get_definitions)}
 {sections('고유벡터', 'la5', get_definitions)}
 {sections('직교', 'la6', get_definitions)}
+
+</blockquote>
 
 '''
 

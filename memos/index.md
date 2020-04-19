@@ -34,6 +34,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
+
 - [논리학](https://ccss17.github.io/logic.html)
     
   ######  언어,  단어,  문장,  사고 전달의 최소단위,  명제(proposition),  조건(condition),  진리값,  진리집합(truth set),  추리,  추론(inference),  논증,  논리학,  논리학에서의 올바르다,  연역적으로 건전 타당한(sound and valid) 추론,  귀납적으로 건전한(inductively sound) 추론, 또는 귀납적으로 강한(inductively strong) 추론,  논리학의 기본원리,  비형식 논리학,  형식 논리학,  오류론,  설득력 있는 추론,  설득력 없는 추론,  형식적 오류,  비형식적 오류,  심리적 오류,  유추(analogy),  귀납(induction),  완전귀납,  불완전귀납,  귀납 추론의 종류,  인과적 귀납법,  연역(deduction),  연역논증 규칙,  정언 논리,  현대 논리학
@@ -187,3 +188,4 @@
 ##### - [생각](https://ccss17.github.io/all2.html)
 
 ##### - [역사](https://ccss17.github.io/all3.html)
+
