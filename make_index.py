@@ -61,7 +61,7 @@ def update():
 {sections('확률 메모', 'prop', get_definitions)}
 
 # 통계학 메모
-{sections('도수분포의 평균,분산,표준편차 통계학', 'stat', get_definitions)}
+{sections('도수분포의 평균,분산,표준편차', 'stat', get_definitions)}
 {sections('이산확률변수의 평균,분산,표준편차', 'stat2', get_definitions)}
 {sections('이항분포와 연속확률변수의 평균,분산,표준편차', 'stat3', get_definitions)}
 

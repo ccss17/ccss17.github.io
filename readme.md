@@ -76,7 +76,7 @@
 
 # 통계학 메모
 
-- [도수분포의 평균,분산,표준편차 통계학](https://ccss17.github.io/stat.html)
+- [도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)
     
   ######  통계학(statistics),  자료(data, 데이터),  질적 자료(qualitative data, 정성적 자료),  양적 자료(quantitative data, 정량적 자료),  정보(information),  지식(knowledge),  변량(variate),  계급(class),  계급의 크기(class interval),  대표값(representative value),  계급값(class mark),  평균(mean),  도수(frequency),  도수분포표(frequency distribution),  히스토그램(histogram),  상대도수(relative frequency),  산포도(dispersion, variability, scatter, spread),  편차(deviation),  분산(variance),  표준편차(standard deviation)
 
