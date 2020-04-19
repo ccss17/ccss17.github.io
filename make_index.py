@@ -41,25 +41,29 @@ def update():
     math_sections = f'''\
 {START_SECTION}
 
-## 수학기초론
+## 수학기초론 메모
 {sections('논리학', 'logic', get_definitions)}
 {sections('집합론', 'math', get_definitions)}
 {sections('수리논리학', 'mathmatical_logic', get_definitions)}
 
-## 산술과 대수학
+## 산술과 대수학 메모
 {sections('기초 산술 메모', 'arithmetic', get_definitions)}
 {sections('추상대수학 메모', 'abstract_algebra', get_definitions)}
 {sections('대수학 메모', 'algebra', get_definitions)}
 
-## 해석학
+## 해석학 메모
 {sections('해석학 메모', 'anal', get_definitions)}
 {sections('삼각 함수 메모', 'trig', get_definitions)}
 {sections('함수 메모', 'function', get_definitions)}
 
-## 확률과 통계
+## 확률 메모
 {sections('조합 메모', 'comb', get_definitions)}
 {sections('확률 메모', 'prop', get_definitions)}
-{sections('통계 메모', 'stat', get_definitions)}
+
+# 통계학 메모
+{sections('도수분포의 평균,분산,표준편차 통계학', 'stat', get_definitions)}
+{sections('이산확률변수의 평균,분산,표준편차', 'stat2', get_definitions)}
+{sections('이항분포와 연속확률변수의 평균,분산,표준편차', 'stat3', get_definitions)}
 
 # 미적분 메모
 {sections('극한 메모', 'calculus', get_definitions)}

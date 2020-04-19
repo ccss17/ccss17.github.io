@@ -22,7 +22,7 @@
 
 # 수학 메모
 
-## 수학기초론
+## 수학기초론 메모
 
 - [논리학](https://ccss17.github.io/logic.html)
     
@@ -36,7 +36,7 @@
     
   ######  수리 논리학,  명제와 조건의 부정,  명제 $p \to q$,  명제 $p \to q$ 의 부정,  조건부 명제의 참, 거짓,  명제의 역(converse),  명제의 대우(contraposition),  수학에서의 증명,  직접증명법,  간접증명법,  대우를 이용한 증명법(proof by contraposition),  귀류법,  수학적 귀납법(mathematical induction),  충분조건(sufficiency),  필요조건(necessity),  필요충분조건(necessity and sufficiency),  수리 논리학의 논증,  의미론적으로 타당한 논증,  구문론적으로 타당한 논증,  메타 정리
 
-## 산술과 대수학
+## 산술과 대수학 메모
 
 - [기초 산술 메모](https://ccss17.github.io/arithmetic.html)
     
@@ -50,7 +50,7 @@
     
   ######  수식,  미지수(변수, variable),  독립변수(independant variable),  종속변수(dependant variable),  방정식(equation),  불능,  항등식,  계수(coefficient),  항,  단항식(monomial),  다항식(polynomial),  차수(degree),  최고차항,  인수,  다항식의 연산에 대한 성질,  일차방정식(선형방정식, linear equation),  이차방정식,  다항방정식,  인수분해,  부등식(inequality),  절대부등식,  조건부등식,  유리식,  분수식,  가분수식,  진분수식,  다항식의 연산,  무리식,  연립방정식(simultaneous equation) 또는 방정식계(system of equations),  대수학의 기본 정리,  $k$중근,  대수학의 기본 정리의 따름 정리,  모델(model ; 모형),  수학적 모델링
 
-## 해석학
+## 해석학 메모
 
 - [해석학 메모](https://ccss17.github.io/anal.html)
     
@@ -64,7 +64,7 @@
     
   ######  함수의 그래프,  직선의 방정식,  원의 방정식,  점의 평행이동,  도형의 평행이동,  대칭,  점의 대칭이동,  도형의 대칭이동,  항등함수,  상수함수,  합성함수(composite function),  역함수(inverse function),  양함수(explicit function),  음함수(implicit function),  초월함수(transcendental function),  다항함수(polynomial function),  함수의 최대값,  함수의 최소값,  홀함수(기함수, odd function),  짝함수(우함수, even function),  매개변수 방정식(parameter equation),  유리함수(rational function),  유리함수의 그래프,  무리함수,  무리함수의 그래프,  지수함수,  지수방정식(exponential equation),  지수부등식(exponential inequality),  로그함수,  로그방정식(logarithm equation),  로그부등식(logarithm inequality),  가우스 함수,  주기함수,  뉴턴의 다항식 보간법(polynomial interpolation),  시그모이드 함수(sigmoid function),  표준 시그모이드 함수
 
-## 확률과 통계
+## 확률 메모
 
 - [조합 메모](https://ccss17.github.io/comb.html)
     
@@ -74,9 +74,19 @@
     
   ######  확률(probability),  사건의 경우의 수,  수학적 확률(mathematical probability),  통계적 확률,  큰 수의 법칙(law of large number),  기하학적 확률,  확률의 성질,  확률의 덧셈,  확률의 곱,  확률의 덧셈정리(addition theorem of probability),  배반사건의 확률의 덧셈정리,  여사건의 확률,  조건부확률(conditional probability),  확률의 곱셈정리(multiplication theorem of probability),  독립사건(independent),  종속사건(dependent),  독립시행(independent trials),  독립시행의 확률,  전확률 공식(total probability),  베이즈 정리(bayes theorem)
 
-- [통계 메모](https://ccss17.github.io/stat.html)
+# 통계학 메모
+
+- [도수분포의 평균,분산,표준편차 통계학](https://ccss17.github.io/stat.html)
     
-  ######  통계학(statistics),  자료(data, 데이터),  질적 자료(qualitative data, 정성적 자료),  양적 자료(quantitative data, 정량적 자료),  정보(information),  지식(knowledge),  변량(variate),  계급(class),  계급의 크기(class interval),  대표값(representative value),  계급값(class mark),  평균(mean),  도수(frequency),  도수분포표(frequency distribution),  히스토그램(histogram),  상대도수(relative frequency),  산포도(dispersion, variability, scatter, spread),  편차(deviation),  분산(variance),  표준편차(standard deviation),  확률변수(random variable),  확률변수로의 확률 표기,  확률분포(probability distribution),  이산확률변수(discrete random variable),  확률질량함수(probability mass function),  확률질량함수의 성질,  기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable),  분산(variance),  표준편차(standard deviation),  평균,  분산,  표준편차
+  ######  통계학(statistics),  자료(data, 데이터),  질적 자료(qualitative data, 정성적 자료),  양적 자료(quantitative data, 정량적 자료),  정보(information),  지식(knowledge),  변량(variate),  계급(class),  계급의 크기(class interval),  대표값(representative value),  계급값(class mark),  평균(mean),  도수(frequency),  도수분포표(frequency distribution),  히스토그램(histogram),  상대도수(relative frequency),  산포도(dispersion, variability, scatter, spread),  편차(deviation),  분산(variance),  표준편차(standard deviation)
+
+- [이산확률변수의 평균,분산,표준편차](https://ccss17.github.io/stat2.html)
+    
+  ######  확률변수(random variable),  확률변수로의 확률 표기,  확률분포(probability distribution),  이산확률변수(discrete random variable),  확률질량함수(probability mass function),  확률질량함수의 성질,  기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable),  이산확률변수의 분산(variance),  이산확률변수의 표준편차(standard deviation),  이산확률변수의 기대값(평균)의 성질,  이산확률변수의 분산의 성질,  이산확률변수의 표준편차의 성질
+
+- [이항분포와 연속확률변수의 평균,분산,표준편차](https://ccss17.github.io/stat3.html)
+    
+  ###### 
 
 # 미적분 메모
 
