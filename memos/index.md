@@ -6,23 +6,33 @@
 
 # 컴퓨터 관련 메모
 
-### [Makefile 메모](https://ccss17.github.io/makefile.html)
+<blockquote style="border: 2px solid; color:black; padding: 7px;">
 
-### [git 메모](https://ccss17.github.io/git.html)
+- ### [Makefile 메모](https://ccss17.github.io/makefile.html)
 
-### [docker 메모](https://ccss17.github.io/docker.html)
+- ### [git 메모](https://ccss17.github.io/git.html)
+
+- ### [docker 메모](https://ccss17.github.io/docker.html)
+
+</blockquote>
 
 # 철학 메모
 
-### [인공지능 메모](https://ccss17.github.io/ai.html)
+<blockquote style="border: 2px solid; color:black; padding: 7px;">
 
-### [철학 메모](https://ccss17.github.io/philosophy.html)
+- ### [인공지능 메모](https://ccss17.github.io/ai.html)
 
-### [정신지도규칙/방법서설 메모(데카르트)](https://ccss17.github.io/descartes.html)
+- ### [철학 메모](https://ccss17.github.io/philosophy.html)
+
+- ### [정신지도규칙/방법서설 메모(데카르트)](https://ccss17.github.io/descartes.html)
+
+</blockquote>
 
 # 수학 메모
 
-## 수학기초론 메모
+### 수학기초론 메모
+
+<blockquote style="border: 2px solid; color:black; padding: 7px;">
 
 - [논리학](https://ccss17.github.io/logic.html)
     
@@ -36,7 +46,11 @@
     
   ######  수리 논리학,  명제와 조건의 부정,  명제 $p \to q$,  명제 $p \to q$ 의 부정,  조건부 명제의 참, 거짓,  명제의 역(converse),  명제의 대우(contraposition),  수학에서의 증명,  직접증명법,  간접증명법,  대우를 이용한 증명법(proof by contraposition),  귀류법,  수학적 귀납법(mathematical induction),  충분조건(sufficiency),  필요조건(necessity),  필요충분조건(necessity and sufficiency),  수리 논리학의 논증,  의미론적으로 타당한 논증,  구문론적으로 타당한 논증,  메타 정리
 
-## 산술과 대수학 메모
+</blockquote>
+
+### 산술과 대수학 메모
+
+<blockquote style="border: 2px solid; color:black; padding: 7px;">
 
 - [기초 산술 메모](https://ccss17.github.io/arithmetic.html)
     
@@ -50,7 +64,11 @@
     
   ######  수식,  미지수(변수, variable),  독립변수(independant variable),  종속변수(dependant variable),  방정식(equation),  불능,  항등식,  계수(coefficient),  항,  단항식(monomial),  다항식(polynomial),  차수(degree),  최고차항,  인수,  다항식의 연산에 대한 성질,  일차방정식(선형방정식, linear equation),  이차방정식,  다항방정식,  인수분해,  부등식(inequality),  절대부등식,  조건부등식,  유리식,  분수식,  가분수식,  진분수식,  다항식의 연산,  무리식,  연립방정식(simultaneous equation) 또는 방정식계(system of equations),  대수학의 기본 정리,  $k$중근,  대수학의 기본 정리의 따름 정리,  모델(model ; 모형),  수학적 모델링
 
-## 해석학 메모
+</blockquote>
+
+### 해석학 메모
+
+<blockquote style="border: 2px solid; color:black; padding: 7px;">
 
 - [해석학 메모](https://ccss17.github.io/anal.html)
     
@@ -64,7 +82,11 @@
     
   ######  함수의 그래프,  직선의 방정식,  원의 방정식,  점의 평행이동,  도형의 평행이동,  대칭,  점의 대칭이동,  도형의 대칭이동,  항등함수,  상수함수,  합성함수(composite function),  역함수(inverse function),  양함수(explicit function),  음함수(implicit function),  초월함수(transcendental function),  다항함수(polynomial function),  함수의 최대값,  함수의 최소값,  홀함수(기함수, odd function),  짝함수(우함수, even function),  매개변수 방정식(parameter equation),  유리함수(rational function),  유리함수의 그래프,  무리함수,  무리함수의 그래프,  지수함수,  지수방정식(exponential equation),  지수부등식(exponential inequality),  로그함수,  로그방정식(logarithm equation),  로그부등식(logarithm inequality),  가우스 함수,  주기함수,  뉴턴의 다항식 보간법(polynomial interpolation),  시그모이드 함수(sigmoid function),  표준 시그모이드 함수
 
-## 확률 메모
+</blockquote>
+
+### 확률 메모
+
+<blockquote style="border: 2px solid; color:black; padding: 7px;">
 
 - [조합 메모](https://ccss17.github.io/comb.html)
     
@@ -74,7 +96,11 @@
     
   ######  확률(probability),  사건의 경우의 수,  수학적 확률(mathematical probability),  통계적 확률,  큰 수의 법칙(law of large number),  기하학적 확률,  확률의 성질,  확률의 덧셈,  확률의 곱,  확률의 덧셈정리(addition theorem of probability),  배반사건의 확률의 덧셈정리,  여사건의 확률,  조건부확률(conditional probability),  확률의 곱셈정리(multiplication theorem of probability),  독립사건(independent),  종속사건(dependent),  독립시행(independent trials),  독립시행의 확률,  전확률 공식(total probability),  베이즈 정리(bayes theorem)
 
-# 통계학 메모
+</blockquote>
+
+### 통계학 메모
+
+<blockquote style="border: 2px solid; color:black; padding: 7px;">
 
 - [도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)
     
@@ -88,7 +114,11 @@
     
   ###### 
 
-# 미적분 메모
+</blockquote>
+
+## 미적분 메모
+
+<blockquote style="border: 2px solid; color:black; padding: 7px;">
 
 - [극한 메모](https://ccss17.github.io/calculus.html)
     
@@ -118,7 +148,11 @@
     
   ######  이변수 함수의 극한,  이변수 함수의 극한의 성질,  이변수 함수의 연속,  이변수 합성함수의 연속,  다변수 함수의 극한과 연속,  상미분(ordinary derivative),  $x$ 에 대한 편미분계수,  $y$ 에 대한 편미분계수,  편도함수(partial derivative),  편도함수의 기하학적 의미,  이계 편도함수(second-order partial derivative),  혼합 편미분(mixed derivative),  혼합 편미분 정리(mixed derivative theorem),  이변수 함수의 미분가능성,  이변수 합성함수의 도함수(chain rule) 또는 일독립변수와 이매개변수에 대한 도함수,  일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule),  이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule),  이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule),  $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule),  스칼라장(scalar field),  방향도함수(directional derivative),  기울기 벡터(gradient vector),  기울기 벡터 방향의 단위벡터,  방향도함수의 계산,  삼변수 함수의 방향도함수,  삼변수 함수의 기울기 벡터(gradient vector),  삼변수 함수의 방향도함수 계산,  선형화(linearization),  표준 선형 근사(standard linear approximation),  미분(differential),  미분의 추정(estimating with differentials),  접평면(tangent plane),  법선벡터(normal vector),  이변수 함수 선형화 또는 접평면(tangent plane),  이변수 함수 미분 또는 전미분(total differential)
 
-# 선형대수학 메모
+</blockquote>
+
+## 선형대수학 메모
+
+<blockquote style="border: 2px solid; color:black; padding: 7px;">
 
 - [선형방정식](https://ccss17.github.io/la.html)
     
@@ -144,11 +178,16 @@
     
   ######  내적(inner product) 또는 스칼라곱(dot product),  내적의 성질,  벡터의 크기(length) 또는 노름(norm),  벡터의 크기의 성질,  단위벡터(unit vector),  정규화(normalizatoin),  두 벡터 $u, v$ 사이의 거리(distance),  벡터 $u, v$ 의 직교(orthogonal),  직교집합(orthogonal set)
 
-#### 생각 메모
+</blockquote>
 
-###### - [기초](https://ccss17.github.io/all.html)
+### 생각 메모
 
-###### - [생각](https://ccss17.github.io/all2.html)
+<blockquote style="border: 2px solid; color:black; padding: 7px;">
 
-###### - [역사](https://ccss17.github.io/all3.html)
+##### - [기초](https://ccss17.github.io/all.html)
 
+##### - [생각](https://ccss17.github.io/all2.html)
+
+##### - [역사](https://ccss17.github.io/all3.html)
+
+</blockquote>
