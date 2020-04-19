@@ -6,7 +6,7 @@
 
 # 컴퓨터 관련 메모
 
-<blockquote style="border: 2px solid; color:black; padding: 7px;">
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
 - ### [Makefile 메모](https://ccss17.github.io/makefile.html)
 
@@ -18,7 +18,7 @@
 
 # 철학 메모
 
-<blockquote style="border: 2px solid; color:black; padding: 7px;">
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
 - ### [인공지능 메모](https://ccss17.github.io/ai.html)
 
@@ -32,7 +32,7 @@
 
 ### 수학기초론 메모
 
-<blockquote style="border: 2px solid; color:black; padding: 7px;">
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
 - [논리학](https://ccss17.github.io/logic.html)
     
@@ -50,7 +50,7 @@
 
 ### 산술과 대수학 메모
 
-<blockquote style="border: 2px solid; color:black; padding: 7px;">
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
 - [기초 산술 메모](https://ccss17.github.io/arithmetic.html)
     
@@ -68,7 +68,7 @@
 
 ### 해석학 메모
 
-<blockquote style="border: 2px solid; color:black; padding: 7px;">
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
 - [해석학 메모](https://ccss17.github.io/anal.html)
     
@@ -86,7 +86,7 @@
 
 ### 확률 메모
 
-<blockquote style="border: 2px solid; color:black; padding: 7px;">
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
 - [조합 메모](https://ccss17.github.io/comb.html)
     
@@ -100,7 +100,7 @@
 
 ### 통계학 메모
 
-<blockquote style="border: 2px solid; color:black; padding: 7px;">
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
 - [도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)
     
@@ -118,7 +118,7 @@
 
 ## 미적분 메모
 
-<blockquote style="border: 2px solid; color:black; padding: 7px;">
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
 - [극한 메모](https://ccss17.github.io/calculus.html)
     
@@ -152,7 +152,7 @@
 
 ## 선형대수학 메모
 
-<blockquote style="border: 2px solid; color:black; padding: 7px;">
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
 - [선형방정식](https://ccss17.github.io/la.html)
     
@@ -182,12 +182,8 @@
 
 ### 생각 메모
 
-<blockquote style="border: 2px solid; color:black; padding: 7px;">
-
 ##### - [기초](https://ccss17.github.io/all.html)
 
 ##### - [생각](https://ccss17.github.io/all2.html)
 
 ##### - [역사](https://ccss17.github.io/all3.html)
-
-</blockquote>
