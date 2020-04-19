@@ -76,7 +76,7 @@
 
 - [통계 메모](https://ccss17.github.io/stat.html)
     
-  ######  통계학(statistics),  자료(data, 데이터),  질적 자료(qualitative data, 정성적 자료),  양적 자료(quantitative data, 정량적 자료),  정보(information),  지식(knowledge),  변량(variate),  계급(class),  계급의 크기(class interval),  대표값(representative value),  계급값(class mark),  평균(mean),  도수(frequency),  도수분포표(frequency distribution),  히스토그램(histogram),  상대도수(relative frequency),  편차,  분산,  표준편차,  확률변수(random variable),  확률변수로의 확률 표기,  확률분포(probability distribution),  이산확률변수(discrete random variable),  확률질량함수(probability mass function),  확률질량함수의 성질,  기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable),  분산(variance),  표준편차(standard deviation),  평균,  분산,  표준편차
+  ######  통계학(statistics),  자료(data, 데이터),  질적 자료(qualitative data, 정성적 자료),  양적 자료(quantitative data, 정량적 자료),  정보(information),  지식(knowledge),  변량(variate),  계급(class),  계급의 크기(class interval),  대표값(representative value),  계급값(class mark),  평균(mean),  도수(frequency),  도수분포표(frequency distribution),  히스토그램(histogram),  상대도수(relative frequency),  산포도(dispersion, variability, scatter, spread),  편차(deviation),  분산(variance),  표준편차(standard deviation),  확률변수(random variable),  확률변수로의 확률 표기,  확률분포(probability distribution),  이산확률변수(discrete random variable),  확률질량함수(probability mass function),  확률질량함수의 성질,  기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable),  분산(variance),  표준편차(standard deviation),  평균,  분산,  표준편차
 
 # 미적분 메모
 
