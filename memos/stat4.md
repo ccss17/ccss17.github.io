@@ -1,0 +1,5 @@
+# [ccss17.github.io](https://ccss17.github.io)
+
+# 연속확률변수
+
+# 연속확률변수 평균, 분산, 표준편차(산포도 측정)

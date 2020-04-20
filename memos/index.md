@@ -111,7 +111,11 @@
     
   ######  확률변수(random variable),  확률변수로의 확률 표기,  확률분포(probability distribution),  이산확률변수(discrete random variable),  확률질량함수(probability mass function),  확률질량함수의 성질,  기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable),  이산확률변수의 분산(variance),  이산확률변수의 표준편차(standard deviation),  이산확률변수의 기대값(평균)의 성질,  이산확률변수의 분산의 성질,  이산확률변수의 표준편차의 성질
 
-- [이항분포와 연속확률변수의 평균,분산,표준편차](https://ccss17.github.io/stat3.html)
+- [이항분포의 평균,분산,표준편차](https://ccss17.github.io/stat3.html)
+    
+  ######  이항분포(binomial distribution),  이항분포의 평균,  이항분포의 분산,  이항분포의 표준편차,  큰 수의 법칙(law of large number)
+
+- [연속확률변수의 평균,분산,표준편차](https://ccss17.github.io/stat4.html)
     
   ###### 
 

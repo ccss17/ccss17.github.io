@@ -82,7 +82,8 @@ def update():
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 {sections('도수분포의 평균,분산,표준편차', 'stat', get_definitions)}
 {sections('이산확률변수의 평균,분산,표준편차', 'stat2', get_definitions)}
-{sections('이항분포와 연속확률변수의 평균,분산,표준편차', 'stat3', get_definitions)}
+{sections('이항분포의 평균,분산,표준편차', 'stat3', get_definitions)}
+{sections('연속확률변수의 평균,분산,표준편차', 'stat4', get_definitions)}
 
 </blockquote>
 
