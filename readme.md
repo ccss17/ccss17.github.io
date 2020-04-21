@@ -115,9 +115,9 @@
     
   ######  이항분포(binomial distribution),  이항분포의 평균,  이항분포의 분산,  이항분포의 표준편차,  큰 수의 법칙(law of large number)
 
-- [연속확률변수의 평균,분산,표준편차](https://ccss17.github.io/stat4.html)
+- [연속확률변수의 평균,분산,표준편차와 정규분포](https://ccss17.github.io/stat4.html)
     
-  ###### 
+  ######  연속확률변수(continuous random variable),  확률밀도함수(probability density function),  확률밀도함수의 성질,  연속확률변수의 평균,  연속확률변수의 분산,  연속확률변수의 표준편차,  연속확률변수의 평균, 분산, 표준편차의 성질,  정규분포(normal distribution),  정규분포곡선,  정규분포의 성질,  표준정규분포(standard normal distribution),  정규분포의 표준화(standardization),  이항분포와 정규분포의 관계
 
 </blockquote>
 
