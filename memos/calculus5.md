@@ -64,7 +64,7 @@
 
   - 예시 
 
-    $$ \int_{}^{}e ^{x+2}dx = \int_{}^{}e ^{2} \circ e ^{x}dx=e ^{2}\int_{}^{}e ^{x}dx = e ^{2} \circ e ^{x}+C = e ^{x+2}+C $$
+    $$ \int_{}^{}e ^{x+2}dx = \int_{}^{}e ^{2} \cdot e ^{x}dx=e ^{2}\int_{}^{}e ^{x}dx = e ^{2} \cdot e ^{x}+C = e ^{x+2}+C $$
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -90,7 +90,7 @@
 
   - 예시 
 
-    $$ \int_{}^{}3 ^{x-2}dx = \int_{}^{}3 ^{x} \circ 3 ^{-2}dx = \frac{1}{9}\int_{}^{}3 ^{x}dx = \frac{3 ^{x}}{9 \ln 3}+C = \frac{3 ^{x-2}}{\ln 3}+C $$
+    $$ \int_{}^{}3 ^{x-2}dx = \int_{}^{}3 ^{x} \cdot 3 ^{-2}dx = \frac{1}{9}\int_{}^{}3 ^{x}dx = \frac{3 ^{x}}{9 \ln 3}+C = \frac{3 ^{x-2}}{\ln 3}+C $$
 
 ## 삼각함수의 부정적분
 
@@ -194,13 +194,9 @@
 
   </blockquote>
 
-  - 부연설명
+  - 설명
 
-    함수 $f(x)$ 에서 변수 $x$ 를 다른 변수 $t$ 에 대한 미분가능한 함수 $x=g(t)$ 로 생각하면
-
-    $$ f(x) = f(g(t)), \frac{dx}{dt} = g'(t) $$
-
-    이므로 
+    함수 $f(x)$ 에서 변수 $x$ 를 다른 변수 $t$ 에 대한 미분가능한 함수 $x=g(t)$ 로 생각하면 $f(x) = f(g(t)), \dfrac{dx}{dt} = g'(t)$ 이므로 
 
     $$ \int_{}^{}f(x)dx = \int_{}^{}f(x)\frac{dt}{dt}dx$$
 
@@ -216,11 +212,23 @@
 
     - 합성함수의 미분법, 즉 연쇄법칙에서 미분기호를 
 
-      $$ \frac{dy}{dx} = \frac{dy}{dt} \circ \frac{dt}{dx} $$
+      $$ \frac{dy}{dx} = \frac{dy}{dt} \cdot \frac{dt}{dx} $$
 
       와 같이 분수처럼 계산할 수 있었다.
 
-    - $\int_{}^{}$ 안에서 $\frac{dt}{dt}$ 에 대한 곱하기, 약분, 결합법칙을 자유롭게 적용할 수 있다.
+    - $\displaystyle \int_{}^{}$ 안에서 $\dfrac{dt}{dt}$ 에 대한 곱하기, 약분, 결합법칙을 자유롭게 적용할 수 있다.
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 치환적분법(integration by substitution) : 적분변수의 치환을 이용하여 합성함수 형태의 적분식을 쉬운 적분식으로 변환하여 적분하는 방법으로써 
+
+  함수 $f(x)$ 의 한 부정적분을 $F(x)$ 라 하고 미분가능한 함수 $g(t)$ 에 대하여 $x=g(t)$ 로 놓으면
+
+  $$ \int_{}^{}f(x)dx = \int_{}^{}f(g(t))g'(t)dt = F(g(t)) + C $$
+
+  이다. 
+
+  </blockquote>
 
   - 증명 
 
@@ -230,7 +238,7 @@
 
     이다. $x$ 를 $t$ 에 대한 미분가능한 함수 $x=g(t)$ 로 두면 $F(x)=F(g(t))$ 이므로 $F(x)$ 를 $t$ 에 대하여 미분하면 합성함수의 미분법에 의하여 
 
-    $$ \frac{d}{dt}F(x)=\frac{d}{dx}F(x)\circ \frac{dx}{dt}=f(x)g'(t)=f(g(t))g'(t) $$
+    $$ \frac{d}{dt}F(x)=\frac{d}{dx}F(x)\cdot \frac{dx}{dt}=f(x)g'(t)=f(g(t))g'(t) $$
 
     이다. 따라서 부정적분의 정의에 의하여 
 
@@ -238,25 +246,11 @@
 
     이다.
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
-
-- 치환적분법(integration by substitution) : 적분변수의 치환을 이용하여 합성함수 형태의 적분식을 쉬운 적분식으로 변환하여 적분하는 방법이다. 
-
-  </blockquote>
-
-  - 부연설명 
-
-    함수 $f(x)$ 의 한 부정적분을 $F(x)$ 라 하고 미분가능한 함수 $g(t)$ 에 대하여 $x=g(t)$ 로 놓으면
-
-    $$ \int_{}^{}f(x)dx = \int_{}^{}f(g(t))g'(t)dt = F(g(t)) + C $$
-
-    이다. 
-
   - 예시 
 
     $$ \int_{}^{}(3x+2) ^{2}dx $$
 
-    에서 $3x+2=t$ 로 두면 $x = \frac{t-2}{3}$ 이고 양변을 $t$ 에 대하여 미분하면 
+    에서 $3x+2=t$ 로 두면 $x = \dfrac{t-2}{3}$ 이고 양변을 $t$ 에 대하여 미분하면 
 
     $$ \frac{dx}{dt} = \frac{1}{3} $$
 
@@ -266,11 +260,11 @@
 
     이다. 따라서
 
-    $$ \int_{}^{}(3x+2)^{2}dx = \int_{}^{}t ^{2} \circ \frac{1}{3}dt $$
+    $$ \int_{}^{}(3x+2)^{2}dx = \int_{}^{}t ^{2} \cdot \frac{1}{3}dt $$
 
     이므로
 
-    $$ = \frac{1}{3} \int_{}^{}t ^{2}dt = \frac{1}{3} \circ \frac{1}{3} t ^{3}+C = \frac{1}{9} (3x+2) ^{3}+C$$
+    $$ = \frac{1}{3} \int_{}^{}t ^{2}dt = \frac{1}{3} \cdot \frac{1}{3} t ^{3}+C = \frac{1}{9} (3x+2) ^{3}+C$$
 
     이다.
 
@@ -310,7 +304,7 @@
 
     에서 $(x ^{2}+1)'=2x$ 이므로 $x^2+1=g(x)=t$ 로 두고 $t ^{5} = f(t)$ 로 두면,
 
-    $$ \int_{}^{}x(x ^{2}+1)^{5}dx = \frac{1}{2} \int_{}^{}(x ^{2}+1) ^{5} \circ 2xdx = \frac{1}{2} \int_{}^{}f(g(x)) \circ g'(x)dx = \frac{1}{2} \circ \frac{1}{6}t ^{6} + C = \frac{1}{12}t ^{6}+C $$
+    $$ \int_{}^{}x(x ^{2}+1)^{5}dx = \frac{1}{2} \int_{}^{}(x ^{2}+1) ^{5} \cdot 2xdx = \frac{1}{2} \int_{}^{}f(g(x)) \cdot g'(x)dx = \frac{1}{2} \cdot \frac{1}{6}t ^{6} + C = \frac{1}{12}t ^{6}+C $$
 
     이다. 그러므로 
 
@@ -332,7 +326,7 @@
 
     이므로
 
-    $$ \int_{}^{}x(x ^{2}+1)^{5}dx = \frac{1}{2} \int_{}^{}(x ^{2}+1) ^{5} \circ 2xdx = \frac{1}{2} \int_{}^{} t ^{5}dt = \frac{1}{12}t ^{6}+C $$
+    $$ \int_{}^{}x(x ^{2}+1)^{5}dx = \frac{1}{2} \int_{}^{}(x ^{2}+1) ^{5} \cdot 2xdx = \frac{1}{2} \int_{}^{} t ^{5}dt = \frac{1}{12}t ^{6}+C $$
 
     이다. 그러므로
 
@@ -430,7 +424,7 @@
 
     에서 
 
-    $$ \int_{}^{}x e ^{x}dx = x \circ e ^{x}- \int_{}^{}1 \circ e ^{x}dx $$
+    $$ \int_{}^{}x e ^{x}dx = x \cdot e ^{x}- \int_{}^{}1 \cdot e ^{x}dx $$
 
     이다. 그러므로
 
@@ -500,7 +494,7 @@
 
     에서 $u = \ln x, v'=1$ 로 두면 
 
-    $$ \int_{}^{}\ln x \circ 1 dx = \ln x \circ x - \int_{}^{} \frac{1}{x} \circ x dx $$
+    $$ \int_{}^{}\ln x \cdot 1 dx = \ln x \cdot x - \int_{}^{} \frac{1}{x} \cdot x dx $$
 
     이다. 그러므로 
 
@@ -526,7 +520,7 @@
 
     에서 $u = \log_{a} x, v'=1$ 로 두면 
 
-    $$ \int_{}^{}\log_{a} x \circ 1 dx = \log_{a} x \circ x - \int_{}^{} \frac{1}{x \ln a} \circ x dx $$
+    $$ \int_{}^{}\log_{a} x \cdot 1 dx = \log_{a} x \cdot x - \int_{}^{} \frac{1}{x \ln a} \cdot x dx $$
 
     이다. 그러므로 
 
@@ -724,7 +718,7 @@
 
     에서 $y=f(x)$ 로 나타내면 
 
-    $$ \frac{dy}{dx} \circ \frac{1}{y}=1 $$
+    $$ \frac{dy}{dx} \cdot \frac{1}{y}=1 $$
 
     이므로 
 
