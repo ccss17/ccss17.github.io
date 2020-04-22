@@ -128,11 +128,31 @@
 
   </blockquote>
 
+  - 예시 
+
+    모집단 $\{1,2,3,4\}$ 에서 하나의 숫자를 취할 확률변수를 $X$ 라 할 때 다음 표
+
+    | $X$| $1$ | $2$ |$3$|
+    |:---:|:---:|:---:|:---:|
+    | $P(X=x)$| $\dfrac{1}{3}$  |$\dfrac{1}{3}$ |$\dfrac{1}{3}$ |
+
+    를 모집단의 확률분포라고 할 수 있다. 
+
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 모평균(population mean) : 모집단의 확률분포의 확률변수 $X$ 의 평균을 모평균 $\mu$ 라 한다.
 
   </blockquote>
+
+  - 예시 
+
+    "모집단의 확률분포" 의 예시의 모집단의 확률분포에서 모평균을 구해보면 
+
+    $$ \therefore  \mu = 1 \times \dfrac{1}{3} + 2 \times \dfrac{1}{3} + 3 \times \dfrac{1}{3} = \dfrac{1+2+3}{3} = 2 $$
+
+    이다. ■ 
+
+    그러니까 이 값으로 "다음 시행에서 $2$ 라는 값이 나올 것을 기대할 수 있다" 또는 "평균적으로 값이 $2$ 를 취한다" 라고 해석할 수 있다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -140,11 +160,27 @@
 
   </blockquote>
 
+  - 예시 
+
+    "모집단의 확률분포" 의 예시의 모집단의 확률분포에서 모분산을 구해보면 
+
+    $$ \therefore \sigma ^{2} = E(X ^{2}) - \mu ^{2} = \bigg (1 ^{2} \dfrac{1}{3}+2 ^{2}\dfrac{1}{3}+3 ^{2}\dfrac{1}{3}\bigg ) - 2^{2} = \dfrac{1+4+9}{3}- \dfrac{12}{3} = \dfrac{2}{3}  $$
+
+    이다. ■ 
+
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 모표준편차(population standard deviation) : 모집단의 확률분포의 확률변수 $X$ 의 분산을 모분산 $\sigma$ 라 한다.
 
   </blockquote>
+
+  - 예시 
+
+    "모집단의 확률분포" 의 예시의 모집단의 확률분포에서 모표준편차를 구해보면 
+
+    $$ \therefore \sigma = \sqrt[]{\dfrac{2}{3}}  = \dfrac{\sqrt[]{6}}{3} $$
+
+    이다. ■ 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -169,6 +205,23 @@
     $$ N \bigg (\mu , \dfrac{\sigma ^{2}}{n} \bigg ) $$
 
     를 따른다.
+
+  - 예시 
+
+    "모집단의 확률분포" 의 예시의 모집단에서 크기가 $2$ 인 표본을 임의추출한 표본을 $X_1, X_2$ 라 하면 이 표본은 다음 중 하나로 될 수 있다. 
+
+    | $X_1$| $1$ | $1$ |$1$|$2$ | $2$ |$2$|$3$ | $3$ |$3$|
+    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+    | $X_2$| $1$ | $2$ |$3$|$1$ | $2$ |$3$|$1$ | $2$ |$3$|
+
+    이때 표본들의 표본평균 $\overline{X} = \dfrac{X_1+X_2}{2}$ 는 
+
+    | $\overline{X}$| $1$ | $1.5$ |$2$|$1.5$ | $2$ |$2.5$|$2$ | $2.5$ |$3$|
+    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+
+    위와 같은 값을 가질 수 있는 확률변수이다. ■ 
+
+    그러니까 이 새로운 확률변수 $\overline{X}$(표본평균) 에 대한 평균, 분산, 표준편차를 구할 수 있는 것이다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -204,6 +257,27 @@
 
   </blockquote>
 
+  - 예시 
+
+    "모집단의 확률분포" 의 예시의 모집단에서 크기가 $2$ 인 표본을 임의추출한 표본을 $X_1, X_2$ 이었을 때 이 표본의 평균 $\overline{X} = \dfrac{X_1+X_2}{2}$ 를 구하여 확률변수 $\overline{X}$ 의 평균을 구해보자. 
+
+    "표본평균(sample mean)" 의 예시에서 확률변수 $\overline{X}$ 는 다음과 같은 값을 가질 수 있었음을 조사했으니까
+
+    | $\overline{X}$| $1$ | $1.5$ |$2$|$1.5$ | $2$ |$2.5$|$2$ | $2.5$ |$3$|
+    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+
+    표본평균 $\overline{X}$ 의 확률분포표는 다음과 같다. 
+
+    | $\overline{X}$| $1$ | $1.5$ |$2$|$2.5$ | $3$ |
+    |:---:|:---:|:---:|:---:|:---:|:---:|
+    | $P(\overline{X}=x)$| $\dfrac{1}{9}$ | $\dfrac{2}{9}$ |$\dfrac{3}{9}=\dfrac{1}{3}$|$\dfrac{2}{9}$ | $\dfrac{1}{9}$ |
+
+    이제 표본평균 $\overline{X}$ 의 평균을 구해보면
+
+    $$ \therefore  E(\overline{X}) = 1 \times \dfrac{1}{9} + 1.5 \times \dfrac{2}{9} + 2 \times \dfrac{1}{3} + 2.5 \times \dfrac{2}{9} + 3 \times \dfrac{1}{9} = \dfrac{1 + 3 + 6 + 5 + 3}{9} = \dfrac{18}{9} = 2 $$
+
+    임을 알 수 있다. ■ 
+
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 표본평균의 분산 : 모평균이 $\mu$, 모표준편차가 $\sigma$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
@@ -215,6 +289,24 @@
   이다. 
 
   </blockquote>
+
+  - 예시 
+
+    "모집단의 확률분포" 의 예시의 모집단에서 크기가 $2$ 인 표본을 임의추출한 표본을 $X_1, X_2$ 이었을 때 이 표본의 평균 $\overline{X} = \dfrac{X_1+X_2}{2}$ 를 구하여 확률변수 $\overline{X}$ 의 분산을 구해보자. 
+
+    "표본평균의 평균" 의 예시에서 표본평균 $\overline{X}$ 의 확률분포표는 다음과 같았고
+
+    | $\overline{X}$| $1$ | $1.5$ |$2$|$2.5$ | $3$ |
+    |:---:|:---:|:---:|:---:|:---:|:---:|
+    | $P(\overline{X}=x)$| $\dfrac{1}{9}$ | $\dfrac{2}{9}$ |$\dfrac{3}{9}=\dfrac{1}{3}$|$\dfrac{2}{9}$ | $\dfrac{1}{9}$ |
+
+    표본평균 $\overline{X}$ 의 평균은 $E(\overline{X}) = 2$ 이었다.
+
+    따라서 표본평균의 분산 $V(\overline{X})$ 은 
+
+    $$ \therefore  V(\overline{X}) = E(\overline{X} ^{2}) - \{E(\overline{X})\} ^{2} = \bigg (1 ^{2} \times \dfrac{1}{9} + 1.5 ^{2} \times \dfrac{2}{9} + 2 ^{2} \times \dfrac{1}{3} + 2.5 ^{2} \times \dfrac{2}{9} + 3 ^{2} \times \dfrac{1}{9} \bigg ) - 2 ^{2}= \dfrac{13}{3}-4 = \dfrac{1}{3} $$
+
+    이다. ■ 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -230,6 +322,18 @@
 
   - 예시 
 
+    "모집단의 확률분포" 의 예시의 모집단에서 크기가 $2$ 인 표본을 임의추출한 표본을 $X_1, X_2$ 이었을 때 이 표본의 평균 $\overline{X} = \dfrac{X_1+X_2}{2}$ 를 구하여 확률변수 $\overline{X}$ 의 표준편차 구해보자. 
+
+    "표본평균의 분산" 의 예시에서 표본평균 $\overline{X}$ 의 분산은 $V(\overline{X}) = \dfrac{1}{3}$ 이었다.
+
+    따라서 표본평균의 표준편차 $\sigma (\overline{X})$ 은 
+
+    $$ \therefore  \sigma (\overline{X}) = \sqrt[]{\dfrac{1}{3}} = \dfrac{\sqrt[]{3}}{3}  $$
+
+    이다. ■ 
+
+  - 예시 
+
     어떤 공장에서 생산한 건전지의 수명은 평균이 $200$ 시간이고 표준편차가 $10$ 시간인 정규분포 
 
     $$ N(200, 10 ^{2}) $$
@@ -239,6 +343,28 @@
     $$ P(199 \leq \overline{X} \leq 201) $$
 
     의 값을 구해보자. 
+
+    모집단이 정규분포 $N(200, 10 ^{2})$ 를 따르므로 크기가 $25$ 인 표본평균 $\overline{X}$ 는 정규분포
+
+    $$ N \bigg (200, \dfrac{10 ^{2}}{25}\bigg ) = N(200, 2 ^{2}) $$
+
+    를 따른다. 이제 확률변수 $\overline{X}$ 를 표준화하여 표준정규분포의 확률변수 $Z = \dfrac{\overline{X} - \mu }{\sigma } = \dfrac{\overline{X} - 200}{2}$ 를 만들자. 그러면 
+
+    $$ P(199 \leq \overline{X} \leq 201) = P \bigg (\dfrac{199 - 200}{2} \leq Z \leq \dfrac{201 - 200}{2} \bigg ) $$
+
+    $$ = P(-0.5 \leq Z \leq 0.5) = 2 P(0 \leq Z \leq 0.5) $$
+
+    $$ = 2 \times  (0.1915) = 0.383 $$
+
+    이다. 그러므로 
+
+    $$ \therefore  P(199 \leq \overline{X} \leq 201) = 0.383 $$
+
+    이다. ■ 
+
+    이 값은 "수명이 $199$ 이상이고 $201$ 인 건전지의 비율이 $38.3\%$ 이다" 또는 "어떤 건전지를 골랐는데 그 수명이 $199$ 이상이고 $201$ 이하일 확률이 $38.3\%$ 이다" 로 해석될 수 있다.
+
+
 
 # 표본비율의 평균, 분산, 표준편차
 
