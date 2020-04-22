@@ -121,7 +121,7 @@
 
 - [통계적 추정](https://ccss17.github.io/stat5.html)
     
-  ######  모집단(population),  표본(sample),  모집단의 크기,  표본의 크기,  전수조사(total inspection),  표본조사(sample survey),  추출(sampling),  임의추출(random sampling),  임의표본(random sample),  복원추출(sampling with replacement),  비복원추출(sampling without replacement),  모집단의 확률분포,  모평균(population mean),  모분산(population variance),  모표준편차(population standard deviation),  표본평균(sample mean),  표본분산(sample variance),  표본표준편차(sample standard deviation),  표본평균의 평균,  표본평균의 분산,  표본평균의 표준편차,  모비율,  표본비율,  표본비율 $\hat{p}$ 의 평균,  표본비율 $\hat{p}$ 의 분산,  표본비율 $\hat{p}$ 의 표준편차
+  ######  모집단(population),  표본(sample),  모집단의 크기,  표본의 크기,  전수조사(total inspection),  표본조사(sample survey),  추출(sampling),  임의추출(random sampling),  임의표본(random sample),  복원추출(sampling with replacement),  비복원추출(sampling without replacement),  모집단의 확률분포,  모평균(population mean),  모분산(population variance),  모표준편차(population standard deviation),  표본평균(sample mean),  표본분산(sample variance),  표본표준편차(sample standard deviation),  표본평균의 평균,  표본평균의 분산,  표본평균의 표준편차,  모비율(population ratio),  표본비율(sample ratio),  표본비율 $\hat{p}$ 의 평균,  표본비율 $\hat{p}$ 의 분산,  표본비율 $\hat{p}$ 의 표준편차,  추정,  신뢰도,  신뢰구간,  모평균의 신뢰구간,  모평균의 신뢰구간 길이,  모비율의 신뢰구간,  모비율의 신뢰구간 길이
 
 </blockquote>
 

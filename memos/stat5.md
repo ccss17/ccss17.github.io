@@ -130,7 +130,7 @@
 
   - 예시 
 
-    모집단 $\{1,2,3,4\}$ 에서 하나의 숫자를 취할 확률변수를 $X$ 라 할 때 다음 표
+    모집단 $\{1,2,3\}$ 에서 하나의 숫자를 취할 확률변수를 $X$ 라 할 때 다음 표
 
     | $X$| $1$ | $2$ |$3$|
     |:---:|:---:|:---:|:---:|
@@ -200,11 +200,13 @@
 
     를 따른다.
 
-  - 모집단의 확률분포가 정규분포가 아니어도 $n$ 이 충분히 크면 표본평균 $\overline{X}$ 는 근사적으로 정규분포
+  - (중심극한정리) 모집단의 확률분포가 정규분포가 아니어도 $n$ 이 충분히 크면 표본평균 $\overline{X}$ 는 근사적으로 정규분포
 
     $$ N \bigg (\mu , \dfrac{\sigma ^{2}}{n} \bigg ) $$
 
     를 따른다.
+
+    - 보통 $n$ 이 $30$ 이상이면 충분히 큰 표본으로 간주한다. 
 
   - 예시 
 
@@ -249,7 +251,7 @@
 
 - 표본평균의 평균 : 모평균이 $\mu$, 모표준편차가 $\sigma$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
 
-  표본평균 $\overline{X}$ 에 대한 평균은 
+  표본평균 $\overline{X}$ 들의 평균은 
 
   $$ E(\overline{X}) = \mu $$
 
@@ -270,11 +272,17 @@
 
     | $\overline{X}$| $1$ | $1.5$ |$2$|$2.5$ | $3$ |
     |:---:|:---:|:---:|:---:|:---:|:---:|
-    | $P(\overline{X}=x)$| $\dfrac{1}{9}$ | $\dfrac{2}{9}$ |$\dfrac{3}{9}=\dfrac{1}{3}$|$\dfrac{2}{9}$ | $\dfrac{1}{9}$ |
+    | $P(\overline{X}=x)$| $\dfrac{1}{9}$ | $\dfrac{2}{9}$ |$\dfrac{3}{9}$|$\dfrac{2}{9}$ | $\dfrac{1}{9}$ |
 
     이제 표본평균 $\overline{X}$ 의 평균을 구해보면
 
-    $$ \therefore  E(\overline{X}) = 1 \times \dfrac{1}{9} + 1.5 \times \dfrac{2}{9} + 2 \times \dfrac{1}{3} + 2.5 \times \dfrac{2}{9} + 3 \times \dfrac{1}{9} = \dfrac{1 + 3 + 6 + 5 + 3}{9} = \dfrac{18}{9} = 2 $$
+    $$ \therefore  E(\overline{X}) = 1 \times \dfrac{1}{9} + 1.5 \times \dfrac{2}{9} + 2 \times \dfrac{3}{9} + 2.5 \times \dfrac{2}{9} + 3 \times \dfrac{1}{9} = \dfrac{1 + 3 + 6 + 5 + 3}{9} = \dfrac{18}{9} = 2 $$
+
+    임을 알 수 있다. ■ 
+
+    한편 표본평균의 평균 $E(\overline{X})$ 는 모평균 $\mu$ 와 $E(\overline{X}) = \mu$ 의 관계를 갖는다는 점을 이용하여 "모평균(population mean)" 의 예시에서 $\mu = 2$ 였으므로 
+
+    $$ \therefore E(\overline{X}) = \mu = 2 $$
 
     임을 알 수 있다. ■ 
 
@@ -282,7 +290,7 @@
 
 - 표본평균의 분산 : 모평균이 $\mu$, 모표준편차가 $\sigma$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
 
-  표본평균 $\overline{X}$ 에 대한 분산은 
+  표본평균 $\overline{X}$ 들의 분산은 
 
   $$ V(\overline{X}) = \dfrac{\sigma ^{2}}{n} $$
 
@@ -298,27 +306,37 @@
 
     | $\overline{X}$| $1$ | $1.5$ |$2$|$2.5$ | $3$ |
     |:---:|:---:|:---:|:---:|:---:|:---:|
-    | $P(\overline{X}=x)$| $\dfrac{1}{9}$ | $\dfrac{2}{9}$ |$\dfrac{3}{9}=\dfrac{1}{3}$|$\dfrac{2}{9}$ | $\dfrac{1}{9}$ |
+    | $P(\overline{X}=x)$| $\dfrac{1}{9}$ | $\dfrac{2}{9}$ |$\dfrac{3}{9}$|$\dfrac{2}{9}$ | $\dfrac{1}{9}$ |
 
     표본평균 $\overline{X}$ 의 평균은 $E(\overline{X}) = 2$ 이었다.
 
     따라서 표본평균의 분산 $V(\overline{X})$ 은 
 
-    $$ \therefore  V(\overline{X}) = E(\overline{X} ^{2}) - \{E(\overline{X})\} ^{2} = \bigg (1 ^{2} \times \dfrac{1}{9} + 1.5 ^{2} \times \dfrac{2}{9} + 2 ^{2} \times \dfrac{1}{3} + 2.5 ^{2} \times \dfrac{2}{9} + 3 ^{2} \times \dfrac{1}{9} \bigg ) - 2 ^{2}= \dfrac{13}{3}-4 = \dfrac{1}{3} $$
+    $$ \therefore  V(\overline{X}) = E(\overline{X} ^{2}) - \{E(\overline{X})\} ^{2} = \bigg (1 ^{2} \times \dfrac{1}{9} + 1.5 ^{2} \times \dfrac{2}{9} + 2 ^{2} \times \dfrac{3}{9} + 2.5 ^{2} \times \dfrac{2}{9} + 3 ^{2} \times \dfrac{1}{9} \bigg ) - 2 ^{2}= \dfrac{13}{3}-4 = \dfrac{1}{3} $$
 
     이다. ■ 
+
+    한편 표본평균의 분산 $V(\overline{X})$ 는 모분산 $\sigma ^{2}$ 와 표본의 크기 $n$ 에 대하여 $V(\overline{X}) = \dfrac{\sigma ^{2}}{n}$ 의 관계를 갖는다는 점을 이용하여 "모분산(population variance)" 의 예시에서 $\sigma ^{2} = \dfrac{2}{3}$ 이고 표본의 크기는 $2$ 였으므로
+
+    $$ \therefore V(\overline{X}) = \dfrac{\sigma ^{2}}{n} = \dfrac{\frac{2}{3}}{2} = \dfrac{1}{3} $$
+
+    임을 알 수 있다. ■ 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 표본평균의 표준편차 : 모평균이 $\mu$, 모표준편차가 $\sigma$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
 
-  표본평균 $\overline{X}$ 에 대한 표준편차
+  표본평균 $\overline{X}$ 들의 표준편차는
 
   $$ \sigma (\overline{X}) = \dfrac{\sigma }{\sqrt[]{n}} $$
 
   이다. 
 
   </blockquote>
+
+  - 그러므로 모집단의 평균, 분산, 표준편차와 표본의 평균, 분산, 표준편차는 다음과 같은 관계를 가진다.
+
+    ![캡처](https://user-images.githubusercontent.com/16812446/79965816-7684e280-84c7-11ea-8ec9-05f6175ca128.PNG)
 
   - 예시 
 
@@ -331,6 +349,12 @@
     $$ \therefore  \sigma (\overline{X}) = \sqrt[]{\dfrac{1}{3}} = \dfrac{\sqrt[]{3}}{3}  $$
 
     이다. ■ 
+
+    한편 표본평균의 표준편차 $\sigma(\overline{X})$ 는 모표준편차 $\sigma$ 와 표본의 크기 $n$ 에 대하여 $\sigma (\overline{X}) = \dfrac{\sigma }{\sqrt[]{n}}$ 의 관계를 갖는다는 점을 이용하여 "모표준편차(population variance)" 의 예시에서 $\sigma = \dfrac{\sqrt[]{6}}{3}$ 이고 표본의 크기는 $2$ 였으므로
+
+    $$ \therefore \sigma (\overline{X}) = \dfrac{\sigma }{\sqrt[]{n}} = \dfrac{\frac{\sqrt[]{6}}{3}}{\sqrt[]{2}} = \dfrac{\sqrt[]{6}}{3 \sqrt[]{2}} = \dfrac{\sqrt[]{12}}{6} = \dfrac{\sqrt[]{3}}{3} $$
+
+    임을 알 수 있다. ■ 
 
   - 예시 
 
@@ -364,19 +388,27 @@
 
     이 값은 "수명이 $199$ 이상이고 $201$ 인 건전지의 비율이 $38.3\%$ 이다" 또는 "어떤 건전지를 골랐는데 그 수명이 $199$ 이상이고 $201$ 이하일 확률이 $38.3\%$ 이다" 로 해석될 수 있다.
 
-
-
 # 표본비율의 평균, 분산, 표준편차
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 모비율 : 모집단에서 어떤 특성을 가지는 대상의 비율을 그 특성에 대한 모비율 $p$ 라 한다.
+- 모비율(population ratio) : 모집단에서 어떤 특성을 가지는 대상의 비율을 그 특성에 대한 모비율 $p$ 라 한다.
 
   </blockquote>
 
+  - 기호 $p$ 는 proportion(비율) 의 앞글자를 딴 것이다. 
+
+  - 예시 
+
+    어느 도시의 청소년 $3482$ 명 중 흡연자가 $218$ 명이라고 하면 모집단에서 청소년 흡연자의 비율, 즉 모비율은 
+
+    $$ \therefore  p = \dfrac{218}{3482} \approx 0.062 = 6.2\% $$
+
+    이다. ■ 
+
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 표본비율 : 모집단에서 임의추출한 크기가 $n$ 인 표본에서 이 특성을 가지는 대상의 수를 확률변수 $X$ 라 할 때
+- 표본비율(sample ratio) : 모집단에서 임의추출한 크기가 $n$ 인 표본에서 이 특성을 가지는 대상의 수를 확률변수 $X$ 라 할 때
 
   그 특성에 대한 대상의 비율을 그 특성에 대한 표본비율 
   
@@ -386,11 +418,57 @@
 
   </blockquote>
 
+  - 기호 $\hat{p}$ 는 "피햇" 으로 읽는다. 
+
   - 표본의 크기 $n$ 이 충분히 클 때 표본비율 $\hat{p}$ 는 근사적으로 정규분포 
 
     $$ N \bigg ( p, \dfrac{pq}{n} \bigg ) $$
 
     를 따른다. 
+
+    - 증명 
+
+      표본비율 $\hat{p} = \dfrac{X}{n}$ 에서 확률변수 $X$ 는 모집단에서 임의추출한 크기 $n$ 의 표본에서 어떤 특성을 가진 대상의 갯수이다.
+
+      그러므로 크기 $n$ 의 표본에서 그 특성을 가진 대상들이 추출되었을 가짓수는 $0, 1, 2, \dots, n$ 이다.
+      
+      즉, 크기 $n$ 의 표본에 특성을 가진 대상이 아예 추출되지 않았을 수도 있고 
+      
+      단 $1$ 개의 특성을 가진 대상이 모집단에서 추출되어 속해있을 수도 있고
+
+      특성을 가진 대상이 모집단에서 $2$ 개가 추출되어 속해있을 수도 있고
+
+      특성을 가진 대상이 모집단에서 $n$ 개가 추출되어 속해있을 수도 있다.
+
+      이때 모비율 $p$ 에 의하여 모집단에서 각각의 대상들이 그 특성을 가질 확률은 $p$ 이다. 또한 확률변수 $X$ 란 모집단에서 대상을 뽑는 독립시행을 $n$ 번 했을 때 특성을 갖는 대상들의 수이다.
+      
+      따라서 확률변수 $X$ 는 특성을 갖는 대상의 갯수 $x = 0, 1, 2, \dots, n$ 와 $q = 1-p$ 에 대하여 확률질량함수
+
+      $$ P(X = x) = {}_{n}C_{x} p ^{x} q ^{n-x} $$
+
+      를 가지며 이항분포의 정의에 의하여
+
+      $$ B(n, p) $$
+
+      를 따른다. 그러므로 확률변수 $X$ 의 평균과 분산은 
+
+      $$ E(X) = np, V(X) = npq $$
+
+      이다. 이때 이항분포에서 $n$ 이 충분히 크면 확률분포가 정규분포를 따르므로 확률변수 $X$ 는 근사적으로 정규분포를 따른다.
+      
+      그런데 표본비율 $\hat{p} = \dfrac{X}{n}$ 도 단지 확률변수 $X$ 를 $n$ 으로 나눈 것이므로 표본의 크기 $n$ 이 충분히 크면 평균 $E(\hat{p})$ 과 분산 $V(\hat{p})$ 에 대하여 근사적으로 정규분포
+
+      $$ \therefore  N \bigg(E(\hat{p}) , V(\hat{p}) \bigg ) = N \bigg(p , \dfrac{pq}{n} \bigg ) $$
+
+      를 따른다. ■ 
+
+  - 예시 
+
+    "모비율" 의 예시의 어느 도시의 청소년 $3482$ 명 중 흡연자가 $218$ 명이라고 하였다. 이때 모집단에서 $300$ 명을 임의추출했더니 그중에서 청소년 흡연자가 $31$ 명이었다. 그러면 표본에서 청소년 흡연자의 비율, 즉 표본비율은
+
+    $$ \therefore  \hat{p} = \dfrac{31}{300} \approx 0.103 = 10.3\% $$
+
+    이다. ■ 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -404,6 +482,18 @@
 
   </blockquote>
 
+  - 증명 
+
+    "표본비율(sample ratio)" 의 $n$ 이 클 때 표본비율 $\hat{p}$ 이 정규분포를 따르는 것의 증명에서 확률변수 $X$ 는 이항분포 $B(n, p)$ 를 따르며 평균과 분산은 
+
+    $$ E(X) = np, V(X) = npq $$
+
+    이었다. 이에 따라 확률변수 $X$ 의 스칼라배 $\dfrac{1}{n}$ 인 표본비율 $\hat{p} = \dfrac{X}{n}$ 의 평균은 
+
+    $$ \therefore  E(\hat{p}) = E \bigg (\dfrac{X}{n} \bigg ) = \dfrac{1}{n}E(X)=\dfrac{1}{n} np = p $$
+
+    이다. ■ 
+
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 표본비율 $\hat{p}$ 의 분산 : 모비율이 $p$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
@@ -416,6 +506,18 @@
 
   </blockquote>
 
+  - 증명 
+
+    "표본비율 $\hat{p}$ 의 평균" 의 증명에서 확률변수 $X$ 는 이항분포 $B(n, p)$ 를 따르며 확률변수 $X$ 의 평균과 분산은 $q = 1-p$ 에 대하여
+
+    $$ E(X) = np, V(X) = npq $$
+
+    이었다. 따라서 확률변수 $X$ 의 스칼라배 $\dfrac{1}{n}$ 인 표본비율 $\hat{p} = \dfrac{X}{n}$ 의 분산은
+
+    $$ \therefore  V(\hat{p}) = V \bigg (\dfrac{X}{n} \bigg ) = \dfrac{1}{n ^{2}}V(X)=\dfrac{1}{n ^{2}} npq = \dfrac{pq}{n} $$
+
+    이다. ■ 
+
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 표본비율 $\hat{p}$ 의 표준편차 : 모비율이 $p$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
@@ -425,5 +527,135 @@
   $$ \sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}} $$
 
   이다.
+
+  </blockquote>
+
+  - 증명 
+
+    "표본비율 $\hat{p}$ 의 분산" 의 증명에서 확률변수 $X$ 의 스칼라배 $\dfrac{1}{n}$ 인 표본비율 $\hat{p} = \dfrac{X}{n}$ 의 분산은
+
+    $$ V(\hat{p}) = \dfrac{pq}{n} $$
+
+    이었다. 그러므로 표본비율 $\hat{p}$ 의 표준편차는 
+
+    $$ \therefore  \sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}} $$
+
+    이다. ■ 
+  
+  - 예시 
+
+    어떤 고등학교 학생 중 $40\%$ 가 졸업 후 대학에 진학하지 않고 바로 취직할 것으로 조사되었다.
+    
+    이 고등학교 학생 중에서 $96$ 명을 임의추출했을 때 바로 취직할 학생이 $46\%$ 이상 $50\%$ 이하일 확률을 구해보자. 
+
+    대상의 특성을 "졸업 후 바로 취직하는 학생" 으로 두면 모집단에서 특성에 대한 모비율은 $p = 0.4$ 이다.
+    
+    임의추출한 $96$ 명의 표본에서 $96$ 을 $n$ 으로 두고 특성을 가지는 수를 $X$ 로 두면 표본비율을 $\hat{p} = \dfrac{X}{n}$ 로 볼 수 있고 이때 표본비율이
+
+    $$ P(0.46 \leq \hat{p} \leq 0.5) $$
+
+    일 확률을 구해야 한다. 
+
+    표본비율의 평균, 분산, 표준편차는 $p = 0.4, q = 0.6, n = 94$ 이므로
+
+    $$ E(\hat{p}) = p = 0.4 $$
+    
+    $$ V(\hat{p}) = \dfrac{pq}{n} = \dfrac{0.4 \times 0.6}{94} = \dfrac{1}{400} $$ 
+    
+    $$ \sigma (\hat{p}) = \sqrt[]{V(\hat{p})} = \sqrt[]{\dfrac{1}{400}} = \dfrac{1}{20} = 0.05$$
+
+    이다. $n$ 이 $94$ 로 충분히 크므로 확률변수 $X$ 는 정규분포를 따르고 그것의 실수배인 확류변수 $\hat{p} = \dfrac{X}{n}$ 도 정규분포를 따른다. 그러므로 표준화하여 새로운 확률변수 $Z = \dfrac{\hat{p} - 0.4 }{0.05 }$ 를 만들면 
+
+    $$ P(0.46 \leq \hat{p} \leq 0.5) = P \bigg ( \dfrac{0.46 - 0.4}{0.05}  \leq Z \leq \dfrac{0.5-0.4}{0.05} \bigg ) $$
+
+    $$ = P(1.2 \leq Z \leq 2) = P(0 \leq Z \leq 2) - P(0 \leq Z \leq 1.2) $$
+
+    $$ = 0.4772 - 0.3849 = 0.0923 $$
+
+    이다. 따라서 이 고등학교 학생 중에서 $96$ 명을 임의추출했을 때 바로 취직할 학생이 $46\%$ 이상 $50\%$ 이하일 확률은
+
+    $$ \therefore  P(0.46 \leq \hat{p} \leq 0.5)= 0.0923 $$
+
+    이다. ■ 
+
+    즉 $9.2\%$ 정도라고 생각할 수 있다. 
+
+# 모평균의 추정 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 추정 : 표본에서 얻은 결과를 이용하여 모집단의 평균, 표준편차 등을 추측하는 것이다.
+
+  </blockquote>
+
+  - "표본평균과 표본비율의 평균, 분산, 표준편차" 에서는 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 신뢰도 : 표본평균의 분포로부터 모평균이 포함될 구간을 얻을 때 
+
+  그 구간에 모평균이 포함될 확률이다. 
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 신뢰구간 : 모평균 $\mu$ 이 존재할 것으로 추정되는 구간이다.
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 모평균의 신뢰구간 : 정규분포 $N(\mu , \sigma ^{2})$ 을 따르는 모집단에서 임의추출한 크기가 $n$ 인 표본의 표본평균을 $\overline{X}$ 이라 할 때 
+
+  모평균 $\mu$ 의 신뢰구간은 다음과 같다.
+
+  1. 신뢰도 $95\%$ 의 신뢰구간
+
+      $$ \bigg [ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ] \Leftarrow \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+  2. 신뢰도 $99\%$ 의 신뢰구간
+
+      $$ \bigg [ \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ] \Leftarrow \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+  </blockquote>
+
+  - 모표준편차 $\sigma$ 가 주어지지 않은 경우 표본표준편차 $S$ 를 사용할 수 있다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 모평균의 신뢰구간 길이 : 모평균의 신뢰구간으로부터 모평균 $\mu$ 의 신뢰구간 길이는 다음과 같다. 
+
+  1. 신뢰도 $95\%$ 의 신뢰구간 길이 : $\displaystyle 2 \times 1.96 \dfrac{\sigma }{\sqrt[]{n}}$
+
+  2. 신뢰도 $99\%$ 의 신뢰구간 길이 : $\displaystyle 2 \times 2.58 \dfrac{\sigma }{\sqrt[]{n}}$
+
+  </blockquote>
+
+# 모비율의 추정 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 모비율의 신뢰구간 : 모집단에서 임의추출한 크기가 $n$ 인 표본의 표본비율을 $\hat{p}$ 이라 할 때
+
+  $n$ 이 충분히 크면 $\hat{q} = 1 - \hat{p}$ 에 대하여 모비율 $p$ 의 신뢰구간은 다음과 같다.
+
+  1. 신뢰도 $95\%$ 의 신뢰구간
+
+      $$ \bigg [ \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ] \Leftarrow \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} $$
+
+  2. 신뢰도 $99\%$ 의 신뢰구간
+
+      $$ \bigg [ \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ] \Leftarrow \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}  $$
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 모비율의 신뢰구간 길이 : 모비율의 신뢰구간으로부터 모비율 $p$ 의 신뢰구간 길이는 다음과 같다.
+
+  1. 신뢰도 $95\%$ 의 신뢰구간 길이 : $\displaystyle 2 \times 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$
+
+  2. 신뢰도 $99\%$ 의 신뢰구간 길이 : $\displaystyle 2 \times 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$
 
   </blockquote>
