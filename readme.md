@@ -117,7 +117,11 @@
 
 - [연속확률변수의 평균,분산,표준편차와 정규분포](https://ccss17.github.io/stat4.html)
     
-  ######  연속확률변수(continuous random variable),  확률밀도함수(probability density function),  확률밀도함수의 성질,  연속확률변수의 평균,  연속확률변수의 분산,  연속확률변수의 표준편차,  연속확률변수의 평균, 분산, 표준편차의 성질,  정규분포(normal distribution),  정규분포곡선,  정규분포의 성질,  표준정규분포(standard normal distribution),  정규분포의 표준화(standardization),  이항분포와 정규분포의 관계
+  ######  연속확률변수(continuous random variable),  확률밀도함수(probability density function),  확률밀도함수의 성질,  연속확률변수의 평균,  연속확률변수의 분산,  연속확률변수의 표준편차,  연속확률변수의 평균, 분산, 표준편차의 성질,  정규분포(normal distribution),  정규분포곡선,  정규분포의 성질,  표준정규분포(standard normal distribution),  표준정규분포표,  정규분포의 표준화(standardization),  이항분포와 정규분포의 관계
+
+- [통계적 추정](https://ccss17.github.io/stat5.html)
+    
+  ######  모집단(population),  표본(sample),  모집단의 크기,  표본의 크기,  전수조사(total inspection),  표본조사(sample survey),  추출(sampling),  임의추출(random sampling),  임의표본(random sample),  복원추출(sampling with replacement),  비복원추출(sampling without replacement),  모집단의 확률분포,  모평균(population mean),  모분산(population variance),  모표준편차(population standard deviation),  표본평균(sample mean),  표본분산(sample variance),  표본표준편차(sample standard deviation),  표본평균의 평균,  표본평균의 분산,  표본평균의 표준편차,  모비율,  표본비율,  표본비율 $\hat{p}$ 의 평균,  표본비율 $\hat{p}$ 의 분산,  표본비율 $\hat{p}$ 의 표준편차
 
 </blockquote>
 

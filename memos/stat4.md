@@ -392,6 +392,8 @@
 
     에 대한 적분값을 미리 계산해둔다. 그러면 모든 정규분포들을 표준정규분포로 표준화시켜서 미리 계산해둔 값을 사용할 수 있다.
 
+    실제로 수학자들이 표준정규분포에 대한 적분 결과를 이미 표로 정리해두었으니 그것이 표준정규분포표이다. 
+
     - 확률변수 $Z$ 에 대한 표준정규분포의 확률밀도함수
 
       $$ f(z) = \dfrac{1}{\sqrt[]{2 \pi } } e ^{- \frac{z^{2}}{2} } $$
@@ -399,39 +401,45 @@
       의 그래프개형은 다음과 같다. 
 
       ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/79836894-ab236c00-83eb-11ea-99f7-7d0fa630b574.png)
-    
-  - 이때 확률변수 $Z$ 에 대한 표준정규분포에서 양수 $a$ 에 대한 확률 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 표준정규분포표 : 표준정규분포 $N(0, 1)$ 를 따르는 확률변수 $Z$ 와 양수 $a$ 에 대한 확률 
 
     $$ P(0 \leq Z \leq a) = \int_{0}^{a} f(z)dz $$
 
-    의 적분값들을 수학자들이 표준정규분포표로 정리해두었으니 우리는 그 표를 갖다 쓰면 된다. 
+    의 적분값들을 수학자들이 미리 정리해둔 표이다. 
 
-    - 예시 
+  </blockquote>
 
-      표준정규분포를 따르는 확률분포에서 확률 $\displaystyle  P(0 \leq Z \leq 1.76) = \int_{0}^{1.76}\dfrac{1}{\sqrt[]{2 \pi } } e ^{- \frac{z^{2}}{2} }$ 은 다음과 같은 표준정규분포표
+  - 수학자들이 표준정규분포표로 정리해두었으니 우리는 그 표를 갖다 쓰면 된다. 
 
-      | $z$ | $0.00$ | $\dots$ |$0.06$|
-      |:---:|:---:|:---:|:---:|
-      | $\vdots$ | | | |
-      | $1.7$ | |  | $0.4608$|
+  - 예시 
 
-      에서 $0.4608$ 임을 알 수 있다. 
-    
-    - 이 표준정규분포표를 통하여 모든 경우의 구간에 대한 확률을 구할 수 있다.
+    표준정규분포를 따르는 확률분포에서 확률 $\displaystyle  P(0 \leq Z \leq 1.76) = \int_{0}^{1.76}\dfrac{1}{\sqrt[]{2 \pi } } e ^{- \frac{z^{2}}{2} }$ 은 다음과 같은 표준정규분포표
 
-      즉, $0 < a \leq b$ 에 대하여 
+    | $z$ | $0.00$ | $\dots$ |$0.06$|
+    |:---:|:---:|:---:|:---:|
+    | $\vdots$ | | | |
+    | $1.7$ | |  | $0.4608$|
 
-      $$ P(a \leq Z \leq b) = P(0 \leq Z \leq b) - P(0 \leq Z \leq a) $$
+    에서 $0.4608$ 임을 알 수 있다. 
+  
+  - 이 표준정규분포표를 통하여 모든 경우의 구간에 대한 확률을 구할 수 있다.
 
-      $$ P(-a \leq Z \leq b) = P(0 \leq Z \leq b) + P(0 \leq Z \leq a) $$
+    즉, $0 < a \leq b$ 에 대하여 
 
-      $$ P(-a \leq Z \leq a) = 2P(0 \leq Z \leq a) $$
+    $$ P(a \leq Z \leq b) = P(0 \leq Z \leq b) - P(0 \leq Z \leq a) $$
 
-      $$ P(Z \geq a) = 0.5 - P(0 \leq Z \leq a) $$
+    $$ P(-a \leq Z \leq b) = P(0 \leq Z \leq b) + P(0 \leq Z \leq a) $$
 
-      $$ P(Z \leq a) = 0.5 + P(0 \leq Z \leq a) $$
+    $$ P(-a \leq Z \leq a) = 2P(0 \leq Z \leq a) $$
 
-      인 것을 활용하여 구간을 적절히 변환시켜 표준정규분포표를 사용하게 할 수 있다. 
+    $$ P(Z \geq a) = 0.5 - P(0 \leq Z \leq a) $$
+
+    $$ P(Z \leq a) = 0.5 + P(0 \leq Z \leq a) $$
+
+    인 것을 활용하여 구간을 적절히 변환시켜 표준정규분포표를 사용하게 할 수 있다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -457,9 +465,9 @@
 
     로 정의하자. 그러면 확률변수 $Z$ 의 평균과 분산은
 
-    $$ E(Z) = E(\dfrac{X - \mu }{\sigma }) = E(\dfrac{1}{\sigma }X - \dfrac{\mu }{\sigma }) = \dfrac{1}{\sigma}E(X) - \dfrac{\mu }{\sigma } = \dfrac{\mu }{\sigma } - \dfrac{\mu }{\sigma } = 0 $$
+    $$ E(Z) = E \bigg (\dfrac{X - \mu }{\sigma } \bigg ) = E \bigg (\dfrac{1}{\sigma }X - \dfrac{\mu }{\sigma } \bigg ) = \dfrac{1}{\sigma}E(X) - \dfrac{\mu }{\sigma } = \dfrac{\mu }{\sigma } - \dfrac{\mu }{\sigma } = 0 $$
 
-    $$ Z(Z) = Z(\dfrac{X - \mu }{\sigma }) = V(\dfrac{1}{\sigma }X - \dfrac{\mu }{\sigma }) = \dfrac{1}{\sigma ^{2}}V(X) = \dfrac{\sigma ^{2}}{\sigma ^{2}} = 1 $$
+    $$ Z(Z) = Z \bigg (\dfrac{X - \mu }{\sigma } \bigg ) = V \bigg (\dfrac{1}{\sigma }X - \dfrac{\mu }{\sigma } \bigg ) = \dfrac{1}{\sigma ^{2}}V(X) = \dfrac{\sigma ^{2}}{\sigma ^{2}} = 1 $$
 
     이 된다. 따라서 확률변수 $Z$ 는 표준정규분포 
 
@@ -541,6 +549,44 @@
       $$ Z_1 = \dfrac{80 - 70}{5} = 2, Z_2 = \dfrac{60 - 50}{2} = 5 $$
 
       가 된다. 이로써 학생 $A$ 는 수학 성적이 오히려 영어 성적보다 높았다는 것을 알게 되었다. 
+  
+  - 예시 
+
+    한 회사에서 신입 사원 $60$ 명을 모집하는데 $500$ 명이 지원했다고 하자. 지원자들의 입사 시험 점수의 평균이 $74$ 점이고 표준편차가 $10$ 점인 정규분포 
+
+    $$ N(74, 10 ^{2}) $$
+
+    를 따른다고 하자.
+
+    이때 회사에 입사하기 위한 최저 점수를 구해보자.
+
+    먼저 지원자의 시험 점수를 확률변수 $X$ 로 두면 이것은 정규분포 $N(74, 10 ^{2})$ 를 따르고
+    
+    입사할 확률(비율)이 $\dfrac{60}{500} = 0.12$ 이므로 입사 최저 점수를 $a$ 로 두면 확률변수 $X$ 가 $a$ 보다 클 확률(또는 $a$ 보다 큰 $X$ 들의 비율) 은
+
+    $$ P(X \geq a) = 0.12 $$
+
+    이다. 그러므로 정규분포를 표준화하여 새로운 확률변수 $Z = \dfrac{X - \mu }{ \sigma } = \dfrac{X - 74}{10}$ 를 만들면 이것은 표준정규분포 $N(0, 1)$ 를 따른다. 
+
+    따라서 
+
+    $$ P(X \geq a) = P \bigg ( \dfrac{X-74}{10} \geq \dfrac{a-74}{10} \bigg ) = P \bigg ( Z \geq \dfrac{a-74}{10} \bigg ) $$
+
+    $$ = 0.5 - P \bigg ( 0 \leq Z \leq \dfrac{a-74}{10} \bigg ) = 0.12 $$
+
+    에서 
+
+    $$ P \bigg ( 0 \leq Z \leq \dfrac{a-74}{10} \bigg ) = 0.38 $$
+
+    임을 알 수 있다. 그런데 표준정규분포표에 따라 확률값 $0.38$ 은 $z$ 값이 $1.2$ 일 때 해당한다.
+
+    그러므로 $\dfrac{a-74}{10}=1.2$ 에서 
+
+    $$ \therefore  a = 86 $$
+
+    을 얻는다. ■ 
+
+    이로써 입사 최저 점수를 $86$ 점이라고 예측할 수 있다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
