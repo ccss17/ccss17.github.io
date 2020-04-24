@@ -346,3 +346,39 @@
     $$ \lim_{n \to \infty} P \bigg ( \bigg | \dfrac{X}{n} - p \bigg | < h \bigg ) = 1 $$
 
     이것은 쉽게 말해 그냥 시행횟수를 한없이 늘리면 통계적확률과 수학적확률이 똑같아진다는 것을 의미한다.
+
+# 체비세프의 부등식 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 체비세프의 부등식(Chebyshev's inequality) : 확률변수 $X$ 의 평균이 $\mu$, 표준편차가 $\sigma$ 이고 자료의 총수가 $N$ 일 때
+
+  $1$ 보다 큰 임의의 양수 $k$ 에 대하여 $|X- \mu | < k \sigma$ 를 만족시키는 자료의 수는 
+
+  $$ N \bigg (1 - \dfrac{1}{k^2} \bigg ) $$
+
+  개 이상이다. 
+
+  **구체화 필요**
+
+  </blockquote>
+
+  - 즉, $\mu - k \sigma < x_i < \mu + k \sigma$ 을 만족하는 $x_i$ 는 전체의 $1 - \dfrac{1}{k^2}$ 이상이다. 
+
+  - 예시 
+
+    어떤 학교의 전교생은 $450$ 명이다. 이 학교의 수학 점수 평균이 $70$ 점, 표준편차가 $3$ 점이었다. 
+
+    $61$ 점 이상 $79$ 점 이하인 학생은 몇 명 이상인지 체비세프 부등식으로 추정해보자. 
+
+    **구체화 필요**
+
+# 베르누이 시행
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 베르누이 시행 : 
+
+  </blockquote>
+
+  **구체화 필요**

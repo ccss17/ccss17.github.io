@@ -584,15 +584,37 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 추정 : 표본에서 얻은 결과를 이용하여 모집단의 평균, 표준편차 등을 추측하는 것이다.
+- 추정(estimation) : 표본에서 얻은 결과를 이용하여 모집단의 평균, 표준편차 등을 추측하는 것이다.
 
   </blockquote>
 
-  - "표본평균과 표본비율의 평균, 분산, 표준편차" 에서는 
+  - "표본평균과 표본비율의 평균, 분산, 표준편차" 에서는 모집단의 평균, 분산, 표준편차로부터 표본평균의 평균, 분산, 표준편차를 구해보았다. 하지만 이제 표본으로부터 모집단의 성질을 추측해본다.
+  
+    이것이 추정이다. 모집단을 전수조사하기에는 비용이 너무 많이 들기에 표본을 추출하여 조사하고 모집단의 속성을 추정하는 것이다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 신뢰도 : 표본평균의 분포로부터 모평균이 포함될 구간을 얻을 때 
+- 점추정(point estimation) : 추정의 방법 중 하나로써 그 값을 직접 추정하는 것이다. 
+
+  </blockquote>
+
+  - 통계학에서는 모집단으로부터 표본을 추출하고 추출된 표본의 통계량(표본평균, 표본표준편차)을 통하여 모수(모평균, 모표준편차)를 추정한다. 그 이유는 여러번 언급했듯이 모집단을 전수조사하기에는 시간과 비용이 너무 많이 들기 때문이다.
+
+    이때 모수를 직접적인 값으로 추정하는 것을 점추정이라고 한다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 구간추정(interval estimation) : 추정의 방법 중 하나로써 그 값이 포함되어 있을 구간을 추정하는 것이다. 
+
+  </blockquote>
+
+  - 점추정으로 모수(모평균, 모표준편차)를 추정해도 그 값이 얼마나 정밀한지 알 수 없으므로 구간추정을 통하여 모수가 어떤 구간에 속할지 조사하기도 한다. 
+
+    가장 대표적인 구간추정은 $95\%$ 신뢰도의 신뢰구간으로써 이 신뢰구간은 실제 모평균이 그 구간 내에 있을 가능성이 $95\%$ 임을 알려준다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 신뢰도(confidence coefficient) : 표본평균의 분포로부터 모평균이 포함될 구간을 얻을 때 
 
   그 구간에 모평균이 포함될 확률이다. 
 
@@ -600,27 +622,108 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 신뢰구간 : 모평균 $\mu$ 이 존재할 것으로 추정되는 구간이다.
+- 모평균의 신뢰구간(confidence interval) : 모평균 $\mu$ 이 존재할 것으로 추정되는 구간으로써 
+
+  정규분포 $N(\mu , \sigma ^{2})$ 을 따르는 모집단에서 임의추출한 크기가 $n$ 인 표본의 표본평균을 $\overline{X}$ 이라 할 때 
+
+  정규화된 확률변수 $Z = \dfrac{\overline{X} - \mu }{\dfrac{\sigma }{\sqrt[]{n}}}$ 에 대하여 다음과 같다. 
+
+  1. 신뢰도 $95\%$ 의 신뢰구간 : $P(-1.96 \leq Z \leq 1.96) = 0.95 \Rightarrow \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
+
+      $$ \bigg [ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ] $$
+
+  2. 신뢰도 $99\%$ 의 신뢰구간 : $P(-2.58 \leq Z \leq 2.58) = 0.95 \Rightarrow \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
+
+      $$ \bigg [ \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ] $$
+
+  3. 신뢰도 $\alpha \%$ 의 신뢰구간 : $P(-k \leq Z \leq k) = \dfrac{\alpha }{100} \Rightarrow \overline{X} - k \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + k \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
+
+      $$ \bigg [ \overline{X} - k \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + k \dfrac{\sigma }{\sqrt[]{n}} \bigg ] $$
 
   </blockquote>
 
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+  - 설명 
 
-- 모평균의 신뢰구간 : 정규분포 $N(\mu , \sigma ^{2})$ 을 따르는 모집단에서 임의추출한 크기가 $n$ 인 표본의 표본평균을 $\overline{X}$ 이라 할 때 
+    정규분포 $N(\mu , \sigma ^{2})$ 을 따르는 모집단에서 크기가 $n$ 인 표본을 임의추출할 때 
 
-  모평균 $\mu$ 의 신뢰구간은 다음과 같다.
+    표본평균 $\overline{X}$ 는 정규분포 $N \bigg (\mu , \dfrac{\sigma ^{2}}{n} \bigg )$ 을 따른다. 따라서 $\overline{X}$ 를 표준화한 확률변수 $Z = \dfrac{\overline{X}- \mu  }{\dfrac{\sigma }{\sqrt[]{n}}}$ 은 표준정규분포 $N(0, 1)$ 을 따른다. 
 
-  1. 신뢰도 $95\%$ 의 신뢰구간
+    이때 모평균 $\mu$ 을 신뢰도 $95\%$ 로 추정하고 싶다고 하면 $\mu$ 가 $\overline{X}$ 을 표준화한 표준정규분포곡선에서 $0.95$ 의 면적 내에 포함되어야만 한다. 그런데 
 
-      $$ \bigg [ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ] \Leftarrow \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} $$
+    $$ P(-1.96 \leq Z \leq 1.96) = 0.95 $$
 
-  2. 신뢰도 $99\%$ 의 신뢰구간
+    이므로 
 
-      $$ \bigg [ \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ] \Leftarrow \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} $$
+    $$ = P \Bigg ( -1.96 \leq \dfrac{\overline{X}- \mu  }{\dfrac{\sigma }{\sqrt[]{n}}} \leq 1.96 \Bigg ) $$
 
-  </blockquote>
+    $$ = P(\overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}}) = 0.95 $$
 
-  - 모표준편차 $\sigma$ 가 주어지지 않은 경우 표본표준편차 $S$ 를 사용할 수 있다. 
+    이다. 따라서 모평균 $\mu$ 이 폐구간 
+
+    $$\bigg [ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ]$$
+
+    에 포함될 확률이 $0.95$ 이다. ■ 
+    
+    이 폐구간을 모평균 $\mu$ 에 대한 신뢰도 $95\%$ 의 신뢰구간이라 하는 것이다.
+
+    이때 모평균 $\mu$ 을 신뢰도 $99\%$ 로 추정하고 싶다고 하면 $\mu$ 가 $\overline{X}$ 을 표준화한 표준정규분포곡선에서 $0.99$ 의 면적 내에 포함되어야만 한다. 같은 방법으로 모평균 $\mu$ 이 폐구간 
+
+    $$\bigg [ \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ]$$
+
+    에 포함될 확률이 $0.99$ 라는 것을 알 수 있다. ■ 
+    
+  - 모표준편차 $\sigma$ 가 주어지지 않은 경우 표본의 크기 $n$ 이 충분히 클 때
+  
+    즉 $n \geq 30$ 일 때 표본표준편차 $S$ 를 사용할 수 있다. 
+  
+  - 그런데 표본평균 $\overline{X}$ 는 확률변수로써 다양한 값을 가질 수 있다. 왜냐하면 추출되는 표본은 매번 달라질 수 있고 이에따라 그 표본에 대한 평균인 표본평균 $\overline{X}$ 도 달라질 수 있기 때문이다. 이것은 모평균 $\mu$ 가 $\alpha \%$ 의 확률로 포함될 수 있는 신뢰구간 
+
+    $$ \bigg [ \overline{X} - k \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + k \dfrac{\sigma }{\sqrt[]{n}} \bigg ] $$
+
+    이 표본에 따라 매번 달라질 수 있다는 것이다. 
+
+    이것은 크기가 $n$ 인 표본을 여러 번 추출하여 신뢰구간을 만들었을 때 그 신뢰구간들 중 $\alpha \%$ 가 모평균 $\mu$ 을 포함한다는 뜻이다. 
+
+  
+  - 예시 
+
+    어떤 학교 학생의 키는 표준편차가 $3cm$ 인 정규분포를 따른다.
+
+    학생 $36$ 명을 임의추출하여 키를 측정했더니 평큔 키가 $175cm$ 였다. 
+
+    전교생 키의 평균 $\mu$ 의 신뢰도 $95\%$ 신뢰구간과 신뢰도 $99\%$ 신뢰구간을 구해보자. 
+
+    모평균 $\mu$ 의 신뢰도 $95\%$ 신뢰구간은
+
+    $$ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+    에서 $\overline{X} = 175, \sigma  = 3, n = 36$ 이므로 
+
+    $$ \iff  175 - 1.96 \dfrac{3 }{\sqrt[]{36}} \leq \mu \leq  175 + 1.96 \dfrac{3 }{\sqrt[]{36}} $$
+
+    $$ \iff 174.02 \leq \mu \leq 175.98 $$
+
+    이다. 따라서 모평균이 $95\%$ 확률로 속할 폐구간은
+
+    $$ \therefore [174.02, 175.98] $$
+
+    이다. ■ 
+
+    모평균 $\mu$ 의 신뢰도 $99\%$ 신뢰구간은
+
+    $$ \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+    에서 $\overline{X} = 175, \sigma  = 3, n = 36$ 이므로 
+
+    $$ \iff  175 - 2.58 \dfrac{3 }{\sqrt[]{36}} \leq \mu \leq  175 + 2.58 \dfrac{3 }{\sqrt[]{36}} $$
+
+    $$ \iff 173.71 \leq \mu \leq 176.29 $$
+
+    이다. 따라서 모평균이 $99\%$ 확률로 속할 폐구간은
+
+    $$ \therefore [173.71, 176.29] $$
+
+    이다. ■ 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -630,25 +733,165 @@
 
   2. 신뢰도 $99\%$ 의 신뢰구간 길이 : $\displaystyle 2 \times 2.58 \dfrac{\sigma }{\sqrt[]{n}}$
 
+  3. 신뢰도 $\alpha \%$ 의 신뢰구간 길이 : $\displaystyle 2 \times k \dfrac{\sigma }{\sqrt[]{n}}$
+
   </blockquote>
+
+  - 증명 
+
+    신뢰도 $95\%$ 의 신뢰구간은 폐구간 $\bigg [ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ]$ 이다. 그러므로 길이는 
+
+    $$\bigg | \bigg ( \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ) - \bigg ( \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ) \bigg | = 2 \times  1.96 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+    에서
+
+    $$ \therefore  2 \times  1.96 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+    이다. ■ 
+    
+    마찬가지로 신뢰도 $99\%$ 의 신뢰구간은 폐구간 $\bigg [ \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ]$ 이다. 그러므로 길이는 
+
+    $$\bigg | \bigg ( \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ) - \bigg ( \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ) \bigg | = 2 \times  2.58 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+    에서
+
+    $$ \therefore 2 \times  2.58 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+    이다. ■ 
+
+  - 표본들의 평균과 표준편차가 비슷하다면 신뢰구간의 폭은 표본의 크기 $n$ 에 영향을 받는다. 표본의 크기 $n$이 크다면 신뢰구간이 작아져서 모평균을 정밀하게 추정할 수 있고 $n$ 이 작다면 신뢰구간이 커져서 모평균을 예측하기가 힘들어진다.
+
+    - 예시 
+
+      어떤 모집단에서 다음과 같은 표본 $3$ 개를 추출했다고 하자. 
+
+      표본 $1$ 은 크기 $n=16$, 평균 $\overline{X} = 98$, 표준편차 $\sigma =24$ 를 가진다. 
+  
+      표본 $2$ 은 크기 $n=64$, 평균 $\overline{X} = 96$, 표준편차 $\sigma =24$ 를 가진다. 
+  
+      표본 $3$ 은 크기 $n=9$, 평균 $\overline{X} = 97$, 표준편차 $\sigma =24$ 를 가진다. 
+
+      이때 각각의 표본들에서 모평균 $\mu$ 이 포함될 $95\%$ 신뢰구간은 다음과 같다. 
+
+      표본 $1$ 의 $95\%$ 신뢰구간은
+
+      $$ 98 \pm 1.96 \dfrac{24}{\sqrt[]{16}} = [86.2, 109.8] $$
+  
+      이고 표본 $2$ 의 $95\%$ 신뢰구간은
+
+      $$ 96 \pm 1.96 \dfrac{24}{\sqrt[]{64}} = [90.1, 101.9] $$
+
+      이고 표본 $2$ 의 $95\%$ 신뢰구간은
+
+      $$ 97 \pm 1.96 \dfrac{24}{\sqrt[]{9}} = [81.3, 112.7] $$
+
+      이다. 
+
+      이때 각각의 신뢰구간 길이는 표본 $1$ 이 약 $23.6$, 표본 $2$ 가 약 $11.8$, 표본 $3$ 이 약 $31.4$ 이다.
+
+      표본 $2$ 의 신뢰구간 폭이 가장 좁으므로 표본의 크기가 가장 큰 표본 $2$ 를 사용하여 모평균이 있을 구간을 추정한 신뢰구간이 가장 정밀한 추정이라고 할 수 있다. ■ 
 
 # 모비율의 추정 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 모비율의 신뢰구간 : 모집단에서 임의추출한 크기가 $n$ 인 표본의 표본비율을 $\hat{p}$ 이라 할 때
+- 모비율의 신뢰구간 : 모비율 $p$ 가 존재할 것으로 추정되는 구간으로써 
 
-  $n$ 이 충분히 크면 $\hat{q} = 1 - \hat{p}$ 에 대하여 모비율 $p$ 의 신뢰구간은 다음과 같다.
+  모집단에서 임의추출한 크기가 $n$ 인 표본의 표본비율을 $\hat{p}$ 이라 할 때
 
-  1. 신뢰도 $95\%$ 의 신뢰구간
+  $n$ 이 충분히 크면 $\hat{q} = 1 - \hat{p}$ 와 정규화된 확률변수 $Z = \dfrac{\hat{p}- p  }{\sqrt{\dfrac{pq}{n}}}$ 에 대하여 다음과 같다. 
 
-      $$ \bigg [ \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ] \Leftarrow \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} $$
+  1. 신뢰도 $95\%$ 의 신뢰구간 : $P(-1.96 \leq Z \leq 1.96) = 0.95 \Rightarrow  \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$ 에 대하여 
 
-  2. 신뢰도 $99\%$ 의 신뢰구간
+      $$ \bigg [ \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ] $$
 
-      $$ \bigg [ \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ] \Leftarrow \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}  $$
+  2. 신뢰도 $99\%$ 의 신뢰구간 : $P(-2.58 \leq Z \leq 2.58) = 0.95 \Rightarrow  \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$ 에 대하여 
+
+      $$ \bigg [ \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ] $$
+
+  3. 신뢰도 $\alpha \%$ 의 신뢰구간 : $P(-k \leq Z \leq k) = \dfrac{\alpha }{100} \Rightarrow  \hat{p} - k \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + k \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$ 에 대하여 
+
+      $$ \bigg [ \hat{p} - k \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + k \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ]  $$
 
   </blockquote>
+
+  - 표본평균의 분포로 모평균의 신뢰구간을 추정한 것처럼 표본비율의 분포로 모비율에 대한 신뢰구간을 추정할 수 있다. 
+
+  - 설명 
+
+    모비율이 $p$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 했을 때 표본의 크기 $n$ 이 충분히 크면 표본비율 $\hat{p} = \dfrac{X}{n}$ 는 근사적으로 정규분포 $q = 1 - p$ 에 대하여
+
+    $$ N \bigg ( p, \dfrac{pq}{n} \bigg ) $$
+
+    를 따른다. 따라서 $\hat{p}$ 를 표준화한 확률변수 $Z = \dfrac{\hat{p}- p  }{\sqrt{\dfrac{pq}{n}}}$ 은 표준정규분포 $N(0, 1)$ 을 따른다. 
+
+    또한 모표준편차를 모를 때 표본의 크기 $n$ 이 충분히 크다면 표본표준편차를 사용해도 되므로 $\hat{p}$ 의 표준편차 $\sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}}$ 에서 $p, q$ 대신 $\hat{p}, \hat{q}$ 를 대입한 $\sigma (\hat{p}) = \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$ 도 표준정규분포 $N(0, 1)$ 을 따른다. 그러므로 $Z = \dfrac{\hat{p}- p  }{\sqrt{\dfrac{\hat{p}\hat{q}}{n}}}$ 를 사용해도 된다. 
+
+    이때 모비율 $p$ 을 신뢰도 $95\%$ 로 추정하고 싶다고 하면 $Z = \dfrac{\hat{p}- p  }{\sqrt{\dfrac{\hat{p}\hat{q}}{n}}}$ 에 대하여
+
+    $$ P(-1.96 \leq Z \leq 1.96) = 0.95 $$
+
+    이므로 
+
+    $$ = P \Bigg ( -1.96 \leq \dfrac{\hat{p}- p  }{\sqrt{\dfrac{\hat{p}\hat{q}}{n}}} \leq 1.96 \Bigg ) $$
+
+    $$ = P(\hat{p} - 1.96 \sqrt{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 1.96 \sqrt{\dfrac{\hat{p}\hat{q}}{n}}) = 0.95 $$
+
+    이다. 따라서 모비율 $p$ 이 폐구간 
+
+    $$\bigg [ \hat{p} - 1.96 \sqrt{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 1.96 \sqrt{\dfrac{\hat{p}\hat{q}}{n}} \bigg ]$$
+
+    에 포함될 확률이 $0.95$ 이다. ■ 
+    
+    이 폐구간을 모비율 $p$ 에 대한 신뢰도 $95\%$ 의 신뢰구간이라 하는 것이다.
+
+    이때 모비율 $p$ 을 신뢰도 $99\%$ 로 추정하고 싶다고 하면 $Z = \dfrac{\hat{p}- p  }{\sqrt{\dfrac{\hat{p}\hat{q}}{n}}}$ 에 대하여
+
+    $$\bigg [ \hat{p} - 2.58 \sqrt{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 2.58 \sqrt{\dfrac{\hat{p}\hat{q}}{n}} \bigg ]$$
+
+    에 포함될 확률이 $0.99$ 라는 것을 알 수 있다. ■ 
+  
+  - 예시 
+
+    어떤 커뮤니티에서 회원들이 관심있는 분야를 조사하기 위하여 회원 $300$ 명을 임의추출하여 설문조사를 했더니 $75$ 이 "의류" 에 관심이 있다고 응답했다.
+    
+    전체 회원 중에서 의류에 관심있는 회원의 비율을 $p$ 라고 할 때 모비율 $p$ 의 신뢰구간을 추정해보자. 
+
+    신뢰도 $95\%$ 의 신뢰구간을 추정해보면 다음과 같다. 
+    
+    $$ \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} $$
+
+    에서 표본의 크기가 $n = 300$ 이고 표본비율 $\hat{p} = \dfrac{75}{300} = 0.25$ 인데 표본의 크기가 충분히 크므로($\because n > 30$) $\hat{q} = 1 - \hat{p} = 0.75$ 에 대하여 
+
+    $$ \iff  0.25 - 1.96 \sqrt[]{\dfrac{0.25\times 0.75}{300}} \leq p \leq  0.25 + 1.96 \sqrt[]{\dfrac{0.25\times 0.75}{300}} $$
+
+    $$ \iff  0.201 \leq p \leq 0.229 $$
+
+    이다. 따라서 신뢰도 $95\%$ 의 신뢰구간은 
+
+    $$ \therefore [0.201 \leq p \leq 0.229 ] $$
+
+    이다. ■ 
+
+    이로써 전체 회원 중에서 "의류" 에 관심이 있는 회원의 비율은 $95\%$ 의 확률로 $20.1\%$ 에서 $22.9\%$ 사이값이라고 생각할 수 있다. 
+
+    한편 신뢰도 $99\%$ 의 신뢰구간을 추정해보면 다음과 같다. 
+    
+    $$ \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} $$
+
+    $$ \iff  0.25 - 2.58 \sqrt[]{\dfrac{0.25\times 0.75}{300}} \leq p \leq  0.25 + 1.96 \sqrt[]{\dfrac{0.25\times 0.75}{300}} $$
+
+    $$ \iff  0.1855 \leq p \leq 0.3145 $$
+
+    이다. 따라서 신뢰도 $99\%$ 의 신뢰구간은 
+
+    $$ \therefore [0.1855 \leq p \leq 0.3145 ] $$
+
+    이다. ■ 
+
+    이로써 전체 회원 중에서 "의류" 에 관심이 있는 회원의 비율은 $99\%$ 의 확률로 $18.5\%$ 에서 $31.4\%$ 사이값이라고 생각할 수 있다. 
+
+    그러나 이처럼 모평균에 대한 추정 확률이 높아질수록 구간추정의 정밀도가 떨어진다. 따라서 통상적으로(특히 보건업계에서) 신뢰도 $95\%$ 의 신뢰구간을 널리 사용한다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -658,4 +901,28 @@
 
   2. 신뢰도 $99\%$ 의 신뢰구간 길이 : $\displaystyle 2 \times 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$
 
+  2. 신뢰도 $\alpha \%$ 의 신뢰구간 길이 : $\displaystyle 2 \times k \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$
+
   </blockquote>
+
+  - 증명 
+
+    신뢰도 $95\%$ 의 신뢰구간은 폐구간 $\bigg [ \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ]$ 이다. 그러므로 길이는 
+
+    $$\bigg | \bigg ( \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ) - \bigg ( \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ) \bigg | = 2 \times  1.96 \sqrt{\dfrac{\hat{p}\hat{q}}{n}}$$
+
+    에서
+
+    $$ \therefore  2 \times 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$$
+
+    이다. ■ 
+
+    마찬가지로 신뢰도 $99\%$ 의 신뢰구간은 폐구간 $\bigg [ \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ]$ 이다. 그러므로 길이는 
+
+    $$\bigg | \bigg ( \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ) - \bigg ( \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ) \bigg | = 2 \times  2.58 \sqrt{\dfrac{\hat{p}\hat{q}}{n}}$$
+
+    에서
+
+    $$ \therefore  2 \times 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$$
+
+    이다. ■ 
