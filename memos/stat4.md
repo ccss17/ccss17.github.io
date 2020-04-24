@@ -1,6 +1,6 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-# 연속확률변수
+# 연속확률분포 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -23,6 +23,18 @@
   $X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다. 
 
   </blockquote>
+
+  - 대표적인 확률밀도함수가 정규분포곡선이다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 연속확률분포(continuous probability distribution) : 확률밀도함수를 이용해 분포를 표현할 수 있는 확률분포이다.
+
+  </blockquote>
+
+  - 연속확률분포에는 정규분포(normal distribution), 지수분포(exponential distribution), 스튜던트 $t$ 분포(Student's t-distribution), 파레토 분포(Pareto distribution), 로지스틱 분포(logistic distribution) 등이 있다. 
+
+    한편 이산확률분포도 무한히 반복하면 연속확률분포 중 하나로 수렴한다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 

@@ -85,6 +85,7 @@ def update():
 {sections('이항분포의 평균,분산,표준편차', 'stat3', get_definitions)}
 {sections('연속확률변수의 평균,분산,표준편차와 정규분포', 'stat4', get_definitions)}
 {sections('통계적 추정', 'stat5', get_definitions)}
+{sections('상관관계 분석', 'stat6', get_definitions)}
 
 </blockquote>
 

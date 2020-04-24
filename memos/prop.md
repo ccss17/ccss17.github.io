@@ -226,7 +226,7 @@
 
     이다. ■ 
 
-## 확률의 덧셈정리
+# 확률의 덧셈정리
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 

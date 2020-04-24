@@ -109,7 +109,7 @@
 
 - [이산확률변수의 평균,분산,표준편차](https://ccss17.github.io/stat2.html)
     
-  ######  확률변수(random variable),  확률변수로의 확률 표기,  확률분포(probability distribution),  이산확률변수(discrete random variable),  확률질량함수(probability mass function),  확률질량함수의 성질,  기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable),  이산확률변수의 분산(variance),  이산확률변수의 표준편차(standard deviation),  이산확률변수의 기대값(평균)의 성질,  이산확률변수의 분산의 성질,  이산확률변수의 표준편차의 성질
+  ######  확률변수(random variable),  확률변수로의 확률 표기,  확률분포(probability distribution),  이산확률변수(discrete random variable),  확률질량함수(probability mass function),  이산확률분포(discrete probability distribution),  확률질량함수의 성질,  기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable),  이산확률변수의 분산(variance),  이산확률변수의 표준편차(standard deviation),  이산확률변수의 기대값(평균)의 성질,  이산확률변수의 분산의 성질,  이산확률변수의 표준편차의 성질
 
 - [이항분포의 평균,분산,표준편차](https://ccss17.github.io/stat3.html)
     
@@ -117,11 +117,15 @@
 
 - [연속확률변수의 평균,분산,표준편차와 정규분포](https://ccss17.github.io/stat4.html)
     
-  ######  연속확률변수(continuous random variable),  확률밀도함수(probability density function),  확률밀도함수의 성질,  연속확률변수의 평균,  연속확률변수의 분산,  연속확률변수의 표준편차,  연속확률변수의 평균, 분산, 표준편차의 성질,  정규분포(normal distribution),  정규분포곡선,  정규분포의 성질,  표준정규분포(standard normal distribution),  표준정규분포표,  정규분포의 표준화(standardization),  이항분포와 정규분포의 관계
+  ######  연속확률변수(continuous random variable),  확률밀도함수(probability density function),  연속확률분포(continuous probability distribution),  확률밀도함수의 성질,  연속확률변수의 평균,  연속확률변수의 분산,  연속확률변수의 표준편차,  연속확률변수의 평균, 분산, 표준편차의 성질,  정규분포(normal distribution),  정규분포곡선,  정규분포의 성질,  표준정규분포(standard normal distribution),  표준정규분포표,  정규분포의 표준화(standardization),  이항분포와 정규분포의 관계
 
 - [통계적 추정](https://ccss17.github.io/stat5.html)
     
   ######  모집단(population),  표본(sample),  모집단의 크기,  표본의 크기,  전수조사(total inspection),  표본조사(sample survey),  추출(sampling),  임의추출(random sampling),  임의표본(random sample),  복원추출(sampling with replacement),  비복원추출(sampling without replacement),  모집단의 확률분포,  모평균(population mean),  모분산(population variance),  모표준편차(population standard deviation),  표본평균(sample mean),  표본분산(sample variance),  표본표준편차(sample standard deviation),  표본평균의 평균,  표본평균의 분산,  표본평균의 표준편차,  모비율(population ratio),  표본비율(sample ratio),  표본비율 $\hat{p}$ 의 평균,  표본비율 $\hat{p}$ 의 분산,  표본비율 $\hat{p}$ 의 표준편차,  추정(estimation),  점추정(point estimation),  구간추정(interval estimation),  신뢰도(confidence coefficient),  모평균의 신뢰구간(confidence interval),  모평균의 신뢰구간 길이,  모비율의 신뢰구간,  모비율의 신뢰구간 길이
+
+- [상관관계 분석](https://ccss17.github.io/stat6.html)
+    
+  ######  공분산(covariance)
 
 </blockquote>
 
