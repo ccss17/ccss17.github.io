@@ -8,7 +8,7 @@ def get_definitions(file):
         content = f.read()
     definitions = re.findall(DEF_PATTERN, content)
     definitions = ', '.join((definition[2:-2] for definition in definitions))
-    return '  ###### ' + definitions
+    return definitions
 
 def get_theorem(file):
     THEOREM_PATTERN = '### \*\*<center>.+</center>\*\*'
@@ -20,9 +20,9 @@ def get_theorem(file):
 
 def sections(title, file, get):
     return f'''
-- [{title}](https://ccss17.github.io/{file}.html)
+- {title}
     
-{get('memos/'+file+'.md')}'''
+  ###### [{get('memos/'+file+'.md')}](https://ccss17.github.io/{file}.html)'''
 
 def update():
     theorems = f'''\
@@ -77,7 +77,7 @@ def update():
 
 </blockquote>
 
-### 통계학 메모
+## 통계학 메모
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 {sections('도수분포의 평균,분산,표준편차', 'stat', get_definitions)}
