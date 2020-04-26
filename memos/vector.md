@@ -16,6 +16,36 @@
 
   </blockquote>
 
+  - 매개변수 방정식 예시 
+
+    개구간 $(-\infty , \infty )$ 에서 정의된 $t$ 에 대한 함수 
+
+    $$ x = t ^{2}, y = t+1 $$
+
+    로 정의된 매개변수 방정식의 곡선을 그려보자. 
+
+    $t$ 값에 따라 결정되는 $x, y$ 의 값을 살펴보면 다음과 같다.
+
+    | t | x | y |
+    |:---:|:---:|:---:|
+    | -3  | 9 | -2 |
+    | -2  | 4 | -1 |
+    | -1  | 1 | 0 |
+    | 0  | 0 | 1 |
+    | 1  | 1 | 2 |
+    | 2  | 4 | 3 |
+    | 3  | 9 | 4 |
+
+    따라서 $xy$ 평면에 그래프를 그려보면 아래와 같다. 
+
+    ![desmos-graph](https://user-images.githubusercontent.com/16812446/79000371-73185f80-7b87-11ea-946b-6f1c94583fb4.png)
+
+    이 그래프는 매개변수 방정식을 $t$ 에 대하여 풀어서 
+
+    $$ x = y ^{2} - 2y +1 $$
+
+    를 얻음으로써 그릴 수도 있다. 
+
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 매개변수 곡선(parametric curve) : 매개변수 방정식의 정의에서 매개변수 방정식으로 정의된 점들의 집합 $(x, y) = (f(t), g(t))$ 을 매개변수 곡선이라 한다. 
@@ -37,48 +67,6 @@
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 - 종점(terminal point) : 매개변수 방정식의 정의에서 $I$ 가 폐구간이고 $t$ 가 $a \leq t \leq b$ 로 정의되었을 때 점 $(f(b), g(b))$ 를 곡선의 종점이라 한다.
-
-  </blockquote>
-
-- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
-
-- 매개변수 방정식 예시 
-
-  개구간 $(-\infty , \infty )$ 에서 정의된 $t$ 에 대한 함수 
-
-  $$ x = t ^{2}, y = t+1 $$
-
-  로 정의된 매개변수 방정식의 곡선을 그려보자. 
-
-  $t$ 값에 따라 결정되는 $x, y$ 의 값을 살펴보면 다음과 같다.
-
-  | t | x | y |
-
-  |:---:|:---:|:---:|
-
-  | -3  | 9 | -2 |
-
-  | -2  | 4 | -1 |
-
-  | -1  | 1 | 0 |
-
-  | 0  | 0 | 1 |
-
-  | 1  | 1 | 2 |
-
-  | 2  | 4 | 3 |
-
-  | 3  | 9 | 4 |
-
-  따라서 $xy$ 평면에 그래프를 그려보면 아래와 같다. 
-
-  ![desmos-graph](https://user-images.githubusercontent.com/16812446/79000371-73185f80-7b87-11ea-946b-6f1c94583fb4.png)
-
-  이 그래프는 매개변수 방정식을 $t$ 에 대하여 풀어서 
-
-  $$ x = y ^{2} - 2y +1 $$
-
-  를 얻음으로써 그릴 수도 있다. 
 
   </blockquote>
 
@@ -132,9 +120,9 @@
 
 - 벡터(vector) : 크기와 방향성이 동시에 있는 물리량이다. 
 
-  > 크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. 
-
   </blockquote>
+
+  > 크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. 
 
   - 스칼라량으로는 방향에 대한 정보가 부족하기에 방향에 대한 정보를 덧붙힌 것이 벡터이다. 
 
@@ -176,9 +164,9 @@
 
 - 벡터의 시점(initial point) : 다음과 같이 점 $A$ 에서 점 $B$ 로 방향이 주어진 선분 $AB$ 를 벡터 $AB$ 에서
 
-    ![](https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C)
+  ![](https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C)
 
-    점 $A$ 를 벡터의 시점이라 한다. 
+  점 $A$ 를 벡터의 시점이라 한다. 
 
   </blockquote>
 
@@ -186,9 +174,9 @@
 
 - 벡터의 종점(terminal point) : 다음과 같이 점 $A$ 에서 점 $B$ 로 방향이 주어진 선분 $AB$ 를 벡터 $AB$ 에서
 
-    ![](https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C)
+  ![](https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C)
 
-    점 $B$ 를 벡터의 종점이라 한다. 
+  점 $B$ 를 벡터의 종점이라 한다. 
 
   </blockquote>
 
@@ -202,9 +190,9 @@
 
   - 지금까지 살펴본 함수들이 스칼라 함수에 해당한다. 
 
-  - 실숫값 함수의 정의처럼 공역이 실수 집합 $\Re$ 인 함수 
+  - 실숫값 함수의 정의처럼 공역이 실수 집합 $\R$ 인 함수 
 
-    $$ f: X \to \Re $$
+    $$ f: X \to \R $$
 
     이다. 
 
@@ -332,7 +320,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 두 벡터가 같다 : 시점과 종점의 위치에 관계 없이 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 의 크기와 방향이 같으면 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 를 같다고 한다.
+- 벡터의 상등 : 시점과 종점의 위치에 관계 없이 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 의 크기와 방향이 같으면 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 를 같다고 한다.
 
   </blockquote>
 
@@ -646,29 +634,31 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 벡터의 길이(magnitude or length of vector) : $2$ 차원, $3$ 차원일 경우 각각 다음과 같이 정의된다. 
+- $2$ 차원 벡터의 길이(magnitude or length of vector) : $2$ 차원 공간에서 정의된 임의의 벡터 $\overrightarrow{PQ}$ 를 표준점에 위치시켜서 그 성분을
+
+  $$ v = \big<x_2-x_1, y_2-y_1\big> $$
+
+  로 표기할 수 있다면 벡터의 길이는 
+
+  $$ |v| = ||v|| = \sqrt[]{v _{1} ^{2} + v _{2} ^{2} } = \sqrt[]{(x _{2} - x _{1}) ^{2} + (y _{2} - y _{1}) ^{2} } $$
+
+  이다. 
 
   </blockquote>
 
-  - $2$ 차원 공간에서 정의된 임의의 벡터 $\overrightarrow{PQ}$ 를 표준점에 위치시켜서 그 성분을
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-    $$ v = \big<x_2-x_1, y_2-y_1\big> $$
+- $3$ 차원 벡터의 길이(magnitude or length of vector) : $3$ 차원 공간에서 정의된 임의의 벡터 $\overrightarrow{PQ}$ 를 표준점에 위치시켜서 그 성분을
 
-    로 표기할 수 있다면 벡터의 길이는 
+  $$ v = \big<x_2-x_1, y_2-y_1, z_2-z_1 \big> $$
 
-    $$ |v| = ||v|| = \sqrt[]{v _{1} ^{2} + v _{2} ^{2} } = \sqrt[]{(x _{2} - x _{1}) ^{2} + (y _{2} - y _{1}) ^{2} } $$
+  로 표기할 수 있다면 벡터의 길이는 
 
-    이다. 
+  $$ |v| = ||v|| = \sqrt[]{v _{1} ^{2} + v _{2} ^{2} + v _{3} ^{2}} = \sqrt[]{(x _{2} - x _{1}) ^{2} + (y _{2} - y _{1}) ^{2} + (z _{2} - z _{1}) ^{2}} $$
 
-  - $3$ 차원 공간에서 정의된 임의의 벡터 $\overrightarrow{PQ}$ 를 표준점에 위치시켜서 그 성분을
+  이다. 
 
-    $$ v = \big<x_2-x_1, y_2-y_1, z_2-z_1 \big> $$
-
-    로 표기할 수 있다면 벡터의 길이는 
-
-    $$ |v| = ||v|| = \sqrt[]{v _{1} ^{2} + v _{2} ^{2} + v _{3} ^{2}} = \sqrt[]{(x _{2} - x _{1}) ^{2} + (y _{2} - y _{1}) ^{2} + (z _{2} - z _{1}) ^{2}} $$
-
-    이다. 
+  </blockquote>
 
   - 벡터 $v$ 의 길이를 $|v|$ 또는 $||v||$ 로 표기한다. 
 
@@ -736,11 +726,11 @@
 
     $$ = \max (|x_1 -y_1|, |x_2 - y_2|, \dots, |x_n - y_n|) $$
 
-    - 보통 $L_1$ 노름거리과 $L_2$ 노름거리, 무한 노름거리 외에는 잘 사용되지 않는다. 
-
-    - 무한노름거리는 체비쇼프 거리(chebyshev distance) 거리로도 불린다. 
-
   </blockquote>
+
+  - 보통 $L_1$ 노름거리과 $L_2$ 노름거리, 무한 노름거리 외에는 잘 사용되지 않는다. 
+
+  - 무한노름거리는 체비쇼프 거리(chebyshev distance) 거리로도 불린다. 
 
 ## 벡터 대수 연산 
 
@@ -748,37 +738,45 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 벡터 대수 연산 : 벡터 $u, v$ 를 다음과 같이 정의했을 때 덧셈과 스칼라배가 다음과 같이 정의된다. 
+- 벡터 덧셈 : $u = \big <u_1, u_2, u_3 \big >, v = \big < v_1, v_2, v_3 \big >$ 인 벡터 $u, v$ 에 대하여 
 
-  $$ u = \big <u_1, u_2, u_3 \big >, v = \big < v_1, v_2, v_3 \big > $$
+  $$u + v = \big <u_1+v_1, u_2+v_2 + u_3+v_3 \big >$$
+
+  이다.
 
   </blockquote>
 
-  - 벡터 덧셈 : $u + v = \big <u_1+v_1, u_2+v_2 + u_3+v_3 \big >$
+  - 예시 
 
-    - 예시 
+    해석기학적인 벡터 덧셈은 논증기하적으로 벡터 덧셈을 정의했을 때와 같이 
 
-      해석기학적인 벡터 덧셈은 논증기하적으로 벡터 덧셈을 정의했을 때와 같이 
+    벡터 $u, v$ 를 더해 벡터 $w$ 가 나오는데, 각각
 
-      벡터 $u, v$ 를 더해 벡터 $w$ 가 나오는데, 각각
+    삼각형의 형태로 덧셈이 이루어지는 경우
 
-      삼각형의 형태로 덧셈이 이루어지는 경우
+    ![캡처](https://user-images.githubusercontent.com/16812446/79008020-73205b80-7b97-11ea-9e2a-b085f47baf47.PNG)
 
-      ![캡처](https://user-images.githubusercontent.com/16812446/79008020-73205b80-7b97-11ea-9e2a-b085f47baf47.PNG)
+    와 평행사변형의 형태로 덧셈이 이루어지는 경우
 
-      와 평행사변형의 형태로 덧셈이 이루어지는 경우
+    ![캡처](https://user-images.githubusercontent.com/16812446/79008186-c5617c80-7b97-11ea-8f0a-4bba658bd881.PNG)
 
-      ![캡처](https://user-images.githubusercontent.com/16812446/79008186-c5617c80-7b97-11ea-8f0a-4bba658bd881.PNG)
+    와 같다. 
 
-      와 같다. 
+  - 특히 위 예시에서 덧셈의 결과인 $w$ 를 합 벡터(resultant vector) 라 한다. 
 
-    - 특히 위 예시에서 덧셈의 결과인 $w$ 를 합 벡터(resultant vector) 라 한다. 
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-  - 스칼라배 : $ku = \big <ku_1, ku_2, ku_3 \big >$
+- 벡터 스칼라배 : $u = \big <u_1, u_2, u_3 \big >, v = \big < v_1, v_2, v_3 \big >$ 인 벡터 $u, v$ 에 대하여 
 
-    - 벡터 $u$ 에 스칼라배를 하면 벡터가 늘어날 수도 있고 줄어들 수도 있다.
+  $$ku = \big <ku_1, ku_2, ku_3 \big >$$
 
-    - 특히 스칼라 $k$ 가 음수면 벡터의 방향이 바뀐다.
+  이다.
+
+  </blockquote>
+
+  - 벡터 $u$ 에 스칼라배를 하면 벡터가 늘어날 수도 있고 줄어들 수도 있다.
+
+  - 특히 스칼라 $k$ 가 음수면 벡터의 방향이 바뀐다.
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 

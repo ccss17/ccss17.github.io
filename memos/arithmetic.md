@@ -251,17 +251,11 @@
   - 예시 
 
     | 집합 | 연산자 | 항등원 |
-
     |:---:|:---:|:---:|
-
     | 실수 | $+, -$|$0$|
-
     | 실수 | $\times$|$1$|
-
     | 정사각행렬 | 행렬 덧셈|영행렬|
-
     | 정사각행렬 | 행렬 곱셈|단위행렬|
-
     | 함수 | 합성함수|항등함수|
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
@@ -292,7 +286,7 @@
 
   </blockquote>
 
-  - $\aleph$ 로 표기한다.
+  - $\N$ 로 표기한다.
 
   - 페아노 공리계와 집합론적 정의로 엄밀히 정의된다. 
 
@@ -334,7 +328,7 @@
 
   </blockquote>
 
-  - $\Re$ 로 표기한다. 
+  - $\R$ 로 표기한다. 
 
   - 실수체로 엄밀히 정의된다. 
 
@@ -420,7 +414,11 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 수열(sequence) : 자연수 전체 집합 $\aleph$ 에서 실수 전체 집합 $\Re$ 로의 함수 $f : \aleph \to \Re$ 에서 함숫값을 차례로 나열한 $f(1), f(2), ..., f(n), ...$ 을 수열이라 한다.
+- 수열(sequence) : 자연수 전체 집합 $\N$ 에서 실수 전체 집합 $\R$ 로의 함수 
+
+  $$f : \N \to \R$$
+  
+  에서 함숫값을 차례로 나열한 $f(1), f(2), ..., f(n), ...$ 을 수열이라 한다.
 
   </blockquote>
 
@@ -436,7 +434,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 유한수열 : 정의역이 모든 자연수의 집합 $\aleph$ 의 부분집합 $\{1, 2, 3, \dots, n\}$, 공역이 모든 실수 집합 $\Re$ 인 함수이다. 
+- 유한수열 : 정의역이 모든 자연수의 집합 $\N$ 의 부분집합 $\{1, 2, 3, \dots, n\}$, 공역이 모든 실수 집합 $\R$ 인 함수이다. 
 
   </blockquote>
 

@@ -14,7 +14,7 @@
 
   - 예시
 
-    - 다음은 함수 $f(x) = 2x+1$ 의 그래프를 $\Re^2$(2차원 좌표계) 에서 시각화한 것이다. 
+    - 다음은 함수 $f(x) = 2x+1$ 의 그래프를 $\R^2$(2차원 좌표계) 에서 시각화한 것이다. 
 
       ![desmos-graph](https://user-images.githubusercontent.com/16812446/75017426-52f5e980-54d0-11ea-9e69-e8a8e3df403d.png)
 
@@ -212,7 +212,7 @@
 
       - 집합 $X$ 에서의 항등함수를 $I_X$ 로, 집합 $Y$ 에서의 항등함수를 $I_Y$ 로 표기한다. 
 
-    - 함수 $f: \Re \to \Re$ 에 대하여 $y=f(x)$ 의 그래프와 그 역함수 $y = f ^{-1}(x)$ 의 그래프는 직선 $y=x$ 에 대하여 서로 대칭이다.
+    - 함수 $f: \R \to \R$ 에 대하여 $y=f(x)$ 의 그래프와 그 역함수 $y = f ^{-1}(x)$ 의 그래프는 직선 $y=x$ 에 대하여 서로 대칭이다.
 
       - $y=f(x)$ 그래프에서 $y=f ^{-1}(x)$ 를 구하기 위해서 $y$ 축을 정의역으로 취급하고 $x$ 축을 공역으로 취급하기 때문이다. 
 
@@ -372,7 +372,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 매개변수 방정식(parameter equation) : 점 $P(x, y)$ 에 대하여 $x=g(t), y=h(t)$ 이면 함수 $f: \Re \to \Re ^{2}, t \mapsto (x, y)$ 를 생각할 수 있다. 이때 $x=g(t), y=h(t)$ 를 $t$ 를 매개변수로 하는 도형의 매개변수 방정식이라 한다. 
+- 매개변수 방정식(parameter equation) : 점 $P(x, y)$ 에 대하여 $x=g(t), y=h(t)$ 이면 함수 $f: \R \to \R ^{2}, t \mapsto (x, y)$ 를 생각할 수 있다. 이때 $x=g(t), y=h(t)$ 를 $t$ 를 매개변수로 하는 도형의 매개변수 방정식이라 한다. 
 
   </blockquote>
 

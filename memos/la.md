@@ -416,15 +416,15 @@
 
   </blockquote>
 
-### $\Re^2$에서의 벡터
+### $\R^2$에서의 벡터
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- $\Re^2$ 의 정의 : $2$ 개의 성분을 갖는 모든 벡터의 집합이다.
+- $\R^2$ 의 정의 : $2$ 개의 성분을 갖는 모든 벡터의 집합이다.
 
   </blockquote>
 
-  - $\Re$ 의 의미는 벡터의 성분이 실수라는 것이다.
+  - $\R$ 의 의미는 벡터의 성분이 실수라는 것이다.
 
   - 지수 $2$ 의 의미는 각각의 벡터가 $2$ 개의 성분을 갖는다는 뜻이다.
 
@@ -434,11 +434,11 @@
 
     이것은 $\big < 1, 2\big >$ 로도 표현할 수 있고 좌표평면에서의 종점의 좌표가 $(1, 2)$ 인 벡터로 볼 수 있다. 
 
-### $\Re^3$에서의 벡터
+### $\R^3$에서의 벡터
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- $\Re^3$ 의 정의 : $3$ 개의 성분($3 \times 1$ 열행렬)을 갖는 벡터의 집합이다.
+- $\R^3$ 의 정의 : $3$ 개의 성분($3 \times 1$ 열행렬)을 갖는 벡터의 집합이다.
 
   </blockquote>
 
@@ -448,11 +448,11 @@
 
     이는 $3$차원 좌표공간에서의 좌표 $(2, 3, 4)$ 로 볼 수 있다.
 
-### $\Re^n$에서의 벡터
+### $\R^n$에서의 벡터
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- $\Re^n$ 의 정의 : n 이 양의 정수일때, n 개의 실수로 이루어진 모든 순서 있는 n 짝(ordered n-tuples) 의 집합이다. 
+- $\R^n$ 의 정의 : n 이 양의 정수일때, n 개의 실수로 이루어진 모든 순서 있는 n 짝(ordered n-tuples) 의 집합이다. 
 
   </blockquote>
 
@@ -466,7 +466,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- $\Re^n$ 의 대수적 성질 : 임의의 벡터들 $u, v, w \in \Re^n$ 과 임의의 수 c 와 d 에 대하여 다음이 성립한다.
+- $\R^n$ 의 대수적 성질 : 임의의 벡터들 $u, v, w \in \R^n$ 과 임의의 수 c 와 d 에 대하여 다음이 성립한다.
 
   1. $u + v = v + u$
 
@@ -490,7 +490,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 일차결합(linear combination) : 어떤 벡터 $v_1, v_2, \dots, v_p \in \Re^n$ 와 스칼라 $c_1, c_2, \dots, c_p$ 에 대하여 
+- 일차결합(linear combination) : 어떤 벡터 $v_1, v_2, \dots, v_p \in \R^n$ 와 스칼라 $c_1, c_2, \dots, c_p$ 에 대하여 
 
   다음과 같이 정의된 벡터 $y$ 를 가중치(weight) $c_1, c_2, \dots, c_p$ 를 갖는 $v_1, v_2, \dots, v_p$ 의 일차결합(linear combination) 이라 한다.
 
@@ -512,7 +512,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 벡터방정식 (vector equation) : 어떤 벡터 $v_1, v_2, \dots, v_p \in \Re^n$ 와 변수 $x_1, x_2, \dots, x_p$ 에 대하여 
+- 벡터방정식 (vector equation) : 어떤 벡터 $v_1, v_2, \dots, v_p \in \R^n$ 와 변수 $x_1, x_2, \dots, x_p$ 에 대하여 
 
   다음과 같이 정의된 벡터 $y$ 를  벡터 방정식(vector equation) 이라 함. 
 
@@ -588,7 +588,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 모든 벡터의 집합 $Span$ : 어떤 벡터 $v_1, v_2, \dots, v_p \in \Re^n$ 에 대하여 
+- 모든 벡터의 집합 $Span$ : 어떤 벡터 $v_1, v_2, \dots, v_p \in \R^n$ 에 대하여 
 
   $v_1, v_2, \dots, v_p$ 의 모든 일차결합의 집합을 $Span\{v_1, \dots, v_p\}$ 이라 한다. 
 
@@ -602,17 +602,17 @@
 
     - $Span\{v\}$ 의 의미
 
-      $v$ 가 $\Re^3$ 에 속하는 영이 아닌 벡터라고하자.
+      $v$ 가 $\R^3$ 에 속하는 영이 아닌 벡터라고하자.
 
-      $Span\{v\}$ 는 $v$ 의 모든 스칼라배의 집합이며, $v$ 과 $0$ 을 지나는 $\Re^3$ 의 직선의 연장선상 위의 점들의 집합이다. 
+      $Span\{v\}$ 는 $v$ 의 모든 스칼라배의 집합이며, $v$ 과 $0$ 을 지나는 $\R^3$ 의 직선의 연장선상 위의 점들의 집합이다. 
 
       ![3차원 직선](https://user-images.githubusercontent.com/16812446/74583507-095a5a00-500b-11ea-86fe-a1cb8faccfae.png)
 
     - $Span\{u, v\}$ 의 의미
 
-      $u, v$ 가 $\Re^3$ 에 속하는 영이 아닌 벡터라고 하자. 
+      $u, v$ 가 $\R^3$ 에 속하는 영이 아닌 벡터라고 하자. 
 
-      $Span\{u, v\}$ 는 $u, v, 0$ 를 포함하는 $\Re^3$ 내의 평면이다.
+      $Span\{u, v\}$ 는 $u, v, 0$ 를 포함하는 $\R^3$ 내의 평면이다.
 
       ![3차원 직선(1)](https://user-images.githubusercontent.com/16812446/74583586-d2387880-500b-11ea-8096-d51df7105043.png)
 
@@ -624,7 +624,7 @@
 
   $$ A = \begin{pmatrix} a_1 & a_2 & \dots & a_n \end{pmatrix}$$
 
-  이고 $x \in \Re^n$ 
+  이고 $x \in \R^n$ 
 
   $$ x = \begin{pmatrix} x_1 \\ x_2 \\ \dots \\ x_n \end{pmatrix}$$
 
@@ -640,7 +640,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 3** 행렬방정식의 해집합(벡터방정식과 선형계와의 관계) : A 가 $a_1, \dots, a_n$ 을 열로 갖는 $m \times n$ 행렬이고, $b \in \Re^m$ 이면 다음 행렬방정식
+- **Theorem 3** 행렬방정식의 해집합(벡터방정식과 선형계와의 관계) : A 가 $a_1, \dots, a_n$ 을 열로 갖는 $m \times n$ 행렬이고, $b \in \R^m$ 이면 다음 행렬방정식
 
   $$ Ax = b$$
 
@@ -692,11 +692,11 @@
 
 - **Theorem 4** $A$ 가 $m \times n$ 행렬이라 하자. 다음 명제들은 모두 동치이다. 
 
-  1. 임의의 $b \in \Re^m$ 에 대하여, 방정식 $Ax = b$ 가 해를 갖는다. 
+  1. 임의의 $b \in \R^m$ 에 대하여, 방정식 $Ax = b$ 가 해를 갖는다. 
 
-  2. 임의의 $b \in \Re^m$ 는 $A$ 의 열들의 일차결합이다.
+  2. 임의의 $b \in \R^m$ 는 $A$ 의 열들의 일차결합이다.
 
-  3. $A$ 의 열들이 $\Re^m$ 을 생성한다. 
+  3. $A$ 의 열들이 $\R^m$ 을 생성한다. 
 
   4. $A$ 의 모든 행에 추축위치가 있다.
 
@@ -724,7 +724,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 5** $A$가 $m \times n$ 행렬이고, $u, v \in \Re^n$ 이며, $c$ 가 스칼라 일 때 다음이 성립한다.
+- **Theorem 5** $A$가 $m \times n$ 행렬이고, $u, v \in \R^n$ 이며, $c$ 가 스칼라 일 때 다음이 성립한다.
 
   1. $A(u+v) = Au + Av$ 가 해를 갖는다. 
 
@@ -738,7 +738,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 동차선형계(homogeneous) : $m \times n$ 행렬 $A$ 와 영벡터 $0 \in \Re^m$ 에 대하여
+- 동차선형계(homogeneous) : $m \times n$ 행렬 $A$ 와 영벡터 $0 \in \R^m$ 에 대하여
 
   $Ax = 0$ 형태로 쓸 수 있는 선형방정식계를 동차(homogeneous) 라 한다. 
 
@@ -750,7 +750,7 @@
 
   </blockquote>
 
-  - 동차선형계 $Ax = 0$ 은 항상 적어도 하나의 해, $x = 0(\Re^m 의 영벡터)$  를 갖는다. 그리고 이 해를 자명한 해(trivial solution) 라 한다.
+  - 동차선형계 $Ax = 0$ 은 항상 적어도 하나의 해, $x = 0(\R^m 의 영벡터)$  를 갖는다. 그리고 이 해를 자명한 해(trivial solution) 라 한다.
 
   - 동차선형계 $Ax = 0$ 의 자명하지 않은 해(nontirival solution) 은 영이 아닌 벡터 $x$ 이다. 
 
@@ -874,9 +874,9 @@
 
 ### 매개변수 벡터 형식
 
-동차선형계 예시 2 에서 방정식을 풀어서 $x = su + tv (s, t \in \Re)$ 형식으로 나타낸 것을 매개변수 벡터방정식(parametric vector equation) 이라 한다. 
+동차선형계 예시 2 에서 방정식을 풀어서 $x = su + tv (s, t \in \R)$ 형식으로 나타낸 것을 매개변수 벡터방정식(parametric vector equation) 이라 한다. 
 
-동차선형계 예시 1 에서 방정식 $x = x_3v$ 또는 $x = tv (t\in\Re)$ 는 직선의 매개변수 벡터방정식이다. 
+동차선형계 예시 1 에서 방정식 $x = x_3v$ 또는 $x = tv (t\in\R)$ 는 직선의 매개변수 벡터방정식이다. 
 
 이렇게 해집합이 벡터들로 명시적으로 표현되었다면 그 해가 매개변수 벡터 형식으로 주어졌다고 한다. 
 
@@ -924,7 +924,7 @@
 
     $Ax=b$ 의 해집합은 $x = p + x_3v$ 를 $t$ 를 매개변수로 하여 다음과 같이 매개변수 벡터 형식으로 나타낼 수 있다. 
 
-    $$x = p + tv (t\in\Re)$$
+    $$x = p + tv (t\in\R)$$
 
     이는 동차선형계 예시 1 에서의 해집합 $x = tv$ 에 $p$ 를 더하여 얻어진 것이다. 기하학적으로는 $x = tv$ 에서 $p$ 만큼 평행이동하여 $x = p + tv$ 를 얻었다고 할 수 있다. 
 
@@ -948,7 +948,7 @@
 
     $$x_1v_1 + x_2v_2 + \dots + x_pv_p = 0$$
 
-    이 방정식이 오직 자명한 해($x_1=x_2=\dots=x_p=0$)만을 가질 때 벡터들의 집합 $\{v_1, \dots, v_p\} \in \Re^n$ 은 일차 독립이다. 
+    이 방정식이 오직 자명한 해($x_1=x_2=\dots=x_p=0$)만을 가질 때 벡터들의 집합 $\{v_1, \dots, v_p\} \in \R^n$ 은 일차 독립이다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -966,7 +966,7 @@
 
     $$c_1v_1 + c_2v_2 + \dots + c_pv_p = 0$$
 
-    을 만족하면 벡터들의 집합 $\{v_1, \dots, v_p\} \in \Re^n$ 은 일차 종속이다. 
+    을 만족하면 벡터들의 집합 $\{v_1, \dots, v_p\} \in \R^n$ 은 일차 종속이다. 
 
   - 예시 
 
@@ -1058,7 +1058,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 8** 어떤 집합에 포함된 벡터의 수가 각 벡터에 있는 성분의 개수보다 많으면, 그 집합은 반드시 일차 종속이다. 즉, 어떤 집합 $\{v_1, \dots, v_p\} \notin \Re^n$ 에 대하여 $p > n$ 이면 그 집합은 일차 종속이다. 
+- **Theorem 8** 어떤 집합에 포함된 벡터의 수가 각 벡터에 있는 성분의 개수보다 많으면, 그 집합은 반드시 일차 종속이다. 즉, 어떤 집합 $\{v_1, \dots, v_p\} \notin \R^n$ 에 대하여 $p > n$ 이면 그 집합은 일차 종속이다. 
 
   </blockquote>
 
@@ -1076,7 +1076,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 9** $\Re^n$에 속하는 집합 $S = \{v_1, \dots, v_p\}$ 가 영벡터를 포함하면 $S$ 는 일차 종속이다. 
+- **Theorem 9** $\R^n$에 속하는 집합 $S = \{v_1, \dots, v_p\}$ 가 영벡터를 포함하면 $S$ 는 일차 종속이다. 
 
   </blockquote>
 
@@ -1088,31 +1088,31 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 선형변환 $T$ : $\Re^n$ 에서 $\Re^m$ 으로의 변환 $T$ 는 $\Re^n$ 에 속하는 모든 벡터에 $\Re^m$ 에 속하는 벡터 $T(x)$ 를 각각 부여하는 규칙이다. 
+- 선형변환 $T$ : $\R^n$ 에서 $\R^m$ 으로의 변환 $T$ 는 $\R^n$ 에 속하는 모든 벡터에 $\R^m$ 에 속하는 벡터 $T(x)$ 를 각각 부여하는 규칙이다. 
 
   </blockquote>
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 정의역(domain) : 선형변환 $T$ 의 정의에서 집합 $\Re^n$ 을 $T$ 의 정의역이라 한다. 
+- 정의역(domain) : 선형변환 $T$ 의 정의에서 집합 $\R^n$ 을 $T$ 의 정의역이라 한다. 
 
   </blockquote>
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 공역(codomain) : 선형변환 $T$ 의 정의에서 집합 $\Re^m$ 을 $T$ 의 공역이라 한다. 
+- 공역(codomain) : 선형변환 $T$ 의 정의에서 집합 $\R^m$ 을 $T$ 의 공역이라 한다. 
 
   </blockquote>
 
   - 선형변환 $T$ 의 정의역과 공역을 
 
-    $$T: \Re^n \to \Re^m$$
+    $$T: \R^n \to \R^m$$
 
-    로 표현하면 $T$ 의 정의역이 $\Re^n$ 이고 공역이 $\Re^m$ 임을 나타낸다. 
+    로 표현하면 $T$ 의 정의역이 $\R^n$ 이고 공역이 $\R^m$ 임을 나타낸다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 상(image) : 선형변환 $T$ 의 정의에서 $\Re^n$ 에 속하는 $x$ 에 대하여 $\Re^m$ 의 벡터 $T(x)$ 를 $x$ 의 상(image) 이라 한다. 
+- 상(image) : 선형변환 $T$ 의 정의에서 $\R^n$ 에 속하는 $x$ 에 대하여 $\R^m$ 의 벡터 $T(x)$ 를 $x$ 의 상(image) 이라 한다. 
 
   </blockquote>
 
@@ -1130,7 +1130,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 행렬변환 : $A$ 가 $m \times n$ 일 때, $\Re^n$ 에 속하는 각 $x$ 에 대하여 $T(x)$ 는 $Ax$ 로 계산된다.
+- 행렬변환 : $A$ 가 $m \times n$ 일 때, $\R^n$ 에 속하는 각 $x$ 에 대하여 $T(x)$ 는 $Ax$ 로 계산된다.
 
   </blockquote>
 
@@ -1142,7 +1142,7 @@
 
     $$ A = \begin{pmatrix} 1 & -3 \\ 3 & 5 \\ -1 & 7 \\ \end{pmatrix}, u = \begin{pmatrix} 2 \\ -1 \\ \end{pmatrix}, b = \begin{pmatrix} 3 \\ 2 \\ -5 \\ \end{pmatrix} $$
 
-    그리고 변환 $T: \Re^2 \to \Re^3$ 을 다음과 같이 $T(x) = Ax$ 로 정의하자. 
+    그리고 변환 $T: \R^2 \to \R^3$ 을 다음과 같이 $T(x) = Ax$ 로 정의하자. 
 
     $$ T(x) = Ax = \begin{pmatrix} 1 & -3 \\ 3 & 5 \\ -1 & 7 \\ \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ \end{pmatrix} = \begin{pmatrix} x_1 - 3x_2 \\ 3x_1 + 5x_2 \\ -x_1 + 7x_2 \\ \end{pmatrix} $$
 
@@ -1150,7 +1150,7 @@
 
     $$ T(u) = Au = \begin{pmatrix} 1 & -3 \\ 3 & 5 \\ -1 & 7 \\ \end{pmatrix} \begin{pmatrix} 2 \\ -1 \\ \end{pmatrix} = \begin{pmatrix} 5 \\ 1 \\ -9 \\ \end{pmatrix} $$
 
-    이제 $T$ 에 의한 상이 $b$ 가 되는 $\Re^2$ 의 벡터 $x$ 를 구해보자. 
+    이제 $T$ 에 의한 상이 $b$ 가 되는 $\R^2$ 의 벡터 $x$ 를 구해보자. 
 
     $T(x) = b$ 의 해 $x$ 를 구한다. 즉, 아래와 같은 $Ax = b$ 를 풀자. 
 
@@ -1202,13 +1202,13 @@
 
   - 예시 
 
-    $I_2=\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$ 의 열은 $e_1 = \begin{pmatrix}1 \\ 0\end{pmatrix}$,$e_2=\begin{pmatrix}0\\1\end{pmatrix}$ 이다. $T$ 는 $\Re ^2$ 에서 $\Re ^3$ 으로의 선형변환으로 다음을 만족한다. 
+    $I_2=\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$ 의 열은 $e_1 = \begin{pmatrix}1 \\ 0\end{pmatrix}$,$e_2=\begin{pmatrix}0\\1\end{pmatrix}$ 이다. $T$ 는 $\R ^2$ 에서 $\R ^3$ 으로의 선형변환으로 다음을 만족한다. 
 
     $$ T(e_1)= \begin{pmatrix} 5\\-7\\2 \end{pmatrix} $$
 
     $$ T(e_2)= \begin{pmatrix} -3\\8\\0 \end{pmatrix} $$
 
-    이때 $\Re ^2$ 에 속하는 임의의 벡터 $x$ 의 상을 얻는 식을 구해보자. $x$ 는 다음과 같이 쓸 수 있다.
+    이때 $\R ^2$ 에 속하는 임의의 벡터 $x$ 의 상을 얻는 식을 구해보자. $x$ 는 다음과 같이 쓸 수 있다.
 
     $$ x = \begin{pmatrix} x_1\\x_2 \end{pmatrix} = x_1 \begin{pmatrix} 1\\0 \end{pmatrix} + x_2\begin{pmatrix} 0\\1 \end{pmatrix} = x_1e_1 + x_2e_2 $$
 
@@ -1220,11 +1220,11 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 10** $T: \Re ^n \to \Re ^m$ 을 선형변환이라 하면 다음을 만족하는 유일한 행렬 $A$ 가 존재한다.
+- **Theorem 10** $T: \R ^n \to \R ^m$ 을 선형변환이라 하면 다음을 만족하는 유일한 행렬 $A$ 가 존재한다.
 
-  $$ T(x) = Ax, (x \in \Re ^n ) $$
+  $$ T(x) = Ax, (x \in \R ^n ) $$
 
-  $e_j \in \Re ^n$ 이 항등행렬의 $j$ 번째 열이라 하면 $A$ 는 $j$번째 열이 벡터 $T(e_j)$ 인 $m \times n$ 행렬이며 다음과 같이 쓸 수 있다. 
+  $e_j \in \R ^n$ 이 항등행렬의 $j$ 번째 열이라 하면 $A$ 는 $j$번째 열이 벡터 $T(e_j)$ 인 $m \times n$ 행렬이며 다음과 같이 쓸 수 있다. 
 
   $$ A = \begin{pmatrix} T(e_1) & \dots & T(e_n) \end{pmatrix} $$
 
@@ -1238,7 +1238,7 @@
 
   - 예제 
 
-    팽창변환 $T(x) = 3x, x \in \Re ^2$ 에 대한 표준행렬을 구하자.
+    팽창변환 $T(x) = 3x, x \in \R ^2$ 에 대한 표준행렬을 구하자.
 
     정의에 따라 벡터 $T(e_1), T(e_2)$ 을 열로 갖는 행렬 $A$ 를 구하면 된다. 
 
@@ -1274,31 +1274,31 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 전사 변환(onto) : $\Re ^m$ 에 속하는 각각의 $b$ 가 $\Re ^n$ 에 속하는 적어도 한 $x$ 의 상이면, 변환 $T: \Re ^n \to \Re ^m$ 을 $\Re ^m$ 으로의 전사(onto) 변환이라 한다.
+- 전사 변환(onto) : $\R ^m$ 에 속하는 각각의 $b$ 가 $\R ^n$ 에 속하는 적어도 한 $x$ 의 상이면, 변환 $T: \R ^n \to \R ^m$ 을 $\R ^m$ 으로의 전사(onto) 변환이라 한다.
 
   </blockquote>
 
-  - 즉 치역이 공역 $\Re ^m$ 전체가 되면 $T$ 는 $\Re ^m$ 으로의 전사변환이다.
+  - 즉 치역이 공역 $\R ^m$ 전체가 되면 $T$ 는 $\R ^m$ 으로의 전사변환이다.
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 일대일 변환(one-to-one) : $\Re ^m$ 에 속하는 각각의 $b$ 가 많아야 한 $x \in \Re ^n$ 의 상이면, 변환 $T: \Re ^n \to \Re ^m$ 을 $\Re ^m$ 으로의 일대일 변환(one-to-one) 이라 한다.
+- 일대일 변환(one-to-one) : $\R ^m$ 에 속하는 각각의 $b$ 가 많아야 한 $x \in \R ^n$ 의 상이면, 변환 $T: \R ^n \to \R ^m$ 을 $\R ^m$ 으로의 일대일 변환(one-to-one) 이라 한다.
 
   </blockquote>
 
-  - 즉 $\Re ^m$ 에 속하는 임의의 $b$ 에 대하여 $T(x) = b$ 를 만족하는 유일한 해가 존재하거나 하나도 없다면 $T$ 는 $\Re ^m$ 으로의 일대일 변환이다.
+  - 즉 $\R ^m$ 에 속하는 임의의 $b$ 에 대하여 $T(x) = b$ 를 만족하는 유일한 해가 존재하거나 하나도 없다면 $T$ 는 $\R ^m$ 으로의 일대일 변환이다.
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 11** : $T: \Re ^n \to  \Re ^m$ 이 선형변환 일 때, $T$ 가 일대일이 될 필요충분조건은 방정식 $T(x) = 0$ 이 자명한 해만을 갖는 것이다. 
+- **Theorem 11** : $T: \R ^n \to  \R ^m$ 이 선형변환 일 때, $T$ 가 일대일이 될 필요충분조건은 방정식 $T(x) = 0$ 이 자명한 해만을 갖는 것이다. 
 
   </blockquote>
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 12** : $T: \Re ^n \to  \Re ^m$ 이 선형변환 이고, $A$ 가 $T$ 에 대한 표준행렬이면 다음이 성립한다.
+- **Theorem 12** : $T: \R ^n \to  \R ^m$ 이 선형변환 이고, $A$ 가 $T$ 에 대한 표준행렬이면 다음이 성립한다.
 
-  1. $T$ 가 $\Re ^n$ 에서 $\Re ^m$ 으로의 전사변환이기 위한 필요충분조건은 $A$ 의 열들이 $\Re ^m$ 을 생성한다는 것이다. 
+  1. $T$ 가 $\R ^n$ 에서 $\R ^m$ 으로의 전사변환이기 위한 필요충분조건은 $A$ 의 열들이 $\R ^m$ 을 생성한다는 것이다. 
 
   2. $T$ 가 일대일 대응이기 위한 필요충분조건은 $A$ 의 열들이 일차 독립인 것이다. 
 

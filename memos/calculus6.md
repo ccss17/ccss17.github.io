@@ -520,9 +520,9 @@
 
   </blockquote>
 
-  - 유클리드 공간 $\Re ^{n}$ 에서 스칼라장은 
+  - 유클리드 공간 $\R ^{n}$ 에서 스칼라장은 
 
-    $$ F: A \in \Re ^{n} \to \Re, (a_1, a_2, \dots, a_n) \mapsto a $$
+    $$ F: A \in \R ^{n} \to \R, (a_1, a_2, \dots, a_n) \mapsto a $$
 
     으로 정의되는 사상(함수) 로써 정의역 $A$ 의 모든 원소 $x \in A$ 에 스칼라(실수), 즉 $F(x)$ 를 대응시킨다. 
 

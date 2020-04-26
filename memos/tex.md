@@ -80,9 +80,9 @@ https://katex.org/docs/support_table.html
 
 ### Misc
 
-| $\aleph$ |$\mathbb{Z}$|$\mathbb{Q}$|$\mathbb{I}$|$\Re$|
+| $\N$ |$\mathbb{Z}$|$\mathbb{Q}$|$\mathbb{I}$|$\R$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| \aleph  |\mathbb{Z}|\mathbb{Q}|\mathbb{I}|\Re  |
+| \N  |\mathbb{Z}|\mathbb{Q}|\mathbb{I}|\R  |
 |$\infty$|$\nabla$| $\because$| $\therefore$ |$\sim$|
 |\infty|\nabla  | \because  | \therefore  |\sim|
 |$\infty$|   $\forall$ |$\exists$|$\overline{AB}$|$\overrightarrow{AB}$|

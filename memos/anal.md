@@ -60,7 +60,7 @@
 
 - 구간(interval) : 두 실수 $a, b(a<b)$ 에 대하여 실수의 집합 
 
-  $$\{x \in \Re |a \leq x \leq b\}, \{x \in \Re |a < x < b\}, \{x \in \Re  | a \leq x < b\}, \{x \in \Re |a<x \leq b\}$$
+  $$\{x \in \R |a \leq x \leq b\}, \{x \in \R |a < x < b\}, \{x \in \R  | a \leq x < b\}, \{x \in \R |a<x \leq b\}$$
 
   를 구간이라 한다. 
 
@@ -76,7 +76,7 @@
 
   </blockquote>
 
-  - $[a,b] = \{x \in \Re | a \leq x \leq b\}$ 이다. 
+  - $[a,b] = \{x \in \R | a \leq x \leq b\}$ 이다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -84,7 +84,7 @@
 
   </blockquote>
 
-  - $(a,b) = \{x \in \Re | a < x < b\}$ 이다. 
+  - $(a,b) = \{x \in \R | a < x < b\}$ 이다. 
 
   - 특히 실수 전체의 집합도 하나의 구간으로 보고 개구간 $(-\infty, \infty)$ 로 나타낸다. 
 
@@ -96,13 +96,13 @@
 
   </blockquote>
 
-  - $(a,b] = \{x \in \Re | a < x \leq b\}$ 이다. 
+  - $(a,b] = \{x \in \R | a < x \leq b\}$ 이다. 
 
-  - $[a,b) = \{x \in \Re | a \leq x < b\}$ 이다. 
+  - $[a,b) = \{x \in \R | a \leq x < b\}$ 이다. 
 
-  - $(-\infty,b] = \{x \in \Re | x \leq b\}$ 이다. 
+  - $(-\infty,b] = \{x \in \R | x \leq b\}$ 이다. 
 
-  - $[a,+\infty) = \{x \in \Re | a \leq x\}$ 이다. 
+  - $[a,+\infty) = \{x \in \R | a \leq x\}$ 이다. 
 
 ## 1차원 좌표계
 
@@ -362,7 +362,7 @@
 
   - 예시
 
-    실수를 그 제곱에 대응시키는 대응 관계 $f: \Re \to \Re, x \mapsto x^2$ 는 함수이다. 
+    실수를 그 제곱에 대응시키는 대응 관계 $f: \R \to \R, x \mapsto x^2$ 는 함수이다. 
 
   - 함수는 자연대상의 인과관계를 수학 대상물로 추상화 시킨 것이다.
 
@@ -470,13 +470,13 @@
 
   - 예시 
 
-    $g: \Re \to \Re, x \to x ^{2}$ 로 정의된 함수 $f(x) = x ^{2}$ 는 단사함수가 아니다.
+    $g: \R \to \R, x \to x ^{2}$ 로 정의된 함수 $f(x) = x ^{2}$ 는 단사함수가 아니다.
 
     왜냐하면 $f(1)=1=f(-1)$ 이기 때문이다. 
 
   - 예시 
 
-    무리수 $e$ 를 밑으로 하는 지수함수 $exp: \Re \to \Re, x \mapsto e ^{x}$ 는 단사함수이다.
+    무리수 $e$ 를 밑으로 하는 지수함수 $exp: \R \to \R, x \mapsto e ^{x}$ 는 단사함수이다.
 
     한편 음수에서는 상이 존재하지 않으므로 전사함수는 아니다. 
 
@@ -498,25 +498,25 @@
 
   - 예시 
 
-    실수 집합 $\Re$ 에서 실수 집합 $\Re$ 로 가는 함수 $f$ 가 
+    실수 집합 $\R$ 에서 실수 집합 $\R$ 로 가는 함수 $f$ 가 
 
-    $$ f: \Re \to \Re $$
+    $$ f: \R \to \R $$
 
     $$ f:x \mapsto x ^{2} $$
 
-    로 정의되었다고 하자. 이때 $f$ 의 공역은 $\Re$, $f$ 의 치역은 반개구간 $[0, \infty)$ 이다.
+    로 정의되었다고 하자. 이때 $f$ 의 공역은 $\R$, $f$ 의 치역은 반개구간 $[0, \infty)$ 이다.
 
     따라서 $f$ 는 전사함수가 아니다. 
 
   - 예시 
 
-    실수 집합 $\Re$ 에서 실수 집합 $\Re$ 로 가는 함수 $f$ 가 
+    실수 집합 $\R$ 에서 실수 집합 $\R$ 로 가는 함수 $f$ 가 
 
-    $$ f: \Re \to \Re $$
+    $$ f: \R \to \R $$
 
     $$ f:x \mapsto 2x $$
 
-    로 정의되었다고 하자. 이때 $f$ 의 공역과 치역이 둘 다 $\Re$ 이다.
+    로 정의되었다고 하자. 이때 $f$ 의 공역과 치역이 둘 다 $\R$ 이다.
 
     따라서 $f$ 는 전사함수이다. 
 
@@ -542,7 +542,7 @@
 
   - 예시 
 
-    $f: \Re \to \Re, x \mapsto 2x+1$ 로 정의된 함수 $f(x) = 2x+1$ 는 전단사함수이다. 
+    $f: \R \to \R, x \mapsto 2x+1$ 로 정의된 함수 $f(x) = 2x+1$ 는 전단사함수이다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -560,9 +560,9 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 실변수 함수(function of a real variable) : 정의역이 실수 집합 $\Re$ 인 함수 
+- 실변수 함수(function of a real variable) : 정의역이 실수 집합 $\R$ 인 함수 
 
-  $$ f: \Re \to X $$
+  $$ f: \R \to X $$
 
   를 실변수 함수라 한다.
 
@@ -570,9 +570,9 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 실숫값 함수(real-valued function) 또는 실함수(real function) : 공역이 실수 집합 $\Re$ 인 함수 
+- 실숫값 함수(real-valued function) 또는 실함수(real function) : 공역이 실수 집합 $\R$ 인 함수 
 
-  $$ f: X \to \Re  $$
+  $$ f: X \to \R  $$
 
   를 실숫값 함수라 한다.
 
@@ -614,15 +614,15 @@
 
   </blockquote>
 
-  - 즉, 다변수 실함수 $f$ 는 $y,x_1, x_2, \dots, x_n \in \Re$ 에 대하여 $n-$튜플 $(x_1, x_2, \dots, x_n)$ 을 오직 하나의 함수값
+  - 즉, 다변수 실함수 $f$ 는 $y,x_1, x_2, \dots, x_n \in \R$ 에 대하여 $n-$튜플 $(x_1, x_2, \dots, x_n)$ 을 오직 하나의 함수값
 
     $$ y = f(x_1, x_2, \dots, x_n) $$
 
     로 대응시키는 규칙이다.
 
-  - 유클리드 공간 $\Re ^{n}$(또는 그 부분집합) 을 정의역으로 갖는 실수값 함수
+  - 유클리드 공간 $\R ^{n}$(또는 그 부분집합) 을 정의역으로 갖는 실수값 함수
 
-    $$ f: \Re ^{n} \to \Re $$
+    $$ f: \R ^{n} \to \R $$
 
     로 정의할 수도 있다. 
 

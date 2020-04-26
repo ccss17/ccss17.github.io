@@ -366,7 +366,7 @@ a_1&\dots&a_{j-1}&x&a_{j+1}&\dots&a_n
 
 $$
 
-그리고 $\Re ^n$ 에서 $\Re$ 로 보내는 변환 $T$ 를 다음과 같이 행렬식 함수로 정의하자.
+그리고 $\R ^n$ 에서 $\R$ 로 보내는 변환 $T$ 를 다음과 같이 행렬식 함수로 정의하자.
 
 $$
 
@@ -392,7 +392,7 @@ $$
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- $A_i(b)$ : 임의의 $n \times n$ 행렬 $A$ 와 $\Re ^n$ 에 속한 임의의 $b$ 에 대해서 $A$ 의 $i$ 번째 열을 벡터 $b$ 로 바꾼 행렬이다.
+- $A_i(b)$ : 임의의 $n \times n$ 행렬 $A$ 와 $\R ^n$ 에 속한 임의의 $b$ 에 대해서 $A$ 의 $i$ 번째 열을 벡터 $b$ 로 바꾼 행렬이다.
 
   </blockquote>
 
@@ -402,7 +402,7 @@ $$
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 크래머의 공식(Cramer's rule) : 역행렬을 가지는 $n \times n$ 행렬 $A$ 와 $\Re ^n$ 에 속한 임의의 $b$ 에 대하여 $Ax = b$ 의 유일한 해 $x$ 는 다음과 같다.
+- 크래머의 공식(Cramer's rule) : 역행렬을 가지는 $n \times n$ 행렬 $A$ 와 $\R ^n$ 에 속한 임의의 $b$ 에 대하여 $Ax = b$ 의 유일한 해 $x$ 는 다음과 같다.
 
   </blockquote>
 

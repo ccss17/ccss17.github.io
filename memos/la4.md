@@ -40,9 +40,9 @@
 
   - 예시
 
-    $n \geq 1$ 에서의 $\Re ^n$ 이 주요한 벡터 공간의 예시이다.
+    $n \geq 1$ 에서의 $\R ^n$ 이 주요한 벡터 공간의 예시이다.
 
-    그래서 우리가 자주 다뤘던 $\Re ^2, \Re ^3$ 가 벡터 공간이었던 것이다. 
+    그래서 우리가 자주 다뤘던 $\R ^2, \R ^3$ 가 벡터 공간이었던 것이다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -96,13 +96,13 @@
 
   </blockquote>
 
-  - $Nul A = \{x: \forall x \in \Re ^n, Ax = 0\}$
+  - $Nul A = \{x: \forall x \in \R ^n, Ax = 0\}$
 
-  - $Nul A$ 는 선형 변환 $x \mapsto Ax$ 를 통해서 $0$ 으로 보내지는 $\Re ^n$ 에 속한 $x$ 들의 집합니다.
+  - $Nul A$ 는 선형 변환 $x \mapsto Ax$ 를 통해서 $0$ 으로 보내지는 $\R ^n$ 에 속한 $x$ 들의 집합니다.
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 2** $m \times n$ 행렬 $A$ 의 영 공간은 $\Re ^n$ 의 부분공간이다. $n$ 개의 미지수를 가지는 $m$ 개의 방정식인 $Ax = 0$ 의 모든 해의 집합은 $\Re ^n$ 의 부분집합이다. 
+- **Theorem 2** $m \times n$ 행렬 $A$ 의 영 공간은 $\R ^n$ 의 부분공간이다. $n$ 개의 미지수를 가지는 $m$ 개의 방정식인 $Ax = 0$ 의 모든 해의 집합은 $\R ^n$ 의 부분집합이다. 
 
   </blockquote>
 
@@ -122,11 +122,11 @@
 
   - $Ax$ 가 행렬 $A$ 의 열들의 선형결합이기 때문에 $Col A$ 에 속하는 벡터를 $Ax$ 로 표현할 수 있고, 이 관점에서 열 공간을 다음과 같이 정의할 수 있다.
 
-    - $Col A = \{ b : 어떤 x \in \Re ^n, b = Ax\}$ (단, $x$ 는 $\Re ^n$ 에 속한 임의의 벡터이다)
+    - $Col A = \{ b : 어떤 x \in \R ^n, b = Ax\}$ (단, $x$ 는 $\R ^n$ 에 속한 임의의 벡터이다)
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 3** $m \times n$ 행렬 $A$ 의 열공간은 $\Re ^m$ 의 부분공간이다.
+- **Theorem 3** $m \times n$ 행렬 $A$ 의 열공간은 $\R ^m$ 의 부분공간이다.
 
   </blockquote>
 
@@ -238,11 +238,11 @@
 
   - 예시
 
-    $\Re ^n$ 에서 벡터 $v$ 하나만 가진 집합은 $v \neq 0$ 일 때 선형 독립이다.
+    $\R ^n$ 에서 벡터 $v$ 하나만 가진 집합은 $v \neq 0$ 일 때 선형 독립이다.
 
   - 예시 
 
-    $\Re ^{2}$ 의 두 벡터 
+    $\R ^{2}$ 의 두 벡터 
 
     $$ u = \begin{bmatrix} 1\\0 \end{bmatrix}, v = \begin{bmatrix} 0\\1 \end{bmatrix} $$
 
@@ -272,7 +272,7 @@
 
   - 예시 
 
-    $\Re ^{3}$ 의 벡터 
+    $\R ^{3}$ 의 벡터 
 
     $$ u = \begin{bmatrix} 1\\0\\0 \end{bmatrix}, v = \begin{bmatrix} 0\\1\\0 \end{bmatrix}, w = \begin{bmatrix} 2\\1\\0 \end{bmatrix} $$
 
@@ -324,7 +324,7 @@
 
   - 예시
 
-    - $e_1, \dots, e_n$ 을 $n \times n$ 단위 행렬 $I_n$ 의 열이라 하자. 집합 $\{e_1, \dots, e_n\}$ 은 $\Re ^n$ 의 표준 기저(standard basis) 라 한다.
+    - $e_1, \dots, e_n$ 을 $n \times n$ 단위 행렬 $I_n$ 의 열이라 하자. 집합 $\{e_1, \dots, e_n\}$ 은 $\R ^n$ 의 표준 기저(standard basis) 라 한다.
 
 ### 형성집합정리
 
@@ -382,7 +382,7 @@
 
   </blockquote>
 
-  - 즉, $c_1, \dots, c_n$ 이 $x$ 의 $B$ 좌표이면 $\Re ^{n}$ 에 속한 벡터 
+  - 즉, $c_1, \dots, c_n$ 이 $x$ 의 $B$ 좌표이면 $\R ^{n}$ 에 속한 벡터 
 
     $$ \big [  x \big ] _{B} = \begin{bmatrix} c_1\\\vdots \\c_n \end{bmatrix} $$
 
@@ -390,11 +390,11 @@
 
   - 예시 
 
-    $\Re ^{2}$ 에 대한 기저 $B = \{b_1, b_2\}$ 에서
+    $\R ^{2}$ 에 대한 기저 $B = \{b_1, b_2\}$ 에서
 
     $$ b_1 = \begin{bmatrix} 1\\0 \end{bmatrix}, b_2 = \begin{bmatrix} 1\\2 \end{bmatrix} $$
 
-    일 때, $\Re ^{2}$ 에 속한 벡터 $x$ 가 $B$ 에 대한 좌표 벡터 
+    일 때, $\R ^{2}$ 에 속한 벡터 $x$ 가 $B$ 에 대한 좌표 벡터 
 
     $$ [x] _{B} = \begin{bmatrix} -2\\3 \end{bmatrix} $$ 
 
@@ -434,13 +434,13 @@
 
   - 기저 $B$ 에 대한 $x$ 의 좌표의 예시에서 벡터 $x$ 를 $B$ 에 대한 좌표로 변환하는 좌표 사상을 구체적으로 볼 수 있다. 
 
-  - 좌표사상 $x \mapsto [x] _{B}$ 은 $V$ 로부터 $\Re ^{n}$ 으로의 일대일 선형 변환이다. 
+  - 좌표사상 $x \mapsto [x] _{B}$ 은 $V$ 로부터 $\R ^{n}$ 으로의 일대일 선형 변환이다. 
 
-    - 익숙하지 않은 벡터 공간 $V$ 를 익숙한 $\Re ^{n}$ 의 좌표로 연결시키기 때문이다. 
+    - 익숙하지 않은 벡터 공간 $V$ 를 익숙한 $\R ^{n}$ 의 좌표로 연결시키기 때문이다. 
 
-  - 좌표사상은 $V$ 에서 $\Re ^{n}$ 로의 동형 사상의 중요한 예시이다.
+  - 좌표사상은 $V$ 에서 $\R ^{n}$ 로의 동형 사상의 중요한 예시이다.
 
-    - 이로써 $n$ 개의 벡터로 이루어진 기저 $B$ 로 생성된 벡터 공간 $V$ 는 $\Re ^{n}$ 과 동형임을 알 수 있다. 
+    - 이로써 $n$ 개의 벡터로 이루어진 기저 $B$ 로 생성된 벡터 공간 $V$ 는 $\R ^{n}$ 과 동형임을 알 수 있다. 
 
   - 증명 
 
@@ -486,7 +486,7 @@
 
   - 예시 
 
-    $\Re ^{n}$ 의 표준 기저는 $n$ 개의 벡터를 지니므로 
+    $\R ^{n}$ 의 표준 기저는 $n$ 개의 벡터를 지니므로 
 
     $$ \dim R ^{n} = n $$
 
@@ -592,7 +592,7 @@
 
     를 생각하자. 
 
-    이때 $A$ 의 행공간은 $\{r_1, r_2, r_3\}$ 에 의하여 형성되는 $\Re ^{3}$ 의 부분 공간
+    이때 $A$ 의 행공간은 $\{r_1, r_2, r_3\}$ 에 의하여 형성되는 $\R ^{3}$ 의 부분 공간
 
     $$ Row A = Span \{r_1, r_2, r_3\} $$
 

@@ -8,7 +8,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 내적(inner product) 또는 스칼라곱(dot product) : $\Re ^{n}$ 공간 상의 두 $n \times 1$ 행렬, 즉 두 벡터 $u, v$ 의 내적은 행렬곱
+- 내적(inner product) 또는 스칼라곱(dot product) : $\R ^{n}$ 공간 상의 두 $n \times 1$ 행렬, 즉 두 벡터 $u, v$ 의 내적은 행렬곱
 
   $$ u ^{T}v $$
 
@@ -38,7 +38,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 내적의 성질 : $\Re ^{n}$ 공간 상의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다.
+- 내적의 성질 : $\R ^{n}$ 공간 상의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다.
 
   1. (교환법칙) $u \cdot v = v \cdot u$
 
@@ -58,7 +58,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 벡터의 크기(length) 또는 노름(norm) : $\Re ^{n}$ 공간 상의 벡터 $v$ 가 성분 $v_1, \dots, v_n$ 을 가질 때 양수 스칼라
+- 벡터의 크기(length) 또는 노름(norm) : $\R ^{n}$ 공간 상의 벡터 $v$ 가 성분 $v_1, \dots, v_n$ 을 가질 때 양수 스칼라
 
   $$ ||v|| = \sqrt[]{v \cdot v} = \sqrt[]{v_1^{2} + v_2 ^{2} + \dots + v_n ^{2}} $$
 
@@ -72,11 +72,11 @@
 
   - 예시 
 
-    $\Re ^{2}$ 공간 상의 벡터 $v = \begin{bmatrix} a\\b \end{bmatrix}$ 를 좌표평면 상의 벡터 $\big < a, b \big >$ 로 생각할 수 있다. 
+    $\R ^{2}$ 공간 상의 벡터 $v = \begin{bmatrix} a\\b \end{bmatrix}$ 를 좌표평면 상의 벡터 $\big < a, b \big >$ 로 생각할 수 있다. 
 
     이때 $||v||$ 는 원점에서 $v$ 까지의 선분의 길이이다.
 
-    $\Re ^{3}$ 공간 상의 벡터, 즉 $3$ 차원 공간좌표에서도 마찬가지로 원점에서 $v$ 까지의 길이로 생각할 수 있다. 
+    $\R ^{3}$ 공간 상의 벡터, 즉 $3$ 차원 공간좌표에서도 마찬가지로 원점에서 $v$ 까지의 길이로 생각할 수 있다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -102,9 +102,9 @@
 
   - 예시 
 
-    $\Re ^{2}$ 공간 상의 벡터 $u = \begin{bmatrix} 1\\0 \end{bmatrix}$ 는 단위벡터이다. 
+    $\R ^{2}$ 공간 상의 벡터 $u = \begin{bmatrix} 1\\0 \end{bmatrix}$ 는 단위벡터이다. 
 
-    $\Re ^{3}$ 공간 상의 벡터 $u = \begin{bmatrix} 0\\1\\0 \end{bmatrix}$ 는 단위벡터이다. 
+    $\R ^{3}$ 공간 상의 벡터 $u = \begin{bmatrix} 0\\1\\0 \end{bmatrix}$ 는 단위벡터이다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
@@ -126,7 +126,7 @@
 
   - 예시 
 
-    $\Re ^{4}$ 공간 상의 벡터 $v = \begin{bmatrix} 1\\-2\\2\\0 \end{bmatrix}$ 에 대하여 $v$ 의 방향을 방하는 단위벡터 $u$ 를 구해보자.
+    $\R ^{4}$ 공간 상의 벡터 $v = \begin{bmatrix} 1\\-2\\2\\0 \end{bmatrix}$ 에 대하여 $v$ 의 방향을 방하는 단위벡터 $u$ 를 구해보자.
 
     벡터 $v$ 의 크기는 
 
@@ -144,7 +144,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 두 벡터 $u, v$ 사이의 거리(distance) : $\Re ^{n}$ 상의 두 벡터 $u, v$ 의 거리는 벡터 $u - v$ 의 크기
+- 두 벡터 $u, v$ 사이의 거리(distance) : $\R ^{n}$ 상의 두 벡터 $u, v$ 의 거리는 벡터 $u - v$ 의 크기
 
   $$ \text{dist}(u, v) = ||u - v|| $$
 
@@ -152,7 +152,7 @@
 
   </blockquote>
 
-  - $\Re ^{3}$ 공간 상의 두 벡터 $u = \begin{bmatrix} u_1\\u_2\\u_3 \end{bmatrix}, v = \begin{bmatrix} v_1\\v_2\\v_3 \end{bmatrix}$ 의 거리는 
+  - $\R ^{3}$ 공간 상의 두 벡터 $u = \begin{bmatrix} u_1\\u_2\\u_3 \end{bmatrix}, v = \begin{bmatrix} v_1\\v_2\\v_3 \end{bmatrix}$ 의 거리는 
 
     $$ \text{dist}(u, v) = ||u - v|| = \sqrt[]{(u - v) \cdot (u - v)} = \sqrt[]{(u_1 - v_1) ^{2} + (u_2 - v_2) ^{2} + (u_3 - v_3) ^{2}} $$
 
@@ -178,7 +178,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 벡터 $u, v$ 의 직교(orthogonal) : $\Re ^{n}$ 상의 두 벡터 $u ,v$ 가
+- 벡터 $u, v$ 의 직교(orthogonal) : $\R ^{n}$ 상의 두 벡터 $u ,v$ 가
 
   $$ u \cdot v = 0 $$
 
@@ -192,7 +192,7 @@
 
   - 증명 
 
-    $\Re ^{n}$ 상에서 원점을 지나고 벡터 $u, v$ 에 결정되는 두 직선을 생각하자.
+    $\R ^{n}$ 상에서 원점을 지나고 벡터 $u, v$ 에 결정되는 두 직선을 생각하자.
 
     두 직선이 수직일 필요충분조건은 $u$ 에서 $v$ 까지의 거리가 $u$ 에서 $-v$ 까지의 거리와 같다는 것이다. 이것은 거리의 제곱들이 서로 같음을 의미한다.
 
@@ -222,13 +222,13 @@
 
     이다. 
 
-  - 유클리드 기하학의 수직 개념을 $\Re ^{n}$, 즉 $n$ 차원에서 적용할 수 있도록 일반화한 것이다. 
+  - 유클리드 기하학의 수직 개념을 $\R ^{n}$, 즉 $n$ 차원에서 적용할 수 있도록 일반화한 것이다. 
 
-  - 모든 벡터 $v$ 은 $0 ^{T}v = 0$ 이므로 $\Re ^{n}$ 에서 영벡터는 모든 벡터와 직교한다. 
+  - 모든 벡터 $v$ 은 $0 ^{T}v = 0$ 이므로 $\R ^{n}$ 에서 영벡터는 모든 벡터와 직교한다. 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 직교집합(orthogonal set) : $\Re ^{n}$ 공간의 벡터 집합 $S = \{u_1, \dots, u_p\}$ 에서 $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교집합이다. 
+- 직교집합(orthogonal set) : $\R ^{n}$ 공간의 벡터 집합 $S = \{u_1, \dots, u_p\}$ 에서 $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교집합이다. 
 
   </blockquote>
 

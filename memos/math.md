@@ -366,7 +366,7 @@
 
   - 예시 
 
-    $$ \Re ^{2} = \Re \times \Re = \{(x, y) | x,y \in \Re \} $$
+    $$ \R ^{2} = \R \times \R = \{(x, y) | x,y \in \R \} $$
 
-    $$ \Re ^{3} = \Re \times \Re = \{(x, y, z) | x,y,z \in \Re \} $$
+    $$ \R ^{3} = \R \times \R = \{(x, y, z) | x,y,z \in \R \} $$
 

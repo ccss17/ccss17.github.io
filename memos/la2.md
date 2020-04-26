@@ -238,7 +238,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 5** $A$ 가 $n \times n$ 가역행렬이면 $\Re^n$ 에 속하는 임의의 $b$ 에 대하여 방정식 $Ax=b$ 는 유일한 해 $x=A^{-1}b$ 를 갖는다. 
+- **Theorem 5** $A$ 가 $n \times n$ 가역행렬이면 $\R^n$ 에 속하는 임의의 $b$ 에 대하여 방정식 $Ax=b$ 는 유일한 해 $x=A^{-1}b$ 를 갖는다. 
 
   </blockquote>
 
@@ -384,11 +384,11 @@
 
   6. 선형변환 $x \mapsto Ax$ 는 일대일이다.
 
-  7. $\Re ^n$ 에 속하는 각 $b$ 에 대하여 방정식 $Ax = b$ 는 적어도 하나의 해를 갖는다. 
+  7. $\R ^n$ 에 속하는 각 $b$ 에 대하여 방정식 $Ax = b$ 는 적어도 하나의 해를 갖는다. 
 
-  8. $A$ 의 열들은 $\Re ^n$ 을 생성한다.
+  8. $A$ 의 열들은 $\R ^n$ 을 생성한다.
 
-  9. 선형변환 $x \mapsto Ax$ 는 $\Re ^n$ 에서 $\Re ^n$ 로의 전사변환이다. 
+  9. 선형변환 $x \mapsto Ax$ 는 $\R ^n$ 에서 $\R ^n$ 로의 전사변환이다. 
 
   10. $CA=I$ 를 만족하는 $n \times n$ 행렬 $C$ 가 존재한다. 
 
@@ -430,17 +430,17 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 가역 선형변환의 정의 : 선형변환 $T:\Re ^n \to \Re ^n$ 에 대해 다음 두 조건을 만족하는 함수 $S:\Re ^n \to \Re ^n$ 가 존재하면 $T$ 를 가역적(invertible) 이라 한다. 
+- 가역 선형변환의 정의 : 선형변환 $T:\R ^n \to \R ^n$ 에 대해 다음 두 조건을 만족하는 함수 $S:\R ^n \to \R ^n$ 가 존재하면 $T$ 를 가역적(invertible) 이라 한다. 
 
-  $$ S(T(x)) = x, 모든 x \in \Re ^n $$ (1)
+  $$ S(T(x)) = x, 모든 x \in \R ^n $$ (1)
 
-  $$ T(S(x)) = x, 모든 x \in \Re ^n $$ (2)
+  $$ T(S(x)) = x, 모든 x \in \R ^n $$ (2)
 
   </blockquote>
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 9** $T: \Re ^n \to  \Re ^n$ 이 선형변환이고 $A$ 가 $T$ 에 대한 표준행렬일 때, $T$가 가역적이기 위한 필요충분조건은 $A$ 가 가역행렬이라는 것이다. 이 경우 $S(x) = A^{-1}x$ 로 주어지는 선형변환 $S$ 은 식 (1), (2) 를 만족하는 유일한 함수이다. 
+- **Theorem 9** $T: \R ^n \to  \R ^n$ 이 선형변환이고 $A$ 가 $T$ 에 대한 표준행렬일 때, $T$가 가역적이기 위한 필요충분조건은 $A$ 가 가역행렬이라는 것이다. 이 경우 $S(x) = A^{-1}x$ 로 주어지는 선형변환 $S$ 은 식 (1), (2) 를 만족하는 유일한 함수이다. 
 
   </blockquote>
 
@@ -612,11 +612,11 @@
 
     그런데 $L$ 은 단지 $A$ 를 $U$ 로 행 축약하는 과정에서 추축열을 만드는 연산을 하기 전 상태의 열을 가져온 후 대각성분을 $1$ 로 만드는 나눗셈을 한 결과와도 같다는 것을 알 수 있다. 
 
-## $\Re ^n$ 의 부분공간
+## $\R ^n$ 의 부분공간
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- $\Re ^n$ 의 부분공간 : $\Re ^n$ 의 부분공간이란 다음 세 성질을 만족하는 $\Re ^n$ 의 집합 $H$ 이다.
+- $\R ^n$ 의 부분공간 : $\R ^n$ 의 부분공간이란 다음 세 성질을 만족하는 $\R ^n$ 의 집합 $H$ 이다.
 
   1. 영벡터가 $H$ 에 속한다. 
 
@@ -632,7 +632,7 @@
 
   - 예시
 
-    $v_1, v_2$ 가 $\Re ^n$ 에 속하고 $H = Span\{v_1, v_2\}$ 이면, $H$ 는 $\Re ^n$ 의 부분공간임을 보여라. 
+    $v_1, v_2$ 가 $\R ^n$ 에 속하고 $H = Span\{v_1, v_2\}$ 이면, $H$ 는 $\R ^n$ 의 부분공간임을 보여라. 
 
     부분공간이 정의된 세 가지 조건을 각각 검증하면 된다.
 
@@ -652,7 +652,7 @@
 
   - 예시
 
-    $\Re ^n$ 에 속하는 $v_1, \dots, v_p$ 의 모든 일차결합의 집합 $Span\{v_1, \dots, v_p\}$ 은 $\Re ^n$ 의 부분공간이다. 증명은 위의 예시와 유사하다. 그러므로 $Span\{v_1, \dots, v_p\}$ 을 $v_1, \dots, v_p$ 에 의해 생성된 부분공간이라 할 수 있다. 
+    $\R ^n$ 에 속하는 $v_1, \dots, v_p$ 의 모든 일차결합의 집합 $Span\{v_1, \dots, v_p\}$ 은 $\R ^n$ 의 부분공간이다. 증명은 위의 예시와 유사하다. 그러므로 $Span\{v_1, \dots, v_p\}$ 을 $v_1, \dots, v_p$ 에 의해 생성된 부분공간이라 할 수 있다. 
 
 ### 행렬의 열공간과 영공간
 
@@ -662,7 +662,7 @@
 
   </blockquote>
 
-  - 그러므로 모든 열벡터가 $\Re ^m$ 에 속하는 행렬 $A = \begin{bmatrix}a_1&\dots&a_n\end{bmatrix}$ 의 $Col A$ 는 $Span\{a_1, \dots, a_n\}$ 이다.
+  - 그러므로 모든 열벡터가 $\R ^m$ 에 속하는 행렬 $A = \begin{bmatrix}a_1&\dots&a_n\end{bmatrix}$ 의 $Col A$ 는 $Span\{a_1, \dots, a_n\}$ 이다.
 
   - 예시 
 
@@ -688,13 +688,13 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 12** $m \times n$ 행렬 $A$ 의 영공간 $Nul A$ 는 $\Re ^n$ 의 부분공간이다. 이와 동등하게 $n$ 개의 미지수를 갖는 $m$ 개의 동차선형방정식으로 구성된 방정식계 $Ax=0$ 의 모든 해의 집합은 $\Re ^n$ 의 부분공간이다. 
+- **Theorem 12** $m \times n$ 행렬 $A$ 의 영공간 $Nul A$ 는 $\R ^n$ 의 부분공간이다. 이와 동등하게 $n$ 개의 미지수를 갖는 $m$ 개의 동차선형방정식으로 구성된 방정식계 $Ax=0$ 의 모든 해의 집합은 $\R ^n$ 의 부분공간이다. 
 
   </blockquote>
 
-  - $\because$ $A$ 가 $n$ 개의 열을 가질 때, $Ax = 0$ 의 해는 $\Re ^n$ 에 속하고 $A$ 의 영공간은 $\Re ^n$ 의 부분집합이다.
+  - $\because$ $A$ 가 $n$ 개의 열을 가질 때, $Ax = 0$ 의 해는 $\R ^n$ 에 속하고 $A$ 의 영공간은 $\R ^n$ 의 부분집합이다.
 
-  - $Ax=0$ 의 모든 해집합 $Nul A$ 가 $\Re ^n$ 의 부분공간이라는 것에 대한 증명
+  - $Ax=0$ 의 모든 해집합 $Nul A$ 가 $\R ^n$ 의 부분공간이라는 것에 대한 증명
 
     - $A0=0$ 이므로 영벡터는 $Nul A$ 에 속한다. $Nul A$ 에 속하는 임의의 두 벡터 $u, v$ 를 취하자. 즉, $Au = 0, Av = 0$ 라고 가정한다. 그러면 행렬곱의 성질에 의해 다음이 성립한다.
 
@@ -718,7 +718,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 부분공간 $H$ 의 기저(basis) $\Beta$ : $\Re ^n$ 의 부분공간 $H$ 의 기저 $\Beta$ 는 $H$ 를 생성하는 $H$ 내의 일차 독립인 집합이다.
+- 부분공간 $H$ 의 기저(basis) $\Beta$ : $\R ^n$ 의 부분공간 $H$ 의 기저 $\Beta$ 는 $H$ 를 생성하는 $H$ 내의 일차 독립인 집합이다.
 
   </blockquote>
 
@@ -726,11 +726,11 @@
 
   - 예시 
 
-    $n \times n$ 가역행렬의 열들은 $\Re ^n$ 전체에 대한 기저가 된다. 왜냐하면 가역행렬 정리에 의해 이 열들이 일차 독립이며 $\Re ^n$ 을 생성하기 때문이다. 이와 같은 행렬의 한 예로 $n \times n$ 항등행렬을 들 수 있다. 그 열들을 다음과 같이 $e_1, \dots, e_n$ 라 하자. 
+    $n \times n$ 가역행렬의 열들은 $\R ^n$ 전체에 대한 기저가 된다. 왜냐하면 가역행렬 정리에 의해 이 열들이 일차 독립이며 $\R ^n$ 을 생성하기 때문이다. 이와 같은 행렬의 한 예로 $n \times n$ 항등행렬을 들 수 있다. 그 열들을 다음과 같이 $e_1, \dots, e_n$ 라 하자. 
 
     $$ e_1=\begin{bmatrix} 1\\0\\\vdots \\0 \end{bmatrix}, e_2=\begin{bmatrix} 0\\1\\\vdots \\0 \end{bmatrix}, \dots, e_n=\begin{bmatrix} 0\\\vdots \\0\\1 \end{bmatrix} $$
 
-    집합 $\{e_1, \dots, e_n\}$ 을 $\Re ^n$ 의 표준기저(standard basis) 라 한다. 
+    집합 $\{e_1, \dots, e_n\}$ 을 $\R ^n$ 의 표준기저(standard basis) 라 한다. 
 
   - 예시 
 
@@ -790,7 +790,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 좌표벡터(coordinates vector of x relative to $\Beta$) : 그리고 $\Re ^p$ 에 속하는 다음 벡터를 
+- 좌표벡터(coordinates vector of x relative to $\Beta$) : 그리고 $\R ^p$ 에 속하는 다음 벡터를 
 
   $$ \begin{bmatrix} x\\ \end{bmatrix}_\Beta = \begin{bmatrix} c_1\\ \vdots  \\c_p \end{bmatrix} $$
 
@@ -856,7 +856,7 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- **Theorem 15** 기저정리(Basis Theorem) : $H$ 가 $\Re ^n$ 의 $p$차원 부분공간이라 하자. $H$ 에 속하는 정확하게 $p$ 개의 요소를 갖는 임의의 일차독립인 집합도 자동적으로 $H$ 에 대한 기저가 된다. 또한 $H$ 에 속하는 $p$ 개로 이루어진 임의의 집합이 $H$ 를 생성하면 이는 자동적으로 $H$ 의 기저가 된다. 
+- **Theorem 15** 기저정리(Basis Theorem) : $H$ 가 $\R ^n$ 의 $p$차원 부분공간이라 하자. $H$ 에 속하는 정확하게 $p$ 개의 요소를 갖는 임의의 일차독립인 집합도 자동적으로 $H$ 에 대한 기저가 된다. 또한 $H$ 에 속하는 $p$ 개로 이루어진 임의의 집합이 $H$ 를 생성하면 이는 자동적으로 $H$ 의 기저가 된다. 
 
   </blockquote>
 
@@ -866,9 +866,9 @@
 
 - **Theorem** 가역행렬 정리 : $A$ 가 $n \times n$ 행렬이라 하자. 그러면 다음 명제들 각각은 $A$ 가 역행렬을 갖는다는 명제와 동치이다. 
 
-  13. $A$ 의 열벡터들은 $\Re ^n$ 의 기저이다. 
+  13. $A$ 의 열벡터들은 $\R ^n$ 의 기저이다. 
 
-  14. $Col A = \Re ^n$
+  14. $Col A = \R ^n$
 
   15. $dim Col A = n$
 
