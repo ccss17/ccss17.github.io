@@ -117,7 +117,7 @@
 
 - 연속확률변수의 평균,분산,표준편차와 정규분포
     
-  ###### [ 연속확률변수(continuous random variable),  확률밀도함수(probability density function),  연속확률분포(continuous probability distribution),  확률밀도함수의 성질,  연속확률변수의 평균,  연속확률변수의 분산,  연속확률변수의 표준편차,  연속확률변수의 평균, 분산, 표준편차의 성질,  정규분포(normal distribution),  정규분포곡선,  정규분포의 성질,  표준정규분포(standard normal distribution),  표준정규분포표,  정규분포의 표준화(standardization),  이항분포와 정규분포의 관계](https://ccss17.github.io/stat4.html)
+  ###### [ 연속확률변수(continuous random variable),  확률밀도함수(probability density function),  연속확률분포(continuous probability distribution),  확률밀도함수의 성질,  연속확률변수의 평균,  연속확률변수의 분산,  연속확률변수의 표준편차,  연속확률변수의 평균, 분산, 표준편차의 성질,  정규분포(normal distribution),  정규분포곡선,  정규분포의 성질,  표준정규분포(standard normal distribution),  표준점수(standard score),  편차치,  표준정규분포표,  정규분포의 표준화(standardization),  이항분포와 정규분포의 관계](https://ccss17.github.io/stat4.html)
 
 - 통계적 추정
     
@@ -125,7 +125,7 @@
 
 - 상관관계 분석
     
-  ###### [ 공분산(covariance)](https://ccss17.github.io/stat6.html)
+  ###### [ 양의 관계,  음의 관계,  산점도(scatter plot, scatter graph, scatter chart, scattergram),  공분산(covariance),  편차제곱의 합 표기,  상관계수(correlation coefficient),  표본공분산(sample covariance),  표본상관계수(sample correlation coefficient),  가능도(likelihood),  최대가능도추정(maximum likelihood estimation)](https://ccss17.github.io/stat6.html)
 
 </blockquote>
 
