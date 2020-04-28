@@ -189,7 +189,7 @@
 
 - 직교
     
-  ###### [ 내적(inner product) 또는 스칼라곱(dot product),  내적의 성질,  벡터의 크기(length) 또는 노름(norm),  벡터의 크기의 성질,  단위벡터(unit vector),  정규화(normalizatoin),  두 벡터 $u, v$ 사이의 거리(distance),  벡터 $u, v$ 의 직교(orthogonal),  직교집합(orthogonal set)](https://ccss17.github.io/la6.html)
+  ###### [ 내적(inner product) 또는 스칼라곱(dot product),  내적의 성질,  벡터의 크기(length) 또는 노름(norm),  벡터의 크기의 성질,  단위벡터(unit vector),  정규화(normalizatoin),  두 벡터 $u, v$ 사이의 거리(distance),  벡터 $u, v$ 의 직교(orthogonal),  부분공간과 직교하는 벡터,  직교여공간(orthogonal complement),  행렬의 행공간과 영공간의 직교여공간에 의한 관계,  직교집합(orthogonal set),  직교기저(orthogonal basis),  직교사영(orthogonal projection),  정규직교집합(orthonormal set),  정규직교기저(orthonormal basis),  직교행렬(orthogonal matrix)](https://ccss17.github.io/la6.html)
 
 </blockquote>
 

@@ -10,7 +10,7 @@
 
 - 내적(inner product) 또는 스칼라곱(dot product) : $\R ^{n}$ 공간 상의 두 $n \times 1$ 행렬, 즉 두 벡터 $u, v$ 의 내적은 행렬곱
 
-  $$ u ^{T}v $$
+  $$ u \cdot v = u ^{T}v $$
 
   이다. 
 
@@ -21,8 +21,6 @@
     - 또한 행렬곱연산을 했을 시 $1 \times 1$ 행렬이 되며
 
       이것을 간단히 스칼라(단일 실수) 로 표현하기도 한다.
-
-  - $u \cdot v$ 로도 표기한다. 
 
   - 예시 
 
@@ -194,7 +192,11 @@
 
     $\R ^{n}$ 상에서 원점을 지나고 벡터 $u, v$ 에 결정되는 두 직선을 생각하자.
 
-    두 직선이 수직일 필요충분조건은 $u$ 에서 $v$ 까지의 거리가 $u$ 에서 $-v$ 까지의 거리와 같다는 것이다. 이것은 거리의 제곱들이 서로 같음을 의미한다.
+    두 직선이 수직일 필요충분조건은 $u$ 에서 $v$ 까지의 거리가 $u$ 에서 $-v$ 까지의 거리와 같다는 것이다.
+    
+    ![캡처](https://user-images.githubusercontent.com/16812446/80373873-b20d1b80-88d0-11ea-9423-356b765a3c14.PNG)
+
+    이것은 거리의 제곱들이 서로 같음을 의미한다.
 
     $u, -v$ 의 거리의 제곱은
 
@@ -226,11 +228,144 @@
 
   - 모든 벡터 $v$ 은 $0 ^{T}v = 0$ 이므로 $\R ^{n}$ 에서 영벡터는 모든 벡터와 직교한다. 
 
+## 직교여공간 
+
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 직교집합(orthogonal set) : $\R ^{n}$ 공간의 벡터 집합 $S = \{u_1, \dots, u_p\}$ 에서 $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교집합이다. 
+- 부분공간과 직교하는 벡터 : 어떤 벡터 $z$ 가 $\R ^{n}$ 의 부분공간 $W$ 의 모든 벡터와 직교한다면
+
+  $z$ 는 $W$ 에 직교한다고 말한다.
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 직교여공간(orthogonal complement) : 부분공간 $W$ 와 직교하는 모든 벡터의 집합
+
+  $$ W ^{\perp } $$
+
+  이다.
+
+  </blockquote>
+
+  - 예시 
+
+    $W$ 를 $\R ^{3}$ 공간에서 원점을 지나는 평면을 나타내는 부분공간이라고 하고
+    
+    $L$ 을 원점을 지나며 $W$ 평면에 수직인 직선이라고 하자.
+
+    영이 아닌 벡터 $z, w$ 에 대하여 $z$ 는 직선 $L$ 위에 있고 $w$ 는 평면 $W$ 에 있다면, 
+
+    벡터 $z$ 와 $w$ 는 서로 수직이다. 즉, 
+
+    $$ z \cdot w = 0 $$
+
+    이다. 따라서 $L$ 위의 모든 벡터는 $W$ 안의 임의의 벡터와 직교한다.
+    
+    그러므로 $L$ 은 $W$ 안에 있는 모든 벡터와 직교하는 벡터로 구성되었다. 즉, 
+
+    $$ \therefore L = W ^{\perp } $$
+
+    이다. ■  
+    
+    그런데 $W$ 또한 $L$ 위의 모든 벡터와 직교하는 벡터로 구성되었다. 즉,
+
+    $$ \therefore W = L ^{\perp } $$
+
+    이다. ■ 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 직교여공간의 성질
+
+  1. 벡터 $x$ 가 $W ^{\perp }$ 의 원소일 필요충분조건은 $x$ 가 $W$ 를 생성하는 집합의 모든 벡터와 직교하는 것이다.
+
+  2. $W ^{\perp }$ 는 $\R ^{n}$ 의 부분공간이다.
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 행렬의 행공간과 영공간의 직교여공간에 의한 관계 : 행렬 $A$ 를 $m \times n$ 행렬이라 할 때 $A$ 의 행공간 $\text{Row} A$ 에 대한 직교여공간은 $A$ 의 영공간 $\text{Nul} A$ 이고,
+
+  $A$ 의 영공간 $\text{Nul} A$ 에 대한 직교여공간은 $A$ 의 행공간 $\text{Row} A$ 이다.
+
+  $$ (\text{Row} A)^{\perp } = \text{Nul} A, (\text{Nul} A)^{\perp } = \text{Row} A $$
+
+  </blockquote>
+
+  - 증명 
+
+    **구체화 필요**
+
+## 직교집합
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 직교집합(orthogonal set) : $\R ^{n}$ 공간의 벡터 집합 $S = \{u_1, \dots, u_p\}$ 에서 그 집합의 모든 서로 다른 벡터가 직교한다면, 즉
+
+  $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교집합이다. 
 
   </blockquote>
 
   - 즉, 서로 다른 모든 두 벡터가 직교하는 집합이 직교집합이다. 
 
+  - 예시 
+
+    벡터 $\displaystyle u_1 = \begin{bmatrix} 3\\1\\1 \end{bmatrix}, u_2 = \begin{bmatrix} -1\\2\\1 \end{bmatrix}, u_3 = \begin{bmatrix} -1/2\\-2\\7/2 \end{bmatrix}$ 에 대한 벡터 집합 $S = \{u_1,u_2,u_3\}$ 이 직교집합인지 확인해보자.
+
+    각각의 서로 다른 벡터에 대한 내적은 모두
+
+    $$ u_1 \cdot u_2 = 0 $$
+
+    $$ u_1 \cdot u_3 = 0 $$
+
+    $$ u_2 \cdot u_3 = 0 $$
+
+    이다. 그러므로 $S$ 는 직교집합이다. 
+  
+  - $S = \{u_1, u_2, \dots, u_p\}$ 를 $\R ^{n}$ 의 $0$ 이 아닌 벡터들로 이루어진 직교집합이라 할 때 
+  
+    집합 $S$ 는 일차독립이고 $S$ 는 $S$ 에 의해 생성된 부분공간의 기저이다.
+
+    - 증명 
+
+      스칼라 $c_1, \dots, c_p$ 에 대하여 $0 = c_1u_1 + \dots + c_pu_p$ 이면 벡터 $u_1$ 은 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 직교기저(orthogonal basis) : $\R ^{n}$ 의 부분공간 $W$ 의 기저인 동시에 직교인 집합을 $W$ 의 직교기저라 한다. 
+
+  </blockquote>
+
+## 직교사영
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 직교사영(orthogonal projection) : 
+
+  </blockquote>
+
+## 정규직교집합 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 정규직교집합(orthonormal set) : 벡터집합 $\{u_1, \dots, u_p\}$ 가 단위벡터로 이루어진 직교집합일 때 정규직교집합이라 한다. 
+
+  </blockquote>
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 정규직교기저(orthonormal basis) : 부분공간 $W$ 의 기저가 되는 정규직교집합이다.
+
+  </blockquote>
+
+  - 예시 
+
+    $\R ^{n}$ 의 표준기저 $\{e_1, \dots, e_n\}$ 은 정규직교기저이다. 
+
+- <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- 직교행렬(orthogonal matrix) : 정사각 정칙행렬 $U$ 가 $U ^{-1} = U ^{T}$ 를 만족할 때 $U$ 를 직교행렬이라 한다. 
+
+  </blockquote>
