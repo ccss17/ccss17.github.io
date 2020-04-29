@@ -199,5 +199,5 @@
 
 ##### - [생각](https://ccss17.github.io/all2.html)
 
-##### - [역사](https://ccss17.github.io/all3.html)
+##### - [수학 역사](https://ccss17.github.io/all3.html)
 

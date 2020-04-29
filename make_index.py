@@ -32,7 +32,7 @@ def update():
 
 ##### - [생각](https://ccss17.github.io/all2.html)
 
-##### - [역사](https://ccss17.github.io/all3.html)
+##### - [수학 역사](https://ccss17.github.io/all3.html)
 
 '''
 # {sections('기초적인 것에 관련된 메모', 'all', get_theorem)}
