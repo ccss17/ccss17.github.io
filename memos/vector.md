@@ -118,13 +118,15 @@
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
-- 벡터(vector) : 크기와 방향성이 동시에 있는 물리량이다. 
+- 벡터(vector) 또는 유향선분(directed segment) : 크기와 방향성이 동시에 있는 물리량이다. 
 
   </blockquote>
 
   > 크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. 
 
   - 스칼라량으로는 방향에 대한 정보가 부족하기에 방향에 대한 정보를 덧붙힌 것이 벡터이다. 
+
+    - 그래서 방향성이 있는 선분 "유향선분" 이라고도 부른다.
 
   - 예시 
 
