@@ -1,5 +1,19 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- ## **확률 메모**
+
+  **[조합 메모](https://ccss17.github.io/comb.html)**
+
+  **[확률 메모](https://ccss17.github.io/prop.html)**
+
+</blockquote>
+
+# 조합 메모
+
+---
+
 # 확률론
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;

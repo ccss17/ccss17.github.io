@@ -34,6 +34,8 @@ def update():
 
 ##### - [수학 역사](https://ccss17.github.io/all3.html)
 
+##### - [컴퓨터 역사](https://ccss17.github.io/all4.html)
+
 '''
 # {sections('기초적인 것에 관련된 메모', 'all', get_theorem)}
 # {sections('생각에 관련된 메모', 'all2', get_theorem)}

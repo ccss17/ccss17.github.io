@@ -1,5 +1,27 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- ## **통계 메모**
+
+  **[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
+
+  **[이산확률변수의 평균,분산,표준편차](https://ccss17.github.io/stat2.html)**
+
+  **[이항분포의 평균,분산,표준편차](https://ccss17.github.io/stat3.html)**
+
+  **[연속확률변수의 평균,분산,표준편차와 정규분포](https://ccss17.github.io/stat4.html)**
+
+  **[통계적 추정](https://ccss17.github.io/stat5.html)**
+
+  **[상관관계 분석](https://ccss17.github.io/stat6.html)**
+
+</blockquote>
+
+#  이항분포의 평균,분산,표준편차
+
+---
+
 # 이항분포 
 
 - <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;

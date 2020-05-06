@@ -1,6 +1,20 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-# 생각에 관련된 메모
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+- ## **생각 메모**
+
+  **[기초](https://ccss17.github.io/all.html)**
+
+  **[생각](https://ccss17.github.io/all2.html)**
+
+  **[수학 역사](https://ccss17.github.io/all3.html)**
+
+  **[컴퓨터 역사](https://ccss17.github.io/all4.html)**
+
+</blockquote>
+
+# 생각
 
 **생각에 관한 생각을 메모해 둔 곳입니다.**
 
