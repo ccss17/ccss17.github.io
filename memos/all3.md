@@ -1,6 +1,6 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 - ## **생각 메모**
 
