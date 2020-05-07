@@ -28,11 +28,7 @@
 
 곡선을 두 독립변수 $x, y$ 로 나타내는 것이 아니라 매개변수를 통한 방정식으로 나타내면 훨씬 더 일반적인 곡선을 표현할 수 있다. 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 매개변수 방정식(parametric equations) : $x, y$ 가 각각 구간 $I$ 의 $t$ 에 대한 함수 
 
@@ -144,14 +140,13 @@ $$ x = y ^{2} - 2y +1 $$
 
   를 얻음으로써 그릴 수도 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 매개변수 곡선(parametric curve) : 매개변수 방정식의 정의에서 매개변수 방정식으로 정의된 점들의 집합 $(x, y) = (f(t), g(t))$ 을 매개변수 곡선이라 한다. 
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 매개변수 구간(parametric interval) : 매개변수 방정식의 정의에서 정의역 $I$ 를 매개변수 구간이라 한다. 
 
@@ -252,13 +247,13 @@ $$ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots $$
 =======
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 시점(initial point) : 매개변수 방정식의 정의에서 $I$ 가 폐구간이고 $t$ 가 $a \leq t \leq b$ 로 정의되었을 때 점 $(f(a), g(a))$ 를 곡선의 시점이라 한다.
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 종점(terminal point) : 매개변수 방정식의 정의에서 $I$ 가 폐구간이고 $t$ 가 $a \leq t \leq b$ 로 정의되었을 때 점 $(f(b), g(b))$ 를 곡선의 종점이라 한다.
 
@@ -266,7 +261,7 @@ $$ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots $$
 
 # 벡터 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 양 : 어떤 물체의 크기이다.
 
@@ -274,7 +269,7 @@ $$ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots $$
 
 - 측정 가능한 양(물리량)과 측정 불가능한 양(비물리량)으로 나눌 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 물리량 : 측정 가능한 양이다.
 
@@ -282,7 +277,7 @@ $$ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots $$
 
 - 벡터와 스칼라로 나눌 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 비물리량 : 측정 불가능한 양이다. 
 
@@ -296,7 +291,7 @@ $$ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots $$
 
   > 그러나 리더십이라는 대상에 대한 단순화 및 집합으로의 환원을 거쳐서 측정하능하게 만들 수 있다는 가능성을 볼 수 있다. 여기에서 더 나아가 철학적 관념 또한 단순화와 수학적 모델링을 거쳐서 측정가능한 수로 격하시킬 수 있는 가능성도 엿볼 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 스칼라(scala) : 크기만 있고 방향성이 없는 물리량이다. 
 
@@ -310,7 +305,7 @@ $$ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots $$
 
   "$A$ 는 $20$ 분을 뛰었다" 에서 $20$ 은 스칼라량이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터(vector) 또는 유향선분(directed segment) : 크기와 방향성이 동시에 있는 물리량이다. 
 
@@ -452,7 +447,7 @@ $$ r(t) = \bigg < f(t), g(t), h(t) \bigg > = f(t)i + g(t)j+h(t)k $$
 
 - **벡터는 행렬과 같이 수와 다른 개념이므로 행렬에서처럼 연산법칙, 항등원, 역원, 단위(수에서 $1$) 등을 새로 정의해야 한다.**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 시점(initial point) : 다음과 같이 점 $A$ 에서 점 $B$ 로 방향이 주어진 선분 $AB$ 를 벡터 $AB$ 에서
 
@@ -462,7 +457,7 @@ $$ r(t) = \bigg < f(t), g(t), h(t) \bigg > = f(t)i + g(t)j+h(t)k $$
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 종점(terminal point) : 다음과 같이 점 $A$ 에서 점 $B$ 로 방향이 주어진 선분 $AB$ 를 벡터 $AB$ 에서
 
@@ -472,7 +467,7 @@ $$ r(t) = \bigg < f(t), g(t), h(t) \bigg > = f(t)i + g(t)j+h(t)k $$
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 스칼라 함수(scalar function) : 실숫값 함수와 같이 어떤 점을 하나의 스칼라에 대응시키는 함수이다.
 
@@ -492,7 +487,7 @@ $$ r(t) = \bigg < f(t), g(t), h(t) \bigg > = f(t)i + g(t)j+h(t)k $$
 
   $$ y = x ^{2}, y = \sin x, y = \ln x \dots $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터 함수(vector function) : 어떤 점을 하나의 벡터에 대응시키는 함수이다. 
 
@@ -504,7 +499,7 @@ $$ r(t) = \bigg < f(t), g(t), h(t) \bigg > = f(t)i + g(t)j+h(t)k $$
 
   $$ r(t) = \bigg < f(t), g(t), h(t) \bigg > = f(t)i + g(t)j+h(t)k $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 장(field) : 공간에서 위치, 시간 등에 따라 그 성질을 다르게 나타내는 물리량이다. 
 
@@ -516,7 +511,7 @@ $$ r(t) = \bigg < f(t), g(t), h(t) \bigg > = f(t)i + g(t)j+h(t)k $$
 
   - 물리량이므로 스칼라량, 벡터량을 지닌다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 스칼라 장(scalar field) : 공간 내 각 점의 위치, 시간 등에 따라 결정되는 크기를 갖는 스칼라를 나타내는 분포이다.
 
@@ -532,7 +527,7 @@ $$ r(t) = \bigg < f(t), g(t), h(t) \bigg > = f(t)i + g(t)j+h(t)k $$
 
   전하가 있는 공간에서의 전위의 분포 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터 장(vector field) : 공간 내 각 점의 위치, 시간 등에 따라 결정되는 크기와 방향을 갖는 벡터를 나타내는 분포이다. 
 
@@ -550,8 +545,7 @@ $$ r(t) = \bigg < f(t), g(t), h(t) \bigg > = f(t)i + g(t)j+h(t)k $$
 
 ## 여러가지 벡터 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 영벡터(zero vector) : 임의의 점 $A$ 에 대하여 $\overrightarrow{AA}$ 와 같이 시점과 종점이 일치하는 벡터를 영벡터라 한다. 
 
@@ -572,8 +566,7 @@ $$ r(t) = \bigg < f(t), g(t), h(t) \bigg > = f(t)i + g(t)j+h(t)k $$
 
 - 실수연산에서 항등원 역할을 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 역벡터(inverse vector) : 벡터 $\overrightarrow{AB}$ 에 대하여 크기는 같고 방향이 반대인 벡터 $\overrightarrow{BA}$ 를 벡터 $\overrightarrow{AB}$ 의 역벡터라 한다. 
 
@@ -594,8 +587,7 @@ $$ \overrightarrow{BA} = -\overrightarrow{AB} $$
 
 - 실수연산에서 역원 역할을 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 단위벡터(unit vector) : 크기가 $1$ 인 벡터이다. 
 
@@ -608,18 +600,13 @@ $$ \overrightarrow{BA} = -\overrightarrow{AB} $$
 =======
 - 실수연산에서 $1$ 의 역할을 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 평면벡터(plane vector) : 평면에서 정의된 벡터이다. 
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 공간벡터(space vector) : 공간에서 정의된 벡터이다. 
 
@@ -629,11 +616,7 @@ $$ \overrightarrow{BA} = -\overrightarrow{AB} $$
 
 실수에서 했던 연산들을 벡터에 대하여 재정의하고 있는 것이다. 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 벡터의 크기 : 벡터 $\overrightarrow{AB}$ 에서 선분 $AB$ 의 길이를 벡터의 크기라 한다.
 
@@ -654,8 +637,7 @@ $$ |\overrightarrow{a}|, |\overrightarrow{b}|, |\overrightarrow{c}|, \dots $$
 
   $$ |\overrightarrow{a}|, |\overrightarrow{b}|, |\overrightarrow{c}|, \dots $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 상등 : 시점과 종점의 위치에 관계 없이 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 의 크기와 방향이 같으면 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 를 같다고 한다.
 
@@ -700,8 +682,7 @@ $$ \overrightarrow{AB}= \overrightarrow{CD}= \overrightarrow{OP} $$
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 덧셈 : 벡터의 덧셈은 다음 두 경우로 정의된다. 
 
@@ -750,8 +731,7 @@ $$ \overrightarrow{AB}= \overrightarrow{CD}= \overrightarrow{OP} $$
 
     ![](https://i.ytimg.com/vi/gdWfqihMW14/maxresdefault.jpg)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터 덧셈의 성질 
 
@@ -778,8 +758,7 @@ $$ \overrightarrow{AB}= \overrightarrow{CD}= \overrightarrow{OP} $$
 
 - 역원 : $\overrightarrow{a}+(-\overrightarrow{a})=-\overrightarrow{a}+\overrightarrow{a} = \overrightarrow{0}$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 뺄셈 : 두 벡터 $\overrightarrow{OA}, \overrightarrow{OB}$ 에 대하여 $\overrightarrow{a}$ 와 $\overrightarrow{-b}=\overrightarrow{BO}$ 의 합 
 
@@ -808,8 +787,7 @@ $$ \overrightarrow{a}-\overrightarrow{b}= \overrightarrow{OA} - \overrightarrow{
 
   ![](https://i.ytimg.com/vi/kOCTTK3Cnto/maxresdefault.jpg)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 실수배(스칼라배) : 임의의 실수 $k$ 와 벡터 $\overrightarrow{a}$ 의 곱 $k \overrightarrow{a}$ 를 벡터 $\overrightarrow{a}$ 의 실수배라 하고 다음과 같이 정의한다.
 
@@ -838,8 +816,7 @@ $\overrightarrow{a} = \overrightarrow{0}$ 인 경우, 실수 $k$ 에 대하여 $
 
 - $\overrightarrow{a} = \overrightarrow{0}$ 인 경우, 실수 $k$ 에 대하여 $k \overrightarrow{a}=\overrightarrow{0}$ 이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 실수배의 성질 : 두 실수 $k, l$ 과 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 에 대하여 다음이 성립한다.
 
@@ -864,8 +841,7 @@ $k(\overrightarrow{a}+\overrightarrow{b}) = k\overrightarrow{a}+k \overrightarro
 
   $k(\overrightarrow{a}+\overrightarrow{b}) = k\overrightarrow{a}+k \overrightarrow{b}$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 두 벡터의 평행조건 : 다음 두 경우에서 두 벡터는 평행한다고 정의한다. 
 
@@ -882,8 +858,7 @@ $$ \overrightarrow{a}//\overrightarrow{b} \iff \overrightarrow{b} = k \overright
 
   $$ \overrightarrow{a}//\overrightarrow{b} \iff \overrightarrow{b} = k \overrightarrow{a} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 세 점이 한 직선 위에 있을 조건 : 서로 다른 세점 $A, B, C$ 가 한 직선 위에 존재하기 위한 필요충분조건은 $0$ 이 아닌 실수 $k$ 에 대하여
 
@@ -895,11 +870,7 @@ $$ \overrightarrow{AC} = k \overrightarrow{AB} $$
 
 ## 위치벡터 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 위치벡터 : 평면 또는 공간에서 한 점 $O$ 를 고정할 때 임의의 한 점 $A$ 에 대하여 $O$ 를 시점으로 하고 $A$ 를 종점으로 하는 유일한 벡터 $\overrightarrow{OA}$ 를 점 $O$ 에 대한 점 $A$ 의 위치벡터라 한다. 
 
@@ -931,11 +902,7 @@ $$ \overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} = \overrighta
 
 ## 평면벡터 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 평면벡터 : 위치벡터의 개념을 좌표평면 위로 옮겨서 시점을 원점 $O(0, 0)$ 으로 고정시킨 벡터이다.
 
@@ -948,8 +915,7 @@ $$ \overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} = \overrighta
 =======
 - 종점의 좌표 $2-$튜플을 평면벡터를 대표하는 값으로 삼는다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 평면벡터 성분 표현 : 임의의 평면벡터 $\overrightarrow{a}$ 에 대하여 $\overrightarrow{a} = \overrightarrow{OA}$ 의 종점이 점이 $A(a_1, a_2)$ 일 때, 두 점 $E_1(1, 0), E_2(0, 1)$ 의 위치벡터 $\overrightarrow{e_1}, \overrightarrow{e_2}$ 를 이용하여 벡터 $\overrightarrow{a}$ 를 다음과 같이 나타낼 수 있다. 
 
@@ -976,8 +942,7 @@ $$ \overrightarrow{a} = (a_1,a_2) $$
 
   로 나타낼 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 평면벡터의 크기 : $\overrightarrow{a} = (a_1,a_2)$  의 크기는 
 
@@ -985,11 +950,7 @@ $$ |\overrightarrow{a}| = \sqrt[]{a^{2}_{1}+a^{2}_{2}} $$
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 평면벡터의 같음 : $\overrightarrow{a} = (a_1,a_2),\overrightarrow{b} = (b_1,b_2)$  가 같을 조건은
 
@@ -999,11 +960,7 @@ $$ \overrightarrow{a} = \overrightarrow{b} \iff a_1=b_1, a_2 = b_2 $$
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 평면벡터의 연산 : $\overrightarrow{a} = (a_1,a_2),\overrightarrow{b} = (b_1,b_2)$ 에 대하여
 
@@ -1024,8 +981,7 @@ $$ \overrightarrow{a} = \overrightarrow{b} \iff a_1=b_1, a_2 = b_2 $$
 
 - 실수배 : $k\overrightarrow{a}=(ka_1, ka_2)$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 두 점에 대한 평면벡터의 성분 : 좌표평면 위의 두 점 $A(a_1,a_2),B(b_1,b_2)$ 에 대하여 
 
@@ -1035,11 +991,7 @@ $$ \overrightarrow{AB} = \overrightarrow{OB}-\overrightarrow{OA}=(b_1,a_1, b_2-a
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 두 점에 대한 평면벡터의 크기 : 좌표평면 위의 두 점 $A(a_1,a_2),B(b_1,b_2)$ 에 대하여 
 
@@ -1049,11 +1001,7 @@ $$ |\overrightarrow{AB}| = \sqrt[]{(b_1-a_1)^{2}+(b_2-a_2)^{2}} $$
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 두 평면벡터의 평행 : 영벡터가 아닌 두 평면벡터 $\overrightarrow{a} = (a_1,a_2),\overrightarrow{b} = (b_1,b_2)$ 에 대하여
 
@@ -1069,11 +1017,7 @@ $$ \overrightarrow{a}//\overrightarrow{b} \iff \overrightarrow{b} = k \overright
 
 과학 공학, 금융, 의학, 더 높은 수준의 수학 같은 현실 세계에서는 일변수 함수가 아닌 다변수 함수가 훨씬 자주 쓰인다. 이 파트는 다변수 함수의 미적분을 소개하기 위한 사전 지식을 가르친다. 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 표준점(standard poitn) 에 위치한 벡터 : 시점이 원점에 위치한 벡터이다. 
 
@@ -1090,8 +1034,7 @@ $$ \overrightarrow{a}//\overrightarrow{b} \iff \overrightarrow{b} = k \overright
 
   - 이것을 표준점에 위치한 벡터라고 한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터 성분 표기(component form) : $2$ 차원, $3$ 차원일 경우 각각 다음과 같이 정의된다. 
 
@@ -1164,18 +1107,13 @@ $$ v = \big<x_2-x_1, y_2-y_1, z_2-z_1 \big> $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 성분(component) : 벡터 성분 표기에서 $v_1, v_2, v_3$ 을 벡터의 성분이라 한다. 
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 영 벡터(zero vector) : 길이가 $0$ 인 벡터로써 
 
@@ -1189,11 +1127,7 @@ $$ \big< 0,0,0 \big > $$
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 $2$ 차원 벡터의 길이(magnitude or length of vector) : $2$ 차원 공간에서 정의된 임의의 벡터 $\overrightarrow{PQ}$ 를 표준점에 위치시켜서 그 성분을
 
@@ -1207,11 +1141,7 @@ $$ |v| = ||v|| = \sqrt[]{v _{1} ^{2} + v _{2} ^{2} } = \sqrt[]{(x _{2} - x _{1})
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 $3$ 차원 벡터의 길이(magnitude or length of vector) : $3$ 차원 공간에서 정의된 임의의 벡터 $\overrightarrow{PQ}$ 를 표준점에 위치시켜서 그 성분을
 
@@ -1236,8 +1166,7 @@ $$ |v| = ||v|| = \sqrt[]{v _{1} ^{2} + v _{2} ^{2} + v _{3} ^{2}} = \sqrt[]{(x _
 
 ## 노름 거리
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 $L_1$ 노름(norm) 거리 또는 맨해튼 거리 : 벡터 $a$ 에 대한 $L_1$ 노름은 
 
@@ -1266,8 +1195,7 @@ $$ ||a|| _{1} = |a_1| + |a_2| + |a_3| + \dots + |a_n| = \sum_{i=1}^{n}|a_i| $$
 
   와 같이 바둑판 모양으로 움직인 최단거리를 뜻한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 $L_2$ 노름(norm) 거리 또는 유클리드 거리 : 벡터 $a$ 에 대한 $L_2$ 노름은 벡터의 크기에서의 정의와 동일하게 
 
@@ -1292,8 +1220,7 @@ $L_1, L_2$ 노름은 선형회귀 모델의 정규화 항에서 사용된다.
 
 - $L_1, L_2$ 노름은 선형회귀 모델의 정규화 항에서 사용된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 $L_p$ 노름 : 점 $(x_1, x_2, \dots, x_n)$ 과 점 $(y_1, y_2, \dots, y_n)$ 의 $L_p$ 노름 거리는 다음과 같이 정의된다. 
 
@@ -1338,7 +1265,7 @@ $$ = \max (|x_1 -y_1|, |x_2 - y_2|, \dots, |x_n - y_n|) $$
 
   로 정의된 것에서 일반화 된 것이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 무한 $L _{\infty }$ 노름 : 점 $(x_1, x_2, \dots, x_n)$ 과 점 $(y_1, y_2, \dots, y_n)$ 의 $L _{\infty }$ 노름 거리는 다음과 같이 정의된다. 
 
@@ -1359,11 +1286,7 @@ $$ = \max (|x_1 -y_1|, |x_2 - y_2|, \dots, |x_n - y_n|) $$
 
 (스칼라는 단순히 실수로 생각하면 된다.)
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 벡터 덧셈 : $u = \big <u_1, u_2, u_3 \big >, v = \big < v_1, v_2, v_3 \big >$ 인 벡터 $u, v$ 에 대하여 
 
@@ -1412,8 +1335,7 @@ $$u + v = \big <u_1+v_1, u_2+v_2 + u_3+v_3 \big >$$
 
 - 특히 위 예시에서 덧셈의 결과인 $w$ 를 합 벡터(resultant vector) 라 한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터 스칼라배 : $u = \big <u_1, u_2, u_3 \big >, v = \big < v_1, v_2, v_3 \big >$ 인 벡터 $u, v$ 에 대하여 
 
@@ -1434,8 +1356,7 @@ $$ku = \big <ku_1, ku_2, ku_3 \big >$$
 
 - 특히 스칼라 $k$ 가 음수면 벡터의 방향이 바뀐다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 스칼라배 벡터의 길이 : 벡터 $u$ 에 스칼라배 $k$ 를 한 벡터 $ku$ 의 길이 $|ku|$ 는 
 
@@ -1456,8 +1377,7 @@ $$ |ku| = \sqrt[]{(ku_1) ^{2}+(ku_2) ^{2}+(ku_3)^{2}} = \sqrt[]{k ^{2}(u_1 ^{2}+
 
 - 특히 벡터 $u$ 에 $-1$ 스칼라를 곱한 벡터 $-u$ 는 같은 길이에 정반대 방향을 가르킨다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 단위 벡터(unit vector) : 길이가 $1$ 인 벡터이다. 
 
@@ -1486,8 +1406,7 @@ $$ |v| = \sqrt[]{(x _{2} - x _{1}) ^{2} + (y _{2} - y _{1}) ^{2} + (z _{2} - z _
 
   을 만족하는 모든 벡터를 뜻한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 표준 단위 벡터(standard unit vector) : 표준 단위 벡터는 길이가 $1$ 인 다음의 특수한 $3$ 가지 경우의 벡터를 뜻한다. 
 
@@ -1522,8 +1441,7 @@ $$ i = \big <1, 0, 0 \big >, j = \big <0, 1, 0 \big >, k = \big <0, 0, 1 \big > 
 
     $$ = v_1i + v_2j + v_3k $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 $i$ 성분(i-component) : 표준 단위 벡터의 예시에서 스칼라 $v_1$ 을 벡터 $v$ 의 $i$ 성분이라한다.
 
@@ -1540,8 +1458,7 @@ $$ i = \big <1, 0, 0 \big >, j = \big <0, 1, 0 \big >, k = \big <0, 0, 1 \big > 
 
 - 또 $i$ 벡터를 $x$ 축 상의 단위벡터라고도 한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 $j$ 성분(j-component) : 표준 단위 벡터의 예시에서 스칼라 $v_2$ 을 벡터 $v$ 의 $j$ 성분이라한다.
 
@@ -1558,8 +1475,7 @@ $$ i = \big <1, 0, 0 \big >, j = \big <0, 1, 0 \big >, k = \big <0, 0, 1 \big > 
 
 - 또 $j$ 벡터를 $y$ 축 상의 단위벡터라고도 한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 $k$ 성분(k-component) : 표준 단위 벡터의 예시에서 스칼라 $v_3$ 을 벡터 $v$ 의 $k$ 성분이라한다.
 
@@ -1576,8 +1492,7 @@ $$ i = \big <1, 0, 0 \big >, j = \big <0, 1, 0 \big >, k = \big <0, 0, 1 \big > 
 
 - 또 $k$ 벡터를 $z$ 축 상의 단위벡터라고도 한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 $i,j,k$ 성분으로의 벡터 표기 : 점 $P_1(x_1, y_1, z_1)$ 에서 점 $P_2(x_2, y_2, z_2)$ 으로 이어져있는 벡터는 
 
@@ -1602,8 +1517,7 @@ $$ \overrightarrow{P_1P_2} = \big <x_2 - x_1 , y_2-y_1,z_2-z_1 \big >  = (x_2 - 
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터 방향으로의 단위 벡터 : 영벡터가 아닌 벡터 $v \neq 0$ 와 길이 $|v|$ 에 대하여 
 
@@ -1716,8 +1630,7 @@ $$ \therefore  u = \frac{\overrightarrow{P_1P_2}}{|\overrightarrow{P_1P_2}|} = \
 
 ## 내적, 외적
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 내적(inner product) : 두 벡터 $u ,v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 두 벡터 $u, v$ 의 내적은 스칼라
 
@@ -1842,8 +1755,7 @@ $$ \big < a, b \big > = (1)(4)+(2)(5)+(3)(6)=4+10+18=32 $$
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 내적의 성질 : 임의의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다. 
 
@@ -1859,11 +1771,7 @@ $$ \big < a, b \big > = (1)(4)+(2)(5)+(3)(6)=4+10+18=32 $$
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 두 벡터의 각도(angle between two vectors) : 영벡터가 아닌 두 벡터 $u, v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 두 벡터 $u ,v$ 가 이루는 각 $\theta$ 는 
 
@@ -1924,8 +1832,7 @@ $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) = \cos ^{-1} \bi
 
   $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) = \cos ^{-1} \bigg ( \frac{-4}{(3)(7)} \bigg ) \approx 100.98 \degree $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 코사인 유사도(cosine similarity) : 영벡터가 아닌 두 벡터 $u, v$ 가 $u = \big < u_1, u_2, \dots, u_n \big >, v = \big  <v_1, v_2, \dots, v_n \big  >$ 일 때, 
 
@@ -2050,8 +1957,7 @@ $$ \therefore \cos (a, b) = \frac{28}{\sqrt[]{14} \sqrt[]{77}} = \frac{2 \sqrt[]
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 직교(orthogonal vectors) : 두 벡터 $u, v$ 가 직교하는 조건은
 
@@ -2112,8 +2018,7 @@ $$ \therefore u \cdot v = 0 $$
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 외적(outer product) : 벡터 $u, v$ 가 이루는 각이 $\theta$ 이고 벡터 $u, v$ 가 이루는 평면에 수직한 단위 벡터 $n$ 에 대하여 
 
@@ -2156,8 +2061,7 @@ $$ u \times v = (|u||v| \sin \theta) n $$
 
   - 위 그림의 빨간선이 벡터 $u, v$ 가 이루는 평면에 직교하는 단위벡터 $n$ 이다! 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 외적의 성질 : 임의의 벡터 $u, v, w$ 와 임의의 스칼라 $r, s$ 에 대하여 다음이 성립한다. 
 
@@ -2175,11 +2079,7 @@ $$ u \times v = (|u||v| \sin \theta) n $$
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 외적의 크기 : 벡터 $u, v$ 의 외적의 크기는 
 
@@ -2244,8 +2144,7 @@ $$ \therefore  |u \times v| = |u||v| \sin \theta $$
 
     는 두 벡터 $u, v$ 가 이루는 평행사변형의 넓이와 같다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 평행 벡터(parallel vectors) : 두 벡터 $u, v$ 가 평행인 것은
 

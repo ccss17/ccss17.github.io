@@ -24,11 +24,7 @@
 
 # 확률분포
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 확률변수(random variable) : 어떤 시행에서 조건에 의해 표본공간의 각 원소(근원사건)에 하나의 실수 $x$ 를 대응시킨 변수
 
@@ -169,7 +165,7 @@ $$ P(a \leq  X \leq b) $$
 
   이 확률변수로 각각의 사건들이 특정되므로 $X=x$ 로 표현할 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 확률변수로의 확률 표기 : 확률변수 $X$ 에 대하여 어떤 사건 $X = x$ 가 일어날 확률을 
 
@@ -213,7 +209,7 @@ $$ P(a \leq  X \leq b) $$
 
   로 표현할 수 있다. ■ 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 확률분포(probability distribution) : 확률변수 $X$ 가 가질 수 있는 모든 값과 $X$ 가 그 값을 취할 확률의 대응 관계(함수)를
 
@@ -238,11 +234,7 @@ $$ P(a \leq  X \leq b) $$
 
 # 이산확률분포 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 이산확률변수(discrete random variable) : 확률변수 $X$ 가 가질 수 있는 값들이 유한개이거나, 또는 자연수나 정수와 같이 셀 수 있을 때 $X$ 를 이산확률변수라 한다. 
 
@@ -256,11 +248,7 @@ $$ P(a \leq  X \leq b) $$
 
   따라서 $X$ 는 이산확률변수이다. 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 확률질량함수(probability mass function) : 이산확률변수 $X$ 가 가질 수 있는 값이 $x_1, x_2, x_3, \dots, x_n$ 일 때
 
@@ -294,11 +282,7 @@ $$ P(X = x_i) = p_i (i= 1, 2, 3, \dots, n) $$
 
   로 표현할 수 있다. ■ 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 이산확률분포(discrete probability distribution) : 이산확률변수가 가지는 확률분포, 즉 확률질량함수를 통해 표현할 수 있는 확률분포이다.
 
@@ -323,7 +307,7 @@ $$ P(X = x_i) = p_i (i= 1, 2, 3, \dots, n) $$
 
 - 확률변수가 이산확률분포라는 것은 확률변수가 가질 수 있는 값의 개수가 셀 수 있다는 것이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 확률질량함수의 성질 : 이산확률변수 $X$ 의 확률질량함수가 $P(X = x_i) = p_i(i = 1, 2, 3, \dots, n)$ 일 때 다음이 성립한다. 
 
@@ -356,37 +340,7 @@ $$ P(X = x_i) = p_i (i= 1, 2, 3, \dots, n) $$
 
 # 이산확률변수의 평균, 분산, 표준편차(산포도 측정)
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable) : 매 시행마다 예상되는 값으로써
-
-이산확률변수 $X$ 의 확률질량함수가 $P(X=x_i) = p_i(i=1,2,3, \dots, n)$ 일 때 
-
-기댓값은 확률변수($x_1, x_2, \dots, x_n$) 에 그 확률($p_1, p_2, \dots, p_n$)을 곱하여 더한 값
-
-$$ \mu = E(X) = \sum_{i=1}^{n}x_i P(X=i) = \sum_{i=1}^{n}x_ip_i=x_1p_1 + x_2p_2 + \dots + x_n p_n$$
-
-이다.
-
-</blockquote>
-
-- 증명 
-
-  평균이란 $(변량) \times (도수)$ 의 총합을 도수로 나눈 것이었다. 즉, 
-
-  $$ (평균) = \dfrac{(변량) \times (도수) 의 총합}{(도수) 의 총합} $$
-
-  이다. 그러면 평균은 $i=1,2,3, \dots, n$ 에 대한 변량 $x_i$ 과 도수 $f_i$ 그리고 도수의 총합 $N$ 에 대하여
-
-  $$ \dfrac{x_1f_1 + x_2f_2 + \dots + x_n f_n}{N} $$
-
-  이다. 이것은 
-
-  $$ x_1 \cdot \dfrac{f_1}{N} +x_2 \cdot \dfrac{f_2}{N} + \dots + x_n \cdot \dfrac{f_n}{N} $$
-
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable) : 매 시행마다 예상되는 값으로써
 
@@ -515,11 +469,7 @@ $$ \mu = E(X) = \sum_{i=1}^{n}x_i P(X=i) = \sum_{i=1}^{n}x_ip_i=x_1p_1 + x_2p_2 
 
   | 표준편차 $\sigma(x)$| 표준편차 |
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 이산확률변수의 분산(variance) : 확률변수의 산포도를 나타내는 수치로써 
 
@@ -593,11 +543,7 @@ $$V(X) = \sum_{i=1}^{n} (x_i- \mu ) ^{2} p_i = E(X ^{2}) - \{E(X)\}^{2} $$
 
   방금 구했던 $1.06$ 의 값이 동일하게 나온 것을 알 수 있다. 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 이산확률변수의 표준편차(standard deviation) : 확률변수의 산포도를 나타내는 수치로써 
 
@@ -703,11 +649,7 @@ $$\sigma (X) = \sqrt[]{V(X)} $$
 
 따라서 이런 상황을 위해 확률변수 $X$ 가 실수 $a, b$ 에 대한 확률변수 $aX+b$ 와 어떤 관계를 갖는지 밝혀둘 필요가 있다. 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 이산확률변수의 기대값(평균)의 성질 : 이산확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 평균은 다음 성질을 갖는다. 
 
@@ -741,11 +683,7 @@ $$ E(aX+b) = aE(X)+b $$
 
   이다. ■ 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 이산확률변수의 분산의 성질 : 이산확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 분산은 다음 성질을 갖는다. 
 
@@ -777,11 +715,7 @@ $$ V(aX+b) = a ^{2}V(X) $$
 
   이다. ■ 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 이산확률변수의 표준편차의 성질 : 이산확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 표준편차은 다음 성질을 갖는다. 
 

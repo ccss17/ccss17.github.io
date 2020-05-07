@@ -24,11 +24,7 @@
 
 # 통계
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 통계학(statistics) : 산술적 방법으로 다량의 데이터를 관찰하고 분석하는 수학의 분야이다. 
 
@@ -73,8 +69,7 @@
 
 - 통계학을 배우는 목적을 자료로부터 필요한 정보를 찾고 그것으로부터 필요한 결론을 추론하여 내는 결정 능력을 기르는 것으로 삼으면 좋을 것이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 자료(data, 데이터) : 수, 영상, 단어 등의 형태로 된 의미 단위이다.
 
@@ -87,8 +82,7 @@
 =======
 - 보통 연구의 바탕이 되는 재료를 뜻하고 자료를 의미있게 정리하면 정보가 된다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 질적 자료(qualitative data, 정성적 자료) : 수치로 측정이 불가능한 자료이다.
 
@@ -105,8 +99,7 @@
 
   전화번호, 성별, 종교분류 등이 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 양적 자료(quantitative data, 정량적 자료) : 수치로 측정이 가능한 자료이다.
 
@@ -123,8 +116,7 @@
 
   온도, 지능지수, 매출액 등이 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정보(information) : 특정 목적의 의사결정을 위하여 의미있게 자료를 가공한 것이다. 
 
@@ -141,8 +133,7 @@
 
 - 비교적 장기간 사용할 수 있는 정보를 지식으로 취급하기도 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 지식(knowledge) : 일반적으로 사용할 수 있는 정보, 또는 어떤 대상에 관하여 알고 있는 이해이다. 
 
@@ -150,32 +141,7 @@
 
 ## 기초 통계학 용어
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-변량(variate) : 자료를 수량으로 나타낸 것이다.
-
-</blockquote>
-
-예시 
-
-학생들의 수학 점수를 숫자로 환원하여 나열한 것 
-
-$$ 92, 84, 88, 45, 12, 29, 39, \dots $$
-
-은 변량이다.
-
-예시 
-
-각 국가별 행복도를 수치로 환원하여 나열한 것
-
-$$ 15, 82, 10, 99, 28, \dots $$
-
-은 변량이다.
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
 
 변량(variate) : 자료를 수량으로 나타낸 것이다.
 
@@ -197,8 +163,7 @@ $$ 15, 82, 10, 99, 28, \dots $$
 
   은 변량이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 계급(class) : 변량을 일정한 간격으로 나눈 구간이다. 
 
@@ -247,8 +212,7 @@ $90$ 점대 $x_n$ 명
 
   와 같이 일정 구간으로 나눈 것은 계급이라 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 계급의 크기(class interval) : 변량을 나눈 간격이다.
 
@@ -273,8 +237,7 @@ $90$ 점대 $x_n$ 명
 
 ## 대표값
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 대표값(representative value) : 어떤 데이터를 대표하는 값이다. 
 
@@ -295,8 +258,7 @@ $90$ 점대 $x_n$ 명
 
   또한 백분위수, 사분위수, 절사평균 등의 대표값이 존재한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 계급값(class mark) : 계급을 대표하는 값으로써 계급의 중앙값이다.
 
@@ -317,8 +279,7 @@ $90$ 점대 $x_n$ 명
 
   계급값은 각각 $5, 15$ 이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 평균(mean) : 데이터를 모두 더한 것을 데이터의 개수로 나눈 값이다. 
 
@@ -617,7 +578,7 @@ $$ \therefore  \sigma _{B} = \sqrt[]{V_B} =  \sqrt[]{208600} \approx  456 $$
 
 # 도수분포
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 도수(frequency) : 각 계급에 속하는 변량의 개수이다. 
 
@@ -633,7 +594,7 @@ $$ \therefore  \sigma _{B} = \sqrt[]{V_B} =  \sqrt[]{208600} \approx  456 $$
 
   도수가 $2$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 도수분포표(frequency distribution) : 자료를 몇 개의 계급으로 나누고 각 계급의 도수를 정리한 표다.
 
@@ -655,7 +616,7 @@ $$ \therefore  \sigma _{B} = \sqrt[]{V_B} =  \sqrt[]{208600} \approx  456 $$
 
   | 20 ~ 30 | 10 |
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 히스토그램(histogram) : 도수분포표의 각 계급의 끝값을 가로축에 표시하고 도수를 세로축에 표시하여 직사각형으로 나타낸 그래프이다. 
 
@@ -689,7 +650,7 @@ $$ \therefore  \sigma _{B} = \sqrt[]{V_B} =  \sqrt[]{208600} \approx  456 $$
 
   ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Example_histogram.png/220px-Example_histogram.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 상대도수(relative frequency) : 전체 도수에 대한 각 계급의 도수의 비율
 
@@ -725,7 +686,7 @@ $$ \boxed{(\text{계급의 상대도수}) = \dfrac{(\text{계급의 도수})}{(\
 
 # 도수분포의 평균, 분산, 표준편차(산포도 측정)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 산포도(dispersion, variability, scatter, spread) : 데이터가 흩어져있는 정도를 나타내는 용어이다.
 
@@ -735,7 +696,7 @@ $$ \boxed{(\text{계급의 상대도수}) = \dfrac{(\text{계급의 도수})}{(\
 
   범위, 분산, 표준편차, 절대 편차 등이 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 편차(deviation) : 자료의 산포도를 나타내는 수치로써 
 
@@ -773,7 +734,7 @@ $$ \boxed{(\text{계급의 상대도수}) = \dfrac{(\text{계급의 도수})}{(\
 
   | 회사 $B$ 의 편차 | $-280$ | $+220$ | $-30$ | $+720$ | $-630$ | 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 분산(variance) : 어떤 대상의 산포도를 나타내는 수치로써 
 
@@ -811,7 +772,7 @@ $$\boxed{V = \frac{(편차)^2의 총합}{(변량)의 개수}} $$
 
   그러므로 회사 $A$ 의 직원들간의 연봉 차이가 회사 $B$ 의 직원들간의 연봉 차이보다 더 많다고 할 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 표준편차(standard deviation) : 어떤 대상의 산포도를 나타내는 수치로써 
 

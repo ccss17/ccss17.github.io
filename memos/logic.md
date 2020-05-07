@@ -18,11 +18,7 @@
 
 # 논리학
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 언어 : 인간이 자신의 마음 속 내적 대상을 다른 대상에게 전달하기 위하여 외적으로 표현한 것이다. 
 
@@ -39,18 +35,13 @@
 
 - 그러므로 언어의 본질, 근원, 구조, 의미, 쓰임새를 연구하는 일은 인간의 마음을 연구하는 일과 다름 없다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 단어 : 
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 문장 : 
 
@@ -63,8 +54,7 @@
 =======
 - 통상 문장의 종류에는 서술문, 의문문, 명령문, 기원문, 감탄문이 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 사고 전달의 최소단위 : 대상이 마음 속 사고를 다른 대상에게 전달하는 최소단위는 문장이다. 
 
@@ -149,8 +139,7 @@
 
     "나랑 같이 밥 먹으러 가자" 는 문장을 생각하자. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 명제(proposition) : 뜻이 분명하여 참, 거짓을 판단할 수 있는 문장이다. 
 
@@ -223,8 +212,7 @@
 
     "배고플 때만 밥을 먹는다." 는 명제는 "밥을 먹었다면 배고팠던 것이다." 와 동치이며 대우 "배고프지 않으면 밥을 먹지 않는다." 로 변형될 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 조건(condition) : 변수를 포함하는 문장이나 식 중에서 변수의 값에 따라 참, 거짓을 명확하게 판별할 수 있는 것이다. 
 
@@ -241,8 +229,7 @@
 
   "$x$ 는 $10$ 보다 작은 소수이다." 는 명제가 아니지만 변수 $x$ 에 따라 참이 될 수도 있고 거짓이 될 수도 있다. 이런 문장을 조건이라 한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 진리값 : 어떤 명제가 논리적으로 갖는 값이다. 
 
@@ -263,8 +250,7 @@
 
 - 비표준 논리에서는 진리값이 $3$ 개 이상이 될 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 진리집합(truth set) : 전체집합 $U$ 의 원소 중에서 조건을 참이 되게 하는 원소들의 집합이다. 
 
@@ -289,8 +275,7 @@
 
   조건 "$x$ 는 $10$ 보다 작은 소수이다." 을 참이 되게 하는 모든 원소의 집합은 $\{2,3,5,7\}$ 이다. 따라서 이 조건의 진리집합은 $\{2,3,5,7\}$ 이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 추리 : 인간의 마음 속 사유 과정 속에서 하나 이상의 믿음이 다른 믿음을 유도해내는 정신적인 과정이다.
 
@@ -319,8 +304,7 @@
 
   하지만 오렌지에 비타민C 가 풍부하여 괴혈병을 예방해준다는 지식은 반응적 사고로써 획득될 수 없고 반드시 추리과정을 거쳐야 한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 추론(inference) : 인간의 마음 속에 존재하는 추리를 언어로 객관화하여 외적으로 표현한 것이다. 
 
@@ -417,8 +401,7 @@
 
   결론 : 어떤 사람은 도덕적인 사람이 아니다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 논증 : 일정한 근거를 들어 주장을 펼쳐서 추론을 언어적으로 표현한 것이다. 
 
@@ -451,8 +434,7 @@
 
 - 타당한 논증이 되기 위해서는 전제들이 모두 참일 때 결론도 참이어야 한다. 반면 전제들이 전부 참인데도 결론이 거짓일 때 그 논증을 부당하다고 말한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 논리학 : 올바른 추론의 형식을 연구하는 학문이다. 
 
@@ -485,8 +467,7 @@
 
 ## 논리학에 관하여 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 논리학의 특징 
 
@@ -519,8 +500,7 @@
 
   논리학은 참거짓이 이미 판정된 명제를 가지고 추론 내용이 아닌 추론 형식이 올바른지 연구하는 것이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 논리학에서의 올바르다 : 논리학은 연역 추론과 귀납 추론에 대하여 다음과 같이 정의한다. 
 
@@ -537,8 +517,7 @@
 
 - 올바른 귀납 추론 : 귀납적으로 건전한 추론, 또는 귀납적으로 강한 추론이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 연역적으로 건전 타당한(sound and valid) 추론 : 추론의 형식이 타당하고 전제가 참일 때, 결론이 반드시 참이되는 연역추론이다.
 
@@ -631,8 +610,7 @@ $$ r \to q $$
 
   결론 - 모든 독수리는 새이다.(참)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 귀납적으로 건전한(inductively sound) 추론, 또는 귀납적으로 강한(inductively strong) 추론 : 전제가 제시하는 증거의 강도가 강해 그 전제로부터 결론이 도출될 확률이 1 에 가까운 추론이다. 
 
@@ -640,11 +618,7 @@ $$ r \to q $$
 
 ## 논리학 기본 원리 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 논리학의 기본원리 : 아리스토텔레스는 다음과 같은 논리학의 세 가지 근본원리를 주장했다. 
 
@@ -737,8 +711,7 @@ $$ r \to q $$
 
 ## 논리학 종류
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 비형식 논리학 : 일상 언어가 타당하고 합당한 논증으로 성립하는지 따지는 학문이다.
 
@@ -751,8 +724,7 @@ $$ r \to q $$
 =======
 - 순환논증의 오류, 논점일탈의 오류, 인신공격의 오류, 허수아비 공격의 오류 등이 비형식 논리학에서 다루는 것들이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 형식 논리학 : 논증을 구성하는 명제의 내용이 아닌 논증 형식을 연구하는 학문이다. 
 
@@ -841,8 +813,7 @@ $$ r \to q $$
 
     - 집합론 : 집합론은 넓은 의미에서 논리학에 포함된다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 논리학의 역사 
 
@@ -875,8 +846,7 @@ $$ r \to q $$
 
 # 오류론 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 오류론 : 명제의 오류의 유형을 검토하고 분류하는 논리학 분야이다. 
 
@@ -893,8 +863,7 @@ $$ r \to q $$
 
   - 그 충돌이 작으면 괜찮으나 크면 사람이 죽거나 다칠 수도 있기 때문에 올바른 추론을 하는 것은 중요하다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 설득력 있는 추론 : 통상적으로 설득력 있는 추론은 다음과 같은 조건을 지닌다.
 
@@ -908,11 +877,7 @@ $$ r \to q $$
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 설득력 없는 추론 : 오류를 지니는 추론으로써 사람들이 받아들일 수 없거나 받아들여서는 안되는 추론이다.
 
@@ -924,11 +889,7 @@ $$ r \to q $$
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 형식적 오류 : 추론의 형식적 기준을 위배하여 발생하는 오류이다.
 
@@ -945,8 +906,7 @@ $$ r \to q $$
 
 - 형식적 오류는 확연하게 구분되는 성질이 있어서 분류할 때 문제가 되지 않는다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 비형식적 오류 : 잘못된 추론을 받아들이게 만드는 비형식적 요소로 인하여 발생하는 오류이다. 
 
@@ -986,11 +946,7 @@ $$ r \to q $$
 
 > 또한 이것을 응용하면 사람들을 선동하는데에 악용될 수 있다. 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 심리적 오류 : 강한 감정, 감정 혼동에 이끌려 추론을 받아들임으로써 발생하는 오류이다.
 
@@ -1122,11 +1078,7 @@ $$ r \to q $$
 
 ## 유추
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 유추(analogy) : 개별적인 특수한 것에서 또 다른 특수한 것을 이끌어내는 추론이다. 
 
@@ -1147,8 +1099,7 @@ $$ r \to q $$
 
 ## 귀납논증
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 귀납(induction) : 개별적인 특수한 것에서 그러한 것들이 포함되는 일반적인 것을 이끌어내는 사유 작용이다. 
 
@@ -1257,8 +1208,7 @@ $$ r \to q $$
 
   - 한편 데이터의 개수와 귀납논증의 정당성이 관계있는 것은 아니다. 뉴턴은 사과가 땅에 떨어지는 사건을 보고서 만유인력의 법칙의 존재를 직관적으로 통찰하여 깨달았다. 반면 수많은 정황증거가 쏟아진 사건에 연루된 용의자일지라도 반례가 되는 물증 하나로 무죄임이 판명날 때도 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 완전귀납 : 모든 특수한 경우를 완전히 들어서 확실하게 일반적인 것을 주장하는 귀납법이다. 
 
@@ -1271,28 +1221,19 @@ $$ r \to q $$
 =======
 - 현실적으로 대부분의 경우 불가능하다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 불완전귀납 : 특수한 경우를 모두 들지 못하고 일반적인 것을 주장하는 귀납법이다. 
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 귀납 추론의 종류 : 인과적 귀납법, 매거법, 통계적 삼단논법이 있다. 
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 인과적 귀납법 : 존 스튜어트 밀이 <논리의 구조>의 제8장 "실증적 4가지 방법" 에서 소개한 다섯 가지 귀납의 방법이다.
 
@@ -1309,8 +1250,7 @@ $$ r \to q $$
 
 ## 연역논증
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 연역(deduction) : 이미 알고 있는 명제(판단)을 근거로 새로운 판단을 유도하는 추론이다.
 
@@ -1359,8 +1299,7 @@ $$ r \to q $$
 
   - **한 인간이 알고 있는 모든 지식과 그 지식들이 획득된 경로를 그리기 위한 방법을 어떻게 설계해야 좋을까?**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 연역논증 규칙 : 수학 증명에서 자주 사용되는 논리 규칙은 다음 세 가지가 있다. 
 
@@ -1393,8 +1332,7 @@ $$ r \to q $$
 
   - 즉, 원 명제가 참이면 대우 명제도 참이고 원 명제가 거짓이면 대우 명제도 거짓이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정언 논리 : 아리스토텔레스가 개발한 정언 명제를 대상으로 하는 논리 체계이다.
 
@@ -1407,8 +1345,7 @@ $$ r \to q $$
 =======
 - 삼단 논법이 대표적 예이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 현대 논리학 : 조지 불 및 프레게 등이 수리 논리학을 도구 삼아 발전시킨 논리학이다.
 
@@ -1447,8 +1384,7 @@ $$ r \to q $$
 
 ### 귀납과 연역
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 간접추리의 방향 
 
@@ -1465,8 +1401,7 @@ $$ r \to q $$
 
 - 연역논증 - 일반적인 것에서 특수한 것을 도출하는 추론방식이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 전제와 결론 
 
@@ -1483,8 +1418,7 @@ $$ r \to q $$
 
 - 연역논증 - 서로간의 필연성이 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 올바른 추론
 

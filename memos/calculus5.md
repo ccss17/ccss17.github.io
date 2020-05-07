@@ -28,11 +28,7 @@
 
 # 여러 가지 함수의 부정적분 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 $n$ 차 단항 함수 $y=x^n$ 의 부정적분 : $n \neq 1$ 인 실수일 때
 
@@ -105,8 +101,7 @@ $$
 
 ## 지수함수의 부정적분
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 지수함수 $y = e^x$ 의 부정적분 : 
 
@@ -141,8 +136,7 @@ $$ \int_{}^{}e ^{x+2}dx = \int_{}^{}e ^{2} \cdot e ^{x}dx=e ^{2}\int_{}^{}e ^{x}
 
   $$ \int_{}^{}e ^{x+2}dx = \int_{}^{}e ^{2} \cdot e ^{x}dx=e ^{2}\int_{}^{}e ^{x}dx = e ^{2} \cdot e ^{x}+C = e ^{x+2}+C $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 지수함수 $y = a^x$ 의 부정적분 : 
 
@@ -193,8 +187,7 @@ $$ \int_{}^{}3 ^{x-2}dx = \int_{}^{}3 ^{x} \cdot 3 ^{-2}dx = \frac{1}{9}\int_{}^
 
 ## 삼각함수의 부정적분
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 삼각함수의 부정적분 : 
 
@@ -267,8 +260,7 @@ $$ \int_{}^{}(3 \sin x-\cos x)dx = -3 \cos x-\sin x+C $$
 
   $$ \int_{}^{}(3 \sin x-\cos x)dx = -3 \cos x-\sin x+C $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 함수 $\tan x$ 의 부정적분 : 
 
@@ -311,8 +303,7 @@ $$ \therefore \int_{}^{}\tan xdx = - \ln |\cos x|+C $$
 
   $$ \therefore \int_{}^{}\tan xdx = - \ln |\cos x|+C $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 함수 $\cot x$ 의 부정적분 : 
 
@@ -320,11 +311,7 @@ $$ \int_{}^{}\cot xdx = \ln |\sin x| +C $$
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 함수 $\sec x$ 의 부정적분 : 
 
@@ -332,11 +319,7 @@ $$ \int_{}^{}\sec xdx = \ln |\sec x+\tan x|+C $$
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 함수 $\csc xdx$ 의 부정적분 :
 
@@ -346,11 +329,7 @@ $$ \int_{}^{}\csc xdx = -\ln |\csc x+\cot x| $$
 
 # 치환적분법 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 적분변수의 치환(역연쇄법칙, anti chain rule) : 적분변수 $x$ 를 새로운 변수 $t$ 로 바꾸는 것이다.
 
@@ -407,8 +386,7 @@ $$ \therefore \int_{}^{}f(x)dx = \int_{}^{}f(g(t))g'(t)dt $$ $$
 
   - $\displaystyle \int_{}^{}$ 안에서 $\dfrac{dt}{dt}$ 에 대한 곱하기, 약분, 결합법칙을 자유롭게 적용할 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 치환적분법(integration by substitution) : 적분변수의 치환을 이용하여 합성함수 형태의 적분식을 쉬운 적분식으로 변환하여 적분하는 방법으로써 
 
@@ -502,11 +480,7 @@ $$ = \frac{1}{3} \int_{}^{}t ^{2}dt = \frac{1}{3} \cdot \frac{1}{3} t ^{3}+C = \
 
 피적분함수의 형태에 따라 다음의 경우로 나누어 정의한다.
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 피적분함수가 $f(g(x))g'(x)$ 꼴인 경우 : 함수 $f(x)$ 의 한 부정적분이 $F(x)$ 이고 $g(x) = t$ 라고 하면
 
@@ -623,8 +597,7 @@ $$ \therefore \int_{}^{}x(x ^{2}+1)^{5}dx = \frac{1}{12}(x ^{2}+1)^{6}+C $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 피적분함수가 $\frac{f'(x)}{f(x)}$ 꼴인 경우 : 
 
@@ -678,11 +651,7 @@ $$ \int_{}^{}\frac{x^2}{x^3-4}dx = \frac{1}{3} \int_{}^{}\frac{3x^2}{x^3-4}dx=\f
 
 피적분함수가 $\frac{f'(x)}{f(x)}$ 꼴이 아닌 유리함수의 부정적분은 분모, 분자의 차수에 따라 다음과 같이 구한다.
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 (분자의 차수) $<$ (분모의 차수) 이고 분모가 인수분해되는 경우 : 피적분함수를 부분분수로 변형하여 부정적분을 구한다.
 
@@ -690,11 +659,7 @@ $$ \int_{}^{}\frac{x^2}{x^3-4}dx = \frac{1}{3} \int_{}^{}\frac{3x^2}{x^3-4}dx=\f
 
 </blockquote>
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 (분자의 차수) $\geq$ (분모의 차수) 인 경우 : 분자를 분모로 나누어 몫과 나머지의 꼴로 나타내어 부정적분을 구한다.
 
@@ -704,11 +669,7 @@ $$ \int_{}^{}\frac{x^2}{x^3-4}dx = \frac{1}{3} \int_{}^{}\frac{3x^2}{x^3-4}dx=\f
 
 ## 부분적분법 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 부분적분법(integration by parts) : 두 함수 $f(x),g(x)$ 가 미분가능할 때 
 
@@ -797,8 +758,7 @@ $$ \therefore  \int_{}^{}x e ^{x}dx = xe ^{x}- e ^{x} + C$$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 부분적분법의 활용
 
@@ -891,8 +851,7 @@ $$ \therefore  \int_{}^{}x e ^{x}dx = xe ^{x}- e ^{x} + C$$
 
     를 최대한 간단하게 할 수 있는 $u, v'$ 를 택하면 된다는 것이다. 그러므로 일반적으로 미분하면 간단해지는 것을 $u$ 로 두고 나머지 것들을 $v'$ 로 택한다. 또한 일반적으로 미분하면 간단해지는 함수의 우선순위는 로그함수, 다항함수, 삼각함수, 지수함수이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 자연로그함수 $\ln x$ 의 부정적분 : 
 
@@ -939,8 +898,7 @@ $$ \therefore \int_{}^{}\ln xdx = x \ln x - x + C $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 로그함수 $\log_{a} x$ 의 부정적분 : 
 
@@ -991,8 +949,7 @@ $$ \therefore \int_{}^{}\log_{a}  xdx = x \log_{a}  x - \frac{x}{\ln a} + C $$
 
 ## 치환적분법, 부분적분법으로의 정적분
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 치환적분법으로의 정적분 : 폐구간 $[a,b]$ 에서 연속인 함수 $f(x)$ 에 대하여 미분가능한 함수 $x=g(t)$ 의 도함수 $g'(t)$ 가 폐구간 $[\alpha, \beta]$ 에서 연속이고 $x=g(t)$ 가 적분 구간에서 일대일대응이며 $a= g(\alpha), b = g(\beta)$ 이면 
 
@@ -1093,8 +1050,7 @@ $$ \int_{0}^{4}\sqrt[]{2x+1}dx = \int_{1}^{9}\sqrt[]{t} \frac{1}{2}dt = \frac{1}
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 부분적분법으로의 정적분 : 폐구간 $[a,b]$ 에서 두 함수 $f(x), g(x)$ 가 미분가능하고 $f'(x), g'(x)$ 가 연속일 때 
 
@@ -1191,8 +1147,7 @@ $$ \therefore  \int_{0}^{1}x e ^{x}dx = (e - 0) - \bigg[e^x\bigg]^{1}_{0} = e - 
 
 # 속도와 거리 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정적분으로 구하는 속도 및 거리 
 
@@ -1202,11 +1157,7 @@ $$ \therefore  \int_{0}^{1}x e ^{x}dx = (e - 0) - \bigg[e^x\bigg]^{1}_{0} = e - 
 
 # 역함수의 부정적분과 정적분 
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 역함수의 부정적분 : 함수 $f(x)$ 의 역함수 $y=f ^{-1}(x)$ 에 대하여 $f ^{-1}(x)$ 의 부정적분은 
 
@@ -1271,8 +1222,7 @@ $$ \therefore \int_{}^{}f ^{-1}(x)dx = xf ^{-1}(x) - \int_{}^{}f(y)dy $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 역함수의 정적분 : 
 
@@ -1282,11 +1232,7 @@ $$ \therefore \int_{}^{}f ^{-1}(x)dx = xf ^{-1}(x) - \int_{}^{}f(y)dy $$
 
 # 미분방정식
 
-<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-=======
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
->>>>>>> correct
 
 미분방정식(differential equation) : 함수와 그 도함수의 관계를 나타내는 방정식이다. 
 
