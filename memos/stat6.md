@@ -1,6 +1,6 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 ## **통계 메모**
 
@@ -24,19 +24,19 @@
 
 # 공분산과 상관계수 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 양의 관계 : 두 변수에 대하여 한 변수가 증가할 때 다른 변수가 증가하고 한 변수가 감소할 때 다른 변수도 감소하는 관계이다. 
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 음의 관계 : 두 변수에 대하여 한 변수가 증가할 때 다른 변수가 감소하고 한 변수가 감소할 때 다른 변수가 증가하는 관계이다. 
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 산점도(scatter plot, scatter graph, scatter chart, scattergram) : 직교 좌표계를 이용해 두 변수 간의 관계를 나타내는 방법이다.
 
@@ -64,7 +64,7 @@
 
   위 산점도는 선형적이지가 않아서 양의 관계인지 음의 관계인지 파악하기 힘들다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 공분산(covariance) : 두 가지 데이터의 직선관계가 어느 정도인지를 나타내는 통계값으로써 
 
@@ -204,7 +204,7 @@ $$ \text{Cov}(X, Y) = \dfrac{1}{n} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}
 
   | 평균 월 매출 | $3666. 66\dots$ 백만원  |$138.89$ 백만원 $^{2}$  | 약 $1200$ 백만원  ||
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 편차제곱의 합 표기 : 데이터 $x, y$ 와 그 각각의 평균 $\mu _{x}, \mu _{y}$ 에 대하여 편차제곱의 합을 일반적으로 $S _{ab}$ 의 형식으로 다음과 같이 표기한다.
 
@@ -236,7 +236,7 @@ $$ S _{xy} = \sum_{i=1}^{n}(x_i - \mu _{x}  )(y_i - \mu _{y}  )  = \sum_{i=1}^{n
 
   이다. ■ 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 상관계수(correlation coefficient) : 측정단위에 영향을 받아 선형관계의 강도를 명확히 알 수 없는 공분산의 단점을 해결하여 직선관계의 정도까지 나타내줄 수 있는 통계값으로써 
 
@@ -376,7 +376,7 @@ $$ \rho = \dfrac{1}{n} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}
 
   또 월매출과 광고비는 약한 음의 상관관계를 갖는다고 볼 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 표본공분산(sample covariance) : 추출된 표본의 두 가지 데이터의 직선관계가 어느 정도인지를 나타내는 통계값으로써 
 
@@ -456,7 +456,7 @@ $$ \text{Cov}(X, Y) = \dfrac{1}{n-1} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{
 
   으로 공분산이 변한다. 따라서 공분산의 절댓값 크기에서 의미를 찾으려 들면 안된다! 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 표본상관계수(sample correlation coefficient) : 측정단위에 영향을 받아 선형관계의 강도를 명확히 알 수 없는 공분산의 단점을 해결하여 직선관계의 정도까지 나타내줄 수 있는 추출된 표본의 통계값으로써 
 
@@ -480,7 +480,7 @@ $$ \rho = \dfrac{1}{n-1} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{
 
     그렇다면 수명을 늘리기 위해 휴대전화 보급을 늘려야 하는가? 이 두 변수는 인과관계가 없기 때문에 올바르지 않는 결론이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 가능도(likelihood) : 
 
@@ -488,7 +488,7 @@ $$ \rho = \dfrac{1}{n-1} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{
 
 **구체화 필요**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 최대가능도추정(maximum likelihood estimation) : 
 

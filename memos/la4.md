@@ -1,6 +1,6 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 ## **선형대수학 메모**
 
@@ -26,7 +26,7 @@
 
 ## 벡터 공간과 부분 공간
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터 공간(vector space) : 벡터의 집합이다.
 
@@ -64,7 +64,7 @@
 
   그래서 우리가 자주 다뤘던 $\R ^2, \R ^3$ 가 벡터 공간이었던 것이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 부분 공간(subspaces) : 다음 $3$ 가지 성질을 만족하는 벡터 공간 $V$ 의 부분 집합 $H$ 이다.
 
@@ -84,7 +84,7 @@
 
 - 역으로 모든 벡터공간은 자기 자신의 부분공간이거나 더 큰 벡터공간의 부분공간이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 영 부분 공간(zero subspace) : 벡터 공간 $V$ 에 속한 $0$벡터만으로 이루어진 집합이다. 
 
@@ -96,7 +96,7 @@
 
 ### 벡터들의 집합에 의해 생성되는 부분 공간
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 **Theorem 1** 만약 $v_1, \dots, v_p$ 들이 벡터 공간 $V$ 에 속한 벡터들이면 $Span\{v_1, \dots, v_p\}$ 는 $V$ 의 부분공간이다. 
 
@@ -110,7 +110,7 @@
 
 ### 행렬의 영 공간
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 영 공간(null space) : $m \times n$ 행렬 $A$ 의 영 공간 $Nul A$ 은 동차 방정식 $Ax=0$ 의 해들의 집합이다.
 
@@ -120,7 +120,7 @@
 
 - $Nul A$ 는 선형 변환 $x \mapsto Ax$ 를 통해서 $0$ 으로 보내지는 $\R ^n$ 에 속한 $x$ 들의 집합니다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 **Theorem 2** $m \times n$ 행렬 $A$ 의 영 공간은 $\R ^n$ 의 부분공간이다. $n$ 개의 미지수를 가지는 $m$ 개의 방정식인 $Ax = 0$ 의 모든 해의 집합은 $\R ^n$ 의 부분집합이다. 
 
@@ -128,7 +128,7 @@
 
 ### 행렬의 열 공간
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 열 공간(colum space) : $m \times n$ 행렬 $A$ 의 열 공간은 $A$ 의 열들의 선형 결합으로 만들 수 있는 벡터들의 집합이다.
 
@@ -144,7 +144,7 @@
 
   - $Col A = \{ b : 어떤 x \in \R ^n, b = Ax\}$ (단, $x$ 는 $\R ^n$ 에 속한 임의의 벡터이다)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 **Theorem 3** $m \times n$ 행렬 $A$ 의 열공간은 $\R ^m$ 의 부분공간이다.
 
@@ -152,7 +152,7 @@
 
 ### 선형 변환의 핵과 치역
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 선형변환(linear transformation) : 벡터 공간 $V$ 에서 벡터 공간 $W$ 로의 선형변환 $T$ 는 $V$ 에 속한 벡터를 $W$ 에 속한 벡터 $T(x)$ 로 할당하는 규칙이다.
 
@@ -212,7 +212,7 @@
 
   물론 표준좌표계에서 $b$ 는 $(1, 5)$ 위치에 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 선형변환 $T$ 의 핵(kernel) : $T(u)=0$ 이 되는 $V$ 에 속한 벡터 $u$ 들의 집합이다. 
 
@@ -222,7 +222,7 @@
 
   동차선형 미분방정식의 모든 해 집합은 선형 변환의 핵이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 선형변환 $T$ 의 치역(range) : $V$ 에 속한 어떤 $x$ 에 대하여 $W$ 에 속한 벡터 $T(x)$ 의 집합이다. 
 
@@ -244,7 +244,7 @@
 
 ## 선형 독립 집합; 기저 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 선형 독립(linearly independent) : 다음 조건을 만족하는 벡터 공간 $V$ 에 속한 벡터들 $\{v_1, \dots, v_p\}$ 는 선형 독립이다.
 
@@ -276,7 +276,7 @@
 
   이므로 두 벡터 $u, v$ 는 선형독립이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 선형 종속(linearly dependent) : 선형 독립의 정의에서 방정식 (1) 이 자명한 해 이외의 해를 가지면 벡터집합 $[v_1, \dots, v_p]$ 은 선형 종속이다. 
 
@@ -320,7 +320,7 @@
 
   따라서 이 열들은 선형종속이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 **Theorem 4** $v_1 \neq 0$ 인 벡터집합 $\{v_1, \dots, v_p\}$ 이 선형종속이 되는 필요충분조건은 벡터 $v_j(j>1)$ 를 $v_1, \dots, v_{j-1}$  들의 선형결합으로 표현할 수 있는 것이다. 
 
@@ -332,7 +332,7 @@
 
   - 반면 임의의 실수 $t$ 에 대하여 $\sin 2t=2 \sin t \cos t$ 이기 때문에 $\{\sin t \cos t, \sin 2t\}$ 는 선형종속이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 기저(basis) : $H$ 를 벡터 공간 $V$의 부분공간이라 할 때 다음 두 조건을 만족하는 벡터 집합 $\Beta = \{b_1, \dots, b_p\}$ 는 $H$ 의 기저이다.
 
@@ -348,7 +348,7 @@
 
 ### 형성집합정리
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 **Theorem 5** 생성집합이론(Spanning Set Theorem) : $S = \{v_1, \dots, v_p\}$ 를 $V$ 에 속한 집합이라 하고 $H=Span\{v_1,\dots,v_p\}$ 이라 하자.
 
@@ -360,7 +360,7 @@
 
 ## 좌표 시스템
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 유일 표현 정리 : $B = \{b_1, \dots, b_n\}$ 가 벡터 공간 $V$ 의 기저일 때, 
 
@@ -392,7 +392,7 @@ $$ x = c_1b_1 + \dots+c_nb_n $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 기저 $B$ 에 대한 $x$ 의 좌표 : $B = \{b_1, \dots, b_n\}$ 가 벡터 공간 $V$ 의 기저이고 $x$ 를 $V$ 에 속한 벡터라 할 때 
 
@@ -436,13 +436,13 @@ $$ x = c_1b_1 + \dots+c_nb_n $$
 
   $$ [x]_{B} =x $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 동형사상(isomorphism) : 벡터 공간 $V$ 에서 벡터 공간 $W$ 로의 일대일 선형 변환이다. 
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 좌표 사상 : 벡터 공간 $V$ 의 기저 $B = \{b_1, \dots, b_n\}$ 에 대하여 벡터 $x$ 를 $B$ 의 좌표로 변환하는 사상
 
@@ -470,7 +470,7 @@ $$ x \mapsto [x] _{B}$$
 
 ## 벡터 공간의 차원
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 기저 $B$ 보다 많은 벡터를 가지는 집합에 대한 선형종속성 : 벡터 공간 $V$ 가 기저 $B = \{b_1, \dots, b_n\}$ 을 가질 때
 
@@ -482,19 +482,19 @@ $n$ 보다 더 많은 벡터를 가지는 $V$ 에 속한 어떤 집합도 선형
 
   **구체화 필요** 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터 공간 $V$ 의 기저들의 벡터 개수 통일성 : 벡터 공간 $V$ 의 어떤 기저가 $n$ 개의 벡터를 가지면 $V$ 내의 모든 기저가 $n$ 개의 벡터를 가진다. 
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 유한 차원(finite-dimensional) : 유한 개의 벡터로 이루어진 기저 $B$ 로 형성된 벡터 공간 $V$ 을 뜻한다.
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 차원(dimension) : 벡터 공간 $V$ 를 형성한 기저 $B$ 의 벡터의 원소의 개수이다.
 
@@ -540,13 +540,13 @@ $n$ 보다 더 많은 벡터를 가지는 $V$ 에 속한 어떤 집합도 선형
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 무한 차원(finite-dimensional) : 무한 개의 벡터로 이루어진 기저 $B$ 로 형성된 벡터 공간 $V$ 을 뜻한다.
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 유한 차원 벡터 공간의 부분 공간의 차원에 대한 정리 : $H$ 를 유한 차원 벡터 공간 $V$ 의 부분공간이라 하면 
 
@@ -560,7 +560,7 @@ $$ \dim H \leq \dim V $$
 
   **구체화 필요** 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 기저 정리 : $p \geq 1$ 차원 벡터 공간 $V$ 에 대하여,
 
@@ -572,13 +572,13 @@ $p$ 개의 원소를 가진 $V$ 안의 임의의 선형 독립 집합은 $V$ 에
 
   **구체화 필요** 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 영공간의 차원 : $Nul A$ 의 차원은 방정식 $Ax = 0$ 의 자유변수의 개수이다. 
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 열공간의 차원 : $Col A$ 의 차원은 방정식 $Ax = 0$ 의 추축열의 개수이다. 
 
@@ -586,7 +586,7 @@ $p$ 개의 원소를 가진 $V$ 안의 임의의 선형 독립 집합은 $V$ 에
 
 ## 계수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 행공간(row space) : 행렬의 행벡터들의 선형결합으로 만들 수 있는 집합이다. 
 
@@ -618,7 +618,7 @@ $p$ 개의 원소를 가진 $V$ 안의 임의의 선형 독립 집합은 $V$ 에
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 계수(rank) : 행렬 $A$ 의 계수는 $A$ 의 열 공간의 차원
 
@@ -628,7 +628,7 @@ $\dim  Col A$
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 계수 정리 : $m \times n$ 행렬 $A$ 에 대하여 
 

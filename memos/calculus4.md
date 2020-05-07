@@ -1,6 +1,6 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 ## **미적분 메모**
 
@@ -26,7 +26,7 @@
 
 # 지수함수와 로그함수의 극한
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 지수함수 $y=a ^{x}(a>0, a \neq 1)$ 의 극한 : 다음과 같이 $x$ 가 상수에 한없이 가까워지는 경우와 무한대로 발산하는 경우로 나누어서 생각할 수 있다. 
 
@@ -96,7 +96,7 @@
 
       임을 알 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 로그함수 $y= \log_{a} x(a>0, a \neq 1)$ 의 극한 : 다음과 같이 $x$ 가 $0$ 이 아닌 상수에 한없이 가까워지는 경우와 무한대로 발산하는 경우 또는 $0$ 에 한없이 가까워지는 경우로 나누어서 생각할 수 있다. 
 
@@ -168,7 +168,7 @@
 
 ## 무리수 $e$ 와 자연로그 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 무리수 $e$ : 무리수 $e$ 는 다음과 같이 정의한다. 
 
@@ -228,7 +228,7 @@ $$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
 
   $$ \lim_{x \to \infty} (1+\frac{2}{x}) ^{x} = \lim_{x \to \infty} \{(1+\frac{2}{x})^{\frac{x}{2}}\} ^{2} = e ^{2} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 자연로그 : 무리수 $e$ 를 밑으로 하는 로그 $\log_{e} x$ 를 $x$ 의 자연로그라 한다. 
 
@@ -244,7 +244,7 @@ $$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
 
   - $\ln 1 = \log_{e} 1 = 0$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 무리수 $e$ 를 이용한 지수함수와 로그함수의 극한 : $a>0, a \neq 0$ 일 때 다음이 성립한다. 
 
@@ -284,7 +284,7 @@ $$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
 
 ## 지수함수와 로그함수의 미분 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 지수함수 $y=a ^{x}$ 의 도함수 : 지수함수 $y=a ^{x}$ 의 도함수는 
 
@@ -310,7 +310,7 @@ $$ (a ^{x})' = a ^{x} \ln a $$
 
     $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 $y = e ^{x}$ 의 도함수 : 지수함수 도함수의 정의에 따라 밑이 $e$ 일 때, 즉 $a=e$ 일 때 지수함수 $y = e ^{x}$ 의 도함수는 
 
@@ -320,7 +320,7 @@ $y = e ^{x}$ 의 도함수 : 지수함수 도함수의 정의에 따라 밑이 $
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 로그함수 $y = \log_{a} x$ 의 도함수 : 로그함수 $y = \log_{a} x(a>0, a \neq 1)$ 의 도함수는 
 
@@ -348,7 +348,7 @@ $$ (\log_{a} x)' = \frac{1}{x \ln a} $$
 
     이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 자연로그함수 $y = \ln x$ 의 도함수 : 로그함수 도함수의 정의에 따라 밑이 $e$ 일 때, 즉 $a=e$ 일 때 자연로그함수 $y = \ln x$ 의 도함수는 
 
@@ -362,7 +362,7 @@ $$ (\ln x)' = \frac{1}{x} $$
 
 지금까지의 로그함수의 미분은 정의역이 양의 실수 집합에서만 성립한다. 그러나 이제 정의역을 확장해보자. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 로그함수 $y = \ln |x|$ 의 도함수 : 로그함수 $y = \ln |x|$ 의 도함수는 
 
@@ -386,7 +386,7 @@ $$ (\ln |x|)' = \frac{1}{x} $$
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 로그함수 $y = \log_{a} |x|$ 의 도함수 : 로그함수 $y = \log_{a} |x|$ 의 도함수는 
 
@@ -410,7 +410,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
 # 삼각함수의 극한
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 삼각함수의 극한 : 임의의 실수 $a$ 에 대하여 삼각함수의 극한은 다음과 같다. 
 
@@ -442,7 +442,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
     가 되어 극한값이 존재하지 않는다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 함수 $\frac{\sin x}{x}, \frac{\tan x}{x}$ 의 극한 : $x$ 가 라디안일 때 다음이 성립한다. 
 
@@ -508,7 +508,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
 # 삼각함수의 도함수 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 함수 $y = \sin x$ 의 도함수 : $y' = \cos x$ 이다. 
 
@@ -538,7 +538,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
     이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 함수 $y = \cos x$ 의 도함수 : $y' = -\sin x$ 이다. 
 
@@ -568,7 +568,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
     이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 함수 $y = \tan x$ 의 도함수 : $y' = \sec ^{2} x$ 이다. 
 
@@ -582,7 +582,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
   $$ \frac{\cos x \cdot \cos x - \sin x \cdot (- \sin x)}{\cos ^{2}x} = \frac{\cos ^{2}x + \sin ^{2}x}{\cos ^{2}x} = \frac{1}{\cos ^{2}x} = \sec ^{2} x$$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 함수 $y = \sec x$ 의 도함수 : $y' = \sec x \tan x$ 이다. 
 
@@ -600,7 +600,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 함수 $y = \csc x$ 의 도함수 : $y' = -\csc x \cot x$ 이다. 
 
@@ -618,7 +618,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 함수 $y = \cot x$ 의 도함수 : $y' = -\csc ^{2} x$ 이다. 
 
@@ -638,7 +638,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
 ## 복잡한 함수의 도함수 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 로그함수 $y = \ln |f(x)|$ 의 도함수 : 함수 $f(x)$ 가 미분가능하고 $f(x) \neq 0$ 일 때 로그함수 $y = \ln |f(x)|$ 의 도함수는
 
@@ -670,7 +670,7 @@ $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)}$$
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 로그함수 $y = \log_{a} |f(x)|(a>0, a \neq 1)$ 의 도함수 : 함수 $f(x)$ 가 미분가능하고 $f(x) \neq 0$ 일 때 로그함수 $y = \ln |f(x)|$ 의 도함수는
 
@@ -692,7 +692,7 @@ $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)\ln a}$$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 로그미분법 : 밑과 지수에 변수가 포함되어 있는 함수나 복잡한 분수함수는 다음과 같이 미분하면 편할 때가 있다. 
 
@@ -738,7 +738,7 @@ $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)\ln a}$$
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 실수일 때, $y' = f'(x) = nx ^{n-1}$ 
 
@@ -778,7 +778,7 @@ $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)\ln a}$$
 
 ## 매개변수로 나타낸 함수의 미분 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 매개변수(parameter)로 나타낸 함수 : 두 변수 $x, y$ 사이의 관계를 변수 $t$ 를 매개로 
 
@@ -788,7 +788,7 @@ $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)\ln a}$$
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 매개변수로 나타낸 함수의 미분법 : 두 함수 $x=f(t),y=g(t)$ 에서 $f(t),g(t)$ 가 각각 $t$ 에 대하여 미분가능하고 $f'(t) \neq 0$ 일 때 
 
@@ -842,7 +842,7 @@ $$ \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{g'(t)}{f'(t)} $$
 
   $$ \therefore \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{\frac{3}{(1+t)^{2}}}{\frac{2}{(1-t)^2}} = \frac{3(1-t)^2}{2(1+t)^2} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 음함수의 미분 : $x$ 에 대한 함수 $y$ 가 음함수 $f(x,y)=0$ 꼴로 주어질 때, $y$ 를 $x$ 에 대한 함수로 보고 각항을 $x$ 에 대하여 미분하여 $\frac{dy}{dx}$ 를 구한다. 
 
@@ -870,7 +870,7 @@ $$ \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{g'(t)}{f'(t)} $$
 
   이다. (단, $y \neq 0$)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 역함수의 도함수 : 미분가능한 함수 $f(x)$ 의 역함수 $f ^{-1}(x)$ 가 존재하고 미분가능할 때 , 함수 $y = f ^{-1}(x)$ 의 도함수는 
 
@@ -954,7 +954,7 @@ $$ \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}} $$
 
   $$ \therefore \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}} = \frac{1}{3y ^{2}} = \frac{1}{3 \sqrt[3]{(x+1) ^{2}}} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이계도함수(second order derivatives) : 함수 $f(x)$ 의 도함수 $f'(x)$ 가 미분가능할 때 $f'(x)$ 의 도함수
 
@@ -992,7 +992,7 @@ $$
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 고계도함수(higher order derivatives) : 함수 $f(x)$ 를 $2$ 번 이상 미분함 함수이다.
 
@@ -1024,7 +1024,7 @@ $$
 
 ## 함수의 그래프 개형 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 곡선의 오목과 볼록의 판정 : 함수 $f(x)$ 가 어떤 구간에서 
 
@@ -1070,7 +1070,7 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
   ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/77051638-f6261a00-6a0e-11ea-84ae-4b9472dcbf7e.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 변곡점(inflection point) : 곡선 $y=f(x)$ 위의 점 $(a, f(a))$ 에 대하여 $x=a$ 의 좌우에서 곡선의 모양이 아래로 볼록에서 위로 볼록으로 바뀌거나 위로 볼록에서 아래로 볼록으로 바뀔 때, 이 점을 곡선 $y=f(x)$ 의 변곡점이라 한다. 
 
@@ -1080,7 +1080,7 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
   바로 위의 예시에서 살펴보았듯이 곡선 $y = x ^{3} - 3 x ^{2}$ 의 변곡점은 $x=1$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 변곡점의 판정 : 함수 $f(x)$ 에서 $f''(a)=0$ 이고 $x=a$ 의 좌우에서 $f''(x)$ 의 부호가 바뀌면 점 $(a, f(a))$ 는 곡선 $y=f(x)$ 의 변곡점이다. 
 
@@ -1094,7 +1094,7 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
   $\therefore$ 변곡점을 확인하기 위하여 $f''(a)=0$ 인 점 좌우에서 $f''(x)$ 의 부호가 바뀌는지 확인해야 한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 점근선(asymptote) : 곡선 위의 점이 특정 방향으로 진행하면서 일정한 직선에 한없이 가까워지지만 만나지는 않을 때 그 직선을 곡선의 점근선이라 한다. 
 
@@ -1134,7 +1134,7 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
 - 사선점근선(oblique asymptote) : 직선 $y=x$ 에 평행한 점근선($y$축에 수직인 점근선)이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 곡선의 추적 : 함수 $f(x)$ 의 그래프 개형을 다음의 요소를 통하여 추적할 수 있다. 
 
@@ -1160,7 +1160,7 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
 # 테일러 급수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 테일러 전개(Taylor's Expansion) : 어떤 함수를 이해하고자 할 때 그 함수를 직접적으로 관찰하는 것이 어려울 경우 그 함수를 다항함수로 근사시켜서 쉽게 관찰하여 이해하고자 하는 방법이다. 
 
@@ -1172,7 +1172,7 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
   - 다항함수는 덧셈, 뺄셈으로만 계산 가능하기 때문이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 매끄러운 함수(smooth function) : 무한 번 미분 가능한 함수이다. 
 
@@ -1180,7 +1180,7 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
 - $C ^{\infty}$ 함수로 표기하기도 한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 테일러 급수(Taylor's Series) : $f(x)$ 가 무한 번 미분가능한 함수라 할 때 
 
@@ -1216,7 +1216,7 @@ $$ f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a) ^{2} + \dots + \
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 매클로린 급수(Maclaurin Series) : 테일러 급수에서 $a=0$ 일 때, 즉 
 
@@ -1284,7 +1284,7 @@ $$ f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x ^{2} + \dots + \frac{f ^
 
   이므로 우변을 계속 더하면 $e$ 의 근사값을 얻을 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 $n$차 테일러 다항식(nth Taylor Polynomial) : 함수 $f(x)$ 에 대하여 
 
@@ -1336,7 +1336,7 @@ $$ T_n(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a) ^{2} + \dots +
 
 # 특수 함수의 미분 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 시그모이드 함수의 도함수 : 시그모이드 함수
 
@@ -1398,7 +1398,7 @@ $$ \{\zeta _{a} (x)\}' = a\zeta _{a} (x)\{1 - \zeta _{a} (x)\} $$
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 표준 시그모이드 함수의 도함수 : 시그모이드 함수의 도함수의 정의로부터 $a=1$ 일 때 
 
@@ -1414,7 +1414,7 @@ $$ \{\zeta (x)\}' = \zeta (x) \{1 - \zeta (x)\} $$
 
   와 같이 그려진다. 최대값이 $0.25$ 이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 시그모이드 함수의 이계도함수 : 시그모이드 함수
 
@@ -1466,7 +1466,7 @@ $$ \{\zeta (x)\}'' = a ^{2} \zeta _{a}(x) \{1 - \zeta _{a}(x)\}\{1 - 2 \zeta _{a
 
 - 시그모이드 함수는 인공지능에서 활성화 함수의 일종으로 신경망의 표현력을 높일 때 사용된다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 ReLU 함수 : ReLU 함수는 다음과 같이 정의된다. 
 
@@ -1476,7 +1476,7 @@ $$ \phi (x) = \max (0, x) = \begin{cases} x &(x>0)\text{}\\ 0 &(x \leq 0)\text{}
 
 - ReLU 함수는 인공지능에서 시그모이드 함수와 같이 활성화 함수로 사용된다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 ReLU 함수의 도함수 : ReLU 함수의 도함수는 
 

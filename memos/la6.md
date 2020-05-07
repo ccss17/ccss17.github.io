@@ -1,6 +1,6 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 ## **선형대수학 메모**
 
@@ -26,7 +26,7 @@
 
 ## 내적, 길이, 직교
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 내적(inner product) 또는 스칼라곱(dot product) : $\R ^{n}$ 공간 상의 두 $n \times 1$ 행렬, 즉 두 벡터 $u, v$ 의 내적은 행렬곱
 
@@ -54,7 +54,7 @@ $$ u \cdot v = u ^{T}v $$
 
   $$ v \cdot u = v ^{T}u = \begin{bmatrix} 3&2&-3\\ \end{bmatrix} \begin{bmatrix} 2\\-5\\-1 \end{bmatrix} = -1 $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 내적의 성질 : $\R ^{n}$ 공간 상의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다.
 
@@ -74,7 +74,7 @@ $$ u \cdot v = u ^{T}v $$
 
   을 연역할 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 크기(length) 또는 노름(norm) : $\R ^{n}$ 공간 상의 벡터 $v$ 가 성분 $v_1, \dots, v_n$ 을 가질 때 양수 스칼라
 
@@ -96,7 +96,7 @@ $$ ||v|| = \sqrt[]{v \cdot v} = \sqrt[]{v_1^{2} + v_2 ^{2} + \dots + v_n ^{2}} $
 
   $\R ^{3}$ 공간 상의 벡터, 즉 $3$ 차원 공간좌표에서도 마찬가지로 원점에서 $v$ 까지의 길이로 생각할 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터의 크기의 성질 : 임의의 스칼라 $c$ 와 벡터 $v$ 에 대하여 벡터 $cv$ 의 크기는 $v$ 의 크기 $||v||$ 의 $|c|$ 배이다.
 
@@ -112,7 +112,7 @@ $$ ||v|| = \sqrt[]{v \cdot v} = \sqrt[]{v_1^{2} + v_2 ^{2} + \dots + v_n ^{2}} $
 
   이기 때문이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 단위벡터(unit vector) : 크기가 $1$ 인 벡터이다.
 
@@ -124,7 +124,7 @@ $$ ||v|| = \sqrt[]{v \cdot v} = \sqrt[]{v_1^{2} + v_2 ^{2} + \dots + v_n ^{2}} $
 
   $\R ^{3}$ 공간 상의 벡터 $u = \begin{bmatrix} 0\\1\\0 \end{bmatrix}$ 는 단위벡터이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정규화(normalizatoin) : 벡터 $v$ 로부터 단위벡터 $u$ 를 얻는 과정이다.
 
@@ -160,7 +160,7 @@ $$ ||v|| = \sqrt[]{v \cdot v} = \sqrt[]{v_1^{2} + v_2 ^{2} + \dots + v_n ^{2}} $
 
   을 얻는다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 두 벡터 $u, v$ 사이의 거리(distance) : $\R ^{n}$ 상의 두 벡터 $u, v$ 의 거리는 벡터 $u - v$ 의 크기
 
@@ -194,7 +194,7 @@ $$ \text{dist}(u, v) = ||u - v|| $$
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터 $u, v$ 의 직교(orthogonal) : $\R ^{n}$ 상의 두 벡터 $u ,v$ 가
 
@@ -250,7 +250,7 @@ $$ ||u + v|| ^{2} = ||u|| ^{2} + ||v||^{2} $$
 
 ## 직교여공간 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 부분공간과 직교하는 벡터 : 어떤 벡터 $z$ 가 $\R ^{n}$ 의 부분공간 $W$ 의 모든 벡터와 직교한다면
 
@@ -258,7 +258,7 @@ $z$ 는 $W$ 에 직교한다고 말한다.
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 직교여공간(orthogonal complement) : 부분공간 $W$ 와 직교하는 모든 벡터의 집합
 
@@ -294,7 +294,7 @@ $$ W ^{\perp } $$
 
   이다. ■ 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 직교여공간의 성질
 
@@ -304,7 +304,7 @@ $$ W ^{\perp } $$
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 행렬의 행공간과 영공간의 직교여공간에 의한 관계 : 행렬 $A$ 를 $m \times n$ 행렬이라 할 때 $A$ 의 행공간 $\text{Row} A$ 에 대한 직교여공간은 $A$ 의 영공간 $\text{Nul} A$ 이고,
 
@@ -320,7 +320,7 @@ $$ (\text{Row} A)^{\perp } = \text{Nul} A, (\text{Nul} A)^{\perp } = \text{Row} 
 
 ## 직교집합
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 직교집합(orthogonal set) : $\R ^{n}$ 공간의 벡터 집합 $S = \{u_1, \dots, u_p\}$ 에서 그 집합의 모든 서로 다른 벡터가 직교한다면, 즉
 
@@ -352,7 +352,7 @@ $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교
 
     스칼라 $c_1, \dots, c_p$ 에 대하여 $0 = c_1u_1 + \dots + c_pu_p$ 이면 벡터 $u_1$ 은 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 직교기저(orthogonal basis) : $\R ^{n}$ 의 부분공간 $W$ 의 기저인 동시에 직교인 집합을 $W$ 의 직교기저라 한다. 
 
@@ -360,7 +360,7 @@ $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교
 
 ## 직교사영
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 직교사영(orthogonal projection) : 
 
@@ -368,13 +368,13 @@ $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교
 
 ## 정규직교집합 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정규직교집합(orthonormal set) : 벡터집합 $\{u_1, \dots, u_p\}$ 가 단위벡터로 이루어진 직교집합일 때 정규직교집합이라 한다. 
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정규직교기저(orthonormal basis) : 부분공간 $W$ 의 기저가 되는 정규직교집합이다.
 
@@ -384,7 +384,7 @@ $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교
 
   $\R ^{n}$ 의 표준기저 $\{e_1, \dots, e_n\}$ 은 정규직교기저이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 직교행렬(orthogonal matrix) : 정사각 정칙행렬 $U$ 가 $U ^{-1} = U ^{T}$ 를 만족할 때 $U$ 를 직교행렬이라 한다. 
 

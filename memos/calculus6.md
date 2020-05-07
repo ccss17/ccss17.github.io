@@ -1,6 +1,6 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 ## **미적분 메모**
 
@@ -26,7 +26,7 @@
 
 # 이변수 함수의 극한 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이변수 함수의 극한 : 함수 $f(x, y)$ 에서 $(x, y)$ 이 $(x_0, y_0)$ 에 한없이 다가갈 때 함수값이 극한값 $L$ 로 다가가는 것은 
 
@@ -40,7 +40,7 @@
 
   $$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이변수 함수의 극한의 성질 : 실수 $L, M, k$ 에 대하여 
 
@@ -82,7 +82,7 @@ $$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L\\ \lim_{(x, y) \to (x_0, y_0)} g(x, 
 
   (생략)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이변수 함수의 연속 : 이변수 함수 $f(x, y)$ 가 점 $(x_0, y_0)$ 에서 연속이라는 것은 다음 조건과 동치이다.
 
@@ -94,7 +94,7 @@ $$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L\\ \lim_{(x, y) \to (x_0, y_0)} g(x, 
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이변수 합성함수의 연속 : 이변수 함수 $f$ 가 $(x_0, y_0)$ 에서 연속이고 일변수 함수 $g$ 가 $x$ 축 상의 점 $f(x_0, y_0)$ 에서 연속일 때,
 
@@ -106,7 +106,7 @@ $h(x, y) = g(f(x, y))$ 로 정의된 이변수 합성함수 $h = g \circ f$ 는 
 
   합성함수 $e ^{x-y}, \cos \frac{xy}{x^2+1}, \ln (1+x ^{2}y ^{2})$ 는 개구간 $(-\infty , \infty)$ 에서 연속이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 다변수 함수의 극한과 연속 : 이변수 함수의 극한과 연속의 정의와 비슷하다.
 
@@ -124,7 +124,7 @@ $h(x, y) = g(f(x, y))$ 로 정의된 이변수 합성함수 $h = g \circ f$ 는 
 
 실제로 많은 함수들이 하나의 독립 변수에 의존하는 것이 아니라 두 개 이상의 독립 변수에 종속되기 때문에 많은 경우 일변수 함수에 대한 미분을 다변수 함수로 확장한 미분이 필요하다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 상미분(ordinary derivative) : 변수가 하나만 있는 함수에 대한 미분이다.
 
@@ -132,7 +132,7 @@ $h(x, y) = g(f(x, y))$ 로 정의된 이변수 합성함수 $h = g \circ f$ 는 
 
 - 지금까지 해오던 미분이 바로 상미분이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 $x$ 에 대한 편미분계수 : 이변수 함수 $z = f(x, y)$ 의 점 $(x_0, y_0)$ 에서의 $x$ 에 대한 편미분계수는 
 
@@ -164,7 +164,7 @@ $$ \frac{\partial f}{\partial x} \bigg | _{(x_0, y_0)} = \frac{d}{dx}f(x, y_0) \
 
   그때의 기울기는 곧 접선의 기울기가 되는 것이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 $y$ 에 대한 편미분계수 : 이변수 함수 $z = f(x, y)$ 의 점 $(x_0, y_0)$ 에서의 $y$ 에 대한 편미분계수는 
 
@@ -174,7 +174,7 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 편도함수(partial derivative) : 이변수 함수 $z = f(x, y)$ 의 편도함수는 다음과 같이 정의된다.
 
@@ -238,7 +238,7 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 편도함수의 기하학적 의미 : 이변수 함수 $f(x, y)$ 에 대하여 편도함수의 기하학적 의미는 각각 다음과 같다. 
 
@@ -284,7 +284,7 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
 ## 여러가지 편도함수 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이계 편도함수(second-order partial derivative) : 이변수 함수 $f(x, y)$ 를 두번 미분한 것으로 다음 $4$ 가지 경우로 정의된다. 
 
@@ -322,7 +322,7 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
   $$ \frac{\partial ^{2}f}{\partial y ^{2}} = \frac{\partial }{\partial y}(\frac{\partial f}{\partial y}) = -x \cos y $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 혼합 편미분(mixed derivative) : 이변수 함수 $f(x, y)$ 에 대하여 서로 다른 두 변수에 대한 편미분이다.
 
@@ -338,7 +338,7 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
   를 뜻한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 혼합 편미분 정리(mixed derivative theorem) : 이변수 함수 $f(x, y)$ 와 그 편미분 $f_x, f_y, f _{xy}, f _{yx}$ 가 점 $(a, b)$ 를 포함하는 개구간에서 정의되어 있고 점 $(a, b)$ 에서 연속이라면 
 
@@ -358,7 +358,7 @@ $$ f _{xy}(a, b) = f _{yx}(a, b) $$
 
   가 동일한 것은 우연의 일치가 아니다. 혼합 편미분 정리에 의하여 이 둘이 같은 것이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이변수 함수의 미분가능성 : 
 
@@ -366,7 +366,7 @@ $$ f _{xy}(a, b) = f _{yx}(a, b) $$
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이변수 합성함수의 도함수(chain rule) 또는 일독립변수와 이매개변수에 대한 도함수 : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t)$ 가 미분가능하면
 
@@ -416,7 +416,7 @@ $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule) : 삼변수 함수 $w = f(x, y, z)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t), z = z(t)$ 가 미분가능하면
 
@@ -458,7 +458,7 @@ $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule) : 삼변수 함수 $w = f(x, y, z)$ 가 미분가능하고 $r, s$ 에 대한 함수 $x = x(r, s), y = y(r, s), z = z(r, s)$ 가 미분가능하면,
 
@@ -502,7 +502,7 @@ $$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule) : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $r, s$ 에 대한 함수 $x = x(r, s), y = y(r, s)$ 가 미분가능하면,
 
@@ -514,7 +514,7 @@ $$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
 
@@ -536,7 +536,7 @@ $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\part
 
 # 기울기 벡터와 방향도함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 스칼라장(scalar field) : 공간 상의 모든 점에 스칼라가 대응되어 있는 분포이다.
 
@@ -558,7 +558,7 @@ $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\part
 
   위 그림은 스칼라장의 일종으로 색채에 대응하는 숫자를 색으로 표현한 것이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
 
@@ -728,7 +728,7 @@ $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta
 
   의 정의와 같다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 기울기 벡터(gradient vector) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
 
@@ -806,7 +806,7 @@ $$  \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > $$
 
   $$ \therefore \nabla f(1, 2, 3) = \big < 8, 4, 27\big > $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 기울기 벡터 방향의 단위벡터 : 기울기 벡터 $\nabla f$ 방향으로의 단위벡터는
 
@@ -848,7 +848,7 @@ $$  \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > $$
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 방향도함수의 계산 : 이변수 함수 $z = f(x, y)$ 가 $x, y$ 에 관한 편도함수를 각각 가지면 임의의 단위벡터 $u = \big < \cos \theta, \sin \theta \big >$ 에 대하여 
 
@@ -938,7 +938,7 @@ $$ D _{u}f(x, y) = \frac{\partial f}{\partial x} \cos \theta + \frac{\partial f}
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 삼변수 함수의 방향도함수 : 삼변수 함수 $f(x, y, z)$ 에 대하여 단위벡터 $u = \big < \cos \alpha , \cos \beta , \cos \gamma  \big >$ (단, $\cos ^{2}\alpha +\cos ^{2}\beta +\cos ^{2}\gamma =1$) 방향으로의 방향도함수는
 
@@ -960,7 +960,7 @@ $$ D _{u}f(x,y,z) = \lim_{h \to 0} \frac{f(x+h \cos \alpha , y + h \cos \beta , 
 
   $$ \Delta x = h \cos \alpha , \Delta y = y + h \cos \beta , \Delta z= z + h \cos \gamma $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 삼변수 함수의 기울기 벡터(gradient vector) : 스칼라 함수 $w = f(x, y, z)$ 의 기울기는 벡터함수 
 
@@ -974,7 +974,7 @@ $$ \nabla f(x, y, z) = \bigg < f_x(x, y, z), f_y(x, y, z), f_z(x, y, z) \bigg > 
 
 </blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 삼변수 함수의 방향도함수 계산 : 삼변수 함수 $w = f(x, y, z)$ 가 $x, y, z$ 에 관한 편도함수를 각각 가지면 임의의 단위벡터 $u$ 에 대하여 
 
@@ -986,7 +986,7 @@ $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\
 
 # 선형화
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 접선의 방정식
 
@@ -1024,7 +1024,7 @@ $$ L(x) = f'(a)(x-a) + f(a) $$
 
   $$ \sqrt[]{1+x} \approx 1 + \frac{x}{2} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 표준 선형 근사(standard linear approximation) : 선형화의 정의에서 $x=a$ 에서 함수 $f$ 의 함수 $L$ 에 의한 근사
 
@@ -1038,7 +1038,7 @@ $$ f(x) \approx L(x) $$
 
 ## 미분 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 미분(differential) : $y = f(x)$ 를 미분가능한 함수이고 미분 $dx$ 가 독립변수일 때 미분 $dy$ 는 
 
@@ -1120,7 +1120,7 @@ $$ dy = f'(x)dx $$
 
   이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 미분의 추정(estimating with differentials) : 함수 $f(x)$ 가 $x = a$ 에서 미분가능할 때 $x = a$ 의 근방 $x = a + dx$ 에서 함수값이 변하는 정도 $f(a + dx)$ 는 근사적으로
 
@@ -1186,7 +1186,7 @@ $$ f(a + dx) \approx f(a) + dy $$
 
 ## 이변수 함수 선형화
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 접평면(tangent plane) : $3$ 차원 곡면의 한 접점에 존재하는 무수히 많은 접선들이 동시에 상주하고 있는 평면이다.
 
@@ -1196,7 +1196,7 @@ $$ f(a + dx) \approx f(a) + dy $$
 
 - 위 그림과 같이 어떤 곡면에는 접선이 무수히 많고 그 접선들이 상주하는 평면이 곡면의 접평면이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 법선벡터(normal vector) : 접평면에 직교하는 벡터이다.
 
@@ -1206,7 +1206,7 @@ $$ f(a + dx) \approx f(a) + dy $$
 
 - 즉 법선벡터는 위 그림의 화살표 벡터와 같이 $3$ 차원 곡면의 한 접점에서의 모든 접선과 직교한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이변수 함수 선형화 또는 접평면(tangent plane) : $f$ 의 연속인 편도함수들이 존재할 때 점 $P(x_0, y_0, z_0)$ 에서 곡면 $z = f(x, y)$ 에 대한 접평면의 방정식은 
 
@@ -1230,7 +1230,7 @@ $$
 
   일변수 함수 $f$ 를 $x=a$ 에서 끝없이 확대했을 때 $x=a$ 에서 접선과 거의 똑같아지는 것과 같이 이변수 함수 $f$ 를 끝없이 확대하면 접평면의 방정식과 거의 똑같아지기 때문이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이변수 함수 미분 또는 전미분(total differential) : 점 $(x_0, y_0)$ 에서 점 $(x_0 + dx, y_0 + dy)$ 로 움직였을 때의 변화량 
 

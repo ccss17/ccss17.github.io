@@ -1,6 +1,6 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 ## **통계 메모**
 
@@ -24,7 +24,7 @@
 
 # 연속확률분포 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 연속확률변수(continuous random variable) : 어떤 구간에 속하는 모든 실수의 값을 가지는 확률변수 $X$ 이다. 
 
@@ -38,7 +38,7 @@
 
   이 확률변수 $X$ 는 어떤 구간 내에서 모든 실수 값을 가지므로 연속확률변수이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 확률밀도함수(probability density function) : 연속확률변수 $X$ 가 구간 $[\alpha , \beta ]$ 에 속하는 모든 실수 값을 가질 때
 
@@ -48,7 +48,7 @@ $X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다.
 
 - 대표적인 확률밀도함수가 정규분포곡선이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 연속확률분포(continuous probability distribution) : 확률밀도함수를 이용해 분포를 표현할 수 있는 확률분포이다.
 
@@ -58,7 +58,7 @@ $X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다.
 
   한편 이산확률분포도 무한히 반복하면 연속확률분포 중 하나로 수렴한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 확률밀도함수의 성질 : 구간 $[\alpha , \beta ]$ 에 속하는 모든 실수 값을 가지는 연속확률변수 $X$ 의 확률분포를 나타내는 확률밀도함수 $f(x)$ 는 다음 성질을 만족한다. 
 
@@ -154,7 +154,7 @@ $X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다.
 
 ## 연속확률변수 평균, 분산, 표준편차(산포도 측정)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 연속확률변수의 평균 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
 
@@ -180,7 +180,7 @@ $$ \boxed{\mu = E(X) = \int_{\alpha }^{\beta }xf(x)dx}  $$
 
   이다. ■ 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 연속확률변수의 분산 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
 
@@ -216,7 +216,7 @@ $$ \boxed{V(X) = E((X - \mu ) ^{2}) = \int_{\alpha }^{\beta }(x- \mu ) ^{2} f(x)
 
   이다. ■ 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 연속확률변수의 표준편차 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
 
@@ -264,7 +264,7 @@ $$ \boxed{\sigma (X) = \sqrt[]{V(X)}}  $$
 
   이다. ■ 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 연속확률변수의 평균, 분산, 표준편차의 성질 : 연속확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 
 
@@ -292,7 +292,7 @@ $$ \boxed{\sigma (X) = \sqrt[]{V(X)}}  $$
 
 # 정규분포 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정규분포(normal distribution) : 연속확률변수 $X$ 의 확률밀도함수 $f(x)$ 가 각각 평균과 표준편차를 나타내는 두 상수 $\mu , \sigma (\sigma >0)$ 에 대하여 
 
@@ -322,7 +322,7 @@ $$ N(\mu , \sigma ^{2}) $$
 
   로 주어질 때 $X$ 의 확률분포를 정규분포라 하는 것이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정규분포곡선 : 확률변수 $X$ 의 확률분포가 정규분포일 때 확률밀도함수 $y = f(x)$ 의 그래프를 정규분포곡선이라 한다. 
 
@@ -338,7 +338,7 @@ $$ N(\mu , \sigma ^{2}) $$
 
   ![desmos-graph](https://user-images.githubusercontent.com/16812446/79834513-2b47d280-83e8-11ea-8108-647d17728c38.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정규분포의 성질 : 연속확률변수 $X$ 의 확률밀도함수 $f(x)$ 가 각각 평균과 표준편차를 나타내는 두 상수 $\mu , \sigma (\sigma >0)$ 에 대하여 정규분포일 때 다음 성질을 갖는다.
 
@@ -404,7 +404,7 @@ $$ N(\mu , \sigma ^{2}) $$
 
   ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/79835764-37349400-83ea-11ea-801e-3854af430f1d.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 표준정규분포(standard normal distribution) : 평균과 표준편차가 $\mu=0, \sigma = 1$ 인 정규분포를 표준정규분포
 
@@ -442,7 +442,7 @@ $$ N(0, 1) $$
 
   ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/79836894-ab236c00-83eb-11ea-99f7-7d0fa630b574.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 표준점수(standard score) : 표준정규분포를 따르는 확률변수로써 
 
@@ -478,7 +478,7 @@ $$ z = \dfrac{x - \mu }{\sigma } $$
 
   위 예시에서 알 수 있듯이 원수치의 상대적 위치를 알기 위하여 표준점수를 사용한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 편차치 : 표준점수에서 음수가 나오는 것을 극복하기 위한 점수로써 표준점수 $z$ 에 대하여 
 
@@ -490,7 +490,7 @@ $$ t = 10 z + 50 $$
 
 - $T$ 점수($T$ score) 라고도 표기한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 표준정규분포표 : 표준정규분포 $N(0, 1)$ 를 따르는 확률변수 $Z$ 와 양수 $a$ 에 대한 확률 
 
@@ -532,7 +532,7 @@ $$ t = 10 z + 50 $$
 
   인 것을 활용하여 구간을 적절히 변환시켜 표준정규분포표를 사용하게 할 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정규분포의 표준화(standardization) : 정규분포를 표준정규분포로 변환하는 것으로써 확률변수 $X$ 가 정규분포 $N(\mu , \sigma ^{2})$ 를 따를 때 
 
@@ -682,7 +682,7 @@ $$ t = 10 z + 50 $$
 
   이로써 입사 최저 점수를 $86$ 점이라고 예측할 수 있다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이항분포와 정규분포의 관계 : 확률변수 $X$ 가 이항분포 $B(n, p)$ 를 따를 때 
 

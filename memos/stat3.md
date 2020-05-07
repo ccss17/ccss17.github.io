@@ -1,6 +1,6 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 ## **통계 메모**
 
@@ -24,7 +24,7 @@
 
 # 이항분포 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이항분포(binomial distribution) : 한 번의 시행에서 사건 $A$ 가 일어날 확률이 $p$ 이고
 
@@ -92,7 +92,7 @@ $$ \boxed{B(n, p)} $$
 
 ## 이항분포의 평균, 분산, 표준편차(산포도 측정)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이항분포의 평균 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
 
@@ -162,7 +162,7 @@ $$ E(X) = np $$
 
   이다. ■ 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이항분포의 분산 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
 
@@ -244,7 +244,7 @@ $$ V(X) = npq $$
 
   이다. ■ 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이항분포의 표준편차 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
 
@@ -296,7 +296,7 @@ $$ \sigma (X) = \sqrt[]{npq} $$
 
 ## 큰 수의 법칙 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 큰 수의 법칙(law of large number) : 어떤 시행에서 사건 $A$ 가 일어날 확률이 $p$ 일 때
 
@@ -370,7 +370,7 @@ $$ \lim_{n \to \infty} P \bigg ( \bigg | \dfrac{X}{n} - p \bigg | < h \bigg ) = 
 
 # 체비세프의 부등식 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 체비세프의 부등식(Chebyshev's inequality) : 확률변수 $X$ 의 평균이 $\mu$, 표준편차가 $\sigma$ 이고 자료의 총수가 $N$ 일 때
 
@@ -396,7 +396,7 @@ $$ N \bigg (1 - \dfrac{1}{k^2} \bigg ) $$
 
 # 베르누이 시행
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 베르누이 시행 : 
 

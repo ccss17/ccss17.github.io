@@ -1,6 +1,6 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 ## **선형대수학 메모**
 
@@ -24,7 +24,7 @@
 
 # 고윳값과 고유 벡터
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 고유벡터(eigenvector) : $n \times n$ 행렬 $A$ 의 고유 벡터는 어떤 스칼라 $\lambda$ 에 대하여 
 
@@ -66,7 +66,7 @@ $$ Ax = \lambda x $$
 
   $v$ 는 $Av$ 가 $v$ 의 스칼라배가 아니므로 고유 벡터가 아니다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 고윳값(eigenvalue) : $n \times n$ 행렬 $A$ 에서
 
@@ -102,7 +102,7 @@ $$ Ax = \lambda x $$
 
 > 또 고유값은 어떤 데이터가 특징을 얼마나 잘 설명할 수 있는지 가늠할 때도 사용된다. 기여율이라는 것은 각 주성분, 즉 고유벡터에 대응되는 고유값을 전체 고유값들의 총합을 나눈것으로 주성분이 데이터를 얼마나 잘 설명할 수 있는지 평가할 때 사용된다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 고유벡터와 고유값의 기하학적 의미 : 어떤 행렬에 벡터를 곱하는 선형변환 연산을 했을 때 일반적으로 벡터의 방향이 바뀌지만 
 
@@ -122,7 +122,7 @@ $$ Ax = \lambda x $$
 
   그러나 벡터 $u, w$ 가 벡터 $c$ 로 선형변환되었다면 방향이 바뀌었으므로 고유벡터가 사용되지 않은 것이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 고유공간(eigenspace) : 행렬 $A$ 를 고윳값에 대하여 정리한 행렬방정식
 
@@ -170,7 +170,7 @@ $$ (A - \lambda I)x = 0 $$
 
   이 고유공간이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 고유방정식(eigenvalue equation) : 행렬 $A$ 에 대한 $\lambda$ 의 방정식
 
