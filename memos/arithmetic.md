@@ -267,17 +267,11 @@
 - 예시 
 
   | 집합 | 연산자 | 항등원 |
-
   |:---:|:---:|:---:|
-
   | 실수 | $+, -$|$0$|
-
   | 실수 | $\times$|$1$|
-
   | 정사각행렬 | 행렬 덧셈|영행렬|
-
   | 정사각행렬 | 행렬 곱셈|단위행렬|
-
   | 함수 | 합성함수|항등함수|
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
