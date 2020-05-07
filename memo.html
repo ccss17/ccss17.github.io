@@ -1,0 +1,78 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
+<link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
+<link rel="stylesheet" href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+}
+</style>
+</head><body><article class="markdown-body">
+<h1>trivial memo</h1>
+<h2>Colab 에서 TensorBoard 사용하기</h2>
+<ol>
+<li>코드 셀 하나를 만들고 다음 두 줄 코드 실행</li>
+</ol>
+<pre><code>!wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+!unzip ngrok-stable-linux-amd64.zip
+</code></pre>
+<pre><code>- 그리고 주석처리하거나 셀을 삭제해서 모든 셀 실행 시 다시 실행되지 않도록 합니다. 
+</code></pre>
+<ol start="2">
+<li>TensorBoard 로그를 생성한다.</li>
+</ol>
+<pre><code class="language-python">import torchvision
+import torchvision.transforms as transforms
+# transforms
+transform = transforms.Compose(
+  [transforms.ToTensor(),
+  transforms.Normalize((0.5,), (0.5,))])
+# datasets
+trainset = torchvision.datasets.FashionMNIST('./data',
+  download=True,
+  train=True,
+  transform=transform)
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=4,
+                                      shuffle=True, num_workers=2)
+# get some random training images
+dataiter = iter(trainloader)
+images, labels = dataiter.next()
+# create grid of images
+img_grid = torchvision.utils.make_grid(images)
+from torch.utils.tensorboard import SummaryWriter
+# default `log_dir` is &quot;runs&quot; - we'll be more specific here
+writer = SummaryWriter('runs/fashion_mnist_experiment_1')
+# write to tensorboard
+writer.add_image('four_fashion_mnist_images', img_grid)
+</code></pre>
+<pre><code>- 이 경우 `runs` 디렉토리가 로그가 저장되는 경로이다. 
+</code></pre>
+<ol start="3">
+<li>또 코드 셀을 하나 만들고 tensorboard 를 실행한다. 이때 <code>runs</code> 디렉토리에 로그가 저장되어 있다고 가정한다.</li>
+</ol>
+<pre><code class="language-python">LOG_DIR = './runs'
+get_ipython().system_raw(
+'tensorboard --logdir {} --host 0.0.0.0 --port 6006 &amp;'
+.format(LOG_DIR)
+)
+</code></pre>
+<ol start="4">
+<li>ngrok 로 외부에서 내부 tensorboard 로 연결할 수 있는 터널링 프록시를 만든다.</li>
+</ol>
+<pre><code class="language-python">get_ipython().system_raw('./ngrok http 6006 &amp;')
+</code></pre>
+<ol start="5">
+<li>마지막으로 만들어진 터널의 public URL 을 얻어서 브라우저로 접속하면 된다.</li>
+</ol>
+<pre><code class="language-shell">! curl -s http://localhost:4040/api/tunnels | python3 -c \
+  &quot;import sys, json; print(json.load(sys.stdin)['tunnels'][0]['public_url'])&quot;
+</code></pre>
+
+</article></body></html>

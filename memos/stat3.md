@@ -24,7 +24,11 @@
 
 # 이항분포 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 이항분포(binomial distribution) : 한 번의 시행에서 사건 $A$ 가 일어날 확률이 $p$ 이고
 
@@ -92,7 +96,11 @@ $$ \boxed{B(n, p)} $$
 
 ## 이항분포의 평균, 분산, 표준편차(산포도 측정)
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 이항분포의 평균 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
 
@@ -101,6 +109,7 @@ $$ \boxed{B(n, p)} $$
 $$ E(X) = np $$
 
 이다.
+<<<<<<< HEAD
 
 </blockquote>
 
@@ -290,13 +299,208 @@ $$ \sigma (X) = \sqrt[]{npq} $$
 
   $$ \therefore \sigma (X) = \sqrt[]{\dfrac{75}{4}} = \dfrac{ 5 \sqrt[]{3}}{2} $$
 
+=======
+
+</blockquote>
+
+- 일반적인 이산확률변수의 확률질량함수가 $i = 1, 2, \dots, n$ 에 대하여 
+
+  $$ P(X = x_i) = p_i $$
+
+  로 정의된데 비해 이항분포 $B(n, p)$ 를 따르는 확률변수 $X$ 의 확률질량함수는 $x=0,1,2, \dots, n$ 와 $q = 1 - p$ 에 대하여 
+
+  $$ P(X=x) = {}_{n}C_{x}p ^{x}q ^{n-x} $$
+
+  로 정의된 것을 주의하자. 
+
+- 증명 
+
+  일반적인 이산확률변수 $X$ 의 확률질량함수가 $i = 1, 2, \dots, n$ 에 대하여 $P(X = x_i) = p_i$ 이었고 그에 대한 확률변수 $X$ 의 평균은 
+
+  $$ E(X) = \sum_{i=1}^{n}x_i P(X=i) =  \sum_{i=1}^{n}x_ip_i $$
+
+  이었다는 것을 우리는 이미 알고 있다. 
+
+  이 확률변수 $X$ 가 이항분포 $B(n, p)$ 를 따른다면 확률변수 $X$ 가 갖는 값은 $0, 1, 2, \dots, n$ 이므로 $i=0,1,2,\dots, n$ 에 대하여 $x_i = i$ 이다. 따라서 평균은 
+
+  $$ E(X) = \sum_{i=0}^{n}i \cdot  P(X=i) $$ 
+
+  인데 여기에서 $i$ 를 조합에서 자주 사용되는 $r$ 로 바꾸자.
+
+  그리고 이항분포 $B(n, p)$ 를 따르는 확률변수 $X$ 의 확률질량함수 $P(X=x)$ 는 
+
+  $q = 1 - p$ 에 대하여 $P(X=x) = {}_{n}C_{x}p ^{x}q ^{n-x}$ 이므로
+
+  $$ = \sum_{r=0}^{n}r \cdot  P(X=r) =  \sum_{r=0}^{n}r \cdot {}_{n}C_{r}p ^{r}q ^{n-r} $$
+
+  이다. 이때 $r=0$ 경우는 $0 \cdot {}_{n}C_{0}p ^{0}q ^{n} = 0$ 이 되어 생각할 필요가 없으므로 $r=1$ 의 경우부터 생각하여
+
+  $$ = \sum_{r=1}^{n}r \cdot \dfrac{n!}{(n-r)!r!}p ^{r}q ^{n-r} = \sum_{r=1}^{n}\dfrac{n!}{(n-r)!(r-1)!}p ^{r}q ^{n-r} $$
+
+  $$ = \sum_{r=1}^{n}np \cdot \dfrac{(n-1)!}{(n-r)!(r-1)!}p ^{r-1}q ^{n-r} = np \sum_{r=1}^{n} \dfrac{(n-1)!}{(n-r)!(r-1)!}p ^{r-1}q ^{n-r} $$
+
+  $$ = np \sum_{r=1}^{n} {}_{n-1}C_{r-1} p ^{r-1}q ^{(n-1)-(r-1)} 
+
+  $$ = np \sum_{r=0}^{n-1} {}_{n-1}C_{r} p ^{r}q ^{(n-1)-(r)} $$
+
+  이다. 여기에서 $r$ 에 $1$ 을 더해주면
+
+  $$ = np \sum_{r=0}^{n-1} {}_{n-1}C_{r} p ^{r}q ^{(n-1)-(r)} $$
+
+  인데 이항정리 $\displaystyle (a+b) ^{n} = \sum_{r=0}^{n}{}_{n}C_{r}a ^{n-r}b ^{r}$ 에 의하여
+
+  $$ = np (p+q) ^{n-1} $$ 
+
+  이다. 이때 $q=1-p$ 에서 $p+q=1$ 이므로 
+
+  $$ = np $$
+
+  이다. 그러므로 이항분포 $B(n, p)$ 를 따르는 이산확률변수 $X$ 의 평균은
+
+  $$ \therefore  E(X) = np $$
+
+  이다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+이항분포의 분산 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
+
+이항분포의 분산은 $q = 1-p$ 에 대하여
+
+$$ V(X) = npq $$
+
+이다.
+
+</blockquote>
+
+- 증명 
+
+  확률변수 $X$ 의 분산은 
+
+  $$ V(X) = E(X ^{2}) - \{E(X)\} ^{2} $$
+
+  이었다. $E(X) = np$ 이었으므로 $E(X ^{2})$ 를 구해보자.
+
+  확률변수 $X$ 가 이항분포 $B(n, p)$ 를 따른다면 확률변수 $X$ 가 갖는 값은 $0, 1, 2, \dots, n$ 이므로 확률변수 $X^2$ 가 갖는 값은 $0 ^{2}, 1 ^{2}, 2 ^{2}, \dots, n ^{2}$ 이다. 따라서 $X^2$ 의 평균은 
+
+  $$ E(X ^{2}) = \sum_{r=0}^{n}r ^{2} \cdot  P(X ^{2}=r) $$ 
+
+  이다. 그런데 이항분포 $B(n, p)$ 를 따르는 확률변수 $X$ 의 확률질량함수 $P(X=x)$ 는 
+
+  $q = 1 - p$ 에 대하여 $P(X=x) = {}_{n}C_{x}p ^{x}q ^{n-x}$ 인데 확률변수 $X$ 에 제곱을 하여 $X^2$ 를 만들었다고 해도 그에 대응되는 확률이 변하지는 않으므로 확률질량함수는 변하지 않는다.
+
+  따라서 
+
+  $$ = \sum_{r=0}^{n}r ^{2} \cdot  P(X ^{2}=r) =\sum_{r=0}^{n}r ^{2} \cdot  P(X =r) = \sum_{r=0}^{n} r ^{2} {}_{n}C_{r}p ^{r}q ^{n-r} $$ 
+
+  인데 $r ^{2} = r(r-1) + r$ 이므로
+
+  $$ = \sum_{r=0}^{n} r(r-1)  {}_{n}C_{r}p ^{r}q ^{n-r}+\sum_{r=0}^{n} r  {}_{n}C_{r}p ^{r}q ^{n-r}  $$ 
+
+  이다. 이때 $r=0, 1$ 일 때 $\displaystyle  \sum_{r=0}^{n} r(r-1)  {}_{n}C_{r}p ^{r}q ^{n-r}$ 는 생각할 필요가 없고 $\displaystyle  \sum_{r=0}^{n} r  {}_{n}C_{r}p ^{r}q ^{n-r} = E(X)$ 이므로
+
+  $$ = \sum_{r=2}^{n} r(r-1) \dfrac{n!}{(n-r)!r!} p ^{r}q ^{n-r}+E(X)$$ 
+
+  $$ = n(n-1)p ^{2}\sum_{r=2}^{n} \dfrac{(n-2)!}{(n-r)!(r-2)!} p ^{r-2}q ^{(n-2)-(r-2)}+np$$ 
+
+  이다. 이때 $r$ 에 $2$ 를 더하면 
+
+  $$ = n(n-1)p ^{2}\sum_{r=0}^{n-2} \dfrac{(n-2)!}{(n-(r+2))!r!} p ^{r}q ^{(n-2)-r}+np$$ 
+
+  $$ = n(n-1)p ^{2}\sum_{r=0}^{n-2} \dfrac{(n-2)!}{(n-2-r)!r!} p ^{r}q ^{(n-2)-r}+np$$ 
+
+  $$ = n(n-1)p ^{2}\sum_{r=0}^{n-2} {}_{n-2}C_{r} p ^{r}q ^{(n-2)-r}+np$$ 
+
+  이다. 또 이항정리 $\displaystyle (a+b) ^{n} = \sum_{r=0}^{n}{}_{n}C_{r}a ^{n-r}b ^{r}$ 에 의하여
+
+  $$ = n(n-1)p ^{2} (p+q) ^{n-2} + np$$
+
+  이고 $p+q=1$ 이므로 
+
+  $$ = n(n-1)p ^{2} + np$$
+
+  $$ = n ^{2} p ^{2} - n p ^{2} + np $$
+
+  $$ = n ^{2} p ^{2} + np(1-p) $$
+
+  이다. 즉, 
+
+  $$ E(X ^{2}) = n ^{2} p ^{2} + np(1-p) $$
+
+  임을 알 수 있다. 따라서 확률변수 $X$ 의 분산은
+
+  $$ V(X) = E(X ^{2}) - \{E(X)\} ^{2} $$
+
+  $$ = n ^{2} p ^{2} + np(1-p) - n ^{2}p ^{2} $$
+
+  $$ = np(1-p) $$
+
+  $$ = npq  $$
+
+  에서 
+
+  $$ \therefore  V(X) = npq $$
+
+  이다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+이항분포의 표준편차 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
+
+이항분포의 표준편차는 $q = 1-p$ 에 대하여
+
+$$ \sigma (X) = \sqrt[]{npq} $$
+
+이다.
+
+</blockquote>
+
+- 증명 
+
+  이항분포 $B(n, p)$ 를 따르는 확률변수 $X$ 의 분산은 $q = 1-p$ 에 대하여
+
+  $$ V(X) = npq $$
+
+  이므로 표준편차는 
+
+  $$ \therefore  \sigma (X) = \sqrt[]{V(X)} = \sqrt[]{npq} $$
+
+  이다. ■ 
+
+- 예시 
+
+  각 면에 $1,2,3,4$ 가 적혀있는 정사면체를 $100$ 번 던져서 밑면의 숫자가 $2$ 가 되는 횟수를 확률변수 $X$ 라고 하자. 
+
+  $X$ 의 평균, 분산, 표준편차를 구해보자.
+
+  먼저 $100$ 의 시행이 독립시행이고 한 번의 시행에서 숫자 $2$ 가 나올 확률이 $\dfrac{1}{4}$ 이므로
+
+  확률변수 $X$ 는 이항분포 $B \bigg (100, \dfrac{1}{4} \bigg )$ 를 따른다. 
+
+  따라서 확률변수 $X$ 의 평균은 
+
+  $$ \therefore E(X) = np = 100 \times \dfrac{1}{4} = 25 $$
+
+  이고 분산은
+
+  $$ \therefore V(X) = npq = 100 \times \dfrac{1}{4} \times \dfrac{3}{4} = \dfrac{75}{4} $$
+
+  이고 표준편차는 
+
+  $$ \therefore \sigma (X) = \sqrt[]{\dfrac{75}{4}} = \dfrac{ 5 \sqrt[]{3}}{2} $$
+
+>>>>>>> correct
   이다. ■ 
 
   $E(X) = 25$ 를 통해 정사면체를 $100$ 번 던졌을 때 숫자 $2$ 가 $25$ 정도 나올 것이라고 생각할 수 있다. 
 
 ## 큰 수의 법칙 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 큰 수의 법칙(law of large number) : 어떤 시행에서 사건 $A$ 가 일어날 확률이 $p$ 일 때
 
@@ -370,7 +574,11 @@ $$ \lim_{n \to \infty} P \bigg ( \bigg | \dfrac{X}{n} - p \bigg | < h \bigg ) = 
 
 # 체비세프의 부등식 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 체비세프의 부등식(Chebyshev's inequality) : 확률변수 $X$ 의 평균이 $\mu$, 표준편차가 $\sigma$ 이고 자료의 총수가 $N$ 일 때
 
@@ -396,11 +604,20 @@ $$ N \bigg (1 - \dfrac{1}{k^2} \bigg ) $$
 
 # 베르누이 시행
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 베르누이 시행 : 
 
 </blockquote>
 
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+베르누이 시행 : 
+
+</blockquote>
+
+>>>>>>> correct
 **구체화 필요**
 

@@ -24,19 +24,31 @@
 
 # 공분산과 상관계수 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 양의 관계 : 두 변수에 대하여 한 변수가 증가할 때 다른 변수가 증가하고 한 변수가 감소할 때 다른 변수도 감소하는 관계이다. 
 
 </blockquote>
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 음의 관계 : 두 변수에 대하여 한 변수가 증가할 때 다른 변수가 감소하고 한 변수가 감소할 때 다른 변수가 증가하는 관계이다. 
 
 </blockquote>
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 산점도(scatter plot, scatter graph, scatter chart, scattergram) : 직교 좌표계를 이용해 두 변수 간의 관계를 나타내는 방법이다.
 
@@ -64,7 +76,11 @@
 
   위 산점도는 선형적이지가 않아서 양의 관계인지 음의 관계인지 파악하기 힘들다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 공분산(covariance) : 두 가지 데이터의 직선관계가 어느 정도인지를 나타내는 통계값으로써 
 
@@ -204,7 +220,11 @@ $$ \text{Cov}(X, Y) = \dfrac{1}{n} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}
 
   | 평균 월 매출 | $3666. 66\dots$ 백만원  |$138.89$ 백만원 $^{2}$  | 약 $1200$ 백만원  ||
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 편차제곱의 합 표기 : 데이터 $x, y$ 와 그 각각의 평균 $\mu _{x}, \mu _{y}$ 에 대하여 편차제곱의 합을 일반적으로 $S _{ab}$ 의 형식으로 다음과 같이 표기한다.
 
@@ -236,7 +256,11 @@ $$ S _{xy} = \sum_{i=1}^{n}(x_i - \mu _{x}  )(y_i - \mu _{y}  )  = \sum_{i=1}^{n
 
   이다. ■ 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 상관계수(correlation coefficient) : 측정단위에 영향을 받아 선형관계의 강도를 명확히 알 수 없는 공분산의 단점을 해결하여 직선관계의 정도까지 나타내줄 수 있는 통계값으로써 
 
@@ -271,6 +295,7 @@ $$ \rho = \dfrac{1}{n} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}
   $$ \therefore  \rho = \dfrac{\sigma _{xy}}{\sigma _{x} \sigma _{y}} $$
 
   를 얻는다. ■ 
+<<<<<<< HEAD
 
   그리고 표준편차 $\displaystyle \sigma _{x} = \sqrt[]{\dfrac{1}{n}\sum_{i=1}^{n}(x_i-\mu _{x}) ^{2}}, \sigma _{y}= \sqrt[]{\dfrac{1}{n}\sum_{i=1}^{n}(y_i-\mu _{y}) ^{2}}$ 를 이용하여 식을 풀고 편차 제곱의 합 표기 
 
@@ -306,6 +331,43 @@ $$ \rho = \dfrac{1}{n} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}
 
     임을 알 수 있다. 그러므로 $\rho ^{2} \leq 1$ 에서 
 
+=======
+
+  그리고 표준편차 $\displaystyle \sigma _{x} = \sqrt[]{\dfrac{1}{n}\sum_{i=1}^{n}(x_i-\mu _{x}) ^{2}}, \sigma _{y}= \sqrt[]{\dfrac{1}{n}\sum_{i=1}^{n}(y_i-\mu _{y}) ^{2}}$ 를 이용하여 식을 풀고 편차 제곱의 합 표기 
+
+  $$ S _{xx} = \sum_{i=1}^{n}(x_i - \mu _{x}  ) ^{2} , S _{yy} = \sum_{i=1}^{n}(y_i - \mu _{y}  ) ^{2} , S _{xy} = \sum_{i=1}^{n}(x_i - \mu _{x}  )(y_i - \mu _{y}  )  $$
+
+  를 이용하면 
+
+  $$ \therefore  \rho = \dfrac{\displaystyle \sum_{i=1}^{n}(x_i-\mu _{x})(y_i - \mu _{y})}{\sqrt[]{\displaystyle \sum_{i=1}^{n}(x_i - \mu _{x})^{2}} \sqrt[]{\displaystyle \sum_{i=1}^{n}(y_i -  \mu _{y})^{2}}} = \dfrac{S _{xy}}{\sqrt[]{S _{xx}} \sqrt[]{ S _{yy}} } $$ 
+
+  를 얻는다. ■ 
+
+- 상관계수 $\rho$ 는 $-1 \leq \rho \leq 1$ 의 범위 내에서 존재한다. 
+
+  - 증명 
+
+    코시-슈바르츠 부등식은 $\displaystyle \bigg ( \sum_{i=1}^{n}a_ib_i \bigg ) ^{2} \leq  \sum_{i=1}^{n}a_i ^{2} \sum_{i=1}^{n}b_i ^{2}$ 의 관계를 보증한다. 
+
+    이때 상관계수의 정의
+
+    $$ \rho = \dfrac{\displaystyle \sum_{i=1}^{n}(x_i-\mu _{x})(y_i - \mu _{y})}{\sqrt[]{\displaystyle \sum_{i=1}^{n}(x_i - \mu _{x})^{2}} \sqrt[]{\displaystyle \sum_{i=1}^{n}(y_i -  \mu _{y})^{2}}}  $$ 
+
+    에서 $a_i = x_i - \mu _{x}, b_i = y_i - \mu _{y}$ 로 두면 
+
+    $$ = \dfrac{\displaystyle \sum_{i=1}^{n}a_ib_i}{\sqrt[]{\displaystyle \sum_{i=1}^{n}a_i^{2}} \sqrt[]{\displaystyle \sum_{i=1}^{n}b_i^{2}}}  $$ 
+
+    을 얻는다. 양변에 제곱을 취하면
+
+    $$ \rho ^{2} = \dfrac{\bigg (\displaystyle \sum_{i=1}^{n}a_ib_i \bigg ) ^{2}}{\displaystyle \sum_{i=1}^{n}a_i^{2} \displaystyle \sum_{i=1}^{n}b_i^{2}} $$ 
+
+    을 얻는데 코시-슈바르츠 부등식 $\displaystyle \bigg ( \sum_{i=1}^{n}a_ib_i \bigg ) ^{2} \leq  \sum_{i=1}^{n}a_i ^{2} \sum_{i=1}^{n}b_i ^{2}$ 에서
+
+    $$ \rho ^{2} = \dfrac{\bigg (\displaystyle \sum_{i=1}^{n}a_ib_i \bigg ) ^{2}}{\displaystyle \sum_{i=1}^{n}a_i^{2} \displaystyle \sum_{i=1}^{n}b_i^{2}} \leq 1 $$
+
+    임을 알 수 있다. 그러므로 $\rho ^{2} \leq 1$ 에서 
+
+>>>>>>> correct
     $$ \therefore -1 \leq \rho \leq 1 $$
 
     이다. ■ 
@@ -369,6 +431,7 @@ $$ \rho = \dfrac{1}{n} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}
   $$ \therefore  \rho _{RA} = \dfrac{\text{Cov}(R,A)}{\sigma _{R} \sigma _{A}} = \dfrac{-3.056}{11.8 \times 0.943} = -0.2746 $$
 
   $$ \therefore  \rho _{RP} = \dfrac{\text{Cov}(R,P)}{\sigma _{R} \sigma _{P}} = \dfrac{1703}{11.8 \times 154} = 0.9372 $$
+<<<<<<< HEAD
 
   이다. ■ 
 
@@ -430,6 +493,69 @@ $$ \text{Cov}(X, Y) = \dfrac{1}{n-1} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{
 
   | $1$ | $1900$ | $11$ | $20900$ |
 
+=======
+
+  이다. ■ 
+
+  이에 따라 월매출과 광고조회수 $PV$ 가 강한 양의 상관관계에 있다고 생각할 수 있다. 
+
+  또 월매출과 광고비는 약한 음의 상관관계를 갖는다고 볼 수 있다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+표본공분산(sample covariance) : 추출된 표본의 두 가지 데이터의 직선관계가 어느 정도인지를 나타내는 통계값으로써 
+
+$n$ 개의 $2$-튜플 확률변수 
+
+$$ (X, Y) = \{(x_1, y_1),(x_2, y_2),(x_3, y_3),\dots, (x_n, y_n)\} $$
+
+가 있을 때 $X$ 의 평균 $\mu _{x}$, $Y$ 의 평균이 $\mu _{y}$ 에 대하여 
+
+$$ \text{Cov}(X, Y) = \dfrac{1}{n-1} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  $$
+
+이다.
+
+</blockquote>
+
+- 공분산이 $n$ 으로 나눈 반면 표본공분산은 $n-1$ 로 나누었다는 것에 주의하자. 
+
+- 증명 
+
+  표본공분산은 다음 공식으로 간편화되어 사용된다. 
+
+  $$ \text{Cov}(X, Y) = \dfrac{1}{n-1} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) $$
+
+  $$ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}(x_iy_i - \mu _{x}y_i+x_i \mu _{y} - \mu _{x} \mu _{y}) \bigg \}  $$
+
+  $$ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \mu _{x}\sum_{i=1}^{n} y_i + \mu _{y} \sum_{i=1}^{n}x_i - \sum_{i=1}^{n} \mu _{x} \mu _{y} \bigg \}  $$
+
+  이다. 이때 $\displaystyle \mu _{x} = \dfrac{1}{n} \sum_{i=1}^{n}x_i , \mu _{y} = \dfrac{1}{n} \sum_{i=1}^{n}y_i$ 이므로 $\displaystyle  \mu _{x}n = \sum_{i=1}^{n}x _{i}, \mu _{y}n = \sum_{i=1}^{n}y _{i}$ 임을 이용하면
+
+  $$ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \mu _{x} \mu _{y}n + \mu _{y} \mu _{x}n - n \mu _{x} \mu _{y} \bigg \}  $$
+
+  $$ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - n \mu _{x} \mu _{y} \bigg \}  $$
+
+  $$ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - n \bigg ( \dfrac{1}{n}\sum_{i=1}^{n}x_i \bigg ) \bigg ( \dfrac{1}{n}\sum_{i=1}^{n}y_i \bigg ) \bigg \}  $$
+
+  $$ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  $$
+
+  을 얻는다. 따라서
+
+  $$ \therefore  \text{Cov}(X, Y) = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  $$
+
+  이다.  ■ 
+
+- 예시 
+
+  올림픽 육상 $100$ 미터 남자 우승기록에서 $1900$ 년부터 $2016$ 년까지의 표본은 다음과 같다. 
+
+  | 번호 | $X$(연도) | $Y$(기록) | $XY$ |
+
+  |:---:|:---:|:---:|:---:|
+
+  | $1$ | $1900$ | $11$ | $20900$ |
+
+>>>>>>> correct
   | $2$ | $1904$ | $11$ | $20944$ |
 
   | $\vdots$ | $\vdots$ | $\vdots$ | $\vdots$ |
@@ -456,7 +582,11 @@ $$ \text{Cov}(X, Y) = \dfrac{1}{n-1} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{
 
   으로 공분산이 변한다. 따라서 공분산의 절댓값 크기에서 의미를 찾으려 들면 안된다! 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 표본상관계수(sample correlation coefficient) : 측정단위에 영향을 받아 선형관계의 강도를 명확히 알 수 없는 공분산의 단점을 해결하여 직선관계의 정도까지 나타내줄 수 있는 추출된 표본의 통계값으로써 
 
@@ -480,7 +610,11 @@ $$ \rho = \dfrac{1}{n-1} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{
 
     그렇다면 수명을 늘리기 위해 휴대전화 보급을 늘려야 하는가? 이 두 변수는 인과관계가 없기 때문에 올바르지 않는 결론이다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 가능도(likelihood) : 
 
@@ -488,7 +622,11 @@ $$ \rho = \dfrac{1}{n-1} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{
 
 **구체화 필요**
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 최대가능도추정(maximum likelihood estimation) : 
 

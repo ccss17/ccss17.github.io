@@ -26,7 +26,11 @@
 
 # 모집단과 표본 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 모집단(population) : 알고자 하는 전체 조사 대상이다.
 
@@ -38,7 +42,11 @@
 
   이때 그 학교의 모든 학생 집단은 모집단이다.
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 표본(sample) : 조사를 하기 위하여 모집단의 일부분을 추출한 것이다.
 
@@ -50,7 +58,11 @@
 
   따라서 모집단에서 국민 $1000$ 명을 추출하여 표본을 만들어 조사한다. 정확도를 약간 잃더라도 시간과 비용이 소모되는 것을 적당한 선에서 제한하는 것이다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 모집단의 크기 : 모집단에 속한 자료의 개수이다.
 
@@ -62,7 +74,11 @@
 
   이때 모집단의 크기는 $10000$ 이다.
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 표본의 크기 : 표본에 속한 자료의 개수이다.
 
@@ -74,7 +90,11 @@
 
   이때 표본의 크기는 $10$ 이다.
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 전수조사(total inspection) : 모집단 전체를 전부 다 조사하는 것이다.
 
@@ -86,7 +106,11 @@
 
   이때 이 설문조사는 전수조사가 된다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 표본조사(sample survey) : 모집단의 일부만, 즉 표본만 조사하는 것이다.
 
@@ -102,7 +126,11 @@
 
   아무리 표본을 조사한다고 하지만 결국에 관심있는 것은 모집단에 대한 정보임을 기억해야 한다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 추출(sampling) : 모집단으로부터 표본에 포함시킬 대상들을 뽑는 것이다.
 
@@ -112,7 +140,11 @@
 
   따라서 모집단으로부터 일부 대상을 추출할 때 모집단의 특성이 잘 반영되도록 대상들을 뽑아야 한다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 임의추출(random sampling) : 추출의 방법 중 하나로써 모집단에 속한 각 대상들을 같은 확률로 뽑는 방법이다.
 
@@ -122,17 +154,26 @@
 
   제비뽑기나 난수 생성기로 표본을 추출하는 것이 임의추출이다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 임의표본(random sample) : 임의추출한 표본이다.
 
 </blockquote>
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 복원추출(sampling with replacement) : 추출한 것을 다시 넣고 다음을 추출하는 방법이다.
 
 </blockquote>
+<<<<<<< HEAD
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -140,10 +181,20 @@
 
 </blockquote>
 
+=======
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+비복원추출(sampling without replacement) : 추출한 것을 다시 넣지 않고 다음을 추출하는 방법이다. 
+
+</blockquote>
+
+>>>>>>> correct
 - 모집단의 크기가 충분히 크면 비복원추출도 복원추출로 볼 수 있다. 
 
 # 표본평균의 평균, 분산, 표준편차
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 모집단의 확률분포 : 모집단에서 조사의 대상이 되는 특성을 나타내는 확률변수 $X$ 의 확률분포이다. 
@@ -370,11 +421,240 @@ $$ \sigma (\overline{X}) = \dfrac{\sigma }{\sqrt[]{n}} $$
 
   ![캡처](https://user-images.githubusercontent.com/16812446/79965816-7684e280-84c7-11ea-8ec9-05f6175ca128.PNG)
 
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+모집단의 확률분포 : 모집단에서 조사의 대상이 되는 특성을 나타내는 확률변수 $X$ 의 확률분포이다. 
+
+</blockquote>
+
+- 예시 
+
+  모집단 $\{1,2,3\}$ 에서 하나의 숫자를 취할 확률변수를 $X$ 라 할 때 다음 표
+
+  | $X$| $1$ | $2$ |$3$|
+
+  |:---:|:---:|:---:|:---:|
+
+  | $P(X=x)$| $\dfrac{1}{3}$  |$\dfrac{1}{3}$ |$\dfrac{1}{3}$ |
+
+  를 모집단의 확률분포라고 할 수 있다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+모평균(population mean) : 모집단의 확률분포의 확률변수 $X$ 의 평균을 모평균 $\mu$ 라 한다.
+
+</blockquote>
+
+- 예시 
+
+  "모집단의 확률분포" 의 예시의 모집단의 확률분포에서 모평균을 구해보면 
+
+  $$ \therefore  \mu = 1 \times \dfrac{1}{3} + 2 \times \dfrac{1}{3} + 3 \times \dfrac{1}{3} = \dfrac{1+2+3}{3} = 2 $$
+
+  이다. ■ 
+
+  그러니까 이 값으로 "다음 시행에서 $2$ 라는 값이 나올 것을 기대할 수 있다" 또는 "평균적으로 값이 $2$ 를 취한다" 라고 해석할 수 있다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+모분산(population variance) : 모집단의 확률분포의 확률변수 $X$ 의 분산을 모분산 $\sigma ^{2}$ 라 한다.
+
+</blockquote>
+
+- 예시 
+
+  "모집단의 확률분포" 의 예시의 모집단의 확률분포에서 모분산을 구해보면 
+
+  $$ \therefore \sigma ^{2} = E(X ^{2}) - \mu ^{2} = \bigg (1 ^{2} \dfrac{1}{3}+2 ^{2}\dfrac{1}{3}+3 ^{2}\dfrac{1}{3}\bigg ) - 2^{2} = \dfrac{1+4+9}{3}- \dfrac{12}{3} = \dfrac{2}{3}  $$
+
+  이다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+모표준편차(population standard deviation) : 모집단의 확률분포의 확률변수 $X$ 의 분산을 모분산 $\sigma$ 라 한다.
+
+</blockquote>
+
+- 예시 
+
+  "모집단의 확률분포" 의 예시의 모집단의 확률분포에서 모표준편차를 구해보면 
+
+  $$ \therefore \sigma = \sqrt[]{\dfrac{2}{3}}  = \dfrac{\sqrt[]{6}}{3} $$
+
+  이다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+표본평균(sample mean) : 모집단에서 크기가 $n$ 인 표본 $X_1, X_2, \dots, X_n$ 을 임의추출했을 때 이들의 평균
+
+$$ \overline{X} = \dfrac{1}{n} \sum_{i=1}^{n}X_i $$
+
+이다.
+
+</blockquote>
+
+- 모평균 $\mu$ 이 고정된 상수임에 비해 표본평균 $\overline{X}$ 은 추출된 표본에 따라 여러 값을 가질 수 있는 확률변수이다.
+
+- 모집단의 확률분포가 정규분포이면 표본평균 $\overline{X}$ 는 $n$ 의 크기에 관계없이 정규분포
+
+  $$ N \bigg (\mu , \dfrac{\sigma ^{2}}{n} \bigg ) $$
+
+  를 따른다.
+
+- (중심극한정리) 모집단의 확률분포가 정규분포가 아니어도 $n$ 이 충분히 크면 표본평균 $\overline{X}$ 는 근사적으로 정규분포
+
+  $$ N \bigg (\mu , \dfrac{\sigma ^{2}}{n} \bigg ) $$
+
+  를 따른다.
+
+  - 보통 $n$ 이 $30$ 이상이면 충분히 큰 표본으로 간주한다. 
+
+- 예시 
+
+  "모집단의 확률분포" 의 예시의 모집단에서 크기가 $2$ 인 표본을 임의추출한 표본을 $X_1, X_2$ 라 하면 이 표본은 다음 중 하나로 될 수 있다. 
+
+  | $X_1$| $1$ | $1$ |$1$|$2$ | $2$ |$2$|$3$ | $3$ |$3$|
+
+  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+
+  | $X_2$| $1$ | $2$ |$3$|$1$ | $2$ |$3$|$1$ | $2$ |$3$|
+
+  이때 표본들의 표본평균 $\overline{X} = \dfrac{X_1+X_2}{2}$ 는 
+
+  | $\overline{X}$| $1$ | $1.5$ |$2$|$1.5$ | $2$ |$2.5$|$2$ | $2.5$ |$3$|
+
+  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+
+  위와 같은 값을 가질 수 있는 확률변수이다. ■ 
+
+  그러니까 이 새로운 확률변수 $\overline{X}$(표본평균) 에 대한 평균, 분산, 표준편차를 구할 수 있는 것이다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+표본분산(sample variance) : 모집단에서 크기가 $n$ 인 표본 $X_1, X_2, \dots, X_n$ 을 임의추출했을 때 이들의 분산
+
+$$ S ^{2} = \dfrac{1}{n-1}\sum_{i=1}^{n}(X_i - \overline{X}) ^{2} $$
+
+이다.
+
+</blockquote>
+
+- 모분산과 달리 표본분산에서는 분산을 표본의 크기 $n$ 이 아닌 $n-1$ 로 나누어서 구하는데 이는 표본분산과 모분산의 차이를 줄이기 위해서이다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+표본표준편차(sample standard deviation) : 모집단에서 크기가 $n$ 인 표본 $X_1, X_2, \dots, X_n$ 을 임의추출했을 때 이들의 표준편차
+
+$$ S = \sqrt[]{S ^{2}} $$
+
+이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+표본평균의 평균 : 모평균이 $\mu$, 모표준편차가 $\sigma$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
+
+표본평균 $\overline{X}$ 들의 평균은 
+
+$$ E(\overline{X}) = \mu $$
+
+이다. 
+
+</blockquote>
+
+- 예시 
+
+  "모집단의 확률분포" 의 예시의 모집단에서 크기가 $2$ 인 표본을 임의추출한 표본을 $X_1, X_2$ 이었을 때 이 표본의 평균 $\overline{X} = \dfrac{X_1+X_2}{2}$ 를 구하여 확률변수 $\overline{X}$ 의 평균을 구해보자. 
+
+  "표본평균(sample mean)" 의 예시에서 확률변수 $\overline{X}$ 는 다음과 같은 값을 가질 수 있었음을 조사했으니까
+
+  | $\overline{X}$| $1$ | $1.5$ |$2$|$1.5$ | $2$ |$2.5$|$2$ | $2.5$ |$3$|
+
+  |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+
+  표본평균 $\overline{X}$ 의 확률분포표는 다음과 같다. 
+
+  | $\overline{X}$| $1$ | $1.5$ |$2$|$2.5$ | $3$ |
+
+  |:---:|:---:|:---:|:---:|:---:|:---:|
+
+  | $P(\overline{X}=x)$| $\dfrac{1}{9}$ | $\dfrac{2}{9}$ |$\dfrac{3}{9}$|$\dfrac{2}{9}$ | $\dfrac{1}{9}$ |
+
+  이제 표본평균 $\overline{X}$ 의 평균을 구해보면
+
+  $$ \therefore  E(\overline{X}) = 1 \times \dfrac{1}{9} + 1.5 \times \dfrac{2}{9} + 2 \times \dfrac{3}{9} + 2.5 \times \dfrac{2}{9} + 3 \times \dfrac{1}{9} = \dfrac{1 + 3 + 6 + 5 + 3}{9} = \dfrac{18}{9} = 2 $$
+
+  임을 알 수 있다. ■ 
+
+  한편 표본평균의 평균 $E(\overline{X})$ 는 모평균 $\mu$ 와 $E(\overline{X}) = \mu$ 의 관계를 갖는다는 점을 이용하여 "모평균(population mean)" 의 예시에서 $\mu = 2$ 였으므로 
+
+  $$ \therefore E(\overline{X}) = \mu = 2 $$
+
+  임을 알 수 있다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+표본평균의 분산 : 모평균이 $\mu$, 모표준편차가 $\sigma$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
+
+표본평균 $\overline{X}$ 들의 분산은 
+
+$$ V(\overline{X}) = \dfrac{\sigma ^{2}}{n} $$
+
+이다. 
+
+</blockquote>
+
+- 예시 
+
+  "모집단의 확률분포" 의 예시의 모집단에서 크기가 $2$ 인 표본을 임의추출한 표본을 $X_1, X_2$ 이었을 때 이 표본의 평균 $\overline{X} = \dfrac{X_1+X_2}{2}$ 를 구하여 확률변수 $\overline{X}$ 의 분산을 구해보자. 
+
+  "표본평균의 평균" 의 예시에서 표본평균 $\overline{X}$ 의 확률분포표는 다음과 같았고
+
+  | $\overline{X}$| $1$ | $1.5$ |$2$|$2.5$ | $3$ |
+
+  |:---:|:---:|:---:|:---:|:---:|:---:|
+
+  | $P(\overline{X}=x)$| $\dfrac{1}{9}$ | $\dfrac{2}{9}$ |$\dfrac{3}{9}$|$\dfrac{2}{9}$ | $\dfrac{1}{9}$ |
+
+  표본평균 $\overline{X}$ 의 평균은 $E(\overline{X}) = 2$ 이었다.
+
+  따라서 표본평균의 분산 $V(\overline{X})$ 은 
+
+  $$ \therefore  V(\overline{X}) = E(\overline{X} ^{2}) - \{E(\overline{X})\} ^{2} = \bigg (1 ^{2} \times \dfrac{1}{9} + 1.5 ^{2} \times \dfrac{2}{9} + 2 ^{2} \times \dfrac{3}{9} + 2.5 ^{2} \times \dfrac{2}{9} + 3 ^{2} \times \dfrac{1}{9} \bigg ) - 2 ^{2}= \dfrac{13}{3}-4 = \dfrac{1}{3} $$
+
+  이다. ■ 
+
+  한편 표본평균의 분산 $V(\overline{X})$ 는 모분산 $\sigma ^{2}$ 와 표본의 크기 $n$ 에 대하여 $V(\overline{X}) = \dfrac{\sigma ^{2}}{n}$ 의 관계를 갖는다는 점을 이용하여 "모분산(population variance)" 의 예시에서 $\sigma ^{2} = \dfrac{2}{3}$ 이고 표본의 크기는 $2$ 였으므로
+
+  $$ \therefore V(\overline{X}) = \dfrac{\sigma ^{2}}{n} = \dfrac{\frac{2}{3}}{2} = \dfrac{1}{3} $$
+
+  임을 알 수 있다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+표본평균의 표준편차 : 모평균이 $\mu$, 모표준편차가 $\sigma$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
+
+표본평균 $\overline{X}$ 들의 표준편차는
+
+$$ \sigma (\overline{X}) = \dfrac{\sigma }{\sqrt[]{n}} $$
+
+이다. 
+
+</blockquote>
+
+- 그러므로 모집단의 평균, 분산, 표준편차와 표본의 평균, 분산, 표준편차는 다음과 같은 관계를 가진다.
+
+  ![캡처](https://user-images.githubusercontent.com/16812446/79965816-7684e280-84c7-11ea-8ec9-05f6175ca128.PNG)
+
+>>>>>>> correct
 - 예시 
 
   "모집단의 확률분포" 의 예시의 모집단에서 크기가 $2$ 인 표본을 임의추출한 표본을 $X_1, X_2$ 이었을 때 이 표본의 평균 $\overline{X} = \dfrac{X_1+X_2}{2}$ 를 구하여 확률변수 $\overline{X}$ 의 표준편차 구해보자. 
 
   "표본평균의 분산" 의 예시에서 표본평균 $\overline{X}$ 의 분산은 $V(\overline{X}) = \dfrac{1}{3}$ 이었다.
+<<<<<<< HEAD
 
   따라서 표본평균의 표준편차 $\sigma (\overline{X})$ 은 
 
@@ -406,6 +686,39 @@ $$ \sigma (\overline{X}) = \dfrac{\sigma }{\sqrt[]{n}} $$
 
   를 따른다. 이제 확률변수 $\overline{X}$ 를 표준화하여 표준정규분포의 확률변수 $Z = \dfrac{\overline{X} - \mu }{\sigma } = \dfrac{\overline{X} - 200}{2}$ 를 만들자. 그러면 
 
+=======
+
+  따라서 표본평균의 표준편차 $\sigma (\overline{X})$ 은 
+
+  $$ \therefore  \sigma (\overline{X}) = \sqrt[]{\dfrac{1}{3}} = \dfrac{\sqrt[]{3}}{3}  $$
+
+  이다. ■ 
+
+  한편 표본평균의 표준편차 $\sigma(\overline{X})$ 는 모표준편차 $\sigma$ 와 표본의 크기 $n$ 에 대하여 $\sigma (\overline{X}) = \dfrac{\sigma }{\sqrt[]{n}}$ 의 관계를 갖는다는 점을 이용하여 "모표준편차(population variance)" 의 예시에서 $\sigma = \dfrac{\sqrt[]{6}}{3}$ 이고 표본의 크기는 $2$ 였으므로
+
+  $$ \therefore \sigma (\overline{X}) = \dfrac{\sigma }{\sqrt[]{n}} = \dfrac{\frac{\sqrt[]{6}}{3}}{\sqrt[]{2}} = \dfrac{\sqrt[]{6}}{3 \sqrt[]{2}} = \dfrac{\sqrt[]{12}}{6} = \dfrac{\sqrt[]{3}}{3} $$
+
+  임을 알 수 있다. ■ 
+
+- 예시 
+
+  어떤 공장에서 생산한 건전지의 수명은 평균이 $200$ 시간이고 표준편차가 $10$ 시간인 정규분포 
+
+  $$ N(200, 10 ^{2}) $$
+
+  을 따른다고 하자. 이때 생산된 건전지 중에서 임의추출한 크기가 $25$ 인 표본의 표본평균을 $\overline{X}$ 라 할 때
+
+  $$ P(199 \leq \overline{X} \leq 201) $$
+
+  의 값을 구해보자. 
+
+  모집단이 정규분포 $N(200, 10 ^{2})$ 를 따르므로 크기가 $25$ 인 표본평균 $\overline{X}$ 는 정규분포
+
+  $$ N \bigg (200, \dfrac{10 ^{2}}{25}\bigg ) = N(200, 2 ^{2}) $$
+
+  를 따른다. 이제 확률변수 $\overline{X}$ 를 표준화하여 표준정규분포의 확률변수 $Z = \dfrac{\overline{X} - \mu }{\sigma } = \dfrac{\overline{X} - 200}{2}$ 를 만들자. 그러면 
+
+>>>>>>> correct
   $$ P(199 \leq \overline{X} \leq 201) = P \bigg (\dfrac{199 - 200}{2} \leq Z \leq \dfrac{201 - 200}{2} \bigg ) $$
 
   $$ = P(-0.5 \leq Z \leq 0.5) = 2 P(0 \leq Z \leq 0.5) $$
@@ -422,7 +735,11 @@ $$ \sigma (\overline{X}) = \dfrac{\sigma }{\sqrt[]{n}} $$
 
 # 표본비율의 평균, 분산, 표준편차
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 모비율(population ratio) : 모집단에서 어떤 특성을 가지는 대상의 비율을 그 특성에 대한 모비율 $p$ 라 한다.
 
@@ -438,7 +755,11 @@ $$ \sigma (\overline{X}) = \dfrac{\sigma }{\sqrt[]{n}} $$
 
   이다. ■ 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 표본비율(sample ratio) : 모집단에서 임의추출한 크기가 $n$ 인 표본에서 이 특성을 가지는 대상의 수를 확률변수 $X$ 라 할 때
 
@@ -502,7 +823,11 @@ $$\hat{p} = \dfrac{X}{n}$$
 
   이다. ■ 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 표본비율 $\hat{p}$ 의 평균 : 모비율이 $p$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
 
@@ -526,7 +851,11 @@ $$ E(\hat{p}) = p $$
 
   이다. ■ 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 표본비율 $\hat{p}$ 의 분산 : 모비율이 $p$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
 
@@ -550,7 +879,11 @@ $$ V(\hat{p}) = \dfrac{pq}{n} $$
 
   이다. ■ 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 표본비율 $\hat{p}$ 의 표준편차 : 모비율이 $p$ 인 모집단에서 크기가 $n$ 인 표본을 임의추출 할 때 
 
@@ -575,6 +908,7 @@ $$ \sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}} $$
   이다. ■ 
 
 - 예시 
+<<<<<<< HEAD
 
   어떤 고등학교 학생 중 $40\%$ 가 졸업 후 대학에 진학하지 않고 바로 취직할 것으로 조사되었다.
 
@@ -606,6 +940,39 @@ $$ \sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}} $$
 
   이다. 따라서 이 고등학교 학생 중에서 $96$ 명을 임의추출했을 때 바로 취직할 학생이 $46\%$ 이상 $50\%$ 이하일 확률은
 
+=======
+
+  어떤 고등학교 학생 중 $40\%$ 가 졸업 후 대학에 진학하지 않고 바로 취직할 것으로 조사되었다.
+
+  이 고등학교 학생 중에서 $96$ 명을 임의추출했을 때 바로 취직할 학생이 $46\%$ 이상 $50\%$ 이하일 확률을 구해보자. 
+
+  대상의 특성을 "졸업 후 바로 취직하는 학생" 으로 두면 모집단에서 특성에 대한 모비율은 $p = 0.4$ 이다.
+
+  임의추출한 $96$ 명의 표본에서 $96$ 을 $n$ 으로 두고 특성을 가지는 수를 $X$ 로 두면 표본비율을 $\hat{p} = \dfrac{X}{n}$ 로 볼 수 있고 이때 표본비율이
+
+  $$ P(0.46 \leq \hat{p} \leq 0.5) $$
+
+  일 확률을 구해야 한다. 
+
+  표본비율의 평균, 분산, 표준편차는 $p = 0.4, q = 0.6, n = 94$ 이므로
+
+  $$ E(\hat{p}) = p = 0.4 $$
+
+  $$ V(\hat{p}) = \dfrac{pq}{n} = \dfrac{0.4 \times 0.6}{94} = \dfrac{1}{400} $$ 
+
+  $$ \sigma (\hat{p}) = \sqrt[]{V(\hat{p})} = \sqrt[]{\dfrac{1}{400}} = \dfrac{1}{20} = 0.05$$
+
+  이다. $n$ 이 $94$ 로 충분히 크므로 확률변수 $X$ 는 정규분포를 따르고 그것의 실수배인 확류변수 $\hat{p} = \dfrac{X}{n}$ 도 정규분포를 따른다. 그러므로 표준화하여 새로운 확률변수 $Z = \dfrac{\hat{p} - 0.4 }{0.05 }$ 를 만들면 
+
+  $$ P(0.46 \leq \hat{p} \leq 0.5) = P \bigg ( \dfrac{0.46 - 0.4}{0.05}  \leq Z \leq \dfrac{0.5-0.4}{0.05} \bigg ) $$
+
+  $$ = P(1.2 \leq Z \leq 2) = P(0 \leq Z \leq 2) - P(0 \leq Z \leq 1.2) $$
+
+  $$ = 0.4772 - 0.3849 = 0.0923 $$
+
+  이다. 따라서 이 고등학교 학생 중에서 $96$ 명을 임의추출했을 때 바로 취직할 학생이 $46\%$ 이상 $50\%$ 이하일 확률은
+
+>>>>>>> correct
   $$ \therefore  P(0.46 \leq \hat{p} \leq 0.5)= 0.0923 $$
 
   이다. ■ 
@@ -614,6 +981,7 @@ $$ \sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}} $$
 
 # 모평균의 추정 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 추정(estimation) : 표본에서 얻은 결과를 이용하여 모집단의 평균, 표준편차 등을 추측하는 것이다.
@@ -764,11 +1132,164 @@ $$ \sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}} $$
 
 2. 신뢰도 $99\%$ 의 신뢰구간 길이 : $\displaystyle 2 \times 2.58 \dfrac{\sigma }{\sqrt[]{n}}$
 
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+추정(estimation) : 표본에서 얻은 결과를 이용하여 모집단의 평균, 표준편차 등을 추측하는 것이다.
+
+</blockquote>
+
+- "표본평균과 표본비율의 평균, 분산, 표준편차" 에서는 모집단의 평균, 분산, 표준편차로부터 표본평균의 평균, 분산, 표준편차를 구해보았다. 하지만 이제 표본으로부터 모집단의 성질을 추측해본다.
+
+  이것이 추정이다. 모집단을 전수조사하기에는 비용이 너무 많이 들기에 표본을 추출하여 조사하고 모집단의 속성을 추정하는 것이다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+점추정(point estimation) : 추정의 방법 중 하나로써 그 값을 직접 추정하는 것이다. 
+
+</blockquote>
+
+- 통계학에서는 모집단으로부터 표본을 추출하고 추출된 표본의 통계량(표본평균, 표본표준편차)을 통하여 모수(모평균, 모표준편차)를 추정한다. 그 이유는 여러번 언급했듯이 모집단을 전수조사하기에는 시간과 비용이 너무 많이 들기 때문이다.
+
+  이때 모수를 직접적인 값으로 추정하는 것을 점추정이라고 한다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+구간추정(interval estimation) : 추정의 방법 중 하나로써 그 값이 포함되어 있을 구간을 추정하는 것이다. 
+
+</blockquote>
+
+- 점추정으로 모수(모평균, 모표준편차)를 추정해도 그 값이 얼마나 정밀한지 알 수 없으므로 구간추정을 통하여 모수가 어떤 구간에 속할지 조사하기도 한다. 
+
+  가장 대표적인 구간추정은 $95\%$ 신뢰도의 신뢰구간으로써 이 신뢰구간은 실제 모평균이 그 구간 내에 있을 가능성이 $95\%$ 임을 알려준다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+신뢰도(confidence coefficient) : 표본평균의 분포로부터 모평균이 포함될 구간을 얻을 때 
+
+그 구간에 모평균이 포함될 확률이다. 
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+모평균의 신뢰구간(confidence interval) : 모평균 $\mu$ 이 존재할 것으로 추정되는 구간으로써 
+
+정규분포 $N(\mu , \sigma ^{2})$ 을 따르는 모집단에서 임의추출한 크기가 $n$ 인 표본의 표본평균을 $\overline{X}$ 이라 할 때 
+
+정규화된 확률변수 $Z = \dfrac{\overline{X} - \mu }{\dfrac{\sigma }{\sqrt[]{n}}}$ 에 대하여 다음과 같다. 
+
+1. 신뢰도 $95\%$ 의 신뢰구간 : $P(-1.96 \leq Z \leq 1.96) = 0.95 \Rightarrow \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
+
+    $$ \bigg [ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ] $$
+
+2. 신뢰도 $99\%$ 의 신뢰구간 : $P(-2.58 \leq Z \leq 2.58) = 0.95 \Rightarrow \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
+
+    $$ \bigg [ \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ] $$
+
+3. 신뢰도 $\alpha \%$ 의 신뢰구간 : $P(-k \leq Z \leq k) = \dfrac{\alpha }{100} \Rightarrow \overline{X} - k \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + k \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
+
+    $$ \bigg [ \overline{X} - k \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + k \dfrac{\sigma }{\sqrt[]{n}} \bigg ] $$
+
+</blockquote>
+
+- 설명 
+
+  정규분포 $N(\mu , \sigma ^{2})$ 을 따르는 모집단에서 크기가 $n$ 인 표본을 임의추출할 때 
+
+  표본평균 $\overline{X}$ 는 정규분포 $N \bigg (\mu , \dfrac{\sigma ^{2}}{n} \bigg )$ 을 따른다. 따라서 $\overline{X}$ 를 표준화한 확률변수 $Z = \dfrac{\overline{X}- \mu  }{\dfrac{\sigma }{\sqrt[]{n}}}$ 은 표준정규분포 $N(0, 1)$ 을 따른다. 
+
+  이때 모평균 $\mu$ 을 신뢰도 $95\%$ 로 추정하고 싶다고 하면 $\mu$ 가 $\overline{X}$ 을 표준화한 표준정규분포곡선에서 $0.95$ 의 면적 내에 포함되어야만 한다. 그런데 
+
+  $$ P(-1.96 \leq Z \leq 1.96) = 0.95 $$
+
+  이므로 
+
+  $$ = P \Bigg ( -1.96 \leq \dfrac{\overline{X}- \mu  }{\dfrac{\sigma }{\sqrt[]{n}}} \leq 1.96 \Bigg ) $$
+
+  $$ = P(\overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}}) = 0.95 $$
+
+  이다. 따라서 모평균 $\mu$ 이 폐구간 
+
+  $$\bigg [ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ]$$
+
+  에 포함될 확률이 $0.95$ 이다. ■ 
+
+  이 폐구간을 모평균 $\mu$ 에 대한 신뢰도 $95\%$ 의 신뢰구간이라 하는 것이다.
+
+  이때 모평균 $\mu$ 을 신뢰도 $99\%$ 로 추정하고 싶다고 하면 $\mu$ 가 $\overline{X}$ 을 표준화한 표준정규분포곡선에서 $0.99$ 의 면적 내에 포함되어야만 한다. 같은 방법으로 모평균 $\mu$ 이 폐구간 
+
+  $$\bigg [ \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ]$$
+
+  에 포함될 확률이 $0.99$ 라는 것을 알 수 있다. ■ 
+
+- 모표준편차 $\sigma$ 가 주어지지 않은 경우 표본의 크기 $n$ 이 충분히 클 때
+
+  즉 $n \geq 30$ 일 때 표본표준편차 $S$ 를 사용할 수 있다. 
+
+- 그런데 표본평균 $\overline{X}$ 는 확률변수로써 다양한 값을 가질 수 있다. 왜냐하면 추출되는 표본은 매번 달라질 수 있고 이에따라 그 표본에 대한 평균인 표본평균 $\overline{X}$ 도 달라질 수 있기 때문이다. 이것은 모평균 $\mu$ 가 $\alpha \%$ 의 확률로 포함될 수 있는 신뢰구간 
+
+  $$ \bigg [ \overline{X} - k \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + k \dfrac{\sigma }{\sqrt[]{n}} \bigg ] $$
+
+  이 표본에 따라 매번 달라질 수 있다는 것이다. 
+
+  이것은 크기가 $n$ 인 표본을 여러 번 추출하여 신뢰구간을 만들었을 때 그 신뢰구간들 중 $\alpha \%$ 가 모평균 $\mu$ 을 포함한다는 뜻이다. 
+
+- 예시 
+
+  어떤 학교 학생의 키는 표준편차가 $3cm$ 인 정규분포를 따른다.
+
+  학생 $36$ 명을 임의추출하여 키를 측정했더니 평큔 키가 $175cm$ 였다. 
+
+  전교생 키의 평균 $\mu$ 의 신뢰도 $95\%$ 신뢰구간과 신뢰도 $99\%$ 신뢰구간을 구해보자. 
+
+  모평균 $\mu$ 의 신뢰도 $95\%$ 신뢰구간은
+
+  $$ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+  에서 $\overline{X} = 175, \sigma  = 3, n = 36$ 이므로 
+
+  $$ \iff  175 - 1.96 \dfrac{3 }{\sqrt[]{36}} \leq \mu \leq  175 + 1.96 \dfrac{3 }{\sqrt[]{36}} $$
+
+  $$ \iff 174.02 \leq \mu \leq 175.98 $$
+
+  이다. 따라서 모평균이 $95\%$ 확률로 속할 폐구간은
+
+  $$ \therefore [174.02, 175.98] $$
+
+  이다. ■ 
+
+  모평균 $\mu$ 의 신뢰도 $99\%$ 신뢰구간은
+
+  $$ \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+  에서 $\overline{X} = 175, \sigma  = 3, n = 36$ 이므로 
+
+  $$ \iff  175 - 2.58 \dfrac{3 }{\sqrt[]{36}} \leq \mu \leq  175 + 2.58 \dfrac{3 }{\sqrt[]{36}} $$
+
+  $$ \iff 173.71 \leq \mu \leq 176.29 $$
+
+  이다. 따라서 모평균이 $99\%$ 확률로 속할 폐구간은
+
+  $$ \therefore [173.71, 176.29] $$
+
+  이다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+모평균의 신뢰구간 길이 : 모평균의 신뢰구간으로부터 모평균 $\mu$ 의 신뢰구간 길이는 다음과 같다. 
+
+1. 신뢰도 $95\%$ 의 신뢰구간 길이 : $\displaystyle 2 \times 1.96 \dfrac{\sigma }{\sqrt[]{n}}$
+
+2. 신뢰도 $99\%$ 의 신뢰구간 길이 : $\displaystyle 2 \times 2.58 \dfrac{\sigma }{\sqrt[]{n}}$
+
+>>>>>>> correct
 3. 신뢰도 $\alpha \%$ 의 신뢰구간 길이 : $\displaystyle 2 \times k \dfrac{\sigma }{\sqrt[]{n}}$
 
 </blockquote>
 
 - 증명 
+<<<<<<< HEAD
 
   신뢰도 $95\%$ 의 신뢰구간은 폐구간 $\bigg [ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ]$ 이다. 그러므로 길이는 
 
@@ -820,11 +1341,68 @@ $$ \sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}} $$
 
     이때 각각의 신뢰구간 길이는 표본 $1$ 이 약 $23.6$, 표본 $2$ 가 약 $11.8$, 표본 $3$ 이 약 $31.4$ 이다.
 
+=======
+
+  신뢰도 $95\%$ 의 신뢰구간은 폐구간 $\bigg [ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ]$ 이다. 그러므로 길이는 
+
+  $$\bigg | \bigg ( \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ) - \bigg ( \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ) \bigg | = 2 \times  1.96 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+  에서
+
+  $$ \therefore  2 \times  1.96 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+  이다. ■ 
+
+  마찬가지로 신뢰도 $99\%$ 의 신뢰구간은 폐구간 $\bigg [ \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ]$ 이다. 그러므로 길이는 
+
+  $$\bigg | \bigg ( \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ) - \bigg ( \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ) \bigg | = 2 \times  2.58 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+  에서
+
+  $$ \therefore 2 \times  2.58 \dfrac{\sigma }{\sqrt[]{n}} $$
+
+  이다. ■ 
+
+- 표본들의 평균과 표준편차가 비슷하다면 신뢰구간의 폭은 표본의 크기 $n$ 에 영향을 받는다. 표본의 크기 $n$이 크다면 신뢰구간이 작아져서 모평균을 정밀하게 추정할 수 있고 $n$ 이 작다면 신뢰구간이 커져서 모평균을 예측하기가 힘들어진다.
+
+  - 예시 
+
+    어떤 모집단에서 다음과 같은 표본 $3$ 개를 추출했다고 하자. 
+
+    표본 $1$ 은 크기 $n=16$, 평균 $\overline{X} = 98$, 표준편차 $\sigma =24$ 를 가진다. 
+
+    표본 $2$ 은 크기 $n=64$, 평균 $\overline{X} = 96$, 표준편차 $\sigma =24$ 를 가진다. 
+
+    표본 $3$ 은 크기 $n=9$, 평균 $\overline{X} = 97$, 표준편차 $\sigma =24$ 를 가진다. 
+
+    이때 각각의 표본들에서 모평균 $\mu$ 이 포함될 $95\%$ 신뢰구간은 다음과 같다. 
+
+    표본 $1$ 의 $95\%$ 신뢰구간은
+
+    $$ 98 \pm 1.96 \dfrac{24}{\sqrt[]{16}} = [86.2, 109.8] $$
+
+    이고 표본 $2$ 의 $95\%$ 신뢰구간은
+
+    $$ 96 \pm 1.96 \dfrac{24}{\sqrt[]{64}} = [90.1, 101.9] $$
+
+    이고 표본 $2$ 의 $95\%$ 신뢰구간은
+
+    $$ 97 \pm 1.96 \dfrac{24}{\sqrt[]{9}} = [81.3, 112.7] $$
+
+    이다. 
+
+    이때 각각의 신뢰구간 길이는 표본 $1$ 이 약 $23.6$, 표본 $2$ 가 약 $11.8$, 표본 $3$ 이 약 $31.4$ 이다.
+
+>>>>>>> correct
     표본 $2$ 의 신뢰구간 폭이 가장 좁으므로 표본의 크기가 가장 큰 표본 $2$ 를 사용하여 모평균이 있을 구간을 추정한 신뢰구간이 가장 정밀한 추정이라고 할 수 있다. ■ 
 
 # 모비율의 추정 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 모비율의 신뢰구간 : 모비율 $p$ 가 존재할 것으로 추정되는 구간으로써 
 
@@ -924,7 +1502,11 @@ $n$ 이 충분히 크면 $\hat{q} = 1 - \hat{p}$ 와 정규화된 확률변수 $
 
   그러나 이처럼 모평균에 대한 추정 확률이 높아질수록 구간추정의 정밀도가 떨어진다. 따라서 통상적으로(특히 보건업계에서) 신뢰도 $95\%$ 의 신뢰구간을 널리 사용한다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 모비율의 신뢰구간 길이 : 모비율의 신뢰구간으로부터 모비율 $p$ 의 신뢰구간 길이는 다음과 같다.
 

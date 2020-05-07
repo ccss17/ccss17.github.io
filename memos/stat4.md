@@ -24,7 +24,11 @@
 
 # 연속확률분포 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 연속확률변수(continuous random variable) : 어떤 구간에 속하는 모든 실수의 값을 가지는 확률변수 $X$ 이다. 
 
@@ -38,6 +42,7 @@
 
   이 확률변수 $X$ 는 어떤 구간 내에서 모든 실수 값을 가지므로 연속확률변수이다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 확률밀도함수(probability density function) : 연속확률변수 $X$ 가 구간 $[\alpha , \beta ]$ 에 속하는 모든 실수 값을 가질 때
@@ -74,6 +79,44 @@ $X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다.
 
 - 증명 
 
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+확률밀도함수(probability density function) : 연속확률변수 $X$ 가 구간 $[\alpha , \beta ]$ 에 속하는 모든 실수 값을 가질 때
+
+$X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다. 
+
+</blockquote>
+
+- 대표적인 확률밀도함수가 정규분포곡선이다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+연속확률분포(continuous probability distribution) : 확률밀도함수를 이용해 분포를 표현할 수 있는 확률분포이다.
+
+</blockquote>
+
+- 연속확률분포에는 정규분포(normal distribution), 지수분포(exponential distribution), 스튜던트 $t$ 분포(Student's t-distribution), 파레토 분포(Pareto distribution), 로지스틱 분포(logistic distribution) 등이 있다. 
+
+  한편 이산확률분포도 무한히 반복하면 연속확률분포 중 하나로 수렴한다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+확률밀도함수의 성질 : 구간 $[\alpha , \beta ]$ 에 속하는 모든 실수 값을 가지는 연속확률변수 $X$ 의 확률분포를 나타내는 확률밀도함수 $f(x)$ 는 다음 성질을 만족한다. 
+
+1. $f(x) \geq 0 (\alpha \leq x \leq \beta )$
+
+2. $\displaystyle \int_{\alpha }^{\beta }f(x)dx=1$
+
+3. $\displaystyle  P(a \leq X \leq b) = \int_{a}^{b}f(x)dx$
+
+4. $\displaystyle  P(a \leq X \leq b) = P(a < X \leq b) = P(a \leq X < b) = P(a < X < b)$
+
+</blockquote>
+
+- 증명 
+
+>>>>>>> correct
   "확률질량함수의 성질" 에서 이산확률변수 $X$ 의 확률질량함수가 $P(X = x_i) = p_i(i = 1, 2, 3, \dots, n)$ 일 때 다음이 성립함을 우리는 이미 알고 있다. 
 
   1. $0 \leq P(x) \leq 1$
@@ -129,6 +172,7 @@ $X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다.
   은 연속확률변수 $X$ 가 하나의 값 $a$ 을 가질 확률이 $F'(x) =f(x)$ 에 대하여
 
   $$ P(X = a) = P(a \leq X \leq a) = \int_{a}^{a}f(x)dx = F(a)-F(a) = 0 $$
+<<<<<<< HEAD
 
   이라는 것으로부터 기인했다. ■ 
 
@@ -148,12 +192,34 @@ $X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다.
 
   $P \bigg  (X \geq \dfrac{5}{2} \bigg  )$ 는
 
+=======
+
+  이라는 것으로부터 기인했다. ■ 
+
+- 예시 
+
+  연속확률변수 $X$ 의 확률밀도함수 $f(x) = \dfrac{2}{9}x$ 가 폐구간 $[0, 3]$ 에서 정의되었다고 하자.
+
+  확률변수 $X$ 가 $1 \leq X \leq 2$ 일 확률 $P(1 \leq X \leq 2)$ 을 구해보자.
+
+  $P(1 \leq X \leq 2)$ 는
+
+  $$ \therefore  P(1 \leq X \leq 2) = \int_{1}^{2}\dfrac{2}{9}x dx = \bigg [ \dfrac{1}{9}x ^{2} \bigg ] ^{2} _{1} = \dfrac{3}{9} = \dfrac{1}{3} $$
+
+  이다. ■ 
+
+  확률변수 $X$ 가 $X \geq \dfrac{5}{2}$ 일 확률 $P \bigg  (X \geq \dfrac{5}{2} \bigg  )$ 을 구해보자.
+
+  $P \bigg  (X \geq \dfrac{5}{2} \bigg  )$ 는
+
+>>>>>>> correct
   $$ \therefore P \bigg  (X \geq \dfrac{5}{2} \bigg  ) = P \bigg  (\dfrac{5}{2} \leq X \leq 3 \bigg  ) = \int_{5/2}^{3} \dfrac{2}{9}x dx = \bigg [ \dfrac{1}{9}x ^{2} \bigg ] ^{3} _{5/2} = 1 - \dfrac{25}{36} = \dfrac{11}{36} $$
 
   이다. ■ 
 
 ## 연속확률변수 평균, 분산, 표준편차(산포도 측정)
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 연속확률변수의 평균 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
@@ -288,10 +354,147 @@ $$ \boxed{\sigma (X) = \sqrt[]{V(X)}}  $$
 
   $$ \therefore  \sigma (aX+b) = \sqrt[]{a ^{2} {V(X)}} = |a|\sigma (X) $$
 
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+연속확률변수의 평균 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
+
+평균은
+
+$$ \boxed{\mu = E(X) = \int_{\alpha }^{\beta }xf(x)dx}  $$
+
+이다.
+
+</blockquote>
+
+- 설명 
+
+  이산확률변수 $X$ 의 평균에서 변량과 확률을 곱한 것의 총합
+
+  $$ \mu = E(X) = \sum_{i=1}^{n}x_i P(X=i) = \sum_{i=1}^{n}x_ip_i=x_1p_1 + x_2p_2 + \dots + x_n p_n$$
+
+  으로써 평균을 구했듯이 연속확률변수 $X$ 의 평균도 다음과 같이 
+
+  폐구간 $[\alpha , \beta ]$ 에서 정의된 확률질량함수 $f(x)$ 에 대하여 변량 $x$ 와 확률 $f(x)$ 을 곱한 것의 총합으로 평균을 구한다. 즉 평균은
+
+  $$ \therefore \mu = E(X) = \int_{\alpha }^{\beta } xf(x)dx $$
+
+  이다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+연속확률변수의 분산 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
+
+분산은
+
+$$ \boxed{V(X) = E((X - \mu ) ^{2}) = \int_{\alpha }^{\beta }(x- \mu ) ^{2} f(x)dx = \int_{\alpha }^{\beta }x ^{2}f(x)dx - \mu ^{2} = E(X ^{2}) - \{E(X)\} ^{2}}  $$
+
+이다.
+
+</blockquote>
+
+- 증명 
+
+  이산확률변수 $X$ 의 분산을 구할 때처럼 분산은 본질적으로 편차 제곱의 평균이다. 
+
+  그러므로 폐구간 $[\alpha , \beta ]$ 에서 정의된 확률질량함수 $f(x)$ 에 대한 연속확률변수 $X$ 의 분산은 다음과 같다.
+
+  $$ V(X) = E((X - \mu ) ^{2}) = \int_{\alpha }^{\beta }(x - \mu ) ^{2}f(x)dx $$
+
+  $$ = \int_{\alpha }^{\beta } \{ x ^{2}f(x) - 2x \mu f(x) + \mu ^{2} f(x) \} dx $$
+
+  $$ = \int_{\alpha }^{\beta } x ^{2}f(x) dx -2 \mu  \int_{\alpha }^{\beta } x f(x) dx + \mu ^{2}  \int_{\alpha }^{\beta } f(x) dx $$
+
+  에서 $\displaystyle \int_{\alpha }^{\beta }f(x) dx = 1$ 이므로 
+
+  $$ = \int_{\alpha }^{\beta } x ^{2}f(x) dx -2 \mu \cdot \mu  + \mu ^{2} \cdot 1 $$
+
+  $$ = \int_{\alpha }^{\beta } x ^{2}f(x) dx - \mu ^{2} = E(X ^{2}) - \{E(X)\} ^{2} $$
+
+  이다. 따라서 
+
+  $$ \therefore V(X) = E(X ^{2}) - \{E(X)\} ^{2} $$
+
+  이다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+연속확률변수의 표준편차 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
+
+표준편차는
+
+$$ \boxed{\sigma (X) = \sqrt[]{V(X)}}  $$
+
+이다.
+
+</blockquote>
+
+- 예시 
+
+  연속확률변수 $X$ 의 확률밀도함수가 $\displaystyle f(x) = \dfrac{4}{9} - kx(-1 \leq x \leq 2)$ 라고 하자.
+
+  그러면 먼저 $k$ 값은 $\displaystyle \int_{-1}^{2} f(x)dx = 1$ 이므로 
+
+  $$ \int_{-1}^{2} \bigg ( \dfrac{4}{9} - kx \bigg ) dx = \bigg [ \dfrac{4}{9}x - \dfrac{k}{2}x ^{2} \bigg ] ^{2} _{-1} =\dfrac{4}{3}-\dfrac{3}{2}k = 1 $$
+
+  에서 $k = \dfrac{2}{9}$ 이다. 
+
+  이때 확률변수 $X$ 의 평균, 분산, 표준편차를 구해보자.
+
+  $X$ 의 평균은 
+
+  $$ \therefore  \mu = E(X) =  \int_{-1}^{2}xf(x)dx = \int_{-1}^{2}x \bigg ( \dfrac{4}{9}-\dfrac{2}{9}x \bigg )dx = \int_{-1}^{2} \bigg (\dfrac{4}{9}x - \dfrac{2}{9}x ^{2} \bigg )dx = \bigg [ \dfrac{2}{9}x ^{2} - \dfrac{2}{27}x ^{3} \bigg ] ^{2}_{-1} = \dfrac{2}{3}-\dfrac{2}{3}=0 $$
+
+  이다. ■ 
+
+  $X$ 의 분산은 
+
+  $$  V(X) = E(X ^{2}) - \{E(X)\} ^{2} = \int_{-1}^{2}x ^{2}f(x)dx - 0 ^{2} $$
+
+  $$ = \int_{-1}^{2} \bigg ( \dfrac{4}{9}x ^{2}-\dfrac{2}{9}x ^{3} \bigg ) dx = \bigg [ \dfrac{4}{27}x ^{3} - \dfrac{1}{18}x ^{4} \bigg ] ^{2} _{-1} = \dfrac{1}{2} $$
+
+  이므로 
+
+  $$ \therefore  V(X) = \dfrac{1}{2} $$
+
+  이다. ■
+
+  $X$ 의 표준편차는 
+
+  $$ \therefore \sigma (X) = \sqrt[]{V(X)} = \sqrt[]{\dfrac{1}{2}} $$
+
+  이다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+연속확률변수의 평균, 분산, 표준편차의 성질 : 연속확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 
+
+1. $E(aX+b) = aE(X) + b$
+
+2. $V(aX+b) = a ^{2} V(X)$
+
+3. $\sigma (aX+b) = |a| \sigma (X)$
+
+</blockquote>
+
+- 이산확률변수의 평균, 분산, 표준편차의 성질이 그대로 적용된다. 
+
+- 증명 
+
+  연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
+
+  $$ \therefore  E(aX + b) = \int_{\alpha }^{\beta }(ax + b) f(x)dx = a \int_{\alpha }^{\beta }xf(x)dx + b \int_{\alpha }^{\beta }f(x)dx = a E(X)+b $$
+
+  $$ \therefore  V(aX+b) = \int_{\alpha }^{\beta }\{ax+b-(a \mu +b) ^{2} \}f(x)dx dx = a ^{2} \int_{\alpha }^{\beta }(x-m) ^{2}f(x)dx = a ^{2}V(X) $$
+
+  $$ \therefore  \sigma (aX+b) = \sqrt[]{a ^{2} {V(X)}} = |a|\sigma (X) $$
+
+>>>>>>> correct
   이다. ■ 
 
 # 정규분포 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정규분포(normal distribution) : 연속확률변수 $X$ 의 확률밀도함수 $f(x)$ 가 각각 평균과 표준편차를 나타내는 두 상수 $\mu , \sigma (\sigma >0)$ 에 대하여 
@@ -302,6 +505,18 @@ $$ f(x) = \dfrac{1}{\sqrt[]{2 \pi } \sigma } e ^{- \frac{(x- \mu )^{2}}{2 \sigma
 
 확률변수 $X$ 의 확률분포를 정규분포
 
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+정규분포(normal distribution) : 연속확률변수 $X$ 의 확률밀도함수 $f(x)$ 가 각각 평균과 표준편차를 나타내는 두 상수 $\mu , \sigma (\sigma >0)$ 에 대하여 
+
+개구간 $(-\infty , \infty )$ 에서 다음과 같이 정의될 때
+
+$$ f(x) = \dfrac{1}{\sqrt[]{2 \pi } \sigma } e ^{- \frac{(x- \mu )^{2}}{2 \sigma ^{2}}} $$
+
+확률변수 $X$ 의 확률분포를 정규분포
+
+>>>>>>> correct
 $$ N(\mu , \sigma ^{2}) $$
 
 라 한다. 
@@ -322,6 +537,7 @@ $$ N(\mu , \sigma ^{2}) $$
 
   로 주어질 때 $X$ 의 확률분포를 정규분포라 하는 것이다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 정규분포곡선 : 확률변수 $X$ 의 확률분포가 정규분포일 때 확률밀도함수 $y = f(x)$ 의 그래프를 정규분포곡선이라 한다. 
@@ -362,6 +578,48 @@ $$ N(\mu , \sigma ^{2}) $$
 
 </blockquote>
 
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+정규분포곡선 : 확률변수 $X$ 의 확률분포가 정규분포일 때 확률밀도함수 $y = f(x)$ 의 그래프를 정규분포곡선이라 한다. 
+
+</blockquote>
+
+- 예시 
+
+  다음 그래프는 정규분포 $N(1, 1)$ 을 따르는 확률변수 $X$ 의 확률밀도함수 
+
+  $$ f(x) = \dfrac{1}{\sqrt[]{2 \pi } } e ^{- \frac{x^{2}}{2 }} $$
+
+  의 정규분포곡선이다.
+
+  ![desmos-graph](https://user-images.githubusercontent.com/16812446/79834513-2b47d280-83e8-11ea-8108-647d17728c38.png)
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+정규분포의 성질 : 연속확률변수 $X$ 의 확률밀도함수 $f(x)$ 가 각각 평균과 표준편차를 나타내는 두 상수 $\mu , \sigma (\sigma >0)$ 에 대하여 정규분포일 때 다음 성질을 갖는다.
+
+1. 그래프의 개형이 직선 $x=m$ 에 대하여 좌우 대칭인 종 모양 곡선이다.
+
+2. $f(x)$ 의 최댓값은 $x=m$ 에서 $\dfrac{1}{\sqrt[]{2 \pi }\sigma }$ 이다. 
+
+3. $x$ 축을 점근선으로 가진다.
+
+4. $x$ 축과 정규분포곡선 사이 넓이
+
+    $$ \int_{-\infty }^{\infty }f(x)dx = 1 $$ 
+
+    는 $1$ 이다.
+
+5. 표준편차 $\sigma$ 가 일정할 때 평균 $\mu$ 에 따라 대칭축의 위치는 바뀌지만 곡선의 모양은 불변한다.
+
+6. 평균 $\mu$ 가 일정할 때 표준편차 $\sigma$ 가 커지면 곡선의 가운데 부분이 낮아지면서 양쪽으로 퍼지고
+
+    표준편차 $\sigma$  가 작아지면 곡선 가운데 부분이 높아지면서 좁아진다. 
+
+</blockquote>
+
+>>>>>>> correct
 - 증명 
 
   1. 그래프의 개형이 직선 $x=m$ 에 대하여 좌우 대칭인 종 모양 곡선이다.
@@ -404,7 +662,11 @@ $$ N(\mu , \sigma ^{2}) $$
 
   ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/79835764-37349400-83ea-11ea-801e-3854af430f1d.png)
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 표준정규분포(standard normal distribution) : 평균과 표준편차가 $\mu=0, \sigma = 1$ 인 정규분포를 표준정규분포
 
@@ -442,7 +704,11 @@ $$ N(0, 1) $$
 
   ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/79836894-ab236c00-83eb-11ea-99f7-7d0fa630b574.png)
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 표준점수(standard score) : 표준정규분포를 따르는 확률변수로써 
 
@@ -478,7 +744,11 @@ $$ z = \dfrac{x - \mu }{\sigma } $$
 
   위 예시에서 알 수 있듯이 원수치의 상대적 위치를 알기 위하여 표준점수를 사용한다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 편차치 : 표준점수에서 음수가 나오는 것을 극복하기 위한 점수로써 표준점수 $z$ 에 대하여 
 
@@ -490,7 +760,11 @@ $$ t = 10 z + 50 $$
 
 - $T$ 점수($T$ score) 라고도 표기한다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 표준정규분포표 : 표준정규분포 $N(0, 1)$ 를 따르는 확률변수 $Z$ 와 양수 $a$ 에 대한 확률 
 
@@ -532,7 +806,11 @@ $$ t = 10 z + 50 $$
 
   인 것을 활용하여 구간을 적절히 변환시켜 표준정규분포표를 사용하게 할 수 있다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 정규분포의 표준화(standardization) : 정규분포를 표준정규분포로 변환하는 것으로써 확률변수 $X$ 가 정규분포 $N(\mu , \sigma ^{2})$ 를 따를 때 
 
@@ -682,7 +960,11 @@ $$ t = 10 z + 50 $$
 
   이로써 입사 최저 점수를 $86$ 점이라고 예측할 수 있다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 이항분포와 정규분포의 관계 : 확률변수 $X$ 가 이항분포 $B(n, p)$ 를 따를 때 
 

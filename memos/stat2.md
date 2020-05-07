@@ -24,7 +24,11 @@
 
 # 확률분포
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 확률변수(random variable) : 어떤 시행에서 조건에 의해 표본공간의 각 원소(근원사건)에 하나의 실수 $x$ 를 대응시킨 변수
 
@@ -41,6 +45,7 @@ $$ X = x $$
   확률변수와 이 분야의 개념들은 표본공간 안의 모든 사건들의 확률을 구하여 그 분포를 해석함으로써 다른 사건의 확률을 추정하는 것이 목적이다. 
 
 - 예시 
+<<<<<<< HEAD
 
   주사위를 던졌을 때 나오는 숫자를 확률변수 $X_1$ 이라 하면 $X_1 \in \{1,2,3,4,5,6\}$ 이다. 
 
@@ -134,11 +139,110 @@ $$ P(a \leq  X \leq b) $$
 
   | $P(X=x)$  | $\dfrac{1}{4}$  | $\dfrac{1}{2}$ | $\dfrac{1}{4}$ |
 
+=======
+
+  주사위를 던졌을 때 나오는 숫자를 확률변수 $X_1$ 이라 하면 $X_1 \in \{1,2,3,4,5,6\}$ 이다. 
+
+  주사위를 $2$ 번 던졌을 때 나오는 숫자의 합을 확률변수 $X_2$ 이라 하면 $X_2 \in \{2,3,4,5,6,7,8,9,10,11,12\}$ 이다. 
+
+- 예시 
+
+  $1$ 개의 동전을 $2$ 번 던지는 시행에서 표본공간을 조건 "앞면이 나온 횟수" 로 분할하자.
+
+  그러면 분할된 각 사건과 그 확률의 대응관계는 앞면 $H$, 뒷면 $T$ 에 대하여 다음과 같다.
+
+  | 표본공간 | $(T,T)$ | $(H,T), (T, H)$ | $(H,H)$ | 
+
+  |:---:|:---:|:---:|:---:|
+
+  | 앞면이 나온 횟수  | $0$  | $1$ | $2$ |
+
+  | 확률  | $\dfrac{1}{4}$  | $\dfrac{2}{4}=\dfrac{1}{2}$ | $\dfrac{1}{4}$ |
+
+  이때 "앞면이 나온 횟수" 를 $X$ 로 두면 각 사건을 
+
+  $$ X=0, X=1, X=2 $$
+
+  로 표현할 수 있다. ■ 
+
+  이러한 $X$ 들을 표본공간의 각각의 원소, 즉 근원사건에 실수를 대응시킨 것을 확률변수라 한다. 
+
+  이 확률변수로 각각의 사건들이 특정되므로 $X=x$ 로 표현할 수 있다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+확률변수로의 확률 표기 : 확률변수 $X$ 에 대하여 어떤 사건 $X = x$ 가 일어날 확률을 
+
+$$ P(X = x) $$
+
+로 표기하고 $X$ 가 $a$ 이상, $b$ 이하의 값을 취할 확률을
+
+$$ P(a \leq  X \leq b) $$
+
+로 표기한다. 
+
+</blockquote>
+
+- 어떤 사건이 일어날 확률을 $P(A)$ 로 표기할 수 있으나 어차피 표본공간 내 모든 근원사건을 확률변수 $X=x$ 로 특정할 수 있기 때문에 
+
+  전체 사건(표본공간)에 대한 일관적인 표기를 위하여 $P(X) = x$ 로 표기하는 것이 좋다. 
+
+- 예시 
+
+  주사위를 던졌을 때 나오는 숫자를 확률변수 $X_1$ 에서 $x = 1,2,3,4,5,6$ 에 대하여 $P(X_1 = x) = \dfrac{1}{6}$ 이다. 
+
+  주사위를 $2$ 번 던졌을 때 나오는 숫자의 합을 확률변수 $X_2$ 이라 하면 $P(X_2 = 2) = \dfrac{1}{36}$ 이다.
+
+- 예시 
+
+  "확률변수의 정의" 의 $1$ 개의 동전을 $2$ 번 던지는 시행에서 표본공간의 근원사건을 "앞면이 나온 횟수" 로 특정하는 예시에서 
+
+  각각의 사건들을 확률변수
+
+  $$ X=0, X=1, X=2 $$
+
+  로 표현할 수 있었다. 그러면 이제 이 사건들이 일어날 각각의 확률들을 
+
+  $$ P(X=0) = \dfrac{1}{4}, P(X=1) = \dfrac{1}{2}, P(X=2) = \dfrac{1}{4} $$
+
+  로 일관되게 표현할 수 있다. ■ 
+
+  한편 $X$ 가 $1$ 이상, $2$ 이하의 값을 가질 확률, 즉 앞면이 $1$ 번이나 $2$ 번이 나올 사건이 일어날 확률을 
+
+  $$P(1 \leq X \leq 2) = \dfrac{1}{2} + \dfrac{1}{4} = \dfrac{3}{4}$$
+
+  로 표현할 수 있다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+확률분포(probability distribution) : 확률변수 $X$ 가 가질 수 있는 모든 값과 $X$ 가 그 값을 취할 확률의 대응 관계(함수)를
+
+확률변수 $X$ 의 확률분포라 한다. 
+
+</blockquote>
+
+- 예시 
+
+  "확률변수의 정의" 의 $1$ 개의 동전을 $2$ 번 던지는 시행에서 표본공간의 근원사건을 "앞면이 나온 횟수" 로 특정하는 예시에서 
+
+  확률변수 $X$ 의 확률분포는 다음과 같다. 
+
+  | $X$ | $0$  | $1$ | $2$ |
+
+  |:---:|:---:|:---:|:---:|
+
+  | $P(X=x)$  | $\dfrac{1}{4}$  | $\dfrac{1}{2}$ | $\dfrac{1}{4}$ |
+
+>>>>>>> correct
 - 위 예시처럼 확률분포는 확률분포표로 나타낼 수도 있고 좌표계에 확률분포 그래프로 나타낼 수도 있다. 
 
 # 이산확률분포 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 이산확률변수(discrete random variable) : 확률변수 $X$ 가 가질 수 있는 값들이 유한개이거나, 또는 자연수나 정수와 같이 셀 수 있을 때 $X$ 를 이산확률변수라 한다. 
 
@@ -152,7 +256,11 @@ $$ P(a \leq  X \leq b) $$
 
   따라서 $X$ 는 이산확률변수이다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 확률질량함수(probability mass function) : 이산확률변수 $X$ 가 가질 수 있는 값이 $x_1, x_2, x_3, \dots, x_n$ 일 때
 
@@ -186,11 +294,16 @@ $$ P(X = x_i) = p_i (i= 1, 2, 3, \dots, n) $$
 
   로 표현할 수 있다. ■ 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 이산확률분포(discrete probability distribution) : 이산확률변수가 가지는 확률분포, 즉 확률질량함수를 통해 표현할 수 있는 확률분포이다.
 
 </blockquote>
+<<<<<<< HEAD
 
 - 확률변수가 이산확률분포라는 것은 확률변수가 가질 수 있는 값의 개수가 셀 수 있다는 것이다. 
 
@@ -206,6 +319,23 @@ $$ P(X = x_i) = p_i (i= 1, 2, 3, \dots, n) $$
 
 </blockquote>
 
+=======
+
+- 확률변수가 이산확률분포라는 것은 확률변수가 가질 수 있는 값의 개수가 셀 수 있다는 것이다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+확률질량함수의 성질 : 이산확률변수 $X$ 의 확률질량함수가 $P(X = x_i) = p_i(i = 1, 2, 3, \dots, n)$ 일 때 다음이 성립한다. 
+
+1. $0 \leq P(X = x_i) \leq 1$
+
+2. $\displaystyle \sum_{i=1}^{n}P(X=x_i)= \sum_{i=1}^{n}p_i = p_1+p_2+p_3+\dots+p_n=1$
+
+3. $\displaystyle P(x_i \leq X \leq x_j) = \sum_{k=i}^{j}P(X=x_k) = \sum_{k=i}^{j}p_k$ (단, $i, j = 1, 2, 3, \dots, n$ 이고 $i < j$)
+
+</blockquote>
+
+>>>>>>> correct
 - 설명 
 
   확률질량함수는 어떤 사건에 대한 확률을 나타내는 함수이므로 다음의 확률의 기본 성질이 성립한다. 
@@ -226,6 +356,7 @@ $$ P(X = x_i) = p_i (i= 1, 2, 3, \dots, n) $$
 
 # 이산확률변수의 평균, 분산, 표준편차(산포도 측정)
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable) : 매 시행마다 예상되는 값으로써
@@ -254,6 +385,36 @@ $$ \mu = E(X) = \sum_{i=1}^{n}x_i P(X=i) = \sum_{i=1}^{n}x_ip_i=x_1p_1 + x_2p_2 
 
   $$ x_1 \cdot \dfrac{f_1}{N} +x_2 \cdot \dfrac{f_2}{N} + \dots + x_n \cdot \dfrac{f_n}{N} $$
 
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+
+기댓값(expectation, expected value) 또는 이산확률변수의 평균(mean of a discrete random variable) : 매 시행마다 예상되는 값으로써
+
+이산확률변수 $X$ 의 확률질량함수가 $P(X=x_i) = p_i(i=1,2,3, \dots, n)$ 일 때 
+
+기댓값은 확률변수($x_1, x_2, \dots, x_n$) 에 그 확률($p_1, p_2, \dots, p_n$)을 곱하여 더한 값
+
+$$ \mu = E(X) = \sum_{i=1}^{n}x_i P(X=i) = \sum_{i=1}^{n}x_ip_i=x_1p_1 + x_2p_2 + \dots + x_n p_n$$
+
+이다.
+
+</blockquote>
+
+- 증명 
+
+  평균이란 $(변량) \times (도수)$ 의 총합을 도수로 나눈 것이었다. 즉, 
+
+  $$ (평균) = \dfrac{(변량) \times (도수) 의 총합}{(도수) 의 총합} $$
+
+  이다. 그러면 평균은 $i=1,2,3, \dots, n$ 에 대한 변량 $x_i$ 과 도수 $f_i$ 그리고 도수의 총합 $N$ 에 대하여
+
+  $$ \dfrac{x_1f_1 + x_2f_2 + \dots + x_n f_n}{N} $$
+
+  이다. 이것은 
+
+  $$ x_1 \cdot \dfrac{f_1}{N} +x_2 \cdot \dfrac{f_2}{N} + \dots + x_n \cdot \dfrac{f_n}{N} $$
+
+>>>>>>> correct
   와 같다. 그런데 확률이란 도수에서 도수의 총합을 나눈 것 
 
   $$ p_i = \dfrac{f_i}{N} $$
@@ -354,7 +515,11 @@ $$ \mu = E(X) = \sum_{i=1}^{n}x_i P(X=i) = \sum_{i=1}^{n}x_ip_i=x_1p_1 + x_2p_2 
 
   | 표준편차 $\sigma(x)$| 표준편차 |
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 이산확률변수의 분산(variance) : 확률변수의 산포도를 나타내는 수치로써 
 
@@ -428,7 +593,11 @@ $$V(X) = \sum_{i=1}^{n} (x_i- \mu ) ^{2} p_i = E(X ^{2}) - \{E(X)\}^{2} $$
 
   방금 구했던 $1.06$ 의 값이 동일하게 나온 것을 알 수 있다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 이산확률변수의 표준편차(standard deviation) : 확률변수의 산포도를 나타내는 수치로써 
 
@@ -451,6 +620,7 @@ $$\sigma (X) = \sqrt[]{V(X)} $$
   $$ \therefore \sigma (X) = \sqrt[]{V(X)} = \sqrt[]{1.06} \approx 1.029 $$
 
   이다. ■ 
+<<<<<<< HEAD
 
   이로써 확률변수 $X$ 가 평균 $1.8$ 로부터 대충 $1.029$ 만큼 떨어져있다고 생각할 수 있다. 
 
@@ -486,6 +656,43 @@ $$\sigma (X) = \sqrt[]{V(X)} $$
 
   $$ \therefore \sigma (X) = \sqrt[]{V(X)} = \sqrt[]{2} \approx 1.414 $$
 
+=======
+
+  이로써 확률변수 $X$ 가 평균 $1.8$ 로부터 대충 $1.029$ 만큼 떨어져있다고 생각할 수 있다. 
+
+- 예시 
+
+  확률변수 $X$ 의 확률분포가 다음과 같을 때 기대값, 분산, 표준편차를 구해보자. 
+
+  | $X$ | $2$ |$4$ |$6$ |
+
+  |:---:|:---:|:---:|:---:|
+
+  | $P(X=x)$ | $\dfrac{1}{4}$ |$\dfrac{1}{2}$ |$\dfrac{1}{4}$ |
+
+  확률변수 $X$ 의 기대값(평균) $E(X)$ 는
+
+  $$ \therefore  E(X) = 2 \times \dfrac{1}{4} + 4 \times \dfrac{1}{2} + 6 \times \dfrac{1}{4} = 4 $$
+
+  이다. ■  
+
+  이때 $X ^{2}$ 의 기댓값 $E(X^2)$ 은
+
+  $$ E(X ^{2}) = 2 ^{2} \times \dfrac{1}{4} + 4 ^{2} \times \dfrac{1}{2} + 6 ^{2} \times \dfrac{1}{4} = 18 $$
+
+  이다. 
+
+  따라서 분산 $V(X)$ 은 
+
+  $$ \therefore V(X) = E(X ^{2}) - \{E(X)\} ^{2} = 18 - 4 ^{4} = 2 $$
+
+  이다. ■ 
+
+  이에따라 표준편차 $\sigma (X)$ 는
+
+  $$ \therefore \sigma (X) = \sqrt[]{V(X)} = \sqrt[]{2} \approx 1.414 $$
+
+>>>>>>> correct
   이다. ■ 
 
   이로써 확률변수 $X$ 가 평균 $4$ 로부터 대충 $1.414$ 만큼 떨어져있다고 볼 수 있다. 
@@ -496,7 +703,11 @@ $$\sigma (X) = \sqrt[]{V(X)} $$
 
 따라서 이런 상황을 위해 확률변수 $X$ 가 실수 $a, b$ 에 대한 확률변수 $aX+b$ 와 어떤 관계를 갖는지 밝혀둘 필요가 있다. 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 이산확률변수의 기대값(평균)의 성질 : 이산확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 평균은 다음 성질을 갖는다. 
 
@@ -530,7 +741,11 @@ $$ E(aX+b) = aE(X)+b $$
 
   이다. ■ 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 이산확률변수의 분산의 성질 : 이산확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 분산은 다음 성질을 갖는다. 
 
@@ -562,7 +777,11 @@ $$ V(aX+b) = a ^{2}V(X) $$
 
   이다. ■ 
 
+<<<<<<< HEAD
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+=======
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;
+>>>>>>> correct
 
 이산확률변수의 표준편차의 성질 : 이산확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 표준편차은 다음 성질을 갖는다. 
 
