@@ -3,11 +3,11 @@ import re
 START_SECTION = '# 수학 메모'
 
 def get_definitions(file):
-    DEF_PATTERN = '\n- .+ :'
+    DEF_PATTERN = '">\n\n.+ :'
     with open(file, encoding='utf-8') as f:
         content = f.read()
     definitions = re.findall(DEF_PATTERN, content)
-    definitions = ', '.join((definition[2:-2] for definition in definitions))
+    definitions = ', '.join((definition[4:-2] for definition in definitions))
     return definitions
 
 def get_theorem(file):
