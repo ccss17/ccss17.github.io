@@ -117,7 +117,98 @@
 
 ## 빌드 
 
-- 이미지 생성 
+- `Dockerfile` :  도커는 이미지를 만들기 위하여 `Dockerfile` 이라는 이미지 빌드용 파일을 사용한다. 
+
+  - 예시 
+
+    ```Dockerfile
+    # 1. ubuntu 설치 (패키지 업데이트 + 만든사람 표시)
+    FROM       ubuntu:16.04
+    MAINTAINER subicura@subicura.com
+    RUN        apt-get -y update
+
+    # 2. ruby 설치
+    RUN apt-get -y install ruby
+    RUN gem install bundler
+
+    # 3. 소스 복사
+    COPY . /usr/src/app
+
+    # 4. Gem 패키지 설치 (실행 디렉토리 설정)
+    WORKDIR /usr/src/app
+    RUN     bundle install
+
+    # 5. Sinatra 서버 실행 (Listen 포트 정의)
+    EXPOSE 4567
+    CMD    bundle exec ruby app.rb -o 0.0.0.0
+    ```
+
+  - 예시 
+
+    ```Dockerfile
+    FROM ubuntu:18.04
+    RUN set -xe \
+        && apt -qq update \
+        && apt -y -qq upgrade \
+        && apt -y -qq install apt-utils tzdata locales 
+    ENV TZ=Asia/Seoul
+    RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
+        && echo $TZ > /etc/timezone
+    RUN set -xe &&\
+        dpkg-reconfigure --frontend=noninteractive tzdata && \
+        sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
+        echo 'LANG="en_US.UTF-8"'>/etc/default/locale && \
+        dpkg-reconfigure --frontend=noninteractive locales && \
+        update-locale LANG=en_US.UTF-8
+
+    ENV LANG en_US.UTF-8
+    ENV LANGUAGE en_US.UTF-8
+    ENV LC_ALL en_US.UTF-8
+
+    RUN yes | unminimize
+    RUN set -xe \
+        && apt -y -qq install vim perl wget tar man sudo adduser netstat-nat net-tools curl w3m git build-essential xxd file git make build-essential wget \
+        && useradd -m -s /bin/bash ccsss \
+        && usermod -aG sudo ccsss \
+        && echo "user ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/ccsss \
+        && chmod 0440 /etc/sudoers.d/ccsss 
+
+    USER ccsss:ccsss
+
+    WORKDIR /home/ccsss
+
+    CMD [ "/bin/bash" ]
+    ```
+  
+  - 예시 
+
+    ```Dockerfile
+    FROM       ccss17/ubuntu
+    MAINTAINER chansol0505@naver.com
+    RUN set -xe \
+        && cd ~ \
+        && git clone -q https://github.com/ccss17/dotfiles-cli \
+        && cd dotfiles-cli \
+        && ./install.sh \
+        && ./install_reversing.sh \
+        && cd ~ \
+        && wget http://security.cs.rpi.edu/courses/binexp-spring2015/lectures/2/challenges.zip \
+        && unzip challenges.zip \
+        && mv challenges crackme \
+        && wget http://security.cs.rpi.edu/courses/binexp-spring2015/lectures/3/bombs.zip \
+        && unzip bombs.zip \
+        && chmod +x ~/bombs/bomb \
+        && git clone -q https://github.com/ccss17/bof \
+        && cd bof \
+        && ./setup.sh \
+        && rm -rf ~/dotfiles-cli ~/__MACOSX ~/challenges.zip ~/bombs.zip ~/bof \
+        && cd ~ \
+        && git clone -q https://github.com/ccss17/security-tutorial
+        && chsh -s `which zsh` \
+    CMD zsh
+    ```
+
+- 이미지 생성 : `Dockerfile` 이 있는 위치에서 다음 명령어를 실행한다. 
 
   ```shell
   docker build -t username/image .
