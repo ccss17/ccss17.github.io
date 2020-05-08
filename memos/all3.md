@@ -1,6 +1,24 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+- ## **생각 메모**
+
+  **[기초](https://ccss17.github.io/all.html)**
+
+  **[생각](https://ccss17.github.io/all2.html)**
+
+  **[수학 역사](https://ccss17.github.io/all3.html)**
+
+  **[컴퓨터 역사](https://ccss17.github.io/all4.html)**
+
+</blockquote>
+
+# 수학 역사 
+
 **수학의 역사에 관한 메모를 해 둔 곳입니다.**
+
+---
 
 ### **<center>_(3-1)_ $\therefore$ 2-9 에 따라 어떤 학문을 알기 위해서는 그 역사부터 공부해야 한다.</center>**
 
@@ -3247,8 +3265,6 @@ B.C. 600 ~ B.C. 300
     - 이것이 리만 가설이고 아직도 증명되지 않았다.
 
     > 풀다가 정신병 걸리는 문제..
-
-
 
 (철학의 역사)
 

@@ -6,77 +6,73 @@
 <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
 <link rel="stylesheet" href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
 <style>
-  body {
-    box-sizing: border-box;
-    min-width: 200px;
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 45px;
-  }
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+}
 </style>
-
-
-</head><body>
-<article class="markdown-body">
-<h1 id="trivial-memo-1" data-line="0" class="code-line">trivial memo</h1>
-<h2 id="colab-ec9790ec849c-tensorboard-ec82acec9aa9ed9598eab8b0-1" data-line="2" class="code-line">Colab 에서 TensorBoard 사용하기</h2>
+</head><body><article class="markdown-body">
+<h1>trivial memo</h1>
+<h2>Colab 에서 TensorBoard 사용하기</h2>
 <ol>
-<li data-line="4" class="code-line">코드 셀 하나를 만들고 다음 두 줄 코드 실행</li>
+<li>코드 셀 하나를 만들고 다음 두 줄 코드 실행</li>
 </ol>
-<pre><code data-line="6" class="code-line"><code><div>!wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+<pre><code>!wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 !unzip ngrok-stable-linux-amd64.zip
-</div></code></code></pre>
-<pre data-line="11" class="code-line"><code>- 그리고 주석처리하거나 셀을 삭제해서 모든 셀 실행 시 다시 실행되지 않도록 합니다. 
+</code></pre>
+<pre><code>- 그리고 주석처리하거나 셀을 삭제해서 모든 셀 실행 시 다시 실행되지 않도록 합니다. 
 </code></pre>
 <ol start="2">
-<li data-line="13" class="code-line">TensorBoard 로그를 생성한다.</li>
+<li>TensorBoard 로그를 생성한다.</li>
 </ol>
-<pre><code data-line="15" class="code-line language-python"><div><span class="hljs-keyword">import</span> torchvision
-<span class="hljs-keyword">import</span> torchvision.transforms <span class="hljs-keyword">as</span> transforms
-<span class="hljs-comment"># transforms</span>
+<pre><code class="language-python">import torchvision
+import torchvision.transforms as transforms
+# transforms
 transform = transforms.Compose(
   [transforms.ToTensor(),
-  transforms.Normalize((<span class="hljs-number">0.5</span>,), (<span class="hljs-number">0.5</span>,))])
-<span class="hljs-comment"># datasets</span>
-trainset = torchvision.datasets.FashionMNIST(<span class="hljs-string">'./data'</span>,
-  download=<span class="hljs-literal">True</span>,
-  train=<span class="hljs-literal">True</span>,
+  transforms.Normalize((0.5,), (0.5,))])
+# datasets
+trainset = torchvision.datasets.FashionMNIST('./data',
+  download=True,
+  train=True,
   transform=transform)
-trainloader = torch.utils.data.DataLoader(trainset, batch_size=<span class="hljs-number">4</span>,
-                                      shuffle=<span class="hljs-literal">True</span>, num_workers=<span class="hljs-number">2</span>)
-<span class="hljs-comment"># get some random training images</span>
+trainloader = torch.utils.data.DataLoader(trainset, batch_size=4,
+                                      shuffle=True, num_workers=2)
+# get some random training images
 dataiter = iter(trainloader)
 images, labels = dataiter.next()
-<span class="hljs-comment"># create grid of images</span>
+# create grid of images
 img_grid = torchvision.utils.make_grid(images)
-<span class="hljs-keyword">from</span> torch.utils.tensorboard <span class="hljs-keyword">import</span> SummaryWriter
-<span class="hljs-comment"># default `log_dir` is "runs" - we'll be more specific here</span>
-writer = SummaryWriter(<span class="hljs-string">'runs/fashion_mnist_experiment_1'</span>)
-<span class="hljs-comment"># write to tensorboard</span>
-writer.add_image(<span class="hljs-string">'four_fashion_mnist_images'</span>, img_grid)
-</div></code></pre>
-<pre data-line="41" class="code-line"><code>- 이 경우 `runs` 디렉토리가 로그가 저장되는 경로이다. 
+from torch.utils.tensorboard import SummaryWriter
+# default `log_dir` is &quot;runs&quot; - we'll be more specific here
+writer = SummaryWriter('runs/fashion_mnist_experiment_1')
+# write to tensorboard
+writer.add_image('four_fashion_mnist_images', img_grid)
+</code></pre>
+<pre><code>- 이 경우 `runs` 디렉토리가 로그가 저장되는 경로이다. 
 </code></pre>
 <ol start="3">
-<li data-line="43" class="code-line">또 코드 셀을 하나 만들고 tensorboard 를 실행한다. 이때 <code>runs</code> 디렉토리에 로그가 저장되어 있다고 가정한다.</li>
+<li>또 코드 셀을 하나 만들고 tensorboard 를 실행한다. 이때 <code>runs</code> 디렉토리에 로그가 저장되어 있다고 가정한다.</li>
 </ol>
-<pre><code data-line="45" class="code-line language-python"><div>LOG_DIR = <span class="hljs-string">'./runs'</span>
+<pre><code class="language-python">LOG_DIR = './runs'
 get_ipython().system_raw(
-<span class="hljs-string">'tensorboard --logdir {} --host 0.0.0.0 --port 6006 &amp;'</span>
+'tensorboard --logdir {} --host 0.0.0.0 --port 6006 &amp;'
 .format(LOG_DIR)
 )
-</div></code></pre>
+</code></pre>
 <ol start="4">
-<li data-line="53" class="code-line">ngrok 로 외부에서 내부 tensorboard 로 연결할 수 있는 터널링 프록시를 만든다.</li>
+<li>ngrok 로 외부에서 내부 tensorboard 로 연결할 수 있는 터널링 프록시를 만든다.</li>
 </ol>
-<pre><code data-line="55" class="code-line language-python"><div>get_ipython().system_raw(<span class="hljs-string">'./ngrok http 6006 &amp;'</span>)
-</div></code></pre>
+<pre><code class="language-python">get_ipython().system_raw('./ngrok http 6006 &amp;')
+</code></pre>
 <ol start="5">
-<li data-line="59" class="code-line">마지막으로 만들어진 터널의 public URL 을 얻어서 브라우저로 접속하면 된다.</li>
+<li>마지막으로 만들어진 터널의 public URL 을 얻어서 브라우저로 접속하면 된다.</li>
 </ol>
-<pre><code data-line="61" class="code-line language-shell"><div>! curl -s http://localhost:4040/api/tunnels | python3 -c \
-  "import sys, json; print(json.load(sys.stdin)['tunnels'][0]['public_url'])"
-</div></code></pre>
+<pre><code class="language-shell">! curl -s http://localhost:4040/api/tunnels | python3 -c \
+  &quot;import sys, json; print(json.load(sys.stdin)['tunnels'][0]['public_url'])&quot;
+</code></pre>
 
-</article>
-</body></html>
+</article></body></html>
