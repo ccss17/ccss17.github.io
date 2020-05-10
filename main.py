@@ -34,7 +34,9 @@ def update():
 
 ##### - [수학 역사](https://ccss17.github.io/all3.html)
 
-##### - [컴퓨터 역사](https://ccss17.github.io/all4.html)
+##### - [수학 역사2(수학의 확실성)](https://ccss17.github.io/all4.html)
+
+##### - [컴퓨터 역사](https://ccss17.github.io/all5.html)
 
 '''
 # {sections('기초적인 것에 관련된 메모', 'all', get_theorem)}
@@ -128,6 +130,36 @@ def update():
     with open('readme.md', 'w', encoding='utf-8') as f:
         f.write(index)
 
+def subsection(fname, title, dic):
+    with open(f'memos/{fname}.md', encoding='utf-8') as f:
+        content = f.read()
+    
+    str=f'''\
+# [ccss17.github.io](https://ccss17.github.io)
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+- ## **{title}**
+
+'''
+    for k, v in dic.items():
+        str += f'  **[{k}](https://ccss17.github.io/{v}.html)**\n\n'
+    str += '</blockquote>\n\n---\n'
+    with open(f'memos/{fname}.md', 'w', encoding='utf-8') as f:
+        f.write(str + content.split('---', maxsplit=1)[1])
+
+def update_subsection(subsection, data):
+    for title in data.values():
+        subsection(title, subsection, data)
+
 if __name__ == '__main__':
-    update()
-    print('생각 정리와 수학 정의 섹션들이 index.md 와 readme.md 에 업데이트됨')
+    dic = {
+        '기초' : 'all',
+        '생각' : 'all2',
+        '수학 역사' : 'all3',
+        '수학 역사2(수학의 확실성)' : 'all4',
+        '컴퓨터 역사' : 'all5'
+    }
+    update_subsection('생각 메모', dic)
+    # update()
+    # print('생각 정리와 수학 정의 섹션들이 index.md 와 readme.md 에 업데이트됨')

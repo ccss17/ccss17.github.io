@@ -10,15 +10,14 @@
 
   **[수학 역사](https://ccss17.github.io/all3.html)**
 
-  **[컴퓨터 역사](https://ccss17.github.io/all4.html)**
+  **[수학 역사2(수학의 확실성)](https://ccss17.github.io/all4.html)**
+
+  **[컴퓨터 역사](https://ccss17.github.io/all5.html)**
 
 </blockquote>
 
-# 기초
-
-**지식을 획득하는 방법이나 생각을 효과적으로 전달하는 방법 같이 아주 기초적인 것에 대한 논의와 생각을 메모해둔 곳입니다.**
-
 ---
+
 
 ### **<center>_(1-2)_ 지식의 발전이 요구되는 상황에서 발전되는 지식에 대한 매우 엄밀한 증명의 요구는 비효율적일 수 있다. </center>**
 
