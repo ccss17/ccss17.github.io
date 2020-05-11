@@ -148,9 +148,9 @@ def subsection(fname, title, dic):
     with open(f'memos/{fname}.md', 'w', encoding='utf-8') as f:
         f.write(str + content.split('---', maxsplit=1)[1])
 
-def update_subsection(subsection, data):
+def update_subsection(section, data):
     for title in data.values():
-        subsection(title, subsection, data)
+        subsection(title, section, data)
 
 if __name__ == '__main__':
     dic = {
@@ -161,5 +161,5 @@ if __name__ == '__main__':
         '컴퓨터 역사' : 'all5'
     }
     update_subsection('생각 메모', dic)
-    # update()
-    # print('생각 정리와 수학 정의 섹션들이 index.md 와 readme.md 에 업데이트됨')
+    update()
+    print('생각 정리와 수학 정의 섹션들이 index.md 와 readme.md 에 업데이트됨')
