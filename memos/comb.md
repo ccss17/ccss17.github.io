@@ -1003,3 +1003,4 @@ $$ \boxed{ {}_{n}C_{p} \cdot {}_{n-p}C_{q} \cdot {}_{r}C_{r} a ^{p} b ^{q} c ^{r
 
 
 
+

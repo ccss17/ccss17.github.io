@@ -650,3 +650,4 @@ $$ \text{rank} A + \dim \text{Nul} A = n $$
 
 
 
+

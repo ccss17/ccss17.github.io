@@ -22,3 +22,4 @@ $${}$$
 $$ \sigma (\overline{X}) = \dfrac{\sigma}{\sqrt[]{n}} $$
 
 
+
