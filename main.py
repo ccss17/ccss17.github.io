@@ -145,7 +145,7 @@ def subsection(fname, title, dic):
 '''
     for k, v in dic.items():
         str += f'  **[{k}](https://ccss17.github.io/{v}.html)**\n\n'
-    str += '</blockquote>\n\n---\n'
+    str += '</blockquote>\n\n---'
     with open(f'memos/{fname}.md', 'w', encoding='utf-8') as f:
         f.write(str + content.split('---', maxsplit=1)[1])
 
@@ -167,22 +167,15 @@ def link(fname):
                     and '<a name="' not in header:
                     level, value = header.split(' ', maxsplit=1)
                     lst.append(f'{level} <a name="{value}" href="#{value}">{value}</a>')
-                    # f.write(f'{level} <a name="{value}" href="#{value}">{value}</a>')
-                    # f.write('\n')
                 else:
                     lst.append(line)
-                    # f.write(line)
-                    # f.write('\n')
             else:
                 lst.append(line)
-                # f.write(line)
-                # f.write('\n')
         f.write('\n'.join(lst))
 
 def linkable():
-    # for fname in os.listdir('memos'):
-    #     link(fname)
-    link('test_stat5.md')
+    for fname in os.listdir('memos'):
+        link(fname)
     
 if __name__ == '__main__':
     dic = {
