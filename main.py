@@ -157,7 +157,8 @@ def link(fname):
     with open(f'memos/{fname}', encoding='utf-8') as f:
         content = f.read()
     HEADER_PATTERN = '^#+.*'
-    with open(f'memos/test_{fname}', 'w', encoding='utf-8') as f:
+    with open(f'memos/{fname}', 'w', encoding='utf-8') as f:
+        lst = []
         for line in content.split('\n'):
             header = re.findall(HEADER_PATTERN, line)
             if header:
@@ -165,19 +166,23 @@ def link(fname):
                 if 'https://ccss17.github.io' not in header\
                     and '<a name="' not in header:
                     level, value = header.split(' ', maxsplit=1)
-                    f.write(f'{level} <a name="{value}" href="#{value}">{value}</a>')
-                    f.write('\n')
+                    lst.append(f'{level} <a name="{value}" href="#{value}">{value}</a>')
+                    # f.write(f'{level} <a name="{value}" href="#{value}">{value}</a>')
+                    # f.write('\n')
                 else:
-                    f.write(line)
-                    f.write('\n')
+                    lst.append(line)
+                    # f.write(line)
+                    # f.write('\n')
             else:
-                f.write(line)
-                f.write('\n')
+                lst.append(line)
+                # f.write(line)
+                # f.write('\n')
+        f.write('\n'.join(lst))
 
 def linkable():
     # for fname in os.listdir('memos'):
     #     link(fname)
-    link('all5.md')
+    link('test_stat5.md')
     
 if __name__ == '__main__':
     dic = {
