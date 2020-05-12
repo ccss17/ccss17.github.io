@@ -157,7 +157,7 @@ def link(fname):
     with open(f'memos/{fname}', encoding='utf-8') as f:
         content = f.read()
     HEADER_PATTERN = '^#+.*'
-    with open(f'memos/{fname}', 'w', encoding='utf-8') as f:
+    with open(f'memos/test_{fname}', 'w', encoding='utf-8') as f:
         for line in content.split('\n'):
             header = re.findall(HEADER_PATTERN, line)
             if header:
@@ -175,8 +175,9 @@ def link(fname):
                 f.write('\n')
 
 def linkable():
-    for fname in os.listdir('memos'):
-        link(fname)
+    # for fname in os.listdir('memos'):
+    #     link(fname)
+    link('all5.md')
     
 if __name__ == '__main__':
     dic = {
