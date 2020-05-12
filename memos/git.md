@@ -1,14 +1,14 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-# git 메모 
+# <a name="git 메모 " href="#git 메모 ">git 메모 </a>
 
 https://git-scm.com/book/en/v2
 
-# Version Control
+# <a name="Version Control" href="#Version Control">Version Control</a>
 
 VCS(Version Control System) 이란 파일의 변화를 추적하여 기록하는 프로그램이다. 이것을 사용하면 몇 가지 장점이 있는데 파일들을 버전으로 관리하여 복원할 때 편리하고 버전들을 쉽게 비교할 수 있다는 것이다. 
 
-# git 
+# <a name="git " href="#git ">git </a>
 
 - 여러 VCS 프로그램이 있지만 git 이 그것들과 다른 점이 있다.
 
@@ -16,7 +16,7 @@ VCS(Version Control System) 이란 파일의 변화를 추적하여 기록하는
 
   - 하지만 git 은 그 프로젝트 전체 파일의 스냅샷으로 버전을 관리한다. 물론 파일이 동일할 경우 이전 스냅샷에 단지 연결함으로써 용량을 아낀다! 
 
-## git 이 파일을 관리하는 세 가지 상태
+## <a name="git 이 파일을 관리하는 세 가지 상태" href="#git 이 파일을 관리하는 세 가지 상태">git 이 파일을 관리하는 세 가지 상태</a>
 
 - git 은 다음 상태로 파일을 관리한다. 
 
@@ -28,7 +28,7 @@ VCS(Version Control System) 이란 파일의 변화를 추적하여 기록하는
 
   - commited 상태 : `git` 데이터베이스에 하나의 버전으로 저장된 상태이다.
 
-## git 프로젝트의 세 가지 영역 
+## <a name="git 프로젝트의 세 가지 영역 " href="#git 프로젝트의 세 가지 영역 ">git 프로젝트의 세 가지 영역 </a>
 
 - 이 세 가지 상태는 프로젝트를 working tree, staging area, git database 라는 세 가지 영역으로 나눈다. 
 
@@ -44,7 +44,7 @@ VCS(Version Control System) 이란 파일의 변화를 추적하여 기록하는
   
     - .git 디렉토리에 저장되어 있다. 
 
-## git 프로젝트 기본 작업 흐름
+## <a name="git 프로젝트 기본 작업 흐름" href="#git 프로젝트 기본 작업 흐름">git 프로젝트 기본 작업 흐름</a>
 
 1. working tree 의 파일을 수정한다.
 
@@ -52,9 +52,9 @@ VCS(Version Control System) 이란 파일의 변화를 추적하여 기록하는
 
 3. 커밋하여 git database 에 스냅샷으로 남긴다. 또 하나의 버전을 생선한 것이다. 
 
-# git 사용법 
+# <a name="git 사용법 " href="#git 사용법 ">git 사용법 </a>
 
-## 설치 후 초기 설정 
+## <a name="설치 후 초기 설정 " href="#설치 후 초기 설정 ">설치 후 초기 설정 </a>
 
 git 을 설치한 후 가장 먼저 `user.name` 과 `user.email` 을 설정해주어야 한다. 커밋할 때 매번 이 정보가 사용되어야 하기 때문이다. 
 
@@ -67,9 +67,9 @@ git config --global user.email "EMAIL"
 
 ---
 
-# 레포지토리 관리 
+# <a name="레포지토리 관리 " href="#레포지토리 관리 ">레포지토리 관리 </a>
 
-### 레포지토리 생성 
+### <a name="레포지토리 생성 " href="#레포지토리 생성 ">레포지토리 생성 </a>
 
 - `git init` : 레포지토리를 `git` 프로젝트로 초기화한다. 
 
@@ -80,7 +80,7 @@ git config --global user.email "EMAIL"
     git init
     ```
 
-### 파일 staging 하기
+### <a name="파일 staging 하기" href="#파일 staging 하기">파일 staging 하기</a>
 
 파일을 staging 영역에 올리는 것을 "staging 한다" 고 한다.
 
@@ -95,13 +95,13 @@ git config --global user.email "EMAIL"
     git add *.c
     ```
 
-### 커밋 하기 
+### <a name="커밋 하기 " href="#커밋 하기 ">커밋 하기 </a>
 
 - `git commit -m 'init'` : 커밋을 하여 staging 된 파일들의 스냅샷을 찍고 데이터베이스에 하나의 버전으로 저장한다. 
 
 - `git commit -a -m 'init'` : `-a` 옵션에 따라 `git` 이 스테이징 과정을 건너뛰고 모든 파일을 커밋한다. 
 
-### 추적 금지하기 
+### <a name="추적 금지하기 " href="#추적 금지하기 ">추적 금지하기 </a>
 
 - `.gitignore` : 이 파일에 파일 이름을 넣으면 `git` 이 변경사항을 더 이상 추적하지 않는다. 
 
@@ -122,7 +122,7 @@ git config --global user.email "EMAIL"
   doc/**/*.pdf
   ```
 
-## 파일 삭제 
+## <a name="파일 삭제 " href="#파일 삭제 ">파일 삭제 </a>
 
 - `git rm <file>` : 파일을 삭제하고 파일의 삭제를 스테이징한다. 
 
@@ -134,15 +134,15 @@ git config --global user.email "EMAIL"
 
 ---
 
-# 레포지토리 분석
+# <a name="레포지토리 분석" href="#레포지토리 분석">레포지토리 분석</a>
 
-### 레포지토리 상태 보기 
+### <a name="레포지토리 상태 보기 " href="#레포지토리 상태 보기 ">레포지토리 상태 보기 </a>
 
 - `git status` : 파일들이 추적되고 있는지 추적되고 있지 않은지, 또는 커밋이 된 상태인지를 볼 수 있다. 
 
 - `git status -s` : 상태를 간단히 출력한다. 
 
-## 변경 사항 비교하기 
+## <a name="변경 사항 비교하기 " href="#변경 사항 비교하기 ">변경 사항 비교하기 </a>
 
 - `git diff` : 아직 스테이징 되지 않은 파일의 변경사항을 마지막 커밋과 비교하여 출력한다. 
 
@@ -150,7 +150,7 @@ git config --global user.email "EMAIL"
 
 - `git diff --cached` : `git diff --staged` 와 동일하다. 
 
-## 커밋 기록 보기 
+## <a name="커밋 기록 보기 " href="#커밋 기록 보기 ">커밋 기록 보기 </a>
 
 - `git log` : 커멋 기록을 출력한다.
 
@@ -178,9 +178,9 @@ git config --global user.email "EMAIL"
 
 ---
 
-# 원격 레포지토리 
+# <a name="원격 레포지토리 " href="#원격 레포지토리 ">원격 레포지토리 </a>
 
-### 원격 레포지토리 가져오기 
+### <a name="원격 레포지토리 가져오기 " href="#원격 레포지토리 가져오기 ">원격 레포지토리 가져오기 </a>
 
 - `git clone <URL>` : 원격 레포지토리를 가져오기 위하여 다음 명령어를 입력한다. 
 
@@ -194,7 +194,7 @@ git config --global user.email "EMAIL"
     git clone git://user@server:path/to/repo.git
     ```
 
-### 원격 레포지토리 리스트 관리
+### <a name="원격 레포지토리 리스트 관리" href="#원격 레포지토리 리스트 관리">원격 레포지토리 리스트 관리</a>
 
 - `git remote -v` : 원격 레포지토리들을 본다. 
 
@@ -242,7 +242,7 @@ git config --global user.email "EMAIL"
   
     `git remote rename pb paul`
 
-### 원격 레포지토리로부터 업데이트하기 
+### <a name="원격 레포지토리로부터 업데이트하기 " href="#원격 레포지토리로부터 업데이트하기 ">원격 레포지토리로부터 업데이트하기 </a>
 
 - `git fetch <remote>` : 원격 레포지토리의 변경사항을 가져온다. 
 
@@ -258,7 +258,7 @@ git config --global user.email "EMAIL"
   
     `git pull origin master`
 
-### 원격 레포지토리를 업데이트하기 
+### <a name="원격 레포지토리를 업데이트하기 " href="#원격 레포지토리를 업데이트하기 ">원격 레포지토리를 업데이트하기 </a>
 
 - `git push <remote> <branch>` : 원격 레포지토리로 변경사항을 업데이트한다. 
 
@@ -270,23 +270,23 @@ git config --global user.email "EMAIL"
 
 ---
 
-# 복원하기 
+# <a name="복원하기 " href="#복원하기 ">복원하기 </a>
 
 **이 명령어들은 `git` 이 재복원을 지원하지 않는 몇 안되는 기능들이니 아주 조심히 사용해야 한다. 더 이상의 재복원은 없다.**
 
-### 마지막 커밋 수정하기 
+### <a name="마지막 커밋 수정하기 " href="#마지막 커밋 수정하기 ">마지막 커밋 수정하기 </a>
 
 - `git commit --amend` : 스테이징된 파일을 마지막 커밋에 포함시킨다. 
 
   - 만약 스테이징된 파일이 없다면 단순히 마지막 커밋 메시지를 수정하게 되는 것이다.
 
-### 스테이징된 파일을 내리기 
+### <a name="스테이징된 파일을 내리기 " href="#스테이징된 파일을 내리기 ">스테이징된 파일을 내리기 </a>
 
 - `git reset HEAD <file>` : 스테이징된 파일을 언스테이징한다. 
 
   - 만약 스테이징된 파일이 없다면 단순히 마지막 커밋 메시지를 수정하게 되는 것이다.
 
-### 파일 복원하기 
+### <a name="파일 복원하기 " href="#파일 복원하기 ">파일 복원하기 </a>
 
 - `git restore <file>` : 스테이징되지 않은 변경된 파일을 마지막 커밋 버전으로 복원한다. 
 
@@ -296,7 +296,7 @@ git config --global user.email "EMAIL"
 
 ---
 
-# Tagging
+# <a name="Tagging" href="#Tagging">Tagging</a>
 
 `git` 특정 커밋에 태그를 부여해서 릴리즈 포인트를 정한다. 
 
@@ -304,13 +304,13 @@ git config --global user.email "EMAIL"
 
   - `git tag -l "v1.8.5*` : `1.8.5` 버전의 모든 하위 버전을 출력한다. 
 
-## 태그 생성 
+## <a name="태그 생성 " href="#태그 생성 ">태그 생성 </a>
 
 `git` 은 `lightweight` 태그와 `annotated` 태그를 지원한다. `lightweight` 는 단순히 특정 커밋을 가르키는 포인터 역할을 하지만, `annotated` 태그는 태그 이름, 이메일, 태그 메시지 등을 포함하며 GPG 로 사인되어 커밋 오브젝트에 포함된다.
 
 일반적으로 `annotated` 태그를 다는 것이 좋다. 하지만 임시적인 태그를 달거나 별도의 이유로 추가 정보를 저장하기 싫다면 `lightweight` 도 써도 좋다. 
 
-### 마지막 커밋에 annotated 태그 부여 
+### <a name="마지막 커밋에 annotated 태그 부여 " href="#마지막 커밋에 annotated 태그 부여 ">마지막 커밋에 annotated 태그 부여 </a>
 
 - `git tag -a <VERSION> -m "MESSAGE"` : 마지막 커밋에 `annotated` 태그를 생성한다. 
 
@@ -324,7 +324,7 @@ git config --global user.email "EMAIL"
 
 - `git show v1.4` : `1.4` 태그의 정보와 그것에 딸린 커밋 정보를 본다. 
 
-### 마지막 커밋에 lightweight 태그 부여 
+### <a name="마지막 커밋에 lightweight 태그 부여 " href="#마지막 커밋에 lightweight 태그 부여 ">마지막 커밋에 lightweight 태그 부여 </a>
 
 - `git tag <VERSION>` : 마지막 커밋에 `lightweight` 태그를 생성한다. 
 
@@ -336,7 +336,7 @@ git config --global user.email "EMAIL"
 
   - `git show v1.4-lw` 로 태그 정보를 보면 커밋 해쉬만 볼 수 있다. 
 
-### 특정 커밋에 lightweight 태그 부여 
+### <a name="특정 커밋에 lightweight 태그 부여 " href="#특정 커밋에 lightweight 태그 부여 ">특정 커밋에 lightweight 태그 부여 </a>
 
 - `git tag -a <VERSION> <COMMIT>` : 특정 커밋에 `annotated` 태그를 생성한다. 
 
@@ -346,7 +346,7 @@ git config --global user.email "EMAIL"
   
     `git tag -a v1.2 9fceb02`
 
-### 특정 버전의 레포지토리 살펴보기 
+### <a name="특정 버전의 레포지토리 살펴보기 " href="#특정 버전의 레포지토리 살펴보기 ">특정 버전의 레포지토리 살펴보기 </a>
 
 - `git checkout <VERSION>` : 특정 버전일 때의 시점으로 레포지토리를 바꾼다. 
 
@@ -360,7 +360,7 @@ git config --global user.email "EMAIL"
     git checkout -b version2 v2.0.0
     ```
 
-### 원격 레포지토리에 태그 공유 
+### <a name="원격 레포지토리에 태그 공유 " href="#원격 레포지토리에 태그 공유 ">원격 레포지토리에 태그 공유 </a>
 
 `git push` 는 원격 레포에 태그까지 공유해주지는 않는다. 따라서 명시적으로 태그를 `push` 해주어야 한다. 
 
@@ -374,7 +374,7 @@ git config --global user.email "EMAIL"
 
   - 푸쉬할 태그가 너무 많을 때 유용한다. 
 
-### 원격 레포지토리에 태그 공유 
+### <a name="원격 레포지토리에 태그 공유 " href="#원격 레포지토리에 태그 공유 ">원격 레포지토리에 태그 공유 </a>
 
 - `git tag -d <VERSION>` : 특정 태그를 삭제한다. 
 
@@ -388,7 +388,7 @@ git config --global user.email "EMAIL"
 
 ---
 
-# Branching 
+# <a name="Branching " href="#Branching ">Branching </a>
 
 프로젝트를 개발할 때 확실하게 정해진 파일들을 수정하지 않은 채 개발적이고 실험적인 내용들을 추가하며 파일들을 수정해야 한다. 그런데 이 작업은 매우 귀찮다. 원본 프로젝트를 복사하여 훼손되지 않도록 백업한 후 복사본을 고치는 과정을 반복해야 하기 때문이다. 
 
@@ -396,13 +396,13 @@ git config --global user.email "EMAIL"
 
 `git` 이 제공하는 브랜치 기능을 잘 이해하면 당신의 개발 과정이 아주 강력하고 안정적으로 완전히 변할 것이다. 
 
-## About Git Branching
+## <a name="About Git Branching" href="#About Git Branching">About Git Branching</a>
 
 먼저 `git` 이 다른 VCS 와는 달리 각각의 커밋들을 파일의 변경기록으로 저장하는 것이 아니라 레포지토리의 전체 스냅샷으로 저장하는 것을 기억하자. 당신이 커밋을 하면 커밋 오브젝트는 스테이징된 파일들, 커미터의 이름과 이메일, 그리고 부모 커밋들을 포인팅 한다. 
 
 스테이징된 파일들 각각의 체크섬 해쉬값이 커밋에 저장되는데 이것을 `blobs` 오브젝트라 한다. 또한 `git` 은 디렉토리들의 체크섬을 계산하여 그 해쉬값을 `tree` 오브젝트로 저장한다. `tree` 오브젝트는 그 디렉토리에 저장되어있는 `blobs` 들의 리스트 정보를 지니고 있는 것이다. 그러면 `git` 은 최종적으로 메타데이터(날짜, 작성자 등)와 루트 디렉토리의 `tree` 오브젝트를 가르키는 `commit` 오브젝트를 만들며 커밋을 완료한다. 이 `commit` 오브젝트가 지금까지 해오던 커밋의 실체인 것이다. 
 
-## 예시 
+## <a name="예시 " href="#예시 ">예시 </a>
 
 만약 3 개의 파일을 만든 후 스테이징 하고 커밋했다고 하자. 그러면 이 시점에서 5 개의 오브젝트가 생성된다. 3 개의 `blobs` 오브젝트와 루트 디렉토리를 가르키는 1 개의 `tree` 오브젝트, 그리고 1 개의 `commit` 오브젝트가 그것이다. 다음 그림이 지금 상황을 시각적으로 보여준다. 
 
@@ -414,7 +414,7 @@ git config --global user.email "EMAIL"
 
 `git` 은 `master` 라는 기본 브랜치를 갖고 있다. `master` 브랜치는 항상 마지막 커밋을 포인팅한다. 즉 커밋을 할 때마다 자동으로 마지막 커밋으로 포인팅을 변경해주는 것이다. 
 
-## 브랜치 생성 
+## <a name="브랜치 생성 " href="#브랜치 생성 ">브랜치 생성 </a>
 
 `branch` 를 생성한다는 것은 새로운 포인터를 만든다는 것이다. 
 
@@ -438,7 +438,7 @@ git config --global user.email "EMAIL"
 
 - `git log --oneline --decorate` : 현재 어떤 브랜치에 상주하고 있는지 확인한다. 
 
-## 브랜치 이주 
+## <a name="브랜치 이주 " href="#브랜치 이주 ">브랜치 이주 </a>
 
 - `git checkout <name>` : 브랜치를 이주한다. 
 
@@ -476,7 +476,7 @@ git checkout master
 
 - `git log --oneline --decorate --graph --all` : 브랜치 상황을 그래프로 시각적으로 보여준다. 
 
-## Branching Management
+## <a name="Branching Management" href="#Branching Management">Branching Management</a>
 
 - `git checkout -b <name>` : 브랜치 생성과 동시에 이주한다. 
 
@@ -498,22 +498,22 @@ git checkout master
 
 - `git branch -D <name>` : 병합되지 않은 브랜치도 강제로 삭제한다. 
 
-## 기본적인 브랜칭과 병합 시나리오 예시 
+## <a name="기본적인 브랜칭과 병합 시나리오 예시 " href="#기본적인 브랜칭과 병합 시나리오 예시 ">기본적인 브랜칭과 병합 시나리오 예시 </a>
 
 ```shell
 git checkout -b iss53
-# branch[iss53] modify files and commit
+# <a name="branch[iss53] modify files and commit" href="#branch[iss53] modify files and commit">branch[iss53] modify files and commit</a>
 git checkout master
 git checkout -b hotfix
-# branch[hotfix] modify files and commit
+# <a name="branch[hotfix] modify files and commit" href="#branch[hotfix] modify files and commit">branch[hotfix] modify files and commit</a>
 git checkout master
 git merge hotfix
 git branch -d hotfix 
 git checkout iss53
-# branch[iss53] modify files and commit
+# <a name="branch[iss53] modify files and commit" href="#branch[iss53] modify files and commit">branch[iss53] modify files and commit</a>
 git checkout master
 git merge iss53
-# resolve merge conflicts and commit
+# <a name="resolve merge conflicts and commit" href="#resolve merge conflicts and commit">resolve merge conflicts and commit</a>
 git branch -d iss53
 ```
 이제 한 웹개발자가 어떤 유저의 이슈를 해결하던 중 매우 급한 에러를 해결해야 하는 상황을 상상하자.
@@ -524,7 +524,7 @@ git branch -d iss53
 
 이제 웹개발자가 유저의 이슈를 받고 그 이슈를 `#53` 라 이름지었다고 하자. 그는 이 이슈를 해결하기 위하여 새로운 브랜치를 생성하고 이주한다.
 
-### iss53 을 해결하러 가기 
+### <a name="iss53 을 해결하러 가기 " href="#iss53 을 해결하러 가기 ">iss53 을 해결하러 가기 </a>
 
 ```shell
 git checkout -b iss53
@@ -545,7 +545,7 @@ git commit -a -m 'added a new footer [issue 53]'
 
 ![](https://git-scm.com/book/en/v2/images/basic-branching-3.png)
 
-### 급히 해결해야 하는 에러 hotfix 를 보고받아서 그것부터 해결하러 하기 
+### <a name="급히 해결해야 하는 에러 hotfix 를 보고받아서 그것부터 해결하러 하기 " href="#급히 해결해야 하는 에러 hotfix 를 보고받아서 그것부터 해결하러 하기 ">급히 해결해야 하는 에러 hotfix 를 보고받아서 그것부터 해결하러 하기 </a>
 
 그런데 웹개발자가 지금 즉시 해결해야만 하는 매우 급한 에러인 `hotfix` 를 보고받아서 `master` 브랜치로 되돌아가야 한다. 그런데 `git` 은 브랜치를 변경하기 전에 커밋되지 않은 파일들이 있다면 브랜치 변경을 허용하지 않기 때문에 모두 다 커밋이 완료된 상태여야 한다. (하지만 `Stashing` 을 사용하면 가능하기는 하다!)
 
@@ -576,7 +576,7 @@ git merge hotfix
 
 ![](https://git-scm.com/book/en/v2/images/basic-branching-5.png)
 
-### 다시 iss53 로 되돌아와서 작업하기 
+### <a name="다시 iss53 로 되돌아와서 작업하기 " href="#다시 iss53 로 되돌아와서 작업하기 ">다시 iss53 로 되돌아와서 작업하기 </a>
 
 이제 웹개발자는 다시 `#53` 이슈로 되돌아가서 하던 일을 마무리 하려 한다. 그런데 `hotfix` 브랜치는 더 이상 필요 없으니 먼저 삭제를 한 후 `#53` 이슈를 해결하러 돌아가자. 
 
@@ -614,7 +614,7 @@ git merge iss53
 git branch -d iss53
 ```
 
-## 병합 충돌 
+## <a name="병합 충돌 " href="#병합 충돌 ">병합 충돌 </a>
 
 병합 충돌이란 두 커밋이 동일한 파일을 다른 내용으로 수정하여 병합할 수 없는 상황을 말한다. 위 상황에서 만약 병합 충돌이 일어났다면 어떻게 해야 할까? 
 
@@ -661,7 +661,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 그러고 나서 커밋하면 최종적으로 `merge commit` 이 생성되며 병합이 완료된다! 
 
-## 원격 레포지토리의 브랜치 관리 시나리오 
+## <a name="원격 레포지토리의 브랜치 관리 시나리오 " href="#원격 레포지토리의 브랜치 관리 시나리오 ">원격 레포지토리의 브랜치 관리 시나리오 </a>
 
 - Remote references : 브랜치, 태그 등을 포함한 원격 레포지토리의 레퍼런스를 뜻한다. 
 
@@ -699,7 +699,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 그러면 위와 같이 `origin/master` 가 업데이트되어 새로운 커밋을 가르키게 되었다. 
 
-## 다중 원격 레포지토리 브랜치 관리 시나리오 
+## <a name="다중 원격 레포지토리 브랜치 관리 시나리오 " href="#다중 원격 레포지토리 브랜치 관리 시나리오 ">다중 원격 레포지토리 브랜치 관리 시나리오 </a>
 
 이제 당신의 소규모 팀이 개인적으로 사용하는 또 다른 서버 `git.team1.ourcompany.com` 이라는 원격 레포지토리를 `git remote add teamone git://git.team1.ourcompany.com` 를 통하여 추가했다고 하자.
 
@@ -777,10 +777,12 @@ no changes added to commit (use "git add" and/or "git commit -a")
     git push origin --delete serverfix
     ```
 
-# 기타 
+# <a name="기타 " href="#기타 ">기타 </a>
 
-## 자동 로그인
+## <a name="자동 로그인" href="#자동 로그인">자동 로그인</a>
 
 - `git config --global credential.helper cache` : 원격 레포지토리의 아이디와 비밀번호를 임시적으로 저장한다.
 
 - `git config --global credential.helper store` : 원격 레포지토리의 아이디와 비밀번호를 `~/.git-credentials` 에 영구적으로 저장한다.
+
+

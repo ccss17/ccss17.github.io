@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## **수와 연산**
+## <a name="**수와 연산**" href="#**수와 연산**">**수와 연산**</a>
 
 **[기초 산술 메모](https://ccss17.github.io/arithmetic.html)**
 
@@ -12,11 +12,11 @@
 
 </blockquote>
 
-# 기초 산술 메모
+# <a name="기초 산술 메모" href="#기초 산술 메모">기초 산술 메모</a>
 
 ---
 
-# 수와 연산 
+# <a name="수와 연산 " href="#수와 연산 ">수와 연산 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -38,7 +38,7 @@
 
 </blockquote>
 
-## 이항연산
+## <a name="이항연산" href="#이항연산">이항연산</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -136,7 +136,7 @@
 
   $$
 
-## 수의 연산 
+## <a name="수의 연산 " href="#수의 연산 ">수의 연산 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -288,7 +288,7 @@
 
   - 곱셈의 역원은 지수의 부호가 반대인 수(역수)이다. $a \cdot (a^{-1}) = 1$
 
-## 수의 분류
+## <a name="수의 분류" href="#수의 분류">수의 분류</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -426,7 +426,7 @@
 
 - $a>0,b<0$ 이면 $\frac{\sqrt[]{a}}{\sqrt[]{b}} = - \sqrt[]{\frac{a}{b}}$, 이외의 경우에는 $\frac{\sqrt[]{a}}{\sqrt[]{b}} = \sqrt[]{\frac{a}{b}}(단, b \neq 0)$ 이다.
 
-## 수열
+## <a name="수열" href="#수열">수열</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -496,7 +496,7 @@ $$f : \N \to \R$$
 
   - $b^2 = ac$
 
-## 급수
+## <a name="급수" href="#급수">급수</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -620,7 +620,7 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 - $$\sum_{k=1}^{n}\frac{1}{\sqrt[]{k}+\sqrt[]{k+1}} = \sum_{k=1}^{n}(\sqrt[]{k+1}-\sqrt[]{k})$$
 
-## 수학적 귀납법과 수열
+## <a name="수학적 귀납법과 수열" href="#수학적 귀납법과 수열">수학적 귀납법과 수열</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -680,7 +680,7 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
   $$ a_n = a_1 + (a_2-a_1) \times \frac{1 - (\frac{r}{p})^{n-1}}{1 - \frac{r}{p}} $$
 
-# 지수
+# <a name="지수" href="#지수">지수</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -728,7 +728,7 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
   - $a^\frac{1}{n} = \sqrt[n]{a}$
 
-## 지수법칙
+## <a name="지수법칙" href="#지수법칙">지수법칙</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -782,7 +782,7 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 - $a > 0, b > 0$ 이어야 하는 이유는 지수가 짝수이건 홀수이건 거듭제곱근이 항상 존재해야 하기 때문이다. 만약 음수에 붙은 지수가 홀수라면 음수의 제곱근을 정의해야 하는데 실수 범위에서 $\sqrt[]{-1}$ 는 존재하지 않는다. 
 
-## 제곱근
+## <a name="제곱근" href="#제곱근">제곱근</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -836,7 +836,7 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 - $\sqrt[np]{a^{mp}} = \sqrt[n]{a^m}$
 
-# 로그
+# <a name="로그" href="#로그">로그</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -915,4 +915,6 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 - 상용로그는 보통 밑 $10$ 을 생략하여 $\log_{} n$ 같이 나타낸다. 
 
 - 혹은 더욱 간단하게 $\lg_{} n$ 으로 나타낼 수도 있다. 
+
+
 

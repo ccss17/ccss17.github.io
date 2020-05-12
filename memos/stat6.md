@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## **통계 메모**
+## <a name="**통계 메모**" href="#**통계 메모**">**통계 메모**</a>
 
 **[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
 
@@ -18,11 +18,11 @@
 
 </blockquote>
 
-# 상관관계 분석
+# <a name="상관관계 분석" href="#상관관계 분석">상관관계 분석</a>
 
 ---
 
-# 공분산과 상관계수 
+# <a name="공분산과 상관계수 " href="#공분산과 상관계수 ">공분산과 상관계수 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -470,4 +470,6 @@ $$ \rho = \dfrac{1}{n-1} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{
 </blockquote>
 
 **구체화 필요**
+
+
 

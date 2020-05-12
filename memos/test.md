@@ -20,3 +20,5 @@ $$ V(\overline{X}) = \dfrac{\sigma ^{2}}{n} $$
 $${}$$
 
 $$ \sigma (\overline{X}) = \dfrac{\sigma}{\sqrt[]{n}} $$
+
+

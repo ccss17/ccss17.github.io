@@ -1,4 +1,5 @@
 import re
+import os
 
 START_SECTION = '# 수학 메모'
 
@@ -152,6 +153,31 @@ def update_subsection(section, data):
     for title in data.values():
         subsection(title, section, data)
 
+def link(fname):
+    with open(f'memos/{fname}', encoding='utf-8') as f:
+        content = f.read()
+    HEADER_PATTERN = '^#+.*'
+    with open(f'memos/{fname}', 'w', encoding='utf-8') as f:
+        for line in content.split('\n'):
+            header = re.findall(HEADER_PATTERN, line)
+            if header:
+                header = header[0]
+                if 'https://ccss17.github.io' not in header\
+                    and '<a name="' not in header:
+                    level, value = header.split(' ', maxsplit=1)
+                    f.write(f'{level} <a name="{value}" href="#{value}">{value}</a>')
+                    f.write('\n')
+                else:
+                    f.write(line)
+                    f.write('\n')
+            else:
+                f.write(line)
+                f.write('\n')
+
+def linkable():
+    for fname in os.listdir('memos'):
+        link(fname)
+    
 if __name__ == '__main__':
     dic = {
         '기초' : 'all',
@@ -162,4 +188,5 @@ if __name__ == '__main__':
     }
     update_subsection('생각 메모', dic)
     update()
-    print('생각 정리와 수학 정의 섹션들이 index.md 와 readme.md 에 업데이트됨')
+    linkable()
+    print('업데이트됨')

@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## **선형대수학 메모**
+## <a name="**선형대수학 메모**" href="#**선형대수학 메모**">**선형대수학 메모**</a>
 
 **[선형방정식](https://ccss17.github.io/la.html)**
 
@@ -18,13 +18,13 @@
 
 </blockquote>
 
-# 직교
+# <a name="직교" href="#직교">직교</a>
 
 ---
 
-# 직교성과 최소제곱법 
+# <a name="직교성과 최소제곱법 " href="#직교성과 최소제곱법 ">직교성과 최소제곱법 </a>
 
-## 내적, 길이, 직교
+## <a name="내적, 길이, 직교" href="#내적, 길이, 직교">내적, 길이, 직교</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -248,7 +248,7 @@ $$ ||u + v|| ^{2} = ||u|| ^{2} + ||v||^{2} $$
 
 - 모든 벡터 $v$ 은 $0 ^{T}v = 0$ 이므로 $\R ^{n}$ 에서 영벡터는 모든 벡터와 직교한다. 
 
-## 직교여공간 
+## <a name="직교여공간 " href="#직교여공간 ">직교여공간 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -318,7 +318,7 @@ $$ (\text{Row} A)^{\perp } = \text{Nul} A, (\text{Nul} A)^{\perp } = \text{Row} 
 
   **구체화 필요**
 
-## 직교집합
+## <a name="직교집합" href="#직교집합">직교집합</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -358,7 +358,7 @@ $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교
 
 </blockquote>
 
-## 직교사영
+## <a name="직교사영" href="#직교사영">직교사영</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -366,7 +366,7 @@ $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교
 
 </blockquote>
 
-## 정규직교집합 
+## <a name="정규직교집합 " href="#정규직교집합 ">정규직교집합 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -389,4 +389,6 @@ $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교
 직교행렬(orthogonal matrix) : 정사각 정칙행렬 $U$ 가 $U ^{-1} = U ^{T}$ 를 만족할 때 $U$ 를 직교행렬이라 한다. 
 
 </blockquote>
+
+
 

@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## **통계 메모**
+## <a name="**통계 메모**" href="#**통계 메모**">**통계 메모**</a>
 
 **[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
 
@@ -18,13 +18,13 @@
 
 </blockquote>
 
-# 통계적 추정
+# <a name="통계적 추정" href="#통계적 추정">통계적 추정</a>
 
 ---
 
-# 통계적 추정 
+# <a name="통계적 추정 " href="#통계적 추정 ">통계적 추정 </a>
 
-# 모집단과 표본 
+# <a name="모집단과 표본 " href="#모집단과 표본 ">모집단과 표본 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -142,7 +142,7 @@
 
 - 모집단의 크기가 충분히 크면 비복원추출도 복원추출로 볼 수 있다. 
 
-# 표본평균의 평균, 분산, 표준편차
+# <a name="표본평균의 평균, 분산, 표준편차" href="#표본평균의 평균, 분산, 표준편차">표본평균의 평균, 분산, 표준편차</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -410,7 +410,7 @@ $$ \sigma (\overline{X}) = \dfrac{\sigma }{\sqrt[]{n}} $$
 
   이 값은 "수명이 $199$ 이상이고 $201$ 인 건전지의 비율이 $38.3\%$ 이다" 또는 "어떤 건전지를 골랐는데 그 수명이 $199$ 이상이고 $201$ 이하일 확률이 $38.3\%$ 이다" 로 해석될 수 있다.
 
-# 표본비율의 평균, 분산, 표준편차
+# <a name="표본비율의 평균, 분산, 표준편차" href="#표본비율의 평균, 분산, 표준편차">표본비율의 평균, 분산, 표준편차</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -602,7 +602,7 @@ $$ \sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}} $$
 
   즉 $9.2\%$ 정도라고 생각할 수 있다. 
 
-# 모평균의 추정 
+# <a name="모평균의 추정 " href="#모평균의 추정 ">모평균의 추정 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -812,7 +812,7 @@ $$ \sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}} $$
 
     표본 $2$ 의 신뢰구간 폭이 가장 좁으므로 표본의 크기가 가장 큰 표본 $2$ 를 사용하여 모평균이 있을 구간을 추정한 신뢰구간이 가장 정밀한 추정이라고 할 수 있다. ■ 
 
-# 모비율의 추정 
+# <a name="모비율의 추정 " href="#모비율의 추정 ">모비율의 추정 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -947,4 +947,6 @@ $n$ 이 충분히 크면 $\hat{q} = 1 - \hat{p}$ 와 정규화된 확률변수 $
   $$ \therefore  2 \times 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$$
 
   이다. ■ 
+
+
 

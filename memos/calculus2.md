@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## **미적분 메모**
+## <a name="**미적분 메모**" href="#**미적분 메모**">**미적분 메모**</a>
 
 **[극한 메모](https://ccss17.github.io/calculus.html)**
 
@@ -20,11 +20,11 @@
 
 </blockquote>
 
-# 미분 메모
+# <a name="미분 메모" href="#미분 메모">미분 메모</a>
 
 ---
 
-# 미적분학 Calculus 
+# <a name="미적분학 Calculus " href="#미적분학 Calculus ">미적분학 Calculus </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -66,7 +66,7 @@
 
   > 그러므로 수학을 구성하는 가장 기초적인 연산과 요소들은 세상에 존재하는 수많은 자연 대상의 행동을 구성할 수 있고 원리를 추상적으로 표현할 수 있다. 그렇다면 수학은 어느정도 수준까지 세상을 추상적으로 표현할 수 있는가? 모든 세상과 모든 대상들을 수학으로 표현할 수 있을까? 그렇다면 인공지능을 개발하는 사람들에게는 희소식이다. 왜냐하면 수학적 형식 언어로 표현된 알고리즘과 수식들은 비교적 코드로 자동화시키기 쉽기 때문이다. 
 
-# 미분
+# <a name="미분" href="#미분">미분</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -188,7 +188,7 @@ $$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac
 
   **수와 달리 물리량에는 최소단위가 존재한다. 그래서 물리량은 그 최소단위만큼 변하며 동적일 수 있다. 하지만 수는 변할 수 없다. 최소단위가 존재하지 않는 수로 이루어진 이데아의 세계는 현실 세계와 다른 것 같다. 그렇다면 수학이 현실세계를 정확하게 반영할 수 있는가? 만약 수학이 자연 대상을 참되게 추상화시키지 못한다면 수학의 정당성을 어떻게 증명할 수 있는가? 수학이 거짓된 세상이고 우리는 마치 꿈 속이나 정신병 걸린 사람의 잘못된 정신세계라는 수학에서 뛰놀고 있었다는 것이 아니라는 것을 어떻게 증명할 수 있을까?**
 
-# 미분 가능성
+# <a name="미분 가능성" href="#미분 가능성">미분 가능성</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -258,7 +258,7 @@ $$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac
 
 - 위 예시로 불연속이 점, 뾰족한 점에서 접선을 그릴 수 없으므로(좌미분계수와 우미분계수가 다르므로) 미분계수가 존재하지 않는다, 즉 미분 불가능하다는 것을 이해하였다. 그러므로 연속이어도 미분 불가능(뾰족한 점일경우)할 수 있다.
 
-# 도함수 
+# <a name="도함수 " href="#도함수 ">도함수 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -336,7 +336,7 @@ $$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac
 
   - 또 그 계산법을 미분법이라 한다. 
 
-## 여러가지 함수의 도함수 
+## <a name="여러가지 함수의 도함수 " href="#여러가지 함수의 도함수 ">여러가지 함수의 도함수 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -424,7 +424,7 @@ $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 정수일 때, $y' = 
 
   $$ = f'(x)g(x) + f(x)g'(x) $$
 
-#### 연쇄법칙(Chain Rule)
+#### <a name="연쇄법칙(Chain Rule)" href="#연쇄법칙(Chain Rule)">연쇄법칙(Chain Rule)</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -678,7 +678,7 @@ $$ \{\frac{f(x)}{g(x)}\}' = \frac{f'(x)g(x)-f(x)g'(x)}{\{g(x)\} ^{2}} $$
 
   $$ \therefore y' = \frac{f'(x)g(x) - f(x)g'(x)}{\{g(x)\} ^{2}} $$
 
-## 도함수의 활용 
+## <a name="도함수의 활용 " href="#도함수의 활용 ">도함수의 활용 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -760,7 +760,7 @@ $$ y - f(a) = - \frac{1}{f'(a)}(x-a) (단, f'(a) \neq 0)$$
 
 </blockquote>
 
-# 롤의 정리, 평균값 정리
+# <a name="롤의 정리, 평균값 정리" href="#롤의 정리, 평균값 정리">롤의 정리, 평균값 정리</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -890,7 +890,7 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
   - 또한 따름정리 $2$ 는 도함수가 같다고 해서 원래 함수와 같은 것은 아니라는 것을 말해준다. 
 
-# 함수의 증가와 감소 
+# <a name="함수의 증가와 감소 " href="#함수의 증가와 감소 ">함수의 증가와 감소 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1004,7 +1004,7 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
 - 어떤 점에서 미분계수가 음수면 그 점에서 함수는 감소한다. 
 
-# 함수의 극대와 극소 
+# <a name="함수의 극대와 극소 " href="#함수의 극대와 극소 ">함수의 극대와 극소 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1120,7 +1120,7 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
     ![desmos-graph](https://user-images.githubusercontent.com/16812446/76137520-6634b780-6081-11ea-8c89-0b5cb3c02da3.png)
 
-# 함수의 최대-최소 
+# <a name="함수의 최대-최소 " href="#함수의 최대-최소 ">함수의 최대-최소 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1144,7 +1144,7 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
 > 판단을 수학적으로 모델링하여 코드로 자동화할 때 자주 사용된다. 왜냐하면 수로 격하된 자연대상들은 수 간의 비교를 통하여 최선의 선택을 결정하게 되기 때문이다. 대상들의 관계를 일반화시킨 함수로 최선의 판단과 일어날 결과에 대한 목적달성도를 표현하여 최대값을 도출하는 선택을 쉽게 알 수 있다. 
 
-## 함수의 그래프의 활용
+## <a name="함수의 그래프의 활용" href="#함수의 그래프의 활용">함수의 그래프의 활용</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1171,4 +1171,6 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
   함수 $f(x)$ 의 극값이 존재할 때, $x>a$ 에서 $(f(x) 의 최소값)>0$ 임을 보이면 된다. 
 
   함수 $f(x)$ 의 극값이 존재하지 않을 때, $x>a$ 에서 $f(x)$ 가 증가하고, $f(a) \geq 0$ 임을 보이면 된다. 
+
+
 

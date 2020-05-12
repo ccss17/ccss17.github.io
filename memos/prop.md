@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## **확률 메모**
+## <a name="**확률 메모**" href="#**확률 메모**">**확률 메모**</a>
 
 **[조합 메모](https://ccss17.github.io/comb.html)**
 
@@ -10,11 +10,11 @@
 
 </blockquote>
 
-# 확률 메모
+# <a name="확률 메모" href="#확률 메모">확률 메모</a>
 
 ---
 
-# 확률
+# <a name="확률" href="#확률">확률</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -238,7 +238,7 @@ $$ \boxed{P(A) = \frac{\text{sum}(A)}{\text{sum}(S)}}  $$
 
   이다. ■ 
 
-# 확률의 덧셈정리
+# <a name="확률의 덧셈정리" href="#확률의 덧셈정리">확률의 덧셈정리</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -368,7 +368,7 @@ $$ \boxed{P(A ^{C}) = 1 - P(A)}  $$
 
   이다. 이것이 남자가 적어도 $1$ 명 선출되는 확률이다. ■ 
 
-## 조건부 확률 
+## <a name="조건부 확률 " href="#조건부 확률 ">조건부 확률 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -478,7 +478,7 @@ $$ P(A \cap B) = P(A)P(B|A) = P(B)P(A|B) $$
 
   이다. ■ 
 
-## 사건의 독립과 종속
+## <a name="사건의 독립과 종속" href="#사건의 독립과 종속">사건의 독립과 종속</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -617,7 +617,7 @@ $$ P_r = {}_{n}C_{r}p ^{r}(1-p)^{n-r} = {}_{n}C_{r} p ^{r}q ^{n-r} $$
 
   이다. ■ 
 
-## 전확률 공식과 베이즈 정리 
+## <a name="전확률 공식과 베이즈 정리 " href="#전확률 공식과 베이즈 정리 ">전확률 공식과 베이즈 정리 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -737,7 +737,7 @@ $$ \boxed{P(A_i|B) = \frac{P(B \cap A_i)}{P(B)} = \frac{P(A_i)P(B|A_i)}{\display
 
   임을 보였기 때문이다. 
 
-### 몬티홀 문제
+### <a name="몬티홀 문제" href="#몬티홀 문제">몬티홀 문제</a>
 
 어떤 게임 쇼는 게임 참가자에게 세 개의 문 중에서 하나를 고르라고 한다. 한 문 뒤에는 자동차가, 두 문 뒤에는 염소가 있고 그 중에서 자동차가 있는 문을 선택하면 참가자는 자동차를 얻을 수 있다. 
 
@@ -804,4 +804,6 @@ $9$ 가지의 선택을 바꾸었을 경우에 대하여 자동차를 획득할 
 반면 $9$ 가지의 선택을 바꾸지 않을 경우에 대하여 자동차를 획득할 수 있는 경우는 $3$, 획득할 수 없는 경우는 $6$ 가지이다. 
 
 따라서 선택을 바꾸었을 때 자동차를 획득할 수 있는 확률은 $\dfrac{6}{9} = \dfrac{2}{3}$ 이고 선택을 바꾸지 않았을 때 자동차를 획득할 수 있는 확률은 $\dfrac{3}{9} = \dfrac{1}{3}$ 이다. 
+
+
 

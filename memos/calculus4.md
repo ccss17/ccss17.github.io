@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## **미적분 메모**
+## <a name="**미적분 메모**" href="#**미적분 메모**">**미적분 메모**</a>
 
 **[극한 메모](https://ccss17.github.io/calculus.html)**
 
@@ -20,11 +20,11 @@
 
 </blockquote>
 
-# 미분2 메모
+# <a name="미분2 메모" href="#미분2 메모">미분2 메모</a>
 
 ---
 
-# 지수함수와 로그함수의 극한
+# <a name="지수함수와 로그함수의 극한" href="#지수함수와 로그함수의 극한">지수함수와 로그함수의 극한</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -166,7 +166,7 @@
 
       임을 알 수 있다.
 
-## 무리수 $e$ 와 자연로그 
+## <a name="무리수 $e$ 와 자연로그 " href="#무리수 $e$ 와 자연로그 ">무리수 $e$ 와 자연로그 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -282,7 +282,7 @@ $$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
 
 </blockquote>
 
-## 지수함수와 로그함수의 미분 
+## <a name="지수함수와 로그함수의 미분 " href="#지수함수와 로그함수의 미분 ">지수함수와 로그함수의 미분 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -358,7 +358,7 @@ $$ (\ln x)' = \frac{1}{x} $$
 
 </blockquote>
 
-## 정의역이 확장된 로그함수의 미분
+## <a name="정의역이 확장된 로그함수의 미분" href="#정의역이 확장된 로그함수의 미분">정의역이 확장된 로그함수의 미분</a>
 
 지금까지의 로그함수의 미분은 정의역이 양의 실수 집합에서만 성립한다. 그러나 이제 정의역을 확장해보자. 
 
@@ -408,7 +408,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
 - 그런데 정의역이 양의 실수로 국한된 로그함수의 도함수와 절대값 연산으로 정의역이 확장된 로그함수의 도함수가 서로 같으므로 로그함수의 도함수를 구할 때 절대값을 무시할 수 있다. 
 
-# 삼각함수의 극한
+# <a name="삼각함수의 극한" href="#삼각함수의 극한">삼각함수의 극한</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -506,7 +506,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
     ![desmos-graph(6)](https://user-images.githubusercontent.com/16812446/76513437-a4731200-6499-11ea-87ae-a6646df7cc60.png)
 
-# 삼각함수의 도함수 
+# <a name="삼각함수의 도함수 " href="#삼각함수의 도함수 ">삼각함수의 도함수 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -636,7 +636,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
   이다.
 
-## 복잡한 함수의 도함수 
+## <a name="복잡한 함수의 도함수 " href="#복잡한 함수의 도함수 ">복잡한 함수의 도함수 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -776,7 +776,7 @@ $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)\ln a}$$
 
   $y = x ^e$ 의 도함수는 $y'=ex^{e-1}$ 이다.
 
-## 매개변수로 나타낸 함수의 미분 
+## <a name="매개변수로 나타낸 함수의 미분 " href="#매개변수로 나타낸 함수의 미분 ">매개변수로 나타낸 함수의 미분 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1022,7 +1022,7 @@ $$
 
   $$ f(x) = \cos x \Rightarrow f ^{(n)}(x) =\cos (x+\frac{n \pi }{2}) $$
 
-## 함수의 그래프 개형 
+## <a name="함수의 그래프 개형 " href="#함수의 그래프 개형 ">함수의 그래프 개형 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1154,11 +1154,11 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
 </blockquote>
 
-# 로피탈의 정리 
+# <a name="로피탈의 정리 " href="#로피탈의 정리 ">로피탈의 정리 </a>
 
 **구체화 필요**
 
-# 테일러 급수
+# <a name="테일러 급수" href="#테일러 급수">테일러 급수</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1334,7 +1334,7 @@ $$ T_n(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a) ^{2} + \dots +
 
   $n$차 테일러 다항식이 점차 원래 함수 $f(x)=e ^{x}$ 로 근사되는 것을 알 수 있다. 
 
-# 특수 함수의 미분 
+# <a name="특수 함수의 미분 " href="#특수 함수의 미분 ">특수 함수의 미분 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1489,4 +1489,6 @@ $$ \phi ' (x) = \begin{cases} 1 &(x>0)\text{}\\ 0 &(x \leq 0)\text{}\\ \end{case
 - 인공지능에서 오차역전파를 할 때 표준 시그모이드 함수의 미분의 최대값이 $0.25$ 라서 오차 전파가 어려운 경우가 있다. 이 상황을 기울기 소실(vanishing gradient) 문제라 한다. 
 
   이때 ReLU 함수를 사용하면 되는데 ReLU 함수의 미분은 $0$ 또는 $1$ 의 값을 갖기 때문이다. 이는 기울기 소실 문제를 해결하는데 도움을 준다. 
+
+
 

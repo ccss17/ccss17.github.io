@@ -1,8 +1,8 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-# Philosophy Memo
+# <a name="Philosophy Memo" href="#Philosophy Memo">Philosophy Memo</a>
 
-# 철학 
+# <a name="철학 " href="#철학 ">철학 </a>
 
 - 반응적 사고 : 반응에 대하여 하는 사고이다. 
 
@@ -69,3 +69,4 @@
   - 논리학 : 생각의 규칙에 관하여 연구하며 어떤 생각이 합리적으로 연결되는지 연구한다. 
 
   - 구체 학문으로 과학철학, 기술철학, 정치철학, 법철학 등의 분야가 있다.
+

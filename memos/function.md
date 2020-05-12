@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## **해석학 메모**
+## <a name="**해석학 메모**" href="#**해석학 메모**">**해석학 메모**</a>
 
 **[해석학 메모](https://ccss17.github.io/anal.html)**
 
@@ -12,11 +12,11 @@
 
 </blockquote>
 
-# 함수 메모 
+# <a name="함수 메모 " href="#함수 메모 ">함수 메모 </a>
 
 ---
 
-# 도형의 방정식 
+# <a name="도형의 방정식 " href="#도형의 방정식 ">도형의 방정식 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -116,7 +116,7 @@
 
 - 직선 $y=x$에 대하여 대칭이동한 도형의 방정식 : $f(y, x)=0$
 
-# 여러가지 함수 
+# <a name="여러가지 함수 " href="#여러가지 함수 ">여러가지 함수 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -296,7 +296,7 @@
 
   삼각함수 $y = \sin x$ 는 초월함수이다. 
 
-## 다항함수 
+## <a name="다항함수 " href="#다항함수 ">다항함수 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -392,7 +392,7 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
 </blockquote>
 
-## 유리함수
+## <a name="유리함수" href="#유리함수">유리함수</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -426,7 +426,7 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   ![desmos-graph](https://user-images.githubusercontent.com/16812446/75099281-255d8d00-5603-11ea-98fd-89c968af8de2.png)
 
-## 무리함수
+## <a name="무리함수" href="#무리함수">무리함수</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -466,7 +466,7 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
     ![desmos-graph(5)](https://user-images.githubusercontent.com/16812446/75109648-9c793c80-5668-11ea-8542-9369bc611610.png) ![desmos-graph(6)](https://user-images.githubusercontent.com/16812446/75109660-b87cde00-5668-11ea-897c-4eaf836d5a0b.png)
 
-## 지수함수 
+## <a name="지수함수 " href="#지수함수 ">지수함수 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -516,7 +516,7 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   $2^{x^2-4} \geq 8^x$
 
-## 로그함수
+## <a name="로그함수" href="#로그함수">로그함수</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -562,7 +562,7 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   $\log_{3} (x^2-2x) > \log_{3} (2-x)+1$
 
-## 특별한 함수 
+## <a name="특별한 함수 " href="#특별한 함수 ">특별한 함수 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -739,4 +739,6 @@ $$ \zeta (x) = \frac{1}{1+e ^{-x}} $$
   ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/77423392-72a36900-6e12-11ea-80e0-b3baf537b86b.png)
 
   - 게인 $a$ 의 값을 $1$ 에서 $5$ 로 높혔더니 함수의 휘어지는 정도가 커졌다는 것을 알 수 있다. $x$ 축을 압축시켰다고도 할 수 있다.
+
+
 
