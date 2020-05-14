@@ -864,5 +864,19 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 <p><code>git config --global credential.helper store</code> : 원격 레포지토리의 아이디와 비밀번호를 <code>~/.git-credentials</code> 에 영구적으로 저장한다.</p>
 </li>
 </ul>
+<h1><a name="경험 " href="#경험 ">경험 </a></h1>
+<ul>
+<li>
+<p>만약 실수로 <code>master</code> 브랜치를 망쳐버려서 마지막 <code>commit</code> 으로 이동해야 하는 경우(마지막 커밋 해쉬를 <code>4428</code> 이라고 하자), 일단 <code>master</code> 브랜치를 커밋한 후</p>
+<pre><code class="language-shell">git add .
+git commit -m &quot;Incorrect!&quot;
+git checkout 4428
+</code></pre>
+<p>로 마지막 커밋으로 이동한다. 그런 다음 고칠 것을 고치고, 커밋을 한다.</p>
+<pre><code class="language-shell">git add .
+git commit -m &quot;CORRECT!&quot;
+</code></pre>
+</li>
+</ul>
 
 </article></body></html>
