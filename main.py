@@ -166,6 +166,7 @@ def link(fname):
                 if 'https://ccss17.github.io' not in header\
                     and '<a name="' not in header:
                     level, value = header.split(' ', maxsplit=1)
+                    value = value.replace('"', '&#x22;')
                     lst.append(f'{level} <a name="{value}" href="#{value}">{value}</a>')
                 else:
                     lst.append(line)
