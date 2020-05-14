@@ -1,8 +1,8 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-# <a name="Docker 메모 " href="#Docker 메모 ">Docker 메모 </a>
+# <a name="<a name=\"Docker 메모 \" href=\"#Docker 메모 \">Docker 메모 </a>" href="#<a name=\"Docker 메모 \" href=\"#Docker 메모 \">Docker 메모 </a>"><a name=\"Docker 메모 \" href=\"#Docker 메모 \">Docker 메모 </a></a>
 
-## <a name="시작 " href="#시작 ">시작 </a>
+## <a name="<a name=\"시작 \" href=\"#시작 \">시작 </a>" href="#<a name=\"시작 \" href=\"#시작 \">시작 </a>"><a name=\"시작 \" href=\"#시작 \">시작 </a></a>
 
 - `ubuntu 18.04` 시작 
 
@@ -40,7 +40,7 @@
   docker run -d --name torch-notebook -p 8888:8888 -p 6006:6006 -v d:\repo\torch-test:/workspace ccss17/torch-notebook
   ```
 
-## <a name="관리" href="#관리">관리</a>
+## <a name="<a name=\"관리\" href=\"#관리\">관리</a>" href="#<a name=\"관리\" href=\"#관리\">관리</a>"><a name=\"관리\" href=\"#관리\">관리</a></a>
 
 - 실행중인 컨테이너 중지 
 
@@ -81,7 +81,7 @@
 
   
 
-## <a name="상태" href="#상태">상태</a>
+## <a name="<a name=\"상태\" href=\"#상태\">상태</a>" href="#<a name=\"상태\" href=\"#상태\">상태</a>"><a name=\"상태\" href=\"#상태\">상태</a></a>
 
 - 이미지 상태 보기
 
@@ -101,7 +101,7 @@
   docker ps -a
   ```
 
-## <a name="삭제 " href="#삭제 ">삭제 </a>
+## <a name="<a name=\"삭제 \" href=\"#삭제 \">삭제 </a>" href="#<a name=\"삭제 \" href=\"#삭제 \">삭제 </a>"><a name=\"삭제 \" href=\"#삭제 \">삭제 </a></a>
 
 - 컨테이너 삭제 
 
@@ -115,7 +115,7 @@
   docker rm -v $(docker ps -a -q -f status=exited)
   ```
 
-## <a name="빌드 " href="#빌드 ">빌드 </a>
+## <a name="<a name=\"빌드 \" href=\"#빌드 \">빌드 </a>" href="#<a name=\"빌드 \" href=\"#빌드 \">빌드 </a>"><a name=\"빌드 \" href=\"#빌드 \">빌드 </a></a>
 
 - `Dockerfile` :  도커는 이미지를 만들기 위하여 `Dockerfile` 이라는 이미지 빌드용 파일을 사용한다. 
 
@@ -226,7 +226,7 @@
     docker tag app username/image:1
     ```
 
-## <a name="공유 " href="#공유 ">공유 </a>
+## <a name="<a name=\"공유 \" href=\"#공유 \">공유 </a>" href="#<a name=\"공유 \" href=\"#공유 \">공유 </a>"><a name=\"공유 \" href=\"#공유 \">공유 </a></a>
 
 - 이미지 푸쉬 
 

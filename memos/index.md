@@ -1,10 +1,10 @@
-# <a name="여러가지 메모 " href="#여러가지 메모 ">여러가지 메모 </a>
+# <a name="<a name=\"여러가지 메모 \" href=\"#여러가지 메모 \">여러가지 메모 </a>" href="#<a name=\"여러가지 메모 \" href=\"#여러가지 메모 \">여러가지 메모 </a>"><a name=\"여러가지 메모 \" href=\"#여러가지 메모 \">여러가지 메모 </a></a>
 
  ##### 게시용으로 작성되지 않았습니다. 그래서 개인적으로만 사용하는 용어들 및 개인적인 생각들이 종종 포함되어 있습니다. 공부한 거를 안 까먹으려고 메모한 것들입니다. **http://github.com/ccss17/ccss17.github.io** 에서 관리합니다.
 
 ## [Tex 수학기호 메모](https://ccss17.github.io/tex.html)
 
-# <a name="컴퓨터 관련 메모" href="#컴퓨터 관련 메모">컴퓨터 관련 메모</a>
+# <a name="<a name=\"컴퓨터 관련 메모\" href=\"#컴퓨터 관련 메모\">컴퓨터 관련 메모</a>" href="#<a name=\"컴퓨터 관련 메모\" href=\"#컴퓨터 관련 메모\">컴퓨터 관련 메모</a>"><a name=\"컴퓨터 관련 메모\" href=\"#컴퓨터 관련 메모\">컴퓨터 관련 메모</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
@@ -16,7 +16,7 @@
 
 </blockquote>
 
-# <a name="철학 메모" href="#철학 메모">철학 메모</a>
+# <a name="<a name=\"철학 메모\" href=\"#철학 메모\">철학 메모</a>" href="#<a name=\"철학 메모\" href=\"#철학 메모\">철학 메모</a>"><a name=\"철학 메모\" href=\"#철학 메모\">철학 메모</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
 
@@ -28,7 +28,7 @@
 
 </blockquote>
 
-# <a name="수학 메모" href="#수학 메모">수학 메모</a>
+# <a name="<a name=\"수학 메모\" href=\"#수학 메모\">수학 메모</a>" href="#<a name=\"수학 메모\" href=\"#수학 메모\">수학 메모</a>"><a name=\"수학 메모\" href=\"#수학 메모\">수학 메모</a></a>
 
 ### <a name="수학기초론 메모" href="#수학기초론 메모">수학기초론 메모</a>
 

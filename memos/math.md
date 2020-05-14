@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**수학 기초론**" href="#**수학 기초론**">**수학 기초론**</a>
+## <a name="<a name=\"**수학 기초론**\" href=\"#**수학 기초론**\">**수학 기초론**</a>" href="#<a name=\"**수학 기초론**\" href=\"#**수학 기초론**\">**수학 기초론**</a>"><a name=\"**수학 기초론**\" href=\"#**수학 기초론**\">**수학 기초론**</a></a>
 
 **[논리학](https://ccss17.github.io/logic.html)**
 
@@ -12,11 +12,11 @@
 
 </blockquote>
 
-# <a name="집합론 " href="#집합론 ">집합론 </a>
+# <a name="<a name=\"집합론 \" href=\"#집합론 \">집합론 </a>" href="#<a name=\"집합론 \" href=\"#집합론 \">집합론 </a>"><a name=\"집합론 \" href=\"#집합론 \">집합론 </a></a>
 
 ---
 
-# <a name="수학" href="#수학">수학</a>
+# <a name="<a name=\"수학\" href=\"#수학\">수학</a>" href="#<a name=\"수학\" href=\"#수학\">수학</a>"><a name=\"수학\" href=\"#수학\">수학</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -132,7 +132,7 @@
 
 </blockquote>
 
-# <a name="수학기초론" href="#수학기초론">수학기초론</a>
+# <a name="<a name=\"수학기초론\" href=\"#수학기초론\">수학기초론</a>" href="#<a name=\"수학기초론\" href=\"#수학기초론\">수학기초론</a>"><a name=\"수학기초론\" href=\"#수학기초론\">수학기초론</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -156,7 +156,7 @@
 
   - 위 두 자연언어로 표현된 명제는 전혀 다른 사건을 표현하지만 두 사건이 동일한 형식 언어 $2- 1 = 1$ 로 격하되었다. 이는 추상 언어($2, 1, -, =$)가 대상을 일반화하고 추상화 할 수 있기 때문이다. 역으로 추상화된 형식 언어는 개별적인 자연 사건에 대응될 수 있다. 따라서 참으로 판명된 수학 명제의 형식 언어는 수많은 개별 사건에 적용되는 자연 언어로 격상될 가능성을 갖는다. 
 
-## <a name="집합론 " href="#집합론 ">집합론 </a>
+## <a name="<a name=\"집합론 \" href=\"#집합론 \">집합론 </a>" href="#<a name=\"집합론 \" href=\"#집합론 \">집합론 </a>"><a name=\"집합론 \" href=\"#집합론 \">집합론 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -310,7 +310,7 @@
 
 - 유한 집합의 크기를 자연수로 나타낼 수 있는데 그 크기를 무한 집합으로 확장한 것이다.
 
-### <a name="집합의 연산 " href="#집합의 연산 ">집합의 연산 </a>
+### <a name="<a name=\"집합의 연산 \" href=\"#집합의 연산 \">집합의 연산 </a>" href="#<a name=\"집합의 연산 \" href=\"#집합의 연산 \">집합의 연산 </a>"><a name=\"집합의 연산 \" href=\"#집합의 연산 \">집합의 연산 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -364,7 +364,7 @@
 
 - $n(A - B) = n(A) - n(A \cap B) = n(A \cup B) - n(B)$
 
-### <a name="여러가지 집합" href="#여러가지 집합">여러가지 집합</a>
+### <a name="<a name=\"여러가지 집합\" href=\"#여러가지 집합\">여러가지 집합</a>" href="#<a name=\"여러가지 집합\" href=\"#여러가지 집합\">여러가지 집합</a>"><a name=\"여러가지 집합\" href=\"#여러가지 집합\">여러가지 집합</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

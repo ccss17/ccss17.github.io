@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**미적분 메모**" href="#**미적분 메모**">**미적분 메모**</a>
+## <a name="<a name=\"**미적분 메모**\" href=\"#**미적분 메모**\">**미적분 메모**</a>" href="#<a name=\"**미적분 메모**\" href=\"#**미적분 메모**\">**미적분 메모**</a>"><a name=\"**미적분 메모**\" href=\"#**미적분 메모**\">**미적분 메모**</a></a>
 
 **[극한 메모](https://ccss17.github.io/calculus.html)**
 
@@ -20,11 +20,11 @@
 
 </blockquote>
 
-# <a name="적분 메모" href="#적분 메모">적분 메모</a>
+# <a name="<a name=\"적분 메모\" href=\"#적분 메모\">적분 메모</a>" href="#<a name=\"적분 메모\" href=\"#적분 메모\">적분 메모</a>"><a name=\"적분 메모\" href=\"#적분 메모\">적분 메모</a></a>
 
 ---
 
-# <a name="적분" href="#적분">적분</a>
+# <a name="<a name=\"적분\" href=\"#적분\">적분</a>" href="#<a name=\"적분\" href=\"#적분\">적분</a>"><a name=\"적분\" href=\"#적분\">적분</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -164,7 +164,7 @@ $$ \int_{}^{}f(x)dx=F(x)+C $$
 
 - 특히, 적분한 것을 미분하면 상수가 더해지지 않지만 미분한 것을 적분하면 적분상수가 더해지는 것을 주의해야 한다. 
 
-## <a name="부정적분의 계산 " href="#부정적분의 계산 ">부정적분의 계산 </a>
+## <a name="<a name=\"부정적분의 계산 \" href=\"#부정적분의 계산 \">부정적분의 계산 </a>" href="#<a name=\"부정적분의 계산 \" href=\"#부정적분의 계산 \">부정적분의 계산 </a>"><a name=\"부정적분의 계산 \" href=\"#부정적분의 계산 \">부정적분의 계산 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -320,7 +320,7 @@ $$ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C $$
 
 - 다항함수보다 지수함수, 로그함수, 삼각함수 등의 부정적분에 자주 쓰인다. 
 
-## <a name="정적분 " href="#정적분 ">정적분 </a>
+## <a name="<a name=\"정적분 \" href=\"#정적분 \">정적분 </a>" href="#<a name=\"정적분 \" href=\"#정적분 \">정적분 </a>"><a name=\"정적분 \" href=\"#정적분 \">정적분 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -408,7 +408,7 @@ $$ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C $$
 
 - 부정적분 $\int_{}^{}f(x)dx$ 는 하나의 함수지만 정적분 $\int_{b}^{a}f(x)dx$ 는 하나의 수이다. 
 
-## <a name="정적분의 성질 " href="#정적분의 성질 ">정적분의 성질 </a>
+## <a name="<a name=\"정적분의 성질 \" href=\"#정적분의 성질 \">정적분의 성질 </a>" href="#<a name=\"정적분의 성질 \" href=\"#정적분의 성질 \">정적분의 성질 </a>"><a name=\"정적분의 성질 \" href=\"#정적분의 성질 \">정적분의 성질 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -466,7 +466,7 @@ $$ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C $$
 
     $$ \int_{-2}^{2}|x|dx = \int_{-2}^{0} -xdx + \int_{0}^{2} xdx $$ 
 
-# <a name="구분구적법" href="#구분구적법">구분구적법</a>
+# <a name="<a name=\"구분구적법\" href=\"#구분구적법\">구분구적법</a>" href="#<a name=\"구분구적법\" href=\"#구분구적법\">구분구적법</a>"><a name=\"구분구적법\" href=\"#구분구적법\">구분구적법</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -552,7 +552,7 @@ $$ \lim_{n \to \infty} S_n = \lim_{n \to \infty} \sum_{k=1}^{n} f(x_k)\Delta x =
 
     **구체화 필요**
 
-# <a name="정적분의 계산 " href="#정적분의 계산 ">정적분의 계산 </a>
+# <a name="<a name=\"정적분의 계산 \" href=\"#정적분의 계산 \">정적분의 계산 </a>" href="#<a name=\"정적분의 계산 \" href=\"#정적분의 계산 \">정적분의 계산 </a>"><a name=\"정적분의 계산 \" href=\"#정적분의 계산 \">정적분의 계산 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -778,7 +778,7 @@ $$ \int_{-a}^{a}f(x)dx=0 $$
 
     이다.
 
-## <a name="정적분과 미분의 관계 " href="#정적분과 미분의 관계 ">정적분과 미분의 관계 </a>
+## <a name="<a name=\"정적분과 미분의 관계 \" href=\"#정적분과 미분의 관계 \">정적분과 미분의 관계 </a>" href="#<a name=\"정적분과 미분의 관계 \" href=\"#정적분과 미분의 관계 \">정적분과 미분의 관계 </a>"><a name=\"정적분과 미분의 관계 \" href=\"#정적분과 미분의 관계 \">정적분과 미분의 관계 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -904,7 +904,7 @@ $$ \int_{-a}^{a}f(x)dx=0 $$
 
     이다. 
 
-## <a name="정적분으로 구하는 넓이 " href="#정적분으로 구하는 넓이 ">정적분으로 구하는 넓이 </a>
+## <a name="<a name=\"정적분으로 구하는 넓이 \" href=\"#정적분으로 구하는 넓이 \">정적분으로 구하는 넓이 </a>" href="#<a name=\"정적분으로 구하는 넓이 \" href=\"#정적분으로 구하는 넓이 \">정적분으로 구하는 넓이 </a>"><a name=\"정적분으로 구하는 넓이 \" href=\"#정적분으로 구하는 넓이 \">정적분으로 구하는 넓이 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

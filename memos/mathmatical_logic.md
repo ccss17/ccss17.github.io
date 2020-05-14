@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**수학 기초론**" href="#**수학 기초론**">**수학 기초론**</a>
+## <a name="<a name=\"**수학 기초론**\" href=\"#**수학 기초론**\">**수학 기초론**</a>" href="#<a name=\"**수학 기초론**\" href=\"#**수학 기초론**\">**수학 기초론**</a>"><a name=\"**수학 기초론**\" href=\"#**수학 기초론**\">**수학 기초론**</a></a>
 
 **[논리학](https://ccss17.github.io/logic.html)**
 
@@ -12,11 +12,11 @@
 
 </blockquote>
 
-# <a name="수리논리학" href="#수리논리학">수리논리학</a>
+# <a name="<a name=\"수리논리학\" href=\"#수리논리학\">수리논리학</a>" href="#<a name=\"수리논리학\" href=\"#수리논리학\">수리논리학</a>"><a name=\"수리논리학\" href=\"#수리논리학\">수리논리학</a></a>
 
 ---
 
-# <a name="수리 논리학 " href="#수리 논리학 ">수리 논리학 </a>
+# <a name="<a name=\"수리 논리학 \" href=\"#수리 논리학 \">수리 논리학 </a>" href="#<a name=\"수리 논리학 \" href=\"#수리 논리학 \">수리 논리학 </a>"><a name=\"수리 논리학 \" href=\"#수리 논리학 \">수리 논리학 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -225,7 +225,7 @@
 
   즉 생략되어 보충되어야 할 전제란 "책임의 소중함을 느끼는 자는 참을 깨달은 자이다" 라고 말할 수 있다.
 
-## <a name="수리논리학의 증명법 및 논증법" href="#수리논리학의 증명법 및 논증법">수리논리학의 증명법 및 논증법</a>
+## <a name="<a name=\"수리논리학의 증명법 및 논증법\" href=\"#수리논리학의 증명법 및 논증법\">수리논리학의 증명법 및 논증법</a>" href="#<a name=\"수리논리학의 증명법 및 논증법\" href=\"#수리논리학의 증명법 및 논증법\">수리논리학의 증명법 및 논증법</a>"><a name=\"수리논리학의 증명법 및 논증법\" href=\"#수리논리학의 증명법 및 논증법\">수리논리학의 증명법 및 논증법</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -469,7 +469,7 @@
 
   공리라고 불리는 일련의 명제와 전제의 전체 집합 $\Gamma$ 를 주어진 추론규칙을 적용하여 결론을 도출하는 연속된 문장들이다. 
 
-## <a name="메타 정리 " href="#메타 정리 ">메타 정리 </a>
+## <a name="<a name=\"메타 정리 \" href=\"#메타 정리 \">메타 정리 </a>" href="#<a name=\"메타 정리 \" href=\"#메타 정리 \">메타 정리 </a>"><a name=\"메타 정리 \" href=\"#메타 정리 \">메타 정리 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

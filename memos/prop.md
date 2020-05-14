@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**확률 메모**" href="#**확률 메모**">**확률 메모**</a>
+## <a name="<a name=\"**확률 메모**\" href=\"#**확률 메모**\">**확률 메모**</a>" href="#<a name=\"**확률 메모**\" href=\"#**확률 메모**\">**확률 메모**</a>"><a name=\"**확률 메모**\" href=\"#**확률 메모**\">**확률 메모**</a></a>
 
 **[조합 메모](https://ccss17.github.io/comb.html)**
 
@@ -10,11 +10,11 @@
 
 </blockquote>
 
-# <a name="확률 메모" href="#확률 메모">확률 메모</a>
+# <a name="<a name=\"확률 메모\" href=\"#확률 메모\">확률 메모</a>" href="#<a name=\"확률 메모\" href=\"#확률 메모\">확률 메모</a>"><a name=\"확률 메모\" href=\"#확률 메모\">확률 메모</a></a>
 
 ---
 
-# <a name="확률" href="#확률">확률</a>
+# <a name="<a name=\"확률\" href=\"#확률\">확률</a>" href="#<a name=\"확률\" href=\"#확률\">확률</a>"><a name=\"확률\" href=\"#확률\">확률</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -238,7 +238,7 @@ $$ \boxed{P(A) = \frac{\text{sum}(A)}{\text{sum}(S)}}  $$
 
   이다. ■ 
 
-# <a name="확률의 덧셈정리" href="#확률의 덧셈정리">확률의 덧셈정리</a>
+# <a name="<a name=\"확률의 덧셈정리\" href=\"#확률의 덧셈정리\">확률의 덧셈정리</a>" href="#<a name=\"확률의 덧셈정리\" href=\"#확률의 덧셈정리\">확률의 덧셈정리</a>"><a name=\"확률의 덧셈정리\" href=\"#확률의 덧셈정리\">확률의 덧셈정리</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -368,7 +368,7 @@ $$ \boxed{P(A ^{C}) = 1 - P(A)}  $$
 
   이다. 이것이 남자가 적어도 $1$ 명 선출되는 확률이다. ■ 
 
-## <a name="조건부 확률 " href="#조건부 확률 ">조건부 확률 </a>
+## <a name="<a name=\"조건부 확률 \" href=\"#조건부 확률 \">조건부 확률 </a>" href="#<a name=\"조건부 확률 \" href=\"#조건부 확률 \">조건부 확률 </a>"><a name=\"조건부 확률 \" href=\"#조건부 확률 \">조건부 확률 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -478,7 +478,7 @@ $$ P(A \cap B) = P(A)P(B|A) = P(B)P(A|B) $$
 
   이다. ■ 
 
-## <a name="사건의 독립과 종속" href="#사건의 독립과 종속">사건의 독립과 종속</a>
+## <a name="<a name=\"사건의 독립과 종속\" href=\"#사건의 독립과 종속\">사건의 독립과 종속</a>" href="#<a name=\"사건의 독립과 종속\" href=\"#사건의 독립과 종속\">사건의 독립과 종속</a>"><a name=\"사건의 독립과 종속\" href=\"#사건의 독립과 종속\">사건의 독립과 종속</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -617,7 +617,7 @@ $$ P_r = {}_{n}C_{r}p ^{r}(1-p)^{n-r} = {}_{n}C_{r} p ^{r}q ^{n-r} $$
 
   이다. ■ 
 
-## <a name="전확률 공식과 베이즈 정리 " href="#전확률 공식과 베이즈 정리 ">전확률 공식과 베이즈 정리 </a>
+## <a name="<a name=\"전확률 공식과 베이즈 정리 \" href=\"#전확률 공식과 베이즈 정리 \">전확률 공식과 베이즈 정리 </a>" href="#<a name=\"전확률 공식과 베이즈 정리 \" href=\"#전확률 공식과 베이즈 정리 \">전확률 공식과 베이즈 정리 </a>"><a name=\"전확률 공식과 베이즈 정리 \" href=\"#전확률 공식과 베이즈 정리 \">전확률 공식과 베이즈 정리 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -737,7 +737,7 @@ $$ \boxed{P(A_i|B) = \frac{P(B \cap A_i)}{P(B)} = \frac{P(A_i)P(B|A_i)}{\display
 
   임을 보였기 때문이다. 
 
-### <a name="몬티홀 문제" href="#몬티홀 문제">몬티홀 문제</a>
+### <a name="<a name=\"몬티홀 문제\" href=\"#몬티홀 문제\">몬티홀 문제</a>" href="#<a name=\"몬티홀 문제\" href=\"#몬티홀 문제\">몬티홀 문제</a>"><a name=\"몬티홀 문제\" href=\"#몬티홀 문제\">몬티홀 문제</a></a>
 
 어떤 게임 쇼는 게임 참가자에게 세 개의 문 중에서 하나를 고르라고 한다. 한 문 뒤에는 자동차가, 두 문 뒤에는 염소가 있고 그 중에서 자동차가 있는 문을 선택하면 참가자는 자동차를 얻을 수 있다. 
 

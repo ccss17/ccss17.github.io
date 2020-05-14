@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**수와 연산**" href="#**수와 연산**">**수와 연산**</a>
+## <a name="<a name=\"**수와 연산**\" href=\"#**수와 연산**\">**수와 연산**</a>" href="#<a name=\"**수와 연산**\" href=\"#**수와 연산**\">**수와 연산**</a>"><a name=\"**수와 연산**\" href=\"#**수와 연산**\">**수와 연산**</a></a>
 
 **[기초 산술 메모](https://ccss17.github.io/arithmetic.html)**
 
@@ -12,11 +12,11 @@
 
 </blockquote>
 
-# <a name="기초 산술 메모" href="#기초 산술 메모">기초 산술 메모</a>
+# <a name="<a name=\"기초 산술 메모\" href=\"#기초 산술 메모\">기초 산술 메모</a>" href="#<a name=\"기초 산술 메모\" href=\"#기초 산술 메모\">기초 산술 메모</a>"><a name=\"기초 산술 메모\" href=\"#기초 산술 메모\">기초 산술 메모</a></a>
 
 ---
 
-# <a name="수와 연산 " href="#수와 연산 ">수와 연산 </a>
+# <a name="<a name=\"수와 연산 \" href=\"#수와 연산 \">수와 연산 </a>" href="#<a name=\"수와 연산 \" href=\"#수와 연산 \">수와 연산 </a>"><a name=\"수와 연산 \" href=\"#수와 연산 \">수와 연산 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -38,7 +38,7 @@
 
 </blockquote>
 
-## <a name="이항연산" href="#이항연산">이항연산</a>
+## <a name="<a name=\"이항연산\" href=\"#이항연산\">이항연산</a>" href="#<a name=\"이항연산\" href=\"#이항연산\">이항연산</a>"><a name=\"이항연산\" href=\"#이항연산\">이항연산</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -136,7 +136,7 @@
 
   $$
 
-## <a name="수의 연산 " href="#수의 연산 ">수의 연산 </a>
+## <a name="<a name=\"수의 연산 \" href=\"#수의 연산 \">수의 연산 </a>" href="#<a name=\"수의 연산 \" href=\"#수의 연산 \">수의 연산 </a>"><a name=\"수의 연산 \" href=\"#수의 연산 \">수의 연산 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -288,7 +288,7 @@
 
   - 곱셈의 역원은 지수의 부호가 반대인 수(역수)이다. $a \cdot (a^{-1}) = 1$
 
-## <a name="수의 분류" href="#수의 분류">수의 분류</a>
+## <a name="<a name=\"수의 분류\" href=\"#수의 분류\">수의 분류</a>" href="#<a name=\"수의 분류\" href=\"#수의 분류\">수의 분류</a>"><a name=\"수의 분류\" href=\"#수의 분류\">수의 분류</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -426,7 +426,7 @@
 
 - $a>0,b<0$ 이면 $\frac{\sqrt[]{a}}{\sqrt[]{b}} = - \sqrt[]{\frac{a}{b}}$, 이외의 경우에는 $\frac{\sqrt[]{a}}{\sqrt[]{b}} = \sqrt[]{\frac{a}{b}}(단, b \neq 0)$ 이다.
 
-## <a name="수열" href="#수열">수열</a>
+## <a name="<a name=\"수열\" href=\"#수열\">수열</a>" href="#<a name=\"수열\" href=\"#수열\">수열</a>"><a name=\"수열\" href=\"#수열\">수열</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -496,7 +496,7 @@ $$f : \N \to \R$$
 
   - $b^2 = ac$
 
-## <a name="급수" href="#급수">급수</a>
+## <a name="<a name=\"급수\" href=\"#급수\">급수</a>" href="#<a name=\"급수\" href=\"#급수\">급수</a>"><a name=\"급수\" href=\"#급수\">급수</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -620,7 +620,7 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 - $$\sum_{k=1}^{n}\frac{1}{\sqrt[]{k}+\sqrt[]{k+1}} = \sum_{k=1}^{n}(\sqrt[]{k+1}-\sqrt[]{k})$$
 
-## <a name="수학적 귀납법과 수열" href="#수학적 귀납법과 수열">수학적 귀납법과 수열</a>
+## <a name="<a name=\"수학적 귀납법과 수열\" href=\"#수학적 귀납법과 수열\">수학적 귀납법과 수열</a>" href="#<a name=\"수학적 귀납법과 수열\" href=\"#수학적 귀납법과 수열\">수학적 귀납법과 수열</a>"><a name=\"수학적 귀납법과 수열\" href=\"#수학적 귀납법과 수열\">수학적 귀납법과 수열</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -680,7 +680,7 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
   $$ a_n = a_1 + (a_2-a_1) \times \frac{1 - (\frac{r}{p})^{n-1}}{1 - \frac{r}{p}} $$
 
-# <a name="지수" href="#지수">지수</a>
+# <a name="<a name=\"지수\" href=\"#지수\">지수</a>" href="#<a name=\"지수\" href=\"#지수\">지수</a>"><a name=\"지수\" href=\"#지수\">지수</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -728,7 +728,7 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
   - $a^\frac{1}{n} = \sqrt[n]{a}$
 
-## <a name="지수법칙" href="#지수법칙">지수법칙</a>
+## <a name="<a name=\"지수법칙\" href=\"#지수법칙\">지수법칙</a>" href="#<a name=\"지수법칙\" href=\"#지수법칙\">지수법칙</a>"><a name=\"지수법칙\" href=\"#지수법칙\">지수법칙</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -782,7 +782,7 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 - $a > 0, b > 0$ 이어야 하는 이유는 지수가 짝수이건 홀수이건 거듭제곱근이 항상 존재해야 하기 때문이다. 만약 음수에 붙은 지수가 홀수라면 음수의 제곱근을 정의해야 하는데 실수 범위에서 $\sqrt[]{-1}$ 는 존재하지 않는다. 
 
-## <a name="제곱근" href="#제곱근">제곱근</a>
+## <a name="<a name=\"제곱근\" href=\"#제곱근\">제곱근</a>" href="#<a name=\"제곱근\" href=\"#제곱근\">제곱근</a>"><a name=\"제곱근\" href=\"#제곱근\">제곱근</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -836,7 +836,7 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 - $\sqrt[np]{a^{mp}} = \sqrt[n]{a^m}$
 
-# <a name="로그" href="#로그">로그</a>
+# <a name="<a name=\"로그\" href=\"#로그\">로그</a>" href="#<a name=\"로그\" href=\"#로그\">로그</a>"><a name=\"로그\" href=\"#로그\">로그</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

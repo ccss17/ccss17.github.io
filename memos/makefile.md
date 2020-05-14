@@ -1,14 +1,14 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-# <a name="Makefile Memo" href="#Makefile Memo">Makefile Memo</a>
+# <a name="<a name=\"Makefile Memo\" href=\"#Makefile Memo\">Makefile Memo</a>" href="#<a name=\"Makefile Memo\" href=\"#Makefile Memo\">Makefile Memo</a>"><a name=\"Makefile Memo\" href=\"#Makefile Memo\">Makefile Memo</a></a>
 
-## <a name="튜토리얼 " href="#튜토리얼 ">튜토리얼 </a>
+## <a name="<a name=\"튜토리얼 \" href=\"#튜토리얼 \">튜토리얼 </a>" href="#<a name=\"튜토리얼 \" href=\"#튜토리얼 \">튜토리얼 </a>"><a name=\"튜토리얼 \" href=\"#튜토리얼 \">튜토리얼 </a></a>
 
 - https://makefiletutorial.com/ : Command line arguments and override (Section 6.7)
 
 - http://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
 
-## <a name="일반 규칙 " href="#일반 규칙 ">일반 규칙 </a>
+## <a name="<a name=\"일반 규칙 \" href=\"#일반 규칙 \">일반 규칙 </a>" href="#<a name=\"일반 규칙 \" href=\"#일반 규칙 \">일반 규칙 </a>"><a name=\"일반 규칙 \" href=\"#일반 규칙 \">일반 규칙 </a></a>
 
 - `Makefile` 은 수 개의 규칙으로 구성되는데 규칙의 일반적 문법은 다음과 같다.
 
@@ -59,7 +59,7 @@
 
     처음 실행할 때는 규칙이 실행 되지만 한번 더 실행하면 규칙이 실행되지 않는다. 
 
-## <a name="축약규칙 " href="#축약규칙 ">축약규칙 </a>
+## <a name="<a name=\"축약규칙 \" href=\"#축약규칙 \">축약규칙 </a>" href="#<a name=\"축약규칙 \" href=\"#축약규칙 \">축약규칙 </a>"><a name=\"축약규칙 \" href=\"#축약규칙 \">축약규칙 </a></a>
 
 - 위 예제의 `Makefile` 은 다음과 같이 축약할 수 있다. 
 
@@ -67,7 +67,7 @@
 some_file:; touch some_file
 ```
 
-## <a name="PHONY" href="#PHONY">PHONY</a>
+## <a name="<a name=\"PHONY\" href=\"#PHONY\">PHONY</a>" href="#<a name=\"PHONY\" href=\"#PHONY\">PHONY</a>"><a name=\"PHONY\" href=\"#PHONY\">PHONY</a></a>
 
 - `.PHONY` : `targets` 이 실제 파일 이름이 아니라는 것을 명시한다.
 
@@ -92,7 +92,7 @@ some_file:; touch some_file
 
     따라서 `.PHONY` 에 `clean` 을 명시하여 실제 파일 이름이 아니라는 것을 명시해준다. 그러면 `clean` 파일이 있어도 규칙이 항상 실행된다. 
 
-## <a name="변수 " href="#변수 ">변수 </a>
+## <a name="<a name=\"변수 \" href=\"#변수 \">변수 </a>" href="#<a name=\"변수 \" href=\"#변수 \">변수 </a>"><a name=\"변수 \" href=\"#변수 \">변수 </a></a>
 
 - 문자열을 변수에 저장하고 `${}` 나 `$()` 로 사용할 수 있다.
 
@@ -113,7 +113,7 @@ some_file:; touch some_file
       rm -f file1 file2 some_file
     ```
 
-### <a name="변수 할당 " href="#변수 할당 ">변수 할당 </a>
+### <a name="<a name=\"변수 할당 \" href=\"#변수 할당 \">변수 할당 </a>" href="#<a name=\"변수 할당 \" href=\"#변수 할당 \">변수 할당 </a>"><a name=\"변수 할당 \" href=\"#변수 할당 \">변수 할당 </a></a>
 
 - `var = value` : 지연된 할당으로써 변수가 사용될 때 그 값들이 재귀적으로 할당된다. 
 
@@ -282,7 +282,7 @@ some_file:; touch some_file
     위 예시는 `a b c.c` 를 출력한다. 
 
 
-## <a name="함축 규칙 " href="#함축 규칙 ">함축 규칙 </a>
+## <a name="<a name=\"함축 규칙 \" href=\"#함축 규칙 \">함축 규칙 </a>" href="#<a name=\"함축 규칙 \" href=\"#함축 규칙 \">함축 규칙 </a>"><a name=\"함축 규칙 \" href=\"#함축 규칙 \">함축 규칙 </a></a>
 
 - `Makefile` 은 다음과 같이 함축 규칙을 지원한다. 
 
@@ -301,7 +301,7 @@ some_file:; touch some_file
   	rm -f blah.o blah blah.c
   ```
 
-## <a name="특수 문자 " href="#특수 문자 ">특수 문자 </a>
+## <a name="<a name=\"특수 문자 \" href=\"#특수 문자 \">특수 문자 </a>" href="#<a name=\"특수 문자 \" href=\"#특수 문자 \">특수 문자 </a>"><a name=\"특수 문자 \" href=\"#특수 문자 \">특수 문자 </a></a>
 
 - 와일드카드 `*` : 와일드카드 `*` 는 `targets`, `prerequisites`, `commands` 에서 사용 가능하다.
 
@@ -345,7 +345,7 @@ some_file:; touch some_file
 
 - `$^` 는 규칙의 `:` 오른쪽 부분이다. 
 
-## <a name="다중 타겟" href="#다중 타겟">다중 타겟</a>
+## <a name="<a name=\"다중 타겟\" href=\"#다중 타겟\">다중 타겟</a>" href="#<a name=\"다중 타겟\" href=\"#다중 타겟\">다중 타겟</a>"><a name=\"다중 타겟\" href=\"#다중 타겟\">다중 타겟</a></a>
 
 - `targets` 에 여러 파일이 선언되어 사용할 수도 있다. 
 
@@ -381,7 +381,7 @@ some_file:; touch some_file
 
     하지만 위와 같이 `f1.o` 의 규칙을 따로 지정해줄 경우 `f1.o` 를 생성할 때 `make` 는 `%.o` 규칙이 아니라 `f1.o` 규칙을 실행한다. 
 
-## <a name="vpath " href="#vpath ">vpath </a>
+## <a name="<a name=\"vpath \" href=\"#vpath \">vpath </a>" href="#<a name=\"vpath \" href=\"#vpath \">vpath </a>"><a name=\"vpath \" href=\"#vpath \">vpath </a></a>
 
 - `vpath` : `prerequisites` 를 찾는 경로를 현재 디렉토리와 더불어서 추가한다. 
 
@@ -410,7 +410,7 @@ some_file:; touch some_file
 
     위 예시의 `vpath` 때문에 `.h` 확장자를 가진 파일을 현재 디렉토리 뿐만 아니라 `../headers` 디렉토리와 `../other-directory` 에서도 찾는다. 이에 따라 만약 `vpath` 가 포함된 라인을 지우고 `make` 를 실행해보면 파일 `blah.h` 를 찾지 못하여 규칙 `blah.h:` 를 항상 실행하게 된다.
   
-## <a name="Static Pattern Rules" href="#Static Pattern Rules">Static Pattern Rules</a>
+## <a name="<a name=\"Static Pattern Rules\" href=\"#Static Pattern Rules\">Static Pattern Rules</a>" href="#<a name=\"Static Pattern Rules\" href=\"#Static Pattern Rules\">Static Pattern Rules</a>"><a name=\"Static Pattern Rules\" href=\"#Static Pattern Rules\">Static Pattern Rules</a></a>
 
 - static pattern : 패턴에 맞는 `targets` 을 자동으로 `prerequisites` 으로 변환해주는 규칙이다.
 
@@ -434,7 +434,7 @@ some_file:; touch some_file
       echo "Call gcc to generate bar.o from bar.c"
     ```
 
-## <a name="Static Pattern Rules and Filter" href="#Static Pattern Rules and Filter">Static Pattern Rules and Filter</a>
+## <a name="<a name=\"Static Pattern Rules and Filter\" href=\"#Static Pattern Rules and Filter\">Static Pattern Rules and Filter</a>" href="#<a name=\"Static Pattern Rules and Filter\" href=\"#Static Pattern Rules and Filter\">Static Pattern Rules and Filter</a>"><a name=\"Static Pattern Rules and Filter\" href=\"#Static Pattern Rules and Filter\">Static Pattern Rules and Filter</a></a>
 
 - static pattern with Filter : static pattern 의 `targets` 을 패턴으로 필터링해서 매칭되지 않는 `target` 은 규칙에 적용시키지 않는 규칙이다. 
 
@@ -469,7 +469,7 @@ some_file:; touch some_file
 
     위 규칙은 `objects` 에서 `.o` 로 끝나는 파일만 규칙에 적용시킨다. 
 
-## <a name="Double-Colon" href="#Double-Colon">Double-Colon</a>
+## <a name="<a name=\"Double-Colon\" href=\"#Double-Colon\">Double-Colon</a>" href="#<a name=\"Double-Colon\" href=\"#Double-Colon\">Double-Colon</a>"><a name=\"Double-Colon\" href=\"#Double-Colon\">Double-Colon</a></a>
 
 - Double-Colon : (이 규칙은 흔히 쓰이지 않음) Double-Colon 으로 시작되는 규칙이 여러번 정의되어도 그것들을 모두 실행하게 해준다. 
 
@@ -485,9 +485,9 @@ some_file:; touch some_file
 
     위 규칙에서 `blah` 가 Double-Colon 으로 시작되는데 Single-Colon 으로 바꾸면 에러가 발생하면서 마지막 규칙만 실행된다. 
 
-# <a name="명령 실행 관련 " href="#명령 실행 관련 ">명령 실행 관련 </a>
+# <a name="<a name=\"명령 실행 관련 \" href=\"#명령 실행 관련 \">명령 실행 관련 </a>" href="#<a name=\"명령 실행 관련 \" href=\"#명령 실행 관련 \">명령 실행 관련 </a>"><a name=\"명령 실행 관련 \" href=\"#명령 실행 관련 \">명령 실행 관련 </a></a>
 
-## <a name="Command Echoing/Silencing" href="#Command Echoing/Silencing">Command Echoing/Silencing</a>
+## <a name="<a name=\"Command Echoing/Silencing\" href=\"#Command Echoing/Silencing\">Command Echoing/Silencing</a>" href="#<a name=\"Command Echoing/Silencing\" href=\"#Command Echoing/Silencing\">Command Echoing/Silencing</a>"><a name=\"Command Echoing/Silencing\" href=\"#Command Echoing/Silencing\">Command Echoing/Silencing</a></a>
 
 - Command Echoing/Silencing : 명령어 앞에 `@` 를 붙히면 명령어가 출력되지 않는다. 
 
@@ -510,7 +510,7 @@ some_file:; touch some_file
     hello again
     ```
 
-## <a name="Command Execution" href="#Command Execution">Command Execution</a>
+## <a name="<a name=\"Command Execution\" href=\"#Command Execution\">Command Execution</a>" href="#<a name=\"Command Execution\" href=\"#Command Execution\">Command Execution</a>"><a name=\"Command Execution\" href=\"#Command Execution\">Command Execution</a></a>
 
 - Command Execution : 각각의 명령어는 항상 새로운 쉘에서 실행되는 것과 같다. 
 
@@ -541,7 +541,7 @@ some_file:; touch some_file
     /home/ccsss/repo/csrepo/ccss17.github.io
     ```
 
-## <a name="Default Shell" href="#Default Shell">Default Shell</a>
+## <a name="<a name=\"Default Shell\" href=\"#Default Shell\">Default Shell</a>" href="#<a name=\"Default Shell\" href=\"#Default Shell\">Default Shell</a>"><a name=\"Default Shell\" href=\"#Default Shell\">Default Shell</a></a>
 
 - Default Shell : `make` 가 명령어를 실행하는 기본 쉘은 `/bin/sh` 인데 `SHELL` 변수를 바꿈으로써 기본 쉘을 변경할 수 있다. 
 
@@ -560,7 +560,7 @@ some_file:; touch some_file
       echo "current shell: $$0"
     ```
 
-## <a name="DELETE_ON_ERROR" href="#DELETE_ON_ERROR">DELETE_ON_ERROR</a>
+## <a name="<a name=\"DELETE_ON_ERROR\" href=\"#DELETE_ON_ERROR\">DELETE_ON_ERROR</a>" href="#<a name=\"DELETE_ON_ERROR\" href=\"#DELETE_ON_ERROR\">DELETE_ON_ERROR</a>"><a name=\"DELETE_ON_ERROR\" href=\"#DELETE_ON_ERROR\">DELETE_ON_ERROR</a></a>
 
 - `DELETE_ON_ERROR` : `make` 는 규칙이 `nonzero` 종료 코드를 반환하면 전체 실행을 중단하는데, `.DELETE_ON_ERROR` 가 설정되면 이때 `nonzero` 반환값을 반환한 규칙의 `target` 파일을 삭제한다. 
 
@@ -587,7 +587,7 @@ some_file:; touch some_file
       false
     ```
   
-## <a name="에러 처리 " href="#에러 처리 ">에러 처리 </a>
+## <a name="<a name=\"에러 처리 \" href=\"#에러 처리 \">에러 처리 </a>" href="#<a name=\"에러 처리 \" href=\"#에러 처리 \">에러 처리 </a>"><a name=\"에러 처리 \" href=\"#에러 처리 \">에러 처리 </a></a>
 
 - `-k` 옵션 : `make` 를 이 옵션으로 실행하면 에러가 발생해도 실행을 중단하지 않고 끝까지 실행한다.
 
@@ -623,7 +623,7 @@ some_file:; touch some_file
 
     위 예시에서 에러가 무시되고 파일 `one` 이 잘 실행된다. 
 
-# <a name="Recursive make " href="#Recursive make ">Recursive make </a>
+# <a name="<a name=\"Recursive make \" href=\"#Recursive make \">Recursive make </a>" href="#<a name=\"Recursive make \" href=\"#Recursive make \">Recursive make </a>"><a name=\"Recursive make \" href=\"#Recursive make \">Recursive make </a></a>
 
 - `make -C <directory>` : `<directory>` 를 `make` 한다. 
 

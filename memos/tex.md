@@ -1,16 +1,16 @@
 # [ccss17.github.io](https://ccss17.github.io)
 
-# <a name="Katex Official Reference" href="#Katex Official Reference">Katex Official Reference</a>
+# <a name="<a name=\"Katex Official Reference\" href=\"#Katex Official Reference\">Katex Official Reference</a>" href="#<a name=\"Katex Official Reference\" href=\"#Katex Official Reference\">Katex Official Reference</a>"><a name=\"Katex Official Reference\" href=\"#Katex Official Reference\">Katex Official Reference</a></a>
 
 https://katex.org/docs/supported.html
 
 https://katex.org/docs/support_table.html
 
-# <a name="My Tex Math Cheat Sheet" href="#My Tex Math Cheat Sheet">My Tex Math Cheat Sheet</a>
+# <a name="<a name=\"My Tex Math Cheat Sheet\" href=\"#My Tex Math Cheat Sheet\">My Tex Math Cheat Sheet</a>" href="#<a name=\"My Tex Math Cheat Sheet\" href=\"#My Tex Math Cheat Sheet\">My Tex Math Cheat Sheet</a>"><a name=\"My Tex Math Cheat Sheet\" href=\"#My Tex Math Cheat Sheet\">My Tex Math Cheat Sheet</a></a>
 
-## <a name="1. Symbols" href="#1. Symbols">1. Symbols</a>
+## <a name="<a name=\"1. Symbols\" href=\"#1. Symbols\">1. Symbols</a>" href="#<a name=\"1. Symbols\" href=\"#1. Symbols\">1. Symbols</a>"><a name=\"1. Symbols\" href=\"#1. Symbols\">1. Symbols</a></a>
 
-### <a name="Greek Letters" href="#Greek Letters">Greek Letters</a>
+### <a name="<a name=\"Greek Letters\" href=\"#Greek Letters\">Greek Letters</a>" href="#<a name=\"Greek Letters\" href=\"#Greek Letters\">Greek Letters</a>"><a name=\"Greek Letters\" href=\"#Greek Letters\">Greek Letters</a></a>
 
 | $\alpha$| $\beta$ | $\delta$ |$\epsilon$|$\Delta$|$\phi$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -24,7 +24,7 @@ https://katex.org/docs/support_table.html
 | $\varepsilon$|
 | \varepsilon  |
 
-### <a name="Calculus" href="#Calculus">Calculus</a>
+### <a name="<a name=\"Calculus\" href=\"#Calculus\">Calculus</a>" href="#<a name=\"Calculus\" href=\"#Calculus\">Calculus</a>"><a name=\"Calculus\" href=\"#Calculus\">Calculus</a></a>
 
 | $\partial$| $\int$ | $\oint$ |$\lim$|$f'(x)$|$f''(x)$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -32,7 +32,7 @@ https://katex.org/docs/support_table.html
 | $f^{(k)}(x)$| $\sum$| $f \circ g$|$\prod$|
 | f^{(k)}(x)| \sum| f \circ g|\prod|
 
-### <a name="Binary Relations" href="#Binary Relations">Binary Relations</a>
+### <a name="<a name=\"Binary Relations\" href=\"#Binary Relations\">Binary Relations</a>" href="#<a name=\"Binary Relations\" href=\"#Binary Relations\">Binary Relations</a>"><a name=\"Binary Relations\" href=\"#Binary Relations\">Binary Relations</a></a>
 
 | $\equiv$| $\simeq$ | $\approx$ |$\subset$|$\supset$|$\subseteq$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -44,7 +44,7 @@ https://katex.org/docs/support_table.html
 |  $\neq$ |
 | \neq |
 
-### <a name="Binary Operators" href="#Binary Operators">Binary Operators</a>
+### <a name="<a name=\"Binary Operators\" href=\"#Binary Operators\">Binary Operators</a>" href="#<a name=\"Binary Operators\" href=\"#Binary Operators\">Binary Operators</a>"><a name=\"Binary Operators\" href=\"#Binary Operators\">Binary Operators</a></a>
 
 | $\pm$| $\mp$ | $\div$ |$\times$|$\setminus$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -52,7 +52,7 @@ https://katex.org/docs/support_table.html
 |$\cup$| $\cap$| $\ast$ | $\lor$ |$\land$|
 |\cup  | \cap  | \ast  |\lor |\land |
 
-### <a name="Arrows" href="#Arrows">Arrows</a>
+### <a name="<a name=\"Arrows\" href=\"#Arrows\">Arrows</a>" href="#<a name=\"Arrows\" href=\"#Arrows\">Arrows</a>"><a name=\"Arrows\" href=\"#Arrows\">Arrows</a></a>
 
 | $\gets$| $\to$ | $\Leftarrow$ |$\Rightarrow$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -60,7 +60,7 @@ https://katex.org/docs/support_table.html
 |$\Leftrightarrow$|$\mapsto$| $\overrightarrow{AB}$| $\overleftrightarrow{AB}$
 |\Leftrightarrow|\mapsto  | \overrightarrow{AB}  | \overleftrightarrow{AB}
 
-### <a name="Logic" href="#Logic">Logic</a>
+### <a name="<a name=\"Logic\" href=\"#Logic\">Logic</a>" href="#<a name=\"Logic\" href=\"#Logic\">Logic</a>"><a name=\"Logic\" href=\"#Logic\">Logic</a></a>
 
 | $\forall$| $\exists$ | $\nexists$ |$\neg$|$\iff$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -72,13 +72,13 @@ https://katex.org/docs/support_table.html
 | $\vdash$| $\not\vdash$ |$\emptyset$|
 | \vdash  | \not\vdash |\emptyset|
 
-### <a name="Large Delimiters" href="#Large Delimiters">Large Delimiters</a>
+### <a name="<a name=\"Large Delimiters\" href=\"#Large Delimiters\">Large Delimiters</a>" href="#<a name=\"Large Delimiters\" href=\"#Large Delimiters\">Large Delimiters</a>"><a name=\"Large Delimiters\" href=\"#Large Delimiters\">Large Delimiters</a></a>
 
 | $\lgroup$| $\rgroup$ |$\langle  M, \circ \rangle$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | \lgroup  | \rgroup  |\langle  M, \circ \rangle|
 
-### <a name="Misc" href="#Misc">Misc</a>
+### <a name="<a name=\"Misc\" href=\"#Misc\">Misc</a>" href="#<a name=\"Misc\" href=\"#Misc\">Misc</a>"><a name=\"Misc\" href=\"#Misc\">Misc</a></a>
 
 | $\N$ |$\mathbb{Z}$|$\mathbb{Q}$|$\mathbb{I}$|$\R$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -117,9 +117,9 @@ $$ (f \circ g)(x) $$
 
   $$ \prod_{k=1}^{n}f(k) $$
 
-## <a name="2. Operators" href="#2. Operators">2. Operators</a>
+## <a name="<a name=\"2. Operators\" href=\"#2. Operators\">2. Operators</a>" href="#<a name=\"2. Operators\" href=\"#2. Operators\">2. Operators</a>"><a name=\"2. Operators\" href=\"#2. Operators\">2. Operators</a></a>
 
-### <a name="trigonometric functions" href="#trigonometric functions">trigonometric functions</a>
+### <a name="<a name=\"trigonometric functions\" href=\"#trigonometric functions\">trigonometric functions</a>" href="#<a name=\"trigonometric functions\" href=\"#trigonometric functions\">trigonometric functions</a>"><a name=\"trigonometric functions\" href=\"#trigonometric functions\">trigonometric functions</a></a>
 
 | $\cos(\theta)$| $\cos^2\theta$ | $\sin(\theta)$ |$\tan(\theta)$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -133,7 +133,7 @@ $$ (f \circ g)(x) $$
 
 ---
 
-## <a name="3. Powers and indices" href="#3. Powers and indices">3. Powers and indices</a>
+## <a name="<a name=\"3. Powers and indices\" href=\"#3. Powers and indices\">3. Powers and indices</a>" href="#<a name=\"3. Powers and indices\" href=\"#3. Powers and indices\">3. Powers and indices</a>"><a name=\"3. Powers and indices\" href=\"#3. Powers and indices\">3. Powers and indices</a></a>
 
 `k_{n+1} = n^2 + k_n^2 - k_{n-1}`
 
@@ -145,7 +145,7 @@ $n^{22}$ | $f(n) = n^5 + 4n^2 + 2$
 
 ---
 
-## <a name="4. Fractions and Binomials" href="#4. Fractions and Binomials">4. Fractions and Binomials</a>
+## <a name="<a name=\"4. Fractions and Binomials\" href=\"#4. Fractions and Binomials\">4. Fractions and Binomials</a>" href="#<a name=\"4. Fractions and Binomials\" href=\"#4. Fractions and Binomials\">4. Fractions and Binomials</a>"><a name=\"4. Fractions and Binomials\" href=\"#4. Fractions and Binomials\">4. Fractions and Binomials</a></a>
 
 | $\frac{x}{y}$| $\frac{n!}{k!(n-k)!} = \binom{n}{k}$ |
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -170,7 +170,7 @@ $$
 
 ---
 
-## <a name="5. Roots" href="#5. Roots">5. Roots</a>
+## <a name="<a name=\"5. Roots\" href=\"#5. Roots\">5. Roots</a>" href="#<a name=\"5. Roots\" href=\"#5. Roots\">5. Roots</a>"><a name=\"5. Roots\" href=\"#5. Roots\">5. Roots</a></a>
 
 | $\sqrt 2$| $\sqrt{a+b}$ |$\sqrt[a]{b}$ |
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -185,7 +185,7 @@ $$
 
 ---
 
-## <a name="6. Sums" href="#6. Sums">6. Sums</a>
+## <a name="<a name=\"6. Sums\" href=\"#6. Sums\">6. Sums</a>" href="#<a name=\"6. Sums\" href=\"#6. Sums\">6. Sums</a>"><a name=\"6. Sums\" href=\"#6. Sums\">6. Sums</a></a>
 
 `\sum_{i=1}^{10} t_i`
 
@@ -201,7 +201,7 @@ $$\sum_{n=0}^{\infty} f(g(n))$$
 
 ---
 
-## <a name="7. Integrals" href="#7. Integrals">7. Integrals</a>
+## <a name="<a name=\"7. Integrals\" href=\"#7. Integrals\">7. Integrals</a>" href="#<a name=\"7. Integrals\" href=\"#7. Integrals\">7. Integrals</a>"><a name=\"7. Integrals\" href=\"#7. Integrals\">7. Integrals</a></a>
 
 `\int ydx`
 
@@ -226,7 +226,7 @@ $$ \int_{a}^{x}(-1)(-f'(t))dt = f(x) - f(a) = \bigg[ -(x-t)f'(t)-\frac{(x-t)^2}{
 
 ---
 
-## <a name="8. Matrics" href="#8. Matrics">8. Matrics</a>
+## <a name="<a name=\"8. Matrics\" href=\"#8. Matrics\">8. Matrics</a>" href="#<a name=\"8. Matrics\" href=\"#8. Matrics\">8. Matrics</a>"><a name=\"8. Matrics\" href=\"#8. Matrics\">8. Matrics</a></a>
 
 ```
 H = 
@@ -268,7 +268,7 @@ a_{m,1} & a_{m,2} & \cdots & a_{m,n}
 \end{pmatrix}
 $$
 
-## <a name="9. Cases" href="#9. Cases">9. Cases</a>
+## <a name="<a name=\"9. Cases\" href=\"#9. Cases\">9. Cases</a>" href="#<a name=\"9. Cases\" href=\"#9. Cases\">9. Cases</a>"><a name=\"9. Cases\" href=\"#9. Cases\">9. Cases</a></a>
 
 ```
 f(n) =
@@ -288,7 +288,7 @@ $$
 
 ---
 
-## <a name="Sample " href="#Sample ">Sample </a>
+## <a name="<a name=\"Sample \" href=\"#Sample \">Sample </a>" href="#<a name=\"Sample \" href=\"#Sample \">Sample </a>"><a name=\"Sample \" href=\"#Sample \">Sample </a></a>
 
 $$a{\bold e}_\alpha + b\tilde{\bold e}_\alpha + c{\bold e}_x = \bold 0$$ (1)
 
@@ -305,13 +305,13 @@ Introducing the hypothenuse segments $p={\bold a}\cdot{\bold e}_x$ and  $q={\bol
 |:---:|:---:|:---:|:---:|
 |$cp = a^2$|$cq = b^2$|$pq = h^2$|$ab = ch$|
 
-## <a name="Sample 2 " href="#Sample 2 ">Sample 2 </a>
+## <a name="<a name=\"Sample 2 \" href=\"#Sample 2 \">Sample 2 </a>" href="#<a name=\"Sample 2 \" href=\"#Sample 2 \">Sample 2 </a>"><a name=\"Sample 2 \" href=\"#Sample 2 \">Sample 2 </a></a>
 
-### <a name="샘플 텍스트 $2\times 3 = 6$" href="#샘플 텍스트 $2\times 3 = 6$">샘플 텍스트 $2\times 3 = 6$</a>
+### <a name="<a name=\"샘플 텍스트 $2\times 3 = 6$\" href=\"#샘플 텍스트 $2\times 3 = 6$\">샘플 텍스트 $2\times 3 = 6$</a>" href="#<a name=\"샘플 텍스트 $2\times 3 = 6$\" href=\"#샘플 텍스트 $2\times 3 = 6$\">샘플 텍스트 $2\times 3 = 6$</a>"><a name=\"샘플 텍스트 $2\times 3 = 6$\" href=\"#샘플 텍스트 $2\times 3 = 6$\">샘플 텍스트 $2\times 3 = 6$</a></a>
 
 $$ f(x) = \sum_{i=0}^{\infty}\frac{f^{(i)}(x^2)}{i!} $$
 
-### <a name="샘플 행렬" href="#샘플 행렬">샘플 행렬</a>
+### <a name="<a name=\"샘플 행렬\" href=\"#샘플 행렬\">샘플 행렬</a>" href="#<a name=\"샘플 행렬\" href=\"#샘플 행렬\">샘플 행렬</a>"><a name=\"샘플 행렬\" href=\"#샘플 행렬\">샘플 행렬</a></a>
 
 $$
 \begin{pmatrix}

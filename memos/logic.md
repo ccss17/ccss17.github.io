@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**수학 기초론**" href="#**수학 기초론**">**수학 기초론**</a>
+## <a name="<a name=\"**수학 기초론**\" href=\"#**수학 기초론**\">**수학 기초론**</a>" href="#<a name=\"**수학 기초론**\" href=\"#**수학 기초론**\">**수학 기초론**</a>"><a name=\"**수학 기초론**\" href=\"#**수학 기초론**\">**수학 기초론**</a></a>
 
 **[논리학](https://ccss17.github.io/logic.html)**
 
@@ -12,11 +12,11 @@
 
 </blockquote>
 
-# <a name="논리학" href="#논리학">논리학</a>
+# <a name="<a name=\"논리학\" href=\"#논리학\">논리학</a>" href="#<a name=\"논리학\" href=\"#논리학\">논리학</a>"><a name=\"논리학\" href=\"#논리학\">논리학</a></a>
 
 ---
 
-# <a name="논리학" href="#논리학">논리학</a>
+# <a name="<a name=\"논리학\" href=\"#논리학\">논리학</a>" href="#<a name=\"논리학\" href=\"#논리학\">논리학</a>"><a name=\"논리학\" href=\"#논리학\">논리학</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -260,7 +260,7 @@
 
   - 양자논리학에서는 고전 논리학의 근본원리들 중 어느 하나 이상을 배제(배중률을 배제한다)하면서 추론을 진전시킨다.
 
-## <a name="논리학에 관하여 " href="#논리학에 관하여 ">논리학에 관하여 </a>
+## <a name="<a name=\"논리학에 관하여 \" href=\"#논리학에 관하여 \">논리학에 관하여 </a>" href="#<a name=\"논리학에 관하여 \" href=\"#논리학에 관하여 \">논리학에 관하여 </a>"><a name=\"논리학에 관하여 \" href=\"#논리학에 관하여 \">논리학에 관하여 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -344,7 +344,7 @@
 
 </blockquote>
 
-## <a name="논리학 기본 원리 " href="#논리학 기본 원리 ">논리학 기본 원리 </a>
+## <a name="<a name=\"논리학 기본 원리 \" href=\"#논리학 기본 원리 \">논리학 기본 원리 </a>" href="#<a name=\"논리학 기본 원리 \" href=\"#논리학 기본 원리 \">논리학 기본 원리 </a>"><a name=\"논리학 기본 원리 \" href=\"#논리학 기본 원리 \">논리학 기본 원리 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -392,7 +392,7 @@
 
 - 그러나 라이프니츠는 충족이유의 원리와 모순율을 논리학의 두 가지 근본원리라고 보았다.
 
-## <a name="논리학 종류" href="#논리학 종류">논리학 종류</a>
+## <a name="<a name=\"논리학 종류\" href=\"#논리학 종류\">논리학 종류</a>" href="#<a name=\"논리학 종류\" href=\"#논리학 종류\">논리학 종류</a>"><a name=\"논리학 종류\" href=\"#논리학 종류\">논리학 종류</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -464,7 +464,7 @@
 
 - 라이프니츠는 수학에서 수 대신 대수를 사용하는 것처럼 논리학 역시 자연언어 대신 기호를 사용할 것을 주장했다. 이것으로부터 기호논리학이 발달할 수 있었다.
 
-# <a name="오류론 " href="#오류론 ">오류론 </a>
+# <a name="<a name=\"오류론 \" href=\"#오류론 \">오류론 </a>" href="#<a name=\"오류론 \" href=\"#오류론 \">오류론 </a>"><a name=\"오류론 \" href=\"#오류론 \">오류론 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -602,9 +602,9 @@
 
     "물건 하나쯤 빼돌려도 상관없겠지. 회사 사장이 봉급도 제대로 안주는데 말야" 도 이에 해당하는 오류이다. 
 
-# <a name="논증과 추론법" href="#논증과 추론법">논증과 추론법</a>
+# <a name="<a name=\"논증과 추론법\" href=\"#논증과 추론법\">논증과 추론법</a>" href="#<a name=\"논증과 추론법\" href=\"#논증과 추론법\">논증과 추론법</a>"><a name=\"논증과 추론법\" href=\"#논증과 추론법\">논증과 추론법</a></a>
 
-## <a name="유추" href="#유추">유추</a>
+## <a name="<a name=\"유추\" href=\"#유추\">유추</a>" href="#<a name=\"유추\" href=\"#유추\">유추</a>"><a name=\"유추\" href=\"#유추\">유추</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -616,7 +616,7 @@
 
 - 유추는 개연적 결론 밖에 주지 못한다는 단점이 있으나 과학적 가설을 세울 때와 같이 새로운 발견을 진전시킬 때 중요한 역할을 한다. 
 
-## <a name="귀납논증" href="#귀납논증">귀납논증</a>
+## <a name="<a name=\"귀납논증\" href=\"#귀납논증\">귀납논증</a>" href="#<a name=\"귀납논증\" href=\"#귀납논증\">귀납논증</a>"><a name=\"귀납논증\" href=\"#귀납논증\">귀납논증</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -702,7 +702,7 @@
 
 - 밀의 귀납 방법은 전제와 결론의 인과관계를 명확히 밝히는 것이 주된 목적이다. 
 
-## <a name="연역논증" href="#연역논증">연역논증</a>
+## <a name="<a name=\"연역논증\" href=\"#연역논증\">연역논증</a>" href="#<a name=\"연역논증\" href=\"#연역논증\">연역논증</a>"><a name=\"연역논증\" href=\"#연역논증\">연역논증</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -776,7 +776,7 @@
 
   - 철학에서 많은 관심을 받는 논리 체계이다. 
 
-### <a name="귀납과 연역" href="#귀납과 연역">귀납과 연역</a>
+### <a name="<a name=\"귀납과 연역\" href=\"#귀납과 연역\">귀납과 연역</a>" href="#<a name=\"귀납과 연역\" href=\"#귀납과 연역\">귀납과 연역</a>"><a name=\"귀납과 연역\" href=\"#귀납과 연역\">귀납과 연역</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

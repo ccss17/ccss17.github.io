@@ -162,7 +162,7 @@ def link(fname):
         for line in content.split('\n'):
             header = re.findall(HEADER_PATTERN, line)
             if header:
-                header = header[0]
+                header = header[0].replace("\"", "\\\"")
                 if 'https://ccss17.github.io' not in header\
                     and '<a name="' not in header:
                     level, value = header.split(' ', maxsplit=1)

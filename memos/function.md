@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**해석학 메모**" href="#**해석학 메모**">**해석학 메모**</a>
+## <a name="<a name=\"**해석학 메모**\" href=\"#**해석학 메모**\">**해석학 메모**</a>" href="#<a name=\"**해석학 메모**\" href=\"#**해석학 메모**\">**해석학 메모**</a>"><a name=\"**해석학 메모**\" href=\"#**해석학 메모**\">**해석학 메모**</a></a>
 
 **[해석학 메모](https://ccss17.github.io/anal.html)**
 
@@ -12,11 +12,11 @@
 
 </blockquote>
 
-# <a name="함수 메모 " href="#함수 메모 ">함수 메모 </a>
+# <a name="<a name=\"함수 메모 \" href=\"#함수 메모 \">함수 메모 </a>" href="#<a name=\"함수 메모 \" href=\"#함수 메모 \">함수 메모 </a>"><a name=\"함수 메모 \" href=\"#함수 메모 \">함수 메모 </a></a>
 
 ---
 
-# <a name="도형의 방정식 " href="#도형의 방정식 ">도형의 방정식 </a>
+# <a name="<a name=\"도형의 방정식 \" href=\"#도형의 방정식 \">도형의 방정식 </a>" href="#<a name=\"도형의 방정식 \" href=\"#도형의 방정식 \">도형의 방정식 </a>"><a name=\"도형의 방정식 \" href=\"#도형의 방정식 \">도형의 방정식 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -116,7 +116,7 @@
 
 - 직선 $y=x$에 대하여 대칭이동한 도형의 방정식 : $f(y, x)=0$
 
-# <a name="여러가지 함수 " href="#여러가지 함수 ">여러가지 함수 </a>
+# <a name="<a name=\"여러가지 함수 \" href=\"#여러가지 함수 \">여러가지 함수 </a>" href="#<a name=\"여러가지 함수 \" href=\"#여러가지 함수 \">여러가지 함수 </a>"><a name=\"여러가지 함수 \" href=\"#여러가지 함수 \">여러가지 함수 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -296,7 +296,7 @@
 
   삼각함수 $y = \sin x$ 는 초월함수이다. 
 
-## <a name="다항함수 " href="#다항함수 ">다항함수 </a>
+## <a name="<a name=\"다항함수 \" href=\"#다항함수 \">다항함수 </a>" href="#<a name=\"다항함수 \" href=\"#다항함수 \">다항함수 </a>"><a name=\"다항함수 \" href=\"#다항함수 \">다항함수 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -392,7 +392,7 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
 </blockquote>
 
-## <a name="유리함수" href="#유리함수">유리함수</a>
+## <a name="<a name=\"유리함수\" href=\"#유리함수\">유리함수</a>" href="#<a name=\"유리함수\" href=\"#유리함수\">유리함수</a>"><a name=\"유리함수\" href=\"#유리함수\">유리함수</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -426,7 +426,7 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   ![desmos-graph](https://user-images.githubusercontent.com/16812446/75099281-255d8d00-5603-11ea-98fd-89c968af8de2.png)
 
-## <a name="무리함수" href="#무리함수">무리함수</a>
+## <a name="<a name=\"무리함수\" href=\"#무리함수\">무리함수</a>" href="#<a name=\"무리함수\" href=\"#무리함수\">무리함수</a>"><a name=\"무리함수\" href=\"#무리함수\">무리함수</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -466,7 +466,7 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
     ![desmos-graph(5)](https://user-images.githubusercontent.com/16812446/75109648-9c793c80-5668-11ea-8542-9369bc611610.png) ![desmos-graph(6)](https://user-images.githubusercontent.com/16812446/75109660-b87cde00-5668-11ea-897c-4eaf836d5a0b.png)
 
-## <a name="지수함수 " href="#지수함수 ">지수함수 </a>
+## <a name="<a name=\"지수함수 \" href=\"#지수함수 \">지수함수 </a>" href="#<a name=\"지수함수 \" href=\"#지수함수 \">지수함수 </a>"><a name=\"지수함수 \" href=\"#지수함수 \">지수함수 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -516,7 +516,7 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   $2^{x^2-4} \geq 8^x$
 
-## <a name="로그함수" href="#로그함수">로그함수</a>
+## <a name="<a name=\"로그함수\" href=\"#로그함수\">로그함수</a>" href="#<a name=\"로그함수\" href=\"#로그함수\">로그함수</a>"><a name=\"로그함수\" href=\"#로그함수\">로그함수</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -562,7 +562,7 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   $\log_{3} (x^2-2x) > \log_{3} (2-x)+1$
 
-## <a name="특별한 함수 " href="#특별한 함수 ">특별한 함수 </a>
+## <a name="<a name=\"특별한 함수 \" href=\"#특별한 함수 \">특별한 함수 </a>" href="#<a name=\"특별한 함수 \" href=\"#특별한 함수 \">특별한 함수 </a>"><a name=\"특별한 함수 \" href=\"#특별한 함수 \">특별한 함수 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

@@ -2,7 +2,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**통계 메모**" href="#**통계 메모**">**통계 메모**</a>
+## <a name="<a name=\"**통계 메모**\" href=\"#**통계 메모**\">**통계 메모**</a>" href="#<a name=\"**통계 메모**\" href=\"#**통계 메모**\">**통계 메모**</a>"><a name=\"**통계 메모**\" href=\"#**통계 메모**\">**통계 메모**</a></a>
 
 **[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
 
@@ -18,11 +18,11 @@
 
 </blockquote>
 
-# <a name=" 이항분포의 평균,분산,표준편차" href="# 이항분포의 평균,분산,표준편차"> 이항분포의 평균,분산,표준편차</a>
+# <a name="<a name=\" 이항분포의 평균,분산,표준편차\" href=\"# 이항분포의 평균,분산,표준편차\"> 이항분포의 평균,분산,표준편차</a>" href="#<a name=\" 이항분포의 평균,분산,표준편차\" href=\"# 이항분포의 평균,분산,표준편차\"> 이항분포의 평균,분산,표준편차</a>"><a name=\" 이항분포의 평균,분산,표준편차\" href=\"# 이항분포의 평균,분산,표준편차\"> 이항분포의 평균,분산,표준편차</a></a>
 
 ---
 
-# <a name="이항분포 " href="#이항분포 ">이항분포 </a>
+# <a name="<a name=\"이항분포 \" href=\"#이항분포 \">이항분포 </a>" href="#<a name=\"이항분포 \" href=\"#이항분포 \">이항분포 </a>"><a name=\"이항분포 \" href=\"#이항분포 \">이항분포 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -90,7 +90,7 @@ $$ \boxed{B(n, p)} $$
 
   이다.
 
-## <a name="이항분포의 평균, 분산, 표준편차(산포도 측정)" href="#이항분포의 평균, 분산, 표준편차(산포도 측정)">이항분포의 평균, 분산, 표준편차(산포도 측정)</a>
+## <a name="<a name=\"이항분포의 평균, 분산, 표준편차(산포도 측정)\" href=\"#이항분포의 평균, 분산, 표준편차(산포도 측정)\">이항분포의 평균, 분산, 표준편차(산포도 측정)</a>" href="#<a name=\"이항분포의 평균, 분산, 표준편차(산포도 측정)\" href=\"#이항분포의 평균, 분산, 표준편차(산포도 측정)\">이항분포의 평균, 분산, 표준편차(산포도 측정)</a>"><a name=\"이항분포의 평균, 분산, 표준편차(산포도 측정)\" href=\"#이항분포의 평균, 분산, 표준편차(산포도 측정)\">이항분포의 평균, 분산, 표준편차(산포도 측정)</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -294,7 +294,7 @@ $$ \sigma (X) = \sqrt[]{npq} $$
 
   $E(X) = 25$ 를 통해 정사면체를 $100$ 번 던졌을 때 숫자 $2$ 가 $25$ 정도 나올 것이라고 생각할 수 있다. 
 
-## <a name="큰 수의 법칙 " href="#큰 수의 법칙 ">큰 수의 법칙 </a>
+## <a name="<a name=\"큰 수의 법칙 \" href=\"#큰 수의 법칙 \">큰 수의 법칙 </a>" href="#<a name=\"큰 수의 법칙 \" href=\"#큰 수의 법칙 \">큰 수의 법칙 </a>"><a name=\"큰 수의 법칙 \" href=\"#큰 수의 법칙 \">큰 수의 법칙 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -368,7 +368,7 @@ $$ \lim_{n \to \infty} P \bigg ( \bigg | \dfrac{X}{n} - p \bigg | < h \bigg ) = 
 
   이것은 쉽게 말해 그냥 시행횟수를 한없이 늘리면 통계적확률과 수학적확률이 똑같아진다는 것을 의미한다.
 
-# <a name="체비세프의 부등식 " href="#체비세프의 부등식 ">체비세프의 부등식 </a>
+# <a name="<a name=\"체비세프의 부등식 \" href=\"#체비세프의 부등식 \">체비세프의 부등식 </a>" href="#<a name=\"체비세프의 부등식 \" href=\"#체비세프의 부등식 \">체비세프의 부등식 </a>"><a name=\"체비세프의 부등식 \" href=\"#체비세프의 부등식 \">체비세프의 부등식 </a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -394,7 +394,7 @@ $$ N \bigg (1 - \dfrac{1}{k^2} \bigg ) $$
 
   **구체화 필요**
 
-# <a name="베르누이 시행" href="#베르누이 시행">베르누이 시행</a>
+# <a name="<a name=\"베르누이 시행\" href=\"#베르누이 시행\">베르누이 시행</a>" href="#<a name=\"베르누이 시행\" href=\"#베르누이 시행\">베르누이 시행</a>"><a name=\"베르누이 시행\" href=\"#베르누이 시행\">베르누이 시행</a></a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
