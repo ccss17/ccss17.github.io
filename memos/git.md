@@ -785,5 +785,19 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 - `git config --global credential.helper store` : 원격 레포지토리의 아이디와 비밀번호를 `~/.git-credentials` 에 영구적으로 저장한다.
 
+# 경험 
 
+- 만약 실수로 `master` 브랜치를 망쳐버려서 마지막 `commit` 으로 이동해야 하는 경우(마지막 커밋 해쉬를 `4428` 이라고 하자), 일단 `master` 브랜치를 커밋한 후
 
+  ```shell
+  git add .
+  git commit -m "Incorrect!"
+  git checkout 4428
+  ```
+
+  로 마지막 커밋으로 이동한다. 그런 다음 고칠 것을 고치고, 커밋을 한다.
+
+  ```shell
+  git add .
+  git commit -m "CORRECT!"
+  ```
