@@ -20,12 +20,6 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-자연대상 : 세상에 존재하는 모든 것들이다. 
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
 수학 : 자연대상을 단순화하고 추상화시켜 그것의 성질과 관계를 정확하게 다룰 수 있도록 만들고 연구하는 것이다. 
 
 </blockquote>
@@ -385,7 +379,3 @@
   $$ \R ^{2} = \R \times \R = \{(x, y) | x,y \in \R \} $$
 
   $$ \R ^{3} = \R \times \R = \{(x, y, z) | x,y,z \in \R \} $$
-
-
-
-

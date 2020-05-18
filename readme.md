@@ -41,7 +41,7 @@
 
 - 집합론
     
-  ###### [자연대상, 수학, 수학, 정의(definition), 공리(axiom), 증명(proof), 정리(theorem), 수학기초론, 집합론, 집합, 원소, 집합 표현법, 집합의 분류, 부분집합, 서로 같은 집합, 진부분집합, 부분집합의 개수, 기수(cardinal number), 집합의 연산, 집합의 연산 법칙, 유한집합의 원소의 개수, 곱집합(product set)](https://ccss17.github.io/math.html)
+  ###### [수학, 수학, 정의(definition), 공리(axiom), 증명(proof), 정리(theorem), 수학기초론, 집합론, 집합, 원소, 집합 표현법, 집합의 분류, 부분집합, 서로 같은 집합, 진부분집합, 부분집합의 개수, 기수(cardinal number), 집합의 연산, 집합의 연산 법칙, 유한집합의 원소의 개수, 곱집합(product set)](https://ccss17.github.io/math.html)
 
 - 수리논리학
     
