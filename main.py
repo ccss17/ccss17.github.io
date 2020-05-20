@@ -37,7 +37,13 @@ def update():
 
 ##### - [수학 역사2(수학의 확실성)](https://ccss17.github.io/all4.html)
 
-##### - [컴퓨터 역사](https://ccss17.github.io/all5.html)
+##### - [컴퓨터 역사 (괴델의 불완전성 정리)](https://ccss17.github.io/all5.html)
+
+##### - [컴퓨터 역사2 (튜링의 불완전성 정리)](https://ccss17.github.io/all6.html)
+
+##### - [컴퓨터 역사3 (튜링 기계의 구현)](https://ccss17.github.io/all7.html)
+
+##### - [컴퓨터 역사4 (초지능)](https://ccss17.github.io/all8.html)
 
 '''
 # {sections('기초적인 것에 관련된 메모', 'all', get_theorem)}
