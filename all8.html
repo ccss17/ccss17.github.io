@@ -27,7 +27,8 @@ body {
 <p><strong><a href="https://ccss17.github.io/all5.html">컴퓨터 역사 (괴델의 불완전성 정리)</a></strong></p>
 <p><strong><a href="https://ccss17.github.io/all6.html">컴퓨터 역사2 (튜링의 불완전성 증명)</a></strong></p>
 <p><strong><a href="https://ccss17.github.io/all7.html">컴퓨터 역사3 (튜링 기계의 구현)</a></strong></p>
-<p><strong><a href="https://ccss17.github.io/all8.html">컴퓨터 역사4 (초지능)</a></strong></p>
+<p><strong><a href="https://ccss17.github.io/all8.html">컴퓨터 역사4 (소프트웨어와 알고리즘)</a></strong></p>
+<p><strong><a href="https://ccss17.github.io/all9.html">컴퓨터 역사5 (초지능)</a></strong></p>
 </li>
 </ul>
 </blockquote>
@@ -35,522 +36,625 @@ body {
 <h1><a name="컴퓨터 역사 " href="#컴퓨터 역사 ">컴퓨터 역사 </a></h1>
 <p><strong>컴퓨터의 역사에 관한 메모를 해 둔 곳입니다.</strong></p>
 <hr>
-<h1><a name="우리는 왜 필요없는 존재가 될 것인가?" href="#우리는 왜 필요없는 존재가 될 것인가?">우리는 왜 필요없는 존재가 될 것인가?</a></h1>
+<p>튜링 기계를 실제로 구현하자 이후의 컴퓨터 과학은 두 갈래로 갈라졌다. 하나는 알고리즘으로써 소프트웨어(튜링기계)가 어떻게 일하게 할 것인가 에 대한 연구였고, 다른 하나는 프로그래밍 언어로써 소프트웨어(튜링기계) 를 어떻게 표현할 것인가 에 대한 연구였다.</p>
+<h1>알고리즘</h1>
+<ul>
+<li>
+<p>소프트웨어는 튜링기계이다. 즉 프로그램은 튜링기계이다. 컴퓨터는 그 튜링기계를 읽고 흉내내는 보편만능 튜링기계이다.</p>
+</li>
+<li>
+<p>알고리즘이란 소프트웨어(튜링기계) 로 만드는 문제 푸는 방법이다.</p>
+</li>
+</ul>
+<h2>복잡도</h2>
+<ul>
+<li>
+<p>복잡도complexity 란 알고리즘을 실행할 때 드는 비용이다.</p>
+</li>
+<li>
+<p>주어진 문제를 기계적으로 푸기 위하여 (1) 알고리즘(문제풀이법) 을 찾고 (2) 그 해법이 맞는지 확인한 후 (3) 복잡도가 감당할만하면 (4) 알고리즘대로 소프트웨어를 만든다.</p>
+</li>
+<li>
+<p>그러나 멈춤 문제처럼 컴퓨터가 절대 못푸는 문제도 많다. 또 풀 수 있다고 해도 그 비용이 너무 커서 현실적으로 못푸는 문제도 많다.</p>
+</li>
+<li>
+<p>복잡도에서 관심을 두어야할 것은 입력의 크기에 따라서 비용이 어떻게 증가하느냐 이다.</p>
 <blockquote>
-<p>참고 : <a href="http://greenreview.co.kr/greenreview_article/1843/">http://greenreview.co.kr/greenreview_article/1843/</a></p>
-</blockquote>
-<ul>
-<li>
-<p>선 마이크로시스템의 창립자이자 클린턴 대통령에 의해 정보기술 대통령 자문위원회 공동의장이자 BSD 유닉스 개발의 핵심 역할을 한 개발자이자 vi 에디터의 개발자이자 미국의 대규모 사회실험의 과학기술자 그룹의 핵심 멤버인 빌 조이가 쓴 기술공학 발전의 가속화에 대한 경고성 메시지를 담은 블로그 글이다.</p>
-</li>
-<li>
-<p>이 글이 발표되자 독일의 주요 신문이 지면에 번역하여 실었고, 영국의 세계적 환경잡지도 이 문제를 특집으로 다뤘고, 스탠포드 대학에서 빌 조이를 불러서 그의 견해에 관련하여 치열한 논쟁을 벌였다.</p>
-</li>
-</ul>
-<h2><a name="내가 커즈와일과 나눈 대화" href="#내가 커즈와일과 나눈 대화">내가 커즈와일과 나눈 대화</a></h2>
-<ul>
-<li>
-<p>나(빌조이를 지칭한다)는 1998년 가을 레이 커즈웨일을 만나 대화를 하고 기술 발전에 대한 심각성과 위험성을 느꼈다.</p>
-<ul>
-<li>
-<p>나는 인간의 의식에 관해 연구하는 버클리 대학 철학자 존 서얼과 대화하고 있었는데 레이가 대화에 참여하게 되었다.</p>
-</li>
-<li>
-<p>레이는 기술 발전속도가 점차 가속될 것이고 인간이 로봇이 되거나 로봇과 뒤섞일 것이라고 했다.</p>
-</li>
-<li>
-<p>그러나 존은 로봇이 의식을 가질 수 없기 때문에 그런 일이 일어나지 않을 것이라고 했다.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2><a name="기술적 특이점이 도래했을 때의 미래" href="#기술적 특이점이 도래했을 때의 미래">기술적 특이점이 도래했을 때의 미래</a></h2>
-<ul>
-<li>
-<p>컴퓨터 공학자들이 인간보다 모든 일을 더 잘할 수 있는 기계를 개발했다고 하자.</p>
-<ul>
-<li>
-<p>그러면 모든 일이 기계 시스템에 의해 수행될 것이고 인간의 어떤 노력도 불필요하게 된다.</p>
-</li>
-<li>
-<p>이 시점에서 기계가 인간의 통제를 받지 않고 스스로 판단하는 것이 허용되거나, 인간의 통제가 유지되거나 둘 중 하나의 상황이 될 것이다.</p>
-</li>
-<li>
-<p>기계들이 스스로 판단하는 것이 허용된다면 인류의 운명이 기계에 의해 좌우될 수도 있다.</p>
-<ul>
-<li>
-<p>어떤 사람은 인간이 기계에게 통제권을 넘겨줄만큼 어리석지 않다고 주장할 수 있다.</p>
-</li>
-<li>
-<p>하지만 우리가 말하고자 하는 것은 인류가 기계에 점차 의존하면서 언젠가 기계가 내리는 모든 결정을 받아들이는 선택밖에 할 수 없는 상황이 온다는 것이다.</p>
-</li>
-<li>
-<p>왜냐하면 기계가 인간보다 인간이 직면한 복잡한 사회 문제에 대하여 인간 보다 훨씬 더 나은 결정을 내리기 때문이다.</p>
-</li>
-<li>
-<p>이에 따라 기계의 스위치를 내리는 것이 인간들 자신에게 자살행위가 되는 시점이 온다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>한편 기계에 대한 인간의 통제가 유지되는 경우 극소수의 엘리트에 의하여 기계 시스템은 장악될 것이다.</p>
-<ul>
-<li>
-<p>사실 극소수 엘리트의 장악은 오늘날과 비슷하지만 두 가지 큰 차이점이 있다.</p>
-</li>
-<li>
-<p>첫째, 엘리트가 대중에 행사하는 통제력이 지금보다 훨씬 더 클 것이다.</p>
-</li>
-<li>
-<p>둘째, 인간의 노동력이 아무런 필요가 없어져서 인간이 사회에 잉여 존재가 될 것이다.</p>
-<blockquote>
-<p>홀로코스트 때 독일이 유대인 중에서 기술력이 있는 일부만 남겨두고 나머지는 다 죽였다. 왜냐하면 그들의 노동력이 가치가 없기 때문이다.</p>
-</blockquote>
-<blockquote>
-<p>기술이 인간을 대체하면서 일어나는 현상에 관하여 기술하면 좋을 듯. 즉, 기술이 발달하면서 인간의 더 고차원적인 행동까지 대체하게 되고, 그 시점에서도 아직 가치가 있는 인간이란 고차원적인 행동을 대체한 기술 또한 통제할 수 있는 인간이라는 것. 미래에 인간은 두 부류로 나뉘는데, 그것은 기술을 통제할 수 있는 지적능력을 가진 인간과 기술을 통제할 지적 능력이 없는 인간인데, 이것은 곧 인공지능을 통제할 수 있는 인간과 인공지능을 통제할 수 없는 인간이고, 이지성 작가는 이것이 또 다시 철학을 할 수 있는 인간과 철학을 할 수 없는 인간이라고 했다는 것.</p>
+<p>p101~p134</p>
 </blockquote>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-<li>
-<p>한스 모라벡의 책 『로봇 - 단순한 기계로부터 초월적인 정신으로』 는 생물학적 종이 우월한 경쟁자를 만나 살아남는 경우가 거의 없다는 것을 알려준다.</p>
+<h1><a name="소프트웨어" href="#소프트웨어">소프트웨어</a></h1>
 <ul>
 <li>
-<p>인간이 동물들에게 그렇게 했듯이 완전히 자유로운 시장에서 우월한 로봇들이 재료, 에너지, 공간 등을 차지하기 위하여 끝없이 경쟁하며 성장할 것이고 인간은 점차 그 경쟁에서 밀려 생존이 불가능한 상황이 올 것이다.</p>
+<p>소프트웨어(튜링기계) 를 컴퓨터(보편만능 튜링기계) 의 입력으로 주기 위하여 그것을 표현할 언어가 필요하다. 이것이 프로그래밍 언어이다.</p>
 </li>
 <li>
-<p>그러나 다행히도 세금 등의 제도만 봐도 알 수 있듯이 우리는 완전 자유 시장 경쟁체제 속에서 살고 있지 않다. 정부가 강제적 정책을 현명하게 제시한다면 인간이 로봇을 이용하여 오랫동안 수준 높은 삶을 영위할 수 있다.</p>
-</li>
-<li>
-<p>모라벡은 또 다시 21세기 인류의 과업이 “법률을 통해 로봇들과 지속적 협력을 확보하는 것” 이라고 말하고</p>
-</li>
-<li>
-<p>“초지능이 탑재된 로봇” 으로 인간이 얼마나 위험한 존재가 될 것인지 설명한다.</p>
-</li>
-<li>
-<p>그의 견해에 따르면 로봇이 인간을 계승하게 될 것이고 인간은 멸종을 직면하게 될 것이 틀림없다고 한다.</p>
-</li>
+<p>튜링기계의 규칙표 방식은 너무 원시적이고 수학적 증명을 위한 최소한의 골격만을 갖고 있다.</p>
+<ul>
+<li>따라서 근본적으로 모든 소프트웨어가 튜링기계의 규칙표로 정의될 수 있으나 현실은 끝없이 정교하고 복잡한 일을 체계적이고 효율적이고 빠르게 만들 수 있는 프로그래밍 언어가 필요하다.</li>
 </ul>
 </li>
 </ul>
-<h2><a name="기술적 특이점에 관하여 대니 힐리스에게 물어보았다 " href="#기술적 특이점에 관하여 대니 힐리스에게 물어보았다 ">기술적 특이점에 관하여 대니 힐리스에게 물어보았다 </a></h2>
+<h2>기계와 사람의 간격</h2>
 <ul>
 <li>
-<p>나는 이제 내가 지적으로 존경하는 대니 힐리스에게 이 이야기를 해주었다.</p>
+<p>알고리즘을 찾으면 그것을 소프트웨어(튜링기계) 로 만든다. 그러면 컴퓨터(보편만능 튜링기계)가 그것을 실행한다.</p>
 <ul>
-<li>
-<p>그는 놀랍게도 지금까지 그래왔듯 변화는 점진적으로 올 것이고 인류는 이 변화에 익숙해질 것이라고 말했다.</p>
-</li>
-<li>
-<p>또 만약 내 몸이 로봇화되어 200살까지 살 수 있다고 한다면 그렇게 할 것이라고 했다.</p>
-</li>
+<li>이때 소프트웨어는 언어라는 수단으로 사상되어야만 한다.</li>
 </ul>
 </li>
 <li>
-<p>그와 대화하며 나는 속으로 우리가 왜 로봇에 의한 재앙에 관심을 주지 않는지 의문을 제기했다.</p>
+<p>그렇다면 사람에게 편한 언어와 컴퓨터에게 쉬운 언어가 일치하는가?</p>
 <ul>
 <li>
-<p>그 대답은 부분적으로는 새로운 과학적 발견에 인류가 익숙해져버려서 로봇공학, 유전자공학, 나노테크놀로지가 지금까지의 과학기술과는 근본적으로 다른 위협을 제기한다는 것을 깨닫지 못했다는 것이 될 것이다.</p>
+<p>튜링기계는 소프트웨어를 표현하기에 충분한 언어이다.</p>
 </li>
 <li>
-<p>특히 극미로봇(nanobots), 인공 유기체은 특별히 더 위험한데 그것이 자기복제를 할 수 있기에 빠른 속도로 통제 불가능하게 되기 때문이다.</p>
-</li>
-<li>
-<p>네트워크 상에서 프로그램이 자기 복제를 한다면 최악의 경우 네트워크를 중단하면 되지만, 로봇의 자기복제는 인류의 물리 세계에 위협이 될 것이다.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2><a name="특이점의 실현 가능성에 관하여 " href="#특이점의 실현 가능성에 관하여 ">특이점의 실현 가능성에 관하여 </a></h2>
+<p>하지만 튜링기계는 사람이 쓰기에 너무 원시적이다.</p>
 <ul>
-<li>
-<p>커즈와일은 로봇에서 영생의 비전을 보았고, 유전자공학과 나노테크놀로디는 거의 모든 질병의 치유를 제공하지만, 이런 기술공학 발전에 인류가 점점 의존하게 될수록 힘과 부는 점차 집적되어가고 이것은 엄청난 위험을 초래할 수 있게 된다.</p>
-<ul>
-<li>
-<p>20세기 기술공학의 결정체 - 핵, 생화학무기 - 는 인류에 엄청난 위협을 주었지만 정부의 허가와 희긔한 원료물질이 필요했다. 따라서 이런 기술 공학을 개발하는 건 국가(정부)였다.</p>
-</li>
-<li>
-<p>하지만 21세기 기술공학의 결정체 - 유전공학, 나노테크놀로지, 로봇공학 - 은 정부 허가나 희긔한 원료를 필요로 하지 않고 오직 지식만을 필요로 한다. 따라서 현 시대 이런 기술 공학을 개발하는 건 기업(개인)이다.</p>
-</li>
-<li>
-<p>즉 기술공학 개발을 선도하는 극소수의 개인들에게 힘과 부가 점차 집적되어가고 있다는 것이다.</p>
-</li>
-<li>
-<p>나는 인류가 극단적 악으로 나아가고 있다는 것이 전혀 과장된 말이 아니라고 생각한다.</p>
-</li>
-<li>
-<p>왜냐하면 20세기의 대량파괴 무기가 그나마 신뢰할 수 있는 국가들의 통제 하에 있었으나, 21세기 대량파괴 무기는 예측할 수 없는 개인들의 통제 하에 있게 되기 때문이다.</p>
-</li>
+<li>심지어 덧셈하는 튜링기계 작동규칙표를 만드는 일도 보통일이 아니다.</li>
 </ul>
 </li>
 <li>
-<p>나는 정보기술이 컴퓨터 과학자나 컴퓨터 공학자가 아니라 물리학자에 의하여 발전된다는 것을 인식하고 있었다.</p>
+<p>좀 더 개선되었긴 했으나 폰 노이만이 구현한 컴퓨터가 사용하는 언어인 기계어도 매한가지이다.</p>
 <ul>
-<li>
-<p>1980대 초에 스티븐 울프램과 브로슬 해슬래처에 의해 카오스 이론과 비선형 체계를 알게 되었고 1990년대 대니 힐스, 스튜어트 카우프먼, 머레이 갤먼에 의해 복잡계에 대한 지식을 얻었고, 최근에는 해슬래처와 마크 리드에 의해 분자전자공학의 엄청난 가능성을 알게 되었다.</p>
-</li>
-<li>
-<p>나는 세 개의 마이크로프로세서 구조 - SPARC, picoJAVA, MAJC - 의 공동 설계자로서, 무어의 법칙에 대한 직접적 이해를 갖게 되었지만 물리적 한계 때문에 그 법칙이 2010년까지 유효할 것이라고 예측했다.</p>
-</li>
-<li>
-<p>하지만 분자전자공학의 급속한 진보에 의해 기존의 트랜지스터를 원자와 분자가 대체할 수 있다는 것을 알게 되었고, 나는 무어의 법칙이 30년 이상 유효할 것이라고 믿게 되었다.</p>
-</li>
-<li>
-<p>그렇게 된다면 2030년에 오늘날 컴퓨터보다 100만배 이상의 강력한 성능을 가진 기계가 탄생할 것이고, 그렇게 되면 커즈와일과 모라벡의 예언이 충분히 실현될 수 있는 플랫폼이 형성되는 것이다.</p>
-</li>
-<li>
-<p>또한 이 엄청나게 진보된 컴퓨터가 유전학과 결합될 때 이 결합은 좋든 나쁘든 세계를 완전히 바꾸게 될 것이다. 왜냐하면 자연세계 법칙에 국한되어 있던 복제와 진화 과정이 인간의 손(어쩌면 로봇의 손)에 의해 좌지우지 될 것이기 때문이다.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2><a name="기계가 인류는 완전히 대체하는 것에 관하여 " href="#기계가 인류는 완전히 대체하는 것에 관하여 ">기계가 인류는 완전히 대체하는 것에 관하여 </a></h2>
-<ul>
-<li>
-<p>소프트웨어와 마이크로프로세서를 설계하면서 나는 지능을 가진 기계를 설계한다는 생각을 하지는 않았지만, 30년 내에 인간 수준 능력을 가진 컴퓨터가 탄생할 것이라는 생각이 들면서, 내게 내가 하는 일이 인간이라는 종을 대체할 수도 있는 존재를 만드는 것이 아닐까 하는 근심이 생기기 시작했다.</p>
-<ul>
-<li>
-<p>새로운 기술의 엄청난 힘을 생각하면 우리는 마땅이 이것과 어떻게 공존할 수 있는지 물어야만 한다.</p>
-</li>
-<li>
-<p>또 만약 그 기술 공학이 인류를 멸종하게 할 수 있다면 큰 조심성을 가지고 나아가야만 한다.</p>
-</li>
-<li>
-<p>로봇의 첫번째 꿈은, 지능을 가진 기계가 인간의 노동을 대체하여 대신 일을 해줌으로써 인간을 쉬게하는 것이다. 내게는 이와 같은 지능을 가진 기계가 2030년까지는 가능할 것으로 보인다.</p>
-</li>
-<li>
-<p>로봇의 두번째 꿈은 로봇기술로 인간 자체를 대체하여, 우리의 의식을 다운로드시키고 영생을 누리게 하는 것이다. 커즈와일의 『정신적 기계』 에 묘사되어있듯 컴퓨터 장치를 몸속에 심은 행위가 이런 과정의 전조를 보여준다.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2><a name="유전자공학에 관하여 " href="#유전자공학에 관하여 ">유전자공학에 관하여 </a></h2>
-<ul>
-<li>
-<p>유전자공학은 믿을 수 없을 만큼 강력한 힘을 가지고 있기 때문에 그 기술 공학에도 인류에게 중대한 안전 문제가 존재한다.</p>
-<ul>
-<li>
-<p>애머리 로빈스와 헌터 로빈스는 “새로운 생물종의 개발이 진화의 법칙이 아니라 경제적 이해관계에 따라 이루어진다” 며 생태학적 관점에서 경고하는 논설을 내었다.</p>
-</li>
-<li>
-<p>하지만 이미 유전자 공학에 인류는 너무 많이 의존하고 있다. 미국 농무부는 50여개 유전자조작 농산물의 무제한 방출을 승인했고, 세계의 절반 이상 콩과 옥수수가 다른 생명형태에서 떼어낸 유전자 조각을 포함하고 있다.</p>
-</li>
-<li>
-<p>내가 우려하는 것은 유전자조작 기술 공학이 군사적으로든, 우발적으로든, 고의적 테러행위로든, 인류 전체에 위협이 될 가공할 재앙을 만들어낼 수 있다는 것이다.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2><a name="나노테크놀로지에 관하여 " href="#나노테크놀로지에 관하여 ">나노테크놀로지에 관하여 </a></h2>
-<ul>
-<li>
-<p>나노테크놀로지의 놀라운 기술은 리처드 파인만이 1959년 연설에서 처음 언급했다.</p>
-<ul>
-<li>
-<p>1980년 에릭 드렉슬러는 『창조의 엔진』 에서 원자 수준 물질이 조작됨으로써 어떻게 풍요로운 미래가 창조되는지 묘사했다.</p>
-<ul>
-<li>그 풍요로운 미래란 모든 것이 값싸게 만들어지고 모든 질병과 육체적 문제가 나노테크놀로지와 인공지능을 통해 해결되는 미래였다.</li>
-</ul>
-</li>
-<li>
-<p>드렉슬러는 그의 또 다른 책 『무한한 미래 - 나노테크놀로지 혁명』 에서 분자 수준 “어셈블러” 가 값싼 에너지를 창조하고, 암에서부터 감기에 이르는 모든 질병을 치유하고, 값싼 포켓용 슈퍼컴퓨터를 만들어낼 수 있고, 우주비행을 지금의 대양 횡단보다 용이하게 만들고, 멸종된 생물도 복원한다고 말한다.</p>
-</li>
-<li>
-<p>나는 『창조의 엔진』 을 읽고 평안함을 느꼈다. 나노테크놀로지는 인류를 믿을 수 없늘 만큼 진보하게 할 것인데, 그 진보는 아마 필연적인 것이라는 사실을 알게 되었기 때문이다.</p>
-<ul>
-<li>그러므로 현재의 어떠한 문제로도 압박감을 느낄 필요가 없는 것은 때가 되면 드렉슬러가 말한 미래가 올 것이고 밤을 새워 일하는 것이 무의미해질 것이기 때문이다.</li>
+<li>기계어는 튜링기계보다 편하지만 그 언어도 사람이 쓰기엔 너무 원시적이다.</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p>그러나 나는 1989년에 여러 물리학자들과 나노테크놀로지에 관한 대화를 나누었고 나노테크놀로지가 그렇게 뜻대로 되지는 않을 것이고, 최소한 그렇게 빨리 되지는 않을 것이라는 것을 확신하게 되었다.</p>
+<p>이 사람과 기계의 간격을 해결하기 위하여 상위 언어와 번역compilation 이 사용된다.</p>
 <ul>
 <li>
-<p>그런데 작년 여름 브로스 해슬래처로부터 나노스케일 분자전자공학이 이제 실제적인 것이 되었다는 것을 들었다.</p>
+<p>컴퓨터가 직접 이해하는 언어는 기계어(튜링기계) 이다.</p>
 </li>
 <li>
-<p>이것은 나노테크놀로지에 관한 나의 견해를 다시금 바꾸어 『창조의 엔진』 을 다시 읽게하였고, 10년도 더 지난 지금 드렉슬러가 설명하는 “파괴의 엔진” 이 실제로는 드렉슬러의 설명보다 훨씬 더 위험하다는 것을 깨닫게 되었다.</p>
-</li>
-<li>
-<p>어셈블러 기술이 20년 내에 출현할 것으로 보이고, 개별 분자가 회로 요소가 되는 분자전자공학은 10년 내에 엄청난 돈벌이가 될 것으로 보인다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>하지만 불행히도 핵기술처럼 나노테크놀로지는 긍정적 용도보다 파괴적 용도로 사용되기 더 쉬웠다.</p>
+<p>그런데 이 언어를 사람이 사용하기 편하게 상위 언어로 사상시킬 수 있고, 이 상위 언어는 다시 기계어로 번역될 수 있다.</p>
 <ul>
 <li>
-<p>가령 특정 지역 또는 특정 유전적 특성을 지닌 인간집단에게 선택적으로 상해를 가할 수 있는 장비도 나노테크놀로지로 쉽게 만들 수 있다.</p>
-</li>
-<li>
-<p>드렉슬러는 다음과 같이 말했다.</p>
-<p>“효율성 없는 식물들이 진짜 식물들을 이길 수 있고, 닥치는대로 먹어치우는 박테리아들이 진짜 박테리아들과의 경쟁에서 이길 수 있다. 그것들은 급속히 복제됨으로써 단 며칠 만에 세계를 먼지의 세계로 환원시킬 수 있다.”</p>
-</li>
-<li>
-<p>이런 종말은 온 인류의 종말을 야기하는 우울한 종말이 될 것이나 이런 종말이 한 실험실에서의 단순한 실수와 사고로 야기될 수 있는 시대가 이르렀다.</p>
+<p>가령</p>
+<p><strong>Coq</strong> → <strong>ML</strong>, <strong>Python</strong>, <strong>Scala</strong> → <strong>Java</strong> → <strong>C</strong> → <strong>Dalvik</strong> 바이트 코드 → <strong>x86-64</strong> 기계어</p>
+<p>순으로 상위 언어라고 할 수 있다.</p>
 </li>
 </ul>
 </li>
 </ul>
-<h2><a name="GNR 에 관하여 " href="#GNR 에 관하여 ">GNR 에 관하여 </a></h2>
+</li>
+</ul>
+<h3>튜링 완전</h3>
 <ul>
 <li>
-<p>무엇보다 GNR(유전자공학, 나노테크놀로지, 로봇공학) 기술의 파괴적인 자기복제 능력을 조심해야만 한다.</p>
+<p>그런데 이러한 프로그래밍 언어마다 표현력의 차이가 있는가? 그러니까 어떤 프로그래밍 언어는 표현하지 못하는 튜링기계를 다른 프로그래밍 언어는 표현할 수 있는가?</p>
 <ul>
 <li>
-<p>스튜어트 카우프먼의 논문 『자기복제 - 펩타이드도 한다』 은 32개의 아미노산 펩타이드가 자가촉매작용으로 스스로 합성물을 만드는 것을 토의하고 있다.</p>
+<p>표현력이 완전한 프로그래밍 언어를 튜링-완전turing-complete 하다고 한다.</p>
 </li>
 <li>
-<p>우리는 여러해 전부터 GNR 의 위험, 즉 지식만으로 대량 파괴가 가능하다는 위험에 대한 경고를 받아왔지만 이 경고는 널리 알려지지 않았다.</p>
+<p>튜링-완전한 프로그래밍 언어는 모든 소프트웨어(튜링기계)를 표현할 수 있다.</p>
 </li>
 <li>
-<p>왜냐하면 대중에게 이 위험을 알리는 것은 이익이 생기는 일이 아니기 때문이다.</p>
+<p>튜링완전한 언어는 튜링 기계로 할 수 있는 모든 계산을 다 할 수 있으므로 범용 언어general-purpose language 라고 한다.</p>
 </li>
 </ul>
 </li>
 <li>
-<p>기업은 엄청난 돈벌이를 위하여 전지구적 자본주의 체제 속에서 이 새로운 테크놀로지들을 공격적으로 추구하고 있다.</p>
-</li>
-<li>
-<p>칼 세이건은 1994년에 『창백한 푸른 점』 에서 다음과 같이 말했다.</p>
-<p>“새로이 형성된 행성에서 생명이 형성되고, 생명체들은 진화의 과정을 따라가며 지능이 생기고 어느 지점까지 살아남는다. 그리고는 기술이 발명된다. 그들은 실험으로 자연법칙을 드러내고 자연법칙을 모아둔 과학은 그들에게 엄청난 힘을 허용한다. 한순간에 그들은 세계를 변화시킬 수 있는 장치들을 만들어낸다. 몇몇 문명은 해도 되는 것과 해서는 안될 것의 한계를 정하여 위기를 안전하게 통과한다. 그밖의 다른 문명은 운이 좋지 않거나 신중하지 못한 결과로 파멸한다.”</p>
+<p>상위 언어를 기계어로 번역할 때 상위 언어가 튜링-완전하다면 안심이 된다.</p>
 <ul>
 <li>
-<p>칼 세이건의 목소리는 웅변적이지만 단순한 상식에서 나왔다.</p>
+<p>왜냐하면 사람이 쓰기 편하면서 온전하게 기계어로 번역될 수 있기 때문이다.</p>
 </li>
 <li>
-<p>21세기 기술의 주창자들은 겸손과 더불어 이 상식을 결여하고 있다.</p>
+<p>튜링-불완전 언어를 사용하면 번역이 막히는 경우가 발생할 수 있다.</p>
 </li>
 </ul>
 </li>
 </ul>
-<h2><a name="기술적 특이점에 대한 대안책 " href="#기술적 특이점에 대한 대안책 ">기술적 특이점에 대한 대안책 </a></h2>
+<h2>자동 번역</h2>
 <ul>
 <li>
-<p>한 가지 제안은 위험한 테크놀로지 하나하나에 대한 방어막을 각기 만들어놓잔느 것이다.</p>
+<p>자연어는 자동 번역이 힘들지만 프로그래밍 언어는 항상 자동 번역이 가능하다.</p>
 <ul>
 <li>
-<p>레이건 행정부에 의해 제안된 전략방어계획(Strategic Defense Initiative) 은 소련의 핵공격에 대한 방패로써 설계된 것인데 이 계획의 토의에 관여했던 아서 C. 클라크는 이렇게 말했다.</p>
-<p>“탄도탄들 중 극소수만 통과하게 할 수 있는 지역방어체제를 엄청난 비용을 들여 건설하는 것이 가능하다 해도 전면적 국가방어체제는 넌센스이다. 전면적 방어가 가능할지 몰라도 그것을 이루기 위해 동원된 테크놀로지는 그것의 부산물로써 끔찍한 무기들을 만들게 될 것이고, 그 결과 누구도 당초의 문제였던 탄도탄같은 ‘원시적’ 무기에 관심을 갖지 않게 될 것이다.”</p>
-</li>
-</ul>
+<p>왜냐하면 자연어는 한 단어가 여러 의미를 지니지만 프로그래밍 언어는 모든 문장 부품의 의미가 유일하기 때문이다.</p>
 </li>
 <li>
-<p>『창조의 엔진』 에서 에릭 드렉슬러는 실험실로부터 빠져나가는 모든 위험한 복제물을 차단하기 위하여 나노테크놀로지 방패를 건설할 것을 제안했다.</p>
-<ul>
-<li>
-<p>하지만 나는 이 방패도 그 자체로 매우 위험한 것이 될 것이라 생각한다.</p>
-</li>
-<li>
-<p>그것이 자가면역 문제를 일으켜 생명권을 공격한다면 그 어떤 것도 막을 수 없기 때문이다.</p>
-</li>
-<li>
-<p>이런 문제는 로봇공학, 유전공학에 대한 방패를 건설하는 데도 똑같이 일어난다.</p>
-</li>
-<li>
-<p>즉, 내가 보기에 방패 개발의 부작용은 그것이 막아내고자 하는 기술들만큼 위험한 것이 된다는 것이다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>그러므로 기술적 특이점의 대책이 무엇이냐 에 대한 나의 대답은 이러한 가능성들은 전부 다 바람직하지 않거나 성취가 불가능한 것이기 때문에 유일한 현실적인 대안은 포기하는 것이다.</p>
-<ul>
-<li>
-<p>즉, 어떤 종류의 지식의 발전에 제약을 가함으로써 인류의 멸종을 야기할 수도 있는 위험한 기술 공학의 개발에 제동을 걸어야 한다는 것이다.</p>
-</li>
-<li>
-<p>만일 우리가 인류라는 하나의 종으로서 무엇을 원하고, 우리가 어떤 미래로 가고 있으며, 어쨰서 그렇게 될 수밖에 없는지에 대하여 합의하게 되었다면 더 이상의 지식 발전을 포기함으로써 미래에 대한 위험을 없앨 수 있다.</p>
-</li>
-<li>
-<p>그러나 그렇게 되지 않는다면 20세기에 NBC(핵, 생물, 화학) 기술이 그러했듯이 21세기에 GNR(유전자, 나노테크놀로지, 로봇) 기술 개발이 대학교 간의, 기업 간의, 국가 간의 무기 경쟁으로 전개될 것이고, 이렇게 된다면 우리는 매우 위험한 미래에 직면하게 될 것이다.</p>
-</li>
-<li>
-<p>왜냐하면 우리는 경쟁이 한번 시작되면 그것을 멈출 수 없다는 것을 알고 있기 때문이다.</p>
-</li>
-<li>
-<p>멈출 수 없는 이유는 20세기 NBC 기술 개발이 전쟁상황이라는 특수한 상황 때문에 이루어졌었지만 GNR 기술 개발은 우리의 습관, 욕망, 경제체제, 지식에 대한 탐구욕 때문에 이루어질 것이기 때문이다.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2><a name="인류가 미래의 평화를 위하여 합의를 할만한 존재가 아니라는 것에 관하여 " href="#인류가 미래의 평화를 위하여 합의를 할만한 존재가 아니라는 것에 관하여 ">인류가 미래의 평화를 위하여 합의를 할만한 존재가 아니라는 것에 관하여 </a></h2>
-<ul>
-<li>
-<p>나는 인류가 집단적 가치, 윤리, 도덕에 의해 나아갈 길을 결정하는데 합의하길 바란다.</p>
-<ul>
-<li>
-<p>그러나 역사를 미루어 보았을 때 인류가 하나의 종으로써 하나되어 행동하는 것 같지는 않았다.</p>
-</li>
-<li>
-<p>핵 위협에 관련하여 우리는 서로에게 정직하지 않게 말했고 행동했었다.</p>
-</li>
-<li>
-<p>이것이 정치적 이유인지, 우리가 미래를 보지 않기로 선택했기 때문인지, 전쟁이라는 두려움 속에서 비합리적으로 행동했기 때문인지 나는 알 수 없지만, 이것은 전혀 좋은 징조가 아니다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>GNR, 즉 유전자공학, 나노테크놀로지, 로봇공학이라는 판도라의 상자가 열렸는데 인류는 이것에 주목하고 있지 않다.</p>
-<ul>
-<li>
-<p>이것을 상자 속으로 되돌려 놓을 수 없다.</p>
-</li>
-<li>
-<p>우라늄과 플루토늄과 달리 이것은 채굴할 필요도 정련할 필요도 없이 단지 지식을 얻고 발전시키기만 하면 된다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>인류는 아무런 계획, 제어장치가 없이 이미 너무 멀리왔기 때문에 미래를 바꾸는 것이 불가능한 것이 아닐까?</p>
-<ul>
-<li>
-<p>하지만 나는 그렇다고 믿지 않는다. 미래의 위험을 막기 위하여 지식 발전에 제동을 걸 마지막 기회가 빠른 속도로 오고 있다.</p>
-</li>
-<li>
-<p>또한 인류가 희망을 가질 수 있는 좋은 선례가 존재한다. 그것은 미국이 생물학 무기 개발을 무조건적이고 일방적으로 포기한 것이다.</p>
-</li>
-<li>
-<p>이 포기는 생물학 무기가 한번 만들어진 다음에 쉽게 복제될 수 있고 깡패국가나 테러단체에 넘어갈 수 있다는 깨달음으로부터 나왔고, 우리는 이것을 1972년 “생물무기협약” 과 1993년 “화학무기협약” 에서 구체화시켰다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>나는 오히려 1945년 핵기술을 포기해야하는 상황이 지금보다 더 단순했다고 생각한다.</p>
-<ul>
-<li>
-<p>왜냐하면 핵기술은 상업적 용도와 군사적 용도로 분리될 수 있었고 그것의 감시는 방사능 측정 등을 이용하면 매우 용이했기 때문이다.</p>
-</li>
-<li>
-<p>하지만 GNR 기술은 상업용과 군사용으로 구분하기가 애매하다.</p>
-</li>
-<li>
-<p>GNR 의 경제적 가치 때문에 국가는 그 기술들을 국가기관(군대 등)에서만 발전시키게 할 수가 없다.</p>
-<blockquote>
-<p>왜냐하면 경제 가치란 곧 국가 경쟁력이고 국가 경쟁력의 하락이란 곧 남의 나라가 내 나라를 먹을 수도 있는 상황을 의미하기 때문.</p>
-</blockquote>
-</li>
-<li>
-<p>GNR 기술의 포기를 위해서는 생화학 무기와 핵무기에 대한 감시체계와 비슷한 감시체계가 필요할 것이나 이것은 개인 프라이버시와 지식 발전에 대한 욕구와 우리 모두를 보호하기 위한 감시의 필요성 사이에 갈등을 일으킬 것이다.</p>
-</li>
-<li>
-<p>왜냐하면 GNR 기술은 오로지 지식 탐구에 의하여 발전되는 것이기 때문이다.</p>
-</li>
-<li>
-<p>이 갈등은 곧바로 감시체계를 운영하는 국가에 대한 개인의 자유의 상실로 인한 국민들의 저항을 발생시킬 것이다.</p>
-</li>
-<li>
-<p>또한 GNR 기술 발전이 오직 지식 탐구에 의해 이루어지므로 물리 공간에 대한 감시 뿐만 아니라 사이버 공간에 대한 감시도 필수불가결할 것이다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>맨허튼 계획(미국의 핵무기 개발 프로젝트)에 참여한 노벨상 수상자 한스 베티는 모든 과학자들, 학자들, 대학생들에게 이렇게 호소했다.</p>
-<p>“핵무기와 그밖의 잠재적으로 대량 파괴력을 가진 무기들의 창조, 개발, 개선, 제조 작업을 중단하고 거기서 물러나야 한다”</p>
-<ul>
-<li>즉 NBC 기술 뿐 아니라 GNR 기술, 그리고 기술적 특이점을 야기할 수 있는 인공지능 개발자들까지, 또한 그러한 기술 공학을 막론하고 인류의 멸종을 부르는 위험한 기술을 연구하는 사람들에게 각성된 의식과 개인적인 책임감이 필요하다는 것이다.</li>
-</ul>
-</li>
-</ul>
-<h2><a name="우리가 해야 할 일 " href="#우리가 해야 할 일 ">우리가 해야 할 일 </a></h2>
-<ul>
-<li>
-<p>우리는 장생불사의 꿈도 버려야 한다.</p>
-<ul>
-<li>그 꿈에는 너무나 값비싼 대가, 인류의 멸종의 위험이 뒤따르기 때문이다.</li>
-</ul>
-</li>
-<li>
-<p>우리는 어디에서 윤리적 토대를 마련해야 할까?</p>
-<ul>
-<li>
-<p>나는 달라이 라마의 『새로운 천년을 위한 윤리』 에 담겨있는 생각이 도움이 된다고 본다.</p>
-</li>
-<li>
-<p>달라이 라마의 논지는 타인에 대한 사랑과 자비심으로 삶을 살아가는 것이 가장 중요하다는 것이다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>나는 우리가 경제성장의 문화를 초월하여 우리의 창조력을 발휘할 수 있는 대안적인 통로를 찾아야 한다고 생각한다.</p>
-<ul>
-<li>
-<p>경제성장은 수백년간 축복이었지만 항상 행복은 아니었다.</p>
-</li>
-<li>
-<p>이제 우리는 기술 공학의 무분별한 성장에 따른 명백한 위험을 받아들일 것인지 선택해야만 한다.</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2><a name="커즈와일과 존 서얼과의 대화 일 년 후 " href="#커즈와일과 존 서얼과의 대화 일 년 후 ">커즈와일과 존 서얼과의 대화 일 년 후 </a></h2>
-<ul>
-<li>
-<p>나는 커즈와일과 존 서얼과의 대화를 나눈 일 년 후 희망의 징조를 보곤 했다.</p>
-<ul>
-<li>경고와 포기에 대한 목소리가 들려오고 현재의 곤경에 대하여 깊이 우려하는 사람들을 발견했다.</li>
-</ul>
-</li>
-<li>
-<p>그러나 위험을 알고 있으면서 아직 많은 사람들이 침묵을 지키고 있는 것 같다.</p>
-<ul>
-<li>
-<p>대학가에서 생명윤리학자들은 “당신이 말하는 것은 이미 오래 전부터 전문자들에 의해 이야기되었던 것이다. 당신의 논리와 당신의 우려는 케케묵은 것이다.” 라며 투덜거렸다.</p>
-</li>
-<li>
-<p>나는 많은 권위있는 학자들에 의해 이 문제가 거론되어와다는 것을 알지만, 그것이 우리에게 닥친 위험을 무시해도 좋다는 뜻이 되는가?</p>
-</li>
-</ul>
-</li>
-<li>
-<p>원자과학자들의 경험은 개인적 책임을 가져야만 한다는 것을 보여준다.</p>
-<ul>
-<li>우리도 원자과학자들처럼 언젠가부터 극복할 수 없는 문제를 만들어낼 수 있다.</li>
-</ul>
-</li>
-<li>
-<p>전문가로서 나의 일은 소프트웨어의 신뢰성을 개선하는 것이다.</p>
-<blockquote>
-<p>빌 조이는 <code>java</code>, <code>vi</code> 등의 역사적으로 이름이 남을 위대한 소프트웨어들을 만들었다.</p>
-</blockquote>
-<ul>
-<li>
-<p>나는 이 일이 세계를 좀더 안전하고 살기 좋은 장소로 만들 것이라고 믿어왔다.</p>
-</li>
-<li>
-<p>그러나 만약 그 반대라고 믿게 될 날이 온다면 나는 소프트웨어를 만드는 일을 도덕적 인간으로서 중지해야만 할 것이다.</p>
-</li>
-<li>
-<p>지금 나는 그런 날이 올지도 모른다고 생각하고 있다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>이 모든 것을 생각하며 나는 화가 나기보다 우울해진다.</p>
-<ul>
-<li>이제 내게 진보와 기술 공학 발전이란 씁쓸한 어떤 것이다.</li>
-</ul>
-</li>
-<li>
-<p>나는 지금 내가 제기했던 문제들에 관한 테크놀로지 자체에 대한 두려움이나 사랑 같은 감정이 기울어지지 않은 분위기에서 다양한 배경을 가진 사람들과 좀 더 큰 토론을 마련하여 거기에 참여하길 희망한다.</p>
-</li>
-<li>
-<p>우리는 아직 모르는 것이 많다. 우리가 성공할지, 실패할지, 테크놀로지의 희생자가 될지 아직 결정되지 않았다.</p>
-</li>
-<li>
-<p>나는 다시금 밤늦게 잠을 이루지 못하였고 지금은 거의 새벽 6시이다. 나는 좀 더 나은 해답을 찾아보려고 노력하고 있다.</p>
+<p>프로그래밍 언어를 자동 번역해주는 프로그램을 번역기compiler 라고 한다.</p>
 </li>
 </ul>
 <blockquote>
-<p>기술이란 변환과 대체로써 새로운 창조물을 만드는 것인데, 컴퓨터 공학이 유전자 공학과 나노테크노로지와 결합될 때 새로운 지평이 열린다는 것을 알게 되었다. 전자 신호가 유전자공학의 생명체 신호와 연결될 수도 있고, 나노테크놀로지로 그 핵신 연산들이 분자와 원자 단위에서 이루어져서 믿을 수 없을 만큼 빨라진다는…</p>
+<p>이것으로 초코드체계의 가능성을 엿볼 수 있다.</p>
 </blockquote>
 <blockquote>
-<p>이 요약글을 한번 더 요약하고 정제해서 GBC 에 전문을 포함시키자. 그리고 내 생각을 좀 더 첨가하자. 기술 공학이 발전하는 것이란 어떤 것인지, 그러므로 우리는 왜 인공지능을 연구해야 하는지. 기술 공학이 인류를 대체하는 과정을 그래프로, 자세한 예시로 보여주자.</p>
+<p>튜링-완전한 프로그래밍 언어는 항상 서로 번역 가능하다는 말이구나.</p>
 </blockquote>
-<p>(철학의 역사)</p>
-<p>(기술의 역사)</p>
-<p>(컴퓨터 역사)</p>
+</li>
+<li>
+<p>자동번역은 다음 두 원리를 사용한다.</p>
+<ol>
+<li>
+<p>부품에서 전체로(조립식compositional) : 전체 번역 결과가 부분 번역 결과로 만들어진다는 뜻이다.</p>
+<ul>
+<li>
+<p>이때 부품 조립 방법은 유한개이다. 불 논리에서 명제를 “그리고”, “또는”, “아닌” 으로 조립했듯이 프로그램도 부품의 조립이며 그 조립 규칙은 유한하다.</p>
+</li>
+<li>
+<p>이건 마치 공리와 유한 개의 추론규칙으로 정리를 연역해내는 과정과 같다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>불변성질invariant 유지하기 : 부분들의 번역 결과가 항상 유지하는 성질이 있다는 것이다.</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>이 두 원리가 서로 의존하며 자동번역을 해낸다. 부분을 번역한 결과는 불변하는 성질이 유지되고, 그 불변성 덕분에 전체 번역 결과를 속편하게 조립할 수 있게 된다.</p>
+</li>
+<li>
+<p>예시</p>
+<p>출발어source language 와 도착어target language 를 정하여 예를 들어보자. 출발어는 정수식이다. 정수 하나 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">n</span></span></span></span></eq> 도 정수식이 될 수 있고 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo></mrow><annotation encoding="application/x-tex">-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">−</span></span></span></span></eq> 를 붙힌 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">-n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord mathdefault">n</span></span></span></span></eq> 도 정수식이 될 수 있고 두 정수 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo separator="true">,</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n, m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">n</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span></span></span></span></eq> 를 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>+</mo></mrow><annotation encoding="application/x-tex">+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">+</span></span></span></span></eq> 로 묶은 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>+</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n+m</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">m</span></span></span></span></eq> 도 정수식이 될 수 있다.</p>
+<p>도착어는 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span></eq> 가지 명령 <code>push n</code>, <code>add</code>, <code>minus</code> 로 구성된다. 이 명령이 일렬로 늘어서있는 것이 문장이 된다. 이 명령들은 스택 구조의 메모리의 데이터를 다루며 그 의미는 다음과 같다. <code>push n</code> 은 스택에 <code>n</code> 을 쌓는다. <code>add</code> 는 스택 맨 위에서 두개의 데이터를 꺼내서 더하고 더한 결과를 다시 넣는다. <code>minus</code> 는 스택 맨 위의 데이터의 부호를 바꾸고 다시 넣는다.</p>
+<p>출발어에서 도착어로 번역하는 규칙을 정할 수 있다.</p>
+<p>정수식의 번역 결과가 유지하는 불변성질은 이러하다.</p>
+<blockquote>
+<p>p149~152 이해 안됨</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>이렇게 튜링-완전한 프로그래밍 언어 사이에는 자동 번역이 가능하다.</p>
+<ul>
+<li>이 자동 번역 덕분에 상위 언어를 사용하여 소프트웨어를 조립하면 자동 번역기가 기계어로 번역해주고 컴퓨터가 이것을 실행하게 된다.</li>
+</ul>
+</li>
+</ul>
+<h2>실행</h2>
+<ul>
+<li>
+<p>컴퓨터는 소프트웨어를 자동 실행하는데 이것을 해석실행interpretation 이라고 한다.</p>
+<ul>
+<li>
+<p>왜냐하면 컴퓨터(보편만능 튜링기계) 메모리에 표현된 튜링기계(소프트웨어) 기호들의 의미를 해석해서 그 튜링기계의 작동을 그대로 흉내내기 때문이다.</p>
+</li>
+<li>
+<p>즉 컴퓨터는 번역사슬 맨 밑바닥 언어, 즉 기계어의 실행기이다.</p>
+</li>
+<li>
+<p>상위 언어로 짠 소프트웨어가 기계어로 번역되면 컴퓨터가 실행할 수 있다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>실행기가 반드시 하드웨어일 필요는 없다. 언어의 실행기를 소프트웨어로도 만들 수 있다.</p>
+<blockquote>
+<p>파이썬, 자바 처럼</p>
+</blockquote>
+<ul>
+<li>이 실행기는 소프트웨어를 번역 없이 해석실행한다. 단, 이 실행기는 소프트웨어 이므로 기계어로 번역되어 컴퓨터 메모리에 실려있어야 한다.</li>
+</ul>
+</li>
+</ul>
+<h2>또 다른 방식의 프로그래밍 언어</h2>
+<ul>
+<li>
+<p>기계적으로 계산한다는 것, 즉 컴퓨터로 계산한다는 것의 정의를 어떻게 하느냐에 따라 다른 방식의 언어가 만들어진다.</p>
+</li>
+<li>
+<p>튜링은 기계적으로 계산 가능한 것을 정의하며 테이프를 읽고 규칙표를 따라 테이프의 문자를 읽고 쓰는 튜링기계를 제시했다.</p>
+</li>
+<li>
+<p>알론조 처치는 기계적으로 계산 가능한 것을 람다 계산법이라는 개념으로 정의했다.</p>
+<ul>
+<li>이 람다 계산법과 튜링 기계의 표현력은 똑같다. 즉 모든 튜링기계는 람다 계산법으로 계산할 수 있고 반대도 그렇다.</li>
+</ul>
+</li>
+<li>
+<p>튜링이 정의한 기계적 계산인 튜링기계로부터 상위 언어로 올라온 언어들은 기계를 염두해둔 언어가 되었고,</p>
+<p>처치가 정의한 기계적 계산인 람다 계산법으로부터 상위 언어로 올라온 언어들은 기계는 없고 값들이 함수를 통과하며 새 값으로 만들어지는 과정이 주를 이룬다.</p>
+<ul>
+<li>
+<p>이처럼 기계 중심 프로그래밍 언어에는 <strong>C</strong>, <strong>Java</strong>, <strong>C++</strong>, <strong>C#</strong>, <strong>Javascript</strong> 등이 있고</p>
+<p>함수 중심 프로그래밍 언어에는 <strong>Haskell</strong>, <strong>ML</strong>, <strong>F#</strong>, <strong>Clojure</strong>, <strong>Lisp</strong> 등이 있으며</p>
+<p>둘 다 지원하는 언어는 <strong>ML</strong>, <strong>F#</strong>, <strong>C++11</strong>, <strong>Python</strong>, <strong>Scala</strong>, <strong>Clojure</strong>, <strong>Lisp</strong> 등이 있다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>이 두 패러다임의 언어 중 무엇이 더 좋냐고 논쟁하는 건 무의미하다.</p>
+<ul>
+<li>
+<p>왜냐하면 각각의 언어마다 적절하게 사용되는 상황이 따로 있기 때문이다.</p>
+</li>
+<li>
+<p>육상 선수가 더 낫냐, 수영 선수가 더 낫냐고 논쟁하는 격이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>이 두 패러다임의 언어가 프로그래밍 언어의 두 가지 시초이지만, 튜링도 처치도 프로그래밍 언어의 원시 모델을 만들려는 것이 아니라 단지 기계적인 자동계산에 대한 각자의 정의를 내린 것일 뿐이었다.</p>
+<ul>
+<li>
+<p>이 둘 모두 <strong>“기계적인 계산, 자연적 대상을 기술로 대체하여 자동화하는 것이란 이것이다!”</strong> 라고 정의한 것이고,</p>
+<p>이는 곧 <strong>“이런 것이 컴퓨터 프로그램(튜링기계) 를 표현하는 것의 전부이다!”</strong> 라고 선언한 것이고,</p>
+<p>결국 프로그래밍 언어를 소개한 것이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>튜링 기계의 패러다임</h3>
+<ul>
+<li>
+<p>튜링기계의 프로그래밍 언어 패러다임에서 프로그램이란 기계에게 전달하는 일련의 명령어이다.</p>
+<ul>
+<li>즉, 프로그램(튜링기계)은 기계의 현재 상태에서 다음 상태를 뭐로 할지, 메모리에 뭘 쓸지 명령하는 것에 불과하다.</li>
+</ul>
+<h3>&gt; 완전 엄청나게 단순하게 말하면 “이것이면 저것을 하라” 이고 좀 더 구체적으로 말하면 “이것일 때 현재 상태를 다음 상태로 바꾸고, 테이프에 이것을 써라” 가 되는 것이구나. 그리고 이것을 더욱 구체적으로 말하면 레지스터, 메모리, 기계어, 가상 메모리 시스템, 캐시메모리 등의 설명이 들어가야 하는 것이고.</h3>
+<ul>
+<li>
+<p>이 패러다임에서는 프로그램의 일련의 명령어대로만 실행하면 되는 것이다. 즉, 언어란 기계에 전달하는 명령어들을 표현하는 언어인 것이다.</p>
+</li>
+<li>
+<p>그리고 그 명령어들이란 기계의 상태(레지스터, 메모리, 드라이브)를 변경시키는 명령에 불과하다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>람다 계산법의 패러다임</h3>
+<ul>
+<li>
+<p>하지만 람다 계산법 패러다임에서 프로그램은 기계의 상태를 변화시키는 일련의 명령어가 아니다.</p>
+<ul>
+<li>
+<p>프로그램은 단지 함수와 함수 사이를 통과하는 데이터들이다.</p>
+</li>
+<li>
+<p>마치 단지 수학 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">1+2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></eq> 나 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f(n) = n ^{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></eq> 에 대하여 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mn>10</mn></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\sum_{n=1}^{10}f(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.253718em;vertical-align:-0.29971000000000003em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.954008em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span></eq> 을 계산하는 것처럼 수식의 계산에 불과하다.</p>
+</li>
+<li>
+<p>따라서 이 관점에서는 기계와 기계의 상태를 변화시키는 작용이 더 이상 보이지 않는다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>람다 계산법에서의 프로그래밍 언어에서 람다식은 다음 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span></eq> 가지 방식에 불과하다.</p>
+<ol>
+<li>
+<p><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span></eq> (수)</p>
+</li>
+<li>
+<p><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mi>x</mi><mi mathvariant="normal">.</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">\lambda x.E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span><span class="mord mathdefault">x</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span></eq> (<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span></eq> 는 람다식, <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span></eq> 는 수)</p>
+</li>
+<li>
+<p><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>1</mn></msub><msub><mi>E</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">E_1 E_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></eq> (나란히 있는 람다식)</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>이러한 람다식을 계산하는 방법은 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mi>x</mi><mi mathvariant="normal">.</mi><mi>E</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">\lambda x.E y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">λ</span><span class="mord mathdefault">x</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span></eq> 에서 람다식 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span></span></span></span></eq> 에 포함된 모든 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span></eq> 를 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi></mrow><annotation encoding="application/x-tex">y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span></eq> 로 바꾸고 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\lambda x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">λ</span><span class="mord mathdefault">x</span></span></span></span></eq> 를 없애는 것이다.</p>
+</li>
+<li>
+<p><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></eq> 이나 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></eq> 유형이 되면 더 이상 대입할 입력이 없으므로 그만 둔다. 오직 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span></eq> 유형에서만 대입이 일어날 수 있기 때문이다.</p>
+<ul>
+<li>
+<p>예시</p>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>λ</mi><mi>x</mi><mi mathvariant="normal">.</mi><mo stretchy="false">(</mo><mi>λ</mi><mi>y</mi><mi mathvariant="normal">.</mi><mi>x</mi><mi>y</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mi>z</mi><mo>→</mo><mi>λ</mi><mi>y</mi><mi mathvariant="normal">.</mi><mi>z</mi><mi>y</mi></mrow><annotation encoding="application/x-tex"> (\lambda x.(\lambda y.xy))z \to  \lambda y.zy </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">λ</span><span class="mord mathdefault">x</span><span class="mord">.</span><span class="mopen">(</span><span class="mord mathdefault">λ</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord">.</span><span class="mord mathdefault">x</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mclose">)</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">λ</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span></span></eqn></section></li>
+</ul>
+</li>
+<li>
+<p>이처럼 간단한 람다 계산법은 튜링-완전하여 컴퓨터로 실행할 수 있는 모~든 것을 다 표현할 수 있다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>이 순수 람다 계산법으로 자연수, 사칙연산, 참과 거짓, “그리고”, “또는”, “아닌” 을 표현할 수 있다.</p>
+</li>
+</ul>
+<h3>람다의 패러다임</h3>
+<h3><strong>그러면 튜링-완전한 언어들이 서로 번역가능하다면 왜 어셈블리어를 상위 언어로 자동으로 편하게 번역해줄 수 없는가? 현실적인 어려움이 있는 걸까? 초 코드 체계를 부르짖던 내가 그 초 코드 체계의 후보가 되는 언어를 찾았지 않은가. 그것은 튜링기계의 작동규칙표이다. 이것은 너무나도 원시적이어서 인간이 직접 사용하기가 힘들지만, 너무나도 원시적인 형태를 지닌 탓에 모든 튜링-완전한 프로그래밍언어가 격하될 수 있고, 다시 그 프로그래밍 언어로 격상될 수 있다.</strong></h3>
+<h3><strong>언어들을 어셈블리어로도 분해하기가 쉽지 않았지만, 튜링 기계의 작동규칙표로 분해한다면 완전 거의 뭐 먼지 수준으로 분해하는 것이 될 것이다. 왜냐하면 덧셈같은 기본적인 연산조차 튜링기계 연산규칙표로 표현하면 매우 복잡하기 때문이다. 하지만 이로써 얻을 수 있는 효용은 모든 프로그래밍 언어를 완전하게 더 이상 쪼갤 수 없는 수준으로 쪼갤 수 있다는 것이다. 이 밑바닥에 닿으면 뭐든지 할 수 있다. 어떤 물질로도 변형될 수 있는 끈이론의 끈처럼, 더 이상 쪼갤 수 없는 기계적 계산의 본질에 대한 정의의 가장 원초적이고 원시적 형태로 프로그래밍 언어를 분해해버리는 것이다. 이 튜링기계 작동규칙표에 비하면 어셈블리어도 한참 상위 언어이다! 그러므로 심지어 어셈블리어들 간의 번역도 가능할 것이다. 즉 아키텍쳐가 다른 언어일지라도 튜링-완전하므로 놀랍게도 번역이 가능하다. 아키텍쳐가 다른 언어가 번역이 가능한 놀라운 상황에서 다른 프로그래밍 언어를 또 다른 프로그래밍 언어로 번역하는 쉬운일은 당연히 가능할것이다.</strong></h3>
+<h1>프로그래밍 언어와 논리</h1>
+<ul>
+<li>
+<p>그런데 람다 계산법은 프로그래밍에 관한 놀라운 사실을 밝혀주었다.</p>
+<ul>
+<li>
+<p>그것은 프로그래밍 언어와 논리는 정확히 같은 것이다는 사실이다.</p>
+</li>
+<li>
+<p>이는 프로그래밍 언어로 짠 프로그램이 논리적 증명과 일대일로 정확히 대응된다는 것이다.</p>
+</li>
+<li>
+<p>지금까지 프로그래밍을 해왔다면 수학에서의 논리적 증명을 해온 것이고, 수학에서의 논리적 증명을 해왔다면 프로그래밍을 해온 것이다.</p>
+</li>
+</ul>
+<blockquote>
+<p>프로그램 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇔</span></span></span></span></eq> 증명 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>…</mo></mrow><annotation encoding="application/x-tex">\dots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.12em;vertical-align:0em;"></span><span class="minner">…</span></span></span></span></eq> 취약점 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇔</span></span></span></span></eq> 허술한 증명 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>…</mo></mrow><annotation encoding="application/x-tex">\dots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.12em;vertical-align:0em;"></span><span class="minner">…</span></span></span></span></eq> 기계적 계산을 정의한 프로그래밍 언어로부터 취약점 존재를 유일하게 결정할 수 있는 증명법이 있을까?</p>
+</blockquote>
+</li>
+<li>
+<p>유클리드의 원론과 러셀의 수학원리와 힐베르트 프로그램에서 알아보았듯, 수학에서의 논리적 증명이란 공리에 추론규칙을 적용하여 정리를 연역하는 과정이었다.</p>
+<ul>
+<li>프로그램도 이 수학적 증명에 정확히 대응되어 다음과 같이 이처럼 논리적으로 연역하는 과정의 연속이다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">증명하기</th>
+<th style="text-align:center">프로그램짜기</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">공리로부터 정리를 연역하는 과정</td>
+<td style="text-align:center">기존의 데이터로부터 새로운 데이터를 만드는 과정</td>
+</tr>
+<tr>
+<td style="text-align:center">참 또는 참이라고 가정한 것에서 시작함</td>
+<td style="text-align:center">기초적 데이터(프로그래밍 언어가 기본적으로 제공하는 정수, 문자, 참, 거짓 등)에서 시작함.</td>
+</tr>
+<tr>
+<td style="text-align:center">사실을 기반으로 새로운 정리를 연역함</td>
+<td style="text-align:center">이미 있는 데이터로부터 새로운 데이터를 만들어감</td>
+</tr>
+</tbody>
+</table>
+<h3>아 이것은 형식적 연역체계에서 형식적 추론 규칙으로 연역될 수 있는 증명법을 말하고 있구나. 그러므로 프로그래밍은 형식체계 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">PM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span></span></span></span></eq> 에서 형식적 추론규칙으로 통해 무의미한 기호를 조작하는 과정에 불과하구나. 또한 그렇기에 불완전성 정리 밑에 있는거고. 즉, 모든 진리를 만들어낼 수 없다는 것, 문제를 풀 수 없다는 것.</h3>
+</li>
+</ul>
+<h2>논리 추론 예시</h2>
+<ul>
+<li>프로그래밍이 어떻게 수학에서의 논리적 증명과 대응되는지 살펴보기 전에 대표적인 논리 추론 유형을 몇 가지 살펴보자.</li>
+</ul>
+<ol>
+<li>
+<p><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 가 사실이고 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 가 사실이면 &quot;<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 그리고 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq>&quot; 도 사실이다.</p>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>→</mo><mi>A</mi><mo>∧</mo><mi>B</mi></mrow><annotation encoding="application/x-tex"> (A, B) \to A \land B </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></span></eqn></section></li>
+<li>
+<p>&quot;<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 그리고 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq>&quot; 가 사실이면 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 도 사실이고 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 도 사실이다.</p>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∧</mo><mi>B</mi><mo>→</mo><mi>A</mi></mrow><annotation encoding="application/x-tex"> A \land B \to A </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></span></eqn></section><section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∧</mo><mi>B</mi><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex"> A \land B \to B </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></span></eqn></section></li>
+<li>
+<p><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 가 사실이라고 가정하에 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 가 사실이면 &quot;<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 이면 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq>&quot; 도 사실이다.</p>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover><mo>…</mo><mi>B</mi><mo>→</mo><mi>A</mi><mo>⇒</mo><mi>B</mi></mrow><annotation encoding="application/x-tex"> \overline{A} \dots B \to A \Rightarrow B </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">A</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></span></eqn></section><ul>
+<li>가정한 것에는 윗줄을 긋는다.</li>
+</ul>
+</li>
+<li>
+<p>&quot;<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 이면 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq>&quot; 가 사실이고 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 가 사실이면 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 도 사실이다.</p>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>⇒</mo><mi>B</mi><mo separator="true">,</mo><mi>A</mi><mo stretchy="false">)</mo><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex"> (A \Rightarrow B, A) \to B </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></span></eqn></section></li>
+<li>
+<p><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 가 사실이면 임의의 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 에 대한 &quot;<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 또는 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq>&quot; 도 사실이고 &quot;<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 또는 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq>&quot; 도 사실이다.</p>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>→</mo><mi>A</mi><mo>∨</mo><mi>B</mi></mrow><annotation encoding="application/x-tex"> A \to A \lor B </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></span></eqn></section><section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>→</mo><mi>B</mi><mo>∨</mo><mi>A</mi></mrow><annotation encoding="application/x-tex"> A \to B \lor A </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></span></eqn></section></li>
+<li>
+<p><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 또는 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 가 사실이고 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 가 사실이라는 가정하에 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span></eq> 가 사실이고 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 가 사실이라는 가정하에 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span></eq> 가 사실이면 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span></eq> 는 사실이다.</p>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∨</mo><mi>B</mi><mo separator="true">,</mo><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover><mo>…</mo><mi>C</mi><mo separator="true">,</mo><mover accent="true"><mi>B</mi><mo stretchy="true">‾</mo></mover><mo>…</mo><mi>C</mi><mo stretchy="false">)</mo><mo>→</mo><mi>C</mi></mrow><annotation encoding="application/x-tex"> (A \lor B, \overline{A} \dots C, \overline{B} \dots C) \to C </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.13333em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">A</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span></span></eqn></section></li>
+</ol>
+<ul>
+<li>
+<p>이와 같은 논리 추론 규칙들로 무수히 많은 새로운 정리를 연역해낼 수 있다.</p>
+<ul>
+<li>
+<p>가령 두 개의 전제</p>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo separator="true">,</mo><mo stretchy="false">(</mo><mi>A</mi><mo>⇒</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><mi>A</mi><mo>⇒</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex"> A, (A \Rightarrow B)\land (A \Rightarrow C) </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mclose">)</span></span></span></span></span></eqn></section><p>로부터</p>
+<section><eqn><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>⇒</mo><mi>B</mi><mo stretchy="false">)</mo><mo>∧</mo><mo stretchy="false">(</mo><mi>A</mi><mo>⇒</mo><mi>C</mi><mo stretchy="false">)</mo><mo>⇒</mo><mo stretchy="false">(</mo><mi>A</mi><mo>⇒</mo><mo stretchy="false">(</mo><mi>B</mi><mo>∧</mo><mi>C</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex"> (A \Rightarrow B) \land (A \Rightarrow C) \Rightarrow (A \Rightarrow (B \land C)) </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mclose">)</span><span class="mclose">)</span></span></span></span></span></eqn></section><p>를 이끌어낼 수 있다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>그러므로 설령 멜트다운 취약점이 하드웨어 상의 캐시와 비순차 실행으로 발생했다 ㄷ하더라도, 그 하드웨어 또한 튜링 기계이므로 모~든 컴퓨터와 관련 기기들을 튜링기계로 환원한다. 그런 다음 취약점이라고 일컬어지는 튜링 기계의 형태를 수집한 다음에 공통적으로 나타나는 특징을 추출한다. 그리고 왜 취약점이라고 그 튜링기계가 결정되었는지 확인한다.</h3>
+<h2>커리-하워드 동치 (논리적 증명과 정확히 대응되는 프로그래밍)</h2>
+<ul>
+<li>위에서 살펴본 논리식(<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq>, <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq>, <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∧</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \land B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 등) 을 컴퓨터 프로그램에서 프로그램이 만들어 내는 데이터의 종류로 대응시키면 수학에서의 논리적 증명이 프로그래밍과 정확히 대응된다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">유형</th>
+<th style="text-align:center">논리추론</th>
+<th style="text-align:center">프로그래밍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></eq></td>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">)</mo><mo>→</mo><mi>A</mi><mo>∧</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">(A, B) \to A \land B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq></td>
+<td style="text-align:center">여러 데이터를 하나로 결합하는 것</td>
+</tr>
+<tr>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></eq></td>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∧</mo><mi>B</mi><mo>→</mo><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">A \land B \to (A,B)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∧</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mclose">)</span></span></span></span></eq></td>
+<td style="text-align:center">하나로 결합된 데이터를 사용하는 것</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>유형 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn></mrow><annotation encoding="application/x-tex">1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span></eq></p>
+<ul>
+<li>
+<p>예시</p>
+<p>문자열 <code>&quot;abc&quot;</code> 와 정수 <code>10</code> 을 튜플 <code>(&quot;abc&quot;, 10)</code> 로 결합한다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>유형 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></eq></p>
+<ul>
+<li>
+<p>예시</p>
+<p>튜플 <code>t = (&quot;abc&quot;, 10)</code> 에서 <code>t[0]</code> 로 문자열<code>&quot;abc&quot;</code> 를 꺼낸다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">유형</th>
+<th style="text-align:center">논리추론</th>
+<th style="text-align:center">프로그래밍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span></eq></td>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover><mo>…</mo><mi>B</mi><mo>→</mo><mi>A</mi><mo>⇒</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">\overline{A} \dots B \to A \Rightarrow B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8833300000000001em;vertical-align:0em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">A</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq></td>
+<td style="text-align:center">함수를 정의하는 것</td>
+</tr>
+<tr>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span></eq></td>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>⇒</mo><mi>B</mi><mo separator="true">,</mo><mi>A</mi><mo stretchy="false">)</mo><mo>→</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">(A \Rightarrow B, A) \to B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">⇒</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq></td>
+<td style="text-align:center">함수를 사용하는 것</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>유형 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span></eq></p>
+<ul>
+<li>
+<p>인자(<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 데이터) 가 주어지면 그것으로 새로운 데이터(<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 데이터)를 만드는 함수이다.</p>
+</li>
+<li>
+<p>예시</p>
+<p>함수 <code>pair(x) = (x-1, x+1)</code> 는 정수 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">x</span></span></span></span></eq>(<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq> 데이터) 로 튜플(<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 데이터) 를 만들도록 프로그래밍 되었다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>유형 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span></eq></p>
+<ul>
+<li>
+<p><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq>데이터를 주면 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq>데이터를 만드는 함수가 있을 때 이 함수에 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq>데이터를 주고 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq>데이터를 만드는 것이다.</p>
+</li>
+<li>
+<p>예시</p>
+<p>함수 <code>pair</code> 에 정수 <code>3</code> 을 대입하여 <code>pair(3)</code>, 즉 <code>(2, 4)</code> 라는 데이터를 만든다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">유형</th>
+<th style="text-align:center">논리추론</th>
+<th style="text-align:center">프로그래밍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span></eq></td>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>→</mo><mo stretchy="false">(</mo><mi>A</mi><mo>∨</mo><mi>B</mi><mo separator="true">,</mo><mi>B</mi><mo>∨</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">A \to (A \lor B, B \lor A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">A</span><span class="mclose">)</span></span></span></span></eq></td>
+<td style="text-align:center">프로그램에서 데이터를 추상화시키는 것.</td>
+</tr>
+<tr>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span></eq></td>
+<td style="text-align:center"><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>∨</mo><mi>B</mi><mo separator="true">,</mo><mover accent="true"><mi>A</mi><mo stretchy="true">‾</mo></mover><mo>…</mo><mi>C</mi><mo separator="true">,</mo><mover accent="true"><mi>B</mi><mo stretchy="true">‾</mo></mover><mo>…</mo><mi>C</mi><mo stretchy="false">)</mo><mo>→</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">(A \lor B, \overline{A} \dots C, \overline{B} \dots C) \to C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.13333em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">A</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord overline"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8833300000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span><span style="top:-3.80333em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span></eq></td>
+<td style="text-align:center">프로그램에서 추상화된 데이터를 사용하는 것.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>유형 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn></mrow><annotation encoding="application/x-tex">5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span></eq></p>
+<ul>
+<li>
+<p>예시</p>
+<p>사과(<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq>데이터) 가 있을 때 사과를 그것이 배(<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 데이터)와 함께 있을 때 추상적으로 표현되는 과일(<eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∨</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \lor B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq>)로 추상화 시킨다. 그래서 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∨</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \lor B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 속에는 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq>데이터 혹은 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq>데이터 하나만 존재한다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>유형 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn></mrow><annotation encoding="application/x-tex">6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span></eq></p>
+<ul>
+<li>
+<p>예시</p>
+<p><eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∨</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \lor B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 라고 추상화된 데이터가 있을 때 이것이 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></eq>데이터일 경우 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span></eq>데이터를 만들고 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq>데이터일 경우 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span></eq>데이터를 만드는 프로그램이 있다면, 이 프로그램으로 추상화된 데이터 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∨</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A \lor B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span></eq> 를 받아서 각 경우에 따라 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span></eq>데이터를 만들 수 있다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>이러한 방식으로 프로그래밍 언어가 제공하는 모든 것이 논리적 추론과 정확히 일대일 대응된다.</p>
+<ul>
+<li>
+<p>코드 한 줄이 형식체계의 형식적 증명의 한 줄이었고, 증명의 한 줄은 프로그램 한 줄이었던 것이다.</p>
+</li>
+<li>
+<p>이 대응관계를 하스켈 커리와 윌리엄 하워드가 밝형내서 커리-하워드 동형Curry-Howard isomorphism 또는 커리-하워드 대응Curry-Howard correspondence 이라고 한다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>커리-하워드 동치의 의미</h2>
+<ul>
+<li>
+<p>이 대응관계가 튜링기계 패러다임이 아닌 람다 계산법 패러다임의 프로그래밍 언어에서 밝혀진 것은</p>
+<p>논리추론의 관점으로 프로그래밍 언어를 바라보았을 때 람다 패러다임의 프로그램들이 논리적 증명과 대응되는 모습을 더욱 잘 보여주었기 때문이다.</p>
+<ul>
+<li>
+<p>반면 튜링기계 패러다임의 프로그램들과 논리적 증명을 대응했을 때는 그 대응관계를 쉽게 알아볼 수 없었다.</p>
+</li>
+<li>
+<p>기계에 전달하는 일련의 명령어들은 논리적 증명과 거리가 멀어보이기 때문이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>이 대응관계를 다음과 같이 정리할 수 있다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">논리</th>
+<th style="text-align:center">프로그래밍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">증명</td>
+<td style="text-align:center">프로그램</td>
+</tr>
+<tr>
+<td style="text-align:center">증명이란 어떤 형식문을 연역하는 과정이다.</td>
+<td style="text-align:center">프로그램은 어떤 데이터를 만드는 과정이다.</td>
+</tr>
+<tr>
+<td style="text-align:center">증명에는 결론에 해당하는 참인 형식문이 있다.</td>
+<td style="text-align:center">프로그램에는 최종적으로 만드는 데이터의 종류가 있다.</td>
+</tr>
+<tr>
+<td style="text-align:center">증명한 형식문(정리)</td>
+<td style="text-align:center">프로그램의 타입type</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>이 대응관계는 프로그래머에게 실질적인 도움을 주었다.</p>
+<ul>
+<li>
+<p>논리적 증명 과정에서 중요한 것은 올바른 식을 쓰고 올바르게 추론규칙을 적용하여 올바른 증명을 하는 것이다.</p>
+</li>
+<li>
+<p>소프트웨어 제작도 이것과 똑같이 올바른 코드를 작성해야 올바르게 작동하고 실수가 없다.</p>
+</li>
+<li>
+<p>프로그래머는 프로그램을 짜기 전에 프로그램을 설계할 때 제대로 설계했는지 몰라서 불안하고, 실제로 프로그램을 짠 후에도 제대로 실행할지 몰라서 불안하다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>그런데 프로그램을 논리적 증명에 대응시킴으로써 이 불안함을 해소해줄 수 있다.</p>
+<ul>
+<li>이 기술의 개발은 아직도 현재진행형이다.</li>
+</ul>
+</li>
+</ul>
+<h3>프로그램 설계 단계</h3>
+<ul>
+<li>p186 ~ p202</li>
+</ul>
 
 </article></body></html>

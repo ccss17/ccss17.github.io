@@ -199,15 +199,17 @@
 
 ##### - [생각](https://ccss17.github.io/all2.html)
 
-##### - [수학 역사](https://ccss17.github.io/all3.html)
+##### - [수학 역사 (고대 그리스~19세기)](https://ccss17.github.io/all3.html)
 
-##### - [수학 역사2(수학의 확실성)](https://ccss17.github.io/all4.html)
+##### - [수학 역사2 (수학의 확실성)](https://ccss17.github.io/all4.html)
 
 ##### - [컴퓨터 역사 (괴델의 불완전성 정리)](https://ccss17.github.io/all5.html)
 
-##### - [컴퓨터 역사2 (튜링의 불완전성 정리)](https://ccss17.github.io/all6.html)
+##### - [컴퓨터 역사2 (튜링의 불완전성 증명)](https://ccss17.github.io/all6.html)
 
 ##### - [컴퓨터 역사3 (튜링 기계의 구현)](https://ccss17.github.io/all7.html)
 
-##### - [컴퓨터 역사4 (초지능)](https://ccss17.github.io/all8.html)
+##### - [컴퓨터 역사4 (소프트웨어와 알고리즘)](https://ccss17.github.io/all8.html)
+
+##### - [컴퓨터 역사5 (초지능)](https://ccss17.github.io/all9.html)
 

@@ -25,30 +25,12 @@ def sections(title, file, get):
     
   ###### [{get('memos/'+file+'.md')}](https://ccss17.github.io/{file}.html)'''
 
-def update():
-    theorems = f'''\
-### 생각 메모
-
-##### - [기초](https://ccss17.github.io/all.html)
-
-##### - [생각](https://ccss17.github.io/all2.html)
-
-##### - [수학 역사](https://ccss17.github.io/all3.html)
-
-##### - [수학 역사2(수학의 확실성)](https://ccss17.github.io/all4.html)
-
-##### - [컴퓨터 역사 (괴델의 불완전성 정리)](https://ccss17.github.io/all5.html)
-
-##### - [컴퓨터 역사2 (튜링의 불완전성 정리)](https://ccss17.github.io/all6.html)
-
-##### - [컴퓨터 역사3 (튜링 기계의 구현)](https://ccss17.github.io/all7.html)
-
-##### - [컴퓨터 역사4 (초지능)](https://ccss17.github.io/all8.html)
-
-'''
-# {sections('기초적인 것에 관련된 메모', 'all', get_theorem)}
-# {sections('생각에 관련된 메모', 'all2', get_theorem)}
-# {sections('역사에 관련된 메모', 'all3', get_theorem)}
+def update(think):
+    theorems = []
+    theorems.append('### 생각 메모')
+    for k, v in think.items():
+        theorems.append(f'##### - [{k}](https://ccss17.github.io/{v}.html)')
+    theorems = '\n\n'.join(theorems) + '\n\n'
     math_sections = f'''\
 {START_SECTION}
 
@@ -185,7 +167,7 @@ def linkable():
         link(fname)
     
 if __name__ == '__main__':
-    dic = {
+    think = {
         '기초' : 'all',
         '생각' : 'all2',
         '수학 역사 (고대 그리스~19세기)' : 'all3',
@@ -193,9 +175,9 @@ if __name__ == '__main__':
         '컴퓨터 역사 (괴델의 불완전성 정리)' : 'all5',
         '컴퓨터 역사2 (튜링의 불완전성 증명)' : 'all6',
         '컴퓨터 역사3 (튜링 기계의 구현)' : 'all7',
-        '컴퓨터 역사4 (초지능)' : 'all8'
+        '컴퓨터 역사4 (소프트웨어와 알고리즘)' : 'all8',
+        '컴퓨터 역사5 (초지능)' : 'all9'
     }
-    update_subsection('생각 메모', dic)
-    update()
+    update_subsection('생각 메모', think)
+    update(think)
     linkable()
-    print('업데이트됨')
