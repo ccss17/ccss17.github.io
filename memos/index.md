@@ -195,10 +195,6 @@
 
 ### <a name="생각 메모" href="#생각 메모">생각 메모</a>
 
-##### - [기초](https://ccss17.github.io/all.html)
-
-##### - [생각](https://ccss17.github.io/all2.html)
-
 ##### - [수학 역사 (고대 그리스~19세기)](https://ccss17.github.io/all3.html)
 
 ##### - [수학 역사2 (수학의 확실성)](https://ccss17.github.io/all4.html)
