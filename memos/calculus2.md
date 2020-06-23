@@ -482,7 +482,7 @@ $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 정수일 때, $y' = 
 
   도함수의 정의에 의하여 
 
-  $$ \{f(g(x))\}' = \lim_{h \to 0} \frac{f(g(x+h)-f(g(x)))}{h} $$
+  $$ \{f(g(x))\}' = \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{h} $$
 
   이다. 여기에서
 
@@ -650,7 +650,7 @@ $$ \{\frac{1}{g(x)}\}' = - \frac{g'(x)}{\{g(x)\}^{2}} $$
 
   함수 $f(x)$ 가 미분가능하고 $f(x) \neq 0$ 일 때 $y = \frac{1}{f(x)}$ 의 도함수는 도함수의 정의에 의하여 
 
-    $$ y' = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = \lim_{h \to 0} \frac{\frac{1}{f(x+h)} - \frac{1}{f(x)}}{h} = \lim_{h \to 0} \frac{-\frac{f(x+h)-f(x)}{f(x+h)f(x)}}{\frac{h}{1}} $$
+    $$ y' = \lim_{h \to 0} \frac{\frac{1}{f(x+h)} - \frac{1}{f(x)}}{h} = \lim_{h \to 0} \frac{-\frac{f(x+h)-f(x)}{f(x+h)f(x)}}{\frac{h}{1}} $$
 
     $$ = -\lim_{h \to 0} \frac{f(x+h)-f(x)}{hf(x+h)f(x)} = - \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} \circ \frac{1}{f(x+h)f(x)} $$
 
