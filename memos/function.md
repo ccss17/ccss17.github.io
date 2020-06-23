@@ -662,7 +662,7 @@ $$ \zeta _a(x) = \frac{1}{1+ e ^{-ax} } $$
 
   - 점근선 $y = 0, y = 1$ 을 갖는다.
 
-  - $$x = 0 \to \zeta _a(0) = \frac{1}{2}$$ 
+  - $\displaystyle x = 0 \to \zeta _a(0) = \frac{1}{2}$ 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -739,7 +739,3 @@ $$ \zeta (x) = \frac{1}{1+e ^{-x}} $$
   ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/77423392-72a36900-6e12-11ea-80e0-b3baf537b86b.png)
 
   - 게인 $a$ 의 값을 $1$ 에서 $5$ 로 높혔더니 함수의 휘어지는 정도가 커졌다는 것을 알 수 있다. $x$ 축을 압축시켰다고도 할 수 있다.
-
-
-
-

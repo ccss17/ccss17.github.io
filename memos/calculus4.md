@@ -248,39 +248,39 @@ $$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
 
 무리수 $e$ 를 이용한 지수함수와 로그함수의 극한 : $a>0, a \neq 0$ 일 때 다음이 성립한다. 
 
-1. $$ \lim_{x \to 0} \frac{\log_{a} (1+x)}{x} = \frac{1}{\ln a} $$
+1. $\displaystyle \lim_{x \to 0} \frac{\log_{a} (1+x)}{x} = \frac{1}{\ln a}$
 
-    - 증명 
-
-      $$ \lim_{x \to 0} \frac{\log_{a} (1+x)}{x} = \lim_{x \to 0} \log_{a} (1+x) ^{\frac{1}{x}} = \log_{a} e = \frac{1}{\ln a} $$
-
-    - 그러므로 $a = e$ 일 때 
-
-      $$ \lim_{x \to 0} \frac{\ln (1+x)}{x} = 1 $$
-
-      이다. 
-
-2. $$ \lim_{x \to 0} \frac{a ^{x}-1}{x} = \ln a $$
-
-    - 증명 
-
-      $a ^{x} -1 = t$ 로 두면 $x \to 0 \Rightarrow t \to 0$ 이고 $a ^{x} = 1+t$ 에서 
-
-        $$ \therefore x = \log_{a} (1+t) $$
-
-      이다. 따라서 
-
-        $$ \lim_{x \to 0} \frac{a ^{x}-1}{x} = \lim_{t \to 0} \frac{t}{\log_{a} (1+t)} = \lim_{t \to 0} \frac{1}{\frac{\log_{a} (1+t)}{t}} $$
-
-        $$ = \lim_{t \to 0} \frac{1}{\log_{a} (1+t) ^{\frac{1}{t}}} = \frac{1}{\log_{a} e} = \ln a $$
-
-    - 그러므로 $a = e$ 일 때 
-
-      $$ \lim_{x \to 0} \frac{e ^{x}-1}{x} = e $$
-
-      이다. 
+2. $\displaystyle \lim_{x \to 0} \frac{a ^{x}-1}{x} = \ln a$
 
 </blockquote>
+
+- $1$ 의 증명 
+
+  $$ \lim_{x \to 0} \frac{\log_{a} (1+x)}{x} = \lim_{x \to 0} \log_{a} (1+x) ^{\frac{1}{x}} = \log_{a} e = \frac{1}{\ln a} $$
+
+- 그러므로 $a = e$ 일 때 
+
+  $$ \lim_{x \to 0} \frac{\ln (1+x)}{x} = 1 $$
+
+  이다. 
+
+- $2$ 의 증명 
+
+  $a ^{x} -1 = t$ 로 두면 $x \to 0 \Rightarrow t \to 0$ 이고 $a ^{x} = 1+t$ 에서 
+
+    $$ \therefore x = \log_{a} (1+t) $$
+
+  이다. 따라서 
+
+    $$ \lim_{x \to 0} \frac{a ^{x}-1}{x} = \lim_{t \to 0} \frac{t}{\log_{a} (1+t)} = \lim_{t \to 0} \frac{1}{\frac{\log_{a} (1+t)}{t}} $$
+
+    $$ = \lim_{t \to 0} \frac{1}{\log_{a} (1+t) ^{\frac{1}{t}}} = \frac{1}{\log_{a} e} = \ln a $$
+
+- 그러므로 $a = e$ 일 때 
+
+  $$ \lim_{x \to 0} \frac{e ^{x}-1}{x} = e $$
+
+  이다. 
 
 ## <a name="지수함수와 로그함수의 미분 " href="#지수함수와 로그함수의 미분 ">지수함수와 로그함수의 미분 </a>
 
