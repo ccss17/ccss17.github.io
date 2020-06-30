@@ -740,3 +740,33 @@ $$ E = - \sum_{k}^{} t _{k}\ln_{} y _{k} $$
   ```
 
   가령 `np.random.choice(100, 3)` 은 $0 \sim 99$ 에서 $3$ 개의 무작위 수를 반환한다.
+
+- 예시 
+
+  미니배치를 했을 때 교차 엔트로피 오차를 구하는 코드는 다음과 같다. 교차 엔트로피의 원래 코드에서처럼 신경망의 출력 `y`, 정답 레이블 `t` 에 대한 코드이다. 
+  
+  만약 `y` 가 1차원이면, 즉 배치가 없다면, 즉, 데이터 하나당 교차 엔트로피 오차를 구하는 경우, `reshape` 함수로 데이터의 형상을 바꾸어 준다.
+
+  계산이 다 되면 `batch_size` 로 나누어 정규화해줌으로써 이미지 1장당 평균 교차 엔트로피 오차, 즉 입력 하나 당 평균 교차 엔트로피 오차를 계산한다.
+
+  ```python
+  def CEE(y, t):
+      if y.ndim == 1:
+          t = t.reshape(1, t.size)
+          y = y.reshape(1, y.size)
+      batch_size = y.shape[0]
+      return -np.sum(t * np.log(y + 1e-7)) / batch_size
+  ```
+
+- 예시
+
+  반면 교차 엔트로피 오차 함수에 정답 레이블이 원-핫 인코딩이 아닌 숫자 $2$, 또는 $7$ 로 주어졌다면 다음과 같이 구현해야 한다.
+
+  ```python
+  def CEE(y, t):
+      if y.ndim == 1:
+          t = t.reshape(1, t.size)
+          y = y.reshape(1, y.size)
+      batch_size = y.shape[0]
+      return -np.sum(np.log(y[np.arange(batch_size), t] + 1e-7)) / batch_size
+  ```

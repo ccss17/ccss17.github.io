@@ -1,6 +1,8 @@
 <!doctype html><html><head><meta charset="utf-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github-gist.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script> 
+<script>hljs.initHighlightingOnLoad();</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/texmath.css">
 <link rel="stylesheet" href="https://gitcdn.xyz/repo/goessner/mdmath/master/css/vscode-texmath.css">
@@ -326,7 +328,7 @@ def relu(x):
 </code></pre>
 </li>
 </ul>
-<h1>신경망</h1>
+<h1><a name="신경망" href="#신경망">신경망</a></h1>
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 <p>신경망(neural network) : 퍼셉트론이 사용하는 계단함수를 일반적인 활성화 함수로 일반화 시키고,</p>
 <p>퍼셉트론의 가중치 매개변수를 수동으로 입력하는 것이 아니라 데이터로부터 자동으로 결정하게 하는 알고리즘이다.</p>
@@ -445,7 +447,7 @@ def softmax(a):
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 <p>단조증가함수 : 정의역 원소 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo separator="true">,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span></span></span></span></eq> 가 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≤</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a \leq b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719400000000001em;vertical-align:-0.13597em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span></eq> 일 때, <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo><mo>≤</mo><mi>f</mi><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(a) \leq f(b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">b</span><span class="mclose">)</span></span></span></span></eq> 가 성립하는 함수이다.</p>
 </blockquote>
-<h1>순전파</h1>
+<h1><a name="순전파" href="#순전파">순전파</a></h1>
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 <p>순전파(forward propagation) : 신경망의 학습과 추론 두 단계 중 추론과정이다.</p>
 </blockquote>
@@ -558,7 +560,7 @@ print(&quot;Accuracy:&quot; + str(float(accuracy_cnt) / len(x)))
 <p>폐구간 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>255</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0, 255]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mord">5</span><span class="mclose">]</span></span></span></span></eq> 에 존재하는 정수 데이터를 폐구간 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mn>1</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0, 1]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mclose">]</span></span></span></span></eq> 에 존재하는 실수로 변환한다.</p>
 </li>
 </ul>
-<h1>기계학습</h1>
+<h1><a name="기계학습" href="#기계학습">기계학습</a></h1>
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 <p>학습(learning) : 신경망 학습에서 학습이란,</p>
 <p>손실함수의 값을 가장 작게 만드는 가중치 매개변수의 최적값을 훈련 데이터로부터 자동으로 찾는 것이다.</p>
@@ -645,7 +647,7 @@ print(&quot;Accuracy:&quot; + str(float(accuracy_cnt) / len(x)))
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 <p>과적합(overfitting) : 신경망이 특정 데이터셋에 과하게 최적화된 상태이다.</p>
 </blockquote>
-<h1>손실함수</h1>
+<h1><a name="손실함수" href="#손실함수">손실함수</a></h1>
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 <p>손실함수(loss function) : 현재의 신경망이 데이터를 얼마나 처리하지 못하는지를 출력하는 함수이다.</p>
 </blockquote>
@@ -754,6 +756,30 @@ x_batch = x_train[batch_mask]
 t_batch = t_train[batch_mask]
 </code></pre>
 <p>가령 <code>np.random.choice(100, 3)</code> 은 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>∼</mo><mn>99</mn></mrow><annotation encoding="application/x-tex">0 \sim 99</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">9</span><span class="mord">9</span></span></span></span></eq> 에서 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn></mrow><annotation encoding="application/x-tex">3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span></span></span></span></eq> 개의 무작위 수를 반환한다.</p>
+</li>
+<li>
+<p>예시</p>
+<p>미니배치를 했을 때 교차 엔트로피 오차를 구하는 코드는 다음과 같다. 교차 엔트로피의 원래 코드에서처럼 신경망의 출력 <code>y</code>, 정답 레이블 <code>t</code> 에 대한 코드이다.</p>
+<p>만약 <code>y</code> 가 1차원이면, 즉 배치가 없다면, 즉, 데이터 하나당 교차 엔트로피 오차를 구하는 경우, <code>reshape</code> 함수로 데이터의 형상을 바꾸어 준다.</p>
+<p>계산이 다 되면 <code>batch_size</code> 로 나누어 정규화해줌으로써 이미지 1장당 평균 교차 엔트로피 오차, 즉 입력 하나 당 평균 교차 엔트로피 오차를 계산한다.</p>
+<pre><code class="language-python">def CEE(y, t):
+    if y.ndim == 1:
+        t = t.reshape(1, t.size)
+        y = y.reshape(1, y.size)
+    batch_size = y.shape[0]
+    return -np.sum(t * np.log(y + 1e-7)) / batch_size
+</code></pre>
+</li>
+<li>
+<p>예시</p>
+<p>반면 교차 엔트로피 오차 함수에 정답 레이블이 원-핫 인코딩이 아닌 숫자 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></eq>, 또는 <eq><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn></mrow><annotation encoding="application/x-tex">7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span></span></span></span></eq> 로 주어졌다면 다음과 같이 구현해야 한다.</p>
+<pre><code class="language-python">def CEE(y, t):
+    if y.ndim == 1:
+        t = t.reshape(1, t.size)
+        y = y.reshape(1, y.size)
+    batch_size = y.shape[0]
+    return -np.sum(np.log(y[np.arange(batch_size), t] + 1e-7)) / batch_size
+</code></pre>
 </li>
 </ul>
 
