@@ -28,11 +28,161 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-유클리드 공간 : 유클리드 기하학의 공리가 성립하는 $n$ 차원의 공간이다. 
+평면에서의 위치 표현 : 평면의 각 점의 위치는 실수 $a, b$ 에 대한 실수쌍 $(a,b)$ 에 대응시킬 수 있으므로 실수쌍
+
+$$ (a,b) $$
+
+으로 표현한다.
 
 </blockquote>
 
-- 유클리드가 연구했던 길이와 평면과 공간에 좌표계를 도입하여 임의 차원의 공간으로 일반화한 것이다. 직선은 1차원 유클리드 공간, 평면은 2차원 유클리드 공간, 공간은 3차원 유클리드 공간이다. 
+- 실수 순서쌍 $(a, b)$ 전체의 집합을 $\R^2$ 로 나타낸다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+집합 $\R ^{2}$ : 실수 $a, b$ 에 대한 실수 순서쌍 $(a, b)$ 전체의 집합이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+공간에서의 위치 표현 : 공간의 각 점의 위치는 실수 $a, b, c$ 에 대한 실수쌍 $(a,b,c)$ 에 대응시킬 수 있으므로 실수쌍
+
+$$ (a,b,c) $$
+
+으로 표현한다.
+
+</blockquote>
+
+- 실수 순서쌍 $(a, b, c)$ 전체의 집합을 $\R^3$ 로 나타낸다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+집합 $\R ^{3}$ : 실수 $a, b, c$ 에 대한 실수 순서쌍 $(a, b, c)$ 전체의 집합이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$ 차원 실수공간, 또는 $n$차원 좌표공간, 또는 $n$차원 데카르트 공간 또는, $n$-공간($n$-space) : 자연수 $n$ 에 대한 집합
+
+$$ \R ^{n} := \{(a_1, a_2, \dots, a_n) | a_1, a_2, \dots, a_n \in \R \} $$
+
+이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+점(dot) : $n$-공간 $\R ^{n} := \{(a_1, a_2, \dots, a_n) | a_1, a_2, \dots, a_n \in \R \}$ 의 원소이다.
+
+</blockquote>
+
+- 예시 
+
+  $n$-공간의 점 중 하나는 
+
+  $$ (0, 0, 0, \dots, 0) $$
+
+  이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+거리함수(metric function) : 어떤 집합 $U$ 에 대하여 성질 
+
+1. $d(x, y) = 0 \Leftrightarrow x = y$
+
+2. $d(x, y) = d(y, x)$
+
+3. $d(x, y) + d(y, z) \geq d(x, z)$
+
+을 만족하는 함수 
+
+$$ d: U \times U \to [0, \infty) $$
+
+이다.
+
+</blockquote>
+
+- 예시 
+
+  행렬 $A := \begin{pmatrix} a&b\\c&d \end{pmatrix}$ 와 $A' = \begin{pmatrix} a'&b'\\c'&d' \end{pmatrix}$ 사이의 거리함수를
+
+  $$ d(A, A') := \sqrt[]{(a-a') ^{2}+(b-b')^{2}+(c-c')^{2}+(d-d')^{2}} $$
+
+  로 정의할 수 있다.
+
+- 예시 
+
+  임의의 집합 $U$ 에 대한 함수를
+
+  $$ d(x, y) := \begin{cases} 1, x \neq y &\text{}\\ 0, x = y&\text{}\\ \end{cases} $$
+
+  로 정의하면 이것은 거리함수이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+거리공간(metric space) : 거리공간 $(U, d)$ 는 어떤 집합 $U$ 에 대하여 정의된 거리함수 $d$ 가 존재하는 집합이다.
+
+</blockquote>
+
+- 좌표공간은 거리공간의 특수한 예이다.
+
+- 거리공간은 쉽게 말해 두 점 사이의 거리가 정의된 공간에 불과하다.
+
+- 예시 
+
+  임의의 행렬 $A := \begin{pmatrix} a&b\\c&d \end{pmatrix}$ 와 임의의 $A' = \begin{pmatrix} a'&b'\\c'&d' \end{pmatrix}$ 사이의 거리함수를
+
+  $$ d(A, A') := \sqrt[]{(a-a') ^{2}+(b-b')^{2}+(c-c')^{2}+(d-d')^{2}} $$
+
+  로 정의하면, $2 \times 2$ 행렬 전체의 집합이 거리 공간 $(A, d)$ 이 된다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+등장사상(isometry), 또는 거리 보존 사상, 또는 등거리 변환, 또는 등거리 사상 : 두 거리 공간 $(U_1, d_1), (U_2, d_2)$ 사이의 전단사 함수 
+
+$$ f: U_1 \to U_2 $$
+
+가 임의의 두 점 사이의 거리를 보존하는, 즉 
+
+$$ d_2(f(x), f(y)) = d_1(x, y) $$
+
+인 함수 $f$ 이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+등장(isometric) : 두 거리공간 $U_1, U_2$ 사이의 등장사상이 존재하면 $U_1$ 과 $U_2$ 를 서로 등장이라고 한다.
+
+</blockquote>
+
+- 두 거리공간 $U_1, U_2$ 이 등장인 것을 
+
+  $$ U_1 \approx U_2 $$
+
+  로 표기한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+유클리드 공간 : $n$ 차원 유클리드 공간은 $n$ 차원 데카르트 공간 $\R ^{n}$ 과 등장인 거리공간이다.
+
+</blockquote>
+
+- 쉽게 말해 좌표계가 없는 데카르트 공간이라고 할 수 있다. 유클리드 공간에서는 모든 점이 다 평등하고, 기준점이 없고, 좌표축도 없다.
+
+- 유클리드 공간은 유클리드 기하학의 공리가 성립하는 $n$ 차원의 공간이다. 
+
+- $n$ 차원 유클리드 공간을 $\mathbb{E} ^{n}$ 로 표기한다.
+
+- 유클리드가 연구했던 길이와 평면과 공간에 좌표계를 도입한 것이 데카르트 공간이다. 
+
+  직선은 1차원 데카르트 공간, 평면은 2차원 데카르트 공간, 공간은 3차원 데카르트 공간이다. 
+
+- 미적분학에서는 데카르트 공간 $\R ^{n}$ 을 주로 사용하기에 유클리드 공간에 관심이 가지 않을 수도 있지만,
+
+  데카르트 공간은 유클리드 공간의 특수한 예이므로 그 본연의 대상을 이해하는 것도 중요하다.
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -658,6 +808,94 @@ $$ w = f(z_1, z_2, \dots, z_n) $$
 
   로 정의할 수도 있다. 
 
+# 최대최소 정리 
 
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
+연속 : $n$-공간의 부분집합 $U$ 에서 정의된 함수 $f: U \to \R$ 와 $U$ 의 한 점 $P$ 에 대하여 
 
+$$ \lim_{X \to P} f(x) = f(P) $$
+
+일 때 $f$ 는 점 $P$ 에서 연속이다.
+
+</blockquote>
+
+- 이는 $U$ 의 점 $X$ 가 $P$ 에 충분히 가까우면 $f(X)$ 도 $f(P)$ 에 가깝다는 것이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+연속함수 : 함수 $f: U \to \R$ 가 정의역 $U$ 의 모든 점에서 연속이면, $f$ 를 연속함수라고 한다.
+
+</blockquote>
+
+- 예시 
+
+  $n$-공간의 고정된 한 점 $Q$ 와 임의의 점 $X$ 의 거리를 재는 함수 
+
+  $$ f(X) := |X-Q| $$
+
+  가 연속함수임읠 보이자.
+
+  임의의 점 $P$ 에 대하여 
+
+  $$ |f(X) - f(P)| = \bigg  ||X-Q| - |P-Q| \bigg | \leq |X-P| $$
+
+  이므로 
+
+  $$ \lim_{X \to P} |f(X) - f(P)| = 0 $$
+
+  이다. 그러므로 
+
+  $$ \lim_{X \to P} f(X)=f(P) $$
+
+  이고, 따라서 $f$ 는 연속함수이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+열린 공(open ball) : 양수 $r$ 에 대하여 $n$-공간의 한 점 $P$ 를 중심으로 반지름이 $r$ 인 
+
+$$ \mathbb{B} ^{n}(P, r) := \{X \in \R ^{n} \Big ||X-P| < r\} $$
+
+이다.
+
+</blockquote>
+
+- 예시 
+
+  1차원 열린 공은 구간이고,
+
+  다음은 2차원 열린 공으로써, 열린 원판 $\mathbb{B} ^{2}$ 이다.
+
+  ![](https://mblogthumb-phinf.pstatic.net/20141228_119/dydrogud22_1419762043201Uk8cC_JPEG/2.jpg?type=w2)
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+닫힌 공(closed ball) : 양수 $r$ 에 대하여 $n$-공간의 한 점 $P$ 를 중심으로 반지름이 $r$ 인 
+
+$$ \overline{\mathbb{B}}  ^{n}(P, r) := \{X \in \R ^{n} \Big ||X-P| \leq r\} $$
+
+이다.
+
+</blockquote>
+
+- 예시 
+
+  다음은 2차원 닫힌 공으로써, 닫힌 원판 $\overline{\mathbb{B}}  ^{2}$ 이다.
+
+  ![](https://mblogthumb-phinf.pstatic.net/20141228_134/dydrogud22_14197620690306kJlI_JPEG/3.jpg?type=w2)
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+유계(bounded) : $n$-공간의 부분 집합 $U$ 가 유계라는 것은 $U$ 를 포함하는 열린공 또는 닫힌공이 존재한다는 것이다.
+
+</blockquote>
+
+- 어라? 그러면 유계가 아닐 수가 있나?
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+최대최소 정리 : 좋은 영역, 즉 유계인 닫힌 집합에서 정의된 연속함수는 항상 최댓값과 최솟값을 가진다.
+
+</blockquote>
+
+- 이 정리는 해의 존재를 말해주는 중요한 정리이다.
