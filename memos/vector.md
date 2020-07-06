@@ -1659,14 +1659,34 @@ $$ w_1, \dots, w_k $$
 
   그러므로 
 
-  $$ (a _{11}v_1 + a _{12}v_2 + a _{1n}v_n), \dots (a _{k1}v_1 + a _{k2}v_2 + a _{kn}v_n) $$
+  $$ (a _{11}v_1, a _{12}v_2, a _{1n}v_n), \dots, (a _{k1}v_1, a _{k2}v_2, a _{kn}v_n) $$
 
   는 일차독립이다.
 
+  그러므로 
 
+  $$ (a _{11}, a _{12}, a _{1n}), \dots, (a _{k1}, a _{k2}, a _{kn}) $$
 
+  는 일차독립이다.
 
+  **??????? 벡터공간의 차원 정리에 대한 다른 증명을 찾아보자..**
 
 - 예시 
 
   $\R ^{n}$ 의 차원은 $n$ 이다.
+
+# <a name="좌표계 " href="#좌표계 ">좌표계 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+좌표(coordinates) : $n$-공간의 의 벡터 $b_1, \dots, b_n$ 와 $n$-공간의 한 기저 $\mathcal{B}:= (b_1, \dots, b_n)$ 에 대하여 임의의 벡터 $v \in \R ^{n}$ 을 $\mathcal{B}:= (b_1, \dots, b_n)$ 로 표현하는 방법은
+
+$$ v = c_1b_1 + c_2b_2 + \dots + c_nb_n $$
+
+로써 유일한데, 이때 $(c_1, \dots, c_n) \in \R ^{n}$ 을 기저 $\mathcal{B}:= (b_1, \dots, b_n)$ 에 대한 벡터 $v$ 의 좌표라고 한다.
+
+</blockquote>
+
+- 지금까지 줄곧 사용하던 좌표평면의 좌표 $(a,b)$ 와 좌표공간의 좌표 $(a,b,c)$ 을 일반화한 것이다.
+
+  - 우리가 일반적으로 사용해왔던 좌표평면의 기저는 $\bigg (\begin{bmatrix} 1\\0 \end{bmatrix}, \begin{bmatrix} 0\\1 \end{bmatrix}\bigg )$ 이고, 좌표공간의 기저는 $\bigg ( \begin{bmatrix} 1\\0\\0 \end{bmatrix}, \begin{bmatrix} 0\\1\\0 \end{bmatrix}, \begin{bmatrix} 0\\0\\1 \end{bmatrix} \bigg )$ 인 것이다.
