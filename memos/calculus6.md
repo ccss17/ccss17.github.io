@@ -88,9 +88,9 @@ $$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L\\ \lim_{(x, y) \to (x_0, y_0)} g(x, 
 
 1. $f$ 가 $(x_0, y_0)$ 에서 정의되어 있다. 
 
-2. $\lim_{(x, y) \to (x_0, y_0)} f(x, y)$ 극한값이 존재한다.
+2. $\displaystyle \lim_{(x, y) \to (x_0, y_0)} f(x, y)$ 극한값이 존재한다.
 
-3. $\lim_{(x, y) \to (x_0, y_0)} f(x, y) = f(x_0, y_0)$
+3. $\displaystyle \lim_{(x, y) \to (x_0, y_0)} f(x, y) = f(x_0, y_0)$
 
 </blockquote>
 
@@ -244,6 +244,8 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
 ![2v](https://user-images.githubusercontent.com/16812446/78995906-63e0e400-7b7e-11ea-9f1e-76382bc9c548.jpg)
 
+</blockquote>
+
 1. $x$ 에 대한 편도함수 
 
     $$ f_x(x, y) = \frac{\partial z}{\partial x} = \lim_{h \to 0} \frac{f(x+h, y)-f(x, y)}{h} $$
@@ -274,15 +276,13 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
     - 그리고 그 기울기들에 대한 함수가 $y$ 에 대한 편도함수이다. 
 
-</blockquote>
-
 - 그러면 $x$ 축 방향으로 평행하지도 않고 $y$ 축 방향으로 평행하지도 않고 
 
   $x$ 축으로부터 $60 \degree$ 벌어진 단위 벡터 $u$ 의 방향으로 교선을 잘라서 기울기를 구하는 상황도 생각할 수 있다.
 
   이것을 단위벡터 $u$ 의 방향도함수라 한다. 
 
-## <a name="여러가지 편도함수 " href="#여러가지 편도함수 ">여러가지 편도함수 </a>
+## <a name="여러가지 편도함수" href="#여러가지 편도함수">여러가지 편도함수 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
