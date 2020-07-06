@@ -8,7 +8,7 @@ def make_def_boxed(file):
     fname = 'memos/'+file+'.md'
     with open(fname, encoding='utf-8') as f:
         content = f.read()
-    
+
     wfname = 'memos/'+file+'.md'
     # wfname = 'memos/'+file+'_test.md'
     mode = False
@@ -52,4 +52,4 @@ if __name__ == '__main__':
     # make_def_boxed('la3')
     # make_def_boxed('la4')
     # make_def_boxed('la5')
-    # make_def_boxed('la6')
+    # make_def_boxed('la6') 

@@ -28,6 +28,43 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
+이변수함수 : 두 개의 변수에 의존하는 함수이다.
+
+</blockquote>
+
+- 예시 
+
+  수직선 $\R$ 의 두 점 $x,y$ 에 대하여 이들 사이의 거리를 재는 함수 
+
+  $$ d(x, y) := |x - y| $$
+
+  는 정의역이 실수쌍 $(x, y)$ 전체로 이루어진 집합, 즉 좌표평면 $\R ^{2}$ 이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+다변수함수 또는 $n$변수 함수 : $n$-공간의 부분집합 $U$ 에서 $U$ 의 각 점 $X = (x_1, x _{2}, \dots, x _{n})$ 을 실수 $f(x) = f(x_1, x _{2}, \dots, x _{n})$ 에 대응시키는 함수
+
+$$ f : U \to \R $$
+
+이다.
+
+</blockquote>
+
+- $n$-공간의 부분집합 $U$ 에서 정의된 다변수함수 $f$ 를 이해하는 방법 중 하나는 그래프를 그려보는 것인데, $f$ 의 그래프는 
+
+  $$ \{(x_1, x_2, \dots, x_n, z) \in R ^{n+1} | (x_1, x_2, \dots, x_n) \in U, z = f(x_1, x_2, \dots, x_n)\} $$
+
+  이다.
+
+  - 예시 
+
+    이변수함수 $f(x, y) = x^2+ y ^{2}$ 의 그래프는 방정식 $z = x^2+ y ^{2}$ 으로 표현되는 다음과 같은 회전포물변이다.
+
+    ![image](https://user-images.githubusercontent.com/16812446/86470649-cc52f200-bd76-11ea-9347-5421db411de9.png)
+   
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
 이변수 함수의 극한 : 함수 $f(x, y)$ 에서 $(x, y)$ 이 $(x_0, y_0)$ 에 한없이 다가갈 때 함수값이 극한값 $L$ 로 다가가는 것은 
 
 임의의 양수 $\epsilon > 0$ 에 대하여 적당한 양수 $\delta > 0$ 가 존재하여 정의역의 모든 $(x, y)$ 에 대하여 다음을 만족하는 것이다. 
@@ -39,6 +76,96 @@
 - 기호로 다음과 같이 표현한다. 
 
   $$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L $$
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+일변수 함수의 일차함수의 기울기 : 일변수 함수의 일차함수 $y = ax + b$ 의 기울기는
+
+$$ \dfrac{\Delta y}{\Delta x} = \dfrac{(a(x+\Delta x)+b) - (ax + b)}{\Delta x} = a $$
+
+이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+이변수함수의 일차함수의 기울기 : 이변수 함수의 일차함수 
+
+$$ z = z(x, y) = ax + by + c $$
+
+의 기울기는 $x$ 축 방향 기울기와 $y$ 축 방향 기울기로 이루어진 벡터
+
+$$ (a, b) = ai + bj $$
+
+이다.
+
+</blockquote>
+
+- 설명 
+
+  이변수 함수의 일차함수 
+
+  $$ z = z(x, y) = ax + by + c $$
+  
+  에 대하여 $xy$-평면에서 $x$ 축과 나란한 직선 위에서의 기울기는 
+
+  $$ \dfrac{z(x+\Delta x, y) - z(x, y)}{\Delta x} = \dfrac{(a(x+\Delta x)+by+c) - (ax + by + c)}{\Delta x} = a $$
+
+  이고 $y$ 축과 나란한 직선 위에서의 기울기는
+
+  $$ \dfrac{z(x, y + \Delta y) - z(x, y)}{\Delta y} = b $$
+
+  이다. 그러므로 이것을 일반화하여 임의의 방향에 대한 기울기를 벡터
+
+  $$ (a, b) = ai+bj $$
+
+  로 표현한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+이변수 일차함수의 기울기 벡터 : 이변수 함수의 일차함수 $z = z(x, y) = ax + by + c$ 의 기울기를 나타내는 벡터
+
+$$ (a, b) = ai+bj $$
+
+이다.
+
+</blockquote>
+
+- 예시 
+
+  함수 $z = 1 - x - y$ 의 $x$ 축 방향, $y$ 축 방향의 기울기는 모두 $-1$ 이므로 기울기 벡터는
+
+  $$ (-1, -1) $$
+
+  이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$변수 일차함수의 기울기 : 벡터 $a = (a_1, \dots, a_n), x = (x_1, \dots, x_n)$ 와 단위벡터 $v = (v_1, \dots, v_n)$ 와 실수 $c$ 에 대한  $n$변수 함수
+
+$$ z = z(x) = a \cdot x = a_1x_1 + \dots + a_nx_n + c = a \cdot x + c $$
+
+의 $v-$방향 기울기는
+
+$$ a \cdot v = a_1v_1 + \dots + a_n v_n $$
+
+이다.
+
+</blockquote>
+
+- 설명 
+
+  벡터 $a = (a_1, \dots, a_n), x = (x_1, \dots, x_n), e_1 = (1, \dots, 0)$ 와 실수 $c$ 에 대한  $n$변수 함수
+
+  $$ z = z(x) = a_1x_1 + \dots + a_nx_n + c = a \cdot x + c $$
+
+  의 첫번째 축 방향의 기울기는 
+
+  $$ \dfrac{z(x + te_1) - z(x)}{t} = \dfrac{(a \cdot (x + te_1) + c) - (a \cdot x+c)}{t} = a \cdot e_1 = a_1 $$
+
+  이다.
+
+  이 기울기는 함수의 그래프를 $x_1z$-평면에서 살펴본 직선의 기울기이다. 마찬가지로 $x_nz$-평면에서 살펴본 직선의 기울기, 즉 마지막 축 방향의 기울기는 $a_n$ 이다.
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -981,6 +1108,30 @@ $$ \nabla f(x, y, z) = \bigg < f_x(x, y, z), f_y(x, y, z), f_z(x, y, z) \bigg > 
 $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\bigg > \cdot u $$
 
 이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+열린집합 : 위상수학에서 열린집합은 스스로의 경계를 포함하지 않는 위상 공간의 부분집합이다.
+
+</blockquote>
+
+- 예시
+
+  양수 $r$ 에 대하여 $n$-공간의 한 점 $P$ 를 중심으로 반지름이 $r$ 인 열린공
+
+  $$ \mathbb{B} ^{n}(P, r) := \{X \in \R ^{n} \Big ||X-P| < r\} $$
+
+  은 열린 집합이다.
+
+  다음은 2차원 열린 공으로써, 열린 원판 $\mathbb{B} ^{2}$ 이다.
+
+  ![](https://mblogthumb-phinf.pstatic.net/20141228_119/dydrogud22_1419762043201Uk8cC_JPEG/2.jpg?type=w2)
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+
 
 </blockquote>
 
