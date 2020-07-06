@@ -1129,12 +1129,6 @@ $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\
 
   ![](https://mblogthumb-phinf.pstatic.net/20141228_119/dydrogud22_1419762043201Uk8cC_JPEG/2.jpg?type=w2)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-
-
-</blockquote>
-
 # <a name="선형화" href="#선형화">선형화</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">

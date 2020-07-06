@@ -96,6 +96,34 @@ $$ x = f(t), y = g(t) $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
+평행이동 사상 : 좌표공간 $\R ^{n}$ 의 한 점 $v$ 에 대한 함수 
+
+$$ T _{v}: \R ^{n} \to \R ^{n}, T _{v}(X) := X+v $$
+
+이다.
+
+</blockquote>
+
+- 일반적으로 두 점 $v, w \in \R ^{n}$ 에 대한 평행이동 $T _{v}, T _{w}$ 의 합성은 평행이동이고,
+
+  $$ T _{v} \circ T _{w} = T _{v+w} = T _{w} \circ T _{v} $$
+
+  가 성립한다.
+
+- 원점 $O$ 에 대한 평행이동 $T _{O}$ 은 항등사상 $id: \R ^{n}\to \R ^{n}$ 와 같다.
+
+- $T _{-v} = T _{v} ^{-1}$ 이다.
+
+- 예시 
+
+  좌표평면에서 사상 
+
+  $$ (x,y) \mapsto (x+1, y+2) $$
+
+  은 각 점을 오른쪽으로 $1$, 위쪽으로 $2$ 만큼 평행이동시키는 사상이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
 양 : 어떤 물체의 크기이다.
 
 </blockquote>
@@ -140,15 +168,65 @@ $$ x = f(t), y = g(t) $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-벡터(vector) 또는 유향선분(directed segment) : 크기와 방향성이 동시에 있는 물리량이다. 
+벡터(vector) 또는 유향선분(directed segment) : 유클리드 공간 속 두 점 $A,B$ 를 잇는 유향선분 
+
+$$ \overrightarrow{AB} $$
+
+이다.
 
 </blockquote>
 
-> 크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. 
+- $A$ 를 시점, $B$ 를 종점이라 한다.
 
-- 스칼라량으로는 방향에 대한 정보가 부족하기에 방향에 대한 정보를 덧붙힌 것이 벡터이다. 
+- 평행이동 사상 $T$ 는 점들을 이동시킬 뿐 아니라 유향선분도 이동시킨다. 즉,
 
-  - 그래서 방향성이 있는 선분 "유향선분" 이라고도 부른다.
+  $$ T(A)=A', T(B)=B' $$
+
+  이면,
+
+  $$ T(\overrightarrow{AB})=\overrightarrow{A'B'} $$
+
+  이다.
+
+  - 만약 유향선분 $\overrightarrow{AB}$ 를 평행이동하여 유향선분 $\overrightarrow{A'B'}$ 를 얻으면 두 유향선분을 동등하다고 하고,
+
+    $$ \overrightarrow{AB} \equiv \overrightarrow{A'B'} $$
+
+    라고 쓴다.
+
+- 서로 동등한 유향선분을 대표하는 것을 벡터(vector) 로 정의하는 의견도 있다.
+
+  - 즉, 유향선분은 시점과 종점을 가진 방향성이 있는 선분이다. 하지만 벡터는 그 모든 선분을 대표하는 추상대상물인 것이다.
+
+    이 정의에 의하면 벡터를 시점을 원점 $(0, 0)$ 으로 하는 유향선분으로 이해해야 하지만, 시점과 종점은 존재하지 않는다.
+
+  - 이 정의에 의하면 임의의 유향선분은 원점을 시점으로 하는 유향선분과 동등하기 때문에, 벡터 전체 집합은 원점을 시점으로 하는 유향선분 전체의 집합과 같다. 
+
+  - 원점을 시점으로 한 유향선분의 종점은 $\R ^{n}$ 의 한 점이므로, $\R ^{n}$ 의 한 점을 벡터로 볼 수 있다.
+
+    즉, $\R ^{n}$ 의 벡터의 전체 집합은 $\R ^{n}$ 과 일대일 대응이다.
+  
+  - 이 관점에서 유향선분 $\overrightarrow{AB}$ 가 표현하는 벡터는 점 $B-A$ 에 대응된다.
+
+- 다음과 같이 점 $A$ 에서 점 $B$ 로 방향이 주어진 선분 $AB$ 를 벡터 $AB$ 라 한다.
+
+  ![](https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C)
+
+  - 이것을 형식언어로 $\overrightarrow{AB}$ 로 표현한다. 
+
+- 다음과 같이 벡터를 시점과 종점이 아닌 단일 문자로 나타낼 수도 있다. 
+
+  $$ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots $$
+
+- **벡터는 행렬과 같이 수와 다른 개념이므로 행렬에서처럼 연산법칙, 항등원, 역원, 단위(수에서 $1$) 등을 새로 정의해야 한다.**
+
+- 크기와 방향성이 동시에 있는 물리량이다. 
+
+  > 크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. 
+
+  - 스칼라량으로는 방향에 대한 정보가 부족하기에 방향에 대한 정보를 덧붙힌 것이 벡터이다. 
+
+    그래서 방향성이 있는 선분 "유향선분" 이라고도 부른다.
 
 - 예시 
 
@@ -171,18 +249,6 @@ $$ x = f(t), y = g(t) $$
   기브스(1849), 헤비사이드(1850) 는 벡터해석학을 완성했다. 
 
   이 벡터해석학은 19세기 물리학을 대표하는 전자기학의 필수적인 수학적 도구가 되었다. 또 현대에 와서는 의학과 공학에도 널리 쓰이는 중요한 개념이 되었다. 
-
-- 다음과 같이 점 $A$ 에서 점 $B$ 로 방향이 주어진 선분 $AB$ 를 벡터 $AB$ 라 한다.
-
-  ![](https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C)
-
-  - 이것을 형식언어로 $\overrightarrow{AB}$ 로 표현한다. 
-
-- 다음과 같이 벡터를 시점과 종점이 아닌 단일 문자로 나타낼 수도 있다. 
-
-  $$ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots $$
-
-- **벡터는 행렬과 같이 수와 다른 개념이므로 행렬에서처럼 연산법칙, 항등원, 역원, 단위(수에서 $1$) 등을 새로 정의해야 한다.**
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -344,13 +410,17 @@ $$ x = f(t), y = g(t) $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-벡터의 상등 : 시점과 종점의 위치에 관계 없이 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 의 크기와 방향이 같으면 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 를 같다고 한다.
+벡터의 상등 : 두 벡터 $\overrightarrow{AB}, \overrightarrow{CD}$ 에 대하여 한 벡터를 평행이동 사상하여 다른 벡터를 얻을 수 있으면,
+
+두 벡터가 동등하다고 한다.
 
 </blockquote>
 
+- 시점과 종점의 위치에 관계 없이 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 의 크기와 방향이 같으면 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 를 같다고 한다.
+
 - 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 가 각각 선분 $\overline{AB}, \overleftrightarrow{CD}$ 로 구성되었을 때 이 둘이 같다는 것을
 
-  $$ \overrightarrow{a} = \overrightarrow{b} \iff \overrightarrow{AB} = \overrightarrow{CD} $$
+  $$ \overrightarrow{a} \equiv \overrightarrow{b} \iff \overrightarrow{AB} \equiv \overrightarrow{CD} $$
 
   로 표현한다. 
 
@@ -362,7 +432,7 @@ $$ x = f(t), y = g(t) $$
 
   즉, 왼쪽부터 차례로 $\overrightarrow{AB}, \overrightarrow{CD}, \overrightarrow{OP}$ 라고 한다면 
 
-  $$ \overrightarrow{AB}= \overrightarrow{CD}= \overrightarrow{OP} $$
+  $$ \overrightarrow{AB} \equiv \overrightarrow{CD} \equiv \overrightarrow{OP} $$
 
   이다. 
 
@@ -392,21 +462,17 @@ $$ x = f(t), y = g(t) $$
 
     ![](https://i.ytimg.com/vi/gdWfqihMW14/maxresdefault.jpg)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+- 벡터 덧셈의 성질 
 
-벡터 덧셈의 성질 
+  임의의 세 벡터 $\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}$ 와 영벡터 $\overrightarrow{0}$ 에 대하여 다음이 성립한다.
 
-임의의 세 벡터 $\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}$ 와 영벡터 $\overrightarrow{0}$ 에 대하여 다음이 성립한다.
+  - 교환법칙 : $\overrightarrow{a}+\overrightarrow{b}=\overrightarrow{b}+\overrightarrow{a}$
 
-</blockquote>
+  - 결합법칙 : $(\overrightarrow{a}+\overrightarrow{b})+\overrightarrow{c}=\overrightarrow{a}+(\overrightarrow{b}+\overrightarrow{c})$
 
-- 교환법칙 : $\overrightarrow{a}+\overrightarrow{b}=\overrightarrow{b}+\overrightarrow{a}$
+  - 항등원 : $\overrightarrow{a}+\overrightarrow{0}=\overrightarrow{0}+\overrightarrow{a} = \overrightarrow{a}$
 
-- 결합법칙 : $(\overrightarrow{a}+\overrightarrow{b})+\overrightarrow{c}=\overrightarrow{a}+(\overrightarrow{b}+\overrightarrow{c})$
-
-- 항등원 : $\overrightarrow{a}+\overrightarrow{0}=\overrightarrow{0}+\overrightarrow{a} = \overrightarrow{a}$
-
-- 역원 : $\overrightarrow{a}+(-\overrightarrow{a})=-\overrightarrow{a}+\overrightarrow{a} = \overrightarrow{0}$
+  - 역원 : $\overrightarrow{a}+(-\overrightarrow{a})=-\overrightarrow{a}+\overrightarrow{a} = \overrightarrow{0}$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -442,23 +508,21 @@ $$ \overrightarrow{a}+(-\overrightarrow{b}) = \overrightarrow{OA}+\overrightarro
 
 - $\overrightarrow{a} = \overrightarrow{0}$ 인 경우, 실수 $k$ 에 대하여 $k \overrightarrow{a}=\overrightarrow{0}$ 이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+- 벡터의 실수배의 성질 
 
-벡터의 실수배의 성질 : 두 실수 $k, l$ 과 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 에 대하여 다음이 성립한다.
+  두 실수 $k, l$ 과 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 에 대하여 다음이 성립한다.
 
-</blockquote>
+  - 벡터의 실수배의 결합법칙 : $k(l \overrightarrow{a}) = (kl)\overrightarrow{a}$
 
-- 벡터의 실수배의 결합법칙 : $k(l \overrightarrow{a}) = (kl)\overrightarrow{a}$
+  - 벡터의 실수배의 분배법칙 
 
-- 벡터의 실수배의 분배법칙 
+    $(k+l) \overrightarrow{a} = k\overrightarrow{a}+l \overrightarrow{a}$
 
-  $(k+l) \overrightarrow{a} = k\overrightarrow{a}+l \overrightarrow{a}$
-
-  $k(\overrightarrow{a}+\overrightarrow{b}) = k\overrightarrow{a}+k \overrightarrow{b}$
+    $k(\overrightarrow{a}+\overrightarrow{b}) = k\overrightarrow{a}+k \overrightarrow{b}$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-두 벡터의 평행조건 : 다음 두 경우에서 두 벡터는 평행한다고 정의한다. 
+벡터의 평행 : 다음 두 경우에서 두 벡터는 평행한다고 정의한다. 
 
 </blockquote>
 
@@ -480,9 +544,13 @@ $$ \overrightarrow{AC} = k \overrightarrow{AB} $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-위치벡터 : 평면 또는 공간에서 한 점 $O$ 를 고정할 때 임의의 한 점 $A$ 에 대하여 $O$ 를 시점으로 하고 $A$ 를 종점으로 하는 유일한 벡터 $\overrightarrow{OA}$ 를 점 $O$ 에 대한 점 $A$ 의 위치벡터라 한다. 
+위치벡터 : 원점 $O$ 를 시점으로 하고 임의의 한 점 $A$ 를 종점으로 하는 벡터 $\overrightarrow{OA}$ 를 
+
+점 $O$ 에 대한 점 $A$ 의 위치벡터라 한다. 
 
 </blockquote>
+
+- 그냥 좌표공간에서 점을 벡터로 이해할 때 그것을 위치벡터라고 부르는 것이다.
 
 - 점 $O$ 에 대한 점 $A$ 의 위치벡터를 간단하게 점 $A$ 의 위치벡터로 부른다.
 
@@ -494,8 +562,6 @@ $$ \overrightarrow{AC} = k \overrightarrow{AB} $$
 
   이다. 
 
-**구체화 필요**
-
 ## <a name="평면벡터 " href="#평면벡터 ">평면벡터 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
@@ -506,21 +572,19 @@ $$ \overrightarrow{AC} = k \overrightarrow{AB} $$
 
 - 종점의 좌표 $2-$튜플을 평면벡터를 대표하는 값으로 삼는다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+- 평면벡터 성분 표현 
 
-평면벡터 성분 표현 : 임의의 평면벡터 $\overrightarrow{a}$ 에 대하여 $\overrightarrow{a} = \overrightarrow{OA}$ 의 종점이 점이 $A(a_1, a_2)$ 일 때, 두 점 $E_1(1, 0), E_2(0, 1)$ 의 위치벡터 $\overrightarrow{e_1}, \overrightarrow{e_2}$ 를 이용하여 벡터 $\overrightarrow{a}$ 를 다음과 같이 나타낼 수 있다. 
+  임의의 평면벡터 $\overrightarrow{a}$ 에 대하여 $\overrightarrow{a} = \overrightarrow{OA}$ 의 종점이 점이 $A(a_1, a_2)$ 일 때, 두 점 $E_1(1, 0), E_2(0, 1)$ 의 위치벡터 $\overrightarrow{e_1}, \overrightarrow{e_2}$ 를 이용하여 벡터 $\overrightarrow{a}$ 를 다음과 같이 나타낼 수 있다. 
 
-$$ \overrightarrow{a} = \overrightarrow{OA} = \overrightarrow{OA_1} + \overrightarrow{OA_2} = a_1\overrightarrow{e_1} + a_2 \overrightarrow{e_2} $$
+  $$ \overrightarrow{a} = \overrightarrow{OA} = \overrightarrow{OA_1} + \overrightarrow{OA_2} = a_1\overrightarrow{e_1} + a_2 \overrightarrow{e_2} $$
 
-</blockquote>
+  - 이때 두 실수 $a_1, a_2$ 를 평면벡터 $\overrightarrow{a}$ 의 성분이라 한다. 
 
-- 이때 두 실수 $a_1, a_2$ 를 평면벡터 $\overrightarrow{a}$ 의 성분이라 한다. 
+  - 또 성분만을 이용해서 평면벡터 $\overrightarrow{a}$ 를 두 수의 순서쌍($2-$튜플)
 
-- 또 성분만을 이용해서 평면벡터 $\overrightarrow{a}$ 를 두 수의 순서쌍($2-$튜플)
+    $$ \overrightarrow{a} = (a_1,a_2) $$
 
-  $$ \overrightarrow{a} = (a_1,a_2) $$
-
-  로 나타낼 수 있다. 
+    로 나타낼 수 있다. 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -590,7 +654,7 @@ $$ \overrightarrow{a}//\overrightarrow{b} \iff \overrightarrow{b} = k \overright
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-표준점(standard poitn) 에 위치한 벡터 : 시점이 원점에 위치한 벡터이다. 
+표준점(standard point) 에 위치한 벡터 : 시점이 원점에 위치한 벡터이다. 
 
 </blockquote>
 
@@ -686,6 +750,20 @@ $$ |v| = ||v|| = \sqrt[]{v _{1} ^{2} + v _{2} ^{2} + v _{3} ^{2}} = \sqrt[]{(x _
 
 - 벡터 $v$ 의 길이를 $|v|$ 또는 $||v||$ 로 표기한다. 
 
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$-공간의 벡터의 크기, 길이, 또는 절댓값 : 유향선분 $\overrightarrow{AB}$ 에 대하여 
+
+$$ |\overrightarrow{AB}| := |B-A| $$
+
+또는 좌표 $(v_1, \dots, v_n)$ 으로 표현한 벡터 $v$ 에 대하여
+
+$$ |v| = \sqrt[]{v_1 ^{2}, \dots, v_n ^{2}} $$
+
+이다.
+
+</blockquote>
+
 ## <a name="노름 거리" href="#노름 거리">노름 거리</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
@@ -698,7 +776,9 @@ $$ ||a|| _{1} = |a_1| + |a_2| + |a_3| + \dots + |a_n| = \sum_{i=1}^{n}|a_i| $$
 
 </blockquote>
 
-- 벡터 $a = (4, 3)$ 에 대한 $L_1$ 노름은 오른쪽으로 $4$, 위로 $3$ 움직인 것과 같이 $7$ 이다.
+- 예시
+
+  벡터 $a = (4, 3)$ 에 대한 $L_1$ 노름은 오른쪽으로 $4$, 위로 $3$ 움직인 것과 같이 $7$ 이다.
 
   이처럼 $L_1$ 노름은 
 
@@ -834,23 +914,25 @@ $$ |ku| = \sqrt[]{(ku_1) ^{2}+(ku_2) ^{2}+(ku_3)^{2}} = \sqrt[]{k ^{2}(u_1 ^{2}+
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-표준 단위 벡터(standard unit vector) : 표준 단위 벡터는 길이가 $1$ 인 다음의 특수한 $3$ 가지 경우의 벡터를 뜻한다. 
+$3$차원 공간에서의 표준 단위 벡터(standard unit vector) : 표준 단위 벡터는 길이가 $1$ 인 다음의 특수한 $3$ 가지 경우의 벡터를 뜻한다. 
 
-$$ i = \big <1, 0, 0 \big >, j = \big <0, 1, 0 \big >, k = \big <0, 0, 1 \big > $$
+$$ i := \big <1, 0, 0 \big >, j := \big <0, 1, 0 \big >, k := \big <0, 0, 1 \big > $$
 
 </blockquote>
 
+- 벡터 $i,j,k$ 는 사원수체에서 허수부의 기저이다.
+
 - 그 어떠한 벡터도 표준 단위 벡터의 선형결합으로 표현될 수 있다. 그러므로 표준 단위 벡터는 모든 벡터를 생성한다. 
 
-  - 예시
+- 예시
 
-    즉, 임의의 벡터 $v = \big <v_1,v_2, v_3 \big >$ 는 다음과 같이 표준 단위 벡터의 선형 결합으로 표현될 수 있다. 
+  즉, 임의의 벡터 $v = \big <v_1,v_2, v_3 \big >$ 는 다음과 같이 표준 단위 벡터의 선형 결합으로 표현될 수 있다. 
 
-    $$ v = \big <v_1,v_2, v_3 \big > = \big <v_1,0,0\big > + \big <0,v_2,0\big > + \big <0,0,v_3\big > $$
+  $$ v = \big <v_1,v_2, v_3 \big > = \big <v_1,0,0\big > + \big <0,v_2,0\big > + \big <0,0,v_3\big > $$
 
-    $$ = v_1\big <1,0,0\big > + v_2\big <0,1,0\big > + v_3\big <0,0,1\big > $$
+  $$ = v_1\big <1,0,0\big > + v_2\big <0,1,0\big > + v_3\big <0,0,1\big > $$
 
-    $$ = v_1i + v_2j + v_3k $$
+  $$ = v_1i + v_2j + v_3k $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -897,6 +979,38 @@ $$ \overrightarrow{P_1P_2} = (x_2 - x_1)i + (y_2-y_1)j+(z_2-z_1)k $$
   $$ \overrightarrow{P_1P_2} = \big <x_2 - x_1 , y_2-y_1,z_2-z_1 \big >  = (x_2 - x_1)i + (y_2-y_1)j+(z_2-z_1)k $$
 
   이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$-공간에서의 표준단위벡터 : $n$-공간에서 벡터
+
+$$ e_1 := (1,0,0,\dots,0) $$
+
+$$ e_2 := (0,1,0,\dots,0) $$
+
+$$ \vdots $$
+
+$$ e_n := (0,0,0,\dots,1) $$
+
+를 표준단위벡터라고 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+나란한 벡터 : 영벡터가 아닌 두 벡터 $v, w$ 에 대하여 
+
+$$ v = tw $$
+
+인 실수 $t$ 가 존재하면, $v, w$ 를 나란하다고 한다.
+
+</blockquote>
+
+- 이때 $t>0$ 이면 $v,w$ 는 같은 방향이라 하고,
+
+  $t<0$ 이면 $v,w$ 는 반대 방향이라 한다.
+
+- 영벡터는 모든 벡터와 나란하다고 정의한다.
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

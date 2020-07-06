@@ -625,7 +625,7 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
       기울기가 $0$ 이 되지 않아서 시그모이드 함수로 신경망이 올바르게 학습할 수 있는 것이다.
 
-### **<center>아 이게 시그모이드 함수를 활성화 함수로 사용하는 이유구나.</center>**
+### <a name="**<center>아 이게 시그모이드 함수를 활성화 함수로 사용하는 이유구나.</center>**" href="#**<center>아 이게 시그모이드 함수를 활성화 함수로 사용하는 이유구나.</center>**">**<center>아 이게 시그모이드 함수를 활성화 함수로 사용하는 이유구나.</center>**</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -909,7 +909,7 @@ $$ E = - \sum_{k}^{} t _{k}\ln_{} y _{k} $$
 
     즉, `[y[0, 2], y[1, 7], y[2, 0], y[3, 9], y[4, 4]]` 인 배열을 생성한 것이 된다.
   
-# 미분 
+# <a name="미분 " href="#미분 ">미분 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
