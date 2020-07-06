@@ -758,7 +758,7 @@ $$ |\overrightarrow{AB}| := |B-A| $$
 
 또는 좌표 $(v_1, \dots, v_n)$ 으로 표현한 벡터 $v$ 에 대하여
 
-$$ |v| = \sqrt[]{v_1 ^{2}, \dots, v_n ^{2}} $$
+$$ |v| = \sqrt[]{v_1 ^{2}+\dots+v_n ^{2}} $$
 
 이다.
 
@@ -1012,6 +1012,26 @@ $$ v = tw $$
 
 - 영벡터는 모든 벡터와 나란하다고 정의한다.
 
+- 예시 
+
+  벡터 $v = (1,2,3)$ 과 같은 방향의 단위벡터를 구해보자.
+
+  $v$ 의 절댓값(크기)를 $t$ 라고 하고 $v$ 와 같은 방향의 단위벡터를 $a$ 라고 하자. 그러면 
+
+  $$ \sqrt[]{1 ^{2}+2 ^{2}+3 ^{3}} = t $$
+
+  이고 
+
+  $$ (1,2,3) = ta $$
+
+  이다. 따라서 
+
+  $$ a = \dfrac{1}{t}(1,2,3) = \dfrac{1}{\sqrt[]{14}}(1,2,3) $$
+
+  이다.
+
+  - 벡터 $v$ 방향으로의 단위벡터는 다음의 정의에서 좀 더 구체적으로 살펴보자.
+
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 벡터 방향으로의 단위 벡터 : 영벡터가 아닌 벡터 $v \neq 0$ 와 길이 $|v|$ 에 대하여 
@@ -1074,9 +1094,11 @@ $$ \frac{v}{|v|} $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-내적(inner product) : 두 벡터 $u ,v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 두 벡터 $u, v$ 의 내적은 스칼라
+내적(inner product) : $n$-공간 의 두 벡터 $u ,v$ 가 $u = \big < u_1, u_2, u_3, \dots, u_n \big >, v = \big  <v_1, v_2, v_3, \dots, v_n \big  >$ 일 때, 
 
-$$ u \cdot v = u_1v_1+u_2v_2+u_3v_3 $$
+두 벡터 $u, v$ 의 내적은 스칼라
+
+$$ u \cdot v := u_1v_1+u_2v_2+u_3v_3+\dots+u_nv_n = \sum_{i=1}^{n}u_iv_i $$
 
 이다. 
 
@@ -1105,6 +1127,18 @@ $$ u \cdot v = u_1v_1+u_2v_2+u_3v_3 $$
     $$ \therefore  u \cdot v = |u||v| \cos \theta $$
 
     이다.
+  
+- 내적의 성질 : 임의의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다. 
+
+  1. $u \cdot v = v \cdot u$
+
+  2. $(cu)\cdot v = u \cdot (cv) = c(u \cdot v)$
+
+  3. $u \cdot (v + w) = u \cdot v + u \cdot w$
+
+  4. $u \cdot u = |u| ^{2}$
+
+  5. $0 \cdot u = 0$
 
 - 내적은 두 벡터
 
@@ -1140,19 +1174,50 @@ $$ u \cdot v = u_1v_1+u_2v_2+u_3v_3 $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-내적의 성질 : 임의의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다. 
+정사영(orthogonal projection) : 영이 아닌 벡터 $a$ 와 임의의 벡터 $b$ 에 대하여, 벡터 $b$ 에서 직선 $\{ta|t \in \R\}$ 에 내린 수선의 발
 
-1. $u \cdot v = v \cdot u$
+$$ P _{a}(b) = \text{proj} _{a}b =  \dfrac{a \cdot b}{a \cdot a}a $$
 
-2. $(cu)\cdot v = u \cdot (cv) = c(u \cdot v)$
 
-3. $u \cdot (v + w) = u \cdot v + u \cdot w$
-
-4. $u \cdot u = |u| ^{2}$
-
-5. $0 \cdot u = 0$
+을 $a$ 에 대한 $b$ 의 정사영이라 한다.
 
 </blockquote>
+
+- 실수(스칼라) $\dfrac{a \cdot b}{a \cdot a}$ 를 벡터 $b$ 의 $a$ 성분이라고 한다.
+
+  - $a$ 가 단위벡터라면 
+
+    $$ a \cdot b $$
+
+    가 $b$ 의 $a$ 성분이다.
+
+- 즉, $a$ 에 대한 $b$ 의 정사영은 영이 아닌 벡터 $a$ 와 임의의 벡터 $b$ 에 대하여, $a$ 와 나란한 벡터 중 $b$ 와의 거리가 가장 가까운 벡터인 것이다.
+
+  ![](data:image/png;base64,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)
+
+- 증명
+
+  벡터 $a$ 와 나란한 벡터 $ta$ 중에서 $b$ 와 거리가 가장 가까운 것을 구하면 된다.
+
+  벡터 $b$ 와 $ta$ 사이의 거리의 제곱은 
+
+  $$ f(x) = |ta-b| ^{2} = (ta-b)\cdot (ta-b) $$
+
+  $$ = (a \cdot a) t^{2} - 2(a \cdot b)t+b \cdot b $$
+
+  이다. 그러면 $f(t)$ 는 임의의 실수 $t$ 에 대한 $2$차 다항함수이고, 최고차 항의 계수가 양수이다.
+
+  그러므로 $f(t)$ 는 
+
+  $$ 0 = f'(t) = 2(a \cdot a)t - 2(a \cdot b) $$
+
+  일 때, 즉 
+
+  $$ t = \dfrac{a \cdot b}{a \cdot a} $$
+
+  일 때 최솟값을 가진다.
+
+  $\therefore$ 그러므로 벡터 $b$ 와 거리가 가장 가까운 벡터 $ta$ 는 $\dfrac{a \cdot b}{a \cdot a} a$ 이다. ■ 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1272,9 +1337,7 @@ $$ u \cdot v = 0 $$
 
 - 증명 
 
-  $$ \cos \bigg ( \frac{\pi }{2} \bigg ) = 0 $$
-
-  $$ \cos ^{-1} 0 = \frac{\pi }{2} $$
+  $$ \cos \bigg ( \frac{\pi }{2} \bigg ) = 0 , \cos ^{-1} 0 = \frac{\pi }{2} $$
 
   이므로 벡터 $u, v$ 가 이루는 각이 $90 \degree = \dfrac{\pi }{2}$ 라면
 
@@ -1290,7 +1353,7 @@ $$ u \cdot v = 0 $$
 
   $$ \therefore u \cdot v = 0 $$
 
-  이다. 
+  이다. ■ 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1318,23 +1381,19 @@ $$ u \times v = (|u||v| \sin \theta) n $$
 
   - 위 그림의 빨간선이 벡터 $u, v$ 가 이루는 평면에 직교하는 단위벡터 $n$ 이다! 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+- 외적의 성질 : 임의의 벡터 $u, v, w$ 와 임의의 스칼라 $r, s$ 에 대하여 다음이 성립한다. 
 
-외적의 성질 : 임의의 벡터 $u, v, w$ 와 임의의 스칼라 $r, s$ 에 대하여 다음이 성립한다. 
+  1. $(ru) \times (sv) = (rs)(u \times v)$
 
-1. $(ru) \times (sv) = (rs)(u \times v)$
+  2. $u \times (v + w) = u \times v + u \times w$
 
-2. $u \times (v + w) = u \times v + u \times w$
+  3. $v \times u = -(u \times v)$
 
-3. $v \times u = -(u \times v)$
+  4. $(v+w)\times u = v \times u + w \times u$
 
-4. $(v+w)\times u = v \times u + w \times u$
+  5. $0 \times u=0$
 
-5. $0 \times u=0$
-
-6. $u \times (v \times w) = (u \cdot w)v - (u \cdot v)w$
-
-</blockquote>
+  6. $u \times (v \times w) = (u \cdot w)v - (u \cdot v)w$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1404,6 +1463,210 @@ $$ u \times v = 0 $$
 
   로 표현할 수 있다. 
 
+# 일차독립과 일차종속 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$3$차원 좌표공간의 표준단위벡터의 일차결합(linear combination) : $3$차원 좌표공간의 임의의 벡터 
+
+$$ v = (v_1, v_2, v_3) $$
+
+은 표준단위벡터 $i = (1,0,0),j = (1,0,0),k = (1,0,0)$ 에 의하여 
+
+$$ a = a_1i + a_2j + a_3 k $$
+
+로 표현할 수 있는데, 이와 같은 표현을 벡터 $i,j,k$ 의 일차결합이라 한다.
+
+</blockquote>
+
+- 예시 
+
+  $2$차원 좌표평면에서의 벡터 $i, j$ 를 $1$시방향 벡터 
+
+  $$ h_1 := (\cos 60 \degree , \sin 60 \degree ) = \dfrac{1}{2}(1, \sqrt[]{3}) $$
+
+  와 $5$시방향 벡터
+
+  $$ h_5 := (\cos 60 \degree , -\sin 60 \degree ) = \dfrac{1}{2}(1, -\sqrt[]{3}) $$
+
+  의 일차결합으로 표현하면
+
+  $$ i = h_1+h_5, j = \dfrac{1}{\sqrt[]{3}}h_1 - \dfrac{1}{\sqrt[]{3}}h_5 $$
+
+  이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+일차결합 또는 선형결합(linear combination) : 임의의 자연수 $k$ 에 대한 임의의 실수 $t_1, \dots, t_k$ 에 대하여 벡터 
+
+$$ t_1a_1 + \dots + t_ka_k $$
+
+를 $a_1, \dots, a_k$ 의 일차결합이라 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+일차종속 또는 선형종속(linearly dependent) : 일차결합의 정의에서 $a_1, \dots, a_k$ 중 어느 벡터 $a_i$ 가 나머지 벡터들의 일차결합이면 $a_1, \dots, a_k$ 를 일차종속이라 한다.
+
+</blockquote>
+
+- 예시 
+
+  $a_1, \dots, a_k$ 에서 $a_1$ 이 $a_2, \dots, a_k$ 의 일차결합이면 $a_1, \dots, a_k$ 는 일차종속이다.
+
+- 예시 
+
+  벡터 $a=(1,2,3),b=(2,4,6)$ 에서 $b=2a$ 이므로 이들은 일차종속이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+일차독립 또는 선형독립(linearly independent) : 일차결합의 정의에서 $a_1, \dots, a_k$ 가 일차종속이 아니면 $a_1, \dots, a_k$ 을 일차독립이라 한다.
+
+</blockquote>
+
+- 어떤 벡터 $a$ 가 일차독립이라는 것은 $a \neq 0$ 임을 뜻한다.
+
+- 자연수 $k$ 에 대한 벡터 $a_1, \dots, a_k$ 가 일차독립일 필요충분조건은 방정식 
+
+  $$ x_1a_1 + x_2a_2 + \dots + x_ka_k = 0 $$
+
+  의 해가 자명한 해 즉, $x_1=x_2=\dots=x_k=0$ 뿐인 것이다.
+
+  - 증명 
+
+    이 명제의 대우를 증명하려 해보자. 즉, 귀류법을 사용하자. 그러면 방정식
+
+    $$ x_1a_1 + x_2a_2 + \dots + x_ka_k = 0 $$
+
+    은 자명하지 않은 해 $(x_1, \dots, x_k)$ 를 갖는다. 즉, 어떤 $i \in \{1, \dots, k\}$ 에 대하여 $x_i \neq 0$ 이다. 그러므로 
+
+    $$ a_i = -\dfrac{x_1}{x_i}a_1 - \dots -\dfrac{x _{i-1}}{x_i}a _{i-1}-\dfrac{x _{i+1}}{x_i}a _{i+1} - \dots - -\dfrac{x _{k}}{x_i}a _{k} $$
+
+    인데 이것은 곧 $a_1, \dots, a_k$ 가 일차종속이라는 것이다.
+
+    가정과 모순이므로 벡터 $a_1, \dots, a_k$ 가 일차독립이면 방정식
+
+    $$ x_1a_1 + x_2a_2 + \dots + x_ka_k = 0 $$
+
+    은 자명한 해만을 갖는다.
+
+# $3$차원 좌표공간의 기저
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$3$차원 좌표공간의 생성 : $3$차원 좌표공간에서 실수 $v_1, v_2, v_3 \in \R$ 에 대한 벡터 $v=(v_1, v_2, v_3)$ 는 표준단위벡터 $i,j,k$ 의 일차결합인데,
+
+이때 $i,j,k$ 가 $3$차원 좌표공간을 생성한다고 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$-공간의 생성 : $n$-공간의 모든 벡터가 벡터 $a_1,\dots,a_n$ 의 일차결합이면,
+
+$a_1,\dots,a_n$ 는 $n$-공간을 생성한다.
+
+</blockquote>
+
+- 좌표평면에서는 $i,j$ 가 평면을 생성한다.
+
+- 예시 
+
+  $n$-공간의 임의의 벡터 $a=(a_1,\dots,a_n)$ 는 표준단위벡터들의 일차결합이다. 즉, 
+
+  $$ a=a_1e_1+a_2e_2+\dots+a_ne_n $$
+
+  이다. 그러므로 표준단위벡터 $e_1, \dots, e_n$ 는 $n$-공간을 생성한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$-공간의 기저(basis) : 일차독립이면서 $n$-공간을 생성하는 벡터 집합을 $n$-공간의 기저라고 한다.
+
+</blockquote>
+
+- 예시 
+
+  $n$-공간의 임의의 벡터 $a=(a_1,\dots,a_n)$ 는 표준단위벡터들의 일차결합이다. 즉, 
+
+  $$ a=a_1e_1+a_2e_2+\dots+a_ne_n $$
+
+  이다. 그러므로 표준단위벡터 $e_1, \dots, e_n$ 는 $n$-공간을 생성한다.
+
+  그런데 벡터 $e_2, \dots, e_n$ 의 어떤 일차결합도 첫번째 성분이 $0$ 이 되므로 $e_1$ 의 일차결합이 될 수 없다. 같은 원리로 $e_i$ 는 $e_1, \dots, e _{i-1},e _{i+1}, \dots,e_n$ 의 일차결합일 수 없다. 그러므로 표준단위벡터 $e_1, \dots, e_n$ 은 서로 일차독립이다.
+
+  표준단위벡터는 일차독립이면서 $n$-공간을 생성한다. 따라서 표준단위벡터는 $n$-공간의 기저이다. ■ 
+
+# 벡터공간과 차원 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+벡터공간(vector space) : $\R ^{n}$ 처럼 원소의 합과 상수배가 정의되어 있는 집합, 즉 대수구조이다.
+
+</blockquote>
+
+- 선형대수학이란 벡터공간을 연구하는 학문이다.
+
+- 이 집합의 원소를 벡터라고 한다.
+
+- 좌표공간에서처럼 일반적인 벡터공간 $V$ 에서도 기저를 보일 수 있다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+차원(dimension) : 벡터공간 $V$ 과 자연수 $n, k$ 에 대한 임의의 두 기저
+
+$$ v_1, \dots, v_n $$
+
+$$ w_1, \dots, w_k $$
+
+에 대하여 항상 $n=k$ 인데, 
+
+이 $n$ 을 $V$ 의 차원이라고 한다.
+
+</blockquote>
+
+- 증명 
+
+  벡터 $v_1, \dots, v_n$ 는 벡터공간 $V$ 의 기저이므로 $V$ 를 생성한다. 그러므로 벡터공간 $V$ 의 모든 벡터를 $v_1, \dots, v_n$ 의 일차결합으로 나타낼 수 있다. 
+
+  따라서 $i \in \{1, \dots, k\}, j \in \{1,\dots,n\}$ 에 대한 임의의 실수 $a _{ij}$ 에 대하여
+
+  $$ w _{i} = \sum_{j=1}^{n}a _{ij}v _{j} $$
+
+  로 나타낼 수 있다.
+
+  한편 이때 방정식
+
+  $$ x_1w_1 + x_2w_2 + \dots + x_kw_k = 0 $$
+
+  은 
+
+  $$ \sum_{i=1}^{k}x_iw_i = x_1w_1 +x_2w_2+\dots +x_kw_k $$
+
+  $$ = x_1(a _{11}v_1 + a _{12}v_2 + a _{1n}v_n) + $$
+
+  $$   x_2(a _{21}v_1 + a _{22}v_2 + a _{2n}v_n) + $$
+
+  $$ \vdots $$
+
+  $$   x_k(a _{k1}v_1 + a _{k2}v_2 + a _{kn}v_n) $$
+
+  이다. 이것은 $x_1a_{11}v_1$ 에서 $x_ka_{kn}v_n$ 까지 더한 것이므로 
+
+  $$ = \sum_{j=1}^{n}\bigg (\sum_{i=1}^{k}x_ia_{ij}\bigg )v_j $$
+
+  이다. 그런데 이 방정식은 $w_1, \dots, w_k$ 가 기저이고, 이에따라 일차독립이므로 자명한 해 $x_1 = x_2 = \dots = x_k = 0$  만 가진다.
+
+  그러므로 
+
+  $$ (a _{11}v_1 + a _{12}v_2 + a _{1n}v_n), \dots (a _{k1}v_1 + a _{k2}v_2 + a _{kn}v_n) $$
+
+  는 일차독립이다.
 
 
 
+
+
+- 예시 
+
+  $\R ^{n}$ 의 차원은 $n$ 이다.
