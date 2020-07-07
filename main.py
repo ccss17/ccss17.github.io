@@ -85,13 +85,13 @@ def update(think):
 ## 미적분 메모
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0; padding: 7px;">
-{sections('극한 메모', 'calculus', get_definitions)}
-{sections('미분 메모', 'calculus2', get_definitions)}
-{sections('적분 메모', 'calculus3', get_definitions)}
-{sections('미분2 메모', 'calculus4', get_definitions)}
-{sections('적분2 메모', 'calculus5', get_definitions)}
+{sections('극한 메모', 'cal', get_definitions)}
+{sections('미분 메모', 'cal2', get_definitions)}
+{sections('적분 메모', 'cal3', get_definitions)}
+{sections('미분2 메모', 'cal4', get_definitions)}
+{sections('적분2 메모', 'cal5', get_definitions)}
 {sections('벡터해석학 메모', 'vector', get_definitions)}
-{sections('미적분 메모', 'calculus6', get_definitions)}
+{sections('미적분 메모', 'cal6', get_definitions)}
 
 </blockquote>
 
