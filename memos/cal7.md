@@ -2,6 +2,141 @@
 
 ---
 
+# <a name="미분(differential)" href="#미분(differential)">미분(differential)</a>
+
+
+## <a name="이변수 함수 선형화" href="#이변수 함수 선형화">이변수 함수 선형화</a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+접평면(tangent plane) : $3$ 차원 곡면의 한 접점에 존재하는 무수히 많은 접선들이 동시에 상주하고 있는 평면이다.
+
+![index](https://user-images.githubusercontent.com/16812446/79077468-ec0ce800-7d3c-11ea-8d57-3c992ab66d6e.jpg)
+
+</blockquote>
+
+- 위 그림과 같이 어떤 곡면에는 접선이 무수히 많고 그 접선들이 상주하는 평면이 곡면의 접평면이다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+법선벡터(normal vector) : 접평면에 직교하는 벡터이다.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Surface_normal_illustration.svg/220px-Surface_normal_illustration.svg.png)
+
+</blockquote>
+
+- 즉 법선벡터는 위 그림의 화살표 벡터와 같이 $3$ 차원 곡면의 한 접점에서의 모든 접선과 직교한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+이변수 함수 선형화 또는 접평면(tangent plane) : $f$ 의 연속인 편도함수들이 존재할 때 점 $P(x_0, y_0, z_0)$ 에서 곡면 $z = f(x, y)$ 에 대한 접평면의 방정식은 
+
+$$ z - z_0 = f_x(x_0, y_0)(x- x_0) + f_y(x_0, y_0)(y - y_0) $$
+
+또는 
+
+$$ L(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y - y_0)
+
+$$
+
+이고 이것은 이변수 함수 $f(x, y)$ 의 선형화이다. 
+
+</blockquote>
+
+- 또한 점 $P(x_0, y_0, z_0)$ 근방에서 
+
+  $$ f(x, y) \approx L(x, y) $$
+
+  이 성립한다.
+
+  일변수 함수 $f$ 를 $x=a$ 에서 끝없이 확대했을 때 $x=a$ 에서 접선과 거의 똑같아지는 것과 같이 이변수 함수 $f$ 를 끝없이 확대하면 접평면의 방정식과 거의 똑같아지기 때문이다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+이변수 함수 미분 또는 전미분(total differential) : 점 $(x_0, y_0)$ 에서 점 $(x_0 + dx, y_0 + dy)$ 로 움직였을 때의 변화량 
+
+$$ df = f_x(x_0, y_0)dx + f_y (x_0, y_0)dy $$
+
+또는
+
+$$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
+
+을 함수 $f$ 의 전미분이라 한다. 
+
+</blockquote>
+
+- $y = f(x, y)$ 가 미분가능한 함수이면 점 $(x_0, y_0)$ 에서 편미분계수가 존재한다. 이 점에서 조금 움직인 점 $(x_0+\Delta x, y_0+\Delta y)$ 를 생각할 수 있고 이때의 함수 $f$ 의 변화량
+
+  $$ \Delta f =f(x_0+\Delta x, y_0+\Delta y)- f(x_0, y_0) $$
+
+  을 생각할 수 있다. 
+
+  이때 접평면의 변화량 
+
+  $$ \Delta L = L(x_0 + \Delta x, y_0 + \Delta y) - L(x_0, y_0) $$
+
+  을 접평면의 방정식을 사용하여 풀면
+
+  $$ = f_x(x_0, y_0)\Delta x + f_y(x_0, y_0)\Delta y $$
+
+  이다. 
+
+  이때 $dx, dy$ 는 독립변수이므로 임의의 값을 대입할 수 있다. 또한 우리는 보통
+
+  $$ dx = \Delta x = x - x_0, dy = \Delta y = y - y_0 $$
+
+  으로 정의한다.
+
+- 편미분이 변수 하나에 대한 함수의 변화량을 생각했다면 전미분은 모든 변수에 대한 변화량에 따라 함수가 얼마나 변하는지를 측정한다. 
+
+- 예시 
+
+  반지름이 $r = 1$ 이고 높이가 $h = 5$ 인 원통이 있다고 하자. 이때 반지름과 높이를 변화시켜서 
+
+  $$ dr = +0.03, dh = -0.1 $$
+
+  가 되게 한다고 하자. 이때 부피의 변화량을 구해보자. 
+
+  먼저 부피 $V$ 는 다음과 같은 이변수 함수다.
+
+  $$ V = V(r, h) = \pi r ^{2}h $$
+
+  $V$ 를 선형 근사시키면(전미분하면)
+
+  $$ \Delta V \approx dV = V_r(r_0, h_0)dr + V_h(r_0, h_0)dh $$
+
+  이다.
+
+  $$ V_r = 2 \pi rh, V_h = \pi r ^{2} $$
+
+  이므로
+
+  $$ dV = 2 \pi r_0h_0dr + \pi r_0 ^{2}dh = 2 \pi 1 \cdot 5 \cdot (0.03) + \pi (1) ^{2}(-0.1) = 0.3 \pi - 0.1 \pi = 0.2 \pi \approx 0.63 cm ^{3} $$
+
+  을 얻는다. 
+
+- 예시 
+
+  $2.5m$ 높이와 $0.5m$ 반지름의 원뿔형 물탱크의 부피가 반지름과 높이의 변화에 얼마나 민감하게 변하는지 조사하려 한다.
+
+  먼저 부피 $V$ 는 
+
+  $$ V = \pi r ^{2} h $$
+
+  이며, 각 변수에 대한 전미분은 다음과 같다. 
+
+  $$ dV = V_r(0.5, 2.5)dr + V_h(0.5,2.5)dh $$
+
+  $$ =(2 \pi rh)_{(0.5, 2.5)} dr + (\pi r ^{2})_{(0.5,2.5)}dh $$
+
+  $$ = 2.5 \pi dr + 0.25 \pi dh $$
+
+  따라서 반지름 $r$ 의 단위 $1$ 변화는 전체 부피 $V$ 를 $2.5 \pi$ 변하게 하고
+
+  높이 $h$ 의 단위 $1$ 변화는 전체 부피 $V$ 를 $0.25\pi$ 변하게 한다.
+
+  이로보아 반지름이 변할 때 물탱크의 전체 부피가 훨씬 더 민감하게 변한다는 것을 알 수 있다. 
+
 # <a name="방향미분과 편미분의 일반적인 정의" href="#방향미분과 편미분의 일반적인 정의">방향미분과 편미분의 일반적인 정의</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
@@ -240,12 +375,22 @@ $$ \text{grad}\ f(P) := (D_1f(P), \dots, D_nf(P)) $$
 
 - 설명 
 
-  $n=1$ 일 때 $n$-공간에서 함수 $f(x)$ 가 점 $p$ 에서 미분가능하다는 것은 $x=p$ 에서 미분계수 $f'(p)$ 가 존재한다는 것
+  $n=1$ 일 때 $n$-공간에서 함수 $f(x)$ 가 점 $p$ 에서 미분가능하다는 것은 $x=p$ 에서 미분계수 $f'(p)$ 가 존재한다는 것, 즉 평균변화율의 우극한과 좌극한이 같다는 것이었다. 이는 다시 말해 $x=p$ 에서 좌미분계수와 우미분계수가 같다는 것이다.
 
   기하학적으로 함수 $f$ 의 그래프가 점 $(p, f(p))$ 에서 접선을 가진다는 것이었다.
 
-  점 $(p, f(p))$ 를 지나는 직선의 방정식은 
+  점 $(p, f(p))$ 를 지나는 직선의 방정식은 어떤 실수 $a$ 에 대하여
 
   $$ y = f(p)+a(x-p) $$
 
-  이었고, 이 직선이 $x=p$ 일 때
+  이었고, 이 직선이 $x=p$ 일 때 $y=f(x)$ 와 접한다는 것은 
+
+  **(무슨 이유인지 모르겠지만)** $f(x)$ 와 $f(p) + a(x-p)$ 의 차가 $0$ 에 접근하는 것이 $x$ 가 $p$ 의 차가 $0$ 에 접근하는 것보다 훨씬 빠르다 **(이게 대체 무슨말일까?)** 는 뜻, 즉
+
+  $$ \lim_{x \to p} \dfrac{f(x) - f(p) -a(x-p)}{x-p} = 0 $$
+
+  이라고 한다. 
+
+  그러므로 $n$-공간에서도 함수 $f$ 가
+
+

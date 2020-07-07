@@ -484,17 +484,299 @@ $$ f _{xy}(a, b) = f _{yx}(a, b) $$
 
   가 동일한 것은 우연의 일치가 아니다. 혼합 편미분 정리에 의하여 이 둘이 같은 것이다. 
 
+# <a name="다변수 합성 함수의 미분" href="#다변수 합성 함수의 미분">다변수 합성 함수의 미분</a>
+
+## <a name="선형근사" href="#선형근사">선형근사</a>
+
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-이변수 함수의 미분가능성 : 
+선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 접선의 방정식
 
-**구체화 필요**
+$$ L(x) = f'(a)(x-a) + f(a) $$
+
+를 함수 $f$ 의 선형화라고 한다.
 
 </blockquote>
 
+- 다음 그래프는 $y = x^2, y = 2x-1$ 이다. 그런데 $x=1$ 지점에서 그래프를 더 확대해보면 다음과 같다. 
+
+  <img src="https://user-images.githubusercontent.com/16812446/79032028-2b70f280-7bde-11ea-84c5-a63f705c0906.png" width="30%" height="auto"> <img src="https://user-images.githubusercontent.com/16812446/79032042-43e10d00-7bde-11ea-94f6-9056afab3f22.png" width="30%" height="auto"> <img src="https://user-images.githubusercontent.com/16812446/79032074-991d1e80-7bde-11ea-9a8f-3e636d9bb31b.png" width="30%" height="auto">
+
+  그러면 거의 두 함수를 분간할 수가 없다. 
+
+  이것은 원함수의 임의의 점 $x=a$ 에서의 접선을 그렸을 때 $x=a$ 를 중심으로 그래프를 끝없이 확대해보면 원함수와 접선이 거의 똑같아지는 것을 의미한다.
+
+- 이 현상을 이용하여 $x=a$ 에서 원래의 함수를 선형 근사시킬 수 있는 방법을 $x=a$ 에서의 접선 
+
+  $$ L(x) = f'(a)(x-a) + f(a) $$
+
+  을 구하는 것이라 할 수 있다. 
+
+- 예시 
+
+  $y = \sqrt[]{1+x}$ 을 $x = 0$ 에서 선형근사시켜보면 다음과 같다.
+
+  $$ \sqrt[]{1+x} \approx 1 + \frac{x}{2} $$
+
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-이변수 합성함수의 도함수(chain rule) 또는 일독립변수와 이매개변수에 대한 도함수 : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t)$ 가 미분가능하면
+표준 선형 근사(standard linear approximation) : 선형화의 정의에서 $x=a$ 에서 함수 $f$ 의 함수 $L$ 에 의한 근사
+
+$$ f(x) \approx L(x) $$
+
+를 표준 선형 근사라한다.
+
+</blockquote>
+
+- 이때 $x=a$ 를 근사의 중심이라 한다. 
+
+## <a name="미분(differential)" href="#미분(differential)">미분(differential)</a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+미분(differential) : $y = f(x)$ 를 미분가능한 함수이고 미분 $dx$ 가 독립변수일 때 미분 $dy$ 는 
+
+$$ dy = f'(x)dx $$
+
+이다. 
+
+</blockquote>
+
+- $dx$ 와 $x$ 가 독립변수인 반면 $dy$ 는 종속변수이다. 즉, $dy$ 는 $x, dx$ 에 의해 결정된다.
+
+- 가끔 $dy = f'(x)dx$ 를 다음과 같이 미분 $f$ 로도 표현한다.
+
+  $$ df = f'(x)dx $$
+
+- 미분은 서로 다른 두 개념인 differentiation(미분) 과 differential(미분) 으로 동시에 쓰인다. 전자는 도함수를 얻는다는 뜻의 differentiate 의 명사형이다. 후자 differential 은 원함수의 선형근사함수를 뜻한다.
+
+  가령 함수 $f(x)$ 의 한 점 $a$ 에서의 미분(differential) 은 
+
+  $$ df(\Delta x) = f'(a)\Delta x $$
+
+  로 표현되는 선형근사함수이다. 
+
+- 기하학적 의미 
+
+  ![image](https://user-images.githubusercontent.com/16812446/86736612-a11a1c80-c06e-11ea-8b4f-20ed5748ea3c.png)
+
+  > 출처 : [Thomas' CALCULUS](https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078) Figure3.55
+
+  기하학적 의미는 이렇다.
+  
+  위 그림에서 $x = a, dx = \Delta x$ 로 두자. $x$ 의 증분 $\Delta x$ 는 $x = a$ 에서 $x = a + \Delta x$ 의 거리
+
+  $$ \Delta x = (\Delta x + a) - (a) $$
+
+  로 두자. 
+  
+  $x$ 증분에 따른 $y=f(x)$ 의 변화는 $\Delta y = f(a + dx) - f(a)$ 이다. 
+  
+  $x$ 증분에 따른 접선 $L(x) = f'(a)(x-a) + f(a)$ 의 변화는 
+  
+  $$\Delta L = L(a + dx) - L(a)$$
+
+  $$ = f'(a)\{(a+dx)-a\} +f(a) -f(a) $$
+
+  $$ = f'(a)dx $$
+
+  이다.
+
+  이것의 의미는 $\Delta L = f'(a)dx = dy$ 이므로 $f$ 의 선형화(접선 $L$)의 변화가 정확하게 $x=a, dx = \Delta x$ 일때 미분(differential) $dy$ 와 똑같다는 것이다.
+
+  그러므로 우리는 $dx = \Delta x$ 일때 미분(differential) $dy$ 가 정확하게 접선의 변화량을 나타내준다는 것을 알 수 있다.
+
+  만약 $dx \neq 0$ 이라면 다음과 같이 미분(differential) $dy$ 를 $dx$ 로 나누어 얻은 것이 도함수 $f'(x)$ 와 정확하게 일치한다는 것을 알 수 있다.
+
+  $$ dy \div dx = \dfrac{f'(x)dx}{dx} = f'(x) = \dfrac{dy}{dx} $$
+
+- 예시 
+
+  $y = x ^{5} + 37x$ 에서의 $dy$ 를 찾자. 
+
+  $$ dy = (5x ^{4} + 37)dx $$ □ 
+
+  이때 $x=1,dx=0.1$ 에서 $dy$ 값을 찾으면
+
+  $$ dy = (5 \cdot 1   ^{4} + 37)(0.2) = 8.4 $$
+
+  이다. ■ 
+
+- 예시 
+
+  합성함수 미분법(Chain Rule) 과 다른 미분법을 함께 사용할 수 있다. 
+
+  먼저 일반적인 미분(differentiation) 의 관점에서 $(\tan x)' = \sec ^{2}x$ 이므로 $(\tan 2x)'$ 에서 $2x = t$ 로 두면 
+
+  $$ \dfrac{d \tan 2x}{dx} = \dfrac{d \tan t}{dx} = \dfrac{d \tan t}{dt}\cdot \dfrac{d2x}{dx} = \sec ^{2}t \cdot 2 = 2 \sec ^{2}(2x) $$
+
+  이다.
+
+  이제 미분(differential) 의 관점에서
+
+  $$ d (\tan  2x) = \sec ^{2}(2x)d(2x) $$ 
+
+  에서 $d(2x)$ 을 함수 $y = 2x$ 를 $x$ 에 대하여 하는 미분(differential) 으로 보면 $d(2x) = (2x)'dx = 2dx$ 이므로
+
+  $$ d (\tan 2x) = 2 \sec ^{2} (2x) dx $$
+
+  이다. 
+
+## <a name="미분 추정" href="#미분 추정">미분 추정</a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+미분의 추정(estimating with differentials) : 함수 $f(x)$ 가 $x = a$ 에서 미분가능할 때 $x = a$ 의 근방 $x = a + dx$ 에서 함수값이 변하는 정도 $f(a + dx)$ 는 근사적으로
+
+$$ f(a + dx) \approx f(a) + dy $$
+
+이다. 
+
+</blockquote>
+
+- $y$ 의 증분은 $\Delta y = f(a + \Delta x) - f(a)$ 이다. 이때 $dx= \Delta x$ 가 충분히 작으면 $y$ 의 증분 $\Delta y$ 는 미분 $dy$ 와 거의 똑같아진다. 왜냐하면 함수 $f$ 의 접선 $L$ 의 증분 $\Delta L = f'(a)dx = dy$ 이 $x = a$ 의 근방에서 함수 $f$ 의 증분 $\Delta y$ 와 거의 똑같아지기 때문이다. 그러므로 $x = a$ 근방에서 
+
+  $$ f'(a)dx = dy \approx \Delta y $$
+
+  라 할 수 있고, 이에 따라
+
+  $$ f(a + dx) = f(a) + \Delta y $$
+
+  를 근사적으로 
+
+  $$ f(a + dx) \approx  f(a) + dy $$
+
+  로 쓸 수 있다. 
+
+- 예시 
+
+  $7.97 ^{\frac{1}{3}}$ 을 추산해보자. 
+
+  $f(x) = x ^{\frac{1}{3}}$ 의 미분(differential)은 $dy = \dfrac{1}{3x ^{\frac{2}{3}}}dx$ 이다. 이때 $a = 8$ 로 둔다면 $7.97$ 을 $x = a$ 근방의 함수 $f$ 의 접선의 함수값으로 생각할 수 있다. 그렇다면 $dx = -0.03$ 으로 둘 때 $x = a$ 에서의 함수값 $f(7.97)$ 을 다음과 같이 근사시킬 수 있다. 
+
+  $$ f(7.97) = f(a + dx) \approx f(a) + dy $$
+
+  그러면 $f(a) + dy = f(a) + f'(a)dx$ 에서 $f'(x) = \frac{1}{3x ^{\frac{2}{3}}}$ 이고 $dx = -0.03$ 으로 두었으므로
+
+  $$ = 8 ^{\frac{1}{3}} + \frac{1}{3(8)^{\frac{2}{3}}}(-0.03) = 1.9975 $$
+
+  이다. 따라서 
+
+  $$ \therefore  7.97 ^{\frac{1}{3}} \approx 1.9975 $$
+
+  이다. ■ 
+
+- 예시
+
+  원의 반지름 $r$ 이 $a=10$ 에서 $a=10.1$ 로 변했을 때 원의 넓이 $A$ 를 추정해보자.
+
+  먼저 원의 정확한 넓이는 $A = \pi r ^{2}$ 이고 $a=10, dr = 0.1$ 이므로 미분(differential) 을 구하여
+
+  $$ dA = A'(a)dr = 2 \pi adr = 2 \pi (10)(0.1) = 2 \pi $$
+
+  을 얻는다.
+
+  그런데 $A(r + \Delta r) \approx A(r)+dA$ 이므로 
+
+  $$ A(10 + 0.1) \approx A(10)+2 \pi = \pi (10)^{2}+2 \pi =102 \pi $$
+
+  를 얻는다. 그러므로 반지름 $r=10.1$ 일 때 원의 넓이를 미분 추정해보면 $102 \pi$ 이다. ■ 
+
+  실제 넓이는 $A(10.1) = \pi (10.1) ^{2} = 102.01 \pi$ 이므로 오차는 $\Delta A - dA = 0.01 \pi$ 이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+미분근사의 오차(error in differential approximation) : 함수 $y=f(x)$ 가 $x=a$ 에서 미분가능하고 $x$ 가 $a$ 에서 $a+\Delta x$ 로 변할 때 함수 $y$ 의 변화량 $\Delta y$ 은
+
+$\Delta x \to 0 \Rightarrow \epsilon \to 0$ 인 오차량 $\epsilon = \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a)$ 에대하여
+
+$$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
+
+이다.
+
+</blockquote>
+
+- 설명 
+
+  함수 $f(x)$ 가 $x=a$ 에서 미분가능하다고 하고 $x$ 의 변화량을 $dx = \Delta x$ 라고 하자.
+
+  그러면 $x$ 가 $a$ 에서 $a+ \Delta x$ 변할 때 함수 $f$ 의 변화를 표현하는 두 가지 방법이 있다.
+
+  1. 진짜 변화량 : $\Delta f = f(a+\Delta x)-f(a)$
+
+  2. 미분 추정량 : $df = f'(a)\Delta x$
+
+  이때 미분 추정량 $df$ 는 진짜 변화량 $\Delta f$ 와 얼마나 차이가 날까? 이것은 단순히 $\Delta f$ 로부터 $df$ 를 빼보면 알 수 있다.
+
+  그러므로 추정오차량은
+
+  $$ \text{(추정오차량)} = \Delta f - df = \Delta f - f'(a)\Delta x $$
+
+  $$ = f(a+\Delta x)-f(a)-f'(a)\Delta x $$
+
+  $$ = \bigg ( \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a) \bigg )\cdot \Delta x $$
+
+  인데 오차량을 $\epsilon = \bigg ( \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a) \bigg )$ 로 두면
+
+  $$ = \epsilon \cdot \Delta x $$
+
+  이다.
+
+  그런데 $\Delta x \to 0$ 일 때 미분계수의 정의에 따라 $\dfrac{f(a+\Delta x) - f(a)}{\Delta x} \to f'(a)$ 이다. 그러므로 실질적으로 $\epsilon$ 은 매우 작은양으로 줄어든다. 즉,
+
+  $$ \Delta x \to 0 \Rightarrow \epsilon \to 0 $$
+
+  이다. 따라서 $\Delta x$ 가 매우 작으면 오차량 $\epsilon$ 도 함께 매우 작아진다. 이때 $\Delta f - df = \epsilon \cdot \Delta x$ 이므로 $\Delta f = df + \epsilon \Delta x$ 즉,
+
+  $$ \underbrace{\Delta f}_{\text{true change}} = \underbrace{f'(a)\Delta x}_{\text{estimated change}} + \underbrace{\epsilon \Delta x}_{error} $$
+
+  를 얻는다.
+
+- 예시
+
+  원의 반지름 $r$ 이 $a=10$ 에서 $a=10.1$ 로 변했을 때 원의 넓이 $A$ 를 추정해보고 오차를 조사하자.
+
+  먼저 원의 정확한 넓이는 $A = \pi r ^{2}$ 이고 $a=10, dr = 0.1$ 이므로 미분(differential) 을 구하여
+
+  $$ dA = A'(a)dr = 2 \pi adr = 2 \pi (10)(0.1) = 2 \pi $$
+
+  을 얻는다.
+
+  그런데 $A(r + \Delta r) \approx A(r)+dA$ 이므로 
+
+  $$ A(10 + 0.1) \approx A(10)+2 \pi = \pi (10)^{2}+2 \pi =102 \pi $$
+
+  를 얻는다. 그러므로 반지름 $r=10.1$ 일 때 원의 넓이를 미분 추정해보면 $102 \pi$ 이다. 
+
+  실제 넓이는 $A(10.1) = \pi (10.1) ^{2} = 102.01 \pi$ 이므로 
+  
+  $$ \Delta A = (102.01 - 100) \pi = (\underbrace{2 \pi}_{dA}  + \underbrace{0.01 \pi}_{\text{error}}) $$
+  
+  에서 $\Delta A - dA = \epsilon \Delta r = 0.01 \pi$ 이다. 따라서 최종적으로 오차량 
+  
+  $$\epsilon = \dfrac{0.01 \pi}{\Delta r} = \dfrac{0.01 \pi }{0.1} = 0.1 \pi$$ 
+  
+  을 얻는다. ■ 
+
+## <a name="이변수함수의 미분가능성 " href="#이변수함수의 미분가능성 ">이변수함수의 미분가능성 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+이변수함수의 미분가능 : 점 $(x_0,y_0)$ 에 대한 이변수함수 $z=f(x,y)$ 의 편미분 $f_x(x_0, y_0), f_y(x_0,y_0)$ 이 존재하고 함수 $z$ 의 변화량 $\Delta z$ 가 
+
+$\Delta x, \Delta y \to 0 \Rightarrow \epsilon _1, \epsilon _2 \to 0$ 에 대한 방정식
+
+$$ \Delta z = f_x(x_0,y_0)\Delta x+f_y(x_0,y_0)\Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y $$
+
+을 만족하면 $f$ 는 모든 정의역에서 미분가능하다.
+
+</blockquote>
+
+- 그리고 미분가능한 이변수함수의 그래프를 매끄러운 곡면(smooth surface)이라고 한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+일독립변수와 이매개변수에 대한 도함수 : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t)$ 가 미분가능하면
 
 $t$ 에 대한 이변수 합성함수 $w = f(x(t), y(t))$ 는 미분가능하며 그 도함수는 
 
@@ -510,7 +792,30 @@ $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w
 
 - 증명 
 
-  (생략)**구체화 필요**
+  증명은 $x,y$ 가 $t=t_0$ 에서 미분가능하면 $w$ 도 $t_0$ 에서 미분가능하고 
+
+  점 $P_0 = (x(t_0),y(t_0))$ 에 대하여
+
+  $$ \bigg (\dfrac{dw}{dt}\bigg )_{t_0} = \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0} \bigg (\dfrac{d x}{d t}\bigg )_{t_0} +\bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \bigg (\dfrac{d y}{d t}\bigg )_{t_0} $$
+
+  가 성립함을 보임으로써 완성된다.
+
+  먼저 $\Delta x, \Delta y, \Delta w$ 를 $t$ 가 $t_0$ 에서 $t_0 + \Delta t$ 로 변할때의 증분이라고 하자. 이변수함수 $f$ 가 미분가능하다고 가정했으므로
+
+  $\Delta x,y \to 0 \Rightarrow \epsilon _{1}, \epsilon _{2} \to 0$ 에 대하여
+
+  $$ \Delta w =  \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0}\Delta x+ \bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y $$
+
+  이 성립한다.
+
+  이 식을 $\Delta t$ 로 나누면
+
+  $$ \dfrac{\Delta w}{\Delta t}  =  \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0} \dfrac{\Delta x}{\Delta t} + \bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \dfrac{\Delta y}{\Delta t}+\epsilon _1  \dfrac{\Delta x}{\Delta t}+\epsilon _2 \dfrac{\Delta y}{\Delta t} $$
+
+  를 얻는다. 이때 $\Delta t \to 0$ 이면
+
+  $$ \lim_{\Delta t \to 0} \dfrac{\Delta w}{\Delta t}  =  \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0} \bigg (\dfrac{dx}{dt}\bigg )_{t_0} + \bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \bigg (\dfrac{dy}{dt}\bigg ) _{t_0}+0 \cdot  \dfrac{\Delta x}{\Delta t}+0 \cdot \dfrac{\Delta y}{\Delta t} $$
+
 
 - 예시 
 
@@ -556,7 +861,7 @@ $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w
 
 - 증명 
 
-  (생략)**구체화 필요**
+  일독립변수와 이매개변수에 대한 도함수의 증명과 동일하다.
 
 - 예시 
 
@@ -1109,335 +1414,3 @@ $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\
 이다.
 
 </blockquote>
-
-# <a name="선형화" href="#선형화">선형화</a>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 접선의 방정식
-
-$$ L(x) = f'(a)(x-a) + f(a) $$
-
-를 함수 $f$ 의 선형화라고 한다.
-
-</blockquote>
-
-- 다음 그래프는 $y = x^2, y = 2x-1$ 이다.
-
-  ![desmos-graph(1)](https://user-images.githubusercontent.com/16812446/79032028-2b70f280-7bde-11ea-84c5-a63f705c0906.png)
-
-  그런데 $x=1$ 지점에서 그래프를 더 확대해보면 다음과 같다. 
-
-  ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/79032042-43e10d00-7bde-11ea-94f6-9056afab3f22.png)
-
-  여기에서 더 확대해보자. 
-
-  ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/79032074-991d1e80-7bde-11ea-9a8f-3e636d9bb31b.png)
-
-  그러면 거의 두 함수를 분간할 수가 없다. 
-
-  이것은 원함수의 임의의 점 $x=a$ 에서의 접선을 그렸을 때 $x=a$ 를 중심으로 그래프를 끝없이 확대해보면 원함수와 접선이 거의 똑같아지는 것을 의미한다.
-
-- 이 현상을 이용하여 $x=a$ 에서 원래의 함수를 선형 근사시킬 수 있는 방법을 $x=a$ 에서의 접선 
-
-  $$ L(x) = f'(a)(x-a) + f(a) $$
-
-  을 구하는 것이라 할 수 있다. 
-
-- 예시 
-
-  $y = \sqrt[]{1+x}$ 을 $x = 0$ 에서 선형근사시켜보면 다음과 같다.
-
-  $$ \sqrt[]{1+x} \approx 1 + \frac{x}{2} $$
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-표준 선형 근사(standard linear approximation) : 선형화의 정의에서 $x=a$ 에서 함수 $f$ 의 함수 $L$ 에 의한 근사
-
-$$ f(x) \approx L(x) $$
-
-를 표준 선형 근사라한다.
-
-</blockquote>
-
-- 이때 $x=a$ 를 근사의 중심이라 한다. 
-
-## <a name="미분 " href="#미분 ">미분 </a>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-미분(differential) : $y = f(x)$ 를 미분가능한 함수이고 미분 $dx$ 가 독립변수일 때 미분 $dy$ 는 
-
-$$ dy = f'(x)dx $$
-
-이다. 
-
-</blockquote>
-
-- 가끔 $dy = f'(x)dx$ 를 다음과 같이 미분 $f$ 로도 표현한다.
-
-  $$ df = f'(x)dx $$
-
-- 미분은 서로 다른 두 개념인 differentiation(미분) 과 differential(미분) 으로 동시에 쓰인다. 전자는 도함수를 얻는다는 뜻의 differentiate 의 명사형이다. 후자 differential 은 원함수의 선형근사함수를 뜻한다.
-
-  가령 함수 $f(x)$ 의 한 점 $a$ 에서의 미분(differential) 은 
-
-  $$ df(\Delta x) = f'(a)\Delta x $$
-
-  로 표현되는 선형근사함수이다. 
-
-- 기하학적 의미 
-
-  $x = a, dx = \Delta x$ 로 두자. $x$ 의 증분 $\Delta x$ 는 $x = a$ 에서 $x = a + \Delta x$ 의 거리
-
-  $$ \Delta x = (\Delta x + a) - (a) $$
-
-  로 두자.
-
-  그러면 우선 $y$ 의 증분 
-
-  $$ \Delta y = f(a + \Delta x) - f(a) $$
-
-  은
-
-  $$ \Delta y = f(a + dx) - f(a) $$
-
-  이다. 한편 $x = a$ 에서 접선은 
-
-  $$ L(x) = f'(a)(x-a) + f(a) $$
-
-  이므로 $x = a$ 근방에서 접선의 변화를 
-
-  $$ \Delta L = L(a + dx) - L(a) $$
-
-  에서
-
-  $$ = f'(a)\{(a+dx)-a\} +f(a) -f(a) $$
-
-  $$ = f'(a)dx $$
-
-  이므로 
-
-  $$ \Delta L = f'(a)dx = dy $$
-
-  이다. 
-
-  이것은 함수 $f$ 의 $x=a$ 에서 선형근사함수 $L(x)$ 의 변화가 $x = a$ 이고 $dx = \Delta x$ 일 때 $dy$ 과 정확히 일치한다는 것이다. 
-
-- 예시 
-
-  $y = x ^{5} + 37x$ 에서의 $dy$ 를 찾자. 
-
-  $$ dy = (5x ^{4} + 37)dx $$
-
-- 예시 
-
-  합성함수 미분법(Chain Rule) 과 다른 미분법을 함께 사용할 수 있다. 
-
-  $$ d (\tan  2x) = \sec ^{2}(2x)d(2x) $$ 
-
-  에서 
-
-  $$ d(2x) = (2x)'dx = 2dx $$
-
-  이므로
-
-  $$ d (\tan 2x) = 2 \sec ^{2} 2x dx $$
-
-  이다. 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-미분의 추정(estimating with differentials) : 함수 $f(x)$ 가 $x = a$ 에서 미분가능할 때 $x = a$ 의 근방 $x = a + dx$ 에서 함수값이 변하는 정도 $f(a + dx)$ 는 근사적으로
-
-$$ f(a + dx) \approx f(a) + dy $$
-
-이다. 
-
-</blockquote>
-
-- $y$ 의 증분은 
-
-  $$ \Delta y = f(a + \Delta x) - f(a) $$
-
-  이다. 이때 $dx= \Delta x$ 가 충분히 작으면 $y$ 의 증분 $\Delta y$ 는 미분 $dy$ 와 거의 똑같아진다. 왜냐하면 함수 $f$ 의 접선 $L$ 의 증분 
-
-  $$ \Delta L = f'(a)dx = dy$$
-
-  가 $x = a$ 의 근방에서 함수 $f$ 의 증분 $\Delta y$ 와 거의 똑같아지기 때문이다. 그러므로 $x = a$ 근방에서 
-
-  $$ f'(a)dx = dy \approx \Delta y $$
-
-  라 할 수 있고, 이에 따라
-
-  $$ f(a + dx) = f(a) + \Delta y $$
-
-  를 근사적으로 
-
-  $$ f(a + dx) \approx  f(a) + dy $$
-
-  로 쓸 수 있다. 
-
-- 예시 
-
-  $7.97 ^{\frac{1}{3}}$ 을 추산해보자. 
-
-  $f(x) = x ^{\frac{1}{3}}$ 의 미분은 
-
-  $$ dy = \frac{1}{3x ^{\frac{2}{3}}}dx $$
-
-  이다. 
-
-  이때 $a = 8$ 로 둔다면 $7.97$ 을 $x = a$ 근방의 함수 $f$ 의 접선의 함수값으로 생각할 수 있다. 
-
-  그렇다면 $dx = -0.03$ 으로 둘 때 $x = a$ 에서의 함수값 $f(7.97)$ 을 다음과 같이 근사시킬 수 있다. 
-
-  $$ f(7.97) = f(a + dx) \approx f(a) + dy $$
-
-  그러면
-
-  $$ f(a) + dy = f(a) + f'(a)dx $$
-
-  에서 $f'(x) = \frac{1}{3x ^{\frac{2}{3}}}$ 이고 $dx = -0.03$ 으로 두었으므로
-
-  $$ = 8 ^{\frac{1}{3}} + \frac{1}{3(8)^{\frac{2}{3}}}(-0.03) $$
-
-  $$ = 1.9975 $$
-
-  이다. 따라서 
-
-  $$ \therefore  7.97 ^{\frac{1}{3}} \approx 1.9975 $$
-
-  이다.
-
-## <a name="이변수 함수 선형화" href="#이변수 함수 선형화">이변수 함수 선형화</a>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-접평면(tangent plane) : $3$ 차원 곡면의 한 접점에 존재하는 무수히 많은 접선들이 동시에 상주하고 있는 평면이다.
-
-![index](https://user-images.githubusercontent.com/16812446/79077468-ec0ce800-7d3c-11ea-8d57-3c992ab66d6e.jpg)
-
-</blockquote>
-
-- 위 그림과 같이 어떤 곡면에는 접선이 무수히 많고 그 접선들이 상주하는 평면이 곡면의 접평면이다. 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-법선벡터(normal vector) : 접평면에 직교하는 벡터이다.
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Surface_normal_illustration.svg/220px-Surface_normal_illustration.svg.png)
-
-</blockquote>
-
-- 즉 법선벡터는 위 그림의 화살표 벡터와 같이 $3$ 차원 곡면의 한 접점에서의 모든 접선과 직교한다.
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-이변수 함수 선형화 또는 접평면(tangent plane) : $f$ 의 연속인 편도함수들이 존재할 때 점 $P(x_0, y_0, z_0)$ 에서 곡면 $z = f(x, y)$ 에 대한 접평면의 방정식은 
-
-$$ z - z_0 = f_x(x_0, y_0)(x- x_0) + f_y(x_0, y_0)(y - y_0) $$
-
-또는 
-
-$$ L(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y - y_0)
-
-$$
-
-이고 이것은 이변수 함수 $f(x, y)$ 의 선형화이다. 
-
-</blockquote>
-
-- 또한 점 $P(x_0, y_0, z_0)$ 근방에서 
-
-  $$ f(x, y) \approx L(x, y) $$
-
-  이 성립한다.
-
-  일변수 함수 $f$ 를 $x=a$ 에서 끝없이 확대했을 때 $x=a$ 에서 접선과 거의 똑같아지는 것과 같이 이변수 함수 $f$ 를 끝없이 확대하면 접평면의 방정식과 거의 똑같아지기 때문이다. 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-이변수 함수 미분 또는 전미분(total differential) : 점 $(x_0, y_0)$ 에서 점 $(x_0 + dx, y_0 + dy)$ 로 움직였을 때의 변화량 
-
-$$ df = f_x(x_0, y_0)dx + f_y (x_0, y_0)dy $$
-
-또는
-
-$$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
-
-을 함수 $f$ 의 전미분이라 한다. 
-
-</blockquote>
-
-- $y = f(x, y)$ 가 미분가능한 함수이면 점 $(x_0, y_0)$ 에서 편미분계수가 존재한다. 이 점에서 조금 움직인 점 $(x_0+\Delta x, y_0+\Delta y)$ 를 생각할 수 있고 이때의 함수 $f$ 의 변화량
-
-  $$ \Delta f =f(x_0+\Delta x, y_0+\Delta y)- f(x_0, y_0) $$
-
-  을 생각할 수 있다. 
-
-  이때 접평면의 변화량 
-
-  $$ \Delta L = L(x_0 + \Delta x, y_0 + \Delta y) - L(x_0, y_0) $$
-
-  을 접평면의 방정식을 사용하여 풀면
-
-  $$ = f_x(x_0, y_0)\Delta x + f_y(x_0, y_0)\Delta y $$
-
-  이다. 
-
-  이때 $dx, dy$ 는 독립변수이므로 임의의 값을 대입할 수 있다. 또한 우리는 보통
-
-  $$ dx = \Delta x = x - x_0, dy = \Delta y = y - y_0 $$
-
-  으로 정의한다.
-
-- 편미분이 변수 하나에 대한 함수의 변화량을 생각했다면 전미분은 모든 변수에 대한 변화량에 따라 함수가 얼마나 변하는지를 측정한다. 
-
-- 예시 
-
-  반지름이 $r = 1$ 이고 높이가 $h = 5$ 인 원통이 있다고 하자. 이때 반지름과 높이를 변화시켜서 
-
-  $$ dr = +0.03, dh = -0.1 $$
-
-  가 되게 한다고 하자. 이때 부피의 변화량을 구해보자. 
-
-  먼저 부피 $V$ 는 다음과 같은 이변수 함수다.
-
-  $$ V = V(r, h) = \pi r ^{2}h $$
-
-  $V$ 를 선형 근사시키면(전미분하면)
-
-  $$ \Delta V \approx dV = V_r(r_0, h_0)dr + V_h(r_0, h_0)dh $$
-
-  이다.
-
-  $$ V_r = 2 \pi rh, V_h = \pi r ^{2} $$
-
-  이므로
-
-  $$ dV = 2 \pi r_0h_0dr + \pi r_0 ^{2}dh = 2 \pi 1 \cdot 5 \cdot (0.03) + \pi (1) ^{2}(-0.1) = 0.3 \pi - 0.1 \pi = 0.2 \pi \approx 0.63 cm ^{3} $$
-
-  을 얻는다. 
-
-- 예시 
-
-  $2.5m$ 높이와 $0.5m$ 반지름의 원뿔형 물탱크의 부피가 반지름과 높이의 변화에 얼마나 민감하게 변하는지 조사하려 한다.
-
-  먼저 부피 $V$ 는 
-
-  $$ V = \pi r ^{2} h $$
-
-  이며, 각 변수에 대한 전미분은 다음과 같다. 
-
-  $$ dV = V_r(0.5, 2.5)dr + V_h(0.5,2.5)dh $$
-
-  $$ =(2 \pi rh)_{(0.5, 2.5)} dr + (\pi r ^{2})_{(0.5,2.5)}dh $$
-
-  $$ = 2.5 \pi dr + 0.25 \pi dh $$
-
-  따라서 반지름 $r$ 의 단위 $1$ 변화는 전체 부피 $V$ 를 $2.5 \pi$ 변하게 하고
-
-  높이 $h$ 의 단위 $1$ 변화는 전체 부피 $V$ 를 $0.25\pi$ 변하게 한다.
-
-  이로보아 반지름이 변할 때 물탱크의 전체 부피가 훨씬 더 민감하게 변한다는 것을 알 수 있다. 
