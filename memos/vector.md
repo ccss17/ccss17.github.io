@@ -126,6 +126,24 @@ $$ x = f(t), y = g(t) $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
+평행이동 : 좌표공간, 즉 데카르트 공간 $\R ^{n}$ 의 한 점 $v$ 과 임의의 점 $X$ 에 대하여 함수
+
+$$ T_v : \R ^{n} \to \R ^{n}, T_v(X) := X+v $$
+
+를 $v$ 만큼 평행이동하는 사상이라고 한다.
+
+</blockquote>
+
+- 예시 
+
+  좌표평면에서 사상
+
+  $$ (x, y) \mapsto (x+1, y+2) $$
+
+  은 각 점들을 오른쪽으로 $1$, 위쪽으로 $2$ 만큼 평행이동하는 사상이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
 스칼라(scala) : 크기만 있고 방향성이 없는 물리량이다. 
 
 </blockquote>
@@ -144,7 +162,9 @@ $$ x = f(t), y = g(t) $$
 
 </blockquote>
 
-> 크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. 
+- 크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. 
+
+  데카르트가 점들을 대수화했듯이 라그랑주가 힘, 속도, 가속도 등을 벡터로 대수화한 것이다.
 
 - 스칼라량으로는 방향에 대한 정보가 부족하기에 방향에 대한 정보를 덧붙힌 것이 벡터이다. 
 
@@ -1289,7 +1309,3 @@ $$ u \times v = 0 $$
   $$ u // v \iff u \times v $$
 
   로 표현할 수 있다. 
-
-
-
-
