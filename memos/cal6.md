@@ -991,7 +991,144 @@ $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\part
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
+이변수함수의 $u$-방향미분계수, 또는 $u$-방향 순간변화율 : 데카르트 공간 $\R ^{3}$ 에서 정의된 이변수함수 $f(x,y)$ 와 한 점 $P_0(x_0,y_0)$ 와 단위벡터 $u = u_1i+u_2j$ 에 대한 극한값
+
+$$ (D_uf)_{P_0} := \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{f(x_0+su_1, y_0 + su_2)-f(x_0,y_0)}{s} $$
+
+이다.
+
+</blockquote>
+
+- 다음과 같이 표기하기도 한다.
+
+  $$ D_uf(P_0) := \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{f(x_0+su_1, y_0 + su_2)-f(x_0,y_0)}{s} $$
+
+- $s$ 는 점 $P_0$ 에서 $u$ 방향으로의 곡선의 길이를 뜻한다. 
+
+  그러므로 $\dfrac{df}{ds}$ 를 계산함으로써 $P_0$ 에서의 이변수함수 $f$ 의 순간변화율을 계산할 수 있는 것이다.
+
+- 편미분계수 $f_x(x_0, y_0), f_y(x_0, y_0)$ 은 각각 점 $P_0$ 에 대한 $i$-방향미분계수, $j$-방향미분계수 였던 것이다.
+
+  일변수 함수에서는 방향이 오직 하나였지만, 다변수 함수에서는 방향이 무한하므로 벡터 $u$ 를 통하여 미분 방향, 즉 변화율을 조사할 방향을 설정해야 한다.
+
+- 기하학적 의미 
+
+  <img src="https://user-images.githubusercontent.com/16812446/86775439-57dbc400-c092-11ea-94ea-ed93c3413888.png" width="70%" height="auto">
+
+  > 출처 : [Thomas' CALCULUS](https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078) Figure14.28
+
+  위 그림과 같이 이변수 함수 $z=f(x,y)$ 는 곡면 $S$ 를 그린다.
+  
+  $z_0=f(x_0,y_0)$ 으로 곡면 $S$ 위에 위치한 점 $P(x_0,y_0,z_0)$ 에서 수직평면 $C$ 가 벡터 $u = u_1i+u_2j$ 방향으로 곡면 $S$ 를 가로지르고 있다.
+
+  벡터 $u$ 방향으로의 $f$ 의 변화율은 접평면 $C$ 가 점 $P$ 와 만나는 지점에서 $u$ 방향으로의 변화율을 뜻하는 것이다.
+
+  만약 $u=i$ 라면 점 $P_0$ 에서의 방향미분계수, 즉 순간변화율은 $\dfrac{\partial f}{\partial x} \bigg | _{(x_0, y_0)}$ 과 같게 되는 것이다. 즉 $x$ 축 방향 벡터 $u$ 로의 $f$의 순간변화율인 것이다.
+
+  만약 $u=j$ 라면 점 $P_0$ 에서의 방향미분계수, 즉 순간변화율은 $\dfrac{\partial f}{\partial y} \bigg | _{(x_0, y_0)}$ 과 같게 되는 것이다. 즉 $y$ 축 방향 벡터 $u$ 로의 $f$의 순간변화율인 것이다.
+
+  방향미분계수는 이것을 일반화하여 임의의 방향 벡터 $u$ 로의 $f$의 순간변화율을 계산할 수 있게 해주는 것이다.
+
+  - 한편 곡면 $S$ 의 점 $P_0(x_0,y_0)$ 에서 벡터 $u$ 방향으로의 직선을 $xy$ 평면에서 표현해보면 다음과 같다.
+
+    <img src="https://user-images.githubusercontent.com/16812446/86777767-865a9e80-c094-11ea-8374-29a5d45204db.png" width="50%" height="auto">
+
+    > 출처 : [Thomas' CALCULUS](https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078) Figure14.27
+
+    이 직선을 독립변수 $s$ 와 벡터 $u=u_1i+u_2j$ 에 대한 매개변수 방정식
+
+    $$ x = x_0+su_1, y = y_0 + su_2 $$
+
+    으로 표현할 수 있다.
+
+- 예시 
+
+  이변수함수 $f(x,y) = x ^{2}+xy$ 의 점 $P_0(1,2)$ 에서 벡터 $u = (1/\sqrt[]{2})i+(1/\sqrt[]{2})j$ 방향의 순간변화율을 구해보자.
+
+  방향미분계수의 정의에 따라
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{f(x_0+su_1, y_0 + su_2)-f(x_0,y_0)}{s} $$
+
+  $$ = \lim_{s \to 0} \dfrac{f(1+s \cdot \dfrac{1}{\sqrt[]{2}}, 2 + s \cdot \dfrac{1}{\sqrt[]{2}})-f(1,2)}{s} $$
+
+  $$ = \lim_{s \to 0} \dfrac{\bigg (1+s \cdot \dfrac{1}{\sqrt[]{2}} \bigg ) ^{2}+\bigg (1+s \cdot \dfrac{1}{\sqrt[]{2}} \bigg )\bigg (2 + s \cdot \dfrac{1}{\sqrt[]{2}}\bigg ) -3}{s} $$
+
+  $$ = \lim_{s \to 0} \dfrac{\dfrac{5s}{\sqrt[]{2}}+s ^{2}}{s} = \lim_{s \to 0} \bigg (\dfrac{5}{\sqrt[]{2}}+s\bigg ) = \dfrac{5}{\sqrt[]{2}}$$
+
+  이다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+이변수함수의 방향도함수 : 데카르트 공간 $\R ^{3}$ 에서 정의된 이변수함수 $f(x,y)$ 단위벡터 $u = u_1i+u_2j$ 에 대하여
+
+$f$ 의 정의역의 각 원소를 $u$-방향미분계수에 대응시켜 만든 함수
+
+$$ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+ su_2)-f(x,y)}{s} $$
+
+이다.
+
+</blockquote>
+
+- 이때 $x, y$ 를 벡터 $u = u_1i+u_2j$ 방향으로 향하는 직선
+
+  $$ x = x_0 + su_1, y = y_0 + su_2 $$
+
+  으로 한정시키자. 그래도 이변수 함수 $f(x,y)$ 의 벡터 $u$ 방향으로의 순간변화율을 구하기에 충분하다. 그러면 
+
+  $f$ 의 $u$ 방향으로의 순간변화율은 독립변수 $s$ 에 의존하는 $x,y$ 를 변수로 갖는 이독립변수 일매개변수의 합성함수 미분으로 구할 수 있게 된다. 그러므로 
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = \bigg (\dfrac{\partial f}{\partial x}\bigg )\dfrac{dx}{ds}+\bigg (\dfrac{\partial f}{\partial y}\bigg )\dfrac{dy}{ds} $$
+
+  인데 $x = x_0 + su_1$ 를 $s$ 에 대하여 미분하면 $\dfrac{dx}{ds} = u_1$ 이고 $y = y_0 + su_2$ 를 $s$ 에 대하여 미분하면 $\dfrac{dy}{ds} = u_2$ 이므로
+
+  $$ = \bigg (\dfrac{\partial f}{\partial x}\bigg )u_1+\bigg (\dfrac{\partial f}{\partial y}\bigg )u_2 $$
+
+  인데 이것을 벡터 $\bigg <\dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y}\bigg >$ 와 벡터 $\big <u_1,u_2\big >$ 내적으로 표현하면
+
+  $$ = \bigg[ \bigg (\dfrac{\partial f}{\partial x}\bigg )i+\bigg (\dfrac{\partial f}{\partial y}\bigg )j \bigg ]\cdot \bigg [u_1i+u_2j\bigg ] $$
+
+  이다.
+
+  - 이것은 다변수함수 $f$ 의 $u$ 방향의 미분이 벡터 $u$ 와 기울기벡터의 내적임을 알려준다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+방향도함수의 계산 : 단위벡터 $u$ 방향의 방향도함수가 결국 기울기 벡터와 벡터 $u$ 의 내적임을 이용하여 간편하게 방향도함수를 계산하는 방식
+
+$$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u $$
+
+이다.
+
+</blockquote>
+
+- 예시
+
+  이변수함수 $f(x, y) = xe ^{y}+\cos (xy)$ 의 벡터 $v = 3i-4j$ 방향의 방향도함수의 점 $(2,0)$ 에서의 방향미분계수를 구해보자.
+
+  먼저 벡터 $v$ 를 단위벡터로 바꾸면 $u = \dfrac{v}{|v|}=\dfrac{v}{5}=\dfrac{3}{5}i-\dfrac{4}{5}j$, 즉 $\bigg <\dfrac{3}{5},\dfrac{4}{5}\bigg >$ 이다.
+
+  또 기울기 벡터는 
+
+  $$ \bigg <\dfrac{\partial  f}{\partial x},\dfrac{\partial f}{\partial y}\bigg > = \big < e ^{y}-y \sin (xy), x e ^{y}-x \sin (xy) \big > $$
+
+  이다.
+
+  그러므로 방향도함수는 
+
+  $$ D_uf = \big < e ^{y}-y \sin (xy), x e ^{y}-x \sin (xy) \big > \cdot \bigg <\dfrac{3}{5},\dfrac{4}{5}\bigg >$$ 
+
+  $$ = \dfrac{3}{5}e ^{y}-y \sin (xy)i + \dfrac{4}{5}x e ^{y}-x \sin (xy)j$$ 
+
+  이다. 따라서 점 $(2,0)$ 에서 벡터 $v$ 방향으로의 방향미분계수는
+
+  $$ D_uf \bigg | _{(2,0)} = 
+  $$
+ 
+# <a name="삼각함수로 정의한 방향도함수 " href="#삼각함수로 정의한 방향도함수 ">삼각함수로 정의한 방향도함수 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+삼각함수로 정의한 이변수 함수의 방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
 
 함수 $f$ 의 벡터 $u$ 방향으로의 순간변화율로써
 
@@ -1161,19 +1298,19 @@ $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-기울기 벡터(gradient vector) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
+기울기 벡터(gradient vector, gradient) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
 
 $$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > $$
 
-또는 
-
-$$  \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > $$
-
-로써 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
+이다.
 
 </blockquote>
 
-- 기울기 벡터는 함수의 증가율이 최대가 되는 방향을 가르키는 벡터이다.
+- 다음과 같이 표기하기도 한다.
+
+$$  \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > $$
+
+- 기울기 벡터는 함수의 증가율이 최대가 되는 방향, 즉 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
 
   - 증명
 
