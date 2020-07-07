@@ -904,7 +904,7 @@ $$ w = f(z_1, z_2, \dots, z_n) $$
 
   로 정의할 수도 있다. 
 
-# 최대최소 정리 
+# <a name="최대최소 정리 " href="#최대최소 정리 ">최대최소 정리 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

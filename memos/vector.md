@@ -96,6 +96,34 @@ $$ x = f(t), y = g(t) $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
+평행이동 사상 : 좌표공간 $\R ^{n}$ 의 한 점 $v$ 에 대한 함수 
+
+$$ T _{v}: \R ^{n} \to \R ^{n}, T _{v}(X) := X+v $$
+
+이다.
+
+</blockquote>
+
+- 일반적으로 두 점 $v, w \in \R ^{n}$ 에 대한 평행이동 $T _{v}, T _{w}$ 의 합성은 평행이동이고,
+
+  $$ T _{v} \circ T _{w} = T _{v+w} = T _{w} \circ T _{v} $$
+
+  가 성립한다.
+
+- 원점 $O$ 에 대한 평행이동 $T _{O}$ 은 항등사상 $id: \R ^{n}\to \R ^{n}$ 와 같다.
+
+- $T _{-v} = T _{v} ^{-1}$ 이다.
+
+- 예시 
+
+  좌표평면에서 사상 
+
+  $$ (x,y) \mapsto (x+1, y+2) $$
+
+  은 각 점을 오른쪽으로 $1$, 위쪽으로 $2$ 만큼 평행이동시키는 사상이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
 양 : 어떤 물체의 크기이다.
 
 </blockquote>
@@ -158,17 +186,71 @@ $$ T_v : \R ^{n} \to \R ^{n}, T_v(X) := X+v $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-벡터(vector) 또는 유향선분(directed segment) : 크기와 방향성이 동시에 있는 물리량이다. 
+벡터(vector) 또는 유향선분(directed segment) : 유클리드 공간 속 두 점 $A,B$ 를 잇는 유향선분 
+
+$$ \overrightarrow{AB} $$
+
+이다.
 
 </blockquote>
 
+<<<<<<< HEAD
 - 크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. 
 
   데카르트가 점들을 대수화했듯이 라그랑주가 힘, 속도, 가속도 등을 벡터로 대수화한 것이다.
+=======
+- $A$ 를 시점, $B$ 를 종점이라 한다.
+>>>>>>> 82207c90f53c26aee225ec06643774ee6bd351ef
 
-- 스칼라량으로는 방향에 대한 정보가 부족하기에 방향에 대한 정보를 덧붙힌 것이 벡터이다. 
+- 평행이동 사상 $T$ 는 점들을 이동시킬 뿐 아니라 유향선분도 이동시킨다. 즉,
 
-  - 그래서 방향성이 있는 선분 "유향선분" 이라고도 부른다.
+  $$ T(A)=A', T(B)=B' $$
+
+  이면,
+
+  $$ T(\overrightarrow{AB})=\overrightarrow{A'B'} $$
+
+  이다.
+
+  - 만약 유향선분 $\overrightarrow{AB}$ 를 평행이동하여 유향선분 $\overrightarrow{A'B'}$ 를 얻으면 두 유향선분을 동등하다고 하고,
+
+    $$ \overrightarrow{AB} \equiv \overrightarrow{A'B'} $$
+
+    라고 쓴다.
+
+- 서로 동등한 유향선분을 대표하는 것을 벡터(vector) 로 정의하는 의견도 있다.
+
+  - 즉, 유향선분은 시점과 종점을 가진 방향성이 있는 선분이다. 하지만 벡터는 그 모든 선분을 대표하는 추상대상물인 것이다.
+
+    이 정의에 의하면 벡터를 시점을 원점 $(0, 0)$ 으로 하는 유향선분으로 이해해야 하지만, 시점과 종점은 존재하지 않는다.
+
+  - 이 정의에 의하면 임의의 유향선분은 원점을 시점으로 하는 유향선분과 동등하기 때문에, 벡터 전체 집합은 원점을 시점으로 하는 유향선분 전체의 집합과 같다. 
+
+  - 원점을 시점으로 한 유향선분의 종점은 $\R ^{n}$ 의 한 점이므로, $\R ^{n}$ 의 한 점을 벡터로 볼 수 있다.
+
+    즉, $\R ^{n}$ 의 벡터의 전체 집합은 $\R ^{n}$ 과 일대일 대응이다.
+  
+  - 이 관점에서 유향선분 $\overrightarrow{AB}$ 가 표현하는 벡터는 점 $B-A$ 에 대응된다.
+
+- 다음과 같이 점 $A$ 에서 점 $B$ 로 방향이 주어진 선분 $AB$ 를 벡터 $AB$ 라 한다.
+
+  ![](https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C)
+
+  - 이것을 형식언어로 $\overrightarrow{AB}$ 로 표현한다. 
+
+- 다음과 같이 벡터를 시점과 종점이 아닌 단일 문자로 나타낼 수도 있다. 
+
+  $$ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots $$
+
+- **벡터는 행렬과 같이 수와 다른 개념이므로 행렬에서처럼 연산법칙, 항등원, 역원, 단위(수에서 $1$) 등을 새로 정의해야 한다.**
+
+- 크기와 방향성이 동시에 있는 물리량이다. 
+
+  > 크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. 
+
+  - 스칼라량으로는 방향에 대한 정보가 부족하기에 방향에 대한 정보를 덧붙힌 것이 벡터이다. 
+
+    그래서 방향성이 있는 선분 "유향선분" 이라고도 부른다.
 
 - 예시 
 
@@ -191,18 +273,6 @@ $$ T_v : \R ^{n} \to \R ^{n}, T_v(X) := X+v $$
   기브스(1849), 헤비사이드(1850) 는 벡터해석학을 완성했다. 
 
   이 벡터해석학은 19세기 물리학을 대표하는 전자기학의 필수적인 수학적 도구가 되었다. 또 현대에 와서는 의학과 공학에도 널리 쓰이는 중요한 개념이 되었다. 
-
-- 다음과 같이 점 $A$ 에서 점 $B$ 로 방향이 주어진 선분 $AB$ 를 벡터 $AB$ 라 한다.
-
-  ![](https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C)
-
-  - 이것을 형식언어로 $\overrightarrow{AB}$ 로 표현한다. 
-
-- 다음과 같이 벡터를 시점과 종점이 아닌 단일 문자로 나타낼 수도 있다. 
-
-  $$ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots $$
-
-- **벡터는 행렬과 같이 수와 다른 개념이므로 행렬에서처럼 연산법칙, 항등원, 역원, 단위(수에서 $1$) 등을 새로 정의해야 한다.**
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -364,13 +434,17 @@ $$ T_v : \R ^{n} \to \R ^{n}, T_v(X) := X+v $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-벡터의 상등 : 시점과 종점의 위치에 관계 없이 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 의 크기와 방향이 같으면 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 를 같다고 한다.
+벡터의 상등 : 두 벡터 $\overrightarrow{AB}, \overrightarrow{CD}$ 에 대하여 한 벡터를 평행이동 사상하여 다른 벡터를 얻을 수 있으면,
+
+두 벡터가 동등하다고 한다.
 
 </blockquote>
 
+- 시점과 종점의 위치에 관계 없이 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 의 크기와 방향이 같으면 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 를 같다고 한다.
+
 - 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 가 각각 선분 $\overline{AB}, \overleftrightarrow{CD}$ 로 구성되었을 때 이 둘이 같다는 것을
 
-  $$ \overrightarrow{a} = \overrightarrow{b} \iff \overrightarrow{AB} = \overrightarrow{CD} $$
+  $$ \overrightarrow{a} \equiv \overrightarrow{b} \iff \overrightarrow{AB} \equiv \overrightarrow{CD} $$
 
   로 표현한다. 
 
@@ -382,7 +456,7 @@ $$ T_v : \R ^{n} \to \R ^{n}, T_v(X) := X+v $$
 
   즉, 왼쪽부터 차례로 $\overrightarrow{AB}, \overrightarrow{CD}, \overrightarrow{OP}$ 라고 한다면 
 
-  $$ \overrightarrow{AB}= \overrightarrow{CD}= \overrightarrow{OP} $$
+  $$ \overrightarrow{AB} \equiv \overrightarrow{CD} \equiv \overrightarrow{OP} $$
 
   이다. 
 
@@ -412,21 +486,17 @@ $$ T_v : \R ^{n} \to \R ^{n}, T_v(X) := X+v $$
 
     ![](https://i.ytimg.com/vi/gdWfqihMW14/maxresdefault.jpg)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+- 벡터 덧셈의 성질 
 
-벡터 덧셈의 성질 
+  임의의 세 벡터 $\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}$ 와 영벡터 $\overrightarrow{0}$ 에 대하여 다음이 성립한다.
 
-임의의 세 벡터 $\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}$ 와 영벡터 $\overrightarrow{0}$ 에 대하여 다음이 성립한다.
+  - 교환법칙 : $\overrightarrow{a}+\overrightarrow{b}=\overrightarrow{b}+\overrightarrow{a}$
 
-</blockquote>
+  - 결합법칙 : $(\overrightarrow{a}+\overrightarrow{b})+\overrightarrow{c}=\overrightarrow{a}+(\overrightarrow{b}+\overrightarrow{c})$
 
-- 교환법칙 : $\overrightarrow{a}+\overrightarrow{b}=\overrightarrow{b}+\overrightarrow{a}$
+  - 항등원 : $\overrightarrow{a}+\overrightarrow{0}=\overrightarrow{0}+\overrightarrow{a} = \overrightarrow{a}$
 
-- 결합법칙 : $(\overrightarrow{a}+\overrightarrow{b})+\overrightarrow{c}=\overrightarrow{a}+(\overrightarrow{b}+\overrightarrow{c})$
-
-- 항등원 : $\overrightarrow{a}+\overrightarrow{0}=\overrightarrow{0}+\overrightarrow{a} = \overrightarrow{a}$
-
-- 역원 : $\overrightarrow{a}+(-\overrightarrow{a})=-\overrightarrow{a}+\overrightarrow{a} = \overrightarrow{0}$
+  - 역원 : $\overrightarrow{a}+(-\overrightarrow{a})=-\overrightarrow{a}+\overrightarrow{a} = \overrightarrow{0}$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -462,23 +532,21 @@ $$ \overrightarrow{a}+(-\overrightarrow{b}) = \overrightarrow{OA}+\overrightarro
 
 - $\overrightarrow{a} = \overrightarrow{0}$ 인 경우, 실수 $k$ 에 대하여 $k \overrightarrow{a}=\overrightarrow{0}$ 이다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+- 벡터의 실수배의 성질 
 
-벡터의 실수배의 성질 : 두 실수 $k, l$ 과 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 에 대하여 다음이 성립한다.
+  두 실수 $k, l$ 과 두 벡터 $\overrightarrow{a}, \overrightarrow{b}$ 에 대하여 다음이 성립한다.
 
-</blockquote>
+  - 벡터의 실수배의 결합법칙 : $k(l \overrightarrow{a}) = (kl)\overrightarrow{a}$
 
-- 벡터의 실수배의 결합법칙 : $k(l \overrightarrow{a}) = (kl)\overrightarrow{a}$
+  - 벡터의 실수배의 분배법칙 
 
-- 벡터의 실수배의 분배법칙 
+    $(k+l) \overrightarrow{a} = k\overrightarrow{a}+l \overrightarrow{a}$
 
-  $(k+l) \overrightarrow{a} = k\overrightarrow{a}+l \overrightarrow{a}$
-
-  $k(\overrightarrow{a}+\overrightarrow{b}) = k\overrightarrow{a}+k \overrightarrow{b}$
+    $k(\overrightarrow{a}+\overrightarrow{b}) = k\overrightarrow{a}+k \overrightarrow{b}$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-두 벡터의 평행조건 : 다음 두 경우에서 두 벡터는 평행한다고 정의한다. 
+벡터의 평행 : 다음 두 경우에서 두 벡터는 평행한다고 정의한다. 
 
 </blockquote>
 
@@ -500,9 +568,13 @@ $$ \overrightarrow{AC} = k \overrightarrow{AB} $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-위치벡터 : 평면 또는 공간에서 한 점 $O$ 를 고정할 때 임의의 한 점 $A$ 에 대하여 $O$ 를 시점으로 하고 $A$ 를 종점으로 하는 유일한 벡터 $\overrightarrow{OA}$ 를 점 $O$ 에 대한 점 $A$ 의 위치벡터라 한다. 
+위치벡터 : 원점 $O$ 를 시점으로 하고 임의의 한 점 $A$ 를 종점으로 하는 벡터 $\overrightarrow{OA}$ 를 
+
+점 $O$ 에 대한 점 $A$ 의 위치벡터라 한다. 
 
 </blockquote>
+
+- 그냥 좌표공간에서 점을 벡터로 이해할 때 그것을 위치벡터라고 부르는 것이다.
 
 - 점 $O$ 에 대한 점 $A$ 의 위치벡터를 간단하게 점 $A$ 의 위치벡터로 부른다.
 
@@ -514,8 +586,6 @@ $$ \overrightarrow{AC} = k \overrightarrow{AB} $$
 
   이다. 
 
-**구체화 필요**
-
 ## <a name="평면벡터 " href="#평면벡터 ">평면벡터 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
@@ -526,21 +596,19 @@ $$ \overrightarrow{AC} = k \overrightarrow{AB} $$
 
 - 종점의 좌표 $2-$튜플을 평면벡터를 대표하는 값으로 삼는다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+- 평면벡터 성분 표현 
 
-평면벡터 성분 표현 : 임의의 평면벡터 $\overrightarrow{a}$ 에 대하여 $\overrightarrow{a} = \overrightarrow{OA}$ 의 종점이 점이 $A(a_1, a_2)$ 일 때, 두 점 $E_1(1, 0), E_2(0, 1)$ 의 위치벡터 $\overrightarrow{e_1}, \overrightarrow{e_2}$ 를 이용하여 벡터 $\overrightarrow{a}$ 를 다음과 같이 나타낼 수 있다. 
+  임의의 평면벡터 $\overrightarrow{a}$ 에 대하여 $\overrightarrow{a} = \overrightarrow{OA}$ 의 종점이 점이 $A(a_1, a_2)$ 일 때, 두 점 $E_1(1, 0), E_2(0, 1)$ 의 위치벡터 $\overrightarrow{e_1}, \overrightarrow{e_2}$ 를 이용하여 벡터 $\overrightarrow{a}$ 를 다음과 같이 나타낼 수 있다. 
 
-$$ \overrightarrow{a} = \overrightarrow{OA} = \overrightarrow{OA_1} + \overrightarrow{OA_2} = a_1\overrightarrow{e_1} + a_2 \overrightarrow{e_2} $$
+  $$ \overrightarrow{a} = \overrightarrow{OA} = \overrightarrow{OA_1} + \overrightarrow{OA_2} = a_1\overrightarrow{e_1} + a_2 \overrightarrow{e_2} $$
 
-</blockquote>
+  - 이때 두 실수 $a_1, a_2$ 를 평면벡터 $\overrightarrow{a}$ 의 성분이라 한다. 
 
-- 이때 두 실수 $a_1, a_2$ 를 평면벡터 $\overrightarrow{a}$ 의 성분이라 한다. 
+  - 또 성분만을 이용해서 평면벡터 $\overrightarrow{a}$ 를 두 수의 순서쌍($2-$튜플)
 
-- 또 성분만을 이용해서 평면벡터 $\overrightarrow{a}$ 를 두 수의 순서쌍($2-$튜플)
+    $$ \overrightarrow{a} = (a_1,a_2) $$
 
-  $$ \overrightarrow{a} = (a_1,a_2) $$
-
-  로 나타낼 수 있다. 
+    로 나타낼 수 있다. 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -610,7 +678,7 @@ $$ \overrightarrow{a}//\overrightarrow{b} \iff \overrightarrow{b} = k \overright
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-표준점(standard poitn) 에 위치한 벡터 : 시점이 원점에 위치한 벡터이다. 
+표준점(standard point) 에 위치한 벡터 : 시점이 원점에 위치한 벡터이다. 
 
 </blockquote>
 
@@ -706,6 +774,20 @@ $$ |v| = ||v|| = \sqrt[]{v _{1} ^{2} + v _{2} ^{2} + v _{3} ^{2}} = \sqrt[]{(x _
 
 - 벡터 $v$ 의 길이를 $|v|$ 또는 $||v||$ 로 표기한다. 
 
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$-공간의 벡터의 크기, 길이, 또는 절댓값 : 유향선분 $\overrightarrow{AB}$ 에 대하여 
+
+$$ |\overrightarrow{AB}| := |B-A| $$
+
+또는 좌표 $(v_1, \dots, v_n)$ 으로 표현한 벡터 $v$ 에 대하여
+
+$$ |v| = \sqrt[]{v_1 ^{2}+\dots+v_n ^{2}} $$
+
+이다.
+
+</blockquote>
+
 ## <a name="노름 거리" href="#노름 거리">노름 거리</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
@@ -718,7 +800,9 @@ $$ ||a|| _{1} = |a_1| + |a_2| + |a_3| + \dots + |a_n| = \sum_{i=1}^{n}|a_i| $$
 
 </blockquote>
 
-- 벡터 $a = (4, 3)$ 에 대한 $L_1$ 노름은 오른쪽으로 $4$, 위로 $3$ 움직인 것과 같이 $7$ 이다.
+- 예시
+
+  벡터 $a = (4, 3)$ 에 대한 $L_1$ 노름은 오른쪽으로 $4$, 위로 $3$ 움직인 것과 같이 $7$ 이다.
 
   이처럼 $L_1$ 노름은 
 
@@ -854,23 +938,25 @@ $$ |ku| = \sqrt[]{(ku_1) ^{2}+(ku_2) ^{2}+(ku_3)^{2}} = \sqrt[]{k ^{2}(u_1 ^{2}+
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-표준 단위 벡터(standard unit vector) : 표준 단위 벡터는 길이가 $1$ 인 다음의 특수한 $3$ 가지 경우의 벡터를 뜻한다. 
+$3$차원 공간에서의 표준 단위 벡터(standard unit vector) : 표준 단위 벡터는 길이가 $1$ 인 다음의 특수한 $3$ 가지 경우의 벡터를 뜻한다. 
 
-$$ i = \big <1, 0, 0 \big >, j = \big <0, 1, 0 \big >, k = \big <0, 0, 1 \big > $$
+$$ i := \big <1, 0, 0 \big >, j := \big <0, 1, 0 \big >, k := \big <0, 0, 1 \big > $$
 
 </blockquote>
 
+- 벡터 $i,j,k$ 는 사원수체에서 허수부의 기저이다.
+
 - 그 어떠한 벡터도 표준 단위 벡터의 선형결합으로 표현될 수 있다. 그러므로 표준 단위 벡터는 모든 벡터를 생성한다. 
 
-  - 예시
+- 예시
 
-    즉, 임의의 벡터 $v = \big <v_1,v_2, v_3 \big >$ 는 다음과 같이 표준 단위 벡터의 선형 결합으로 표현될 수 있다. 
+  즉, 임의의 벡터 $v = \big <v_1,v_2, v_3 \big >$ 는 다음과 같이 표준 단위 벡터의 선형 결합으로 표현될 수 있다. 
 
-    $$ v = \big <v_1,v_2, v_3 \big > = \big <v_1,0,0\big > + \big <0,v_2,0\big > + \big <0,0,v_3\big > $$
+  $$ v = \big <v_1,v_2, v_3 \big > = \big <v_1,0,0\big > + \big <0,v_2,0\big > + \big <0,0,v_3\big > $$
 
-    $$ = v_1\big <1,0,0\big > + v_2\big <0,1,0\big > + v_3\big <0,0,1\big > $$
+  $$ = v_1\big <1,0,0\big > + v_2\big <0,1,0\big > + v_3\big <0,0,1\big > $$
 
-    $$ = v_1i + v_2j + v_3k $$
+  $$ = v_1i + v_2j + v_3k $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -917,6 +1003,58 @@ $$ \overrightarrow{P_1P_2} = (x_2 - x_1)i + (y_2-y_1)j+(z_2-z_1)k $$
   $$ \overrightarrow{P_1P_2} = \big <x_2 - x_1 , y_2-y_1,z_2-z_1 \big >  = (x_2 - x_1)i + (y_2-y_1)j+(z_2-z_1)k $$
 
   이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$-공간에서의 표준단위벡터 : $n$-공간에서 벡터
+
+$$ e_1 := (1,0,0,\dots,0) $$
+
+$$ e_2 := (0,1,0,\dots,0) $$
+
+$$ \vdots $$
+
+$$ e_n := (0,0,0,\dots,1) $$
+
+를 표준단위벡터라고 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+나란한 벡터 : 영벡터가 아닌 두 벡터 $v, w$ 에 대하여 
+
+$$ v = tw $$
+
+인 실수 $t$ 가 존재하면, $v, w$ 를 나란하다고 한다.
+
+</blockquote>
+
+- 이때 $t>0$ 이면 $v,w$ 는 같은 방향이라 하고,
+
+  $t<0$ 이면 $v,w$ 는 반대 방향이라 한다.
+
+- 영벡터는 모든 벡터와 나란하다고 정의한다.
+
+- 예시 
+
+  벡터 $v = (1,2,3)$ 과 같은 방향의 단위벡터를 구해보자.
+
+  $v$ 의 절댓값(크기)를 $t$ 라고 하고 $v$ 와 같은 방향의 단위벡터를 $a$ 라고 하자. 그러면 
+
+  $$ \sqrt[]{1 ^{2}+2 ^{2}+3 ^{3}} = t $$
+
+  이고 
+
+  $$ (1,2,3) = ta $$
+
+  이다. 따라서 
+
+  $$ a = \dfrac{1}{t}(1,2,3) = \dfrac{1}{\sqrt[]{14}}(1,2,3) $$
+
+  이다.
+
+  - 벡터 $v$ 방향으로의 단위벡터는 다음의 정의에서 좀 더 구체적으로 살펴보자.
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -980,9 +1118,11 @@ $$ \frac{v}{|v|} $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-내적(inner product) : 두 벡터 $u ,v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 두 벡터 $u, v$ 의 내적은 스칼라
+내적(inner product) : $n$-공간 의 두 벡터 $u ,v$ 가 $u = \big < u_1, u_2, u_3, \dots, u_n \big >, v = \big  <v_1, v_2, v_3, \dots, v_n \big  >$ 일 때, 
 
-$$ u \cdot v = u_1v_1+u_2v_2+u_3v_3 $$
+두 벡터 $u, v$ 의 내적은 스칼라
+
+$$ u \cdot v := u_1v_1+u_2v_2+u_3v_3+\dots+u_nv_n = \sum_{i=1}^{n}u_iv_i $$
 
 이다. 
 
@@ -1011,6 +1151,18 @@ $$ u \cdot v = u_1v_1+u_2v_2+u_3v_3 $$
     $$ \therefore  u \cdot v = |u||v| \cos \theta $$
 
     이다.
+  
+- 내적의 성질 : 임의의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다. 
+
+  1. $u \cdot v = v \cdot u$
+
+  2. $(cu)\cdot v = u \cdot (cv) = c(u \cdot v)$
+
+  3. $u \cdot (v + w) = u \cdot v + u \cdot w$
+
+  4. $u \cdot u = |u| ^{2}$
+
+  5. $0 \cdot u = 0$
 
 - 내적은 두 벡터
 
@@ -1046,19 +1198,50 @@ $$ u \cdot v = u_1v_1+u_2v_2+u_3v_3 $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-내적의 성질 : 임의의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다. 
+정사영(orthogonal projection) : 영이 아닌 벡터 $a$ 와 임의의 벡터 $b$ 에 대하여, 벡터 $b$ 에서 직선 $\{ta|t \in \R\}$ 에 내린 수선의 발
 
-1. $u \cdot v = v \cdot u$
+$$ P _{a}(b) = \text{proj} _{a}b =  \dfrac{a \cdot b}{a \cdot a}a $$
 
-2. $(cu)\cdot v = u \cdot (cv) = c(u \cdot v)$
 
-3. $u \cdot (v + w) = u \cdot v + u \cdot w$
-
-4. $u \cdot u = |u| ^{2}$
-
-5. $0 \cdot u = 0$
+을 $a$ 에 대한 $b$ 의 정사영이라 한다.
 
 </blockquote>
+
+- 실수(스칼라) $\dfrac{a \cdot b}{a \cdot a}$ 를 벡터 $b$ 의 $a$ 성분이라고 한다.
+
+  - $a$ 가 단위벡터라면 
+
+    $$ a \cdot b $$
+
+    가 $b$ 의 $a$ 성분이다.
+
+- 즉, $a$ 에 대한 $b$ 의 정사영은 영이 아닌 벡터 $a$ 와 임의의 벡터 $b$ 에 대하여, $a$ 와 나란한 벡터 중 $b$ 와의 거리가 가장 가까운 벡터인 것이다.
+
+  ![](data:image/png;base64,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)
+
+- 증명
+
+  벡터 $a$ 와 나란한 벡터 $ta$ 중에서 $b$ 와 거리가 가장 가까운 것을 구하면 된다.
+
+  벡터 $b$ 와 $ta$ 사이의 거리의 제곱은 
+
+  $$ f(x) = |ta-b| ^{2} = (ta-b)\cdot (ta-b) $$
+
+  $$ = (a \cdot a) t^{2} - 2(a \cdot b)t+b \cdot b $$
+
+  이다. 그러면 $f(t)$ 는 임의의 실수 $t$ 에 대한 $2$차 다항함수이고, 최고차 항의 계수가 양수이다.
+
+  그러므로 $f(t)$ 는 
+
+  $$ 0 = f'(t) = 2(a \cdot a)t - 2(a \cdot b) $$
+
+  일 때, 즉 
+
+  $$ t = \dfrac{a \cdot b}{a \cdot a} $$
+
+  일 때 최솟값을 가진다.
+
+  $\therefore$ 그러므로 벡터 $b$ 와 거리가 가장 가까운 벡터 $ta$ 는 $\dfrac{a \cdot b}{a \cdot a} a$ 이다. ■ 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1178,9 +1361,7 @@ $$ u \cdot v = 0 $$
 
 - 증명 
 
-  $$ \cos \bigg ( \frac{\pi }{2} \bigg ) = 0 $$
-
-  $$ \cos ^{-1} 0 = \frac{\pi }{2} $$
+  $$ \cos \bigg ( \frac{\pi }{2} \bigg ) = 0 , \cos ^{-1} 0 = \frac{\pi }{2} $$
 
   이므로 벡터 $u, v$ 가 이루는 각이 $90 \degree = \dfrac{\pi }{2}$ 라면
 
@@ -1196,7 +1377,7 @@ $$ u \cdot v = 0 $$
 
   $$ \therefore u \cdot v = 0 $$
 
-  이다. 
+  이다. ■ 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1224,23 +1405,19 @@ $$ u \times v = (|u||v| \sin \theta) n $$
 
   - 위 그림의 빨간선이 벡터 $u, v$ 가 이루는 평면에 직교하는 단위벡터 $n$ 이다! 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+- 외적의 성질 : 임의의 벡터 $u, v, w$ 와 임의의 스칼라 $r, s$ 에 대하여 다음이 성립한다. 
 
-외적의 성질 : 임의의 벡터 $u, v, w$ 와 임의의 스칼라 $r, s$ 에 대하여 다음이 성립한다. 
+  1. $(ru) \times (sv) = (rs)(u \times v)$
 
-1. $(ru) \times (sv) = (rs)(u \times v)$
+  2. $u \times (v + w) = u \times v + u \times w$
 
-2. $u \times (v + w) = u \times v + u \times w$
+  3. $v \times u = -(u \times v)$
 
-3. $v \times u = -(u \times v)$
+  4. $(v+w)\times u = v \times u + w \times u$
 
-4. $(v+w)\times u = v \times u + w \times u$
+  5. $0 \times u=0$
 
-5. $0 \times u=0$
-
-6. $u \times (v \times w) = (u \cdot w)v - (u \cdot v)w$
-
-</blockquote>
+  6. $u \times (v \times w) = (u \cdot w)v - (u \cdot v)w$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1309,3 +1486,234 @@ $$ u \times v = 0 $$
   $$ u // v \iff u \times v $$
 
   로 표현할 수 있다. 
+<<<<<<< HEAD
+=======
+
+# <a name="일차독립과 일차종속 " href="#일차독립과 일차종속 ">일차독립과 일차종속 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$3$차원 좌표공간의 표준단위벡터의 일차결합(linear combination) : $3$차원 좌표공간의 임의의 벡터 
+
+$$ v = (v_1, v_2, v_3) $$
+
+은 표준단위벡터 $i = (1,0,0),j = (1,0,0),k = (1,0,0)$ 에 의하여 
+
+$$ a = a_1i + a_2j + a_3 k $$
+
+로 표현할 수 있는데, 이와 같은 표현을 벡터 $i,j,k$ 의 일차결합이라 한다.
+
+</blockquote>
+
+- 예시 
+
+  $2$차원 좌표평면에서의 벡터 $i, j$ 를 $1$시방향 벡터 
+
+  $$ h_1 := (\cos 60 \degree , \sin 60 \degree ) = \dfrac{1}{2}(1, \sqrt[]{3}) $$
+
+  와 $5$시방향 벡터
+
+  $$ h_5 := (\cos 60 \degree , -\sin 60 \degree ) = \dfrac{1}{2}(1, -\sqrt[]{3}) $$
+
+  의 일차결합으로 표현하면
+
+  $$ i = h_1+h_5, j = \dfrac{1}{\sqrt[]{3}}h_1 - \dfrac{1}{\sqrt[]{3}}h_5 $$
+
+  이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+일차결합 또는 선형결합(linear combination) : 임의의 자연수 $k$ 에 대한 임의의 실수 $t_1, \dots, t_k$ 에 대하여 벡터 
+
+$$ t_1a_1 + \dots + t_ka_k $$
+
+를 $a_1, \dots, a_k$ 의 일차결합이라 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+일차종속 또는 선형종속(linearly dependent) : 일차결합의 정의에서 $a_1, \dots, a_k$ 중 어느 벡터 $a_i$ 가 나머지 벡터들의 일차결합이면 $a_1, \dots, a_k$ 를 일차종속이라 한다.
+
+</blockquote>
+
+- 예시 
+
+  $a_1, \dots, a_k$ 에서 $a_1$ 이 $a_2, \dots, a_k$ 의 일차결합이면 $a_1, \dots, a_k$ 는 일차종속이다.
+
+- 예시 
+
+  벡터 $a=(1,2,3),b=(2,4,6)$ 에서 $b=2a$ 이므로 이들은 일차종속이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+일차독립 또는 선형독립(linearly independent) : 일차결합의 정의에서 $a_1, \dots, a_k$ 가 일차종속이 아니면 $a_1, \dots, a_k$ 을 일차독립이라 한다.
+
+</blockquote>
+
+- 어떤 벡터 $a$ 가 일차독립이라는 것은 $a \neq 0$ 임을 뜻한다.
+
+- 자연수 $k$ 에 대한 벡터 $a_1, \dots, a_k$ 가 일차독립일 필요충분조건은 방정식 
+
+  $$ x_1a_1 + x_2a_2 + \dots + x_ka_k = 0 $$
+
+  의 해가 자명한 해 즉, $x_1=x_2=\dots=x_k=0$ 뿐인 것이다.
+
+  - 증명 
+
+    이 명제의 대우를 증명하려 해보자. 즉, 귀류법을 사용하자. 그러면 방정식
+
+    $$ x_1a_1 + x_2a_2 + \dots + x_ka_k = 0 $$
+
+    은 자명하지 않은 해 $(x_1, \dots, x_k)$ 를 갖는다. 즉, 어떤 $i \in \{1, \dots, k\}$ 에 대하여 $x_i \neq 0$ 이다. 그러므로 
+
+    $$ a_i = -\dfrac{x_1}{x_i}a_1 - \dots -\dfrac{x _{i-1}}{x_i}a _{i-1}-\dfrac{x _{i+1}}{x_i}a _{i+1} - \dots - -\dfrac{x _{k}}{x_i}a _{k} $$
+
+    인데 이것은 곧 $a_1, \dots, a_k$ 가 일차종속이라는 것이다.
+
+    가정과 모순이므로 벡터 $a_1, \dots, a_k$ 가 일차독립이면 방정식
+
+    $$ x_1a_1 + x_2a_2 + \dots + x_ka_k = 0 $$
+
+    은 자명한 해만을 갖는다.
+
+# <a name="$3$차원 좌표공간의 기저" href="#$3$차원 좌표공간의 기저">$3$차원 좌표공간의 기저</a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$3$차원 좌표공간의 생성 : $3$차원 좌표공간에서 실수 $v_1, v_2, v_3 \in \R$ 에 대한 벡터 $v=(v_1, v_2, v_3)$ 는 표준단위벡터 $i,j,k$ 의 일차결합인데,
+
+이때 $i,j,k$ 가 $3$차원 좌표공간을 생성한다고 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$-공간의 생성 : $n$-공간의 모든 벡터가 벡터 $a_1,\dots,a_n$ 의 일차결합이면,
+
+$a_1,\dots,a_n$ 는 $n$-공간을 생성한다.
+
+</blockquote>
+
+- 좌표평면에서는 $i,j$ 가 평면을 생성한다.
+
+- 예시 
+
+  $n$-공간의 임의의 벡터 $a=(a_1,\dots,a_n)$ 는 표준단위벡터들의 일차결합이다. 즉, 
+
+  $$ a=a_1e_1+a_2e_2+\dots+a_ne_n $$
+
+  이다. 그러므로 표준단위벡터 $e_1, \dots, e_n$ 는 $n$-공간을 생성한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$-공간의 기저(basis) : 일차독립이면서 $n$-공간을 생성하는 벡터 집합을 $n$-공간의 기저라고 한다.
+
+</blockquote>
+
+- 예시 
+
+  $n$-공간의 임의의 벡터 $a=(a_1,\dots,a_n)$ 는 표준단위벡터들의 일차결합이다. 즉, 
+
+  $$ a=a_1e_1+a_2e_2+\dots+a_ne_n $$
+
+  이다. 그러므로 표준단위벡터 $e_1, \dots, e_n$ 는 $n$-공간을 생성한다.
+
+  그런데 벡터 $e_2, \dots, e_n$ 의 어떤 일차결합도 첫번째 성분이 $0$ 이 되므로 $e_1$ 의 일차결합이 될 수 없다. 같은 원리로 $e_i$ 는 $e_1, \dots, e _{i-1},e _{i+1}, \dots,e_n$ 의 일차결합일 수 없다. 그러므로 표준단위벡터 $e_1, \dots, e_n$ 은 서로 일차독립이다.
+
+  표준단위벡터는 일차독립이면서 $n$-공간을 생성한다. 따라서 표준단위벡터는 $n$-공간의 기저이다. ■ 
+
+# <a name="벡터공간과 차원 " href="#벡터공간과 차원 ">벡터공간과 차원 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+벡터공간(vector space) : $\R ^{n}$ 처럼 원소의 합과 상수배가 정의되어 있는 집합, 즉 대수구조이다.
+
+</blockquote>
+
+- 선형대수학이란 벡터공간을 연구하는 학문이다.
+
+- 이 집합의 원소를 벡터라고 한다.
+
+- 좌표공간에서처럼 일반적인 벡터공간 $V$ 에서도 기저를 보일 수 있다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+차원(dimension) : 벡터공간 $V$ 과 자연수 $n, k$ 에 대한 임의의 두 기저
+
+$$ v_1, \dots, v_n $$
+
+$$ w_1, \dots, w_k $$
+
+에 대하여 항상 $n=k$ 인데, 
+
+이 $n$ 을 $V$ 의 차원이라고 한다.
+
+</blockquote>
+
+- 증명 
+
+  벡터 $v_1, \dots, v_n$ 는 벡터공간 $V$ 의 기저이므로 $V$ 를 생성한다. 그러므로 벡터공간 $V$ 의 모든 벡터를 $v_1, \dots, v_n$ 의 일차결합으로 나타낼 수 있다. 
+
+  따라서 $i \in \{1, \dots, k\}, j \in \{1,\dots,n\}$ 에 대한 임의의 실수 $a _{ij}$ 에 대하여
+
+  $$ w _{i} = \sum_{j=1}^{n}a _{ij}v _{j} $$
+
+  로 나타낼 수 있다.
+
+  한편 이때 방정식
+
+  $$ x_1w_1 + x_2w_2 + \dots + x_kw_k = 0 $$
+
+  은 
+
+  $$ \sum_{i=1}^{k}x_iw_i = x_1w_1 +x_2w_2+\dots +x_kw_k $$
+
+  $$ = x_1(a _{11}v_1 + a _{12}v_2 + a _{1n}v_n) + $$
+
+  $$   x_2(a _{21}v_1 + a _{22}v_2 + a _{2n}v_n) + $$
+
+  $$ \vdots $$
+
+  $$   x_k(a _{k1}v_1 + a _{k2}v_2 + a _{kn}v_n) $$
+
+  이다. 이것은 $x_1a_{11}v_1$ 에서 $x_ka_{kn}v_n$ 까지 더한 것이므로 
+
+  $$ = \sum_{j=1}^{n}\bigg (\sum_{i=1}^{k}x_ia_{ij}\bigg )v_j $$
+
+  이다. 그런데 이 방정식은 $w_1, \dots, w_k$ 가 기저이고, 이에따라 일차독립이므로 자명한 해 $x_1 = x_2 = \dots = x_k = 0$  만 가진다.
+
+  그러므로 
+
+  $$ (a _{11}v_1, a _{12}v_2, a _{1n}v_n), \dots, (a _{k1}v_1, a _{k2}v_2, a _{kn}v_n) $$
+
+  는 일차독립이다.
+
+  그러므로 
+
+  $$ (a _{11}, a _{12}, a _{1n}), \dots, (a _{k1}, a _{k2}, a _{kn}) $$
+
+  는 일차독립이다.
+
+  **??????? 벡터공간의 차원 정리에 대한 다른 증명을 찾아보자..**
+
+- 예시 
+
+  $\R ^{n}$ 의 차원은 $n$ 이다.
+
+# <a name="좌표계 " href="#좌표계 ">좌표계 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+좌표(coordinates) : $n$-공간의 의 벡터 $b_1, \dots, b_n$ 와 $n$-공간의 한 기저 $\mathcal{B}:= (b_1, \dots, b_n)$ 에 대하여 임의의 벡터 $v \in \R ^{n}$ 을 $\mathcal{B}:= (b_1, \dots, b_n)$ 로 표현하는 방법은
+
+$$ v = c_1b_1 + c_2b_2 + \dots + c_nb_n $$
+
+로써 유일한데, 이때 $(c_1, \dots, c_n) \in \R ^{n}$ 을 기저 $\mathcal{B}:= (b_1, \dots, b_n)$ 에 대한 벡터 $v$ 의 좌표라고 한다.
+
+</blockquote>
+
+- 지금까지 줄곧 사용하던 좌표평면의 좌표 $(a,b)$ 와 좌표공간의 좌표 $(a,b,c)$ 을 일반화한 것이다.
+
+  - 우리가 일반적으로 사용해왔던 좌표평면의 기저는 $\bigg (\begin{bmatrix} 1\\0 \end{bmatrix}, \begin{bmatrix} 0\\1 \end{bmatrix}\bigg )$ 이고, 좌표공간의 기저는 $\bigg ( \begin{bmatrix} 1\\0\\0 \end{bmatrix}, \begin{bmatrix} 0\\1\\0 \end{bmatrix}, \begin{bmatrix} 0\\0\\1 \end{bmatrix} \bigg )$ 인 것이다.
+>>>>>>> 82207c90f53c26aee225ec06643774ee6bd351ef

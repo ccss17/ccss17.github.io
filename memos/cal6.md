@@ -62,7 +62,6 @@ $$ f : U \to \R $$
 
     ![image](https://user-images.githubusercontent.com/16812446/86470649-cc52f200-bd76-11ea-9347-5421db411de9.png)
    
-
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 이변수 함수의 극한 : 함수 $f(x, y)$ 에서 $(x, y)$ 이 $(x_0, y_0)$ 에 한없이 다가갈 때 함수값이 극한값 $L$ 로 다가가는 것은 
@@ -215,9 +214,9 @@ $$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L\\ \lim_{(x, y) \to (x_0, y_0)} g(x, 
 
 1. $f$ 가 $(x_0, y_0)$ 에서 정의되어 있다. 
 
-2. $\lim_{(x, y) \to (x_0, y_0)} f(x, y)$ 극한값이 존재한다.
+2. $\displaystyle \lim_{(x, y) \to (x_0, y_0)} f(x, y)$ 극한값이 존재한다.
 
-3. $\lim_{(x, y) \to (x_0, y_0)} f(x, y) = f(x_0, y_0)$
+3. $\displaystyle \lim_{(x, y) \to (x_0, y_0)} f(x, y) = f(x_0, y_0)$
 
 </blockquote>
 
@@ -371,6 +370,8 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
 ![2v](https://user-images.githubusercontent.com/16812446/78995906-63e0e400-7b7e-11ea-9f1e-76382bc9c548.jpg)
 
+</blockquote>
+
 1. $x$ 에 대한 편도함수 
 
     $$ f_x(x, y) = \frac{\partial z}{\partial x} = \lim_{h \to 0} \frac{f(x+h, y)-f(x, y)}{h} $$
@@ -401,15 +402,13 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
     - 그리고 그 기울기들에 대한 함수가 $y$ 에 대한 편도함수이다. 
 
-</blockquote>
-
 - 그러면 $x$ 축 방향으로 평행하지도 않고 $y$ 축 방향으로 평행하지도 않고 
 
   $x$ 축으로부터 $60 \degree$ 벌어진 단위 벡터 $u$ 의 방향으로 교선을 잘라서 기울기를 구하는 상황도 생각할 수 있다.
 
   이것을 단위벡터 $u$ 의 방향도함수라 한다. 
 
-## <a name="여러가지 편도함수 " href="#여러가지 편도함수 ">여러가지 편도함수 </a>
+## <a name="여러가지 편도함수" href="#여러가지 편도함수">여러가지 편도함수 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -485,17 +484,299 @@ $$ f _{xy}(a, b) = f _{yx}(a, b) $$
 
   가 동일한 것은 우연의 일치가 아니다. 혼합 편미분 정리에 의하여 이 둘이 같은 것이다. 
 
+# <a name="다변수 합성 함수의 미분" href="#다변수 합성 함수의 미분">다변수 합성 함수의 미분</a>
+
+## <a name="선형근사" href="#선형근사">선형근사</a>
+
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-이변수 함수의 미분가능성 : 
+선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 접선의 방정식
 
-**구체화 필요**
+$$ L(x) = f'(a)(x-a) + f(a) $$
+
+를 함수 $f$ 의 선형화라고 한다.
 
 </blockquote>
 
+- 다음 그래프는 $y = x^2, y = 2x-1$ 이다. 그런데 $x=1$ 지점에서 그래프를 더 확대해보면 다음과 같다. 
+
+  <img src="https://user-images.githubusercontent.com/16812446/79032028-2b70f280-7bde-11ea-84c5-a63f705c0906.png" width="30%" height="auto"> <img src="https://user-images.githubusercontent.com/16812446/79032042-43e10d00-7bde-11ea-94f6-9056afab3f22.png" width="30%" height="auto"> <img src="https://user-images.githubusercontent.com/16812446/79032074-991d1e80-7bde-11ea-9a8f-3e636d9bb31b.png" width="30%" height="auto">
+
+  그러면 거의 두 함수를 분간할 수가 없다. 
+
+  이것은 원함수의 임의의 점 $x=a$ 에서의 접선을 그렸을 때 $x=a$ 를 중심으로 그래프를 끝없이 확대해보면 원함수와 접선이 거의 똑같아지는 것을 의미한다.
+
+- 이 현상을 이용하여 $x=a$ 에서 원래의 함수를 선형 근사시킬 수 있는 방법을 $x=a$ 에서의 접선 
+
+  $$ L(x) = f'(a)(x-a) + f(a) $$
+
+  을 구하는 것이라 할 수 있다. 
+
+- 예시 
+
+  $y = \sqrt[]{1+x}$ 을 $x = 0$ 에서 선형근사시켜보면 다음과 같다.
+
+  $$ \sqrt[]{1+x} \approx 1 + \frac{x}{2} $$
+
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-이변수 합성함수의 도함수(chain rule) 또는 일독립변수와 이매개변수에 대한 도함수 : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t)$ 가 미분가능하면
+표준 선형 근사(standard linear approximation) : 선형화의 정의에서 $x=a$ 에서 함수 $f$ 의 함수 $L$ 에 의한 근사
+
+$$ f(x) \approx L(x) $$
+
+를 표준 선형 근사라한다.
+
+</blockquote>
+
+- 이때 $x=a$ 를 근사의 중심이라 한다. 
+
+## <a name="미분(differential)" href="#미분(differential)">미분(differential)</a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+미분(differential) : $y = f(x)$ 를 미분가능한 함수이고 미분 $dx$ 가 독립변수일 때 미분 $dy$ 는 
+
+$$ dy = f'(x)dx $$
+
+이다. 
+
+</blockquote>
+
+- $dx$ 와 $x$ 가 독립변수인 반면 $dy$ 는 종속변수이다. 즉, $dy$ 는 $x, dx$ 에 의해 결정된다.
+
+- 가끔 $dy = f'(x)dx$ 를 다음과 같이 미분 $f$ 로도 표현한다.
+
+  $$ df = f'(x)dx $$
+
+- 미분은 서로 다른 두 개념인 differentiation(미분) 과 differential(미분) 으로 동시에 쓰인다. 전자는 도함수를 얻는다는 뜻의 differentiate 의 명사형이다. 후자 differential 은 원함수의 선형근사함수를 뜻한다.
+
+  가령 함수 $f(x)$ 의 한 점 $a$ 에서의 미분(differential) 은 
+
+  $$ df(\Delta x) = f'(a)\Delta x $$
+
+  로 표현되는 선형근사함수이다. 
+
+- 기하학적 의미 
+
+  ![image](https://user-images.githubusercontent.com/16812446/86736612-a11a1c80-c06e-11ea-8b4f-20ed5748ea3c.png)
+
+  > 출처 : [Thomas' CALCULUS](https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078) Figure3.55
+
+  기하학적 의미는 이렇다.
+  
+  위 그림에서 $x = a, dx = \Delta x$ 로 두자. $x$ 의 증분 $\Delta x$ 는 $x = a$ 에서 $x = a + \Delta x$ 의 거리
+
+  $$ \Delta x = (\Delta x + a) - (a) $$
+
+  로 두자. 
+  
+  $x$ 증분에 따른 $y=f(x)$ 의 변화는 $\Delta y = f(a + dx) - f(a)$ 이다. 
+  
+  $x$ 증분에 따른 접선 $L(x) = f'(a)(x-a) + f(a)$ 의 변화는 
+  
+  $$\Delta L = L(a + dx) - L(a)$$
+
+  $$ = f'(a)\{(a+dx)-a\} +f(a) -f(a) $$
+
+  $$ = f'(a)dx $$
+
+  이다.
+
+  이것의 의미는 $\Delta L = f'(a)dx = dy$ 이므로 $f$ 의 선형화(접선 $L$)의 변화가 정확하게 $x=a, dx = \Delta x$ 일때 미분(differential) $dy$ 와 똑같다는 것이다.
+
+  그러므로 우리는 $dx = \Delta x$ 일때 미분(differential) $dy$ 가 정확하게 접선의 변화량을 나타내준다는 것을 알 수 있다.
+
+  만약 $dx \neq 0$ 이라면 다음과 같이 미분(differential) $dy$ 를 $dx$ 로 나누어 얻은 것이 도함수 $f'(x)$ 와 정확하게 일치한다는 것을 알 수 있다.
+
+  $$ dy \div dx = \dfrac{f'(x)dx}{dx} = f'(x) = \dfrac{dy}{dx} $$
+
+- 예시 
+
+  $y = x ^{5} + 37x$ 에서의 $dy$ 를 찾자. 
+
+  $$ dy = (5x ^{4} + 37)dx $$ □ 
+
+  이때 $x=1,dx=0.1$ 에서 $dy$ 값을 찾으면
+
+  $$ dy = (5 \cdot 1   ^{4} + 37)(0.2) = 8.4 $$
+
+  이다. ■ 
+
+- 예시 
+
+  합성함수 미분법(Chain Rule) 과 다른 미분법을 함께 사용할 수 있다. 
+
+  먼저 일반적인 미분(differentiation) 의 관점에서 $(\tan x)' = \sec ^{2}x$ 이므로 $(\tan 2x)'$ 에서 $2x = t$ 로 두면 
+
+  $$ \dfrac{d \tan 2x}{dx} = \dfrac{d \tan t}{dx} = \dfrac{d \tan t}{dt}\cdot \dfrac{d2x}{dx} = \sec ^{2}t \cdot 2 = 2 \sec ^{2}(2x) $$
+
+  이다.
+
+  이제 미분(differential) 의 관점에서
+
+  $$ d (\tan  2x) = \sec ^{2}(2x)d(2x) $$ 
+
+  에서 $d(2x)$ 을 함수 $y = 2x$ 를 $x$ 에 대하여 하는 미분(differential) 으로 보면 $d(2x) = (2x)'dx = 2dx$ 이므로
+
+  $$ d (\tan 2x) = 2 \sec ^{2} (2x) dx $$
+
+  이다. 
+
+## <a name="미분 추정" href="#미분 추정">미분 추정</a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+미분의 추정(estimating with differentials) : 함수 $f(x)$ 가 $x = a$ 에서 미분가능할 때 $x = a$ 의 근방 $x = a + dx$ 에서 함수값이 변하는 정도 $f(a + dx)$ 는 근사적으로
+
+$$ f(a + dx) \approx f(a) + dy $$
+
+이다. 
+
+</blockquote>
+
+- $y$ 의 증분은 $\Delta y = f(a + \Delta x) - f(a)$ 이다. 이때 $dx= \Delta x$ 가 충분히 작으면 $y$ 의 증분 $\Delta y$ 는 미분 $dy$ 와 거의 똑같아진다. 왜냐하면 함수 $f$ 의 접선 $L$ 의 증분 $\Delta L = f'(a)dx = dy$ 이 $x = a$ 의 근방에서 함수 $f$ 의 증분 $\Delta y$ 와 거의 똑같아지기 때문이다. 그러므로 $x = a$ 근방에서 
+
+  $$ f'(a)dx = dy \approx \Delta y $$
+
+  라 할 수 있고, 이에 따라
+
+  $$ f(a + dx) = f(a) + \Delta y $$
+
+  를 근사적으로 
+
+  $$ f(a + dx) \approx  f(a) + dy $$
+
+  로 쓸 수 있다. 
+
+- 예시 
+
+  $7.97 ^{\frac{1}{3}}$ 을 추산해보자. 
+
+  $f(x) = x ^{\frac{1}{3}}$ 의 미분(differential)은 $dy = \dfrac{1}{3x ^{\frac{2}{3}}}dx$ 이다. 이때 $a = 8$ 로 둔다면 $7.97$ 을 $x = a$ 근방의 함수 $f$ 의 접선의 함수값으로 생각할 수 있다. 그렇다면 $dx = -0.03$ 으로 둘 때 $x = a$ 에서의 함수값 $f(7.97)$ 을 다음과 같이 근사시킬 수 있다. 
+
+  $$ f(7.97) = f(a + dx) \approx f(a) + dy $$
+
+  그러면 $f(a) + dy = f(a) + f'(a)dx$ 에서 $f'(x) = \frac{1}{3x ^{\frac{2}{3}}}$ 이고 $dx = -0.03$ 으로 두었으므로
+
+  $$ = 8 ^{\frac{1}{3}} + \frac{1}{3(8)^{\frac{2}{3}}}(-0.03) = 1.9975 $$
+
+  이다. 따라서 
+
+  $$ \therefore  7.97 ^{\frac{1}{3}} \approx 1.9975 $$
+
+  이다. ■ 
+
+- 예시
+
+  원의 반지름 $r$ 이 $a=10$ 에서 $a=10.1$ 로 변했을 때 원의 넓이 $A$ 를 추정해보자.
+
+  먼저 원의 정확한 넓이는 $A = \pi r ^{2}$ 이고 $a=10, dr = 0.1$ 이므로 미분(differential) 을 구하여
+
+  $$ dA = A'(a)dr = 2 \pi adr = 2 \pi (10)(0.1) = 2 \pi $$
+
+  을 얻는다.
+
+  그런데 $A(r + \Delta r) \approx A(r)+dA$ 이므로 
+
+  $$ A(10 + 0.1) \approx A(10)+2 \pi = \pi (10)^{2}+2 \pi =102 \pi $$
+
+  를 얻는다. 그러므로 반지름 $r=10.1$ 일 때 원의 넓이를 미분 추정해보면 $102 \pi$ 이다. ■ 
+
+  실제 넓이는 $A(10.1) = \pi (10.1) ^{2} = 102.01 \pi$ 이므로 오차는 $\Delta A - dA = 0.01 \pi$ 이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+미분근사의 오차(error in differential approximation) : 함수 $y=f(x)$ 가 $x=a$ 에서 미분가능하고 $x$ 가 $a$ 에서 $a+\Delta x$ 로 변할 때 함수 $y$ 의 변화량 $\Delta y$ 은
+
+$\Delta x \to 0 \Rightarrow \epsilon \to 0$ 인 오차량 $\epsilon = \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a)$ 에대하여
+
+$$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
+
+이다.
+
+</blockquote>
+
+- 설명 
+
+  함수 $f(x)$ 가 $x=a$ 에서 미분가능하다고 하고 $x$ 의 변화량을 $dx = \Delta x$ 라고 하자.
+
+  그러면 $x$ 가 $a$ 에서 $a+ \Delta x$ 변할 때 함수 $f$ 의 변화를 표현하는 두 가지 방법이 있다.
+
+  1. 진짜 변화량 : $\Delta f = f(a+\Delta x)-f(a)$
+
+  2. 미분 추정량 : $df = f'(a)\Delta x$
+
+  이때 미분 추정량 $df$ 는 진짜 변화량 $\Delta f$ 와 얼마나 차이가 날까? 이것은 단순히 $\Delta f$ 로부터 $df$ 를 빼보면 알 수 있다.
+
+  그러므로 추정오차량은
+
+  $$ \text{(추정오차량)} = \Delta f - df = \Delta f - f'(a)\Delta x $$
+
+  $$ = f(a+\Delta x)-f(a)-f'(a)\Delta x $$
+
+  $$ = \bigg ( \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a) \bigg )\cdot \Delta x $$
+
+  인데 오차량을 $\epsilon = \bigg ( \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a) \bigg )$ 로 두면
+
+  $$ = \epsilon \cdot \Delta x $$
+
+  이다.
+
+  그런데 $\Delta x \to 0$ 일 때 미분계수의 정의에 따라 $\dfrac{f(a+\Delta x) - f(a)}{\Delta x} \to f'(a)$ 이다. 그러므로 실질적으로 $\epsilon$ 은 매우 작은양으로 줄어든다. 즉,
+
+  $$ \Delta x \to 0 \Rightarrow \epsilon \to 0 $$
+
+  이다. 따라서 $\Delta x$ 가 매우 작으면 오차량 $\epsilon$ 도 함께 매우 작아진다. 이때 $\Delta f - df = \epsilon \cdot \Delta x$ 이므로 $\Delta f = df + \epsilon \Delta x$ 즉,
+
+  $$ \underbrace{\Delta f}_{\text{true change}} = \underbrace{f'(a)\Delta x}_{\text{estimated change}} + \underbrace{\epsilon \Delta x}_{error} $$
+
+  를 얻는다.
+
+- 예시
+
+  원의 반지름 $r$ 이 $a=10$ 에서 $a=10.1$ 로 변했을 때 원의 넓이 $A$ 를 추정해보고 오차를 조사하자.
+
+  먼저 원의 정확한 넓이는 $A = \pi r ^{2}$ 이고 $a=10, dr = 0.1$ 이므로 미분(differential) 을 구하여
+
+  $$ dA = A'(a)dr = 2 \pi adr = 2 \pi (10)(0.1) = 2 \pi $$
+
+  을 얻는다.
+
+  그런데 $A(r + \Delta r) \approx A(r)+dA$ 이므로 
+
+  $$ A(10 + 0.1) \approx A(10)+2 \pi = \pi (10)^{2}+2 \pi =102 \pi $$
+
+  를 얻는다. 그러므로 반지름 $r=10.1$ 일 때 원의 넓이를 미분 추정해보면 $102 \pi$ 이다. 
+
+  실제 넓이는 $A(10.1) = \pi (10.1) ^{2} = 102.01 \pi$ 이므로 
+  
+  $$ \Delta A = (102.01 - 100) \pi = (\underbrace{2 \pi}_{dA}  + \underbrace{0.01 \pi}_{\text{error}}) $$
+  
+  에서 $\Delta A - dA = \epsilon \Delta r = 0.01 \pi$ 이다. 따라서 최종적으로 오차량 
+  
+  $$\epsilon = \dfrac{0.01 \pi}{\Delta r} = \dfrac{0.01 \pi }{0.1} = 0.1 \pi$$ 
+  
+  을 얻는다. ■ 
+
+## <a name="이변수함수의 미분가능성 " href="#이변수함수의 미분가능성 ">이변수함수의 미분가능성 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+이변수함수의 미분가능 : 점 $(x_0,y_0)$ 에 대한 이변수함수 $z=f(x,y)$ 의 편미분 $f_x(x_0, y_0), f_y(x_0,y_0)$ 이 존재하고 함수 $z$ 의 변화량 $\Delta z$ 가 
+
+$\Delta x, \Delta y \to 0 \Rightarrow \epsilon _1, \epsilon _2 \to 0$ 에 대한 방정식
+
+$$ \Delta z = f_x(x_0,y_0)\Delta x+f_y(x_0,y_0)\Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y $$
+
+을 만족하면 $f$ 는 모든 정의역에서 미분가능하다.
+
+</blockquote>
+
+- 그리고 미분가능한 이변수함수의 그래프를 매끄러운 곡면(smooth surface)이라고 한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+일독립변수와 이매개변수에 대한 도함수 : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t)$ 가 미분가능하면
 
 $t$ 에 대한 이변수 합성함수 $w = f(x(t), y(t))$ 는 미분가능하며 그 도함수는 
 
@@ -511,7 +792,30 @@ $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w
 
 - 증명 
 
-  (생략)**구체화 필요**
+  증명은 $x,y$ 가 $t=t_0$ 에서 미분가능하면 $w$ 도 $t_0$ 에서 미분가능하고 
+
+  점 $P_0 = (x(t_0),y(t_0))$ 에 대하여
+
+  $$ \bigg (\dfrac{dw}{dt}\bigg )_{t_0} = \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0} \bigg (\dfrac{d x}{d t}\bigg )_{t_0} +\bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \bigg (\dfrac{d y}{d t}\bigg )_{t_0} $$
+
+  가 성립함을 보임으로써 완성된다.
+
+  먼저 $\Delta x, \Delta y, \Delta w$ 를 $t$ 가 $t_0$ 에서 $t_0 + \Delta t$ 로 변할때의 증분이라고 하자. 이변수함수 $f$ 가 미분가능하다고 가정했으므로
+
+  $\Delta x,y \to 0 \Rightarrow \epsilon _{1}, \epsilon _{2} \to 0$ 에 대하여
+
+  $$ \Delta w =  \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0}\Delta x+ \bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y $$
+
+  이 성립한다.
+
+  이 식을 $\Delta t$ 로 나누면
+
+  $$ \dfrac{\Delta w}{\Delta t}  =  \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0} \dfrac{\Delta x}{\Delta t} + \bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \dfrac{\Delta y}{\Delta t}+\epsilon _1  \dfrac{\Delta x}{\Delta t}+\epsilon _2 \dfrac{\Delta y}{\Delta t} $$
+
+  를 얻는다. 이때 $\Delta t \to 0$ 이면
+
+  $$ \lim_{\Delta t \to 0} \dfrac{\Delta w}{\Delta t}  =  \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0} \bigg (\dfrac{dx}{dt}\bigg )_{t_0} + \bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \bigg (\dfrac{dy}{dt}\bigg ) _{t_0}+0 \cdot  \dfrac{\Delta x}{\Delta t}+0 \cdot \dfrac{\Delta y}{\Delta t} $$
+
 
 - 예시 
 
@@ -557,7 +861,7 @@ $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w
 
 - 증명 
 
-  (생략)**구체화 필요**
+  일독립변수와 이매개변수에 대한 도함수의 증명과 동일하다.
 
 - 예시 
 
@@ -687,7 +991,144 @@ $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\part
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
+이변수함수의 $u$-방향미분계수, 또는 $u$-방향 순간변화율 : 데카르트 공간 $\R ^{3}$ 에서 정의된 이변수함수 $f(x,y)$ 와 한 점 $P_0(x_0,y_0)$ 와 단위벡터 $u = u_1i+u_2j$ 에 대한 극한값
+
+$$ (D_uf)_{P_0} := \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{f(x_0+su_1, y_0 + su_2)-f(x_0,y_0)}{s} $$
+
+이다.
+
+</blockquote>
+
+- 다음과 같이 표기하기도 한다.
+
+  $$ D_uf(P_0) := \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{f(x_0+su_1, y_0 + su_2)-f(x_0,y_0)}{s} $$
+
+- $s$ 는 점 $P_0$ 에서 $u$ 방향으로의 곡선의 길이를 뜻한다. 
+
+  그러므로 $\dfrac{df}{ds}$ 를 계산함으로써 $P_0$ 에서의 이변수함수 $f$ 의 순간변화율을 계산할 수 있는 것이다.
+
+- 편미분계수 $f_x(x_0, y_0), f_y(x_0, y_0)$ 은 각각 점 $P_0$ 에 대한 $i$-방향미분계수, $j$-방향미분계수 였던 것이다.
+
+  일변수 함수에서는 방향이 오직 하나였지만, 다변수 함수에서는 방향이 무한하므로 벡터 $u$ 를 통하여 미분 방향, 즉 변화율을 조사할 방향을 설정해야 한다.
+
+- 기하학적 의미 
+
+  <img src="https://user-images.githubusercontent.com/16812446/86775439-57dbc400-c092-11ea-94ea-ed93c3413888.png" width="70%" height="auto">
+
+  > 출처 : [Thomas' CALCULUS](https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078) Figure14.28
+
+  위 그림과 같이 이변수 함수 $z=f(x,y)$ 는 곡면 $S$ 를 그린다.
+  
+  $z_0=f(x_0,y_0)$ 으로 곡면 $S$ 위에 위치한 점 $P(x_0,y_0,z_0)$ 에서 수직평면 $C$ 가 벡터 $u = u_1i+u_2j$ 방향으로 곡면 $S$ 를 가로지르고 있다.
+
+  벡터 $u$ 방향으로의 $f$ 의 변화율은 접평면 $C$ 가 점 $P$ 와 만나는 지점에서 $u$ 방향으로의 변화율을 뜻하는 것이다.
+
+  만약 $u=i$ 라면 점 $P_0$ 에서의 방향미분계수, 즉 순간변화율은 $\dfrac{\partial f}{\partial x} \bigg | _{(x_0, y_0)}$ 과 같게 되는 것이다. 즉 $x$ 축 방향 벡터 $u$ 로의 $f$의 순간변화율인 것이다.
+
+  만약 $u=j$ 라면 점 $P_0$ 에서의 방향미분계수, 즉 순간변화율은 $\dfrac{\partial f}{\partial y} \bigg | _{(x_0, y_0)}$ 과 같게 되는 것이다. 즉 $y$ 축 방향 벡터 $u$ 로의 $f$의 순간변화율인 것이다.
+
+  방향미분계수는 이것을 일반화하여 임의의 방향 벡터 $u$ 로의 $f$의 순간변화율을 계산할 수 있게 해주는 것이다.
+
+  - 한편 곡면 $S$ 의 점 $P_0(x_0,y_0)$ 에서 벡터 $u$ 방향으로의 직선을 $xy$ 평면에서 표현해보면 다음과 같다.
+
+    <img src="https://user-images.githubusercontent.com/16812446/86777767-865a9e80-c094-11ea-8374-29a5d45204db.png" width="50%" height="auto">
+
+    > 출처 : [Thomas' CALCULUS](https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078) Figure14.27
+
+    이 직선을 독립변수 $s$ 와 벡터 $u=u_1i+u_2j$ 에 대한 매개변수 방정식
+
+    $$ x = x_0+su_1, y = y_0 + su_2 $$
+
+    으로 표현할 수 있다.
+
+- 예시 
+
+  이변수함수 $f(x,y) = x ^{2}+xy$ 의 점 $P_0(1,2)$ 에서 벡터 $u = (1/\sqrt[]{2})i+(1/\sqrt[]{2})j$ 방향의 순간변화율을 구해보자.
+
+  방향미분계수의 정의에 따라
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{f(x_0+su_1, y_0 + su_2)-f(x_0,y_0)}{s} $$
+
+  $$ = \lim_{s \to 0} \dfrac{f(1+s \cdot \dfrac{1}{\sqrt[]{2}}, 2 + s \cdot \dfrac{1}{\sqrt[]{2}})-f(1,2)}{s} $$
+
+  $$ = \lim_{s \to 0} \dfrac{\bigg (1+s \cdot \dfrac{1}{\sqrt[]{2}} \bigg ) ^{2}+\bigg (1+s \cdot \dfrac{1}{\sqrt[]{2}} \bigg )\bigg (2 + s \cdot \dfrac{1}{\sqrt[]{2}}\bigg ) -3}{s} $$
+
+  $$ = \lim_{s \to 0} \dfrac{\dfrac{5s}{\sqrt[]{2}}+s ^{2}}{s} = \lim_{s \to 0} \bigg (\dfrac{5}{\sqrt[]{2}}+s\bigg ) = \dfrac{5}{\sqrt[]{2}}$$
+
+  이다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+이변수함수의 방향도함수 : 데카르트 공간 $\R ^{3}$ 에서 정의된 이변수함수 $f(x,y)$ 단위벡터 $u = u_1i+u_2j$ 에 대하여
+
+$f$ 의 정의역의 각 원소를 $u$-방향미분계수에 대응시켜 만든 함수
+
+$$ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+ su_2)-f(x,y)}{s} $$
+
+이다.
+
+</blockquote>
+
+- 이때 $x, y$ 를 벡터 $u = u_1i+u_2j$ 방향으로 향하는 직선
+
+  $$ x = x_0 + su_1, y = y_0 + su_2 $$
+
+  으로 한정시키자. 그래도 이변수 함수 $f(x,y)$ 의 벡터 $u$ 방향으로의 순간변화율을 구하기에 충분하다. 그러면 
+
+  $f$ 의 $u$ 방향으로의 순간변화율은 독립변수 $s$ 에 의존하는 $x,y$ 를 변수로 갖는 이독립변수 일매개변수의 합성함수 미분으로 구할 수 있게 된다. 그러므로 
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = \bigg (\dfrac{\partial f}{\partial x}\bigg )\dfrac{dx}{ds}+\bigg (\dfrac{\partial f}{\partial y}\bigg )\dfrac{dy}{ds} $$
+
+  인데 $x = x_0 + su_1$ 를 $s$ 에 대하여 미분하면 $\dfrac{dx}{ds} = u_1$ 이고 $y = y_0 + su_2$ 를 $s$ 에 대하여 미분하면 $\dfrac{dy}{ds} = u_2$ 이므로
+
+  $$ = \bigg (\dfrac{\partial f}{\partial x}\bigg )u_1+\bigg (\dfrac{\partial f}{\partial y}\bigg )u_2 $$
+
+  인데 이것을 벡터 $\bigg <\dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y}\bigg >$ 와 벡터 $\big <u_1,u_2\big >$ 내적으로 표현하면
+
+  $$ = \bigg[ \bigg (\dfrac{\partial f}{\partial x}\bigg )i+\bigg (\dfrac{\partial f}{\partial y}\bigg )j \bigg ]\cdot \bigg [u_1i+u_2j\bigg ] $$
+
+  이다.
+
+  - 이것은 다변수함수 $f$ 의 $u$ 방향의 미분이 벡터 $u$ 와 기울기벡터의 내적임을 알려준다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+방향도함수의 계산 : 단위벡터 $u$ 방향의 방향도함수가 결국 기울기 벡터와 벡터 $u$ 의 내적임을 이용하여 간편하게 방향도함수를 계산하는 방식
+
+$$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u $$
+
+이다.
+
+</blockquote>
+
+- 예시
+
+  이변수함수 $f(x, y) = xe ^{y}+\cos (xy)$ 의 벡터 $v = 3i-4j$ 방향의 방향도함수의 점 $(2,0)$ 에서의 방향미분계수를 구해보자.
+
+  먼저 벡터 $v$ 를 단위벡터로 바꾸면 $u = \dfrac{v}{|v|}=\dfrac{v}{5}=\dfrac{3}{5}i-\dfrac{4}{5}j$, 즉 $\bigg <\dfrac{3}{5},\dfrac{4}{5}\bigg >$ 이다.
+
+  또 기울기 벡터는 
+
+  $$ \bigg <\dfrac{\partial  f}{\partial x},\dfrac{\partial f}{\partial y}\bigg > = \big < e ^{y}-y \sin (xy), x e ^{y}-x \sin (xy) \big > $$
+
+  이다.
+
+  그러므로 방향도함수는 
+
+  $$ D_uf = \big < e ^{y}-y \sin (xy), x e ^{y}-x \sin (xy) \big > \cdot \bigg <\dfrac{3}{5},\dfrac{4}{5}\bigg >$$ 
+
+  $$ = \dfrac{3}{5}e ^{y}-y \sin (xy)i + \dfrac{4}{5}x e ^{y}-x \sin (xy)j$$ 
+
+  이다. 따라서 점 $(2,0)$ 에서 벡터 $v$ 방향으로의 방향미분계수는
+
+  $$ D_uf \bigg | _{(2,0)} = 
+  $$
+ 
+# <a name="삼각함수로 정의한 방향도함수 " href="#삼각함수로 정의한 방향도함수 ">삼각함수로 정의한 방향도함수 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+삼각함수로 정의한 이변수 함수의 방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
 
 함수 $f$ 의 벡터 $u$ 방향으로의 순간변화율로써
 
@@ -857,19 +1298,19 @@ $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-기울기 벡터(gradient vector) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
+기울기 벡터(gradient vector, gradient) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
 
 $$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > $$
 
-또는 
-
-$$  \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > $$
-
-로써 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
+이다.
 
 </blockquote>
 
-- 기울기 벡터는 함수의 증가율이 최대가 되는 방향을 가르키는 벡터이다.
+- 다음과 같이 표기하기도 한다.
+
+$$  \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > $$
+
+- 기울기 벡터는 함수의 증가율이 최대가 되는 방향, 즉 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
 
   - 증명
 
@@ -1110,6 +1551,7 @@ $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\
 이다.
 
 </blockquote>
+<<<<<<< HEAD:memos/calculus6.md
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1464,3 +1906,5 @@ $$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
 
 
 
+=======
+>>>>>>> 82207c90f53c26aee225ec06643774ee6bd351ef:memos/cal6.md
