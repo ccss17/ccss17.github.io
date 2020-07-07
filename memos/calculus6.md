@@ -1250,7 +1250,7 @@ $$ D_kf:U \to \R, P \mapsto D_kf(P) $$
 
   이다. $t = x_1 ^{2}+ \dots+x_n ^{2}$ 라고 두면,
 
-  $$ = \dfrac{\partial }{\partial x_i}t^{\frac{1}{2}} = \dfrac{d t ^{\frac{1}{2}} }{d t} \dfrac{\partial t}{\partial x_i}  $$
+  $$ = \dfrac{\partial }{\partial x_i}t^{\frac{1}{2}} = \dfrac{d t ^{\frac{1}{2}} }{d t} \dfrac{\partial t}{\partial x_i} = \dfrac{d t ^{\frac{1}{2}} }{d t} \dfrac{\partial (x_1 ^{2}+ \dots+x_n ^{2})}{\partial x_i} $$
 
   $$ = \dfrac{1}{2}t ^{\frac{1}{2}-1}(2x_i) = \dfrac{1}{t^{\frac{1}{2}} }(x_i) = \dfrac{x_i}{\sqrt[]{t}} $$
 
@@ -1259,6 +1259,90 @@ $$ D_kf:U \to \R, P \mapsto D_kf(P) $$
   $$ = \dfrac{x_i}{r} $$
 
   이다. ■ 
+
+## <a name="기울기 벡터의 일반적인 정의" href="#기울기 벡터의 일반적인 정의">기울기 벡터의 일반적인 정의</a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+편미분 가능 : $n$변수함수 $f$ 의 모든 편미분계수가 점 $P$ 에서 존재할 때, $f$ 는 점 $P$ 에서 편미분 가능하다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+기울기벡터(gradient vector) : $n$변수함수 $f$ 가 점 $P$ 에서 편미분가능할 때 벡터
+
+$$ \text{grad}\ f(P) := (D_1f(P), \dots, D_nf(P)) $$
+
+를 점 $P$ 에서 $f$ 의 기울기 벡터라고 한다.
+
+</blockquote>
+
+- 기울기 벡터를 다음과 같이 표기하기도 한다.
+
+  $$ \text{grad}\ f(P) := \Big < D_1f(P), \dots, D_nf(P) \Big > $$
+
+  $$ \nabla f(P) := \bigg ( \dfrac{\partial f(P)}{\partial x_1}, \dots, \dfrac{\partial f(P)}{\partial x_n} \bigg ) = \bigg < \dfrac{\partial f(P)}{\partial x_1}, \dots, \dfrac{\partial f(P)}{\partial x_n} \bigg > $$
+
+  - 다 같은 표기법이다.
+
+  - $\nabla f$ 는 나블라 $f$ 또는 델 $f$ 라고 읽는다.
+
+- 일변수함수 $f(x)$ 에서 접선의 기울기가 $f'(x)$ 인 것처럼, 
+
+  다변수함수 $f(X)$ 의 그래프에서 접평면의 기울기 벡터가 $\text{grad} \ f(P)$ 이다.
+
+- 예시 
+
+  원점 $O = (0,0,0)$ 에서 함수 
+
+  $$ f(x,y,z) = \exp (x+yz) $$
+
+  의 기울기 벡터를 구해보자.
+
+  $$ D_1f(x,y,z)=\dfrac{\partial \exp (x+yz)}{\partial x} = $$ 
+
+  에서 상수배 함수 $y=cf(x)$ 의 도함수는 $y'=cf'(x)$ 이고, 함수 $y=e^x$ 의 도함수는 $y'=e^x$ 이므로
+  
+  $$ = \dfrac{\partial e ^{x+yz}}{\partial x} = e ^{x+yz} =f(x,y,z) $$
+
+  이다. □ 
+
+  $$ D_2f(x,y,z) = \dfrac{\partial e ^{x+yz}}{\partial y} = $$
+
+  에서 지수함수 $y=  a^x$ 의 도함수는 $y' = a^x \ln a$ 이므로 
+
+  $$ = e ^{x}\dfrac{\partial (e ^{z})^{y}}{\partial y} = e ^{x}(e ^{z})^{y}\ln e ^{z} = e ^{x+zy} \cdot z = zf(x,y,z) $$
+
+  이다. □ 
+  
+  마찬가지로 
+
+  $$ D_3f(x,y,z) = yf(x,y,z) $$
+
+  이다. □ 
+
+  그런데 $f(O) = e^{0+0 \cdot 0} = 1$ 이므로 
+
+  $$ D_1f(O) = 1, D_2f(O) =1 \cdot  0 = 0, D_3f(O) = 1 \cdot  0 = 0 $$
+
+  이고, 이에따라 원점 $O$ 에서의 $f$ 의 기울기 벡터 
+
+  $$ \therefore \text{grad}\ f(O) = (1,0,0) $$
+
+  을 얻는다. ■ 
+
+## <a name="미분 가능의 일반적인 정의" href="#미분 가능의 일반적인 정의">미분 가능의 일반적인 정의</a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+**$n$-공간의 열린 집합에서 정의된 함수 $f$ 의 미분 가능** : 
+
+</blockquote>
+
+- 이 개념은 점 $P$ 에서 모든 벡터 $v$ 에 대한 방향미분계수 $D_vf(P)$ 가 존재한다는 것이 아니다.
+
+  모든 방향미분계수가 존재하지만
 
 # <a name="선형화" href="#선형화">선형화</a>
 
