@@ -397,4 +397,88 @@ $$ \text{grad}\ f(P) := (D_1f(P), \dots, D_nf(P)) $$
 
   그러므로 $n$-공간에서도 함수 $f$ 가
 
+  **(책이 정말 어렵다..)**
 
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+일급함수 : $n$-공간의 열린 집합에서 정의된 함수 $f(x_1, \dots, x_n)$ 의 각 편도함수 
+
+$$ \dfrac{\partial f}{\partial x_1}, \dots,\dfrac{\partial f}{\partial x_n} $$
+
+가 연속이면, $f$ 를 일급함수 또는 $\mathcal{C} ^{1}$ 라고 한다.
+
+</blockquote>
+
+# <a name="다변수 벡터함수" href="#다변수 벡터함수">다변수 벡터함수</a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+함수의 분류 : 함수는 정의역과 공역의 차원을 기준으로 다음 $4$ 가지로 분류된다. 
+
+1. 실함수(real valued functions) : 다음과 같이 $1$차원에서 $1$차원으로 가는 함수이다.
+
+    $$ \R \to \R $$
+
+2. 매개화된 곡선(parametrized curves) : 다음과 같이 $1$차원에서 $n$차원으로 가는 함수이다.
+
+    $$ \R \to \R ^{n}$$
+
+3. 다변수 함수(functions of several variables) : 다음과 같이 $n$차원에서 $1$차원으로 가는 함수이다.
+
+    $$ \R ^{n} \to \R $$
+
+4. 다변수 벡터함수(vector valued functions of several variables) : 다음과 같이 $n$차원에서 $m$차원으로 가는 함수이다.
+
+    $$ \R ^{n} \to \R ^{m} $$
+
+</blockquote>
+
+- 지금까지 실함수와 다변수함수의 미분을 살펴봤는데, 이제 다변수 벡터함수의 미분을 살펴본다. 
+
+  다변수 벡터함수의 미분은 야코비 행렬로 표현된다. 정의역과 공역의 차원이 같은 함수, 즉 
+
+  $$ R ^{n} \to R ^{n} $$
+
+  는 야코비 행렬의 행렬식을 구할 수 있고, 이 값의 절대값은 부피변화율을 나타내는 것임을 알아볼 것이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+다변수 벡터함수(vector valued functions of several variables) : $n$-공간의 한 부분집합에서 정의된 벡터함수
+
+$$ F: \R ^{n} \to \R ^{m} $$
+
+는 $F$ 의 성분함수 $f_1, \dots, f_m$ 에 대하여
+
+$$ F(x_1, \dots,x_n) = (f_1(x_1, \dots,x_n), \dots, f_m(x_1, \dots,x_n)) $$
+
+이다.
+
+</blockquote>
+
+- 예시 
+
+  함수 $F(x, y) = (e ^{x}\cos y, e ^{x}\sin y, x+y)$ 는 다변수 벡터함수이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+야코비 행렬(jacobian matrix) : 열린집합 $U \subset \R ^{n}$ 에서 정의된 함수 벡터함수 $f: U \to \R ^{m}$ 가 $F = (f_1, \dots, f_m)$ 가 점 $P \in U$ 에서 미분가능하면 
+
+$f'_1(P) = \text{grad}\ f_1(P)$ 를 첫번째 행,
+
+$f'_2(P) = \text{grad}\ f_2(P)$ 를 두번째 행,
+
+$f'_m(P) = \text{grad}\ f_m(P)$ 를 마지막 행으로 하는 행렬
+
+$$ F'(P) := \dfrac{\partial (f_1, \dots, f_m)}{\partial (x_1, \dots, x_n)}(P) := \begin{pmatrix} \dfrac{\partial f_1}{\partial x_1}(P)&\dfrac{\partial f_1}{\partial x_2}(P)&\dots&\dfrac{\partial f_1}{\partial x_n}(P)\\ \dfrac{\partial f_2}{\partial x_1}(P)&\dfrac{\partial f_2}{\partial x_2}(P)&\dots&\dfrac{\partial f_2}{\partial x_n}(P)\\ \vdots &\ddots &\cdots&\vdots \\ \dfrac{\partial f_m}{\partial x_1}(P)&\dfrac{\partial f_m}{\partial x_2}(P)&\dots&\dfrac{\partial f_m}{\partial x_n}(P)\\ \end{pmatrix} $$
+
+을 점 $P$ 에서 $F$ 의 야코비 행렬이라고 한다.
+
+</blockquote>
+
+- 예시 
+
+  $F: \R ^{2} \to \R ^{3}$ 로 정의된 다변수 벡터함수 $F(x, y) = (e ^{x}\cos y, e ^{x}\sin y, x+y)$ 의 야코비행렬은 
+
+  $$ F'(x, y) = \begin{pmatrix} e ^{x}\cos y&-e ^{x}\sin y\\ e ^{x}\sin y&e ^{x}\cos y\\ 1&1\\ \end{pmatrix} $$
+
+  이다.

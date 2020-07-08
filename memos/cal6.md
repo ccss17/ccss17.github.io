@@ -1083,7 +1083,7 @@ $$ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+
 
   인데 이것을 벡터 $\bigg <\dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y}\bigg >$ 와 벡터 $\big <u_1,u_2\big >$ 내적으로 표현하면
 
-  $$ = \bigg[ \bigg (\dfrac{\partial f}{\partial x}\bigg )i+\bigg (\dfrac{\partial f}{\partial y}\bigg )j \bigg ]\cdot \bigg [u_1i+u_2j\bigg ] $$
+  $$ = \bigg[ \bigg (\dfrac{\partial f}{\partial x}\bigg )i+\bigg (\dfrac{\partial f}{\partial y}\bigg )j \bigg ]\cdot \bigg [u_1i+u_2j\bigg ] = \nabla f \cdot u = \text{grad}\ f \cdot u $$
 
   이다.
 
@@ -1091,9 +1091,9 @@ $$ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-방향도함수의 계산 : 단위벡터 $u$ 방향의 방향도함수가 결국 기울기 벡터와 벡터 $u$ 의 내적임을 이용하여 간편하게 방향도함수를 계산하는 방식
+방향도함수의 계산 : 단위벡터 $u$ 방향의 방향도함수의 계산은 기울기 벡터 $\nabla f$ 와 벡터 $u$ 와 두 벡터가 이루는 각 $\theta$ 에 대하여
 
-$$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u $$
+$$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u = |\nabla f|\cos \theta $$
 
 이다.
 
@@ -1101,7 +1101,67 @@ $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u $$
 
 - 증명
 
-  (이변수함수의 방향도함수에서 이미 설명되었다.)
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u $$
+
+  을 유도하는 과정은 이변수함수의 방향도함수에서 이미 다루었다.
+
+  두 벡터 $u, v$ 가 이루는 코사인 유사도 $\cos  \theta = \dfrac{u \cdot v}{|u||v|}$ 에 두 벡터 $\nabla f, u$ 를 적용하면
+
+  $$ \cos \theta = \dfrac{\nabla f \cdot u}{|\nabla f||u|} $$
+
+  이므로 
+
+  $$ \nabla f \cdot u = |\nabla f||u| \cos \theta $$
+
+  를 얻는다. 따라서
+
+  $$ D_uf = \nabla f \cdot u = |\nabla f||u| \cos \theta $$
+
+  에서 $u$ 는 단위벡터이므로 $|u|=1$ 을 이용하여
+
+  $$ \therefore D_uf = |\nabla f| \cos \theta $$
+
+  를 얻는다. ■ 
+
+- **가장 급격하게 변화하는 방향으로의 방향도함수**
+
+  방향도함수가 결국 
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f|\cos \theta $$
+
+  이므로 방향도함수의 방향을 나타내는 벡터 $u$ 와 기울기 벡터 $\nabla f$ 가 이루는 각 $\theta$ 가 $0$ 일때 방향도함수 값이 최대가 된다. 즉, 다변수 함수의 변화율이 최대가 된다. 
+
+  왜냐하면 $\cos \theta$ 함수값은 폐구간 $[-1, 1]$ 에서 존재하는데, 최댓값 $1$ 을 내기 위해서는 $\theta = 0$ 이어야 하기 때문이다. 
+
+  이는 곧 방향도함수의 방향 $u$ 가 기울기벡터 $\nabla f$ 와 이루는 각이 $0 \degree$, 즉 두 벡터가 동일할 때 다변수함수의 변화율이 가장 크다는 뜻이다.
+
+  이것은 기울기벡터 $\nabla f = \text{grad}\ f$ 는 다변수 함수의 최대변화율의 방향을 나타내고 있다는 것이다.
+
+- **가장 급격하게 감소하는 방향으로의 방향도함수**
+
+  반대로 다변수 함수 $f$ 가 가장 급격하게 감소하는 방향벡터 $u$ 를 구해보자. 마찬가지로 방향도함수의 계산이 
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f|\cos \theta $$
+
+  인데 $\cos \theta$ 이 폐구간 $[-1, 1]$ 에 존재하므로 $\cos \theta = -1$ 을 내기 위하여 방향벡터 $u$ 가 기울기 벡터 $\nabla f$ 와 이루는 각이 $\theta=\pi$ 가 되어야 한다.
+
+  즉, 방향벡터 $u$ 가 기울기벡터와 정반대방향을 향하면 방향도함수가
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = -|\nabla f|$$
+
+  가 되어 가장 급격하게 감소하는 방향으로의 변화율을 구할 수 있게 된다.
+
+- **변하지않는 방향으로의 방향도함수**
+
+  다변수 함수 $f$ 가 변하지 않는 방향으로의 방향벡터 $u$ 를 구해보자. 방향도함수의 계산이 
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f|\cos \theta $$
+
+  인데 $\cos \theta$ 이 폐구간 $[-1, 1]$ 에 존재하므로 $\cos \theta = 0$ 이면 즉, 방향벡터 $u$ 가 기울기벡터와 직교하면 방향도함수가
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f| \cdot 0$$
+
+  이 되어 변하지 않는 방향으로의 방향벡터 $u$ 를 구할 수 있게 된다. 이 조건은 $\theta= \dfrac{\pi }{2} = 90 \degree$ 이므로 결국 방향벡터 $u$ 와 기울기벡터 $\nabla f$ 가 직교하는 방향으로 향할 때 변하지 않는 방향으로의 변화율을 구할 수 있는 것이다.
 
 - 예시
 

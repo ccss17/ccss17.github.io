@@ -165,7 +165,7 @@
 
 - 다변수함수 미분의 일반적인 정의
     
-  ###### [접평면(tangent plane), 법선벡터(normal vector), 이변수 함수 선형화 또는 접평면(tangent plane), 이변수 함수 미분 또는 전미분(total differential), **다변수함수의 변화율 조사와 일변수 함수의 변화율 조사의 차이점**, 열린집합 또는 개집합(open set), $v$-방향미분계수, 또는 $v$-방향 순간변화율, 편미분계수, 편도함수, 편미분 가능, 기울기벡터(gradient vector), **$n$-공간의 열린 집합에서 정의된 함수 $f$ 의 미분 가능**](https://ccss17.github.io/cal7.html)
+  ###### [접평면(tangent plane), 법선벡터(normal vector), 이변수 함수 선형화 또는 접평면(tangent plane), 이변수 함수 미분 또는 전미분(total differential), **다변수함수의 변화율 조사와 일변수 함수의 변화율 조사의 차이점**, 열린집합 또는 개집합(open set), $v$-방향미분계수, 또는 $v$-방향 순간변화율, 편미분계수, 편도함수, 편미분 가능, 기울기벡터(gradient vector), **$n$-공간의 열린 집합에서 정의된 함수 $f$ 의 미분 가능**, 일급함수, 함수의 분류, 다변수 벡터함수(vector valued functions of several variables), 야코비 행렬(jacobian matrix)](https://ccss17.github.io/cal7.html)
 
 </blockquote>
 
