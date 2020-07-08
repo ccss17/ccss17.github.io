@@ -78,7 +78,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-비(비율) : 어떤 양을 기준으로 다른 양의 크기의 정도를 나타내는 값이다. 
+비(비율) : 어떤 양에 대한 양의 크기의 정도를 나타내는 값이다. 
 
 </blockquote>
 

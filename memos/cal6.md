@@ -1073,9 +1073,7 @@ $$ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+
 
   $$ x = x_0 + su_1, y = y_0 + su_2 $$
 
-  으로 한정시키자. 그래도 이변수 함수 $f(x,y)$ 의 벡터 $u$ 방향으로의 순간변화율을 구하기에 충분하다. 그러면 
-
-  $f$ 의 $u$ 방향으로의 순간변화율은 독립변수 $s$ 에 의존하는 $x,y$ 를 변수로 갖는 이독립변수 일매개변수의 합성함수 미분으로 구할 수 있게 된다. 그러므로 
+  으로 한정시키자. 그래도 이변수 함수 $f(x,y)$ 의 벡터 $u$ 방향으로의 순간변화율을 구하기에 충분하다. 그러면 $f$ 의 $u$ 방향으로의 순간변화율은 독립변수 $s$ 에 의존하는 $x,y$ 를 변수로 갖는 이독립변수 일매개변수의 합성함수 미분으로 구할 수 있게 된다. 그러므로 
 
   $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = \bigg (\dfrac{\partial f}{\partial x}\bigg )\dfrac{dx}{ds}+\bigg (\dfrac{\partial f}{\partial y}\bigg )\dfrac{dy}{ds} $$
 
@@ -1101,11 +1099,15 @@ $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u $$
 
 </blockquote>
 
+- 증명
+
+  (이변수함수의 방향도함수에서 이미 설명되었다.)
+
 - 예시
 
   이변수함수 $f(x, y) = xe ^{y}+\cos (xy)$ 의 벡터 $v = 3i-4j$ 방향의 방향도함수의 점 $(2,0)$ 에서의 방향미분계수를 구해보자.
 
-  먼저 벡터 $v$ 를 단위벡터로 바꾸면 $u = \dfrac{v}{|v|}=\dfrac{v}{5}=\dfrac{3}{5}i-\dfrac{4}{5}j$, 즉 $\bigg <\dfrac{3}{5},\dfrac{4}{5}\bigg >$ 이다.
+  먼저 벡터 $v$ 를 단위벡터로 바꾸면 $u = \dfrac{v}{|v|}=\dfrac{v}{5}=\dfrac{3}{5}i-\dfrac{4}{5}j$, 즉 $\bigg <\dfrac{3}{5},-\dfrac{4}{5}\bigg >$ 이다.
 
   또 기울기 벡터는 
 
@@ -1115,14 +1117,17 @@ $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u $$
 
   그러므로 방향도함수는 
 
-  $$ D_uf = \big < e ^{y}-y \sin (xy), x e ^{y}-x \sin (xy) \big > \cdot \bigg <\dfrac{3}{5},\dfrac{4}{5}\bigg >$$ 
+  $$ D_uf = \big < e ^{y}-y \sin (xy), x e ^{y}-x \sin (xy) \big > \cdot \bigg <\dfrac{3}{5},-\dfrac{4}{5}\bigg >$$ 
 
-  $$ = \dfrac{3}{5}e ^{y}-y \sin (xy)i + \dfrac{4}{5}x e ^{y}-x \sin (xy)j$$ 
+  $$ = \dfrac{3}{5}(e ^{y}-y \sin (xy))-\dfrac{4}{5}(x e ^{y}-x \sin (xy)) $$
 
   이다. 따라서 점 $(2,0)$ 에서 벡터 $v$ 방향으로의 방향미분계수는
 
-  $$ D_uf \bigg | _{(2,0)} = 
-  $$
+  $$ D_uf \bigg | _{(2,0)} = \dfrac{3}{5}(e ^{0}-0 \cdot \sin (2 \cdot 0))-\dfrac{4}{5}(2 \cdot e ^{0}- 2 \sin (2 \cdot 0)) $$
+
+  $$ = \dfrac{3}{5}(1 - 0) - \dfrac{4}{5}(2 - 0) = \dfrac{3-8}{5} = -1 $$
+
+  이다. ■ 
  
 # <a name="삼각함수로 정의한 방향도함수 " href="#삼각함수로 정의한 방향도함수 ">삼각함수로 정의한 방향도함수 </a>
 

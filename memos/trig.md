@@ -611,6 +611,28 @@ $$ \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R $$
 
 </blockquote>
 
+- 증명 
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Law_of_sines_proof.svg/400px-Law_of_sines_proof.svg.png" width="50%" height="auto">
+
+  삼각형 $ABC$ 의 변 $c$ 위의 높이를 $h$ 라고 하면 $\sin A$ 는 빗변 $b$ 에 대한 높이 $h$ 의 비율 $\sin A = \dfrac{h}{b}$ 이다. 그러므로 
+
+  $$ h = b \sin A $$
+
+  인데, 이에따라 삼각형 $ABC$ 의 넓이 $K$ 는 
+
+  $$ K = \dfrac{1}{2}ch=\dfrac{1}{2}bc \sin A $$
+
+  이다. 그러므로 $2K = bc \sin A$ 인데 마찬가지의 방법으로 
+
+  $$ 2K = bc \sin A = ac \sin B = ab \sin C $$
+
+  를 얻는다. 이것을 $abc$ 로 나누면 $\dfrac{\sin A}{a} =\dfrac{\sin B}{b} =\dfrac{\sin C}{c}$ 을 얻고 이것의 역수를 취하면 사인법칙
+
+  $$\dfrac{a}{\sin A} =\dfrac{b}{\sin B} =\dfrac{c}{\sin C}$$
+
+  을 얻는다. ■ 
+
 - 그리고 이 관계로부터 다음의 관계들이 도출된다. 
 
 - $\sin A = \frac{a}{2R}$
@@ -629,19 +651,67 @@ $$ \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R $$
 
 코사인법칙(Law of cosines) : 삼각형 $ABC$ 의 세 변의 길이와 세 각의 크기 사이에 다음의 관계가 존재하고 이를 코사인법칙이라 한다. 
 
+$$a^2 = b^2 + c^2 -2bc \cos A$$
+
+$$b^2 = c^2 + a^2 -2ca \cos B$$
+
+$$c^2 = a^2 + b^2 -2ab \cos C$$
+
 </blockquote>
 
-- $a^2 = b^2 + c^2 -2bc \cos A$
+- 코사인 법칙은 시점이 같은 두 벡터 $u, v$ 와 두 벡터가 이루는 각 $\theta$ 와 두 벡터의 종점을 이은 벡터 $w = u-v$ 에 대하여서도 적용된다.
 
-- $b^2 = c^2 + a^2 -2ca \cos B$
+  <img src="https://user-images.githubusercontent.com/16812446/86887866-392e0980-c134-11ea-9889-3e42cf40f31a.png" width="50%" height="auto">
 
-- $c^2 = a^2 + b^2 -2ab \cos C$
+  > 출처 : [Thomas' CALCULUS](https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078) Figure12.21
 
-- $\cos A = \frac{b^2+c^2-a^2}{2bc}$
+  이때 벡터들의 길이 $|u|, |v|, |w|$ 와 $u,v$ 가 이루는 각 $\theta$ 에 대하여 코사인 법칙 
 
-- $\cos B = \frac{c^2+a^2-b^2}{2ca}$
+  $$ |w| ^{2} = |u|^{2}+|v|^{2}-2|u||v|\cos \theta $$
 
-- $\cos C = \frac{a^2+b^2-c^2}{2ab}$
+  가 성립한다.
+
+- 증명 
+
+  <img src="https://w.namu.la/s/8cdb7e58c9045a93487b9344d5c293f6dbd4490cbcecd8bee4e150402bdde278e491b4d20d72ca08f27c2dedcc9f2e08a18bddaa4c0bda69db51fe80f13b8c8aa8b46e373b790be34442adff9d35034756944778474f7b75dd3f6246bfa1c09f" width="50%" height="auto">
+
+  위 삼각형에서 각각의 각 $A,B,C$ 와 마주보는 변의 길이를 $a,b,c$ 라고 하자.
+
+  삼각형 $\Delta ABC$ 에 대하여 $\cos B = \dfrac{\overline{BH}}{c}, \cos C = \dfrac{\overline{CH}}{b}$ 이므로
+
+  $$ a = \overline{BH}+\overline{CH} = c \cos B + b \cos C $$
+
+  이 성립한다. 마찬가지의 방식으로
+
+  $$ a = c \cos B + b \cos C $$
+
+  $$ b = a \cos C + c \cos A $$
+
+  $$ c = a \cos B + b \cos A $$
+
+  을 얻는다. 이 세 등식에 각각 $a,b,c$ 를 곱하면
+
+  $$ a ^{2} = ac \cos B + ab \cos C $$
+
+  $$ b ^{2} = ab \cos C + bc \cos A $$
+
+  $$ c ^{2} = ac \cos B + bc \cos A $$
+
+  을 얻는다. 이때 첫째 등식에 둘째 등식과 셋째 등식을 빼면 $a ^{2}-b ^{2}- c ^{2}=-2bc \cos A$ 이므로
+
+  $$ \therefore  a^2 = b^2 + c^2 -2bc \cos A$$
+
+  을 얻는다. ■ 
+
+  마찬가지의 방식으로 나머지 코사인 법칙도 쉽게 유도할 수 있다. ■ 
+
+- 코사인 법칙으로부터 다음의 따름법칙을 쉽게 유도할 수 있다.
+
+  $$\cos A = \frac{b^2+c^2-a^2}{2bc}$$
+
+  $$\cos B = \frac{c^2+a^2-b^2}{2ca}$$
+
+  $$\cos C = \frac{a^2+b^2-c^2}{2ab}$$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

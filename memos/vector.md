@@ -372,6 +372,10 @@ $$ \overrightarrow{AB} $$
 
 - 실수연산에서 역원 역할을 한다.
 
+- 예시
+
+  $\overrightarrow{a}+\overrightarrow{-a} = \overrightarrow{0}$
+
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 단위벡터(unit vector) : 크기가 $1$ 인 벡터이다. 
@@ -458,13 +462,15 @@ $$ \overrightarrow{AB} $$
 
     $$ \overrightarrow{a}+\overrightarrow{b}= \overrightarrow{AB} + \overrightarrow{AC} = \overrightarrow{AD} $$ 
 
-  - 그림
+  - **하지만 정말 벡터의 덧셈이 이 두 가지 경우로 따로 정의된 것이 아니다. 실제로 삼각형에서의 덧셈과 평행사변형에서의 덧셈은 본질적으로 동일하다.**
 
     ![](https://i.ytimg.com/vi/gdWfqihMW14/maxresdefault.jpg)
 
-- 벡터 덧셈의 성질 
+    왜냐하면 위 그림에서 벡터 $\overrightarrow{AC}$ 를 벡터 $\overrightarrow{BD}$ 로 옮겨도 두 벡터가 방향과 크기가 같으므로 동일하기 때문이다. 그러므로 평행사변형에서의 덧셈도 결국 삼각형에서의 덧셈 $\overrightarrow{AB} + \overrightarrow{BD} = \overrightarrow{AD}$ 으로 변환할 수 있다.
 
-  임의의 세 벡터 $\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}$ 와 영벡터 $\overrightarrow{0}$ 에 대하여 다음이 성립한다.
+    마찬가지의 방법으로 삼각형에서의 덧셈도 평행사변형에서의 덧셈으로 변환할 수 있다. 
+
+- 임의의 세 벡터 $\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}$ 와 영벡터 $\overrightarrow{0}$ 에 대하여 다음이 성립한다.
 
   - 교환법칙 : $\overrightarrow{a}+\overrightarrow{b}=\overrightarrow{b}+\overrightarrow{a}$
 
@@ -488,9 +494,47 @@ $$ \overrightarrow{a}+(-\overrightarrow{b}) = \overrightarrow{OA}+\overrightarro
 
   $$ \overrightarrow{a}-\overrightarrow{b}= \overrightarrow{OA} - \overrightarrow{OB} = \overrightarrow{BA} $$ 
 
-- 그림 
+- 벡터의 뺄셈은 다음 그림으로 설명된다. 즉, 종점과 종점을 이은 벡터가 뺄셈의 결과이다.
 
   ![](https://i.ytimg.com/vi/kOCTTK3Cnto/maxresdefault.jpg)
+
+  위 그림에서는 $\overrightarrow{OA} - \overrightarrow{OB} = \overrightarrow{BA}$ 의 연산결과를 살펴보았다. 그런데 방향이 다른 벡터를 얻기 위하여
+
+  $$\overrightarrow{OB} - \overrightarrow{OA} = \overrightarrow{AB}$$
+
+  를 연산하면된다.
+
+  - 설명 
+
+    벡터 $\overrightarrow{a}, \overrightarrow{b}$ 뺄셈 $\overrightarrow{a}-\overrightarrow{b}$ 은 벡터 $\overrightarrow{a}$ 와 벡터 $\overrightarrow{b}$ 의 역벡터의 합으로 볼 수 있다. 즉, 
+
+    ![](https://t1.daumcdn.net/cfile/tistory/99845F335A03C4D528)
+
+    > https://waraccc.tistory.com/11
+
+    에서 벡터의 뺄셈 $\overrightarrow{a}-\overrightarrow{b}$ 을 다음과 같이 $\overrightarrow{a}+(-\overrightarrow{b})$ 로 볼 수 있다는 것이다.
+
+    ![](https://t1.daumcdn.net/cfile/tistory/996A6F335A03CBC129)
+
+    > https://waraccc.tistory.com/11
+
+    그러면 벡터의 덧셈은 이미 알고있는대로 다음과 같이 진행된다.
+
+    ![](https://t1.daumcdn.net/cfile/tistory/99454C335A03CC0719)
+
+    > https://waraccc.tistory.com/11
+
+    그런데 벡터는 평행이동 사상이 존재하면 동일한 것이므로 다음과 같이 원래의 벡터 $\overrightarrow{b},\overrightarrow{a}$ 의 종점을 이은 벡터를 뺄셈 결과로 볼 수 있는 것이다.
+
+    ![](https://t1.daumcdn.net/cfile/tistory/998675335A03CC1A06)
+
+    > https://waraccc.tistory.com/11
+
+    마찬가지로 $\overrightarrow{b}-\overrightarrow{a}$ 의 연산결과는 다음과 같은 빨간 벡터가 된다.
+
+    ![](https://t1.daumcdn.net/cfile/tistory/99D4A7335A03CC2C45)
+
+    > https://waraccc.tistory.com/11
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1221,21 +1265,63 @@ $$ P _{a}(b) = \text{proj} _{a}b =  \dfrac{a \cdot b}{a \cdot a}a $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-두 벡터의 각도(angle between two vectors) : 영벡터가 아닌 두 벡터 $u, v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 두 벡터 $u ,v$ 가 이루는 각 $\theta$ 는 
+두 벡터의 각도(angle between two vectors) : 시점이 같은 영벡터가 아닌 두 벡터 $u, v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 
+
+두 벡터 $u ,v$ 가 이루는 각 $0 \leq  \theta \leq \pi$ 는 
 
 $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) $$
-
-또는
-
-$$ \theta = \cos ^{-1} \bigg ( \frac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \bigg ) $$
 
 이다. 
 
 </blockquote>
 
+- 다음과 같이 쓸 수도 있다.
+
+  $$ \theta = \cos ^{-1} \bigg ( \frac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \bigg ) $$
+
 - 증명 
 
-  **구체화 필요** 
+  시점이 같은 임의의 두 벡터 $u = \big <u_1,u_2,u_3\big >, v=\big <v_1,v_2,v_3\big >$ 가 이루는 각 $0 \leq \theta \leq \pi$ 를 구해보자. 
+
+  <img src="https://user-images.githubusercontent.com/16812446/86887866-392e0980-c134-11ea-9889-3e42cf40f31a.png" width="50%" height="auto">
+
+  > 출처 : [Thomas' CALCULUS](https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078) Figure12.21
+
+  두 벡터의 크기 $|u|, |v|$ 와 두 벡터의 뺄셈으로 얻은 벡터 
+  
+  $$w = u-v=\big <u_1-v_1,u_2-v_2,u_3-v_3\big >$$
+  
+  에 대하여 코사인 법칙
+
+  $$ |w| ^{2} = |u|^{2}+|v|^{2}-2|u||v|\cos \theta $$
+
+  $$ 2|u||v|\cos \theta= |u|^{2}+|v|^{2} - |w| ^{2} $$
+
+  이 성립한다. 이때 벡터 $u, v, w$ 의 크기 제곱은
+
+  $$ |u| ^{2} = \bigg (\sqrt[]{u_1 ^{2}+u_2 ^{2}+u_3 ^{2}} \bigg )^{2}=u_1 ^{2}+u_2 ^{2}+u_3 ^{2} $$
+   
+  $$ |v| ^{2} = v_1 ^{2}+v_2 ^{2}+v_3 ^{2} $$
+   
+  $$ |w| ^{2} = (u_1-v_1) ^{2}+(u_2 - v_2) ^{2}+(u_3 - v_3) ^{2} $$
+
+  $$ = u_1 ^{2}-2u_1v_1 + v_1 ^{2} +u_2 ^{2}-2u_2v_2 + v_2 ^{2} +u_3 ^{2}-2u_3v_3 + v_3 ^{2} $$
+
+  이므로 
+   
+   $$ = |u|^{2}+|v|^{2} - |w| ^{2} = 2(u_1v_1+u_2v_2+u_3v_3) $$
+
+  이다. 그러므로
+
+  $$ 2|u||v|\cos \theta= |u|^{2}+|v|^{2} - |w| ^{2} = 2(u_1v_1+u_2v_2+u_3v_3) $$
+
+  $$ \cos \theta = \dfrac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} $$
+
+  이다. 그런데 $\theta$ 가 두 벡터가 이루는 각이므로 $0 \leq 0 < \pi$ 이다. 따라서 최종적으로 두 벡터 $u,v$ 가 이루는 각 $\theta$ 는
+
+  $$ \therefore \theta = \cos ^{-1}\bigg ( \dfrac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \bigg ) = \cos ^{-1}\bigg ( \dfrac{u \cdot v}{|u||v|} \bigg ) $$
+
+  이다. ■ 
 
 - 예시 
 
@@ -1253,7 +1339,7 @@ $$ \theta = \cos ^{-1} \bigg ( \frac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \bigg ) $$
 
   에서 
 
-  $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) = \cos ^{-1} \bigg ( \frac{-4}{(3)(7)} \bigg ) \approx 100.98 \degree $$
+  $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) = \cos ^{-1} \bigg ( \frac{-4}{3 \cdot 7} \bigg ) \approx 100.98 \degree $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1263,7 +1349,7 @@ $$ \cos  \theta = \frac{u \cdot v}{|u||v|} $$
 
 또는 
 
-$$ \cos  (u, v) = \frac{u \cdot v}{|u||v|} $$
+$$ \cos  (u, v) := \frac{u \cdot v}{|u||v|} $$
 
 를 코사인 유사도라고 정의한다.
 
@@ -1271,15 +1357,7 @@ $$ \cos  (u, v) = \frac{u \cdot v}{|u||v|} $$
 
 - 증명 
 
-  코사인 유사도
-
-  $$ \cos  \theta = \frac{u \cdot v}{|u||v|} $$
-
-  는 두 벡터의 각도
-
-  $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) $$
-
-  에서 
+  코사인 유사도 $\cos  \theta = \dfrac{u \cdot v}{|u||v|}$ 는 두 벡터의 각도 $\theta = \cos ^{-1} \bigg ( \dfrac{u \cdot v}{|u||v|} \bigg )$ 에서 
 
   $$ \therefore  \cos \theta = \frac{u \cdot v}{|u||v|} $$
 
@@ -1287,7 +1365,7 @@ $$ \cos  (u, v) = \frac{u \cdot v}{|u||v|} $$
 
 - 다음의 기호로도 표기할 수 있다. 
 
-  $$ \cos \theta = \frac{\big < u ,v \big >}{||u|| \cdot  ||v||} = \frac{ \displaystyle \sum_{i=1}^{n}a_ib_i}{ \displaystyle \sqrt[]{\sum_{i=1}^{n}a_i ^{2}} \sqrt[]{\sum_{i=1}^{n}b_i ^{2}}} $$
+  $$ \cos \theta = \frac{u \cdot v }{||u|| \cdot  ||v||} = \frac{ \displaystyle \sum_{i=1}^{n}a_ib_i}{ \displaystyle \sqrt[]{\sum_{i=1}^{n}a_i ^{2}} \sqrt[]{\sum_{i=1}^{n}b_i ^{2}}} $$
 
 - 코사인 유사도는 폐구간 $[-1, 1]$ 에 존재한다. 
 
