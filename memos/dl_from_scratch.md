@@ -86,17 +86,17 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
 
   - 이때 $b$ 를 편향(bias) 라고 한다.
 
-  - 그러므로 원래는 $n$ 차원 벡터 $x = \begin{bmatrix} x_1\\x_2\\\dots\\x_n\end{bmatrix}$ (입력) 의 전치와 $n$ 차원 벡터 $w = \begin{bmatrix} w_1\\w_2\\\dots\\w_n\end{bmatrix}$ (가중치) 의 내적(순입력)
+  - 그러므로 원래는 $n$ 차원 벡터 $x = \begin{bmatrix} x_1\\x_2\\\dots\\x_n\end{bmatrix}$ (입력) 의 전치와 $n$ 차원 벡터 $w = \begin{bmatrix} w_1\\w_2\\\dots\\w_n\end{bmatrix}$ (가중치) 의 행렬곱(순입력)
 
     $$ x ^{T}w = \sum_{i=1}^{n} w _{i} x _{i} = z $$
 
     이 $z > \theta$ 이면 $y=1$ 로, $z \leq  \theta$ 이면 $y=0$ 로 계산했었다.
   
-  - 그러나 임계값 $\theta$ 를 편향 $b$ 로 바꾸어 표현한 모델에서는 입력 $x_0$ 와 가중치 $w_0 = b$ 를 추가하여 
+  - 그러나 임계값 $\theta$ 를 편향 $b$ 로 바꾸어 표현한 모델에서는 입력 $x_0 = 1$ 와 가중치 $w_0 = b$ 를 추가하여 
   
     $x_0=1$ 에 대한 $n+1$ 차원 벡터 $x = \begin{bmatrix} x_0\\x_1\\x_2\\\dots\\x_n\end{bmatrix}$ (입력) 의 전치와 
     
-    $w_0 = b$ 에 대한 $n+1$ 차원 벡터 $w = \begin{bmatrix} w_0 \\ w_1\\w_2\\\dots\\w_n\end{bmatrix}$ (가중치) 의 내적(순입력)
+    $w_0 = b$ 에 대한 $n+1$ 차원 벡터 $w = \begin{bmatrix} w_0 \\ w_1\\w_2\\\dots\\w_n\end{bmatrix}$ (가중치) 의 행렬곱(순입력)
 
     $$ x ^{T}w = b + \sum_{i=1}^{n} w _{i} x _{i} =  \sum_{i=0}^{n} w _{i} x _{i} = z (\because b = x_0w_0 = 1 \cdot b)$$
 
@@ -110,7 +110,7 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
 
 - 이 퍼셉트론 알고리즘으로 할 수 있는 일이란 입력을 직선으로(선형적으로) 두 가지로 분류하는 것이다.
 
-  - 퍼셉트론 알고리즘으로 직선으선형적으 분류가 가능한 다음과 같은 단순한 문제들을 풀 수 있다. 
+  - 퍼셉트론 알고리즘으로 직선으로, 즉 선형적으로 분류가 가능한 다음과 같은 단순한 문제들을 풀 수 있다. 
   
     이것은 퍼셉트론 알고리즘이 매개변수(가중치 $w$, 임계값 $\theta$)를 조정하는 것으로써 다양한 알고리즘(AND 게이트, OR 게이트, NAND 게이트)로 사상될 수 있다는 것을 의미한다.
 
@@ -181,8 +181,6 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
 
   - 예시 
 
-    **구체화 필요**
-
     ```python
     def AND(x1, x2):
         w1, w2, theta = 0.5, 0.5, 0.7
@@ -190,8 +188,6 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
     ```
   
   - 퍼셉트론 코드를 다음과 같이 일반적으로 나타낼 수 있다.
-
-    **구체화 필요**
 
     ```python
     import numpy as np
@@ -201,6 +197,104 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
           xi = xi
         return
     ```
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+퍼셉트론 학습 알고리즘(Perceptron Learning Algorithm) : 퍼셉트론을 통하여 선형 분리 가능 문제를 해결하기 위한 가중치를 수렴시키는 알고리즘(계산과정)이다.
+
+</blockquote>
+
+- 퍼셉트론 학습 알고리즘은 다음과 같다. 이때 퍼셉트론 알고리즘의 목적은 입력 벡터 $x$ 를 올바르게 선형 분리하는 가중치 벡터 $w$ 를 구하는 것임을 상기하자.
+
+  1. (공리)
+  
+      임의의 자연수 $m$ 과 $i \in \{1,\dots,m\}$ 에 대한 $m$ 개의 불변요소인 입력 벡터 $\mathbf{x}^{(i)} \in \R ^{n}$, 
+  
+      무작위 값으로 초기화된 가변요소인 가중치 벡터 $\mathbf{w} \in \R ^{n}$, 
+
+      $m$ 개의 입력 벡터에 대응되는 $i \in \{1,\dots,m\}$ 에 대한 클래스 레이블 $y ^{(i)} \in \{0,1\}$, 
+      
+      학습률 $\eta \in \R$ 가 있다. 
+
+  2. (연역) 
+  
+      계단함수 $h: \R \to \{0,1\}$ 와 $i$ 번째 입력벡터 $\mathbf{x}^{(i)}$ 대하여 출력(예측값) $\hat{y} ^{(i)} = h(\mathbf{x} ^{(i)} \cdot \mathbf{w})$ 을 계산할 수 있다. 
+
+      그런데 출력 $\hat{y} ^{(i)}$ 이 클레스 레이블 $y ^{(i)}$ 과 다르면 가변요소 가중치 벡터 $\mathbf{w}$ 를 조정해야 한다. 이때 로젠블라트는 다음과 같은 규칙으로 가중치를 조정하기로 결정했다.
+
+      > 근데 뭔가 너무 "되겠지?.." 하고 던지는 마인드이긴 하다. 원래 정확한 계산을 통하여 얼마나 조정해야 하는지 알아낸 다음 그만큼 조정해야 하잖아. CTF 풀 때 입력 바이트를 0바이트부터 1000바이트까지 때려넣는 거랑 약간 비슷하네.
+
+  3. 에폭(학습횟수)이 남았거나 종료 조건(출력이 실제값과 다른 허용할만한 정도)이 충족되지 않으면 가중치 벡터 $\mathbf{w}$ 를 다음과 같이 조정한다.
+
+      $$ \mathbf{w} := \mathbf{w} + \eta (y ^{(i)} - \hat{y} ^{(i)})\mathbf{x}^{(i)} $$
+
+      그러므로 자연수 $j \in \{1,\dots,n\}$ 에 대한 가중치 벡터의 $j$ 번째 원소 $w_j$ 는 $i$ 번째 입력벡터 $\mathbf{x}^{(i)}$ 의 $j$ 번째 원소 $x_j ^{(i)}$ 에 대하여
+
+      $$ w_j := w_j + \eta (y ^{(i)} - \hat{y}^{(i)}) x_j ^{(i)} $$
+
+      와 같이 조정된다. $\Delta w_j = \eta (y ^{(i)} - \hat{y}^{(i)}) x_j ^{(i)}$ 로 두면
+
+      $$ w_j := w_j + \Delta w_j $$
+
+      로 쓸 수 있다.
+
+      - 만약 정답 레이블 $y ^{(i)}$ 와 출력(예측값) $\hat{y} ^{(i)}$ 가 같으면 $\Delta w_j = 0$ 이 되므로 가중치는 $w_j := w_j + 0$ 이 되어 조정되지 않는다.
+
+      - 만약 정답 레이블 $y ^{(i)}$ 이 출력(예측값) $\hat{y} ^{(i)}$ 보다 크면 $\Delta w_j = \eta ( 1 - (-1) ) x _j ^{(i)} = 2\eta x _j ^{(i)}$ 이 되어 가중치가
+
+        $$ w_j = w_j + 2 \eta x _j ^{(i)}$$
+
+        로 조정되면서 $2 \eta x _j ^{(i)}$ 만큼 증가한다.
+      
+      - 만약 정답 레이블 $y ^{(i)}$ 이 출력(예측값) $\hat{y} ^{(i)}$ 보다 작으면 $\Delta w_j = \eta ( -1 - 1 ) x _{j}^{(i)} = -2\eta x _j ^{(i)}$ 이 되어 가중치가
+
+        $$ w_j = w_j - 2 \eta x _j ^{(i)} $$
+
+        로 조정되면서 $2 \eta x _{j}^{(i)}$ 만큼 감소한다.
+
+- 예시 
+
+  학습을 통하여 $\R ^{5}$ 공간의 예측 벡터 $\hat{y}$ 가 출력되었는데, 정답 벡터 $y$ 가 다음과 같다고 하자.
+
+  $$ \hat{y} = (\hat{y_1},\hat{y_2},\hat{y_3},\hat{y_4},\hat{y_5}) = (1,-1,1,1,-1) $$
+
+  $$ y = (y_1,y_2,y_3,y_4,y_5) = (1,-1,-1,1,-1) $$
+
+  그러면 $3$ 번째 샘플이 다르기 때문에 $3$ 번째 가중치만 조정(학습)된다.
+
+  $$\Delta w_3 = \eta ( -1 - 1 ) x = -2\eta x$$
+
+- 예시 
+
+  편향을 나타내기 위한 고정된 입력 $x_0 = 1$ 과 편향 $w_0 = b$ 과 계단함수 $h(x)$ 와 학습률 $\eta =1$ 에 대하여
+
+  퍼셉트론의 입력 벡터 $x = (x_0 = 1, x_1 = 2, x_2 = 1)$, 가중치 $w = (w_0 = -1, w_1 = 0.5, w_2 = 0.3)$ 에 대한 출력(예측값)은 
+
+  $$ \hat{y} = h(x \cdot w) = h(-1 + 2 \cdot 0.5 + 1 \cdot 0.3) = h(0.3) = 1 $$
+
+  이다. 그런데 정답이 $y = 0$ 이라면 가중치는 다음과 같이 조정(학습)된다.
+
+  $$ w_j = w_j + \eta (y - \hat{y})x $$
+
+  $$ w_0 = -1 + 1 \cdot (0 - 1) \cdot 1 = -2 $$
+        
+  $$ w_1 = 0.5 + 1 \cdot (0 - 1) \cdot 2 = -1.5 $$
+        
+  $$ w_2 = 0.3 + 1 \cdot (0 - 1) \cdot 1 = -0.7 $$
+        
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+퍼셉트론 수렴 정리(perceptron convergence theorem) : 퍼셉트론이 선형 분리 가능 문제들, 즉 직선으로 분류가 가능한 데이터를
+
+유한번의 학습으로 데이터를 잘 분류하는 가중치를 수렴시킬 수 있다 는 정리이다.
+
+</blockquote>
+
+- 퍼셉트론 수렴 정리는 다시 말해 퍼셉트론 학습 알고리즘이 선형적으로 분리할 수 있는 데이터를 올바르게 분류할 수 있는 가중치 벡터를 반드시 수렴시킬 수 있다는 것이다.
+
+  선형적으로 분리 가능하다는 것은 특징(features) 의 선형결합을 통하여 데이터를 분류할 수 있다는 것이다.
+
+- 그러나 비선형 분리 문제는 퍼셉트론이 자동으로 학습할 수 없다.
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -294,7 +388,7 @@ $$
 
   - 예시 
 
-    가령 입력 벡터를 $1 \times 2$ 행렬 $X = \begin{pmatrix} x_1\\x_2 \end{pmatrix}$, 가중치를 $2 \times 3$ 행렬 $W=\begin{pmatrix} w _{11}&w _{21}&w _{31}\\w _{12}&w _{22}&w _{32} \end{pmatrix}$, 편향을 $1 \times 3$ 행렬 $B = \begin{pmatrix} b _{1}&b _{2} & b _{3}\\ \end{pmatrix}$ 으로 나타낸다면, 순입력 $Z = \begin{pmatrix} z_1&z_2&z_3\\ \end{pmatrix}$ 를 다음과 같이 계산할 수 있다. 
+    가령 입력 벡터를 $1 \times 2$ 행렬 $X = \begin{pmatrix} x_1&x_2 \end{pmatrix}$, 가중치를 $2 \times 3$ 행렬 $W=\begin{pmatrix} w _{11}&w _{21}&w _{31}\\w _{12}&w _{22}&w _{32} \end{pmatrix}$, 편향을 $1 \times 3$ 행렬 $B = \begin{pmatrix} b _{1}&b _{2} & b _{3}\\ \end{pmatrix}$ 으로 나타낸다면, 순입력 $Z = \begin{pmatrix} z_1&z_2&z_3\\ \end{pmatrix}$ 를 다음과 같이 계산할 수 있다. 
 
     $$ Z = XW + B $$
 
@@ -352,7 +446,7 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
   $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})}  $$
 
-  에 임의의 정수 $C$ 를 분바와 분모에 곱하여
+  에 임의의 정수 $C$ 를 분자와 분모에 곱하여
 
   $$ = \dfrac{C\exp (a _{k})}{\displaystyle C\sum_{i=1}^{n} \exp (a _{i})} $$
 
@@ -433,6 +527,7 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
         y = softmax(a3)
         return y
 
+    # 앞의 두 반환값 _, _ 은 훈련 데이터와 훈련 정답 레이블이다. 여기서는 이미 훈련된 가중치로 추론, 즉 순전파만 테스트할 것이기 때문에 시험 데이터 x 와 시험 정답 레이블 t 만 가져온다.
     _, _, x, t = load_mnist(normalize=True, flatten=True, one_hot_label=False)
     with open("sample_weight.pkl", 'rb') as f:
         network = pickle.load(f)
@@ -568,16 +663,6 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 - 위의 이유 때문에 딥러닝을 종단간 기계학습(end-to-end machine learning) 이라고도 한다.
 
   이것은 "처음부터 끝까지" 사람의 개입없이 결과를 얻는다는 뜻을 갖고 있다.
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-퍼셉트론 수렴 정리(perceptron convergence theorem) : 퍼셉트론이 선형 분리 가능 문제들, 즉 직선으로 분류가 가능한 데이터는 
-
-항상 데이터로부터 자동으로 학습할 수 있다는 정리이다.
-
-</blockquote>
-
-- 그러나 비선형 분리 문제는 퍼셉트론이 자동으로 학습할 수 없다.
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1022,7 +1107,7 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-편미분 : 
+편미분 코드 구현
 
 </blockquote>
 
@@ -1062,3 +1147,36 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
     ```
 
     를 사용하자.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+기울기 벡터 코드 구현
+
+</blockquote>
+
+- 예시  
+
+  점 $P(x_0, x_1) = (3, 4)$ 에서 이변수 함수 $f$ 에 대한 기울기 $\bigg (\dfrac{\partial f}{\partial  x_1}, \dfrac{\partial f}{\partial x_1}\bigg )$ 을 계산해보자.
+
+  ```python
+  import numpy as np
+
+  def numertical_gradient(f, x):
+      h = 1e-4
+      grad = np.zeros_like(x)
+
+      for idx in range(x.size):
+          tmp_val = x[idx]
+          # f(x+h) 계산
+          x[idx] = tmp_val+h
+          fxh1 = f(x)
+
+          # f(x-h) 계산
+          x[idx] = tmp_val-h
+          fxh2 = f(x)
+
+          grad[idx] = (fxh1 - fxh2) / (2+h)
+          x[idx] = tmp_val # 값 복원
+      
+      return grad
+  ```
