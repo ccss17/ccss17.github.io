@@ -1140,9 +1140,9 @@ $$ \frac{v}{|v|} $$
 
 내적(inner product) : $n$-공간 의 두 벡터 $u ,v$ 가 $u = \big < u_1, u_2, u_3, \dots, u_n \big >, v = \big  <v_1, v_2, v_3, \dots, v_n \big  >$ 일 때, 
 
-두 벡터 $u, v$ 의 내적은 스칼라
+두 벡터 $u, v$ 의 내적은 두 벡터 $u, v$ 가 이루는 각 $\theta$ 에 대하여 스칼라
 
-$$ u \cdot v := u_1v_1+u_2v_2+u_3v_3+\dots+u_nv_n = \sum_{i=1}^{n}u_iv_i $$
+$$ u \cdot v := u_1v_1+u_2v_2+u_3v_3+\dots+u_nv_n = \sum_{i=1}^{n}u_iv_i = |u||v|\cos \theta $$
 
 이다. 
 

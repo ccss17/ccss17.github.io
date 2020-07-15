@@ -578,11 +578,11 @@ $$ a_1\times a_2\times a_3\times\dots \times a_n = \prod_{k=1}^{n}a_k $$
 
 </blockquote>
 
-- $$\sum_{k=1}^{n}(a_k \pm b_k) = \sum_{k=1}^{n}a_k \pm \sum_{k=1}^{n} b_k$$
+- $\displaystyle \sum_{k=1}^{n}(a_k \pm b_k) = \sum_{k=1}^{n}a_k \pm \sum_{k=1}^{n} b_k$
 
-- $$\sum_{k=1}^{n}ca_k = c \sum_{k=1}^{n}a_k$$
+- $\displaystyle \sum_{k=1}^{n}ca_k = c \sum_{k=1}^{n}a_k$
 
-- $$\sum_{k=1}^{n}c = cn$$
+- $\displaystyle \sum_{k=1}^{n}c = cn$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -610,15 +610,15 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 </blockquote>
 
-- $$1+2+3+\dots+n=\sum_{k=1}^{n}k=\frac{n(n+1)}{2}$$
+- $\displaystyle  1+2+3+\dots+n=\sum_{k=1}^{n}k=\frac{n(n+1)}{2}$
 
-- $$1^2+2^2+3^2+\dots+n^2=\sum_{k=1}^{n}k^2=\frac{n(n+1)(2n+1)}{6}$$
+- $\displaystyle  1^2+2^2+3^2+\dots+n^2=\sum_{k=1}^{n}k^2=\frac{n(n+1)(2n+1)}{6}$
 
-- $$1^3+2^3+3^3+\dots+n^3=\sum_{k=1}^{n}k^3=\{\frac{n(n+1)}{2}\}^2$$
+- $\displaystyle  1^3+2^3+3^3+\dots+n^3=\sum_{k=1}^{n}k^3=\{\frac{n(n+1)}{2}\}^2$
 
-- $$\sum_{k=1}^{n}\frac{1}{k(k+1)} = \sum_{k=1}^{n}(\frac{1}{k}-\frac{1}{k+1})$$
+- $\displaystyle \sum_{k=1}^{n}\frac{1}{k(k+1)} = \sum_{k=1}^{n}(\frac{1}{k}-\frac{1}{k+1})$
 
-- $$\sum_{k=1}^{n}\frac{1}{\sqrt[]{k}+\sqrt[]{k+1}} = \sum_{k=1}^{n}(\sqrt[]{k+1}-\sqrt[]{k})$$
+- $\displaystyle \sum_{k=1}^{n}\frac{1}{\sqrt[]{k}+\sqrt[]{k+1}} = \sum_{k=1}^{n}(\sqrt[]{k+1}-\sqrt[]{k})$
 
 ## <a name="수학적 귀납법과 수열" href="#수학적 귀납법과 수열">수학적 귀납법과 수열</a>
 

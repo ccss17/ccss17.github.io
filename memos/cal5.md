@@ -370,7 +370,7 @@ $$ \int_{}^{}\frac{f'(x)}{f(x)} = \ln |f(x)|+C $$
 
   $f(x)=t$ 로 두면 
 
-  $$ f'(x) = \frac{dt}{dx} \Rightarrow  f'(x)dx = dt $$
+  $$ f'(x) = \frac{dt}{dx} \implies  f'(x)dx = dt $$
 
   이다. 따라서
 

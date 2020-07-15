@@ -68,7 +68,7 @@ $$ f : U \to \R $$
 
 임의의 양수 $\epsilon > 0$ 에 대하여 적당한 양수 $\delta > 0$ 가 존재하여 정의역의 모든 $(x, y)$ 에 대하여 다음을 만족하는 것이다. 
 
-  $$  0 < \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} < \delta \Rightarrow  |f(x, y) - L| < \epsilon $$
+  $$  0 < \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} < \delta \implies  |f(x, y) - L| < \epsilon $$
 
 </blockquote>
 
@@ -336,9 +336,9 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
   이변수 함수 $f(x) = x ^{3}+x ^{2}y ^{3}-2y ^{2}$ 일 때 
 
-  $$ f_x(x, y) = 3x ^{2} + 2xy ^{3} \Rightarrow f_x(2, 1) = 16 $$
+  $$ f_x(x, y) = 3x ^{2} + 2xy ^{3} \implies f_x(2, 1) = 16 $$
 
-  $$ f_y(x, y) = 3x ^{2}y ^{2} - 4y \Rightarrow f_x(2, 1) = 8 $$
+  $$ f_y(x, y) = 3x ^{2}y ^{2} - 4y \implies f_x(2, 1) = 8 $$
 
   이다.
 
@@ -688,7 +688,7 @@ $$ f(a + dx) \approx f(a) + dy $$
 
 미분근사의 오차(error in differential approximation) : 함수 $y=f(x)$ 가 $x=a$ 에서 미분가능하고 $x$ 가 $a$ 에서 $a+\Delta x$ 로 변할 때 함수 $y$ 의 변화량 $\Delta y$ 은
 
-$\Delta x \to 0 \Rightarrow \epsilon \to 0$ 인 오차량 $\epsilon = \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a)$ 에대하여
+$\Delta x \to 0 \implies \epsilon \to 0$ 인 오차량 $\epsilon = \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a)$ 에대하여
 
 $$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
 
@@ -724,7 +724,7 @@ $$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
 
   그런데 $\Delta x \to 0$ 일 때 미분계수의 정의에 따라 $\dfrac{f(a+\Delta x) - f(a)}{\Delta x} \to f'(a)$ 이다. 그러므로 실질적으로 $\epsilon$ 은 매우 작은양으로 줄어든다. 즉,
 
-  $$ \Delta x \to 0 \Rightarrow \epsilon \to 0 $$
+  $$ \Delta x \to 0 \implies \epsilon \to 0 $$
 
   이다. 따라서 $\Delta x$ 가 매우 작으면 오차량 $\epsilon$ 도 함께 매우 작아진다. 이때 $\Delta f - df = \epsilon \cdot \Delta x$ 이므로 $\Delta f = df + \epsilon \Delta x$ 즉,
 
@@ -764,7 +764,7 @@ $$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
 
 이변수함수의 미분가능 : 점 $(x_0,y_0)$ 에 대한 이변수함수 $z=f(x,y)$ 의 편미분 $f_x(x_0, y_0), f_y(x_0,y_0)$ 이 존재하고 함수 $z$ 의 변화량 $\Delta z$ 가 
 
-$\Delta x, \Delta y \to 0 \Rightarrow \epsilon _1, \epsilon _2 \to 0$ 에 대한 방정식
+$\Delta x, \Delta y \to 0 \implies \epsilon _1, \epsilon _2 \to 0$ 에 대한 방정식
 
 $$ \Delta z = f_x(x_0,y_0)\Delta x+f_y(x_0,y_0)\Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y $$
 
@@ -802,7 +802,7 @@ $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w
 
   먼저 $\Delta x, \Delta y, \Delta w$ 를 $t$ 가 $t_0$ 에서 $t_0 + \Delta t$ 로 변할때의 증분이라고 하자. 이변수함수 $f$ 가 미분가능하다고 가정했으므로
 
-  $\Delta x,y \to 0 \Rightarrow \epsilon _{1}, \epsilon _{2} \to 0$ 에 대하여
+  $\Delta x,y \to 0 \implies \epsilon _{1}, \epsilon _{2} \to 0$ 에 대하여
 
   $$ \Delta w =  \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0}\Delta x+ \bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y $$
 

@@ -43,7 +43,7 @@
 
 - 집합론
     
-  ###### [수학, 수학, 정의(definition), 공리(axiom), 증명(proof), 정리(theorem), 수학기초론, 집합론, 집합, 원소, 집합 표현법, 집합의 분류, 부분집합, 서로 같은 집합, 진부분집합, 부분집합의 개수, 기수(cardinal number), 집합의 연산, 집합의 연산 법칙, 유한집합의 원소의 개수, 곱집합(product set)](https://ccss17.github.io/math.html)
+  ###### [수학, 수학, 정의(definition), 공리(axiom), 증명(proof), 정리(theorem), 수학기초론, 집합론, 명제, $\lnot p$, 진리표, $p \lor q$, $p \land q$, $p \to q$, $p \implies q$, 조건, 진리집합, 집합의 상등, 대우명제, 부분집합, 진부분집합, 여집합, 공집합, 합집합(union) $A \cup B$, 교집합 $A \cap B$, 집합족(family of sets), 서로소인 집합족 : 집합족 $\mathcal{A} = \{A_i, 순서쌍(ordered pair, 2-tuple), 곱집합(cartesian product), Cartesian Space, 멱집합(power set), 관계(relation), 동치관계, 동치류, 함수(function), 항등함수, 포함함수, 합성함수 : 함수 $f: X \to Y$ 와 $g: Y \to Z$ 에 대한 합성함수 $g \circ f, 함수의 제한, 전사함수, 단사함수, 전단사함수, 역함수, 함수 전체 집합, 특성함수, 클래스(class), endorelation, 관계 구조(relational structure), 순서관계(ordered relation), 순서집합(ordered set), 상계(upper bound), 상한(supremum) 또는 최소상계(least upper bound), 위로 유계(bounded from above), 위로 무계(unbounded from above), 역진귀납법(backwards induction), 하계(lower bound), 하한(infimum) 또는 최대하계(greatest lower bound), 아래로 유계(bounded from below), 집합, 원소, 집합 표현법, 집합의 분류, 부분집합, 서로 같은 집합, 진부분집합, 부분집합의 개수, 기수(cardinal number), 집합의 연산, 집합의 연산 법칙, 유한집합의 원소의 개수, 곱집합(product set)](https://ccss17.github.io/math.html)
 
 - 수리논리학
     
@@ -65,7 +65,7 @@
 
 - 대수학 메모
     
-  ###### [수식, 미지수(변수, variable), 독립변수(independant variable), 종속변수(dependant variable), 방정식(equation), 불능, 항등식, 계수(coefficient), 항, 단항식(monomial), 다항식(polynomial), 차수(degree), 최고차항, 인수, 다항식의 연산에 대한 성질, 일차방정식(선형방정식, linear equation), 이차방정식, 다항방정식, 인수분해, 부등식(inequality), 절대부등식, 조건부등식, 유리식, 분수식, 가분수식, 진분수식, 다항식의 연산, 무리식, 연립방정식(simultaneous equation) 또는 방정식계(system of equations), 대수학의 기본 정리, $k$중근, 대수학의 기본 정리의 따름 정리, 모델(model ; 모형), 수학적 모델링](https://ccss17.github.io/algebra.html)
+  ###### [수식, 미지수(변수, variable), 독립변수(independant variable), 종속변수(dependant variable), 방정식(equation), 불능, 항등식, 계수(coefficient), 항, 단항식(monomial), 다항식(polynomial), 차수(degree), 최고차항, 인수, 다항식의 연산에 대한 성질, 일차방정식(선형방정식, linear equation), 이차방정식, 다항방정식, 인수분해, 부등식(inequality), 절대부등식, 산술기하 평균 부등식(arithmetic mean-geometric mean inequality, AM-GM inequality), 산술평균, 기하평균, 조화평균의 관계, 산술평균, 기하평균, 조화평균의 일반적 관계, 코시-슈바르츠(Cauchy-Schwartz) 의 부등식, 조건부등식, 유리식, 분수식, 가분수식, 진분수식, 다항식의 연산, 무리식, 연립방정식(simultaneous equation) 또는 방정식계(system of equations), 대수학의 기본 정리, $k$중근, 대수학의 기본 정리의 따름 정리, 모델(model ; 모형), 수학적 모델링](https://ccss17.github.io/algebra.html)
 
 </blockquote>
 

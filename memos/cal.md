@@ -86,7 +86,7 @@
 
   또는 
 
-    $$ n \to \infty \Rightarrow a_n \to \alpha $$
+    $$ n \to \infty \implies a_n \to \alpha $$
 
   라 한다. 
 
@@ -134,7 +134,7 @@
 
         또는 
 
-        $$ n \to \infty \Rightarrow a_n \to \infty $$
+        $$ n \to \infty \implies a_n \to \infty $$
 
         로 나타낸다. 
 
@@ -148,7 +148,7 @@
 
         또는 
 
-        $$ n \to \infty \Rightarrow a_n \to -\infty $$
+        $$ n \to \infty \implies a_n \to -\infty $$
 
         로 나타낸다. 
 
@@ -638,7 +638,7 @@ $\epsilon-\delta$ 논법으로 정의하는 함수의 수렴 : 함수 $f(x)$ 에
 
 - 이것을 한정기호와 논리기호를 사용하여 자연어를 격하하면 다음과 같다. 함수 $f(x)$ 에서
 
-  $$\forall \epsilon > 0, \exists \delta > 0, 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon\iff \lim_{x \to a} f(x) = L$$
+  $$\forall \epsilon > 0, \exists \delta > 0, 0<|x-a|<\delta \implies |f(x)-L|< \epsilon\iff \lim_{x \to a} f(x) = L$$
 
   이다. 
 
@@ -670,23 +670,23 @@ $\epsilon-\delta$ 논법으로 정의하는 함수의 수렴 : 함수 $f(x)$ 에
 
     를 
 
-    "$0<|x-a|<\delta$ 일때 $|f(x)-L|< \epsilon$ 이면 함수 $f(x)$ 는 $L$ 에 수렴한다. $\iff \lim_{x \to a} f(x) = L$" 로 재정의할 수 있다. 한편 $p \to q$ 가 참일 때 $p \Rightarrow q$ 로 표기하는 것을 사용하여 최종적으로 
+    "$0<|x-a|<\delta$ 일때 $|f(x)-L|< \epsilon$ 이면 함수 $f(x)$ 는 $L$ 에 수렴한다. $\iff \lim_{x \to a} f(x) = L$" 로 재정의할 수 있다. 한편 $p \to q$ 가 참일 때 $p \implies q$ 로 표기하는 것을 사용하여 최종적으로 
 
-    $$ 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
+    $$ 0<|x-a|<\delta \implies |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
 
     로 표현할 수 있다. 
 
   - 그런데 임의의 양수 $\epsilon$ 값이 정해진 시점에서 그것에 종속된 함수값 $f(x)$ 이 제한되고 이에따라 함수값을 결정해야 하는 $x$ 도 종속된다. 또한 $x$ 값을 결정해야 하는 $\delta$ 도 $x$ 에 종속되어 있기에 결론적으로 $\delta$ 는 $\epsilon$ 에 종속되어 있다. 따라서 $\delta$ 는 $\epsilon$ 을 임의로 정했던 것과 달리 임의로 정할 수 없고 임의의 $\epsilon$ 값에 대하여 조건을 만족시키는 적절한 $\delta$ 값이 존재하면 된다. 따라서 
 
-    $$ 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
+    $$ 0<|x-a|<\delta \implies |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
 
     에 조건을 명확하게 명시하여
 
-    $$ 함수 f(x) 에서 임의의 양수 \epsilon 와 적당한 양수 \delta 에 대하여 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
+    $$ 함수 f(x) 에서 임의의 양수 \epsilon 와 적당한 양수 \delta 에 대하여 0<|x-a|<\delta \implies |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
 
     와 같이 고칠 수 있다. 이때 "임의의" 를 $Any$ 의 앞글자를 딴 한정기호 $\forall$ 로, "존재한다" 의 $Exist$ 의 앞글자를 딴 한정기호 $\exists$ 로 고치면 최종적으로 
 
-    $$ 함수 f(x) 에서 \forall \epsilon > 0, \exists \delta > 0, 0<|x-a|<\delta \Rightarrow |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
+    $$ 함수 f(x) 에서 \forall \epsilon > 0, \exists \delta > 0, 0<|x-a|<\delta \implies |f(x)-L|< \epsilon \iff \lim_{x \to a} f(x) = L $$
 
     로 표현할 수 있다. 
 
@@ -712,7 +712,7 @@ $\epsilon-\delta$ 논법으로 정의하는 함수의 수렴 : 함수 $f(x)$ 에
 
 - 예시 
 
-  함수 $f(x) = 2x$ 에서 $x \to 2 \Rightarrow f(x) \to 4$ 임을 직관적으로 알 수 있다. 그럼 이제 극한값이 $4$ 에 접근한다는 정보를 가지고 "$f(x)$ 와 $4$ 사이의 거리가 $0.1$ 보다 작게 되었다면 $x$ 는 $2$ 에 얼마나 근접해 있는가?" 라는 질문에 답해보자.
+  함수 $f(x) = 2x$ 에서 $x \to 2 \implies f(x) \to 4$ 임을 직관적으로 알 수 있다. 그럼 이제 극한값이 $4$ 에 접근한다는 정보를 가지고 "$f(x)$ 와 $4$ 사이의 거리가 $0.1$ 보다 작게 되었다면 $x$ 는 $2$ 에 얼마나 근접해 있는가?" 라는 질문에 답해보자.
 
   $x$ 와 $2$ 의 거리를 $|x-2|$ 로, $f(x)$ 와 $4$ 의 거리를 $|f(x)-4|$ 로 두면 위 질문을 "$|x-2|<\delta$ 이고 $x \neq 2$ 이면 $|f(x)-4|<0.1$ 인 $\delta$ 값은 얼마인가?" 로 바꿀 수 있다.
 

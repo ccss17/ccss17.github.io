@@ -392,19 +392,75 @@
 
   - $x^2 + y^2 \ge 2xy (x, y \in \R)$
 
-- 산술평균, 기하평균, 조화평균의 관계 : 다음 절대부등식은 두 양수의 특정한 연산 결과의 관계를 나타낸다. 
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+산술기하 평균 부등식(arithmetic mean-geometric mean inequality, AM-GM inequality) : $n$개의 양수 $a_1, a_2, \dots, a_n$ 에 대하여 절대부등식
+
+$$ \dfrac{a_1, a_2, \dots, a_n}{n} \geq (a_1a_2 \dots a_n)^{\frac{1}{n}} $$
+
+즉, $\displaystyle \dfrac{1}{n}\bigg (\sum_{k=1}^{n}a_k\bigg ) \geq \bigg (\prod_{k=1}^{n}a_k \bigg )^{1/n}$ 이 성립한다.
+
+</blockquote>
+
+- 단 등호는 $a_1 = a_2 = \dots = a_n$ 일때만 성립한다.
+
+- 증명
+
+  $x_1, x_2, \dots, x_n \in \R _{>0}$ 에 대하여 산술평균을 $A_n = \displaystyle \dfrac{1}{n}\bigg (\sum_{k=1}^{n}a_k\bigg )$ 이라고 하고 기하평균을 $\displaystyle  G_n = \bigg (\prod_{k=1}^{n}a_k \bigg )^{1/n}$ 이라고 하자.
+
+  모든 $n \in \Z _{>0}$ 에 대하여 명제 $P(n)$ 을 
+
+  $$ \forall x_1, x_2, \dots, x_n \in \R _{>0} : A_n \geq G_n $$
+
+  이라고 하자.
+
+  $P(1)$ 은 $\dfrac{x_1}{1} \geq x_1 ^{1/1}$ 이므로 성립한다.
+
+  $P(2)$ 은 $\dfrac{x_1+x_2}{2} \geq \sqrt[]{x_1x_2}$ 인데, $x_1, x_2 >0$ 이므로 
+
+  $$ 0 \leq (\sqrt[]{x_1}-\sqrt[]{x_2}) ^{2} = x_1 -2 \sqrt[]{x_1x_2}+x_2 $$
+
+  에서 
+
+  $$ \sqrt[]{x_1x_2} \leq \dfrac{x_1+x_2}{2} $$
+
+  를 얻는다. 그러므로 $P(2)$ 도 성립한다.
+
+  이제 우리는 
+
+  1. $k \geq 1$ 에 대하여 $P(2 ^{k})$ 이면 $P(2 ^{k+1})$ 이다.
+
+  2. $k \geq 2$ 에 대하여 $P(k)$ 이면 $P(k-1)$ 이다.
+
+  를 보일 것이다. 이로써 역진귀납법(backward induction)
+
+
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+산술평균, 기하평균, 조화평균의 관계 : 다음 절대부등식은 두 양수의 특정한 연산 결과의 관계를 나타낸다. 
 
   $$ a>0, b>0 일때, \frac{a+b}{2} \geq \sqrt[]{ab} \geq \frac{2ab}{a+b} $$
 
-  - 위 절대부등식의 $3$ 가지 식은 처음부터 각각 산술평균(arithmetic mean), 기하평균(geometric mean), 조화평균(harmonic mean) 이라 한다. 
+</blockquote>
 
-- 산술평균, 기하평균, 조화평균의 일반적 관계 : 양수 $a_1, a_2, \dots, a_n$ 에 대하여 다음 절대부등식이 항상 성립한다.
+- 위 절대부등식의 $3$ 가지 식은 처음부터 각각 산술평균(arithmetic mean), 기하평균(geometric mean), 조화평균(harmonic mean) 이라 한다. 
 
-  $$ \frac{\sum_{k=1}^{n}a_1}{n} \geq \sqrt[n]{\prod_{k=1}^{n}a_k} \geq \frac{n}{\sum_{k=1}^{n}\frac{1}{a_k}} $$
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-- 코시-슈바르츠(Cauchy-Schwartz) 의 부등식 : $a,b,c,d$ 가 실수일 때 다음 절대부등식이 항상 성립한다.
+산술평균, 기하평균, 조화평균의 일반적 관계 : 양수 $a_1, a_2, \dots, a_n$ 에 대하여 다음 절대부등식이 항상 성립한다.
 
-  $$ (a^2+b^2)(c^2+d^2) \geq (ac+bd)^2 (단, 등호는 \frac{c}{a}=\frac{d}{b} 일 때 성립) $$
+$$ \frac{\sum_{k=1}^{n}a_1}{n} \geq \sqrt[n]{\prod_{k=1}^{n}a_k} \geq \frac{n}{\sum_{k=1}^{n}\frac{1}{a_k}} $$
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+코시-슈바르츠(Cauchy-Schwartz) 의 부등식 : $a,b,c,d$ 가 실수일 때 다음 절대부등식이 항상 성립한다.
+
+$$ (a^2+b^2)(c^2+d^2) \geq (ac+bd)^2 (단, 등호는 \frac{c}{a}=\frac{d}{b} 일 때 성립) $$
+
+</blockquote>
 
 - 코시-슈바르츠(Cauchy-Schwartz) 의 부등식의 일반형태 : $a_1,a_2, \dots, a_n, b_1,b_2, \dots, b_n$ 이 실수일 때 다음 절대부등식이 항상 성립한다.
 

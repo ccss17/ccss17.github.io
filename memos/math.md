@@ -150,7 +150,7 @@
 
   - 위 두 자연언어로 표현된 명제는 전혀 다른 사건을 표현하지만 두 사건이 동일한 형식 언어 $2- 1 = 1$ 로 격하되었다. 이는 추상 언어($2, 1, -, =$)가 대상을 일반화하고 추상화 할 수 있기 때문이다. 역으로 추상화된 형식 언어는 개별적인 자연 사건에 대응될 수 있다. 따라서 참으로 판명된 수학 명제의 형식 언어는 수많은 개별 사건에 적용되는 자연 언어로 격상될 가능성을 갖는다. 
 
-## <a name="집합론 " href="#집합론 ">집합론 </a>
+# <a name="집합론 " href="#집합론 ">집합론 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -165,6 +165,1130 @@
 - 중고등학교 과정에서 배우는 집합론은 소박한 집합론이다. 그러나 이 집합론에서 러셀의 역설이 발견되었고 이에 따라 공리적 집합론이 나왔다. 
 
 - 공리적 집합론이 형식 언어로 정의되는 것에 비해 소박한 집합론은 자연 언어로 정의된다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+명제 : 문장들 가운데 참 또는 거짓인 것이다.
+
+</blockquote>
+
+- 예시 
+
+  "$5$ 는 자연수이다." 는 명제이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$\lnot p$ : 명제 $p$ 에 대한 명제 "$p$가 아니다." 이다.
+
+</blockquote>
+
+- 예시 
+
+  명제 $p$ "$5$ 는 자연수이다." 의 부정 $\lnot p$ 은 "$5$ 는 자연수가 아니다." 이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+진리표 : 명제 $p$ 에 따른 다른 명제들의 결과를 표로 정리한 것이다.
+
+</blockquote>
+
+- 예시 
+
+  명제 $p$ 가 참이면 부정 $\lnot p$ 은 거짓이 되고, 거짓이면 참이 되는데 이것을 표로 정리하면 다음과 같다. 
+
+  |$p$|$\lnot p$|$\lnot (\lnot p)$|
+  |:---:| :---:| :---:|
+  |$T$|$F$|$T$|
+  |$F$|$T$|$F$|
+
+  진리표를 통하여 $p$ 와 $\lnot (\lnot p)$ 의 옳고 그름이 같다는 것을 알 수 있다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$p \lor q$ : 명제 $p, q$ 에 대하여 명제 "$p$ 또는 $q$" 이다.
+
+</blockquote>
+
+- "$p \lor q$" 는 $p$와 $q$ 중 하나만 참이어도 $p \lor q$ 가 참이 된다.
+
+- 예시 
+
+  명제 "$18$은 $4$의 배수이거나 $6$의 배수이다." 는 명제 "[$18$은 $4$의 배수이다.] $\lor$ [$18$은 $6$ 의 배수이다.]" 이다.
+
+- $p \lor q$, 즉 "$p$ 또는 $q$" 의 부정은 "$p$도 아니고 $q$도 아니다.", 즉 $(\lnot p) \land (\lnot q)$ 이다.
+
+  - 예시 
+
+    "그곳에 풀이나 나무 중 적어도 한 가지가 있었다." 의 부정은 "그곳에 풀도 없었고 나무도 없었다." 가 된다.
+
+  - 위 예시로 $\lnot (p \lor q) \equiv (\lnot p) \land (\lnot q)$ 임을 알 수 있다.
+
+- 그러므로 진리표는 다음과 같다. 
+
+  |$p$|$q$ |$p \lor q$|$\lnot (p \lor q)$|$(\lnot p) \land (\lnot q)$|
+  |:---:| :---:| :---:| :---:| :---:|
+  |$T$|$T$|$T$|$F$|$F$|
+  |$T$|$F$|$T$|$F$|$F$|
+  |$F$|$T$|$T$|$F$|$F$|
+  |$F$|$F$|$F$|$T$|$T$|
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$p \land q$ : 명제 $p, q$ 에 대한 명제 "$p$ 그리고 $q$" 이다.
+
+</blockquote>
+
+- "$p \land q$" 는 $p$와 $q$ 가 둘 다 참이어야 $p \land q$ 가 참이 된다.
+
+- 진리표는 다음과 같다. 
+
+  |$p$|$q$ |$p \land q$|$\lnot (p \land q)$|$(\lnot p) \lor (\lnot q)$|
+  |:---:| :---:| :---:| :---:| :---:|
+  |$T$|$T$|$T$|$F$|$F$|
+  |$T$|$F$|$F$|$T$|$T$|
+  |$F$|$T$|$F$|$T$|$T$|
+  |$F$|$F$|$F$|$T$|$T$|
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$p \to q$ : 명제 $p,q$ 에 대한 명제 "$p$이면 $q$" 이다.
+
+</blockquote>
+
+- 이 명제의 부정은 $p$는 성립하지만 $q$ 는 성립하지 않는 것이므로 
+
+  $$ \lnot (p \to q) \equiv p \land (\lnot q) $$
+
+  이다. 이것을 다시 쓰면
+
+  $$ p \to q \equiv \lnot  p \lor q $$
+
+  이다. 그러므로 진리표는
+
+  |$p$|$q$ |$\lnot  p \lor q$|$p \to q$|
+  |:---:| :---:| :---:| :---:|
+  |$T$|$T$|$T$|$T$|
+  |$T$|$F$|$F$|$F$|
+  |$F$|$T$|$T$|$T$|
+  |$F$|$F$|$T$|$T$|
+
+  이다.
+
+  - 그러므로 $p$ 가 거짓이면 $p \to q$ 는 항상 참이다. 이것을 공진리라고 한다.
+
+- $p \to q$ 이고 $q \to p$ 일때 즉, $(p \to q)\land (q \to p)$ 일 때 $p \iff q$ 라고 한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$p \implies q$ : $p \to q$ 가 참일 때 $p \implies q$ 라고 한다.
+
+</blockquote>
+
+- $p \implies q$ 이고 $q \implies p$ 일 때, $p \iff q$ 라고 한다.
+
+> 증명이란 이것의 연속과정이 아닐까?
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+조건 : 변수 $x$ 를 포함하는 문장은 변수가 초기화됨에 따라 명제가 되는데, 이런 문장을 조건이라고 한다.
+
+</blockquote>
+
+- 예시 
+
+  변수 $x$ 를 포함하는 문장 "$x$ 는 $6$ 의 약수이다." 는 $x$ 가 초기화됨에 따라 명제가 되므로 조건이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+진리집합 : 변수 $x$ 를 포함하는 조건을 참이되게 하는 변수 $x$ 의 집합이다.
+
+</blockquote>
+
+- 예시 
+
+  변수 $x$ 에 대한 조건 "$x$ 는 $6$ 의 약수이다." 의 진리집합은 
+
+  $$ P = \{x:x\text{는 6 의 약수} \} $$
+
+  이다.
+
+  이때 "$x \in P$" 와 "$x$ 는 $6$ 의 약수" 는 같다.
+
+- 조건은 이미 존재하는 집합을 상정하고 그 집합에 특정 조건을 가하여 얻은 부분집합으로 구성하는 경우가 많다. 
+
+  만약 전체집합을 $U$ 로 가정하는 경우 조건 $p(x)$ 를 집합 $U$ 에서 정의했다고 한다.
+
+  - 예시 
+
+    변수 $x$ 에 대한 조건 "$x$ 는 $6$ 의 약수이다." 은 자연수 집합 $\N$ 을 상정하고 정의된 것이므로 진리집합을 더 엄밀하게 쓰면
+
+    $$ P = \{x \in \N:x\text{는 6 의 약수} \} = \{1,2,3,6\}$$
+
+    이 된다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+집합의 상등 : 조건 $p$ 의 진리집합 $A$, 조건 $q$ 의 진리집합 $B$ 에 대하여 $p \iff q$, 즉 $x \in A \iff x \in B$ 이면 
+
+두 집합 $A, B$ 가 같다, 즉 $A = B$ 라고 한다.
+
+</blockquote>
+
+- $x \in A$ 는 조건 $p$ 를 참이되게 하는 $A$ 의 원소 $x$ 에 대한 것이므로 참이 된 조건 $p$ 를 뜻한다. 
+
+  그러므로 $x \in A$ 라는 표기는 참과 거짓이 정해졌으므로 더 이상 조건이 아니라 명제를 뜻한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+대우명제 : $p \to q$ 의 대우는 $\lnot q \to \lnot p$ 이다.
+
+</blockquote>
+
+- 조건 $p(x)$ 의 진리집합 $P$ 에 대하여 명제 "어떤 $x$ 에 대하여 $p(x)$ 이다." 는 어떤 $x$ 에 대하여 $p(x)$ 가 참이되게 하는 $x$ 가 하나 이상 있다는 뜻이다. 그러므로 이 명제는
+
+  $$ P \neq \emptyset $$
+
+  와 같다. 이것을 부정하면 $P = \emptyset$ 인데, 이것은 곧 $P ^{c} = U$ 이므로 
+
+  $$ U = P ^{c} = \{x|\lnot p(x)\} $$
+
+  이고, 이것을 말로 설명하면 "임의의 $x$ 에 대하여 $\lnot p(x)$ 이다." 이다.
+
+  그러므로 $\lnot [\text{어떤 x 에 대하여 p(x)}] \equiv \text{임의의 x 에 대하여} \lnot  \text{p(x)}$ 즉, 
+
+  $$ \lnot [\exists x, p(x)] \equiv [\forall x, \lnot p(x)] $$
+
+  이다. 마찬가지로
+
+  $$ \lnot [\forall x, p(x)] \equiv [\exists  x, \lnot p(x)] $$
+
+  이다.
+
+  - 예시 
+
+    "임의의 $a < 0$ 에 대하여 $x \geq a$ 이다." 는 변수 $x$ 에 관한 조건인데, 이것의 대우명제는 "$x<a$ 인 음수 $a<0$ 이 존재한다." 이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+부분집합 : 조건 $p$ 의 진리집합 $A$, 조건 $q$ 의 진리집합 $B$ 에 대하여 $p \to q$, 즉 $x \in A \to x \in B$ 이면 
+
+$A$ 를 $B$ 의 부분집합, 즉 $A \subset B$ 라고 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+진부분집합 : 부분집합의 정의에서 $A \neq B$ 이면서 $A \subset B$ 이면, $A$ 를 $B$ 의 진부분집합이라고 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+여집합 : 집합 $A$ 에 대하여 $A ^{c}=\{x:x \not \in A\}$ 를 $A$ 의 여집합이라고 한다.
+
+</blockquote>
+
+- 조건 $p$ 의 진리집합이 $P$ 이면 그 부정 $\lnot p$ 의 진리집합은 $P ^{c}$ 이다.
+
+- 집합 $A$ 에 대하여 다음이 성립한다.
+
+  1. $(A ^{c})^{c} = A$
+
+  - 증명 
+
+    $$ x \in (A ^{c})^{c} \iff \lnot (x \in A ^{c}) \iff \lnot (\lnot x \in A) \iff x \in A $$
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+공집합 : 원소가 없는 집합 $\emptyset$ 이다.
+
+</blockquote>
+
+- 전체집합 $U$ 에 대하여 다음이 성립한다.
+
+  1. $\emptyset ^{c} = U, U ^{c} = \emptyset$
+
+  2. $A \cup A ^{c} = U, A \cap A ^{c} = \emptyset$
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+합집합(union) $A \cup B$ : 두 집합 $A, B$ 에 대하여 
+
+$$ A \cup B = \{x:x \in A \lor x \in B\} $$
+
+이다.
+
+</blockquote>
+
+- 정의에 따라 조건 $p, q$ 의 진리집합 $P, Q$ 에 대하여 조건 $p \lor q$ 의 진리집합은 $P \cup Q$ 이다.
+
+- 예시 
+
+  $$ \{1,2,3\}\cup \{3,4\}=\{1,2,3,4\} $$
+
+  이다.
+
+  $$ A \cup B \cup C = \{x : x \in A \lor x \in B \lor x \in C\} $$
+
+  이다.
+
+- 가산 개의 집합의 합집합
+
+  자연수 개수만큼 무한히 많은 집합을 다음과 같이 일렬로 나열 가능하다면,
+
+  $$ A, B, C, D , \dots $$
+
+  다음과 같이 이들에게 자연수를 매길 수 있다. 
+
+  $$ A_1, A_2, A_3, A_4, \dots $$
+
+  이때 이것들의 합집합을 다음과 같이 표기한다. 
+
+  $$ A_1 \cup A_2 \cup \dots = \bigcup_{i=0}^{\infty}A_i =\bigcup_{i \in \N}^{}A_i := \{x: \exists i \in \N, x \in A_i\} $$
+
+- 임의의 첨수족의 합집합
+
+  자연수 $\N$ 으로 번호를 매기는 것은 과하거나(유한 개의 집합들), 적당하거나(자연수 개수만큼 많은 집합들), 부족(비가산 개의 집합들)할 수 있다. 
+  
+  그러므로 적당한 첨수 $i \in I$ 를 부여받은 집합 $A_i$ 들의 합집합(적어도 한 집합의 원소인 대상들의 집합)을 다음과 같이 표기할 수 있다.
+
+  $$ \bigcup_{i \in I}^{}A_i := \{x : \exists i \in I, x \in A_i\} $$
+
+  - 예시 
+
+    만일 $I = \{1,2\}$ 이면 집합족은 $\mathcal{A} = \{A_1, A_2\} = \{A_i : i \in \{1,2\}\}$ 이고 합집합은 
+
+    $$ \bigcup_{i \in I}^{} A_i = \bigcup_{}^{}\{A_i : i \in I\} = \bigcup_{}^{}\mathcal{A} = \bigcup_{}^{}\{A \in \mathcal{A}\} = \bigcup_{}^{}\{X \in \mathcal{A}\} := A_1 \cup A_2 $$
+
+    이다.
+
+- 임의의 합집합 
+
+  집합족 $\mathcal{M}$ 의 합집합은 그에 속하는 집합들의 모든 원소를 합쳐놓은 집합
+
+  $$ \bigcup_{}^{}\mathcal{M} = \bigcup_{A \in \mathcal{M}}^{} A := \{x : \exists A \in \mathcal{M}, x \in A\} $$
+
+  이다. 이는 가산 개의 집합의 합집합과 임의의 첨수족의 합집합을 모두 포함하는 일반적인 정의이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+교집합 $A \cap B$ : 두 집합 $A, B$ 에 대하여 
+
+$$ A \cap B = \{x:x \in A \land x \in B\} $$
+
+이다.
+
+</blockquote>
+
+- 합집합과 교집합은 다음 성질을 갖는다.
+
+  - $A \cup \emptyset  = A, A \cap \emptyset = \emptyset$
+
+  - $A \cup B  = B \cup  A, A \cap B = B \cap A$
+
+  - $A \cup (B \cup C)  = (A \cup B) \cup C, A \cap (B \cap C) = (A \cap B) \cap C$
+
+  - $A \cup A = A, A \cap A =A$
+
+  - $A \cap (B \cup C) = (A \cap B) \cup (A \cap C), A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+
+  - $(A \cup B) ^{c} = A ^{c} \cap B ^{c}, (A \cap B)^{c}=A ^{c}\cup B ^{c}$
+
+    - 증명 
+
+      $$ x \in (A \cup B) ^{c} \iff \lnot (x \in A \lor x \in B) $$
+
+      $$ \iff (x \not \in A) \land (x \not \in B) $$
+
+      $$ \iff (x \in A ^{c}) \land (x \in B ^{c}) $$
+
+      $$ \iff x \in A ^{c} \cap B ^{c} $$
+
+- 정의에 따라 조건 $p, q$ 의 진리집합 $P, Q$ 에 대하여 조건 $p \land q$ 의 진리집합은 $P \cap Q$ 이다.
+
+- 여러 집합의 교집합은 다음과 같이 나타낼 수 있다. 
+
+  집합 $A_1,A_2,A_3,A_4,A_5$ 의 교집합은 
+
+  $$ A_1 \cap A_2 \cap A_3 \cap A_4 \cap A_5 $$
+
+  으로 나타낼 수 있는데, 이것을 
+
+  $$ \bigcap_{i=1}^{5}A_i $$
+
+  로 나타낼 수 있다.
+
+  - 이때 
+
+    $$ x \in \bigcap_{i \in I}^{}A_i \iff \forall i \in I, x \in A_i $$
+
+    가 성립한다.
+
+- 집합족 $\mathcal{A}$ 의 교집합은 $\mathcal{A}$ 의 모든 원소에 동시에 속하는 대상으로 이루어진 집합 
+
+  $$ x \in \bigcap_{}^{}\mathcal{A} \iff \forall A in \mathcal{A}, x \in A $$
+
+  이다.
+
+- 집합족에 대한 합집합과 교집합은 전체집합 $U$ 안에 있는 집합 $A_i$ 들에 대하여 다음이 성립한다. 
+
+  - $\displaystyle \bigg (\bigcup_{i \in I}^{}A_i\bigg ) ^{c} = \bigcap_{i \in I}^{} A_i ^{c}$
+
+    - 증명
+
+      $$\displaystyle \bigg (\bigcup_{i \in I}^{}A_i\bigg ) ^{c} = \bigcap_{i \in I}^{} A_i ^{c} \iff x \not \in \bigcup_{i \in I}^{} A_i$$
+
+      $$ \iff \lnot (\exists i \in I, x \in A_i) $$
+
+      $$ \iff \forall  i \in I, x  \not \in A_i$$
+
+      $$ \iff \forall  i \in I, x  \in A_i ^{c}$$
+
+      $$ \iff x \in \bigcap_{i \in I}^{} A_i ^{c} $$
+
+  - $\displaystyle \bigg (\bigcap_{i \in I}^{}A_i\bigg ) ^{c} = \bigcup_{i \in I}^{} A_i ^{c}$
+
+  - $\displaystyle  A \cap \bigg (\bigcup_{i \in I}^{}A_i\bigg ) = \bigcup_{i \in I}^{}(A \cap A_i)$
+
+  - $\displaystyle  A \cup \bigg (\bigcap_{i \in I}^{}A_i\bigg ) = \bigcap_{i \in I}^{}(A \cup A_i)$
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+집합족(family of sets) : 집합을 원소로 하여 구성된 집합이다.
+
+</blockquote>
+
+- 집합 $X$ 속의 집합족이란 $X$ 의 부분집합으로 이루어진 집합이다. 
+
+  즉, $X$ 속의 집합족은 $X$ 의 멱집합 $\mathcal{P}(X)$ 의 부분집합 $\mathcal{F} \subseteq  \mathcal{P}(X)$ 이다.
+
+- 예시 
+
+  집합 $\{\{2, \{3\}\}, \{1\}, \{5,6\}\}$ 은 모든 원소가 집합이므로 집합족이다.
+
+  임의의 집합 $X$ 에 대하여 공집합 $\emptyset$ 과 $X$ 의 멱집합 $\mathcal{P}(X)$ 은 $X$ 속의 집합족이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+서로소인 집합족 : 집합족 $\mathcal{A} = \{A_i : i \in I\}$ 가 
+
+$$ i,i \in I, i \neq j \implies A_i \cap A_j = \emptyset $$
+
+을 만족하면 서로소인 집합족이라 한다.
+
+</blockquote>
+
+- 서로소인 집합족의 합집합을 
+
+  $$ \bigsqcup_{i \in I}^{}A_i $$
+
+  로 표현한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+순서쌍(ordered pair, 2-tuple) : 두 개의 수학적 대상 $a,b$ 를 순서를 정하여 짝지어 나타낸 쌍
+
+$$ (a, b) := \{\{a\}, \{a,b\}\} $$
+
+이다.
+
+</blockquote>
+
+- 두 원소 $a,b$ 로 이루어진 집합은 $\{a,b\}=\{b,a\}$ 이지만, 순서쌍은 $a \neq b$ 인 한
+
+  $$ (a,b) \neq (b,a) $$
+
+  이다.
+
+- 곱집합, 함수, 이항관계 등이 순서쌍을 이용해 정의된다.
+
+- 순서쌍의 성분은 스칼라, 벡터, 다른 순서쌍일 수도 있다.
+
+- 순서쌍으로 $n-tuple$ 을 귀납적으로 정의할 수 있다. 
+
+  - 예시 
+
+    $3$-튜플 순서쌍을 $(a,b,c) := (a, (b, c))$ 로 정의할 수 있다.
+
+- 순서쌍의 가장 기본적인 성질은 두 순서쌍이 같을 필요충분조건이 두 성분이 각각 같은 것이라는 것이다. 즉, 
+
+  $$ (a,b) = (c,d) \iff (a = c) \land (b = d) $$
+
+  - 이것으로 곱집합과 관계의 정의를 내릴 수 있다. 첫번째 성분 집합을 $A$, 두번째 성분 집합을 $B$ 로 두고, 이것에서 취한 모든 순서쌍 집합을 곱집합 $A \times B$ 라고 정의한다.
+
+    그러면 집합 $A$ 와 $B$ 의 관계는 $A \times B$ 의 부분집합이다.
+
+- 보통 순서쌍을 $(a,b)$ 로 표현하지만 개구간과 혼동하지 않기 위하여 $\big <a, b\big >$ 로 나타내기도 한다.
+
+- 정리 
+
+  $(a,b) = (c,d)$ 이면 $a=c, b=d$ 이다.
+
+  - 증명 
+
+    $a=b$ 인 경우 
+    
+    $$\{\{a\}\} = (a, b) = (c,d) = \{\{c\},\{c,d\}\}$$ 
+    
+    에서 $\{a\}=\{c\}=\{c,d\}$ 이므로 $a=b=c=d$ 이다.
+
+    $a \neq b$ 인 경우 $\{a,b\}$ 는 두 원소의 집합이므로 한 원소의 집합이 아니다. 그러므로 
+
+    $$ \{c\} \in \{\{c\},\{c,d\}\} = \{\{a\}, \{a,b\}\} $$
+
+    에서 명백하게 $\{c\} \neq \{a,b\}$ 이다. 그러므로 당연히 
+
+    $$ \{c\}=\{a\} \implies a = c $$
+
+    이다. 마찬가지로
+
+    $$ \{a,b\} \in \{\{a\}, \{a,b\}\} = \{\{c\}, \{c,d\}\} $$
+
+    에서 명백하게 $\{a,b\}\neq \{c\}$ 이다. 그러므로 당연히 
+
+    $$ \{a,b\} = \{c,d\} $$
+
+    인데 $b \in \{c,d\} = \{a,b\}$ 로부터 $b=c$ 또는 $b=d$ 이다.
+
+    그런데 $b=c$ 이면 $a=c=b$ 이므로 모순이다. 그러므로 $b=d$ 이다.
+  
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+곱집합(cartesian product) : 두 집합 $A,B$ 의 곱집합 $A \times B$ 는 
+
+$$ A \times B := \{(a,b):a \in A, b \in B\} $$
+
+이다.
+
+</blockquote>
+
+- 정리 
+
+  $$ A \times (B \cup C) = (A \times B) \cup (A \times C) $$
+
+  $$ A \times (B \cap C) = (A \times B) \cap (A \times C) $$
+
+  $$ (A \times B) \cap (C \times D) = (A \cap C) \times (B \cap D) $$
+
+- 예시 
+
+  우리에게 익숙한 데카르트 공간 $\R ^{2}$, 즉 직교좌표계는 $\R \times \R$ 로써 곱집합이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+Cartesian Space : 집합 $S$ 에 대한 cartesian $n$th power  는 
+
+$$ S ^{n} = \prod_{k=1}^{n}S = \{(x_1, x_2, \dots, x_n): \forall k \in \N ^{*}_{n}:x_k \in S\} $$
+
+이다.
+
+</blockquote>
+
+- 그냥 간단하게 $S ^{n} = \underbrace{S \times S \times \dots \times S}_{n \text{times}}$ 이다.
+
+- 다음과 같이 귀납적으로 정의할 수도 있다. 
+
+  $$ S ^{n} = \begin{cases} S &n = 1\\ S \times S ^{n-1}&n > 1\\ \end{cases} $$
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+멱집합(power set) : 주어진 집합의 모든 부분 집합으로 구성된 집합이다.
+
+</blockquote>
+
+- 즉, 집합 $S$ 의 멱집합 $\mathcal{P}(S)$ 또는 $2 ^{S}$ 는
+
+  $$ \mathcal{P}(S) := \{A: A \subseteq S\} $$
+
+  이다.
+
+- 예시 
+
+  집합 \{x,y,z\} 의 멱집합 원소들의 부분 집합 관계는
+
+  ![](https://upload.wikimedia.org/wikipedia/commons/e/ea/Hasse_diagram_of_powerset_of_3.svg)
+
+  와 같은 헤세 도형으로도 표현할 수 있다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+관계(relation) : 두 집합 $X, Y$ 의 곱집합 $X \times Y$ 의 부분집합이다.
+
+</blockquote>
+
+- 더 엄밀한 정의는 다음과 같다. 
+
+  집합족 $\{X_i\}_{i \in I}$ 위의 관계는 곱집합의 부분집합
+
+  $$ R \subseteq \prod_{i \in I}^{}X_i $$
+
+  이다.
+
+  - 이를 통해 순서수 $\alpha$ 에 대하여 집합 $X$ 위의 $\alpha$항 관계를 거듭제곱 집합의 부분집합
+
+    $$ R \subseteq X ^{\times \alpha } $$
+
+    로 정의한다.
+
+  - 예시 
+
+    집합 $X$ 위의 영항관계(nullary relation) 은 $R \subseteq \{\cdot \}$ 즉, $R = \emptyset$ 이다.
+
+    집합 $X$ 위의 단항관계(unary relation) 은 $R \subseteq X$ 이다.
+
+    집합 $X$ 위의 이항관계(binary relation) 은 $R \subseteq X \times X$ 이다. 특히 이항관계에서 $(x, y) \in R$ 일 경우 $xRy$ 와 같이 자주 표기한다. 
+    
+    - 가령 집합 $\N$ 위의 이항관계 $+ \subseteq \N \times \N$ 에서 $(1, 2) \in \N$ 을 $1 + 2$ 로 표기한다.
+
+    집합 $X$ 위의 삼항관계(ternary relation) 은 $R \subseteq X \times X \times X$ 이다. 
+    
+    - 프로그래밍 언어에서 $x = (condition) ? a : b;$ 와 같이 사용되기도 한다.
+    
+    집합 $X$ 위의 $n$항관계(n-ary relation) 은 $R \subseteq X ^{\times n}$ 이다. 이때 $(x_1, \dots, x_n) \in R$ 을 $R(x_1, \dots, x_n)$ 와 같이 표기한다.
+
+- 집합 $X$ 에 관계가 주어졌다는 것은 곱집합 $X \times X$ 의 부분집합이 주어졌다는 것이다.
+    
+- 예시 
+
+  데카르트 공간 $\R ^{2}$, 즉 직교좌표계의 부분집합 
+
+  $$ x \in X, y \in Y, x ^{2}+y ^{2} = 4 $$
+
+  는 관계이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+동치관계 : 집합 $X$ 에 대한 관계 $R \subset X \times X$ 가 
+
+1. 임의의 $x \in X$ 에 대하여 $(x,x)\in R$ 이다.
+
+2. $(x, y) \in R$ 이면 $(y, x) \in R$ 이다. 
+
+3. $(x, y) \in R$ 이고 $(y,z)\in R$ 이면 $(x, z) \in R$ 이다.
+
+를 만족하면 $R$ 을 동치관계라 한다.
+
+</blockquote>
+
+- 동치관계 $R \subset X \times X$ 의 원소 $(x, y) \in R$ 을 
+
+  $$ x \sim y $$
+
+  라고 쓴다.
+
+  - 예시 
+
+    동치관계의 조건을 다시 열거하면 다음과 같이 된다.
+    
+    $$ x \in X \to x \sim x $$
+
+    $$ x \sim y \to y \sim x $$
+
+    $$ x \sim y, y \sim z \to x \sim z $$
+
+- 예시 
+
+  "같다" 는 동치관계의 예시이다.
+
+  "서로 평행이다", "서로 닮음이다" 도 동치관계의 예시이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+동치류 : 집합 $X$ 에 동치관계 $\sim$ 가 주어져 있을 때 각 $x \in X$ 에 대하여
+
+$$ [x] = \{z \in X: z \sim x\} $$
+
+를 $x$ 의 동치류라 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+함수(function) : 두 집합 $X, Y$ 의 곱집합 $X \times Y$ 의 부분집합 $f \subset X \times Y$ 가 
+
+1. $x \in X \to (x,y) \in f$ 를 만족하는 $y \in Y$ 가 존재한다.
+
+2. $(x, y_1) \in f, (x, y_2) \in f \to y_1 = y_2$
+
+을 만족하면 $X$ 에서 $Y$ 로 가는 함수라고 한다.
+
+</blockquote>
+
+- $(x,y) \in f$ 일 때 
+
+  $$f(x) = y \text{  또는  } f: x \mapsto y$$
+
+  라고 쓴다.
+
+- 집합 $X$ 를 $f$ 의 정의역, $Y$ 를 $f$ 의 공역이라고 하고, 
+
+  $$ f: X \to Y $$
+
+  라고 쓴다.
+
+  - 앞으로 정의역과 공역은 항상 공집합이 아니라고 간주한다.
+
+- $f: x \mapsto x, X \to Y$ 는 $f: X \to Y$ 가 함수이고 $(x, y) \in f$ 라는 뜻이다.
+
+- 상황에 따라 "함수(function)" 를 "사상(mapping)", "변환(transformation)" 으로 부르기도 하는데 다 같은 뜻이다.
+
+- 정리 
+
+  함수 $f: X \to Y$ 와 $g: X \to Y$ 가 같은 함수일 필요충분조건은 
+
+  $$ f(x) = g(x), x \in X $$
+
+  이다. 
+
+  - 증명 
+
+    $f = g$ 이면 임의의 $x \in X$ 에 대하여 
+
+    $$ y = f(x) \iff (x, y) \in f \iff (x, y) \in g \iff y = g(x) $$
+
+    이므로 $f(x) = g(x)$ 이다.
+
+    반대로 임의의 $x \in X$ 에 대하여 $f(x) = g(x)$ 이면 
+
+    $$ (x,y) \in f \iff y = f(x) \iff y = g(x) \iff (x,y) \in g $$
+
+    이므로 $f=g$ 이다. ■ 
+
+- 예시 
+
+  데카르트 공간 $\R ^{2}$, 즉 직교좌표계의 부분집합 
+
+  $$ x \in X, y \in Y, x ^{2}+y ^{2} = 4 $$
+
+  는 함수가 아니다. $(0, -2), (0, +2)$ 가 이 관계에 속하는데 이는 함수의 두번째 조건
+
+  2. $(x, y_1) \in f, (x, y_2) \in f \to y_1 = y_2$
+
+  을 위배하기 때문이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+항등함수 : 집합 $X$ 에 대하여 
+
+$$ \{(x_1, x_2) \in X \times X:x_1 = x_2\} $$
+
+로 주어진 함수를 $X$ 에서 정의된 항등함수
+
+$$ 1 _{X} = X \to X $$
+
+라 한다.
+
+</blockquote>
+
+- 즉, 항등함수는 
+
+  $$ 1 _{X}(x) = x, x \in X $$
+
+  이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+포함함수 : $A \subset X$ 일 때 
+
+$$ \{(a,a) \in A \times X : a \in A\} $$
+
+로 주어진 함수를 포함함수 
+
+$$ \iota _{A}:A \hookrightarrow X $$
+
+이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+합성함수 : 함수 $f: X \to Y$ 와 $g: Y \to Z$ 에 대한 합성함수 $g \circ f : X \to Z$ 는 
+
+$$ (g \circ f)(x) = g(f(x)), x \in X $$
+
+이다.
+
+</blockquote>
+
+- $f$ 와 $g$ 는 각각 곱집합 $X \in Y$ 와 $Y \times Z$ 의 부분집합이므로 
+
+  $$ g \circ f = \{(x, z) \in X \times Z: (\exists y) ((x, y) \in f, (y, z) \in g)\} $$
+
+  와 같이 정의할 수도 있다. 이는 $(x, y) \in f, (y, z) \in g$ 인 $y$ 가 존재한다는 말이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+함수의 제한 : 함수 $f: X \to Y$ 의 정의역 $X$ 의 부분집합 $A$ 에 대한 합성함수 
+
+$$ f \circ \iota _{A}:A \to Y $$
+
+를 $f$ 의 제한 
+
+$$ f | _{A} : A \to Y $$
+
+이라고 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+전사함수 :
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+단사함수 :
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+전단사함수 :
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+역함수 : 함수 $f: X \to Y$ 에 대하여 
+
+$$ g \circ f = 1 _{X}, f \circ g = 1 _{Y} $$
+
+인 $g: Y \to X$ 가 존재하면 이를 $f$ 의 역함수라 한다.
+
+</blockquote>
+
+- 역함수는 유일하다. 
+
+  - 증명 
+
+    $g$ 와 $h$ 가 $f$ 의 역함수라면 
+    
+    $$ g = 1 _{X} \circ g = (h \circ f) \circ g = h \circ (f \circ g) = h \circ 1 _{Y} = h $$
+
+    가 된다.
+
+- $f$ 의 역함수 $g$ 를 $f ^{-1} : Y \to X$ 로 표기한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+함수 전체 집합 : 집합 $X$ 에서 $Y$ 로 가는 함수 전체의 집합을 $Y ^{X}$ 라고 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+특성함수 : 임의의 $A \in \mathcal{P}(X)$ 에 대하여 $\Phi (A) \in \{0,1\}^{X}$ 를 
+
+$$ \Phi (A)(x) = \begin{cases} 1 &x \in A\\ 0 &x \not \in A\\ \end{cases} $$
+
+라고 정의하고 특성함수라 한다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+클래스(class) : 집합 $A$ 와 자유변수 $x \in A$ 에 대하여 조건 $p(x)$ 으로 변수 $x$ 를 모은 것
+
+$$ \{x:p(x)\} $$
+
+이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+endorelation : 집합 $S$ 에 대한 곱집합 $S \times S$ 에 대한 관계 $\mathcal{R}$ 를 $S$ 의 endorelation 이라고 한다.
+
+</blockquote>
+
+- endorelation 은 순서쌍 $3$-튜플로도 정의된다. $R \subseteq S \times S$ 에 대하여 
+
+  $$ \mathcal{R} = (S,S,R) $$
+
+  이다.
+
+- endorelation 의 일반적인 정의는 다음과 같다. 
+
+  cartesian space $S ^{n}$ 에 대한 $n$항관계 $\mathcal{R}$ 은 $R \subseteq S ^{n}$ 에 대한 $S$ 의 $n$-ary endorelation
+
+  $$ \mathcal{R} = (S,S,\dots,S,R) $$
+
+  이다.
+
+- 예시 
+
+  $V_0 = \{a,b,c\}$ 에 대한 endorelation 중 하나는
+
+  $$ R = \{(a,a),(b,b),(b,c),(c,b)\} $$
+
+  이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+관계 구조(relational structure) : 집합 $S$ 과 $S$ 의 endorelation $\mathcal{R}$ 에 대한 순서쌍 $(S, \mathcal{R})$ 이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+순서관계(ordered relation) : 집합 $X$ 의 관계 $R \subset X \times X$ 이 
+
+1. 임의의 $x \in X$ 에 대하여 $(x, x) \in R$ 이다.
+
+2. $(x, y) \in R, (y, x) \in R$ 이면 $x = y$ 이다. 
+
+3. $(x, y) \in R$ 이고 $(y, z) \in R$ 이면 $(x, z) \in R$ 이다.
+
+를 만족하면 이를 순서관계라고 한다.
+
+</blockquote>
+
+- 순서관계는 $\leq$ 로 표현한다. 
+
+  이를 통해 순서관계의 세 조건을 
+
+  $$ x \in X \to x \leq x $$
+
+  $$ x \leq y, y \leq x \to x = y $$
+
+  $$ x \leq y, y \leq z \to x \leq z $$
+
+  와 같이 쓸 수 있다.
+
+- 만약 $x \leq y$ 이면서 $x \neq y$ 이면 $x < y$ 라고 쓴다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+순서집합(ordered set) : 순서관계가 정의되어 있는 집합이다.
+
+</blockquote>
+
+- 예시 
+
+  집합 $X = \{a,b,c\}$ 에 관계 
+
+  $$ R = \{(a,a),(b,b),(c,c),(a,b),(a,c)\}\subset X \times X $$
+
+  를 정의하면 $R$ 은 순서관계가 된다. 이때 원소 $a,b,c$ 사이에 다음의 순서 
+
+  $$ a \leq a, b \leq b, c \leq c, a \leq b, a \leq c $$
+
+  가 있게 된다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+상계(upper bound) : 순서집합 $X$ 의 부분집합 $S \subset X$ 와 한 원소 $a \in X$ 에 대하여 
+
+$$ x \in S \to x \leq a $$
+
+가 성립하면 $a$ 를 $S$ 의 상계라고 한다.
+
+</blockquote>
+
+- 상계 중 가장 작은 원소를 최소상계(least upper bound) 또는 상한(supremum)이라 한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+상한(supremum) 또는 최소상계(least upper bound) : 상계 중 가장 작은 원소 즉, 집합 $X$ 과 부분집합 $S \subset X$ 에 대하여 
+
+1. $\alpha$ 는 $S$ 의 상계이다. 즉, $x \in S \to x \leq \alpha$ 이다.
+
+2. $\beta$ 가 $S$ 의 상계이면 반드시 $\alpha \leq \beta$ 이다. 즉, $\forall x \in S, x \leq \beta \to \alpha \leq \beta$ 이다.
+
+를 만족하는 원소 $\alpha \in X$ 이다.
+
+</blockquote>
+
+- 집합 $S$ 가 상한을 가지면 두번째 조건에 의하여 상한이 오직 하나밖에 없음을 쉽게 알 수 있다.
+
+  그 상한을 
+
+  $$ \sup S $$
+
+  라고 쓴다.
+
+- 어느 집합의 상한은 그 집합의 원소일 수도 있고, 아닐 수도 있다.
+
+  만약 $\sup A$ 가 $A$ 의 원소가 되면, $\sup A$ 는 자명하게 $A$ 에서 가장 큰 원소이다.
+
+  - 예시 
+
+    실수집합 $\R$ 의 부분집합을 취하고 순서를 부여하여 개구간 
+
+    $$ (0, 1) = \{x \in \R: 0 < x < 1\} $$
+
+    을 얻으면, 이것의 상계 전체 집합은 
+
+    $$ \{x \in \R : x \geq 1\} $$
+
+    이다. 이 집합의 최소원소는 $1$ 이므로 
+
+    $$ \sup (0, 1) = 1 $$
+
+    이다.
+
+    마찬가지로 실수집합 $\R$ 의 부분집합을 취하고 순서를 부여하여 폐구간 
+
+    $$ [0, 1] = \{x \in \R: 0 \leq x \leq 1\} $$
+
+    을 얻으면, 이것의 상한은
+
+    $$ \sup [0, 1] = 1 $$
+
+    이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+위로 유계(bounded from above) : 순서집합의 부분집합이 상계를 가지면 이 집합을 위로 유계라고 한다.
+
+</blockquote>
+
+- 정리 
+
+  정수집합 $\Z$ 과 $\Z$ 의 순서관계 $\leq$ 에 대하여
+  
+  $\emptyset \subset S \subseteq \Z$ 인 집합 $S$ 가 $(\Z, \leq )$ 에서 위로 유계라면 $S$ 는 가장 큰 원소를 갖는다.
+
+  - 증명 
+
+    $S$ 가 위로 유계이므로 $\exists M \in \Z: \forall s \in S: s \leq M$ 이다. 즉, 모든 $S$ 의 원소 $s$ 에 대하여 적당한 정수 $M$ 이 존재하여 항상 $s \leq M$ 라는 것이다.
+
+    그러므로 $\forall s \in S: 0 \leq M - s$ 이다. 그러면 집합 $T$ 를 이렇게 정의해보자.
+
+    $$ T = \{M - s : s \in S\} \subseteq \N $$
+
+    그러면 [Well-Ordering Principle](https://proofwiki.org/wiki/Well-Ordering_Principle) 에 의하여 $T$ 는 가장 작은 원소를 갖는다. 그것을 $b _{T} \in T$ 라고 하자.
+
+    > **Well-Ordering Principle 구체화 필요**
+
+    그렇다면 
+
+    $$ (\forall s \in S: b _{T} \leq M - s) \land (\exists g _{S} \in S:b _{T} = M - g _{S}) $$
+
+    이다. 즉, $S$ 의 모든 원소 $s$ 에 대하여 $M-s$ 는 $b _{T}$ 와 같거나 크고, $S$ 의 원소 $g _{S}$ 가 존재하여 $b _{T} = M - g _{S}$ 가 된다는 것이다.
+
+    그러므로 
+
+    $$ \forall s \in S : b _{T} \leq M - s $$
+
+    $$ \iff  \forall s \in S : M - g _{S} \leq M - s $$
+
+    $$ \iff  \forall s \in S : - g _{S} \leq - s $$
+
+    $$ \iff  \forall s \in S : g _{S} \geq s $$
+
+    $$ \iff g _{S} \in S \land (\forall s \in S : g _{S} \geq s ) $$
+
+    이다. 즉, $S$ 의 모든 원소 $s$ 보다 큰 원소 $g _{S}$ 가 존재한다는 것이다.
+
+    그러므로 $S$ 의 가장 큰 원소 $g _{S}$ 가 존재한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+위로 무계(unbounded from above) : 순서집합 $(S, \leq )$ 의 부분집합 $T \subseteq S$ 이 위로 유계가 아니면 위로 무계이다.
+
+</blockquote>
+
+- 정리 
+
+  $x \in \R$ 이 $x > 1$ 일 때 집합 $S = \{x ^{n}:n \in \N\}$ 은 위로 무계 집합이다.
+
+  - 증명 
+
+    $S$ 가 위로 유계라고 하자. 그러면 $S$ 는 상한 $B = \sup S$ 를 갖는다.
+
+    $x > 1$ 이므로 $\dfrac{x}{B} > \dfrac{1}{B}$ 에서 $\dfrac{B}{x} < B$ 이다.
+
+    $B$ 가 최소상계, 즉 상한인데도 $\dfrac{B}{x} < B$ 이므로 $\dfrac{B}{x}$ 는 상계가 될 수 없다. 그러므로 
+
+    $$ \exists n \in \N: x ^{n} > \dfrac{B}{x} \implies x ^{n+1} > B $$
+
+    이다. 즉, $\dfrac{B}{x}$ 가 상계가 아니므로 와 적당한 자연수 $n$ 에 대한 $x ^{n}$ 이 존재하여 $x ^{n} > \dfrac{B}{x}$ 인데, 이는 곧 $x ^{n+1} > B$ 이 된다. 그런데 $B$ 를 최소상계라고 했으므로 이는 모순이다.
+
+    그러므로 $B$ 는 상계가 아니다. 
+
+    이로써 $S$ 가 위로 유계라는 가정 또한 모순이다. 그러므로 $S$ 는 위로 무계 집합이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+역진귀납법(backwards induction) : 자연수 집합 $\N$ 과 명제함수 $P$ 에 대하여 
+
+1. $\forall n \in \N : P(2 ^{n})$
+
+2. $P(n) \implies P(n-1)$
+
+이면 $P(n)$ 은 $\forall n \in N$ 에 대하여 성립한다.
+
+</blockquote>
+
+- 증명 
+
+  적당한 자연수 $\exists k \in \N$ 가 존재하여 $P(k)$ 가 거짓이 된다고 하자.
+
+  그러면 정리 "$x \in \R$ 이 $x > 1$ 일 때 집합 $S = \{x ^{n}:n \in \N\}$ 은 위로 무계 집합이다." 에 의하여 $\{2 ^{n} : n \in \N\}$ 은 위로 무계이다.
+
+  쉽게 말해서 $2$ 의 제곱수는 상계가 없다. 그러므로 $k \in \N$ 가 아무리 크더라도 
+
+  $$ M = 2 ^{N} > k $$
+
+  를 만족하는 $N, M \in \N$ 이 존재한다. 그러면 이제 집합 $S$ 를 다음과 같이 만들어보자.
+
+  $$ S = \{n \in \N : n < M, P(n) \text{ is false}\} $$
+
+  쉽게 말해 $M$ 보다 작은 자연수 $n$ 중에서 명제함수 $P(n)$ 가 거짓이 되는 자연수 $n$ 의 모임으로 집합 $S$ 를 정의하는 것이다. 그러면 $k$ 는 반드시 $S$ 의 원소이므로 $S \neq \emptyset$ 이다. ($\because k < M , P(k) \text{ is false}$)
+
+  그리고 $S$ 는 $\forall x \in S: x < M$ 이므로 위로 유계이다.
+
+  그렇다면 정리 "정수집합 $\Z$ 과 $\Z$ 의 순서관계 $\leq$ 에 대하여 $\emptyset \subset S \subseteq \Z$ 인 집합 $S$ 가 $(\Z, \leq )$ 에서 위로 유계라면 $S$ 는 가장 큰 원소를 갖는다." 에 의하여 $S$ 는 가장 큰 원소 $g _{S}$ 를 갖는다.
+
+  그러면 $S$ 의 가장 큰 원소 $g _{S}$ 보다 큰 자연수 $m$ 에 대하여 $m < n \leq M$ 인 자연수 $n$ 이 존재하여 $P(n)$ 을 참이 되게 한다. 그리고 그러므로 $P(m+1)$ 도 참이다.
+
+  그런데 명제함수 $P$ 의 두번째 성질
+
+  2. $P(n) \implies P(n-1)$
+
+  에 의하여 $P(m+1) \implies P(m)$ 이다. 즉, $P(m+1)$ 이 참이면 $P(m)$ 도 참이다. 이에따라 $P(m-1)$ 도 참이고, $P(m-2)$ 도 참이고, $\dots$, $P(1)$ 도 참이다.
+
+  그러므로 $S$ 의 가장 큰 원소 $g _{S}$ 가 존재하지 않으며, 이에따라 $S = \emptyset$ 이라는 결론을 얻는다. 이는 모순이다. 
+
+  그러므로 $P(k)$ 가 거짓이 되게 하는 $k \in \N$ 는 존재하지 않는다. ■  
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+하계(lower bound) : 순서집합 $X$ 의 부분집합 $S \subset X$ 와 한 원소 $a \in X$ 에 대하여 
+
+$$ x \in S \to x \geq a $$
+
+가 성립하면 $a$ 를 $S$ 의 하계라고 한다.
+
+</blockquote>
+
+- 하계 중 가장 작은 원소를 최대하계(greatest lower bound) 또는 하한(infimum)이라 한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+하한(infimum) 또는 최대하계(greatest lower bound) : 하계 중 가장 큰 원소 즉, 집합 $X$ 과 부분집합 $S \subset X$ 에 대하여 
+
+1. $\alpha$ 는 $S$ 의 하계이다. 즉, $x \in S \to x \geq \alpha$ 이다.
+
+2. $\beta$ 가 $S$ 의 하계이면 반드시 $\alpha \geq \beta$ 이다. 즉, $\forall x \in S, x \geq \beta \to \alpha \geq \beta$ 이다.
+
+를 만족하는 원소 $\alpha \in X$ 이다.
+
+</blockquote>
+
+- 마찬가지로 하한도 집합 $S$ 에 대하여 오직 하나밖에 없는데 그 하한을 
+
+  $$ \inf S $$
+
+  라고 한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+아래로 유계(bounded from below) : 순서집합의 부분집합이 하계를 가지면 이 집합을 아래로 유계라고 한다.
+
+</blockquote>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

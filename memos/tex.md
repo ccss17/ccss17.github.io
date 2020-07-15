@@ -54,19 +54,19 @@ https://katex.org/docs/support_table.html
 
 ### <a name="Arrows" href="#Arrows">Arrows</a>
 
-| $\gets$| $\to$ | $\Leftarrow$ |$\Rightarrow$|
+| $\gets$| $\to$ | $\Leftarrow$ |$\implies$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| \gets  | \to  |\Leftarrow |\Rightarrow |
-|$\Leftrightarrow$|$\mapsto$| $\overrightarrow{AB}$| $\overleftrightarrow{AB}$
-|\Leftrightarrow|\mapsto  | \overrightarrow{AB}  | \overleftrightarrow{AB}
+| \gets  | \to  |\Leftarrow |\implies |
+|$\iff$|$\mapsto$| $\overrightarrow{AB}$| $\overleftrightarrow{AB}$
+|\iff|\mapsto  | \overrightarrow{AB}  | \overleftrightarrow{AB}
 
 ### <a name="Logic" href="#Logic">Logic</a>
 
 | $\forall$| $\exists$ | $\nexists$ |$\neg$|$\iff$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | \forall  | \exists  |\nexists |\neg |\iff |
-| $\lor$| $\land$ | $\Rightarrow$ |$\Leftarrow$|$\top$|
-| \lor  | \land  |\Rightarrow |\Leftarrow |\top|
+| $\lor$| $\land$ | $\implies$ |$\Leftarrow$|$\top$|
+| \lor  | \land  |\implies |\Leftarrow |\top|
 | $\bot$| $\models$ | $\perp$ |$\bowtie$|$\dashv$|
 | \bot  | \models  |\perp |\bowtie |\dashv|
 | $\vdash$| $\not\vdash$ |$\emptyset$|

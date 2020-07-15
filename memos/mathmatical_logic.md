@@ -90,9 +90,9 @@
 
     "모든 삼각형은 이등변삼각형이다" 라는 명제는 거짓이다. 삼각형이면서 이등변삼각형이 아닌 대상이 존재하기 때문이다. 
 
-- 명제 $p \to q$ 가 참일 때 이것을 $p \Rightarrow q$ 라고 표현한다. 
+- 명제 $p \to q$ 가 참일 때 이것을 $p \implies q$ 라고 표현한다. 
 
-- 명제 $p \to q$ 가 거짓일 때 이것을 $p \not \Rightarrow q$ 라고 표현한다. 
+- 명제 $p \to q$ 가 거짓일 때 이것을 $p \not \implies q$ 라고 표현한다. 
 
 - 예시 
 
@@ -211,9 +211,9 @@
 
 - 어떤 명제 $p$ 와 그것의 대우는 항상 똑같은 진리치를 갖는다. 즉 $p$ 가 참이면 그것의 대우도 참이고 거짓이면 그것의 대우도 거짓이다. 다시 말해 명제와 그 대우는 동치이다. 
 
-- $p \Rightarrow q$, 즉 명제 $p \to q$ 가 참이면 $P \subset Q$ 이다. 또한 이에 따라 $\sim q \to \sim p$ 이기에 $Q^C \subset P^C$ 도 참이다. 
+- $p \implies q$, 즉 명제 $p \to q$ 가 참이면 $P \subset Q$ 이다. 또한 이에 따라 $\sim q \to \sim p$ 이기에 $Q^C \subset P^C$ 도 참이다. 
 
-- $p \not \Rightarrow q$, 즉 명제 $p \to q$ 가 거짓이면 $P \not \subset Q$ 이다. 또한 $Q^C \not \subset P^C$ 도 참이며 이에 따라 $\sim q \not \Rightarrow \sim p$ 이다. 
+- $p \not \implies q$, 즉 명제 $p \to q$ 가 거짓이면 $P \not \subset Q$ 이다. 또한 $Q^C \not \subset P^C$ 도 참이며 이에 따라 $\sim q \not \implies \sim p$ 이다. 
 
 - 따라서 명제 $p \to q$ 를 증명할 때 $\sim q \to \sim p$ 를 증명해도 된다. 
 
@@ -373,11 +373,11 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-충분조건(sufficiency) : $p \Rightarrow q$ 이면 $p$ 는 $q$ 이기 위한 충분조건이다. 
+충분조건(sufficiency) : $p \implies q$ 이면 $p$ 는 $q$ 이기 위한 충분조건이다. 
 
 </blockquote>
 
-- $P \subset Q$ 이면 $p \Rightarrow q$ 이기 때문에 $p$ 를 참이 되게하는 진리집합 $P$ 가 $q$ 를 참이 되게하는 진리집합 $Q$ 에 속한다. 따라서 $p$ 가 참이라는 것이 보장되면 진리집합이 $q$ 를 참이 되게하는 진리집합에 포함되므로 $q$ 도 참이라는 것이 충분히 보장된다. 쉽게 말해 $p \Rightarrow q$ 는 "$p$ 이면 무조건 $q$ 이다" 라는 것이기 때문에 $p$ 는 $q$ 가 참이 되기 위한 충분한 조건을 이미 충족한다. 따라서 $p \Rightarrow q$ 일 때, $p$ 를 $q$ 이기 위한 충분조건이라고 한다. 
+- $P \subset Q$ 이면 $p \implies q$ 이기 때문에 $p$ 를 참이 되게하는 진리집합 $P$ 가 $q$ 를 참이 되게하는 진리집합 $Q$ 에 속한다. 따라서 $p$ 가 참이라는 것이 보장되면 진리집합이 $q$ 를 참이 되게하는 진리집합에 포함되므로 $q$ 도 참이라는 것이 충분히 보장된다. 쉽게 말해 $p \implies q$ 는 "$p$ 이면 무조건 $q$ 이다" 라는 것이기 때문에 $p$ 는 $q$ 가 참이 되기 위한 충분한 조건을 이미 충족한다. 따라서 $p \implies q$ 일 때, $p$ 를 $q$ 이기 위한 충분조건이라고 한다. 
 
 - 예시 
 
@@ -391,11 +391,11 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-필요조건(necessity) : $p \Rightarrow q$ 이면 $q$ 는 $p$ 이기 위한 필요조건이다. 
+필요조건(necessity) : $p \implies q$ 이면 $q$ 는 $p$ 이기 위한 필요조건이다. 
 
 </blockquote>
 
-- $P \subset Q$ 이면 $p \Rightarrow q$ 이기 때문에 $p$ 를 참이 되게하는 진리집합 $P$ 가 $q$ 를 참이 되게하는 진리집합 $Q$ 에 속한다. 이는 $q$ 를 참이 되게 하는 진리집합이 반드시 $p$ 를 참이 되게 한다는 보장은 없지만 $p$ 를 참이 되게 하기 위해서는 필요하기는 한 조건임을 의미한다. 따라서 $q$ 를 $p$ 가 참이기 위한 필요조건이라 한다. (충분한 조건, 즉 충분 조건은 아닌 것이 $q$ 의 진리집합의 모든 원소가 $p$ 를 항상 만족하지 않기 때문이다.)
+- $P \subset Q$ 이면 $p \implies q$ 이기 때문에 $p$ 를 참이 되게하는 진리집합 $P$ 가 $q$ 를 참이 되게하는 진리집합 $Q$ 에 속한다. 이는 $q$ 를 참이 되게 하는 진리집합이 반드시 $p$ 를 참이 되게 한다는 보장은 없지만 $p$ 를 참이 되게 하기 위해서는 필요하기는 한 조건임을 의미한다. 따라서 $q$ 를 $p$ 가 참이기 위한 필요조건이라 한다. (충분한 조건, 즉 충분 조건은 아닌 것이 $q$ 의 진리집합의 모든 원소가 $p$ 를 항상 만족하지 않기 때문이다.)
 
 - 예시 
 
@@ -407,7 +407,7 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-필요충분조건(necessity and sufficiency) : $p \Rightarrow q$ 이고 $q \Rightarrow p$ 이면 $p$ 는 $q$ 이기 위한 필요충분조건이다. 
+필요충분조건(necessity and sufficiency) : $p \implies q$ 이고 $q \implies p$ 이면 $p$ 는 $q$ 이기 위한 필요충분조건이다. 
 
 </blockquote>
 
@@ -417,7 +417,7 @@
 
 - 필요충분조건은 두 명제의 진리집합이 동일함을 뜻하고 두 명제가 동치라는 것을 뜻한다. 
 
-- 즉, $P \subset Q$ 이면 $p \Rightarrow q$ 이고 $Q \subset P$ 이면 $q \Rightarrow p$ 이므로 $P=Q$ 이며 이것을 $p \iff q$ 라고 표현한다. 
+- 즉, $P \subset Q$ 이면 $p \implies q$ 이고 $Q \subset P$ 이면 $q \implies p$ 이므로 $P=Q$ 이며 이것을 $p \iff q$ 라고 표현한다. 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -491,11 +491,11 @@
 
 - 논리 체계의 건전성 : 문장집합 $\Gamma$ 로부터 명제 $\phi$ 가 도출되면 문장 $\phi$ 가 명제집합 $\Gamma$ 의 귀결이다.
 
-    $$ \Gamma \vdash \phi \Rightarrow \Gamma \models \phi$$
+    $$ \Gamma \vdash \phi \implies \Gamma \models \phi$$
 
 - 논리 체계의 완전성 : 문장 $\phi$ 가 명제집합 $\Gamma$ 의 귀결이면 문장집합 $\Gamma$ 로부터 명제 $\phi$ 가 도출된다는 것이다.
 
-    $$ \Gamma \models \phi\Rightarrow \Gamma \vdash \phi $$
+    $$ \Gamma \models \phi\implies \Gamma \vdash \phi $$
 
   - 건정성과 완전성은 역 관계이며, 괴델의 완전성 정리에 의해 명제 논리와 1차 술어논리 체계에서 동치라는 것이 증명되었다. 
 

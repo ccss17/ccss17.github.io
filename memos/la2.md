@@ -418,17 +418,17 @@ $$ (A^T)^{-1} = (A^{-1})^T $$
 
 </blockquote>
 
-- 명제들의 순환관계의 표기 : 명제 (1) 가 참이면 명제 (10) 가 참일 때, (1) 를 (10) 의 충분조건이라 하고 (1)$\rightarrow$(10) 라 쓴다. 
+- 명제들의 순환관계의 표기 : 명제 (1) 가 참이면 명제 (10) 가 참일 때, (1) 를 (10) 의 충분조건이라 하고 (1)$\implies$(10) 라 쓴다. 
 
 - 명제들의 순환관계
 
-  - $(1) \rightarrow (10) \rightarrow (4) \rightarrow (3) \rightarrow (2) \rightarrow (1)$
+  - $(1) \implies (10) \implies (4) \implies (3) \implies (2) \implies (1)$
 
     - (1) 이 참이면 (10) 에서 $A^{-1}$ 이 $C$ 의 역할을 한다. 
 
     - (1) 이 참이면 (10) 에서 $A^{-1}$ 이 $C$ 의 역할을 한다. 
 
-  - $(1) \rightarrow (11) \rightarrow (7) \rightarrow (1)$
+  - $(1) \implies (11) \implies (7) \implies (1)$
 
   - $(7) \iff (8) \iff (9)$
 
