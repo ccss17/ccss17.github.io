@@ -396,7 +396,7 @@
 
 산술기하 평균 부등식(arithmetic mean-geometric mean inequality, AM-GM inequality) : $n$개의 양수 $a_1, a_2, \dots, a_n$ 에 대하여 절대부등식
 
-$$ \dfrac{a_1, a_2, \dots, a_n}{n} \geq (a_1a_2 \dots a_n)^{\frac{1}{n}} $$
+$$ \dfrac{a_1+a_2+\dots+a_n}{n} \geq (a_1a_2 \dots a_n)^{\frac{1}{n}} $$
 
 즉, $\displaystyle \dfrac{1}{n}\bigg (\sum_{k=1}^{n}a_k\bigg ) \geq \bigg (\prod_{k=1}^{n}a_k \bigg )^{1/n}$ 이 성립한다.
 
@@ -416,7 +416,7 @@ $$ \dfrac{a_1, a_2, \dots, a_n}{n} \geq (a_1a_2 \dots a_n)^{\frac{1}{n}} $$
 
   $P(1)$ 은 $\dfrac{x_1}{1} \geq x_1 ^{1/1}$ 이므로 성립한다.
 
-  $P(2)$ 은 $\dfrac{x_1+x_2}{2} \geq \sqrt[]{x_1x_2}$ 인데, $x_1, x_2 >0$ 이므로 
+  $P(2)$ 은 $\dfrac{x_1+x_2}{2} \geq \sqrt[]{x_1x_2}$ 인데, $x_1, x_2 >0$ 이므로
 
   $$ 0 \leq (\sqrt[]{x_1}-\sqrt[]{x_2}) ^{2} = x_1 -2 \sqrt[]{x_1x_2}+x_2 $$
 
@@ -426,13 +426,33 @@ $$ \dfrac{a_1, a_2, \dots, a_n}{n} \geq (a_1a_2 \dots a_n)^{\frac{1}{n}} $$
 
   를 얻는다. 그러므로 $P(2)$ 도 성립한다.
 
-  이제 우리는 
+  이제 우리는 역진귀납법을 통하여
 
   1. $k \geq 1$ 에 대하여 $P(2 ^{k})$ 이면 $P(2 ^{k+1})$ 이다.
 
   2. $k \geq 2$ 에 대하여 $P(k)$ 이면 $P(k-1)$ 이다.
 
-  를 보일 것이다. 이로써 역진귀납법(backward induction)
+  를 보일 것이다.
+
+  그러면 이제 $A _{2 ^{k}} \geq G _{2 ^{k}}$ 라고 가정하고 $A _{2 ^{k+1}} \geq G _{2 ^{k+1}}$ 임을 보이자.
+  
+  $m = 2 ^{k}$ 라고 하고 $2 ^{k+1} = 2m$ 라고 하자. $P(m)$ 이 참이라고 가정했으므로 $m$ 개의 양수 $x_1, x_2, \dots, x_m$ 에 대하여
+
+  $$ (x_1x_2 \dots x_m)^{1/m} \leq \dfrac{1}{m}(x_1 + x_2 + \dots+x_m) $$ 
+
+  이고 $m$ 개의 양수 $x _{m+1}, x _{m+2}, \dots, x _{2m}$ 에 대하여
+
+  $$ (x _{m+1}x _{m+2} \dotsx _{2m}) ^{1/m} \leq \dfrac{1}{m} (x _{m+1}+x _{m+2}+\dots+x _{2m}) $$
+
+  이다. 그런데 우리는 $P(2)$ 즉, $\dfrac{x_1+x_2}{2} \geq \sqrt[]{x_1x_2}$ 가 참임을 알고 있다. 그러므로 
+
+  $$ \bigg ( (x_1x_2 \dots x_m)^{1/m}(x _{m+1}x _{m+2} \dotsx _{2m}) ^{1/m} \bigg ) ^{1/2}  \leq \dfrac{1}{2}\bigg ( \dfrac{1}{m}(x_1 + x_2 + \dots+x_m) + \dfrac{1}{m} (x _{m+1}+x _{m+2}+\dots+x _{2m}) \bigg ) $$
+
+  $$ \iff (x_1x_2 \dots x _{2m}) ^{1/2m} \leq \dfrac{x_1 + x_2 + \dots + x _{2m}}{2m} $$
+
+  이다.
+
+
 
 
 
