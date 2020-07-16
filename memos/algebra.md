@@ -414,7 +414,7 @@ $$ \dfrac{a_1+a_2+\dots+a_n}{n} \geq (a_1a_2 \dots a_n)^{\frac{1}{n}} $$
 
   이라고 하자.
 
-  $P(1)$ 은 $\dfrac{x_1}{1} \geq x_1 ^{1/1}$ 이므로 성립한다.
+  $P(1)$ 은 $\dfrac{x_1}{1} \geq x_1 ^{1/1}$ 이므로 성립한다. ▲ 
 
   $P(2)$ 은 $\dfrac{x_1+x_2}{2} \geq \sqrt[]{x_1x_2}$ 인데, $x_1, x_2 >0$ 이므로
 
@@ -424,7 +424,7 @@ $$ \dfrac{a_1+a_2+\dots+a_n}{n} \geq (a_1a_2 \dots a_n)^{\frac{1}{n}} $$
 
   $$ \sqrt[]{x_1x_2} \leq \dfrac{x_1+x_2}{2} $$
 
-  를 얻는다. 그러므로 $P(2)$ 도 성립한다.
+  를 얻는다. 그러므로 $P(2)$ 도 성립한다. ▲ 
 
   이제 우리는 역진귀납법을 통하여
 
@@ -450,11 +450,29 @@ $$ \dfrac{a_1+a_2+\dots+a_n}{n} \geq (a_1a_2 \dots a_n)^{\frac{1}{n}} $$
 
   $$ \iff (x_1x_2 \dots x _{2m}) ^{1/2m} \leq \dfrac{x_1 + x_2 + \dots + x _{2m}}{2m} $$
 
-  이다.
+  이다. 그러므로 $P(m) \implies P(2m)$ 즉, $\forall n \in \N$ 에 대하여 $P(2 ^{n})$ 이 성립한다. ▲ 
 
+  이제 $P(k)$ 가 성립한다고 하자. 그러면 
 
+  $$ (x_1x_2 \dots x _{k-1}x _{k})^{1/k} \leq \dfrac{x_1 + x_2 + \dots + x _{k-1} + x _{k}}{k} $$
 
+  인데 이때 $G_{k-1} = x_k$ 로 두면
 
+  $$ (x_1x_2 \dots x _{k-1}G _{k-1})^{1/k} \leq \dfrac{x_1 + x_2 + \dots + x _{k-1} + G _{k-1}}{k} $$
+
+  $$ \iff (G ^{k-1}_{k-1}G _{k-1})^{1/k} \leq \dfrac{(k-1)A _{k-1}+G _{k-1}}{k} $$
+
+  $$ \iff G _{k-1} \leq \dfrac{(k-1)A _{k-1}+G _{k-1}}{k} $$
+
+  $$ \iff kG _{k-1} \leq (k-1)A _{k-1}+G _{k-1} $$
+
+  $$ \iff (k-1) G _{k-1} \leq (k-1)A _{k-1}$$
+
+  $$ \iff  G _{k-1} \leq A _{k-1}$$
+
+  이다. 그러므로 $P(k) \imath P(k-1)$ 이다. ▲ 
+
+  그렇다면 $P(n)$ 은 $\forall n \in \N$ 에 대하여 $P(2 ^{n})$ 이 성립하고, $P(n) \implies P(n-1)$ 이므로 역진귀납법에 의하여 $\forall n \in \N$ 에 대하여 $P(n)$ 즉, $A_n \geq G_n$ 이 성립한다. ■ 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -476,15 +494,61 @@ $$ \frac{\sum_{k=1}^{n}a_1}{n} \geq \sqrt[n]{\prod_{k=1}^{n}a_k} \geq \frac{n}{\
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-코시-슈바르츠(Cauchy-Schwartz) 의 부등식 : $a,b,c,d$ 가 실수일 때 다음 절대부등식이 항상 성립한다.
+코시-슈바르츠(Cauchy-Schwartz) 의 부등식 : $r_i,s_i \in \R$ 에 대하여 절대부등식이 항상 성립한다.
 
-$$ (a^2+b^2)(c^2+d^2) \geq (ac+bd)^2 (단, 등호는 \frac{c}{a}=\frac{d}{b} 일 때 성립) $$
+  $$ \sum_{i=1}^{n}r_i^2\sum_{i=1}^{n}s_i^2 \geq \bigg (\sum_{i=1}^{n}r_is_i \bigg )^2 $$
 
 </blockquote>
 
-- 코시-슈바르츠(Cauchy-Schwartz) 의 부등식의 일반형태 : $a_1,a_2, \dots, a_n, b_1,b_2, \dots, b_n$ 이 실수일 때 다음 절대부등식이 항상 성립한다.
+- 등호는 $\displaystyle \frac{s_1}{r_1}=\frac{s_2}{r_2}=\dots=\frac{s_n}{r_n}$ 일 때 성립한다.
 
-  $$ (\sum_{k=1}^{n}a_k^2)(\sum_{k=1}^{n}b_k^2) \geq (\sum_{k=1}^{n}a_kb_k)^2 (단, 등호는 \frac{b_1}{a_1}=\frac{b_2}{a_2}=\dots=\frac{b_n}{a_n} 일 때 성립) $$
+- 증명 
+
+  임의의 $\lambda \in \R$ 에 대하여 함수 $f: \R \to \R$ 를 이렇게 정의해보자. 
+
+  $$ f(\lambda ) = \sum_{i=1}^{n}(r_i + \lambda s_i) ^{2} $$
+
+  그러면 이는 실수의 제곱이므로 $f(\lambda ) \geq 0$ 이다. 따라서 
+  
+  $$ \forall \lambda \in \R : f(\lambda ) \equiv \sum_{i=1}^{n}(r_i ^{2}+2 \lambda r_is_i+\lambda ^{2}s_i ^{2}) \geq 0 $$
+
+  $$ \equiv \sum_{i=1}^{n}r_i ^{2}+2 \lambda \sum_{i=1}^{n}r_is_i+\lambda ^{2}\sum_{i=1}^{n}s_i ^{2} \geq 0 $$
+
+  이다. 이때 $\displaystyle  a = \sum_{i=1}^{n}s_i ^{2}, b =2 \sum_{i=1}^{n}r_is_i, c = \sum_{i=1}^{n}r_i ^{2}$ 로 두면
+
+  $$ \equiv a \lambda ^{2} + b \lambda + c \geq   0$$
+
+  가 되므로 이것이 $\lambda \in \R$ 에 대한 이차방정식이라는 것이 보인다.
+
+  그렇다면 이차방정식 $a \lambda ^{2} + b \lambda + c = 0$ 의 판별식 $b ^{2} - 4ac$ 은
+
+  $$ D := \bigg (2 \sum_{i=1}^{n}r_is_i\bigg ) ^{2} -4 \bigg (\sum_{i=1}^{n} r_i ^{2}\sum_{i=1}^{n}s_i ^{2}\bigg ) $$
+
+  인데, 이 판별식이 양수라고 해보자. 즉, 
+
+  $$ b ^{2} - 4ac = \bigg (2 \sum_{i=1}^{n}r_is_i\bigg ) ^{2} -4 \bigg (\sum_{i=1}^{n} r_i ^{2}\sum_{i=1}^{n}s_i ^{2}\bigg ) > 0 $$
+
+  이라고 해보자. 이차방정식의 판별식이 양수라는 것은 이차방정식이 두 실근 $\lambda _1, \lambda _2$ 를 갖는다는 것이다. 이때 $\lambda _1 \leq \lambda _2$ 라고 하자.
+
+  그렇다면 함수 $f(\lambda ) = a \lambda ^{2}+b \lambda +c$ 는 개구간 $(\lambda _1, \lambda _2)$ 에서 $f(\lambda ) < 0$ 이다.
+
+  그런데 $\forall \lambda \in \R : f(\lambda ) \geq 0$ 이므로 이는 모순이다. 그러므로 판별식은 양수가 아니다. 즉, 
+
+  $$ D = b ^{2} - 4ac \leq 0 $$
+
+  이다. 이는 곧 
+
+  $$ \bigg (2 \sum_{i=1}^{n}r_is_i\bigg ) ^{2} -4 \bigg (\sum_{i=1}^{n} r_i ^{2}\sum_{i=1}^{n}s_i ^{2}\bigg ) \leq  0 $$
+
+  $$ \iff  \sum_{i=1}^{n} r_i ^{2}\sum_{i=1}^{n}s_i ^{2} \geq  \bigg (\sum_{i=1}^{n}r_is_i\bigg ) ^{2} $$
+
+  임을 뜻하며 이로써 증명이 끝났다. ■ 
+
+- 예시 
+
+  코시-슈바르츠(Cauchy-Schwartz) 의 부등식 : $a,b,c,d$ 가 실수일 때 다음 절대부등식이 항상 성립한다.
+
+  $$ (a^2+b^2)(c^2+d^2) \geq (ac+bd)^2 (단, 등호는 \frac{c}{a}=\frac{d}{b} 일 때 성립) $$ 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
