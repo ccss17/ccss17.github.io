@@ -448,11 +448,21 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
 
   를 얻는다. 이것은 곧 학습 횟수 $t$ 가 상계를 갖는다는 것이므로 
   
-  결과적으로 선형분리 가능 데이터에 $\eta =1, \|\mathbf{w}^{0}\| = 0$ 에 대하여 퍼셉트론 알고리즘이 유한번의 학습으로, 즉 최대 $\dfrac{R ^{2}}{\gamma ^{2}}$ 번의 학습으로(에러로) 가중치 매개변수 $\mathbf{w}$ 를 최적의 가중치 벡터 $\mathbf{w}^{*}$ 로 수렴시킬 수 있다는 것이다. ■   
+  결과적으로 선형분리 가능 데이터에 조건 $\eta =1, \|\mathbf{w}^{0}\| = 0$ 을 적용하면 퍼셉트론 알고리즘이 유한번의 학습으로, 즉 최대 $\dfrac{R ^{2}}{\gamma ^{2}}$ 번의 학습으로(에러로) 가중치 매개변수 $\mathbf{w}$ 를 최적의 가중치 벡터 $\mathbf{w}^{*}$ 로 수렴시킬 수 있다는 것이다. ■   
 
   - 이는 분류해야 하는 클래스간 거리가 가까울수록 알고리즘 반복 횟수(학습횟수, 에러횟수)는 늘어나지만 어쨌든 수렴은 한다는 것을 보여준다.
 
-  > 벡터의 크기의 제곱의 연산에 대한 정리, 코시-슈바르츠 부등식의 벡터 표현, 하한의 제곱
+  > $\gamma$ 가 늘어날수록 학습횟수가 줄어들고, $R$ 이 늘어날수록 학습횟수가 많아지는구나.
+
+  > 또한 그렇다면 이것은 선형분리가 불가능한 문제이더라도 좌표변환으로써 결국 선형분리 문제로 회귀시키면 비선형문제라도 잘 분류할 수 있는 가중치 벡터를 수렴시킬 수 있다는 뜻이구나. 가령 $XOR$ 문제를 좌표변환으로써 선형분리 문제로 사상시키는 것이다.
+
+  > 벡터의 크기의 제곱의 연산에 대한 정리, 코시-슈바르츠 부등식의 벡터 표현 -> semi-inner-product , 하한의 제곱
+
+  > 코시 슈바르츠 부등식 https://namu.wiki/w/%EC%BD%94%EC%8B%9C-%EC%8A%88%EB%B0%94%EB%A5%B4%EC%B8%A0%20%EB%B6%80%EB%93%B1%EC%8B%9D#toc , https://proofwiki.org/wiki/Cauchy-Bunyakovsky-Schwarz_Inequality
+
+- **그러면 이로썬 선형분리 문제는 항상 가중치를 수렴시킬 수 있다는 것을 알게 되었다. 그러면 임의의 데이터가 선형분리되는지 판단할 수 있는 알고리즘은 존재할까?** 
+
+  **만약 존재하지 않으면 레이어를 하나 더 추가하여 좌표변환(공간변환)을 해보고, 또 존재하지 않으면 레이어를 또 추가해서 공간변환을 또 해보고... 그렇게 자동으로 네트워크를 생성해볼 수 있으니까.**
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1314,12 +1324,12 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
 
 - 예시  
 
-  점 $P(x_0, x_1) = (3, 4)$ 에서 이변수 함수 $f$ 에 대한 기울기 $\bigg (\dfrac{\partial f}{\partial  x_1}, \dfrac{\partial f}{\partial x_1}\bigg )$ 을 계산해보자.
+  점 $P(x_0, x_1) = (3, 4)$ 에서 이변수 함수 $f$ 에 대한 기울기 $\bigg (\dfrac{\partial f}{\partial  x_0}, \dfrac{\partial f}{\partial x_1}\bigg )$ 을 계산해보자.
 
   ```python
   import numpy as np
 
-  def numertical_gradient(f, x):
+  def numerical_gradient(f, x):
       h = 1e-4
       grad = np.zeros_like(x)
 
@@ -1338,3 +1348,343 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
       
       return grad
   ```
+
+# <a name="경사 하강법 " href="#경사 하강법 ">경사 하강법 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+경사법 : 기울기 벡터를 사용하여 손실함수 값을 최소로 만드는 방법을 찾는 알고리즘이다.
+
+</blockquote>
+
+- 하지만 기울기가 가리키는 곳에 함수의 최솟값이 존재하는지 확신할 수 없다. 실제로 복잡한 함수에서는 기울기가 가르키는 방향에 최솟값이 없는 경우가 대부분이다. 또 복잡하고 찌그러진 함수에서 평평한 곳으로 파고들면 고원(plateau)이라고 하는 학습이 정체되는 공간에 수렴할 수도 있다.
+
+  기울기의 방향이 반드시 최소값을 가르키는 것은 아니지만 일단 그 방향으로 가면 함수의 값을 줄일 수 있기 때문에 일단 기울기를 단서로 나아갈 방향을 정하는 것이다.
+  
+  경사법에서는 그 기울기 방향으로 일정 거리만큼 이동하여 또 기울기를 구한다. 그런데 기울어져 있으면 또 그방향으로 일정 거리 나아가본다. 이렇게 계속 기울기 방향으로 나아가서 손실 함수 값을 줄여보는 것이 경사법이다.
+
+- 최솟값을 찾는다면 그것을 경사하강법(gradient descent method)이라고 하고, 최댓값을 찾는다면 경사 상승법(gradient ascent method)이라고한다.
+
+- 경사법을 수식으로 나타내면 학습률 $\eta \in \R$ 과 가중치 벡터 $\mathbf{w} \in \R ^{n}$ 에 대하여
+
+  > 학습률은 하이퍼파라미터이다. 이는 가중치와 편향 같은 신경망 내부에서 자동으로 결정되는 매개변수와는 달리 사람이 직접 설정해야 하는 매개변수이다.
+
+  $$ \mathbf{w} := \mathbf{w} - \eta \dfrac{\partial f}{\partial \mathbf{w}} $$
+
+  이다. 즉, 가중치 벡터 $\mathbf{w}$ 의 $k$번째 원소에 대하여
+
+  $$ w_k := w_k - \eta \dfrac{\partial f}{\partial w_k} $$
+
+  이다. 
+  
+  - 이것을 최적화하려는 함수 `f`, 초기값 `init_x`, 학습률 `lr`, 경사법 반복 회수 `epoch` 에 대하여 다음과 같이 코드로 간단히 구현할 수 있다. 
+
+    ```python
+    def gradient_descent(f, init_x, lr=0.01, epoch=100):
+        x = init_x
+        for _ in range(epoch):
+            grad = numerical_gradient(f, x)
+            x -= lr * grad
+        return x
+    ```
+
+    이 함수로 극소값을 구할 수 있고, 운좋으면 최소값을 구할 수 있다.
+  
+- 신경망에서의 경사법은 손실함수 $L$ 에 대하여 가중치 행렬 $W$ 의 미분을 구하는 것이다.
+
+  - 예시 
+
+    $2 \times 3$ 행렬 $W$ 가 
+
+    $$ W = \begin{pmatrix} w _{11}&w _{12}&w _{13}\\w _{21}& w _{22}& w _{23} \end{pmatrix} $$
+
+    일 때 기울기는 
+
+    $$ \dfrac{\partial L}{\partial W} = \begin{pmatrix} \dfrac{\partial L}{\partial w _{11}}& \dfrac{\partial L}{\partial w _{12}}& \dfrac{\partial L}{\partial w _{13}} \\ \dfrac{\partial L}{\partial w _{21}}& \dfrac{\partial L}{\partial w _{22}}& \dfrac{\partial L}{\partial w _{23}} \end{pmatrix} $$
+
+    이다. 1행의 첫번째 원소 $\dfrac{\partial L}{\partial w _{11}}$ 는 $w _{11}$ 을 아주 조금 변경했을 때 손실함수값 $L$ 이 얼마나 변하는지를 나타내준다.
+  
+  - 코드 구현 
+
+    신경망의 기울기를 구하는 코드를 실제로 구현해보자.
+
+    ```python
+    class simpleNet:
+        def __init__(self):
+            self.W = np.random.randn(2, 3)
+
+        def predict(self, x):
+            return np.dot(x, self.W)
+        
+        def loss(self, x, t):
+            z = self.predict(x)
+            y = softmax(z)
+            loss = CEE(y, t)
+            return loss
+    
+    
+    net = simpleNet
+    x = np.array([0.6, 0.9])  # 입력
+    t = np.array([0, 0, 1])   # 정답 레이블
+    p = net.predict(x)
+
+    f = lambda w: net.loss(x, t)
+    
+    dW = numerical_gradient(f, net.W)
+    print(dW) # 기울기 벡터 출력
+    # [[0.21, 0.14, -0.36] 
+    #  [0.32, 0.21, -0.54]]
+    ```
+
+    이를 통해 $\dfrac{\partial L}{\partial w _{11}} \approx 0.2$ 임을 알 수 있다. 이는 $w _{11}$ 을 $h$ 만큼 늘리면 손실함수 값은 $0.2h$ 만큼 증가한다는 것이다.
+
+    또한 $\dfrac{\partial L}{\partial w _{23}} \approx -0.5$ 임을 알 수 있다. 이는 $w _{23}$ 을 $h$ 만큼 늘리면 손실함수 값은 $-0.5h$ 만큼 증가한다는 것이다.
+
+    이로써 $w _{11}$ 는 음의 방향으로 갱신해야 손실함수 값이 감소하고, $w _{23}$ 은 양의 방향으로 조정해야 손실함수 값이 감소함을 알 수 있다. 
+
+    또한 $\bigg |\dfrac{\partial L}{\partial w _{11}}\bigg | < \bigg |\dfrac{\partial L}{\partial w _{23}}\bigg |$ 이므로 $w _{23}$ 을 갱신할 때 $w _{11}$ 보다 손실함수 값이 더 예민하게 움직인다는 것을 알 수 있다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+신경망 학습 알고리즘 : 신경망 학습 알고리즘은 다음의 2단계와 3단계를 에폭만큼, 또는 수용가능 오차도가 산출될때까지 반복하여 가중치와 편향을 훈련 데이터에 적합하도록 조정하는 알고리즘이다.
+
+1. (미니배치) 훈련 데이터 중 일부를 무작위로 추출한다. 이 일부 데이터를 미니배치라고 하며, 이 미니배치의 손실 함수 값을 줄이는 것이 신경망 학습의 목표이다.
+
+2. (기울기 산출) 손실함수에 대한 가중치 행렬의 기울기를 구한다. 이 기울기 벡터로 손실함수 값을 줄이는 방향에 대한 단서를 얻는다. 
+
+3. (가중치 학습) 가중치 매개변수를 기울기 방향으로 학습률만큼 갱신한다.
+
+</blockquote>
+
+- 이때 미니배치를 무작위로 선정하므로 확률적 경사 하강법(SGD, stochastic gradient descent)라고 한다.
+
+- 코드 구현 
+
+  ```python
+  class TwoLayerNet:
+      def __init__(self, input_size, hidden_size, output_size, weight_init_std=0.01):
+          # {params} 입력층의 뉴런수, 은닉층의 뉴런 수, 출력증의 뉴럭수
+          # 가중치 초기화
+          self.params = {}
+          self.params['W1'] = weight_init_std * np.random.randn(input_size, hidden_size)
+          self.params['b1'] = np.zeros(hidden_size)
+          self.params['W2'] = weight_init_std * np.random.randn(hidden_size, output_size)
+          self.params['b2'] = np.zeros(output_size)
+
+      def predict(self, x):
+          # 예측(추론)을 수행한다.
+          W1, W2 = self.params['W1'], self.params['W2']
+          b1, b2 = self.params['b1'], self.params['b2']
+      
+          a1 = np.dot(x, W1) + b1
+          z1 = sigmoid(a1)
+          a2 = np.dot(z1, W2) + b2
+          y = softmax(a2)
+          
+          return y
+          
+      def loss(self, x, t):
+          # {params} x : 입력 데이터, t : 정답 레이블
+          # 손실함수 값을 계산한다.
+          y = self.predict(x)
+          
+          return cross_entropy_error(y, t)
+      
+      def accuracy(self, x, t):
+          # 정확도를 구한다.
+          y = self.predict(x)
+          y = np.argmax(y, axis=1)
+          t = np.argmax(t, axis=1)
+          
+          accuracy = np.sum(y == t) / float(x.shape[0])
+          return accuracy
+          
+      def numerical_gradient(self, x, t):
+          # {params} x : 입력 데이터, t : 정답 레이블
+          # 가중치 행렬의 기울기 벡터를 구한다.
+          loss_W = lambda W: self.loss(x, t)
+          
+          grads = {}
+          grads['W1'] = numerical_gradient(loss_W, self.params['W1'])
+          grads['b1'] = numerical_gradient(loss_W, self.params['b1'])
+          grads['W2'] = numerical_gradient(loss_W, self.params['W2'])
+          grads['b2'] = numerical_gradient(loss_W, self.params['b2'])
+          
+          return grads
+          
+      def gradient(self, x, t):
+          # 오차 역전파로 가중치 행렬의 기울기 벡터를 빠르게 구한다.
+          W1, W2 = self.params['W1'], self.params['W2']
+          b1, b2 = self.params['b1'], self.params['b2']
+          grads = {}
+          
+          batch_num = x.shape[0]
+          
+          # forward
+          a1 = np.dot(x, W1) + b1
+          z1 = sigmoid(a1)
+          a2 = np.dot(z1, W2) + b2
+          y = softmax(a2)
+          
+          # backward
+          dy = (y - t) / batch_num
+          grads['W2'] = np.dot(z1.T, dy)
+          grads['b2'] = np.sum(dy, axis=0)
+          
+          da1 = np.dot(dy, W2.T)
+          dz1 = sigmoid_grad(a1) * da1
+          grads['W1'] = np.dot(x.T, dz1)
+          grads['b1'] = np.sum(dz1, axis=0)
+
+          return grads
+  
+  def test_dummy():
+      # 더미 데이터와 더미 정답 레이블로 학습해본다.
+      net = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
+      x = np.random.rand(100, 784) # 더미 데이터 손글씨 사진 100장
+      t = np.random.rand(100, 10)  # 더미 데이터 100장에 대한 더미 정답 레이블 
+      grads = net.numerical_gradient(x, t)
+      # ...
+
+  def test_mnist():
+      from dataset.mnist import load_mnist
+      (x_train, t_train), (x_test, t_test) = \
+          load_mnist(normalize=True, one_hot_label=True)
+      
+      train_loss_list = []
+      epoch = 10000
+      train_size = x_train.shape[0]
+      batch_size = 100
+      lr = 0.1
+      net = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
+      # net = TwoLayerNet(input_size=784, hidden_size=100, output_size=10)
+      train_acc_list = []
+      test_acc_list = []
+
+      for _ in range(epoch):
+          batch_mask = np.random.choice(train_size, batch_size)
+          x_batch = x_train[batch_mask]
+          t_batch = t_train[batch_mask]
+
+          grad = net.numerical_gradient(x_batch, t_batch)
+          for key in ('W1', 'b1', 'W2', 'b2'):
+              net.params[key] -= lr * grad[key]
+          loss = net.loss(x_batch, t_batch)
+          train_loss_list.append(loss)
+
+          # 정확도 계산 
+          train_acc = net.accuracy(x_train, t_train)
+          test_acc = net.accuracy(x_test, t_test)
+          train_acc_list.append(train_acc)
+          test_acc_list.append(test_acc)
+          print("tarin acc, test acc : ", train_acc, test_acc)
+
+
+  if __name__ == '__main__':
+      test_mnist()
+  ```
+
+  - 위 코드에서 `numerical_gradient(self, x, t)` 의 수치미분으로 가중치의 기울기를 계산하는데, 실제로는 오차역전파로 기울기 계산을 빠르게 수행한다.
+
+# <a name="오차역전파 " href="#오차역전파 ">오차역전파 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+오차역전파 : 신경망 학습에서 수치미분보다 효율적으로 기울기를 계산하는 방법이다.
+
+</blockquote>
+
+- 오차역전파는 계산 그래프로 순전파를 계산한다.
+
+  - 계산 그래프는 연산 노드(덧셈, 곱셈 등등)에 입력을 주고 출력을 상위 연산 노드로 전달하는 알고리즘이다.
+
+  - 계산 그래프를 통한 중간 노드로 국소적 계산을 하면 여러 이점이 있다. 
+
+    1. 네트워크가 아무리 복잡해도 각 노드에서는 단순한 국소적 계산만 하면 된다. 
+
+    2. 중간 계산 과정을 저장할 수 있다. 
+
+    3. 역전파를 통해 미분을 효율적으로 빠르게 계산할 수 있다.
+
+- 계산 그래프의 역전파는 입력 $x$ 와 출력 $y$ 을 갖는 노드에 전달된 상위 노드에서 전달된 값 $E$ 에 대하여
+
+  $$ E \dfrac{\partial y}{\partial x} $$
+
+  을 이전 노드로 전달한다.
+
+  - 이렇게 미분을 구하는 것이 가능한 이유는 합성함수의 미분, 즉 연쇄법칙 때문이다.
+
+    - 예시 
+
+      이독립변수와 일매개변수와 대한 합성함수
+
+      $$ z = t ^{2} $$
+
+      $$ t = x + y $$
+
+      의 도함수는 $x$ 에 대한 미분
+
+      $$ \dfrac{\partial z}{\partial x} = \dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} $$
+
+      과 $y$ 에 대한 미분
+
+      $$ \dfrac{\partial z}{\partial x} = \dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} $$
+
+      이다.
+
+      가장 상위 노드에서, 즉 출력층에서 이전 노드로 미분 $\dfrac{\partial z}{\partial z}$ 를 전달한다.
+
+      그러면 이전 노드가 상위 노드의 미분 $\dfrac{\partial z}{\partial z}$ 을 받고 $z$ 에 대한 $t$ 의 미분 $\dfrac{\partial z}{\partial t}$ 를 곱하여 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}$ 를 만들어서 또 이전 노드로 전달한다. 
+
+      그러면 이전 노드가 상위 노드의 미분 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}$ 을 받고 각각 $t$ 에 대한 $x$ 의 미분 
+      과 $t$ 에 대한 $y$ 의 미분을 곱하여
+
+      $$ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} $$
+
+      $$ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial y} $$
+
+      을 만든다. 그러면 이 결과는 곧
+
+      $$ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} = \dfrac{\partial z}{\partial x}$$
+
+      $$ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial y} = \dfrac{\partial z}{\partial y}$$
+
+      가 되어 각각 $z$ 에 대한 $x$ 의 미분, $z$ 에 대한 $y$ 의 미분 결과값이 되는 것이다.
+
+      이렇게 각각의 노드가 상위 노드에서 받은 미분값을 자신의 미분에 곱하기만 하면, 최종 손실함수가 자신의 변화에 대하여 얼마나 변하는지 보여주는 순간변화율, 즉 미분값을 구할 수 있는 것이다.
+
+      > 모든 합성함수의 미분, 즉 연쇄법칙은 독립변수에 대한 미분이고, 전체함수 $f$ 를 매개변수로 미분하고, 매개변수를 독립변수로 미분한 것을 곱하면 된다. 다음의 다변수 합성함수의 편도함수를 보자.
+      
+      <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+      $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
+
+      $n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
+
+      $w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수들도 미분가능하며
+
+      각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
+
+      $$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}$$
+
+      $$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}$$
+
+      $$ \vdots $$
+
+      $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}$$
+
+      </blockquote>
+
+- 덧셈 노드의 역전파
+
+  덧셈 연산 노드는 입력을 더하여 상위 연산 노드로 전달한다. 
+  
+  $n$ 개의 입력 $x_1, x_2, \dots, x_n$ 을 받아 상위 연산 노드로 전달하는 덧세 연산 노드는 함수 $y  = x_1+x_2+\dots+x_n$ 로 표현되는데 각 독립변수에 대한 미분은
+
+  $$ \dfrac{\partial y}{\partial x_1} = 1, \dfrac{\partial y}{\partial x_2} = 1, \dots, \dfrac{\partial y}{\partial x_n} = 1 $$
+
+  로써 모두 $1$ 이다.
+
+  그러므로 덧셈 노드의 역전파는 단지 상위 노드에서 온 미분값에 $1$ 을 곱해주는 것이다.
+
+  - 예시 

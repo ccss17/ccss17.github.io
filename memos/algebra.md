@@ -500,6 +500,12 @@ $$ \frac{\sum_{k=1}^{n}a_1}{n} \geq \sqrt[n]{\prod_{k=1}^{n}a_k} \geq \frac{n}{\
 
 </blockquote>
 
+- 벡터 $v, w$ 에 대하여 
+
+  $$ \|v\|^{2} \|w\|^{2} \geq \|v \cdot w\|^{2} $$
+
+  이 가장 일반적인 형태이다.
+
 - 등호는 $\displaystyle \frac{s_1}{r_1}=\frac{s_2}{r_2}=\dots=\frac{s_n}{r_n}$ 일 때 성립한다.
 
 - 증명 
