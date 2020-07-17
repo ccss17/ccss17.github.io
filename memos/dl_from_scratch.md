@@ -1675,16 +1675,309 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
 
       </blockquote>
 
-- 덧셈 노드의 역전파
+    - 예시 
 
-  덧셈 연산 노드는 입력을 더하여 상위 연산 노드로 전달한다. 
+      이독립변수와 이매개변수에 대한 합성함수 
+
+      $$ z = x + y $$
+
+      $$ x = 2r s$$
+
+      $$ y = r s$$
+
+      의 도함수는 $r$ 에 대한 미분 
+
+      $$ \dfrac{\partial z}{\partial r} = \dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial r} + \dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial r} $$
+
+      과 $s$ 에 대한 미분
+
+      $$ \dfrac{\partial z}{\partial s} = \dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial s} + \dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial s} $$
+
+      이다.
+
+      가장 상위 노드에서, 즉 출력층에서 이전 노드로 미분 $\dfrac{\partial z}{\partial z}$ 를 전달한다.
+
+      그러면 이전 노드가 상위 노드의 미분 $\dfrac{\partial z}{\partial z}$ 을 받고 각각 $z$ 에 대한 $x$ 의 미분과 $z$ 에 대한 $y$ 의 미분을 곱하여
+      
+      $$\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}$$
+
+      $$\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}$$
+
+      를 전달한다. 그러면 이전 그 이전 노드는 각각 $x$ 에 대한 $r$ 의 미분을 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}$ 에 곱한 것과 $y$ 에 대한 $r$ 의 미분을 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}$ 에 곱한 것을 더하고
+
+      $x$ 에 대한 $s$ 의 미분을 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}$ 에 곱한 것과 $y$ 에 대한 $s$ 의 미분을 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}$ 에 곱한 것을 더하여 
+
+      $$\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial r} + \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial r}$$
+
+      $$\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial s}  + \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial s}$$
+
+      를 구할 수 있다.
+
+      - **이로써 우리는 상위 노드로부터 전달된 모든 미분 값에 그 상위 노드에 대한 자신의 미분을 곱하고 모두 더해야 한다는 것을 알 수 있다.**
+      
+        **즉, $n \in \R$ 개의 상위 노드로부터 전달된 미분 $\dfrac{\partial L}{\partial u_1},\dfrac{\partial L}{\partial u_2}, \dots, \dfrac{\partial L}{\partial u_n}$ 에 각각의 상위 노드에 대한 자신 $v$ 의 미분 $\dfrac{\partial u_1}{\partial v},\dfrac{\partial u_2}{\partial v}, \dots, \dfrac{\partial u_n}{\partial v}$ 를 곱하고 모두 더한 값**
+
+        $$ \dfrac{\partial L}{\partial u_1}\dfrac{\partial u_1}{\partial v} +\dfrac{\partial L}{\partial u_2}\dfrac{\partial u_2}{\partial v} +\dots+\dfrac{\partial L}{\partial u_n}\dfrac{\partial u_n}{\partial v} $$
+
+        **을 최종적으로 자신의 미분값, 즉 자신이 조금 변했을 때 손실함수가 얼마나 변하는지에 대한 단서로 삼아야 한다.**
   
-  $n$ 개의 입력 $x_1, x_2, \dots, x_n$ 을 받아 상위 연산 노드로 전달하는 덧세 연산 노드는 함수 $y  = x_1+x_2+\dots+x_n$ 로 표현되는데 각 독립변수에 대한 미분은
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+덧셈 노드의 역전파 : 입력을 더하여 상위 연산 노드로 전달하는 덧셈 연산 노드의 역전파는 그 미분이 $1$ 이므로 상위 연산 노드에서 전달된 미분에 $1$ 을 곱하여 하위 연산 노드로 전달한다.
+
+</blockquote>
+  
+- $n$ 개의 입력 $x_1, x_2, \dots, x_n$ 을 받아 상위 연산 노드로 전달하는 덧세 연산 노드는 함수 $y  = x_1+x_2+\dots+x_n$ 로 표현되는데 각 독립변수에 대한 미분은
 
   $$ \dfrac{\partial y}{\partial x_1} = 1, \dfrac{\partial y}{\partial x_2} = 1, \dots, \dfrac{\partial y}{\partial x_n} = 1 $$
 
   로써 모두 $1$ 이다.
 
-  그러므로 덧셈 노드의 역전파는 단지 상위 노드에서 온 미분값에 $1$ 을 곱해주는 것이다.
+  그러므로 덧셈 노드의 역전파는 단지 상위 노드에서 온 미분값에 $1$ 을 곱해주는 것이다. 그런데 $1$ 을 곱하는 것은 무의미하므로 그냥 전달된 값을 아무 연산 없이 그대로 다시 전달하면 된다.
+
+  - **물론 상위 노드에서 $n$ 개의 미분이 전달되면 그것들에 상위 노드에 대한 자신의 미분을 곱하여 더해주어야 하기 때문에**
+
+    **덧셈 노드의 경우 그냥 상위 노드에서 전달된 미분들을 더하기만 하면 된다는 것이다.**
+
+- 예시 
+
+  함수 $z = x+y$ 의 역전파를 조사하자. $z$ 의 미분은 다음과 같다. 
+
+  $$ \dfrac{\partial z}{\partial x} = 1 $$
+
+  $$ \dfrac{\partial z}{\partial y} = 1 $$
+
+  그러므로 상류에서 전해진 미분 $\dfrac{\partial L}{\partial z}$ 에 단지 $1$ 을 곱하여 하류로 전달하면 된다. $L$ 은 손실함수를 뜻한다.
+
+  - 코드 구현 
+
+    이 예시를 다음과 같이 코드로 간단히 구현할 수 있다.
+
+    ```python
+    class AddLayer:
+        def __init__(self):
+            pass
+
+        def forward(self, x, y):
+            out = x + y
+
+            return out
+
+        def backward(self, dout):
+            dx = dout * 1
+            dy = dout * 1
+
+            return dx, dy
+    ```
+
+- 예시 
+
+  함수 $u = x+y+z+w$ 의 역전파를 조사하자. $u$ 의 미분은 다음과 같다. 
+
+  $$ \dfrac{\partial u}{\partial x} = 1, \dfrac{\partial u}{\partial y} = 1, \dfrac{\partial u}{\partial z} = 1, \dfrac{\partial u}{\partial w} = 1 $$
+
+  그러므로 상류에서 전해진 미분 $\dfrac{\partial L}{\partial u}$ 에 단지 $1$ 을 곱하여 하류로 전달하면 된다. $L$ 은 손실함수를 뜻한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+곱셈 노드의 역전파 : 입력을 곱하여 상위 연산 노드로 전달하는 곱셈 연산 노드의 역전파는 순전파 때의 그 입력을 제외한 나머지 입력을 곱한 것을 상위 노드에서 역전파된 미분에 곱하여 하위 노드로 전달한다.
+
+</blockquote>
+
+- 예시 
+
+  함수 $z = xy$ 에 대한 미분은 
+
+  $$ \dfrac{\partial z}{\partial x} = y , \dfrac{\partial z}{\partial y} = x $$
+
+  이다. 
+
+  그러므로 우리는 순전파 때의 입력들을 서로 바꾼 값을 상위 노드에서 역전파된 미분에 곱하여 하위 노드로 전달하면 된다는 것을 알 수 있다.
 
   - 예시 
+
+    곱셈 노드가 순전파때 입력 $10,5$ 를 받아 상위노드로 $50$ 을 전달했는데, 
+
+    역전파 때 상위노드에서 미분 $1.3$ 을 전달했다면 
+
+    $10$ 의 입력을 전달한 하위 노드에 $6.5$ 를 전달하고
+
+    $5$ 의 입력을 전달한 하위 노드에 $13$ 를 전달하는 것이다.
+  
+  - 코드 구현 
+
+    이 예시를 다음과 같이 간단하게 코드로 구현할 수 있다. 
+
+    ```python
+    class MulLayer:
+        def __init__(self):
+            self.x = None
+            self.y = None
+
+        def forward(self, x, y):
+            self.x = x
+            self.y = y                
+            out = x * y
+
+            return out
+
+        def backward(self, dout):
+            dx = dout * self.y  # x와 y를 바꾼다.
+            dy = dout * self.x
+
+            return dx, dy
+    ```
+
+    이 코드를 사용하여 사과 $100$ 원 짜리 사과를 $2$ 개 사고 $10\%$ 의 세금이 부과된 상황을 순전파로 구현하고, 역전파로 미분을 구해보자.
+
+    ```python
+    apple = 100
+    apple_num = 2
+    tax = 1.1
+
+    mul_apple_layer = MulLayer()
+    mul_tax_layer = MulLayer()
+
+    # 순전파
+    apple_price = mul_apple_layer.forward(apple, apple_num)
+    price = mul_tax_layer.forward(apple_price, tax)
+
+    # 역전파
+    dprice = 1 # 최종 노드가 price 인데 price 에 대한 price 의 미분은 1 이다.
+    dapple_price, dtax = mul_tax_layer.backward(dprice)
+    dapple, dapple_num = mul_apple_layer.backward(dapple_price)
+    ```
+
+    역전파 `backward` 의 입력은 순전파의 출력에 대한 미분이라는 것을 기억하자.
+  
+- 예시 
+
+  함수 $u = xyzw$ 에 대한 미분은 
+
+  $$ \dfrac{\partial u}{\partial x} = yzw , \dfrac{\partial u}{\partial y} = xzw, \dfrac{\partial u}{\partial z} = xyw , \dfrac{\partial u}{\partial w} = xyz $$
+
+  이다. 
+
+  그러므로 우리는 순전파 때의 그 입력을 제외한 나머지 입력을 곱한 것을 상위 노드에서 역전파된 미분에 곱하여 하위 노드로 전달하면 된다는 것을 알 수 있다.
+
+  - 예시 
+
+    곱셈 노드가 순전파때 입력 $1,2,3,4$ 를 받아 상위노드로 $24$ 을 전달했는데, 
+
+    역전파 때 상위노드에서 미분 $1$ 을 전달했다면 
+
+    $1$ 의 입력을 전달한 하위 노드에 $24 \times (2 \times 3 \times 4)$ 를 전달하고
+
+    $2$ 의 입력을 전달한 하위 노드에 $24 \times (1 \times 3 \times 4)$ 를 전달하고
+
+    $3$ 의 입력을 전달한 하위 노드에 $24 \times (1 \times 2 \times 4)$ 를 전달하고
+
+    $4$ 의 입력을 전달한 하위 노드에 $24 \times (1 \times 2 \times 3)$ 를 전달하는 것이다.
+
+  - 코드 구현 
+
+    이 예시를 다음과 같이 간단하게 코드로 구현할 수 있다. 
+
+    ```python
+    import numpy as np
+
+    class MulLayer:
+        def __init__(self):
+            self.input = []
+
+        def forward(self, input):
+            self.input = input
+            out = np.prod(self.input)
+
+            return out
+
+        def backward(self, dout):
+            result = []
+            for i, v in enumerate(self.input):
+                tmp = self.input
+                del tmp[i]
+                result.append(dout * np.prod(tmp))
+
+            return result
+    ```
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+나눗셈 노드의 역전파 : 입력 $x$ 의 곱셈의 역원 $\dfrac{1}{x}$ 을 상위 연산 노드로 전달하는 나눗셈 연산 노드의 역전파는 상위노드에 $-\dfrac{1}{x ^{2}}$ 를 곱하여 하류로 전달한다.
+
+</blockquote>
+
+- 함수 $y = \dfrac{1}{x}$ 의 미분은 $\dfrac{dy}{dx} = -\dfrac{1}{x ^{2}}$ 이다. 그러므로 역전파 때 상위 노드에서 전달된 값에 $-\dfrac{1}{x ^{2}}$ 를 곱하여 하위 노드로 전달한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$\exp$ 노드의 역전파 : 입력 $x$ 에 대하여 $\exp(x)$ 를 상위 연산 노드로 전달하는 $\exp$ 연산 노드의 역전파는 상위노드에 $\exp (x)$ 를 곱하여 하류로 전달한다.
+
+</blockquote>
+
+- 함수 $y = \exp (x)$ 의 미분은 $\dfrac{dy}{dx} = \exp (x)$ 이다. 그러므로 역전파 때 상위 노드에서 전달된 값에 $\exp (x)$ 를 곱하여 하위 노드로 전달한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+표준 Sigmoid 활성화 함수의 역전파 : 표준 Sigmoid 함수 $y = \zeta (x) = \text{sigmoid}(x) =: \dfrac{1}{1 + \exp (-x)}$ 의 역전파는 상위노드에 $y(1-y)$ 를 곱하여 하류로 전달한다.
+
+</blockquote>
+
+- 함수 $y = \zeta (x) =: \dfrac{1}{1+\exp (-x)}$ 의 미분은 $\{\zeta (x)\}' = \zeta (x)\{1-\zeta (x)\}$ 이다. 그러므로 역전파 때 상위 노드에서 전달된 값에 $y(1-y)$ 를 곱하여 하위 노드로 전달한다.
+
+- 코드 구현 
+
+  시그모이드 함수 레이어는 다음과 같이 간단하게 구현할 수 있다. 
+
+  ```python
+  class Sigmoid:
+    def __init__(self):
+        self.out = None
+
+    def forward(self, x):
+        out = sigmoid(x)
+        self.out = out
+        return out
+
+    def backward(self, dout):
+        dx = dout * (1.0 - self.out) * self.out
+
+        return dx
+  ```
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+ReLU 활성화 함수의 역전파 : ReLU 함수 $y = \begin{cases} x &(x>0)\\ 0 &(x \leq 0)\\ \end{cases}$ 의 미분은 
+
+$$ \dfrac{dy}{dx} = \begin{cases} 1 &(x>0)\\ 0 &(x \leq 0)\\ \end{cases} $$
+
+이므로 순전파 때 입력 $x$ 가 $0$ 보다 크면 $1$ 을 곱하여 하위 노드로 전달하고 $0$ 이하면 $0$ 을 곱하여 하위 노드로 전달한다.
+
+</blockquote>
+
+- 즉, 순전파 때 입력이 $0$ 보다 크면 상류의 값을 그대로 하류로 전달하고 
+
+  $0$ 이하면 하류로 아무것도 전달하지 않는다.
+
+- 코드 구현 
+
+  ReLU 함수 레이어는 다음과 같이 간단하게 코드로 구현할 수 있다. 
+
+  ```python
+  class Relu:
+      def __init__(self):
+          self.mask = None
+
+      def forward(self, x):
+          self.mask = (x <= 0)
+          out = x.copy()
+          out[self.mask] = 0
+
+          return out
+
+      def backward(self, dout):
+          dout[self.mask] = 0
+          dx = dout
+
+          return dx
+  ```
