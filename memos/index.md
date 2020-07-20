@@ -28,6 +28,8 @@
 
 - ### [정신지도규칙/방법서설 메모(데카르트)](https://ccss17.github.io/descartes.html)
 
+- ### [정보 이론](information.md)
+
 </blockquote>
 
 # <a name="수학 메모" href="#수학 메모">수학 메모</a>

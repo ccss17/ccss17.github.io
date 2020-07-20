@@ -194,13 +194,11 @@ $$ \overrightarrow{AB} $$
 
 </blockquote>
 
-<<<<<<< HEAD
 - 크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. 
 
   데카르트가 점들을 대수화했듯이 라그랑주가 힘, 속도, 가속도 등을 벡터로 대수화한 것이다.
-=======
+  
 - $A$ 를 시점, $B$ 를 종점이라 한다.
->>>>>>> 82207c90f53c26aee225ec06643774ee6bd351ef
 
 - 평행이동 사상 $T$ 는 점들을 이동시킬 뿐 아니라 유향선분도 이동시킨다. 즉,
 
@@ -1486,8 +1484,6 @@ $$ u \times v = 0 $$
   $$ u // v \iff u \times v $$
 
   로 표현할 수 있다. 
-<<<<<<< HEAD
-=======
 
 # <a name="일차독립과 일차종속 " href="#일차독립과 일차종속 ">일차독립과 일차종속 </a>
 
@@ -1716,4 +1712,3 @@ $$ v = c_1b_1 + c_2b_2 + \dots + c_nb_n $$
 - 지금까지 줄곧 사용하던 좌표평면의 좌표 $(a,b)$ 와 좌표공간의 좌표 $(a,b,c)$ 을 일반화한 것이다.
 
   - 우리가 일반적으로 사용해왔던 좌표평면의 기저는 $\bigg (\begin{bmatrix} 1\\0 \end{bmatrix}, \begin{bmatrix} 0\\1 \end{bmatrix}\bigg )$ 이고, 좌표공간의 기저는 $\bigg ( \begin{bmatrix} 1\\0\\0 \end{bmatrix}, \begin{bmatrix} 0\\1\\0 \end{bmatrix}, \begin{bmatrix} 0\\0\\1 \end{bmatrix} \bigg )$ 인 것이다.
->>>>>>> 82207c90f53c26aee225ec06643774ee6bd351ef

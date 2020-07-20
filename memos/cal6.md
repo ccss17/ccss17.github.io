@@ -1551,7 +1551,6 @@ $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\
 이다.
 
 </blockquote>
-<<<<<<< HEAD:memos/calculus6.md
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1906,5 +1905,3 @@ $$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
 
 
 
-=======
->>>>>>> 82207c90f53c26aee225ec06643774ee6bd351ef:memos/cal6.md
