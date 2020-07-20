@@ -394,6 +394,10 @@ $$ \overrightarrow{AB} $$
 
 - 실수연산에서 역원 역할을 한다.
 
+- 예시
+
+  $\overrightarrow{a}+\overrightarrow{-a} = \overrightarrow{0}$
+
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 단위벡터(unit vector) : 크기가 $1$ 인 벡터이다. 
@@ -480,13 +484,15 @@ $$ \overrightarrow{AB} $$
 
     $$ \overrightarrow{a}+\overrightarrow{b}= \overrightarrow{AB} + \overrightarrow{AC} = \overrightarrow{AD} $$ 
 
-  - 그림
+  - **하지만 정말 벡터의 덧셈이 이 두 가지 경우로 따로 정의된 것이 아니다. 실제로 삼각형에서의 덧셈과 평행사변형에서의 덧셈은 본질적으로 동일하다.**
 
     ![](https://i.ytimg.com/vi/gdWfqihMW14/maxresdefault.jpg)
 
-- 벡터 덧셈의 성질 
+    왜냐하면 위 그림에서 벡터 $\overrightarrow{AC}$ 를 벡터 $\overrightarrow{BD}$ 로 옮겨도 두 벡터가 방향과 크기가 같으므로 동일하기 때문이다. 그러므로 평행사변형에서의 덧셈도 결국 삼각형에서의 덧셈 $\overrightarrow{AB} + \overrightarrow{BD} = \overrightarrow{AD}$ 으로 변환할 수 있다.
 
-  임의의 세 벡터 $\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}$ 와 영벡터 $\overrightarrow{0}$ 에 대하여 다음이 성립한다.
+    마찬가지의 방법으로 삼각형에서의 덧셈도 평행사변형에서의 덧셈으로 변환할 수 있다. 
+
+- 임의의 세 벡터 $\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}$ 와 영벡터 $\overrightarrow{0}$ 에 대하여 다음이 성립한다.
 
   - 교환법칙 : $\overrightarrow{a}+\overrightarrow{b}=\overrightarrow{b}+\overrightarrow{a}$
 
@@ -510,9 +516,47 @@ $$ \overrightarrow{a}+(-\overrightarrow{b}) = \overrightarrow{OA}+\overrightarro
 
   $$ \overrightarrow{a}-\overrightarrow{b}= \overrightarrow{OA} - \overrightarrow{OB} = \overrightarrow{BA} $$ 
 
-- 그림 
+- 벡터의 뺄셈은 다음 그림으로 설명된다. 즉, 종점과 종점을 이은 벡터가 뺄셈의 결과이다.
 
   ![](https://i.ytimg.com/vi/kOCTTK3Cnto/maxresdefault.jpg)
+
+  위 그림에서는 $\overrightarrow{OA} - \overrightarrow{OB} = \overrightarrow{BA}$ 의 연산결과를 살펴보았다. 그런데 방향이 다른 벡터를 얻기 위하여
+
+  $$\overrightarrow{OB} - \overrightarrow{OA} = \overrightarrow{AB}$$
+
+  를 연산하면된다.
+
+  - 설명 
+
+    벡터 $\overrightarrow{a}, \overrightarrow{b}$ 뺄셈 $\overrightarrow{a}-\overrightarrow{b}$ 은 벡터 $\overrightarrow{a}$ 와 벡터 $\overrightarrow{b}$ 의 역벡터의 합으로 볼 수 있다. 즉, 
+
+    ![](https://t1.daumcdn.net/cfile/tistory/99845F335A03C4D528)
+
+    > https://waraccc.tistory.com/11
+
+    에서 벡터의 뺄셈 $\overrightarrow{a}-\overrightarrow{b}$ 을 다음과 같이 $\overrightarrow{a}+(-\overrightarrow{b})$ 로 볼 수 있다는 것이다.
+
+    ![](https://t1.daumcdn.net/cfile/tistory/996A6F335A03CBC129)
+
+    > https://waraccc.tistory.com/11
+
+    그러면 벡터의 덧셈은 이미 알고있는대로 다음과 같이 진행된다.
+
+    ![](https://t1.daumcdn.net/cfile/tistory/99454C335A03CC0719)
+
+    > https://waraccc.tistory.com/11
+
+    그런데 벡터는 평행이동 사상이 존재하면 동일한 것이므로 다음과 같이 원래의 벡터 $\overrightarrow{b},\overrightarrow{a}$ 의 종점을 이은 벡터를 뺄셈 결과로 볼 수 있는 것이다.
+
+    ![](https://t1.daumcdn.net/cfile/tistory/998675335A03CC1A06)
+
+    > https://waraccc.tistory.com/11
+
+    마찬가지로 $\overrightarrow{b}-\overrightarrow{a}$ 의 연산결과는 다음과 같은 빨간 벡터가 된다.
+
+    ![](https://t1.daumcdn.net/cfile/tistory/99D4A7335A03CC2C45)
+
+    > https://waraccc.tistory.com/11
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1118,9 +1162,9 @@ $$ \frac{v}{|v|} $$
 
 내적(inner product) : $n$-공간 의 두 벡터 $u ,v$ 가 $u = \big < u_1, u_2, u_3, \dots, u_n \big >, v = \big  <v_1, v_2, v_3, \dots, v_n \big  >$ 일 때, 
 
-두 벡터 $u, v$ 의 내적은 스칼라
+두 벡터 $u, v$ 의 내적은 두 벡터 $u, v$ 가 이루는 각 $\theta$ 에 대하여 스칼라
 
-$$ u \cdot v := u_1v_1+u_2v_2+u_3v_3+\dots+u_nv_n = \sum_{i=1}^{n}u_iv_i $$
+$$ u \cdot v := u_1v_1+u_2v_2+u_3v_3+\dots+u_nv_n = \sum_{i=1}^{n}u_iv_i = |u||v|\cos \theta $$
 
 이다. 
 
@@ -1243,21 +1287,63 @@ $$ P _{a}(b) = \text{proj} _{a}b =  \dfrac{a \cdot b}{a \cdot a}a $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-두 벡터의 각도(angle between two vectors) : 영벡터가 아닌 두 벡터 $u, v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 두 벡터 $u ,v$ 가 이루는 각 $\theta$ 는 
+두 벡터의 각도(angle between two vectors) : 시점이 같은 영벡터가 아닌 두 벡터 $u, v$ 가 $u = \big < u_1, u_2, u_3 \big >, v = \big  <v_1, v_2, v_3 \big  >$ 일 때, 
+
+두 벡터 $u ,v$ 가 이루는 각 $0 \leq  \theta \leq \pi$ 는 
 
 $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) $$
-
-또는
-
-$$ \theta = \cos ^{-1} \bigg ( \frac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \bigg ) $$
 
 이다. 
 
 </blockquote>
 
+- 다음과 같이 쓸 수도 있다.
+
+  $$ \theta = \cos ^{-1} \bigg ( \frac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \bigg ) $$
+
 - 증명 
 
-  **구체화 필요** 
+  시점이 같은 임의의 두 벡터 $u = \big <u_1,u_2,u_3\big >, v=\big <v_1,v_2,v_3\big >$ 가 이루는 각 $0 \leq \theta \leq \pi$ 를 구해보자. 
+
+  <img src="https://user-images.githubusercontent.com/16812446/86887866-392e0980-c134-11ea-9889-3e42cf40f31a.png" width="50%" height="auto">
+
+  > 출처 : [Thomas' CALCULUS](https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078) Figure12.21
+
+  두 벡터의 크기 $|u|, |v|$ 와 두 벡터의 뺄셈으로 얻은 벡터 
+  
+  $$w = u-v=\big <u_1-v_1,u_2-v_2,u_3-v_3\big >$$
+  
+  에 대하여 코사인 법칙
+
+  $$ |w| ^{2} = |u|^{2}+|v|^{2}-2|u||v|\cos \theta $$
+
+  $$ 2|u||v|\cos \theta= |u|^{2}+|v|^{2} - |w| ^{2} $$
+
+  이 성립한다. 이때 벡터 $u, v, w$ 의 크기 제곱은
+
+  $$ |u| ^{2} = \bigg (\sqrt[]{u_1 ^{2}+u_2 ^{2}+u_3 ^{2}} \bigg )^{2}=u_1 ^{2}+u_2 ^{2}+u_3 ^{2} $$
+   
+  $$ |v| ^{2} = v_1 ^{2}+v_2 ^{2}+v_3 ^{2} $$
+   
+  $$ |w| ^{2} = (u_1-v_1) ^{2}+(u_2 - v_2) ^{2}+(u_3 - v_3) ^{2} $$
+
+  $$ = u_1 ^{2}-2u_1v_1 + v_1 ^{2} +u_2 ^{2}-2u_2v_2 + v_2 ^{2} +u_3 ^{2}-2u_3v_3 + v_3 ^{2} $$
+
+  이므로 
+   
+   $$ |u|^{2}+|v|^{2} - |w| ^{2} = 2(u_1v_1+u_2v_2+u_3v_3) $$
+
+  이다. 그러므로
+
+  $$ 2|u||v|\cos \theta= |u|^{2}+|v|^{2} - |w| ^{2} = 2(u_1v_1+u_2v_2+u_3v_3) $$
+
+  $$ \cos \theta = \dfrac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} $$
+
+  이다. 그런데 $\theta$ 가 두 벡터가 이루는 각이므로 $0 \leq 0 < \pi$ 이다. 따라서 최종적으로 두 벡터 $u,v$ 가 이루는 각 $\theta$ 는
+
+  $$ \therefore \theta = \cos ^{-1}\bigg ( \dfrac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \bigg ) = \cos ^{-1}\bigg ( \dfrac{u \cdot v}{|u||v|} \bigg ) $$
+
+  이다. ■ 
 
 - 예시 
 
@@ -1275,7 +1361,7 @@ $$ \theta = \cos ^{-1} \bigg ( \frac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \bigg ) $$
 
   에서 
 
-  $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) = \cos ^{-1} \bigg ( \frac{-4}{(3)(7)} \bigg ) \approx 100.98 \degree $$
+  $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) = \cos ^{-1} \bigg ( \frac{-4}{3 \cdot 7} \bigg ) \approx 100.98 \degree $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1285,7 +1371,7 @@ $$ \cos  \theta = \frac{u \cdot v}{|u||v|} $$
 
 또는 
 
-$$ \cos  (u, v) = \frac{u \cdot v}{|u||v|} $$
+$$ \cos  (u, v) := \frac{u \cdot v}{|u||v|} $$
 
 를 코사인 유사도라고 정의한다.
 
@@ -1293,15 +1379,7 @@ $$ \cos  (u, v) = \frac{u \cdot v}{|u||v|} $$
 
 - 증명 
 
-  코사인 유사도
-
-  $$ \cos  \theta = \frac{u \cdot v}{|u||v|} $$
-
-  는 두 벡터의 각도
-
-  $$ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) $$
-
-  에서 
+  코사인 유사도 $\cos  \theta = \dfrac{u \cdot v}{|u||v|}$ 는 두 벡터의 각도 $\theta = \cos ^{-1} \bigg ( \dfrac{u \cdot v}{|u||v|} \bigg )$ 에서 
 
   $$ \therefore  \cos \theta = \frac{u \cdot v}{|u||v|} $$
 
@@ -1309,7 +1387,7 @@ $$ \cos  (u, v) = \frac{u \cdot v}{|u||v|} $$
 
 - 다음의 기호로도 표기할 수 있다. 
 
-  $$ \cos \theta = \frac{\big < u ,v \big >}{||u|| \cdot  ||v||} = \frac{ \displaystyle \sum_{i=1}^{n}a_ib_i}{ \displaystyle \sqrt[]{\sum_{i=1}^{n}a_i ^{2}} \sqrt[]{\sum_{i=1}^{n}b_i ^{2}}} $$
+  $$ \cos \theta = \frac{u \cdot v }{||u|| \cdot  ||v||} = \frac{ \displaystyle \sum_{i=1}^{n}a_ib_i}{ \displaystyle \sqrt[]{\sum_{i=1}^{n}a_i ^{2}} \sqrt[]{\sum_{i=1}^{n}b_i ^{2}}} $$
 
 - 코사인 유사도는 폐구간 $[-1, 1]$ 에 존재한다. 
 
@@ -1712,3 +1790,157 @@ $$ v = c_1b_1 + c_2b_2 + \dots + c_nb_n $$
 - 지금까지 줄곧 사용하던 좌표평면의 좌표 $(a,b)$ 와 좌표공간의 좌표 $(a,b,c)$ 을 일반화한 것이다.
 
   - 우리가 일반적으로 사용해왔던 좌표평면의 기저는 $\bigg (\begin{bmatrix} 1\\0 \end{bmatrix}, \begin{bmatrix} 0\\1 \end{bmatrix}\bigg )$ 이고, 좌표공간의 기저는 $\bigg ( \begin{bmatrix} 1\\0\\0 \end{bmatrix}, \begin{bmatrix} 0\\1\\0 \end{bmatrix}, \begin{bmatrix} 0\\0\\1 \end{bmatrix} \bigg )$ 인 것이다.
+
+# <a name="행렬 " href="#행렬 ">행렬 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+행렬곱 : $m \times n$ 행렬 $A=(a_{ij})$ 와 $n \times l$ 행렬 $B = (b _{jk})$ 에 대한 곱 $AB$ 는
+
+$m \times l$ 행렬 $A \times B = C = (c _{ik})$ 로써 $(i, k)$ 항이 $A$ 의 $i$번째 행 벡터와 $B$ 의 $k$ 번째 열 벡터의 내적 
+
+$$ \sum_{j=1}^{n}a _{ij}b _{jk} $$
+
+이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+정사각행렬, or 정방행렬(square matrix), or $n$차 정사각행렬 : 행의 수와 열의 수가 $n$ 으로 같은 행렬이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$차 단위 행렬, or 항등행렬 : 대각선의 항들, 즉 $(i,i)$ 항이 모두 $1$ 이고 나머지 항은 $0$ 인 $n$차 정사각행렬 $I_n$ 이다.
+
+</blockquote>
+
+- 혹은 간단히 $I$ 로도 표기한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+선형사상(linear map) : $\forall x, y \in \R ^{n}$ 와 $t \in \R$ 에 대한 사상 $L$ 이 
+
+$$ L(\mathbf{x}+\mathbf{y}) = L(\mathbf{x}) + L(\mathbf{y}), L(t \mathbf{x}) = tL(\mathbf{x}) $$
+
+이면 $L$ 을 선형사상이라 한다.
+
+</blockquote>
+
+- 예시 
+
+  항등사상(identity map)
+
+  $$ \text{id}:\R ^{n}\to \R ^{n}, \text{id}(\mathbf{x}):=\mathbf{x} $$
+
+  은 선형사상이다.
+
+- 예시 
+
+  점대칭변환
+
+  $$ -\text{id}:\R ^{n}\to \R ^{n}, \mathbf{x}\mapsto -x$$
+
+  은 선형사상이다.
+
+- 예시 
+
+  $a_1, \dots, a_n \in \R$ 와 $(x_1, \dots, x_n) \in \R ^{n}$ 대한 함수 
+
+  $$ l(x_1, \dots, x_n) := a_1x_1 + \dots+a_nx_n $$
+
+  은 선형사상이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+선형사상으로 정의하는 행렬 : $m \times n$ 행렬 $A$ 는 벡터 $\mathbf{x}\in \R ^{n}, A \mathbf{x}\in \R ^{m}$ 에 대한 사상
+
+$$ L_A : \R ^{n} \to \R ^{m}, \mathbf{x} \mapsto A \mathbf{x} $$
+
+이다.
+
+</blockquote>
+
+- 설명 
+
+  $n$-공간의 원소 열벡터 $\begin{pmatrix} x_1\\ \vdots \\x_n \end{pmatrix}$ 를 $m \times n$ 행렬 $A = (a _{ij})$ 와 곱하여 $m$-공간의 원소, 즉 벡터를 얻는다. 즉, 
+
+  $$ \begin{pmatrix} a _{11} & \dots & a _{1n}\\ \vdots & \ddots & \vdots \\ a _{m1} & \dots & a _{mn}\\ \end{pmatrix} \begin{pmatrix} x_1\\\vdots \\x_n \end{pmatrix} = \begin{pmatrix} a _{11}x_1 + \dots + a _{1n}x_n\\ \vdots \\ a _{m1}x_1 + \dots + a _{mn}x_n\\ \end{pmatrix} \in \R ^{m} $$
+
+  이다. 그러므로 $m \times n$ 행렬 $A$ 는 벡터 $\mathbf{x}\in \R ^{m}$ 에 대한 사상
+
+  $$ L_A := A \mathbf{x} $$
+
+  으로 정의할 수 있다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+치환(permutation) : $n \in \N$ 에 대한 집합 $\{1,2,\dots,n\}$ 에서 집합 $\{1,2,\dots,n\}$ 으로 가는 전단사 사상을 $n$-치환이라고 한다.
+
+</blockquote>
+
+- 예시 
+
+  항등치환 $id$ 는 
+
+  $$ \text{id}(k) = k $$
+
+  이고, 치환이다.
+
+- $\sigma$ 가 $n$-치환일 때 $n$-치환을
+
+  $$ \begin{pmatrix} 1&2&3&\dots&n\\ \sigma(1)& \sigma(2)& \sigma(3)& \dots& \sigma(n) \end{pmatrix} $$
+
+  로 나타낸다.
+
+  - 예시 
+
+    $$ \begin{pmatrix} 1&2&3&4&5\\ 5& 4& 3& 2& 1 \end{pmatrix} $$
+
+    은 $1,2,3,4,5$ 를 $5,4,3,2,1$ 로 보내는 치환이다.
+  
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+항등치환 $\varepsilon$ : 항등치환은 
+
+$$ \varepsilon = \begin{pmatrix} 1&2&3&\dots&n\\ 1&2&3&\dots&n\\ \end{pmatrix} $$
+
+이다.
+
+</blockquote>
+  
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+치환의 부호 : 치환 $\sigma$ 를 항등치환 $\varepsilon$ 으로 바꾸기 위한 조작횟수 $N(\sigma )$ 에 대하여 치환의 부호는
+
+$$ \text{sgn}(\sigma ) = (-1) ^{N(\sigma )} $$
+
+이다.
+
+</blockquote>
+
+- 예시 
+
+  치환 $\sigma = \begin{pmatrix} 1&2&3\\3&2&1 \end{pmatrix}$ 을 항등치환으로 바꾸기 위한 조작 횟수 $N(\sigma )$ 은 두번째 행의 $3$ 과 $1$ 을 $1$번 바꾸면 되기 때문에 
+
+  $$ N(\sigma ) = 1 $$
+
+  이다. 그러므로 치환의 부호는 
+
+  $$ \text{sgn} (\sigma ) = (-1) ^{N(\sigma )} = (-1) ^{1} = -1 $$
+
+  이다.
+
+- 예시 
+
+  치환 $\sigma = \begin{pmatrix} 1&2&3\\2&3&1 \end{pmatrix}$ 을 항등치환으로 바꾸기 위한 조작 횟수 $N(\sigma )$ 은 두번째 행의 $3$ 과 $1$ 을 $1$번 바꾸고 $1$ 과 $2$ 를 바꾸어야 하므로
+
+  $$ N(\sigma ) = 2 $$
+
+  이다. 그러므로 치환의 부호는 
+
+  $$ \text{sgn} (\sigma ) = (-1) ^{N(\sigma )} = (-1) ^{2} = 1 $$
+
+  이다.

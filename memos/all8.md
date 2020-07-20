@@ -250,7 +250,7 @@
 
   - 지금까지 프로그래밍을 해왔다면 수학에서의 논리적 증명을 해온 것이고, 수학에서의 논리적 증명을 해왔다면 프로그래밍을 해온 것이다. 
 
-  > 프로그램 $\Leftrightarrow$ 증명 $\dots$ 취약점 $\Leftrightarrow$ 허술한 증명 $\dots$ 기계적 계산을 정의한 프로그래밍 언어로부터 취약점 존재를 유일하게 결정할 수 있는 증명법이 있을까? 
+  > 프로그램 $\iff$ 증명 $\dots$ 취약점 $\iff$ 허술한 증명 $\dots$ 기계적 계산을 정의한 프로그래밍 언어로부터 취약점 존재를 유일하게 결정할 수 있는 증명법이 있을까? 
 
 - 유클리드의 원론과 러셀의 수학원리와 힐베르트 프로그램에서 알아보았듯, 수학에서의 논리적 증명이란 공리에 추론규칙을 적용하여 정리를 연역하는 과정이었다. 
 
@@ -280,13 +280,13 @@
 
 3. $A$ 가 사실이라고 가정하에 $B$ 가 사실이면 "$A$ 이면 $B$" 도 사실이다. 
 
-    $$ \overline{A} \dots B \to A \Rightarrow B $$
+    $$ \overline{A} \dots B \to A \implies B $$
 
     - 가정한 것에는 윗줄을 긋는다.
 
 4. "$A$ 이면 $B$" 가 사실이고 $A$ 가 사실이면 $B$ 도 사실이다. 
 
-    $$ (A \Rightarrow B, A) \to B $$
+    $$ (A \implies B, A) \to B $$
 
 5. $A$ 가 사실이면 임의의 $B$ 에 대한 "$A$ 또는 $B$" 도 사실이고 "$B$ 또는 $A$" 도 사실이다. 
 
@@ -302,11 +302,11 @@
 
   - 가령 두 개의 전제 
 
-    $$ A, (A \Rightarrow B)\land (A \Rightarrow C) $$
+    $$ A, (A \implies B)\land (A \implies C) $$
 
     로부터 
 
-    $$ (A \Rightarrow B) \land (A \Rightarrow C) \Rightarrow (A \Rightarrow (B \land C)) $$
+    $$ (A \implies B) \land (A \implies C) \implies (A \implies (B \land C)) $$
 
     를 이끌어낼 수 있다. 
 
@@ -335,8 +335,8 @@
 
 |유형|논리추론|프로그래밍| 
 |:---:|:---:|:---:|
-|$3$| $\overline{A} \dots B \to A \Rightarrow B$ | 함수를 정의하는 것 |함수 `pair(x) = (x-1, x+1)` 는 정수 $x$($A$ 데이터) 로 튜플($B$ 데이터) 를 만들도록 프로그래밍 되었다. |
-| $4$ | $(A \Rightarrow B, A) \to B$ | 함수를 사용하는 것 |
+|$3$| $\overline{A} \dots B \to A \implies B$ | 함수를 정의하는 것 |함수 `pair(x) = (x-1, x+1)` 는 정수 $x$($A$ 데이터) 로 튜플($B$ 데이터) 를 만들도록 프로그래밍 되었다. |
+| $4$ | $(A \implies B, A) \to B$ | 함수를 사용하는 것 |
 
 - 유형 $3$ 
 

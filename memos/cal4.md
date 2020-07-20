@@ -176,7 +176,7 @@ $$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
 
 </blockquote>
 
-- 위의 정의에서 $\frac{1}{x} = t$ 로 놓으면 $x \to 0+ \Rightarrow t \to \infty$ 이다. 따라서
+- 위의 정의에서 $\frac{1}{x} = t$ 로 놓으면 $x \to 0+ \implies t \to \infty$ 이다. 따라서
 
   $$ \lim_{t \to \infty} (1+\frac{1}{t}) ^{t} = e $$
 
@@ -266,7 +266,7 @@ $$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
 
 - $2$ 의 증명 
 
-  $a ^{x} -1 = t$ 로 두면 $x \to 0 \Rightarrow t \to 0$ 이고 $a ^{x} = 1+t$ 에서 
+  $a ^{x} -1 = t$ 로 두면 $x \to 0 \implies t \to 0$ 이고 $a ^{x} = 1+t$ 에서 
 
     $$ \therefore x = \log_{a} (1+t) $$
 
@@ -338,7 +338,7 @@ $$ (\log_{a} x)' = \frac{1}{x \ln a} $$
 
     $$ = \lim_{h \to 0} \frac{1}{x} \cdot \frac{x}{h} \log_{a} (1+\frac{h}{x}) = \frac{1}{x} \lim_{h \to 0} \log_{a} (1+\frac{h}{x}) ^{\frac{x}{h}} $$
 
-    이때 $\frac{h}{x} = t$ 로 두면 $h \to 0 \Rightarrow t \to 0$ 이므로
+    이때 $\frac{h}{x} = t$ 로 두면 $h \to 0 \implies t \to 0$ 이므로
 
     $$ = \frac{1}{x} \lim_{t \to 0} \log_{a} (1 + t)^{\frac{1}{t}} = \frac{1}{x}\log_{a} e $$
 
@@ -478,7 +478,7 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
     $$ \therefore \lim_{x \to 0} \tan x = 1 $$
 
-    이다. 다음 그래프 $y=\frac{\tan x}{x}$ 에서도 $x \to 0 \Rightarrow \tan x \to 1$ 임을 확인할 수 있다. 물론 다음 그래프도 $x=0$ 에서 함수값은 정의되어있지 않다. 
+    이다. 다음 그래프 $y=\frac{\tan x}{x}$ 에서도 $x \to 0 \implies \tan x \to 1$ 임을 확인할 수 있다. 물론 다음 그래프도 $x=0$ 에서 함수값은 정의되어있지 않다. 
 
     ![desmos-graph(5)](https://user-images.githubusercontent.com/16812446/76512834-b56f5380-6498-11ea-8ebb-40991579d7e4.png)
 
@@ -806,7 +806,7 @@ $$ \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{g'(t)}{f'(t)} $$
 
   의 값이 존재한다. 그런데 분모가 $0$ 에 한없이 다가가는데도 그 값이 존재하므로 분자도 $0$ 에 다가간다. 따라서
 
-  $$ \Delta x \to 0 \Rightarrow \Delta t \to 0 $$
+  $$ \Delta x \to 0 \implies \Delta t \to 0 $$
 
   이다. 또 이것으로 도함수의 정의에 의한 $x$ 에 대한 $y$ 의 미분
 
@@ -1012,15 +1012,15 @@ $$
 
 - 예시 
 
-  $$ f(x) = e ^{x} \Rightarrow f ^{(n)}(x) = e ^{x} $$
+  $$ f(x) = e ^{x} \implies f ^{(n)}(x) = e ^{x} $$
 
 - 예시 
 
-  $$ f(x) = \sin x \Rightarrow f ^{(n)}(x) =\sin (x+\frac{n \pi }{2}) $$
+  $$ f(x) = \sin x \implies f ^{(n)}(x) =\sin (x+\frac{n \pi }{2}) $$
 
 - 예시 
 
-  $$ f(x) = \cos x \Rightarrow f ^{(n)}(x) =\cos (x+\frac{n \pi }{2}) $$
+  $$ f(x) = \cos x \implies f ^{(n)}(x) =\cos (x+\frac{n \pi }{2}) $$
 
 ## <a name="함수의 그래프 개형 " href="#함수의 그래프 개형 ">함수의 그래프 개형 </a>
 

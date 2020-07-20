@@ -86,17 +86,17 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
 
   - 이때 $b$ 를 편향(bias) 라고 한다.
 
-  - 그러므로 원래는 $n$ 차원 벡터 $x = \begin{bmatrix} x_1\\x_2\\\dots\\x_n\end{bmatrix}$ (입력) 의 전치와 $n$ 차원 벡터 $w = \begin{bmatrix} w_1\\w_2\\\dots\\w_n\end{bmatrix}$ (가중치) 의 내적(순입력)
+  - 그러므로 원래는 $n$ 차원 벡터 $x = \begin{bmatrix} x_1\\x_2\\\dots\\x_n\end{bmatrix}$ (입력) 의 전치와 $n$ 차원 벡터 $w = \begin{bmatrix} w_1\\w_2\\\dots\\w_n\end{bmatrix}$ (가중치) 의 행렬곱(순입력)
 
     $$ x ^{T}w = \sum_{i=1}^{n} w _{i} x _{i} = z $$
 
     이 $z > \theta$ 이면 $y=1$ 로, $z \leq  \theta$ 이면 $y=0$ 로 계산했었다.
   
-  - 그러나 임계값 $\theta$ 를 편향 $b$ 로 바꾸어 표현한 모델에서는 입력 $x_0$ 와 가중치 $w_0 = b$ 를 추가하여 
+  - 그러나 임계값 $\theta$ 를 편향 $b$ 로 바꾸어 표현한 모델에서는 입력 $x_0 = 1$ 와 가중치 $w_0 = b$ 를 추가하여 
   
     $x_0=1$ 에 대한 $n+1$ 차원 벡터 $x = \begin{bmatrix} x_0\\x_1\\x_2\\\dots\\x_n\end{bmatrix}$ (입력) 의 전치와 
     
-    $w_0 = b$ 에 대한 $n+1$ 차원 벡터 $w = \begin{bmatrix} w_0 \\ w_1\\w_2\\\dots\\w_n\end{bmatrix}$ (가중치) 의 내적(순입력)
+    $w_0 = b$ 에 대한 $n+1$ 차원 벡터 $w = \begin{bmatrix} w_0 \\ w_1\\w_2\\\dots\\w_n\end{bmatrix}$ (가중치) 의 행렬곱(순입력)
 
     $$ x ^{T}w = b + \sum_{i=1}^{n} w _{i} x _{i} =  \sum_{i=0}^{n} w _{i} x _{i} = z (\because b = x_0w_0 = 1 \cdot b)$$
 
@@ -110,7 +110,7 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
 
 - 이 퍼셉트론 알고리즘으로 할 수 있는 일이란 입력을 직선으로(선형적으로) 두 가지로 분류하는 것이다.
 
-  - 퍼셉트론 알고리즘으로 직선으선형적으 분류가 가능한 다음과 같은 단순한 문제들을 풀 수 있다. 
+  - 퍼셉트론 알고리즘으로 직선으로, 즉 선형적으로 분류가 가능한 다음과 같은 단순한 문제들을 풀 수 있다. 
   
     이것은 퍼셉트론 알고리즘이 매개변수(가중치 $w$, 임계값 $\theta$)를 조정하는 것으로써 다양한 알고리즘(AND 게이트, OR 게이트, NAND 게이트)로 사상될 수 있다는 것을 의미한다.
 
@@ -181,8 +181,6 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
 
   - 예시 
 
-    **구체화 필요**
-
     ```python
     def AND(x1, x2):
         w1, w2, theta = 0.5, 0.5, 0.7
@@ -190,8 +188,6 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
     ```
   
   - 퍼셉트론 코드를 다음과 같이 일반적으로 나타낼 수 있다.
-
-    **구체화 필요**
 
     ```python
     import numpy as np
@@ -201,6 +197,272 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
           xi = xi
         return
     ```
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+퍼셉트론 학습 알고리즘(Perceptron Learning Algorithm) : 퍼셉트론을 통하여 선형 분리 가능 문제를 해결하기 위한 가중치를 수렴시키는 알고리즘(계산과정)이다.
+
+</blockquote>
+
+- 퍼셉트론 학습 알고리즘은 다음과 같다. 이때 퍼셉트론 알고리즘의 목적은 입력 벡터 $x$ 를 올바르게 선형 분리하는 가중치 벡터 $w$ 를 구하는 것임을 상기하자.
+
+1. (공리)
+
+    임의의 자연수 $m$ 과 $i \in \{1,\dots,m\}$ 에 대한 $m$ 개의 불변요소인 입력 벡터 $\mathbf{x}^{(i)} \in \R ^{n}$, 
+
+    무작위 값으로 초기화된 가변요소인 가중치 벡터 $\mathbf{w} \in \R ^{n}$, 
+
+    $m$ 개의 입력 벡터에 대응되는 $i \in \{1,\dots,m\}$ 에 대한 클래스 레이블 $y ^{(i)} \in \{0,1\}$, 
+    
+    학습률 $\eta \in \R$ 가 있다. 
+
+2. (연역) 
+
+    계단함수 $h: \R \to \{0,1\}$ 와 $i$ 번째 입력벡터 $\mathbf{x}^{(i)}$ 대하여 출력(예측값) 
+    
+    $$\hat{y} ^{(i)} = h(\mathbf{x} ^{(i)} \cdot \mathbf{w})$$
+    
+    을 계산할 수 있다. 
+
+    그런데 출력 $\hat{y} ^{(i)}$ 이 클레스 레이블 $y ^{(i)}$ 과 다르면 가변요소 가중치 벡터 $\mathbf{w}$ 를 조정해야 한다. 이때 로젠블라트는 다음과 같은 규칙으로 가중치를 조정하기로 결정했다.
+
+    > 근데 뭔가 너무 "되겠지?.." 하고 던지는 마인드이긴 하다. 원래 정확한 계산을 통하여 얼마나 조정해야 하는지 알아낸 다음 그만큼 조정해야 하잖아. CTF 풀 때 입력 바이트를 0바이트부터 1000바이트까지 때려넣는 거랑 약간 비슷하네.
+
+3. 에폭(학습횟수)이 남았거나 종료 조건(출력이 실제값과 다른 허용할만한 정도)이 충족되지 않으면 가중치 벡터 $\mathbf{w}$ 를 다음과 같이 조정한다.
+
+    $$ \mathbf{w} := \mathbf{w} + \eta (y ^{(i)} - \hat{y} ^{(i)})\mathbf{x}^{(i)} $$
+
+    그러므로 자연수 $j \in \{1,\dots,n\}$ 에 대한 가중치 벡터의 $j$ 번째 원소 $w_j$ 는 $i$ 번째 입력벡터 $\mathbf{x}^{(i)}$ 의 $j$ 번째 원소 $x_j ^{(i)}$ 에 대하여
+
+    $$ w_j := w_j + \eta (y ^{(i)} - \hat{y}^{(i)}) x_j ^{(i)} $$
+
+    와 같이 조정된다. $\Delta w_j = \eta (y ^{(i)} - \hat{y}^{(i)}) x_j ^{(i)}$ 로 두면
+
+    $$ w_j := w_j + \Delta w_j $$
+
+    로 쓸 수 있다.
+
+    - 만약 정답 레이블 $y ^{(i)}$ 와 출력(예측값) $\hat{y} ^{(i)}$ 가 같으면 $\Delta w_j = 0$ 이 되므로 가중치는 
+    
+      $$w_j := w_j + 0$$ 
+      
+      이 되어 조정되지 않는다.
+
+    - 만약 정답 레이블 $y ^{(i)}$ 이 출력(예측값) $\hat{y} ^{(i)}$ 보다 크면 $\Delta w_j = \eta ( 1 - (-1) ) x _j ^{(i)} = 2\eta x _j ^{(i)}$ 이 되어 가중치가
+
+      $$ w_j := w_j + 2 \eta x _j ^{(i)}$$
+
+      로 조정되면서 $2 \eta x _j ^{(i)}$ 만큼 증가한다.
+    
+    - 만약 정답 레이블 $y ^{(i)}$ 이 출력(예측값) $\hat{y} ^{(i)}$ 보다 작으면 $\Delta w_j = \eta ( -1 - 1 ) x _{j}^{(i)} = -2\eta x _j ^{(i)}$ 이 되어 가중치가
+
+      $$ w_j := w_j - 2 \eta x _j ^{(i)} $$
+
+      로 조정되면서 $2 \eta x _{j}^{(i)}$ 만큼 감소한다.
+  
+- 이때 $i$ 번째 입력벡터 $\mathbf{x}^{(i)}$ 의 $0$ 번째 입력을 $x_0 = 1$, $0$ 번째 가중치를 $w_0 = b$ 로 두어 인공뉴런의 편향을 벡터의 내적 계산에 포함시켜서 편하게 계산하기도 한다.
+
+  - 예시 
+  
+    $\R ^{3}$ 공간의 입력벡터 $\mathbf{x}$, 가중치벡터 $\mathbf{w}$ 를 학습시킨다면(가중치를 조정한다면)
+
+    $$ \Delta w_0 = \eta (y ^{(i)} - \hat{y}^{(i)}) $$
+
+    $$ \Delta w_1 = \eta (y ^{(i)} - \hat{y}^{(i)})x_1 ^{(i)} $$
+
+    $$ \Delta w_2 = \eta (y ^{(i)} - \hat{y}^{(i)})x_2 ^{(i)} $$
+
+    와 같이 조정된다는 것이다. $0$번째 입력 $x_0 ^{(i)}$ 은 편향 $w_0 = b$ 를 나타내기 위하여 항상 $1$ 이기 때문이다.
+
+- 예시 
+
+  학습을 통하여 $\R ^{5}$ 공간의 예측 벡터 $\hat{y}$ 가 출력되었는데, 정답 벡터 $y$ 가 다음과 같다고 하자.
+
+  $$ \hat{y} = (\hat{y_1},\hat{y_2},\hat{y_3},\hat{y_4},\hat{y_5}) = (1,-1,1,1,-1) $$
+
+  $$ y = (y_1,y_2,y_3,y_4,y_5) = (1,-1,-1,1,-1) $$
+
+  그러면 $3$ 번째 샘플이 다르기 때문에 $3$ 번째 가중치만 조정(학습)된다.
+
+  $$\Delta w_3 = \eta ( -1 - 1 ) x = -2\eta x$$
+
+- 예시 
+
+  편향을 나타내기 위한 고정된 입력 $x_0 = 1$ 과 편향 $w_0 = b$ 과 계단함수 $h(x)$ 와 학습률 $\eta =1$ 에 대하여
+
+  퍼셉트론의 입력 벡터 $x = (x_0 = 1, x_1 = 2, x_2 = 1)$, 가중치 $w = (w_0 = -1, w_1 = 0.5, w_2 = 0.3)$ 에 대한 출력(예측값)은 
+
+  $$ \hat{y} = h(x \cdot w) = h(-1 + 2 \cdot 0.5 + 1 \cdot 0.3) = h(0.3) = 1 $$
+
+  이다. 그런데 정답이 $y = 0$ 이라면 가중치는 다음과 같이 조정(학습)된다.
+
+  $$ w_j = w_j + \eta (y - \hat{y})x $$
+
+  $$ w_0 = -1 + 1 \cdot (0 - 1) \cdot 1 = -2 $$
+        
+  $$ w_1 = 0.5 + 1 \cdot (0 - 1) \cdot 2 = -1.5 $$
+        
+  $$ w_2 = 0.3 + 1 \cdot (0 - 1) \cdot 1 = -0.7 $$
+        
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+퍼셉트론 수렴 정리(perceptron convergence theorem) : 퍼셉트론이 선형 분리 가능 문제들, 즉 직선으로 분류가 가능한 데이터를
+
+유한번의 학습으로 데이터를 잘 분류하는 가중치를 수렴시킬 수 있다 는 정리이다.
+
+</blockquote>
+
+- 퍼셉트론 수렴 정리는 다시 말해 퍼셉트론 학습 알고리즘이 선형적으로 분리할 수 있는 데이터를 올바르게 분류할 수 있는 가중치 벡터를 반드시 수렴시킬 수 있다는 것이다.
+
+  선형적으로 분리 가능하다는 것은 특징(features) 의 선형결합을 통하여 데이터를 분류할 수 있다는 것이다.
+
+- 그러나 비선형 분리 문제는 퍼셉트론이 자동으로 학습할 수 없다.
+
+- 정리 
+
+  > 참고/출처 : https://nbviewer.jupyter.org/github/metamath1/ml-simple-works/blob/master/perceptron/perceptron.ipynb
+
+  "$\|\mathbf{w} ^{*}\|=1$ 인 계수벡터 $\mathbf{w} ^{*}$ 와 $\forall k \in \{1, \dots, n\}$ 에 대한 $k$ 번째 입력벡터 $\mathbf{x}_{k}$ 와 $k$ 번째 출력값을 나타내는 번째 스칼라 $y_k \in \{-1,1\}$ 에 대하여 
+
+  $y_k(\mathbf{x}_{k}\cdot \mathbf{w}^{*}) \geq \gamma > 0$ 을 만족하는 $\gamma \in \R$ 가 존재하고, 
+  
+  $\|\mathbf{x}_{k}\| \leq R$ 인 $R \in \R$ 이 존재하면,
+
+  퍼셉트론 알고리즘의 에러 $y_k \neq \hat{y}_{k} = \mathbf{x}_{k}\cdot \mathbf{w}^{*}$ 에 대한 에러 발생횟수 $\epsilon$ 은 $\epsilon \leq \dfrac{R ^{2}}{\gamma ^{2}}$ 이다."
+
+  - 정리의 이해
+
+    먼저 여기에서는 활성화함수로 양극성 계단함수 $\displaystyle y = h(x) = \begin{cases} 1 &x > 0\\ -1 &x \leq 0\\ \end{cases}$ 를 사용한다. 퍼셉트론 수렴 정리를 한줄씩 풀어서 이해해보자.
+
+    ![](https://nbviewer.jupyter.org/github/metamath1/ml-simple-works/blob/master/perceptron/fig1.png)
+
+    위 그림에서 $\mathbf{w} ^{*}$ 에 의해 결정되는 직선의 방정식은 붉은선이다. 이 붉은선이 모든 데이터를 올바르게 선형 분리하는 선이라고 하자. 그 직선의 방정식을 편향을 나타내기 위한 $w_0 = b, x_0 = 1$ 와 자유변수 $x_1, x_2$ 에 대한 $\mathbf{x} = \big <1, x_1, x_2\big >$ 와 가중치 벡터 $\mathbf{w} ^{*}=\big <b, w_1, w_2\big >$ 에 대하여 $x_1x_2$ 평면 위의 직선의 방정식
+
+    $$ \mathbf{w} ^{*}\cdot \mathbf{x} = b + w_1x_1 + w_2x_2 = 0 $$
+
+    으로 나타낼 수 있다. 
+    
+    퍼셉트론 알고리즘은 이와같은 가중치 벡터 $\mathbf{w} ^{*}$ 를 찾는 것이다. 만약 가중치 벡터 $\mathbf{w} ^{*}$ 를 찾았다면 이것을 사용하여 $k$번째 입력벡터 $\mathbf{x}_{k}$ 에 대하여 $\mathbf{w} ^{*}\cdot \mathbf{x} _{k} > 0$ 이면 빨간 직선의 위쪽, $\mathbf{w} ^{*}\cdot \mathbf{x} _{k} < 0$ 이면 빨간 직선의 아래쪽에 위치한다고 판별할 수 있다.
+
+    그렇다면 가중치 벡터 $\mathbf{w}^{*}$ 가 존재하여 $y_k(\mathbf{w}^{*}\cdot \mathbf{x}_{k}) = y_k \hat{y_k} \geq \gamma > 0$ 인 $\gamma$ 가 있다는 것은 $\mathbf{w}^{*}$ 가 데이터를 $2$개의 클래스로 잘 선형분리 하고 있다는 것이다.
+    
+    왜냐하면 $y_k$ 가 직선의 방정식 위쪽에 위치했다면 $y_k > 0$ 인데 예측값 $\hat{y_k} = \mathbf{w}^{*}\cdot \mathbf{x}_k$ 도 데이터가 위쪽에 있다고 판별했으면 $\hat{y_k} = \mathbf{w}^{*}\cdot \mathbf{x}_k > 0$ 이 되어 $y_k \hat{y_k} > 0$ 이 되고,
+
+    $y_k$ 가 직선의 방정식 아래쪽에 위치했다면 $y_k < 0$ 인데 예측값 $\hat{y_k} = \mathbf{w}^{*}\cdot \mathbf{x}_k$ 도 데이터가 아래쪽에 있다고 판별했으면 $\hat{y_k} = \mathbf{w}^{*}\cdot \mathbf{x}_k < 0$ 이 되어 $y_k \hat{y_k} > 0$ 이 되기 때문에
+
+    $\mathbf{w}^{*}$ 가 데이터를 잘 선형분리하고 있다면 항상 $y_k \hat{y_k} > 0$ 가 될 것이기 때문이다.
+
+    이때 결과값, 즉 $\mathbf{w}^{*}\cdot \mathbf{x}_{k}$ 이 $0$ 에 가까울수록 직선의 방정식과의 거리가 가까워진다. 그러므로 $\gamma$ 는 아무리 커봤자 직선의 방정식과 거리가 가장 가까운 입력 벡터 $\mathbf{x}_{k}$ 와 직선의 방정식과의 거리이다. 
+
+    또한 입력 벡터 $\mathbf{x}_{k}$ 의 크기, 즉 $\|\mathbf{x}_{k}\|$ 와 같거나 큰 $R \in \R$ 을 정할 수 있다.
+
+    이 조건이 충족되면 퍼셉트론 알고리즘이 최대 $\dfrac{R ^{2}}{\gamma ^{2}}$ 번만에 데이터를 잘 선형분리하는 계수 벡터 $\mathbf{w}^{*}$ 를 찾을 수 있다. 
+
+- 증명
+
+  > 참고/출처 : https://nbviewer.jupyter.org/github/metamath1/ml-simple-works/blob/master/perceptron/perceptron.ipynb
+
+  > 참고/출처 : 알고리즘 중심의 머신러닝 가이드Machine Learning: An Algorithmic Perspective, 2nd ed., 스티븐 마슬랜드
+
+  > 참고/출처 : http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf
+
+  $y_k(\mathbf{x}_{k}\cdot \mathbf{w}^{*}) \geq \gamma > 0$ 을 만족하는 $\gamma \in \R$ 가 존재하므로 데이터를 잘 선형분리시킬 수 있는 $\mathbf{w}^{*}$ 가 존재한다. 퍼셉트론 알고리즘은 가중치 학습을 반복하면서 $\mathbf{w} ^{*}$ 을 찾으려할텐데 이때 $t$번째 학습에서의 가중치 $\mathbf{w} ^{(t)}$ 가 $\mathbf{w}^{*}$ 와 평행하다면 두 벡터의 사이각이 $0$ 가 되어 $\mathbf{w}^{*}\cdot \mathbf{w} ^{(t)}$ 값이 최대가 된다.
+
+  그러므로 매 학습마다 두 벡터 $\mathbf{w}^{*}, \mathbf{w} ^{(t)}$ 의 내적값이 증가함을 보이면 가중치가 수렴하고 있음을 보인느 것이 된다. 이때 두 벡터의 각도가 줄어듦으로써 내적값이 증가하는 것이 아니라 $\mathbf{w} ^{(t)}$ 의 값 자체가 커져서 내적값이 증가할 수도 있기 때문에 $\mathbf{w} ^{(t)}$ 의 크기 상한값도 함께 보여야 가중치가 수렴한다고 말할 수 있다.
+
+  만약 $t$번째 반복에서 $k$번째 입력 벡터 $\mathbf{x}_{k}$ 와 그것의 클래스 레이블 $y _{k}$ 에 대하여 $y _{k}(\mathbf{w} ^{(t-1)} \cdot \mathbf{x}_{k}) < 0$ 이 되었다면 에러가 발생한 것이므로 가중치를 조정해야 한다. 퍼셉트론 알고리즘에서 가중치 조정은 
+
+  $$ \mathbf{w} ^{(t)} := \mathbf{w}^{(t-1)} + \eta (y _{k} - \hat{y} _{k})\mathbf{x}_{k} $$
+
+  와 같이 이루어졌다는 것을 기억하자. 이때 $\eta = 1$ 로 두고 퍼셉트론의 예측값 $\hat{y}_{k}$ 는 편의를 위하여 제거하자. 그렇게 해도 양이 어느정도 바뀔 뿐 부호는 바뀌지 않으므로 가중치 조정이 가능하기 때문이다. 그러면 가중치 조정은
+
+  $$ \mathbf{w}^{(t)} := \mathbf{w}^{(t-1)} + y _{k}\mathbf{x}_{k} $$
+
+  와 같이 이루어진다. 그러면 이때 두 벡터 $\mathbf{w}^{*}, \mathbf{w}^{(t)}$ 의 내적값을 계산해보면
+
+  $$ \mathbf{w}^{*}\cdot \mathbf{w}^{(t)} = \mathbf{w}^{*}\cdot (\mathbf{w}^{(t-1)}+y _{k} \mathbf{x}_{k}) $$
+
+  $$ = \mathbf{w}^{*}\cdot \mathbf{w}^{(t-1)}+y _{k} \mathbf{w}^{*}\cdot \mathbf{x}_{k} $$
+
+  $$ \geq  \mathbf{w}^{*}\cdot \mathbf{w}^{(t-1)} + \gamma \ \ (\because y_k(\mathbf{x}_{k}\cdot \mathbf{w}^{*}) \geq \gamma ) $$
+
+  이다. 즉, $\mathbf{w}^{*}\cdot \mathbf{w}^{(t)}- \mathbf{w}^{*}\cdot \mathbf{w}^{(t-1)} \geq  \gamma > 0$ 이므로 $\mathbf{w}^{*}\cdot \mathbf{w}^{(t)}$ 이 $\mathbf{w}^{*}\cdot \mathbf{w}^{(t-1)}$ 보다 $\gamma$ 이상 크다는 것이다. 이로써 매 학습마다 $\mathbf{w}^{*}\cdot \mathbf{w}^{(t)}$ 가 증가한다는 것이, 즉 가중치 벡터가 수렴되고 있다는 것이 증명되었다. ▲ 
+
+  매 학습마다 내적 $\mathbf{w}^{*}\cdot \mathbf{w}^{(t)}$ 의 값이 최소 $\gamma$ 이상 증가하기 때문에 초기 가중치 벡터를 $\|\mathbf{w}^{0}\| = 0$ 로 두면 $t$번 학습 후 내적값이 
+
+  $$ \mathbf{w}^{*}\cdot \mathbf{w}^{(t)} \geq t \gamma $$
+
+  이라는 것 즉, 최소 $t \gamma$ 이상이라는 것을 알 수 있다. 그런데 코시-슈바르츠 부등식에 의해 
+
+  $$ \|\mathbf{w}^{*}\|\|\mathbf{w}^{(t)}\| \geq \mathbf{w}^{*}\cdot \mathbf{w}^{(t)} $$ 
+
+  인데 $\|\mathbf{w}^{*}\| = 1$ 이므로 $\|\mathbf{w}^{(t)}\| \geq \mathbf{w}^{*}\cdot \mathbf{w}^{(t)} \geq t \gamma$ 에서 
+
+  $$\|\mathbf{w}^{(t)}\| \geq t \gamma$$
+
+  이다. 그러므로 $t \gamma$ 가 $\|\mathbf{w}^{(t)}\|$ 의 최대하계, 즉 하한
+
+  $$ \therefore \inf \| \mathbf{w}^{(t)}\| = t \gamma $$
+
+  이 된다. ▲ 
+
+  $t$번째 학습 이후 가중치 벡터 $\mathbf{w}^{(t)}$ 의 길이의 제곱은 
+
+  $$ \|\mathbf{w}^{(t)}\|^{2} = \|\mathbf{w}^{(t-1)} + y _{k} \mathbf{x} _{k}\|^{2} $$
+
+  $$ = \|\mathbf{w}^{(t-1)}\| ^{2} + y _{k} ^{2} \|\mathbf{x} _{k}\| ^{2} + 2y _{k} \mathbf{w}^{(t-1)}\cdot  \mathbf{x} _{k} $$
+
+  인데 $y _{k} \in \{-1,1\}$ 이므로 $y _{k}^{2} = 1$ 이고 $\|x _{k}\| \leq R \implies \|x _{k}\|^{2}\leq R ^{2}$ 이고 예측값이 출력값과 틀렸으므로 $y _{k} \mathbf{w}^{(t-1)} \cdot \mathbf{x} = y _{k}\hat{y}_{k} < 0$ 이다. 따라서
+
+  $$ \|\mathbf{w}^{(t)}\| ^{2} \leq  \|\mathbf{w}^{(t-1)}\| ^{2} + R ^{2} $$
+
+  이다. 즉, $\|\mathbf{w}^{(t)}\| ^{2} - \|\mathbf{w}^{(t-1)}\| ^{2} \leq  R ^{2}$ 이므로 초기 가중치 벡터를 $\| \mathbf{w}^{0}\| = 0$ 로 두면 $t$ 번은 학습은 다음과 같이 이루어진다.
+
+  $$ \|\mathbf{w}^{1}\|^{2} - \|\mathbf{w}^{0}\| ^{2} \leq R ^{2} $$
+
+  $$ \|\mathbf{w}^{2}\|^{2} - \|\mathbf{w}^{1}\| ^{2} \leq R ^{2} $$
+
+  $$ \dots $$
+
+  $$ \|\mathbf{w}^{(t)}\|^{2} - \|\mathbf{w}^{(t-1)}\| ^{2} \leq R ^{2} $$
+
+  이것들을 모두 더하면
+
+  $$ \|\mathbf{w}^{(t)}\|^{2} \leq t R ^{2} $$
+
+  을 얻는다. 이것이 $\|\mathbf{w}\|^{2}$ 의 최소상계, 즉 상한
+
+  $$ \sup \|\mathbf{w}^{(t)}\| ^{2} = t R ^{2} $$
+  
+  이다. ▲ 
+
+  상한과 하한을 같은 부등식에 쓰면 다음과 같다. 
+
+  $$ (\inf \|\mathbf{w}^{(t)}\|) ^{2} \leq \|\mathbf{w}^{(t)}\|^{2} \leq \sup \|\mathbf{w}^{(t)}\|^{2} $$
+
+  $$ \iff t ^{2} \gamma ^{2} \leq \|\mathbf{w}^{(t)}\|^{2} \leq t R ^{2} $$
+
+  여기에서 
+
+  $$ \iff t \leq \dfrac{R ^{2}}{\gamma ^{2}} $$
+
+  를 얻는다. 이것은 곧 학습 횟수 $t$ 가 상계를 갖는다는 것이므로 
+  
+  결과적으로 선형분리 가능 데이터에 조건 $\eta =1, \|\mathbf{w}^{0}\| = 0$ 을 적용하면 퍼셉트론 알고리즘이 유한번의 학습으로, 즉 최대 $\dfrac{R ^{2}}{\gamma ^{2}}$ 번의 학습으로(에러로) 가중치 매개변수 $\mathbf{w}$ 를 최적의 가중치 벡터 $\mathbf{w}^{*}$ 로 수렴시킬 수 있다는 것이다. ■   
+
+  - 이는 분류해야 하는 클래스간 거리가 가까울수록 알고리즘 반복 횟수(학습횟수, 에러횟수)는 늘어나지만 어쨌든 수렴은 한다는 것을 보여준다.
+
+  > $\gamma$ 가 늘어날수록 학습횟수가 줄어들고, $R$ 이 늘어날수록 학습횟수가 많아지는구나.
+
+  > 또한 그렇다면 이것은 선형분리가 불가능한 문제이더라도 좌표변환으로써 결국 선형분리 문제로 회귀시키면 비선형문제라도 잘 분류할 수 있는 가중치 벡터를 수렴시킬 수 있다는 뜻이구나. 가령 $XOR$ 문제를 좌표변환으로써 선형분리 문제로 사상시키는 것이다.
+
+  > 벡터의 크기의 제곱의 연산에 대한 정리, 코시-슈바르츠 부등식의 벡터 표현 -> semi-inner-product , 하한의 제곱
+
+  > 코시 슈바르츠 부등식 https://namu.wiki/w/%EC%BD%94%EC%8B%9C-%EC%8A%88%EB%B0%94%EB%A5%B4%EC%B8%A0%20%EB%B6%80%EB%93%B1%EC%8B%9D#toc , https://proofwiki.org/wiki/Cauchy-Bunyakovsky-Schwarz_Inequality
+
+- **그러면 이로썬 선형분리 문제는 항상 가중치를 수렴시킬 수 있다는 것을 알게 되었다. 그러면 임의의 데이터가 선형분리되는지 판단할 수 있는 알고리즘은 존재할까?** 
+
+  **만약 존재하지 않으면 레이어를 하나 더 추가하여 좌표변환(공간변환)을 해보고, 또 존재하지 않으면 레이어를 또 추가해서 공간변환을 또 해보고... 그렇게 자동으로 네트워크를 생성해볼 수 있으니까.**
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -294,7 +556,7 @@ $$
 
   - 예시 
 
-    가령 입력 벡터를 $1 \times 2$ 행렬 $X = \begin{pmatrix} x_1\\x_2 \end{pmatrix}$, 가중치를 $2 \times 3$ 행렬 $W=\begin{pmatrix} w _{11}&w _{21}&w _{31}\\w _{12}&w _{22}&w _{32} \end{pmatrix}$, 편향을 $1 \times 3$ 행렬 $B = \begin{pmatrix} b _{1}&b _{2} & b _{3}\\ \end{pmatrix}$ 으로 나타낸다면, 순입력 $Z = \begin{pmatrix} z_1&z_2&z_3\\ \end{pmatrix}$ 를 다음과 같이 계산할 수 있다. 
+    가령 입력 벡터를 $1 \times 2$ 행렬 $X = \begin{pmatrix} x_1&x_2 \end{pmatrix}$, 가중치를 $2 \times 3$ 행렬 $W=\begin{pmatrix} w _{11}&w _{21}&w _{31}\\w _{12}&w _{22}&w _{32} \end{pmatrix}$, 편향을 $1 \times 3$ 행렬 $B = \begin{pmatrix} b _{1}&b _{2} & b _{3}\\ \end{pmatrix}$ 으로 나타낸다면, 순입력 $Z = \begin{pmatrix} z_1&z_2&z_3\\ \end{pmatrix}$ 를 다음과 같이 계산할 수 있다. 
 
     $$ Z = XW + B $$
 
@@ -352,7 +614,7 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
   $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})}  $$
 
-  에 임의의 정수 $C$ 를 분바와 분모에 곱하여
+  에 임의의 정수 $C$ 를 분자와 분모에 곱하여
 
   $$ = \dfrac{C\exp (a _{k})}{\displaystyle C\sum_{i=1}^{n} \exp (a _{i})} $$
 
@@ -433,6 +695,7 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
         y = softmax(a3)
         return y
 
+    # 앞의 두 반환값 _, _ 은 훈련 데이터와 훈련 정답 레이블이다. 여기서는 이미 훈련된 가중치로 추론, 즉 순전파만 테스트할 것이기 때문에 시험 데이터 x 와 시험 정답 레이블 t 만 가져온다.
     _, _, x, t = load_mnist(normalize=True, flatten=True, one_hot_label=False)
     with open("sample_weight.pkl", 'rb') as f:
         network = pickle.load(f)
@@ -568,16 +831,6 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 - 위의 이유 때문에 딥러닝을 종단간 기계학습(end-to-end machine learning) 이라고도 한다.
 
   이것은 "처음부터 끝까지" 사람의 개입없이 결과를 얻는다는 뜻을 갖고 있다.
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-퍼셉트론 수렴 정리(perceptron convergence theorem) : 퍼셉트론이 선형 분리 가능 문제들, 즉 직선으로 분류가 가능한 데이터는 
-
-항상 데이터로부터 자동으로 학습할 수 있다는 정리이다.
-
-</blockquote>
-
-- 그러나 비선형 분리 문제는 퍼셉트론이 자동으로 학습할 수 없다.
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1022,7 +1275,7 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-편미분 : 
+편미분 코드 구현
 
 </blockquote>
 
@@ -1062,3 +1315,691 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
     ```
 
     를 사용하자.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+기울기 벡터 코드 구현
+
+</blockquote>
+
+- 예시  
+
+  점 $P(x_0, x_1) = (3, 4)$ 에서 이변수 함수 $f$ 에 대한 기울기 $\bigg (\dfrac{\partial f}{\partial  x_0}, \dfrac{\partial f}{\partial x_1}\bigg )$ 을 계산해보자.
+
+  ```python
+  import numpy as np
+
+  def numerical_gradient(f, x):
+      h = 1e-4
+      grad = np.zeros_like(x)
+
+      for idx in range(x.size):
+          tmp_val = x[idx]
+          # f(x+h) 계산
+          x[idx] = tmp_val+h
+          fxh1 = f(x)
+
+          # f(x-h) 계산
+          x[idx] = tmp_val-h
+          fxh2 = f(x)
+
+          grad[idx] = (fxh1 - fxh2) / (2+h)
+          x[idx] = tmp_val # 값 복원
+      
+      return grad
+  ```
+
+# <a name="경사 하강법 " href="#경사 하강법 ">경사 하강법 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+경사법 : 기울기 벡터를 사용하여 손실함수 값을 최소로 만드는 방법을 찾는 알고리즘이다.
+
+</blockquote>
+
+- 하지만 기울기가 가리키는 곳에 함수의 최솟값이 존재하는지 확신할 수 없다. 실제로 복잡한 함수에서는 기울기가 가르키는 방향에 최솟값이 없는 경우가 대부분이다. 또 복잡하고 찌그러진 함수에서 평평한 곳으로 파고들면 고원(plateau)이라고 하는 학습이 정체되는 공간에 수렴할 수도 있다.
+
+  기울기의 방향이 반드시 최소값을 가르키는 것은 아니지만 일단 그 방향으로 가면 함수의 값을 줄일 수 있기 때문에 일단 기울기를 단서로 나아갈 방향을 정하는 것이다.
+  
+  경사법에서는 그 기울기 방향으로 일정 거리만큼 이동하여 또 기울기를 구한다. 그런데 기울어져 있으면 또 그방향으로 일정 거리 나아가본다. 이렇게 계속 기울기 방향으로 나아가서 손실 함수 값을 줄여보는 것이 경사법이다.
+
+- 최솟값을 찾는다면 그것을 경사하강법(gradient descent method)이라고 하고, 최댓값을 찾는다면 경사 상승법(gradient ascent method)이라고한다.
+
+- 경사법을 수식으로 나타내면 학습률 $\eta \in \R$ 과 가중치 벡터 $\mathbf{w} \in \R ^{n}$ 에 대하여
+
+  > 학습률은 하이퍼파라미터이다. 이는 가중치와 편향 같은 신경망 내부에서 자동으로 결정되는 매개변수와는 달리 사람이 직접 설정해야 하는 매개변수이다.
+
+  $$ \mathbf{w} := \mathbf{w} - \eta \dfrac{\partial f}{\partial \mathbf{w}} $$
+
+  이다. 즉, 가중치 벡터 $\mathbf{w}$ 의 $k$번째 원소에 대하여
+
+  $$ w_k := w_k - \eta \dfrac{\partial f}{\partial w_k} $$
+
+  이다. 
+  
+  - 이것을 최적화하려는 함수 `f`, 초기값 `init_x`, 학습률 `lr`, 경사법 반복 회수 `epoch` 에 대하여 다음과 같이 코드로 간단히 구현할 수 있다. 
+
+    ```python
+    def gradient_descent(f, init_x, lr=0.01, epoch=100):
+        x = init_x
+        for _ in range(epoch):
+            grad = numerical_gradient(f, x)
+            x -= lr * grad
+        return x
+    ```
+
+    이 함수로 극소값을 구할 수 있고, 운좋으면 최소값을 구할 수 있다.
+  
+- 신경망에서의 경사법은 손실함수 $L$ 에 대하여 가중치 행렬 $W$ 의 미분을 구하는 것이다.
+
+  - 예시 
+
+    $2 \times 3$ 행렬 $W$ 가 
+
+    $$ W = \begin{pmatrix} w _{11}&w _{12}&w _{13}\\w _{21}& w _{22}& w _{23} \end{pmatrix} $$
+
+    일 때 기울기는 
+
+    $$ \dfrac{\partial L}{\partial W} = \begin{pmatrix} \dfrac{\partial L}{\partial w _{11}}& \dfrac{\partial L}{\partial w _{12}}& \dfrac{\partial L}{\partial w _{13}} \\ \dfrac{\partial L}{\partial w _{21}}& \dfrac{\partial L}{\partial w _{22}}& \dfrac{\partial L}{\partial w _{23}} \end{pmatrix} $$
+
+    이다. 1행의 첫번째 원소 $\dfrac{\partial L}{\partial w _{11}}$ 는 $w _{11}$ 을 아주 조금 변경했을 때 손실함수값 $L$ 이 얼마나 변하는지를 나타내준다.
+  
+  - 코드 구현 
+
+    신경망의 기울기를 구하는 코드를 실제로 구현해보자.
+
+    ```python
+    class simpleNet:
+        def __init__(self):
+            self.W = np.random.randn(2, 3)
+
+        def predict(self, x):
+            return np.dot(x, self.W)
+        
+        def loss(self, x, t):
+            z = self.predict(x)
+            y = softmax(z)
+            loss = CEE(y, t)
+            return loss
+    
+    
+    net = simpleNet
+    x = np.array([0.6, 0.9])  # 입력
+    t = np.array([0, 0, 1])   # 정답 레이블
+    p = net.predict(x)
+
+    f = lambda w: net.loss(x, t)
+    
+    dW = numerical_gradient(f, net.W)
+    print(dW) # 기울기 벡터 출력
+    # [[0.21, 0.14, -0.36] 
+    #  [0.32, 0.21, -0.54]]
+    ```
+
+    이를 통해 $\dfrac{\partial L}{\partial w _{11}} \approx 0.2$ 임을 알 수 있다. 이는 $w _{11}$ 을 $h$ 만큼 늘리면 손실함수 값은 $0.2h$ 만큼 증가한다는 것이다.
+
+    또한 $\dfrac{\partial L}{\partial w _{23}} \approx -0.5$ 임을 알 수 있다. 이는 $w _{23}$ 을 $h$ 만큼 늘리면 손실함수 값은 $-0.5h$ 만큼 증가한다는 것이다.
+
+    이로써 $w _{11}$ 는 음의 방향으로 갱신해야 손실함수 값이 감소하고, $w _{23}$ 은 양의 방향으로 조정해야 손실함수 값이 감소함을 알 수 있다. 
+
+    또한 $\bigg |\dfrac{\partial L}{\partial w _{11}}\bigg | < \bigg |\dfrac{\partial L}{\partial w _{23}}\bigg |$ 이므로 $w _{23}$ 을 갱신할 때 $w _{11}$ 보다 손실함수 값이 더 예민하게 움직인다는 것을 알 수 있다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+신경망 학습 알고리즘 : 신경망 학습 알고리즘은 다음의 2단계와 3단계를 에폭만큼, 또는 수용가능 오차도가 산출될때까지 반복하여 가중치와 편향을 훈련 데이터에 적합하도록 조정하는 알고리즘이다.
+
+1. (미니배치) 훈련 데이터 중 일부를 무작위로 추출한다. 이 일부 데이터를 미니배치라고 하며, 이 미니배치의 손실 함수 값을 줄이는 것이 신경망 학습의 목표이다.
+
+2. (기울기 산출) 손실함수에 대한 가중치 행렬의 기울기를 구한다. 이 기울기 벡터로 손실함수 값을 줄이는 방향에 대한 단서를 얻는다. 
+
+3. (가중치 학습) 가중치 매개변수를 기울기 방향으로 학습률만큼 갱신한다.
+
+</blockquote>
+
+- 이때 미니배치를 무작위로 선정하므로 확률적 경사 하강법(SGD, stochastic gradient descent)라고 한다.
+
+- 코드 구현 
+
+  ```python
+  class TwoLayerNet:
+      def __init__(self, input_size, hidden_size, output_size, weight_init_std=0.01):
+          # {params} 입력층의 뉴런수, 은닉층의 뉴런 수, 출력증의 뉴럭수
+          # 가중치 초기화
+          self.params = {}
+          self.params['W1'] = weight_init_std * np.random.randn(input_size, hidden_size)
+          self.params['b1'] = np.zeros(hidden_size)
+          self.params['W2'] = weight_init_std * np.random.randn(hidden_size, output_size)
+          self.params['b2'] = np.zeros(output_size)
+
+      def predict(self, x):
+          # 예측(추론)을 수행한다.
+          W1, W2 = self.params['W1'], self.params['W2']
+          b1, b2 = self.params['b1'], self.params['b2']
+      
+          a1 = np.dot(x, W1) + b1
+          z1 = sigmoid(a1)
+          a2 = np.dot(z1, W2) + b2
+          y = softmax(a2)
+          
+          return y
+          
+      def loss(self, x, t):
+          # {params} x : 입력 데이터, t : 정답 레이블
+          # 손실함수 값을 계산한다.
+          y = self.predict(x)
+          
+          return cross_entropy_error(y, t)
+      
+      def accuracy(self, x, t):
+          # 정확도를 구한다.
+          y = self.predict(x)
+          y = np.argmax(y, axis=1)
+          t = np.argmax(t, axis=1)
+          
+          accuracy = np.sum(y == t) / float(x.shape[0])
+          return accuracy
+          
+      def numerical_gradient(self, x, t):
+          # {params} x : 입력 데이터, t : 정답 레이블
+          # 가중치 행렬의 기울기 벡터를 구한다.
+          loss_W = lambda W: self.loss(x, t)
+          
+          grads = {}
+          grads['W1'] = numerical_gradient(loss_W, self.params['W1'])
+          grads['b1'] = numerical_gradient(loss_W, self.params['b1'])
+          grads['W2'] = numerical_gradient(loss_W, self.params['W2'])
+          grads['b2'] = numerical_gradient(loss_W, self.params['b2'])
+          
+          return grads
+          
+      def gradient(self, x, t):
+          # 오차 역전파로 가중치 행렬의 기울기 벡터를 빠르게 구한다.
+          W1, W2 = self.params['W1'], self.params['W2']
+          b1, b2 = self.params['b1'], self.params['b2']
+          grads = {}
+          
+          batch_num = x.shape[0]
+          
+          # forward
+          a1 = np.dot(x, W1) + b1
+          z1 = sigmoid(a1)
+          a2 = np.dot(z1, W2) + b2
+          y = softmax(a2)
+          
+          # backward
+          dy = (y - t) / batch_num
+          grads['W2'] = np.dot(z1.T, dy)
+          grads['b2'] = np.sum(dy, axis=0)
+          
+          da1 = np.dot(dy, W2.T)
+          dz1 = sigmoid_grad(a1) * da1
+          grads['W1'] = np.dot(x.T, dz1)
+          grads['b1'] = np.sum(dz1, axis=0)
+
+          return grads
+  
+  def test_dummy():
+      # 더미 데이터와 더미 정답 레이블로 학습해본다.
+      net = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
+      x = np.random.rand(100, 784) # 더미 데이터 손글씨 사진 100장
+      t = np.random.rand(100, 10)  # 더미 데이터 100장에 대한 더미 정답 레이블 
+      grads = net.numerical_gradient(x, t)
+      # ...
+
+  def test_mnist():
+      from dataset.mnist import load_mnist
+      (x_train, t_train), (x_test, t_test) = \
+          load_mnist(normalize=True, one_hot_label=True)
+      
+      train_loss_list = []
+      epoch = 10000
+      train_size = x_train.shape[0]
+      batch_size = 100
+      lr = 0.1
+      net = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
+      # net = TwoLayerNet(input_size=784, hidden_size=100, output_size=10)
+      train_acc_list = []
+      test_acc_list = []
+
+      for _ in range(epoch):
+          batch_mask = np.random.choice(train_size, batch_size)
+          x_batch = x_train[batch_mask]
+          t_batch = t_train[batch_mask]
+
+          grad = net.numerical_gradient(x_batch, t_batch)
+          for key in ('W1', 'b1', 'W2', 'b2'):
+              net.params[key] -= lr * grad[key]
+          loss = net.loss(x_batch, t_batch)
+          train_loss_list.append(loss)
+
+          # 정확도 계산 
+          train_acc = net.accuracy(x_train, t_train)
+          test_acc = net.accuracy(x_test, t_test)
+          train_acc_list.append(train_acc)
+          test_acc_list.append(test_acc)
+          print("tarin acc, test acc : ", train_acc, test_acc)
+
+
+  if __name__ == '__main__':
+      test_mnist()
+  ```
+
+  - 위 코드에서 `numerical_gradient(self, x, t)` 의 수치미분으로 가중치의 기울기를 계산하는데, 실제로는 오차역전파로 기울기 계산을 빠르게 수행한다.
+
+# <a name="오차역전파 " href="#오차역전파 ">오차역전파 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+오차역전파 : 신경망 학습에서 수치미분보다 효율적으로 기울기를 계산하는 방법이다.
+
+</blockquote>
+
+- 오차역전파는 계산 그래프로 순전파를 계산한다.
+
+  - 계산 그래프는 연산 노드(덧셈, 곱셈 등등)에 입력을 주고 출력을 상위 연산 노드로 전달하는 알고리즘이다.
+
+  - 계산 그래프를 통한 중간 노드로 국소적 계산을 하면 여러 이점이 있다. 
+
+    1. 네트워크가 아무리 복잡해도 각 노드에서는 단순한 국소적 계산만 하면 된다. 
+
+    2. 중간 계산 과정을 저장할 수 있다. 
+
+    3. 역전파를 통해 미분을 효율적으로 빠르게 계산할 수 있다.
+
+- 계산 그래프의 역전파는 입력 $x$ 와 출력 $y$ 을 갖는 노드에 전달된 상위 노드에서 전달된 값 $E$ 에 대하여
+
+  $$ E \dfrac{\partial y}{\partial x} $$
+
+  을 이전 노드로 전달한다.
+
+  - 이렇게 미분을 구하는 것이 가능한 이유는 합성함수의 미분, 즉 연쇄법칙 때문이다.
+
+    - 예시 
+
+      이독립변수와 일매개변수와 대한 합성함수
+
+      $$ z = t ^{2} $$
+
+      $$ t = x + y $$
+
+      의 도함수는 $x$ 에 대한 미분
+
+      $$ \dfrac{\partial z}{\partial x} = \dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} $$
+
+      과 $y$ 에 대한 미분
+
+      $$ \dfrac{\partial z}{\partial x} = \dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} $$
+
+      이다.
+
+      가장 상위 노드에서, 즉 출력층에서 이전 노드로 미분 $\dfrac{\partial z}{\partial z}$ 를 전달한다.
+
+      그러면 이전 노드가 상위 노드의 미분 $\dfrac{\partial z}{\partial z}$ 을 받고 $z$ 에 대한 $t$ 의 미분 $\dfrac{\partial z}{\partial t}$ 를 곱하여 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}$ 를 만들어서 또 이전 노드로 전달한다. 
+
+      그러면 이전 노드가 상위 노드의 미분 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}$ 을 받고 각각 $t$ 에 대한 $x$ 의 미분 
+      과 $t$ 에 대한 $y$ 의 미분을 곱하여
+
+      $$ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} $$
+
+      $$ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial y} $$
+
+      을 만든다. 그러면 이 결과는 곧
+
+      $$ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} = \dfrac{\partial z}{\partial x}$$
+
+      $$ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial y} = \dfrac{\partial z}{\partial y}$$
+
+      가 되어 각각 $z$ 에 대한 $x$ 의 미분, $z$ 에 대한 $y$ 의 미분 결과값이 되는 것이다.
+
+      이렇게 각각의 노드가 상위 노드에서 받은 미분값을 자신의 미분에 곱하기만 하면, 최종 손실함수가 자신의 변화에 대하여 얼마나 변하는지 보여주는 순간변화율, 즉 미분값을 구할 수 있는 것이다.
+
+      > 모든 합성함수의 미분, 즉 연쇄법칙은 독립변수에 대한 미분이고, 전체함수 $f$ 를 매개변수로 미분하고, 매개변수를 독립변수로 미분한 것을 곱하면 된다. 다음의 다변수 합성함수의 편도함수를 보자.
+      
+      <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+      $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
+
+      $n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
+
+      $w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수들도 미분가능하며
+
+      각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
+
+      $$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}$$
+
+      $$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}$$
+
+      $$ \vdots $$
+
+      $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}$$
+
+      </blockquote>
+
+    - 예시 
+
+      이독립변수와 이매개변수에 대한 합성함수 
+
+      $$ z = x + y $$
+
+      $$ x = 2r s$$
+
+      $$ y = r s$$
+
+      의 도함수는 $r$ 에 대한 미분 
+
+      $$ \dfrac{\partial z}{\partial r} = \dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial r} + \dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial r} $$
+
+      과 $s$ 에 대한 미분
+
+      $$ \dfrac{\partial z}{\partial s} = \dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial s} + \dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial s} $$
+
+      이다.
+
+      가장 상위 노드에서, 즉 출력층에서 이전 노드로 미분 $\dfrac{\partial z}{\partial z}$ 를 전달한다.
+
+      그러면 이전 노드가 상위 노드의 미분 $\dfrac{\partial z}{\partial z}$ 을 받고 각각 $z$ 에 대한 $x$ 의 미분과 $z$ 에 대한 $y$ 의 미분을 곱하여
+      
+      $$\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}$$
+
+      $$\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}$$
+
+      를 전달한다. 그러면 이전 그 이전 노드는 각각 $x$ 에 대한 $r$ 의 미분을 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}$ 에 곱한 것과 $y$ 에 대한 $r$ 의 미분을 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}$ 에 곱한 것을 더하고
+
+      $x$ 에 대한 $s$ 의 미분을 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}$ 에 곱한 것과 $y$ 에 대한 $s$ 의 미분을 $\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}$ 에 곱한 것을 더하여 
+
+      $$\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial r} + \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial r}$$
+
+      $$\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial s}  + \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial s}$$
+
+      를 구할 수 있다.
+
+      - **이로써 우리는 상위 노드로부터 전달된 모든 미분 값에 그 상위 노드에 대한 자신의 미분을 곱하고 모두 더해야 한다는 것을 알 수 있다.**
+      
+        **즉, $n \in \R$ 개의 상위 노드로부터 전달된 미분 $\dfrac{\partial L}{\partial u_1},\dfrac{\partial L}{\partial u_2}, \dots, \dfrac{\partial L}{\partial u_n}$ 에 각각의 상위 노드에 대한 자신 $v$ 의 미분 $\dfrac{\partial u_1}{\partial v},\dfrac{\partial u_2}{\partial v}, \dots, \dfrac{\partial u_n}{\partial v}$ 를 곱하고 모두 더한 값**
+
+        $$ \dfrac{\partial L}{\partial u_1}\dfrac{\partial u_1}{\partial v} +\dfrac{\partial L}{\partial u_2}\dfrac{\partial u_2}{\partial v} +\dots+\dfrac{\partial L}{\partial u_n}\dfrac{\partial u_n}{\partial v} $$
+
+        **을 최종적으로 자신의 미분값, 즉 자신이 조금 변했을 때 손실함수가 얼마나 변하는지에 대한 단서로 삼아야 한다.**
+  
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+덧셈 노드의 역전파 : 입력을 더하여 상위 연산 노드로 전달하는 덧셈 연산 노드의 역전파는 그 미분이 $1$ 이므로 상위 연산 노드에서 전달된 미분에 $1$ 을 곱하여 하위 연산 노드로 전달한다.
+
+</blockquote>
+  
+- $n$ 개의 입력 $x_1, x_2, \dots, x_n$ 을 받아 상위 연산 노드로 전달하는 덧세 연산 노드는 함수 $y  = x_1+x_2+\dots+x_n$ 로 표현되는데 각 독립변수에 대한 미분은
+
+  $$ \dfrac{\partial y}{\partial x_1} = 1, \dfrac{\partial y}{\partial x_2} = 1, \dots, \dfrac{\partial y}{\partial x_n} = 1 $$
+
+  로써 모두 $1$ 이다.
+
+  그러므로 덧셈 노드의 역전파는 단지 상위 노드에서 온 미분값에 $1$ 을 곱해주는 것이다. 그런데 $1$ 을 곱하는 것은 무의미하므로 그냥 전달된 값을 아무 연산 없이 그대로 다시 전달하면 된다.
+
+  - **물론 상위 노드에서 $n$ 개의 미분이 전달되면 그것들에 상위 노드에 대한 자신의 미분을 곱하여 더해주어야 하기 때문에**
+
+    **덧셈 노드의 경우 그냥 상위 노드에서 전달된 미분들을 더하기만 하면 된다는 것이다.**
+
+- 예시 
+
+  함수 $z = x+y$ 의 역전파를 조사하자. $z$ 의 미분은 다음과 같다. 
+
+  $$ \dfrac{\partial z}{\partial x} = 1 $$
+
+  $$ \dfrac{\partial z}{\partial y} = 1 $$
+
+  그러므로 상류에서 전해진 미분 $\dfrac{\partial L}{\partial z}$ 에 단지 $1$ 을 곱하여 하류로 전달하면 된다. $L$ 은 손실함수를 뜻한다.
+
+  - 코드 구현 
+
+    이 예시를 다음과 같이 코드로 간단히 구현할 수 있다.
+
+    ```python
+    class AddLayer:
+        def __init__(self):
+            pass
+
+        def forward(self, x, y):
+            out = x + y
+
+            return out
+
+        def backward(self, dout):
+            dx = dout * 1
+            dy = dout * 1
+
+            return dx, dy
+    ```
+
+- 예시 
+
+  함수 $u = x+y+z+w$ 의 역전파를 조사하자. $u$ 의 미분은 다음과 같다. 
+
+  $$ \dfrac{\partial u}{\partial x} = 1, \dfrac{\partial u}{\partial y} = 1, \dfrac{\partial u}{\partial z} = 1, \dfrac{\partial u}{\partial w} = 1 $$
+
+  그러므로 상류에서 전해진 미분 $\dfrac{\partial L}{\partial u}$ 에 단지 $1$ 을 곱하여 하류로 전달하면 된다. $L$ 은 손실함수를 뜻한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+곱셈 노드의 역전파 : 입력을 곱하여 상위 연산 노드로 전달하는 곱셈 연산 노드의 역전파는 순전파 때의 그 입력을 제외한 나머지 입력을 곱한 것을 상위 노드에서 역전파된 미분에 곱하여 하위 노드로 전달한다.
+
+</blockquote>
+
+- 예시 
+
+  함수 $z = xy$ 에 대한 미분은 
+
+  $$ \dfrac{\partial z}{\partial x} = y , \dfrac{\partial z}{\partial y} = x $$
+
+  이다. 
+
+  그러므로 우리는 순전파 때의 입력들을 서로 바꾼 값을 상위 노드에서 역전파된 미분에 곱하여 하위 노드로 전달하면 된다는 것을 알 수 있다.
+
+  - 예시 
+
+    곱셈 노드가 순전파때 입력 $10,5$ 를 받아 상위노드로 $50$ 을 전달했는데, 
+
+    역전파 때 상위노드에서 미분 $1.3$ 을 전달했다면 
+
+    $10$ 의 입력을 전달한 하위 노드에 $6.5$ 를 전달하고
+
+    $5$ 의 입력을 전달한 하위 노드에 $13$ 를 전달하는 것이다.
+  
+  - 코드 구현 
+
+    이 예시를 다음과 같이 간단하게 코드로 구현할 수 있다. 
+
+    ```python
+    class MulLayer:
+        def __init__(self):
+            self.x = None
+            self.y = None
+
+        def forward(self, x, y):
+            self.x = x
+            self.y = y                
+            out = x * y
+
+            return out
+
+        def backward(self, dout):
+            dx = dout * self.y  # x와 y를 바꾼다.
+            dy = dout * self.x
+
+            return dx, dy
+    ```
+
+    이 코드를 사용하여 사과 $100$ 원 짜리 사과를 $2$ 개 사고 $10\%$ 의 세금이 부과된 상황을 순전파로 구현하고, 역전파로 미분을 구해보자.
+
+    ```python
+    apple = 100
+    apple_num = 2
+    tax = 1.1
+
+    mul_apple_layer = MulLayer()
+    mul_tax_layer = MulLayer()
+
+    # 순전파
+    apple_price = mul_apple_layer.forward(apple, apple_num)
+    price = mul_tax_layer.forward(apple_price, tax)
+
+    # 역전파
+    dprice = 1 # 최종 노드가 price 인데 price 에 대한 price 의 미분은 1 이다.
+    dapple_price, dtax = mul_tax_layer.backward(dprice)
+    dapple, dapple_num = mul_apple_layer.backward(dapple_price)
+    ```
+
+    역전파 `backward` 의 입력은 순전파의 출력에 대한 미분이라는 것을 기억하자.
+  
+- 예시 
+
+  함수 $u = xyzw$ 에 대한 미분은 
+
+  $$ \dfrac{\partial u}{\partial x} = yzw , \dfrac{\partial u}{\partial y} = xzw, \dfrac{\partial u}{\partial z} = xyw , \dfrac{\partial u}{\partial w} = xyz $$
+
+  이다. 
+
+  그러므로 우리는 순전파 때의 그 입력을 제외한 나머지 입력을 곱한 것을 상위 노드에서 역전파된 미분에 곱하여 하위 노드로 전달하면 된다는 것을 알 수 있다.
+
+  - 예시 
+
+    곱셈 노드가 순전파때 입력 $1,2,3,4$ 를 받아 상위노드로 $24$ 을 전달했는데, 
+
+    역전파 때 상위노드에서 미분 $1$ 을 전달했다면 
+
+    $1$ 의 입력을 전달한 하위 노드에 $24 \times (2 \times 3 \times 4)$ 를 전달하고
+
+    $2$ 의 입력을 전달한 하위 노드에 $24 \times (1 \times 3 \times 4)$ 를 전달하고
+
+    $3$ 의 입력을 전달한 하위 노드에 $24 \times (1 \times 2 \times 4)$ 를 전달하고
+
+    $4$ 의 입력을 전달한 하위 노드에 $24 \times (1 \times 2 \times 3)$ 를 전달하는 것이다.
+
+  - 코드 구현 
+
+    이 예시를 다음과 같이 간단하게 코드로 구현할 수 있다. 
+
+    ```python
+    import numpy as np
+
+    class MulLayer:
+        def __init__(self):
+            self.input = []
+
+        def forward(self, input):
+            self.input = input
+            out = np.prod(self.input)
+
+            return out
+
+        def backward(self, dout):
+            result = []
+            for i, v in enumerate(self.input):
+                tmp = self.input
+                del tmp[i]
+                result.append(dout * np.prod(tmp))
+
+            return result
+    ```
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+나눗셈 노드의 역전파 : 입력 $x$ 의 곱셈의 역원 $\dfrac{1}{x}$ 을 상위 연산 노드로 전달하는 나눗셈 연산 노드의 역전파는 상위노드에 $-\dfrac{1}{x ^{2}}$ 를 곱하여 하류로 전달한다.
+
+</blockquote>
+
+- 함수 $y = \dfrac{1}{x}$ 의 미분은 $\dfrac{dy}{dx} = -\dfrac{1}{x ^{2}}$ 이다. 그러므로 역전파 때 상위 노드에서 전달된 값에 $-\dfrac{1}{x ^{2}}$ 를 곱하여 하위 노드로 전달한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$\exp$ 노드의 역전파 : 입력 $x$ 에 대하여 $\exp(x)$ 를 상위 연산 노드로 전달하는 $\exp$ 연산 노드의 역전파는 상위노드에 $\exp (x)$ 를 곱하여 하류로 전달한다.
+
+</blockquote>
+
+- 함수 $y = \exp (x)$ 의 미분은 $\dfrac{dy}{dx} = \exp (x)$ 이다. 그러므로 역전파 때 상위 노드에서 전달된 값에 $\exp (x)$ 를 곱하여 하위 노드로 전달한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+표준 Sigmoid 활성화 함수의 역전파 : 표준 Sigmoid 함수 $y = \zeta (x) = \text{sigmoid}(x) =: \dfrac{1}{1 + \exp (-x)}$ 의 역전파는 상위노드에 $y(1-y)$ 를 곱하여 하류로 전달한다.
+
+</blockquote>
+
+- 함수 $y = \zeta (x) =: \dfrac{1}{1+\exp (-x)}$ 의 미분은 $\{\zeta (x)\}' = \zeta (x)\{1-\zeta (x)\}$ 이다. 그러므로 역전파 때 상위 노드에서 전달된 값에 $y(1-y)$ 를 곱하여 하위 노드로 전달한다.
+
+- 코드 구현 
+
+  시그모이드 함수 레이어는 다음과 같이 간단하게 구현할 수 있다. 
+
+  ```python
+  class Sigmoid:
+    def __init__(self):
+        self.out = None
+
+    def forward(self, x):
+        out = sigmoid(x)
+        self.out = out
+        return out
+
+    def backward(self, dout):
+        dx = dout * (1.0 - self.out) * self.out
+
+        return dx
+  ```
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+ReLU 활성화 함수의 역전파 : ReLU 함수 $y = \begin{cases} x &(x>0)\\ 0 &(x \leq 0)\\ \end{cases}$ 의 미분은 
+
+$$ \dfrac{dy}{dx} = \begin{cases} 1 &(x>0)\\ 0 &(x \leq 0)\\ \end{cases} $$
+
+이므로 순전파 때 입력 $x$ 가 $0$ 보다 크면 $1$ 을 곱하여 하위 노드로 전달하고 $0$ 이하면 $0$ 을 곱하여 하위 노드로 전달한다.
+
+</blockquote>
+
+- 즉, 순전파 때 입력이 $0$ 보다 크면 상류의 값을 그대로 하류로 전달하고 
+
+  $0$ 이하면 하류로 아무것도 전달하지 않는다.
+
+- 코드 구현 
+
+  ReLU 함수 레이어는 다음과 같이 간단하게 코드로 구현할 수 있다. 
+
+  ```python
+  class Relu:
+      def __init__(self):
+          self.mask = None
+
+      def forward(self, x):
+          self.mask = (x <= 0)
+          out = x.copy()
+          out[self.mask] = 0
+
+          return out
+
+      def backward(self, dout):
+          dout[self.mask] = 0
+          dx = dout
+
+          return dx
+  ```
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+신경망 순전파 흐름 : $n, m \in \N$ 에 대한 $1 \times n$ 입력행렬 $X$, $n \times m$ 가중치행렬 $W$, $1 \times m$ 편향행렬 $B$ 에 대하여 $1 \times m$ 순입력행렬
+
+$$ Z = X W + B $$
+
+를 활성화 함수 $h:\R ^{m} \to \R ^{m}$ 에 입력하여 얻은 $1 \times m$ 출력행렬 $Y$ 를 다음 층으로 전달하는 것이다.
+
+</blockquote>
+
+- 신경망 순전파의 행렬곱을 기하학에서 아핀 변환(affine transformation) 이라고 한다.
+
+  > 아핀 기하학이 유클리드 기하학보다 논리적으로 선행한다는 것을 수학사에서 살펴본 적이 있다.
+
+  - 그래서 아핀 변환(행렬곱)을 처리하는 레이어를 Affine 계층이라는 이름으로 구현한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+Affine 변환의 역전파 : 
+
+</blockquote>

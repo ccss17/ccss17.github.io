@@ -264,7 +264,7 @@
 
 - 예시 
 
-  $$y = 2x-1 \Rightarrow 2x-y-1 = 0$$
+  $$y = 2x-1 \implies 2x-y-1 = 0$$
 
 - 예시
 

@@ -68,7 +68,7 @@ $$ f : U \to \R $$
 
 임의의 양수 $\epsilon > 0$ 에 대하여 적당한 양수 $\delta > 0$ 가 존재하여 정의역의 모든 $(x, y)$ 에 대하여 다음을 만족하는 것이다. 
 
-  $$  0 < \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} < \delta \Rightarrow  |f(x, y) - L| < \epsilon $$
+  $$  0 < \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} < \delta \implies  |f(x, y) - L| < \epsilon $$
 
 </blockquote>
 
@@ -336,9 +336,9 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
   이변수 함수 $f(x) = x ^{3}+x ^{2}y ^{3}-2y ^{2}$ 일 때 
 
-  $$ f_x(x, y) = 3x ^{2} + 2xy ^{3} \Rightarrow f_x(2, 1) = 16 $$
+  $$ f_x(x, y) = 3x ^{2} + 2xy ^{3} \implies f_x(2, 1) = 16 $$
 
-  $$ f_y(x, y) = 3x ^{2}y ^{2} - 4y \Rightarrow f_x(2, 1) = 8 $$
+  $$ f_y(x, y) = 3x ^{2}y ^{2} - 4y \implies f_x(2, 1) = 8 $$
 
   이다.
 
@@ -688,7 +688,7 @@ $$ f(a + dx) \approx f(a) + dy $$
 
 미분근사의 오차(error in differential approximation) : 함수 $y=f(x)$ 가 $x=a$ 에서 미분가능하고 $x$ 가 $a$ 에서 $a+\Delta x$ 로 변할 때 함수 $y$ 의 변화량 $\Delta y$ 은
 
-$\Delta x \to 0 \Rightarrow \epsilon \to 0$ 인 오차량 $\epsilon = \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a)$ 에대하여
+$\Delta x \to 0 \implies \epsilon \to 0$ 인 오차량 $\epsilon = \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a)$ 에대하여
 
 $$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
 
@@ -724,7 +724,7 @@ $$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
 
   그런데 $\Delta x \to 0$ 일 때 미분계수의 정의에 따라 $\dfrac{f(a+\Delta x) - f(a)}{\Delta x} \to f'(a)$ 이다. 그러므로 실질적으로 $\epsilon$ 은 매우 작은양으로 줄어든다. 즉,
 
-  $$ \Delta x \to 0 \Rightarrow \epsilon \to 0 $$
+  $$ \Delta x \to 0 \implies \epsilon \to 0 $$
 
   이다. 따라서 $\Delta x$ 가 매우 작으면 오차량 $\epsilon$ 도 함께 매우 작아진다. 이때 $\Delta f - df = \epsilon \cdot \Delta x$ 이므로 $\Delta f = df + \epsilon \Delta x$ 즉,
 
@@ -764,7 +764,7 @@ $$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
 
 이변수함수의 미분가능 : 점 $(x_0,y_0)$ 에 대한 이변수함수 $z=f(x,y)$ 의 편미분 $f_x(x_0, y_0), f_y(x_0,y_0)$ 이 존재하고 함수 $z$ 의 변화량 $\Delta z$ 가 
 
-$\Delta x, \Delta y \to 0 \Rightarrow \epsilon _1, \epsilon _2 \to 0$ 에 대한 방정식
+$\Delta x, \Delta y \to 0 \implies \epsilon _1, \epsilon _2 \to 0$ 에 대한 방정식
 
 $$ \Delta z = f_x(x_0,y_0)\Delta x+f_y(x_0,y_0)\Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y $$
 
@@ -802,7 +802,7 @@ $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w
 
   먼저 $\Delta x, \Delta y, \Delta w$ 를 $t$ 가 $t_0$ 에서 $t_0 + \Delta t$ 로 변할때의 증분이라고 하자. 이변수함수 $f$ 가 미분가능하다고 가정했으므로
 
-  $\Delta x,y \to 0 \Rightarrow \epsilon _{1}, \epsilon _{2} \to 0$ 에 대하여
+  $\Delta x,y \to 0 \implies \epsilon _{1}, \epsilon _{2} \to 0$ 에 대하여
 
   $$ \Delta w =  \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0}\Delta x+ \bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y $$
 
@@ -947,6 +947,40 @@ $$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
+$1$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
+
+$1$ 개의 독립변수 $p$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
+
+$w$ 가 미분가능하고 $p$ 에 대한 함수들도 미분가능하며
+
+각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
+
+$$ \frac{\partial  w}{\partial p} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p} = \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p}$$
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$ 개의 독립변수와 $1$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : $1$ 개의 매개변수 $x$ 에 대한 일변수 함수 $w = f(x)$ 가 미분가능하고,
+
+$n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 다변수 함수 $x$ 도 미분가능하면,
+
+$w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x$ 도 미분가능하며
+
+각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
+
+$$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_1} $$
+
+$$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_2} $$
+
+$$ \vdots $$
+
+$$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_n} $$
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
 $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
 
 $n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
@@ -955,13 +989,13 @@ $w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수들도 미분
 
 각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
 
-$$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}$$
+$$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_1}$$
 
-$$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}$$
+$$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_2}$$
 
 $$ \vdots $$
 
-$$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}$$
+$$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_n}$$
 
 </blockquote>
 
@@ -1073,9 +1107,7 @@ $$ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+
 
   $$ x = x_0 + su_1, y = y_0 + su_2 $$
 
-  으로 한정시키자. 그래도 이변수 함수 $f(x,y)$ 의 벡터 $u$ 방향으로의 순간변화율을 구하기에 충분하다. 그러면 
-
-  $f$ 의 $u$ 방향으로의 순간변화율은 독립변수 $s$ 에 의존하는 $x,y$ 를 변수로 갖는 이독립변수 일매개변수의 합성함수 미분으로 구할 수 있게 된다. 그러므로 
+  으로 한정시키자. 그래도 이변수 함수 $f(x,y)$ 의 벡터 $u$ 방향으로의 순간변화율을 구하기에 충분하다. 그러면 $f$ 의 $u$ 방향으로의 순간변화율은 독립변수 $s$ 에 의존하는 $x,y$ 를 변수로 갖는 이독립변수 일매개변수의 합성함수 미분으로 구할 수 있게 된다. 그러므로 
 
   $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = \bigg (\dfrac{\partial f}{\partial x}\bigg )\dfrac{dx}{ds}+\bigg (\dfrac{\partial f}{\partial y}\bigg )\dfrac{dy}{ds} $$
 
@@ -1085,7 +1117,7 @@ $$ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+
 
   인데 이것을 벡터 $\bigg <\dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y}\bigg >$ 와 벡터 $\big <u_1,u_2\big >$ 내적으로 표현하면
 
-  $$ = \bigg[ \bigg (\dfrac{\partial f}{\partial x}\bigg )i+\bigg (\dfrac{\partial f}{\partial y}\bigg )j \bigg ]\cdot \bigg [u_1i+u_2j\bigg ] $$
+  $$ = \bigg[ \bigg (\dfrac{\partial f}{\partial x}\bigg )i+\bigg (\dfrac{\partial f}{\partial y}\bigg )j \bigg ]\cdot \bigg [u_1i+u_2j\bigg ] = \nabla f \cdot u = \text{grad}\ f \cdot u $$
 
   이다.
 
@@ -1093,19 +1125,83 @@ $$ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-방향도함수의 계산 : 단위벡터 $u$ 방향의 방향도함수가 결국 기울기 벡터와 벡터 $u$ 의 내적임을 이용하여 간편하게 방향도함수를 계산하는 방식
+방향도함수의 계산 : 단위벡터 $u$ 방향의 방향도함수의 계산은 기울기 벡터 $\nabla f$ 와 벡터 $u$ 와 두 벡터가 이루는 각 $\theta$ 에 대하여
 
-$$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u $$
+$$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u = |\nabla f|\cos \theta $$
 
 이다.
 
 </blockquote>
 
+- 증명
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u $$
+
+  을 유도하는 과정은 이변수함수의 방향도함수에서 이미 다루었다.
+
+  두 벡터 $u, v$ 가 이루는 코사인 유사도 $\cos  \theta = \dfrac{u \cdot v}{|u||v|}$ 에 두 벡터 $\nabla f, u$ 를 적용하면
+
+  $$ \cos \theta = \dfrac{\nabla f \cdot u}{|\nabla f||u|} $$
+
+  이므로 
+
+  $$ \nabla f \cdot u = |\nabla f||u| \cos \theta $$
+
+  를 얻는다. 따라서
+
+  $$ D_uf = \nabla f \cdot u = |\nabla f||u| \cos \theta $$
+
+  에서 $u$ 는 단위벡터이므로 $|u|=1$ 을 이용하여
+
+  $$ \therefore D_uf = |\nabla f| \cos \theta $$
+
+  를 얻는다. ■ 
+
+- **가장 급격하게 변화하는 방향으로의 방향도함수**
+
+  방향도함수가 결국 
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f|\cos \theta $$
+
+  이므로 방향도함수의 방향을 나타내는 벡터 $u$ 와 기울기 벡터 $\nabla f$ 가 이루는 각 $\theta$ 가 $0$ 일때 방향도함수 값이 최대가 된다. 즉, 다변수 함수의 변화율이 최대가 된다. 
+
+  왜냐하면 $\cos \theta$ 함수값은 폐구간 $[-1, 1]$ 에서 존재하는데, 최댓값 $1$ 을 내기 위해서는 $\theta = 0$ 이어야 하기 때문이다. 
+
+  이는 곧 방향도함수의 방향 $u$ 가 기울기벡터 $\nabla f$ 와 이루는 각이 $0 \degree$, 즉 두 벡터가 동일할 때 다변수함수의 변화율이 가장 크다는 뜻이다.
+
+  이것은 기울기벡터 $\nabla f = \text{grad}\ f$ 는 다변수 함수의 최대변화율의 방향을 나타내고 있다는 것이다.
+
+- **가장 급격하게 감소하는 방향으로의 방향도함수**
+
+  반대로 다변수 함수 $f$ 가 가장 급격하게 감소하는 방향벡터 $u$ 를 구해보자. 마찬가지로 방향도함수의 계산이 
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f|\cos \theta $$
+
+  인데 $\cos \theta$ 이 폐구간 $[-1, 1]$ 에 존재하므로 $\cos \theta = -1$ 을 내기 위하여 방향벡터 $u$ 가 기울기 벡터 $\nabla f$ 와 이루는 각이 $\theta=\pi$ 가 되어야 한다.
+
+  즉, 방향벡터 $u$ 가 기울기벡터와 정반대방향을 향하면 방향도함수가
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = -|\nabla f|$$
+
+  가 되어 가장 급격하게 감소하는 방향으로의 변화율을 구할 수 있게 된다.
+
+- **변하지않는 방향으로의 방향도함수**
+
+  다변수 함수 $f$ 가 변하지 않는 방향으로의 방향벡터 $u$ 를 구해보자. 방향도함수의 계산이 
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f|\cos \theta $$
+
+  인데 $\cos \theta$ 이 폐구간 $[-1, 1]$ 에 존재하므로 $\cos \theta = 0$ 이면 즉, 방향벡터 $u$ 가 기울기벡터와 직교하면 방향도함수가
+
+  $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f| \cdot 0$$
+
+  이 되어 변하지 않는 방향으로의 방향벡터 $u$ 를 구할 수 있게 된다. 이 조건은 $\theta= \dfrac{\pi }{2} = 90 \degree$ 이므로 결국 방향벡터 $u$ 와 기울기벡터 $\nabla f$ 가 직교하는 방향으로 향할 때 변하지 않는 방향으로의 변화율을 구할 수 있는 것이다.
+
 - 예시
 
   이변수함수 $f(x, y) = xe ^{y}+\cos (xy)$ 의 벡터 $v = 3i-4j$ 방향의 방향도함수의 점 $(2,0)$ 에서의 방향미분계수를 구해보자.
 
-  먼저 벡터 $v$ 를 단위벡터로 바꾸면 $u = \dfrac{v}{|v|}=\dfrac{v}{5}=\dfrac{3}{5}i-\dfrac{4}{5}j$, 즉 $\bigg <\dfrac{3}{5},\dfrac{4}{5}\bigg >$ 이다.
+  먼저 벡터 $v$ 를 단위벡터로 바꾸면 $u = \dfrac{v}{|v|}=\dfrac{v}{5}=\dfrac{3}{5}i-\dfrac{4}{5}j$, 즉 $\bigg <\dfrac{3}{5},-\dfrac{4}{5}\bigg >$ 이다.
 
   또 기울기 벡터는 
 
@@ -1115,14 +1211,17 @@ $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u $$
 
   그러므로 방향도함수는 
 
-  $$ D_uf = \big < e ^{y}-y \sin (xy), x e ^{y}-x \sin (xy) \big > \cdot \bigg <\dfrac{3}{5},\dfrac{4}{5}\bigg >$$ 
+  $$ D_uf = \big < e ^{y}-y \sin (xy), x e ^{y}-x \sin (xy) \big > \cdot \bigg <\dfrac{3}{5},-\dfrac{4}{5}\bigg >$$ 
 
-  $$ = \dfrac{3}{5}e ^{y}-y \sin (xy)i + \dfrac{4}{5}x e ^{y}-x \sin (xy)j$$ 
+  $$ = \dfrac{3}{5}(e ^{y}-y \sin (xy))-\dfrac{4}{5}(x e ^{y}-x \sin (xy)) $$
 
   이다. 따라서 점 $(2,0)$ 에서 벡터 $v$ 방향으로의 방향미분계수는
 
-  $$ D_uf \bigg | _{(2,0)} = 
-  $$
+  $$ D_uf \bigg | _{(2,0)} = \dfrac{3}{5}(e ^{0}-0 \cdot \sin (2 \cdot 0))-\dfrac{4}{5}(2 \cdot e ^{0}- 2 \sin (2 \cdot 0)) $$
+
+  $$ = \dfrac{3}{5}(1 - 0) - \dfrac{4}{5}(2 - 0) = \dfrac{3-8}{5} = -1 $$
+
+  이다. ■ 
  
 # <a name="삼각함수로 정의한 방향도함수 " href="#삼각함수로 정의한 방향도함수 ">삼각함수로 정의한 방향도함수 </a>
 

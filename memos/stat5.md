@@ -650,15 +650,15 @@ $$ \sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}} $$
 
 정규화된 확률변수 $Z = \dfrac{\overline{X} - \mu }{\dfrac{\sigma }{\sqrt[]{n}}}$ 에 대하여 다음과 같다. 
 
-1. 신뢰도 $95\%$ 의 신뢰구간 : $P(-1.96 \leq Z \leq 1.96) = 0.95 \Rightarrow \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
+1. 신뢰도 $95\%$ 의 신뢰구간 : $P(-1.96 \leq Z \leq 1.96) = 0.95 \implies \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
 
     $$ \bigg [ \overline{X} - 1.96 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 1.96 \dfrac{\sigma }{\sqrt[]{n}} \bigg ] $$
 
-2. 신뢰도 $99\%$ 의 신뢰구간 : $P(-2.58 \leq Z \leq 2.58) = 0.95 \Rightarrow \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
+2. 신뢰도 $99\%$ 의 신뢰구간 : $P(-2.58 \leq Z \leq 2.58) = 0.95 \implies \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
 
     $$ \bigg [ \overline{X} - 2.58 \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + 2.58 \dfrac{\sigma }{\sqrt[]{n}} \bigg ] $$
 
-3. 신뢰도 $\alpha \%$ 의 신뢰구간 : $P(-k \leq Z \leq k) = \dfrac{\alpha }{100} \Rightarrow \overline{X} - k \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + k \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
+3. 신뢰도 $\alpha \%$ 의 신뢰구간 : $P(-k \leq Z \leq k) = \dfrac{\alpha }{100} \implies \overline{X} - k \dfrac{\sigma }{\sqrt[]{n}} \leq \mu \leq  \overline{X} + k \dfrac{\sigma }{\sqrt[]{n}}$ 에 대하여 
 
     $$ \bigg [ \overline{X} - k \dfrac{\sigma }{\sqrt[]{n}}, \overline{X} + k \dfrac{\sigma }{\sqrt[]{n}} \bigg ] $$
 
@@ -822,15 +822,15 @@ $$ \sigma (\hat{p}) = \sqrt[]{\dfrac{pq}{n}} $$
 
 $n$ 이 충분히 크면 $\hat{q} = 1 - \hat{p}$ 와 정규화된 확률변수 $Z = \dfrac{\hat{p}- p  }{\sqrt{\dfrac{pq}{n}}}$ 에 대하여 다음과 같다. 
 
-1. 신뢰도 $95\%$ 의 신뢰구간 : $P(-1.96 \leq Z \leq 1.96) = 0.95 \Rightarrow  \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$ 에 대하여 
+1. 신뢰도 $95\%$ 의 신뢰구간 : $P(-1.96 \leq Z \leq 1.96) = 0.95 \implies  \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$ 에 대하여 
 
     $$ \bigg [ \hat{p} - 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 1.96 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ] $$
 
-2. 신뢰도 $99\%$ 의 신뢰구간 : $P(-2.58 \leq Z \leq 2.58) = 0.95 \Rightarrow  \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$ 에 대하여 
+2. 신뢰도 $99\%$ 의 신뢰구간 : $P(-2.58 \leq Z \leq 2.58) = 0.95 \implies  \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$ 에 대하여 
 
     $$ \bigg [ \hat{p} - 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + 2.58 \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ] $$
 
-3. 신뢰도 $\alpha \%$ 의 신뢰구간 : $P(-k \leq Z \leq k) = \dfrac{\alpha }{100} \Rightarrow  \hat{p} - k \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + k \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$ 에 대하여 
+3. 신뢰도 $\alpha \%$ 의 신뢰구간 : $P(-k \leq Z \leq k) = \dfrac{\alpha }{100} \implies  \hat{p} - k \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \leq p \leq  \hat{p} + k \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}$ 에 대하여 
 
     $$ \bigg [ \hat{p} - k \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}}, \hat{p} + k \sqrt[]{\dfrac{\hat{p}\hat{q}}{n}} \bigg ]  $$
 
