@@ -1981,3 +1981,25 @@ $$ \dfrac{dy}{dx} = \begin{cases} 1 &(x>0)\\ 0 &(x \leq 0)\\ \end{cases} $$
 
           return dx
   ```
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+신경망 순전파 흐름 : $n, m \in \N$ 에 대한 $1 \times n$ 입력행렬 $X$, $n \times m$ 가중치행렬 $W$, $1 \times m$ 편향행렬 $B$ 에 대하여 $1 \times m$ 순입력행렬
+
+$$ Z = X W + B $$
+
+를 활성화 함수 $h:\R ^{m} \to \R ^{m}$ 에 입력하여 얻은 $1 \times m$ 출력행렬 $Y$ 를 다음 층으로 전달하는 것이다.
+
+</blockquote>
+
+- 신경망 순전파의 행렬곱을 기하학에서 아핀 변환(affine transformation) 이라고 한다.
+
+  > 아핀 기하학이 유클리드 기하학보다 논리적으로 선행한다는 것을 수학사에서 살펴본 적이 있다.
+
+  - 그래서 아핀 변환(행렬곱)을 처리하는 레이어를 Affine 계층이라는 이름으로 구현한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+Affine 변환의 역전파 : 
+
+</blockquote>

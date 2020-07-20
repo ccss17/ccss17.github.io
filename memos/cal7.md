@@ -482,3 +482,137 @@ $$ F'(P) := \dfrac{\partial (f_1, \dots, f_m)}{\partial (x_1, \dots, x_n)}(P) :=
   $$ F'(x, y) = \begin{pmatrix} e ^{x}\cos y&-e ^{x}\sin y\\ e ^{x}\sin y&e ^{x}\cos y\\ 1&1\\ \end{pmatrix} $$
 
   이다.
+
+# <a name="행렬 미분" href="#행렬 미분">행렬 미분</a>
+
+- 행렬 표기 
+
+  $i \in \{1,2,\dots,m\}$, $j \in \{1,2,\dots,n\}$ 에 대한 $a _{ij}\in \R$ 에 대하여 행렬 
+
+  $$ \mathbf{A}= \begin{bmatrix} a _{11} & a _{12} & \dots & a _{1n} \\ a _{21} & a _{22} & \dots & a _{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a _{m1} & a _{m2} & \dots & a _{mn} \\ \end{bmatrix} $$
+
+  을 $m \times n$ 행렬이라 한다.
+
+  - 이 행렬을 $i \in \{1,2,\dots,m\}$, $j \in \{1,2,\dots,n\}$ 에 대하여 
+
+    $$ \mathbf{A} = [a _{ij}] $$
+
+    라고 한다.
+  
+  - 이 행렬의 원소를 $a _{ij}$ 라고 한다.
+
+  - $a _{jk}$ 는 $j$번째 행과 $k$번째 열의 원소를 말한다.
+
+- 행렬곱 정의
+
+  $m \times n$ 행렬 $\mathbf{A}$, $n \times p$ 행렬 $\mathbf{B}$ 에 대한 행렬곱은 $m \times p$ 행렬 $\mathbf{AB} = \mathbf{C}$ 이고, 
+
+  $\mathbf{C}$ 의 $i \in \{1,\dots,m\}, j \in \{1,\dots,p\}$ 항 $(i,j)$ 는 
+
+  $$ c _{ij} = \sum_{k=1}^{n}a _{ik}b _{kj} $$
+
+  이다.
+
+  - $\displaystyle \sum_{k=1}^{n}a _{ik}$ 는 $\mathbf{A}$ 의 $(i, 1), (i, 2), \dots, (i, n)$ 까지의 항을 뜻하므로 $\mathbf{A}$ 의 한 행의 모든 항을 뜻한다.
+
+  - $\displaystyle \sum_{k=1}^{n}b _{kj}$ 는 $\mathbf{B}$ 의 $(1, j), (2, j), \dots, (n, j)$ 까지의 항을 뜻하므로 $\mathbf{B}$ 의 한 열의 모든 항을 뜻한다.
+
+- 정리 1 
+
+  - $m \times n$ 행렬 $\mathbf{A}$ 와 $n \times 1$ 행렬 $\mathbf{x} \in \R ^{n}$, 즉 벡터 $\mathbf{x}$ 에 대하여 
+
+    $$ \mathbf{z} = \mathbf{Ax} $$
+
+    는 $m \times 1$ 행렬, 즉 벡터 $\mathbf{z}\in \R ^{m}$ 이다.
+
+    벡터 $\mathbf{z}$ 의 원소 $z_i$ 는 $a _{ik} \in \mathbf{A}, x_k \in \mathbf{x}$ 에 대하여 다음과 같이 결정된다. 
+
+    $$ z_i = \sum_{k=1}^{n}a _{ik}x _{k} $$
+  
+  - 한편 $m \times 1$ 행렬 $\mathbf{y} \in \R ^{m}$ 에 대하여
+
+    $$ \mathbf{z}^{T}=\mathbf{y}^{T}\mathbf{A} $$
+
+    는 $n \times 1$ 행렬, 즉 벡터 $\mathbf{z} \in \R ^{n}$ 이다.
+
+    - 이는 $(1 \times n) = (1 \times m)(m \times n)$ 의 결과이다.
+  
+  - 마지막으로 스칼라 $\alpha = \mathbf{y}^{T}\mathbf{Ax}$ 는 
+
+    $$ \alpha = \sum_{j=1}^{m}\sum_{k=1}^{n}a _{jk}y_jx_k $$
+
+    이다.
+  
+- 정리 2 
+
+  $m \times n$ 행렬 $\mathbf{A}$, $n \times p$ 행렬 $\mathbf{B}$ 에 대한 행렬곱은 행렬 $\mathbf{C} = \mathbf{AB}$ 인데 이것의 전치행렬은 
+
+  $$ \mathbf{C}^{\intercal }=\mathbf{B}^{\intercal }\mathbf{A}^{\intercal } $$
+
+  이다.
+
+  - 증명 
+
+- 정리 3 
+
+  $n \times n$ 가역행렬 $\mathbf{A,B}$ 에 대한 행렬곱 $\mathbf{C = AB}$ 에 대하여
+
+  $$ \mathbf{C} ^{-1} = \mathbf{B}^{-1}\mathbf{A}^{-1} $$
+
+  이다. 
+
+  - 증명 
+
+    $$ \mathbf{C B ^{-1}A ^{-1} = AB B ^{-1}A ^{-1} = I} $$
+
+    이므로 $\mathbf{C}$ 의 역행렬은 $\mathbf{B ^{-1}A ^{-1}}$ 이다.
+
+- 행렬 미분 
+
+  - 벡터 $\mathbf{y} \in \R ^{m}$ 와 $\mathbf{x} \in \R ^{n}$ 에 대하여 다변수벡터함수
+
+    $$ \mathbf{y} = \Psi (\mathbf{x}) $$
+
+    가 존재한다. 이때 $\mathbf{y}$ 에 대한 $\mathbf{x}$ 의 미분은 다변수벡터함수의 미분, 즉 야코비 행렬 
+
+    $$ \dfrac{\partial \mathbf{y}}{\partial \mathbf{x}} = \begin{bmatrix} \dfrac{\partial y_1}{\partial x_1} && \dfrac{\partial y_1}{\partial x_2} && \dots && \dfrac{\partial y_1}{\partial x_n} \\ \dfrac{\partial y_2}{\partial x_1} && \dfrac{\partial y_2}{\partial x_2} && \dots && \dfrac{\partial y_2}{\partial x_n} \\ \vdots && \vdots && \ddots && \vdots \\ \dfrac{\partial y_m}{\partial x_1} && \dfrac{\partial y_m}{\partial x_2} && \dots && \dfrac{\partial y_m}{\partial x_n} \end{bmatrix} $$
+
+    이다.
+
+    - 이 행렬을 변환 $\Psi ()$ 의 야코비 행렬이라고 한다.
+
+- 정리 5 
+
+  벡터 $\mathbf{y} \in \R ^{m}$($m \times 1$ 행렬), $\mathbf{x} \in \R ^{n}$($n \times 1$ 행렬) 와 $m \times n$ 행렬 $\mathbf{A}$ 에 대한 행렬방정식 $\mathbf{y} = \mathbf{Ax}$ 의 미분은 
+
+  $$ \dfrac{\partial \mathbf{y}}{\partial \mathbf{x}}=\mathbf{A} $$
+
+  이다.
+
+  - 증명 
+
+    $\mathbf{y}$ 의 $i$ 번째 원소는 $\displaystyle  y_i = \sum_{k=1}^{n}a _{ik}x_k$ 이다. 그러므로 $y_i$ 에 대한 $x_j$ 의 미분은 
+
+    $$ \dfrac{\partial y_i}{\partial x_j} = \dfrac{\partial }{\partial x_j}\sum_{k=1}^{n}a _{ik}x_k = a _{ij} $$
+
+    이다. 그렇다면 $i \in \{1,2,\dots,m\}$, $j \in \{1,2,\dots,n\}$ 에서 $\mathbf{y}$ 에 대한 $\mathbf{x}$ 의 미분은 
+
+    $$ \dfrac{\partial \mathbf{y}}{\partial \mathbf{x}} = \mathbf{A} $$
+
+    이다.
+
+- 정리 6
+
+  벡터 $\mathbf{y} \in \R ^{m}$($m \times 1$ 행렬), $\mathbf{x} \in \R ^{n}$($n \times 1$ 행렬) 와 $m \times n$ 행렬 $\mathbf{A}$ 이 존재할때 $\mathbf{x}$ 가 벡터 $\mathbf{z}$ 에 대한 함수라면 행렬방정식 $\mathbf{y} = \mathbf{Ax}$ 의 미분은 
+
+  $$ \dfrac{\partial \mathbf{y}}{\partial \mathbf{z}} = \dfrac{\partial \mathbf{y}}{\partial \mathbf{x}}\dfrac{\partial \mathbf{x}}{\partial \mathbf{z}} = \mathbf{A}\dfrac{\partial \mathbf{x}}{\partial \mathbf{z}} $$ 
+
+  이다.
+
+  - 증명 
+
+    $\mathbf{y}$ 의 $i$ 번째 원소는 $\displaystyle y_i = \sum_{k=1}^{n}a _{ik}x _{k}$ 이다. 그러므로 $y_i$ 에 대한 $z_j$ 의 미분은 
+
+    $$ \dfrac{\partial y_i}{\partial z_j} = \dfrac{\partial y_i}{\partial  x_j}\dfrac{\partial x_j}{\partial z_j} = a _{ij}\dfrac{\partial x_k}{\partial z_j}
+    $$
+

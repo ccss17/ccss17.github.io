@@ -947,6 +947,40 @@ $$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
+$1$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
+
+$1$ 개의 독립변수 $p$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
+
+$w$ 가 미분가능하고 $p$ 에 대한 함수들도 미분가능하며
+
+각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
+
+$$ \frac{\partial  w}{\partial p} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p} = \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p}$$
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+$n$ 개의 독립변수와 $1$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : $1$ 개의 매개변수 $x$ 에 대한 일변수 함수 $w = f(x)$ 가 미분가능하고,
+
+$n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 다변수 함수 $x$ 도 미분가능하면,
+
+$w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x$ 도 미분가능하며
+
+각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
+
+$$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_1} $$
+
+$$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_2} $$
+
+$$ \vdots $$
+
+$$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_n} $$
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
 $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
 
 $n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
@@ -955,13 +989,13 @@ $w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수들도 미분
 
 각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
 
-$$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}$$
+$$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_1}$$
 
-$$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}$$
+$$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_2}$$
 
 $$ \vdots $$
 
-$$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}$$
+$$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_n}$$
 
 </blockquote>
 
