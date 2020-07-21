@@ -567,7 +567,7 @@ $$ F'(P) := \dfrac{\partial (f_1, \dots, f_m)}{\partial (x_1, \dots, x_n)}(P) :=
 
     이므로 $\mathbf{C}$ 의 역행렬은 $\mathbf{B ^{-1}A ^{-1}}$ 이다.
 
-- 행렬 미분 
+- 다변수벡터함수의 미분(야코비 행렬)
 
   - 벡터 $\mathbf{y} \in \R ^{m}$ 와 $\mathbf{x} \in \R ^{n}$ 에 대하여 다변수벡터함수
 
@@ -581,7 +581,7 @@ $$ F'(P) := \dfrac{\partial (f_1, \dots, f_m)}{\partial (x_1, \dots, x_n)}(P) :=
 
     - 이 행렬을 변환 $\Psi ()$ 의 야코비 행렬이라고 한다.
 
-- 정리 5 
+- 정리 5 (다변수벡터함수 미분)
 
   벡터 $\mathbf{y} \in \R ^{m}$($m \times 1$ 행렬), $\mathbf{x} \in \R ^{n}$($n \times 1$ 행렬) 와 $m \times n$ 행렬 $\mathbf{A}$ 에 대한 행렬방정식 $\mathbf{y} = \mathbf{Ax}$ 의 미분은 
 
@@ -595,13 +595,13 @@ $$ F'(P) := \dfrac{\partial (f_1, \dots, f_m)}{\partial (x_1, \dots, x_n)}(P) :=
 
     $$ \dfrac{\partial y_i}{\partial x_j} = \dfrac{\partial }{\partial x_j}\sum_{k=1}^{n}a _{ik}x_k = a _{ij} $$
 
-    이다. 그렇다면 $i \in \{1,2,\dots,m\}$, $j \in \{1,2,\dots,n\}$ 에서 $\mathbf{y}$ 에 대한 $\mathbf{x}$ 의 미분은 
+    이다. 그렇다면 $i \in \{1,2,\dots,m\}$, $j \in \{1,2,\dots,n\}$ 에서 $\mathbf{y}$ 에 대한 $\mathbf{x}$ 의 미분은 다변수벡터함수의 미분, 즉 야코비행렬
 
-    $$ \dfrac{\partial \mathbf{y}}{\partial \mathbf{x}} = \mathbf{A} $$
+    $$ \dfrac{\partial \mathbf{y}}{\partial \mathbf{x}} = \begin{bmatrix} \dfrac{\partial y_1}{\partial x_1} && \dfrac{\partial y_1}{\partial x_2} && \dots && \dfrac{\partial y_1}{\partial x_n} \\ \dfrac{\partial y_2}{\partial x_1} && \dfrac{\partial y_2}{\partial x_2} && \dots && \dfrac{\partial y_2}{\partial x_n} \\ \vdots && \vdots && \ddots && \vdots \\ \dfrac{\partial y_m}{\partial x_1} && \dfrac{\partial y_m}{\partial x_2} && \dots && \dfrac{\partial y_m}{\partial x_n} \end{bmatrix} =  \begin{bmatrix} a_{11} && a_{12} && \dots && a_{1n} \\ a_{21} && a_{22} && \dots && a_{2n} \\ \vdots && \vdots && \ddots && \vdots \\ a_{m1} && a_{m2} && \dots && a_{mn} \end{bmatrix} = \mathbf{A} $$
 
     이다.
 
-- 정리 6
+- 정리 6 (매개변수를 갖는 행렬방정식의 미분)
 
   벡터 $\mathbf{y} \in \R ^{m}$($m \times 1$ 행렬), $\mathbf{x} \in \R ^{n}$($n \times 1$ 행렬) 와 $m \times n$ 행렬 $\mathbf{A}$ 이 존재할때 $\mathbf{x}$ 가 벡터 $\mathbf{z}$ 에 대한 함수라면 행렬방정식 $\mathbf{y} = \mathbf{Ax}$ 의 미분은 
 
@@ -611,8 +611,123 @@ $$ F'(P) := \dfrac{\partial (f_1, \dots, f_m)}{\partial (x_1, \dots, x_n)}(P) :=
 
   - 증명 
 
-    $\mathbf{y}$ 의 $i$ 번째 원소는 $\displaystyle y_i = \sum_{k=1}^{n}a _{ik}x _{k}$ 이다. 그러므로 $y_i$ 에 대한 $z_j$ 의 미분은 
+    $\mathbf{y}$ 의 $i$ 번째 원소는 $\displaystyle y_i = \sum_{k=1}^{n}a _{ik}x _{k}$ 이다. 또 $\mathbf{x} \in \R ^{n}$ 는 독립변수 $\mathbf{z} \in \R ^{n}$ 를 $\mathbf{y} \in \R ^{m}$ 로 잇는 매개변수이다. 그러므로 $y_i$ 에 대한 $z_j$ 의 미분은 $1$ 개의 독립변수와 $n$ 개의 매개변수에 대한 일변수 합성함수에 대한 미분이다. 그러므로 
+    
+    <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-    $$ \dfrac{\partial y_i}{\partial z_j} = \dfrac{\partial y_i}{\partial  x_j}\dfrac{\partial x_j}{\partial z_j} = a _{ij}\dfrac{\partial x_k}{\partial z_j}
-    $$
+    $1$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
 
+    $1$ 개의 독립변수 $p$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
+
+    $w$ 가 미분가능하고 $p$ 에 대한 함수들도 미분가능하며
+
+    독립변수 $p$ 에 대한 $w$ 의 편도함수는 다음과 같다. 
+
+    $$ \frac{\partial  w}{\partial p} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p} = \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p}$$
+
+    </blockquote>
+
+    에 의하여 $y_i$ 에 대한 $z_j$ 의 미분은 
+
+    $$ \dfrac{\partial y_i}{\partial z_j} = \dfrac{\partial y_i}{\partial  x_1}\dfrac{\partial x_1}{\partial z_j} +\dfrac{\partial y_i}{\partial  x_2}\dfrac{\partial x_2}{\partial z_j} +\dots +\dfrac{\partial y_i}{\partial  x_n}\dfrac{\partial x_n}{\partial z_j} = \sum_{k=1}^{n}\dfrac{\partial y_i}{\partial x_k}\dfrac{\partial x_k}{\partial z_j} = \sum_{k=1}^{n}a _{ik}\dfrac{\partial x_k}{\partial z_j} $$
+
+    이다. 
+    
+    그렇다면 $i \in \{1,2,\dots,m\}, j \in \{1,2,\dots,n\}$ 에 대하여 $\displaystyle \sum_{k=1}^{n}a _{ik}\dfrac{\partial x_k}{\partial z_j}$ 를 $\mathbf{A}\dfrac{\partial \mathbf{x}}{\partial \mathbf{z}}$ 로 일반화시킬 수 있고, 이에따라 $\mathbf{y}$ 에 대한 $\mathbf{z}$ 의 미분은 
+
+    $$ \dfrac{\partial \mathbf{y}}{\partial \mathbf{z}}= \dfrac{\partial \mathbf{y}}{\partial \mathbf{x}}\dfrac{\partial \mathbf{x}}{\partial \mathbf{z}}= \mathbf{A}\dfrac{\partial \mathbf{x}}{\partial \mathbf{z}} $$
+
+    이다.
+
+- 정리 7 (이독립변수를 갖는 행렬방정식의 미분)
+
+  $m \times 1$ 행렬 $\mathbf{y}$, $n \times 1$ 행렬 $\mathbf{x}$, $m \times n$ 행렬 $\mathbf{A}$ 가 존재하고, $\mathbf{A}$ 가 $\mathbf{x}, \mathbf{y}$ 와 독립적일 때 스칼라
+  
+  $$\alpha = \mathbf{y}^{\intercal }\mathbf{Ax}$$
+
+  를 정의할 수 있다. 그러면 $\alpha$ 에 대한 $\mathbf{x}$ 의 미분은 
+
+  $$ \dfrac{\partial \alpha }{\partial \mathbf{x}} = \mathbf{y}^{\intercal }\mathbf{A} $$
+
+  이고, $\alpha$ 에 대한 $\mathbf{y}$ 의 미분은 
+
+  $$ \dfrac{\partial \alpha }{\partial \mathbf{y}} = \mathbf{x}^{\intercal }\mathbf{A} $$
+
+  이다.
+
+  - 증명 
+
+    $1 \times n$ 행렬 $\mathbf{w}^{\intercal }=\mathbf{y}^{\intercal }\mathbf{A}$ 을 정의하자. 그러면 $\alpha = \mathbf{w}^{\intercal }\mathbf{x}$ 이다. 
+    
+    그렇다면 정리 5 "벡터 $\mathbf{y} \in \R ^{m}$($m \times 1$ 행렬), $\mathbf{x} \in \R ^{n}$($n \times 1$ 행렬) 
+    와 $m \times n$ 행렬 $\mathbf{A}$ 에 대한 행렬방정식 $\mathbf{y} = \mathbf{Ax}$ 의 미분은 $\dfrac{\partial \mathbf{y}}{\partial \mathbf{x}}=\mathbf{A}$ 이다." 에서 $m = 1$ 로 두면
+
+    "스칼라 $y \in \R$($1 \times 1$ 행렬), $\mathbf{x} \in \R ^{n}$($n \times 1$ 행렬) 와 $1 \times n$ 행렬 $\mathbf{A}$ 에 대한 행렬방정식 $y = \mathbf{Ax}$ 의 미분은 $\dfrac{\partial y}{\partial \mathbf{x}}=\mathbf{A}$ 이다." 이므로 
+
+    $$ \dfrac{\partial \alpha }{\partial \mathbf{x}} = \mathbf{w}^{\intercal } = \mathbf{y}^{\intercal }\mathbf{A} $$
+
+    이다. ■ 
+
+    한편 $\alpha$ 는 스칼라이므로 $\alpha = \alpha ^{\intercal }$ 이다. 그러므로 
+
+    $$ \alpha = \alpha ^{\intercal } = \mathbf{x}^{\intercal }\mathbf{A}^{\intercal }\mathbf{y} $$
+
+    이다. 그렇다면 마찬가지로 정리 5 에 의하여
+
+    $$ \dfrac{\partial \alpha }{\partial \mathbf{y}} = \mathbf{x}^{\intercal }\mathbf{A}^{\intercal } $$
+
+    이다. ■ 
+
+- 정리 8 (일독립변수와 그것의 전치로 구성된 행렬방정식의 미분)
+
+  $n \times 1$ 행렬 $\mathbf{x}$, $n \times n$ 행렬 $\mathbf{A}$ 에 대하여 $\mathbf{A}$ 가 $\mathbf{x}$ 에 독립적일 때 스칼라
+
+  $$ \alpha = \mathbf{x}^{\intercal }\mathbf{Ax} $$
+
+  가 존재한다. 이때 $\alpha$ 에 대한 $\mathbf{x}$ 의 미분은 
+
+  $$ \dfrac{\partial \alpha }{\partial \mathbf{x}} = \mathbf{x}^{\intercal }(\mathbf{A}+\mathbf{A}^{\intercal }) $$
+
+  이다.
+
+  - 증명
+
+    먼저 $\mathbf{Ax} = \begin{pmatrix} a _{11} & a _{12} & \dots & a _{1n} \\ a _{21} & a _{22} & \dots & a _{2n} \\ \vdots & \vdots  & \ddots & \vdots \\ a _{n1} & a _{n2} & \dots & a _{nn} \\ \end{pmatrix} \begin{pmatrix} x _{1}\\ x _{2}\\ \vdots \\ x _{n}\\ \end{pmatrix}= \begin{pmatrix} \displaystyle \sum_{i=1}^{n} a _{1i} x_i\\ \displaystyle\sum_{i=1}^{n} a _{2i} x_i\\ \vdots \\ \displaystyle\sum_{i=1}^{n} a _{ni} x_i\\ \end{pmatrix}$ 이다. 그러므로 
+
+    $$ \alpha = \mathbf{x}^{\intercal }\mathbf{Ax} = \begin{pmatrix} x_1 & x_2 & \dots & x_n \\ \end{pmatrix} \begin{pmatrix} \displaystyle \sum_{i=1}^{n} a _{1i} x_i\\ \displaystyle\sum_{i=1}^{n} a _{2i} x_i\\ \vdots \\ \displaystyle\sum_{i=1}^{n} a _{ni} x_i\\ \end{pmatrix} = x_1 \sum_{i=1}^{n}a _{1i}x _i + x_2 \sum_{i=1}^{n}a _{2i}x _i +\dots + x_n \sum_{i=1}^{n}a _{ni}x _i $$
+
+    $$ = \sum_{j=1}^{n} x_j \sum_{i=1}^{n}a _{ji}x_i = \sum_{j=1}^{n} \sum_{i=1}^{n}a _{ij}x_i x_j $$
+
+    이다. 이 $\alpha$ 에서 $k \in \{1,2,\dots,n\}$ 에 대하여 $x_k$ 에 종속된 수식만 생각하면 $j=k, i \neq k$ 일때
+
+    $$ \sum_{i \in \{1,\dots,(k-1),(k+1),\dots,n\}}a _{ik}x_i x_k $$
+
+    이고, $i=k , j \neq k$ 일때
+
+    $$ \sum_{j \in \{1,\dots,(k-1),(k+1),\dots,n\}}a _{kj}x_k x_j $$
+
+    이고, $i=j=k$ 일때
+
+    $$ a _{kk}x_k ^{2} $$
+
+    이다. 그렇다면 $\alpha$ 를 $x_k$ 에 대하여 미분하면
+
+    $$ \dfrac{\partial \alpha }{\partial x_k} = \sum_{i \in \{1,\dots,(k-1),(k+1),\dots,n\}}a _{ik}x_i + \sum_{j \in \{1,\dots,(k-1),(k+1),\dots,n\}}a _{kj}x_j + 2a _{kk}x_k = $$ 
+
+    $$=  \sum_{i=1}^{n} a _{ik}x_i + \sum_{j=1}^{n}a _{kj}x_j $$
+
+    이다. 그런데 $n \times 1$ 행렬 $\mathbf{Ax} = \begin{pmatrix} \displaystyle \sum_{i=1}^{n} a _{1i} x_i\\ \displaystyle\sum_{i=1}^{n} a _{2i} x_i\\ \vdots \\ \displaystyle\sum_{i=1}^{n} a _{ni} x_i\\ \end{pmatrix}$ 에 대한 전치는 $1 \times n$ 행렬
+
+    $$\mathbf{x ^{\intercal }A ^{\intercal }} = \begin{pmatrix} \displaystyle \sum_{i=1}^{n} a _{1i} x_i& \displaystyle\sum_{i=1}^{n} a _{2i} x_i& \dots & \displaystyle\sum_{i=1}^{n} a _{ni} x_i \end{pmatrix}$$
+
+    이고,
+
+    $$\mathbf{x ^{\intercal }A } = \begin{pmatrix} \displaystyle \sum_{i=1}^{n} a _{i1} x_i& \displaystyle\sum_{i=1}^{n} a _{i2} x_i& \dots & \displaystyle\sum_{i=1}^{n} a _{in} x_i \end{pmatrix}$$
+
+    이다.
+
+    그러므로 $\forall k \in \{1,2,\dots,n\}$ 에 대하여 
+
+    $$ \dfrac{\partial \alpha }{\partial \mathbf{x}} = \mathbf{x ^{\intercal }A ^{\intercal }} + \mathbf{x ^{\intercal }A} = \mathbf{x ^{\intercal }(A ^{\intercal }+ A)} $$
+
+    이다. ■   
