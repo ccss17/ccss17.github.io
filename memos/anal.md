@@ -126,6 +126,8 @@ $$ d: U \times U \to [0, \infty) $$
 
 </blockquote>
 
+- **추상대수학에서 대수구조 중 하나인 것 같네**
+
 - 좌표공간은 거리공간의 특수한 예이다.
 
 - 거리공간은 쉽게 말해 두 점 사이의 거리가 정의된 공간에 불과하다.
@@ -186,12 +188,6 @@ $$ d_2(f(x), f(y)) = d_1(x, y) $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-좌표평면(직교 좌표계, rectangular coordinate system) : 임의 차원의 유클리드 공간을 나타내는 좌표계 중 하나이다. 
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
 튜플(tuple) : 셀 수 있는 수량의 순서있는 열거이다. 
 
 </blockquote>
@@ -220,6 +216,106 @@ $$ d_2(f(x), f(y)) = d_1(x, y) $$
 
   집합 $A = \{a, b\}$ 의 원소를 집합 $B = \{c\}$ 로 대응시키는 모든 순서쌍은 집합 $R = \{(a, c), (b, c)\}$ 이다.
 
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+좌표계(coordinate system) : 임의의 집합 $U$ 의 각 원소 $p$ 가 단사 함수 
+
+$$ f: U \to \R ^{n} $$
+
+의 함숫값 
+
+$$ f(p) = (f_1(p),f_2(p),\dots,f_n(p)) $$
+
+에 의하여 구별되면, 함수 $f$ 를 $U$ 의 한 좌표계라고 한다.
+
+</blockquote>
+
+- $f(p)$ 를 점 $p$ 의 $f$-좌표 라고 한다.
+
+- $f_1(p)$ 를 $p$ 의 첫번째 성분(또는 $f_1$ 성분), $f_2(p)$ 를 $p$ 의 두번째 성분(또는 $f_2$ 성분), $f_n(p)$ 를 $p$ 의 n번째 성분(또는 $f_n$ 성분) 이라 한다.
+
+- 예시 
+
+  삼차원 공간 $\R ^{3}$ 속의 북반구면
+
+  $$ S : x ^{2} + y ^{2} + z ^{2} = 1, z \geq 0 $$
+
+  에서 함수 
+
+  $$ (x, y): S \to \R ^{2} $$
+
+  는 좌표계이다.
+
+  - 비유클리드 기하학의 구면위의 좌표일까?
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+직교좌표계(좌표평면, 정규좌표계 rectangular coordinate system) : $n$차원 유클리드공간 $\mathbb{E} ^{n}$ 과 데카르트 공간 $\R ^{n}$ 사이의 등장사상
+
+$$ x = (x_1, \dots, x_n) : \mathbb{E} ^{n} \to \R ^{n} $$
+
+이다.
+
+</blockquote>
+
+- 임의 차원의 유클리드 공간을 나타내는 좌표계 중 하나이다. 
+
+- $x_2, \dots, x_n$ 성분이 모두 $0$ 인 점들의 집합을 $x_1$축(또는 첫번째 축)이라고 한다.
+
+  일반적으로 $n$ 이하의 자연수 $i$ 에 대하여 $i$ 번째 성분을 제외한 나머지 성분이 모두 $0$ 인 점들의 집합을 $x_i$ 축(또는 $i$번째 축)이라고 한다.
+
+  - 이때 각 축들은 증가하는 방향을 갖고 있다.
+  
+  - 예시 
+
+    $2$차원 유클리드 공간 $\mathbb{E} ^{2}$ 과 $\R ^{2}$ 사이의 등장사상
+
+    $$ x = (x_1, x_2) : \mathbb{E} ^{2} \to \R ^{2} $$
+
+    으로 정의된 직교좌표계에서 $x_2 = 0$ 인 집합은 $x_1$축 이고, $x_1 = 0$ 인 집합은 $x_2$축 이다.
+
+    이것은 우리가 일반적으로 가장 자주 사용하던 $x, y$ 축으로 이루어진 $2$차원 좌표평면에서의 $x$축과 $y$축과 같다.
+
+- 좌표계가 주어진 유클리드 공간의 원점 
+
+  $$ O := x ^{-1}(0, \dots, 0) $$
+
+  은 모든 성분이 $0$ 이다.
+
+- 직교좌표계가 주어진 유클리드 공간 $\mathbb{E} ^{n}$ 은 데카르트 공간 $\R ^{n}$ 과 같다.
+
+- 공간의 점(위치)를 표현하기 위하여 직교좌표계 뿐만 아니라 극좌표계, 원기둥좌표계, 구면좌표계 등등이 유용하게 사용된다.
+
+  좌표계는 상황과 필요에 따라 인위적으로 정해지지만, 좌표계과 관계없이 정해지는 양들, 즉 불변량(invariants)은 (공간에서?) 중요한 의미를 갖는다.
+
+  - 불변량은 점들의 질량중심, 정사각행렬의 고유값, 대각합, 행렬식 등이 있다. 곡선의 길이, 곡률, 접선, 접평면도 중요한 불변량이다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+데카르트 공간 $\R ^{n}$ : 유클리드 공간 $\mathbb{E} ^{n}$ 에 직교좌표계가 주어진 것이다.
+
+</blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+표준좌표계(standard coordinate system) : $n$차원 데카르트 공간 $\R ^{n}$ 에서 항등사상 
+
+$$ x = (x_1, \dots, x_n): \R ^{n} \to \R ^{n} $$
+
+이다.
+
+</blockquote>
+
+- 표준좌표계의 $i$번째 성분함수 $x_i$ 는 $i$번째 축으로의 정사영이다.
+
+- 예시 
+
+  $n=3$ 일 때 즉, $3$ 차원 데카르트 공간 $\R ^{3}$ 의 표준좌표계를 보통 $(x, y, z)$ 로 나타낸다.
+
+  즉, $\begin{cases} x(a,b,c)=a&\text{}\\ y(a,b,c)=b&\text{}\\ z(a,b,c)=c&\text{}\\ \end{cases}$ 이다.
+
+
+  
 ## <a name="구간 " href="#구간 ">구간 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">

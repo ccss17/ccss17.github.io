@@ -1650,3 +1650,357 @@ $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\
 이다.
 
 </blockquote>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+열린집합 : 위상수학에서 열린집합은 스스로의 경계를 포함하지 않는 위상 공간의 부분집합이다.
+
+</blockquote>
+
+- 예시
+
+  양수 $r$ 에 대하여 $n$-공간의 한 점 $P$ 를 중심으로 반지름이 $r$ 인 열린공
+
+  $$ \mathbb{B} ^{n}(P, r) := \{X \in \R ^{n} \Big ||X-P| < r\} $$
+
+  은 열린 집합이다.
+
+  다음은 2차원 열린 공으로써, 열린 원판 $\mathbb{B} ^{2}$ 이다.
+
+  ![](https://mblogthumb-phinf.pstatic.net/20141228_119/dydrogud22_1419762043201Uk8cC_JPEG/2.jpg?type=w2)
+
+# <a name="선형화" href="#선형화">선형화</a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 접선의 방정식
+
+$$ L(x) = f'(a)(x-a) + f(a) $$
+
+를 함수 $f$ 의 선형화라고 한다.
+
+</blockquote>
+
+- 다음 그래프는 $y = x^2, y = 2x-1$ 이다.
+
+  ![desmos-graph(1)](https://user-images.githubusercontent.com/16812446/79032028-2b70f280-7bde-11ea-84c5-a63f705c0906.png)
+
+  그런데 $x=1$ 지점에서 그래프를 더 확대해보면 다음과 같다. 
+
+  ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/79032042-43e10d00-7bde-11ea-94f6-9056afab3f22.png)
+
+  여기에서 더 확대해보자. 
+
+  ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/79032074-991d1e80-7bde-11ea-9a8f-3e636d9bb31b.png)
+
+  그러면 거의 두 함수를 분간할 수가 없다. 
+
+  이것은 원함수의 임의의 점 $x=a$ 에서의 접선을 그렸을 때 $x=a$ 를 중심으로 그래프를 끝없이 확대해보면 원함수와 접선이 거의 똑같아지는 것을 의미한다.
+
+- 이 현상을 이용하여 $x=a$ 에서 원래의 함수를 선형 근사시킬 수 있는 방법을 $x=a$ 에서의 접선 
+
+  $$ L(x) = f'(a)(x-a) + f(a) $$
+
+  을 구하는 것이라 할 수 있다. 
+
+- 예시 
+
+  $y = \sqrt[]{1+x}$ 을 $x = 0$ 에서 선형근사시켜보면 다음과 같다.
+
+  $$ \sqrt[]{1+x} \approx 1 + \frac{x}{2} $$
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+표준 선형 근사(standard linear approximation) : 선형화의 정의에서 $x=a$ 에서 함수 $f$ 의 함수 $L$ 에 의한 근사
+
+$$ f(x) \approx L(x) $$
+
+를 표준 선형 근사라한다.
+
+</blockquote>
+
+- 이때 $x=a$ 를 근사의 중심이라 한다. 
+
+## <a name="미분 " href="#미분 ">미분 </a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+미분(differential) : $y = f(x)$ 를 미분가능한 함수이고 미분 $dx$ 가 독립변수일 때 미분 $dy$ 는 
+
+$$ dy = f'(x)dx $$
+
+이다. 
+
+</blockquote>
+
+- 가끔 $dy = f'(x)dx$ 를 다음과 같이 미분 $f$ 로도 표현한다.
+
+  $$ df = f'(x)dx $$
+
+- 미분은 서로 다른 두 개념인 differentiation(미분) 과 differential(미분) 으로 동시에 쓰인다. 전자는 도함수를 얻는다는 뜻의 differentiate 의 명사형이다. 후자 differential 은 원함수의 선형근사함수를 뜻한다.
+
+  가령 함수 $f(x)$ 의 한 점 $a$ 에서의 미분(differential) 은 
+
+  $$ df(\Delta x) = f'(a)\Delta x $$
+
+  로 표현되는 선형근사함수이다. 
+
+- 기하학적 의미 
+
+  $x = a, dx = \Delta x$ 로 두자. $x$ 의 증분 $\Delta x$ 는 $x = a$ 에서 $x = a + \Delta x$ 의 거리
+
+  $$ \Delta x = (\Delta x + a) - (a) $$
+
+  로 두자.
+
+  그러면 우선 $y$ 의 증분 
+
+  $$ \Delta y = f(a + \Delta x) - f(a) $$
+
+  은
+
+  $$ \Delta y = f(a + dx) - f(a) $$
+
+  이다. 한편 $x = a$ 에서 접선은 
+
+  $$ L(x) = f'(a)(x-a) + f(a) $$
+
+  이므로 $x = a$ 근방에서 접선의 변화를 
+
+  $$ \Delta L = L(a + dx) - L(a) $$
+
+  에서
+
+  $$ = f'(a)\{(a+dx)-a\} +f(a) -f(a) $$
+
+  $$ = f'(a)dx $$
+
+  이므로 
+
+  $$ \Delta L = f'(a)dx = dy $$
+
+  이다. 
+
+  이것은 함수 $f$ 의 $x=a$ 에서 선형근사함수 $L(x)$ 의 변화가 $x = a$ 이고 $dx = \Delta x$ 일 때 $dy$ 과 정확히 일치한다는 것이다. 
+
+- 예시 
+
+  $y = x ^{5} + 37x$ 에서의 $dy$ 를 찾자. 
+
+  $$ dy = (5x ^{4} + 37)dx $$
+
+- 예시 
+
+  합성함수 미분법(Chain Rule) 과 다른 미분법을 함께 사용할 수 있다. 
+
+  $$ d (\tan  2x) = \sec ^{2}(2x)d(2x) $$ 
+
+  에서 
+
+  $$ d(2x) = (2x)'dx = 2dx $$
+
+  이므로
+
+  $$ d (\tan 2x) = 2 \sec ^{2} 2x dx $$
+
+  이다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+미분의 추정(estimating with differentials) : 함수 $f(x)$ 가 $x = a$ 에서 미분가능할 때 $x = a$ 의 근방 $x = a + dx$ 에서 함수값이 변하는 정도 $f(a + dx)$ 는 근사적으로
+
+$$ f(a + dx) \approx f(a) + dy $$
+
+이다. 
+
+</blockquote>
+
+- $y$ 의 증분은 
+
+  $$ \Delta y = f(a + \Delta x) - f(a) $$
+
+  이다. 이때 $dx= \Delta x$ 가 충분히 작으면 $y$ 의 증분 $\Delta y$ 는 미분 $dy$ 와 거의 똑같아진다. 왜냐하면 함수 $f$ 의 접선 $L$ 의 증분 
+
+  $$ \Delta L = f'(a)dx = dy$$
+
+  가 $x = a$ 의 근방에서 함수 $f$ 의 증분 $\Delta y$ 와 거의 똑같아지기 때문이다. 그러므로 $x = a$ 근방에서 
+
+  $$ f'(a)dx = dy \approx \Delta y $$
+
+  라 할 수 있고, 이에 따라
+
+  $$ f(a + dx) = f(a) + \Delta y $$
+
+  를 근사적으로 
+
+  $$ f(a + dx) \approx  f(a) + dy $$
+
+  로 쓸 수 있다. 
+
+- 예시 
+
+  $7.97 ^{\frac{1}{3}}$ 을 추산해보자. 
+
+  $f(x) = x ^{\frac{1}{3}}$ 의 미분은 
+
+  $$ dy = \frac{1}{3x ^{\frac{2}{3}}}dx $$
+
+  이다. 
+
+  이때 $a = 8$ 로 둔다면 $7.97$ 을 $x = a$ 근방의 함수 $f$ 의 접선의 함수값으로 생각할 수 있다. 
+
+  그렇다면 $dx = -0.03$ 으로 둘 때 $x = a$ 에서의 함수값 $f(7.97)$ 을 다음과 같이 근사시킬 수 있다. 
+
+  $$ f(7.97) = f(a + dx) \approx f(a) + dy $$
+
+  그러면
+
+  $$ f(a) + dy = f(a) + f'(a)dx $$
+
+  에서 $f'(x) = \frac{1}{3x ^{\frac{2}{3}}}$ 이고 $dx = -0.03$ 으로 두었으므로
+
+  $$ = 8 ^{\frac{1}{3}} + \frac{1}{3(8)^{\frac{2}{3}}}(-0.03) $$
+
+  $$ = 1.9975 $$
+
+  이다. 따라서 
+
+  $$ \therefore  7.97 ^{\frac{1}{3}} \approx 1.9975 $$
+
+  이다.
+
+## <a name="이변수 함수 선형화" href="#이변수 함수 선형화">이변수 함수 선형화</a>
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+접평면(tangent plane) : $3$ 차원 곡면의 한 접점에 존재하는 무수히 많은 접선들이 동시에 상주하고 있는 평면이다.
+
+![index](https://user-images.githubusercontent.com/16812446/79077468-ec0ce800-7d3c-11ea-8d57-3c992ab66d6e.jpg)
+
+</blockquote>
+
+- 위 그림과 같이 어떤 곡면에는 접선이 무수히 많고 그 접선들이 상주하는 평면이 곡면의 접평면이다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+법선벡터(normal vector) : 접평면에 직교하는 벡터이다.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Surface_normal_illustration.svg/220px-Surface_normal_illustration.svg.png)
+
+</blockquote>
+
+- 즉 법선벡터는 위 그림의 화살표 벡터와 같이 $3$ 차원 곡면의 한 접점에서의 모든 접선과 직교한다.
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+이변수 함수 선형화 또는 접평면(tangent plane) : $f$ 의 연속인 편도함수들이 존재할 때 점 $P(x_0, y_0, z_0)$ 에서 곡면 $z = f(x, y)$ 에 대한 접평면의 방정식은 
+
+$$ z - z_0 = f_x(x_0, y_0)(x- x_0) + f_y(x_0, y_0)(y - y_0) $$
+
+또는 
+
+$$ L(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y - y_0)
+
+$$
+
+이고 이것은 이변수 함수 $f(x, y)$ 의 선형화이다. 
+
+</blockquote>
+
+- 또한 점 $P(x_0, y_0, z_0)$ 근방에서 
+
+  $$ f(x, y) \approx L(x, y) $$
+
+  이 성립한다.
+
+  일변수 함수 $f$ 를 $x=a$ 에서 끝없이 확대했을 때 $x=a$ 에서 접선과 거의 똑같아지는 것과 같이 이변수 함수 $f$ 를 끝없이 확대하면 접평면의 방정식과 거의 똑같아지기 때문이다. 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+이변수 함수 미분 또는 전미분(total differential) : 점 $(x_0, y_0)$ 에서 점 $(x_0 + dx, y_0 + dy)$ 로 움직였을 때의 변화량 
+
+$$ df = f_x(x_0, y_0)dx + f_y (x_0, y_0)dy $$
+
+또는
+
+$$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
+
+을 함수 $f$ 의 전미분이라 한다. 
+
+</blockquote>
+
+- $y = f(x, y)$ 가 미분가능한 함수이면 점 $(x_0, y_0)$ 에서 편미분계수가 존재한다. 이 점에서 조금 움직인 점 $(x_0+\Delta x, y_0+\Delta y)$ 를 생각할 수 있고 이때의 함수 $f$ 의 변화량
+
+  $$ \Delta f =f(x_0+\Delta x, y_0+\Delta y)- f(x_0, y_0) $$
+
+  을 생각할 수 있다. 
+
+  이때 접평면의 변화량 
+
+  $$ \Delta L = L(x_0 + \Delta x, y_0 + \Delta y) - L(x_0, y_0) $$
+
+  을 접평면의 방정식을 사용하여 풀면
+
+  $$ = f_x(x_0, y_0)\Delta x + f_y(x_0, y_0)\Delta y $$
+
+  이다. 
+
+  이때 $dx, dy$ 는 독립변수이므로 임의의 값을 대입할 수 있다. 또한 우리는 보통
+
+  $$ dx = \Delta x = x - x_0, dy = \Delta y = y - y_0 $$
+
+  으로 정의한다.
+
+- 편미분이 변수 하나에 대한 함수의 변화량을 생각했다면 전미분은 모든 변수에 대한 변화량에 따라 함수가 얼마나 변하는지를 측정한다. 
+
+- 예시 
+
+  반지름이 $r = 1$ 이고 높이가 $h = 5$ 인 원통이 있다고 하자. 이때 반지름과 높이를 변화시켜서 
+
+  $$ dr = +0.03, dh = -0.1 $$
+
+  가 되게 한다고 하자. 이때 부피의 변화량을 구해보자. 
+
+  먼저 부피 $V$ 는 다음과 같은 이변수 함수다.
+
+  $$ V = V(r, h) = \pi r ^{2}h $$
+
+  $V$ 를 선형 근사시키면(전미분하면)
+
+  $$ \Delta V \approx dV = V_r(r_0, h_0)dr + V_h(r_0, h_0)dh $$
+
+  이다.
+
+  $$ V_r = 2 \pi rh, V_h = \pi r ^{2} $$
+
+  이므로
+
+  $$ dV = 2 \pi r_0h_0dr + \pi r_0 ^{2}dh = 2 \pi 1 \cdot 5 \cdot (0.03) + \pi (1) ^{2}(-0.1) = 0.3 \pi - 0.1 \pi = 0.2 \pi \approx 0.63 cm ^{3} $$
+
+  을 얻는다. 
+
+- 예시 
+
+  $2.5m$ 높이와 $0.5m$ 반지름의 원뿔형 물탱크의 부피가 반지름과 높이의 변화에 얼마나 민감하게 변하는지 조사하려 한다.
+
+  먼저 부피 $V$ 는 
+
+  $$ V = \pi r ^{2} h $$
+
+  이며, 각 변수에 대한 전미분은 다음과 같다. 
+
+  $$ dV = V_r(0.5, 2.5)dr + V_h(0.5,2.5)dh $$
+
+  $$ =(2 \pi rh)_{(0.5, 2.5)} dr + (\pi r ^{2})_{(0.5,2.5)}dh $$
+
+  $$ = 2.5 \pi dr + 0.25 \pi dh $$
+
+  따라서 반지름 $r$ 의 단위 $1$ 변화는 전체 부피 $V$ 를 $2.5 \pi$ 변하게 하고
+
+  높이 $h$ 의 단위 $1$ 변화는 전체 부피 $V$ 를 $0.25\pi$ 변하게 한다.
+
+  이로보아 반지름이 변할 때 물탱크의 전체 부피가 훨씬 더 민감하게 변한다는 것을 알 수 있다. 
+
+
+
+

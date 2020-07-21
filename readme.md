@@ -28,6 +28,8 @@
 
 - ### [정신지도규칙/방법서설 메모(데카르트)](https://ccss17.github.io/descartes.html)
 
+- ### [정보 이론](information.md)
+
 </blockquote>
 
 # <a name="수학 메모" href="#수학 메모">수학 메모</a>
@@ -75,7 +77,7 @@
 
 - 해석학 메모
     
-  ###### [해석학, 평면에서의 위치 표현, 집합 $\R ^{2}$, 공간에서의 위치 표현, 집합 $\R ^{3}$, $n$ 차원 실수공간, 또는 $n$차원 좌표공간, 또는 $n$차원 데카르트 공간 또는, $n$-공간($n$-space), 점(dot) : $n$-공간 $\R ^{n}, 거리함수(metric function), 거리공간(metric space), 등장사상(isometry), 또는 거리 보존 사상, 또는 등거리 변환, 또는 등거리 사상, 등장(isometric), 유클리드 공간, 좌표평면(직교 좌표계, rectangular coordinate system), 튜플(tuple), 순서쌍(2-튜플, ordered pair), 이항관계(binary relation), 구간(interval), 폐구간(닫힌구간, closed interval), 개구간(열린구간, open interval), 반열린구간(반개구간 또는 반폐구간, half open interval 또는 half closed interval), 수직선(number line), 좌표(coordinate), 좌표평면(coordinate plane), 절편, 사분면(quadrant), 좌표평면에서의 직선, 직선의 기울기, 거리, 유클리드 거리(Euclidean distance), 두 점의 거리의 의미, 수직선에서 두 점의 거리, 좌표평면에서 두 점의 거리, 공간 좌표, 3차원 좌표계, 대응, 함수(function) 또는 사상(mapping), 정의역(domain), 공역(codomain), 상(image) 또는 함수값, 원상(preimage) 또는 역상(inverse image), 치역(range), 단사함수(injection function) 또는 일대일 함수(one-to-one function), 전사함수(onto function, surjection function), 전단사 함수(bijection, bijective function) 또는 일대일 대응, 서로 같은 함수, 실변수 함수(function of a real variable), 실숫값 함수(real-valued function) 또는 실함수(real function), 복소변수 함수(function of a complex variable), 복소 함수(complex function), 다변수함수(multivariate function), 다변수 실함수, 다변수 복소함수, 연속, 연속함수, 열린 공(open ball), 닫힌 공(closed ball), 유계(bounded), 최대최소 정리](https://ccss17.github.io/anal.html)
+  ###### [해석학, 평면에서의 위치 표현, 집합 $\R ^{2}$, 공간에서의 위치 표현, 집합 $\R ^{3}$, $n$ 차원 실수공간, 또는 $n$차원 좌표공간, 또는 $n$차원 데카르트 공간 또는, $n$-공간($n$-space), 점(dot) : $n$-공간 $\R ^{n}, 거리함수(metric function), 거리공간(metric space), 등장사상(isometry), 또는 거리 보존 사상, 또는 등거리 변환, 또는 등거리 사상, 등장(isometric), 유클리드 공간, 튜플(tuple), 순서쌍(2-튜플, ordered pair), 이항관계(binary relation), 좌표계(coordinate system), 직교좌표계(좌표평면, 정규좌표계 rectangular coordinate system), 데카르트 공간 $\R ^{n}$, 표준좌표계(standard coordinate system), 구간(interval), 폐구간(닫힌구간, closed interval), 개구간(열린구간, open interval), 반열린구간(반개구간 또는 반폐구간, half open interval 또는 half closed interval), 수직선(number line), 좌표(coordinate), 좌표평면(coordinate plane), 절편, 사분면(quadrant), 좌표평면에서의 직선, 직선의 기울기, 거리, 유클리드 거리(Euclidean distance), 두 점의 거리의 의미, 수직선에서 두 점의 거리, 좌표평면에서 두 점의 거리, 공간 좌표, 3차원 좌표계, 대응, 함수(function) 또는 사상(mapping), 정의역(domain), 공역(codomain), 상(image) 또는 함수값, 원상(preimage) 또는 역상(inverse image), 치역(range), 단사함수(injection function) 또는 일대일 함수(one-to-one function), 전사함수(onto function, surjection function), 전단사 함수(bijection, bijective function) 또는 일대일 대응, 서로 같은 함수, 실변수 함수(function of a real variable), 실숫값 함수(real-valued function) 또는 실함수(real function), 복소변수 함수(function of a complex variable), 복소 함수(complex function), 다변수함수(multivariate function), 다변수 실함수, 다변수 복소함수, 연속, 연속함수, 열린 공(open ball), 닫힌 공(closed ball), 유계(bounded), 최대최소 정리](https://ccss17.github.io/anal.html)
 
 - 삼각 함수 메모
     
