@@ -2003,3 +2003,9 @@ $$ Z = X W + B $$
 Affine 변환의 역전파 : 
 
 </blockquote>
+
+- 예시
+  
+  $1 \times 2$ 행렬 $\mathbf{X}$, $2 \times 3$ 행렬 $\mathbf{W}$, $1 \times 3$ 행렬 $\mathbf{W}$ 에 대하여 $1 \times 3$ 행렬 $\mathbf{Y} = \mathbf{XW+B}$ 이 존재한다.
+
+- 신경망 순전파 때 사용되는 행렬곱을 기하학에서 어파인 변환(affine transformation) 이라고 한다.
