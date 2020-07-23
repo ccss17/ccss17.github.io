@@ -2004,8 +2004,195 @@ Affine 변환의 역전파 :
 
 </blockquote>
 
-- 예시
+- 정리
   
-  $1 \times 2$ 행렬 $\mathbf{X}$, $2 \times 3$ 행렬 $\mathbf{W}$, $1 \times 3$ 행렬 $\mathbf{W}$ 에 대하여 $1 \times 3$ 행렬 $\mathbf{Y} = \mathbf{XW+B}$ 이 존재한다.
+  $n \times d$ 입력 행렬 $\mathbf{X}$, $d \times m$ 가중치 행렬 $\mathbf{W}$ 에 대한 $n \times m$ 행렬 $\mathbf{Y=XW}$ 과 손실함수 $l$ 에 대한 스칼라 $L=l(\mathbf{Y})$ 에 대하여 $\mathbf{X}$ 의 미분은 
+
+  $$ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\mathbf{W}^{\intercal } $$ (1)
+
+  이고, $\mathbf{W}$ 의 미분은
+  
+  $$ \dfrac{\partial L}{\partial \mathbf{W}} = \mathbf{X}^{\intercal } \dfrac{\partial L}{\partial \mathbf{Y}}$$ (2)
+
+  이다.
+
+- (1) 증명
+
+  $n \times d$ 입력 행렬 $\mathbf{X}$, $d \times m$ 가중치 행렬 $\mathbf{W}$ 에 대한 행렬곱 $\mathbf{Y}$ 는 $n \times m$ 행렬
+
+  $$ \mathbf{Y} = \mathbf{XW} = \begin{pmatrix} x _{11}&x _{12}&\dots&x _{1d}\\ x _{21}&x _{22}&\dots&x _{2d}\\ \vdots & \vdots & \ddots & \vdots \\ x _{n1}&x _{n2}&\dots&x _{nd}\\ \end{pmatrix} \begin{pmatrix} w _{11} & w _{12} &\dots & w _{1m} \\ w _{21} & w _{22} &\dots & w _{2m} \\ \vdots & \vdots & \ddots & \vdots \\ w _{d1} & w _{d2} &\dots & w _{dm} \\ \end{pmatrix} $$
+
+  $$ = \begin{pmatrix} \displaystyle \sum_{k=1}^{d}x _{1k} w _{k1} & \displaystyle \sum_{k=1}^{d}x _{1k} w _{k2} & \dots & \displaystyle \sum_{k=1}^{d}x _{1k} w _{km} \\ \displaystyle \sum_{k=1}^{d}x _{2k} w _{k1} & \displaystyle \sum_{k=1}^{d}x _{2k} w _{k2} & \dots & \displaystyle \sum_{k=1}^{d}x _{2k} w _{km} \\ \vdots & \vdots & \ddots & \vdots \\ \displaystyle \sum_{k=1}^{d}x _{nk} w _{k1} & \displaystyle \sum_{k=1}^{d}x _{nk} w _{k2} & \dots & \displaystyle \sum_{k=1}^{d}x _{nk} w _{km} \\ \end{pmatrix} $$
+
+  이다. 이 순전파 출력 $\mathbf{Y}$ 이 손실함수 $l$ 로 전달되어 최종적으로 스칼라 $L$ 이 되었다고 하면 
+
+  $$ L = l(\mathbf{Y}) = l(\mathbf{XW}) $$
+
+  이다.
+
+  $L$ 이 스칼라고 $\mathbf{Y}$ 는 $n \times m$ 행렬이므로 $L$ 에 대한 $\mathbf{Y}$ 의 미분은 $n \times m$ 행렬 
+
+  $$ \dfrac{\partial L}{\partial \mathbf{Y}} = \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix} $$
+
+  이다. $\mathbf{Y}$ 는 $\mathbf{X, W}$ 에 대한 함수이므로 $L$ 에 대한 $\mathbf{X, W}$ 의 미분은 이독립변수와 일매개변수의 합성함수의 미분
+
+  $$ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}}, \dfrac{\partial L}{\partial \mathbf{W}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{W}} $$
+
+  이다. 이때 $L$ 에 대한 $\mathbf{X}$ 의 미분은 행렬 미분의 정의에 의하여 야코비 행렬
+
+  $$ \dfrac{\partial L}{\partial \mathbf{X}} = \begin{pmatrix} \dfrac{\partial L}{\partial x _{11}}& \dfrac{\partial L}{\partial x _{12}}& \dots& \dfrac{\partial L}{\partial x _{1d}}\\ \dfrac{\partial L}{\partial x _{21}}& \dfrac{\partial L}{\partial x _{22}}& \dots& \dfrac{\partial L}{\partial x _{2d}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial x _{n1}}& \dfrac{\partial L}{\partial x _{n2}}& \dots& \dfrac{\partial L}{\partial x _{nd}}\\ \end{pmatrix} $$
+
+  이다. 이때 $L$ 에 대한 $\mathbf{X}$ 의 $(1,1)$ 원소 $x_{11}$ 의 미분은
+  
+  $\mathbf{Y}$ 를 행렬이 아니라 매개변수의 나열로 본다면, $\dfrac{\partial L}{\partial x _{11}}$ 에 대한 매개변수를 갖는 합성함수의 편미분으로 나타낼 수 있으므로 스칼라
+
+  $$ \dfrac{\partial L}{\partial x _{11}} = \sum_{i=1}^{n}\sum_{j=1}^{m}\dfrac{\partial L}{\partial y _{ij}}\dfrac{\partial y _{ij}}{\partial x _{11}} $$
+
+  이다. 그런데 귀찮은 덧셈 연산을 피하기 위하여 모든 스칼라 $\dfrac{\partial L}{\partial y _{ij}}$ 들을 행렬 $\dfrac{\partial L}{\partial \mathbf{Y}}$ 로 쓰고, 모든 스칼라 $\dfrac{\partial y _{ij}}{\partial x _{11}}$ 들을 행렬 $\dfrac{\partial \mathbf{Y}}{\partial x _{11}}$ 로 쓰면 이것을 Frobenius 내적
+
+  $$ = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{11}} \bigg  > _{\mathbf{F}}$$
+
+  으로 나타낼 수 있다. 이때 
+
+  $$ \dfrac{\partial \mathbf{Y}}{\partial x _{11}} = \begin{pmatrix} w _{11}& w _{12}& \dots& w _{1m} \\ 0& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ 0& 0& \dots& 0\\ \end{pmatrix} $$
+
+  이므로 
+
+  $$ \bigg < \dfrac{\partial L}{\partial Y} , \dfrac{\partial Y}{\partial x _{11}} \bigg > _{\mathbf{F}} = \Bigg < \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}, \begin{pmatrix} w _{11}& w _{12}& \dots& w _{1m} \\ 0& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ 0& 0& \dots& 0\\ \end{pmatrix}  \Bigg > _{\mathbf{F}} $$
+
+  $$ = \dfrac{\partial L}{\partial y _{11}} w _{11} + \dfrac{\partial L}{\partial y _{12}} w _{12} + \dots+ \dfrac{\partial L}{\partial y _{1m}} w _{1m} = \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k} $$
+
+  이다. 즉, $\displaystyle \dfrac{\partial \mathbf{Y}}{\partial x _{11}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{11}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k}$ 이다. 마찬가지로 
+
+  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial x _{12}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{12}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{2k}$$
+  
+  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial x _{21}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{21}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{1k}$$
+
+  $$ \vdots $$
+  
+  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial x _{ij}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{ij}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{ik}}w _{jk}$$
+
+  이다. 그렇다면 최종적으로 $L$ 에 대한 $\mathbf{X}$ 의 미분은 $n \times d$ 행렬
+
+  $$ \therefore  \dfrac{\partial L}{\partial \mathbf{X}} = \begin{pmatrix} \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k}& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{2k}& \dots& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{dk} \\ \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{1k}& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{2k}& \dots& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{dk} \\ \vdots & \vdots & \ddots & \vdots \\ \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{1k}& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{2k}& \dots& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{dk} \\ \end{pmatrix}$$
+
+  $$ = \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}\begin{pmatrix} w_{11}& w_{21}& \dots & w_{d1} \\ w_{12}& w_{22}& \dots & w_{d2} \\ \vdots & \vdots & \ddots & \vdots \\ w_{1m}& w_{2m}& \dots & w_{dm} \\ \end{pmatrix} $$
+
+  $$ = \boxed{\dfrac{\partial L}{\partial \mathbf{Y}}\mathbf{W}^{\intercal } } $$
+
+  이다. ■ 
+
+- (2) 증명
+
+  마찬가지로 $L$ 에 대한 $\mathbf{W}$ 의 미분은 행렬 미분의 정의에 의하여 야코비 행렬
+
+  $$ \dfrac{\partial L}{\partial \mathbf{W}} = \begin{pmatrix} \dfrac{\partial L}{\partial w_{11}}& \dfrac{\partial L}{\partial w_{12}}& \dots& \dfrac{\partial L}{\partial w_{1m}}\\ \dfrac{\partial L}{\partial w_{21}}& \dfrac{\partial L}{\partial w_{22}}& \dots& \dfrac{\partial L}{\partial w_{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial w_{d1}}& \dfrac{\partial L}{\partial w_{d2}}& \dots& \dfrac{\partial L}{\partial w_{dm}}\\ \end{pmatrix} $$
+
+  인데 이때 $L$ 에 대한 $\mathbf{W}$ 의 $(1,1)$ 원소 $w _{11}$ 의 미분은 
+
+  $\mathbf{Y}$ 를 행렬이 아니라 매개변수의 나열로 본다면, $\dfrac{\partial L}{\partial w _{11}}$ 에 대한 매개변수를 갖는 합성함수의 편미분으로 나타낼 수 있으므로 스칼라
+
+  $$ \dfrac{\partial L}{\partial w_{11}} = \sum_{i=1}^{n}\sum_{j=1}^{m}\dfrac{\partial L}{\partial y _{ij}}\dfrac{\partial y _{ij}}{\partial w_{11}} $$
+
+  이다. 이것도 마찬가지로 Frobenius 내적 
+
+  $$ = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  > _{\mathbf{F}}$$
+
+  으로 나타낼 수 있다. 그러면 마찬가지로
+
+  $$ \dfrac{\partial \mathbf{Y}}{\partial w _{11}} = \begin{pmatrix} x _{11}& 0& \dots& 0 \\ x _{21}& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ x _{n1}& 0& \dots& 0\\ \end{pmatrix} $$
+
+  이므로
+
+  $$ \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  > _{\mathbf{F}} = \Bigg < \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}, \begin{pmatrix} x _{11}& 0& \dots& 0 \\ x _{21}& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ x _{n1}& 0& \dots& 0\\ \end{pmatrix} \Bigg > _{\mathbf{F}} $$
+
+  $$ = \dfrac{\partial L}{\partial y _{11}}x _{11} + \dfrac{\partial L}{\partial y _{21}}x _{21} + \dots+ \dfrac{\partial L}{\partial y _{n1}}x _{n1}  = \sum_{k=1}^{n} \dfrac{\partial L}{\partial y _{k1}}x _{k1} $$
+
+  이다. 즉, $\displaystyle \dfrac{\partial \mathbf{Y}}{\partial w _{11}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k1}}x _{k1}$ 이다. 마찬가지로 
+
+  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial w _{12}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{12}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k2}}x_{k1}$$
+
+  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial w _{21}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{21}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k1}}x_{k2}$$
+
+  $$ \vdots $$
+
+  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial w _{ij}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{ij}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{kj}}x_{ki}$$
+
+  이다. 그렇다면 최종적으로 $L$ 에 대한 $\mathbf{W}$ 의 미분은 $d \times m$ 행렬
+
+  $$ \therefore \dfrac{\partial L}{\partial \mathbf{W}} = \begin{pmatrix} \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{k1}& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{k1}& \dots& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{k1} \\ \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{k2}& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{k2}& \dots& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{k2} \\ \vdots & \vdots & \ddots & \vdots \\ \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{kd}& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{kd}& \dots& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{kd} \\ \end{pmatrix}$$
+
+  $$ = \begin{pmatrix} x_{11}& x_{21}& \dots & x_{n1} \\ x_{12}& x_{22}& \dots & x_{n2} \\ \vdots & \vdots & \ddots & \vdots \\ x_{1d}& x_{2d}& \dots & x_{nd} \\ \end{pmatrix}\begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix} $$
+
+  $$ = \boxed{\mathbf{X}^{\intercal }\dfrac{\partial L}{\partial \mathbf{Y}}} $$
+
+  이다. ■ 
+
+---
+
+# <a name="affine layer 메모" href="#affine layer 메모">affine layer 메모</a>
+
+  - $\dfrac{\partial L}{\partial \mathbf{Y}}$ 를 전달하는 이유는 최종적으로 $\dfrac{\partial L}{\partial \mathbf{X}}, \dfrac{\partial L}{\partial \mathbf{W}}$  를 계산하기 위함이다.
+  
+  - 마찬가지로 $L$ 이 스칼라므로 $\dfrac{\partial L}{\partial \mathbf{X}}$ 의 형상은 $\mathbf{X}$ 와 동일하게 $n \times d$ 이고, $\dfrac{\partial L}{\partial \mathbf{W}}$ 의 형상은 $\mathbf{W}$ 와 동일하게 $d \times m$ 이다.
+
+  - 이미 잘 알고 있듯 $\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}}, \dfrac{\partial \mathbf{Y}}{\partial \mathbf{W}}$ 는 야코비안 행렬이다. 그런데 이것을 명시적으로 나타내기란 매우 어렵다. 통상적인 신경망에서 $n=64,m=d=4096$ 으로 둔다면 $\mathbf{X}$ 는 $n \times d =64 \times 4096$ 행렬이 되고, $\mathbf{Y}$ 는 $n \times m = 64 \times 4096$ 행렬이 되므로 $\dfrac{\partial \mathbf{Y}}{\partial  \mathbf{X}}$ 은 $64 \cdot 4096 \cdot 64 \cdot 4096$ 의 스칼라 값을 갖기 때문이다.
+
+  - 만약 벡터 $\mathbf{v} \in \R ^{n}, \mathbf{w} \in \R ^{m}$ 에 대하여 $\mathbf{v}$ 가 $\mathbf{w}$ 에 종속되어 있다면 $\mathbf{v}$ 에 대한 $\mathbf{w}$ 의 미분은 $m \times n$ 야코비안 행렬이 된다.
+
+      마찬가지로 스칼라($1 \times 1$ 행렬) $a$ 와 $n \times m$ 행렬 $\mathbf{A}$ 에 대하여 $\mathbf{A}$ 가 스칼라 $a$ 의 독립변수라면 $a$ 에 대한 $\mathbf{A}$ 의 미분은 $n \times m$ 야코비안 행렬이 된다.
+
+      마찬가지로 $n \times m$ 행렬 $A$ 와 $s \times t$ 행렬 $B$ 가 서로 종속일 때 $A$ 에 대한 $B$ 의 미분으로 얻어진 야코비안 행렬의 원소 개수는 $n \times m \times s \times t$ 이다.
+
+      - 증명 
+
+        행렬 $A$ 의 $(i, j)$ 원소 $a _{ij}$ 를 행렬 $B$ 에 대하여 미분하면 야코비안 행렬
+
+        $$ \dfrac{\partial a _{ij}}{\partial B} = \begin{pmatrix} \dfrac{\partial a _{ij}}{\partial b _{11}} & \dfrac{\partial a _{ij}}{\partial b _{12}} & \dots& \dfrac{\partial a _{ij}}{\partial b _{1t}}  \\ \dfrac{\partial a _{ij}}{\partial b _{21}} & \dfrac{\partial a _{ij}}{\partial b _{22}} & \dots& \dfrac{\partial a _{ij}}{\partial b _{2t}}  \\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial a _{ij}}{\partial b _{s1}} & \dfrac{\partial a _{ij}}{\partial b _{s2}} & \dots& \dfrac{\partial a _{ij}}{\partial b _{st}}  \\ \end{pmatrix} $$ 
+
+        을 얻는다. 그러므로 행렬 $A$ 의 모든 원소에 대하여 $B$ 를 미분하면 야코비안 행렬을 부분행렬로 갖는 행렬 
+
+        $$ \dfrac{\partial A}{\partial B} = \begin{pmatrix} \dfrac{\partial a _{11}}{\partial B}& \dfrac{\partial a _{12}}{\partial B}& \dots& \dfrac{\partial a _{1m}}{\partial B} \\ \dfrac{\partial a _{21}}{\partial B}& \dfrac{\partial a _{22}}{\partial B}& \dots& \dfrac{\partial a _{2m}}{\partial B} \\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial a _{n1}}{\partial B}& \dfrac{\partial a _{n2}}{\partial B}& \dots& \dfrac{\partial a _{nm}}{\partial B} \\ \end{pmatrix} $$
+
+        이다. $s \times t$ 행렬이 $n \times m$ 행렬의 원소로 있으므로 모든 원소의 개수는 $(s \times t) n \times m$ 이다.
+
+  - 하지만 다행히도 야코비안 행렬 $\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}}$ 를 명시적으로 표현하지 않고, 심지어 계산하지도 않고 식 $\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}}$ 을 다룰 수 있다. 
+
+  ---
+
+  에 대한 $1 \times m$ 행렬 $\mathbf{Y} = \mathbf{XW+B}$ 
+
+  $$ \mathbf{Y} = \mathbf{XW}+\mathbf{B} = \begin{pmatrix} \displaystyle \sum_{k=1}^{n}x_kw _{k1} + b_1 & \displaystyle \sum_{k=1}^{n}x_kw _{k2} + b_2 & \dots & \displaystyle \sum_{k=1}^{n}x_kw _{km} + b_m \\ \end{pmatrix} $$
+
+  이 존재한다. 스칼라 $L = Y \Psi$ 가 존재한다. ▲ 
+
+  그러므로 $\mathbf{Y}$ 의 $i$번째 원소 $y_i = \displaystyle \sum_{k=1}^{n}x_kw _{ki}+b_i$ 에 대한 $x_j$ 의 미분은
+
+  $$ \dfrac{\partial  y_i}{\partial x_j} = w _{ji} $$
+
+  이다. 그렇다면 $\mathbf{Y}$ 에 대한 $\mathbf{X}$ 의 미분은 야코비행렬 
+
+  $$ \dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}} = \begin{pmatrix} \dfrac{\partial y_1}{\partial x_1} & \dfrac{\partial y_1}{\partial x_2} & \dots& \dfrac{\partial y_1}{\partial x_n} \\ \dfrac{\partial y_2}{\partial x_1} & \dfrac{\partial y_2}{\partial x_2} & \dots& \dfrac{\partial y_2}{\partial x_n} \\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial y_m}{\partial x_1} & \dfrac{\partial y_m}{\partial x_2} & \dots& \dfrac{\partial y_m}{\partial x_n} \\ \end{pmatrix} = \begin{pmatrix} w _{11} & w _{21}& \dots & w _{n1} \\ w _{12} & w _{22}& \dots & w _{n2} \\ \vdots & \vdots & \ddots & \vdots \\ w _{1m} & w _{2m}& \dots & w _{nm} \\ \end{pmatrix} = \mathbf{W} ^{\intercal } $$
+
+  이다. ▲ 
 
 - 신경망 순전파 때 사용되는 행렬곱을 기하학에서 어파인 변환(affine transformation) 이라고 한다.
+
+---
+
+
+  정리 6 (매개변수를 갖는 행렬방정식의 미분) "벡터 $\mathbf{y} \in \R ^{m}$($m \times 1$ 행렬), $\mathbf{x} \in \R ^{n}$($n \times 1$ 행렬) 와 $m \times n$ 행렬 $\mathbf{A}$ 이 존재할때 $\mathbf{x}$ 가 벡터 $\mathbf{z}$ 에 대한 함수라면 행렬방정식 $\mathbf{y} = \mathbf{Ax}$ 의 미분은 $\dfrac{\partial \mathbf{y}}{\partial \mathbf{z}} = \dfrac{\partial \mathbf{y}}{\partial \mathbf{x}}\dfrac{\partial \mathbf{x}}{\partial \mathbf{z}} = \mathbf{A}\dfrac{\partial \mathbf{x}}{\partial \mathbf{z}}$  이다." 에 의하여
+
+  $1 \times 1$ 행렬 $L$ 
+
+  $$ \dfrac{\partial L}{\partial \mathbf{X}} = 
+  $$
+
+  먼저 
+  
+  먼저 $L$ 을 $\mathbf{X}$ 의 $(i, j)$ 원소로 미분하면 $L = l(\mathbf{Y}) = l(\mathbf{XW})$ 이므로 매개변수 $\mathbf{Y}$ 에 대한 합성함수 미분, 즉 
+
+  $$ \dfrac{\partial L}{\partial x _{ij}} = 
+  $$
+
+  $\dfrac{\partial L}{\partial \mathbf{X}} = \begin{pmatrix} \dfrac{\partial L}{\partial x _{11}}& \dfrac{\partial L}{\partial x _{12}}& \dots& \dfrac{\partial L}{\partial x _{1d}} \\ \dfrac{\partial L}{\partial x _{21}}& \dfrac{\partial L}{\partial x _{22}}& \dots& \dfrac{\partial L}{\partial x _{2d}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial x _{n1}}& \dfrac{\partial L}{\partial x _{n2}}& \dots& \dfrac{\partial L}{\partial x _{nd}}\\ \end{pmatrix}$ 이다.

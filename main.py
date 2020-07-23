@@ -93,6 +93,7 @@ def update(think):
 {sections('벡터해석학 메모', 'vector', get_definitions)}
 {sections('미적분 메모', 'cal6', get_definitions)}
 {sections('다변수함수 미분의 일반적인 정의', 'cal7', get_definitions)}
+{sections('텐서 해석학', 'cal8', get_definitions)}
 
 </blockquote>
 
