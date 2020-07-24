@@ -1864,15 +1864,15 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
 
     곱셈 노드가 순전파때 입력 $1,2,3,4$ 를 받아 상위노드로 $24$ 을 전달했는데, 
 
-    역전파 때 상위노드에서 미분 $1$ 을 전달했다면 
+    역전파 때 상위노드에서 미분 $2.7$ 을 전달했다면 
 
-    $1$ 의 입력을 전달한 하위 노드에 $24 \times (2 \times 3 \times 4)$ 를 전달하고
+    $1$ 의 입력을 전달한 하위 노드에 $2.7 \times (2 \times 3 \times 4)$ 를 전달하고
 
-    $2$ 의 입력을 전달한 하위 노드에 $24 \times (1 \times 3 \times 4)$ 를 전달하고
+    $2$ 의 입력을 전달한 하위 노드에 $2.7 \times (1 \times 3 \times 4)$ 를 전달하고
 
-    $3$ 의 입력을 전달한 하위 노드에 $24 \times (1 \times 2 \times 4)$ 를 전달하고
+    $3$ 의 입력을 전달한 하위 노드에 $2.7 \times (1 \times 2 \times 4)$ 를 전달하고
 
-    $4$ 의 입력을 전달한 하위 노드에 $24 \times (1 \times 2 \times 3)$ 를 전달하는 것이다.
+    $4$ 의 입력을 전달한 하위 노드에 $2.7 \times (1 \times 2 \times 3)$ 를 전달하는 것이다.
 
   - 코드 구현 
 
@@ -2000,133 +2000,420 @@ $$ Z = X W + B $$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-Affine 변환의 역전파 : 
+Affine 변환의 역전파 : 입력 행렬 $\mathbf{X,W}$ 과 출력행렬 $\mathbf{Y} = \mathbf{XW}$ 를 갖는 Affine 레이어의 역전파는 손실값 $L$ 에 대한 $\mathbf{Y}$ 의 미분 $\dfrac{\partial L}{\partial \mathbf{Y}}$ 에 대하여 
+
+$$ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\cdot \mathbf{W} ^{\intercal } $$
+
+$$ \dfrac{\partial L}{\partial \mathbf{W}} = \mathbf{X}^{\intercal } \dfrac{\partial L}{\partial \mathbf{Y}} $$
+
+이다.
 
 </blockquote>
 
-- 정리
-  
+- ㅇㅇ
+
+  ![](https://cdn-ak.f.st-hatena.com/images/fotolife/m/msyksphinz/20170622/20170622015132.png)
+
+- 코드 구현 
+
+  행렬곱 연산과 행렬덧셈 연산을 하는 Affine 레이어는 다음과 같이 코드로 구현할 수 있다.
+
+  ```python
+  class Affine:
+      def __init__(self, W, b):
+          self.W = W
+          self.b = b
+          self.x = None
+          self.dW = None
+          self.db = None
+
+      def forward(self, x):
+          self.x = x
+          out = np.dot(self.x, self.W) + self.b 
+          return out
+
+      def backward(self, dout):
+          dx = np.dot(dout, self.W.T)
+          self.dW = np.dot(self.x.T, dout)
+          self.db = np.sum(dout, axis=0) # 살짝 이해 안됨.
+          return dx
+  ```
+
+  다음 코드는 입력 데이터가 행렬이 아니라 텐서인 경우, 즉 4차원 데이터인 경우도 처리할 수 있도록 구현한 것이다.
+
+  ```python
+  class Affine:
+      def __init__(self, W, b):
+          self.W = W
+          self.b = b
+          self.x = None
+          self.original_x_shape = None
+          self.dW = None
+          self.db = None
+
+      def forward(self, x):
+          # 텐서 대응
+          self.original_x_shape = x.shape
+          x = x.reshape(x.shape[0], -1) # 이 부분 이해 안됨.
+          self.x = x
+          out = np.dot(self.x, self.W) + self.b # 입력 행렬을 데이터별로 벡터로 만들고 행렬곱을 개별 가중치 벡터로 한다고? 이해 안됨.
+          return out
+
+      def backward(self, dout):
+          dx = np.dot(dout, self.W.T)
+          self.dW = np.dot(self.x.T, dout)
+          self.db = np.sum(dout, axis=0)
+          dx = dx.reshape(*self.original_x_shape)  # 입력 데이터 모양 변경(텐서 대응)
+          return dx
+  ```
+
+- 행렬곱 미분 정리
+
+  http://cs231n.stanford.edu/handouts/derivatives.pdf
+
+  http://cs231n.stanford.edu/handouts/linear-backprop.pdf
+
   $n \times d$ 입력 행렬 $\mathbf{X}$, $d \times m$ 가중치 행렬 $\mathbf{W}$ 에 대한 $n \times m$ 행렬 $\mathbf{Y=XW}$ 과 손실함수 $l$ 에 대한 스칼라 $L=l(\mathbf{Y})$ 에 대하여 $\mathbf{X}$ 의 미분은 
 
-  $$ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\mathbf{W}^{\intercal } $$ (1)
+  $$ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\mathbf{W}^{\intercal } $$ (1)
 
   이고, $\mathbf{W}$ 의 미분은
   
-  $$ \dfrac{\partial L}{\partial \mathbf{W}} = \mathbf{X}^{\intercal } \dfrac{\partial L}{\partial \mathbf{Y}}$$ (2)
+  $$ \dfrac{\partial L}{\partial \mathbf{W}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{W}} = \mathbf{X}^{\intercal } \dfrac{\partial L}{\partial \mathbf{Y}}$$ (2)
 
   이다.
 
-- (1) 증명
+  - (1) 증명
 
-  $n \times d$ 입력 행렬 $\mathbf{X}$, $d \times m$ 가중치 행렬 $\mathbf{W}$ 에 대한 행렬곱 $\mathbf{Y}$ 는 $n \times m$ 행렬
+    $n \times d$ 입력 행렬 $\mathbf{X}$, $d \times m$ 가중치 행렬 $\mathbf{W}$ 에 대한 행렬곱 $\mathbf{Y}$ 는 $n \times m$ 행렬
 
-  $$ \mathbf{Y} = \mathbf{XW} = \begin{pmatrix} x _{11}&x _{12}&\dots&x _{1d}\\ x _{21}&x _{22}&\dots&x _{2d}\\ \vdots & \vdots & \ddots & \vdots \\ x _{n1}&x _{n2}&\dots&x _{nd}\\ \end{pmatrix} \begin{pmatrix} w _{11} & w _{12} &\dots & w _{1m} \\ w _{21} & w _{22} &\dots & w _{2m} \\ \vdots & \vdots & \ddots & \vdots \\ w _{d1} & w _{d2} &\dots & w _{dm} \\ \end{pmatrix} $$
+    $$ \mathbf{Y} = \mathbf{XW} = \begin{pmatrix} x _{11}&x _{12}&\dots&x _{1d}\\ x _{21}&x _{22}&\dots&x _{2d}\\ \vdots & \vdots & \ddots & \vdots \\ x _{n1}&x _{n2}&\dots&x _{nd}\\ \end{pmatrix} \begin{pmatrix} w _{11} & w _{12} &\dots & w _{1m} \\ w _{21} & w _{22} &\dots & w _{2m} \\ \vdots & \vdots & \ddots & \vdots \\ w _{d1} & w _{d2} &\dots & w _{dm} \\ \end{pmatrix} $$
 
-  $$ = \begin{pmatrix} \displaystyle \sum_{k=1}^{d}x _{1k} w _{k1} & \displaystyle \sum_{k=1}^{d}x _{1k} w _{k2} & \dots & \displaystyle \sum_{k=1}^{d}x _{1k} w _{km} \\ \displaystyle \sum_{k=1}^{d}x _{2k} w _{k1} & \displaystyle \sum_{k=1}^{d}x _{2k} w _{k2} & \dots & \displaystyle \sum_{k=1}^{d}x _{2k} w _{km} \\ \vdots & \vdots & \ddots & \vdots \\ \displaystyle \sum_{k=1}^{d}x _{nk} w _{k1} & \displaystyle \sum_{k=1}^{d}x _{nk} w _{k2} & \dots & \displaystyle \sum_{k=1}^{d}x _{nk} w _{km} \\ \end{pmatrix} $$
+    $$ = \begin{pmatrix} \displaystyle \sum_{k=1}^{d}x _{1k} w _{k1} & \displaystyle \sum_{k=1}^{d}x _{1k} w _{k2} & \dots & \displaystyle \sum_{k=1}^{d}x _{1k} w _{km} \\ \displaystyle \sum_{k=1}^{d}x _{2k} w _{k1} & \displaystyle \sum_{k=1}^{d}x _{2k} w _{k2} & \dots & \displaystyle \sum_{k=1}^{d}x _{2k} w _{km} \\ \vdots & \vdots & \ddots & \vdots \\ \displaystyle \sum_{k=1}^{d}x _{nk} w _{k1} & \displaystyle \sum_{k=1}^{d}x _{nk} w _{k2} & \dots & \displaystyle \sum_{k=1}^{d}x _{nk} w _{km} \\ \end{pmatrix} $$
 
-  이다. 이 순전파 출력 $\mathbf{Y}$ 이 손실함수 $l$ 로 전달되어 최종적으로 스칼라 $L$ 이 되었다고 하면 
+    이다. 이 순전파 출력 $\mathbf{Y}$ 이 손실함수 $l$ 로 전달되어 최종적으로 스칼라 $L$ 이 되었다고 하면 
 
-  $$ L = l(\mathbf{Y}) = l(\mathbf{XW}) $$
+    $$ L = l(\mathbf{Y}) = l(\mathbf{XW}) $$
+
+    이다.
+
+    $L$ 이 스칼라고 $\mathbf{Y}$ 는 $n \times m$ 행렬이므로 $L$ 에 대한 $\mathbf{Y}$ 의 미분은 $n \times m$ 행렬 
+
+    $$ \dfrac{\partial L}{\partial \mathbf{Y}} = \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix} $$
+
+    이다. $\mathbf{Y}$ 는 $\mathbf{X, W}$ 에 대한 함수이므로 $L$ 에 대한 $\mathbf{X, W}$ 의 미분은 이독립변수와 일매개변수의 합성함수의 미분
+
+    $$ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}}, \dfrac{\partial L}{\partial \mathbf{W}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{W}} $$
+
+    이다. 이때 $L$ 에 대한 $\mathbf{X}$ 의 미분은 행렬 미분의 정의에 의하여 야코비 행렬
+
+    $$ \dfrac{\partial L}{\partial \mathbf{X}} = \begin{pmatrix} \dfrac{\partial L}{\partial x _{11}}& \dfrac{\partial L}{\partial x _{12}}& \dots& \dfrac{\partial L}{\partial x _{1d}}\\ \dfrac{\partial L}{\partial x _{21}}& \dfrac{\partial L}{\partial x _{22}}& \dots& \dfrac{\partial L}{\partial x _{2d}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial x _{n1}}& \dfrac{\partial L}{\partial x _{n2}}& \dots& \dfrac{\partial L}{\partial x _{nd}}\\ \end{pmatrix} $$
+
+    이다. 이때 $L$ 에 대한 $\mathbf{X}$ 의 $(1,1)$ 원소 $x_{11}$ 의 미분은
+    
+    $\mathbf{Y}$ 를 행렬이 아니라 매개변수의 나열로 본다면, $\dfrac{\partial L}{\partial x _{11}}$ 에 대한 매개변수를 갖는 합성함수의 편미분으로 나타낼 수 있으므로 스칼라
+
+    $$ \dfrac{\partial L}{\partial x _{11}} = \sum_{i=1}^{n}\sum_{j=1}^{m}\dfrac{\partial L}{\partial y _{ij}}\dfrac{\partial y _{ij}}{\partial x _{11}} $$
+
+    이다. 그런데 귀찮은 덧셈 연산을 피하기 위하여 모든 스칼라 $\dfrac{\partial L}{\partial y _{ij}}$ 들을 행렬 $\dfrac{\partial L}{\partial \mathbf{Y}}$ 로 쓰고, 모든 스칼라 $\dfrac{\partial y _{ij}}{\partial x _{11}}$ 들을 행렬 $\dfrac{\partial \mathbf{Y}}{\partial x _{11}}$ 로 쓰면 이것을 Frobenius 내적
+
+    $$ = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{11}} \bigg  > _{\mathbf{F}}$$
+
+    으로 나타낼 수 있다. 이때 
+
+    $$ \dfrac{\partial \mathbf{Y}}{\partial x _{11}} = \begin{pmatrix} w _{11}& w _{12}& \dots& w _{1m} \\ 0& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ 0& 0& \dots& 0\\ \end{pmatrix} $$
+
+    이므로 
+
+    $$ \bigg < \dfrac{\partial L}{\partial Y} , \dfrac{\partial Y}{\partial x _{11}} \bigg > _{\mathbf{F}} = \Bigg < \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}, \begin{pmatrix} w _{11}& w _{12}& \dots& w _{1m} \\ 0& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ 0& 0& \dots& 0\\ \end{pmatrix}  \Bigg > _{\mathbf{F}} $$
+
+    $$ = \dfrac{\partial L}{\partial y _{11}} w _{11} + \dfrac{\partial L}{\partial y _{12}} w _{12} + \dots+ \dfrac{\partial L}{\partial y _{1m}} w _{1m} = \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k} $$
+
+    이다. 즉, $\displaystyle \dfrac{\partial L}{\partial x _{11}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{11}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k}$ 이다. 마찬가지로 
+
+    $$\displaystyle \dfrac{\partial L}{\partial x _{12}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{12}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{2k}$$
+    
+    $$\displaystyle \dfrac{\partial L}{\partial x _{21}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{21}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{1k}$$
+
+    $$ \vdots $$
+    
+    $$\displaystyle \dfrac{\partial L}{\partial x _{ij}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{ij}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{ik}}w _{jk}$$
+
+    이다. 그렇다면 최종적으로 $L$ 에 대한 $\mathbf{X}$ 의 미분은 $n \times d$ 행렬
+
+    $$ \therefore  \dfrac{\partial L}{\partial \mathbf{X}} = \begin{pmatrix} \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k}& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{2k}& \dots& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{dk} \\ \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{1k}& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{2k}& \dots& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{dk} \\ \vdots & \vdots & \ddots & \vdots \\ \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{1k}& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{2k}& \dots& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{dk} \\ \end{pmatrix}$$
+
+    $$ = \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}\begin{pmatrix} w_{11}& w_{21}& \dots & w_{d1} \\ w_{12}& w_{22}& \dots & w_{d2} \\ \vdots & \vdots & \ddots & \vdots \\ w_{1m}& w_{2m}& \dots & w_{dm} \\ \end{pmatrix} $$
+
+    $$ = \boxed{\dfrac{\partial L}{\partial \mathbf{Y}}\mathbf{W}^{\intercal } } $$
+
+    이다. ■ 
+
+  - (2) 증명
+
+    마찬가지로 $L$ 에 대한 $\mathbf{W}$ 의 미분은 행렬 미분의 정의에 의하여 야코비 행렬
+
+    $$ \dfrac{\partial L}{\partial \mathbf{W}} = \begin{pmatrix} \dfrac{\partial L}{\partial w_{11}}& \dfrac{\partial L}{\partial w_{12}}& \dots& \dfrac{\partial L}{\partial w_{1m}}\\ \dfrac{\partial L}{\partial w_{21}}& \dfrac{\partial L}{\partial w_{22}}& \dots& \dfrac{\partial L}{\partial w_{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial w_{d1}}& \dfrac{\partial L}{\partial w_{d2}}& \dots& \dfrac{\partial L}{\partial w_{dm}}\\ \end{pmatrix} $$
+
+    인데 이때 $L$ 에 대한 $\mathbf{W}$ 의 $(1,1)$ 원소 $w _{11}$ 의 미분은 
+
+    $\mathbf{Y}$ 를 행렬이 아니라 매개변수의 나열로 본다면, $\dfrac{\partial L}{\partial w _{11}}$ 에 대한 매개변수를 갖는 합성함수의 편미분으로 나타낼 수 있으므로 스칼라
+
+    $$ \dfrac{\partial L}{\partial w_{11}} = \sum_{i=1}^{n}\sum_{j=1}^{m}\dfrac{\partial L}{\partial y _{ij}}\dfrac{\partial y _{ij}}{\partial w_{11}} $$
+
+    이다. 이것도 마찬가지로 Frobenius 내적 
+
+    $$ = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  > _{\mathbf{F}}$$
+
+    으로 나타낼 수 있다. 그러면 마찬가지로
+
+    $$ \dfrac{\partial \mathbf{Y}}{\partial w _{11}} = \begin{pmatrix} x _{11}& 0& \dots& 0 \\ x _{21}& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ x _{n1}& 0& \dots& 0\\ \end{pmatrix} $$
+
+    이므로
+
+    $$ \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  > _{\mathbf{F}} = \Bigg < \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}, \begin{pmatrix} x _{11}& 0& \dots& 0 \\ x _{21}& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ x _{n1}& 0& \dots& 0\\ \end{pmatrix} \Bigg > _{\mathbf{F}} $$
+
+    $$ = \dfrac{\partial L}{\partial y _{11}}x _{11} + \dfrac{\partial L}{\partial y _{21}}x _{21} + \dots+ \dfrac{\partial L}{\partial y _{n1}}x _{n1}  = \sum_{k=1}^{n} \dfrac{\partial L}{\partial y _{k1}}x _{k1} $$
+
+    이다. 즉, $\displaystyle \dfrac{\partial L}{\partial w _{11}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k1}}x _{k1}$ 이다. 마찬가지로 
+
+    $$\displaystyle \dfrac{\partial L}{\partial w _{12}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{12}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k2}}x_{k1}$$
+
+    $$\displaystyle \dfrac{\partial L}{\partial w _{21}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{21}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k1}}x_{k2}$$
+
+    $$ \vdots $$
+
+    $$\displaystyle \dfrac{\partial L}{\partial w _{ij}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{ij}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{kj}}x_{ki}$$
+
+    이다. 그렇다면 최종적으로 $L$ 에 대한 $\mathbf{W}$ 의 미분은 $d \times m$ 행렬
+
+    $$ \therefore \dfrac{\partial L}{\partial \mathbf{W}} = \begin{pmatrix} \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{k1}& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{k1}& \dots& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{k1} \\ \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{k2}& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{k2}& \dots& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{k2} \\ \vdots & \vdots & \ddots & \vdots \\ \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{kd}& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{kd}& \dots& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{kd} \\ \end{pmatrix}$$
+
+    $$ = \begin{pmatrix} x_{11}& x_{21}& \dots & x_{n1} \\ x_{12}& x_{22}& \dots & x_{n2} \\ \vdots & \vdots & \ddots & \vdots \\ x_{1d}& x_{2d}& \dots & x_{nd} \\ \end{pmatrix}\begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix} $$
+
+    $$ = \boxed{\mathbf{X}^{\intercal }\dfrac{\partial L}{\partial \mathbf{Y}}} $$
+
+    이다. ■ 
+
+- 행렬덧셈 미분 정리
+
+  $n \times m$ 출력 행렬 $\mathbf{Y}$, $n \times m$ 편향 행렬 $\mathbf{B}$ 에 대한 $n \times m$ 순입력 행렬 $\mathbf{Z=Y + B}$ 과 손실함수 $l$ 에 대한 스칼라 $L=l(\mathbf{Y})$ 에 대하여 $\mathbf{Y}$ 의 미분은 
+
+  $$ \dfrac{\partial L}{\partial \mathbf{Y}} = \dfrac{\partial L}{\partial \mathbf{Z}} $$ (1)
+
+  이고, $\mathbf{W}$ 의 미분은
+  
+  $$ \dfrac{\partial L}{\partial \mathbf{B}} = \dfrac{\partial L}{\partial \mathbf{Z}} $$ (2)
 
   이다.
 
-  $L$ 이 스칼라고 $\mathbf{Y}$ 는 $n \times m$ 행렬이므로 $L$ 에 대한 $\mathbf{Y}$ 의 미분은 $n \times m$ 행렬 
+  - (1) 증명
 
-  $$ \dfrac{\partial L}{\partial \mathbf{Y}} = \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix} $$
+    $n \times m$ 출력 행렬 $\mathbf{Y}$, $n \times m$ 편향 행렬 $\mathbf{B}$ 에 대한 행렬 $\mathbf{Z = Y + B}$ 는 $n \times m$ 행렬
 
-  이다. $\mathbf{Y}$ 는 $\mathbf{X, W}$ 에 대한 함수이므로 $L$ 에 대한 $\mathbf{X, W}$ 의 미분은 이독립변수와 일매개변수의 합성함수의 미분
+    $$ \mathbf{Z} = \mathbf{Y + B} = \begin{pmatrix} y_{11}&y_{12}&\dots&y_{1m}\\ y_{21}&y_{22}&\dots&y_{2m}\\ \vdots & \vdots & \ddots & \vdots \\ y_{n1}&y_{n2}&\dots&y_{nm}\\ \end{pmatrix} + \begin{pmatrix} b_{11} & b_{12} &\dots & b_{1m} \\ b_{21} & b_{22} &\dots & b_{2m} \\ \vdots & \vdots & \ddots & \vdots \\ b_{n1} & b_{n2} &\dots & b_{nm} \\ \end{pmatrix} $$
 
-  $$ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}}, \dfrac{\partial L}{\partial \mathbf{W}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{W}} $$
+    $$ = \begin{pmatrix} \displaystyle y_{11}+b_{11} & \displaystyle y_{12}+b_{12} & \dots & \displaystyle y_{1m}+b_{1m} \\ \displaystyle y_{21}+b_{21} & \displaystyle y_{22}+b_{22} & \dots & \displaystyle y_{2m}+b_{2m} \\ \vdots & \vdots & \ddots & \vdots \\ \displaystyle y_{n1}+b_{n1} & \displaystyle y_{n2}+b_{n2} & \dots & \displaystyle y_{nm}+b_{nm} \\ \end{pmatrix} $$
 
-  이다. 이때 $L$ 에 대한 $\mathbf{X}$ 의 미분은 행렬 미분의 정의에 의하여 야코비 행렬
+    이다. 이 $\mathbf{Z}$ 이 손실함수 $l$ 로 전달되어 최종적으로 스칼라 $L$ 이 되었다고 하면 
 
-  $$ \dfrac{\partial L}{\partial \mathbf{X}} = \begin{pmatrix} \dfrac{\partial L}{\partial x _{11}}& \dfrac{\partial L}{\partial x _{12}}& \dots& \dfrac{\partial L}{\partial x _{1d}}\\ \dfrac{\partial L}{\partial x _{21}}& \dfrac{\partial L}{\partial x _{22}}& \dots& \dfrac{\partial L}{\partial x _{2d}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial x _{n1}}& \dfrac{\partial L}{\partial x _{n2}}& \dots& \dfrac{\partial L}{\partial x _{nd}}\\ \end{pmatrix} $$
+    $$ L = l(\mathbf{Z}) = l(\mathbf{Y + B}) $$
 
-  이다. 이때 $L$ 에 대한 $\mathbf{X}$ 의 $(1,1)$ 원소 $x_{11}$ 의 미분은
+    이다.
+
+    $L$ 이 스칼라고 $\mathbf{Z}$ 는 $n \times m$ 행렬이므로 $L$ 에 대한 $\mathbf{Z}$ 의 미분은 $n \times m$ 행렬 
+
+    $$ \dfrac{\partial L}{\partial \mathbf{Z}} = \begin{pmatrix} \dfrac{\partial L}{\partial z_{11}}& \dfrac{\partial L}{\partial z_{12}}& \dots& \dfrac{\partial L}{\partial z_{1m}}\\ \dfrac{\partial L}{\partial z_{21}}& \dfrac{\partial L}{\partial z_{22}}& \dots& \dfrac{\partial L}{\partial z_{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial z_{n1}}& \dfrac{\partial L}{\partial z_{n2}}& \dots& \dfrac{\partial L}{\partial z_{nm}}\\ \end{pmatrix} $$
+
+    이다. $\mathbf{Z}$ 는 $\mathbf{Y, B}$ 에 대한 함수이므로 $L$ 에 대한 $\mathbf{Y, B}$ 의 미분은 이독립변수와 일매개변수의 합성함수의 미분
+
+    $$ \dfrac{\partial L}{\partial \mathbf{Y}} = \dfrac{\partial L}{\partial \mathbf{Z}}\dfrac{\partial \mathbf{Z}}{\partial \mathbf{Y}}, \dfrac{\partial L}{\partial \mathbf{B}} = \dfrac{\partial L}{\partial \mathbf{Z}}\dfrac{\partial \mathbf{Z}}{\partial \mathbf{B}} $$
+
+    이다. 이때 $L$ 에 대한 $\mathbf{Y}$ 의 미분은 행렬 미분의 정의에 의하여 야코비 행렬
+
+    $$ \dfrac{\partial L}{\partial \mathbf{Y}} = \begin{pmatrix} \dfrac{\partial L}{\partial y_{11}}& \dfrac{\partial L}{\partial y_{12}}& \dots& \dfrac{\partial L}{\partial y_{1m}}\\ \dfrac{\partial L}{\partial y_{21}}& \dfrac{\partial L}{\partial y_{22}}& \dots& \dfrac{\partial L}{\partial y_{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y_{n1}}& \dfrac{\partial L}{\partial y_{n2}}& \dots& \dfrac{\partial L}{\partial y_{nm}}\\ \end{pmatrix} $$
+
+    이다. 이때 $L$ 에 대한 $\mathbf{Y}$ 의 $(1,1)$ 원소 $y_{11}$ 의 미분은
+    
+    $\mathbf{Z}$ 를 행렬이 아니라 매개변수의 나열로 본다면, $\dfrac{\partial L}{\partial y_{11}}$ 에 대한 매개변수를 갖는 합성함수의 편미분으로 나타낼 수 있으므로 스칼라
+
+    $$ \dfrac{\partial L}{\partial y_{11}} = \sum_{i=1}^{n}\sum_{j=1}^{m}\dfrac{\partial L}{\partial z _{ij}}\dfrac{\partial z _{ij}}{\partial y_{11}} $$
+
+    이다. 그런데 귀찮은 덧셈 연산을 피하기 위하여 모든 스칼라 $\dfrac{\partial L}{\partial z _{ij}}$ 들을 행렬 $\dfrac{\partial L}{\partial \mathbf{Z}}$ 로 쓰고, 모든 스칼라 $\dfrac{\partial z _{ij}}{\partial y_{11}}$ 들을 행렬 $\dfrac{\partial \mathbf{Z}}{\partial y_{11}}$ 로 쓰면 이것을 Frobenius 내적
+
+    $$ = \bigg < \dfrac{\partial L}{\partial \mathbf{Z}} , \dfrac{\partial \mathbf{Z}}{\partial y_{11}} \bigg  > _{\mathbf{F}}$$
+
+    으로 나타낼 수 있다. 이때 
+
+    $$ \dfrac{\partial \mathbf{Z}}{\partial y_{11}} = \begin{pmatrix} 1 & 0& \dots& 0 \\ 0& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ 0& 0& \dots& 0\\ \end{pmatrix} $$
+
+    이므로 
+    
+    $$ \bigg < \dfrac{\partial L}{\partial \mathbf{Z}} , \dfrac{\partial \mathbf{Z}}{\partial y _{11}} \bigg  > _{\mathbf{F}} = \Bigg < \begin{pmatrix} \dfrac{\partial L}{\partial z_{11}}& \dfrac{\partial L}{\partial z_{12}}& \dots& \dfrac{\partial L}{\partial z_{1m}}\\ \dfrac{\partial L}{\partial z_{21}}& \dfrac{\partial L}{\partial z_{22}}& \dots& \dfrac{\partial L}{\partial z_{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial z_{n1}}& \dfrac{\partial L}{\partial z_{n2}}& \dots& \dfrac{\partial L}{\partial z_{nm}}\\ \end{pmatrix}, \begin{pmatrix} 1& 0& \dots& 0 \\ 0& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ 0& 0& \dots& 0\\ \end{pmatrix} \Bigg > _{\mathbf{F}} $$
+
+    $$ = \dfrac{\partial L}{\partial z_{11}} $$
+
+    이다. 즉, $\displaystyle \dfrac{\partial L}{\partial y _{11}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Z}} , \dfrac{\partial \mathbf{Z}}{\partial y _{11}} \bigg  > _{\mathbf{F}}= \dfrac{\partial L}{\partial z _{11}}$ 이다. 마찬가지로 
+
+    $$\displaystyle \dfrac{\partial L}{\partial y _{ij}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Z}} , \dfrac{\partial \mathbf{Z}}{\partial y _{ij}} \bigg  > _{\mathbf{F}}= \dfrac{\partial L}{\partial z _{ij}}$$
+
+    이다. 그러므로 $L$ 에 대한 $\mathbf{Y}$ 의 미분은 $n \times m$ 행렬 
+
+    $$ \therefore \dfrac{\partial L}{\partial \mathbf{Y}} = \begin{pmatrix} \dfrac{\partial L}{\partial z _{11}}& \dfrac{\partial L}{\partial z _{12}}& \dots& \dfrac{\partial L}{\partial z _{1m}}\\ \dfrac{\partial L}{\partial z _{21}}& \dfrac{\partial L}{\partial z _{22}}& \dots& \dfrac{\partial L}{\partial z _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial z _{n1}}& \dfrac{\partial L}{\partial z _{n2}}& \dots& \dfrac{\partial L}{\partial z _{nm}}\\ \end{pmatrix} = \dfrac{\partial L}{\partial \mathbf{Z}} $$ 
+
+    이다. ■ 
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+CrossEntropyError 레이어 역전파 : 신경망의 출력벡터 $\mathbf{y} \in \R ^{k}$, 원-핫 인코딩된 정답 레이블 $\mathbf{t} \in \R ^{k}$ 에 대한 손실함수
+
+$$ E(\mathbf{t}, \mathbf{y}) = - \sum_{i}^{} t _{i}\ln_{} y _{i} $$
+
+CrossEntropyError 함수의 역전파는 상위 노드에서 역전파된 미분에 
+
+$$ - \dfrac{t_i}{y_i} $$
+
+를 곱하여 하위 노드로 역전파한다.
+
+</blockquote>
+
+- 신경망의 출력벡터 $\mathbf{y}$ 는 CrossEntropyError 레이어의 입력 벡터임을 주의하자.
+
+- CrossEntropyError 함수는 출력벡터 $\mathbf{y} \in \R ^{k}$, 정답벡터 $\mathbf{t} \in \R ^{k}$, $i$ 번째 뉴런 에 대하여 
+
+  $$ E(\mathbf{t, y}) = - \sum_{i}^{}t_i \ln y_i $$
+
+  이다. 이것의 미분은 
+
+  $$ \dfrac{\partial E(\mathbf{t},\mathbf{o})}{\partial y_i} = \boxed{- \dfrac{t_i}{y_i}} $$
+
+  이다. ■ 
+
+- 그러므로 만약 정답 레이블이 아니라면 $t_i = 0$ 이므로 상위 노드에서 역전파된 미분에 $0$ 을 곱하여 하위 노드로 전달한다. 이는 가중치 조정이 $0$ 이 된다는 것이다.
+
+- 이것은 곱셈 노드, 덧셈 노드, 로그 노드의 국소적 역전파로 구성될 수 있다.
   
-  $\mathbf{Y}$ 를 행렬이 아니라 매개변수의 나열로 본다면, $\dfrac{\partial L}{\partial x _{11}}$ 에 대한 매개변수를 갖는 합성함수의 편미분으로 나타낼 수 있으므로 스칼라
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-  $$ \dfrac{\partial L}{\partial x _{11}} = \sum_{i=1}^{n}\sum_{j=1}^{m}\dfrac{\partial L}{\partial y _{ij}}\dfrac{\partial y _{ij}}{\partial x _{11}} $$
+Softmax 레이어 역전파 : $n \in \N$ 개의 입력 $a_1, \dots, a_n$ 에 대한 $k$ 번째 입력 $a_k$ 에 대하여 $k$ 번째 출력 $y_k$ 
 
-  이다. 그런데 귀찮은 덧셈 연산을 피하기 위하여 모든 스칼라 $\dfrac{\partial L}{\partial y _{ij}}$ 들을 행렬 $\dfrac{\partial L}{\partial \mathbf{Y}}$ 로 쓰고, 모든 스칼라 $\dfrac{\partial y _{ij}}{\partial x _{11}}$ 들을 행렬 $\dfrac{\partial \mathbf{Y}}{\partial x _{11}}$ 로 쓰면 이것을 Frobenius 내적
+$$ y_k = \dfrac{\exp (a_k)}{\displaystyle \sum_{i=1}^{n}\exp (a_i)} $$
 
-  $$ = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{11}} \bigg  > _{\mathbf{F}}$$
+을 갖는 Softmax 함수의 역전파는 상위 노드에서 역전파된 미분에
 
-  으로 나타낼 수 있다. 이때 
+$$ y_k(1 - y_k) $$
 
-  $$ \dfrac{\partial \mathbf{Y}}{\partial x _{11}} = \begin{pmatrix} w _{11}& w _{12}& \dots& w _{1m} \\ 0& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ 0& 0& \dots& 0\\ \end{pmatrix} $$
+를 곱하여 하위 노드로 전달한다.
 
-  이므로 
+> $-y_ky_j$ 라는 미분 결과에 대해서도 처리할 수 있어야 하는데, 여러개의 역전파 값에 대하여 일반적인 역전파 정의를 다시 해야 할 듯.
 
-  $$ \bigg < \dfrac{\partial L}{\partial Y} , \dfrac{\partial Y}{\partial x _{11}} \bigg > _{\mathbf{F}} = \Bigg < \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}, \begin{pmatrix} w _{11}& w _{12}& \dots& w _{1m} \\ 0& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ 0& 0& \dots& 0\\ \end{pmatrix}  \Bigg > _{\mathbf{F}} $$
+</blockquote>
 
-  $$ = \dfrac{\partial L}{\partial y _{11}} w _{11} + \dfrac{\partial L}{\partial y _{12}} w _{12} + \dots+ \dfrac{\partial L}{\partial y _{1m}} w _{1m} = \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k} $$
+- 증명 
 
-  이다. 즉, $\displaystyle \dfrac{\partial \mathbf{Y}}{\partial x _{11}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{11}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k}$ 이다. 마찬가지로 
+  Softmax 함수는 $n \in \N$ 개의 입력 $a_1, \dots, a_n$ 에 대한 $k$ 번째 입력 $a_k$ 에 대하여 $k$ 번째 출력 $y_k$ 
 
-  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial x _{12}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{12}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{2k}$$
+  $$ y_k = \dfrac{\text{exp}( a_k)}{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)} $$
+
+  을 갖는다. 이것의 미분은 
+
+  $$ \dfrac{\partial y_k}{\partial a_j} = \dfrac{\partial }{\partial a_j}\bigg (\dfrac{\text{exp}( a_k)}{\sum_{i=1}^{n}\text{exp}(a_i)} \bigg ) $$
+
+  이다. $k = j$ 일 경우 $\dfrac{\partial \text{exp}( a_k)}{\partial a_j} = \text{exp}( a_k)$ 이므로 분수함수의 미분에 의하여 
+
+  $$ = \dfrac{\text{exp}( a_k)\sum_{i=1}^{n}\text{exp}(a_i) - \text{exp}( a_j)\text{exp}( a_k)}{\bigg (\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)\bigg ) ^{2}} = \dfrac{\text{exp}( a_k)(\sum_{i=1}^{n}\text{exp}(a_i) - \text{exp}( a_j))}{\bigg (\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)\bigg ) ^{2}} $$
+
+  $$ = \dfrac{\text{exp}( a_k)}{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)}\times \dfrac{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i) - \text{exp}( a_j)}{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)} = y_k(1 - y_j)= \boxed{y_k(1 - y_k)}  $$
+
+  이다. ▲ 
   
-  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial x _{21}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{21}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{1k}$$
+  $k \neq j$ 일 경우 $\dfrac{\partial \text{exp}( a_k)}{\partial a_j} = 0$ 이므로 
 
-  $$ \vdots $$
-  
-  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial x _{ij}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{ij}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{ik}}w _{jk}$$
+  $$ \dfrac{\partial y_k}{\partial a_j} = \dfrac{0 - \text{exp}( a_j)\text{exp}( a_k)}{\bigg (\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)\bigg ) ^{2}} = -\dfrac{\text{exp}( a_k)}{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)}\dfrac{\text{exp}( a_j)}{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)} = \boxed{-y_ky_j}  $$
 
-  이다. 그렇다면 최종적으로 $L$ 에 대한 $\mathbf{X}$ 의 미분은 $n \times d$ 행렬
+  이다. ▲ 
 
-  $$ \therefore  \dfrac{\partial L}{\partial \mathbf{X}} = \begin{pmatrix} \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k}& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{2k}& \dots& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{dk} \\ \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{1k}& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{2k}& \dots& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{dk} \\ \vdots & \vdots & \ddots & \vdots \\ \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{1k}& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{2k}& \dots& \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{dk} \\ \end{pmatrix}$$
+  그러므로 Softmax 함수의 미분은 
 
-  $$ = \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}\begin{pmatrix} w_{11}& w_{21}& \dots & w_{d1} \\ w_{12}& w_{22}& \dots & w_{d2} \\ \vdots & \vdots & \ddots & \vdots \\ w_{1m}& w_{2m}& \dots & w_{dm} \\ \end{pmatrix} $$
-
-  $$ = \boxed{\dfrac{\partial L}{\partial \mathbf{Y}}\mathbf{W}^{\intercal } } $$
+  $$ \therefore \dfrac{\partial y_k}{\partial a_j} = \begin{cases} y_k(1 - y_k) &(j=k)\\ -y_ky_j &(j \neq k)\\ \end{cases} $$
 
   이다. ■ 
 
-- (2) 증명
+  또는 크로네커 델타 $\delta _{ij} = \begin{cases} 1 &(i=j)\\ 0 &(i\neq j)\\ \end{cases}$  를 사용하여 
 
-  마찬가지로 $L$ 에 대한 $\mathbf{W}$ 의 미분은 행렬 미분의 정의에 의하여 야코비 행렬
+  $$ \therefore \dfrac{\partial y_k}{\partial a_j} = y_k(\delta _{kj} - y_j) $$
 
-  $$ \dfrac{\partial L}{\partial \mathbf{W}} = \begin{pmatrix} \dfrac{\partial L}{\partial w_{11}}& \dfrac{\partial L}{\partial w_{12}}& \dots& \dfrac{\partial L}{\partial w_{1m}}\\ \dfrac{\partial L}{\partial w_{21}}& \dfrac{\partial L}{\partial w_{22}}& \dots& \dfrac{\partial L}{\partial w_{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial w_{d1}}& \dfrac{\partial L}{\partial w_{d2}}& \dots& \dfrac{\partial L}{\partial w_{dm}}\\ \end{pmatrix} $$
+  로 정의할 수도 있다.
 
-  인데 이때 $L$ 에 대한 $\mathbf{W}$ 의 $(1,1)$ 원소 $w _{11}$ 의 미분은 
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-  $\mathbf{Y}$ 를 행렬이 아니라 매개변수의 나열로 본다면, $\dfrac{\partial L}{\partial w _{11}}$ 에 대한 매개변수를 갖는 합성함수의 편미분으로 나타낼 수 있으므로 스칼라
+Softmax-with-CrossEntropyError-Loss 레이어 역전파 : Softmax 함수로 입력을 정규화하고 CrossEntropyError 로 손실값까지 구해주는 레이어의 역전파는 상위노드에서 전달된 미분에 
 
-  $$ \dfrac{\partial L}{\partial w_{11}} = \sum_{i=1}^{n}\sum_{j=1}^{m}\dfrac{\partial L}{\partial y _{ij}}\dfrac{\partial y _{ij}}{\partial w_{11}} $$
+$$ y_k - t_k $$
 
-  이다. 이것도 마찬가지로 Frobenius 내적 
+를 곱하여 하위노드로 전달한다.
 
-  $$ = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  > _{\mathbf{F}}$$
+</blockquote>
 
-  으로 나타낼 수 있다. 그러면 마찬가지로
+- 출력층에서 사용하는 Softmax 레이어는 출력을 정규화해준다.
 
-  $$ \dfrac{\partial \mathbf{Y}}{\partial w _{11}} = \begin{pmatrix} x _{11}& 0& \dots& 0 \\ x _{21}& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ x _{n1}& 0& \dots& 0\\ \end{pmatrix} $$
+  신경망이 하는 일이란 학습과 추론인데, 추론할 때는 출력이 정규화되지 않아도 된다. 왜냐하면 그냥 가장 높은 값만 알면 되기 때문이다. 
 
-  이므로
+  반면 학습할 때에는 Softmax 레이어로 출력을 정규화해주어야 한다.
 
-  $$ \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  > _{\mathbf{F}} = \Bigg < \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}, \begin{pmatrix} x _{11}& 0& \dots& 0 \\ x _{21}& 0& \dots& 0\\ \vdots & \vdots & \ddots & \vdots \\ x _{n1}& 0& \dots& 0\\ \end{pmatrix} \Bigg > _{\mathbf{F}} $$
+  - 왜??
 
-  $$ = \dfrac{\partial L}{\partial y _{11}}x _{11} + \dfrac{\partial L}{\partial y _{21}}x _{21} + \dots+ \dfrac{\partial L}{\partial y _{n1}}x _{n1}  = \sum_{k=1}^{n} \dfrac{\partial L}{\partial y _{k1}}x _{k1} $$
+- 증명 
 
-  이다. 즉, $\displaystyle \dfrac{\partial \mathbf{Y}}{\partial w _{11}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k1}}x _{k1}$ 이다. 마찬가지로 
+  Softmax 함수는 $n \in \N$ 개의 입력 $a_1, \dots, a_n$ 에 대한 $k$ 번째 입력 $a_k$ 에 대하여 $k$ 번째 출력 $y_k$ 
 
-  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial w _{12}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{12}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k2}}x_{k1}$$
+  $$ y_k = \dfrac{\exp (a_k)}{\displaystyle \sum_{i=1}^{n} \exp (a_i)} $$
 
-  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial w _{21}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{21}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k1}}x_{k2}$$
+  을 갖는다. 이 $y_k$ 는 정답 벡터 $\mathbf{t} \in \R ^{n}$ 에 대하여 CrossEntropyError 함수 
 
-  $$ \vdots $$
+  $$ L = E(\mathbf{t, y}) := - \sum_{i=1}^{n}t_i \ln y_i $$
 
-  $$\displaystyle \dfrac{\partial \mathbf{Y}}{\partial w _{ij}} = \bigg < \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{ij}} \bigg  > _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{kj}}x_{ki}$$
+  로 전달되고 최종적으로 손실값 $L$ 이 계산된다. 이 $L$ 에 대한 입력 벡터 $\mathbf{a} \in \R ^{n}$ 의 $k$ 번째 입력 $a_k$ 의 미분은
 
-  이다. 그렇다면 최종적으로 $L$ 에 대한 $\mathbf{W}$ 의 미분은 $d \times m$ 행렬
+  $$ \dfrac{\partial L}{\partial a_k} = - \sum_{i=1}^{n}t_i \dfrac{\partial \ln y_i}{\partial a_k}= - \sum_{i=1}^{n}t_i \dfrac{\partial \ln y_i}{\partial y_i}\dfrac{\partial y_i}{\partial a_k} = - \sum_{i=1}^{n}t_i \dfrac{1}{y_i}\dfrac{\partial y_i}{\partial a_k} $$
 
-  $$ \therefore \dfrac{\partial L}{\partial \mathbf{W}} = \begin{pmatrix} \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{k1}& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{k1}& \dots& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{k1} \\ \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{k2}& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{k2}& \dots& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{k2} \\ \vdots & \vdots & \ddots & \vdots \\ \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{kd}& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{kd}& \dots& \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{kd} \\ \end{pmatrix}$$
+  $$ = -t_k(1-y_k)- \sum_{i \in \{1,\dots,(k-1),(k+1),\dots,n\}}^{}\dfrac{t_i}{y_i}(-y_iy_k) $$
 
-  $$ = \begin{pmatrix} x_{11}& x_{21}& \dots & x_{n1} \\ x_{12}& x_{22}& \dots & x_{n2} \\ \vdots & \vdots & \ddots & \vdots \\ x_{1d}& x_{2d}& \dots & x_{nd} \\ \end{pmatrix}\begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}& \dfrac{\partial L}{\partial y _{12}}& \dots& \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}& \dfrac{\partial L}{\partial y _{22}}& \dots& \dfrac{\partial L}{\partial y _{2m}}\\ \vdots & \vdots & \ddots & \vdots \\ \dfrac{\partial L}{\partial y _{n1}}& \dfrac{\partial L}{\partial y _{n2}}& \dots& \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix} $$
+  $$ = -t_k+t_ky_k+ \sum_{i \in \{1,\dots,(k-1),(k+1),\dots,n\}}^{}t_iy_k $$
 
-  $$ = \boxed{\mathbf{X}^{\intercal }\dfrac{\partial L}{\partial \mathbf{Y}}} $$
+  $$ = -t_k+y_k \bigg (t_k+ \sum_{i \in \{1,\dots,(k-1),(k+1),\dots,n\}}^{}t_i \bigg ) = -t_k+y_k \sum_{i =  1}^{n}t_i $$
+
+  인데, 정답 벡터 $\mathbf{t} \in \R ^{n}$ 은 원-핫 인코딩되어 있으므로 $\sum_{k=1}^{n}t_k = 1$ 이다. 따라서
+
+  $$ = -t_k+y_k  = \boxed{y_k - t_k} $$
 
   이다. ■ 
+
+- 코드 구현 
+
+  ```python
+  class SoftmaxCrossEntropyError:
+      def __init__(self):
+          self.loss = None 
+          self.y = None     # softmax 출력
+          self.t = None     # 정답 레이블(원-핫 벡터)
+      
+      def forward(self, x, t):
+          self.t = t
+          self.y = softmax(x)
+          slef.loss = cross_entropy_error(self.y, self.t)
+          return self.loss
+      
+      def backward(self, dout = 1):
+          batch_size = self.t.shape[0]
+          if self.t.size == self.y.size: # 정답 레이블이 원-핫 벡터일 때
+              dx = (self.y - self.t) / batch_size
+          else:
+              dx = self.y.copy()
+              dx[np.arange(batch_size), self.t] -= 1 # 이해 안됨
+              dx = dx / batch_size
+          return dx
+  ```
 
 ---
 
