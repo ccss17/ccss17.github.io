@@ -1446,7 +1446,7 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-신경망 학습 알고리즘 : 신경망 학습 알고리즘은 다음의 2단계와 3단계를 에폭만큼, 또는 수용가능 오차도가 산출될때까지 반복하여 가중치와 편향을 훈련 데이터에 적합하도록 조정하는 알고리즘이다.
+신경망 학습 알고리즘 : 신경망 학습 알고리즘은 다음의 1~3단계를 에폭만큼, 또는 수용가능 오차도가 산출될때까지 반복하여 가중치와 편향을 훈련 데이터에 적합하도록 조정하는 알고리즘이다.
 
 1. (미니배치) 훈련 데이터 중 일부를 무작위로 추출한다. 이 일부 데이터를 미니배치라고 하며, 이 미니배치의 손실 함수 값을 줄이는 것이 신경망 학습의 목표이다.
 
@@ -1586,6 +1586,129 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
 
   - 위 코드에서 `numerical_gradient(self, x, t)` 의 수치미분으로 가중치의 기울기를 계산하는데, 실제로는 오차역전파로 기울기 계산을 빠르게 수행한다.
 
+- 오차역전파가 적용된 코드 구현
+
+  ```python
+  class TwoLayerNet:
+      def __init__(self, input_size, hidden_size, output_size, weight_init_std = 0.01):
+          # 가중치 초기화
+          self.params = {}
+          self.params['W1'] = weight_init_std * np.random.randn(input_size, hidden_size)
+          self.params['b1'] = np.zeros(hidden_size)
+          self.params['W2'] = weight_init_std * np.random.randn(hidden_size, output_size) 
+          self.params['b2'] = np.zeros(output_size)
+
+          # 계층 생성
+          self.layers = OrderedDict()
+          self.layers['Affine1'] = Affine(self.params['W1'], self.params['b1'])
+          self.layers['Relu1'] = Relu()
+          self.layers['Affine2'] = Affine(self.params['W2'], self.params['b2'])
+
+          self.lastLayer = SoftmaxWithLoss()
+          
+      def predict(self, x):
+          for layer in self.layers.values():
+              x = layer.forward(x)
+          
+          return x
+          
+      # x : 입력 데이터, t : 정답 레이블
+      def loss(self, x, t):
+          y = self.predict(x)
+          return self.lastLayer.forward(y, t)
+      
+      def accuracy(self, x, t):
+          y = self.predict(x)
+          y = np.argmax(y, axis=1)
+          if t.ndim != 1 : t = np.argmax(t, axis=1)
+          
+          accuracy = np.sum(y == t) / float(x.shape[0])
+          return accuracy
+          
+      # x : 입력 데이터, t : 정답 레이블
+      def numerical_gradient(self, x, t):
+          loss_W = lambda W: self.loss(x, t)
+          
+          grads = {}
+          grads['W1'] = numerical_gradient(loss_W, self.params['W1'])
+          grads['b1'] = numerical_gradient(loss_W, self.params['b1'])
+          grads['W2'] = numerical_gradient(loss_W, self.params['W2'])
+          grads['b2'] = numerical_gradient(loss_W, self.params['b2'])
+          
+          return grads
+          
+      def gradient(self, x, t):
+          # forward
+          self.loss(x, t)
+
+          # backward
+          dout = 1
+          dout = self.lastLayer.backward(dout)
+          
+          layers = list(self.layers.values())
+          layers.reverse()
+          for layer in layers:
+              dout = layer.backward(dout)
+
+          # 결과 저장
+          grads = {}
+          grads['W1'], grads['b1'] = self.layers['Affine1'].dW, self.layers['Affine1'].db
+          grads['W2'], grads['b2'] = self.layers['Affine2'].dW, self.layers['Affine2'].db
+
+          return grads
+  ```
+
+  이 역전파를 사용하는 신경망 학습을 실제로 사용하는 코드는 다음과 같다. 
+
+  ```python
+  # coding: utf-8
+  import sys, os
+  sys.path.append(os.pardir)
+
+  import numpy as np
+  from dataset.mnist import load_mnist
+  from two_layer_net import TwoLayerNet
+
+  # 데이터 읽기
+  (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
+
+  network = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
+
+  iters_num = 10000
+  train_size = x_train.shape[0]
+  batch_size = 100
+  learning_rate = 0.1
+
+  train_loss_list = []
+  train_acc_list = []
+  test_acc_list = []
+
+  iter_per_epoch = max(train_size / batch_size, 1)
+
+  for i in range(iters_num):
+      batch_mask = np.random.choice(train_size, batch_size)
+      x_batch = x_train[batch_mask]
+      t_batch = t_train[batch_mask]
+      
+      # 기울기 계산
+      #grad = network.numerical_gradient(x_batch, t_batch) # 수치 미분 방식
+      grad = network.gradient(x_batch, t_batch) # 오차역전파법 방식(훨씬 빠르다)
+      
+      # 갱신
+      for key in ('W1', 'b1', 'W2', 'b2'):
+          network.params[key] -= learning_rate * grad[key]
+      
+      loss = network.loss(x_batch, t_batch)
+      train_loss_list.append(loss)
+      
+      if i % iter_per_epoch == 0:
+          train_acc = network.accuracy(x_train, t_train)
+          test_acc = network.accuracy(x_test, t_test)
+          train_acc_list.append(train_acc)
+          test_acc_list.append(test_acc)
+          print(train_acc, test_acc)
+  ```
+
 # <a name="오차역전파 " href="#오차역전파 ">오차역전파 </a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
@@ -1720,7 +1843,48 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
         $$ \dfrac{\partial L}{\partial u_1}\dfrac{\partial u_1}{\partial v} +\dfrac{\partial L}{\partial u_2}\dfrac{\partial u_2}{\partial v} +\dots+\dfrac{\partial L}{\partial u_n}\dfrac{\partial u_n}{\partial v} $$
 
         **을 최종적으로 자신의 미분값, 즉 자신이 조금 변했을 때 손실함수가 얼마나 변하는지에 대한 단서로 삼아야 한다.**
+
+<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+
+기울기 확인(gradient check) : 오차역전파를 구현하고 제대로 구현했는지 확인하기 위하여 수치미분과 대조하는 것이다.
+
+</blockquote>
   
+- **오차역전파는 수치미분의 느린 속도 때문에 개발되었으나 수치미분이 딥러닝에서 완전히 폐기되는 것은 아니다. 왜냐하면 수치 미분으로 오차역전파가 정확하게 구현되었는지 확인할 수 있기 때문이다.**
+
+  수치미분은 구현하기가 상대적으로 쉬워서 코드에 버그가 있기 어려운 반면, 오차역전파의 구현은 다소 복잡해서 버그가 있을 수도 있다.
+
+- 코드 구현 
+
+  ```python
+  # 데이터 읽기
+  (x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
+
+  network = TwoLayerNet(input_size=784, hidden_size=50, output_size=10)
+
+  x_batch = x_train[:3]
+  t_batch = t_train[:3]
+
+  grad_numerical = network.numerical_gradient(x_batch, t_batch)
+  grad_backprop = network.gradient(x_batch, t_batch)
+
+  # 각 가중치의 절대 오차의 평균을 구한다.
+  for key in grad_numerical.keys():
+      diff = np.average( np.abs(grad_backprop[key] - grad_numerical[key]) )
+      print(key + ":" + str(diff))
+  ```
+
+  위 코드의 출력이 
+
+  ```python
+  b1:9.7e-13
+  W1:8.4e-13
+  b2:1.1e-10
+  W2:2.2e-13
+  ```
+
+  로 나왔다면 오차가 $0$ 에 수렴하므로 역전파가 잘 구현되어 있는 것이다.
+
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
 덧셈 노드의 역전파 : 입력을 더하여 상위 연산 노드로 전달하는 덧셈 연산 노드의 역전파는 그 미분이 $1$ 이므로 상위 연산 노드에서 전달된 미분에 $1$ 을 곱하여 하위 연산 노드로 전달한다.
