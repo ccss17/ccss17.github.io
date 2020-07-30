@@ -24,6 +24,10 @@
 
   - ### [Deep Learning from Scratch 메모](https://ccss17.github.io/dl_from_scratch.html)
 
+  - ### [Deep Learning from Scratch 메모2](https://ccss17.github.io/dl_from_scratch2.html)
+
+  - ### [Deep Learning from Scratch 메모3](https://ccss17.github.io/dl_from_scratch3.html)
+
 - ### [철학 메모](https://ccss17.github.io/philosophy.html)
 
 - ### [정신지도규칙/방법서설 메모(데카르트)](https://ccss17.github.io/descartes.html)

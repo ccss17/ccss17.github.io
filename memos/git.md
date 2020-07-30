@@ -801,3 +801,13 @@ no changes added to commit (use "git add" and/or "git commit -a")
   git add .
   git commit -m "CORRECT!"
   ```
+
+# <a name="깃허브 협업 메모 " href="#깃허브 협업 메모 ">깃허브 협업 메모 </a>
+
+- 레포지토리에 협업 권한을 부여해야 브랜치 $A$ 를 새로 생성할 수 있다.
+
+- 이제 레포지토리를 `fork` 하고, `clone` 한다.
+
+- 작업을 하고 `push` 한다. 
+
+- 브랜치 $A$ 를 원본 레포지토리 브랜치 $A$ 로 **Pull request** 를 한다.
