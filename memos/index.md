@@ -22,6 +22,8 @@
 
 - ### [인공지능 메모](https://ccss17.github.io/ai.html)
 
+  - ### [CUDA 메모](https://ccss17.github.io/cuda.html)
+
   - ### [Deep Learning from Scratch 메모](https://ccss17.github.io/dl_from_scratch.html)
 
   - ### [Deep Learning from Scratch 메모2](https://ccss17.github.io/dl_from_scratch2.html)
