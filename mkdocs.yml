@@ -1,0 +1,127 @@
+site_name: ccss17
+site_author: ccsss
+# repo_name: ccss17.github.io
+# repo_url: https://github.com/ccss17/ccss17.github.io
+
+nav:
+  - Home: index.md
+  - Tex 수학기호: tex.md
+  - Computer: 
+    - Makefile: Computer/makefile.md
+    - Git: Computer/git.md
+    - Docker: Computer/docker.md
+    - CUDA: Computer/cuda.md
+  - Philosophy: 
+    - AI: 
+      - DL from stratch 메모: Philosophy/AI/dl_from_scratch.md
+      - DL from stratch 메모2: Philosophy/AI/dl_from_scratch2.md
+      - DL from stratch 메모3: Philosophy/AI/dl_from_scratch3.md
+      - 인공지능 메모3: Philosophy/AI/ai.md
+    - Algorithm:
+      - Leetcode: Philosophy/Algorithm/leetcode.md
+    - 철학 메모: Philosophy/philosophy.md
+    - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
+    - 정보이론: Philosophy/information.md
+  - Math: 
+    - 수학기초론: 
+      - 논리학: Math/Foundations/logic.md
+      - 집합론: Math/Foundations/math.md
+      - 수리논리학: Math/Foundations/mathmatical_logic.md
+    - 산술/대수학: 
+      - 기초 산술: Math/Algebra/arithmetic.md
+      - 추상대수학: Math/Algebra/abstract_algebra.md
+      - 대수학: Math/Algebra/algebra.md
+    - 해석학: 
+      - 해석학: Math/Analysis/anal.md
+      - 삼각함수: Math/Analysis/trig.md
+      - 함수: Math/Analysis/function.md
+    - 확률: 
+      - 조합: Math/Analysis/comb.md
+      - 확률: Math/Analysis/prob.md
+    - 통계학: 
+      - 도수분포의 평균,분산,표준편차: Math/Statistics/stat.md
+      - 이산확률변수의 평균,분산,표준편차: Math/Statistics/stat2.md
+      - 이항분포의 평균,분산,표준편차: Math/Statistics/stat3.md
+      - 연속확률변수의 평균,분산,표준편차: Math/Statistics/stat4.md
+      - 통계적 추정: Math/Statistics/stat5.md
+      - 상관관계 분석: Math/Statistics/stat6.md
+    - 미적분: 
+      - 극한: Math/Calculus/cal.md
+      - 미분: Math/Calculus/cal2.md
+      - 적분: Math/Calculus/cal3.md
+      - 미분2: Math/Calculus/cal4.md
+      - 적분2: Math/Calculus/cal5.md
+      - 벡터해석학: Math/Calculus/vector.md
+      - 미적분: Math/Calculus/cal6.md
+      - 다변수함수의 미분의 일반적 정의: Math/Calculus/cal7.md
+      - 텐서해석학: Math/Calculus/cal8.md
+    - 선형대수학: 
+      - 선형방정식: Math/LinearAlgebra/la.md
+      - 행렬대수: Math/LinearAlgebra/la2.md
+      - 행렬식: Math/LinearAlgebra/la3.md
+      - 벡터공간: Math/LinearAlgebra/la4.md
+      - 고유벡터: Math/LinearAlgebra/la5.md
+      - 직교: Math/LinearAlgebra/la6.md
+    - 다중선형대수학: 
+      - (임시): Math/MultiLinearAlgebra/mla.md
+    - 위상수학: 
+      - (임시): Math/Topology/topology.md
+  - 생각 메모: 
+    - 수학역사(고대 그리스~19세기): Think/all3.md
+    - 수학역사2(수학의 확실성): Think/all4.md
+    - 컴퓨터역사(괴델의 불완전성 정리): Think/all5.md
+    - 컴퓨터역사2(튜링의 불완전성 증명): Think/all6.md
+    - 컴퓨터역사3(튜링기계의 구현): Think/all7.md
+    - 컴퓨터역사4(소프트웨어와 알고리즘): Think/all8.md
+    - 컴퓨터역사5(초지능): Think/all9.md
+
+theme: 
+  name: material
+  palette:
+    primary: black
+    scheme: default
+  language: kr
+#   logo: assets/images/favicon.png
+#   favicon: assets/images/favicon.ico
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github-gist.min.css
+  - stylesheets/config.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ccss17
+
+markdown_extensions:
+  - toc:
+      permalink: "&para;"
+      baselevel: 2
+      toc_depth: 2-4
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.critic
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - attr_list
+  - def_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.magiclink
+  - pymdownx.tasklist:
+      clickable_checkbox: false
+      custom_checkbox: true
