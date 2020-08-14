@@ -272,7 +272,7 @@ $$ \mu = E(X) = \dfrac{1}{2} \cdot 1 +\dfrac{1}{4} \cdot 2 +\dfrac{1}{8} \cdot 3
 ---
 
 
-!!! note ""
+!!! tldr ""
 
     평균 부호어 길이(average codeword length, $\overline{L}$) : 메시지의 수 $n \in \mathbb{N}$, 메시지의 발생확률 $P_i$, 메시지를 표현하는 비트수 $l_i$ 에 대하여 
     
@@ -347,7 +347,7 @@ $$ \mu = E(X) = \dfrac{1}{2} \cdot 1 +\dfrac{1}{4} \cdot 2 +\dfrac{1}{8} \cdot 3
 
   > 사상 관계 존재 추론 방식의 좋은 예시이다.
 
-!!! note ""
+!!! tldr ""
 
     정보와 확률의 관계 : 정보량과 확률은 다음 두 가지 공통점(사상 가능 관계)을 갖는다.
     

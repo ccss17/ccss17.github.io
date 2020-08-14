@@ -37,7 +37,7 @@ def tag2note(fname):
         for i, def_section in enumerate(content):
             def_section = def_section.split(END)
             if len(def_section) == 2:
-                f.write('!!! note ""\n\n')
+                f.write('!!! tldr ""\n\n')
                 for line in def_section[0].strip().split('\n'):
                     f.write(' ' * 4 + line + '\n')
                 f.write('\n')

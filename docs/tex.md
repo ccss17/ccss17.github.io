@@ -317,6 +317,7 @@ $$
 \sin\alpha & 2
 \end{pmatrix}
 $$
+
 $$ M= 
 \begin{pmatrix}
 1 & 2 \\
@@ -327,6 +328,3 @@ $$ M=
 3 & 4
 \end{pmatrix}
 $$
-
-
-
