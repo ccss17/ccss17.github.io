@@ -1,45 +1,20 @@
+# 공분산과 상관계수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-## **통계 메모**
+    양의 관계 : 두 변수에 대하여 한 변수가 증가할 때 다른 변수가 증가하고 한 변수가 감소할 때 다른 변수도 감소하는 관계이다.
 
-**[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
 
-**[이산확률변수의 평균,분산,표준편차](https://ccss17.github.io/stat2.html)**
 
-**[이항분포의 평균,분산,표준편차](https://ccss17.github.io/stat3.html)**
+!!! note ""
 
-**[연속확률변수의 평균,분산,표준편차와 정규분포](https://ccss17.github.io/stat4.html)**
+    음의 관계 : 두 변수에 대하여 한 변수가 증가할 때 다른 변수가 감소하고 한 변수가 감소할 때 다른 변수가 증가하는 관계이다.
 
-**[통계적 추정](https://ccss17.github.io/stat5.html)**
 
-**[상관관계 분석](https://ccss17.github.io/stat6.html)**
 
-</blockquote>
+!!! note ""
 
-# 상관관계 분석
-
----
-
-# 공분산과 상관계수 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-양의 관계 : 두 변수에 대하여 한 변수가 증가할 때 다른 변수가 증가하고 한 변수가 감소할 때 다른 변수도 감소하는 관계이다. 
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-음의 관계 : 두 변수에 대하여 한 변수가 증가할 때 다른 변수가 감소하고 한 변수가 감소할 때 다른 변수가 증가하는 관계이다. 
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-산점도(scatter plot, scatter graph, scatter chart, scattergram) : 직교 좌표계를 이용해 두 변수 간의 관계를 나타내는 방법이다.
-
-</blockquote>
+    산점도(scatter plot, scatter graph, scatter chart, scattergram) : 직교 좌표계를 이용해 두 변수 간의 관계를 나타내는 방법이다.
 
 - 예시 
 
@@ -61,23 +36,21 @@
 
   <img src="https://user-images.githubusercontent.com/16812446/80305697-5e7bce80-87f9-11ea-8fd1-b19165bcdbaa.JPG" width="400" height="400"> 
 
-  위 산점도는 선형적이지가 않아서 양의 관계인지 음의 관계인지 파악하기 힘들다. 
+  위 산점도는 선형적이지가 않아서 양의 관계인지 음의 관계인지 파악하기 힘들다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-공분산(covariance) : 두 가지 데이터의 직선관계가 어느 정도인지를 나타내는 통계값으로써 
-
-$n$ 개의 $2$-튜플 확률변수 
-
-$$ (X, Y) = \{(x_1, y_1),(x_2, y_2),(x_3, y_3),\dots, (x_n, y_n)\} $$
-
-가 있을 때 $X$ 의 평균 $\mu _{x}$, $Y$ 의 평균이 $\mu _{y}$ 에 대하여 
-
-$$ \text{Cov}(X, Y) = \dfrac{1}{n} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) = \dfrac{1}{n} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  $$
-
-이다.
-
-</blockquote>
+    공분산(covariance) : 두 가지 데이터의 직선관계가 어느 정도인지를 나타내는 통계값으로써 
+    
+    $n$ 개의 $2$-튜플 확률변수 
+    
+    $$ (X, Y) = \{(x_1, y_1),(x_2, y_2),(x_3, y_3),\dots, (x_n, y_n)\} $$
+    
+    가 있을 때 $X$ 의 평균 $\mu _{x}$, $Y$ 의 평균이 $\mu _{y}$ 에 대하여 
+    
+    $$ \text{Cov}(X, Y) = \dfrac{1}{n} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) = \dfrac{1}{n} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  $$
+    
+    이다.
 
 - 설명
 
@@ -192,17 +165,15 @@ $$ \text{Cov}(X, Y) = \dfrac{1}{n} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}
   | 고객 $C$ | $5000$ 원  |$4,666,667$ 원 $^{2}$  |$2160$ 원  |$24167$|
   | 평균 월 매출 | $3666. 66\dots$ 백만원  |$138.89$ 백만원 $^{2}$  | 약 $1200$ 백만원  ||
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-편차제곱의 합 표기 : 데이터 $x, y$ 와 그 각각의 평균 $\mu _{x}, \mu _{y}$ 에 대하여 편차제곱의 합을 일반적으로 $S _{ab}$ 의 형식으로 다음과 같이 표기한다.
-
-$$ S _{xx} = \sum_{i=1}^{n}(x_i - \mu _{x}  ) ^{2} = \sum_{i=1}^{n}x_i ^{2} - n \mu _{x} ^{2} $$
-
-$$ S _{yy} = \sum_{i=1}^{n}(y_i - \mu _{y}  ) ^{2} = \sum_{i=1}^{n}y_i ^{2} - n \mu _{y} ^{2} $$
-
-$$ S _{xy} = \sum_{i=1}^{n}(x_i - \mu _{x}  )(y_i - \mu _{y}  )  = \sum_{i=1}^{n}x_iy_i  - n \mu _{x}\mu _{y}  $$
-
-</blockquote>
+    편차제곱의 합 표기 : 데이터 $x, y$ 와 그 각각의 평균 $\mu _{x}, \mu _{y}$ 에 대하여 편차제곱의 합을 일반적으로 $S _{ab}$ 의 형식으로 다음과 같이 표기한다.
+    
+    $$ S _{xx} = \sum_{i=1}^{n}(x_i - \mu _{x}  ) ^{2} = \sum_{i=1}^{n}x_i ^{2} - n \mu _{x} ^{2} $$
+    
+    $$ S _{yy} = \sum_{i=1}^{n}(y_i - \mu _{y}  ) ^{2} = \sum_{i=1}^{n}y_i ^{2} - n \mu _{y} ^{2} $$
+    
+    $$ S _{xy} = \sum_{i=1}^{n}(x_i - \mu _{x}  )(y_i - \mu _{y}  )  = \sum_{i=1}^{n}x_iy_i  - n \mu _{x}\mu _{y}  $$
 
 - 증명 
 
@@ -222,19 +193,17 @@ $$ S _{xy} = \sum_{i=1}^{n}(x_i - \mu _{x}  )(y_i - \mu _{y}  )  = \sum_{i=1}^{n
 
   $$ \therefore  S _{xx} = \sum_{i=1}^{n}(x_i - \mu _{x}  ) ^{2} = \sum_{i=1}^{n}x_i ^{2} - n \mu _{x} ^{2}$$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-상관계수(correlation coefficient) : 측정단위에 영향을 받아 선형관계의 강도를 명확히 알 수 없는 공분산의 단점을 해결하여 직선관계의 정도까지 나타내줄 수 있는 통계값으로써 
-
-확률변수 $X$ 와 $Y$ 의 분산이 양수일 때 각각의 표준편차 $\sigma _{y}, \sigma _{y}$ 와 공분산 $\sigma _{xy}$ 에 대한 무차원수
-
-$$ \rho = \dfrac{1}{n} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}} \bigg ) \bigg (\dfrac{y_i - \mu _{y}}{\sigma _{y}} \bigg ) = \dfrac{\sigma _{xy}}{\sigma _{x} \sigma _{y}} = \dfrac{S _{xy}}{\sqrt[]{S _{xx}} \sqrt[]{ S _{yy}} } $$
-
-이다. 
-
-</blockquote>
+    상관계수(correlation coefficient) : 측정단위에 영향을 받아 선형관계의 강도를 명확히 알 수 없는 공분산의 단점을 해결하여 직선관계의 정도까지 나타내줄 수 있는 통계값으로써 
+    
+    확률변수 $X$ 와 $Y$ 의 분산이 양수일 때 각각의 표준편차 $\sigma _{y}, \sigma _{y}$ 와 공분산 $\sigma _{xy}$ 에 대한 무차원수
+    
+    $$ \rho = \dfrac{1}{n} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}} \bigg ) \bigg (\dfrac{y_i - \mu _{y}}{\sigma _{y}} \bigg ) = \dfrac{\sigma _{xy}}{\sigma _{x} \sigma _{y}} = \dfrac{S _{xy}}{\sqrt[]{S _{xx}} \sqrt[]{ S _{yy}} } $$
+    
+    이다.
 
 - 설명 
 
@@ -354,23 +323,21 @@ $$ \rho = \dfrac{1}{n} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}
 
   이에 따라 월매출과 광고조회수 $PV$ 가 강한 양의 상관관계에 있다고 생각할 수 있다. 
 
-  또 월매출과 광고비는 약한 음의 상관관계를 갖는다고 볼 수 있다. 
+  또 월매출과 광고비는 약한 음의 상관관계를 갖는다고 볼 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-표본공분산(sample covariance) : 추출된 표본의 두 가지 데이터의 직선관계가 어느 정도인지를 나타내는 통계값으로써 
-
-$n$ 개의 $2$-튜플 확률변수 
-
-$$ (X, Y) = \{(x_1, y_1),(x_2, y_2),(x_3, y_3),\dots, (x_n, y_n)\} $$
-
-가 있을 때 $X$ 의 평균 $\mu _{x}$, $Y$ 의 평균이 $\mu _{y}$ 에 대하여 
-
-$$ \text{Cov}(X, Y) = \dfrac{1}{n-1} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  $$
-
-이다.
-
-</blockquote>
+    표본공분산(sample covariance) : 추출된 표본의 두 가지 데이터의 직선관계가 어느 정도인지를 나타내는 통계값으로써 
+    
+    $n$ 개의 $2$-튜플 확률변수 
+    
+    $$ (X, Y) = \{(x_1, y_1),(x_2, y_2),(x_3, y_3),\dots, (x_n, y_n)\} $$
+    
+    가 있을 때 $X$ 의 평균 $\mu _{x}$, $Y$ 의 평균이 $\mu _{y}$ 에 대하여 
+    
+    $$ \text{Cov}(X, Y) = \dfrac{1}{n-1} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  $$
+    
+    이다.
 
 - 공분산이 $n$ 으로 나눈 반면 표본공분산은 $n-1$ 로 나누었다는 것에 주의하자. 
 
@@ -428,19 +395,17 @@ $$ \text{Cov}(X, Y) = \dfrac{1}{n-1} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{
 
   $$ -13.98 \to -0.233 $$
 
-  으로 공분산이 변한다. 따라서 공분산의 절댓값 크기에서 의미를 찾으려 들면 안된다! 
+  으로 공분산이 변한다. 따라서 공분산의 절댓값 크기에서 의미를 찾으려 들면 안된다!
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-표본상관계수(sample correlation coefficient) : 측정단위에 영향을 받아 선형관계의 강도를 명확히 알 수 없는 공분산의 단점을 해결하여 직선관계의 정도까지 나타내줄 수 있는 추출된 표본의 통계값으로써 
-
-확률변수 $X$ 와 $Y$ 의 분산이 양수일 때 각각의 표본표준편차 $\sigma _{x}, \sigma _{y}$ 와 표본공분산 $\sigma _{xy}$ 에 대한 무차원수
-
-$$ \rho = \dfrac{1}{n-1} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}} \bigg ) \bigg (\dfrac{y_i - \mu _{y}}{\sigma _{y}} \bigg ) = \dfrac{\sigma _{xy}}{\sigma _{x} \sigma _{y}} = \dfrac{S _{xy}}{\sqrt[]{S _{xx}} \sqrt[]{ S _{yy}} } $$
-
-이다.
-
-</blockquote>
+    표본상관계수(sample correlation coefficient) : 측정단위에 영향을 받아 선형관계의 강도를 명확히 알 수 없는 공분산의 단점을 해결하여 직선관계의 정도까지 나타내줄 수 있는 추출된 표본의 통계값으로써 
+    
+    확률변수 $X$ 와 $Y$ 의 분산이 양수일 때 각각의 표본표준편차 $\sigma _{x}, \sigma _{y}$ 와 표본공분산 $\sigma _{xy}$ 에 대한 무차원수
+    
+    $$ \rho = \dfrac{1}{n-1} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}} \bigg ) \bigg (\dfrac{y_i - \mu _{y}}{\sigma _{y}} \bigg ) = \dfrac{\sigma _{xy}}{\sigma _{x} \sigma _{y}} = \dfrac{S _{xy}}{\sqrt[]{S _{xx}} \sqrt[]{ S _{yy}} } $$
+    
+    이다.
 
 - 표본상관계수도 마찬가지로 $-1$ 에서서 $1$ 의 값을 갖는다. 
 
@@ -452,24 +417,17 @@ $$ \rho = \dfrac{1}{n-1} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{
 
     휴대전화 보급률과 기대수명에 대한 선형상관관계는 매우 높다.
 
-    그렇다면 수명을 늘리기 위해 휴대전화 보급을 늘려야 하는가? 이 두 변수는 인과관계가 없기 때문에 올바르지 않는 결론이다. 
+    그렇다면 수명을 늘리기 위해 휴대전화 보급을 늘려야 하는가? 이 두 변수는 인과관계가 없기 때문에 올바르지 않는 결론이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-가능도(likelihood) : 
-
-</blockquote>
+    가능도(likelihood) :
 
 **구체화 필요**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-최대가능도추정(maximum likelihood estimation) : 
-
-</blockquote>
+    최대가능도추정(maximum likelihood estimation) :
 
 **구체화 필요**
-
-
-
 

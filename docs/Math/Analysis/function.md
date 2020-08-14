@@ -1,27 +1,9 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-## **해석학 메모**
-
-**[해석학 메모](https://ccss17.github.io/anal.html)**
-
-**[삼각 함수 메모](https://ccss17.github.io/trig.html)**
-
-**[함수 메모](https://ccss17.github.io/function.html)**
-
-</blockquote>
-
-# 함수 메모 
-
----
-
 # 도형의 방정식 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-함수의 그래프 : $x$ 축을 독립변수로 하고 각각의 $x$값에 대응하는 $y$ 값의 모든 순서쌍 $(x, y)$ 을 좌표평면에서 시각적으로 나타낸 것이다. 
+!!! note ""
 
-</blockquote>
+    함수의 그래프 : $x$ 축을 독립변수로 하고 각각의 $x$값에 대응하는 $y$ 값의 모든 순서쌍 $(x, y)$ 을 좌표평면에서 시각적으로 나타낸 것이다.
 
 - 함수 $f$ 의 그래프 $G$ 는 엄밀하게 다음과 같이 정의된다.
 
@@ -33,11 +15,9 @@
 
     ![desmos-graph](https://user-images.githubusercontent.com/16812446/75017426-52f5e980-54d0-11ea-9e69-e8a8e3df403d.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-직선의 방정식 : 직선의 방정식은 좌표평면에서 두 점을 곧게 이은 선분을 양 끝으로 무한히 늘린 직선을 나타내는 함수이다. 
-
-</blockquote>
+    직선의 방정식 : 직선의 방정식은 좌표평면에서 두 점을 곧게 이은 선분을 양 끝으로 무한히 늘린 직선을 나타내는 함수이다.
 
 - 직선은 두 점으로 유일하게 특정될 뿐 아니라 한 점과 기울기로도 유일하게 특정되므로 직선의 방정식은 다음과 같이 정의된다. 
 
@@ -51,25 +31,21 @@
 
 - 이로부터 모든 직선의 방정식을 대표하는 일차방정식 $ax + by + c = 0$ 를 얻는다. (단, $a \neq 0 또는 b \neq 0$)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-원의 방정식 : 중심이 $C(a, b)$ 이고 반지름의 길이가 $r(r>0)$ 인 원의 방정식은 $(x-a)^2 + (y-b)^2 = r^2$ 이다. 
+    원의 방정식 : 중심이 $C(a, b)$ 이고 반지름의 길이가 $r(r>0)$ 인 원의 방정식은 $(x-a)^2 + (y-b)^2 = r^2$ 이다.
 
-</blockquote>
+- 원이란 중심을 기준으로 일정한 거리에 있는 점들의 모임이다. 이 정의에 따라 중심 $C(a, b)$ 로부터 $r$ 만큼 떨어진 임의의 점 $(x, y)$ 을 피타고라스의 정리를 통하여 $(x-a)^2 + (y-b)^2 = r^2$ 로 표현할 수 있다.
 
-- 원이란 중심을 기준으로 일정한 거리에 있는 점들의 모임이다. 이 정의에 따라 중심 $C(a, b)$ 로부터 $r$ 만큼 떨어진 임의의 점 $(x, y)$ 을 피타고라스의 정리를 통하여 $(x-a)^2 + (y-b)^2 = r^2$ 로 표현할 수 있다. 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+    점의 평행이동 : 좌표평면 위의 한 점 $P(x, y)$ 를 $x$ 축의 방향으로 $a$ 만큼, $y$ 축의 방향으로 $b$ 만큼 평행이동한 점 $Q$ 의 좌표는 $Q(x+a, y+b)$ 이다.
 
-점의 평행이동 : 좌표평면 위의 한 점 $P(x, y)$ 를 $x$ 축의 방향으로 $a$ 만큼, $y$ 축의 방향으로 $b$ 만큼 평행이동한 점 $Q$ 의 좌표는 $Q(x+a, y+b)$ 이다. 
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-도형의 평행이동 : 방정식 $f(x, y) = 0$ 이 나타내는 도형을 $x$ 축의 방향으로 $a$ 만큼, $y$ 축의 방향으로 $b$ 만큼 평행이동한 도형의 방정식은 $f(x-a, y-b) = 0$ 이다. 
-
-</blockquote>
+    도형의 평행이동 : 방정식 $f(x, y) = 0$ 이 나타내는 도형을 $x$ 축의 방향으로 $a$ 만큼, $y$ 축의 방향으로 $b$ 만큼 평행이동한 도형의 방정식은 $f(x-a, y-b) = 0$ 이다.
 
 - 도형 위의 임의의 점을 $P(x, y)$ 라 할 때 도형을 $x$ 축의 방향으로 $a$ 만큼, $y$ 축의 방향으로 $b$ 만큼 평행이동하면 도형 위의 임의의 점 $P$ 도 평행이동한다. 그 결과 점 $P$ 가 $P'(X, Y)$ 가 되었다고 하면 다음이 성립한다. 
 
@@ -79,19 +55,17 @@
 
   이때 $x, y$ 는 도형의 방정식 $f(x, y) = 0$ 을 만족하는 미지수이므로 $x = X-a, y = Y-b$ 를 도형의 방정식에 대입하면 $f(X-a, Y-b) = 0$ 이 된다. 그런데 이것은 임의의 점 $P'(X, Y)$ 가 $f(X-a, Y-b) = 0$ 를 항상 만족하는 것을 의미하기 때문에 이 방정식이 평행이동한 도형의 방정식이 된다. 
 
-  한편 도형의 방정식을 일반적으로 $x, y$ 를 통하여 나타내기 때문에 $X, Y$ 를 $x, y$ 를 고쳐 최종적으로 평행이동한 도형의 방정식 $f(x-a, y-b)=0$ 를 얻는다. 
+  한편 도형의 방정식을 일반적으로 $x, y$ 를 통하여 나타내기 때문에 $X, Y$ 를 $x, y$ 를 고쳐 최종적으로 평행이동한 도형의 방정식 $f(x-a, y-b)=0$ 를 얻는다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-대칭 : 중심선을 기준으로 양 측이 동일한 대상이다. 
+    대칭 : 중심선을 기준으로 양 측이 동일한 대상이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-점의 대칭이동 : 좌표평면 위의 임의의 한 점 $(x, y)$ 를 대칭이동한 결과는 다음과 같다. 
+!!! note ""
 
-</blockquote>
+    점의 대칭이동 : 좌표평면 위의 임의의 한 점 $(x, y)$ 를 대칭이동한 결과는 다음과 같다.
 
 - 원점에 대하여 대칭이동한 점의 좌표 : $(-x, -y)$
 
@@ -101,11 +75,9 @@
 
 - 직선 $y=x$에 대하여 대칭이동한 점의 좌표 : $(y, x)$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-도형의 대칭이동 : 도형의 방정식 $f(x, y) = 0$ 이 나타내는 도형을 대칭이동한 결과는 다음과 같다. 
-
-</blockquote>
+    도형의 대칭이동 : 도형의 방정식 $f(x, y) = 0$ 이 나타내는 도형을 대칭이동한 결과는 다음과 같다.
 
 - 원점에 대하여 대칭이동한 도형의 방정식 : $f(-x, -y)=0$
 
@@ -115,35 +87,29 @@
 
 - 직선 $y=x$에 대하여 대칭이동한 도형의 방정식 : $f(y, x)=0$
 
-# 여러가지 함수 
+# 여러가지 함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-항등함수 : 함수 $f: X \to Y$ 에서 정의역 $X$ 의 각 원소가 자기 자신으로 대응되는 함수를 항등함수라 한다.
-
-</blockquote>
+    항등함수 : 함수 $f: X \to Y$ 에서 정의역 $X$ 의 각 원소가 자기 자신으로 대응되는 함수를 항등함수라 한다.
 
 - 즉 $f: X \to Y, x \mapsto x$ 인 함수 $f(x) = x$ 를 항등함수라 한다.
 
 - 예시 
 
-  - 파이썬 프로그래밍 언어로 정의된 함수 `def f(x): return x` 는 항등함수이다. 
+  - 파이썬 프로그래밍 언어로 정의된 함수 `def f(x): return x` 는 항등함수이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-상수함수 : 함수 $f: X \to Y$ 에서 정의역 $X$ 의 모든 원소가 공역의 단 하나의 원소로 대응되는 함수, 즉 $f(x) = c$ ($c$ 는 상수) 인 함수 $f$ 를 상수함수라 한다. 
-
-</blockquote>
+    상수함수 : 함수 $f: X \to Y$ 에서 정의역 $X$ 의 모든 원소가 공역의 단 하나의 원소로 대응되는 함수, 즉 $f(x) = c$ ($c$ 는 상수) 인 함수 $f$ 를 상수함수라 한다.
 
 - 예시 
 
   $f(x) = 5$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-합성함수(composite function) : 두 함수 $f: X \to Y, g: Y \to Z$ 가 주어졌을 때, 두 함수 $f$ 와 $g$ 를 통하여 집합 $X$ 의 임의의 원소 $x$ 에 집합 $Z$ 의 원소 $g(f(x))$ 를 대응시킨 새로운 함수를 $f$ 와 $g$ 의 합성함수라 한다. 
-
-</blockquote>
+    합성함수(composite function) : 두 함수 $f: X \to Y, g: Y \to Z$ 가 주어졌을 때, 두 함수 $f$ 와 $g$ 를 통하여 집합 $X$ 의 임의의 원소 $x$ 에 집합 $Z$ 의 원소 $g(f(x))$ 를 대응시킨 새로운 함수를 $f$ 와 $g$ 의 합성함수라 한다.
 
 - 합성함수를 기호로 $g \circ f: X \to Z$ 로 표현한다.
 
@@ -199,13 +165,11 @@
 
     $\because (h \circ g)(x) = h(g(x)) = h(x+1) = (x+1)^2$
 
-    따라서 결합법칙이 성립한다. 
+    따라서 결합법칙이 성립한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-역함수(inverse function) : 함수 $f: X \to Y$ 가 일대일대응이면 집합 $Y$ 의 임의의 원소 $y$ 에 $f(x) = y$ 인 집합 $X$ 의 원소 $x$ 를 대응시킨 함수 $f^{-1}: Y \to X$ 이다.
-
-</blockquote>
+    역함수(inverse function) : 함수 $f: X \to Y$ 가 일대일대응이면 집합 $Y$ 의 임의의 원소 $y$ 에 $f(x) = y$ 인 집합 $X$ 의 원소 $x$ 를 대응시킨 함수 $f^{-1}: Y \to X$ 이다.
 
 - 함수 $f$ 의 역함수를 $f^{-1}$ 로 표현한다. 
 
@@ -239,13 +203,11 @@
 
 - 예시 
 
-  - 함수 $f(x) = y = 3x-2$ 의 역함수는 무엇인가. 함수 $f$ 를 $x$ 에 대하여 풀면 $x = \frac{1}{3}y + \frac{2}{3}$ 이므로 역함수는 $f ^{-1}(x) = \frac{1}{3}x+\frac{2}{3}$ 이다. 
+  - 함수 $f(x) = y = 3x-2$ 의 역함수는 무엇인가. 함수 $f$ 를 $x$ 에 대하여 풀면 $x = \frac{1}{3}y + \frac{2}{3}$ 이므로 역함수는 $f ^{-1}(x) = \frac{1}{3}x+\frac{2}{3}$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-양함수(explicit function) : 하나의 변수 $y$ 가 다른 한 변수 $x$ 에 대한 식으로 제시된 함수일 때, $y$ 를 $x$ 의 양함수라 한다. 
-
-</blockquote>
+    양함수(explicit function) : 하나의 변수 $y$ 가 다른 한 변수 $x$ 에 대한 식으로 제시된 함수일 때, $y$ 를 $x$ 의 양함수라 한다.
 
 - 지금까지 살펴본 대부분의 함수가 양함수이다. 
 
@@ -253,11 +215,9 @@
 
   $y = x + 3$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-음함수(implicit function) : $x$ 에 대한 함수 $y$ 가 두 변수 $x, y$ 의 항을 모두 좌변으로 이항하여 $f(x, y) = 0$ 꼴로 주어질 때 $y$ 를 $x$ 의 음함수라 한다. 
-
-</blockquote>
+    음함수(implicit function) : $x$ 에 대한 함수 $y$ 가 두 변수 $x, y$ 의 항을 모두 좌변으로 이항하여 $f(x, y) = 0$ 꼴로 주어질 때 $y$ 를 $x$ 의 음함수라 한다.
 
 - 양함수는 항상 음함수로 바꿀 수 있다. 
 
@@ -279,13 +239,11 @@
 
   $y \leq 0$ 일 때, $y = -\sqrt[]{1-x^2}$ 이다. 
 
-  이것들은 모두 폐구간 $[-1, 1]$ 에서 $x$ 에 대한 함수가 된다. 
+  이것들은 모두 폐구간 $[-1, 1]$ 에서 $x$ 에 대한 함수가 된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-초월함수(transcendental function) : 계수가 유리수인 다항함수의 사칙연산(거듭제곱근 연산을 포함)을 유한번 이내에서 아무리 적용하여도 만들 수 없는 함수이다. 
-
-</blockquote>
+    초월함수(transcendental function) : 계수가 유리수인 다항함수의 사칙연산(거듭제곱근 연산을 포함)을 유한번 이내에서 아무리 적용하여도 만들 수 없는 함수이다.
 
 - 예시 
 
@@ -295,65 +253,63 @@
 
   삼각함수 $y = \sin x$ 는 초월함수이다. 
 
-## 다항함수 
+## 다항함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-다항함수(polynomial function) : 다음과 같은 꼴의 함수 $f(x)$ 를 $x$ 에 대한 $n$ 차 다항함수(nth degree polynomial function)라 한다. 
+    다항함수(polynomial function) : 다음과 같은 꼴의 함수 $f(x)$ 를 $x$ 에 대한 $n$ 차 다항함수(nth degree polynomial function)라 한다. 
+    
+    $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n-2} + \dots + a _{0}x ^{0}  (단, a _{n} \neq 0, n 은 자연수, a _{i}(0 \leq i \leq n) 는 상수) $$
 
-$$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n-2} + \dots + a _{0}x ^{0}  (단, a _{n} \neq 0, n 은 자연수, a _{i}(0 \leq i \leq n) 는 상수) $$
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이차함수 
+    이차함수 
+    
+    **구체화 필요**
 
-**구체화 필요**
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-삼차함수 
+    삼차함수 
+    
+    **구체화 필요**
 
-**구체화 필요**
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-사차함수 
+    사차함수 
+    
+    **구체화 필요**
 
-**구체화 필요**
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수의 최대값 : 어떤 함수의 모든 함수값 중에서 가장 큰 값을 함수의 최대값이라 한다. 
+    함수의 최대값 : 어떤 함수의 모든 함수값 중에서 가장 큰 값을 함수의 최대값이라 한다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-함수의 최소값 : 어떤 함수의 모든 함수값 중에서 가장 작은 값을 함수의 최소값이라 한다. 
+!!! note ""
 
-</blockquote>
+    함수의 최소값 : 어떤 함수의 모든 함수값 중에서 가장 작은 값을 함수의 최소값이라 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-이차함수의 최대값과 최소값
 
-**구체화 필요**
+!!! note ""
 
-</blockquote>
+    이차함수의 최대값과 최소값
+    
+    **구체화 필요**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-홀함수(기함수, odd function) : 원점에 대하여 대칭인 함수이다.
 
-</blockquote>
+!!! note ""
+
+    홀함수(기함수, odd function) : 원점에 대하여 대칭인 함수이다.
 
 - 즉, $f(-x) = -f(x)$ 가 성립하는 함수이다.
 
@@ -367,11 +323,9 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
     ![desmos-graph(7)](https://user-images.githubusercontent.com/16812446/75110012-f3ccdc00-566b-11ea-801b-97894c2b66c0.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-짝함수(우함수, even function) : $y$ 축에 대하여 대칭인 함수이다.
-
-</blockquote>
+    짝함수(우함수, even function) : $y$ 축에 대하여 대칭인 함수이다.
 
 - 즉, $f(-x) = f(x)$ 가 성립하는 함수이다. 
 
@@ -385,31 +339,25 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   - $y=x^2-x$ 는 짝수차항과 홀수차항이 모두 있기 때문에 홀함수도 아니고 짝함수도 아니다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-매개변수 방정식(parameter equation) : 점 $P(x, y)$ 에 대하여 $x=g(t), y=h(t)$ 이면 함수 $f: \mathbb{R} \to \mathbb{R} ^{2}, t \mapsto (x, y)$ 를 생각할 수 있다. 이때 $x=g(t), y=h(t)$ 를 $t$ 를 매개변수로 하는 도형의 매개변수 방정식이라 한다. 
-
-</blockquote>
+    매개변수 방정식(parameter equation) : 점 $P(x, y)$ 에 대하여 $x=g(t), y=h(t)$ 이면 함수 $f: \mathbb{R} \to \mathbb{R} ^{2}, t \mapsto (x, y)$ 를 생각할 수 있다. 이때 $x=g(t), y=h(t)$ 를 $t$ 를 매개변수로 하는 도형의 매개변수 방정식이라 한다.
 
 ## 유리함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유리함수(rational function) : 함수 $y=f(x)$ 에서 $f(x)$ 가 $x$ 에 대한 유리식일 때, 이 함수를 유리함수라 한다.
-
-</blockquote>
+    유리함수(rational function) : 함수 $y=f(x)$ 에서 $f(x)$ 가 $x$ 에 대한 유리식일 때, 이 함수를 유리함수라 한다.
 
 - $f(x)$ 가 $x$ 에 대한 다항식이면 다항함수(polynomial function)라 하는 것이다. 
 
 - $f(x)$ 가 $x$ 에 대한 분수식이면 분수함수(fractional function)라 하는 것이다. 
 
-  - 다항함수와 분수함수의 차이점은 다항함수의 정의역이 실수 전체 집합인데 비해 분수함수의 정의역은 분모를 $0$ 이 되게 하는 실수를 제외한 실수 전체 집합이라는 것이다. 
+  - 다항함수와 분수함수의 차이점은 다항함수의 정의역이 실수 전체 집합인데 비해 분수함수의 정의역은 분모를 $0$ 이 되게 하는 실수를 제외한 실수 전체 집합이라는 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유리함수의 그래프 : $y = \frac{ax+b}{cx+d}$(단, $ad-bc \neq 0, c \neq 0$)의 그래프는 함수 $y = \frac{k}{x-p}+q$(단, $k \neq 0$) 의 꼴로 변형할 수 있으므로 다음이 성립한다. 
-
-</blockquote>
+    유리함수의 그래프 : $y = \frac{ax+b}{cx+d}$(단, $ad-bc \neq 0, c \neq 0$)의 그래프는 함수 $y = \frac{k}{x-p}+q$(단, $k \neq 0$) 의 꼴로 변형할 수 있으므로 다음이 성립한다.
 
 - $y = \frac{k}{x}$ 의 그래프를 $x$ 축 방향으로 $p$ 만큼, $y$ 축 방향으로 $q$ 만큼 평행이동한 것이다.
 
@@ -427,17 +375,15 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
 ## 무리함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-무리함수 : 함수 $y=f(x)$ 에서 $f(x)$ 가 $x$ 에 대한 무리식일 때, 이 함수를 무리함수라 한다. 
+    무리함수 : 함수 $y=f(x)$ 에서 $f(x)$ 가 $x$ 에 대한 무리식일 때, 이 함수를 무리함수라 한다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-무리함수의 그래프 : $y = \sqrt[]{ax+b}+c$(단, $a \neq 0$) 의 그래프는 $y=\sqrt[]{a(x-p)}+c$ 로 변형할 수 있으므로 다음이 성립한다. 
+!!! note ""
 
-</blockquote>
+    무리함수의 그래프 : $y = \sqrt[]{ax+b}+c$(단, $a \neq 0$) 의 그래프는 $y=\sqrt[]{a(x-p)}+c$ 로 변형할 수 있으므로 다음이 성립한다.
 
 - $y=\sqrt[]{ax}$ 의 그래프를 $x$ 축의 방향으로 $p$ 만큼, $y$ 축의 방향으로 $q$ 만큼 평행이동한 것이다.
 
@@ -465,13 +411,11 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
     ![desmos-graph(5)](https://user-images.githubusercontent.com/16812446/75109648-9c793c80-5668-11ea-8542-9369bc611610.png) ![desmos-graph(6)](https://user-images.githubusercontent.com/16812446/75109660-b87cde00-5668-11ea-897c-4eaf836d5a0b.png)
 
-## 지수함수 
+## 지수함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-지수함수 : $a$ 가 $1$ 이 아닌 양수일 때, 임의의 실수 $x$ 에 $a^x$ 를 대응시킨 함수 $y = a^x$ 이다. 
-
-</blockquote>
+    지수함수 : $a$ 가 $1$ 이 아닌 양수일 때, 임의의 실수 $x$ 에 $a^x$ 를 대응시킨 함수 $y = a^x$ 이다.
 
 - 지수함수의 그래프는 $a > 1$ 일 때와 $0 < a < 1$ 일 때 달라진다. 
 
@@ -493,21 +437,17 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/73837415-c652f680-4854-11ea-8eac-410e5f17204b.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-지수방정식(exponential equation) : 지수에 미지수를 포함하고 있는 방정식이다. 
-
-</blockquote>
+    지수방정식(exponential equation) : 지수에 미지수를 포함하고 있는 방정식이다.
 
 - 예시 
 
   $x^{x+3} = x^{2x-1}$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-지수부등식(exponential inequality) : 지수에 미지수를 포함하고 있는 부등식이다. 
-
-</blockquote>
+    지수부등식(exponential inequality) : 지수에 미지수를 포함하고 있는 부등식이다.
 
 - 지수부등식의 밑이 $a$ 일때, 밑의 범위가 $a > 1$ 인지 $0 < a <1$ 인지에 따라 지수의 대수 관계가 바뀌므로 주의해야 한다. 
 
@@ -517,11 +457,9 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
 ## 로그함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그함수 : $a$ 가 $1$ 이 아닌 양수일 때, 임의의 양의 실수 $x$ 에 $\log_{a} x$ 를 대응시키는 함수 $y = \log_{a} x$ 를 $a$ 를 밑으로 하는 로그함수라 한다. 
-
-</blockquote>
+    로그함수 : $a$ 가 $1$ 이 아닌 양수일 때, 임의의 양의 실수 $x$ 에 $\log_{a} x$ 를 대응시키는 함수 $y = \log_{a} x$ 를 $a$ 를 밑으로 하는 로그함수라 한다.
 
 - 로그함수 $y = \log_{a} x(a>0, a \neq 1)$ 은 지수함수 $y = a^x(a>0, a \neq 1)$ 의 역함수이다. 
 
@@ -539,21 +477,17 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   ![desmos-graph(5)](https://user-images.githubusercontent.com/16812446/73849242-f0b0ae00-486c-11ea-8587-58a29b4e4606.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그방정식(logarithm equation) : 로그의 진수($value$) 또는 밑($base$)에 미지수를 포함하고 있는 방정식이다. 
-
-</blockquote>
+    로그방정식(logarithm equation) : 로그의 진수($value$) 또는 밑($base$)에 미지수를 포함하고 있는 방정식이다.
 
 - 예시 
 
   $\log_{2} (x+2) = \log_{2} 2x$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그부등식(logarithm inequality) : 로그의 진수 또는 밑에 미지수를 포함하고 있는 부등식이다. 
-
-</blockquote>
+    로그부등식(logarithm inequality) : 로그의 진수 또는 밑에 미지수를 포함하고 있는 부등식이다.
 
 - 로그부등식의 밑이 $a$ 일때, 밑의 범위가 $a > 1$ 인지 $0 < a <1$ 인지에 따라 지수의 대수 관계가 바뀌므로 주의해야 한다. 
 
@@ -561,13 +495,11 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   $\log_{3} (x^2-2x) > \log_{3} (2-x)+1$
 
-## 특별한 함수 
+## 특별한 함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-가우스 함수 : 실수 $x$ 에 대하여 $x$ 보다 크지 않은 최대의 정수를 대응시키는 함수이다. 
-
-</blockquote>
+    가우스 함수 : 실수 $x$ 에 대하여 $x$ 보다 크지 않은 최대의 정수를 대응시키는 함수이다.
 
 - $f(x) = [x]$ 로 표기한다. 
 
@@ -577,13 +509,11 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   $[1.23] = 1, [-1.23] = -2$ 
 
-- 이 함수를 가우스 함수라 부르는 것은 대한민국을 제외하면 보편적이지 않으니 주의해야 한다. 버림함수 또는 바닥함수라고도 불리운다. 
+- 이 함수를 가우스 함수라 부르는 것은 대한민국을 제외하면 보편적이지 않으니 주의해야 한다. 버림함수 또는 바닥함수라고도 불리운다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-주기함수 : $y = f(x)$ 의 정의역에 속하는 모든 실수 $x$ 에 대하여 $f(x+p) = f(x)$ 를 만족시키는 $0$ 이 아닌 상수 $p$ 가 존재할 때 이 함수를 주기함수라 한다. 
-
-</blockquote>
+    주기함수 : $y = f(x)$ 의 정의역에 속하는 모든 실수 $x$ 에 대하여 $f(x+p) = f(x)$ 를 만족시키는 $0$ 이 아닌 상수 $p$ 가 존재할 때 이 함수를 주기함수라 한다.
 
 - 또한 이러한 상수 $p$ 중에서 최소인 양수를 그 함수의 주기라고 한다. 
 
@@ -597,11 +527,9 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
   $y = \tan x$ 는 주기가 $\pi$ 인 주기함수이다. 모든 실수 $x$ 에 대하여 관계 $\tan x = \tan(x + \pi)$ 가 성립한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-뉴턴의 다항식 보간법(polynomial interpolation) : $(n+1)$ 개의 점을 지나는 $n$ 차 다항함수의 정확한 식을 얻는 방법이다.
-
-</blockquote>
+    뉴턴의 다항식 보간법(polynomial interpolation) : $(n+1)$ 개의 점을 지나는 $n$ 차 다항함수의 정확한 식을 얻는 방법이다.
 
 - 이 예시 뉴턴의 다항식 보간법을 사용하지 않고 연립방정식으로 구하는 방법이다. 
 
@@ -641,19 +569,17 @@ $$ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n
 
     $$ f(x)+6(x-3.17)= + a(x-2.17)(x-3.17) $$
 
-  이제 이 이차함수 $f(x)$ 가 $(4.17, 3)$ 을 지나는 것을 이용하여 마지막 미지수 $a$ 가 $4$ 라는 것을 밝힐 수 있다. 
+  이제 이 이차함수 $f(x)$ 가 $(4.17, 3)$ 을 지나는 것을 이용하여 마지막 미지수 $a$ 가 $4$ 라는 것을 밝힐 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-시그모이드 함수(sigmoid function) : 다음과 같이 표현되는 함수를 시그모이드 함수라 한다. 
-
-$$ \zeta _a(x) = \frac{1}{1+\exp(-ax)} $$
-
-또는
-
-$$ \zeta _a(x) = \frac{1}{1+ e ^{-ax} } $$
-
-</blockquote>
+    시그모이드 함수(sigmoid function) : 다음과 같이 표현되는 함수를 시그모이드 함수라 한다. 
+    
+    $$ \zeta _a(x) = \frac{1}{1+\exp(-ax)} $$
+    
+    또는
+    
+    $$ \zeta _a(x) = \frac{1}{1+ e ^{-ax} } $$
 
 - $a$ 를 게인(gain) 이라 한다.
 
@@ -661,27 +587,25 @@ $$ \zeta _a(x) = \frac{1}{1+ e ^{-ax} } $$
 
   - 점근선 $y = 0, y = 1$ 을 갖는다.
 
-  - $\displaystyle x = 0 \to \zeta _a(0) = \frac{1}{2}$ 
+  - $\displaystyle x = 0 \to \zeta _a(0) = \frac{1}{2}$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-표준 시그모이드 함수 : $a=1$ 일 때의 시그모이드 함수, 즉
+    표준 시그모이드 함수 : $a=1$ 일 때의 시그모이드 함수, 즉
+    
+    $$ \zeta (x) = \frac{1}{1+\exp (-x)} $$
+    
+    또는
+    
+    $$ \zeta (x) = \frac{1}{1+e ^{-x}} $$
+    
+    를 표준 시그모이드 함수라 한다.
 
-$$ \zeta (x) = \frac{1}{1+\exp (-x)} $$
 
-또는
 
-$$ \zeta (x) = \frac{1}{1+e ^{-x}} $$
+!!! note ""
 
-를 표준 시그모이드 함수라 한다. 
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-밑이 무리수 $e$ 인 지수함수의 그래프 연구 k
-
-</blockquote>
+    밑이 무리수 $e$ 인 지수함수의 그래프 연구 k
 
 - 다음 그래프에서 빨간 곡선이 $y = e^x$, 파란 곡선이 $y=e^{-x}$ 를 나타낸다. 
 
@@ -738,3 +662,4 @@ $$ \zeta (x) = \frac{1}{1+e ^{-x}} $$
   ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/77423392-72a36900-6e12-11ea-80e0-b3baf537b86b.png)
 
   - 게인 $a$ 의 값을 $1$ 에서 $5$ 로 높혔더니 함수의 휘어지는 정도가 커졌다는 것을 알 수 있다. $x$ 축을 압축시켰다고도 할 수 있다.
+

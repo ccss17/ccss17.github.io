@@ -1,32 +1,3 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-- ## **생각 메모**
-
-  **[수학 역사 (고대 그리스~19세기)](https://ccss17.github.io/all3.html)**
-
-  **[수학 역사2 (수학의 확실성)](https://ccss17.github.io/all4.html)**
-
-  **[컴퓨터 역사 (괴델의 불완전성 정리)](https://ccss17.github.io/all5.html)**
-
-  **[컴퓨터 역사2 (튜링의 불완전성 증명)](https://ccss17.github.io/all6.html)**
-
-  **[컴퓨터 역사3 (튜링 기계의 구현)](https://ccss17.github.io/all7.html)**
-
-  **[컴퓨터 역사4 (소프트웨어와 알고리즘)](https://ccss17.github.io/all8.html)**
-
-  **[컴퓨터 역사5 (초지능)](https://ccss17.github.io/all9.html)**
-
-</blockquote>
-
----
-
-# 수학 역사 
-
-**수학의 역사에 관한 메모를 해 둔 곳입니다.**
-
----
-
 ###### _(3-1)_ $\therefore$ 2-9 에 따라 어떤 학문을 알기 위해서는 그 역사부터 공부해야 한다.
 
 ###### 그런데 인공지능의 뿌리는 컴퓨터공학이고 컴퓨터공학의 뿌리는 과학공학이며 과학공학의 뿌리는 수학이다. 
@@ -2982,5 +2953,4 @@ B.C. 600 ~ B.C. 300
 - 좌표기하학으로 작도가 대수적으로 두 일차방정식이나 두 이차방정식으로 된 연립방정식을 푸는 것을 의미하는 것을 깨닫게 되었다. 
 
   > 작도 -> 대수학 -> 코딩(?) [기하학 -> 대수학 -> 코딩] [자연적 대상 -> 대수학 -> 코딩]
-
 

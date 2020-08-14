@@ -1,39 +1,14 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-## **선형대수학 메모**
-
-**[선형방정식](https://ccss17.github.io/la.html)**
-
-**[행렬대수](https://ccss17.github.io/la2.html)**
-
-**[행렬식](https://ccss17.github.io/la3.html)**
-
-**[벡터공간](https://ccss17.github.io/la4.html)**
-
-**[고유벡터](https://ccss17.github.io/la5.html)**
-
-**[직교](https://ccss17.github.io/la6.html)**
-
-</blockquote>
-
-# 직교
-
----
-
 # 직교성과 최소제곱법 
 
 ## 내적, 길이, 직교
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-내적(inner product) 또는 스칼라곱(dot product) : $\mathbb{R} ^{n}$ 공간 상의 두 $n \times 1$ 행렬, 즉 두 벡터 $u, v$ 의 내적은 행렬곱
-
-$$ u \cdot v = u ^{T}v $$
-
-이다. 
-
-</blockquote>
+    내적(inner product) 또는 스칼라곱(dot product) : $\mathbb{R} ^{n}$ 공간 상의 두 $n \times 1$ 행렬, 즉 두 벡터 $u, v$ 의 내적은 행렬곱
+    
+    $$ u \cdot v = u ^{T}v $$
+    
+    이다.
 
 - $u ^{T}$ 는 $u$ 의 전치벡터로써 $1 \times n$ 행렬이 되므로 $n \times 1$ 행렬 $v$ 와 행렬곱 연산을 할 수 있다.
 
@@ -53,35 +28,31 @@ $$ u \cdot v = u ^{T}v $$
 
   $$ v \cdot u = v ^{T}u = \begin{bmatrix} 3&2&-3\\ \end{bmatrix} \begin{bmatrix} 2\\-5\\-1 \end{bmatrix} = -1 $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-내적의 성질 : $\mathbb{R} ^{n}$ 공간 상의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다.
-
-1. (교환법칙) $u \cdot v = v \cdot u$
-
-2. (분배법칙) $(u + v) \cdot w = v \cdot w + v \cdot w$
-
-3. (분배법칙) $(cu) \cdot v = c (u \cdot v) = u \cdot(cv)$
-
-4. $u \cdot u \geq 0$, 그리고 $u \cdot u = 0 \iff u = 0$
-
-</blockquote>
+    내적의 성질 : $\mathbb{R} ^{n}$ 공간 상의 벡터 $u, v, w$ 와 스칼라 $c$ 에 대하여 다음이 성립한다.
+    
+    1. (교환법칙) $u \cdot v = v \cdot u$
+    
+    2. (분배법칙) $(u + v) \cdot w = v \cdot w + v \cdot w$
+    
+    3. (분배법칙) $(cu) \cdot v = c (u \cdot v) = u \cdot(cv)$
+    
+    4. $u \cdot u \geq 0$, 그리고 $u \cdot u = 0 \iff u = 0$
 
 - $2, 3$ 을 사용하여
 
   $$ (c_1u_1 + \dots + c_pu_p)\cdot w = c_1(u_1 \cdot w) + \dots + c_p(u_p \cdot w) $$
 
-  을 연역할 수 있다. 
+  을 연역할 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-벡터의 크기(length) 또는 노름(norm) : $\mathbb{R} ^{n}$ 공간 상의 벡터 $v$ 가 성분 $v_1, \dots, v_n$ 을 가질 때 양수 스칼라
-
-$$ ||v|| = \sqrt[]{v \cdot v} = \sqrt[]{v_1^{2} + v_2 ^{2} + \dots + v_n ^{2}} $$
-
-를 벡터의 크기 또는 노름이라고 정의한다. 
-
-</blockquote>
+    벡터의 크기(length) 또는 노름(norm) : $\mathbb{R} ^{n}$ 공간 상의 벡터 $v$ 가 성분 $v_1, \dots, v_n$ 을 가질 때 양수 스칼라
+    
+    $$ ||v|| = \sqrt[]{v \cdot v} = \sqrt[]{v_1^{2} + v_2 ^{2} + \dots + v_n ^{2}} $$
+    
+    를 벡터의 크기 또는 노름이라고 정의한다.
 
 - 직선 사이의 크기, 평면 사이의 크기, 공간 사이의 크기를 $n$ 차원에 적용되도록 일반화 한 것이다. 
 
@@ -93,13 +64,11 @@ $$ ||v|| = \sqrt[]{v \cdot v} = \sqrt[]{v_1^{2} + v_2 ^{2} + \dots + v_n ^{2}} $
 
   이때 $||v||$ 는 원점에서 $v$ 까지의 선분의 길이이다.
 
-  $\mathbb{R} ^{3}$ 공간 상의 벡터, 즉 $3$ 차원 공간좌표에서도 마찬가지로 원점에서 $v$ 까지의 길이로 생각할 수 있다. 
+  $\mathbb{R} ^{3}$ 공간 상의 벡터, 즉 $3$ 차원 공간좌표에서도 마찬가지로 원점에서 $v$ 까지의 길이로 생각할 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-벡터의 크기의 성질 : 임의의 스칼라 $c$ 와 벡터 $v$ 에 대하여 벡터 $cv$ 의 크기는 $v$ 의 크기 $||v||$ 의 $|c|$ 배이다.
-
-</blockquote>
+    벡터의 크기의 성질 : 임의의 스칼라 $c$ 와 벡터 $v$ 에 대하여 벡터 $cv$ 의 크기는 $v$ 의 크기 $||v||$ 의 $|c|$ 배이다.
 
 - 즉,
 
@@ -111,23 +80,19 @@ $$ ||v|| = \sqrt[]{v \cdot v} = \sqrt[]{v_1^{2} + v_2 ^{2} + \dots + v_n ^{2}} $
 
   이기 때문이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-단위벡터(unit vector) : 크기가 $1$ 인 벡터이다.
-
-</blockquote>
+    단위벡터(unit vector) : 크기가 $1$ 인 벡터이다.
 
 - 예시 
 
   $\mathbb{R} ^{2}$ 공간 상의 벡터 $u = \begin{bmatrix} 1\\0 \end{bmatrix}$ 는 단위벡터이다. 
 
-  $\mathbb{R} ^{3}$ 공간 상의 벡터 $u = \begin{bmatrix} 0\\1\\0 \end{bmatrix}$ 는 단위벡터이다. 
+  $\mathbb{R} ^{3}$ 공간 상의 벡터 $u = \begin{bmatrix} 0\\1\\0 \end{bmatrix}$ 는 단위벡터이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정규화(normalizatoin) : 벡터 $v$ 로부터 단위벡터 $u$ 를 얻는 과정이다.
-
-</blockquote>
+    정규화(normalizatoin) : 벡터 $v$ 로부터 단위벡터 $u$ 를 얻는 과정이다.
 
 - $0$ 이 아닌 벡터 $v$ 를 그 크기로 나누면 $v$ 방향을 향하는 단위벡터를 얻을 수 있다. 
 
@@ -159,15 +124,13 @@ $$ ||v|| = \sqrt[]{v \cdot v} = \sqrt[]{v_1^{2} + v_2 ^{2} + \dots + v_n ^{2}} $
 
   을 얻는다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-두 벡터 $u, v$ 사이의 거리(distance) : $\mathbb{R} ^{n}$ 상의 두 벡터 $u, v$ 의 거리는 벡터 $u - v$ 의 크기
-
-$$ \text{dist}(u, v) = ||u - v|| $$
-
-이다. 
-
-</blockquote>
+    두 벡터 $u, v$ 사이의 거리(distance) : $\mathbb{R} ^{n}$ 상의 두 벡터 $u, v$ 의 거리는 벡터 $u - v$ 의 크기
+    
+    $$ \text{dist}(u, v) = ||u - v|| $$
+    
+    이다.
 
 - $\mathbb{R} ^{3}$ 공간 상의 두 벡터 $u = \begin{bmatrix} u_1\\u_2\\u_3 \end{bmatrix}, v = \begin{bmatrix} v_1\\v_2\\v_3 \end{bmatrix}$ 의 거리는 
 
@@ -191,21 +154,19 @@ $$ \text{dist}(u, v) = ||u - v|| $$
 
   $$ ||u - v|| = \sqrt[]{4 ^{2} + (-1)^{2}} = \sqrt[]{17} $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-벡터 $u, v$ 의 직교(orthogonal) : $\mathbb{R} ^{n}$ 상의 두 벡터 $u ,v$ 가
-
-$$ u \cdot v = 0 $$
-
-또는 
-
-$$ ||u + v|| ^{2} = ||u|| ^{2} + ||v||^{2} $$
-
-를 만족하면 서로 직교한다.
-
-</blockquote>
+    벡터 $u, v$ 의 직교(orthogonal) : $\mathbb{R} ^{n}$ 상의 두 벡터 $u ,v$ 가
+    
+    $$ u \cdot v = 0 $$
+    
+    또는 
+    
+    $$ ||u + v|| ^{2} = ||u|| ^{2} + ||v||^{2} $$
+    
+    를 만족하면 서로 직교한다.
 
 - 증명 
 
@@ -247,25 +208,23 @@ $$ ||u + v|| ^{2} = ||u|| ^{2} + ||v||^{2} $$
 
 - 모든 벡터 $v$ 은 $0 ^{T}v = 0$ 이므로 $\mathbb{R} ^{n}$ 에서 영벡터는 모든 벡터와 직교한다. 
 
-## 직교여공간 
+## 직교여공간
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-부분공간과 직교하는 벡터 : 어떤 벡터 $z$ 가 $\mathbb{R} ^{n}$ 의 부분공간 $W$ 의 모든 벡터와 직교한다면
+    부분공간과 직교하는 벡터 : 어떤 벡터 $z$ 가 $\mathbb{R} ^{n}$ 의 부분공간 $W$ 의 모든 벡터와 직교한다면
+    
+    $z$ 는 $W$ 에 직교한다고 말한다.
 
-$z$ 는 $W$ 에 직교한다고 말한다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-직교여공간(orthogonal complement) : 부분공간 $W$ 와 직교하는 모든 벡터의 집합
-
-$$ W ^{\perp } $$
-
-이다.
-
-</blockquote>
+    직교여공간(orthogonal complement) : 부분공간 $W$ 와 직교하는 모든 벡터의 집합
+    
+    $$ W ^{\perp } $$
+    
+    이다.
 
 - 예시 
 
@@ -291,27 +250,25 @@ $$ W ^{\perp } $$
 
   $$ \therefore W = L ^{\perp } $$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-직교여공간의 성질
+    직교여공간의 성질
+    
+    1. 벡터 $x$ 가 $W ^{\perp }$ 의 원소일 필요충분조건은 $x$ 가 $W$ 를 생성하는 집합의 모든 벡터와 직교하는 것이다.
+    
+    2. $W ^{\perp }$ 는 $\mathbb{R} ^{n}$ 의 부분공간이다.
 
-1. 벡터 $x$ 가 $W ^{\perp }$ 의 원소일 필요충분조건은 $x$ 가 $W$ 를 생성하는 집합의 모든 벡터와 직교하는 것이다.
 
-2. $W ^{\perp }$ 는 $\mathbb{R} ^{n}$ 의 부분공간이다.
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-행렬의 행공간과 영공간의 직교여공간에 의한 관계 : 행렬 $A$ 를 $m \times n$ 행렬이라 할 때 $A$ 의 행공간 $\text{Row} A$ 에 대한 직교여공간은 $A$ 의 영공간 $\text{Nul} A$ 이고,
-
-$A$ 의 영공간 $\text{Nul} A$ 에 대한 직교여공간은 $A$ 의 행공간 $\text{Row} A$ 이다.
-
-$$ (\text{Row} A)^{\perp } = \text{Nul} A, (\text{Nul} A)^{\perp } = \text{Row} A $$
-
-</blockquote>
+    행렬의 행공간과 영공간의 직교여공간에 의한 관계 : 행렬 $A$ 를 $m \times n$ 행렬이라 할 때 $A$ 의 행공간 $\text{Row} A$ 에 대한 직교여공간은 $A$ 의 영공간 $\text{Nul} A$ 이고,
+    
+    $A$ 의 영공간 $\text{Nul} A$ 에 대한 직교여공간은 $A$ 의 행공간 $\text{Row} A$ 이다.
+    
+    $$ (\text{Row} A)^{\perp } = \text{Nul} A, (\text{Nul} A)^{\perp } = \text{Row} A $$
 
 - 증명 
 
@@ -319,13 +276,11 @@ $$ (\text{Row} A)^{\perp } = \text{Nul} A, (\text{Nul} A)^{\perp } = \text{Row} 
 
 ## 직교집합
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-직교집합(orthogonal set) : $\mathbb{R} ^{n}$ 공간의 벡터 집합 $S = \{u_1, \dots, u_p\}$ 에서 그 집합의 모든 서로 다른 벡터가 직교한다면, 즉
-
-$i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교집합이다. 
-
-</blockquote>
+    직교집합(orthogonal set) : $\mathbb{R} ^{n}$ 공간의 벡터 집합 $S = \{u_1, \dots, u_p\}$ 에서 그 집합의 모든 서로 다른 벡터가 직교한다면, 즉
+    
+    $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교집합이다.
 
 - 즉, 서로 다른 모든 두 벡터가 직교하는 집합이 직교집합이다. 
 
@@ -349,46 +304,37 @@ $i \neq j$ 에 대하여 $u_j \cdot u_i = 0$ 이면 벡터 집합 $S$ 는 직교
 
   - 증명 
 
-    스칼라 $c_1, \dots, c_p$ 에 대하여 $0 = c_1u_1 + \dots + c_pu_p$ 이면 벡터 $u_1$ 은 
+    스칼라 $c_1, \dots, c_p$ 에 대하여 $0 = c_1u_1 + \dots + c_pu_p$ 이면 벡터 $u_1$ 은
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-직교기저(orthogonal basis) : $\mathbb{R} ^{n}$ 의 부분공간 $W$ 의 기저인 동시에 직교인 집합을 $W$ 의 직교기저라 한다. 
-
-</blockquote>
+    직교기저(orthogonal basis) : $\mathbb{R} ^{n}$ 의 부분공간 $W$ 의 기저인 동시에 직교인 집합을 $W$ 의 직교기저라 한다.
 
 ## 직교사영
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-직교사영(orthogonal projection) : 
+    직교사영(orthogonal projection) :
 
-</blockquote>
+## 정규직교집합
 
-## 정규직교집합 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+    정규직교집합(orthonormal set) : 벡터집합 $\{u_1, \dots, u_p\}$ 가 단위벡터로 이루어진 직교집합일 때 정규직교집합이라 한다.
 
-정규직교집합(orthonormal set) : 벡터집합 $\{u_1, \dots, u_p\}$ 가 단위벡터로 이루어진 직교집합일 때 정규직교집합이라 한다. 
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정규직교기저(orthonormal basis) : 부분공간 $W$ 의 기저가 되는 정규직교집합이다.
-
-</blockquote>
+    정규직교기저(orthonormal basis) : 부분공간 $W$ 의 기저가 되는 정규직교집합이다.
 
 - 예시 
 
-  $\mathbb{R} ^{n}$ 의 표준기저 $\{e_1, \dots, e_n\}$ 은 정규직교기저이다. 
+  $\mathbb{R} ^{n}$ 의 표준기저 $\{e_1, \dots, e_n\}$ 은 정규직교기저이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-직교행렬(orthogonal matrix) : 정사각 정칙행렬 $U$ 가 $U ^{-1} = U ^{T}$ 를 만족할 때 $U$ 를 직교행렬이라 한다. 
-
-</blockquote>
-
+    직교행렬(orthogonal matrix) : 정사각 정칙행렬 $U$ 가 $U ^{-1} = U ^{T}$ 를 만족할 때 $U$ 를 직교행렬이라 한다.
 
 
 

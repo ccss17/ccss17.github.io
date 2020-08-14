@@ -1,35 +1,9 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-## **미적분 메모**
-
-**[극한 메모](https://ccss17.github.io/calculus.html)**
-
-**[미분 메모](https://ccss17.github.io/calculus2.html)**
-
-**[적분 메모](https://ccss17.github.io/calculus3.html)**
-
-**[미분2 메모](https://ccss17.github.io/calculus4.html)**
-
-**[적분2 메모](https://ccss17.github.io/calculus5.html)**
-
-**[벡터해석학 메모](https://ccss17.github.io/vector.html)**
-
-**[미적분 메모](https://ccss17.github.io/calculus6.html)**
-
-</blockquote>
-
-# 미적분 메모
-
----
-
 # 이변수 함수의 극한 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-이변수함수 : 두 개의 변수에 의존하는 함수이다.
+!!! note ""
 
-</blockquote>
+    이변수함수 : 두 개의 변수에 의존하는 함수이다.
 
 - 예시 
 
@@ -39,15 +13,13 @@
 
   는 정의역이 실수쌍 $(x, y)$ 전체로 이루어진 집합, 즉 좌표평면 $\mathbb{R} ^{2}$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-다변수함수 또는 $n$변수 함수 : $n$-공간의 부분집합 $U$ 에서 $U$ 의 각 점 $X = (x_1, x _{2}, \dots, x _{n})$ 을 실수 $f(x) = f(x_1, x _{2}, \dots, x _{n})$ 에 대응시키는 함수
-
-$$ f : U \to \mathbb{R} $$
-
-이다.
-
-</blockquote>
+    다변수함수 또는 $n$변수 함수 : $n$-공간의 부분집합 $U$ 에서 $U$ 의 각 점 $X = (x_1, x _{2}, \dots, x _{n})$ 을 실수 $f(x) = f(x_1, x _{2}, \dots, x _{n})$ 에 대응시키는 함수
+    
+    $$ f : U \to \mathbb{R} $$
+    
+    이다.
 
 - $n$-공간의 부분집합 $U$ 에서 정의된 다변수함수 $f$ 를 이해하는 방법 중 하나는 그래프를 그려보는 것인데, $f$ 의 그래프는 
 
@@ -60,44 +32,40 @@ $$ f : U \to \mathbb{R} $$
     이변수함수 $f(x, y) = x^2+ y ^{2}$ 의 그래프는 방정식 $z = x^2+ y ^{2}$ 으로 표현되는 다음과 같은 회전포물변이다.
 
     ![image](https://user-images.githubusercontent.com/16812446/86470649-cc52f200-bd76-11ea-9347-5421db411de9.png)
-   
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-이변수 함수의 극한 : 함수 $f(x, y)$ 에서 $(x, y)$ 이 $(x_0, y_0)$ 에 한없이 다가갈 때 함수값이 극한값 $L$ 로 다가가는 것은 
+!!! note ""
 
-임의의 양수 $\epsilon > 0$ 에 대하여 적당한 양수 $\delta > 0$ 가 존재하여 정의역의 모든 $(x, y)$ 에 대하여 다음을 만족하는 것이다. 
-
-  $$  0 < \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} < \delta \implies  |f(x, y) - L| < \epsilon $$
-
-</blockquote>
+    이변수 함수의 극한 : 함수 $f(x, y)$ 에서 $(x, y)$ 이 $(x_0, y_0)$ 에 한없이 다가갈 때 함수값이 극한값 $L$ 로 다가가는 것은 
+    
+    임의의 양수 $\epsilon > 0$ 에 대하여 적당한 양수 $\delta > 0$ 가 존재하여 정의역의 모든 $(x, y)$ 에 대하여 다음을 만족하는 것이다. 
+    
+      $$  0 < \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} < \delta \implies  |f(x, y) - L| < \epsilon $$
 
 - 기호로 다음과 같이 표현한다. 
 
   $$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-일변수 함수의 일차함수의 기울기 : 일변수 함수의 일차함수 $y = ax + b$ 의 기울기는
+    일변수 함수의 일차함수의 기울기 : 일변수 함수의 일차함수 $y = ax + b$ 의 기울기는
+    
+    $$ \dfrac{\Delta y}{\Delta x} = \dfrac{(a(x+\Delta x)+b) - (ax + b)}{\Delta x} = a $$
+    
+    이다.
 
-$$ \dfrac{\Delta y}{\Delta x} = \dfrac{(a(x+\Delta x)+b) - (ax + b)}{\Delta x} = a $$
 
-이다.
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-이변수함수의 일차함수의 기울기 : 이변수 함수의 일차함수 
-
-$$ z = z(x, y) = ax + by + c $$
-
-의 기울기는 $x$ 축 방향 기울기와 $y$ 축 방향 기울기로 이루어진 벡터
-
-$$ (a, b) = ai + bj $$
-
-이다.
-
-</blockquote>
+    이변수함수의 일차함수의 기울기 : 이변수 함수의 일차함수 
+    
+    $$ z = z(x, y) = ax + by + c $$
+    
+    의 기울기는 $x$ 축 방향 기울기와 $y$ 축 방향 기울기로 이루어진 벡터
+    
+    $$ (a, b) = ai + bj $$
+    
+    이다.
 
 - 설명 
 
@@ -119,15 +87,13 @@ $$ (a, b) = ai + bj $$
 
   로 표현한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이변수 일차함수의 기울기 벡터 : 이변수 함수의 일차함수 $z = z(x, y) = ax + by + c$ 의 기울기를 나타내는 벡터
-
-$$ (a, b) = ai+bj $$
-
-이다.
-
-</blockquote>
+    이변수 일차함수의 기울기 벡터 : 이변수 함수의 일차함수 $z = z(x, y) = ax + by + c$ 의 기울기를 나타내는 벡터
+    
+    $$ (a, b) = ai+bj $$
+    
+    이다.
 
 - 예시 
 
@@ -137,19 +103,17 @@ $$ (a, b) = ai+bj $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$n$변수 일차함수의 기울기 : 벡터 $a = (a_1, \dots, a_n), x = (x_1, \dots, x_n)$ 와 단위벡터 $v = (v_1, \dots, v_n)$ 와 실수 $c$ 에 대한  $n$변수 함수
-
-$$ z = z(x) = a \cdot x = a_1x_1 + \dots + a_nx_n + c = a \cdot x + c $$
-
-의 $v-$방향 기울기는
-
-$$ a \cdot v = a_1v_1 + \dots + a_n v_n $$
-
-이다.
-
-</blockquote>
+    $n$변수 일차함수의 기울기 : 벡터 $a = (a_1, \dots, a_n), x = (x_1, \dots, x_n)$ 와 단위벡터 $v = (v_1, \dots, v_n)$ 와 실수 $c$ 에 대한  $n$변수 함수
+    
+    $$ z = z(x) = a \cdot x = a_1x_1 + \dots + a_nx_n + c = a \cdot x + c $$
+    
+    의 $v-$방향 기울기는
+    
+    $$ a \cdot v = a_1v_1 + \dots + a_n v_n $$
+    
+    이다.
 
 - 설명 
 
@@ -165,15 +129,13 @@ $$ a \cdot v = a_1v_1 + \dots + a_n v_n $$
 
   이 기울기는 함수의 그래프를 $x_1z$-평면에서 살펴본 직선의 기울기이다. 마찬가지로 $x_nz$-평면에서 살펴본 직선의 기울기, 즉 마지막 축 방향의 기울기는 $a_n$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이변수 함수의 극한의 성질 : 실수 $L, M, k$ 에 대하여 
-
-$$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L\\ \lim_{(x, y) \to (x_0, y_0)} g(x, y) = M $$
-
-일 때 다음이 성립한다. 
-
-</blockquote>
+    이변수 함수의 극한의 성질 : 실수 $L, M, k$ 에 대하여 
+    
+    $$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L\\ \lim_{(x, y) \to (x_0, y_0)} g(x, y) = M $$
+    
+    일 때 다음이 성립한다.
 
 - 합의 법칙 
 
@@ -207,35 +169,31 @@ $$ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L\\ \lim_{(x, y) \to (x_0, y_0)} g(x, 
 
   (생략)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이변수 함수의 연속 : 이변수 함수 $f(x, y)$ 가 점 $(x_0, y_0)$ 에서 연속이라는 것은 다음 조건과 동치이다.
+    이변수 함수의 연속 : 이변수 함수 $f(x, y)$ 가 점 $(x_0, y_0)$ 에서 연속이라는 것은 다음 조건과 동치이다.
+    
+    1. $f$ 가 $(x_0, y_0)$ 에서 정의되어 있다. 
+    
+    2. $\displaystyle \lim_{(x, y) \to (x_0, y_0)} f(x, y)$ 극한값이 존재한다.
+    
+    3. $\displaystyle \lim_{(x, y) \to (x_0, y_0)} f(x, y) = f(x_0, y_0)$
 
-1. $f$ 가 $(x_0, y_0)$ 에서 정의되어 있다. 
 
-2. $\displaystyle \lim_{(x, y) \to (x_0, y_0)} f(x, y)$ 극한값이 존재한다.
 
-3. $\displaystyle \lim_{(x, y) \to (x_0, y_0)} f(x, y) = f(x_0, y_0)$
+!!! note ""
 
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-이변수 합성함수의 연속 : 이변수 함수 $f$ 가 $(x_0, y_0)$ 에서 연속이고 일변수 함수 $g$ 가 $x$ 축 상의 점 $f(x_0, y_0)$ 에서 연속일 때,
-
-$h(x, y) = g(f(x, y))$ 로 정의된 이변수 합성함수 $h = g \circ f$ 는 연속이다. 
-
-</blockquote>
+    이변수 합성함수의 연속 : 이변수 함수 $f$ 가 $(x_0, y_0)$ 에서 연속이고 일변수 함수 $g$ 가 $x$ 축 상의 점 $f(x_0, y_0)$ 에서 연속일 때,
+    
+    $h(x, y) = g(f(x, y))$ 로 정의된 이변수 합성함수 $h = g \circ f$ 는 연속이다.
 
 - 예시 
 
-  합성함수 $e ^{x-y}, \cos \frac{xy}{x^2+1}, \ln (1+x ^{2}y ^{2})$ 는 개구간 $(-\infty , \infty)$ 에서 연속이다. 
+  합성함수 $e ^{x-y}, \cos \frac{xy}{x^2+1}, \ln (1+x ^{2}y ^{2})$ 는 개구간 $(-\infty , \infty)$ 에서 연속이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-다변수 함수의 극한과 연속 : 이변수 함수의 극한과 연속의 정의와 비슷하다.
-
-</blockquote>
+    다변수 함수의 극한과 연속 : 이변수 함수의 극한과 연속의 정의와 비슷하다.
 
 - 예시 
 
@@ -249,23 +207,19 @@ $h(x, y) = g(f(x, y))$ 로 정의된 이변수 합성함수 $h = g \circ f$ 는 
 
 실제로 많은 함수들이 하나의 독립 변수에 의존하는 것이 아니라 두 개 이상의 독립 변수에 종속되기 때문에 많은 경우 일변수 함수에 대한 미분을 다변수 함수로 확장한 미분이 필요하다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-상미분(ordinary derivative) : 변수가 하나만 있는 함수에 대한 미분이다.
+    상미분(ordinary derivative) : 변수가 하나만 있는 함수에 대한 미분이다.
 
-</blockquote>
+- 지금까지 해오던 미분이 바로 상미분이다.
 
-- 지금까지 해오던 미분이 바로 상미분이다. 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-$x$ 에 대한 편미분계수 : 이변수 함수 $z = f(x, y)$ 의 점 $(x_0, y_0)$ 에서의 $x$ 에 대한 편미분계수는 
-
-$$ \frac{\partial f}{\partial x} \bigg | _{(x_0, y_0)} = \frac{d}{dx}f(x, y_0) \bigg | _{x=x_0} =  \lim_{h \to 0} \frac{f(x_0 + h, y_0)-f(x_0,y_0)}{h} $$
-
-이다. 
-
-</blockquote>
+    $x$ 에 대한 편미분계수 : 이변수 함수 $z = f(x, y)$ 의 점 $(x_0, y_0)$ 에서의 $x$ 에 대한 편미분계수는 
+    
+    $$ \frac{\partial f}{\partial x} \bigg | _{(x_0, y_0)} = \frac{d}{dx}f(x, y_0) \bigg | _{x=x_0} =  \lim_{h \to 0} \frac{f(x_0 + h, y_0)-f(x_0,y_0)}{h} $$
+    
+    이다.
 
 - 기하학적 의미 
 
@@ -287,35 +241,33 @@ $$ \frac{\partial f}{\partial x} \bigg | _{(x_0, y_0)} = \frac{d}{dx}f(x, y_0) \
 
   이때 $h$ 를 $0$ 에 한없이 가깝게 만들어서 $P$ 와 $Q$ 를 거의 같게 만들면 두 점을 잇는 직선은 곧 곡면의 접선이 되고,
 
-  그때의 기울기는 곧 접선의 기울기가 되는 것이다. 
+  그때의 기울기는 곧 접선의 기울기가 되는 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$y$ 에 대한 편미분계수 : 이변수 함수 $z = f(x, y)$ 의 점 $(x_0, y_0)$ 에서의 $y$ 에 대한 편미분계수는 
+    $y$ 에 대한 편미분계수 : 이변수 함수 $z = f(x, y)$ 의 점 $(x_0, y_0)$ 에서의 $y$ 에 대한 편미분계수는 
+    
+    $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \bigg | _{y=y_0} =  \lim_{h \to 0} \frac{f(x_0, y_0+h)-f(x_0,y_0)}{h} $$
+    
+    이다.
 
-$$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \bigg | _{y=y_0} =  \lim_{h \to 0} \frac{f(x_0, y_0+h)-f(x_0,y_0)}{h} $$
 
-이다. 
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-편도함수(partial derivative) : 이변수 함수 $z = f(x, y)$ 의 편도함수는 다음과 같이 정의된다.
-
-1. $x$ 에 대한 편도함수는 
-
-    $$ f_x(x, y) = \frac{\partial z}{\partial x} = \lim_{h \to 0} \frac{f(x+h, y)-f(x, y)}{h} $$
-
-    이다. 
-
-2. $y$ 에 대한 편도함수는 
-
-    $$ f_y(x, y) = \frac{\partial z}{\partial y} = \lim_{h \to 0} \frac{f(x, y+h)-f(x, y)}{h} $$
-
-    이다. 
-
-</blockquote>
+    편도함수(partial derivative) : 이변수 함수 $z = f(x, y)$ 의 편도함수는 다음과 같이 정의된다.
+    
+    1. $x$ 에 대한 편도함수는 
+    
+        $$ f_x(x, y) = \frac{\partial z}{\partial x} = \lim_{h \to 0} \frac{f(x+h, y)-f(x, y)}{h} $$
+    
+        이다. 
+    
+    2. $y$ 에 대한 편도함수는 
+    
+        $$ f_y(x, y) = \frac{\partial z}{\partial y} = \lim_{h \to 0} \frac{f(x, y+h)-f(x, y)}{h} $$
+    
+        이다.
 
 - 이변수 함수 $f(x, y)$ 의 편미분할 변수를 제외한 나머지 변수를 상수로 취급하여 미분하면 된다.
 
@@ -363,13 +315,11 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-편도함수의 기하학적 의미 : 이변수 함수 $f(x, y)$ 에 대하여 편도함수의 기하학적 의미는 각각 다음과 같다. 
-
-![2v](https://user-images.githubusercontent.com/16812446/78995906-63e0e400-7b7e-11ea-9f1e-76382bc9c548.jpg)
-
-</blockquote>
+    편도함수의 기하학적 의미 : 이변수 함수 $f(x, y)$ 에 대하여 편도함수의 기하학적 의미는 각각 다음과 같다. 
+    
+    ![2v](https://user-images.githubusercontent.com/16812446/78995906-63e0e400-7b7e-11ea-9f1e-76382bc9c548.jpg)
 
 1. $x$ 에 대한 편도함수 
 
@@ -407,13 +357,11 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
   이것을 단위벡터 $u$ 의 방향도함수라 한다. 
 
-## 여러가지 편도함수 
+## 여러가지 편도함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이계 편도함수(second-order partial derivative) : 이변수 함수 $f(x, y)$ 를 두번 미분한 것으로 다음 $4$ 가지 경우로 정의된다. 
-
-</blockquote>
+    이계 편도함수(second-order partial derivative) : 이변수 함수 $f(x, y)$ 를 두번 미분한 것으로 다음 $4$ 가지 경우로 정의된다.
 
 - $x$ 에 대하여 두번 미분할 경우 
 
@@ -447,11 +395,9 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
   $$ \frac{\partial ^{2}f}{\partial y ^{2}} = \frac{\partial }{\partial y}(\frac{\partial f}{\partial y}) = -x \cos y $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-혼합 편미분(mixed derivative) : 이변수 함수 $f(x, y)$ 에 대하여 서로 다른 두 변수에 대한 편미분이다.
-
-</blockquote>
+    혼합 편미분(mixed derivative) : 이변수 함수 $f(x, y)$ 에 대하여 서로 다른 두 변수에 대한 편미분이다.
 
 - 이계 편도함수에서 $x$ 에 대하여 미분하고 $y$ 에 대하여 미분한 경우
 
@@ -463,15 +409,13 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
   를 뜻한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-혼합 편미분 정리(mixed derivative theorem) : 이변수 함수 $f(x, y)$ 와 그 편미분 $f_x, f_y, f _{xy}, f _{yx}$ 가 점 $(a, b)$ 를 포함하는 개구간에서 정의되어 있고 점 $(a, b)$ 에서 연속이라면 
-
-$$ f _{xy}(a, b) = f _{yx}(a, b) $$
-
-이다.
-
-</blockquote>
+    혼합 편미분 정리(mixed derivative theorem) : 이변수 함수 $f(x, y)$ 와 그 편미분 $f_x, f_y, f _{xy}, f _{yx}$ 가 점 $(a, b)$ 를 포함하는 개구간에서 정의되어 있고 점 $(a, b)$ 에서 연속이라면 
+    
+    $$ f _{xy}(a, b) = f _{yx}(a, b) $$
+    
+    이다.
 
 - 예시 
 
@@ -487,15 +431,13 @@ $$ f _{xy}(a, b) = f _{yx}(a, b) $$
 
 ## 선형근사
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 접선의 방정식
-
-$$ L(x) = f'(a)(x-a) + f(a) $$
-
-를 함수 $f$ 의 선형화라고 한다.
-
-</blockquote>
+    선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 접선의 방정식
+    
+    $$ L(x) = f'(a)(x-a) + f(a) $$
+    
+    를 함수 $f$ 의 선형화라고 한다.
 
 - 다음 그래프는 $y = x^2, y = 2x-1$ 이다. 그런데 $x=1$ 지점에서 그래프를 더 확대해보면 다음과 같다. 
 
@@ -517,29 +459,25 @@ $$ L(x) = f'(a)(x-a) + f(a) $$
 
   $$ \sqrt[]{1+x} \approx 1 + \frac{x}{2} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-표준 선형 근사(standard linear approximation) : 선형화의 정의에서 $x=a$ 에서 함수 $f$ 의 함수 $L$ 에 의한 근사
-
-$$ f(x) \approx L(x) $$
-
-를 표준 선형 근사라한다.
-
-</blockquote>
+    표준 선형 근사(standard linear approximation) : 선형화의 정의에서 $x=a$ 에서 함수 $f$ 의 함수 $L$ 에 의한 근사
+    
+    $$ f(x) \approx L(x) $$
+    
+    를 표준 선형 근사라한다.
 
 - 이때 $x=a$ 를 근사의 중심이라 한다. 
 
 ## 미분(differential)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-미분(differential) : $y = f(x)$ 를 미분가능한 함수이고 미분 $dx$ 가 독립변수일 때 미분 $dy$ 는 
-
-$$ dy = f'(x)dx $$
-
-이다. 
-
-</blockquote>
+    미분(differential) : $y = f(x)$ 를 미분가능한 함수이고 미분 $dx$ 가 독립변수일 때 미분 $dy$ 는 
+    
+    $$ dy = f'(x)dx $$
+    
+    이다.
 
 - $dx$ 와 $x$ 가 독립변수인 반면 $dy$ 는 종속변수이다. 즉, $dy$ 는 $x, dx$ 에 의해 결정된다.
 
@@ -623,15 +561,13 @@ $$ dy = f'(x)dx $$
 
 ## 미분 추정
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-미분의 추정(estimating with differentials) : 함수 $f(x)$ 가 $x = a$ 에서 미분가능할 때 $x = a$ 의 근방 $x = a + dx$ 에서 함수값이 변하는 정도 $f(a + dx)$ 는 근사적으로
-
-$$ f(a + dx) \approx f(a) + dy $$
-
-이다. 
-
-</blockquote>
+    미분의 추정(estimating with differentials) : 함수 $f(x)$ 가 $x = a$ 에서 미분가능할 때 $x = a$ 의 근방 $x = a + dx$ 에서 함수값이 변하는 정도 $f(a + dx)$ 는 근사적으로
+    
+    $$ f(a + dx) \approx f(a) + dy $$
+    
+    이다.
 
 - $y$ 의 증분은 $\Delta y = f(a + \Delta x) - f(a)$ 이다. 이때 $dx= \Delta x$ 가 충분히 작으면 $y$ 의 증분 $\Delta y$ 는 미분 $dy$ 와 거의 똑같아진다. 왜냐하면 함수 $f$ 의 접선 $L$ 의 증분 $\Delta L = f'(a)dx = dy$ 이 $x = a$ 의 근방에서 함수 $f$ 의 증분 $\Delta y$ 와 거의 똑같아지기 때문이다. 그러므로 $x = a$ 근방에서 
 
@@ -683,17 +619,15 @@ $$ f(a + dx) \approx f(a) + dy $$
 
   실제 넓이는 $A(10.1) = \pi (10.1) ^{2} = 102.01 \pi$ 이므로 오차는 $\Delta A - dA = 0.01 \pi$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-미분근사의 오차(error in differential approximation) : 함수 $y=f(x)$ 가 $x=a$ 에서 미분가능하고 $x$ 가 $a$ 에서 $a+\Delta x$ 로 변할 때 함수 $y$ 의 변화량 $\Delta y$ 은
-
-$\Delta x \to 0 \implies \epsilon \to 0$ 인 오차량 $\epsilon = \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a)$ 에대하여
-
-$$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
-
-이다.
-
-</blockquote>
+    미분근사의 오차(error in differential approximation) : 함수 $y=f(x)$ 가 $x=a$ 에서 미분가능하고 $x$ 가 $a$ 에서 $a+\Delta x$ 로 변할 때 함수 $y$ 의 변화량 $\Delta y$ 은
+    
+    $\Delta x \to 0 \implies \epsilon \to 0$ 인 오차량 $\epsilon = \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a)$ 에대하여
+    
+    $$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
+    
+    이다.
 
 - 설명 
 
@@ -757,37 +691,33 @@ $$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
   
   을 얻는다. ■ 
 
-## 이변수함수의 미분가능성 
+## 이변수함수의 미분가능성
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이변수함수의 미분가능 : 점 $(x_0,y_0)$ 에 대한 이변수함수 $z=f(x,y)$ 의 편미분 $f_x(x_0, y_0), f_y(x_0,y_0)$ 이 존재하고 함수 $z$ 의 변화량 $\Delta z$ 가 
-
-$\Delta x, \Delta y \to 0 \implies \epsilon _1, \epsilon _2 \to 0$ 에 대한 방정식
-
-$$ \Delta z = f_x(x_0,y_0)\Delta x+f_y(x_0,y_0)\Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y $$
-
-을 만족하면 $f$ 는 모든 정의역에서 미분가능하다.
-
-</blockquote>
+    이변수함수의 미분가능 : 점 $(x_0,y_0)$ 에 대한 이변수함수 $z=f(x,y)$ 의 편미분 $f_x(x_0, y_0), f_y(x_0,y_0)$ 이 존재하고 함수 $z$ 의 변화량 $\Delta z$ 가 
+    
+    $\Delta x, \Delta y \to 0 \implies \epsilon _1, \epsilon _2 \to 0$ 에 대한 방정식
+    
+    $$ \Delta z = f_x(x_0,y_0)\Delta x+f_y(x_0,y_0)\Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y $$
+    
+    을 만족하면 $f$ 는 모든 정의역에서 미분가능하다.
 
 - 그리고 미분가능한 이변수함수의 그래프를 매끄러운 곡면(smooth surface)이라고 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-일독립변수와 이매개변수에 대한 도함수 : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t)$ 가 미분가능하면
-
-$t$ 에 대한 이변수 합성함수 $w = f(x(t), y(t))$ 는 미분가능하며 그 도함수는 
-
-$$ \frac{dw}{dt} = f_x(x(t), y(t)) \cdot x'(t) + f_y(x(t), y(t)) \cdot y'(t) $$
-
-또는 
-
-$$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w}{\partial y}\frac{dy}{dt} $$
-
-이다. 
-
-</blockquote>
+    일독립변수와 이매개변수에 대한 도함수 : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t)$ 가 미분가능하면
+    
+    $t$ 에 대한 이변수 합성함수 $w = f(x(t), y(t))$ 는 미분가능하며 그 도함수는 
+    
+    $$ \frac{dw}{dt} = f_x(x(t), y(t)) \cdot x'(t) + f_y(x(t), y(t)) \cdot y'(t) $$
+    
+    또는 
+    
+    $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w}{\partial y}\frac{dy}{dt} $$
+    
+    이다.
 
 - 증명 
 
@@ -844,19 +774,17 @@ $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w
 
   $$ \frac{dw}{dt} = \frac{d}{dt}(\frac{1}{2}\sin 2t) = \frac{1}{2}\cdot 2 \cos 2t = \cos 2t $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule) : 삼변수 함수 $w = f(x, y, z)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t), z = z(t)$ 가 미분가능하면
-
-$t$ 에 대한 삼변수 합성함수 $w = f(x(t), y(t), z(t))$ 도 미분가능하며 그 도함수는 
-
-$$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w}{\partial y}\frac{dy}{dt} + \frac{\partial w}{\partial z}\frac{dz}{dt}$$
-
-이다. 
-
-</blockquote>
+    일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule) : 삼변수 함수 $w = f(x, y, z)$ 가 미분가능하고 $t$ 에 대한 함수 $x = x(t), y = y(t), z = z(t)$ 가 미분가능하면
+    
+    $t$ 에 대한 삼변수 합성함수 $w = f(x(t), y(t), z(t))$ 도 미분가능하며 그 도함수는 
+    
+    $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w}{\partial y}\frac{dy}{dt} + \frac{\partial w}{\partial z}\frac{dz}{dt}$$
+    
+    이다.
 
 - 증명 
 
@@ -886,19 +814,17 @@ $$ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w
 
   $$ \therefore \frac{dw}{dt} = 1+\cos 2t $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule) : 삼변수 함수 $w = f(x, y, z)$ 가 미분가능하고 $r, s$ 에 대한 함수 $x = x(r, s), y = y(r, s), z = z(r, s)$ 가 미분가능하면,
-
-이 $4$ 가지 함수는 모두 미분 가능하고 $w$ 는 $r$ 과 $s$ 에 대하여 각각 다음의 편도함수를 가진다. 
-
-$$ \frac{\partial  w}{\partial  r} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  r} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  r} + \frac{\partial w}{\partial z}\frac{\partial  z}{\partial  r}$$
-
-$$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  s} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  s} + \frac{\partial w}{\partial z}\frac{\partial  z}{\partial  s}$$
-
-</blockquote>
+    이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule) : 삼변수 함수 $w = f(x, y, z)$ 가 미분가능하고 $r, s$ 에 대한 함수 $x = x(r, s), y = y(r, s), z = z(r, s)$ 가 미분가능하면,
+    
+    이 $4$ 가지 함수는 모두 미분 가능하고 $w$ 는 $r$ 과 $s$ 에 대하여 각각 다음의 편도함수를 가진다. 
+    
+    $$ \frac{\partial  w}{\partial  r} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  r} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  r} + \frac{\partial w}{\partial z}\frac{\partial  z}{\partial  r}$$
+    
+    $$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  s} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  s} + \frac{\partial w}{\partial z}\frac{\partial  z}{\partial  s}$$
 
 - 증명 
 
@@ -932,79 +858,75 @@ $$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule) : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $r, s$ 에 대한 함수 $x = x(r, s), y = y(r, s)$ 가 미분가능하면,
+    이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule) : 이변수 함수 $w = f(x, y)$ 가 미분가능하고 $r, s$ 에 대한 함수 $x = x(r, s), y = y(r, s)$ 가 미분가능하면,
+    
+    이 $3$ 가지 함수는 모두 미분 가능하고 $w$ 는 $r$ 과 $s$ 에 대하여 각각 다음의 편도함수를 가진다. 
+    
+    $$ \frac{\partial  w}{\partial  r} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  r} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  r} $$
+    
+    $$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  s} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  s} $$
 
-이 $3$ 가지 함수는 모두 미분 가능하고 $w$ 는 $r$ 과 $s$ 에 대하여 각각 다음의 편도함수를 가진다. 
 
-$$ \frac{\partial  w}{\partial  r} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  r} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  r} $$
 
-$$ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  s} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  s} $$
+!!! note ""
 
-</blockquote>
+    $1$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
+    
+    $1$ 개의 독립변수 $p$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
+    
+    $w$ 가 미분가능하고 $p$ 에 대한 함수들도 미분가능하며
+    
+    독립변수 $p$ 에 대한 편도함수는 다음과 같다. 
+    
+    $$ \frac{\partial  w}{\partial p} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p} = \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p}$$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-$1$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
 
-$1$ 개의 독립변수 $p$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
+!!! note ""
 
-$w$ 가 미분가능하고 $p$ 에 대한 함수들도 미분가능하며
+    $n$ 개의 독립변수와 $1$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : $1$ 개의 매개변수 $x$ 에 대한 일변수 함수 $w = f(x)$ 가 미분가능하고,
+    
+    $n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 다변수 함수 $x$ 도 미분가능하면,
+    
+    $w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x$ 도 미분가능하며
+    
+    각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
+    
+    $$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_1} $$
+    
+    $$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_2} $$
+    
+    $$ \vdots $$
+    
+    $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_n} $$
 
-독립변수 $p$ 에 대한 편도함수는 다음과 같다. 
 
-$$ \frac{\partial  w}{\partial p} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p} = \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p}$$
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-$n$ 개의 독립변수와 $1$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : $1$ 개의 매개변수 $x$ 에 대한 일변수 함수 $w = f(x)$ 가 미분가능하고,
-
-$n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 다변수 함수 $x$ 도 미분가능하면,
-
-$w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x$ 도 미분가능하며
-
-각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
-
-$$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_1} $$
-
-$$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_2} $$
-
-$$ \vdots $$
-
-$$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_n} $$
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-$n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
-
-$n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
-
-$w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수들도 미분가능하며
-
-각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
-
-$$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_1}$$
-
-$$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_2}$$
-
-$$ \vdots $$
-
-$$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_n}$$
-
-</blockquote>
+    $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
+    
+    $n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
+    
+    $w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수들도 미분가능하며
+    
+    각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
+    
+    $$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_1}$$
+    
+    $$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_2}$$
+    
+    $$ \vdots $$
+    
+    $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_n}$$
 
 # 기울기 벡터와 방향도함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-스칼라장(scalar field) : 공간 상의 모든 점에 스칼라가 대응되어 있는 분포이다.
-
-</blockquote>
+    스칼라장(scalar field) : 공간 상의 모든 점에 스칼라가 대응되어 있는 분포이다.
 
 - 유클리드 공간 $\mathbb{R} ^{n}$ 에서 스칼라장은 
 
@@ -1020,17 +942,15 @@ $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\part
 
   ![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Scalar_field.png/330px-Scalar_field.png)
 
-  위 그림은 스칼라장의 일종으로 색채에 대응하는 숫자를 색으로 표현한 것이다. 
+  위 그림은 스칼라장의 일종으로 색채에 대응하는 숫자를 색으로 표현한 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이변수함수의 $u$-방향미분계수, 또는 $u$-방향 순간변화율 : 데카르트 공간 $\mathbb{R} ^{3}$ 에서 정의된 이변수함수 $f(x,y)$ 와 한 점 $P_0(x_0,y_0)$ 와 단위벡터 $u = u_1i+u_2j$ 에 대한 극한값
-
-$$ (D_uf)_{P_0} := \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{f(x_0+su_1, y_0 + su_2)-f(x_0,y_0)}{s} $$
-
-이다.
-
-</blockquote>
+    이변수함수의 $u$-방향미분계수, 또는 $u$-방향 순간변화율 : 데카르트 공간 $\mathbb{R} ^{3}$ 에서 정의된 이변수함수 $f(x,y)$ 와 한 점 $P_0(x_0,y_0)$ 와 단위벡터 $u = u_1i+u_2j$ 에 대한 극한값
+    
+    $$ (D_uf)_{P_0} := \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{f(x_0+su_1, y_0 + su_2)-f(x_0,y_0)}{s} $$
+    
+    이다.
 
 - 다음과 같이 표기하기도 한다.
 
@@ -1088,19 +1008,17 @@ $$ (D_uf)_{P_0} := \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{
 
   $$ = \lim_{s \to 0} \dfrac{\dfrac{5s}{\sqrt[]{2}}+s ^{2}}{s} = \lim_{s \to 0} \bigg (\dfrac{5}{\sqrt[]{2}}+s\bigg ) = \dfrac{5}{\sqrt[]{2}}$$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이변수함수의 방향도함수 : 데카르트 공간 $\mathbb{R} ^{3}$ 에서 정의된 이변수함수 $f(x,y)$ 단위벡터 $u = u_1i+u_2j$ 에 대하여
-
-$f$ 의 정의역의 각 원소를 $u$-방향미분계수에 대응시켜 만든 함수
-
-$$ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+ su_2)-f(x,y)}{s} $$
-
-이다.
-
-</blockquote>
+    이변수함수의 방향도함수 : 데카르트 공간 $\mathbb{R} ^{3}$ 에서 정의된 이변수함수 $f(x,y)$ 단위벡터 $u = u_1i+u_2j$ 에 대하여
+    
+    $f$ 의 정의역의 각 원소를 $u$-방향미분계수에 대응시켜 만든 함수
+    
+    $$ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+ su_2)-f(x,y)}{s} $$
+    
+    이다.
 
 - 이때 $x, y$ 를 벡터 $u = u_1i+u_2j$ 방향으로 향하는 직선
 
@@ -1122,15 +1040,13 @@ $$ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+
 
   - 이것은 다변수함수 $f$ 의 $u$ 방향의 미분이 벡터 $u$ 와 기울기벡터의 내적임을 알려준다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-방향도함수의 계산 : 단위벡터 $u$ 방향의 방향도함수의 계산은 기울기 벡터 $\nabla f$ 와 벡터 $u$ 와 두 벡터가 이루는 각 $\theta$ 에 대하여
-
-$$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u = |\nabla f|\cos \theta $$
-
-이다.
-
-</blockquote>
+    방향도함수의 계산 : 단위벡터 $u$ 방향의 방향도함수의 계산은 기울기 벡터 $\nabla f$ 와 벡터 $u$ 와 두 벡터가 이루는 각 $\theta$ 에 대하여
+    
+    $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u = |\nabla f|\cos \theta $$
+    
+    이다.
 
 - 증명
 
@@ -1222,19 +1138,17 @@ $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u = |\nabla f|\cos \
 
   이다. ■ 
  
-# 삼각함수로 정의한 방향도함수 
+# 삼각함수로 정의한 방향도함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-삼각함수로 정의한 이변수 함수의 방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
-
-함수 $f$ 의 벡터 $u$ 방향으로의 순간변화율로써
-
-$$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h}  $$
-
-이다. 
-
-</blockquote>
+    삼각함수로 정의한 이변수 함수의 방향도함수(directional derivative) : 스칼라 함수 $f(x, y)$ 에 대하여 단위벡터 $u = \big < \cos \theta , \sin \theta \big >$ 방향의 방향도함수는 
+    
+    함수 $f$ 의 벡터 $u$ 방향으로의 순간변화율로써
+    
+    $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h}  $$
+    
+    이다.
 
 - 위 정의는 다음 그림과 같이
 
@@ -1394,15 +1308,13 @@ $$ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta
 
   의 정의와 같다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-기울기 벡터(gradient vector, gradient) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
-
-$$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > $$
-
-이다.
-
-</blockquote>
+    기울기 벡터(gradient vector, gradient) : 스칼라 함수 $f(x, y)$ 의 기울기는 벡터함수 
+    
+    $$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg > $$
+    
+    이다.
 
 - 다음과 같이 표기하기도 한다.
 
@@ -1472,15 +1384,13 @@ $$  \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > $$
 
   $$ \therefore \nabla f(1, 2, 3) = \big < 8, 4, 27\big > $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-기울기 벡터 방향의 단위벡터 : 기울기 벡터 $\nabla f$ 방향으로의 단위벡터는
-
-  $$ \frac{\nabla f}{|\nabla f|} $$
-
-  이다.
-
-</blockquote>
+    기울기 벡터 방향의 단위벡터 : 기울기 벡터 $\nabla f$ 방향으로의 단위벡터는
+    
+      $$ \frac{\nabla f}{|\nabla f|} $$
+    
+      이다.
 
 - 증명
 
@@ -1512,21 +1422,19 @@ $$  \nabla f(x, y) = \bigg < f_x(x, y), f_y(x, y) \bigg > $$
 
   $$ \therefore \overrightarrow{u} = \frac{\nabla f(1, 1, 1)}{|\nabla f(1, 1, 1)|} = \frac{\big < 2, 1, 1 \big > }{\bigg |\big < 2, 1, 1 \big > \bigg |} = \frac{\big <2, 1, 1 \big >}{\sqrt[]{6}} $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-방향도함수의 계산 : 이변수 함수 $z = f(x, y)$ 가 $x, y$ 에 관한 편도함수를 각각 가지면 임의의 단위벡터 $u = \big < \cos \theta, \sin \theta \big >$ 에 대하여 
-
-$$ D _{u}f(x, y) = f_x(x, y) \cos \theta + f_y(x, y) \sin \theta $$
-
-또는 
-
-$$ D _{u}f(x, y) = \frac{\partial f}{\partial x} \cos \theta + \frac{\partial f}{\partial y} \sin \theta $$
-
-이다. 
-
-</blockquote>
+    방향도함수의 계산 : 이변수 함수 $z = f(x, y)$ 가 $x, y$ 에 관한 편도함수를 각각 가지면 임의의 단위벡터 $u = \big < \cos \theta, \sin \theta \big >$ 에 대하여 
+    
+    $$ D _{u}f(x, y) = f_x(x, y) \cos \theta + f_y(x, y) \sin \theta $$
+    
+    또는 
+    
+    $$ D _{u}f(x, y) = \frac{\partial f}{\partial x} \cos \theta + \frac{\partial f}{\partial y} \sin \theta $$
+    
+    이다.
 
 - 이 관계식은 기울기벡터의 정의 
 
@@ -1602,17 +1510,15 @@ $$ D _{u}f(x, y) = \frac{\partial f}{\partial x} \cos \theta + \frac{\partial f}
 
   $$ \therefore  D_u f(3, 4) = \nabla f \cdot u \bigg | _{(3, 4)} = \frac{24}{\sqrt[]{5}} + \frac{18}{\sqrt[]{5}} = \frac{42}{\sqrt[]{5}} $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-삼변수 함수의 방향도함수 : 삼변수 함수 $f(x, y, z)$ 에 대하여 단위벡터 $u = \big < \cos \alpha , \cos \beta , \cos \gamma  \big >$ (단, $\cos ^{2}\alpha +\cos ^{2}\beta +\cos ^{2}\gamma =1$) 방향으로의 방향도함수는
-
-$$ D _{u}f(x,y,z) = \lim_{h \to 0} \frac{f(x+h \cos \alpha , y + h \cos \beta , z + h \cos \gamma )-f(x,y,z)}{h} $$
-
-이다. 
-
-</blockquote>
+    삼변수 함수의 방향도함수 : 삼변수 함수 $f(x, y, z)$ 에 대하여 단위벡터 $u = \big < \cos \alpha , \cos \beta , \cos \gamma  \big >$ (단, $\cos ^{2}\alpha +\cos ^{2}\beta +\cos ^{2}\gamma =1$) 방향으로의 방향도함수는
+    
+    $$ D _{u}f(x,y,z) = \lim_{h \to 0} \frac{f(x+h \cos \alpha , y + h \cos \beta , z + h \cos \gamma )-f(x,y,z)}{h} $$
+    
+    이다.
 
 - 이때 $\alpha$ 는 단위벡터 $u$ 가 $x$ 축과 이루는 각,
 
@@ -1626,35 +1532,33 @@ $$ D _{u}f(x,y,z) = \lim_{h \to 0} \frac{f(x+h \cos \alpha , y + h \cos \beta , 
 
   $$ \Delta x = h \cos \alpha , \Delta y = y + h \cos \beta , \Delta z= z + h \cos \gamma $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-삼변수 함수의 기울기 벡터(gradient vector) : 스칼라 함수 $w = f(x, y, z)$ 의 기울기는 벡터함수 
+    삼변수 함수의 기울기 벡터(gradient vector) : 스칼라 함수 $w = f(x, y, z)$ 의 기울기는 벡터함수 
+    
+    $$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j + \frac{\partial f}{\partial z} k=  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\bigg > $$
+    
+    또는 
+    
+    $$ \nabla f(x, y, z) = \bigg < f_x(x, y, z), f_y(x, y, z), f_z(x, y, z) \bigg > $$
+    
+    로써 스칼라장의 최대 증가율을 나타내는 벡터장이다.
 
-$$ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j + \frac{\partial f}{\partial z} k=  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\bigg > $$
 
-또는 
 
-$$ \nabla f(x, y, z) = \bigg < f_x(x, y, z), f_y(x, y, z), f_z(x, y, z) \bigg > $$
+!!! note ""
 
-로써 스칼라장의 최대 증가율을 나타내는 벡터장이다. 
+    삼변수 함수의 방향도함수 계산 : 삼변수 함수 $w = f(x, y, z)$ 가 $x, y, z$ 에 관한 편도함수를 각각 가지면 임의의 단위벡터 $u$ 에 대하여 
+    
+    $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\bigg > \cdot u $$
+    
+    이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-삼변수 함수의 방향도함수 계산 : 삼변수 함수 $w = f(x, y, z)$ 가 $x, y, z$ 에 관한 편도함수를 각각 가지면 임의의 단위벡터 $u$ 에 대하여 
+!!! note ""
 
-$$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\bigg > \cdot u $$
-
-이다.
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-열린집합 : 위상수학에서 열린집합은 스스로의 경계를 포함하지 않는 위상 공간의 부분집합이다.
-
-</blockquote>
+    열린집합 : 위상수학에서 열린집합은 스스로의 경계를 포함하지 않는 위상 공간의 부분집합이다.
 
 - 예시
 
@@ -1670,15 +1574,13 @@ $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\
 
 # 선형화
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 접선의 방정식
-
-$$ L(x) = f'(a)(x-a) + f(a) $$
-
-를 함수 $f$ 의 선형화라고 한다.
-
-</blockquote>
+    선형화(linearization) : 함수 $f$ 가 $x=a$ 에서 미분가능할 때 $x=a$ 에서의 접선의 방정식
+    
+    $$ L(x) = f'(a)(x-a) + f(a) $$
+    
+    를 함수 $f$ 의 선형화라고 한다.
 
 - 다음 그래프는 $y = x^2, y = 2x-1$ 이다.
 
@@ -1708,29 +1610,25 @@ $$ L(x) = f'(a)(x-a) + f(a) $$
 
   $$ \sqrt[]{1+x} \approx 1 + \frac{x}{2} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-표준 선형 근사(standard linear approximation) : 선형화의 정의에서 $x=a$ 에서 함수 $f$ 의 함수 $L$ 에 의한 근사
-
-$$ f(x) \approx L(x) $$
-
-를 표준 선형 근사라한다.
-
-</blockquote>
+    표준 선형 근사(standard linear approximation) : 선형화의 정의에서 $x=a$ 에서 함수 $f$ 의 함수 $L$ 에 의한 근사
+    
+    $$ f(x) \approx L(x) $$
+    
+    를 표준 선형 근사라한다.
 
 - 이때 $x=a$ 를 근사의 중심이라 한다. 
 
-## 미분 
+## 미분
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-미분(differential) : $y = f(x)$ 를 미분가능한 함수이고 미분 $dx$ 가 독립변수일 때 미분 $dy$ 는 
-
-$$ dy = f'(x)dx $$
-
-이다. 
-
-</blockquote>
+    미분(differential) : $y = f(x)$ 를 미분가능한 함수이고 미분 $dx$ 가 독립변수일 때 미분 $dy$ 는 
+    
+    $$ dy = f'(x)dx $$
+    
+    이다.
 
 - 가끔 $dy = f'(x)dx$ 를 다음과 같이 미분 $f$ 로도 표현한다.
 
@@ -1802,17 +1700,15 @@ $$ dy = f'(x)dx $$
 
   $$ d (\tan 2x) = 2 \sec ^{2} 2x dx $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-미분의 추정(estimating with differentials) : 함수 $f(x)$ 가 $x = a$ 에서 미분가능할 때 $x = a$ 의 근방 $x = a + dx$ 에서 함수값이 변하는 정도 $f(a + dx)$ 는 근사적으로
-
-$$ f(a + dx) \approx f(a) + dy $$
-
-이다. 
-
-</blockquote>
+    미분의 추정(estimating with differentials) : 함수 $f(x)$ 가 $x = a$ 에서 미분가능할 때 $x = a$ 의 근방 $x = a + dx$ 에서 함수값이 변하는 정도 $f(a + dx)$ 는 근사적으로
+    
+    $$ f(a + dx) \approx f(a) + dy $$
+    
+    이다.
 
 - $y$ 의 증분은 
 
@@ -1870,41 +1766,35 @@ $$ f(a + dx) \approx f(a) + dy $$
 
 ## 이변수 함수 선형화
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-접평면(tangent plane) : $3$ 차원 곡면의 한 접점에 존재하는 무수히 많은 접선들이 동시에 상주하고 있는 평면이다.
+    접평면(tangent plane) : $3$ 차원 곡면의 한 접점에 존재하는 무수히 많은 접선들이 동시에 상주하고 있는 평면이다.
+    
+    ![index](https://user-images.githubusercontent.com/16812446/79077468-ec0ce800-7d3c-11ea-8d57-3c992ab66d6e.jpg)
 
-![index](https://user-images.githubusercontent.com/16812446/79077468-ec0ce800-7d3c-11ea-8d57-3c992ab66d6e.jpg)
+- 위 그림과 같이 어떤 곡면에는 접선이 무수히 많고 그 접선들이 상주하는 평면이 곡면의 접평면이다.
 
-</blockquote>
+!!! note ""
 
-- 위 그림과 같이 어떤 곡면에는 접선이 무수히 많고 그 접선들이 상주하는 평면이 곡면의 접평면이다. 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-법선벡터(normal vector) : 접평면에 직교하는 벡터이다.
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Surface_normal_illustration.svg/220px-Surface_normal_illustration.svg.png)
-
-</blockquote>
+    법선벡터(normal vector) : 접평면에 직교하는 벡터이다.
+    
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Surface_normal_illustration.svg/220px-Surface_normal_illustration.svg.png)
 
 - 즉 법선벡터는 위 그림의 화살표 벡터와 같이 $3$ 차원 곡면의 한 접점에서의 모든 접선과 직교한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이변수 함수 선형화 또는 접평면(tangent plane) : $f$ 의 연속인 편도함수들이 존재할 때 점 $P(x_0, y_0, z_0)$ 에서 곡면 $z = f(x, y)$ 에 대한 접평면의 방정식은 
-
-$$ z - z_0 = f_x(x_0, y_0)(x- x_0) + f_y(x_0, y_0)(y - y_0) $$
-
-또는 
-
-$$ L(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y - y_0)
-
-$$
-
-이고 이것은 이변수 함수 $f(x, y)$ 의 선형화이다. 
-
-</blockquote>
+    이변수 함수 선형화 또는 접평면(tangent plane) : $f$ 의 연속인 편도함수들이 존재할 때 점 $P(x_0, y_0, z_0)$ 에서 곡면 $z = f(x, y)$ 에 대한 접평면의 방정식은 
+    
+    $$ z - z_0 = f_x(x_0, y_0)(x- x_0) + f_y(x_0, y_0)(y - y_0) $$
+    
+    또는 
+    
+    $$ L(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y - y_0)
+    
+    $$
+    
+    이고 이것은 이변수 함수 $f(x, y)$ 의 선형화이다.
 
 - 또한 점 $P(x_0, y_0, z_0)$ 근방에서 
 
@@ -1912,21 +1802,19 @@ $$
 
   이 성립한다.
 
-  일변수 함수 $f$ 를 $x=a$ 에서 끝없이 확대했을 때 $x=a$ 에서 접선과 거의 똑같아지는 것과 같이 이변수 함수 $f$ 를 끝없이 확대하면 접평면의 방정식과 거의 똑같아지기 때문이다. 
+  일변수 함수 $f$ 를 $x=a$ 에서 끝없이 확대했을 때 $x=a$ 에서 접선과 거의 똑같아지는 것과 같이 이변수 함수 $f$ 를 끝없이 확대하면 접평면의 방정식과 거의 똑같아지기 때문이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이변수 함수 미분 또는 전미분(total differential) : 점 $(x_0, y_0)$ 에서 점 $(x_0 + dx, y_0 + dy)$ 로 움직였을 때의 변화량 
-
-$$ df = f_x(x_0, y_0)dx + f_y (x_0, y_0)dy $$
-
-또는
-
-$$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
-
-을 함수 $f$ 의 전미분이라 한다. 
-
-</blockquote>
+    이변수 함수 미분 또는 전미분(total differential) : 점 $(x_0, y_0)$ 에서 점 $(x_0 + dx, y_0 + dy)$ 로 움직였을 때의 변화량 
+    
+    $$ df = f_x(x_0, y_0)dx + f_y (x_0, y_0)dy $$
+    
+    또는
+    
+    $$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
+    
+    을 함수 $f$ 의 전미분이라 한다.
 
 - $y = f(x, y)$ 가 미분가능한 함수이면 점 $(x_0, y_0)$ 에서 편미분계수가 존재한다. 이 점에서 조금 움직인 점 $(x_0+\Delta x, y_0+\Delta y)$ 를 생각할 수 있고 이때의 함수 $f$ 의 변화량
 
@@ -1998,8 +1886,5 @@ $$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
 
   높이 $h$ 의 단위 $1$ 변화는 전체 부피 $V$ 를 $0.25\pi$ 변하게 한다.
 
-  이로보아 반지름이 변할 때 물탱크의 전체 부피가 훨씬 더 민감하게 변한다는 것을 알 수 있다. 
-
-
-
+  이로보아 반지름이 변할 때 물탱크의 전체 부피가 훨씬 더 민감하게 변한다는 것을 알 수 있다.
 

@@ -1,6 +1,7 @@
 from glob import *
 from pprint import *
 import re
+import os
 
 lint_header = lambda str: str.split('>')[1].split('<')[0]
 
@@ -26,7 +27,28 @@ def remove_link(fname):
                 lst.append(line)
         f.write('\n'.join(lst))
 
+def tag2note(fname):
+    with open(f'{fname}', encoding='utf-8') as f:
+        content = f.read()
+    START = '<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">'
+    END = '</blockquote>'
+    content = content.split(START)
+    with open(f'{fname}', 'w', encoding='utf-8') as f:
+        for i, def_section in enumerate(content):
+            def_section = def_section.split(END)
+            if len(def_section) == 2:
+                f.write('!!! note ""\n\n')
+                for line in def_section[0].strip().split('\n'):
+                    f.write(' ' * 4 + line + '\n')
+                f.write('\n')
+                f.write(def_section[1].strip() + '\n')
+                f.write('\n')
+            else:
+                f.write(def_section[0]+'\n')
+
 md_list = glob('docs/**/*.md', recursive=True)
 for md in md_list:
-    print(md)
-    remove_link(md)
+    # if md.endswith('-test.md'):
+    #     os.remove(md)
+    tag2note(md)
+    # remove_link(md)

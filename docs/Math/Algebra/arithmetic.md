@@ -1,85 +1,63 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-## **수와 연산**
-
-**[기초 산술 메모](https://ccss17.github.io/arithmetic.html)**
-
-**[추상대수학 메모](https://ccss17.github.io/abstract_algebra.html)**
-
-**[대수학 메모](https://ccss17.github.io/algebra.html)**
-
-</blockquote>
-
-# 기초 산술 메모
-
----
-
 # 수와 연산 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-양 : 현상, 물체, 또는 물질의 크기이다.
+!!! note ""
 
-</blockquote>
+    양 : 현상, 물체, 또는 물질의 크기이다.
 
-- 분리량과 연속량으로 나뉘는데 전자에는 물체의 개수 등이 포함되고 후자는 길이나 넓이 등이 포함된다. 
+- 분리량과 연속량으로 나뉘는데 전자에는 물체의 개수 등이 포함되고 후자는 길이나 넓이 등이 포함된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-수 : 양을 나타내기 위한 추상적 개념이다. 
+    수 : 양을 나타내기 위한 추상적 개념이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-값 : 수의 크기를 나타내는 용어이다. 
+!!! note ""
 
-</blockquote>
+    값 : 수의 크기를 나타내는 용어이다.
 
 ## 이항연산
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이항연산(binary operation) : 두 항으로부터 결과를 얻어내는 연산이다. 
+    이항연산(binary operation) : 두 항으로부터 결과를 얻어내는 연산이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-등호($=$) : 수의 같음을 나타낸다. 
+!!! note ""
 
-</blockquote>
+    등호($=$) : 수의 같음을 나타낸다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-덧셈($+$) : 두 수의 총량을 나타내는 이항연산이다. 
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+    덧셈($+$) : 두 수의 총량을 나타내는 이항연산이다.
 
-뺄셈($-$) : 전항의 수에 후항의 수만큼의 양을 제거한 양을 나타내는 이항연산이다. 
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-곱셈($\times$) : 덧셈의 반복을 나타내는 이항연산이다. ?????????????
+    뺄셈($-$) : 전항의 수에 후항의 수만큼의 양을 제거한 양을 나타내는 이항연산이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-나눗셈($\div$) : 전항의 수에 대한 후항의 수의 비율을 나타내는 이항연산이다. 
+!!! note ""
 
-</blockquote>
+    곱셈($\times$) : 덧셈의 반복을 나타내는 이항연산이다. ?????????????
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-비(비율) : 어떤 양에 대한 양의 크기의 정도를 나타내는 값이다. 
 
-</blockquote>
+!!! note ""
+
+    나눗셈($\div$) : 전항의 수에 대한 후항의 수의 비율을 나타내는 이항연산이다.
+
+
+
+!!! note ""
+
+    비(비율) : 어떤 양에 대한 양의 크기의 정도를 나타내는 값이다.
 
 - $b$ 에 대한 $a$ 의 비는 $a : b$ 로 나타내고 값은 $\frac{a}{b}$ 이다. 
 
@@ -89,13 +67,11 @@
 
   - 다시 말해 $2$ 를 기준으로 했을 때 $1$ 의 크기의 정도는 $0.5$ 이다. 
 
-- 원주율($\pi$)은 원의 지름($d$) 에 대한 원주(원의 둘레, $C$)의 비율이다. 즉 $\pi = C/d$ 이다. 
+- 원주율($\pi$)은 원의 지름($d$) 에 대한 원주(원의 둘레, $C$)의 비율이다. 즉 $\pi = C/d$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-비례식 : 비율이 같은 두 비를 등호를 사용하여 나타낸 식이다. 
-
-</blockquote>
+    비례식 : 비율이 같은 두 비를 등호를 사용하여 나타낸 식이다.
 
 - 비례식이란 두 개의 비 $a : b$ 와 $c : d$ 에 대하여 비의 값 $\frac{a}{b}$ 와 $\frac{c}{d}$ 가 같을 때 $a:b=c:d$ 또는 $\frac{a}{b} = \frac{c}{d}$ 로 나타내는 것이다. 
 
@@ -113,13 +89,11 @@
 
 - 예시
 
-  - $3:5$ 와 $6:10$ 은 그 비가 같아 $3:5=6:10$ 으로 나타낼 수 있다. 
+  - $3:5$ 와 $6:10$ 은 그 비가 같아 $3:5=6:10$ 으로 나타낼 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-가비의 비 : 비의 값이 같을 때 각 비의 분모끼리, 분자끼리 더해 만든 비도 그 값이 같다는 비례식의 성질이다. 
-
-</blockquote>
+    가비의 비 : 비의 값이 같을 때 각 비의 분모끼리, 분자끼리 더해 만든 비도 그 값이 같다는 비례식의 성질이다.
 
 - 비례식 $a:b=c:d=e:f$ 가 성립하면 다음이 성립한다. 단, $b+d+f \neq 0, Pb+Qd+Rf \neq 0$ 이다.
 
@@ -135,43 +109,41 @@
 
   $$
 
-## 수의 연산 
+## 수의 연산
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-약수 : 어떤 수를 나누어떨어지게 하는 수이다. 
+    약수 : 어떤 수를 나누어떨어지게 하는 수이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-배수 : 어떤 수에 정수를 곱한 수이다. 
+!!! note ""
 
-</blockquote>
+    배수 : 어떤 수에 정수를 곱한 수이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-공약수 : 두 수의 공통인 약수이다. 
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+    공약수 : 두 수의 공통인 약수이다.
 
-최대공약수 : 공약수 중 가장 큰 수이다. 
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-공배수 : 두 수의 공통인 배수이다. 
+    최대공약수 : 공약수 중 가장 큰 수이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-소수(decimal) : 각각의 자리에 놓인 숫자와 소수점을 통해 나타낸 실수이다.
+!!! note ""
 
-</blockquote>
+    공배수 : 두 수의 공통인 배수이다.
+
+
+
+!!! note ""
+
+    소수(decimal) : 각각의 자리에 놓인 숫자와 소수점을 통해 나타낸 실수이다.
 
 - 음이 아닌 실수 $r$ 의 소수 표기를 
 
@@ -187,31 +159,25 @@
 
   $$ 1/3 = 0.33333 \dots $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유한소수(finite decimal) : 소수점 아랫자리가 유한한 수를 갖는 것을 유한소수라 한다. 
-
-</blockquote>
+    유한소수(finite decimal) : 소수점 아랫자리가 유한한 수를 갖는 것을 유한소수라 한다.
 
 - 예시 
 
   $$ 1/2 = 0.5 $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유한소수(infinite decimal) : 소수점 아랫자리가 무한한 수를 갖는 것을 무한소수라 한다. 
-
-</blockquote>
+    유한소수(infinite decimal) : 소수점 아랫자리가 무한한 수를 갖는 것을 무한소수라 한다.
 
 - 예시 
 
   $$ 1/3 = 0.33333 \dots $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-순환소수 : 소수점 아래 어떤 자리에서부터 일정한 숫자의 배열이 계속해서 되풀이 되는 무한소수이다.
-
-</blockquote>
+    순환소수 : 소수점 아래 어떤 자리에서부터 일정한 숫자의 배열이 계속해서 되풀이 되는 무한소수이다.
 
 - 예시
 
@@ -225,37 +191,33 @@
 
   $$ 0.\dot{1}5 \dot{3} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-최소공배수 : 공배수 중 가장 작은 수이다. 
+    최소공배수 : 공배수 중 가장 작은 수이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-소수(prime number) : $1$ 보다 큰 자연수 중 $1$ 과 자기 자신만을 약수로 가지는 수이다. 
+!!! note ""
 
-</blockquote>
+    소수(prime number) : $1$ 보다 큰 자연수 중 $1$ 과 자기 자신만을 약수로 가지는 수이다.
 
 - $\mathbb{P}$ 로 표기된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-서로소 : 최대공약수가 $1$ 인 두 수의 관계이다. 
+    서로소 : 최대공약수가 $1$ 인 두 수의 관계이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-역연산 : 
+!!! note ""
 
-</blockquote>
+    역연산 :
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-항등원 : 임의의 수 $a$ 에 대하여 어떤 수를 연산했을 때 처음의 수 $a$ 가 되도록 만들어주는 수이다. 
 
-</blockquote>
+!!! note ""
+
+    항등원 : 임의의 수 $a$ 에 대하여 어떤 수를 연산했을 때 처음의 수 $a$ 가 되도록 만들어주는 수이다.
 
 - 군론을 비롯한 대수학에서 정의된다. 
 
@@ -273,11 +235,9 @@
   | 정사각행렬 | 행렬 곱셈|단위행렬|
   | 함수 | 합성함수|항등함수|
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-역원(inverse element) : 두 원소를 연산한 결과가 항등원일 때, 한 원소에 대하여 다른 원소를 이르는 말이다.
-
-</blockquote>
+    역원(inverse element) : 두 원소를 연산한 결과가 항등원일 때, 한 원소에 대하여 다른 원소를 이르는 말이다.
 
 - 덧셈에서의 반수와 곱셈에서의 역수를 일반화한 개념이다. 
 
@@ -289,99 +249,83 @@
 
 ## 수의 분류
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-페아노 공리계 
+    페아노 공리계
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-자연수(natural number) : $1, 2, 3, ...$ 등의 수의 체계.
+!!! note ""
 
-</blockquote>
+    자연수(natural number) : $1, 2, 3, ...$ 등의 수의 체계.
 
 - $\mathbb{N}$ 로 표기한다.
 
-- 페아노 공리계와 집합론적 정의로 엄밀히 정의된다. 
+- 페아노 공리계와 집합론적 정의로 엄밀히 정의된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정수(integer) : 음의 정수($-1, -2, -3, ...$) 와 $0$, 그리고 양의 정수($1, 2, 3, ...$)$ 로 이루어진 수의 체계.
-
-</blockquote>
+    정수(integer) : 음의 정수($-1, -2, -3, ...$) 와 $0$, 그리고 양의 정수($1, 2, 3, ...$)$ 로 이루어진 수의 체계.
 
 - $\mathbb{Z}$ 로 표기한다.
 
-- 대수학에서 정수환으로 엄밀히 정의된다. 
+- 대수학에서 정수환으로 엄밀히 정의된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유리수(rational number) : 두 정수의 비율로 나타낼 수 있는 수. 단, 분모가 $0$ 이 아니어야 한다. 
-
-</blockquote>
+    유리수(rational number) : 두 정수의 비율로 나타낼 수 있는 수. 단, 분모가 $0$ 이 아니어야 한다.
 
 - 분모가 $1$ 일 수 있으므로 모든 정수는 유리수이다. 
 
 - $\mathbb{Q}$ 로 표기한다.
 
-- 대수학에서 정수환의 분수체로 나타낼 수 있는 유리수체로 엄밀히 정의된다. 
+- 대수학에서 정수환의 분수체로 나타낼 수 있는 유리수체로 엄밀히 정의된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-무리수(irrational number) : 두 정수의 비의 형태로 나타낼 수 없는 실수를 뜻한다. 
-
-</blockquote>
+    무리수(irrational number) : 두 정수의 비의 형태로 나타낼 수 없는 실수를 뜻한다.
 
 - 분수로 나타낼 수 없는 소수라고도 할 수 있다. 
 
 - $\mathbb{I}$ 로 표기한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-실수(real number) : 유리수 집합과 무리수 집합을 합한 수의 체계이다. 
-
-</blockquote>
+    실수(real number) : 유리수 집합과 무리수 집합을 합한 수의 체계이다.
 
 - $\mathbb{R}$ 로 표기한다. 
 
-- 실수체로 엄밀히 정의된다. 
+- 실수체로 엄밀히 정의된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-허수(imaginary number) : 제곱하여 $-1$ 이 되는 수 $\sqrt{-1}$ 이고 $i$ 라고 정의한다. 
-
-</blockquote>
+    허수(imaginary number) : 제곱하여 $-1$ 이 되는 수 $\sqrt{-1}$ 이고 $i$ 라고 정의한다.
 
 - 실수는 제곱하였을 때 반드시 $0$ 또는 양수가 되기 때문에 $x^2 = -1$ 등의 방정식의 해를 표현할 수 없다. 그러므로 이와 같은 방정식의 해를 표현하기 위하여 제곱해서 음수가 되는 수를 고안하여 허수라고 칭한다.
 
 - 실제로 존재하는 수라고 여겨지지 않지만 특정 조건의 방정식의 해를 표현할 수 있게 해주어 수학적 가치가 있다고 여겨진다. 
 
-- 허수가 알려지기 전까지 수는 $1$ 차원적 개념에 머물렀지만 실수를 $x$ 축으로 허수를 $y$ 축으로 생각하여 복소평면이 만들어진 후 수의 개념이 $2$ 차원으로 확장되었다. 또한 허수의 존재로 수가 $n$ 차원으로 확장될 수도 있다는 가능성이 열렸다. 
+- 허수가 알려지기 전까지 수는 $1$ 차원적 개념에 머물렀지만 실수를 $x$ 축으로 허수를 $y$ 축으로 생각하여 복소평면이 만들어진 후 수의 개념이 $2$ 차원으로 확장되었다. 또한 허수의 존재로 수가 $n$ 차원으로 확장될 수도 있다는 가능성이 열렸다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-복소수(complex number) : 실수와 허수를 포괄하는 수이며 $a + bi(a, b 는 실수)$ 의 꼴로 나타낸다. 
-
-</blockquote>
+    복소수(complex number) : 실수와 허수를 포괄하는 수이며 $a + bi(a, b 는 실수)$ 의 꼴로 나타낸다.
 
 - $a$ 를 실수부, $b$ 를 허수부라고 한다.
 
 - 컬레복소수 : 복소수 $a+bi$ 에서 허수부의 부호를 바꾼 복소수이다.
 
-  - $\overline{a+bi} = a-bi$ 로 표현한다. 
+  - $\overline{a+bi} = a-bi$ 로 표현한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-사원수(quaternion) : 복소수를 확장한 체계이다. 
+    사원수(quaternion) : 복소수를 확장한 체계이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-초월수(transcendental number) : 계수가 유리수인 어떤 다항 방정식의 해도 될 수 없는 복소수이다.
+!!! note ""
 
-</blockquote>
+    초월수(transcendental number) : 계수가 유리수인 어떤 다항 방정식의 해도 될 수 없는 복소수이다.
 
 - 다항방정식의 해가 될 수 있는 대수적 수와 반대되는 개념이다. 
 
@@ -413,11 +357,9 @@
 
   $$ 2 ^{\sqrt[]{2}} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-음수의 제곱근
-
-</blockquote>
+    음수의 제곱근
 
 - $a > 0$ 일 때 $\sqrt[]{-a}=\sqrt[]{a}i$ 로 정의하며, $-a$ 의 제곱근은 $\pm \sqrt[]{-a}=\pm \sqrt[]{a}i$
 
@@ -427,15 +369,13 @@
 
 ## 수열
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-수열(sequence) : 자연수 전체 집합 $\mathbb{N}$ 에서 실수 전체 집합 $\mathbb{R}$ 로의 함수 
-
-$$f : \mathbb{N} \to \mathbb{R}$$
-
-에서 함숫값을 차례로 나열한 $f(1), f(2), ..., f(n), ...$ 을 수열이라 한다.
-
-</blockquote>
+    수열(sequence) : 자연수 전체 집합 $\mathbb{N}$ 에서 실수 전체 집합 $\mathbb{R}$ 로의 함수 
+    
+    $$f : \mathbb{N} \to \mathbb{R}$$
+    
+    에서 함숫값을 차례로 나열한 $f(1), f(2), ..., f(n), ...$ 을 수열이라 한다.
 
 - 이때 함수적 표현 $f(n)$ 을 $a_n$ 으로 나타낸다. 
 
@@ -445,19 +385,17 @@ $$f : \mathbb{N} \to \mathbb{R}$$
 
 - 단순하게 정의하면 수열이란 차례로 나열된 수의 순서있는 나열이다. 
 
-- 유한수열이라는 언급이 없는 한 수열은 무한수열이다. 
+- 유한수열이라는 언급이 없는 한 수열은 무한수열이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유한수열 : 정의역이 모든 자연수의 집합 $\mathbb{N}$ 의 부분집합 $\{1, 2, 3, \dots, n\}$, 공역이 모든 실수 집합 $\mathbb{R}$ 인 함수이다. 
+    유한수열 : 정의역이 모든 자연수의 집합 $\mathbb{N}$ 의 부분집합 $\{1, 2, 3, \dots, n\}$, 공역이 모든 실수 집합 $\mathbb{R}$ 인 함수이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-등차수열(arithmetic sequence) : 첫째항부터 차례로 일정한 수 공차를 더하여 얻어진 수열이다. 
+!!! note ""
 
-</blockquote>
+    등차수열(arithmetic sequence) : 첫째항부터 차례로 일정한 수 공차를 더하여 얻어진 수열이다.
 
 - 등차수열 $\{a_n\}$ 의 공차를 $d$ 라 하면 다음이 성립한다. 
 
@@ -471,21 +409,17 @@ $$f : \mathbb{N} \to \mathbb{R}$$
 
   - $b = \frac{a+c}{2}$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-조화수열(harmonic progression) : 수열의 각 항의 역수들이 등차수열을 이루는 수열이다. 
-
-</blockquote>
+    조화수열(harmonic progression) : 수열의 각 항의 역수들이 등차수열을 이루는 수열이다.
 
 - 예시 
 
   $\frac{1}{2}, \frac{1}{6}, \frac{1}{10}, \frac{1}{14}, \dots$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-등비수열(geometric sequence) : 첫째항부터 차례로 일정한 수 공비를 곱하여 얻어진 수열이다.
-
-</blockquote>
+    등비수열(geometric sequence) : 첫째항부터 차례로 일정한 수 공비를 곱하여 얻어진 수열이다.
 
 - 등비수열 $\{a_n\}$ 의 공비를 $r$ 라 할 때 $a_{n+1} = ra_n$ 가 성립한다. 
 
@@ -497,55 +431,47 @@ $$f : \mathbb{N} \to \mathbb{R}$$
 
 ## 급수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-합의 기호 $\sum$ : 수열 $\{a_n\}$ 의 합을 $a_1+a_2+\dots+a_n+\dots$ 을 합의 기호 $\sum$ 를 사용하여 다음과 같이 표현할 수 있다.
+    합의 기호 $\sum$ : 수열 $\{a_n\}$ 의 합을 $a_1+a_2+\dots+a_n+\dots$ 을 합의 기호 $\sum$ 를 사용하여 다음과 같이 표현할 수 있다.
+    
+    $$ a_1+a_2+\dots+a_n +\dots= \sum_{k=1}^{\infty}a_k $$
 
-$$ a_1+a_2+\dots+a_n +\dots= \sum_{k=1}^{\infty}a_k $$
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-급수(series) : 수열의 모든 항을 더한 것, 즉 수열의 합이다. 
-
-</blockquote>
+    급수(series) : 수열의 모든 항을 더한 것, 즉 수열의 합이다.
 
 - 즉, 급수는 수열 $\{a_n\}$ 의 합 $a_1+a_2+\dots+a_n+\dots$ 으로써 다음과 같다. 
 
   $$ a_1+a_2+\dots+a_n +\dots= \sum_{k=1}^{\infty}a_k $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유한급수(finite series) : 항의 개수가 유한한 급수이다. 
+    유한급수(finite series) : 항의 개수가 유한한 급수이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-무한급수(infinite series) : 항의 개수가 무한한 급수이다. 
+!!! note ""
 
-</blockquote>
+    무한급수(infinite series) : 항의 개수가 무한한 급수이다.
 
-- 무한급수의 경우 합이 어떤 값에 가까워지는 수렴급수와 그렇지 않은 발산급수로 분류된다. 
+- 무한급수의 경우 합이 어떤 값에 가까워지는 수렴급수와 그렇지 않은 발산급수로 분류된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-부분합(partial sum) : 급수의 제 $n$ 항 까지의 합을 부분합이라 하고
+    부분합(partial sum) : 급수의 제 $n$ 항 까지의 합을 부분합이라 하고
+    
+    $$S_n = a_1 + a_2 + a_3 + + \dots + a_n = \sum_{k=1}^{n}a_k$$
+    
+    로 나타낸다.
 
-$$S_n = a_1 + a_2 + a_3 + + \dots + a_n = \sum_{k=1}^{n}a_k$$
+- 이것을 급수의 제 $n$ 까지의 부분합이라 한다.
 
-로 나타낸다. 
+!!! note ""
 
-</blockquote>
-
-- 이것을 급수의 제 $n$ 까지의 부분합이라 한다. 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-급수의 성질 : 두 급수 $\sum_{n=1}^{\infty}a_n, \sum_{n=1}^{\infty}b_n$ 이 수렴하고 그 합을 $S, S'$ 라 할 때 다음 관계가 존재하게 된다. 
-
-</blockquote>
+    급수의 성질 : 두 급수 $\sum_{n=1}^{\infty}a_n, \sum_{n=1}^{\infty}b_n$ 이 수렴하고 그 합을 $S, S'$ 라 할 때 다음 관계가 존재하게 된다.
 
 - $$ \sum_{n=1}^{\infty}ca_n = c \sum_{n=1}^{\infty} a_n = cS $$ 
 
@@ -553,29 +479,25 @@ $$S_n = a_1 + a_2 + a_3 + + \dots + a_n = \sum_{k=1}^{n}a_k$$
 
 - $$ \sum_{n=1}^{\infty}(a_n \pm b_n) = \sum_{n=1}^{\infty}a_n \pm \sum_{n=1}^{\infty}b_n = S \pm S' $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-곱의 기호 $\prod$ : 수열 $\{a_n\}$ 의 첫째항부터 제 $n$항까지의 곱 $a_1 \times a_2\times a_3\times\dots \times a_n$ 을 곱의 기호 $\prod$ 를 사용하여 다음과 같이 표현할 수 있다.
+    곱의 기호 $\prod$ : 수열 $\{a_n\}$ 의 첫째항부터 제 $n$항까지의 곱 $a_1 \times a_2\times a_3\times\dots \times a_n$ 을 곱의 기호 $\prod$ 를 사용하여 다음과 같이 표현할 수 있다.
+    
+    $$ a_1\times a_2\times a_3\times\dots \times a_n = \prod_{k=1}^{n}a_k $$
 
-$$ a_1\times a_2\times a_3\times\dots \times a_n = \prod_{k=1}^{n}a_k $$
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-멱급수(power series) : 일반적으로 등비수열 $x, x^2, \dots, x^n, \dots$ 과 임의의 수열 $\{a_n\}$ 을 항끼리 곱하여 얻은 새로운 수열 $\{a_nx^n\}$ 의 합을 멱급수라 한다.
-
-</blockquote>
+    멱급수(power series) : 일반적으로 등비수열 $x, x^2, \dots, x^n, \dots$ 과 임의의 수열 $\{a_n\}$ 을 항끼리 곱하여 얻은 새로운 수열 $\{a_nx^n\}$ 의 합을 멱급수라 한다.
 
 - 즉 다음과 같이 표현할 수 있다.
 
   $$ a_1x + a_2x^2 + a_3x^3 + \dots + a_nx^n + \dots = \sum_{k=1}^{\infty} a_k x ^{k} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유한급수의 성질 : 두 수열 $\{a_n\}, \{b_n\}$ 과 상수 $c$ 에 대하여 다음 관계가 존재한다. 
-
-</blockquote>
+    유한급수의 성질 : 두 수열 $\{a_n\}, \{b_n\}$ 과 상수 $c$ 에 대하여 다음 관계가 존재한다.
 
 - $\displaystyle \sum_{k=1}^{n}(a_k \pm b_k) = \sum_{k=1}^{n}a_k \pm \sum_{k=1}^{n} b_k$
 
@@ -583,31 +505,25 @@ $$ a_1\times a_2\times a_3\times\dots \times a_n = \prod_{k=1}^{n}a_k $$
 
 - $\displaystyle \sum_{k=1}^{n}c = cn$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-등차수열의 합 : 첫째항이 $a$, 공차가 $d$ 인 등차수열의 제 $n$ 항이 $l$ 일 때, 첫째항부터 제 $n$항까지의 합 $S_n$ 음 다음과 같다.
+    등차수열의 합 : 첫째항이 $a$, 공차가 $d$ 인 등차수열의 제 $n$ 항이 $l$ 일 때, 첫째항부터 제 $n$항까지의 합 $S_n$ 음 다음과 같다.
+    
+    $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
-$$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
+- 등차수열의 합은 상수항이 없는 $n$ 에 대한 이차식이다.
 
-</blockquote>
+!!! note ""
 
-- 등차수열의 합은 상수항이 없는 $n$ 에 대한 이차식이다. 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-등비수열의 합 : 첫째항이 $a$, 공비가 $r(r \neq 0)$ 인 등비수열의 첫째항부터 제 $n$항까지의 합 $S_n$ 은 다음과 같다.
-
-</blockquote>
+    등비수열의 합 : 첫째항이 $a$, 공비가 $r(r \neq 0)$ 인 등비수열의 첫째항부터 제 $n$항까지의 합 $S_n$ 은 다음과 같다.
 
 - $r \neq 1$ 일 때, $S_n = \frac{a(1-r^n)}{1-r} = \frac{a(r^n-1)}{r-1}$
 
 - $r =1$ 일 때, $S_n = na$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-여러가지 부분합
-
-</blockquote>
+    여러가지 부분합
 
 - $\displaystyle  1+2+3+\dots+n=\sum_{k=1}^{n}k=\frac{n(n+1)}{2}$
 
@@ -621,11 +537,9 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 ## 수학적 귀납법과 수열
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-수열의 귀납적 정의 : 첫째항 또는 처음 몇 개의 항과 이웃하는 항들 사이의 관계식으로 수열을 정의하는 것이다. 
-
-</blockquote>
+    수열의 귀납적 정의 : 첫째항 또는 처음 몇 개의 항과 이웃하는 항들 사이의 관계식으로 수열을 정의하는 것이다.
 
 - 수열을 정의하는 두 가지 방법(일반항으로의 정의, 귀납적 정의) 중 하나이다.
 
@@ -633,25 +547,21 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
   - 첫째항이 $a$, 공차가 $d$ 인 등차수열의 일반항 $\{a_n\}$ 은 $a+(n-1)d$ 이다.
 
-  - 이것을 귀납적으로 정의하면 $a_1 = a, a_{n+1} = a_n + d(n=1,2,3,\dots)$ 가 된다. 
+  - 이것을 귀납적으로 정의하면 $a_1 = a, a_{n+1} = a_n + d(n=1,2,3,\dots)$ 가 된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-점화식 : 수열을 귀납적으로 정의했을 때 이웃한 항 사이의 관계식이다. 
+    점화식 : 수열을 귀납적으로 정의했을 때 이웃한 항 사이의 관계식이다.
 
-</blockquote>
+- 위 예시에서 $a_{n+1} = a_n + d$ 가 점화식이다.
 
-- 위 예시에서 $a_{n+1} = a_n + d$ 가 점화식이다. 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-수열에 사용된 수학적 귀납법 : 자연수 $n$ 에 대한 명제 $p(n)$ 이 모든 자연수 $n$ 에 대하여 성립함을 증명하려면 다음 두 가지를 보이면 충분하다.
-
-1. $n=1$ 일 때 명제 $p(n)$ 이 성립한다. 
-
-2. $n=k$ 일 때 명제 $p(n)$ 이 성립한다고 가정하면 $n=k+1$ 일 때도 명제 $p(n)$ 이 성립한다.
-
-</blockquote>
+    수열에 사용된 수학적 귀납법 : 자연수 $n$ 에 대한 명제 $p(n)$ 이 모든 자연수 $n$ 에 대하여 성립함을 증명하려면 다음 두 가지를 보이면 충분하다.
+    
+    1. $n=1$ 일 때 명제 $p(n)$ 이 성립한다. 
+    
+    2. $n=k$ 일 때 명제 $p(n)$ 이 성립한다고 가정하면 $n=k+1$ 일 때도 명제 $p(n)$ 이 성립한다.
 
 - 예시 
 
@@ -663,11 +573,9 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
   3. (보충설명) 그런데 수식이 $n=1$ 일 때 성립하였으므로 $n=2$ 일 때도 성립하고 $n=3$ 일 때도 성립하며 $n=k(k는 모든 자연수)$ 일 때도 성립한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-점화식과 일반항과의 관계
-
-</blockquote>
+    점화식과 일반항과의 관계
 
 - 점화식이 $a_{n+1} = a_n + f(n)$ 일 경우 일반항은 $a_n = a_1 + \sum_{k=1}^{n-1}f(k)$ 이다. 
 
@@ -681,35 +589,31 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 # 지수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-제곱(squared) : 실수 $a$ 대하여 $a$ 를 $2$ 번 곱한 것을 $a$ 의 제곱이라 하고 $a^2$ 으로 나타낸다. 
+    제곱(squared) : 실수 $a$ 대하여 $a$ 를 $2$ 번 곱한 것을 $a$ 의 제곱이라 하고 $a^2$ 으로 나타낸다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-세제곱(cube) : 실수 $a$ 대하여 $a$ 를 $3$ 번 곱한 것을 $a$ 의 제곱이라 하고 $a^3$ 으로 나타낸다. 
+!!! note ""
 
-</blockquote>
+    세제곱(cube) : 실수 $a$ 대하여 $a$ 를 $3$ 번 곱한 것을 $a$ 의 제곱이라 하고 $a^3$ 으로 나타낸다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-거듭제곱(exponentiation) : 주어진 수나 문자(밑)를 주어진 횟수(지수)만큼 곱하는 이항연산이다. 
 
-</blockquote>
+!!! note ""
+
+    거듭제곱(exponentiation) : 주어진 수나 문자(밑)를 주어진 횟수(지수)만큼 곱하는 이항연산이다.
 
 - 실수 $a$ 와 자연수 $n$ 에 대하여 $a$ 를 $n$ 번 곱한 것을 $a$ 의 $n$ 제곱이라 하고 $a^n$ 으로 나타낸다. 
 
 - $a, a^2, \dots, a^n, \dots$ 을 통틀어 $a$ 의 거듭제곱이라 한다. 
 
-- 밑이 $a$, 지수가 $n$ 인 거듭제곰을 $a$ 의 $n$ 제곱이라 하고 $a^n$ 이라 나타낸다. 
+- 밑이 $a$, 지수가 $n$ 인 거듭제곰을 $a$ 의 $n$ 제곱이라 하고 $a^n$ 이라 나타낸다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-지수(exponent) : 거듭제곱을 한 횟수를 나타내는 문자나 숫자이다. 
-
-</blockquote>
+    지수(exponent) : 거듭제곱을 한 횟수를 나타내는 문자나 숫자이다.
 
 - 자연수 지수의 정의 : $a \times a \times a \times \dots \times a = a^n$ 과 같이 반복되는 곱셈을 지수 $n$ 으로 표현한다. 
 
@@ -729,11 +633,9 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 ## 지수법칙
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-지수가 정수 일 때의 지수법칙 : $a \neq 0, b \neq 0$ 이고 $m, n$ 이 정수일 때 다음 관계가 성립한다. 
-
-</blockquote>
+    지수가 정수 일 때의 지수법칙 : $a \neq 0, b \neq 0$ 이고 $m, n$ 이 정수일 때 다음 관계가 성립한다.
 
 - $a^ma^n = a^{m+n}$
 
@@ -743,11 +645,9 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 - $(ab)^n=a^nb^n$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-지수가 유리수 일 때의 지수법칙 : $a > 0, b > 0$ 이고 $p, q$ 가 유리수일 때 다음 관계가 성립한다. 
-
-</blockquote>
+    지수가 유리수 일 때의 지수법칙 : $a > 0, b > 0$ 이고 $p, q$ 가 유리수일 때 다음 관계가 성립한다.
 
 - $a^pa^q = a^{p+q}$
 
@@ -757,11 +657,9 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 - $(ab)^p=a^pb^p$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-지수가 실수 일 때의 지수법칙 : $a > 0, b > 0$ 가 실수이고 $x, y$ 가 실수일 때 다음 관계가 성립한다. 
-
-</blockquote>
+    지수가 실수 일 때의 지수법칙 : $a > 0, b > 0$ 가 실수이고 $x, y$ 가 실수일 때 다음 관계가 성립한다.
 
 - $a^xa^y = a^{x+y}$
 
@@ -783,31 +681,25 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 ## 제곱근
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-제곱근(square root) : 실수 $a$ 에 대하여 제곱하여 $a$ 가 되는 모든 수이다. 
-
-</blockquote>
+    제곱근(square root) : 실수 $a$ 에 대하여 제곱하여 $a$ 가 되는 모든 수이다.
 
 - $x^2 = a(a\ge0)$ 을 만족하는 $x$ 를 $a$ 의 제곱근이라 한다.
 
-- 이때 $x$ 를 $\sqrt a$ 라고 표기한다. 
+- 이때 $x$ 를 $\sqrt a$ 라고 표기한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-세제곱근(cube root) : 실수 $a$ 에 대하여 세제곱하여 $a$ 가 되는 모든 수이다. 
-
-</blockquote>
+    세제곱근(cube root) : 실수 $a$ 에 대하여 세제곱하여 $a$ 가 되는 모든 수이다.
 
 - $x^3 = a(a\ge0)$ 을 만족하는 $x$ 를 $a$ 의 제곱근이라 한다.
 
-- 이때 $x$ 를 $\sqrt[3]{a}$ 라고 표기한다. 
+- 이때 $x$ 를 $\sqrt[3]{a}$ 라고 표기한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-거듭제곱근 : 실수 $a$ 과 $2$ 이상의 자연수 $n$에 대하여 $n$제곱하여 $a$ 가 되는 모든 수이다. 
-
-</blockquote>
+    거듭제곱근 : 실수 $a$ 과 $2$ 이상의 자연수 $n$에 대하여 $n$제곱하여 $a$ 가 되는 모든 수이다.
 
 - 방정식 $x^n = a$ 를 만족시키는 $x$ 를 $a$ 의 $n$ 제곱근이라 한다. 
 
@@ -815,11 +707,9 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 - 이때 $n$ 이 짝수이면 실수 $a$ 의 $n$ 제곱근 중 실수인 것은 양수, 음수 각각 하나씩 있고 각각 $-\sqrt[n]{a},\sqrt[n]{a}$ 로 나타낸다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-거듭제곱근의 성질 : $a > 0, b > 0$ 이고 $m, n$ 이 $2$ 이상의 자연수일 때 다음 관계 성립한다. 
-
-</blockquote>
+    거듭제곱근의 성질 : $a > 0, b > 0$ 이고 $m, n$ 이 $2$ 이상의 자연수일 때 다음 관계 성립한다.
 
 - $\sqrt[n]{a}\sqrt[n]{b}=\sqrt[n]{ab}$ : $n$ 제곱하여 $a$ 가 되는 수와 $n$ 제곱하여 $b$ 가 되는 수를 곱하면 $n$ 제곱하여 $ab$ 가 되는 수가 된다. 
 
@@ -837,11 +727,9 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 # 로그
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그($logarithm$) : $a > 0, a \neq 1, N > 0$ 일 때, 식 $a^x = N$ 의 $x$ 를 밑 $a$ 를 둔 $N$ 의 로그 $\log_{a}N$ 라 한다.
-
-</blockquote>
+    로그($logarithm$) : $a > 0, a \neq 1, N > 0$ 일 때, 식 $a^x = N$ 의 $x$ 를 밑 $a$ 를 둔 $N$ 의 로그 $\log_{a}N$ 라 한다.
 
 - 이때 $N$ 을 $\log_{a} N$ 의 진수($value$)라 한다. 
 
@@ -867,13 +755,11 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
   - 허수 $i$ 도 표현할 수 없는 특정 조건의 방정식의 해를 일단 표현하여 수학을 진전시키기 위하여 개발된 것처럼 쉽게 표현할 수 없는 지수를 $\log_{}$ 로 쉽게 표현하게 된 것이다. 
 
-- 지수의 역연산이다. 
+- 지수의 역연산이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그의 성질 : $a > 0, a \neq 1, M > 0, N > 0$ 일 때 다음 관계가 성립한다. 
-
-</blockquote>
+    로그의 성질 : $a > 0, a \neq 1, M > 0, N > 0$ 일 때 다음 관계가 성립한다.
 
 - $\log_{a} 1 = 0, \log_{a} a = 1$
 
@@ -887,13 +773,11 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 - $\log_{a} M^k = k\log_{a}M$ (단, $k$ 는 실수)
 
-  - $\log_{a} M = x$ 라 하면 $a^x = M$ 이고 양변에 $k$ 제곱을 하면 $a^{kx} = M^k$ 를 얻는다. 따라서 $\log_{a} M^k = kx = k \log_{a} M$ 이다. 
+  - $\log_{a} M = x$ 라 하면 $a^x = M$ 이고 양변에 $k$ 제곱을 하면 $a^{kx} = M^k$ 를 얻는다. 따라서 $\log_{a} M^k = kx = k \log_{a} M$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그의 성질(2) : $a > 0, a \neq 1, b > 0, c > 0, c \neq 1$ 일 때 다음 관계가 성립한다. 
-
-</blockquote>
+    로그의 성질(2) : $a > 0, a \neq 1, b > 0, c > 0, c \neq 1$ 일 때 다음 관계가 성립한다.
 
 - $\log_{a} b = \frac{\log_{c} b}{\log_{c} a}$
 
@@ -905,16 +789,11 @@ $$ S_n = \frac{n(a + l)}{2} = \frac{n(2a+(n-1)d)}{2} $$
 
 - $a^{\log_{c} b} = b^{\log_{c} a}$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-상용로그 : 양수 $N$ 에 대하여 $\log_{10} n$ 처럼 $10$ 을 밑으로 하는 로그이다. 
-
-</blockquote>
+    상용로그 : 양수 $N$ 에 대하여 $\log_{10} n$ 처럼 $10$ 을 밑으로 하는 로그이다.
 
 - 상용로그는 보통 밑 $10$ 을 생략하여 $\log_{} n$ 같이 나타낸다. 
 
-- 혹은 더욱 간단하게 $\lg_{} n$ 으로 나타낼 수도 있다. 
-
-
-
+- 혹은 더욱 간단하게 $\lg_{} n$ 으로 나타낼 수도 있다.
 

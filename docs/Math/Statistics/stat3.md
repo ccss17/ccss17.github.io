@@ -1,45 +1,20 @@
+# 이항분포
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-## **통계 메모**
-
-**[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
-
-**[이산확률변수의 평균,분산,표준편차](https://ccss17.github.io/stat2.html)**
-
-**[이항분포의 평균,분산,표준편차](https://ccss17.github.io/stat3.html)**
-
-**[연속확률변수의 평균,분산,표준편차와 정규분포](https://ccss17.github.io/stat4.html)**
-
-**[통계적 추정](https://ccss17.github.io/stat5.html)**
-
-**[상관관계 분석](https://ccss17.github.io/stat6.html)**
-
-</blockquote>
-
-#  이항분포의 평균,분산,표준편차
-
----
-
-# 이항분포 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-이항분포(binomial distribution) : 한 번의 시행에서 사건 $A$ 가 일어날 확률이 $p$ 이고
-
-$n$ 번의 독립시행에서 사건 $A$ 가 일어나는 횟수를 확률변수 $X$ 라고 할 때
-
-$q=1-p$ 와 $x = 0,1,2,\dots, n$ 에 대한 확률변수 $X$ 의 확률질량함수는
-
-$$ P(X=x) = {}_{n}C_{x}p ^{x}q ^{n-x} $$
-
-인데 이러한 $X$ 의 확률분포를 이항분포
-
-$$ \boxed{B(n, p)} $$
-
-라 한다.
-
-</blockquote>
+    이항분포(binomial distribution) : 한 번의 시행에서 사건 $A$ 가 일어날 확률이 $p$ 이고
+    
+    $n$ 번의 독립시행에서 사건 $A$ 가 일어나는 횟수를 확률변수 $X$ 라고 할 때
+    
+    $q=1-p$ 와 $x = 0,1,2,\dots, n$ 에 대한 확률변수 $X$ 의 확률질량함수는
+    
+    $$ P(X=x) = {}_{n}C_{x}p ^{x}q ^{n-x} $$
+    
+    인데 이러한 $X$ 의 확률분포를 이항분포
+    
+    $$ \boxed{B(n, p)} $$
+    
+    라 한다.
 
 - 증명 
 
@@ -91,17 +66,15 @@ $$ \boxed{B(n, p)} $$
 
 ## 이항분포의 평균, 분산, 표준편차(산포도 측정)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이항분포의 평균 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
-
-이항분포의 평균은 
-
-$$ E(X) = np $$
-
-이다.
-
-</blockquote>
+    이항분포의 평균 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
+    
+    이항분포의 평균은 
+    
+    $$ E(X) = np $$
+    
+    이다.
 
 - 일반적인 이산확률변수의 확률질량함수가 $i = 1, 2, \dots, n$ 에 대하여 
 
@@ -159,19 +132,17 @@ $$ E(X) = np $$
 
   $$ \therefore  E(X) = np $$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이항분포의 분산 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
-
-이항분포의 분산은 $q = 1-p$ 에 대하여
-
-$$ V(X) = npq $$
-
-이다.
-
-</blockquote>
+    이항분포의 분산 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
+    
+    이항분포의 분산은 $q = 1-p$ 에 대하여
+    
+    $$ V(X) = npq $$
+    
+    이다.
 
 - 증명 
 
@@ -241,19 +212,17 @@ $$ V(X) = npq $$
 
   $$ \therefore  V(X) = npq $$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이항분포의 표준편차 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
-
-이항분포의 표준편차는 $q = 1-p$ 에 대하여
-
-$$ \sigma (X) = \sqrt[]{npq} $$
-
-이다.
-
-</blockquote>
+    이항분포의 표준편차 : 확률변수 $X$ 가 이항분포 $B(n,p)$ 를 따를 때 
+    
+    이항분포의 표준편차는 $q = 1-p$ 에 대하여
+    
+    $$ \sigma (X) = \sqrt[]{npq} $$
+    
+    이다.
 
 - 증명 
 
@@ -293,21 +262,19 @@ $$ \sigma (X) = \sqrt[]{npq} $$
 
   $E(X) = 25$ 를 통해 정사면체를 $100$ 번 던졌을 때 숫자 $2$ 가 $25$ 정도 나올 것이라고 생각할 수 있다. 
 
-## 큰 수의 법칙 
+## 큰 수의 법칙
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-큰 수의 법칙(law of large number) : 어떤 시행에서 사건 $A$ 가 일어날 확률이 $p$ 일 때
-
-$n$ 번의 독립시행에서 사건 $A$ 가 일어나는 횟수를 $X$ 라 하면
-
-확률변수 $X$ 는 이항분포 $B(n, p)$ 를 따르는데 이때 아무리 작은 양수 $h$ 를 택하더라도 
-
-$$ \lim_{n \to \infty} P \bigg ( \bigg | \dfrac{X}{n} - p \bigg | < h \bigg ) = 1 $$
-
-이 성립한다.
-
-</blockquote>
+    큰 수의 법칙(law of large number) : 어떤 시행에서 사건 $A$ 가 일어날 확률이 $p$ 일 때
+    
+    $n$ 번의 독립시행에서 사건 $A$ 가 일어나는 횟수를 $X$ 라 하면
+    
+    확률변수 $X$ 는 이항분포 $B(n, p)$ 를 따르는데 이때 아무리 작은 양수 $h$ 를 택하더라도 
+    
+    $$ \lim_{n \to \infty} P \bigg ( \bigg | \dfrac{X}{n} - p \bigg | < h \bigg ) = 1 $$
+    
+    이 성립한다.
 
 - 설명 
 
@@ -367,21 +334,19 @@ $$ \lim_{n \to \infty} P \bigg ( \bigg | \dfrac{X}{n} - p \bigg | < h \bigg ) = 
 
   이것은 쉽게 말해 그냥 시행횟수를 한없이 늘리면 통계적확률과 수학적확률이 똑같아진다는 것을 의미한다.
 
-# 체비세프의 부등식 
+# 체비세프의 부등식
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-체비세프의 부등식(Chebyshev's inequality) : 확률변수 $X$ 의 평균이 $\mu$, 표준편차가 $\sigma$ 이고 자료의 총수가 $N$ 일 때
-
-$1$ 보다 큰 임의의 양수 $k$ 에 대하여 $|X- \mu | < k \sigma$ 를 만족시키는 자료의 수는 
-
-$$ N \bigg (1 - \dfrac{1}{k^2} \bigg ) $$
-
-개 이상이다. 
-
-**구체화 필요**
-
-</blockquote>
+    체비세프의 부등식(Chebyshev's inequality) : 확률변수 $X$ 의 평균이 $\mu$, 표준편차가 $\sigma$ 이고 자료의 총수가 $N$ 일 때
+    
+    $1$ 보다 큰 임의의 양수 $k$ 에 대하여 $|X- \mu | < k \sigma$ 를 만족시키는 자료의 수는 
+    
+    $$ N \bigg (1 - \dfrac{1}{k^2} \bigg ) $$
+    
+    개 이상이다. 
+    
+    **구체화 필요**
 
 - 즉, $\mu - k \sigma < x_i < \mu + k \sigma$ 을 만족하는 $x_i$ 는 전체의 $1 - \dfrac{1}{k^2}$ 이상이다. 
 
@@ -395,14 +360,9 @@ $$ N \bigg (1 - \dfrac{1}{k^2} \bigg ) $$
 
 # 베르누이 시행
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-베르누이 시행 : 
-
-</blockquote>
+    베르누이 시행 :
 
 **구체화 필요**
-
-
-
 

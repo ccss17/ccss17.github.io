@@ -1,13 +1,12 @@
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## **확률 메모**
+!!! note ""
 
-**[조합 메모](https://ccss17.github.io/comb.html)**
-
-**[확률 메모](https://ccss17.github.io/prop.html)**
-
-</blockquote>
+    ## **확률 메모**
+    
+    **[조합 메모](https://ccss17.github.io/comb.html)**
+    
+    **[확률 메모](https://ccss17.github.io/prop.html)**
 
 # 확률 메모
 
@@ -15,11 +14,9 @@
 
 # 확률
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-확률(probability) : 모든 경우의 수(표본공간)에 대하여 특정한 사건이 발생하는 경우의 수의 비율이다. 
-
-</blockquote>
+    확률(probability) : 모든 경우의 수(표본공간)에 대하여 특정한 사건이 발생하는 경우의 수의 비율이다.
 
 - 다시 말해 전사건(표본공간)의 경우의 수에 대한 어떤 사건이 일어날 경우의 수에 대한 비율이다.
 
@@ -39,13 +36,11 @@
 
 - 예시 
 
-  동전을 던질 때 앞면이 나오는 가능성은 앞면, 뒷면 $2$ 가지 경우 중 $1$ 가지이므로 $\dfrac{1}{2}$ 이다. 
+  동전을 던질 때 앞면이 나오는 가능성은 앞면, 뒷면 $2$ 가지 경우 중 $1$ 가지이므로 $\dfrac{1}{2}$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-사건의 경우의 수 : 사건 $A$ 에 대한 경우의 수를 $n(A)$ 로 정의한다. 
-
-</blockquote>
+    사건의 경우의 수 : 사건 $A$ 에 대한 경우의 수를 $n(A)$ 로 정의한다.
 
 - 전사건의 경우의 수, 즉 표본공간 $S$ 의 원소를 
 
@@ -53,17 +48,15 @@
 
   로 나타낸다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-수학적 확률(mathematical probability) : 표본공간 $S$ 안에서 각각의 근원사건이 일어날 가능성이 같을 때
-
-사건 $A$ 가 일어날 수학적 확률은
-
-$$ \boxed{P(A) = \frac{n(A)}{n(S)}}  $$
-
-이다.
-
-</blockquote>
+    수학적 확률(mathematical probability) : 표본공간 $S$ 안에서 각각의 근원사건이 일어날 가능성이 같을 때
+    
+    사건 $A$ 가 일어날 수학적 확률은
+    
+    $$ \boxed{P(A) = \frac{n(A)}{n(S)}}  $$
+    
+    이다.
 
 - 예시 
 
@@ -107,19 +100,17 @@ $$ \boxed{P(A) = \frac{n(A)}{n(S)}}  $$
 
   $$ \therefore \frac{8}{20} = \frac{2}{5} $$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-통계적 확률 : 같은 시행을 $n$ 번 반복하여 사건 $A$ 가 일어난 횟수를 $r _{n}$ 이라 할 때 
-
-시행 횟수 $n$ 을 한없이 크게 함에 따라 상대도수 
-
-$$ \boxed{\frac{r_n}{n}}  $$
-
-이 다가가는 일정한 값 $p$ 를 사건 $A$ 가 일어날 통계적 확률이라 한다. 
-
-</blockquote>
+    통계적 확률 : 같은 시행을 $n$ 번 반복하여 사건 $A$ 가 일어난 횟수를 $r _{n}$ 이라 할 때 
+    
+    시행 횟수 $n$ 을 한없이 크게 함에 따라 상대도수 
+    
+    $$ \boxed{\frac{r_n}{n}}  $$
+    
+    이 다가가는 일정한 값 $p$ 를 사건 $A$ 가 일어날 통계적 확률이라 한다.
 
 - 즉 통계적 확률은 
 
@@ -147,11 +138,9 @@ $$ \boxed{\frac{r_n}{n}}  $$
 
   즉 위와 같은 수식이 정확한 가능성을 보여준다. 그러나 실제 현실에서는 농구 선수에게 무한번 자유투를 던지게 할 수 없는 노릇이니 그냥 충분한 횟수를 던지게 해야 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-큰 수의 법칙(law of large number) : 통계적 확률에서 시행 횟수 $n$ 이 한없이 커질 때 그 극한이 수학적 확률과 같아진다.
-
-</blockquote>
+    큰 수의 법칙(law of large number) : 통계적 확률에서 시행 횟수 $n$ 이 한없이 커질 때 그 극한이 수학적 확률과 같아진다.
 
 - 예시 
 
@@ -161,31 +150,29 @@ $$ \boxed{\frac{r_n}{n}}  $$
 
   시행 $20$ 을 했더니 수학적 확률이 $\dfrac{9}{20}$ 이 나왔다고 하자.
 
-  실제로 수학적 확률은 $\dfrac{1}{2}$ 이고 시행을 무한히 반복하면 통계적 확률이 이 $\dfrac{1}{2}$ 에 가까워진다. 
+  실제로 수학적 확률은 $\dfrac{1}{2}$ 이고 시행을 무한히 반복하면 통계적 확률이 이 $\dfrac{1}{2}$ 에 가까워진다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-기하학적 확률 : 영역 $S$ 안에서 각각의 점을 잡을 가능성이 같고 $\text{sum} (A)$ 을 영역 $A$ 의 넓이라고 할 떄
+    기하학적 확률 : 영역 $S$ 안에서 각각의 점을 잡을 가능성이 같고 $\text{sum} (A)$ 을 영역 $A$ 의 넓이라고 할 떄
+    
+    영역 $S$ 에서 임의로 잡은 점이 영역 $A$ 에 속할 기하학적 확률은
+    
+    $$ \boxed{P(A) = \frac{\text{sum}(A)}{\text{sum}(S)}}  $$
+    
+    이다.
 
-영역 $S$ 에서 임의로 잡은 점이 영역 $A$ 에 속할 기하학적 확률은
 
-$$ \boxed{P(A) = \frac{\text{sum}(A)}{\text{sum}(S)}}  $$
 
-이다.
+!!! note ""
 
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-확률의 성질 : 전사건 $S$ 과 임의의 사건 $A$ 에 대하여 다음이 성립한다. 
-
-1. $\boxed{ 0 \leq P(A) \leq 1}$
-
-2. $\boxed{ P(S) = 1}$
-
-3. $\boxed{ P(\emptyset ) = 0}$
-
-</blockquote>
+    확률의 성질 : 전사건 $S$ 과 임의의 사건 $A$ 에 대하여 다음이 성립한다. 
+    
+    1. $\boxed{ 0 \leq P(A) \leq 1}$
+    
+    2. $\boxed{ P(S) = 1}$
+    
+    3. $\boxed{ P(\emptyset ) = 0}$
 
 - 증명 
 
@@ -239,29 +226,25 @@ $$ \boxed{P(A) = \frac{\text{sum}(A)}{\text{sum}(S)}}  $$
 
 # 확률의 덧셈정리
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-확률의 덧셈 : 두 사건 $A$ 와 $B$ 가 동시에 일어나지 않을 때, 사건 $A$ 와 $B$ 가 발생할 확률을 각각 $p, q$ 라 하면 사건 $A$ 또는 $B$ 가 발생할 확률은 $p + q$ 이다. 
+    확률의 덧셈 : 두 사건 $A$ 와 $B$ 가 동시에 일어나지 않을 때, 사건 $A$ 와 $B$ 가 발생할 확률을 각각 $p, q$ 라 하면 사건 $A$ 또는 $B$ 가 발생할 확률은 $p + q$ 이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-확률의 곱 : 두 사건 $A$ 와 $B$ 가 서로 영향을 미치지 않을 때, 사건 $A$ 와 $B$ 가 발생할 확률을 각각 $p, q$ 라 하면 사건 $A$ 또는 $B$ 가 동시에 발생할 확률은 $p \times q$ 이다. 
+!!! note ""
 
-</blockquote>
+    확률의 곱 : 두 사건 $A$ 와 $B$ 가 서로 영향을 미치지 않을 때, 사건 $A$ 와 $B$ 가 발생할 확률을 각각 $p, q$ 라 하면 사건 $A$ 또는 $B$ 가 동시에 발생할 확률은 $p \times q$ 이다.
 
 - ???????? "동시에" 라는 말 때문에 혼란이 일어나는 것 같은데 서로 다른 사건을 동시에 일어나게 하는 건 순전히 전체 사건을 정의하는 사람 마음이 아닌가?
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-확률의 덧셈정리(addition theorem of probability) : 표본공간 $S$ 의 부분집합인 두 사건 $A, B$ 에 대하여 
-
-$$ \boxed{ P(A \cup B) = P(A)+P(B)-P(A \cap B) }$$
-
-이다. 
-
-</blockquote>
+    확률의 덧셈정리(addition theorem of probability) : 표본공간 $S$ 의 부분집합인 두 사건 $A, B$ 에 대하여 
+    
+    $$ \boxed{ P(A \cup B) = P(A)+P(B)-P(A \cap B) }$$
+    
+    이다.
 
 - 증명 
 
@@ -279,17 +262,15 @@ $$ \boxed{ P(A \cup B) = P(A)+P(B)-P(A \cap B) }$$
 
   $$ \therefore  P(A \cup B) = P(A) + P(B) - P(A \cap B) $$
 
-  을 얻는다. ■ 
+  을 얻는다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-배반사건의 확률의 덧셈정리 : 두 사건 $A, B$ 가 배반사건이면, 즉 $A \cap B = \emptyset$ 이면 
-
-$$ \boxed{P(A \cup B) = P(A)+P(B) } $$
-
-이다.
-
-</blockquote>
+    배반사건의 확률의 덧셈정리 : 두 사건 $A, B$ 가 배반사건이면, 즉 $A \cap B = \emptyset$ 이면 
+    
+    $$ \boxed{P(A \cup B) = P(A)+P(B) } $$
+    
+    이다.
 
 - 증명 
 
@@ -313,15 +294,13 @@ $$ \boxed{P(A \cup B) = P(A)+P(B) } $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-여사건의 확률 : 표본공간 $S$ 의 부분집합인 사건 $A$ 의 여사건 $A ^{C}$ 가 일어날 확률은 
-
-$$ \boxed{P(A ^{C}) = 1 - P(A)}  $$
-
-이다. 
-
-</blockquote>
+    여사건의 확률 : 표본공간 $S$ 의 부분집합인 사건 $A$ 의 여사건 $A ^{C}$ 가 일어날 확률은 
+    
+    $$ \boxed{P(A ^{C}) = 1 - P(A)}  $$
+    
+    이다.
 
 - 증명 
 
@@ -367,19 +346,17 @@ $$ \boxed{P(A ^{C}) = 1 - P(A)}  $$
 
   이다. 이것이 남자가 적어도 $1$ 명 선출되는 확률이다. ■ 
 
-## 조건부 확률 
+## 조건부 확률
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-조건부확률(conditional probability) : 확률이 $0$ 이 아닌 사건 $A$ 가 일어났다고 가정할 때
-
-사건 $B$ 가 일어날 확률
-
-$$ \boxed{P(B|A) = \frac{n(A \cap B)}{n(A)} = \frac{P(A \cap B)}{P(A)}= \dfrac{P(A \cap B)}{P(A \cap B) + P(A \cap B ^{C})}}  $$
-
-을 사건 $A$ 가 일어났을 때의 사건 $B$ 의 조건부확률이라 한다.
-
-</blockquote>
+    조건부확률(conditional probability) : 확률이 $0$ 이 아닌 사건 $A$ 가 일어났다고 가정할 때
+    
+    사건 $B$ 가 일어날 확률
+    
+    $$ \boxed{P(B|A) = \frac{n(A \cap B)}{n(A)} = \frac{P(A \cap B)}{P(A)}= \dfrac{P(A \cap B)}{P(A \cap B) + P(A \cap B ^{C})}}  $$
+    
+    을 사건 $A$ 가 일어났을 때의 사건 $B$ 의 조건부확률이라 한다.
 
 - 증명 
 
@@ -431,17 +408,15 @@ $$ \boxed{P(B|A) = \frac{n(A \cap B)}{n(A)} = \frac{P(A \cap B)}{P(A)}= \dfrac{P
 
   $$ \therefore  P(B|A) = \dfrac{P(A \cap B)}{P(A)} = \dfrac{\dfrac{5}{100}}{\dfrac{10}{100}} = \dfrac{1}{2} $$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-확률의 곱셈정리(multiplication theorem of probability) : $P(A) \neq 0, P(B) \neq 0$ 일 때 두 사건 $A, B$ 가 동시에 일어날 확률은 
-
-$$ P(A \cap B) = P(A)P(B|A) = P(B)P(A|B) $$
-
-이다. 
-
-</blockquote>
+    확률의 곱셈정리(multiplication theorem of probability) : $P(A) \neq 0, P(B) \neq 0$ 일 때 두 사건 $A, B$ 가 동시에 일어날 확률은 
+    
+    $$ P(A \cap B) = P(A)P(B|A) = P(B)P(A|B) $$
+    
+    이다.
 
 - 증명 
 
@@ -479,19 +454,17 @@ $$ P(A \cap B) = P(A)P(B|A) = P(B)P(A|B) $$
 
 ## 사건의 독립과 종속
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-독립사건(independent) : 두 사건 $A$ 와 $B$ 에서 한 사건의 결과가 다른 사건에 영향을 주지 않을 때, 즉
-
-$$ P(B|A) = P(B) $$
-
-또는
-
-$$ P(A|B) = P(A) $$
-
-일 때 $A$ 와 $B$ 를 독립사건이라 한다. 
-
-</blockquote>
+    독립사건(independent) : 두 사건 $A$ 와 $B$ 에서 한 사건의 결과가 다른 사건에 영향을 주지 않을 때, 즉
+    
+    $$ P(B|A) = P(B) $$
+    
+    또는
+    
+    $$ P(A|B) = P(A) $$
+    
+    일 때 $A$ 와 $B$ 를 독립사건이라 한다.
 
 - 다음 등식이 성립하면 두 사건 $A, B$ 는 서로 독립이다. 
 
@@ -535,17 +508,15 @@ $$ P(A|B) = P(A) $$
 
   $$ \therefore  P(A \cap B) = P(A)P(B|A) = \dfrac{3}{10} \times \dfrac{3}{10} = \dfrac{9}{100} $$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-종속사건(dependent) : 두 사건 $A$ 와 $B$ 에서 한 사건의 결과가 다른 사건에 영향을 줄 때, 즉
-
-$$ P(B) \neq P(B|A), P(A) \neq P(A|B) $$
-
-일 때 $A$ 와 $B$ 를 종속사건이라 한다. 
-
-</blockquote>
+    종속사건(dependent) : 두 사건 $A$ 와 $B$ 에서 한 사건의 결과가 다른 사건에 영향을 줄 때, 즉
+    
+    $$ P(B) \neq P(B|A), P(A) \neq P(A|B) $$
+    
+    일 때 $A$ 와 $B$ 를 종속사건이라 한다.
 
 - 예시 
 
@@ -563,31 +534,27 @@ $$ P(B) \neq P(B|A), P(A) \neq P(A|B) $$
 
   $$ \therefore  P(A \cap B) = P(A)P(B|A) = \dfrac{3}{10} \times \dfrac{2}{9} = \dfrac{1}{15} $$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-독립시행(independent trials) : 동일한 시행을 반복하여 나타나는 시행의 결과가 서로 독립일 때, 이 시행을 독립시행이라고 한다.
-
-</blockquote>
+    독립시행(independent trials) : 동일한 시행을 반복하여 나타나는 시행의 결과가 서로 독립일 때, 이 시행을 독립시행이라고 한다.
 
 - 예시 
 
   주사위를 던질 때 $4$ 가 나올 확률은 $\dfrac{1}{6}$ 이다. 이때 한번 더 던져서 $4$ 가 나올 확률도 $\dfrac{1}{6}$ 이다. 
 
-  이처럼 동일한 시행을 계속 할 때 시행들이 서로 영향을 주지 않고, 매회 일어나는 사건이 독립이므로 이것은 독립시행이다. 
+  이처럼 동일한 시행을 계속 할 때 시행들이 서로 영향을 주지 않고, 매회 일어나는 사건이 독립이므로 이것은 독립시행이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-독립시행의 확률 : 매회의 시행에서 사건 $A$ 가 일어날 확률이 $p$ 일 때,
-
-$n$ 회의 독립시행에서 사건 $A$ 가 $r$ 회 일어날 확률 $P_r$ 은 $q = 1-p, r = 0, 1, 2, \dots, n$ 에 대하여
-
-$$ P_r = {}_{n}C_{r}p ^{r}(1-p)^{n-r} = {}_{n}C_{r} p ^{r}q ^{n-r} $$
-
-이다.
-
-</blockquote>
+    독립시행의 확률 : 매회의 시행에서 사건 $A$ 가 일어날 확률이 $p$ 일 때,
+    
+    $n$ 회의 독립시행에서 사건 $A$ 가 $r$ 회 일어날 확률 $P_r$ 은 $q = 1-p, r = 0, 1, 2, \dots, n$ 에 대하여
+    
+    $$ P_r = {}_{n}C_{r}p ^{r}(1-p)^{n-r} = {}_{n}C_{r} p ^{r}q ^{n-r} $$
+    
+    이다.
 
 - 예시 
 
@@ -616,25 +583,23 @@ $$ P_r = {}_{n}C_{r}p ^{r}(1-p)^{n-r} = {}_{n}C_{r} p ^{r}q ^{n-r} $$
 
   이다. ■ 
 
-## 전확률 공식과 베이즈 정리 
+## 전확률 공식과 베이즈 정리
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-전확률 공식(total probability) : 공사건이 아닌 $n$ 개의 사건 $A_1, A_2, \dots, A_n$ 이
-
-표본공간 $S$ 와 $i, j = 1, 2, \dots, n$ 이고 $i \neq j$ 인 $i, j$ 에 대하여 다음 두 조건을 만족할 때 
-
-$$ A_i \cap A_j = \emptyset $$
-
-$$ A_1 \cup A_2 \cup \dots \cup A_n = S $$
-
-공사건이 아닌 사건 $B (\subset S)$ 가 일어날 확률 $P(B)$ 는 
-
-$$ \boxed{P(B) = \sum_{k=1}^{n}P(A_k)P(B|A_k) = P(A_1)B(B|A_1) +P(A_2)B(B|A_2)+\dots +P(A_n)B(B|A_n)}  $$
-
-이다. 
-
-</blockquote>
+    전확률 공식(total probability) : 공사건이 아닌 $n$ 개의 사건 $A_1, A_2, \dots, A_n$ 이
+    
+    표본공간 $S$ 와 $i, j = 1, 2, \dots, n$ 이고 $i \neq j$ 인 $i, j$ 에 대하여 다음 두 조건을 만족할 때 
+    
+    $$ A_i \cap A_j = \emptyset $$
+    
+    $$ A_1 \cup A_2 \cup \dots \cup A_n = S $$
+    
+    공사건이 아닌 사건 $B (\subset S)$ 가 일어날 확률 $P(B)$ 는 
+    
+    $$ \boxed{P(B) = \sum_{k=1}^{n}P(A_k)P(B|A_k) = P(A_1)B(B|A_1) +P(A_2)B(B|A_2)+\dots +P(A_n)B(B|A_n)}  $$
+    
+    이다.
 
 - 증명
 
@@ -690,17 +655,15 @@ $$ \boxed{P(B) = \sum_{k=1}^{n}P(A_k)P(B|A_k) = P(A_1)B(B|A_1) +P(A_2)B(B|A_2)+\
 
   $$ = \dfrac{37}{90} $$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-베이즈 정리(bayes theorem) : 전확률 공식의 정의의 전제조건을 만족할 때 사건 $B$ 가 일어났을 때 사건 $A_i$ 의 조건부확률은 
-
-$$ \boxed{P(A_i|B) = \frac{P(B \cap A_i)}{P(B)} = \frac{P(A_i)P(B|A_i)}{\displaystyle \sum_{k=1}^{n}P(A_k)P(B|A_k)}}  $$
-
-이다.
-
-</blockquote>
+    베이즈 정리(bayes theorem) : 전확률 공식의 정의의 전제조건을 만족할 때 사건 $B$ 가 일어났을 때 사건 $A_i$ 의 조건부확률은 
+    
+    $$ \boxed{P(A_i|B) = \frac{P(B \cap A_i)}{P(B)} = \frac{P(A_i)P(B|A_i)}{\displaystyle \sum_{k=1}^{n}P(A_k)P(B|A_k)}}  $$
+    
+    이다.
 
 - 증명 
 
@@ -802,8 +765,5 @@ $9$ 가지의 선택을 바꾸었을 경우에 대하여 자동차를 획득할 
 
 반면 $9$ 가지의 선택을 바꾸지 않을 경우에 대하여 자동차를 획득할 수 있는 경우는 $3$, 획득할 수 없는 경우는 $6$ 가지이다. 
 
-따라서 선택을 바꾸었을 때 자동차를 획득할 수 있는 확률은 $\dfrac{6}{9} = \dfrac{2}{3}$ 이고 선택을 바꾸지 않았을 때 자동차를 획득할 수 있는 확률은 $\dfrac{3}{9} = \dfrac{1}{3}$ 이다. 
-
-
-
+따라서 선택을 바꾸었을 때 자동차를 획득할 수 있는 확률은 $\dfrac{6}{9} = \dfrac{2}{3}$ 이고 선택을 바꾸지 않았을 때 자동차를 획득할 수 있는 확률은 $\dfrac{3}{9} = \dfrac{1}{3}$ 이다.
 

@@ -1,27 +1,9 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-## **수와 연산**
-
-**[기초 산술 메모](https://ccss17.github.io/arithmetic.html)**
-
-**[추상대수학 메모](https://ccss17.github.io/abstract_algebra.html)**
-
-**[대수학 메모](https://ccss17.github.io/algebra.html)**
-
-</blockquote>
-
-# 추상대수학 메모 
-
----
-
 # 대수학
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-대수학(代數學, Algebra) : 일련의 공리들을 만족하는 수학적 구조들의 일반적인 성질을 연구하는 수학의 한 분야이다.
+!!! note ""
 
-</blockquote>
+    대수학(代數學, Algebra) : 일련의 공리들을 만족하는 수학적 구조들의 일반적인 성질을 연구하는 수학의 한 분야이다.
 
 - 거칠게 말해서 대수학은 관계를 말한다. 그리고 선형대수학은 선형적 관계를 말한다. 
 
@@ -75,11 +57,9 @@
 
 ## 추상대수학
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-추상대수학(abstract algebra) : 대수 구조에 관련된 수학적 대상들을 연구하는 분야이다. 
-
-</blockquote>
+    추상대수학(abstract algebra) : 대수 구조에 관련된 수학적 대상들을 연구하는 분야이다.
 
 - 추상대수학은 다루는 대수 구조에 따라 분류된다. 
 
@@ -107,13 +87,11 @@
 
   만약 더 이상 추상화가 불가능한 가장 추상적인 법칙이 발견되면 그것으로부터 모든 것을 이끌어낼 수 있을 것이기 때문이다. 
 
-  > 또한 인공지능에 관하여 생각의 법칙을 끊임없이 추상화시키고 일반화시키는 작업의 목적이 이 이유이기도 하다. 생각 자체를 추상화시켜서 물질화시키면 언젠가 생각도 기계가 대체할 수 있지 않을까? 한편 이러한 작업을 하기 위하여 현대까지 발전되어온 추상화 자체에 대한 연구 즉 대수학을 심도있게 공부할 필요가 있어 보인다. 
+  > 또한 인공지능에 관하여 생각의 법칙을 끊임없이 추상화시키고 일반화시키는 작업의 목적이 이 이유이기도 하다. 생각 자체를 추상화시켜서 물질화시키면 언젠가 생각도 기계가 대체할 수 있지 않을까? 한편 이러한 작업을 하기 위하여 현대까지 발전되어온 추상화 자체에 대한 연구 즉 대수학을 심도있게 공부할 필요가 있어 보인다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-대수 구조(algebraic structure) : 일련의 연산이 정의된 집합이다.
-
-</blockquote>
+    대수 구조(algebraic structure) : 일련의 연산이 정의된 집합이다.
 
 - 집합에 연산이 잘 정의되어 있다는 말은 집합이 연산에 대하여 닫혀 있다는 말이다.
 
@@ -163,11 +141,9 @@
 
 ## 연산의 추상화
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-연산(operation) : 어떤 집합 $A$ 의 거듭제곱 집합 $A^n$ 에서 그 집합 $A$ 로 가는 함수이다. 
-
-</blockquote>
+    연산(operation) : 어떤 집합 $A$ 의 거듭제곱 집합 $A^n$ 에서 그 집합 $A$ 로 가는 함수이다.
 
 - 즉 연산은 다음과 같이 임의의 개수의 원소들의 순서쌍을 유일한 하나의 원소에 대응시키는 함수이다. 
 
@@ -187,45 +163,41 @@
 
     으로 정의된 함수이다. 
 
-- 집합 속 원소에 대한 연산 결과가 집합에 속해있다는 것을 연산에 대한 닫혀있다고 한다. 
+- 집합 속 원소에 대한 연산 결과가 집합에 속해있다는 것을 연산에 대한 닫혀있다고 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$n$ 항 연산(n-ary operation) : 어떤 집합 $S$ 의 거듭제곱집합 $S ^{n}$ 의 $n$ 개의 원소들의 순서쌍을 집합 $S$ 의 원소에 대응시키는 함수이다. 
-
-</blockquote>
+    $n$ 항 연산(n-ary operation) : 어떤 집합 $S$ 의 거듭제곱집합 $S ^{n}$ 의 $n$ 개의 원소들의 순서쌍을 집합 $S$ 의 원소에 대응시키는 함수이다.
 
 - 집합 $A$ 와 음이 아닌 정수 $n \in Z _{\geq 0}$ 에 대하여 $n$ 항 연산 $\circ$ 은 
 
   $$ \circ:A ^{n} \to A, (a_1, a_2, \dots, a_n) \mapsto a $$
 
-  으로 정의된 함수이다. 
+  으로 정의된 함수이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-영항 연산(0-ary operation) : 어떤 집합 $S$ 의 원소 $s \in S$ 이다. 
+    영항 연산(0-ary operation) : 어떤 집합 $S$ 의 원소 $s \in S$ 이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-일항 연산(unary operation) 또는 단항 연산 : 어떤 집합 $S$ 에 대하여 정의된 함수 $S \to S$ 이다. 
+!!! note ""
 
-</blockquote>
+    일항 연산(unary operation) 또는 단항 연산 : 어떤 집합 $S$ 에 대하여 정의된 함수 $S \to S$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-이항 연산(binary operation) : 어떤 집합 $S$ 의 제곱집합 $S ^{2}$ 의 순서쌍으로부터 $S$ 의 한 원소를 얻는 함수 
 
-$$S \times S \to S$$
+!!! note ""
 
-또는
-
-$$S ^{2} \to S$$
-
-이다. 
-
-</blockquote>
+    이항 연산(binary operation) : 어떤 집합 $S$ 의 제곱집합 $S ^{2}$ 의 순서쌍으로부터 $S$ 의 한 원소를 얻는 함수 
+    
+    $$S \times S \to S$$
+    
+    또는
+    
+    $$S ^{2} \to S$$
+    
+    이다.
 
 - 일반적으로 이항 연산을 편의상 덧셈 또는 곱셈이라 한다.
 
@@ -263,31 +235,27 @@ $$S ^{2} \to S$$
 
 - 예시 
 
-  군 위의 연산과 벡터 공간 위의 연산, 행렬에 대한 연산 등 직관적으로 알고 있는 실수 체계에 대한 연산 말고도 다양한 연산들이 정의되어 있다. 
+  군 위의 연산과 벡터 공간 위의 연산, 행렬에 대한 연산 등 직관적으로 알고 있는 실수 체계에 대한 연산 말고도 다양한 연산들이 정의되어 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-삼항 연산(ternary operation) : 어떤 집합 $S$ 의 세제곱집합 $S ^{3}$ 의 순서쌍으로부터 $S$ 의 한 원소를 얻는 함수 
-
-$$S \times S \times S \to S$$
-
-또는
-
-$$S ^{3} \to S$$
-
-이다. 
-
-</blockquote>
+    삼항 연산(ternary operation) : 어떤 집합 $S$ 의 세제곱집합 $S ^{3}$ 의 순서쌍으로부터 $S$ 의 한 원소를 얻는 함수 
+    
+    $$S \times S \times S \to S$$
+    
+    또는
+    
+    $$S ^{3} \to S$$
+    
+    이다.
 
 # 여러가지 대수구조
 
 ## 군론
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-군론(group theory) : 군을 연구하는 대수학의 한 분야이다. 
-
-</blockquote>
+    군론(group theory) : 군을 연구하는 대수학의 한 분야이다.
 
 - 여러 수학 분야의 기초가 된다. 
 
@@ -317,37 +285,31 @@ $$S ^{3} \to S$$
 
   **내 생각에 대수학자가 프로그래머가 되거나 프로그래머가 대수학자가 되면 뭔가 획기적인 걸 만들어낼 수 있을 거 같다.**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-덧셈에 대한 항등원을 제외한 집합 : 집합 $A$ 에서 $+$ 에 대한 항등원 $0$ 을 제외한 집합을 $A ^{*}$ 으로 표기한다. 
+    덧셈에 대한 항등원을 제외한 집합 : 집합 $A$ 에서 $+$ 에 대한 항등원 $0$ 을 제외한 집합을 $A ^{*}$ 으로 표기한다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-"연산이 잘 정의되었다" : 어떤 집합에서 연산이 잘 정의되었다는 것은 연산이 집합에 대하여 닫혀있다는 것이다.
+!!! note ""
 
-</blockquote>
+    "연산이 잘 정의되었다" : 어떤 집합에서 연산이 잘 정의되었다는 것은 연산이 집합에 대하여 닫혀있다는 것이다.
 
 - 즉 연산 $\circ$ 이 집합 $S$ 에서 잘 정의되어있다는 것은 집합 $S$ 의 임의의 원소 $s, t$ 에 대하여 
 
   $$ (s \circ t) \in S $$
 
-  라는 것이다. 
+  라는 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-집합(set) : 대수구조의 관점에서 집합은 아무런 연산이 정의되어 있지 않은 대수구조이다. (수학기초론 파트에서 집합의 정확한 정의를 기술해놓았다.)
+    집합(set) : 대수구조의 관점에서 집합은 아무런 연산이 정의되어 있지 않은 대수구조이다. (수학기초론 파트에서 집합의 정확한 정의를 기술해놓았다.)
 
-</blockquote>
+- 모든 대상들의 가장 밑바닥에 존재하는 대수구조이다.
 
-- 모든 대상들의 가장 밑바닥에 존재하는 대수구조이다. 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-마그마(magma) : 집합에서 닫혀있는 이항 연산이 정의되어있는 대수구조이다. 
-
-</blockquote>
+    마그마(magma) : 집합에서 닫혀있는 이항 연산이 정의되어있는 대수구조이다.
 
 - 즉 집합 $M$ 에서 닫혀있는 이항연산 $\circ$ 을 갖춘 대수구조 $(M, \circ)$ 를 마그마라고 한다.
 
@@ -371,13 +333,11 @@ $$S ^{3} \to S$$
 
   홀수 집합을 $O$ 라고 하면 $(O, \cdot )$ 은 마그마이지만 $(O, +)$ 은 마그마가 아니다. 
 
-  홀수는 곱셈에 대하여 닫혀있고 덧셈에 대하여 닫혀있지 않기 때문이다. 
+  홀수는 곱셈에 대하여 닫혀있고 덧셈에 대하여 닫혀있지 않기 때문이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-반군(semi group) : 마그마에서 결합 법칙이 성립하는 대수구조이다. 
-
-</blockquote>
+    반군(semi group) : 마그마에서 결합 법칙이 성립하는 대수구조이다.
 
 - 대수학에서 결합법칙이 성립해야 한다는 것이 어떤 대수 구조에든지간에 기본이다.
 
@@ -399,11 +359,9 @@ $$S ^{3} \to S$$
 
   - 덧셈의 순서는 연산 결과에 아무런 영향을 끼치지 못하기에 결합법칙도 성립한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-모노이드(monoid) : 반군에서 항등원을 갖는 대수구조이다. 
-
-</blockquote>
+    모노이드(monoid) : 반군에서 항등원을 갖는 대수구조이다.
 
 - 즉 반군 $(M, \circ)$ 의 모든 원소 $a$ 에 대하여 항등원 $e$ 를 가져서 
 
@@ -413,13 +371,11 @@ $$S ^{3} \to S$$
 
 - 예시 
 
-  정방행렬의 집합 $\mathbb{R} ^{n \times n}$ 은 행렬곱 연산 $\cdot$ 에 대하여 단위행렬 $I_n$ 을 항등원으로 가지므로 $(\mathbb{R}, \cdot)$ 은 모노이드이다. 
+  정방행렬의 집합 $\mathbb{R} ^{n \times n}$ 은 행렬곱 연산 $\cdot$ 에 대하여 단위행렬 $I_n$ 을 항등원으로 가지므로 $(\mathbb{R}, \cdot)$ 은 모노이드이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-군(group) : 모노이드에서 역원을 갖는 대수구조이다.
-
-</blockquote>
+    군(group) : 모노이드에서 역원을 갖는 대수구조이다.
 
 - 즉 집합 $G$ 에 연산 $\circ$ 이 닫혀있고 다음 세 조건(G.1, G.2, G.3)이 성립할 때 $(G, \circ)$ 를 연산 $\circ$ 를 갖는 군이라 한다. 
 
@@ -505,13 +461,11 @@ $$S ^{3} \to S$$
 
   연산에 대하여 닫혀있고, 결합법칙이 성립하고, 항등원 $0$ 가 존재하며, 역원이 존재하기 때문이다. 
 
-  사실 $(\mathbb{Z}, +)$ 는 교환법칙도 성립하기 때문에 아벨군이기도 한다. 
+  사실 $(\mathbb{Z}, +)$ 는 교환법칙도 성립하기 때문에 아벨군이기도 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-아벨군(abelian group) 또는 가환군(commutative group) : 군에서 교환법칙이 성립하는 대수구조이다. 
-
-</blockquote>
+    아벨군(abelian group) 또는 가환군(commutative group) : 군에서 교환법칙이 성립하는 대수구조이다.
 
 - 즉 군의 정의에서 다음 조건(G.4)이 추가로 성립하는 군 $(G, \circ)$ 을 연산 $\circ$ 를 갖는 아벨군이라 한다.
 
@@ -581,13 +535,11 @@ $$S ^{3} \to S$$
 
     임의의 두 유리수를 곱할 때 순서는 관계없다.
 
-  $\therefore (\mathbb{Q}^{*}, \times)$ 은 아벨군이다. 
+  $\therefore (\mathbb{Q}^{*}, \times)$ 은 아벨군이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-순환군(cyclic group) : 하나의 원소에 의하여 생성된 군이다. 
-
-</blockquote>
+    순환군(cyclic group) : 하나의 원소에 의하여 생성된 군이다.
 
 - 군 $G$ 의 어떤 원소 $a$ 와 임의의 $x \in G$ 에 대하여 $x = a ^{n}$ 를 만족하는 정수 $n$ 이 존재하면 군 $G$ 의 모든 원소가 $a$ 의 거듭제곱에 의하여 나타내어질 수 있다고 볼 수 있다. 
 
@@ -649,11 +601,9 @@ $$S ^{3} \to S$$
 
 ## 환론
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-환(ring) : 덧셈에 대한 아벨 군과 곱셈에 대한 모노이드의 구조를 동시에 가지며 두 연산에 분배법칙이 성립하여 두 구조가 서로 호환되는 대수 구조이다. 
-
-</blockquote>
+    환(ring) : 덧셈에 대한 아벨 군과 곱셈에 대한 모노이드의 구조를 동시에 가지며 두 연산에 분배법칙이 성립하여 두 구조가 서로 호환되는 대수 구조이다.
 
 - 환은 정수집합 $\mathbb{Z}$ 을 추상화하여 얻은 대수구조이다. 
 
@@ -721,25 +671,23 @@ $$S ^{3} \to S$$
 
   정수 집합 $\mathbb{Z}$ 은 환을 이룬다. 
 
-  사실 가환환이기도 하다. 
+  사실 가환환이기도 하다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유사환(pseudo ring) : 환에서 곱셈에 대한 구조가 모노이드가 아니라 반군일 때 유사환이라 한다. 
+    유사환(pseudo ring) : 환에서 곱셈에 대한 구조가 모노이드가 아니라 반군일 때 유사환이라 한다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-가환환(commutative ring) : 환에서 곱셈에 대한 교환법칙이 성립하는 대수 구조이다. 
+!!! note ""
 
-</blockquote>
+    가환환(commutative ring) : 환에서 곱셈에 대한 교환법칙이 성립하는 대수 구조이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-자명환(trivial ring) : 하나의 원소만을 가지는 환이다. 
 
-</blockquote>
+!!! note ""
+
+    자명환(trivial ring) : 하나의 원소만을 가지는 환이다.
 
 - 하나의 원소만을 가진 집합 $\{0\}$ 에는 유일한 환 구조가 존재한다. 즉
 
@@ -753,31 +701,27 @@ $$S ^{3} \to S$$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-단위원(unity) : 환 $(R, +, \cdot)$ 에 곱셈에 대한 항등원 $1 \in R$ 을 가질 때, $1$ 을 단위원이라 한다.
+    단위원(unity) : 환 $(R, +, \cdot)$ 에 곱셈에 대한 항등원 $1 \in R$ 을 가질 때, $1$ 을 단위원이라 한다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-가역원(invertible element) 또는 단원(unit) : 단위원을 가진 환 $R$ 에서 곱셈에 대한 역원이 있는 원소 $r \neq 0 \in R$ 들이다. 
+!!! note ""
 
-</blockquote>
+    가역원(invertible element) 또는 단원(unit) : 단위원을 가진 환 $R$ 에서 곱셈에 대한 역원이 있는 원소 $r \neq 0 \in R$ 들이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-나눗셈환(division ring) : 단위원을 가지는 환에서 $0$ 이 아닌 모든 원소가 가역원인 대수 구조이다. 
 
-</blockquote>
+!!! note ""
+
+    나눗셈환(division ring) : 단위원을 가지는 환에서 $0$ 이 아닌 모든 원소가 가역원인 대수 구조이다.
 
 ## 체론
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-체(field) : 가환환이면서 나눗셈환인 대수구조이다. 
-
-</blockquote>
+    체(field) : 가환환이면서 나눗셈환인 대수구조이다.
 
 - 가환환이라는 조건과 나눗셈환이라는 조건에서 $(F \text{\textbackslash}0, \cdot)$ 이 모노이드에서 아벨군이 된다. 
 
@@ -827,13 +771,11 @@ $$S ^{3} \to S$$
 
   정수 집합 $\mathbb{Z}$ 은 체가 아니다. 정수집합에서 덧셈, 뺄셈, 곱셈은 닫혀있지만 나눗셈에 대하여서는 닫혀있지 않기 때문이다. 
 
-  자연수 집합 $\mathbb{N}$ 은 뺄셈에 대하여 닫혀있지 않기 때문에 체가 되지 못한다. 
+  자연수 집합 $\mathbb{N}$ 은 뺄셈에 대하여 닫혀있지 않기 때문에 체가 되지 못한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-체의 확대(field extension) : 체에 원소를 추가하여 얻는 더 큰 체이다. 
-
-</blockquote>
+    체의 확대(field extension) : 체에 원소를 추가하여 얻는 더 큰 체이다.
 
 - 예시 
 
@@ -855,13 +797,11 @@ $$S ^{3} \to S$$
 
 - 예시 
 
-  위 예시에서 이해하였다면 실수체 $\mathbb{R}$ 의 체 확장 $\mathbb{R}(i)$ 이 복소수체 $\mathbb{C}$ 와 같다는 것을 쉽게 알 수 있다. 
+  위 예시에서 이해하였다면 실수체 $\mathbb{R}$ 의 체 확장 $\mathbb{R}(i)$ 이 복소수체 $\mathbb{C}$ 와 같다는 것을 쉽게 알 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유한체(finite field) 또는 갈루아 체(Galois field) : 유한개의 원소를 가지는 유한집합인 체이다. 
-
-</blockquote>
+    유한체(finite field) 또는 갈루아 체(Galois field) : 유한개의 원소를 가지는 유한집합인 체이다.
 
 - 처음 가우스가 유한체 개념을 생각했을 때 그것이 존재한다고 믿는 사람이 없었다. 그러나 이제 유한체가 존재할 뿐 아니라 그 유일한 형태까지 밝혀졌다. 그러므로 유한체를 더 이상 규명할 필요가 없다. 
 
@@ -927,39 +867,37 @@ $$S ^{3} \to S$$
 
   그러므로 나눗셈이 유한집합에 대하여 가능하다. 
 
-  그러므로 유한집합이 체가 되기 위한 검증이 끝났고 유한집합은 체가 된다. 이 체는 원소가 유한하기에 유한체이다. 
+  그러므로 유한집합이 체가 되기 위한 검증이 끝났고 유한집합은 체가 된다. 이 체는 원소가 유한하기에 유한체이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-벡터공간(Vector Space) : 집합 $V$ 에 연산 $+$ 가 잘 정의되어 있고 즉 임의의 $u, v \in V$ 에 대하여 $u + v \in V$ 이고,
-
-체 $F$ 에 대하여 함수 $\phi ((a, u)) = au(a \in F, u \in V, au \in V)$ 가 존재하여 다음 다섯 조건이 성립할 때,
-
-집합 $V$ 를 체 $F$ 위의 벡터공간이라 한다. 
-
-1. $(V, +)$ 은 아벨군이다.
-
-2. (스칼라배에 대한 결합법칙) 임의의 $u \in V$ 와 임의의 $a, b \in F$ 에 대하여 
-
-    $$ (ab)u = a(bu) $$
-
-    가 성립한다.
-
-3. (벡터의 덧셈에 대한 분배법칙) 임의의 $u, v \in V$ 와 임의의 $a \in F$ 에 대하여 
-
-    $$ a(u+v) = au + av $$
-
-    가 성립한다.
-
-4. (스칼라배의 덧셈에 대한 분배법칙) 임의의 $u \in V$ 와 임의의 $a, b \in F$ 에 대하여 
-
-    $$ (a + b)u = au + bu $$
-
-5. 체 $F$ 의 곱셈에 대한 항등원을 $1$ 이라 할 때, 
-
-    임의의 $u \in V$ 에 대하여 $1u = u$ 이다. 
-
-</blockquote>
+    벡터공간(Vector Space) : 집합 $V$ 에 연산 $+$ 가 잘 정의되어 있고 즉 임의의 $u, v \in V$ 에 대하여 $u + v \in V$ 이고,
+    
+    체 $F$ 에 대하여 함수 $\phi ((a, u)) = au(a \in F, u \in V, au \in V)$ 가 존재하여 다음 다섯 조건이 성립할 때,
+    
+    집합 $V$ 를 체 $F$ 위의 벡터공간이라 한다. 
+    
+    1. $(V, +)$ 은 아벨군이다.
+    
+    2. (스칼라배에 대한 결합법칙) 임의의 $u \in V$ 와 임의의 $a, b \in F$ 에 대하여 
+    
+        $$ (ab)u = a(bu) $$
+    
+        가 성립한다.
+    
+    3. (벡터의 덧셈에 대한 분배법칙) 임의의 $u, v \in V$ 와 임의의 $a \in F$ 에 대하여 
+    
+        $$ a(u+v) = au + av $$
+    
+        가 성립한다.
+    
+    4. (스칼라배의 덧셈에 대한 분배법칙) 임의의 $u \in V$ 와 임의의 $a, b \in F$ 에 대하여 
+    
+        $$ (a + b)u = au + bu $$
+    
+    5. 체 $F$ 의 곱셈에 대한 항등원을 $1$ 이라 할 때, 
+    
+        임의의 $u \in V$ 에 대하여 $1u = u$ 이다.
 
 - 좌표평면에서의 위치벡터와 좌표공간에서의 위치벡터의 집합
 
@@ -977,17 +915,11 @@ $$S ^{3} \to S$$
 
 https://github.com/pilgwon/CategoryTheory
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-범주론 : 한편 이러한 모든 대수 구조에서 공통적인 특성들이 발견되어 그것을 한 단계 더 추상화시킨(추상대수학을 한단계 더 추상화시킨) 대상을 보편대수학과 범주론(category theory)에서 연구한다. 
-
-</blockquote>
+    범주론 : 한편 이러한 모든 대수 구조에서 공통적인 특성들이 발견되어 그것을 한 단계 더 추상화시킨(추상대수학을 한단계 더 추상화시킨) 대상을 보편대수학과 범주론(category theory)에서 연구한다.
 
 - 대수 구조 자체가 수학적 대상들을 추상화시켜 집합과 함수로 보여지는 구조로 만든 것인데, 막상 그 구조들을 만들어놓고 보니까 그 구조들 사이에서 나타나는 공통적인 특성이 있으므로 한번 더 추상화시킨 것이 카테고리 이론(범주론) 이다. 
 
-- 카테고리 이론은 프로그래밍에 직접적으로 많은 아이디어를 제공한다. 
-
-
-
-
+- 카테고리 이론은 프로그래밍에 직접적으로 많은 아이디어를 제공한다.
 

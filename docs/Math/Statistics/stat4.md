@@ -1,33 +1,8 @@
+# 연속확률분포
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-## **통계 메모**
-
-**[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
-
-**[이산확률변수의 평균,분산,표준편차](https://ccss17.github.io/stat2.html)**
-
-**[이항분포의 평균,분산,표준편차](https://ccss17.github.io/stat3.html)**
-
-**[연속확률변수의 평균,분산,표준편차와 정규분포](https://ccss17.github.io/stat4.html)**
-
-**[통계적 추정](https://ccss17.github.io/stat5.html)**
-
-**[상관관계 분석](https://ccss17.github.io/stat6.html)**
-
-</blockquote>
-
-# 연속확률변수의 평균,분산,표준편차와 정규분포
-
----
-
-# 연속확률분포 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-연속확률변수(continuous random variable) : 어떤 구간에 속하는 모든 실수의 값을 가지는 확률변수 $X$ 이다. 
-
-</blockquote>
+    연속확률변수(continuous random variable) : 어떤 구간에 속하는 모든 실수의 값을 가지는 확률변수 $X$ 이다.
 
 - 예시 
 
@@ -35,41 +10,35 @@
 
   $$ X = 2.54, 3.1, 4.0, 2.9, \dots $$
 
-  이 확률변수 $X$ 는 어떤 구간 내에서 모든 실수 값을 가지므로 연속확률변수이다. 
+  이 확률변수 $X$ 는 어떤 구간 내에서 모든 실수 값을 가지므로 연속확률변수이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-확률밀도함수(probability density function) : 연속확률변수 $X$ 가 구간 $[\alpha , \beta ]$ 에 속하는 모든 실수 값을 가질 때
+    확률밀도함수(probability density function) : 연속확률변수 $X$ 가 구간 $[\alpha , \beta ]$ 에 속하는 모든 실수 값을 가질 때
+    
+    $X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다.
 
-$X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다. 
+- 대표적인 확률밀도함수가 정규분포곡선이다.
 
-</blockquote>
+!!! note ""
 
-- 대표적인 확률밀도함수가 정규분포곡선이다. 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-연속확률분포(continuous probability distribution) : 확률밀도함수를 이용해 분포를 표현할 수 있는 확률분포이다.
-
-</blockquote>
+    연속확률분포(continuous probability distribution) : 확률밀도함수를 이용해 분포를 표현할 수 있는 확률분포이다.
 
 - 연속확률분포에는 정규분포(normal distribution), 지수분포(exponential distribution), 스튜던트 $t$ 분포(Student's t-distribution), 파레토 분포(Pareto distribution), 로지스틱 분포(logistic distribution) 등이 있다. 
 
-  한편 이산확률분포도 무한히 반복하면 연속확률분포 중 하나로 수렴한다. 
+  한편 이산확률분포도 무한히 반복하면 연속확률분포 중 하나로 수렴한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-확률밀도함수의 성질 : 구간 $[\alpha , \beta ]$ 에 속하는 모든 실수 값을 가지는 연속확률변수 $X$ 의 확률분포를 나타내는 확률밀도함수 $f(x)$ 는 다음 성질을 만족한다. 
-
-1. $f(x) \geq 0 (\alpha \leq x \leq \beta )$
-
-2. $\displaystyle \int_{\alpha }^{\beta }f(x)dx=1$
-
-3. $\displaystyle  P(a \leq X \leq b) = \int_{a}^{b}f(x)dx$
-
-4. $\displaystyle  P(a \leq X \leq b) = P(a < X \leq b) = P(a \leq X < b) = P(a < X < b)$
-
-</blockquote>
+    확률밀도함수의 성질 : 구간 $[\alpha , \beta ]$ 에 속하는 모든 실수 값을 가지는 연속확률변수 $X$ 의 확률분포를 나타내는 확률밀도함수 $f(x)$ 는 다음 성질을 만족한다. 
+    
+    1. $f(x) \geq 0 (\alpha \leq x \leq \beta )$
+    
+    2. $\displaystyle \int_{\alpha }^{\beta }f(x)dx=1$
+    
+    3. $\displaystyle  P(a \leq X \leq b) = \int_{a}^{b}f(x)dx$
+    
+    4. $\displaystyle  P(a \leq X \leq b) = P(a < X \leq b) = P(a \leq X < b) = P(a < X < b)$
 
 - 증명 
 
@@ -153,17 +122,15 @@ $X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다.
 
 ## 연속확률변수 평균, 분산, 표준편차(산포도 측정)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-연속확률변수의 평균 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
-
-평균은
-
-$$ \boxed{\mu = E(X) = \int_{\alpha }^{\beta }xf(x)dx}  $$
-
-이다.
-
-</blockquote>
+    연속확률변수의 평균 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
+    
+    평균은
+    
+    $$ \boxed{\mu = E(X) = \int_{\alpha }^{\beta }xf(x)dx}  $$
+    
+    이다.
 
 - 설명 
 
@@ -177,19 +144,17 @@ $$ \boxed{\mu = E(X) = \int_{\alpha }^{\beta }xf(x)dx}  $$
 
   $$ \therefore \mu = E(X) = \int_{\alpha }^{\beta } xf(x)dx $$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-연속확률변수의 분산 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
-
-분산은
-
-$$ \boxed{V(X) = E((X - \mu ) ^{2}) = \int_{\alpha }^{\beta }(x- \mu ) ^{2} f(x)dx = \int_{\alpha }^{\beta }x ^{2}f(x)dx - \mu ^{2} = E(X ^{2}) - \{E(X)\} ^{2}}  $$
-
-이다.
-
-</blockquote>
+    연속확률변수의 분산 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
+    
+    분산은
+    
+    $$ \boxed{V(X) = E((X - \mu ) ^{2}) = \int_{\alpha }^{\beta }(x- \mu ) ^{2} f(x)dx = \int_{\alpha }^{\beta }x ^{2}f(x)dx - \mu ^{2} = E(X ^{2}) - \{E(X)\} ^{2}}  $$
+    
+    이다.
 
 - 증명 
 
@@ -213,19 +178,17 @@ $$ \boxed{V(X) = E((X - \mu ) ^{2}) = \int_{\alpha }^{\beta }(x- \mu ) ^{2} f(x)
 
   $$ \therefore V(X) = E(X ^{2}) - \{E(X)\} ^{2} $$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-연속확률변수의 표준편차 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
-
-표준편차는
-
-$$ \boxed{\sigma (X) = \sqrt[]{V(X)}}  $$
-
-이다.
-
-</blockquote>
+    연속확률변수의 표준편차 : 연속확률변수 $X$ 의 확률밀도함수가 $f(x) (\alpha \leq x \leq \beta )$ 일 때
+    
+    표준편차는
+    
+    $$ \boxed{\sigma (X) = \sqrt[]{V(X)}}  $$
+    
+    이다.
 
 - 예시 
 
@@ -261,19 +224,17 @@ $$ \boxed{\sigma (X) = \sqrt[]{V(X)}}  $$
 
   $$ \therefore \sigma (X) = \sqrt[]{V(X)} = \sqrt[]{\dfrac{1}{2}} $$
 
-  이다. ■ 
+  이다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-연속확률변수의 평균, 분산, 표준편차의 성질 : 연속확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 
-
-1. $E(aX+b) = aE(X) + b$
-
-2. $V(aX+b) = a ^{2} V(X)$
-
-3. $\sigma (aX+b) = |a| \sigma (X)$
-
-</blockquote>
+    연속확률변수의 평균, 분산, 표준편차의 성질 : 연속확률변수 $X$ 와 두 상수 $a, b(a \neq 0)$ 에 대하여 
+    
+    1. $E(aX+b) = aE(X) + b$
+    
+    2. $V(aX+b) = a ^{2} V(X)$
+    
+    3. $\sigma (aX+b) = |a| \sigma (X)$
 
 - 이산확률변수의 평균, 분산, 표준편차의 성질이 그대로 적용된다. 
 
@@ -289,23 +250,21 @@ $$ \boxed{\sigma (X) = \sqrt[]{V(X)}}  $$
 
   이다. ■ 
 
-# 정규분포 
+# 정규분포
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정규분포(normal distribution) : 연속확률변수 $X$ 의 확률밀도함수 $f(x)$ 가 각각 평균과 표준편차를 나타내는 두 상수 $\mu , \sigma (\sigma >0)$ 에 대하여 
-
-개구간 $(-\infty , \infty )$ 에서 다음과 같이 정의될 때
-
-$$ f(x) = \dfrac{1}{\sqrt[]{2 \pi } \sigma } e ^{- \frac{(x- \mu )^{2}}{2 \sigma ^{2}}} $$
-
-확률변수 $X$ 의 확률분포를 정규분포
-
-$$ N(\mu , \sigma ^{2}) $$
-
-라 한다. 
-
-</blockquote>
+    정규분포(normal distribution) : 연속확률변수 $X$ 의 확률밀도함수 $f(x)$ 가 각각 평균과 표준편차를 나타내는 두 상수 $\mu , \sigma (\sigma >0)$ 에 대하여 
+    
+    개구간 $(-\infty , \infty )$ 에서 다음과 같이 정의될 때
+    
+    $$ f(x) = \dfrac{1}{\sqrt[]{2 \pi } \sigma } e ^{- \frac{(x- \mu )^{2}}{2 \sigma ^{2}}} $$
+    
+    확률변수 $X$ 의 확률분포를 정규분포
+    
+    $$ N(\mu , \sigma ^{2}) $$
+    
+    라 한다.
 
 - 가우스가 처음 정립했기 때문에 가우스 분포(Gaussian distribution) 이라고도 한다.
 
@@ -319,13 +278,11 @@ $$ N(\mu , \sigma ^{2}) $$
 
   $$ f(x) = \dfrac{1}{\sqrt[]{2 \pi } \sigma } e ^{- \frac{(x- \mu )^{2}}{2 \sigma ^{2}}} $$
 
-  로 주어질 때 $X$ 의 확률분포를 정규분포라 하는 것이다. 
+  로 주어질 때 $X$ 의 확률분포를 정규분포라 하는 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정규분포곡선 : 확률변수 $X$ 의 확률분포가 정규분포일 때 확률밀도함수 $y = f(x)$ 의 그래프를 정규분포곡선이라 한다. 
-
-</blockquote>
+    정규분포곡선 : 확률변수 $X$ 의 확률분포가 정규분포일 때 확률밀도함수 $y = f(x)$ 의 그래프를 정규분포곡선이라 한다.
 
 - 예시 
 
@@ -337,29 +294,27 @@ $$ N(\mu , \sigma ^{2}) $$
 
   ![desmos-graph](https://user-images.githubusercontent.com/16812446/79834513-2b47d280-83e8-11ea-8108-647d17728c38.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정규분포의 성질 : 연속확률변수 $X$ 의 확률밀도함수 $f(x)$ 가 각각 평균과 표준편차를 나타내는 두 상수 $\mu , \sigma (\sigma >0)$ 에 대하여 정규분포일 때 다음 성질을 갖는다.
-
-1. 그래프의 개형이 직선 $x=m$ 에 대하여 좌우 대칭인 종 모양 곡선이다.
-
-2. $f(x)$ 의 최댓값은 $x=m$ 에서 $\dfrac{1}{\sqrt[]{2 \pi }\sigma }$ 이다. 
-
-3. $x$ 축을 점근선으로 가진다.
-
-4. $x$ 축과 정규분포곡선 사이 넓이
-
-    $$ \int_{-\infty }^{\infty }f(x)dx = 1 $$ 
-
-    는 $1$ 이다.
-
-5. 표준편차 $\sigma$ 가 일정할 때 평균 $\mu$ 에 따라 대칭축의 위치는 바뀌지만 곡선의 모양은 불변한다.
-
-6. 평균 $\mu$ 가 일정할 때 표준편차 $\sigma$ 가 커지면 곡선의 가운데 부분이 낮아지면서 양쪽으로 퍼지고
-
-    표준편차 $\sigma$  가 작아지면 곡선 가운데 부분이 높아지면서 좁아진다. 
-
-</blockquote>
+    정규분포의 성질 : 연속확률변수 $X$ 의 확률밀도함수 $f(x)$ 가 각각 평균과 표준편차를 나타내는 두 상수 $\mu , \sigma (\sigma >0)$ 에 대하여 정규분포일 때 다음 성질을 갖는다.
+    
+    1. 그래프의 개형이 직선 $x=m$ 에 대하여 좌우 대칭인 종 모양 곡선이다.
+    
+    2. $f(x)$ 의 최댓값은 $x=m$ 에서 $\dfrac{1}{\sqrt[]{2 \pi }\sigma }$ 이다. 
+    
+    3. $x$ 축을 점근선으로 가진다.
+    
+    4. $x$ 축과 정규분포곡선 사이 넓이
+    
+        $$ \int_{-\infty }^{\infty }f(x)dx = 1 $$ 
+    
+        는 $1$ 이다.
+    
+    5. 표준편차 $\sigma$ 가 일정할 때 평균 $\mu$ 에 따라 대칭축의 위치는 바뀌지만 곡선의 모양은 불변한다.
+    
+    6. 평균 $\mu$ 가 일정할 때 표준편차 $\sigma$ 가 커지면 곡선의 가운데 부분이 낮아지면서 양쪽으로 퍼지고
+    
+        표준편차 $\sigma$  가 작아지면 곡선 가운데 부분이 높아지면서 좁아진다.
 
 - 증명 
 
@@ -403,15 +358,13 @@ $$ N(\mu , \sigma ^{2}) $$
 
   ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/79835764-37349400-83ea-11ea-801e-3854af430f1d.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-표준정규분포(standard normal distribution) : 평균과 표준편차가 $\mu=0, \sigma = 1$ 인 정규분포를 표준정규분포
-
-$$ N(0, 1) $$
-
-라 한다. 
-
-</blockquote>
+    표준정규분포(standard normal distribution) : 평균과 표준편차가 $\mu=0, \sigma = 1$ 인 정규분포를 표준정규분포
+    
+    $$ N(0, 1) $$
+    
+    라 한다.
 
 - 자연 대상을 관찰하여 정리하면 정규분포를 따른다는 것을 우리는 이미 알고 있다. 그런데 특정 자연 대상이 어떤 범위에 속한다는 것을 구하기 위하여 확률을 구해야 한다면 
 
@@ -441,19 +394,17 @@ $$ N(0, 1) $$
 
   ![desmos-graph(3)](https://user-images.githubusercontent.com/16812446/79836894-ab236c00-83eb-11ea-99f7-7d0fa630b574.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-표준점수(standard score) : 표준정규분포를 따르는 확률변수로써 
-
-정규분포를 만드는 개개의 경우가 표준정규분포에서 어떤 위치를 차지하는지 보여주는 무차원 수로써 
-
-원수치 $x$ 와 모집단의 표준편차 $\sigma$ 와 모집단의 평균 $\mu$ 에 대하여
-
-$$ z = \dfrac{x - \mu }{\sigma } $$
-
-이다.
-
-</blockquote>
+    표준점수(standard score) : 표준정규분포를 따르는 확률변수로써 
+    
+    정규분포를 만드는 개개의 경우가 표준정규분포에서 어떤 위치를 차지하는지 보여주는 무차원 수로써 
+    
+    원수치 $x$ 와 모집단의 표준편차 $\sigma$ 와 모집단의 평균 $\mu$ 에 대하여
+    
+    $$ z = \dfrac{x - \mu }{\sigma } $$
+    
+    이다.
 
 - 표준값, $z$ 값($z$ value), $z$ 점수($z$ score) 로도 표기한다. 
 
@@ -475,29 +426,25 @@ $$ z = \dfrac{x - \mu }{\sigma } $$
 
     이다. 이로써 수학을 영어보다 훨씬 잘했다는 것을 알 수 있다. 
 
-  위 예시에서 알 수 있듯이 원수치의 상대적 위치를 알기 위하여 표준점수를 사용한다. 
+  위 예시에서 알 수 있듯이 원수치의 상대적 위치를 알기 위하여 표준점수를 사용한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-편차치 : 표준점수에서 음수가 나오는 것을 극복하기 위한 점수로써 표준점수 $z$ 에 대하여 
+    편차치 : 표준점수에서 음수가 나오는 것을 극복하기 위한 점수로써 표준점수 $z$ 에 대하여 
+    
+    $$ t = 10 z + 50 $$
+    
+    이다.
 
-$$ t = 10 z + 50 $$
+- $T$ 점수($T$ score) 라고도 표기한다.
 
-이다.
+!!! note ""
 
-</blockquote>
-
-- $T$ 점수($T$ score) 라고도 표기한다. 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-표준정규분포표 : 표준정규분포 $N(0, 1)$ 를 따르는 확률변수 $Z$ 와 양수 $a$ 에 대한 확률 
-
-  $$ P(0 \leq Z \leq a) = \int_{0}^{a} f(z)dz $$
-
-  의 적분값들을 수학자들이 미리 정리해둔 표이다. 
-
-</blockquote>
+    표준정규분포표 : 표준정규분포 $N(0, 1)$ 를 따르는 확률변수 $Z$ 와 양수 $a$ 에 대한 확률 
+    
+      $$ P(0 \leq Z \leq a) = \int_{0}^{a} f(z)dz $$
+    
+      의 적분값들을 수학자들이 미리 정리해둔 표이다.
 
 - 수학자들이 표준정규분포표로 정리해두었으니 우리는 그 표를 갖다 쓰면 된다. 
 
@@ -526,15 +473,13 @@ $$ t = 10 z + 50 $$
 
   $$ P(Z \leq a) = 0.5 + P(0 \leq Z \leq a) $$
 
-  인 것을 활용하여 구간을 적절히 변환시켜 표준정규분포표를 사용하게 할 수 있다. 
+  인 것을 활용하여 구간을 적절히 변환시켜 표준정규분포표를 사용하게 할 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정규분포의 표준화(standardization) : 정규분포를 표준정규분포로 변환하는 것으로써 확률변수 $X$ 가 정규분포 $N(\mu , \sigma ^{2})$ 를 따를 때 
-
-확률변수 $X$ 를 확률변수 $Z = \dfrac{X - \mu }{\sigma }$ 로 변환하여 표준정규분포 $N(0, 1)$ 를 따르게 하는 것이다.
-
-</blockquote>
+    정규분포의 표준화(standardization) : 정규분포를 표준정규분포로 변환하는 것으로써 확률변수 $X$ 가 정규분포 $N(\mu , \sigma ^{2})$ 를 따를 때 
+    
+    확률변수 $X$ 를 확률변수 $Z = \dfrac{X - \mu }{\sigma }$ 로 변환하여 표준정규분포 $N(0, 1)$ 를 따르게 하는 것이다.
 
 - 설명
 
@@ -673,19 +618,17 @@ $$ t = 10 z + 50 $$
 
   을 얻는다. ■ 
 
-  이로써 입사 최저 점수를 $86$ 점이라고 예측할 수 있다. 
+  이로써 입사 최저 점수를 $86$ 점이라고 예측할 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이항분포와 정규분포의 관계 : 확률변수 $X$ 가 이항분포 $B(n, p)$ 를 따를 때 
-
-$n$ 이 충분히 크면 큰 수의 법칙에 의하여 $X$ 는 근사적으로 $q=1-p$ 에 대한 정규분포
-
-$$ N(np, npq) $$
-
-를 따른다.
-
-</blockquote>
+    이항분포와 정규분포의 관계 : 확률변수 $X$ 가 이항분포 $B(n, p)$ 를 따를 때 
+    
+    $n$ 이 충분히 크면 큰 수의 법칙에 의하여 $X$ 는 근사적으로 $q=1-p$ 에 대한 정규분포
+    
+    $$ N(np, npq) $$
+    
+    를 따른다.
 
 - 설명
 
@@ -723,8 +666,5 @@ $$ N(np, npq) $$
 
   $$ \therefore  P(X \geq 75) = 0.0062 $$
 
-  이다. ■ 
-
-
-
+  이다. ■
 

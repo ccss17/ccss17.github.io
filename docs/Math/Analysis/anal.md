@@ -1,78 +1,57 @@
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
+
+    해석학 : 
+    
+    **구체화 필요**
 
 
-**[해석학 메모](https://ccss17.github.io/anal.html)**
 
-**[삼각 함수 메모](https://ccss17.github.io/trig.html)**
+!!! note ""
 
-**[함수 메모](https://ccss17.github.io/function.html)**
-
-</blockquote>
-
-
----
-
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-해석학 : 
-
-**구체화 필요**
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-평면에서의 위치 표현 : 평면의 각 점의 위치는 실수 $a, b$ 에 대한 실수쌍 $(a,b)$ 에 대응시킬 수 있으므로 실수쌍
-
-$$ (a,b) $$
-
-으로 표현한다.
-
-</blockquote>
+    평면에서의 위치 표현 : 평면의 각 점의 위치는 실수 $a, b$ 에 대한 실수쌍 $(a,b)$ 에 대응시킬 수 있으므로 실수쌍
+    
+    $$ (a,b) $$
+    
+    으로 표현한다.
 
 - 실수 순서쌍 $(a, b)$ 전체의 집합을 $\mathbb{R}^2$ 로 나타낸다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-집합 $\mathbb{R} ^{2}$ : 실수 $a, b$ 에 대한 실수 순서쌍 $(a, b)$ 전체의 집합이다.
+    집합 $\mathbb{R} ^{2}$ : 실수 $a, b$ 에 대한 실수 순서쌍 $(a, b)$ 전체의 집합이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-공간에서의 위치 표현 : 공간의 각 점의 위치는 실수 $a, b, c$ 에 대한 실수쌍 $(a,b,c)$ 에 대응시킬 수 있으므로 실수쌍
+!!! note ""
 
-$$ (a,b,c) $$
-
-으로 표현한다.
-
-</blockquote>
+    공간에서의 위치 표현 : 공간의 각 점의 위치는 실수 $a, b, c$ 에 대한 실수쌍 $(a,b,c)$ 에 대응시킬 수 있으므로 실수쌍
+    
+    $$ (a,b,c) $$
+    
+    으로 표현한다.
 
 - 실수 순서쌍 $(a, b, c)$ 전체의 집합을 $\mathbb{R}^3$ 로 나타낸다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-집합 $\mathbb{R} ^{3}$ : 실수 $a, b, c$ 에 대한 실수 순서쌍 $(a, b, c)$ 전체의 집합이다.
+    집합 $\mathbb{R} ^{3}$ : 실수 $a, b, c$ 에 대한 실수 순서쌍 $(a, b, c)$ 전체의 집합이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-$n$ 차원 실수공간, 또는 $n$차원 좌표공간, 또는 $n$차원 데카르트 공간 또는, $n$-공간($n$-space) : 자연수 $n$ 에 대한 집합
+!!! note ""
 
-$$ \mathbb{R} ^{n} := \{(a_1, a_2, \dots, a_n) | a_1, a_2, \dots, a_n \in \mathbb{R} \} $$
+    $n$ 차원 실수공간, 또는 $n$차원 좌표공간, 또는 $n$차원 데카르트 공간 또는, $n$-공간($n$-space) : 자연수 $n$ 에 대한 집합
+    
+    $$ \mathbb{R} ^{n} := \{(a_1, a_2, \dots, a_n) | a_1, a_2, \dots, a_n \in \mathbb{R} \} $$
+    
+    이다.
 
-이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-점(dot) : $n$-공간 $\mathbb{R} ^{n} := \{(a_1, a_2, \dots, a_n) | a_1, a_2, \dots, a_n \in \mathbb{R} \}$ 의 원소이다.
-
-</blockquote>
+    점(dot) : $n$-공간 $\mathbb{R} ^{n} := \{(a_1, a_2, \dots, a_n) | a_1, a_2, \dots, a_n \in \mathbb{R} \}$ 의 원소이다.
 
 - 예시 
 
@@ -82,23 +61,21 @@ $$ \mathbb{R} ^{n} := \{(a_1, a_2, \dots, a_n) | a_1, a_2, \dots, a_n \in \mathb
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-거리함수(metric function) : 어떤 집합 $U$ 에 대하여 성질 
-
-1. $d(x, y) = 0 \iff x = y$
-
-2. $d(x, y) = d(y, x)$
-
-3. $d(x, y) + d(y, z) \geq d(x, z)$
-
-을 만족하는 함수 
-
-$$ d: U \times U \to [0, \infty) $$
-
-이다.
-
-</blockquote>
+    거리함수(metric function) : 어떤 집합 $U$ 에 대하여 성질 
+    
+    1. $d(x, y) = 0 \iff x = y$
+    
+    2. $d(x, y) = d(y, x)$
+    
+    3. $d(x, y) + d(y, z) \geq d(x, z)$
+    
+    을 만족하는 함수 
+    
+    $$ d: U \times U \to [0, \infty) $$
+    
+    이다.
 
 - 예시 
 
@@ -116,11 +93,9 @@ $$ d: U \times U \to [0, \infty) $$
 
   로 정의하면 이것은 거리함수이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-거리공간(metric space) : 거리공간 $(U, d)$ 는 어떤 집합 $U$ 에 대하여 정의된 거리함수 $d$ 가 존재하는 집합이다.
-
-</blockquote>
+    거리공간(metric space) : 거리공간 $(U, d)$ 는 어떤 집합 $U$ 에 대하여 정의된 거리함수 $d$ 가 존재하는 집합이다.
 
 - **추상대수학에서 대수구조 중 하나인 것 같네**
 
@@ -136,25 +111,23 @@ $$ d: U \times U \to [0, \infty) $$
 
   로 정의하면, $2 \times 2$ 행렬 전체의 집합이 거리 공간 $(A, d)$ 이 된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-등장사상(isometry), 또는 거리 보존 사상, 또는 등거리 변환, 또는 등거리 사상 : 두 거리 공간 $(U_1, d_1), (U_2, d_2)$ 사이의 전단사 함수 
+    등장사상(isometry), 또는 거리 보존 사상, 또는 등거리 변환, 또는 등거리 사상 : 두 거리 공간 $(U_1, d_1), (U_2, d_2)$ 사이의 전단사 함수 
+    
+    $$ f: U_1 \to U_2 $$
+    
+    가 임의의 두 점 사이의 거리를 보존하는, 즉 
+    
+    $$ d_2(f(x), f(y)) = d_1(x, y) $$
+    
+    인 함수 $f$ 이다.
 
-$$ f: U_1 \to U_2 $$
 
-가 임의의 두 점 사이의 거리를 보존하는, 즉 
 
-$$ d_2(f(x), f(y)) = d_1(x, y) $$
+!!! note ""
 
-인 함수 $f$ 이다.
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-등장(isometric) : 두 거리공간 $U_1, U_2$ 사이의 등장사상이 존재하면 $U_1$ 과 $U_2$ 를 서로 등장이라고 한다.
-
-</blockquote>
+    등장(isometric) : 두 거리공간 $U_1, U_2$ 사이의 등장사상이 존재하면 $U_1$ 과 $U_2$ 를 서로 등장이라고 한다.
 
 - 두 거리공간 $U_1, U_2$ 이 등장인 것을 
 
@@ -162,11 +135,9 @@ $$ d_2(f(x), f(y)) = d_1(x, y) $$
 
   로 표기한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유클리드 공간 : $n$ 차원 유클리드 공간은 $n$ 차원 데카르트 공간 $\mathbb{R} ^{n}$ 과 등장인 거리공간이다.
-
-</blockquote>
+    유클리드 공간 : $n$ 차원 유클리드 공간은 $n$ 차원 데카르트 공간 $\mathbb{R} ^{n}$ 과 등장인 거리공간이다.
 
 - 쉽게 말해 좌표계가 없는 데카르트 공간이라고 할 수 있다. 유클리드 공간에서는 모든 점이 다 평등하고, 기준점이 없고, 좌표축도 없다.
 
@@ -182,49 +153,41 @@ $$ d_2(f(x), f(y)) = d_1(x, y) $$
 
   데카르트 공간은 유클리드 공간의 특수한 예이므로 그 본연의 대상을 이해하는 것도 중요하다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-튜플(tuple) : 셀 수 있는 수량의 순서있는 열거이다. 
-
-</blockquote>
+    튜플(tuple) : 셀 수 있는 수량의 순서있는 열거이다.
 
 - $n$ 개의 요소를 가진 튜플을 $n$-튜플이라 한다.
 
-- 가령 $5$-튜플은 $(2, 4, 7, 1, 7)$ 와 같다. 
+- 가령 $5$-튜플은 $(2, 4, 7, 1, 7)$ 와 같다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-순서쌍(2-튜플, ordered pair) : 두 개의 수학적 대상을 순서를 정하여 나타낸 쌍이다.
-
-</blockquote>
+    순서쌍(2-튜플, ordered pair) : 두 개의 수학적 대상을 순서를 정하여 나타낸 쌍이다.
 
 - 예시 
 
-  두 대상 $a, b$ 를 $(a, b)$ 로 나타낸다. 
+  두 대상 $a, b$ 를 $(a, b)$ 로 나타낸다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이항관계(binary relation) : 순서쌍들로 이루어지는 집합이다. 
-
-</blockquote>
+    이항관계(binary relation) : 순서쌍들로 이루어지는 집합이다.
 
 - 예시 
 
   집합 $A = \{a, b\}$ 의 원소를 집합 $B = \{c\}$ 로 대응시키는 모든 순서쌍은 집합 $R = \{(a, c), (b, c)\}$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-좌표계(coordinate system) : 임의의 집합 $U$ 의 각 원소 $p$ 가 단사 함수 
-
-$$ f: U \to \mathbb{R} ^{n} $$
-
-의 함숫값 
-
-$$ f(p) = (f_1(p),f_2(p),\dots,f_n(p)) $$
-
-에 의하여 구별되면, 함수 $f$ 를 $U$ 의 한 좌표계라고 한다.
-
-</blockquote>
+    좌표계(coordinate system) : 임의의 집합 $U$ 의 각 원소 $p$ 가 단사 함수 
+    
+    $$ f: U \to \mathbb{R} ^{n} $$
+    
+    의 함숫값 
+    
+    $$ f(p) = (f_1(p),f_2(p),\dots,f_n(p)) $$
+    
+    에 의하여 구별되면, 함수 $f$ 를 $U$ 의 한 좌표계라고 한다.
 
 - $f(p)$ 를 점 $p$ 의 $f$-좌표 라고 한다.
 
@@ -244,15 +207,13 @@ $$ f(p) = (f_1(p),f_2(p),\dots,f_n(p)) $$
 
   - 비유클리드 기하학의 구면위의 좌표일까?
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-직교좌표계(좌표평면, 정규좌표계 rectangular coordinate system) : $n$차원 유클리드공간 $\mathbb{E} ^{n}$ 과 데카르트 공간 $\mathbb{R} ^{n}$ 사이의 등장사상
-
-$$ x = (x_1, \dots, x_n) : \mathbb{E} ^{n} \to \mathbb{R} ^{n} $$
-
-이다.
-
-</blockquote>
+    직교좌표계(좌표평면, 정규좌표계 rectangular coordinate system) : $n$차원 유클리드공간 $\mathbb{E} ^{n}$ 과 데카르트 공간 $\mathbb{R} ^{n}$ 사이의 등장사상
+    
+    $$ x = (x_1, \dots, x_n) : \mathbb{E} ^{n} \to \mathbb{R} ^{n} $$
+    
+    이다.
 
 - 임의 차원의 유클리드 공간을 나타내는 좌표계 중 하나이다. 
 
@@ -286,21 +247,19 @@ $$ x = (x_1, \dots, x_n) : \mathbb{E} ^{n} \to \mathbb{R} ^{n} $$
 
   - 불변량은 점들의 질량중심, 정사각행렬의 고유값, 대각합, 행렬식 등이 있다. 곡선의 길이, 곡률, 접선, 접평면도 중요한 불변량이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-데카르트 공간 $\mathbb{R} ^{n}$ : 유클리드 공간 $\mathbb{E} ^{n}$ 에 직교좌표계가 주어진 것이다.
+    데카르트 공간 $\mathbb{R} ^{n}$ : 유클리드 공간 $\mathbb{E} ^{n}$ 에 직교좌표계가 주어진 것이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-표준좌표계(standard coordinate system) : $n$차원 데카르트 공간 $\mathbb{R} ^{n}$ 에서 항등사상 
+!!! note ""
 
-$$ x = (x_1, \dots, x_n): \mathbb{R} ^{n} \to \mathbb{R} ^{n} $$
-
-이다.
-
-</blockquote>
+    표준좌표계(standard coordinate system) : $n$차원 데카르트 공간 $\mathbb{R} ^{n}$ 에서 항등사상 
+    
+    $$ x = (x_1, \dots, x_n): \mathbb{R} ^{n} \to \mathbb{R} ^{n} $$
+    
+    이다.
 
 - 표준좌표계의 $i$번째 성분함수 $x_i$ 는 $i$번째 축으로의 정사영이다.
 
@@ -310,48 +269,37 @@ $$ x = (x_1, \dots, x_n): \mathbb{R} ^{n} \to \mathbb{R} ^{n} $$
 
   즉, $\begin{cases} x(a,b,c)=a&\text{}\\ y(a,b,c)=b&\text{}\\ z(a,b,c)=c&\text{}\\ \end{cases}$ 이다.
 
+!!! note ""
 
-  
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-구간(interval) : 두 실수 $a, b(a<b)$ 에 대하여 실수의 집합 
-
-$$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \in \mathbb{R}  | a \leq x < b\}, \{x \in \mathbb{R} |a<x \leq b\}$$
-
-를 구간이라 한다. 
-
-</blockquote>
+    구간(interval) : 두 실수 $a, b(a<b)$ 에 대하여 실수의 집합 
+    
+    $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \in \mathbb{R}  | a \leq x < b\}, \{x \in \mathbb{R} |a<x \leq b\}$$
+    
+    를 구간이라 한다.
 
 - 기호로 각각 $[a,b], (a,b), [a,b), (a,b]$ 라 한다.
 
 - 구간은 수로 그 특성 혹은 존재자체를 수로 추상화할 수 있는 자연의 모든 대상의 집합을 마찬가지로 수로 격하될 수 있는 자연의 어떤 대상을 기준으로 하여 나눈 것에 대응된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-폐구간(닫힌구간, closed interval) : $[a,b]$ 를 닫힌구간이라 한다. 
+    폐구간(닫힌구간, closed interval) : $[a,b]$ 를 닫힌구간이라 한다.
 
-</blockquote>
+- $[a,b] = \{x \in \mathbb{R} | a \leq x \leq b\}$ 이다.
 
-- $[a,b] = \{x \in \mathbb{R} | a \leq x \leq b\}$ 이다. 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-개구간(열린구간, open interval) : $(a,b)$ 를 열린구간이라 한다. 
-
-</blockquote>
+    개구간(열린구간, open interval) : $(a,b)$ 를 열린구간이라 한다.
 
 - $(a,b) = \{x \in \mathbb{R} | a < x < b\}$ 이다. 
 
 - 특히 실수 전체의 집합도 하나의 구간으로 보고 개구간 $(-\infty, \infty)$ 로 나타낸다. 
 
-  - $\infty$ 는 특정한 값이 아니고 "한없이 커지고 있는 상태" 를 나타내기 때문에 $[-\infty, \infty]$ 나 $(a, \infty]$ 와 같이 $\infty$ 를 폐구간과 엮지 않는다. 실수 $x$ 의 값이 한없이 커질 수는 있어도 $x = \infty$ 라는 값을 가질 수는 없기 때문이다. 
+  - $\infty$ 는 특정한 값이 아니고 "한없이 커지고 있는 상태" 를 나타내기 때문에 $[-\infty, \infty]$ 나 $(a, \infty]$ 와 같이 $\infty$ 를 폐구간과 엮지 않는다. 실수 $x$ 의 값이 한없이 커질 수는 있어도 $x = \infty$ 라는 값을 가질 수는 없기 때문이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-반열린구간(반개구간 또는 반폐구간, half open interval 또는 half closed interval) : $(a,b]$ 또는 $[a,b)$ 를 반열린구간이라 한다. 
-
-</blockquote>
+    반열린구간(반개구간 또는 반폐구간, half open interval 또는 half closed interval) : $(a,b]$ 또는 $[a,b)$ 를 반열린구간이라 한다.
 
 - $(a,b] = \{x \in \mathbb{R} | a < x \leq b\}$ 이다. 
 
@@ -359,41 +307,35 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 - $(-\infty,b] = \{x \in \mathbb{R} | x \leq b\}$ 이다. 
 
-- $[a,+\infty) = \{x \in \mathbb{R} | a \leq x\}$ 이다. 
+- $[a,+\infty) = \{x \in \mathbb{R} | a \leq x\}$ 이다.
+
+!!! note ""
+
+    수직선(number line) : 다음과 같은 규칙으로 실수를 한 점에 일대일 대응시키는 직선이다. 
+    
+    1. 원점 $O$ 는 $0$ 이다.
+    
+    2. $x(x>0)$ 는 원점 $O$ 에서 양의 방향으로 $x$단위만큼 떨어진 점이다.
+    
+    3. $-x(x>0)$ 는 원점 $O$ 에서 음의 방향으로 $x$단위만큼 떨어진 점이다.
 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-수직선(number line) : 다음과 같은 규칙으로 실수를 한 점에 일대일 대응시키는 직선이다. 
+!!! note ""
 
-1. 원점 $O$ 는 $0$ 이다.
-
-2. $x(x>0)$ 는 원점 $O$ 에서 양의 방향으로 $x$단위만큼 떨어진 점이다.
-
-3. $-x(x>0)$ 는 원점 $O$ 에서 음의 방향으로 $x$단위만큼 떨어진 점이다.
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-좌표(coordinate) : 수직선 위의 점에 대응하는 실수이다.
-
-</blockquote>
+    좌표(coordinate) : 수직선 위의 점에 대응하는 실수이다.
 
 - 일대일 대응이기에 좌표는 그 점을 유일하게 특정할 수 있다.
 
-- 좌표가 $a$ 인 점 $P$ 를 $P(a)$ 로 표기한다. 
+- 좌표가 $a$ 인 점 $P$ 를 $P(a)$ 로 표기한다.
 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-좌표평면(coordinate plane) : 서로 직교하는 수직선을 $x$축과 $y$축으로 두고 다음과 같은 규칙으로 평면 위의 실수 순서쌍 좌표를 정의하는 $xy$ 좌표평면이다. 
-
-1. 원점 $O$ 는 $(0, 0)$ 이다. 
-
-2. 점 $P$ 는 점 $P$ 에서 두 수직선($x$축, $y$축)으로 수산의 발을 내렸을 때 각 수직선에서의 수선의 발의 좌표의 순서쌍 $(n, m)$ 이다. 
-
-</blockquote>
+    좌표평면(coordinate plane) : 서로 직교하는 수직선을 $x$축과 $y$축으로 두고 다음과 같은 규칙으로 평면 위의 실수 순서쌍 좌표를 정의하는 $xy$ 좌표평면이다. 
+    
+    1. 원점 $O$ 는 $(0, 0)$ 이다. 
+    
+    2. 점 $P$ 는 점 $P$ 에서 두 수직선($x$축, $y$축)으로 수산의 발을 내렸을 때 각 수직선에서의 수선의 발의 좌표의 순서쌍 $(n, m)$ 이다.
 
 - 이렇게 얻은 실수 순서쌍 $(n, m)$ 를 그 점의 좌표라 하고 $n$ 와 $m$ 를 각각 그 점에서의 $x$ 좌표, $y$ 좌표라 한다. 
 
@@ -401,23 +343,19 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 - 좌표평면을 통하여 평면 위의 모든 점은 유일한 실수 순서쌍에 대응된다. 
 
-- 좌표평면을 통하여 평면 위에서 정의되었던 논증기하학의 도형들을 좌표위에 나타낼 수 있게 되어 대수학적 문제로 변환할 수 있게 된다. 역으로 대수학적 수식 또한 기하학적으로 나타낼 수 있다. 
+- 좌표평면을 통하여 평면 위에서 정의되었던 논증기하학의 도형들을 좌표위에 나타낼 수 있게 되어 대수학적 문제로 변환할 수 있게 된다. 역으로 대수학적 수식 또한 기하학적으로 나타낼 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-절편 : 좌표평면 상의 함수의 그래프가 $x$ 축과 $y$ 축과 만나는 좌표를 통틀어서 이르는 말이다. 
-
-</blockquote>
+    절편 : 좌표평면 상의 함수의 그래프가 $x$ 축과 $y$ 축과 만나는 좌표를 통틀어서 이르는 말이다.
 
 - $x$ 절편 : $x$ 축과 만나는 $x$ 좌표이다. 
 
-- $y$ 절편 : $y$ 축과 만나는 $y$ 좌표이다. 
+- $y$ 절편 : $y$ 축과 만나는 $y$ 좌표이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-사분면(quadrant) : 좌표평면의 직교좌표축으로 구분되는 $4$ 가지 영역을 다음과 같이 특정하는 방법이다.
-
-</blockquote>
+    사분면(quadrant) : 좌표평면의 직교좌표축으로 구분되는 $4$ 가지 영역을 다음과 같이 특정하는 방법이다.
 
 - $1$사분면 : $x$ 좌표와 $y$ 좌표가 모두 양수인 좌표평면 영역을 칭한다. 
 
@@ -425,25 +363,21 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 - $3$사분면 : $x$ 좌표와 $y$ 좌표가 모두 음수인 좌표평면 영역을 칭한다. 
 
-- $4$사분면 : $x$ 좌표가 양수이고 $y$ 좌표가 음수인 좌표평면 영역을 칭한다. 
+- $4$사분면 : $x$ 좌표가 양수이고 $y$ 좌표가 음수인 좌표평면 영역을 칭한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-좌표평면에서의 직선 : 서로 다른 두 좌표가 주어지면 두 점을 지나는 유일한 직선이 결정되며 그 직선은 다음 $3$ 가지 중 하나에 속한다. 
-
-</blockquote>
+    좌표평면에서의 직선 : 서로 다른 두 좌표가 주어지면 두 점을 지나는 유일한 직선이 결정되며 그 직선은 다음 $3$ 가지 중 하나에 속한다.
 
 - 수직선(vertical line) : $x$ 축과 수직인 직선이다. 
 
 - 수평선(horizontal line) : $x$ 축과 평행인 직선이다. 
 
-- 수직선 또는 수평선이 아닌 직선. 
+- 수직선 또는 수평선이 아닌 직선.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-직선의 기울기 : 직선의 방향을 유일하게 특정할 수 있는 방법으로 다음과 같이 정의된다. 
-
-</blockquote>
+    직선의 기울기 : 직선의 방향을 유일하게 특정할 수 있는 방법으로 다음과 같이 정의된다.
 
 - 기울기 $m$ 은 서로 다른 두 점 $A(x_1, y_1), B(x_2, y_2)$ 를 지나는 직선에 대하여 다음과 같이 정의된다. 
 
@@ -455,18 +389,15 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 - 쉽게 말해 기울기란 어떤 직선이 $y$ 축에 기운 정도인데, 그것을 그 직선을 특정하는 두 $x$ 좌표가 일정량 변했을 때 두 $y$ 좌표가 일정량 변한 정도의 비율로 나타내겠다는 것이다. (수직선일 때는 $y$ 축에 전혀 기울지 않았다고 생각하면 되려나?)
 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+    거리 : 두 대상이 서로 떨어진 정도를 수치로 나타낸 것이다.
 
-거리 : 두 대상이 서로 떨어진 정도를 수치로 나타낸 것이다. 
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유클리드 거리(Euclidean distance) : 두 점 사이의 거리를 계산할 때 쓰이는 방법이다. 
-
-</blockquote>
+    유클리드 거리(Euclidean distance) : 두 점 사이의 거리를 계산할 때 쓰이는 방법이다.
 
 - 이 거리로 유클리드 공간을 정의할 수 있다. 
 
@@ -502,19 +433,17 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 - 예시 
 
-  인공지능에서 데이터가 정해진 카테고리에 속하는지 알기 위해 벡터 공간상에 위치시킨 후 더 가까운 카테고리를 유클리드 거리로 판단한다. 
+  인공지능에서 데이터가 정해진 카테고리에 속하는지 알기 위해 벡터 공간상에 위치시킨 후 더 가까운 카테고리를 유클리드 거리로 판단한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-두 점의 거리의 의미 : 논증기하학이 측정으로부터 비롯된 학문이기 때문에 두 대상과의 관계의 기본은 거리이다. 그런데 해석기하학으로 두 점과의 거리를 좌표사이의 거리로 계산할 수 있게 되었다. 
+    두 점의 거리의 의미 : 논증기하학이 측정으로부터 비롯된 학문이기 때문에 두 대상과의 관계의 기본은 거리이다. 그런데 해석기하학으로 두 점과의 거리를 좌표사이의 거리로 계산할 수 있게 되었다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-수직선에서 두 점의 거리 : 수직선 위의 두 점 $P(x), Q(y)$ 의 거리 $\overline{PQ}$ 는 $|x - y|$ 이다. 
+!!! note ""
 
-</blockquote>
+    수직선에서 두 점의 거리 : 수직선 위의 두 점 $P(x), Q(y)$ 의 거리 $\overline{PQ}$ 는 $|x - y|$ 이다.
 
 - 좌표가 원점으로부터 단위거리만큼 떨어진 실수에 일대일 대응되는 위치로 정의되었기 때문에 유일하게 특정된 원점을 기준으로 한 위치를 기반으로 대상이 서로 떨어진 정도를 측정할 수 있다. 
 
@@ -534,45 +463,39 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 - 이로부터 모든 경우를 대표하는 $d = |x - y|$ 을 얻는다. 
 
-- 원점과 점 $P(x)$ 와의 거리는 $|x|$ 이다. 
+- 원점과 점 $P(x)$ 와의 거리는 $|x|$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-좌표평면에서 두 점의 거리 : 좌표평면에서 두 점 $P(x_1, y_1), Q(x_2, y_2)$ 의 거리 $\overline{AB}$ 는 $\sqrt[]{(x_2-x_1)^2 + (y_2-y_1)^2}$ 이다. 
-
-</blockquote>
+    좌표평면에서 두 점의 거리 : 좌표평면에서 두 점 $P(x_1, y_1), Q(x_2, y_2)$ 의 거리 $\overline{AB}$ 는 $\sqrt[]{(x_2-x_1)^2 + (y_2-y_1)^2}$ 이다.
 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-공간 좌표 : 
+!!! note ""
 
-**구체화 필요**
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-3차원 좌표계 : 서로 직교하는 $x$축, $y$축, $z$축으로 정의하여 $xy$, $xz$, $yz$ 평면으로 이루어진 좌표계이다. 
-
-![3-coor](https://res.cloudinary.com/eightcruz/image/upload/v1543400108/hmxzjj3qbay9o3zh4w7m.png)
-
-</blockquote>
+    공간 좌표 : 
+    
+    **구체화 필요**
 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-대응 : 공집합이 아닌 두 집합 $X, Y$ 에 대하여 $X$ 의 원소를 $Y$ 의 원소에 짝짓는 것을 $X$ 에서 $Y$ 로의 대응이라 한다. 
+!!! note ""
 
-</blockquote>
+    3차원 좌표계 : 서로 직교하는 $x$축, $y$축, $z$축으로 정의하여 $xy$, $xz$, $yz$ 평면으로 이루어진 좌표계이다. 
+    
+    ![3-coor](https://res.cloudinary.com/eightcruz/image/upload/v1543400108/hmxzjj3qbay9o3zh4w7m.png)
 
-- 집합 $X$ 의 원소 $x$ 가 집합 $Y$ 의 원소 $y$ 에 대응하는 것을 $x \to y$ 로 표현한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-함수(function) 또는 사상(mapping) : 집합 $X, Y$ 에 대하여 집합 $X$ 의 임의의 한 원소 $x \in X$ 를 집합 $Y$ 의 오직 한 원소 $y \in Y$ 에 대응시키는 이항관계이다. 
+!!! note ""
 
-</blockquote>
+    대응 : 공집합이 아닌 두 집합 $X, Y$ 에 대하여 $X$ 의 원소를 $Y$ 의 원소에 짝짓는 것을 $X$ 에서 $Y$ 로의 대응이라 한다.
+
+- 집합 $X$ 의 원소 $x$ 가 집합 $Y$ 의 원소 $y$ 에 대응하는 것을 $x \to y$ 로 표현한다.
+
+!!! note ""
+
+    함수(function) 또는 사상(mapping) : 집합 $X, Y$ 에 대하여 집합 $X$ 의 임의의 한 원소 $x \in X$ 를 집합 $Y$ 의 오직 한 원소 $y \in Y$ 에 대응시키는 이항관계이다.
 
 - 집합 $X$ 를 정의역이라 하고 집합 $Y$ 를 공역이라 한다. 
 
@@ -642,47 +565,37 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
     **따라서 수와 연산으로 격하될 수 있는 모든 자연대상과 그것들의 관계는 함수로 표현 가능하다. 그런데 수학의 형식언어는 모두 코드로 변환될 수 있기 때문에 수와 연산으로 격하될 수 있는 임의의 자연대상은 모두 다 프로그램으로 자동화 할 수 있다. 그리고 이것은 역사적으로 거듭되어온 기술의 자연대상 대체가 가속화되다가 언젠가는 초지능이 탄생 할 수도 있다는 기술적 특이점의 가능성을 시사한다.**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정의역(domain) : 함수 $f: X \to Y$ 에서 집합 $X$ 를 $f$ 의 정의역이라 한다.
-
-</blockquote>
+    정의역(domain) : 함수 $f: X \to Y$ 에서 집합 $X$ 를 $f$ 의 정의역이라 한다.
 
 - 즉 정의역은 함수의 모든 입력값의 집합이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-공역(codomain) : 함수 $f: X \to Y$ 에서 집합 $Y$ 를 $f$ 의 공역이라 한다.
-
-</blockquote>
+    공역(codomain) : 함수 $f: X \to Y$ 에서 집합 $Y$ 를 $f$ 의 공역이라 한다.
 
 - 모든 $y \in Y$ 에 대하여 $f(x) = y$ 인 $x \in X$ 가 존재할 필요는 없다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-상(image) 또는 함수값 : 함수 $f: X \to Y$ 에서 정의역 $X$ 의 원소 $x \in X$ 에 대응하는 공역 $Y$ 의 원소 $y \in Y$ 이다.
-
-</blockquote>
+    상(image) 또는 함수값 : 함수 $f: X \to Y$ 에서 정의역 $X$ 의 원소 $x \in X$ 에 대응하는 공역 $Y$ 의 원소 $y \in Y$ 이다.
 
 - 즉 상은 함수 $f: X \to Y$ 의 정의역의 원소 $x \in X$ 에 대한 공역의 원소 
 
   $$ f(x) \in Y $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-원상(preimage) 또는 역상(inverse image) : 함수 $f: X \to Y$ 에서 공역 $Y$ 의 원소 $y \in Y$ 에 대응하는 정의역 $X$ 의 원소 $x \in X$ 이다. 
+    원상(preimage) 또는 역상(inverse image) : 함수 $f: X \to Y$ 에서 공역 $Y$ 의 원소 $y \in Y$ 에 대응하는 정의역 $X$ 의 원소 $x \in X$ 이다.
 
-</blockquote>
+- 즉 원상은 함수 $f: X \to Y$ 의 공역의 원소 $y \in Y$ 에 대한 정의역의 원소
 
-- 즉 원상은 함수 $f: X \to Y$ 의 공역의 원소 $y \in Y$ 에 대한 정의역의 원소 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-치역(range) : 함수 $f: X \to Y$ 에서 모든 상(함수값)의 집합 $\{f(x): x \in X\}$ 을 $f$ 의 치역이라 한다.
-
-</blockquote>
+    치역(range) : 함수 $f: X \to Y$ 에서 모든 상(함수값)의 집합 $\{f(x): x \in X\}$ 을 $f$ 의 치역이라 한다.
 
 - 즉 치역은 함수의 모든 함수값의 집합이다.
 
@@ -700,12 +613,9 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
     이다.
 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-단사함수(injection function) 또는 일대일 함수(one-to-one function) : 정의역의 서로 다른 원소를 공역의 서로 다른 원소로 대응시키는 함수이다.
-
-</blockquote>
+    단사함수(injection function) 또는 일대일 함수(one-to-one function) : 정의역의 서로 다른 원소를 공역의 서로 다른 원소로 대응시키는 함수이다.
 
 - 즉 단사함수에서 공역의 각 원소는 정의역의 원소 중 최대 한 원소의 상이다. 
 
@@ -729,13 +639,11 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
   무리수 $e$ 를 밑으로 하는 지수함수 $exp: \mathbb{R} \to \mathbb{R}, x \mapsto e ^{x}$ 는 단사함수이다.
 
-  한편 음수에서는 상이 존재하지 않으므로 전사함수는 아니다. 
+  한편 음수에서는 상이 존재하지 않으므로 전사함수는 아니다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-전사함수(onto function, surjection function) : 공역과 치역이 같은 함수이다.
-
-</blockquote>
+    전사함수(onto function, surjection function) : 공역과 치역이 같은 함수이다.
 
 - 전사함수에서 두 집합 $X, Y$ 사이의 함수 $f: X \to Y$ 에 대하여 다음 조건들이 성립하며 서로 동치이다. 
 
@@ -769,13 +677,11 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
   로 정의되었다고 하자. 이때 $f$ 의 공역과 치역이 둘 다 $\mathbb{R}$ 이다.
 
-  따라서 $f$ 는 전사함수이다. 
+  따라서 $f$ 는 전사함수이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-전단사 함수(bijection, bijective function) 또는 일대일 대응 : 두 집합 사이를 중복 없이 모두 일대일 대응시키는 이항관계를 갖는 함수이다.
-
-</blockquote>
+    전단사 함수(bijection, bijective function) 또는 일대일 대응 : 두 집합 사이를 중복 없이 모두 일대일 대응시키는 이항관계를 갖는 함수이다.
 
 - 전단사함수에서 두 집합 $X, Y$ 사이의 함수 $f: X \to Y$ 에 대하여 다음 조건들이 성립하며 서로 동치이다. 
 
@@ -793,75 +699,67 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 - 예시 
 
-  $f: \mathbb{R} \to \mathbb{R}, x \mapsto 2x+1$ 로 정의된 함수 $f(x) = 2x+1$ 는 전단사함수이다. 
+  $f: \mathbb{R} \to \mathbb{R}, x \mapsto 2x+1$ 로 정의된 함수 $f(x) = 2x+1$ 는 전단사함수이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-서로 같은 함수 : 두 함수 $f: X \to Y$, $g: X' \to Y'$ 에 대하여 다음 두 조건이 성립하면 두 함수 $f, g$ 를 서로 같다고 한다. 
+    서로 같은 함수 : 두 함수 $f: X \to Y$, $g: X' \to Y'$ 에 대하여 다음 두 조건이 성립하면 두 함수 $f, g$ 를 서로 같다고 한다. 
+    
+    1. 두 함수의 정의역과 공역이 같다. $X = X', Y = Y'$
+    
+    2. 정의역의 모든 원소 $x$ 에 대하여 두 함수의 함수값이 같다. $f(x) = g(x)$
 
-1. 두 함수의 정의역과 공역이 같다. $X = X', Y = Y'$
+- 두 함수가 서로 같다는 것을 $f=g$ 라고 표현한다.
 
-2. 정의역의 모든 원소 $x$ 에 대하여 두 함수의 함수값이 같다. $f(x) = g(x)$
+!!! note ""
 
-</blockquote>
-
-- 두 함수가 서로 같다는 것을 $f=g$ 라고 표현한다. 
-
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-실변수 함수(function of a real variable) : 정의역이 실수 집합 $\mathbb{R}$ 인 함수 
-
-$$ f: \mathbb{R} \to X $$
-
-를 실변수 함수라 한다.
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-실숫값 함수(real-valued function) 또는 실함수(real function) : 공역이 실수 집합 $\mathbb{R}$ 인 함수 
-
-$$ f: X \to \mathbb{R}  $$
-
-를 실숫값 함수라 한다.
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-복소변수 함수(function of a complex variable) : 정의역이 복소수 집합 $\mathbb{C}$ 인 함수 
-
-$$ f: \mathbb{C} \to X  $$
-
-를 복소변수 함수라 한다.
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-복소 함수(complex function) : 공역이 복소수 집합 $\mathbb{C}$ 인 함수 
-
-$$ f: X \to \mathbb{C}  $$
-
-를 복소 함수라 한다.
-
-</blockquote>
+    실변수 함수(function of a real variable) : 정의역이 실수 집합 $\mathbb{R}$ 인 함수 
+    
+    $$ f: \mathbb{R} \to X $$
+    
+    를 실변수 함수라 한다.
 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-다변수함수(multivariate function) : 둘 이상의 독립변수를 갖는 함수이다.
+!!! note ""
 
-</blockquote>
+    실숫값 함수(real-valued function) 또는 실함수(real function) : 공역이 실수 집합 $\mathbb{R}$ 인 함수 
+    
+    $$ f: X \to \mathbb{R}  $$
+    
+    를 실숫값 함수라 한다.
 
-- 일반적으로 다변수 실함수와 다변수 복소함수를 뜻한다. 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-다변수 실함수 : 다변수 실함수는 $n(n \geq 2)$ 개의 실수 독립 변수들을 오직 하나의 실수값에 대응시키는 규칙이다.
+!!! note ""
 
-</blockquote>
+    복소변수 함수(function of a complex variable) : 정의역이 복소수 집합 $\mathbb{C}$ 인 함수 
+    
+    $$ f: \mathbb{C} \to X  $$
+    
+    를 복소변수 함수라 한다.
+
+
+
+!!! note ""
+
+    복소 함수(complex function) : 공역이 복소수 집합 $\mathbb{C}$ 인 함수 
+    
+    $$ f: X \to \mathbb{C}  $$
+    
+    를 복소 함수라 한다.
+
+
+
+!!! note ""
+
+    다변수함수(multivariate function) : 둘 이상의 독립변수를 갖는 함수이다.
+
+- 일반적으로 다변수 실함수와 다변수 복소함수를 뜻한다.
+
+!!! note ""
+
+    다변수 실함수 : 다변수 실함수는 $n(n \geq 2)$ 개의 실수 독립 변수들을 오직 하나의 실수값에 대응시키는 규칙이다.
 
 - 즉, 다변수 실함수 $f$ 는 $y,x_1, x_2, \dots, x_n \in \mathbb{R}$ 에 대하여 $n-$튜플 $(x_1, x_2, \dots, x_n)$ 을 오직 하나의 함수값
 
@@ -873,42 +771,35 @@ $$ f: X \to \mathbb{C}  $$
 
   $$ f: \mathbb{R} ^{n} \to \mathbb{R} $$
 
-  로 정의할 수도 있다. 
+  로 정의할 수도 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-다변수 복소함수 : 다중 복소수 독립 변수에 대한 복소수 값 함수
-
-$$ w = f(z_1, z_2, \dots, z_n) $$
-
-이다.
-
-</blockquote>
+    다변수 복소함수 : 다중 복소수 독립 변수에 대한 복소수 값 함수
+    
+    $$ w = f(z_1, z_2, \dots, z_n) $$
+    
+    이다.
 
 - 복소수 곱공간 $C ^{n}$(또는 그 부분집합) 을 정의역으로 갖는 복소수 값 함수 
 
   $$ f: C ^{n} \to C $$
 
-  로 정의할 수도 있다. 
+  로 정의할 수도 있다.
 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-연속 : $n$-공간의 부분집합 $U$ 에서 정의된 함수 $f: U \to \mathbb{R}$ 와 $U$ 의 한 점 $P$ 에 대하여 
-
-$$ \lim_{X \to P} f(x) = f(P) $$
-
-일 때 $f$ 는 점 $P$ 에서 연속이다.
-
-</blockquote>
+    연속 : $n$-공간의 부분집합 $U$ 에서 정의된 함수 $f: U \to \mathbb{R}$ 와 $U$ 의 한 점 $P$ 에 대하여 
+    
+    $$ \lim_{X \to P} f(x) = f(P) $$
+    
+    일 때 $f$ 는 점 $P$ 에서 연속이다.
 
 - 이는 $U$ 의 점 $X$ 가 $P$ 에 충분히 가까우면 $f(X)$ 도 $f(P)$ 에 가깝다는 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-연속함수 : 함수 $f: U \to \mathbb{R}$ 가 정의역 $U$ 의 모든 점에서 연속이면, $f$ 를 연속함수라고 한다.
-
-</blockquote>
+    연속함수 : 함수 $f: U \to \mathbb{R}$ 가 정의역 $U$ 의 모든 점에서 연속이면, $f$ 를 연속함수라고 한다.
 
 - 예시 
 
@@ -932,15 +823,13 @@ $$ \lim_{X \to P} f(x) = f(P) $$
 
   이고, 따라서 $f$ 는 연속함수이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-열린 공(open ball) : 양수 $r$ 에 대하여 $n$-공간의 한 점 $P$ 를 중심으로 반지름이 $r$ 인 
-
-$$ \mathbb{B} ^{n}(P, r) := \{X \in \mathbb{R} ^{n} \Big ||X-P| < r\} $$
-
-이다.
-
-</blockquote>
+    열린 공(open ball) : 양수 $r$ 에 대하여 $n$-공간의 한 점 $P$ 를 중심으로 반지름이 $r$ 인 
+    
+    $$ \mathbb{B} ^{n}(P, r) := \{X \in \mathbb{R} ^{n} \Big ||X-P| < r\} $$
+    
+    이다.
 
 - 예시 
 
@@ -950,15 +839,13 @@ $$ \mathbb{B} ^{n}(P, r) := \{X \in \mathbb{R} ^{n} \Big ||X-P| < r\} $$
 
   ![](https://mblogthumb-phinf.pstatic.net/20141228_119/dydrogud22_1419762043201Uk8cC_JPEG/2.jpg?type=w2)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-닫힌 공(closed ball) : 양수 $r$ 에 대하여 $n$-공간의 한 점 $P$ 를 중심으로 반지름이 $r$ 인 
-
-$$ \overline{\mathbb{B}}  ^{n}(P, r) := \{X \in \mathbb{R} ^{n} \Big ||X-P| \leq r\} $$
-
-이다.
-
-</blockquote>
+    닫힌 공(closed ball) : 양수 $r$ 에 대하여 $n$-공간의 한 점 $P$ 를 중심으로 반지름이 $r$ 인 
+    
+    $$ \overline{\mathbb{B}}  ^{n}(P, r) := \{X \in \mathbb{R} ^{n} \Big ||X-P| \leq r\} $$
+    
+    이다.
 
 - 예시 
 
@@ -966,18 +853,15 @@ $$ \overline{\mathbb{B}}  ^{n}(P, r) := \{X \in \mathbb{R} ^{n} \Big ||X-P| \leq
 
   ![](https://mblogthumb-phinf.pstatic.net/20141228_134/dydrogud22_14197620690306kJlI_JPEG/3.jpg?type=w2)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유계(bounded) : $n$-공간의 부분 집합 $U$ 가 유계라는 것은 $U$ 를 포함하는 열린공 또는 닫힌공이 존재한다는 것이다.
-
-</blockquote>
+    유계(bounded) : $n$-공간의 부분 집합 $U$ 가 유계라는 것은 $U$ 를 포함하는 열린공 또는 닫힌공이 존재한다는 것이다.
 
 - 어라? 그러면 유계가 아닐 수가 있나?
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-최대최소 정리 : 좋은 영역, 즉 유계인 닫힌 집합에서 정의된 연속함수는 항상 최댓값과 최솟값을 가진다.
-
-</blockquote>
+    최대최소 정리 : 좋은 영역, 즉 유계인 닫힌 집합에서 정의된 연속함수는 항상 최댓값과 최솟값을 가진다.
 
 - 이 정리는 해의 존재를 말해주는 중요한 정리이다.
+

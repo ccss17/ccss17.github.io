@@ -1,32 +1,3 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-- ## **생각 메모**
-
-  **[수학 역사 (고대 그리스~19세기)](https://ccss17.github.io/all3.html)**
-
-  **[수학 역사2 (수학의 확실성)](https://ccss17.github.io/all4.html)**
-
-  **[컴퓨터 역사 (괴델의 불완전성 정리)](https://ccss17.github.io/all5.html)**
-
-  **[컴퓨터 역사2 (튜링의 불완전성 증명)](https://ccss17.github.io/all6.html)**
-
-  **[컴퓨터 역사3 (튜링 기계의 구현)](https://ccss17.github.io/all7.html)**
-
-  **[컴퓨터 역사4 (소프트웨어와 알고리즘)](https://ccss17.github.io/all8.html)**
-
-  **[컴퓨터 역사5 (초지능)](https://ccss17.github.io/all9.html)**
-
-</blockquote>
-
----
-
-# 컴퓨터 역사 
-
-**컴퓨터의 역사에 관한 메모를 해 둔 곳입니다.**
-
----
-
 # 튜링의 불완전성 증명
 
 > 참고 : [컴퓨터 과학이 여는 세계](https://book.naver.com/bookdb/book_detail.nhn?bid=9078133)
@@ -450,4 +421,5 @@
 
 - 이후 여러가지 시도가 있었지만 1937년 MIT 석사 과정 대학원생인 클로드 섀넌이 여러 스위치의 조합인 전기 회로의 디지털 동작이 정확히 불 대수를 이루는 논리와 일치한다는 것을 깨달았다. 
 
-  - 그리고 섀넌은 불 대수를 사용해 복잡한 회로를 단순화하는 것과 회로를 사용해 연산 동작과 대수함수를 모델링 할 수 있는 것을 보였다. 
+  - 그리고 섀넌은 불 대수를 사용해 복잡한 회로를 단순화하는 것과 회로를 사용해 연산 동작과 대수함수를 모델링 할 수 있는 것을 보였다.
+

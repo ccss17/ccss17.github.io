@@ -1,35 +1,9 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-## **미적분 메모**
-
-**[극한 메모](https://ccss17.github.io/calculus.html)**
-
-**[미분 메모](https://ccss17.github.io/calculus2.html)**
-
-**[적분 메모](https://ccss17.github.io/calculus3.html)**
-
-**[미분2 메모](https://ccss17.github.io/calculus4.html)**
-
-**[적분2 메모](https://ccss17.github.io/calculus5.html)**
-
-**[벡터해석학 메모](https://ccss17.github.io/vector.html)**
-
-**[미적분 메모](https://ccss17.github.io/calculus6.html)**
-
-</blockquote>
-
-# 미분2 메모
-
----
-
 # 지수함수와 로그함수의 극한
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-지수함수 $y=a ^{x}(a>0, a \neq 1)$ 의 극한 : 다음과 같이 $x$ 가 상수에 한없이 가까워지는 경우와 무한대로 발산하는 경우로 나누어서 생각할 수 있다. 
+!!! note ""
 
-</blockquote>
+    지수함수 $y=a ^{x}(a>0, a \neq 1)$ 의 극한 : 다음과 같이 $x$ 가 상수에 한없이 가까워지는 경우와 무한대로 발산하는 경우로 나누어서 생각할 수 있다.
 
 - $x$ 가 상수에 한없이 가까워질 때
 
@@ -95,11 +69,9 @@
 
       임을 알 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그함수 $y= \log_{a} x(a>0, a \neq 1)$ 의 극한 : 다음과 같이 $x$ 가 $0$ 이 아닌 상수에 한없이 가까워지는 경우와 무한대로 발산하는 경우 또는 $0$ 에 한없이 가까워지는 경우로 나누어서 생각할 수 있다. 
-
-</blockquote>
+    로그함수 $y= \log_{a} x(a>0, a \neq 1)$ 의 극한 : 다음과 같이 $x$ 가 $0$ 이 아닌 상수에 한없이 가까워지는 경우와 무한대로 발산하는 경우 또는 $0$ 에 한없이 가까워지는 경우로 나누어서 생각할 수 있다.
 
 - $x$ 가 상수에 한없이 가까워질 때
 
@@ -165,15 +137,13 @@
 
       임을 알 수 있다.
 
-## 무리수 $e$ 와 자연로그 
+## 무리수 $e$ 와 자연로그
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-무리수 $e$ : 무리수 $e$ 는 다음과 같이 정의한다. 
-
-$$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
-
-</blockquote>
+    무리수 $e$ : 무리수 $e$ 는 다음과 같이 정의한다. 
+    
+    $$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
 
 - 위의 정의에서 $\frac{1}{x} = t$ 로 놓으면 $x \to 0+ \implies t \to \infty$ 이다. 따라서
 
@@ -227,11 +197,9 @@ $$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
 
   $$ \lim_{x \to \infty} (1+\frac{2}{x}) ^{x} = \lim_{x \to \infty} \{(1+\frac{2}{x})^{\frac{x}{2}}\} ^{2} = e ^{2} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-자연로그 : 무리수 $e$ 를 밑으로 하는 로그 $\log_{e} x$ 를 $x$ 의 자연로그라 한다. 
-
-</blockquote>
+    자연로그 : 무리수 $e$ 를 밑으로 하는 로그 $\log_{e} x$ 를 $x$ 의 자연로그라 한다.
 
 - 자연로그 $\log_{e} x$ 를 간단히 $\ln x$ 로 나타낸다. 
 
@@ -243,15 +211,13 @@ $$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
 
   - $\ln 1 = \log_{e} 1 = 0$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-무리수 $e$ 를 이용한 지수함수와 로그함수의 극한 : $a>0, a \neq 0$ 일 때 다음이 성립한다. 
-
-1. $\displaystyle \lim_{x \to 0} \frac{\log_{a} (1+x)}{x} = \frac{1}{\ln a}$
-
-2. $\displaystyle \lim_{x \to 0} \frac{a ^{x}-1}{x} = \ln a$
-
-</blockquote>
+    무리수 $e$ 를 이용한 지수함수와 로그함수의 극한 : $a>0, a \neq 0$ 일 때 다음이 성립한다. 
+    
+    1. $\displaystyle \lim_{x \to 0} \frac{\log_{a} (1+x)}{x} = \frac{1}{\ln a}$
+    
+    2. $\displaystyle \lim_{x \to 0} \frac{a ^{x}-1}{x} = \ln a$
 
 - $1$ 의 증명 
 
@@ -281,17 +247,15 @@ $$ \lim_{x \to 0} (1+x) ^{\frac{1}{x}} = e $$
 
   이다. 
 
-## 지수함수와 로그함수의 미분 
+## 지수함수와 로그함수의 미분
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-지수함수 $y=a ^{x}$ 의 도함수 : 지수함수 $y=a ^{x}$ 의 도함수는 
-
-$$ (a ^{x})' = a ^{x} \ln a $$
-
-이다.
-
-</blockquote>
+    지수함수 $y=a ^{x}$ 의 도함수 : 지수함수 $y=a ^{x}$ 의 도함수는 
+    
+    $$ (a ^{x})' = a ^{x} \ln a $$
+    
+    이다.
 
 - 증명 
 
@@ -309,25 +273,23 @@ $$ (a ^{x})' = a ^{x} \ln a $$
 
     $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$y = e ^{x}$ 의 도함수 : 지수함수 도함수의 정의에 따라 밑이 $e$ 일 때, 즉 $a=e$ 일 때 지수함수 $y = e ^{x}$ 의 도함수는 
+    $y = e ^{x}$ 의 도함수 : 지수함수 도함수의 정의에 따라 밑이 $e$ 일 때, 즉 $a=e$ 일 때 지수함수 $y = e ^{x}$ 의 도함수는 
+    
+      $$ (e ^{x})' = e ^{x} $$
+    
+      이다.
 
-  $$ (e ^{x})' = e ^{x} $$
 
-  이다. 
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-로그함수 $y = \log_{a} x$ 의 도함수 : 로그함수 $y = \log_{a} x(a>0, a \neq 1)$ 의 도함수는 
-
-$$ (\log_{a} x)' = \frac{1}{x \ln a} $$
-
-이다.
-
-</blockquote>
+    로그함수 $y = \log_{a} x$ 의 도함수 : 로그함수 $y = \log_{a} x(a>0, a \neq 1)$ 의 도함수는 
+    
+    $$ (\log_{a} x)' = \frac{1}{x \ln a} $$
+    
+    이다.
 
 - 증명 
 
@@ -345,31 +307,27 @@ $$ (\log_{a} x)' = \frac{1}{x \ln a} $$
 
     $$ \therefore (\log_{a} x)' = \frac{1}{x\ln a} $$
 
-    이다. 
+    이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-자연로그함수 $y = \ln x$ 의 도함수 : 로그함수 도함수의 정의에 따라 밑이 $e$ 일 때, 즉 $a=e$ 일 때 자연로그함수 $y = \ln x$ 의 도함수는 
-
-$$ (\ln x)' = \frac{1}{x} $$
-
-이다. 
-
-</blockquote>
+    자연로그함수 $y = \ln x$ 의 도함수 : 로그함수 도함수의 정의에 따라 밑이 $e$ 일 때, 즉 $a=e$ 일 때 자연로그함수 $y = \ln x$ 의 도함수는 
+    
+    $$ (\ln x)' = \frac{1}{x} $$
+    
+    이다.
 
 ## 정의역이 확장된 로그함수의 미분
 
-지금까지의 로그함수의 미분은 정의역이 양의 실수 집합에서만 성립한다. 그러나 이제 정의역을 확장해보자. 
+지금까지의 로그함수의 미분은 정의역이 양의 실수 집합에서만 성립한다. 그러나 이제 정의역을 확장해보자.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그함수 $y = \ln |x|$ 의 도함수 : 로그함수 $y = \ln |x|$ 의 도함수는 
-
-$$ (\ln |x|)' = \frac{1}{x} $$
-
-이다. 
-
-</blockquote>
+    로그함수 $y = \ln |x|$ 의 도함수 : 로그함수 $y = \ln |x|$ 의 도함수는 
+    
+    $$ (\ln |x|)' = \frac{1}{x} $$
+    
+    이다.
 
 - 증명 
 
@@ -383,17 +341,15 @@ $$ (\ln |x|)' = \frac{1}{x} $$
 
   $$ \therefore (\ln |x|)' = \frac{1}{x} $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그함수 $y = \log_{a} |x|$ 의 도함수 : 로그함수 $y = \log_{a} |x|$ 의 도함수는 
-
-$$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
-
-이다. 
-
-</blockquote>
+    로그함수 $y = \log_{a} |x|$ 의 도함수 : 로그함수 $y = \log_{a} |x|$ 의 도함수는 
+    
+    $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
+    
+    이다.
 
 - 증명 
 
@@ -409,11 +365,9 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
 # 삼각함수의 극한
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-삼각함수의 극한 : 임의의 실수 $a$ 에 대하여 삼각함수의 극한은 다음과 같다. 
-
-</blockquote>
+    삼각함수의 극한 : 임의의 실수 $a$ 에 대하여 삼각함수의 극한은 다음과 같다.
 
 - $\lim_{x \to a} \sin x = \sin a$
 
@@ -441,11 +395,9 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
     가 되어 극한값이 존재하지 않는다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 $\frac{\sin x}{x}, \frac{\tan x}{x}$ 의 극한 : $x$ 가 라디안일 때 다음이 성립한다. 
-
-</blockquote>
+    함수 $\frac{\sin x}{x}, \frac{\tan x}{x}$ 의 극한 : $x$ 가 라디안일 때 다음이 성립한다.
 
 - $\lim_{x \to 0} \frac{\sin x}{x} = 1$
 
@@ -505,13 +457,11 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
     ![desmos-graph(6)](https://user-images.githubusercontent.com/16812446/76513437-a4731200-6499-11ea-87ae-a6646df7cc60.png)
 
-# 삼각함수의 도함수 
+# 삼각함수의 도함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 $y = \sin x$ 의 도함수 : $y' = \cos x$ 이다. 
-
-</blockquote>
+    함수 $y = \sin x$ 의 도함수 : $y' = \cos x$ 이다.
 
 - 증명 
 
@@ -535,13 +485,11 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
     $$ \therefore (\sin x)' = \cos x $$
 
-    이다. 
+    이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 $y = \cos x$ 의 도함수 : $y' = -\sin x$ 이다. 
-
-</blockquote>
+    함수 $y = \cos x$ 의 도함수 : $y' = -\sin x$ 이다.
 
 - 증명 
 
@@ -565,13 +513,11 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
     $$ \therefore (\cos x)' = -\sin x $$
 
-    이다. 
+    이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 $y = \tan x$ 의 도함수 : $y' = \sec ^{2} x$ 이다. 
-
-</blockquote>
+    함수 $y = \tan x$ 의 도함수 : $y' = \sec ^{2} x$ 이다.
 
 - 증명 
 
@@ -581,11 +527,9 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
   $$ \frac{\cos x \cdot \cos x - \sin x \cdot (- \sin x)}{\cos ^{2}x} = \frac{\cos ^{2}x + \sin ^{2}x}{\cos ^{2}x} = \frac{1}{\cos ^{2}x} = \sec ^{2} x$$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 $y = \sec x$ 의 도함수 : $y' = \sec x \tan x$ 이다. 
-
-</blockquote>
+    함수 $y = \sec x$ 의 도함수 : $y' = \sec x \tan x$ 이다.
 
 - 증명 
 
@@ -599,11 +543,9 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 $y = \csc x$ 의 도함수 : $y' = -\csc x \cot x$ 이다. 
-
-</blockquote>
+    함수 $y = \csc x$ 의 도함수 : $y' = -\csc x \cot x$ 이다.
 
 - 증명 
 
@@ -617,11 +559,9 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 $y = \cot x$ 의 도함수 : $y' = -\csc ^{2} x$ 이다. 
-
-</blockquote>
+    함수 $y = \cot x$ 의 도함수 : $y' = -\csc ^{2} x$ 이다.
 
 - 증명 
 
@@ -635,17 +575,15 @@ $$ (\log_{a} |x|)' = \frac{1}{x \ln a} $$
 
   이다.
 
-## 복잡한 함수의 도함수 
+## 복잡한 함수의 도함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그함수 $y = \ln |f(x)|$ 의 도함수 : 함수 $f(x)$ 가 미분가능하고 $f(x) \neq 0$ 일 때 로그함수 $y = \ln |f(x)|$ 의 도함수는
-
-$$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)}$$ 
-
-이다.
-
-</blockquote>
+    로그함수 $y = \ln |f(x)|$ 의 도함수 : 함수 $f(x)$ 가 미분가능하고 $f(x) \neq 0$ 일 때 로그함수 $y = \ln |f(x)|$ 의 도함수는
+    
+    $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)}$$ 
+    
+    이다.
 
 - 증명 
 
@@ -667,17 +605,15 @@ $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)}$$
 
     $$ \{\ln |f(x)|\}' = \frac{f'(x)}{f(x)} $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그함수 $y = \log_{a} |f(x)|(a>0, a \neq 1)$ 의 도함수 : 함수 $f(x)$ 가 미분가능하고 $f(x) \neq 0$ 일 때 로그함수 $y = \ln |f(x)|$ 의 도함수는
-
-$$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)\ln a}$$ 
-
-이다.
-
-</blockquote>
+    로그함수 $y = \log_{a} |f(x)|(a>0, a \neq 1)$ 의 도함수 : 함수 $f(x)$ 가 미분가능하고 $f(x) \neq 0$ 일 때 로그함수 $y = \ln |f(x)|$ 의 도함수는
+    
+    $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)\ln a}$$ 
+    
+    이다.
 
 - 증명 
 
@@ -691,27 +627,25 @@ $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)\ln a}$$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-로그미분법 : 밑과 지수에 변수가 포함되어 있는 함수나 복잡한 분수함수는 다음과 같이 미분하면 편할 때가 있다. 
-
-1. $y=f(x)$ 양 변에 절대값을 취한다.
-
-    $$ |y| = |f(x)| $$
-
-2. 양변에 자연로그를 취한다. 
-
-    $$ \ln |y| = \ln |f(x)| $$
-
-3. 양변을 $x$ 에 대하여 미분한다. 
-
-    $$ \frac{y'}{y} = \frac{f'(x)}{f(x)} $$
-
-4. $y'$ 에 대하여 정리한다. 
-
-    $$ y' = y \cdot \frac{f'(x)}{f(x)} $$
-
-</blockquote>
+    로그미분법 : 밑과 지수에 변수가 포함되어 있는 함수나 복잡한 분수함수는 다음과 같이 미분하면 편할 때가 있다. 
+    
+    1. $y=f(x)$ 양 변에 절대값을 취한다.
+    
+        $$ |y| = |f(x)| $$
+    
+    2. 양변에 자연로그를 취한다. 
+    
+        $$ \ln |y| = \ln |f(x)| $$
+    
+    3. 양변을 $x$ 에 대하여 미분한다. 
+    
+        $$ \frac{y'}{y} = \frac{f'(x)}{f(x)} $$
+    
+    4. $y'$ 에 대하여 정리한다. 
+    
+        $$ y' = y \cdot \frac{f'(x)}{f(x)} $$
 
 - 예시 
 
@@ -735,13 +669,11 @@ $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)\ln a}$$
 
   $$ \therefore y' = x ^{\sin x}(\cos x \cdot \ln x + \frac{\sin x}{x}) $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 $y = x ^{n}$ 의 도함수 : $n$ 이 실수일 때, $y' = f'(x) = nx ^{n-1}$ 
-
-</blockquote>
+    함수 $y = x ^{n}$ 의 도함수 : $n$ 이 실수일 때, $y' = f'(x) = nx ^{n-1}$
 
 - 증명 
 
@@ -775,25 +707,23 @@ $$\{\ln |f(x)|\}' = \frac{f'(x)}{f(x)\ln a}$$
 
   $y = x ^e$ 의 도함수는 $y'=ex^{e-1}$ 이다.
 
-## 매개변수로 나타낸 함수의 미분 
+## 매개변수로 나타낸 함수의 미분
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-매개변수(parameter)로 나타낸 함수 : 두 변수 $x, y$ 사이의 관계를 변수 $t$ 를 매개로 
+    매개변수(parameter)로 나타낸 함수 : 두 변수 $x, y$ 사이의 관계를 변수 $t$ 를 매개로 
+    
+      $$ x = f(t), y = g(t) $$
+    
+    꼴로 나타낼 때, 변수 $t$ 를 매개변수라 하고 위 식을 매개변수로 나타낸 함수라 한다.
 
-  $$ x = f(t), y = g(t) $$
 
-꼴로 나타낼 때, 변수 $t$ 를 매개변수라 하고 위 식을 매개변수로 나타낸 함수라 한다. 
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-매개변수로 나타낸 함수의 미분법 : 두 함수 $x=f(t),y=g(t)$ 에서 $f(t),g(t)$ 가 각각 $t$ 에 대하여 미분가능하고 $f'(t) \neq 0$ 일 때 
-
-$$ \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{g'(t)}{f'(t)} $$
-
-</blockquote>
+    매개변수로 나타낸 함수의 미분법 : 두 함수 $x=f(t),y=g(t)$ 에서 $f(t),g(t)$ 가 각각 $t$ 에 대하여 미분가능하고 $f'(t) \neq 0$ 일 때 
+    
+    $$ \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{g'(t)}{f'(t)} $$
 
 - 증명 
 
@@ -841,11 +771,9 @@ $$ \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{g'(t)}{f'(t)} $$
 
   $$ \therefore \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{\frac{3}{(1+t)^{2}}}{\frac{2}{(1-t)^2}} = \frac{3(1-t)^2}{2(1+t)^2} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-음함수의 미분 : $x$ 에 대한 함수 $y$ 가 음함수 $f(x,y)=0$ 꼴로 주어질 때, $y$ 를 $x$ 에 대한 함수로 보고 각항을 $x$ 에 대하여 미분하여 $\frac{dy}{dx}$ 를 구한다. 
-
-</blockquote>
+    음함수의 미분 : $x$ 에 대한 함수 $y$ 가 음함수 $f(x,y)=0$ 꼴로 주어질 때, $y$ 를 $x$ 에 대한 함수로 보고 각항을 $x$ 에 대하여 미분하여 $\frac{dy}{dx}$ 를 구한다.
 
 - $y$ 가 포함된 항을 미분할 때 $x$ 에 대한 함수로 보고 합성함수의 미분법을 적용한다.
 
@@ -869,19 +797,17 @@ $$ \frac{dy}{dx} = \frac{\frac{dy}{dt}}{\frac{dx}{dt}} = \frac{g'(t)}{f'(t)} $$
 
   이다. (단, $y \neq 0$)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-역함수의 도함수 : 미분가능한 함수 $f(x)$ 의 역함수 $f ^{-1}(x)$ 가 존재하고 미분가능할 때 , 함수 $y = f ^{-1}(x)$ 의 도함수는 
-
-$$ (f ^{-1})'(x) = \frac{1}{f'(y)} $$
-
-또는 
-
-$$ \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}} $$
-
-이다. (단, $f'(y) \neq 0, \frac{dx}{dy} \neq 0$)
-
-</blockquote>
+    역함수의 도함수 : 미분가능한 함수 $f(x)$ 의 역함수 $f ^{-1}(x)$ 가 존재하고 미분가능할 때 , 함수 $y = f ^{-1}(x)$ 의 도함수는 
+    
+    $$ (f ^{-1})'(x) = \frac{1}{f'(y)} $$
+    
+    또는 
+    
+    $$ \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}} $$
+    
+    이다. (단, $f'(y) \neq 0, \frac{dx}{dy} \neq 0$)
 
 - 증명
 
@@ -953,19 +879,17 @@ $$ \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}} $$
 
   $$ \therefore \frac{dy}{dx} = \frac{1}{\frac{dx}{dy}} = \frac{1}{3y ^{2}} = \frac{1}{3 \sqrt[3]{(x+1) ^{2}}} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이계도함수(second order derivatives) : 함수 $f(x)$ 의 도함수 $f'(x)$ 가 미분가능할 때 $f'(x)$ 의 도함수
-
-$$
-
-\lim_{\Delta x \to 0} \frac{f'(x+\Delta x)-f'(x)}{\Delta x} 
-
-$$
-
-를 함수 $f(x)$ 의 이계도함수라 한다. 
-
-</blockquote>
+    이계도함수(second order derivatives) : 함수 $f(x)$ 의 도함수 $f'(x)$ 가 미분가능할 때 $f'(x)$ 의 도함수
+    
+    $$
+    
+    \lim_{\Delta x \to 0} \frac{f'(x+\Delta x)-f'(x)}{\Delta x} 
+    
+    $$
+    
+    를 함수 $f(x)$ 의 이계도함수라 한다.
 
 - 기호로
 
@@ -989,13 +913,11 @@ $$
 
   $$ \therefore  f''(x) = 6x $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-고계도함수(higher order derivatives) : 함수 $f(x)$ 를 $2$ 번 이상 미분함 함수이다.
-
-</blockquote>
+    고계도함수(higher order derivatives) : 함수 $f(x)$ 를 $2$ 번 이상 미분함 함수이다.
 
 - 삼계도 함수 : 함수 $f(x)$ 를 $3$ 번 미분한 함수로써 
 
@@ -1021,17 +943,15 @@ $$
 
   $$ f(x) = \cos x \implies f ^{(n)}(x) =\cos (x+\frac{n \pi }{2}) $$
 
-## 함수의 그래프 개형 
+## 함수의 그래프 개형
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-곡선의 오목과 볼록의 판정 : 함수 $f(x)$ 가 어떤 구간에서 
-
-$f''(x) > 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 아래로 볼록(convex upward)하고, 
-
-$f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex downward)하다.
-
-</blockquote>
+    곡선의 오목과 볼록의 판정 : 함수 $f(x)$ 가 어떤 구간에서 
+    
+    $f''(x) > 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 아래로 볼록(convex upward)하고, 
+    
+    $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex downward)하다.
 
 - 증명 
 
@@ -1069,21 +989,17 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
   ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/77051638-f6261a00-6a0e-11ea-84ae-4b9472dcbf7e.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-변곡점(inflection point) : 곡선 $y=f(x)$ 위의 점 $(a, f(a))$ 에 대하여 $x=a$ 의 좌우에서 곡선의 모양이 아래로 볼록에서 위로 볼록으로 바뀌거나 위로 볼록에서 아래로 볼록으로 바뀔 때, 이 점을 곡선 $y=f(x)$ 의 변곡점이라 한다. 
-
-</blockquote>
+    변곡점(inflection point) : 곡선 $y=f(x)$ 위의 점 $(a, f(a))$ 에 대하여 $x=a$ 의 좌우에서 곡선의 모양이 아래로 볼록에서 위로 볼록으로 바뀌거나 위로 볼록에서 아래로 볼록으로 바뀔 때, 이 점을 곡선 $y=f(x)$ 의 변곡점이라 한다.
 
 - 예시 
 
   바로 위의 예시에서 살펴보았듯이 곡선 $y = x ^{3} - 3 x ^{2}$ 의 변곡점은 $x=1$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-변곡점의 판정 : 함수 $f(x)$ 에서 $f''(a)=0$ 이고 $x=a$ 의 좌우에서 $f''(x)$ 의 부호가 바뀌면 점 $(a, f(a))$ 는 곡선 $y=f(x)$ 의 변곡점이다. 
-
-</blockquote>
+    변곡점의 판정 : 함수 $f(x)$ 에서 $f''(a)=0$ 이고 $x=a$ 의 좌우에서 $f''(x)$ 의 부호가 바뀌면 점 $(a, f(a))$ 는 곡선 $y=f(x)$ 의 변곡점이다.
 
 - 증명
 
@@ -1091,13 +1007,11 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
   하지만 그 역은 일반적으로 성립하지 않는다. 즉, $f''(a)=0$ 이어도 점 $(a,f(a))$ 가 변곡점이 아닐 수도 있다. 왜냐하면 $f''(a) = 0$ 일 지라도 $x=a$ 좌우에서 $f''(x)$ 의 부호가 바뀌지 않을 수도 있기 때문이다. 
 
-  $\therefore$ 변곡점을 확인하기 위하여 $f''(a)=0$ 인 점 좌우에서 $f''(x)$ 의 부호가 바뀌는지 확인해야 한다. 
+  $\therefore$ 변곡점을 확인하기 위하여 $f''(a)=0$ 인 점 좌우에서 $f''(x)$ 의 부호가 바뀌는지 확인해야 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-점근선(asymptote) : 곡선 위의 점이 특정 방향으로 진행하면서 일정한 직선에 한없이 가까워지지만 만나지는 않을 때 그 직선을 곡선의 점근선이라 한다. 
-
-</blockquote>
+    점근선(asymptote) : 곡선 위의 점이 특정 방향으로 진행하면서 일정한 직선에 한없이 가까워지지만 만나지는 않을 때 그 직선을 곡선의 점근선이라 한다.
 
 - 수직점근선(vertical asymptote) : $x$ 축에 수직인 점근선($y$축과 평행한 점근선) 이다. 
 
@@ -1131,27 +1045,25 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
     이면 $f(x)$ 의 그래프는 수평점근선 $x=a$ 을 갖는다. 
 
-- 사선점근선(oblique asymptote) : 직선 $y=x$ 에 평행한 점근선($y$축에 수직인 점근선)이다. 
+- 사선점근선(oblique asymptote) : 직선 $y=x$ 에 평행한 점근선($y$축에 수직인 점근선)이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-곡선의 추적 : 함수 $f(x)$ 의 그래프 개형을 다음의 요소를 통하여 추적할 수 있다. 
-
-1. 함수의 정의역과 치역 
-
-2. 그래프의 대칭성과 주기
-
-3. 좌표축과 교점($x$절편, $y$절편)
-
-4. 함수의 증가와 감소, 극대와 극소
-
-5. 곡선의 오목과 볼록, 변곡점
-
-6. $\lim_{x \to \infty} f(x), \lim_{x \to -\infty}$, 점근선
-
-7. 불연속인 점이나 미분가능하지 않은 점
-
-</blockquote>
+    곡선의 추적 : 함수 $f(x)$ 의 그래프 개형을 다음의 요소를 통하여 추적할 수 있다. 
+    
+    1. 함수의 정의역과 치역 
+    
+    2. 그래프의 대칭성과 주기
+    
+    3. 좌표축과 교점($x$절편, $y$절편)
+    
+    4. 함수의 증가와 감소, 극대와 극소
+    
+    5. 곡선의 오목과 볼록, 변곡점
+    
+    6. $\lim_{x \to \infty} f(x), \lim_{x \to -\infty}$, 점근선
+    
+    7. 불연속인 점이나 미분가능하지 않은 점
 
 # 로피탈의 정리 
 
@@ -1159,35 +1071,29 @@ $f''(x) < 0$ 이면 곡선 $y=f(x)$ 는 이 구간에서 위로 볼록(convex do
 
 # 테일러 급수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-테일러 전개(Taylor's Expansion) : 어떤 함수를 이해하고자 할 때 그 함수를 직접적으로 관찰하는 것이 어려울 경우 그 함수를 다항함수로 근사시켜서 쉽게 관찰하여 이해하고자 하는 방법이다. 
-
-</blockquote>
+    테일러 전개(Taylor's Expansion) : 어떤 함수를 이해하고자 할 때 그 함수를 직접적으로 관찰하는 것이 어려울 경우 그 함수를 다항함수로 근사시켜서 쉽게 관찰하여 이해하고자 하는 방법이다.
 
 - 테일러 전개란 함수를 다항함수로 근사시키는 것이라 하였다. 따라서 함수을 멱급수로 표현하게 되는데 그때 표현되는 급수를 테일러 급수라고 한다. 
 
 - 테일러 전개는 복잡한 함수를 이산적 계산만 가능한 컴퓨터에서 계산할 수 있도록 다항함수로 근사시킬 수 있다는 효용도 가지고 있다.
 
-  - 다항함수는 덧셈, 뺄셈으로만 계산 가능하기 때문이다. 
+  - 다항함수는 덧셈, 뺄셈으로만 계산 가능하기 때문이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-매끄러운 함수(smooth function) : 무한 번 미분 가능한 함수이다. 
+    매끄러운 함수(smooth function) : 무한 번 미분 가능한 함수이다.
 
-</blockquote>
+- $C ^{\infty}$ 함수로 표기하기도 한다.
 
-- $C ^{\infty}$ 함수로 표기하기도 한다. 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-테일러 급수(Taylor's Series) : $f(x)$ 가 무한 번 미분가능한 함수라 할 때 
-
-$$ f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a) ^{2} + \dots + \frac{f ^{(n)}(a)}{n!}(x-a) ^{n} + \dots = \sum_{n=0}^{\infty} \frac{f ^{(n)}(a)}{n!}(x-a) ^{n} $$
-
-라는 다항함수로 표현할 수 있고, 이를 $a$ 에서 $f(x)$ 의 테일러 급수라 한다. 
-
-</blockquote>
+    테일러 급수(Taylor's Series) : $f(x)$ 가 무한 번 미분가능한 함수라 할 때 
+    
+    $$ f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a) ^{2} + \dots + \frac{f ^{(n)}(a)}{n!}(x-a) ^{n} + \dots = \sum_{n=0}^{\infty} \frac{f ^{(n)}(a)}{n!}(x-a) ^{n} $$
+    
+    라는 다항함수로 표현할 수 있고, 이를 $a$ 에서 $f(x)$ 의 테일러 급수라 한다.
 
 - 증명 
 
@@ -1213,17 +1119,15 @@ $$ f(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a) ^{2} + \dots + \
 
   $$ \therefore  f(x) = f(a) + (x-a)f'(a)+\frac{(x-a)^2}{2!}f''(x) + \frac{(x-a)^3}{3!}f'''(t)+ \dots $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-매클로린 급수(Maclaurin Series) : 테일러 급수에서 $a=0$ 일 때, 즉 
-
-$$ f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x ^{2} + \dots + \frac{f ^{(n)}(0)}{n!}x ^{n} + \dots $$
-
-을 매클로린 급수라 한다. 
-
-</blockquote>
+    매클로린 급수(Maclaurin Series) : 테일러 급수에서 $a=0$ 일 때, 즉 
+    
+    $$ f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x ^{2} + \dots + \frac{f ^{(n)}(0)}{n!}x ^{n} + \dots $$
+    
+    을 매클로린 급수라 한다.
 
 - 예시 
 
@@ -1281,17 +1185,15 @@ $$ f(x) = f(0) + \frac{f'(0)}{1!}x + \frac{f''(0)}{2!}x ^{2} + \dots + \frac{f ^
 
   $$ e = 1 + 1 + \frac{1}{2!}+\frac{1}{3!}+\frac{1}{4!}+\dots = \sum_{n=0}^{\infty} \frac{1}{n!}$$
 
-  이므로 우변을 계속 더하면 $e$ 의 근사값을 얻을 수 있다. 
+  이므로 우변을 계속 더하면 $e$ 의 근사값을 얻을 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$n$차 테일러 다항식(nth Taylor Polynomial) : 함수 $f(x)$ 에 대하여 
-
-$$ T_n(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a) ^{2} + \dots + \frac{f ^{(n)}(a)}{n!}(x-a) ^{n} $$
-
-를 $a$ 에서 $f(x)$ 의 $n$ 차 테일러 다항식이라 한다. 
-
-</blockquote>
+    $n$차 테일러 다항식(nth Taylor Polynomial) : 함수 $f(x)$ 에 대하여 
+    
+    $$ T_n(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a) ^{2} + \dots + \frac{f ^{(n)}(a)}{n!}(x-a) ^{n} $$
+    
+    를 $a$ 에서 $f(x)$ 의 $n$ 차 테일러 다항식이라 한다.
 
 - 테일러 급수는 원래의 함수를 근사시킨 것이기에 오차가 존재한다. 그러면 몇 번 미분해야 
 
@@ -1333,25 +1235,23 @@ $$ T_n(x) = f(a) + \frac{f'(a)}{1!}(x-a) + \frac{f''(a)}{2!}(x-a) ^{2} + \dots +
 
   $n$차 테일러 다항식이 점차 원래 함수 $f(x)=e ^{x}$ 로 근사되는 것을 알 수 있다. 
 
-# 특수 함수의 미분 
+# 특수 함수의 미분
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-시그모이드 함수의 도함수 : 시그모이드 함수
-
-$$ \zeta _{a} (x) = \frac{1}{1 + \exp(-ax)} $$
-
-또는 
-
-$$ \zeta (x) = \frac{1}{1 + e ^{-ax}} $$
-
-의 도함수는 
-
-$$ \{\zeta _{a} (x)\}' = a\zeta _{a} (x)\{1 - \zeta _{a} (x)\} $$
-
-이다.
-
-</blockquote>
+    시그모이드 함수의 도함수 : 시그모이드 함수
+    
+    $$ \zeta _{a} (x) = \frac{1}{1 + \exp(-ax)} $$
+    
+    또는 
+    
+    $$ \zeta (x) = \frac{1}{1 + e ^{-ax}} $$
+    
+    의 도함수는 
+    
+    $$ \{\zeta _{a} (x)\}' = a\zeta _{a} (x)\{1 - \zeta _{a} (x)\} $$
+    
+    이다.
 
 - 간단하게 시그모이드 함수 $\zeta (x)$ 를 $s(x)$ 로 표현하여 
 
@@ -1395,41 +1295,37 @@ $$ \{\zeta _{a} (x)\}' = a\zeta _{a} (x)\{1 - \zeta _{a} (x)\} $$
 
   $$ \therefore \{\zeta _{a}(x)\}' = a \zeta _{a}(x)\{1-\zeta _{a}(x)\} $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-표준 시그모이드 함수의 도함수 : 시그모이드 함수의 도함수의 정의로부터 $a=1$ 일 때 
-
-$$ \{\zeta (x)\}' = \zeta (x) \{1 - \zeta (x)\} $$
-
-이다. 
-
-</blockquote>
+    표준 시그모이드 함수의 도함수 : 시그모이드 함수의 도함수의 정의로부터 $a=1$ 일 때 
+    
+    $$ \{\zeta (x)\}' = \zeta (x) \{1 - \zeta (x)\} $$
+    
+    이다.
 
 - 표준 시그모이드 함수의 도함수는 
 
   ![](https://taewanmerepo.github.io/2017/09/sigmoid/differential_sigmoid.jpg)
 
-  와 같이 그려진다. 최대값이 $0.25$ 이다. 
+  와 같이 그려진다. 최대값이 $0.25$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-시그모이드 함수의 이계도함수 : 시그모이드 함수
-
-$$ \zeta (x) = \frac{1}{1 + \exp(-x)} $$
-
-또는 
-
-$$ \zeta (x) = \frac{1}{1 + e ^{-x}} $$
-
-의 이계도함수는 
-
-$$ \{\zeta (x)\}'' = a ^{2} \zeta _{a}(x) \{1 - \zeta _{a}(x)\}\{1 - 2 \zeta _{a}(x)\}$$
-
-이다.
-
-</blockquote>
+    시그모이드 함수의 이계도함수 : 시그모이드 함수
+    
+    $$ \zeta (x) = \frac{1}{1 + \exp(-x)} $$
+    
+    또는 
+    
+    $$ \zeta (x) = \frac{1}{1 + e ^{-x}} $$
+    
+    의 이계도함수는 
+    
+    $$ \{\zeta (x)\}'' = a ^{2} \zeta _{a}(x) \{1 - \zeta _{a}(x)\}\{1 - 2 \zeta _{a}(x)\}$$
+    
+    이다.
 
 - 증명 
 
@@ -1463,32 +1359,25 @@ $$ \{\zeta (x)\}'' = a ^{2} \zeta _{a}(x) \{1 - \zeta _{a}(x)\}\{1 - 2 \zeta _{a
 
   이다. 
 
-- 시그모이드 함수는 인공지능에서 활성화 함수의 일종으로 신경망의 표현력을 높일 때 사용된다. 
+- 시그모이드 함수는 인공지능에서 활성화 함수의 일종으로 신경망의 표현력을 높일 때 사용된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-ReLU 함수 : ReLU 함수는 다음과 같이 정의된다. 
+    ReLU 함수 : ReLU 함수는 다음과 같이 정의된다. 
+    
+    $$ \phi (x) = \max (0, x) = \begin{cases} x &(x>0)\text{}\\ 0 &(x \leq 0)\text{}\\ \end{cases} $$
 
-$$ \phi (x) = \max (0, x) = \begin{cases} x &(x>0)\text{}\\ 0 &(x \leq 0)\text{}\\ \end{cases} $$
+- ReLU 함수는 인공지능에서 시그모이드 함수와 같이 활성화 함수로 사용된다.
 
-</blockquote>
+!!! note ""
 
-- ReLU 함수는 인공지능에서 시그모이드 함수와 같이 활성화 함수로 사용된다. 
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-ReLU 함수의 도함수 : ReLU 함수의 도함수는 
-
-$$ \phi ' (x) = \begin{cases} 1 &(x>0)\text{}\\ 0 &(x \leq 0)\text{}\\ \end{cases} $$
-
-이다. 
-
-</blockquote>
+    ReLU 함수의 도함수 : ReLU 함수의 도함수는 
+    
+    $$ \phi ' (x) = \begin{cases} 1 &(x>0)\text{}\\ 0 &(x \leq 0)\text{}\\ \end{cases} $$
+    
+    이다.
 
 - 인공지능에서 오차역전파를 할 때 표준 시그모이드 함수의 미분의 최대값이 $0.25$ 라서 오차 전파가 어려운 경우가 있다. 이 상황을 기울기 소실(vanishing gradient) 문제라 한다. 
 
-  이때 ReLU 함수를 사용하면 되는데 ReLU 함수의 미분은 $0$ 또는 $1$ 의 값을 갖기 때문이다. 이는 기울기 소실 문제를 해결하는데 도움을 준다. 
-
-
-
+  이때 ReLU 함수를 사용하면 되는데 ReLU 함수의 미분은 $0$ 또는 $1$ 의 값을 갖기 때문이다. 이는 기울기 소실 문제를 해결하는데 도움을 준다.
 

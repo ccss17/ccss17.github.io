@@ -1,35 +1,9 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-## **미적분 메모**
-
-**[극한 메모](https://ccss17.github.io/calculus.html)**
-
-**[미분 메모](https://ccss17.github.io/calculus2.html)**
-
-**[적분 메모](https://ccss17.github.io/calculus3.html)**
-
-**[미분2 메모](https://ccss17.github.io/calculus4.html)**
-
-**[적분2 메모](https://ccss17.github.io/calculus5.html)**
-
-**[벡터해석학 메모](https://ccss17.github.io/vector.html)**
-
-**[미적분 메모](https://ccss17.github.io/calculus6.html)**
-
-</blockquote>
-
-# 미분 메모
-
----
-
 # 미적분학 Calculus 
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-미적분학(Calculus) : 수학의 한 분야로 극한, 함수, 미분, 적분, 무한급수를 다루는 학문이다. 
+!!! note ""
 
-</blockquote>
+    미적분학(Calculus) : 수학의 한 분야로 극한, 함수, 미분, 적분, 무한급수를 다루는 학문이다.
 
 - 미적분학은 속도나 가속도 같이 일정하게 변하는 대상들의 양의 값을 구한다.
 
@@ -67,11 +41,9 @@
 
 # 미분
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-미분(derivative) : 특정 함수의 어떤 지점에서의 접선(또는 접평면)을 구하는 연산이다. 
-
-</blockquote>
+    미분(derivative) : 특정 함수의 어떤 지점에서의 접선(또는 접평면)을 구하는 연산이다.
 
 - 즉 복잡한 함수를 선형근사시켜서 파악하려는 것이 미분이다. 따라서 미분은 선형사상이다.
 
@@ -87,25 +59,21 @@
 
   - 자연 대상을 수학적 대상물로 사상시킨 다음 그것을 한 가지 속성으로 추상화 시키고 그 속성이 변하는 변화율을 구하는 것이 수학적으로 사상된 게 기울기를 구하는 미분인 것이다. 
 
-  - 자연 대상을 한 가지 속성과 한 가지 관점으로 추상화시킨 것이 "수" 라는 수학적 대상물로 사상되기 때문에 이런 일이 가능한 것이다. 
+  - 자연 대상을 한 가지 속성과 한 가지 관점으로 추상화시킨 것이 "수" 라는 수학적 대상물로 사상되기 때문에 이런 일이 가능한 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-증분(increment) : 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $b$ 까지 변할 때, $x$ 의 값의 변화량 $b-a$ 를 $x$ 의 증분, $y$ 값의 변화량 $f(b) - f(a)$ 를 $y$ 의 증분이라 한다. 
+    증분(increment) : 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $b$ 까지 변할 때, $x$ 의 값의 변화량 $b-a$ 를 $x$ 의 증분, $y$ 값의 변화량 $f(b) - f(a)$ 를 $y$ 의 증분이라 한다.
 
-</blockquote>
+- $x$ 의 증분과 $y$ 의 증분을 각각 $\Delta x$, $\Delta y$ 로 표현한다.
 
-- $x$ 의 증분과 $y$ 의 증분을 각각 $\Delta x$, $\Delta y$ 로 표현한다. 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-평균변화율(average rate of change) : 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $b$ 까지 변할 때의 평균변화율은
-
-$$ \frac{\Delta y}{\Delta x} = \frac{f(b)-f(a)}{b-a} = \frac{f(a+\Delta x)-f(a)}{\Delta x} $$
-
-이다.
-
-</blockquote>
+    평균변화율(average rate of change) : 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $b$ 까지 변할 때의 평균변화율은
+    
+    $$ \frac{\Delta y}{\Delta x} = \frac{f(b)-f(a)}{b-a} = \frac{f(a+\Delta x)-f(a)}{\Delta x} $$
+    
+    이다.
 
 - 그러니까 $x$ 가 $a$ 에서 $b$ 까지 변할 때의 변화량은 $1$ 변했을 때 $y$ 가 $\frac{\Delta y}{\Delta x}$ 만큼 변한 셈이라는 뜻이다. 
 
@@ -121,17 +89,15 @@ $$ \frac{\Delta y}{\Delta x} = \frac{f(b)-f(a)}{b-a} = \frac{f(a+\Delta x)-f(a)}
 
     $$ \frac{\Delta y}{\Delta x} = \frac{f(2) - f(0)}{2 - 0} = \frac{(2^2+2)-2}{2} = 2 $$
 
-    이다. 이는 $x$ 가 $1$ 변할 때 $y$ 가 평균적으로 $2$ 변했다는 뜻이다. 
+    이다. 이는 $x$ 가 $1$ 변할 때 $y$ 가 평균적으로 $2$ 변했다는 뜻이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-미분계수(derivative) 또는 순간변화율(instantaneous rate of change) : 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $a+\Delta x$ 까지 변할 때의 평균변화율 $\frac{\Delta y}{\Delta x}$ 에서 $\Delta x \to 0$ 일 때의 극한값, 즉
-
-$$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(a+\Delta x)-f(a)}{\Delta x} = f'(a) $$
-
-가 존재할 때, 이 극한값을 함수 $y=f(x)$ 의 $x=a$ 에서의 미분계수(또는 순간변화율) 이라 한다. 
-
-</blockquote>
+    미분계수(derivative) 또는 순간변화율(instantaneous rate of change) : 함수 $y=f(x)$ 에서 $x$ 의 값이 $a$ 에서 $a+\Delta x$ 까지 변할 때의 평균변화율 $\frac{\Delta y}{\Delta x}$ 에서 $\Delta x \to 0$ 일 때의 극한값, 즉
+    
+    $$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(a+\Delta x)-f(a)}{\Delta x} = f'(a) $$
+    
+    가 존재할 때, 이 극한값을 함수 $y=f(x)$ 의 $x=a$ 에서의 미분계수(또는 순간변화율) 이라 한다.
 
 - $x-a=\Delta x$ 로 $\Delta x$ 를 풀어서 다음과 같이 나타낼 수도 있다. 
 
@@ -195,11 +161,9 @@ $$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac
 
 # 미분 가능성
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-미분 가능한 함수 : 함수 $f(x)$ 의 $x=a$ 에서의 미분계수 $f'(a)$ 가 존재할 때, 함수 $f(x)$ 는 $x=a$ 에서 미분가능하다고 한다. 
-
-</blockquote>
+    미분 가능한 함수 : 함수 $f(x)$ 의 $x=a$ 에서의 미분계수 $f'(a)$ 가 존재할 때, 함수 $f(x)$ 는 $x=a$ 에서 미분가능하다고 한다.
 
 - 미분가능하다는 것은 미분계수가 존재한다는 것이다. 그런데 미분계수란 평균변화율의 극한값에 불과하다. 따라서 미분계수가 존재한다는 것은 평균변화율의 우극한과 좌극한이 같다는 것이다.
 
@@ -207,13 +171,11 @@ $$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac
 
 - 일반적으로 함수 $f(x)$ 가 구간에 속하는 모든 $x$ 에 대하여 미분가능할 때, 함수 $f(x)$ 는 그 구간에서 미분가능하다고 한다.
 
-- 또한 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여, 즉 개구간 $(\infty, -\infty)$ 에서 미분가능할 때, 함수 $f(x)$ 를 미분가능한 함수라고 한다. 
+- 또한 함수 $f(x)$ 가 모든 실수 $x$ 에 대하여, 즉 개구간 $(\infty, -\infty)$ 에서 미분가능할 때, 함수 $f(x)$ 를 미분가능한 함수라고 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-미분가능성과 함수의 연속 : 함수 $f(x)$ 가 $x=a$ 에서 미분가능하면 $f(x)$ 는 $x=a$ 에서 연속이다.
-
-</blockquote>
+    미분가능성과 함수의 연속 : 함수 $f(x)$ 가 $x=a$ 에서 미분가능하면 $f(x)$ 는 $x=a$ 에서 연속이다.
 
 - 그러나 그 역은 일반적으로 성립하지 않는다. 
 
@@ -263,13 +225,11 @@ $$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac
 
 - 위 예시로 불연속이 점, 뾰족한 점에서 접선을 그릴 수 없으므로(좌미분계수와 우미분계수가 다르므로) 미분계수가 존재하지 않는다, 즉 미분 불가능하다는 것을 이해하였다. 그러므로 연속이어도 미분 불가능(뾰족한 점일경우)할 수 있다.
 
-# 도함수 
+# 도함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-도함수(derivatives, derived function, derivative of a function) : 미분가능한 함수 $y=f(x)$ 의 정의역의 각 원소 $x$ 에 미분계수 $f'(x)$ 를 대응시켜 만든 새로운 함수를 함수 $y=f'(x)$ 의 도함수라 한다. 
-
-</blockquote>
+    도함수(derivatives, derived function, derivative of a function) : 미분가능한 함수 $y=f(x)$ 의 정의역의 각 원소 $x$ 에 미분계수 $f'(x)$ 를 대응시켜 만든 새로운 함수를 함수 $y=f'(x)$ 의 도함수라 한다.
 
 - 이미 언급했지만 함수 $y=f(x)$ 가 어떤 구간에 대한 명시가 없이 단순히 "미분가능하다" 라고 하면 개구간 $(\infty, -\infty)$ 에서, 즉 실수 범위에서 미분가능하다는 것이다. 
 
@@ -341,13 +301,11 @@ $$ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac
 
   - 또 그 계산법을 미분법이라 한다. 
 
-## 여러가지 함수의 도함수 
+## 여러가지 함수의 도함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 정수일 때, $y' = f'(x) = nx ^{n-1}$ 
-
-</blockquote>
+    $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 정수일 때, $y' = f'(x) = nx ^{n-1}$
 
 - 증명 
 
@@ -359,13 +317,11 @@ $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 정수일 때, $y' = 
 
   $$ = \sum_{k=1}^{n}x ^{n-1} = nx ^{n-1} $$
 
-- $x^n$ 이 계속해서 $nx ^{n-1}$ 만큼 변화한다는 것이다. 
+- $x^n$ 이 계속해서 $nx ^{n-1}$ 만큼 변화한다는 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-상수 함수 $y = c$ 의 도함수 : $y'=0$ 
-
-</blockquote>
+    상수 함수 $y = c$ 의 도함수 : $y'=0$
 
 - 증명
 
@@ -379,25 +335,21 @@ $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 정수일 때, $y' = 
 
   $$ f'(x) = c \times 0 \times x ^{-1} = 0$$
 
-- 상수함수는 변하지 않고 일정하기 때문에 그것의 변화량을 보여주는 도함수가 $0$ 인 것을 직관적으로 이해할 수 있다. 
+- 상수함수는 변하지 않고 일정하기 때문에 그것의 변화량을 보여주는 도함수가 $0$ 인 것을 직관적으로 이해할 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-상수배 함수 $y =cf(x)$ 의 도함수 : $y' = cf'(x)$
-
-</blockquote>
+    상수배 함수 $y =cf(x)$ 의 도함수 : $y' = cf'(x)$
 
 - 증명
 
   $$ \{cf(x)\}' = \lim_{h \to 0} \frac{cf(x+h)-cf(x)}{h} = c \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = cf'(x) $$
 
-- 어떤 함수에 실수배를 하면 그 변화율이 정확히 실수배 된다는 것을 것을 알 수 있다. 
+- 어떤 함수에 실수배를 하면 그 변화율이 정확히 실수배 된다는 것을 것을 알 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-합차 함수 $y=f(x)\pm g(x)$ 의 도함수 : $y'=f'(x)\pm g'(x)$
-
-</blockquote>
+    합차 함수 $y=f(x)\pm g(x)$ 의 도함수 : $y'=f'(x)\pm g'(x)$
 
 - 증명
 
@@ -409,13 +361,11 @@ $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 정수일 때, $y' = 
 
   $$ = f'(x)+g'(x) $$
 
-- 이를 통해 함수의 합과 차의 도함수는 각각의 함수의 도함수를 합과 차와 동일하다는 것을 알 수 있다. 
+- 이를 통해 함수의 합과 차의 도함수는 각각의 함수의 도함수를 합과 차와 동일하다는 것을 알 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-곱 함수 $y=f(x)g(x)$ 의 도함수 : $y'=f'(x)g(x)+f(x)g'(x)$
-
-</blockquote>
+    곱 함수 $y=f(x)g(x)$ 의 도함수 : $y'=f'(x)g(x)+f(x)g'(x)$
 
 - 증명
 
@@ -431,11 +381,9 @@ $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 정수일 때, $y' = 
 
 #### 연쇄법칙(Chain Rule)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-합성함수 $y=g(f(x))$ 의 도함수(연쇄법칙, Chain Rule) : $y' = g'(f(x))f'(x)$
-
-</blockquote>
+    합성함수 $y=g(f(x))$ 의 도함수(연쇄법칙, Chain Rule) : $y' = g'(f(x))f'(x)$
 
 - 여러 개의 함수를 미분할 때 고리로 연결된 것처럼 연속적으로 작용한다는 형상에서 착안하여 합성함수의 미분법을 연쇄법칙(Chain Rule) 이라고도 한다. 
 
@@ -563,19 +511,17 @@ $n$ 차 단항 함수 $y = x ^{n}$ 의 도함수 : $n$ 이 정수일 때, $y' = 
 
   $$ \therefore \frac{d}{dx} y ^{2} = 2y \circ y' $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 $y=f(x)$ 에 대한 제곱 함수 $y ^{n} = \{f(x)\} ^{n}$ 의 도함수 : 
-
-$$[\{f(x)\} ^{n}]' = n \{f(x)\} ^{n-1}f'(x) $$
-
-또는
-
-$$(y ^{n})' = \frac{d}{dx}y ^{n} = n y ^{n-1}y' $$
-
-</blockquote>
+    함수 $y=f(x)$ 에 대한 제곱 함수 $y ^{n} = \{f(x)\} ^{n}$ 의 도함수 : 
+    
+    $$[\{f(x)\} ^{n}]' = n \{f(x)\} ^{n-1}f'(x) $$
+    
+    또는
+    
+    $$(y ^{n})' = \frac{d}{dx}y ^{n} = n y ^{n-1}y' $$
 
 - 증명 (합성함수의 도함수로)
 
@@ -635,15 +581,13 @@ $$(y ^{n})' = \frac{d}{dx}y ^{n} = n y ^{n-1}y' $$
 
   $$ (y ^{2})' = \frac{d}{dx}y ^{2} = 2 y \circ y' $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-몫 함수 $y = \frac{1}{f(x)}$ 의 미분법 : 몫 함수 $y = \frac{1}{f(x)}(f(x) \neq 0)$ 의 도함수는 다음과 같다. 
-
-$$ \{\frac{1}{f(x)}\}' = - \frac{f'(x)}{\{f(x)\}^{2}} $$
-
-</blockquote>
+    몫 함수 $y = \frac{1}{f(x)}$ 의 미분법 : 몫 함수 $y = \frac{1}{f(x)}(f(x) \neq 0)$ 의 도함수는 다음과 같다. 
+    
+    $$ \{\frac{1}{f(x)}\}' = - \frac{f'(x)}{\{f(x)\}^{2}} $$
 
 - 증명 
 
@@ -659,15 +603,13 @@ $$ \{\frac{1}{f(x)}\}' = - \frac{f'(x)}{\{f(x)\}^{2}} $$
 
     $$ y' = -\frac{f'(x)}{\{f(x)\}^{2}} $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-분수 함수 $y = \frac{f(x)}{g(x)}$ 의 미분법 : 몫 함수 $y = \frac{f(x)}{g(x)}(g(x) \neq 0)$ 의 도함수는 다음과 같다. 
-
-$$ \{\frac{f(x)}{g(x)}\}' = \frac{f'(x)g(x)-f(x)g'(x)}{\{g(x)\} ^{2}} $$
-
-</blockquote>
+    분수 함수 $y = \frac{f(x)}{g(x)}$ 의 미분법 : 몫 함수 $y = \frac{f(x)}{g(x)}(g(x) \neq 0)$ 의 도함수는 다음과 같다. 
+    
+    $$ \{\frac{f(x)}{g(x)}\}' = \frac{f'(x)g(x)-f(x)g'(x)}{\{g(x)\} ^{2}} $$
 
 - 증명 
 
@@ -683,21 +625,19 @@ $$ \{\frac{f(x)}{g(x)}\}' = \frac{f'(x)g(x)-f(x)g'(x)}{\{g(x)\} ^{2}} $$
 
   $$ \therefore y' = \frac{f'(x)g(x) - f(x)g'(x)}{\{g(x)\} ^{2}} $$
 
-## 도함수의 활용 
+## 도함수의 활용
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-접선의 방정식 : 함수 $f(x)$ 가 $x=a$ 에서 미분가능할 때, 곡선 $y=f(x)$ 위의 점 $(a, f(a))$ 에서의 접선의 기울기가 $f'(a)$ 이므로 이 점에서 접선의 방정식은 다음과 같다. 
+    접선의 방정식 : 함수 $f(x)$ 가 $x=a$ 에서 미분가능할 때, 곡선 $y=f(x)$ 위의 점 $(a, f(a))$ 에서의 접선의 기울기가 $f'(a)$ 이므로 이 점에서 접선의 방정식은 다음과 같다. 
+    
+    $$ y - f(a) = - \frac{1}{f'(a)}(x-a) (단, f'(a) \neq 0)$$
 
-$$ y - f(a) = - \frac{1}{f'(a)}(x-a) (단, f'(a) \neq 0)$$
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-접선의 방정식을 특정하는 $2$ 가지 유형 
-
-</blockquote>
+    접선의 방정식을 특정하는 $2$ 가지 유형
 
 - 두 점 또는 한 점과 기울기로 직선을 결정할 수 있기 때문에 $2$ 가지 유형이다.
 
@@ -715,63 +655,59 @@ $$ y - f(a) = - \frac{1}{f'(a)}(x-a) (단, f'(a) \neq 0)$$
 
     - $y-f(a) = f'(a)(x-a)$ 에 $(x_1, y_1)$ 를 대입하여 미지수 $a$ 를 구한다. 
 
-    - $y - f(a) = f'(a)(x-a)$ 로 접선의 방정식을 구한다. 
+    - $y - f(a) = f'(a)(x-a)$ 로 접선의 방정식을 구한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-매개변수로 나타낸 곡선의 접선의 방정식 
+    매개변수로 나타낸 곡선의 접선의 방정식 
+    
+    **(구체화 필요)**
 
-**(구체화 필요)**
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-음함수로 나타낸 곡선의 접선의 방정식 
+    음함수로 나타낸 곡선의 접선의 방정식 
+    
+    **(구체화 필요)**
 
-**(구체화 필요)**
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-실근의 근사값 구하기(뉴턴의 방법) : 뉴턴은 기하학적 아이디어로 실근의 근사값을 구하는 알고리즘을 고안했고 그 생각을 수학적으로 엄밀하게 정의한 것은 다음과 같다. 
-
-> 이처럼 기하학적 아이디어, 즉 어떤 대상을 동적으로 움직이며 상상하여 목적을 이루는 것은 알고리즘이 되고 그것을 수학적으로 엄밀하게 정의할 수 있다. 그리고 곧바로 코드로 쓸 수 있다. 
-
-함수 $f(x)$ 가 개구간 $(a, b)$ 에서 미분가능하고, 방정식 $f(x) = 0$ 의 실근 $x=r$ 가 이 구간에 $1$ 개 있고 구간 안의 모든 $x$ 에 대하여 $f'(x) \neq 0$ 이라고 하자. 
-
-  - 함수 $f(x)$ 가 다항함수일 때 $f'(x) = 0$ 을 만족시키는 $x$ 의 값을 기준으로 구간을 나누면 각 구간에는 실근 $f(x)=0$ 이 존재하는 $1$ 개 또는 $0$ 개 존재한다. 이때 실근이 존재하는 구간을 선택하면 이 전제조건이 만족된다. 
-
-  ![](https://mblogthumb-phinf.pstatic.net/20140504_144/dydrogud22_1399170275775e2xeG_JPEG/%C1%A6%B8%F1_%BE%F8%C0%BD.jpg?type=w2)
-
-위 그림과 같이 개구간 $(a, b)$ 내에서 실근 $r$ 로 추정되는 값 $x_0$ 을 무작위로 잡는다. 그리고 $x_0$ 에서의 접선을 구하고 그 접선에서의 $x$ 절편 $x_1$ 을 구한다. 그러면 다시 $x_1$ 에서의 접선을 구하고 그 접선에서의 $x$ 절편 $x_2$ 를 구한다. 이 과정을 반복하면 $x_n$ 이 $x _{n-1}$ ($n$ 은 자연수) 보다 $r$ 에 더 가까워진다는 것을 시각적으로 확인할 수 있다. 
-
-이것을 수식으로 표현하자. 함수 $y = f(x)$ 위의 어떤 점 $P(x_n,f(x_n))$ 에서의 접선의 방정식은 다음과 같다. 
-
-  $$ y - f(x_n) = f'(x_n) (x-x_n) $$
-
-이 접선의 $x$ 절편을 $x _{n+1}$ 이라 하면 이 접선이 점 $(x _{n+1}, 0)$ 을 지나기 때문에 
-
-  $$ x _{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} $$
-
-이 성립한다. 이제 이 연산을 계속해서 $x _{n+1}$ 을 실근에 근사시켜야 하는데, 이때 분모는 $0$ 이 되면 안되기에 $f'(x) \neq 0$ 이어야 한다. 따라서 이것을 만족시키는 수열 $\{x_n\}$ 을 구하면
-
-  $$ \lim_{n \to \infty} x_n = r $$
-
-이 성립한다. 
-
-> 이것은 극한이 한없이 가까워진다는 자연 대상을 수학적으로 추상화시켰다는 것에서 착안하여 $x$ 절편이 실근으로 한없이 가까워지는 알고리즘을 고안하여 그것을 수학의 형식 언어로 바꾼 것이다. 그리고 이것은 코드로 자동화 가능하다. 
-
-</blockquote>
+    실근의 근사값 구하기(뉴턴의 방법) : 뉴턴은 기하학적 아이디어로 실근의 근사값을 구하는 알고리즘을 고안했고 그 생각을 수학적으로 엄밀하게 정의한 것은 다음과 같다. 
+    
+    > 이처럼 기하학적 아이디어, 즉 어떤 대상을 동적으로 움직이며 상상하여 목적을 이루는 것은 알고리즘이 되고 그것을 수학적으로 엄밀하게 정의할 수 있다. 그리고 곧바로 코드로 쓸 수 있다. 
+    
+    함수 $f(x)$ 가 개구간 $(a, b)$ 에서 미분가능하고, 방정식 $f(x) = 0$ 의 실근 $x=r$ 가 이 구간에 $1$ 개 있고 구간 안의 모든 $x$ 에 대하여 $f'(x) \neq 0$ 이라고 하자. 
+    
+      - 함수 $f(x)$ 가 다항함수일 때 $f'(x) = 0$ 을 만족시키는 $x$ 의 값을 기준으로 구간을 나누면 각 구간에는 실근 $f(x)=0$ 이 존재하는 $1$ 개 또는 $0$ 개 존재한다. 이때 실근이 존재하는 구간을 선택하면 이 전제조건이 만족된다. 
+    
+      ![](https://mblogthumb-phinf.pstatic.net/20140504_144/dydrogud22_1399170275775e2xeG_JPEG/%C1%A6%B8%F1_%BE%F8%C0%BD.jpg?type=w2)
+    
+    위 그림과 같이 개구간 $(a, b)$ 내에서 실근 $r$ 로 추정되는 값 $x_0$ 을 무작위로 잡는다. 그리고 $x_0$ 에서의 접선을 구하고 그 접선에서의 $x$ 절편 $x_1$ 을 구한다. 그러면 다시 $x_1$ 에서의 접선을 구하고 그 접선에서의 $x$ 절편 $x_2$ 를 구한다. 이 과정을 반복하면 $x_n$ 이 $x _{n-1}$ ($n$ 은 자연수) 보다 $r$ 에 더 가까워진다는 것을 시각적으로 확인할 수 있다. 
+    
+    이것을 수식으로 표현하자. 함수 $y = f(x)$ 위의 어떤 점 $P(x_n,f(x_n))$ 에서의 접선의 방정식은 다음과 같다. 
+    
+      $$ y - f(x_n) = f'(x_n) (x-x_n) $$
+    
+    이 접선의 $x$ 절편을 $x _{n+1}$ 이라 하면 이 접선이 점 $(x _{n+1}, 0)$ 을 지나기 때문에 
+    
+      $$ x _{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} $$
+    
+    이 성립한다. 이제 이 연산을 계속해서 $x _{n+1}$ 을 실근에 근사시켜야 하는데, 이때 분모는 $0$ 이 되면 안되기에 $f'(x) \neq 0$ 이어야 한다. 따라서 이것을 만족시키는 수열 $\{x_n\}$ 을 구하면
+    
+      $$ \lim_{n \to \infty} x_n = r $$
+    
+    이 성립한다. 
+    
+    > 이것은 극한이 한없이 가까워진다는 자연 대상을 수학적으로 추상화시켰다는 것에서 착안하여 $x$ 절편이 실근으로 한없이 가까워지는 알고리즘을 고안하여 그것을 수학의 형식 언어로 바꾼 것이다. 그리고 이것은 코드로 자동화 가능하다.
 
 # 롤의 정리, 평균값 정리
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-롤의 정리 : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속이고 개구간 $(a, b)$ 에서 미분가능할 때, $f(a) = f(b)$ 이면 $f'(c) = 0$ 인 $c$ 가 개구간 $(a, b)$ 에 적어도 하나 존재한다. 
-
-</blockquote>
+    롤의 정리 : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속이고 개구간 $(a, b)$ 에서 미분가능할 때, $f(a) = f(b)$ 이면 $f'(c) = 0$ 인 $c$ 가 개구간 $(a, b)$ 에 적어도 하나 존재한다.
 
 - 기하적으로 양 끝의 함수값이 서로 같은 구간에 $x$ 축과 평행하는 수평선이 하나 이상 존재한다는 정리이다. 
 
@@ -813,17 +749,15 @@ $$ y - f(a) = - \frac{1}{f'(a)}(x-a) (단, f'(a) \neq 0)$$
 
       위와 비슷한 과정으로 $f'(c) = 0$ 임을 보일 수 있다. 
 
-- 위에서 단순화 시킨 모든 대상들에서 공통적으로 $f'(c) = 0$ 이 존재한다. 따라서 단순화된 개별적인 대상들을 일반화시켜 롤의 정리로 만든다. 
+- 위에서 단순화 시킨 모든 대상들에서 공통적으로 $f'(c) = 0$ 이 존재한다. 따라서 단순화된 개별적인 대상들을 일반화시켜 롤의 정리로 만든다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-평균값 정리 : 함수가 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속이고 개구간 $(a, b)$ 에서 미분가능하면
-
-$$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
-
-인 $c$ 가 개구간 $(a,b)$ 에 적어도 하나 존재한다. 
-
-</blockquote>
+    평균값 정리 : 함수가 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속이고 개구간 $(a, b)$ 에서 미분가능하면
+    
+    $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
+    
+    인 $c$ 가 개구간 $(a,b)$ 에 적어도 하나 존재한다.
 
 - 다음 그림과 같이 기하적으로 어떤 폐구간에서 정의된 연속 함수 $f(x)$ 의 양끝점으로 결정된 직선의 기울기 $\frac{f(b)-f(a)}{b-a}$ 와 기울기가 같은 함수 $f(x)$ 의 접선이 하나 이상 존재한다는 의미이다. 
 
@@ -853,41 +787,39 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
   $$ f'(c) = \frac{f(b)-f(a)}{b-a} $$
 
-  인 것을 알 수 있다. 
+  인 것을 알 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-평균값 정리의 따름정리 : 평균값 정리를 통하여 곧바로 유도할 수 있는 중요한 정리가 있다. 
-
-1. 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속이고 개구간 $(a, b)$ 에서 미분가능하며, 개구간 $(a, b)$ 의 모든 $x$ 에 대하여 $f'(x) = 0$ 이면 함수 $f(x)$ 는 폐구간 $[a, b]$ 에서 상수함수이다. 
-
-    - 반개구간 $(a, b]$ ($x=a$ 이면 평균값 정리의 수식이 성립하지 않으므로 구간에서 제외한다) 에 속하는 임의의 값을 $x$ 라 하면 평균값 정리에 의하여 
-
-        $$ \frac{f(x)-f(a)}{x-a} = f'(c) $$
-
-      인 $c$ 가 개구간 $(a, x)$ 에 적어도 하나 존재한다. 그런데 $f'(x) = 0$ 이므로 
-
-        $$ \frac{f(x)-f(a)}{x-a} = 0 \therefore f(x) = f(a) $$
-
-      이다. 그런데 $f(a)$ 는 상수이므로 함수 $f(x)$ 는 폐구간 $[a, b]$ 에서 상수함수이다. 
-
-2. 두 함수 $f(x), g(x)$ 가 폐구간 $[a, b]$ 에서 연속이고 개구간 $(a, b)$ 에서 미분가능하며, 개구간 $(a, b)$ 의 모든 $x$ 에 대하여 $f'(x) = g'(x)$ 이면 $f(x) = g(x) + C$ ($C$ 는 상수) 이다.
-
-    - 함수 $h(x) = f(x) - g(x)$ 를 생각하자. 반개구간 $(a, b]$ 에 속하는 임의의 값을 $x$ 라 하면 
-
-        $$ h'(x) = f'(x) - g'(x) = g'(x) - g'(x) = 0 (\because f'(x) = g'(x)) $$
-
-      이므로 함수 $h(x)$ 는 따름정리 $1$ 을 만족한다. 따라서 함수 $h(x) = C$($C$ 는 상수) 로 상수함수이다. 그런데 
-
-        $$ h(x) = f(x) - g(x) $$
-
-      이므로 
-
-        $$ \therefore f(x) = g(x) + h(x) = g(x) + C $$
-
-      이다. 
-
-</blockquote>
+    평균값 정리의 따름정리 : 평균값 정리를 통하여 곧바로 유도할 수 있는 중요한 정리가 있다. 
+    
+    1. 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속이고 개구간 $(a, b)$ 에서 미분가능하며, 개구간 $(a, b)$ 의 모든 $x$ 에 대하여 $f'(x) = 0$ 이면 함수 $f(x)$ 는 폐구간 $[a, b]$ 에서 상수함수이다. 
+    
+        - 반개구간 $(a, b]$ ($x=a$ 이면 평균값 정리의 수식이 성립하지 않으므로 구간에서 제외한다) 에 속하는 임의의 값을 $x$ 라 하면 평균값 정리에 의하여 
+    
+            $$ \frac{f(x)-f(a)}{x-a} = f'(c) $$
+    
+          인 $c$ 가 개구간 $(a, x)$ 에 적어도 하나 존재한다. 그런데 $f'(x) = 0$ 이므로 
+    
+            $$ \frac{f(x)-f(a)}{x-a} = 0 \therefore f(x) = f(a) $$
+    
+          이다. 그런데 $f(a)$ 는 상수이므로 함수 $f(x)$ 는 폐구간 $[a, b]$ 에서 상수함수이다. 
+    
+    2. 두 함수 $f(x), g(x)$ 가 폐구간 $[a, b]$ 에서 연속이고 개구간 $(a, b)$ 에서 미분가능하며, 개구간 $(a, b)$ 의 모든 $x$ 에 대하여 $f'(x) = g'(x)$ 이면 $f(x) = g(x) + C$ ($C$ 는 상수) 이다.
+    
+        - 함수 $h(x) = f(x) - g(x)$ 를 생각하자. 반개구간 $(a, b]$ 에 속하는 임의의 값을 $x$ 라 하면 
+    
+            $$ h'(x) = f'(x) - g'(x) = g'(x) - g'(x) = 0 (\because f'(x) = g'(x)) $$
+    
+          이므로 함수 $h(x)$ 는 따름정리 $1$ 을 만족한다. 따라서 함수 $h(x) = C$($C$ 는 상수) 로 상수함수이다. 그런데 
+    
+            $$ h(x) = f(x) - g(x) $$
+    
+          이므로 
+    
+            $$ \therefore f(x) = g(x) + h(x) = g(x) + C $$
+    
+          이다.
 
 - 따름정리 $2$ 는 도함수가 같은 함수는 상수항 정도의 차이만 가진다는 것을 의미한다. 
 
@@ -895,13 +827,11 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
   - 또한 따름정리 $2$ 는 도함수가 같다고 해서 원래 함수와 같은 것은 아니라는 것을 말해준다. 
 
-# 함수의 증가와 감소 
+# 함수의 증가와 감소
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수의 증가 : 함수 $f(x)$ 가 어떤 구간에 속하는 임의의 두 실수 $a, b$ 에 대하여 $a < b$ 일 때 $f(a) < f(b)$ 이면 $f(x)$ 는 이 구간에서 증가한다고 한다. 
-
-</blockquote>
+    함수의 증가 : 함수 $f(x)$ 가 어떤 구간에 속하는 임의의 두 실수 $a, b$ 에 대하여 $a < b$ 일 때 $f(a) < f(b)$ 이면 $f(x)$ 는 이 구간에서 증가한다고 한다.
 
 - 직관적으로 $x$ 값이 커질 때 $f(x)$ 가 커지면 함수는 증가한다는 것을 알 수 있다. 
 
@@ -917,13 +847,11 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
     $$ f (2-h) < f(2)< f (2+h) $$
 
-  가 성립하므로 함수 $f(x) = x^2$ 는 $x=2$ 에서 증가상태에 있다. 
+  가 성립하므로 함수 $f(x) = x^2$ 는 $x=2$ 에서 증가상태에 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수의 감소 : 함수 $f(x)$ 가 어떤 구간에 속하는 임의의 두 실수 $a, b$ 에 대하여 $a < b$ 일 때 $f(a) > f(b)$ 이면 $f(x)$ 는 이 구간에서 감소한다고 한다. 
-
-</blockquote>
+    함수의 감소 : 함수 $f(x)$ 가 어떤 구간에 속하는 임의의 두 실수 $a, b$ 에 대하여 $a < b$ 일 때 $f(a) > f(b)$ 이면 $f(x)$ 는 이 구간에서 감소한다고 한다.
 
 - 직관적으로 $x$ 값이 커질 때 $f(x)$ 가 작아지면 함수는 증가한다는 것을 알 수 있다. 
 
@@ -931,13 +859,11 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
     $$ f (a-h) > f(a)> f (a+h) $$
 
-  가 성립하면 함수 $f(x)$ 가 $x=a$ 에서 감소상태에 있다고 한다. 
+  가 성립하면 함수 $f(x)$ 가 $x=a$ 에서 감소상태에 있다고 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수의 증가의 판정 : 함수 $f(x)$ 가 어떤 개구간에서 미분가능할 때, 이 구간의 모든 $x$ 에 대하여 $f'(x) > 0$ 이면 $f(x)$ 는 이 구간에서 증가한다.
-
-</blockquote>
+    함수의 증가의 판정 : 함수 $f(x)$ 가 어떤 개구간에서 미분가능할 때, 이 구간의 모든 $x$ 에 대하여 $f'(x) > 0$ 이면 $f(x)$ 는 이 구간에서 증가한다.
 
 - 함수 $f(x)$ 가 어떤 구간에서 증가하면 이 구간의 모든 $x$ 에 대하여 $f'(x) \geq 0$ 이다. 
 
@@ -997,25 +923,21 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
   이므로 $a<b$ 일 때 $f(a) < f(b)$ 이다. 이것으로 함수 $f(x)$ 는 이 구간에서 증가한다는 것이 참임을 증명하였다. 
 
-  > 이제 우리는 이 증명으로 증가하는 것을 감소한다거나 감소하는 것을 증가한다는 거짓된 생각, 즉 잘못된 생각을 갖지 않게 되었다. 
+  > 이제 우리는 이 증명으로 증가하는 것을 감소한다거나 감소하는 것을 증가한다는 거짓된 생각, 즉 잘못된 생각을 갖지 않게 되었다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수의 감소의 판정 : 함수 $f(x)$ 가 어떤 개구간에서 미분가능할 때, 이 구간의 모든 $x$ 에 대하여 $f'(x) < 0$ 이면 $f(x)$ 는 이 구간에서 감소한다.
-
-</blockquote>
+    함수의 감소의 판정 : 함수 $f(x)$ 가 어떤 개구간에서 미분가능할 때, 이 구간의 모든 $x$ 에 대하여 $f'(x) < 0$ 이면 $f(x)$ 는 이 구간에서 감소한다.
 
 - 함수 $f(x)$ 가 어떤 구간에서 감소하면 이 구간의 모든 $x$ 에 대하여 $f'(x) \leq 0$ 이다. 
 
 - 어떤 점에서 미분계수가 음수면 그 점에서 함수는 감소한다. 
 
-# 함수의 극대와 극소 
+# 함수의 극대와 극소
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수의 극대와 극소 : 함수 $f(x)$ 에서 $x=a$ 를 포함하는 어떤 개구간에 속하는 모든 $x$ 에 대하여 
-
-</blockquote>
+    함수의 극대와 극소 : 함수 $f(x)$ 에서 $x=a$ 를 포함하는 어떤 개구간에 속하는 모든 $x$ 에 대하여
 
 - 함수의 극대(local maximum) : $f(x) \leq f(a)$ 이면 함수 $f(x)$ 는 $x=a$ 에서 극대이다. 
 
@@ -1029,13 +951,11 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
   ![desmos-graph(1)](https://user-images.githubusercontent.com/16812446/76137353-5025f780-607f-11ea-8794-99ae3aaf9345.png)
 
-  위 함수의 그래프는 왼쪽 뾰족한 부위에 극대값이 있고 오른쪽 밑의 아래로 뾰족한 부분에 극소값이 있는 것이다. 
+  위 함수의 그래프는 왼쪽 뾰족한 부위에 극대값이 있고 오른쪽 밑의 아래로 뾰족한 부분에 극소값이 있는 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수의 극대와 극소의 판정 : 미분가능한 함수 $f(x)$ 에 대하여 $f'(a) = 0$ 일 때, $x=a$ 의 좌우에서 
-
-</blockquote>
+    함수의 극대와 극소의 판정 : 미분가능한 함수 $f(x)$ 에 대하여 $f'(a) = 0$ 일 때, $x=a$ 의 좌우에서
 
 - 함수의 극대 판정 : $f'(x)$ 의 부호가 $+$ 에서 $-$ 으로 바뀌면 $f(x)$ 는 $x=a$ 에서 극대이다. 
 
@@ -1077,17 +997,15 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
     > 자연어 표현들과 대상의 특징을 묘사하는 언어들을 수학적 형식언어로 바꾸어서 표현한 것 뿐이다. 
 
-  - 그 역은 성립하지 않는다. $f'(a) = 0$ 이라고 해서 $f(x)$ 가 $x=a$ 에서 극값을 갖는 것은 아니다. 
+  - 그 역은 성립하지 않는다. $f'(a) = 0$ 이라고 해서 $f(x)$ 가 $x=a$ 에서 극값을 갖는 것은 아니다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이계도함수를 이용한 함수의 극대와 극소의 판정 : 함수 $f(x)$ 에 대하여 $f'(x), f''(x)$ 가 존재하고 $f'(x)=0$ 일 때,
-
- $f''(a)<0$ 이면 함수 $f(x)$ 는 $x=a$ 에서 극대이고,
-
- $f''(a)>0$ 이면 함수 $f(x)$ 는 $x=a$ 에서 극소이다. 
-
-</blockquote>
+    이계도함수를 이용한 함수의 극대와 극소의 판정 : 함수 $f(x)$ 에 대하여 $f'(x), f''(x)$ 가 존재하고 $f'(x)=0$ 일 때,
+    
+     $f''(a)<0$ 이면 함수 $f(x)$ 는 $x=a$ 에서 극대이고,
+    
+     $f''(a)>0$ 이면 함수 $f(x)$ 는 $x=a$ 에서 극소이다.
 
 - 증명 
 
@@ -1097,19 +1015,17 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
   마찬가지로 $f'(a)=0$ 이고 $f''(a)>0$ 이면 $f'(x)$ 는 $x=a$ 에서 증가상태에 있다. 그런데 $f'(a)=0$ 이므로 $x=a$ 의 좌우에서 $f'(x)$ 가 $-$ 에서 $+$ 으로 바뀐다. 이는 $f(x)$ 가 $x=a$ 에서 극소임을 뜻한다. 
 
-> 그러므로 수학적 대상들의 관계를 많이 더 많이 밝혀두면 둘수록 특정한 대상에 대한 계산이 훨씬 쉬울 때 그것과 그것과의 관계들을 통하여 결정되는 다른 대상들을 쉽게 알 수 있다. 따라서 대상의 수학적 관계를 최대한 많이 탐구해놓는 것은 많은 효용을 가져다준다. 이렇게 수학적 관계를 밝히는 인간의 사고과정도 자동화시키면 좋을 것이다. 
+> 그러므로 수학적 대상들의 관계를 많이 더 많이 밝혀두면 둘수록 특정한 대상에 대한 계산이 훨씬 쉬울 때 그것과 그것과의 관계들을 통하여 결정되는 다른 대상들을 쉽게 알 수 있다. 따라서 대상의 수학적 관계를 최대한 많이 탐구해놓는 것은 많은 효용을 가져다준다. 이렇게 수학적 관계를 밝히는 인간의 사고과정도 자동화시키면 좋을 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-극값을 찾는 법 : 극값은 다음과 같이 찾을 수 있다. 
-
-1. 도함수 $f'(x)$ 를 구한다. 
-
-2. $f'(x) = 0$ 인 $x$ 값을 구한다. 
-
-3. 구한 $x$ 값의 좌우에서 $f'(x)$ 의 부호가 $+$ 에서 $-$ 로 바뀌는지, $-$ 에서 $+$ 로 바뀌는지 확인하여 극대값인지 극소값인지 확인한다. 
-
-</blockquote>
+    극값을 찾는 법 : 극값은 다음과 같이 찾을 수 있다. 
+    
+    1. 도함수 $f'(x)$ 를 구한다. 
+    
+    2. $f'(x) = 0$ 인 $x$ 값을 구한다. 
+    
+    3. 구한 $x$ 값의 좌우에서 $f'(x)$ 의 부호가 $+$ 에서 $-$ 로 바뀌는지, $-$ 에서 $+$ 로 바뀌는지 확인하여 극대값인지 극소값인지 확인한다.
 
 - 예시 
 
@@ -1125,13 +1041,11 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
     ![desmos-graph](https://user-images.githubusercontent.com/16812446/76137520-6634b780-6081-11ea-8c89-0b5cb3c02da3.png)
 
-# 함수의 최대-최소 
+# 함수의 최대-최소
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수의 최대값-최소값 : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속이면 이 구간에서 반드시 최대값과 최소값을 갖는다. 
-
-</blockquote>
+    함수의 최대값-최소값 : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속이면 이 구간에서 반드시 최대값과 최소값을 갖는다.
 
 - 함수의 최대값 : 이 구간에서 $f(x)$ 의 극값과 구간의 양 끝점의 함수값 $f(a), f(b)$ 중에서 가장 큰 값이 최대값이다. 
 
@@ -1151,21 +1065,19 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
 ## 함수의 그래프의 활용
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-방정식과 실근과 함수의 그래프 : 함수의 그래프를 이용하여 방정식의 실근의 개수를 알 수 있다. 
+    방정식과 실근과 함수의 그래프 : 함수의 그래프를 이용하여 방정식의 실근의 개수를 알 수 있다. 
+    
+    1. 방정식 $f(x) = 0$ 의 실근의 개수는 함수 $y=f(x)$ 의 그래프와 $x$ 축과의 교점의 개수이다.
+    
+    2. 방정식 $f(x) = g(x)$ 의 실근의 개수는 두 함수 $y=f(x)$ 와 $y=g(x)$ 의 그래프의 교점의 개수이다.
 
-1. 방정식 $f(x) = 0$ 의 실근의 개수는 함수 $y=f(x)$ 의 그래프와 $x$ 축과의 교점의 개수이다.
 
-2. 방정식 $f(x) = g(x)$ 의 실근의 개수는 두 함수 $y=f(x)$ 와 $y=g(x)$ 의 그래프의 교점의 개수이다. 
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-부등식에의 활용 : 
-
-</blockquote>
+    부등식에의 활용 :
 
 - 모든 실수 $x$ 에 대하여 부등식 $f(x)>0$ 이 성립함을 보이려면 함수 $f(x)$ 에 대하여 $(f(x) 최소값) > 0)$ 임을 보이면 된다.
 
@@ -1175,8 +1087,5 @@ $$ \frac{f(b)-f(a)}{b-a} = f'(c) $$
 
   함수 $f(x)$ 의 극값이 존재할 때, $x>a$ 에서 $(f(x) 의 최소값)>0$ 임을 보이면 된다. 
 
-  함수 $f(x)$ 의 극값이 존재하지 않을 때, $x>a$ 에서 $f(x)$ 가 증가하고, $f(a) \geq 0$ 임을 보이면 된다. 
-
-
-
+  함수 $f(x)$ 의 극값이 존재하지 않을 때, $x>a$ 에서 $f(x)$ 가 증가하고, $f(a) \geq 0$ 임을 보이면 된다.
 

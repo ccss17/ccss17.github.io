@@ -1,36 +1,3 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-- ## **생각 메모**
-
-  **[기초](https://ccss17.github.io/all.html)**
-
-  **[생각](https://ccss17.github.io/all2.html)**
-
-  **[수학 역사 (고대 그리스~19세기)](https://ccss17.github.io/all3.html)**
-
-  **[수학 역사2 (수학의 확실성)](https://ccss17.github.io/all4.html)**
-
-  **[컴퓨터 역사 (괴델의 불완전성 정리)](https://ccss17.github.io/all5.html)**
-
-  **[컴퓨터 역사2 (튜링의 불완전성 증명)](https://ccss17.github.io/all6.html)**
-
-  **[컴퓨터 역사3 (튜링 기계의 구현)](https://ccss17.github.io/all7.html)**
-
-  **[컴퓨터 역사4 (소프트웨어와 알고리즘)](https://ccss17.github.io/all8.html)**
-
-  **[컴퓨터 역사5 (초지능)](https://ccss17.github.io/all9.html)**
-
-</blockquote>
-
----
-
-# 생각
-
-**생각에 관한 생각을 메모해 둔 곳입니다.**
-
----
-
 ### _(*2-1)_ 사람은 마음 속에 어떤 법이든 만들 수 있고 없앨 수 있다.
 
 사람은 마음 속 공간에 한하여 전능한 신이다. 그 어떤 것이든 만들 수 있고 제거할 수 있기 때문이다. 설령 마음 속 공간에 거짓된 것이나 모순된 존재를 만든다 해도 그런 존재가 마음 속에 탄생하는 것도 가능하다. 사람은 마음 속 법칙을 마음대로 정할 수 있고 마음에 들지 않는 법칙을 폐기처분할 수 있다. 그리고 이 제정된 법칙 하나하나가 마음 속 공간에 세상을 구축한다.
@@ -413,5 +380,4 @@
 (추상화와 일반화에 관한 것을 서술하여 역사를 공부할 때 적용할 수 있게 해야함)
 
 (올바른 것과 대조하면 다른 부분을 찾으면 올바르게 고칠 수 있다.)
-
 

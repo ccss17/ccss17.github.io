@@ -1,4 +1,3 @@
-
 # CUDA 메모
 
 - **CPU** 를 **host** , **GPU** 를 **device** 라고 한다.

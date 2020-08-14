@@ -1,35 +1,9 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-## **미적분 메모**
-
-**[극한 메모](https://ccss17.github.io/calculus.html)**
-
-**[미분 메모](https://ccss17.github.io/calculus2.html)**
-
-**[적분 메모](https://ccss17.github.io/calculus3.html)**
-
-**[미분2 메모](https://ccss17.github.io/calculus4.html)**
-
-**[적분2 메모](https://ccss17.github.io/calculus5.html)**
-
-**[벡터해석학 메모](https://ccss17.github.io/vector.html)**
-
-**[미적분 메모](https://ccss17.github.io/calculus6.html)**
-
-</blockquote>
-
-# 적분 메모
-
----
-
 # 적분
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-적분(integral) : 기하학적으로 곡선과 좌표축으로 둘러싸인 영역의 면적을 구하는 것이다. 
+!!! note ""
 
-</blockquote>
+    적분(integral) : 기하학적으로 곡선과 좌표축으로 둘러싸인 영역의 면적을 구하는 것이다.
 
 - 적분이 어떤 자연 대상을 추상화시킨 것인지 확실하게 파악되지는 않고 있다. 
 
@@ -47,13 +21,11 @@
 
   > 자연 대상과의 관계를 최대한 많이 규명해놓으면 알기 쉬운 대상으로부터 그것과 관계되어 있는 대상들을 밝힐 수 있다고 정리해놓은 것이 여기에서 또 다시 근거를 얻었다. 
 
-- 미분은 어떤 대상에 대한 변화를 알 수 있게 해주었는데 적분은 그 변화로부터 어떤 현상이 일어날지 예측하게 해주었다. 미적분의 발달은 과학과 기술을 발달하게 하였다. 
+- 미분은 어떤 대상에 대한 변화를 알 수 있게 해주었는데 적분은 그 변화로부터 어떤 현상이 일어날지 예측하게 해주었다. 미적분의 발달은 과학과 기술을 발달하게 하였다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-부정적분(indefinite integral, antiderivative) : 함수 $f(x)$ 에 대하여 $F'(x) = f(x)$ 가 성립할 때 함수 $F(x)$ 를 함수 $f(x)$ 의 부정적분이라 한다. 
-
-</blockquote>
+    부정적분(indefinite integral, antiderivative) : 함수 $f(x)$ 에 대하여 $F'(x) = f(x)$ 가 성립할 때 함수 $F(x)$ 를 함수 $f(x)$ 의 부정적분이라 한다.
 
 - 즉, 미분(도함수를 구하는 연산)의 역연산이다. 다시 말해 어떤 함수를 도함수로 하는 모든 함수를 구하는 연산이다. 
 
@@ -107,13 +79,11 @@
 
   ![desmos-graph(2)](https://user-images.githubusercontent.com/16812446/76163204-8353ae00-6187-11ea-83c2-1d611dcf608e.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-적분용어 : 다음 부정적분식을 생각하자. 
-
-$$ \int_{}^{}f(x)dx=F(x)+C $$
-
-</blockquote>
+    적분용어 : 다음 부정적분식을 생각하자. 
+    
+    $$ \int_{}^{}f(x)dx=F(x)+C $$
 
 - 적분상수(integral constant) : 위 부정적분에서 $C$ 를 적분상수라 한다. 
 
@@ -121,13 +91,11 @@ $$ \int_{}^{}f(x)dx=F(x)+C $$
 
 - 적분변수 : 위 부정적분에서 $dx$ 란 $x$ 에 대하여 적분한다는 의미이고 이때의 $x$ 를 적분변수라 한다.
 
-  - 적분할 때 적분변수 이외의 미지수는 상수로 취급한다. 
+  - 적분할 때 적분변수 이외의 미지수는 상수로 취급한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-부정적분과 미분의 관계 : 정의에 따라 부정적분과 미분의 관계는 역연산이다.
-
-</blockquote>
+    부정적분과 미분의 관계 : 정의에 따라 부정적분과 미분의 관계는 역연산이다.
 
 - 자연어를 형식언어로 변환한 수식은 다음과 같다. 
 
@@ -163,17 +131,15 @@ $$ \int_{}^{}f(x)dx=F(x)+C $$
 
 - 특히, 적분한 것을 미분하면 상수가 더해지지 않지만 미분한 것을 적분하면 적분상수가 더해지는 것을 주의해야 한다. 
 
-## 부정적분의 계산 
+## 부정적분의 계산
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$n$ 차 단항 함수 $y=x^n$ 의 부정적분 : $n$ 이 음이 아닌 정수일 때, $n$ 차 단항 함수의 부정적분은 
-
-$$ \int_{}^{}x ^{n} dx = \frac{1}{n+1} x ^{n+1} + C $$
-
-이다. 
-
-</blockquote>
+    $n$ 차 단항 함수 $y=x^n$ 의 부정적분 : $n$ 이 음이 아닌 정수일 때, $n$ 차 단항 함수의 부정적분은 
+    
+    $$ \int_{}^{}x ^{n} dx = \frac{1}{n+1} x ^{n+1} + C $$
+    
+    이다.
 
 - 증명 
 
@@ -185,13 +151,11 @@ $$ \int_{}^{}x ^{n} dx = \frac{1}{n+1} x ^{n+1} + C $$
 
     $$ \int_{}^{}x ^{n}dx = \frac{1}{n+1} x ^{n+1} +C $$
 
-  이다. 
+  이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$1$ 의 부정적분 : $\int_{}^{}1dx = x + C$
-
-</blockquote>
+    $1$ 의 부정적분 : $\int_{}^{}1dx = x + C$
 
 - 증명 
 
@@ -201,11 +165,9 @@ $1$ 의 부정적분 : $\int_{}^{}1dx = x + C$
 
   $$ \int_{}^{}dx $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수의 실수배, 합, 차의 부정적분 : 두 함수 $f(x), g(x)$ 의 부정적분이 존재할 때 
-
-</blockquote>
+    함수의 실수배, 합, 차의 부정적분 : 두 함수 $f(x), g(x)$ 의 부정적분이 존재할 때
 
 - 실수배(단, $k$ 는 $0$ 이 아닌 실수)
 
@@ -247,13 +209,11 @@ $1$ 의 부정적분 : $\int_{}^{}1dx = x + C$
 
     (함수의 합의 부정적분의 증명에서 $+$ 를 $-$ 로 바꾸어 생각하면 바로 증명된다)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 $f'(g(x))g'(x)$ 의 부정적분 : 함수 $f'(g(x))g'(x)$ 의 부정적분은 다음과 같다. (단, $C$ 는 적분상수)
-
-$$ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C $$
-
-</blockquote>
+    함수 $f'(g(x))g'(x)$ 의 부정적분 : 함수 $f'(g(x))g'(x)$ 의 부정적분은 다음과 같다. (단, $C$ 는 적분상수)
+    
+    $$ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C $$
 
 - 합성함수 $f(g(x))$ 를 미분하면 
 
@@ -299,33 +259,29 @@ $$ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C $$
 
     $$ \int_{}^{}(2x+a) ^{10} dx = \frac{1}{2} \circ \frac{1}{10 + 1}(2x+1) ^{10 + 1} + C = \frac{1}{22}(2x+1) ^{11} + C $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-곱의 미분의 역연산을 이용한 부정적분 : 함수 $f(x), g(x)$ 에 대한 곱함수의 미분법 
-
-  $$ \{f(x)g(x)\}' = f'(x)g(x) +f(x)g'(x) $$
-
-을 역으로 이용하여 $f'(x)g(x) + f(x)g'(x)$ 꼴 함수의 부정적분은
-
-  $$ \int_{}^{}\{f'(x)g(x)+f(x)g'(x)\}dx = f(x)g(x)+C $$
-
-이므로 
-
-  $$ \int_{}^{}f'(x)g(x)dx + \int_{}^{}f(x)g'(x)dx = f(x)g(x)+C $$
-
-이다. 
-
-</blockquote>
+    곱의 미분의 역연산을 이용한 부정적분 : 함수 $f(x), g(x)$ 에 대한 곱함수의 미분법 
+    
+      $$ \{f(x)g(x)\}' = f'(x)g(x) +f(x)g'(x) $$
+    
+    을 역으로 이용하여 $f'(x)g(x) + f(x)g'(x)$ 꼴 함수의 부정적분은
+    
+      $$ \int_{}^{}\{f'(x)g(x)+f(x)g'(x)\}dx = f(x)g(x)+C $$
+    
+    이므로 
+    
+      $$ \int_{}^{}f'(x)g(x)dx + \int_{}^{}f(x)g'(x)dx = f(x)g(x)+C $$
+    
+    이다.
 
 - 다항함수보다 지수함수, 로그함수, 삼각함수 등의 부정적분에 자주 쓰인다. 
 
-## 정적분 
+## 정적분
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정적분(definte integral) : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 함수 $f(x)$ 의 한 부정적분 $F(x)$ 에 대하여 부정적분의 함수값의 차 $F(b)-F(a)$ 를 함수 $f(x)$ 의 $a$ 에서 $b$ 까지의 정적분이라 한다. 
-
-</blockquote>
+    정적분(definte integral) : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 함수 $f(x)$ 의 한 부정적분 $F(x)$ 에 대하여 부정적분의 함수값의 차 $F(b)-F(a)$ 를 함수 $f(x)$ 의 $a$ 에서 $b$ 까지의 정적분이라 한다.
 
 - 이것을 형식언어로 다음과 같이 표현한다. 
 
@@ -371,11 +327,9 @@ $$ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C $$
 
     $$ \int_{3}^{2}xdx = [\frac{1}{2}x ^{2}] ^{3} _{2} = \frac{9}{2} - \frac{4}{2} = \frac{5}{2} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-여러가지 정적분
-
-</blockquote>
+    여러가지 정적분
 
 - $a$ 부터 $a$ 까지의 정적분 
 
@@ -397,23 +351,19 @@ $$ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C $$
 
     $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-부정적분과 정적분의 관계 : 정적분은 부정적분이라는 함수로 얻을 수 있는 하나의 값이다.    
-
-</blockquote>
+    부정적분과 정적분의 관계 : 정적분은 부정적분이라는 함수로 얻을 수 있는 하나의 값이다.
 
 - 정적분은 부정적분을 그대로 이용한다. 부정적분을 구하면 정적분은 식의 값을 구하는 것일 뿐이다. 
 
 - 부정적분 $\int_{}^{}f(x)dx$ 는 하나의 함수지만 정적분 $\int_{b}^{a}f(x)dx$ 는 하나의 수이다. 
 
-## 정적분의 성질 
+## 정적분의 성질
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정적분의 성질 : 두 함수 $f(x), g(x)$ 가 임의의 실수 $a, b, c$ 를 포함하는 폐구간에서 연속일 때 다음이 성립한다. 
-
-</blockquote>
+    정적분의 성질 : 두 함수 $f(x), g(x)$ 가 임의의 실수 $a, b, c$ 를 포함하는 폐구간에서 연속일 때 다음이 성립한다.
 
 - $\int_{b}^{a}kf(x)dx = k \int_{b}^{a}f(x)dx$
 
@@ -443,11 +393,9 @@ $$ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C $$
 
     $$ = \int_{a}^{b}f(x)dx $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-절대값 기호를 포함한 함수의 정적분 : 절대값 기호 안의 식의 값이 $0$ 이 되게 하는 $x$ 값을 경계로 적분 구간을 나누어 계산한다. 
-
-</blockquote>
+    절대값 기호를 포함한 함수의 정적분 : 절대값 기호 안의 식의 값이 $0$ 이 되게 하는 $x$ 값을 경계로 적분 구간을 나누어 계산한다.
 
 - 만약 $a$ 부터 $b$ 까지 적분할 때 절대값 안의 기호를 $0$ 이 되게 하는 $x$ 값이 $c$ 라면 다음과 같이 적분구간을 나누고 음수구간에 $-$ 를 분혀서 절대값 기호를 상쇄하여 없애준다. 
 
@@ -467,13 +415,11 @@ $$ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C $$
 
 # 구분구적법
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-구분구적법(리만합, Riemann sum) : 어떤 도평의 넓이나 부피를 구할 때, 주어진 도형을 넓이 또는 부피를 쉽게 구할 수 있는 기본 도형으로 나누어서 기본 도형들의 넓이 또는 부피의 합을 구한 후 그 합의 극한값 구하여 기본 도형들의 넓이 또는 부피의 합을 주어진 도형의 넓이 또는 부피로 근사시키는 방법이다.
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Riemann_sum_%28y%3Dx%5E2%29.gif/220px-Riemann_sum_%28y%3Dx%5E2%29.gif)
-
-</blockquote>
+    구분구적법(리만합, Riemann sum) : 어떤 도평의 넓이나 부피를 구할 때, 주어진 도형을 넓이 또는 부피를 쉽게 구할 수 있는 기본 도형으로 나누어서 기본 도형들의 넓이 또는 부피의 합을 구한 후 그 합의 극한값 구하여 기본 도형들의 넓이 또는 부피의 합을 주어진 도형의 넓이 또는 부피로 근사시키는 방법이다.
+    
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Riemann_sum_%28y%3Dx%5E2%29.gif/220px-Riemann_sum_%28y%3Dx%5E2%29.gif)
 
 - 기본 도형들의 넓이의 합을 $S_n$ 이라 하면 주어진 도형의 넓이는 
 
@@ -517,21 +463,19 @@ $$ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C $$
 
   과도 같다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정적분과 급수의 합의 관계 : 함수 $f(x)$ 가 폐구간 $[a,b]$ 에서 연속이고 $\Delta x = \frac{b-a}{n}, x_k = a+k \Delta x$ 일 때
+    정적분과 급수의 합의 관계 : 함수 $f(x)$ 가 폐구간 $[a,b]$ 에서 연속이고 $\Delta x = \frac{b-a}{n}, x_k = a+k \Delta x$ 일 때
+    
+    $$ \lim_{n \to \infty} S_n = \lim_{n \to \infty} \sum_{k=1}^{n} f(x_k)\Delta x = \int_{a}^{b}f(x)dx $$
+    
+    이다.
 
-$$ \lim_{n \to \infty} S_n = \lim_{n \to \infty} \sum_{k=1}^{n} f(x_k)\Delta x = \int_{a}^{b}f(x)dx $$
 
-이다.
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-정적분으로 급수의 합 구하기 
-
-</blockquote>
+    정적분으로 급수의 합 구하기
 
 - $\lim_{n \to \infty} \sum_{k=1}^{n}f(a+\frac{b-a}{n}k)\circ \frac{b-a}{n} = \int_{a}^{b}f(x)dx$
 
@@ -551,17 +495,15 @@ $$ \lim_{n \to \infty} S_n = \lim_{n \to \infty} \sum_{k=1}^{n} f(x_k)\Delta x =
 
     **구체화 필요**
 
-# 정적분의 계산 
+# 정적분의 계산
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정적분의 기하적 의미 : 함수 $f(x)$ 가 폐구간 $[a,b]$ 에서 연속이고 $f(x) \geq 0$ 일 때, 정적분
-
-$$ \int_{a}^{b}f(x)dx $$
-
-는 함수 $y=f(x)$ 의 그래프와 $x$ 축 및 두 직선 $x=a, x=b$ 로 둘러싸인 도형의 넓이이다.
-
-</blockquote>
+    정적분의 기하적 의미 : 함수 $f(x)$ 가 폐구간 $[a,b]$ 에서 연속이고 $f(x) \geq 0$ 일 때, 정적분
+    
+    $$ \int_{a}^{b}f(x)dx $$
+    
+    는 함수 $y=f(x)$ 의 그래프와 $x$ 축 및 두 직선 $x=a, x=b$ 로 둘러싸인 도형의 넓이이다.
 
 - 함수가 $f(x) < 0$ 일 때에는 
 
@@ -589,15 +531,13 @@ $$ \int_{a}^{b}f(x)dx $$
 
   ![desmos-graph](https://user-images.githubusercontent.com/16812446/76172763-62697800-61dc-11ea-9f47-fa641aef1c9b.png)
 
-  위 그래프에서 가로 곱하기 세로 $3 \times 3$ 는 $9$ 이다. 
+  위 그래프에서 가로 곱하기 세로 $3 \times 3$ 는 $9$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-짝함수의 정적분 : $y$ 축에 대칭인 짝함수의 정적분은 다음과 같다. 
-
-$$ \int_{-a}^{a} f(x)dx = 2 \int_{0}^{a}f(x)dx $$
-
-</blockquote>
+    짝함수의 정적분 : $y$ 축에 대칭인 짝함수의 정적분은 다음과 같다. 
+    
+    $$ \int_{-a}^{a} f(x)dx = 2 \int_{0}^{a}f(x)dx $$
 
 - 증명 (기하적 증명)
 
@@ -651,13 +591,11 @@ $$ \int_{-a}^{a} f(x)dx = 2 \int_{0}^{a}f(x)dx $$
 
   $$ \int_{-3}^{3}(x ^{2}+2)dx = 2 \int_{0}^{3}(x ^{2}+2)dx = 2 [ \frac{1}{3}x ^{3} + 2x] ^{3} _{0} = 2 \times (15 - 0) = 30 $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-홀함수의 정적분 : $y=x$ 에 대하여 대칭인 홀함수의 정적분은 다음과 같다. 
-
-$$ \int_{-a}^{a}f(x)dx=0 $$
-
-</blockquote>
+    홀함수의 정적분 : $y=x$ 에 대하여 대칭인 홀함수의 정적분은 다음과 같다. 
+    
+    $$ \int_{-a}^{a}f(x)dx=0 $$
 
 - 증명 (기하적 증명)
 
@@ -715,11 +653,9 @@ $$ \int_{-a}^{a}f(x)dx=0 $$
 
   $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-주기함수의 정적분 : 주기가 $p$ 인 주기함수의 정적분은 다음과 같은 관계를 갖는다. 
-
-</blockquote>
+    주기함수의 정적분 : 주기가 $p$ 인 주기함수의 정적분은 다음과 같은 관계를 갖는다.
 
 - $\int_{a}^{b}f(x)dx = \int_{a+p}^{b+p}f(x)dx$
 
@@ -777,13 +713,11 @@ $$ \int_{-a}^{a}f(x)dx=0 $$
 
     이다.
 
-## 정적분과 미분의 관계 
+## 정적분과 미분의 관계
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정적분으로 나타내어진 함수 : 정적분의 위끝과 아래끝이 상수면 그 연산결과가 수가 되지만 그 둘 중 하나 이상을 적분변수가 아닌 미지수로 둔다면 정적분 연산결과는 수가 아니라 함수가 되는데, 이 함수를 정적분으로 나타내어진 함수라 한다.
-
-</blockquote>
+    정적분으로 나타내어진 함수 : 정적분의 위끝과 아래끝이 상수면 그 연산결과가 수가 되지만 그 둘 중 하나 이상을 적분변수가 아닌 미지수로 둔다면 정적분 연산결과는 수가 아니라 함수가 되는데, 이 함수를 정적분으로 나타내어진 함수라 한다.
 
 - 예시 
 
@@ -793,13 +727,11 @@ $$ \int_{-a}^{a}f(x)dx=0 $$
 
   $$ \int_{a}^{x}f(t)dt $$
 
-- 정적분으로 나타내어진 함수는 일반적으로 미분가능하다. 따라서 미분 연산을 가하여 미분과 정적분의 관계를 알 수 있다. 
+- 정적분으로 나타내어진 함수는 일반적으로 미분가능하다. 따라서 미분 연산을 가하여 미분과 정적분의 관계를 알 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정적분과 미분의 관계 : 정적분으로 함수의 미분을 나타내면 다음과 같다. 
-
-</blockquote>
+    정적분과 미분의 관계 : 정적분으로 함수의 미분을 나타내면 다음과 같다.
 
 - 정적분으로 나타내어진 함수에 미분을 하는 경우를 위끝에 변수가 오는 함수와 위끝과 아래끝 모두에 변수가 오는 함수로 나누어 단순화시켜 생각하자. 
 
@@ -847,13 +779,11 @@ $$ \int_{-a}^{a}f(x)dx=0 $$
 
     $$ \frac{d}{dx}\int_{a}^{x} $$
 
-    에서 두 변수 $x$ 가 일치해야 한다. 
+    에서 두 변수 $x$ 가 일치해야 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정적분과 함수의 극한의 관계 
-
-</blockquote>
+    정적분과 함수의 극한의 관계
 
 - $\lim_{x \to a} \frac{1}{x-a}\int_{a}^{x}f(t)dt=f(a)$
 
@@ -903,78 +833,65 @@ $$ \int_{-a}^{a}f(x)dx=0 $$
 
     이다. 
 
-## 정적분으로 구하는 넓이 
+## 정적분으로 구하는 넓이
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-곡선과 $x$ 축 사이의 넓이 : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $y=f(x)$ 와 $x$축 및 두 직선 $x=a, x=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
-
-$$ S = \int_{a}^{b}|f(x)|dx $$
-
-이다. 
-
-</blockquote>
+    곡선과 $x$ 축 사이의 넓이 : 함수 $f(x)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $y=f(x)$ 와 $x$축 및 두 직선 $x=a, x=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
+    
+    $$ S = \int_{a}^{b}|f(x)|dx $$
+    
+    이다.
 
 - 증명 
 
   **구체화 필요**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-곡선과 $y$ 축 사이의 넓이 : 함수 $f(y)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $x=f(y)$ 와 $y$축 및 두 직선 $y=a, y=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
-
-$$ S = \int_{a}^{b}|f(y)|dy $$
-
-이다. 
-
-</blockquote>
+    곡선과 $y$ 축 사이의 넓이 : 함수 $f(y)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $x=f(y)$ 와 $y$축 및 두 직선 $y=a, y=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
+    
+    $$ S = \int_{a}^{b}|f(y)|dy $$
+    
+    이다.
 
 - 증명 
 
   **구체화 필요**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$x$축으로 둘러싼 두 곡선 사이의 넓이 : 함수 $f(x), g(x)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $y=f(x), y=g(x)$ 와 두 직선 $x=a, x=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
-
-$$ S = \int_{a}^{b}|f(x)-g(x)|dx $$
-
-이다. 
-
-</blockquote>
+    $x$축으로 둘러싼 두 곡선 사이의 넓이 : 함수 $f(x), g(x)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $y=f(x), y=g(x)$ 와 두 직선 $x=a, x=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
+    
+    $$ S = \int_{a}^{b}|f(x)-g(x)|dx $$
+    
+    이다.
 
 - 증명 
 
   **구체화 필요**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$y$축으로 둘러싼 두 곡선 사이의 넓이 : 함수 $f(y), g(y)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $x=f(y), x=g(y)$ 와 두 직선 $x=a, x=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
-
-$$ S = \int_{a}^{b}|f(y)-g(y)|dy $$
-
-이다. 
-
-</blockquote>
+    $y$축으로 둘러싼 두 곡선 사이의 넓이 : 함수 $f(y), g(y)$ 가 폐구간 $[a, b]$ 에서 연속일 때, 곡선 $x=f(y), x=g(y)$ 와 두 직선 $x=a, x=b$ 로 둘러싸인 도형의 넓이 $S$ 는 
+    
+    $$ S = \int_{a}^{b}|f(y)-g(y)|dy $$
+    
+    이다.
 
 - 증명 
 
   **구체화 필요**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 $y=f(x)$ 와 그 역함수 $y=g(x)$ 로 둘러싼 두 곡선 사이의 넓이 : 곡선 $y=f(x)$ 과 그 역함수 $y=g(x)$ 로 둘러싼 도형의 넓이 $S$ 는 
-
-$$ S = \int_{a}^{b}|f(x)-g(x)|dx = 2 \int_{a}^{b}|f(x)-x|dx $$
-
-이다. 
-
-</blockquote>
+    함수 $y=f(x)$ 와 그 역함수 $y=g(x)$ 로 둘러싼 두 곡선 사이의 넓이 : 곡선 $y=f(x)$ 과 그 역함수 $y=g(x)$ 로 둘러싼 도형의 넓이 $S$ 는 
+    
+    $$ S = \int_{a}^{b}|f(x)-g(x)|dx = 2 \int_{a}^{b}|f(x)-x|dx $$
+    
+    이다.
 
 - 증명 
 
   **구체화 필요**
-
-
-
 

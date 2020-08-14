@@ -1,33 +1,8 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-## **통계 메모**
-
-**[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
-
-**[이산확률변수의 평균,분산,표준편차](https://ccss17.github.io/stat2.html)**
-
-**[이항분포의 평균,분산,표준편차](https://ccss17.github.io/stat3.html)**
-
-**[연속확률변수의 평균,분산,표준편차와 정규분포](https://ccss17.github.io/stat4.html)**
-
-**[통계적 추정](https://ccss17.github.io/stat5.html)**
-
-**[상관관계 분석](https://ccss17.github.io/stat6.html)**
-
-</blockquote>
-
-#  도수분포의 평균,분산,표준편차
-
----
-
 # 통계
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-통계학(statistics) : 산술적 방법으로 다량의 데이터를 관찰하고 분석하는 수학의 분야이다. 
-
-</blockquote>
+    통계학(statistics) : 산술적 방법으로 다량의 데이터를 관찰하고 분석하는 수학의 분야이다.
 
 - 통계학 statistics 의 어원은 라틴어 status 인데 이는 국가를 의미한다. 즉 통계학은 국가를 지배하는데에 필요한 학문으로써 발달하였다. 
 
@@ -45,59 +20,47 @@
 
   > 이렇게 얻어낸 사회의 법칙은 사회를 지배하는데에 쓰일 수 있다. 
 
-- 통계학을 배우는 목적을 자료로부터 필요한 정보를 찾고 그것으로부터 필요한 결론을 추론하여 내는 결정 능력을 기르는 것으로 삼으면 좋을 것이다. 
+- 통계학을 배우는 목적을 자료로부터 필요한 정보를 찾고 그것으로부터 필요한 결론을 추론하여 내는 결정 능력을 기르는 것으로 삼으면 좋을 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-자료(data, 데이터) : 수, 영상, 단어 등의 형태로 된 의미 단위이다.
+    자료(data, 데이터) : 수, 영상, 단어 등의 형태로 된 의미 단위이다.
 
-</blockquote>
+- 보통 연구의 바탕이 되는 재료를 뜻하고 자료를 의미있게 정리하면 정보가 된다.
 
-- 보통 연구의 바탕이 되는 재료를 뜻하고 자료를 의미있게 정리하면 정보가 된다. 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-질적 자료(qualitative data, 정성적 자료) : 수치로 측정이 불가능한 자료이다.
-
-</blockquote>
+    질적 자료(qualitative data, 정성적 자료) : 수치로 측정이 불가능한 자료이다.
 
 - 예시
 
-  전화번호, 성별, 종교분류 등이 있다. 
+  전화번호, 성별, 종교분류 등이 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-양적 자료(quantitative data, 정량적 자료) : 수치로 측정이 가능한 자료이다.
-
-</blockquote>
+    양적 자료(quantitative data, 정량적 자료) : 수치로 측정이 가능한 자료이다.
 
 - 예시 
 
-  온도, 지능지수, 매출액 등이 있다. 
+  온도, 지능지수, 매출액 등이 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정보(information) : 특정 목적의 의사결정을 위하여 의미있게 자료를 가공한 것이다. 
-
-</blockquote>
+    정보(information) : 특정 목적의 의사결정을 위하여 의미있게 자료를 가공한 것이다.
 
 - 정보는 판단을 위하여 존재하기 때문에 목적적합성과 신뢰성, 적시성이 중요하다. 목적적합성이 없다면 판단하는데 있어 의미있는 자료가 되지 못한다. 신뢰성이 없다면 판단할 때 사용할 수 없다. 적시성이 없으면 판단할 때가 이미 지나버려 무의미하게 된다. 
 
 - 비교적 장기간 사용할 수 있는 정보를 지식으로 취급하기도 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-지식(knowledge) : 일반적으로 사용할 수 있는 정보, 또는 어떤 대상에 관하여 알고 있는 이해이다. 
-
-</blockquote>
+    지식(knowledge) : 일반적으로 사용할 수 있는 정보, 또는 어떤 대상에 관하여 알고 있는 이해이다.
 
 ## 기초 통계학 용어
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-변량(variate) : 자료를 수량으로 나타낸 것이다.
-
-</blockquote>
+    변량(variate) : 자료를 수량으로 나타낸 것이다.
 
 - 예시 
 
@@ -115,11 +78,9 @@
 
   은 변량이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-계급(class) : 변량을 일정한 간격으로 나눈 구간이다. 
-
-</blockquote>
+    계급(class) : 변량을 일정한 간격으로 나눈 구간이다.
 
 - 예시 
 
@@ -141,11 +102,9 @@
 
   와 같이 일정 구간으로 나눈 것은 계급이라 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-계급의 크기(class interval) : 변량을 나눈 간격이다.
-
-</blockquote>
+    계급의 크기(class interval) : 변량을 나눈 간격이다.
 
 - 예시 
 
@@ -155,35 +114,29 @@
 
 ## 대표값
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-대표값(representative value) : 어떤 데이터를 대표하는 값이다. 
-
-</blockquote>
+    대표값(representative value) : 어떤 데이터를 대표하는 값이다.
 
 - 예시 
 
   대표값에는 대표적으로 계급값, 중앙값, 평균, 최빈값이 있다. 
 
-  또한 백분위수, 사분위수, 절사평균 등의 대표값이 존재한다. 
+  또한 백분위수, 사분위수, 절사평균 등의 대표값이 존재한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-계급값(class mark) : 계급을 대표하는 값으로써 계급의 중앙값이다.
-
-</blockquote>
+    계급값(class mark) : 계급을 대표하는 값으로써 계급의 중앙값이다.
 
 - 예시 
 
   학생들의 수학 점수를 $0 \sim 10$, $10 \sim 20$ 와 같이 나누었다면 
 
-  계급값은 각각 $5, 15$ 이다. 
+  계급값은 각각 $5, 15$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-평균(mean) : 데이터를 모두 더한 것을 데이터의 개수로 나눈 값이다. 
-
-</blockquote>
+    평균(mean) : 데이터를 모두 더한 것을 데이터의 개수로 나눈 값이다.
 
 - 일반적으로 평균이라고 부르는 것은 통계학에서 산술평균이라고 하는 것이다. 
 
@@ -205,11 +158,9 @@
 
 # 도수분포
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-도수(frequency) : 각 계급에 속하는 변량의 개수이다. 
-
-</blockquote>
+    도수(frequency) : 각 계급에 속하는 변량의 개수이다.
 
 - 예시 
 
@@ -221,11 +172,9 @@
 
   도수가 $2$ 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-도수분포표(frequency distribution) : 자료를 몇 개의 계급으로 나누고 각 계급의 도수를 정리한 표다.
-
-</blockquote>
+    도수분포표(frequency distribution) : 자료를 몇 개의 계급으로 나누고 각 계급의 도수를 정리한 표다.
 
 - 예시
 
@@ -239,11 +188,9 @@
   | 10 ~ 20 | 6 | 
   | 20 ~ 30 | 10 |
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-히스토그램(histogram) : 도수분포표의 각 계급의 끝값을 가로축에 표시하고 도수를 세로축에 표시하여 직사각형으로 나타낸 그래프이다. 
-
-</blockquote>
+    히스토그램(histogram) : 도수분포표의 각 계급의 끝값을 가로축에 표시하고 도수를 세로축에 표시하여 직사각형으로 나타낸 그래프이다.
 
 - 예시 
 
@@ -264,15 +211,13 @@
 
   ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Example_histogram.png/220px-Example_histogram.png)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-상대도수(relative frequency) : 전체 도수에 대한 각 계급의 도수의 비율
-
-$$ \boxed{(\text{계급의 상대도수}) = \dfrac{(\text{계급의 도수})}{(\text{도수의 총합})} } $$
-
-이다. 
-
-</blockquote>
+    상대도수(relative frequency) : 전체 도수에 대한 각 계급의 도수의 비율
+    
+    $$ \boxed{(\text{계급의 상대도수}) = \dfrac{(\text{계급의 도수})}{(\text{도수의 총합})} } $$
+    
+    이다.
 
 - 즉 전체 도수가 $1$ 일 때 그 계급의 도수의 값을 뜻한다. 
 
@@ -295,23 +240,19 @@ $$ \boxed{(\text{계급의 상대도수}) = \dfrac{(\text{계급의 도수})}{(\
 
 # 도수분포의 평균, 분산, 표준편차(산포도 측정)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-산포도(dispersion, variability, scatter, spread) : 데이터가 흩어져있는 정도를 나타내는 용어이다.
-
-</blockquote>
+    산포도(dispersion, variability, scatter, spread) : 데이터가 흩어져있는 정도를 나타내는 용어이다.
 
 - 예시 
 
-  범위, 분산, 표준편차, 절대 편차 등이 있다. 
+  범위, 분산, 표준편차, 절대 편차 등이 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-편차(deviation) : 자료의 산포도를 나타내는 수치로써 
-
-자료의 한 변량에서 평균값을 뺀 값이다. 
-
-</blockquote>
+    편차(deviation) : 자료의 산포도를 나타내는 수치로써 
+    
+    자료의 한 변량에서 평균값을 뺀 값이다.
 
 - 예시 
 
@@ -335,19 +276,17 @@ $$ \boxed{(\text{계급의 상대도수}) = \dfrac{(\text{계급의 도수})}{(\
   |:--:|:--:|:--:| :--:| :--:| :--:| 
   | 회사 $A$ 의 편차 | $-3080$ | $-2680$ | $+1320$ | $+1720$ | $+2720$ | 
   | 회사 $B$ | $4000$ | $4500$ | $4250$ | $5000$ | $3650$ | 
-  | 회사 $B$ 의 편차 | $-280$ | $+220$ | $-30$ | $+720$ | $-630$ | 
+  | 회사 $B$ 의 편차 | $-280$ | $+220$ | $-30$ | $+720$ | $-630$ |
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-분산(variance) : 어떤 대상의 산포도를 나타내는 수치로써 
-
-편차의 제곱의 합을 전체 변량의 개수로 나눈 값
-
-$$\boxed{V = \frac{(편차)^2의 총합}{(변량)의 개수}} $$
-
-이다.
-
-</blockquote>
+    분산(variance) : 어떤 대상의 산포도를 나타내는 수치로써 
+    
+    편차의 제곱의 합을 전체 변량의 개수로 나눈 값
+    
+    $$\boxed{V = \frac{(편차)^2의 총합}{(변량)의 개수}} $$
+    
+    이다.
 
 - 즉 편차 제곱의 평균이다. 
 
@@ -373,19 +312,17 @@ $$\boxed{V = \frac{(편차)^2의 총합}{(변량)의 개수}} $$
 
   회사 $A$ 의 분산이 회사 $B$ 의 분산보다 훨씬 더 높다.
 
-  그러므로 회사 $A$ 의 직원들간의 연봉 차이가 회사 $B$ 의 직원들간의 연봉 차이보다 더 많다고 할 수 있다. 
+  그러므로 회사 $A$ 의 직원들간의 연봉 차이가 회사 $B$ 의 직원들간의 연봉 차이보다 더 많다고 할 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-표준편차(standard deviation) : 어떤 대상의 산포도를 나타내는 수치로써 
-
-분산의 양의 제곱근
-
-$$\sigma = \sqrt[]{V}$$
-
-이다.
-
-</blockquote>
+    표준편차(standard deviation) : 어떤 대상의 산포도를 나타내는 수치로써 
+    
+    분산의 양의 제곱근
+    
+    $$\sigma = \sqrt[]{V}$$
+    
+    이다.
 
 - 표준편차는 그리스 문자 $\sigma$ 로 표기한다. 
 
@@ -429,4 +366,5 @@ $$\sigma = \sqrt[]{V}$$
 
     를 관찰해보면 회사 $A$ 의 각 자료들이 평균 $4280$ 으로부터 약 $2398$ 만큼 떨어져있고 
 
-    회사 $B$ 의 각 자료들이 평균 $4280$ 으로부터 약 $456$ 만큼 떨어져있다는 것도 알 수 있다. 
+    회사 $B$ 의 각 자료들이 평균 $4280$ 으로부터 약 $456$ 만큼 떨어져있다는 것도 알 수 있다.
+

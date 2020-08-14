@@ -4,15 +4,14 @@
 
 # 퍼셉트론 Perceptron
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-계단 함수(step function) : 입력 $x$ 가 $0$ 을 넘으면 $y = 1$ 을 출력하고, $0$ 과 같거나 작으면 $y = 0$ 을 출력하는 함수
+!!! note ""
 
-$$ y = \begin{cases} 1\ (x > 0) &\text{}\\ 0\ (x \leq 0) &\text{}\\ \end{cases} $$
-
-이다.
-
-</blockquote>
+    계단 함수(step function) : 입력 $x$ 가 $0$ 을 넘으면 $y = 1$ 을 출력하고, $0$ 과 같거나 작으면 $y = 0$ 을 출력하는 함수
+    
+    $$ y = \begin{cases} 1\ (x > 0) &\text{}\\ 0\ (x \leq 0) &\text{}\\ \end{cases} $$
+    
+    이다.
 
 - 코드로도 간단하게 구현할 수 있다.
 
@@ -30,19 +29,17 @@ $$ y = \begin{cases} 1\ (x > 0) &\text{}\\ 0\ (x \leq 0) &\text{}\\ \end{cases} 
       return y.astype(np.int)
   ```
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-시그모이드 함수(sigmoid function) : 정의역 $(- \infty , \infty )$ 과 치역 $(0, 1)$ 을 가지는 함수로써 
-
-입력 $x$ 에 대하여 다음의 출력 $y$ 를 계산하는 함수이다.
-
-$$ y = \zeta (x) = \dfrac{1}{1+e ^{-x}} $$
-
-또는
-
-$$ y = \zeta (x) =\dfrac{1}{1+\text{exp}(-x)} $$
-
-</blockquote>
+    시그모이드 함수(sigmoid function) : 정의역 $(- \infty , \infty )$ 과 치역 $(0, 1)$ 을 가지는 함수로써 
+    
+    입력 $x$ 에 대하여 다음의 출력 $y$ 를 계산하는 함수이다.
+    
+    $$ y = \zeta (x) = \dfrac{1}{1+e ^{-x}} $$
+    
+    또는
+    
+    $$ y = \zeta (x) =\dfrac{1}{1+\text{exp}(-x)} $$
 
 - 편의상 표준 시그모이드 함수를 단순히 시그모이드 함수라고 부르는 것이다.
 
@@ -68,15 +65,13 @@ $$ y = \zeta (x) =\dfrac{1}{1+\text{exp}(-x)} $$
       return 1 / (1 + np.exp(-x))
   ```
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-퍼셉트론(perceptron) 또는 인공뉴런 : 임의의 자연수 $n$ 에 대하여 $n$ 개의 실수 $x$(입력) 와 그 입력에 각각 대응되는 실수 $w$(가중치) 를 곱한 것을 모두 더한 실수 $z$(순입력) 가
-
-실수 $\theta$(임계값) 보다 크면 $y=0$ 을 계산(출력)하고, 같거나 작으면 $y=1$ 을 계산(계단함수)하는 알고리즘(계산과정)이다.
-
-$$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \theta \bigg ) &\text{}\\ 0\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} \leq \theta \bigg ) &\text{}\\ \end{cases} $$
-
-</blockquote>
+    퍼셉트론(perceptron) 또는 인공뉴런 : 임의의 자연수 $n$ 에 대하여 $n$ 개의 실수 $x$(입력) 와 그 입력에 각각 대응되는 실수 $w$(가중치) 를 곱한 것을 모두 더한 실수 $z$(순입력) 가
+    
+    실수 $\theta$(임계값) 보다 크면 $y=0$ 을 계산(출력)하고, 같거나 작으면 $y=1$ 을 계산(계단함수)하는 알고리즘(계산과정)이다.
+    
+    $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \theta \bigg ) &\text{}\\ 0\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} \leq \theta \bigg ) &\text{}\\ \end{cases} $$
 
 - 또는 $b = -\theta$ 에 대하여
 
@@ -198,11 +193,9 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
         return
     ```
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-퍼셉트론 학습 알고리즘(Perceptron Learning Algorithm) : 퍼셉트론을 통하여 선형 분리 가능 문제를 해결하기 위한 가중치를 수렴시키는 알고리즘(계산과정)이다.
-
-</blockquote>
+    퍼셉트론 학습 알고리즘(Perceptron Learning Algorithm) : 퍼셉트론을 통하여 선형 분리 가능 문제를 해결하기 위한 가중치를 수렴시키는 알고리즘(계산과정)이다.
 
 - 퍼셉트론 학습 알고리즘은 다음과 같다. 이때 퍼셉트론 알고리즘의 목적은 입력 벡터 $x$ 를 올바르게 선형 분리하는 가중치 벡터 $w$ 를 구하는 것임을 상기하자.
 
@@ -303,14 +296,12 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
   $$ w_1 = 0.5 + 1 \cdot (0 - 1) \cdot 2 = -1.5 $$
         
   $$ w_2 = 0.3 + 1 \cdot (0 - 1) \cdot 1 = -0.7 $$
-        
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-퍼셉트론 수렴 정리(perceptron convergence theorem) : 퍼셉트론이 선형 분리 가능 문제들, 즉 직선으로 분류가 가능한 데이터를
+!!! note ""
 
-유한번의 학습으로 데이터를 잘 분류하는 가중치를 수렴시킬 수 있다 는 정리이다.
-
-</blockquote>
+    퍼셉트론 수렴 정리(perceptron convergence theorem) : 퍼셉트론이 선형 분리 가능 문제들, 즉 직선으로 분류가 가능한 데이터를
+    
+    유한번의 학습으로 데이터를 잘 분류하는 가중치를 수렴시킬 수 있다 는 정리이다.
 
 - 퍼셉트론 수렴 정리는 다시 말해 퍼셉트론 학습 알고리즘이 선형적으로 분리할 수 있는 데이터를 올바르게 분류할 수 있는 가중치 벡터를 반드시 수렴시킬 수 있다는 것이다.
 
@@ -464,11 +455,9 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
 
   **만약 존재하지 않으면 레이어를 하나 더 추가하여 좌표변환(공간변환)을 해보고, 또 존재하지 않으면 레이어를 또 추가해서 공간변환을 또 해보고... 그렇게 자동으로 네트워크를 생성해볼 수 있으니까.**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-다층 퍼셉트론(multi-layer perceptron) : 퍼셉트론을 여러개 쌓은 것이다.
-
-</blockquote>
+    다층 퍼셉트론(multi-layer perceptron) : 퍼셉트론을 여러개 쌓은 것이다.
 
 - 퍼셉트론으로 XOR 게이트를 표현할 수 없었지만 AND 게이트, NAND 게이트, OR 게이트를 표현한 퍼셉트론을 연결하면 XOR 게이트를 표현할 수 있다. 이렇게 연결된 퍼셉트론(인공뉴런)을 다층 퍼셉트론이라고 한다.
 
@@ -493,30 +482,26 @@ $$ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} > \
   - 2층 퍼셉트론, 정확히는 시그모이드 함수를 활성화 함수로 사용한다면 2층 퍼셉트론 구조로 임의의 함수를 표현할 수 있다는 사실이 증명되었다. 
 
     AND 게이트와 OR 게이트로 반가산기와 전가산기를 만들고, 그것으로 산술 논리 연산 장치(ALU)를 만들고 이것으로 CPU 를 만들 수 있다.
-  
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-활성화 함수(activate function) : n차원 벡터 입력 $x$ 와 n차원 벡터 가중치 $x$ 의 내적인 순입력 $z$ 를 
+!!! note ""
 
-계산하여 뉴런(노드)의 출력을 결정하는 함수이다.
-
-</blockquote>
+    활성화 함수(activate function) : n차원 벡터 입력 $x$ 와 n차원 벡터 가중치 $x$ 의 내적인 순입력 $z$ 를 
+    
+    계산하여 뉴런(노드)의 출력을 결정하는 함수이다.
 
 - 퍼셉트론은 활성화 함수로써 계단함수를 채택하였다.
 
   - 하지만 퍼셉트론 알고리즘에서 계단함수를 임의의 활성화 함수로 일반화시켜야 신경망으로 나아갈 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-ReLU 함수 : 입력이 $0$ 을 넘으면 입력을 그대로 출력하고, $0$ 이하면 $0$ 을 출력하는 함수이다.
-
-$$ y = \begin{cases}
-x\ (x>0) &\text{}\\
-0\ (x \leq 0) &\text{}\\
-\end{cases} 
-$$
-
-</blockquote>
+    ReLU 함수 : 입력이 $0$ 을 넘으면 입력을 그대로 출력하고, $0$ 이하면 $0$ 을 출력하는 함수이다.
+    
+    $$ y = \begin{cases}
+    x\ (x>0) &\text{}\\
+    0\ (x \leq 0) &\text{}\\
+    \end{cases} 
+    $$
 
 - 전통적으로 기계학습에서 학습을 위해 시그모이드 함수를 사용했으나 최근에는 이 ReLU 함수를 주로 사용하는 추세이다.
 
@@ -532,13 +517,11 @@ $$
 
 # 신경망
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-신경망(neural network) : 퍼셉트론이 사용하는 계단함수를 일반적인 활성화 함수로 일반화 시키고, 
-
-퍼셉트론의 가중치 매개변수를 수동으로 입력하는 것이 아니라 데이터로부터 자동으로 결정하게 하는 알고리즘이다.
-
-</blockquote>
+    신경망(neural network) : 퍼셉트론이 사용하는 계단함수를 일반적인 활성화 함수로 일반화 시키고, 
+    
+    퍼셉트론의 가중치 매개변수를 수동으로 입력하는 것이 아니라 데이터로부터 자동으로 결정하게 하는 알고리즘이다.
 
 - 퍼셉트론이 활성화 함수로 계단 함수를 사용하는 것과 달리 신경망에서는 시그모이드 함수나 ReLU 함수 등을 사용하여 출력 신호를 변환한다.
 
@@ -588,15 +571,13 @@ $$
     
       가령 사진 속 인물의 몸무게를 맞추는 문제이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-소프트맥스 함수(softmax function) : 분류에서 사용되는 함수
-
-$$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
-
-이다.
-
-</blockquote>
+    소프트맥스 함수(softmax function) : 분류에서 사용되는 함수
+    
+    $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
+    
+    이다.
 
 - 코드
 
@@ -653,20 +634,16 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
   - 기계학습 문제풀이는 학습과 추론 두 단계로 이뤄진다. 학습 단계에서 모델을 학습하고, 추론 단계에서 미지의 데이터를 분류(추론) 한다.
 
     신경망을 학습시킬 때에는 출력층에서 소프트맥스를 사용한다.
-  
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-단조증가함수 : 정의역 원소 $a, b$ 가 $a \leq b$ 일 때, $f(a) \leq f(b)$ 가 성립하는 함수이다.
+!!! note ""
 
-</blockquote>
+    단조증가함수 : 정의역 원소 $a, b$ 가 $a \leq b$ 일 때, $f(a) \leq f(b)$ 가 성립하는 함수이다.
 
 # 순전파
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-순전파(forward propagation) : 신경망의 학습과 추론 두 단계 중 추론과정이다.
-
-</blockquote>
+    순전파(forward propagation) : 신경망의 학습과 추론 두 단계 중 추론과정이다.
 
 - 기계학습과 마찬가지로 신경망도 두 단계로 문제를 해결한다. 
    
@@ -732,11 +709,9 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
     ```
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-배치(batch) : 입력 데이터를 하나로 묶은 것이다.
-
-</blockquote>
+    배치(batch) : 입력 데이터를 하나로 묶은 것이다.
 
 - 입력 데이터를 배치로 처리하면 다음과 같은 여러 이점이 있다.
 
@@ -748,17 +723,15 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
     - 더 정확히 말하면 느린 I/O 를 통해 데이터를 읽는 횟수를 줄여서, 빠른 CPU 나 GPU 의 순수계산 비율을 높이는 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-원-핫 인코딩(one-hot encoding) : 정답을 뜻하는 원소만 $1$ 로, 나머지는 모두 $0$ 인 배열로 저장하는 방식이다.
+    원-핫 인코딩(one-hot encoding) : 정답을 뜻하는 원소만 $1$ 로, 나머지는 모두 $0$ 인 배열로 저장하는 방식이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-전처리(pre-processing) : 신경망의 입력 데이터에 특정 변환을 가하는 것이다.
+!!! note ""
 
-</blockquote>
+    전처리(pre-processing) : 신경망의 입력 데이터에 특정 변환을 가하는 것이다.
 
 - 이 전처리는 활발히 사용되는데, 입력 데이터에 적절한 변환을 가함으로써 식별 능력을 개선하고 학습 속도를 높일 수 있기 때문이다.
 
@@ -770,11 +743,9 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
   전체 데이터를 균일하게 분포시키는 데이터 백색화(whitening) 를 진행한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정규화(normalization) : 전처리 과정 중 하나로 입력 데이터를 특정 범위로 변환하는 것이다.
-
-</blockquote>
+    정규화(normalization) : 전처리 과정 중 하나로 입력 데이터를 특정 범위로 변환하는 것이다.
 
 - 예시 
 
@@ -782,13 +753,11 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
 # 기계학습
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-학습(learning) : 신경망 학습에서 학습이란, 
-
-손실함수의 값을 가장 작게 만드는 가중치 매개변수의 최적값을 훈련 데이터로부터 자동으로 찾는 것이다.
-
-</blockquote>
+    학습(learning) : 신경망 학습에서 학습이란, 
+    
+    손실함수의 값을 가장 작게 만드는 가중치 매개변수의 최적값을 훈련 데이터로부터 자동으로 찾는 것이다.
 
 - 손실 함수의 값을 작게만드는 기법 중 하나로 함수의 기울기를 활용하는 경사법이 있다.
 
@@ -832,19 +801,15 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
   이것은 "처음부터 끝까지" 사람의 개입없이 결과를 얻는다는 뜻을 갖고 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-과적합(overfitting) : 신경망이 특정 데이터셋에 과하게 최적화된 상태이다.
-
-</blockquote>
+    과적합(overfitting) : 신경망이 특정 데이터셋에 과하게 최적화된 상태이다.
 
 # 손실함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-손실함수(loss function) : 현재의 신경망이 데이터를 얼마나 처리하지 못하는지를 출력하는 함수이다.
-
-</blockquote>
+    손실함수(loss function) : 현재의 신경망이 데이터를 얼마나 처리하지 못하는지를 출력하는 함수이다.
 
 - 이 손실함수를 통하여 가중치 매개변수들을 얼마나 조정해야 하는지 알 수 있다.
 
@@ -880,15 +845,13 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
 ### 아 이게 시그모이드 함수를 활성화 함수로 사용하는 이유구나.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-평균 제곱 오차(mean squared error, MSE) : 신경망의 출력 $y _{k}$, 정답 레이블 $t _{k}$, 데이터의 차원 수 $k$ 에 대한 손실함수
-
-$$ E = \dfrac{1}{2}  \sum_{k}^{}(y _{k} - t _{k}) ^{2} $$
-
-이다.
-
-</blockquote>
+    평균 제곱 오차(mean squared error, MSE) : 신경망의 출력 $y _{k}$, 정답 레이블 $t _{k}$, 데이터의 차원 수 $k$ 에 대한 손실함수
+    
+    $$ E = \dfrac{1}{2}  \sum_{k}^{}(y _{k} - t _{k}) ^{2} $$
+    
+    이다.
 
 - 가장 자주 쓰이는 손실 함수이다.
 
@@ -924,15 +887,13 @@ $$ E = \dfrac{1}{2}  \sum_{k}^{}(y _{k} - t _{k}) ^{2} $$
   # 0.0975...
   ```
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-교차 엔트로피 오차(cross entropy error, CEE) : 신경망의 출력 $y _{k}$, 원-핫 인코딩된 정답 레이블 $t _{k}$, 데이터의 차원 수 $k$ 에 대한 손실함수
-
-$$ E = - \sum_{k}^{} t _{k}\ln_{} y _{k} $$
-
-이다.
-
-</blockquote>
+    교차 엔트로피 오차(cross entropy error, CEE) : 신경망의 출력 $y _{k}$, 원-핫 인코딩된 정답 레이블 $t _{k}$, 데이터의 차원 수 $k$ 에 대한 손실함수
+    
+    $$ E = - \sum_{k}^{} t _{k}\ln_{} y _{k} $$
+    
+    이다.
 
 - 교차 엔트로피 오차 함수에서 정답레이블의 $t _{k}$ 는 원-핫 인코딩된 레이블이다. 따라서 정답 인덱스만 $1$ 이고 나머지는 $0$ 이다.
 
@@ -990,15 +951,13 @@ $$ E = - \sum_{k}^{} t _{k}\ln_{} y _{k} $$
 
   - 이렇게 $N$ 을 나눔으로써 "평균 손실 함수", 즉 손실 함수의 평균값이 구해지는 것이다.
 
-  - 우리는 이로써 훈련 데이터의 개수에 관계없이 언제나 통일되고 일관된 손실함수 지표를 얻을 수 있게 되었다. 
+  - 우리는 이로써 훈련 데이터의 개수에 관계없이 언제나 통일되고 일관된 손실함수 지표를 얻을 수 있게 되었다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-미니배치 학습(mini-batch) : 실제로 수없이 많은 모든 데이터를 대상으로 손실함수의 합을 구하기에는 시간이 걸리기 때문에,
-
-훈련 데이터의 일부만 추려서 "근사치" 로 손실함수를 계산하며 학습하는 과정이다.
-
-</blockquote>
+    미니배치 학습(mini-batch) : 실제로 수없이 많은 모든 데이터를 대상으로 손실함수의 합을 구하기에는 시간이 걸리기 때문에,
+    
+    훈련 데이터의 일부만 추려서 "근사치" 로 손실함수를 계산하며 학습하는 과정이다.
 
 - 만약 데이터가 $20,0000$ 개가 있다면 이 모든 데이터에 대한 손실함수의 합의 평균을 구하면 너무 좋겠지만, 
 
@@ -1162,17 +1121,15 @@ $$ E = - \sum_{k}^{} t _{k}\ln_{} y _{k} $$
 
     즉, `[y[0, 2], y[1, 7], y[2, 0], y[3, 9], y[4, 4]]` 인 배열을 생성한 것이 된다.
   
-# 미분 
+# 미분
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-해석적 미분 : 수학에서의 미분으로써 한순간의 변화량을 표현한 것
-
-$$ \dfrac{df(x)}{dx} = \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h} $$
-
-이다.
-
-</blockquote>
+    해석적 미분 : 수학에서의 미분으로써 한순간의 변화량을 표현한 것
+    
+    $$ \dfrac{df(x)}{dx} = \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h} $$
+    
+    이다.
 
 - 예시 
 
@@ -1190,15 +1147,13 @@ $$ \dfrac{df(x)}{dx} = \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h} $$
 
   라고 표현할 수도 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-수치 미분(numerical differentiation) : 컴퓨터에서 미분을 계산할 때 실제로 $0$ 에 수렴하는 차분을 사용할 수 없으므로 매우 작은 차분을 사용하여 미분을 하는 것
-
-$$ \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h} $$
-
-이다.
-
-</blockquote>
+    수치 미분(numerical differentiation) : 컴퓨터에서 미분을 계산할 때 실제로 $0$ 에 수렴하는 차분을 사용할 수 없으므로 매우 작은 차분을 사용하여 미분을 하는 것
+    
+    $$ \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h} $$
+    
+    이다.
 
 - 해석적 미분의 달리기 선수 예시의 순간변화량을 코드로 
 
@@ -1228,11 +1183,9 @@ $$ \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h} $$
 
   로 최종 미분 코드를 짤 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-반올림 오차 : 작은 값이 생략되어 최종 계산 결과에 오차가 생기게 되는 것이다.
-
-</blockquote>
+    반올림 오차 : 작은 값이 생략되어 최종 계산 결과에 오차가 생기게 되는 것이다.
 
 - 예시 
 
@@ -1245,15 +1198,13 @@ $$ \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h} $$
 
 - 컴퓨터로 미분할 때 엄청나게 작은 값을 사용하는 게 아니라 $10 ^{-4}$ 정도의 값을 사용하면 반올림 오차도 생기지 않고 적당히 좋은 결과를 얻는다는 사실이 알려져있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-중심 차분(중앙 차분) : 미분 $\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h}$ 을 컴퓨터 코드로 구현할 때 $h$ 를 실제로 $0$ 에 수렴시키지 못하기 때문에
-
-$$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
-
-로 미분을 구하여 오차를 최소화시키는 방식이다.
-
-</blockquote>
+    중심 차분(중앙 차분) : 미분 $\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h}$ 을 컴퓨터 코드로 구현할 때 $h$ 를 실제로 $0$ 에 수렴시키지 못하기 때문에
+    
+    $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
+    
+    로 미분을 구하여 오차를 최소화시키는 방식이다.
 
 - 설명 
 
@@ -1273,11 +1224,9 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
 
   을 사용하는 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-편미분 코드 구현
-
-</blockquote>
+    편미분 코드 구현
 
 - 먼저 이변수 함수 $f(x_0, x_1) = x _{0} ^{2} + x _{1} ^{2}$ 는 `numpy` 배열 `x` 에 대하여 다음과 같이 간단히 코드로 사상시킬 수 있다.
 
@@ -1316,11 +1265,9 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
 
     를 사용하자.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-기울기 벡터 코드 구현
-
-</blockquote>
+    기울기 벡터 코드 구현
 
 - 예시  
 
@@ -1348,3 +1295,4 @@ $$\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}$$
       
       return grad
   ```
+

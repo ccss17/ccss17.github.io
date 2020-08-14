@@ -1,46 +1,38 @@
-
----
-
 # 미분(differential)
 
 
 ## 이변수 함수 선형화
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-접평면(tangent plane) : $3$ 차원 곡면의 한 접점에 존재하는 무수히 많은 접선들이 동시에 상주하고 있는 평면이다.
+!!! note ""
 
-![index](https://user-images.githubusercontent.com/16812446/79077468-ec0ce800-7d3c-11ea-8d57-3c992ab66d6e.jpg)
+    접평면(tangent plane) : $3$ 차원 곡면의 한 접점에 존재하는 무수히 많은 접선들이 동시에 상주하고 있는 평면이다.
+    
+    ![index](https://user-images.githubusercontent.com/16812446/79077468-ec0ce800-7d3c-11ea-8d57-3c992ab66d6e.jpg)
 
-</blockquote>
+- 위 그림과 같이 어떤 곡면에는 접선이 무수히 많고 그 접선들이 상주하는 평면이 곡면의 접평면이다.
 
-- 위 그림과 같이 어떤 곡면에는 접선이 무수히 많고 그 접선들이 상주하는 평면이 곡면의 접평면이다. 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-법선벡터(normal vector) : 접평면에 직교하는 벡터이다.
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Surface_normal_illustration.svg/220px-Surface_normal_illustration.svg.png)
-
-</blockquote>
+    법선벡터(normal vector) : 접평면에 직교하는 벡터이다.
+    
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Surface_normal_illustration.svg/220px-Surface_normal_illustration.svg.png)
 
 - 즉 법선벡터는 위 그림의 화살표 벡터와 같이 $3$ 차원 곡면의 한 접점에서의 모든 접선과 직교한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이변수 함수 선형화 또는 접평면(tangent plane) : $f$ 의 연속인 편도함수들이 존재할 때 점 $P(x_0, y_0, z_0)$ 에서 곡면 $z = f(x, y)$ 에 대한 접평면의 방정식은 
-
-$$ z - z_0 = f_x(x_0, y_0)(x- x_0) + f_y(x_0, y_0)(y - y_0) $$
-
-또는 
-
-$$ L(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y - y_0)
-
-$$
-
-이고 이것은 이변수 함수 $f(x, y)$ 의 선형화이다. 
-
-</blockquote>
+    이변수 함수 선형화 또는 접평면(tangent plane) : $f$ 의 연속인 편도함수들이 존재할 때 점 $P(x_0, y_0, z_0)$ 에서 곡면 $z = f(x, y)$ 에 대한 접평면의 방정식은 
+    
+    $$ z - z_0 = f_x(x_0, y_0)(x- x_0) + f_y(x_0, y_0)(y - y_0) $$
+    
+    또는 
+    
+    $$ L(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y - y_0)
+    
+    $$
+    
+    이고 이것은 이변수 함수 $f(x, y)$ 의 선형화이다.
 
 - 또한 점 $P(x_0, y_0, z_0)$ 근방에서 
 
@@ -48,21 +40,19 @@ $$
 
   이 성립한다.
 
-  일변수 함수 $f$ 를 $x=a$ 에서 끝없이 확대했을 때 $x=a$ 에서 접선과 거의 똑같아지는 것과 같이 이변수 함수 $f$ 를 끝없이 확대하면 접평면의 방정식과 거의 똑같아지기 때문이다. 
+  일변수 함수 $f$ 를 $x=a$ 에서 끝없이 확대했을 때 $x=a$ 에서 접선과 거의 똑같아지는 것과 같이 이변수 함수 $f$ 를 끝없이 확대하면 접평면의 방정식과 거의 똑같아지기 때문이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-이변수 함수 미분 또는 전미분(total differential) : 점 $(x_0, y_0)$ 에서 점 $(x_0 + dx, y_0 + dy)$ 로 움직였을 때의 변화량 
-
-$$ df = f_x(x_0, y_0)dx + f_y (x_0, y_0)dy $$
-
-또는
-
-$$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
-
-을 함수 $f$ 의 전미분이라 한다. 
-
-</blockquote>
+    이변수 함수 미분 또는 전미분(total differential) : 점 $(x_0, y_0)$ 에서 점 $(x_0 + dx, y_0 + dy)$ 로 움직였을 때의 변화량 
+    
+    $$ df = f_x(x_0, y_0)dx + f_y (x_0, y_0)dy $$
+    
+    또는
+    
+    $$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
+    
+    을 함수 $f$ 의 전미분이라 한다.
 
 - $y = f(x, y)$ 가 미분가능한 함수이면 점 $(x_0, y_0)$ 에서 편미분계수가 존재한다. 이 점에서 조금 움직인 점 $(x_0+\Delta x, y_0+\Delta y)$ 를 생각할 수 있고 이때의 함수 $f$ 의 변화량
 
@@ -138,13 +128,11 @@ $$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
 
 # 방향미분과 편미분의 일반적인 정의
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-**다변수함수의 변화율 조사와 일변수 함수의 변화율 조사의 차이점** : 일변수 함수의 미분에서는 변수가 변할 수 있는 방향이 본질적으로 하나뿐(변수가 증가하는 방향) 이지만 
-
-다변수 함수의 경우 변수의 변화의 방향이 무수히 많은데, 이 방향을 보통 단위벡터로 결정한다.
-
-</blockquote>
+    **다변수함수의 변화율 조사와 일변수 함수의 변화율 조사의 차이점** : 일변수 함수의 미분에서는 변수가 변할 수 있는 방향이 본질적으로 하나뿐(변수가 증가하는 방향) 이지만 
+    
+    다변수 함수의 경우 변수의 변화의 방향이 무수히 많은데, 이 방향을 보통 단위벡터로 결정한다.
 
 - 예시 
 
@@ -154,11 +142,9 @@ $$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
   
   변수 $x$ 와 변수 $y$ 가 변하는 방향을 먼저 정의하고 $z$ 의 변화율을 조사해야 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-열린집합 또는 개집합(open set) : 위상수학에서 열린집합은 스스로의 경계를 포함하지 않는 위상 공간의 부분집합이다.
-
-</blockquote>
+    열린집합 또는 개집합(open set) : 위상수학에서 열린집합은 스스로의 경계를 포함하지 않는 위상 공간의 부분집합이다.
 
 - 함수의 변화를 조사하려 할 때, 함수가 한 점에서 정의될 뿐 아니라 그 점의 근방에서 정의되어야 하는 것이 요구된다. 왜냐하면 그래야만 그 함수의 그 점에서의 변화를 조사하기에 용이하기 때문이다.
 
@@ -176,19 +162,17 @@ $$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
 
   ![](https://mblogthumb-phinf.pstatic.net/20141228_119/dydrogud22_1419762043201Uk8cC_JPEG/2.jpg?type=w2)
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$v$-방향미분계수, 또는 $v$-방향 순간변화율 : $n$-공간의 열린 집합 $U$ 에서 정의된 함수 
-
-$$ f: U \to \mathbb{R} $$
-
-와 $U$ 의 한 점 $P$ 와 벡터 $v$ 에 대하여 극한값
-
-$$ D_vf(P) := \lim_{t \to 0} \dfrac{f(P+tv)-f(P)}{t}=\dfrac{d}{dt}\bigg | _{0}f(P+tv) $$
-
-이 존재하면 이 값을 점 $P$ 에서 $f$ 의 $v$-방향미분계수 또는 $v$-방향 순간변화율이라 한다.
-
-</blockquote>
+    $v$-방향미분계수, 또는 $v$-방향 순간변화율 : $n$-공간의 열린 집합 $U$ 에서 정의된 함수 
+    
+    $$ f: U \to \mathbb{R} $$
+    
+    와 $U$ 의 한 점 $P$ 와 벡터 $v$ 에 대하여 극한값
+    
+    $$ D_vf(P) := \lim_{t \to 0} \dfrac{f(P+tv)-f(P)}{t}=\dfrac{d}{dt}\bigg | _{0}f(P+tv) $$
+    
+    이 존재하면 이 값을 점 $P$ 에서 $f$ 의 $v$-방향미분계수 또는 $v$-방향 순간변화율이라 한다.
 
 - $t$ 는 점 $P$ 에서 벡터 $v$ 방향으로의 함수 $f$ 의 곡선의 길이를 뜻한다. 
 
@@ -222,21 +206,19 @@ $$ D_vf(P) := \lim_{t \to 0} \dfrac{f(P+tv)-f(P)}{t}=\dfrac{d}{dt}\bigg | _{0}f(
 
   이다. ■ 
 
-  즉, 함수 $f(x,y) = x^2+y^2$ 의 점 $P=(0,1)$ 에서 $(2,3)$ 방향으로의 순간변화율이 $6$ 이라는 것이다.  
+  즉, 함수 $f(x,y) = x^2+y^2$ 의 점 $P=(0,1)$ 에서 $(2,3)$ 방향으로의 순간변화율이 $6$ 이라는 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-편미분계수 : $n$-공간의 $n$개의 축 방향의 단위벡터인 표준단위벡터 
-
-$$ e_1 := (1,0,\dots,0), \dots, e_n := (0,0,\dots,1), $$
-
-에 대하여 점 $P = (p_1, \dots,p_n)$ 에서 함수 $f: U \to \mathbb{R}$ 의 $e_k$-방향미분계수 
-
-$$D _{k}f(P) = \dfrac{\partial f(P)}{\partial x_k} = \dfrac{d}{dt}\bigg | _{0}f(p_1, \dots,p_k+t,\dots,p_n)$$
-
-를 점 $P$ 에서 $f$ 의 $k$번째 편미분계수라고 한다.
-
-</blockquote>
+    편미분계수 : $n$-공간의 $n$개의 축 방향의 단위벡터인 표준단위벡터 
+    
+    $$ e_1 := (1,0,\dots,0), \dots, e_n := (0,0,\dots,1), $$
+    
+    에 대하여 점 $P = (p_1, \dots,p_n)$ 에서 함수 $f: U \to \mathbb{R}$ 의 $e_k$-방향미분계수 
+    
+    $$D _{k}f(P) = \dfrac{\partial f(P)}{\partial x_k} = \dfrac{d}{dt}\bigg | _{0}f(p_1, \dots,p_k+t,\dots,p_n)$$
+    
+    를 점 $P$ 에서 $f$ 의 $k$번째 편미분계수라고 한다.
 
 - 점 $P = (p_1, \dots,p_n)$ 에서 $f$ 의 $k$번째 편미분계수는 $P = (p_1, \dots,p_n)$ 의 $k$ 번째 성분만 변화시켜서 얻은 $f$ 의 변화율이다.
 
@@ -260,15 +242,13 @@ $$D _{k}f(P) = \dfrac{\partial f(P)}{\partial x_k} = \dfrac{d}{dt}\bigg | _{0}f(
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-편도함수 : 함수 $f$ 가 점 $P = (p_1, \dots,p_n)$ 에 대하여 정의역 $U$ 의 모든 점에 대하여 $k$번째 편미분계수를 가지면 함수 
-
-$$ D_kf:U \to \mathbb{R}, P \mapsto D_kf(P) $$
-
-를 $f$의 $k$번째 편도함수라고 한다.
-
-</blockquote>
+    편도함수 : 함수 $f$ 가 점 $P = (p_1, \dots,p_n)$ 에 대하여 정의역 $U$ 의 모든 점에 대하여 $k$번째 편미분계수를 가지면 함수 
+    
+    $$ D_kf:U \to \mathbb{R}, P \mapsto D_kf(P) $$
+    
+    를 $f$의 $k$번째 편도함수라고 한다.
 
 - 예시 
 
@@ -292,21 +272,19 @@ $$ D_kf:U \to \mathbb{R}, P \mapsto D_kf(P) $$
 
 ## 기울기 벡터의 일반적인 정의
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-편미분 가능 : $n$변수함수 $f$ 의 모든 편미분계수가 점 $P$ 에서 존재할 때, $f$ 는 점 $P$ 에서 편미분 가능하다.
+    편미분 가능 : $n$변수함수 $f$ 의 모든 편미분계수가 점 $P$ 에서 존재할 때, $f$ 는 점 $P$ 에서 편미분 가능하다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-기울기벡터(gradient vector) : $n$변수함수 $f$ 가 점 $P$ 에서 편미분가능할 때 벡터
+!!! note ""
 
-$$ \text{grad}\ f(P) := (D_1f(P), \dots, D_nf(P)) $$
-
-를 점 $P$ 에서 $f$ 의 기울기 벡터라고 한다.
-
-</blockquote>
+    기울기벡터(gradient vector) : $n$변수함수 $f$ 가 점 $P$ 에서 편미분가능할 때 벡터
+    
+    $$ \text{grad}\ f(P) := (D_1f(P), \dots, D_nf(P)) $$
+    
+    를 점 $P$ 에서 $f$ 의 기울기 벡터라고 한다.
 
 - 기울기 벡터를 다음과 같이 표기하기도 한다.
 
@@ -364,11 +342,9 @@ $$ \text{grad}\ f(P) := (D_1f(P), \dots, D_nf(P)) $$
 
 ## 미분 가능의 일반적인 정의
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-**$n$-공간의 열린 집합에서 정의된 함수 $f$ 의 미분 가능** : 
-
-</blockquote>
+    **$n$-공간의 열린 집합에서 정의된 함수 $f$ 의 미분 가능** :
 
 - 이 개념은 점 $P$ 에서 모든 벡터 $v$ 에 대한 방향미분계수 $D_vf(P)$ 가 존재한다는 것이 아니다.
 
@@ -398,39 +374,35 @@ $$ \text{grad}\ f(P) := (D_1f(P), \dots, D_nf(P)) $$
 
   **(책이 정말 어렵다..)**
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-일급함수 : $n$-공간의 열린 집합에서 정의된 함수 $f(x_1, \dots, x_n)$ 의 각 편도함수 
-
-$$ \dfrac{\partial f}{\partial x_1}, \dots,\dfrac{\partial f}{\partial x_n} $$
-
-가 연속이면, $f$ 를 일급함수 또는 $\mathcal{C} ^{1}$ 라고 한다.
-
-</blockquote>
+    일급함수 : $n$-공간의 열린 집합에서 정의된 함수 $f(x_1, \dots, x_n)$ 의 각 편도함수 
+    
+    $$ \dfrac{\partial f}{\partial x_1}, \dots,\dfrac{\partial f}{\partial x_n} $$
+    
+    가 연속이면, $f$ 를 일급함수 또는 $\mathcal{C} ^{1}$ 라고 한다.
 
 # 다변수 벡터함수
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수의 분류 : 함수는 정의역과 공역의 차원을 기준으로 다음 $4$ 가지로 분류된다. 
-
-1. 실함수(real valued functions) : 다음과 같이 $1$차원에서 $1$차원으로 가는 함수이다.
-
-    $$ \mathbb{R} \to \mathbb{R} $$
-
-2. 매개화된 곡선(parametrized curves) : 다음과 같이 $1$차원에서 $n$차원으로 가는 함수이다.
-
-    $$ \mathbb{R} \to \mathbb{R} ^{n}$$
-
-3. 다변수 함수(functions of several variables) : 다음과 같이 $n$차원에서 $1$차원으로 가는 함수이다.
-
-    $$ \mathbb{R} ^{n} \to \mathbb{R} $$
-
-4. 다변수 벡터함수(vector valued functions of several variables) : 다음과 같이 $n$차원에서 $m$차원으로 가는 함수이다.
-
-    $$ \mathbb{R} ^{n} \to \mathbb{R} ^{m} $$
-
-</blockquote>
+    함수의 분류 : 함수는 정의역과 공역의 차원을 기준으로 다음 $4$ 가지로 분류된다. 
+    
+    1. 실함수(real valued functions) : 다음과 같이 $1$차원에서 $1$차원으로 가는 함수이다.
+    
+        $$ \mathbb{R} \to \mathbb{R} $$
+    
+    2. 매개화된 곡선(parametrized curves) : 다음과 같이 $1$차원에서 $n$차원으로 가는 함수이다.
+    
+        $$ \mathbb{R} \to \mathbb{R} ^{n}$$
+    
+    3. 다변수 함수(functions of several variables) : 다음과 같이 $n$차원에서 $1$차원으로 가는 함수이다.
+    
+        $$ \mathbb{R} ^{n} \to \mathbb{R} $$
+    
+    4. 다변수 벡터함수(vector valued functions of several variables) : 다음과 같이 $n$차원에서 $m$차원으로 가는 함수이다.
+    
+        $$ \mathbb{R} ^{n} \to \mathbb{R} ^{m} $$
 
 - 지금까지 실함수와 다변수함수의 미분을 살펴봤는데, 이제 다변수 벡터함수의 미분을 살펴본다. 
 
@@ -440,39 +412,35 @@ $$ \dfrac{\partial f}{\partial x_1}, \dots,\dfrac{\partial f}{\partial x_n} $$
 
   는 야코비 행렬의 행렬식을 구할 수 있고, 이 값의 절대값은 부피변화율을 나타내는 것임을 알아볼 것이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-다변수 벡터함수(vector valued functions of several variables) : $n$-공간의 한 부분집합에서 정의된 벡터함수
-
-$$ F: \mathbb{R} ^{n} \to \mathbb{R} ^{m} $$
-
-는 $F$ 의 성분함수 $f_1, \dots, f_m$ 에 대하여
-
-$$ F(x_1, \dots,x_n) = (f_1(x_1, \dots,x_n), \dots, f_m(x_1, \dots,x_n)) $$
-
-이다.
-
-</blockquote>
+    다변수 벡터함수(vector valued functions of several variables) : $n$-공간의 한 부분집합에서 정의된 벡터함수
+    
+    $$ F: \mathbb{R} ^{n} \to \mathbb{R} ^{m} $$
+    
+    는 $F$ 의 성분함수 $f_1, \dots, f_m$ 에 대하여
+    
+    $$ F(x_1, \dots,x_n) = (f_1(x_1, \dots,x_n), \dots, f_m(x_1, \dots,x_n)) $$
+    
+    이다.
 
 - 예시 
 
   함수 $F(x, y) = (e ^{x}\cos y, e ^{x}\sin y, x+y)$ 는 다변수 벡터함수이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-야코비 행렬(jacobian matrix) : 열린집합 $U \subset \mathbb{R} ^{n}$ 에서 정의된 함수 벡터함수 $f: U \to \mathbb{R} ^{m}$ 가 $F = (f_1, \dots, f_m)$ 가 점 $P \in U$ 에서 미분가능하면 
-
-$f'_1(P) = \text{grad}\ f_1(P)$ 를 첫번째 행,
-
-$f'_2(P) = \text{grad}\ f_2(P)$ 를 두번째 행,
-
-$f'_m(P) = \text{grad}\ f_m(P)$ 를 마지막 행으로 하는 행렬
-
-$$ F'(P) := \dfrac{\partial (f_1, \dots, f_m)}{\partial (x_1, \dots, x_n)}(P) := \begin{pmatrix} \dfrac{\partial f_1}{\partial x_1}(P)&\dfrac{\partial f_1}{\partial x_2}(P)&\dots&\dfrac{\partial f_1}{\partial x_n}(P)\\ \dfrac{\partial f_2}{\partial x_1}(P)&\dfrac{\partial f_2}{\partial x_2}(P)&\dots&\dfrac{\partial f_2}{\partial x_n}(P)\\ \vdots &\ddots &\cdots&\vdots \\ \dfrac{\partial f_m}{\partial x_1}(P)&\dfrac{\partial f_m}{\partial x_2}(P)&\dots&\dfrac{\partial f_m}{\partial x_n}(P)\\ \end{pmatrix} $$
-
-을 점 $P$ 에서 $F$ 의 야코비 행렬이라고 한다.
-
-</blockquote>
+    야코비 행렬(jacobian matrix) : 열린집합 $U \subset \mathbb{R} ^{n}$ 에서 정의된 함수 벡터함수 $f: U \to \mathbb{R} ^{m}$ 가 $F = (f_1, \dots, f_m)$ 가 점 $P \in U$ 에서 미분가능하면 
+    
+    $f'_1(P) = \text{grad}\ f_1(P)$ 를 첫번째 행,
+    
+    $f'_2(P) = \text{grad}\ f_2(P)$ 를 두번째 행,
+    
+    $f'_m(P) = \text{grad}\ f_m(P)$ 를 마지막 행으로 하는 행렬
+    
+    $$ F'(P) := \dfrac{\partial (f_1, \dots, f_m)}{\partial (x_1, \dots, x_n)}(P) := \begin{pmatrix} \dfrac{\partial f_1}{\partial x_1}(P)&\dfrac{\partial f_1}{\partial x_2}(P)&\dots&\dfrac{\partial f_1}{\partial x_n}(P)\\ \dfrac{\partial f_2}{\partial x_1}(P)&\dfrac{\partial f_2}{\partial x_2}(P)&\dots&\dfrac{\partial f_2}{\partial x_n}(P)\\ \vdots &\ddots &\cdots&\vdots \\ \dfrac{\partial f_m}{\partial x_1}(P)&\dfrac{\partial f_m}{\partial x_2}(P)&\dots&\dfrac{\partial f_m}{\partial x_n}(P)\\ \end{pmatrix} $$
+    
+    을 점 $P$ 에서 $F$ 의 야코비 행렬이라고 한다.
 
 - 예시 
 
@@ -1127,3 +1095,4 @@ $$ F'(P) := \dfrac{\partial (f_1, \dots, f_m)}{\partial (x_1, \dots, x_n)}(P) :=
 
     $$ \dfrac{\partial z _{ij}}{\partial x _{st}} = \dfrac{\partial }{\partial x _{st}}\sum_{k=1}^{m}x _{ik}y _{kj} = 
     $$
+

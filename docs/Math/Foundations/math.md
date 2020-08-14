@@ -1,71 +1,45 @@
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-## **수학 기초론**
-
-**[논리학](https://ccss17.github.io/logic.html)**
-
-**[집합론](https://ccss17.github.io/math.html)**
-
-**[수리논리학](https://ccss17.github.io/mathmatical_logic.html)**
-
-</blockquote>
-
-# 집합론 
-
----
-
 # 수학
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-수학 : 자연대상을 단순화하고 추상화시켜 그것의 성질과 관계를 정확하게 다룰 수 있도록 만들고 연구하는 것이다. 
+!!! note ""
 
-</blockquote>
+    수학 : 자연대상을 단순화하고 추상화시켜 그것의 성질과 관계를 정확하게 다룰 수 있도록 만들고 연구하는 것이다.
 
 - 수학 또한 자연대상의 일부이기에 수학도 한번 더 추상화하여 수학적으로 다룰 수 있다. 이것을 메타수학이라 한다. 
 
 - 자연대상을 추상화시켜 수학적으로 표현한 것으로부터 얻을 수 있는 장점은 자연대상을 명확하게 밝힐 수 있다는 것이다. 명확하게 볼 수 있으면 앞서갈 수 있기 때문에 역사적으로 국가나 개인의 존속을 위하여 수학은 자연스럽게 사용되었고 발전하였다.
 
-- 수학은 자연대상의 존재와 관계를 추상화시켜 세상의 법을 연구하는 것인데 과거 수학자들이 수학과 현실 세상과의 괴리를 느꼈다는 것은 좀 이상하다. 하디(Hardy, G. H.) 는 이렇게 말했다. "나의 수학에는 지금까지 어느 것 하나 유용한 것이 없다. 나의 수학은 참된 수학, 즉 페르마와 오일러와 가우스와 아벨의 수학이지, 공학 실험실에서 수학이라는 이름으로 불리는 쓰레기를 뜻하지 않는다." 그러나 하디가 연구한 정수의 독특한 성질이 인터넷 뱅킹이나 온라인 결제를 할 때 반드시 필요한 암호화 과정에 유용하게 사용되고 있다. 한편 응용수학 쪽 스탠스를 갖고 있던 푸앵카레는 "예전에는 실제적 응용을 위해 새로운 함수를 만들었으나 요즘 수학자들은 괴상하기 짝이 없는 함수만 만든다." 며 아무리 확대해도 매끄럽게 그려지지 않는 함수를 두고 순수수학자들을 비판했다. 그러나 그 함수는 물리학에서 프랙탈 현상을 연구하는데 유용하게 사용되고 있다. 
+- 수학은 자연대상의 존재와 관계를 추상화시켜 세상의 법을 연구하는 것인데 과거 수학자들이 수학과 현실 세상과의 괴리를 느꼈다는 것은 좀 이상하다. 하디(Hardy, G. H.) 는 이렇게 말했다. "나의 수학에는 지금까지 어느 것 하나 유용한 것이 없다. 나의 수학은 참된 수학, 즉 페르마와 오일러와 가우스와 아벨의 수학이지, 공학 실험실에서 수학이라는 이름으로 불리는 쓰레기를 뜻하지 않는다." 그러나 하디가 연구한 정수의 독특한 성질이 인터넷 뱅킹이나 온라인 결제를 할 때 반드시 필요한 암호화 과정에 유용하게 사용되고 있다. 한편 응용수학 쪽 스탠스를 갖고 있던 푸앵카레는 "예전에는 실제적 응용을 위해 새로운 함수를 만들었으나 요즘 수학자들은 괴상하기 짝이 없는 함수만 만든다." 며 아무리 확대해도 매끄럽게 그려지지 않는 함수를 두고 순수수학자들을 비판했다. 그러나 그 함수는 물리학에서 프랙탈 현상을 연구하는데 유용하게 사용되고 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-수학 : 양(정수론), 구조(대수학), 공간(기하학), 변화(해석학) 등의 개념을 다루는 학문으로써 단순하게는 수와 그 논리에 대하여 연구하는 학문이다. 
-
-</blockquote>
+    수학 : 양(정수론), 구조(대수학), 공간(기하학), 변화(해석학) 등의 개념을 다루는 학문으로써 단순하게는 수와 그 논리에 대하여 연구하는 학문이다.
 
 - 수학은 관측된 대상을 추상화시키고 형식화하며 발전하였고 적절한 정의와 공리로부터 연역을 통해 관측되지 않은 존재마저 일반화 및 추상화시키며 발전하고 있다. 
 
-- 추상화하는 것은 대상을 단순화하여 문제를 풀기 쉽게 만들기 위함이다. 먼저 자연 대상을 수학적으로 추상화시키면 불변요소와 가변요소를 구분할 수 있는데 불변요소를 제거하여 대상을 단순화 시킬 수 있다. 또한 가변요소라 할지라도 가정법을 사용하여 특정 요소를 불변요소라고 상정하면 가변요소집합을 더 축소할 수 있어 대상을 더욱 단순화 시킬 수 있다. 
+- 추상화하는 것은 대상을 단순화하여 문제를 풀기 쉽게 만들기 위함이다. 먼저 자연 대상을 수학적으로 추상화시키면 불변요소와 가변요소를 구분할 수 있는데 불변요소를 제거하여 대상을 단순화 시킬 수 있다. 또한 가변요소라 할지라도 가정법을 사용하여 특정 요소를 불변요소라고 상정하면 가변요소집합을 더 축소할 수 있어 대상을 더욱 단순화 시킬 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정의(definition) : 용어의 뜻을 명확하게 정하여 약속한 것이다. 
-
-</blockquote>
+    정의(definition) : 용어의 뜻을 명확하게 정하여 약속한 것이다.
 
 - 정의란 대상을 특정할 수 있는 조건들로 이루어진 서술이다. 따라서 대상을 특정할 수 있는 조건이 여러 개라면 정의도 여러 개일 수 있다. 
 
-- 정의는 대상의 존재성을 보장하지 않는다. 다시 말해 어떤 대상을 특정할 수 있는 조건으로 정의를 내리더라도 그 정의로 특정된 대상이 실제로 존재하지 않을 수도 있다. 
+- 정의는 대상의 존재성을 보장하지 않는다. 다시 말해 어떤 대상을 특정할 수 있는 조건으로 정의를 내리더라도 그 정의로 특정된 대상이 실제로 존재하지 않을 수도 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-공리(axiom) : 어떤 정리가 속한 분야(기하학, 해석학 등) 의 가장 근본이 되는 것으로 증명 없이 받아들이기로 약속한 명제들이다.
-
-</blockquote>
+    공리(axiom) : 어떤 정리가 속한 분야(기하학, 해석학 등) 의 가장 근본이 되는 것으로 증명 없이 받아들이기로 약속한 명제들이다.
 
 - 어떤 사실을 증명하기 위해서는 근거가 필요한데 그 근거를 증명하기 위해서는 또 다른 근거가 필요하다. 그런데 이 작업을 무한히 반복할 수는 없기에 너무나도 자명하여 근거만 없지만 예외적으로 참이라고 받아들이자고 모두가 약속한 명제가 바로 공리이다. 
 
 - 예시 
 
-  미적분학에서 꼭 필요한 실수 체계의 공리중 하나 '아르키메데스 공리' 는 "임의의 양수를 충분히 $N$ 번 거듭 더하면 $1$ 보다 커지게 할 수 있도록 하는 자연수 $N$ 이 존재한다." 이다. 
+  미적분학에서 꼭 필요한 실수 체계의 공리중 하나 '아르키메데스 공리' 는 "임의의 양수를 충분히 $N$ 번 거듭 더하면 $1$ 보다 커지게 할 수 있도록 하는 자연수 $N$ 이 존재한다." 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-증명(proof) : 정의 또는 이미 참임을 알고 있는 명제로부터 논리학적으로 정당한 방법을 사용하여 어떤 명제가 참임을 논증하는 것이다. 
-
-</blockquote>
+    증명(proof) : 정의 또는 이미 참임을 알고 있는 명제로부터 논리학적으로 정당한 방법을 사용하여 어떤 명제가 참임을 논증하는 것이다.
 
 - 정리의 증명에서 용어의 정의를 확실히 이해해야 한다. 왜냐하면 정리의 증명은 사실상 한 정의로부터 다른 정의로 논리적으로 옮겨가는 과정을 모아둔 것이기 때문이다. 
 
@@ -117,21 +91,17 @@
 
         조건 $q_1, q_2, \dots, q_n$ 들이 서로 배반적(mutually exclusive, 이들 중 어느 두 조건도 동시에 만족하는 대상이 있을 수 없음) 이며 동시에 임의의 대상이 이들 조건 중 하나는 만족해야 한다는 완벽성(exhaustiveness) 을 갖추고 있다고 하자.
 
-        이때 "$p$ 를 만족하면서 동시에 $q_k$ 를 만족하는 대상은 없다" 는 명제를 $k=1$ 부터 $k=n-1$ 까지 모두 증명하였다면 결국 "$p$ 이면 $q_n$ 이다" 를 증명하게 된 것이다. 이것을 "proof by cases" 라고 하는데 사실 귀류법을 여러번 사용한 것에 불과하다. 
+        이때 "$p$ 를 만족하면서 동시에 $q_k$ 를 만족하는 대상은 없다" 는 명제를 $k=1$ 부터 $k=n-1$ 까지 모두 증명하였다면 결국 "$p$ 이면 $q_n$ 이다" 를 증명하게 된 것이다. 이것을 "proof by cases" 라고 하는데 사실 귀류법을 여러번 사용한 것에 불과하다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정리(theorem) : 참임이 증명된 명제 중에서 기본이 되는 것이나 다른 명제를 증명할 때 이용할 수 있는 명제이다. 
-
-</blockquote>
+    정리(theorem) : 참임이 증명된 명제 중에서 기본이 되는 것이나 다른 명제를 증명할 때 이용할 수 있는 명제이다.
 
 # 수학기초론
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-수학기초론 : 수학의 명제를 옳다고 판단할 근거가 무엇인지 탐구하여 수학의 기초를 다지는 영역이다. 
-
-</blockquote>
+    수학기초론 : 수학의 명제를 옳다고 판단할 근거가 무엇인지 탐구하여 수학의 기초를 다지는 영역이다.
 
 - 수학의 분야들 중 수리논리학, 집합론, 모형 이론, 증명 이론, 계산 가능성 이론들을 다룬다.
 
@@ -149,13 +119,11 @@
 
   - 위 두 자연언어로 표현된 명제는 전혀 다른 사건을 표현하지만 두 사건이 동일한 형식 언어 $2- 1 = 1$ 로 격하되었다. 이는 추상 언어($2, 1, -, =$)가 대상을 일반화하고 추상화 할 수 있기 때문이다. 역으로 추상화된 형식 언어는 개별적인 자연 사건에 대응될 수 있다. 따라서 참으로 판명된 수학 명제의 형식 언어는 수많은 개별 사건에 적용되는 자연 언어로 격상될 가능성을 갖는다. 
 
-# 집합론 
+# 집합론
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-집합론 : 추상적 대상들의 모임을 연구하는 학문이다. 
-
-</blockquote>
+    집합론 : 추상적 대상들의 모임을 연구하는 학문이다.
 
 - 집합론은 술어논리학과 함께 수학기초론의 근본을 이룬다. 
 
@@ -163,33 +131,27 @@
 
 - 중고등학교 과정에서 배우는 집합론은 소박한 집합론이다. 그러나 이 집합론에서 러셀의 역설이 발견되었고 이에 따라 공리적 집합론이 나왔다. 
 
-- 공리적 집합론이 형식 언어로 정의되는 것에 비해 소박한 집합론은 자연 언어로 정의된다. 
+- 공리적 집합론이 형식 언어로 정의되는 것에 비해 소박한 집합론은 자연 언어로 정의된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-명제 : 문장들 가운데 참 또는 거짓인 것이다.
-
-</blockquote>
+    명제 : 문장들 가운데 참 또는 거짓인 것이다.
 
 - 예시 
 
   "$5$ 는 자연수이다." 는 명제이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$\lnot p$ : 명제 $p$ 에 대한 명제 "$p$가 아니다." 이다.
-
-</blockquote>
+    $\lnot p$ : 명제 $p$ 에 대한 명제 "$p$가 아니다." 이다.
 
 - 예시 
 
   명제 $p$ "$5$ 는 자연수이다." 의 부정 $\lnot p$ 은 "$5$ 는 자연수가 아니다." 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-진리표 : 명제 $p$ 에 따른 다른 명제들의 결과를 표로 정리한 것이다.
-
-</blockquote>
+    진리표 : 명제 $p$ 에 따른 다른 명제들의 결과를 표로 정리한 것이다.
 
 - 예시 
 
@@ -202,11 +164,9 @@ $\lnot p$ : 명제 $p$ 에 대한 명제 "$p$가 아니다." 이다.
 
   진리표를 통하여 $p$ 와 $\lnot (\lnot p)$ 의 옳고 그름이 같다는 것을 알 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$p \lor q$ : 명제 $p, q$ 에 대하여 명제 "$p$ 또는 $q$" 이다.
-
-</blockquote>
+    $p \lor q$ : 명제 $p, q$ 에 대하여 명제 "$p$ 또는 $q$" 이다.
 
 - "$p \lor q$" 는 $p$와 $q$ 중 하나만 참이어도 $p \lor q$ 가 참이 된다.
 
@@ -231,11 +191,9 @@ $p \lor q$ : 명제 $p, q$ 에 대하여 명제 "$p$ 또는 $q$" 이다.
   |$F$|$T$|$T$|$F$|$F$|
   |$F$|$F$|$F$|$T$|$T$|
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$p \land q$ : 명제 $p, q$ 에 대한 명제 "$p$ 그리고 $q$" 이다.
-
-</blockquote>
+    $p \land q$ : 명제 $p, q$ 에 대한 명제 "$p$ 그리고 $q$" 이다.
 
 - "$p \land q$" 는 $p$와 $q$ 가 둘 다 참이어야 $p \land q$ 가 참이 된다.
 
@@ -248,11 +206,9 @@ $p \land q$ : 명제 $p, q$ 에 대한 명제 "$p$ 그리고 $q$" 이다.
   |$F$|$T$|$F$|$T$|$T$|
   |$F$|$F$|$F$|$T$|$T$|
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$p \to q$ : 명제 $p,q$ 에 대한 명제 "$p$이면 $q$" 이다.
-
-</blockquote>
+    $p \to q$ : 명제 $p,q$ 에 대한 명제 "$p$이면 $q$" 이다.
 
 - 이 명제의 부정은 $p$는 성립하지만 $q$ 는 성립하지 않는 것이므로 
 
@@ -277,31 +233,25 @@ $p \to q$ : 명제 $p,q$ 에 대한 명제 "$p$이면 $q$" 이다.
 
 - $p \to q$ 이고 $q \to p$ 일때 즉, $(p \to q)\land (q \to p)$ 일 때 $p \iff q$ 라고 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-$p \implies q$ : $p \to q$ 가 참일 때 $p \implies q$ 라고 한다.
-
-</blockquote>
+    $p \implies q$ : $p \to q$ 가 참일 때 $p \implies q$ 라고 한다.
 
 - $p \implies q$ 이고 $q \implies p$ 일 때, $p \iff q$ 라고 한다.
 
 > 증명이란 이것의 연속과정이 아닐까?
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-조건 : 변수 $x$ 를 포함하는 문장은 변수가 초기화됨에 따라 명제가 되는데, 이런 문장을 조건이라고 한다.
-
-</blockquote>
+    조건 : 변수 $x$ 를 포함하는 문장은 변수가 초기화됨에 따라 명제가 되는데, 이런 문장을 조건이라고 한다.
 
 - 예시 
 
   변수 $x$ 를 포함하는 문장 "$x$ 는 $6$ 의 약수이다." 는 $x$ 가 초기화됨에 따라 명제가 되므로 조건이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-진리집합 : 변수 $x$ 를 포함하는 조건을 참이되게 하는 변수 $x$ 의 집합이다.
-
-</blockquote>
+    진리집합 : 변수 $x$ 를 포함하는 조건을 참이되게 하는 변수 $x$ 의 집합이다.
 
 - 예시 
 
@@ -325,23 +275,19 @@ $p \implies q$ : $p \to q$ 가 참일 때 $p \implies q$ 라고 한다.
 
     이 된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-집합의 상등 : 조건 $p$ 의 진리집합 $A$, 조건 $q$ 의 진리집합 $B$ 에 대하여 $p \iff q$, 즉 $x \in A \iff x \in B$ 이면 
-
-두 집합 $A, B$ 가 같다, 즉 $A = B$ 라고 한다.
-
-</blockquote>
+    집합의 상등 : 조건 $p$ 의 진리집합 $A$, 조건 $q$ 의 진리집합 $B$ 에 대하여 $p \iff q$, 즉 $x \in A \iff x \in B$ 이면 
+    
+    두 집합 $A, B$ 가 같다, 즉 $A = B$ 라고 한다.
 
 - $x \in A$ 는 조건 $p$ 를 참이되게 하는 $A$ 의 원소 $x$ 에 대한 것이므로 참이 된 조건 $p$ 를 뜻한다. 
 
   그러므로 $x \in A$ 라는 표기는 참과 거짓이 정해졌으므로 더 이상 조건이 아니라 명제를 뜻한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-대우명제 : $p \to q$ 의 대우는 $\lnot q \to \lnot p$ 이다.
-
-</blockquote>
+    대우명제 : $p \to q$ 의 대우는 $\lnot q \to \lnot p$ 이다.
 
 - 조건 $p(x)$ 의 진리집합 $P$ 에 대하여 명제 "어떤 $x$ 에 대하여 $p(x)$ 이다." 는 어떤 $x$ 에 대하여 $p(x)$ 가 참이되게 하는 $x$ 가 하나 이상 있다는 뜻이다. 그러므로 이 명제는
 
@@ -367,25 +313,23 @@ $p \implies q$ : $p \to q$ 가 참일 때 $p \implies q$ 라고 한다.
 
     "임의의 $a < 0$ 에 대하여 $x \geq a$ 이다." 는 변수 $x$ 에 관한 조건인데, 이것의 대우명제는 "$x<a$ 인 음수 $a<0$ 이 존재한다." 이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-부분집합 : 조건 $p$ 의 진리집합 $A$, 조건 $q$ 의 진리집합 $B$ 에 대하여 $p \to q$, 즉 $x \in A \to x \in B$ 이면 
+    부분집합 : 조건 $p$ 의 진리집합 $A$, 조건 $q$ 의 진리집합 $B$ 에 대하여 $p \to q$, 즉 $x \in A \to x \in B$ 이면 
+    
+    $A$ 를 $B$ 의 부분집합, 즉 $A \subset B$ 라고 한다.
 
-$A$ 를 $B$ 의 부분집합, 즉 $A \subset B$ 라고 한다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-진부분집합 : 부분집합의 정의에서 $A \neq B$ 이면서 $A \subset B$ 이면, $A$ 를 $B$ 의 진부분집합이라고 한다.
+    진부분집합 : 부분집합의 정의에서 $A \neq B$ 이면서 $A \subset B$ 이면, $A$ 를 $B$ 의 진부분집합이라고 한다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-여집합 : 집합 $A$ 에 대하여 $A ^{c}=\{x:x \not \in A\}$ 를 $A$ 의 여집합이라고 한다.
+!!! note ""
 
-</blockquote>
+    여집합 : 집합 $A$ 에 대하여 $A ^{c}=\{x:x \not \in A\}$ 를 $A$ 의 여집합이라고 한다.
 
 - 조건 $p$ 의 진리집합이 $P$ 이면 그 부정 $\lnot p$ 의 진리집합은 $P ^{c}$ 이다.
 
@@ -397,11 +341,9 @@ $A$ 를 $B$ 의 부분집합, 즉 $A \subset B$ 라고 한다.
 
     $$ x \in (A ^{c})^{c} \iff \lnot (x \in A ^{c}) \iff \lnot (\lnot x \in A) \iff x \in A $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-공집합 : 원소가 없는 집합 $\emptyset$ 이다.
-
-</blockquote>
+    공집합 : 원소가 없는 집합 $\emptyset$ 이다.
 
 - 전체집합 $U$ 에 대하여 다음이 성립한다.
 
@@ -409,15 +351,13 @@ $A$ 를 $B$ 의 부분집합, 즉 $A \subset B$ 라고 한다.
 
   2. $A \cup A ^{c} = U, A \cap A ^{c} = \emptyset$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-합집합(union) $A \cup B$ : 두 집합 $A, B$ 에 대하여 
-
-$$ A \cup B = \{x:x \in A \lor x \in B\} $$
-
-이다.
-
-</blockquote>
+    합집합(union) $A \cup B$ : 두 집합 $A, B$ 에 대하여 
+    
+    $$ A \cup B = \{x:x \in A \lor x \in B\} $$
+    
+    이다.
 
 - 정의에 따라 조건 $p, q$ 의 진리집합 $P, Q$ 에 대하여 조건 $p \lor q$ 의 진리집합은 $P \cup Q$ 이다.
 
@@ -469,15 +409,13 @@ $$ A \cup B = \{x:x \in A \lor x \in B\} $$
 
   이다. 이는 가산 개의 집합의 합집합과 임의의 첨수족의 합집합을 모두 포함하는 일반적인 정의이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-교집합 $A \cap B$ : 두 집합 $A, B$ 에 대하여 
-
-$$ A \cap B = \{x:x \in A \land x \in B\} $$
-
-이다.
-
-</blockquote>
+    교집합 $A \cap B$ : 두 집합 $A, B$ 에 대하여 
+    
+    $$ A \cap B = \{x:x \in A \land x \in B\} $$
+    
+    이다.
 
 - 합집합과 교집합은 다음 성질을 갖는다.
 
@@ -551,11 +489,9 @@ $$ A \cap B = \{x:x \in A \land x \in B\} $$
 
   - $\displaystyle  A \cup \bigg (\bigcap_{i \in I}^{}A_i\bigg ) = \bigcap_{i \in I}^{}(A \cup A_i)$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-집합족(family of sets) : 집합을 원소로 하여 구성된 집합이다.
-
-</blockquote>
+    집합족(family of sets) : 집합을 원소로 하여 구성된 집합이다.
 
 - 집합 $X$ 속의 집합족이란 $X$ 의 부분집합으로 이루어진 집합이다. 
 
@@ -567,15 +503,13 @@ $$ A \cap B = \{x:x \in A \land x \in B\} $$
 
   임의의 집합 $X$ 에 대하여 공집합 $\emptyset$ 과 $X$ 의 멱집합 $\mathcal{P}(X)$ 은 $X$ 속의 집합족이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-서로소인 집합족 : 집합족 $\mathcal{A} = \{A_i : i \in I\}$ 가 
-
-$$ i,i \in I, i \neq j \implies A_i \cap A_j = \emptyset $$
-
-을 만족하면 서로소인 집합족이라 한다.
-
-</blockquote>
+    서로소인 집합족 : 집합족 $\mathcal{A} = \{A_i : i \in I\}$ 가 
+    
+    $$ i,i \in I, i \neq j \implies A_i \cap A_j = \emptyset $$
+    
+    을 만족하면 서로소인 집합족이라 한다.
 
 - 서로소인 집합족의 합집합을 
 
@@ -583,15 +517,13 @@ $$ i,i \in I, i \neq j \implies A_i \cap A_j = \emptyset $$
 
   로 표현한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-순서쌍(ordered pair, 2-tuple) : 두 개의 수학적 대상 $a,b$ 를 순서를 정하여 짝지어 나타낸 쌍
-
-$$ (a, b) := \{\{a\}, \{a,b\}\} $$
-
-이다.
-
-</blockquote>
+    순서쌍(ordered pair, 2-tuple) : 두 개의 수학적 대상 $a,b$ 를 순서를 정하여 짝지어 나타낸 쌍
+    
+    $$ (a, b) := \{\{a\}, \{a,b\}\} $$
+    
+    이다.
 
 - 두 원소 $a,b$ 로 이루어진 집합은 $\{a,b\}=\{b,a\}$ 이지만, 순서쌍은 $a \neq b$ 인 한
 
@@ -650,16 +582,14 @@ $$ (a, b) := \{\{a\}, \{a,b\}\} $$
     인데 $b \in \{c,d\} = \{a,b\}$ 로부터 $b=c$ 또는 $b=d$ 이다.
 
     그런데 $b=c$ 이면 $a=c=b$ 이므로 모순이다. 그러므로 $b=d$ 이다.
-  
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-곱집합(cartesian product) : 두 집합 $A,B$ 의 곱집합 $A \times B$ 는 
+!!! note ""
 
-$$ A \times B := \{(a,b):a \in A, b \in B\} $$
-
-이다.
-
-</blockquote>
+    곱집합(cartesian product) : 두 집합 $A,B$ 의 곱집합 $A \times B$ 는 
+    
+    $$ A \times B := \{(a,b):a \in A, b \in B\} $$
+    
+    이다.
 
 - 정리 
 
@@ -673,15 +603,13 @@ $$ A \times B := \{(a,b):a \in A, b \in B\} $$
 
   우리에게 익숙한 데카르트 공간 $\mathbb{R} ^{2}$, 즉 직교좌표계는 $\mathbb{R} \times \mathbb{R}$ 로써 곱집합이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-Cartesian Space : 집합 $S$ 에 대한 cartesian $n$th power  는 
-
-$$ S ^{n} = \prod_{k=1}^{n}S = \{(x_1, x_2, \dots, x_n): \forall k \in \mathbb{N} ^{*}_{n}:x_k \in S\} $$
-
-이다.
-
-</blockquote>
+    Cartesian Space : 집합 $S$ 에 대한 cartesian $n$th power  는 
+    
+    $$ S ^{n} = \prod_{k=1}^{n}S = \{(x_1, x_2, \dots, x_n): \forall k \in \mathbb{N} ^{*}_{n}:x_k \in S\} $$
+    
+    이다.
 
 - 그냥 간단하게 $S ^{n} = \underbrace{S \times S \times \dots \times S}_{n \text{times}}$ 이다.
 
@@ -689,11 +617,9 @@ $$ S ^{n} = \prod_{k=1}^{n}S = \{(x_1, x_2, \dots, x_n): \forall k \in \mathbb{N
 
   $$ S ^{n} = \begin{cases} S &n = 1\\ S \times S ^{n-1}&n > 1\\ \end{cases} $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-멱집합(power set) : 주어진 집합의 모든 부분 집합으로 구성된 집합이다.
-
-</blockquote>
+    멱집합(power set) : 주어진 집합의 모든 부분 집합으로 구성된 집합이다.
 
 - 즉, 집합 $S$ 의 멱집합 $\mathcal{P}(S)$ 또는 $2 ^{S}$ 는
 
@@ -709,11 +635,9 @@ $$ S ^{n} = \prod_{k=1}^{n}S = \{(x_1, x_2, \dots, x_n): \forall k \in \mathbb{N
 
   와 같은 헤세 도형으로도 표현할 수 있다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-관계(relation) : 두 집합 $X, Y$ 의 곱집합 $X \times Y$ 의 부분집합이다.
-
-</blockquote>
+    관계(relation) : 두 집합 $X, Y$ 의 곱집합 $X \times Y$ 의 부분집합이다.
 
 - 더 엄밀한 정의는 다음과 같다. 
 
@@ -755,19 +679,17 @@ $$ S ^{n} = \prod_{k=1}^{n}S = \{(x_1, x_2, \dots, x_n): \forall k \in \mathbb{N
 
   는 관계이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-동치관계 : 집합 $X$ 에 대한 관계 $R \subset X \times X$ 가 
-
-1. 임의의 $x \in X$ 에 대하여 $(x,x)\in R$ 이다.
-
-2. $(x, y) \in R$ 이면 $(y, x) \in R$ 이다. 
-
-3. $(x, y) \in R$ 이고 $(y,z)\in R$ 이면 $(x, z) \in R$ 이다.
-
-를 만족하면 $R$ 을 동치관계라 한다.
-
-</blockquote>
+    동치관계 : 집합 $X$ 에 대한 관계 $R \subset X \times X$ 가 
+    
+    1. 임의의 $x \in X$ 에 대하여 $(x,x)\in R$ 이다.
+    
+    2. $(x, y) \in R$ 이면 $(y, x) \in R$ 이다. 
+    
+    3. $(x, y) \in R$ 이고 $(y,z)\in R$ 이면 $(x, z) \in R$ 이다.
+    
+    를 만족하면 $R$ 을 동치관계라 한다.
 
 - 동치관계 $R \subset X \times X$ 의 원소 $(x, y) \in R$ 을 
 
@@ -791,27 +713,25 @@ $$ S ^{n} = \prod_{k=1}^{n}S = \{(x_1, x_2, \dots, x_n): \forall k \in \mathbb{N
 
   "서로 평행이다", "서로 닮음이다" 도 동치관계의 예시이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-동치류 : 집합 $X$ 에 동치관계 $\sim$ 가 주어져 있을 때 각 $x \in X$ 에 대하여
+    동치류 : 집합 $X$ 에 동치관계 $\sim$ 가 주어져 있을 때 각 $x \in X$ 에 대하여
+    
+    $$ [x] = \{z \in X: z \sim x\} $$
+    
+    를 $x$ 의 동치류라 한다.
 
-$$ [x] = \{z \in X: z \sim x\} $$
 
-를 $x$ 의 동치류라 한다.
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-함수(function) : 두 집합 $X, Y$ 의 곱집합 $X \times Y$ 의 부분집합 $f \subset X \times Y$ 가 
-
-1. $x \in X \to (x,y) \in f$ 를 만족하는 $y \in Y$ 가 존재한다.
-
-2. $(x, y_1) \in f, (x, y_2) \in f \to y_1 = y_2$
-
-을 만족하면 $X$ 에서 $Y$ 로 가는 함수라고 한다.
-
-</blockquote>
+    함수(function) : 두 집합 $X, Y$ 의 곱집합 $X \times Y$ 의 부분집합 $f \subset X \times Y$ 가 
+    
+    1. $x \in X \to (x,y) \in f$ 를 만족하는 $y \in Y$ 가 존재한다.
+    
+    2. $(x, y_1) \in f, (x, y_2) \in f \to y_1 = y_2$
+    
+    을 만족하면 $X$ 에서 $Y$ 로 가는 함수라고 한다.
 
 - $(x,y) \in f$ 일 때 
 
@@ -865,19 +785,17 @@ $$ [x] = \{z \in X: z \sim x\} $$
 
   을 위배하기 때문이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-항등함수 : 집합 $X$ 에 대하여 
-
-$$ \{(x_1, x_2) \in X \times X:x_1 = x_2\} $$
-
-로 주어진 함수를 $X$ 에서 정의된 항등함수
-
-$$ 1 _{X} = X \to X $$
-
-라 한다.
-
-</blockquote>
+    항등함수 : 집합 $X$ 에 대하여 
+    
+    $$ \{(x_1, x_2) \in X \times X:x_1 = x_2\} $$
+    
+    로 주어진 함수를 $X$ 에서 정의된 항등함수
+    
+    $$ 1 _{X} = X \to X $$
+    
+    라 한다.
 
 - 즉, 항등함수는 
 
@@ -885,29 +803,27 @@ $$ 1 _{X} = X \to X $$
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-포함함수 : $A \subset X$ 일 때 
+    포함함수 : $A \subset X$ 일 때 
+    
+    $$ \{(a,a) \in A \times X : a \in A\} $$
+    
+    로 주어진 함수를 포함함수 
+    
+    $$ \iota _{A}:A \hookrightarrow X $$
+    
+    이다.
 
-$$ \{(a,a) \in A \times X : a \in A\} $$
 
-로 주어진 함수를 포함함수 
 
-$$ \iota _{A}:A \hookrightarrow X $$
+!!! note ""
 
-이다.
-
-</blockquote>
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-합성함수 : 함수 $f: X \to Y$ 와 $g: Y \to Z$ 에 대한 합성함수 $g \circ f : X \to Z$ 는 
-
-$$ (g \circ f)(x) = g(f(x)), x \in X $$
-
-이다.
-
-</blockquote>
+    합성함수 : 함수 $f: X \to Y$ 와 $g: Y \to Z$ 에 대한 합성함수 $g \circ f : X \to Z$ 는 
+    
+    $$ (g \circ f)(x) = g(f(x)), x \in X $$
+    
+    이다.
 
 - $f$ 와 $g$ 는 각각 곱집합 $X \in Y$ 와 $Y \times Z$ 의 부분집합이므로 
 
@@ -915,47 +831,45 @@ $$ (g \circ f)(x) = g(f(x)), x \in X $$
 
   와 같이 정의할 수도 있다. 이는 $(x, y) \in f, (y, z) \in g$ 인 $y$ 가 존재한다는 말이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수의 제한 : 함수 $f: X \to Y$ 의 정의역 $X$ 의 부분집합 $A$ 에 대한 합성함수 
+    함수의 제한 : 함수 $f: X \to Y$ 의 정의역 $X$ 의 부분집합 $A$ 에 대한 합성함수 
+    
+    $$ f \circ \iota _{A}:A \to Y $$
+    
+    를 $f$ 의 제한 
+    
+    $$ f | _{A} : A \to Y $$
+    
+    이라고 한다.
 
-$$ f \circ \iota _{A}:A \to Y $$
 
-를 $f$ 의 제한 
 
-$$ f | _{A} : A \to Y $$
+!!! note ""
 
-이라고 한다.
+    전사함수 :
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-전사함수 :
+!!! note ""
 
-</blockquote>
+    단사함수 :
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-단사함수 :
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+    전단사함수 :
 
-전단사함수 :
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-역함수 : 함수 $f: X \to Y$ 에 대하여 
-
-$$ g \circ f = 1 _{X}, f \circ g = 1 _{Y} $$
-
-인 $g: Y \to X$ 가 존재하면 이를 $f$ 의 역함수라 한다.
-
-</blockquote>
+    역함수 : 함수 $f: X \to Y$ 에 대하여 
+    
+    $$ g \circ f = 1 _{X}, f \circ g = 1 _{Y} $$
+    
+    인 $g: Y \to X$ 가 존재하면 이를 $f$ 의 역함수라 한다.
 
 - 역함수는 유일하다. 
 
@@ -969,37 +883,35 @@ $$ g \circ f = 1 _{X}, f \circ g = 1 _{Y} $$
 
 - $f$ 의 역함수 $g$ 를 $f ^{-1} : Y \to X$ 로 표기한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-함수 전체 집합 : 집합 $X$ 에서 $Y$ 로 가는 함수 전체의 집합을 $Y ^{X}$ 라고 한다.
+    함수 전체 집합 : 집합 $X$ 에서 $Y$ 로 가는 함수 전체의 집합을 $Y ^{X}$ 라고 한다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-특성함수 : 임의의 $A \in \mathcal{P}(X)$ 에 대하여 $\Phi (A) \in \{0,1\}^{X}$ 를 
+!!! note ""
 
-$$ \Phi (A)(x) = \begin{cases} 1 &x \in A\\ 0 &x \not \in A\\ \end{cases} $$
+    특성함수 : 임의의 $A \in \mathcal{P}(X)$ 에 대하여 $\Phi (A) \in \{0,1\}^{X}$ 를 
+    
+    $$ \Phi (A)(x) = \begin{cases} 1 &x \in A\\ 0 &x \not \in A\\ \end{cases} $$
+    
+    라고 정의하고 특성함수라 한다.
 
-라고 정의하고 특성함수라 한다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-클래스(class) : 집합 $A$ 와 자유변수 $x \in A$ 에 대하여 조건 $p(x)$ 으로 변수 $x$ 를 모은 것
+    클래스(class) : 집합 $A$ 와 자유변수 $x \in A$ 에 대하여 조건 $p(x)$ 으로 변수 $x$ 를 모은 것
+    
+    $$ \{x:p(x)\} $$
+    
+    이다.
 
-$$ \{x:p(x)\} $$
 
-이다.
 
-</blockquote>
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-endorelation : 집합 $S$ 에 대한 곱집합 $S \times S$ 에 대한 관계 $\mathcal{R}$ 를 $S$ 의 endorelation 이라고 한다.
-
-</blockquote>
+    endorelation : 집합 $S$ 에 대한 곱집합 $S \times S$ 에 대한 관계 $\mathcal{R}$ 를 $S$ 의 endorelation 이라고 한다.
 
 - endorelation 은 순서쌍 $3$-튜플로도 정의된다. $R \subseteq S \times S$ 에 대하여 
 
@@ -1023,25 +935,23 @@ endorelation : 집합 $S$ 에 대한 곱집합 $S \times S$ 에 대한 관계 $\
 
   이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-관계 구조(relational structure) : 집합 $S$ 과 $S$ 의 endorelation $\mathcal{R}$ 에 대한 순서쌍 $(S, \mathcal{R})$ 이다.
+    관계 구조(relational structure) : 집합 $S$ 과 $S$ 의 endorelation $\mathcal{R}$ 에 대한 순서쌍 $(S, \mathcal{R})$ 이다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-순서관계(ordered relation) : 집합 $X$ 의 관계 $R \subset X \times X$ 이 
+!!! note ""
 
-1. 임의의 $x \in X$ 에 대하여 $(x, x) \in R$ 이다.
-
-2. $(x, y) \in R, (y, x) \in R$ 이면 $x = y$ 이다. 
-
-3. $(x, y) \in R$ 이고 $(y, z) \in R$ 이면 $(x, z) \in R$ 이다.
-
-를 만족하면 이를 순서관계라고 한다.
-
-</blockquote>
+    순서관계(ordered relation) : 집합 $X$ 의 관계 $R \subset X \times X$ 이 
+    
+    1. 임의의 $x \in X$ 에 대하여 $(x, x) \in R$ 이다.
+    
+    2. $(x, y) \in R, (y, x) \in R$ 이면 $x = y$ 이다. 
+    
+    3. $(x, y) \in R$ 이고 $(y, z) \in R$ 이면 $(x, z) \in R$ 이다.
+    
+    를 만족하면 이를 순서관계라고 한다.
 
 - 순서관계는 $\leq$ 로 표현한다. 
 
@@ -1057,11 +967,9 @@ endorelation : 집합 $S$ 에 대한 곱집합 $S \times S$ 에 대한 관계 $\
 
 - 만약 $x \leq y$ 이면서 $x \neq y$ 이면 $x < y$ 라고 쓴다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-순서집합(ordered set) : 순서관계가 정의되어 있는 집합이다.
-
-</blockquote>
+    순서집합(ordered set) : 순서관계가 정의되어 있는 집합이다.
 
 - 예시 
 
@@ -1075,29 +983,25 @@ endorelation : 집합 $S$ 에 대한 곱집합 $S \times S$ 에 대한 관계 $\
 
   가 있게 된다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-상계(upper bound) : 순서집합 $X$ 의 부분집합 $S \subset X$ 와 한 원소 $a \in X$ 에 대하여 
-
-$$ x \in S \to x \leq a $$
-
-가 성립하면 $a$ 를 $S$ 의 상계라고 한다.
-
-</blockquote>
+    상계(upper bound) : 순서집합 $X$ 의 부분집합 $S \subset X$ 와 한 원소 $a \in X$ 에 대하여 
+    
+    $$ x \in S \to x \leq a $$
+    
+    가 성립하면 $a$ 를 $S$ 의 상계라고 한다.
 
 - 상계 중 가장 작은 원소를 최소상계(least upper bound) 또는 상한(supremum)이라 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-상한(supremum) 또는 최소상계(least upper bound) : 상계 중 가장 작은 원소 즉, 집합 $X$ 과 부분집합 $S \subset X$ 에 대하여 
-
-1. $\alpha$ 는 $S$ 의 상계이다. 즉, $x \in S \to x \leq \alpha$ 이다.
-
-2. $\beta$ 가 $S$ 의 상계이면 반드시 $\alpha \leq \beta$ 이다. 즉, $\forall x \in S, x \leq \beta \to \alpha \leq \beta$ 이다.
-
-를 만족하는 원소 $\alpha \in X$ 이다.
-
-</blockquote>
+    상한(supremum) 또는 최소상계(least upper bound) : 상계 중 가장 작은 원소 즉, 집합 $X$ 과 부분집합 $S \subset X$ 에 대하여 
+    
+    1. $\alpha$ 는 $S$ 의 상계이다. 즉, $x \in S \to x \leq \alpha$ 이다.
+    
+    2. $\beta$ 가 $S$ 의 상계이면 반드시 $\alpha \leq \beta$ 이다. 즉, $\forall x \in S, x \leq \beta \to \alpha \leq \beta$ 이다.
+    
+    를 만족하는 원소 $\alpha \in X$ 이다.
 
 - 집합 $S$ 가 상한을 가지면 두번째 조건에 의하여 상한이 오직 하나밖에 없음을 쉽게 알 수 있다.
 
@@ -1137,11 +1041,9 @@ $$ x \in S \to x \leq a $$
 
     이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-위로 유계(bounded from above) : 순서집합의 부분집합이 상계를 가지면 이 집합을 위로 유계라고 한다.
-
-</blockquote>
+    위로 유계(bounded from above) : 순서집합의 부분집합이 상계를 가지면 이 집합을 위로 유계라고 한다.
 
 - 정리 
 
@@ -1183,11 +1085,9 @@ $$ x \in S \to x \leq a $$
 
     그러므로 $S$ 의 가장 큰 원소 $g _{S}$ 가 존재한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-위로 무계(unbounded from above) : 순서집합 $(S, \leq )$ 의 부분집합 $T \subseteq S$ 이 위로 유계가 아니면 위로 무계이다.
-
-</blockquote>
+    위로 무계(unbounded from above) : 순서집합 $(S, \leq )$ 의 부분집합 $T \subseteq S$ 이 위로 유계가 아니면 위로 무계이다.
 
 - 정리 
 
@@ -1209,17 +1109,15 @@ $$ x \in S \to x \leq a $$
 
     이로써 $S$ 가 위로 유계라는 가정 또한 모순이다. 그러므로 $S$ 는 위로 무계 집합이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-역진귀납법(backwards induction) : 자연수 집합 $\mathbb{N}$ 과 명제함수 $P$ 에 대하여 
-
-1. $\forall n \in \mathbb{N} : P(2 ^{n})$
-
-2. $P(n) \implies P(n-1)$
-
-이면 $P(n)$ 은 $\forall n \in N$ 에 대하여 성립한다.
-
-</blockquote>
+    역진귀납법(backwards induction) : 자연수 집합 $\mathbb{N}$ 과 명제함수 $P$ 에 대하여 
+    
+    1. $\forall n \in \mathbb{N} : P(2 ^{n})$
+    
+    2. $P(n) \implies P(n-1)$
+    
+    이면 $P(n)$ 은 $\forall n \in N$ 에 대하여 성립한다.
 
 - 증명 
 
@@ -1251,31 +1149,27 @@ $$ x \in S \to x \leq a $$
 
   그러므로 $S$ 의 가장 큰 원소 $g _{S}$ 가 존재하지 않으며, 이에따라 $S = \emptyset$ 이라는 결론을 얻는다. 이는 모순이다. 
 
-  그러므로 $P(k)$ 가 거짓이 되게 하는 $k \in \mathbb{N}$ 는 존재하지 않는다. ■  
+  그러므로 $P(k)$ 가 거짓이 되게 하는 $k \in \mathbb{N}$ 는 존재하지 않는다. ■
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-하계(lower bound) : 순서집합 $X$ 의 부분집합 $S \subset X$ 와 한 원소 $a \in X$ 에 대하여 
-
-$$ x \in S \to x \geq a $$
-
-가 성립하면 $a$ 를 $S$ 의 하계라고 한다.
-
-</blockquote>
+    하계(lower bound) : 순서집합 $X$ 의 부분집합 $S \subset X$ 와 한 원소 $a \in X$ 에 대하여 
+    
+    $$ x \in S \to x \geq a $$
+    
+    가 성립하면 $a$ 를 $S$ 의 하계라고 한다.
 
 - 하계 중 가장 작은 원소를 최대하계(greatest lower bound) 또는 하한(infimum)이라 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-하한(infimum) 또는 최대하계(greatest lower bound) : 하계 중 가장 큰 원소 즉, 집합 $X$ 과 부분집합 $S \subset X$ 에 대하여 
-
-1. $\alpha$ 는 $S$ 의 하계이다. 즉, $x \in S \to x \geq \alpha$ 이다.
-
-2. $\beta$ 가 $S$ 의 하계이면 반드시 $\alpha \geq \beta$ 이다. 즉, $\forall x \in S, x \geq \beta \to \alpha \geq \beta$ 이다.
-
-를 만족하는 원소 $\alpha \in X$ 이다.
-
-</blockquote>
+    하한(infimum) 또는 최대하계(greatest lower bound) : 하계 중 가장 큰 원소 즉, 집합 $X$ 과 부분집합 $S \subset X$ 에 대하여 
+    
+    1. $\alpha$ 는 $S$ 의 하계이다. 즉, $x \in S \to x \geq \alpha$ 이다.
+    
+    2. $\beta$ 가 $S$ 의 하계이면 반드시 $\alpha \geq \beta$ 이다. 즉, $\forall x \in S, x \geq \beta \to \alpha \geq \beta$ 이다.
+    
+    를 만족하는 원소 $\alpha \in X$ 이다.
 
 - 마찬가지로 하한도 집합 $S$ 에 대하여 오직 하나밖에 없는데 그 하한을 
 
@@ -1283,17 +1177,15 @@ $$ x \in S \to x \geq a $$
 
   라고 한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-아래로 유계(bounded from below) : 순서집합의 부분집합이 하계를 가지면 이 집합을 아래로 유계라고 한다.
+    아래로 유계(bounded from below) : 순서집합의 부분집합이 하계를 가지면 이 집합을 아래로 유계라고 한다.
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-집합 : 어떤 기준에 부합하는 대상들의 모임이다. 
+!!! note ""
 
-</blockquote>
+    집합 : 어떤 기준에 부합하는 대상들의 모임이다.
 
 - 즉 집합은 명확한 기준에 의하여 서로 다른 대상들이 모여 이루는 새로운 대상이다.
 
@@ -1307,11 +1199,9 @@ $$ x \in S \to x \geq a $$
 
   - 대한민국 국적을 가진 사람들의 모임
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-원소 : 집합을 이루고 있는 대상이다. 
-
-</blockquote>
+    원소 : 집합을 이루고 있는 대상이다.
 
 - 원소 $a$ 가 집합 $A$ 에 속해있으면 
 
@@ -1321,13 +1211,11 @@ $$ x \in S \to x \geq a $$
 
   $$ a \not \in A $$
 
-  로 표현한다. 
+  로 표현한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-집합 표현법 : 집합은 다음 $3$ 가지 방법으로 표현할 수 있다. 
-
-</blockquote>
+    집합 표현법 : 집합은 다음 $3$ 가지 방법으로 표현할 수 있다.
 
 - 원소나열법 : $\{ \}$ 안에 집합의 모든 원소를 나열하는 것이다. 
 
@@ -1343,13 +1231,11 @@ $$ x \in S \to x \geq a $$
 
     $A = \{x|x는 대한민국 국적을 가진 사람\}$
 
-- 벤다이어그램 : 도형을 통하여 집합을 나타내는 방법이다. 
+- 벤다이어그램 : 도형을 통하여 집합을 나타내는 방법이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-집합의 분류 : 집합은 다음과 같이 분류된다. 
-
-</blockquote>
+    집합의 분류 : 집합은 다음과 같이 분류된다.
 
 - 유한집합 : 원소의 개수가 유한한 집합이다. 
 
@@ -1359,13 +1245,11 @@ $$ x \in S \to x \geq a $$
 
 - 공집합 : 원소가 하나도 없는 집합이다.
 
-  - 공집합은 $\emptyset$ 으로 표시한다. 
+  - 공집합은 $\emptyset$ 으로 표시한다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-부분집합 : 집합 $A$ 의 모든 원소가 집합 $B$ 에 속하면 집합 $A$ 는 집합 $B$ 의 부분집합이다. 
-
-</blockquote>
+    부분집합 : 집합 $A$ 의 모든 원소가 집합 $B$ 에 속하면 집합 $A$ 는 집합 $B$ 의 부분집합이다.
 
 - 따라서 모든 집합은 자기 자신의 부분집합이다. 
 
@@ -1389,25 +1273,21 @@ $$ x \in S \to x \geq a $$
 
   $$ C \not \subset B $$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-서로 같은 집합 : 두 집합이 서로 같다는 것은 서로가 서로의 부분집합이라는 것이다. 
+    서로 같은 집합 : 두 집합이 서로 같다는 것은 서로가 서로의 부분집합이라는 것이다.
 
-</blockquote>
+- 임의의 두 집합 $A, B$ 가 서로 같다는 것은 $A \subset B$ 와 $B \subset A$ 를 만족한다는 것이고 $A = B$ 로 표현한다.
 
-- 임의의 두 집합 $A, B$ 가 서로 같다는 것은 $A \subset B$ 와 $B \subset A$ 를 만족한다는 것이고 $A = B$ 로 표현한다. 
+!!! note ""
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+    진부분집합 : 두 집합 $A, B$ 에 대하여 $A \subset B$ 이고 $A \neq B$ 이면 $A$ 는 $B$ 의 진부분집합이다.
 
-진부분집합 : 두 집합 $A, B$ 에 대하여 $A \subset B$ 이고 $A \neq B$ 이면 $A$ 는 $B$ 의 진부분집합이다. 
 
-</blockquote>
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-부분집합의 개수 : 집합 $A = \{a_1, a_2, \dots, a_n\}$ 일 때 부분집합의 개수는 다음과 같다. 
-
-</blockquote>
+    부분집합의 개수 : 집합 $A = \{a_1, a_2, \dots, a_n\}$ 일 때 부분집합의 개수는 다음과 같다.
 
 - 집합 $A$ 의 부분집합의 개수 : $2^n$
 
@@ -1419,21 +1299,17 @@ $$ x \in S \to x \geq a $$
 
 - 특정 원소 $l$ 개를 원소로 갖지 않는 부분집합의 개수 : $2^{n - l}(단, l \leq n)$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-기수(cardinal number) : 집합의 크기를 나타내는 수이다. 
-
-</blockquote>
+    기수(cardinal number) : 집합의 크기를 나타내는 수이다.
 
 - 유한 집합의 크기를 자연수로 나타낼 수 있는데 그 크기를 무한 집합으로 확장한 것이다.
 
-### 집합의 연산 
+### 집합의 연산
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-집합의 연산 : 전체집합 $U$ 의 두 부분집합 $A, B$ 에 대하여 집합의 연산을 다음과 같이 정의한다. 
-
-</blockquote>
+    집합의 연산 : 전체집합 $U$ 의 두 부분집합 $A, B$ 에 대하여 집합의 연산을 다음과 같이 정의한다.
 
 - 합집합(union) : $A \cup B = \{x | x \in A 또는 x \in B\}$
 
@@ -1445,11 +1321,9 @@ $$ x \in S \to x \geq a $$
 
 - 차집합(difference set) : $A-B = \{x | x \in A 그리고 x \not \in B\}$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-집합의 연산 법칙 : 전체집합 $U$ 의 부분집합 $A, B, C$ 에 대하여 다음이 성립한다. 
-
-</blockquote>
+    집합의 연산 법칙 : 전체집합 $U$ 의 부분집합 $A, B, C$ 에 대하여 다음이 성립한다.
 
 - 합집합의 교환법칙(commutative law) : $A \cup B = B \cup A$
 
@@ -1471,11 +1345,9 @@ $$ x \in S \to x \geq a $$
 
   - $(A \cup B)^C = A^C \cap B^C$
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-유한집합의 원소의 개수 : 세 집합 $A, B, C$ 가 유한집합일 때 원소의 개수는 다음과 같은 관계를 갖는다. 
-
-</blockquote>
+    유한집합의 원소의 개수 : 세 집합 $A, B, C$ 가 유한집합일 때 원소의 개수는 다음과 같은 관계를 갖는다.
 
 - $n(A \cup B) = n(A) + n(B) - n(A \cap B)$
 
@@ -1483,11 +1355,9 @@ $$ x \in S \to x \geq a $$
 
 ### 여러가지 집합
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-곱집합(product set) : 각 집합의 원소를 각 성분으로 하는 순서쌍(tuple)들의 집합이다. 
-
-</blockquote>
+    곱집합(product set) : 각 집합의 원소를 각 성분으로 하는 순서쌍(tuple)들의 집합이다.
 
 - 두 집합 $A, B$ 의 곱집합 $A \times B$ 을 형식언어로 다음과 같이 나타낸다.
 
@@ -1502,3 +1372,4 @@ $$ x \in S \to x \geq a $$
   $$ \mathbb{R} ^{2} = \mathbb{R} \times \mathbb{R} = \{(x, y) | x,y \in \mathbb{R} \} $$
 
   $$ \mathbb{R} ^{3} = \mathbb{R} \times \mathbb{R} = \{(x, y, z) | x,y,z \in \mathbb{R} \} $$
+

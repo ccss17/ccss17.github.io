@@ -271,15 +271,14 @@ $$ \mu = E(X) = \dfrac{1}{2} \cdot 1 +\dfrac{1}{4} \cdot 2 +\dfrac{1}{8} \cdot 3
 
 ---
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-평균 부호어 길이(average codeword length, $\overline{L}$) : 메시지의 수 $n \in \mathbb{N}$, 메시지의 발생확률 $P_i$, 메시지를 표현하는 비트수 $l_i$ 에 대하여 
+!!! note ""
 
-$$ \overline{L} = \sum_{i=1}^{n}P_il_i $$
-
-이다. 
-
-</blockquote>
+    평균 부호어 길이(average codeword length, $\overline{L}$) : 메시지의 수 $n \in \mathbb{N}$, 메시지의 발생확률 $P_i$, 메시지를 표현하는 비트수 $l_i$ 에 대하여 
+    
+    $$ \overline{L} = \sum_{i=1}^{n}P_il_i $$
+    
+    이다.
 
 - 예시 
 
@@ -348,15 +347,13 @@ $$ \overline{L} = \sum_{i=1}^{n}P_il_i $$
 
   > 사상 관계 존재 추론 방식의 좋은 예시이다.
 
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
+!!! note ""
 
-정보와 확률의 관계 : 정보량과 확률은 다음 두 가지 공통점(사상 가능 관계)을 갖는다.
-
-1. 불확실성(uncertainty) : 사건이 일어날 확률이 낮을수록 정보가 많고, 사건이 일어날 확률이 높을수록 정보가 적다.
-
-2. 불규칙성(irregularity) : 불규칙적인 사건일수록 정보가 많고, 규칙적인 사건일수록 정보가 적다.
-
-</blockquote>
+    정보와 확률의 관계 : 정보량과 확률은 다음 두 가지 공통점(사상 가능 관계)을 갖는다.
+    
+    1. 불확실성(uncertainty) : 사건이 일어날 확률이 낮을수록 정보가 많고, 사건이 일어날 확률이 높을수록 정보가 적다.
+    
+    2. 불규칙성(irregularity) : 불규칙적인 사건일수록 정보가 많고, 규칙적인 사건일수록 정보가 적다.
 
 - 불확실성 예시 
 
