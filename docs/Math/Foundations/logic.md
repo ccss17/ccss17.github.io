@@ -1,21 +1,3 @@
-# [ccss17.github.io](https://ccss17.github.io)
-
-<blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
-
-## <a name="**수학 기초론**" href="#**수학 기초론**">**수학 기초론**</a>
-
-**[논리학](https://ccss17.github.io/logic.html)**
-
-**[집합론](https://ccss17.github.io/math.html)**
-
-**[수리논리학](https://ccss17.github.io/mathmatical_logic.html)**
-
-</blockquote>
-
-# <a name="논리학" href="#논리학">논리학</a>
-
----
-
 # <a name="논리학" href="#논리학">논리학</a>
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
@@ -23,6 +5,10 @@
 언어 : 인간이 자신의 마음 속 내적 대상을 다른 대상에게 전달하기 위하여 외적으로 표현한 것이다. 
 
 </blockquote>
+
+!!! note ""
+
+    언어 : 인간이 자신의 마음 속 내적 대상을 다른 대상에게 전달하기 위하여 외적으로 표현한 것이다. 
 
 - 그런데 언어 체계는 사회 구성원들의 충분한 동의로 형성된다. 따라서 언어에는 집단 구성원들의 사고와 세계관이 담겨있다. 
 

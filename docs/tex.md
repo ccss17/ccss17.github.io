@@ -80,9 +80,9 @@ https://katex.org/docs/support_table.html
 
 ### <a name="Misc" href="#Misc">Misc</a>
 
-| $\mathbb{N}$ |$\mathbb{Z}$|$\mathbb{Q}$|$\mathbb{I}$|$\mathbb{R}$|
+| $\N$ |$\mathbb{Z}$|$\mathbb{Q}$|$\mathbb{I}$|$\R$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| \mathbb{N}  |\mathbb{Z}|\mathbb{Q}|\mathbb{I}|\mathbb{R}  |
+| \N  |\mathbb{Z}|\mathbb{Q}|\mathbb{I}|\R  |
 |$\infty$|$\nabla$| $\because$| $\therefore$ |$\sim$|
 |\infty|\nabla  | \because  | \therefore  |\sim|
 |$\infty$|   $\forall$ |$\exists$|$\overline{AB}$|$\overrightarrow{AB}$|
