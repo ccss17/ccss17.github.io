@@ -1,6 +1,5 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
-# <a name="AI Memo" href="#AI Memo">AI Memo</a>
+# AI Memo
 
 > 기술이란 대체하는 것이다. 대체하는 과정에는 변환과 대응이 사용된다. 세상 모든 기술에 의한 공학물들은 대체의 관점에서 설명될 수 있다. 대체를 위하여 변환된 자연 대상은 내부적으로 프로그래밍 되어 하나의 기계가 된다. 즉 세상 모든 기술 공학물들은 프로그래밍된 기계로 볼 수 있다. 
 
@@ -12,17 +11,17 @@
 
 > 최근 컴퓨터 공학계에서 이러한 인공지능의 연구가 가속화되고 있는데 그 연구가 시작 될 때로 거슬러 올라가 살펴보면, 인간의 뇌를 하나의 기계로 보고 문자로 격하하여 컴퓨터에서 실행될 수 있도록 변환하는 시도로부터 시작되었다는 것을 알 수 있다. 뇌의 최소단위는 뉴런이다. 어떤 대상에 관하여 연구를 시작하고 완전히 이해할 수 있기 위해서는 그 대상의 최소단위를 알아야 한다. 왜냐하면 오직 최소단위만으로 그 대상의 모든 것을 설명할 수 있고 이해할 수 있기 때문이다. 컴퓨터의 실행에서의 최소단위는 기계어인데 그것에 관해서는 나중에 생각하자. 어쨌든 뉴런을 대체하자는 생각이 퍼셉트론을 만들었고 이 퍼셉트론을 층층이 쌓아서 신경망도 만들었고 이 신경망은 세상 모든 것을 벡터로 격하시켜서 일련의 계산을 거친 후 출력 값을 도출한다. 그리고 그 값이 미리 준비된 정답과 다르면 에러를 고치기 위하여 반성하는 시간을 갖고 그때 신경망은 왜 정답과 달랐는지 반성하며 앞으로는 주어진 정답과 가까운 결과를 도출하기 위해 자신의 내부를 변경한다. 그런데 세상 모든 것이 벡터로 격하될 수 있다면 신경망으로 하여금 이해하는 행위도 학습시킬 수 있고 그것에도 정답을 꾸준히 부여하여 반성의 시간을 가지며 이해하는 행위를 완벽하게 할 수 있도록 학습시킬 수 있다. 뿐만 아니라 신경망에게 지식의 일반화에 관한 사고방식을 가르치면 본인 스스로가 퍼셉트론으로 이루어진 네트워크이지만 또 다른 네트워크를 만들면서 재귀적 자가성장의 시작을 촉발시킬 수도 있다. 네트워크를 만드는 네트워크를 성장시키는 것이다. 
 
-# <a name="역사 " href="#역사 ">역사 </a>
+# 역사 
 
 항상 역사가 첫 시작.
 
-# <a name="텐서란 " href="#텐서란 ">텐서란 </a>
+# 텐서란 
 
 수학에서 $0$ 차원 수를 스칼라라 하고 $1$ 차원 수 배열을 벡터라 하고 $2$ 차원 수 배열을 행렬이라 하는데, 이것을 일반화 시킨 $n$ 차원 수를 텐저라고 한다.
 
 그래서 텐저는 $0$ 차원의 스칼라, $1$ 차원의 벡터, $2$ 차원의 행렬을 모두 포함한다.
 
-# <a name="행렬이란" href="#행렬이란">행렬이란</a>
+# 행렬이란
 
 행렬은 연립방정식에서 계수와 변수를 분리해서 쓰면 어떨까 라는 아이디어에서 나왔다. 
 
@@ -38,13 +37,13 @@
 
   로 쓰는 것이다. 
 
-# <a name="뇌 리버싱 " href="#뇌 리버싱 ">뇌 리버싱 </a>
+# 뇌 리버싱 
 
 뇌 역공학. 과학자들은 사람은 사물을 빨리 인식하는데 컴퓨터는 그렇게 할 수 없다는 것을 보고 뇌를 연구하기 시작했다. 뇌의 원리를 프로그램으로 대체하면 사람처럼 사물을 인식할 수 있을 것 같았기 때문이다. 
 
 과학자들은 뇌가 850억개의 뉴런으로 구성되어있다는 것을 발견했다. 그리고 뉴런이 일종의 연산자, 즉 함수라는 것을 발견했다. 이 뉴런은 다수의 입력을 받아 임계값이 초과되면 하나 이상의 뉴런으로 출력을 전달하는 함수였다.
 
-# <a name="퍼셉트론 " href="#퍼셉트론 ">퍼셉트론 </a>
+# 퍼셉트론 
 
 - 선형 이진 분류기(Linear Binary Classificatoin) : 입력을 2가지로 분류하는 퍼셉트론
 
@@ -54,13 +53,13 @@
 
   - 입력을 받고 결과와 예상값을 비교하면서 틀리면 가중치를 고치고 맞으면 가중치를 강화하는 방향으로 학습해나가면 된다. 이것이 기계학습이다. 
 
-## <a name="퍼셉트론 알고리즘 " href="#퍼셉트론 알고리즘 ">퍼셉트론 알고리즘 </a>
+## 퍼셉트론 알고리즘 
 
 프랭크 
 
 기계학습에서 모든 학습자료를 사용했지만 만족스러운 결과가 나오지 않을 때가 흔하다. 이때 한 가지 해결법은 그냥 같은 학습자료로 학습을 반복하는 것이다. 이때 모든 학습자료로 학습을 한번 수행하는 것을 $1$ 에폭이라고 한다. 필요에 따라 학습을 늘릴 수 있는데 에폭 수를 늘린다고 표현할 수 있다. 
 
-# <a name="인공지능, 머신러닝, 딥러닝" href="#인공지능, 머신러닝, 딥러닝">인공지능, 머신러닝, 딥러닝</a>
+# 인공지능, 머신러닝, 딥러닝
 
 - 딥러닝 $\in$ 머신러닝 $\in$ 인공지능
 
@@ -70,7 +69,7 @@
   
   - DL(Deep Learning) : a branch of ML to model high-level abstractions in data, based on **deep neural networks**.
 
-# <a name="Machine Learning" href="#Machine Learning">Machine Learning</a>
+# Machine Learning
 
 - ML(Machine Learning) : 프로그램에게 어떻게 해야 할지를 알려주지 않고 데이터로부터 어떻게 해야 하는지 스스로 배우게 하는 기술. 
 
@@ -98,21 +97,21 @@
 
   - 결론적으로 에러를 최소화하는 문제는 미분으로 어떤 함수의 최소값, 또는 최대값을 찾는 문제로 최종적으로 격하된다. 그래서 뉴럴 네트워크에서 중요한 수학이 미분이다. 즉 트레이닝이란 미분으로 함수의 에러를 최소화시키는 것이다. 
 
-## <a name="Type of Machine Learning" href="#Type of Machine Learning">Type of Machine Learning</a>
+## Type of Machine Learning
 
-### <a name="Supervised learning 지도 학습 " href="#Supervised learning 지도 학습 ">Supervised learning 지도 학습 </a>
+### Supervised learning 지도 학습 
 
 - Supervised learning 지도 학습의 정의 : 입력에 대한 출력이 주어지면 그것과 정답을 비교하여 입력에 대한 정확한 출력을 할 수 있는 함수를 찾아내는 것.
 
   - 입력에 대한 출력(정답)도 같이 주기 때문에 선생님이 가르쳐주는 것과 같다 해서 지도학습이라 한다. 
 
-### <a name="Unsupervised learning 비지도 학습" href="#Unsupervised learning 비지도 학습">Unsupervised learning 비지도 학습</a>
+### Unsupervised learning 비지도 학습
 
 - Unsupervised learning 비지도 학습 : 입력에 대응되는 정답이 없이 학습하는 것.
 
   - 그래서 선생님 없이 학습하는 것과 같다. 그런데 선생님 없이 뭘 할 수 있을까? 크게 3 가지를 할 수 있다. 
 
-#### <a name="비지도 학습으로 할 수 있는 일" href="#비지도 학습으로 할 수 있는 일">비지도 학습으로 할 수 있는 일</a>
+#### 비지도 학습으로 할 수 있는 일
 
 1. clustering : 비슷한 성격의 데이터를 묶는 것. 특징을 분석거나 구조가 어떻게 생겼는지 알아내는데 중요한 역할을 한다.
 
@@ -124,7 +123,7 @@
 
     -  어떤 현상을 계속 관찰하면서 숨겨진 이유를 찾아내는 것이다. 가령 어떤 사람이 하는 말을 입력으로 받고 어떤 이유로 이런 말을 했는지 추측하는 것이다. 이것 또한 정답이 주어지지 않는다. 폐가 아프거나 숨쉬는데 문제가 있으면 "심장에 문제가 있다" 라는 hidden factor 를 유추할 수 있고 한걸음 더 나아가 "심장 문제"의 원인을 담배, 운동부족, 유전적 요인 같은 hidden factor 가 있다고 유추할 수 있다. 이때 관찰 가능한 변수를 visible variable 이라 하고 숨겨인 요소, 추정해야 하는 요인을 latent variable 또는 hidden variable 이라 한다. 
 
-### <a name="Semi-supervised learning 반지도 학습" href="#Semi-supervised learning 반지도 학습">Semi-supervised learning 반지도 학습</a>
+### Semi-supervised learning 반지도 학습
 
 - 반지도 학습이 개발된 배경 : 지도 학습을 하기위해 데이터를 모아야 하는데 인터넷의 발전으로 데이터를 수집하는 게 어렵지 않다. 그런데 정답이 부여된 데이터, 즉 레이블링된 데이터는 적다. 또한 수집한 데이터에 정답을 부여하는 것 즉 레이블링 또한 비용이 너무 많이 소모된다. 
 
@@ -132,7 +131,7 @@
 
   - 레이블이 존재하는 데이터를 기반으로 정답이 될 수 있는 범위를 형성한 다음 레이블링 되지 않은 데이터들로 정답의 범위를 좁혀나가는 것이다. 
 
-### <a name="Reinforcement learning 강화 학습 " href="#Reinforcement learning 강화 학습 ">Reinforcement learning 강화 학습 </a>
+### Reinforcement learning 강화 학습 
 
 - Reinforcement learning 강화 학습의 정의 : 지능(`Agent`) 이 어떤 환경에 놓였을 때, 이 환경과 상호작용을 잘 할 수 있게 학습 시키는 것.
 
@@ -155,17 +154,17 @@
 
   - `policy network` 는 결국 Tree Search 하는 폭을 축소해주고 `value network` 는 Tree Search 의 깊이를 줄여준다. 그래서 결국 알파고는 `policy network` 로 서치의 폭을 줄이고 `value network` 로 서치의 깊이를 줄이는 것으로 강화학습으로 하는 시스템이다. 
 
-# <a name="Goal of Machine Learning" href="#Goal of Machine Learning">Goal of Machine Learning</a>
+# Goal of Machine Learning
 
 머신러닝이 입력이 들어왔을 때 입력에 합당한 출력의 파라미터를 매핑하는 것이라 하였다. 이 머신러닝은 크게 두 가지 문제를 풀기 위하여 학습한다. `Classificatoin` 과 `Regression` 이 그것이다. 
 
-## <a name="Classificatoin 분류" href="#Classificatoin 분류">Classificatoin 분류</a>
+## Classificatoin 분류
 
 - Classificatoin 의 정의 : 입력을 특정 카테고리 중 하나로 매핑하는 것. 어떤 데이터가 입력되면 출력은 데이터가 속한 카테고리가 된다. 
 
   - 숫자면 0~9, 성별이면 남녀가 될 것이다. 
 
-## <a name="Regression 회귀" href="#Regression 회귀">Regression 회귀</a>
+## Regression 회귀
 
 - Regression 의 정의 : 입력 데이터로부터 특정 결과 값을 추정하는 것. 입력 데이터가 주어지면 출력으로 특정 값이 나온다. 
 
@@ -173,7 +172,7 @@
 
   - Regression 은 함수를 배우는 것이다. 입력 값이 주어지면 함수를 찾아내는 것이다. 가장 쉬운 것이 linear regression 인데 1차 함수를 찾는 것이다. 좀 더 어려운 건 nonlinear regression 은 2차, 3차 함수를 알아맞춰야 한다. logistic regression 은 True, False 를 추정하는 함수를 알아맞추는 거싱다. 
 
-## <a name="Recognition System Example" href="#Recognition System Example">Recognition System Example</a>
+## Recognition System Example
 
 전체적 시스템을 예를 들어 사진을 찍어 얼굴을 알아맞추는 것으로 생각해보자.
 
@@ -193,7 +192,7 @@
 
   3. 적은 계산으로 빠르게 처리할 수 있다. 
 
-### <a name="Overfitting" href="#Overfitting">Overfitting</a>
+### Overfitting
 
 - 과적합(Overfitting) : 하나의 훈련 데이터 셋에 매개변수가 지나치게 최적화되어 있는 상태이다. 
 
@@ -217,7 +216,7 @@
 
 - Overfitting 을 극복하는 방법 : 옛날에는 Overfitting 을 극복하는 방법으로써 데이터가 부족하면 모델을 작게 하고 단순하게 하자가 원칙이었고 지금도 이 원칙이 여전히 있다. 하지만 Overfitting 을 막는 여러 기법이 발전되서 일단 모델을 복잡하고 크게 쓴다. 왜냐면 크고 복잡하고 정교한 모델이 작고 단순한 모델보다 좋기 때문이다. 일단은 멍청한 지능보다 똑똑한 지능이 더 좋으니까. 
 
-# <a name="Bayesian Theorem " href="#Bayesian Theorem ">Bayesian Theorem </a>
+# Bayesian Theorem 
 
 - 예를들어 키과 몸무게를 주고 남녀를 판단하라는 문제가 있다고 하자. 100% 항상 맞추기는 못하지만 통계적으로 어느정도는 맞출 수 있다. 키와 몸무게를 X 라고 하고 남녀의 성별을 W 라고 하자. 그러면 우리의 문제는 X 가 주어졌을 때 남자일 확률과 여자일 확률을 찾아내는 것이다. `P(W|X)` 로 표현할 수 있다. 
 
@@ -225,7 +224,7 @@
 
 - 하지만 `P(W|X)` 는 구하기 쉽지 않아서 P(W|X) 를 P(X|w)P(W) / P(X) 로 변환한다. P(W|X) 를 posterior prob. 후행확률이라 하고 P(W) 를 prior prob. 선행확률이라 하고 P(X|W) 를 Likelihood 라 한다. 
 
-# <a name="Neural Networks" href="#Neural Networks">Neural Networks</a>
+# Neural Networks
 
 뇌세포를 모방하여 만든 컴퓨터 모델이 neural network 이다. 뇌세포는 세포들로부터 자극을 받아서 자극들의 합이 일정 수준의 임계점을 넘기면 다음 세포로 넘기고 넘기지 못하면 자극을 무시하게 된다. 사람의 뇌는 상당히 복잡하고 다양항 기능을 하지만 지능을 이루는 가장 기본 단위인 뉴런 하나가 하는 일은 이렇게 상당히 단순하다. 
 
@@ -269,7 +268,7 @@
 
   - 시험 데이터 : 아직 접하지 못한 데이터에도 학습한 매개변수가 범용적으로 적용되는지 확인하는 용도로 사용되는 데이터이다. 
 
-## <a name="손실 함수 loss function " href="#손실 함수 loss function ">손실 함수 loss function </a>
+## 손실 함수 loss function 
 
 - 손실 함수(Error Criteria) : 신경망이 훈련 데이터를 잘 처리하지 못하는 정도를 나타내는 함수로써 신경망 학습에서 최적의 매개변수를 결정하는 기준이다.
 
@@ -310,7 +309,7 @@
 
     - 전산학에 정보이론이라는 학문에서 정보의 양을 확률로부터 추정을하는 식이 있고 그것을 더 확장하여 엔트로피를 정의한다. 여기에서 Cross entropy 는 간단히 말해서 신경망의 출력이 레이블을 알아맞출 수 있기 위해 얼마나 정보를 많이 주느냐를 수식으로 나타낸 것이다. 그래서 이 값이 낮을수록 좋다. 또 최근에 클래스가 많을수록 MSE 보다 Cross entropy 를 쓰는 것이 좋다는 연구결과도 나와있다. 
 
-## <a name="미니배치 mini-batch " href="#미니배치 mini-batch ">미니배치 mini-batch </a>
+## 미니배치 mini-batch 
 
 - 미니배치 mini-batch : 시간 절약을 위하여 훈련 데이터 중 일부만을 추출하여 평균 손실 함수 값을 계산하는 것이다. 
 
@@ -330,13 +329,13 @@
 
   - 예시 : $epochs = 40$ 이라면 전체 데이터를 $40$ 번 사용하여 학습을 한다는 것이다. 
 
-## <a name="Perceptron" href="#Perceptron">Perceptron</a>
+## Perceptron
 
 - 퍼셉트론 Perceptron : 신경망의 가장 기본적인 형태. Frank Rosenblatt 가 1957년에 고안한 알고리즘으로써 인공 뉴런이라고도 한다. 좌표평면에서 퍼셉트론 노드 하나는 하나의 직선이 된다. 
 
   - 퍼셉트론은 입력 벡터에 가중치를 곱해서 활성화 함수(activation function) 으로 보내 하나의 값을 출력한다.
 
-### <a name="Activation Functions" href="#Activation Functions">Activation Functions</a>
+### Activation Functions
 
 - 활성화 함수의 정의 : 입력으로 들어온 자극(입력 벡터)의 총합이 활성화를 일으키는지 결정하는 함수. 
 
@@ -349,7 +348,7 @@
     - Measurement : 만약 어떤 값이 5 이상이면 남자다, 5 미만이면 여자다 라는 의미를 부여할 수 있게 해준다. 
 
 
-### <a name="Forward Propagation " href="#Forward Propagation ">Forward Propagation </a>
+### Forward Propagation 
 
 - Forward Propagation : 입력벡터에서 레이어를 거쳐 출력층까지 가중치들의 곱의 합을 통해 값이 전달되는 과정. 
 
@@ -371,7 +370,7 @@
   }
   ```
 
-## <a name="Simple Perceptron Example " href="#Simple Perceptron Example ">Simple Perceptron Example </a>
+## Simple Perceptron Example 
 
 ![simple-perceptron](res/simple-perceptron.PNG)
 
@@ -389,7 +388,7 @@
 
   - 이처럼 퍼셉트론 노드 하나는 하나의 직선이 된다. 
 
-## <a name="Single-layer Perceptron " href="#Single-layer Perceptron ">Single-layer Perceptron </a>
+## Single-layer Perceptron 
 
 ![single-layer-perceptron](res/single-layer-perceptron.PNG)
 
@@ -408,9 +407,9 @@
   - Single layer Perceptron 은 Continuous perceptron Training (Gradient descent) 를 사용하는데, 최근에는 이것을 확장한 Back-propagation algorithm 을 Multi layer perceptron 에서 사용하고 있다. 
 
 
-## <a name="Multi-layer Perceptron " href="#Multi-layer Perceptron ">Multi-layer Perceptron </a>
+## Multi-layer Perceptron 
 
-### <a name="Limitation of Single-Layer Perceptron" href="#Limitation of Single-Layer Perceptron">Limitation of Single-Layer Perceptron</a>
+### Limitation of Single-Layer Perceptron
 
 - 단층 퍼셉트론Single-Layer Perceptron 이 꽤 많은 문제를 풀 수 있기 때문에 각광받았지만 $XOR$ 문제도 제대로 풀지 못하였기 때문에 추락하기 시작했다. Single-Layer Perceptron 은 오직 선형적으로 구분할 수 있는 패턴만 구분할 수 있기 때문이다.
 
@@ -418,7 +417,7 @@
 
 - $XOR$ 문제는 위와 같이 같은 입력일 때 $0$ 이라는 출력을, 다른 입력일 때 $1$ 이라는 출력을 내어야 하는데 Single-Layer Perceptron 의 선형 구분법으로는 절대로 $XOR$ 문제를 풀 수 없었다. 
 
-### <a name="Two-Layer Perceptron" href="#Two-Layer Perceptron">Two-Layer Perceptron</a>
+### Two-Layer Perceptron
 
 - 하지만 다음과 같이 여러 개의 선을 통하여 영역을 구분하면 $XOR$ 문제도 풀 수 있다. $XOR$ 문제의 경우 2개의 직선이 필요하다. 
 
@@ -436,7 +435,7 @@
 
 - 결국 직선 $H_1$ 과 $H_2$ 보다 동시에 크거나 작으면 어떤 직선보다 밑에 있게 하면 되고, 그 이외의 경우 어떤 직선보다 위에 있게 하는 직선을 만드는 가중치를 찾는 문제로 귀결된다. 
 
-### <a name="Multi-Layer Perceptron" href="#Multi-Layer Perceptron">Multi-Layer Perceptron</a>
+### Multi-Layer Perceptron
 
   ![single-layer-vs-multi-layer](res/single-layer-vs-multi-layer.PNG)
 
@@ -448,13 +447,13 @@
 
 - 레이어의 개수는 프로그래머가 마음대로 정하는 것이지만 레이어가 많으면 많을수록 학습하기 힘들어질 수도 있다. 
 
-# <a name="Activation Functions " href="#Activation Functions ">Activation Functions </a>
+# Activation Functions 
 
 - 입력으로 들어온 자극(입력 벡터)의 총합이 활성화를 일으키는지 결정하는 함수인 활성화 함수는 비선형 함수(Non-linearity functions) 이라고도 불린다. 왜냐하면 활성화 함수로는 반드시 비선형 함수를 사용해야만 하기 때문이다. 
 
   - 활성화 함수로 선형 함수를 사용하면 레이어를 추가하는 의미가 사라진다. 가령 선형 함수인 $h(x) = cx$ 를 활성화 함수로 정하고 Three-layer perceptron 신경망을 만들었다고 하면 출력층은 결과적으로 $y(x) = h(h(h(x))) = c \times c \times c \times x$ 가 되어 사실상 $y(x) = ax$ 와 똑같은 식이 도출된다. 그래서 기껏 3층 퍼셉트론을 만들었더니 단층 퍼셉트론과 똑같아진 것이다. 
 
-## <a name="전통적인 활성화 함수 " href="#전통적인 활성화 함수 ">전통적인 활성화 함수 </a>
+## 전통적인 활성화 함수 
 
   - Step function(Hard-limit) : 0 보다 크면 1, 작으면 -1 을 반환하는 함수. 그래프를 그려보면 계단같다고 해서 계단함수(step function) 이라고도 한다. 
 
@@ -466,7 +465,7 @@
 
     ![activation-functions](res/activation-functions.PNG)
 
-## <a name="요즘 많이 사용되는 활성화 함수 " href="#요즘 많이 사용되는 활성화 함수 ">요즘 많이 사용되는 활성화 함수 </a>
+## 요즘 많이 사용되는 활성화 함수 
 
   - ReLU : 음의 값을 0 으로 기각하고 양의 값만 출력하는 함수. 
 
@@ -478,7 +477,7 @@
 
   - 일반적으로 특별한 상황이 아니면 히든 레이어에서는 대부분 $ReLU$ 함수를 사용해야 한다고 생각하면 된다. 그런데 리커런트 네트워크에서는 하이퍼탄젠트를 활성화 함수로 쓴다. ReLU 함수가 장점이 많지만 몇가지 문제가 있는데 그 문제가 리커런트 네트워크에서 치명적으로 작용하기 때문이다.  
 
-## <a name="출력층에서 사용되는 활성화 함수 " href="#출력층에서 사용되는 활성화 함수 ">출력층에서 사용되는 활성화 함수 </a>
+## 출력층에서 사용되는 활성화 함수 
 
 - Softmax 함수 : $[0, +1]$ 출력층이 여러 개의 사건들의 확률일 때 사용한다. 히든 레이어에서 어떤 클래스에 대한 출력을 하면 그 값이 확률로 표현되지 않는데 그 값들은 0 에서 1 사이의 확률값으로 변환해주는 함수이다. 다음 수식이 소프트맥스 함수이다. 
 
@@ -507,7 +506,7 @@
     return a / sum_a
   ```
 
-# <a name="경사 하강법 Gradient Descent " href="#경사 하강법 Gradient Descent ">경사 하강법 Gradient Descent </a>
+# 경사 하강법 Gradient Descent 
 
 - 경사 하강법 Gradient Descent 의 정의 : gradient vector 를 사용한 에러 최소화 기술 
 
@@ -527,7 +526,7 @@
 
     - (이해안됨-수식) https://www.youtube.com/watch?v=Bxe_meOt8f8&t=1583s - 44:57, 45:12, 48:00, 52:28
 
-## <a name="미분 " href="#미분 ">미분 </a>
+## 미분 
 
 - 미분 : 대상의 변화량을 계산하기 위한 수학적 도구이다. 
 
@@ -609,7 +608,7 @@
     
     이 예제에서는 목표변수를 제외한 변수를 고정시켜서 변수가 하나인 함수를 정의하고 그 함수를 미분하였다. 
 
-## <a name="기울기 " href="#기울기 ">기울기 </a>
+## 기울기 
 
 - 기울기(gradient) : 다변수 함수의 모든 변수에 대하여 편미분을 계산한 후 벡터로 정리한 것이다.
 
@@ -648,7 +647,7 @@
 
     이로써 $(x_0, x_1)$ 의 각 점에서 기울기를 계산할 수 있다. 
 
-## <a name="경사 하강법 " href="#경사 하강법 ">경사 하강법 </a>
+## 경사 하강법 
 
 - 경사 하강법 Gradient descent : 기울기 값으로 손실 함수가 최소값이 되는 매개변수 공간의 좌표를 찾는 방법이다. 
 
@@ -658,7 +657,7 @@
 
   - 기계학습을 최적화 할 때 흔히 쓰는 방법이며 신경망 학습에서 자주 쓰인다. 
 
-## <a name="학습률 Learning Rate" href="#학습률 Learning Rate">학습률 Learning Rate</a>
+## 학습률 Learning Rate
 
 - 학습률 Learning Rate : rate decides amount of movement in learning. 학습 결과를 가중치에 반영하는 정도이다. 
 
@@ -674,7 +673,7 @@
 
   - 또한 프로그래머가 신경망을 매우 정확하게 설계했다 하더라도 Learning Rate 가 크다는 이유 하나로 에러를 최소화를 못하기도 한다. 
 
-### <a name="경사 하강법 예시 " href="#경사 하강법 예시 ">경사 하강법 예시 </a>
+### 경사 하강법 예시 
 
 - 다음 수식을 생각하자. 
 
@@ -723,7 +722,7 @@
 
 **어떤 함수가 특정되기 위한 조건으로부터 창조된 수학적 추상 대상물의 어떤 한 좌표와 그 좌표에서의 접선의 기울기와 가장 가까운 극소점과의 관계가 존재하지 않을까? 만약 정말 존재하지 않는다면 0.01 같은 경험적 방법으로 도출된 학습률을 사용하는 것이 최선이다. 그러나 함수가 특정되는 조건으로부터 차례대로 파생된 좌표와 좌표에서의 접선의 기울기와 가장 가까운 극소점과의 관계를 밝힐 수 있지 않을까?**
 
-## <a name="1-layer 신경망 학습 예시 " href="#1-layer 신경망 학습 예시 ">1-layer 신경망 학습 예시 </a>
+## 1-layer 신경망 학습 예시 
 
 입력값이 $2$ 개이고 형상이 $2 \times 3$ 인 가중치가 $W$ 이고 출력값이 $3$ 개인 신경망을 생각하자. 이때 손실함수가 $L$ 인 신경망의 기울기는 $\frac{\partial L}{\partial W}$ 이다. 이 상황을 행렬로 표기하면 다음과 같다. 
 
@@ -756,7 +755,7 @@ $\frac{\partial L}{\partial W}$ 의 각 원소는 각각의 가중치가 변할 
 
 예를 들어 $w_{11}$ 이 $h$ 만큼 변할 때 손실 함수 $L$ 의 함수값은 $\frac{\partial L}{\partial W_{11}}h$ 만큼 변한다. 
 
-### <a name="코드 구현 " href="#코드 구현 ">코드 구현 </a>
+### 코드 구현 
 
 다음과 같이 $2 \times 3$ 가중치를 가지는 1-layer 신경망을 만들었다. 가중치 형상이 $2 \times 3$ 이기 때문에 입력값은 $2$ 개, 출력값은 $3$ 이다. 가중치 값은 무의미한 값들이다. 
 
@@ -822,7 +821,7 @@ array([-0.86237498, -0.50492135, -0.65925445])
 
 한편 변할 때 손실함수값을 가장 크게 좌지우지 할 수 있는 가중치는 $(2, 3)$ 이라는 것을 알 수 있다. 왜냐하면 부호에 관계 없이 그 절대값이 가장 크기 때문이다. 따라서 긍정적 방향이든 부정적 방향이든 $(2, 3)$ 가 변하면 손실함수값은 가장 크게 변한다. 
 
-# <a name="Training algorithm" href="#Training algorithm">Training algorithm</a>
+# Training algorithm
 
 머신러닝 학습 알고리즘 
 
@@ -850,9 +849,9 @@ array([-0.86237498, -0.50492135, -0.65925445])
 
       $$ W^{t+1} = W^t - \eta \times (o - d)o(1 - o)X $$
 
-## <a name="Back-propagation " href="#Back-propagation ">Back-propagation </a>
+## Back-propagation 
 
-### <a name="MLP(Multilayer Perceptron) Learning 재정리" href="#MLP(Multilayer Perceptron) Learning 재정리">MLP(Multilayer Perceptron) Learning 재정리</a>
+### MLP(Multilayer Perceptron) Learning 재정리
 
 ![multilayer](res/multilayer.png)
 
@@ -870,13 +869,13 @@ array([-0.86237498, -0.50492135, -0.65925445])
 
   2. gradient 를 조금씩 빼주면서 손실loss 값을 줄여나간다. 
 
-### <a name="Back Propagation" href="#Back Propagation">Back Propagation</a>
+### Back Propagation
 
 - Back Propagation : a method for computing gradient of any function.
 
   - Forward Propagation 의 정의를 다시 살펴보면 "입력벡터에서 레이어를 거쳐 출력층까지 가중치들의 곱의 합을 통해 값이 전달되는 과정" 이다. 그런데 Back Propagation 은 출력층으로부터 gradient 를 계산하여 한 단계 낮은 레이어를 업데이트하고 또 한 단계 낮은 레이어를 업데이트해나가간다. 그래서 전파 방향이 반대된다고 해서 Back Propagation 이라고 한다. 
 
-#### <a name="Matrix Notation " href="#Matrix Notation ">Matrix Notation </a>
+#### Matrix Notation 
 
 - Propagation 
 
@@ -904,7 +903,7 @@ array([-0.86237498, -0.50492135, -0.65925445])
 
     - 계산된 net value 행렬을 활성화 함수에 대입하여 출력 행렬 $Y$ 를 얻는다. 
 
-#### <a name="Chain Rule " href="#Chain Rule ">Chain Rule </a>
+#### Chain Rule 
 
 - 연쇄법칙 Chain Rule : 합성 함수의 도함수(derivative) 에 관한 공식이다. 
 
@@ -916,7 +915,7 @@ array([-0.86237498, -0.50492135, -0.65925445])
 
   - 식이 사슬처럼 이어져 있어 연쇄법칙이라 한다. 
 
-# <a name="메모 " href="#메모 ">메모 </a>
+# 메모 
 
 - 텐저(Tensor) : $n$ 차원 배열이다. 
 
@@ -924,7 +923,7 @@ array([-0.86237498, -0.50492135, -0.65925445])
 
     - 기계학습에서 `numpy` 가 `GPU` 가속화를 사용할 수 없기에 가속화를 사용할 수 있는 `pytorch` 를 자주 사용하는 편이다.
 
-# <a name="순환 신경망 RNN " href="#순환 신경망 RNN ">순환 신경망 RNN </a>
+# 순환 신경망 RNN 
 
 - 순환 신경망(Recurrent neural network, RNN) : 인공 신경망의 한 종류로써 순환 구조로 유닛들을 연결하여 학습하는 신경망이다. 
 
@@ -932,9 +931,9 @@ array([-0.86237498, -0.50492135, -0.65925445])
 
   - 전방 전달 신경망과 달리 순환 인공 신경망은 내부의 메모리를 이용해 시퀸스 형태의 입력을 처리할 수 있기 때문에 자연어 처리나 음성 인식 같이 시변적 성질을 갖는 데이터를 처리할 수 있다. 
 
-## <a name="튜토리얼 " href="#튜토리얼 ">튜토리얼 </a>
+## 튜토리얼 
 
-### <a name="밑바닥에서 시작하는 자연어 처리 : 문자수준 RNN 으로 이름 구별하기" href="#밑바닥에서 시작하는 자연어 처리 : 문자수준 RNN 으로 이름 구별하기">밑바닥에서 시작하는 자연어 처리 : 문자수준 RNN 으로 이름 구별하기</a>
+### 밑바닥에서 시작하는 자연어 처리 : 문자수준 RNN 으로 이름 구별하기
 
 - 자연어의 수학적 모델링 : 이름을 컴퓨터가 처리할 수 있는 텐저로 격하하기 
 
@@ -952,7 +951,7 @@ array([-0.86237498, -0.50492135, -0.65925445])
 
 - 네트워크 만들기 : 순환 신경망의 네트워크를 만드는 것은 여러 시간단계에 거쳐서 파라미터를 복제하는 과정을 포함한다. 
 
-# <a name="PyTorch " href="#PyTorch ">PyTorch </a>
+# PyTorch 
 
 - PyTorch : 다음 두 사용자를 위하여 제작된 과학적 계산 파이썬 패키지이다. 
 

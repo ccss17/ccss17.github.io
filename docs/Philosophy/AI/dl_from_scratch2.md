@@ -1,8 +1,8 @@
-# <a name="Deep Learning from Scratch" href="#Deep Learning from Scratch">Deep Learning from Scratch</a>
+# Deep Learning from Scratch
 
 [밑바닥부터 시작하는 딥러닝](https://book.naver.com/bookdb/book_detail.nhn?bid=11492334)의 개인 메모입니다.
 
-# <a name="경사 하강법 " href="#경사 하강법 ">경사 하강법 </a>
+# 경사 하강법 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -362,7 +362,7 @@
           print(train_acc, test_acc)
   ```
 
-# <a name="오차역전파 " href="#오차역전파 ">오차역전파 </a>
+# 오차역전파 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1234,7 +1234,7 @@ $$ y_k - t_k $$
 
 ---
 
-# <a name="affine layer 메모" href="#affine layer 메모">affine layer 메모</a>
+# affine layer 메모
 
   - $\dfrac{\partial L}{\partial \mathbf{Y}}$ 를 전달하는 이유는 최종적으로 $\dfrac{\partial L}{\partial \mathbf{X}}, \dfrac{\partial L}{\partial \mathbf{W}}$  를 계산하기 위함이다.
   

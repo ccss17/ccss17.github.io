@@ -1,8 +1,7 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
-# <a name="Philosophy Memo" href="#Philosophy Memo">Philosophy Memo</a>
+# Philosophy Memo
 
-# <a name="철학 " href="#철학 ">철학 </a>
+# 철학 
 
 - 반응적 사고 : 반응에 대하여 하는 사고이다. 
 

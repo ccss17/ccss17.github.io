@@ -1,8 +1,7 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**미적분 메모**" href="#**미적분 메모**">**미적분 메모**</a>
+## **미적분 메모**
 
 **[극한 메모](https://ccss17.github.io/calculus.html)**
 
@@ -20,11 +19,11 @@
 
 </blockquote>
 
-# <a name="미적분 메모" href="#미적분 메모">미적분 메모</a>
+# 미적분 메모
 
 ---
 
-# <a name="이변수 함수의 극한 " href="#이변수 함수의 극한 ">이변수 함수의 극한 </a>
+# 이변수 함수의 극한 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -246,7 +245,7 @@ $h(x, y) = g(f(x, y))$ 로 정의된 이변수 합성함수 $h = g \circ f$ 는 
 
   이다. 
 
-# <a name="상미분과 편미분 " href="#상미분과 편미분 ">상미분과 편미분 </a>
+# 상미분과 편미분 
 
 실제로 많은 함수들이 하나의 독립 변수에 의존하는 것이 아니라 두 개 이상의 독립 변수에 종속되기 때문에 많은 경우 일변수 함수에 대한 미분을 다변수 함수로 확장한 미분이 필요하다.
 
@@ -408,7 +407,7 @@ $$ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \
 
   이것을 단위벡터 $u$ 의 방향도함수라 한다. 
 
-## <a name="여러가지 편도함수" href="#여러가지 편도함수">여러가지 편도함수 </a>
+## 여러가지 편도함수 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -484,9 +483,9 @@ $$ f _{xy}(a, b) = f _{yx}(a, b) $$
 
   가 동일한 것은 우연의 일치가 아니다. 혼합 편미분 정리에 의하여 이 둘이 같은 것이다. 
 
-# <a name="다변수 합성 함수의 미분" href="#다변수 합성 함수의 미분">다변수 합성 함수의 미분</a>
+# 다변수 합성 함수의 미분
 
-## <a name="선형근사" href="#선형근사">선형근사</a>
+## 선형근사
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -530,7 +529,7 @@ $$ f(x) \approx L(x) $$
 
 - 이때 $x=a$ 를 근사의 중심이라 한다. 
 
-## <a name="미분(differential)" href="#미분(differential)">미분(differential)</a>
+## 미분(differential)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -622,7 +621,7 @@ $$ dy = f'(x)dx $$
 
   이다. 
 
-## <a name="미분 추정" href="#미분 추정">미분 추정</a>
+## 미분 추정
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -758,7 +757,7 @@ $$ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x $$
   
   을 얻는다. ■ 
 
-## <a name="이변수함수의 미분가능성 " href="#이변수함수의 미분가능성 ">이변수함수의 미분가능성 </a>
+## 이변수함수의 미분가능성 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -999,7 +998,7 @@ $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\part
 
 </blockquote>
 
-# <a name="기울기 벡터와 방향도함수" href="#기울기 벡터와 방향도함수">기울기 벡터와 방향도함수</a>
+# 기울기 벡터와 방향도함수
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1223,7 +1222,7 @@ $$ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u = |\nabla f|\cos \
 
   이다. ■ 
  
-# <a name="삼각함수로 정의한 방향도함수 " href="#삼각함수로 정의한 방향도함수 ">삼각함수로 정의한 방향도함수 </a>
+# 삼각함수로 정의한 방향도함수 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1669,7 +1668,7 @@ $$ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg <\frac{\
 
   ![](https://mblogthumb-phinf.pstatic.net/20141228_119/dydrogud22_1419762043201Uk8cC_JPEG/2.jpg?type=w2)
 
-# <a name="선형화" href="#선형화">선형화</a>
+# 선형화
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1721,7 +1720,7 @@ $$ f(x) \approx L(x) $$
 
 - 이때 $x=a$ 를 근사의 중심이라 한다. 
 
-## <a name="미분 " href="#미분 ">미분 </a>
+## 미분 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1869,7 +1868,7 @@ $$ f(a + dx) \approx f(a) + dy $$
 
   이다.
 
-## <a name="이변수 함수 선형화" href="#이변수 함수 선형화">이변수 함수 선형화</a>
+## 이변수 함수 선형화
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

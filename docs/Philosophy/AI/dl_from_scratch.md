@@ -1,8 +1,8 @@
-# <a name="Deep Learning from Scratch" href="#Deep Learning from Scratch">Deep Learning from Scratch</a>
+# Deep Learning from Scratch
 
 [밑바닥부터 시작하는 딥러닝](https://book.naver.com/bookdb/book_detail.nhn?bid=11492334)의 개인 메모입니다.
 
-# <a name="퍼셉트론 Perceptron" href="#퍼셉트론 Perceptron">퍼셉트론 Perceptron</a>
+# 퍼셉트론 Perceptron
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -530,7 +530,7 @@ $$
       return np.maximum(0, x)
   ```
 
-# <a name="신경망" href="#신경망">신경망</a>
+# 신경망
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -660,7 +660,7 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
 </blockquote>
 
-# <a name="순전파" href="#순전파">순전파</a>
+# 순전파
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -780,7 +780,7 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
   폐구간 $[0, 255]$ 에 존재하는 정수 데이터를 폐구간 $[0, 1]$ 에 존재하는 실수로 변환한다.
 
-# <a name="기계학습" href="#기계학습">기계학습</a>
+# 기계학습
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -838,7 +838,7 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
 </blockquote>
 
-# <a name="손실함수" href="#손실함수">손실함수</a>
+# 손실함수
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -878,7 +878,7 @@ $$ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} $$
 
       기울기가 $0$ 이 되지 않아서 시그모이드 함수로 신경망이 올바르게 학습할 수 있는 것이다.
 
-### <a name="**<center>아 이게 시그모이드 함수를 활성화 함수로 사용하는 이유구나.</center>**" href="#**<center>아 이게 시그모이드 함수를 활성화 함수로 사용하는 이유구나.</center>**">**<center>아 이게 시그모이드 함수를 활성화 함수로 사용하는 이유구나.</center>**</a>
+### 아 이게 시그모이드 함수를 활성화 함수로 사용하는 이유구나.
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -1162,7 +1162,7 @@ $$ E = - \sum_{k}^{} t _{k}\ln_{} y _{k} $$
 
     즉, `[y[0, 2], y[1, 7], y[2, 0], y[3, 9], y[4, 4]]` 인 배열을 생성한 것이 된다.
   
-# <a name="미분 " href="#미분 ">미분 </a>
+# 미분 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

@@ -1,8 +1,7 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**통계 메모**" href="#**통계 메모**">**통계 메모**</a>
+## **통계 메모**
 
 **[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
 
@@ -18,11 +17,11 @@
 
 </blockquote>
 
-# <a name="연속확률변수의 평균,분산,표준편차와 정규분포" href="#연속확률변수의 평균,분산,표준편차와 정규분포">연속확률변수의 평균,분산,표준편차와 정규분포</a>
+# 연속확률변수의 평균,분산,표준편차와 정규분포
 
 ---
 
-# <a name="연속확률분포 " href="#연속확률분포 ">연속확률분포 </a>
+# 연속확률분포 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -152,7 +151,7 @@ $X$ 의 확률분포를 나타내는 함수 $f(x)$ 이다.
 
   이다. ■ 
 
-## <a name="연속확률변수 평균, 분산, 표준편차(산포도 측정)" href="#연속확률변수 평균, 분산, 표준편차(산포도 측정)">연속확률변수 평균, 분산, 표준편차(산포도 측정)</a>
+## 연속확률변수 평균, 분산, 표준편차(산포도 측정)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -290,7 +289,7 @@ $$ \boxed{\sigma (X) = \sqrt[]{V(X)}}  $$
 
   이다. ■ 
 
-# <a name="정규분포 " href="#정규분포 ">정규분포 </a>
+# 정규분포 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

@@ -1,8 +1,7 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**수와 연산**" href="#**수와 연산**">**수와 연산**</a>
+## **수와 연산**
 
 **기초 산술 메모 https://ccss17.github.io/arithmetic.html**
 
@@ -12,11 +11,11 @@
 
 </blockquote>
 
-# <a name="대수학 메모 " href="#대수학 메모 ">대수학 메모 </a>
+# 대수학 메모 
 
 ---
 
-# <a name="수식" href="#수식">수식</a>
+# 수식
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -172,7 +171,7 @@
 
 - 무리식
 
-## <a name="다항식" href="#다항식">다항식</a>
+## 다항식
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -360,7 +359,7 @@
 
 - *더 많은 예시는 단지 곱셈공식의 수식을 역방향으로 살펴보면 결국 그것이 인수분해이다.*
 
-## <a name="부등식" href="#부등식">부등식</a>
+## 부등식
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -566,7 +565,7 @@ $$ \frac{\sum_{k=1}^{n}a_1}{n} \geq \sqrt[n]{\prod_{k=1}^{n}a_k} \geq \frac{n}{\
 
   - $3x + 3 > 0 (x > -1)$
 
-## <a name="유리식 " href="#유리식 ">유리식 </a>
+## 유리식 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -634,7 +633,7 @@ $$ \frac{\sum_{k=1}^{n}a_1}{n} \geq \sqrt[n]{\prod_{k=1}^{n}a_k} \geq \frac{n}{\
 
   **구체화 필요**
 
-## <a name="무리식 " href="#무리식 ">무리식 </a>
+## 무리식 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -646,7 +645,7 @@ $$ \frac{\sum_{k=1}^{n}a_1}{n} \geq \sqrt[n]{\prod_{k=1}^{n}a_k} \geq \frac{n}{\
 
   $\sqrt[]{(3-\sqrt[]{10})^2}$ 
 
-## <a name="연립방정식" href="#연립방정식">연립방정식</a>
+## 연립방정식
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -660,7 +659,7 @@ $$ \frac{\sum_{k=1}^{n}a_1}{n} \geq \sqrt[n]{\prod_{k=1}^{n}a_k} \geq \frac{n}{\
 
   $\begin{cases} ax+by=p &\text{}\\ cx + dy = q &\text{}\\ \end{cases}$
 
-## <a name="대수학의 기본 정리" href="#대수학의 기본 정리">대수학의 기본 정리</a>
+## 대수학의 기본 정리
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -692,7 +691,7 @@ $k$중근 : $n$차방정식 $f(x)=0$ 의 좌변을 인수분해했을 때 정확
 
 - $x$ 의 소수부 $frac(x)$ : $x$ 에서 $[x]$ 를 뺀 값으로 $0 \leq frac(x) \leq 1$ 인 수이다.
 
-## <a name="수학적 모델링" href="#수학적 모델링">수학적 모델링</a>
+## 수학적 모델링
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

@@ -1,6 +1,5 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
-# <a name="CUDA 메모" href="#CUDA 메모">CUDA 메모</a>
+# CUDA 메모
 
 - **CPU** 를 **host** , **GPU** 를 **device** 라고 한다.
 

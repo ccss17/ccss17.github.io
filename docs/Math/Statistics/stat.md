@@ -1,8 +1,7 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**통계 메모**" href="#**통계 메모**">**통계 메모**</a>
+## **통계 메모**
 
 **[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
 
@@ -18,11 +17,11 @@
 
 </blockquote>
 
-# <a name=" 도수분포의 평균,분산,표준편차" href="# 도수분포의 평균,분산,표준편차"> 도수분포의 평균,분산,표준편차</a>
+#  도수분포의 평균,분산,표준편차
 
 ---
 
-# <a name="통계" href="#통계">통계</a>
+# 통계
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -92,7 +91,7 @@
 
 </blockquote>
 
-## <a name="기초 통계학 용어" href="#기초 통계학 용어">기초 통계학 용어</a>
+## 기초 통계학 용어
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -154,7 +153,7 @@
 
   계급의 크기는 $10$ 이다. 
 
-## <a name="대표값" href="#대표값">대표값</a>
+## 대표값
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -204,7 +203,7 @@
 
   이렇게 단순하게 생각할 수 있게 해주는 것이 대표값의 장점이다. 
 
-# <a name="도수분포" href="#도수분포">도수분포</a>
+# 도수분포
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -294,7 +293,7 @@ $$ \boxed{(\text{계급의 상대도수}) = \dfrac{(\text{계급의 도수})}{(\
 
   즉, 어떤 학생 $1$ 명을 골랐는데 수학점수가 $81 \sim 90$ 일 확률은 $0.5 = 50 \%$ 이다. 
 
-# <a name="도수분포의 평균, 분산, 표준편차(산포도 측정)" href="#도수분포의 평균, 분산, 표준편차(산포도 측정)">도수분포의 평균, 분산, 표준편차(산포도 측정)</a>
+# 도수분포의 평균, 분산, 표준편차(산포도 측정)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

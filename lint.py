@@ -14,9 +14,11 @@ def remove_link(fname):
         for line in content.split('\n'):
             header = re.findall(HEADER_PATTERN, line)
             if header:
+                header = header[0]
+                if '<a name=' not in header:
+                    continue
                 if 'https://ccss17.github.io' in header:
                     continue
-                header = header[0]
                 level, value = header.split(' ', maxsplit=1)
                 print(header)
                 lst.append(f'{level} {lint_header(header)}')

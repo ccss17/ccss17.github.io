@@ -1,8 +1,7 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**미적분 메모**" href="#**미적분 메모**">**미적분 메모**</a>
+## **미적분 메모**
 
 **[극한 메모](https://ccss17.github.io/calculus.html)**
 
@@ -20,13 +19,13 @@
 
 </blockquote>
 
-# <a name="적분2 메모" href="#적분2 메모">적분2 메모</a>
+# 적분2 메모
 
 ---
 
-# <a name="Calculus5 Memo" href="#Calculus5 Memo">Calculus5 Memo</a>
+# Calculus5 Memo
 
-# <a name="여러 가지 함수의 부정적분 " href="#여러 가지 함수의 부정적분 ">여러 가지 함수의 부정적분 </a>
+# 여러 가지 함수의 부정적분 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -68,7 +67,7 @@ $$ \int_{}^{} \frac{1}{x} dx = \ln |x| + C $$
 
   $$
 
-## <a name="지수함수의 부정적분" href="#지수함수의 부정적분">지수함수의 부정적분</a>
+## 지수함수의 부정적분
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -116,7 +115,7 @@ $$ \int_{}^{}a ^{x}dx= \frac{a ^{x}}{\ln a}+C $$
 
   $$ \int_{}^{}3 ^{x-2}dx = \int_{}^{}3 ^{x} \cdot 3 ^{-2}dx = \frac{1}{9}\int_{}^{}3 ^{x}dx = \frac{3 ^{x}}{9 \ln 3}+C = \frac{3 ^{x-2}}{\ln 3}+C $$
 
-## <a name="삼각함수의 부정적분" href="#삼각함수의 부정적분">삼각함수의 부정적분</a>
+## 삼각함수의 부정적분
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -210,7 +209,7 @@ $$ \int_{}^{}\csc xdx = -\ln |\csc x+\cot x| $$
 
 </blockquote>
 
-# <a name="치환적분법 " href="#치환적분법 ">치환적분법 </a>
+# 치환적분법 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -292,7 +291,7 @@ $$ \int_{}^{}f(x)dx = \int_{}^{}f(g(t))g'(t)dt = F(g(t)) + C $$
 
   이다.
 
-## <a name="치환적분법을 이용한 부정적분 계산 " href="#치환적분법을 이용한 부정적분 계산 ">치환적분법을 이용한 부정적분 계산 </a>
+## 치환적분법을 이용한 부정적분 계산 
 
 피적분함수의 형태에 따라 다음의 경우로 나누어 정의한다.
 
@@ -386,7 +385,7 @@ $$ \int_{}^{}\frac{f'(x)}{f(x)} = \ln |f(x)|+C $$
 
   $$ \int_{}^{}\frac{x^2}{x^3-4}dx = \frac{1}{3} \int_{}^{}\frac{3x^2}{x^3-4}dx=\frac{1}{3}\ln |x ^{3}-4|+C $$
 
-## <a name="유리함수의 부정적분 " href="#유리함수의 부정적분 ">유리함수의 부정적분 </a>
+## 유리함수의 부정적분 
 
 피적분함수가 $\frac{f'(x)}{f(x)}$ 꼴이 아닌 유리함수의 부정적분은 분모, 분자의 차수에 따라 다음과 같이 구한다.
 
@@ -406,7 +405,7 @@ $$ \int_{}^{}\frac{f'(x)}{f(x)} = \ln |f(x)|+C $$
 
 </blockquote>
 
-## <a name="부분적분법 " href="#부분적분법 ">부분적분법 </a>
+## 부분적분법 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -556,7 +555,7 @@ $$ \int_{}^{}\log_{a}  xdx=x \ln x - x +C $$
 
   이다.
 
-## <a name="치환적분법, 부분적분법으로의 정적분" href="#치환적분법, 부분적분법으로의 정적분">치환적분법, 부분적분법으로의 정적분</a>
+## 치환적분법, 부분적분법으로의 정적분
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -664,7 +663,7 @@ $$ \int_{a}^{b}uv'dx = \bigg[uv\bigg]^{b}_{a}-\int_{a}^{b}u'vdx $$
 
   이다.
 
-# <a name="속도와 거리 " href="#속도와 거리 ">속도와 거리 </a>
+# 속도와 거리 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -674,7 +673,7 @@ $$ \int_{a}^{b}uv'dx = \bigg[uv\bigg]^{b}_{a}-\int_{a}^{b}u'vdx $$
 
 </blockquote>
 
-# <a name="역함수의 부정적분과 정적분 " href="#역함수의 부정적분과 정적분 ">역함수의 부정적분과 정적분 </a>
+# 역함수의 부정적분과 정적분 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -720,7 +719,7 @@ $$ \int_{}^{}f ^{-1}(x)dx = xf ^{-1}(x)-\int_{}^{}f(y)dy $$
 
 </blockquote>
 
-# <a name="미분방정식" href="#미분방정식">미분방정식</a>
+# 미분방정식
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

@@ -1,8 +1,7 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**선형대수학 메모**" href="#**선형대수학 메모**">**선형대수학 메모**</a>
+## **선형대수학 메모**
 
 **[선형방정식](https://ccss17.github.io/la.html)**
 
@@ -18,11 +17,11 @@
 
 </blockquote>
 
-# <a name="고유벡터" href="#고유벡터">고유벡터</a>
+# 고유벡터
 
 ---
 
-# <a name="고윳값과 고유 벡터" href="#고윳값과 고유 벡터">고윳값과 고유 벡터</a>
+# 고윳값과 고유 벡터
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

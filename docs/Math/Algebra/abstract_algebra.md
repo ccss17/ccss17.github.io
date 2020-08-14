@@ -1,8 +1,7 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**수와 연산**" href="#**수와 연산**">**수와 연산**</a>
+## **수와 연산**
 
 **[기초 산술 메모](https://ccss17.github.io/arithmetic.html)**
 
@@ -12,11 +11,11 @@
 
 </blockquote>
 
-# <a name="추상대수학 메모 " href="#추상대수학 메모 ">추상대수학 메모 </a>
+# 추상대수학 메모 
 
 ---
 
-# <a name="대수학" href="#대수학">대수학</a>
+# 대수학
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -74,7 +73,7 @@
 
   8. ...
 
-## <a name="추상대수학" href="#추상대수학">추상대수학</a>
+## 추상대수학
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -162,7 +161,7 @@
 
   ![](https://upload.wikimedia.org/wikipedia/commons/1/1f/Algebraic_structures_system001.svg)
 
-## <a name="연산의 추상화" href="#연산의 추상화">연산의 추상화</a>
+## 연산의 추상화
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -280,9 +279,9 @@ $$S ^{3} \to S$$
 
 </blockquote>
 
-# <a name="여러가지 대수구조" href="#여러가지 대수구조">여러가지 대수구조</a>
+# 여러가지 대수구조
 
-## <a name="군론" href="#군론">군론</a>
+## 군론
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -648,7 +647,7 @@ $$S ^{3} \to S$$
 
   - $3 + _{\mod 4} 3 + _{\mod 4} 3 + _{\mod 4} 3 \mapsto  12 \mod 4 = 0$
 
-## <a name="환론" href="#환론">환론</a>
+## 환론
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -772,7 +771,7 @@ $$S ^{3} \to S$$
 
 </blockquote>
 
-## <a name="체론" href="#체론">체론</a>
+## 체론
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -974,7 +973,7 @@ $$S ^{3} \to S$$
 
 - 수학에서 엄밀하게 벡터란 다름 아닌 벡터 공간이 속하는 모든 원소가 바로 벡터다.
 
-# <a name="범주론" href="#범주론">범주론</a>
+# 범주론
 
 https://github.com/pilgwon/CategoryTheory
 

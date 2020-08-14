@@ -1,11 +1,10 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
 ---
 
-# <a name="미분(differential)" href="#미분(differential)">미분(differential)</a>
+# 미분(differential)
 
 
-## <a name="이변수 함수 선형화" href="#이변수 함수 선형화">이변수 함수 선형화</a>
+## 이변수 함수 선형화
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -137,7 +136,7 @@ $$ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy $$
 
   이로보아 반지름이 변할 때 물탱크의 전체 부피가 훨씬 더 민감하게 변한다는 것을 알 수 있다. 
 
-# <a name="방향미분과 편미분의 일반적인 정의" href="#방향미분과 편미분의 일반적인 정의">방향미분과 편미분의 일반적인 정의</a>
+# 방향미분과 편미분의 일반적인 정의
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -291,7 +290,7 @@ $$ D_kf:U \to \mathbb{R}, P \mapsto D_kf(P) $$
 
   이다. ■ 
 
-## <a name="기울기 벡터의 일반적인 정의" href="#기울기 벡터의 일반적인 정의">기울기 벡터의 일반적인 정의</a>
+## 기울기 벡터의 일반적인 정의
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -363,7 +362,7 @@ $$ \text{grad}\ f(P) := (D_1f(P), \dots, D_nf(P)) $$
 
   을 얻는다. ■ 
 
-## <a name="미분 가능의 일반적인 정의" href="#미분 가능의 일반적인 정의">미분 가능의 일반적인 정의</a>
+## 미분 가능의 일반적인 정의
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -409,7 +408,7 @@ $$ \dfrac{\partial f}{\partial x_1}, \dots,\dfrac{\partial f}{\partial x_n} $$
 
 </blockquote>
 
-# <a name="다변수 벡터함수" href="#다변수 벡터함수">다변수 벡터함수</a>
+# 다변수 벡터함수
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -483,7 +482,7 @@ $$ F'(P) := \dfrac{\partial (f_1, \dots, f_m)}{\partial (x_1, \dots, x_n)}(P) :=
 
   이다.
 
-# <a name="행렬 미분" href="#행렬 미분">행렬 미분</a>
+# 행렬 미분
 
 > 출처/참고 : https://atmos.washington.edu/~dennis/MatrixCalculus.pdf
 

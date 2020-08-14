@@ -1,7 +1,6 @@
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## **해석학 메모**
 
 **[해석학 메모](https://ccss17.github.io/anal.html)**
 
@@ -11,11 +10,9 @@
 
 </blockquote>
 
-# 해석학 메모 
 
 ---
 
-# 해석
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -315,7 +312,6 @@ $$ x = (x_1, \dots, x_n): \mathbb{R} ^{n} \to \mathbb{R} ^{n} $$
 
 
   
-## 구간 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -365,7 +361,6 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 - $[a,+\infty) = \{x \in \mathbb{R} | a \leq x\}$ 이다. 
 
-## 1차원 좌표계
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -389,7 +384,6 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 - 좌표가 $a$ 인 점 $P$ 를 $P(a)$ 로 표기한다. 
 
-## 2차원 좌표계
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -461,7 +455,6 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 - 쉽게 말해 기울기란 어떤 직선이 $y$ 축에 기운 정도인데, 그것을 그 직선을 특정하는 두 $x$ 좌표가 일정량 변했을 때 두 $y$ 좌표가 일정량 변한 정도의 비율로 나타내겠다는 것이다. (수직선일 때는 $y$ 축에 전혀 기울지 않았다고 생각하면 되려나?)
 
-## 두 점의 거리 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -549,7 +542,6 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 </blockquote>
 
-## 3차원 좌표계
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -567,7 +559,6 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 </blockquote>
 
-## 함수 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -709,7 +700,6 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
     이다.
 
-## 함수의 분류 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -817,7 +807,6 @@ $$\{x \in \mathbb{R} |a \leq x \leq b\}, \{x \in \mathbb{R} |a < x < b\}, \{x \i
 
 - 두 함수가 서로 같다는 것을 $f=g$ 라고 표현한다. 
 
-## 특별한 정의역과 공역을 갖는 함수 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -859,7 +848,6 @@ $$ f: X \to \mathbb{C}  $$
 
 </blockquote>
 
-## 다변수 함수 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -903,7 +891,6 @@ $$ w = f(z_1, z_2, \dots, z_n) $$
 
   로 정의할 수도 있다. 
 
-# 최대최소 정리 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

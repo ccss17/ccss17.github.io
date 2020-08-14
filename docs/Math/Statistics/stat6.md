@@ -1,8 +1,7 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**통계 메모**" href="#**통계 메모**">**통계 메모**</a>
+## **통계 메모**
 
 **[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
 
@@ -18,11 +17,11 @@
 
 </blockquote>
 
-# <a name="상관관계 분석" href="#상관관계 분석">상관관계 분석</a>
+# 상관관계 분석
 
 ---
 
-# <a name="공분산과 상관계수 " href="#공분산과 상관계수 ">공분산과 상관계수 </a>
+# 공분산과 상관계수 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 

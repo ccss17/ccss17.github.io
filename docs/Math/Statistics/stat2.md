@@ -1,8 +1,7 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
-## <a name="**통계 메모**" href="#**통계 메모**">**통계 메모**</a>
+## **통계 메모**
 
 **[도수분포의 평균,분산,표준편차](https://ccss17.github.io/stat.html)**
 
@@ -18,11 +17,11 @@
 
 </blockquote>
 
-# <a name=" 이산확률변수의 평균,분산,표준편차" href="# 이산확률변수의 평균,분산,표준편차"> 이산확률변수의 평균,분산,표준편차</a>
+#  이산확률변수의 평균,분산,표준편차
 
 ---
 
-# <a name="확률분포" href="#확률분포">확률분포</a>
+# 확률분포
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -131,7 +130,7 @@ $$ P(a \leq  X \leq b) $$
 
 - 위 예시처럼 확률분포는 확률분포표로 나타낼 수도 있고 좌표계에 확률분포 그래프로 나타낼 수도 있다. 
 
-# <a name="이산확률분포 " href="#이산확률분포 ">이산확률분포 </a>
+# 이산확률분포 
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -219,7 +218,7 @@ $$ P(X = x_i) = p_i (i= 1, 2, 3, \dots, n) $$
 
   2. $\displaystyle \Sigma P(x) = 1$
 
-# <a name="이산확률변수의 평균, 분산, 표준편차(산포도 측정)" href="#이산확률변수의 평균, 분산, 표준편차(산포도 측정)">이산확률변수의 평균, 분산, 표준편차(산포도 측정)</a>
+# 이산확률변수의 평균, 분산, 표준편차(산포도 측정)
 
 <blockquote style="border: 2px solid; color:black; background:#E0E0E0;padding: 7px;">
 
@@ -467,7 +466,7 @@ $$\sigma (X) = \sqrt[]{V(X)} $$
 
   이로써 확률변수 $X$ 가 평균 $4$ 로부터 대충 $1.414$ 만큼 떨어져있다고 볼 수 있다. 
 
-## <a name="이산확률변수의 평균, 분산, 표준편차의 성질" href="#이산확률변수의 평균, 분산, 표준편차의 성질">이산확률변수의 평균, 분산, 표준편차의 성질</a>
+## 이산확률변수의 평균, 분산, 표준편차의 성질
 
 이제 우리는 이산확률변수 $X$ 의 평균, 분산, 표준편차를 구하는 법을 알게 되었다. 그러나 $X$ 라는 확률변수로부터 $2X +1$ 이나 $3X$ 라는 확률변수의 평균, 분산, 표준편차를 구해야하는 상황이 있다.   
 

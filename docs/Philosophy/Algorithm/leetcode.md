@@ -1,11 +1,10 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
 
-# <a name="uncrossed-lines/" href="#uncrossed-lines/">uncrossed-lines/</a>
+# uncrossed-lines/
 
 https://leetcode.com/problems/uncrossed-lines/
 
-## <a name="증명 " href="#증명 ">증명 </a>
+## 증명 
 
 모든 조합을 찾고 가장 많은 선 조합을 선택한다.
 

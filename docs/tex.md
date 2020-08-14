@@ -1,16 +1,15 @@
-# [ccss17.github.io](https://ccss17.github.io)
 
-# <a name="Katex Official Reference" href="#Katex Official Reference">Katex Official Reference</a>
+# Katex Official Reference
 
 https://katex.org/docs/supported.html
 
 https://katex.org/docs/support_table.html
 
-# <a name="My Tex Math Cheat Sheet" href="#My Tex Math Cheat Sheet">My Tex Math Cheat Sheet</a>
+# My Tex Math Cheat Sheet
 
-## <a name="1. Symbols" href="#1. Symbols">1. Symbols</a>
+## 1. Symbols
 
-### <a name="Greek Letters" href="#Greek Letters">Greek Letters</a>
+### Greek Letters
 
 | $\alpha$| $\beta$ | $\delta$ |$\epsilon$|$\Delta$|$\phi$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -24,7 +23,7 @@ https://katex.org/docs/support_table.html
 | $\varepsilon$|
 | \varepsilon  |
 
-### <a name="Calculus" href="#Calculus">Calculus</a>
+### Calculus
 
 | $\partial$| $\int$ | $\oint$ |$\lim$|$f'(x)$|$f''(x)$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -32,7 +31,7 @@ https://katex.org/docs/support_table.html
 | $f^{(k)}(x)$| $\sum$| $f \circ g$|$\prod$|
 | f^{(k)}(x)| \sum| f \circ g|\prod|
 
-### <a name="Binary Relations" href="#Binary Relations">Binary Relations</a>
+### Binary Relations
 
 | $\equiv$| $\simeq$ | $\approx$ |$\subset$|$\supset$|$\subseteq$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -44,7 +43,7 @@ https://katex.org/docs/support_table.html
 |  $\neq$ |
 | \neq |
 
-### <a name="Binary Operators" href="#Binary Operators">Binary Operators</a>
+### Binary Operators
 
 | $\pm$| $\mp$ | $\div$ |$\times$|$\setminus$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -52,7 +51,7 @@ https://katex.org/docs/support_table.html
 |$\cup$| $\cap$| $\ast$ | $\lor$ |$\land$|
 |\cup  | \cap  | \ast  |\lor |\land |
 
-### <a name="Arrows" href="#Arrows">Arrows</a>
+### Arrows
 
 | $\gets$| $\to$ | $\Leftarrow$ |$\implies$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -60,7 +59,7 @@ https://katex.org/docs/support_table.html
 |$\iff$|$\mapsto$| $\overrightarrow{AB}$| $\overleftrightarrow{AB}$
 |\iff|\mapsto  | \overrightarrow{AB}  | \overleftrightarrow{AB}
 
-### <a name="Logic" href="#Logic">Logic</a>
+### Logic
 
 | $\forall$| $\exists$ | $\nexists$ |$\neg$|$\iff$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -72,13 +71,13 @@ https://katex.org/docs/support_table.html
 | $\vdash$| $\not\vdash$ |$\emptyset$|
 | \vdash  | \not\vdash |\emptyset|
 
-### <a name="Large Delimiters" href="#Large Delimiters">Large Delimiters</a>
+### Large Delimiters
 
 | $\lgroup$| $\rgroup$ |$\langle  M, \circ \rangle$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | \lgroup  | \rgroup  |\langle  M, \circ \rangle|
 
-### <a name="Misc" href="#Misc">Misc</a>
+### Misc
 
 | $\N$ |$\mathbb{Z}$|$\mathbb{Q}$|$\mathbb{I}$|$\R$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -117,9 +116,9 @@ $$ (f \circ g)(x) $$
 
   $$ \prod_{k=1}^{n}f(k) $$
 
-## <a name="2. Operators" href="#2. Operators">2. Operators</a>
+## 2. Operators
 
-### <a name="trigonometric functions" href="#trigonometric functions">trigonometric functions</a>
+### trigonometric functions
 
 | $\cos(\theta)$| $\cos^2\theta$ | $\sin(\theta)$ |$\tan(\theta)$|
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -133,7 +132,7 @@ $$ (f \circ g)(x) $$
 
 ---
 
-## <a name="3. Powers and indices" href="#3. Powers and indices">3. Powers and indices</a>
+## 3. Powers and indices
 
 `k_{n+1} = n^2 + k_n^2 - k_{n-1}`
 
@@ -145,7 +144,7 @@ $n^{22}$ | $f(n) = n^5 + 4n^2 + 2$
 
 ---
 
-## <a name="4. Fractions and Binomials" href="#4. Fractions and Binomials">4. Fractions and Binomials</a>
+## 4. Fractions and Binomials
 
 | $\frac{x}{y}$| $\frac{n!}{k!(n-k)!} = \binom{n}{k}$ |
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -170,7 +169,7 @@ $$
 
 ---
 
-## <a name="5. Roots" href="#5. Roots">5. Roots</a>
+## 5. Roots
 
 | $\sqrt 2$| $\sqrt{a+b}$ |$\sqrt[a]{b}$ |
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -185,7 +184,7 @@ $$
 
 ---
 
-## <a name="6. Sums" href="#6. Sums">6. Sums</a>
+## 6. Sums
 
 `\sum_{i=1}^{10} t_i`
 
@@ -201,7 +200,7 @@ $$\sum_{n=0}^{\infty} f(g(n))$$
 
 ---
 
-## <a name="7. Integrals" href="#7. Integrals">7. Integrals</a>
+## 7. Integrals
 
 `\int ydx`
 
@@ -226,7 +225,7 @@ $$ \int_{a}^{x}(-1)(-f'(t))dt = f(x) - f(a) = \bigg[ -(x-t)f'(t)-\frac{(x-t)^2}{
 
 ---
 
-## <a name="8. Matrics" href="#8. Matrics">8. Matrics</a>
+## 8. Matrics
 
 ```
 H = 
@@ -268,7 +267,7 @@ a_{m,1} & a_{m,2} & \cdots & a_{m,n}
 \end{pmatrix}
 $$
 
-## <a name="9. Cases" href="#9. Cases">9. Cases</a>
+## 9. Cases
 
 ```
 f(n) =
@@ -288,7 +287,7 @@ $$
 
 ---
 
-## <a name="Sample " href="#Sample ">Sample </a>
+## Sample 
 
 $$a{\bold e}_\alpha + b\tilde{\bold e}_\alpha + c{\bold e}_x = \bold 0$$ (1)
 
@@ -305,13 +304,13 @@ Introducing the hypothenuse segments $p={\bold a}\cdot{\bold e}_x$ and  $q={\bol
 |:---:|:---:|:---:|:---:|
 |$cp = a^2$|$cq = b^2$|$pq = h^2$|$ab = ch$|
 
-## <a name="Sample 2 " href="#Sample 2 ">Sample 2 </a>
+## Sample 2 
 
-### <a name="샘플 텍스트 $2\times 3 = 6$" href="#샘플 텍스트 $2\times 3 = 6$">샘플 텍스트 $2\times 3 = 6$</a>
+### 샘플 텍스트 $2\times 3 = 6$
 
 $$ f(x) = \sum_{i=0}^{\infty}\frac{f^{(i)}(x^2)}{i!} $$
 
-### <a name="샘플 행렬" href="#샘플 행렬">샘플 행렬</a>
+### 샘플 행렬
 
 $$
 \begin{pmatrix}
