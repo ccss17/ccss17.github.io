@@ -1,6 +1,9 @@
 div.arithmatex {
-  overflow-x: visible !important;
-  overflow-y: visible !important;
+  overflow: visible !important;
+}
+
+.katex-display {
+  overflow: visible !important;
 }
 
 .md-typeset {

@@ -45,7 +45,7 @@ https://katex.org/docs/support_table.html
 ### Binary Operators
 
 | $\pm$| $\mp$ | $\div$ |$\times$|$\setminus$|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|
 | \pm  | \mp  |\div |\times |\setminus|
 |$\cup$| $\cap$| $\ast$ | $\lor$ |$\land$|
 |\cup  | \cap  | \ast  |\lor |\land |
@@ -53,7 +53,7 @@ https://katex.org/docs/support_table.html
 ### Arrows
 
 | $\gets$| $\to$ | $\Leftarrow$ |$\implies$|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|
 | \gets  | \to  |\Leftarrow |\implies |
 |$\iff$|$\mapsto$| $\overrightarrow{AB}$| $\overleftrightarrow{AB}$
 |\iff|\mapsto  | \overrightarrow{AB}  | \overleftrightarrow{AB}
@@ -61,7 +61,7 @@ https://katex.org/docs/support_table.html
 ### Logic
 
 | $\forall$| $\exists$ | $\nexists$ |$\neg$|$\iff$|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|
 | \forall  | \exists  |\nexists |\neg |\iff |
 | $\lor$| $\land$ | $\implies$ |$\Leftarrow$|$\top$|
 | \lor  | \land  |\implies |\Leftarrow |\top|
@@ -73,13 +73,13 @@ https://katex.org/docs/support_table.html
 ### Large Delimiters
 
 | $\lgroup$| $\rgroup$ |$\langle  M, \circ \rangle$|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|
 | \lgroup  | \rgroup  |\langle  M, \circ \rangle|
 
 ### Misc
 
 | $\N$ |$\mathbb{Z}$|$\mathbb{Q}$|$\mathbb{I}$|$\R$|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|
 | \N  |\mathbb{Z}|\mathbb{Q}|\mathbb{I}|\R  |
 |$\infty$|$\nabla$| $\because$| $\therefore$ |$\sim$|
 |\infty|\nabla  | \because  | \therefore  |\sim|
@@ -93,34 +93,34 @@ https://katex.org/docs/support_table.html
 
 - (f \circ g)(x) 
 
-$$ (f \circ g)(x) $$
+    $$ (f \circ g)(x) $$
 
 - \int_a^bf(x)dx
 
-  $$ \int_a^bf(x)dx $$
+    $$ \int_a^bf(x)dx $$
 
 - \lim_{x \to \infty}
 
-  $$ \lim_{x \to \infty} $$
+    $$ \lim_{x \to \infty} $$
 
 - \int\int \iint \iiint \oint 
 
-  $$\int\int \iint \iiint \oint $$
+    $$\int\int \iint \iiint \oint $$
 
 - \sum_{k=1}^\infty f(k)
 
-  $$ \sum_{k=1}^\infty f(k) $$
+    $$ \sum_{k=1}^\infty f(k) $$
 
 - \prod_{k=1}^{n}f(k) 
 
-  $$ \prod_{k=1}^{n}f(k) $$
+    $$ \prod_{k=1}^{n}f(k) $$
 
 ## 2. Operators
 
 ### trigonometric functions
 
 | $\cos(\theta)$| $\cos^2\theta$ | $\sin(\theta)$ |$\tan(\theta)$|
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|:---:|
 | \cos(\theta)  | \cos^2\theta  |\sin(\theta) |\tan(\theta)|
 | $sec$| $cot$ | $csc$ |$arcsin$|
 | sec  | cot  |csc |arcsin |
@@ -146,7 +146,7 @@ $n^{22}$ | $f(n) = n^5 + 4n^2 + 2$
 ## 4. Fractions and Binomials
 
 | $\frac{x}{y}$| $\frac{n!}{k!(n-k)!} = \binom{n}{k}$ |
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|
 | \frac{x}{y}  | \frac{n!}{k!(n-k)!} = \binom{n}{k}  |
 | $\frac{\frac{1}{x}}{y}$| $^x/_y = x/y$ |
 | \frac{\frac{1}{x}}{y}  | ^x/_y = x/y  |
@@ -159,6 +159,7 @@ x = a_0 + \cfrac{1}{a_1
         + \cfrac{1}{a_3 
         + \cfrac{1}{a_4} } } }
 ```
+
 $$
 x = a_0 + \cfrac{1}{a_1 
         + \cfrac{1}{a_2 
@@ -171,12 +172,13 @@ $$
 ## 5. Roots
 
 | $\sqrt 2$| $\sqrt{a+b}$ |$\sqrt[a]{b}$ |
-|:---:|:---:|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|
 | \sqrt 2  | \sqrt{a+b}  |\sqrt[a]{b}  |
 
 ```
 \sqrt[n]{1+x+x^2+\dots+x^n}
 ```
+
 $$
 \sqrt[n]{1+x+x^2+\dots+x^n}
 $$
@@ -234,6 +236,7 @@ H =
 0 & b & 9 \\
 \end{pmatrix}
 ```
+
 $$
 H = 
 \begin{pmatrix}
@@ -256,6 +259,7 @@ a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
 a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
 \end{pmatrix}
 ```
+
 $$
 A_{m,n} = 
 \begin{pmatrix}
@@ -288,7 +292,7 @@ $$
 
 ## Sample 
 
-$$a{\bold e}_\alpha + b\tilde{\bold e}_\alpha + c{\bold e}_x = \bold 0$$ (1)
+$$a{\bold e}_\alpha + b\tilde{\bold e}_\alpha + c{\bold e}_x = \bold 0$$
 
 $${\bold e}_\alpha = \begin{pmatrix}\cos\alpha & 1\\ \sin\alpha & 2\end{pmatrix} \quad and \quad {\tilde\bold e}_\alpha = \begin{pmatrix}-\sin\alpha\\ \cos\alpha\end{pmatrix}$$
 
