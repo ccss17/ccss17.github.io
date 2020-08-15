@@ -430,19 +430,19 @@
 
     $n$ 개의 독립변수와 $m$ 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 $x_1, x_2, \dots, x_m$ 에 대한 다변수 함수 $w = f(x_1, x_2, \dots, x_m)$ 가 미분가능하고,
     
-          $n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
-    
-          $w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수들도 미분가능하며
-    
-          각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
-    
-          $$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}$$
-    
-          $$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}$$
-    
-          $$ \vdots $$
-    
-          $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}$$
+    $n$ 개의 독립변수 $p_1, p_2, \dots, p_n$ 에 대한 함수 $x_1, x_2, \dots, x_m$ 도 미분가능하면,
+
+    $w$ 가 미분가능하고 $p_1, p_2, \dots, p_n$ 에 대한 함수들도 미분가능하며
+
+    각각의 독립변수에 대한 $w$ 의 편도함수는 다음과 같다. 
+
+    $$ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}$$
+
+    $$ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}$$
+
+    $$ \vdots $$
+
+    $$ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}$$
 
 - 예시 
 
@@ -865,13 +865,13 @@
 
     http://cs231n.stanford.edu/handouts/linear-backprop.pdf
 
-    $n \times d$ 입력 행렬 $\mathbf{X}$, $d \times m$ 가중치 행렬 $\mathbf{W}$ 에 대한 $n \times m$ 행렬 $\mathbf{Y=XW}$ 과 손실함수 $l$ 에 대한 스칼라 $L=l(\mathbf{Y})$ 에 대하여 $\mathbf{X}$ 의 미분은 
+    $n \times d$ 입력 행렬 $\mathbf{X}$, $d \times m$ 가중치 행렬 $\mathbf{W}$ 에 대한 $n \times m$ 행렬 $\mathbf{Y=XW}$ 과 손실함수 $l$ 에 대한 스칼라 $L=l(\mathbf{Y})$ 에 대하여 $\mathbf{X}$ 의 미분 (1) 은 
 
-    $$ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\mathbf{W}^{\intercal } $$ (1)
+    $$ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\mathbf{W}^{\intercal } $$
 
-    이고, $\mathbf{W}$ 의 미분은
+    이고, $\mathbf{W}$ 의 미분 (2) 은
     
-    $$ \dfrac{\partial L}{\partial \mathbf{W}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{W}} = \mathbf{X}^{\intercal } \dfrac{\partial L}{\partial \mathbf{Y}}$$ (2)
+    $$ \dfrac{\partial L}{\partial \mathbf{W}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{W}} = \mathbf{X}^{\intercal } \dfrac{\partial L}{\partial \mathbf{Y}}$$
 
     이다.
 
@@ -989,13 +989,13 @@
 
 - 행렬덧셈 미분 정리
 
-    $n \times m$ 출력 행렬 $\mathbf{Y}$, $n \times m$ 편향 행렬 $\mathbf{B}$ 에 대한 $n \times m$ 순입력 행렬 $\mathbf{Z=Y + B}$ 과 손실함수 $l$ 에 대한 스칼라 $L=l(\mathbf{Y})$ 에 대하여 $\mathbf{Y}$ 의 미분은 
+    $n \times m$ 출력 행렬 $\mathbf{Y}$, $n \times m$ 편향 행렬 $\mathbf{B}$ 에 대한 $n \times m$ 순입력 행렬 $\mathbf{Z=Y + B}$ 과 손실함수 $l$ 에 대한 스칼라 $L=l(\mathbf{Y})$ 에 대하여 $\mathbf{Y}$ 의 미분 (1) 은 
 
-    $$ \dfrac{\partial L}{\partial \mathbf{Y}} = \dfrac{\partial L}{\partial \mathbf{Z}} $$ (1)
+    $$ \dfrac{\partial L}{\partial \mathbf{Y}} = \dfrac{\partial L}{\partial \mathbf{Z}} $$ 
 
-    이고, $\mathbf{W}$ 의 미분은
+    이고, $\mathbf{W}$ 의 미분 (2) 은
     
-    $$ \dfrac{\partial L}{\partial \mathbf{B}} = \dfrac{\partial L}{\partial \mathbf{Z}} $$ (2)
+    $$ \dfrac{\partial L}{\partial \mathbf{B}} = \dfrac{\partial L}{\partial \mathbf{Z}} $$ 
 
     이다.
 

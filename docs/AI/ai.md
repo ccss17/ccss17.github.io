@@ -728,26 +728,23 @@
 
 입력값이 $2$ 개이고 형상이 $2 \times 3$ 인 가중치가 $W$ 이고 출력값이 $3$ 개인 신경망을 생각하자. 이때 손실함수가 $L$ 인 신경망의 기울기는 $\frac{\partial L}{\partial W}$ 이다. 이 상황을 행렬로 표기하면 다음과 같다. 
 
-$$
-x = \begin{pmatrix}
+$$ x = \begin{pmatrix}
 x_1&x_2
 \end{pmatrix}
-$$ (in)
+$$ 
 
 $$
 y = \begin{pmatrix}
 y_1&y_2&y_3
 \end{pmatrix}
-$$ (out)
-$$
+$$ 
 
-W = \begin{pmatrix}
+$$ W = \begin{pmatrix}
 w_{11}&w_{12}&w_{13}\\w_{21}&w_{22}&w_{23}
 \end{pmatrix}
 $$
 
-$$
-\frac{\partial L}{\partial W} = \begin{pmatrix}
+$$ \frac{\partial L}{\partial W} = \begin{pmatrix}
 \frac{\partial L}{\partial W_{11}} &\frac{\partial L}{\partial W_{12}} &\frac{\partial L}{\partial W_{13}} \\
 \frac{\partial L}{\partial W_{21}} &\frac{\partial L}{\partial W_{22}} &\frac{\partial L}{\partial W_{23}} 
 \end{pmatrix}

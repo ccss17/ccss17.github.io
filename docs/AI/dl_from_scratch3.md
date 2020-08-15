@@ -154,26 +154,26 @@
     ```python
     class AdaGrad:
 
-        """AdaGrad"""
+    """AdaGrad"""
 
-        def __init__(self, lr=0.01):
-            self.lr = lr
-            self.h = None
+    def __init__(self, lr=0.01):
+        self.lr = lr
+        self.h = None
+        
+    def update(self, params, grads):
+        if self.h is None:
+            self.h = {}
+            for key, val in params.items():
+                self.h[key] = np.zeros_like(val)
             
-        def update(self, params, grads):
-            if self.h is None:
-                self.h = {}
-                for key, val in params.items():
-                    self.h[key] = np.zeros_like(val)
-                
-            for key in params.keys():
-                self.h[key] += grads[key] * grads[key]
-                params[key] -= self.lr * grads[key] / (np.sqrt(self.h[key]) + 1e-7)
-        ```
+        for key in params.keys():
+            self.h[key] += grads[key] * grads[key]
+            params[key] -= self.lr * grads[key] / (np.sqrt(self.h[key]) + 1e-7)
+    ```
 
-        수식을 그냥 코드로 구현한 것이다. 다만 `1e-7` 을 더해주어 최악의 상황에서 $0$ 으로 나누어지는 것을 방지한다.
+    수식을 그냥 코드로 구현한 것이다. 다만 `1e-7` 을 더해주어 최악의 상황에서 $0$ 으로 나누어지는 것을 방지한다.
 
-        - 이 값 `1e-7` 은 딥러닝 프레임워크에서는 파라미터로 직접 설정할 수 있다.
+    - 이 값 `1e-7` 은 딥러닝 프레임워크에서는 파라미터로 직접 설정할 수 있다.
 
 !!! tldr ""
 

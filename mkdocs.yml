@@ -11,14 +11,14 @@ nav:
     - Git: Computer/git.md
     - Docker: Computer/docker.md
     - CUDA: Computer/cuda.md
+  - AI: 
+    - DL from stratch 메모: AI/dl_from_scratch.md
+    - DL from stratch 메모2: AI/dl_from_scratch2.md
+    - DL from stratch 메모3: AI/dl_from_scratch3.md
+    - 인공지능 메모3: AI/ai.md
+  - Algorithm:
+    - Leetcode: Algorithm/leetcode.md
   - Philosophy: 
-    - AI: 
-      - DL from stratch 메모: Philosophy/AI/dl_from_scratch.md
-      - DL from stratch 메모2: Philosophy/AI/dl_from_scratch2.md
-      - DL from stratch 메모3: Philosophy/AI/dl_from_scratch3.md
-      - 인공지능 메모3: Philosophy/AI/ai.md
-    - Algorithm:
-      - Leetcode: Philosophy/Algorithm/leetcode.md
     - 철학 메모: Philosophy/philosophy.md
     - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
     - 정보이론: Philosophy/information.md
