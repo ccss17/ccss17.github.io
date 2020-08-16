@@ -36,8 +36,8 @@ nav:
       - 삼각함수: Math/Analysis/trig.md
       - 함수: Math/Analysis/function.md
     - 확률: 
-      - 조합: Math/Analysis/comb.md
-      - 확률: Math/Analysis/prob.md
+      - 조합: Math/Probability/comb.md
+      - 확률: Math/Probability/prob.md
     - 통계학: 
       - 도수분포의 평균,분산,표준편차: Math/Statistics/stat.md
       - 이산확률변수의 평균,분산,표준편차: Math/Statistics/stat2.md

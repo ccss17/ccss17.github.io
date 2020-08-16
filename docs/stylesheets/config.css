@@ -4,6 +4,7 @@ div.arithmatex {
 
 .katex-display {
   overflow: visible !important;
+  width: auto !important;
 }
 
 .md-typeset {

@@ -181,17 +181,17 @@
 
 - 증명 
 
-  부채꼴의 중심각을 $\theta$ 라디안이라 하고 부채꼴의 호의 길이를 $l$ 이라고 하자. 
+    부채꼴의 중심각을 $\theta$ 라디안이라 하고 부채꼴의 호의 길이를 $l$ 이라고 하자. 
 
-  부채꼴의 호의 길이 $l$ 는 중심각의 크기 $\theta$ 에 비례하므로 원의 둘레 $2 \pi r$ 과의 비례식은 
+    부채꼴의 호의 길이 $l$ 는 중심각의 크기 $\theta$ 에 비례하므로 원의 둘레 $2 \pi r$ 과의 비례식은 
 
     $$ 2 \pi : 2 \pi r = \theta : l $$
 
-  이다. 그러므로 호의 길이 $l$ 는
+    이다. 그러므로 호의 길이 $l$ 는
 
     $$ \therefore  l = r \theta $$
 
-  이다.
+    이다.
 
 !!! tldr ""
 
@@ -199,17 +199,17 @@
 
 - 증명 
 
-  부채꼴의 중심각을 $\theta$ 라디안이라 하고 원의 반지름을 $r$ 이라 하자.
+    부채꼴의 중심각을 $\theta$ 라디안이라 하고 원의 반지름을 $r$ 이라 하자.
 
-  부채꼴의 넓이 $S$ 도 중심각 $\theta$ 에 비례하므로 원의 넓이 $\pi r ^{2}$ 와의 비례식은 
+    부채꼴의 넓이 $S$ 도 중심각 $\theta$ 에 비례하므로 원의 넓이 $\pi r ^{2}$ 와의 비례식은 
 
     $$ 2 \pi : \pi r ^{2} = \theta : S $$
 
-  이다. 그러므로 부채꼴의 넓이 $S$ 는 
+    이다. 그러므로 부채꼴의 넓이 $S$ 는 
 
     $$ \therefore S = \frac{\pi r ^{2} \theta }{2 \pi } = \frac{1}{2} r ^{2} \theta $$
 
-  이다.
+    이다.
 
 !!! tldr ""
 
@@ -351,27 +351,27 @@
 
     삼각함수의 단위원을 통한 정의 : 반지름 $r$ 의 길이가 $1$ 인 단위원 위의 점 A $(x, y)$ 가 있다고 하자. 이때 $x$ 축과 점 $A$ 와 원점을 잇는 직선과의 각을 $\theta$ 라고하면 삼각함수를 다음과 같이 정의할 수 있다. 
     
-      ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Circle-trig6.svg/255px-Circle-trig6.svg.png)
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Circle-trig6.svg/255px-Circle-trig6.svg.png)
 
 - 사인함수($sin\theta$) : $sin\theta = \frac{y}{r}$
 
 - 코사인함수($cos\theta$) : $cos\theta = \frac{x}{r}$
 
-  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Sine_function001.svg/500px-Sine_function001.svg.png)
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Sine_function001.svg/500px-Sine_function001.svg.png)
 
 - 탄젠트함수($tan\theta$) : $tan\theta = \frac{sin \theta}{cos \theta} = \frac{y}{x}$
 
-  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Tangent.svg/350px-Tangent.svg.png)
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Tangent.svg/350px-Tangent.svg.png)
 
 - 코시컨트함수($csc\theta$) : $csc\theta = \frac{1}{\sin \theta} = \frac{r}{y}$
 
-  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Csc_drawing_process.gif/350px-Csc_drawing_process.gif)
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Csc_drawing_process.gif/350px-Csc_drawing_process.gif)
 
 - 시컨트함수($sec\theta$) : $sec\theta = \frac{1}{\cos \theta} = \frac{r}{x}$
 
 - 코탄젠트함수($cot\theta$) : $cot\theta = \frac{1}{\tan \theta} = \frac{x}{y}$
 
-  ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Trigonometric_functions.svg/744px-Trigonometric_functions.svg.png)
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Trigonometric_functions.svg/744px-Trigonometric_functions.svg.png)
 
 ## 삼각함수의 특수각
 
@@ -398,41 +398,41 @@
 
 - $\sin ^2 \theta  + \cos ^2 \theta = 1$
 
-  - 증명 
+    - 증명 
 
-    반지름 길이가 $r$ 인 원에서 사인함수는 $\sin \theta = \frac{y}{r}$ 이고 코사인함수는 $\cos \theta  = \frac{x}{r}$ 이다. 이때 원의 방정식 $x^2 + y^2 = r^2$ 의 $x, y$ 를 각각 사인과 코사인에 대하여 풀면 $r^2 \sin \theta + r^2 \cos \theta = r^2$ 이므로 
+        반지름 길이가 $r$ 인 원에서 사인함수는 $\sin \theta = \frac{y}{r}$ 이고 코사인함수는 $\cos \theta  = \frac{x}{r}$ 이다. 이때 원의 방정식 $x^2 + y^2 = r^2$ 의 $x, y$ 를 각각 사인과 코사인에 대하여 풀면 $r^2 \sin \theta + r^2 \cos \theta = r^2$ 이므로 
 
-    $$ \therefore  \sin ^2 \theta  + \cos ^2 \theta = 1$$ 
+        $$ \therefore  \sin ^2 \theta  + \cos ^2 \theta = 1$$ 
 
-    이다.
+        이다.
 
 - $1 + \tan ^{2} \theta = \sec ^{2} \theta$
 
-  - 증명 
+    - 증명 
 
-    $$\sin ^2 \theta  + \cos ^2 \theta = 1 $$
+        $$\sin ^2 \theta  + \cos ^2 \theta = 1 $$
 
-    $$ \iff $$
+        $$ \iff $$
 
-    $$\frac{1}{\cos ^{2} \theta}(\sin ^2 \theta  + \cos ^2 \theta) = \frac{1}{\cos ^{2} \theta} $$
+        $$\frac{1}{\cos ^{2} \theta}(\sin ^2 \theta  + \cos ^2 \theta) = \frac{1}{\cos ^{2} \theta} $$
 
-    $$ \iff $$
+        $$ \iff $$
 
-    $$ \therefore \tan ^{2} \theta + 1 = \sec ^{2} \theta$$
+        $$ \therefore \tan ^{2} \theta + 1 = \sec ^{2} \theta$$
 
 - $1 + \cot ^{2} \theta = \csc ^{2} \theta$
 
-  - 증명 
+    - 증명 
 
-    $$\sin ^2 \theta  + \cos ^2 \theta = 1 $$
+        $$\sin ^2 \theta  + \cos ^2 \theta = 1 $$
 
-    $$ \iff $$
+        $$ \iff $$
 
-    $$\frac{1}{\sin ^{2} \theta}(\sin ^2 \theta  + \cos ^2 \theta) = \frac{1}{\sin ^{2} \theta} $$
+        $$\frac{1}{\sin ^{2} \theta}(\sin ^2 \theta  + \cos ^2 \theta) = \frac{1}{\sin ^{2} \theta} $$
 
-    $$ \iff $$
+        $$ \iff $$
 
-    $$ \therefore 1 + \cot ^{2} \theta = \csc ^{2} \theta$$
+        $$ \therefore 1 + \cot ^{2} \theta = \csc ^{2} \theta$$
 
 ### 삼각함수의 주기와 대칭성 
 
@@ -498,7 +498,7 @@
 
 - 예시 
 
-  $\sin x = \frac{1}{2}$
+    $\sin x = \frac{1}{2}$
 
 !!! tldr ""
 
@@ -506,7 +506,7 @@
 
 - 예시 
 
-  $\cos x > \frac{\sqrt[]{3}}{2}$
+    $\cos x > \frac{\sqrt[]{3}}{2}$
 
 ## 삼각형과 삼각함수와의 관계
 
@@ -526,25 +526,25 @@
 
 - 증명 
 
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Law_of_sines_proof.svg/400px-Law_of_sines_proof.svg.png" width="50%" height="auto">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Law_of_sines_proof.svg/400px-Law_of_sines_proof.svg.png" width="50%" height="auto">
 
-  삼각형 $ABC$ 의 변 $c$ 위의 높이를 $h$ 라고 하면 $\sin A$ 는 빗변 $b$ 에 대한 높이 $h$ 의 비율 $\sin A = \dfrac{h}{b}$ 이다. 그러므로 
+    삼각형 $ABC$ 의 변 $c$ 위의 높이를 $h$ 라고 하면 $\sin A$ 는 빗변 $b$ 에 대한 높이 $h$ 의 비율 $\sin A = \dfrac{h}{b}$ 이다. 그러므로 
 
-  $$ h = b \sin A $$
+    $$ h = b \sin A $$
 
-  인데, 이에따라 삼각형 $ABC$ 의 넓이 $K$ 는 
+    인데, 이에따라 삼각형 $ABC$ 의 넓이 $K$ 는 
 
-  $$ K = \dfrac{1}{2}ch=\dfrac{1}{2}bc \sin A $$
+    $$ K = \dfrac{1}{2}ch=\dfrac{1}{2}bc \sin A $$
 
-  이다. 그러므로 $2K = bc \sin A$ 인데 마찬가지의 방법으로 
+    이다. 그러므로 $2K = bc \sin A$ 인데 마찬가지의 방법으로 
 
-  $$ 2K = bc \sin A = ac \sin B = ab \sin C $$
+    $$ 2K = bc \sin A = ac \sin B = ab \sin C $$
 
-  를 얻는다. 이것을 $abc$ 로 나누면 $\dfrac{\sin A}{a} =\dfrac{\sin B}{b} =\dfrac{\sin C}{c}$ 을 얻고 이것의 역수를 취하면 사인법칙
+    를 얻는다. 이것을 $abc$ 로 나누면 $\dfrac{\sin A}{a} =\dfrac{\sin B}{b} =\dfrac{\sin C}{c}$ 을 얻고 이것의 역수를 취하면 사인법칙
 
-  $$\dfrac{a}{\sin A} =\dfrac{b}{\sin B} =\dfrac{c}{\sin C}$$
+    $$\dfrac{a}{\sin A} =\dfrac{b}{\sin B} =\dfrac{c}{\sin C}$$
 
-  을 얻는다. ■ 
+    을 얻는다. ■ 
 
 - 그리고 이 관계로부터 다음의 관계들이 도출된다. 
 
@@ -572,57 +572,57 @@
 
 - 코사인 법칙은 시점이 같은 두 벡터 $u, v$ 와 두 벡터가 이루는 각 $\theta$ 와 두 벡터의 종점을 이은 벡터 $w = u-v$ 에 대하여서도 적용된다.
 
-  <img src="https://user-images.githubusercontent.com/16812446/86887866-392e0980-c134-11ea-9889-3e42cf40f31a.png" width="50%" height="auto">
+    <img src="https://user-images.githubusercontent.com/16812446/86887866-392e0980-c134-11ea-9889-3e42cf40f31a.png" width="50%" height="auto">
 
-  > 출처 : [Thomas' CALCULUS](https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078) Figure12.21
+    > 출처 : [Thomas' CALCULUS](https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078) Figure12.21
 
-  이때 벡터들의 길이 $|u|, |v|, |w|$ 와 $u,v$ 가 이루는 각 $\theta$ 에 대하여 코사인 법칙 
+    이때 벡터들의 길이 $|u|, |v|, |w|$ 와 $u,v$ 가 이루는 각 $\theta$ 에 대하여 코사인 법칙 
 
-  $$ |w| ^{2} = |u|^{2}+|v|^{2}-2|u||v|\cos \theta $$
+    $$ |w| ^{2} = |u|^{2}+|v|^{2}-2|u||v|\cos \theta $$
 
-  가 성립한다.
+    가 성립한다.
 
 - 증명 
 
-  <img src="https://w.namu.la/s/8cdb7e58c9045a93487b9344d5c293f6dbd4490cbcecd8bee4e150402bdde278e491b4d20d72ca08f27c2dedcc9f2e08a18bddaa4c0bda69db51fe80f13b8c8aa8b46e373b790be34442adff9d35034756944778474f7b75dd3f6246bfa1c09f" width="50%" height="auto">
+    <img src="https://w.namu.la/s/8cdb7e58c9045a93487b9344d5c293f6dbd4490cbcecd8bee4e150402bdde278e491b4d20d72ca08f27c2dedcc9f2e08a18bddaa4c0bda69db51fe80f13b8c8aa8b46e373b790be34442adff9d35034756944778474f7b75dd3f6246bfa1c09f" width="50%" height="auto">
 
-  위 삼각형에서 각각의 각 $A,B,C$ 와 마주보는 변의 길이를 $a,b,c$ 라고 하자.
+    위 삼각형에서 각각의 각 $A,B,C$ 와 마주보는 변의 길이를 $a,b,c$ 라고 하자.
 
-  삼각형 $\Delta ABC$ 에 대하여 $\cos B = \dfrac{\overline{BH}}{c}, \cos C = \dfrac{\overline{CH}}{b}$ 이므로
+    삼각형 $\Delta ABC$ 에 대하여 $\cos B = \dfrac{\overline{BH}}{c}, \cos C = \dfrac{\overline{CH}}{b}$ 이므로
 
-  $$ a = \overline{BH}+\overline{CH} = c \cos B + b \cos C $$
+    $$ a = \overline{BH}+\overline{CH} = c \cos B + b \cos C $$
 
-  이 성립한다. 마찬가지의 방식으로
+    이 성립한다. 마찬가지의 방식으로
 
-  $$ a = c \cos B + b \cos C $$
+    $$ a = c \cos B + b \cos C $$
 
-  $$ b = a \cos C + c \cos A $$
+    $$ b = a \cos C + c \cos A $$
 
-  $$ c = a \cos B + b \cos A $$
+    $$ c = a \cos B + b \cos A $$
 
-  을 얻는다. 이 세 등식에 각각 $a,b,c$ 를 곱하면
+    을 얻는다. 이 세 등식에 각각 $a,b,c$ 를 곱하면
 
-  $$ a ^{2} = ac \cos B + ab \cos C $$
+    $$ a ^{2} = ac \cos B + ab \cos C $$
 
-  $$ b ^{2} = ab \cos C + bc \cos A $$
+    $$ b ^{2} = ab \cos C + bc \cos A $$
 
-  $$ c ^{2} = ac \cos B + bc \cos A $$
+    $$ c ^{2} = ac \cos B + bc \cos A $$
 
-  을 얻는다. 이때 첫째 등식에 둘째 등식과 셋째 등식을 빼면 $a ^{2}-b ^{2}- c ^{2}=-2bc \cos A$ 이므로
+    을 얻는다. 이때 첫째 등식에 둘째 등식과 셋째 등식을 빼면 $a ^{2}-b ^{2}- c ^{2}=-2bc \cos A$ 이므로
 
-  $$ \therefore  a^2 = b^2 + c^2 -2bc \cos A$$
+    $$ \therefore  a^2 = b^2 + c^2 -2bc \cos A$$
 
-  을 얻는다. ■ 
+    을 얻는다. ■ 
 
-  마찬가지의 방식으로 나머지 코사인 법칙도 쉽게 유도할 수 있다. ■ 
+    마찬가지의 방식으로 나머지 코사인 법칙도 쉽게 유도할 수 있다. ■ 
 
 - 코사인 법칙으로부터 다음의 따름법칙을 쉽게 유도할 수 있다.
 
-  $$\cos A = \frac{b^2+c^2-a^2}{2bc}$$
+    $$\cos A = \frac{b^2+c^2-a^2}{2bc}$$
 
-  $$\cos B = \frac{c^2+a^2-b^2}{2ca}$$
+    $$\cos B = \frac{c^2+a^2-b^2}{2ca}$$
 
-  $$\cos C = \frac{a^2+b^2-c^2}{2ab}$$
+    $$\cos C = \frac{a^2+b^2-c^2}{2ab}$$
 
 !!! tldr ""
 
@@ -660,21 +660,21 @@
 
 - 사인함수의 덧셈정리 
 
-  - $\sin(\alpha +\beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta$
+    - $\sin(\alpha +\beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta$
 
-  - $\sin (\alpha - \beta ) = \sin \alpha \cos \beta - \cos \alpha \sin \beta$
+    - $\sin (\alpha - \beta ) = \sin \alpha \cos \beta - \cos \alpha \sin \beta$
 
 - 코사인함수의 덧셈정리 
 
-  - $\cos (\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta$
+    - $\cos (\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta$
 
-  - $\cos (\alpha - \beta ) = \cos \alpha \cos \beta + \sin \alpha \sin \beta$
+    - $\cos (\alpha - \beta ) = \cos \alpha \cos \beta + \sin \alpha \sin \beta$
 
 - 탄젠트함수의 덧셈정리 
 
-  - $$\tan (\alpha + \beta) = \frac{\tan \alpha + \tan \beta }{1 - \tan \alpha \tan \beta }$$
+    - $$\tan (\alpha + \beta) = \frac{\tan \alpha + \tan \beta }{1 - \tan \alpha \tan \beta }$$
 
-  - $$\tan (\alpha - \beta) = \frac{\tan \alpha - \tan \beta }{1 + \tan \alpha \tan \beta }$$
+    - $$\tan (\alpha - \beta) = \frac{\tan \alpha - \tan \beta }{1 + \tan \alpha \tan \beta }$$
 
 - 우리는 특수각에 대한 삼각함수 값만을 알고 있었지만 이 덧셈정리들로 일반적인 각에 대한 삼각함수 값을 비교적 쉽게 구할 수 있게 되었다.
 
@@ -682,13 +682,13 @@
 
 - 증명 
 
-  ![](https://ww.namu.la/s/25287916f70ebb1ca9f932f4eb1edf48a08497c7bcb48cd58da722ebf3c5d4a7b86694ff5126861296b0642f3bd55f0db9aab0301cd1413a26c38641bffeb18ee6796941a31dff1b70d77a0f79e576c3d0e2422f7c553dc2953e8ceef220aedd)
+    ![](https://ww.namu.la/s/25287916f70ebb1ca9f932f4eb1edf48a08497c7bcb48cd58da722ebf3c5d4a7b86694ff5126861296b0642f3bd55f0db9aab0301cd1413a26c38641bffeb18ee6796941a31dff1b70d77a0f79e576c3d0e2422f7c553dc2953e8ceef220aedd)
 
-  위 그림에서 양의 $x$ 축을 시초선으로하고 각의 크기가 $\beta$ 인 동경이 단위원과 만나는 점을 $B$, 각의 크기가 $\alpha$ 인 동경이 단위원과 만나는 점을 $C$ 라 하자. 
+    위 그림에서 양의 $x$ 축을 시초선으로하고 각의 크기가 $\beta$ 인 동경이 단위원과 만나는 점을 $B$, 각의 크기가 $\alpha$ 인 동경이 단위원과 만나는 점을 $C$ 라 하자. 
 
-  그러면 각각의 좌표는 $B(\cos \beta, \sin \beta), C(\cos \alpha, \sin \alpha)$ 이다. 
+    그러면 각각의 좌표는 $B(\cos \beta, \sin \beta), C(\cos \alpha, \sin \alpha)$ 이다. 
 
-  이때 두 점 사이의 거리는 
+    이때 두 점 사이의 거리는 
 
     $$ \overline{BC} ^{2} = (\cos \beta - \cos \alpha) ^{2} + (\sin \beta -\sin \alpha ) ^{2} = (\cos ^{2} \alpha + \sin ^{2} \alpha ) + (\cos ^{2} \beta + \sin ^{2} \beta ) - 2(\cos \alpha \cos \beta + \sin \alpha \sin \beta ) $$
 
@@ -696,13 +696,13 @@
 
     $$ = 2 - 2(\cos \alpha \cos \beta + \sin \alpha \sin \beta ) $$
 
-  이다. 그런데 삼각형의 세 변의 길이와 한 각의 크기 사이의 관계를 보여주는 코사인 법칙에 의하여 
+    이다. 그런데 삼각형의 세 변의 길이와 한 각의 크기 사이의 관계를 보여주는 코사인 법칙에 의하여 
 
     $$ \overline{BC} ^{2} = 1 ^{2} + 1 ^{2} - 2 \circ 1 \circ 1 \cos (\alpha -\beta ) $$
 
     $$ = 2 - 2 \cos (\alpha -\beta ) $$
 
-  이다. 따라서 
+    이다. 따라서 
 
     $$ 2 - 2 \cos (\alpha -\beta ) = 2 - 2(\cos \alpha \cos \beta + \sin \alpha \sin \beta ) $$
 
@@ -746,15 +746,11 @@
 
 - 예시 
 
-  $$ \sin 75 \degree = \sin (45 \degree + 30 \degree) = \sin 45 \degree \cos 30 \degree + \cos 45 \degree \sin 30 \degree = \frac{\sqrt[]{2}}{2} \circ \frac{\sqrt[]{3}}{2} + \frac{\sqrt[]{2}}{2}\circ \frac{1}{2} = \frac{\sqrt[]{6}+\sqrt[]{2}}{4} $$
+    $$ \sin 75 \degree = \sin (45 \degree + 30 \degree) = \sin 45 \degree \cos 30 \degree + \cos 45 \degree \sin 30 \degree = \frac{\sqrt[]{2}}{2} \circ \frac{\sqrt[]{3}}{2} + \frac{\sqrt[]{2}}{2}\circ \frac{1}{2} = \frac{\sqrt[]{6}+\sqrt[]{2}}{4} $$
 
-  $$ \cos 75 \degree = \cos (45 \degree + 30 \degree) = \cos 45 \degree \cos 30 \degree - \sin 45 \degree \sin 30 \degree = \frac{\sqrt[]{2}}{2} \circ \frac{\sqrt[]{3}}{2} - \frac{\sqrt[]{2}}{2}\circ \frac{1}{2} = \frac{\sqrt[]{6}-\sqrt[]{2}}{4} $$
+    $$ \cos 75 \degree = \cos (45 \degree + 30 \degree) = \cos 45 \degree \cos 30 \degree - \sin 45 \degree \sin 30 \degree = \frac{\sqrt[]{2}}{2} \circ \frac{\sqrt[]{3}}{2} - \frac{\sqrt[]{2}}{2}\circ \frac{1}{2} = \frac{\sqrt[]{6}-\sqrt[]{2}}{4} $$
 
-  $$
-
-  \tan 15 \degree = \tan(45 \degree - 30 \degree ) = \frac{\tan 45 \degree - \tan 30  \degree }{1 + \tan 45 \degree \tan 30 \degree } = \frac{1 - \frac{1}{\sqrt[]{3}}}{1 + 1 \circ \frac{1}{\sqrt[]{3}}} = \frac{\sqrt[]{3}-1}{\sqrt[]{3}+1} = 2 - \sqrt[]{3}
-
-  $$
+    $$ \tan 15 \degree = \tan(45 \degree - 30 \degree ) = \frac{\tan 45 \degree - \tan 30  \degree }{1 + \tan 45 \degree \tan 30 \degree } = \frac{1 - \frac{1}{\sqrt[]{3}}}{1 + 1 \circ \frac{1}{\sqrt[]{3}}} = \frac{\sqrt[]{3}-1}{\sqrt[]{3}+1} = 2 - \sqrt[]{3} $$
 
 !!! tldr ""
 
@@ -762,61 +758,61 @@
 
 - $\sin 2 \alpha = 2 \sin \alpha \cos \alpha$
 
-  - 증명 
+    - 증명 
 
-    사인함수의 덧셈정리
+        사인함수의 덧셈정리
 
-    $$\sin(\alpha +\beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta$$
+        $$\sin(\alpha +\beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta$$
 
-    는 임의의 두 각 $\alpha, \beta$ 에 대하여 성립하므로 $\beta = \alpha$ 로 두면 
+        는 임의의 두 각 $\alpha, \beta$ 에 대하여 성립하므로 $\beta = \alpha$ 로 두면 
 
-    $$ \therefore \sin 2 \alpha = 2 \sin \alpha \cos \alpha $$
+        $$ \therefore \sin 2 \alpha = 2 \sin \alpha \cos \alpha $$
 
-    이다. 
+        이다. 
 
 - $\cos 2 \alpha = \cos ^{2} \alpha - \sin ^{2} \alpha = 2 \cos ^{2} \alpha -1 = 1 - 2 \sin ^{2} \alpha$
 
-  - 증명 
+    - 증명 
 
-    코사인함수의 덧셈정리
+        코사인함수의 덧셈정리
 
-    $$\cos (\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta$$
+        $$\cos (\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta$$
 
-    는 임의의 두 각 $\alpha, \beta$ 에 대하여 성립하므로 $\beta = \alpha$ 로 두면 
+        는 임의의 두 각 $\alpha, \beta$ 에 대하여 성립하므로 $\beta = \alpha$ 로 두면 
 
-    $$ \therefore \cos 2 \alpha = \cos ^{2}\alpha - \sin ^{2} \alpha  $$
+        $$ \therefore \cos 2 \alpha = \cos ^{2}\alpha - \sin ^{2} \alpha  $$
 
-    그런데 $\sin ^{2}\theta  + \cos ^{2} \theta  = 1$ 이므로 $\sin ^{2}\theta  = 1 - \cos ^{2} \theta$ 에서
+        그런데 $\sin ^{2}\theta  + \cos ^{2} \theta  = 1$ 이므로 $\sin ^{2}\theta  = 1 - \cos ^{2} \theta$ 에서
 
-    $$ \therefore \cos 2 \alpha = 2\cos ^{2}\alpha - 1  $$
+        $$ \therefore \cos 2 \alpha = 2\cos ^{2}\alpha - 1  $$
 
-    이고 $\cos ^{2} \theta  = 1 - \sin ^{2} \theta$ 에서
+        이고 $\cos ^{2} \theta  = 1 - \sin ^{2} \theta$ 에서
 
-    $$ \therefore \cos 2 \alpha = 1 - 2\sin ^{2}\alpha $$
+        $$ \therefore \cos 2 \alpha = 1 - 2\sin ^{2}\alpha $$
 
-    이다. 
+        이다. 
 
 - $\tan 2 \alpha = \frac{2 \tan \alpha }{1 - \tan ^{2}\alpha }$
 
-  - 증명 
+    - 증명 
 
-    탄젠트 함수의 덧셈정리
+        탄젠트 함수의 덧셈정리
 
-    $$\tan (\alpha + \beta) = \frac{\tan \alpha + \tan \beta }{1 - \tan \alpha \tan \beta }$$
+        $$\tan (\alpha + \beta) = \frac{\tan \alpha + \tan \beta }{1 - \tan \alpha \tan \beta }$$
 
-    는 임의의 두 각 $\alpha, \beta$ 에 대하여 성립하므로 $\beta = \alpha$ 로 두면 
+        는 임의의 두 각 $\alpha, \beta$ 에 대하여 성립하므로 $\beta = \alpha$ 로 두면 
 
-    $$ \therefore  \tan 2\alpha = \frac{2\tan \alpha}{1 - \tan ^{2} \alpha}$$
+        $$ \therefore  \tan 2\alpha = \frac{2\tan \alpha}{1 - \tan ^{2} \alpha}$$
 
-    이다.
+        이다.
 
 - 이 공식은 차수가 $2$ 인 식과 차수가 $1$ 인 식이 갖는 관계를 보여주므로 차수를 변환시키면 유용한 상황에서 사용된다. 
 
-  > 따라서 임의의 차수를 원하는 차수로 변환하기 위한 목적으로 공식을 더 유용하게 변환할 수 있다. 
+    > 따라서 임의의 차수를 원하는 차수로 변환하기 위한 목적으로 공식을 더 유용하게 변환할 수 있다. 
 
-  - 삼각방정식, 적분법 등에서 사용된다. 
+    - 삼각방정식, 적분법 등에서 사용된다. 
 
-  - 배각의 공식 뿐만 아니라 $3$ 배각의 공식, $4$ 배각의 공식, $n$ 배각의 공식이 존재한다.
+    - 배각의 공식 뿐만 아니라 $3$ 배각의 공식, $4$ 배각의 공식, $n$ 배각의 공식이 존재한다.
 
 !!! tldr ""
 
@@ -824,59 +820,52 @@
 
 - $\sin ^{2} \frac{\alpha }{2} = \frac{1 - \cos \alpha }{2}$
 
-  - 증명 
+    - 증명 
 
-    $\cos 2 \alpha = 1 - 2 \sin ^{2} \alpha$ 에서
+        $\cos 2 \alpha = 1 - 2 \sin ^{2} \alpha$ 에서
 
-    $$ \sin ^{2} \alpha  = \frac{1 - \cos 2 \alpha }{2} $$
+        $$ \sin ^{2} \alpha  = \frac{1 - \cos 2 \alpha }{2} $$
 
-    를 얻는다. 이때 $\alpha$ 대신 $\frac{\alpha }{2}$ 를 대입하면
+        를 얻는다. 이때 $\alpha$ 대신 $\frac{\alpha }{2}$ 를 대입하면
 
-    $$ \therefore  \sin ^{2} \frac{\alpha }{2} = \frac{1 - \cos \alpha }{2} $$
+        $$ \therefore  \sin ^{2} \frac{\alpha }{2} = \frac{1 - \cos \alpha }{2} $$
 
-    이다.
+        이다.
 
 - $\cos ^{2}\frac{\alpha }{2} = \frac{1+\cos \alpha }{2}$
 
-  - 증명 
+    - 증명 
 
-    $\cos 2 \alpha = 2 \cos ^{2} \alpha -1$ 에서 
+        $\cos 2 \alpha = 2 \cos ^{2} \alpha -1$ 에서 
 
-    $$ \cos ^{2} \alpha = \frac{1 + \cos 2 \alpha}{2} $$
+        $$ \cos ^{2} \alpha = \frac{1 + \cos 2 \alpha}{2} $$
 
-    를 얻는다. 이때 $\alpha$ 대신 $\frac{\alpha }{2}$ 를 대입하면
+        를 얻는다. 이때 $\alpha$ 대신 $\frac{\alpha }{2}$ 를 대입하면
 
-    $$ \therefore  \cos ^{2}\frac{\alpha }{2} = \frac{1+\cos \alpha }{2} $$
+        $$ \therefore  \cos ^{2}\frac{\alpha }{2} = \frac{1+\cos \alpha }{2} $$
 
-    이다.
+        이다.
 
 - $\tan ^{2} \frac{\alpha }{2} = \frac{1-\cos \alpha }{1+\cos \alpha }$
 
-  - 증명 
+    - 증명 
 
-    탄젠트는 코사인 값에 대한 사인 값의 비이므로 
+        탄젠트는 코사인 값에 대한 사인 값의 비이므로 
 
-    $$ \tan ^{2} \frac{\alpha }{2} = \frac{\sin ^{2} \frac{\alpha }{2}}{\cos ^{2} \frac{\alpha }{2}} = \frac{\frac{1-\cos \alpha }{2}}{\frac{1+\cos \alpha }{2}} $$ 
+        $$ \tan ^{2} \frac{\alpha }{2} = \frac{\sin ^{2} \frac{\alpha }{2}}{\cos ^{2} \frac{\alpha }{2}} = \frac{\frac{1-\cos \alpha }{2}}{\frac{1+\cos \alpha }{2}} $$ 
 
-    에서
+        에서
 
-    $$ \therefore  \tan ^{2} \frac{\alpha }{2} = \frac{\sin ^{2} \frac{\alpha }{2}}{\cos ^{2} \frac{\alpha }{2}} = \frac{\frac{1-\cos \alpha }{2}}{\frac{1+\cos \alpha }{2}} = \frac{1-\cos \alpha }{1+\cos \alpha } $$
+        $$ \therefore  \tan ^{2} \frac{\alpha }{2} = \frac{\sin ^{2} \frac{\alpha }{2}}{\cos ^{2} \frac{\alpha }{2}} = \frac{\frac{1-\cos \alpha }{2}}{\frac{1+\cos \alpha }{2}} = \frac{1-\cos \alpha }{1+\cos \alpha } $$
 
-    이다. 
+        이다. 
 
 - 반각의 공식은 모든 식이 $\cos \alpha$ 로 표현된다. 
 
-  - 즉 이 관계 덕분에 $\cos \alpha$ 값만 알면 $\sin ^{2} \frac{\alpha }{2}, \cos ^{2} \frac{\alpha }{2}, \tan ^{2} \frac{\alpha }{2}$ 를 알 수 있다. 
+    - 즉 이 관계 덕분에 $\cos \alpha$ 값만 알면 $\sin ^{2} \frac{\alpha }{2}, \cos ^{2} \frac{\alpha }{2}, \tan ^{2} \frac{\alpha }{2}$ 를 알 수 있다. 
 
 ## 삼각함수의 합성
-
-
 
 삼각함수의 합성 
 
 **구체화 필요**
-
-
-
-
-
