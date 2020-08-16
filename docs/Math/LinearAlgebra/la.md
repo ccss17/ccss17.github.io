@@ -16,11 +16,11 @@
 
 - 예시 
 
-  $4x_1 - 5x_2 + 2 = x_1$ 
+    $4x_1 - 5x_2 + 2 = x_1$ 
 
 - 예시 
 
-  $x_2 = 2(\sqrt 6 - x_1) + x_3$
+    $x_2 = 2(\sqrt 6 - x_1) + x_3$
 
 !!! tldr ""
 
@@ -30,9 +30,9 @@
 
 - 예시
 
-  $$ 2x_1 - x_2 + 1.5x_3 = 8 $$
+    $$ 2x_1 - x_2 + 1.5x_3 = 8 $$
 
-  $$ x_1 - 4x_3 = -7 $$ (2)
+    $$ x_1 - 4x_3 = -7 \tag{2}  $$ 
 
 !!! tldr ""
 
@@ -40,9 +40,9 @@
 
 - 예시 
 
-  다음선형계의 해는 $(5, 6, 3)$ 이다.
+    다음선형계의 해는 $(5, 6, 3)$ 이다.
 
-  $$ x_1 - 4x_3 = -7 $$ (2)
+    $$ x_1 - 4x_3 = -7 \tag{2} $$ 
 
 !!! tldr ""
 
@@ -62,11 +62,11 @@
 
 - 선형계는 다음 중 하나를 만족한다.
 
-  1. 해를 갖지 않는다(inconsistent).
+    1. 해를 갖지 않는다(inconsistent).
 
-  2. 하나의 해를 갖는다(consistent).
+    2. 하나의 해를 갖는다(consistent).
 
-  3. 무한히 많은 해를 갖는다. 
+    3. 무한히 많은 해를 갖는다. 
 
 ## 행렬
 
@@ -80,9 +80,9 @@
 
 - 예시 
 
-  다음은 여섯 개의 원소를 가진 $2 \times 3$ 행렬이다. 
+    다음은 여섯 개의 원소를 가진 $2 \times 3$ 행렬이다. 
 
-  $$ \begin{bmatrix} 1&9&-13\\20&5&-16 \end{bmatrix} $$
+    $$ \begin{bmatrix} 1&9&-13\\20&5&-16 \end{bmatrix} $$
 
 !!! tldr ""
 
@@ -102,17 +102,17 @@
 
 - 예시
 
-  다음과 같은 선형계가 있다고 하자.
+    다음과 같은 선형계가 있다고 하자.
 
-  $$ x_1 - 2x_2 + x_3 = 0 $$
+    $$ x_1 - 2x_2 + x_3 = 0 $$
 
-  $$ 2x_2 - 8x_3 = 8 $$
+    $$ 2x_2 - 8x_3 = 8 $$
 
-  $$ 5x_1 - 5x_3 = 10 $$ (3)
+    $$ 5x_1 - 5x_3 = 10 \tag{3}  $$ 
 
-  선형계(3) 의 계수 행렬은 다음과 같다. 
+    선형계(3) 의 계수 행렬은 다음과 같다. 
 
-  $$ \begin{pmatrix} 1 & -2 & 1 \\ 0 & 2  &-8 \\ 5 & 0 & -5 \end{pmatrix} $$
+    $$ \begin{pmatrix} 1 & -2 & 1 \\ 0 & 2  &-8 \\ 5 & 0 & -5 \end{pmatrix} $$
 
 !!! tldr ""
 
@@ -120,9 +120,9 @@
 
 - 예시 
 
-  선형계(3) 의 첨가행렬은 다음과 같다. 
+    선형계(3) 의 첨가행렬은 다음과 같다. 
 
-  $$ \begin{pmatrix} 1 & -2 & 1 & 0\\ 0 & 2  & -8 & 8\\ 5 & 0 & -5 & 10 \end{pmatrix} $$ (4)
+    $$ \begin{pmatrix} 1 & -2 & 1 & 0\\ 0 & 2  & -8 & 8\\ 5 & 0 & -5 & 10 \end{pmatrix} \tag{4} $$ 
 
 !!! tldr ""
 
@@ -136,7 +136,7 @@
 
 - 예시 
 
-  첨가행렬 (4) 는 3개의 행과 4개의 열로 이루어져 있기 때문에 $3 \times 4$ 행렬이다. 
+    첨가행렬 (4) 는 3개의 행과 4개의 열로 이루어져 있기 때문에 $3 \times 4$ 행렬이다. 
 
 ### 선형계 풀이법
 
@@ -146,37 +146,37 @@
 
 - 첫번째 방정식의 $x_1$ 항으로 나머지 방정식의 $x_1$ 항을 소거한다.
 
-  두번째 방정식의 $x_2$ 항으로 나머지 방정식의 $x_2$ 항을 소거한다.
+    두번째 방정식의 $x_2$ 항으로 나머지 방정식의 $x_2$ 항을 소거한다.
 
-  이를 계속하면 풀기 쉬운 동치인 선형계를 얻는다.
+    이를 계속하면 풀기 쉬운 동치인 선형계를 얻는다.
 
 !!! tldr ""
 
     기본 행연산 : 선형계의 단순화 시 사용하는 세 가지 기본연산이다.
     
     1. (교체) 하나의 방정식을 그 방정식을 상수배하여 합한 것으로 대체한다. 
-    
+
         - ~~$i$ 행에 상수 $c$ 를 곱하여 $j$ 행에 더하는 것을 $A_{i, j}(c)$ 로 표현한다.~~
-    
+
         - 예시 
-    
-          $\begin{bmatrix}1&2&3\\2&3&4\\3&4&5\end{bmatrix} \to \begin{bmatrix}1&2&3\\2&3&4\\0&-2&-5\end{bmatrix}$
-    
+
+            $\begin{bmatrix}1&2&3\\2&3&4\\3&4&5\end{bmatrix} \to \begin{bmatrix}1&2&3\\2&3&4\\0&-2&-5\end{bmatrix}$
+
     2. (교환) 두 방정식을 교환한다. 
-    
+
         - ~~$i$ 행과 $j$ 행을 교환하는 것을 $A_{i, j}$ 로 표현한다.~~
-    
+
         - 예시 
-    
-          $\begin{bmatrix}1&2&3\\2&3&4\\3&4&5\end{bmatrix} \to \begin{bmatrix}1&2&3\\3&4&5\\2&3&4\end{bmatrix}$
-    
+
+            $\begin{bmatrix}1&2&3\\2&3&4\\3&4&5\end{bmatrix} \to \begin{bmatrix}1&2&3\\3&4&5\\2&3&4\end{bmatrix}$
+
     3. (스칼라곱) 방정식의 모든 항에 0 이 아닌 상수를 곱한다. 
-    
+
         - ~~$i$ 행에 $0$ 이 아닌 상수 $c$ 를 곱하는 것을 $A_i(c), (c \neq 0)$ 으로 표현한다.~~
-    
-        - 예시 
-    
-          $\begin{bmatrix}1&2&3\\2&3&4\\3&4&5\end{bmatrix} \to \begin{bmatrix}2&4&6\\2&3&4\\3&4&5\end{bmatrix}$
+
+- 예시 
+
+    $\begin{bmatrix}1&2&3\\2&3&4\\3&4&5\end{bmatrix} \to \begin{bmatrix}2&4&6\\2&3&4\\3&4&5\end{bmatrix}$
 
 
 
@@ -221,32 +221,30 @@
     사다리꼴(echelon form) 행렬 : 다음 세 가지 성질을 갖는 직사각행렬이다.
     
     1. 영이 아닌 행은 모든 성분이 영인 행보다 항상 위에 있다. 
-    
+
     2. 행의 선행 성분은 그 행보다 위에 있는 행의 선행 성분보다 더 오른쪽 열에 있다.
-    
+
     3. 선행 성분보다 아래에 있는 것은 모두 0 이다. 
-    
-        - 행사다리꼴(row echelon form) 이라고도 한다. 
-    
-        - 예시
-    
-          $$ \begin{pmatrix} 2 & -3 & 2 & 1 \\ 0 & 1 & -4 & 8 \\ 0 & 0 & 0 & 5/2 \end{pmatrix} $$
 
+- 행사다리꼴(row echelon form) 이라고도 한다. 
 
+- 예시
+
+    $$ \begin{pmatrix} 2 & -3 & 2 & 1 \\ 0 & 1 & -4 & 8 \\ 0 & 0 & 0 & 5/2 \end{pmatrix} $$
 
 !!! tldr ""
 
     기약사다리꼴(reduced echelon form) 행렬  : 행사다리꼴의 정의를 포함하여 다음의 조건을 만족하는 직사각행렬이다.
     
     4. 영이 아닌 행의 선행 성분은 항상 1 이다.
-    
+
     5. 선행 성분 1 은 항상 그 열에서 유일한 영이 아닌 성분이다. 
-    
-        - 기약행사다리꼴(reduced row echelon form) 이라고도 한다.
-    
-        - 예시
-    
-          $$ \begin{pmatrix} 1 & 0 & 9 & 0 & 29 \\ 0 & 1 & 5 & 0 & 16 \\ 0 & 0 & 0 & 1 & 3 \end{pmatrix} $$
+
+- 기약행사다리꼴(reduced row echelon form) 이라고도 한다.
+
+- 예시
+
+    $$ \begin{pmatrix} 1 & 0 & 9 & 0 & 29 \\ 0 & 1 & 5 & 0 & 16 \\ 0 & 0 & 0 & 1 & 3 \end{pmatrix} $$
 
 
 
@@ -268,13 +266,13 @@
 
 - 예시
 
-  행렬 A 에 행연산을 수행하여 사다리꼴 행렬을 얻어서 A 의 추축위치와 추축열을 찾는다.
+    행렬 A 에 행연산을 수행하여 사다리꼴 행렬을 얻어서 A 의 추축위치와 추축열을 찾는다.
 
-  $$ A = \begin{pmatrix} 0 & -3& -6& 4& 9 \\ -1& -2& -1& 3& 1\\ -2& -3& 0& 3& -1\\ 1& 4& 5& -9& -7 \end{pmatrix} $$
+    $$ A = \begin{pmatrix} 0 & -3& -6& 4& 9 \\ -1& -2& -1& 3& 1\\ -2& -3& 0& 3& -1\\ 1& 4& 5& -9& -7 \end{pmatrix} $$
 
-  다음 사다리꼴에 따라서 추축열은 열 $1$, 열 $2$, 열 $4$ 이다. 추축위치는 $(1, 1), (2, 2), (3, 4)$ 이다.
+    다음 사다리꼴에 따라서 추축열은 열 $1$, 열 $2$, 열 $4$ 이다. 추축위치는 $(1, 1), (2, 2), (3, 4)$ 이다.
 
-  $$ \begin{pmatrix} 1 & 4& 5& -9& 7 \\ 0& 2& 4& -6& -6\\ 0& 0& 0& -5& 0\\ 0& 0& 0& 0& 0 \end{pmatrix} $$
+    $$ \begin{pmatrix} 1 & 4& 5& -9& 7 \\ 0& 2& 4& -6& -6\\ 0& 0& 0& -5& 0\\ 0& 0& 0& 0& 0 \end{pmatrix} $$
 
 ### 선형계의 해
 
@@ -296,23 +294,23 @@
 
 - 예시
 
-  어떤 선형계의 첨가행렬이 다음의 기약사다리꼴로 변환되었다고 하자.
+    어떤 선형계의 첨가행렬이 다음의 기약사다리꼴로 변환되었다고 하자.
 
-  $$ \begin{pmatrix} 1 & 0& -5& 1 \\ 0& 1& 1& 4\\ 0& 0& 0& 0 \end{pmatrix} $$
+    $$ \begin{pmatrix} 1 & 0& -5& 1 \\ 0& 1& 1& 4\\ 0& 0& 0& 0 \end{pmatrix} $$
 
-  이에 해당하는 방정식계는 다음과 같다. 
+    이에 해당하는 방정식계는 다음과 같다. 
 
-  $$ x_1 - 5x_3 = 1$$
+    $$ x_1 - 5x_3 = 1$$
 
-  $$ x_2 + x_3 = 4$$
+    $$ x_2 + x_3 = 4$$
 
-  $$ 0 = 0$$ (4)
+    $$ 0 = 0 \tag{4} $$ 
 
-  이때 기본변수는 $x_1$ 과 $x_2$ 이고 자유변수는 $x_3$ 이다. 
+    이때 기본변수는 $x_1$ 과 $x_2$ 이고 자유변수는 $x_3$ 이다. 
 
-  $$ \begin{cases} x_1 = 1 + 5x_3 \\ x_2 = 4 - x_3 \\ x_3 은 자유변수 \end{cases} $$ (5)
+    $$ \begin{cases} x_1 = 1 + 5x_3 \\ x_2 = 4 - x_3 \\ x_3 은 자유변수 \end{cases} \tag{5} $$ 
 
-  $x_3$ 은 자유변수이기에 값이 임의로 정해진다. 그리고 $x_3$ 에 따라 $x_1$ 과 $x_2$ 이 정해진다. 
+    $x_3$ 은 자유변수이기에 값이 임의로 정해진다. 그리고 $x_3$ 에 따라 $x_1$ 과 $x_2$ 이 정해진다. 
 
 ### 해집합의 매개변수 표현
 
@@ -348,9 +346,9 @@
 
 - 예시
 
-  $u = \begin{pmatrix} 3 \\ -1 \end{pmatrix}$ 
+    $u = \begin{pmatrix} 3 \\ -1 \end{pmatrix}$ 
 
-  이는 직교좌표계의 좌표(3, -1)로 생각할 수도 있다.
+    이는 직교좌표계의 좌표(3, -1)로 생각할 수도 있다.
 
 > 구글이 제안한 벡터에 단어를 대입하여 자연어를 처리하는 word2vec 방식이 있다.
 
@@ -364,7 +362,7 @@
 
 - 예시
 
-  $u = \begin{pmatrix} 3 & -1 \\ \end{pmatrix}$
+    $u = \begin{pmatrix} 3 & -1 \\ \end{pmatrix}$
 
 !!! tldr ""
 
@@ -382,9 +380,9 @@
 
 - 예시 
 
-  $$ \begin{bmatrix} 1\\2 \end{bmatrix} $$
+    $$ \begin{bmatrix} 1\\2 \end{bmatrix} $$
 
-  이것은 $\big < 1, 2\big >$ 로도 표현할 수 있고 좌표평면에서의 종점의 좌표가 $(1, 2)$ 인 벡터로 볼 수 있다. 
+    이것은 $\big < 1, 2\big >$ 로도 표현할 수 있고 좌표평면에서의 종점의 좌표가 $(1, 2)$ 인 벡터로 볼 수 있다. 
 
 ### $\mathbb{R}^3$에서의 벡터
 
@@ -394,9 +392,9 @@
 
 - 예시 
 
-  $a=\begin{pmatrix} 2 \\ 3 \\ 4 \end{pmatrix}$
+    $a=\begin{pmatrix} 2 \\ 3 \\ 4 \end{pmatrix}$
 
-  이는 $3$차원 좌표공간에서의 좌표 $(2, 3, 4)$ 로 볼 수 있다.
+    이는 $3$차원 좌표공간에서의 좌표 $(2, 3, 4)$ 로 볼 수 있다.
 
 ### $\mathbb{R}^n$에서의 벡터
 
@@ -406,31 +404,31 @@
 
 - 예시 
 
-  보통 다음과 같이 $n \times 1$ 열행렬로 표시한다.
+    보통 다음과 같이 $n \times 1$ 열행렬로 표시한다.
 
-  $u=\begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix}$
+    $u=\begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix}$
 
-  이는 $n$차원 좌표공간에서의 좌표로 볼 수 있다.
+    이는 $n$차원 좌표공간에서의 좌표로 볼 수 있다.
 
 !!! tldr ""
 
     $\mathbb{R}^n$ 의 대수적 성질 : 임의의 벡터들 $u, v, w \in \mathbb{R}^n$ 과 임의의 수 c 와 d 에 대하여 다음이 성립한다.
     
-    1. $u + v = v + u$
-    
-    2. $(u + v) + w = u + (v + w)$
-    
-    3. $u + 0 = 0 + u = u$
-    
-    4. $u + (-u) = -u + u = 0$
-    
-    5. $c(u + v) = cv + cu$
-    
-    6. $(c + d)u = cv + cu$
-    
-    7. $c(du) = (cd)u$
-    
-    8. $lu = u$
+1. $u + v = v + u$
+
+2. $(u + v) + w = u + (v + w)$
+
+3. $u + 0 = 0 + u = u$
+
+4. $u + (-u) = -u + u = 0$
+
+5. $c(u + v) = cv + cu$
+
+6. $(c + d)u = cv + cu$
+
+7. $c(du) = (cd)u$
+
+8. $lu = u$
 
 ### 일차결합(linear combination)
 
@@ -444,13 +442,13 @@
 
 - 예시 
 
-  다음은 $v_1$ 과 $v_2$ 의 일차결합이다. 
+    다음은 $v_1$ 과 $v_2$ 의 일차결합이다. 
 
-  $\sqrt3v_1 + v_2$
+    $\sqrt3v_1 + v_2$
 
-  $\frac{1}{2}v_1 (=\frac{1}{2}v_1 + 0v_2)$
+    $\frac{1}{2}v_1 (=\frac{1}{2}v_1 + 0v_2)$
 
-  $0 (= 0v_1 + 0v_2)$
+    $0 (= 0v_1 + 0v_2)$
 
 ### 벡터방정식 (vector equation)
 
@@ -464,31 +462,17 @@
 
 - 예시
 
-  - $a_1 = \begin{pmatrix} 1 \\ -2 \\ -5 \end{pmatrix}$ , $a_2 = \begin{pmatrix} 2 \\ 5 \\ 6 \end{pmatrix}$ , $b = \begin{pmatrix} 7 \\ 4 \\ -3 \end{pmatrix}$ 이라 하자. $b$ 를 $a_1$ 과 $a_2$ 의 일차결합으로 표시할 수 있는지, 즉 다음 식을 만족하는 $x_1$ 과 $x_2$ 가 있는지 판별하자.
+    - $a_1 = \begin{pmatrix} 1 \\ -2 \\ -5 \end{pmatrix}$ , $a_2 = \begin{pmatrix} 2 \\ 5 \\ 6 \end{pmatrix}$ , $b = \begin{pmatrix} 7 \\ 4 \\ -3 \end{pmatrix}$ 이라 하자. $b$ 를 $a_1$ 과 $a_2$ 의 일차결합으로 표시할 수 있는지, 즉 다음 식을 만족하는 $x_1$ 과 $x_2$ 가 있는지 판별하자.
 
-    $$x_1a_1 + x_2a_2 = b$$ (1)
+    $$x_1a_1 + x_2a_2 = b \tag{1} $$ 
 
     주어진 벡터방정식은 다음과 같다. 
 
-    $$
-
-    x_1\begin{pmatrix} 1 \\-2 \\ -5  \end{pmatrix} +
-
-    x_2\begin{pmatrix} 2 \\5 \\ 6  \end{pmatrix} =
-
-    \begin{pmatrix} 7 \\4 \\ -3  \end{pmatrix}
-
-    $$
+    $$ x_1\begin{pmatrix} 1 \\-2 \\ -5  \end{pmatrix} + x_2\begin{pmatrix} 2 \\5 \\ 6  \end{pmatrix} = \begin{pmatrix} 7 \\4 \\ -3  \end{pmatrix} $$
 
     이는 다음과 같이 쓸 수 있다. 
 
-    $$
-
-    \begin{pmatrix} x_1 + 2x_2\\ -2x_1 +5x_2 \\-5x_1 + 6x_2  \end{pmatrix} =
-
-    \begin{pmatrix} 7 \\4 \\ -3  \end{pmatrix}
-
-    $$ (2)
+    $$ \begin{pmatrix} x_1 + 2x_2\\ -2x_1 +5x_2 \\-5x_1 + 6x_2  \end{pmatrix} = \begin{pmatrix} 7 \\4 \\ -3  \end{pmatrix} \tag{2} $$ 
 
     (2) 의 좌변과 우변의 벡터가 같게 되기 위해서는 성분이 같아야 한다. 그러므로 $x_1$ 과 $x_2$ 가 (1) 의 해가 되기 위해서는 다음 선형계의 해가 되어야 함. 
 
@@ -496,17 +480,11 @@
 
     $$-2x_1 + 5x_2 = 4$$
 
-    $$-5x_1 + 6x_2 = -3$$ (3)
+    $$-5x_1 + 6x_2 = -3 \tag{3} $$ 
 
     이 선형계를 풀기 위해 그것의 첨가행렬을 축약하자. 
 
-    $$
-
-    \begin{pmatrix}1 & 2 & 7 \\ -2 & 5 & 4 \\ -5 & 6 & -3\end{pmatrix} \sim
-
-    \begin{pmatrix}1 & 0 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 0\end{pmatrix} 
-
-    $$
+    $$ \begin{pmatrix}1 & 2 & 7 \\ -2 & 5 & 4 \\ -5 & 6 & -3\end{pmatrix} \sim \begin{pmatrix}1 & 0 & 3 \\ 0 & 1 & 2 \\ 0 & 0 & 0\end{pmatrix} $$
 
     이때 (3) 의 해는 $x_1 = 3$, $x_2 = 2$ 이기에 b 는 가중치 $x_1 = 3$, $x_2 = 2$ 를 갖는 $a_1$ 과 $a_2$ 의 일차결합이다. 
 
@@ -536,25 +514,25 @@
 
 - 즉 스칼라 $c_1, \dots, c_p$ 에 대하여 다음의 형태로 표현되는 모든 벡터의 집합이다. 
 
-  $$c_1v_1 + c_2v_2 + \dots + c_pv_p$$
+    $$c_1v_1 + c_2v_2 + \dots + c_pv_p$$
 
 - 예시
 
-  - $Span\{v\}$ 의 의미
+    - $Span\{v\}$ 의 의미
 
-    $v$ 가 $\mathbb{R}^3$ 에 속하는 영이 아닌 벡터라고하자.
+        $v$ 가 $\mathbb{R}^3$ 에 속하는 영이 아닌 벡터라고하자.
 
-    $Span\{v\}$ 는 $v$ 의 모든 스칼라배의 집합이며, $v$ 과 $0$ 을 지나는 $\mathbb{R}^3$ 의 직선의 연장선상 위의 점들의 집합이다. 
+        $Span\{v\}$ 는 $v$ 의 모든 스칼라배의 집합이며, $v$ 과 $0$ 을 지나는 $\mathbb{R}^3$ 의 직선의 연장선상 위의 점들의 집합이다. 
 
-    ![3차원 직선](https://user-images.githubusercontent.com/16812446/74583507-095a5a00-500b-11ea-86fe-a1cb8faccfae.png)
+        ![3차원 직선](https://user-images.githubusercontent.com/16812446/74583507-095a5a00-500b-11ea-86fe-a1cb8faccfae.png)
 
-  - $Span\{u, v\}$ 의 의미
+    - $Span\{u, v\}$ 의 의미
 
-    $u, v$ 가 $\mathbb{R}^3$ 에 속하는 영이 아닌 벡터라고 하자. 
+        $u, v$ 가 $\mathbb{R}^3$ 에 속하는 영이 아닌 벡터라고 하자. 
 
-    $Span\{u, v\}$ 는 $u, v, 0$ 를 포함하는 $\mathbb{R}^3$ 내의 평면이다.
+        $Span\{u, v\}$ 는 $u, v, 0$ 를 포함하는 $\mathbb{R}^3$ 내의 평면이다.
 
-    ![3차원 직선(1)](https://user-images.githubusercontent.com/16812446/74583586-d2387880-500b-11ea-8096-d51df7105043.png)
+        ![3차원 직선(1)](https://user-images.githubusercontent.com/16812446/74583586-d2387880-500b-11ea-8096-d51df7105043.png)
 
 ## 행렬방정식 $Ax = b$
 
@@ -574,7 +552,7 @@
 
 - 예시
 
-  $$ \begin{pmatrix} 1 & 2 & -1 \\ 0 & -5 & 3 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 4 \\ 1 \end{pmatrix} $$
+    $$ \begin{pmatrix} 1 & 2 & -1 \\ 0 & -5 & 3 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 4 \\ 1 \end{pmatrix} $$
 
 !!! tldr ""
 
@@ -600,27 +578,21 @@
 
 - 예시
 
-  $A=\begin{pmatrix}1 & 3 & 4 \\ -4 & 2 & -6 \\ -3 & -2 & -7\end{pmatrix}, b = \begin{pmatrix}b_1\\ b_2 \\ b_3\end{pmatrix}$ 이라 하면, 행렬방정식 $Ax=b$ 가 임의의 $b_1, b_2, b_3$ 에 대하여 해를 갖는가? 
+    $A=\begin{pmatrix}1 & 3 & 4 \\ -4 & 2 & -6 \\ -3 & -2 & -7\end{pmatrix}, b = \begin{pmatrix}b_1\\ b_2 \\ b_3\end{pmatrix}$ 이라 하면, 행렬방정식 $Ax=b$ 가 임의의 $b_1, b_2, b_3$ 에 대하여 해를 갖는가? 
 
-  $Ax = b$ 에 대한 첨가행렬을 축약하면 다음과 같다.
+    $Ax = b$ 에 대한 첨가행렬을 축약하면 다음과 같다.
 
-  $$
+    $$ \begin{pmatrix}1 & 3 & 4 & b_1 \\ -4 & 2 & -6 & b_2 \\ -3 & -2 & -7 & b_3\end{pmatrix} \sim \begin{pmatrix}1 & 3 & 4 & b_1 \\ 0 & 14 & 10 & b_2 + 4b_1 \\ 0 & 0 & 0 & b_3+3b_1-\frac{1}{2}(b_2+4b_1)\end{pmatrix} $$
 
-  \begin{pmatrix}1 & 3 & 4 & b_1 \\ -4 & 2 & -6 & b_2 \\ -3 & -2 & -7 & b_3\end{pmatrix} \sim
+    열 4 의 3번쨰 성분이 $b_3+3b_1-\frac{1}{2}(b_2+4b_1)$ 인데 적당한 $b$ 에 대하여 $b_3+3b_1-\frac{1}{2}(b_2+4b_1)$ 이 영이 아니게 되면 $0 = n (n\ne 0)$ 라는 식의 모순이 발생한다.
 
-  \begin{pmatrix}1 & 3 & 4 & b_1 \\ 0 & 14 & 10 & b_2 + 4b_1 \\ 0 & 0 & 0 & b_3+3b_1-\frac{1}{2}(b_2+4b_1)\end{pmatrix} 
+    $\therefore$ 임의의 $b$ 에 대하여 해를 갖는 것은 아니다. 
 
-  $$
+    위 행렬방정식이 해를 갖기 위해서는 반드시 다음을 만족해야 한다. 
 
-  열 4 의 3번쨰 성분이 $b_3+3b_1-\frac{1}{2}(b_2+4b_1)$ 인데 적당한 $b$ 에 대하여 $b_3+3b_1-\frac{1}{2}(b_2+4b_1)$ 이 영이 아니게 되면 $0 = n (n\ne 0)$ 라는 식의 모순이 발생한다.
+    $$b_1-\frac{1}{2}b_2+b_3 = 0$$
 
-  $\therefore$ 임의의 $b$ 에 대하여 해를 갖는 것은 아니다. 
-
-  위 행렬방정식이 해를 갖기 위해서는 반드시 다음을 만족해야 한다. 
-
-  $$b_1-\frac{1}{2}b_2+b_3 = 0$$
-
-  위 행렬방정식 $Ax = b$ 에서 $A$ 의 **사다리꼴 행렬** 이 영인 행을 가지므로 모든 $b$ 에 대하여 항상 행을 가지지 않는 것이다. 만약 $A$ 의 3 개의 행에 모두 추축이 있었다면 첨가행렬에서 계산을 신경 쓰지 않았을 것이다. 왜냐하면 첨가행렬에 $\begin{pmatrix}0&0&0&1\end{pmatrix}$ 같은 행이 없었을 것이기 때문이다.
+    위 행렬방정식 $Ax = b$ 에서 $A$ 의 **사다리꼴 행렬** 이 영인 행을 가지므로 모든 $b$ 에 대하여 항상 행을 가지지 않는 것이다. 만약 $A$ 의 3 개의 행에 모두 추축이 있었다면 첨가행렬에서 계산을 신경 쓰지 않았을 것이다. 왜냐하면 첨가행렬에 $\begin{pmatrix}0&0&0&1\end{pmatrix}$ 같은 행이 없었을 것이기 때문이다.
 
 !!! tldr ""
 
@@ -634,8 +606,6 @@
     
     4. $A$ 의 모든 행에 추축위치가 있다.
 
-
-
 !!! tldr ""
 
     항등행렬(identity matrix) 의 정의 : 대각성분이 모두 1 이고 나머지 성분은 0 인 행렬이다.
@@ -644,7 +614,7 @@
 
 - 예시 
 
-  $I_3 = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}$
+    $I_3 = \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1\end{pmatrix}$
 
 !!! tldr ""
 
@@ -690,107 +660,57 @@
 
 - 예시 
 
-  (자명하지 않는 해를 갖는지 판별)
+    (자명하지 않는 해를 갖는지 판별)
 
-  다음 동차선형계가 자명하지 않은 해를 갖는지 판별하고 해집합을 구하자.
+    다음 동차선형계가 자명하지 않은 해를 갖는지 판별하고 해집합을 구하자.
 
-  $$3x_1 + 5x_2 - 4x_3 = 0$$
+    $$3x_1 + 5x_2 - 4x_3 = 0$$
 
-  $$-3x_1 - 2x_2 + 4x_3 = 0$$
+    $$-3x_1 - 2x_2 + 4x_3 = 0$$
 
-  $$6x_1 + x_2 - 8x_3 = 0$$
+    $$6x_1 + x_2 - 8x_3 = 0$$
 
-  위 선형계의 계수행렬을 $A$ 라 하고 첨가행렬 $\begin{pmatrix}A & 0\end{pmatrix}$ 을 행축약하여 **사다리꼴**로 변환하자.
+    위 선형계의 계수행렬을 $A$ 라 하고 첨가행렬 $\begin{pmatrix}A & 0\end{pmatrix}$ 을 행축약하여 **사다리꼴** 로 변환하자.
 
-  $$
+    $$ \begin{pmatrix} 3 & 5 & -4 & 0 \\ -3 & -2 & 4 & 0 \\ 6 & 1 & -8 & 0 \\ \end{pmatrix} \sim \begin{pmatrix} 3 & 5 & -4 & 0 \\ 0 & 3 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ \end{pmatrix} $$
 
-  \begin{pmatrix}
-
-  3 & 5 & -4 & 0 \\
-
-  -3 & -2 & 4 & 0 \\
-
-  6 & 1 & -8 & 0 \\
-
-  \end{pmatrix}
-
-  \sim
-
-  \begin{pmatrix}
-
-  3 & 5 & -4 & 0 \\
-
-  0 & 3 & 0 & 0 \\
-
-  0 & 0 & 0 & 0 \\
-
-  \end{pmatrix}
-
-  $$
-
-  $x_3$ 이 자유변수이므로, $Ax=0$ 은 $x_3$ 의 값에 따라 한 개씩 정해지는 자명하지 않은 해를 갖는다.
+    $x_3$ 이 자유변수이므로, $Ax=0$ 은 $x_3$ 의 값에 따라 한 개씩 정해지는 자명하지 않은 해를 갖는다.
 
 - 예시 
 
-  (해집합을 구하는 과정)
+    (해집합을 구하는 과정)
 
-  해집합을 구하기 위하여, $\begin{pmatrix}A & 0\end{pmatrix}$ 을 계속해서 행축약하여 **기약사다리꼴**로 만들자. 
+    해집합을 구하기 위하여, $\begin{pmatrix}A & 0\end{pmatrix}$ 을 계속해서 행축약하여 **기약사다리꼴** 로 만들자. 
 
-  $$
+    $$ \begin{pmatrix} 1 & 0 & -\frac{4}{3} & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ \end{pmatrix} $$
 
-  \begin{pmatrix}
+    $$ x_1 - \frac{4}{3}x_3 = 0 $$
 
-  1 & 0 & -\frac{4}{3} & 0 \\
+    $$ x_2 = 0 $$
 
-  0 & 1 & 0 & 0 \\
+    $$ 0 = 0 $$
 
-  0 & 0 & 0 & 0 \\
+    기본변수 $x_1$ 과 $x_2$ 를 풀어서 $x_1 = \frac{4}{3}x_3$, $x_2 = 0$ 을 얻을 수 있다.
 
-  \end{pmatrix}
+    이제 $Ax=0$ 의 일반해를 다음과 같은 벡터로 나타낼 수 있다. 
 
-  $$
+    $$ x = \begin{pmatrix}x_1 \\ x_2 \\ x_3\end{pmatrix} = \begin{pmatrix}\frac{4}{3}x_3 \\ 0 \\ x_3\end{pmatrix} = x_3\begin{pmatrix}\frac{4}{3} \\ 0 \\ 1\end{pmatrix} = x_3v $$
 
-  $$ x_1 - \frac{4}{3}x_3 = 0 $$
+    이때
 
-  $$ x_2 = 0 $$
+    $$ v = \begin{pmatrix}\frac{4}{3} \\ 0 \\ 1\end{pmatrix} $$
 
-  $$ 0 = 0 $$
+    이다. 그러므로 $x=x_3v$ 가 되어 $Ax=0$ 의 모든 해는 $v$ 의 스칼라배($Span\{v\}$)이다. (물론 자명한 해는 자유변수 $x_3$ 을 $x_3 = 0$ 으로 택하여 얻을 수 있다)
 
-  기본변수 $x_1$ 과 $x_2$ 를 풀어서 $x_1 = \frac{4}{3}x_3$, $x_2 = 0$ 을 얻을 수 있다.
-
-  이제 $Ax=0$ 의 일반해를 다음과 같은 벡터로 나타낼 수 있다. 
-
-  $$
-
-  x = \begin{pmatrix}x_1 \\ x_2 \\ x_3\end{pmatrix}
-
-  = \begin{pmatrix}\frac{4}{3}x_3 \\ 0 \\ x_3\end{pmatrix}
-
-  = x_3\begin{pmatrix}\frac{4}{3} \\ 0 \\ 1\end{pmatrix}
-
-  = x_3v
-
-  $$
-
-  $$
-
-  (이때 v = \begin{pmatrix}\frac{4}{3} \\ 0 \\ 1\end{pmatrix})
-
-  $$
-
-  그러므로 $x=x_3v$ 가 되어 $Ax=0$ 의 모든 해는 $v$ 의 스칼라배($Span\{v\}$)이다. (물론 자명한 해는 자유변수 $x_3$ 을 $x_3 = 0$ 으로 택하여 얻을 수 있다)
-
-!!! tldr ""
-
-    예시 
+- 예시 
     
     다음 동차선형계의 모든 해를 구하자.
     
-    $$10x_1 - 3x_2 - 2x_3 = 0$$ (1)
+    $$10x_1 - 3x_2 - 2x_3 = 0 \tag{1} $$ 
     
     기본변수 $x_1$ 를 자유변수의 항으로 생각하면 일반해는 $x_1 = .3x_2 + .2x_3$ 이다. $x_2$ 와 $x_3$ 은 자유변수이다. 이 일반해를 벡터로 표현하면 다음과 같다.
     
-    $$ x = \begin{pmatrix}x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} .3x_2 + .2x_3 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} .3x_2 \\ x_2 \\ 0\end{pmatrix} + \begin{pmatrix} .2x_3 \\ 0\\ x_3 \end{pmatrix} = x_2\begin{pmatrix} .3 \\ 1 \\ 0\end{pmatrix} + x_3\begin{pmatrix} .2 \\ 0\\ 1 \end{pmatrix} $$(2)
+    $$ x = \begin{pmatrix}x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} .3x_2 + .2x_3 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} .3x_2 \\ x_2 \\ 0\end{pmatrix} + \begin{pmatrix} .2x_3 \\ 0\\ x_3 \end{pmatrix} = x_2\begin{pmatrix} .3 \\ 1 \\ 0\end{pmatrix} + x_3\begin{pmatrix} .2 \\ 0\\ 1 \end{pmatrix} \tag{2} $$
     
     $$ u = \begin{pmatrix} .3 \\ 1 \\ 0\end{pmatrix} v = \begin{pmatrix} .2 \\ 0\\ 1 \end{pmatrix} $$
     
@@ -812,43 +732,33 @@
 
 - 예시 
 
-  $Ax = b$ 가 다음과 같이 주어졌을 때 해집합을 구하자.
+    $Ax = b$ 가 다음과 같이 주어졌을 때 해집합을 구하자.
 
-  $$ A = \begin{pmatrix} 3 & 5 & -4 \\ -3 &-2 & 4 \\ 6 & 1 & -8 \\ \end{pmatrix} $$
+    $$ A = \begin{pmatrix} 3 & 5 & -4 \\ -3 &-2 & 4 \\ 6 & 1 & -8 \\ \end{pmatrix} $$
 
-  $$ b = \begin{pmatrix} 7  \\ -1  \\ -4  \\ \end{pmatrix} $$
+    $$ b = \begin{pmatrix} 7  \\ -1  \\ -4  \\ \end{pmatrix} $$
 
-  $\begin{pmatrix} A & b\end{pmatrix}$ 에 행연산을 수행하여 다음을 얻자.
+    $\begin{pmatrix} A & b\end{pmatrix}$ 에 행연산을 수행하여 다음을 얻자.
 
-  $$ \begin{pmatrix} 3 & 5 & -4 & 7 \\ -3 &-2 & 4 & -1\\ 6 & 1 & -8 & -4\\ \end{pmatrix} \sim \begin{pmatrix} 1 & 0 & -\frac{4}{3} & -1 \\ 0 & 1 & 0 & 2\\ 0 & 0 & 0 & 0\\ \end{pmatrix} $$
+    $$ \begin{pmatrix} 3 & 5 & -4 & 7 \\ -3 &-2 & 4 & -1\\ 6 & 1 & -8 & -4\\ \end{pmatrix} \sim \begin{pmatrix} 1 & 0 & -\frac{4}{3} & -1 \\ 0 & 1 & 0 & 2\\ 0 & 0 & 0 & 0\\ \end{pmatrix} $$
 
-  $$x_1 - \frac{4}{3}x_3 = -1 $$
+    $$x_1 - \frac{4}{3}x_3 = -1 $$
 
-  $$x_2 = 2 $$
+    $$x_2 = 2 $$
 
-  $$0 = 0 $$
+    $$0 = 0 $$
 
-  따라서 $x_1$, $x_2$ 는 기본변수, $x_3$ 은 자유변수이다. 
+    따라서 $x_1$, $x_2$ 는 기본변수, $x_3$ 은 자유변수이다. 
 
-  $Ax=b$ 의 일반해를 벡터형식으로 나타내보자. 
+    $Ax=b$ 의 일반해를 벡터형식으로 나타내보자. 
 
-  $$
+    $$ x = \begin{pmatrix}x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix}-1 + \frac{4}{3}x_3 \\ 2 \\ x_3 \end{pmatrix} = \begin{pmatrix}-1 \\ 2 \\ 0 \end{pmatrix} + x_3\begin{pmatrix}\frac{4}{3}  \\ 0 \\ 1 \end{pmatrix} $$
 
-  x = \begin{pmatrix}x_1 \\ x_2 \\ x_3 \end{pmatrix}
+    $Ax=b$ 의 해집합은 $x = p + x_3v$ 를 $t$ 를 매개변수로 하여 다음과 같이 매개변수 벡터 형식으로 나타낼 수 있다. 
 
-  = \begin{pmatrix}-1 + \frac{4}{3}x_3 \\ 2 \\ x_3 \end{pmatrix}
+    $$x = p + tv (t\in\mathbb{R})$$
 
-  = \begin{pmatrix}-1 \\ 2 \\ 0 \end{pmatrix}
-
-  + x_3\begin{pmatrix}\frac{4}{3}  \\ 0 \\ 1 \end{pmatrix}
-
-  $$
-
-  $Ax=b$ 의 해집합은 $x = p + x_3v$ 를 $t$ 를 매개변수로 하여 다음과 같이 매개변수 벡터 형식으로 나타낼 수 있다. 
-
-  $$x = p + tv (t\in\mathbb{R})$$
-
-  이는 동차선형계 예시 1 에서의 해집합 $x = tv$ 에 $p$ 를 더하여 얻어진 것이다. 기하학적으로는 $x = tv$ 에서 $p$ 만큼 평행이동하여 $x = p + tv$ 를 얻었다고 할 수 있다.
+    이는 동차선형계 예시 1 에서의 해집합 $x = tv$ 에 $p$ 를 더하여 얻어진 것이다. 기하학적으로는 $x = tv$ 에서 $p$ 만큼 평행이동하여 $x = p + tv$ 를 얻었다고 할 수 있다.
 
 !!! tldr ""
 
@@ -862,11 +772,11 @@
 
 - 예시 
 
-  다음의 벡터방정식을 생각하자.
+    다음의 벡터방정식을 생각하자.
 
-  $$x_1v_1 + x_2v_2 + \dots + x_pv_p = 0$$
+    $$x_1v_1 + x_2v_2 + \dots + x_pv_p = 0$$
 
-  이 방정식이 오직 자명한 해($x_1=x_2=\dots=x_p=0$)만을 가질 때 벡터들의 집합 $\{v_1, \dots, v_p\} \in \mathbb{R}^n$ 은 일차 독립이다.
+    이 방정식이 오직 자명한 해($x_1=x_2=\dots=x_p=0$)만을 가질 때 벡터들의 집합 $\{v_1, \dots, v_p\} \in \mathbb{R}^n$ 은 일차 독립이다.
 
 !!! tldr ""
 
@@ -874,41 +784,41 @@
 
 - 예시 
 
-  다음의 벡터방정식을 생각하자.
+    다음의 벡터방정식을 생각하자.
 
-  $$x_1v_1 + x_2v_2 + \dots + x_pv_p = 0$$
+    $$x_1v_1 + x_2v_2 + \dots + x_pv_p = 0$$
 
-  이 방정식이 적어도 하나는 영이 아닌 상수 $c_1, \dots, c_p$ 를 해로 가지면, 즉 다음 식
+    이 방정식이 적어도 하나는 영이 아닌 상수 $c_1, \dots, c_p$ 를 해로 가지면, 즉 다음 식
 
-  $$c_1v_1 + c_2v_2 + \dots + c_pv_p = 0$$
+    $$c_1v_1 + c_2v_2 + \dots + c_pv_p = 0$$
 
-  을 만족하면 벡터들의 집합 $\{v_1, \dots, v_p\} \in \mathbb{R}^n$ 은 일차 종속이다. 
+    을 만족하면 벡터들의 집합 $\{v_1, \dots, v_p\} \in \mathbb{R}^n$ 은 일차 종속이다. 
 
 - 예시 
 
-  다음 벡터들을 생각하자.
+    다음 벡터들을 생각하자.
 
-  $$ v_1 = \begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix} v_2 = \begin{pmatrix}4 \\ 5 \\ 6\end{pmatrix} v_3 = \begin{pmatrix}2 \\ 1 \\ 0\end{pmatrix} $$
+    $$ v_1 = \begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix} v_2 = \begin{pmatrix}4 \\ 5 \\ 6\end{pmatrix} v_3 = \begin{pmatrix}2 \\ 1 \\ 0\end{pmatrix} $$
 
-  집합 $\{v_1, v_2, v_3\}$ 이 일차 독립인지 판별하자. 
+    집합 $\{v_1, v_2, v_3\}$ 이 일차 독립인지 판별하자. 
 
-  일차독립과 일차종속의 정의에 따라 다음 벡터방정식이 자명하지 않은 해를 갖는지 판단하면 된다. 
+    일차독립과 일차종속의 정의에 따라 다음 벡터방정식이 자명하지 않은 해를 갖는지 판단하면 된다. 
 
-  $$ x_1\begin{pmatrix}1\\2\\3\end{pmatrix} + x_2\begin{pmatrix}4\\5\\6\end{pmatrix} + x_3\begin{pmatrix}2\\1\\0\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix} $$
+    $$ x_1\begin{pmatrix}1\\2\\3\end{pmatrix} + x_2\begin{pmatrix}4\\5\\6\end{pmatrix} + x_3\begin{pmatrix}2\\1\\0\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix} $$
 
-  그러면 이 벡터방정식의 첨가행렬을 행연산하여 기약사다리꼴을 얻자. 
+    그러면 이 벡터방정식의 첨가행렬을 행연산하여 기약사다리꼴을 얻자. 
 
-  $$ \begin{pmatrix} 1&4&2&0\\ 2&5&1&0\\ 3&6&0&0\\ \end{pmatrix} \sim \begin{pmatrix} 1&0&-2&0\\ 0&1&1&0\\ 0&0&0&0\\ \end{pmatrix} $$
+    $$ \begin{pmatrix} 1&4&2&0\\ 2&5&1&0\\ 3&6&0&0\\ \end{pmatrix} \sim \begin{pmatrix} 1&0&-2&0\\ 0&1&1&0\\ 0&0&0&0\\ \end{pmatrix} $$
 
-  기본변수가 $x_1, x_2$ 임을 알 수 있고 $x_3$ 이 자유변수라는 것을 알 수 있다. 그러므로 영이 아닌 값 $x_3$ 마다 자명하지 않은 해 하나가 결정되므로 $v_1, v_2, v_3$ 은 일차 종속이다. 
+    기본변수가 $x_1, x_2$ 임을 알 수 있고 $x_3$ 이 자유변수라는 것을 알 수 있다. 그러므로 영이 아닌 값 $x_3$ 마다 자명하지 않은 해 하나가 결정되므로 $v_1, v_2, v_3$ 은 일차 종속이다. 
 
-  이제 $v_1, v_2, v_3$ 사이의 일차 종속 관계를 구해보자. 
+    이제 $v_1, v_2, v_3$ 사이의 일차 종속 관계를 구해보자. 
 
-  $x_3$ 이 자유변수니까 그냥 $x_3 = 5$ 라고 생각하자. 그러면 $x_1 = 2x_3$, $x_2 = -x_3$ 이기 때문에 다음과 같은 벡터방정식을 얻는다.
+    $x_3$ 이 자유변수니까 그냥 $x_3 = 5$ 라고 생각하자. 그러면 $x_1 = 2x_3$, $x_2 = -x_3$ 이기 때문에 다음과 같은 벡터방정식을 얻는다.
 
-  $$10v_1 - 5v_2 + 5v_3 = 0$$
+    $$10v_1 - 5v_2 + 5v_3 = 0$$
 
-  이것은 $v_1, v_2, v_3$ 사이의 무수히 많은 일차 종속 관계 중 하나다.
+    이것은 $v_1, v_2, v_3$ 사이의 무수히 많은 일차 종속 관계 중 하나다.
 
 !!! tldr ""
 
@@ -916,9 +826,9 @@
 
 - 벡터들의 집합 대신 행렬 $A = \begin{pmatrix}a_1 \dots a_n\end{pmatrix}$ 로 시작한다고 생각하면 행렬방정식 $Ax = 0$ 은 다음과 같이 쓸 수 있다. 
 
-  $$x_1a_1 + x_2a_2 + \dots + x_na_n = 0$$
+    $$x_1a_1 + x_2a_2 + \dots + x_na_n = 0$$
 
-  그러므로 $A$ 의 열들의 일차 종속 관계는 $Ax = 0$ 의 자명하지 않은 해에 대응한다. 반대로 $A$ 의 열들이 일차 독립 관계이려면 $Ax = 0$ 이 자명한 해만을 가져야 한다.
+    그러므로 $A$ 의 열들의 일차 종속 관계는 $Ax = 0$ 의 자명하지 않은 해에 대응한다. 반대로 $A$ 의 열들이 일차 독립 관계이려면 $Ax = 0$ 이 자명한 해만을 가져야 한다.
 
 !!! tldr ""
 
@@ -932,31 +842,19 @@
 
 - 예시
 
-  다음과 같이 서로 스칼라 배인 벡터 집합과 스칼라 배가 아닌 벡터 집합을 생각하자.
+    다음과 같이 서로 스칼라 배인 벡터 집합과 스칼라 배가 아닌 벡터 집합을 생각하자.
 
-  $$
+    $$ v_1 = \begin{pmatrix}3 \\ 1\end{pmatrix} , v_2 = \begin{pmatrix}6 \\ 2\end{pmatrix} \tag{a} $$ 
 
-  v_1 = \begin{pmatrix}3 \\ 1\end{pmatrix}
+    (a) 의 경우 $v_2$ 가 $v_1$ 의 스칼라배, 즉 $v_2 = 2v_1$ 이므로 $-2v_1 + v_2 = 0$ 이 성립한다. 그러므로 일차 종속의 정의에 따라 집합 $\{v_1, v_2\}$ 은 일차 종속이다. 
 
-  , v_2 = \begin{pmatrix}6 \\ 2\end{pmatrix}
+    $$ v_1 = \begin{pmatrix}3 \\ 2\end{pmatrix} , v_2 = \begin{pmatrix}6 \\ 2\end{pmatrix} \tag{b} $$ 
 
-  $$ (a)
+    (b) 의 경우 $v_1$ 와 $v_2$ 가 서로 스칼라배가 아니다. 그런데 (b) 가 일차 종속이 되려면 $c$ 와 $d$ 가 다음 식을 만족해야 한다.
 
-  (a) 의 경우 $v_2$ 가 $v_1$ 의 스칼라배, 즉 $v_2 = 2v_1$ 이므로 $-2v_1 + v_2 = 0$ 이 성립한다. 그러므로 일차 종속의 정의에 따라 집합 $\{v_1, v_2\}$ 은 일차 종속이다. 
+    $$cv_1 + dv_2 = 0$$
 
-  $$
-
-  v_1 = \begin{pmatrix}3 \\ 2\end{pmatrix}
-
-  , v_2 = \begin{pmatrix}6 \\ 2\end{pmatrix}
-
-  $$ (b)
-
-  (b) 의 경우 $v_1$ 와 $v_2$ 가 서로 스칼라배가 아니다. 그런데 (b) 가 일차 종속이 되려면 $c$ 와 $d$ 가 다음 식을 만족해야 한다.
-
-  $$cv_1 + dv_2 = 0$$
-
-  $c \ne 0$ 일 경우 $v_1$ 을 $v_2$ 로 표현하여 $v_1 = (-\frac{d}{c})v_2$ 로 나타낼 수 있다. 그러나 $v_1$ 이 $v_2$ 의 스칼라배가 아니므로 모순이다. 따라서 $c = 0$ 이며, 이에 따라 $d = 0$ 이다. 그러므로 (b) 는 일차 독립인 집합이다. 
+    $c \ne 0$ 일 경우 $v_1$ 을 $v_2$ 로 표현하여 $v_1 = (-\frac{d}{c})v_2$ 로 나타낼 수 있다. 그러나 $v_1$ 이 $v_2$ 의 스칼라배가 아니므로 모순이다. 따라서 $c = 0$ 이며, 이에 따라 $d = 0$ 이다. 그러므로 (b) 는 일차 독립인 집합이다. 
 
 ### 두 개 이상의 벡터로 이루어진 집합의 일차 독립
 
@@ -972,15 +870,15 @@
 
 - 증명 
 
-  $A = \begin{pmatrix}v_1 & \dots & v_p \end{pmatrix}$ 라 하면, $A$ 는 $n \times p$ 행렬이고 방정식 $Ax=0$ 은 $p$ 개의 미지수를 갖는 $n$ 개의 방정식으로 이루어진 선형방정식이다. $p > n$ 이면, 미지수의 개수가 방정식의 개수보다 많으므로 자유변수가 존재하고, 이에 따라 $Ax=0$은 자명하지 않은 해가 존재한다. 그러므로 $A$ 의 열들은 일차 종속이다. 
+    $A = \begin{pmatrix}v_1 & \dots & v_p \end{pmatrix}$ 라 하면, $A$ 는 $n \times p$ 행렬이고 방정식 $Ax=0$ 은 $p$ 개의 미지수를 갖는 $n$ 개의 방정식으로 이루어진 선형방정식이다. $p > n$ 이면, 미지수의 개수가 방정식의 개수보다 많으므로 자유변수가 존재하고, 이에 따라 $Ax=0$은 자명하지 않은 해가 존재한다. 그러므로 $A$ 의 열들은 일차 종속이다. 
 
 - 예시 
 
-  다음 3 개의 벡터를 생각하자.
+    다음 3 개의 벡터를 생각하자.
 
-  $$ \begin{pmatrix} 2 \\ 1 \end{pmatrix}, \begin{pmatrix} 4 \\ -1 \end{pmatrix}, \begin{pmatrix} -2 \\ 2 \end{pmatrix} $$
+    $$ \begin{pmatrix} 2 \\ 1 \end{pmatrix}, \begin{pmatrix} 4 \\ -1 \end{pmatrix}, \begin{pmatrix} -2 \\ 2 \end{pmatrix} $$
 
-  위의 3개 벡터는 정리 8 에 의해 일차 종속이다. 각 벡터 성분이 2 개인데 3 개의 벡터가 집합에 포함되기 때문이다. 이때 어떤 벡터도 다른 벡터의 스칼라곱이 아님을 유의하자.
+    위의 3개 벡터는 정리 8 에 의해 일차 종속이다. 각 벡터 성분이 2 개인데 3 개의 벡터가 집합에 포함되기 때문이다. 이때 어떤 벡터도 다른 벡터의 스칼라곱이 아님을 유의하자.
 
 !!! tldr ""
 
@@ -988,7 +886,7 @@
 
 - 증명 
 
-  벡터의 한 요소 $v_1$ 을  $v_1 = 0$ 이라 가정하면, $cv_1 + 0v2 + \dots + 0v_p = 0 (c\ne0)$ 이 성립한다. 즉 일차 종속이다. 
+    벡터의 한 요소 $v_1$ 을  $v_1 = 0$ 이라 가정하면, $cv_1 + 0v2 + \dots + 0v_p = 0 (c\ne0)$ 이 성립한다. 즉 일차 종속이다. 
 
 ## 선형변환(linear transformation) 입문
 
@@ -1010,9 +908,9 @@
 
 - 선형변환 $T$ 의 정의역과 공역을 
 
-  $$T: \mathbb{R}^n \to \mathbb{R}^m$$
+    $$T: \mathbb{R}^n \to \mathbb{R}^m$$
 
-  로 표현하면 $T$ 의 정의역이 $\mathbb{R}^n$ 이고 공역이 $\mathbb{R}^m$ 임을 나타낸다.
+    로 표현하면 $T$ 의 정의역이 $\mathbb{R}^n$ 이고 공역이 $\mathbb{R}^m$ 임을 나타낸다.
 
 !!! tldr ""
 
@@ -1036,29 +934,29 @@
 
 - 예시 
 
-  다음과 같이 주어진 행렬을 생각하자. 
+    다음과 같이 주어진 행렬을 생각하자. 
 
-  $$ A = \begin{pmatrix} 1 & -3 \\ 3 & 5 \\ -1 & 7 \\ \end{pmatrix}, u = \begin{pmatrix} 2 \\ -1 \\ \end{pmatrix}, b = \begin{pmatrix} 3 \\ 2 \\ -5 \\ \end{pmatrix} $$
+    $$ A = \begin{pmatrix} 1 & -3 \\ 3 & 5 \\ -1 & 7 \\ \end{pmatrix}, u = \begin{pmatrix} 2 \\ -1 \\ \end{pmatrix}, b = \begin{pmatrix} 3 \\ 2 \\ -5 \\ \end{pmatrix} $$
 
-  그리고 변환 $T: \mathbb{R}^2 \to \mathbb{R}^3$ 을 다음과 같이 $T(x) = Ax$ 로 정의하자. 
+    그리고 변환 $T: \mathbb{R}^2 \to \mathbb{R}^3$ 을 다음과 같이 $T(x) = Ax$ 로 정의하자. 
 
-  $$ T(x) = Ax = \begin{pmatrix} 1 & -3 \\ 3 & 5 \\ -1 & 7 \\ \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ \end{pmatrix} = \begin{pmatrix} x_1 - 3x_2 \\ 3x_1 + 5x_2 \\ -x_1 + 7x_2 \\ \end{pmatrix} $$
+    $$ T(x) = Ax = \begin{pmatrix} 1 & -3 \\ 3 & 5 \\ -1 & 7 \\ \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ \end{pmatrix} = \begin{pmatrix} x_1 - 3x_2 \\ 3x_1 + 5x_2 \\ -x_1 + 7x_2 \\ \end{pmatrix} $$
 
-  변환 $T$ 에 의한 $u$ 의 상 $T(u)$ 를 구하자.
+    변환 $T$ 에 의한 $u$ 의 상 $T(u)$ 를 구하자.
 
-  $$ T(u) = Au = \begin{pmatrix} 1 & -3 \\ 3 & 5 \\ -1 & 7 \\ \end{pmatrix} \begin{pmatrix} 2 \\ -1 \\ \end{pmatrix} = \begin{pmatrix} 5 \\ 1 \\ -9 \\ \end{pmatrix} $$
+    $$ T(u) = Au = \begin{pmatrix} 1 & -3 \\ 3 & 5 \\ -1 & 7 \\ \end{pmatrix} \begin{pmatrix} 2 \\ -1 \\ \end{pmatrix} = \begin{pmatrix} 5 \\ 1 \\ -9 \\ \end{pmatrix} $$
 
-  이제 $T$ 에 의한 상이 $b$ 가 되는 $\mathbb{R}^2$ 의 벡터 $x$ 를 구해보자. 
+    이제 $T$ 에 의한 상이 $b$ 가 되는 $\mathbb{R}^2$ 의 벡터 $x$ 를 구해보자. 
 
-  $T(x) = b$ 의 해 $x$ 를 구한다. 즉, 아래와 같은 $Ax = b$ 를 풀자. 
+    $T(x) = b$ 의 해 $x$ 를 구한다. 즉, 아래와 같은 $Ax = b$ 를 풀자. 
 
-  $$ \begin{pmatrix} 1 & -3 \\ 3 & 5 \\ -1 & 7 \\ \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ \end{pmatrix} = \begin{pmatrix} 3 \\ 2 \\ -5 \\ \end{pmatrix} $$
+    $$ \begin{pmatrix} 1 & -3 \\ 3 & 5 \\ -1 & 7 \\ \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ \end{pmatrix} = \begin{pmatrix} 3 \\ 2 \\ -5 \\ \end{pmatrix} $$
 
-  위 행렬방정식의 첨가행렬을 다음과 같이 행 축약하자. 
+    위 행렬방정식의 첨가행렬을 다음과 같이 행 축약하자. 
 
-  $$ \begin{pmatrix} 1 & -3 & 3 \\ 3 & 5 & 2 \\ -1 & 7 & -5 \\ \end{pmatrix} \sim \begin{pmatrix} 1 & 0 & 1.5 \\ 0 & 1 & -.5 \\ 0 & 0 & 0 \\ \end{pmatrix} $$
+    $$ \begin{pmatrix} 1 & -3 & 3 \\ 3 & 5 & 2 \\ -1 & 7 & -5 \\ \end{pmatrix} \sim \begin{pmatrix} 1 & 0 & 1.5 \\ 0 & 1 & -.5 \\ 0 & 0 & 0 \\ \end{pmatrix} $$
 
-  따라서 $x_1 = 1.5, x_2 = -.5$ 이고, $x = \begin{pmatrix}1.5\\-.5\end{pmatrix}$ 이다. ($T$ 에 의한 이 $x$ 의 상은 주어진 벡터 $b$ 이다)
+    따라서 $x_1 = 1.5, x_2 = -.5$ 이고, $x = \begin{pmatrix}1.5\\-.5\end{pmatrix}$ 이다. ($T$ 에 의한 이 $x$ 의 상은 주어진 벡터 $b$ 이다)
 
 ### 선형변환
 
@@ -1080,11 +978,11 @@
     
     4. $T$ 의 정의역에 속하는 모든 벡터 $u, v$ 와 모든 스칼라 $c, d$ 에 대하여 다음이 성립한다. 
     
-      $$T(cu + dv) = cT(u) + dT(v)$$
+        $$T(cu + dv) = cT(u) + dT(v)$$
     
     5. 중첩원리 
     
-      $$T(c_1v_1 + \dots + c_pv_p) = c_1T(v_1) + \dots + c_pT(v_p)$$
+        $$T(c_1v_1 + \dots + c_pv_p) = c_1T(v_1) + \dots + c_pT(v_p)$$
 
 ## 선형변환 행렬
 
@@ -1096,21 +994,21 @@
 
 - 예시 
 
-  $I_2=\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$ 의 열은 $e_1 = \begin{pmatrix}1 \\ 0\end{pmatrix}$,$e_2=\begin{pmatrix}0\\1\end{pmatrix}$ 이다. $T$ 는 $\mathbb{R} ^2$ 에서 $\mathbb{R} ^3$ 으로의 선형변환으로 다음을 만족한다. 
+    $I_2=\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}$ 의 열은 $e_1 = \begin{pmatrix}1 \\ 0\end{pmatrix}$,$e_2=\begin{pmatrix}0\\1\end{pmatrix}$ 이다. $T$ 는 $\mathbb{R} ^2$ 에서 $\mathbb{R} ^3$ 으로의 선형변환으로 다음을 만족한다. 
 
-  $$ T(e_1)= \begin{pmatrix} 5\\-7\\2 \end{pmatrix} $$
+    $$ T(e_1)= \begin{pmatrix} 5\\-7\\2 \end{pmatrix} $$
 
-  $$ T(e_2)= \begin{pmatrix} -3\\8\\0 \end{pmatrix} $$
+    $$ T(e_2)= \begin{pmatrix} -3\\8\\0 \end{pmatrix} $$
 
-  이때 $\mathbb{R} ^2$ 에 속하는 임의의 벡터 $x$ 의 상을 얻는 식을 구해보자. $x$ 는 다음과 같이 쓸 수 있다.
+    이때 $\mathbb{R} ^2$ 에 속하는 임의의 벡터 $x$ 의 상을 얻는 식을 구해보자. $x$ 는 다음과 같이 쓸 수 있다.
 
-  $$ x = \begin{pmatrix} x_1\\x_2 \end{pmatrix} = x_1 \begin{pmatrix} 1\\0 \end{pmatrix} + x_2\begin{pmatrix} 0\\1 \end{pmatrix} = x_1e_1 + x_2e_2 $$
+    $$ x = \begin{pmatrix} x_1\\x_2 \end{pmatrix} = x_1 \begin{pmatrix} 1\\0 \end{pmatrix} + x_2\begin{pmatrix} 0\\1 \end{pmatrix} = x_1e_1 + x_2e_2 $$
 
-  $T$ 는 선형변환이므로 다음을 얻는다. 
+    $T$ 는 선형변환이므로 다음을 얻는다. 
 
-  $$T(x) = T(x_1e_1 + x_2e_2) = x_1T(e_1) + x_2T(e_2)$$
+    $$T(x) = T(x_1e_1 + x_2e_2) = x_1T(e_1) + x_2T(e_2)$$
 
-  $$ = x_1 \begin{pmatrix} 5\\-7\\2 \end{pmatrix} +x_2 \begin{pmatrix} -3\\8\\0 \end{pmatrix} = \begin{pmatrix} 5x_1 - 3x_2\\ -7x_1 + 8x_2\\ 2x_1 + 0\\ \end{pmatrix} $$
+    $$ = x_1 \begin{pmatrix} 5\\-7\\2 \end{pmatrix} +x_2 \begin{pmatrix} -3\\8\\0 \end{pmatrix} = \begin{pmatrix} 5x_1 - 3x_2\\ -7x_1 + 8x_2\\ 2x_1 + 0\\ \end{pmatrix} $$
 
 !!! tldr ""
 
@@ -1130,37 +1028,13 @@
 
 - 예제 
 
-  팽창변환 $T(x) = 3x, x \in \mathbb{R} ^2$ 에 대한 표준행렬을 구하자.
+    팽창변환 $T(x) = 3x, x \in \mathbb{R} ^2$ 에 대한 표준행렬을 구하자.
 
-  정의에 따라 벡터 $T(e_1), T(e_2)$ 을 열로 갖는 행렬 $A$ 를 구하면 된다. 
+    정의에 따라 벡터 $T(e_1), T(e_2)$ 을 열로 갖는 행렬 $A$ 를 구하면 된다. 
 
-  $$
+    $$ T(e_1) = 3e_1 = \begin{pmatrix} 3 \\ 0 \end{pmatrix}, T(e_2) = 3e_2 = \begin{pmatrix} 0 \\ 3 \end{pmatrix} $$
 
-  T(e_1) = 3e_1 = \begin{pmatrix}
-
-  3 \\ 0
-
-  \end{pmatrix},
-
-  T(e_2) = 3e_2 = \begin{pmatrix}
-
-  0 \\ 3
-
-  \end{pmatrix}
-
-  $$
-
-  $$
-
-  A = \begin{pmatrix}
-
-  3 & 0\\
-
-  0 & 3\\
-
-  \end{pmatrix}
-
-  $$
+    $$ A = \begin{pmatrix} 3 & 0\\ 0 & 3\\ \end{pmatrix} $$
 
 ### 존재성과 유일성 문제
 
@@ -1181,16 +1055,10 @@
     **Theorem 11** : $T: \mathbb{R} ^n \to  \mathbb{R} ^m$ 이 선형변환 일 때, $T$ 가 일대일이 될 필요충분조건은 방정식 $T(x) = 0$ 이 자명한 해만을 갖는 것이다.
 
 
+!!! tldr ""
 
-
-
-**Theorem 12** : $T: \mathbb{R} ^n \to  \mathbb{R} ^m$ 이 선형변환 이고, $A$ 가 $T$ 에 대한 표준행렬이면 다음이 성립한다.
+    **Theorem 12** : $T: \mathbb{R} ^n \to  \mathbb{R} ^m$ 이 선형변환 이고, $A$ 가 $T$ 에 대한 표준행렬이면 다음이 성립한다.
 
 1. $T$ 가 $\mathbb{R} ^n$ 에서 $\mathbb{R} ^m$ 으로의 전사변환이기 위한 필요충분조건은 $A$ 의 열들이 $\mathbb{R} ^m$ 을 생성한다는 것이다. 
 
 2. $T$ 가 일대일 대응이기 위한 필요충분조건은 $A$ 의 열들이 일차 독립인 것이다. 
-
-
-
-
-
