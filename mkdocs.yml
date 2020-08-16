@@ -83,8 +83,8 @@ theme:
   font:
     text: Nanum Gothic
   language: kr
-#   logo: assets/images/favicon.png
-#   favicon: assets/images/favicon.ico
+  logo: assets/images/favicon.png
+  favicon: assets/images/favicon.ico
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js
