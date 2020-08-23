@@ -10,37 +10,37 @@ VCS(Version Control System) 이란 파일의 변화를 추적하여 기록하는
 
 - 여러 VCS 프로그램이 있지만 git 이 그것들과 다른 점이 있다.
 
-  - 여타 VCS 는 버전을 관리할 때 파일이 변경된 것을 중심으로 기록한다. 
+    - 여타 VCS 는 버전을 관리할 때 파일이 변경된 것을 중심으로 기록한다. 
 
-  - 하지만 git 은 그 프로젝트 전체 파일의 스냅샷으로 버전을 관리한다. 물론 파일이 동일할 경우 이전 스냅샷에 단지 연결함으로써 용량을 아낀다! 
+    - 하지만 git 은 그 프로젝트 전체 파일의 스냅샷으로 버전을 관리한다. 물론 파일이 동일할 경우 이전 스냅샷에 단지 연결함으로써 용량을 아낀다! 
 
 ## git 이 파일을 관리하는 세 가지 상태
 
 - git 은 다음 상태로 파일을 관리한다. 
 
-  - untracked 상태 : `git` 이 변경사항을 추적하지 않는 파일이다.
+    - untracked 상태 : `git` 이 변경사항을 추적하지 않는 파일이다.
 
-  - modified 상태 : 파일을 변경했지만 아직 스테이징되지 않은 상태이다.
+    - modified 상태 : 파일을 변경했지만 아직 스테이징되지 않은 상태이다.
 
-  - staged 상태 : 변경된 파일을 커밋이 될 리스트에 포함시킨 상태이다.
+    - staged 상태 : 변경된 파일을 커밋이 될 리스트에 포함시킨 상태이다.
 
-  - commited 상태 : `git` 데이터베이스에 하나의 버전으로 저장된 상태이다.
+    - commited 상태 : `git` 데이터베이스에 하나의 버전으로 저장된 상태이다.
 
 ## git 프로젝트의 세 가지 영역 
 
 - 이 세 가지 상태는 프로젝트를 working tree, staging area, git database 라는 세 가지 영역으로 나눈다. 
 
-![](https://git-scm.com/book/en/v2/images/areas.png)
+    ![](https://git-scm.com/book/en/v2/images/areas.png)
 
-  - working tree : 프로젝트의 특정 버전의 파일들이 있는 영역이다. 
-  
-    - 최신 버전일 수도 있고 git database 에서 옛날 버전을 가져온 것일 수도 있다. 
+    - working tree : 프로젝트의 특정 버전의 파일들이 있는 영역이다. 
+    
+        - 최신 버전일 수도 있고 git database 에서 옛날 버전을 가져온 것일 수도 있다. 
 
-  - staging area : 다음 버전, 즉 다음 커밋이 예정된 파일들이 있는 영역이다. 
+    - staging area : 다음 버전, 즉 다음 커밋이 예정된 파일들이 있는 영역이다. 
 
-  - git database : 프로젝트의 모든 버전을 데이터베이스로 관리하는 영역이다.
-  
-    - .git 디렉토리에 저장되어 있다. 
+    - git database : 프로젝트의 모든 버전을 데이터베이스로 관리하는 영역이다.
+    
+        - .git 디렉토리에 저장되어 있다. 
 
 ## git 프로젝트 기본 작업 흐름
 
@@ -71,12 +71,12 @@ git config --global user.email "EMAIL"
 
 - `git init` : 레포지토리를 `git` 프로젝트로 초기화한다. 
 
-  - 예시
+    - 예시
 
-    ```shell
-    cd /path/to/my_project
-    git init
-    ```
+        ```shell
+        cd /path/to/my_project
+        git init
+        ```
 
 ### 파일 staging 하기
 
@@ -84,14 +84,14 @@ git config --global user.email "EMAIL"
 
 - `git add <file>` : 파일을 git 이 추적하도록 한다.
 
-  - 파일 수정이 모두 끝났을 때 staging 해서 커밋 예정 리스트에 등록하는 것이다. 
+    - 파일 수정이 모두 끝났을 때 staging 해서 커밋 예정 리스트에 등록하는 것이다. 
 
-  - 예시
+    - 예시
 
-    ```shell
-    git add readme.md
-    git add *.c
-    ```
+        ```shell
+        git add readme.md
+        git add *.c
+        ```
 
 ### 커밋 하기 
 
@@ -103,28 +103,28 @@ git config --global user.email "EMAIL"
 
 - `.gitignore` : 이 파일에 파일 이름을 넣으면 `git` 이 변경사항을 더 이상 추적하지 않는다. 
 
-- 예시 
+    - 예시 
 
-    ```shell
-    # ignore all .a files
-    *.a
-    # but do track lib.a, even though you're ignoring .a files above
-    !lib.a
-    # only ignore the TODO file in the current directory, not subdir/TODO
-    /TODO
-    # ignore all files in any directory named build
-    build/
-    # ignore doc/notes.txt, but not doc/server/arch.txt
-    doc/*.txt
-    # ignore all .pdf files in the doc/ directory and any of its subdirectories
-    doc/**/*.pdf
-    ```
+        ```shell
+        # ignore all .a files
+        *.a
+        # but do track lib.a, even though you're ignoring .a files above
+        !lib.a
+        # only ignore the TODO file in the current directory, not subdir/TODO
+        /TODO
+        # ignore all files in any directory named build
+        build/
+        # ignore doc/notes.txt, but not doc/server/arch.txt
+        doc/*.txt
+        # ignore all .pdf files in the doc/ directory and any of its subdirectories
+        doc/**/*.pdf
+        ```
 
 ## 파일 삭제 
 
 - `git rm <file>` : 파일을 삭제하고 파일의 삭제를 스테이징한다. 
 
-  -  스테이징된 파일을 삭제하려면 다음 명령어를 입력해야 한다. 
+    -  스테이징된 파일을 삭제하려면 다음 명령어를 입력해야 한다. 
 
 - `git rm -f <file>` : 스테이징된 파일을 삭제하고 로컬에서도 삭제한다. 
 
@@ -152,27 +152,27 @@ git config --global user.email "EMAIL"
 
 - `git log` : 커멋 기록을 출력한다.
 
-  - `git log -2` : 커멋 기록을 2개만 출력한다.
+    - `git log -2` : 커멋 기록을 2개만 출력한다.
 
 - `git log -p` : 변경 사항도 출력하면서 커멋 기록을 출력한다.
 
-  - `git log -p -2` : 변경 사항도 출력하면서 커멋 기록을 2개만 출력한다.
+    - `git log -p -2` : 변경 사항도 출력하면서 커멋 기록을 2개만 출력한다.
 
 - `git log --stat` : 변경 사항을 간략히 출력하면서 커멋 기록을 출력한다.
 
 - `git log --pretty=oneline` : 커멋 기록을 한줄로 출력한다.
 
-  - `--graph` 와 함께 쓰여 `merge` 기록을 한 눈에 살펴보기 편하다. 
+    - `--graph` 와 함께 쓰여 `merge` 기록을 한 눈에 살펴보기 편하다. 
 
 - `git log --since=<dat>` : 지난 2주간의 커밋 기록을 출력한다. 
 
-  - `git log --since=2.weeks` : 지난 2주간의 커밋 기록을 출력한다. 
+    - `git log --since=2.weeks` : 지난 2주간의 커밋 기록을 출력한다. 
 
-  - `git log --since=2008-1-15` : 2008 년 1월 15부터의 커밋 기록을 출력한다. 
+    - `git log --since=2008-1-15` : 2008 년 1월 15부터의 커밋 기록을 출력한다. 
 
 - `git log -S <string>` : `<string>` 이 레포지토리에 추가되거나 삭제된 커밋 기록을 출력한다. 
 
-  - 어떤 함수나 클래스가 추가되고 삭제된 기록을 살펴볼 때 편하다. 
+    - 어떤 함수나 클래스가 추가되고 삭제된 기록을 살펴볼 때 편하다. 
 
 ---
 
@@ -182,89 +182,89 @@ git config --global user.email "EMAIL"
 
 - `git clone <URL>` : 원격 레포지토리를 가져오기 위하여 다음 명령어를 입력한다. 
 
-  - 예시 
-  
-    `git clone https://github.com/libgit2/libgit2`
+    - 예시 
+    
+        `git clone https://github.com/libgit2/libgit2`
 
   - `git` 은 `https` 프로토콜 뿐만 아니라 다음과 같이 `ssh` 프로토콜도 지원한다. 
 
-    ```shell
-    git clone git://user@server:path/to/repo.git
-    ```
+        ```shell
+        git clone git://user@server:path/to/repo.git
+        ```
 
 ### 원격 레포지토리 리스트 관리
 
 - `git remote -v` : 원격 레포지토리들을 본다. 
 
-  - 예시  
-  
-    다음의 출력 결과를 보자. 이 중 어느 곳에서부터든지 프로젝트를 업데이트 할 수 있다.
+    - 예시  
+    
+        다음의 출력 결과를 보자. 이 중 어느 곳에서부터든지 프로젝트를 업데이트 할 수 있다.
 
-    ```shell
-    $ git remote -v
-    bakkdoor  https://github.com/bakkdoor/grit (fetch)
-    bakkdoor  https://github.com/bakkdoor/grit (push)
-    cho45     https://github.com/cho45/grit (fetch)
-    cho45     https://github.com/cho45/grit (push)
-    defunkt   https://github.com/defunkt/grit (fetch)
-    defunkt   https://github.com/defunkt/grit (push)
-    koke      git://github.com/koke/grit.git (fetch)
-    koke      git://github.com/koke/grit.git (push)
-    origin    git@github.com:mojombo/grit.git (fetch)
-    origin    git@github.com:mojombo/grit.git (push)
-    ```
+        ```shell
+        $ git remote -v
+        bakkdoor  https://github.com/bakkdoor/grit (fetch)
+        bakkdoor  https://github.com/bakkdoor/grit (push)
+        cho45     https://github.com/cho45/grit (fetch)
+        cho45     https://github.com/cho45/grit (push)
+        defunkt   https://github.com/defunkt/grit (fetch)
+        defunkt   https://github.com/defunkt/grit (push)
+        koke      git://github.com/koke/grit.git (fetch)
+        koke      git://github.com/koke/grit.git (push)
+        origin    git@github.com:mojombo/grit.git (fetch)
+        origin    git@github.com:mojombo/grit.git (push)
+        ```
 
 - `git remote show <remote>` : 특정 원격 레포지토리들을 본다. 
 
-  - 예시 
-  
-    `git remote show origin` 
+    - 예시 
+    
+        `git remote show origin` 
 
 - `git remote add <shortname> <url>` : 원격 레포지토리를 추가한다. 
 
-  - 예시 
-  
-    `git remote add pb https://github.com/paulboone/ticgit`
+    - 예시 
+    
+        `git remote add pb https://github.com/paulboone/ticgit`
 
 - `git remote remove <remote>` : 원격 레포지토리를 삭제한다. 
 
-  - `git remote rm` 으로도 삭제할 수 있다. 
+    - `git remote rm` 으로도 삭제할 수 있다. 
 
-  - 예시 
-    
-    `git remote remove paul`
+    - 예시 
+        
+        `git remote remove paul`
 
 - `git remote rename <remote> <new>` : 원격 레포지토리의 이름을 바꾼다. 
 
-  - 예시 
-  
-    `git remote rename pb paul`
+    - 예시 
+    
+        `git remote rename pb paul`
 
 ### 원격 레포지토리로부터 업데이트하기 
 
 - `git fetch <remote>` : 원격 레포지토리의 변경사항을 가져온다. 
 
-  - `git fetch` 는 원격 레포지토리의 데이터를 가져오기는 하지만 프로젝트를 업데이트하지는 않는다. 따라서 프로그래머가 스스로 가져온 내용을 병합해야 한다. 
+    - `git fetch` 는 원격 레포지토리의 데이터를 가져오기는 하지만 프로젝트를 업데이트하지는 않는다. 따라서 프로그래머가 스스로 가져온 내용을 병합해야 한다. 
 
-  - 예시 
-  
-    `git fetch pb`
+    - 예시 
+    
+        `git fetch pb`
 
 - `git pull <remote> <branch>` : 원격 레포지토리의 변경사항을 가져온 후 자동으로 병합한다. 
 
-  - 예시 
-  
-    `git pull origin master`
+    - 예시 
+    
+        `git pull origin master`
 
 ### 원격 레포지토리를 업데이트하기 
 
 - `git push <remote> <branch>` : 원격 레포지토리로 변경사항을 업데이트한다. 
 
-  - 만약 A 와 B 가 원격 레포지토리를 동시에 `clone` 하고 A 가 변경사항을 `push` 했다고 하자. 그러면 B 는 곧 바로 `push` 하지 못한다. B 는 먼저 A 가 업데이트 한 내용을 `fetch` 하고 병합한 후에야 `push` 할 수 있다. 
+    - 만약 A 와 B 가 원격 레포지토리를 동시에 `clone` 하고 A 가 변경사항을 `push` 했다고 하자. 그러면 B 는 곧 바로 `push` 하지 못한다. B 는 먼저 A 가 업데이트 한 내용을 `fetch` 하고 병합한 후에야 `push` 할 수 있다. 
 
-  - 예시 
-  
-    `git push origin master`
+    - 예시 
+    
+        `git push origin master`
 
 ---
 
@@ -276,21 +276,21 @@ git config --global user.email "EMAIL"
 
 - `git commit --amend` : 스테이징된 파일을 마지막 커밋에 포함시킨다. 
 
-  - 만약 스테이징된 파일이 없다면 단순히 마지막 커밋 메시지를 수정하게 되는 것이다.
+    - 만약 스테이징된 파일이 없다면 단순히 마지막 커밋 메시지를 수정하게 되는 것이다.
 
 ### 스테이징된 파일을 내리기 
 
 - `git reset HEAD <file>` : 스테이징된 파일을 언스테이징한다. 
 
-  - 만약 스테이징된 파일이 없다면 단순히 마지막 커밋 메시지를 수정하게 되는 것이다.
+    - 만약 스테이징된 파일이 없다면 단순히 마지막 커밋 메시지를 수정하게 되는 것이다.
 
 ### 파일 복원하기 
 
 - `git restore <file>` : 스테이징되지 않은 변경된 파일을 마지막 커밋 버전으로 복원한다. 
 
-  - 스테이징 된 파일은 먼저 `git restore --staged <file>` 로 언스테이징을 한 후에야 복원할 수 있다. 
+    - 스테이징 된 파일은 먼저 `git restore --staged <file>` 로 언스테이징을 한 후에야 복원할 수 있다. 
 
-  - `git checkout -- <file>` 과 동일하다. 
+    - `git checkout -- <file>` 과 동일하다. 
 
 ---
 
@@ -300,7 +300,7 @@ git config --global user.email "EMAIL"
 
 - `git tag` : 모든 태그를 출력한다. 
 
-  - `git tag -l "v1.8.5*` : `1.8.5` 버전의 모든 하위 버전을 출력한다. 
+    - `git tag -l "v1.8.5*` : `1.8.5` 버전의 모든 하위 버전을 출력한다. 
 
 ## 태그 생성 
 
@@ -312,13 +312,13 @@ git config --global user.email "EMAIL"
 
 - `git tag -a <VERSION> -m "MESSAGE"` : 마지막 커밋에 `annotated` 태그를 생성한다. 
 
-  - `-a` 에 버전을 명시한다. 
+    - `-a` 에 버전을 명시한다. 
 
-  - `-m` 에 태그 메시지를 전달한다. 
+    - `-m` 에 태그 메시지를 전달한다. 
 
-  - 예시 
-  
-    `git tag -a v1.4 -m "my version 1.4"`
+    - 예시 
+    
+        `git tag -a v1.4 -m "my version 1.4"`
 
 - `git show v1.4` : `1.4` 태그의 정보와 그것에 딸린 커밋 정보를 본다. 
 
@@ -326,37 +326,37 @@ git config --global user.email "EMAIL"
 
 - `git tag <VERSION>` : 마지막 커밋에 `lightweight` 태그를 생성한다. 
 
-  - `lightweight` 태그는 단지 커밋의 해쉬값만 저장한다. 
+    - `lightweight` 태그는 단지 커밋의 해쉬값만 저장한다. 
 
-  - 예시 
-  
-    `git tag v1.4-lw`
+    - 예시 
+    
+        `git tag v1.4-lw`
 
-  - `git show v1.4-lw` 로 태그 정보를 보면 커밋 해쉬만 볼 수 있다. 
+    - `git show v1.4-lw` 로 태그 정보를 보면 커밋 해쉬만 볼 수 있다. 
 
 ### 특정 커밋에 lightweight 태그 부여 
 
 - `git tag -a <VERSION> <COMMIT>` : 특정 커밋에 `annotated` 태그를 생성한다. 
 
-  - 커밋의 해쉬를 특정할 수 있을만큼 헥사값을 전달하면 된다. 
+    - 커밋의 해쉬를 특정할 수 있을만큼 헥사값을 전달하면 된다. 
 
-  - 예시  
-  
-    `git tag -a v1.2 9fceb02`
+    - 예시  
+    
+        `git tag -a v1.2 9fceb02`
 
 ### 특정 버전의 레포지토리 살펴보기 
 
 - `git checkout <VERSION>` : 특정 버전일 때의 시점으로 레포지토리를 바꾼다. 
 
-  - 예시 
-  
-    `git checkout 2.0.0`
-  
-  - 만약 특정 버전으로 되돌아가서 어떤 버그를 수정하고 커밋을 한다면, 그 커밋이 해당 태그를 바꾸는 것이 아니다. 그 커밋은 어떤 브랜치에도 속하지 않은 동떨어진 상태이다. 일반적으로 이런 경우에 다음의 명령어로 새로운 브랜치를 만들게 된다. 
+    - 예시 
+    
+        `git checkout 2.0.0`
+    
+    - 만약 특정 버전으로 되돌아가서 어떤 버그를 수정하고 커밋을 한다면, 그 커밋이 해당 태그를 바꾸는 것이 아니다. 그 커밋은 어떤 브랜치에도 속하지 않은 동떨어진 상태이다. 일반적으로 이런 경우에 다음의 명령어로 새로운 브랜치를 만들게 된다. 
 
-    ```shell
-    git checkout -b version2 v2.0.0
-    ```
+        ```shell
+        git checkout -b version2 v2.0.0
+        ```
 
 ### 원격 레포지토리에 태그 공유 
 
@@ -364,23 +364,23 @@ git config --global user.email "EMAIL"
 
 - `git push origin <VERSION>` : 특정 태그를 원격 레포에 푸쉬한다. 
 
-  - 예시 
-  
-    `git push origin v1.5`
+    - 예시 
+    
+        `git push origin v1.5`
 
 - `git push origin --tags` : 원격 레포에는 없는 모든 버전을 푸쉬한다.
 
-  - 푸쉬할 태그가 너무 많을 때 유용한다. 
+    - 푸쉬할 태그가 너무 많을 때 유용한다. 
 
 ### 원격 레포지토리에 태그 공유 
 
 - `git tag -d <VERSION>` : 특정 태그를 삭제한다. 
 
-  - 예시 
-   
-    `git tag -d v1.4-lw` : 특정 태그를 삭제한다. 
+    - 예시 
+    
+        `git tag -d v1.4-lw` : 특정 태그를 삭제한다. 
 
-  - 그러나 원격 레포의 태그까지 삭제하지는 않는다. 
+    - 그러나 원격 레포의 태그까지 삭제하지는 않는다. 
 
 - `git push origin --delete <VERSION>` : 원격 레포의 특정 태그를 삭제한다. 
 
@@ -418,11 +418,11 @@ git config --global user.email "EMAIL"
 
 - `git branch <name>` : 새로운 브랜치를 만든다. 
 
-  - 예시 
-  
-    `git branch testing` 현재 커밋에 `testing` 이라는 새로운 포인터를 만든다. 
-  
-  - 이제 현재 커밋에는 `master` 와 `testing` 이 포인팅하고 있는 것이다.
+    - 예시 
+    
+        `git branch testing` 현재 커밋에 `testing` 이라는 새로운 포인터를 만든다. 
+    
+    - 이제 현재 커밋에는 `master` 와 `testing` 이 포인팅하고 있는 것이다.
 
 ![](https://git-scm.com/book/en/v2/images/two-branches.png)
 
@@ -430,7 +430,7 @@ git config --global user.email "EMAIL"
 
 - `HEAD` : 현재 상주하고 있는 브랜치를 가르키는 포인터이다. 
 
-  - 지금 `HEAD` 는 아직 `matser` 를 가르키고 있다. 
+    - 지금 `HEAD` 는 아직 `matser` 를 가르키고 있다. 
 
 ![](https://git-scm.com/book/en/v2/images/head-to-master.png)
 
@@ -440,13 +440,13 @@ git config --global user.email "EMAIL"
 
 - `git checkout <name>` : 브랜치를 이주한다. 
 
-  - 예시 
+    - 예시 
   
-    `git checkout testing` 는 `testing` 브랜치로 이주하게 한다. 즉 `HEAD` 가 `testing` 를 포인팅하게 하는 것이다. 
+        `git checkout testing` 는 `testing` 브랜치로 이주하게 한다. 즉 `HEAD` 가 `testing` 를 포인팅하게 하는 것이다. 
 
 - `git checkout -b <name>` : 브랜치를 생성하면서 이주한다. 
 
-  - 일반적으로 이 형태가 자주 쓰인다. 
+    - 일반적으로 이 형태가 자주 쓰인다. 
 
 ![](https://git-scm.com/book/en/v2/images/head-to-testing.png)
 
@@ -480,17 +480,17 @@ git checkout master
 
 - `git branch` : 현재 브랜치를 출력한다. 
 
-  - `*` 가 표시되어 있는 브랜치가 현재 상주하고 있는, 즉 `HEAD` 가 포인팅하고 있는 브랜치이다. 
+    - `*` 가 표시되어 있는 브랜치가 현재 상주하고 있는, 즉 `HEAD` 가 포인팅하고 있는 브랜치이다. 
 
 - `git branch -v` : 더 자세하게 출력한다. 
 
 - `git branch --merged` : 현재 상주하고 있는 브랜치에 이미 병합된 브랜치를 출력한다. 
 
-  - 이미 병합해서 삭제해도 되는 브랜치를 출력할 때 유용한다. 
+    - 이미 병합해서 삭제해도 되는 브랜치를 출력할 때 유용한다. 
 
 - `git branch --no-merged` : 현재 상주하고 있는 브랜치에 병합되지 않은 브랜치를 출력한다. 
 
-  - 이 명령어로 출력된 브랜치를 `git branch -d <name>` 으로 삭제하려하면 병합되지 않았다는 에러가 출력되며 삭제되지 않는다. 하지만 `-d` 옵션을 `-D` 로 바꾸어 강제로 삭제 할 수도 있다.
+    - 이 명령어로 출력된 브랜치를 `git branch -d <name>` 으로 삭제하려하면 병합되지 않았다는 에러가 출력되며 삭제되지 않는다. 하지만 `-d` 옵션을 `-D` 로 바꾸어 강제로 삭제 할 수도 있다.
 
 - `git branch -d <name>` : 브랜치를 삭제한다. 
 
@@ -669,11 +669,11 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 - Remote-tracking branch : 원격 레포지토리의 브랜치의 로컬 레퍼런스이다. 
 
-  - `<remote>/<branch>` 로 명칭된다. 
+    - `<remote>/<branch>` 로 명칭된다. 
 
-  - 예시 
+    - 예시 
   
-    `origin` 원격 레포지토리의 `master` 브랜치를 확인하려면 `origin/master` 로컬 브랜치를 보면 된다.
+        `origin` 원격 레포지토리의 `master` 브랜치를 확인하려면 `origin/master` 로컬 브랜치를 보면 된다.
 
 이제 `git.ourcompany.com` 이라는 서버에서 레포지토리를 `clone` 해왔다고 하자. `git clone` 명령어는 `origin` 이라는 원격 레퍼런스를 자동으로 생성하고 `master` 브랜치가 그것을 가르키도록 만든다. 그리고 `master` 를 Remote-tracking branch 로써 `origin/master` 로컬 브랜치로 이름짓는다.
 
@@ -715,65 +715,65 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 - `git push <remote> <branch>` : 원격 레포지토리에 `<branch>` 를 업데이트한다. 
 
-  - `serverfix` 라는 브랜치를 갖고 있고 이것을 서버에 업데이트 하고 싶다면 `git push origin serverfix` 라고 입력한다. 
+    - `serverfix` 라는 브랜치를 갖고 있고 이것을 서버에 업데이트 하고 싶다면 `git push origin serverfix` 라고 입력한다. 
 
-  - 이것은 `git push origin refs/heads/server:refs/heads/server` 의 줄임말이고 "로컬에 있는 `serverfix` 브랜치를 원격 레포지토리의 `serverfix` 브랜치에 업데이트 하겠다" 는 뜻이다. 
+    - 이것은 `git push origin refs/heads/server:refs/heads/server` 의 줄임말이고 "로컬에 있는 `serverfix` 브랜치를 원격 레포지토리의 `serverfix` 브랜치에 업데이트 하겠다" 는 뜻이다. 
 
-  - `git push origin serverfix:serverfix` 도 동일한 기능을 한다. 
+    - `git push origin serverfix:serverfix` 도 동일한 기능을 한다. 
 
-  - 만약 원격 레포지토리에 추가되어 업데이트될 브랜치 이름을 `awesomebranch` 로 변경하고 싶다면 `git push origin serverfix:awesomebranch` 라고 실행하면 된다.
+    - 만약 원격 레포지토리에 추가되어 업데이트될 브랜치 이름을 `awesomebranch` 로 변경하고 싶다면 `git push origin serverfix:awesomebranch` 라고 실행하면 된다.
 
 이후의 시나리오 : 
 
 - `git fetch origin` : 이제 또 다른 누군가 `git fetch origin` 를 실행하면 당신이 `push` 한 `serverfix` 브랜치도 가져오게 된다.
 
-  - `git merge origin/serverfix` : 하지만 단지 `origin/serverfix` 라는 포인터가 생겼을 뿐이다! 만약 현재 브랜치에 병학하여 작업하고 싶다면 이 명령어를 실행하자. 
+    - `git merge origin/serverfix` : 하지만 단지 `origin/serverfix` 라는 포인터가 생겼을 뿐이다! 만약 현재 브랜치에 병학하여 작업하고 싶다면 이 명령어를 실행하자. 
 
-  - `git checkout -b serverfix origin/serverfix` : 하지만 로컬에서 `serverfix` 라는 브랜치를 생성하고 그곳에서 작업하고 싶다면 이 명령어를 실행하면 된다. 
+    - `git checkout -b serverfix origin/serverfix` : 하지만 로컬에서 `serverfix` 라는 브랜치를 생성하고 그곳에서 작업하고 싶다면 이 명령어를 실행하면 된다. 
 
-    - `git checkout --track origin/serverfix` 가 동일한 기능을 하기 때문에 이런 줄임 형태로도 많이 쓰인다. 
+        - `git checkout --track origin/serverfix` 가 동일한 기능을 하기 때문에 이런 줄임 형태로도 많이 쓰인다. 
 
-  - `git checkout -b sf origin/serverfix` : 서버에서 사용하는 `serverfix` 라는 이름이 마음에 들지 않아서 로컬에서는 `sf` 라는 이름을 사용하고 싶다면 이 명령어를 입력한다. 
+    - `git checkout -b sf origin/serverfix` : 서버에서 사용하는 `serverfix` 라는 이름이 마음에 들지 않아서 로컬에서는 `sf` 라는 이름을 사용하고 싶다면 이 명령어를 입력한다. 
 
-  - `git branch -u origin/serverfix` : 만약 이미 로컬 브랜치가 존재하는데 이것을 원격 레포지토리의 브랜치로 업데이트하고 싶다면 `-u` 옵션 또는 `--set-upstream-to` 옵션을 붙혀서 이 명령어를 실행한다. 
+    - `git branch -u origin/serverfix` : 만약 이미 로컬 브랜치가 존재하는데 이것을 원격 레포지토리의 브랜치로 업데이트하고 싶다면 `-u` 옵션 또는 `--set-upstream-to` 옵션을 붙혀서 이 명령어를 실행한다. 
 
 - `git branch -vv` : 브랜치들의 상황정보를 ahead, behind 정보와 함께 보여준다. 
 
-  - 예시 
+    - 예시 
 
-    ```shell
-    $ git branch -vv
-      iss53     7e424c3 [origin/iss53: ahead 2] forgot the brackets
-      master    1ae2a45 [origin/master] deploying index fix
-    * serverfix f8674d9 [teamone/server-fix-good: ahead 3, behind 1] this should do it
-      testing   5ea463a trying something new
-    ```
+        ```shell
+        $ git branch -vv
+        iss53     7e424c3 [origin/iss53: ahead 2] forgot the brackets
+        master    1ae2a45 [origin/master] deploying index fix
+        * serverfix f8674d9 [teamone/server-fix-good: ahead 3, behind 1] this should do it
+        testing   5ea463a trying something new
+        ```
 
-    위 예시에서 `origin/iss53` 의 `ahead 2` 는 서버에 `push` 되지 않은 로컬의 커밋이 `2` 개 있다는 뜻이다. 
+        위 예시에서 `origin/iss53` 의 `ahead 2` 는 서버에 `push` 되지 않은 로컬의 커밋이 `2` 개 있다는 뜻이다. 
+        
+        `origin/master` 브랜치는 업데이트 할 것이 없다.
+
+        `serverfix` 브랜치는 `teamone` 서버의 `server-fix-good` 브랜치를 포인팅하고 있는데 아직 `push` 되지 않은 로컬 커밋이 `3` 개 있고 서버에서 병합해야 할 커밋이 `1` 개 있다는 뜻이다. 
+
+        `testing` 브랜치는 어떤 원격 레포지토리도 포인팅하고 있지 않는 것을 알 수 있다.
     
-    `origin/master` 브랜치는 업데이트 할 것이 없다.
+    - 위 예시에서의 ahead 와 behind 의 숫자들은 마지막 `fetch` 로부터 얻은 정보들일 뿐이다. 이 명령어는 서버의 최신 상황을 반영해주지는 않는다. 따라서 실제 최신 정보를 보기 위하여 다음 명령어를 입력해야 한다.
 
-    `serverfix` 브랜치는 `teamone` 서버의 `server-fix-good` 브랜치를 포인팅하고 있는데 아직 `push` 되지 않은 로컬 커밋이 `3` 개 있고 서버에서 병합해야 할 커밋이 `1` 개 있다는 뜻이다. 
-
-    `testing` 브랜치는 어떤 원격 레포지토리도 포인팅하고 있지 않는 것을 알 수 있다.
-  
-  - 위 예시에서의 ahead 와 behind 의 숫자들은 마지막 `fetch` 로부터 얻은 정보들일 뿐이다. 이 명령어는 서버의 최신 상황을 반영해주지는 않는다. 따라서 실제 최신 정보를 보기 위하여 다음 명령어를 입력해야 한다.
-
-    ```shell
-    git fetch --all; git branch -vv
-    ```
+        ```shell
+        git fetch --all; git branch -vv
+        ```
 
 - `git pull <remote> <branch>` : 원격 레포지토리에서 데이터를 가져옴과 동시에 병합을 해준다.
 
-  - `git fetch` 가 단순히 원격 레포지토리에서 데이터를 가져오기만 하기 때문에 `git merge` 로 병합을 해주어야 하는 반면 `git pull` 은 데이터를 가져옴과 동시에 병합을 해준다.
+    - `git fetch` 가 단순히 원격 레포지토리에서 데이터를 가져오기만 하기 때문에 `git merge` 로 병합을 해주어야 하는 반면 `git pull` 은 데이터를 가져옴과 동시에 병합을 해준다.
 
 - `git push <remote> --delete <branch>` : 원격 레포지토리의 브랜치를 삭제한다. 
 
-  - 특정 브랜치에서의 모든 작업이 끝났고 `master` 브랜치에도 병합을 했다면 원격레포지토리의 브랜치를 삭제할 수 있다. `origin` 서버의 `serverfix` 브랜치를 삭제하고 싶다면 다음과 같이 입력한다.
+    - 특정 브랜치에서의 모든 작업이 끝났고 `master` 브랜치에도 병합을 했다면 원격레포지토리의 브랜치를 삭제할 수 있다. `origin` 서버의 `serverfix` 브랜치를 삭제하고 싶다면 다음과 같이 입력한다.
 
-    ```shell
-    git push origin --delete serverfix
-    ```
+        ```shell
+        git push origin --delete serverfix
+        ```
 
 # 기타 
 
@@ -787,18 +787,18 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 - 만약 실수로 `master` 브랜치를 망쳐버려서 마지막 `commit` 으로 이동해야 하는 경우(마지막 커밋 해쉬를 `4428` 이라고 하자), 일단 `master` 브랜치를 커밋한 후
 
-  ```shell
-  git add .
-  git commit -m "Incorrect!"
-  git checkout 4428
-  ```
+    ```shell
+    git add .
+    git commit -m "Incorrect!"
+    git checkout 4428
+    ```
 
-  로 마지막 커밋으로 이동한다. 그런 다음 고칠 것을 고치고, 커밋을 한다.
+    로 마지막 커밋으로 이동한다. 그런 다음 고칠 것을 고치고, 커밋을 한다.
 
-  ```shell
-  git add .
-  git commit -m "CORRECT!"
-  ```
+    ```shell
+    git add .
+    git commit -m "CORRECT!"
+    ```
 
 # 깃허브 협업 메모 
 

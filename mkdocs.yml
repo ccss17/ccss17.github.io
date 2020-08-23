@@ -5,23 +5,31 @@ site_author: ccsss
 
 nav:
   - Home: index.md
-  - Tex 수학기호: tex.md
-  - Computer: 
-    - Makefile: Computer/makefile.md
-    - Git: Computer/git.md
-    - Docker: Computer/docker.md
-    - CUDA: Computer/cuda.md
-  - AI: 
-    - DL from stratch 메모: AI/dl_from_scratch.md
-    - DL from stratch 메모2: AI/dl_from_scratch2.md
-    - DL from stratch 메모3: AI/dl_from_scratch3.md
-    - 인공지능 메모3: AI/ai.md
-  - Algorithm:
-    - Leetcode: Algorithm/leetcode.md
-  - Philosophy: 
-    - 철학 메모: Philosophy/philosophy.md
-    - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
-    - 정보이론: Philosophy/information.md
+  - Top-Down: td/1.md
+  - References:
+    - AI: 
+      - DL from stratch 메모: AI/dl_from_scratch.md
+      - DL from stratch 메모2: AI/dl_from_scratch2.md
+      - DL from stratch 메모3: AI/dl_from_scratch3.md
+      - 인공지능 메모3: AI/ai.md
+    - 생각 메모: 
+      - 수학역사(고대 그리스~19세기): Think/all3.md
+      - 수학역사2(수학의 확실성): Think/all4.md
+      - 컴퓨터역사(괴델의 불완전성 정리): Think/all5.md
+      - 컴퓨터역사2(튜링의 불완전성 증명): Think/all6.md
+      - 컴퓨터역사3(튜링기계의 구현): Think/all7.md
+      - 컴퓨터역사4(소프트웨어와 알고리즘): Think/all8.md
+      - 컴퓨터역사5(초지능): Think/all9.md
+    - Computer: 
+      - Makefile: Computer/makefile.md
+      - Git: Computer/git.md
+      - Docker: Computer/docker.md
+      - CUDA: Computer/cuda.md
+    - Philosophy: 
+      - 철학 메모: Philosophy/philosophy.md
+      - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
+      - 정보이론: Philosophy/information.md
+    - Tex 수학기호: tex.md
   - Math: 
     - 수학기초론: 
       - 논리학: Math/Foundations/logic.md
@@ -66,14 +74,29 @@ nav:
       - (임시): Math/MultiLinearAlgebra/mla.md
     - 위상수학: 
       - (임시): Math/Topology/topology.md
-  - 생각 메모: 
-    - 수학역사(고대 그리스~19세기): Think/all3.md
-    - 수학역사2(수학의 확실성): Think/all4.md
-    - 컴퓨터역사(괴델의 불완전성 정리): Think/all5.md
-    - 컴퓨터역사2(튜링의 불완전성 증명): Think/all6.md
-    - 컴퓨터역사3(튜링기계의 구현): Think/all7.md
-    - 컴퓨터역사4(소프트웨어와 알고리즘): Think/all8.md
-    - 컴퓨터역사5(초지능): Think/all9.md
+  - ProgrammerBase: 
+    - ProgrammerBase: ProgrammerBase/readme.md
+    - Day 1: ProgrammerBase/01-Day1/readme.md
+    - Day 2: ProgrammerBase/02-Day2/readme.md
+    - Day 3: ProgrammerBase/03-Day3/readme.md
+    - Day 4: ProgrammerBase/04-Day4/readme.md
+    - Day 5: ProgrammerBase/05-Day5/readme.md
+    - Contents:
+      - Docker: ProgrammerBase/docker.md
+      - Information: ProgrammerBase/information.md
+      - Git: ProgrammerBase/git.md
+      - VSCode: ProgrammerBase/vscode.md
+      - Markdown: ProgrammerBase/markdown.md
+      - Tmux: ProgrammerBase/tmux.md
+      - Vim: ProgrammerBase/vim.md
+      - CLI: ProgrammerBase/cli.md
+    - 조금 철학적인 이야기:
+      - 수학의 역사: ProgrammerBase/math.md
+      - 불완전성 정리: ProgrammerBase/godel.md
+      - 튜링의 증명: ProgrammerBase/turing.md
+      - 기술적 특이점: ProgrammerBase/future.md
+  - Algorithm:
+    - Leetcode: Algorithm/leetcode.md
 
 theme: 
   name: material
