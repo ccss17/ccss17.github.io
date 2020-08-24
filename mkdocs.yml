@@ -5,21 +5,22 @@ site_author: ccsss
 
 nav:
   - Home: index.md
-  - Top-Down: td/1.md
-  - References:
+  - Top-Down: 
+    - 기초적인 생각: Top-Down/1.md
+    - 생각에 대한 생각: Top-Down/2.md
+    - 수학역사1(고대 그리스~19세기): Top-Down/3.md
+    - 수학역사2(수학의 확실성): Top-Down/4.md
+    - 컴퓨터역사(괴델의 불완전성 정리): Top-Down/5.md
+    - 컴퓨터역사2(튜링의 불완전성 증명): Top-Down/6.md
+    - 컴퓨터역사3(튜링기계의 구현): Top-Down/7.md
+    - 컴퓨터역사4(소프트웨어와 알고리즘): Top-Down/8.md
+    - 컴퓨터역사5(초지능): Top-Down/9.md
+  - Library:
     - AI: 
       - DL from stratch 메모: AI/dl_from_scratch.md
       - DL from stratch 메모2: AI/dl_from_scratch2.md
       - DL from stratch 메모3: AI/dl_from_scratch3.md
       - 인공지능 메모3: AI/ai.md
-    - 생각 메모: 
-      - 수학역사(고대 그리스~19세기): Think/all3.md
-      - 수학역사2(수학의 확실성): Think/all4.md
-      - 컴퓨터역사(괴델의 불완전성 정리): Think/all5.md
-      - 컴퓨터역사2(튜링의 불완전성 증명): Think/all6.md
-      - 컴퓨터역사3(튜링기계의 구현): Think/all7.md
-      - 컴퓨터역사4(소프트웨어와 알고리즘): Think/all8.md
-      - 컴퓨터역사5(초지능): Think/all9.md
     - Computer: 
       - Makefile: Computer/makefile.md
       - Git: Computer/git.md
