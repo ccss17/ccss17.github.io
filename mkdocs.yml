@@ -4,18 +4,18 @@ site_author: ccsss
 # repo_url: https://github.com/ccss17/ccss17.github.io
 
 nav:
-  - Home: index.md
-  - Top-Down: 
-    - 기초적인 생각: Top-Down/1.md
-    - 생각에 대한 생각: Top-Down/2.md
-    - 수학역사1(고대 그리스~19세기): Top-Down/3.md
-    - 수학역사2(수학의 확실성): Top-Down/4.md
-    - 컴퓨터역사(괴델의 불완전성 정리): Top-Down/5.md
-    - 컴퓨터역사2(튜링의 불완전성 증명): Top-Down/6.md
-    - 컴퓨터역사3(튜링기계의 구현): Top-Down/7.md
-    - 컴퓨터역사4(소프트웨어와 알고리즘): Top-Down/8.md
-    - 컴퓨터역사5(초지능): Top-Down/9.md
-  - Library:
+  - 인공지능 만들기:
+    - 1. 기초: index.md
+    - 2. 생각: HAI/think.md
+    - 3. 실행: HAI/doit.md
+    - 수학의 역사: HAI/math_history.md
+    - 4. 수학역사 1차 추상화: HAI/abstract_math_history.md
+    - 컴퓨터역사(괴델의 불완전성 정리): HAI/5.md
+    - 컴퓨터역사2(튜링의 불완전성 증명): HAI/6.md
+    - 컴퓨터역사3(튜링기계의 구현): HAI/7.md
+    - 컴퓨터역사4(소프트웨어와 알고리즘): HAI/8.md
+    - 컴퓨터역사5(초지능): HAI/9.md
+  - 재료:
     - AI: 
       - DL from stratch 메모: AI/dl_from_scratch.md
       - DL from stratch 메모2: AI/dl_from_scratch2.md
@@ -31,66 +31,66 @@ nav:
       - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
       - 정보이론: Philosophy/information.md
     - Tex 수학기호: tex.md
-  - Math: 
-    - 수학기초론: 
-      - 논리학: Math/Foundations/logic.md
-      - 집합론: Math/Foundations/math.md
-      - 수리논리학: Math/Foundations/mathmatical_logic.md
-    - 산술/대수학: 
-      - 기초 산술: Math/Algebra/arithmetic.md
-      - 추상대수학: Math/Algebra/abstract_algebra.md
-      - 대수학: Math/Algebra/algebra.md
-    - 해석학: 
-      - 해석학: Math/Analysis/anal.md
-      - 삼각함수: Math/Analysis/trig.md
-      - 함수: Math/Analysis/function.md
-    - 확률: 
-      - 조합: Math/Probability/comb.md
-      - 확률: Math/Probability/prob.md
-    - 통계학: 
-      - 도수분포의 평균,분산,표준편차: Math/Statistics/stat.md
-      - 이산확률변수의 평균,분산,표준편차: Math/Statistics/stat2.md
-      - 이항분포의 평균,분산,표준편차: Math/Statistics/stat3.md
-      - 연속확률변수의 평균,분산,표준편차: Math/Statistics/stat4.md
-      - 통계적 추정: Math/Statistics/stat5.md
-      - 상관관계 분석: Math/Statistics/stat6.md
-    - 미적분: 
-      - 극한: Math/Calculus/cal.md
-      - 미분: Math/Calculus/cal2.md
-      - 적분: Math/Calculus/cal3.md
-      - 미분2: Math/Calculus/cal4.md
-      - 적분2: Math/Calculus/cal5.md
-      - 벡터해석학: Math/Calculus/vector.md
-      - 미적분: Math/Calculus/cal6.md
-      - 다변수함수의 미분의 일반적 정의: Math/Calculus/cal7.md
-      - 텐서해석학: Math/Calculus/cal8.md
-    - 선형대수학: 
-      - 선형방정식: Math/LinearAlgebra/la.md
-      - 행렬대수: Math/LinearAlgebra/la2.md
-      - 행렬식: Math/LinearAlgebra/la3.md
-      - 벡터공간: Math/LinearAlgebra/la4.md
-      - 고유벡터: Math/LinearAlgebra/la5.md
-      - 직교: Math/LinearAlgebra/la6.md
-    - 다중선형대수학: 
-      - (임시): Math/MultiLinearAlgebra/mla.md
-    - 위상수학: 
-      - (임시): Math/Topology/topology.md
+    - Math: 
+      - 수학기초론: 
+        - 논리학: Math/Foundations/logic.md
+        - 집합론: Math/Foundations/math.md
+        - 수리논리학: Math/Foundations/mathmatical_logic.md
+      - 산술/대수학: 
+        - 기초 산술: Math/Algebra/arithmetic.md
+        - 추상대수학: Math/Algebra/abstract_algebra.md
+        - 대수학: Math/Algebra/algebra.md
+      - 해석학: 
+        - 해석학: Math/Analysis/anal.md
+        - 삼각함수: Math/Analysis/trig.md
+        - 함수: Math/Analysis/function.md
+      - 확률: 
+        - 조합: Math/Probability/comb.md
+        - 확률: Math/Probability/prob.md
+      - 통계학: 
+        - 도수분포의 평균,분산,표준편차: Math/Statistics/stat.md
+        - 이산확률변수의 평균,분산,표준편차: Math/Statistics/stat2.md
+        - 이항분포의 평균,분산,표준편차: Math/Statistics/stat3.md
+        - 연속확률변수의 평균,분산,표준편차: Math/Statistics/stat4.md
+        - 통계적 추정: Math/Statistics/stat5.md
+        - 상관관계 분석: Math/Statistics/stat6.md
+      - 미적분: 
+        - 극한: Math/Calculus/cal.md
+        - 미분: Math/Calculus/cal2.md
+        - 적분: Math/Calculus/cal3.md
+        - 미분2: Math/Calculus/cal4.md
+        - 적분2: Math/Calculus/cal5.md
+        - 벡터해석학: Math/Calculus/vector.md
+        - 미적분: Math/Calculus/cal6.md
+        - 다변수함수의 미분의 일반적 정의: Math/Calculus/cal7.md
+        - 텐서해석학: Math/Calculus/cal8.md
+      - 선형대수학: 
+        - 선형방정식: Math/LinearAlgebra/la.md
+        - 행렬대수: Math/LinearAlgebra/la2.md
+        - 행렬식: Math/LinearAlgebra/la3.md
+        - 벡터공간: Math/LinearAlgebra/la4.md
+        - 고유벡터: Math/LinearAlgebra/la5.md
+        - 직교: Math/LinearAlgebra/la6.md
+      - 다중선형대수학: 
+        - (임시): Math/MultiLinearAlgebra/mla.md
+      - 위상수학: 
+        - (임시): Math/Topology/topology.md
   - ProgrammerBase: 
     - ProgrammerBase: ProgrammerBase/readme.md
-    - Day 1: ProgrammerBase/01-Day1/readme.md
-    - Day 2: ProgrammerBase/02-Day2/readme.md
-    - Day 3: ProgrammerBase/03-Day3/readme.md
-    - Day 4: ProgrammerBase/04-Day4/readme.md
-    - Day 5: ProgrammerBase/05-Day5/readme.md
     - Contents:
-      - Docker: ProgrammerBase/docker.md
-      - Information: ProgrammerBase/information.md
-      - Git: ProgrammerBase/git.md
-      - VSCode: ProgrammerBase/vscode.md
-      - Markdown: ProgrammerBase/markdown.md
-      - Tmux: ProgrammerBase/tmux.md
-      - Vim: ProgrammerBase/vim.md
-      - CLI: ProgrammerBase/cli.md
+      - Day 1: ProgrammerBase/01-Day1/readme.md
+      - Day 2: ProgrammerBase/02-Day2/readme.md
+      - Day 3: ProgrammerBase/03-Day3/readme.md
+      - Day 4: ProgrammerBase/04-Day4/readme.md
+      - Day 5: ProgrammerBase/05-Day5/readme.md
+    - Docker: ProgrammerBase/docker.md
+    - Information: ProgrammerBase/information.md
+    - Git: ProgrammerBase/git.md
+    - VSCode: ProgrammerBase/vscode.md
+    - Markdown: ProgrammerBase/markdown.md
+    - Tmux: ProgrammerBase/tmux.md
+    - Vim: ProgrammerBase/vim.md
+    - CLI: ProgrammerBase/cli.md
     - 조금 철학적인 이야기:
       - 수학의 역사: ProgrammerBase/math.md
       - 불완전성 정리: ProgrammerBase/godel.md
