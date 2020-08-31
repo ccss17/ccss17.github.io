@@ -101,6 +101,8 @@ nav:
       - 컴퓨터과학적 사고: lecture/20-2/cthink.md
   - Algorithm:
     - Leetcode: Algorithm/leetcode.md
+  - 강의 메모:
+    - Korean History: lecture/koreahistory.md
 
 theme: 
   name: material
