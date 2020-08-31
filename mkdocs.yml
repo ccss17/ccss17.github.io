@@ -98,6 +98,8 @@ nav:
       - 기술적 특이점: ProgrammerBase/future.md
   - Algorithm:
     - Leetcode: Algorithm/leetcode.md
+  - 강의 메모:
+    - Korean History: lecture/koreahistory.md
 
 theme: 
   name: material
