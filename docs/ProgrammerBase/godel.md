@@ -226,7 +226,7 @@ $$((p\to{}q)\to((r\to{}s)\to{}t))\to((u\to((r\to{}s)\to{}t))\to((p\to{}u)\to(s\t
     |:---:|:---:|:---:|:---:|
     |직선|<img src="https://user-images.githubusercontent.com/16812446/83409465-6e697c80-a44f-11ea-9b3f-c210fc2c954a.png" width="50%" height="auto">| <img src="https://user-images.githubusercontent.com/16812446/83409429-58f45280-a44f-11ea-990c-87bf0db3d6d9.png" width="50%" height="auto">|$y=x$|
     |삼각형|<img src="https://user-images.githubusercontent.com/16812446/83410218-eedcad00-a450-11ea-85e1-03e4752cc625.png" width="50%" height="auto">|<img src="https://user-images.githubusercontent.com/16812446/83410251-0025b980-a451-11ea-9308-89ff83dd5849.png" width="50%" height="auto">||
-    |원|<img src="https://user-images.githubusercontent.com/16812446/83410439-627eba00-a451-11ea-8244-09a3fa065b6b.png" width="50%" height="auto">|<img src="https://user-images.githubusercontent.com/16812446/83410382-40853780-a451-11ea-8b13-2b90a77fb9b0.png" width="50%" height="auto">|$x^{2}%2By^{2}=1$|
+    |원|<img src="https://user-images.githubusercontent.com/16812446/83410439-627eba00-a451-11ea-8244-09a3fa065b6b.png" width="50%" height="auto">|<img src="https://user-images.githubusercontent.com/16812446/83410382-40853780-a451-11ea-8b13-2b90a77fb9b0.png" width="50%" height="auto">|$x^{2}+y^{2}=1$|
 
     그러므로 만약 대수학이 정합적 체계라면 유클리드 기하학도 모순을 내뱉지 않는 정합적 체계이고, 이에따라 비유클리드 기하학도 정합적인 체계가 되는 것임. **대수학은 산술의 확장체이므로 힐베르트는 "기하학과 물리학의 무모순성(정합성)의 증명은 산술의 무모순성으로 귀결시킴으로써 성취된다."** 고 말함. 즉 산술에 모순이 없다면 산술의 확장체인 기하학의 대수적인 구성에도 모순이 없게되기 때문에 **이제 초미의 관심사는 산술의 정합성** 이 되었음. 
 
@@ -292,15 +292,15 @@ $$((p\to{}q)\to((r\to{}s)\to{}t))\to((u\to((r\to{}s)\to{}t))\to((p\to{}u)\to(s\t
 
     - 예시 
     
-        $2%2B3=5$
+        $2+3=5$
 
 - 상위 수학명제 : 수학명제에 관하여 언급하는 명제
 
     - 예시 
     
-        "$2%2B3=5$" 는 산술학적 형식문이다.
+        "$2+3=5$" 는 산술학적 형식문이다.
 
-        "$2%2B3=5$" 의 두번째 기호는 + 이다.
+        "$2+3=5$" 의 두번째 기호는 + 이다.
 
 ### 수학의 모든 공리체계를 대표할 수 있는 **PM**
 
@@ -351,7 +351,7 @@ $$((p\to{}q)\to((r\to{}s)\to{}t))\to((u\to((r\to{}s)\to{}t))\to((p\to{}u)\to(s\t
 | $+$  | $11$ | 더하기 |
 | $\times$  | $12$ | 곱하기 |
 
-가령 "$0%2Bs0=s0$" 은 일상적인 의미로 0+1=1 을 뜻합니다.
+가령 "$0+s0=s0$" 은 일상적인 의미로 0+1=1 을 뜻합니다.
 
 또한 숫자변항, 문장변항, 술어변항으로 구성되는 변항기호에도 괴델수를 부여할 수 있습니다. 다음과 같이 숫자변항에는 12 보다 큰 소수를 차례로 부여합니다.
 
@@ -380,7 +380,7 @@ $$((p\to{}q)\to((r\to{}s)\to{}t))\to((u\to((r\to{}s)\to{}t))\to((p\to{}u)\to(s\t
 |:---:|:---:|:---:|
 | $P$  | $13^{3}$ | $x=sy$ |
 | $Q$  | $17^{3}$ | $~(x=ss0\times{}y)$ |
-| $R$  | $19^{3}$ | $(\exists{}z)(x=y%2Bsz)$ |
+| $R$  | $19^{3}$ | $(\exists{}z)(x=y+sz)$ |
 
 
 ### 1-(2) 형식문에 괴델수 붙이기
@@ -388,11 +388,9 @@ $$((p\to{}q)\to((r\to{}s)\to{}t))\to((u\to((r\to{}s)\to{}t))\to((p\to{}u)\to(s\t
 형식문에 괴델수를 붙이는 것은 매우 간답합니다. 가령 $y$ 바로 다음 수 $x$ 가 있다는 의미의 형식문 "$(\exists{}x)(x=sy)$" 의 기본 기호는 각각 괴델수
 
 
-| $($ | $\exists$ | $x$ | $)$ | $($ | 
-|:---:|:---:|:---:|:---:|:---:|
-| 8  | 4 |13 |9 |8 |
-|$x$ | $=$ | $s$ | $y$ | $)$ | 
-|13 |5 |7 |17 |9 |
+| $($ | $\exists$ | $x$ | $)$ | $($ | $x$ | $=$ | $s$ | $y$ | $)$ | 
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 8  | 4 |13 |9 |8 | 13 |5 |7 |17 |9 |
 
 를 갖는데 일련의 소수에 이 괴델수의 거듭제곱을 취하여 곱한 수
 
@@ -464,7 +462,7 @@ $$(\exists{}z)(\overbrace{sss\dots{}sss0}^{a}=z\times{}2)\land\sim(\exists{}z)(\
 
 - **$\text{Dem}(x,z)$ : 증명함수 $\text{dem}(x,z)$ 의 형식문이다.**
 
-> $\text{dem}(x,z)$ 가 형식문 $\text{Dem}(x,z)$ 으로 사상된 것은 $3=1%2B2$ 가 형식문 $sss0=s0+ss0$ 로 사상된 것과 비슷합니다. 그래서 사실은 $\text{Dem}(x,z)$ 를 $\text{Dem}(\overbrace{sss\dots{}sss0}^{x},\overbrace{sss\dots{}sss0}^{z})$ 로 써야 하지만 편의상 축약하여 쓰는 것입니다.
+> $\text{dem}(x,z)$ 가 형식문 $\text{Dem}(x,z)$ 으로 사상된 것은 $3=1+2$ 가 형식문 $sss0=s0+ss0$ 로 사상된 것과 비슷합니다. 그래서 사실은 $\text{Dem}(x,z)$ 를 $\text{Dem}(\overbrace{sss\dots{}sss0}^{x},\overbrace{sss\dots{}sss0}^{z})$ 로 써야 하지만 편의상 축약하여 쓰는 것입니다.
 
 ### 대입함수
 

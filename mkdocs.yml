@@ -91,18 +91,22 @@ nav:
     - Tmux: ProgrammerBase/tmux.md
     - Vim: ProgrammerBase/vim.md
     - CLI: ProgrammerBase/cli.md
-    - 조금 철학적인 이야기:
-      - 수학의 역사: ProgrammerBase/math.md
-      - 불완전성 정리: ProgrammerBase/godel.md
-      - 튜링의 증명: ProgrammerBase/turing.md
-      - 기술적 특이점: ProgrammerBase/future.md
+    - 수학의 역사: ProgrammerBase/math.md
+    - 불완전성 정리: ProgrammerBase/godel.md
+    - 튜링의 증명: ProgrammerBase/turing.md
+    - 기술적 특이점: ProgrammerBase/future.md
+  - 강의메모:
+    - 2020-2:
+      - 딥러닝 응용: lecture/20-2/dl.md
+      - 컴퓨터과학적 사고: lecture/20-2/cthink.md
   - Algorithm:
     - Leetcode: Algorithm/leetcode.md
 
 theme: 
   name: material
   palette:
-    primary: black
+    # primary: black
+    primary: white
     scheme: default
   font:
     text: Nanum Gothic
