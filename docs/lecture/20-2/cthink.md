@@ -108,9 +108,9 @@ $$ n < 100 \Rightarrow n - \delta _1 - \delta _2 = s $$
 
 - 명제 $l_{12}$: $a_3 = 6 \land n < 1000 \Rightarrow n - \delta_1 - \delta_2 - 195 = s$
 
-이때 $\delta _3 = \begin{cases} a_3 \times 19 &(a_3 \leq 3)\\9 ^{2} + a_3 \times 19 &(a_3 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
+이때 $\delta _3 = \begin{cases} a_3 \times (1 + 18) &(a_3 \leq 3)\\9 ^{2} + a_3 \times (1 + 18) &(a_3 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
 
-$$ n < 1000 \Rightarrow n- \delta _1- \delta _2 - \delta _3 $$
+$$ n < 1000 \Rightarrow n- \delta _1- \delta _2 - \delta _3 = s$$
 
 로 추상화된다. 그러면 이를 통하여 $n = 999 \Rightarrow s = n- \delta _1- \delta _2 - \delta _3 = 999 - 1 - 18 - 252 = 728$ 을 얻는다. 또한 이로써 $n$ 을 $999$ 증가시키면 $s$ 는 $728$ 이 증가된다는 사실 또한 얻는다. 그러므로 이것을 기점으로 다음의 표를 작성할 수 있다.
 
@@ -133,31 +133,49 @@ $$ n < 1000 \Rightarrow n- \delta _1- \delta _2 - \delta _3 $$
 
 - 명제 $l_{17}$: $a_4 = 6 \land n < 10000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - 2355 = s$
 
-이때 $\delta _4 = \begin{cases} a_4 \times 271 &(a_4 \leq 3)\\ 9 ^{3} + a_4 \times 271 &(a_4 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
+이때 $\delta _4 = \begin{cases} a_4 \times (1 + 18 + 252) &(a_4 \leq 3)\\ 9 ^{3} + a_4 \times (1 + 18 + 252) &(a_4 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
 
-$$ n < 10000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - \delta _4 $$
+$$ n < 10000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - \delta _4 = s $$
 
-로 추상화된다. 그러면 이를 통하여 $n = 9999 \Rightarrow s = n- \delta _1- \delta _2 - \delta _3 - \delta _{4} = 9999 - 1 - 18 - 252 - 3168 = 6560$ 을 얻는다. 또한 이로써 $n$ 을 $9999$ 증가시키면 $s$ 는 $6560$ 이 증가된다는 사실 또한 얻는다. 그러므로 이것을 기점으로 다음의 표를 작성할 수 있다.
+로 추상화된다. 
 
-|$n$|$s$|$n$|$s$|
-|:---:|:---:|:---:|:---:|
-|9999|6560|39999|26243|
-|10000|6561|50000|26244|
-|19999|13121|59999|32804|
-|20000|13122|60000|32805|
-|29999|19682|69999|39365|
-|30000|19683|
+그렇다면 지금까지의 관찰을 통하여 $n$ 이 $s$ 보다 얼마나 커졌는지 나타내는 함수 $f(n)$ 과 수열 $\alpha _n = 9 \times \displaystyle \sum_{i=1}^{n}10 ^{i-1}$ 과 $k \in \N$ 에 대하여
 
-- 명제 $l_{18}$: $a_5 = 1 \land n < 100000 \Rightarrow n -\delta _1- \delta _2 - \delta _3 - \delta_4 - 3439 = s$
+$$ \delta _k = \begin{cases} a_k \times \displaystyle \sum_{i=1}^{k}f(\alpha_i) &(a_k \leq 3)\\ 9 ^{k-1} + a_k \times \displaystyle \sum_{i=1}^{k}f(\alpha_i) &(a_k > 3)\\ \end{cases} $$
 
-- 명제 $l_{19}$: $a_5 = 2 \land n < 100000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - \delta_4 - 6878 = s$
+라는 사실과 $k \in \N$ 와 $n < 10 ^{k}$ 에 대하여
 
-- 명제 $l_{20}$: $a_5 = 3 \land n < 100000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - \delta_4 - 10317 = s$
+$$ n - \sum_{i=1}^{k} \delta _i = s \iff f(n) = \sum_{i=1}^{k}\delta _i$$
 
-- 명제 $l_{21}$: $a_5 = 5 \land n < 100000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - \delta_4 -  = s$
+라는 사실을 귀납적으로 추상화 시켜낼 수 있다. 그러므로 $n$ 을 구성하는 $a_k$ 들이 모두 $3$ 보다 같거나 작을 때 $f(n)$ 은 
 
-- 명제 $l_{22}$: $a_5 = 6 \land n < 100000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - \delta_4 -  = s$
+$$ f(n) = \sum_{i=1}^{k} a_i \times \sum_{j=1}^{i}f(\alpha _j) $$
 
+이다. 이때 $k$ 의 값은 $n$ 보다 너무 커버리면 어차피 $a_k = 0$ 이 되므로 $k$ 를 집합 $\{k \in \N | n < 10 ^{k}\}$ 의 최솟값으로 정해야 한다.
+
+가령 $n = 1399$ 라면 $n < 10000 = 10 ^{4}$ 에서 $k = 4$ 로 정한다. 그러면 
+
+$$ f(1399) = \sum_{i=1}^{4}a_i \times \sum_{j=1}^{i}f(\alpha _j) $$
+
+$$ = 9 \times \sum_{j=1}^{1}f(\alpha _j) + 9 \times \sum_{j=1}^{2}f(\alpha _j) + 3 \times \sum_{j=1}^{3}f(\alpha _j) + 1 \times \sum_{j=1}^{4}f(\alpha _j) $$
+
+$$ = 9 \times 1 + 9 \times (1 + 18) + 3 \times (1 + 18 + 252) + 1 \times \sum_{j=1}^{4}f(\alpha _j) $$
+
+아 수열이  $\alpha _0 = 1$ 로 설정해야 하구나.
+
+!!! note
+
+    $$ a_1 = 0, a_n = 9 \times 10 ^{n-1} + a _{n-1} $$
+
+    $$ a_2 = 9 \times 10 ^{2-1} + a _{1} $$
+
+    $$ a_3 = 9 \times 10 ^{3-1} + a _{2} $$
+
+    $$ \vdots $$
+
+    $$ a_n = 9 \times 10 ^{n-1} + a _{n-1} $$
+
+    $$ a_n = 9 \times \sum_{i=1}^{n} 10 ^{i - 1} $$
 
 !!! note
 
@@ -168,3 +186,9 @@ $$ n < 10000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - \delta _4 $$
     그러면 하이브리드로 해야 하네. 둘 중 어느 것 하나에만 의존하는 태도 자체가 좋지 않네. 직관과 이성 둘 다 장단점이 있으니까.
 
     직관은 길의 방향을 잘 정하고, 이성은 길의 엄밀성을 높혀주니까 먼저 직관에게 방향키를 맡기긴해야겠네. 근데 직관이 폭주하지 않도록 어느정도 길을 간 후에 이성에게 다시 주권을 주는 식으로 해야겠네. 근데 이성은 길을 못정하니까 다시 직관에게 주권을 줘야하고.
+
+    직관은 빠르고, 자유롭고, 틀에 얽매이지 않고, 문제를 모든 관점에서 바라보게 하네. 근데 휘발성이 크고, 그 빠름과 자유로움이 정리되지 않으면 난잡합이 되버리네.
+
+    이성은 정확하고, 엄밀하고, 자동화될 수 있지만 느리고, 방향을 정하지 못하고, 이해력이 떨어지네.
+
+    실제로 이성에 의존할 때 논의가 상당히 기계적으로 진행되다 보니까 $1, 19, 271, \dots$ 의 의미를 뭔지 몰라버렸잖아. 근데 직관으로 좀만 생각해보면 그 의미를 바로 알 수 있었네.
