@@ -36,13 +36,21 @@
 
 !!! note "가설 1"
 
-    자연수 $n \in \N$ 을 $1$씩 증가시킬 때, $n$ 을 구성하는 숫자 집합 $S$ 의 원소 $m \in S$ 가 항상 $m = 3$ 에서 $m = 5$ 로 바뀌었다면, 이 $n$ 을 일반적인 자연수 증가 방식에 따른 증가 결과값으로 계산할 수 있는 계산 과정이 존재한다.
+    자연수 $n \in \N$ 을 $1$씩 증가시킬 때, 
+    
+    $n$ 을 구성하는 숫자 집합 $S$ 의 원소 $m \in S$ 가 항상 $m = 3$ 에서 $m = 5$ 로 바뀌었다면,
+    
+    이 $n$ 과 일반적인 자연수 증가 방식에 따른 증가 결과값 $s$ 과의 차이를 계산할 수 있는 함수 $f(n)$ 이 존재한다.
 
-명제 $p$ 의 진리집합은 가설 1 의 진리집합의 부분집합이기 때문에 가설 1 이 증명되면 명제 $p$ 가 증명된다. 
+가설 1 이 주장하는 함수 $f(n)$ 이 존재하면 $n - f(n)$ 로 일반적인 자연수 증가 방식에 따라 증가한 자연수 $s \in \N$ 을 구할 수 있으므로 명제 $p$ 가 증명된다.
 
-### 가설 1 증명
+**그런데 아래의 증명을 통하여 $f(n)$ 이 존재한다는 것이 귀납적으로(비도덕적인(?) 방식으로) 증명되었다. 그러므로 가설 1 이 증명되었다. 이에 따라 명제 $p$ 도 증명되었고, 따라서 명제 $p$ 는 계산가능하다.■**
+
+## 가설 1 증명
 
 자연수 $n \in \N$ 은 $i \in \N$ 에 대한 $a_i \in \{0,1,2,3,5,6,7,8,9\}$ 에 대하여 $n = \dots a_i \dots a_5a_4a_3a_2a_1$ 로 구성된다.
+
+### 패턴 관찰과 1차 추상화
 
 이때 $n$ 을 일반적인 자연수 증가 방식에 따른 증가 결과값으로 변환한 자연수를 $s \in \N$ 이라고 하자.
 
@@ -51,173 +59,161 @@
 |3|3|
 |5|4|
 
-위 표에서 나타난 자연수 증가 패턴을 추상화시켜 귀납적으로 얻게 되는 법칙이 있다.
+위 표에서 나타난 자연수 증가 패턴을 귀납적으로 추상화시켜 다음의 명제를 얻을 수 있다.
 
-- 명제 $l_1$: $a_1 \leq 3 \land n < 10 \Rightarrow n = s$
+- $a_1 \leq 3 \land n < 10 \Rightarrow n = s$
 
-- 명제 $l_2$: $a_1 > 3 \land n < 10 \Rightarrow n - 1 = s$
+- $a_1 > 3 \land n < 10 \Rightarrow n - 1 = s$
 
-이때 $\epsilon_1 = \begin{cases} 0 &(a_1 \leq 3)\\ 1 &(a_1 > 3)\\ \end{cases}$ 를 정의하자. 그러면 명제 $l_1, l_2$ 는 명제
+$\epsilon_1 = \begin{cases} 0 &(a_1 \leq 3)\\ 1 &(a_1 > 3)\\ \end{cases}$ 을 정의하면 위 명제들을 명제
 
 $$ n < 10 \Rightarrow n - \epsilon_1 = s $$
 
-로 추상화된다. 
+로 추상화시킬 수 있다.
 
+|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|13|12|15|13|23|21|25|22|33|30|35|31|
+|39|35|50|36|53|39|55|40|63|48|65|49|
 
-|$n$|$s$|$n$|$s$|$n$|$s$|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|13|12|33|30|53|39|
-|15|13|35|31|55|40|
-|$\vdots$|$\vdots$|$\vdots$|$\vdots$|$\vdots$|$\vdots$|
-|23|21|39|35|63|48|
-|25|22|50|36|65|49|
+$\epsilon_1$ 를 사용하여 위 표에서 나타난 자연수 증가 패턴을 귀납적으로 추상화시켜 다음의 명제를 얻을 수 있다.
 
-이 $\epsilon_1$ 를 사용하여 계속해서 패턴을 관찰하면 다음의 법칙을 얻는다.
+- $a_2 = 1 \land n < 100 \Rightarrow n - \epsilon_1 - 1 = s$
 
-- 명제 $l_3$: $a_2 = 1 \land n < 100 \Rightarrow n - \epsilon_1 - 1 = s$
+- $a_2 = 2 \land n < 100 \Rightarrow n - \epsilon_1 - 2 = s$
 
-- 명제 $l_4$: $a_2 = 2 \land n < 100 \Rightarrow n - \epsilon_1 - 2 = s$
+- $a_2 = 3 \land n < 100 \Rightarrow n - \epsilon_1 - 3 = s$
 
-- 명제 $l_5$: $a_2 = 3 \land n < 100 \Rightarrow n - \epsilon_1 - 3 = s$
+- $a_2 = 5 \land n < 100 \Rightarrow n - \epsilon_1 - 14 = s$
 
-- 명제 $l_6$: $a_2 = 5 \land n < 100 \Rightarrow n - \epsilon_1 - 14 = s$
+- $a_2 = 6 \land n < 100 \Rightarrow n - \epsilon_1 - 15 = s$
 
-- 명제 $l_7$: $a_2 = 6 \land n < 100 \Rightarrow n - \epsilon_1 - 15 = s$
-
-이때 $\epsilon _2 = \begin{cases} a_2 &(a_2 \leq 3)\\ 9 + a_2 &(a_2 > 3)\\ \end{cases}$ 를 정의하면 명제 $l_3, l_4, l_5, l_6, l_7$ 은 명제
+$\epsilon _2 = \begin{cases} a_2 &(a_2 \leq 3)\\ a_2 + 9 &(a_2 > 3)\\ \end{cases}$ 를 정의하면 위 명제들을 명제
 
 $$ n < 100 \Rightarrow n - \epsilon _1 - \epsilon _2 = s $$
 
-로 추상화된다. 그러면 이를 통하여 $n = 99 \Rightarrow s = n - \epsilon _1 - \epsilon _2 = 99 - 1 - 18 = 80$ 을 얻는다. 또한 이로써 $n$ 을 $99$ 증가시키면 $s$ 는 $80$ 이 증가된다는 사실 또한 얻는다. 그러므로 이것을 기점으로 다음의 표를 작성할 수 있다.
+로 추상화시킬 수 있다. 그러면 이를 통하여 $n = 99 \Rightarrow s = n - \epsilon _1 - \epsilon _2 = 99 - 1 - 18 = 80$ 을 얻는다. 또한 이로써 $n$ 을 $99$ 증가시키면 $s$ 는 $80$ 이 증가된다는 사실도 얻는다. 이것을 기점으로 다음의 표를 작성할 수 있다.
 
-|$n$|$s$|$n$|$s$|
-|:---:|:---:|:---:|:---:|
-|99|80|300|243|
-|100|81|399|323|
-|199|161|500|324|
-|200|162|599|404|
-|299|242|600|405|
+|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|99|80|100|81 |199|161|200|162 |299|242|
+|300|243| 399|323| 500|324| 599|404| 600|405|
 
-- 명제 $l_8$: $a_3 = 1 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 19 = s$
+$\epsilon_1, \epsilon _2$ 를 사용하여 위 표에서 나타난 자연수 증가 패턴을 귀납적으로 추상화시켜 다음의 명제를 얻을 수 있다.
 
-- 명제 $l_9$: $a_3 = 2 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 38 = s$
+- $a_3 = 1 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 19 = s$
 
-- 명제 $l_{10}$: $a_3 = 3 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 57 = s$
+- $a_3 = 2 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 38 = s$
 
-- 명제 $l_{11}$: $a_3 = 5 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 176 = s$
+- $a_3 = 3 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 57 = s$
 
-- 명제 $l_{12}$: $a_3 = 6 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 195 = s$
+- $a_3 = 5 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 176 = s$
 
-이때 $\epsilon _3 = \begin{cases} a_3 \times 19 &(a_3 \leq 3)\\9 ^{2} + a_3 \times 19 &(a_3 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
+- $a_3 = 6 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 195 = s$
+
+$\epsilon _3 = \begin{cases} a_3 \times 19 &(a_3 \leq 3)\\a_3 \times 19 + 9 ^{2}&(a_3 > 3)\\ \end{cases}$ 를 정의하면 위 명제들을 명제
 
 $$ n < 1000 \Rightarrow n- \epsilon _1- \epsilon _2 - \epsilon _3 = s$$
 
-로 추상화된다. 그러면 이를 통하여 $n = 999 \Rightarrow s = n- \epsilon _1- \epsilon _2 - \epsilon _3 = 999 - 1 - 18 - 252 = 728$ 을 얻는다. 또한 이로써 $n$ 을 $999$ 증가시키면 $s$ 는 $728$ 이 증가된다는 사실 또한 얻는다. 그러므로 이것을 기점으로 다음의 표를 작성할 수 있다.
+로 추상화시킬 수 있다. 그러면 이를 통하여 $n = 999 \Rightarrow s = n- \epsilon _1- \epsilon _2 - \epsilon _3 = 999 - 1 - 18 - 252 = 728$ 을 얻는다. 또한 이로써 $n$ 을 $999$ 증가시키면 $s$ 는 $728$ 이 증가된다는 사실도 얻는다. 이것을 기점으로 다음의 표를 작성할 수 있다.
 
-|$n$|$s$|$n$|$s$|
-|:---:|:---:|:---:|:---:|
-|999|728|3999|2915|
-|1000|729|5000|2916|
-|1999|1457|5999|3644|
-|2000|1458|6000|3645|
-|2999|2186|6999|4373|
-|3000|2187|
+|$n$|$s$|$n$|$s$| $n$|$s$|$n$|$s$| $n$|$s$|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|999|728|1000|729|1999|1457|2000|1458 |2999|2186|
+|3000|2187|3999|2915|5000|2916|5999|3644|6000|3645|
+|6999|4373|
 
-- 명제 $l_{13}$: $a_4 = 1 \land n < 10000 \Rightarrow n -\epsilon _1- \epsilon _2 - \epsilon _3 - 271 = s$
+$\epsilon_1, \epsilon _2, \epsilon _3$ 를 사용하여 위 표에서 나타난 자연수 증가 패턴을 귀납적으로 추상화시켜 다음의 명제를 얻을 수 있다.
 
-- 명제 $l_{14}$: $a_4 = 2 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 542 = s$
+- $a_4 = 1 \land n < 10000 \Rightarrow n -\epsilon _1- \epsilon _2 - \epsilon _3 - 271 = s$
 
-- 명제 $l_{15}$: $a_4 = 3 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 813 = s$
+- $a_4 = 2 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 542 = s$
 
-- 명제 $l_{16}$: $a_4 = 5 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 2084 = s$
+- $a_4 = 3 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 813 = s$
 
-- 명제 $l_{17}$: $a_4 = 6 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 2355 = s$
+- $a_4 = 5 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 2084 = s$
 
-이때 $\epsilon _4 = \begin{cases} a_4 \times 271 &(a_4 \leq 3)\\ 9 ^{3} + a_4 \times 271 &(a_4 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
+- $a_4 = 6 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 2355 = s$
+
+$\epsilon _4 = \begin{cases} a_4 \times 271 &(a_4 \leq 3)\\ a_4 \times 271 + 9 ^{3}&(a_4 > 3)\\ \end{cases}$ 를 정의하면 위 명제들을 명제
 
 $$ n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - \epsilon _4 = s $$
 
-로 추상화된다. 
+로 추상화시킬 수 있다.
 
-그렇다면 지금까지의 관찰을 통하여 $n$ 이 $s$ 보다 얼마나 커졌는지 나타내는 함수 $f(n)$ 과 수열 $\alpha _1 = 1, \alpha _n = 9 \times \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1}$ 과 $k \in \N$ 에 대하여 명제
+### 2차 추상화
 
-$$ \epsilon _k = \begin{cases} a_k f(\alpha_k) &(a_k \leq 3)\\ 9 ^{k-1} + a_k f(\alpha_k) &(a_k > 3)\\ \end{cases} $$
+지금까지의 관찰과 1차 추상화를 통하여 $\epsilon _1, \epsilon _2, \epsilon _3, \dots$ 들을 $n$ 이 $s$ 보다 얼마나 커졌는지 나타내는 함수 $f(n)$ 과 수열 $\gamma _1 = 1, \gamma _n = 9 \times \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1}$ 과 $k \in \N$ 에 대하여 
 
-를 귀납적으로 추상화시켜낼 수 있다. 이때 
+$$ \epsilon _k = \begin{cases} a_k f(\gamma_k) &(a_k \leq 3)\\ a_k f(\gamma_k) + 9 ^{k-1}&(a_k > 3)\\ \end{cases} $$
+
+로 귀납적으로 추상화시킬 수 있다. 이때 
 
 $$ \delta (a_k, k) = \begin{cases} 0 &(a _{k} \leq 3)\\ 9 ^{k-1} & (a _{k} > 3)\\ \end{cases} $$
 
-를 정의하면 
+를 정의하면 $\epsilon _k$ 를
 
-$$ \epsilon _{k} = \delta (a_k, k) + a_k f(\alpha _k) $$
+$$ \epsilon _{k} = a_k f(\gamma _k) + \delta (a_k, k) $$
 
 로 쓸 수 있다.
 
-또한 지금까지의 관찰을 통하여 $k \in \N$ 와 $n < 10 ^{k}$ 에 대하여
+또한 지금까지의 관찰과 1차 추상화를 통하여 $n - \epsilon _1 = s, n - \epsilon _1 - \epsilon _2= s, n - \epsilon _1 - \epsilon _2 - \epsilon _3= s, \dots$ 들을 $n < 10 ^{k}$ 를 만족하는 가장 작은 $k \in \N$ 대하여
 
 $$ n - \sum_{i=1}^{k} \epsilon _i = s \iff f(n) = \sum_{i=1}^{k}\epsilon _i$$
 
-라는 사실을 귀납적으로 추상화 시켜낼 수 있다. 그러므로 최종적으로 $f(n)$ 은 $k \in \N$ 와 $n < 10 ^{k}$ 와 $n$ 을 구성하는 자리수 $a_k$ 와 수열 $\alpha _1 = 1, \alpha _n = 9 \times \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1}$ 과 사전에 정의한 $\delta (a_k, k)$ 에 대하여
+로 귀납적으로 추상화 시킬 수 있다. 그러므로 $f(n)$ 은 $n < 10 ^{k}$ 를 만족하는 가장 작은 $k \in \N$ 와 $n$ 을 구성하는 자리수 $a_k$ 와 수열 $\gamma _1 = 1, \gamma _n = 9 \times \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1}$ 과 $\delta (a_k, k)$ 에 대하여
 
-$$ \therefore  f(n) = \sum_{i=1}^{k} \bigg (\delta (a_i, i) + a_i f(\alpha _i)\bigg ) $$
+$$ \therefore \boxed{f(n) = \sum_{i=1}^{k} \bigg (a_i f(\gamma _i) + \delta (a_i, i)\bigg )}  $$
 
-이다. 단, $f(1) = 0$ 이다.
+이다(단, $f(1) = 0$). **이렇게 $f(n)$ 이 존재한다는 것이 귀납적으로 증명되었다.■**
 
-이때 $f(1)$ 이 있으면 $1 \leq n < 10$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다.
+!!! note
 
-$f(1), f(9)$ 가 있으면 $10 \leq n < 100$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다.
+    이때 $f(1)$ 이 있으면 $1 \leq n < 10$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다.
 
-$f(1), f(9), f(99)$ 가 있으면 $100 \leq n < 1000$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다.
+    $f(1), f(9)$ 가 있으면 $10 \leq n < 100$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다.
 
-그러므로 $f(\alpha _1), f(\alpha _2), \dots, f(\alpha _{k})$ 가 있으면 $10 ^{k-1} \leq n < 10 ^{k}$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다는 사실을 귀납적으로 추상화시킬 수 있다.
+    $f(1), f(9), f(99)$ 가 있으면 $100 \leq n < 1000$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다.
 
-그러므로 구하고자 하는 $n$ 이 $n < 10 ^{k}$ 라면 $f(\alpha _1), f(\alpha _2), \dots, f(\alpha _{k})$ 이 있으면 된다. 이러한 $f(\alpha _1), f(\alpha _2), \dots, f(\alpha _{k})$ 같은 것들은 자주 계산될텐데 이러한 $f(n)$ 의 결과들이 또 다시 계산되지 않도록 이미 계산된 것을 캐싱해두는 것이 효율적이다.
+    그러므로 $f(\gamma _1), f(\gamma _2), \dots, f(\gamma _{k})$ 가 있으면 $10 ^{k-1} \leq n < 10 ^{k}$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다는 사실을 귀납적으로 추상화시킬 수 있다.
 
-이로써 지금까지의 논의를 통하여 $n$ 과 $s$ 의 차이를 구하는 함수 $f(n)$ 을 코드로 구현할 준비가 되었다. 지금까지의 논의를 기반으로 다음과 같이 매우 쉽게 파이썬 코드를 짤 수 있다.
+    그러므로 구하고자 하는 $n$ 이 $n < 10 ^{k}$ 라면 $f(\gamma _1), f(\gamma _2), \dots, f(\gamma _{k})$ 이 있으면 된다. 이러한 $f(\gamma _1), f(\gamma _2), \dots, f(\gamma _{k})$ 같은 것들은 자주 계산될텐데 이러한 $f(n)$ 의 결과들이 또 다시 계산되지 않도록 이미 계산된 것을 캐싱해두는 것이 효율적이다.
+
+## P1 코드 구현
+
+이로써 지금까지의 논의를 통하여 $n$ 과 $s$ 의 차이를 구하는 함수 $f(n)$ 을 코드로 구현할 준비가 되었다. 지금까지의 논의를 기반으로 다음과 같이 매우 쉽게 **Python** 코드를 짤 수 있다. 그냥 수식을 코드로 옮긴 것에 불과하다.
 
 ```python
-def alpha(n):
-    if n == 1:
-        return 1
-    a = 0
+def gamma(n):
+    if n == 1: return 1
+    tmp = 0
     for i in range(1, n):
-        a += 10 ** (i - 1)
-    return 9 * a
+        tmp += 10 ** (i - 1)
+    return 9 * tmp
 
 def delta(ak, k):
-    if ak <= 3:
-        return 0
-    else:
-        return 9 ** (k - 1)
+    return 0 if ak <= 3 else 9 ** (k - 1)
 
 f_result = {}
 def f(n):
-    if isinstance(n, int):
-        n_int = n
-        n = repr(n)
-    else:
-        n_int = int(n)
-    if n in f_result:
-        return f_result[n]
-    if n == '1':
-        return 0
-    k = 1
+    if n in f_result: return f_result[n]
+    if n == '1': return 0
+    n_int, k = int(n), 1
     while n_int >= 10 ** k:
         k += 1
-    d = 0
+    result, l = 0, len(n)
     for i in range(1, k+1):
-        ni_1 = int(n[::-1][i-1])
-        d += delta(ni_1, i) + ni_1 * f(alpha(i))
-    f_result[n] = d
-    return d
+        ai = int(n[l - i])
+        result += delta(ai, i) + ai * f(repr(gamma(i)))
+    f_result[n] = result
+    return result
 ```
 
 이 코드를 기반으로 다음과 같이 $n = 10 ^{100}$ 일 때 $s$ 를 구해본다.
 
 ```python
 i = 10 ** 100
-d = f(i)
-print(int(i) - d)
+print(i - f(repr(i)))
 ```
 
 결과는 다음과 같다. 
@@ -227,7 +223,11 @@ $ python p1.py
 265613988875874769338781322035779626829233452653394495974574961739092490901302182994384699044001
 ```
 
-[hyperfine](https://github.com/sharkdp/hyperfine) 으로 성능을 벤치마킹 해보면 다음과 같다.
+이제 이 **Python** 코드를 기반으로 매우 손쉽게 **C++** 코드로 포팅할 수 있다. 하지만 **C++** 코드는 과제로 제출해야 하기 때문에 블로그에 게시할 수 없다. 
+
+### 성능 평가
+
+[hyperfine](https://github.com/sharkdp/hyperfine) 으로 $n = 10 ^{100}$ 에 대한 $s$ 를 구하는 성능을 벤치마킹 해보면 다음과 같이 평균적으로 약 $0.1$ 초 정도 걸린다.
 
 ```shell
 $ hyperfine 'python p1.py'
@@ -236,9 +236,7 @@ Benchmark #1: python p1.py
   Range (min … max):    83.8 ms … 133.7 ms    28 runs
 ```
 
-$n = 10 ^{100}$ 의 $s$ 를 구하는데 평균적으로 약 $0.1$ 초 정도 걸린다.
-
-이제 이 코드를 기반으로 매우 손쉽게 `C++` 코드로 포팅할 수 있다. 하지만 `C++` 코드는 과제를 제출해야 하기 때문에 블로그에 게시할 수 없다. 어쨌든 포팅 후 $n = 999999$ 를 구하는 성능을 벤치마킹해보면 다음과 같다.
+**Python** 코드를 **C++** 로 포팅한 것으로 $n = 999999$ 에 대한 $s$ 를 구하는 성능을 벤치마킹해보면 다음과 같이 평균적으로 $0.003$ 초 걸린다. 
 
 ```shell
 $ hyperfine ./p1          
@@ -247,7 +245,7 @@ Benchmark #1: ./p1
   Range (min … max):     0.0 ms …  25.3 ms    496 runs
 ```
 
-평균적으로 $0.003$ 초 걸린다. 파이썬 코드로 $n = 999999$ 를 구하는 성능에 대한 벤치마킹은 다음과 같다.
+**Python** 코드로 $n = 999999$ 에 대한 $s$ 를 구하는 성능을 벤치마킹하면 다음과 같이 평균적으로 $0.051$ 초 걸린다. 
 
 ```shell
 $ hyperfine 'python p1.py'                                                 
@@ -256,11 +254,9 @@ Benchmark #1: python p1.py
   Range (min … max):    33.1 ms …  82.7 ms    58 runs
 ```
 
-평균적으로 $0.051$ 초 걸린다.
+**C++** 로 구현한 것이 **Python** 보다 $17$ 배 더 빠르다.
 
-!!! note
-
-    이때 $k$ 의 값은 $n$ 보다 너무 커버리면 어차피 $a_k = 0$ 이 되므로 $k$ 를 집합 $\{k \in \N | n < 10 ^{k}\}$ 의 최솟값으로 정해야 한다.
+---
 
 !!! note
 
