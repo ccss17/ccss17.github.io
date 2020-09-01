@@ -57,9 +57,9 @@
 
 - 명제 $l_2$: $a_1 > 3 \land n < 10 \Rightarrow n - 1 = s$
 
-이때 $\delta_1 = \begin{cases} 0 &(a_1 \leq 3)\\ 1 &(a_1 > 3)\\ \end{cases}$ 를 정의하자. 그러면 명제 $l_1, l_2$ 는 명제
+이때 $\epsilon_1 = \begin{cases} 0 &(a_1 \leq 3)\\ 1 &(a_1 > 3)\\ \end{cases}$ 를 정의하자. 그러면 명제 $l_1, l_2$ 는 명제
 
-$$ n < 10 \Rightarrow n - \delta_1 = s $$
+$$ n < 10 \Rightarrow n - \epsilon_1 = s $$
 
 로 추상화된다. 
 
@@ -72,23 +72,23 @@ $$ n < 10 \Rightarrow n - \delta_1 = s $$
 |23|21|39|35|63|48|
 |25|22|50|36|65|49|
 
-이 $\delta_1$ 를 사용하여 계속해서 패턴을 관찰하면 다음의 법칙을 얻는다.
+이 $\epsilon_1$ 를 사용하여 계속해서 패턴을 관찰하면 다음의 법칙을 얻는다.
 
-- 명제 $l_3$: $a_2 = 1 \land n < 100 \Rightarrow n - \delta_1 - 1 = s$
+- 명제 $l_3$: $a_2 = 1 \land n < 100 \Rightarrow n - \epsilon_1 - 1 = s$
 
-- 명제 $l_4$: $a_2 = 2 \land n < 100 \Rightarrow n - \delta_1 - 2 = s$
+- 명제 $l_4$: $a_2 = 2 \land n < 100 \Rightarrow n - \epsilon_1 - 2 = s$
 
-- 명제 $l_5$: $a_2 = 3 \land n < 100 \Rightarrow n - \delta_1 - 3 = s$
+- 명제 $l_5$: $a_2 = 3 \land n < 100 \Rightarrow n - \epsilon_1 - 3 = s$
 
-- 명제 $l_6$: $a_2 = 5 \land n < 100 \Rightarrow n - \delta_1 - 14 = s$
+- 명제 $l_6$: $a_2 = 5 \land n < 100 \Rightarrow n - \epsilon_1 - 14 = s$
 
-- 명제 $l_7$: $a_2 = 6 \land n < 100 \Rightarrow n - \delta_1 - 15 = s$
+- 명제 $l_7$: $a_2 = 6 \land n < 100 \Rightarrow n - \epsilon_1 - 15 = s$
 
-이때 $\delta _2 = \begin{cases} a_2 &(a_2 \leq 3)\\ 9 + a_2 &(a_2 > 3)\\ \end{cases}$ 를 정의하면 명제 $l_3, l_4, l_5, l_6, l_7$ 은 명제
+이때 $\epsilon _2 = \begin{cases} a_2 &(a_2 \leq 3)\\ 9 + a_2 &(a_2 > 3)\\ \end{cases}$ 를 정의하면 명제 $l_3, l_4, l_5, l_6, l_7$ 은 명제
 
-$$ n < 100 \Rightarrow n - \delta _1 - \delta _2 = s $$
+$$ n < 100 \Rightarrow n - \epsilon _1 - \epsilon _2 = s $$
 
-로 추상화된다. 그러면 이를 통하여 $n = 99 \Rightarrow s = n - \delta _1 - \delta _2 = 99 - 1 - 18 = 80$ 을 얻는다. 또한 이로써 $n$ 을 $99$ 증가시키면 $s$ 는 $80$ 이 증가된다는 사실 또한 얻는다. 그러므로 이것을 기점으로 다음의 표를 작성할 수 있다.
+로 추상화된다. 그러면 이를 통하여 $n = 99 \Rightarrow s = n - \epsilon _1 - \epsilon _2 = 99 - 1 - 18 = 80$ 을 얻는다. 또한 이로써 $n$ 을 $99$ 증가시키면 $s$ 는 $80$ 이 증가된다는 사실 또한 얻는다. 그러므로 이것을 기점으로 다음의 표를 작성할 수 있다.
 
 |$n$|$s$|$n$|$s$|
 |:---:|:---:|:---:|:---:|
@@ -98,21 +98,21 @@ $$ n < 100 \Rightarrow n - \delta _1 - \delta _2 = s $$
 |200|162|599|404|
 |299|242|600|405|
 
-- 명제 $l_8$: $a_3 = 1 \land n < 1000 \Rightarrow n - \delta_1 - \delta_2 - 19 = s$
+- 명제 $l_8$: $a_3 = 1 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 19 = s$
 
-- 명제 $l_9$: $a_3 = 2 \land n < 1000 \Rightarrow n - \delta_1 - \delta_2 - 38 = s$
+- 명제 $l_9$: $a_3 = 2 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 38 = s$
 
-- 명제 $l_{10}$: $a_3 = 3 \land n < 1000 \Rightarrow n - \delta_1 - \delta_2 - 57 = s$
+- 명제 $l_{10}$: $a_3 = 3 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 57 = s$
 
-- 명제 $l_{11}$: $a_3 = 5 \land n < 1000 \Rightarrow n - \delta_1 - \delta_2 - 176 = s$
+- 명제 $l_{11}$: $a_3 = 5 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 176 = s$
 
-- 명제 $l_{12}$: $a_3 = 6 \land n < 1000 \Rightarrow n - \delta_1 - \delta_2 - 195 = s$
+- 명제 $l_{12}$: $a_3 = 6 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 195 = s$
 
-이때 $\delta _3 = \begin{cases} a_3 \times (1 + 18) &(a_3 \leq 3)\\9 ^{2} + a_3 \times (1 + 18) &(a_3 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
+이때 $\epsilon _3 = \begin{cases} a_3 \times (1 + 18) &(a_3 \leq 3)\\9 ^{2} + a_3 \times (1 + 18) &(a_3 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
 
-$$ n < 1000 \Rightarrow n- \delta _1- \delta _2 - \delta _3 = s$$
+$$ n < 1000 \Rightarrow n- \epsilon _1- \epsilon _2 - \epsilon _3 = s$$
 
-로 추상화된다. 그러면 이를 통하여 $n = 999 \Rightarrow s = n- \delta _1- \delta _2 - \delta _3 = 999 - 1 - 18 - 252 = 728$ 을 얻는다. 또한 이로써 $n$ 을 $999$ 증가시키면 $s$ 는 $728$ 이 증가된다는 사실 또한 얻는다. 그러므로 이것을 기점으로 다음의 표를 작성할 수 있다.
+로 추상화된다. 그러면 이를 통하여 $n = 999 \Rightarrow s = n- \epsilon _1- \epsilon _2 - \epsilon _3 = 999 - 1 - 18 - 252 = 728$ 을 얻는다. 또한 이로써 $n$ 을 $999$ 증가시키면 $s$ 는 $728$ 이 증가된다는 사실 또한 얻는다. 그러므로 이것을 기점으로 다음의 표를 작성할 수 있다.
 
 |$n$|$s$|$n$|$s$|
 |:---:|:---:|:---:|:---:|
@@ -123,45 +123,61 @@ $$ n < 1000 \Rightarrow n- \delta _1- \delta _2 - \delta _3 = s$$
 |2999|2186|6999|4373|
 |3000|2187|
 
-- 명제 $l_{13}$: $a_4 = 1 \land n < 10000 \Rightarrow n -\delta _1- \delta _2 - \delta _3 - 271 = s$
+- 명제 $l_{13}$: $a_4 = 1 \land n < 10000 \Rightarrow n -\epsilon _1- \epsilon _2 - \epsilon _3 - 271 = s$
 
-- 명제 $l_{14}$: $a_4 = 2 \land n < 10000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - 542 = s$
+- 명제 $l_{14}$: $a_4 = 2 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 542 = s$
 
-- 명제 $l_{15}$: $a_4 = 3 \land n < 10000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - 813 = s$
+- 명제 $l_{15}$: $a_4 = 3 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 813 = s$
 
-- 명제 $l_{16}$: $a_4 = 5 \land n < 10000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - 2084 = s$
+- 명제 $l_{16}$: $a_4 = 5 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 2084 = s$
 
-- 명제 $l_{17}$: $a_4 = 6 \land n < 10000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - 2355 = s$
+- 명제 $l_{17}$: $a_4 = 6 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 2355 = s$
 
-이때 $\delta _4 = \begin{cases} a_4 \times (1 + 18 + 252) &(a_4 \leq 3)\\ 9 ^{3} + a_4 \times (1 + 18 + 252) &(a_4 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
+이때 $\epsilon _4 = \begin{cases} a_4 \times (1 + 18 + 252) &(a_4 \leq 3)\\ 9 ^{3} + a_4 \times (1 + 18 + 252) &(a_4 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
 
-$$ n < 10000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - \delta _4 = s $$
+$$ n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - \epsilon _4 = s $$
 
 로 추상화된다. 
 
 그렇다면 지금까지의 관찰을 통하여 $n$ 이 $s$ 보다 얼마나 커졌는지 나타내는 함수 $f(n)$ 과 수열 $\alpha _n = 9 \times \displaystyle \sum_{i=1}^{n}10 ^{i-1}$ 과 $k \in \N$ 에 대하여
 
-$$ \delta _k = \begin{cases} a_k \times \displaystyle \sum_{i=1}^{k}f(\alpha_i) &(a_k \leq 3)\\ 9 ^{k-1} + a_k \times \displaystyle \sum_{i=1}^{k}f(\alpha_i) &(a_k > 3)\\ \end{cases} $$
+$$ \epsilon _k = \begin{cases} a_k \times \displaystyle \sum_{i=1}^{k}f(\alpha_i) &(a_k \leq 3)\\ 9 ^{k-1} + a_k \times \displaystyle \sum_{i=1}^{k}f(\alpha_i) &(a_k > 3)\\ \end{cases} $$
 
-라는 사실과 $k \in \N$ 와 $n < 10 ^{k}$ 에 대하여
+라는 사실을 알 수 있다. 이때 
 
-$$ n - \sum_{i=1}^{k} \delta _i = s \iff f(n) = \sum_{i=1}^{k}\delta _i$$
+$$ \delta (a_k, k) = \begin{cases} 0 &(a _{k} \leq 3)\\ 9 ^{k-1} & (a _{k} > 3)\\ \end{cases} $$
 
-라는 사실을 귀납적으로 추상화 시켜낼 수 있다. 그러므로 $n$ 을 구성하는 $a_k$ 들이 모두 $3$ 보다 같거나 작을 때 $f(n)$ 은 
+를 정의하면 
+
+$$ \epsilon _{k} = \delta (a_k, k) + a_k \times \sum_{i=1}^{k}f(\alpha _i) $$
+
+로 쓸 수 있다.
+
+또한 지금까지의 관찰을 통하여 $k \in \N$ 와 $n < 10 ^{k}$ 에 대하여
+
+$$ n - \sum_{i=1}^{k} \epsilon _i = s \iff f(n) = \sum_{i=1}^{k}\epsilon _i$$
+
+라는 사실을 귀납적으로 추상화 시켜낼 수 있다. 그러므로 $f(n)$ 은 
+
+$$ f(n) = \sum_{i=1}^{k} \bigg (\delta (a_k, k) + a_k \times \sum_{i=1}^{k}f(\alpha _i)\bigg ) $$
 
 $$ f(n) = \sum_{i=1}^{k} a_i \times \sum_{j=1}^{i}f(\alpha _j) $$
 
-이다. 이때 $k$ 의 값은 $n$ 보다 너무 커버리면 어차피 $a_k = 0$ 이 되므로 $k$ 를 집합 $\{k \in \N | n < 10 ^{k}\}$ 의 최솟값으로 정해야 한다.
+이다. 
 
-가령 $n = 1399$ 라면 $n < 10000 = 10 ^{4}$ 에서 $k = 4$ 로 정한다. 그러면 
+!!! note
 
-$$ f(1399) = \sum_{i=1}^{4}a_i \times \sum_{j=1}^{i}f(\alpha _j) $$
+    이때 $k$ 의 값은 $n$ 보다 너무 커버리면 어차피 $a_k = 0$ 이 되므로 $k$ 를 집합 $\{k \in \N | n < 10 ^{k}\}$ 의 최솟값으로 정해야 한다.
 
-$$ = 9 \times \sum_{j=1}^{1}f(\alpha _j) + 9 \times \sum_{j=1}^{2}f(\alpha _j) + 3 \times \sum_{j=1}^{3}f(\alpha _j) + 1 \times \sum_{j=1}^{4}f(\alpha _j) $$
+!!! example
 
-$$ = 9 \times 1 + 9 \times (1 + 18) + 3 \times (1 + 18 + 252) + 1 \times \sum_{j=1}^{4}f(\alpha _j) $$
+    가령 $n = 1399$ 라면 $n < 10000 = 10 ^{4}$ 에서 $k = 4$ 로 정한다. 그러면 
 
-아 수열이  $\alpha _0 = 1$ 로 설정해야 하구나.
+    $$ f(1399) = \sum_{i=1}^{4}a_i \times \sum_{j=1}^{i}f(\alpha _j) $$
+
+    $$ = 9 \times \sum_{j=1}^{1}f(\alpha _j) + 9 \times \sum_{j=1}^{2}f(\alpha _j) + 3 \times \sum_{j=1}^{3}f(\alpha _j) + 1 \times \sum_{j=1}^{4}f(\alpha _j) $$
+
+    $$ = 9 \times 1 + 9 \times (1 + 18) + 3 \times (1 + 18 + 252) + 1 \times \sum_{j=1}^{4}f(\alpha _j) $$
 
 !!! note
 
