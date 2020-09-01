@@ -802,7 +802,7 @@
     
     이다.
 
-- ㅇㅇ
+- 아핀 변환 신경망 구성
 
     ![](https://cdn-ak.f.st-hatena.com/images/fotolife/m/msyksphinz/20170622/20170622015132.png)
 
