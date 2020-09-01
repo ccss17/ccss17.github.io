@@ -108,7 +108,7 @@ $$ n < 100 \Rightarrow n - \epsilon _1 - \epsilon _2 = s $$
 
 - 명제 $l_{12}$: $a_3 = 6 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 195 = s$
 
-이때 $\epsilon _3 = \begin{cases} a_3 \times (1 + 18) &(a_3 \leq 3)\\9 ^{2} + a_3 \times (1 + 18) &(a_3 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
+이때 $\epsilon _3 = \begin{cases} a_3 \times 19 &(a_3 \leq 3)\\9 ^{2} + a_3 \times 19 &(a_3 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
 
 $$ n < 1000 \Rightarrow n- \epsilon _1- \epsilon _2 - \epsilon _3 = s$$
 
@@ -133,23 +133,23 @@ $$ n < 1000 \Rightarrow n- \epsilon _1- \epsilon _2 - \epsilon _3 = s$$
 
 - 명제 $l_{17}$: $a_4 = 6 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 2355 = s$
 
-이때 $\epsilon _4 = \begin{cases} a_4 \times (1 + 18 + 252) &(a_4 \leq 3)\\ 9 ^{3} + a_4 \times (1 + 18 + 252) &(a_4 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
+이때 $\epsilon _4 = \begin{cases} a_4 \times 271 &(a_4 \leq 3)\\ 9 ^{3} + a_4 \times 271 &(a_4 > 3)\\ \end{cases}$ 를 정의하면 위 명제들은 명제
 
 $$ n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - \epsilon _4 = s $$
 
 로 추상화된다. 
 
-그렇다면 지금까지의 관찰을 통하여 $n$ 이 $s$ 보다 얼마나 커졌는지 나타내는 함수 $f(n)$ 과 수열 $\alpha _n = 9 \times \displaystyle \sum_{i=1}^{n}10 ^{i-1}$ 과 $k \in \N$ 에 대하여
+그렇다면 지금까지의 관찰을 통하여 $n$ 이 $s$ 보다 얼마나 커졌는지 나타내는 함수 $f(n)$ 과 수열 $\alpha _1 = 1, \alpha _n = 9 \times \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1}$ 과 $k \in \N$ 에 대하여 명제
 
-$$ \epsilon _k = \begin{cases} a_k \times \displaystyle \sum_{i=1}^{k}f(\alpha_i) &(a_k \leq 3)\\ 9 ^{k-1} + a_k \times \displaystyle \sum_{i=1}^{k}f(\alpha_i) &(a_k > 3)\\ \end{cases} $$
+$$ \epsilon _k = \begin{cases} a_k f(\alpha_k) &(a_k \leq 3)\\ 9 ^{k-1} + a_k f(\alpha_k) &(a_k > 3)\\ \end{cases} $$
 
-라는 사실을 알 수 있다. 이때 
+를 귀납적으로 추상화시켜낼 수 있다. 이때 
 
 $$ \delta (a_k, k) = \begin{cases} 0 &(a _{k} \leq 3)\\ 9 ^{k-1} & (a _{k} > 3)\\ \end{cases} $$
 
 를 정의하면 
 
-$$ \epsilon _{k} = \delta (a_k, k) + a_k \times \sum_{i=1}^{k}f(\alpha _i) $$
+$$ \epsilon _{k} = \delta (a_k, k) + a_k f(\alpha _k) $$
 
 로 쓸 수 있다.
 
@@ -157,41 +157,110 @@ $$ \epsilon _{k} = \delta (a_k, k) + a_k \times \sum_{i=1}^{k}f(\alpha _i) $$
 
 $$ n - \sum_{i=1}^{k} \epsilon _i = s \iff f(n) = \sum_{i=1}^{k}\epsilon _i$$
 
-라는 사실을 귀납적으로 추상화 시켜낼 수 있다. 그러므로 $f(n)$ 은 
+라는 사실을 귀납적으로 추상화 시켜낼 수 있다. 그러므로 최종적으로 $f(n)$ 은 $k \in \N$ 와 $n < 10 ^{k}$ 와 $n$ 을 구성하는 자리수 $a_k$ 와 수열 $\alpha _1 = 1, \alpha _n = 9 \times \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1}$ 과 사전에 정의한 $\delta (a_k, k)$ 에 대하여
 
-$$ f(n) = \sum_{i=1}^{k} \bigg (\delta (a_k, k) + a_k \times \sum_{i=1}^{k}f(\alpha _i)\bigg ) $$
+$$ \therefore  f(n) = \sum_{i=1}^{k} \bigg (\delta (a_i, i) + a_i f(\alpha _i)\bigg ) $$
 
-$$ f(n) = \sum_{i=1}^{k} a_i \times \sum_{j=1}^{i}f(\alpha _j) $$
+이다. 단, $f(1) = 0$ 이다.
 
-이다. 
+이때 $f(1)$ 이 있으면 $1 \leq n < 10$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다.
+
+$f(1), f(9)$ 가 있으면 $10 \leq n < 100$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다.
+
+$f(1), f(9), f(99)$ 가 있으면 $100 \leq n < 1000$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다.
+
+그러므로 $f(\alpha _1), f(\alpha _2), \dots, f(\alpha _{k})$ 가 있으면 $10 ^{k-1} \leq n < 10 ^{k}$ 인 $n$ 에 대하여 $f(n)$ 을 계산할 수 있다는 사실을 귀납적으로 추상화시킬 수 있다.
+
+그러므로 구하고자 하는 $n$ 이 $n < 10 ^{k}$ 라면 $f(\alpha _1), f(\alpha _2), \dots, f(\alpha _{k})$ 이 있으면 된다. 이러한 $f(\alpha _1), f(\alpha _2), \dots, f(\alpha _{k})$ 같은 것들은 자주 계산될텐데 이러한 $f(n)$ 의 결과들이 또 다시 계산되지 않도록 이미 계산된 것을 캐싱해두는 것이 효율적이다.
+
+이로써 지금까지의 논의를 통하여 $n$ 과 $s$ 의 차이를 구하는 함수 $f(n)$ 을 코드로 구현할 준비가 되었다. 지금까지의 논의를 기반으로 다음과 같이 매우 쉽게 파이썬 코드를 짤 수 있다.
+
+```python
+def alpha(n):
+    if n == 1:
+        return 1
+    a = 0
+    for i in range(1, n):
+        a += 10 ** (i - 1)
+    return 9 * a
+
+def delta(ak, k):
+    if ak <= 3:
+        return 0
+    else:
+        return 9 ** (k - 1)
+
+f_result = {}
+def f(n):
+    if isinstance(n, int):
+        n_int = n
+        n = repr(n)
+    else:
+        n_int = int(n)
+    if n in f_result:
+        return f_result[n]
+    if n == '1':
+        return 0
+    k = 1
+    while n_int >= 10 ** k:
+        k += 1
+    d = 0
+    for i in range(1, k+1):
+        ni_1 = int(n[::-1][i-1])
+        d += delta(ni_1, i) + ni_1 * f(alpha(i))
+    f_result[n] = d
+    return d
+```
+
+이 코드를 기반으로 다음과 같이 $n = 10 ^{100}$ 일 때 $s$ 를 구해본다.
+
+```python
+i = 10 ** 100
+d = f(i)
+print(int(i) - d)
+```
+
+결과는 다음과 같다. 
+
+```shell
+$ python p1.py
+265613988875874769338781322035779626829233452653394495974574961739092490901302182994384699044001
+```
+
+[hyperfine](https://github.com/sharkdp/hyperfine) 으로 성능을 벤치마킹 해보면 다음과 같다.
+
+```shell
+$ hyperfine 'python p1.py'
+Benchmark #1: python p1.py
+  Time (mean ± σ):     102.8 ms ±  15.0 ms    [User: 97.7 ms, System: 4.7 ms]
+  Range (min … max):    83.8 ms … 133.7 ms    28 runs
+```
+
+$n = 10 ^{100}$ 의 $s$ 를 구하는데 평균적으로 약 $0.1$ 초 정도 걸린다.
+
+이제 이 코드를 기반으로 매우 손쉽게 `C++` 코드로 포팅할 수 있다. 하지만 `C++` 코드는 과제를 제출해야 하기 때문에 블로그에 게시할 수 없다. 어쨌든 포팅 후 $n = 999999$ 를 구하는 성능을 벤치마킹해보면 다음과 같다.
+
+```shell
+$ hyperfine ./p1          
+Benchmark #1: ./p1
+  Time (mean ± σ):       3.4 ms ±   2.4 ms    [User: 2.6 ms, System: 1.8 ms]
+  Range (min … max):     0.0 ms …  25.3 ms    496 runs
+```
+
+평균적으로 $0.003$ 초 걸린다. 파이썬 코드로 $n = 999999$ 를 구하는 성능에 대한 벤치마킹은 다음과 같다.
+
+```shell
+$ hyperfine 'python p1.py'                                                 
+Benchmark #1: python p1.py
+  Time (mean ± σ):      51.6 ms ±  12.6 ms    [User: 40.4 ms, System: 10.5 ms]
+  Range (min … max):    33.1 ms …  82.7 ms    58 runs
+```
+
+평균적으로 $0.051$ 초 걸린다.
 
 !!! note
 
     이때 $k$ 의 값은 $n$ 보다 너무 커버리면 어차피 $a_k = 0$ 이 되므로 $k$ 를 집합 $\{k \in \N | n < 10 ^{k}\}$ 의 최솟값으로 정해야 한다.
-
-!!! example
-
-    가령 $n = 1399$ 라면 $n < 10000 = 10 ^{4}$ 에서 $k = 4$ 로 정한다. 그러면 
-
-    $$ f(1399) = \sum_{i=1}^{4}a_i \times \sum_{j=1}^{i}f(\alpha _j) $$
-
-    $$ = 9 \times \sum_{j=1}^{1}f(\alpha _j) + 9 \times \sum_{j=1}^{2}f(\alpha _j) + 3 \times \sum_{j=1}^{3}f(\alpha _j) + 1 \times \sum_{j=1}^{4}f(\alpha _j) $$
-
-    $$ = 9 \times 1 + 9 \times (1 + 18) + 3 \times (1 + 18 + 252) + 1 \times \sum_{j=1}^{4}f(\alpha _j) $$
-
-!!! note
-
-    $$ a_1 = 0, a_n = 9 \times 10 ^{n-1} + a _{n-1} $$
-
-    $$ a_2 = 9 \times 10 ^{2-1} + a _{1} $$
-
-    $$ a_3 = 9 \times 10 ^{3-1} + a _{2} $$
-
-    $$ \vdots $$
-
-    $$ a_n = 9 \times 10 ^{n-1} + a _{n-1} $$
-
-    $$ a_n = 9 \times \sum_{i=1}^{n} 10 ^{i - 1} $$
 
 !!! note
 

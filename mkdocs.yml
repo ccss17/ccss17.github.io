@@ -4,8 +4,9 @@ site_author: ccsss
 # repo_url: https://github.com/ccss17/ccss17.github.io
 
 nav:
-  - 인공지능 만들기:
-    - 1. 기초: index.md
+  - Home: index.md
+  - HAI:
+    - 1. 기초: HAI/base.md
     - 2. 생각: HAI/think.md
     - 3. 실행: HAI/doit.md
     - 수학의 역사: HAI/math_history.md
