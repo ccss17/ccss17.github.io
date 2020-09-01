@@ -139,15 +139,17 @@ $$ n < 10000 \Rightarrow n-\delta _1- \delta _2 - \delta _3 - \delta _4 = s $$
 
 로 추상화된다. 
 
-그렇다면 지금까지의 관찰을 통하여 $n$ 이 $s$ 보다 얼마나 커졌는지 나타내는 함수 $f(n)$ 과 수열 $\alpha _n = 9 \times \displaystyle \sum_{i=1}^{n}10 ^{i-1}$ 과 $k \in \N$ 에 대하여
+그렇다면 지금까지의 관찰을 통하여 $n$ 이 $s$ 보다 얼마나 커졌는지 나타내는 함수 $f(n)$ 과 수열 $\alpha _1 = 1, \alpha _n = 9 \times \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1}$ 과 $k \in \N$ 에 대하여
 
 $$ \delta _k = \begin{cases} a_k \times \displaystyle \sum_{i=1}^{k}f(\alpha_i) &(a_k \leq 3)\\ 9 ^{k-1} + a_k \times \displaystyle \sum_{i=1}^{k}f(\alpha_i) &(a_k > 3)\\ \end{cases} $$
 
-라는 사실과 $k \in \N$ 와 $n < 10 ^{k}$ 에 대하여
+라는 사실을 귀납적으로 추상화 할 수 있다. 그리고 $k \in \N$ 와 $n < 10 ^{k}$ 에 대하여
 
 $$ n - \sum_{i=1}^{k} \delta _i = s \iff f(n) = \sum_{i=1}^{k}\delta _i$$
 
-라는 사실을 귀납적으로 추상화 시켜낼 수 있다. 그러므로 $n$ 을 구성하는 $a_k$ 들이 모두 $3$ 보다 같거나 작을 때 $f(n)$ 은 
+라는 사실을 귀납적으로 추상화 시켜낼 수 있다. 
+
+그러므로 $n$ 을 구성하는 $a_k$ 들이 모두 $3$ 보다 같거나 작을 때 $f(n)$ 은 
 
 $$ f(n) = \sum_{i=1}^{k} a_i \times \sum_{j=1}^{i}f(\alpha _j) $$
 
@@ -159,7 +161,7 @@ $$ f(1399) = \sum_{i=1}^{4}a_i \times \sum_{j=1}^{i}f(\alpha _j) $$
 
 $$ = 9 \times \sum_{j=1}^{1}f(\alpha _j) + 9 \times \sum_{j=1}^{2}f(\alpha _j) + 3 \times \sum_{j=1}^{3}f(\alpha _j) + 1 \times \sum_{j=1}^{4}f(\alpha _j) $$
 
-$$ = 9 \times 1 + 9 \times (1 + 18) + 3 \times (1 + 18 + 252) + 1 \times \sum_{j=1}^{4}f(\alpha _j) $$
+$$ = 9 \times 0 + 9 \times (0 + 1) + 3 \times (0 + 1 + 18) + 1 \times (0 + 1 + 18 + 252) $$
 
 아 수열이  $\alpha _0 = 1$ 로 설정해야 하구나.
 
