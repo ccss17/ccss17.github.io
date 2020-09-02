@@ -53,7 +53,7 @@ long long f(long long n)
         k += 1;
 
     int result = 0;
-    for (int i = 1; i < k + 1; i++)
+    for (int i = 1; i <= k; i++)
     {
         int ai = num_digit(n, i);
         result += delta(ai, i) + ai * f(gamma(i));
