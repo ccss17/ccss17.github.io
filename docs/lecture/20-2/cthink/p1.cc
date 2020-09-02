@@ -1,15 +1,21 @@
 #include <iostream>
 #include <map>
-using namespace std;
 
-map<string, int> f_result;
+std::map<long long, long long> f_result;
+
+int num_digit(int n, int i)
+{
+    while (--i > 0)
+        n /= 10;
+    return n % 10;
+}
 
 long long pow(int n, unsigned int m)
 {
-    int tmp;
     if (m == 0)
         return 1;
-    tmp = pow(n, m / 2);
+
+    int tmp = pow(n, m / 2);
     if (m % 2 == 0)
         return tmp * tmp;
     else
@@ -20,6 +26,7 @@ int gamma(int n)
 {
     if (n == 1)
         return 1;
+
     int tmp = 0;
     for (int i = 1; i < n; i++)
         tmp += pow(10, i - 1);
@@ -34,34 +41,32 @@ int delta(int ak, int k)
         return pow(9, k - 1);
 }
 
-long long f(string n);
-long long f(int n);
-long long _f(string n, int n_int)
+long long f(long long n)
 {
     if (f_result.find(n) != f_result.end())
         return f_result[n];
-    if (n == "1")
+    if (n == 1)
         return 0;
+
     int k = 1;
-    while (n_int >= pow(10, k))
+    while (n >= pow(10, k))
         k += 1;
+
     int result = 0;
-    size_t l = n.size();
     for (int i = 1; i < k + 1; i++)
     {
-        int ai = n[l - i] - '0';
+        int ai = num_digit(n, i);
         result += delta(ai, i) + ai * f(gamma(i));
     }
+
     f_result[n] = result;
     return result;
 }
 
-long long f(string n) { return _f(n, stoi(n)); }
-long long f(int n) { return _f(to_string(n), n); }
-
-int main(int c, char *v[])
+int main(int c, char* v[])
 {
-    int in = 999999;
-    cout << in - f(in) << endl;
+    long long in = 999999;
+    // long long in = pow(10, 7);
+    std::cout << in - f(in) << std::endl;
     return 0;
 }

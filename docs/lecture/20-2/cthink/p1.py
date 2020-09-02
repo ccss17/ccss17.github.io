@@ -26,7 +26,7 @@ def f(n):
     result, l = 0, len(n)
     for i in range(1, k+1):
         ai = int(n[l - i])
-        result += delta(ai, i) + ai * f(repr(gamma(i)))
+        result += ai * f(repr(gamma(i))) + delta(ai, i) 
 
     f_result[n] = result
     return result
