@@ -65,9 +65,11 @@
 
 - $a_1 > 3 \land n < 10 \Rightarrow n - 1 = s$
 
-$\epsilon_1 = \begin{cases} 0 &(a_1 \leq 3)\\ 1 &(a_1 > 3)\\ \end{cases}$ 을 정의하면 위 명제들을 명제
+$$\epsilon_1 = \begin{cases} 0 &(a_1 \leq 3)\\ 1 &(a_1 > 3)\\ \end{cases} \tag{1} $$
 
-$$ n < 10 \Rightarrow n - \epsilon_1 = s $$
+을 정의하면 위 명제들을 명제
+
+$$ n < 10 \Rightarrow n - \epsilon_1 = s \tag{2} $$
 
 로 추상화시킬 수 있다.
 
@@ -88,9 +90,11 @@ $\epsilon_1$ 를 사용하여 위 표에서 나타난 자연수 증가 패턴을
 
 - $a_2 = 6 \land n < 100 \Rightarrow n - \epsilon_1 - 15 = s$
 
-$\epsilon _2 = \begin{cases} a_2 &(a_2 \leq 3)\\ a_2 + 9 &(a_2 > 3)\\ \end{cases}$ 를 정의하면 위 명제들을 명제
+$$\epsilon _2 = \begin{cases} a_2 &(a_2 \leq 3)\\ a_2 + 9 &(a_2 > 3)\\ \end{cases} \tag{3} $$ 
 
-$$ n < 100 \Rightarrow n - \epsilon _1 - \epsilon _2 = s $$
+를 정의하면 위 명제들을 명제
+
+$$ n < 100 \Rightarrow n - \epsilon _1 - \epsilon _2 = s \tag{4} $$
 
 로 추상화시킬 수 있다. 그러면 이를 통하여 $n = 99 \Rightarrow s = n - \epsilon _1 - \epsilon _2 = 99 - 1 - 18 = 80$ 을 얻는다. 또한 이로써 $n$ 을 $99$ 증가시키면 $s$ 는 $80$ 이 증가된다는 사실도 얻는다. 이것을 기점으로 다음의 표를 작성할 수 있다.
 
@@ -111,9 +115,11 @@ $\epsilon_1, \epsilon _2$ 를 사용하여 위 표에서 나타난 자연수 증
 
 - $a_3 = 6 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 195 = s$
 
-$\epsilon _3 = \begin{cases} a_3 \times 19 &(a_3 \leq 3)\\a_3 \times 19 + 9 ^{2}&(a_3 > 3)\\ \end{cases}$ 를 정의하면 위 명제들을 명제
+$$\epsilon _3 = \begin{cases} a_3 \times 19 &(a_3 \leq 3)\\a_3 \times 19 + 9 ^{2}&(a_3 > 3)\\ \end{cases} \tag{5} $$ 
 
-$$ n < 1000 \Rightarrow n- \epsilon _1- \epsilon _2 - \epsilon _3 = s$$
+를 정의하면 위 명제들을 명제
+
+$$ n < 1000 \Rightarrow n- \epsilon _1- \epsilon _2 - \epsilon _3 = s \tag{6} $$
 
 로 추상화시킬 수 있다. 그러면 이를 통하여 $n = 999 \Rightarrow s = n- \epsilon _1- \epsilon _2 - \epsilon _3 = 999 - 1 - 18 - 252 = 728$ 을 얻는다. 또한 이로써 $n$ 을 $999$ 증가시키면 $s$ 는 $728$ 이 증가된다는 사실도 얻는다. 이것을 기점으로 다음의 표를 작성할 수 있다.
 
@@ -135,37 +141,45 @@ $\epsilon_1, \epsilon _2, \epsilon _3$ 를 사용하여 위 표에서 나타난 
 
 - $a_4 = 6 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 2355 = s$
 
-$\epsilon _4 = \begin{cases} a_4 \times 271 &(a_4 \leq 3)\\ a_4 \times 271 + 9 ^{3}&(a_4 > 3)\\ \end{cases}$ 를 정의하면 위 명제들을 명제
+$$\epsilon _4 = \begin{cases} a_4 \times 271 &(a_4 \leq 3)\\ a_4 \times 271 + 9 ^{3}&(a_4 > 3)\\ \end{cases} \tag{7} $$ 
 
-$$ n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - \epsilon _4 = s $$
+를 정의하면 위 명제들을 명제
+
+$$ n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - \epsilon _4 = s \tag{8} $$
 
 로 추상화시킬 수 있다.
 
 ### 2차 추상화
 
-지금까지의 관찰과 1차 추상화를 통하여 $\epsilon _1, \epsilon _2, \epsilon _3, \dots$ 들을 $n$ 이 $s$ 보다 얼마나 커졌는지 나타내는 함수 $f(n)$ 과 수열 $\gamma _1 = 1, \gamma _n = 9 \times \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1}$ 과 $k \in \N$ 에 대하여 
+먼저 수열 $\{\gamma _{n}\} : 1, 9, 99, 999, 9999, \dots$ 을 
 
-$$ \epsilon _k = \begin{cases} a_k f(\gamma_k) &(a_k \leq 3)\\ a_k f(\gamma_k) + 9 ^{k-1}&(a_k > 3)\\ \end{cases} $$
+$$ \gamma _n = 9 \times \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1} \tag{9} $$
+
+로 정의한다(단, $\gamma _1 = 1$).
+
+그렇다면 $(1), (3), (5), (7)$ 을 함수 $f(n)$ 과 수열 $\gamma _n$ 과 $k \in \N$ 에 대하여 
+
+$$ \epsilon _k = \begin{cases} a_k f(\gamma_k) &(a_k \leq 3)\\ a_k f(\gamma_k) + 9 ^{k-1}&(a_k > 3)\\ \end{cases} \tag{10} $$
 
 로 귀납적으로 추상화시킬 수 있다. 이때 
 
-$$ \delta (a_k, k) = \begin{cases} 0 &(a _{k} \leq 3)\\ 9 ^{k-1} & (a _{k} > 3)\\ \end{cases} $$
+$$ \delta (a_k, k) = \begin{cases} 0 &(a _{k} \leq 3)\\ 9 ^{k-1} & (a _{k} > 3)\\ \end{cases} \tag{11} $$
 
-를 정의하면 $\epsilon _k$ 를
+를 정의하면 $(10)$ 을 
 
-$$ \epsilon _{k} = a_k f(\gamma _k) + \delta (a_k, k) $$
+$$ \epsilon _{k} = a_k f(\gamma _k) + \delta (a_k, k) \tag{12} $$
 
 로 쓸 수 있다.
 
-또한 지금까지의 관찰과 1차 추상화를 통하여 $n - \epsilon _1 = s, n - \epsilon _1 - \epsilon _2= s, n - \epsilon _1 - \epsilon _2 - \epsilon _3= s, \dots$ 들을 $n < 10 ^{k}$ 를 만족하는 가장 작은 $k \in \N$ 대하여
+또한 $(2), (4), (6), (8)$ 을 $n < 10 ^{k}$ 를 만족하는 가장 작은 $k \in \N$ 대하여
 
-$$ n - \sum_{i=1}^{k} \epsilon _i = s \iff f(n) = \sum_{i=1}^{k}\epsilon _i$$
+$$ n - \sum_{i=1}^{k} \epsilon _i = s \iff f(n) = \sum_{i=1}^{k}\epsilon _i \tag{13} $$
 
-로 귀납적으로 추상화 시킬 수 있다. 그러므로 $f(n)$ 은 $n < 10 ^{k}$ 를 만족하는 가장 작은 $k \in \N$ 와 $n$ 을 구성하는 자리수 $a_k$ 와 수열 $\gamma _1 = 1, \gamma _n = 9 \times \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1}$ 과 $\delta (a_k, k)$ 에 대하여
+로 귀납적으로 추상화 시킬 수 있다. 그러므로 $\epsilon_i$ 를 $(12)$ 로 치환하여 다음을 얻는다(단, $f(1) = 0$). 
 
-$$ \therefore \boxed{f(n) = \sum_{i=1}^{k} \bigg (a_i f(\gamma _i) + \delta (a_i, i)\bigg )}  $$
+$$ \therefore \boxed{f(n) = \sum_{i=1}^{k} \bigg (a_i f(\gamma _i) + \delta (a_i, i)\bigg )} \tag{14} $$
 
-이다(단, $f(1) = 0$). **이렇게 $f(n)$ 이 존재한다는 것이 귀납적으로 증명되었다.■**
+**이렇게 $f(n)$ 이 존재한다는 것이 귀납적으로 증명되었다.■**
 
 !!! note
 
@@ -181,30 +195,39 @@ $$ \therefore \boxed{f(n) = \sum_{i=1}^{k} \bigg (a_i f(\gamma _i) + \delta (a_i
 
 ## P1 코드 구현
 
-이로써 지금까지의 논의를 통하여 $n$ 과 $s$ 의 차이를 구하는 함수 $f(n)$ 을 코드로 구현할 준비가 되었다. 지금까지의 논의를 기반으로 다음과 같이 매우 쉽게 **Python** 코드를 짤 수 있다. 그냥 수식을 코드로 옮긴 것에 불과하다.
+이로써 지금까지의 논의를 통하여 $n$ 과 $s$ 의 차이를 구하는 함수 $f(n)$ 을 코드로 구현할 준비가 되었다. 지금까지의 논의를 기반으로 다음과 같이 매우 쉽게 **Python** 코드를 짤 수 있다. 단지 수식 $(14)$ 와 수식 $(14)$ 가 의존하는 수식 $(9), (11)$ 을 코드로 옮긴 것에 불과하다.
 
 ```python
 def gamma(n):
-    if n == 1: return 1
+    if n == 1:
+        return 1
+
     tmp = 0
     for i in range(1, n):
         tmp += 10 ** (i - 1)
+
     return 9 * tmp
 
 def delta(ak, k):
     return 0 if ak <= 3 else 9 ** (k - 1)
 
 f_result = {}
+
 def f(n):
-    if n in f_result: return f_result[n]
-    if n == '1': return 0
+    if n in f_result:
+        return f_result[n]
+    if n == '1':
+        return 0
+
     n_int, k = int(n), 1
     while n_int >= 10 ** k:
         k += 1
+
     result, l = 0, len(n)
     for i in range(1, k+1):
         ai = int(n[l - i])
-        result += delta(ai, i) + ai * f(repr(gamma(i)))
+        result += ai * f(repr(gamma(i))) + delta(ai, i) 
+
     f_result[n] = result
     return result
 ```
@@ -222,8 +245,6 @@ print(i - f(repr(i)))
 $ python p1.py
 265613988875874769338781322035779626829233452653394495974574961739092490901302182994384699044001
 ```
-
-이제 이 **Python** 코드를 기반으로 매우 손쉽게 **C++** 코드로 포팅할 수 있다. 하지만 **C++** 코드는 과제로 제출해야 하기 때문에 블로그에 게시할 수 없다. 
 
 ### 성능 평가
 
