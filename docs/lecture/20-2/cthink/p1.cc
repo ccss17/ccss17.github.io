@@ -16,14 +16,14 @@ long long pow(int n, unsigned int m)
         return n * tmp * tmp;
 }
 
-int alpha(int n)
+int gamma(int n)
 {
     if (n == 1)
         return 1;
-    int a = 0;
+    int tmp = 0;
     for (int i = 1; i < n; i++)
-        a += pow(10, i - 1);
-    return 9 * a;
+        tmp += pow(10, i - 1);
+    return 9 * tmp;
 }
 
 int delta(int ak, int k)
@@ -45,15 +45,15 @@ long long _f(string n, int n_int)
     int k = 1;
     while (n_int >= pow(10, k))
         k += 1;
-    int d = 0;
+    int result = 0;
     size_t l = n.size();
-    for (int i = 1; i < k+1; i++)
+    for (int i = 1; i < k + 1; i++)
     {
-        int ni_1 = n[l - i] - '0';
-        d += delta(ni_1, i) + ni_1 * f(alpha(i));
+        int ai = n[l - i] - '0';
+        result += delta(ai, i) + ai * f(gamma(i));
     }
-    f_result[n] = d;
-    return d;
+    f_result[n] = result;
+    return result;
 }
 
 long long f(string n) { return _f(n, stoi(n)); }
