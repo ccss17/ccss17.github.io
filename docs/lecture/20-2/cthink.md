@@ -270,6 +270,15 @@ Benchmark #1: python p1.py
 
 **C++** 로 구현한 것이 **Python** 보다 $21$ 배 정도 더 빠르다.
 
+**C++** 로 $n = 99999999$ 에 대한 $s$ 를 구하는 성능을 벤치마킹해보면 다음과 같이 평균적으로 $0.002$ 초 걸린다. 
+
+```shell
+$ hyperfine ./p1
+Benchmark #1: ./a.out
+  Time (mean ± σ):       2.8 ms ±   1.2 ms    [User: 2.0 ms, System: 1.6 ms]
+  Range (min … max):     0.0 ms …   7.8 ms    307 runs
+```
+
 ---
 
 !!! note
