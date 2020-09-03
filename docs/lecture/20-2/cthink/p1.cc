@@ -3,8 +3,6 @@
 #include <map>
 #include <cmath>
 
-std::map<int, int> f_result;
-
 int num_digit(int n, int i)
 {
     while (--i > 0)
@@ -12,12 +10,12 @@ int num_digit(int n, int i)
     return n % 10;
 }
 
-int pow(int n, unsigned int m)
+int power(int n, unsigned int m)
 {
     if (m == 0)
         return 1;
 
-    int tmp = pow(n, m / 2);
+    int tmp = power(n, m / 2);
     if (m % 2 == 0)
         return tmp * tmp;
     else
@@ -31,7 +29,7 @@ int gamma(int n)
 
     int tmp = 0;
     for (int i = 1; i < n; i++)
-        tmp += pow(10, i - 1);
+        tmp += power(10, i - 1);
     return 9 * tmp;
 }
 
@@ -40,11 +38,13 @@ int delta(int ak, int k)
     if (ak <= 3)
         return 0;
     else
-        return pow(9, k - 1);
+        return power(9, k - 1);
 }
 
 int f(int n)
 {
+    static std::map<int, int> f_result;
+
     if (f_result.find(n) != f_result.end())
         return f_result[n];
     if (n == 1)
@@ -65,7 +65,8 @@ int f(int n)
 
 int main(int c, char* v[])
 {
-    int in = 999999;
+    int in;
+    std::cin >> in;
     std::cout << in - f(in) << std::endl;
     return 0;
 }
