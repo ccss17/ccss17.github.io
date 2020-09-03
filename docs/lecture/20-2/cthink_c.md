@@ -46,11 +46,15 @@
 
 # 가설 1 증명
 
-자연수 $n \in \N$ 은 $i \in \N$ 에 대한 $a_i \in \{0,1,2,3,5,6,7,8,9\}$ 에 대하여 $n = \dots a_i \dots a_5a_4a_3a_2a_1$ 로 구성된다.
+- 자연수 $n \in \N$ 은 $i \in \N$ 에 대한 $a_i \in \{0,1,2,3,5,6,7,8,9\}$ 에 대하여 $n = \dots a_i \dots a_5a_4a_3a_2a_1$ 로 구성
 
-이때 $n$ 을 일반적인 자연수 증가 방식에 따른 증가 결과값으로 변환한 자연수를 $s \in \N$ 이라고 하자. 그리고 $n$ 의 숫자 자리수 $a_k$ 와 $s$ 의 숫자 자리수 $b_k$ 와의 차이를 $\epsilon _k$ 라고 하자.
+- 이때 $n$ 을 일반적인 자연수 증가 방식에 따른 증가 결과값으로 변환한 자연수를 $s \in \N$ 이라고 정의함. 
 
-그러면 $f(n)$ 은 $f(n) = \epsilon _1 + \epsilon _2 + \epsilon _3 + \dots$ 으로 계산될 수 있다. 먼저 $n = 1$ 일 때 $s = 1$ 이므로 $f(1) = 0$ 이다.
+- $n$ 의 숫자 자리수 $a_k$ 와 $s$ 의 숫자 자리수 $b_k$ 와의 차이를 $\epsilon _k$ 라고 정의함.
+
+- $f(n) = \epsilon _1 + \epsilon _2 + \epsilon _3 + \dots$ 으로 계산가능. 
+
+- $n = 1$ 일 때는 $s = 1$ 이므로 $f(1) = 0$
 
 ## 패턴 관찰과 1차 추상화
 
@@ -61,109 +65,145 @@
 |3|3|
 |5|4|
 
-$n < 10$ 일 때 위 표에서 나타난 자연수 증가 패턴을 귀납적으로 추상화시켜 다음의 명제를 얻을 수 있다.
+$a_1 \leq 3 \land n < 10 \to n = s$
 
-- $a_1 \leq 3 \land n < 10 \to n = s$
+$a_1 > 3 \land n < 10 \to n - 1 = s$
 
-- $a_1 > 3 \land n < 10 \to n - 1 = s$
+- $$\epsilon_1 = \begin{cases} 0 &(a_1 \leq 3)\\ 1 &(a_1 > 3)\\ \end{cases} \tag{1} $$
 
-$$\epsilon_1 = \begin{cases} 0 &(a_1 \leq 3)\\ 1 &(a_1 > 3)\\ \end{cases} \tag{1} $$
+    을 정의하여 
 
-을 정의하면 위 명제들을
+    $$ n < 10 \to n - \epsilon_1 = s \tag{2} \to f(n) = \epsilon _1 $$
 
-$$ n < 10 \to n - \epsilon_1 = s \tag{2} \to f(n) = \epsilon _1 $$
-
-로 추상화시킬 수 있다. 
+    로 일반화.
 
 ### $10 \leq n < 100$ 일 때
 
-$10 \leq n < 100$ 이면서 $a_2 \leq 3$ 이면 $\epsilon _1$ 의 최댓값이 $a_2$ 만큼 증가한 것이므로 $10 \leq n < 100 \land a_2 \leq 3 \to \epsilon _2 = \max \epsilon _1 \cdot a_2 = f(9) \cdot a_2$ 이다.
+$10 \leq n < 100$ 이면서 $a_2 \leq 3$ 이면 $\epsilon _1$ 의 최댓값이 $a_2$ 만큼 증가한 것
 
-이제 $n = 9 \to s = n - \epsilon _1 = 9 - 1 = 8$ 에서 $n$ 을 $9$ 증가시키면 $s$ 가 $8$ 증가된다는 사실을 이용하여 다음의 표를 작성하자. 이로써 $10 \leq n < 100$ 이면서 $a_2$ 가 $3$ 보다 커질 때 $n$ 과 $s$ 의 차이를 살펴본다.
+$\therefore 10 \leq n < 100 \land a_2 \leq 3 \to \epsilon _2 = \max \epsilon _1 \cdot a_2 = f(9) \cdot a_2$ 
+
+이제 $n = 9 \to s = n - \epsilon _1 = 9 - 1 = 8$ 에서 $n$ 을 $9$ 증가시키면 $s$ 가 $8$ 증가된다는 사실을 이용하여 
+
+다음의 표를 작성. 이로써 $10 \leq n < 100$ 이면서 $a_2$ 가 $3$ 보다 커질 때 $n$ 과 $s$ 의 차이를 조사.
 
 |$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |$9$|$8$|$36 = 9 + 9 \cdot 3$|$32 = 8 + 8 \cdot 3$|$39$|$35$|$50$|$36$|
 
-$n = 50$ 일 때 $n$ 과 $s$ 의 차이는 $50 - 36 = 14$ 이다. 그런데 마찬가지로 $\epsilon _1$ 의 최댓값이 $a_2$ 만큼 증가했으므로 순수하게 $a_2$ 가 $3$ 보다 커진 것만으로 $n$ 이 $s$ 보다 커진 값을 계산하면 $14 - f(9) \cdot a_2 = 9$ 이다. 그러므로
+$n = 50$ 일 때 $n$ 과 $s$ 의 차이는 $50 - 36 = 14$. 
+
+이때 마찬가지로 $\epsilon _1$ 의 최댓값이 $a_2$ 만큼 증가했으므로 
+
+순수하게 $a_2$ 가 $3$ 보다 커진 것만으로 $n$ 이 $s$ 보다 커진 값을 계산하면 $14 - f(9) \cdot a_2 = 9$ 
+
+그러므로
 
 $$\epsilon _2 = \begin{cases} f(9) \cdot a_2 &(a_2 \leq 3)\\ f(9) \cdot a_2 + 9 &(a_2 > 3)\\ \end{cases} \tag{3} $$ 
 
 를 정의하여
 
-$$ n < 100 \to n - \epsilon _1 - \epsilon _2 = s \to f(n) = \epsilon _1 + \epsilon _2 \tag{4} $$
+$$ \therefore  n < 100 \to n - \epsilon _1 - \epsilon _2 = s \to f(n) = \epsilon _1 + \epsilon _2 \tag{4} $$
 
 를 얻는다.
 
 ### $100 \leq n < 1000$ 일 때
 
-$100 \leq n < 1000$ 이면서 $a_3 \leq 3$ 이면 $\epsilon _1, \epsilon _2$ 의 최댓값이 $a_3$ 만큼 증가한 것이므로 $100 \leq n < 1000 \land a_3 \leq 3 \to \epsilon 3 = (\max \epsilon _1 + \max \epsilon _2) \cdot a_3 = f(99) \cdot a_3$ 이다.
+$100 \leq n < 1000$ 이면서 $a_3 \leq 3$ 이면 $\epsilon _1, \epsilon _2$ 의 최댓값이 $a_3$ 만큼 증가한 것
 
-이제 $n = 99 \to s = n - \epsilon _1 - \epsilon _2 = 99 - 1 - 18 = 80$ 에서 $n$ 을 $99$ 증가시키면 $s$ 는 $80$ 이 증가된다는 사실을 이용하여 다음의 표를 작성하자. 이로써 $100 \leq n < 1000$ 이면서 $a_3$ 가 $3$ 에서 $5$ 로 증가했을 때 $n$ 과 $s$ 의 차이를 살펴본다. 
+$\therefore 100 \leq n < 1000 \land a_3 \leq 3 \to \epsilon_3 = (\max \epsilon _1 + \max \epsilon _2) \cdot a_3 = f(99) \cdot a_3$ 
+
+이제 $n = 99 \to s = n - \epsilon _1 - \epsilon _2 = 99 - 1 - 18 = 80$ 에서 $n$ 을 $99$ 증가시키면 $s$ 는 $80$ 이 증가된다는 사실을 이용하여 
+
+다음의 표를 작성. 이로써 $100 \leq n < 1000$ 이면서 $a_3$ 가 $3$ 에서 $5$ 로 증가했을 때 $n$ 과 $s$ 의 차이를 조사.
 
 |$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|
 |:---:|:---:|:---: |:---:|:---:|:---:|:---:|:---:|
 |$99$|$80$|$396 = 99 + 99 \cdot 3$|$320 = 80 + 80 \cdot 3$|$399$|$323$|$500$|$324$|
 
-$n = 500$ 일 때 $n$ 과 $s$ 의 차이는 $500 - 324 = 176$ 이다. 그런데 마찬가지로 $\epsilon _1, \epsilon _2$ 의 최댓값이 $a_3$ 만큼 증가했으므로 순수하게 $a_3$ 가 $3$ 보다 커진 것만으로 $n$ 이 $s$ 보다 커진 값을 계산하면 $176 - f(99) \cdot a_3 = 176 - (1 + 18) \cdot 5 = 81 = 9 ^{2}$  이다. 그러므로
+$n = 500$ 일 때 $n$ 과 $s$ 의 차이는 $500 - 324 = 176$. 
+
+이때 마찬가지로 $\epsilon _1, \epsilon _2$ 의 최댓값이 $a_3$ 만큼 증가했으므로 
+
+순수하게 $a_3$ 가 $3$ 보다 커진 것만으로 $n$ 이 $s$ 보다 커진 값을 계산하면
+
+$176 - f(99) \cdot a_3 = 176 - (1 + 18) \cdot 5 = 81 = 9 ^{2}$ 
 
 $$\epsilon _3 = \begin{cases} f(99) \cdot  a_3 &(a_3 \leq 3)\\f(99) \cdot a_3 + 9 ^{2}&(a_3 > 3)\\ \end{cases} \tag{5} $$ 
 
 를 정의하여
 
-$$ n < 1000 \to n- \epsilon _1- \epsilon _2 - \epsilon _3 = s \to f(n) = \sum_{i=1}^{3} \epsilon _i \tag{6} $$
+$$ \therefore  n < 1000 \to n- \epsilon _1- \epsilon _2 - \epsilon _3 = s \to f(n) = \sum_{i=1}^{3} \epsilon _i \tag{6} $$
 
 을 얻는다. 
 
 ### $1000 \leq n < 10000$ 일 때
 
-$1000 \leq n < 10000$ 이면서 $a_4 \leq 3$ 이면 $\epsilon _1, \epsilon _2, \epsilon _3$ 의 최댓값이 $a_4$ 만큼 증가한 것이므로 $1000 \leq n < 10000 \land a_4 \leq 3 \to \epsilon 4 = (\max \epsilon _1 + \max \epsilon _2 + \max \epsilon _3) \cdot a_4 = f(999) \cdot a_4$ 이다.
+$1000 \leq n < 10000$ 이면서 $a_4 \leq 3$ 이면 $\epsilon _1, \epsilon _2, \epsilon _3$ 의 최댓값이 $a_4$ 만큼 증가한 것
 
-이제 $n = 999 \to s = n- \epsilon _1- \epsilon _2 - \epsilon _3 = 999 - 1 - 18 - 252 = 728$ 에서 $n$ 을 $999$ 증가시키면 $s$ 는 $728$ 이 증가된다는 사실을 이용하여 다음의 표를 작성하자. 이로써 $100 \leq n < 1000$ 이면서 $a_4$ 가 $3$ 에서 $5$ 로 증가했을 때 $n$ 과 $s$ 의 차이를 살펴본다. 
+$\therefore  1000 \leq n < 10000 \land a_4 \leq 3 \to \epsilon 4 = (\max \epsilon _1 + \max \epsilon _2 + \max \epsilon _3) \cdot a_4 = f(999) \cdot a_4$ 이다.
+
+이제 $n = 999 \to s = n- \epsilon _1- \epsilon _2 - \epsilon _3 = 999 - 1 - 18 - 252 = 728$ 에서 $n$ 을 $999$ 증가시키면 
+
+$s$ 는 $728$ 이 증가된다는 사실을 이용하여 다음의 표를 작성. 
+
+이로써 $100 \leq n < 1000$ 이면서 $a_4$ 가 $3$ 에서 $5$ 로 증가했을 때 $n$ 과 $s$ 의 차이를 조사.
 
 |$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |$999$|$728$|$3996 = 999 + 999 \cdot 3$|$2912 = 728 + 728 \cdot 3$|$3999$|$2915$|$5000$|$2916$|
 
-$n$ 과 $s$ 의 차이는 $5000 - 2916 = 2084$ 이다. 그런데 마찬가지로 $\epsilon _1, \epsilon _2, \epsilon _3$ 의 최댓값이 $a_4$ 만큼 증가했으므로 순수하게 $a_4$ 가 $3$ 보다 커진 것만으로 $n$ 이 $s$ 보다 커진 값을 계산하면 $2084 - f(999) \cdot a_4 = 2084 - (1 + 18 + 252) \cdot 5 = 729 = 9 ^{3}$ 이다. 그러므로
+$n = 5000$ 일 때 $n$ 과 $s$ 의 차이는 $5000 - 2916 = 2084$. 
+
+이때 마찬가지로 $\epsilon _1, \epsilon _2, \epsilon _3$ 의 최댓값이 $a_4$ 만큼 증가했으므로 
+
+순수하게 $a_4$ 가 $3$ 보다 커진 것만으로 $n$ 이 $s$ 보다 커진 값을 계산하면 
+
+$2084 - f(999) \cdot a_4 = 2084 - (1 + 18 + 252) \cdot 5 = 729 = 9 ^{3}$ 
 
 $$\epsilon _4 = \begin{cases} f(999) \cdot a_4 &(a_4 \leq 3)\\ f(999) \cdot a_4 + 9 ^{3}&(a_4 > 3)\\ \end{cases} \tag{7} $$ 
 
 를 정의하여
 
-$$ n < 10000 \to n-\epsilon _1- \epsilon _2 - \epsilon _3 - \epsilon _4 = s \to f(n) = \sum_{i=1}^{4}\epsilon _i \tag{8} $$
+$$ \therefore  n < 10000 \to n-\epsilon _1- \epsilon _2 - \epsilon _3 - \epsilon _4 = s \to f(n) = \sum_{i=1}^{4}\epsilon _i \tag{8} $$
 
 을 얻는다.
 
 ## 2차 추상화
 
-먼저 수열 $\{\gamma _{n}\} : 1, 9, 99, 999, 9999, \dots$ 을 
+수열 $\{\gamma _{n}\} : 1, 9, 99, 999, 9999, \dots$ 
 
 $$ \gamma _n = 9 \cdot \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1} \tag{9} $$
 
-로 정의한다(단, $\gamma _1 = 1$).
+정의(단, $\gamma _1 = 1$).
 
-그렇다면 $f(\overbrace{99 \dots 9}^{k}) = f(\gamma _k)$ 이므로 $(1), (3), (5), (7)$ 을 $k \in \N$ 에 대하여 
+$f(\overbrace{99 \dots 9}^{k}) = f(\gamma _k)$ 이므로 $\epsilon _1, \epsilon _2, \epsilon _3, \epsilon _4$ 를 
 
 $$ \epsilon _k = \begin{cases} f(\gamma_k)a_k  &(a_k \leq 3)\\ f(\gamma_k)a_k  + 9 ^{k-1}&(a_k > 3)\\ \end{cases} \tag{10} $$
 
-로 귀납적으로 추상화시켜 본다. 이때 
+로 일반화.
 
 $$ \delta (a_k, k) = \begin{cases} 0 &(a _{k} \leq 3)\\ 9 ^{k-1} & (a _{k} > 3)\\ \end{cases} \tag{11} $$
 
-를 정의하면 $(10)$ 을 
+를 정의하면 
 
 $$ \epsilon _{k} = f(\gamma _k)a_k  + \delta (a_k, k) \tag{12} $$
 
-로 쓸 수 있다.
+로 쓸 수 있음.
 
-또한 $(2), (4), (6), (8)$ 을 $k-1 \leq \log_{10} n < k$ 인 $k \in \N$ 대하여
+또한 $n < 10 ^{4} \to n - \epsilon _1- \epsilon _2- \epsilon _3- \epsilon _4 \to f(n) = \sum_{i=1}^{4} \epsilon _i$ 를
+
+$k-1 \leq \log_{10} n < k$ 인 $k \in \N$ 대하여
 
 $$ n < 10 ^{k} \to f(n) = \sum_{i=1}^{k}\epsilon _i \tag{13} $$
 
-로 귀납적으로 추상화 시킬 수 있다. 그러므로 $\epsilon_i$ 를 $(12)$ 로 치환하여 다음을 얻는다(단, $f(1) = 0$). 
+로 일반화.
+
+이때 $\epsilon_i$ 를 치환하여 
 
 $$ \therefore \boxed{f(n) = \sum_{i=1}^{k} \bigg (f(\gamma _i)a_i  + \delta (a_i, i)\bigg )} \tag{14} $$
+
+을 얻음. (단, $f(1) = 0$). 
 
 !!! note
 
