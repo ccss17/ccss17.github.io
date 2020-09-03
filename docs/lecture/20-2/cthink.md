@@ -282,7 +282,7 @@ Benchmark #1: python p1.py
   Range (min … max):    19.0 ms …  58.6 ms    93 runs
 ```
 
-**C++** 로 구현한 것이 **Python** 보다 $30$ 배 더 빠르다.
+**C++** 로 구현한 것이 **Python** 보다 $21$ 배 정도 더 빠르다.
 
 ---
 
