@@ -1,7 +1,9 @@
 #include <iostream>
+#include <string>
 #include <map>
+#include <cmath>
 
-std::map<long long, long long> f_result;
+std::map<int, int> f_result;
 
 int num_digit(int n, int i)
 {
@@ -10,7 +12,7 @@ int num_digit(int n, int i)
     return n % 10;
 }
 
-long long pow(int n, unsigned int m)
+int pow(int n, unsigned int m)
 {
     if (m == 0)
         return 1;
@@ -41,16 +43,14 @@ int delta(int ak, int k)
         return pow(9, k - 1);
 }
 
-long long f(long long n)
+int f(int n)
 {
     if (f_result.find(n) != f_result.end())
         return f_result[n];
     if (n == 1)
         return 0;
 
-    int k = 1;
-    while (n >= pow(10, k))
-        k += 1;
+    double k = ceil(log10(n));
 
     int result = 0;
     for (int i = 1; i <= k; i++)
@@ -65,8 +65,7 @@ long long f(long long n)
 
 int main(int c, char* v[])
 {
-    long long in = 999999;
-    // long long in = pow(10, 7);
+    int in = 999999;
     std::cout << in - f(in) << std::endl;
     return 0;
 }

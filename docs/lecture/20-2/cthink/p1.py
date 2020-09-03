@@ -1,3 +1,5 @@
+import math
+
 def gamma(n):
     if n == 1:
         return 1
@@ -19,11 +21,9 @@ def f(n):
     if n == '1':
         return 0
 
-    n_int, k = int(n), 1
-    while n_int >= 10 ** k:
-        k += 1
-
-    result, l = 0, len(n)
+    k = math.ceil(math.log10(int(n)))
+    l = len(n)
+    result = 0
     for i in range(1, k+1):
         ai = int(n[l - i])
         result += ai * f(repr(gamma(i))) + delta(ai, i) 
@@ -34,4 +34,6 @@ def f(n):
 
 if __name__ == '__main__':
     i = 10 ** 100
+    # i = 1399
+    # i = 999999
     print(i - f(repr(i)))
