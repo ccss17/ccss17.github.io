@@ -157,7 +157,7 @@ $$ \epsilon _{k} = f(\gamma _k)a_k  + \delta (a_k, k) \tag{12} $$
 
 로 쓸 수 있다.
 
-또한 $(2), (4), (6), (8)$ 을 $k = \left\lceil \log_{10} n \right\rceil$ 에 대하여
+또한 $(2), (4), (6), (8)$ 을 $k-1 \leq \log_{10} n < k$ 인 $k \in \N$ 대하여
 
 $$ n < 10 ^{k} \to f(n) = \sum_{i=1}^{k}\epsilon _i \tag{13} $$
 
@@ -182,8 +182,6 @@ $$ \therefore \boxed{f(n) = \sum_{i=1}^{k} \bigg (f(\gamma _i)a_i  + \delta (a_i
 이로써 지금까지의 논의를 통하여 $n$ 과 $s$ 의 차이를 구하는 함수 $f(n)$ 을 코드로 구현할 준비가 되었다. 지금까지의 논의를 기반으로 다음과 같이 매우 쉽게 **Python** 코드를 짤 수 있다. 단지 수식 $(14)$ 와 수식 $(14)$ 가 의존하는 수식 $(9), (11)$ 을 코드로 옮긴 것에 불과하다.
 
 ```python
-import math
-
 def gamma(n):
     if n == 1:
         return 1
@@ -205,9 +203,11 @@ def f(n):
     if n == '1':
         return 0
 
-    k = math.ceil(math.log10(int(n)))
-    l = len(n)
-    result = 0
+    n_int, k = int(n), 1
+    while n_int >= 10 ** k:
+        k += 1
+
+    result, l = 0, len(n)
     for i in range(1, k+1):
         ai = int(n[l - i])
         result += ai * f(repr(gamma(i))) + delta(ai, i) 

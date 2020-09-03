@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <map>
-#include <cmath>
 
 int num_digit(int n, int i)
 {
@@ -50,7 +49,9 @@ int f(int n)
     if (n == 1)
         return 0;
 
-    double k = ceil(log10(n));
+    int k = 1;
+    while (n >= pow(10, k))
+        k += 1;
 
     int result = 0;
     for (int i = 1; i <= k; i++)
