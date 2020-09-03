@@ -10,7 +10,7 @@
 
 - P1 나옴. 기한 내에 코드 제출 및 보고서 제출.
 
-## P1
+# P1
 
 !!! note ""
 
@@ -20,7 +20,7 @@
     
     웹사이트가 카운팅한 숫자를 올바르게 고쳐라.
 
-### 자연 대상을 수학 명제로 사상시키기
+## 자연 대상을 수학 명제로 사상시키기
 
 이때 편의상 제한 조건도 함께 포함시켰다.
 
@@ -32,7 +32,7 @@
     
     이 $n$ 을 일반적인 자연수 증가 방식에 따른 증가 결과값으로 변환할 수 있다.
 
-### 명제 $p$ 증명 
+## 명제 $p$ 증명 
 
 !!! note "가설 1"
 
@@ -44,142 +44,126 @@
 
 가설 1 이 주장하는 함수 $f(n)$ 이 존재하면 $n - f(n)$ 로 일반적인 자연수 증가 방식에 따라 증가한 자연수 $s \in \N$ 을 구할 수 있으므로 명제 $p$ 가 증명된다.
 
-**그런데 아래의 증명을 통하여 $f(n)$ 이 존재한다는 것이 귀납적으로(비도덕적인(?) 방식으로) 증명되었다. 그러므로 가설 1 이 증명되었다. 이에 따라 명제 $p$ 도 증명되었고, 따라서 명제 $p$ 는 계산가능하다.■**
-
-## 가설 1 증명
+# 가설 1 증명
 
 자연수 $n \in \N$ 은 $i \in \N$ 에 대한 $a_i \in \{0,1,2,3,5,6,7,8,9\}$ 에 대하여 $n = \dots a_i \dots a_5a_4a_3a_2a_1$ 로 구성된다.
 
-### 패턴 관찰과 1차 추상화
+이때 $n$ 을 일반적인 자연수 증가 방식에 따른 증가 결과값으로 변환한 자연수를 $s \in \N$ 이라고 하자. 그리고 $n$ 의 숫자 자리수 $a_k$ 와 $s$ 의 숫자 자리수 $b_k$ 와의 차이를 $\epsilon _k$ 라고 하자.
 
-이때 $n$ 을 일반적인 자연수 증가 방식에 따른 증가 결과값으로 변환한 자연수를 $s \in \N$ 이라고 하자.
+그러면 $f(n)$ 은 $f(n) = \epsilon _1 + \epsilon _2 + \epsilon _3 + \dots$ 으로 계산될 수 있다. 먼저 $n = 1$ 일 때 $s = 1$ 이므로 $f(1) = 0$ 이다.
+
+## 패턴 관찰과 1차 추상화
+
+### $n < 10$ 일 때
 
 |$n$|$s$|
 |:---:|:---:|
 |3|3|
 |5|4|
 
-위 표에서 나타난 자연수 증가 패턴을 귀납적으로 추상화시켜 다음의 명제를 얻을 수 있다.
+$n < 10$ 일 때 위 표에서 나타난 자연수 증가 패턴을 귀납적으로 추상화시켜 다음의 명제를 얻을 수 있다.
 
-- $a_1 \leq 3 \land n < 10 \Rightarrow n = s$
+- $a_1 \leq 3 \land n < 10 \to n = s$
 
-- $a_1 > 3 \land n < 10 \Rightarrow n - 1 = s$
+- $a_1 > 3 \land n < 10 \to n - 1 = s$
 
 $$\epsilon_1 = \begin{cases} 0 &(a_1 \leq 3)\\ 1 &(a_1 > 3)\\ \end{cases} \tag{1} $$
 
-을 정의하면 위 명제들을 명제
+을 정의하면 위 명제들을
 
-$$ n < 10 \Rightarrow n - \epsilon_1 = s \tag{2} $$
+$$ n < 10 \to n - \epsilon_1 = s \tag{2} \to f(n) = \epsilon _1 $$
 
-로 추상화시킬 수 있다.
+로 추상화시킬 수 있다. 
 
-|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|13|12|15|13|23|21|25|22|33|30|35|31|
-|39|35|50|36|53|39|55|40|63|48|65|49|
+### $10 \leq n < 100$ 일 때
 
-$\epsilon_1$ 를 사용하여 위 표에서 나타난 자연수 증가 패턴을 귀납적으로 추상화시켜 다음의 명제를 얻을 수 있다.
+$10 \leq n < 100$ 이면서 $a_2 \leq 3$ 이면 $\epsilon _1$ 의 최댓값이 $a_2$ 만큼 증가한 것이므로 $10 \leq n < 100 \land a_2 \leq 3 \to \epsilon _2 = \max \epsilon _1 \cdot a_2 = f(9) \cdot a_2$ 이다.
 
-- $a_2 = 1 \land n < 100 \Rightarrow n - \epsilon_1 - 1 = s$
+이제 $n = 9 \to s = n - \epsilon _1 = 9 - 1 = 8$ 에서 $n$ 을 $9$ 증가시키면 $s$ 가 $8$ 증가된다는 사실을 이용하여 다음의 표를 작성하자. 이로써 $10 \leq n < 100$ 이면서 $a_2$ 가 $3$ 보다 커질 때 $n$ 과 $s$ 의 차이를 살펴본다.
 
-- $a_2 = 2 \land n < 100 \Rightarrow n - \epsilon_1 - 2 = s$
+|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|$9$|$8$|$36 = 9 + 9 \cdot 3$|$32 = 8 + 8 \cdot 3$|$39$|$35$|$50$|$36$|
 
-- $a_2 = 3 \land n < 100 \Rightarrow n - \epsilon_1 - 3 = s$
+$n = 50$ 일 때 $n$ 과 $s$ 의 차이는 $50 - 36 = 14$ 이다. 그런데 마찬가지로 $\epsilon _1$ 의 최댓값이 $a_2$ 만큼 증가했으므로 순수하게 $a_2$ 가 $3$ 보다 커진 것만으로 $n$ 이 $s$ 보다 커진 값을 계산하면 $14 - f(9) \cdot a_2 = 9$ 이다. 그러므로
 
-- $a_2 = 5 \land n < 100 \Rightarrow n - \epsilon_1 - 14 = s$
+$$\epsilon _2 = \begin{cases} f(9) \cdot a_2 &(a_2 \leq 3)\\ f(9) \cdot a_2 + 9 &(a_2 > 3)\\ \end{cases} \tag{3} $$ 
 
-- $a_2 = 6 \land n < 100 \Rightarrow n - \epsilon_1 - 15 = s$
+를 정의하여
 
-$$\epsilon _2 = \begin{cases} a_2 &(a_2 \leq 3)\\ a_2 + 9 &(a_2 > 3)\\ \end{cases} \tag{3} $$ 
+$$ n < 100 \to n - \epsilon _1 - \epsilon _2 = s \to f(n) = \epsilon _1 + \epsilon _2 \tag{4} $$
 
-를 정의하면 위 명제들을 명제
+를 얻는다.
 
-$$ n < 100 \Rightarrow n - \epsilon _1 - \epsilon _2 = s \tag{4} $$
+### $100 \leq n < 1000$ 일 때
 
-로 추상화시킬 수 있다. 그러면 이를 통하여 $n = 99 \Rightarrow s = n - \epsilon _1 - \epsilon _2 = 99 - 1 - 18 = 80$ 을 얻는다. 또한 이로써 $n$ 을 $99$ 증가시키면 $s$ 는 $80$ 이 증가된다는 사실도 얻는다. 이것을 기점으로 다음의 표를 작성할 수 있다.
+$100 \leq n < 1000$ 이면서 $a_3 \leq 3$ 이면 $\epsilon _1, \epsilon _2$ 의 최댓값이 $a_3$ 만큼 증가한 것이므로 $100 \leq n < 1000 \land a_3 \leq 3 \to \epsilon 3 = (\max \epsilon _1 + \max \epsilon _2) \cdot a_3 = f(99) \cdot a_3$ 이다.
 
-|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|99|80|100|81 |199|161|200|162 |299|242|
-|300|243| 399|323| 500|324| 599|404| 600|405|
+이제 $n = 99 \to s = n - \epsilon _1 - \epsilon _2 = 99 - 1 - 18 = 80$ 에서 $n$ 을 $99$ 증가시키면 $s$ 는 $80$ 이 증가된다는 사실을 이용하여 다음의 표를 작성하자. 이로써 $100 \leq n < 1000$ 이면서 $a_3$ 가 $3$ 에서 $5$ 로 증가했을 때 $n$ 과 $s$ 의 차이를 살펴본다. 
 
-$\epsilon_1, \epsilon _2$ 를 사용하여 위 표에서 나타난 자연수 증가 패턴을 귀납적으로 추상화시켜 다음의 명제를 얻을 수 있다.
+|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|
+|:---:|:---:|:---: |:---:|:---:|:---:|:---:|:---:|
+|$99$|$80$|$396 = 99 + 99 \cdot 3$|$320 = 80 + 80 \cdot 3$|$399$|$323$|$500$|$324$|
 
-- $a_3 = 1 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 19 = s$
+$n$ 과 $s$ 의 차이는 $500 - 324 = 176$ 이다. 그런데 마찬가지로 $\epsilon _1, \epsilon _2$ 의 최댓값이 $a_3$ 만큼 증가했으므로 순수하게 $a_3$ 가 $3$ 보다 커진 것만으로 $n$ 이 $s$ 보다 커진 값을 계산하면 $176 - f(99) \cdot a_3 = 176 - (1 + 18) \cdot 5 = 81 = 9 ^{2}$  이다. 그러므로
 
-- $a_3 = 2 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 38 = s$
+$$\epsilon _3 = \begin{cases} f(99) \cdot  a_3 &(a_3 \leq 3)\\f(99) \cdot a_3 + 9 ^{2}&(a_3 > 3)\\ \end{cases} \tag{5} $$ 
 
-- $a_3 = 3 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 57 = s$
+를 정의하여
 
-- $a_3 = 5 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 176 = s$
+$$ n < 1000 \to n- \epsilon _1- \epsilon _2 - \epsilon _3 = s \to f(n) = \sum_{i=1}^{3} \epsilon _i \tag{6} $$
 
-- $a_3 = 6 \land n < 1000 \Rightarrow n - \epsilon_1 - \epsilon_2 - 195 = s$
+을 얻는다. 
 
-$$\epsilon _3 = \begin{cases} a_3 \times 19 &(a_3 \leq 3)\\a_3 \times 19 + 9 ^{2}&(a_3 > 3)\\ \end{cases} \tag{5} $$ 
+### $1000 \leq n < 10000$ 일 때
 
-를 정의하면 위 명제들을 명제
+$1000 \leq n < 10000$ 이면서 $a_4 \leq 3$ 이면 $\epsilon _1, \epsilon _2, \epsilon _3$ 의 최댓값이 $a_4$ 만큼 증가한 것이므로 $1000 \leq n < 10000 \land a_4 \leq 3 \to \epsilon 4 = (\max \epsilon _1 + \max \epsilon _2 + \max \epsilon _3) \cdot a_4 = f(999) \cdot a_4$ 이다.
 
-$$ n < 1000 \Rightarrow n- \epsilon _1- \epsilon _2 - \epsilon _3 = s \tag{6} $$
+이제 $n = 999 \to s = n- \epsilon _1- \epsilon _2 - \epsilon _3 = 999 - 1 - 18 - 252 = 728$ 에서 $n$ 을 $999$ 증가시키면 $s$ 는 $728$ 이 증가된다는 사실을 이용하여 다음의 표를 작성하자. 이로써 $100 \leq n < 1000$ 이면서 $a_4$ 가 $3$ 에서 $5$ 로 증가했을 때 $n$ 과 $s$ 의 차이를 살펴본다. 
 
-로 추상화시킬 수 있다. 그러면 이를 통하여 $n = 999 \Rightarrow s = n- \epsilon _1- \epsilon _2 - \epsilon _3 = 999 - 1 - 18 - 252 = 728$ 을 얻는다. 또한 이로써 $n$ 을 $999$ 증가시키면 $s$ 는 $728$ 이 증가된다는 사실도 얻는다. 이것을 기점으로 다음의 표를 작성할 수 있다.
+|$n$|$s$|$n$|$s$|$n$|$s$|$n$|$s$|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|$999$|$728$|$3996 = 999 + 999 \cdot 3$|$2912 = 728 + 728 \cdot 3$|$3999$|$2915$|$5000$|$2916$|
 
-|$n$|$s$|$n$|$s$| $n$|$s$|$n$|$s$| $n$|$s$|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|999|728|1000|729|1999|1457|2000|1458 |2999|2186|
-|3000|2187|3999|2915|5000|2916|5999|3644|6000|3645|
-|6999|4373|
+$n$ 과 $s$ 의 차이는 $5000 - 2916 = 2084$ 이다. 그런데 마찬가지로 $\epsilon _1, \epsilon _2, \epsilon _3$ 의 최댓값이 $a_4$ 만큼 증가했으므로 순수하게 $a_4$ 가 $3$ 보다 커진 것만으로 $n$ 이 $s$ 보다 커진 값을 계산하면 $2084 - f(999) \cdot a_4 = 2084 - (1 + 18 + 252) \cdot 5 = 729 = 9 ^{3}$ 이다. 그러므로
 
-$\epsilon_1, \epsilon _2, \epsilon _3$ 를 사용하여 위 표에서 나타난 자연수 증가 패턴을 귀납적으로 추상화시켜 다음의 명제를 얻을 수 있다.
+$$\epsilon _4 = \begin{cases} f(999) \cdot a_4 &(a_4 \leq 3)\\ f(999) \cdot a_4 + 9 ^{3}&(a_4 > 3)\\ \end{cases} \tag{7} $$ 
 
-- $a_4 = 1 \land n < 10000 \Rightarrow n -\epsilon _1- \epsilon _2 - \epsilon _3 - 271 = s$
+를 정의하여
 
-- $a_4 = 2 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 542 = s$
+$$ n < 10000 \to n-\epsilon _1- \epsilon _2 - \epsilon _3 - \epsilon _4 = s \to f(n) = \sum_{i=1}^{4}\epsilon _i \tag{8} $$
 
-- $a_4 = 3 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 813 = s$
+을 얻는다.
 
-- $a_4 = 5 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 2084 = s$
-
-- $a_4 = 6 \land n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - 2355 = s$
-
-$$\epsilon _4 = \begin{cases} a_4 \times 271 &(a_4 \leq 3)\\ a_4 \times 271 + 9 ^{3}&(a_4 > 3)\\ \end{cases} \tag{7} $$ 
-
-를 정의하면 위 명제들을 명제
-
-$$ n < 10000 \Rightarrow n-\epsilon _1- \epsilon _2 - \epsilon _3 - \epsilon _4 = s \tag{8} $$
-
-로 추상화시킬 수 있다.
-
-### 2차 추상화
+## 2차 추상화
 
 먼저 수열 $\{\gamma _{n}\} : 1, 9, 99, 999, 9999, \dots$ 을 
 
-$$ \gamma _n = 9 \times \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1} \tag{9} $$
+$$ \gamma _n = 9 \cdot \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1} \tag{9} $$
 
 로 정의한다(단, $\gamma _1 = 1$).
 
-그렇다면 $(1), (3), (5), (7)$ 을 함수 $f(n)$ 과 수열 $\gamma _n$ 과 $k \in \N$ 에 대하여 
+그렇다면 $f(\overbrace{99 \dots 9}^{k}) = f(\gamma _k)$ 이므로 $(1), (3), (5), (7)$ 을 $k \in \N$ 에 대하여 
 
-$$ \epsilon _k = \begin{cases} a_k f(\gamma_k) &(a_k \leq 3)\\ a_k f(\gamma_k) + 9 ^{k-1}&(a_k > 3)\\ \end{cases} \tag{10} $$
+$$ \epsilon _k = \begin{cases} f(\gamma_k)a_k  &(a_k \leq 3)\\ f(\gamma_k)a_k  + 9 ^{k-1}&(a_k > 3)\\ \end{cases} \tag{10} $$
 
-로 귀납적으로 추상화시킬 수 있다. 이때 
+로 귀납적으로 추상화시켜 본다. 이때 
 
 $$ \delta (a_k, k) = \begin{cases} 0 &(a _{k} \leq 3)\\ 9 ^{k-1} & (a _{k} > 3)\\ \end{cases} \tag{11} $$
 
 를 정의하면 $(10)$ 을 
 
-$$ \epsilon _{k} = a_k f(\gamma _k) + \delta (a_k, k) \tag{12} $$
+$$ \epsilon _{k} = f(\gamma _k)a_k  + \delta (a_k, k) \tag{12} $$
 
 로 쓸 수 있다.
 
-또한 $(2), (4), (6), (8)$ 을 $k = \left\lceil \log_{10} n \right\rceil$ 인 $k \in \N$ 대하여
+또한 $(2), (4), (6), (8)$ 을 $k = \left\lceil \log_{10} n \right\rceil$ 에 대하여
 
-$$ n - \sum_{i=1}^{k} \epsilon _i = s \iff f(n) = \sum_{i=1}^{k}\epsilon _i \tag{13} $$
+$$ n < 10 ^{k} \to f(n) = \sum_{i=1}^{k}\epsilon _i \tag{13} $$
 
 로 귀납적으로 추상화 시킬 수 있다. 그러므로 $\epsilon_i$ 를 $(12)$ 로 치환하여 다음을 얻는다(단, $f(1) = 0$). 
 
-$$ \therefore \boxed{f(n) = \sum_{i=1}^{k} \bigg (a_i f(\gamma _i) + \delta (a_i, i)\bigg )} \tag{14} $$
-
-**이렇게 $f(n)$ 이 존재한다는 것이 귀납적으로 증명되었다.■**
+$$ \therefore \boxed{f(n) = \sum_{i=1}^{k} \bigg (f(\gamma _i)a_i  + \delta (a_i, i)\bigg )} \tag{14} $$
 
 !!! note
 
