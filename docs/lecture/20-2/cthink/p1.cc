@@ -50,7 +50,7 @@ int f(int n)
         return 0;
 
     int k = 1;
-    while (n >= pow(10, k))
+    while (n >= power(10, k))
         k += 1;
 
     int result = 0;
