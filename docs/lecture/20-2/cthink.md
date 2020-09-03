@@ -171,7 +171,7 @@ $$ \epsilon _{k} = a_k f(\gamma _k) + \delta (a_k, k) \tag{12} $$
 
 로 쓸 수 있다.
 
-또한 $(2), (4), (6), (8)$ 을 $k-1 \leq \log_{10} n \leq k$ 인 $k \in \N$ 대하여
+또한 $(2), (4), (6), (8)$ 을 $k = \left\lceil \log_{10} n \right\rceil$ 인 $k \in \N$ 대하여
 
 $$ n - \sum_{i=1}^{k} \epsilon _i = s \iff f(n) = \sum_{i=1}^{k}\epsilon _i \tag{13} $$
 
@@ -252,7 +252,9 @@ $ python p1.py
 
 - `delta` 함수 : $O(1)$
 
-- `f` 함수 : $O(n\log_{10} n)$
+- `f` 함수 : $O(\log_{10} n)$ ????
+
+    - 솔직히 시간복잡도를 정확히 못 구하겠음 ㅜ 
 
 ### 성능 평가
 
