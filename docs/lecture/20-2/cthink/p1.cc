@@ -21,6 +21,39 @@ int power(int n, unsigned int m)
         return n * tmp * tmp;
 }
 
+int epsilon(int k)
+{
+    if (k == 1)
+        return 0;
+    int tmp = 0;
+    for (int i=1; i<k; i++)
+        tmp += power(10, k - 1 - i) * power(9, i - 1);
+    return tmp;
+}
+
+int delta(int ak, int k)
+{
+    if (ak <= 3)
+        return -ak * epsilon(k);
+    else
+        return -(ak - 1) * epsilon(k) - power(10, k - 1);
+}
+
+int s(int n)
+{
+    int k = 1;
+    while (n >= power(10, k))
+        k += 1;
+    int n_tmp = n;
+    int d = 0;
+    for (int i = 0; i <= k; i++)
+    {
+        d += delta(n_tmp % 10, i);
+        n_tmp /= 10;
+    }
+    return n + d;
+}
+
 int gamma(int n)
 {
     if (n == 1)
@@ -32,7 +65,7 @@ int gamma(int n)
     return 9 * tmp;
 }
 
-int delta(int ak, int k)
+int de(int ak, int k)
 {
     if (ak <= 3)
         return 0;
@@ -57,7 +90,7 @@ int f(int n)
     for (int i = 1; i <= k; i++)
     {
         int ai = num_digit(n, i);
-        result += delta(ai, i) + ai * f(gamma(i));
+        result += de(ai, i) + ai * f(gamma(i));
     }
 
     f_result[n] = result;
@@ -69,5 +102,6 @@ int main(int c, char* v[])
     int in = 99999999;
     // std::cin >> in;
     std::cout << in - f(in) << std::endl;
+    // std::cout << s(in) << std::endl;
     return 0;
 }

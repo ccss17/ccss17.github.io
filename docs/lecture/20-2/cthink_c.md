@@ -44,6 +44,40 @@
 
 가설 1 이 주장하는 함수 $f(n)$ 이 존재하면 $n - f(n)$ 로 일반적인 자연수 증가 방식에 따라 증가한 자연수 $s \in \N$ 을 구할 수 있으므로 명제 $p$ 가 증명된다.
 
+# 가설 1 증명 (심플)
+
+먼저 자연수 $n$ 과 $s$ 는 $n$ 의 각 자리수 보다 아랫자리수 때문에 
+
+생겨날 가장 큰 차이값을 해당 자리수의 수만큼 갖고 있다.
+
+자연수 $n$ 과 $s$ 는 $a_1 > 3$ 이면 $1$ 의 자리에서 $1$ 차이가 난다. 
+
+$\epsilon_1 = \begin{cases} 0 &(a_1 \leq 3)\\ 1 &(a_1 > 3)\\ \end{cases}$ 에 대하여 $n < 10 \to f(n) = \epsilon _1$ 
+
+자연수 $n$ 과 $s$ 는 $a_2 > 3$ 이면 $10$ 의 자리에서 $9$ 차이가 난다. 
+
+$\epsilon _2 = \begin{cases} f(9) \cdot a_2 &(a_2 \leq 3)\\ f(9) \cdot a_2 + 9 &(a_2 > 3)\\ \end{cases}$ 에 대하여 $n < 10 ^{2} \to f(n) = \sum_{i=1}^{2} \epsilon _i$ 
+
+자연수 $n$ 과 $s$ 는 $a_3 > 3$ 이면 $100$ 의 자리에서 $9 ^{2}$ 차이가 난다. 
+
+$\epsilon _3 = \begin{cases} f(99) \cdot  a_3 &(a_3 \leq 3)\\f(99) \cdot a_3 + 9 ^{2}&(a_3 > 3)\\ \end{cases}$ 에 대하여 $n < 10 ^{3} \to f(n) = \sum_{i=1}^{3} \epsilon _i$ 
+
+이때 수열 $\{\gamma _{n}\} : 1, 9, 99, 999, 9999, \dots$ 을
+
+$$ \gamma _n = 9 \cdot \displaystyle \sum_{i=1}^{n - 1}10 ^{i-1} $$
+
+로 정의한다(단, $\gamma _1 = 1$). 그러면 $f(\overbrace{99 \dots 9}^{k-1}) = f(\gamma _k)$ 이다.
+
+그렇다면 자연수 $n$ 과 $s$ 는 $a_k > 3$ 이면 $10 ^{k-1}$ 의 자리에서 $9 ^{k}$ 차이가 나기 때문에 수열 $\gamma _k$ 에 대한
+
+$$\epsilon _k = \begin{cases} f(\gamma _k) \cdot  a_k &(a_k \leq 3)\\f(\gamma _k) \cdot a_k + 9 ^{k}&(a_k > 3)\\ \end{cases}$$ 
+
+에 대하여 $n < 10 ^{k} \to f(n) = \sum_{i=1}^{k} \epsilon _i$ 이다.
+
+$\delta (a_k, k) = \begin{cases} 0 &(a _{k} \leq 3)\\ 9 ^{k-1} & (a _{k} > 3)\\ \end{cases}$ 를 정의하면 $\epsilon _{k} = f(\gamma _k)a_k  + \delta (a_k, k)$ 로 쓸 수 있다. 그러므로 최종적으로 $\epsilon_i$ 를 소거하여 다음을 얻는다(단, $f(1) = 0$). 
+
+$$ \therefore \boxed{f(n) = \sum_{i=1}^{k} \bigg (f(\gamma _i)a_i  + \delta (a_i, i)\bigg )} $$
+
 # 가설 1 증명
 
 - 자연수 $n \in \N$ 은 $i \in \N$ 에 대한 $a_i \in \{0,1,2,3,5,6,7,8,9\}$ 에 대하여 $n = \dots a_i \dots a_5a_4a_3a_2a_1$ 로 구성
