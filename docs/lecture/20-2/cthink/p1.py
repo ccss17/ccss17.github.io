@@ -41,11 +41,7 @@ if __name__ == '__main__':
     # print(7777, 7777 - f(repr(7777)))
 
     import matplotlib.pyplot as plt
-    import numpy as np
-    x = np.arange(100)
-
-    x = [x for x in range(1, 100000)]
-    y = [f(repr(i)) for i in x]
-    
+    x = [x for x in range(1, 10000)]
+    y = [f(i) for i in x]
     plt.plot(x, y)
     plt.show()
