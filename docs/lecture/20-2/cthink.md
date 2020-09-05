@@ -64,38 +64,7 @@ $$ \therefore \boxed{s = f(n) = n - \sum_{i=1}^{k} \delta (a_i, i)} \tag{3} $$
 
 ## 코드 구현
 
-이로써 지금까지의 논의를 통하여 $(1), (2), (3)$ 을 통하여 $n$ 을 $s$ 로 변환하는 코드를 구현할 수 있다.
-
-```python
-def epsilon(k):
-    if k == 1:
-        return 0
-    tmp = 0
-    for i in range(1, k):
-        tmp += 10 ** (k - 1 - i) * 9 ** (i - 1)
-    return tmp
-
-def delta(ak, k):
-    if ak <= 3:
-        return ak * epsilon(k)
-    else:
-        return (ak - 1) * epsilon(k) + 10 ** (k - 1)
-    
-def f(n):
-    k = 1
-    while n >= 10 ** k:
-        k += 1
-    
-    n_tmp = n
-    d = 0
-    for i in range(1, k+1):
-        d += delta(n_tmp % 10, i)
-        n_tmp = int(n_tmp / 10)
-    
-    return n - d
-```
-
-이 코드를 기반으로 다음과 같이 $n = 10 ^{780}$ 일 때 $s$ 를 구해본다.
+이로써 지금까지의 논의를 통하여 $(1), (2), (3)$ 을 통하여 $n$ 을 $s$ 로 변환하는 코드를 구현할 수 있다. 그 코드를 기반으로 다음과 같이 $n = 10 ^{780}$ 일 때 $s$ 를 구해본다.
 
 ```python
 print(f(10 ** 780))
