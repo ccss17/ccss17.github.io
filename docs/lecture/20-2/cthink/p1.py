@@ -8,9 +8,9 @@ def epsilon(k):
 
 def delta(ak, k):
     if ak <= 3:
-        return -ak * epsilon(k)
+        return ak * epsilon(k)
     else:
-        return -(ak - 1) * epsilon(k) - 10 ** (k - 1)
+        return (ak - 1) * epsilon(k) + 10 ** (k - 1)
     
 def f(n):
     k = 1
@@ -23,7 +23,7 @@ def f(n):
         d += delta(n_tmp % 10, i)
         n_tmp = int(n_tmp / 10)
     
-    return n + d
+    return n - d
 
 if __name__ == '__main__':
     # print(s(10))

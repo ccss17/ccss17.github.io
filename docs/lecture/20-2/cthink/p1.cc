@@ -21,9 +21,9 @@ int epsilon(int k) {
 
 int delta(int ak, int k) {
     if (ak <= 3)
-        return -ak * epsilon(k);
+        return ak * epsilon(k);
     else
-        return -(ak - 1) * epsilon(k) - power(10, k - 1);
+        return (ak - 1) * epsilon(k) + power(10, k - 1);
 }
 
 int f(int n) {
@@ -36,7 +36,7 @@ int f(int n) {
         diff += delta(n_tmp % 10, i);
         n_tmp /= 10;
     }
-    return n + diff;
+    return n - diff;
 }
 
 int main(int c, char *v[]) {

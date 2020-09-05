@@ -50,13 +50,13 @@ $a_3$ 이 $3$ 보다 크면 $n$ 에 $100$ 을 빼주어 $b_3$ 를 만든다. 또
 
 $a_4$ 이 $3$ 보다 크면 $n$ 에 $1000$ 을 빼주어 $b_4$ 를 만든다. 또 $a_4$ 로 인하여 $a_3$ 가 $b_4 \times 1$ 만큼 증가하고 $a_2$ 가 $b_4 \times 9$ 만큼 증가하고 $a_1$ 이 $b_4 \times 9 ^{2}$ 만큼 증가했기 때문에 $n$ 에 $b_4 \times (10 ^{2} - 10 \times 9 - 9 ^{2})$ 를 빼준다.
 
-즉, $a_k$ 가 $3$ 보다 크면 $n$ 에 $10 ^{k-1}$ 을 빼주어 $b_k$ 를 만든다. 또 $a_k$ 로 인하여 $n$ 이 $b_k \times \bigg (\displaystyle \sum_{i=1}^{k-1}10 ^{k - 1 - i} \times 9 ^{i - 1}\bigg )$ 만큼 증가했기 때문에 $n$ 에 $b_k \times \bigg (\displaystyle \sum_{i=1}^{k-1}10 ^{k - 1 - i} \times 9 ^{i - 1}\bigg )$ 를 빼준다.
+즉, $a_k$ 가 $3$ 보다 크면 $n$ 에 $10 ^{k-1}$ 을 빼주어 $b_k$ 를 만든다. 또 $a_k$ 로 인하여 $n$ 이 $b_k \bigg (\displaystyle \sum_{i=1}^{k-1}10 ^{k - 1 - i}  9 ^{i - 1}\bigg )$ 만큼 증가했기 때문에 $n$ 에 $b_k \bigg (\displaystyle \sum_{i=1}^{k-1}10 ^{k - 1 - i} 9 ^{i - 1}\bigg )$ 를 빼준다.
 
 그러면
 
-$$ \epsilon (k) = \begin{cases} 0 & (k = 1)\\ \displaystyle \sum_{i=1}^{k-1}10 ^{k - 1 - i} \times 9 ^{i - 1} & (k > 1)\\ \end{cases} \tag{1} $$
+$$ \epsilon (k) = \sum_{i=1}^{k-1}10 ^{k - 1 - i} 9 ^{i - 1} \qquad (\text{단,}\ \epsilon (1) = 0) \tag{1} $$
 
-$$ \delta (a_k, k) = \begin{cases} - a_k \times \epsilon (k) &(a_k \leq 3)\\ - (a_k - 1) \times \epsilon (k) - 10 ^{k-1} &(a_k > 3)\\ \end{cases} \tag{2} $$
+$$ \delta (a_k, k) = \begin{cases} a_k \cdot  \epsilon (k) &(a_k \leq 3)\\ (a_k - 1) \cdot  \epsilon (k) + 10 ^{k-1} &(a_k > 3)\\ \end{cases} \tag{2} $$
 
 을 정의하여 다음과 같이 $n$ 을 일반적인 자연수 증가에 따라 증가한 $s$ 로 변환할 수 있다.
 
@@ -77,9 +77,9 @@ def epsilon(k):
 
 def delta(ak, k):
     if ak <= 3:
-        return -ak * epsilon(k)
+        return ak * epsilon(k)
     else:
-        return -(ak - 1) * epsilon(k) - 10 ** (k - 1)
+        return (ak - 1) * epsilon(k) + 10 ** (k - 1)
     
 def f(n):
     k = 1
@@ -92,7 +92,7 @@ def f(n):
         d += delta(n_tmp % 10, i)
         n_tmp = int(n_tmp / 10)
     
-    return n + d
+    return n - d
 ```
 
 이 코드를 기반으로 다음과 같이 $n = 10 ^{780}$ 일 때 $s$ 를 구해본다.
