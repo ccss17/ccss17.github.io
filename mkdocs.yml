@@ -100,6 +100,7 @@ nav:
     - 2020-2:
       - 딥러닝 응용: lecture/20-2/dl.md
       - 컴퓨터과학적 사고: lecture/20-2/cthink.md
+      - Programming Language: lecture/20-2/pl.md
       - Korean History: lecture/koreahistory.md
   - Algorithm:
     - 시간복잡도: Algorithm/timecomplexity.md

@@ -1,1 +1,3 @@
 site/
+*.exe
+a.out
