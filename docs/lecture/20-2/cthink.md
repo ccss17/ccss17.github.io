@@ -165,6 +165,86 @@ Benchmark #1: python p1.py
 !!! note ""
 
     문제 : 
+  
+## 그래프, 유도 부분 그래프, 완전 그래프
+
+!!! tldr ""
+
+    그래프(graph, undirected graph) : 그래프 $G$ 는 자연수의 집합 $V$ 와 $V$ 의 2-집합(two-sets) 의 집합 $E$ 에 대한 순서쌍
+
+    $$ G = (V, E) $$
+
+    이다.
+
+- $V$ 의 원소를 정점(vertex) 이라 부르고, $E$ 의 원소를 간선(edges) 이라 부른다.
+
+- 간선 $\{v_1, v_2\} \in E$ 을 흔히 $v_1v_2$ 로 표기한다.
+
+- 그래프 $G = (V, E)$ 의 정점의 집합을 $V(G)$ 로, 간선의 집합을 $E(G)$ 로 표기한다.
+
+!!! tldr ""
+
+    그래프 $G$ 의 꼭짓점 $v \in V(G)$ 의 차수(degree) : $\deg v$ 는 기수 
+
+    $$ \deg v = |\{u \in V(G): uv \in E(G) \} \text{\textbackslash} \{v\}| $$
+
+    이다.
+
+- 이 정의에 따라 자연스럽게 그래프 $G$ 의 최대 차수는
+
+    $$ \Delta (G)= \sup _{u \in V(G)} \deg (V) $$
+
+    이다.
+
+!!! tldr ""
+
+    부분 그래프 : 그래프 $G$ 의 부분 그래프 $H \subset G$ 는 다음을 만족시키는 그래프이다.
+
+    $$ V(H) \subset V(G) $$
+
+    $$ E(H) \subset E(G) $$
+
+- 부분집합과 비슷한 개념이다.
+
+!!! tldr ""
+
+    유도 부분 그래프(induced subgraph) : 그래프 $G$ 의 부분 그래프 $H \subset G$ 는 다음을 만족시키는 그래프이다.
+
+    $$ V(H) \subset V(G) $$
+
+    $$ uv \in E(H) \iff u, v \in V(H) \land uv \in E(G) $$
+
+- 다음 그림을 보자.
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Teilgraphenbeziehungen.svg/1530px-Teilgraphenbeziehungen.svg.png)
+
+    *from: https://ko.wikipedia.org/wiki/%EB%B6%80%EB%B6%84_%EA%B7%B8%EB%9E%98%ED%94%84* 
+
+    - $G_1, G_2, G_3$ 는 모두 $G$ 의 부분 그래프이다.
+
+    - $G_1$ 은 간선 $26$ 을 포함하지 않기에 $G$ 의 유도 부분 그래프가 아니다.
+
+    - $G_2, G_3$ 는 $G$ 의 유도 부분 그래프이다.
+
+    - $G_3$ 는 $G_2$ 의 유도 부분 그래프이다.
+
+!!! tldr ""
+
+    완전 그래프(complete graph) : 집합 $S$ 에 대한 완전 그래프 $K_S$ 는
+
+    $$ V(K_S) = S $$
+
+    $$ uv \in E(K_S) \iff u \neq v $$
+
+    를 만족하는 그래프이다.
+
+- 서로 다른 두 개의 정점이 반드시 하나의 간선으로 연결된 그래프이다.
+
+- 정점이 $n$ 면 간선은 $\dfrac{n(n-1)}{2}$ 개 이다.
+
+- 어떤 완전 그래프가 부분 그래프라면 유도 부분 그래프가 아닐 수 없다.
+
+    왜냐하면 완전 그래프란 서로 다른 두 개의 정점이 반드시 하나의 간선으로 연결된 그래프인데, 유도 부분 그래프가 아니라면 서로 다른 두 정점에 대하여 간선이 없을 수도 있기 때문이다.
 
 ## 자연 대상을 수학 명제로 사상시키기
 
