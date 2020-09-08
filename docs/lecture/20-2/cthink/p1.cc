@@ -101,7 +101,7 @@ int main(int c, char* v[])
 {
     int in = 99999999;
     // std::cin >> in;
-    std::cout << in - f(in) << std::endl;
-    // std::cout << s(in) << std::endl;
+    //std::cout << in - f(in) << std::endl;
+     std::cout << s(in) << std::endl;
     return 0;
 }

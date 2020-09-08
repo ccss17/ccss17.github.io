@@ -62,8 +62,9 @@ if __name__ == '__main__':
     # print(s(10))
     # for i in range(10, 21):
         # print(i, s(i))
-    for n in [13, 1399, 999999]:
-        print(s(n))
+    # for n in [13, 1399, 999999]:
+        # print(s(n))
+    print(s(10 ** 100))
     # print(s(100))
     # print(20 - f(repr(20)))
     # print(30 - f(repr(30)))
