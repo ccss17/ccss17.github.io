@@ -6,7 +6,7 @@
 
 ## VSCode 설치
 
-> 만약 컴퓨터 운영체제로 **Linux** 를 사용하는 분이 있다면 당신은 전세계 컴퓨터 사용자 중 **`1.63%`** 의 사용자이기 때문에 스스로 **VSCode** 를 설치할 수 있다고 믿습니다.
+~~만약 컴퓨터 운영체제로 **Linux** 를 사용하는 분이 있다면 당신은 전세계 컴퓨터 사용자 중 **`1.63%`** 의 사용자이기 때문에 스스로 **VSCode** 를 설치할 수 있다고 믿습니다.~~
 
 ### Windows 설치
 
@@ -42,7 +42,7 @@ $ git init
 
     - 명령 팔레트는 **VSCode** 의 모든 기능을 실행할 수 있는 메뉴판이다.
 
-- **<kbd>Git: Initialize Repository</kbd> : **VSCode** 명령 팔레트 기능으로써 디렉토리를 `git` 레포지토리로 자동으로 초기화한다.**
+- **<kbd>Git: Initialize Repository</kbd> : VSCode 명령 팔레트 기능으로써 디렉토리를 `git` 레포지토리로 자동으로 초기화한다.**
 
     - 명령 팔레트에서 git init 만 검색해도 나온다.
 
@@ -50,21 +50,21 @@ $ git init
 
 **VSCode** 에서는 <kbd>Ctrl</kbd>+<kbd>n</kbd> 으로 새 파일을 만들 수 있고 <kbd>Ctrl</kbd>+<kbd>s</kbd> 로 파일을 저장할 수 있습니다. 
 
-- **<kbd>Ctrl</kbd>+<kbd>n</kbd> or <kbd>command</kbd>+<kbd>n</kbd> : **VSCode** 에서 새 파일을 만든다.**
+- **<kbd>Ctrl</kbd>+<kbd>n</kbd> or <kbd>command</kbd>+<kbd>n</kbd> : VSCode 에서 새 파일을 만든다.**
 
-- **<kbd>Ctrl</kbd>+<kbd>s</kbd> or <kbd>command</kbd>+<kbd>s</kbd> : **VSCode** 에서 파일을 저장한다.**
+- **<kbd>Ctrl</kbd>+<kbd>s</kbd> or <kbd>command</kbd>+<kbd>s</kbd> : VSCode 에서 파일을 저장한다.**
 
 새 파일을 만들고 `test.txt` 로 저장해보세요.
 
 ### 변경된 파일 스테이징하고 커밋하기
 
-그리고 이 파일을 스테이징하고 커밋을 해볼텐데, 마찬가지로 **VSCode** 의 **명령팔레트**를 열어서 `git commit` 을 입력해주세요. 
+그리고 이 파일을 스테이징하고 커밋을 해볼텐데, 마찬가지로 **VSCode** 의 **명령팔레트** 를 열어서 `git commit` 을 입력해주세요. 
 
 ![2020-05-04_16-45](https://user-images.githubusercontent.com/16812446/80945381-abc5f480-8e26-11ea-9e78-ed054d64fbe2.png)
 
-그러면 위와 같이 여러가지 커밋 기능들이 있는데 **Git: Commit All** 에 커서를 포커싱하고 <kbd>Enter</kbd> 를 눌러주세요. 그러면 커밋 메시지를 입력할 수 있는 팝업이 뜨는데 입력하고 다시 <kbd>Enter</kbd> 를 치면 **VSCode**가 변경된 모든 파일을 지알아서 스테이징하고 커밋합니다.
+그러면 위와 같이 여러가지 커밋 기능들이 있는데 **Git: Commit All** 에 커서를 포커싱하고 <kbd>Enter</kbd> 를 눌러주세요. 그러면 커밋 메시지를 입력할 수 있는 팝업이 뜨는데 입력하고 다시 <kbd>Enter</kbd> 를 치면 **VSCode** 가 변경된 모든 파일을 지알아서 스테이징하고 커밋합니다.
 
-- **<kbd>Git: Commit All</kbd> : **VSCode** 명령 팔레트 기능으로써 변경된 모든 파일을 자동으로 스테이징하고 커밋한다.**
+- **<kbd>Git: Commit All</kbd> : VSCode 명령 팔레트 기능으로써 변경된 모든 파일을 자동으로 스테이징하고 커밋한다.**
 
     - 이 기능을 터미널에서 손수 실행하려면 
 
@@ -81,7 +81,7 @@ $ git init
 
 이제 레포지토리를 **Github** 에 공유하기 위하여 원격 레포지토리를 등록해보겠습니다. 앞서 **Github** 에 `git-test` 라는 원격레포지토리를 만들었었는데, 이제는 `git-test2` 라는 레포지토리를 만들고 오세요.
 
-다 만들었다면 **명령 팔레트**를 열고 <kbd>git add</kbd> 만 쳐주세요. 그러면 다음 그림과 같이
+다 만들었다면 **명령 팔레트** 를 열고 <kbd>git add</kbd> 만 쳐주세요. 그러면 다음 그림과 같이
 
 ![2020-05-04_16-53](https://user-images.githubusercontent.com/16812446/80945842-b9c84500-8e27-11ea-9d44-06d50cb56d5a.png)
 
@@ -91,17 +91,17 @@ $ git init
 $ git remote add origin https://github.com/<USER>/git-test2
 ``` 
 
-- **<kbd>Git: Add Remote</kbd> : **VSCode** 명령 팔레트 기능으로써 원격 레포지토리를 등록한다.**
+- **<kbd>Git: Add Remote</kbd> : VSCode 명령 팔레트 기능으로써 원격 레포지토리를 등록한다.**
 
 ### 원격 레포지토리로 공유하기
 
-원격 레포지토리까지 등록했으니 이제 공유를 해보겠습니다. **명령 팔레트**를 열고 **git push** 만 입력해보세요.
+원격 레포지토리까지 등록했으니 이제 공유를 해보겠습니다. **명령 팔레트** 를 열고 **git push** 만 입력해보세요.
 
 ![2020-05-04_16-58](https://user-images.githubusercontent.com/16812446/80946179-6b677600-8e28-11ea-89cc-17084c76b067.png)
 
 그리고 위 그림과 같이 <kbd>Git: Push to...</kbd> 에 커서를 두고 <kbd>Enter</kbd> 를 치면 원격 레포지토리를 지정하는 단계로 넘어가는데 `origin` 밖에 없을테니 그냥 <kbd>Enter</kbd> 를 한번 더 치면 됩니다. **아이디** 와 **비밀번호** 를 입력하는 팝업이 뜨면 **Github** 의 아이디와 비밀번호를 입력하면 됩니다.
 
-- **<kbd>Git: Push to...</kbd> : **VSCode** 명령 팔레트 기능으로써 원격 레포지토리로 변경사항을 업데이트한다.**
+- **<kbd>Git: Push to...</kbd> : VSCode 명령 팔레트 기능으로써 원격 레포지토리로 변경사항을 업데이트한다.**
 
 그러면 **VSCode** 가 지알아서 `git push origin master` 기능을 수행해줍니다. 각자의 **`https://github.com/<USER>/git-test2`** 로 들어가서 확인해보세요!
 
@@ -123,7 +123,7 @@ git clone https://github.com/<USER>/git-test2
 
 그리고 위와 같이 <kbd>Open</kbd>, <kbd>Open in New Window</kbd> 가 뜨는데 지금은 후자를 선택해주세요.
 
-- **<kbd>Git: Clone</kbd> : **VSCode** 명령 팔레트 기능으로써 원격 레포지토리를 로컬로 가져온다.**
+- **<kbd>Git: Clone</kbd> : VSCode 명령 팔레트 기능으로써 원격 레포지토리를 로컬로 가져온다.**
 
 이제 다음과 같이 `test.txt` 에 `VScode 편하다. GBC 재밌다` 를 치고 <kbd>Ctrl+S</kbd> 를 눌러 저장하세요.
 
@@ -133,7 +133,7 @@ git clone https://github.com/<USER>/git-test2
 
 ### 원격 레포지토리로부터 업데이트하기
 
-이제 원래의 레포지토리, 즉 `text.txt` 에 아무런 내용이 없는 원래의 레포지토리를 열어주세요. 그리고 **명령 팔레트**에서 **git pull** 만 치면 다음과 같이 <kbd>Git: Pull from...</kbd> 이 뜨는데 시원하게 <kbd>Enter</kbd> 를 쳐주세요.
+이제 원래의 레포지토리, 즉 `text.txt` 에 아무런 내용이 없는 원래의 레포지토리를 열어주세요. 그리고 **명령 팔레트** 에서 **git pull** 만 치면 다음과 같이 <kbd>Git: Pull from...</kbd> 이 뜨는데 시원하게 <kbd>Enter</kbd> 를 쳐주세요.
 
 ![2020-05-04_17-19](https://user-images.githubusercontent.com/16812446/80947604-7a9bf300-8e2b-11ea-8064-26e3a9bf53aa.png)
 
@@ -145,7 +145,9 @@ git clone https://github.com/<USER>/git-test2
 
 그래서 이런 단축키를 익혀두는 이유는 **"마우스를 최대한 사용하지 않기 위해서"** 라고 생각하시면 됩니다. 이 파트의 제목이 "더 빨라진 개발환경" 인데 이 말은 마우스 대신 단축키를 사용하기 때문에 빨라졌다는 것을 의미합니다. 여기서는 몇 가지 핵심적인 단축키만 가볍게 알아보겠습니다. 
 
-> 더 많은 단축키는 공식 **VSCode** 의 메뉴얼 https://code.visualstudio.com/docs/editor/codebasics  을 참고하세요.
+!!! note
+
+    더 많은 단축키는 공식 **VSCode** 의 메뉴얼 https://code.visualstudio.com/docs/editor/codebasics  을 참고하세요.
 
 ### 파일 열기
 
@@ -227,7 +229,9 @@ git clone https://github.com/<USER>/git-test2
 
     ![sUipBmhwXE](https://user-images.githubusercontent.com/16812446/82408662-07d77c80-9aa7-11ea-88e2-db0b8c95ea09.gif)
 
-> 사실 <kbd>Ctrl</kbd>+<kbd>1</kbd>, <kbd>Ctrl</kbd>+<kbd>2</kbd> 은 왼쪽 화면과 오른쪽 화면을 포커싱 하는게 아니라 더 정확하게 첫번째 분할 화면을 포커싱, 두번째 분할 화면을 포커싱하는 단축키입니다. 그러면 자연스럽게 <kbd>Ctrl</kbd>+<kbd>3</kbd> 이 세번째 분할 화면을 포커싱하는 단축키라는 것을 유추할 수 있겠죠?
+!!! info
+
+    사실 <kbd>Ctrl</kbd>+<kbd>1</kbd>, <kbd>Ctrl</kbd>+<kbd>2</kbd> 은 왼쪽 화면과 오른쪽 화면을 포커싱 하는게 아니라 더 정확하게 첫번째 분할 화면을 포커싱, 두번째 분할 화면을 포커싱하는 단축키입니다. 그러면 자연스럽게 <kbd>Ctrl</kbd>+<kbd>3</kbd> 이 세번째 분할 화면을 포커싱하는 단축키라는 것을 유추할 수 있겠죠?
 
 ### 화면 레이아웃 변경
 
@@ -257,7 +261,9 @@ git clone https://github.com/<USER>/git-test2
 
     ![v70ylfP1Ld](https://user-images.githubusercontent.com/16812446/82409239-44f03e80-9aa8-11ea-8b91-12df0d825110.gif)
 
-> 여러번 누르면 여러번 복제됩니다.
+!!! tip
+
+    여러번 누르면 여러번 복제됩니다.
 
 ## **<div align="center"> 🌜 ️여기까지 Day2     🌜️ </div>**
 
@@ -269,7 +275,7 @@ git clone https://github.com/<USER>/git-test2
 
 하지만 **VSCode** 를 사용하면 **VSCode** 확장과 편리한 코드 찾기 기능, 편리한 디버깅 기능들을 사용할 수 있습니다. **VSCode** 확장 중에는 `vim` 도 있어서 **VSCode** 에서 `vim` 을 사용할 수도 있습니다.
 
-**VSCode** 가 지원하는 Git 은 지난시간에 이미 알아보았습니다. 뿐만 아니라 **안드로이드, 아두이노, 웹 개발, Python, Java, C/C++, C#, Rust, 주피터 노트북** 등등 상상할 수 있는 모든 플랫폼을 **VSCode** 에서 매우 편하게 사용할 수 있는 확장이 마련되어 있습니다. 
+**VSCode** 가 지원하는 Git 은 지난시간에 이미 알아보았습니다. 뿐만 아니라 **안드로이드, 아두이노, 웹 개발, Python, Java, C/C++, C#, Rust, 주피터 노트북, Flutter, Racket** 등등 상상할 수 있는 모든 플랫폼을 **VSCode** 에서 매우 편하게 사용할 수 있는 확장이 마련되어 있습니다. 
 
 이 중에서 몇가지 핵심적인 기능만 좀 더 알아보겠습니다. 
 
@@ -285,7 +291,9 @@ git clone https://github.com/<USER>/git-test2
 
 테마는 <kbd>File</kbd> &rarr; <kbd>Preferences</kbd> &rarr; <kbd>Color Theme</kbd> 에서 바꿀 수 있습니다. 또는 단축키 <kbd>Ctrl</kbd>+<kbd>k</kbd>, <kbd>Ctrl</kbd>+<kbd>t</kbd> 를 눌러도 됩니다. 
 
-> 밝은 테마는 전혀 관심이 없어서 추천을 못해드리지만 밝은 테마도 정말 많이 있습니다!
+!!! note
+
+    밝은 테마는 눈이 아파서 전혀 관심이 없어서 추천을 못해드리지만 밝은 테마도 정말 많이 있습니다!
 
 ### 기본 테마
 
@@ -499,7 +507,7 @@ https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categor
 
 그 외의 단축키는 `vim` 과 동일합니다.
 
-여기에서는 이 설정이 적용된 **VSCode** 에서 `vim` 을 사용하여 어떻게 코드를 효율적으로 편집하는지 몇개의 예시를 보여드리겠습니다. **Python** 으로 예시를 들었지만 **모든 언어에 적용될 수 있는 상황들**입니다.
+여기에서는 이 설정이 적용된 **VSCode** 에서 `vim` 을 사용하여 어떻게 코드를 효율적으로 편집하는지 몇개의 예시를 보여드리겠습니다. **Python** 으로 예시를 들었지만 **모든 언어에 적용될 수 있는 상황들** 입니다.
 
 # VSCode Vim 예시
 
@@ -525,7 +533,9 @@ https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categor
 <img src="https://user-images.githubusercontent.com/16812446/82322465-8550ad80-9a11-11ea-9682-a1f291bb6883.gif" width="70%" height="auto">
 </div>
 
-> `0` 으로 문장 앞으로 커서를 옮기는 것이나 `f'` 로 `'` 로 커서를 옮기는 것 등의 설명까지 하면 너무 장황해져서 생략했습니다. 
+!!! note
+
+    `0` 으로 문장 앞으로 커서를 옮기는 것이나 `f'` 로 `'` 로 커서를 옮기는 것 등의 설명까지 하면 너무 장황해져서 생략했습니다. 
 
 ## Python - copy & paste
 
@@ -671,9 +681,11 @@ https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categor
 
 과거에는 `gdb` 등의 CLI 디버깅 툴로 디버깅을 했었지만 **VSCode** 로 매우 편하게 디버깅할 수 있게 되었습니다. **VSCode** 는 거의 모든 프로그래밍 언어에 대한 풍부한 디버깅 기능을 제공합니다. 여기에서는 간단하게 **Python** 의 디버깅을 가볍게 알아보겠습니다. 하지만 **VSCode** 는 **Flutter**, **Rust**, **C/C++**, **NodeJS**, **Arduino**, **HTML/CSS/JS**, **Latex** 등등 매우 광범위한 언어에 대한 풍부한 디버깅 기능을 제공합니다. 
 
-> 안드로이드 스튜디오에서 제공하는 안드로이드 가상머신 디버깅 기능도 **VSCode** 가 제공합니다.
+!!! note
 
-> 그냥 생각나는 모든 프로그래밍 언어와 모든 플랫폼에 대한 디버깅 기능이 **VSCode** 확장으로 제공되고 있다고 봐도 무방합니다. **VSCode** 가 전세계 1등 에디터라서 각각의 기업들과 커뮤니티들이 앞다투어 자신의 제품을 **VSCode** 확장을 제공하려는 상황이기 때문입니다. 
+    안드로이드 스튜디오에서 제공하는 안드로이드 가상머신 디버깅 기능도 **VSCode** 가 제공합니다.
+
+    그냥 생각나는 모든 프로그래밍 언어와 모든 플랫폼에 대한 디버깅 기능이 **VSCode** 확장으로 제공되고 있다고 봐도 무방합니다. **VSCode** 가 전세계 1등 에디터라서 각각의 기업들과 커뮤니티들이 앞다투어 자신의 제품을 **VSCode** 확장을 제공하려는 상황이기 때문입니다. 
 
 더 자세한 **VSCode** 의 디버깅 방법과 다른 프로그래밍 언어에 대한 디버깅은 **Google** 을 검색하거나 **VSCode** 의 공식 메뉴얼
 
@@ -764,7 +776,9 @@ $ docker logs 7
      or http://127.0.0.1:8888/?token=bea66985c7d6c36d0712374ae803435c15229531e599b125
 ```
 
-> 컨테이너 아이디 `77c5f7e5...` 는 각자 다를 수 있습니다. 이 컨테이너 아이디를 축약하여 `docker logs 7` 만 입력한 것입니다.
+!!! note
+
+    컨테이너 아이디 `77c5f7e5...` 는 각자 다를 수 있습니다. 이 컨테이너 아이디를 축약하여 `docker logs 7` 만 입력한 것입니다.
 
 그러면 맨 밑에 **localhost** 의 `8888` 포트에 토큰이 파라미터로 전달된 형태의 **URL** 이 출력됩니다. 한 번 웹브라우저로 이 주소에 들어가보세요.
 
@@ -774,7 +788,7 @@ $ docker logs 7
 
 그러면 그냥 이 상태에서도 **tensorflow**, **pytorch**, **opencv**, **torchtext**, **torchvision**, **jupyter_tensorboard**, **pandas**, **matplotlib** 등이 설치된 주피터 노트북과 텐저보드를 사용할 수 있습니다. 이제 이것을 **VSCode** 에 연동해보겠습니다.
 
-**VSCode** 에서 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> 를 눌러 **명령 팔레트**를 연 후 `jupyter` 만 입력해보세요. 그럼 다음과 같이 **Python: Specify local or remote Jupyter server for connections** 기능이 뜨는데 이것을 실행하세요.
+**VSCode** 에서 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> 를 눌러 **명령 팔레트** 를 연 후 `jupyter` 만 입력해보세요. 그럼 다음과 같이 **Python: Specify local or remote Jupyter server for connections** 기능이 뜨는데 이것을 실행하세요.
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/16812446/84479947-b9e11d80-acce-11ea-914b-1bb38040fbf8.png" width="70%" height="auto">
@@ -788,11 +802,9 @@ $ docker logs 7
 
 그러면 각자의 
 
-<div align="center">
-
-`http://127.0.0.1:8888/?token=bea66985c7d6c36d0712374ae803435c15229531e599b125` 
-
-</div>
+```
+http://127.0.0.1:8888/?token=bea66985c7d6c36d0712374ae803435c15229531e599b125
+``` 
 
 를 입력하고 <kbd>Enter</kbd> 를 치기만 하면 됩니다. 그러면 다음과 같이 창을 다시 로드하라는 메시지가 뜨는데 <kbd>Reload</kbd> 버튼을 누르기만 하면 됩니다.
 
