@@ -148,3 +148,183 @@
     - Based on European History
 
     - Not to fit Asian history
+
+---
+
+# The Neolithic Revolution
+
+- The change of climate around 10,000 years ago
+
+- Tools: polished stone tools (new stone tools), pottery
+
+- Housing: Pit dwellings
+
+- Settlement: Larger Community
+
+- Weaving and spinning (fiber woven of hemp, spindles)
+
+- Productive Economic Life: Agriculture, Stock farming
+
+## Communal society
+
+- Primitive communal society(community)
+
+- Blood Relationship
+
+- Co-ownership of property within community
+
+    - No Division between rich and the poor
+
+- No social division
+
+    - No Vertical social division society without classes
+
+    - No horizontal social division non-specialized society no differences in job or works among individuals
+
+    - No Distinction in the Role between different genders
+
+- Democratic Decision making in the assembly
+
+- Co-operation in almost every work
+
+## Neolithic age of the Korean penisula
+
+- Three inflows of Neolithic cultures
+
+- THe first inflow:
+
+    - 8,000 years ago (B.C. 6000)
+
+    - Ethnically the same people that lived in Siberia
+
+    - A few sites were found mainly along the coast
+
+        - Dongsam-dong site 
+
+        - Gulpori
+    
+    - Tools
+
+        - Knife, Spearhead, Arrow-head
+
+        - Primitive non-decorated pottery with round bottom, Sealed Design pottery
+
+## Dongsam-dong shell-midden site
+
+- Seashore of Yongdo Island, Pusan
+
+    - Along the Southern coast of the Korean Penisula
+
+- Tools:
+
+    - Polished stone tools
+
+    - Comb design pottery
+
+    - Fishing nets, harpoons made of bones,
+
+- Food:
+
+    - Fish bones, Sea-mammal bones (whale, dolphin, sea-lion),
+
+    - Carbonized millet
+
+- Ornaments
+
+    - Necklace, bracelet, earring, other ornaments
+
+    - Material: shells, bones, teeth, stone, clay
+
+- Pit burial and Jar burial
+
+    - Clay figures, Shell figures resembling man's face
+
+# The second stage
+
+- 6,000 years ago
+
+- All the Region of Korea
+
+- Comb pattern pottery with pointed bottm
+
+    - Maritime area of Siberia(연해주)
+
+    - Basin of the Amur river
+
+    - Mongolia
+
+- Amsa-dong site, in Seoul
+
+## Amsa-dong Neolithic sites
+
+- 4,000 b.c. ~ 3,000 b.c.
+
+- Three layers
+
+    - The lowest layer: Neolithic Age.
+
+    - The second layer: Bronze Age: Undecorated pottery
+
+    - The top layer: Baekje kingdom's age
+
+- New Stone tools
+
+    - Hand-axes, Arrowheads, Scrapers, Stone-sinkers for fishing nets, Grinding stones, Ploughs for agriculture
+
+    - Comb pattern pottery
+    
+- 20 pit-house(pit-dwellings)
+
+## The last stage
+
+- 3,800 years age(1800 B.C.)
+
+- New type Pottery (Chinese Influence)
+
+    - Painted design pottery
+
+    - Modified Comb pattern pottery
+
+    - Thunderbolt design pottery
+
+- Kyo-dong sites(Chun-chon city in Kang-won P.)
+
+    - Lived in a cave. Axe, arrowheads, stone point, scraper, stone hammer, some potteries.
+
+# Characteristics of Korean Neolithic cultures
+
+- An important Part of the present Korean people.
+
+- Residence
+
+    - Settlement along the water's edge.
+
+    - Pit-dwellings: Circular, square or rectangular shape; Shallow pits; Thatched roofs
+
+- Food: Agriculture, Stock-farming, Fishing, shell-fish, hunting.
+
+- Clothing:
+
+    - Animal skins, Fibers of hemp, Spindles, Bone needles
+
+- Social organization
+
+    - Communal society; Clan society.
+
+    - Independent and self-sufficient economic unit
+
+- Political structure
+
+    - Unanimous Opinion-decision in assembly
+
+- Shamanistic belief
+
+    - Totemism:
+
+        - the myth of construction of old chosun.
+
+    - Animism
+
+        - Sun-worship,
+    
+    - shamanism
