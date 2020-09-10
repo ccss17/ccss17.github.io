@@ -38,11 +38,11 @@ $ git init
 
 여기에서 **git init** 만 입력하면 **Git: Initialize Repository** 가 검색되어 나옵니다. 그것에 커서가 포커싱되었다면 그냥 <kbd>Enter</kbd> 쳐주세요. 그러면 **VSCode** 가 알아서 디렉토리를 `git` 레포지토리로 초기화합니다.
 
-- **<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> or <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> : VSCode 에서 명령 팔레트를 연다.**
+- ==**<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> or <kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> : VSCode 에서 명령 팔레트를 연다.**==
 
     - 명령 팔레트는 **VSCode** 의 모든 기능을 실행할 수 있는 메뉴판이다.
 
-- **<kbd>Git: Initialize Repository</kbd> : VSCode 명령 팔레트 기능으로써 디렉토리를 `git` 레포지토리로 자동으로 초기화한다.**
+- ==**<kbd>Git: Initialize Repository</kbd> : VSCode 명령 팔레트 기능으로써 디렉토리를 `git` 레포지토리로 자동으로 초기화한다.**==
 
     - 명령 팔레트에서 git init 만 검색해도 나온다.
 
@@ -50,9 +50,9 @@ $ git init
 
 **VSCode** 에서는 <kbd>Ctrl</kbd>+<kbd>n</kbd> 으로 새 파일을 만들 수 있고 <kbd>Ctrl</kbd>+<kbd>s</kbd> 로 파일을 저장할 수 있습니다. 
 
-- **<kbd>Ctrl</kbd>+<kbd>n</kbd> or <kbd>command</kbd>+<kbd>n</kbd> : VSCode 에서 새 파일을 만든다.**
+- ==**<kbd>Ctrl</kbd>+<kbd>n</kbd> or <kbd>command</kbd>+<kbd>n</kbd> : VSCode 에서 새 파일을 만든다.**==
 
-- **<kbd>Ctrl</kbd>+<kbd>s</kbd> or <kbd>command</kbd>+<kbd>s</kbd> : VSCode 에서 파일을 저장한다.**
+- ==**<kbd>Ctrl</kbd>+<kbd>s</kbd> or <kbd>command</kbd>+<kbd>s</kbd> : VSCode 에서 파일을 저장한다.**==
 
 새 파일을 만들고 `test.txt` 로 저장해보세요.
 
@@ -64,7 +64,7 @@ $ git init
 
 그러면 위와 같이 여러가지 커밋 기능들이 있는데 **Git: Commit All** 에 커서를 포커싱하고 <kbd>Enter</kbd> 를 눌러주세요. 그러면 커밋 메시지를 입력할 수 있는 팝업이 뜨는데 입력하고 다시 <kbd>Enter</kbd> 를 치면 **VSCode** 가 변경된 모든 파일을 지알아서 스테이징하고 커밋합니다.
 
-- **<kbd>Git: Commit All</kbd> : VSCode 명령 팔레트 기능으로써 변경된 모든 파일을 자동으로 스테이징하고 커밋한다.**
+- ==**<kbd>Git: Commit All</kbd> : VSCode 명령 팔레트 기능으로써 변경된 모든 파일을 자동으로 스테이징하고 커밋한다.**==
 
     - 이 기능을 터미널에서 손수 실행하려면 
 
@@ -91,7 +91,7 @@ $ git init
 $ git remote add origin https://github.com/<USER>/git-test2
 ``` 
 
-- **<kbd>Git: Add Remote</kbd> : VSCode 명령 팔레트 기능으로써 원격 레포지토리를 등록한다.**
+- ==**<kbd>Git: Add Remote</kbd> : VSCode 명령 팔레트 기능으로써 원격 레포지토리를 등록한다.**==
 
 ### 원격 레포지토리로 공유하기
 
@@ -101,7 +101,7 @@ $ git remote add origin https://github.com/<USER>/git-test2
 
 그리고 위 그림과 같이 <kbd>Git: Push to...</kbd> 에 커서를 두고 <kbd>Enter</kbd> 를 치면 원격 레포지토리를 지정하는 단계로 넘어가는데 `origin` 밖에 없을테니 그냥 <kbd>Enter</kbd> 를 한번 더 치면 됩니다. **아이디** 와 **비밀번호** 를 입력하는 팝업이 뜨면 **Github** 의 아이디와 비밀번호를 입력하면 됩니다.
 
-- **<kbd>Git: Push to...</kbd> : VSCode 명령 팔레트 기능으로써 원격 레포지토리로 변경사항을 업데이트한다.**
+- ==**<kbd>Git: Push to...</kbd> : VSCode 명령 팔레트 기능으로써 원격 레포지토리로 변경사항을 업데이트한다.**==
 
 그러면 **VSCode** 가 지알아서 `git push origin master` 기능을 수행해줍니다. 각자의 **`https://github.com/<USER>/git-test2`** 로 들어가서 확인해보세요!
 
@@ -123,7 +123,7 @@ git clone https://github.com/<USER>/git-test2
 
 그리고 위와 같이 <kbd>Open</kbd>, <kbd>Open in New Window</kbd> 가 뜨는데 지금은 후자를 선택해주세요.
 
-- **<kbd>Git: Clone</kbd> : VSCode 명령 팔레트 기능으로써 원격 레포지토리를 로컬로 가져온다.**
+- ==**<kbd>Git: Clone</kbd> : VSCode 명령 팔레트 기능으로써 원격 레포지토리를 로컬로 가져온다.**==
 
 이제 다음과 같이 `test.txt` 에 `VScode 편하다. GBC 재밌다` 를 치고 <kbd>Ctrl+S</kbd> 를 눌러 저장하세요.
 
