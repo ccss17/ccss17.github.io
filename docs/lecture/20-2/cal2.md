@@ -1,0 +1,257 @@
+# 역삼각함수
+
+!!! tldr ""
+
+    역함수(inverse function) : 함수 $f: A \to B$ 에 대해 함수 $g: B \to A$ 가 있어서 $\forall a \in A, g(f(a)) = a \land \forall \in B f(g(b)) = b$ 이면 $g$ 를 $f$ 의 역함수라고 한다.
+
+- $f$ 의 역함수를 $f ^{-1}$ 라고 표시한다.
+
+- 어떤 함수가 역함수를 가지려면 일대일 대응이어야 한다. 
+
+!!! tldr ""
+
+    역사인함수(arcsine) : 정의역 $\bigg [- \dfrac{\pi }{2}, \dfrac{\pi }{2}\bigg ]$ 을 갖는 사인함수 $f:\bigg [-\dfrac{\pi }{2},\dfrac{\pi }{2}\bigg ] \to [-1, 1], x \mapsto \sin x$ 의 역함수 
+    
+    $$f ^{-1}: [-1, 1] \to \bigg [- \dfrac{\pi }{2}, \dfrac{\pi }{2}\bigg ], x \mapsto \arcsin x = \sin ^{-1}x$$
+    
+    이다.
+
+- 역함수는 일대일 대응이므로 특별한 언급이 없는 한 역사인함수를 정의하기 위하여 사인함수의 정의역을 $\bigg [- \dfrac{\pi }{2}, \dfrac{\pi }{2}\bigg ]$ 로 한다.
+
+- 예시 
+
+    $$ \arcsin 1 = \dfrac{\pi }{2}, \sin ^{-1} \dfrac{1}{2} = \dfrac{\pi }{6} $$
+
+!!! tldr ""
+
+    역코사인함수(arccosine) : 정의역 $[0, \pi]$ 을 갖는 코사인함수 $y = f(x) = \cos x$ 의 역함수 
+
+    $$f ^{-1}: [-1, 1] \to [0, \pi], x \mapsto \arccos x = \cos ^{-1}x$$
+    
+    이다.
+
+- 다음 그림을 보자.
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Arcsine_Arccosine.svg/252px-Arcsine_Arccosine.svg.png)
+    
+!!! tldr ""
+
+    역탄젠트함수(arctangent) : 정의역 $\bigg (-\dfrac{\pi }{2}, \dfrac{\pi }{2}\bigg )$ 을 갖는 탄젠트함수 $y = f(x) = \tan x$ 의 역함수 
+
+    $$f ^{-1}: \R \to \bigg (-\dfrac{\pi }{2}, \dfrac{\pi }{2}\bigg ), x \mapsto \arctan x = \tan ^{-1}x$$
+    
+    이다.
+
+!!! tldr ""
+
+    역코탄젠트함수(arccotangent) : 정의역 $[0, \pi]$ 을 갖는 코탄젠트함수 $y = f(x) = \cot x$ 의 역함수 
+
+    $$ f ^{-1}: \R \to (0, \pi), x \mapsto \operatorname{arccot} x = \cot ^{-1} x $$
+    
+    이다.
+
+- 다음 그림을 보자.
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Arctangent_Arccotangent.svg/441px-Arctangent_Arccotangent.svg.png)
+
+!!! tldr ""
+
+    역시컨트함수(arcsecant) : 시컨트함수 $y = f(x) = \sec x$ 의 역함수 
+
+    $$ f ^{-1}: (\infty, -1] \cup [1, \infty) \to \bigg [- \dfrac{\pi }{2}, 0 \bigg ) \cup \bigg (0,\dfrac{\pi }{2}\bigg], x \mapsto \operatorname{arcsec} x = \sec ^{-1} x $$
+    
+    이다.
+
+!!! tldr ""
+
+    역코시컨트함수(arcsecant) : 코시컨트함수 $y = f(x) = \csc x$ 의 역함수 
+
+    $$ f ^{-1}: (\infty, -1] \cup [1, \infty) \to \bigg [0, - \dfrac{\pi }{2}\bigg ) \cup \bigg (\dfrac{\pi }{2}, \pi \bigg], x \mapsto \operatorname{arccsc} x = \csc ^{-1} x $$
+    
+    이다.
+
+- 다음 그림을 보자.
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Arcsecant_Arccosecant.svg/441px-Arcsecant_Arccosecant.svg.png)
+
+# 역삼각함수 미분
+
+!!! tldr ""
+
+    역사인함수의 미분 : $y = \arcsin x$ 의 미분은 
+
+    $$ (\arcsin x)' = \dfrac{1}{\sqrt[]{1-x ^{2}}} $$
+
+    이다.
+
+- 증명
+
+    함수 $y = \arcsin x$ 에 대하여 $\sin y = \sin (\arcsin x) = x$ 이다. 양변을 $x$ 로 미분하면 합성함수의 미분에 의하여 
+
+    $$ \cos y \dfrac{dy}{dx} = 1 $$
+
+    이다. 그러므로 $\cos y \neq 0$ 일 때 
+
+    $$ \dfrac{dy}{dx} = \dfrac{1}{\cos y} = \dfrac{1}{\pm \sqrt[]{1 - \sin ^{2}y}} = \dfrac{1}{\pm \sqrt[]{1- x ^{2}}}   $$
+
+    이다. 그런데 $y = \arcsin x$ 의 치역이 $- \pi /2 \leq y \leq \pi /2$ 이므로 $\cos y \geq 0$ 이다. 그러므로 
+
+    $$ \therefore \dfrac{d}{dx}\arcsin x = \dfrac{1}{\pm \sqrt[]{1- x ^{2}}} , |x| < 1$$
+
+    이다.
+
+!!! tldr ""
+
+    역코사인함수의 미분 : $y = \arccos x$ 의 미분은 
+
+    $$ (\arccos x)' = - \dfrac{1}{\sqrt[]{1-x ^{2}}} $$
+
+    이다.
+
+!!! tldr ""
+
+    역탄젠트함수의 미분 : $y = \arctan x$ 의 미분은 
+
+    $$ (\arctan x)' = \dfrac{1}{\sqrt[]{1+x ^{2}}} $$
+
+    이다.
+
+- 증명 
+
+    $$ y = \arctan x \implies \tan y = x $$
+
+    $$ \implies \dfrac{d \tan y}{dx} = \sec ^{2}y \dfrac{dy}{dx}=1 $$
+
+    $$ \therefore \dfrac{dy}{dx} = \dfrac{1}{\sec ^{2}y} = \dfrac{1}{1+x ^{2}} $$
+
+!!! tldr ""
+
+    역코탄젠트함수의 미분 : $y = \operatorname{arccot}  x$ 의 미분은 
+
+    $$ (\operatorname{arccot}  x)' = -\dfrac{1}{\sqrt[]{1+x ^{2}}} $$
+
+    이다.
+
+# 쌍곡함수(hyperbolic function)
+
+!!! tldr ""
+
+    쌍곡사인함수(hyperbolic sine) : $\sinh x = \dfrac{e ^{x} - e ^{-x}}{2}$
+
+!!! tldr ""
+
+    쌍곡코사인함수(hyperbolic cosine) : $\cosh x = \dfrac{e ^{x} + e ^{-x}}{2}$
+
+- 쌍곡함수를 $x = \cosh u, y = \sinh u$ 로 두면
+
+    $$ x ^{2} - y ^{2} = \cosh ^{2}u - \sinh ^{2}u = \dfrac{1}{4}(e ^{2u} + 2 + e ^{-2u}) - \dfrac{1}{4}(e ^{2u} - 2 + e ^{-2u}) =  1 $$
+
+    이 되어 쌍곡선에 대한 적절한 매개화(parametrization) 이 가능하게 되어 쌍곡 함수라는 이름이 붙었다.
+    
+    다음 그래프는 쌍곡선을 이루는 $x ^{2} - y ^{2} = 1$ 의 그래프이다.
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Hyperbolic_functions-2.svg/465px-Hyperbolic_functions-2.svg.png)
+
+!!! tldr ""
+
+    쌍곡탄젠트함수(hyperbolic tangent) : $\tanh x = \dfrac{\sinh x}{\cosh x} = \dfrac{e ^{x} - e ^{-x}}{e ^{x}+e ^{-x}}$
+
+- 그래프 
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Sinh_cosh_tanh.svg/450px-Sinh_cosh_tanh.svg.png)
+
+!!! tldr ""
+
+    쌍곡코시컨트함수(hyperbolic cosecant) : $\operatorname{csch} x = \dfrac{1}{\sinh x} = \dfrac{2}{e ^{x} - e ^{-x}}$
+
+!!! tldr ""
+
+    쌍곡시컨트함수(hyperbolic secant) : $\operatorname{csch} x = \dfrac{1}{\cosh x} = \dfrac{2}{e ^{x} + e ^{-x}}$
+
+!!! tldr ""
+
+    쌍곡코탄젠트함수(hyperbolic cotangent) : $\coth  x = \dfrac{\cosh  x}{\sinh  x} = \dfrac{e ^{x} + e ^{-x}}{e ^{x}-e ^{-x}}$
+
+!!! tldr ""
+
+    쌍곡함수 성질 : 쌍곡함수에 관해 다음 성질이 성립한다.
+
+- $\cosh ^{x} - \sinh ^{2}x = 1$
+
+- $1 - \tanh ^{2} = \operatorname{sech} ^{2}x$
+
+- $\coth ^{2}x -1 = \operatorname{csch} ^{2}x$
+
+- $\cosh x$ 는 짝함수이다.
+
+    $$ \because \cosh (-x) = \dfrac{e ^{-x} + e ^{-(-x)}}{2} = \dfrac{e ^{-x} + e ^{x}}{2} = \cosh x $$
+
+- $\sinh x$ 는 홀함수이다.
+
+    $$ \because \sinh (-x) = \dfrac{e ^{-x} - e ^{-(-x)}}{2} = - \bigg (\dfrac{e ^{-x} - e ^{x}}{2}\bigg ) = -\sinh x $$
+
+- $\sinh (x+y) = \sinh x \cosh y + \cosh x \sinh y \implies  \sinh 2x = 2 \sinh x \cosh x$
+
+    $$ \because \sinh x \cosh y + \cosh x \sinh y = \dfrac{e ^{x}-e ^{-x}}{2}\dfrac{e ^{y}+e ^{-y}}{2} +  \dfrac{e ^{x}+e ^{-x}}{2}\dfrac{e ^{y}-e ^{-y}}{2} $$
+
+    $$ = \dfrac{1}{4}(e ^{x+y}+e ^{x-y}-e ^{-x+y}- e ^{-x-y} + e ^{x+y}-e ^{x-y}+e ^{-x+y} - e ^{-x-y}) $$
+
+    $$ \dfrac{2}{4}(e ^{x+y} - e ^{-(x+y)}) = \sinh (x+y) $$
+
+- $\cosh  (x+y) = \cosh  x \cosh y + \sinh  x \sinh y \implies  \cosh  2x = \cosh ^{2} x + \sinh ^{2} x$
+
+!!! tldr ""
+
+    쌍곡사인함수의 미분 : $(\sinh x)' = \cosh x$
+
+- 증명
+
+    $$\dfrac{d}{dx}\sinh x = \dfrac{d}{dx} \dfrac{e ^{x}-e ^{-x}}{2} = \dfrac{e ^{x} + e ^{-x}}{2} = \cosh x$$
+
+!!! tldr ""
+
+    쌍곡코사인함수의 미분 : $(\cosh x)' = \sinh x$
+
+- 증명
+
+    $$\dfrac{d}{dx}\cosh x = \dfrac{d}{dx} \dfrac{e ^{x}+e ^{-x}}{2} = \dfrac{e ^{x} - e ^{-x}}{2} = \sinh x$$
+
+!!! tldr ""
+
+    쌍곡탄젠트함수의 미분 : $(\tanh  x)' = \operatorname{sech} ^{2} x$
+
+- 증명
+
+    $$\dfrac{d}{dx}\tanh  x = \dfrac{d}{dx} \dfrac{\sinh x}{\cosh x} = \dfrac{\cosh x \cosh x - \sinh x \sinh x}{\cosh ^{2}x} = \operatorname{sech} ^{2} x$$
+
+# 쌍곡함수의 적분
+
+!!! tldr ""
+
+    쌍곡사인함수의 부정적분 : $\displaystyle \int_{}^{}\sinh x dx = \cosh x + C$
+
+- 예시 
+
+    $$ \int_{}^{}\sinh ^{2}xdx = \int_{}^{}\bigg (\dfrac{e ^{x} - e ^{-x}}{2}\bigg )^{2}dx = \int_{}^{}\dfrac{e ^{2x} + e ^{-2x} -2}{4}dx $$
+
+    $$ \dfrac{1}{8} ( e ^{2x} - e ^{-2x}) - \dfrac{1}{2}x + C = \dfrac{\sinh 2x}{4} - \dfrac{x}{2} + C $$
+
+!!! tldr ""
+
+    쌍곡코사인함수의 부정적분 : $\displaystyle \int_{}^{}\cosh  x dx = \sinh x + C$
+
+!!! tldr ""
+
+    쌍곡시컨트 제곱함수의 부정적분 : $\displaystyle \int_{}^{}\operatorname{sech} ^{2} x dx = \tanh  x + C$
+
+!!! tldr ""
+
+    쌍곡코탄젠트함수의 부정적분 : $\displaystyle \int_{}^{}\operatorname{coth} x dx = \ln |\sinh x|+ C$
+
+- 증명 
+
+    $\int_{}^{}\coth x dx = \int_{}^{}\dfrac{\cosh x}{\sinh x}dx$ 이므로 $u = \sinh x, du = \cosh x dx$ 로 두면
+
+    $$ \therefore \int_{}^{}\dfrac{du}{u} = ln|u| + C = \ln |\sinh x|+C $$
+
+    이다.
