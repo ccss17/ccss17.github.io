@@ -255,3 +255,119 @@
     $$ \therefore \int_{}^{}\dfrac{du}{u} = ln|u| + C = \ln |\sinh x|+C $$
 
     이다.
+
+# 역쌍곡함수
+
+!!! tldr ""
+
+    역쌍곡사인함수 : 쌍곡사인함수 $y = \sinh x$ 의 역함수는
+
+    $$ y = \sinh ^{-1} x = \ln (x + \sqrt[]{x ^{2} + 1}) $$
+
+    이다.
+
+- $y = \sinh x$ 는 일대일 대응이므로 역함수를 갖는다.
+
+- 증명
+
+    $y = \sinh ^{-1} x$ 에서 $\sinh y = x$ 이므로 $\sinh y = \dfrac{e ^{y} - e ^{-y}}{2} = x$ 을 얻는다. 양변에 $2 e ^{y}$ 를 곱하여
+
+    $$ e ^{2y} - 2x e ^{y} - 1 = 0 $$
+
+    를 얻고 이에 따라 
+
+    $$ e ^{y} = \dfrac{2x \pm \sqrt[]{4 x ^{2} + 4}}{2} = x \pm \sqrt[]{x ^{2} + 1} $$
+
+    을 얻는데, $e ^{y}$ 는 항상 양수이므로 
+
+    $$ e ^{y} = x + \sqrt[]{x ^{2} + 1} $$
+
+    이다. 그러므로 
+
+    $$ \therefore y = \ln (x + \sqrt[]{x ^{2} + 1}) $$
+
+    이다.
+
+!!! tldr ""
+
+    역쌍곡코사인함수 : 쌍곡코사인함수 $y = \cosh x$ 의 역함수는 정의역 $x \geq 1$ 에서
+
+    $$ y = \cosh ^{-1} x = \ln (x + \sqrt[]{x ^{2} - 1}) $$
+
+    이다.
+
+- 증명
+
+    $y = \cosh ^{-1} x$ 에서 $\cosh y = x$ 이므로 $\cosh y = \dfrac{e ^{y} + e ^{-y}}{2} = x$ 을 얻는다. 양변에 $2 e ^{y}$ 를 곱하여
+
+    $$ e ^{2y} - 2x e ^{y} + 1 = 0 $$
+
+    를 얻고 이에 따라 
+
+    $$ e ^{y} = \dfrac{2x \pm \sqrt[]{4 x ^{2} - 4}}{2} = x \pm \sqrt[]{x ^{2} - 1} \qquad (x \geq 1) $$
+
+    을 얻는다. 이때 $y \geq 0$ 이므로 $e ^{y} \geq 1$ 인데 $x > 1$ 일 때 $x - \sqrt[]{x ^{2} - 1}$ 이므로
+
+    $$ e ^{y} = x + \sqrt[]{x ^{2} - 1} $$
+
+    이다. 그러므로 
+
+    $$ \therefore y = \ln (x + \sqrt[]{x ^{2} - 1}) $$
+
+    이다.
+
+!!! tldr ""
+
+    역쌍곡탄젠트함수 : 쌍곡탄젠트함수 $y = \tanh x$ 의 역함수는 정의역 $|x| < 1$ 에서
+
+    $$ y = \tanh ^{-1} x = \dfrac{1}{2} \ln \dfrac{1+x}{1-x} $$
+
+    이다.
+
+- 증명
+
+    $-1 < \tanh y < 1$ 이므로 $|x| < 1$ 이다. $\tanh y = \dfrac{e ^{y} - e ^{-y}}{e ^{y} + e ^{-y}} = x$ 에 $e ^{y}$ 를 곱하면
+
+    $$ \dfrac{e ^{2y} - 1}{e ^{2y} + 1} = x $$
+
+    을 얻는다. 이로부터
+
+    $$ e ^{2y} - 1 = x e ^{2y} + x \implies (1 - x) e ^{2y} = x + 1 \implies e ^{2y} = \dfrac{1+x}{1-x} $$ 
+    
+    $$ \therefore y = \dfrac{1}{2}\ln \bigg (\dfrac{1+x}{1-x}\bigg ) \quad (|x| < 1) $$
+
+    을 얻는다.
+
+# 역쌍곡함수 미분
+
+!!! tldr ""
+
+    역쌍곡사인함수 미분 : $\displaystyle \frac{d}{dx} (\sinh ^{-1} x) = \dfrac{1}{\sqrt[]{x^2 + 1}}$
+
+- 역쌍곡함수들의 미분은 로그함수를 이용한 역함수 표현법을 사용하면 쉽게 구할 수 있다.
+
+!!! tldr ""
+
+    역쌍곡코사인함수 미분 : $\displaystyle \frac{d}{dx} (\cosh ^{-1} x) = \dfrac{1}{\sqrt[]{x ^{2} -1 }} \quad (x > 1)$
+
+!!! tldr ""
+
+    역쌍곡탄젠트함수 미분 : $\displaystyle \frac{d}{dx} (\tanh ^{-1} x) = \dfrac{1}{1 - x ^{2}} \quad (|x| < 1)$
+
+- 증명
+
+    $$ \frac{d}{dx}  (\tanh ^{-1} x) = \dfrac{1}{2}\dfrac{d}{dx} (\ln (1+x) - \ln (1-x)) = \dfrac{1}{2} \bigg (\dfrac{1}{1+x}+\dfrac{1}{1-x}\bigg ) $$
+
+    $$ \dfrac{1}{2}\bigg (\dfrac{2}{1 - x ^{2}}\bigg ) = \dfrac{1}{1-x ^{2}} $$
+
+!!! tldr ""
+
+    역쌍곡코탄젠트함수 미분 : $\displaystyle \frac{d}{dx} (\coth ^{-1} x) = \dfrac{1}{1 - x ^{2}} \quad (|x| > 1)$
+
+!!! tldr ""
+
+    역쌍곡시컨트함수 미분 : $\displaystyle \frac{d}{dx} (\operatorname{sech} ^{-1} x) = \dfrac{1}{x \sqrt[]{1 - x ^{2}} } \quad (0 < x < 1)$
+
+!!! tldr ""
+
+    역쌍곡코시컨트함수 미분 : $\displaystyle \frac{d}{dx} (\operatorname{csch} ^{-1} x) = \dfrac{1}{|x| \sqrt[]{1 + x ^{2}} } \quad (x \neq 0)$
