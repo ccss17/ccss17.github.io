@@ -260,9 +260,9 @@ int main(int argc, char** argv)
 | 한 글자 지우고 편집하기 | <kbd>Backspace</kbd> | `r` | 
 | 단어 지우고 편집하기 | <kbd>Backspace</kbd> × **n** | `cw` | 
 | 커서로부터 문장 끝까지 지우고 편집하기 | <kbd>Delete</kbd> × **n<sup>2</sup>** | `C` | 
-| 문장에서 `<OLD>` 를 `<NEW>` 로 치환하기 |  | `:s/<OLD>/<NEW>` | 
-| 전체 파일에서 `<OLD>` 를 `<NEW>` 로 치환하기 |  | `:s/<OLD>/<NEW>/g` | 
-| 전체 파일에서 하나씩 확인하면서 `<OLD>` 를 `<NEW>` 로 치환하기 |  | `:s/<OLD>/<NEW>/gc` | 
+| 문장에서 `<OLD>` 를 `<NEW>` 로 치환하기 |  | `:%s/<OLD>/<NEW>` | 
+| 전체 파일에서 `<OLD>` 를 `<NEW>` 로 치환하기 |  | `:%s/<OLD>/<NEW>/g` | 
+| 전체 파일에서 하나씩 확인하면서 `<OLD>` 를 `<NEW>` 로 치환하기 |  | `:%s/<OLD>/<NEW>/gc` | 
 
 - 실습 
 
@@ -280,7 +280,7 @@ int main(int argc, char** argv)
 
 - 실습 
 
-    `:s/int/long long/g` 을 실행해보세요. 파일 전체의 `int` 가 `long long` 으로 바뀝니다. 
+    `:%s/int/long long/g` 을 실행해보세요. 파일 전체의 `int` 가 `long long` 으로 바뀝니다. 
 
 ### 화면 내의 커서 이동 
 
