@@ -371,3 +371,95 @@
 !!! tldr ""
 
     역쌍곡코시컨트함수 미분 : $\displaystyle \frac{d}{dx} (\operatorname{csch} ^{-1} x) = \dfrac{1}{|x| \sqrt[]{1 + x ^{2}} } \quad (x \neq 0)$
+
+!!! tldr ""
+
+    1계 미분방정식의 해 : 미분방정식 $\dfrac{dy}{dt} + P(t)y = Q(t)$ 에 대하여 적분인자(integrating factor) 
+
+    $$ \mu = \pm e ^{\int_{}^{}P(t)dt} $$
+
+    를 양변에 곱하면 미분방정식의 해를 간단히 구할 수 있다.
+
+- 예시
+
+    미분방정식 $\dfrac{dy}{dt} + \dfrac{1}{t}y = t \quad (t > 0)$ 의 일반해를 구해보자. 양변에 $t$ 를 곱하면 
+
+    $$ t \dfrac{dy}{dt} + y = t ^{2} $$
+
+    이다. 이때 좌변은 $ty$ 를 $t$ 에 대하여 합성함수의 미분한 결과
+
+    $$ \dfrac{d}{dt}(ty) = t'y + ty' = y + t \dfrac{dy}{dt} = t \dfrac{dy}{dt} + y $$
+
+    와 같다. 그러므로 미분방정식을 
+
+    $$ \dfrac{d}{dt}(ty) = t ^{2} $$
+
+    로 쓸 수 있다. 이때 양변을 $t$ 에 대하여 적분하면
+
+    $$ \int_{}^{}\dfrac{d}{dt}(ty) dt = \int_{}^{} t ^{2}dt $$
+
+    $$ \iff ty = \dfrac{1}{3}t ^{3} + C $$
+
+    를 얻는다. 따라서 일반해는
+
+    $$ \therefore \dfrac{1}{3}t ^{2} + \dfrac{C}{t} \quad (t > 0) $$
+
+    이다.
+
+- 증명 
+
+    1계 미분방정식 
+    
+    $$\dfrac{dy}{dt} + P(t)y = Q(t)$$ 
+    
+    의 해를 구하는 방법을 살펴보자. 먼저 위 예시로 우리가 알 수 있는 것은 미분방정식에 적당한 함수 $\mu (t)$ 를 곱하면 좌변이 어떤 함수의 미분 꼴이 되어 양변을 적분하여 간단히 해를 구할 수 있게 된다는 것이다. 이것을 식으로 표현하면 
+
+    $$ \mu (t) \bigg (\dfrac{dy}{dt} + P(t)y\bigg ) = \mu (t)Q(t) $$
+
+    인데, 우리가 원하는 것은 결과적으로 
+
+    $$ \mu (t) \bigg (\dfrac{dy}{dt} + P(t)y\bigg ) = \dfrac{d}{dt}(\mu (t) y) $$
+
+    이 되는 $\mu (t)$ 이다. 이 식을 전개해보면
+
+    $$ \iff \mu y' + \mu P(t)y = \mu y' + \mu ' y $$
+
+    $$ \iff \mu P(t) y = \mu ' y \iff \mu ' = \mu P(t) $$
+
+    $$ \iff \dfrac{d \mu }{dt} = \mu P(t) \iff \dfrac{1}{\mu }d \mu = P(t) dt $$
+
+    이다. 이것을 그대로 적분하면
+
+    $$ \int_{}^{}\dfrac{1}{\mu }d \mu = \int_{}^{}P(t)dt $$
+
+    $$ \ln |\mu | = \int_{}^{}P(t)dt $$
+
+    $$ \therefore \mu = \pm e ^{\int_{}^{}P(t)dt} $$
+
+    를 얻는다.
+
+    즉, 1계 선형 미분방정식에서 $y$ 의 계수인 함수 $P(t)$ 를 적분하여 $e$ 의 지수함수에 올린 형태 $\mu = \exp \bigg (\int_{}^{}P(t)dt\bigg )$ 를 곱하면 미분방정식의 해를 간단히 구할 수 있다. 
+
+- 예시 
+
+    미분방정식 $t \dfrac{dy}{dt} = t ^{2} + 3y \quad (t > 0)$ 의 일반해를 구해보자. 먼저 방정식을 표준형으로 쓰면
+
+    $$ \dfrac{dy}{dt} - \dfrac{3}{t}y = t $$
+
+    이다. 이때 적분인자는 
+
+    $$ e ^{- \int_{}^{}\dfrac{3}{t}dt} = e ^{-3 \ln t} = e ^{\ln t ^{-3}} = t ^{-3} \quad (t > 0) $$
+
+    이다. 이 적분인자를 미분방정식 양변에 곱하면
+
+    $$ t ^{-3}(y'-\dfrac{3}{t}y) = t ^{-2} \iff \dfrac{d}{dt}(t ^{-3}y) = t ^{-2} $$
+
+    를 얻는다. 양변을 적분하면 일반해는 
+
+    $$ \int_{}^{} \dfrac{d}{dt}(t ^{-3}y) = \int_{}^{} t ^{-2} $$
+
+    $$ \iff t ^{-3}y = \int_{}^{}t ^{-2}dt = - \dfrac{1}{t} + C $$
+
+    $$ \iff y = -t ^{2} + C t ^{3} \quad (t > 0) $$
+
+    이다.
