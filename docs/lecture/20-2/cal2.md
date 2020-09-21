@@ -371,3 +371,4 @@
 !!! tldr ""
 
     역쌍곡코시컨트함수 미분 : $\displaystyle \frac{d}{dx} (\operatorname{csch} ^{-1} x) = \dfrac{1}{|x| \sqrt[]{1 + x ^{2}} } \quad (x \neq 0)$
+
