@@ -531,3 +531,78 @@
     $$ \iff y = -t ^{2} + C t ^{3} \quad (t > 0) $$
 
     이다.
+    
+# 수열의 수렴
+
+!!! tldr ""
+
+    수열의 수렴 : $n \in \N$ 에 대하여 수열 $a_n$ 이 수렴한다는 것은 어떤 실수 $L \in \R$ 이 존재하여 임의의 양수 $\epsilon$ 에 대하여
+
+    $n > N _{\epsilon }$ 이기만 하면 $|a_n -L | < \epsilon$ 이 성립하도록 하는 양수 $N _{\epsilon }$ 이 존재한다는 것이다.
+
+- 증명
+
+    (중복)
+
+!!! tldr ""
+
+    유계 증가수열 원리(Monotonic Sequence Principle) : 대한 수열 $a_n$ 이 
+    
+    $$\forall n \in \N, a_n \leq a _{n+1} \land \exists M \in \R, \forall n \in \N, a_n \leq M$$
+
+    이면 수열 $a_n$ 은 반드시 수렴한다.
+
+- 이는 실수의 완비성이라 부르는 실수 체계의 공리이다.
+
+- 증명
+
+    **구체화 필요**
+
+- 예시 
+
+    $$ \lim_{n \to \infty} \sqrt[m]{a_n} = \sqrt[m]{l} $$
+
+!!! tldr ""
+
+    수렴하는 수열의 성질 : 수렴하는 두 수열 $\{a_n\},\{b_n\}$ 에 대하여 $\displaystyle \lim_{n \to \infty} a_n = l, \lim_{n \to \infty} b_n = l'$ 일 때 다음 성질이 성립한다.
+
+1. $\displaystyle \lim_{n \to \infty} (a_n + b_n) = l + l'$
+
+2. $\displaystyle \lim_{n \to \infty} (a_n \cdot b_n) = l \cdot  l'$
+
+3. 상수 $c$ 에 대하여 $\displaystyle \lim_{n \to \infty} ca_n = cl$
+
+4. $f$ 가 $\R$ 위에서 정의된 연속함수라면 $\displaystyle  \lim_{n \to \infty}f(a_n) = f(l)$ 이다.
+
+5. 수열 $\{c_n\}$ 이 있어서 어떤 양수 $N$ 보다 큰 모든 $n$ 에 대해 $\displaystyle  a_n \leq c_n \leq b_n \land l=l' \implies \lim_{n \to \infty} c_n =l$ 이다.
+
+
+# 무한급수 수렴판정
+
+!!! tldr ""
+
+    무한급수 (infinite series) : 무한수열의 합니다.
+
+- 예시 
+
+    수열 $\{a_n\}$ 에 대한 무한급수는 $\displaystyle \sum_{n=1}^{\infty} a_n$ 이다.
+
+    이 수열의 부분합은 $\displaystyle  k \in \N, S_k = \sum_{n=1}^{k}a_n$ 인데, 무한급수가 수렴한다는 것은 수열 $\{S_k\}$ 가 수렴한다는 것, 즉 $\displaystyle \exists L \in \R, \lim_{k \to \infty} S_k = \sum_{n=1}^{\infty} a_n = L$ 라는 것이다.
+
+!!! tldr ""
+
+    수렴하는 급수의 성질 : 수렴하는 두 급수 $\displaystyle \sum_{n=1}^{\infty}a_n, \sum_{n=1}^{\infty} b_n$ 에 대하여 다음 성질이 성립한다.
+
+1. 상수 $A$ 에 대해 $\displaystyle \sum_{n=1}^{\infty}Aa_n = A \sum_{n=1}^{\infty}a_n$
+
+2. $\displaystyle \sum_{n=1}^{\infty}a_n + \sum_{n=1}^{\infty}b_n = \sum_{n=1}^{\infty}(a_n + b_n)$
+
+!!! tldr ""
+
+    일반항 판정범(n-th term test) : 일반항 $a_n$ 이 $n \to \infty \implies \lim_{n \to \infty} a_n \neq 0$ 이면 급수 $\sum_{n=1}^{\infty}a_n$ 이 발산한다.
+
+- 예시 
+
+    무한급수 $\displaystyle \sum_{n=1}^{\infty}\dfrac{n ^{2}}{4 + 2 n ^{2}}$ 가 수렴하는지 조사하자.
+
+    $\displaystyle \lim_{n \to \infty} \dfrac{n ^{2}}{4 + 2 n ^{2}} = \lim_{n \to \infty}\dfrac{1}{4/n ^{2} + 2}  = \dfrac{1}{2}$ 이므로 일반항이 $0$ 으로 수렴하지 않는다. 그러므로 급수가 발산한다.
