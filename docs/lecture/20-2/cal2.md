@@ -581,13 +581,19 @@
 
 !!! tldr ""
 
-    무한급수 (infinite series) : 무한수열의 합니다.
+    무한급수 (infinite series) : 무한수열의 합이다.
+
+- 수열 $\{a_n\}$ 에 대한 무한급수는 $\displaystyle \sum_{n=1}^{\infty} a_n$ 이다.
+
+    이 수열의 부분합은 $\displaystyle  k \in \N, S_k = \sum_{n=1}^{k}a_n$ 인데, 무한급수가 수렴한다는 것은 수열 $\{S_k\}$ 가 수렴한다는 것, 즉 $\displaystyle \exists L \in \R, \lim_{k \to \infty} S_k = \sum_{n=1}^{\infty} a_n = L$ 라는 것이다.
 
 - 예시 
 
-    수열 $\{a_n\}$ 에 대한 무한급수는 $\displaystyle \sum_{n=1}^{\infty} a_n$ 이다.
+    $\displaystyle \sum_{n=2}^{\infty}\dfrac{1}{n(n-1)} = \sum_{n=2}^{\infty}\bigg (\dfrac{1}{n-1}-\dfrac{1}{n}\bigg )$ 은 수렴한다. 왜냐하면
 
-    이 수열의 부분합은 $\displaystyle  k \in \N, S_k = \sum_{n=1}^{k}a_n$ 인데, 무한급수가 수렴한다는 것은 수열 $\{S_k\}$ 가 수렴한다는 것, 즉 $\displaystyle \exists L \in \R, \lim_{k \to \infty} S_k = \sum_{n=1}^{\infty} a_n = L$ 라는 것이다.
+    $$ S_n = 1 - \dfrac{1}{n} \implies  \lim_{n \to \infty}S_n = 1 \implies  \sum_{n=2}^{\infty}\dfrac{1}{n(n-1)}=1 $$
+
+    이기 때문이다.
 
 !!! tldr ""
 
@@ -599,10 +605,74 @@
 
 !!! tldr ""
 
-    일반항 판정범(n-th term test) : 일반항 $a_n$ 이 $n \to \infty \implies \lim_{n \to \infty} a_n \neq 0$ 이면 급수 $\sum_{n=1}^{\infty}a_n$ 이 발산한다.
+    일반항 판정법(n-th term test) : 일반항 $a_n$ 이 $\displaystyle  n \to \infty \implies \lim_{n \to \infty} a_n \neq 0$ 이면 급수 $\displaystyle \sum_{n=1}^{\infty}a_n$ 이 발산한다.
 
 - 예시 
 
     무한급수 $\displaystyle \sum_{n=1}^{\infty}\dfrac{n ^{2}}{4 + 2 n ^{2}}$ 가 수렴하는지 조사하자.
 
     $\displaystyle \lim_{n \to \infty} \dfrac{n ^{2}}{4 + 2 n ^{2}} = \lim_{n \to \infty}\dfrac{1}{4/n ^{2} + 2}  = \dfrac{1}{2}$ 이므로 일반항이 $0$ 으로 수렴하지 않는다. 그러므로 급수가 발산한다.
+
+!!! tldr ""
+
+    등비급수(geometric series) 의 수렴 : $a \neq 0$ 와 공비(ratio) $r \in \R$ 에 대한 등비급수
+
+    $$ S = a + ar + ar ^{2} + ar ^{3} + \dots + a r ^{n} + \dots = \sum_{k=0}^{\infty}a r ^{k} $$ 
+
+    는 $r = 1$ 인 경우 부분합이 $S_k = ka$ 이 되어 발산하고,
+
+    $r \neq 1$ 인 경우 부분합이 $S_k = \dfrac{a(1-r ^{k})}{1-r}$ 이 되므로 $|r|<1$ 일 때 $\displaystyle \lim_{k \to \infty} S_k = \dfrac{a}{1-r}$ 이 되어 수렴하고, $|r| > 1$ 일 때는 발산한다.
+
+- 부분합 $S_k$ 는 다음과 같이 얻는다.
+
+    $$ rS_k = ar + \dots + ar ^{k} $$
+
+    $$ S_k - rS_k = (1-r)S_k = a - ar ^{k}  \iff S_k = \dfrac{a(1-r ^{k})}{1-r} $$
+
+- 예시 
+
+    등비급수 $\displaystyle \sum_{k=1}^{\infty}\bigg (\dfrac{1}{2}\bigg )^{k}$ 의 수렴을 조사하자.
+
+    공비가 $\dfrac{1}{2}$ 이므로 수렴한다.
+
+!!! tldr ""
+
+    비교판정법(comparison test) : 모든 $n$ 에 대해 $0 \leq a_n \leq b_n$ 이면
+
+    1. $\displaystyle \sum_{n=1}^{\infty} b_n$ 이 수렴하면 $\displaystyle \sum_{n=1}^{\infty} a_n$ 도 수렴한다.
+
+    2. $\displaystyle \sum_{n=1}^{\infty} b_n$ 이 발산하면 $\displaystyle \sum_{n=1}^{\infty} a_n$ 도 발산한다.
+
+- 1 증명 
+
+   $\displaystyle \sum_{n=1}^{\infty} b_n = M$ 으로 두면 
+
+   $$ \sum_{n=1}^{k} a_n \leq \sum_{n=1}^{k} b_n \leq \sum_{n=1}^{\infty} b_n = M $$
+
+   이 되어 유계 증가수열의 원리에 의해 $\displaystyle \sum_{n=1}^{\infty} a_n$ 이 수렴한다.
+
+- 2 증명 
+
+    (1 의 증명과 비슷하게 할 수 있다.)
+
+- 예시 
+
+    $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n ^{2}}$ 은 비교 판정법에 의하여 수렴한다.
+    
+    왜냐하면 $n \geq 2$ 일 때 $\dfrac{1}{n ^{2}} < \dfrac{1}{n(n-1)}$ 이고 $\sum_{n=2}^{\infty} = 1$ 이기 때문이다. 
+
+- 예시 
+
+    조화급수 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n}$ 은 비교 판정법에 의하여 발산한다.
+
+    왜냐하면 
+
+    $$ 1 + \dfrac{1}{2} + \dfrac{1}{3} + \dots > 1 + \dfrac{1}{2} + \bigg (\dfrac{1}{4} + \dfrac{1}{4} \bigg ) + \dots $$
+
+    $$ = 1 + \dfrac{1}{2} + 2 \times \dfrac{1}{4} + 4 \times \dfrac{1}{8} = 1 + \dfrac{1}{2} + \dfrac{1}{2} + \dots = \infty $$
+
+    이기 때문이다.
+
+!!! tldr ""
+
+    극한 비교판정법(limit comparison test) : $\forall n \in \N, a_n > 0, b_n > 0$ 일 때 $\displaystyle \lim_{n \to \infty} \dfrac{a_n}{b_n} = c \land c > 0$ 이면 $\sum a_n, \sum b_n$ 은 둘 다 수렴하거나 둘 다 발산한다.
