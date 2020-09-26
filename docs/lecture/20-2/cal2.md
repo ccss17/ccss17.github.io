@@ -676,3 +676,130 @@
 !!! tldr ""
 
     극한 비교판정법(limit comparison test) : $\forall n \in \N, a_n > 0, b_n > 0$ 일 때 $\displaystyle \lim_{n \to \infty} \dfrac{a_n}{b_n} = c \land c > 0$ 이면 $\sum a_n, \sum b_n$ 은 둘 다 수렴하거나 둘 다 발산한다.
+
+- 증명 
+
+    극한 $\displaystyle \lim_{n \to \infty} \dfrac{a_n}{b_n}$ 이 유한값 $c$ 라고 하면 극한의 정의에 따라 조건 $n \geq N$ 을 만족하는 $\forall n \in \N$ 에 대하여 부등식
+
+    $$ a_n \leq (c+1) b_n $$
+
+    이 항상 성립하게 하는 자연수 $N$ 이 존재하게 된다. 그러면
+
+    $$ \sum_{n=1}^{\infty} a_n = \sum_{n=1}^{N-1}a_n + \sum_{n=N}^{\infty}a_n \leq \sum_{n=1}^{N-1}a_n + (c+1) \sum_{n=N}^{\infty}b_n $$
+
+    이다. 그러므로 $\sum b_n$ 이 수렴하면 $\sum a_n$ 이 수렴한다.
+
+    $\sum b_n$ 이 발산한다고 가정하면, 극한의 정의에 따라 조건 $n \geq N_1$ 을 만족하는 임의의 자연수 $n$ 에 대하여 부등식 
+
+    $$ \dfrac{c}{2}b_n \leq a_n $$
+
+    이 항상 성립하게 하는 자연수 $N_1$ 이 존재하게 된다 그러면 
+
+    $$ \sum_{n=N_1}^{\infty} \dfrac{c}{2}b_n \leq \sum_{n=N_1}^{\infty} a_n $$
+
+    의 좌변이 발산하므로 $\sum a_n$ 은 발산한다.
+
+    (이해 안 됨 강의 봐야할듯)
+
+- 예시 
+
+    $\displaystyle \sum_{n=1}^{\infty}\dfrac{2 n ^{2} + 3n}{\sqrt[]{5 + n ^{5}}}$ 가 수렴하는지 조사하자.
+
+    $a_n = \dfrac{2 n ^{2} + 3n}{\sqrt[]{5 + n ^{5}}}, b_n = \dfrac{2 n ^{2}}{n ^{5/2}} = \dfrac{2}{\sqrt[]{2}}$ 라고 하면 
+
+    $$ \lim_{n \to \infty} \dfrac{a_n}{b_n} = \lim_{n \to \infty}  \dfrac{2 n ^{2} + 3n}{\sqrt[]{5 + n ^{5}}}\dfrac{n ^{1/2}}{2} = \lim_{n \to \infty}  \dfrac{n ^{5/2} + \dfrac{3}{2} n ^{3/2}}{\sqrt[]{5 + n ^{5}}} $$
+
+    $$ = \lim_{n \to \infty} \dfrac{1 + \dfrac{3}{2}n ^{3/2-5/2}}{\sqrt[]{\dfrac{5+n ^{5}}{n ^{5}}}} = \lim_{n \to \infty} \dfrac{1 + \dfrac{3}{2}n ^{-1}}{\sqrt[]{1+5 /n ^{5}}} = 1 $$
+
+    이므로 극한 비교판정법을 사용할 수 있다.
+
+    $\displaystyle \sum_{n=1}^{\infty} \dfrac{2}{\sqrt[]{n}}$ 이 발산하므로 극한 비교판정법에 의하여 처음의 급수도 발산한다.
+
+!!! tldr ""
+
+    비율 판정법(raio test) : $\forall n \in \N, a_n > 0$ 에 대하여 극한값
+
+    $$ r = \lim_{m \to \infty} \dfrac{a _{m+1}}{a_m} $$
+
+    이 존재할 때 $r < 1$ 이면 급수 $\displaystyle \sum_{n=1}^{\infty}a_n$ 가 수렴하고,
+
+    $r > 1$ 이면 급수 $\displaystyle \sum_{n=1}^{\infty}a_n$ 가 발산한다.
+
+- 증명
+
+    ㅇㅇ 
+    (이해 안 됨 강의 봐야할듯)
+
+- 예시 
+
+    $\displaystyle \sum_{n=0}^{\infty} \dfrac{n}{3 ^{n}}$ 이 수렴하는지 조사하자.
+
+    $$ \lim_{n \to \infty} \dfrac{\dfrac{n+1}{3 ^{n+1}}}{\dfrac{n}{3 ^{n}}}  = \lim_{n \to \infty} \dfrac{n+1}{n} \dfrac{3 ^{n}}{3 ^{n+1}} = \dfrac{1}{3} $$
+
+    이므로 주어진 급수는 비율 판정법에 의하여 수렴한다.
+
+!!! tldr ""
+
+    거듭제곱근 판정법(root test) : $\displaystyle \forall n \in \N, a_n>0 \land \exists r \in \R, r = \lim_{m \to \infty} (a_m) ^{1/m} \implies r < 1$ 이면 급수 $\displaystyle \sum_{n=1}^{\infty}a_n$ 이 수렴하고, $r>1$ 이면 발산한다.
+
+- 증명
+
+    **구체화 필요**
+
+- $r=1$ 일 경우 수렴, 발산에 대한 결론을 얻을 수 없다는 단점이 있다. 이런 경우 다음에 소개할 적분판정법을 사용할 수 있다.
+
+- 예시 
+
+    $\displaystyle \sum_{n=2}^{\infty}\dfrac{1}{(\ln n) ^{n}}$ 이 수렴하는지 조사하자.
+
+    $$ \lim_{n \to \infty} \sqrt[n]{\dfrac{1}{(\ln n) ^{n}}}  = \lim_{n \to \infty} \dfrac{1}{\ln n}  = 0 $$ 
+
+    이므로 거듭제곱근 판정법에 의해 수렴한다.
+
+!!! tldr ""
+
+    단조감소함수 : 다음 조건을 만족하는 함수 $f(x)$ 를 단조감수함수라고 한다.
+
+    $$ x_1 < x_2 \to f(x_1) > f(x_2) $$
+
+!!! tldr ""
+
+    적분판정법(integral test) : $x>0$ 에서 정의된 단조감소함수 $f(x)$ 와 수열 $a_n$ 에 대하여 $f(x) \geq 0 \land \forall n \in \N, a_n = f(n)$ 일 때 극한
+
+    $$ \lim_{R \to \infty}\int_{1}^{R}f(x)dx $$
+
+    가 수렴하면 급수 $\displaystyle \sum_{n=1}^{\infty}a_n$ 도 수렴하고,
+
+    무한대로 발산하면 급수 $\displaystyle \sum_{n=1}^{\infty}a_n$ 도 발산한다.
+
+- 증명 
+
+    **구체화 필요**
+
+- 예시 
+
+    $\exists p \in \R$ 에 대하여 급수 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n^p}$ 는 $p \leq 1$ 이면 발산하고, $p>1$ 이면 수렴하는데, 이 사실을 증명해보자.
+
+    먼저 수열 $a_n = \dfrac{1}{n^p}$ 에 대하여 $p \leq 0$ 이면 $\forall n \in \N, a_n > 1$ 이므로 급수가 무조건 발산하므로, $p > 0$ 인 경우만 상정하자.
+
+    함수 $f(x) = x ^{-p}$ 에 대하여
+    
+    $$p \neq 1 \implies \int_{1}^{R}x ^{-p}dx = \bigg [\dfrac{1}{1-p}x ^{1-p}\bigg ] ^{R} _{1} = \dfrac{1}{1-p}(R ^{1-p} - 1) $$ 
+
+    이다. 이때 
+
+    $$ p>1 \iff 1-p<0 \implies \lim_{R \to \infty} \int_{1}^{R}x ^{-p}dx = \lim_{R \to \infty} \dfrac{1}{1-p}(R ^{1-p} - 1) = \dfrac{1}{p-1} $$
+
+    이므로 이 값은 유한하다. 그러므로 $p>1$ 이면 $\sum \dfrac{1}{n^p}$ 는 수렴한다. ■ 
+
+    한편, 
+
+    $$ 0 < p < 1 \implies \lim_{R \to \infty} \int_{1}^{R} x ^{-p}dx \to \infty  $$
+
+    이므로 $0<p<1$ 이면 $\sum \dfrac{1}{n^p}$ 는 발산한다. ■ 
+
+    또
+
+    $$ p = 1 \implies \lim_{R \to \infty} \int_{1}^{R}x ^{-1}dx = \lim_{R \to \infty}  \ln R \to \infty $$
+
+    이다. 그러므로 $p=1$ 이면 $\sum \dfrac{1}{n^p}$ 는 발산한다. ■ 

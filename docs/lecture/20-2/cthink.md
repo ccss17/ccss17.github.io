@@ -810,15 +810,15 @@ $1$ 과 $2$ 가 $i \in \{1, 2, \dots, N\}$ 에서 만나는 모든 경우의 수
 
 ## 분석
 
-기존의 하노이 탑에서 원반 $1 \sim n$ 을 옮기는 횟수를 $a_n$ 이라고 했을 때, 
+기존의 하노이 탑에서 원반 $1 \sim (n-1)$ 을 옮기는 횟수를 $a _{n-1}$ 이라고 했을 때, 
 
-원반 $1 \sim (n+1)$ 을 옮기기 위해서는 원반 $1 \sim n$ 을 옮기고($+a_n$) 
+원반 $1 \sim n$ 을 옮기기 위해서는 원반 $1 \sim (n-1)$ 을 다른 곳에 옮겨두고($+a _{n-1}$) 
 
-원반 $n+1$ 을 옮기고($+1$) 다시 원반 $1 \sim n$ 을 원반 $n+1$ 에 쌓으면($+a_n$) 되었다.
+원반 $n$ 을 목적지에 옮기고($+1$) 다시 원반 $1 \sim (n-1)$ 을 원반 $n$ 에 쌓으면($+a _{n-1}$) 되었다.
 
-그러므로 기존의 하노이 탑에서 원반 $1 \sim (n+1)$ 을 옮기기 위한 비용은 다음과 같다.
+그러므로 기존의 하노이 탑에서 원반 $1 \sim n$ 을 옮기기 위한 비용은 다음과 같다.
 
-$$ a _{n+1} = \overbrace{a_n}^{(1 \sim n) \to \text{temp}} + \overbrace{1}^{n+1 \to \text{dest}} + \overbrace{a_n}^{(1 \sim n) \to \text{dest}} $$
+$$ a _n = \overbrace{a _{n-1}}^{1 \sim (n-1) \to \text{temp}} + \overbrace{1}^{n \to \text{dest}} + \overbrace{a _{n-1}}^{1 \sim (n-1) \to \text{dest}} = 2 ^{n} - 1 \quad (a_1 = 1) $$
 
 ## 풀이
 
@@ -842,7 +842,7 @@ $$ f (x, d_x, l_x) = \overbrace{f(x-1, \text{temp}, l _{x-1})}^{1 \sim (x-1) \to
 
 $$ \therefore \boxed{f (x, d_x, l_x) = \begin{cases} f (x-1, d_x, l _{x-1} ) &(d_x = l_x)\\ f (x-1, \text{temp}, l _{x-1} ) + 1 + f (x-1, d_x, l_{x-1} ) &(d_x \neq l_x)\\ \end{cases}}  $$
 
-단, $\displaystyle f(1) = \begin{cases} 0 & (d_x = l_x) \\ 1 & (d_x \neq l_x)\\ \end{cases}$ 이다.
+단, $\displaystyle f(1, d_1, l_1) = \begin{cases} 0 & (d_1 = l_1) \\ 1 & (d_1 \neq l_1)\\ \end{cases}$ 이다.
 
 $1 \sim (x-1)$ 을 목적지 기둥 $\text{dest}$ 이 아닌 임시 기둥 $\text{temp}$ 로 
 
