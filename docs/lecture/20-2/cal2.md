@@ -803,3 +803,35 @@
     $$ p = 1 \implies \lim_{R \to \infty} \int_{1}^{R}x ^{-1}dx = \lim_{R \to \infty}  \ln R \to \infty $$
 
     이다. 그러므로 $p=1$ 이면 $\sum \dfrac{1}{n^p}$ 는 발산한다. ■ 
+
+!!! tldr ""
+
+    절대수렴(converges absolutely) : 임의의 급수 $\displaystyle \sum_{n=1}^{\infty}a_n$ 이 주어졌을 때, 급수 $\displaystyle \sum_{n=1}^{\infty}|a_n|$ 이 수렴하면, 급수 $\displaystyle \sum_{n=1}^{\infty}a_n$ 이 절대수렴한다.
+
+!!! tldr ""
+
+    절대수렴판정법(absolute convergence test) : 절대수렴하는 급수는 수렴한다.
+
+- 증명
+
+    **구체화 필요**
+
+!!! tldr ""
+
+    교대급수(alternating series) : $\forall n \in \N, a_n > 0 \implies \sum(-1) ^{n+1} a_n$ 꼴의 급수이다.
+
+- 예시 
+
+    $$ 1 - \dfrac{1}{2} + \dfrac{1}{3} - \dfrac{1}{4} + \dots $$
+
+!!! tldr ""
+
+    교대급수 판정법(alternating series test) : $\forall n \in \N, a_n > 0 \land a_n \geq a _{n+1}$ 이면 $\sum (-1) ^{n+1} a_n$ 은 수렴한다. 
+
+- 증명
+
+    **구체화 필요**
+
+- 예시 
+
+    $1 - \dfrac{1}{2} + \dfrac{1}{3} - \dfrac{1}{4} + \dots$ 은 교대급수판정법에 의하여 수렴한다.
