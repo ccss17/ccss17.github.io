@@ -52,7 +52,7 @@ $ vim +PlugInstall +qall
 
 하지만 이 명령어들을 다 입력해야 한다니 정말 의욕이 사라지지 않나요? 그래서 제가 이것을 한 방에 설치할 수 있도록 쉘스크립트를 만들어두었습니다. 
 
-!!! danger "Acceleration"
+!!! danger "Speed up!!"
 
     이러한 CLI 툴들의 설치와 설정들을 매번 설치하기가 너무 귀찮아서 죽을 수도 있기 때문에 사람들은 `dotfiles` 라는 이름의 레포지토리에 일관적으로 정리해놓습니다. 
 
@@ -71,6 +71,7 @@ $ vim +PlugInstall +qall
 ```shell
 $ git clone https://github.com/ccss17/dotfiles-cli
 $ cd dotfiles-cli
+$ ./updatepkg.sh
 $ ./install.sh
 $ chsh -s /usr/bin/zsh    # 기본 쉘을 bash 에서 zsh 로 바꿉니다. 비밀번호를 물으면 당연히 "a" 를 입력하면 됩니다. 
 ```
@@ -126,7 +127,7 @@ source ~/.zsh_aliases
     $ cl
     ```
 
-    !!! danger "Acceleration"
+    !!! danger "Speed up!!"
     
         이로써 만약 여러분이 살아가는 전체 시간동안 `clear` 명령어를 **1만** 번 실행시킨다고 가정한다면 **10000 * 5 = 5만** 번 키보드를 입력해야 하는 것을 **10000 * 1 = 1만** 번으로 절약하여 **4만 번의 타수를 절약** 했습니다. 
 
@@ -447,7 +448,7 @@ $ fzf
     $ cd /usr/lib/gcc/x86_64-linux-gnu/9.3.0
     ```
 
-    !!! danger "Acceleration"
+    !!! danger "Speed up!!"
 
         하지만 이건 너무 길어서 짜증나서 견딜 수가 없습니다. 
         
@@ -467,7 +468,7 @@ $ fzf
 
 단 `z` 명령어를 사용하기 위해서는 반드시 한 번 이상은 그 경로로 이동한 적이 있어야 합니다. 왜냐하면 `z` 이 사용자가 이동한 경로를 분석하고 통계를 낼 기회를 줘야하기 때문이죠.
 
-!!! danger "Acceleration"
+!!! danger "Speed up!!"
 
     경로 입력 타수의 최소화!
 
@@ -493,7 +494,7 @@ $ fzf
 
 이 기능은 가장 최근에 실행한 명령어를 기억하여 사용자가 그 명령어와 비슷한 타자를 친다면 자동으로 완성된 명령어를 추천해주는 `zsh` 플러그인입니다. 
 
-!!! danger "Acceleration"
+!!! danger "Speed up!!"
 
     이 기능은 긴 명령어를 반복해야 할 때 **너무 편합** 니다. 명령어 입력 타수의 최소화!
 

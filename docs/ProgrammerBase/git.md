@@ -345,17 +345,23 @@ very important message
 $ g config --global alias.cm "commit -m"
 ```
 
-!!! note
+!!! danger "Speed up!!"
 
     `zsh` 의 `alias` 에서 `alias g=git` 으로 `git` 의 에일리어스 `g` 를 설정했었기 때문에 `git` 이 아닌 `g` 만 입력해도 됩니다. 
 
-그러면 이제부터 우리는 `git commit -m` 이 아니라 `g cm` 만 입력해도 되는 것입니다. 그런데 저의 `dotfiles` 를 설치하면서 이런 `git` 의 `alias` 들이 이미 `~/.gitconfig` 파일에 많이 설정되었습니다. 이 내용들을 확인하고 싶다면 
+저의 `dotfiles` 를 설치하면서 이런 `git` 의 `alias` 들이 이미 `~/.gitconfig` 파일에 많이 설정되었습니다. 이 내용들을 확인하고 싶다면 
 
 ```shell
 $ bat ~/.gitconfig
 ```
 
-를 실행해보면 됩니다. `git` 의 `alias` 가 매우 많이 설정되어 있지만 그중에서 주요한 `alias` 들은 다음과 같습니다. 
+를 실행해보면 됩니다. 
+
+!!! danger "Speed up!!"
+
+    이제부터 우리는 `git commit -m` 이 아니라 `g cm` 만 입력해도 되는 것입니다. 입력 타수 최소화!
+    
+`git` 의 `alias` 가 매우 많이 설정되어 있지만 그중에서 주요한 `alias` 들은 다음과 같습니다. 
 
 |`alias`|원래 명령어|완성된 명령어|의미|
 |:---|:---|:---|:---|
@@ -466,7 +472,7 @@ $ bat test.txt
 |`git pull origin master`|`g plom`|
 |**총합 `213` 개**|**총합 `79` 개**|
 
-!!! danger "Acceleration"
+!!! danger "Speed up!!"
 
     이러한 `git` 레포지토리 관리 패턴은 코딩을 할 때마다 반복되는데, 이 패턴을 개발자로 살아가면서 적게 잡아서 **10000** 번 반복한다고 한다면, 여러분은 **10000 * 213 = 2백 13만** 번 칠 것을 **10000 * 79 = 79만** 만쳤습니다. 
 

@@ -90,7 +90,7 @@ $ exit
 
 먼저 `tmux` 라는 명령어를 매번 치는 것은 너무 비효율적입니다. 
 
-!!! danger "Acceleration"
+!!! danger "Speed up!!"
 
     무려 `4` 번이나 키보드를 쳐야하기 때문이죠. 
     
@@ -161,7 +161,7 @@ bind-key C-a send-prefix
 
 를 추가하여 거리가 가까운 <kbd>Ctrl</kbd>+<kbd>a</kbd> 로 **Meta** 키를 재설정합니다. 
 
-!!! danger "Acceleration"
+!!! danger "Speed up!!"
 
     입력키 편의성 극대화!
 
@@ -184,7 +184,7 @@ bind-key C-a send-prefix
 
 또한 터미널을 수직으로 분할하려면 기존의 명령어 <kbd>Meta</kbd>+ <kbd>%</kbd> 를 입력해야 하는데 이것 역시 외우기가 너무 어렵습니다. 그래서 외우기 쉽도록 수직으로 나눈다는 의미에서 백슬래쉬로 바꿔서 <kbd>Meta</kbd>+ <kbd>⧵</kbd> 로 직관적인 단축키를 설정합니다. 
 
-!!! danger "Acceleration"
+!!! danger "Speed up!!"
 
     입력키 직관성 극대화!
 
@@ -198,7 +198,7 @@ bind-key C-a send-prefix
 
     ![mMkWtsbnpw](https://user-images.githubusercontent.com/16812446/81961730-bca80e80-964d-11ea-935f-e6e5f5699b12.gif)
 
-    !!! danger "Acceleration"
+    !!! danger "Speed up!!"
 
         터미널 이동이 정말 빨라졌습니다. 
 

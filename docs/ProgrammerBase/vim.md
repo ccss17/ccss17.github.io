@@ -641,7 +641,7 @@ alias v=vim
 
 를 추가하여 `v` 만 눌러도 `vim` 가 켜지도록 합니다. 
 
-!!! danger "Acceleration"
+!!! danger "Speed up!!"
 
     입력 타수 최소화!
 
@@ -665,7 +665,7 @@ alias v=vim
 <img src="https://user-images.githubusercontent.com/16812446/82145156-d468d800-9883-11ea-804f-77728db33733.gif" width="70%" height="auto">
 </div>
 
-!!! danger "Acceleration"
+!!! danger "Speed up!!"
 
     병렬 설치로 성능 극대화.
 
@@ -735,7 +735,7 @@ nmap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
     ![render1589720657002](https://user-images.githubusercontent.com/16812446/82147434-6f64b080-988a-11ea-995a-f6d2b1c92a9c.gif)
 
-    !!! danger "Acceleration"
+    !!! danger "Speed up!!"
 
         너무 빠르고 편하게 저장되고 종료됩니다. 
 
