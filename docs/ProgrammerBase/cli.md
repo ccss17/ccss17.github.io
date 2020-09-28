@@ -71,7 +71,7 @@ $ vim +PlugInstall +qall
 ```shell
 $ git clone https://github.com/ccss17/dotfiles-cli
 $ cd dotfiles-cli
-$ ./updatepkg.sh 
+$ ./updatepkg.sh
 $ ./install.sh
 $ chsh -s /usr/bin/zsh    # 기본 쉘을 bash 에서 zsh 로 바꿉니다. 비밀번호를 물으면 당연히 "a" 를 입력하면 됩니다. 
 ```
