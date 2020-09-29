@@ -641,6 +641,10 @@ alias v=vim
 
 를 추가하여 `v` 만 눌러도 `vim` 가 켜지도록 합니다. 
 
+!!! danger "Speed up!!"
+
+    입력 타수 최소화!
+
 - 실습 
 
     다음과 같이 도커 컨테이너에서 `vim` 를 켜보세요. 
@@ -660,6 +664,10 @@ alias v=vim
 <div align="center">
 <img src="https://user-images.githubusercontent.com/16812446/82145156-d468d800-9883-11ea-804f-77728db33733.gif" width="70%" height="auto">
 </div>
+
+!!! danger "Speed up!!"
+
+    병렬 설치로 성능 극대화.
 
 마지막 부분에서 나타나는 `vim` 화면이 `vim` 의 플러그인들을 `vim-plug` 가 병렬로 매우 빠르게 설치하는 장면입니다. 너무 빠르죠? 
 
@@ -727,7 +735,9 @@ nmap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
     ![render1589720657002](https://user-images.githubusercontent.com/16812446/82147434-6f64b080-988a-11ea-995a-f6d2b1c92a9c.gif)
 
-    너무 빠르고 편하게 저장되고 종료됩니다. 
+    !!! danger "Speed up!!"
+
+        너무 빠르고 편하게 저장되고 종료됩니다. 
 
     !!! info
     

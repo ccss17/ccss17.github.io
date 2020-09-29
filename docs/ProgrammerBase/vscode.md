@@ -368,7 +368,9 @@ https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categor
 
 ### Git Lens
 
-(git lens)
+!!! note
+
+    Git Lens 은 제가 이미 문서를 작성해둔 곳이 있어서 https://wicwiu.github.io/dev/VSCode/git/#git-lens 를 참고해주세요!
 
 ### Git Graph 
 
@@ -392,7 +394,7 @@ https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categor
 
 ### PDF 
 
-**VSCode** 에는 **PDF**를 편하게 볼 수 있게 해주는 확장이 있습니다. 두 가지 확장을 추천해드릴 것인데, 편한 것을 쓰면 됩니다.
+**VSCode** 에는 **PDF** 를 편하게 볼 수 있게 해주는 확장이 있습니다. 두 가지 확장을 추천해드릴 것인데, 편한 것을 쓰면 됩니다.
 
 [vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf) 는 다음과 같이 **PDF** 파일을 **VSCode** 로 볼 수 있게 해주는 확장입니다.
 
@@ -411,8 +413,6 @@ https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categor
 [**mdmath**](https://marketplace.visualstudio.com/items?itemName=goessner.mdmath) 는 다음과 같이 **Markdown** 파일에 **Tex** 수식을 입력하면 그것을 `.html` 파일로 자동으로 랜더링해주는 확장입니다. 
 
 <img src="https://raw.githubusercontent.com/goessner/mdmath/master/img/mdmath.gif" width="70%" height="auto">
-
-개인적으로 자주 사용하고 있는 확장이기도 합니다. 
 
 ### Bracket Pair Colorizer 2
 
@@ -486,7 +486,9 @@ https://marketplace.visualstudio.com/search?target=VSCode&category=All%20categor
 }
 ```
 
-> 이렇게 개인적으로 개발환경 설정을 할 수 있는데 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> 로 명령 팔레트를 열어서 **setting json** 만 검색하면 다음과 같이 **Preferences: Open Settings (JSON)** 이 나옵니다. 이것을 실행하여 설정창이 뜨면 단순히 위의 설정을 복사해서 붙혀넣으면 됩니다. 
+!!! tip
+
+    이렇게 개인적으로 개발환경 설정을 할 수 있는데 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> 로 명령 팔레트를 열어서 **setting json** 만 검색하면 다음과 같이 **Preferences: Open Settings (JSON)** 이 나옵니다. 이것을 실행하여 설정창이 뜨면 단순히 위의 설정을 복사해서 붙혀넣으면 됩니다. 
 
 <img src="https://user-images.githubusercontent.com/16812446/82322033-cbf1d800-9a10-11ea-9726-10ef40cff6c5.PNG" width="50%" height="auto">
 

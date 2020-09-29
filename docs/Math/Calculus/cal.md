@@ -445,7 +445,7 @@
         
             또는
         
-            $$ x \to a \Rightarrow f(x) \to \infty  $$
+            $$ x \to a \implies f(x) \to \infty  $$
         
     2. 음의 무한대로 발산 : 함수 $f(x)$ 에서 $x$ 의 값이 $a$ 가 아니면서 $a$ 에 한없이 가까워질 때, $f(x)$ 의 값이 음수이면서 그 절대값이 한없이 커지면 커지면 함수 $f(x)$ 는 음의 무한대로 발산한다고 한다. 
     
@@ -455,7 +455,7 @@
         
             또는
         
-            $$ x \to a \Rightarrow f(x) \to -\infty  $$
+            $$ x \to a \implies f(x) \to -\infty  $$
 
 - 예시
 

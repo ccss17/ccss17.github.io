@@ -88,7 +88,13 @@ $ exit
 
 ## 더 빨라진 alias
 
-먼저 `tmux` 라는 명령어를 매번 치는 것은 너무 비효율적입니다. 무려 `4` 번이나 키보드를 쳐야하기 때문이죠. 그래서 `~/.zsh_aliases` 에 
+먼저 `tmux` 라는 명령어를 매번 치는 것은 너무 비효율적입니다. 
+
+!!! danger "Speed up!!"
+
+    무려 `4` 번이나 키보드를 쳐야하기 때문이죠. 
+    
+그래서 `~/.zsh_aliases` 에 
 
 ```shell
 alias t=tmux
@@ -153,7 +159,13 @@ set-option -g prefix C-a
 bind-key C-a send-prefix
 ```
 
-를 추가하여 거리가 가까운 <kbd>Ctrl</kbd>+<kbd>a</kbd> 로 **Meta** 키를 재설정합니다. 여러분의 도커 컨테이너에는 이미 설정 되어있으니 걱정하지 마세요.
+를 추가하여 거리가 가까운 <kbd>Ctrl</kbd>+<kbd>a</kbd> 로 **Meta** 키를 재설정합니다. 
+
+!!! danger "Speed up!!"
+
+    입력키 편의성 극대화!
+
+여러분의 도커 컨테이너에는 이미 설정 되어있으니 걱정하지 마세요.
 
 !!! info
 
@@ -172,6 +184,10 @@ bind-key C-a send-prefix
 
 또한 터미널을 수직으로 분할하려면 기존의 명령어 <kbd>Meta</kbd>+ <kbd>%</kbd> 를 입력해야 하는데 이것 역시 외우기가 너무 어렵습니다. 그래서 외우기 쉽도록 수직으로 나눈다는 의미에서 백슬래쉬로 바꿔서 <kbd>Meta</kbd>+ <kbd>⧵</kbd> 로 직관적인 단축키를 설정합니다. 
 
+!!! danger "Speed up!!"
+
+    입력키 직관성 극대화!
+
 그리고 다음 터미널로 이동하는 단축키 <kbd>Meta</kbd>+<kbd>o</kbd> 는 실제로 (<kbd>Ctrl</kbd>+<kbd>a</kbd>) + <kbd>o</kbd> 인데, 다음 터미널로 이동하는 작업은 매우 많이 일어나므로 키를 `3` 번이나 눌러야 하는 것은 너무 비효율적이어서 참을 수가 없습니다. 그래서 <kbd>Alt</kbd>+<kbd>o</kbd> 로 바꿉니다. 
 
 **유일하게 MacOS 에서만 테스트를 못해봤기 때문에 MacOS 에서는 <kbd>Alt</kbd> 키로 하는 것이 안될 수도 있습니다. 그럴경우 그냥 <kbd>Meta</kbd> + <kbd>o</kbd> 로 하면 될 겁니다. 맥에서 <kbd>Alt</kbd> 가 어떻게 입력되는지 아시는 분이 있다면 알려주세요. 아마도 맥에서 "option" 이라는 키가 <kbd>Alt</kbd> 의 기능을 하지 않을까 싶습니다.**
@@ -182,7 +198,9 @@ bind-key C-a send-prefix
 
     ![mMkWtsbnpw](https://user-images.githubusercontent.com/16812446/81961730-bca80e80-964d-11ea-935f-e6e5f5699b12.gif)
 
-    터미널 이동이 정말 빨라졌습니다. 
+    !!! danger "Speed up!!"
+
+        터미널 이동이 정말 빨라졌습니다. 
 
 ## 더 빨라진 화면 생성 
 
