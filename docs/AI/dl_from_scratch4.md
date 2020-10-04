@@ -86,7 +86,7 @@
     
         $(n, n)$ 입력 데이터에 $(m, m)$ 커널을 몇번 적용할 수 있는지 조사하기 위하여 집합
 
-        $$ A = \{x + (m - 1) | x \in \N, 1 \leq x + (m - 1) \leq n\} $$
+        $$ A = \{x + (m - 1) | x \in \N,  x + (m - 1) \leq n\} $$
         
         을 정의해보자. 이 집합은 입력 데이터에 필터가 적용되는 마지막 좌표를 갖는다.
         
@@ -94,7 +94,7 @@
 
         이 집합의 기수 자체가 필터가 적용되는 횟수이다. 그러므로 집합 $A$ 가 의존하는 독립변수 $x \in \N$ 를 조사하면
 
-        $$ 1 \leq x + (m - 1) \leq n \iff 1 - (m - 1) \leq x \leq n - (m - 1) \iff x \leq n - m + 1 $$
+        $$  x + (m - 1) \leq n \iff  x \leq n - (m - 1) \iff x \leq n - m + 1 $$
 
         이다. 이는 $x$ 가 $1$ 부터 $n - m + 1$ 까지의 자연수라는 말이므로 집합 $|A| = n - m + 1$ 이고, 결과적으로 커널이 적용되는 횟수가 $n - m + 1$ 번이라는 것이다. 그러므로 $n - m + 1$ 개의 커널 적용 결과가 생성되고 이는 $y$ 축 방향으로도 마찬가지이므로 최종적으로 형상 $(n-m+1, n-m+1)$ 이 생성된다. 
         
@@ -114,7 +114,7 @@
     
         $(n, n)$ 입력 데이터에 스트라이드 $s$ 로 $(m, m)$ 커널을 몇번 적용할 수 있는지 조사하기 위하여 집합
 
-        $$ A = \{s(x - 1) + m | x \in \N, 1 \leq s(x - 1) + m \leq n\} $$
+        $$ A = \{s(x - 1) + m | x \in \N,  s(x - 1) + m \leq n\} $$
 
         을 정의하자. 이 집합은 입력 데이터에 필터가 적용되는 마지막 좌표를 갖는다.
         
@@ -122,13 +122,9 @@
 
         이 집합의 기수 자체가 필터가 적용되는 횟수이다. 그러므로 집합 $A$ 가 의존하는 독립변수 $x \in \N$ 를 조사하면
 
-        $$ 1 \leq s(x - 1) + m \leq n \iff \dfrac{1-m}{s} + 1 \leq x \leq \dfrac{n-m}{s} + 1 $$
+        $$  s(x - 1) + m \leq n \iff  x \leq \dfrac{n-m}{s} + 1 $$
 
-        인데, $m$ 은 필터의 형상을 결정하는 변수인데 아무리 작아봤자 $1$ 이므로 $\dfrac{1-m}{s}+1 = \dfrac{1-1}{s} + 1 = 1$ 이다. 그러므로 
-
-        $$ \iff 1 \leq x \leq \dfrac{n-m}{s} + 1 $$
-
-        이다. 이는 $x$ 가 $1$ 부터 $\dfrac{n-m}{s} + 1$ 까지의 자연수라는 말이므로 집합 $|A| = \dfrac{n-m}{s} + 1$ 이고, 결과적으로 커널이 적용되는 횟수가 $\dfrac{n-m}{s} + 1$ 라는 것이다. 그러므로 $\dfrac{n-m}{s} + 1$ 개의 커널 적용 결과가 생성되고, 이는 $y$ 축 방향으로도 마찬가지이므로 최종적으로 형상 $\bigg (\dfrac{n-m}{s} + 1, \dfrac{n-m}{s} + 1\bigg )$ 이 생성된다.
+        이는 $x$ 가 $1$ 부터 $\dfrac{n-m}{s} + 1$ 까지의 자연수라는 말이므로 집합 $|A| = \dfrac{n-m}{s} + 1$ 이고, 결과적으로 커널이 적용되는 횟수가 $\dfrac{n-m}{s} + 1$ 라는 것이다. 그러므로 $\dfrac{n-m}{s} + 1$ 개의 커널 적용 결과가 생성되고, 이는 $y$ 축 방향으로도 마찬가지이므로 최종적으로 형상 $\bigg (\dfrac{n-m}{s} + 1, \dfrac{n-m}{s} + 1\bigg )$ 이 생성된다.
 
 - 일반적으로 입력 데이터 $(H, W)$, 커널 $(FH, FW)$, 출력 데이터 $(OH, OW)$, 패딩 $P$, 스트라이드 $S$ 는 다음의 관계를 갖는다.
 
@@ -227,7 +223,6 @@
 
 - 입력 데이터가 조금 변해도 풀링의 결과는 잘 변하지 않는다.
 
-
 !!! tldr ""
 
     im2col : CNN 의 $4$ 차원 데이터를 $2$ 차원 행렬로 변형시키고 $4$ 차원 필터도 $2$ 차원 행렬로 변환시켜서 합성곱 연산을 행렬곱으로 단순화시키는 트릭이다.
@@ -324,6 +319,85 @@
 
         return img[:, :, pad:H + pad, pad:W + pad]
     ```
+
+- 예시 
+
+    $4 \times 4 \times 3$ 형상의 입력에 $3 \times 3 \times 3$ 필터를 스트라이드 $s = 1$ 로 적용한다고 하자. 
+    
+    그러면 먼저 각 채널 마다, 즉 $3$ 개의 필터 적용 부분공간을 하나의 벡터로 만든다. 이 작업으로 $1$ 개의 벡터가 생성되는 것이다.
+
+    그리고 그 다음 필터 적용 부분공간을 하나의 벡터로 만들고, 또 그 다음 필터 적용 부분공간을 하나의 벡터로 만든다.
+
+    최종적으로 생성된 벡터들을 다음과 같이 하나의 행렬로 만든다. 
+
+    ![](https://praisethemoon.org/wp-content/uploads/2019/04/im2col-3d-1024x510.png)
+
+    ![](https://praisethemoon.org/wp-content/uploads/2019/04/im2col-3d1-1024x510.png)
+
+    ![](https://praisethemoon.org/wp-content/uploads/2019/04/im2col-3d2-1024x510.png)
+
+    ![](https://praisethemoon.org/wp-content/uploads/2019/04/im2col-3d3-1024x510.png)
+
+    *https://praisethemoon.org/demystifying-the-math-and-implementation-of-convolutions-part-iii/*
+
+    그런 다음 각 채널에 적용될 커널도 하나의 벡터로 만든다. 
+
+    !!! note
+    
+        커널을 여러개 두었다면 행렬이 생성되겠지만, 여기에서는 단순한 예시이므로 하나의 벡터가 생성되었다. 하지만 실제로 이렇게 하면 입력 데이터의 차원이 계속 줄어드니까 안된다.
+
+    ![](https://praisethemoon.org/wp-content/uploads/2019/04/im2col-filter-3d-1.png)
+
+    *https://praisethemoon.org/demystifying-the-math-and-implementation-of-convolutions-part-iii/*
+
+    마지막으로 단지 행렬곱을 하면 된다. 그리고 원래의 입력 형상을 복원해준다.
+
+    ![](https://praisethemoon.org/wp-content/uploads/2019/04/conv-im2col-1-filter-3d-1024x351.png)
+
+    *https://praisethemoon.org/demystifying-the-math-and-implementation-of-convolutions-part-iii/*
+
+- 예시 
+
+    $227 \times 227 \times 3$ 형상의 입력에 $11 \times 11 \times 3$ 필터가 스트라이드 $s = 4$ 와 패딩 $p = 0$ 으로 적용된다고 하자.
+    
+    그러면 우선 입력 데이터에 필터가 적용되는 $11 \times 11 \times 3$ 블록을 벡터로 쭉 늘어뜨리게 된다. 그러므로 늘어뜨린 벡터 크기는 $11 \times 11 \times 3 = 363$ 이 된다. 또 필터 적용 횟수는 곧 출력 데이터 형상 $\bigg (\dfrac{227 - 11}{4} + 1, \dfrac{227 - 11}{4} + 1\bigg ) = (55, 55)$ 에서 $55 \times 55 = 3025$ 와 같기 때문에 $363$ 사이즈 벡터가 $3025$ 개 생성된다. 그러므로 입력 데이터를 행렬로 바꾸면 $363 \times 3025$ 형상의 행렬이 생성된다.
+
+    이제 필터를 행렬로 바꾸어야 한다. $11 \times 11 \times 3$ 필터를 $96$ 개를 적용한다고 하면 $4$ 차원 필터 $96 \times 11 \times 11 \times 3$ 을 적용하게 되는 것이다. 그러므로 $11 \times 11 \times 3$ 을 먼저 벡터로 바꾸어 $363$ 사이즈 벡터를 만들고 $96$ 개의 벡터로 행렬을 만들어서 최종적으로 $96 \times 363$ 의 행렬을 생성한다.
+
+    이후 가중치 행렬 $96 \times 363$ 와 입력 데이터 행렬 $363 \times 3025$ 를 행렬곱을 하여 $96 \times 3025$ 의 행렬이 나온다. 이것이 합성곱 연산 결과와 같다. 이 행렬을 $55 \times 55 \times 96$ 형상으로 바꾸어 주기만 하면 된다. 이 바꾸는 연산은 `col2im` 함수로 할 수 있다.
+
+    코드구현
+
+    ```python
+    def im2col(x,hh,ww,stride):
+        """
+        Args:
+        x: image matrix to be translated into columns, (C,H,W)
+        hh: filter height
+        ww: filter width
+        stride: stride
+        Returns:
+        col: (new_h*new_w,hh*ww*C) matrix, each column is a cube that will convolve with a filter
+                new_h = (H-hh) // stride + 1, new_w = (W-ww) // stride + 1
+        """
+
+        c,h,w = x.shape
+        new_h = (h-hh) // stride + 1
+        new_w = (w-ww) // stride + 1
+        col = np.zeros([new_h*new_w,c*hh*ww])
+
+        for i in range(new_h):
+            for j in range(new_w):
+                patch = x[...,i*stride:i*stride+hh,j*stride:j*stride+ww]
+                col[i*new_w+j,:] = np.reshape(patch,-1)
+        return col
+    ```
+
+- 즉, `im2col` 연산은 다음과 같이 진행된다.
+
+    ![](https://gblobscdn.gitbook.com/assets%2F-LvMRntv-nKvtl7WOpCz%2F-LvMRp9FltcwEeVxPYFs%2F-LvMRrx8aKg05MeAZ3ds%2FConv_Graph_Im2col.png?alt=media)
+
+    *https://leonardoaraujosantos.gitbook.io/artificial-inteligence/machine_learning/deep_learning/convolution_layer/making_faster*
 
 !!! tldr ""
 
