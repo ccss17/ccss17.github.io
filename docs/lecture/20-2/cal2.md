@@ -166,7 +166,7 @@
 
 !!! tldr ""
 
-    쌍곡시컨트함수(hyperbolic secant) : $\operatorname{csch} x = \dfrac{1}{\cosh x} = \dfrac{2}{e ^{x} + e ^{-x}}$
+    쌍곡시컨트함수(hyperbolic secant) : $\operatorname{sech} x = \dfrac{1}{\cosh x} = \dfrac{2}{e ^{x} + e ^{-x}}$
 
 !!! tldr ""
 
@@ -239,6 +239,10 @@
 !!! tldr ""
 
     쌍곡코사인함수의 부정적분 : $\displaystyle \int_{}^{}\cosh  x dx = \sinh x + C$
+
+!!! tldr ""
+
+    쌍곡탄젠트함수의 부정적분 : $\displaystyle \int_{}^{}\tanh xdx = \ln (\cosh x) + C$
 
 !!! tldr ""
 
@@ -816,6 +820,16 @@
 
     **구체화 필요**
 
+- 예시 
+
+    $\displaystyle \sum_{n=1}^{\infty}\dfrac{\sin n}{n ^{2}}$ 에서 $a_n = \dfrac{\sin n}{n ^{2}}$ 로 두자. $\sin n$ 은 $-1 \sim  +1$ 의 값을 가지므로 다루기 어렵다. 그러므로 $|\sin n|$ 로 두면 $1$ 과 같거나 작은 양수로 생각할 수 있다. 그러므로
+
+    $$\displaystyle \sum_{n=1}^{\infty}|a_n| = \sum_{n=1}^{\infty}\dfrac{|\sin n|}{n ^{2}} \leq \sum_{n=1}^{\infty}\dfrac{1}{n ^{2}}$$
+
+    인데 $\dfrac{1}{n ^{2}}$ 이 수렴하므로 비교판정법에 의하여 $\dfrac{|\sin n|}{n ^{2}}$ 도 수렴한다. 
+
+    이에 따라 절대수렴 판정법에 의하여 $\dfrac{\sin n}{n ^{2}}$ 도 수렴한다.
+
 !!! tldr ""
 
     교대급수(alternating series) : $\forall n \in \N, a_n > 0 \implies \sum(-1) ^{n+1} a_n$ 꼴의 급수이다.
@@ -835,6 +849,34 @@
 - 예시 
 
     $1 - \dfrac{1}{2} + \dfrac{1}{3} - \dfrac{1}{4} + \dots$ 은 교대급수판정법에 의하여 수렴한다.
+
+!!! tldr ""
+
+    절대수렴 판정법과 비율판정법 : $\displaystyle \lim_{n \to \infty} \dfrac{| a _{n+1}|}{|a_n|} = r$ 에서 비율판정법으로 $r < 1$ 인 경우 $|a_n|$ 이 수렴한다는 사실을 얻고, 
+    
+    이에 따라 절대수렴 판정법으로 $a_n$ 이 수렴한다는 결론을 얻는다.
+
+- 예시 
+
+    $\displaystyle \sum_{n=1}^{\infty}\dfrac{(-10) ^{n}}{n!}$ 에서 $|a_n| = \dfrac{10 ^{n}}{n!}$ 로 두면 
+
+    $$ \dfrac{|a _{n+1}|}{|a_n|} = \dfrac{10}{n+1} \implies \lim_{n \to \infty} \dfrac{10}{n+1} = 0 < 1 $$
+
+    이므로 $|a_n|$ 이 비율판정법에 의하여 수렴하고,
+
+    절대수렴 판정법에 의하여 $a_n$ 이 수렴한다.
+
+!!! tldr ""
+
+    절대수렴 판정법과 거듭제곱근 판정법 : $\lim_{n \to \infty} \sqrt[n]{|a_n|} = r$ 에서 $r < 1$ 이면 거듭제곱근 판정법에 의하여 $|a_n|$ 이 수렴한다는 사실을 얻고,
+
+    이에 따라 절대수렴 판정법으로 $a_n$ 이 수렴한다는 결론을 얻는다.
+
+!!! tldr ""
+
+    절대수렴 판정법과 적분 판정법 : $\lim_{n \to \infty} |a_n| = f(x)$ 로 두었을 때 $f(x)$ 가 단조감소함수이고, $f(x) \geq 0$ 이면서 $\displaystyle \lim_{R \to \infty}\int_{1}^{R}f(x)dx$ 가 수렴한다면,  적분 판정법에 의하여 $|a_n|$ 이 수렴한다는 사실을 얻고,
+
+    이에 따라 절대수렴 판정법으로 $a_n$ 이 수렴한다는 결론을 얻는다.
 
 # 멱급수와 수렴반경
 
@@ -872,20 +914,96 @@
 
     $x = -1$ 일 경우 $\displaystyle \sum_{n=0}^{\infty} (-1) ^{n} = 1 - 1 + 1 - 1 + \dots$ 이므로 진동 발산한다.
 
-- 멱급수의 수렴 조사
+    결국 수렴 구간은 $(-1, 1)$ 이고 수렴반경은 $1$ 이다.
 
-    비율판정법을 사용하여 
+- 예시
 
-    $$ r = \lim_{n \to \infty} \dfrac{| a _{n+1} x ^{n+1}|  }{|a_n x ^{n}} $$
+    멱급수 $\displaystyle \sum_{n=1}^{\infty}\dfrac{x ^{n}}{n}$ 의 수렴조사.
 
-    을 생각해보면 $r<1$ 인 경우 멱급수 $\sum a_n x ^{n}$ 가 절대 수렴한다. 따라서 부등식
+    $$ \lim_{n \to \infty} \dfrac{|b _{n+1}|}{|b_n|} = \lim_{n \to \infty} \dfrac{|x ^{n+1}|}{n+1}\dfrac{n}{|x ^{n}|} = |x| < 1 $$
 
-    $$ \lim_{n \to \infty} \dfrac{| a _{n+1} x ^{n+1}|  }{|a_n x ^{n}} < 1 $$
+    이므로 $|x| < 1$ 이면 수렴하고, $|x| > 1$ 이면 발산한다. $|x| = 1$ 일 떄는 직접 조사해본다.
 
-    을 풀어서
+    $x = 1$ 이면 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n}$ 가 적분판정법에 의해 발산한다.
 
-    $$ |x| < \lim_{n \to \infty} \dfrac{| a _{n} |  }{|a _{n+1}| }  $$
+    $x = -1$ 이면 $\displaystyle \sum_{n=1}^{\infty}(-1) ^{n}\dfrac{1}{n}$ 가 교대급수판정법에 의해 수렴한다.
 
-    을 얻으면, 우변의 극한이 존재할 경우 $R = \displaystyle \lim_{n \to \infty} \dfrac{| a _{n} |  }{|a _{n+1}| }$ 을 얻는데, 조건 $|x| < R$ 을 만족하는 범위에서 멱급수 $\sum a_n x ^{n}$ 가 수렴(절대수렴) 한다는 것을 알 수 있다.
+    결국 수렴구간은 $[-1, 1)$ 이고 수렴반경은 $1$ 이다.
 
-    ...
+- 예시 
+
+    $\displaystyle \sum_{n=0}^{\infty}\dfrac{x ^{n}}{n!}$ 수렴 조사.
+
+    $b_n = \dfrac{x ^{n}}{n!}$ 으로 두면
+
+    $$ \lim_{n \to \infty} \dfrac{|b _{n+1}|}{|b_n|} = \lim_{n \to \infty} \dfrac{| x ^{n+1}|}{(n+1)!} \dfrac{n!}{|x ^{n}|} = \lim_{n \to \infty} \dfrac{|x|}{n+1} = 0 < 1$$
+
+    이므로 $x$ 가 모든 실수에서 수렴한다.
+
+    수렴구간은 $\R = (- \infty , \infty )$ 이고 수렴 반경은 $\infty$ 이다.
+
+# HW1
+
+1. $\int_{}^{}\sinh ^{3}xdx$ 의 적분 풀기
+
+    $$ \int_{}^{}\sinh ^{3}xdx = \int_{}^{}\bigg (\dfrac{e ^{x} - e ^{-x}}{2}\bigg ) ^{3}dx = \int_{}^{}\dfrac{e ^{3x}-e ^{-3x}-3 e ^{x} + 3 e ^{-x}}{8}dx $$
+
+    인데, $e ^{x} = t$ 로 두면 $\dfrac{d e ^{3}}{dx} = \dfrac{dt ^{3}}{dt}\dfrac{dt}{dx} = 3 t ^{2} e ^{x} = 3 e ^{3}$ 이고 $\dfrac{d e ^{-3}}{dx} = \dfrac{dt ^{-3}}{dt}\dfrac{dt}{dx} = -3 t ^{-4} e ^{x} = -3 e ^{-3}$ 이므로 
+
+    $$ = \dfrac{e ^{3x} - e ^{-3x}}{8 \cdot 3} - \dfrac{3}{8}(e ^{x} - e ^{-x}) + C = \dfrac{\sinh 3x}{12} - \dfrac{3}{4}\sinh x + C $$
+
+2. $\int_{}^{}x ^{2} \tanh ^{-1}xdx$ 의 적분 풀기
+
+    $u = \tanh ^{-1}x, v' = x ^{2}$ 로 두면 $\int_{}^{}uv'dx = uv - \int_{}^{}u'vdx$ 이므로 
+
+    $$ \int_{}^{}x ^{2}\tanh ^{-1}xdx = \dfrac{1}{3}x ^{3}\tanh ^{-1}x - \int_{}^{}\dfrac{1}{3}x ^{3}\dfrac{1}{1 - x ^{2}}dx = \dfrac{x ^{3}}{3}\tanh ^{-1}x - \dfrac{1}{3}\int_{}^{}\dfrac{x ^{3}}{1- x ^{2}} dx $$
+
+    이다. 이때
+    
+    $$\dfrac{x ^{3}}{1 - x ^{2}} = \dfrac{x}{1 - x ^{2}} - x = -x + \dfrac{1}{2}\bigg (\dfrac{x}{1-x} + \dfrac{x}{1+x}\bigg ) = -x + \dfrac{1}{2}\bigg (\dfrac{1}{1-x} - \dfrac{1}{1+x} \bigg )$$
+
+    이므로 
+
+    $$ \int_{}^{} -x + \dfrac{1}{2} \bigg (\dfrac{1}{1-x} - \dfrac{1}{1+x}\bigg ) dx = - \dfrac{1}{2}x ^{2} + \dfrac{1}{2}\ln \bigg |\dfrac{1-x}{1+x}\bigg | + C$$
+
+    이다. 따라서 
+
+    $$ \int_{}^{}x ^{2}\tanh ^{-1}xdx = \dfrac{x ^{3}}{3}\tanh ^{-1}x - \bigg (- \dfrac{1}{2}x ^{2} + \dfrac{1}{2}\ln \bigg |\dfrac{1-x}{1+x}\bigg | + C\bigg ) $$
+
+    이다.
+
+3. $ty' + 3y = \dfrac{\sinh t}{t ^{t}}$ 의 일반해 구하기.
+
+    주어진 미분방정식을 표준형으로 정리하면 $y' + y \dfrac{3}{t} = \dfrac{\sinh t}{t ^{3}}$ 이므로 적분인자는 
+
+    $$ \mu = \pm e ^{\int_{}^{}3/t dt} = \pm e ^{3 \ln t} = e ^{\ln t ^{3}} \quad (t>0) $$
+
+    $$ = t ^{3} $$
+
+    이다. $\mu$ 를 주어진 방정식의 양변에 곱하면 
+
+    $$ t ^{3} (y' + y \dfrac{3}{t}) = \sinh t \iff \dfrac{d}{dt}(t ^{3}y) = \sinh t $$
+
+    $$ \iff t ^{3} y = \int_{}^{}\sinh t dt = \cosh t + C_1 $$
+
+    이므로 
+
+    $$ \therefore y = \dfrac{\cosh t}{t ^{3}} + C_2 $$
+
+    이다.
+
+4. $y' = (\tanh t)y = \operatorname{sech} t$ 의 일반해 구하기.
+
+    주어진 방정식의 적분인자는 
+
+    $$ \mu = \pm e ^{\int_{}^{}\tanh tdt} = \pm e ^{\ln (\cosh x)} = \pm \cosh t $$
+
+    이므로 이것을 주어진 방정식의 양변에 곱하면 식이 
+
+    $$ \dfrac{d}{dt}(y \cosh t) = \cosh t \cdot \operatorname{sech} t = 1 $$
+
+    로 정리된다. 그러므로 
+
+    $$ y \cosh t = t + C_1 \iff y = \dfrac{t}{\cosh t} + C_2 $$
+
+    이다.
