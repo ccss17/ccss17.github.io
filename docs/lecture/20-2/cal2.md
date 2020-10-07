@@ -835,3 +835,29 @@
 - 예시 
 
     $1 - \dfrac{1}{2} + \dfrac{1}{3} - \dfrac{1}{4} + \dots$ 은 교대급수판정법에 의하여 수렴한다.
+
+# 멱급수와 수렴반경
+
+!!! tldr ""
+
+    멱급수(power series) : 변수 $x$ 에 대하여
+
+    $$ \sum_{n=0}^{\infty}a_n x ^{n} = a_0 + a_1x + a_2 x ^{2} + \dots $$
+
+    이다.
+
+- 멱급수의 수렴 조사
+
+    비율판정법을 사용하여 
+
+    $$ r = \lim_{n \to \infty} \dfrac{| a _{n+1} x ^{n+1}|  }{|a_n x ^{n}} $$
+
+    을 생각해보면 $r<1$ 인 경우 멱급수 $\sum a_n x ^{n}$ 가 절대 수렴한다. 따라서 부등식
+
+    $$ \lim_{n \to \infty} \dfrac{| a _{n+1} x ^{n+1}|  }{|a_n x ^{n}} < 1 $$
+
+    을 풀어서
+
+    $$ |x| < \lim_{n \to \infty} \dfrac{| a _{n} |  }{|a _{n+1}| }  $$
+
+    을 얻으면, 우변의 극한이 존재할 경우 $R = \displaystyle \lim_{n \to \infty} \dfrac{| a _{n} |  }{|a _{n+1}| }$ 을 얻는데, 조건 $|x| < R$ 을 만족하는 범위에서 멱급수 $\sum a_n x ^{n}$ 가 수렴(절대수렴) 한다는 것을 알 수 있다.
