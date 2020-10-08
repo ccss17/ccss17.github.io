@@ -6,19 +6,24 @@ site_author: ccsss
 nav:
   - Home: index.md
   - 화가의 일기(소설):
-    - intro: diary/0.md
-    - 19XX.7.23 용서란 무엇인가 : diary/1.md
-    - 19XX.7.29 제목 없음 : diary/2.md
-    - 19XX.8.2 내 마음이 죽은 것 같다 : diary/3.md
-    - 19XX.8.13-1 내 힘으로 살 수 없는 것 : diary/4.md
-    - 19XX.8.13-2 세상을 어떻게 바꿀 수 있을까? : diary/5.md
-    - 19XX.8.17 소설 1 : diary/6.md
-    - 19XX.9.1 그들은, 그들은 그냥 죽은 것이다: diary/7.md
-    - 19XX.9.6 아이에게 : diary/8.md
-    - 19XX.10.11 죽을 수 없다 : diary/9.md
-    - 19XX.10.14-1 푸르고 텅 빈 곳 : diary/10.md
-    - 19XX.10.14-2 외로움 : diary/11.md
-    - 19XX.10.16 열등감 : diary/12.md
+    - intro: diary/intro.md
+    - 19xx.7.23 용서란 무엇인가 : diary/19xx.7.23.md
+    - 19xx.7.29 제목 없음 : diary/19xx.7.29.md
+    - 19xx.8.2 내 마음이 죽은 것 같다 : diary/19xx.8.2.md
+    - 19xx.8.13-1 내 힘으로 살 수 없는 것 : diary/19xx.8.13-1.md
+    - 19xx.8.13-2 세상을 어떻게 바꿀 수 있을까? : diary/19xx.8.13-2.md
+    - 19xx.8.17 소설 1 : diary/19xx.8.17.md
+    - 19xx.9.1 그들은, 그들은 그냥 죽은 것이다: diary/19xx.9.1.md
+    - 19xx.9.6 아이에게 : diary/19xx.9.6.md
+    - 19xx.10.11 죽을 수 없다 : diary/19xx.10.11.md
+    - 19xx.10.14-1 푸르고 텅 빈 곳 : diary/19xx.10.14-1.md
+    - 19xx.10.14-2 외로움 : diary/19xx.10.14-2.md
+    - 19xx.10.16 열등감 : diary/19xx.10.16.md
+    - 19xx.10.17 무제 : diary/19xx.10.17.md
+    - 19xx.10.23 현실 : diary/19xx.10.23.md
+    - 19xx.10.25 내 일기를 돌아봤다 : diary/19xx.10.25.md
+    - 19xx.11.10 혼잣말: diary/19xx.11.10.md
+    - 19xx.11.13 춥다: diary/19xx.11.13.md
   - HAI:
     - 1. 기초: HAI/base.md
     - 2. 생각: HAI/think.md
@@ -112,12 +117,11 @@ nav:
     - 튜링의 증명: ProgrammerBase/turing.md
     - 기술적 특이점: ProgrammerBase/future.md
   - 강의메모:
-    - 2020-2:
-      - 딥러닝 응용: lecture/20-2/dl.md
-      - 컴퓨터과학적 사고: lecture/20-2/cthink.md
-      - Programming Language: lecture/20-2/pl.md
-      - Korean History: lecture/20-2/koreahistory.md
-      - Calculus 2: lecture/20-2/cal2.md
+    - 딥러닝 응용: lecture/20-2/dl.md
+    - 컴퓨터과학적 사고: lecture/20-2/cthink.md
+    - Programming Language: lecture/20-2/pl.md
+    - Korean History: lecture/20-2/koreahistory.md
+    - Calculus 2: lecture/20-2/cal2.md
   - Algorithm:
     - 시간복잡도: Algorithm/timecomplexity.md
     - Leetcode: Algorithm/leetcode.md
