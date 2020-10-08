@@ -948,7 +948,7 @@
 
     $$ \int_{}^{}\sinh ^{3}xdx = \int_{}^{}\bigg (\dfrac{e ^{x} - e ^{-x}}{2}\bigg ) ^{3}dx = \int_{}^{}\dfrac{e ^{3x}-e ^{-3x}-3 e ^{x} + 3 e ^{-x}}{8}dx $$
 
-    인데, $e ^{x} = t$ 로 두면 $\dfrac{d e ^{3}}{dx} = \dfrac{dt ^{3}}{dt}\dfrac{dt}{dx} = 3 t ^{2} e ^{x} = 3 e ^{3}$ 이고 $\dfrac{d e ^{-3}}{dx} = \dfrac{dt ^{-3}}{dt}\dfrac{dt}{dx} = -3 t ^{-4} e ^{x} = -3 e ^{-3}$ 이므로 
+    인데, $e ^{x} = t$ 로 두면 $\dfrac{d e ^{3x}}{dx} = \dfrac{dt ^{3}}{dt}\dfrac{dt}{dx} = 3 t ^{2} e ^{x} = 3 e ^{3x}$ 이고 $\dfrac{d e ^{-3}}{dx} = \dfrac{dt ^{-3}}{dt}\dfrac{dt}{dx} = -3 t ^{-4} e ^{x} = -3 e ^{-3}$ 이므로 
 
     $$ = \dfrac{e ^{3x} - e ^{-3x}}{8 \cdot 3} - \dfrac{3}{8}(e ^{x} - e ^{-x}) + C = \dfrac{\sinh 3x}{12} - \dfrac{3}{4}\sinh x + C $$
 
@@ -972,7 +972,7 @@
 
     이다.
 
-3. $ty' + 3y = \dfrac{\sinh t}{t ^{t}}$ 의 일반해 구하기.
+3. $ty' + 3y = \dfrac{\sinh t}{t ^{2}}$ 의 일반해 구하기.
 
     주어진 미분방정식을 표준형으로 정리하면 $y' + y \dfrac{3}{t} = \dfrac{\sinh t}{t ^{3}}$ 이므로 적분인자는 
 
@@ -992,7 +992,7 @@
 
     이다.
 
-4. $y' = (\tanh t)y = \operatorname{sech} t$ 의 일반해 구하기.
+4. $y' + (\tanh t)y = \operatorname{sech} t$ 의 일반해 구하기.
 
     주어진 방정식의 적분인자는 
 
@@ -1010,7 +1010,7 @@
 
 5. $\displaystyle \sum_{n=1}^{\infty}\dfrac{3n-1}{(n+1) ^{2}}$ 이 수렴하는지 조사.
 
-    $f(x) = \dfrac{3x - 1}{(x + 1) ^{2}}$ 로 두면 $f(x)$ 는 단조감소함수이고, $f(x) \leq 0$ 이다.
+    $f(x) = \dfrac{3x - 1}{(x + 1) ^{2}}$ 로 두면 $f(x)$ 는 단조감소함수이고, $f(x) \geq 0$ 이다.
 
     $$ \int_{1}^{R} f(x) dx = \int_{1}^{R} \dfrac{3x - 1}{(x + 1) ^{2}} dx $$
 
@@ -1048,7 +1048,7 @@
 
     $$ \int_{1}^{R} f(x) dx = \int_{1}^{R} x ^{-3/2} dx = [-2 x ^{-1/2}] ^{R} _{1} = -2 R ^{-1/2} - (-2 \cdot 1 ^{-1/2}) = -2 \dfrac{1}{\sqrt[]{R}} + 2 $$
 
-    이므로 $\lim_{R \to \infty} \int_{1}^{R} f(x) = 2$ 이다. 따라서 적분판정법에 의하여 급수 $\displaystyle \sum_{n=1}^{\infty} \dfrac{\sqrt[]{n}}{n ^{2}}$ 가 수렴한다.
+    이므로 $\displaystyle \lim_{R \to \infty} \int_{1}^{R} f(x) = 2$ 이다. 따라서 적분판정법에 의하여 급수 $\displaystyle \sum_{n=1}^{\infty} \dfrac{\sqrt[]{n}}{n ^{2}}$ 가 수렴한다.
 
     그러므로 비교판정법에 의하여 주어진 급수도 수렴한다.
 
@@ -1138,4 +1138,10 @@
 
     $$ -\dfrac{1}{n ^{2}} \leq \dfrac{\sin n}{n ^{2}} \leq \dfrac{1}{n ^{2}} $$
 
-    이다. 이때 급수 $\sum_{n=1}^{\infty}\dfrac{1}{n ^{2}}$ 가 수렴하므로 비교 판정법에 의하여 주어진 급수도 수렴한다.
+    이다. 
+
+    $a_n = \dfrac{1}{n ^{2}}$ 에서 $f(x) = \dfrac{1}{x ^{2}}$ 로 두면 $f(x)$ 는 단조감소함수이고, $f(x) \geq 0$ 이다. 
+
+    $$ \int_{1}^{R}f(x)dx = \int_{1}^{R}x ^{-2} dx = [-x ^{-1}] ^{R}_{1} = - \dfrac{1}{R} + 1 $$
+
+    이므로 $R \to \infty \Rightarrow \int_{1}^{R}f(x)dx \to 1$ 이다. 그러므로 적분판정법에 의하여 급수 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n ^{2}}$ 가 수렴하고, 이에따라 비교 판정법에 의하여 주어진 급수도 수렴한다.
