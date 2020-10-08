@@ -1131,3 +1131,11 @@
     이다. 따라서 $R \to \infty \implies \int_{1}^{R}f(x)dx \to \dfrac{2}{3}$ 이므로 적분판정법에 의하여 급수 $\dfrac{1}{n \sqrt[]{(\ln n) ^{5}}}$ 가 수렴한다.
 
     그러므로 극한비교 판정법에 의하여 주어진 급수가 수렴한다.
+
+15. $\displaystyle \sum_{n=1}^{\infty}\dfrac{\sin n}{n ^{2}}$ 수렴 조사.
+
+    $-1 \leq \sin n \leq 1$ 이므로
+
+    $$ -\dfrac{1}{n ^{2}} \leq \dfrac{\sin n}{n ^{2}} \leq \dfrac{1}{n ^{2}} $$
+
+    이다. 이때 급수 $\sum_{n=1}^{\infty}\dfrac{1}{n ^{2}}$ 가 수렴하므로 비교 판정법에 의하여 주어진 급수도 수렴한다.
