@@ -948,9 +948,7 @@
 
     $$ \int_{}^{}\sinh ^{3}xdx = \int_{}^{}\bigg (\dfrac{e ^{x} - e ^{-x}}{2}\bigg ) ^{3}dx = \int_{}^{}\dfrac{e ^{3x}-e ^{-3x}-3 e ^{x} + 3 e ^{-x}}{8}dx $$
 
-    인데, $e ^{x} = t$ 로 두면 $\dfrac{d e ^{3x}}{dx} = \dfrac{dt ^{3}}{dt}\dfrac{dt}{dx} = 3 t ^{2} e ^{x} = 3 e ^{3x}$ 이고 $\dfrac{d e ^{-3}}{dx} = \dfrac{dt ^{-3}}{dt}\dfrac{dt}{dx} = -3 t ^{-4} e ^{x} = -3 e ^{-3}$ 이므로 
-
-    $$ = \dfrac{e ^{3x} - e ^{-3x}}{8 \cdot 3} - \dfrac{3}{8}(e ^{x} - e ^{-x}) + C = \dfrac{\sinh 3x}{12} - \dfrac{3}{4}\sinh x + C $$
+    $$ = \dfrac{e ^{3x} + e ^{-3x}}{8 \cdot 3} - \dfrac{3}{8}(e ^{x} + e ^{-x}) + C = \dfrac{\cosh 3x}{12} - \dfrac{3}{4}\cosh x + C $$
 
 2. $\int_{}^{}x ^{2} \tanh ^{-1}xdx$ 의 적분 풀기
 
@@ -968,7 +966,7 @@
 
     이다. 따라서 
 
-    $$ \int_{}^{}x ^{2}\tanh ^{-1}xdx = \dfrac{x ^{3}}{3}\tanh ^{-1}x - \bigg (- \dfrac{1}{2}x ^{2} + \dfrac{1}{2}\ln \bigg |\dfrac{1-x}{1+x}\bigg | + C\bigg ) $$
+    $$ \int_{}^{}x ^{2}\tanh ^{-1}xdx = \dfrac{x ^{3}}{3}\tanh ^{-1}x - \dfrac{1}{3} \bigg (- \dfrac{1}{2}x ^{2} + \dfrac{1}{2}\ln \bigg |\dfrac{1-x}{1+x}\bigg | + C\bigg ) $$
 
     이다.
 
@@ -988,7 +986,7 @@
 
     이므로 
 
-    $$ \therefore y = \dfrac{\cosh t}{t ^{3}} + C_2 $$
+    $$ \therefore y = \dfrac{\cosh t}{t ^{3}} + \dfrac{C_1}{t ^{3}} $$
 
     이다.
 
@@ -1004,13 +1002,13 @@
 
     로 정리된다. 그러므로 
 
-    $$ y \cosh t = t + C_1 \iff y = \dfrac{t}{\cosh t} + C_2 $$
+    $$ y \cosh t = t + C_1 \iff y = \dfrac{t}{\cosh t} + \dfrac{C_2}{\cosh t} $$
 
     이다.
 
 5. $\displaystyle \sum_{n=1}^{\infty}\dfrac{3n-1}{(n+1) ^{2}}$ 이 수렴하는지 조사.
 
-    $f(x) = \dfrac{3x - 1}{(x + 1) ^{2}}$ 로 두면 $f(x)$ 는 단조감소함수이고, $f(x) \geq 0$ 이다.
+    $f(x) = \dfrac{3x - 1}{(x + 1) ^{2}}$ 로 두면 $f'(x) = \dfrac{5 - 3x}{(1+n)^{3}}$ 가 $f' \bigg (\dfrac{5}{3}\bigg ) = 0$ 이고, $x > \dfrac{5}{3}$ 에서 $f'(x) < 0$ 이므로 $f(x)$ 는 $x > \dfrac{5}{3}$ 에서 단조감소함수이다. 또한 $f \bigg (\dfrac{1}{3}\bigg ) = 0$ 이고 $x > \dfrac{1}{3}$ 에서 $f(x) \geq 0$ 이다.
 
     $$ \int_{1}^{R} f(x) dx = \int_{1}^{R} \dfrac{3x - 1}{(x + 1) ^{2}} dx $$
 
