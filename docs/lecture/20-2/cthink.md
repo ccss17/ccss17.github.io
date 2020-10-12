@@ -1350,3 +1350,17 @@ $$ r'_2 = \max \{r'_2 | (r'_2 \leq r_2) \land (r'_2 + r'_1 \leq d _{21}) \} $$
 $$ r'_n = \max \{r'_n | (r'_n \leq r_n) \land (r'_n + r'_1 \leq d _{n1}) \land (r'_n + r'_2 \leq d _{n2}) \land \dots \land (r'_n + r' _{n-1} \leq d _{n(n-1)}) \} $$ 
 
 이는 상수 $r_n, x_1, x_2, \dots, x_n, r'_1, r'_2, \dots, r' _{n-1}$ 에 대한 변수 $r'_n$ 의 최댓값을 계산하는 것이다.
+
+### 효율적인 과정
+
+이러한 계산 과정은 조건 
+
+$$ (r'_i \leq r_i) \land (r'_i + r'_1 \leq d _{i1}) \land (r'_i + r'_2 \leq d _{i2}) \land \dots \land (r'_i + r' _{i-1} \leq d _{i(i-1)}) $$ 
+
+을 만족하는 최대의 $r'_i$ 를 찾는 과정인데, 좀 더 효율적으로 이진 탐색을 사용하여 이 조건이 이 참이 되는 최대의 $r'_i$ 을 찾을 수 있다.
+
+쉽게 말해 처음에는 $r'_i = r_i / 2$ 로 두고 조건
+
+$$ (r'_i + r'_1 \leq d _{i1}) \land (r'_i + r'_2 \leq d _{i2}) \land \dots \land (r'_i + r' _{i-1} \leq d _{i(i-1)}) $$ 
+
+이 참이 되는지 본다. 참이라면 $r'_i = \dfrac{3}{4}r_i$ 로 둬보고 다시 검사하고, 거짓이라면 $r'_i = \dfrac{r_i}{4}$ 으로 두고 다시 검사한다. 그러면 이진 탐색을 통하여 효율적으로 최적의 $r'_i$ 값을 찾을 수 있다.
