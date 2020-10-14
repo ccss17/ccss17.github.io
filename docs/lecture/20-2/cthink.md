@@ -1379,6 +1379,12 @@ $$ r'_i \bigg |_j = \dfrac{(x_i - x_j) ^{2}}{4r'_j} \qquad r'_i \bigg |_k = \dfr
 
     $$ \therefore r'_u = \dfrac{(x_u - x_v) ^{2}}{4r'_v} $$
 
+    한편 원 $O_u$ 가 원 $O_v$ 를 침범한 조건은 
+
+    $$ 4r'_ur'_v > (x_u - x_v) ^{2} $$
+
+    이다.
+
 분자의 대소관계는 자명하게 $(x_i - x_j) ^{2} > (x_i - x_k) ^{2}$ 이므로 분모의 대소관계를 따져야 한다. 
 
 - $r'_j \leq r'_k$ 일 경우 분자의 대소관계가 불변하므로 $r'_i \bigg |_j > r'_i \bigg |_k$ 이다. 
