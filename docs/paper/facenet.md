@@ -150,6 +150,10 @@
 
 # 《FaceNet: A Unified Embedding for Face Recognition and Clustering》 
 
+!!! info 
+
+    2015년 6월 17일에 나온 논문
+
 ## Abstract
 
 우리는 이 논문에서 얼굴 유사도가 거리인 유클리드 공간으로 얼굴 사진을 사상(mapping)시키는 것을 학습하는 **FaceNet** 이라는 시스템을 소개한다. 얼굴 유사도가 거리인 유클리드 공간이 생성되면 얼굴 검증(*같은 사람인가?*), 얼굴 확인(*누구인가?*), 얼굴 군집화(*비슷한 얼굴을 모으는 것*)가 매우 쉬워진다.

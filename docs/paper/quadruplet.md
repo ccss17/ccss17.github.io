@@ -367,7 +367,9 @@ def build_model4(input_shape, network, metricnetwork,margin=0.1, margin2=0.01):
 
 # 《Beyond triplet loss: a deep quadruplet network for person re-identification》 
 
-2017년 4월 6일에 나온 논문.
+!!! info 
+
+    2017년 4월 6일에 나온 논문.
 
 # Abstract
 
