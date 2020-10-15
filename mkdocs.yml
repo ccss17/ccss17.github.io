@@ -52,6 +52,9 @@ nav:
       - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
       - 정보이론: Philosophy/information.md
     - Tex 수학기호: tex.md
+  - Paper:
+    - Facenet (2015): paper/facenet.md
+    - Quadruplet (2017): paper/quadruplet.md
   - Math: 
     - 수학기초론: 
       - 논리학: Math/Foundations/logic.md
