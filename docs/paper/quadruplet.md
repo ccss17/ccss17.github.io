@@ -373,26 +373,140 @@ def build_model4(input_shape, network, metricnetwork,margin=0.1, margin2=0.01):
 
 # Abstract
 
+우리는 triplet loss 보다 더 성능이 좋은 quadruplet loss 를 소개할 것이다. 4x 시스템은 margin-based online hard negative mining 을 사용한다.
+
 # 1. Introduction
 
+triplet loss 가 널리 사용되고 있지만, 사람의 재인식이라는 관점에서는 테스트 데이터셋에 사람의 신원이 보이지 않거나, 훈련 데이터셋과 겹치는 부분이 없기도 하다. triplet loss 는 큰 내부 클래스 변동에 대한 학습을 한다. 이것은 내부 클래스의 변동를 줄이고 외부 클래스 간의 변동를 높이면 에러율이 높아짐을 의미한다.
+
+이에 따라 우리는 triplet loss 가 테스트 셋에서 보이는 성능을 높이기 위하여 내부 클래스 간 변동을 줄이고 외부 클래스 간의 변동을 높이는 연구를 했다. 그 연구 결과가 quadruplet ranking loss 이다. 이 시스템은 두 가지 기능을 한다. 
+
+1. positive 들을 서로 가깝게 만든다. 
+
+2. negative 페어를 positive 페어로부터 밀어낸다.
+
+첫번째 기능은 triplet loss 에서 소개된 기능과 같다. 하지만 두번째 기능은 외부 클래스 간 변이를 줄이고 내부 클래스 간 변이를 최소화시키게 해준다.
+
+이 두 기능의 밸런스는 2 개의 마진을 어떻게 설정하느냐에 따라 달라진다. 주의할점은 두번째 기능은 훈련 데이터셋에 대하여 모델이 좋은 성능을 내는데에 필요하지는 않다. 하지만 이 기능은 훈련 데이터셋과 테스트 데이터셋에 대한 일반적인 능력을 향상시키는데에 도움이 된다. 파트 5 에서 이 디자인 설계가 외부 클래스 간 변이를 높이고, 내부 클래스 간 변이를 줄이는 실험을 보여줄 것이다.
+
+한편, 몇몇 사람 재인식 딥러닝 모델들은 학습을 위하여 binary classification loss 를 채택하기도 했다. 우리는 우리의 방법을 정당화하기 위하여 quadruplet loss, triplet loss, binary classification loss 를 이론적으로 비교해 볼 것이다.
+
+또한 quadruplet loss 를 사용하는 quadruplet deep network 를 소개할 것이다. 이 모델은 입력으로 quadruplet 을 받게 된다. 실제 실험을 진행하게 되면 작은 데이터셋에 대해서도 이 시스템은 매우 많은 quadruplet sample 을 생성하게 되므로, 어떻게 적합한 샘플링을 할지가 중요한 문제이다. 우리는 샘플링 전략으로 margin-based online hard negative mining 을 택하여 모델을 학습하기 위해 hard sample 들을 추출하도록 했다. 
+
+우리는 알고리즘을 학습된 모델에 따라 적응적으로 margin threshold 를 설정하도록 만들었고, 이 margin threshold 가 hard 샘플들을 자동으로 선택하도록 만들었다. 
+
+정리하자면 우리는 다음 4 가지 성과를 냈다. 
+
+1. strong push 와 weak push 전략을 사용하는 quadruplet loss
+
+2. margin-based online hard negative mining 전략을 사용하는 quadruplet deep network 모델
+
+3. 통합된 관점에서 다른 손실들을 주는 이론적이고 통찰력있는 loss 관계 분석
+
+4. 대표적인 데이터셋(CUHK03, CUHK01, VIPeR)에 대한 뛰어난 성능(기존의 모델보다 더 뛰어난 성능)
+
 # 2. Related work
+
+(생략)
 
 # 3. The proposed approachd
 
 ## 3.1. The triplet loss
 
+triplet loss 는 같은 사람 $x_i, x_j$ 와 다른 사람 $x_k$ 에 대한 triplet $\{x_i, x_j, x_k\}$ 들로 학습을 한다. triplet 시스템은 $x_i$ 를 $x_k$ 보다 $x_j$ 에 가깝게 만든다. 이는 $[z] _{+} = \max (z, 0)$ 와 입력 이미지 $f(x_i), f(x_j), f(x_k)$ 와 하이퍼파라미터 $\alpha _{trp}$ 에 대하여
+
+$$ L _{trp} = \sum_{i,j,k}^{N} [\|f(x_i) - f(x_j)\| ^{2} _{2} - \|f(x_i) - f(x_k)\|^{2}_{2} + \alpha _{trp}]_{+} \tag{1} $$ 
+
+으로 표현할 수 있다. image feature $f$ 는 학습이 진행되면서 정규화된다. threshold $\alpha _{trp}$ 는 positive 와 negative 에서 강제되는 여백이다. 또 triplet loss 는 얼굴 유사도를 표현하기 위하여 유클리드 거리를 채택했다.
+
+하지만 우리는 유클리드 거리를 learned metric $g(x_i, x_j)$ 로 대체할 것이다. 이는 기존의 유클리드 거리에 비하여 여러 카메라 사진에 대한 훨씬 견고한 유사도 측정을 제공하게 된다. learned metric 에 의한 loss 함수는 다음과 같다.
+
+$$ L _{trp} = \sum_{i, j, k}^{N} [g(x_i, x_j) ^{2} - g(x_i, x_k) ^{2} + \alpha _{trp}]_{+} \tag{2} $$
+
+방정식 $(1)$ 에서 $f(x_i)$ 는 잘 정규화되고, $\|f(x_i) - f(x_j)\| _{2} \in [0, 1]$ 를 유지하게 된다. 하지만 방정식 $(2)$ 의 $g(x_i, x_j)$ 는 벡터가 아니라 스칼라이다. 이에 따라 $g(x_i, x_j)$ 의 값이 폐구간 $[0, 1]$ 을 유지할 없게 되고, 부분적으로 margin threshold $\alpha _{trp}$ 을 무효화시킨다. 가령 $\alpha _{trp}$ 이 아무리 커도 모델이 지속적으로 $g(x_i, x_j)$ 을 $g(x_i, x_k)$ 와 곱한다. 그래서 3.2 파트에서 triplet loss 를 업그레이드 한 quadruplet loss 를 소개한다.
+
 ## 3.2. The quadruplet loss
+
+![image](https://user-images.githubusercontent.com/16812446/96235604-f81c7f80-0fd5-11eb-88df-4644714296b4.png)
+
+:   Figure 2. 세 모딜의 서로 다른 loss 시스템. (a) 는 유클리드 거리를 사용하는 triplet loss 이다. (b) 는 learned metric 을 사용하는 triplet loss 이다. (c) 는 정규화가 포함된 우리가 향상시킨 triplet loss 이다.
+
+먼저 Fig 2 (b) 를 뜻하는 정규화가 필요한 방정식 $(2)$ 를 보완해보자. Fig 2 (c) 는 2 차원 출력을 갖는 fc 계층을 추가하여 정규화를 한 모습을 보여준다. $g(x_i, x_j)$ 의 값이 클수록 두 이미지가 유사하지 않다는 것을 뜻한다. 그러므로 fc 계층의 2 차원 중 하나가 두 이미지의 비유사도를 보여주어야 한다. 이때 2 차원 출력을 정규화하기 위하여 softmax 를 사용했다. 그러면 한 차원(Fig 2 (c) 의 빨간점)은 두 이미지의 비유사도를 표현하는데, loss 에 보내지고 학습이 될 $g(x_i, x_j)$ 의 역할을 한다. 그 결과 $g(x_i, x_j)$ 가 margin threshold $\alpha _{trp}$ 가 효과를 가지도록 폐구간 $[0, 1]$ 로 정규화된다.
+
+또 우리는 마지막 fc 계층 이후에 softmax 계층을 넣어서 두가지 출력이 유사도와 비유사도의 확률을 나타내도록 했다. 이것의 영향력을 파트 5.2 에서 Triplet(Improved w/o sfx) 와 Triplet(Improved) 와 비교해본다. 
+
+방정식 (2) 에서 triplet loss 가 positive 와 negative 사이의 거리를 기반으로 학습한다는 것을 알 수 있다. 우리의 quadruplet loss 는 새로운 제약을 추가했다. 이 제약은 negative 페어를 positive 페어로부터 멀리 민다. quadruplet loss 는 두 margin 을 뜻하는 $\alpha _1, \alpha _2$ 와 이미지 $x_i$ 의 신원 ID 를 뜻하는 $s_i$ 에 대하여 다음과 같다.
+
+$$ L _{quad} = \sum_{i,j,k}^{N} [g(x_i, x_j) ^{2} - g(x_i, x_k) ^{2} + \alpha _{1}] _{+} \\ + \sum_{i,j,k,l}^{N} [g(x_i, x_j) ^{2} - g(x_l, x_k) ^{2} + \alpha _{2}] _{+} \\ s_i = s_j, s_l \neq s_k, s_i \neq s_l, s_i \neq s_k \tag{3} $$
+
+첫번째 항은 positive 와 negative 의 상대적 거리를 계산하는 방정식 (2) 와 같다. 두번째 항이 새롭게 추가되었는데, 이는 서로 다른 이미지에 대한 positive 와 negative 의 거리를 제약한다. 이 제약 덕분에 외부 클래스 간 최소 거리가 내부 클래스 간 최대 거리보다 커진다.
+
+우리는 이 두 항이 손실에 미치는 영향력을 조정하기 위하여 두 margin threshold 를 도입했다. 이때 $\alpha _1$ 이 주된 제약(첫번째 항)을 이룰 수 있도록 충분히 커야 한다. 두번째 항의 $\alpha _2$ 는 두번째 항의 제약이 첫번째 항의 제약보다 약하도록 충분히 작아야 한다. 그러므로 우리의 시스템은 $\alpha _1 > \alpha _2$ 가 되어야 한다.
+
+![image](https://user-images.githubusercontent.com/16812446/96238455-74649200-0fd9-11eb-9e10-25c0ee0ae7ad.png)
+
+:   Figure 3. quadruplet deep network. 빨간 그림자가 씌워진 부분이 Fig 2 (c) 에서 새롭게 추가된 제약이다.
+
+위 그림에서 빨간 그림자를 제외하면 Fig 2 (c) 와 동일하다. 빨간 그림자가 새롭게 추가된 제약을 뜻한다. 이 제약을 통하여 triplet network 가 quadruplet network 로 된다. quadruplet network 는 positive 와 negative 만을 다루는 것(same probe images)이 아니라 different probe images 도 서로 멀어지게 한다. same probe 에 대해서는 positive 와 negative 에 strong push 를 하고, different probe 에 대해서는 상대적으로 약한 weaker push 를 하여 외부 클래스 간 변이를 줄인다.
 
 ## 3.3. Margin-based online hard negative mining
 
+방정식 (1) 에서는 margin threshold 보다 짧은 거리를 갖는 샘플을 선택하는 online hard negative mining 을 사용했다. 하지만 이는 적합한 margin threshold 를 미리 정의하기에 어렵다. 작은 threshold 의 결과는 작은 hard samples 들이다. hard sample 들이 모델 학습에 기여하기 때문에, 작은 hard samples 들은 모델의 수렴을 느리게 만들고 모델이 차선의 해답을 내게 만든다. 반면 너무 큰 threshold 는 너무 많은 htard sample 들을 발생시켜서 과적합을 발생시킨다.
+
+따라서 우리의 알고리즘은 학습된 모델에 대한 margin threshold 를 적응적으로 설정한다. 그리고 이렇게 설정된 threshold 로 hard sample 들을 샘플링한다. 적응적인 margin 의 메인 아이디어는 과대하게, 혹은 과소하게 hard smaple 들이 샘플링되는 것을 방지하는 것이다.
+
+adaptive margin threshold 는 실질적으로 서로 다른 두 분포의 평균 거리를 표현하는데에 사용된다. 서로 다른 두 분포란 positive pair 의 거리 분포와 negative pair 거리 분포를 뜻한다. 이에 따라 우리는 서로다른 두 분포에 대한 거리의 평균을 적응적으로 설정하는 margin threshold 로 설정했다.
+
+그러므로 adaptive margin threshold 는 두 거리 분포의 평균을 뜻하는 $\mu _{p}, \mu _{n}$ 과 positive pair 의 개수 $N_p$, negative pair 의 개수 $N_n$ 과 상관 계수 $w$ 에 대하여 
+
+$$ \alpha = w(\mu _{n} - \mu _{p})\\ = w \bigg (\dfrac{1}{N_n} \sum_{i,k}^{N}g(x_i, x_k) ^{2} - \dfrac{1}{N_p}\sum_{i,j}^{N}g(x_i, x_j) ^{2}\bigg ) \\ s_i = s_j, s_i \neq s_k \tag{4} $$
+
+이다. 우리는 방정식 (3) 의 $\alpha _{1}$ 에 대하여 $w = 1$ 로, $\alpha _{2}$ 에 대하여 $w = 0.5$ 로 설정했다.
+
+실제로 구현할 때 두 거리 분포를 매 iteration 마다 구하는 것은 시간이 많이 걸린다. 따라서 각 배치마다의 두 분포의 평균을 대신 사용한다. 배치 크기를 $M$ 이라고 하면 $N_p, N_n$ 은 $M, 2M$ 으로 각각 설정된다. 최적화에는 SGD 를 사용했고, 우리의 손실 함수의 역전파 기울기 미분은
+
+$\mu = \mu _n - \mu _p$ 와 $\iota[a] = \begin{cases} 1 & a = \text{true}\\ 0 & a = \text{false}\\ \end{cases}$ 에 대하여 
+
+$$ \dfrac{\partial L _{quad}}{\partial g(x_i, x_j)} = \bigg (2 - \dfrac{2}{M} \bigg )g(x_i, x_j) \iota [g(x_i, x_k) ^{2} - g(x_i, x_j) ^{2} < \max (\mu , 0)] + \\ \bigg (2 - \dfrac{1}{M} \bigg )g(x_i, x_j) \iota \bigg [g(x_i, x_k) ^{2} - g(x_i, x_j) ^{2} < \dfrac{\max (\mu , 0)}{2} \bigg ] \\ \dfrac{\partial L _{quad}}{\partial g(x_i, x_k)} = \bigg (-2 + \dfrac{3}{2M} \bigg )g(x_i, x_j) \iota [g(x_i, x_k) ^{2} - g(x_i, x_j) ^{2} < \max (\mu , 0)] \\ \dfrac{\partial L _{quad}}{\partial g(x_l, x_k)} = \bigg (-2 + \dfrac{3}{2M} \bigg )g(x_i, x_j) \iota \bigg [g(x_i, x_k) ^{2} - g(x_i, x_j) ^{2} < \dfrac{\max (\mu , 0)}{2} \bigg ] \\ s_i = s_j, s_l \neq s_k , s_i \neq s_l, s_i \neq s_k \tag{5} $$
+
+이다.
+
+결과적으로 매 iteration 마다 margin 이 자동으로 두 거리 분포에 대하여 적응하게 된다. 
+
 # 4. Relationships of different losses
+
+(생략)
+
+Quadruplet vs Triplet: quadruplet 의 방정식의 두번째 항은 different probe images 에 대해서도 모델이 학습하게 하여 외부 클래스 간 변이를 높이고 테스트 데이터셋에 대한 성능을 높혀준다.
 
 # 5. Experiment
 
+![image](https://user-images.githubusercontent.com/16812446/96247670-661c7300-0fe5-11eb-8344-62a849a2dd70.png)
+
+:   Figure 5. 데이터셋 CUHK03 의 훈련 데이터를 여러 모델로 학습한 후 내부 클래스와 외부 클래스 간 거리 분포 그래프이다. 빨간선이 내부 클래스 거리 분포, 파란선이 외부 클래스 거리 분포이다.
+
+우리는 두 가지 실험을 진행하였다. 
+
+1. 다른 loss 와 성능을 비교해보기
+
+2. 현재 제안된 state-of-the-art 모델과 비교해보기
+
 ## 5.1. Implementation and Datasets
+
+우리는 Caffe 로 모델을 구현했고, 모든 이미지를 $227 \times 227$ 로 재조정한 다음 모델에 입력했다. 학습율은 $10 ^{-3}$ 으로, 배치 사이즈는 $128$ 로 설정했다. 모든 데이터셋에 대하여 이미지를 수평으로 복사하여 데이터셋 크기를 $4$ 배로 늘렸다.
+
+margin-based hard negative mining 방식을 사용하지 않을 때는 margin threshold 를 각각 $\alpha _1 = 1, \alpha _2 = 0.5$ 로 설정했다. 왜냐하면 margin-based hard negative mining 이 막 시작될 때에는 두 거리 분포가 혼돈 상태라서 두 거리 분포의 평균이 무의미하기 때문이다. 그래서 처음 시작할 때 수렴을 가속화하기 위하여 미리 학습된 네트워크와 고정된 margin threshold 를 사용했다. ImageNet 에서 미리 학습된 AlexNet 모델로 처음 두 합성곱 계층의 커널 가중치를 초기화시켰다. 
+
+![image](https://user-images.githubusercontent.com/16812446/96249267-eb088c00-0fe7-11eb-9fb3-515d34510710.png)
 
 ## 5.2. Results of Quadruplet Network
 
+Triplet 과 Quadruplet 시스템을 비교한 부분이 위 표의 아랫부분에 있다. MargOHNM 이 적응적인 margin threshold 방식을 사용한 것이다. 이게 성능이 제일 좋더라.
+
 ## 5.3. Comparison with the state of the arts
 
+위 표의 상단부분에서 18 개의 다른 알고리즘과 비교해봤는데, 역시 우리게 제일 성능이 좋더라고 ㅋㅋ 
+
 # 6. Conclusion
+
+하여튼 간에 margin-based online hard negative mining 을 샘플링 방식으로 사용하는 quadruplet loss 가 겁나 좋으니까 이거 써라 ㅇㅋ?
