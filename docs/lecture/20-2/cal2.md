@@ -922,7 +922,7 @@
 
     $$ \lim_{n \to \infty} \dfrac{|b _{n+1}|}{|b_n|} = \lim_{n \to \infty} \dfrac{|x ^{n+1}|}{n+1}\dfrac{n}{|x ^{n}|} = |x| < 1 $$
 
-    이므로 $|x| < 1$ 이면 수렴하고, $|x| > 1$ 이면 발산한다. $|x| = 1$ 일 떄는 직접 조사해본다.
+    이므로 $|x| < 1$ 이면 수렴하고, $|x| > 1$ 이면 발산한다. $|x| = 1$ 일 때는 직접 조사해본다.
 
     $x = 1$ 이면 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n}$ 가 적분판정법에 의해 발산한다.
 
@@ -941,3 +941,96 @@
     이므로 $x$ 가 모든 실수에서 수렴한다.
 
     수렴구간은 $\R = (- \infty , \infty )$ 이고 수렴 반경은 $\infty$ 이다.
+
+!!! tldr ""
+
+    수렴 반경(radius of convergence) : 멱급수가 원점을 중심으로 반지름이 $R$ 인 구간에서 수렴할 때 $R$ 을 수렴반경이라 한다.
+
+- 설명 
+
+    멱급수 $\displaystyle \sum_{m=0}^{\infty}a_mx ^{m}$ 가 주어졌을 때 
+
+    $$ R = \lim_{m \to \infty} \dfrac{|a_m|}{|a _{m+1}|} $$
+
+    의 값이 존재하면 주어진 멱급수는 범위 $|x| < R$ 에서 절대수렴하고 범위 $|x| > R$ 에서는 발산한다.
+
+    $R$ 이 표시하는 극한값이 $\infty$ 라면 주어진 멱급수는 실수범위에서 절대 수렴한다. 이 멱급수가 $x = 0$ 에서는 무조건 수렴하고 원점을 중심으로 반지름이 $R$ 인 구간에서 수렴하기 때문에 $R$ 을 수렴반경이라고 한다. 
+
+    또 수렴하는 모든 점의 집합을 수렴구간이라고 한다.
+
+!!! tldr ""
+
+    수렴구간(interval of convergence) : 멱급수가 수렴하는 모든 점의 집합을 수렴구간이라 한다.
+
+- 예시 
+
+    베셀함수 $J_0(x) := \displaystyle \sum_{n=0}^{\infty}\dfrac{(-1) ^{n}x ^{2n}}{2 ^{2n}(n!) ^{2}} = 1 - \dfrac{x ^{2}}{4} + \dfrac{x ^{4}}{64} - \dfrac{x ^{6}}{2304} + \dots$ 의 수렴구간을 구해보자.
+
+    $$ \lim_{n \to \infty} \bigg |\dfrac{\dfrac{x ^{2n+2}}{2 ^{2n+2}(n+1)! ^{2}}}{\dfrac{x ^{2n}}{2 ^{2n}(n!)^{2}}}\bigg | = \lim_{n \to \infty} \dfrac{|x| ^{2}2 ^{2n}(n!)^{2}}{2 ^{2n+2}(n+1)! ^{2}} = \lim_{n \to \infty} \dfrac{|x|^{2}}{4(n+1)^{2}} = 0 $$
+
+    따라서 수렴반경은 $\infty$ 이고, 수렴구간은 실수이다.
+
+- 예시 
+
+    $\displaystyle \sum_{n=0}^{\infty}\dfrac{x ^{n}}{n!}$ 의 수렴구간 찾기.
+
+    $$ \lim_{n \to \infty} \bigg |\dfrac{x ^{n+1}}{(n+1)!}\bigg |\bigg |\dfrac{n!}{x ^{n}}\bigg | = \lim_{n \to \infty} \dfrac{|x|}{n+1} = 0 $$
+
+    이므로 모든 실수 $x$ 에서 수렴한다.
+
+- 예시 
+
+    $\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1) ^{n}x ^{n}}{n}$ 의 수렴구간 찾기.
+
+    수렴반경은 $1$ 이므로 수렴구간의 양 끝에서 수렴하는지 확인해야 한다. 
+
+    $x = 1$ 일 때 $\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1) ^{n}}{n}$ 이 교대급수로써 수렴한다. $x = -1$ 일 때는 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n}$ 이 되어 발산한다.
+
+!!! tldr ""
+
+    테일러 급수 : (생략)
+
+!!! tldr ""
+
+    매클로린 급수 : (생략)
+
+!!! tldr ""
+
+    테일러 정리 : $f$ 가 $c$ 를 포함하는 개구간 $I$ 에서 정의되고, $n$번 미분가능한 함수라고 할 때, 임의의 $x \in I$ 에 대하여 
+
+    $$ f(x) = f(c) + f'(c)(x-c) + \dfrac{f''(c)}{2!}(x-c)^{2} + \dots + \dfrac{f ^{(n-1)} (c)}{(n-1)!}(x-c) ^{n-1} + \dfrac{f ^{(n)}(x ^{*})}{n!}(x-c) ^{n} $$
+
+    를 만족하는 $x ^{*}$ 가 $c$ 와 $x$ 사이에 존재한다.
+
+!!! tldr ""
+
+    나머지항(remainder term) 또는 오차항(error term) : 테일러 정리에서 
+
+    $$ R_n(x) = \dfrac{f ^{(n)}(x ^{*})}{n!}(x-c) ^{n} $$
+
+    이다.
+
+
+!!! tldr ""
+
+    테일러 전개식(Taylor expansion) : 테일러 정리에서 테일러 다항식과 나머지 항의 합
+
+    $$ f(x) = f(c) + f'(c)(x-c) + \dfrac{f''(c)}{2!}(x-c)^{2} + \dots + \dfrac{f ^{(n-1)} (c)}{(n-1)!}(x-c) ^{n-1} + \dfrac{f ^{(n)}(x ^{*})}{n!}(x-c) ^{n} $$
+
+    이다.
+
+- 예시 
+
+    $f(x) = e ^{x}$ 의 $c = 0$ 에서의 테일러 전개식을 구해보자. 
+
+    $f ^{(n)}(x) = e ^{x}, f ^{(n)}(0) = 1$ 이므로 테일러 다항식은 
+
+    $$ T_nf(x) = \sum_{k=0}^{n}\dfrac{f ^{(k)}(0)}{k!}x ^{k} = \sum_{k=0}^{n}\dfrac{1}{k!}x ^{k} = 1 + x + \dfrac{1}{2!}x ^{2} + \dots + \dfrac{1}{n!}x ^{n} $$
+
+    이고, 나머지 항은 $R_n(x) = \dfrac{e ^{x ^{*}}}{n!}x ^{n}$ 이다. 이때 $x ^{*}$ 은 $0$ 과 $x$ 사이의 수이다.
+
+    이에 따라 
+
+    $$ e ^{x} = \sum_{k=0}^{n}\dfrac{1}{k!}x ^{k}  + R_n(x) $$
+
+    이다.
