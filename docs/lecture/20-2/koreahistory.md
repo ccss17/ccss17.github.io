@@ -454,4 +454,52 @@
 
             - Gun-In jeon not granted in reality. 
 
-            - Taken from them to 
+            - Taken from them to pay civil officials' stipend
+
+            - Mobilized for the battle and general corvee labors
+        
+        - The Process of the Military Revolt 
+
+            - Commanders like Jeong Jung Bu, Yi Eui Bang, Yi Go 
+
+            - The slaughter of Civil officials, The replacement of King
+
+            - Power Struggle and Choi Chung Heon's final victory in 1196
+
+            - The formation of Military Regime
+
+- Central Organs of Military Regime
+
+    - The private militia, Do dang 
+
+        - Household retainers and slaves 
+
+        - Three elite patrols(Sam Byeol Cho)
+    
+    - Jin Gang Marquiz's Office: Economic Foundation
+
+    - Gyo Jeong Do Gam Decree Enactment Directorate
+
+        - Director, Byeol Gam
+
+        - Issuance of order to collect taxes and to investigate the wrongdoing of officials
+
+        - Principle: appointment by king, Reality : inheritance
+    
+    - Jeong Bang, Personnel management authority,
+
+        - Choi Woo, the son of Cho Chungheon
+
+        - Personnel management of all civil officials and military officers
+
+        - Jeongsaekseungeon, Royal Secretary
+    
+    - Seo Bang Secritariat Authority
+
+        - Choi Woo
+
+        - Assembly of literati household retainers, (Choi's Private Advisers of Confucian Scholars)
+
+    - The real leader of not only military officers but also civil officials.
+
+## 
