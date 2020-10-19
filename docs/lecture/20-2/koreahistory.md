@@ -329,3 +329,129 @@
         - Sun-worship,
     
     - shamanism
+
+---
+
+# Medieval Age of Korea
+
+## The Collapse of Ancient Society
+
+- The Fall of Kinship Arisocracy
+
+    - The increase of Central Aristocracy
+
+    - The resistance of the aristocracy against the authoritarian Monarchy
+
+    - Armed power struggle among the aristocracy
+
+- The emergence of new type power class 
+
+    - Decentralization of Power : The Independency of Local Powers
+
+    - Hojog (Local Power Clan)
+
+        - The Militarization of Hojog
+
+            - Castle Lord, General
+        
+        - Background of Origin: Village Headman, Local Aristocrat, Commander of Local Garrison 
+
+        - Military power, Administrator, Landlord, Trader
+    
+    - The spread of Meris System <-> Hereditary Aristocracy of Ancient Age.
+
+## Historical Stages of Goryeo Kingdom
+
+- mid 9th ~ 10th : Hojok Society, the Society of Local Power Clan
+
+- 11th ~ 1170(Military Officers' Revolt) : The Society of the Bureacratic Aristocracy, 문벌귀족
+
+- 1170(Military Officers' Revolt) ~ 1270 : The Age of Military Regime
+
+- The age of Mongolian Interference and the growth of New literati
+
+## Tae-jo, Wang Geon's policy on Local Power clan
+
+- Cooperation
+
+    - Intermarriage with 29 daughters of powerful hojok family
+
+    - Bestowal of Sir names
+
+    - Grant of local government offices equal to the central government office rank
+
+- Restriction
+
+    - 기인제 Gi-in je (institution) : A son must stay in the capital as hostage
+
+    - 사심관제 Sasim-gwan je (institution) : A high official was appointed to the supervisor, Sasim-gwan, of his home land
+
+- The Hojog Confederation Government 
+
+    - The authority of king was not sufficiently strong 
+
+    - King Jeongjong's attempt to move the capital from Gae Gyeong to Seo Gyeong.
+
+## King Gwangjong's Reform
+
+- Reform policies 
+
+    - Independent Era Name, Gwangdoeg, Junpung
+
+        - The periodical adoption of Chinese Sung Era Name 
+
+    - Slave Inspection Act(956) 노비안건법
+
+    - Purge of merit vassals and Hojog -> Civil Officials 
+
+    - Establishment of State Civil Examination(958)
+
+        - Naturalized Chinese Official, Ssang Gi 
+
+    - Institution of 4 ranks of official robes (Purple, Red, Crimson, Green)
+
+    - King -> Emperor, the title of Hwang Do(Emperial Capital)
+
+- Aim to strengthen the authority of king, undermining the influence of local power clans.
+
+## The Period of Munbeol Gwijog, the Bureacratic Aristocracy
+
+- Formation of the Bureacratic Aristocracy, Munbeol Gwijog
+
+    - From the reign of King Seongjong (the end of 10th century)
+
+    - Choi Seung-ro & Confucian scholar officials 
+
+        - Family background of Head-rank 6
+
+        - Confucian scholar 
+
+        - Mastermind of Bureacratic government 
+
+        - Government institutions 
+
+        - 12 Mog (Prefecture) 982 
+
+    - Confucian Civil Officals who passed the State Exam
+
+## Military regime: 1170~1271
+
+- Military revolt in 1170
+
+    - Cause of revolt 
+
+        - Long term Mistreatment of military officers 
+
+            - Civil supremacy 
+
+            - Appointment of civil officials to Military commanders 
+
+                - Gang gan-Chan, Yun Gwan, Kim Bu-Sik etc. 
+
+        - The discontent of professional soldiers
+
+            - Degeneration of economic status 
+
+            - Gun-In jeon not granted in reality. 
+
+            - Taken from them to 
