@@ -502,4 +502,112 @@
 
     - The real leader of not only military officers but also civil officials.
 
-## 
+## 30 years war against Mongolian invasion
+
+- Mongolian conquest of Jin(금나라) dynasty in North China 
+
+    - 1st conquest war: 1211~1215
+
+    - 2nd conquest war: 1235
+
+- Mongolian invasion to Goreyo
+
+    - 1st invasion: 1231
+
+        - Reason: Goryeo's refusal to pay excessive tribute
+
+        - Choi military government's decision to continue resistance against Mongol
+
+        - Movement of the capital to Gang Hwa Island
+    
+    - Six times Mongolian invasions in 30 years.
+
+    - Serious damage
+
+        - Decerease of population
+
+        - The abandonment of cultivating land 
+
+        - The destruction of precious cultures
+
+            - Hwang Lyong Sa Temple
+
+            - 9 storied wood tower
+
+            - The first Printing Woodblocks of tripitaka in Bu In Sa Temple
+
+- Goryeo Government's giving up resistance
+
+    - Military Regime's Loss of the People's support 
+
+    - Conspiracy against Choi Military Family
+
+    - Decision to return to Gae Gyeong in 1270
+
+- Three elite Patrol's anti-Mongolian Resistance
+
+    - Jin Do Island military Base, Je Ju Do Island military base
+
+    - Suppressed in 1273
+
+- Carving of the Printing Woodblocks for Tripitaka, Goryeo Dae Jang Gyeong
+
+    - 8 milion printing blocks, equivalent to 6,500 printed volumes of books
+
+    - To save the state from the invasion of Mongolian military forces with the help of Buddhism
+
+- Unification of Buddhism: Jo Gye Jong sector
+
+    - The establishment of Jo-Gye-Jong Sector
+
+    - Unification of Seon and Scriptures
+
+## Ban(Order) System of Gonvernment
+
+- Ban je(order system)
+
+    - Hereditary system: The right and the obligation of their public services to the state
+
+    - Mun Ban(civil official's order), Mu Ban(military official's order), Nam Ban(court functionary's order), Gun Ban(soldier's order) and artisans, local functionary
+
+- Protected Appointment System, Eum-Seo System
+
+    - Civil and military officials over 5th rank
+
+    - The Appointment of One male family member to court functionary.
+
+- Upward social mobility
+
+    - Local functionaries to civil offieal's order through civil service examination
+
+    - Soldiers of Gun Ban to military officer's order through the meris in battles.
+
+    - Slaves recruited to Soldiers.
+
+    - Constant development of upward social mobility.
+
+## Common People's life
+
+- Free-born peasantry
+
+    - Baskjeong: Commoners not belonging to any order system
+
+        - No grant of land from the government
+    
+    - Cultivating land
+
+        - Peoples' Land Min Jeon
+
+            - public land
+
+            - The Payment of 1/4 of the harvest as land rent to the state.
+        
+        - Private land
+
+            - A half of the harvest as land rent to the land owner
+        
+    - Heavy Burdens
+
+        - Tribute tax in cloth
+
+        - Corvee labour; mobilized for every construction works
