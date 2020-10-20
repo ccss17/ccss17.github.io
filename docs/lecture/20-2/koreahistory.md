@@ -611,3 +611,112 @@
         - Tribute tax in cloth
 
         - Corvee labour; mobilized for every construction works
+
+## Land Institution 
+
+- Principle: All land belong to the King
+
+    - Peoples' land (Public Land) : rent 1/4 of the harvest to the state
+
+    - Private Land: owner of the land was allowed the right to receive rent, 1/2 of the harvest 
+
+- Stipend Lnd Law(Jeon-Si Gwa) 976
+
+    - The Basic Land institution
+
+- Merit Reward Land for meritorious subjects(Gong-Eum Jeon or Perpetual Land) in 1049
+
+## Private lands
+
+- Stipend Land (Jeon Si Gwa)
+
+    - All officials and military officers according to 18 official ranks
+
+    - When holders die, the land was returned to the state
+
+- Merit Reward Land(Gond Eum Jeon)
+
+    - Perpetual Land
+
+    - Merit-subjects and the High Officials
+
+    - Freely traded
+
+- Soldiers' Land(Gun In Jeon)
+
+    - Professional soldiers(soldiers' order)
+
+- Pension Land(Gu Bun Jeon)
+
+    - Bereaved family of the deceased soldiers
+
+    - Retired soldiers without descendents taking charge of soldiers obligation
+
+        - They should return their soldiers' land
+
+- Temples' land, Han-In Jeon, Duty Retirement Land to retired headman
+
+# The Collapse of Goryeo dynasty
+
+- suffering under Mongol dominance
+
+    - The Mongolian Failure of Japanese Conquest
+
+        - To mobilize a huge amount of food supply and warships.
+    
+    - Spoilage of Goryeo Society
+
+        - Goryeo King = Yuan Emperor's Son-in-Law
+
+        - The Affection of the Mongolian customs
+
+        - Jeongdonghaeng-seong: A Yuan Chinese Provincial Office
+
+        - Mongolian Commandry such as Ssangseong chong gwan-bu, Dong nyeong-bu, Tamra chonggwan-bu.
+
+- Gweonmun Sejog, Power Family
+
+    - Power families supported by Mongol
+
+        - Jo In Gyu: Mongolian interpreter; Yun Soo: head of Eung Bang(office for paying hawk tribute to Yuan)
+    
+    - The monopoly of the government offices
+
+        - Cheom Sa Bu, Mil Jik Sa, Members of Privy councils
+    
+    - The possession of the extensive Farmstead
+
+        - Gift land, Merit Reward Land, Cultivation of wild Land, Occupying others
+
+        - Exempted from land tax, tribute tax, corvee labour service
+
+        - THe cultivation of Nong-Jang with the wandering people or slaves
+    
+    - Absentee Landowners
+
+        - To send house-retainers or house-servants to collect rent
+
+## Sadaebu, Scholar-Official Class
+
+- Well educated with Neo-Confucianism
+
+- Executive ability in Administration
+
+- Critical perspective about the powerful Families
+
+## The Early Emergence
+
+- Military Regime
+
+- To make up for the inability of military officers in state administration
+
+- Gradually developed into a new social and political force
+
+## The Economic foundation
+
+- middle or small-size landowners
+
+- Self cultivation of the land
+
+- Critical against the powerful families' large land possession
+
