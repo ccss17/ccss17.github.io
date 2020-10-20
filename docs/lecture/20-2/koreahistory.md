@@ -329,3 +329,285 @@
         - Sun-worship,
     
     - shamanism
+
+---
+
+# Medieval Age of Korea
+
+## The Collapse of Ancient Society
+
+- The Fall of Kinship Arisocracy
+
+    - The increase of Central Aristocracy
+
+    - The resistance of the aristocracy against the authoritarian Monarchy
+
+    - Armed power struggle among the aristocracy
+
+- The emergence of new type power class 
+
+    - Decentralization of Power : The Independency of Local Powers
+
+    - Hojog (Local Power Clan)
+
+        - The Militarization of Hojog
+
+            - Castle Lord, General
+        
+        - Background of Origin: Village Headman, Local Aristocrat, Commander of Local Garrison 
+
+        - Military power, Administrator, Landlord, Trader
+    
+    - The spread of Meris System <-> Hereditary Aristocracy of Ancient Age.
+
+## Historical Stages of Goryeo Kingdom
+
+- mid 9th ~ 10th : Hojok Society, the Society of Local Power Clan
+
+- 11th ~ 1170(Military Officers' Revolt) : The Society of the Bureacratic Aristocracy, 문벌귀족
+
+- 1170(Military Officers' Revolt) ~ 1270 : The Age of Military Regime
+
+- The age of Mongolian Interference and the growth of New literati
+
+## Tae-jo, Wang Geon's policy on Local Power clan
+
+- Cooperation
+
+    - Intermarriage with 29 daughters of powerful hojok family
+
+    - Bestowal of Sir names
+
+    - Grant of local government offices equal to the central government office rank
+
+- Restriction
+
+    - 기인제 Gi-in je (institution) : A son must stay in the capital as hostage
+
+    - 사심관제 Sasim-gwan je (institution) : A high official was appointed to the supervisor, Sasim-gwan, of his home land
+
+- The Hojog Confederation Government 
+
+    - The authority of king was not sufficiently strong 
+
+    - King Jeongjong's attempt to move the capital from Gae Gyeong to Seo Gyeong.
+
+## King Gwangjong's Reform
+
+- Reform policies 
+
+    - Independent Era Name, Gwangdoeg, Junpung
+
+        - The periodical adoption of Chinese Sung Era Name 
+
+    - Slave Inspection Act(956) 노비안건법
+
+    - Purge of merit vassals and Hojog -> Civil Officials 
+
+    - Establishment of State Civil Examination(958)
+
+        - Naturalized Chinese Official, Ssang Gi 
+
+    - Institution of 4 ranks of official robes (Purple, Red, Crimson, Green)
+
+    - King -> Emperor, the title of Hwang Do(Emperial Capital)
+
+- Aim to strengthen the authority of king, undermining the influence of local power clans.
+
+## The Period of Munbeol Gwijog, the Bureacratic Aristocracy
+
+- Formation of the Bureacratic Aristocracy, Munbeol Gwijog
+
+    - From the reign of King Seongjong (the end of 10th century)
+
+    - Choi Seung-ro & Confucian scholar officials 
+
+        - Family background of Head-rank 6
+
+        - Confucian scholar 
+
+        - Mastermind of Bureacratic government 
+
+        - Government institutions 
+
+        - 12 Mog (Prefecture) 982 
+
+    - Confucian Civil Officals who passed the State Exam
+
+## Military regime: 1170~1271
+
+- Military revolt in 1170
+
+    - Cause of revolt 
+
+        - Long term Mistreatment of military officers 
+
+            - Civil supremacy 
+
+            - Appointment of civil officials to Military commanders 
+
+                - Gang gan-Chan, Yun Gwan, Kim Bu-Sik etc. 
+
+        - The discontent of professional soldiers
+
+            - Degeneration of economic status 
+
+            - Gun-In jeon not granted in reality. 
+
+            - Taken from them to pay civil officials' stipend
+
+            - Mobilized for the battle and general corvee labors
+        
+        - The Process of the Military Revolt 
+
+            - Commanders like Jeong Jung Bu, Yi Eui Bang, Yi Go 
+
+            - The slaughter of Civil officials, The replacement of King
+
+            - Power Struggle and Choi Chung Heon's final victory in 1196
+
+            - The formation of Military Regime
+
+- Central Organs of Military Regime
+
+    - The private militia, Do dang 
+
+        - Household retainers and slaves 
+
+        - Three elite patrols(Sam Byeol Cho)
+    
+    - Jin Gang Marquiz's Office: Economic Foundation
+
+    - Gyo Jeong Do Gam Decree Enactment Directorate
+
+        - Director, Byeol Gam
+
+        - Issuance of order to collect taxes and to investigate the wrongdoing of officials
+
+        - Principle: appointment by king, Reality : inheritance
+    
+    - Jeong Bang, Personnel management authority,
+
+        - Choi Woo, the son of Cho Chungheon
+
+        - Personnel management of all civil officials and military officers
+
+        - Jeongsaekseungeon, Royal Secretary
+    
+    - Seo Bang Secritariat Authority
+
+        - Choi Woo
+
+        - Assembly of literati household retainers, (Choi's Private Advisers of Confucian Scholars)
+
+    - The real leader of not only military officers but also civil officials.
+
+## 30 years war against Mongolian invasion
+
+- Mongolian conquest of Jin(금나라) dynasty in North China 
+
+    - 1st conquest war: 1211~1215
+
+    - 2nd conquest war: 1235
+
+- Mongolian invasion to Goreyo
+
+    - 1st invasion: 1231
+
+        - Reason: Goryeo's refusal to pay excessive tribute
+
+        - Choi military government's decision to continue resistance against Mongol
+
+        - Movement of the capital to Gang Hwa Island
+    
+    - Six times Mongolian invasions in 30 years.
+
+    - Serious damage
+
+        - Decerease of population
+
+        - The abandonment of cultivating land 
+
+        - The destruction of precious cultures
+
+            - Hwang Lyong Sa Temple
+
+            - 9 storied wood tower
+
+            - The first Printing Woodblocks of tripitaka in Bu In Sa Temple
+
+- Goryeo Government's giving up resistance
+
+    - Military Regime's Loss of the People's support 
+
+    - Conspiracy against Choi Military Family
+
+    - Decision to return to Gae Gyeong in 1270
+
+- Three elite Patrol's anti-Mongolian Resistance
+
+    - Jin Do Island military Base, Je Ju Do Island military base
+
+    - Suppressed in 1273
+
+- Carving of the Printing Woodblocks for Tripitaka, Goryeo Dae Jang Gyeong
+
+    - 8 milion printing blocks, equivalent to 6,500 printed volumes of books
+
+    - To save the state from the invasion of Mongolian military forces with the help of Buddhism
+
+- Unification of Buddhism: Jo Gye Jong sector
+
+    - The establishment of Jo-Gye-Jong Sector
+
+    - Unification of Seon and Scriptures
+
+## Ban(Order) System of Gonvernment
+
+- Ban je(order system)
+
+    - Hereditary system: The right and the obligation of their public services to the state
+
+    - Mun Ban(civil official's order), Mu Ban(military official's order), Nam Ban(court functionary's order), Gun Ban(soldier's order) and artisans, local functionary
+
+- Protected Appointment System, Eum-Seo System
+
+    - Civil and military officials over 5th rank
+
+    - The Appointment of One male family member to court functionary.
+
+- Upward social mobility
+
+    - Local functionaries to civil offieal's order through civil service examination
+
+    - Soldiers of Gun Ban to military officer's order through the meris in battles.
+
+    - Slaves recruited to Soldiers.
+
+    - Constant development of upward social mobility.
+
+## Common People's life
+
+- Free-born peasantry
+
+    - Baskjeong: Commoners not belonging to any order system
+
+        - No grant of land from the government
+    
+    - Cultivating land
+
+        - Peoples' Land Min Jeon
+
+            - public land
+
+            - The Payment of 1/4 of the harvest as land rent to the state.
+        
+        - Private land
+
+            - A half of the harvest as land rent to the land owner
+        
+    - Heavy Burdens
+
+        - Tribute tax in cloth
+
+        - Corvee labour; mobilized for every construction works
