@@ -720,3 +720,78 @@
 
 - Critical against the powerful families' large land possession
 
+## King Gong-min's Reform (1352~1374)
+
+- International Situation
+
+    - The age of Chinese Political Change from Yuan to Ming(1351 ~ 1368)
+
+- Reform Policies
+
+    - The abolition of Mongolian customs(1352)
+
+        - Era name, dresses, hair style
+    
+    - The Restoration of Goryeo Government institutions 1356
+
+    - The Execution of the Pro-Yuan political (Gi Cheol) faction 1356
+
+    - The abolition of the Chinese Province, Jeong-Dong-Haeng Seong
+
+    - The Restoration of the lost territory
+
+    - Pro-Ming stance in 1368
+
+    - Jeonmin Byeonjeong Dogam Directorate for reclassification of farmland and farmers. 1366
+
+    - The Establishment of Seonggyungwan
+
+## New Military Leaders
+
+- The invasions of Red-Turban Raiders(홍건적)(1361, 1369)
+
+- Constant invasions of Japanese Raiders.
+
+- Korean generals:
+
+    - Lee Seong-Gye, Choi Young, Park Wi, Choi Mu-Seon
+
+# Lee Seong-gye's occupation of the political power
+
+- Wi-Hwa Do Island Return of Troops(1388)
+
+    - Pro-Yuan Choi Young's decision to dispatch expeditionary forces to Chinese Liao-dung Peninsula
+
+    - Yi Seong Gye's opposition
+
+        - Impossible for a small state to conquer large state
+
+        - Not to mobilize farmers during the season of farming
+
+        - ...
+
+        - ...
+    
+    - To exile Choi Young to a distance place and purge pro-Yuan political factions
+
+    - To seize the political power
+
+    - To depose King U.(1389)
+
+## Land Reform
+
+- Lee Seong Gye and His Radical scholar-officials
+
+    - To Inspect the landownership of the whole country 1389
+
+    - Land Distribution Directorate
+
+## The Establishment of Jo-seon Kingdom
+
+- Dynastic revolution in 1392
+
+    - Lee Seong-Gey; Taejo
+
+    - Ratified by the Privy Council.
+
+    - Two forces constructing new dynasty
