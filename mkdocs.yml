@@ -16,7 +16,7 @@ nav:
   #   - 19xx.9.1 그들은, 그들은 그냥 죽은 것이다: diary/19xx.9.1.md
   #   - 19xx.9.6 아이에게 : diary/19xx.9.6.md
   #   - 19xx.10.11 죽을 수 없다 : diary/19xx.10.11.md
-  #   - 19xx.10.14-1 푸르고 텅 빈 곳 : diary/19xx.10.14-1.md
+  #   - 19xx.10.14-1 푸르고 텅 빈 곳 : diary/19xx.10.14-1.mdj
   #   - 19xx.10.14-2 외로움 : diary/19xx.10.14-2.md
   #   - 19xx.10.16 열등감 : diary/19xx.10.16.md
   #   - 19xx.10.17 무제 : diary/19xx.10.17.md
@@ -42,6 +42,7 @@ nav:
     - DL from stratch 메모3: AI/dl_from_scratch3.md
     - DL from stratch 메모4: AI/dl_from_scratch4.md
     - 인공지능 메모3: AI/ai.md
+  - 정보이론: Philosophy/information.md
   - Computer: 
     - Makefile: Computer/makefile.md
     - Git: Computer/git.md
@@ -50,7 +51,6 @@ nav:
   - Philosophy: 
     - 철학 메모: Philosophy/philosophy.md
     - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
-    - 정보이론: Philosophy/information.md
   - Tex 수학기호: tex.md
   - Paper:
     - Facenet (2015): paper/facenet.md
