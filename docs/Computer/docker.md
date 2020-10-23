@@ -39,6 +39,12 @@
   docker run -d --name torch-notebook -p 8888:8888 -p 6006:6006 -v d:\repo\torch-test:/workspace ccss17/torch-notebook
   ```
 
+- 도커로 파이썬 쓰기 예시
+
+  ```shell
+  docker run -it --rm -v d:\repo\:/usr/src/myapp python:2.7.13 python /usr/src/myapp/test.py
+  ```
+
 ## 관리
 
 - 실행중인 컨테이너 중지 
