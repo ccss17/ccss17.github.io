@@ -1615,23 +1615,25 @@ $n$ 개의 카드에서 얻을 수 있는 최대 점수를 출력해야 한다.
 
 ### 문제
 
-$a_i \in \N ^{[1, 10 ^{9}]}$ 에 대한 수열 
+$a_i \in \N ^{[1, 10 ^{9}]}, n \in \N ^{[1,50000]}$ 에 대한 수열 
 
-$$\{a_n\} \quad \text{for} \ n \in \N ^{[1,5 \cdot 10 ^{4}]}$$
+$$ \{a_1, a_2, a_3, \dots, a _{n-1}, a_n\} $$
 
-의 부분수열
+의 $m \in \N ^{[1, n]}$ 에 대한 부분수열
 
-$$ \{\alpha _m\} \quad \text{for} \ m \in \N ^{[1, n]} $$
+$$ \{\alpha _1, \alpha _2, \alpha _3, \dots, \alpha _{m-1}, \alpha _m\} $$
 
-들중에서 다음 조건을 만족시키는 부분수열들이 존재한다.
+중에서 조건
 
-- 부분수열의 최대 원소 $\alpha _k$ 에 대하여 
+- 부분수열의 최대 원소 $\alpha _k$ 에 대하여 $\alpha _1 < \alpha _2 < \dots < \alpha _k \land \alpha _k > \alpha _{k+1} > \dots \alpha _m$
 
-    $$ \alpha _1 < \alpha _2 < \dots \alpha _k \land \alpha _k > \alpha _{k+1} > \dots \alpha _m $$
+을 만족시키는 부분수열이 존재한다.
 
 ### 정답
 
-이러한 부분수열들중에서 가장 많은 원소를 갖는 부분수열의 원소
+이 조건을 만족시키는 부분수열들 $\alpha ^{(1)}, \alpha ^{(2)}, \dots, \alpha ^{(l)}$ 에 대하여 
+
+$$\max \{|\alpha ^{(1)}|, |\alpha ^{(2)}|, \dots, |\alpha ^{(l)}| \}$$
 
 ## 순수 수학으로 사상시키기
 
