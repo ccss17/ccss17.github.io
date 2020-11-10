@@ -1885,7 +1885,7 @@ $$ B = \{\forall x, y \in A | x \neq y\} $$
 
 한 가지 확실한 것은 맨 첫번째 폐구간 $1$ 번째 폐구간 $\mathcal{X}_1 = \bigg [x_1 - \sqrt[]{d ^{2} - y_1 ^{2}} , x_1 + \sqrt[]{d ^{2} - y_1 ^{2}}\bigg ]$ 에서부터 우물을 정해야 한다고 한다면, $\max \mathcal{X}_1$ 으로 우물을 정해야 한다. 왜냐하면 그래야 다음 폐구간에서 그 우물을 공유하게 될 확률이 최대가 때문이다. 
 
-단, 폐구간 $\mathcal{X_1}$ 에 완전히 포함된 구간, 즉 $\min \mathcal{X_1} < \min \mathcal{X_2} \land \max \mathcal{X_1} < \max \mathcal{X_2}$ 인 구간이 존재한다면 $\mathcal{X_2}$ 가 우물을 포함할 수 없게 되므로 $\max \mathcal{X_1}$ 을 택하면 안된다. 그렇다면 이러한 잠복 구간이 존재한다면 어떤 점을 우물로 택해야 할까?
+단, 폐구간 $\mathcal{X_1}$ 에 완전히 포함된 구간, 즉 $\min \mathcal{X_1} < \min \mathcal{X_2} \land \max \mathcal{X_2} < \max \mathcal{X_1}$ 인 구간이 존재한다면 $\mathcal{X_2}$ 가 우물을 포함할 수 없게 되므로 $\max \mathcal{X_1}$ 을 택하면 안된다. 그렇다면 이러한 잠복 구간이 존재한다면 어떤 점을 우물로 택해야 할까?
 
 한 가지 확실한 것은 잠복 구간 $\mathcal{X}_2 = \bigg [x_2 - \sqrt[]{d ^{2} - y_2 ^{2}} , x_2 + \sqrt[]{d ^{2} - y_2 ^{2}}\bigg ]$ 에서도 반드시 우물이 하나 이상 있어야 하고, 가장 우측에 있는 우물을 택해야 다른 구간들이 우물을 공유하게 될 가능성이 커진다. 
 
