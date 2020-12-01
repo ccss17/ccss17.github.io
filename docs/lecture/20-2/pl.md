@@ -50,3 +50,14 @@
     - Semantics
 
     - Type
+
+## Type
+
+타입 : 데이터의 추상적 정의이다. Java 에서 `class` 와 같은 개념이다.
+
+
+Racket 의 Type 정의 
+
+```racket
+(define)
+```
