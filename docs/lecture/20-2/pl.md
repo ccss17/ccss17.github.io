@@ -179,12 +179,40 @@ Racket 에서의 심볼이란 따옴표 뒤에 나오는 식별자이다.
 Racket 의 타입 정의:
 
 ```racket
-(define-type type-id
-    [variant_id1 (field_id11 contract_expr11)
+(define type-id
+    [variant_id1 (field11 contract_expr11)
                  ...
-                 (field_id1n contract_expr1n)]
+                 (field1n contract_expr1n)
+    [variant_id2 (field21 contract_expr21)
+                 ...
+                 (field2n contract_expr2n)
     ...
-    [variant_idm (field_idm1 contract_exprm1)
+    [variant_idm (fieldm1 contract_exprm1)
                  ...
-                 (field_idmn contract_exprmn)])
+                 (fieldmn contract_exprmn)])
 ```
+
+생성자 `variant_id1` 은 variant 를 정의한다. 각각의 생성자들은 variant 를 초기화하는 파라미터를 받는다. `field` 의 자료형은 `contract_expr` 로 검증된다.
+
+`type_id?` 와 `variant_id?` 로 타입을 검사할 수 있고, `variant_id-field_id` 로 `field` 에 접근할 수 있다.
+
+!!! example
+
+    ```racket
+    (define-type human
+        [mother (name string?)
+                (age number?)
+                (job string?)
+        [father (name string?)
+                (age number?)
+                (hobby string?)
+        [child (name (list of string?))
+               (first integer?)])
+    
+    (mother "A" 40 "B")
+    (child '("A" "B") 1)
+    (define m (mother "A" 40 "B"))
+    (human? m)
+    (mother? m)
+    (mother-name? m)
+    ```
