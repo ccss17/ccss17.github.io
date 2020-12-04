@@ -216,3 +216,74 @@ Racket 의 타입 정의:
     (mother? m)
     (mother-name? m)
     ```
+
+## Type Deconstruction
+
+Type Deconstruction 을 통하여 주어진 타입의 특정 값을 가져오거나 특정한 task 를 수행할 수 있다.
+
+```racket
+(type-case type-id expr
+    [variant_id1 (field_id11 ...) expr1]
+    ...
+    [variant_idm (field_idm1 ...) exprm])
+```
+
+!!! example
+
+    ```racket
+    (define-type GUI
+        [label (text string?)]
+        [button (text string?)
+                (enabled? boolean?)]
+        [choice (items (listof string?))
+                (selected integer?)])
+    
+    (define ch (choice '("Apple" "Strawberry" "Banana") 0))
+    (choice? ch)
+    (GUI? ch)
+    (choice-selected ch)
+
+    (define (GUI-to-list g)
+        (type-case GUI g
+            [label (t) (list t)]
+            [button (t e?) (list t)]
+            [choice (i s) i]))
+    ```
+
+## Lists
+
+배열과 같은 개념의 데이터 구조이다.
+
+!!! example
+
+    ```racket
+    (list 1 2 3)
+    '(1 2 3)
+    ```
+
+List 생성:
+
+```racket
+(cons 1 empty)                  ; -> (list 1)
+(list 1 2 3)                    ; -> (list 1 2 3)
+'(1 2 3)
+```
+
+List 확장:
+
+```racket
+(append (list 1 2) empty)       ; -> (list 1 2)
+(append (list 1 2) (list 3 4))  ; -> (list 1 2 3 4)
+```
+
+List 접근:
+
+```racket
+(first (list 1 2 3))            ; 1
+(rest (list 1 2 3))             ; (list 2 3)
+map, foldl, foldr, filter
+```
+
+# Modeling Syntax
+
+인터프리터를 짜면서 프로그래밍 언어를 이해해보자고 했었다. 근데 프로그래밍 언어에서 가장 중요한 것은 문법이니 문법부터 짜볼 것이다.
