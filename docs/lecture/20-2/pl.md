@@ -287,3 +287,31 @@ map, foldl, foldr, filter
 # Modeling Syntax
 
 인터프리터를 짜면서 프로그래밍 언어를 이해해보자고 했었다. 근데 프로그래밍 언어에서 가장 중요한 것은 문법이니 문법부터 짜볼 것이다.
+
+expression 의 종류는 다음 세 가지이고, 프로그래밍 언어는 이것들 중 최소한 하나 이상을 사용한다.
+
+- infix: `3 + 4`
+
+- postfix: `3 4 +`
+
+- parenthesized prefix: `(+ 3 4)`
+
+이 문법을 트리 형태로 다음과 같이 추상화된 일반 형태로 표현할 수 있다.
+
+```
+        3 ┬ 4
+          +
+```
+
+## Modeling Arithmetic Expression
+
+먼저 parenthesized prefix 로 AE(Arithmetic Expression) 를 다음과 같이 설계해보자.
+
+```racket
+(define-type AE
+    [num (n number?)]
+    [add (lhs AE?)
+         (rhs AE?)]
+    [sub (lhs AE?)
+         (rhs AE?)])
+```
