@@ -397,3 +397,221 @@ $$ (\text{<expr>} + \text{<expr>}) \\ 8 \in \text{<num>} \subset \text{<expr>} \
 ```
 
 와 같이 정의하면 된다.
+
+## Implementation Parser
+
+지금까지 BNF 를 통해 concrete syntax 를 명확하게 정의해보았다. Parser 의 역할이란 concrete syntax 를 abstract syntax 로 변환해주는 것이라고 하였다. 이 abstract syntax 가 Interpreter 로 입력되고 Interpreter 는 그것을 수행하여 결과를 출력하게 된다.
+
+input(concrete syntax(code)) &rarr; Parser &rarr; abstract syntax &rarr; Interpreter &rarr; output
+
+그러므로 Parser 는 기술적으로 expression 을 받아서 AE 로 변환하는 프로그램이다.
+
+!!! example
+
+    그러므로 Parser 는 다음과 같은 기능을 하게 된다.
+
+    ```racket
+    (test (parse '3) (num 3))
+    (test (parse '{+ 3 4}) (add (num 3) (num 4)))
+    (test (parse '{- 4 3}) (sub (num 4) (num 3)))
+    (test (parse '{+ {+ 4 3} {- 4 3}}) (add (add (num 4) (num 3)) (sub (num 4) (num 3))))
+    ```
+
+이 Parser 는 다음과 같이 입력된 데이터의 타입에 따라서 그 데이터를 해당 AE 로 변환해주는 프로그램으로 구현할 수 있다. 
+
+```racket
+(define (parse sexp)
+    (cond 
+        [(number? sexp) (num sexp)]
+        [(eq? (first sexp) '+) (add (parse (second sexp)) 
+                                    (parse (third sexp)))]
+        [(eq? (first sexp) '-) (sub (parse (second sexp)) 
+                                    (parse (third sexp)))]))
+```
+
+이 프로그램은 
+
+```racket
+(test (parse '3) (num 3))
+(test (parse '{+ 3 4}) (add (num 3) (num 4)))
+```
+
+와 같은 입력을 잘 처리한다. 그러나 `(parse '{+ 3 4 5})` 와 같은 입력은 잘 처리하지 못한다. 그러므로 `sexp` 리스트의 길이가 `3` 이어야 한다는 조건을 추가하고, 그 이외의 입력은 에러로 처리하는 Parser 를 다음과 같이 구현할 수 있다.
+
+```racket
+(define (parse sexp)
+    (cond 
+        [(number? sexp) (num sexp)]
+        [(and (= 3 (length sexp)) (eq? (first sexp) '+))
+         (add (parse (second sexp)) (parse (third sexp)))]
+        [(and (= 3 (length sexp)) (eq? (first sexp) '-))
+         (sub (parse (second sexp)) (parse (third sexp)))]
+        [else (error 'parse "bad syntax")]))
+```
+
+# Interpreter
+
+우리는 concrete syntax(code) 를 받아서 abstract syntax(AE) 로 변환하는 Parser 를 구현해보았다. 그러면 이제 abstract syntax 를 받아서 실행하고 결과를 출력하는 Interpreter 를 구현할 차례이다. 
+
+Interpreter 구현에 있어서 Type Deconstruction 이 사용된다. Type Deconstruction 이 abstract syntax(AE) 의 타입에 따라 특정 task 를 수행해주기 때문이다. 
+
+## Implementation Interpreter
+
+Type Deconstruction 을 기반으로 다음과 같이 Interpreter 를 구현할 수 있다. 이 Interpreter 는 AE 를 받아서 특정 task 를 수행한다.
+
+```racket
+; interp: AE -> number
+(define (interp an-ae)
+    (type-case AE an-ae
+        [num (n) n]    
+        [add (l r) (+ (interp l) (interp r))]
+        [sub (l r) (- (interp l) (interp r))]))
+```
+
+이 Interpreter 와 Parser 를 통해 다음과 같은 산술 연산을 수행할 수 있다. 
+
+!!! example
+
+    ```racket
+    (test (interp (parse '3)) 3)
+    (test (interp (parse '{+ 3 4})) 7)
+    (test (interp (parse '{+ {- 3 4} 7})) 6)
+    ```
+
+    `parse` 는 concrete syntax(code) 를 abstract syntax(AE) 로 변환하고, `interp` 는 abstract syntax(AE) 를 받아서 task 를 수행한다. 
+
+# Substitution
+
+이제 기본적인 Parser, Interpreter 는 완성되었다. 이것들을 업그레이드 해나갈 건데, 먼저 Substitution 을 지원하는 Interpreter 를 만들어볼 것이다.
+
+Substitution 은 반복되는 expression 을 불필요하게 계산하지 않도록 도입된 개념이다.
+
+!!! example
+
+    ```c
+    int totalSum = (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10) + (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10) + (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10);
+    ```
+
+    이 코드는 불필요한 연산이 2번 반복된다. 이 코드를 다음과 같이 최적화할 수 있다.
+
+    ```c
+    int partialSum = 1 + 2 + 3+ 4 + 5 + 6 + 7 + 8 + 9 + 10;
+    int totalSum = partialSum + partialSum + partialSum;
+    ```
+
+이것이 Substitution 인데, Substitution 을 위해서는 identifier 가 필요하다. identifier 는 계산된 결과를 저장하는 장소이다. 위 예시에서 `partialSum` 이 identifier 이다.
+
+## Identifier
+
+Identifier 란 expression 의 값의 이름이다. 이 이름(identifier)을 다른 곳에서 다시 사용할 수 있다.
+
+변수 vraiable 과 비슷한 개념이지만, 변수는 그 값이 변할 수 있다는 것에서 차이가 있다. Identifier 의 값은 불변한다.
+
+가령 
+
+```racket
+(+ (+ 5 5) (+ 5 5))
+```
+
+와 같은 프로그램에서 `(+ 5 5)` 가 중복 계산되므로 이것을 identifier 에 저장하여 재사용하면 Substitution 을 하는 것이다. 이제 `with` 이라는 키워드가 identifier 를 정의한다고 하자. 그러면 위 프로그램을 다음과 같이 Substitution 할 수 있다.
+
+```racket
+(with (x (+ 5 5)) (+ x x))
+```
+
+이처럼 identifier 를 지원하는 AE 를 WAE 라고 하자.
+
+## BNF for WAE
+
+WAE 의 BNF 를 다음과 같이 만들 수 있다.
+
+```
+<WAE> ::= (<WAE> + <WAE>)
+         | (<WAE> - <WAE>)
+         | <num>
+         | (with (<id> <WAE>) <WAE>)
+         | <id>
+<id> ::= x, y, plus, factorial, ...
+```
+
+단지 기존의 AE 의 BNF 에 2 가지가 추가된 것이다. `| (with (<id> <WAE>) <WAE>)` 를 통하여 identifier 를 사용할 수 있게 되고 `| <id>` 를 통하여 identifier 를 WAE 로 정의할 수 있게 되었다. 
+
+## Identifier Type
+
+```racket
+(with (x (+ 1 2))
+      (+ x x))
+```
+
+의 결과는 6 이다. 이떄 `(with (x (+ 1 2))` 에서 identifier `x` 는 Binding instance 이고 `(+ x x))` 에서 identifier `x` 는 Bound instance 이다.
+
+만약 
+
+```racket
+(with (x (+ 1 2))
+      (+ x y))
+```
+
+와 같이 되어있다면 `y` 라는 정의되지 않은 identifier 가 사용되었으므로 에러가 발생한다. 이 `y` 를 free identifier 라고 한다.
+
+## Define WAE
+
+WAE 를 구현하기 위하여 먼저 WAE 라는 abstract syntax 를 정의하자.
+
+```racket
+(define-type WAE
+    [num (n number?)]
+    [add (lhs WAE?) (rhs WAE?)]
+    [sub (lhs WAE?) (rhs WAE?)]
+    [with (name symbol?) (named-expr WAE?) (body WAE?)]
+    [id (name symbol?)])
+```
+
+## Implement Parser for WAE
+
+WAE 를 정의했으니 code(concrete syntax) 를 abstract syntax(WAE) 로 변환해주는 Parser 를 구현해보자.
+
+```racket
+(define (parse sexp)
+  (cond
+       [(number? sexp) (num sexp)]
+       [(and (= 3 (length sexp)) (eq? (first sexp) '+))
+                            (add (parse (second sexp)) (parse (third sexp)))]
+       [(and (= 3 (length sexp)) (eq? (first sexp) '-))
+                            (sub (parse (second sexp)) (parse (third sexp)))]
+        [... (with ...)]
+        [... (id ...)]
+        [else (error 'parse "bad syntax:~a" sexp)]))
+```
+
+일단은 AE 를 위한 `parse` 를 기반으로 위와 같이 스켈레톤 코드를 짜볼 수 있을 것이다. 그런데 위 코드는 racket 의 `match` 키워드를 사용하여 최적화시킬 수 있다. 또한 동시에 `with` 와 `id` 의 케이스도 구현해보자.
+
+```racket
+(define (parse sexp)
+  (match sexp
+       [(? number?)    (num sexp)]
+       [(list '+ l r)  (add (parse l) (parse r))]
+       [(list '- l r)  (sub (parse I) (parse r))]
+       [(list 'with (list i v) e) (with i (parse v) (parse e))]
+       [(? symbol?) (id sexp)]
+       [else (error 'parse "bad syntax:~a" sexp)]))
+```
+
+이 파서는 다음과 같이 concrete syntax(code) 를 abstract syntax(WAE) 로 바꿔준다.
+
+!!! example
+
+    ```racket
+    (test (parse '{+ {- 3 4} 7}) (add (sub (num 3) (num 4)) (num 7)))
+    (test (parse '{with {x 5} {+ 8 2}}) (with 'x (num 5) (add (num 8) (num 2))))
+    (test (parse '{with {x 5} {+ x x}}) (with 'x (num 5) (add (id 'x) (id 'x))))
+    ```
+
+## Implement Substitution
+
+Parser 를 구현했으니 이제 Interpreter 를 구현하면 된다. 하지만 그전에 Substitution 을 구현해야 한다. 이 Substitution 이 Interpreter 로 전달되는 WAE 의 identifier 를 모두 identifier 가 아닌 WAE 로 바꿔준다. 
+
+```racket
+; (with (x 10) 5)
+(test (subst (num 5) 'x 10) (num 5))
+```
