@@ -521,7 +521,7 @@ Identifier 란 expression 의 값의 이름이다. 이 이름(identifier)을 다
 
 이처럼 identifier 를 지원하는 AE 를 WAE 라고 하자.
 
-## BNF for WAE
+## Concrete Syntax for WAE (BNF)
 
 WAE 의 BNF 를 다음과 같이 만들 수 있다.
 
@@ -554,7 +554,7 @@ WAE 의 BNF 를 다음과 같이 만들 수 있다.
 
 와 같이 되어있다면 `y` 라는 정의되지 않은 identifier 가 사용되었으므로 에러가 발생한다. 이 `y` 를 free identifier 라고 한다.
 
-## Define WAE
+## Abstarct Syntax for WAE
 
 WAE 를 구현하기 위하여 먼저 WAE 라는 abstract syntax 를 정의하자.
 
@@ -636,3 +636,140 @@ Parser 를 구현했으니 이제 Interpreter 를 구현하면 된다. 하지만
                                    (subst e idtf val)))]
         [id     (s)        (if (symbol=? s idtf) (num val) wae)]))
 ```
+
+## Implement Interpreter for WAE
+
+`subst` 를 기반으로 WAE 를 위한 Interpreter 를 다음과 같이 구현할 수 있다.
+
+```racket
+; interp: WAE -> number
+(define (interp wae)
+    (type-case WAE wae
+        [num (n) n]
+        [add (l r) (+ (interp l) (interp r))]
+        [sub (l r) (- (interp l) (interp r))]
+        [with (i v e) (interp (subst e i (interp v)))]
+        [id (s)        (error 'interp "free identifier")]))
+```
+
+이 WAE Interpreter 를 다음고 같이 사용할 수 있다.
+
+```racket
+(test (interp (with 'x (num 5) (add (id 'x) (id 'x)))) 10)
+```
+
+# Function
+
+이제 지금까지 만들어본 WAE 가 함수를 지원하도록 할 것이다. 따라서 우리의 프로그래밍 언어는 다음과 같이 발전해왔다.
+
+AE &rarr; WAE &rarr; F1WAE
+
+그러면 먼저 함수의 concrete syntax 와 abstract syntax 를 정의해보자.
+
+## Concrete Syntax for Function (BNF)
+
+먼저 간단한 함수 
+
+$$ \text{identity}(x) = x \\ \text{twice}(x) = x + x $$
+
+를 생각하자. twice 함수를 AE 로 표현하면 다음과 같다. 
+
+```racket
+(+ 10 10)
+(+ 17 17)
+```
+
+twice 함수를 WAE 로 표현하면 다음과 같다.
+
+```racket
+(with (x 10) (+ x x))
+(with (x 17) (+ x x))
+```
+
+이제 F1WAE 로 identity 함수와 twice 함수를 다음과 같은 concrete syntax 로 표현하기로 해보자.
+
+```racket
+(deffun (identity x) x)
+(deffun (twice x) (+ x x))
+```
+
+그러면 다음과 같이 이 함수를 사용할 수 있다. 
+
+```racket
+(identity 8)
+(twice 10)
+(twice 17)
+```
+
+이 concrete syntax 를 BNF 로 정의해보자.
+
+```
+<FunDef> ::= {deffun {<id> <id>} <F1WAE>}
+<F1WAE> ::= <num>
+            | {+ <F1WAE> <F1WAE>}
+            | {- <F1WAE> <F1WAE>}
+            | {with {<id> <F1WAE>} <F1WAE>}
+            | <id>
+            | {<id> <F1WAE>}
+```
+
+`<FunDef> ::= {deffun {<id> <id>} <F1WAE>}` 가 함수 정의를 위한 규칙이고, `| {<id> <F1WAE>}` 는 함수 호출을 위한 규칙이다. 
+
+## Abstarct Syntax for Function
+
+concrete syntax 가 Parser 에 의하여 변환될 abstract syntax 를 다음과 같이 정의할 수 있다.
+
+```racket
+(define-type FunDef
+    [fundef (fun-name symbol?)
+            (arg-name symbol?)
+            (body F1WAE?)])
+
+(define-type F1WAE
+    [num    (n number?)]
+    [add     (lhs F1WAE?) (rhs F1WAE?)]
+    [sub     (lhs F1WAE?) (rhs F1WAE?)]
+    [with    (name symbol?) (named-expr F1WAE?) (body F1WAE?)]
+    [id        (name symbol?)]
+    [app     (ftn symbol?)    (arg F1WAE?)])
+```
+
+함수 정의를 위하여 `FunDef` 를 추가했고, 함수 호출을 위하여 `[app     (ftn symbol?)    (arg F1WAE?)])` 가 추가되었다. 
+
+이를 통해 다음과 같이 함수 선언 및 호출을 할 수 있다.
+
+```racket
+(fundef    'identify 'x (id 'x))
+(app 'identity (num 8))
+
+(fundef 'twice 'x (add (id 'x) (id 'x)))
+(app 'twice (num 10))
+(app 'twice (num 17))
+(app 'twice (num 3))
+```
+
+## Implement Parser for F1WAE
+
+이제 concrete syntax 를 abstract syntax 로 변환할 F1WAE 의 Parser 를 구현할 차례이다.
+
+```racket
+; parse-fd: sexp -> FunDef
+(define (parse-fd sexp)
+    (match sexp
+        [(list 'deffun (list f x) b)    (fundef f x (parse b))]))
+
+; parse : sexp -> F1WAE
+(define (parse sexp)
+    (match sexp
+        [(? number?)            (num sexp)]
+        [(list '+ l r)            (add (parse l) (parse r))]
+        [(list '- l r)                (sub (parse l) (parse r))]
+        [(list 'with (list i v) e)    (with i (parse v) (parse e))]
+        [(? symbol?)            (id sexp)]
+        [(list f a)                (app f (parse a))]
+        [else                 (error 'parse "bad syntax: ~a" sexp)]))
+```
+
+함수 선언을 `fundef` 라는 abstract syntax(F1WAE) 로 변환할 `parse-fd` 를 정의했고, 함수 호출문을 abstract syntax(F1WAE) 로 변환할 `[(list f a) (app f (parse a))]` 가 추가되었다.
+
+## Implement Interpreter for F1WAE
