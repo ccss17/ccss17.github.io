@@ -826,3 +826,94 @@ concrete syntax 가 Parser 에 의하여 변환될 abstract syntax 를 다음과
 (subst (app 'fn (with 'y (num 10) (add  (id 'y) (id 'x)))) 'x 1)
 ; (app 'fn (with 'y (num 10) (add (id 'y) (num 1))))
 ```
+
+# Deferring Substitution
+
+지금까지의 Substitution 은 실제로 identifier 를 치환할 때 다음과 같이 $O(n ^{2})$ 의 시간이 걸린다. 
+
+```racket
+(interp (parse '{with {x 1}
+                        {with {y 2}
+                              {+ 100 {+ 99 {+ 98 ... {+ y x}...}))
+```
+
+⇒
+
+```racket
+(interp (parse '{with {y 2}
+                              {+ 100 {+ 99 {+ 98 ... {+ y 1} ...))
+```
+
+⇒
+
+```racket
+(interp (parse '{+ 100 {+ 99 {+ 98 … {+ 2 1} ...}))
+```
+
+## Improvement Example
+
+이것을 개선하기 위하여 다음과 같이 치환되어야 하는 identifier 를 캐싱해두고 한꺼번에 치환하는 방법을 생각할 수 있다.
+
+```racket
+(interp (parse '{with {x 1}             [ ]                
+                              {with {y 2}
+                                   {+ 100 {+ 99 {+ 98 … {+ y x}...}))
+```
+
+⇒
+
+```racket
+(interp (parse '{with {y 2}             [x=1]
+                              {+ 100 {+ 99 {+ 98 … {+ y x} ...}))
+```
+
+⇒
+
+```racket
+(interp (parse '{+ 100 {+ 99 {+ 98 ... {+ y x} ...} [y=2 x=1] ))
+```
+
+## Improvement Example 2
+
+다음 코드를 Deferring Substitution 을 해보자.
+
+```racket
+(interp (parse '{with {x 1}             [ ]                
+                              {+ {with {x 2} x}
+                                   x}}))
+```
+
+먼저 `x = 1` 을 캐싱한다. 이것으로 `{with {x 1}` 코드는 불필요해졌기에 삭제한다.
+
+⇒
+
+```racket
+(interp (parse '{+ {with {x 2} x}     [x=1]
+                               x}))
+```
+
+`x=1` 의 스코프에 있는 바깥 코드를 분리시킨다.
+
+⇒
+
+```racket
+(+       (interp (parse '{with {x 2} x}     [x=1] ))
+      (interp (parse 'x   [x=1])))
+```
+
+`x=2` 를 캐싱한다.
+
+⇒
+
+```racket
+(+ (interp (parse 'x  [x=2 x=1])) (interp (parse 'x [x=1])))
+```
+
+캐싱된 것의 왼쪽에 있는 것으로 치환을 진행한다.
+
+⇒ 
+
+```racket
+(+ 2 1)
+```
+
