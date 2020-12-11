@@ -5,13 +5,17 @@ site_author: ccsss
 
 nav:
   - Home: index.md
+  - 수학의 역사: ProgrammerBase/math.md
+  - 불완전성 정리: ProgrammerBase/godel.md
+  - 튜링의 증명: ProgrammerBase/turing.md
+  - 기술적 특이점: ProgrammerBase/future.md
+  - 정보이론: Philosophy/information.md
   - AI: 
     - DL from stratch 메모: AI/dl_from_scratch.md
     - DL from stratch 메모2: AI/dl_from_scratch2.md
     - DL from stratch 메모3: AI/dl_from_scratch3.md
     - DL from stratch 메모4: AI/dl_from_scratch4.md
     - 인공지능 메모3: AI/ai.md
-  - 정보이론: Philosophy/information.md
   - Computer: 
     - Makefile: Computer/makefile.md
     - Git: Computer/git.md
@@ -58,6 +62,7 @@ nav:
       - 다변수함수의 미분의 일반적 정의: Math/Calculus/cal7.md
       - 텐서해석학: Math/Calculus/cal8.md
     - 선형대수학: 
+      - 선형대수학 다시정리1: Math/LinearAlgebra/la_new.md
       - 선형방정식: Math/LinearAlgebra/la.md
       - 행렬대수: Math/LinearAlgebra/la2.md
       - 행렬식: Math/LinearAlgebra/la3.md
@@ -84,10 +89,6 @@ nav:
     - Tmux: ProgrammerBase/tmux.md
     - Vim: ProgrammerBase/vim.md
     - CLI: ProgrammerBase/cli.md
-    - 수학의 역사: ProgrammerBase/math.md
-    - 불완전성 정리: ProgrammerBase/godel.md
-    - 튜링의 증명: ProgrammerBase/turing.md
-    - 기술적 특이점: ProgrammerBase/future.md
   - 강의메모:
     - 딥러닝 응용: lecture/20-2/dl.md
     - 컴퓨터과학적 사고: lecture/20-2/cthink.md
@@ -110,24 +111,24 @@ nav:
       - 컴퓨터역사4(소프트웨어와 알고리즘): HAI/8.md
       - 컴퓨터역사5(초지능): HAI/9.md
     # - (소설) 화가의 일기:
-    #   - intro: diary/intro.md
-    #   - "`1년 7월 23일 용서란 무엇인가": diary/`1.7.23.md
-    #   - "`1년 7월 29일 제목 없음": diary/`1.7.29.md
-    #   - "`1년 8월 2일 내 마음이 죽은 것 같다": diary/`1.8.2.md
-    #   - "`1년 8월 13일-1 내 힘으로 살 수 없는 것": diary/`1.8.13-1.md
-    #   - "`1년 8월 13일-2 세상을 어떻게 바꿀 수 있을까?": diary/`1.8.13-2.md
-    #   - "`1년 8월 17일 소설 1": diary/`1.8.17.md
-    #   - "`1년 9월 1일 그들은, 그들은 그냥 죽은 것이다": diary/`1.9.1.md
-    #   - "`1년 9월 6일 아이에게": diary/`1.9.6.md
-    #   - "`1년 10월 11일 죽을 수 없다": diary/`1.10.11.md
-    #   - "`1년 10월 14일-1 푸르고 텅 빈 곳": diary/`1.10.14-1.mdj
-    #   - "`1년 10월 14일-2 외로움": diary/`1.10.14-2.md
-    #   - "`1년 10월 16일 열등감": diary/`1.10.16.md
-    #   - "`1년 10월 17일 무제": diary/`1.10.17.md
-    #   - "`1년 10월 23일 현실": diary/`1.10.23.md
-    #   - "`1년 10월 25일 내 일기를 돌아봤다": diary/`1.10.25.md
-    #   - "`1년 11월 10일 혼잣말": diary/`1.11.10.md
-    #   # - `1년 11월 19일 춥다: diary/`1.11.19.md
+    #   - intro: fairytail/intro.md
+    #   - "`1년 7월 23일 용서란 무엇인가": fairytail/`1.7.23.md
+    #   - "`1년 7월 29일 제목 없음": fairytail/`1.7.29.md
+    #   - "`1년 8월 2일 내 마음이 죽은 것 같다": fairytail/`1.8.2.md
+    #   - "`1년 8월 13일-1 내 힘으로 살 수 없는 것": fairytail/`1.8.13-1.md
+    #   - "`1년 8월 13일-2 세상을 어떻게 바꿀 수 있을까?": fairytail/`1.8.13-2.md
+    #   - "`1년 8월 17일 소설 1": fairytail/`1.8.17.md
+    #   - "`1년 9월 1일 그들은, 그들은 그냥 죽은 것이다": fairytail/`1.9.1.md
+    #   - "`1년 9월 6일 아이에게": fairytail/`1.9.6.md
+    #   - "`1년 10월 11일 죽을 수 없다": fairytail/`1.10.11.md
+    #   - "`1년 10월 14일-1 푸르고 텅 빈 곳": fairytail/`1.10.14-1.mdj
+    #   - "`1년 10월 14일-2 외로움": fairytail/`1.10.14-2.md
+    #   - "`1년 10월 16일 열등감": fairytail/`1.10.16.md
+    #   - "`1년 10월 17일 무제": fairytail/`1.10.17.md
+    #   - "`1년 10월 23일 현실": fairytail/`1.10.23.md
+    #   - "`1년 10월 25일 내 일기를 돌아봤다": fairytail/`1.10.25.md
+    #   - "`1년 11월 10일 혼잣말": fairytail/`1.11.10.md
+    #   # - `1년 11월 19일 춥다: fairytail/`1.11.19.md
 
 theme: 
   name: material
