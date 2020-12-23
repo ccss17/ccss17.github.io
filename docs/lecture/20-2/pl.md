@@ -16,7 +16,7 @@
 
 - Program &rarr; Compiler &rarr; Running on a computer &rarr; Results
 
-이 인터프리터를 다음과 같은 과정을 통하여 맹글어 볼 것이다.
+이 인터프리터를 다음과 같은 과정을 통하여 만들어 볼 것이다.
 
 1. Racket tutorials
 
@@ -917,3 +917,66 @@ concrete syntax 가 Parser 에 의하여 변환될 abstract syntax 를 다음과
 (+ 2 1)
 ```
 
+## Representing Defered Substitution
+
+지금까지의 인터프리터 
+
+```racket
+; interp : WAE -> number
+```
+
+를
+
+```racket
+; interp : WAE DefrdSub -> number
+```
+
+로 바꿀 것이다. 이것을 다음과 같이 표현할 수 있다.
+
+```racket
+(define-type DefrdSub
+    [mtSub]
+    [aSub      (name symbol?)
+                    (value number?)
+                    (saved DefrdSub?)])
+```
+
+`mtSub` 는 비어있는 캐시를 뜻하고, `aSub` 는 비어있지 않은 캐시를 뜻한다. `aSub` 는 identifier 와 substitution 의 값 으로 이루어진 페어와 다음 페어를 저장한다.
+
+사용 예시:
+
+```racket
+; example instance
+(aSub 'x 1 (aSub 'y 4 (aSub 'x 2 (mtSub))))
+```
+
+사용 예시:
+
+```racket
+(interp (parse '{with {x 1}
+                              {with {y 2}
+                                   {+ 100 {+ 99 {+ 98 … {+ y x} … }}})(mtSub))
+```
+
+⇒
+
+```racket
+(interp (parse '{with {y 2}
+                        {+ 100 {+ 99 {+ 98 … {+ y x} … }}})
+            (aSub 'x 1 (mtSub)))
+```
+
+⇒
+
+```racket
+(interp (parse '{+ 100 {+ 99 {+ 98 … {+ y x} … }}})
+            (aSub 'y 2 (aSub 'x 1 (mtSub))))
+```
+
+⇒ …
+
+⇒ 
+
+```racket
+(interp (parse 'y) (aSub 'y 2 (aSub 'x 1 (mtSub))))
+```
