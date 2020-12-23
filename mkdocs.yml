@@ -98,7 +98,7 @@ nav:
   - Algorithm:
     - 시간복잡도: Algorithm/timecomplexity.md
     - Leetcode: Algorithm/leetcode.md
-  - 잡다한 생각:
+  # - 잡다한 생각:
     # - 초지능:
     #   - 1. 기초: HAI/base.md
     #   - 2. 생각: HAI/think.md
