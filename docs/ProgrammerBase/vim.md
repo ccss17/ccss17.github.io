@@ -573,7 +573,7 @@ int main(int argc, char** argv)
 
     코딩을 하다보니 `#define` 문을 여러번 사용했는데 실수로 `#` 을 붙히는 걸 까먹었네요. 하지만 괜찮습니다.
     
-    다음과 같이 `0` 으로 문장 앞으로 이동하고 블록 드래그 <kbd>Shfit</kbd>+`v` 를 한 다음 `10j` 로 커서를 내립니다. 그리고 <kbd>Shfit</kbd>+`i` 로 다중입력을 하고 `#` 을 입력한 후 <kbd>Esc</kbd> 를 눌러보세요. 
+    다음과 같이 `0` 으로 문장 앞으로 이동하고 블록 드래그 <kbd>Ctrl</kbd>+`v` 를 한 다음 `10j` 로 커서를 내립니다. 그리고 <kbd>Shfit</kbd>+`i` 로 다중입력을 하고 `#` 을 입력한 후 <kbd>Esc</kbd> 를 눌러보세요. 
 
     ![render1589353343893](https://user-images.githubusercontent.com/16812446/81781545-3c8d8600-9533-11ea-8665-5cf48fe40c60.gif)
 
