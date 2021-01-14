@@ -86,3 +86,43 @@ rem_handles = num_rsp_handles - cont_offset;
 ![Peek 2019-02-10 21-25](https://user-images.githubusercontent.com/16812446/104617846-4ae9fe00-56cf-11eb-8852-579ac0340513.gif)
 
 POC 코드로는 https://github.com/ojasookert/CVE-2017-0785 를 사용하였다.
+
+# Android RCE Vulnerability in BNEP (CVE-2017-0781)
+
+## BNEP Protocol in Bluetooth
+
+https://jesux.es/exploiting/blueborne-android-6.0.1-english/
+
+BNEP 는 블루투스를 통하여 인터넷 프로토콜을 사용할 수 있게 해주는 프로토콜이다. 이 프로토콜을 통하여 블루투스 테더링 등을 통하여 블루투스를 기반으로한 인터넷 사용이 가능하다.
+
+![](https://t1.daumcdn.net/cfile/tistory/2479D64E56C1521704)
+
+위 그림은 Ethernet 패킷을 블루투스에서 다룰 수 있기 위하여 BNEP 패킷으로 포장한 것을 보여준다.
+
+## Vulnerability
+
+BNEP 프로토콜에서 발생한 Android RCE 취약점은 다음의 안드로이드 커널 소스코드의 `memcpy` 에서 발생했다.
+
+```c linenums="1"
+UINT8 * p = ( UINT8 *)( p_buf + 1 ) + p_buf -> offset ;
+...
+type = * p ++;
+extension_present = type >> 7 ;
+type &= 0x7f ;
+...
+switch ( type )
+{
+    ...
+    case BNEP_FRAME_CONTROL :
+        ctrl_type = * p ;
+        BLUEBORNE ON ANDROID — © 2019 ARMIS, INC. — 3
+        p = bnep_process_control_packet ( p_bcb , p , & rem_len , FALSE );
+        if (ctrl_type == BNEP_SETUP_CONNECTION_REQUEST_MSG &&
+            p_bcb -> con_state != BNEP_STATE_CONNECTED &&
+            extension_present && p && rem_len )
+    {
+        p_bcb -> p_pending_data = ( BT_HDR *) osi_malloc ( rem_len );
+        memcpy (( UINT8 *)( p_bcb -> p_pending_data + 1 ), p , rem_len );
+        ...
+    }
+```
