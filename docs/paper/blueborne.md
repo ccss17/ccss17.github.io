@@ -248,3 +248,58 @@ crash 는 위 코드의 `p_msg->event` 에서 발생했고, R4 레지스터가 `
 ### Gromming the Heap
 
 이제 우리가 해야 할 일은 `list_node_t` 를 힙 영역에 띄엄띄엄 할당하는 것이다. 그래야 `p_pending_data` 에서 오버플로우가 발생했을 때 `list_node_t` 를 overwrite 할 수 있다.
+
+그런데 지금까지의 연구를 통하여 단순히 조작된 패킷을 계속 전송하는 것만으로도 overwrite 가 이루어지고 exploit 이 된다는 것을 알 수 있다. 그러나 exploit 을 좀 더 빠르게 하기 위하여 exploit 을 위한 패킷을 전송하기 전에 힙 메모리 영역을 좀 더 다듬을 수 있다. 
+
+![image](https://user-images.githubusercontent.com/16812446/104645172-0f146000-56f2-11eb-8ee2-1fe0212846f1.png)
+
+우리가 원하는 이상적인 힙 메모리 형태는 위와 같다. 위와 같이 힙 메모리가 형성되어 있으면 `p_pending_data` 가 8 바이트 빈 공간에 할당이 될 것이고 오버플로우가 발생했을 때 `list_node_t` 를 페이로드가 존재하는 주소값으로 덮어씀으로써 `system` 함수를 실행시킬 수 있다. 
+
+![image](https://user-images.githubusercontent.com/16812446/104645670-b2657500-56f2-11eb-8c08-c3222e2a0bbb.png)
+
+그러나 조작된 패킷을 보내기 시작했을 때 힙 메모리 구조는 위와 같다. `list_node_t` 들이 힙 메모리의 전반부에 할당이 되고, 처리가 안된 `p_pending_data` 들은 `list_node_t` 이후에 할당이 된다. 이 `p_pending_data` 들이 발생시키는 오버플로우는 `list_node_t` 를 덮어쓰지 못한다.
+
+8 바이트 빈 공간은 `list_node_t` 가 처리된 후 할당이 해제되었을 때 발생한다.
+
+![image](https://user-images.githubusercontent.com/16812446/104645820-f193c600-56f2-11eb-9ca1-3f4a60667a6c.png)
+
+`list_node_t` 가 할당이 해제되어 8 바이트 빈 공간이 발생한 이후 최초로 전반부에 할당되는 `p_pending_data` 가 발생할 경우 이 오버플로우로 인하여 exploit 이 되지는 않는다. 왜냐하면 이후에 처리된 `list_node_t` 로 인하여 연속적으로 8 바이트 빈 공간이 발생하기 때문이다.
+
+그러므로 8 바이트 빈 공간을 무작위로 발생시켜야 한다. 그래야만 할당된 `p_pending_data` 바로 다음에 `list_node_t` 가 존재할 확률이 높아지기 때문이다. 
+
+이를 위하여 BNEP 프로토콜의 다른 컨트롤 메시지를 사용할 수 있다. "Command not understood" 라는 BNEP 프로토콜 패킷이 있는데, 이 BNEP 메시지를 패킷으로 전송하면 다음과 같은 코드에서 처리된다.
+
+![image](https://user-images.githubusercontent.com/16812446/104646210-7bdc2a00-56f3-11eb-9390-c2d5208609bb.png)
+
+이 코드를 실행하기 위하여 패킷을 다르게 조작하기만 하면 된다. 가령 다음과 같이 패킷을 만들 수 있다. 
+
+![image](https://user-images.githubusercontent.com/16812446/104646338-9f06d980-56f3-11eb-8a13-9d2af1b96b9f.png)
+
+이 패킷을 통하여 힙 영역에 또 다른 스레드가 할당과 해제를 관리하는 `xmit` 라는 객체를 생성시킬 수 있다. 이로써 `xmit` 객체가 할당 해제가 될 때 다음과 같이 힙 영역에 무작위의 8 바이트 빈공간을 마련할 수 있다.
+
+![image](https://user-images.githubusercontent.com/16812446/104646553-ee4d0a00-56f3-11eb-95d1-eebee47abe2b.png)
+
+### exploit 요약 
+
+지금까지의 exploit 과정을 요약해보면 다음과 같다.
+
+1. CVE-2017-0785 취약점을 통하여 메모리를 유출시켜 ASLR 을 우회할 준비를 한다.
+
+2. 블루투스 이름에 페이로드를 삽입하여 안드로이드 블루투스에 연결을 시도한다. 
+
+3. "Command not undertood" 로 인식될 BNEP 패킷을 소량 전송한다. 이로써 안드로이드에 8 바이트 빈공간이 마련된다. 
+
+4. 힙 오버플로우를 발생시키는 패킷을 발생하여 exploit 을 시도한다.
+
+Armis 는 실험적으로 이 과정으로 Android 7.1 을 exploit 하면 첫번째 시도만에 50% 의 확률로 exploit 이 성공하여 shell 을 탈취할 수 있음을 확인하였고, 첫번째 시도가 실패하더라도 수 초 또는 수 분 내에 exploit 이 성공하여 안드로이드에 remtoe shell 을 탈취할 수 있다는 것을 확인하였다. 
+
+### 해킹 시연 
+
+이 영상은 CVE-2017-0785 로 메모리를 유출시켜 ASLR 을 우회하고 CVE-2017-0781 로 안드로이드에 RCE 를 하는 영상이다.
+
+https://www.youtube.com/watch?v=Az-l90RCns8
+
+
+다음은 POC 코드이다.
+
+https://github.com/ArmisSecurity/blueborne
