@@ -10,6 +10,11 @@ nav:
   - 튜링의 증명: ProgrammerBase/turing.md
   - 기술적 특이점: ProgrammerBase/future.md
   - 정보이론: Philosophy/information.md
+  - Paper:
+    - Facenet (2015): paper/facenet.md
+    - Quadruplet (2017): paper/quadruplet.md
+    - BlueBorne: paper/blueborne.md
+    - Meltdown: paper/meltdown.md
   - AI: 
     - DL from stratch 메모: AI/dl_from_scratch.md
     - DL from stratch 메모2: AI/dl_from_scratch2.md
@@ -25,9 +30,6 @@ nav:
     - 철학 메모: Philosophy/philosophy.md
     - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
   - Tex 수학기호: tex.md
-  - Paper:
-    - Facenet (2015): paper/facenet.md
-    - Quadruplet (2017): paper/quadruplet.md
   - Math: 
     - 수학기초론: 
       - 논리학: Math/Foundations/logic.md
@@ -89,12 +91,12 @@ nav:
     - Tmux: ProgrammerBase/tmux.md
     - Vim: ProgrammerBase/vim.md
     - CLI: ProgrammerBase/cli.md
-  - 강의메모:
-    - 딥러닝 응용: lecture/20-2/dl.md
-    - 컴퓨터과학적 사고: lecture/20-2/cthink.md
-    - Programming Language: lecture/20-2/pl.md
-    - Korean History: lecture/20-2/koreahistory.md
-    - Calculus 2: lecture/20-2/cal2.md
+  # - 강의메모:
+  #   - 딥러닝 응용: lecture/20-2/dl.md
+  #   - 컴퓨터과학적 사고: lecture/20-2/cthink.md
+  #   - Programming Language: lecture/20-2/pl.md
+  #   - Korean History: lecture/20-2/koreahistory.md
+  #   - Calculus 2: lecture/20-2/cal2.md
   - Algorithm:
     - 시간복잡도: Algorithm/timecomplexity.md
     - Leetcode: Algorithm/leetcode.md
