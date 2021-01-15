@@ -115,7 +115,6 @@ switch ( type )
     ...
     case BNEP_FRAME_CONTROL :
         ctrl_type = * p ;
-        BLUEBORNE ON ANDROID — © 2019 ARMIS, INC. — 3
         p = bnep_process_control_packet ( p_bcb , p , & rem_len , FALSE );
         if (ctrl_type == BNEP_SETUP_CONNECTION_REQUEST_MSG &&
             p_bcb -> con_state != BNEP_STATE_CONNECTED &&
@@ -157,9 +156,9 @@ switch ( type )
 
 1. **Target Object Selcetion** 힙 메모리 영역에 할당되는, 그리고 첫 8 바이트를 함수 포인터로 갖는 객체를 찾는다. 
 
-2. 조작된 데이터를 예측가능한 메모리 주소에 덮어쓸 수 있는 코드를 찾는다. 
+2. **Loading the Payload into Memory** 조작된 데이터를 예측가능한 메모리 주소에 덮어쓸 수 있는 코드를 찾는다. 
 
-3. 힙 메모리 영역을 조작할 수 있는 방법을 찾는다. 우리의 경우 1 번 과정에서 찾은 버퍼 바로 전에 p_pending_data` 의 오버플로우를 통하여 함수 포인터를 덮어써야 한다. 
+3. **Gromming the Heap** 힙 메모리 영역을 조작할 수 있는 방법을 찾는다. 우리의 경우 1 번 과정에서 찾은 버퍼 바로 전에 `p_pending_data` 의 오버플로우를 통하여 함수 포인터를 덮어써야 한다. 
 
 4. ASLR 을 우회하는 방법을 찾는다. 우리의 경우 CVE-2017-0785 취약점으로 우회한다.
 
@@ -171,7 +170,7 @@ https://jesux.es/exploiting/blueborne-android-6.0.1-english/
 
 ![image](https://user-images.githubusercontent.com/16812446/104638810-facc6500-56e9-11eb-84dc-cb5a6b1b352c.png)
 
-위와 같이 패킷을 안드로이드 블루투스에 전송하면 오버플로우를 일으킬 수 있다. 이 패킷을 500 번에서 1000번 정도 보내면 데몬에 거의 확실하게 crash 가 발생한다. 이 과정은 1~2초 만에 이루어진다. 그러면 안드로이드 시스템에 tombstones 이라는 crash 로그 파일이 생성되는데 이 crash 로그를 살펴보면 다음과 같은 결과를 볼 수 있다. 
+위와 같이 패킷을 안드로이드 블루투스에 전송하면 오버플로우를 일으킬 수 있다. 이 패킷을 500 번에서 1000번 정도 보내면 데몬에 거의 확실하게 crash 가 발생한다. 이 과정은 1~2초 만에 이루어진다. 그러면 안드로이드  crash 로그를 살펴보면 다음과 같은 결과를 볼 수 있다. 
 
 ![image](https://user-images.githubusercontent.com/16812446/104639028-4848d200-56ea-11eb-8233-7918e3778dfc.png)
 
@@ -205,7 +204,7 @@ crash 는 위 코드의 `p_msg->event` 에서 발생했고, R4 레지스터가 `
 
 우리가 오버플로우 시키는 버퍼 `p_pending_data` 의 크기가 8 바이트이고 `list_node_t` 도 8 바이트이므로 이들은 같은 힙 메모리 영역에 연속적으로 할당된다.
 
-이로써 crash 가 발생한 이유가 설명된다. `btu_hci_msg_queue` 가 내부적으로 갖고 있던 `list_node_t` 가 `p_pending_data` 의 오버플로우로 인하여 0x41414141 로 overwritten 된 것이다. 이 데이터가 이후에 `p_msg` 로 형변환되고, `btu_hci_msg_process` 함수로 전달되는 것이다.
+이로써 crash 가 발생한 이유가 설명된다. `btu_hci_msg_queue` 가 내부적으로 갖고 있던 `list_node_t` 가 `p_pending_data` 의 오버플로우로 인하여 0x41414141 로 overwritten 된 것이다. 이 데이터가 이후에 `p_msg` 로 형변환되고, `btu_hci_msg_process` 함수로 전달되는데, 이때 `data` 필드의 주소값을 함수 포인터로 사용하여 호출하고 있기 때문이다. 이로써 exploit 이 가능하다는 것을 알 수 있다.
 
 그러므로 오버플로우를 통하여 exploit 을 하기 위하여 일단 `list_node_t` 를 힙 메모리에 많이 할당을 시키고, 그 사이에 `p_pending_data` 가 할당될 빈 공간을 마련해두어야 한다는 것을 알 수 있다. 이는 단순히 안드로이드 스마트폰의 블루투스에 똑같은 BNEP 패킷을 여러번 보내는 것으로 이루어질 수 있다. 왜냐하면 모든 패킷이 `btu_hci_msg_queue` 를 거쳐가는데 이 큐가 내부적으로 `list_node_t` 객체를 할당했었기 때문이다. 그리고 이 데이터는 이후에 `bnep_data_ind` 로 전달되어 `p_pending_data` 가 할당되고, 이때 오버플로우가 발생하게 된다.
 
