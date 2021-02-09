@@ -10,15 +10,23 @@ GBC 첫번째 과정 **Programmer Base** 의 5일차
 
 # Git 과 Github 못다한 이야기
 
-[Git 과 Github 못다한 이야기](../git.md#git-github) ~ [3. **pull request** 하기](../git.md#3-pull-request)
+[Git 과 Github 못다한 이야기](../git.md#git-github) ~ [Git Stash](../git.md#git-stash)
 
-# 좋은 정보 얻기
+git reset, git rebase
+
+coding convention
+
+building system
+
+# 좋은 정보 얻기 (옵션)
+
+이 부분은 옵션입니다. 관심 있으신 분들만 학습하면 됩니다.
 
 [좋은 정보 얻기](../information.md#_3) ~ [원작자 찾기 ](../information.md#_7)
 
 ---
 
-# Funny CLI 
+# Funny CLI (옵션)
 
 이 부분은 옵션입니다. 관심 있으신 분들만 학습하면 됩니다.
 

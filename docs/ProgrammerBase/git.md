@@ -973,4 +973,107 @@ $ g psom
 
 그러면 이제 정말 **Pull Request** 가 완료되었습니다. 이제 원작자가 여러분이 멋지게 고친 레포지토리를 비교하고 괜찮다고 판단하여 **pull** 을 하기만을 기다리면 됩니다. 
 
+# Git Stash
+
+> 참고/출처 : https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
+
+깃 브랜치를 여러개 만들어서 작업을 하고 있을 때, 현재 수정 및 추가 중인 파일들이 커밋되지 않은 상태에서 다른 브랜치로 이동해야 할 때가 있습니다. 그러나 커밋되지 않은 파일들이 있을 경우 브랜치를 이동할 수 없죠. 이럴 경우 `git stash` 를 사용합니다.
+
+먼저 다음 명령어로 `stash-test` 디렉토리를 만들어서 `git stash` 를 연습해볼 공간을 만들어주세요. 
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ mkdir stash-test
+$ cd stash-test
+$ g i
+$ touch main.c
+$ g a
+$ g cm "main"
+$ g b test
+$ touch readme.md
+$ g a
+$ g cm "readme"
+$ echo aaaa > readme.md
+$ touch func.c
+```
+
+위 명령어를 통해 `master` 브랜치와 `test` 브랜치가 생겼습니다. 그리고 `func.c` 파일이 추가된 상태이고 `readme.md` 는 스테이징된 상태입니다. 이 상태에서 `test` 브랜치로 이동해보세요.
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ g o test
+error: Your local changes to the following files would be overwritten by checkout:
+        readme.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+```
+
+그러면 에러가 발생하면서 브랜치 이동에 실패하게 됩니다. 이는 커밋되지 않은 파일들이 존재하기 때문이지요. 이런 상황에서 `git stash` 명령어는 커밋되지 않은 데이터들을 임시적으로 저장해줘서 브랜치 이동이 가능하게끔 해줍니다. 
+
+- ==**`git stash` : 커밋되지 않은 파일들을 임시 저장소에 저장한다.**==
+
+    - `git stash -u` 으로 untracked 파일들도 저장할 수 있다.
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ g stash -u
+$ g o test
+```
+
+위 명령어를 실행하면 커밋되지 않은 파일들이 임시 저장소에 저장되어서 `test` 브랜치로 이동할 수 있게 됩니다.
+
+- ==**`git stash list` : stashing 된 임시 저장소의 리스트를 출력한다.**==
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ g stash list
+```
+
+위 명령어를 실행하면 stashing 되어온 현재 임시 저장소의 상태를 볼 수 있습니다. 이제 다시 `master` 브랜치로 돌아가서 임시 저장소에 저장되어 있는 수정 사항들을 되돌려봅시다.
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ g o master
+```
+
+stashing 된 수정사항을 다시 가져오는 방법은 먼저 `git stash pop` 을 사용하는 것입니다.
+
+- ==**`git stash pop` : 임시 저장소의 스택 맨 위의 수정사항을 복원하고 삭제한다.**==
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ g stash pop
+```
+
+위 명령어를 실행하면 수정사항을 복원함과 동시에 stash list 에서 stash 를 삭제합니다. 또 다른 방법은 `git stash apply` 를 사용하는 것입니다.
+
+- ==**`git stash apply` : 임시 저장소의 스택 맨 위의 수정사항을 복원한다.**==
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ g stash apply
+```
+
+위 명령어를 실행하면 stash list 맨 위의 수정사항을 복원합니다. 단, stash 를 삭제하지는 않습니다. 그 stash 를 다른 브랜치에서도 적용할 수 있기 때문이죠.
+
+해당 stash 가 더 이상 필요 없다면 stash 를 삭제해야 합니다.
+
+- ==**`git stash drop` : 임시 저장소의 스택 맨 위의 수정사항을 삭제한다.**==
+
+그런데 stash 를 많이 했을 경우 특정한 stash 를 복원하거나 삭제해야 합니다. 이럴 경우 `git stash list` 명령어를 통하여 stash 리스트를 출력한 다음 다음과 같이 stash 번호를 파라미터로 전달하면 됩니다.
+
+```shell
+$ g stash apply stash@{4}   # 5번째 stash 를 적용한다.
+$ g stash drop stash@{2}    # 3번째 stash 를 삭제한다.
+```
+
+# Git Reset
+
 ## **<div align="center"> 🌜 ️여기까지 Day5     🌜️ </div>**
