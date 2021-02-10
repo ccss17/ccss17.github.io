@@ -1023,6 +1023,10 @@ $ g stash -u
 $ g o test
 ```
 
+!!! tip
+
+    `g ss -u` 로도 할 수 있어요.
+
 위 명령어를 실행하면 커밋되지 않은 파일들이 임시 저장소에 저장되어서 `test` 브랜치로 이동할 수 있게 됩니다.
 
 - ==**`git stash list` : stashing 된 임시 저장소의 리스트를 출력한다.**==
@@ -1032,6 +1036,10 @@ $ g o test
 ```shell
 $ g stash list
 ```
+
+!!! tip
+
+    `g sl` 로도 할 수 있어요.
 
 위 명령어를 실행하면 stashing 되어온 현재 임시 저장소의 상태를 볼 수 있습니다. 이제 다시 `master` 브랜치로 돌아가서 임시 저장소에 저장되어 있는 수정 사항들을 되돌려봅시다.
 
@@ -1051,6 +1059,10 @@ stashing 된 수정사항을 다시 가져오는 방법은 먼저 `git stash pop
 $ g stash pop
 ```
 
+!!! tip
+
+    `g sp` 로도 할 수 있어요.
+
 위 명령어를 실행하면 수정사항을 복원함과 동시에 stash list 에서 stash 를 삭제합니다. 또 다른 방법은 `git stash apply` 를 사용하는 것입니다.
 
 - ==**`git stash apply` : 임시 저장소의 스택 맨 위의 수정사항을 복원한다.**==
@@ -1061,11 +1073,19 @@ $ g stash pop
 $ g stash apply
 ```
 
+!!! tip
+
+    `g sa` 로도 할 수 있어요.
+
 위 명령어를 실행하면 stash list 맨 위의 수정사항을 복원합니다. 단, stash 를 삭제하지는 않습니다. 그 stash 를 다른 브랜치에서도 적용할 수 있기 때문이죠.
 
 해당 stash 가 더 이상 필요 없다면 stash 를 삭제해야 합니다.
 
 - ==**`git stash drop` : 임시 저장소의 스택 맨 위의 수정사항을 삭제한다.**==
+
+!!! tip
+
+    `g sd` 로도 할 수 있어요.
 
 그런데 stash 를 많이 했을 경우 특정한 stash 를 복원하거나 삭제해야 합니다. 이럴 경우 `git stash list` 명령어를 통하여 stash 리스트를 출력한 다음 다음과 같이 stash 번호를 파라미터로 전달하면 됩니다.
 

@@ -87,7 +87,7 @@ CLI,더 빨라진 git,`bash` ➜ `zsh`,더 빨라진 tmux,더 빨라진 vim,VSCo
 
 ## [Day 5](05-Day5/readme.md)
 
-Git 과 Github 못다한 이야기,좋은 정보 얻기,리눅스 교재,Funny CLI
+Git 과 Github 못다한 이야기(Git Branch, Github pull request, Git Stash, Git Reset), Build System(Makefile, Bazel), Coding Convention(C++, Python), 좋은 정보 얻기, 리눅스 교재, Funny CLI
 
 ## Content List
 
@@ -96,6 +96,10 @@ Git 과 Github 못다한 이야기,좋은 정보 얻기,리눅스 교재,Funny C
 - **[Docker](docker.md)**
 
 - **[Information](information.md)**
+
+- **[Build System](build.md)**
+
+- **[Coding Convention](codingconvention.md)**
 
 - **[Git](git.md)**
 

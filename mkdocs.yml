@@ -84,6 +84,8 @@ nav:
       - Day 4: ProgrammerBase/04-Day4/readme.md
       - Day 5: ProgrammerBase/05-Day5/readme.md
     - Docker: ProgrammerBase/docker.md
+    - Coding Convention: ProgrammerBase/codingconvention.md
+    - Build System: ProgrammerBase/build.md
     - Information: ProgrammerBase/information.md
     - Git: ProgrammerBase/git.md
     - VSCode: ProgrammerBase/vscode.md
