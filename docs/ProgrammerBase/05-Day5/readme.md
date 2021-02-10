@@ -14,7 +14,9 @@ GBC 첫번째 과정 **Programmer Base** 의 5일차
 
 git rebase, git show 추가되면 좋음
 
-coding convention
+# coding convention
+
+[Coding convention](../codingconvention.md#coding-convention) ~ [pylint](../codingconvention.md##pylint)
 
 # Build System
 
