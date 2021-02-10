@@ -12,11 +12,13 @@ GBC 첫번째 과정 **Programmer Base** 의 5일차
 
 [Git 과 Github 못다한 이야기](../git.md#git-github) ~ [Git Stash](../git.md#reset-with-a-path)
 
-git reset, git rebase
+git rebase, git show 추가되면 좋음
 
 coding convention
 
-building system
+# Build System
+
+[Build system](../build.md#build-system) ~ [Bazel Tutorial](../build.md#bazel-tutorial)
 
 # 좋은 정보 얻기 (옵션)
 
