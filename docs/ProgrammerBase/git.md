@@ -1076,4 +1076,110 @@ $ g stash drop stash@{2}    # 3번째 stash 를 삭제한다.
 
 # Git Reset
 
+> 참고/출처 : https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified
+
+`git reset` 명령어는 직관적으로 알 수 있듯이 레포지토리 복원에 관련된 기능을 제공합니다. 하지만 **"복원"** 은 **"재복원"** 을 지원하지 않는 몇 안되는 `git` 의 기능 중 하나입니다. 그러므로 `git reset` 을 사용할 때는 신중해야 하고, 심지어 대부분의 경우 `git branch` 명령어를 통하여 복원 없이 작업을 진행할 수 있습니다. 
+
+- ==**`git branch <BRANCH> <COMMIT>` : 특정 커밋으로부터 브랜치를 생성한다.**==
+
+    - 예시 
+
+        `git branch test-3 HEAD~3` : 최신 커밋으로부터 3번째 이전 커밋을 `test-3` 브랜치로 만든다. 
+
+이렇게 특정 커밋에서 에러가 시작되었음을 발견했다면, `git reset` 을 통하여 레포지토리를 복원하는 것이 아니라 `git branch` 를 통해 그 커밋에서부터 브랜치를 만들고 에러를 수정하는 작업을 한 뒤 `git rebase` 명령어를 통하여 커밋 히스토리를 최종적으로 수정하면 됩니다. 이 과정에서 `git reset` 명령어는 전혀 사용되지 않았죠.
+
+그러나 이렇게까지 주의깊게 관리해야할 레포지토리가 아닐 경우, 또는 확실하게 복원 기능을 원할 경우 `git reset` 을 사용하면 좋습니다. 
+
+## The Three Trees
+
+`git reset` 을 이해하기 전에 Git 이 세가지 트리로 레포지토리를 관리한다는 것을 이해해봅시다. 먼저 트리(Tree) 란 단순히 **파일들의 모임** 이라고 생각하면 편합니다.
+
+|Tree|Role|
+|:---:|:---:|
+|HEAD|Last Commit snapshot|
+|Index|Proposed next commit snapshot(Staging Area)|
+|Working Directory|Current Files|
+
+- ==**HEAD : HEAD 는 현재 브랜치의 마지막 커밋을 포인팅하는 스냅샷입니다.**==
+
+- ==**Index : 스테이징된 파일들입니다.**==
+
+- ==**Working Directory : `.git` 에 저장되는 Git 의 데이터베이스가 아니라 디렉토리에 있는 실제 파일들입니다.**==
+
+## The Workflow
+
+Git 이 레포지토리를 관리하는 과정은 다음과 같은 3가지 트리를 관리하는 것이었죠.
+
+![](https://git-scm.com/book/en/v2/images/reset-workflow.png)
+
+file.txt 라는 파일이 레포지토리에 있었다고 하겠습니다. 이 파일의 버전을 v1 이라고 하죠. 만약 이 파일을 수정하면 다음과 같이 먼저 Working Directory 의 file.txt 가 수정됩니다.
+
+![](https://git-scm.com/book/en/v2/images/reset-ex4.png)
+
+그리고 `git add` 로 파일을 스테이징하면 다음과 같이 Index 트리에 file.txt 의 v2 가 저장되죠.
+
+![](https://git-scm.com/book/en/v2/images/reset-ex5.png)
+
+마지막으로 `git commit` 을 하면 다음과 같이 새로운 커밋이 생성되면서 HEAD 가 새로운 커밋을 포인팅하게 됩니다.
+
+![](https://git-scm.com/book/en/v2/images/reset-ex6.png)
+
+이제 `file.txt` 를 한번 더 수정하고 커밋하여 버전 v3 가 되게 했다고 하겠습니다.
+
+![](https://git-scm.com/book/en/v2/images/reset-start.png)
+
+## The Role of Reset
+
+`git reset` 의 기능은 이 세 가지 트리(HEAD, Index, Working Directory)를 조작하는 것입니다.
+
+- ==**`git reset` : HEAD, Index, Working Directory 를 조작한다.**==
+
+## soft reset (manipulating HEAD)
+
+- ==**`git reset --soft <COMMIT>` : HEAD 를 `<COMMIT>` 으로 바꾼다.**==
+
+    - `git reset --soft HEAD~` : HEAD 를 바로 이전 커밋으로 바꾼다.
+
+    - `git reset --soft HEAD~3` : HEAD 를 HEAD 보다 3번째 이전에 있는 커밋으로 바꾼다.
+
+가령 `git reset --soft 9e5e6a4` 를 입력하면 다음과 같이 `master` 브랜치의 HEAD 가 9e5e6a4 를 가르키게 됩니다.
+
+![](https://git-scm.com/book/en/v2/images/reset-soft.png)
+
+그런데 이것은 언뜻 보기에 `git checkout` 과 비슷한 기능을 하는 것 같아 보일 수 있습니다. 왜냐하면 다른 브랜치로 이동하는 `git checkout` 명령어도 HEAD 를 바꾸는 것이기 때문이죠. 하지만 `git reset --soft` 는 `git checkout` 과 달리 단순히 HEAD 를 바꾸는 것이 아니라 **앞선 커밋을 무효화 시킨다** 는 개념으로 이해해야 합니다. 즉, `git reset --soft <COMMIT>` 에서 `<COMMIT>` 보다 앞에 있는 모든 커밋들이 무효화됨으로써 HEAD 가 바뀌는 것이죠.
+
+## mixed reset (manipulating HEAD, Index)
+
+soft reset 으로 HEAD 를 조작해보았지만 이것은 Staging Area, 즉 Index 는 바꾸지 못합니다. mixed reset 은 HEAD 를 바꿈과 동시에 Staging Area 도 바꾸어 줍니다.
+
+- ==**`git reset --mixed <COMMIT>` : HEAD, Index 를 `<COMMIT>` 에 맞게 바꾼다.**==
+
+    - mixed 가 reset 의 디폴트 옵션이다. 
+
+가령 `git reset --mixed 9e5e6a4` 를 입력하면 다음과 같이 HEAD 와 Index 가 9e5e6a4 커밋의 내용에 맞게 바뀝니다. 
+
+![](https://git-scm.com/book/en/v2/images/reset-mixed.png)
+
+## hard reset (manipulating HEAD, Index, Working Directory)
+
+hard reset 은 HEAD, Index 뿐만 아니라 Working Directory 도 해당 커밋에 맞게 바꾸어 줍니다.
+
+- ==**`git reset --hard <COMMIT>` : HEAD, Index, Working Directory 를 `<COMMIT>` 에 맞게 바꾼다.**==
+
+가령 `git reset --hard HEAD~` 를 입력하면 다음과 같이 HEAD 와 Index 가 9e5e6a4 커밋의 내용에 맞게 바뀝니다. 
+
+![](https://git-scm.com/book/en/v2/images/reset-hard.png)
+
+이 hard reset 은 Git 이 재복원을 지원하지 않는 몇 안되는 위험한 기능입니다. soft reset 과 mixed reset 은 `git reflog` 와 `git reset` 기능을 통하여 재복원을 할 수 있습니다. 그러나 hard reset 의 Working Directory 는 복원할 수 없습니다.
+
+## Reset With a Path
+
+전체 레포지토리를 복원하는 것이 아니라 특정 파일이나 몇몇 파일만 복원하고 싶을 경우가 있습니다. 이 경우 파일의 경로를 파라미터로 전달하면 해당 파일만 복원됩니다. 또한 **이 경우 HEAD 가 바뀌지 않습니다.** 
+
+`git reset file.txt` 이라는 명령을 입력했다고 하겠습니다. 이 명령어는 `git reset --mixed HEAD file.txt` 와 같습니다. 즉, `file.txt` 를 가장 마지막 커밋의 버전으로 mixed reset 하겠다는 것이죠.
+
+![](https://git-scm.com/book/en/v2/images/reset-path1.png)
+
+그러면 위와 같이 `file.txt` 가 Working Directory 를 제외하고 HEAD 에 맞게 복원됩니다. 
+
 ## **<div align="center"> 🌜 ️여기까지 Day5     🌜️ </div>**
