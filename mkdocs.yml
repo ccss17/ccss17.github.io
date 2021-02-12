@@ -102,18 +102,17 @@ nav:
   - Algorithm:
     - 시간복잡도: Algorithm/timecomplexity.md
     - Leetcode: Algorithm/leetcode.md
-  # - 잡다한 생각:
-    # - 초지능:
-    #   - 1. 기초: HAI/base.md
-    #   - 2. 생각: HAI/think.md
-    #   - 3. 실행: HAI/doit.md
-    #   - 수학의 역사: HAI/math_history.md
-    #   - 4. 수학역사 1차 추상화: HAI/abstract_math_history.md
-    #   - 컴퓨터역사(괴델의 불완전성 정리): HAI/5.md
-    #   - 컴퓨터역사2(튜링의 불완전성 증명): HAI/6.md
-    #   - 컴퓨터역사3(튜링기계의 구현): HAI/7.md
-    #   - 컴퓨터역사4(소프트웨어와 알고리즘): HAI/8.md
-    #   - 컴퓨터역사5(초지능): HAI/9.md
+  - 개인적인 생각:
+    - 1. 기초: HAI/base.md
+    - 2. 생각: HAI/think.md
+    - 3. 실행: HAI/doit.md
+    - 수학의 역사: HAI/math_history.md
+    - 4. 수학역사 1차 추상화: HAI/abstract_math_history.md
+    - 컴퓨터역사(괴델의 불완전성 정리): HAI/5.md
+    - 컴퓨터역사2(튜링의 불완전성 증명): HAI/6.md
+    - 컴퓨터역사3(튜링기계의 구현): HAI/7.md
+    - 컴퓨터역사4(소프트웨어와 알고리즘): HAI/8.md
+    - 컴퓨터역사5(초지능): HAI/9.md
     # - (소설) 화가의 일기:
     #   - intro: fairytail/intro.md
     #   - "`1년 7월 23일 용서란 무엇인가": fairytail/`1.7.23.md
