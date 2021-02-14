@@ -15,21 +15,6 @@ nav:
     - Quadruplet (2017): paper/quadruplet.md
     - BlueBorne: paper/blueborne.md
     - Meltdown: paper/meltdown.md
-  - AI: 
-    - DL from stratch 메모: AI/dl_from_scratch.md
-    - DL from stratch 메모2: AI/dl_from_scratch2.md
-    - DL from stratch 메모3: AI/dl_from_scratch3.md
-    - DL from stratch 메모4: AI/dl_from_scratch4.md
-    - 인공지능 메모3: AI/ai.md
-  - Computer: 
-    - Makefile: Computer/makefile.md
-    - Git: Computer/git.md
-    - Docker: Computer/docker.md
-    - CUDA: Computer/cuda.md
-  - Philosophy: 
-    - 철학 메모: Philosophy/philosophy.md
-    - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
-  - Tex 수학기호: tex.md
   - Math: 
     - 수학기초론: 
       - 논리학: Math/Foundations/logic.md
@@ -93,16 +78,10 @@ nav:
     - Tmux: ProgrammerBase/tmux.md
     - Vim: ProgrammerBase/vim.md
     - CLI: ProgrammerBase/cli.md
-  # - 강의메모:
-  #   - 딥러닝 응용: lecture/20-2/dl.md
-  #   - 컴퓨터과학적 사고: lecture/20-2/cthink.md
-  #   - Programming Language: lecture/20-2/pl.md
-  #   - Korean History: lecture/20-2/koreahistory.md
-  #   - Calculus 2: lecture/20-2/cal2.md
-  - Algorithm:
-    - 시간복잡도: Algorithm/timecomplexity.md
-    - Leetcode: Algorithm/leetcode.md
-  - 개인적인 생각:
+  - Philosophy: 
+    - 철학 메모: Philosophy/philosophy.md
+    - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
+  - 사소한 고민들:
     - 1. 기초: HAI/base.md
     - 2. 생각: HAI/think.md
     - 3. 실행: HAI/doit.md
@@ -113,6 +92,27 @@ nav:
     - 컴퓨터역사3(튜링기계의 구현): HAI/7.md
     - 컴퓨터역사4(소프트웨어와 알고리즘): HAI/8.md
     - 컴퓨터역사5(초지능): HAI/9.md
+  - AI: 
+    - DL from stratch 메모: AI/dl_from_scratch.md
+    - DL from stratch 메모2: AI/dl_from_scratch2.md
+    - DL from stratch 메모3: AI/dl_from_scratch3.md
+    - DL from stratch 메모4: AI/dl_from_scratch4.md
+    - 인공지능 메모3: AI/ai.md
+  - Computer: 
+    - Makefile: Computer/makefile.md
+    - Git: Computer/git.md
+    - Docker: Computer/docker.md
+    - CUDA: Computer/cuda.md
+  - Tex 수학기호: tex.md
+  # - 강의메모:
+  #   - 딥러닝 응용: lecture/20-2/dl.md
+  #   - 컴퓨터과학적 사고: lecture/20-2/cthink.md
+  #   - Programming Language: lecture/20-2/pl.md
+  #   - Korean History: lecture/20-2/koreahistory.md
+  #   - Calculus 2: lecture/20-2/cal2.md
+  - Algorithm:
+    - 시간복잡도: Algorithm/timecomplexity.md
+    - Leetcode: Algorithm/leetcode.md
     # - (소설) 화가의 일기:
     #   - intro: fairytail/intro.md
     #   - "`1년 7월 23일 용서란 무엇인가": fairytail/`1.7.23.md

@@ -8,10 +8,8 @@ scientist 는 원래 "자연 철학자" 라고 불리웠다.
 
 # Post-classical science
 
-# Early cultures
+# Impact of science in Europe
 
-# Early cultures
+# Modern science
 
-# Early cultures
-
-# Early cultures
+# Academic study
