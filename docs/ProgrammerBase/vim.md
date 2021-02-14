@@ -911,7 +911,7 @@ nmap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
     이렇게 개인적으로 개발환경 설정을 할 수 있는데 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> 로 명령 팔레트를 열어서 **setting json** 만 검색하면 다음과 같이 **Preferences: Open Settings (JSON)** 이 나옵니다. 이것을 실행하여 설정창이 뜨면 단순히 위의 설정을 복사해서 붙혀넣으면 됩니다. 
 
-<img src="https://user-images.githubusercontent.com/16812446/82322033-cbf1d800-9a10-11ea-9726-10ef40cff6c5.PNG" width="50%" height="auto">
+    <img src="https://user-images.githubusercontent.com/16812446/82322033-cbf1d800-9a10-11ea-9726-10ef40cff6c5.PNG" width="50%" height="auto">
 
 이런 설정을 통해 **VSCodeVim** 확장 단축키를 비활성화시켜서 원래 **VSCode** 단축키로 기능하게 한 단축키는 다음과 같습니다.
 
