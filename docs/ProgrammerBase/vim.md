@@ -867,4 +867,237 @@ nmap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
     그러고나서 <kbd>Esc</kbd> 를 연타하여 멀티 커서를 다 없애고 <kbd>Ctrl</kbd>+<kbd>s</kbd>, <kbd>Ctrl</kbd>+<kbd>q</kbd> 로 저장 후 종료합니다. 
 
+# VSCode Vim
+
+[**VSCodeVim**](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) 은 **VSCode** 에서 `vim` 키맵을 사용할 수 있도록 해줍니다. 그래서 기존의 CLI 에서의 `vim` 에서는 사용할 수 없었던 **VSCode** 의 모든 풍부한 디버깅 기능, 확장, **VCS** 등을 `vim` 과 함께 사용할 수 있게 됩니다. 어차피 나중에라도 **VSCodeVim** 을 비활성화 시킬 수 있기 때문에 한번 설치해보세요. 
+
+## 단축키
+
+### 주석 처리 
+
+그에 앞서 **VSCode** 에서의 주석 처리 단축키를 알아보겠습니다.
+
+| 기능 | `vim` 단축키 | **VSCode** 단축키 |
+|:---:|:---:|:---:|
+| 주석 | `\cc`  | `gcc`|
+
+**VSCodeVim** 확장이 적용된 **VSCode** 에서 주석처리는 단순히 `gcc` 를 누르면 됩니다. `5gcc` 를 누르면 `5` 줄이 주석처리되는 식입니다.
+
+### 단축키 설정
+
+**VSCodeVim** 확장의 키맵이 **VSCode** 의 강력한 기능을 덮어버리는 경우도 있었기 때문에 개인적으로 다음의 설정을 통해 **VSCodeVim** 확장의 일부 기능을 비활성화시켰습니다. `...` 에는 또 다른 확장들의 설정이 있는 것입니다. 
+
+```json
+{
+  ...
+  "editor.lineNumbers": "relative",
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-d>": false,
+      "<C-f>": false,
+      "<C-n>": false,
+      "<C-o>": false,
+      "<C-w>": false,
+      "<C-k>": false,
+  },
+  ...
+}
+```
+
+!!! tip
+
+    이렇게 개인적으로 개발환경 설정을 할 수 있는데 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> 로 명령 팔레트를 열어서 **setting json** 만 검색하면 다음과 같이 **Preferences: Open Settings (JSON)** 이 나옵니다. 이것을 실행하여 설정창이 뜨면 단순히 위의 설정을 복사해서 붙혀넣으면 됩니다. 
+
+<img src="https://user-images.githubusercontent.com/16812446/82322033-cbf1d800-9a10-11ea-9726-10ef40cff6c5.PNG" width="50%" height="auto">
+
+이런 설정을 통해 **VSCodeVim** 확장 단축키를 비활성화시켜서 원래 **VSCode** 단축키로 기능하게 한 단축키는 다음과 같습니다.
+
+| 단축키 | **VSCodeVim** 확장 | **VSCode** 원래 기능 | 
+|:---:|:---:|:---:|
+| <kbd>Ctrl</kbd>+<kbd>d</kbd> | 화면 내리기 | 멀티 커서 |
+| <kbd>Ctrl</kbd>+<kbd>n</kbd> | | 새 파일 만들기 |
+| <kbd>Ctrl</kbd>+<kbd>w</kbd> | | 파일 닫기 |
+| <kbd>Ctrl</kbd>+<kbd>f</kbd> | | 찾기 |
+| <kbd>Ctrl</kbd>+<kbd>o</kbd> | | 파일 열기 |
+| <kbd>Ctrl</kbd>+<kbd>a</kbd> | | 전체 선택 |
+
+<kbd>Ctrl</kbd>+<kbd>d</kbd> 는 기본 **VSCode** 에서 멀티 커서 기능인데 **VSCodeVim** 확장을 설치하면 <kbd>Ctrl</kbd>+<kbd>d</kbd> 를 덮어버려서 비활성화시켰고, <kbd>Ctrl</kbd>+<kbd>n</kbd> 은 기본 **VSCode** 에서 새 파일을 만드는 단축키인데 마찬가지로 **VSCodeVim** 확장이 이 단축키를 덮어버렸기 때문에 비활성화시켰습니다. 비슷한 이유로 <kbd>Ctrl</kbd>+<kbd>f</kbd>, <kbd>Ctrl</kbd>+<kbd>o</kbd>, <kbd>Ctrl</kbd>+<kbd>k</kbd>, <kbd>Ctrl</kbd>+<kbd>w</kbd> 등도 기본 **VSCode** 기능을 하도록 **VSCodeVim** 확장을 비활성화시켰습니다. 
+
+### 그외의 단축키 
+
+그 외의 단축키는 `vim` 과 동일합니다.
+
+여기에서는 이 설정이 적용된 **VSCode** 에서 `vim` 을 사용하여 어떻게 코드를 효율적으로 편집하는지 몇개의 예시를 보여드리겠습니다. **Python** 으로 예시를 들었지만 **모든 언어에 적용될 수 있는 상황들** 입니다.
+
+# VSCode Vim 예시
+
+여기에서는 **VSCode** 에서 **VSCodeVim** 확장으로 어떻게 코드 편집을 편하게 편하게 할 수 있는지 보여드리겠습니다. **VSCodeVim** 을 사용하고 싶지 않은 분들이라도 한번 따라해보면서 코드 편집을 얼마나 더 효율적으로 할 수 있는지 꼭 체험해보세요. 
+
+## Python - List to Dictionary
+
+**Python** 코딩을 하다가 `lst = ['all', 'all2', 'all3', 'all4', 'all5']` 라는 리스트를 만들게 되었습니다. 그런데 이 자료구조가 딕셔너리로 사용되면 더 효율적이라는 것을 깨닫고 이 리스트를 딕셔너리로 고치려는 상황입니다. 
+
+1. 먼저 다음과 같이 `,` 에 커서를 두고 `v` 로 드래그 모드로 들어가서 `'` 앞까지 드래그합니다. 
+
+2. 그리고 **VSCode** 의 멀티커서 기능인 <kbd>Ctrl</kbd>+<kbd>d</kbd> 를 꾹 누르고 있으면 매칭되는 모든 코드가 멀티 커서로 포커싱됩니다.
+
+3. 그리고 **삭제하고 편집하기** 기능인 `c` 를 눌러 <kbd>Enter</kbd> 를 칩니다.
+
+4. 그러면 멀티커서가 모든 `, ` 를 삭제하고 개행을 합니다. 그런다음 아직 개행되지 않은 `'all'` 을 개행시키고 <kbd>Ctrl</kbd>+<kbd>v</kbd> 로 블록 드래그 모드로 들어가서 `'all5'` 까지 커서를 내립니다.
+
+5. 그리고 <kbd>Shift</kbd>+<kbd>i</kbd> 를 눌러 입력모드로 들어간다음 키값을 써주고 <kbd>Esc</kbd> 를 눌러 명령모드로 돌아옵니다.
+
+6. 그리고 `r2`, `r3`, `r4`, `r5` 를 눌러 키값을 적절히 바꾸고 `5>>` 를 눌러 자동으로 탭 인덴트를 해줍니다. 
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/82322465-8550ad80-9a11-11ea-9682-a1f291bb6883.gif" width="70%" height="auto">
+</div>
+
+!!! note
+
+    `0` 으로 문장 앞으로 커서를 옮기는 것이나 `f'` 로 `'` 로 커서를 옮기는 것 등의 설명까지 하면 너무 장황해져서 생략했습니다. 
+
+## Python - copy & paste
+
+다음의 상황은 코딩을 하다보니 `sub_section('math')` 라는 함수를 여러번 사용해야 하는 상황입니다.
+
+1. `yy4p` 로 코드를 `4` 번 복사하여 붙혀넣습니다. 
+
+2. 그리고 `'` 에 커서를 두고 <kbd>Ctrl</kbd>+<kbd>v</kbd> 로 블록드래그를 한 다음 맨 아래 코드까지 내려서 <kbd>Shift</kbd>+<kbd>i</kbd> 로 입력모드에 들어가서 `1` 을 입력합니다. 
+
+3. `r2jr3jr4jr5` 를 입력해 파라미터를 수정합니다. 
+
+4. 그런데 코딩하다보니 `for` 문으로 고치는게 더 적절하다는 것을 깨닫고 `for` 문으로 대체하려 합니다. 그래서 `for` 문을 하나 만들고 `sub_sectoin('math')` 코드를 `yy` 로 복사하여 가져와서 `p` 로 붙혀넣습니다. 
+
+5. 그러고나서 `>>` 를 눌러 인덴트를 조정합니다. 
+
+6. 마지막으로 `7k` 를 눌러 `sub_section('math1')` 코드로 가서 `5dd` 를 눌러 필요없어진 코드를 삭제합니다.
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/82323380-ef1d8700-9a12-11ea-97b1-d364f38941c0.gif" width="70%" height="auto">
+</div>
+
+## Python - multi cursor
+
+다음의 상황은 코딩을 하면서 `sub_section` 이라는 함수를 만들었는데 갑자기 이 함수의 이름이 마음에 들지 않아서 바꾸고 싶은 상황입니다.
+
+1. `sub_section` 함수 이름이 사용된 아무 곳에서나 커서를 두고 <kbd>Ctrl</kbd>+<kbd>d</kbd> 를 꾹 눌러서 모든 `sub_section` 들이 멀티 커서로 포커싱되게 합니다.
+
+2. **삭제하고 편집하기** 기능인 `c` 를 누르고 고치고 싶은 이름을 입력하면 모든 곳이 자동으로 편집됩니다. 
+
+3. <kbd>Esc</kbd> 를 연타하여 생성된 멀티커서를 소멸해줍니다. 
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/82324002-dc578200-9a13-11ea-987d-bb5282dc8e22.gif" width="70%" height="auto">
+</div>
+
+하지만 단번에 매칭되는 모든 단어에 멀티커서를 두고 싶다면 다음과 같이 하면 됩니다.
+
+1. `subsection` 함수 이름에 커서를 둔다. 
+
+2. <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> 을 누른다.
+
+3. `b` 를 눌러 커서를 단어의 처음으로 옮기고 `cw` 로 삭제하고 편집하기를 눌러 함수 이름을 마음대로 변경한다. 
+
+4. <kbd>Esc</kbd> 를 눌러 빠져나온다. 
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/82770651-3a50f300-9e74-11ea-8ee7-ca2981cdc3a9.gif" width="70%" height="auto">
+</div>
+
+## Python - rename argument
+
+다음의 상황은 함수와 인자를 정의했는데, 인자의 이름을 바꾸어야 하는 상황입니다. 그런데 인자가 여러군데에서 사용되서 일일이 바꾸기 너무 귀찮을 것 같습니다. 하지만 괜찮습니다.
+
+1. `test` 위에 커서를 올려두고 <kbd>Ctrl</kbd>+<kbd>d</kbd> 를 `3` 번 눌러 `test` 를 멀티커서로 포커싱합니다. 
+
+    - **위에서 보았듯 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> 을 누르면 <kbd>Ctrl</kbd>+<kbd>d</kbd> 를 `3` 번 누를 필요 없이 단번에 멀티 커서가 생성됩니다.**
+
+2. `c` 를 눌러 모든 `test` 를 지우고 입력하고 싶은 문자열을 입력합니다.
+
+3. <kbd>Esc</kbd> 를 연타하여 멀티 커서를 소멸시킵니다. 
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/82324486-aff03580-9a14-11ea-991e-fac98ec93be5.gif" width="70%" height="auto">
+</div>
+
+## C 언어 - 변수 한 줄로 선언하기
+
+다음의 상황은 **C 언어** 를 코딩하고 있던 중 `pthread_t tid` 변수들이 여러 줄로 선언되어 있는 것을 한 줄로 만들고 싶은 상황입니다. 
+
+1. 가장 처음 선언된 `pthread_t tid1` 변수에 커서를 두고 `J` 를 눌러 두번째 문장과 이어붙힙니다.
+
+2. 그리고 `.` 을 연타하여 `pthread_t tid6` 이 선언된 문장까지 이어붙힙니다.
+
+3. 그리고 `0f;` 를 눌러서 `;` 에 커서를 두고 `v` 로 드래그 모드로 들어가서 `e` 를 눌러서 `; pthread_t` 를 드래그합니다. 
+
+4. <kbd>Ctrl</kbd>+<kbd>d</kbd> 를 연타하여 모든 `; pthread_t` 를 멀티 커서로 포커싱합니다. 
+
+5. `c` 를 누르고 `,` 를 입력하고 <kbd>Esc</kbd> 를 연타하여 멀티 커서를 소멸시킵니다.
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/82325194-c480fd80-9a15-11ea-8552-9c11c996c0ac.gif" width="70%" height="auto">
+</div>
+
+## Markdown - example 1
+
+다음의 상황은 **Markdown** 파일을 작성중 맨 밑에 있는 문장을 맨 위로 올리고 나머지 문장들을 그 문장의 하위 문장이 되게 하고 싶은 상황입니다. 
+
+1. `gg` 로 커서를 맨 위로 올리고 `13dd` 를 눌러 나머지 문장을 잘라냅니다. 
+
+2. `p` 를 눌러 문장을 붙혀넣고 `O` 로 간편하게 개행을 한 다음 <kbd>Esc</kbd> 로 다시 명령모드로 돌아옵니다. 
+
+3. `13>>` 를 눌러 간편하게 탭 인텐트를 조정합니다. 그런데 탭 사이즈가 `4` 로 설정되어 있어서 너무 많이 뛰어진 것 같아서 탭 사이즈를 `2` 로 줄이고 싶습니다. 
+
+4. <kbd>Ctrl</kbd>+<kbd>v</kbd> 를 눌러 블록 드래그 모드로 들어가고 `G` 를 눌러 커서를 맨 밑으로 내리고 `k` 를 한번 눌러 커서를 한 줄 위로 올립니다. 
+
+5. 그리고 `l` 를 누르고 `x` 를 눌러 공백 `2` 개를 삭제합니다.
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/82324933-681dde00-9a15-11ea-9899-b8edb9638b6c.gif" width="70%" height="auto">
+</div>
+
+## Markdown - example 2
+
+다음은 **Markdown** 파일을 작성하던 중 문장들을 아이템으로 분리하고 싶은 상황입니다. 
+
+1. `0f.` 를 눌러 첫번째 문장이 끝나는 지점에 커서를 둡니다. 
+
+2. `a` 를 누르고 <kbd>Enter</kbd> 를 쳐서 개행을 시킵니다.
+
+3. 이 작업을 다음 문장에도 반복합니다.
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/82325719-a798fa00-9a16-11ea-898d-760c5898a288.gif" width="70%" height="auto">
+</div>
+
+## Python - multicursor
+
+다음은 파이썬에서 딕셔너리를 만들었는데 값들의 이름이 마음에 안들어서 고치려는 상황입니다.
+
+하지만 지금까지의 설명을 통하여 어떻게 멀티 커서를 사용하여 한번에 편집할 수 있는지 다 이해하셨을 거라고 믿습니다.
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/82326020-268e3280-9a17-11ea-92cd-c5261c39047e.gif" width="70%" height="auto">
+</div>
+
+## Markdown - example 3
+
+다음은 **Markdown** 파일을 작성하다가 특정 문장을 헤더로 입력하고 싶은 상황입니다.
+
+1. `f(vf)` 로 `(` 부터 `)` 까지 드래그하고 `y` 를 눌러 복사합니다.
+
+2. 그리고 `gg` 로 맨 위로 커서를 옮기고 헤더를 입력한 다음 `p` 로 붙혀넣습니다. 
+
+3. 하지만 헤더의 `(`, `)` 을 없애고 싶습니다. 그래서 `f(xf)x` 로 삭제합니다. 
+
+4. 그런데 오타가 있다는 것을 발견하고 `toin` 을 드래그하고 멀티커서 <kbd>Ctrl</kbd>+<kbd>d</kbd> 로 그것과 똑같은 오타를 포커싱하여 `tion` 으로 고칩니다. 
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/82326130-563d3a80-9a17-11ea-857f-a6fb7d8db4c8.gif" width="70%" height="auto">
+</div>
+
 ## **<div align="center"> 🌜 ️여기까지 Day4     🌜️ </div>**
