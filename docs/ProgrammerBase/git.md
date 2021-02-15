@@ -1002,38 +1002,36 @@ $ git reset --hard master
 
 ##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
 
-```shell
-$ git show
-commit a83e59dc25ba5430f7f79376d7c0f432ce27a6fe (HEAD -> master, origin/master, origin/HEAD)
-Author: josef radinger <cheese@nosuchhost.net>
-Date:   Tue Aug 6 20:43:33 2019 +0200
+![image](https://user-images.githubusercontent.com/16812446/107993974-0bd90080-701f-11eb-8788-8c4a9669b481.png)
 
-    https instead of http
-
-diff --git a/lolcat.c b/lolcat.c
-index 0c4e921..c300845 100644
---- a/lolcat.c
-+++ b/lolcat.c
-@@ -47,9 +47,9 @@ static char helpstr[] = "\n"
-                         "  lolcat            Copy standard input to standard output.\n"
-                         "  fortune | lolcat  Display a rainbow cookie.\n"
-                         "\n"
--                        "Report lolcat bugs to <http://www.github.com/jaseg/lolcat/issues>\n"
--                        "lolcat home page: <http://www.github.com/jaseg/lolcat/>\n"
--                        "Original idea: <http://www.github.com/busyloop/lolcat/>\n";
-+                        "Report lolcat bugs to <https://github.com/jaseg/lolcat/issues>\n"
-+                        "lolcat home page: <https://github.com/jaseg/lolcat/>\n"
-+                        "Original idea: <https://github.com/busyloop/lolcat/>\n";
-
- #define ARRAY_SIZE(foo) (sizeof(foo) / sizeof(foo[0]))
- const unsigned char codes[] = { 39, 38, 44, 43, 49, 48, 84, 83, 119, 118, 154, 148, 184, 178, 214, 208, 209, 203, 204, 198, 199, 163, 164, 128, 129, 93, 99, 63, 69, 33 };
-(END)
-
-```
+그러면 위와 같이 `Bump version to v1.2` 라는 커밋 메시지와 아래에는 어떤 사항이 수정되었는지 보여줍니다. 왼쪽에 `-` 라고 표시된 코드가 삭제된 코드이고 `+` 라고 표시된 코드가 추가된 코드입니다.
 
 - ==**`git show <COMMIT>` : `<COMMIT>` 이 어떤 수정사항을 갖는지 보여준다.**==
 
     - `<COMMIT>` 이 전달되지 않으면 디폴트로 HEAD, 즉 마지막 커밋이 전달된다.
+
+    - `--color-words` 옵션을 전달하면 한줄에 빨간색으로 삭제된 코드와 초록색으로 추가된 코드를 보여준다.
+
+`--color-words` 옵션을 사용하면 한 줄의 형태로 빨간색으로 삭제된 코드와 초록색으로 추가된 코드를 보여줍니다.
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+![image](https://user-images.githubusercontent.com/16812446/107994123-5195c900-701f-11eb-8f1c-fec8a792b42e.png)
+
+Tmux 로 `git log --oneline` 을 한쪽 터미널에 출력하면서 `git show 0039b3f`, `git show a1dfac8` 처럼 커밋 해쉬를 전달하여 그 커밋이 어떤 수정사항을 갖는지 확인해보세요.
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ git show 0039b3f
+$ git show a1dfac8
+$ git show HEAD
+$ git show HEAD~1
+```
+
+!!! tip
+
+    HEAD 는 마지막 커밋을 뜻하고, HEAD~1 은 1단계 이전 커밋을 뜻합니다. HEAD~n 은 n단계 이전의 커밋을 뜻해요.
 
 ## git diff
 

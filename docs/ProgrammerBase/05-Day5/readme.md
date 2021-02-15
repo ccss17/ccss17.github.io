@@ -12,7 +12,7 @@ GBC 첫번째 과정 **Programmer Base** 의 5일차
 
 [Git 과 Github 못다한 이야기](../git.md#git-github) ~ [Git Reset](../git.md#reset-with-a-path)
 
-git rebase, git show 추가되면 좋음
+git rebase 추가되면 좋음
 
 # coding convention
 
