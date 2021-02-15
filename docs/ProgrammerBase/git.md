@@ -973,6 +973,140 @@ $ g psom
 
 그러면 이제 정말 **Pull Request** 가 완료되었습니다. 이제 원작자가 여러분이 멋지게 고친 레포지토리를 비교하고 괜찮다고 판단하여 **pull** 을 하기만을 기다리면 됩니다. 
 
+# Git Difference
+
+> 참고/출처 : https://www.atlassian.com/git/tutorials/saving-changes/git-diff
+
+> 참고/출처 : https://git-scm.com/docs/git-show
+
+Git 으로 프로젝트를 관리하다보면 커밋과 커밋의 차이점, 브랜치와 브랜치의 차이점, 파일과 파일의 차이점 등을 확인해야 하는 경우가 많습니다. 이럴 때 `git diff` 와 `git show` 를 사용합니다. `git diff` 와 `git show` 는 `git status` 와 `git log` 와 함께 Git 레포지토리의 현재 상태를 이해하는데에 유용하게 사용됩니다.
+
+`git diff` 와 `git show` 를 익히기 위하여 `lolcat` 레포지토리를 clone 해주세요.
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ g cl https://github.com/jaseg/lolcat
+$ cd lolcat
+```
+
+`lolcat` 이 기존에 있고 Vim 을 연습하느라 코드를 좀 수정했다면 레포지토리로 들어가서 다음 명령어를 입력해주세요.
+
+```shell
+$ git reset --hard master
+```
+
+## git show
+
+`git show` 는 특정 커밋이 어떤 수정사항을 갖는지 이해하기 위하여 사용됩니다. `lolcat` 레포지토리에서 `git show` 명령어를 입력해보세요.
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ git show
+commit a83e59dc25ba5430f7f79376d7c0f432ce27a6fe (HEAD -> master, origin/master, origin/HEAD)
+Author: josef radinger <cheese@nosuchhost.net>
+Date:   Tue Aug 6 20:43:33 2019 +0200
+
+    https instead of http
+
+diff --git a/lolcat.c b/lolcat.c
+index 0c4e921..c300845 100644
+--- a/lolcat.c
++++ b/lolcat.c
+@@ -47,9 +47,9 @@ static char helpstr[] = "\n"
+                         "  lolcat            Copy standard input to standard output.\n"
+                         "  fortune | lolcat  Display a rainbow cookie.\n"
+                         "\n"
+-                        "Report lolcat bugs to <http://www.github.com/jaseg/lolcat/issues>\n"
+-                        "lolcat home page: <http://www.github.com/jaseg/lolcat/>\n"
+-                        "Original idea: <http://www.github.com/busyloop/lolcat/>\n";
++                        "Report lolcat bugs to <https://github.com/jaseg/lolcat/issues>\n"
++                        "lolcat home page: <https://github.com/jaseg/lolcat/>\n"
++                        "Original idea: <https://github.com/busyloop/lolcat/>\n";
+
+ #define ARRAY_SIZE(foo) (sizeof(foo) / sizeof(foo[0]))
+ const unsigned char codes[] = { 39, 38, 44, 43, 49, 48, 84, 83, 119, 118, 154, 148, 184, 178, 214, 208, 209, 203, 204, 198, 199, 163, 164, 128, 129, 93, 99, 63, 69, 33 };
+(END)
+
+```
+
+- ==**`git show <COMMIT>` : `<COMMIT>` 이 어떤 수정사항을 갖는지 보여준다.**==
+
+    - `<COMMIT>` 이 전달되지 않으면 디폴트로 HEAD, 즉 마지막 커밋이 전달된다.
+
+## git diff
+
+이제 `git diff` 를 실습하기 위하여 `lolcat` 의 소스코드 `lolcat.c` 의 내용을 약간 수정하겠습니다. 다음 명령어를 통하여 `lolcat.c` 의 헤더 파일 선언 코드 부분의 `stdio.h` 를 `wow` 로 변경해주세요. 
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ sed -i "s/stdio.h/wow/g" lolcat.c
+```
+
+이제 `git diff` 명령어를 입력해보세요. 
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ git diff
+diff --git a/lolcat.c b/lolcat.c
+index c300845..0dfaae4 100644
+--- a/lolcat.c
++++ b/lolcat.c
+@@ -20,7 +20,7 @@
+ #include <errno.h>
+ #include <locale.h>
+ #include <stdint.h>
+-#include <stdio.h>
++#include <wow>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sys/time.h>
+```
+
+그러면 위와 같이 "-" 를 통하여 어떤 부분이 삭제되었고 "+" 를 통하여 어떤 부분이 추가되었는지 볼 수 있습니다. 이번에는 `git diff --color-words` 라고 입력해보세요.
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ git diff --color-words
+```
+
+![image](https://user-images.githubusercontent.com/16812446/107900632-e992a480-6f84-11eb-9a8d-fa2cec7cd24b.png)
+
+그러면 위와 같이 한줄로 삭제된 부분은 빨간색으로, 추가된 부분은 초록색으로 보여줍니다.
+
+- ==**`git diff <COMMIT> <FILE>` : 현재 수정사항과 `<COMMIT>` 과의 내용을 비교하여 보여준다.**==
+
+    - `<COMMIT>` 이 전달되지 않으면 디폴트로 HEAD, 즉 마지막 커밋이 전달된다.
+
+    - `<FILE>` 이 전달되지 않으면 디폴트로 모든 파일의 diff 를 출력한다.
+
+    - `git diff --color-words` 옵션으로 수정사항을 한줄로 한눈에 볼 수 있다.
+
+    - `git diff --cached` 옵션으로 현재 수정사항이 아니라 스테이징된 내용과 비교할 수 있다.
+
+`git diff` 는 현재 수정사항과 특정한 커밋을 비교하게 해줄 뿐만 아니라 커밋과 커밋과의 내용을 비교해주기도 합니다.
+
+- ==**`git diff <COMMIT1> <COMMIT2> <FILE>` : `<COMMIT1>` 과의 내용과 `<COMMIT2>` 와의 내용을 비교하여 보여준다.**==
+
+이 기능을 통하여 다음과 같이 커밋과 커밋간의 내용을 비교할 수 있습니다.
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ git diff abe2bac ceb4d66
+$ git diff HEAD HEAD^
+$ git diff HEAD HEAD~2
+$ git diff HEAD~3 HEAD~4
+```
+
+`git diff` 는 브랜치와 브랜치 간의 차이점을 비교하여 출력해주기도 합니다.
+
+- ==**`git diff <BRANCH1> <BRANCH2> <FILE>` : `<BRANCH1>` 과의 내용과 `<BRANCH2>` 와의 내용을 비교하여 보여준다.**==
+
 # Git Stash
 
 > 참고/출처 : https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning
