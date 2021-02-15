@@ -1,6 +1,6 @@
 # History of science
 
-> 참고/출처 : https://en.wikipedia.org/wiki/History_of_science
+> 참고/출처 : https://en.wikipedia.org/wiki/History_of_science#Age_of_Enlightenment
 
 과학은 과학자들의 관찰, 실험 등에 의하여 발견된 자연 세계에 대한 경험적, 이론적, 실용적 지식의 본체이다. 
 
@@ -30,16 +30,20 @@ pass
 
 이처럼 지식을 어렴풋이 알고 있는 것과 지식을 정립한 것에는 큰 차이가 있으며, 지식을 정립한 사람에게 큰 공헌이 있는 것이다. 
 
-# Post-classical science
-
-## Byzantine Empire
-
-## Islamic world
-
-## Western Europe
-
 # Impact of science in Europe
 
+종교 개혁 때 마틴 루터와 칼빈이 전통적인 기독교 교리에 의문을 제기하면서, 전통적인 과학적 사실들에 의문을 제기하는 분위기가 자연스럽게 형성되었다. 가령 코페르니쿠스가 지동설을 주장하게 된 것처럼.
+
+## Age of Enlightment
+
+17세기에는 과학 커뮤니티의 발생으로 인하여 과학 발전 속도가 폭발적으로 증가했고, 이에따라 현대 과학으로 입성하게 되는 계기가 되었다. 초기 과학 커뮤니티는 뉴턴, 데카르트, 라이프니츠, 파스칼의 연구에 기반을 두었다.
+
+## Romanticism in science
+
+다윈의 진화론으로 인하여 생물학에 대한 전혀 다른 접근이 열렸고, 물리학에서는 전자기학으로, 수학에서는 비유클리드 기하학으로, 화학에서는 유기 화학으로 전혀 다른 접근이 열렸다.
+
 # Modern science
+
+(위키피디아 너무 간략하게 설명되어 있어서 쓸 가치가 없네)
 
 # Academic study
