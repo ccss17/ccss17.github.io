@@ -2,8 +2,6 @@
 
 GBC 첫번째 과정 **Programmer Base** 의 5일차  
 
-> (gdb, pwddbg, gdb-gef)
-
 ---
 
 **다음 내용을 학습하세요.**
