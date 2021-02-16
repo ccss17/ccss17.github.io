@@ -133,7 +133,7 @@ https://awesomeopensource.com/
 
     ![Screen Capture_Navigator_20200523002033](https://user-images.githubusercontent.com/16812446/82683013-301fd080-9c8b-11ea-843f-8c91d5e6a5bc.png)
 
-    대충 [microsoft/DeepSpeed](https://github.com/microsoft/DeepSpeed) 라는 것을 쓰면 신경망 학습이 **5배**배 빨라지고 메모리 효율이 최대 **64배**배 높아진다는   심지어 **PyTorch** 와 호환된다고까지 하니까 만약 여러분이 **PyTorch** 로 진행되는 프로젝트에 참여중이라면 충분히 이런 정보를 공유할 수 있고, 여러분이 속한 공동체를 발전시킬 수 있습니다. 
+    대충 [microsoft/DeepSpeed](https://github.com/microsoft/DeepSpeed) 라는 것을 쓰면 신경망 학습이 **5배** 배 빨라지고 메모리 효율이 최대 **64배** 높아진다는 심지어 **PyTorch** 와 호환된다고까지 하니까 만약 여러분이 **PyTorch** 로 진행되는 프로젝트에 참여중이라면 충분히 이런 정보를 공유할 수 있고, 여러분이 속한 공동체를 발전시킬 수 있습니다. 
 
 마지막으로 한 가지 사례만 더 들고 **Hacker News** 는 마무리 하겠습니다. 
 

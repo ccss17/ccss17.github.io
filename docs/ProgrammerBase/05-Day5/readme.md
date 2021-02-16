@@ -18,11 +18,15 @@ git rebase 추가되면 좋음
 
 [Build system](../build.md#build-system) ~ [Bazel Tutorial](../build.md#bazel-tutorial)
 
-# 좋은 정보 얻기 (옵션)
+# 좋은 정보 얻기 1
+
+[좋은 정보 얻기](../information.md#_3) ~ [dev-community](../information.md#dev-community)
+
+# 좋은 정보 얻기 2 (옵션)
 
 이 부분은 옵션입니다. 관심 있으신 분들만 학습하면 됩니다.
 
-[좋은 정보 얻기](../information.md#_3) ~ [원작자 찾기 ](../information.md#_7)
+[좋은 정보 얻기](../information.md#_4) ~ [원작자 찾기](../information.md#_7)
 
 # Funny CLI (옵션)
 
