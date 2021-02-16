@@ -2,9 +2,7 @@
 
 GBC 첫번째 과정 **Programmer Base** 의 4일차  
 
----
-
-**다음 내용을 학습하세요.**
+<div align="center"> <h2> 다음 내용을 학습하세요.  </h1️> </div>
 
 # CLI
 

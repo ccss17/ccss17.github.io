@@ -73,17 +73,25 @@
 
     - 그리고 윈도우 제품키를 구매한 에듀케이션 제품키로 변경하면 됩니다.
 
-    **히즈넷에서 윈도우 업그레이드하는 방법이 좀 바뀌었음! 업데이트 필요**
-
 2. [이 링크](https://hub.docker.com/editions/community/docker-ce-desktop-windows) 에서 도커 설치파일을 다운로드 받아서 설치하세요.
 
-3. **Hyper-V enable &rarr; [BIOS] Intel - CPU Virtualization enable / AMD - SVM mode enable**
+3. 그리고 **Hyper-V** 를 enable 해야 합니다. 
+
+    1. [이곳](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) 의 메뉴얼을 따라하면서 Hyper-V 를 활성화 시켜주세요.
+    
+    2. 그래도 도커 실행이 정상적으로 안된다면 BIOS 에서 Intel CPU 사용자의 경우 CPU Virtualization 을 enable 시키고, AMD CPU 사용자의 경우 SVM mode 를 enable 시켜주세요.
+
+4. 그래도 안되시는 분들은 컴퓨터 메모리가 4GB 이하인 경우가 있었습니다. 
+
+    이 경우 가상머신(VMWare, VirtualBox) 으로 Ubuntu Linux 를 실행하거나, 
+
+    Microsoft Store 에서 Ubuntu 18.04 를 다운로드하여 WSL 로 Ubuntu Linux 를 실행하거나,
+    
+    이것조차 안되시는 분들은 GBC 매니저가 [이 블로그](https://swiftcoding.org/lemp-on-lightsail) 를 참조하여 Amazon Lightsail 에서 Ubuntu Linux 18.04 인스턴스를 만들어서 서버를 제공하여야 합니다.
 
 ### MacOS 도커 설치
 
 1. 맥은 단순히 [이 링크](https://hub.docker.com/editions/community/docker-ce-desktop-mac) 에서 도커 설치파일을 다운로드 받아 설치하면 됩니다.
-
-    - 제가 유일하게 맥에서만 직접 도커를 설치해본 경험이 없어서 무슨 장애물이 있을지 예상이 안되지만 일단 설치에 문제가 있으면 저에게 질문을 주세요.
 
 ## 도커 초간단 사용법 
 
