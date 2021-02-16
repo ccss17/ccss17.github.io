@@ -89,8 +89,8 @@ nav:
     - 4. 수학역사 1차 추상화: HAI/abstract_history_math.md
     - 과학의 역사: HAI/history_science.md
     - 기술의 역사: HAI/history_technology.md
-    - 컴퓨터의 역사: HAI/history_technology.md
-    - 컴퓨터역사(괴델의 불완전성 정리): HAI/5.md
+    - 컴퓨터의 역사(wikipedia 내용 정리): HAI/history_technology.md
+    - 컴퓨터역사1(괴델의 불완전성 정리): HAI/5.md
     - 컴퓨터역사2(튜링의 불완전성 증명): HAI/6.md
     - 컴퓨터역사3(튜링기계의 구현): HAI/7.md
     - 컴퓨터역사4(소프트웨어와 알고리즘): HAI/8.md
