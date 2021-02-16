@@ -85,10 +85,11 @@ nav:
     - 1. 기초: HAI/base.md
     - 2. 생각: HAI/think.md
     - 3. 실행: HAI/doit.md
-    - 수학의 역사: HAI/math_history.md
-    - 4. 수학역사 1차 추상화: HAI/abstract_math_history.md
-    - 과학의 역사: HAI/science_history.md
-    - 기술의 역사: HAI/technology_history.md
+    - 수학의 역사: HAI/history_math.md
+    - 4. 수학역사 1차 추상화: HAI/abstract_history_math.md
+    - 과학의 역사: HAI/history_science.md
+    - 기술의 역사: HAI/history_technology.md
+    - 컴퓨터의 역사: HAI/history_technology.md
     - 컴퓨터역사(괴델의 불완전성 정리): HAI/5.md
     - 컴퓨터역사2(튜링의 불완전성 증명): HAI/6.md
     - 컴퓨터역사3(튜링기계의 구현): HAI/7.md
