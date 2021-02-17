@@ -1,5 +1,5 @@
 
-컴퓨터 공학자에게 기반 지식이 되는 **수학의 역사**, **괴델의 불완전성 정리**, **튜링기계**, **기술적 특이점** 등과 프로그래머에게 유용한 툴(**Docker**, **Git**, **VSCode**, **vim**, **tmux**, **zsh** 등)과 그것의 생산성을 최대화할 수 있는 여러가지 팁들을 5일 동안 가이드해주는 레포지토리입니다.
+컴퓨터 공학자에게 기반 지식이 되는 **수학의 역사**, **괴델의 불완전성 정리**, **튜링기계**, **기술적 특이점** 등과 프로그래머에게 유용한 툴(**Docker**, **Git**, **VSCode**, **vim**, **tmux**, **zsh**, **make**, **bazel** 등)과 그것의 생산성을 최대화할 수 있는 여러가지 팁들을 5일 동안 가이드해주는 레포지토리입니다.
 
 ## inspired by
 
@@ -11,7 +11,7 @@
 
     Students spend hundreds of hours using these tools over the course of their education (and thousands over their career), so **it makes sense to make the experience as fluid and frictionless as possible.** Mastering these tools not only enables you to spend less time on figuring out how to bend your tools to your will, but it also lets you solve problems that would previously seem impossibly complex.
 
-이 레포지토리는 이러한 아이디어에서 착안하여 제가 주관적으로 선정한 프로그래밍을 할 때 필요한 여러가지 툴들과 **Linux** 에 관련된 내용과 컴퓨터에 대한 약간 철학적인 이야기에 대한 내용을 담고 있습니다.
+이 5일짜리 가이드는 이러한 아이디어에서 착안하여 제가 주관적으로 선정한 프로그래밍을 할 때 필요한 여러가지 툴들과 **Linux** 에 관련된 내용과 컴퓨터에 대한 약간 철학적인 이야기에 대한 내용을 담고 있습니다.
 
 ## Notice 
 
@@ -31,15 +31,7 @@
 
 - 본 내용들은 누구나 자유롭게 무료로 학습할 수 있습니다.
 
-- 본문에서 말하는 "교재" 란 
-
-    <div align="center">
-    
-    [<img src="https://bookthumb-phinf.pstatic.net/cover/077/993/07799304.jpg" width="20%" height="auto">](https://book.naver.com/bookdb/book_detail.nhn?bid=7799304)
-
-    </div>
-
-    를 뜻합니다. 
+- 본문에서 말하는 "교재" 란 http://www.linuxcommand.org/tlcl.php 에서 제공하는 PDF 파일을 뜻합니다. 
 
 ## 읽는 법
 
