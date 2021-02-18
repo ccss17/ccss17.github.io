@@ -14,6 +14,8 @@ git rebase 추가되면 좋음
 
 [Coding convention](../codingconvention.md#coding-convention) ~ [pylint](../codingconvention.md##pylint)
 
+(Unix Philosophy 추가되면 좋음)
+
 # Build System
 
 [Build system](../build.md#build-system) ~ [Bazel Tutorial](../build.md#bazel-tutorial)
