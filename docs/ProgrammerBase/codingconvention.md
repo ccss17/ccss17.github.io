@@ -53,6 +53,10 @@
 
 이 중에서 [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) 이 가장 대표적인 C++ 코딩 컨벤션입니다. C++ 프로젝트를 진행한다면, 이러한 코딩 컨벤션 중 하나를 택하든가 아니면 프로젝트를 진행하는 사람들과 컨벤션에 합의를 보고 통일된 컨벤션으로 코딩을 하면 됩니다. 
 
+한글번역도 있으니까 영어가 아직 어려우신 분들은 다음 링크를 참조해주세요. 하지만 원본을 영어로 읽으시는 것을 추천합니다. 
+
+- https://www.cppkorea.org/CppCoreGuidelines/
+
 ## clang-format
 
 하지만 매번 코딩 컨벤션을 신경쓰면서 코딩을 한다면 매우 피곤하겠죠. 이를 위하여 코딩 컨벤션을 자동으로 맞춰주는 툴이 있습니다. 그 툴 중 하나가 `clang-format` 입니다.
