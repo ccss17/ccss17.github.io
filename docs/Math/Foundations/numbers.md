@@ -45,7 +45,40 @@
 
     3. $\forall n \in \N, n ^{+} \neq 0$
 
-    4. 
+    4. 집합 $X \subset \N$ 이 다음 두 성질 
+
+        $$ 0 \in X, \qquad  n \in X \Rightarrow n ^{+}\in X $$
+
+        을 만족하면 $X = \N$ 이다. 
+
+    5. 만일 $m, n \in \N$ 에 대하여 $m ^{+} = n ^{+}$ 이면 $m=n$ 이다.
+
+- 세번째 성질은 $n ^{+} = n \cup \{n\} \neq \emptyset$ 이므로 당연하고, 네번째 성질은 수학적 귀납법을 통하여 증명된다. 다섯번째 성질의 증명은 다음과 같다. 
+
+    먼저 
+
+    $$ n \in n ^{+} = m ^{+} = m \cup \{m\} $$
+
+    이므로 $n \in m \lor n = m$ 이다. 마찬가지로 $m \in n \lor n = m$ 이다. 그러므로 $n \in m$ 과 $m \in n$ 에서 $n = m$ 을 이끌어내면 된다. 그렇다면
+
+    $$ n \in \N, x \in n \Rightarrow x \subset n $$
+
+    을 증명하면 $n \subset m \land m \subset n$ 이 성립하여 $n = m$ 을 이끌어낼 수 있다. 
+
+    일단 
+
+    $$ X = \{n \in \N : x \in n \Rightarrow x \subset n\} $$
+
+    으로 두자. 먼저 $0 \in X$ 이다. $x \in \emptyset \Rightarrow x \subset \emptyset$ 이기 때문이다.
+
+    이제 수학적 귀납법으로 증명을 하기 위하여 $n \in X$ 라고 하자. 만약 $x \in n ^{+} = n \cup \{n\}$ 이면 $x \in n \lor x = n$ 이다. 
+
+    $x = n$ 이면 $x = n \subset n ^{+}$ 이고, $x \in n$ 이면 집합 $X$ 의 조건에 의하여 $x \subset n$ 이므로 $x \subset n \subset n ^{+}$ 이다. 그러므로
+
+    $$ \therefore X = \N $$
+
+    이다. 
+
 
 
 
