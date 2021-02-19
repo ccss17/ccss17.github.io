@@ -190,7 +190,11 @@ bind-key C-a send-prefix
 
 그리고 다음 터미널로 이동하는 단축키 <kbd>Meta</kbd>+<kbd>o</kbd> 는 실제로 (<kbd>Ctrl</kbd>+<kbd>a</kbd>) + <kbd>o</kbd> 인데, 다음 터미널로 이동하는 작업은 매우 많이 일어나므로 키를 `3` 번이나 눌러야 하는 것은 너무 비효율적이어서 참을 수가 없습니다. 그래서 <kbd>Alt</kbd>+<kbd>o</kbd> 로 바꿉니다. 
 
-**유일하게 MacOS 에서만 테스트를 못해봤기 때문에 MacOS 에서는 <kbd>Alt</kbd> 키로 하는 것이 안될 수도 있습니다. 그럴경우 그냥 <kbd>Meta</kbd> + <kbd>o</kbd> 로 하면 될 겁니다. 맥에서 <kbd>Alt</kbd> 가 어떻게 입력되는지 아시는 분이 있다면 알려주세요. 아마도 맥에서 "option" 이라는 키가 <kbd>Alt</kbd> 의 기능을 하지 않을까 싶습니다.**
+!!! note
+
+    **유일하게 MacOS 에서만 테스트를 못해봤기 때문에 MacOS 에서는 <kbd>Alt</kbd> 키로 하는 것이 안될 수도 있습니다. 그럴경우 그냥 <kbd>Meta</kbd> + <kbd>o</kbd> 로 하면 될 겁니다. 맥에서 <kbd>Alt</kbd> 가 어떻게 입력되는지 아시는 분이 있다면 알려주세요.**
+
+    -> 맥에서 tmux 사용할 때 alt 를 Meta 키로 사용하는 방법은 터미널환경설정->프로파일->키보드 에서 option 을 메타키로 활성화하기 하면 option 키를 메타키로 사용할 수 있다고 합니다!
 
 - 실습 
 

@@ -1177,11 +1177,51 @@
 
     라고 한다.
 
+- 예시 
+
+    집합 $X$ 의 멱집합 $2 ^{X}$ 에 포함관계에 의한 순서를 부여하자. 즉, $A \subset B \to A \leq B$ 로 정의한다는 것이다. 이 관계가 순서관계를 만족한다는 것은 자명하다.
+
+    이때 집합족 $\mathcal{A} \subset 2 ^{X}$ 이 주어지면 
+
+    $$ \sup \mathcal{A} = \bigcup_{}^{}\mathcal{A}, \inf \mathcal{A} = \bigcap_{}^{}\mathcal{A} $$
+
+    이다. 이것을 증명해보자.
+
+    먼저 $\forall A \in \mathcal{A} \to A \leq \bigcup_{}^{}\mathcal{A}$ 이므로 $\bigcup_{}^{}\mathcal{A}$ 은 $\mathcal{A}$ 의 상계이다. 만약 $S \in 2 ^{X}$ 가 $\mathcal{A}$ 의 상계라면, 임의의 $A \in \mathcal{A}$ 에 대하여 $A \subset S$ 이므로 
+
+    $$ x \in \bigcup_{}^{}\mathcal{A} \Rightarrow \exists A \in \mathcal{A}, x \in A \Rightarrow x \in S $$
+
+    이다. 그러므로 $\bigcup_{}^{}\mathcal{A} \leq S$ 이고, 
+
+    $$ \sup \mathcal{A} = \bigcup_{}^{}\mathcal{A} $$
+
+    이다.
+
 !!! tldr ""
 
     아래로 유계(bounded from below) : 순서집합의 부분집합이 하계를 가지면 이 집합을 아래로 유계라고 한다.
 
+!!! tldr ""
 
+    볼록집합 : 좌표공간 $\R ^{\mathcal{v}}$ 의 부분집합 $C \subset \R ^{\mathcal{v}}$ 가 
+
+    $$ x,y \in C, 0 \leq t \leq 1 \to tx + (1-t)y \in C $$
+
+    를 만족하면 이를 볼록집합이라 한다.
+
+!!! tldr ""
+
+    볼록집합의 면 : 블록집합 $C$ 의 볼록부분집합 $F$ 가 
+
+    "$x,y \in C, tx + (1-t)y \in F$ 인 $t \in (0,1)$ 가 존재하면 $x,y \in F$ 이다."
+
+    를 만족하면 $F$ 를 $C$ 의 면이라고 한다.
+
+!!! tldr ""
+
+    볼록집합의 꼭지점 : 한 점으로 이루어진 볼록집합의 면을 꼭지점이라 하다.
+
+---
 
 !!! tldr ""
 
