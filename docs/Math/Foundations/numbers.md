@@ -61,7 +61,7 @@
 
     이므로 $n \in m \lor n = m$ 이다. 마찬가지로 $m \in n \lor n = m$ 이다. 그러므로 $n \in m$ 과 $m \in n$ 에서 $n = m$ 을 이끌어내면 된다. 그렇다면
 
-    $$ n \in \N, x \in n \Rightarrow x \subset n $$
+    $$ n \in \N, x \in n \Rightarrow x \subset n \tag{1}  $$
 
     을 증명하면 $n \subset m \land m \subset n$ 이 성립하여 $n = m$ 을 이끌어낼 수 있다. 
 
@@ -77,8 +77,4 @@
 
     $$ \therefore X = \N $$
 
-    이다. 
-
-
-
-
+    이다. 그렇다면 조건 $(1)$ 를 모든 자연수가 만족한다는 것이다. 그러므로 증명이 끝났다. 
