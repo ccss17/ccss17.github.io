@@ -78,3 +78,47 @@
     $$ \therefore X = \N $$
 
     이다. 그렇다면 조건 $(1)$ 를 모든 자연수가 만족한다는 것이다. 그러므로 증명이 끝났다. 
+
+- 정리 
+
+    집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 
+
+    $$ \gamma (0) = a \tag{1} $$
+
+    $$ \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n)) \tag{2}$$
+
+    을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다. 
+
+    - 이 정리는 집합 $X$ 의 원소 $\gamma (0), \gamma (1), \gamma (2), \dots$ 가 특정 점화식을 만족하도록 귀납적으로 정의할 수 있음을 말해준다. 이는 자연수의 연산을 정의하는데 중요한 역할을 한다. 
+
+    - 함수 $f$ 는 $\gamma$ 가 씌워진 자연수 $n$ 에 $^{+}$ 를 한 효과를 준다고 직관적으로 이해해보자. 즉, $f(\gamma (n)) = \gamma (n ^{+})$ 인 것이다.
+
+    - 증명 
+
+        $(1),(2)$ 를 동시에 만족하는 함수 $\gamma _1, \gamma _2$ 가 있다고 가정하고 
+
+        $$ X = \{n \in \N: \gamma _1(n) = \gamma _2(n)\} $$
+
+        라고 하자.
+
+        일단 $\gamma _1 (0) = a = \gamma _2(0)$ 이므로 $0 \in X$ 이다. 만약 $n \in X$ 이면 
+
+        $$ \gamma _1(n ^{+}) = f(\gamma _1(n)) = f(\gamma _2(n)) = \gamma _2(n ^{+}) $$
+
+        이므로 $n ^{+} \in X$ 이다. 그러므로 수학적 귀납법에 의하여 
+
+        $$ X = \N $$
+
+        이고 
+        
+        $$ \therefore \forall n \in \N, \gamma _1(n) = \gamma _2(n) $$
+
+        이다. 
+
+        이제 존재성을 보이기 위하여 다음 성질 
+
+        $$ (0, a) \in A, (n, x) \in A \Rightarrow (n ^{+}, f(x)) \in A $$
+
+        을 만족하는 $A \subset \N \times X$ 전체의 집합을 $\mathcal{A}$ 라 두면 $\N \times X \in \mathcal{A}$ 이므로(**이해 안되는 부분**) $\mathcal{A}$ 는 비어있지 않다. 
+
+        
