@@ -299,4 +299,33 @@ https://code.visualstudio.com/docs/editor/tasks#vscode
 
 이 링크를 참고해주시면 됩니다. 이 가이드의 목적은 이런 것들이 있다 정도만 가볍게 알려드리는 것이고, 여러분이 앞으로 각자의 분야에서 필요한 것들을 찾아서 이런 식으로 사용할 수 있겠다는 아이디어만 전달해드릴 수 있다면 저는 충분하다고 생각합니다.
 
+## rust with VSCode 
+
+> 참고/출처 : https://stackoverflow.com/a/46885479/15266921
+
+아쉬우니까 나중에 Rust 공부하시는 분들을 위하여 Rust 프로젝트를 빌드하고 실행하는 `tasks.json` 만 알려드리고 마무리하겠습니다. 
+
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cargo run",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "run",
+                // "--release",
+                // "--",
+                // "arg1"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+```
+
 ## **<div align="center"> 🌜 ️여기까지 Day5     🌜️ </div>**
