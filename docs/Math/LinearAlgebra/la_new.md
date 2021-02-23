@@ -203,3 +203,63 @@
     $$ \forall i \in \{1,2,\dots,n\} , a_i = b_i $$
 
     일 때 같다고 정의한다.
+
+- 체 $F$ 의 모든 $n$순서쌍 집합을 $F ^{n}$ 이라 표기한다. 
+
+    $$ u = (a_1, a_2, \dots, a_n) \in F ^{n}, v = (b_1, b_2, \dots, b_n) \in F ^{n}, c \in F $$
+
+    일 때 합과 스칼라 곱을 
+
+    $$ u+v=(a_1+b_1,  a_2+b_2, \dots, a_n + b_n), cu = (ca_1, \dots, ca_n) $$
+
+    로 정의하면 이 집합은 $F-$벡터공간이다.
+
+- 예시 
+
+    $\R ^{3}$  은 벡터공간이다. 합과 스칼라곱이 
+
+    $$ (3, -2, 0) + (-1, 1, 4) = (2, -1, 4) $$ 
+    
+    $$ -5(1, -2, 0) = (-5, 10, 0) $$
+
+    로 정의되기 때문이다. 마찬가지로 $\mathbb{C} ^{2}$ 도 벡터공간이다. 합과 스칼라곱이 
+
+    $$ (1+i, 2)+(2-3i,4i)=(3-2i, 2+4i) $$
+
+    $$ i(1+i,2) = (-1+i, 2i) $$
+
+    로 정의되기 때문이다. 
+
+!!! tldr ""
+
+    행벡터(row vector) : $F ^{n}$ 의 벡터 
+
+    $$ \begin{pmatrix} a_1& a_2& \dots& a_n \end{pmatrix} $$ 
+
+    이다. 
+
+!!! tldr ""
+
+    열벡터(column vector) : $F ^{n}$ 의 벡터 
+
+    $$ \begin{pmatrix} a_1\\a_2\\\vdots\\a_n \end{pmatrix} $$ 
+
+    이다. 
+
+- 보통 $F ^{n}$ 의 벡터를 행벡터보다 이러한 열벡터로 표현한다. 
+
+!!! tldr ""
+
+    행렬(matrix) : 체 $F$ 의 성분을 가져온 $m \times n$ 행렬은 $\forall a _{ij} \in F (i \leq i \leq m, 1 \leq j \leq n)$ 에 대한 수학적 대상
+
+    $$ \begin{pmatrix} a _{11}& a _{12}& \dots& a _{1n}\\ a _{21}& a _{22}& \dots& a _{2n}\\ \vdots& \vdots& \ddots& \vdots \\ a _{m1}& a _{m2}& \dots& a _{mn} \end{pmatrix} $$
+
+    이다.
+
+- 성분 $a _{i1}, a _{i2}, \dots, a _{in}$ 은 행렬의 $i$번째 행(row), 
+
+    성분 $a _{1j}, a _{2j}, \dots, a _{mj}$ 은 행렬의 $j$번째 열(column) 이라고 한다.
+
+- 행렬의 각 행을 $F ^{n}$ 의 벡터로, 각 열을 $F ^{m}$ 의 벡터로 나타낼 수 있다.
+
+- 모든 성분이 

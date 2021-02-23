@@ -463,7 +463,7 @@
 
 - 집합족 $\mathcal{A}$ 의 교집합은 $\mathcal{A}$ 의 모든 원소에 동시에 속하는 대상으로 이루어진 집합 
 
-    $$ x \in \bigcap_{}^{}\mathcal{A} \iff \forall A in \mathcal{A}, x \in A $$
+    $$ x \in \bigcap_{}^{}\mathcal{A} \iff \forall A \in \mathcal{A}, x \in A $$
 
     이다.
 
