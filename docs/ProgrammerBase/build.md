@@ -259,7 +259,7 @@ int main(){
 
 ```makefile
 all:
-	g++ test.cc
+	g++ main.cc
 clean:
 	rm a.out
 ```
