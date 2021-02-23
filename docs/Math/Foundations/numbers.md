@@ -33,7 +33,11 @@
 
     $$ \emptyset \in \mathcal{A}, A \in \mathcal{A} \Rightarrow A ^{+} \in \mathcal{A} $$
 
-    을 가지는 집합 $\mathcal{A}$ 들의 전체의 교집합을 $\N$ 이라고 할 때, $\N$ 의 원소를 자연수라고 한다.
+    을 가지는 집합 $\mathcal{A}$ 에 대하여 집합
+
+    $$ \N := \bigcap_{}^{}\mathcal{A} $$
+
+    의 원소를 자연수라고 한다.
 
 !!! tldr ""
 
