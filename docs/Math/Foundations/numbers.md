@@ -269,7 +269,7 @@
 
 - 자연수의 순서의 정의에 따라 다음과 같은 성질이 생긴다. 
 
-    1. $m \leq m$$ 이다.
+    1. $m \leq m$ 이다.
 
     2. $m \leq n \land n \leq m \Rightarrow m = n$ 이다. 
 
