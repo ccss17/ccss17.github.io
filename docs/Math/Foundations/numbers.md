@@ -258,3 +258,99 @@
     이므로 1) 의 첫째 명제가 증명된다.
 
     둘째 명제는 $m,n$ 을 고정하고 $k$ 에 대한 귀납법을 사용한다.
+
+!!! tldr ""
+
+    자연수의 순서 : 두 자연수 $m, n \in \N$ 에 대하여 
+
+    $$ m \leq n \iff m \in n \lor m = n $$
+
+    이다. 
+
+- 자연수의 순서의 정의에 따라 다음과 같은 성질이 생긴다. 
+
+    1. $m \leq m$$ 이다.
+
+    2. $m \leq n \land n \leq m \Rightarrow m = n$ 이다. 
+
+        - 증명 
+
+            $m \neq n$ 이면 $m \in n \land n \in m$ 인데 페아노 공리계의 5번째 성질을 증명할 때 사용했던 정리 
+
+            $$ n \in \N, x \in n \Rightarrow x \subset n $$
+
+            에 의하여 $m \subset n, n \subset m$ 이 성립하므로 
+
+            $$ m = n $$
+
+            이 된다. 이는 처음의 가정과 모순이다. 그러므로 $m = n$ 이다.
+    
+    3. $m \leq n, n \leq k \Rightarrow m \leq k$ 이다.
+
+        - 증명 
+
+            $m \leq n, n \leq k$ 는 다음 4가지 경우를 내포한다. 
+
+            $$ m \in n, n \in k, \qquad m \in n, n = k, \qquad m = n, n \in k, \qquad m = n, n = k $$
+
+            처음 3가지 경우에서 $m \in k$ 가 성립하고, 마지막 경우에는 $m = k$ 가 성립하므로 
+
+            $$ \therefore m \leq k $$
+
+            이다. ■ 
+
+            또한 이로써 $\leq$ 는 순서관계가 된다.
+            
+!!! tldr ""
+
+    $\forall n \in \N$ 에 대하여 
+
+    $$ n \not \in n $$
+
+    이다. 
+
+- 증명 
+
+    이것을 수학적 귀납법으로 보이기 위하여 
+
+    $$ n \not \in n \Rightarrow n ^{+} \not \in n ^{+} $$
+
+    임을 보이면 되는데, 이것의 대우 명제인 
+
+    $$ n ^{+} \in n ^{+} \Rightarrow n \in n $$
+
+    을 보여도 된다. 만약 $n ^{+} \in n ^{+} = n \cup \{n\}$ 이면 $n ^{+} \in n \lor n ^{+} = n$ 이다. 이때 $n ^{+}\in n$ 이면 페아노 공리계의 5번째 성질을 증명할 때 사용했던 정리 
+
+    $$ n \in \N, x \in n \Rightarrow x \subset n $$
+
+    에 의하여 $n \subset n ^{+} \subset n$ 이므로 $n ^{+} = n$ 이다. 그러므로 항상 
+
+    $$ n ^{+} = n $$
+
+    인데, 이것에서부터 $n \cup \{n\} = n ^{+} = n$ 을 도출할 수 있다. 그렇다면 $\{n\}$ 이 $n$ 의 부분집합이 되므로 
+
+    $$ \{n\} \subset n $$
+
+    이고 이에따라 $n \in n$ 이다. 그러므로 증명이 끝났다. ■ 
+
+- 또한 $\forall n \in \N, n \not \in n$ 이 증명되었으므로 
+
+    $$ m \leq n, m \neq n \iff m \in n $$
+
+    이 성립함을 알 수 있다. 
+
+!!! tldr ""
+
+    두 자연수 $m,n \in \N$ 이 $m \in n$ 일 때 
+
+    $$ m < n $$
+
+    이라고 쓴다.
+
+- 이 정리에 따라 
+
+    $$ m \leq n, m \neq n \iff m < n $$
+
+    이 성립한다.
+
+- 이 정리는 자연수 집합에 정의된 순서관계의 핵심적인 성질이다.
