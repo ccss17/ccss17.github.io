@@ -232,4 +232,100 @@ https://docs.bazel.build/versions/4.0.0/tutorial/cpp.html
 
 이곳에서 더 알아보시면 됩니다.
 
+# make with VSCode
+
+VSCode 를 사용하면서 make 로 C++ 을 빌드하는 방법을 간단하게 살펴보겠습니다. 새폴더를 만드시고 다음과 같이 파일을 세팅해주세요.
+
+##### **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ touch main.cc
+$ touch makefile
+$ mkdir .vscode
+$ touch .vscode/tasks.json
+```
+
+그리고 `main.cc` 라는 C++ 프로그램을 다음과 같이 간단하게 채워봅시다.
+
+```cpp
+#include <iostream>
+int main(){
+    std::cout << "make with vscode!" << std::endl;
+    return 0;
+}
+```
+
+`makefile` 은 다음과 같이 채워주세요.
+
+```makefile
+all:
+	g++ main.cc
+clean:
+	rm a.out
+```
+
+마지막으로 `.vscode/tasks.json` 을 다음과 같이 채워주세요.
+
+```json
+{
+    "tasks": [
+        {
+            "label": "make and run",
+            "type": "shell",
+            "command": "make clean ; make && ./a.out",
+            "args": [
+                // "arg1"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+```
+
+그리고 VSCode 에서 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> 를 누르면 빌드가 됩니다. 빌드 스크립트가 지금
+
+```shell
+$ make clean ; make && ./a.out
+```
+
+이렇게 되어있습니다. 먼저 기존에 컴파일된 바이너리를 `make clean` 으로 삭제하고 `make` 를 통해 빌드를 한 후 컴파일된 바이너리를 `./a.out` 으로 실행합니다. `make clean` 과 `make` 를 `;` 으로 이어준 이유는 컴파일된 바이너리가 없을 경우 `make clean` 명령이 실패하기 때문입니다. 만약 `&&` 로 이어졌다면 `&&` 는 이전 명령어가 성공적으로 종료되어야만 다음 명령어를 실행하기 때문에 빌드에 실패하게 되죠. 그렇기 때문에 `;` 으로 이어준 것입니다.
+
+Make 뿐만 아니라 Grunt, Gulp, MSBuild, Rake, Bazel, Flutter, Android, iOS 등등 다양한 Task 들을 VSCode 와 연동하여 사용할 수 있습니다. 더 자세한 내용은 
+
+https://code.visualstudio.com/docs/editor/tasks#vscode
+
+이 링크를 참고해주시면 됩니다. 이 가이드의 목적은 이런 것들이 있다 정도만 가볍게 알려드리는 것이고, 여러분이 앞으로 각자의 분야에서 필요한 것들을 찾아서 이런 식으로 사용할 수 있겠다는 아이디어만 전달해드릴 수 있다면 저는 충분하다고 생각합니다.
+
+## rust with VSCode 
+
+> 참고/출처 : https://stackoverflow.com/a/46885479/15266921
+
+아쉬우니까 나중에 Rust 공부하시는 분들을 위하여 Rust 프로젝트를 빌드하고 실행하는 `tasks.json` 만 알려드리고 마무리하겠습니다. 
+
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cargo run",
+            "type": "shell",
+            "command": "cargo",
+            "args": [
+                "run",
+                // "--release",
+                // "--",
+                // "arg1"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
+```
+
 ## **<div align="center"> 🌜 ️여기까지 Day5     🌜️ </div>**
