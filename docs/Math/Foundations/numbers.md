@@ -11,15 +11,15 @@
 
 - 예시 
 
-    $0 = \emptyset$ 으로 두고,
+    $0 = \varnothing$ 으로 두고,
 
     $$ 1 = 0 ^{+}, 2 = 1 ^{+}, 3 = 2 ^{+}, \dots $$
 
     으로 정의하면 
 
-    $$ 0 = \emptyset $$
+    $$ 0 = \varnothing $$
 
-    $$ 1 = 0 ^{+} = 0 \cup \{0\} = \emptyset \cup \{0\} = \{0\} $$
+    $$ 1 = 0 ^{+} = 0 \cup \{0\} = \varnothing \cup \{0\} = \{0\} $$
 
     $$ 2 = 1 ^{+} = 1 \cup \{1\} = \{0\} \cup \{1\} = \{0, 1\} $$
 
@@ -31,7 +31,7 @@
 
     자연수(natural number) : 다음 두 가지 성질 
 
-    $$ \emptyset \in \mathcal{A}, A \in \mathcal{A} \Rightarrow A ^{+} \in \mathcal{A} $$
+    $$ \varnothing \in \mathcal{A}, A \in \mathcal{A} \Rightarrow A ^{+} \in \mathcal{A} $$
 
     을 가지는 집합 $\mathcal{A}$ 에 대하여 집합
 
@@ -57,7 +57,7 @@
 
     5. 만일 $m, n \in \N$ 에 대하여 $m ^{+} = n ^{+}$ 이면 $m=n$ 이다.
 
-- 세번째 성질은 $n ^{+} = n \cup \{n\} \neq \emptyset$ 이므로 당연하고, 
+- 세번째 성질은 $n ^{+} = n \cup \{n\} \neq \varnothing$ 이므로 당연하고, 
 
     네번째 성질은 수학적 귀납법을 통하여 증명된다. 
     
@@ -75,7 +75,7 @@
 
     $$ X = \{n \in \N : x \in n \Rightarrow x \subset n\} $$
 
-    으로 두자. 먼저 $0 \in X$ 이다. $x \in \emptyset \Rightarrow x \subset \emptyset$ 이기 때문이다.
+    으로 두자. 먼저 $0 \in X$ 이다. $x \in \varnothing \Rightarrow x \subset \varnothing$ 이기 때문이다.
 
     이제 수학적 귀납법으로 증명을 하기 위하여 $n \in X$ 라고 하자. 만약 $x \in n ^{+} = n \cup \{n\}$ 이면 $x \in n \lor x = n$ 이다. 
 
@@ -361,7 +361,7 @@
 
     $$ X = \{n \in \N: m \in A \Rightarrow n \leq m\} $$
 
-    이라고 두자. 즉, $X$ 는 집합 $A$ 의 최소 원소보다 같거나 작은 자연수로 구성된다. 만약 $k \in X \cap A$ 이면 $k$ 는 $A$ 의 최소 원소가 되므로 $X \cap A = \emptyset$ 이어야 한다. 여기서 귀납법으로 $X = \N$ 임을 보이면 $A = \emptyset$ 이 되어 모순을 얻는다. 
+    이라고 두자. 즉, $X$ 는 집합 $A$ 의 최소 원소보다 같거나 작은 자연수로 구성된다. 만약 $k \in X \cap A$ 이면 $k$ 는 $A$ 의 최소 원소가 되므로 $X \cap A = \varnothing$ 이어야 한다. 여기서 귀납법으로 $X = \N$ 임을 보이면 $A = \varnothing$ 이 되어 모순을 얻는다. 
 
     그러므로 먼저 $0 \in X$ 라고 가정하자. 즉, $\forall m \in \N$ 에 대하여 $0 \leq m$ 임을 보이는 것이다. 이렇게 $\forall m \in \N$ 인 $m$ 에 대하여 보이게 되면 $A$ 가 어떤 원소로 구성되었든 간에 안정적으로 $0 \in X$ 를 보일 수 있다. 이것 또한 귀납법으로 보이게 된다. 먼저 $0 \leq 0$ 은 자명하다. 만약 $0 \leq m$ 이면 $m \in m ^{+}$ 에서 $m \leq m ^{+}$ 이므로 $0 \leq m ^{+}$ 을 얻는다. 그러므로 $0 \in X$ 이 증명되었다. 
 
@@ -381,7 +381,7 @@
 
     $$ Y = \{m \in \N : n < m \Rightarrow n ^{+} \leq m\} $$
 
-    라고 두자. 먼저 $n < 0$ 이면 $n \in \emptyset$ 인데 이런 원소 $n$ 이 없으므로 $0 \in Y$ 임은 자명하다.(이해 안되는 부분) 
+    라고 두자. 먼저 $n < 0$ 이면 $n \in \varnothing$ 인데 이런 원소 $n$ 이 없으므로 $0 \in Y$ 임은 자명하다.(이해 안되는 부분) 
 
     이제 $m \in Y$ 라고 가정하고, $m ^{+} \in Y$ 임을 보이자. $n < m ^{+}$ 이면, 
     
@@ -397,6 +397,54 @@
 
     이다. 그러므로 
 
+    $$ n < m ^{+} \Rightarrow n ^{+}\leq m ^{+} $$
+    
+    가 성립하고 $m ^{+} \in Y$ 임에 따라
+
     $$ Y = \N $$
 
-    이고 모든 증명이 끝났다. ■ 
+    이고 이로써 모든 증명이 끝났다. ■ 
+
+!!! tldr ""
+
+    $$\forall m,n \in \N, m \leq n \lor n \leq m$$
+
+- 증명 
+
+    $\forall  m,n \in \N$ 에 대하여 $\{m,n\} \subset \N$ 은 최소원소를 갖는데, 
+
+    $$ (\min \{m,n\} = m \Rightarrow m \leq n) \lor (\min \{m,n\} = n \Rightarrow n \leq m) $$
+
+    이다.
+
+!!! tldr ""
+
+    $$ n \in \N \Rightarrow n = 0 \lor (\exists m \in \N, n = m ^{+}) $$
+
+- 증명 (이 증명의 풀이는 책에 나와있는게 아니라 문제로 되어있어서 내가 만든 것. 그래서 오류가 있을 수 있음)
+
+    $n = 0$ 일 경우 $0 = 0$ 이다.
+
+    $n = x(x \neq 0)$ 일 경우 성립한다고 가정하고 $n = x ^{+}$ 일때도 성립함을 보이자. $n = x$ 이면 
+    
+    $$ \exists m \in \N, x = m ^{+} $$
+
+    이다. 그러면 
+
+    $$ \iff x ^{+} = [m ^{+}] ^{+} $$
+
+    인데 페아노 공리계 2) $n \in \N \Rightarrow n ^{+} \in \N$ 은 어떤 자연수 $n$ 에 $^{+}$ 를 취하면 그것도 자연수가 됨을 보증해준다. 그러므로 
+
+    $$ [m ^{+}] ^{+} \in \N $$
+
+    이다. 이로써 모든 증명이 끝났다. ■ 
+
+!!! tldr ""
+
+    위로 유계이며 비어있지 않은 자연수들의 집합 $A \subset \N$ 는 최대 원소를 가진다. 
+
+- 증명 
+
+    집합 $A$ 의 상계 전체의 집합을 $B$ 라 두면, 가정에 의하여 $B \neq \varnothing$ 이고 정리 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다." 에 의하여 최소 원소 $k \in \N$ 를 가진다. $\forall n \in A, n \leq k$ 이므로 이므로 $k \in A$ 임을 보이면 $k$ 가 $A$ 의 최대원소임이 증명된다.
+
+    $k \not \in A$ 라고 가정하자. 그러면 $n \in A$ 을 하나 잡았을 때 $k > n \geq 0$ 이고 따라서 정리 "$n \in \N \Rightarrow n = 0 \lor (\exists m \in \N, n = m ^{+})$" 에 의하여 $k = s ^{+}$ 이다. 
