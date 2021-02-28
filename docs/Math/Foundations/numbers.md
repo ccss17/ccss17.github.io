@@ -524,3 +524,41 @@
     $$ \forall m,k,t \in \N, m + k ^{+} = m + t ^{+} \Rightarrow k ^{+} = t ^{+} $$
 
     를 얻었으므로 유일성 증명이 끝났다. ■ 
+
+!!! tldr ""
+
+    $m,l \in \N, 0 < m \leq l$ 이면 
+
+    $$ l=mn+r, \qquad 0 \leq r<m $$
+
+    을 만족하는 자연수 $n,r \in \N$ 이 유일하게 존재한다. 
+
+- 존재성 증명 
+
+    집합 $P = \{k \in \N:mk \leq l\}$ 는 $1 \in P$ 이므로 $P \neq \varnothing$ 이다. 또한 $\forall k \in P, k \leq mk \leq l$ 이므로 $P$ 는 위로 유계이다. 그러므로 정리 "위로 유계이며 비어있지 않은 자연수들의 집합 $A \subset \N$ 는 최대 원소를 가진다." 에 의하여 $P$ 는 최대원소 $n$ 을 가진다. 그러면 
+
+    $$ mn \leq l < mn ^{+} = mn + m $$
+
+    이므로 (*이렇게 되는 것은 매우 간단한데, $l \geq mn ^{+}$ 가 성립한다면 $n$ 이 최대원소라는 가정에 모순이기 때문이다.*) 정리 "$m,n \in \N$ 에 대하여 $n \geq m$ 이면 $n=m+k$ 를 만족하는 자연수 $k \in \N$ 가 유일하게 존재한다." 에 의하여 
+
+    $$ l = mn + r $$
+
+    인 $r \in \N$ 이 유일하게 존재한다. 이때 $mn + r < mn + m \Rightarrow r < m$ 이다. ■ 
+
+    한편 이 증명으로 $n, r$ 의 존재성 증명이 끝남과 동시에 $r$ 의 유일성 증명도 끝났으므로 $n$ 의 유일성 증명만 하면 된다.
+
+- 유일성 증명 
+
+    $$ l = mk+s, \qquad 0 \leq s < m, \qquad k \neq n $$
+
+    이라고 하자. 그러면 $k < n \lor k > n$ 이다. $k < n$ 이면 $k ^{+} \leq n$ 이므로 $mk ^{+} \leq mn \leq l$ 인데
+    
+    $$ l = mk + s < mk + m = mk ^{+} $$
+
+    이므로 모순이다. 같은 방식으로 $k>n$ 도 모순을 도출한다. 그러므로 
+
+    $$ \therefore k = n $$
+
+    이다. ■ 
+
+# 정수의 정의
