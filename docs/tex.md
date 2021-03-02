@@ -67,8 +67,8 @@ https://katex.org/docs/support_table.html
 | \lor  | \land  |\implies |\Leftarrow |\top|
 | $\bot$| $\models$ | $\perp$ |$\bowtie$|$\dashv$|
 | \bot  | \models  |\perp |\bowtie |\dashv|
-| $\vdash$| $\not\vdash$ |$\emptyset$|
-| \vdash  | \not\vdash |\emptyset|
+| $\vdash$| $\not\vdash$ |$\varnothing$|
+| \vdash  | \not\vdash |\varnothing|
 
 ### Large Delimiters
 

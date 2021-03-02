@@ -681,13 +681,13 @@
 
 !!! tldr ""
 
-    동치관계 : 집합 $X$ 에 대한 관계 $R \subset X \times X$ 가 
+    동치관계(equivalence relation) : 집합 $X$ 에 대한 관계 $R \subset X \times X$ 가 
     
-    1. 임의의 $x \in X$ 에 대하여 $(x,x)\in R$ 이다.
+    1. 임의의 $x \in X$ 에 대하여 $(x,x)\in R$ 이다.(반사관계)
     
-    2. $(x, y) \in R$ 이면 $(y, x) \in R$ 이다. 
+    2. $(x, y) \in R$ 이면 $(y, x) \in R$ 이다.(대칭관계)
     
-    3. $(x, y) \in R$ 이고 $(y,z)\in R$ 이면 $(x, z) \in R$ 이다.
+    3. $(x, y) \in R$ 이고 $(y,z)\in R$ 이면 $(x, z) \in R$ 이다.(추이관계)
     
     를 만족하면 $R$ 을 동치관계라 한다.
 
@@ -715,13 +715,87 @@
 
 !!! tldr ""
 
-    동치류 : 집합 $X$ 에 동치관계 $\sim$ 가 주어져 있을 때 각 $x \in X$ 에 대하여
+    동치류(equivalence class) : 집합 $X$ 에 동치관계 $\sim$ 가 주어져 있을 때 각 $x \in X$ 에 대하여
     
     $$ [x] = \{z \in X: z \sim x\} $$
     
     를 $x$ 의 동치류라 한다.
 
+- 동치류에서 
 
+    $$ x \sim y \iff [x]=[y], \qquad x \not \sim y \iff [x] \cap [y] = \varnothing \tag{1} $$
+
+    이 성립한다. 
+
+    - 증명 
+    
+        또한 $x \sim y$ 이면 동치관계의 성질 2), 3) 에 의하여 
+
+        $$ z \in [x] \iff z \sim x \iff z \sim y \iff z \in [y] $$
+
+        이다. 역으로 $[x] = [y]$ 이면 $x \sim x$ 이므로 $x \in [x] = [y]$ 가 되고 따라서 $x \sim y$ 임을 알 수 있다. 
+
+        두번째 성질을 증명하기 위하여 
+
+        $$ [x] \cap [y] \neq \varnothing \Rightarrow [x] = [y] $$
+
+        임을 보이자. 만약 $z \in [x] \cap [y]$ 이면 $z \sim x, z \sim y$ 가 성립하고 따라서 $x \sim y$ 이다. $\forall x \in X, x \in [x]$ 이므로 성질 $(1)$ 에 의해 집합 $X$ 는 집합족
+
+        $$ \{[x]:x \in X\} $$
+
+        으로 분할됨을 알 수 있다. 
+    
+- 예시 
+
+    집합 $X = \{a,b,c\}$ 에 
+
+    $$ R = \{(a,a), (b,b), (c,c), (a,b), (b,a)\} $$
+
+    와 같은 동치 관계가 주어져있다고 하자. 그러면 
+
+    $$ [a]=\{a,b\}, \qquad [b]=\{a,b\}, \qquad [c]=\{c\} $$
+
+    이므로 집합 $X=\{a,b,c\}$ 가 집합족 
+
+    $$ \{\{a,b\}, \{c\}\} $$
+
+    으로 분할된다. 
+
+!!! tldr ""
+
+    분할 : 집합 $X$ 의 공집합이 아닌 부분집합족 $\{A_i : i \in I\}$ 가 
+
+    1. $X = \bigcup_{i \in I}^{}A_i$
+
+    2. $\forall i,j \in I, A_i = A_j \lor A_i \cap A_j = \varnothing$
+
+    를 만족하면 이를 $X$ 의 분할이라 한다. 
+
+- 집합 $X$ 에 동치관계 $\sim$ 가 주어지면 자동적으로 $X$ 의 분할이 생김을 알 수 있는데, 이러한 분할을 
+
+    $$ X/\sim $$
+
+    라고 표시한다. 
+
+- 만약 각 집합 $[x]$ 의 원소를 하나 택하여 $r_x$ 라 두고 $I = \{r_x:x \in X\}$ 라 두면 $\{[r]:r \in I\}$ 는 서로소인 집합족이 되고, 따라서 
+
+    $$ X = \bigcup_{}^{}\{[r]:r \in I\} $$
+
+    임을 알 수 있다. 
+
+- 예시 
+
+    정수 집합 $\mathbb{Z}$ 에 관계 
+
+    $$ m \sim n \iff \exists k \in \N, m - n = 2k $$
+
+    를 정의하면 동치관계가 됨을 바로 알 수 있다. 
+
+    이때 $m$ 이 짝수면 $[m] = \{2n \in \N : n \in \N\}$ 가 되고, $m$ 이 홀수면 $[m] = \{2n+1 \in \N : n \in \N\}$ 가 된다. 따라서 
+
+    $$ \mathbb{Z}/\sim\ = \{[x]:m \in \mathbb{Z}\} = \{[m]:m = 0, 1\} = \{[0], [1]\} $$
+
+    가 되고, $\mathbb{Z} = [0] \cup [1]$ 이 된다. 이때 $0, 1$ 대신 $8, 5$ 를 택하여 $\mathbb{Z} = [8] \cup [5]$ 라고 써도 마찬가지이다. 
 
 !!! tldr ""
 
