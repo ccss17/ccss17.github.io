@@ -635,167 +635,7 @@
 
     와 같은 헤세 도형으로도 표현할 수 있다.
 
-!!! tldr ""
-
-    관계(relation) : 두 집합 $X, Y$ 의 곱집합 $X \times Y$ 의 부분집합이다.
-
-- 더 엄밀한 정의는 다음과 같다. 
-
-    집합족 $\{X_i\}_{i \in I}$ 위의 관계는 곱집합의 부분집합
-
-    $$ R \subseteq \prod_{i \in I}^{}X_i $$
-
-    이다.
-
-    - 이를 통해 순서수 $\alpha$ 에 대하여 집합 $X$ 위의 $\alpha$항 관계를 거듭제곱 집합의 부분집합
-
-        $$ R \subseteq X ^{\times \alpha } $$
-
-        로 정의한다.
-
-    - 예시 
-
-        집합 $X$ 위의 영항관계(nullary relation) 은 $R \subseteq \{\cdot \}$ 즉, $R = \emptyset$ 이다.
-
-        집합 $X$ 위의 단항관계(unary relation) 은 $R \subseteq X$ 이다.
-
-        집합 $X$ 위의 이항관계(binary relation) 은 $R \subseteq X \times X$ 이다. 특히 이항관계에서 $(x, y) \in R$ 일 경우 $xRy$ 와 같이 자주 표기한다. 
-        
-        - 가령 집합 $\mathbb{N}$ 위의 이항관계 $+ \subseteq \mathbb{N} \times \mathbb{N}$ 에서 $(1, 2) \in \mathbb{N}$ 을 $1 + 2$ 로 표기한다.
-
-        집합 $X$ 위의 삼항관계(ternary relation) 은 $R \subseteq X \times X \times X$ 이다. 
-        
-        - 프로그래밍 언어에서 $x = (condition) ? a : b;$ 와 같이 사용되기도 한다.
-        
-        집합 $X$ 위의 $n$항관계(n-ary relation) 은 $R \subseteq X ^{\times n}$ 이다. 이때 $(x_1, \dots, x_n) \in R$ 을 $R(x_1, \dots, x_n)$ 와 같이 표기한다.
-
-- 집합 $X$ 에 관계가 주어졌다는 것은 곱집합 $X \times X$ 의 부분집합이 주어졌다는 것이다.
-    
-- 예시 
-
-    데카르트 공간 $\mathbb{R} ^{2}$, 즉 직교좌표계의 부분집합 
-
-    $$ x \in X, y \in Y, x ^{2}+y ^{2} = 4 $$
-
-    는 관계이다.
-
-!!! tldr ""
-
-    동치관계(equivalence relation) : 집합 $X$ 에 대한 관계 $R \subset X \times X$ 가 
-    
-    1. 임의의 $x \in X$ 에 대하여 $(x,x)\in R$ 이다.(반사관계)
-    
-    2. $(x, y) \in R$ 이면 $(y, x) \in R$ 이다.(대칭관계)
-    
-    3. $(x, y) \in R$ 이고 $(y,z)\in R$ 이면 $(x, z) \in R$ 이다.(추이관계)
-    
-    를 만족하면 $R$ 을 동치관계라 한다.
-
-- 동치관계 $R \subset X \times X$ 의 원소 $(x, y) \in R$ 을 
-
-    $$ x \sim y $$
-
-    라고 쓴다.
-
-    - 예시 
-
-        동치관계의 조건을 다시 열거하면 다음과 같이 된다.
-        
-        $$ x \in X \to x \sim x $$
-
-        $$ x \sim y \to y \sim x $$
-
-        $$ x \sim y, y \sim z \to x \sim z $$
-
-- 예시 
-
-    "같다" 는 동치관계의 예시이다.
-
-    "서로 평행이다", "서로 닮음이다" 도 동치관계의 예시이다.
-
-!!! tldr ""
-
-    동치류(equivalence class) : 집합 $X$ 에 동치관계 $\sim$ 가 주어져 있을 때 각 $x \in X$ 에 대하여
-    
-    $$ [x] = \{z \in X: z \sim x\} $$
-    
-    를 $x$ 의 동치류라 한다.
-
-- 동치류에서 
-
-    $$ x \sim y \iff [x]=[y], \qquad x \not \sim y \iff [x] \cap [y] = \varnothing \tag{1} $$
-
-    이 성립한다. 
-
-    - 증명 
-    
-        또한 $x \sim y$ 이면 동치관계의 성질 2), 3) 에 의하여 
-
-        $$ z \in [x] \iff z \sim x \iff z \sim y \iff z \in [y] $$
-
-        이다. 역으로 $[x] = [y]$ 이면 $x \sim x$ 이므로 $x \in [x] = [y]$ 가 되고 따라서 $x \sim y$ 임을 알 수 있다. 
-
-        두번째 성질을 증명하기 위하여 
-
-        $$ [x] \cap [y] \neq \varnothing \Rightarrow [x] = [y] $$
-
-        임을 보이자. 만약 $z \in [x] \cap [y]$ 이면 $z \sim x, z \sim y$ 가 성립하고 따라서 $x \sim y$ 이다. $\forall x \in X, x \in [x]$ 이므로 성질 $(1)$ 에 의해 집합 $X$ 는 집합족
-
-        $$ \{[x]:x \in X\} $$
-
-        으로 분할됨을 알 수 있다. 
-    
-- 예시 
-
-    집합 $X = \{a,b,c\}$ 에 
-
-    $$ R = \{(a,a), (b,b), (c,c), (a,b), (b,a)\} $$
-
-    와 같은 동치 관계가 주어져있다고 하자. 그러면 
-
-    $$ [a]=\{a,b\}, \qquad [b]=\{a,b\}, \qquad [c]=\{c\} $$
-
-    이므로 집합 $X=\{a,b,c\}$ 가 집합족 
-
-    $$ \{\{a,b\}, \{c\}\} $$
-
-    으로 분할된다. 
-
-!!! tldr ""
-
-    분할 : 집합 $X$ 의 공집합이 아닌 부분집합족 $\{A_i : i \in I\}$ 가 
-
-    1. $X = \bigcup_{i \in I}^{}A_i$
-
-    2. $\forall i,j \in I, A_i = A_j \lor A_i \cap A_j = \varnothing$
-
-    를 만족하면 이를 $X$ 의 분할이라 한다. 
-
-- 집합 $X$ 에 동치관계 $\sim$ 가 주어지면 자동적으로 $X$ 의 분할이 생김을 알 수 있는데, 이러한 분할을 
-
-    $$ X/\sim $$
-
-    라고 표시한다. 
-
-- 만약 각 집합 $[x]$ 의 원소를 하나 택하여 $r_x$ 라 두고 $I = \{r_x:x \in X\}$ 라 두면 $\{[r]:r \in I\}$ 는 서로소인 집합족이 되고, 따라서 
-
-    $$ X = \bigcup_{}^{}\{[r]:r \in I\} $$
-
-    임을 알 수 있다. 
-
-- 예시 
-
-    정수 집합 $\mathbb{Z}$ 에 관계 
-
-    $$ m \sim n \iff \exists k \in \N, m - n = 2k $$
-
-    를 정의하면 동치관계가 됨을 바로 알 수 있다. 
-
-    이때 $m$ 이 짝수면 $[m] = \{2n \in \N : n \in \N\}$ 가 되고, $m$ 이 홀수면 $[m] = \{2n+1 \in \N : n \in \N\}$ 가 된다. 따라서 
-
-    $$ \mathbb{Z}/\sim\ = \{[x]:m \in \mathbb{Z}\} = \{[m]:m = 0, 1\} = \{[0], [1]\} $$
-
-    가 되고, $\mathbb{Z} = [0] \cup [1]$ 이 된다. 이때 $0, 1$ 대신 $8, 5$ 를 택하여 $\mathbb{Z} = [8] \cup [5]$ 라고 써도 마찬가지이다. 
+# 함수
 
 !!! tldr ""
 
@@ -889,7 +729,29 @@
     
     이다.
 
+!!! tldr ""
 
+    두 함수 $f: X \to Y$ 와 $g: X \to Y$ 에 대하여 
+
+    $$ f = g \iff x \in X, f(x) = g(x) $$
+
+    이다.
+
+- 즉, 두 함수 $f,g$ 가 같은 함수일 필요충분조건이 $x \in X$ 에 대하여 $f(x)=g(x)$ 라는 것이다.
+
+- 증명 
+
+    $f = g$ 이면 (*이는 곱집합의 부분집합으로써의 $f$ 와 $g$ 가 서로 같다는 것이다. 즉, 단지 두 집합이 서로 같다는 것이다.*) $\forall x \in X$ 에 대하여 
+
+    $$ y = f(x) \iff (x,y) \in f \iff (x,y) \in g \iff y = g(x) $$
+
+    이므로 $f(x) = g(x)$ 이다. 
+
+    역으로 $\forall x \in X$ 에 대하여 $f(x) = g(x)$ 이면 (*이는 두 함수 $f, g$ 의 상이 서로 같다는 것이다. 즉, 두 함수의 함숫값이 같다는 거지.*)
+
+    $$ (x, y) \in f \iff y = f(x) \iff y = g(x) \iff (x, y) \in g $$
+
+    이므로 $f = g$ 이다. 
 
 !!! tldr ""
 
@@ -917,17 +779,23 @@
     
     이라고 한다.
 
+!!! tldr ""
 
+    단사함수(injection, one-to-one) : 함수 $f:X \to Y$ 가 
+
+    $$ x_1, x_2 \in X, f(x_1)=f(x_2) \Rightarrow x_1 = x_2 $$
+
+    를 만족하면 단사함수이다.
+
+- 즉, 단사 함수는 다음과 같이 정의역의 서로 다른 원소를 공역의 서로 다른 원소로 대응시키는 함수이다. 
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Injection.svg/1024px-Injection.svg.png" width="50%" height="auto">
 
 !!! tldr ""
 
     전사함수 :
 
 
-
-!!! tldr ""
-
-    단사함수 :
 
 
 
@@ -970,6 +838,314 @@
     $$ \Phi (A)(x) = \begin{cases} 1 &x \in A\\ 0 &x \not \in A\\ \end{cases} $$
     
     라고 정의하고 특성함수라 한다.
+
+# 동치관계 
+
+!!! tldr ""
+
+    관계(relation) : 두 집합 $X, Y$ 의 곱집합 $X \times Y$ 의 부분집합이다.
+
+- 더 엄밀한 정의는 다음과 같다. 
+
+    집합족 $\{X_i\}_{i \in I}$ 위의 관계는 곱집합의 부분집합
+
+    $$ R \subseteq \prod_{i \in I}^{}X_i $$
+
+    이다.
+
+    - 이를 통해 순서수 $\alpha$ 에 대하여 집합 $X$ 위의 $\alpha$항 관계를 거듭제곱 집합의 부분집합
+
+        $$ R \subseteq X ^{\times \alpha } $$
+
+        로 정의한다.
+
+    - 예시 
+
+        집합 $X$ 위의 영항관계(nullary relation) 은 $R \subseteq \{\cdot \}$ 즉, $R = \emptyset$ 이다.
+
+        집합 $X$ 위의 단항관계(unary relation) 은 $R \subseteq X$ 이다.
+
+        집합 $X$ 위의 이항관계(binary relation) 은 $R \subseteq X \times X$ 이다. 특히 이항관계에서 $(x, y) \in R$ 일 경우 $xRy$ 와 같이 자주 표기한다. 
+        
+        - 가령 집합 $\mathbb{N}$ 위의 이항관계 $+ \subseteq \mathbb{N} \times \mathbb{N}$ 에서 $(1, 2) \in \mathbb{N}$ 을 $1 + 2$ 로 표기한다.
+
+        집합 $X$ 위의 삼항관계(ternary relation) 은 $R \subseteq X \times X \times X$ 이다. 
+        
+        - 프로그래밍 언어에서 $x = (condition) ? a : b;$ 와 같이 사용되기도 한다.
+        
+        집합 $X$ 위의 $n$항관계(n-ary relation) 은 $R \subseteq X ^{\times n}$ 이다. 이때 $(x_1, \dots, x_n) \in R$ 을 $R(x_1, \dots, x_n)$ 와 같이 표기한다.
+
+- 집합 $X$ 에 관계가 주어졌다는 것은 곱집합 $X \times X$ 의 부분집합이 주어졌다는 것이다.
+    
+- 예시 
+
+    데카르트 공간 $\mathbb{R} ^{2}$, 즉 직교좌표계의 부분집합 
+
+    $$ x \in X, y \in Y, x ^{2}+y ^{2} = 4 $$
+
+    는 관계이다.
+
+!!! tldr ""
+
+    동치관계(equivalence relation) : 집합 $X$ 에 대한 관계 $R \subset X \times X$ 가 
+    
+    1. 임의의 $x \in X$ 에 대하여 $(x,x)\in R$ 이다.(reflexive relation)
+    
+    2. $(x, y) \in R$ 이면 $(y, x) \in R$ 이다.(Symmetric relation)
+    
+    3. $(x, y) \in R$ 이고 $(y,z)\in R$ 이면 $(x, z) \in R$ 이다.(transitive relation)
+    
+    를 만족하면 $R$ 을 동치관계라 한다.
+
+- 동치관계 $R \subset X \times X$ 의 원소 $(x, y) \in R$ 을 
+
+    $$ x \sim y $$
+
+    라고 쓴다.
+
+    - 예시 
+
+        동치관계의 조건을 다시 열거하면 다음과 같이 된다.
+        
+        $$ x \in X \to x \sim x $$
+
+        $$ x \sim y \to y \sim x $$
+
+        $$ x \sim y, y \sim z \to x \sim z $$
+
+- 예시 
+
+    "같다" 는 동치관계의 예시이다.
+
+    "서로 평행이다", "서로 닮음이다" 도 동치관계의 예시이다.
+
+!!! tldr ""
+
+    동치류(equivalence class) : 집합 $X$ 에 동치관계 $\sim$ 가 주어져 있을 때 각 $x \in X$ 에 대하여
+    
+    $$ [x] = \{z \in X: z \sim x\} $$
+    
+    를 $x$ 의 동치류라 한다.
+
+- 동치류에서 
+
+    $$ x \sim y \iff [x]=[y], \qquad x \not \sim y \iff [x] \cap [y] = \varnothing \tag{1} $$
+
+    이 성립한다. 
+
+    - 증명 
+    
+        또한 $x \sim y$ 이면 동치관계의 성질 2), 3) 에 의하여 
+
+        $$ z \in [x] \iff z \sim x \iff z \sim y \iff z \in [y] $$
+
+        이다. 역으로 $[x] = [y]$ 이면 $x \sim x$ 이므로 $x \in [x] = [y]$ 가 되고 따라서 $x \sim y$ 임을 알 수 있다. 
+
+        두번째 성질을 증명하기 위하여 
+
+        $$ [x] \cap [y] \neq \varnothing \Rightarrow [x] = [y] $$
+
+        임을 보이자. 만약 $z \in [x] \cap [y]$ 이면 $z \sim x, z \sim y$ 가 성립하고 따라서 $x \sim y$ 이다. $\forall x \in X, x \in [x]$ 이므로 성질 $(1)$ 에 의해 집합 $X$ 는 집합족
+
+        $$ \{[x]:x \in X\} $$
+
+        으로 분할됨을 알 수 있다. 
+    
+- 예시 
+
+    집합 $X = \{a,b,c\}$ 에 
+
+    $$ R = \{(a,a), (b,b), (c,c), (a,b), (b,a)\} $$
+
+    와 같은 동치 관계가 주어져있다고 하자. 그러면 
+
+    $$ [a]=\{a,b\}, \qquad [b]=\{a,b\}, \qquad [c]=\{c\} $$
+
+    이므로 집합 $X=\{a,b,c\}$ 가 집합족 
+
+    $$ \{\{a,b\}, \{c\}\} $$
+
+    으로 분할된다. 
+
+!!! tldr ""
+
+    분할(partition) : 집합 $X$ 의 공집합이 아닌 부분집합족 $\{A_i : i \in I\}$ 가 
+
+    1. $X = \bigcup_{i \in I}^{}A_i$
+
+    2. $\forall i,j \in I, A_i = A_j \lor A_i \cap A_j = \varnothing$
+
+    를 만족하면 이를 $X$ 의 분할이라 한다. 
+
+- 집합 $X$ 에 동치관계 $\sim$ 가 주어지면 자동적으로 $X$ 의 분할이 생김을 알 수 있는데, 이러한 분할을 
+
+    $$ X/\sim $$
+
+    라고 표시한다. 이 집합족을 몫집합이라고 한다.
+
+- 만약 각 집합 $[x]$ 의 원소를 하나 택하여 $r_x$ 라 두고 $I = \{r_x:x \in X\}$ 라 두면 $\{[r]:r \in I\}$ 는 서로소인 집합족이 되고, 따라서 
+
+    $$ X = \bigcup_{}^{}\{[r]:r \in I\} $$
+
+    임을 알 수 있다. 
+
+- 이제 거꾸로 집합 $X$ 의 분할 $\mathcal{P} = \{X_i : i \in I\}$ 가 주어졌을 때 동치관계를 이끌어내보자. $\forall x, y \in X$ 가 "$x, y \in X_i$ 인 $i \in I$ 가 존재한다" 를 만족할 때 $x \sim y$ 라고 정의하자. 그러면 $\sim$ 이 동치관계임을 바로 알 수 있다. 
+
+    실제로 $x \in X$ 이면 분할의 정의 1) $X = \bigcup_{i \in I}^{}X_i$ 에 의하여 $x \in X_i$ 인 $i \in I$ 를 찾을 수 있고, 이에 따라 $x \sim x$ 가 성립하며, 이로써 동치관계의 조건 1) reflexive relation 이 성립한다.
+
+    동치관계의 조건 2) Symmetric relation 은 $x \sim y$ 로부터 $y \sim x$ 를 이끌어내면 증명되는데, $x, y \in X_i$ 인 $i \in I$ 가 존재하면, $y, x \in X_i$ 인 $i \in I$ 가 존재함은 자명하다. 
+
+    그러면 이제 동치관계의 조건 3) transitive relation 을 보이기 위하여 $x \sim y, y \sim z$ 라 가정하자. 그러면 $x, y \in X_i$ 인 $i \in I$ 와 $y,z \in X_j$ 인 $j \in I$ 가 존재한다. 그런데 $y \in X_i \cap X_j$ 이므로 $X_i = X_j$ 이고, 이에따라 $x \sim z$ 이다. 
+
+- 예시 
+
+    정수 집합 $\mathbb{Z}$ 에 관계 
+
+    $$ m \sim n \iff \exists k \in \N, m - n = 2k $$
+
+    를 정의하면 동치관계가 됨을 바로 알 수 있다. 
+
+    이때 $m$ 이 짝수면 $[m] = \{2n \in \N : n \in \N\}$ 가 되고, $m$ 이 홀수면 $[m] = \{2n+1 \in \N : n \in \N\}$ 가 된다. 따라서 
+
+    $$ \mathbb{Z}/\sim\ = \{[x]:m \in \mathbb{Z}\} = \{[m]:m = 0, 1\} = \{[0], [1]\} $$
+
+    가 되고, $\mathbb{Z} = [0] \cup [1]$ 이 된다. 이때 $0, 1$ 대신 $8, 5$ 를 택하여 $\mathbb{Z} = [8] \cup [5]$ 라고 써도 마찬가지이다. 
+
+!!! tldr ""
+
+    집합 $X$ 에 정의된 동치관계 $\sim$ 에 대하여 $\sim = \sim _{(X/\sim )}$ 이 성립한다.
+
+    역으로, 임의의 분할 $\mathcal{P}$ 에 대하여 $\mathcal{P} = X/\sim _{\mathcal{P}}$ 가 성립한다. 
+    
+    즉, $\forall  x, y \in X$ 와 $A \in 2 ^{X}$ 에 대하여 
+
+    $$ x \sim y \iff x \sim _{(X/\sim )}y, \qquad A \in \mathcal{P}\iff A \in X/ \sim _{\mathcal{P}} $$
+
+    가 성립한다.
+
+- 첫번째 명제의 증명 
+
+    먼저 $x \sim y$ 이면 $x \in [x], y \in [x]$ 이고 $[x] \in X/\sim$ 이므로 $x \sim _{(X/\sim )}y$ 가 성립한다. 역으로 $x \sim _{(X/\sim )}y$ 이면 $x \in [z], y \in [z]$ 인 $[z] \in X/\sim$ 이 존재한다. 그러면 $x \sim z, y \sim z$ 이므로 $x \sim y$ 이다.
+
+- 두번째 명제의 증명 
+
+    $A \in \mathcal{P}$ 라고 가정하고, $a \in A$ 를 택하자. 만약 $x \in A$ 이면 정의에 의하여 $x \sim _{\mathcal{P}} a$ 이다. 만약 $x \sim _{\mathcal{P}}a$ 이면 $x \in B, a \in B$ 인 $B \in \mathcal{P}$ 가 존재하는데 $a \in A \cap B$ 이므로 $A=B$ 이고, 따라서 $x \in A$ 이다. 그러므로 
+
+    $$ A = \{x \in X:x \sim _{\mathcal{P}}a\} \in X/\sim _{\mathcal{P}} $$
+
+    이다. 
+
+    역으로 $A \in X / \sim _{\mathcal{P}}$ 이면 적절한 $a \in X$ 에 대하여 $A = \{x \in X:x \sim _{\mathcal{P}}a\}$ 이다. 한편 분할 $\mathcal{P}$ 에서 $a \in X$ 가 포함되는 것을 $B \in \mathcal{P}$ 라 하자. 그러면 방금 증명한 바에 의하여 $A=B$ 이고, 따라서 $A \in \mathcal{P}$ 이다.
+
+- 예시 
+
+    홀수 전체 집합을 $O$, 짝수 전체 집합을 $E$ 라 두면 $\mathcal{P} = \{O, E\}$ 는 정수 전체 집합 $\mathbb{Z}$ 의 분할이다. 그러면 동치관게 $\sim _{\mathcal{P}}$ 의 정의에 의하여 
+
+    $$ m \sim _{\mathcal{P}} n \iff \exists a, b \in \N, (m = 2a-2, n = 2b-2) \lor (m = 2a - 1, n = 2b - 1) $$
+
+    $$ \iff \exists c \in \N, m - n = 2c $$
+
+    이다. 그러므로 동치관계 $\sim _{\mathcal{P}}$ 는 "분할" 의 예시에서 정의한 $\mathbb{Z}/\sim$ 과 같은 것이 된다.
+
+    - "분할" 의 예시에서는 정수 집합 $\mathbb{Z}$ 에 관계 
+
+        $$ m \sim n \iff \exists k \in \N, m - n = 2k $$
+
+        를 정의하여 $\mathbb{Z}/\sim$ 가 짝수와 홀수의 집합으로 구성된다는 사실을 이끌어 내었고, 
+        
+        이 예시는 역으로 정수 집합 $\mathbb{Z}$ 를 짝수와 홀수로 분할한 집합 $\mathcal{P} = \{O,E\}$ 에 대한 동치관계 $m \sim _{\mathcal{P}} n$ 로부터 이 동치관계가 
+
+        $$ m \sim _{\mathcal{P}} n \iff \exists c \in \N, m - n = 2c $$
+
+        를 뜻함을 이끌어 냄으로써 
+
+        동치관계의 정의로부터 도출된 분할과 분할의 정의로부터 도출된 동치관계가 서로 동일함을 보여주고 있는 것이다. 
+    
+- 즉, 이 정리는 정의된 동치관계로 구분된 원소들이 갖는 관계가 동치관계로 분할된 집합족의 부분집합들이 갖는 관계와 같고,
+
+    어떤 집합에 임의의 분할 집합을 정의하면 그 분할이 갖는 동치관계로 집합을 분할하여도 결국 분할 집합과 같다는 것을 말해준다.  
+
+- *(솔직히 이 정리 자체가 의미하는 것을 제대로 이해하기가 어렵네 잘아는 사람한테 물어봐야 할듯)*
+
+!!! tldr ""
+
+    몫집합(quotient set) 또는 상집합 : 집합 $X$ 의 동치관계 $\sim$ 혹은 분할 $\mathcal{P}$ 에 의하여 얻은 집합 
+
+    $$ X / \sim $$
+
+    을 몫집합이라고 한다. 
+
+!!! tldr ""
+
+    목사상 또는 표준사상 또는 사영(projection) : 집합 $X$ 와 그것의 몫집합 $X/ \sim$ 에 대한 함수  
+
+    $$ q : X \to X/ \sim : x \mapsto [x] $$
+
+    이다.
+
+- 목사상은 전사사상이다.
+
+- 함수 $f:X \to Y$ 가 
+
+    $$ x \sim y \Rightarrow f(x) = f(y) \tag{1} $$
+
+    를 만족할 때 함수 
+
+    $$ \tilde{f}:X/ \sim \to Y:[x] \to f(x) $$
+
+    를 정의할 수 있다. 이때 이 정의가 잘 정의되어 있는지 살펴봐야 하는데, 왜냐하면 $[x]$ 의 함수값을 정의하기 위하여 $x$ 를 사용하였는데 $[x]$ 를 대표하는 원소가 $x$ 이외에 더 있을 수 있기 때문이다. 즉, 다른 원소 $y$ 에 대하여 $[x]=[y]$ 라면 $y$ 도 $[x]$ 를 대표하게 되는데 이런 때에도 $f(x)=f(y)$ 가 성립하여야 $\tilde{f}$ 가 함수가 될 수 있다. 이것을 보장하는 조건이 $(1)$ 인 것이다. 
+
+    역으로 $\tilde{f}\circ q = f$ 가 성립하는 함수 $\tilde{f}:X/\sim \to Y$ 가 존재하면 조건 $(1)$ 이 성립하는 것은 자명하다. 
+
+!!! tldr ""
+
+    집합 $X$ 와 동치관계 $\sim$ 와 함수 $f: X \to Y$ 에 대하여 다음 명제들은 서로 동치이다.
+
+    1. $\tilde{f} \circ q = f$ 인 함수 $\tilde{f}: X/\sim \to Y$ 가 유일하게 존재한다. 
+
+    2. $x \sim y \to f(x)=f(y)$
+
+- $\tilde{f}$ 의 유일성 증명
+
+    $\tilde{f} \circ q = f$ 를 만족하는 $\tilde{f}$ 가 존재하면 유일함을 보이자. 두 함수 $\tilde{f}_{1}, \tilde{f}_{2}: X/\sim \to Y$ 가 
+
+    $$ \tilde{f}_{1} \circ q = f = \tilde{f}_{2} \circ q $$
+
+    이라면, 
+
+    $$ \tilde{f} _{1} = \tilde{f} _{2} $$
+
+    임을 보이면 된다. 
+
+    (*음.. 어려운데? $q$ 의 정의역을 축소하여 전단사사상으로 바꾸면 $q ^{-1}$ 를 정의할 수 있지만, $q$ 의 정의역을 축소하는 것이 올바른지 검증하는 게 어렵네 일단 시간이 너무 없긴 해서 넘어가야할듯*)
+
+- 예시 
+
+    실수체 $\R$ 위의 벡터공간 $V$ 와 그 부분공간 $W$ 에 대하여 
+
+    $$ x \sim _{W} y \iff x - y \in W $$
+
+    라고 정의하면 동치관계가 된다. 이때 $\forall x \in V$ 에 대하여 
+
+    $$ [x] = \{y : x-y \in W\} = \{x+z:z \in W\} $$
+
+    가 되는데, $V / \sim _{W}$ 에 $x, y \in V, a \in \R$ 에 대한 연산 
+
+    $$ [x]+[y]=[x+y], \qquad a[x]=[ax] $$
+
+    를 정의하자. 그러면 $V/ \sim _{W}$ 는 벡터공간이 되는데, 이것을 $V/W$ 라고 쓰고 몫공간이라고 한다. 
+
+    그런데 $[x+y]$ 를 정의하기 위하여 $x$ 를 사용했는데 $[x]$ 를 대표하는 원소가 $x$ 만 있는 것이 아니기 때문에 이것이 잘 정의되었는가 검증해야 한다. 즉, 
+
+    $$ [x_1] = [x_2], [y_1] = [y_2] \Rightarrow [x_1+y_1] = [x_2+y_2], [ax_1] = [ax_2] $$
+
+    임을 증명해야 한다. 먼저 $[x_1] = [x_2], [y_1] = [y_2]$ 이면 $x_1 \sim x_2, y_1 \sim y_2$ 이므로 $x_1 - x_2, y_1 - y_2 \in W$ 이고, 이로부터 
+
+    $$ (x_1+y_1) - (x_2+y_2) = (x_1-x_2)+(y_1-y_2)\in W $$
+
+    $$ ax_1-ax_2=a(x_1-x_2) \in W $$
+
+    임을 알 수 있다. 
 
 
 
