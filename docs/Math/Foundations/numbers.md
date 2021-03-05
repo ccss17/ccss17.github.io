@@ -802,3 +802,13 @@
     정수 집합 $\mathbb{Z}$ 의 세 원소 $a, b, c \in \mathbb{Z}$ 에 대하여 체의 조건 1) - 6) 과 8), 9) 가 성립한다.
 
     $0$ 을 제외한 자연수 집합을 $P _{\mathbb{Z}} \subseteq \mathbb{Z}$ 라 두면 순서체 조건 1)-3) 이 성립한다. 
+
+!!! tldr ""
+
+    절댓값(absolute value, modulus) : 순서체 $F$ 의 원소 $a \in F$ 의 절댓값 $|a|$ 를 
+
+    $$ |a| = \begin{cases} a &a \geq 0\\ -a & a < 0\\ \end{cases} $$
+
+    와 같이 정의한다.
+
+- 절댓값은 실수를 구성할 때 중요한 역할을 한다. 
