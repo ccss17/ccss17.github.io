@@ -202,4 +202,4 @@
 
     $$ \int_{1}^{R}f(x)dx = \int_{1}^{R}x ^{-2} dx = [-x ^{-1}] ^{R}_{1} = - \dfrac{1}{R} + 1 $$
 
-    이므로 $R \to \infty \Rightarrow \int_{1}^{R}f(x)dx \to 1$ 이다. 그러므로 적분판정법에 의하여 급수 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n ^{2}}$ 가 수렴하고, 이에따라 비교 판정법에 의하여 주어진 급수도 수렴한다.
+    이므로 $R \to \infty \implies \int_{1}^{R}f(x)dx \to 1$ 이다. 그러므로 적분판정법에 의하여 급수 $\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n ^{2}}$ 가 수렴하고, 이에따라 비교 판정법에 의하여 주어진 급수도 수렴한다.

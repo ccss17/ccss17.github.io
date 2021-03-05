@@ -783,7 +783,7 @@
 
     단사함수(injection, one-to-one function) : 함수 $f:X \to Y$ 가 
 
-    $$ x_1, x_2 \in X, f(x_1)=f(x_2) \Rightarrow x_1 = x_2 $$
+    $$ x_1, x_2 \in X, f(x_1)=f(x_2) \implies x_1 = x_2 $$
 
     를 만족하면 단사함수이다.
 
@@ -805,7 +805,7 @@
 
     $g \circ f = 1 _{X}$ 를 만족하는 $g$ 가 있으면 
 
-    $$ f(x_1) = f(x_2) \Rightarrow x_1 = (g \circ f)(x_1) = (g \circ f)(x_2) = x_2 $$
+    $$ f(x_1) = f(x_2) \implies x_1 = (g \circ f)(x_1) = (g \circ f)(x_2) = x_2 $$
 
     이므로 $f$ 가 단사함수의 조건을 만족하여 단사함수가 된다.
 
@@ -1073,7 +1073,7 @@
 
         두번째 성질을 증명하기 위하여 
 
-        $$ [x] \cap [y] \neq \varnothing \Rightarrow [x] = [y] $$
+        $$ [x] \cap [y] \neq \varnothing \implies [x] = [y] $$
 
         임을 보이자. 만약 $z \in [x] \cap [y]$ 이면 $z \sim x, z \sim y$ 가 성립하고 따라서 $x \sim y$ 이다. $\forall x \in X, x \in [x]$ 이므로 성질 $(1)$ 에 의해 집합 $X$ 는 집합족
 
@@ -1252,7 +1252,7 @@
 
 - 함수 $f:X \to Y$ 가 
 
-    $$ x \sim y \Rightarrow f(x) = f(y) \tag{1} $$
+    $$ x \sim y \implies f(x) = f(y) \tag{1} $$
 
     를 만족할 때 함수 
 
@@ -1302,7 +1302,7 @@
 
     그런데 $[x+y]$ 를 정의하기 위하여 $x$ 를 사용했는데 $[x]$ 를 대표하는 원소가 $x$ 만 있는 것이 아니기 때문에 이것이 잘 정의되었는가 검증해야 한다. 즉, 
 
-    $$ [x_1] = [x_2], [y_1] = [y_2] \Rightarrow [x_1+y_1] = [x_2+y_2], [ax_1] = [ax_2] $$
+    $$ [x_1] = [x_2], [y_1] = [y_2] \implies [x_1+y_1] = [x_2+y_2], [ax_1] = [ax_2] $$
 
     임을 증명해야 한다. 먼저 $[x_1] = [x_2], [y_1] = [y_2]$ 이면 $x_1 \sim x_2, y_1 \sim y_2$ 이므로 $x_1 - x_2, y_1 - y_2 \in W$ 이고, 이로부터 
 
@@ -1604,7 +1604,7 @@
 
     먼저 $\forall A \in \mathcal{A} \to A \leq \bigcup_{}^{}\mathcal{A}$ 이므로 $\bigcup_{}^{}\mathcal{A}$ 은 $\mathcal{A}$ 의 상계이다. 만약 $S \in 2 ^{X}$ 가 $\mathcal{A}$ 의 상계라면, 임의의 $A \in \mathcal{A}$ 에 대하여 $A \subset S$ 이므로 
 
-    $$ x \in \bigcup_{}^{}\mathcal{A} \Rightarrow \exists A \in \mathcal{A}, x \in A \Rightarrow x \in S $$
+    $$ x \in \bigcup_{}^{}\mathcal{A} \implies \exists A \in \mathcal{A}, x \in A \implies x \in S $$
 
     이다. 그러므로 $\bigcup_{}^{}\mathcal{A} \leq S$ 이고, 
 

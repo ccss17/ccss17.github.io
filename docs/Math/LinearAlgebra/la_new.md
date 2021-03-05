@@ -44,9 +44,9 @@
 
     소거법칙(Cancellation Laws) : 체의 임의의 원소 $a, b, c$ 에 대하여 다음이 성립한다. 
 
-    $$ a+b= c+b \Rightarrow  a=c \tag{1}  $$
+    $$ a+b= c+b \implies  a=c \tag{1}  $$
 
-    $$ a \cdot b = c \cdot b \lor b \neq 0 \Rightarrow a=c \tag{2}  $$
+    $$ a \cdot b = c \cdot b \lor b \neq 0 \implies a=c \tag{2}  $$
 
 - $(1)$ 의 증명 
 
@@ -334,7 +334,7 @@
 
     벡터 합의 소거법칙 : 벡터 공간 $V$ 에 대하여 
     
-    $$x,y,z \in V, x + z = y + z \Rightarrow x = y$$
+    $$x,y,z \in V, x + z = y + z \implies x = y$$
 
     이다. 
 

@@ -31,7 +31,7 @@
 
     자연수(natural number) : 다음 두 가지 성질 
 
-    $$ \varnothing \in \mathcal{A}, A \in \mathcal{A} \Rightarrow A ^{+} \in \mathcal{A} $$
+    $$ \varnothing \in \mathcal{A}, A \in \mathcal{A} \implies A ^{+} \in \mathcal{A} $$
 
     을 가지는 집합 $\mathcal{A}$ 에 대하여 집합
 
@@ -45,13 +45,13 @@
 
     1. $0 \in \N$
 
-    2. $n \in \N \Rightarrow n ^{+} \in \N$
+    2. $n \in \N \implies n ^{+} \in \N$
 
     3. $\forall n \in \N, n ^{+} \neq 0$
 
     4. 집합 $X \subset \N$ 이 다음 두 성질 
 
-        $$ 0 \in X, \qquad  n \in X \Rightarrow n ^{+}\in X $$
+        $$ 0 \in X, \qquad  n \in X \implies n ^{+}\in X $$
 
         을 만족하면 $X = \N$ 이다. 
 
@@ -67,15 +67,15 @@
 
     이므로 $n \in m \lor n = m$ 이다. 마찬가지로 $m \in n \lor n = m$ 이다. 그러므로 $n \in m$ 과 $m \in n$ 에서 $n = m$ 을 이끌어내면 된다. 그렇다면
 
-    $$ n \in \N, x \in n \Rightarrow x \subset n \tag{1}  $$
+    $$ n \in \N, x \in n \implies x \subset n \tag{1}  $$
 
     을 증명하면 $n \subset m \land m \subset n$ 이 성립하여 $n = m$ 을 이끌어낼 수 있다. 
 
     일단 
 
-    $$ X = \{n \in \N : x \in n \Rightarrow x \subset n\} $$
+    $$ X = \{n \in \N : x \in n \implies x \subset n\} $$
 
-    으로 두자. 먼저 $0 \in X$ 이다. $x \in \varnothing \Rightarrow x \subset \varnothing$ 이기 때문이다.
+    으로 두자. 먼저 $0 \in X$ 이다. $x \in \varnothing \implies x \subset \varnothing$ 이기 때문이다.
 
     이제 수학적 귀납법으로 증명을 하기 위하여 $n \in X$ 라고 하자. 만약 $x \in n ^{+} = n \cup \{n\}$ 이면 $x \in n \lor x = n$ 이다. 
 
@@ -129,7 +129,7 @@
 
     $$ (0, a) \in A\tag{1.1} $$
 
-    $$  (n, x) \in A \Rightarrow (n ^{+}, f(x)) \in A \tag{1.2} $$
+    $$  (n, x) \in A \implies (n ^{+}, f(x)) \in A \tag{1.2} $$
 
     을 만족하는 $A \subset \N \times X$ 전체의 집합을 $\mathcal{A}$ 라 두면 이 성질을 만족하는 모든 집합이 $\mathcal{A}$ 에 속하게 되므로 $\N \times X$ 도 $\mathcal{A}$ 에 속한다. 즉, $\N \times X \in \mathcal{A}$ 이다. 따라서 $\mathcal{A}$ 는 비어있지 않다. 
 
@@ -137,11 +137,11 @@
 
     이제 $\gamma = \bigcap_{}^{}\mathcal{A}$ 라고 두자. 만일 $\gamma \subset \N \times X$ 가 함수이면 
 
-    $$ \gamma (n) = x \Rightarrow (n, x) \in \gamma $$
+    $$ \gamma (n) = x \implies (n, x) \in \gamma $$
 
-    $$ \Rightarrow (n ^{+}, f(x)) \in \gamma  $$ 
+    $$ \implies (n ^{+}, f(x)) \in \gamma  $$ 
     
-    $$ \Rightarrow \gamma (n ^{+}) = f(x) = f( \gamma (n)) $$
+    $$ \implies \gamma (n ^{+}) = f(x) = f( \gamma (n)) $$
 
     이다. 
 
@@ -165,7 +165,7 @@
 
     이제 $n \in \mathcal{X}$ 이지만 $n ^{+} \not \in \mathcal{X}$ 라고 하면 $(n ^{+}, f(x)) \in \gamma$ 이므로 $(n ^{+}, y) \in \gamma , y \neq f(x)$ 인 $y \in X$ 가 존재한다. 그러면 마찬가지로 $\gamma \text{ \textbackslash }\{(n ^{+}, y)\} \in \mathcal{A}$ 임을 보이면 $\gamma = \bigcap_{}^{}\mathcal{A}$ 에 모순이고, 결국 $y$ 는 존재하지 않으며 최종적으로 
 
-    $$ n \in \mathcal{X} \Rightarrow n ^{+} \in \mathcal{X} $$
+    $$ n \in \mathcal{X} \implies n ^{+} \in \mathcal{X} $$
 
     이 증명된다. 그렇게 되면 $\gamma$ 가 함수임을 보장하는 공간 $\mathcal{X}$ 는
     
@@ -189,7 +189,7 @@
 
     더하기 : 각 자연수 $m \in \N$ 에 대하여 
 
-    $$ \gamma _m(0) = m, \qquad n \in \N \Rightarrow \gamma _m(n ^{+}) = [\gamma _m(n)]^{+} $$
+    $$ \gamma _m(0) = m, \qquad n \in \N \implies \gamma _m(n ^{+}) = [\gamma _m(n)]^{+} $$
 
     를 만족하면서 유일하게 존재하는 함수 $\gamma _m:\N \to \N$ 에 대하여 자연수의 더하기를 $m, n \in \N$ 에 대하여 
 
@@ -225,7 +225,7 @@
 
     곱하기 : 각 자연수 $m \in \N$ 에 대하여 
 
-    $$ \delta _m(0) = 0, \qquad n \in \N \Rightarrow \delta _m(n ^{+}) = \delta _m(n)+m $$
+    $$ \delta _m(0) = 0, \qquad n \in \N \implies \delta _m(n ^{+}) = \delta _m(n)+m $$
 
     를 만족하면서 유일하게 존재하는 함수 $\delta _m: \N \to \N$ 에 대하여 자연수의 곱하기를 $m,n \in \N$ 에 대하여
 
@@ -253,7 +253,7 @@
 
     수학적 귀납법으로 모든 명제를 증명할 수 있다. 가령 이미 참임을 알고 있는 명제 $0 + 0 = 0$ 에서 출발하여 
 
-    $$ 0 + n = n \Rightarrow 0 + n ^{+} = (0 + n) ^{+} = n ^{+} $$
+    $$ 0 + n = n \implies 0 + n ^{+} = (0 + n) ^{+} = n ^{+} $$
 
     이므로 1) 의 첫째 명제가 증명된다.
 
@@ -271,13 +271,13 @@
 
     1. $m \leq m$ 이다.
 
-    2. $m \leq n \land n \leq m \Rightarrow m = n$ 이다. 
+    2. $m \leq n \land n \leq m \implies m = n$ 이다. 
 
         - 증명 
 
             $m \neq n$ 이면 $m \in n \land n \in m$ 인데 페아노 공리계의 5번째 성질을 증명할 때 사용했던 정리 
 
-            $$ n \in \N, x \in n \Rightarrow x \subset n $$
+            $$ n \in \N, x \in n \implies x \subset n $$
 
             에 의하여 $m \subset n, n \subset m$ 이 성립하므로 
 
@@ -285,7 +285,7 @@
 
             이 된다. 이는 처음의 가정과 모순이다. 그러므로 $m = n$ 이다.
     
-    3. $m \leq n, n \leq k \Rightarrow m \leq k$ 이다.
+    3. $m \leq n, n \leq k \implies m \leq k$ 이다.
 
         - 증명 
 
@@ -309,15 +309,15 @@
 
     이것을 수학적 귀납법으로 보이기 위하여 
 
-    $$ n \not \in n \Rightarrow n ^{+} \not \in n ^{+} $$
+    $$ n \not \in n \implies n ^{+} \not \in n ^{+} $$
 
     임을 보이면 되는데, 이것의 대우 명제인 
 
-    $$ n ^{+} \in n ^{+} \Rightarrow n \in n $$
+    $$ n ^{+} \in n ^{+} \implies n \in n $$
 
     을 보여도 된다. 만약 $n ^{+} \in n ^{+} = n \cup \{n\}$ 이면 $n ^{+} \in n \lor n ^{+} = n$ 이다. 이때 $n ^{+}\in n$ 이면 페아노 공리계의 5번째 성질을 증명할 때 사용했던 정리 
 
-    $$ n \in \N, x \in n \Rightarrow x \subset n $$
+    $$ n \in \N, x \in n \implies x \subset n $$
 
     에 의하여 $n \subset n ^{+} \subset n$ 이므로 $n ^{+} = n$ 이다. 그러므로 항상 
 
@@ -359,33 +359,33 @@
 
     비어있지 않은 자연수들의 집합 $A \subset \N$ 가 최소 원소를 가지지 않는다고 하고 
 
-    $$ X = \{n \in \N: m \in A \Rightarrow n \leq m\} $$
+    $$ X = \{n \in \N: m \in A \implies n \leq m\} $$
 
     이라고 두자. 즉, $X$ 는 집합 $A$ 의 최소 원소보다 같거나 작은 자연수로 구성된다. 만약 $k \in X \cap A$ 이면 $k$ 는 $A$ 의 최소 원소가 되므로 $X \cap A = \varnothing$ 이어야 한다. 여기서 귀납법으로 $X = \N$ 임을 보이면 $A = \varnothing$ 이 되어 모순을 얻는다. 
 
     그러므로 먼저 $0 \in X$ 라고 가정하자. 즉, $\forall m \in \N$ 에 대하여 $0 \leq m$ 임을 보이는 것이다. 이렇게 $\forall m \in \N$ 인 $m$ 에 대하여 보이게 되면 $A$ 가 어떤 원소로 구성되었든 간에 안정적으로 $0 \in X$ 를 보일 수 있다. 이것 또한 귀납법으로 보이게 된다. 먼저 $0 \leq 0$ 은 자명하다. 만약 $0 \leq m$ 이면 $m \in m ^{+}$ 에서 $m \leq m ^{+}$ 이므로 $0 \leq m ^{+}$ 을 얻는다. 그러므로 $0 \in X$ 이 증명되었다. 
 
-    이제 $n \in X \Rightarrow n ^{+} \in X$ 을 보이기 위하여 $n \in X$ 라고 가정하자. 즉, 
+    이제 $n \in X \implies n ^{+} \in X$ 을 보이기 위하여 $n \in X$ 라고 가정하자. 즉, 
 
-    $$ m \in A \Rightarrow n \leq m $$
+    $$ m \in A \implies n \leq m $$
 
     이라고 두는 것이다. 만약 $n \in A$ 이면 $n$ 은 $A$ 의 최소원소가 되고 이는 가정에 어긋난다. 그러므로 $n \not \in A$ 이고 
 
-    $$ m \in A \Rightarrow n < m $$
+    $$ m \in A \implies n < m $$
 
     이 성립한다. 이제 
 
-    $$ n < m \Rightarrow n ^{+} \leq m $$
+    $$ n < m \implies n ^{+} \leq m $$
 
     을 보이면 $X = \N$ 이 되어 모든 증명이 끝난다. 이것에도 귀납법을 사용하는데, $n$ 을 고정하고 $m$ 에 대한 귀납법을 사용하기 위하여 
 
-    $$ Y = \{m \in \N : n < m \Rightarrow n ^{+} \leq m\} $$
+    $$ Y = \{m \in \N : n < m \implies n ^{+} \leq m\} $$
 
     라고 두자. 먼저 $n < 0$ 이면 $n \in \varnothing$ 인데 이런 원소 $n$ 이 없으므로 $0 \in Y$ 임은 자명하다.(**이해 안되는 부분**) 
 
     이제 $m \in Y$ 라고 가정하고, $m ^{+} \in Y$ 임을 보이자. $n < m ^{+}$ 이면, 
     
-    $$n \in m ^{+} = m \cup \{m\} \Rightarrow n \in m \lor n = m$$
+    $$n \in m ^{+} = m \cup \{m\} \implies n \in m \lor n = m$$
     
     이다. 먼저 $n \in m$ 이면 $n < m$ 이므로 귀납법의 가정 $m \in Y$ 에 의하여 
 
@@ -397,7 +397,7 @@
 
     이다. 그러므로 
 
-    $$ n < m ^{+} \Rightarrow n ^{+}\leq m ^{+} $$
+    $$ n < m ^{+} \implies n ^{+}\leq m ^{+} $$
     
     가 성립하고 $m ^{+} \in Y$ 임에 따라
 
@@ -413,13 +413,13 @@
 
     $\forall  m,n \in \N$ 에 대하여 $\{m,n\} \subset \N$ 은 최소원소를 갖는데, 
 
-    $$ (\min \{m,n\} = m \Rightarrow m \leq n) \lor (\min \{m,n\} = n \Rightarrow n \leq m) $$
+    $$ (\min \{m,n\} = m \implies m \leq n) \lor (\min \{m,n\} = n \implies n \leq m) $$
 
     이다.
 
 !!! tldr ""
 
-    $$ n \in \N \Rightarrow n = 0 \lor (\exists m \in \N, n = m ^{+}) $$
+    $$ n \in \N \implies n = 0 \lor (\exists m \in \N, n = m ^{+}) $$
 
 - 증명 (이 증명의 풀이는 책에 나와있는게 아니라 문제로 되어있어서 내가 만든 것. 그래서 오류가 있을 수 있음)
 
@@ -433,7 +433,7 @@
 
     $$ \iff x ^{+} = [m ^{+}] ^{+} $$
 
-    인데 페아노 공리계 2) $n \in \N \Rightarrow n ^{+} \in \N$ 은 어떤 자연수 $n$ 에 $^{+}$ 를 취하면 그것도 자연수가 됨을 보증해준다. 그러므로 
+    인데 페아노 공리계 2) $n \in \N \implies n ^{+} \in \N$ 은 어떤 자연수 $n$ 에 $^{+}$ 를 취하면 그것도 자연수가 됨을 보증해준다. 그러므로 
 
     $$ [m ^{+}] ^{+} \in \N $$
 
@@ -447,11 +447,11 @@
 
     집합 $A$ 의 상계 전체의 집합을 $B$ 라 두면, 가정에 의하여 $B \neq \varnothing$ 이고 정리 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다." 에 의하여 $B$ 는 최소 원소 $k \in \N$ 를 가진다. $\forall n \in A, n \leq k$ 이므로 이므로 $k \in A$ 임을 보이면 $k$ 가 $A$ 의 최대원소임이 증명된다.
 
-    $k \not \in A$ 라고 가정하자. 그러면 $n \in A$ 을 하나 잡았을 때 $k > n \geq 0$ 이고 따라서 정리 "$n \in \N \Rightarrow n = 0 \lor (\exists m \in \N, n = m ^{+})$" 에 의하여 $k = s ^{+}$ 이다. 
+    $k \not \in A$ 라고 가정하자. 그러면 $n \in A$ 을 하나 잡았을 때 $k > n \geq 0$ 이고 따라서 정리 "$n \in \N \implies n = 0 \lor (\exists m \in \N, n = m ^{+})$" 에 의하여 $k = s ^{+}$ 이다. 
 
     만약 $s \not \in B$ 이면 $s < t$ 인 $t \in A$ 가 존재(**이해 안되는 부분**)하고 
 
-    $$ s ^{+} \leq t \leq k = s ^{+} \Rightarrow k = t \in A $$
+    $$ s ^{+} \leq t \leq k = s ^{+} \implies k = t \in A $$
 
     가 되어 모순이다. 그러므로 $s \in B$ 인데, $s < k$ 이므로 이는 $k$ 가 최소원소라는 것에 모순이다.
 
@@ -471,7 +471,7 @@
 
 - 이 정리의 유일성은 
 
-    $$ \forall m,k,l \in \N, m + k = m + l \Rightarrow k = l $$
+    $$ \forall m,k,l \in \N, m + k = m + l \implies k = l $$
 
     로 명확하게 표현할 수 있다.
 
@@ -487,9 +487,9 @@
 
     $$ X = \{l \in \N, m+l \geq n\} $$
 
-    라 두면 $n \in X \Rightarrow X \neq \varnothing$ 이다. 따라서 정리 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다." 에 의하여 $X$ 는 최소 원소 $k \in X$ 를 가지는데, $n = m+k$ 를 증명하면 된다. 
+    라 두면 $n \in X \implies X \neq \varnothing$ 이다. 따라서 정리 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다." 에 의하여 $X$ 는 최소 원소 $k \in X$ 를 가지는데, $n = m+k$ 를 증명하면 된다. 
 
-    먼저 $m+k>n$ 라고 가정하자. (*이는 $n = m+k$ 를 만족하는 $k$ 가 존재하지 않는다고 가정하는 것이다. 그러므로 이 가정으로부터 모순이 도출된다면 $k$ 는 존재한다는 것이 증명된다.*) $k=0$ 이면 $m>n$ 이 가정 $n \geq m$ 에 위배되므로 $k \neq 0$ 이고 정리 "$n \in \N \Rightarrow n = 0 \lor (\exists m \in \N, n = m ^{+})$" 에 의하여 $s \in \N, k = s ^{+}$ 이다. 그러면 
+    먼저 $m+k>n$ 라고 가정하자. (*이는 $n = m+k$ 를 만족하는 $k$ 가 존재하지 않는다고 가정하는 것이다. 그러므로 이 가정으로부터 모순이 도출된다면 $k$ 는 존재한다는 것이 증명된다.*) $k=0$ 이면 $m>n$ 이 가정 $n \geq m$ 에 위배되므로 $k \neq 0$ 이고 정리 "$n \in \N \implies n = 0 \lor (\exists m \in \N, n = m ^{+})$" 에 의하여 $s \in \N, k = s ^{+}$ 이다. 그러면 
 
     $$ (m + s) ^{+} = m + s ^{+} = m + k > n $$
 
@@ -499,11 +499,11 @@
 
     두번째 명제의 유일성 증명은
 
-    $$ \forall m,k,l \in \N, m + k = m + l \Rightarrow k = l $$
+    $$ \forall m,k,l \in \N, m + k = m + l \implies k = l $$
 
     를 $k$ 에 관한 귀납법으로 보임으로써 완성된다. $k=0$ 이면 
 
-    $$ m + 0 + m + l \Rightarrow 0 = l $$
+    $$ m + 0 + m + l \implies 0 = l $$
 
     이다. 만약 $m=m+l$ 인데 $l \neq 0$ 이면 $l = s ^{+}$ 이고,
 
@@ -521,7 +521,7 @@
 
     에서 $m+k=m+t$ 를 얻고, 가정에 의하여 $k=t$ 와 $k ^{+}=t ^{+} = l$ 을 얻는다. 이것으로써 
 
-    $$ \forall m,k,t \in \N, m + k ^{+} = m + t ^{+} \Rightarrow k ^{+} = t ^{+} $$
+    $$ \forall m,k,t \in \N, m + k ^{+} = m + t ^{+} \implies k ^{+} = t ^{+} $$
 
     를 얻었으므로 유일성 증명이 끝났다. ■ 
 
@@ -543,7 +543,7 @@
 
     $$ l = mn + r $$
 
-    인 $r \in \N$ 이 유일하게 존재한다. 이때 $mn + r < mn + m \Rightarrow r < m$ 이다. ■ 
+    인 $r \in \N$ 이 유일하게 존재한다. 이때 $mn + r < mn + m \implies r < m$ 이다. ■ 
 
     한편 이 증명으로 $n, r$ 의 존재성 증명이 끝남과 동시에 $r$ 의 유일성 증명도 끝났으므로 $n$ 의 유일성 증명만 하면 된다.
 
@@ -781,7 +781,7 @@
 
     를 정의하였을 때, 체 $F$ 의 $P \neq \varnothing$ 인 $P \subset F$ 이 
 
-    1. $a, b \in P \Rightarrow a+b,ab \in P$
+    1. $a, b \in P \implies a+b,ab \in P$
 
     2. $F = P \cup \{0\} \cup (-P)$
 
@@ -790,3 +790,15 @@
     을 만족하면 $F$ 를 순서체라고 한다.
 
 - 이때 $P$ 의 원소를 양수(positive number) 라 한다. 
+
+- 순서체 $F$ 의 두 원소 $a, b \in F$ 에 대하여 $a -b \in P$ 이면 $a$ 가 $b$ 보다 크다고 하고 이것을 
+
+    $$ a > b, b < a $$
+
+    라고 쓴다. 
+
+- 예시 
+
+    정수 집합 $\mathbb{Z}$ 의 세 원소 $a, b, c \in \mathbb{Z}$ 에 대하여 체의 조건 1) - 6) 과 8), 9) 가 성립한다.
+
+    $0$ 을 제외한 자연수 집합을 $P _{\mathbb{Z}} \subseteq \mathbb{Z}$
