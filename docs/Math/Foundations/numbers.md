@@ -801,4 +801,4 @@
 
     정수 집합 $\mathbb{Z}$ 의 세 원소 $a, b, c \in \mathbb{Z}$ 에 대하여 체의 조건 1) - 6) 과 8), 9) 가 성립한다.
 
-    $0$ 을 제외한 자연수 집합을 $P _{\mathbb{Z}} \subseteq \mathbb{Z}$
+    $0$ 을 제외한 자연수 집합을 $P _{\mathbb{Z}} \subseteq \mathbb{Z}$ 라 두면 순서체 조건 1)-3) 이 성립한다. 

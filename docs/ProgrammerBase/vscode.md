@@ -801,4 +801,22 @@ int n = 100;
 
 이렇게 LaTeX 수식을 스니펫으로 만들어두면 markdown 문서를 작성할 때 매우 편하고 빠르게 수식을 작성할 수 있어요.
 
+## Snippets Extension
+
+이러한 스니펫들을 잘 정의해둔 확장을 설치하면 여러분이 매번 스니펫을 정의하지 않더라도 남들이 미리 정의해둔 스니펫을 사용할 수 있습니다.
+
+가령 다음과 같은 확장을 설치하면 
+
+https://marketplace.visualstudio.com/items?itemName=thomanq.math-snippets
+
+남들이 markdown 에서 수식을 쓸 때 정의해둔 스니펫을 단번에 적용시킬 수 있는 것이지요.
+
+이런 식으로 여러분이 작업하시는 다른 환경의 스니펫을 한번 찾아보세요.
+
+최근에는 
+
+https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode
+
+이런 확장이 나왔는데 인공지능을 기반으로 코드 완성을 해준다는 확장입니다. 나름 편하더라구요. 쓰실 분들은 써보세요.
+
 ## **<div align="center"> 🌜 ️여기까지 Day4     🌜️ </div>**
