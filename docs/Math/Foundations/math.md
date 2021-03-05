@@ -781,7 +781,7 @@
 
 !!! tldr ""
 
-    단사함수(injection, one-to-one) : 함수 $f:X \to Y$ 가 
+    단사함수(injection, one-to-one function) : 함수 $f:X \to Y$ 가 
 
     $$ x_1, x_2 \in X, f(x_1)=f(x_2) \Rightarrow x_1 = x_2 $$
 
@@ -793,17 +793,93 @@
 
 !!! tldr ""
 
-    전사함수 :
+    함수 $f: X \to Y$ 에 대하여 다음은 동치이다. 
 
+    1. $f$ 는 단사함수이다. 
 
+    2. $g \circ f = 1 _{X}$ 를 만족하는 함수 $g: Y \to X$ 가 존재한다. 
 
+- 즉, 이 정리는 $x$ 를 $y$ 로 보내면 그 $y$ 를 다시 $x$ 로 보낼 수 있음을 말하고 있다. 전사함수라면 이렇게 할 수 없을 수도 있는데, $y$ 에 대응되는 $x$ 가 유일하지 않을 수도 있기 때문이다. 
 
+- 증명 
+
+    $g \circ f = 1 _{X}$ 를 만족하는 $g$ 가 있으면 
+
+    $$ f(x_1) = f(x_2) \Rightarrow x_1 = (g \circ f)(x_1) = (g \circ f)(x_2) = x_2 $$
+
+    이므로 $f$ 가 단사함수의 조건을 만족하여 단사함수가 된다.
+
+    이제 역으로 $f$ 가 단사함수라면 $g \circ f = 1 _{X}$ 인 함수 $g: Y \to X$ 가 존재함을 보이기 위하여
+
+    $$ B = \{y \in Y: f(x) = y \text{ 를 만족하는 } x \in X \text{ 가 존재한다}\} $$
+
+    라고 두자. 즉, $B = \text{ran} f$ 이다. $y \in B$ 이면 $f$ 가 단사함수라는 가정에 의하여 $f(x) = y$ 를 만족하는 $x \in X$ 가 유일하게 존재하는데, 이때 함수 $g$ 를 $g(y) = x$ 라고 정의하자. 만약 $y \not \in B$ 이면 $g(y)$ 는 아무렇게나 정의하자. 
+
+    가령 $X$ 의 한 원소 $x_0 \in X$ 에 대하여 
+
+    $$ g(y) = \begin{cases} x, &y \in B, y = f(x) \\ x_0,& y \not \in B\\ \end{cases} $$
+
+    라고 정의하는 것이다. 그러면 
+
+    $$ g \circ f = 1 _{X} $$
+
+    임이 바로 확인된다. 왜냐하면 어차피 정의역의 원소 $x_0$ 에 대응되는 치역의 원소 $y$ 가 존재하지 않는다면 이 원소 $x_0$ 에 대한 함수 $f$ 는 정의되지 않기 때문에 결국 우리는 $g(y) = x$ 만 생각하면 되기 때문이다. 그렇다면 $g(f(x)) = x$ 이므로 $g \circ f$ 는 항등함수 $1 _{X}$ 가 된다. ■ 
 
 !!! tldr ""
 
-    전단사함수 :
+    전사함수(surjection, onto) : 함수 $f: X \to Y$ 가 성질
+    
+    "임의의 $y \in Y$ 에 대하여 $f(x) = y$ 인 $x \in X$ 가 존재한다"
 
+    를 만족하면 이를 전사함수라 한다.
 
+- 예시 
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Surjection.svg/200px-Surjection.svg.png" width="50%" height="auto">
+
+!!! tldr ""
+
+    함수 $f: X \to Y$ 에 대하여 다음은 동치이다. 
+
+    1. $f$ 는 전사함수이다. 
+
+    2. $f \circ g = 1 _{Y}$ 를 만족하는 함수 $g: Y \to X$ 가 존재한다. 
+
+- 즉, 이 정리는 $y$ 를 $x$ 로 보내면 그 $x$ 를 다시 $y$ 로 보낼 수 있음을 말하고 있다. 단사함수라면 이렇게 할 수 없을 수도 있는데, $y$ 에 대응되는 $x$ 가 존재하지 않을 수도 있기 때문이다. 
+
+- 증명 
+
+    먼저 $f \circ g = 1 _{Y}$ 를 만족하는 함수 $g: Y \to X$ 가 존재한다고 가정하자. 각 $y \in Y$ 에 대하여 $x=g(y)$ 라 두면 $f \circ g$ 이 항등함수라고 하였으므로
+
+    $$ f(x) = f(g(y)) = y $$
+
+    이다. 그러면 이 관계에 의하여 임의의 $y \in Y$ 가 함수 $g$ 와 $f$ 를 통하여, 즉 정의역의 원소 $x$ 를 통하여 다시 $y$ 로 대응되므로 전사함수의 조건이 성립하여 $f$ 가 전사함수가 된다. 
+
+    이제 역으로 $f$ 가 전사함수이면 $f \circ g = 1 _{Y}$ 인 $g$ 가 존재함을 보이기 위하여 
+
+    $$ A_y = \{x \in X: f(x) = y\} $$
+
+    라고 두면 $Y \neq \varnothing$ 이라는 가정 하에(*이 부분은 내가 자의적으로 해석한 것임.*) $A_y \neq \varnothing$ 이다. 왜냐하면 $f$ 가 전사함수이므로 $Y$ 의 모든 원소가 $X$ 의 적당한 원소로 대응되기 때문이다. 이때 각 $y \in Y$ 에 대응되는 $x \in A_y$ 를 택하여 이 $x$ 를 $x = g(y) \in X$ 라 두면 
+
+    $$ f(g(y)) = y $$
+
+    이다. ■ 
+
+- 위 증명에서 $A_y$ 의 원소를 하나 택한다고 하였는데 이렇게 하나씩 택하는 것이 가능한가에 대한 문제는 좀더 신중한 접근이 필요하다. 한편 이것이 가능하다고 가정하는 것이 선택공리이다. 
+
+!!! tldr ""
+
+    전단사함수(bijection, one-to-one correspondence) : 두 집합 $X, Y$ 사이의 함수 $f: X \to Y$ 에 대하여 성질 
+
+    "임의의 $y \in Y$ 에 대하여 $f(x) = y$ 인 유일한 $x \in X$ 가 존재한다."
+    
+    을 만족하는 함수이다. 
+
+- 즉, 전사이면서 동시에 단사인 함수를 전단사함수라 한다.
+
+- 예시 
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bijection.svg/220px-Bijection.svg.png" width="50%" height="auto">
 
 !!! tldr ""
 
@@ -819,25 +895,81 @@
 
         $g$ 와 $h$ 가 $f$ 의 역함수라면 
         
-        $$ g = 1 _{X} \circ g = (h \circ f) \circ g = h \circ (f \circ g) = h \circ 1 _{Y} = h $$
+        $$ g = 1 _{X} \circ g = (h \circ f) \circ g = h \circ (f \circ g) = h \circ 1 _{Y} = h \tag{1} $$
 
         가 된다.
 
 - $f$ 의 역함수 $g$ 를 $f ^{-1} : Y \to X$ 로 표기한다.
 
+- 함수 $f: X \to Y$ 가 역함수를 가지면 전단사함수이다. 
+
+    - 증명 
+
+        다음 두 정리 
+
+        함수 $f: X \to Y$ 에 대하여 다음은 동치이다. "$f$ 는 전사함수이다. $\iff$ $f \circ g = 1 _{Y}$ 를 만족하는 함수 $g: Y \to X$ 가 존재한다."
+
+        함수 $f: X \to Y$ 에 대하여 다음은 동치이다. "$f$ 는 단사함수이다. $\iff$ $g \circ f = 1 _{X}$ 를 만족하는 함수 $g: Y \to X$ 가 존재한다."
+
+        에 의하여 증명이 된다.
+
+- 함수 $f: X \to Y$ 가 전단사 함수이면 $h \circ f = 1 _{X}$ 인 $h: Y \to X$ 와 $f \circ g = 1 _{Y}$ 인 $g: Y \to X$ 가 존재하는데, $(1)$ 에 의하여 $g = h$ 가 되어 $f$ 의 역함수가 된다. 
+
+- 예시 
+
+    함수 $f: \N \to \mathbb{Z}$ 를
+    
+    $$f(2n) = -n, \qquad f(2n-1) = n$$
+
+    이라 정의하면 그 역함수 $g: \mathbb{Z} \to \N$ 는 
+
+    $$ g(n) = 2n-1, g(-n) = 2n $$
+
+    가 된다. 
+
+- 함수 $f: X \to Y$ 와 $A \subset X, B \subset Y$ 에 대하여 
+
+    $$ f ^{-1}(B) = \{x \in X:f(x) \in B\} $$
+
+    $$ f (A) = \{f(x) \in Y:x \in A\} $$
+
+    라 정의하자. 집합 $f ^{-1}(B)$ 를 $B$ 의 역상이라 하고 $f(A)$ 를 $A$ 의 상이라 한다.
+
+    이때 $f$ 가 전사일 필요충분조건은 $f(X)=Y$ 이다.
+
+!!! tldr ""
+
+    함수 $f: X \to Y$ 에 대하여 다음은 동치이다. 
+
+    1. $f$ 는 전단사 함수이다.
+
+    2. $f$ 의 역함수가 존재한다. 
+
+- 한편 정의역이나 공역을 축소하여 전단사함수가 되게 한 후 역함수를 정의할 수도 있다. 삼각함수의 역함수가 이런 식으로 정의된다. 
+
+!!! tldr ""
+
+    두 집합 $X, Y$ 에 대하여 다음은 동치이다. 
+
+    1. 단사함수 $f: X \to Y$ 가 존재한다. 
+
+    2. 전사함수 $g: Y \to X$ 가 존재한다. 
+
+- 증명 
+
 !!! tldr ""
 
     함수 전체 집합 : 집합 $X$ 에서 $Y$ 로 가는 함수 전체의 집합을 $Y ^{X}$ 라고 한다.
 
-
-
 !!! tldr ""
 
-    특성함수 : 임의의 $A \in \mathcal{P}(X)$ 에 대하여 $\Phi (A) \in \{0,1\}^{X}$ 를 
+    특성함수(characteristic function) 또는 지시함수(indicator function) : 임의의 $A \in \mathcal{P}(X)$ 에 대하여 $\chi_A \in \{0,1\}^{X}$ 를 
     
-    $$ \Phi (A)(x) = \begin{cases} 1 &x \in A\\ 0 &x \not \in A\\ \end{cases} $$
+    $$ \chi_A(x) = \begin{cases} 1 &x \in A\\ 0 &x \not \in A\\ \end{cases} $$
     
     라고 정의하고 특성함수라 한다.
+
+- 특정 집합에 특정 값이 속하는지 표시하는 함수이다. 특정 값이 집합에 속하면 $1$, 속하지 않으면 $0$ 의 값을 가진다. 
 
 # 동치관계 
 
@@ -891,7 +1023,7 @@
     
     1. 임의의 $x \in X$ 에 대하여 $(x,x)\in R$ 이다.(reflexive relation)
     
-    2. $(x, y) \in R$ 이면 $(y, x) \in R$ 이다.(Symmetric relation)
+    2. $(x, y) \in R$ 이면 $(y, x) \in R$ 이다.(symmetric relation)
     
     3. $(x, y) \in R$ 이고 $(y,z)\in R$ 이면 $(x, z) \in R$ 이다.(transitive relation)
     
@@ -903,15 +1035,13 @@
 
     라고 쓴다.
 
-    - 예시 
+- 동치관계의 조건을 다시 열거하면 다음과 같이 된다.
+    
+    $$ x \in X \to x \sim x $$
 
-        동치관계의 조건을 다시 열거하면 다음과 같이 된다.
-        
-        $$ x \in X \to x \sim x $$
+    $$ x \sim y \to y \sim x $$
 
-        $$ x \sim y \to y \sim x $$
-
-        $$ x \sim y, y \sim z \to x \sim z $$
+    $$ x \sim y, y \sim z \to x \sim z $$
 
 - 예시 
 
@@ -993,7 +1123,7 @@
 
     실제로 $x \in X$ 이면 분할의 정의 1) $X = \bigcup_{i \in I}^{}X_i$ 에 의하여 $x \in X_i$ 인 $i \in I$ 를 찾을 수 있고, 이에 따라 $x \sim x$ 가 성립하며, 이로써 동치관계의 조건 1) reflexive relation 이 성립한다.
 
-    동치관계의 조건 2) Symmetric relation 은 $x \sim y$ 로부터 $y \sim x$ 를 이끌어내면 증명되는데, $x, y \in X_i$ 인 $i \in I$ 가 존재하면, $y, x \in X_i$ 인 $i \in I$ 가 존재함은 자명하다. 
+    동치관계의 조건 2) symmetric relation 은 $x \sim y$ 로부터 $y \sim x$ 를 이끌어내면 증명되는데, $x, y \in X_i$ 인 $i \in I$ 가 존재하면, $y, x \in X_i$ 인 $i \in I$ 가 존재함은 자명하다. 
 
     그러면 이제 동치관계의 조건 3) transitive relation 을 보이기 위하여 $x \sim y, y \sim z$ 라 가정하자. 그러면 $x, y \in X_i$ 인 $i \in I$ 와 $y,z \in X_j$ 인 $j \in I$ 가 존재한다. 그런데 $y \in X_i \cap X_j$ 이므로 $X_i = X_j$ 이고, 이에따라 $x \sim z$ 이다. 
 
@@ -1010,6 +1140,41 @@
     $$ \mathbb{Z}/\sim\ = \{[x]:m \in \mathbb{Z}\} = \{[m]:m = 0, 1\} = \{[0], [1]\} $$
 
     가 되고, $\mathbb{Z} = [0] \cup [1]$ 이 된다. 이때 $0, 1$ 대신 $8, 5$ 를 택하여 $\mathbb{Z} = [8] \cup [5]$ 라고 써도 마찬가지이다. 
+
+- 예시 
+
+    집합 $\N \times \N = \{(m,n):m,n \in \N\}$ 에 관계 $\sim$ 를 
+
+    $$ (m,n) \sim (m',n') \iff m+n' = n+m' $$
+
+    와 같이 부여하면 동치관계가 된다. reflexive, symmetric 이 성립함은 자명하고, transitive 가 성립함을 보이자. 이는 $x \sim y, y \sim z \to x \sim z$ 를 보임으로써 완성된다.
+    
+    만약 $(m,n) \sim (m',n') \land (m', n') \sim (m'', n'')$ 라면 $m+n'=n+m' \land m'+n''=n'+m''$ 이므로 
+
+    $$ (m+n'')+(m'+n') = (m+n')+(m'+n'') $$
+
+    $$ = (n+m') + (n'+m'')=n+m''+(m'+n') $$
+
+    이 성립한다. 따라서 $m+n''=n+m''$ 이고, 이에따라 
+
+    $$ \therefore (m,n) \sim (m'',n'') $$
+
+    이다. ■ 
+    
+    한편 이 경우 
+
+    $$ \N \times \N / \sim = \{[(0, 0)], [(n, 0)], [(0, n)] : n \in \N \text{ \textbackslash }\{0\} \} $$
+
+    이 성립함을 금방 알 수 있는데, 이것이 정수 체계의 정의로 곧바로 연결된다. 왜냐하면, 사실 이렇게 이해하는 게 더 편하다. 동치 관계 
+
+    $$ (m,n) \sim (m',n') \iff m+n' = n+m' $$
+
+    를 
+
+    $$ (m,n) \sim (m',n') \iff m-n = m'-n' $$
+
+    로 생각하면 이는 $a \in \N \times \N$ 의 첫번째 원소와 두번째 원소의 차이값이다. 
+
 
 !!! tldr ""
 
