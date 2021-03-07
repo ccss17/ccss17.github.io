@@ -1068,6 +1068,8 @@
 
     4. 임의의 $x,y>0$ 에 대하여 $y<nx$ 를 만족하는 자연수 $n \in \N \text{ \textbackslash }\{0\}$ 이 존재한다. 
 
+- 순서체 $F$ 가 이 동치 조건을 만족하면 아르키메데스의 성질을 만족한다고 한다. 
+
 - 증명 
 
 !!! tldr ""
@@ -1077,6 +1079,12 @@
 - 증명 
 
     $$ m,n \in P _{\mathbb{Z}} \to \dfrac{n}{m}<2n $$
+
+    - 내 생각에는..
+    
+        이 증명은 4 번째 명제가 유리수체에서 성립함을 보이려 한다. $0$ 이 아닌 자연수 $m, n$ 을 기반으로 유리수체의 원소 $y := \dfrac{n}{m}$ 를 정의하고, 유리수체의 원소 $x := \dfrac{n}{1}$ 를 정의하며, $n := 2$ 로 두었다.
+
+        이로써 4 번째 명제가 "$n, \dfrac{n}{m} > 0$ 에 대하여 $\dfrac{n}{m} < 2n$ 을 만족하는 자연수 $2 \in \N \text{ \textbackslash }\{0\}$ 가 존재한다." 로 특수화되었다.
 
 # 데데킨트 절단을 기반으로 정의하는 실수
 
@@ -1100,8 +1108,118 @@
 
     은 절단이다. 
 
+- 예시 
+
+    집합 
+
+    $$ \alpha = \{p \in \mathbb{Q} : p \leq 0\} \cup \{p \in \mathbb{Q} : 0 < p, p ^{2} < 2\} $$
+
+    이 절단임을 보이자.
+
+    $0 \in \alpha , 2 \not \in \alpha$ 이므로 절단의 조건 1) 을 만족한다. 
+
+    $q < p \in \alpha$ 일 때 $q \leq 0 \to q \in \alpha$ 이고, $0 < q < p \land p ^{2} < 2 \to q ^{2} < 2$ 이므로 $q \in \alpha$ 이다. 이로써 절단의 조건 2) 를 만족한다. 
+
+    $p \in \alpha$ 에 대하여 $p \leq 0 \to p < 1 \in \alpha$ 이다. 한편 $0 < p, p ^{2} < 2$ 이면 정리 "유리수체는 아르키메데스의 성질을 만족한다." 를 적용하여 
+    
+    $$\dfrac{1}{n}(2p+1) < 2 - p ^{2}$$ 
+    
+    인 $n \in \N$ 을 잡을 수 있다. 그러면 
+
+    $$ \iff p ^{2} + \dfrac{2}{n}p + \dfrac{1}{n} < 2 $$
+
+    에서 $\dfrac{1}{n} \leq \dfrac{1}{n ^{2}}$ 이므로
+
+    $$ \iff  \bigg (p + \dfrac{1}{n}\bigg ) ^{2} \leq p ^{2} + \dfrac{2}{n}p + \dfrac{1}{n} < 2 $$
+
+    이다. 그러므로 
+    
+    $$ p + \dfrac{1}{n} \in \alpha$$ 
+    
+    이다. 이로써 절단의 조건 3) 도 성립한다. 
+
+    그러므로 $\alpha$ 는 절단이다. ■ 
+
+    한편 이 절단 $\alpha$ 는 무리수 $\sqrt[]{2}$ 를 유리수로부터 정의하기 위하여 존재하는데, 더 명확하게 이를 보이기 위하여 
+    
+    $$ \forall r \in \mathbb{Q}, \alpha \neq r ^{*} = \{p \in \mathbb{Q} : p < r\}$$ 
+    
+    임을 보이자. 이를 위해 $\alpha  = r ^{*}$ 인 유리수 $r \in \mathbb{Q}$ 이 있다고 가정한다. 만약 $r ^{2} < 2$ 이면 위에서 한 것처럼 
+
+    $$ \bigg (r + \dfrac{1}{n}\bigg )^{2} < 2 $$
+
+    인 자연수 $n \in \N$ 이 존재한다. 그러면 $r + \dfrac{1}{n} \in \alpha \land r + \dfrac{1}{n} \not \in r ^{*}$ 이 되어 모순이다. 
+
+    반대로 $r ^{2} > 2$ 라고 가정하자. 그러면 비슷하게 
+
+    $$ \bigg (r - \dfrac{1}{m}\bigg )^{2} > 2 $$
+
+    인 자연수 $m \in \N$ 이 존재한다. 그러면 $r - \dfrac{1}{m} \not\in \alpha \land r - \dfrac{1}{m} \in r ^{*}$ 가 되어 모순이다. 그러므로 
+
+    $$ \therefore r ^{2} = 2 $$
+
+    인데 이와같은 $r \in \mathbb{Q}$ 는 존재하지 않는다. 왜냐하면 무리수이기 때문이다. ■ 
+
+!!! tldr ""
+
+    절단 $\alpha$ 에 대하여 $\alpha ^{c} = \mathbb{Q} \text{ \textbackslash }\alpha$ 라 두면 
+
+    $$ p \in \alpha , q \in \alpha ^{c} \implies p < q, \qquad r \in \alpha ^{c}, r < s \implies s \in \alpha ^{c} $$
+
+    가 성립한다.
+
+- 그러므로 두 집합 $\alpha , \alpha ^{c}$ 를 수직선 위의 점들로 보면, 다음과 같이 각각이 수직선을 왼쪽과 오른쪽으로 분할하는 것으로 표현된다. 단, 왼쪽 점들 $\alpha$ 는 절단의 조건 3) 에 의하여 최댓값을 가지지 않는다. 
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/7/72/Dedekind_cut_sqrt_2.svg)
+
 !!! tldr ""
 
     실수 집합(real number set) : 데데킨트 절단 전체의 집합 $\R$ 이다. 
+
+- 유리수 $\mathbb{Q}$ 에 의하여 정의된 모든 절단들은 그 절단으로 자동으로 생성되는 오른쪽 절단과 함께 유리수나 무리수를 그 사이에 둘 수 있게 된다. 가령 위에서 살펴본 절단이 무리수 $\sqrt[]{2}$ 를 표현한 것처럼 말이다.
+
+    이로써 모든 절단을 곧 모든 유리수와 모든 무리수로 대응시키는 전단사 함수를 만들 수 있다(*내 생각이라서 증명 필요*). 그러므로 실수(유리수와 무리수)를 데데킨트 절단으로 구성할 수 있다는 것이다. 
+
+- 양의 실수를 $0 ^{*} = \{p \in \mathbb{Q} : p < r\}$ 에 대하여
+
+    $$ P _{\R} = \{\alpha \in \R : \alpha > 0 ^{*}\} $$
+
+    라고 둔다.
+
+!!! tldr ""
+
+    $\forall \alpha , \beta \in \R$ 에 대하여 다음 중 한 명제만 성립한다. 
+
+    $$ \alpha > \beta , \qquad \alpha = \beta , \qquad \alpha < \beta $$
+
+- 증명 
+
+    두 절단 $\alpha , \beta$ 에 대하여 
+
+    $$ \alpha \leq \beta \iff \alpha \subset \beta $$
+
+    로 정의하면 순서관계를 얻는다.
+
+    만약 $\beta \subset \alpha$ 이면 $p \not \in \beta$ 인 $p \in \alpha$ 가 존재한다. 이때 $q \in \beta$ 이면 $p \not\in \beta$ 로부터 $q<p$ 임을 알 수 있으므로 $q \in \alpha$ 이다. 
+
+    즉, $\alpha \subset \beta$ 가 아니면 $\beta \subset \alpha$ 가 되므로 두 절단 $\alpha , \beta$ 가 주어지면 $\alpha \leq \beta  \lor \alpha \geq \beta$ 이다. ■ 
+
+- 그냥, 어떤 절단들이 주어지면 최소상계가 더 오른쪽에 주어진 절단이 왼쪽의 절단을 전부 다 포함한다는 것을 떠올리면 된다. 이것이 아닐 경우 두 절단은 서로 같다.
+
+- 이 정리는 양의 실수 $P _{\R} = \{\alpha \in \R : \alpha > 0 ^{*}\}$ 가 순서체의 조건 2), 3) 을 만족함을 말해준다. 
+
+!!! tldr ""
+
+    $A \neq \varnothing$ 인 집합 $A \subset \R$ 가 위로 유계이면 $A$ 는 최소상계를 갖는다. 
+
+- 증명 
+
+    $A$ 가 위로 유계일 때, 즉 상계를 가질 때 $\alpha  = \bigcup_{}^{}\{\beta \in A\}$ 가 $A$ 의 최소상계임을 보이려 한다. 
+
+    먼저 $\alpha \subset \mathbb{Q}$ 가 절단임을 보이자. $\beta \in A$ 를 하나 잡으면 $\alpha \supset \beta \neq \varnothing$ 이고 
+
+
+
+
 
 # 코시 수열을 기반으로 정의하는 실수
