@@ -601,9 +601,7 @@
 
 - $\mathbb{Z}$ 의 원소를 정수(integer)라고 한다.
 
-!!! tldr ""
-
-    정수의 표기 : $[n, 0], [0, 0], [0, n] \in \mathbb{Z}$ 를 
+- $[n, 0], [0, 0], [0, n] \in \mathbb{Z}$ 를 
 
     $$ [n, 0] := n, \qquad [0, 0] = 0, \qquad [0, n] = -n $$
 
@@ -693,6 +691,14 @@
 
 !!! tldr ""
 
+    더하기, 곱하기, 순서관계에 관한 한
+
+    $$ \N \subset \mathbb{Z} $$
+
+    이다.
+
+- 증명
+
     함수 $f: \N \to \mathbb{Z}$ 를 
 
     $$ f: n \mapsto [n, 0] $$
@@ -705,11 +711,7 @@
 
     $$ m \geq n \iff f(m) \geq f(n) $$
 
-    이 성립하므로 더하기, 곱하기, 순서관계에 관한 한
-
-    $$ \N \subset \mathbb{Z} $$
-
-    이다.
+    이 성립하기 때문이다.
 
 !!! tldr ""
 
@@ -870,9 +872,11 @@
 
     즉, 유리수 집합 $\mathbb{Q}$ 부터는 덧셈/뺄셈/곱셈/나눗셈을 자유롭게 할 수 있는 체(field)이다.
 
-- $\mathbb{Q}$ 의 원소를 유리수라고 한다.
+- $\mathbb{Q}$ 의 원소 $[(a, b)]$ 를 유리수라고 한다.
 
-- 유리수 집합과 그 동치관계를 다룰 때에도 동치류 $[(a, b)]$ 를 편하게 $[a, b]$ 로 쓰도록 하자.
+    - 유리수 집합과 그 동치관계를 다룰 때에도 동치류 $[(a, b)]$ 를 편하게 $[a, b]$ 로 쓰도록 하자.
+
+    - 또한 유리수 $[a, b]$ 를 더욱 편하게 $\dfrac{a}{b}$ 라고 쓰도록 한다.
 
 - 유리수의 동치관계도 정수에서와 마찬가지로 
 
@@ -895,3 +899,209 @@
     $$ 0 ^{*}, 1 ^{*} $$
 
     이다.
+
+!!! tldr ""
+
+    $\mathbb{Q}$ 는 순서체이다.
+
+- 증명 
+
+    $0$ 을 제외한 자연수 집합을 정수 $\mathbb{Z}$ 의 양수라는 의미에서 $P _{\mathbb{Z}}$ 라고 썼었다. 이 $P _{\mathbb{Z}}$ 에 의하여 $\mathbb{Z}$ 는 
+
+    $$ \mathbb{Z} = P_{\mathbb{Z}} \cup \{0\} \cup (-P_{\mathbb{Z}}) $$
+
+    로 분할된다. 그러면 유리수 집합 $\mathbb{Q}$ 는 
+
+    $$ \mathbb{Q} = \mathbb{Z} \times (\mathbb{Z} \text{ \textbackslash }\{0\}) $$
+
+    이므로 
+
+    $$ = (P_{\mathbb{Z}} \cup \{0\} \cup (-P_{\mathbb{Z}})) \times (P_{\mathbb{Z}} \cup (-P_{\mathbb{Z}})) $$
+
+    집합 $\mathbb{Q} = \mathbb{Z} \times (\mathbb{Z} \text{ \textbackslash }\{0\})$ 의 모든 원소가 
+
+    $$ \{0\} \times (\mathbb{Z} \text{ \textbackslash }\{0\}), \quad  P_{\mathbb{Z}} \times P_{\mathbb{Z}}, \quad  P_{\mathbb{Z}} \times (-P_{\mathbb{Z}}), \quad  (-P_{\mathbb{Z}}) \times P_{\mathbb{Z}}, \quad  (-P_{\mathbb{Z}}) \times (-P_{\mathbb{Z}}) $$
+
+    로 분할된다. 이때 
+    
+    $$\forall (a, b) \in \mathbb{Z}\times (\mathbb{Z}\text{ \textbackslash }\{0\}), (a,b) \sim (-a, -b)$$
+
+    이므로 임의의 유리수는 세 집합 
+
+    $$ \{0\} \times P_{\mathbb{Z}}, \qquad P_{\mathbb{Z}} \times P_{\mathbb{Z}}, \qquad (-P_{\mathbb{Z}}) \times P_{\mathbb{Z}} $$
+
+    에 속하는 원소들을 대표원으로 하는 동치류에 의해 결정된다. 이제 
+
+    $$ P _{\mathbb{Q}} = \{[a, b]:(a,b) \in P_{\mathbb{Z}}\times P_{\mathbb{Z}}\} $$
+
+    라 정의하면 순서체의 조건 2), 3) 이 만족된다. 또한 유리수의 더하기와 곱하기가 
+
+    $$ [a, b] + [c, d] = [ad + bc, bd], \qquad [a, b] \cdot [c, d] = [ac, bd] $$
+
+    이렇게 정의되었으므로 $P _{\mathbb{Q}}$ 에 대하여 닫혀있다. 그러므로 순서체의 조건 1) 도 성립한다. 
+
+    그러므로 $\mathbb{Q}$ 는 순서체이다. ■ 
+
+!!! tldr ""
+
+    순서체에 정의된 양수 집합 $P$ 에 
+
+    $$ a \leq b \iff b-a \in P \lor a=b $$
+
+    를 정의하면, 이는 순서관계가 된다.
+
+- 증명
+
+- 또한 이 정리와 $\mathbb{Q}$ 가 순서체인 것에 의하여 $\mathbb{Q}$ 의 순서관계가 주어진다.
+
+!!! tldr ""
+
+    더하기, 곱하기, 순서에 관한한 $\mathbb{Z} \subset \mathbb{Q}$ 이다. 
+
+- 증명 
+
+    함수 $a \mapsto a ^{*} = [a, 1] : \mathbb{Z} \to \mathbb{Q}$ 가 단사함수임은 자명하다. 또한 
+
+    $$ (a+b) ^{*} = a ^{*} + b ^{*} $$
+
+    $$ (ab)^{*} = a ^{*}b ^{*} $$
+
+    $$ a \geq b \iff a ^{*} \geq b ^{*} $$
+
+    가 성립하므로 더하기, 곱하기, 순서에 관한 한
+
+    $$ \mathbb{Z} \subset \mathbb{Q} $$
+
+    이다. 
+
+!!! tldr ""
+
+    임의의 순서체 $F$ 에 대하여 
+
+    1. $\forall r, s \in \mathbb{Q}, \quad  \gamma (r+s)=\gamma (r)+\gamma (s), \quad  \gamma (rs) = \gamma (r) \gamma (s)$
+
+    2. $\gamma (P _{\mathbb{Q}}) = \gamma (\mathbb{Q}) \cap P _{F}$
+
+    을 만족하는 단사함수 $\gamma : \mathbb{Q} \to  F$ 가 유일하게 존재한다. 
+
+- 이 정리는 임의의 순서체 $F$ 가 유리수체 $\mathbb{Q}$ 를 포함하며, 두 순서체의 연산과 순서를 구별할 필요가 없음을 말해준다. 
+
+    그러므로 임의의 순서체 $F$ 를 다룰 때 
+
+    $$ \mathbb{Q} \subset F $$
+
+    으로 간주한다. 
+
+- 증명 
+
+    임의의 순서체 $F$ 는 더하기와 곱하기의 항등원 $0$ 과 $1$ 을 가진다. 정리
+
+    "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 
+
+    $$ \gamma (0) = a, \qquad \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n)) $$
+
+    을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다."
+
+    에 의하여 성질 
+
+    $$ \gamma (0) = 0 $$
+
+    $$ \gamma (n+1) = \gamma (n ^{+}) = \gamma (n) + 1, \qquad n \in \N $$
+
+    을 만족하는 함수 $\gamma : \N \to F$ 가 유일하게 존재한다. 이때 좌변의 $\gamma (n+1)$ 의 더하기는 $\N$ 에서 정의된 더하기이고, 우변의 $\gamma (n)+1$ 는 순서체 $F$ 의 더하기이다. 또 우변의 $0, 1$ 은 순서체 $F$ 의 더하기와 곱하기의 항등원이다.
+
+    이제 $m,n \in \N$ 에 대한
+
+    $$ \gamma (n+m) = \gamma (n) + \gamma (m) \tag{1} $$
+    
+    $$ \gamma (nm) = \gamma (n)\gamma (m) \tag{2} $$
+
+    이 성립함을 보일 것이다. 먼저 $m = 0$ 이면 자명하게 성립한다. 수학적 귀납법을 사용하기 위하여 $m \in \N$ 에서 성립한다고 가정하면 
+
+    $$ \gamma (n+m ^{+}) = \gamma ((n + m) ^{+}) = \gamma (n+m)+1 $$
+
+    $$ = \gamma (n) + \gamma (m) + 1 = \gamma (n) + \gamma (m ^{+}) $$
+
+    이므로 임의의 $m, n \in \N$ 에서 $(1)$ 이 성립함을 알 수 있다. □ 
+    
+    $(2)$ 도 마찬가지로 $m=0$ 이면 자명하고 귀납법을 사용하여 
+
+    $$ \gamma (nm ^{+}) = \gamma (nm+n)= \gamma (nm)+\gamma (n) $$
+
+    $$ = \gamma (n)\gamma (m)+\gamma (n) = \gamma (n)[\gamma (m) +1] = \gamma (n)\gamma (m ^{+}) $$
+
+    가 되어 증명된다. □ 
+
+    한편, 임의의 순서체에서 $0<1 \implies 1 \in P _{F}$ 이다. 그러므로 $\gamma (n) \in P _{F}$ 이면 $\gamma (n ^{+}) = \gamma (n) + 1 \in P _{F}$ 이 되어 $n \in \N \text{ \textbackslash }\{0\}$ 에 대하여
+
+    $$ \gamma (n) \in P _{F} \tag{3} $$
+
+    이다. □ 
+
+    마지막으로 $\gamma : \N \to F$ 가 단사함수임을 보일 것이다. 먼저 $n> m, \gamma (n) = \gamma (m)$ 이라고 가정하여 단사함수의 조건에 어긋나게 하자. 그러면 $n = m + k$ 인 $k \in \N \text{ \textbackslash }\{0\}$ 가 존재하여 
+
+    $$ \gamma (k) = [\gamma (m) + \gamma (k)] - \gamma (m) $$
+
+    $$ = \gamma (m+k) - \gamma (m) = \gamma (n) - \gamma (m) = 0 \not \in P _{F} $$
+
+    인데, 이는 $(3)$ 에 모순이므로 $\gamma : \N \to F$ 는 단사함수이다. □ 
+
+    이제 $\N \subset \mathbb{Q} \subset \mathbb{Q}$ 를 염두하며 $\gamma : \N \to F$ 의 정의역을 $\mathbb{Q}$ 로 확장할 것이다. 먼저 $\mathbb{Z}$ 로 확장하여 함수 $\gamma : \mathbb{Z} \to F$ 를 $n \in \N$ 에 대하여
+
+    $$ \gamma (n) = \gamma (n), \qquad \gamma (-n) = - \gamma (n) $$
+
+    라 정의하자. 두 함수 $\gamma : \N \to F, \gamma : \mathbb{Z} \to F$ 는 함숫값이 $\N$ 위에서 똑같으므로 같은 기호를 사용해도 된다. 비슷하게 $\gamma : \mathbb{Q} \to F$ 를 
+
+    $$ \gamma \bigg (\dfrac{a}{b}\bigg ) = \dfrac{\gamma (a)}{\gamma (b)}, \qquad (a,b) \in \mathbb{Z}\times (\mathbb{Z}\text{ \textbackslash }\{0\}) $$
+
+    로 정의하자. 그러면 이렇게 정의된 함수 $\gamma : \mathbb{Q} \to F$ 는 잘 정의되어 있고, $(1),(2),(3)$ 을 만족하는 단사함수가 되지만 여백이 부족해서 증명을 마저 쓸 수가 없다. ■ 
+
+!!! tldr ""
+
+    순서체 $F$ 에 대하여 다음이 동치이다. 
+
+    1. $x>0 \to \exists n \in \N \text{ \textbackslash }\{0\}, x > \dfrac{1}{n}$
+
+    2. $y>0 \to \exists n \in \N \text{ \textbackslash }\{0\}, y < n$
+
+    3. 집합 $\N \subset F$ 은 위로 유계가 아니다. 
+
+    4. 임의의 $x,y>0$ 에 대하여 $y<nx$ 를 만족하는 자연수 $n \in \N \text{ \textbackslash }\{0\}$ 이 존재한다. 
+
+- 증명 
+
+!!! tldr ""
+
+    유리수체는 아르키메데스의 성질을 만족한다. 
+
+- 증명 
+
+    $$ m,n \in P _{\mathbb{Z}} \to \dfrac{n}{m}<2n $$
+
+# 데데킨트 절단을 기반으로 정의하는 실수
+
+!!! tldr ""
+
+    데데킨트 절단(Dedekind Cut) : 유리수들의 집합 $\alpha \subset \mathbb{Q}$ 가 
+
+    1. $\alpha \neq \varnothing , \alpha \neq \mathbb{Q}$
+
+    2. $p \in \alpha , q \in \mathbb{Q}, q < p \to q \in \alpha$
+
+    3. $p \in \alpha \to (\exists r \in \alpha , p < r)$
+
+    를 만족하면 데데킨트 절단이라고 한다.
+
+- 혹은 더욱 편하게 그냥 절단이라고도 한다. 
+
+- $\forall r \in \mathbb{Q}$ 에 대하여 
+
+    $$ r ^{*} = \{p \in \mathbb{Q} : p < r\} $$
+
+    은 절단이다. 
+
+!!! tldr ""
+
+    실수 집합(real number set) : 데데킨트 절단 전체의 집합 $\R$ 이다. 
+
+# 코시 수열을 기반으로 정의하는 실수
