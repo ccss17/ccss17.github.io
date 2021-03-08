@@ -1325,5 +1325,15 @@
         $$ 0 ^{*} < \alpha \iff 0 \in \alpha $$
 
         이다. 이 결과로 순서체의 조건 1) 의 첫째명제 $a, b \in P \implies a + b \in P$ 가 성립됨을 바로 알 수 있다. 어떤 절단 $a,b$ 가 $a > 0 ^{*} \land b > 0^{*}$ 이면 $0 \in a \land 0 \in b$ 이므로 $a > 0, b > 0$ 이기 때문이다. ■ 
+    
+- 실수의 더하기의 역원이 존재한다. 
+
+    - 증명 
+
+        $\alpha \in \R$ 에 대하여 
+
+        $$ \beta = \{p \in \mathbb{Q} : \exists r \in \mathbb{Q}, r > p \land -r \not\in \alpha \} $$
+
+        라 두고 $\beta \in \R$ 과 $\alpha + \beta = 0 ^{*}$ 임을 보일 것이다. 
 
 # 코시 수열을 기반으로 정의하는 실수
