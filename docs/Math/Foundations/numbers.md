@@ -1188,25 +1188,31 @@
 
 !!! tldr ""
 
-    $\forall \alpha , \beta \in \R$ 에 대하여 다음 중 한 명제만 성립한다. 
-
-    $$ \alpha > \beta , \qquad \alpha = \beta , \qquad \alpha < \beta $$
-
-- 증명 
-
-    두 절단 $\alpha , \beta$ 에 대하여 
+    실수의 순서관계 : 두 절단 $\alpha , \beta$ 에 대하여 
 
     $$ \alpha \leq \beta \iff \alpha \subset \beta $$
 
-    로 정의하면 순서관계를 얻는다.
+    로 정의한다.
 
-    만약 $\beta \subset \alpha$ 이면 $p \not \in \beta$ 인 $p \in \alpha$ 가 존재한다. 이때 $q \in \beta$ 이면 $p \not\in \beta$ 로부터 $q<p$ 임을 알 수 있으므로 $q \in \alpha$ 이다. 
+- 물론 $\alpha \leq \beta \land \alpha \neq \beta$ 를 
 
-    즉, $\alpha \subset \beta$ 가 아니면 $\beta \subset \alpha$ 가 되므로 두 절단 $\alpha , \beta$ 가 주어지면 $\alpha \leq \beta  \lor \alpha \geq \beta$ 이다. ■ 
+    $$ \alpha < \beta $$
+
+    로 표기한다. 
+
+- $\forall \alpha , \beta \in \R$ 에 대하여 다음 중 한 명제만 성립한다. 
+
+    $$ \alpha > \beta , \qquad \alpha = \beta , \qquad \alpha < \beta $$
+
+    - 증명 
+
+        만약 $\beta \subset \alpha$ 이면 $p \not \in \beta$ 인 $p \in \alpha$ 가 존재한다. 이때 $q \in \beta$ 이면 $p \not\in \beta$ 로부터 $q<p$ 임을 알 수 있으므로 $q \in \alpha$ 이다. 
+
+        즉, $\alpha \subset \beta$ 가 아니면 $\beta \subset \alpha$ 가 되므로 두 절단 $\alpha , \beta$ 가 주어지면 $\alpha \leq \beta  \lor \alpha \geq \beta$ 이다. ■ 
+
+    - 이 정리는 양의 실수 $P _{\R} = \{\alpha \in \R : \alpha > 0 ^{*}\}$ 가 순서체의 조건 2), 3) 을 만족함을 말해준다. 
 
 - 그냥, 어떤 절단들이 주어지면 최소상계가 더 오른쪽에 주어진 절단이 왼쪽의 절단을 전부 다 포함한다는 것을 떠올리면 된다. 이것이 아닐 경우 두 절단은 서로 같다.
-
-- 이 정리는 양의 실수 $P _{\R} = \{\alpha \in \R : \alpha > 0 ^{*}\}$ 가 순서체의 조건 2), 3) 을 만족함을 말해준다. 
 
 !!! tldr ""
 
@@ -1247,5 +1253,77 @@
     $$\delta \geq \alpha$$
     
     이것은 명백하게 $\alpha$ 가 상한임을 말해준다. ■ 
+
+!!! tldr ""
+
+    실수의 더하기 : $\alpha , \beta \in \R$ 에 대하여 
+
+    $$ \alpha + \beta = \{s + t \in \mathbb{Q} : s \in \alpha , t \in \beta \} $$
+
+    이다. 
+
+- $\alpha + \beta \in \R$ 이다. 
+
+    - 이는 두 절단을 더한 결과도 절단임을 보증한다. 이로써 실수의 더하기는 닫혀있다고 할 수 있다. 즉, 잘 정의되어있다.
+
+    - 증명 
+
+        $\alpha + \beta \neq \varnothing$ 은 자명하다. $u \not\in \alpha , v \not\in \beta$ 에 이면 임의의 $s \in \alpha , t \in \beta$ 에 대하여 $u+v>s+t$ 인데 이는 임의의 $r \in \alpha + \beta$ 에 대하여 $u+v > r$ 라는 말이다. 그러므로 $u + v \not\in \alpha + \beta$ 이고, $\alpha + \beta \neq \mathbb{Q}$ 이다. 이로써 절단의 조건 1) 이 증명되었다.
+
+        이제 $p \in \alpha + \beta$ 라고 하자. 그러면 $s \in \alpha , t \in \beta$ 에 대하여 $p = s + t$ 이다. 
+
+        $q < p$ 이면 
+
+        $$ q < p = s + t \iff  q - t < s, s \in \alpha $$
+
+        에서 $q - t \in \alpha$ 이고 $t \in \beta$ 이므로 
+        
+        $$q = (q - t)+t \in \alpha + \beta$$
+        
+        가 성립한다. 그러므로 절단의 조건 2) 가 증명되었다.
+
+        이때 $s < r$ 인 $r \in \alpha$ 를 잡으면 $p < r + t$ 이고 $r+t \in \alpha + \beta$ 이므로 절단의 조건 3) 이 증명되었다. ■ 
+    
+- 실수의 더하기 연산은 체의 조건 1) 결합법칙과 체의 조건 4) 교환법칙을 만족한다.
+
+    - 증명
+
+- $0 ^{*} = \{p \in \mathbb{Q} : p<0\} \in \R$ 은 더하기의 항등원이다.
+
+    - 증명 
+
+        $\forall \alpha \in \R, \alpha + 0 ^{*} = \alpha$ 임을 보이자. 
+
+        먼저 $r \in \alpha , s \in 0 ^{*}$ 에 대하여 $r + s < r$ 이므로(*$s$ 는 음수인 유리수임이 자명하기 때문*)  $r+s \in \alpha$ 이고(*절단의 조건 2) 에 의하여*), (*이는 절단 $\alpha + 0 ^{*}$ 의 원소가 $\alpha$ 에 속한다는 것이므로*) 
+        
+        $$ \alpha + 0 ^{*} \subset \alpha \tag{1} $$
+        
+        이다. $p \in \alpha$ 이면 (*절단의 조건 3) 에 의하여*) $p < r$ 인 $r \in \alpha$ 가 존재한다. 그러면 $p - r \in  0 ^{*}$ 이므로 (*$r$ 은 $\alpha$ 의 원소, $p-r$ 은 $0 ^{*}$ 의 원소이므로*)
+
+        $$ p = r + (p-r) \in \alpha + 0 ^{*} $$
+
+        이다. 그러므로 
+        
+        $$ \alpha \subset \alpha + 0 ^{*} \tag{2} $$
+
+        이다. 그러면 최종적으로 $(1), (2)$ 에 의하여 
+
+        $$ \therefore \alpha + 0 ^{*} = \alpha $$
+
+        이다.
+
+!!! tldr ""
+
+    $\R$ 은 순서체이다. 
+
+- $\R$ 은 체의 조건 1) 의 첫째 명제를 만족시킨다.
+
+    - 증명
+
+        만약 $\alpha > 0 ^{*}$ 이면 (*양수인*) $p \in \alpha \text{ \textbackslash }0 ^{*}$ 을 택할 수 있다. 이는 $0 \leq p, p \in \alpha$ 이므로 (*절단의 조건 2) 에 의하여*) $0 \in \alpha$ 이다. 반대로 $0 \in \alpha$ 이면 (*절단의 조건 2) 에 의하여*) $p < 0 \implies p \in \alpha$ 인데 (*이는 절단 $\alpha$ 가 $0$ 을 포함하면서 아래로 무계인데 $0 ^{*}$ 는 $0$ 을 포함하지 않는 절단이므로*) 이는 $0 ^{*} < \alpha$ 임을 뜻한다. 그러므로 
+
+        $$ 0 ^{*} < \alpha \iff 0 \in \alpha $$
+
+        이다. 이 결과로 순서체의 조건 1) 의 첫째명제 $a, b \in P \implies a + b \in P$ 가 성립됨을 바로 알 수 있다. 어떤 절단 $a,b$ 가 $a > 0 ^{*} \land b > 0^{*}$ 이면 $0 \in a \land 0 \in b$ 이므로 $a > 0, b > 0$ 이기 때문이다. ■ 
 
 # 코시 수열을 기반으로 정의하는 실수
