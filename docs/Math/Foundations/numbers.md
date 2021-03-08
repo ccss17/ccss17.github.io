@@ -1094,9 +1094,9 @@
 
     1. $\alpha \neq \varnothing , \alpha \neq \mathbb{Q}$
 
-    2. $p \in \alpha , q \in \mathbb{Q}, q < p \to q \in \alpha$
+    2. $p \in \alpha , q \in \mathbb{Q}, q < p \to q \in \alpha$ (아래로 무계)
 
-    3. $p \in \alpha \to (\exists r \in \alpha , p < r)$
+    3. $p \in \alpha \to (\exists r \in \alpha , p < r)$ (최댓값이 존재하지 않음)
 
     를 만족하면 데데킨트 절단이라고 한다.
 
@@ -1180,7 +1180,7 @@
 
     이로써 모든 절단을 곧 모든 유리수와 모든 무리수로 대응시키는 전단사 함수를 만들 수 있다(*내 생각이라서 증명 필요*). 그러므로 실수(유리수와 무리수)를 데데킨트 절단으로 구성할 수 있다는 것이다. 
 
-- 양의 실수를 $0 ^{*} = \{p \in \mathbb{Q} : p < r\}$ 에 대하여
+- 양의 실수를 $0 ^{*} = \{p \in \mathbb{Q} : p < 0\}$ 에 대하여
 
     $$ P _{\R} = \{\alpha \in \R : \alpha > 0 ^{*}\} $$
 
@@ -1212,14 +1212,40 @@
 
     $A \neq \varnothing$ 인 집합 $A \subset \R$ 가 위로 유계이면 $A$ 는 최소상계를 갖는다. 
 
+- 실수 $\R$ 을 데데킨트 절단 전체의 모임으로 정의했기 때문에 $r \in \R$ 은 절단 중 하나라고 생각하면 되고, $A \subset \R$ 은 몇몇 절단의 모임이라고 생각하면 편하다. 
+
 - 증명 
+
+    (*$A$: 실수의 부분집합. 즉, 절단들의 모임. 절단은 아래로 무계인 유리수 집합.*)
 
     $A$ 가 위로 유계일 때, 즉 상계를 가질 때 $\alpha  = \bigcup_{}^{}\{\beta \in A\}$ 가 $A$ 의 최소상계임을 보이려 한다. 
 
-    먼저 $\alpha \subset \mathbb{Q}$ 가 절단임을 보이자. $\beta \in A$ 를 하나 잡으면 $\alpha \supset \beta \neq \varnothing$ 이고 
+    (*$\alpha$: 실수의 부분집합의 합집합. 즉, 하나의 절단.*)
 
+    먼저 $\alpha \subset \mathbb{Q}$ 가 절단임을 보이자. $\beta \in A$ 를 하나 잡으면 $\alpha \supset \beta \neq \varnothing$ 이고, $A$ 의 상계 $\gamma \in \R$ 를 하나 잡으면 $\alpha \subset \gamma \subsetneq \mathbb{Q}$ 이다. (*왜냐하면 절단이란 최댓값을 갖지 않고 아래로 무계인 유리수 집합이므로 $\bigcup_{}^{}\{\beta \in A\}$ 는 $A$ 에 속한 실수 중 가장 큰 실수, 즉 가장 우측에 수직선을 분할한 절단으로 여겨진다. 이는 모든 실수가 곧 절단이고, 그 절단들에 합집합 연산을 하면 수직선을 가장 오른쪽에 분할한 절단이 다른 모든 절단을 집어삼키기(?) 때문이다.*)
 
+    만약 $p \in \alpha$ 이면 $p  \in \beta$ 인 $\beta \in A$ 가 존재한다. (*즉, $\alpha$ 라는 절단은 곧 유리수 집합이므로 $\alpha$ 에 속한 유리수가 곧 $\beta$ 에도 속하는 절단 $\beta$ 가 $A$ 에 존재한다는 것.*) 
+    
+    이때 $q < p$ 이면 $q \in \beta \subset \alpha$ 이므로 절단의 조건 2) 가 $\alpha$ 에 성립함이 증명된다.
 
+    또한 $p < q$ 인 $q \in \beta$ 를 잡으면 $q \in \alpha$ 이므로 절단의 조건 3) 이 $\alpha$ 에 성립하고, 그러므로 
+    
+    $$\alpha \in \R$$
+    
+    이다.
 
+    이제 $\alpha$ 가 $A$ 의 최소상계임을 보이자. 먼저 $\alpha$ 가 $A$ 의 상계임은 자명하다. (*상계의 정의에 따라 모든 $A$ 의 원소 $a$ 가 $a \leq \alpha$ 를 만족하기 때문.*) 이제 $\alpha$ 가 상계이지만 최소상계가 아니라고 가정하고 $\delta$ 를 최소상계라고 두자. 즉, 
+    
+    $$\delta < \alpha$$
+    
+    와 같이 두자. 그러면 $\delta \subsetneq \alpha$ 이므로 유리수 $r \in \alpha \text{ \textbackslash }\delta$ 가 존재한다. 이때 $r \in \alpha$ 로부터 $r \in \beta$ 인 $\beta \in A$ 가 존재한다. 그렇다면 $r \in \beta \land r \not\in \delta \implies \beta \not \leq \delta$ 이고 정리 
+
+    "$\forall \alpha , \beta \in \R$ 에 대하여 다음 중 한 명제만 성립한다. $\alpha > \beta ,  \alpha = \beta ,  \alpha < \beta$"
+
+    에 의하여 $\delta < \beta$ 이다. 그런데 $\beta \in A$ 이므로 $\delta$ 는 자명하게 $A$ 의 최소상계가 아니다. 이는 가정 "$\delta$ 가 최소상계이다" 에 모순이므로 $\delta$ 가 $A$ 의 최소상계라면 
+    
+    $$\delta \geq \alpha$$
+    
+    이것은 명백하게 $\alpha$ 가 상한임을 말해준다. ■ 
 
 # 코시 수열을 기반으로 정의하는 실수
