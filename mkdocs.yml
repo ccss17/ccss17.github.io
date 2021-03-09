@@ -16,8 +16,15 @@ nav:
     - BlueBorne: paper/blueborne.md
     - Meltdown: paper/meltdown.md
   - Project:
+    - nonogram: project/nonogram.md
+    - WICWIU: project/WICWIU.md
+    - ProgrammerBase: project/ProgrammerBase.md
     - bof: project/bof.md
     - security-tutorial: project/security-tutorial.md
+    - dotfiles: project/dotfiles.md
+    - auto-connect-raspberry: project/auto-connect-raspberry.md
+    - kill-idle-tty: project/kill-idle-tty.md
+    - standalone: project/standalone.md
   - Math: 
     - 수학기초론: 
       - 논리학: Math/Foundations/logic.md
