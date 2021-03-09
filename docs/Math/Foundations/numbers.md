@@ -1424,15 +1424,15 @@
 
 !!! tldr ""
 
-실수의 곱하기 : 양의 실수 $\alpha , \beta \in P _{\R}$ 에 대하여 
+    실수의 곱하기 : 양의 실수 $\alpha , \beta \in P _{\R}$ 에 대하여 
 
-$$ \alpha \beta  = \{p \in \mathbb{Q} : p \leq rs \text{ 인 } r \in \alpha \cap P _{\mathbb{Q}}, s \in \beta \cap P _{\mathbb{Q}} \text{ 가 존재한다}\} $$
+    $$ \alpha \beta  = \{p \in \mathbb{Q} : p \leq rs \text{ 인 } r \in \alpha \cap P _{\mathbb{Q}}, s \in \beta \cap P _{\mathbb{Q}} \text{ 가 존재한다}\} $$
 
-로 정의하고, 일반적인 곱하기를 임의의 실수 $\forall \alpha , \beta \in \R$ 에 대하여 
+    로 정의하고, 일반적인 곱하기를 임의의 실수 $\forall \alpha , \beta \in \R$ 에 대하여 
 
-$$ \alpha \beta = \begin{cases} 0 ^{*} &\alpha = 0 ^{*} \lor \beta = 0 ^{*}\\ -(-\alpha )\beta  &\alpha \in -P _{\R}, \beta \in P _{\R}\\ -\alpha (-\beta)  &\alpha \in P _{\R}, \beta \in -P _{\R}\\ (-\alpha )(-\beta)  &\alpha \in -P _{\R}, \beta \in -P _{\R}\\ \end{cases} $$
+    $$ \alpha \beta = \begin{cases} 0 ^{*} &\alpha = 0 ^{*} \lor \beta = 0 ^{*}\\ -(-\alpha )\beta  &\alpha \in -P _{\R}, \beta \in P _{\R}\\ -\alpha (-\beta)  &\alpha \in P _{\R}, \beta \in -P _{\R}\\ (-\alpha )(-\beta)  &\alpha \in -P _{\R}, \beta \in -P _{\R}\\ \end{cases} $$
 
-와 같이 정의한다. 
+    와 같이 정의한다. 
 
 - $\alpha , \beta \in P _{\R}$ 에 대하여 $\alpha \beta \in \R$ 이다. 
 
