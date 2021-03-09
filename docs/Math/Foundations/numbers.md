@@ -1350,6 +1350,8 @@
     
 - 실수의 더하기의 역원이 존재한다. 
 
+    - 실수 $\alpha$ 의 더하기의 역원을 $-\alpha$ 라고 한다.
+
     - 증명 
 
         각 $\alpha \in \R$ 에 대하여 
@@ -1419,5 +1421,33 @@
         $$ 0 ^{*} \subset \alpha + \beta $$
 
         이며, 이로써 모든 증명이 끝났다. ■ 
+
+!!! tldr ""
+
+    실수의 곱하기 : 양의 실수 $\alpha , \beta \in P _{\R}$ 에 대하여 
+
+    $$ \alpha \beta  = \{p \in \mathbb{Q} : p \leq rs \text{ 인 } $r \in \alpha \cap P _{\mathbb{Q}}, s \in \beta \cap P _{\mathbb{Q}} \text{ 가 존재한다}\} $$
+
+    로 정의하고, 일반적인 곱하기를 임의의 실수 $\forall \alpha , \beta \in \R$ 에 대하여 
+
+    $$ \alpha \beta = \begin{cases} 0 ^{*} &\alpha = 0 ^{*} \lor \beta = 0 ^{*}\\ -(-\alpha )\beta  &\alpha \in -P _{\R}, \beta \in P _{\R}\\ -\alpha (-\beta)  &\alpha \in P _{\R}, \beta \in -P _{\R}\\ (-\alpha )(-\beta)  &\alpha \in -P _{\R}, \beta \in -P _{\R}\\ \end{cases} $$
+
+    와 같이 정의한다. 
+
+- $\alpha , \beta \in P _{\R}$ 에 대하여 $\alpha \beta \in \R$ 이다. 
+
+    - 증명 
+
+        $0 \in \alpha , 0 \in \beta \implies 0 \in \alpha \beta \implies \alpha \beta \neq \varnothing$ 이므로 절단의 조건 1) 의 첫째 명제가 증명되었다. 
+
+        $u \not\in \alpha , v \not\in \beta \to uv \not\in \alpha \beta \implies \alpha \beta \neq \mathbb{Q}$ 이므로 절단의 조건 1) 의 둘째 명제가 증명되었다. 실제로 $\forall s \in \alpha , t \in \beta, s < u \land t < u \implies st < uv$ 이다. 
+
+        절단의 조건 2), 3) 은 정의에 의하여 자명하다. 그러므로 
+
+        $$ \therefore \alpha \beta \in \R $$
+
+        이다. ■ 
+
+        특히, 순서체의 조건 1) 의 둘째 명제도 증명되었다. 
 
 # 코시 수열을 기반으로 정의하는 실수
