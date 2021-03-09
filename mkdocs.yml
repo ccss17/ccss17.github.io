@@ -16,7 +16,8 @@ nav:
     - BlueBorne: paper/blueborne.md
     - Meltdown: paper/meltdown.md
   - Project:
-    - 임시: project/temp.md
+    - bof: project/bof.md
+    - security-tutorial: project/security-tutorial.md
   - Math: 
     - 수학기초론: 
       - 논리학: Math/Foundations/logic.md
@@ -114,12 +115,6 @@ nav:
     - 설치: archlinux/install.md
     - VM 설치: archlinux/vminstall.md
   - Tex 수학기호: tex.md
-  # - 강의메모:
-  #   - 딥러닝 응용: lecture/20-2/dl.md
-  #   - 컴퓨터과학적 사고: lecture/20-2/cthink.md
-  #   - Programming Language: lecture/20-2/pl.md
-  #   - Korean History: lecture/20-2/koreahistory.md
-  #   - Calculus 2: lecture/20-2/cal2.md
   - Algorithm:
     - 시간복잡도: Algorithm/timecomplexity.md
     - Leetcode: Algorithm/leetcode.md
