@@ -105,11 +105,14 @@ nav:
     - DL from stratch 메모3: AI/dl_from_scratch3.md
     - DL from stratch 메모4: AI/dl_from_scratch4.md
     - 인공지능 메모3: AI/ai.md
-  - Computer: 
+  - Tools: 
     - Makefile: Computer/makefile.md
     - Git: Computer/git.md
     - Docker: Computer/docker.md
     - CUDA: Computer/cuda.md
+  - ArchLinux: 
+    - 설치: archlinux/install.md
+    - VM 설치: archlinux/vminstall.md
   - Tex 수학기호: tex.md
   # - 강의메모:
   #   - 딥러닝 응용: lecture/20-2/dl.md
