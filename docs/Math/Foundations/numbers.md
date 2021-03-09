@@ -1074,6 +1074,28 @@
 
 !!! tldr ""
 
+    아르키메데스의 성질(Archimedean property) : 전순서를 가지는 군 $G$ 의 양의 원소 $x, y$ 에 대하여 
+
+    $$ y < n \cdot x $$
+
+    를 만족하는 $n \in \N$ 이 존재한다.
+
+- 즉, 아무리 작은 원소라도 그것을 유한번 더하여 어떤 원소보다 커질 수 있다면 아르키메데스 성질을 가지고 있다는 것이다. 
+
+- 전순서를 가지는 군 $G$ 의 양의 원소 $x, y$ 에 대하여 
+
+    $$ \forall n \in \N, nx < y $$
+
+    이면 $x$ 는 $y$ 의 무한소(infinitesimal) 이며, $y$ 는 $x$ 의 무한(infinite)이다. 즉, 무한소와 무한가 원소로써 존재하지 않는 군 $G$ 는 아르키메데스의 성질을 가진다는 것이다. 
+
+- 예시 
+
+    $\mathbb{Z}, \mathbb{Q}, \R$ 는 아르키메데스 성질을 만족한다.
+
+    초실수체 $^{*}\R$ 은 아르키메데스의 체가 아니다.
+
+!!! tldr ""
+
     유리수체는 아르키메데스의 성질을 만족한다. 
 
 - 증명 
@@ -1330,10 +1352,72 @@
 
     - 증명 
 
-        $\alpha \in \R$ 에 대하여 
+        각 $\alpha \in \R$ 에 대하여 
 
         $$ \beta = \{p \in \mathbb{Q} : \exists r \in \mathbb{Q}, r > p \land -r \not\in \alpha \} $$
 
         라 두고 $\beta \in \R$ 과 $\alpha + \beta = 0 ^{*}$ 임을 보일 것이다. 
+        
+        이때 조건 $-r \not\in \alpha$ 은 $-r$ 이 절단 $\alpha$ 의 오른쪽에 존재한다는 것이다. 그렇다면 절단 $\alpha$ 오른쪽을 뜻하는 $\mathbb{Q}\text{ \textbackslash }\alpha$ 에 대하여 유리수 $s \in \mathbb{Q}\text{ \textbackslash }\alpha$ 를 택하면 이 $s$ 는 $-r$ 과 같다고 생각할 수 있으므로 $-s > p$ 인 $p \in \mathbb{Q}$ 를 택하면 $p \in \beta$ 이다. (*이로써 절단의 조건 1) 의 첫째 명제 $\beta \neq \varnothing$ 가 증명되었다.*)
+
+        또한 $q \in \alpha$ 에 대하여 $-q$ 보다 큰 유리수 $r$ 을 생각할 수 있다. 그러면 
+
+        $$ r > -q \implies -r < q \implies -r \in \alpha $$
+
+        가 되는데, 이러한 유리수 $r$ 은 $\beta$ 의 조건 $-r \not\in \alpha$ 를 만족하지 않으므로 
+
+        $$ -q \not\in \beta $$
+
+        이다. (*이로써 절단의 조건 1) 의 둘째 명제 $\beta \neq \mathbb{Q}$ 가 증명되었다.*)
+        
+        이제 $p \in \beta$ 라 하고 $r > p, -r \not\in \alpha$ 인 $r \in \mathbb{Q}$ 를 잡자. 이때 $q < p \to r > q, -r \not\in \alpha$ 이므로 $q \in \beta$ 이다. (*이로써 절단의 조건 2) 아래로 무계가 증명되었다.*)
+        
+        만약 $s = \dfrac{p+r}{2}$ 라 두면
+
+        $$ r > p \iff 2r > p + r \iff r > \dfrac{p+r}{2} = s $$
+
+        임에 따라 $r > s, -r \not\in \alpha$ 이므로 $s \in \beta$ 이고 $p<s$ 이다. (*이로써 절단의 조건 3) 최댓값이 없음이 증명되었다.*) 그러므로 $\beta$ 가 절단이라는 것, 즉 
+
+        $$ \beta \in \R $$
+
+        이 증명되었다. □ 
+
+        이제 $\alpha + \beta = 0 ^{*}$ 을 보일텐데, $q \in \alpha , p \in \beta$ 이면 $r > p, -r \not\in \alpha$ 인 $r \in \mathbb{Q}$ 이 다음과 같이 존재한다.
+
+        ![image](https://user-images.githubusercontent.com/16812446/110421597-2a439080-80e1-11eb-9e50-53f0d424795d.png)
+
+        ![image](https://user-images.githubusercontent.com/16812446/110421731-6aa30e80-80e1-11eb-8c98-a05c5b3a0232.png)
+
+        그러면 $q \in \alpha , -r \not\in \alpha \implies q < -r$ 이다. 그러므로 
+
+        $$ -(q + p) = (r - p) + (-r - q) > 0 $$
+
+        이고, (*왜냐하면 $0 < -r -q, r - p > 0$ 이기 때문*) 
+        
+        $$ \iff  q + p < 0 $$
+
+        이므로 $\alpha + \beta \subset 0 ^{*}$ 이다. □ 
+        
+        이제 $0 ^{*} \subset \alpha + \beta$ 를 보이면 모든 증명이 끝난다. 이를 위하여 $s \in 0 ^{*}$ 에 대한 $t = \dfrac{-s}{2} > 0$ 인 $t \in \mathbb{Q}$ 에 대하여 
+
+        $$ A = \{n \in \mathbb{Z} : nt \in \alpha \} $$
+
+        라 두자. 이때 $A$ 가 위로 유계가 아니라고 가정하자. (*하지만 집합 $A$ 의 정수 $n$ 는 절단 $\alpha$ 에 $nt$ 가 속할 때 정의되므로 $n$ 에 상계가 있을 것으로 보인다.*) 그러면 정리 "유리수체는 아르키메데스의 성질을 만족한다." 에 의하여 $\forall q \in \mathbb{Q}, q < mt$ 인 $m \in \N$ 이 존재한다. 그런데 $A$ 가 위로 무계라고 가정하였으므로 $m$ 은 $A$ 의 상계가 아니고, $m < n$ 인 $n \in A$ 이 존재한다. 결국 $q < nt$ 이고, $nt \in \alpha$ 이므로 
+        
+        $$\forall q \in \mathbb{Q}, q \in \alpha \implies \alpha = \mathbb{Q}$$
+
+        가 되어 모순이다. 그러므로 $A$ 는 위로 유계이고, 정리 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다" 에 의하여 최대원소 $n_0 \in A$ 를 가진다. 즉, $n_0t \in \alpha \land (n_0+1)t \not\in \alpha$ 이다. 이제 
+
+        $$ r = s - n_0 t = -(n_0 + 2)t $$
+
+        라 두면, $-(n_0+1)t > r \land (n_0+1)t \not\in \alpha$ 이므로 $r \in \beta$ 임을 알 수 있다. 따라서 $s \in 0 ^{*}$ 이
+
+        $$ s = n_0t + r \in \alpha + \beta $$
+
+        의 관계를 가지므로 $\forall s \in 0 ^{*}, s \in \alpha + \beta$ 를 알 수 있고, 이에 따라 
+
+        $$ 0 ^{*} \subset \alpha + \beta $$
+
+        이며, 이로써 모든 증명이 끝났다. ■ 
 
 # 코시 수열을 기반으로 정의하는 실수
