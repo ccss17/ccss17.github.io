@@ -1334,20 +1334,6 @@
 
         이다.
 
-!!! tldr ""
-
-    $\R$ 은 순서체이다. 
-
-- $\R$ 은 체의 조건 1) 의 첫째 명제를 만족시킨다.
-
-    - 증명
-
-        만약 $\alpha > 0 ^{*}$ 이면 (*양수인*) $p \in \alpha \text{ \textbackslash }0 ^{*}$ 을 택할 수 있다. 이는 $0 \leq p, p \in \alpha$ 이므로 (*절단의 조건 2) 에 의하여*) $0 \in \alpha$ 이다. 반대로 $0 \in \alpha$ 이면 (*절단의 조건 2) 에 의하여*) $p < 0 \implies p \in \alpha$ 인데 (*이는 절단 $\alpha$ 가 $0$ 을 포함하면서 아래로 무계인데 $0 ^{*}$ 는 $0$ 을 포함하지 않는 절단이므로*) 이는 $0 ^{*} < \alpha$ 임을 뜻한다. 그러므로 
-
-        $$ 0 ^{*} < \alpha \iff 0 \in \alpha $$
-
-        이다. 이 결과로 순서체의 조건 1) 의 첫째명제 $a, b \in P \implies a + b \in P$ 가 성립됨을 바로 알 수 있다. 어떤 절단 $a,b$ 가 $a > 0 ^{*} \land b > 0^{*}$ 이면 $0 \in a \land 0 \in b$ 이므로 $a > 0, b > 0$ 이기 때문이다. ■ 
-    
 - 실수의 더하기의 역원이 존재한다. 
 
     - 실수 $\alpha$ 의 더하기의 역원을 $-\alpha$ 라고 한다.
@@ -1438,6 +1424,42 @@
 
     - 증명 
 
+        (아래에서 $\R$ 이 순서체임을 증명하는 부분에 있다.)
+
+- 곱하기에 대한 역원이 존재한다. 
+
+    - 증명 
+
+        각 $\alpha \in P _{\R}$ 에 대하여 
+
+        $$ \gamma = 0 ^{*} \cup \{0\} \cup \{q \in P _{\mathbb{Q}} : r > q, \dfrac{1}{r} \not\in \alpha \text{ 인 } r \in P _{\mathbb{Q}} \text{ 이 존재한다}\} $$
+
+        라 정의하면 $\gamma$ 가 절단이고 $\alpha \gamma = 1 ^{*}$ 임을 보일 수 있지만, 조금 시간이 흐른 후 보이겠다. 
+
+        이제 $\alpha \in -P _{\R}$ 에 대하여 
+
+        $$ \alpha \bigg (- \dfrac{1}{- \alpha }\bigg ) = - \alpha \bigg (\dfrac{1}{- \alpha }\bigg ) = (- \alpha )\bigg (\dfrac{1}{- \alpha }\bigg ) = 1 ^{*} $$
+
+        이므로 최종적으로 $\alpha \neq 0$ 인 $\alpha \in \R$ 는 곱하기의 역원을 가진다. 
+
+!!! tldr ""
+
+    $\R$ 은 정리 "$A \neq \varnothing$ 인 집합 $A \subset \R$ 가 위로 유계이면 $A$ 는 최소상계를 갖는다" 를 만족시키는 순서체이다. 
+
+- $\R$ 은 순서체의 조건 1) 의 첫째 명제를 만족시킨다.
+
+    - 증명
+
+        만약 $\alpha > 0 ^{*}$ 이면 (*양수인*) $p \in \alpha \text{ \textbackslash }0 ^{*}$ 을 택할 수 있다. 이는 $0 \leq p, p \in \alpha$ 이므로 (*절단의 조건 2) 에 의하여*) $0 \in \alpha$ 이다. 반대로 $0 \in \alpha$ 이면 (*절단의 조건 2) 에 의하여*) $p < 0 \implies p \in \alpha$ 인데 (*이는 절단 $\alpha$ 가 $0$ 을 포함하면서 아래로 무계인데 $0 ^{*}$ 는 $0$ 을 포함하지 않는 절단이므로*) 이는 $0 ^{*} < \alpha$ 임을 뜻한다. 그러므로 
+
+        $$ 0 ^{*} < \alpha \iff 0 \in \alpha $$
+
+        이다. 이 결과로 순서체의 조건 1) 의 첫째명제 $a, b \in P \implies a + b \in P$ 가 성립됨을 바로 알 수 있다. 어떤 절단 $a,b$ 가 $a > 0 ^{*} \land b > 0^{*}$ 이면 $0 \in a \land 0 \in b$ 이므로 $a > 0, b > 0$ 이기 때문이다. ■ 
+
+- $\alpha , \beta \in P _{\R}$ 에 대하여 $\alpha \beta \in \R$ 이다. 
+
+    - 증명 
+
         $0 \in \alpha , 0 \in \beta \implies 0 \in \alpha \beta \implies \alpha \beta \neq \varnothing$ 이므로 절단의 조건 1) 의 첫째 명제가 증명되었다. 
 
         $u \not\in \alpha , v \not\in \beta \to uv \not\in \alpha \beta \implies \alpha \beta \neq \mathbb{Q}$ 이므로 절단의 조건 1) 의 둘째 명제가 증명되었다. 실제로 $\forall s \in \alpha , t \in \beta, s < u \land t < u \implies st < uv$ 이다. 
@@ -1448,6 +1470,27 @@
 
         이다. ■ 
 
-        특히, 순서체의 조건 1) 의 둘째 명제도 증명되었다. 
+        특히, 순서체의 조건 1) 의 둘째 명제 "$a,b \in P, ab \in P$ (곱하기에 대하여 닫혀있음)" 도 증명되었다. 
+    
+!!! tldr ""
+
+    $\forall r, s \in \mathbb{Q}$ 에 대하여 
+
+    $$ r = s \iff  r ^{*} = s ^{*} $$
+
+    $$ (r + s ) ^{*} = r ^{*} + s ^{*} $$
+
+    $$ (rs) ^{*} = r ^{*} s ^{*} $$
+
+    $$ r \in P _{\mathbb{Q}} \iff r ^{*} \in P _{\R} $$
+
+    이 성립한다.
+
+- 이 정리는 
+
+    $$ r \mapsto r ^{*} : \mathbb{Q} \to \R $$
+
+    이 연산과 순서를 보존하는 단사함수임을 말해준다. 
+
 
 # 코시 수열을 기반으로 정의하는 실수
