@@ -16,23 +16,23 @@ nav:
     - BlueBorne: paper/blueborne.md
     - Meltdown: paper/meltdown.md
   - Project:
-    - ProgrammerBase: project/ProgrammerBase.md
     - security-tutorial: project/security-tutorial.md
-    - WICWIU: project/WICWIU.md
+    - genie: project/genie.md
+    - homework: project/homework.md
     - nonogram: project/nonogram.md
     - ddtector: project/ddtector.md
     - older-glibc: project/older-glibc.md
-    - bof: project/bof.md
-    - genie: project/genie.md
-    - homework: project/homework.md
+    - justforfun: project/justforfun.md
     - test_virt_memory: project/test_virt_memory.md
     - dogdoor: project/dogdoor.md
-    - justforfun: project/justforfun.md
+    - servercat: project/servercat.md
+    - WICWIU: project/WICWIU.md
+    - ProgrammerBase: project/ProgrammerBase.md
+    - bof: project/bof.md
     - dotfiles: project/dotfiles.md
     - auto-connect-raspberry: project/auto-connect-raspberry.md
     - kill-idle-tty: project/kill-idle-tty.md
     - standalone: project/standalone.md
-    - servercat: project/servercat.md
   - Math: 
     - 수학기초론: 
       - 논리학: Math/Foundations/logic.md

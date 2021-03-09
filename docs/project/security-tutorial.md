@@ -10,7 +10,7 @@
 
 이후 Rensselaer 대학에서 만든 http://security.cs.rpi.edu/courses/binexp-spring2015 라는 리버싱 문제를 풀어보면서 자연스럽게 리버싱을 익히고, 제가 직접 만든 [CTF](https://github.com/ccss17/bof) 문제들을 풀어보면서 자연스럽게 어떻게 취약점이 발생하고 해킹이 이루어질 수 있는지 이해하게 됩니다.
 
-마지막으로 이러한 온실 속 화초같은 취약점에서 벗어나서 현실 세계에서 어떻게 취약점이 발생하는지 [Meltdown](../paper/meltdown/) 과 [Blueborne](../paper/blueborne/) 등을 살펴보게 됩니다. 놀라운 것은 이 2주간의 가이드를 통하여 이 2개의 현실세계의 취약점을 잘 이해할 수 있게 된다는 것입니다. 
+마지막으로 이러한 온실 속 화초같은 취약점에서 벗어나서 현실 세계에서 어떻게 취약점이 발생하는지 [Meltdown](../../paper/meltdown/) 과 [Blueborne](../../paper/blueborne/) 등을 살펴보게 됩니다. 놀라운 것은 이 2주간의 가이드를 통하여 이 2개의 현실세계의 취약점을 잘 이해할 수 있게 된다는 것입니다. 
 
 또한 제가 만든 CTF 프로젝트 [bof](bof.md) 에서 언급하였듯이 (취약점 &rarr; 보안기법 &rarr; 취약점 &rarr; 보안기법 &rarr; ...) 의 싸이클을 볼 수 있는 통찰력을 갖게 합니다.
 
