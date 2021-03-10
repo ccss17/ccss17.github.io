@@ -1492,5 +1492,112 @@
 
     이 연산과 순서를 보존하는 단사함수임을 말해준다. 
 
-
 # 코시 수열을 기반으로 정의하는 실수
+
+!!! tldr ""
+
+    수열(sequence) : 집합 $X$ 에 대한 함수 
+
+    $$ x : \N \to X $$
+
+    이다. 
+
+!!! tldr ""
+
+    수렴(convergence) : 순서체 $F$ 의 수열 $x : \N \to F$ 와 $a \in F$ 가 주어졌을 때 $\forall e \in P _{F}$ 에 대하여 
+
+    $$ i \geq N \implies |x(i) - a| < e $$
+
+    을 만족하는 $N \in \N$ 이 존재하면 $x$ 가 $a \in F$ 로 수렴한다고 한다.
+
+- 이 정의에서 $\forall e \in P _{F}$ 의 의미는 체 $F$ 의 양의 원소 $e$ 가 아주 아주 작은 값으로 줄어든다는 것이고, $|x(i) - a|$ 는 수열의 값 $x(i)$ 와 $a$ 와의 차이값을 뜻한다. 
+
+    그러므로 얼마나 작은 $e$ 를 가져오든지간에 
+
+    $$  |x(i) - a| < e $$
+
+    를 만족시키는 자연수 $N$ 이 존재하여 수열이 $a$ 와 $e$ 보다 가깝다는 것을 보여주는 정의이다. 이로써 이 정의는 수열 $x$ 가 $a$ 와 무한히 가까워지는 형태를 표현할 수 있는 것이다.
+
+!!! tldr ""
+
+    코시 수열(cauchy sequence) : 체 $F$ 에 대한 $\forall e \in P _{F}$ 와 수열 $x : \N \to F$ 에 대하여
+
+    $$ i,j \geq N \implies |x(i) - x(j)| < e $$
+
+    를 만족하는 자연수 $N$ 이 존재하면 $x$ 를 코시 수열이라 한다.
+
+- 유리수의 코시 수열을 기본열이라 한다. 
+
+    - 예시 
+
+        $\forall r \in \mathbb{Q}$ 와  $i \in \N$ 에 대하여 
+
+        $$ r ^{*}(i) = r $$
+
+        이라 정의하면 $r ^{*}$ 은 기본열이다.
+
+- 쉽게 말해 수열의 항들이 임의의 거리 내로 수렴해가면 코시 수열이다. 즉, 다음은 코시 수열이지만 
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Cauchy_sequence_illustration.svg/375px-Cauchy_sequence_illustration.svg.png)
+
+    다음은 코시수열이 아니다.
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Cauchy_sequence_illustration2.svg/375px-Cauchy_sequence_illustration2.svg.png)
+
+- 예시 
+
+    수열 $a_n = \sqrt[]{n}$ 은 코시 수열이다. 왜냐하면 다음과 같이 수열의 두 항의 차이값이 임의의 양수보다 작도록 수렴하기 때문이다. 
+
+    $$ a _{n+1} - a_n = \sqrt[]{n+1} - \sqrt[]{n} = \dfrac{1}{\sqrt[]{n+1} + \sqrt[]{n}} < \dfrac{1}{2 \sqrt[]{n}} $$
+
+!!! tldr ""
+
+    유계 수열(bounded sequence) : 순서체 $F$ 의 수열 $x$ 와 $i \in \N$ 에 대하여 
+
+    $$ |x(i)| \leq M $$
+
+    를 만족하는 $M \in F$ 가 있으면 $x$ 는 유계수열이다.
+
+- 순서체 $F$ 의 수열 $x : \N \to F$ 가 유계일 필요충분조건은 집합 
+
+    $$ \{x(i) \in X : i \in \N\} $$
+
+    이 위로 유계이고 동시에 아래로 유계인 것이다. 
+
+    - 증명
+
+!!! tldr ""
+
+    순서체 $F$ 의 수열 $x : \N \to F$ 가 수렴하면 코시수열이다.
+
+    또한 임의의 코시 수열은 유계이다.
+
+- 증명 
+
+    순서체 $F$ 의 수열 $x : \N \to F$ 가 $\forall e \in P _{F}$ 에 대하여 $a \in F$ 로 수렴한다고 하면
+
+    $$ i \geq N \implies |x(i) - a| < \dfrac{e}{2} $$
+
+    인 $N \in \N$ 이 존재한다. 그러면 임의의 $i, j \geq N$ 에 대하여 
+
+    $$ |x(i) - x(j)| \leq |x(i) - a| + |x(j) - a| < \dfrac{e}{2} + \dfrac{e}{2} = e $$
+
+    가 되어 $x$ 는 코시 수열이다. (*$\because$ 정리 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$"*) □ 
+
+    이제 역으로 $x$ 가 코시 수열이라고 가정하면
+
+    $$ i, j \geq N \implies |x(i) - x(j)| < 1 $$
+
+    인 $N \in \N$ 이 존재한다. 그러면 임의의 자연수 $i \geq N$ 에 대하여 
+    
+    $$|x(i) - x(N)| < 1 \iff |x(i) \leq |x(N)| + 1 $$
+
+    이다. 이제 
+
+    $$ M = \sup \{|x(0)|, |x(1)|, \dots, |x(N-1)|, |x(N)|+1\} $$
+
+    라 두면 
+
+    $$ \forall i \in \N, |x(i)| \leq M $$
+
+    이다. ■ 
