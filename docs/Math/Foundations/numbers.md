@@ -1526,16 +1526,6 @@
 
     를 만족하는 자연수 $N$ 이 존재하면 $x$ 를 코시 수열이라 한다.
 
-- 유리수의 코시 수열을 기본열이라 한다. 
-
-    - 예시 
-
-        $\forall r \in \mathbb{Q}$ 와  $i \in \N$ 에 대하여 
-
-        $$ r ^{*}(i) = r $$
-
-        이라 정의하면 $r ^{*}$ 은 기본열이다.
-
 - 쉽게 말해 수열의 항들이 임의의 거리 내로 수렴해가면 코시 수열이다. 즉, 다음은 코시 수열이지만 
 
     ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Cauchy_sequence_illustration.svg/375px-Cauchy_sequence_illustration.svg.png)
@@ -1549,6 +1539,16 @@
     수열 $a_n = \sqrt[]{n}$ 은 코시 수열이다. 왜냐하면 다음과 같이 수열의 두 항의 차이값이 임의의 양수보다 작도록 수렴하기 때문이다. 
 
     $$ a _{n+1} - a_n = \sqrt[]{n+1} - \sqrt[]{n} = \dfrac{1}{\sqrt[]{n+1} + \sqrt[]{n}} < \dfrac{1}{2 \sqrt[]{n}} $$
+
+!!! tldr ""
+
+    기본열 : 유리수의 코시 수열이다.
+
+- $\forall r \in \mathbb{Q}$ 와  $i \in \N$ 에 대하여 
+
+    $$ r ^{*}(i) = r $$
+
+    이라 정의하면 $r ^{*}$ 은 기본열이다.
 
 !!! tldr ""
 
@@ -1658,7 +1658,7 @@
 
     코시수열에 의한 실수의 구성은 이러한 모든 기본열을 통틀어서 실수(유리수와 무리수)를 구성하는 것이다.
 
-- 한편, 방금 $(1, 1.4, 1.41, 1.141, \dots)$ 이라는 기본열을 $\sqrt[]{2}$ 라는 실수로 근사시켰는데, 어떤 실수를 구성하기 위한 유리수열은 유일하지 않다. 즉, 실수 $x \in \R$ 로 수렴하는 모든 기본열이 $x$ 의 표현들이며, 이것들을 동치류로 묶어서 버리는 것이다.
+- 한편, 방금 $(1, 1.4, 1.41, 1.141, \dots)$ 이라는 기본열을 $\sqrt[]{2}$ 라는 실수로 근사시켰는데, 어떤 실수를 구성하기 위한 유리수열은 유일하지 않다. 즉, 실수 $x \in \R$ 로 수렴하는 모든 기본열이 $x$ 의 표현들이며, 이것들을 동치류로 묶어서 표현해버리는 것이다.
 
     가령 다음과 같이 실수 $\pi$ 를 구성하는 여러가지 방법이 존재한다. 
 
@@ -1672,7 +1672,7 @@
 
     위에서 보인 $4$ 가지 방법 이외에도 $\pi$ 라는 실수를 구성하는 기본열의 종류는 매우 다양하다. 가령 $(1)$ 에서 나타난 기본열 
     
-    $$ \alpha(n) = 4 \sum_{k=1}^{n} (-1) ^{n+1} \dfrac{1}{2n - 1} $$
+    $$ \alpha(n) = 4 \sum_{k=1}^{n} (-1) ^{k+1} \dfrac{1}{2k - 1} $$
 
     은 $n \to \infty \implies \alpha (n) \to \pi$ 가 되는데, 이처럼 $\pi$ 로 근사되는 모든 기본열들을 동치관계로 묶어서 그 동치류를 실수 파이($\pi$)
 
@@ -1719,6 +1719,8 @@
     $$ [\alpha ] > [\beta ] $$
 
     이다. 
+    
+- 이 순서관계도 마찬가지로 기본열의 무한항($i$ 가 무한히 커지는 것을 $\exists N \in \N, i \geq N$ 로 표현한 것)이 특정 값으로 근사되었을 때 그 차이값이 양의 유리수 $d > 0$ 보다 크다는 것으로 실수의 순서를 정의한 것으로 이해하면 된다.
 
 !!! tldr ""
 
@@ -1792,9 +1794,6 @@
 
 - $\alpha + \beta$ 는 기본열이다. 즉, 코시 수열의 덧셈은 닫혀있다.
 
-    $$ 
-    $$
-
 - 기본열 $\alpha$ 에 대하여 $(-\alpha )(i) = - \alpha (i)$ 로 정의된 유리수열 $-\alpha$ 는 기본열이다. 또한 $-\alpha$ 는 $\alpha$ 의 더하기의 역원이다.
 
     - 증명 
@@ -1805,14 +1804,21 @@
 
 - $0 ^{*}$ 가 항등원이다. 
 
-    - 코시수열로 실수를 구성할 때에는 $x^{*}$ 가 뭔지 정의하지 않았었는데, 이건 뭐지? 절단을 뜻하는 건 아닐텐데. 절단을 뜻하는건가.
+    - $0 ^{*}$ 은 기본열의 정의에서 살펴본 것처럼 
+
+        $$ 0 ^{*}(i) = 0 $$
+
+        으로 이해하면 된다.
+
+    - 증명 
 
 !!! tldr ""
 
     실수의 곱하기 : $\alpha , \beta \in \R$ 에 대하여 
 
-    $$ [\alpha ][\beta ]= [\alpha \beta ]
-    $$
+    $$ [\alpha ][\beta ]= [\alpha \beta ] $$
+
+    이다.
 
 - 두 유리수열 $\alpha, \beta : \N \to \mathbb{Q}$ 에 대하여 
 
@@ -1854,4 +1860,112 @@
 
     - 증명 
 
-        $[a] \neq 0 ^{*}$ 이면 정리 "$\forall [\alpha ], [\beta ] \in \R$ 에 대하여 $[\alpha ] > [\beta ], \qquad [\alpha ] = [\beta ], \qquad [\alpha ] < [\beta ]$ 중 오직 하나만 성립한다." 에 의하여 $[\alpha ] > 0 ^{*}$ 또는 $[\alpha ] < 0 ^{*}$ 이 둘 중 하나만 성립한다. 
+        $[a] \neq 0 ^{*}$ 이면 정리 "$\forall [\alpha ], [\beta ] \in \R$ 에 대하여 $[\alpha ] > [\beta ], [\alpha ] = [\beta ], [\alpha ] < [\beta ]$ 중 오직 하나만 성립한다." 에 의하여 $[\alpha ] > 0 ^{*}$ 또는 $[\alpha ] < 0 ^{*}$ 이 둘 중 하나만 성립한다. 그러므로 적당한 유리수 $d>0$ 와 $N_1 \in \N$ 에 대하여 
+
+        $$ i \geq N_1 \implies \alpha (i) > d $$
+
+        과 
+
+        $$ i \geq N_1 \implies \alpha (i) < -d $$
+
+        중 하나만 성립한다. 이때 기본열의 유한개의 항을 바꿔도 (*어차피 그것의 무한항이 근사되는 값은 바뀌지 않고 결국*) 그 동치류도 변하지 않으므로 그냥 
+
+        $$ \forall i \in \N, \alpha (i) \neq 0 $$
+
+        라고 가정해도 좋다. 이제 
+
+        $$ \beta : i \mapsto \dfrac{1}{\alpha (i)} : \N \to \mathbb{Q} $$
+
+        라는 유리수열을 정의하자. $\beta$ 가 기본열임을 보이면 
+
+        $$ [\alpha ][\beta ] = 1 ^{*} $$
+
+        임은 자명하기에 모든 증명이 끝난다. 먼저 $e \in P _{\mathbb{Q}}$ 에 대하여 
+
+        $$ i \geq N_2 \implies |\alpha (i) - \alpha (j)| < d ^{2}e $$
+
+        인 $N_2 \in \N$ 가 존재한다. 이때 $N = \sup \{N_1,N_2\}$ 라고 하자. 그러면 임의의 $i \geq N_1$ 에 대하여 $|\alpha (i)| > d$ 이므로 임의의 $i, j \geq N$ 에 대하여 
+
+        $$ |\beta (i) - \beta (j)| = \bigg |\dfrac{1}{\alpha (i)} - \dfrac{1}{\alpha (j)}\bigg | = \dfrac{1}{|\alpha (i)\alpha (j)|}|\alpha (i) - \alpha (j)| < \dfrac{1}{d ^{2}}d ^{2}e = e $$
+
+        이다. 그러므로 $\beta$ 는 기본열이다. ■ 
+
+!!! tldr ""
+
+    실수 집합 $\R$ 은 순서체이다.
+
+- 지금까지의 정리들을 기반으로 
+
+    $$ P _{\R} = \{[\alpha ] \in \R : [\alpha ] > 0 ^{*}\} $$
+
+    라 두면 순서체의 조건이 모두 성립한다.
+
+!!! tldr ""
+
+    두 실수 $[\alpha ], [\beta ]$ 가 $[\alpha ]>[\beta ]$ 이면 
+
+    $$ [\alpha ] > [r ^{*}] > [\beta ] $$
+
+    를 만족하는 유리수 $r \in \mathbb{Q}$ 가 존재한다. 
+
+- 증명 
+
+    관계 
+
+    $$ i \geq N_1 \implies \alpha (i) - \beta (i) > d $$
+
+    가 성립하는 $N_1 \in \N$ 과 $d > 0$ 인 $d \in \mathbb{Q}$ 가 존재한다. 또한 
+
+    $$ i,j \geq N_2 \implies |\alpha (i) - \alpha (j)| < \dfrac{1}{4}d, \quad |\beta (i) - \beta (j)| < \dfrac{1}{4}d $$
+
+    이 성립하는 $N_2 \in \N$ 가 존재한다. 이때 $N = \sup \{N_1,N_2\}$ 라 두자. 만일 $i \geq N$ 이면 
+
+    $$ \alpha (i) - \bigg (\alpha (N) - \dfrac{1}{2}d\bigg ) = \dfrac{1}{2}d + (\alpha (i) - \alpha (N)) > \dfrac{1}{4}$$
+
+    이므로 (*$-\dfrac{1}{4}d < \alpha (i) - \alpha (j) < \dfrac{1}{4}d$ 에서 $\alpha (i) - \alpha (j) > - \dfrac{1}{4}d$ 이기 때문.*) 
+
+    $$ [\alpha ] > \bigg (\alpha (N) - \dfrac{1}{2}d\bigg ) ^{*} $$
+
+    이다(*임의의 $i \geq N$ 에 대하여 기본열 $\alpha (i)$ 의 무한항의 근사가 기본열 $\bigg (\alpha (N) - \dfrac{1}{2}d\bigg )$ 의 무한항의 근사보다 크다는 사실이 도출되었기 때문*). 
+
+    또한 $i \geq N$ 에 대하여 
+
+    $$ \bigg (\alpha (N) - \dfrac{1}{2}d\bigg ) - \beta (i) = (\alpha (N) - \beta (N)) + (\beta (N) - \beta (i)) - \dfrac{1}{2}d $$
+
+    $$ > d - \dfrac{1}{4}d - \dfrac{1}{2}d = \dfrac{1}{4}d $$
+
+    이므로 
+
+    $$  \bigg (\alpha (N) - \dfrac{1}{2}d\bigg ) ^{*} > [\beta ] $$
+
+    이다. 그러므로 $\alpha (N) - \dfrac{1}{2}d \in \mathbb{Q}$ 가 존재함을 증명하고자 했던 유리수이다. ■ 
+
+!!! tldr ""
+
+    부분 수열(subsequence) : $\forall k \in \{0, 1, 2, \dots\}$ 에 대하여 $i(k) < i(k+1)$ 인 함수 $i : \N \to \N$ 와 수열 $x : i \mapsto x(i)$ 의 합성 
+
+    $$ x \circ i : k \mapsto x(i(k)) $$
+
+    를 $x$ 의 부분 수열이라 한다.
+
+- 순서체 $F$ 의 수열 $x$ 가 $a \in F$ 로 수렴하면, $x$ 의 모든 부분수열도 $a$ 로 수렴함은 자명하다.
+
+!!! tldr ""
+
+    순서체 $F$ 의 코시 수열 $x$ 의 한 부분수열 $x \circ i$ 가 $a \in F$ 로 수렴하면 $x$ 도 $a \in F$ 로 수렴한다.
+
+- 증명 
+
+    $\forall e \in P _{F}$ 에 대하여 
+
+    $$ i,j \geq N \implies |x(i) - x(j)| < \dfrac{e}{2} $$
+
+    가 성립하는 $N \in \N$ 이 존재한다. 또한 
+
+    $$ k \geq K \implies |x(i(k)) - a| < \dfrac{e}{2}, \qquad i(K) \geq N $$
+
+    이 성립하는 $K \in \N$ 가 존재한다. 이제 $i \geq i(K)$ 이면 
+
+    $$ |x(i) - a| \leq |x(i) - x(i(K))| + |x(i(K)) - a| < \dfrac{e}{2} + \dfrac{e}{2} = e $$
+
+    이 되어 $x$ 가 $a$ 로 수렴함을 알 수 있다. ■ 

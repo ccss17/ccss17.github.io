@@ -10,6 +10,8 @@ nav:
   - 튜링의 증명: ProgrammerBase/turing.md
   - 기술적 특이점: ProgrammerBase/future.md
   - 정보이론: Philosophy/information.md
+  - 취약점: 
+    - 취약점에 관하여: vul/memo.md
   - Paper:
     - Facenet (2015): paper/facenet.md
     - Quadruplet (2017): paper/quadruplet.md
