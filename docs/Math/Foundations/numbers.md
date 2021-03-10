@@ -1590,9 +1590,9 @@
 
     인 $N \in \N$ 이 존재한다. 그러면 임의의 자연수 $i \geq N$ 에 대하여 
     
-    $$|x(i) - x(N)| < 1 \iff |x(i) \leq |x(N)| + 1 $$
+    $$|x(i) - x(N)| < 1 \iff |x(i)| \leq |x(N)| + 1 $$
 
-    이다. 이제 
+    이다.(*이해 안되는 부분*) 이제 
 
     $$ M = \sup \{|x(0)|, |x(1)|, \dots, |x(N-1)|, |x(N)|+1\} $$
 
@@ -1601,3 +1601,251 @@
     $$ \forall i \in \N, |x(i)| \leq M $$
 
     이다. ■ 
+
+    - 뭔가 이상한데, 
+
+        $$|x(i) - x(N)| < 1 \iff |x(i)| \leq |x(N)| + 1 $$
+
+        에서 $|x(i)| = |x(N)| + 1$ 라고 하면 
+
+        $$ ||x(N)|+1-x(N)|<1 \iff -1 < |x(N)| + 1 - x(N) < 1$$
+
+        $$ \iff x(N)-2 < |x(N)| < x(N) $$
+
+        가 나오는데 순서체 $F$ 의 원소 $a \in F$ 에 대하여
+
+        $$ |a| < a $$
+
+        가 말이 되나? $a$ 가 양의 원소 즉, $a \in P _{F}$ 일 경우 
+
+        $$ a < a $$
+
+        가 나온다. 이는 $5 < 5$ 와도 같은 결과.
+
+        $a$ 가 음의 원소, 즉 $a \in -P _{F}$ 일 경우 
+
+        $$ -a < a $$
+
+        인데, 이는 $5 < -5$ 와 같은 결과.
+
+        뭐지? 뭘 놓치고 있는거지.
+
+!!! tldr ""
+
+    실수 집합(real number set) : 두 기본열 $\alpha , \beta : \N \to \mathbb{Q}$ 와 $\forall e \in P _{\mathbb{Q}}$ 에 대하여 
+
+    $$ i \geq N \implies |\alpha (i) - \beta (i)| < e $$
+
+    인 $N \in \N$ 이 존재할 때 $\alpha \sim \beta$ 라고 정의한 동치관계 $\sim$ 와 기본열 전체의 집합 $\mathcal{F}$ 에 대하여 
+
+    $$ \R := \mathcal{F}/\sim $$
+
+    이라고 정의한다.
+
+- 또한 이 몫집합 $\R = \mathcal{F}/\sim$ 의 원소를 실수(real number) 라고 한다.
+
+- 이와 같은 실수의 구성방법을 쉽게 말하면 이렇다. 
+
+    어떤 기본열이 제곱하여 $2$ 보다 작은 수로써 각 항 $i$ 마다 $i-1$ 번째까지 소수 자리를 갖는다고 하자. 그러면 이 기본열은 다음과 같은 형태를 가져서 제곱해도 $2$ 보다 작은 유리수로 구성된다.
+
+    $$ (1, 1.4, 1.41, 1.141, \dots) $$
+
+    이러한 유리수열은 수열의 항 $i$ 가 매우 커짐에 따라 인접한 두 항의 차이값이 $0$ 로 수렴한다. 이것은 분명 유리수열이지만 그 항이 무한이 커짐에 따라 그 값이
+
+    $$ \sqrt[]{2} $$
+
+    로 근사된다. 이처럼 유리수열이지만 무한한 항을 따져보면 무리수가 되는 것이 존재한다. 물론 무한한 항이 유리수인 기본열도 존재한다. 
+
+    코시수열에 의한 실수의 구성은 이러한 모든 기본열을 통틀어서 실수(유리수와 무리수)를 구성하는 것이다.
+
+- 한편, 방금 $(1, 1.4, 1.41, 1.141, \dots)$ 이라는 기본열을 $\sqrt[]{2}$ 라는 실수로 근사시켰는데, 어떤 실수를 구성하기 위한 유리수열은 유일하지 않다. 즉, 실수 $x \in \R$ 로 수렴하는 모든 기본열이 $x$ 의 표현들이며, 이것들을 동치류로 묶어서 버리는 것이다.
+
+    가령 다음과 같이 실수 $\pi$ 를 구성하는 여러가지 방법이 존재한다. 
+
+    $$ \pi = 4 \bigg (\dfrac{1}{1} - \dfrac{1}{3} + \dfrac{1}{5} - \dfrac{1}{7} + \dots\bigg ) \tag{1} $$
+
+    $$ \dfrac{\pi }{2} = \dfrac{2}{1}\cdot \dfrac{2}{3} \cdot \dfrac{4}{3} \cdot \dfrac{4}{5} \cdot \dfrac{6}{5} \cdot \dfrac{6}{7} \cdot \dots \tag{2} $$
+
+    $$ \dfrac{\pi ^{2}}{6} = \dfrac{1}{1 ^{2}} + \dfrac{1}{2 ^{2}} + \dfrac{1}{3 ^{2}} + \dfrac{1}{4 ^{2}} + \dots \tag{3} $$
+
+    $$ \dfrac{2}{\pi } = \dfrac{\sqrt[]{2}}{2} \cdot \dfrac{\sqrt[]{2 + \sqrt[]{2}}}{2} \cdot \dfrac{\sqrt[]{2+ \sqrt[]{2 + \sqrt[]{2}}}}{2} \dots \tag{4} $$
+
+    위에서 보인 $4$ 가지 방법 이외에도 $\pi$ 라는 실수를 구성하는 기본열의 종류는 매우 다양하다. 가령 $(1)$ 에서 나타난 기본열 
+    
+    $$ \alpha(n) = 4 \sum_{k=1}^{n} (-1) ^{n+1} \dfrac{1}{2n - 1}
+
+    은 $n \to \infty \implies \alpha (n) \to \pi$ 가 되는데, 이처럼 $\pi$ 로 근사되는 모든 기본열들을 동치관계로 묶어서 그 동치류를 파이
+
+    $$ \pi = [\alpha (n)] $$
+
+    로 표현하겠다는 것이다.
+
+- 관계 $\sim$ 은 동치관계이다.
+
+    - 증명 
+
+        $\alpha \sim \alpha$ 와 $\alpha \sim \beta \implies \beta \sim \alpha$ 가 성립함은 자명하므로 동치관계의 조건 1), 2) 가 성립한다. 
+
+        $\alpha \sim \beta, \beta \sim \gamma$ 라 두면 
+
+        $$ i \geq N_1 \implies |\alpha (i) - \beta (i)| < \dfrac{e}{2}, \qquad i \geq N_2 \implies |\beta (i) - \gamma (i)| < \dfrac{e}{2} $$
+
+        인 자연수 $N_1, N_2 \in \N$ 이 존재하는데 $N = \sup \{N_1,N_2\}$ 라 두면 임의의 $i \geq N$ 에 대하여 
+
+        $$ |\alpha (i) - \gamma (i)| \leq |\alpha (i) - \beta (i)| + |\beta (i) - \gamma (i)| < \dfrac{e}{2} + \dfrac{e}{2} = e $$
+
+        이므로 
+
+        $$ \alpha \sim \gamma $$
+
+        이다. 이로써 동치관계의 조건 3) 도 성립함을 보였다. 
+
+        그러므로 관계 $\sim$ 은 기본열 전체의 집합 $\mathcal{F}$ 의 동치관계이다.
+
+!!! tldr ""
+
+    실수의 순서관계 : 두 실수 $[\alpha ], [\beta ] \in \R$ 에 대하여 
+
+    $$ i \geq N \implies \alpha (i) - \beta (i) > d $$
+
+    를 만족하는 유리수 $d > 0$ 와 자연수 $N \in \N$ 가 있을 때 
+
+    $$ [\alpha ] > [\beta ] $$
+
+    이다. 
+
+!!! tldr ""
+
+    $\forall [\alpha ], [\beta ] \in \R$ 에 대하여 
+
+    $$ [\alpha ] > [\beta ], \qquad [\alpha ] = [\beta ], \qquad [\alpha ] < [\beta ] $$
+
+    중 오직 하나만 성립한다. 
+
+- 증명 
+
+    $\forall e \in \mathbb{Q}, e > 0$ 에 대하여 
+
+    $$ i \geq N_e \implies |\alpha (i) - \alpha (N_e)| <e, |\beta (i) - \beta (N_e)| <e $$
+
+    가 성립하는 최소 자연수 $N_e$ 이 존재한다. $N_e$ 은 $e$ 에 대하여 결정된다. 그러면 각 $i \geq N_e$ 에 대하여 
+
+    $$ \alpha (N_e) - \beta (N_e) - 2e < \alpha (i) - \beta (i) <\alpha (N_e) - \beta (N_e) + 2e \tag{1} $$
+
+    이다. 이제 
+
+    $$ d_e = \alpha (N_e) - \beta (N_e) -2e, \qquad d'_e = \alpha (N_e) - \beta (N_e) + 2e $$
+
+    로 두자. 
+
+    그러면 적당한 유리수 $e > 0$ 에 대하여 $d_e > 0$ 인 경우 
+
+    $$ i \geq N_e \implies \alpha (i) - \beta (i) > d_e $$
+
+    이므로 $[\alpha ] > [\beta ]$ 이고, 또한 적당한 유리수 $e>0$ 에 대하여 $d'_e<0$ 이면 
+
+    $$ i \geq N_e \implies \beta  (i) - \alpha(i) > -d'_e $$
+
+    이므로 $[\beta ]>[\alpha ]$ 이다. □ 
+
+    이제 이 두 가지 경우가 성립하지 않는다고 하면 임의의 유리수 $e > 0$ 에 대하여 
+    
+    $$d_e= \alpha (N_e) - \beta (N_e) -2e \leq 0,\qquad  d'_e= \alpha (N_e) - \beta (N_e) + 2e \geq 0$$
+    
+    이다. (*이때 $d_e = d'_e = 0$ 이면 $e=0$ 이 되어 모순이므로 둘 다 $0$ 이면 안된다 조건이 추가되어야 하지 않나*) 그러므로 
+
+    $$ \alpha (N_e) - \beta (N_e) \leq 2e, \qquad \beta (N_e) -  \alpha (N_2) \leq 2e $$
+
+    $$ \iff |\alpha (N_e) - \beta (N_e)| \leq 2e $$
+
+    인데, 
+
+    (*이때 임의의 $e>0$ 에 대하여 $|\alpha (N_e) - \beta (N_e)| \leq 2e$ 가 성립하므로 $e$ 가 $0$ 과 극도로 가까울 때에도 $|\alpha (N_e) - \beta (N_e)|$ 이 그것보다 같거나 작다는 것이므로 $|\alpha (N_e) - \beta (N_e)| = 0$ 이어야 한다. 왜냐하면 $|\alpha (N_e) - \beta (N_e)| = \epsilon > 0$ 이라면 그것보다 작은 유리수 $e$ 가 존재하여 모순을 발생시키기 때문이다. 그러므로 $(1)$ 을 사실상 $|\alpha (i) - \beta (i)| < 2e$ 로 쓸 수 있으므로*)
+    
+    $(1)$ 에 의하여 
+
+    $$ i \geq N_e \implies |\alpha (i) - \beta (i)| \leq |\alpha (N_e) - \beta (N_e)| + 2 e \leq 4e <5e $$
+
+    이다. 
+
+    (*근데 그렇게 따지면 $|\alpha (i) - \beta (i)| \leq |\alpha (N_e) - \beta (N_e)| + 2 e$  가 아니라 $|\alpha (i) - \beta (i)| < |\alpha (N_e) - \beta (N_e)| + 2 e$ 이어야 하지 않나? 어쨌든..*)
+    
+    그러므로 $\alpha \sim \beta$ 가 되어 
+
+    $$ [\alpha ] = [\beta ] $$
+
+    이다. ■ 
+
+!!! tldr ""
+
+    실수의 더하기 : 유리수열 $\alpha + \beta: i \mapsto \alpha (i) + \beta (i)$ 에 대하여 실수의 더하기를 두 실수 $[\alpha], [\beta]$ 에 대하여 
+
+    $$ [\alpha ]+ [\beta ]=[\alpha + \beta ] $$
+
+    로 정의한다.
+
+- $\alpha + \beta$ 는 기본열이다. 즉, 코시 수열의 덧셈은 닫혀있다.
+
+    $$ 
+    $$
+
+- 기본열 $\alpha$ 에 대하여 $(-\alpha )(i) = - \alpha (i)$ 로 정의된 유리수열 $-\alpha$ 는 기본열이다. 또한 $-\alpha$ 는 $\alpha$ 의 더하기의 역원이다.
+
+    - 증명 
+
+- 실수의 더하기는 잘 정의되어 있고, associative 와 commutative 를 만족한다. 
+
+    - 증명 
+
+- $0 ^{*}$ 가 항등원이다. 
+
+    - 코시수열로 실수를 구성할 때에는 $x^{*}$ 가 뭔지 정의하지 않았었는데, 이건 뭐지? 절단을 뜻하는 건 아닐텐데. 절단을 뜻하는건가.
+
+!!! tldr ""
+
+    실수의 곱하기 : $\alpha , \beta \in \R$ 에 대하여 
+
+    $$ [\alpha ][\beta ]= [\alpha \beta ]
+    $$
+
+- 두 유리수열 $\alpha, \beta : \N \to \mathbb{Q}$ 에 대하여 
+
+    $$ \alpha \beta : i \mapsto \alpha (i)\beta (i) $$
+
+    라 정의하면, 기본열 $\alpha , \beta$ 에 대하여 $\alpha \beta$ 도 기본열이다.
+
+    - 증명 
+    
+        보이자. 정리 "순서체 $F$ 의 수열 $x : \N \to F$ 가 수렴하면 코시수열이다. 또한 임의의 코시 수열은 유계이다." 에 의하여 $i \in \N$ 에 대하여 
+
+        $$ |\alpha (i)| \leq M_1, |\beta (i)| \leq M_2 $$
+
+        인 $M_1, M_2 \in \mathbb{Q}$ 가 존재한다. 이때 $M = \sup \{M_1, M_2\}$ 라 두면
+
+        $$ i,j \geq N_1 \implies |\alpha (i) - \alpha (j)| < \dfrac{e}{2M} $$
+
+        $$ i,j \geq N_2 \implies |\beta (i) - \beta (j)| < \dfrac{e}{2M} $$
+
+        인 $N_1, N_2 \in \N$ 가 존재한다. 이때 $N = \sup \{N_1, N_2\}$ 라 두면 임의의 $i, j \geq N$ 에 대하여 
+
+        $$ |\alpha (i)\beta (i) - \alpha (j)\beta (j)| \leq |\alpha (i)\beta (i) - \alpha (i)\beta (j)| + |\alpha (i)\beta (j) - \alpha (j)\beta (j)| $$
+
+        인데(*$\because$ 정리 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$" 에 의하여*), 
+
+        $$ = |\alpha (i)||\beta (i) - \beta (j)| + |\beta (j)||\alpha (i)-\alpha (j)| $$
+
+        (*에서 $|\alpha (i)|$ 와 $|\beta (i)|$ 의 상한이 $M$ 이므로*)
+
+        $$ < M \dfrac{e}{2M} + M \dfrac{2}{2M} = e $$
+
+        이다. 그러므로 $\alpha \beta$ 는 기본열이다.
+
+    - 이 유리수열 연산은 잘 정의되어 있고, associative, commutative, distributive 를 만족하고 항등원 $1 ^{*}$ 을 가진다. 
+
+        - 증명
+    
+- 실수의 곱하기는 역원을 가진다. 
+
+    - 증명 
+
+        $[a] \neq 0 ^{*}$ 이면 정리 "$\forall [\alpha ], [\beta ] \in \R$ 에 대하여 $[\alpha ] > [\beta ], \qquad [\alpha ] = [\beta ], \qquad [\alpha ] < [\beta ]$ 중 오직 하나만 성립한다." 에 의하여 $[\alpha ] > 0 ^{*}$ 또는 $[\alpha ] < 0 ^{*}$ 이 둘 중 하나만 성립한다. 
