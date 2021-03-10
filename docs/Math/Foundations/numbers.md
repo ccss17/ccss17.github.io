@@ -1674,7 +1674,7 @@
     
     $$ \alpha(n) = 4 \sum_{k=1}^{n} (-1) ^{n+1} \dfrac{1}{2n - 1} $$
 
-    은 $n \to \infty \implies \alpha (n) \to \pi$ 가 되는데, 이처럼 $\pi$ 로 근사되는 모든 기본열들을 동치관계로 묶어서 그 동치류를 파이
+    은 $n \to \infty \implies \alpha (n) \to \pi$ 가 되는데, 이처럼 $\pi$ 로 근사되는 모든 기본열들을 동치관계로 묶어서 그 동치류를 실수 파이($\pi$)
 
     $$ \pi = [\alpha (n)] $$
 
