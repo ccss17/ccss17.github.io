@@ -70,7 +70,7 @@ nav:
       - 벡터해석학: Math/Calculus/vector.md
       - 미적분: Math/Calculus/cal6.md
       - 다변수함수의 미분의 일반적 정의: Math/Calculus/cal7.md
-      - 텐서해석학: Math/Calculus/cal8.md
+      # - 텐서해석학: Math/Calculus/cal8.md
     - 선형대수학: 
       - 선형대수학 다시정리1: Math/LinearAlgebra/la_new.md
       - 선형방정식: Math/LinearAlgebra/la.md
@@ -79,10 +79,10 @@ nav:
       - 벡터공간: Math/LinearAlgebra/la4.md
       - 고유벡터: Math/LinearAlgebra/la5.md
       - 직교: Math/LinearAlgebra/la6.md
-    - 다중선형대수학: 
-      - (임시): Math/MultiLinearAlgebra/mla.md
-    - 위상수학: 
-      - (임시): Math/Topology/topology.md
+    # - 다중선형대수학: 
+    #   - (임시): Math/MultiLinearAlgebra/mla.md
+    # - 위상수학: 
+    #   - (임시): Math/Topology/topology.md
   - ProgrammerBase: 
     - ProgrammerBase: ProgrammerBase/readme.md
     - Contents:
