@@ -2010,9 +2010,49 @@
 
     $$ |[\alpha _n] - r(n)^{*}|<|[\alpha _n]-[\alpha _{n+1}]| $$
 
-    이므로 
+    이므로 임의의 양의 실수 $[ \epsilon ] > 0$ 에 대하여 
 
-    (*차후 구체화*)
+    $$ n \geq N \implies |[\alpha _n] - r(n) ^{*}| < \dfrac{1}{3}[\epsilon] \tag{1} $$
+
+    이 성립하는 $N \in \N$ 이 존재한다.(*이것은 기본열 $\alpha_n$ 의 $n$ 번째 항과 $n+1$ 번째 항 사이에 반드시 어떤 유리수가 존재하고, 그러므로 어떤 실수를 나타내는 실수 수열 $[\alpha _n]$ 과 또 실수 수열 $r(n)^{*}$ 의 무한항의 차이값이 $0$ 으로 근사된다는 의미이다.*)
+
+    한편 $0 < [ \epsilon ]$ 이므로 적당한 자연수 $I_0$ 과 유리수 $d>0$ 에 대하여 
+
+    $$ i \geq I_0 \implies \dfrac{1}{3}\epsilon (i) > d \tag{2} $$
+
+    이 성립한다.(*이떄의 $\epsilon (i)$ 는 $\alpha_n$ 의 $i$ 번째 항에 해당하는 $\epsilon$ 의 값인 것 같다. 아닌가?*)
+
+    이때 유리수열 $n \mapsto r(n)$ 이 기본열임은 자명하므로 
+
+    $$ i, j \geq M \implies |r(i) - r(j)| < d \tag{3} $$
+
+    이 성립하는 자연수 $M \in \N$ 이 존재한다. 이때 $(1)$ 의 자연수 $n \geq N$ 에 대하여 
+
+    $$ i \geq I(n) \implies |\alpha_n(i) - r(n)| < \dfrac{1}{3}\epsilon (i) \tag{4} $$
+
+    이 성립하는 자연수 $I(n)$ 이 존재한다.(*이는 $(1)$ 에서 결정된 자연수 $n \geq N$ 으로 결정된 실수의 기본열 $\alpha _n(i)$ 가 기본열 $r(n)$ 과 또 다시 내부적으로 무한히 가깝게 근사된다는 말이다.*)
+
+    이제 $n \geq \sup \{N, M\}$ 인 $n \in \N$ 을 선택하면, 각 $i \geq \sup \{I_0, I(n), M\}$ 에 대하여 정리 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$" 에 의하여 
+
+    $$ |\alpha _n(i) - r(i)| \leq |\alpha _n -r(n)| + |r(n) - r(i)| $$
+
+    인데 이때 $(3), (4)$ 에 의하여 
+
+    $$ |\alpha _n -r(n)| + |r(n) - r(i)| < \dfrac{1}{3}\epsilon (i) + d $$
+
+    이고, 다시 $(2)$ 에 의하여
+
+    $$  \dfrac{1}{3}\epsilon (i) + d < \dfrac{1}{3}\epsilon (i) + \dfrac{1}{3}\epsilon (i) = \dfrac{2}{3} \epsilon (i) $$
+
+    이므로 최종적으로 
+
+    $$ |\alpha _n(i) - r(i)| \leq \dfrac{2}{3}\epsilon (i) $$
+
+    을 얻는다. 따라서 각 $n \geq \sup \{N, M\}$ 에 대하여 
+
+    $$ |[\alpha _n] - [r]| \leq \dfrac{2}{3}[\epsilon ] < [\epsilon ] $$
+
+    이므로 실수 수열 $<[\alpha _n]>$ 은 실수 $[r]$ 로 수렴한다. ■ 
 
 # 완비순서체 
 
