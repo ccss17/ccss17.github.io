@@ -6,6 +6,15 @@ div.arithmatex {
   padding: 0 !important;
 }
 
+.hangul_fallback {
+  font-family: "Nanum Gothic",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif !important;
+  font-size: 0.78rem !important;
+}
+/* .katex .text { */
+  /* font-family: "Nanum Gothic",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif !important; */
+  /* font-size: 0.78rem !important; */
+/* } */
+
 .katex-display {
   overflow: visible !important;
   width: auto !important;
