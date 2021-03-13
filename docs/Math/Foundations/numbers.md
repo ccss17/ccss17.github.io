@@ -29,7 +29,7 @@
 
 !!! tldr ""
 
-    자연수(natural number) : 다음 두 가지 성질 
+    자연수 집합(natural number set) : 다음 두 가지 성질 
 
     $$ \varnothing \in \mathcal{A}, A \in \mathcal{A} \implies A ^{+} \in \mathcal{A} $$
 
@@ -37,11 +37,15 @@
 
     $$ \N := \bigcap_{}^{}\mathcal{A} $$
 
-    의 원소를 자연수라고 한다.
+    이다.
 
 !!! tldr ""
 
-    페아노 공리계 : 집합 $\N$ 은 다음 성질을 만족하고, 이 성질을 페아노 공리계라고 한다. 
+    자연수(natural number) : 자연수 집합 $\N$ 의 원소이다.
+
+!!! tldr ""
+
+    페아노 공리계(Peano's axioms) : 집합 $\N$ 은 다음 성질을 만족하고, 이 성질을 페아노 공리계라고 한다. 
 
     1. $0 \in \N$
 
