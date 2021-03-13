@@ -2074,13 +2074,99 @@
 
     3. 임의의 코시 수열 $x: \N \to F$ 가 $F$ 안에서 수렴한다. 
 
+- 정리 "$A \neq \varnothing$ 인 집합 $A \subset \R$ 가 위로 유계이면 $A$ 는 최소상계를 갖는다." 는 데데킨트 절단으로 정의된 실수체 $\R$ 이 완비순서체임을 말해준다.
+
+    또한 아래 증명을 통해 코시 수열로 구성한 실수체도 완비순서체임이 증명된다. 
+
 - 이 세 조건이 사실상 서로 같다.
 
-- 증명 
+    - 증명 
 
-    2) 가 1) 과 동치임은 자명하다.
+        2) 가 1) 과 동치임은 자명하다.
 
-    이제 아르키메데스의 성질과 3) 을 가정하고 1) 을 도출함으로써 코시 수열로 구성한 실수체가 완비순서체임을 보이자. 
+        이제 아르키메데스의 성질과 3) 을 가정하고 1) 을 도출함으로써 코시 수열로 구성한 실수체가 완비순서체임을 보이자. 이를 위하여 순서체 $F$ 의 비어 있지 않은 부분집합 $A \subset F$  가 위로 유계라고 하자(*왜 이렇게 가정?*). 그리고 
+
+        $$ \mathcal{I} = \{(a, b) \in F \times F : a < b\} $$
+
+        에 대하여 두 함수 $g,h: \mathcal{I} \to F$ 를 
+
+        $$ g((a, b)) = \begin{cases} a & \dfrac{a+b}{2} \text{ 가  } A \text{ 의 상계이다 }\\ \dfrac{a+b}{2} & \dfrac{a+b}{2} \text{ 가  } A \text{ 의 상계가 아니다 }\end{cases} $$ 
+        
+        $$ h((a, b)) = \begin{cases} \dfrac{a+b}{2} & \dfrac{a+b}{2} \text{ 가  } A \text{ 의 상계이다 }\\ b & \dfrac{a+b}{2} \text{ 가  } A \text{ 의 상계가 아니다 }\end{cases} $$
+
+        로 정의하면, 
+
+        $$ a \leq g((a, b)) < h((a, b)) \leq b, \qquad h((a, b)) - g((a, b)) = \dfrac{1}{2}(b-1) $$
+
+        이다.(*그냥 각 함수가 $g((a,b))=a, h((a,b))=\dfrac{a+b}{2}$ 일 때와 $g((a,b))=\dfrac{a+b}{2}, h((a,b)) = b$ 일 때를 따져보면 된다.*)
+
+        또한 $a$ 가 $A$ 의 상계가 아니고, $b$ 가 $A$ 의 상계라고 하자. (*이때 $\dfrac{a+b}{2}$ 가 $A$ 의 상계일 경우 $g((a,b)) = a$ 이므로 $g((a,b))$ 는 $A$ 의 상계가 아니고, $h((a,b)) = \dfrac{a+b}{2}$ 는 $A$ 의 상계이다. 한편 $\dfrac{a+b}{2}$ 가 $A$ 의 상계가 아닐 경우 $g((a,b)) = \dfrac{a+b}{2}$ 는 $A$ 의 상계가 아니고, $h((a,b)) = b$ 는 $A$ 의 상계이다.*) 그러면 어느 경우든 $g((a,b))$ 는 $A$ 의 상계가 아니고, $h((a,b))$ 는 $A$ 의 상계이다. 그렇다면 $A$ 의 상계가 아닌 첫째 입력과 $A$ 의 상계인 둘째 입력을 받았을 때 함수 $g, h$ 의 성질은 다음과 같다.
+
+        1. $g((a,b))$ 는 $A$ 의 상계가 아니고, $h((a,b))$ 는 $A$ 의 상계이다.
+
+        2. $a \leq g((a, b)) < h((a, b)) \leq b$ 
+        
+        3. $h((a, b)) - g((a, b)) = \dfrac{1}{2}(b-1)$
+
+        <br/>
+
+        이제 함수 $f: \mathcal{I} \to \mathcal{I}$ 를 
+
+        $$ f:(a,b) \mapsto (g((a,b)), h((a,b))) \tag{1} $$
+
+        로 정의하자. 이때 $A$ 의 원소가 $1$개면 증명할 것이 없으므로(*왜?*), $A$ 의 원소가 $2$ 개 이상이라고 하자. 그러면 $A$ 의 상계가 아닌 $a_0 \in A$ 와 $A$ 의 상계 $b_0$ 가 존재한다. 그러면 정리 "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 
+
+        $$ \gamma (0) = a, \qquad \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n)) $$
+
+        을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다." 를 적용하여 
+        
+        $$\gamma (0) = (a_0, b_0), \qquad \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$$
+        
+        인 유일하게 존재하는 함수 $\gamma : \N \to \mathcal{I}$ 를 정의할 수 있다. 이제 두 함수 $\pi _1, \pi _2 : \mathcal{I}\to F$ 를 $(a, b) \in \mathcal{I}$ 에 대하여
+
+        $$ \pi _1 : (a,b) \mapsto a, \quad \pi _2:(a,b) \mapsto b \tag{2} $$
+
+        라고 정의하자. 그리고 
+        
+        $$\alpha  = \pi _1 \circ \gamma , \beta = \pi _2 \circ \gamma \tag{3} $$
+        
+        라 두면 (*수열의 정의에 의하여*) $\alpha , \beta$ 는 $F$ 의 수열이 되며, (*정의 $(1), (2), (3)$ 과 $\gamma (n) = (a_n,b_n)$ 일 때 $a_n = (\pi _1 \circ \gamma )(n) = \alpha (n), b_n = (\pi _2 \circ \gamma )(n) = \beta (n)$ 인 것에 의하여*)
+
+        $$ \alpha (n ^{+}) = (\pi _1 \circ \gamma )(n ^{+}) = (\pi _1 \circ f)(\gamma (n)) = g(\gamma (n)) = g((\alpha (n), \beta (n))) $$
+
+        $$ \beta (n ^{+}) = (\pi _2 \circ \gamma )(n ^{+}) = (\pi _2 \circ f)(\gamma (n)) = h(\gamma (n)) = h((\alpha (n), \beta (n))) $$
+
+        이 된다. $\alpha, \beta$ 함수에 대해서는 $A$ 의 상계가 아닌 $a_0$ 와 $A$ 의 상계 $b_0$ 에 대하여 초깃값이
+
+        $$ \alpha (0) = \pi _1 \circ \gamma (0) = a_0 , \quad \beta (0) = \pi _2 \circ \gamma (0) = b_0 $$
+
+        이므로 $\alpha (0), \beta (0)$ 는 각각 $A$ 의 상계가 아닌 원소와 상계인 원소를 뜻하는데, 이후에는 $\forall n \in \N \text{ \textbackslash }\{0\}$ 에 대하여 
+
+        $$ \alpha (n ^{+}) = g((\alpha (n), \beta (n))) , \quad \beta (n ^{+}) = h((\alpha (n), \beta (n))) $$
+
+        이므로 위에서 첫번째 입력이 상계가 아니고, 두번째 입력이 상계일 때 도출해내었던 함수 $g, h$ 의 성질을 $\alpha ,\beta$ 함수가 그대로 갖게 된다. 그러므로 $n \in \N$ 에 대하여 
+
+        1. $\alpha (n)$ 은 $A$ 의 상계가 아니고, $\beta (n)$ 은 $A$ 의 상계이다.
+
+        2. $\alpha (n) \leq \alpha (n ^{+}) < \beta (n ^{+}) \leq \beta (n)$
+
+        3. $\beta (n ^{+}) - \alpha (n ^{+}) = \dfrac{1}{2}(\beta (n) - \alpha (n))$
+
+        가 성립한다. 이때 아르키메데스의 성질에 의하여 $\forall e \in P _{F}$ 에 대하여 $e \cdot N \geq \beta (0) - \alpha (0)$ 인 자연수 $N$ 이 존재하므로 
+
+        $$ N \geq \dfrac{1}{e}[\beta (0) - \alpha (0)] $$
+
+        이다. 이때 위의 성질 a), b), c) 와 $\forall n \in \N, \dfrac{1}{2 ^{n}} \leq \dfrac{1}{n}$ 인 것에 의하여, 각 $m > n \geq N$ 에 대하여
+
+        $$ 0 \leq  \alpha (m) - \alpha (n) < \beta (n) - \alpha (n) = \dfrac{1}{2 ^{n}}[\beta (0) - \alpha (0)] \leq \dfrac{1}{n}[\beta (0) - \alpha (0)] $$
+
+        인데, $e \geq \dfrac{1}{N} [\beta (0) - \alpha (0)] > \dfrac{1}{n} [\beta (0) - \alpha (0)]$ 이므로 
+
+        $$ \dfrac{1}{n}[\beta (0) - \alpha (0)] < e $$
+
+        이다. 그러므로 $\alpha (m) - \alpha (n) < e$ 에서 $\alpha: \N \to F$ 는 코시 수열이고, 마찬가지로 $\beta$ 도 코시 수열임을 알 수 있다. 
+
+        그런데 완비순서체의 조건 3) 에 의하여 $\alpha , \beta$ 가 수렴함을 알 수 있으므로 각각의 극한값을 $a, b$ 라고 두자. 그러면 성질 c) 는 $\alpha$ 와 $\beta$ 의 차이값이 항이 높아질수록 $1/2$ 된다는 것을 말하고 있으므로 $n \to \infty \implies \beta_n - \alpha_n \to 0$ 이 됨을 알 수 있다. 이는 결국 $a = b$ 임을 뜻한다.
 
 !!! tldr ""
 
