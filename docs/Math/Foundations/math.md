@@ -1633,40 +1633,11 @@
 
 - 조밀 순서는 비교 가능한 서로 다른 두 원소 사이에 항상 제 3의 원소가 존재하는 부분순서이다.
 
-순서 관계의 함의 관계는 다음과 같다. 
+!!! tldr ""
 
-$$ \def\arraystretch{1.5}
-   \begin{array}{c:c:c}
-   a & b & c \\ \hline
-   d & e & f \\
-   \hdashline
-   g & h & i
-\end{array}
-$$
+    순서 관계의 함의 관계는 다음과 같다. 
 
-$$ \begin{equation} \begin{split}   a &=b+c\\ &=e+f \end{split} \end{equation} $$
-
-$$ \begin{gather}
-   a=b \\
-   e=b+c
-\end{gather}
-$$
-
-$$ \begin{align}
-   a&=b+c \\
-   d+e&=f
-\end{align}
-$$
-
-$$ \begin{alignat}{2}
-   10&x+&3&y=2\\
-   3&x+&13&y=4
-\end{alignat}
-$$
-
-$$ \begin{CD} A @>a>> B \\ @VbVV @AAcA \\ C @= D \\end{CD} $$
-
-
+    $$ \begin{CD} \text{전순서 집합} @> >> \text{원전순서 집합} \\ @V VV @VV V \\ \text{부분순서 집합} @> >> \text{원순서 집합} \end{CD} $$
 
 # 유계
 
