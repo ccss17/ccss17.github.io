@@ -1054,7 +1054,7 @@
 
     인데, 이는 $(3)$ 에 모순이므로 $\gamma : \N \to F$ 는 단사함수이다. □ 
 
-    이제 $\N \subset \mathbb{Q} \subset \mathbb{Q}$ 를 염두하며 $\gamma : \N \to F$ 의 정의역을 $\mathbb{Q}$ 로 확장할 것이다. 먼저 $\mathbb{Z}$ 로 확장하여 함수 $\gamma : \mathbb{Z} \to F$ 를 $n \in \N$ 에 대하여
+    이제 $\N \subset \mathbb{Z} \subset \mathbb{Q}$ 를 염두하며 $\gamma : \N \to F$ 의 정의역을 $\mathbb{Q}$ 로 확장할 것이다. 먼저 $\mathbb{Z}$ 로 확장하여 함수 $\gamma : \mathbb{Z} \to F$ 를 $n \in \N$ 에 대하여
 
     $$ \gamma (n) = \gamma (n), \qquad \gamma (-n) = - \gamma (n) $$
 
@@ -2286,13 +2286,47 @@
 
     를 만족한다. 
 
-- 쉽게 말해서 완비순서체는 유일하게 존재한다. 
-
-- 이 정리는 완비순서체가 본질적으로 단 하나만 존재함을 말해준다. 즉, 완비순서체가 2개 이상이 존재하면 그 완비순서체 사이에 모든 구조를 그대로 보존하는 사상이 존재한다. 
+- 쉽게 말해서 완비순서체는 유일하게 존재한다. 다시말해서 이 정리는 완비순서체가 본질적으로 단 하나만 존재함을 말해준다. 즉, 완비순서체가 2개 이상이 존재하면 그 완비순서체 사이에 모든 구조를 그대로 보존하는 사상이 존재한다. 
 
     - 또한 이 정리로써 데데킨트 절단으로 구성한 실수체와 코시 수열로 구성한 실수체가 모두 완비순서체였고, 결국 이들은 같은 순서체임을 알 수 있다. 
 
 - 증명
 
-    (**추후 구체화**)
-    
+    정리 "임의의 순서체 $F$ 에 대하여 
+
+    1. $\forall r, s \in \mathbb{Q}, \quad  \gamma (r+s)=\gamma (r)+\gamma (s), \quad  \gamma (rs) = \gamma (r) \gamma (s)$
+
+    2. $\gamma (P _{\mathbb{Q}}) = \gamma (\mathbb{Q}) \cap P _{F}$
+
+    을 만족하는 단사함수 $\gamma : \mathbb{Q} \to  F$ 가 유일하게 존재한다." 에 의하여 
+
+    $$ \begin{equation}\begin{split} & \gamma (r+s) = \gamma (r) + \gamma (s), \quad \gamma (rs) = \gamma (r)\gamma (s), \quad \gamma (P _{\mathbb{Q}}) = \gamma (\mathbb{Q})\cap P _{F}\\ &\delta (r+s) = \delta (r) + \delta (s), \quad \delta (rs) = \delta (r)\delta (s), \quad \delta (P _{\mathbb{Q}}) = \delta (\mathbb{Q})\cap P _{G} \end{split}\end{equation} \tag{1} $$
+
+
+    을 만족하는 단사함수 
+
+    $$ \gamma : \mathbb{Q} \to F, \quad \delta : \mathbb{Q} \to G $$
+
+    가 존재한다. 이제 각 $x \in F$ 에 대하여 
+
+    $$ A_x = \{\delta (r) \in G : r \in \mathbb{Q}, \gamma (r) < x\} $$
+
+    라 정의하면 정리 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다." 에 의하여 완비순서체 $F$ 에 대하여 
+
+    $$ \exists n \in \N \text{ s.t. }\  n \cdot 1_F > -x $$
+
+    이고, 이는 $\gamma (-n) = (-n) \cdot 1_F < x$ 를 뜻하므로 (*$\delta (-n) \in A_x$ 에서*) $A_x \neq \varnothing$ 이다. 
+
+    다시 아르키메데스의 법칙으로 $m \cdot 1_F > x$ 인 $m \in \N$ 가 존재하는데, 이 $m$ 에 대하여 
+
+    $$ \delta (m) = m \cdot 1_G $$
+
+    는 $\gamma (m) = m \cdot 1_F \not \leq  x$ 이므로 $A_x$ 의 상계이다. 그러면 $A_x$ 는 위로 유계이고 $G$ 는 완비순서체이므로 $A_x$ 는 최소상계를 갖는다. 이 $x$ 에 대하여 결정되는 상한을 $f(x)$ 라고 쓰면 $f$ 는 $F$ 에서 $G$ 로 가는 함수이다. 즉, $x \in F$ 에 대하여 $f: F \to G$ 를 
+
+    $$ f(x) = \sup \{\delta (r) \in G: r \in \mathbb{Q}, \gamma (r) < x\} \in G $$
+
+    와 같이 정의하는 것이다. 그러면 마찬가지로 $G$ 에서 $F$ 로 가는 함수 $g: G \to F$ 를 $y \in G$ 에 대하여
+
+    $$ g(y) = \sup \{\gamma (r) \in F: r \in \mathbb{Q}, \delta (r) < y\} \in F $$
+
+    와 같이 정의할 수 있다. 
