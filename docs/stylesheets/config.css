@@ -3,7 +3,7 @@ div.arithmatex {
 }
 
 .md-typeset div.arithmatex > * {
-  padding: 0 im !important;
+  padding: 0 !important;
 }
 
 .katex-display {
