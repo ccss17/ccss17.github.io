@@ -9,6 +9,7 @@ div.arithmatex {
 
 .md-typeset {
   font-size: .68rem !important;
+  line-height: 0.8 !important;
 }
 
 div.admonition.tldr {
