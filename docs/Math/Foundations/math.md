@@ -1496,15 +1496,44 @@
 
 !!! tldr ""
 
-    순서관계(ordered relation) : 집합 $X$ 의 관계 $R \subset X \times X$ 이 
+    원순서 관계(preordered relation) : 집합 $X$ 의 관계 $R \subset X \times X$ 이 
+
+    1. $\forall  x \in X, (x, x) \in R$ (reflexivity)
+
+    2. $(x, y) \in R \land (y, z) \in R \to (x, z) \in R$ (transitivity)
+
+    을 만족시키면 원순서 관계라고 한다.
+
+- 이 관계를 $\lesssim$ 으로 표현하면 다음과 같다.
+
+    1. $\forall a \in X, a \lesssim a$
+
+    2. $\forall a, b, c \in X, a \lesssim b \lesssim \implies  a \lesssim c$
+
+- 원순서 관계에 반대칭성 조건
+
+    $$ a \lesssim b \land b \lesssim a \implies a = b $$
+
+    을 추가하면 부분 순서가 된다.
+
+!!! tldr ""
+
+    원순서 집합(preordered set, proset) : 원순서 관계를 만족하는 집합이다. 
+
+- 원순서 집합은 두 원소를 추이적으로 비교할 수 있는 집합이다. 
+
+
+!!! tldr ""
+
+    부분 순서관계(partial ordered relation) : 집합 $X$ 의 관계 $R \subset X \times X$ 이 
     
-    1. 임의의 $x \in X$ 에 대하여 $(x, x) \in R$ 이다.
+    1. $\forall  x \in X, (x, x) \in R$ (reflexivity)
     
-    2. $(x, y) \in R, (y, x) \in R$ 이면 $x = y$ 이다. 
+    2. $(x, y) \in R, (y, x) \in R \implies  x = y$ (antisymmetry)
     
-    3. $(x, y) \in R$ 이고 $(y, z) \in R$ 이면 $(x, z) \in R$ 이다.
+    3. $(x, y) \in R \land (y, z) \in R \implies  (x, z) \in R$ (transitivity)
     
-    를 만족하면 이를 순서관계라고 한다.
+    를 만족하면 이를 부분 순서관계라고 한다.
 
 - 순서관계는 $\leq$ 로 표현한다. 
 
@@ -1512,9 +1541,9 @@
 
     $$ x \in X \to x \leq x $$
 
-    $$ x \leq y, y \leq x \to x = y $$
+    $$ x \leq y, y \leq x \implies  x = y $$
 
-    $$ x \leq y, y \leq z \to x \leq z $$
+    $$ x \leq y, y \leq z \implies  x \leq z $$
 
     와 같이 쓸 수 있다.
 
@@ -1522,7 +1551,7 @@
 
 !!! tldr ""
 
-    순서집합(ordered set) : 순서관계가 정의되어 있는 집합이다.
+    부분 순서집합(partially ordered set) : 부분 순서관계가 정의되어 있는 집합이다.
 
 - 예시 
 
@@ -1535,6 +1564,111 @@
     $$ a \leq a, b \leq b, c \leq c, a \leq b, a \leq c $$
 
     가 있게 된다.
+
+!!! tldr ""
+
+    절대 부분 순서 관계(strict partial order) 또는 순부분 순서 : 집합 $X$ 위의 관계 $R \subset X \times X$ 이 
+
+    1. $\forall x \in X, x \not < x$ (irreflexivity)
+
+    2. $a<b \land b < c \implies  a < c$ (transitivity)
+
+    3. $a < b \to y \not < x$ (asymmetry)
+
+- 예시 
+
+    부분 순서 $\leq \subseteq X ^{2}$ 가 존재할 때 $x, y \in X$ 에 대하여
+
+    $$ x < y \iff x \leq y \neq x $$
+
+    를 만족하는 이항 관계 $< \subseteq X ^{2}$ 는 절대 부분순서이다.
+
+- 예시 
+
+    절대 부분 순서 $< \subseteq X ^{2}$ 가 존재할 때 $x, y \in X$ 에 대하여
+
+    $$ x < y \iff x < y \lor x = y $$
+
+    를 만족하는 이항 관계 $\leq  \subseteq X ^{2}$ 는 부분순서이다.
+
+!!! tldr ""
+
+    원전순서 집합(pretotally ordered set, totally preordered set, weakly ordered set) : 원순서 집합 $(X, \lesssim )$ 이 
+
+    $$ \forall x, y \in X, x \lesssim y \lor y \lesssim x $$
+
+    을 만족하면 원전순서 집합이다.
+
+- 원전순서 집합은 두 원소가 항상 비교 가능한 원순서 집합이다.
+
+!!! tldr ""
+
+    전순서 집합(totally ordered set, toset) : 원전순서 집합인 부분 순서 집합 $(X, \leq )$ 으로써 
+
+    1. $x \leq y \leq z \implies x \leq z$
+
+    2. $\forall x, y \in X, x \leq y \land y \leq x \implies x = y$
+
+    3. $\forall x, y \in X, x \leq y \lor y \leq x$
+
+    을 만족하는 집합이다.
+
+!!! tldr ""
+
+    도약(jump) : 전순서 집합 $(X, \leq )$ 의 도약 $(a, b) \in X ^{2}$ 은 
+
+    1. $a<b$
+
+    2. $\not \exists c \in X, a < c < b$
+
+    을 만족시키는 순서쌍이다.
+
+- 도약이 없는 전순서를 조밀 순서라 한다.
+
+!!! tldr ""
+
+    조밀 순서(dense order) : 집합 $X$ 의 부분순서 $\leq$ 가 
+
+    - $\forall x, z \in X, x < z \implies \exists y \in X \text{ s.t. } x < y < z$
+
+- 조밀 순서는 비교 가능한 서로 다른 두 원소 사이에 항상 제 3의 원소가 존재하는 부분순서이다.
+
+순서 관계의 함의 관계는 다음과 같다. 
+
+$$ \def\arraystretch{1.5}
+   \begin{array}{c:c:c}
+   a & b & c \\ \hline
+   d & e & f \\
+   \hdashline
+   g & h & i
+\end{array}
+$$
+
+$$ \begin{equation} \begin{split}   a &=b+c\\ &=e+f \end{split} \end{equation} $$
+
+$$ \begin{gather}
+   a=b \\
+   e=b+c
+\end{gather}
+$$
+
+$$ \begin{align}
+   a&=b+c \\
+   d+e&=f
+\end{align}
+$$
+
+$$ \begin{alignat}{2}
+   10&x+&3&y=2\\
+   3&x+&13&y=4
+\end{alignat}
+$$
+
+$$ \begin{CD} A @>a>> B \\ @VbVV @AAcA \\ C @= D \\end{CD} $$
+
+
+
+# 유계
 
 !!! tldr ""
 

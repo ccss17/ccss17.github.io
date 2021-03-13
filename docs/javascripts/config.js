@@ -20,7 +20,10 @@ var katexMath = (function () {
 (function () {
   var onReady = function onReady(fn) {
     if (document.addEventListener) {
-      document.addEventListener("DOMContentLoaded", fn);
+      // document.addEventListener("DOMContentLoaded", fn);
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body);
+      });
     } else {
       document.attachEvent("onreadystatechange", function () {
         if (document.readyState === "interactive") {
