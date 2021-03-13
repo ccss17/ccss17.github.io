@@ -5,7 +5,7 @@ div.arithmatex {
 .katex-display {
   overflow: visible !important;
   width: auto !important;
-  line-height: 1.0;
+  line-height: 1.0 !important;
 }
 
 .md-typeset {
