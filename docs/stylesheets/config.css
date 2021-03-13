@@ -2,8 +2,8 @@ div.arithmatex {
   overflow: visible !important;
 }
 
-.katex {
-  line-height: 1.0 !important;
+.md-typeset div.arithmatex > * {
+  padding: 0 im !important;
 }
 
 .katex-display {
