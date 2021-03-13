@@ -2,10 +2,13 @@ div.arithmatex {
   overflow: visible !important;
 }
 
+.katex {
+  line-height: 1.0 !important;
+}
+
 .katex-display {
   overflow: visible !important;
   width: auto !important;
-  line-height: 1.0 !important;
 }
 
 .md-typeset {
