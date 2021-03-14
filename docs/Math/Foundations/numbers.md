@@ -2211,6 +2211,14 @@
 
     - 증명 
 
+        순서체 $F$ 의 코시 수열 $\alpha : \N \to F$ 가 존재할때 정리 "순서체 $F$ 의 코시 수열 $x$ 의 한 부분수열 $x \circ i$ 가 $a \in F$ 로 수렴하면 $x$ 도 $a \in F$ 로 수렴한다." 에 의하여 수열 $\alpha$ 가 수렴하는 부분수열을 가짐을 증명하면 된다. 
+
+        $A = \{\alpha (n) : n \in \N\}$ 이면 간단하고, $A$ 가 무한집합이면 정리 "순서체 $F$ 의 수열 $x : \N \to F$ 가 수렴하면 코시수열이다. 또한 임의의 코시 수열은 유계이다." 에 의하여 $A$ 는 위로 유계이고 아래로 유계이이다. 그러면 집합 $A$ 의 하계 $a_0$ 와 상계 $b_0$ 를 택하고 조건 1) 에서 3) 을 도출했을 때처럼 구간을 반으로 계속 분할해 나가는데, $A$ 의 원소가 무한개 속하는 쪽을 계속 선택한다. 
+
+        그러면 이 구간들의 왼쪽 끝점의 집합은 유계이고 조건 1) 을 가정했으므로 상한 $a$ 를 가진다. 또한 구간들의 오른쪽 끝점들의 집합은 아래로 유계이므로 조건 1) 과 동치인 2) 에의하여 하한 $b$ 를 가진다. 
+
+        그러면 3) 에서 1) 을 도출했을 때처럼 $a=b$ 가 되고 이 원소 근방에는 무한히 많은 $A$ 의 원소가 있으므로 $A$ 의 원소를 계속 택하여 수열을 만들어 $a$ 로 수렴하게 할 수 있다. 이 수열이 우리가 원하던 원래 $\alpha$ 의 수렴하는 부분수열이 된다. ■ 
+
 !!! tldr ""
 
     완비순서체 $F$ 는 아르키메데스의 성질을 만족한다. 
@@ -2403,3 +2411,51 @@
     $$ \gamma (s) < x, \quad \gamma (t-s) = \gamma (t) - \gamma (s) < y $$
 
     에서 $\delta (t) = \delta (s) + \delta (t-s)\in A_x+A_y$ 이다. □ 
+
+    이제 $f(xy) = f(x)f(y)$ 임을 보이기 위하여 $x,y \in P_F$ 인 경우부터 생각하면 다시 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+
+    $$ A_x \cap P_G \neq \varnothing , A_y \cap P_G \neq \varnothing $$
+
+    이므로 정리 "순서체 $F$ 의 부분집합 $S, T \subset P _{F}$ 에 대하여 $ST = \{st \in P _{F} : s \in S, t \in T\}$ 라고 정의했을 때 $\sup ST = \sup S \sup T$ 이다." 를 적용하면 된다. 이로써 1) 의 증명이 끝났다. □ 
+
+    이제 
+
+    $$ x > 0 \iff f(x) > 0 $$
+
+    을 보일텐데 먼저 $x>0$ 이면 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+
+    $$ \exists r \in \mathbb{Q} \text{ s.t. }\ 0 < \gamma (r) < x $$
+
+    이다. 그러면 $\delta (r) > 0 \land \delta (r) \in A_x \implies f(x) > 0$ 이다.
+
+    역으로 $f(x)>0$ 이면 $0$ 은 집합 $A_x$ 의 상계가 아니다.따라서 
+
+    $$ \exists \delta (r) \in A_x \text{ s.t. }\ \delta (r) > 0 $$
+
+    이다. 그러면 $0 < \gamma (r)<x$ 이고, 이로써 2) 의 증명이 끝났다. □ 
+
+    이제 $f$ 가 전단사함수임을 보이면 모든 증명이 끝난다. 이는 $g \circ f = 1_f, f \circ g = 1_G$ 를 보임으로써 이루어진다. $g \circ f = 1_F$ 를 보이기 위하여 $f$ 의 정의에 의하여 $x \in F$ 에 대하여
+
+    $$ x = \sup \{\gamma (r) \in F:r \in \mathbb{Q}, \delta (r) < f(x)\} \tag{2} $$
+
+    를 보이면 된다. (*왜냐하면 $g$ 에 $f(x)$ 라는 입력을 넣었을 때 $x$ 라는 출력이 나왔으면 최초에 $f$ 에 $x$ 라는 입력을 넣었으므로 항등함수 $1_F$ 가 되기 때문이다.*) 이는 
+
+    1. $r \in \mathbb{Q}, \delta (r) < f(x) \implies \gamma (r) \leq x$
+
+    2. $z < x \implies \exists r \in \mathbb{Q} \text{ s.t. }\ z < \gamma (r), \delta (r) < f(x)$
+
+    를 보이는 것과 같다. a) 는 $r$ 이 $(2)$ 를 만족하면 $x$ 가 최소상계이므로 $\gamma (r) \leq x$ 라는 이야기이고, b) 는 최소상계인 $x$ 보다 작은 $z$ 가 존재하면 $z$ 는 상계가 아니라는 말이다. 
+
+    $\delta (r) < f(x)$ 이면 $\delta (r)$ 은 $A_x$ 의 상계가 아니므로 
+
+    $$ \exists s \in \mathbb{Q}, \delta (r) < \delta (s), \gamma (s) < x $$
+
+    이다. 그러면 $\gamma (r) \gamma (s) \implies \gamma (r) < x$ 이다. 이로써 a) 가 증명되었다. □ 
+
+    이제 $z<x$ 라고 하면 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+    
+    $$ \exists r \in \mathbb{Q} \text{ s.t. }\  z < \gamma (r) < x$$
+
+    이다. 그러면 $\delta (r) = f(\gamma (r)) < f(x)$ 이므로 b) 가 증명되었다. □ 
+
+    $f \circ g = 1_G$ 도 마찬가지의 방법으로 증명가능하고, 결국 $f$ 는 전단사함수임이 증명된다. 이로써 모든 증명이 끝났다. ■ 
