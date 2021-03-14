@@ -990,7 +990,7 @@
 
     2. $\gamma (P _{\mathbb{Q}}) = \gamma (\mathbb{Q}) \cap P _{F}$
 
-    을 만족하는 단사함수 $\gamma : \mathbb{Q} \to  F$ 가 유일하게 존재한다. 
+    을 만족하는 단사함수 $\gamma : \mathbb{Q} \to  F, r \mapsto r \cdot 1_F$ 가 유일하게 존재한다. 
 
 - 이 정리는 임의의 순서체 $F$ 가 유리수체 $\mathbb{Q}$ 를 포함하며, 두 순서체의 연산과 순서를 구별할 필요가 없음을 말해준다. 
 
@@ -1064,33 +1064,6 @@
 
     로 정의하자. 그러면 이렇게 정의된 함수 $\gamma : \mathbb{Q} \to F$ 는 잘 정의되어 있고, $(1),(2),(3)$ 을 만족하는 단사함수가 되지만 여백이 부족해서 증명을 마저 쓸 수가 없다. ■ 
 
-    - 그러면 이 증명은 결국 $\gamma : \N \to F$ 를 
-
-        $$ \gamma (0) = 0, \quad \gamma (n+1) = \gamma (n ^{+}) = \gamma (n) + 1 $$
-
-        로 정의하고, 이것을 기반으로 $\gamma : \mathbb{Z} \to F$ 를 
-        
-        $$ \gamma (n) = \gamma (n), \quad \gamma (-n) = - \gamma (n) $$
-
-        으로 정의해서 음수인 입력에 대한 함숫값을 정의하고, 또 이것을 기반으로 $\gamma : \mathbb{Q} \to F$ 를 
-
-        $$ r \bigg (\dfrac{a}{b}\bigg ) = \dfrac{\gamma (a)}{\gamma (b)} $$
-
-        라고 정의하면 $(1),(2),(3)$ 을 만족하는 유일한 단사함수가 된다는 것인가? 그러면 정리해서 $\gamma : \mathbb{Q} \to F$ 는 
-
-        $$ \gamma (n) = \begin{cases}
-        0 &n=0\\
-        \gamma (n) + 1 & n \in P _{\mathbb{Z}}, n > 0\\
-        -\gamma (-n) + 1 & n \in - P _{\mathbb{Z}}, n < 0\\
-        \dfrac{\gamma (a)}{\gamma (b)} & n \in \mathbb{Q}, n = \dfrac{a}{b}\\
-        \end{cases} 
-        $$
-
-        인데, 그러면 결국 $\gamma (x) = x$ 라는 결론이 나온다. 
-
-        내 의문은 결국에 이 정리가 말하고 싶은 것이 그러한 조건을 만족시키는 것이 항등함수이고, 항등함수가 순서체에 유일하게 존재한다는 것이냐는 것이다. 
-
-
 - 순서체 $F$ 의 곱하기의 항등원을 $1 _{F}$ 라 두면 $\forall r \in \mathbb{Q}$ 에 대하여 
 
     $$ \gamma (r) = r \cdot 1_F $$
@@ -1098,6 +1071,60 @@
     이다. 
 
     - 증명
+
+        $\gamma : \N \to F$ 는 다음과 같이 정의되었다.
+
+        $$ \gamma (0) = 0 $$
+
+        $$ \gamma (n+1) = \gamma (n ^{+}) = \gamma (n) + 1, \qquad n \in \N $$
+
+        이 정의는 더하기의 정의 "각 자연수 $m \in \N$ 에 대하여 $\gamma _m(0) = m, \qquad n \in \N \implies \gamma _m(n ^{+}) = [\gamma _m(n)]^{+}$ 를 만족하면서 유일하게 존재하는 함수 $\gamma _m:\N \to \N$ 에 대하여 자연수의 더하기를 $m, n \in \N$ 에 대하여 $m + n = \gamma _m(n)$ 라고 정의한다." 에 의하여 
+
+        $$ \gamma _0(n) = 0 + n $$
+
+        와도 같다. 그러므로 $r \in \N, \gamma (r) = r$ 이다. ❒ 
+
+        $\gamma : \mathbb{Z} \to F$ 는 
+
+        $$ \gamma (n) = \gamma (n), \qquad \gamma (-n) = - \gamma (n) $$
+
+        와 같이 정의되었는데, 이는 곧 
+
+        $$ \gamma (r) = \begin{cases}
+        r & r \in \N\\
+        -r & r \in \mathbb{Z} \text{\textbackslash}\N\\
+        \end{cases} 
+        $$
+
+        이므로 $r \in \mathbb{Z}, \gamma (r) = r$ 이다. ❒ 
+
+        $\gamma : \mathbb{Q} \to F$ 는 
+        
+        $$ \gamma \bigg (\dfrac{a}{b}\bigg ) = \dfrac{\gamma (a)}{\gamma (b)}, \qquad (a,b) \in \mathbb{Z}\times (\mathbb{Z}\text{ \textbackslash }\{0\}) $$
+
+        와 같이 정의되었는데 $\gamma (a) \in \mathbb{Q}, \gamma (b) \in \mathbb{Q} \text{\textbackslash}\{0\}$ 이므로 $r \in \mathbb{Z}: \gamma (r) = r$ 에서
+
+        $$ \gamma \bigg (\dfrac{a}{b}\bigg ) = \dfrac{a}{b} $$
+
+        이다. ■ 
+
+- 단사함수 $\gamma$ 는 반드시 $\gamma (r) = r \cdot 1_F$ 이다.
+
+    - 증명 
+
+        $\gamma$ 가 항등함수가 아니라고 가정하면 $\gamma (r) \neq r$ 이다. 그런데도 
+        
+        $$\forall r, s \in \mathbb{Q}, \quad  \gamma (r+s)=\gamma (r)+\gamma (s), \quad  \gamma (rs) = \gamma (r) \gamma (s)$$
+
+        이 성립한다. 이때 $s = 0$ 라 두면 
+
+        $$ \gamma (r + 0) = \gamma (r) + \gamma (0) \iff  \gamma (r) = \gamma (r) + \gamma (0) \iff  0 = 0 + \gamma (0) $$
+
+        에서 
+
+        $$ \gamma (0) = 0 $$
+
+        이다. 그런데 $\gamma (r) \neq r$ 이므로 이는 모순이다. 그러므로 $\gamma$ 는 반드시 항등함수이다. 
 
 !!! tldr ""
 
@@ -2329,7 +2356,7 @@
 
     를 만족한다. 
 
-- 쉽게 말해서 완비순서체는 유일하게 존재한다. 다시말해서 이 정리는 완비순서체가 본질적으로 단 하나만 존재함을 말해준다. 즉, 완비순서체가 2개 이상이 존재하면 그 완비순서체 사이에 모든 구조를 그대로 보존하는 사상이 존재한다. 
+- 이 정리는 완비순서체가 유일하게 존재함을 말한다. 즉, 완비순서체는 본질적으로 단 하나만 존재하고, 그것이 실수체라는 것이다. 만약 완비순서체의 조건을 만족하는 다른 체가 정의된다면, 그 체와 실수체 사이에 일대일 대응과 연산의 대응관계 같은 모든 구조를 그대로 보존하는 사상이 존재한다는 것이다.
 
     - 또한 이 정리로써 데데킨트 절단으로 구성한 실수체와 코시 수열로 구성한 실수체가 모두 완비순서체였고, 결국 이들은 같은 순서체임을 알 수 있다. 
 
@@ -2341,14 +2368,15 @@
 
     2. $\gamma (P _{\mathbb{Q}}) = \gamma (\mathbb{Q}) \cap P _{F}$
 
-    을 만족하는 단사함수 $\gamma : \mathbb{Q} \to  F$ 가 유일하게 존재한다." 에 의하여 
+    을 만족하는 단사함수 $\gamma : \mathbb{Q} \to  F, r \mapsto r \cdot 1_F$ 가 유일하게 존재한다." 에 의하여 
 
     $$ \begin{equation}\begin{split} & \gamma (r+s) = \gamma (r) + \gamma (s), \quad \gamma (rs) = \gamma (r)\gamma (s), \quad \gamma (P _{\mathbb{Q}}) = \gamma (\mathbb{Q})\cap P _{F}\\ &\delta (r+s) = \delta (r) + \delta (s), \quad \delta (rs) = \delta (r)\delta (s), \quad \delta (P _{\mathbb{Q}}) = \delta (\mathbb{Q})\cap P _{G} \end{split}\end{equation} \tag{1} $$
 
-
     을 만족하는 단사함수 
 
-    $$ \gamma : \mathbb{Q} \to F, \quad \delta : \mathbb{Q} \to G $$
+    $$ \gamma : \mathbb{Q} \to F, r \mapsto r \cdot 1_F $$
+    
+    $$ \delta : \mathbb{Q} \to G, r \mapsto r \cdot 1_G $$
 
     가 존재한다. 이제 각 $x \in F$ 에 대하여 
 
@@ -2434,7 +2462,7 @@
 
     이다. 그러면 $0 < \gamma (r)<x$ 이고, 이로써 2) 의 증명이 끝났다. □ 
 
-    이제 $f$ 가 전단사함수임을 보이면 모든 증명이 끝난다. 이는 $g \circ f = 1_f, f \circ g = 1_G$ 를 보임으로써 이루어진다. $g \circ f = 1_F$ 를 보이기 위하여 $f$ 의 정의에 의하여 $x \in F$ 에 대하여
+    이제 $f$ 가 전단사함수임을 보이면 모든 증명이 끝난다. 이는 $g \circ f = 1_F, f \circ g = 1_G$ 를 보임으로써 이루어진다. $g \circ f = 1_F$ 를 보이기 위하여 $f$ 의 정의에 의하여 $x \in F$ 에 대하여
 
     $$ x = \sup \{\gamma (r) \in F:r \in \mathbb{Q}, \delta (r) < f(x)\} \tag{2} $$
 
