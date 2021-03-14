@@ -1082,7 +1082,7 @@
 
         $$ \gamma _0(n) = 0 + n $$
 
-        와도 같다. 그러므로 $r \in \N, \gamma (r) = r$ 이다. ❒ 
+        와도 같다. 그러므로 $r \in \N, \gamma (r) = r$ 이다. □ 
 
         $\gamma : \mathbb{Z} \to F$ 는 
 
@@ -1090,19 +1090,15 @@
 
         와 같이 정의되었는데, 이는 곧 
 
-        $$ \gamma (r) = \begin{cases}
-        r & r \in \N\\
-        -r & r \in \mathbb{Z} \text{\textbackslash}\N\\
-        \end{cases} 
-        $$
+        $$ \gamma (r) = \begin{cases} r & r \in \N\\ - \gamma (-r) & r \in \mathbb{Z} \text{\textbackslash}\N\\ \end{cases} $$
 
-        이므로 $r \in \mathbb{Z}, \gamma (r) = r$ 이다. ❒ 
+        이므로 $r \in \mathbb{Z}, \gamma (r) = r$ 이다. □ 
 
         $\gamma : \mathbb{Q} \to F$ 는 
         
         $$ \gamma \bigg (\dfrac{a}{b}\bigg ) = \dfrac{\gamma (a)}{\gamma (b)}, \qquad (a,b) \in \mathbb{Z}\times (\mathbb{Z}\text{ \textbackslash }\{0\}) $$
 
-        와 같이 정의되었는데 $\gamma (a) \in \mathbb{Q}, \gamma (b) \in \mathbb{Q} \text{\textbackslash}\{0\}$ 이므로 $r \in \mathbb{Z}: \gamma (r) = r$ 에서
+        와 같이 정의되었는데 $\gamma (a) \in \mathbb{Z}, \gamma (b) \in \mathbb{Z} \text{\textbackslash}\{0\}$ 이므로 $r \in \mathbb{Z}, \gamma (r) = r$ 에서
 
         $$ \gamma \bigg (\dfrac{a}{b}\bigg ) = \dfrac{a}{b} $$
 
