@@ -1064,6 +1064,41 @@
 
     로 정의하자. 그러면 이렇게 정의된 함수 $\gamma : \mathbb{Q} \to F$ 는 잘 정의되어 있고, $(1),(2),(3)$ 을 만족하는 단사함수가 되지만 여백이 부족해서 증명을 마저 쓸 수가 없다. ■ 
 
+    - 그러면 이 증명은 결국 $\gamma : \N \to F$ 를 
+
+        $$ \gamma (0) = 0, \quad \gamma (n+1) = \gamma (n ^{+}) = \gamma (n) + 1 $$
+
+        로 정의하고, 이것을 기반으로 $\gamma : \mathbb{Z} \to F$ 를 
+        
+        $$ \gamma (n) = \gamma (n), \quad \gamma (-n) = - \gamma (n) $$
+
+        으로 정의해서 음수인 입력에 대한 함숫값을 정의하고, 또 이것을 기반으로 $\gamma : \mathbb{Q} \to F$ 를 
+
+        $$ r \bigg (\dfrac{a}{b}\bigg ) = \dfrac{\gamma (a)}{\gamma (b)} $$
+
+        라고 정의하면 $(1),(2),(3)$ 을 만족하는 유일한 단사함수가 된다는 것인가? 그러면 정리해서 $\gamma : \mathbb{Q} \to F$ 는 
+
+        $$ \gamma (n) = \begin{cases}
+        0 &n=0\\
+        \gamma (n) + 1 & n \in P _{\mathbb{Z}}, n > 0\\
+        -\gamma (-n) + 1 & n \in - P _{\mathbb{Z}}, n < 0\\
+        \dfrac{\gamma (a)}{\gamma (b)} & n \in \mathbb{Q}, n = \dfrac{a}{b}\\
+        \end{cases} 
+        $$
+
+        인데, 그러면 결국 $\gamma (x) = x$ 라는 결론이 나온다. 
+
+        내 의문은 결국에 이 정리가 말하고 싶은 것이 그러한 조건을 만족시키는 것이 항등함수이고, 항등함수가 순서체에 유일하게 존재한다는 것이냐는 것이다. 
+
+
+- 순서체 $F$ 의 곱하기의 항등원을 $1 _{F}$ 라 두면 $\forall r \in \mathbb{Q}$ 에 대하여 
+
+    $$ \gamma (r) = r \cdot 1_F $$
+
+    이다. 
+
+    - 증명
+
 !!! tldr ""
 
     순서체 $F$ 에 대하여 다음이 동치이고, 이 조건을 만족하는 순서체 $F$ 를 아르키메데스의 성질을 만족한다고 한다.
@@ -2321,12 +2356,50 @@
 
     $$ \delta (m) = m \cdot 1_G $$
 
-    는 $\gamma (m) = m \cdot 1_F \not \leq  x$ 이므로 $A_x$ 의 상계이다. 그러면 $A_x$ 는 위로 유계이고 $G$ 는 완비순서체이므로 $A_x$ 는 최소상계를 갖는다. 이 $x$ 에 대하여 결정되는 상한을 $f(x)$ 라고 쓰면 $f$ 는 $F$ 에서 $G$ 로 가는 함수이다. 즉, $x \in F$ 에 대하여 $f: F \to G$ 를 
+    는 $\gamma (m) = m \cdot 1_F > x$ 이므로 $A_x$ 의 상계이다. 그러면 $A_x$ 는 위로 유계이고 $G$ 는 완비순서체이므로 $A_x$ 는 최소상계를 갖는다. 이 $x$ 에 대하여 결정되는 $A_x$ 의 상한을 $f(x)$ 라고 쓰면 $f$ 는 $F$ 에서 $G$ 로 가는 함수이다. 즉, $x \in F$ 에 대하여 $f: F \to G$ 를 
 
-    $$ f(x) = \sup \{\delta (r) \in G: r \in \mathbb{Q}, \gamma (r) < x\} \in G $$
+    $$ f(x) = \sup \{\delta (r) \in G: r \in \mathbb{Q}, \gamma (r) < x\} = \sup A_x \in G $$
 
     와 같이 정의하는 것이다. 그러면 마찬가지로 $G$ 에서 $F$ 로 가는 함수 $g: G \to F$ 를 $y \in G$ 에 대하여
 
     $$ g(y) = \sup \{\gamma (r) \in F: r \in \mathbb{Q}, \delta (r) < y\} \in F $$
 
     와 같이 정의할 수 있다. 
+
+    먼저 $(1)$ 에 의하여 각 유리수 $r, s \in \mathbb{Q}$ 에 대하여 
+
+    $$ r < s \iff \gamma (r) < \gamma (s) \iff \delta (r) < \delta (s) $$
+
+    가 성립한다. 따라서 
+
+    $$ \begin{equation}\begin{split} f(\gamma (s)) &= \sup \{\delta (r) \in G: r \in \mathbb{Q}, \gamma (r) < \gamma (s)\}  \\ &= \sup \{\delta (r) \in G: r \in \mathbb{Q}, \delta (r) < \delta (s)\} = \delta (s) \end{split}\end{equation} \tag*{} $$
+
+    이므로 
+
+    $$ f \circ \gamma = \delta , \quad g \circ \delta = \gamma $$
+
+    이다. 그러면 다음과 같은 관계가 성립한다.
+
+    $$ \mathbb{Q} \xrightarrow{\gamma } F, \mathbb{Q} \xrightarrow{\delta  } G, F \xleftrightarrow[f]{g} G $$
+
+    이제 $f(x+y) = f(x)+f(y)$ 임을 보이는데 함수 $f$ 의 정의와 정리 "순서체 $F$ 의 부분집합 $S, T \subset F$ 에 대하여 $S + T = \{s + t \in F : s \in S, t \in T\}$ 라고 정의했을 때 $\sup (S+T) = \sup S + \sup T$ 이다." 에 의하여 
+
+    $$ f(x) + f(y) = \sup A_x + \sup A_y = \sup (A_x + A_y) = \sup A _{x+y} = f(x + y) $$
+
+    이므로 
+
+    $$ A _{x+y} = A_x + A_y $$
+
+    임을 보이면 된다. 먼저 $\delta (r) \in A_x, \delta (s) \in A_y \implies \gamma (r) < x, \gamma (s) < y$ 이므로 
+
+    $$ \delta (r)+\delta (s)=\delta (r+s), \quad \gamma (r+s)=\gamma (r)+\gamma (s) < x+y $$
+
+    에서 $\delta (r)+\delta (s)\in A _{x+y}$ 이다. 역으로 $\delta (t) \in A _{x+y} \implies \gamma (t) < x+y$ 인데 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+
+    $$ \exists s \in \mathbb{Q} \text{ s.t. }\ r(t)-y<r(s)<x $$
+
+    이다. 그러면 
+
+    $$ \gamma (s) < x, \quad \gamma (t-s) = \gamma (t) - \gamma (s) < y $$
+
+    에서 $\delta (t) = \delta (s) + \delta (t-s)\in A_x+A_y$ 이다. □ 
