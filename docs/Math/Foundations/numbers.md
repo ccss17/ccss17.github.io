@@ -111,17 +111,17 @@
 
     $(1),(2)$ 를 동시에 만족하는 함수 $\gamma _1, \gamma _2$ 가 있다고 가정하고 
 
-    $$ X = \{n \in \N: \gamma _1(n) = \gamma _2(n)\} $$
+    $$ Z = \{n \in \N: \gamma _1(n) = \gamma _2(n)\} $$
 
     라고 하자.
 
-    일단 $\gamma _1 (0) = a = \gamma _2(0)$ 이므로 $0 \in X$ 이다. 만약 $n \in X$ 이면 
+    일단 $\gamma _1 (0) = a = \gamma _2(0)$ 이므로 $0 \in Z$ 이다. 만약 $n \in Z$ 이면 
 
     $$ \gamma _1(n ^{+}) = f(\gamma _1(n)) = f(\gamma _2(n)) = \gamma _2(n ^{+}) $$
 
-    이므로 $n ^{+} \in X$ 이다. 그러므로 수학적 귀납법에 의하여 
+    이므로 $n ^{+} \in Z$ 이다. 그러므로 수학적 귀납법에 의하여 
 
-    $$ X = \N $$
+    $$ Z = \N $$
 
     이고 
     
@@ -130,8 +130,6 @@
     이다. 
 
 - 존재성 증명
-
-    *($X = \N$ 이지만 계속 $X$ 라는 표기를 사용한다. 따라서 이는 상징적인 의미이다. 즉, $X$ 를 $\gamma$ 의 출력 집합이라고 생각하면 될 것 같다.)*
 
     이제 존재성을 보이기 위하여 다음 성질 
 
@@ -1030,7 +1028,7 @@
 
     $$ = \gamma (n) + \gamma (m) + 1 = \gamma (n) + \gamma (m ^{+}) $$
 
-    이므로 임의의 $m, n \in \N$ 에서 $(1)$ 이 성립함을 알 수 있다. □ 
+    이므로 임의의 $m, n \in \N$ 에서 $(1)$ 이 성립함을 알 수 있다. $\\blacktriangle$ 
     
     $(2)$ 도 마찬가지로 $m=0$ 이면 자명하고 귀납법을 사용하여 
 
@@ -1038,13 +1036,13 @@
 
     $$ = \gamma (n)\gamma (m)+\gamma (n) = \gamma (n)[\gamma (m) +1] = \gamma (n)\gamma (m ^{+}) $$
 
-    가 되어 증명된다. □ 
+    가 되어 증명된다. $\\blacktriangle$ 
 
     한편, 임의의 순서체에서 $0<1 \implies 1 \in P _{F}$ 이다. 그러므로 $\gamma (n) \in P _{F}$ 이면 $\gamma (n ^{+}) = \gamma (n) + 1 \in P _{F}$ 이 되어 $n \in \N \text{ \textbackslash }\{0\}$ 에 대하여
 
     $$ \gamma (n) \in P _{F} \tag{3} $$
 
-    이다. □ 
+    이다. $\\blacktriangle$ 
 
     마지막으로 $\gamma : \N \to F$ 가 단사함수임을 보일 것이다. 먼저 $n> m, \gamma (n) = \gamma (m)$ 이라고 가정하여 단사함수의 조건에 어긋나게 하자. 그러면 $n = m + k$ 인 $k \in \N \text{ \textbackslash }\{0\}$ 가 존재하여 
 
@@ -1052,7 +1050,7 @@
 
     $$ = \gamma (m+k) - \gamma (m) = \gamma (n) - \gamma (m) = 0 \not \in P _{F} $$
 
-    인데, 이는 $(3)$ 에 모순이므로 $\gamma : \N \to F$ 는 단사함수이다. □ 
+    인데, 이는 $(3)$ 에 모순이므로 $\gamma : \N \to F$ 는 단사함수이다. $\\blacktriangle$ 
 
     이제 $\N \subset \mathbb{Z} \subset \mathbb{Q}$ 를 염두하며 $\gamma : \N \to F$ 의 정의역을 $\mathbb{Q}$ 로 확장할 것이다. 먼저 $\mathbb{Z}$ 로 확장하여 함수 $\gamma : \mathbb{Z} \to F$ 를 $n \in \N$ 에 대하여
 
@@ -1082,7 +1080,7 @@
 
         $$ \gamma _0(n) = 0 + n $$
 
-        와도 같다. 그러므로 $r \in \N, \gamma (r) = r$ 이다. □ 
+        와도 같다. 그러므로 $r \in \N, \gamma (r) = r$ 이다. $\\blacktriangle$ 
 
         $\gamma : \mathbb{Z} \to F$ 는 
 
@@ -1092,7 +1090,7 @@
 
         $$ \gamma (r) = \begin{cases} r & r \in \N\\ - \gamma (-r) & r \in \mathbb{Z} \text{\textbackslash}\N\\ \end{cases} $$
 
-        이므로 $r \in \mathbb{Z}, \gamma (r) = r$ 이다. □ 
+        이므로 $r \in \mathbb{Z}, \gamma (r) = r$ 이다. $\\blacktriangle$ 
 
         $\gamma : \mathbb{Q} \to F$ 는 
         
@@ -1434,7 +1432,7 @@
 
         $$ \beta \in \R $$
 
-        이 증명되었다. □ 
+        이 증명되었다. $\\blacktriangle$ 
 
         이제 $\alpha + \beta = 0 ^{*}$ 을 보일텐데, $q \in \alpha , p \in \beta$ 이면 $r > p, -r \not\in \alpha$ 인 $r \in \mathbb{Q}$ 이 다음과 같이 존재한다.
 
@@ -1450,7 +1448,7 @@
         
         $$ \iff  q + p < 0 $$
 
-        이므로 $\alpha + \beta \subset 0 ^{*}$ 이다. □ 
+        이므로 $\alpha + \beta \subset 0 ^{*}$ 이다. $\\blacktriangle$ 
         
         이제 $0 ^{*} \subset \alpha + \beta$ 를 보이면 모든 증명이 끝난다. 이를 위하여 $s \in 0 ^{*}$ 에 대한 $t = \dfrac{-s}{2} > 0$ 인 $t \in \mathbb{Q}$ 에 대하여 
 
@@ -1460,7 +1458,7 @@
         
         $$\forall q \in \mathbb{Q}, q \in \alpha \implies \alpha = \mathbb{Q}$$
 
-        가 되어 모순이다. 그러므로 $A$ 는 위로 유계이고, 정리 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다" 에 의하여 최대원소 $n_0 \in A$ 를 가진다. 즉, $n_0t \in \alpha \land (n_0+1)t \not\in \alpha$ 이다. 이제 
+        가 되어 모순이다. 그러므로 $A$ 는 위로 유계이고, 정리 "위로 유계이며 비어있지 않은 자연수들의 집합 $A \subset \N$ 는 최대 원소를 가진다." 에 의하여 즉, $n_0t \in \alpha \land (n_0+1)t \not\in \alpha$ 이다. 이제 
 
         $$ r = s - n_0 t = -(n_0 + 2)t $$
 
@@ -1648,7 +1646,7 @@
 
     $$ |x(i) - x(j)| \leq |x(i) - a| + |x(j) - a| < \dfrac{e}{2} + \dfrac{e}{2} = e $$
 
-    가 되어 $x$ 는 코시 수열이다. (*$\because$ 정리 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$"*) □ 
+    가 되어 $x$ 는 코시 수열이다. (*$\because$ 정리 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$"*) $\\blacktriangle$ 
 
     이제 역으로 $x$ 가 코시 수열이라고 가정하면
 
@@ -1840,7 +1838,7 @@
 
     $$ i \geq N_e \implies \beta  (i) - \alpha(i) > -d'_e $$
 
-    이므로 $[\beta ]>[\alpha ]$ 이다. □ 
+    이므로 $[\beta ]>[\alpha ]$ 이다. $\\blacktriangle$ 
 
     이제 이 두 가지 경우가 성립하지 않는다고 하면 임의의 유리수 $e > 0$ 에 대하여 
     
@@ -1880,7 +1878,7 @@
 
 - $\alpha + \beta$ 는 기본열이다. 즉, 코시 수열의 덧셈은 닫혀있다.
 
-- 기본열 $\alpha$ 에 대하여 $(-\alpha )(i) = - \alpha (i)$ 로 정의된 유리수열 $-\alpha$ 는 기본열이다. 또한 $-\alpha$ 는 $\alpha$ 의 더하기의 역원이다.
+- 기본열 $\alpha$ 에 대하여 $(-\alpha )(i) = - \alpha (i)$ 로 정의된 유리수열 $-\alpha$ 는 기본열이다. 또한 $[-\alpha]$ 는 $[\alpha]$ 의 더하기의 역원이다.
 
     - 증명 
 
@@ -1888,7 +1886,7 @@
 
     - 증명 
 
-- $0 ^{*}$ 가 항등원이다. 
+- $[0 ^{*}]$ 이 항등원이다. 
 
     - $0 ^{*}$ 은 기본열의 정의에서 살펴본 것처럼 
 
@@ -1938,9 +1936,9 @@
 
         이다. 그러므로 $\alpha \beta$ 는 기본열이다.
 
-    - 이 유리수열 연산은 잘 정의되어 있고, associative, commutative, distributive 를 만족하고 항등원 $1 ^{*}$ 을 가진다. 
+- 실수의 곱하기는 잘 정의되어 있고, associative, commutative, distributive 를 만족하고 항등원 $[1 ^{*}]$ 을 가진다. 
 
-        - 증명
+    - 증명
     
 - 실수의 곱하기는 역원을 가진다. 
 
@@ -2074,11 +2072,11 @@
 
     라고 하면 정리 "$\forall [\alpha ], [\beta ] \in \R$ 에 대하여 $[\alpha ] > [\beta ],  [\alpha ] = [\beta ],  [\alpha ] < [\beta ]$ 중 오직 하나만 성립한다." 에 의하여 $[\alpha _n]$ 과 $[\alpha _{n+1}]$ 사이의 유리수 $r(n) \in \mathbb{Q}$ 가 존재한다. 이때
 
-    $$ |[\alpha _n] - r(n)^{*}|<|[\alpha _n]-[\alpha _{n+1}]| $$
+    $$ |[\alpha _n] - [r(n)^{*}]|<|[\alpha _n]-[\alpha _{n+1}]| $$
 
     이므로 임의의 양의 실수 $[ \epsilon ] > 0$ 에 대하여 
 
-    $$ n \geq N \implies |[\alpha _n] - r(n) ^{*}| < \dfrac{1}{3}[\epsilon] \tag{1} $$
+    $$ n \geq N \implies |[\alpha _n] - [r(n) ^{*}]| < \dfrac{1}{3}[\epsilon] \tag{1} $$
 
     이 성립하는 $N \in \N$ 이 존재한다.(*이것은 기본열 $\alpha_n$ 의 $n$ 번째 항과 $n+1$ 번째 항 사이에 반드시 어떤 유리수가 존재하고, 그러므로 어떤 실수를 나타내는 실수 수열 $[\alpha _n]$ 과 또 실수 수열 $r(n)^{*}$ 의 무한항의 차이값이 $0$ 으로 근사된다는 의미이다.*)
 
@@ -2296,7 +2294,7 @@
 
 - 증명
 
-    $x = 0$ 이면 정리 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다." 와 정리 "순서체 $F$ 에 대하여 다음이 동치이고, 이 조건을 만족하는 순서체 $F$ 를 아르키메데스의 성질을 만족한다고 한다. $x>0 \implies  \exists n \in \N \text{ \textbackslash }\{0\} \text{ s.t.  }\  x > \dfrac{1}{n}$" 를 적용하면 된다. □ 
+    $x = 0$ 이면 정리 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다." 와 정리 "순서체 $F$ 에 대하여 다음이 동치이고, 이 조건을 만족하는 순서체 $F$ 를 아르키메데스의 성질을 만족한다고 한다. $x>0 \implies  \exists n \in \N \text{ \textbackslash }\{0\} \text{ s.t.  }\  x > \dfrac{1}{n}$" 를 적용하면 된다. $\\blacktriangle$ 
 
     이제 $0<x<y$ 라고 하면 다시 정리 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다." 에 의하여 
 
@@ -2314,7 +2312,7 @@
 
     $$ x < \dfrac{m}{n} = \dfrac{m-1}{n} + \dfrac{1}{n} \leq x + \dfrac{1}{n} < y $$
 
-    이다. 그러므로 $\dfrac{m}{n}$ 이 바로 $x$ 와 $y$ 사이에 있는 유리수이다. □ 
+    이다. 그러므로 $\dfrac{m}{n}$ 이 바로 $x$ 와 $y$ 사이에 있는 유리수이다. $\\blacktriangle$ 
 
     $x<0$ 일 때는 $\exists n \in \N \text{ s.t.  }\ -x<n$ 이므로 
 
@@ -2456,13 +2454,13 @@
 
     $$ \gamma (s) < x, \quad \gamma (t-s) = \gamma (t) - \gamma (s) < y $$
 
-    에서 $\delta (t) = \delta (s) + \delta (t-s)\in A_x+A_y$ 이다. □ 
+    에서 $\delta (t) = \delta (s) + \delta (t-s)\in A_x+A_y$ 이다. $\\blacktriangle$ 
 
     이제 $f(xy) = f(x)f(y)$ 임을 보이기 위하여 $x,y \in P_F$ 인 경우부터 생각하면 다시 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
 
     $$ A_x \cap P_G \neq \varnothing , A_y \cap P_G \neq \varnothing $$
 
-    이므로 정리 "순서체 $F$ 의 부분집합 $S, T \subset P _{F}$ 에 대하여 $ST = \{st \in P _{F} : s \in S, t \in T\}$ 라고 정의했을 때 $\sup ST = \sup S \sup T$ 이다." 를 적용하면 된다. 이로써 1) 의 증명이 끝났다. □ 
+    이므로 정리 "순서체 $F$ 의 부분집합 $S, T \subset P _{F}$ 에 대하여 $ST = \{st \in P _{F} : s \in S, t \in T\}$ 라고 정의했을 때 $\sup ST = \sup S \sup T$ 이다." 를 적용하면 된다. 이로써 1) 의 증명이 끝났다. $\\blacktriangle$ 
 
     이제 
 
@@ -2478,7 +2476,7 @@
 
     $$ \exists \delta (r) \in A_x \text{ s.t. }\ \delta (r) > 0 $$
 
-    이다. 그러면 $0 < \gamma (r)<x$ 이고, 이로써 2) 의 증명이 끝났다. □ 
+    이다. 그러면 $0 < \gamma (r)<x$ 이고, 이로써 2) 의 증명이 끝났다. $\\blacktriangle$ 
 
     이제 $f$ 가 전단사함수임을 보이면 모든 증명이 끝난다. 이는 $g \circ f = 1_F, f \circ g = 1_G$ 를 보임으로써 이루어진다. $g \circ f = 1_F$ 를 보이기 위하여 $f$ 의 정의에 의하여 $x \in F$ 에 대하여
 
@@ -2496,12 +2494,12 @@
 
     $$ \exists s \in \mathbb{Q}, \delta (r) < \delta (s), \gamma (s) < x $$
 
-    이다. 그러면 $\gamma (r) \gamma (s) \implies \gamma (r) < x$ 이다. 이로써 a) 가 증명되었다. □ 
+    이다. 그러면 $\gamma (r) \gamma (s) \implies \gamma (r) < x$ 이다. 이로써 a) 가 증명되었다. $\\blacktriangle$ 
 
     이제 $z<x$ 라고 하면 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
     
     $$ \exists r \in \mathbb{Q} \text{ s.t. }\  z < \gamma (r) < x$$
 
-    이다. 그러면 $\delta (r) = f(\gamma (r)) < f(x)$ 이므로 b) 가 증명되었다. □ 
+    이다. 그러면 $\delta (r) = f(\gamma (r)) < f(x)$ 이므로 b) 가 증명되었다. $\\blacktriangle$ 
 
     $f \circ g = 1_G$ 도 마찬가지의 방법으로 증명가능하고, 결국 $f$ 는 전단사함수임이 증명된다. 이로써 모든 증명이 끝났다. ■ 

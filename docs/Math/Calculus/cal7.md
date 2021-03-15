@@ -310,7 +310,7 @@
     
     $$ = \dfrac{\partial e ^{x+yz}}{\partial x} = e ^{x+yz} =f(x,y,z) $$
 
-    이다. □ 
+    이다. $\\blacktriangle$ 
 
     $$ D_2f(x,y,z) = \dfrac{\partial e ^{x+yz}}{\partial y} = $$
 
@@ -318,13 +318,13 @@
 
     $$ = e ^{x}\dfrac{\partial (e ^{z})^{y}}{\partial y} = e ^{x}(e ^{z})^{y}\ln e ^{z} = e ^{x+zy} \cdot z = zf(x,y,z) $$
 
-    이다. □ 
+    이다. $\\blacktriangle$ 
     
     마찬가지로 
 
     $$ D_3f(x,y,z) = yf(x,y,z) $$
 
-    이다. □ 
+    이다. $\\blacktriangle$ 
 
     그런데 $f(O) = e^{0+0 \cdot 0} = 1$ 이므로 
 

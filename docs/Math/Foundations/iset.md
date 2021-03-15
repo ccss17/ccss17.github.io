@@ -26,6 +26,8 @@
 
 - 아래의 2) 에서 3) 을 도출하는 증명에서 $h(A) \in A$ 를 만족하는 함수 $h$ 를 집합 $X$ 의 선택함수라고 하고, 3) 을 선택공리라고 부른다.
 
+- 선택공리가 수학에서 사용될 때 대부분 순서와 관련된다. 아래에서 살펴볼 소른 도움정리와 하우스도르프 극대 원칙은 선택공리과 동치인 명제인데 수학의 여러 분야에서 널리 쓰인다.
+
 - 1) 에서 2) 를 도출하는 증명 
 
     집합 $X$ 의 분할 $\mathcal{P}$ 가 주어졌을 때 각 $x \in X$ 가 속하는 $A \in \mathcal{P}$ 가 유일하게 결정되는데 이를 $f(x)$ 라고 두면, $f: X \to \mathcal{P}$ 는 전사함수이다. 이때 1) 이 가정이므로 $f \circ g = 1 _{\mathcal{P}}$ 인 함수 $g: \mathcal{P}\to X$ 가 존재한다. 
@@ -70,4 +72,74 @@
 
     $$ g(i) = h(X_i) $$
 
-    라 정의하자. 
+    라 정의하자. 그러면 각 $i \in I$ 에 대하여 $g(i) = h(X_i) \in X_i$ 이므로 
+
+    $$ g \in \prod_{i \in I}^{}X_i $$
+
+    이다. ■ 
+
+- 4) 에서 3) 를 도출하는 증명 
+
+    4) 가 가정인 것에서 $\prod_{}^{}\{A:A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\} \neq \varnothing$ 이므로 
+    
+    $$ \exists  h \in \prod_{}^{}\{A:A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\} \neq \varnothing$$
+
+    이다. 그러면 각 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여 $h(A) \in A$ 이므로 $h$ 는 $X$ 의 선택함수이다. ■ 
+
+!!! tldr ""
+
+    사슬(chain) : 순서집합 $X$ 의 부분집합 $A$ 가 
+
+    $$ a, b \in A \implies a \leq b \lor a \geq b $$
+
+    이면 $A$ 를 $X$ 의 사슬이라 한다.
+
+- 즉 사슬 속의 서로 다른 두 원소는 항상 비교 가능하다.
+
+- 예시 
+
+    집합 $X$ 의 멱집합 $2 ^{X}$ 에 포함관계에 의한 순서를 부여하여 $A \subset B \iff A \leq B$ 라고 정의하자. $a,b,c \in X$ 에 대하여 
+
+    $$ \{\{a\}, \{a,c\}\}, \quad \{\varnothing , \{a\},\{a,b\},\{a,b,c\},X\} $$
+
+    등은 $2 ^{X}$ 의 사슬이고, $X$ 는 사슬의 상계이다.
+
+!!! tldr ""
+
+    반사슬(antichain) : 순서집합 $X$ 의 부분집합 $A$ 의 서로 다른 두 원소를 비교할 순서관계가 없을 때 $A$ 를 $X$ 의 반사슬이라 한다.
+
+- 즉 반사슬 속의 서로 다른 두 원소는 비교 불가능하다.
+
+!!! tldr ""
+
+    극대원소(maximal element) : 순서집합 $X$ 의 원소 $m \in X$ 이 
+
+    $$ x \in X, x \geq m \implies x = m $$
+
+    일 때 $m$ 을 $X$ 의 극대원소라 한다.
+
+- 예시 
+
+    사슬의 예시에서 순서집합 $2 ^{X}$ 의 극대원소는 $X$ 이다.
+
+    한편 $\N$ 이나 $\mathbb{Z}$ 는 그 자체가 사슬이지만, 극대원소가 존재하지 않는다.
+
+!!! tldr ""
+
+    극소원소(minimal element) : 순서집합 $X$ 의 원소 $n \in X$ 이 
+
+    $$ x \in X, x \leq n \implies x = n $$
+
+    일 때 $n$ 을 $X$ 의 극대원소라 한다.
+
+!!! tldr ""
+
+    초른의 보조정리(Zorn lemma) : 공집합이 아닌 순서집합 $X$ 의 모든 사슬이 상계를 가지면 $X$ 는 극대원소를 가진다.
+
+- 선택공리과 동치인 명제로써 수학의 여러 분야에서 널리 쓰인다.
+
+!!! tldr ""
+
+    하우스도르프 극대 원리(Hausdorff maximal principle) : 임의의 순서집합 $X$ 는 극대 사슬을 가진다.
+
+- 선택공리과 동치인 명제로써 수학의 여러 분야에서 널리 쓰인다.
