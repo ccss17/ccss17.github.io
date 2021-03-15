@@ -6,11 +6,15 @@
 
     1. 함수 $f: X \to Y$ 가 전사이면 $f \circ g = 1_Y$ 인 함수 $g: Y \to X$ 가 존재한다.
 
-    2. 집합 $X$ 의 분할 $\mathcal{P}$ 에 대하여, 각 $A \in \mathcal{P}$ 에 대하여 $g(A) \in A$ 를 만족하는 함수 $g: \mathcal{P} \to X$ 가 존재한다. 
+    2. 집합 $X$ 의 분할 $\mathcal{P}$ 에 대하여, 각 $A \in \mathcal{P}$ 에 대하여 다음이 성립한다.
 
-    3. 집합 $X$ 가 주어지면 각 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여 $h(A) \in A$ 를 만족하는 함수 $h : 2 ^{X} \text{ \textbackslash }\{\varnothing \} \to X$ 가 존재한다. 
+        $$ \exists g: \mathcal{P} \to X \text{ s.t. }\ g(A) \in A $$
 
-    4. 집합 $I$ 가 비어있지 않고, $\forall i \in I$ 에 대하여 $X_i$ 가 비어있지 않으면 $\prod_{i \in I}^{}X_i$ 는 비어있지 않다.
+    3. 집합 $X$ 에 대한 각 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여 다음이 성립한다.
+
+        $$ \exists h: 2 ^{X} \text{ \textbackslash }\{\varnothing \} \to X \text{ s.t. }\ h(A) \in A$$
+
+    4. $I \neq \varnothing \land  \forall i \in I , X_i \neq \varnothing \implies \displaystyle \prod_{i \in I}^{}X_i \neq \varnothing$
 
     로 정의된다.
     
@@ -48,11 +52,11 @@
 
     라 두면 $\mathcal{P} = \{\tilde{A} : A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\}$ 은 집합 $Y = \bigcup_{}^{}\{\tilde{A} : A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\}$ 의 분할이다. 이때 $\forall A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여 $g(\tilde{A}) \in \tilde{A}$ 를 만족하는 함수 $g: \mathcal{P} \to Y$ 가 존재한다.
 
-    이때 $\pi _2:(2 ^{X} \text{ \textbackslash }\{\varnothing \}\}) \times X \to X$ 를 사영이라 두고 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\}$ 에 대하여
+    이때 $\pi _2:(2 ^{X} \text{ \textbackslash }\{\varnothing \}) \times X \to X$ 를 사영이라 두고 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\}$ 에 대하여
 
     $$ h: A \mapsto \pi _2(g(\tilde{A})) $$
 
-    라 정의하면 $h: 2 ^{X} \text{ \textbackslash }\{\varnothing \}\} \to X$ 가 원하는 함수이다. ■  
+    라 정의하면 $h: 2 ^{X} \text{ \textbackslash }\{\varnothing \} \to X$ 가 원하는 함수이다. ■  
 
 - 3) 에서 2) 를 도출하는 증명 
 
