@@ -10,33 +10,6 @@ nav:
   - 튜링의 증명: ProgrammerBase/turing.md
   - 기술적 특이점: ProgrammerBase/future.md
   - 정보이론: Philosophy/information.md
-  - 취약점: 
-    - 취약점에 관하여: vul/memo.md
-  - Paper:
-    - Facenet (2015): paper/facenet.md
-    - Quadruplet (2017): paper/quadruplet.md
-    - BlueBorne: paper/blueborne.md
-    - Meltdown: paper/meltdown.md
-  - Project:
-    - ProgrammerBase: project/ProgrammerBase.md
-    - security-tutorial: project/security-tutorial.md
-    - WICWIU: project/WICWIU.md
-    - ml: ml.md
-    - ubuntu-unminimize: ubuntu-unminimize.md
-    - bof: project/bof.md
-    - nonogram: project/nonogram.md
-    - older-glibc: project/older-glibc.md
-    - test_virt_memory: project/test_virt_memory.md
-    - genie: project/genie.md
-    - homework: project/homework.md
-    - ddtector: project/ddtector.md
-    - dogdoor: project/dogdoor.md
-    - auto-connect-raspberry: project/auto-connect-raspberry.md
-    - kill-idle-tty: project/kill-idle-tty.md
-    - standalone: project/standalone.md
-    - justforfun: project/justforfun.md
-    - dotfiles: project/dotfiles.md
-    - servercat: project/servercat.md
   - Math: 
     - 수학기초론: 
       - 논리학: Math/Foundations/logic.md
@@ -84,6 +57,36 @@ nav:
     #   - (임시): Math/MultiLinearAlgebra/mla.md
     # - 위상수학: 
     #   - (임시): Math/Topology/topology.md
+  - 취약점: 
+    - 취약점에 관하여: vul/memo.md
+  - Paper:
+    - Facenet (2015): paper/facenet.md
+    - Quadruplet (2017): paper/quadruplet.md
+    - BlueBorne: paper/blueborne.md
+    - Meltdown: paper/meltdown.md
+  - Project:
+    - ProgrammerBase: project/ProgrammerBase.md
+    - security-tutorial: project/security-tutorial.md
+    - WICWIU: project/WICWIU.md
+    - ml: ml.md
+    - ubuntu-unminimize: ubuntu-unminimize.md
+    - bof: project/bof.md
+    - nonogram: project/nonogram.md
+    - older-glibc: project/older-glibc.md
+    - test_virt_memory: project/test_virt_memory.md
+    - genie: project/genie.md
+    - homework: project/homework.md
+    - ddtector: project/ddtector.md
+    - dogdoor: project/dogdoor.md
+    - auto-connect-raspberry: project/auto-connect-raspberry.md
+    - kill-idle-tty: project/kill-idle-tty.md
+    - standalone: project/standalone.md
+    - justforfun: project/justforfun.md
+    - dotfiles: project/dotfiles.md
+    - servercat: project/servercat.md
+  - Computer:
+    - base: Computer/base.md
+    - The Elements of Computing Systems: Computer/The-Elements-of-Computing-Systems.md
   - ProgrammerBase: 
     - ProgrammerBase: ProgrammerBase/readme.md
     - Contents:
@@ -127,10 +130,10 @@ nav:
     - DL from stratch 메모4: AI/dl_from_scratch4.md
     - 인공지능 메모3: AI/ai.md
   - Tools: 
-    - Makefile: Computer/makefile.md
-    - Git: Computer/git.md
-    - Docker: Computer/docker.md
-    - CUDA: Computer/cuda.md
+    - Makefile: Tools/makefile.md
+    - Git: Tools/git.md
+    - Docker: Tools/docker.md
+    - CUDA: Tools/cuda.md
   - ArchLinux: 
     - 설치: archlinux/install.md
     - VM 설치: archlinux/vminstall.md
