@@ -727,23 +727,49 @@
 
 !!! tldr ""
 
-    곱집합(cartesian product) : 두 집합 $A,B$ 의 곱집합 $A \times B$ 는 
+    곱집합(product set) 또는 데카르트 곱(cartesian product) : 첨수족 $\{A_i\} _{i \in I}$ 의 곱집합 $\prod_{i \in I}^{}A_i$ 는 
+
+    $$ \prod_{i \in I}^{}A_i = \{(a_i) _{i \in I} : a_i \in A_i\} $$
+
+    이다.
+
+- 두 집합 $A,B$ 의 곱집합 $A \times B$ 는 
     
     $$ A \times B := \{(a,b):a \in A, b \in B\} $$
     
     이다.
 
-- 정리 
+    - 이때 다음이 성립한다. 
 
-    $$ A \times (B \cup C) = (A \times B) \cup (A \times C) $$
+        $$ A \times (B \cup C) = (A \times B) \cup (A \times C) $$
 
-    $$ A \times (B \cap C) = (A \times B) \cap (A \times C) $$
+        $$ A \times (B \cap C) = (A \times B) \cap (A \times C) $$
 
-    $$ (A \times B) \cap (C \times D) = (A \cap C) \times (B \cap D) $$
+        $$ (A \times B) \cap (C \times D) = (A \cap C) \times (B \cap D) $$
+
+- 유한개의 집합 $A_1, A_2, \dots, A_n$ 의 곱집합 $A_1 \times A_2 \times \dots \times A_n$ 은 
+
+    $$ A_1 \times A_2 \times \dots \times A_n = \{(a_1, a_2, \dots, a_n) : a_i \in A_i\} $$
+
+    이다.
+
+- 이것을 간단하게 표기하여 집합 $A, I$ 에 대하여 $A$ 의 $I$ 번 곱집합 $A ^{I}$ 는 
+
+    $$ A ^{I} = \{(a_i) _{i \in I} : a_i \in A\} $$
+
+    이다. 
 
 - 예시 
 
-    우리에게 익숙한 데카르트 공간 $\mathbb{R} ^{2}$, 즉 직교좌표계는 $\mathbb{R} \times \mathbb{R}$ 로써 곱집합이다.
+    우리에게 익숙한 데카르트 공간 $\mathbb{R} ^{2}$, 즉 직교좌표계는 
+    
+    $$ \R ^{2} = \mathbb{R} \times \mathbb{R} = \{(x,y) : x, y \in \R \}$$
+    
+    로써 곱집합이다. 또한 공간좌표계는 
+
+    $$ \R ^{3} = \mathbb{R} \times \mathbb{R} \times \R = \{(x,y, z) : x, y, z \in \R \}$$
+
+    이다.
 
 !!! tldr ""
 
@@ -1001,7 +1027,7 @@
 
     $$ A_y = \{x \in X: f(x) = y\} $$
 
-    라고 두면 $Y \neq \varnothing$ 이라는 가정 하에(*이 부분은 내가 자의적으로 해석한 것임.*) $A_y \neq \varnothing$ 이다. 왜냐하면 $f$ 가 전사함수이므로 $Y$ 의 모든 원소가 $X$ 의 적당한 원소로 대응되기 때문이다. 이때 각 $y \in Y$ 에 대응되는 $x \in A_y$ 를 택하여 이 $x$ 를 $x = g(y) \in X$ 라 두면 
+    라고 두면 $A_y \neq \varnothing$ 이다. 왜냐하면 $f$ 가 전사함수이므로 $Y$ 의 모든 원소가 $X$ 의 적당한 원소로 대응되기 때문이다. 이때 각 $y \in Y$ 에 대하여 $A_y$ 의 원소 $x$ 를 택하여 이 $x$ 를 $x = g(y) \in X$ 라 두면 
 
     $$ f(g(y)) = y $$
 
