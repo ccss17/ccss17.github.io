@@ -244,12 +244,18 @@
 
     를 보이면 된다. 
     
-    $A = C$ 이면 $g(C) = g(A)$ 이므로 $(3)$ 이 성립한다.
+    - $A = C$ 이면 $g(C) = g(A)$ 이므로 $(3)$ 이 성립한다.
 
-    $g(C) \subset A$ 이면 $g(C) \subset A \subset g(A)$ 이므로 성립한다. 
+    - $g(C) \subset A$ 이면 $g(C) \subset A \subset g(A)$ 이므로 성립한다. 
 
-    $A \subsetneq C$ 이면 $C$ 가 comparable element 이므로 $g(A) \subset C \lor C \subset g(A)$ 이다. $g(A) \subset C$ 이면 성립하고, $C \subsetneq g(A)$ 이면 $A \subsetneq C \subsetneq g(A)$ 이므로 $g(A) \text{ \textbackslash }A$ 가 두 개 이상의 원소를 갖는데, 이는 $g$ 의 정의에 의하여 불가능하다.
+    - $A \subsetneq C$ 이면 $C$ 가 comparable element 이므로 $g(A) \subset C \lor C \subset g(A)$ 이다. 
+    
+        - $g(A) \subset C$ 이면 성립한다.
+        
+        - $C \subsetneq g(A)$ 이면 $A \subsetneq C \subsetneq g(A)$ 이므로 $g(A) \text{ \textbackslash }A$ 가 두 개 이상의 원소를 갖는데(*$g(C), C$ 가 $g(A)$ 에 속하기 때문*), 이는 $g$ 의 정의에 의하여 불가능하다. (*왜냐하면 $g$ 는 $A$ 이거나 $A$ 이외에 다른 원소를 하나만 갖기 때문에 $g(A)\text{ \textbackslash }A$ 의 원소의 갯수는 $0$ 이거나 $1$ 이기 때문.*) 그러므로 $C \subsetneq g(A)$ 은 모순이고, 반드시 $C \supset g(A)$ 이다.
 
     이로써 $(3)$ 이 증명되었고, 집합족 $\mathcal{U}$ 는 $(1)$ 을 만족한다. ▲ 
 
-    집합족 $\mathcal{Y}_0$ 는 $(1)$ 을 만족하는 최소의 집합족인데 $\mathcal{U}\subset \mathcal{Y}_0$ 이므로 $\mathcal{U}=\mathcal{Y}_0$ 이다. 따라서 $\forall A \in \mathcal{Y}_0, A \subset C \subset g(C) \lor g(C) \subset A$ 이다. 즉, $g(C)$ 는 comparable element 라는 말이다. 집함 $C \in \mathcal{Y}_0$ 가 임의의 comparable element 이므로 $(2)$ 가 증명되었고 모든 증명이 끝났다. ■ 
+    집합족 $\mathcal{Y}_0$ 는 $(1)$ 을 만족하는 최소의 집합족인데 $\mathcal{U}\subset \mathcal{Y}_0$ 이므로 $\mathcal{U}=\mathcal{Y}_0$ 이다. 따라서 $\forall A \in \mathcal{Y}_0, A \subset C \subset g(C) \lor g(C) \subset A$ 이다. 즉, $g(C)$ 는 comparable element 라는 말이다. 집합 $C \in \mathcal{Y}_0$ 가 임의의 comparable element 이므로 $(2)$ 가 증명되었고 모든 증명이 끝났다. ■ 
+
+- 이 정리로부터 하우스드로프 극대 원리를 도출하는 증명
