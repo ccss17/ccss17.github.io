@@ -1,3 +1,4 @@
+> 출처/참고 : https://www.nand2tetris.org
 
 이 책이 다루는 내용은 다음과 같다.
 
@@ -119,11 +120,19 @@ $$ \begin{equation}\begin{split} \text{Xor} (a, b) &= \text{Or} (\text{And} (a, 
 
 !!! note
 
-    그런데~ 이 논리 게이트를 통하여 튜링기계의 universal machine 의 모든 부품이 구현 가능했던 것이지.
+    그런데 이 논리 게이트를 통하여 튜링기계의 universal machine 의 모든 부품이 구현 가능했던 것이지.
 
 ## Hardware Description Language (HDL)
 
-> p 31
+실제로 하드웨어를 설계할 때에는 위에서 했던 것처럼 수작업을 하지 않고 HDL 이라는 언어를 사용한다. 이 언어로 프로그램을 짜고 테스트를 해보는 것이지.
+
+![image](https://user-images.githubusercontent.com/16812446/111274857-dacd0980-8678-11eb-81f5-c72da03ba041.png)
+
+위와 같이 HDL 을 사용하여 Xor 게이트를 설계하고 테스트하는 것이다.
+
+HDL 이 하드웨어 구현 언어이기 때문에 HDL 으로 프로그램을 짜고 디버깅하는 것은 소프트웨어에서 하던 그것과 매우 유사하다. 다만 차이점은 컴파일러를 사용하지 않고 하드웨어 시뮬레이터를 사용하여 디버깅하게 된다는 것이다. 
+
+> p 34
 
 # 2. Boolean Arithmetic
 
