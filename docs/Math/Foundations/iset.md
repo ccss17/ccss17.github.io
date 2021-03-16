@@ -150,25 +150,31 @@
 
 !!! tldr ""
 
+    포함관계에 의하여 순서가 부여된 집합 $X$ 의 사슬의 집합 $\mathcal{C}(X)$ 의 사슬 $\mathcal{C}$ 에 대하여 모든 사슬 $\mathcal{C}$ 의 원소의 합집합 $\bigcup_{}^{}\mathcal{C} (\subset X)$ 은 $X$ 의 사슬이다. 즉, 다음이 성립한다.
+
+    $$ \bigcup_{}^{}\mathcal{C} \in \mathcal{C}(X) $$
+
+- 증명
+    
+    $\forall  a,b \in \bigcup_{}^{}\mathcal{C}$ 와 $\mathcal{C}(X)$ 의 어떤 사슬 $\mathcal{C}$ 에 대하여
+
+    $$ \exists C_1, C_2 \text{ s.t. }\ a \in C_1 \in \mathcal{C}, b \in C_2 \in \mathcal{C} $$
+
+    이다. $\mathcal{C}$ 은 사슬이므로 $C_1 \subset C_2 \lor C_2 \subset C_1$ 이다. $C_1 \subset C_2$ 일 경우 $a,b \in C_2$ 인데 $C_2$ 는 $X$ 의 사슬이므로 $a \leq b \lor b \leq a$ 이다. 마찬가지로 $C_2 \subset C_1$ 인 경우에도 $a \leq b \lor b \leq a$ 이다. 이로써 $\bigcup_{}^{}\mathcal{C}$ 의 임의의 두 원소가 서로 비교 가능함을 알 수 있고, 이에따라 $\bigcup_{}^{}\mathcal{C}$ 는 $X$ 의 사슬임이 증명되었다. 즉 $\bigcup_{}^{}\mathcal{C} \in \mathcal{C}(X)$ 이다. ▲
+
+!!! tldr ""
+
     초른의 보조정리는 하우스도르프 극대 원리와 동치이다.
 
 - 초른의 보조정리에서 하우스도르프 극대 원리를 도출하는 증명 
 
     우선 초른의 보조정리를 가정하자. 그리고 포함관계에 의한 순서를 부여받은 순서집합 $X$ 의 모든 사슬을 모은 순서집합 $\mathcal{C}(X)$ 에 초른의 보조정리를 적용해보고, 하우스도르프 극대 원리가 도출되는지 보자. 
 
-    먼저 $X$ 의 사슬의 집합 $\mathcal{C}(X)$ 도 포함관계에 의하여 순서집합이 되므로 $\mathcal{C}(X)$ 의 사슬 $\mathcal{C}$ 가 존재한다. 이 모든 사슬 $\mathcal{C}$ 의 원소의 합집합 
+    정리 "포함관계에 의하여 순서가 부여된 집합 $X$ 의 사슬의 집합 $\mathcal{C}(X)$ 의 사슬 $\mathcal{C}$ 에 대하여 모든 사슬 $\mathcal{C}$ 의 원소의 합집합 $\bigcup_{}^{}\mathcal{C} (\subset X)$ 은 $X$ 의 사슬이다." 에서
 
-    $$ C = \bigcup_{}^{}\mathcal{C} \subset X $$
+    $$ C = \bigcup_{}^{}\mathcal{C} $$
 
-    는 $X$ 의 사슬이다. 
-    
-    이것을 잠깐 증명하고 넘어가자. $\forall  a,b \in C$ 과 $\mathcal{C}(X)$ 의 어떤 사슬 $\mathcal{C}$ 에 대하여
-
-    $$ \exists C_1, C_2 \text{ s.t. }\ a \in C_1 \in \mathcal{C}, b \in C_2 \in \mathcal{C} $$
-
-    이다. $\mathcal{C}$ 은 사슬이므로 $C_1 \subset C_2 \lor C_2 \subset C_1$ 이다. $C_1 \subset C_2$ 일 경우 $a,b \in C_2$ 인데 $C_2$ 는 $X$ 의 사슬이므로 $a \leq b \lor b \leq a$ 이다. 마찬가지로 $C_2 \subset C_1$ 인 경우에도 $a \leq b \lor b \leq a$ 이다. 이로써 $C$ 의 임의의 두 원소가 서로 비교 가능함을 알 수 있고, 이에따라 $C$ 는 $X$ 의 사슬임이 증명되었다. 즉 $C \in \mathcal{C}(X)$ 이다. ▲
-
-    $C$ 는 $\mathcal{C}$ 들의 합집합이므로 $\mathcal{C} \subset \mathcal{C}(X)$ 의 상계임이 자명하다. 그러므로 순서집합 $\mathcal{C}(X)$ 는 초른의 보조정리의 가정을 만족하고, $\mathcal{C}(X)$ 는 초른의 보조정리의 귀결(극대원소를 가진다) 또한 만족한다. 이처럼 $\mathcal{C}(X)$ 이 초른의 보조정리를 만족하는데, 위의 증명이 보인 것은 $\mathcal{C}(X)$ 이 극대 사슬 $C$ 를 가진다는 것이다. 따라서 초른의 보조정리를 가정하면 하우스도르프 극대 원리가 성립한다. ■ 
+    라고 두면 $C$ 는 $\mathcal{C}$ 들의 합집합이므로 $\mathcal{C} \subset \mathcal{C}(X)$ 의 상계임이 자명하다. 그러므로 순서집합 $\mathcal{C}(X)$ 는 초른의 보조정리의 가정을 만족하고, $\mathcal{C}(X)$ 는 초른의 보조정리의 귀결(극대원소를 가진다) 또한 만족한다. 이처럼 $\mathcal{C}(X)$ 이 초른의 보조정리를 만족하는데, 위의 증명이 보인 것은 $\mathcal{C}(X)$ 이 극대 사슬 $C$ 를 가진다는 것이다. 따라서 초른의 보조정리를 가정하면 하우스도르프 극대 원리가 성립한다. ■ 
 
 - 하우스도르프 극대 원리에서 초른의 보조정리를 도출하는 증명 
 
@@ -202,16 +208,48 @@
 
     이제 집합 $X$ 의 선택함수 $h$ 를 택하고 함수 $g: \mathcal{X}\to \mathcal{X}$ 를 
 
-    $$ g(A) = \begin{cases} A \sqcup \{h(\tilde{A}\text{ \textbackslash }A\} & A \subsetneq \tilde{A}\\ A & A = \tilde{A}\\ \end{cases} $$
+    $$ g(A) = \begin{cases} A \sqcup \{h(\tilde{A}\text{ \textbackslash }A)\} & A \subsetneq \tilde{A}\\ A & A = \tilde{A}\\ \end{cases} $$
 
     로 두자. 그러면 $g(A)=A$ 를 만족하는 $A \in \mathcal{X}$ 의 존재성을 보이면 증명이 끝난다. 함수 $g$ 의 특성상 $A \subset g(A)$ 는 항상 성립하므로 $g(A) \subset A$ 인 $A$ 를 보이면 된다. ▲ 
 
-    이제 $A \in \mathcal{X}$ 에 대하여 
+    이제 조건
 
     $$ \varnothing \in \mathcal{Y}, \quad A \in \mathcal{Y} \implies g(A) \in \mathcal{Y}, \quad \mathcal{C} \in \mathcal{C}(\mathcal{Y}) \implies \bigcup_{}^{}\mathcal{C}\in \mathcal{Y} \tag{1} $$
 
-    을 만족하는 $\mathcal{X}$ 의 부분집합 $\mathcal{Y} \subset \mathcal{X}$ 를 생각해보자. 이런 조건을 만족하는 $\mathcal{X}$ 의 모든 부분집합들의 교집합을 $\mathcal{Y}_0$ 이라고 하자. 그러면 $\varnothing \in \mathcal{Y}_0$ 이므로 $\mathcal{Y}_0 \neq \varnothing$ 이고, $(1)$ 을 만족하는 최소의 집합족이 된다. 이때 이 $\mathcal{Y}_0$ 이 $\mathcal{X}$ 의 사슬임을 보이려 한다. 만약 $\mathcal{Y}_0$ 이 $\mathcal{X}$ 의 사슬이면 $\mathcal{Y}_0 \in \mathcal{C}(\mathcal{Y}_0)$ 이므로 $A = \bigcup_{}^{}\mathcal{Y}_0 \in \mathcal{Y}_0$ 이고 다시 $g(A) \in \mathcal{Y}_0$ 이므로 
+    을 만족하는 $\mathcal{X}$ 의 부분집합 $\mathcal{Y} \subset \mathcal{X}$ 를 생각해보자. 이런 조건을 만족하는 $\mathcal{X}$ 의 모든 부분집합들의 교집합을 $\mathcal{Y}_0$ 이라고 하자. 그러면 $\varnothing \in \mathcal{Y}_0$ 이므로 $\mathcal{Y}_0 \neq \varnothing$ 이고, $(1)$ 을 만족하는 최소의 집합족이 된다. 이때 이 $\mathcal{Y}_0$ 이 $\mathcal{X}$ 의 사슬임을 보이려 한다. 만약 $\mathcal{Y}_0$ 이 $\mathcal{X}$ 의 사슬이면 $\mathcal{Y}_0 \in \mathcal{C}(\mathcal{Y}_0)$ 이므로 $\bigcup_{}^{}\mathcal{Y}_0 \in \mathcal{Y}_0$ 인데 $A = \bigcup_{}^{}\mathcal{Y}_0$ 로 두면 $A = \bigcup_{}^{}\mathcal{Y}_0 \in \mathcal{Y}_0$ 에서 $g(A) \in \mathcal{Y}_0$ 이므로 
 
     $$ g(A) \subset \bigcup_{}^{}\mathcal{Y}_0 = A $$
 
     가 되어 증명이 끝난다. ▲ 
+
+    $C \in \mathcal{Y}_0$ 가 
+
+    $$ D \in \mathcal{Y}_0 \implies C \subset D \lor D \subset C $$
+    
+    를 만족할 때 $C$ 를 comparable element 이라고 하자. 가령 $\varnothing$ 는 comparable element 이다. 우리의 목표는 다음을 증명하는 것이다.
+
+    $$ C \text{ is comparable element  } \implies g(C) \text{ is comparable element   } \tag{2} $$
+
+    이것을 증명하면 $\mathcal{Y}_0$ 의 모든 comparable element 의 집합 $\mathcal{C}_0$ 이 $(1)$ 을 만족함을 알 수 있다. (*$(1)$ 의 $\mathcal{Y}$ 를 $\mathcal{C}_0$ 으로 대체하여 따져보면 쉽게 알 수 있다.*) 그런데 $\mathcal{Y}_0$ 은 $(1)$ 을 만족하는 최소의 집합족이었으므로 $\mathcal{Y}_0 \subset \mathcal{C}_0$ 인데 $\mathcal{C}_0$ 은 $\mathcal{Y}_0$ 의 원소로 구성되어 있으므로 $\mathcal{C}_0 \subset \mathcal{Y}_0$ 이므로 $\mathcal{Y}_0=\mathcal{C}_0$ 이다. 이는 $\mathcal{Y}_0$ 의 모든 원소가 비교가능하는 것을 말해준다. 그렇게 되면 $\mathcal{Y}_0$ 는 사슬이라는 말이 되고, 결국 모든 증명이 끝난다. ▲ 
+
+    이제 $(2)$ 를 증명하기 위해 comparable element 인 $C \in \mathcal{Y}_0$ 를 고정하고 집합족 
+
+    $$ \mathcal{U} = \{A \in \mathcal{Y}_0 : A \subset C \lor g(C) \subset A\} $$
+
+    에 대하여 $(1)$ 을 보이려 한다. 이때 $(1)$ 의 첫째 조건은 자명하고, 정리 "포함관계에 의하여 순서가 부여된 집합 $X$ 의 사슬의 집합 $\mathcal{C}(X)$ 의 사슬 $\mathcal{C}$ 에 대하여 모든 사슬 $\mathcal{C}$ 의 원소의 합집합 $\bigcup_{}^{}\mathcal{C} (\subset X)$ 은 $X$ 의 사슬이다." 에 의하여 $\mathcal{Y}$ 의 모든 사슬의 합집합 $\bigcup_{}^{}C$ 은 $\mathcal{Y}$ 의 사슬인데 $\mathcal{Y}$ 는 조건 2) 를 만족하므로 $(1)$ 의 셋째 조건도 자명하다. 
+
+    둘째 조건을 보이기 위하여 $\forall A \in \mathcal{Y}_0$ 에 대하여 
+
+    $$ A \subset C \lor g(C) \subset A \implies g(A) \subset C \lor g(C) \subset g(A) \tag{3} $$
+
+    를 보이면 된다. 
+    
+    $A = C$ 이면 $g(C) = g(A)$ 이므로 $(3)$ 이 성립한다.
+
+    $g(C) \subset A$ 이면 $g(C) \subset A \subset g(A)$ 이므로 성립한다. 
+
+    $A \subsetneq C$ 이면 $C$ 가 comparable element 이므로 $g(A) \subset C \lor C \subset g(A)$ 이다. $g(A) \subset C$ 이면 성립하고, $C \subsetneq g(A)$ 이면 $A \subsetneq C \subsetneq g(A)$ 이므로 $g(A) \text{ \textbackslash }A$ 가 두 개 이상의 원소를 갖는데, 이는 $g$ 의 정의에 의하여 불가능하다.
+
+    이로써 $(3)$ 이 증명되었고, 집합족 $\mathcal{U}$ 는 $(1)$ 을 만족한다. ▲ 
+
+    집합족 $\mathcal{Y}_0$ 는 $(1)$ 을 만족하는 최소의 집합족인데 $\mathcal{U}\subset \mathcal{Y}_0$ 이므로 $\mathcal{U}=\mathcal{Y}_0$ 이다. 따라서 $\forall A \in \mathcal{Y}_0, A \subset C \subset g(C) \lor g(C) \subset A$ 이다. 즉, $g(C)$ 는 comparable element 라는 말이다. 집함 $C \in \mathcal{Y}_0$ 가 임의의 comparable element 이므로 $(2)$ 가 증명되었고 모든 증명이 끝났다. ■ 
