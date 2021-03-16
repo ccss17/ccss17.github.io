@@ -259,3 +259,32 @@
     집합족 $\mathcal{Y}_0$ 는 $(1)$ 을 만족하는 최소의 집합족인데 $\mathcal{U}\subset \mathcal{Y}_0$ 이므로 $\mathcal{U}=\mathcal{Y}_0$ 이다. 따라서 $\forall A \in \mathcal{Y}_0, A \subset C \subset g(C) \lor g(C) \subset A$ 이다. 즉, $g(C)$ 는 comparable element 라는 말이다. 집합 $C \in \mathcal{Y}_0$ 가 임의의 comparable element 이므로 $(2)$ 가 증명되었고 모든 증명이 끝났다. ■ 
 
 - 이 정리로부터 하우스드로프 극대 원리를 도출하는 증명
+
+!!! tldr ""
+
+    정렬 집합(well ordered set) 또는 정렬 전순서 집합(well totally ordered set) : 순서집합 $X$ 에서 $\forall A \in 2 ^{X}$ 에 대하여 $A \neq \varnothing$ 인 $A$ 가 최소 원소를 가지면 $X$ 를 정렬집합이라고 한다. 
+
+- 정렬 집합의 순서관계를 정렬 순서라 한다. 
+
+- 정리 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다." 는 자연수집합 $\N$ 이 정렬 집합임을 말해준다.
+
+- 정렬 집합은 그 자체로서 사슬이 된다.
+
+!!! tldr ""
+
+    정렬 순서(well ordered) : 정렬 집합이 갖는 순서관계이다.
+
+
+!!! tldr ""
+
+    임의의 집합 $X$ 에 정렬순서를 부여할 수 있다.
+
+- 아래의 증명은 초른의 보조정리를 사용하는데 이는 초른의 보조정리가 적용되는 대표적인 사례이다.
+
+- 증명
+
+    먼저 $X$ 의 부분집합 $A$ 와 $G \subset A \times A$ 로써 $A$ 의 정렬순서를 부여해주는 관계들의 순서쌍 $(A,G)$ 를 생각하고, 이런 순서쌍 전체 집합을 $\mathcal{X}$ 라 두자. 이때 $(A,G), (B,H) \in \mathcal{X}$ 가 
+
+    $$ A \subset B, \quad G \subset H, \quad x \in A, y \in B \text{ \textbackslash }A \implies (x, y) \in H $$
+
+    를 만족할 때 $(A, G) \leq (B, H)$ 라 정의하면 순서관계가 됨을 바로 확인할 수 있다.
