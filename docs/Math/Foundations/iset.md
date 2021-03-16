@@ -143,3 +143,75 @@
     하우스도르프 극대 원리(Hausdorff maximal principle) : 임의의 순서집합 $X$ 는 극대 사슬을 가진다.
 
 - 선택공리과 동치인 명제로써 수학의 여러 분야에서 널리 쓰인다.
+
+- 예시
+
+    포함관계에 의한 순서를 부여받은 순서집합 $X$ 의 모든 사슬을 모은 집합 $\mathcal{C}(X)$ 는 포함관계에 의하여 다시 순서집합이 된다. 이 정리는 순서집합 $\mathcal{C}(X)$ 가 극대원소를 가진다는 것을 말한다. 
+
+!!! tldr ""
+
+    초른의 보조정리는 하우스도르프 극대 원리와 동치이다.
+
+- 초른의 보조정리에서 하우스도르프 극대 원리를 도출하는 증명 
+
+    우선 초른의 보조정리를 가정하자. 그리고 포함관계에 의한 순서를 부여받은 순서집합 $X$ 의 모든 사슬을 모은 순서집합 $\mathcal{C}(X)$ 에 초른의 보조정리를 적용해보고, 하우스도르프 극대 원리가 도출되는지 보자. 
+
+    먼저 $X$ 의 사슬의 집합 $\mathcal{C}(X)$ 도 포함관계에 의하여 순서집합이 되므로 $\mathcal{C}(X)$ 의 사슬 $\mathcal{C}$ 가 존재한다. 이 모든 사슬 $\mathcal{C}$ 의 원소의 합집합 
+
+    $$ C = \bigcup_{}^{}\mathcal{C} \subset X $$
+
+    는 $X$ 의 사슬이다. 
+    
+    이것을 잠깐 증명하고 넘어가자. $\forall  a,b \in C$ 과 $\mathcal{C}(X)$ 의 어떤 사슬 $\mathcal{C}$ 에 대하여
+
+    $$ \exists C_1, C_2 \text{ s.t. }\ a \in C_1 \in \mathcal{C}, b \in C_2 \in \mathcal{C} $$
+
+    이다. $\mathcal{C}$ 은 사슬이므로 $C_1 \subset C_2 \lor C_2 \subset C_1$ 이다. $C_1 \subset C_2$ 일 경우 $a,b \in C_2$ 인데 $C_2$ 는 $X$ 의 사슬이므로 $a \leq b \lor b \leq a$ 이다. 마찬가지로 $C_2 \subset C_1$ 인 경우에도 $a \leq b \lor b \leq a$ 이다. 이로써 $C$ 의 임의의 두 원소가 서로 비교 가능함을 알 수 있고, 이에따라 $C$ 는 $X$ 의 사슬임이 증명되었다. 즉 $C \in \mathcal{C}(X)$ 이다. ▲
+
+    $C$ 는 $\mathcal{C}$ 들의 합집합이므로 $\mathcal{C} \subset \mathcal{C}(X)$ 의 상계임이 자명하다. 그러므로 순서집합 $\mathcal{C}(X)$ 는 초른의 보조정리의 가정을 만족하고, $\mathcal{C}(X)$ 는 초른의 보조정리의 귀결(극대원소를 가진다) 또한 만족한다. 이처럼 $\mathcal{C}(X)$ 이 초른의 보조정리를 만족하는데, 위의 증명이 보인 것은 $\mathcal{C}(X)$ 이 극대 사슬 $C$ 를 가진다는 것이다. 따라서 초른의 보조정리를 가정하면 하우스도르프 극대 원리가 성립한다. ■ 
+
+- 하우스도르프 극대 원리에서 초른의 보조정리를 도출하는 증명 
+
+    $X$ 의 모든 사슬이 상계를 가진다고 가정하자. 그러면 하우스도르프 극대 원리에 의하여 $X$ 는 극대 사슬 $C$ 를 가지는데 가정에 의하여 이것의 상계 $m \in X$ 또한 존재한다. 이제 이 $m$ 이 극대원소임을 보이면 된다.
+
+    먼저 $x \in X, x > m$ 이라고 가정하자. 그러면 $x$ 는 $C$ 의 임의의 원소와 비교 가능하고, 따라서 $C \cup \{x\}$ 도 사슬이다. 그런데 $C \subsetneq C \cup \{x\}$ 이므로 $C$ 가 극대사슬이라는 것에 모순이다. 따라서 $x$ 는 존재하지 않으며 $m$ 이 $X$ 의 극대원소가 된다. ■ 
+
+!!! tldr ""
+
+    순서집합 $X$ 의 부분집합족 $\mathcal{X} \subset 2 ^{X}$ 가 
+
+    1. $A \in \mathcal{X}, B \subset A \implies B \in \mathcal{X}$
+
+    2. $\mathcal{C}$ 이 $\mathcal{X}$ 의 사슬이면 $\bigcup_{}^{}\mathcal{C}\in \mathcal{X}$ 이다.
+
+    을 만족하면 $\mathcal{X}$ 는 극대원소를 가진다. 
+
+- 정리 "초른의 보조정리는 하우스도르프 극대 원리와 동치이다." 의 증명과정에서 살펴보았듯 포함관계에 의한 순서가 부여된 $X$ 의 사슬 집합 $\mathcal{C}(X)$ 는 본 정리의 두 가지 조건을 만족한다. 
+
+    따라서 하우스드로프 극대 원리는 이 정리에서 바로 도출된다.
+
+- 증명 
+
+    조건 1), 2) 를 만족하는 $\mathcal{X}$ 가 존재할 때 극대원소가 존재함을 보이면 증명이 된다. 그러므로 $\mathcal{X}$ 이 존재한다고 하면, 조건 1) 에 의하여 $\mathcal{X}$ 는 임의의 원소 $A \in \mathcal{X}$ 의 모든 부분집합을 원소로 갖는다. 
+    
+    그러면 각 $A \in \mathcal{X}$ 에 대하여 
+
+    $$ \tilde{A} = \{x \in X : A \cup \{x\}\in \mathcal{X}\} $$
+
+    라고 하자. 그러면 임의의 $A \in \mathcal{X}$ 가 결정되었을 때 그 $A$ 의 원소인 $x \in X$ 에 대하여 $A \cup \{x\} \in \mathcal{X}$ 도 성립하므로 당연히 $A$ 의 모든 원소는 기본적으로 $\tilde{A}$ 에 속하고, 추가적으로 $A$ 를 포함하면서 $A$ 보다 큰 집합 $B (\supset A)$ 가 $\mathcal{X}$ 에 존재하면 $B \text{ \textbackslash }A$ 의 원소들 또한 $\tilde{A}$ 에 속하게 될 것이다. 그러므로 먼저 자명하게 $A \subset \tilde{A}$ 이고, $A$ 가 $\mathcal{X}$ 의 극대 원소일 필요충분조건은 $A$ 보다 큰 집합이 없다는 것에서 $A = \tilde{A}$ 이다. ▲ 
+
+    이제 집합 $X$ 의 선택함수 $h$ 를 택하고 함수 $g: \mathcal{X}\to \mathcal{X}$ 를 
+
+    $$ g(A) = \begin{cases} A \sqcup \{h(\tilde{A}\text{ \textbackslash }A\} & A \subsetneq \tilde{A}\\ A & A = \tilde{A}\\ \end{cases} $$
+
+    로 두자. 그러면 $g(A)=A$ 를 만족하는 $A \in \mathcal{X}$ 의 존재성을 보이면 증명이 끝난다. 함수 $g$ 의 특성상 $A \subset g(A)$ 는 항상 성립하므로 $g(A) \subset A$ 인 $A$ 를 보이면 된다. ▲ 
+
+    이제 $A \in \mathcal{X}$ 에 대하여 
+
+    $$ \varnothing \in \mathcal{Y}, \quad A \in \mathcal{Y} \implies g(A) \in \mathcal{Y}, \quad \mathcal{C} \in \mathcal{C}(\mathcal{Y}) \implies \bigcup_{}^{}\mathcal{C}\in \mathcal{Y} \tag{1} $$
+
+    을 만족하는 $\mathcal{X}$ 의 부분집합 $\mathcal{Y} \subset \mathcal{X}$ 를 생각해보자. 이런 조건을 만족하는 $\mathcal{X}$ 의 모든 부분집합들의 교집합을 $\mathcal{Y}_0$ 이라고 하자. 그러면 $\varnothing \in \mathcal{Y}_0$ 이므로 $\mathcal{Y}_0 \neq \varnothing$ 이고, $(1)$ 을 만족하는 최소의 집합족이 된다. 이때 이 $\mathcal{Y}_0$ 이 $\mathcal{X}$ 의 사슬임을 보이려 한다. 만약 $\mathcal{Y}_0$ 이 $\mathcal{X}$ 의 사슬이면 $\mathcal{Y}_0 \in \mathcal{C}(\mathcal{Y}_0)$ 이므로 $A = \bigcup_{}^{}\mathcal{Y}_0 \in \mathcal{Y}_0$ 이고 다시 $g(A) \in \mathcal{Y}_0$ 이므로 
+
+    $$ g(A) \subset \bigcup_{}^{}\mathcal{Y}_0 = A $$
+
+    가 되어 증명이 끝난다. ▲ 
