@@ -10,10 +10,12 @@ div.arithmatex {
   font-family: "Nanum Gothic",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif !important;
   font-size: 0.78rem !important;
 }
-/* .katex .text { */
-  /* font-family: "Nanum Gothic",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif !important; */
-  /* font-size: 0.78rem !important; */
-/* } */
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .katex-display {
   overflow: visible !important;

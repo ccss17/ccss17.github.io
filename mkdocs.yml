@@ -86,7 +86,7 @@ nav:
     - servercat: project/servercat.md
   - Computer:
     - base: Computer/base.md
-    - The Elements of Computing Systems: Computer/The-Elements-of-Computing-Systems.md
+    - Nand to Tetris: Computer/nand2tetris.md
   - ProgrammerBase: 
     - ProgrammerBase: ProgrammerBase/readme.md
     - Contents:
