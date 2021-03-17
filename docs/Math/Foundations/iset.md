@@ -262,7 +262,7 @@
 
 !!! tldr ""
 
-    정렬 집합(well ordered set) 또는 정렬 전순서 집합(well totally ordered set) : 순서집합 $X$ 에서 $\forall A \in 2 ^{X}$ 에 대하여 $A \neq \varnothing$ 인 $A$ 가 최소 원소를 가지면 $X$ 를 정렬집합이라고 한다. 
+    정렬 집합(well ordered set) : 순서집합 $X$ 에서 $\forall A \in 2 ^{X}$ 에 대하여 $A \neq \varnothing$ 인 $A$ 가 최소 원소를 가지면 $X$ 를 정렬집합이라고 한다. 
 
 - 정렬 집합의 순서관계를 정렬 순서라 한다. 
 
@@ -277,9 +277,10 @@
 
 !!! tldr ""
 
-    임의의 집합 $X$ 에 정렬순서를 부여할 수 있다.
+    체르멜로 정렬정리(Well-ordering theorem, Zermelo's theorem) : 임의의 집합에는 정렬순서가 존재한다.
 
 - 아래의 증명은 초른의 보조정리를 사용하는데 이는 초른의 보조정리가 적용되는 대표적인 사례이다.
+
 
 - 증명
 
@@ -288,3 +289,51 @@
     $$ A \subset B, \quad G \subset H, \quad x \in A, y \in B \text{ \textbackslash }A \implies (x, y) \in H $$
 
     를 만족할 때 $(A, G) \leq (B, H)$ 라 정의하면 순서관계가 됨을 바로 확인할 수 있다.
+
+    순서집합 $\mathcal{X}$ 에 초른의 보조정리를 적용하기 위하여 $\mathcal{C}$ 가 $\mathcal{X}$ 의 사슬이라고 하고 
+
+    $$ A_0 = \bigcup_{}^{}\{A \subset X:(A,G) \in \mathcal{C}\} $$
+
+    $$ G_0 = \bigcup_{}^{}\{G \subset X \times X:(A,G) \in \mathcal{C}\} $$
+
+    라 두자. 이제 $(A_0, G_0) \in \mathcal{X}$ 임을 보이려 하는데 먼저 $G_0$ 가 $A_0$ 의 순서관계임을 보이려 한다. ▲ 
+
+    만약 $x \in A_0$ 이면 $\exists  (A, G) \in \mathcal{C} \text{ s.t. }\ x \in A$ 이다. 이때 $G$ 는 $A$ 의 정렬순서를 부여하므로 순서관계도 부여한다. 따라서 순서관계의 조건 1) 에 의하여 $x \in A \subset  A_0 \implies (x, x) \in G \subset G_0$ 이다. $A$ 와 $G$ 가 순서관계 조건 1) 을 만족하는 것에서 $x \in A_0 \implies (x, x) \in \subset G_0$ 을 도출했으므로 $A_0$ 와 $G_0$ 는 순서관계 조건 1) 을 만족한다.
+
+    순서관계 조건 2) 를 보이기 위하여 $x, y \in A_0, (x, y) \in G_0, (y, x) \in G_0$ 을 가정하자. 그러면 $(x, y)$ 와 $(y, x)$ 라는 순서관계도 어떤 집합에 속하게 되므로 $(x, y) \in G$ 와 $(y, x) \in H$ 라고 하자. 그러면 $(A, G), (B, H) \in \mathcal{C}$ 가 존재한다. 이때 $\mathcal{C}$ 가 사슬이므로 $(A, G) \leq (B, H) \lor (A, G) \geq (B, H)$ 이다. 어느 경우에나 $(x,y)$ 와 $(y,x)$ 는 $G \cup H = (A \cup B) \times (A \cup B)$ 에 속하게 된다. 그런데 $G \cup H$ 는 $A \cup B$ 의 모든 원소의 순서관계를 잘 부여하는데 순서관계의 조건 2) 에 의하여 $(x, y) \in G \cup H, (y, x) \in G \cup H \implies x = y$ 이다. 이로써 $x = y$ 가 도출되었고, $G_0$ 이 $A_0$ 에 대한 순서관계 2) 를 만족한다는 것이 증명되었다.
+
+    마지막으로 순서관계 3) 이 성립함을 보여야하는데, $(x, y) , (y, z) \in G_0$ 를 가정하면, 이번에도 $(x, y) \in G$ 이고 $(y, z) \in H$ 인 $(A, G), (B, H) \in \mathcal{C}$ 가 존재하므로 순서관계 2) 를 증명했던 것과 마찬가지의 방법으로 $(x, z) \in G_0$ 이 증명된다. 
+
+    그러므로 $G_0$ 는 $A_0$ 의 순서관계이다. ▲ 
+
+    이제 $G_0$ 가 $A_0$ 의 정렬순서임을 보이려 한다. $\varnothing \neq B \subset A_0$ 라 하면 $(A, G) \in \mathcal{C}$ 가 존재하여 $B \cap A \neq \varnothing$ 을 만족한다. 이때 $\varnothing \neq B \cap A \subset A$ 이고, $G$ 가 $A$ 의 정렬순서이므로 $B \cap A$ 는 최소 원소 $b$ 를 가진다. 이러한 최소원소 $b$ 는 모든 원소 $\forall a \in B \cap A$ 에 대하여 $b \leq a \iff (b, a) \in G$ 를 만족하므로 
+
+    $$ b \in B \cap A, \quad a \in B \cap A \implies (b, a) \in G $$
+
+    이다. 이제 $b \in B$ 가 $B (\subset A_0)$ 의 최소 원소임을 보이려 한다. 즉, 
+
+    $$ x \in B \implies (b, x) \in G_0 $$
+
+    임을 보이려 한다. $x \in B$ 가 가정이므로 $x \in A$ 이면 $x \in B \cap A$ 이다. 그러므로 $(b, x) \in G \subset G_0$ 이다. 만약 $x \not\in A$ 이면 적절한 $(C, K) \in \mathcal{C}$ 에 대하여 $x \in C$ 인데, $x \in C \text{ \textbackslash }A$ 이므로 $C \not \subseteq A$ 이다. 따라서 $(C, K) \not \leq (A, G)$ 인데 $\mathcal{C}$ 가 사슬이므로 $(A, G) \leq (C, K)$ 이다. 그런데 $b \in A \land x \in C \text{ \textbackslash }A$ 이므로 $(A, G) \leq (C, K)$ 의 정의에 의하여 $(b, x) \in K \subset G_0$ 이다. 이로써 $b$ 가 $B$ 의 최소원소임이 증명되었다. ▲ 
+
+    이제 $(A_0, G_0) \in \mathcal{X}$ 가 $\mathcal{C}$ 의 상계임을 보이려 하는데 방금 증명한 방법과 비슷하기에 생략한다. ▲ 
+
+    지금까지 순서집합 $\mathcal{X}$ 가 초른의 보조정리의 가정부를 만족함을 보였다. 그러므로 $\mathcal{X}$ 는 극대원소 $(D, L) \in \mathcal{X}$ 을 가진다. 이제 $D=X$ 임을 보일 것이다. $D \subsetneq X$ 이면 $x \in X \text{ \textbackslash }D$ 를 잡고 
+
+    $$ E = D \cup \{x\}, \quad M = L \cup \{(a,x):a \in D\} \cup \{(x,x)\} $$
+
+    라 두자. 그러면 $M$ 은 $E$ 의 순서관계가 되는데 $x$ 는 임의의 $a \in D$ 보다 큰 원소이다. 따라서 $(E,M)$ 은 정렬집합이고 $(E,M) \in \mathcal{X}$ 인데 $(E,M)>(D,L)$ 이다. 이는 $(D,L)$ 이 극대원소라는데 모순이므로 $D=X$ 이고 $L$ 은 $X$ 에 정의된 정렬순서이다. ■ 
+
+!!! tldr ""
+
+    선택공리, 초른의 보조정리, 하우스도르프 극대원리, 체르멜로 정렬정리는 모두 동치이다.
+
+- 증명 
+
+    체르멜로 정렬정리를 가정하면 선택공리를 쉽게 얻을 수 있다. 
+
+    집합 $X$ 가 정렬집합일 때 임의의 $A \in 2 ^{X}\text{ \textbackslash }\{\varnothing \}$ 에 대하여 $A$ 의 최소원소를 $h(A)$ 라 하면 
+
+    $$ h: 2 ^{X}\text{ \textbackslash }\{\varnothing \} \to X $$
+
+    는 선택함수이다. 그러므로 선택공리, 초른의 보조정리, 하우스도르프 극대원리, 체르멜로 정렬정리가 모두 동치임을 알 수 있다. ■ 
