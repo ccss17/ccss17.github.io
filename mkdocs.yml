@@ -16,7 +16,7 @@ nav:
       - 수리논리학: Math/Foundations/mathmatical_logic.md
       - 집합: Math/Foundations/math.md
       - 수체계: Math/Foundations/numbers.md
-      - 무한집합: Math/Foundations/iset.md
+      - 무한집합: Math/Foundations/InfiniteSet.md
     - 산술/대수학: 
       - 기초 산술: Math/Algebra/arithmetic.md
       - 추상대수학: Math/Algebra/abstract_algebra.md
