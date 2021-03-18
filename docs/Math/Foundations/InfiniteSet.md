@@ -394,7 +394,7 @@
 
     $B$ 가 2) 를 만족하지 않는다고 하면 2) 의 형태로 표시되지 않는 원소 $v  \in V$ 가 존재한다. 이때 $B \sqcup \{v\}$ 가 1) 을 만족함을 보이면 $B$ 가 $\mathcal{X}$ 의 극대원소라는 것에 모순이 되어 증명이 끝난다.
 
-    그러므로 증명해야 할 내용은 
+    그러므로 증명해야 할 내용은
 
     - 벡터공간 $V$ 의 부분집합 $B \subset V$ 가 1) 을 만족하고 $v \not\in \text{span } B$ 이면 $B \sqcup \{v\}$ 도 1) 을 만족한다. 
 
@@ -403,3 +403,127 @@
 (구체화 필요)
 
 # 정렬집합과 서수
+
+!!! tldr ""
+
+    자연수 집합의 정렬 집합 표기 : 자연수 집합 $\N$ 을 정렬집합으로 이해할 때 
+
+    $$ \omega $$
+
+    로 표기한다.
+
+!!! tldr ""
+
+    정렬집합의 절편(segment) : 정렬집합 $A$ 와 $x \in A$ 에 대하여 
+
+    $$ S_x = \{a \in A: a < x\} $$
+
+    를 $x$ 에 의한 $A$ 의 절편이라 한다.
+
+- 절편은 정렬집합이다.
+
+- 예시 
+
+    $$ \forall n \in \omega , S_n = n $$
+
+    $$ \forall m \in n, S_m = m $$
+
+!!! tldr ""
+
+    서로소인 두 정렬집합 $A, B$ 의 합집합 $A \sqcup B$ 에 
+
+    $$ x, y \in A, x \leq y \lor x, y \in B, x \leq y \lor x \in A, y \in B $$
+
+    일 때 $x \leq y$ 라고 정의하면 이 관계는 정렬순서가 된다.
+
+- 증명 
+
+- $A \sqcup B$ 와 $B \sqcup A$ 는 집합으로서는 같지만 순서집합으로서는 다르다.
+
+    - 예시 
+
+        $\omega \sqcup \{x\}$ 에서는 맨 뒤에 있는 $x \in \{x\}$ 가 최대 원소이다. 하지만 $\{x\} \sqcup \omega$ 에는 최대원소가 없다. 직관에 어긋나지만, $\{x\} \sqcup \omega$ 와 $\omega$ 는 같은 순서집합이다. 
+
+        $$ \begin{equation}\begin{split} \omega : & 0, 1, 2, 3, \dots\\ \{x\} \sqcup \omega : & x, 0, 1, 2, \dots\\ \omega \sqcup \{x\} : & 0, 1, 2, 3, \dots, x \end{split}\end{equation} \tag*{} $$
+
+!!! tldr ""
+
+    증가함수(increasing function) : 순서집합 $A, B$ 사이에 정의된 함수 $f: A \to B$ 가 
+
+    $$ x, y \in A, x \leq y \implies f(x) \leq f(y) $$
+
+    이면 증가함수라 한다.
+
+- 증가함수는 단조 함수(monotonic function)인데 단조함수는 주어진 순서를 보존하는 함수이다. 
+
+- 이러한 함수 $f$ 에 대하여 $f$ 가 단조 증가(monotonically increasing) 한다고 한다.
+
+!!! tldr ""
+
+    순서 동형(order isomorphism) : 순서집합 $A, B$ 에 정의된 전단사 함수 $f: A \to B$ 가 증가함수이고 그 역함수 $f ^{-1}$ 도 증가함수이면 $A$ 와 $B$ 는 순서동형이다. 
+
+- 두 순서 동형 집합 $A,B$ 를
+
+    $$ A \approxeq B $$
+
+    와 같이 표기한다.
+
+- 순서동형은 부분순서 집합의 동형(isomorphism)이란 무엇인지 정의해준다. 두 부분순서 집합이 순서동형이라면 두 집합은 본질적으로 같은 것으로 여겨진다. 왜냐하면 한 집합의 원소들이 이루는 순서를 다른 집합으로부터 완전히 구성할 수 있기 때문이다.
+
+- 예시 
+
+    다음과 같이 정의된 함수 $f: \{x\} \sqcup \omega \to \omega$ 는 전단사 함수이고 증가함수 이므로 순서동형을 정의해준다. 
+
+    $$ f(a) = \begin{cases}
+    0 & a = x\\
+    a + 1 & a \in \omega \\
+    \end{cases} , \qquad 
+    f ^{-1} (a) = \begin{cases}
+    x & a = 0\\
+    a - 1 & a > 0 \\
+    \end{cases} 
+    $$
+
+    이로써 $\{x\}\sqcup \omega$ 와 $\omega$ 가 순서동형이고, 본질적으로 서로 같은 집합임을 알 수 있다.
+
+!!! tldr ""
+
+    사전순서 : 순서집합 $A,B$ 의 곱집합 $A \times B$ 의 두 원소 $(a_1, b_1) \in A \times B, (a_2, b_2) \in A \times B$ 에 대하여 
+
+    $$ a_1 < a_2 \text{ or } a_1 = a_2, b_1 \leq b_2 $$
+
+    일 때 $(a_1, b_1) \leq (a_2, b_2)$ 라 정의된 순서를 사전순서라 한다.
+
+!!! tldr ""
+
+    반사전순서 : 순서집합 $A,B$ 의 곱집합 $A \times B$ 의 두 원소 $(a_1, b_1) \in A \times B, (a_2, b_2) \in A \times B$ 에 대하여 
+
+    $$ b_1 < b_2 \text{ or } b_1 = b_2, a_1 \leq a_2 $$
+
+    일 때 $(a_1, b_1) \leq (a_2, b_2)$ 라 정의된 순서를 사전순서라 한다.
+
+- $A,B$ 가 정렬집합이면 $A \times B$ 에 정의된 사전순서나 반사전순서는 모두 정렬순서이다.
+
+- 한편, 아래의 논의에서부터는 정렬집합의 곱집합에는 반사전순서가 부여된 것으로 간주하자.
+
+- 예시 
+
+    정렬집합의 곱하기에는 교환법칙이 성립하지 않는다.
+
+    가령 $X = \{x,y\}$ 일 때 $\omega \times X$ 의 순서는 
+
+    $$ (0, x), (1, x), (2, x), \dots, (0, y), (1, y), (2, y), \dots $$
+
+    로써 $\omega$ 가 $n \in \omega$ 에 대한 $(n, x)$ 형태의 튜플에 모두 대응되어 순서동형일 수 없다. 하지만 $X \times \omega$ 의 순서는 
+
+    $$ (x, 0), (y, 0), (x, 1), (y, 1), (x, 2), (y, 2), \dots $$
+
+    로써 $\omega$ 와 순서동형이다. 왜냐하면 증가함수이면서 전단사함수인 $f: \omega \to X \times \omega$ 가 존재하기 때문이다. 
+
+    $$ f(n) = \begin{cases} \bigg (x, \dfrac{n}{2}\bigg ) & n \text{ is even }\\ \bigg (y, \dfrac{n-1}{2}\bigg ) & n \text{ is odd } \end{cases} , \quad f ^{-1}(a, b) = \begin{cases} 2b & a = x\\ 2b+1 & a = y \end{cases} $$
+    
+    그러므로 
+
+    $$ \omega \approxeq X \times \omega, \quad \omega \not \approxeq \omega \times X $$
+
+    이다.
