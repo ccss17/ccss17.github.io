@@ -562,7 +562,29 @@
 
     $$ C = \{x \in A : \exists p \in B \text{ s.t. }\  S_x \approxeq S_p  \} $$
 
-    와 같이 정의하자. 또 함수 $\phi : C \to B$ 를 정의하는데 $(2)$ 에 의하여 $x \in C \land S_x \approxeq S_p \implies \phi (x) = p$ 라 정의할 수 있다. 그러면 이 함수 $\phi$ 는 단사함수가 된다. 왜냐하면 $\phi (x) = \phi (y) = p \implies S_x \approxeq S_p \approxeq S_y$ 인데 $(2)$ 에 의하여 $x = y$ 이기 때문이다.
+    와 같이 정의하자. 또 함수 $\phi : C \to B$ 를 정의하는데 $(2)$ 에 의하여 $x \in A$ 에 대하여 $S_x \approxeq S_p \land S_x \approxeq S_q$ 라면 $S_p \approxeq S_q$ 이므로(*이로써 한 입력이 두 출력을 갖지않음이 보장됨*) 함수 $\phi$ 를
+    
+    $$ \phi (x) = p \quad (\impliedby x \in C \land S_x \approxeq S_p) $$
+    
+    라 정의할 수 있다. 그러면 이 함수 $\phi$ 는 단사함수가 된다. 왜냐하면 $\phi (x) = \phi (y) = p \implies S_x \approxeq S_p \approxeq S_y$ 인데 $(2)$ 에 의하여 $x = y (= p)$ 이기 때문이다. 이제 
+
+    $$ x, y \in C, x \leq y \implies \phi (x) \leq \phi (y) \tag{3} $$
+
+    이 성립함을 보일 것이다. $f : S_x \to S _{\phi (x)}, g: S_y \to S _{\phi (y)}$ 가 순서동형을 정의한다고 하면, $f, g$ 는 전단사함수이며 증가함수이고 그 역함수 $f ^{-1}, g ^{-1}$ 도 증가함수이다. 그러면 $x \leq y$ 이므로 포함함수 $\iota : S_x \hookrightarrow S_y$ 가 존재하고, 합성함수 
+
+    $$ g \circ \iota \circ f ^{-1}: S _{\phi (x)} \to S _{\phi (y)} $$
+
+    는 증가 단사함수이다. 왜냐하면 $f ^{-1}$ 는 증가함수이고, $\iota$ 는 항등함수(포함함수)이고, $g$ 는 증가함수이기 때문에 결국 이 합성함수는 증가함수이다. 그런데 이때 $(1)$ 에 의하여 $\phi (x) \leq \phi (y)$ 가 증명되고, 이로써 함수 $\phi : C \to \phi (C)$ 는 순서동형을 정의한다는 것을 알 수 있다. (*$B$ 가 아닌 새로운 공역 $\phi (C)$ 로 정의된 $\phi : C \to \phi (C)$ 는 전사함수이다. 왜냐하면 공역으로의 $\phi (C)$ 가 치역 $\phi (C)$ 와 같기 때문이다. $\phi$ 가 단사함수임은 이미 살펴보았으므로 $\phi$ 는 전단사함수이고, 또한 증가함수이므로 $\phi$ 는 순서동형을 정의한다.*) ▲ 
+
+    이제 $C = A$ 이거나 $C$ 는 $A$ 의 절편임을 보이자. 이를 위하여 
+
+    $$ x \in A, y \in C, x < y \impliedby x \in C \tag{4} $$
+
+    임을 보일 것이다. 먼저 $y \in C$ 이므로 순서동형 $g : S_y \to S _{\phi (y)}$ 가 존재한다. 한편 $x<y$ 이므로 $S_x \subset S_y$ 인데 $g(S_x) = S _{g(x)}$ 임을 보이자. $z \in S_y$ 이면 
+
+    $$ z \in S_x \iff z<x \iff g(z)<g(x) \iff g(z) \in S _{g(x)} $$
+
+    이므로 $g | _{S_x} : S_x \to S _{g(x)}$ 도 순서동형을 정의한다. 따라서 $x \in C$ 이다.
 
 
 !!! note
