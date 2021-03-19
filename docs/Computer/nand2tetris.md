@@ -219,6 +219,62 @@ $$ \bar{x} = \begin{cases} 2 ^{n} - x & x \neq 0\\ 0  & x = 0\\ \end{cases} $$
 
 ## Adders
 
+이제 multi-bit adder 를 만들기 위하여 다음과 같은 adder 를 먼저 설계하자. 
+
+- Half-adder : 2bits adder 
+
+- Full-adder : 3bits adder 
+
+- Adder(multi-bit adder) : n-bit adder
+
+또 incrementer 라는 특별한 adder 도 설계할 텐데 주어진 숫자에 1 을 더하는 칩이다.
+
+Half-adder 를 다음과 같이 설계한다. MSB 를 carry 비트라고 표현했다.
+
+![image](https://user-images.githubusercontent.com/16812446/111752902-968c7400-88d9-11eb-9341-b42a94fd97bc.png)
+
+Full-adder 를 다음과 같이 설게한다. Half-adder 에서처럼 덧셈 결과의 LSB 와 carry 비트 두 개만 출력한다.
+
+![image](https://user-images.githubusercontent.com/16812446/111753335-16b2d980-88da-11eb-9e52-30893799ebd1.png)
+
+n 비트 덧셈을 위한 Adder 를 다음과 같이 설계한다. n 은 16, 32, 64 등이 될 수 있다. 이 adder 를 multi-bit adder 라고도 하고 그냥 adder 라고도 한다. 다음 사진으 16 비트 adder 를 표현한다.
+
+![image](https://user-images.githubusercontent.com/16812446/111753295-0bf84480-88da-11eb-89bc-911ddf46dd85.png)
+
+다음은 incrementer 의 설계이다. 
+
+![image](https://user-images.githubusercontent.com/16812446/111753578-609bbf80-88da-11eb-94c1-ba137ade86d9.png)
+
+## ALU 
+
+위에서 소개한 adder 는 상당히 범용적이라 어떤 컴퓨터에서도 사용될 수 있다. 그에 반해 이 섹션에서는 Hack 이라는 컴퓨터 플랫폼에서 사용하는 ALU 를 소개한다. 또 이 ALU 의 설계 원리가 상당히 범용적이라는 것도 설명한다.
+
+Hack 플랫폼의 ALU 는 함수 16 비트 입력 $x, y$ 와 16 비트 출력 $o$ 에 대하여
+
+$$ o = f_i(x, y) $$
+
+를 계산한다. 이 함수 $f_i$ 는 18 가지 경우의 정해진 함수이며, 산술 연산이나 논리 연산을 수행하게 된다. 함수 선택은 control 비트라고 불리는 6 비트의 입력을 통해 정해진다. 입출력의 상세는 슈도코드로 다음과 같이 정의된다. 
+
+![image](https://user-images.githubusercontent.com/16812446/111755848-e4ef4200-88dc-11eb-80ee-2007fb43b20c.png)
+
+![image](https://user-images.githubusercontent.com/16812446/111755878-ee78aa00-88dc-11eb-8f40-ee2dd28c79fe.png)
+
+ALU 는 6 비트의 control 비트로 연산을 정의하는데 6 비트니까 $2 ^{6}=64$ 가지의 기능을 표현할 수 있긴하다. 어쨌든 ALU 의 18 가지 기능은 다음과 같다.
+
+![image](https://user-images.githubusercontent.com/16812446/111760927-9fce0e80-88e2-11eb-9990-05728a38f600.png)
+
+가령 12번째 줄에서 $x-1$ 을 계산할 때 $zx = nx = 0$ 이어서 입력 $x$ 가 zero 가 되지도 않고 반전되지도 않는다. $zy = ny = 1$ 인데 이로써 입력 $y$ 가 zero 가 된 다음 반전된다. 그래서 $y$ 은 처음에 $000 \dots 00$ 이 되었다가 $-1$ 을 뜻하는 $111 \dots 11$ 이 된다. 이때 $f = 1$ 이므로 산술 덧셈이 연산으로써 선택되어 $x+(-1)$ 연산을 하게 된다. 이로써 $x-1$ 연산이 수행되는 것이다. 
+
+## Perspective 
+
+이렇게 ALU 를 설계해보았었는데 이는 최적화가 전혀 고려되지 않은 설계이긴 한다. 가령 carry 비트를 LSB 에서 MSB 까지 전달하는데 많은 시간이 걸린다. 이는 carry look-ahead 기술이라는 최적화 기술로 해결된다.
+
+어떤 컴퓨터든 하드웨어와 소프트웨어 플랫폼의 전반적인 기능성은 ALU 와 OS 를 기반으로 한다. 그러므로 얼마나 많은 기능을 ALU 에 넣을지는 비용/성능의 문제에 달려있다. 일반적으로 산술/논리 연산을 많이 구현하면 비용이 더 들지만, 성능은 높아진다. 
+
+이러한 trade-off 가 있는데 우리는 기능을 덜 구현하고 소프트웨어 레벨에서 더 많은 기증을 구현하도록 한 것이다. 가령 우리의 ALU 에는 곱셈이나 나눗셈 floating point 연산이 없다. 우리는 이 기능과 여타 수학적인 기능을 OS 레벨에서 구현해볼 것이다.
+
+참고로 ALU 의 상세한 설계에 대해서는 대부분의 컴퓨터 구조 전공서적에 자세히 나와있으니 한번 봐라.
+
 # 3. Sequential Logic
 
 # 4. Machine Language
