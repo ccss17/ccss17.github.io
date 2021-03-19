@@ -428,6 +428,12 @@
 
     $$ \forall m \in n, S_m = m $$
 
+- 예시 
+
+    $\R$ 의 한 절편은 $S_0 = (- \infty , 0)$ 이다.
+
+    $\N$ 의 한 절편은 $S_3 = \{1,2\}$ 이다.
+
 !!! tldr ""
 
     서로소인 두 정렬집합 $A, B$ 의 합집합 $A \sqcup B$ 에 
@@ -558,19 +564,19 @@
 
     임이 자명하다. ▲ 
 
-    이제 정렬집합 $A$ 의 부분집합 $C$ 를 
+    이제 정렬집합 $A$ 의 부분집합 $C$ 를 (*이때 $x \in X$ 에 대한 절편 $S_x$ 는 $X$ 의 절편이고, $y \in Y$ 에 대한 절편 $S_y$ 는 $Y$ 의 절편인 것 같다. 표기가 조금 헷갈리네. $S _{x \in X}, S _{y \in Y}$ 로 표기했으면 안헷갈렸을텐데.*)
 
     $$ C = \{x \in A : \exists p \in B \text{ s.t. }\  S_x \approxeq S_p  \} $$
 
-    와 같이 정의하자. 또 함수 $\phi : C \to B$ 를 정의하는데 $(2)$ 에 의하여 $x \in A$ 에 대하여 $S_x \approxeq S_p \land S_x \approxeq S_q$ 라면 $S_p \approxeq S_q$ 이므로(*이로써 한 입력이 두 출력을 갖지않음이 보장됨*) 함수 $\phi$ 를
+    와 같이 정의하자.(*그러면 이 $C$ 는 만약 $A$ 가 $B$ 보다 클 경우 $B$ 의 사이즈에 맞는 $A$ 절편이 되고, $A$ 가 $B$ 보다 작을 경우 그냥 $A$ 가 될 것 같은데. 맞나?*) 또 함수 $\phi : C \to B$ 를 정의하는데 $(2)$ 에 의하여 $x \in A$ 에 대하여 $S_x \approxeq S_p \land S_x \approxeq S_q$ 라면 $S_p \approxeq S_q$ 이므로(*이로써 한 입력이 두 출력을 갖지않음이 보장됨*) 함수 $\phi$ 를
     
     $$ \phi (x) = p \quad (\impliedby x \in C \land S_x \approxeq S_p) $$
     
-    라 정의할 수 있다. 그러면 이 함수 $\phi$ 는 단사함수가 된다. 왜냐하면 $\phi (x) = \phi (y) = p \implies S_x \approxeq S_p \approxeq S_y$ 인데 $(2)$ 에 의하여 $x = y (= p)$ 이기 때문이다. 이제 
+    라 정의할 수 있다.(*이때 $S_x$ 는 $C$ 의 절편이고 $S_p$ 는 $B$ 의 절편이며, 두 절편이 순서동형이라는 것은 두 절편의 크기가 같다는 말인 것 같다. 그러면 $\phi$ 함수는 한 절편의 원소에 대응되는 다른 절편의 원소로 가는 단사함수지.*) 그러면 이 함수 $\phi$ 는 단사함수가 된다. 왜냐하면 $\phi (x) = \phi (y) = p \implies S_x \approxeq S_p \approxeq S_y$ 인데 $(2)$ 에 의하여 $x = y (= p)$ 이기 때문이다. 이제 
 
     $$ x, y \in C, x \leq y \implies \phi (x) \leq \phi (y) \tag{3} $$
 
-    이 성립함을 보일 것이다. $f : S_x \to S _{\phi (x)}, g: S_y \to S _{\phi (y)}$ 가 순서동형을 정의한다고 하면, $f, g$ 는 전단사함수이며 증가함수이고 그 역함수 $f ^{-1}, g ^{-1}$ 도 증가함수이다. 그러면 $x \leq y$ 이므로 포함함수 $\iota : S_x \hookrightarrow S_y$ 가 존재하고, 합성함수 
+    이 성립함을 보일 것이다. $f : S_x \to S _{\phi (x)}, g: S_y \to S _{\phi (y)}$ 가 순서동형을 정의한다(*어째서 이렇게 가정하는게 가능하지? 직관적으로 가능함은 알겠는데.*)고 하면, $f, g$ 는 전단사함수이며 증가함수이고 그 역함수 $f ^{-1}, g ^{-1}$ 도 증가함수이다. 그러면 $x \leq y$ 이므로 포함함수 $\iota : S_x \hookrightarrow S_y$ 가 존재하고, 합성함수 
 
     $$ g \circ \iota \circ f ^{-1}: S _{\phi (x)} \to S _{\phi (y)} $$
 
@@ -578,14 +584,41 @@
 
     이제 $C = A$ 이거나 $C$ 는 $A$ 의 절편임을 보이자. 이를 위하여 
 
-    $$ x \in A, y \in C, x < y \impliedby x \in C \tag{4} $$
+    $$ x \in A, y \in C, x < y \implies  x \in C \tag{4} $$
 
-    임을 보일 것이다. 먼저 $y \in C$ 이므로 순서동형 $g : S_y \to S _{\phi (y)}$ 가 존재한다. 한편 $x<y$ 이므로 $S_x \subset S_y$ 인데 $g(S_x) = S _{g(x)}$ 임을 보이자. $z \in S_y$ 이면 
+    임을 보일 것이다. 먼저 $y \in C$ 이므로 순서동형 $g : S_y \to S _{\phi (y)}$ 가 존재한다.(*$y$ 에 의한 $C$ 의 절편과 순서동형인 $B$ 의 절편 $S _{\phi (y)}$ 을 만들 수 있다는 거지.*) 한편 $x<y$ 이므로 $S_x \subset S_y$ 인데 $g(S_x) = S _{g(x)}$ 임을 보이자. 만일 $z \in S_y$ 이면 (*$g(z)<g(x)$ 라는 것은 $g(x)$ 에 의하여 생성된 절편에 $g(z)$ 가 포함됨을 뜻하므로*)
 
     $$ z \in S_x \iff z<x \iff g(z)<g(x) \iff g(z) \in S _{g(x)} $$
 
-    이므로 $g | _{S_x} : S_x \to S _{g(x)}$ 도 순서동형을 정의한다. 따라서 $x \in C$ 이다.
+    이다. 이는 $S_x$ 에 속하는 임의의 원소 $z$ 에 대하여 $g(z)$ 는 $S _{g(x)}$ 에 속한다는 것이고, 그 역도 성립한다는 것이다. 그러므로 임의의 원소 $z \in S_x$ 에 대한 $g(z)$ 를 집합 전체로 $g(S_x)$ 라고 표현하면 $g(S_x) \subset S _{g(x)}$ 인데 그 역도 성립하므로 $g(S_x) \supset S _{g(x)}$ 이다. 따라서 $g(S_x) = S _{g(x)}$ 인데, $g$ 의 제한 
 
+    $$ g | _{S_x} : S_x \to g(S_x) $$
+
+    은 전사함수이므로 함수 $g$ 처럼 순서동형을 정의한다. 따라서 $g | _{S_x} : S_x \to S _{g(x)}$ 도 순서동형을 정의한다. 따라서 $x \in C$ 이다.(*아니 $x \in C$ 인 건 직관적으로 알겠는데 "$g | _{S_x}$ 가 순서동형을 정의하므로 $x \in C$ 이다?" 라는 논리가 이해가 안되네.*) ▲ 
+
+    일반적으로 정렬집합 $A$ 의 부분집합 $C$ 가 $(4)$ 를 만족하면 자동으로 $C=A$ 이거나 $C$ 는 $A$ 의 절편이 된다. 이를 보이기 위하여 $C \subsetneq A$ 라 하면 $A \text{ \textbackslash }C$ 는 최소 원소 $l$ 을 갖는다. 이 경우 $C = S_l$ 인데, 이것을 보이자. 만약 $x \in S_l$ 이면 $x<l$ 이므로 $x \in C$ 이다. 왜냐하면 $x \in A \text{ \textbackslash }C$ 이면 $l$ 이 $A \text{ \textbackslash }C$ 의 최소원소라는데에 모순이기 때문이다. 그러므로 
+
+    $$ x \in S_l \implies x \in C $$
+
+    이다. 반대로 $x \in C$ 라고 하면 $l \leq x$ 일 때 $(4)$ 에 의하여 $l \in C$ 인데 이것도 $l$ 이 $A \text{ \textbackslash }C$ 의 최소 원소라는데 모순이다. 따라서 $x \in C$ 이면 $l > x$, 즉 $x \in S_l$ 이다. 그러므로
+
+    $$ x \in C \implies x \in S_l $$
+
+    이다. 따라서 $\forall x, x \in C \iff x \in S_l$ 이므로 $C = S_l$ 이 증명되었다. 그러므로 $l$ 의 값에 따라서 $C = A$ 이거나 $C$ 는 $A$ 의 절편이 된다. ▲ 
+
+    마찬가지로 $\phi (C) = B$ 이거나 $\phi (C)$ 는 $B$ 의 절편이다. (*엥 위에서 내가 생각한 것대로 하면 $\phi$ 는.. 아아 $C$ 라는 $A$ 의 부분집합을 $B$ 의 원소로 사상시키는 역할을 하는 게 $\phi$ 니까 이게 맞네.*) 그러므로 다음 네 가지 경우가 생긴다. 
+
+    1. $C = A, \phi (C) = B$
+
+    2. $C = A, \phi (C)$ 는 $B$ 의 절편이다.
+
+    3. $C$ 는 $A$ 의 절편이고, $\phi (C) =B$ 이다.
+
+    4. $C$ 는 $A$ 의 절편이고, $\phi (C)$ 는 $B$ 의 절편이다.
+
+    $\phi : C \to \phi (C)$ 가 순서동형을 정의하는 것을 보였기에 d) 만 일어나지 않음을 보이면 모든 증명이 끝난다.
+
+    이를 위하여 $A$ 의 절편으로써의 $C = S_x$, $B$ 의 절편으로써의 $\phi (C) = S_p$ 라고 가정하자. 그러면 $C \approxeq \phi (C)$ 이므로 $S_x \approxeq S_p$ 이고, 이는 $x \in C = S_x$ 임을 뜻한다. 즉, $x < x$ 를 뜻하는데 이는 모순이다. 그러므로 모든 증명이 끝났다. ■ 
 
 !!! note
 
