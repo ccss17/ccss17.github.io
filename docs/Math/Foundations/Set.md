@@ -869,33 +869,41 @@
 
 !!! tldr ""
 
-    항등함수 : 집합 $X$ 에 대하여 
+    항등함수(identity function) : 집합 $X$ 에 대하여 
     
     $$ \{(x_1, x_2) \in X \times X:x_1 = x_2\} $$
     
     로 주어진 함수를 $X$ 에서 정의된 항등함수
     
-    $$ 1 _{X} = X \to X $$
+    $$ 1 _{X} : X \to X, x \mapsto x $$
     
     라 한다.
 
-- 즉, 항등함수는 
+- 즉, 항등함수는 $x \in X$ 에 대하여
 
-    $$ 1 _{X}(x) = x, x \in X $$
+    $$ 1 _{X}(x) = x $$
 
     이다.
 
+- 항등함수를 $1_X$ 로도 표기하고 $\text{ id }_X$ 로도 표기한다. 
+
 !!! tldr ""
 
-    포함함수 : $A \subset X$ 일 때 
+    포함함수(inclusion function), 포함사상(inclusion map) : $A \subset X$ 일 때 
     
     $$ \{(a,a) \in A \times X : a \in A\} $$
     
     로 주어진 함수를 포함함수 
     
-    $$ \iota _{A}:A \hookrightarrow X $$
+    $$ \iota _{A}:A \hookrightarrow X, x \mapsto x $$
     
-    이다.
+    라고 한다.
+
+- 즉 포함 함수란 정의역이 공역의 부분 집합이며, 정의역의 모든 원소를 자신으로 대응시키는 함수이다. 
+
+- 모든 포함함수는 단사 함수이다. 
+
+- 모든 단사 함수는 전단사 함수와 포함 함수의 합성이다.
 
 !!! tldr ""
 
@@ -923,7 +931,7 @@
 
 !!! tldr ""
 
-    합성함수 : 함수 $f: X \to Y$ 와 $g: Y \to Z$ 에 대한 합성함수 $g \circ f : X \to Z$ 는 
+    합성함수(composite function) : 함수 $f: X \to Y$ 와 $g: Y \to Z$ 에 대한 합성함수 $g \circ f : X \to Z$ 는 
     
     $$ (g \circ f)(x) = g(f(x)), x \in X $$
     
