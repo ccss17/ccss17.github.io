@@ -927,3 +927,44 @@
     집합 $X$ 가 "무한 집합의 특성" 을 만족하고 $X \subset  Y$ 이면 $Y$ 도 "무한 집합의 특성" 을 만족한다.
 
 - 증명 
+
+    집합 $X$ 의 진부분집합 $A$ 에 대하여 전단사함수 $f: X \to A$ 가 존재한다. 이때 함수 $g: Y \to Y$ 를 
+
+    $$ g(y) = \begin{cases} y & y \in Y \text{ \textbackslash }X\\ f(y) & y \in X \end{cases} $$ 
+
+    라 정의하면 $g$ 는 단사함수이고 치역이 $A \sqcup (Y \text{ \textbackslash }X)$ 이다. 그런데 $A \subsetneq X$ 이므로 
+    
+    $$A \sqcup (Y \text{ \textbackslash }X) \subsetneq Y = X \sqcup (Y \text{ \textbackslash }X)$$
+    
+    이다. 그러면 함수 $g$ 의 공역을 축소시킨 $h: Y \to A \sqcup (Y \text{ \textbackslash }X)$ 는 전사함수이다. $g$ 는 단사함수이었으므로 $h$ 는 전단사함수이고, 따라서 
+
+    $$ \therefore  Y \approx A \sqcup (Y \text{ \textbackslash }X) $$
+
+    이다. ■ 
+
+!!! tldr ""
+
+    비둘기 집 원리(Pigeonhole principle) : $n = \{0,1,2, \dots, n-1\} \in \N$ 에 대한 임의의 단사함수 $f: n \to n$ 가 전사이다.
+
+- 증명 
+
+    $n=0$ 일 때는 자명하다. $n$ 일때 성립한다고 하고 $n ^{+}$ 일 때도 성립함을 보이기 위하여 함수 
+
+    $$ f: n ^{+} \to n ^{+} $$
+
+    가 단사라고 하자. 함수 $f$ 를 $n ^{+} = n \sqcup \{n\}$ 의 부분집합 $n$ 에 제한하면 단사함수 $f|_n:n \to n ^{+}$ 를 얻는다.
+
+    우선 $f(n) \subset n$ 이라고 하면 가정에 의하여(*$f$ 가 $n$ 에 대하여 전단사라는 가정*) $f(n) = n \subset n ^{+}$ 이다. (*이때 주의할 점은 $f(n)=n$ 을 한 원소의 대응으로 해석하는 게 아니라 $n$ 이라는 집합에 집합 $n$ 이 대응된다고 해석해야한다는 것이다. $f:n \to n$ 가 $n$ 에 대하여 전단사이므로 정의역과 치역이 $n$ 이다. 그런 의미에서 $f(n)=n$ 이라고 표기한 것이다*) 따라서 $f(n) = n \in n ^{+}$ 이고, $f$ 는 전사함수이다.
+
+
+
+!!! tldr ""
+
+    자연수 $n = \{0, 1, 2, \dots, n-1\}$ 의 부분집합 $A$ 에 대하여 
+
+    $$ n \approx A \implies n = A $$
+
+    이다.
+
+- 증명 
+
