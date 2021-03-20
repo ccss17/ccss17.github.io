@@ -772,3 +772,158 @@
 
 # 무한집합과 선택공리
 
+!!! tldr ""
+
+    집합의 대등(equinumerous) : 두 집합 $X$ 와 $Y$ 사이에 전단사함수가 존재하면 $X$ 와 $Y$ 가 대등하다고 하고,
+
+    $$ X \approx Y $$
+
+    라고 쓴다.
+
+- 이는 집합 $A$ 의 크기 $|A|$ 를 비교하기 위한 정의로써 $A \approx B \iff |A| = |B|$ 가 성립한다.
+
+- 자연수집합 $\N$, 정수집합 $\mathbb{Z}$, 유리수집합 $\mathbb{Q}$ 은 대등하다. 
+
+    - 증명 
+
+        함수 $f: \N \to \mathbb{Z}$ 를 
+
+        $$ f(2n) = -n, \quad f(2n-1) = n $$
+
+        라 정의하면 $f$ 는 자연수 전체 집합 $\N$ 에서 정수 전체 집합 $\mathbb{Z}$ 로 가는 함수가 된다. 한편 함수 $g : \mathbb{Z} \to \N$ 를 
+
+        $$ g(n) = 2n-1, g(-n) = 2n $$
+
+        이라 정의하면 $f$ 와 $g$ 는 역함수관계를 갖고 $f$ 와 $g$ 는 전단사 함수가 된다. 그러므로 
+
+        $$ \therefore \N \approx \mathbb{Z} $$
+
+        이다. ▲ 
+
+        양의 유리수 집합 $\mathbb{Q} ^{+}$ 를 
+
+        $$ \dfrac{1}{1},\enspace \dfrac{1}{2}, \dfrac{2}{1},\enspace \dfrac{1}{3}, \dfrac{2}{2}, \dfrac{3}{1},\enspace \dfrac{1}{4}, \dfrac{2}{3}, \dfrac{3}{2}, \dfrac{4}{1},\enspace \dfrac{1}{5}, \dfrac{2}{4}, \dfrac{3}{3}, \dfrac{4}{2}, \dfrac{5}{1}, \dots $$
+
+        와 같이 나열하고 이 나열의 $n$번째 유리수를 $f(n)$ 이라 두면 $f: \N \to \mathbb{Q} ^{+}$ 는 전사함수가 된다. 이때 중복되는 유리수를 제거하여 
+
+        $$ \dfrac{1}{1},\enspace \dfrac{1}{2}, \dfrac{2}{1},\enspace \dfrac{1}{3}, \dfrac{3}{1},\enspace \dfrac{1}{4}, \dfrac{2}{3}, \dfrac{3}{2}, \dfrac{4}{1},\enspace \dfrac{1}{5}, \dfrac{5}{1}, \dots $$
+
+        를 만들고 마찬가지로 $n$ 번째 유리수를 $g(n)$ 라 두면 $g: \N \to \mathbb{Q} ^{+}$ 은 전단사함수가 된다. 그러므로 
+
+        $$ \therefore \N \approx \mathbb{Q} ^{+} $$
+
+        이다. 이때 공역을 음의 유리수 $\mathbb{Q} ^{-}$ 와 $0$ 를 포함하도록 확장하고 정의역을 $\N$ 에서 $\mathbb{Z}$ 로 바꾸면 같은 방식으로 전단사 함수 $h: \mathbb{Z} \to \mathbb{Q}$ 를 쉽게 만들 수 있음을 알 수 있다. 그러므로 
+
+        $$ \therefore \mathbb{Z} \approx \mathbb{Q} $$
+
+        이다. ▲ 
+        
+        그러므로 최종적으로
+        
+        $$ \therefore \N \approx \mathbb{Z} \approx \mathbb{Q} $$
+
+        이다. ■ 
+
+- 두 선분 위의 점들의 집합은 선분의 길이에 관계없이 항상 대등하다.
+
+    - 한편 이 정리를 더 확장하여 
+
+        $$ [x_1, x_2] \approx [y_1, y_2] \text{ s.t. }\  \forall x_1, x_2, y_1, y_2 \in \R $$
+
+        라고 할 수 있다.
+
+    - 증명 
+
+        길이가 같은 선분 사이에 전단사함수가 존재함은 자명하다. ▲ 
+
+        ![image](https://user-images.githubusercontent.com/16812446/111862271-a2d70680-8997-11eb-8367-9aca8a3c0b07.png)
+
+        위와 같이 길이가 다른 선분 $\overline{AB}, \overline{CD}$ 가 존재한다. 그러면 $\overline{AC}$ 와 $\overline{BD}$ 의 연장선은 평행하지 않으므로 한 점 $O$ 에서 만난다. 이때 선분 $\overline{AB}$ 위의 점 $P$ 에 대하여 $\overline{OP}$ 의 연장선이 $\overline{CD}$ 와 만나는 점을 $f(P)$ 로 두면 함수 
+
+        $$ f: \overline{AB} \to \overline{CD} $$
+
+        는 전단사함수이다. ■ 
+
+- 자연수 집합 $\N$ 은 폐구간 $[0, 1]$ 과 대등하지 않다. 즉, 
+
+    $$\N \not \approx [0, 1]$$
+
+    이다. 
+
+    - 아래의 증명이 그 유명한 칸토어의 대각선 논법이다. 
+
+    - 증명 
+
+        $\N$ 에서 $[0,1]$ 로 가는 전사함수가 존재하지 않음을 보이면 된다. 만약 함수 $f: \N \to [0,1]$ 이 전사함수라고 가정하자. 그러면 함수 $f$ 의 상은 무한소수로 표현될 수 있으므로 
+
+        $$ f(0) = 0. x _{00} x _{01} x _{02} \dots x _{0n} \dots $$
+
+        $$ f(1) = 0. x _{10} x _{11} x _{12} \dots x _{1n} \dots $$
+
+        $$ f(2) = 0. x _{20} x _{21} x _{22} \dots x _{2n} \dots $$
+
+        $$ \vdots $$
+
+        $$ f(n) = 0. x _{n0} x _{n1} x _{n2} \dots x _{nn} \dots $$
+
+        $$ \vdots $$
+
+        와 같이 표현할 수 있다. 이때 수열 $\big <a_n\big >$ 을 
+
+        $$ a_n = \begin{cases} 0 &x _{nn} \neq 0\\ 1 &x _{nn} = 0 \end{cases} $$
+
+        로 정의하면 소수 $\alpha  =0.a_0 a_1 a_2 \dots a_n \dots \in [0, 1]$ 은 
+
+        $$ \alpha \not\in \{f(0), f(1), f(2), \dots\} = \text{Ran} (f)  $$
+
+        이다. 그러므로 $f$ 는 전사함수가 아니다. ■ 
+
+!!! tldr ""
+
+    무한 집합의 특성 : 자기자신과 대등한 진부분집합이 존재한다. 즉, 집합 $X$ 가 무한집합이면 
+
+    $$ \exists A \approx X \text{ s.t. }\ A \subset X $$
+
+    이다.
+
+- 정의 "집합의 대등" 의 여러가지 예시에서 다룬 집합들은 모두 이 특성을 만족한다. 
+
+    - 예시 
+
+        자연수 집합 $\N$ 은 짝수 집합과 대등하다. 
+
+        실수 집합 $\R$ 은 다음과 같은 탄젠트 함수 $y = \tan \bigg (\pi x - \dfrac{\pi }{2}\bigg )$ 에 의하여 개구간 $(0, 1)$ 과 대등하다.
+
+        ![](https://user-images.githubusercontent.com/16812446/83792797-8868c080-a6d6-11ea-8dac-6238abb22dfa.png)
+
+        즉, 놀랍게도 
+
+        $$ \R \approx (0, 1) $$
+
+        이다.
+
+!!! tldr ""
+
+    집합 $X$ 가 "무한 집합의 특성" 을 만족하고 $X \approx Y$ 이면 $Y$ 도 "무한 집합의 특성" 을 만족한다.
+
+- 증명 
+
+    집합 $X$ 에 대하여 $\exists A \text{ s.t. }\ A \subsetneq X$ 이고, 가정에 의하여 전단사함수 $f: X \to A$ 가 존재한다. 또한 집합 $Y$ 에 대하여 가정에 의하여 전단사 함수 $g: X \to Y$ 가 존재한다. ▲ 
+
+    그러면 제한 $g|_A : A \to g(A)$ 는 전단사함수이고, 이에따라 
+
+    $$ (g|_A) \circ f \circ g ^{-1}: Y \to g(A) $$
+
+    도 전단사함수이다. 그러므로 $g(A)$ 가 $Y$ 의 진부분집합이면 증명이 끝난다. ▲ 
+
+    그런데 $x \in X \text{ \textbackslash }A \implies g(x) Y \text{ \textbackslash }g(A)$ 이므로 $g(A) \subsetneq  Y$ 이다. 그러므로 
+
+    $$ \therefore g(A) \approx Y $$
+
+    이다. ■ 
+
+!!! tldr ""
+
+    집합 $X$ 가 "무한 집합의 특성" 을 만족하고 $X \subset  Y$ 이면 $Y$ 도 "무한 집합의 특성" 을 만족한다.
+
+- 증명 
