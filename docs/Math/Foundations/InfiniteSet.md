@@ -655,3 +655,119 @@
 - 예시 
 
     자연수 전체의 정렬집합 $\omega$ 는 서수이다. 각 자연수 $n \in \omega$ 도 서수이다.
+
+!!! tldr ""
+
+    서수의 더하기 : $\text{ord }(A) = \alpha , \text{ord }(B) = \beta$ 인 서로소인 정렬집합 $A, B$ 에 대하여 
+
+    $$ \alpha + \beta = \text{ord }(A \sqcup B) $$
+
+    이다. 
+
+- 이때 $A \sqcap B$ 의 정렬순서는 정의 "서로소 집합의 순서" 에 의하여 결정된다.
+
+- 교환법칙이 성립하지 않는다.
+
+    - 예시 
+
+        정의 "서로소 집합의 순서" 의 예시에서 보았듯 
+
+        $$ \omega + 1 \neq 1 + \omega = \omega $$
+
+        이다. 
+
+- 결합법칙이 성립한다.
+
+    - 증명
+
+!!! tldr ""
+
+    서수의 곱하기 : 반사전순서가 부여된 $A \times B$ 에 대하여 
+
+    $$ \alpha \beta  = \text{ord }(A \times B) $$
+
+    이다.
+
+- 교환법칙이 성립하지 않는다.
+
+    - 예시 
+
+        정의 "반사전순서" 의 예시에서 보았듯 $\omega \approxeq X \times \omega, \quad \omega \not \approxeq \omega \times X$ 으로써 
+
+        $$ \omega 2 \neq 2 \omega = \omega $$
+
+        이다.
+
+- 결합법칙이 성립한다.
+
+    - 증명
+
+- 분배법칙은 항상 성립하지 않으므로 조심히 다뤄야 한다. 즉, 왼쪽 분배법칙은 성립하나, 오른쪽 분배법칙은 성립하지 않는다.
+
+    - 증명
+
+    - 예시 
+
+        가령 
+
+        $$ (1 + 1) \omega = 2 \omega \neq \omega 2=\omega +\omega =1 \omega +1 \omega $$
+
+        이다. 하지만 왼쪽 분배법칙 
+
+        $$ \alpha (\beta + \gamma ) = \alpha \beta + \alpha \gamma $$
+
+        은 성립한다.
+
+!!! tldr ""
+
+    서수의 순서 : 서수 $\alpha , \beta$ 에 대한 $\text{ord }(A) =\alpha ,\text{ord }(B) = \beta$ 인 정렬집합 $A, B$ 에 대하여 $A$ 가 $B$ 의 절편과 순서동형이면 
+
+    $$ \alpha < \beta $$
+
+    로 정의한다. 
+
+- 물론 $\alpha < \beta \lor \alpha = \beta$ 이면 
+
+    $$ \alpha \leq \beta $$
+
+    로 정의한다. 
+
+- 정리 "두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 1. $A$ 와 $B$ 는 순서동형이다. 2. $A$ 는 $B$ 의 절편과 순서동형이다. 3. $B$ 는 $A$ 의 절편과 순서동형이다." 는 임의의 서수 $\alpha , \beta$ 에 대하여 
+
+    $$ \alpha < \beta , \quad  \alpha = \beta , \quad  \alpha > \beta $$
+
+    중 하나가 성립함을 말해준다. 
+
+!!! tldr ""
+
+    정렬집합 $A$ 의 부분집합 $B$ 가 
+
+    $$ x \in A, S_x \subset B \implies x \in B $$
+
+    이면 $B=A$ 이다. 
+
+- 이 정리는 정렬집합 $\omega$ 에 관한 귀납법이 임의의 정렬집합에 대하여 어떻게 확장되는지 보여준다. 
+
+- 증명 
+
+    $A \text{ \textbackslash }B \neq \varnothing$ 이면 최소원소 $a \in A \text{ \textbackslash }B$ 를 가진다. 그러면 $S_a \subset B$ 이고 $a \in B$ 가 되어 모순이다. 그러므로 $A \text{ \textbackslash }B = \varnothing$ 이다. ■ 
+
+!!! tldr ""
+
+    정렬집합에 관한 성질 $P$ 와 임의의 정렬집합 $X$ 에 대하여 
+
+    "$X$ 의 모든 절편이 $P$ 를 만족하면 $X$ 도 $P$ 를 만족한다."
+
+    이면 임의의 정렬집합이 $P$ 를 만족한다.
+
+- 이 정리는 정렬집합 $\omega$ 에 관한 귀납법이 임의의 정렬집합에 대하여 어떻게 확장되는지 보여준다. 
+
+- 증명 
+
+    어떤 정렬집합 $X$ 가 $P$ 를 만족하지 않는다면 
+
+    $$ Y = \{x \in X : S_x \text{ 가 } P \text{ 를 만족하지 않는다 }\} \neq \varnothing $$
+
+    이고, $Y$ 는 최소원소 $a \in X$ 를 갖는다. 그러면 $S_a$ 의 모든 절편은 $P$ 를 만족하는데, 가정에 의하여 $S_a$ 도 $P$ 를 만족하므로 모순이다. ■ 
+
+# 무한집합과 선택공리
