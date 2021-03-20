@@ -1028,7 +1028,7 @@
 
     $$ = \gamma (n) + \gamma (m) + 1 = \gamma (n) + \gamma (m ^{+}) $$
 
-    이므로 임의의 $m, n \in \N$ 에서 $(1)$ 이 성립함을 알 수 있다. $\\blacktriangle$ 
+    이므로 임의의 $m, n \in \N$ 에서 $(1)$ 이 성립함을 알 수 있다. $\blacktriangle$ 
     
     $(2)$ 도 마찬가지로 $m=0$ 이면 자명하고 귀납법을 사용하여 
 
@@ -1036,13 +1036,13 @@
 
     $$ = \gamma (n)\gamma (m)+\gamma (n) = \gamma (n)[\gamma (m) +1] = \gamma (n)\gamma (m ^{+}) $$
 
-    가 되어 증명된다. $\\blacktriangle$ 
+    가 되어 증명된다. $\blacktriangle$ 
 
     한편, 임의의 순서체에서 $0<1 \implies 1 \in P _{F}$ 이다. 그러므로 $\gamma (n) \in P _{F}$ 이면 $\gamma (n ^{+}) = \gamma (n) + 1 \in P _{F}$ 이 되어 $n \in \N \text{ \textbackslash }\{0\}$ 에 대하여
 
     $$ \gamma (n) \in P _{F} \tag{3} $$
 
-    이다. $\\blacktriangle$ 
+    이다. $\blacktriangle$ 
 
     마지막으로 $\gamma : \N \to F$ 가 단사함수임을 보일 것이다. 먼저 $n> m, \gamma (n) = \gamma (m)$ 이라고 가정하여 단사함수의 조건에 어긋나게 하자. 그러면 $n = m + k$ 인 $k \in \N \text{ \textbackslash }\{0\}$ 가 존재하여 
 
@@ -1050,7 +1050,7 @@
 
     $$ = \gamma (m+k) - \gamma (m) = \gamma (n) - \gamma (m) = 0 \not \in P _{F} $$
 
-    인데, 이는 $(3)$ 에 모순이므로 $\gamma : \N \to F$ 는 단사함수이다. $\\blacktriangle$ 
+    인데, 이는 $(3)$ 에 모순이므로 $\gamma : \N \to F$ 는 단사함수이다. $\blacktriangle$ 
 
     이제 $\N \subset \mathbb{Z} \subset \mathbb{Q}$ 를 염두하며 $\gamma : \N \to F$ 의 정의역을 $\mathbb{Q}$ 로 확장할 것이다. 먼저 $\mathbb{Z}$ 로 확장하여 함수 $\gamma : \mathbb{Z} \to F$ 를 $n \in \N$ 에 대하여
 
@@ -1080,7 +1080,7 @@
 
         $$ \gamma _0(n) = 0 + n $$
 
-        와도 같다. 그러므로 $r \in \N, \gamma (r) = r$ 이다. $\\blacktriangle$ 
+        와도 같다. 그러므로 $r \in \N, \gamma (r) = r$ 이다. $\blacktriangle$ 
 
         $\gamma : \mathbb{Z} \to F$ 는 
 
@@ -1090,7 +1090,7 @@
 
         $$ \gamma (r) = \begin{cases} r & r \in \N\\ - \gamma (-r) & r \in \mathbb{Z} \text{\textbackslash}\N\\ \end{cases} $$
 
-        이므로 $r \in \mathbb{Z}, \gamma (r) = r$ 이다. $\\blacktriangle$ 
+        이므로 $r \in \mathbb{Z}, \gamma (r) = r$ 이다. $\blacktriangle$ 
 
         $\gamma : \mathbb{Q} \to F$ 는 
         
@@ -1432,7 +1432,7 @@
 
         $$ \beta \in \R $$
 
-        이 증명되었다. $\\blacktriangle$ 
+        이 증명되었다. $\blacktriangle$ 
 
         이제 $\alpha + \beta = 0 ^{*}$ 을 보일텐데, $q \in \alpha , p \in \beta$ 이면 $r > p, -r \not\in \alpha$ 인 $r \in \mathbb{Q}$ 이 다음과 같이 존재한다.
 
@@ -1448,7 +1448,7 @@
         
         $$ \iff  q + p < 0 $$
 
-        이므로 $\alpha + \beta \subset 0 ^{*}$ 이다. $\\blacktriangle$ 
+        이므로 $\alpha + \beta \subset 0 ^{*}$ 이다. $\blacktriangle$ 
         
         이제 $0 ^{*} \subset \alpha + \beta$ 를 보이면 모든 증명이 끝난다. 이를 위하여 $s \in 0 ^{*}$ 에 대한 $t = \dfrac{-s}{2} > 0$ 인 $t \in \mathbb{Q}$ 에 대하여 
 
@@ -1646,7 +1646,7 @@
 
     $$ |x(i) - x(j)| \leq |x(i) - a| + |x(j) - a| < \dfrac{e}{2} + \dfrac{e}{2} = e $$
 
-    가 되어 $x$ 는 코시 수열이다. (*$\because$ 정리 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$"*) $\\blacktriangle$ 
+    가 되어 $x$ 는 코시 수열이다. (*$\because$ 정리 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$"*) $\blacktriangle$ 
 
     이제 역으로 $x$ 가 코시 수열이라고 가정하면
 
@@ -1838,7 +1838,7 @@
 
     $$ i \geq N_e \implies \beta  (i) - \alpha(i) > -d'_e $$
 
-    이므로 $[\beta ]>[\alpha ]$ 이다. $\\blacktriangle$ 
+    이므로 $[\beta ]>[\alpha ]$ 이다. $\blacktriangle$ 
 
     이제 이 두 가지 경우가 성립하지 않는다고 하면 임의의 유리수 $e > 0$ 에 대하여 
     
@@ -2294,7 +2294,7 @@
 
 - 증명
 
-    $x = 0$ 이면 정리 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다." 와 정리 "순서체 $F$ 에 대하여 다음이 동치이고, 이 조건을 만족하는 순서체 $F$ 를 아르키메데스의 성질을 만족한다고 한다. $x>0 \implies  \exists n \in \N \text{ \textbackslash }\{0\} \text{ s.t.  }\  x > \dfrac{1}{n}$" 를 적용하면 된다. $\\blacktriangle$ 
+    $x = 0$ 이면 정리 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다." 와 정리 "순서체 $F$ 에 대하여 다음이 동치이고, 이 조건을 만족하는 순서체 $F$ 를 아르키메데스의 성질을 만족한다고 한다. $x>0 \implies  \exists n \in \N \text{ \textbackslash }\{0\} \text{ s.t.  }\  x > \dfrac{1}{n}$" 를 적용하면 된다. $\blacktriangle$ 
 
     이제 $0<x<y$ 라고 하면 다시 정리 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다." 에 의하여 
 
@@ -2312,7 +2312,7 @@
 
     $$ x < \dfrac{m}{n} = \dfrac{m-1}{n} + \dfrac{1}{n} \leq x + \dfrac{1}{n} < y $$
 
-    이다. 그러므로 $\dfrac{m}{n}$ 이 바로 $x$ 와 $y$ 사이에 있는 유리수이다. $\\blacktriangle$ 
+    이다. 그러므로 $\dfrac{m}{n}$ 이 바로 $x$ 와 $y$ 사이에 있는 유리수이다. $\blacktriangle$ 
 
     $x<0$ 일 때는 $\exists n \in \N \text{ s.t.  }\ -x<n$ 이므로 
 
@@ -2454,13 +2454,13 @@
 
     $$ \gamma (s) < x, \quad \gamma (t-s) = \gamma (t) - \gamma (s) < y $$
 
-    에서 $\delta (t) = \delta (s) + \delta (t-s)\in A_x+A_y$ 이다. $\\blacktriangle$ 
+    에서 $\delta (t) = \delta (s) + \delta (t-s)\in A_x+A_y$ 이다. $\blacktriangle$ 
 
     이제 $f(xy) = f(x)f(y)$ 임을 보이기 위하여 $x,y \in P_F$ 인 경우부터 생각하면 다시 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
 
     $$ A_x \cap P_G \neq \varnothing , A_y \cap P_G \neq \varnothing $$
 
-    이므로 정리 "순서체 $F$ 의 부분집합 $S, T \subset P _{F}$ 에 대하여 $ST = \{st \in P _{F} : s \in S, t \in T\}$ 라고 정의했을 때 $\sup ST = \sup S \sup T$ 이다." 를 적용하면 된다. 이로써 1) 의 증명이 끝났다. $\\blacktriangle$ 
+    이므로 정리 "순서체 $F$ 의 부분집합 $S, T \subset P _{F}$ 에 대하여 $ST = \{st \in P _{F} : s \in S, t \in T\}$ 라고 정의했을 때 $\sup ST = \sup S \sup T$ 이다." 를 적용하면 된다. 이로써 1) 의 증명이 끝났다. $\blacktriangle$ 
 
     이제 
 
@@ -2476,7 +2476,7 @@
 
     $$ \exists \delta (r) \in A_x \text{ s.t. }\ \delta (r) > 0 $$
 
-    이다. 그러면 $0 < \gamma (r)<x$ 이고, 이로써 2) 의 증명이 끝났다. $\\blacktriangle$ 
+    이다. 그러면 $0 < \gamma (r)<x$ 이고, 이로써 2) 의 증명이 끝났다. $\blacktriangle$ 
 
     이제 $f$ 가 전단사함수임을 보이면 모든 증명이 끝난다. 이는 $g \circ f = 1_F, f \circ g = 1_G$ 를 보임으로써 이루어진다. $g \circ f = 1_F$ 를 보이기 위하여 $f$ 의 정의에 의하여 $x \in F$ 에 대하여
 
@@ -2494,12 +2494,12 @@
 
     $$ \exists s \in \mathbb{Q}, \delta (r) < \delta (s), \gamma (s) < x $$
 
-    이다. 그러면 $\gamma (r) \gamma (s) \implies \gamma (r) < x$ 이다. 이로써 a) 가 증명되었다. $\\blacktriangle$ 
+    이다. 그러면 $\gamma (r) \gamma (s) \implies \gamma (r) < x$ 이다. 이로써 a) 가 증명되었다. $\blacktriangle$ 
 
     이제 $z<x$ 라고 하면 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
     
     $$ \exists r \in \mathbb{Q} \text{ s.t. }\  z < \gamma (r) < x$$
 
-    이다. 그러면 $\delta (r) = f(\gamma (r)) < f(x)$ 이므로 b) 가 증명되었다. $\\blacktriangle$ 
+    이다. 그러면 $\delta (r) = f(\gamma (r)) < f(x)$ 이므로 b) 가 증명되었다. $\blacktriangle$ 
 
     $f \circ g = 1_G$ 도 마찬가지의 방법으로 증명가능하고, 결국 $f$ 는 전단사함수임이 증명된다. 이로써 모든 증명이 끝났다. ■ 
