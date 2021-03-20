@@ -2,7 +2,7 @@
 
 !!! tldr ""
 
-    선택공리(axiom of choice, AC) : 공집합이 아닌 집합에서 한 원소를 택할 수 있고, 이를 무한히 반복할 수 있다는 공리로써 다음의 동치 명제들
+    선택공리(axiom of choice, AC) : 공집합이 아닌 집합에서 한 원소를 택할 수 있고, 이를 무한히 반복할 수 있다는 공리로써 다음의 동치 명제들로 정의된다.
 
     1. 함수 $f: X \to Y$ 가 전사이면 $f \circ g = 1_Y$ 인 함수 $g: Y \to X$ 가 존재한다.
 
@@ -14,9 +14,9 @@
 
         $$ \exists h: 2 ^{X} \text{ \textbackslash }\{\varnothing \} \to X \text{ s.t. }\ h(A) \in A$$
 
-    4. $I \neq \varnothing \land  \forall i \in I , X_i \neq \varnothing \implies \displaystyle \prod_{i \in I}^{}X_i \neq \varnothing$
-
-    로 정의된다.
+    4. 집합 $I$ 와 각 $i \in I$ 에 대한 집합 $X_i$ 에 대하여 다음이 성립한다.
+    
+        $$I \neq \varnothing \land  \forall i \in I , X_i \neq \varnothing \implies \displaystyle \prod_{i \in I}^{}X_i \neq \varnothing$$
     
 - 하나의 형식문으로써 
 
@@ -56,21 +56,21 @@
 
     라 두면 $\mathcal{P} = \{\tilde{A} : A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\}$ 은 집합 $Y = \bigcup_{}^{}\{\tilde{A} : A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\}$ 의 분할이다. 이때 $\forall A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여 $g(\tilde{A}) \in \tilde{A}$ 를 만족하는 함수 $g: \mathcal{P} \to Y$ 가 존재한다.
 
-    이때 $\pi _2:(2 ^{X} \text{ \textbackslash }\{\varnothing \}) \times X \to X$ 를 사영이라 두고 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\}$ 에 대하여
+    이때 $\pi :(2 ^{X} \text{ \textbackslash }\{\varnothing \}) \times X \to X$ 를 사영이라 두고 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여
 
-    $$ h: A \mapsto \pi _2(g(\tilde{A})) $$
+    $$ h: A \mapsto \pi (g(\tilde{A})) $$
 
     라 정의하면 $h: 2 ^{X} \text{ \textbackslash }\{\varnothing \} \to X$ 가 원하는 함수이다. ■  
 
 - 3) 에서 2) 를 도출하는 증명 
 
-    집합 $X$ 의 분할 $\mathcal{P}$ 는 $2 ^{X} \text{ \textbackslash }\{\varnothing \}\}$ 의 부분집합이므로 3) 을 가정하면 2) 는 바로 도출된다. ■ 
+    집합 $X$ 의 분할 $\mathcal{P}$ 는 $2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 의 부분집합이므로 3) 을 가정하면 2) 는 바로 도출된다. ■ 
 
 - 3) 에서 4) 를 도출하는 증명 
 
     먼저 집합 $X (\neq \varnothing )$ 와 $Y (\neq \varnothing )$ 의 곱집합 $X \times Y$ 가 $\varnothing$ 이 아님은 자명하다. 왜냐하면 $x \in X$ 와 $y \in Y$ 를 택하면 $(x,y) \in X \times Y$ 이기 때문이다.
 
-    임의의 집합족 $\{X_i : i \in I\}$ 에 대하여 4) 를 정의했는데 3) 에서 4) 를 도출해보자. 먼저 3) 을 가정했으므로 집합 $X = \bigcup_{i \in I}^{}X_i$ 의 선택함수 $h: 2 ^{X} \text{ \textbackslash }\{\varnothing \}\} \to X$ 가 존재하는데, 함수 $g: I \to X$ 를 
+    임의의 집합족 $\{X_i : i \in I\}$ 에 대하여 4) 를 정의했는데 3) 에서 4) 를 도출해보자. 먼저 3) 을 가정했으므로 집합 $X = \bigcup_{i \in I}^{}X_i$ 의 선택함수 $h: 2 ^{X} \text{ \textbackslash }\{\varnothing \} \to X$ 가 존재하는데, 함수 $g: I \to X$ 를 
 
     $$ g(i) = h(X_i) $$
 
@@ -78,15 +78,15 @@
 
     $$ g \in \prod_{i \in I}^{}X_i $$
 
-    이다. ■ 
+    이다.(*$g \in \prod_{i \in I}^{}X_i$ 이 표현 자체가 곱집합의 원소를 의미하는데, 함수 $g$ 는 $I$ 에서 $X$ 로 가는 함수니까 $I$ 와 $X$ 의 곱집합으로 표현될텐데.. 이게 맞나?*) ■ 
 
 - 4) 에서 3) 를 도출하는 증명 
 
     4) 가 가정인 것에서 $\prod_{}^{}\{A:A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\} \neq \varnothing$ 이므로 
     
-    $$ \exists  h \in \prod_{}^{}\{A:A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\} \neq \varnothing$$
+    $$ \exists h \text{ s.t. }\ h \in \prod_{}^{}\{A:A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\} $$
 
-    이다. 그러면 각 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여 $h(A) \in A$ 이므로 $h$ 는 $X$ 의 선택함수이다. ■ 
+    이다. 그러면 각 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여 $h(A) \in A$ 이므로 $h$ 는 $X$ 의 선택함수이다.(*$h$ 는 곱집합의 원소이므로 각 부분집합들에서 선택된 원소들의 쌍으로 이루어졌을 텐데 $h$ 를 선택함수라 했으면 $2 ^{X}\text{ \textbackslash }\{\varnothing \}$ 에서 $A$ 로 가는 함수일텐데, 이게 맞는건가..*) ■ 
 
 !!! tldr ""
 
