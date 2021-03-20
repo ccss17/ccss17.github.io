@@ -942,6 +942,33 @@
 
     이다. ■ 
 
+!!! tldr ""
+
+    비둘기 집 원리(Pigeonhole principle) : $n = \{0,1,2, \dots, n-1\} \in \N$ 에 대한 임의의 단사함수 $f: n \to n$ 가 전사이다.
+
+- 증명
+
+    $n=0$ 일 때는 자명하다. $n$ 일때 성립한다고 하고 $n ^{+}$ 일 때도 성립함을 보이기 위하여 함수 
+
+    $$ f: n ^{+} \to n ^{+} $$
+
+    가 단사라고 하자. 함수 $f$ 를 $n ^{+} = n \sqcup \{n\}$ 의 부분집합 $n$ 에 제한하면 단사함수 $f|_n:n \to n ^{+}$ 를 얻는다.
+
+    우선 $f(n) \subset n$ 이라고 하면 가정에 의하여(*$f$ 가 $n$ 에 대하여 전단사라는 가정*) $f(n) = n \subset n ^{+}$ 이다. (*이때 주의할 점은 $f(n)=n$ 을 한 원소의 대응으로 해석하는 게 아니라 $n$ 이라는 집합에 집합 $n$ 이 대응된다고 해석해야한다는 것이다. $f:n \to n$ 가 $n$ 에 대하여 전단사이므로 정의역과 치역이 $n$ 이다. 그런 의미에서 $f(n)=n$ 이라고 표기한 것이다*) 따라서 $f(n) = n \in n ^{+}$ 이고(*이때의 $f(n)=n$ 은 $n$ 이라는 집합이 $n$ 에 대응되는 것으로써 표기한 것이 아니라 한 원소 $n$ 이 $n$ 으로 대응된다는 것으로써 표기한 것이다. 그러므로 $f(n) = n$ 이 공역 $n ^{+} = n \sqcup \{n\}$ 의 $\{n\}$ 에 대응되므로 공역이 곧 치역이 되어 전사함수가 된다는 것이다.*), $f$ 는 전사함수이다. 그러므로 $f$ 는 전단사 함수이다. ▲ 
+    
+    (*위 증명에서 $f(n) = n \subset n ^{+}$ 은 정의역 $n$ 이 치역 $n$ 으로 대응된다는 것이고 $f(n) = n \in n ^{+}$ 은 한 원소 $n$ 이 $n$ 으로 대응된다는 것으로 표기한 것이 매우 애매하고 헷갈렸던 이유는 전자의 함수의 입출력이 집합이라는 단서가 오로지 $\subset$ 기호에 있고, 후자의 함수의 입출력이 원소라는 단서가 오로지 $\in$ 기호에 있기 때문이었던 거지..*)
+
+    이제 $f(n) \not \subseteq n$ 인 경우를 생각하자. 그러면 $f(k) \not\in n$ 인 $k \in n$ 이 존재한다. 그러면 $f(k) \in n ^{+} \text{ \textbackslash }n$ 이므로 $f(k) = n \in n ^{+}$ 이다.
+
+    이제 함수 $g: n ^{+} \to n ^{+}$ 를 
+
+    $$ g(k) = n \in n ^{+}, \enspace g(n) = k \in n ^{+}, \enspace g(x) = x, \enspace x \in n \text{ \textbackslash }\{k\} $$
+
+    와 같이 정의하자. 그러면 $g$ 는 $n ^{+} = \{n\}\sqcup \{k\}\sqcup (n \text{ \textbackslash }\{k\})$ 에서 단지 $n$ 과 $k$ 만을 바꾸고 나머지는 그대로 대응시키는 함수에 불과 하므로 자명하게 전단사함수이다. 
+
+    합성함수 $f \circ g : n ^{+} \to n ^{+}$ 에 대하여 $(f \circ g)(n) \subset n \subset n ^{+}$ 이고 (*이 부분도 마찬가지로 집합 $n$ 이 집합 $n$ 으로 대응됨을 뜻한다*) $(f \circ g)(n) = n \in n ^{+}$ 이다. (*이 부분도 원소 $n$ 이 $n$ 으로 대응됨을 뜻하지*) 
+    
+    따라서 $(f \circ g)|_n:n \to n$ 에 귀납법의 가정(*$f$ 가 $n$ 에서 전단사라는 가정*)을 적용하면 $(f \circ g)|_n$ 이 전단사임을 알 수 있다. (*이로써 $(f \circ g)(n) = n \subset n ^{+}$ 이 보장되는 거지. 그래서 이제 함수의 제한을 풀고 $(f \circ g)(n) = n \in n ^{+}$ 만 보이면 전사함수가 되는데 이건 이미 위에서 보였으니까*) 따라서 $f \circ g$ 는 전단사이고, $f = (f \circ g) \circ g ^{-1}$ 도 전단사이다.(*$g$ 가 전단사이므로 $g ^{-1}$ 도 전단사니까*) ■ 
 
 !!! tldr ""
 
@@ -953,25 +980,28 @@
 
 - 증명 
 
-    이 정리를 증명하기 위해 "비둘기 집 원리(Pigeonhole principle) : $n = \{0,1,2, \dots, n-1\} \in \N$ 에 대한 임의의 단사함수 $f: n \to n$ 가 전사이다." 를 보이면 된다.
+    $A \subset n$ 에 대하여 $n \approx A$ 이므로 전단사 함수 $f: n \to A$ 가 존재한다. $n \neq A$ 라고 한다면 $k \in n \text{ \textbackslash }A$ 가 존재하여 $k \not\in A$ 이다. 그런데 $f$ 는 전단사함수이므로 $f(k) = l \in A$ 이다. 이때 $n \text{ \textbackslash }\{k\} = A \lor n \text{ \textbackslash }\{k\} \supsetneq A$ 이다. 
+    
+    $n \text{ \textbackslash }\{k\} = A$ 인 경우 $f$ 가 전단사이므로 $f(n \text{ \textbackslash }\{k\}) = f(A) = A$ 가 되어 
+    
+    $$ \exists k' \in n \text{ \textbackslash }\{k\} \text{ s.t. }\  f(k') = l $$
 
-    $n=0$ 일 때는 자명하다. $n$ 일때 성립한다고 하고 $n ^{+}$ 일 때도 성립함을 보이기 위하여 함수 
+    이다. $f$ 는 단사이므로 $f(k) = l \land f(k') = l$ 는 모순이다. ▲ 
 
-    $$ f: n ^{+} \to n ^{+} $$
+    $n \text{ \textbackslash }\{k\}\supsetneq A$ 인 경우 $n \text{ \textbackslash }\{k\} \neq A$ 이므로 $k' \in n \text{ \textbackslash }A \cup \{k\}$ 이다. 그런데 $f$ 는 전단사이므로 $f(k') = l' \in A$ 이다. 그러면 또 다시 $n \text{ \textbackslash }\{k,k'\} = A \lor n \text{ \textbackslash }\{k,k'\} \supsetneq A$ 이다. 이런식으로 $A$ 에 속하지 않는 $n$ 의 원소 $k'', k''', \dots$ 을 제거한 집합 $n'$ 을 만들어 $n' = A$ 가 되게 할 수 있다. 그러면 위의 논증과 마찬가지로 $f(n') = A$ 가 되는데 
 
-    가 단사라고 하자. 함수 $f$ 를 $n ^{+} = n \sqcup \{n\}$ 의 부분집합 $n$ 에 제한하면 단사함수 $f|_n:n \to n ^{+}$ 를 얻는다.
+    $$ \exists x \in n' \text{ s.t. }\ f(x) = l $$
 
-    우선 $f(n) \subset n$ 이라고 하면 가정에 의하여(*$f$ 가 $n$ 에 대하여 전단사라는 가정*) $f(n) = n \subset n ^{+}$ 이다. (*이때 주의할 점은 $f(n)=n$ 을 한 원소의 대응으로 해석하는 게 아니라 $n$ 이라는 집합에 집합 $n$ 이 대응된다고 해석해야한다는 것이다. $f:n \to n$ 가 $n$ 에 대하여 전단사이므로 정의역과 치역이 $n$ 이다. 그런 의미에서 $f(n)=n$ 이라고 표기한 것이다*) 따라서 $f(n) = n \in n ^{+}$ 이고, $f$ 는 전사함수이다.
+    에서 $f(k) = l \land f(x) = l$ 인데 $f$ 는 단사이므로 모순이 된다. ▲ 
 
-    이제 $f(n) \not \subseteq n$ 인 경우를 생각하자. 그러면 $f(k) \not\in n$ 인 $k \in n$ 이 존재한다. 그러면 $f(k) \in n ^{+} \text{ \textbackslash }n$ 이므로 $f(k) = n \in n ^{+}$ 이다.
+    그러므로 
+    
+    $$ \therefore  n = A$$ 
+    
+    이다.
 
-    이제 함수 $g: n ^{+} \to n ^{+}$ 를 
+    - 정리 "비둘기 집 원리(Pigeonhole principle) : $n = \{0,1,2, \dots, n-1\} \in \N$ 에 대한 임의의 단사함수 $f: n \to n$ 가 전사이다." 는 집합 $n$ 에서 $n$ 으로 가는 단사 함수라면 전사함수이라고 말하고 있고, 이 정리는 $n$ 에서 $A (\subset n)$ 으로 가는 전단사함수가 존재하면 $n=A$ 라고 말하고 있네. 그럼 이 둘이 서로 역인데, 어떻게 비둘기 집 원리 정리를 적용할 수 있을까.
 
-    $$ g(k) = n \in n ^{+}, \enspace g(n) = k \in n ^{+}, \enspace g(x) = x, \enspace x \in n \text{ \textbackslash }\{k\} $$
+        위 증명은 어떻게 비둘기 집 원리 정리가 본 정리의 증명에 적용되는지 모르겠어서 내가 만든 것이므로 오류가 있을 수 있다.
 
-    와 같이 정의하자. 그러면 $g$ 는 $n ^{+} = \{n\}\sqcup \{k\}\sqcup (n \text{ \textbackslash }\{k\})$ 에서 $n$ 과 $k$ 를 바꾸는 함수이므로 전단사함수이다. 
-
-    합성함수 $f \circ g : n ^{+} \to n ^{+}$ 에 대하여 $(f \circ g)(n) \subset n \subset n ^{+}$ 이고 $(f \circ g)(n) = n \in n ^{+}$ 이다. 따라서 $(f \circ g)|_n:n \to n$ 에 귀납법의 가정을 적용하면 $(f \circ g)|_n$ 이 전단사임을 알 수 있다. 
-
-    따라서 $f \circ g$ 는 전단사이고, $f = (f \circ g) \circ g ^{-1}$ 도 전단사이다. ■ 
-
+    
