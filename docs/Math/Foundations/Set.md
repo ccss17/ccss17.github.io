@@ -1007,7 +1007,7 @@
 
     전사함수(surjection, onto) : 함수 $f: X \to Y$ 가 성질
 
-    $$ \exists x \in X \text{ s.t. }\ \forall y \in Y, f(x) = y $$
+    $$ \forall y \in Y, \exists x \in X, f(x) = y $$
 
     를 만족하면 이를 전사함수라 한다.
 
@@ -1049,7 +1049,7 @@
 
     전단사함수(bijection, one-to-one correspondence) : 두 집합 $X, Y$ 사이의 함수 $f: X \to Y$ 에 대하여 성질 
 
-    $$ \exists ! x \in X \text{ s.t. }\ \forall y \in Y, f(x) = y $$
+    $$ \forall y \in Y, \exists ! x \in X, f(x) = y $$
     
     을 만족하는 함수이다. 
 
