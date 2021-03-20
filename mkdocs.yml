@@ -57,8 +57,6 @@ nav:
     #   - (임시): Math/MultiLinearAlgebra/mla.md
     # - 위상수학: 
     #   - (임시): Math/Topology/topology.md
-  - 취약점: 
-    - 취약점에 관하여: vul/memo.md
   - Paper:
     - Facenet (2015): paper/facenet.md
     - Quadruplet (2017): paper/quadruplet.md
@@ -108,7 +106,9 @@ nav:
   - Philosophy: 
     - 철학 메모: Philosophy/philosophy.md
     - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
-  - 초지능 연구:
+  - 취약점메모: 
+    - memo: vul/memo.md
+  - 초지능메모:
     - 1. 기초: HAI/base.md
     - 2. 생각: HAI/think.md
     - 3. 실행: HAI/doit.md
@@ -123,7 +123,7 @@ nav:
     - 컴퓨터역사4(소프트웨어와 알고리즘): HAI/history_computer4.md
     - 컴퓨터역사5(초지능): HAI/history_computer5.md
     - 인공지능의 역사: HAI/history_ai.md
-  - AI: 
+  - DeepLearning: 
     - DL from stratch 메모: AI/dl_from_scratch.md
     - DL from stratch 메모2: AI/dl_from_scratch2.md
     - DL from stratch 메모3: AI/dl_from_scratch3.md
