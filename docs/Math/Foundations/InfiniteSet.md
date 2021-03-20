@@ -2,6 +2,18 @@
 
 !!! tldr ""
 
+    선택 함수(choice function) : 집합족 $\{S_i\} _{i \in I}$ 위의 선택함수는 
+
+    $$ f: I \to \bigcup_{i \in I}^{}S_i, \quad \forall i \in I: f(i) \in S_i $$
+
+    인 함수 $f$ 이다.
+
+- 만약 $\varnothing \in \{S_i\}_{i \in I}$ 이면 $\{S_i\} _{i \in I}$ 는 선택 함수를 가질 수 없다.
+
+- 아래의 선택공리에 의하여 공집합을 포함하지 않는 모든 집합족은 선택 함수를 갖는다.
+
+!!! tldr ""
+
     선택공리(axiom of choice, AC) : 공집합이 아닌 집합에서 한 원소를 택할 수 있고, 이를 무한히 반복할 수 있다는 공리로써 다음의 동치 명제들로 정의된다.
 
     1. 함수 $f: X \to Y$ 가 전사이면 $f \circ g = 1_Y$ 인 함수 $g: Y \to X$ 가 존재한다.
@@ -29,6 +41,10 @@
 - 선택공리가 수학에서 사용될 때 대부분 순서와 관련된다. 아래에서 살펴볼 소른 도움정리와 하우스도르프 극대 원칙은 선택공리과 동치인 명제인데 수학의 여러 분야에서 널리 쓰인다.
 
     선택공리를 사용하는 정리들은 수학의 각 분야에서 매우 중요한 역할을 하는 경우가 많다. 
+
+- 선택공리는 다음과 같이 각 집합 $S_i$ 를 그 속의 원소 $x_i \in S_i$ 로 대응시킨다. 
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Axiom_of_choice.svg/330px-Axiom_of_choice.svg.png)
 
 - 1) 에서 2) 를 도출하는 증명 
 
@@ -1023,6 +1039,47 @@
     집합 $X$ 가 유한집합이 아니면, $\exists A \subset X \text{ s.t. }\ \N \approx A$ 이다.
 
 - 증명     
+
+    먼저 선택공리에 의하여 집합 $X$ 의 선택함수 $h: 2 ^{X} \text{ \textbackslash }\{\varnothing \} \to X$ 를 택하자. $X$ 의 모든 유한 부분집합들의 모임 $\mathcal{F}(X)$ 에 대하여 정리 "    집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 $\gamma (0) = a$, $\forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$ 을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다." 를 적용할 것이다. $X$ 는 유한집합이 아니므로 임의의 $A \in \mathcal{F}(X)$ 에 대하여 $X \text{ \textbackslash }A \neq \varnothing$ 이고 따라서 $h(X \text{ \textbackslash }A) \in X \text{ \textbackslash }A$ 이다. 이제 함수 $F: \mathcal{F}(X) \to \mathcal{F}(X)$ 를 $A \in \mathcal{F}(X)$ 에 대하여
+
+    $$ F(A) = A \sqcup \{h(X \text{ \textbackslash }A)\} $$
+
+    라고 정의하면 $n \in \N$ 에 대하여
+
+    $$ \gamma (0) = \varnothing , \quad \gamma (n ^{+}) = F(\gamma (n)) $$
+
+    인 함수 $\gamma : \N \to \mathcal{F}(X)$ 가 존재한다.
+
+    $\forall n \in \N$ 에 대하여 $\gamma (n)$ 은 $X$ 의 유한부분집합이므로 $X \text{ \textbackslash }\gamma (n) \neq \varnothing$ 이고 함수 $\delta : \N \to X$ 를 $n \in \N$ 에 대하여
+
+    $$ \delta (n) = h(X \text{ \textbackslash }\gamma (n)) $$
+
+    와 같이 정의할 수 있다. 그러면 각 $n \in \N$ 에 대하여 
+
+    $$ \gamma (n ^{+}) = F(\gamma (n)) = \gamma (n) \sqcup \{h(X \text{ \textbackslash }\gamma (n))\} = \gamma (n) \sqcup \{\delta (n)\} $$
+
+    이므로 $\gamma (n ^{+})$ 란 $\gamma (n) \subset X$ 에 $\delta (n) \in X$ 이라는 원소를 추가한 것임을 알 수 있다.
+
+    이제 $\delta : \N \to X$ 가 단사함수임을 보이기 위해 $n<m$ 라고 두는데, $n ^{+} \leq m$ 이므로 $\delta (n) \in \gamma (n ^{+}) \subset \gamma (m)$ 이다. 따라서 
+
+    $$ \delta (m) = h(X \text{ \textbackslash }\gamma (m)) \in X \text{ \textbackslash }\gamma (m) $$
+
+    이 되어 $\delta (n) \neq \delta (m)$ 이다. 그러므로 함수 $\delta :\N \to X$ 의 상 $\delta (\N)$ 은 $X$ 의 부분집합이고, $\N$ 과 대등하다. 즉, $X$ 의 부분집합 $\delta (\N)$ 은
+
+    $$ \delta (\N) \approx \N $$
+
+    이므로 증명이 끝났다. ■ 
+
+    - 이 증명을 쉽게 말하면 다음과 같다. $x_1 \in X$ 를 하나 잡으면 $X \text{ \textbackslash }\{x_1\} \neq \varnothing$ 이다. 따라서 $x_2 \in X \text{ \textbackslash }\{x_1\}$ 를 택할 수 있고, $x_3 \in X \text{ \textbackslash }\{x_1, x_2\}$ 도 택할 수 있다. 만약 $x_1, x_2, \dots, x_n \in X$ 을 택했다고 해도 $\forall n \in \N$ 에 대하여
+
+    $$ X \text{ \textbackslash }\{x_1, x_2, \dots, x_n \} \neq \varnothing $$
+
+    이다. 이렇게 계속 $x_n$ 을 택함으로써 집합 
+
+    $$ A = \{x_n : n = 1, 2, \dots \} $$
+
+    을 만들자. 그러면 $A$ 는 $X$ 의 부분집합이고 $A \approx \N$ 이다. 이렇게 무한히 선택할 수 있다는 것이 선택공리가 주장하는 것이다.
+
 
 !!! tldr ""
 
