@@ -674,6 +674,16 @@
 
 !!! tldr ""
 
+    서로소 집합 함수 : $g: A \to C, h: B \to D$ 에 대하여 함수 $g \sqcup h : A \sqcup B \to C \sqcup D$ 를 
+
+    $$ (g \sqcup h) (x) = \begin{cases} g(x) & x \in A\\ h(x) & x \in B\\ \end{cases} $$
+
+    라고 정의한다.
+
+- $g,h$ 가 순서동형을 정의한다면 $g \sqcup h$ 도 순서동형을 정의한다.
+
+!!! tldr ""
+
     서수의 더하기 : $\text{ord }(A) = \alpha , \text{ord }(B) = \beta$ 인 서로소인 정렬집합 $A, B$ 에 대하여 
 
     $$ \alpha + \beta = \text{ord }(A \sqcup B) $$
@@ -1154,5 +1164,69 @@
 
             $g:A \to C, h:B \to D$ 가 전단사라고 하고 함수 $f_1: A ^{B} \to C ^{D}, f_2:C ^{D} \to A ^{B}$ 를 
 
-            $$ 
-            $$
+            $$ f_1(\alpha ) = g \circ \alpha \circ h ^{-1}, \quad \alpha \in A ^{B} $$
+
+            $$ f_2(\beta ) = g ^{-1} \circ \beta \circ h , \quad \beta \in C ^{D} $$
+
+            와 같이 정의하면 
+
+            $$ f_1(f_2(\beta )) = g \circ (g ^{-1} \circ \beta \circ h) \circ h ^{-1} = \beta $$
+
+            이고, 마찬가지로 $f_2(f_1(\alpha ))=\alpha$ 이므로 $f_1$ 과 $f_2$ 는 서로 역함수이다. 그러므로 이들은 전단사 함수이고, 이는 곧 
+
+            $$ A ^{B} \approx C ^{D} $$
+
+            를 의미한다. 그러므로 잘 정의되었죠? ■ 
+
+- $B \cup C = \varnothing$ 인 집합 $A,B,C$ 에 대한 기수 $a = \text{card }(A) , b = \text{card }(B) , c = \text{card }(C)$ 에 대하여 
+
+    $$ a ^{b+c} = a ^{b}a ^{c}, \quad (ab) ^{c} = a ^{c} b ^{c}, \quad (a ^{b})^{c} = a ^{bc} $$
+
+    이다.
+
+    - 증명
+
+        (*책에 있음. 구체화필요*)
+
+!!! tldr ""
+
+    집합 $A, B$ 사이에 단사함수 $f: A \to B$ 가 존재하면 
+
+    $$ A \preccurlyeq B $$
+
+    라고 정의한다.
+
+- 임의의 집합 $A$ 에 대하여 $A \preccurlyeq A$ 이다.
+
+- 단사의 합성이 단사이므로 
+
+    $$ A \preccurlyeq B, B \preccurlyeq C \implies A \preccurlyeq C $$
+
+    이다.
+
+!!! tldr ""
+
+    임의의 집합 $A, B$ 에 대하여 
+
+    $$ A \preccurlyeq B \lor B \preccurlyeq A $$
+
+    이다.
+
+- 증명
+
+    임의의 집합 $A, B$ 에 대하여 정리 "체르멜로 정렬정리 : 임의의 집합에는 정렬순서가 존재한다." 를 적용하여 정렬순서를 부여하자. 
+
+    그러면 정리 "두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 1. $A$ 와 $B$ 는 순서동형이다. 2. $A$ 는 $B$ 의 절편과 순서동형이다. 3. $B$ 는 $A$ 의 절편과 순서동형이다." 에 의하여 $A \approx B$ 이거나 적절한 $a \in A, b \in B$ 에 대하여 $A \approx S_b \subset B$ 혹은 $B \approx S_a \subset A$ 가 성립한다.
+
+!!! tldr ""
+
+    베른슈타인의 정리(Schröder–Bernstein theorem) : 집합 $A, B$ 에 대한 다음의 동치명제이다.
+
+    1. 단사함수 $f: A \to B, g:B \to A$ 가 존재하면 전단사함수 $h: A \to B$ 가 존재한다.
+
+    2. $A \preccurlyeq B \land B \preccurlyeq A \implies A \approx B$
+
+- 이 정리는 기수의 연산에서 핵심적인 역할을 한다.
+
+- 증명 
+
