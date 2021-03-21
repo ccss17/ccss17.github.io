@@ -94,7 +94,7 @@
 
     $$ g \in \prod_{i \in I}^{}X_i $$
 
-    이다.(*$g \in \prod_{i \in I}^{}X_i$ 이 표현 자체가 곱집합의 원소를 의미하는데, 함수 $g$ 는 $I$ 에서 $X$ 로 가는 함수니까 $I$ 와 $X$ 의 곱집합으로 표현될텐데.. 이게 맞나?*) ■ 
+    이다. ■ 
 
 - 4) 에서 3) 를 도출하는 증명 
 
@@ -102,7 +102,7 @@
     
     $$ \exists h \text{ s.t. }\ h \in \prod_{}^{}\{A:A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\} $$
 
-    이다. 그러면 각 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여 $h(A) \in A$ 이므로 $h$ 는 $X$ 의 선택함수이다.(*$h$ 는 곱집합의 원소이므로 각 부분집합들에서 선택된 원소들의 쌍으로 이루어졌을 텐데 $h$ 를 선택함수라 했으면 $2 ^{X}\text{ \textbackslash }\{\varnothing \}$ 에서 $A$ 로 가는 함수일텐데, 이게 맞는건가..*) ■ 
+    이다. 그러면 각 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여 $h(A) \in A$ 이므로 $h$ 는 $X$ 의 선택함수이다. ■ 
 
 !!! tldr ""
 
@@ -890,7 +890,7 @@
 
         로 정의하면 소수 $\alpha  =0.a_0 a_1 a_2 \dots a_n \dots \in [0, 1]$ 은 
 
-        $$ \alpha \not\in \{f(0), f(1), f(2), \dots\} = \text{Ran} (f)  $$
+        $$ \alpha \not\in \{f(0), f(1), f(2), \dots\} = \text{ran} (f)  $$
 
         이다. 그러므로 $f$ 는 전사함수가 아니다. ■ 
 
@@ -1080,7 +1080,6 @@
 
     을 만들자. 그러면 $A$ 는 $X$ 의 부분집합이고 $A \approx \N$ 이다. 이렇게 무한히 선택할 수 있다는 것이 선택공리가 주장하는 것이다.
 
-
 !!! tldr ""
 
     무한집합(infinite set) : 다음 동치조건을 만족하는 집합 $X$ 이다. 
@@ -1088,3 +1087,72 @@
     1. $X$ 가 유한집합이 아니다. 즉, $\forall n \in \N, X \not \approx n$ 이다.
 
     2. $\exists A \subsetneq X \text{ s.t. }\ X \approx A$
+
+- 지금까지의 정리들의 결론이 이 무한집합의 정의이다.
+
+# 기수의 연산과 순서
+
+!!! tldr ""
+
+    기수(cardinal number) : 유한집합 $X$ 와 대등한 자연수 $n \in \N$ 으로써 
+
+    $$ \text{card }(X) = n $$
+
+    이다.
+
+- 기수는 임의의 집합 $A$ 에 대하여 
+
+    $$ A_1 \approx A_2 \iff \text{card }(A_1) = \text{card }(A_2) $$
+
+    를 만족해야 한다. 
+
+- 기수의 더하기는 서로소 집합 $A, B$ 와 그 기수 $a = \text{card }(A) ,b = \text{card }(B)$ 에 대하여 
+
+    $$ a + b = \text{card }(A \sqcup B) $$
+
+    이다.
+
+    - 이 연산은 잘 정의되어 있다. 
+
+        - 증명 
+
+            $$ A \approx C , B \approx D \implies A \sqcup B \approx C \sqcup D $$
+
+            를 보이면 된다. 만약 $g: A \to C, h: B \to D$ 가 전단사이면 함수 $g \sqcup h: A \sqcup B \to C \sqcup D$ 도 전단사이므로 $a+b$ 가 잘 정의되어 있음을 알 수 있다.
+
+    - 교환법칙이 성립한다. 
+
+        - 증명 
+
+            $A \sqcup B = B \sqcup A$ 이므로 $a+b=b+a$ 이다.
+
+    - 결합법칙이 성립한다. 
+
+        - 증명 
+
+            집합의 합집합의 결합법칙이 성립하므로 $(a+b)+c=a+(b+c)$ 도 성립한다.
+
+- 기수의 곱하기는 $\text{card }(A) =a, \text{card }(B) = b$ 인 집합 $A, B$ 에 대하여 
+
+    $$ ab = \text{card }(A \times B) $$
+
+    이다.
+
+    - 이 연산은 잘 정의되어 있고, 교환법칙/결합법칙/분배법칙이 성립한다.
+
+        - 증명 
+
+- 기수의 제곱은 $\text{card }(A) =a,\text{card }(B) =b$ 에 대하여 
+
+    $$ a ^{b} = \text{card }(A ^{B}) $$
+
+    이다.
+
+    - 이 연산은 잘 정의되어 있다.
+
+        - 증명 
+
+            $g:A \to C, h:B \to D$ 가 전단사라고 하고 함수 $f_1: A ^{B} \to C ^{D}, f_2:C ^{D} \to A ^{B}$ 를 
+
+            $$ 
+            $$

@@ -727,11 +727,47 @@
 
 !!! tldr ""
 
-    곱집합(product set) 또는 데카르트 곱(cartesian product) : 첨수족 $\{A_i\} _{i \in I}$ 의 곱집합 $\prod_{i \in I}^{}A_i$ 는 
+    곱집합(product set) 또는 데카르트 곱(cartesian product) : 임의의 집합족 $\{X_i : i \in I\}$ 에 대한 곱집합 $\prod_{i \in I}^{}X_i$ 를 
 
-    $$ \prod_{i \in I}^{}A_i = \{(a_i) _{i \in I} : a_i \in A_i\} $$
+    $$ \prod_{i \in I}^{}X_i = \bigg \{f \in (\bigcup_{i \in I}^{}X_i) ^{I} : f(i) \in X_i, i \in I \bigg \} $$
 
+    와 같이 정의하고, $f \in \prod_{i \in I}^{}X_i$ 인 어느 함수 $f$ 를 $x_i \in X_i$ 에 대하여 곱집합의 원소를
+
+    $$ (x_i) _{i \in I} $$
+
+    라고 표기한다.
+
+- 물론 어느 함수 $f$ 는 실제로는 곱집합 $I \times \bigcup_{i \in I}^{}X_i$ 의 부분집합으로써
+
+    $$ \{(i_1, x_1), (i_2, x_2), \dots, (i_n, x_n), \dots\} $$
+
+    와 같은 $I$ 에서 $\bigcup_{i \in I}^{}X_i$ 로 가는 함수지만, 이것을 
+
+    $$ (x_1,  x_2, \dots,  x_n, \dots) $$
+
+    으로 표기하자고 약속하는 것이다.
+
+- 예시 
+
+    $\R$ 을 $n \in \N$ 개 곱한 곱집합 $\R ^{n}$ 에서 $n = \{0,1,2, \dots, n-1\}$ 이므로 $\R ^{n}$ 는 $n \to \R$ 인 함수 전체의 집합
+
+    $$ \prod_{i=1}^{n}\R =  \{f \in \R ^{n} : f(i) \in \R, i \in n  \} $$
+    
     이다.
+
+    그리고 $n = \{0,1,2,\dots,n-1\}$ 을 $\R$ 로 대응시키는 어느 함수
+
+    $$ i \mapsto a_i, \quad i = 0,1,2,\dots,n-1 $$
+
+    는 실제로
+
+    $$ \{(0, a_0), (1, a_1), (2, a_2), \dots, (n-1, a _{n-1}\} $$
+
+    와 같은 곱집합 $n \times X$ 의 부분집합이지만,
+
+    $$ (a_0, a_1, a_2, \dots, a _{n-1}) $$
+
+    라고 표시한다.
 
 - 두 집합 $A,B$ 의 곱집합 $A \times B$ 는 
     
@@ -770,20 +806,6 @@
     $$ \R ^{3} = \mathbb{R} \times \mathbb{R} \times \R = \{(x,y, z) : x, y, z \in \R \}$$
 
     이다.
-
-!!! tldr ""
-
-    Cartesian Space : 집합 $S$ 에 대한 cartesian $n$th power  는 
-    
-    $$ S ^{n} = \prod_{k=1}^{n}S = \{(x_1, x_2, \dots, x_n): \forall k \in \mathbb{N} ^{*}_{n}:x_k \in S\} $$
-    
-    이다.
-
-- 그냥 간단하게 $S ^{n} = \underbrace{S \times S \times \dots \times S}_{n \text{times}}$ 이다.
-
-- 다음과 같이 귀납적으로 정의할 수도 있다. 
-
-    $$ S ^{n} = \begin{cases} S &n = 1\\ S \times S ^{n-1}&n > 1\\ \end{cases} $$
 
 !!! tldr ""
 
@@ -1139,6 +1161,38 @@
 
     함수 전체 집합 : 집합 $X$ 에서 $Y$ 로 가는 함수 전체의 집합을 $Y ^{X}$ 라고 한다.
 
+- 예시 
+
+    집합 $X$ 와 $\forall A \in 2 ^{X}$ 에 대하여 $\Phi (A) \in \{0,1\}^{X}$ 를 
+
+    $$ \Phi (A)(x) = \begin{cases}
+    1 &x \in A\\
+    0 &x \not \in A\\
+    \end{cases} 
+    $$
+
+    로 정의하자. 또 임의의 함수 $f \in \{0,1\}^{X}$ 에 대하여 $X$ 의 부분집합 $\Psi (f) \in 2 ^{X}$ 를 
+
+    $$ \Psi (f) = \{x \in X : f(x) = 1\} $$
+
+    라 정의하자. ▲ 
+
+    그러면 임의의 $f: X \to \{0,1\}$ 에 대하여 
+
+    $$ \Phi (\Psi (f))(x) = 1 \iff x \in \Psi (f) \iff f(x) = 1 $$
+
+    이므로 $\Phi (\Psi (f)) = f$ 이다. 또한 임의의 $A \in 2 ^{X}$ 에 대하여 
+
+    $$ x \in \Psi (\Phi (A)) \iff \Phi (A)(x) = 1 \iff x \in A $$
+
+    이므로 $\Psi (\Phi (A))=A$ 이다. (*$\Psi(f)$ 는 $f$ 가 $1$ 이 되게 하는 정의역 집합인데, $\Psi (\Phi (A))$ 이므로 $\Phi (A)$ 가 $1$ 이 되게 하는 정의역 집합이다. 근데 $\Phi (A)$ 란 $x$ 가 $A$ 에 속하면 $1$ 이므로 결국 $A$ 의 원소들로 구성된다.*)
+
+    그러므로 두 함수 
+
+    $$ \Psi : 2 ^{X} \to \{0,1\} ^{X}, \quad \Psi : \{0,1\}^{X}\to 2 ^{X} $$
+
+    는 서로 역함수이다.
+
 !!! tldr ""
 
     특성함수(characteristic function) 또는 지시함수(indicator function) : 임의의 $A \in \mathcal{P}(X)$ 에 대하여 $\chi_A \in \{0,1\}^{X}$ 를 
@@ -1148,6 +1202,41 @@
     라고 정의하고 특성함수라 한다.
 
 - 특정 집합에 특정 값이 속하는지 표시하는 함수이다. 특정 값이 집합에 속하면 $1$, 속하지 않으면 $0$ 의 값을 가진다. 
+
+!!! tldr ""
+
+    사영(projection) : 각 $i \in I$ 에 대하여 함수 
+
+    $$ \pi _i: \prod_{i \in I}^{}X_i \to X_i, f \mapsto f(i) $$
+
+    이다.
+
+- 이 정의에서 $f$ 란 곱집합의 정의 
+
+    "곱집합(product set) 또는 데카르트 곱(cartesian product) : 임의의 집합족 $\{X_i : i \in I\}$ 에 대한 곱집합 $\prod_{i \in I}^{}X_i$ 를 
+
+    $$ \prod_{i \in I}^{}X_i = \bigg \{f \in (\bigcup_{i \in I}^{}X_i) ^{I} : f(i) \in X_i, i \in I \bigg \} $$
+
+    와 같이 정의하고, $f \in \prod_{i \in I}^{}X_i$ 인 어느 함수 $f$ 를 $x_i \in X_i$ 에 대하여 곱집합의 원소를
+
+    $$ (x_i) _{i \in I} $$
+
+    라고 표기한다."
+
+    에서의 $f$ 를 뜻한다.
+
+- 즉, $i \in I$ 에 대한 사영이란 집합족 $\{X_i : i \in I\}$ 의 곱집합 $\prod_{i \in I}^{}X_i$ 에 존재하는 함수들 중 어느 함수를 입력하면, 그것을 그 함수의 $i$ 번째 사상으로 대응시킨다.
+
+- 임의의 $i \in I$ 에 대하여 $X_i = X$ 이면 $\prod_{i \in I}^{}X_i = X ^{I}$ 이다. 
+
+- 예시 
+
+    $\R ^{n}$ 의 사영 $\pi _i$ 는 곱집합 $\R ^{n}$ 의 어느 한 원소
+
+    $$ (a_1, a_2, \dots, a_n), \quad a_i \in \R $$
+
+    를 입력하면 $i$ 번째 원소 $a_i$ 를 출력하는 함수이다.
+
 
 # 동치관계 
 
@@ -1420,7 +1509,7 @@
 
 !!! tldr ""
 
-    목사상 또는 표준사상 또는 사영(projection) : 집합 $X$ 와 그것의 몫집합 $X/ \sim$ 에 대한 함수  
+    목사상(quotient map) : 집합 $X$ 와 그것의 몫집합 $X/ \sim$ 에 대한 함수  
 
     $$ q : X \to X/ \sim : x \mapsto [x] $$
 
