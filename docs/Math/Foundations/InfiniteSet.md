@@ -72,9 +72,9 @@
 
     라 두면 $\mathcal{P} = \{\tilde{A} : A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\}$ 은 집합 $Y = \bigcup_{}^{}\{\tilde{A} : A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}\}$ 의 분할이다. 이때 $\forall A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여 $g(\tilde{A}) \in \tilde{A}$ 를 만족하는 함수 $g: \mathcal{P} \to Y$ 가 존재한다.
 
-    이때 $\pi :(2 ^{X} \text{ \textbackslash }\{\varnothing \}) \times X \to X$ 를 사영이라 두고 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여
+    이때 $\pi_2 :(2 ^{X} \text{ \textbackslash }\{\varnothing \}) \times X \to X$ 를 사영이라 두고 $A \in 2 ^{X} \text{ \textbackslash }\{\varnothing \}$ 에 대하여
 
-    $$ h: A \mapsto \pi (g(\tilde{A})) $$
+    $$ h: A \mapsto \pi_2 (g(\tilde{A})) $$
 
     라 정의하면 $h: 2 ^{X} \text{ \textbackslash }\{\varnothing \} \to X$ 가 원하는 함수이다. ■  
 
