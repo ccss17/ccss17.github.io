@@ -106,9 +106,9 @@ nav:
   - Philosophy: 
     - 철학 메모: Philosophy/philosophy.md
     - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
-  - 취약점메모: 
+  - 취약점 관련 사소한 생각들: 
     - memo: vul/memo.md
-  - 초지능메모:
+  - TS 관련 사소한 생각들:
     - 1. 기초: HAI/base.md
     - 2. 생각: HAI/think.md
     - 3. 실행: HAI/doit.md
