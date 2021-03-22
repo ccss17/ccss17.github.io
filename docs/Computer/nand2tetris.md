@@ -22,8 +22,6 @@
 
 # 1. Boolean Logic
 
-> p.23
-
 컴퓨터, 스마트폰, 라우터 같은 디지털 기기가 서로 다르게 설계되었지만 본질적으로 모두 논리 게이트에 의하여 만들어졌다. 이 논리 게이트를 물이나 흙이나 나무로도 설계할 수 있지만, 현재로써 가장 효율적인 것이 전자공학으로 논리 게이트를 설계하는 것이므로 논리 게이트의 밑에는 전자 공학 기술이 있다. 
 
 이 장에서는 Nand 게이트만 살펴보고, 다른 게이트를 이것을 기반으로 만든다.
@@ -282,6 +280,84 @@ ALU 는 6 비트의 control 비트로 연산을 정의하는데 6 비트니까 $
 이것의 구현은 동기화, 클럭킹, 피드백 루프 등이 관련된 복잡한 설계가 필요한데, 그것의 기반에는 플립플롭이 있다. 플립플롭으로 binary cell 에서부터 레지스터까지 만들어볼 거야.
 
 어떤 것을 기억하는 것은 시간 의존적이다. 그러므로 시간의 흐름을 표현할 수 있는 표준적인 수단을 만들어보자.
+
+- Clock : 컴퓨터는 교류신호(0-1, low-high, tick-tack, etc.) 를 번갈아 전송하는 oscillator 에 의하여 시간을 구현한다. "tick" 이 시작되고 "tock" 으로 끝나는 하나의 주기를 cycle 이라고 한다. 이 신호가 회로에 의하여 컴퓨터의 모든 sequential 칩으로 전달된다.
+
+- Filp-Flops : 컴퓨터의 sequential 칩은 filp-flop 을 기반으로 설계된다. flip-flop 은 여러가지 variant 들이 있는데, 우리는 1 비트 입력과 1 비트 출력을 내는 DFF 라고 부르는 data flip-flop 을 살펴볼 것이다. DFF 는 Clock 의 입력을 받아서 시간 기반의 기능 $\text{ out }(t) = \text{ in }(t-1)$ 을 구현한다. 이것을 기반으로 컴퓨터가 상태를 관리할 수 있도록 하여 단순한 binary cell 부터 RAM 까지 구현할 수 있다.
+
+- Register : 레지스터는 어떤 값을 기억하는 기능을 한다. 즉, $\text{ out }(t) = \text{ out }(t-1)$ 의 기능을 한다. 반면 DFF 는 오직 이전 입력에 의하여 기능한다. 즉, $\text{ out }(t) = \text{ in }(t-1)$ 이다. 레지스터는 다음과 같이 DFF 에서 단순히 출력을 그 입력으로 리다이렉트 시킴으로써 구현될 수 있다. 즉, 단순히 임의의 시간 $t$ 에 대하여 시간 $t-1$ 의 출력을 다시 출력해준다는 것이다.
+
+![image](https://user-images.githubusercontent.com/16812446/111954277-30972b00-8b2b-11eb-825d-9aa2253a9494.png)
+
+위 그림에서 가운데 설계는 모호하다. 두 입력 중 어느 것을 사용할지 명확하게 지시하지 않기 때문이다. 이 모호함을 multiplexor 하나를 붙여서 해결할 수 있다. 이 Mux 의 select bit 를 load bit 라고 하는데 레지스터의 새로운 값을 저장하고 싶을 때 load bit 를 1 로 두면 되고, 기존의 값을 유지한채 그 안의 값을 가져오고 싶을 때 load bit 를 0 으로 두면 된다.
+
+이것을 기반으로 다음과 같은 multi-bit 레지스터도 쉽게 구현가능하다. 이 설계의 파라미터는 레지스터의 width 이다. width 는 레지스터가 몇 비트를 저장할 것인지 결정한다. 보통 16, 32, 64 비트가 된다. multi-bit 레지스터 내부의 데이터를 보통 words 라고 부른다.
+
+!!! note
+
+    레지스터가 꽤 오랫동안 32비트였으니까 WORD 가 4바이트를 뜻하게 된 거겠지? Double word 는 8바이트인가.
+
+![image](https://user-images.githubusercontent.com/16812446/111954864-114ccd80-8b2c-11eb-843a-a2c7acd168b2.png)
+
+- Memory : multi-bit 레지스터를 한번 구현해놓으면, 임의의 길이의 memory 도 쉽게 구현가능하다. 다음과 같이 레지스터들을 단지 쌓아놓은 것이 RAM 이 되는 것이다. random accses memory 라는 이름은 임의의 위치의 데이터를 위치에 관계없는 동일한 속도로 읽거나 쓸 수 있게끔 구현했다는 말이다.
+
+이런 개쩌는 구현은 다음과 같이 이루어진다.
+
+1. n 개의 레지스터로 구현된 RAM 의 각각의 word 에 주소값(0 부터 n-1)을 부여한다. 
+
+2. n 레지스터의 배열을 만들뿐 아니라 주소값 j 가 주어지면 주소값 j 를 갖는 레지스터를 선택할 수 있는 논리 게이트 설계를 만든다. 이 주소값은 물리적으로 대응되지 않고, 논리적으로 대응된다. 
+
+RAM 은 입력 데이터, 주소값, load bit 라는 3가지 입력을 받는다. load=0 이면 읽기이고 load=1 이면 쓰기이다. RAM 의 설계 파라미터는 width 와 size 이다. width 는 레지스터가 저장할 비트(word)이고, size 는 word 들의 갯수이다.
+
+![image](https://user-images.githubusercontent.com/16812446/111955228-97691400-8b2c-11eb-8621-687e4138b4ff.png)
+
+- Counters : 카운터는 매 시간 단위마다 상태값을 증가시키는 sequential 칩이다. 즉, $\text{ out }(t) = \text{ out }(t-1) + c$ 의 기능을 한다. $c$ 는 보통 1 이다. 
+
+카운터는 컴퓨터에서 중요한 역할을 한다. 가령 program counter 는 다음에 실행할 명령어의 주소값을 저장하는데, 이때 카운터가 사용된다.
+
+카운터는 adder 와 0 으로 세팅할 수 있는 논리 게이트와 새로운 base 를 세팅할 수 있는 기능과 증가 대신 감소를 할 수 있게 하는 기능으로 설계된다.
+
+- Time Matters : 이 장에서 소개한 모든 칩은 sequential 이고, sequential 은 DFF 를 하나 이상 갖고 있는 칩이다. DFF 는 메모리 유닛에 상태를 유지할 수 있는 기능을 제공하거나, counter 처럼 상태를 조작할 수 있는 기능을 제공한다.
+
+![image](https://user-images.githubusercontent.com/16812446/111963878-5fb39980-8b37-11eb-836d-7b0b5df1f72d.png)
+
+기술적으로 말하면 이 기능은 위와 같은 피드백 루프를 통하여 이루어진다. 시간 t 에서의 출력은 t-1 에서의 출력에 의존적이다. 이것을 기반으로 sequential 칩은 중요한 능력을 얻는다. 그것은 컴퓨터의 전반적인 구조를 동기화시킬 수 있다는 것이다. 
+
+가령, ALU 에 x+y 연산을 하려 하는데 x 의 데이터는 레지스터에 있고 y 의 데이터는 RAM 에 있다고 하자. 그러면 여러가지 물리적 제한(거리, 저항, 간섭, 노이즈 등등) 때문에 x 와 y 의 데이터가 동일한 시간에 ALU 에 도착할 수 없다. 그러나 ALU 는 시간에 독립적인 combinational 칩이므로, x 와 y 의 데이터가 도착할 때까지 쓰레기값을 출력하게 된다. 하지만 ALU 의 출력이 항상 sequential 칩의 통제를 받기 때문에, 우리는 실제로 ALU 의 출력이 쓰레기값인지 아닌지 걱정한 적이 없다.
+
+우리가 해야 할 일은 Clock 을 설계할 때 cycle 을 컴퓨터 구조 내에서 어떤 칩에서 다른 칩으로 비트가 이동하는 가장 먼 거리에 대한 시간보다 살짝 더 길게 만드는 것이다. 이로써 우리는 sequential 칩이 그 상태를 cycle 이 다 되어서 업데이트 할 때 ALU 가 받은 입력이 쓰레기 값이 아니라는 보장을 얻을 수 있다. 
+
+## Specification
+
+이제 다음과 같은 sequential 칩을 설계해보자. 
+
+- Data-flip-flops (DFFs)
+
+- Registers (based on DFF)
+
+- Memory banks (based on registers)
+
+- Counter 칩 (based on registers)
+
+DFF 게이트는 다음과 같이 비트를 입력받아서 비트를 출력한다. Nand 게이트처럼 DFF 게이트는 컴퓨터의 가장 맨 밑바닥에 존재하여 레지스터, 메모리, 카운터의 기반이된다. 모든 DFF 는 하나의 Clock 과 연결된다. Clock cycle 이 시작될 때 DFF 의 모든 출력은 이전 시간 단위 동안 입력에 커밋된다. 다른 때에는 DFF 가 잠금상태가 되어 입력을 바꾸는 것이 출력에 즉각적인 영향을 미치지 않게 된다.
+
+![image](https://user-images.githubusercontent.com/16812446/111976095-9b089500-8b44-11eb-834c-1b21419ef754.png)
+
+싱글비트 레지스터, 혹은 Bit, 혹은 binary cell 은 1 비트 정보를 저장하도록 다음과 같이 설계된다. load 비트가 1 이면 write 라서 내부 내용이 바뀐 후 출력되고, 0 이면 read 라서 내부 내용이 그냥 출력된다.
+
+![image](https://user-images.githubusercontent.com/16812446/111978073-defc9980-8b46-11eb-8035-4ee95479dedf.png)
+
+멀티비트 레지스터는 다음과 같이 16비트 width 로 설계된다. 물론 현재의 컴퓨터는 보통 64비트 레지스터이다.
+
+![image](https://user-images.githubusercontent.com/16812446/111978133-ef147900-8b46-11eb-9403-c3f09452c50b.png)
+
+RAM 은 레지스터의 배열이다. w-비트 레지스터가 n 개의 배열로 쌓인 것이다. 우리는 다음과 같은 16비트 width 를 갖는 RAM 을 만들어 볼 것이다. 
+
+![image](https://user-images.githubusercontent.com/16812446/111978605-7104a200-8b47-11eb-98d8-58db68d661cd.png)
+
+!!! note
+
+    Meltdown 은 소프트웨어 설계가 모순적으로 되었을 때 발생하는 취약점만이 취약점이 아니라 하드웨어 설계가 모순되었을 때도 취약점이 발생한다는 것을 말해준다. 
 
 # 4. Machine Language
 
