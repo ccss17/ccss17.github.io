@@ -422,11 +422,31 @@
 
 !!! tldr ""
 
-    자연수 집합의 정렬 집합 표기 : 자연수 집합 $\N$ 을 정렬집합으로 이해할 때 
+    절대적 무한(Absolute Infinite) : 이보다 더 큰 수가 존재하지 않는 무한수이다.
+
+- 절대 무한을 $\Omega$ 라고 표기한다.
+
+- 초한수 수열 $\aleph _0, \alpha _1, \alpha _2, \dots$ 을 극한으로 보낼 수 있고, $\alpha _{\alpha _0}, \alpha _{\alpha _1},\alpha _{\alpha _2},  \dots$ 수열도 극한으로 보낼 수 있는데, 이 과정 자체를 극한으로 보내면 $\Omega$ 에 도달할 수 있다.
+
+!!! tldr ""
+
+    초한수(Transfinite number) : 절대적 무한이 아닌 무한이다.
+
+- 모든 유한수는 기수와 서수로 표현할 수 있는데 기수는 집합의 크기를 나타내고, 서수는 정렬집합에서의 순서 길이를 나타낸다.
+
+- 자연수의 초한서수를 $\omega$, 초한기수를 $\aleph_0$ 으로 나타낸다.
+
+!!! tldr ""
+
+    초한서수(Transfinite ordinal number) : 무한 정렬 집합에서의 어떤 위치를 나타내는 수이다.
+
+!!! tldr ""
+
+    가장 작은 초한서수 : 자연수 집합 $\N$ 을 정렬집합으로 이해할 때 초한서수
 
     $$ \omega $$
 
-    로 표기한다.
+    로 나타낸다.
 
 - 이는 아래에서 살펴보듯이 자연수 집합을 서수로서 사용할 때 $\omega$ 로 쓴다.
 
@@ -904,6 +924,32 @@
 
         이다. 그러므로 $f$ 는 전사함수가 아니다. ■ 
 
+- $\N \times \N \approx \N$
+
+    - 증명 
+
+        $\N$ 에 속하는 자연수들을 다음과 같은 규칙으로 좌표평면의 1사분면에 나열하자.
+
+        $$ \begin{equation}\begin{split} \vdots &\\ 10&\\ 6&\enspace 11\\ 3&\enspace 7\enspace 12\enspace \\ 1&\enspace 4\enspace 8\enspace 13 \\ 0&\enspace 2\enspace 5\enspace 9\enspace 14\enspace \dots \\ \end{split}\end{equation} \tag*{} $$
+
+        즉, 자연수 $\N = \{0, 1, 2, 3, \dots\}$ 를 $\searrow$ 방향으로 $n, m \in \N$ 에 대한 1사분면의 좌표 $(n, m)$ 에 나열하는 것이다. 그러면 우선 $\N$ 을 1사분면의 자연수 좌표에 모두 대응시킬 수 있다.
+
+        그런데 세로 방향의 숫자가 $1, 2, 3, 4, \dots$ 씩 커지고, 가로 방향의 숫자가 $2, 3, 4, 5, \dots$ 씩 커지는 것에 착안하여, 자연수의 좌표 $(n, m)$ 을 $\N \times \N$ 에 대응시킬 수 있음이 자명하다. 보다 구체적으로 함수 $f: \N \times \N \to \N$ 을
+
+        $$ \begin{equation}\begin{split} f(n, m) &= [1 + 2 + 3 + \dots + n] + [(n+2) + (n+3) + \dots + (n + m + 1)]\\ &= [1 + 2 + 3 + \dots + (m + n)] + m\\ &= \dfrac{1}{2}[(m+n) ^{2} + 3m + n]\\ \end{split}\end{equation} \tag*{} $$
+
+        와 같이 정의하면 모든 좌표 $(n, m)$ 에서 해당 좌표의 자연수로 가는 함수 $f$ 가 정의된다. 이 함수 $f$ 가 전단사함수임을 일단은 직관적으로 알 수 있다. ■ 
+
+        한편, 역함수를 정의해보면 각 $k \in \N$ 에 대하여 
+
+        $$ \dfrac{1}{2}l(l+1) \leq k < \dfrac{1}{2}(l+1)(l+2) $$
+
+        인 유일한 자연수 $l \in \N$ 을 잡고 
+
+        $$ g(k) = \bigg (k - \dfrac{1}{2}l(l+1), l - \bigg [k - \dfrac{1}{2}l(l+1)\bigg ]\bigg ) $$
+
+        라 정의하면된다.(*이건 왜 이렇게 되는지 아직 모르겠네*)
+
 !!! tldr ""
 
     무한 집합의 특성 : 자기자신과 대등한 진부분집합이 존재한다. 즉, 집합 $X$ 가 무한집합이면 
@@ -1230,3 +1276,304 @@
 
 - 증명 
 
+    단사함수 $f: A \to B, g: B \to A$ 를 두고, 정리 "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 $\gamma (0) = a, \enspace \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$ 을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다." 를 적용하여 $A$ 의 부분집합 $C_n$ 과 $B$ 의 부분집합 $D_n$ 을 $n \in \N$ 에 대하여
+
+    $$ C_0 = A \text{ \textbackslash }g(B), \enspace D_0 = f(C_0) $$
+
+    $$ C _{n+1} = g(D_n), \enspace D_n = f(C_n) $$
+
+    라고 정의하자. 이제 $C = \bigcup_{n=0}^{\infty }C_n \subset A$ 라 하고 함수 $h: A \to B$ 를 
+
+    $$ h(x) = \begin{cases} f(x) &x \in C\\ g ^{-1}(x) & x \in A \text{ \textbackslash }C\\ \end{cases} $$
+
+    와 같이 정의한다. $x \in A \text{ \textbackslash }C$ 이면 $x \in A \text{ \textbackslash }C_0=g(B)$ 이므로 $g ^{-1}(x) \in B$ 가 잘 정의된다. ▲ 
+
+    $h$ 가 단사임을 보이기 위해 $x_1 \neq x_2$ 인 $x_1, x_2 \in A$ 를 잡자. $x_1, x_2 \in C$ 이거나 $x_1, x_2 \in A \text{ \textbackslash }C$ 이면 자명하게 $h(x_1) \neq h(x_2)$ 이다. 그러니 $x_1 \in C, x_2 \in A \text{ \textbackslash }C$ 라고 하자.
+
+    그러면 적절한 $n$ 에 대하여 $x_1 \in C_n$ 이므로 $h(x_1) = f(x_1) \in D_n$ 이다. 한편 $h(x_2) = g ^{-1}(x_2) \in D_n$ 이면 $x_2 \in g(D_n) \subset C$ 이므로 $x_2 \not\in C$ 라는 것에 모순이다. 따라서 $h(x_2) \not\in D_n$ 이다. 그러므로 $h(x_1) \neq h(x_2)$ 이다. ▲ 
+
+    $h$ 가 전사임을 보이기 위해 $D = \bigcup_{n=0}^{\infty  }$ 라고 두자. 우선 $h(C) = f(C) = D$ 이므로 $D \subset h(A)$ 이다. 이제 $B \text{ \textbackslash }D \subset h(A)$ 임을 보이면 $h$ 는 전사가 된다. 
+
+    이를 위하여 $y \in B \text{ \textbackslash }D$ 라고 하면 $C_0 = A \text{ \textbackslash }g(B)$ 이므로 $g(y) \not\in C_0$ 은 당연하다. 또 각 $n = 0,1,2,\dots$ 에 대하여 $y \not\in D_n$ 이고 $C _{n+1}=g(D_n)$ 인데 $g$ 가 단사이므로 $D$ 에 속하지 않는 원소 $y$ 의 상은 $C$ 에 속하지 않는다. 즉, $g(y) \not\in C _{n+1}$ 이다.
+
+    그러므로 $g(y) \not\in C$ 인데, $h$ 의 정의에 의하여 $y = g ^{-1}(g(y)) = h(g(y)) \in h(A)$ 에서 결국 임의의 $B \text{ \textbackslash }D$ 의 원소 $y$ 에 대하여
+
+    $$ y \in h(A) $$
+
+    가 성립하여, $h$ 가 전사임이 증명되었다. ▲ 
+
+    그러므로 $h$ 는 전단사이고 모든 증명이 끝났다. ■ 
+
+- 또 다른 증명
+
+    (*또 다른 증명도 책에 있음*)
+
+!!! tldr ""
+
+    기수의 순서 : 두 기수 $a = \text{card }(A) , b = \text{card }(B)$ 에 대하여 
+
+    $$ A \preccurlyeq B \iff a \leq b $$
+
+    라고 정의한다.
+
+- 이 순서는 잘 정의되어 있고, 순서관계의 조건을 만족시킨다.
+
+- 기수의 순서는 자연수의 순서와 유사한 성질을 갖는다. 
+
+    - 가령 기수 $a, b, c$ 에 대하여 $a \leq b \iff \exists c \text{ s.t. }\ b = a + c$ 이다.
+
+        - 증명 
+
+            먼저 $a \leq b$ 이면 $A \preccurlyeq B$ 이므로 단사함수 $f: A \to B$ 가 존재한다. 이때 $c = \text{card }[B \text{ \textbackslash }f(A)]$ 라 두면 $a + c = \text{card }[A \sqcup (B \text{ \textbackslash }f(A))] = \text{card }(B) = b$ 이다. 왜냐하면 기수간의 $=$ 은 전단사함수의 존재성을 뜻하는데 서로소 집합 $A, B$ 에 대하여 $B \text{ \textbackslash }f(A)$ 에 $A$ 를 $\sqcup$ 된 집합은 $B$ 와 일대일 대응될 수 있기 때문이다. ▲ 
+
+            역으로 $c =\text{card }(C)$ 인 집합 $C$ 가 존재하고 $f: A \sqcup C \to B$ 가 전단사이면 $f|_A: A \to B$ 는 단사이고 따라서 $a \leq b$ 이다. ■ 
+
+# 무한집합의 기수
+
+!!! tldr ""
+
+    임의의 무한집합 $X$ 에 대하여 
+
+    $$ \text{card }(\N) \leq \text{card }(X) $$
+
+    이다.
+
+- 증명
+
+    $X$ 가 무한집합이면 정리 "집합 $X$ 가 유한집합이 아니면, $\exists A \subset X \text{ s.t. }\ \N \approx A$ 이다." 에 의하여 단사함수 $f: \N \to X$ 가 존재한다. ■ 
+
+!!! tldr ""
+
+    가장 작은 초한기수 : 자연수의 초한기수를 다음과 같이 나타낸다.
+
+    $$ \aleph _0 = \text{card }(\N) $$
+
+- $\N \approx \mathbb{Z} \approx \mathbb{Q}$ 이므로 
+
+    $$ \text{card }(\N) = \text{card }(\mathbb{Z}) = \text{card }(  \mathbb{Q} ) = \aleph _0 $$
+
+    이다.
+
+!!! tldr ""
+
+    두번째 초한기수 : 실수의 초한기수를 다음과 같이 나타낸다.
+
+    $$ \mathfrak{c} = \aleph _1 = \text{card }(\R) $$
+
+- 단사함수 $f: \N \to \R$ 은 존재하지만 $\R$ 을 $\N$ 으로 보내는 단사함수는 존재하지 않으므로 
+
+    $$ \aleph _0 < \mathfrak{c} $$
+
+    이다.
+
+!!! tldr ""
+
+    가산 집합(countable set) : 집합 $X$ 의 기수가 
+
+    $$ \text{card }(X) \leq \aleph _0 $$
+
+    이면 $X$ 를 셀 수 있는 집합이라고 한다.
+
+- 유한집합은 가산집합이다. 
+
+- $\N , \mathbb{Z} , \mathbb{Q}$ 는 가산 무한집합이다. 가산 무한집합을 가부번 집합이라고도 한다.
+
+!!! tldr ""
+
+    비가산 집합(uncountable set) : 집합 $X$ 의 기수가 
+
+    $$ \text{card }(X) > \aleph _0 $$
+
+    이면 $X$ 를 셀 수 없는 집합이라고 한다.
+
+- $\R$ 는 비가산집합이다.
+
+!!! tldr ""
+
+    $$ \aleph _0 \aleph _0 = \aleph _0 $$
+
+- 이것은 무한기수의 독특한 특징이다.
+
+- 증명 
+
+    $$ \because \N \times \N \approx \N $$
+
+!!! tldr ""
+
+    임의의 무한기수 $a$ 에 대하여 $aa = a$ 이다.
+
+- 증명 
+
+    $\text{card }(A)  = a$ 인 무한집합 $A$ 를 잡으면 정리 "집합 $X$ 가 유한집합이 아니면, $\exists A \subset X \text{ s.t. }\ \N \approx A$ 이다." 에 의하여 $\exists D \subset A \text{ s.t. }\  D \approx \N$ 이다. 이때 $\N \times \N \approx \N$ 이므로 $D \approx D \times D$ 가 되어 전단사 함수 $f: D \to D \times D$ 가 존재한다. 이때 
+
+    $$ D \subset B \subset A, \quad  g|_D=f, \quad g:B \to B \times B \text{ is bijection } $$
+
+    을 만족하는 순서쌍 $(B, g)$ 들의 전체 집합 $\mathcal{B}$ 을 정의하고, 여기에 
+
+    $$ (B_1, g_1) \leq (B_2, g_2) \iff B_1 \subset B_2, g_2| _{B_1} = g_1 $$
+
+    와 같은 순서를 부여하면 $\mathcal{B}$ 는 순서집합이 된다. 또 이로써 초른의 보조정리의 조건부가 만족된다. 그러므로 $\mathcal{B}$ 에는 극대원소 $(C, h)$ 가 존재한다.
+
+    이제 $\text{card }(C) = c$ 로 두고, $c=a$ 을 보이면 증명이 끝난다. ▲ 
+
+    $c<a$ 라고 가정하면, $b = \text{card }(A \text{ \textbackslash }C)$ 가 존재한다. 이때 
+
+    $$ c  = 0 + c \leq c + c = 1c + 1c = 2c \leq cc = c $$
+
+    이므로 $c + c \leq c$ 인데, 애초에 $c \leq c + c$ 이므로 $c = c+ c$ 이다. 만약 $b \leq c$ 이면 
+
+    $$ a = b + c \leq c + c = c $$
+
+    이므로 $a \leq c$ 가 되어 모순이므로 정리 "임의의 집합 $A, B$ 에 대하여 $A \preccurlyeq B \lor B \preccurlyeq A$ 이다." 에 의하여 $c < b$ 이다. $C$ 보다 $A \text{ \textbackslash }C$ 가 더 크므로 $C \approx E$ 인 $E \subset A \text{ \textbackslash }C$ 가 존재한다. 이때 합집합과 곱집합의 분배법칙에 의하여
+
+    $$ (C \sqcup E) \times (C \sqcup E) = (C \times C) \sqcup (C \times E) \sqcup (E \times C) \sqcup (E \times E) $$
+
+    인데, $(C \times E) , (E \times C) , (E \times E)$ 들의 기수는 $c$ 이므로 
+
+    $$ \text{card }[(C \times E) \sqcup (E \times C) \sqcup (E \times E)] = (c+c)+c=c+c=c $$
+
+    이다. 그러므로 전단사 함수 
+
+    $$ k: E \to (C \times E) \sqcup (E \times C) \sqcup (E \times E) $$
+
+    가 존재한다. 한편 전단사 함수 $h:C \to C \times C$ 에 대하여 서로소 집합 함수 $h \sqcup k$ 는 
+
+    $$ h \sqcup k:C \sqcup E \to (C \sqcup E) \times (C \sqcup E) $$
+
+    는 전단사 함수가 된다. 그러면 $(C \sqcup E, h \sqcup k) > (C, h)$ 인데, 이는 $(C, h)$ 가 극대 원소라는데 모순이다. 그러므로 $c = a$ 이다. ▲ 
+
+    $c$ 는 조건에 의하여 $cc = c$ 였으므로 결국 $aa=a$ 이다. ■ 
+
+!!! tldr ""
+
+    무한기수 $a, b$ 에 대하여 
+
+    $$ a \leq b \implies a + b = ab = b $$
+
+    $$ a ^{b} = 2 ^{b} $$
+
+    이다. 
+
+- 증명
+
+    $1 \leq a$ 에서 $b = 1b \leq ab \leq bb = b$ 이므로 $ab = b$ 이다. ▲ 
+    
+    또한 
+
+    $$ b = 0+b \leq a+b \leq b + b = 2b \leq bb = b $$
+
+    이므로 $a + b = b$ 인데 이때의 $a$ 는 어떤 기수라도 관계 없다. ▲ 
+
+    무한 기수 $a = \text{card }(A)$ 와 $2 ^{a} = \text{card }(2 ^{A})$ 에 대하여 $a \leq 2 ^{a}$ 이므로 $a ^{b} \leq (2 ^{a})^{b} = 2 ^{ab} = 2 ^{b}$ 이고, $2 \leq a$ 이므로 $2 ^{b} \leq a ^{b}$ 이다. ■ 
+
+!!! tldr ""
+
+    다음은 동치이다.
+
+    1. 임의의 기수 $a$ 에 대하여 $a < 2 ^{a}$ 이다.
+
+    2. 임의의 집합 $X$ 에 대하여 임의의 함수 $f: X \to 2 ^{X}$ 는 전사가 아니다.
+
+- 이 정리는 어떤 집합의 기수가 그것의 부분집합 전체 집합의 기수보다 반드시 작다는 것인데, 이것도 칸토어의 대각선 논법이다.
+
+- 한편 이 정리는 더욱 더 큰 기수를 발견할 수 있다는 가능성을 보여준다.
+
+- 증명 
+
+    함수 $f: X \to 2 ^{X}$ 에 대하여 
+
+    $$ A = \{x \in X: x \not\in f(x)\} $$
+
+    라 두고, $f$ 가 전사라고 가정하자. 그러면 이 함수 $f$ 는 임의의 $x \in X$ 를 $X$ 의 모든 부분집합으로 대응시키기 때문에 $X$ 의 부분집합인 $A$ 에 대해서도 $f(x_0) = A$ 인 $x_0$ 가 존재한다. ▲ 
+
+    $x_0 \in A$ 이면 $A$ 의 정의에 의하여 $x_0 \not\in f(x_0)$ 인데 $f(x_0) = A$ 이므로 $x_0 \not\in A$ 이다. 따라서 모순이다. ▲ 
+
+    $x_0 \not \in A$ 이면 $x_0 \in f(x_0) = A$ 이 또한 모순이다. ▲ 
+
+    그러므로 $f(x_0) = A$ 인 $x_0$ 는 존재하지 않고, $f$ 는 전사가 아니다. ■ 
+
+!!! tldr ""
+
+    연속체 가설(Continuum hypothesis) : 연속체 가설은 
+
+    $$ \not \exists S, \aleph _0 < |S| < 2 ^{\aleph _0} $$
+
+    이다. 
+
+- 일반화된 연속체 가설은 이 연속체 가설을 임의의 초한기수에 대하여 확장한 것이다.
+
+- 이 정리는 쉽게 말해 자연수의 개수보다 많고 실수의 개수보다 적은 집합이 존재하지 않음을 말한다.
+
+- 증명 
+
+    선택공리를 가정한 체르멜로-프렝켈 집합론(ZFC) 가 무모순이라면, 연속체 가설은 ZFC 와 독립적이다. 즉, 연속체 가설이 참이든, 거짓이든 ZFC 공리체계로 증명되지도 않고 반박되지도 않는다.
+
+    결론은 "증명할 수 없다." 이다.
+
+!!! tldr ""
+
+    $$ 2 ^{\aleph_0} = \mathfrak{c} $$
+
+- 증명 ($2 ^{\N}$ 를 $\R$ 으로 단사시키는 부분은 내가 만든 증명이라 오류가 있을 수 있음)
+
+    먼저 $\R$ 을 $2 ^{\mathbb{Q} }$ 로 단사시킬 수 있는데, 이는 $r \in \R$ 이 $\{q \in \mathbb{Q} : q < r\}$ 로 대응되기 때문이다. 이는 데데킨트 절단으로 실수를 구성하는 개념과도 같다. 그러므로 단사함수 $\R \to 2 ^{\mathbb{Q} }$ 가 존재하는데 $\N \approx \mathbb{Q}$ 이므로 $\R$ 을 $2 ^{\N}$ 으로 단사시킬 수 있다. 그러므로 
+
+    $$ \R \preccurlyeq 2 ^{\N} $$
+
+    이다. ▲ 
+
+    이제 $2 ^{\N}$ 을 $\R$ 으로 단사시킬 수 있음을 보이자. 소수는 무한하므로 무한한 소수의 수열을 $p_n$ 이라고 하자. 그리고 $x \in 2 ^{\N}$ 에 오름차순 순서를 부여하면 $x_i \in x$ 를 작은순대로 $x_1, x_2, x_3, \dots$ 와 같이 나타낼 수 있다. 이때 함수 $f: 2 ^{\N} \to \R$ 을
+
+    $$ f(x) = \prod_{i=1}^{|x|} p_i ^{x_i} $$
+
+    와 같이 정의하면, 
+
+    $$ \forall x, y \in 2 ^{\N}, x \neq y \implies f(x) \neq f(y) $$
+
+    이다. 따라서 함수 $f$ 는 단사함수가 되고, 그러므로 
+
+    $$ 2 ^{\N} \preccurlyeq \R $$
+    
+    이다. ▲ 
+
+    그러므로 정리 "베른슈타인의 정리(Schröder–Bernstein theorem) : 집합 $A, B$ 에 대한 다음의 동치명제이다. 1. 단사함수 $f: A \to B, g:B \to A$ 가 존재하면 전단사함수 $h: A \to B$ 가 존재한다. 2. $A \preccurlyeq B \land B \preccurlyeq A \implies A \approx B$" 에 의하여 $2 ^{\N}$ 과 $\R$ 사이의 전단사 함수가 존재하고, 이로써 
+
+    $$ 2 ^{\N} \approx \R $$
+
+    이며, 그러므로
+
+    $$ \therefore  2 ^{\aleph  _0} = \mathfrak{c} $$
+
+    이다. ■ 
+
+- $2 ^{\N} \to \R$ 가 단사라는 또 다른 증명 
+
+    $[0, 1] \approx \R$ 이므로 $\R$ 대신 $[0, 1]$ 을 생각하자. 한편 임의의 $r \in [0, 1]$ 은 이진법 무한소수로 표현가능하다. 가령 $\dfrac{1}{2} = 0.1 \bar{0}_2$ 이다. 
+
+    이때 $2 ^{\aleph _0}$ 은 자연수집합 $\N$ 을 $\{0,1\}$ 로 보내는 함수 전체의 집합 $2 ^{\N}$ 의 초한기수로도 생각할 수 있다. 가령 어떤 함수 $f : \N \to \{0,1\}$ 는 다음과 같이 자연수 전체를 $\{0,1\}$ 로 사상시키는 전단사 함수이다.
+
+    $$ 0 \mapsto 1, 1 \mapsto 0, 2 \mapsto 0, 3 \mapsto 1, 4 \mapsto 0, \dots $$
+
+    우리는 이 함수 $f$ 를 다음과 같이 이진법 무한소수라고 생각할 수 있다.
+
+    $$ 0.f(0)f(1)f(2)f(3)f(4)\dots = 0.10010 \dots$$
+
+    그러므로 함수 $f \in 2 ^{\N}$ 를 이진법 무한소수로 표현된 실수 $r \in [0, 1]$ 로 대응시킬 수 있으므로 함수 
+
+    $$ g: 2 ^{\N} \to \R $$
+
+    를 생각할 수 있다. 이때 $g$ 는 단사함수이다. ■ 
+
+    - 근데 $\dfrac{1}{2} = 0.1 \bar{0}_2 = 0.0 \bar{1}_2$ 니까 단사가 아니잖아. 이 증명은 틀린 것 같은데.
+
+- 그러니까 요점은 어차피 $\R$ 을 $2 ^{\N}$ 으로 단사시키는 건 데데킨트 절단에 의하여 자명하니까, 결국 $2 ^{\N}$ 을 $\R$ 으로 단사시키는 아이디어만 떠올리면 되는데, 이는 임의의 자연수 집합을 유일한 실수로 대응시키는 방법을 찾는 것과 같다. 
+
+    그래서 어떤 사람들은 $x \in 2 ^{\N}, r \in [0, 1)$ 를 
+
+    $$ r = \sum_{n \in \N} \dfrac{f(x)}{2 ^{n}} $$
+
+    으로 대응시키고, 어떤 사람은 $x \in 2 ^{\N}$ 을 수열 $x$ 로 정의된 소수로 생각하여 실수 
+
+    $$ r = \sum \dfrac{x(n)}{3 ^{n+1}} \in [0, 1] $$
+
+    로 대응시키더라구.
