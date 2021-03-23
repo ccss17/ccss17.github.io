@@ -278,6 +278,8 @@
 
 - 이 정리로부터 하우스드로프 극대 원리를 도출하는 증명
 
+# 정렬집합
+
 !!! tldr ""
 
     정렬 집합(well ordered set) : 순서집합 $X$ 에서 $\forall A \in 2 ^{X}$ 에 대하여 $A \neq \varnothing$ 인 $A$ 가 최소 원소를 가지면 $X$ 를 정렬집합이라고 한다. 
@@ -418,7 +420,7 @@
 
 (구체화 필요)
 
-# 정렬집합과 서수
+# 서수
 
 !!! tldr ""
 
@@ -836,7 +838,7 @@
 
     이고, $Y$ 는 최소원소 $a \in X$ 를 갖는다. 그러면 $S_a$ 의 모든 절편은 $P$ 를 만족하는데, 가정에 의하여 $S_a$ 도 $P$ 를 만족하므로 모순이다. ■ 
 
-# 무한집합과 선택공리
+# 무한집합
 
 !!! tldr ""
 
@@ -1164,15 +1166,23 @@
 
 - 지금까지의 정리들의 결론이 이 무한집합의 정의이다.
 
-# 기수의 연산과 순서
+# 기수
 
 !!! tldr ""
 
-    기수(cardinal number) : 유한집합 $X$ 와 대등한 자연수 $n \in \N$ 으로써 
+    기수(cardinal number) : 임의의 집합 $X$ 에 대하여 $X$ 와 동등한 서수 전체의 집합 
+
+    $$ \{\xi : \xi \approx X, \xi \preccurlyeq 2 ^{X}\} $$
+
+    의 최소 원소를 $\text{card }(X)$, 즉 $X$ 의 기수라고 한다.
+    
+- 유한집합에 대해서는 기수의 정의를 다음과 같이 쉽게 생각해도 된다.
+
+    "유한집합 $X$ 와 대등한 자연수 $n \in \N$ 으로써 
 
     $$ \text{card }(X) = n $$
 
-    이다.
+    이다."
 
 - 기수는 임의의 집합 $A$ 에 대하여 
 
@@ -1180,41 +1190,45 @@
 
     를 만족해야 한다. 
 
-- 기수의 더하기는 서로소 집합 $A, B$ 와 그 기수 $a = \text{card }(A) ,b = \text{card }(B)$ 에 대하여 
+!!! tldr ""
+
+    기수의 더하기 : 서로소 집합 $A, B$ 와 그 기수 $a = \text{card }(A) ,b = \text{card }(B)$ 에 대하여 
 
     $$ a + b = \text{card }(A \sqcup B) $$
 
     이다.
 
-    - 이 연산은 잘 정의되어 있다. 
+- 이 연산은 잘 정의되어 있다. 
 
-        - 증명 
+    - 증명 
 
-            $$ A \approx C , B \approx D \implies A \sqcup B \approx C \sqcup D $$
+        $$ A \approx C , B \approx D \implies A \sqcup B \approx C \sqcup D $$
 
-            를 보이면 된다. 만약 $g: A \to C, h: B \to D$ 가 전단사이면 함수 $g \sqcup h: A \sqcup B \to C \sqcup D$ 도 전단사이므로 $a+b$ 가 잘 정의되어 있음을 알 수 있다.
+        를 보이면 된다. 만약 $g: A \to C, h: B \to D$ 가 전단사이면 함수 $g \sqcup h: A \sqcup B \to C \sqcup D$ 도 전단사이므로 $a+b$ 가 잘 정의되어 있음을 알 수 있다.
 
-    - 교환법칙이 성립한다. 
+- 교환법칙이 성립한다. 
 
-        - 증명 
+    - 증명 
 
-            $A \sqcup B = B \sqcup A$ 이므로 $a+b=b+a$ 이다.
+        $A \sqcup B = B \sqcup A$ 이므로 $a+b=b+a$ 이다.
 
-    - 결합법칙이 성립한다. 
+- 결합법칙이 성립한다. 
 
-        - 증명 
+    - 증명 
 
-            집합의 합집합의 결합법칙이 성립하므로 $(a+b)+c=a+(b+c)$ 도 성립한다.
+        집합의 합집합의 결합법칙이 성립하므로 $(a+b)+c=a+(b+c)$ 도 성립한다.
 
-- 기수의 곱하기는 $\text{card }(A) =a, \text{card }(B) = b$ 인 집합 $A, B$ 에 대하여 
+!!! tldr ""
+
+    기수의 곱하기 : $\text{card }(A) =a, \text{card }(B) = b$ 인 집합 $A, B$ 에 대하여 
 
     $$ ab = \text{card }(A \times B) $$
 
     이다.
 
-    - 이 연산은 잘 정의되어 있고, 교환법칙/결합법칙/분배법칙이 성립한다.
+- 이 연산은 잘 정의되어 있고, 교환법칙/결합법칙/분배법칙이 성립한다.
 
-        - 증명 
+    - 증명 
 
 - 기수의 제곱은 $\text{card }(A) =a,\text{card }(B) =b$ 에 대하여 
 
@@ -1625,3 +1639,47 @@
     이다. ▲ 
 
     이는 어떤 원소가 $\xi$ 에 속하면 $f(\xi)$ 에 속하고, 역으로 $f(\xi)$ 에 속하면 $\xi$ 에도 속함을 뜻한다. 그러므로 $\xi = f(\xi )$ 즉, $\xi \in X$ 이다. 그러면 정리 "정렬집합 $A$ 의 부분집합 $B$ 가 $x \in A, S_x \subset B \implies x \in B$ 이면 $B=A$ 이다." 에 의하여 $X = \alpha$ 이다. ■ 
+
+!!! tldr ""
+
+    서수 $\alpha ,\beta$ 에 대하여 
+
+    $$ \alpha < \beta \iff \alpha \in \beta \iff \alpha \subsetneq \beta $$
+
+    이다. 
+
+- 증명 
+
+    $\alpha < \beta \implies \gamma \in \beta \text{ s.t. }\ \alpha \approxeq S _{\gamma }$ 이다. 이때 $\alpha , S _{\gamma }$ 가 서수이므로 정리 "서수 $\alpha , \beta$ 에 대하여 $\alpha \approxeq \beta \implies \alpha = \beta$ 이다." 에 의하여 $\alpha = S _{\gamma } = \gamma \in \beta$ 이다. ▲ 
+
+    $\alpha \in \beta$ 이면 $\alpha = S _{\alpha } \subsetneq \beta$ 이다. ▲ 
+
+    $\alpha \subsetneq \beta$ 라고 하자. $\exists \gamma \in \alpha \text{ s.t. }\ \beta \approxeq S _{\gamma }$ 이면 $\beta = S _{\gamma } = \gamma \subset \alpha$ 가 되어 모순이다. (*즉 $\beta$ 가 $\alpha$ 의 절편과 순서동형인가 했더니 모순이라는 것이다.*) 따라서 정리 "두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 1. $A \approxeq B$ 2. $b \in B, A \approxeq S_b$ 3. $a \in A, S_a \approxeq B$" 에 의하여 $\alpha$ 는 $\beta$ 의 절편과 순서동형이고, 따라서 $\alpha < \beta$ 이다. ■ 
+
+- $A \iff B \iff C$ 를 보이기 위하여 $A \implies B \implies C \implies A$ 를 증명했네. 이러면 $B \implies C \land C \implies A \implies B$ 니까 $B \iff C$ 이고, 결국 $A \iff B \iff C$ 가 증명되는 식인가.
+
+!!! tldr ""
+
+    임의의 정렬집합 $A$ 에 대하여 $A \approxeq \alpha$ 인 서수 $\alpha$ 가 유일하게 존재한다.
+
+- 증명
+
+    먼저 유일성 증명은 정리 "서수 $\alpha , \beta$ 에 대하여 $\alpha \approxeq \beta \implies \alpha = \beta$ 이다." 에 의하여 해결되므로 존재성 증명만 하면 된다.
+
+    $\forall a \in A$ 에 대하여 $S_a$ 가 어떤 서수 $\alpha (a)$ 가 존재하여 $S_a \approxeq \alpha (a)$ 를 만족한다고 가정하자. 그러면 
+
+    $$ S = \{\alpha (a):a \in A\} $$
+
+    를 정의할 수 있는데 $S$ 가 서수이고 $S \approxeq A$ 을 보이면 정리 "정렬집합에 관한 성질 $P$ 와 임의의 정렬집합 $X$ 에 대하여 '$X$ 의 모든 절편이 $P$ 를 만족하면 $X$ 도 $P$ 를 만족한다.' 이면 임의의 정렬집합이 $P$ 를 만족한다." 에 의하여 임의의 정렬집합과 순서동형인 서수가 존재함이 증명된다. ▲ 
+
+    먼저 $\alpha (a) \leq \alpha (b) \iff a \leq b$ 라 정의하면 $S$ 는 정렬집합이 된다. ▲ 
+
+    임의의 $b \in A$ 에 대하여 정리 "서수 $\alpha ,\beta$ 에 대하여 $\alpha < \beta \iff \alpha \in \beta \iff \alpha \subsetneq \beta$ 이다." 에 의하여
+
+    $$ \alpha (b) \in \alpha (a) \iff \alpha (b) < \alpha (a) \iff \alpha (b) \in S _{\alpha (a)} $$
+
+    이므로 $\alpha (a) = S _{\alpha (a)}$ 이고, $S$ 가 서수임을 알 수 있다. ▲ 
+
+    $a \mapsto \alpha (a)$ 가 $A$ 에서 $S$ 로 가는 순서동형이므로 $A \approxeq S$ 이다. ■ 
+
+
