@@ -1,3 +1,7 @@
+!!! info
+
+    [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html) 를 공부하면서 노트정리 한 내용입니다.
+
 !!! tldr ""
 
     러셀의 역설 : $S = \{x : x \not\in x\}$ 와 같이 정의된 집합은 모순이다. 

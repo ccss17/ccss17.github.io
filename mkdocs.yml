@@ -11,13 +11,13 @@ nav:
   - 기술적 특이점: ProgrammerBase/future.md
   - 정보이론: Philosophy/information.md
   - Math: 
-    - 수학기초론: 
-      - 논리학: Math/Foundations/logic.md
-      - 수리논리학: Math/Foundations/mathmatical_logic.md
-      - ZFC 공리계: Math/Foundations/ZFC.md
+    - 수학의 기초: 
+      # - 논리학: Math/Foundations/logic.md
+      # - 수리논리학: Math/Foundations/mathmatical_logic.md
       - 집합: Math/Foundations/Set.md
       - 수체계: Math/Foundations/numbers.md
       - 무한집합: Math/Foundations/InfiniteSet.md
+      - ZFC 공리계: Math/Foundations/ZFC.md
     - 산술/대수학: 
       - 기초 산술: Math/Algebra/arithmetic.md
       - 추상대수학: Math/Algebra/abstract_algebra.md
