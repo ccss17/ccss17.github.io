@@ -358,100 +358,6 @@
 
     는 선택함수이다. 그러므로 선택공리, 초른의 보조정리, 하우스도르프 극대원리, 체르멜로 정렬정리가 모두 동치임을 알 수 있다. ■ 
 
-# 선택공리의 응용
-
-!!! tldr ""
-
-    선형생성, span  : 벡터공간 $V$ 의 부분집합 $B$ 에 대하여 $v_1, v_2, \dots, v_n \in B$ 와 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 
-
-    $$ a_1v_1 + a_2v_2 + \dots + a_nv_n $$
-
-    의 형태로 표현되는 모든 벡터의 집합을 $\text{span } B$ 라고 한다.
-
-!!! tldr ""
-
-    기저(basis) : 벡터공간 $V$ 의 부분집합 $B$ 가 
-
-    1. $v_1, v_2, \dots, v_n \in B$ 와 스칼라 $a_1, a_2, \dots, a_n$ 가 
-
-        $$ a_1v_1 +  a_2v_2 +  \dots + a_nv_n = 0 $$
-
-        이면 $a_1 = a_2 = \dots = a_n = 0$ 이다.
-    
-    2. $\forall v \in V, v = a_1v_1 + a_2v_2 + \dots + a_nv_n$ 인 $v_1, v_2, \dots, v_n \in B$ 와 스칼라 $a_1, a_2, \dots, a_n$ 가 존재한다.
-
-    를 만족하면 $B$ 를 벡터공간 $V$ 의 기저라고 한다.
-
-!!! tldr ""
-
-    임의의 벡터공간에 기저가 존재한다. 
-
-- 이 정리는 초른의 보조정리를 사용하여 증명되는데, 이런 증명 패턴이 수학의 여러 분야에서 전형적으로 쓰인다.
-
-- 조건 2) 는 $V = \text{span } B$ 라는 것을 말하고 있다. 
-
-- 증명 
-
-    기저의 조건 1) 을 만족하는 $V$ 의 부분집합 전체의 집합을 $\mathcal{X}$ 라 하자. $0$ 이 아닌 벡터 하나로 이루어진 집합은 1) 을 만족하므로(*왜?*) $\mathcal{X} \neq \varnothing$ 이다. 
-    
-    $\mathcal{X}$ 는 포함관계에 의한 순서집합이 되는데, 모든 사슬이 상계를 갖는다는 것을 보이자. 이를 위하여 $\mathcal{X}$ 의 사슬 $\mathcal{C}$ 을 하나 잡으면, $C =\bigcup_{}^{}\mathcal{C}$ 가 $\mathcal{X}$ 의 원소임을 보이면 $C$ 는 $\mathcal{C}$ 의 상계가 된다. 만약 $v_1, v_2, \dots, v_n \in C$ 이면 
-
-    $$ \exists C_i \in \mathcal{C} \text{ s.t. }\ v_i \in C_i, i \in \N \text{ \textbackslash }\{0\} $$
-
-    인데, $\mathcal{C}$ 가 사슬이므로 $\{C_1, C_2, \dots, C_n \}$ 의 최대원소가 존재한다. 그 최대원소를 $C_0$ 라 하면 포함관계에 의한 순서집합이므로 각 $v_i$ 는 $C_0 \in \mathcal{C}$ 의 원소이다. 그러므로 스칼라 $a_1, a_2, \dots, a_n$ 이 
-
-    $$ a_1v_1 +  a_2v_2 +  \dots + a_nv_n = 0 $$
-
-    를 만족하면 
-
-    $$ a_1 = a_2 = \dots = a_n = 0 $$
-
-    이다.(*왜지?*) ▲ 
-    
-    그러면 $C$ 가 1) 을 만족하고 순서집합 $\mathcal{X}$ 가 초른의 보조정리의 가정을 만족하므로 $\mathcal{X}$ 에는 극대 원소 $B$ 가 존재한다. 이제 $B$ 가 2) 를 만족함을 보이면 증명이 끝난다.
-
-    $B$ 가 2) 를 만족하지 않는다고 하면 2) 의 형태로 표시되지 않는 원소 $v  \in V$ 가 존재한다. 이때 $B \sqcup \{v\}$ 가 1) 을 만족함을 보이면 $B$ 가 $\mathcal{X}$ 의 극대원소라는 것에 모순이 되어 증명이 끝난다.
-
-    그러므로 증명해야 할 내용은
-
-    - 벡터공간 $V$ 의 부분집합 $B \subset V$ 가 1) 을 만족하고 $v \not\in \text{span } B$ 이면 $B \sqcup \{v\}$ 도 1) 을 만족한다. 
-
-    인데, 이는 선형대수학의 영역이고 선형대수의 초보적 지식만으로 증명 가능하므로 생략한다. ■ 
-
-(구체화 필요)
-
-# 서수
-
-!!! tldr ""
-
-    절대적 무한(Absolute Infinite) : 이보다 더 큰 수가 존재하지 않는 무한수이다.
-
-- 절대 무한을 $\Omega$ 라고 표기한다.
-
-- 초한수 수열 $\aleph _0, \alpha _1, \alpha _2, \dots$ 을 극한으로 보낼 수 있고, $\alpha _{\alpha _0}, \alpha _{\alpha _1},\alpha _{\alpha _2},  \dots$ 수열도 극한으로 보낼 수 있는데, 이 과정 자체를 극한으로 보내면 $\Omega$ 에 도달할 수 있다.
-
-!!! tldr ""
-
-    초한수(Transfinite number) : 절대적 무한이 아닌 무한이다.
-
-- 모든 유한수는 기수와 서수로 표현할 수 있는데 기수는 집합의 크기를 나타내고, 서수는 정렬집합에서의 순서 길이를 나타낸다.
-
-- 자연수의 초한서수를 $\omega$, 초한기수를 $\aleph_0$ 으로 나타낸다.
-
-!!! tldr ""
-
-    초한서수(Transfinite ordinal number) : 무한 정렬 집합에서의 어떤 위치를 나타내는 수이다.
-
-!!! tldr ""
-
-    가장 작은 초한서수 : 자연수 집합 $\N$ 을 정렬집합으로 이해할 때 초한서수
-
-    $$ \omega $$
-
-    로 나타낸다.
-
-- 이는 아래에서 살펴보듯이 자연수 집합을 서수로서 사용할 때 $\omega$ 로 쓴다.
-
 !!! tldr ""
 
     정렬집합의 절편(segment) : 정렬집합 $A$ 와 $x \in A$ 에 대하여 
@@ -676,6 +582,8 @@
 
     집합론과 수체계를 공부하다보니 이러한 증명들이 완전하게 형식화되어 있어서 문득 이해하기 어렵지만, 실상 이 증명을 떠올린 수학자들은 오로지 무모순의 제약만 걸려있는 자유롭고 자유로운 상상의 세계에서 증명을 떠올렸지 않았을까. 그러면 내가 할 일은 그 자유로운 세계에서 떠올린 핵심 아이디어이다. 그것은 이러한 형식문처럼 딱딱하고 이해하기 어렵지 않다. 실상은 그러한 직관이 통찰한 핵심 아이디어를 엄밀하게 전달하기 위하여 이러한 딱딱한 형식문으로 형식화한 것이기 때문에, 내가 알아야 할 것은 수학자들이 원래 떠올렸던 직관이다. 
 
+# 서수
+
 !!! tldr ""
 
     순서수, 서수(ordinal) : 정렬집합 $\alpha$ 가 
@@ -711,6 +619,110 @@
     - 예시 
 
         $\beta \in \alpha$ 이면 $\beta  = S _{\beta } \subset \alpha$ 이다.
+
+!!! tldr ""
+
+    절대적 무한(Absolute Infinite) : 이보다 더 큰 수가 존재하지 않는 무한수이다.
+
+- 절대 무한을 $\Omega$ 라고 표기한다.
+
+- 초한수 수열 $\aleph _0, \alpha _1, \alpha _2, \dots$ 을 극한으로 보낼 수 있고, $\alpha _{\alpha _0}, \alpha _{\alpha _1},\alpha _{\alpha _2},  \dots$ 수열도 극한으로 보낼 수 있는데, 이 과정 자체를 극한으로 보내면 $\Omega$ 에 도달할 수 있다.
+
+!!! tldr ""
+
+    초한수(Transfinite number) : 절대적 무한이 아닌 무한이다.
+
+- 모든 유한수는 기수와 서수로 표현할 수 있는데 기수는 집합의 크기를 나타내고, 서수는 정렬집합에서의 순서 길이를 나타낸다.
+
+- 자연수의 초한서수를 $\omega$, 초한기수를 $\aleph_0$ 으로 나타낸다.
+
+!!! tldr ""
+
+    유한서수 : 자연수
+
+    $$ 0,1,2,3,\dots $$
+
+    는 서수인데, 이들을 유한서수라고 한다.
+
+!!! tldr ""
+
+    초한서수(Transfinite ordinal number), 초유한서수 : 무한 정렬 집합에서의 어떤 위치를 나타내는 수이다.
+
+- 가장 작은 초한서수는 자연수 집합 $\N$ 을 정렬집합으로 이해할 때의 
+
+    $$ \omega $$
+
+    이다. 이는 아래에서 살펴보듯이 자연수 집합을 서수로서 사용할 때 $\omega$ 로 쓴다.
+
+- 초한 서수를 다음과 같이 열거할 수 있다. 
+
+    $$ \omega , \omega +1, \omega +2, \dots, \omega 2, \omega 2+1, \omega 2+2,\dots, \omega 3, \omega 3+1,\dots $$
+
+    마찬가지로
+
+    $$ \omega , \omega 2, \omega 3, \dots, \omega ^{2} $$
+
+    을 얻고, 이런식으로 반복하면
+
+    $$ 
+    \omega ^{2} + 1,
+    \omega ^{2} + 2, \dots
+    \omega ^{2} + \omega ,
+    \omega ^{2} + \omega + 1,
+    \omega ^{2} + \omega + 2,
+    \omega ^{2} + \omega 2,
+    $$
+
+    $$ 
+    \omega ^{2}+ \omega 2+1,
+    \omega ^{2}+ \omega 3,
+    \dots,
+    \omega ^{2}+ \omega 4,
+    \omega ^{2}2,
+    \dots,
+    \omega ^{3},
+    \dots,
+    \omega ^{4},
+    \dots,
+    $$
+
+    $$ 
+    \omega ^{\omega },
+    \dots,
+    \omega ^{\omega ^{\omega } },
+    \dots,
+    \omega ^{\omega ^{\omega ^{\omega } } },
+    \dots,
+    \epsilon_0,
+    \epsilon_0 + 1,
+    \epsilon_0 + 2,
+    \dots,
+    \epsilon_0 + \omega ,
+    $$
+
+    $$ 
+    \epsilon_0 + \omega 2 ,
+    \dots,
+    \epsilon_0 + \omega ^{2} ,
+    \dots,
+    \epsilon_0 + \omega ^{\omega } ,
+    \dots,
+    \epsilon_0 2
+    \dots,
+    \epsilon_0 \omega 
+    \epsilon_0 \omega ^{\omega }
+    \dots,
+    \epsilon_0 ^{2}
+    \dots,
+    $$
+
+    와 같이 계속 된다.
+
+!!! tldr ""
+
+    극한서수 : 서수 $\alpha$ 가 $\alpha = \beta ^{+}$ 인 $\beta$ 를 가지지 않으면 $\alpha$ 를 극한서수라고 한다. 
+
+- 가령 $\omega$ 는 $\omega = \alpha ^{+}$ 인 $\alpha$ 가 존재하지 않으므로 극한서수이다.
 
 !!! tldr ""
 
@@ -783,6 +795,18 @@
         $$ \alpha (\beta + \gamma ) = \alpha \beta + \alpha \gamma $$
 
         은 성립한다.
+    
+!!! tldr ""
+
+    서수의 제곱 : 임의의 서수 $\alpha ,\beta$ 에 대하여 $\beta$ 가 극한서수이면 
+
+    $$ \alpha ^{\beta } = \sup \{\alpha ^{\gamma } : \gamma < \beta \} $$
+
+    이고, $\beta = \gamma +1$ 이면 
+
+    $$ \alpha ^{\beta } = \alpha ^{\gamma }\alpha $$
+
+    이다.
 
 !!! tldr ""
 
@@ -1170,11 +1194,13 @@
 
 !!! tldr ""
 
-    기수(cardinal number) : 임의의 집합 $X$ 에 대하여 $X$ 와 동등한 서수 전체의 집합 
+    기수(cardinal number) : 임의의 집합 $X$ 에 대하여 $X$ 와 동등한 서수 전체의 집합의 최소원소
 
-    $$ \{\xi : \xi \approx X, \xi \preccurlyeq 2 ^{X}\} $$
+    $$ \text{card }(X) := \min \{\xi : \xi \approx X, \xi \preccurlyeq 2 ^{X}\} $$
 
-    의 최소 원소를 $\text{card }(X)$, 즉 $X$ 의 기수라고 한다.
+    를 $X$ 의 기수라고 한다.
+
+- 이 정의는 아래에서 살펴볼 정리 "비어있지 않은 임의의 서수들의 집합은 최소원소를 가진다." 를 기반으로 한다.
     
 - 유한집합에 대해서는 기수의 정의를 다음과 같이 쉽게 생각해도 된다.
 
@@ -1388,9 +1414,9 @@
 
 !!! tldr ""
 
-    두번째 초한기수 : 실수의 초한기수를 다음과 같이 나타낸다.
+    실수의 초한기수를 다음과 같이 나타낸다.
 
-    $$ \mathfrak{c} = \aleph _1 = \text{card }(\R) $$
+    $$ \mathfrak{c} = \text{card }(\R) $$
 
 - 단사함수 $f: \N \to \R$ 은 존재하지만 $\R$ 을 $\N$ 으로 보내는 단사함수는 존재하지 않으므로 
 
@@ -1523,24 +1549,6 @@
     $x_0 \not \in A$ 이면 $x_0 \in f(x_0) = A$ 이 또한 모순이다. ▲ 
 
     그러므로 $f(x_0) = A$ 인 $x_0$ 는 존재하지 않고, $f$ 는 전사가 아니다. ■ 
-
-!!! tldr ""
-
-    연속체 가설(Continuum hypothesis) : 연속체 가설은 
-
-    $$ \not \exists S, \aleph _0 < |S| < 2 ^{\aleph _0} $$
-
-    이다. 
-
-- 일반화된 연속체 가설은 이 연속체 가설을 임의의 초한기수에 대하여 확장한 것이다.
-
-- 이 정리는 쉽게 말해 자연수의 개수보다 많고 실수의 개수보다 적은 집합이 존재하지 않음을 말한다.
-
-- 증명 
-
-    선택공리를 가정한 체르멜로-프렝켈 집합론(ZFC) 가 무모순이라면, 연속체 가설은 ZFC 와 독립적이다. 즉, 연속체 가설이 참이든, 거짓이든 ZFC 공리체계로 증명되지도 않고 반박되지도 않는다.
-
-    결론은 "증명할 수 없다." 이다.
 
 !!! tldr ""
 
@@ -1682,4 +1690,152 @@
 
     $a \mapsto \alpha (a)$ 가 $A$ 에서 $S$ 로 가는 순서동형이므로 $A \approxeq S$ 이다. ■ 
 
+!!! tldr ""
 
+    비어있지 않은 임의의 서수들의 집합은 최소원소를 가진다. 
+
+- 증명 
+
+    서수들의 집합 $E$ 의 원소 $\alpha$ 를 선택하자. $\forall \beta \in E, \alpha \leq \beta$ 이면 증명이 끝난다. 
+    
+    따라서 $\beta < \alpha$ 라고 하자. 그러면 $\beta \in \alpha \implies \alpha \cap E \neq \varnothing$ 이다. $\alpha \cap E$ 는 정렬집합 $\alpha$ 의 부분집합이므로 최소원소 $\gamma$ 를 가진다.
+
+    $\delta \in E$ 라고 하자. $\alpha \leq \delta \implies \gamma < \alpha \leq \delta$ 이고, $\alpha > \delta \implies \delta \in \alpha \cap E$ 이므로 $\gamma \leq \delta$ 이다. 언제나 $\gamma \leq \delta$ 이므로 $\gamma$ 가 $E$ 의 최소원소이다.
+
+!!! tldr ""
+
+    서수 $\alpha$ 가 집합 $X$ 에 대하여 $\alpha = \text{card }(X)$ 이면 
+
+    $$ \beta \leq \alpha , \beta \approx \alpha \implies \beta = \alpha $$
+
+    이다.
+
+- 이는 기수의 정의에서 $\xi \approx X$ 인 $\xi$ 중 최소인 $\xi$ 가 $\alpha$ 라는 말이므로 $\beta \leq \alpha$ 가 $\beta \approx \alpha$ 이면 $\beta =\alpha$ 임이 당연하다.
+
+!!! tldr ""
+
+    시작서수 : 어떤 기수 $\alpha$ 에 대하여 기수의 정의에 의해 $\alpha$ 보다 작은 서수는 $\alpha$ 와 동등하지 않은데, 이러한 서수 $\alpha$ 를 시작서수라고 한다.
+
+- 즉, 모든 기수는 시작서수이다. 
+
+    역으로, $\alpha$ 가 시작서수이면 $\alpha = \text{card }(\alpha)$ 이므로 기수가 된다. 즉, 임의의 시작서수는 기수이다.
+
+!!! tldr ""
+
+    임의의 서수들의 집합은 최소상계를 가진다.
+
+- 증명 
+
+    정리 "비어있지 않은 임의의 서수들의 집합은 최소원소를 가진다." 에 의하여 서수들의 집합 $C$ 에 대한 집합
+
+    $$ \alpha  = \bigcup_{}^{}\{\xi :\xi \in C\} $$
+
+    은 정렬집합이다. 또한 $\xi \in \alpha$ 의 절편을 $\alpha$ 안에서 취하나 $\xi$ 안에서 취하나 마찬가지이므로 $\alpha$ 는 서수이다(*이거 왜 이해가 안되지*).
+
+    $\forall \xi \in C$ 에 대하여 $\xi \in \alpha$ 이므로 $\xi \leq \alpha$ 이다. $\beta$ 가 $C$ 의 상계이면 $\forall \xi \in C$ 에 대하여 $\xi \subset \beta$ 이고, 따라서 $\alpha \subset \beta \implies \alpha \leq \beta$ 이다(*뭔가 너무 추상적인 논증이라 이해가 안되는 느낌인데*). 
+
+    그러므로 $\alpha = \sup C$ 이다. ■ 
+
+!!! tldr ""
+
+    $$ \aleph _1 := \min \{\xi : \aleph _0 < \text{card }(\xi ) \leq 2 ^{\aleph _0} \} $$
+
+- 이렇게 정의된 $\aleph _1$ 은 정의에 의하여 기수가 되고,
+
+    $$ \aleph _1 > \aleph _0, \quad \xi \in \aleph _1 \implies \text{card }(S _{\xi }) = \aleph _0 $$
+
+    이 성립한다.
+
+- $\aleph _1 = \sup \{\xi : \xi \approx \aleph _0\}$
+
+    - 증명
+
+!!! tldr ""
+
+    연속체 가설(Continuum hypothesis) : 연속체 가설은 
+
+    $$ \aleph _1 = 2 ^{\aleph _0} $$
+
+    이다.
+
+- 이 정리는 쉽게 말해 자연수의 개수보다 많고 실수의 개수보다 적은 집합이 존재하지 않음을 말한다.
+
+- 증명 
+
+    선택공리를 가정한 체르멜로-프렝켈 집합론(ZFC) 가 무모순이라면, 연속체 가설은 ZFC 와 독립적이다. 즉, 연속체 가설이 참이든, 거짓이든 ZFC 공리체계로 증명되지도 않고 반박되지도 않는다.
+
+    결론은 "증명할 수 없다." 이다.
+
+!!! tldr ""
+
+    $$ \aleph _n := \min \{\xi : \aleph _{n-1} < \text{card }(\xi ) \leq 2 ^{\aleph _{n-1}} \} $$
+
+- 이 정의는 정리 "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 $\gamma (0) = a$, $\forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$ 을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다." 를 사용하여 $\aleph _1$ 의 정의를 임의의 자연수 $n = 1, 2, \dots$ 에 대하여 확장한 것이다.
+
+- 또한 $\aleph _{\omega } = \sup \{\aleph _n:n < \omega \}$ 라 두면 새로운 기수를 계속해서 얻을 수 있다.
+
+!!! tldr ""
+
+    일반 연속체 가설 : 임의의 기수 $\alpha$ 에 대하여 $\aleph _{\alpha ^{+}} = 2 ^{\aleph _{\alpha }}$ 이다.
+
+# 선택공리의 응용
+
+!!! tldr ""
+
+    선형생성, span  : 벡터공간 $V$ 의 부분집합 $B$ 에 대하여 $v_1, v_2, \dots, v_n \in B$ 와 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 
+
+    $$ a_1v_1 + a_2v_2 + \dots + a_nv_n $$
+
+    의 형태로 표현되는 모든 벡터의 집합을 $\text{span } B$ 라고 한다.
+
+!!! tldr ""
+
+    기저(basis) : 벡터공간 $V$ 의 부분집합 $B$ 가 
+
+    1. $v_1, v_2, \dots, v_n \in B$ 와 스칼라 $a_1, a_2, \dots, a_n$ 가 
+
+        $$ a_1v_1 +  a_2v_2 +  \dots + a_nv_n = 0 $$
+
+        이면 $a_1 = a_2 = \dots = a_n = 0$ 이다.
+    
+    2. $\forall v \in V, v = a_1v_1 + a_2v_2 + \dots + a_nv_n$ 인 $v_1, v_2, \dots, v_n \in B$ 와 스칼라 $a_1, a_2, \dots, a_n$ 가 존재한다.
+
+    를 만족하면 $B$ 를 벡터공간 $V$ 의 기저라고 한다.
+
+!!! tldr ""
+
+    임의의 벡터공간에 기저가 존재한다. 
+
+- 이 정리는 초른의 보조정리를 사용하여 증명되는데, 이런 증명 패턴이 수학의 여러 분야에서 전형적으로 쓰인다.
+
+- 조건 2) 는 $V = \text{span } B$ 라는 것을 말하고 있다. 
+
+- 증명 
+
+    기저의 조건 1) 을 만족하는 $V$ 의 부분집합 전체의 집합을 $\mathcal{X}$ 라 하자. $0$ 이 아닌 벡터 하나로 이루어진 집합은 1) 을 만족하므로(*왜?*) $\mathcal{X} \neq \varnothing$ 이다. 
+    
+    $\mathcal{X}$ 는 포함관계에 의한 순서집합이 되는데, 모든 사슬이 상계를 갖는다는 것을 보이자. 이를 위하여 $\mathcal{X}$ 의 사슬 $\mathcal{C}$ 을 하나 잡으면, $C =\bigcup_{}^{}\mathcal{C}$ 가 $\mathcal{X}$ 의 원소임을 보이면 $C$ 는 $\mathcal{C}$ 의 상계가 된다. 만약 $v_1, v_2, \dots, v_n \in C$ 이면 
+
+    $$ \exists C_i \in \mathcal{C} \text{ s.t. }\ v_i \in C_i, i \in \N \text{ \textbackslash }\{0\} $$
+
+    인데, $\mathcal{C}$ 가 사슬이므로 $\{C_1, C_2, \dots, C_n \}$ 의 최대원소가 존재한다. 그 최대원소를 $C_0$ 라 하면 포함관계에 의한 순서집합이므로 각 $v_i$ 는 $C_0 \in \mathcal{C}$ 의 원소이다. 그러므로 스칼라 $a_1, a_2, \dots, a_n$ 이 
+
+    $$ a_1v_1 +  a_2v_2 +  \dots + a_nv_n = 0 $$
+
+    를 만족하면 
+
+    $$ a_1 = a_2 = \dots = a_n = 0 $$
+
+    이다.(*왜지?*) ▲ 
+    
+    그러면 $C$ 가 1) 을 만족하고 순서집합 $\mathcal{X}$ 가 초른의 보조정리의 가정을 만족하므로 $\mathcal{X}$ 에는 극대 원소 $B$ 가 존재한다. 이제 $B$ 가 2) 를 만족함을 보이면 증명이 끝난다.
+
+    $B$ 가 2) 를 만족하지 않는다고 하면 2) 의 형태로 표시되지 않는 원소 $v  \in V$ 가 존재한다. 이때 $B \sqcup \{v\}$ 가 1) 을 만족함을 보이면 $B$ 가 $\mathcal{X}$ 의 극대원소라는 것에 모순이 되어 증명이 끝난다.
+
+    그러므로 증명해야 할 내용은
+
+    - 벡터공간 $V$ 의 부분집합 $B \subset V$ 가 1) 을 만족하고 $v \not\in \text{span } B$ 이면 $B \sqcup \{v\}$ 도 1) 을 만족한다. 
+
+    인데, 이는 선형대수학의 영역이고 선형대수의 초보적 지식만으로 증명 가능하므로 생략한다. ■ 
+
+(구체화 필요)
