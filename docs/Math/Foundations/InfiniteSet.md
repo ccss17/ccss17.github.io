@@ -578,7 +578,7 @@
 
     두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 
 
-    1. $A \approxeq $
+    1. $A \approxeq B$
 
     2. $b \in B, A \approxeq S_b$
 
