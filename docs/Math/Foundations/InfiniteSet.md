@@ -14,7 +14,11 @@
 
 !!! tldr ""
 
-    선택공리(axiom of choice, AC) : 공집합이 아닌 집합에서 한 원소를 택할 수 있고, 이를 무한히 반복할 수 있다는 공리로써 다음의 동치 명제들로 정의된다.
+    선택공리(axiom of choice, AC) : 공집합이 아닌 집합들의 집합이 주어지면, 각 원소로부터 한 원소를 택할 수 있고, 이를 무한히 반복할 수 있다는 공리
+
+    $$ \forall X \bigg [\varnothing \not \in X \implies \exists f: X \to \bigcup_{}^{}X \quad \forall A \in X(f(A) \in A) \bigg ] $$
+
+    로써 다음의 동치 명제들로도 정의된다.
 
     1. 함수 $f: X \to Y$ 가 전사이면 $f \circ g = 1_Y$ 인 함수 $g: Y \to X$ 가 존재한다.
 
@@ -30,12 +34,6 @@
     
         $$I \neq \varnothing \land  \forall i \in I , X_i \neq \varnothing \implies \displaystyle \prod_{i \in I}^{}X_i \neq \varnothing$$
     
-- 하나의 형식문으로써 
-
-    $$ \forall X \bigg [\varnothing \not \in X \implies \exists f: X \to \bigcup_{}^{}X \quad \forall A \in X(f(A) \in A) \bigg ] $$
-
-    라고 나타낼 수 있다. 이 형식문은 비어있지 않은 임의의 $X$ 에 대하여 $X$ 위에서 정의된 선택 함수 $f$ 가 존재한다 라는 뜻이다.
-
 - 아래의 2) 에서 3) 을 도출하는 증명에서 $h(A) \in A$ 를 만족하는 함수 $h$ 를 집합 $X$ 의 선택함수라고 하고, 3) 을 선택공리라고 부른다.
 
 - 선택공리가 수학에서 사용될 때 대부분 순서와 관련된다. 아래에서 살펴볼 소른 도움정리와 하우스도르프 극대 원칙은 선택공리과 동치인 명제인데 수학의 여러 분야에서 널리 쓰인다.
@@ -1678,7 +1676,7 @@
 
     $$ S = \{\alpha (a):a \in A\} $$
 
-    를 정의할 수 있는데 $S$ 가 서수이고 $S \approxeq A$ 을 보이면 정리 "정렬집합에 관한 성질 $P$ 와 임의의 정렬집합 $X$ 에 대하여 '$X$ 의 모든 절편이 $P$ 를 만족하면 $X$ 도 $P$ 를 만족한다.' 이면 임의의 정렬집합이 $P$ 를 만족한다." 에 의하여 임의의 정렬집합과 순서동형인 서수가 존재함이 증명된다. ▲ 
+    를 정의할 수 있다. 이때 정리 "정렬집합에 관한 성질 $P$ 와 임의의 정렬집합 $X$ 에 대하여 '$X$ 의 모든 절편이 $P$ 를 만족하면 $X$ 도 $P$ 를 만족한다.' 이면 임의의 정렬집합이 $P$ 를 만족한다." 에 의하여 $S$ 가 서수이고 $S \approxeq A$ 을 보이면 임의의 정렬집합과 순서동형인 서수가 존재한다는 것이 증명된다. ▲ 
 
     먼저 $\alpha (a) \leq \alpha (b) \iff a \leq b$ 라 정의하면 $S$ 는 정렬집합이 된다. ▲ 
 
@@ -1742,7 +1740,7 @@
 
 - 이렇게 정의된 $\aleph _1$ 은 정의에 의하여 기수가 되고,
 
-    $$ \aleph _1 > \aleph _0, \quad \xi \in \aleph _1 \implies \text{card }(S _{\xi }) = \aleph _0 $$
+    $$ \aleph _1 > \aleph _0, \quad \xi \in \aleph _1 \implies \text{card }(S _{\xi }) \leq  \aleph _0 $$
 
     이 성립한다.
 

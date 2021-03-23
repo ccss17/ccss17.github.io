@@ -14,6 +14,7 @@ nav:
     - 수학기초론: 
       - 논리학: Math/Foundations/logic.md
       - 수리논리학: Math/Foundations/mathmatical_logic.md
+      - ZFC 공리계: Math/Foundations/ZFC.md
       - 집합: Math/Foundations/Set.md
       - 수체계: Math/Foundations/numbers.md
       - 무한집합: Math/Foundations/InfiniteSet.md

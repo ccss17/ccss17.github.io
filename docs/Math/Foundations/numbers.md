@@ -31,7 +31,7 @@
 
     자연수 집합(natural number set) : 다음 두 가지 성질 
 
-    $$ \varnothing \in \mathcal{A}, A \in \mathcal{A} \implies A ^{+} \in \mathcal{A} $$
+    $$ \varnothing \in \mathcal{A}, \quad  A \in \mathcal{A} \implies A ^{+} \in \mathcal{A} $$
 
     을 가지는 집합 $\mathcal{A}$ 에 대하여 집합
 
