@@ -109,19 +109,19 @@ Git 과 Github 못다한 이야기(Git Branch, Github pull request, Git Stash, G
 
 ### [수학의 역사](math.md)
 
-- [조금은 철학적인 이야기 ](math.md#_1)
+- [조금은 철학적인 이야기 ](../Math/math.md#_1)
 
-- [수학의 역사 ](math.md#_2)
+- [수학의 역사 ](../Math/math.md#_2)
 
-### [괴델의 불완전성 정리](godel.md)
+### [괴델의 불완전성 정리](../Math/godel.md)
 
-- [컴퓨터의 역사 ](godel.md#%EC%BB%B4%ED%93%A8%ED%84%B0%EC%9D%98-%EC%97%AD%EC%82%AC)
+- [컴퓨터의 역사 ](../Math/godel.md#%EC%BB%B4%ED%93%A8%ED%84%B0%EC%9D%98-%EC%97%AD%EC%82%AC)
 
-- [괴델의 불완전성 정리 ](godel.md#%EA%B4%B4%EB%8D%B8%EC%9D%98-%EB%B6%88%EC%99%84%EC%A0%84%EC%84%B1-%EC%A0%95%EB%A6%AC)
+- [괴델의 불완전성 정리 ](../Math/godel.md#%EA%B4%B4%EB%8D%B8%EC%9D%98-%EB%B6%88%EC%99%84%EC%A0%84%EC%84%B1-%EC%A0%95%EB%A6%AC)
 
-### [튜링의 증명](turing.md)
+### [튜링의 증명](../Math/turing.md)
 
-- [튜링의 증명](turing.md#%ED%8A%9C%EB%A7%81%EC%9D%98-%EC%A6%9D%EB%AA%85)
+- [튜링의 증명](../Math/turing.md#%ED%8A%9C%EB%A7%81%EC%9D%98-%EC%A6%9D%EB%AA%85)
 
 ### [기술적 특이점](future.md)
 

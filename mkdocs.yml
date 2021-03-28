@@ -5,12 +5,13 @@ site_author: ccsss
 
 nav:
   - Home: index.md
-  - 수학의 역사: ProgrammerBase/math.md
-  - 불완전성 정리: ProgrammerBase/godel.md
-  - 튜링의 증명: ProgrammerBase/turing.md
-  - 기술적 특이점: ProgrammerBase/future.md
-  - 정보이론: Philosophy/information.md
   - Math: 
+    - 수학의 역사: Math/math.md
+    - 불완전성 정리: Math/godel.md
+    - 튜링의 증명: Math/turing.md
+    - 산술의 무모순성 증명: Math/gentzen.md
+    - 기술적 특이점: ProgrammerBase/future.md
+    - 정보이론: Math/information.md
     - 수학의 기초: 
       # - 논리학: Math/Foundations/logic.md
       # - 수리논리학: Math/Foundations/mathmatical_logic.md
@@ -107,44 +108,45 @@ nav:
     - Tmux: ProgrammerBase/tmux.md
     - Vim: ProgrammerBase/vim.md
     - CLI: ProgrammerBase/cli.md
-  - Philosophy: 
-    - 철학 메모: Philosophy/philosophy.md
-    - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
-  - 취약점 관련 사소한 생각들: 
-    - memo: vul/memo.md
-  - TS 관련 사소한 생각들:
-    - 1. 기초: HAI/base.md
-    - 2. 생각: HAI/think.md
-    - 3. 실행: HAI/doit.md
-    - 수학의 역사: HAI/history_math.md
-    - 4. 수학역사 1차 추상화: HAI/abstract_history_math.md
-    - 과학의 역사: HAI/history_science.md
-    - 기술의 역사: HAI/history_technology.md
-    - 컴퓨터의 역사(wikipedia 내용 정리): HAI/history_computer_wiki.md
-    - 컴퓨터역사1(괴델의 불완전성 정리): HAI/history_computer1.md
-    - 컴퓨터역사2(튜링의 불완전성 증명): HAI/history_computer2.md
-    - 컴퓨터역사3(튜링기계의 구현): HAI/history_computer3.md
-    - 컴퓨터역사4(소프트웨어와 알고리즘): HAI/history_computer4.md
-    - 컴퓨터역사5(초지능): HAI/history_computer5.md
-    - 인공지능의 역사: HAI/history_ai.md
-  - DeepLearning: 
-    - DL from stratch 메모: AI/dl_from_scratch.md
-    - DL from stratch 메모2: AI/dl_from_scratch2.md
-    - DL from stratch 메모3: AI/dl_from_scratch3.md
-    - DL from stratch 메모4: AI/dl_from_scratch4.md
-    - 인공지능 메모3: AI/ai.md
-  - Tools: 
-    - Makefile: Tools/makefile.md
-    - Git: Tools/git.md
-    - Docker: Tools/docker.md
-    - CUDA: Tools/cuda.md
-  - ArchLinux: 
-    - 설치: archlinux/install.md
-    - VM 설치: archlinux/vminstall.md
-  - Tex 수학기호: tex.md
-  - Algorithm:
-    - 시간복잡도: Algorithm/timecomplexity.md
-    - Leetcode: Algorithm/leetcode.md
+  - 사소한것들:
+    - Philosophy: 
+      - 철학 메모: Philosophy/philosophy.md
+      - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
+    - 취약점 관련 사소한 생각들: 
+      - memo: vul/memo.md
+    - TS 관련 사소한 생각들:
+      - 1. 기초: HAI/base.md
+      - 2. 생각: HAI/think.md
+      - 3. 실행: HAI/doit.md
+      - 수학의 역사: HAI/history_math.md
+      - 4. 수학역사 1차 추상화: HAI/abstract_history_math.md
+      - 과학의 역사: HAI/history_science.md
+      - 기술의 역사: HAI/history_technology.md
+      - 컴퓨터의 역사(wikipedia 내용 정리): HAI/history_computer_wiki.md
+      - 컴퓨터역사1(괴델의 불완전성 정리): HAI/history_computer1.md
+      - 컴퓨터역사2(튜링의 불완전성 증명): HAI/history_computer2.md
+      - 컴퓨터역사3(튜링기계의 구현): HAI/history_computer3.md
+      - 컴퓨터역사4(소프트웨어와 알고리즘): HAI/history_computer4.md
+      - 컴퓨터역사5(초지능): HAI/history_computer5.md
+      - 인공지능의 역사: HAI/history_ai.md
+    - Deep Learning: 
+      - DL from stratch 메모: AI/dl_from_scratch.md
+      - DL from stratch 메모2: AI/dl_from_scratch2.md
+      - DL from stratch 메모3: AI/dl_from_scratch3.md
+      - DL from stratch 메모4: AI/dl_from_scratch4.md
+      - 인공지능 메모3: AI/ai.md
+    - Tools: 
+      - Makefile: Tools/makefile.md
+      - Git: Tools/git.md
+      - Docker: Tools/docker.md
+      - CUDA: Tools/cuda.md
+    - ArchLinux: 
+      - 설치: archlinux/install.md
+      - VM 설치: archlinux/vminstall.md
+    - Tex 수학기호: tex.md
+    - Algorithm:
+      - 시간복잡도: Algorithm/timecomplexity.md
+      - Leetcode: Algorithm/leetcode.md
     # - (소설) 화가의 일기:
     #   - intro: fairytail/intro.md
     #   - "`1년 7월 23일 용서란 무엇인가": fairytail/`1.7.23.md
