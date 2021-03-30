@@ -91,7 +91,7 @@ nav:
     - base: Computer/base.md
     - Nand to Tetris: Computer/nand2tetris.md
   - ProgrammerBase: 
-    - ProgrammerBase: ProgrammerBase/readme.md
+    - README: ProgrammerBase/README.md
     - Contents:
       - Day 1: ProgrammerBase/01-Day1/readme.md
       - Day 2: ProgrammerBase/02-Day2/readme.md
