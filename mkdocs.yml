@@ -6,12 +6,11 @@ site_author: ccsss
 nav:
   - Home: index.md
   - Math: 
-    - 수학의 역사: Math/math.md
-    - 불완전성 정리: Math/godel.md
-    - 튜링의 증명: Math/turing.md
-    - 산술의 무모순성 증명: Math/gentzen.md
-    - 기술적 특이점: ProgrammerBase/future.md
-    - 정보이론: Math/information.md
+    - 수학의 기초의 기초: 
+      - 수학의 역사: Math/math.md
+      - 명제논리: Math/Logic/PropositionalLogic.md
+      - 불완전성 정리: Math/godel.md
+      - 튜링의 증명: Math/turing.md
     - 수학의 기초: 
       # - 논리학: Math/Foundations/logic.md
       # - 수리논리학: Math/Foundations/mathmatical_logic.md
@@ -19,6 +18,7 @@ nav:
       - 수체계: Math/Foundations/numbers.md
       - 무한집합: Math/Foundations/InfiniteSet.md
       - ZFC 공리계: Math/Foundations/ZFC.md
+      - 산술의 무모순성 증명: Math/gentzen.md
     - 선형대수학: 
       - 벡터공간: Math/LinearAlgebra/VectorSpace.md
     - 옛날 수학공부 노트정리..:
@@ -90,6 +90,8 @@ nav:
   - Computer:
     - base: Computer/base.md
     - Nand to Tetris: Computer/nand2tetris.md
+    - 정보이론: Computer/information.md
+    - 기술적 특이점: Computer/future.md
   - ProgrammerBase: 
     - README: ProgrammerBase/README.md
     - Contents:
