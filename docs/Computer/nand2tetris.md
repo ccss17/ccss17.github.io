@@ -493,7 +493,44 @@ Hack 시스템은 16비트 레지스터 D, A 를 갖는다. 이 레지스터는 
 
 Hack instruction 이 16비트인데, 주소값은 15비트를 사용하므로 두 값을 하나의 instruction 에 표현하기란 불가능하다. 따라서 메모리 주소를 뜻하는 라벨 M 을 사용하는데, 이 M 은 항상 A 의 값을 가르킨다. 가령 D=Memory[516]-1 의 instruction 을 표현하기 위하여 516 을 A 에 저장하고 D=M-1 와 같이 표현한다. 
 
-마찬가지로 jump 명령어를 사용할 때에도 instruction 에서 주소값을 직접 표현하지 않고, A 의 값을 참조한다.
+마찬가지로 jump 명령어를 사용할 때에도 instruction 에서 주소값을 직접 표현하지 않고, A 의 값을 참조한다. 가령 `goto 35` 를 위하여 먼저 A 에 35 를 저장하는 명령어를 사용하고, `goto` 명령어를 사용한다.
+
+![image](https://user-images.githubusercontent.com/16812446/113295408-20edc280-9333-11eb-8066-b98ee8814140.png)
+
+위의 예시는 1 부터 100 까지 더하는 예시이다. 보는 것과 같이 Hack 기계어는 원하는 주소값을 선택한 후, 원하는 명령어를 실행하는 식으로 기능하다. 전자의 address instruction 을 A-instruction 이라 하고 compute instruction 을 C-instruction 이라 한다. 
+
+이때 `@value` 라는 특이한 문법이 있는데 `value` 는 어떤 값이나 값을 나타내는 기호가 될 수 있다. 이 명령어는 특정한 값을 A 레지스터에 저장한다. 가령 `sum` 이 메모리 주소 17 을 나타낸다면 `@17` 과 `@sum` 둘 다 `A` 에 17 을 저장한다는 뜻이다.
+
+### A-instruction
+
+![image](https://user-images.githubusercontent.com/16812446/113296711-ca818380-9334-11eb-8725-843c1f8ea0cc.png)
+
+A-instruction 이란 `@value` 이다. `value` 는 음이 아닌 정수이다. A-instruction 은 위와 같이 레지스터 A 를 15 비트 값으로 초기화한다. 가령 `@5` 명령어는 A 를 `0000000000000101` 로 초기화한다.
+
+### C-instruction
+
+![image](https://user-images.githubusercontent.com/16812446/113297028-1cc2a480-9335-11eb-8dbf-bd41b45f14b6.png)
+
+C-instruction 은 1) 무엇을 계산할지, 2) 계산된 값을 어디에 저장할지, 3) 그 이후에 뭘할지 라는 세 가지 질문으로 기계어 코드가 구성된다. 위와 같이 MSB 의 1 은 C-instruction 임을 의미한다. 그 다음 2 비트는 사용되지 않는다. 
+
+C-instruction 의 문법은 `dest = comp;jump` 이다. `comp` 는 ALU 에게 무엇을 계산할지 지정하고, `dest` 는 계산된 ALU 출력을 어디에 저장할지 지정하고, `jump` 는 다음에 실행할 명령에 대한 점프 조건을 명시한다. 각각의 필드를 자세히 살펴보자. 
+
+- The Computation Specification : Hack ALU 는 D, A, M 레지스터를 계산하도록 설계되었다. M 은 Memory[A] 를 뜻한다. `comp` 필드는 7 비트로 구성되었는데, 이로써 128 개의 기능을 구별할 수 있다. 하지만 다음과 같은 28 개의 기능만 사용한다.
+
+    ![image](https://user-images.githubusercontent.com/16812446/113298696-0e758800-9337-11eb-9645-ff40f4ed334e.png)
+
+- The Destination Specification : C-instruction 으로 계산된 값은 `dest` 필드의 3 비트가 지정하는 곳에 저장된다. 첫번째, 두번째 d 비트는 A 레지스터에 저장할지, D 레지스터에 저장할지 구별한다. 세번째 d 비트는 Memory[A] 와 같은 M 에 저장할지 결정한다. 
+
+    ![image](https://user-images.githubusercontent.com/16812446/113299118-7e840e00-9337-11eb-8e7c-bb254ab110ca.png)
+
+    가령 Memory[7] 의 값을 증가시키고 D 레지스터에 저장하려면 다음과 같은 기계어 코드를 입력하면 된다.
+
+    0000 0000 0000 0111 // @7
+
+    1111 1101 1101 1000 // MD=M+1
+
+- The Jump Specification : `jump` 필드는 이후에 무엇을 할지 지정한다. 두 가지 가능성이 있는데 다음 명령어를 실행하거나, 다른 위치에 있는 명령어를 실행하는 것이다. 후자의 경우 A 레지스터가 위치 주소값을 지니고 있다고 가정한다.
+
 
 # 5. Computer Architecture
 
