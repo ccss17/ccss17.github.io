@@ -529,7 +529,7 @@ C-instruction 의 문법은 `dest = comp;jump` 이다. `comp` 는 ALU 에게 무
 
     1111 1101 1101 1000 // MD=M+1
 
-- The Jump Specification : `jump` 필드는 이후에 무엇을 할지 지정한다. 두 가지 가능성이 있는데 다음 명령어를 실행하거나, 다른 위치에 있는 명령어를 실행하는 것이다. 후자의 경우 A 레지스터가 위치 주소값을 지니고 있다고 가정한다.
+- The Jump Specification : `jump` 필드는 이후에 무엇을 할지 지정한다. 두 가지 가능성이 있는데 다음 명령어를 실행하거나, 다른 위치에 있는 명령어를 실행하는 것이다. 후자의 경우 A 레지스터가 위치 주소값을 지니고 있다고 가정한다. 
 
 
 # 5. Computer Architecture

@@ -39,6 +39,16 @@
 
     https://en.wikipedia.org/wiki/Metalanguage
 
+    https://en.wikipedia.org/wiki/Arity
+
+    https://en.wikipedia.org/wiki/Hilbert_system
+
+    https://en.wikipedia.org/wiki/Substitution_(logic)
+
+    https://ko.wikipedia.org/wiki/%EC%9E%90%EC%97%B0_%EC%97%B0%EC%97%AD
+
+    https://en.wikipedia.org/wiki/Method_of_analytic_tableaux
+
 !!! tldr ""
 
     형식 체계(formal system) : 공리로부터 추론규칙을 통해 정리를 이끌어낼 수 있는 논리적 체계이다.
@@ -51,11 +61,11 @@
 
     1. 유한개의 원시 기호를 택한다.
 
-    2. 원시 기호로 형식문을 구성할 문법을 택한다. 어떤 형식문이 잘 구성되었다(well-formed)고 하는 것은 원시 기호에 구성 문법을 가하여 그 형식문을 얻을 수 있다는 것이다.
+    2. 원시 기호로 명제을 구성할 문법을 택한다. 어떤 명제이 잘 구성되었다(well-formed)고 하는 것은 원시 기호에 구성 문법을 가하여 그 명제을 얻을 수 있다는 것이다.
 
-    3. 잘 구성된 형식문인 공리를 택한다.
+    3. 잘 구성된 명제인 공리를 택한다.
 
-    4. 추론 규칙을 택한다. 공리로부터 추론(증명)되는 잘 구성된 형식문을 정리(theorem) 이라고 한다. 
+    4. 추론 규칙을 택한다. 공리로부터 추론(증명)되는 잘 구성된 명제을 정리(theorem) 이라고 한다. 
 
 - 어떤 형식체계가 recursive 하다는 것은 그 공리들과 추론규칙들이 결정 가능한 집합(decidable sets, recursive set), 혹은 semidecidable sets 이라는 것이다.
 
@@ -63,11 +73,11 @@
 
 - 연역 체계란 공리와 추론규칙으로 구성되어 정리를 이끌어낼 수 있는 체계이다. 연역 체계의 한 예시로 1차 논리를 들 수 있다.
 
-- 논리 체계 혹은 language 란 비논리적 공리와 문법이 있는 (보통 1차 논리를 사용하는) 연역 체계이다. 모델 이론의 해석(interpretation) 에 의하여 논리 체계의 문법은 어떤 잘 구성된 형식문이 주어진 구조(structure) 를 만족하는지 확인해준다.
+- 논리 체계 혹은 language 란 비논리적 공리와 문법이 있는 (보통 1차 논리를 사용하는) 연역 체계이다. 모델 이론의 해석(interpretation) 에 의하여 논리 체계의 문법은 어떤 잘 구성된 명제이 주어진 구조(structure) 를 만족하는지 확인해준다.
 
     이때 형식 체계의 공리를 모두 만족하는 구조(structure) 를 논리 체계의 모델(model) 이라고 한다.
 
-    - 어떤 논리 체계가 건전하다(sound)는 것은 공리로 연역된 모든 형식문이 논리 체계의 모든 모델(model) 을 만족한다는 것이다. 즉 건전성(soundness)은 증명가능한 명제(정리)가 의미론 상으로도 참이된다는 성질이다. 
+    - 어떤 논리 체계가 건전하다(sound)는 것은 공리로 연역된 모든 명제이 논리 체계의 모든 모델(model) 을 만족한다는 것이다. 즉 건전성(soundness)은 증명가능한 명제(정리)가 의미론 상으로도 참이된다는 성질이다. 
     
         역으로 논리 체계가 완전하다(complete) 는 것은 모든 모델을 만족하는 명제가 공리로 연역될 수 있다(증명될 수 있다)는 것이다. 즉, 건전성은 완전성과 역관계이다.
 
@@ -81,15 +91,15 @@
 
 - 공리체계는 형식체계의 특수자이다. 즉, 공리체계의 일반화가 형식체계이다.
 
-- 형식적 이론이란 공리체계(주로 모델 이론model theory 으로 형식화된)로 설명되는 형식문의 집합이다. 이렇게 공리체계에서 도출된 이론에 포함된 정리들은 형식적 증명이라고 한다.
+- 형식적 이론이란 공리체계(주로 모델 이론model theory 으로 형식화된)로 설명되는 명제의 집합이다. 이렇게 공리체계에서 도출된 이론에 포함된 정리들은 형식적 증명이라고 한다.
 
-- 공리체계가 무모순(consistent)이라는 것은 모순을 포함하지 않는다는 것이다. 즉, 공리체계로부터 어떤 형식문과 그 부정문이 도출되지 않는다는 것이다.
+- 공리체계가 무모순(consistent)이라는 것은 모순을 포함하지 않는다는 것이다. 즉, 공리체계로부터 어떤 명제과 그 부정문이 도출되지 않는다는 것이다.
 
-    무모순은 모든 공리체계에 있어야 하는 필수적인 속성인데, 왜냐하면 모순이 존재하면 폭발 원리(principle of explosion) 에 의하여 모든 형식문이 증명되기 때문이다.
+    무모순은 모든 공리체계에 있어야 하는 필수적인 속성인데, 왜냐하면 모순이 존재하면 폭발 원리(principle of explosion) 에 의하여 모든 명제이 증명되기 때문이다.
 
 - 공리가 다른 공리로부터 도출될 수 없다면 독립성이 있다고 한다. 그러나 무모순성이 공리체계에 반드시 있어야 하는 조건인 것과 달리 독립성은 반드시 있어야 하는 조건은 아니다.
 
-- 공리체계가 완전하다(complete)는 것은 모든 형식문이 공리로부터 도출된다는 것이다. 즉, 그 공리체계로 표현가능한 모든 형식문이 참이든 거짓으로든 증명 가능하다는 것이다.
+- 공리체계가 완전하다(complete)는 것은 모든 명제이 공리로부터 도출된다는 것이다. 즉, 그 공리체계로 표현가능한 모든 명제이 참이든 거짓으로든 증명 가능하다는 것이다.
 
 - 상대적 무모순성이란 어떤 공리 체계의 무정의 술어의 정의가 다른 공리 체계로부터 주어져서, 전자의 공리체계가 후자의 공리체계의 정리가 되는 상황을 뜻한다. 
 
@@ -127,11 +137,11 @@
 
     공리적 방법은 수학의 추상적 위계를 명확하게 설정하는데 큰 도움을 준다. 가령 에미 뇌터의 첫 제안과는 달리 수학자들은 환(ring)에 commutative 가 성립하지 않아도 된다고 정의했고, 하우스도르프의 첫 정의와는 달리 위상 공간(topological space)이 separation axiom 없이 더 일반적으로 정의된다. ZFC 체계에서는 공리적 방법으로 러셀의 역설 등을 제거할 수 있었다. 
 
-    - 모든 무모순적인 명제가 공리적 방법으로 설명될 수 있는 것은 아니다. 어떤 프로그램이 주어진 명제가 정리인지 확인할 수 있다면 그 공리체계를 재귀 집합(recursive, 계산 가능한) 이라고 한다. 그러나 괴델의 불완전성 정리에 의하여 무모순적이지만 재귀 집합에 속하지 않은 명제가 있다는 것이 밝혀졌다. 즉, 컴퓨터는 어떤 증명이 올바른지 확인할 수 있지만, 어떤 형식문의 증명이 존재한다는 것을 밝힐 수 있다는 보장은 해줄 수 없다. 
+    - 모든 무모순적인 명제가 공리적 방법으로 설명될 수 있는 것은 아니다. 어떤 프로그램이 주어진 명제가 정리인지 확인할 수 있다면 그 공리체계를 재귀 집합(recursive, 계산 가능한) 이라고 한다. 그러나 괴델의 불완전성 정리에 의하여 무모순적이지만 재귀 집합에 속하지 않은 명제가 있다는 것이 밝혀졌다. 즉, 컴퓨터는 어떤 증명이 올바른지 확인할 수 있지만, 어떤 명제의 증명이 존재한다는 것을 밝힐 수 있다는 보장은 해줄 수 없다. 
 
-        그러나 상위 체계 혹은 또 다른 체계에 해당 형식문의 증명이 존재하는 경우가 있다. 
+        그러나 상위 체계 혹은 또 다른 체계에 해당 명제의 증명이 존재하는 경우가 있다. 
 
-        가령 어떤 산술에서의 형식문을 산술의 공리로 표현할 수 있지만, 그것에 대한 증명이 위상수학이나 복소해석학의 공리체계에 의존하게 될 수도 있다. 즉, 산술의 형식문이라 할지라도 그것의 증명을 페아노 공리체계(Peano axioms)에서 찾을 수 있다는 보장은 없다. 
+        가령 어떤 산술에서의 명제을 산술의 공리로 표현할 수 있지만, 그것에 대한 증명이 위상수학이나 복소해석학의 공리체계에 의존하게 될 수도 있다. 즉, 산술의 명제이라 할지라도 그것의 증명을 페아노 공리체계(Peano axioms)에서 찾을 수 있다는 보장은 없다. 
 
 !!! tldr ""
 
@@ -181,7 +191,7 @@
 
 - 명제 논리는 진리값 참과 거짓을 가지며, 다음과 같은 연산을 갖는다. 
 
-    - 부정 $\lnot P$, 그리고 $P \land Q$, Material conditional $P \to  Q$, IFF $P \iff Q$
+    - 부정 $\lnot P$, 그리고 $P \land Q$, Material conditional $P \to  Q$, IFF $P \leftrightarrow  Q$
 
     - 명제 논리는 이러한 연산에 대하여 닫혀있다. 즉, 이 연산을 적용한 대상 또한 명제이다.
 
@@ -203,4 +213,155 @@
 
 - 명제논리는 다음과 같이 일반적으로 표현된다. 
 
-    명제논리는 다음 조건을 만족하는 형식체계 $\mathcal{L} = \mathcal{L}(\Alpha , \Omega , \Zeta, \Iota)$ 이다.
+    명제논리는 다음 조건을 만족하는 형식체계 $\mathcal{L} = \mathcal{L}(\Alpha , \Omega , \Zeta, \Iota)$ 이다. 이를 language $\mathcal{L}$ 라고도 한다.
+
+    - $\Alpha$ 는 명제 기호 또는 명제 변수로 이루어진 가산 무한집합이다. 이는 language $\mathcal{L}$ 의 기본 구성을 이룬다. 관례적으로 $\Alpha$ 의 원소를 $p,q,r, \dots$ 로 표기한다. 
+
+    - $\Omega$ 는 연산 기호 또는 논리 접속사로 이루어진다. 집합 $\Omega$ 는 서로소 집합의 합 
+
+        $$ \Omega = \Omega _0 \sqcup \Omega _1 \sqcup \Omega _2 \sqcup \dots \sqcup  \Omega _m $$
+
+        으로 이루어진다. $\Omega _j$ 는 연산 기호 항수(artiy) j 의 집합이다. 가령 
+
+        $$ \Omega _1 = \{\lnot \}, \Omega _2 \subseteq = \{\land , \lor , \to , \leftrightarrow  \} $$
+
+        이다. 보통 항수(artiy) zero 는 논리값 (False, True) 을 나타내는 $\Omega _0 = \{\top , \bot \}$  이 된다.
+    
+    - $\Zeta$ 는 추론 규칙(변환 규칙) 의 유한 집합이다. 
+
+    - $\Iota$ 는 공리로 이루어진 가산 집합이다. language $\mathcal{L}$ 이 다음 조건을 만족할 때 잘 정의된 명제의 집합이라고 한다. 
+
+        1. Base: $\Alpha$ 의 원소가 $\mathcal{L}$ 의 명제이다. 
+
+        2. $p_1, p_2, \dots, p_j$ 가 $\mathcal{L}$ 의 명제이고 $f$ 가 $\Omega_j$ 에 속했다면, $f(p_1, p_2, \dots, p_j)$ 도 $\mathcal{L}$ 의 명제이다. 
+
+        3. 닫혀있음: 그 외에 것들은 $\mathcal{L}$ 의 명제이 아니다.
+
+        위와 같은 규칙을 반복함으로써 더 복잡한 명제를 생성할 수 있다. 가령 $p$ 가 명제이면 $\lnot p$ 도 명제이고, $(\lnot p \lor q)$ 도 명제가 된다.
+    
+    - 예시 (고전 명제 논리, 또는 힐베르트 연역 체계)
+
+        다음과 같이 정의된 간단한 공리 체계 $\mathcal{L}_1 = \mathcal{L}(\Alpha ,\Omega ,\Zeta ,\Iota )$ 를 생각하자.
+
+        $\Alpha$ 는 가산 무한집합 $A = \{p,q,r,s,t,u,p_2, \dots\}$ 이다.
+
+        $\Omega$ 는 $\Omega _0 = \{\top ,\bot \}, \Omega _1 = \{\lnot \}, \Omega _2 = \{\to \}$ 에 대한 
+
+        $$ \Omega = \Omega _0 \sqcup \Omega _1 \sqcup \Omega _2 $$
+
+        이다. $\lnot , \to$ 로 $\land , \lor$ 을 만들 수 있고, $(a \to b) \land (b \to a)$ 와 같이 $a \leftrightarrow  b$ 를 만들 수 있다.
+
+        $\Iota$ 에 해당하는 공리는 다음과 같은 치환 실례(substitution instance) 로 구성된다.
+
+        1. $(p \to (q \to p))$
+
+        2. $((p \to (q \to r)) \to ((p \to q) \to (p \to r)))$
+
+        3. $((\lnot p \to \lnot q) \to (q \to p))$
+
+        $\Zeta$ 에 해당하는 추론 규칙은 전건긍정(modus ponens) 이다.
+
+        이 체계가 [Metamath](http://us.metamath.org/mpegif/mmset.html#scaxioms) 의 형식적 증명 데이터베이스에 사용된다.
+
+    - 예시 (자연 연역 체계)
+
+        다음 조건을 만족하는 체계 $\mathcal{L}_2 = \mathcal{L}(\Alpha ,\Omega ,\Zeta ,\Iota )$ 를 자연 연역 체계라고 한다. 
+
+        $\Alpha = \{p,q,r,s,t,u,p_2, \dots\}$ 는 가산 무한집합이다.
+
+        $\Omega$ 는 $\Omega _0 = \{\top ,\bot \}, \Omega _1 = \{\lnot \}, \Omega _2 = \{\land ,\lor ,\to ,\leftrightarrow  \}$ 에 대한 
+
+        $$ \Omega = \Omega _0 \sqcup \Omega _1 \sqcup \Omega _2 $$
+
+        이다. 공리 집합 $\Iota = \varnothing$ 는 공집합이다. 즉, 공리가 없다. 추론 규칙 집합 $\Zeta$ 는 다음 11개의 규칙으로 이루어진다. 첫 10개는 잘 구성된 명제에서 잘 구성된 명제를 도출할 수 있다는 것이고, 마지막 규칙은 어떤 명제를 가정했을 때 다른 명제를 도출할 수 있다는 가상의 추론(hypothetical rule)을 뜻한다. 첫 10 개의 규칙은 non-hypothetical rule 이라고 한다.
+
+        추론 규칙을 효과적으로 표현하기 위하여 $\vdash$ 를 사용한다. 가령 $\Gamma \vdash \psi$ 는 가정 $\Gamma$ 에서 결론 $\psi$ 가 도출된다는 것이다. 이때 $\Gamma = \varnothing$ 일 수도 있다. 또 다른 뜻은 $\Gamma$ 가 정리이라면(즉, 공리와 같은 진리값을 가진다면) $\psi$ 도 정리라는 것이다. 아래의 연언 도입(Conjunction introduction) 은 $\Gamma$ 가 2개 이상의 명제를 가지면 그것을 하나의 명제로 줄일 수 있음을 뜻한다.
+
+        1. Negation introduction: $\{(p \to q), (p \to \lnot q)\} \vdash \lnot p$
+
+        2. Negation elimination: $\{\lnot p\} \vdash (p \to r)$
+
+        3. Double negation elimination: $\lnot \lnot p \vdash p$
+
+        4. Conjunction introduction: $\{p,q\} \vdash (p \land q)$
+
+        5. Conjunction elimination: $(p \land q) \vdash p$ and $(p \land q) \vdash q$
+
+        6. Disjunction introduction: $p \vdash (p \lor q)$ and $q \vdash (p \lor q)$
+
+        7. Disjunction elimination: $\{p \lor q, p \to r, q \to r\} \vdash r$
+
+        8. Biconditional introduction: $\{p \to  q, p \to p\} \vdash (p \leftrightarrow  q)$
+
+        9. Biconditional elimination: $(p \leftrightarrow  q) \vdash (p \to q)$ and $(p \leftrightarrow  q) \vdash (q \to p$
+
+        10. Modus ponens(conditional elimination): $\{p, p \to q\} \vdash q$
+
+        11. Conditional proof(conditional introduction): $(p \vdash q) \vdash (p \to q)$ 
+        
+            ($p$ 가 $q$ 를 증명한다고 가정하면, $p \to q$ 이다)
+
+- 명제 논리는 일반적으로 다음과 같은 기본적인 추론 규칙들을 가질 수 있다.
+
+    |Name|Sequent|
+    |:---:|:---:|
+    |Modus Ponens|$((p \to q) \land p) \vdash q$|
+    |Modus Tollens|$((p \to q) \land \lnot q) \vdash \lnot p$|
+    |Hypothetical Syllogism|$((p \to q) \land (q \to r)) \vdash (p \to r)$|
+    |Disjunctive Syllogism|$((p \lor  q) \land \lnot  p) \vdash q$|
+    |Constructive Dilemma|$((p \to q) \land (r \to s) \land (p \lor r)) \vdash (q \lor s)$|
+    |Destructive Dilemma|$((p \to q) \land (r \to s) \land (\lnot q \lor \lnot s)) \vdash (\lnot p \lor \lnot r)$|
+    |Bidirectional Dilemma|$((p \to q) \land (r \to s) \land (p \lor \lnot s)) \vdash (q \lor \lnot r)$|
+    |Simplification|$(p \land  q) \vdash p$|
+    |Conjunction|$p,q \vdash (p \land q)$|
+    |Addition|$p \vdash (p \lor q)$|
+    |Composition|$((p \to q) \land (p \to r)) \vdash (p \to (q \land r))$|
+    |De Morgan's Theorem 1|$\lnot (p \land q) \vdash (\lnot p \lor \lnot q)$|
+    |De Morgan's Theorem 2|$\lnot (p \lor q) \vdash (\lnot p \land \lnot q)$|
+    |Commutation 1|$(p \lor q) \vdash (q \lor p)$|
+    |Commutation 2|$(p \land q) \vdash (q \land p)$|
+    |Commutation 3|$(p \leftrightarrow  q) \vdash (q \leftrightarrow  p)$|
+    |Association 1|$(p \lor (q \lor r)) \vdash ((p \lor q) \lor r)$|
+    |Association 2|$(p \land (q \land r)) \vdash ((p \land q) \land r)$|
+    |Distribution 1|$(p \land (q \lor r)) \vdash ((p \land q) \lor (p \land r))$|
+    |Distribution 2|$(p \lor (q \land r)) \vdash ((p \lor q) \land (p \lor r))$|
+    |Double Negation|$p \vdash \lnot \lnot p$, $\lnot \lnot p \vdash p$|
+    |Transposition|$(p \to q) \vdash (\lnot q \to \lnot p)$|
+    |Material Implication|$(p \to q) \vdash (\lnot p \lor q)$|
+    |Material Equivalence 1|$(p \leftrightarrow   q) \vdash ((p \to q) \land (q \to p))$|
+    |Material Equivalence 2|$(p \leftrightarrow   q) \vdash ((p \land  q) \lor (\land p \land \lnot q))$|
+    |Material Equivalence 3|$(p \leftrightarrow   q) \vdash ((p \lor \lnot  q) \land (\lnot p \lor q))$|
+    |Exportation|$((p \land q) \to r) \vdash (p \to (q \to r))$|
+    |Importation|$(p \to (q \to r)) \vdash ((p \land q) \to r)$|
+    |Tautology 1|$p \vdash (p \lor p)$|
+    |Tautology 2|$p \vdash (p \land p)$|
+    |Tertium non datur(배중률)|$\vdash (p \lor \lnot p)$|
+    |Law of Non Contradiction(무모순성)|$\vdash \lnot (p \land \lnot p)$|
+
+    - Conjunction : $p$, $q$ 가 독립적으로 참이면 $p \land q$ 가 참이다.
+
+    - Exportation : $p$ 와 $q$ 가 참이면 $r$ 이 참이라는 것으로부터 ($p$ 가 참이면 ($q$ 가 참일 때 $r$ 이 참)이라는 것)을 증명할 수 있다.
+
+- 명제 논리가 실제로 사용되는 용도는 어떤 명제와 다른 명제의 동등 관계를 확인하려 함이다. 가령 참임을 알고 있는, 혹은 참이라고 가정한 어떤 명제에 추론 규칙을 적용하여 다른 명제를 도출할 수 있는지 확인하는 것이다. 이때 도출되는 명제로까지의 과정(명제의 나열)을 증명(proof) 이라고 한다.
+
+    - 예시 (자연 연역에서의 증명)
+
+        $$ \begin{array}{rl} 1.&amp; A \\ 2.&amp; A \lor A  \\ 3.&amp; (A \lor A) \land A \\ 4.&amp; A \quad (\text{conjunction elimination)}\\ 5.&amp; A \vdash  A \quad(\text{Summary of 1 through 4}) \\ 6.&amp; \vdash  A \to  A \quad(\text{conditional proof}) \\ \end{array} $$
+
+        위의 증명에서 $A \vdash A$ 를 "$A$ 를 가정하면 $A$ 가 증명된다." 로 해석하면 된다. $\vdash A \to A$ 를 "아무것도 가정하지 않아도, $A$ 가 $A$ 를 도출한다는 것이 증명된다." 로 해석하면 된다. 즉, "$A$ 가 $A$ 를 도출하는 것은 진리이다" 라고 해석하면 된다.
+
+    - 예시 (고전 명제논리에서의 증명)
+
+        이제 $A \to A$ 를 고전 명제논리에서도 증명해보자. 먼저 고전 명제 논리가 다음의 공리를 갖는다는 것을 기억하자.
+
+        1. $(p \to (q \to p))$
+
+        2. $((p \to (q \to r)) \to ((p \to q) \to (p \to r)))$
+
+        3. $((\lnot p \to \lnot q) \to (q \to p))$
+
+        먼저 $A$ 를 가정하면 공리 1 에 의하여 $A \to ((B \to A) \to A)$ 이다. 그러므로 다음과 같이 증명이 끝난다.
+
+        $$ \begin{array}{rl} 1.&amp; A \to ((B \to A) \to A) \\ 2.&amp; (A \to ((B \to A) \to A)) \to ((A \to (B \to A)) \to (A \to A)) \quad (\text{axiom 2})\\ 3.&amp; (A \to (B \to A)) \to (A \to A) \quad (\text{modus ponens from 1 and 2})\\ 4.&amp; A \to (B \to A) \quad (\text{axiom 1})\\ 5.&amp; A \to A\quad (\text{modus ponens from 3 and 4})\\ \end{array} $$
+
+- 추론 규칙의 핵심적인 성질은 건전성(sound) 과 완전성(complete) 이다.
