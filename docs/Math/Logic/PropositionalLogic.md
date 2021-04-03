@@ -56,6 +56,12 @@
 
     https://en.wikipedia.org/wiki/Automated_theorem_proving
 
+    https://en.wikipedia.org/wiki/Decidability_(logic)#Semidecidability
+
+    https://en.wikipedia.org/wiki/Metalogic
+
+    https://en.wikipedia.org/wiki/Categorical_theory
+
 # 형식체계 
 
 !!! tldr ""
@@ -547,11 +553,158 @@
 
 !!! tldr ""
 
+    논의 영역(domain of discourse, universe of discourse, universal set, universe) : 형식적 논의의 대상이 되는 객체의 집합이다.
+
+- set of domain of discourse 를 보통 기호 $\mathbb{D}$ 로 표현한다.
+
+- 논의 영역은 1차 논리에서의 한정사의 범위로 표현된다. 가령 $\forall x, (x ^{2} \neq 2)$ 는 논의 영역이 명시되지 않아서 모호하다. 논의 영역은 $\R$ 이 될 수도 있고 $\N$ 이 될 수도 있다.
+
+!!! tldr ""
+
     1차 논리(first-order logic, predicate logic) : 원소에 한정기호를 사용할 수 있고, 술어에 한정기호를 사용할 수 없는 형식 체계이다.
 
-- 명제 논리와 달리 변수에 한정기호를 사용할 수 있지만, 2차 논리와는 달리 변수들의 집합에 한정기호를 사용할 수 없다. 명제 논리는 1차 논리의 기반이 된다.
+- 명제 논리와 달리 변수에 한정기호를 사용할 수 있지만, 2차 논리와는 달리 변수들의 집합에 한정기호를 사용할 수 없다. 명제 논리는 1차 논리의 기반이 된다. 명제 논리와 달리 1차 논리는 술어와 한정사를 다룰 수 있다.
 
-- 1차 논리에서는 완전성 정리, 콤팩트성 정리, 스콜렘 정리같은 중요한 성질들이 성립한다.
+- 1차 논리에서는 완전성 정리, 콤팩트성 정리, 스콜렘 정리같은 메타 논리에서의 중요한 정리들이 성립한다.
 
 - 1차 논리는 수학, 철학, 언어학, 컴퓨터 공학 등에서 사용된다.
+
+- 1차 논리에서는 건전하면서 완전한 연역 체계들이 많이 존재한다.
+
+- 논리 체계가 준결정가능성(semidecidable) 을 가져도, 상당히 많은 진전이 1차 논리 속에서의 자동 정리 증명(Automated theorem proving)을 통해서 이루어질 수 있다.
+
+- 1차 논리는 수학의 기초로 여겨진다. 가령 페아노 공리계와 ZF 가 1차 논리에서 공리화되었다. 그러나 1차 논리는 자연수나 실수같은 무한한 정의역을 가진 구조를 설명할 수 있는 능력은 없다. 이들 두 구조는 2차 논리 같은 더 강력한 논리 체계로 설명가능하다.
+
+- 술어는 논의 영역을 입력으로 받아서 참이나 거짓을 출력한다. 
+
+    - 예시 
+
+        "소크라테스는 철학자이다" 와 "플라톤은 철학자이다" 는 명제 논리에서 단지 $p, q$ 로 표현되어 서로 관계가 없어 보인다. 하지만 술어 "는(은) 철학자이다" 가 두 문장에 등장하므로 두 명제가 같은 구조로 되어 있음을 알 수 있고, 변수 "소크라테스" 와 "플라톤" 을 가짐을 알 수 있다. 1차 논리에서는 이와 같은 술어로 명제를 표현할 수 있다.
+    
+    술어간의 관계를 논리적 접속사로 표현할 수 있다. 가령 1차 논리의 명제 "A 가 철학자이면, A 는 학자이다." 의 진리값은 변수 A 에 의하여 결정된다.
+
+    이때 변수 A 에 한정사를 가하여 범위를 지정할 수 있다. 가령 "모든 A 에 대하여" 라는 식으로. 
+
+    1차 논리에서의 부정을 살펴보면 "모든 A 에 대하여, A 가 철학자이면 A 는 학자이다." 의 부정은 "A 가 존재하는데, A 는 철학자이고 A 는 학자가 아니다." 이다.
+
+- 1차 논리는 문법과 의미라는 두 개의 핵심 구성요소를 가진다. 문법은 어떤 기호로 구성된 명제가 잘 구성되었는지 결정하고, 의미는 어떤 명제의 의미를 결정한다.
+
+    자연어와 달리 1차 논리의 명제는 완벽하게 형식적이어서 어떤 명제가 잘 구성되었는지 기계적으로 결정할 수 있다. 잘 구성된 명제는 용어와 술어로 구성된다. 용어와 술어는 기호의 나열이다. 기호는 항상 같은 의미를 갖는 논리적 기호와 해석에 따라 의미가 달라지는 비논리적 기호로 구분된다. 
+
+    가령 논리적 기호 $\land$ 는 항상 "그리고" 라는 의미를 가지는데, 비논리적 기호인 $\text{Phil}(x)$ 같은 술어는 해석에 따라서 "x 가 철학자(philosopher) 이다" 라거나 "x 가 Philip 이다" 라는 의미를 가진다.
+
+- 1차 논리에서 사용되는 논리적 기호는 다음과 같다. 
+
+    - 한정사 기호 $\forall$ 는 보편 양화사이고, $\exists$ 는 존재 양화사로 사용된다. 
+
+    - 논리 접속사 $\land , \lor , \to , \leftrightarrow, \lnot$ 가 사용된다.
+
+    - 괄호 $(, )$ 와 대괄호 $\{, \}, [, ]$ 와 기타 구두점 $.,"'$ 등이 사용된다.
+
+    - 변수의 무한 집합을 표현하기 위하여 보통 $x, y, z, \dots$ 을 사용한다. 
+
+    - 동등함을 표현하기 위하여 $=$ 를 사용한다. 
+
+    - 참을 표현하기 위하여 $\bot$ 을, 거짓을 표현하기 위하여 $\top$ 을 사용한다. 
+
+- 1차 논리에서 사용되는 비논리적 기호는 술어(관계), 함수, 논의 영역을 지칭하는 집합 등을 표현한다. [signature](https://en.wikipedia.org/wiki/Signature_(logic)) 란 형식 언어에서 사용하는 비논리 기호의 집합을 뜻하는데, 가령 군에서는 signature 가 $\{1, \times \}$ 이고, 순서체에서는 $\{0,1,+,\times , <\}$ 이다. 하지만 비논리 기호에 제한은 없다. signature 는 공집합일 수 있고, 유한할 수도 있고, 무한할 수도 있고, 비가산 집합일 수도 있다. 비가산 signature 는 뢰벤하임-스콜렘 정리의 증명에서 등장한다. 
+
+    - $0$ 보다 큰 항수를 갖는 술어(관계) 기호: $n$ 항수를 갖는 술어는 $n$ 개의 객체의 관계를 표현한다. 가령 $Q(x, y)$ 는 "$x$ 가 $y$ 보다 크다" 는 관계를 표현한다. 
+
+    - $0$ 보다 큰 항수를 갖는 함수 기호: 함수 기호는 일반적으로 $f, g, h, \dots$ 로 표현한다. 가령 $f(x)$ 는 "$x$ 의 가족" 을 뜻할 수도 있고 "$-x$" 를 뜻할 수도 있다. $g(x, y)$ 는 "$x+y$" 를 뜻할 수도 있다. 항수 $0$ 을 갖는 함수는 상수로써 보통 $a,b,c$ 로 표현된다. 
+
+- Formation rule 은 1차 논리에서의 용어와 명제를 정의한다. 
+
+    - 용어 집합은 다음과 같이 귀납적으로 정의된다.
+
+        1. 변수들. 모든 변수는 용어이다. 
+
+        2. 함수들. $n$ 개의 파라미터를 갖는 임의의 함수 $f(t_1, \dots,t_n)$ 는 용어이다. 
+
+    - 식(formula) 집합은 다음과 같이 귀납적으로 정의된다.
+
+        1. 술어 기호들. $n$ 항수를 갖는 $P(t_1, \dots, t_n)$ 는 식이다.
+
+        2. 동등성. $t_1, t_2$ 가 용어이면 $t_1 = t_2$ 는 식이다. 
+
+        3. 부정. $\phi$ 가 식이면 $\lnot \phi$ 도 식이다.
+
+        4. 이항 연결사. $\phi , \psi$ 가 식이면 이항관계 $R$ 에 대하여 $\phi R \psi$ 도 식이다. 가령 $\phi , \psi$ 가 식이면 $\phi \to \psi$ 은 식이다.
+
+        5. 한정사. $\phi$ 가 식이고, $x$ 가 변수이면 $\forall x \phi$ 이나 $\exists x \phi$ 는 식이다.
+
+        1차 논리에서는 오직 위의 5가지 규칙을 유한하게 구성하여 얻어진 표현만 식이다. 가령 $\forall xx \to$ 는 식이 아니다.
+        
+        참고로 첫번째와 두번쨰 규칙만 적용하여 얻은 식을 [원자적 식(atomic formulas)](https://en.wikipedia.org/wiki/Atomic_formula) 라고 한다.
+
+        괄호는 모든 식이 유일한 귀납적 방법으로 생성되었음을 알려준다. 이는 모든 식이 유일한 [parse tree](https://en.wikipedia.org/wiki/Parse_tree) 를 갖는 것을 말해준다.
+
+        위와 같은 1차 논리에서의 식은 다음과 같은 [BNF 형식](https://en.wikipedia.org/wiki/Backus-Naur_form)으로도 표현할 수 있다.
+
+        ```bnf
+        <index>             ::= "" 
+                            | <index> "'"
+        <variable>          ::= "x" <index>
+        <constant>          ::= "c" <index>
+        <unary function>    ::= "f1" <index>
+        <binary function>   ::= "f2" <index>
+        <ternary function>  ::= "f3" <index>
+        <unary predicate>   ::= "p1" <index>
+        <binary predicate>  ::= "p2" <index>
+        <ternary predicate> ::= "p3" <index>
+        <term>              ::= <variable> 
+                            | <constant> 
+                            | <unary function> "(" <term> ")" 
+                            | <binary function> "(" <term> "," <term> ")" 
+                            | <ternary function> "(" <term> "," <term> "," <term> ")"
+        <atomic formula>    ::= "TRUE" 
+                            | "FALSE"
+                            | <term> "=" <term>
+                            | <unary predicate> "(" <term> ")" 
+                            | <binary predicate> "(" <term> "," <term> ")" 
+                            | <ternary predicate> "(" <term> "," <term> "," <term> ")"
+        <formula>           ::= <atomic formula> 
+                            | "¬" <formula>
+                            | <formula> "∧" <formula>
+                            | <formula> "∨" <formula>
+                            | <formula> "⇒" <formula>
+                            | <formula> "⇔" <formula>
+                            | "(" <formula> ")"
+                            | "∀" <variable> <formula>
+                            | "∃" <variable> <formula>
+        ```
+
+- 1차 논리에서의 논리 연산자들은 먼저 계산되어야 할 우선순위를 갖는다.
+
+    1. $\lnot$ 이 가장 먼저 계산된다.
+
+    2. $\land, \lor$ 이 다음으로 계산된다.
+
+    3. 한정사가 다음으로 계산된다.
+
+    4. $\to$ 가 마지막으로 계산된다.
+
+    그러므로 $\lnot \forall xP(x) \to \exists x \lnot P(x)$ 를 
+
+    $$ (\lnot [\forall xP(x)]) \to \exists x[\lnot P(x)] $$
+
+    로 표현하면 더 읽기 쉽다.
+
+- 1차 논리에서의 식에 포함된 변수는 free 이거나 bound 이다. 쉽게 말하면 한정사에 속박된 변수를 bound 라고 생각하고, 그 이외의 변수를 free 로 생각하면 된다. 가령 $\forall y P(x, y)$ 에서 $y$ 는 bound 이고 $x$ 는 free 이다. free 와 bound 변수는 다음과 같이 귀납적으로 정의된다. 
+
+    1. 원자적 식(atomic formulas): $\phi$ 가 원자적 식이면 $\phi$ 에 등장하는 변수는 free 이다. 원자적 식에 bound 변수는 존재하지 않는다. 
+
+    2. 부정: $\lnot \phi$ 에 나타나는 변수 $x$ 가 free 이면 $\phi$ 에 나타나는 변수 $x$ 도 free 이다. 마찬가지로 $\phi$ 의 변수가 bound 이면 $\lnot \phi$ 의 변수도 bound 이다.
+
+    3. 이항 연결사: $\phi$ 나 $\psi$ 에서 $x$ 가 free 이면 이항 연결사 $R$ 에 대하여 $\phi R \psi$ 의 $x$ 도 free 이다. 가령 $\phi$ 에서 $x$ 가 free 이면 $\phi \to \psi$ 의 $x$ 도 free 이다. bound 의 경우도 마찬가지이다.
+
+    4. 한정사: $\forall y \phi$ 의 변수 $x$ 가 free 이면 $\phi$ 에서도 free 이다. $\forall y \phi$ 의 $x$ 가 bound 이려면, $x$ 가 $y$ 이거나 $\phi$ 에서도 $x$ 가 bound 이어야 한다. $\exists$ 에서도 마찬가지이다.
+
+- free 변수가 없는 식을 sentence 라고 한다.
+
+- 예시 
+
+    아벨리안 순서군(ordered abelian groups) 은 상수 $0$, 영항 함수 $-$, 이항 함수 $+$, 이항 관계 $\leq$ 를 갖는다. 아벨리안 순서군에서 $x+y, x+y-z$ 들은 용어이다. $x+y=0, x+y-z \leq x+y$ 들은 원자적 식이다. $\forall x \forall y(x+y \leq z) \to \forall x \forall y(x+y=0)$ 는 free 변수 $z$ 를 갖는 식이다.
+
+    아벨리안 순서군의 공리는 language 의 sentence 집합이다. 가령 군의 공리인 commutative 는 $(\forall x)(\forall y)[x+y=y+x]$ 이다.
 
