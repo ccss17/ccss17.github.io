@@ -1,6 +1,3 @@
-
-# 명제논리 
-
 !!! info "참고 및 출처"
     
     https://en.wikipedia.org/wiki/Propositional_calculus
@@ -56,6 +53,10 @@
     https://math.stackexchange.com/questions/105575/what-is-the-difference-between-completeness-and-soundness-in-first-order-logic
 
     https://en.wikipedia.org/wiki/Deduction_theorem
+
+    https://en.wikipedia.org/wiki/Automated_theorem_proving
+
+# 형식체계 
 
 !!! tldr ""
 
@@ -151,9 +152,11 @@
 
         가령 어떤 산술에서의 명제을 산술의 공리로 표현할 수 있지만, 그것에 대한 증명이 위상수학이나 복소해석학의 공리체계에 의존하게 될 수도 있다. 즉, 산술의 명제이라 할지라도 그것의 증명을 페아노 공리체계(Peano axioms)에서 찾을 수 있다는 보장은 없다. 
 
+# 명제논리 
+
 !!! tldr ""
 
-    명제논리(Propositional logic, zeroth-order logic) : 명제들에 적용하여 새로운 명제를 도출할 수 있는 추론규칙이다. 
+    명제논리(Propositional logic, zeroth-order logic, Propositional calculus) : 내부 구조가 없는 명제들에 논리 연산을 가하여 구성한 명제들을 다루는 형식 체계이다. 
 
 - 1차 논리와는 달리 명제 논리는 비논리적 대상, 그것에 대한 술어(속성, 조건), 한정사($\exists , \forall$)를 다루지 않는다. 그러나 명제논리는 1차 논리와 고차 논리의 기반이 된다.
 
@@ -539,4 +542,16 @@
     어떤 명제가 tautology 라면 그 명제를 참이라고 평가하는 진리표가 존재한다. 그 평가를 생각하자. 명제의 길이에 대한 수학적 귀납법으로 명제 변수에 따르는 명제들이 참인지 거짓인지 평가할 수 있다. "(참인 $P$ 에 대하여 $P \vDash S$ 이다) $\vDash$ ((거짓인 $P$ 에 대하여 $P \vDash S$) $\vDash S$) 이다." 를 모든 명제 변수의 의존성이 해결될 때까지 반복한다면 주어진 tautology 는 증명가능하고 해당 논리 체계는 완전하다.
 
     (*이게 뭔 소릴까 대체. 영문 위키도 그렇게 매번 속 시원한 설명을 주지는 않네.*)
+
+# 1차 논리 
+
+!!! tldr ""
+
+    1차 논리(first-order logic, predicate logic) : 원소에 한정기호를 사용할 수 있고, 술어에 한정기호를 사용할 수 없는 형식 체계이다.
+
+- 명제 논리와 달리 변수에 한정기호를 사용할 수 있지만, 2차 논리와는 달리 변수들의 집합에 한정기호를 사용할 수 없다. 명제 논리는 1차 논리의 기반이 된다.
+
+- 1차 논리에서는 완전성 정리, 콤팩트성 정리, 스콜렘 정리같은 중요한 성질들이 성립한다.
+
+- 1차 논리는 수학, 철학, 언어학, 컴퓨터 공학 등에서 사용된다.
 
