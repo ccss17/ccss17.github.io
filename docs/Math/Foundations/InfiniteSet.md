@@ -995,6 +995,8 @@
         $$ g(k) = \bigg (k - \dfrac{1}{2}l(l+1), l - \bigg [k - \dfrac{1}{2}l(l+1)\bigg ]\bigg ) $$
 
         라 정의하면된다.
+    
+    - 일반적으로 $\N ^{n} \approx \N$ 이 성립한다.
 
 !!! tldr ""
 
