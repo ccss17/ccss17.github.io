@@ -8,7 +8,7 @@ nav:
   - Math: 
     - 수학의 기초의 기초: 
       - 수학의 역사: Math/math.md
-      - 형식체계: Math/Logic/PropositionalLogic.md
+      - 형식체계: Math/Logic/FormalSystem.md
       - 불완전성 정리: Math/godel.md
       - 튜링의 증명: Math/turing.md
     - 수학의 기초: 
