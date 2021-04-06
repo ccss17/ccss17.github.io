@@ -62,7 +62,11 @@ nav:
     #   - (임시): Math/MultiLinearAlgebra/mla.md
     # - 위상수학: 
     #   - (임시): Math/Topology/topology.md
+  - hai:
+    - base: hai/base.md
+    - BLAS: hai/BLAS.md
   - Paper:
+    - "The NumPy array: a structure for efficient numerical computation": paper/numpy.md
     - Facenet (2015): paper/facenet.md
     - Quadruplet (2017): paper/quadruplet.md
     - BlueBorne: paper/blueborne.md
@@ -117,20 +121,20 @@ nav:
     - 취약점 관련 사소한 생각들: 
       - memo: vul/memo.md
     - TS 관련 사소한 생각들:
-      - 1. 기초: HAI/base.md
-      - 2. 생각: HAI/think.md
-      - 3. 실행: HAI/doit.md
-      - 수학의 역사: HAI/history_math.md
-      - 4. 수학역사 1차 추상화: HAI/abstract_history_math.md
-      - 과학의 역사: HAI/history_science.md
-      - 기술의 역사: HAI/history_technology.md
-      - 컴퓨터의 역사(wikipedia 내용 정리): HAI/history_computer_wiki.md
-      - 컴퓨터역사1(괴델의 불완전성 정리): HAI/history_computer1.md
-      - 컴퓨터역사2(튜링의 불완전성 증명): HAI/history_computer2.md
-      - 컴퓨터역사3(튜링기계의 구현): HAI/history_computer3.md
-      - 컴퓨터역사4(소프트웨어와 알고리즘): HAI/history_computer4.md
-      - 컴퓨터역사5(초지능): HAI/history_computer5.md
-      - 인공지능의 역사: HAI/history_ai.md
+      - 1. 기초: TS/base.md
+      - 2. 생각: TS/think.md
+      - 3. 실행: TS/doit.md
+      - 수학의 역사: TS/history_math.md
+      - 4. 수학역사 1차 추상화: TS/abstract_history_math.md
+      - 과학의 역사: TS/history_science.md
+      - 기술의 역사: TS/history_technology.md
+      - 컴퓨터의 역사(wikipedia 내용 정리): TS/history_computer_wiki.md
+      - 컴퓨터역사1(괴델의 불완전성 정리): TS/history_computer1.md
+      - 컴퓨터역사2(튜링의 불완전성 증명): TS/history_computer2.md
+      - 컴퓨터역사3(튜링기계의 구현): TS/history_computer3.md
+      - 컴퓨터역사4(소프트웨어와 알고리즘): TS/history_computer4.md
+      - 컴퓨터역사5(초지능): TS/history_computer5.md
+      - 인공지능의 역사: TS/history_ai.md
     - Deep Learning: 
       - DL from stratch 메모: AI/dl_from_scratch.md
       - DL from stratch 메모2: AI/dl_from_scratch2.md
