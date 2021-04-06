@@ -488,7 +488,23 @@
 
 - 예시 
 
-    체 $\mathbb{F}$ 에서 계수를 가져온 모든 다항식 집합 $\mathbb{P}(\mathbb{F} )$ 에 대하여 $\mathbb{P}_n(\mathbb{F} )$ 를 $n$ 이하의 차수를 가진 다항식 집합이라 하면, 부분공간이 됨을 보이자.
+    다음과 같은 체 $\mathbb{F}$ 에서 계수를 가져온 두 다항식 $f, g$ 에 대하여
+
+    $$ f(x) = a_n x ^{n} + a _{n-1}x ^{n-1} + \dots + a_1x + a_0 $$
+
+    $$ g(x) = b_n x ^{n} + a _{n-1}x ^{n-1} + \dots + b_1x + b_0 $$
+
+    두 다항식의 합과 스칼라곱을 
+
+    $$ f(x) + g(x) = (a_n+b_n) x ^{n} + (a _{n-1}+b _{n-1})x ^{n-1} + \dots+(a_1+b_1)x+(a_0+b_0) $$
+
+    $$ cf(x) = ca_n x ^{n} + ca _{n-1}x ^{n-1} + \dots + ca_1x + ca_0 $$
+
+    와 같이 정의하면 $\mathbb{F}$ 에서 계수를 가져온 모든 다항식 집합은 벡터공간인데, 이 벡터공간을 $\mathbb{P}(F)$ 라고 표기하자. 
+
+    이때 체 $\mathbb{F}$ 에서 계수를 가져온 모든 다항식 집합 $\mathbb{P}(\mathbb{F} )$ 에 대하여 $\mathbb{P}_n(\mathbb{F} )$ 를 $n$ 이하의 차수를 가진 다항식 집합이라 하면, 부분공간이 됨을 보이자.
+
+    먼저 영 다항식의 차수는 $-1$ 이므로 $\mathbb{P} _n(\mathbb{F} )$ 에 속한다. ▲ 차수가 $n$ 이하인 두 다항식을 더하면 차수가 $n$ 이하이다. ▲ 차수가 $n$ 이하인 두 다항식을 곱해도 차수가 $n$ 이하이다. ■ 
 
 !!! tldr ""
 
@@ -515,3 +531,55 @@
 - 증명  
 
     먼저 영행렬의 전치행렬은 영행렬이다. ▲  행렬 $A, B$ 와 스칼라 $a, b$ 에 대하여 $(aA + bB) ^{\operatorname{T} } = aA ^{\operatorname{T} } + bB ^{\operatorname{T} }$ 을 생각하면 $A \in \mathbb{W} , B \in \mathbb{W} \implies (A + B) ^{\operatorname{T} } = A ^{\operatorname{T} } + B ^{\operatorname{T} } = A + B$ 이다. ▲  마지막으로 행렬 $A$ 와 스칼라 $a$ 에 대하여 $(aA) ^{\operatorname{T} } = a A ^{\operatorname{T} }$ 이므로 $A \in \mathbb{W} \implies (aA) ^{\operatorname{T} } = aA ^{\operatorname{T} } = aA$ 이다. ▲ 그러므로 부분공간의 조건 1), 2), 3) 을 만족하므로 $\mathbb{W}$ 은 부분공간이다. 
+
+!!! tldr ""
+
+    상삼각행렬, 위삼각행렬(upper triangular matrix) : $m \times n$ 행렬 $A$ 의 대각성분 아래의 모든 성분이 $0$ 인행렬이다.
+
+- 즉, $i>j$ 에 대하여 $A _{ij} = 0$ 인 행렬이다.
+
+- 예시 
+
+    $$  \begin{pmatrix} 1 & 2 & 3 & 4\\ 0 & 5 & 3 & 4\\ 0 & 0 & 3 & 4\\ \end{pmatrix} $$
+
+!!! tldr ""
+
+    대각행렬(diagonal matrix) : 대각성분을 제외한 모든 성분이 $0$ 인 정사각행렬이다. 
+
+- 즉, $i \neq j$ 에 대하여 $M _{ij} = 0$ 인 $n \times n$ 행렬 $M$ 이다.
+
+- 예시 
+
+    $$  \begin{pmatrix} 1 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 3 \\ \end{pmatrix} $$
+
+- 예시 
+
+    $n \times n$ 영행렬의 모든 성분은 $0$ 이므로 영행렬은 대각행렬이다. $n \times n$ 대각행렬 $A, B$ 는 $i \neq j$ 에 대하여 
+
+    $$ (A+B) _{ij} = A _{ij} + B _{ij} = 0 + 0 = 0, \enspace (cA) _{ij} = c A _{ij} = c0=0 $$
+
+    이므로 대각행렬의 집합은 $\mathbb{M} _{n \times n}(\mathbb{F} )$ 의 부분공간이다.
+
+!!! tldr ""
+
+    대각합(trace) : $n \times n$ 행렬 $M$ 의 대각합은 모든 대각성분의 합 
+
+    $$ \text{tr}(M) = \sum_{k=1}^{n}M _{kk} $$
+
+    이다.
+
+- 대각합이 $0$ 인 $n \times n$ 행렬의 집합은 자명하게 $\mathbb{M} _{n \times n}(\mathbb{F} )$ 의 부분공간이다.
+
+!!! tldr ""
+
+    벡터공간 $V$ 의 임의의 교집합은 $V$ 의 부분공간이다. 
+
+- 이 정리는 주어진 부분공간으로 새로운 부분공간을 만드는 방법을 제시해준다. 
+
+- 증명 
+
+    $\mathbb{V}$ 의 모든 부분공간을 원소로 갖는 집합족 $\mathcal{C}$ 에 대하여 $\mathbb{W} = \bigcap_{}^{}\mathcal{C}$ 를 생각하자. 영벡터는 모든 부분공간에 속하므로 $0 \in \mathbb{W}$ 이다. ▲  스칼라 $a$ 와 $x, y \in \mathbb{W}$ 에 대하여 $x, y$ 는 $\mathcal{C}$ 의 모든 부분공간에 속한다. 부분공간은 스칼라 곱과 합에 대하여 닫혀 있으므로 $x+y \in \mathbb{W} , ax \in \mathbb{W}$ 이다. ▲ 그러므로 $\mathbb{W}$ 는 $\mathbb{V}$ 의 부분공간이다. ■ 
+
+# 일차결합과 연립일차방정식
+
+
