@@ -730,7 +730,7 @@
 
     $$ cx = ca_1u_1 + ca_2u_2 + \dots + ca_mu_m \in \text{span}(S) $$
 
-    이므로 $\text{span}(S)$ 는 $\mathbb{V}$ 의 부분공간이다. 이때 $v \in S \implies v = 1 \cdot v \in \text{span}(S)$ 이므로 $\text{span}(S)$ 는 $S$ 를 포함한다. ■ 
+    이므로 $\text{span}(S)$ 는 $\mathbb{V}$ 의 부분공간이다. 이때 $v \in S \implies v = 1 \cdot v \in \text{span}(S)$ 이므로 $S \subset \text{span}(S)$ 이다. ■ 
 
 - 두번째 명제의 증명 
 
