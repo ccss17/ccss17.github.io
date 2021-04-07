@@ -15,9 +15,7 @@
 
 ## Notice 
 
-- 모든 내용은 편의를 위하여 [Ubuntu 도커 컨테이너](https://hub.docker.com/_/ubuntu) 위에 실습 환경을 만든 [ccss17/ubuntu](https://github.com/ccss17/ubuntu-unminimize) 에서 진행하는 것을 전제합니다.
-
-    다음을 실행하여 간단히 실습환경을 구축 할 수 있습니다.
+- 모든 내용은 편의를 위하여 [Ubuntu 도커 컨테이너](https://hub.docker.com/_/ubuntu) 위에 실습 환경을 만든 [ccss17/ubuntu](https://github.com/ccss17/ubuntu-unminimize) 에서 진행하는 것을 전제합니다. 다음을 실행하여 간단히 실습환경을 구축 할 수 있습니다.
 
     **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
 
@@ -26,10 +24,6 @@
     ```
 
     **Docker** 설치와 컨테이너 실행에 관한 내용은 [여기](docker.md#%EB%8F%84%EC%BB%A4-%EC%84%A4%EC%B9%98)에서 더 자세히 설명합니다.
-
-- 모든 내용은 출처를 명시하였습니다. 잘못된 내용에 대한 지적과 풀 리퀘스트는 항상 환영합니다. 
-
-- 본 내용들은 누구나 자유롭게 무료로 학습할 수 있습니다.
 
 - 본문에서 말하는 "교재" 란 http://www.linuxcommand.org/tlcl.php 에서 제공하는 PDF 파일을 뜻합니다. 
 
@@ -107,28 +101,10 @@ Git 과 Github 못다한 이야기(Git Branch, Github pull request, Git Stash, G
 
 ## 조금은 철학적인 이야기
 
-### [수학의 역사](math.md)
+- [수학의 역사](../Math/math.md)
 
-- [조금은 철학적인 이야기 ](../Math/math.md#_1)
+- [괴델의 불완전성 정리](../Math/godel.md)
 
-- [수학의 역사 ](../Math/math.md#_2)
+- [튜링의 증명](../Math/turing.md)
 
-### [괴델의 불완전성 정리](../Math/godel.md)
-
-- [컴퓨터의 역사 ](../Math/godel.md#%EC%BB%B4%ED%93%A8%ED%84%B0%EC%9D%98-%EC%97%AD%EC%82%AC)
-
-- [괴델의 불완전성 정리 ](../Math/godel.md#%EA%B4%B4%EB%8D%B8%EC%9D%98-%EB%B6%88%EC%99%84%EC%A0%84%EC%84%B1-%EC%A0%95%EB%A6%AC)
-
-### [튜링의 증명](../Math/turing.md)
-
-- [튜링의 증명](../Math/turing.md#%ED%8A%9C%EB%A7%81%EC%9D%98-%EC%A6%9D%EB%AA%85)
-
-### [기술적 특이점](future.md)
-
-- [미래 ](future.md#%EB%AF%B8%EB%9E%98)
-
-- [Why the future doesn't need us](future.md#why-the-future-doesnt-need-us)
-
-- [기술적 특이점의 의미](future.md#%EA%B8%B0%EC%88%A0%EC%A0%81-%ED%8A%B9%EC%9D%B4%EC%A0%90%EC%9D%98-%EC%9D%98%EB%AF%B8)
-
-- [ProgrammerBase 를 마치며](future.md#programmerbase-%EB%A5%BC-%EB%A7%88%EC%B9%98%EB%A9%B0)
+- [기술적 특이점 - "Why the future doesn't need us"](../Computer/future.md)
