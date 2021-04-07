@@ -9,7 +9,7 @@ nav:
     - 수학의 기초의 기초: 
       - 수학의 역사: Math/math.md
       - 형식체계: Math/Logic/FormalSystem.md
-      - 불완전성 정리: Math/godel.md
+      - 불완전성 정리: Math/incompleteness.md
       - 튜링의 증명: Math/turing.md
     - 수학의 기초: 
       # - 논리학: Math/Foundations/logic.md
@@ -111,6 +111,18 @@ nav:
     - Tmux: ProgrammerBase/tmux.md
     - Vim: ProgrammerBase/vim.md
     - CLI: ProgrammerBase/cli.md
+  - security tutorial:
+    - README: security-tutorial/README.md
+    - Day1 Base: security-tutorial/01-Base/README.md
+    - Day2 Computer Principle 1: security-tutorial/02-Computer1/README.md
+    - Day3 Computer Principle 2: security-tutorial/03-Computer2/README.md
+    - Day4 Reversing 1: security-tutorial/04-Reversing1/README.md
+    - Day5 Reversing 2: security-tutorial/05-Reversing2/README.md
+    - Day6 Exploit 1: security-tutorial/06-Exploit1/README.md
+    - Day7 Exploit 2: security-tutorial/07-Exploit2/README.md
+    - Day8 Exploit 3: security-tutorial/08-Exploit3/README.md
+    - Day9 Exploit 4: security-tutorial/09-Exploit4/README.md
+    - Day10 Pentesting: security-tutorial/10-Pentesting/README.md
   - 사소한것들:
     - hai:
       - base: hai/base.md
@@ -153,26 +165,6 @@ nav:
     - Algorithm:
       - 시간복잡도: Algorithm/timecomplexity.md
       - Leetcode: Algorithm/leetcode.md
-    # - (소설) 화가의 일기:
-    #   - intro: fairytail/intro.md
-    #   - "`1년 7월 23일 용서란 무엇인가": fairytail/`1.7.23.md
-    #   - "`1년 7월 29일 제목 없음": fairytail/`1.7.29.md
-    #   - "`1년 8월 2일 내 마음이 죽은 것 같다": fairytail/`1.8.2.md
-    #   - "`1년 8월 13일-1 내 힘으로 살 수 없는 것": fairytail/`1.8.13-1.md
-    #   - "`1년 8월 13일-2 세상을 어떻게 바꿀 수 있을까?": fairytail/`1.8.13-2.md
-    #   - "`1년 8월 17일 소설 1": fairytail/`1.8.17.md
-    #   - "`1년 9월 1일 그들은, 그들은 그냥 죽은 것이다": fairytail/`1.9.1.md
-    #   - "`1년 9월 6일 아이에게": fairytail/`1.9.6.md
-    #   - "`1년 10월 11일 죽을 수 없다": fairytail/`1.10.11.md
-    #   - "`1년 10월 14일-1 푸르고 텅 빈 곳": fairytail/`1.10.14-1.mdj
-    #   - "`1년 10월 14일-2 외로움": fairytail/`1.10.14-2.md
-    #   - "`1년 10월 16일 열등감": fairytail/`1.10.16.md
-    #   - "`1년 10월 17일 무제": fairytail/`1.10.17.md
-    #   - "`1년 10월 23일 현실": fairytail/`1.10.23.md
-    #   - "`1년 10월 25일 내 일기를 돌아봤다": fairytail/`1.10.25.md
-    #   - "`1년 11월 10일 혼잣말": fairytail/`1.11.10.md
-    #   # - `1년 11월 19일 춥다: fairytail/`1.11.19.md
-
 theme: 
   name: material
   palette:

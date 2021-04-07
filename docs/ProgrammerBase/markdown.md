@@ -316,7 +316,7 @@ print s
 
 `README.md` 라는 이름을 가진 파일은 특별한 파일입니다. 왜냐하면 **Github** 이 레포지토리의 `README.md` 파일을 자동으로 랜더링하여 웹페이지에 보여주기 때문입니다. 
 
-**Github** 은 레포지토리의 최상위 경로에 있는 `README.md` 를 랜더링하여 보여줍니다. https://github.com/ccss17/ProgrammerBase 의 경우처럼 말이죠.
+**Github** 은 레포지토리의 최상위 경로에 있는 `README.md` 를 랜더링하여 보여줍니다. https://ccss17.github.io/ProgrammerBase 의 경우처럼 말이죠.
 
 그리고 어떤 디렉토리로 들어가면 그 디렉토리의 최상위 경로에 있는 `README.md` 를 랜더링해서 보여줍니다. 여러분은 지금 `markdown.md` 파일이 랜더링된 것을 읽고 있습니다.
 

@@ -103,7 +103,7 @@ Git 과 Github 못다한 이야기(Git Branch, Github pull request, Git Stash, G
 
 - [수학의 역사](../Math/math.md)
 
-- [괴델의 불완전성 정리](../Math/godel.md)
+- [괴델의 불완전성 정리](../Math/incompleteness.md)
 
 - [튜링의 증명](../Math/turing.md)
 

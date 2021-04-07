@@ -11,5 +11,3 @@
 더 자세한 내용이나 레포지토리 링크를 확인하고 싶다면 다음을 참조하세요.
 
 - 블로그 : https://ccss17.github.io/ProgrammerBase/
-
-- 예전 레포지토리 : https://github.com/ccss17/ProgrammerBase
