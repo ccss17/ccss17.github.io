@@ -72,8 +72,8 @@ nav:
     - ProgrammerBase: project/ProgrammerBase.md
     - security-tutorial: project/security-tutorial.md
     - WICWIU: project/WICWIU.md
-    - ml: ml.md
-    - ubuntu-unminimize: ubuntu-unminimize.md
+    - ml: project/ml.md
+    - ubuntu-unminimize: project/ubuntu-unminimize.md
     - bof: project/bof.md
     - nonogram: project/nonogram.md
     - older-glibc: project/older-glibc.md
