@@ -63,7 +63,8 @@ nav:
     # - 위상수학: 
     #   - (임시): Math/Topology/topology.md
   - Paper:
-    - "The NumPy array: a structure for efficient numerical computation": paper/numpy.md
+    - "Performance of Python runtimes on a non-numeric scientific code" : paper/1404.6388.md
+    - "The NumPy array: a structure for efficient numerical computation": paper/1102.1523.md
     - Facenet (2015): paper/facenet.md
     - Quadruplet (2017): paper/quadruplet.md
     - BlueBorne: paper/blueborne.md
