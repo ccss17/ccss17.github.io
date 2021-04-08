@@ -6,14 +6,14 @@ This is a repository containing the contents of GBC's 4th course, Security Cours
 
 ## Notice
 
-이 가이드는 **10일** 과정으로 구성되며 독자가 **C 언어** 를 알고 있고 **[ProgrammerBase](ccss17.github.io/ProgrammerBase)** 를 공부하고 왔다고 가정합니다.
+이 가이드는 **10일** 과정으로 구성되며 독자가 **C 언어** 를 알고 있고 **[ProgrammerBase](../ProgrammerBase)** 를 공부하고 왔다고 가정합니다.
 
 ## Docker
 
 이제 모든 실습을 Docker 가상 환경에서 할 수 있도록 되었습니다! 서버 비용도 필요 없고 무겁고 느린 가상머신도 필요없어요. 다음 명령어만 입력하면 security-tutorial 을 실습할 모든 준비가 끝납니다.
 
 ```shell
-$ docker run -it ccss17/security-tutorial
+$ docker run -it --privileged ccss17/security-tutorial
 ```
 
 ## Contents
