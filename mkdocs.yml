@@ -90,7 +90,7 @@ nav:
     - dotfiles: project/dotfiles.md
     - servercat: project/servercat.md
   - Computer:
-    - base: Computer/base.md
+    # - base: Computer/base.md
     - Nand to Tetris: Computer/nand2tetris.md
     - Information Theory: Computer/information.md
     - Technological Singularity: Computer/future.md

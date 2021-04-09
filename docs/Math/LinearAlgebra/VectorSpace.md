@@ -966,7 +966,7 @@
 
 - 예시 
 
-    $\{x ^{n} : n \in \N\} = $\{1, x, x ^{2}, x ^{3}, \dots\}$$ 은 $\mathbb{P} (\mathbb{F} )$ 의 기저이다.
+    $\{x ^{n} : n \in \N\} = \{1, x, x ^{2}, x ^{3}, \dots\}$ 은 $\mathbb{P} (\mathbb{F} )$ 의 기저이다.
 
     - 이 예시는 기저가 무한집합일 수도 있다는 것을 말해준다. 심지어 어떤 벡터공간의 기저는 유한집합일 수 없다. 대표적으로 위 예시의 벡터공간 $\mathbb{P} (\mathbb{F} )$ 의 기저는 반드시 무한집합이다.
 
@@ -986,9 +986,36 @@
     
     - 예시 
 
-        $$\{1, x, x ^{2}, x ^{3}, \dots, x ^{n}\}$$ 은 $\mathbb{P}_n (\mathbb{F} )$ 의 표준기저이다.
+        $\{1, x, x ^{2}, x ^{3}, \dots, x ^{n}\}$ 은 $\mathbb{P}_n (\mathbb{F} )$ 의 표준기저이다.
+
+!!! tldr ""
+
+    벡터공간 $\mathbb{V}$ 와 서로 다른 벡터 $u_1, u_2, \dots, u_n \in \mathbb{V}$ 에 대한 집합 $\beta = \{u_1, u_2, \dots, u_n\}$ 가 $\mathbb{V}$ 에 대하여 다음은 동치이다.
+
+    1. 집합 $\beta = \{u_1, u_2, \dots, u_n\}$ 가 $\mathbb{V}$ 의 기저이다.
+
+    2. 임의의 $v \in \mathbb{V}$ 를 유일한 스칼라 $a_1, a_2, \dots, a_n$ 에 대한 $\beta$ 의 일차결합으로 나타낼 수 있다. 
+
+- 이 정리는 $v \in \mathbb{V}$ 가 주어지면 $\beta$ 의 일차결합에 대한 스칼라 $n$순서쌍 $(a_1, a_2, \dots, a_n)$ 이 유일하게 결정되고, 반대로 $(a_1, a_2, \dots, a_n)$ 이 주어지면 이것을 $\beta$ 의 일차결합 계수로 가지는 유일한 벡터 $v \in \mathbb{V}$ 가 결정됨을 말해준다. ($n$ 은 기저에 존재하는 벡터의 갯수이다.)
+
+- 1 에서 2 를 도출하는 증명 
+
+    $\beta$ 가 기저이므로 $\text{span}(\beta ) = \mathbb{V}$ 이므로 $v \in \mathbb{V} = \text{span}(\beta )$ 이다. 
+
+    $$ v = a_1u_1 + a_2u_2 + \dots + a_nu_n, \enspace v = b_1u_1 + b_2u_2 + \dots + b_nu_n $$
+
+    라고 하면 
+
+    $$ v - v = 0 = (a_1 - b_1)u_1 + (a_2 - b_2)u_2 + \dots + (a_n - b_n)u_n $$
+
+    인데 $\beta$ 가 일차독립이므로 
+
+    $$ a_1 - b_1 = 0, a_2 - b_2 = 0, \dots, a_n - b_n = 0 \iff a_1  = b_1 , a_2  = b_2 , \dots, a_n  = b_n  $$
+
+    이다. ■ 
+
+    
+
 
 
 # 일차독립인 극대 부분집합
-
-
