@@ -531,6 +531,15 @@ C-instruction 의 문법은 `dest = comp;jump` 이다. `comp` 는 ALU 에게 무
 
 - The Jump Specification : `jump` 필드는 이후에 무엇을 할지 지정한다. 두 가지 가능성이 있는데 다음 명령어를 실행하거나, 다른 위치에 있는 명령어를 실행하는 것이다. 후자의 경우 A 레지스터가 위치 주소값을 지니고 있다고 가정한다. 
 
+    `jump` 필드의 세 비트는 다음과 같이 ALU 출력이 특정 조건을 만족할 때 점프를 할지 결정한다. `out` 이 ALU 의 출력을 뜻하고, j1 이 활성화되면 양수 조건이 추가되고 j2 가 활성화되면 $= 0$ 조건이 추가되고 j3 가 활성화되면 음수 조건이 추가된다. 활성화된 조건 중 ALU 의 출력인 `out` 이 하나만 만족해도 점프를 하게 된다.
+
+    ![image](https://user-images.githubusercontent.com/16812446/114166916-48fba800-9969-11eb-8ea5-352bfe6e6998.png)
+
+    마지막 `JMP` 는 무조건 분기를 뜻한다.
+
+### Symbols
+
+
 
 # 5. Computer Architecture
 
