@@ -222,9 +222,9 @@
 
     $$ cf(x) = ca_n x ^{n} + ca _{n-1}x ^{n-1} + \dots + ca_1x + ca_0 $$
 
-    이 벡터공간을 $\mathbb{P}(F)$ 라고 표기한다. 
+    이 벡터공간을 $\mathbb{P}(\mathbb{F})$ 라고 표기한다. 
 
-- 위 예시에서 보인 벡터공간 $\mathbb{P}(F)$ 와 다음 예제에서 보이는 벡터공간은 본질적으로 같다. 
+- 위 예시에서 보인 벡터공간 $\mathbb{P}(\mathbb{F})$ 와 다음 예제에서 보이는 벡터공간은 본질적으로 같다. 
 
 - 예시 
 
@@ -582,7 +582,7 @@
 
     $$ cf(x) = ca_n x ^{n} + ca _{n-1}x ^{n-1} + \dots + ca_1x + ca_0 $$
 
-    와 같이 정의하면 $\mathbb{F}$ 에서 계수를 가져온 모든 다항식 집합은 벡터공간인데, 이 벡터공간을 $\mathbb{P}(F)$ 라고 표기하자. 
+    와 같이 정의하면 $\mathbb{F}$ 에서 계수를 가져온 모든 다항식 집합은 벡터공간인데, 이 벡터공간을 $\mathbb{P}(\mathbb{F})$ 라고 표기하자. 
 
     이때 체 $\mathbb{F}$ 에서 계수를 가져온 모든 다항식 집합 $\mathbb{P}(\mathbb{F} )$ 에 대하여 $\mathbb{P}_n(\mathbb{F} )$ 를 $n$ 이하의 차수를 가진 다항식 집합이라 하면, 부분공간이 됨을 보이자.
 
@@ -1102,7 +1102,73 @@
 
     벡터공간 $\mathbb{V}$ 가 유한집합인 기저를 포함하면 $\mathbb{V}$ 의 모든 기저는 유한집합이며, 같은 개수의 벡터로 이루어져있다.
 
+- 이 정리는 벡터공간의 기저의 기수가 벡터공간의 본질적인 성질임을 말해준다. 그래서 이 정리 덕분에 아래와 같은 차원, 유한차원, 무한차원을 정의할 수 있다.
+
 - 증명
+
+    $\beta$ 가 $\mathbb{V}$ 의 기저이고, $\gamma$ 가 $\text{card}(\gamma ) > \text{card}(\beta )$ 인 $\mathbb{V}$ 의 기저라고 하면, $\exists S \subset \gamma \text{ s.t. } \text{card}(S) = \text{card}(\beta )+1$ 이다. $S$ 는 일차독립이고 $\text{span}(\beta) = \mathbb{V}$ 이므로 정리 1.10 "대체정리(replacement theorem) : $n$ 개의 벡터로 이루어진 집합 $G$ 가 벡터공간 $\mathbb{V}$ 를 생성할 때, $L$ 이 $m$ 개의 일차독립인 벡터로 이루어진 $\mathbb{V}$ 의 부분집합이면 $m \leq n$ 이다." 에 의하여 $\text{card}(S) = \text{card}(\beta ) + 1 \leq \text{card}(\beta )$ 인데, 이는 모순이다. 그러므로 $\text{card}(\gamma) \leq \text{card}(\beta )$ 이다. ▲ 
+
+    같은 논리로 $\text{card}(\beta ) \leq \text{card}(\gamma )$ 를 도출할 수 있다. ▲ 
+
+    그러므로 $\text{card}(\beta ) = \text{card}(\gamma )$ 이다. ■ 
+
+!!! tldr ""
+
+    차원(dimension) : 벡터공간의 기저의 기수이다.
+
+- 벡터공간 $\mathbb{V}$ 의 차원을 $\dim(\mathbb{V} )$ 으로 표기한다.
+
+- 예시 
+
+    지금까지 살펴본 여러가지 벡터공간의 차원은 다음과 같다. 
+
+    $$ \dim(\{0\}) = 0 , \enspace \dim(\mathbb{F} ^{n}) = n , \enspace \dim(\mathbb{M} _{m \times n}(\mathbb{F} )) = mn , \enspace \dim(\mathbb{P} _n(\mathbb{F} )) = n+1 $$
+
+- 동일한 벡터공간이라도 어떤 체 위에 존재하는지에 따라 차원이 달라진다.
+
+    - 예시
+
+        복소수체 $\mathbb{C}$ 에서 복소수 벡터공간의 차원은 $1$ 이고 기저는 $\{1\}$ 이다.
+
+        실수체 $\R$ 에서 복소수 벡터공간의 차원은 $2$ 이고 기저는 $\{1, i\}$ 이다.
+
+!!! tldr ""
+
+    유한차원(finite dimension) : 기저가 유한집합인 벡터공간이다.
+
+- 정리 1.10 "대체정리(replacement theorem) : $n$ 개의 벡터로 이루어진 집합 $G$ 가 벡터공간 $\mathbb{V}$ 를 생성할 때, $L$ 이 $m$ 개의 일차독립인 벡터로 이루어진 $\mathbb{V}$ 의 부분집합이면 $m \leq n$ 이다." 를 차원의 관점에서 다시 말해보면
+
+    "유한차원 벡터공간 $\mathbb{V}$ 에서 $\dim(\mathbb{V} )$ 보다 더 많은 개수의 벡터를 가지는 부분집합은 일차독립이 아니다."
+
+    이다. 왜냐하면 차원보다 큰 기수를 가지는 부분집합은 반드시 기저의 일차결합으로 표현가능하기 때문이다.
+
+- 즉, 유한차원 벡터공간 $\mathbb{V}$ 에서 $\dim(\mathbb{V} )$ 보다 더 많은 벡터를 가지면서 일차독립인 부분집합이 존재하지 않는다.
+
+    $$ \not \exists S \subset \mathbb{V} \text{ s.t. } \text{card}(S) > \dim(\mathbb{V} ) \land S \text{ is linearly independent} $$
+
+!!! tldr ""
+
+    무한차원(infinite dimension) : 기저가 무한집합인 벡터공간이다.
+
+- 예시 
+
+    벡터공간 $\mathbb{P} (\mathbb{F} )$ 는 무한집합 $\{x ^{n} : n \in \N\} = \{1, x, x ^{2}, \dots\}$ 을 기저로 가지므로 무한차원이다. 
+
+!!! tldr "정리 1.10 따름정리 2"
+
+    벡터공간 $\mathbb{V}$ 에 대하여 다음이 성립한다.
+
+    1. $\mathbb{V}$ 의 임의의 유한 생성집합 $S$ 는 $\dim(\mathbb{V} ) \leq \text{card}(S)$ 이고, $\dim(\mathbb{V} ) = \text{card}(S)$ 인 생성집합 $S$ 는 $\mathbb{V}$ 의 기저이다.
+
+    2. $S \subset \mathbb{V}$ 가 일차독립이고 $\text{card}(S) = \dim(\mathbb{V} )$ 이면 기저이다.
+
+    3. $L \subset \mathbb{V}$ 이 일차독립이면 $L \subset \beta$ 인 $\mathbb{V}$ 의 기저 $\beta$ 가 존재한다.
+
+- 명제 3) 은 일차독립인 벡터공간의 부분집합을 확장하여 기저를 만들 수 있음을 말해준다. 
+
+- 증명 
+
+    벡터공간 $\mathbb{V}$ 의 기저를 $\beta$ 라고 하자.
 
 
     
