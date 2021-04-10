@@ -1066,20 +1066,46 @@
 
     또한 $\text{span}(L \cup H) = \mathbb{V}$ 을 만족하는 $n - m$ 개의 벡터로 이루어진 집합 $H \subseteq G$ 이 존재한다.
 
+- 이 정리의 따름정리들은 벡터공간에 관한 모든 사실 중 가장 중요하다.
+
 - 증명 
 
     $m = 0$ 즉, $L = \varnothing$ 일 때 $H = G$ 이면 성립한다. ▲ 
 
     $m \geq 0$ 에 대하여 성립한다고 가정하고 $m + 1$ 에 대하여 성립함을 보이자. $L = \{v_1, v_2, \dots, v _{m+1}\}$ 에 대하여 정리 1.6 따름정리 "$\mathbb{V}$ 가 벡터공간이고 $S_1 \subseteq S_2 \subseteq \mathbb{V}$ 일 때 $S_2$ 이 일차독립이면 $S_1$ 도 일차독립이다." 에 의하여 $\{v_1, v_2, \dots, v _{m}\}$ 은 일차독립이다.
 
-    $m$ 에 대해서는 성립한다고 가정했으므로 집합 $G = \{u_1, u_2, \dots, u _{n-m}\}$  이 존재하여 $\text{span}(\{v_1, v_2, \dots, v _{m}\} \cup G) = \mathbb{V}$ 을 만족한다. 그러므로 스칼라 $a_1, \dots, a_m$ 와 스칼라 $b_1, \dots, b _{n-m}$ 이 존재하여 다음과 같이 벡터 $v _{m+1}$ 도 생성한다. 
+    $m$ 에 대해서는 성립한다고 가정했으므로 집합 $\{u_1, u_2, \dots, u _{n-m}\} \subset G$ 이 존재하여 
+    
+    $$\text{span}(\{v_1, v_2, \dots, v _{m}\} \cup \{u_1, u_2, \dots, u _{n-m}\}) = \mathbb{V}$$ 
+    
+    을 만족한다. 그러므로 스칼라 $a_1, \dots, a_m$ 와 스칼라 $b_1, \dots, b _{n-m}$ 이 존재하여 다음과 같이 벡터 $v _{m+1}$ 도 생성한다. 
 
     $$ a_1v_1 + \dots +a_mv_m + b_1u_1 + \dots + b _{n-m}u _{n-m} = v _{m+1} $$
 
-    이때 $m \leq n$ 인데 $n = m$ 이면 $v _{m+1}$ 이 $v_1, \dots, v_m$ 의 일차결합이 되므로 정리 1.7 "벡터공간 $\mathbb{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbb{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $v _{m+1} \in \text{span}(\{v_1, \dots, v_m\})$ 에서 $L$ 이 일차종속이 되어버린다. 하지만 $L$ 은 일차독립이라고 하였으므로 모순이다. 그러므로 $m \neq n$ 이고 $m < n \iff n \leq m + 1$ 이다.
+    이때 $m \leq n$ 인데 $n = m$ 이면 $v _{m+1}$ 이 $v_1, \dots, v_m$ 의 일차결합이 되므로 정리 1.7 "벡터공간 $\mathbb{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbb{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $v _{m+1} \in \text{span}(\{v_1, \dots, v_m\})$ 에서 $L = \{v_1, \dots, v_m\} \cup \{v _{m+1}\}$ 이 일차종속이 되어버린다. 하지만 $L$ 은 일차독립이라고 하였으므로 모순이다. 그러므로 $m \neq n$ 이고 $m < n \iff m + 1 \leq n$ 이다. ▲ 
 
-- 이 정리의 따름정리들은 벡터공간에 관한 모든 사실 중 가장 중요하다.
+    만약 $b_i$ 들이 모두 $0$ 이면 위와 같은 모순이 또 발생하므로 $b_i$ 중 하나는 반드시 $0$ 이 아니다. 그것을 $b_1$ 이라 하면 
 
+    $$ u_1 = (-b_1 ^{-1}a_1) v_1 + \dots + (-b_1 ^{-1}a_m) v_m + (b_1 ^{-1})v _{m+1} $$
+
+    $$ + (-b_1 ^{-1}b_2) u_2 + \dots + (-b_1 ^{-1}b _{n-m}) u _{n-m} $$
+
+    이다. $H = \{u_2, \dots, u _{n-m}\}$ 이라 하면 $u_1 \in \text{span}(L \cup H)$ 이다. 그러면 $v_1, \dots, v_m, u_2, \dots, u _{n-m} \in \text{span}(L \cup H)$ 이므로 
+
+    $$ \{v_1, \dots, v_m, u_1, \dots, u _{n-m}\} \subseteq \text{span}(L \cup H) $$
+
+    이다. 이 정리가 $m$ 에 대하여 성립한다고 가정했으므로 $\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbb{V}$ 인데, 정리 1.5 "$S$ 를 포함하는 $\mathbb{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다." 에 의하여 $\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbb{V} \subset \text{span}(L \cup H)$ 이다. $\text{span}(L \cup H) \subset \mathbb{V}$ 은 자명하므로 결국 $\text{span}(L \cup H)= \mathbb{V}$ 이다. ▲ 
+
+    그러면 집합 $H \subset \{u_1, u_2, \dots, u _{n-m}\} \subset G$ 에서 $H$ 는 $G$ 의 부분집합이고 $n - (m + 1)$ 개의 벡터를 원소로 가지므로 모든 증명이 끝났다. ■ 
+
+!!! tldr "정리 1.10 따름정리 1"
+
+    벡터공간 $\mathbb{V}$ 가 유한집합인 기저를 포함하면 $\mathbb{V}$ 의 모든 기저는 유한집합이며, 같은 개수의 벡터로 이루어져있다.
+
+- 증명
+
+
+    
 
 
 # 일차독립인 극대 부분집합
