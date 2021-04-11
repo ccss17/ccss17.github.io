@@ -788,7 +788,7 @@
 
 !!! tldr ""
 
-    일차종속(linearly dependent) : 벡터공간 $\mathbb{V}$ 의 부분집합 $S$ 에 대하여 $a_1u_1 + a_2u_2 + \dots + a_nu_n = 0$ 을 만족하는 유한개의 서로 다른 벡터 $u_1, u_2, \dots, u_n \in S$ 와 적어도 하나는 $0$ 이 아닌 스칼라 $a_1, a_2, \dots, a_n$ 이 존재하면 집합 $S$ 를 일차종속이라 한다. 
+    일차종속(linearly dependent) : 벡터공간 $\mathbb{V}$ 의 부분집합 $S$ 에 대하여 $a_1u_1 + a_2u_2 + \dots + a_nu_n = 0$ 을 만족하는 임의의 서로 다른 벡터 $u_1, u_2, \dots, u_n \in S$ 와 적어도 하나는 $0$ 이 아닌 스칼라 $a_1, a_2, \dots, a_n$ 이 존재하면 집합 $S$ 를 일차종속이라 한다. 
 
 - $S$ 의 벡터 또한 일차 종속이다. 
 
@@ -836,7 +836,7 @@
 
 !!! tldr ""
 
-    일차독립(linearly independent) : 벡터공간의 부분집합 $S$ 가 유한개의 서로 다른 벡터 $u_1, u_2, \dots, u_n \in S$ 와 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 $a_1u_1 + a_2u_2 + \dots + a_nu_n = 0$ 이 성립하려면 반드시 $a_1 = a_2 = \dots = a_n = 0$ 이어야 한다면 집합 $S$ 를 일차독립이라 한다. 
+    일차독립(linearly independent) : 벡터공간의 부분집합 $S$ 가 임의의 서로 다른 벡터 $u_1, u_2, \dots, u_n \in S$ 와 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 $a_1u_1 + a_2u_2 + \dots + a_nu_n = 0$ 이 성립하려면 반드시 $a_1 = a_2 = \dots = a_n = 0$ 이어야 한다면 집합 $S$ 를 일차독립이라 한다. 
 
 - 일차독립은 쉽게 말해 벡터공간의 부분집합 $S$ 가 일차종속이 아니면 일차독립이다. 이때 $S$ 의 벡터 또한 일차독립이다.
 
@@ -1420,7 +1420,11 @@
     
     이제 $\mathcal{F}$ 의 임의의 사슬 $\mathcal{C}$ 에 대하여 $\exists U \in \mathcal{F} \text{ s.t. } \mathcal{C} \subset U$ 임을 보일 것이다. 그러면 하우스도르프 극대원리에 의하여 $\mathcal{F}$ 가 극대원소를 가짐을 보일 수 있고 모든 증명이 끝난다.
 
-    $\mathcal{C} = \varnothing$ 이면 
+    $\mathcal{C} = \varnothing$ 일때 $U = S$ 로 정의하면 증명이 끝난다. ▲ 
+
+    $\mathcal{C} \neq \varnothing$ 일때 $U = \bigcup_{}^{}\mathcal{C}$ 로 정의하면, $\mathcal{C} \subset U$ 는 자명하므로 $U \in \mathcal{F}$ 임을 보이면 증명이 끝난다. 즉, $U$ 가 일차독립인 $\mathbb{V}$ 의 부분집합이고 $S$ 를 포함함을 보이는 것이다. $U$ 는 당연히 $S$ 를 포함하는 $\mathbb{V}$ 의 부분집합이므로 일차독립인 것만 보이면 된다.
+
+    $U$ 의 임의의 서로 다른 벡터 $u_1, u_2, \dots, u_n \in U$ 와 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 $a_1u_1 + a_2u_2 +\dots +a_nu_n = 0$ 이라고 하자. 그러면 $u_i \in U \implies \exists A_i \in \mathcal{C} \text{ s.t. } u_i \in A_i$ 이다. $\mathcal{C}$ 는 포함관계에 의한 사슬이므로 $A_i$ 들을 모두 포함하는 $A_k$ 가 존재한다. 그러면 $\forall u_i, u_i \in A_k$ 이다. $A_k \in \mathcal{F}$ 이므로 $A_k$ 는 일차독립이고 따라서 $a_1u_1 + a_2u_2 +\dots +a_nu_n = 0 \implies a_1 = a_2 = \dots = a_n = 0$ 이다. 그러므로 $U$ 는 일차독립이다. ■ 
 
 !!! tldr "정리 1.13 따름정리"
 
