@@ -6,7 +6,7 @@
 
 !!! tldr ""
 
-    선형변환(linear transformation) : $\mathbb{F}$-벡터공간 $\mathbb{V} , \mathbb{W}$ 이 존재할 때 $\forall x, y \in \mathbb{V} , \forall c \in \mathbb{F}$ 에 대하여 다음을 만족하는 함수 $T: \mathbb{V} \to \mathbb{W}$ 를 $\mathbb{V}$ 에서 $\mathbb{W}$ 로 가는 선형변환이라 한다. 
+    선형변환(linear transformation) : $\mathbb{V} , \mathbb{W}$ 이 $\mathbb{F}$-벡터공간이라고 하자. $\forall x, y \in \mathbb{V} , \forall c \in \mathbb{F}$ 에 대하여 다음을 만족하는 함수 $T: \mathbb{V} \to \mathbb{W}$ 를 $\mathbb{V}$ 에서 $\mathbb{W}$ 로 가는 선형변환이라 한다. 
 
     1. $T(x + y) = T(x) + T(y)$
 
@@ -15,6 +15,8 @@
 - 지금까지 벡터공간을 살펴보았는데 이제 벡터공간의 구조를 보존하는 함수를 다룬다. 이런 함수를 선형변환이라고 한다. 
 
     미분연산자나 적분연산자가 선형변환의 대표적인 예시이다. 이런 연산자는 미분방정식과 적분방정식을 특정한 벡터공간에서 정의된 선형변환으로 이해할 수 있게 해준다. 기하학에서의 선형변환은 회전, 대칭, 사영 같은 것들이 있다.
+
+    - $x, y \in \mathbb{V} \implies x+y \in \mathbb{V}$ 인데 $T(x), T(y) \in \mathbb{W} \implies T(x+y) \in \mathbb{W}$ 이므로 $T$ 가 벡터공간의 구조를 보존한다고 하는 것이다. 스칼라곱에 대해서도 마찬가지.
 
 - $\mathbb{F} = \mathbb{Q}$ 이면 2) 는 1) 에서 도출된다. 그러나 일반적으로 1) 과 2) 는 독립된 명제이다.
 
