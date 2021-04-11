@@ -1062,27 +1062,31 @@
 
 !!! tldr "정리 1.10"
 
-    대체정리(replacement theorem) : $n$ 개의 벡터로 이루어진 집합 $G$ 가 벡터공간 $\mathbb{V}$ 를 생성할 때, $L$ 이 $m$ 개의 일차독립인 벡터로 이루어진 $\mathbb{V}$ 의 부분집합이면 $m \leq n$ 이다. 
+    대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbb{V}$ 에 대하여 $\text{span}(G) = \mathbb{V}$ 이고, $L \subset \mathbb{V}$ 이 일차독립이면 다음이 성립한다.
 
-    또한 $\text{span}(L \cup H) = \mathbb{V}$ 을 만족하는 $n - m$ 개의 벡터로 이루어진 집합 $H \subseteq G$ 이 존재한다.
+    1. $\text{card}(L) \leq \text{card}(G)$
+
+    2. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbb{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$
 
 - 이 정리의 따름정리들은 벡터공간에 관한 모든 사실 중 가장 중요하다.
 
 - 증명 
 
-    $m = 0$ 즉, $L = \varnothing$ 일 때 $H = G$ 이면 성립한다. ▲ 
+    $\text{card}(L) = 0$ 즉, $L = \varnothing$ 일 때 $H = G$ 이면 성립한다. ▲ 
 
-    $m \geq 0$ 에 대하여 성립한다고 가정하고 $m + 1$ 에 대하여 성립함을 보이자. $L = \{v_1, v_2, \dots, v _{m+1}\}$ 에 대하여 정리 1.6 따름정리 "$\mathbb{V}$ 가 벡터공간이고 $S_1 \subseteq S_2 \subseteq \mathbb{V}$ 일 때 $S_2$ 이 일차독립이면 $S_1$ 도 일차독립이다." 에 의하여 $\{v_1, v_2, \dots, v _{m}\}$ 은 일차독립이다.
-
-    $m$ 에 대해서는 성립한다고 가정했으므로 집합 $\{u_1, u_2, \dots, u _{n-m}\} \subset G$ 이 존재하여 
+    $\text{card}(L') = m \geq 0$ 에 대하여 성립한다고 가정하고 $\text{card}(L) = m + 1$ 에 대하여 성립함을 보이자. 이때 편의상 $\text{card}(G) = n$ 이라고 하자. 
     
-    $$\text{span}(\{v_1, v_2, \dots, v _{m}\} \cup \{u_1, u_2, \dots, u _{n-m}\}) = \mathbb{V}$$ 
+    $L = \{v_1, v_2, \dots, v _{m+1}\}$ 에 대하여 정리 1.6 따름정리 "$\mathbb{V}$ 가 벡터공간이고 $S_1 \subseteq S_2 \subseteq \mathbb{V}$ 일 때 $S_2$ 이 일차독립이면 $S_1$ 도 일차독립이다." 에 의하여 $L' = \{v_1, v_2, \dots, v _{m}\}$ 은 일차독립이다.
+
+    $m$ 에 대해서는 성립한다고 가정했으므로 집합 $H' = \{u_1, u_2, \dots, u _{n-m}\} \subset G$ 이 존재하여 
+    
+    $$\text{span}(L' \cup H') = \mathbb{V} \tag{1} $$ 
     
     을 만족한다. 그러므로 스칼라 $a_1, \dots, a_m$ 와 스칼라 $b_1, \dots, b _{n-m}$ 이 존재하여 다음과 같이 벡터 $v _{m+1}$ 도 생성한다. 
 
     $$ a_1v_1 + \dots +a_mv_m + b_1u_1 + \dots + b _{n-m}u _{n-m} = v _{m+1} $$
 
-    이때 $m \leq n$ 인데 $n = m$ 이면 $v _{m+1}$ 이 $v_1, \dots, v_m$ 의 일차결합이 되므로 정리 1.7 "벡터공간 $\mathbb{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbb{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $v _{m+1} \in \text{span}(\{v_1, \dots, v_m\})$ 에서 $L = \{v_1, \dots, v_m\} \cup \{v _{m+1}\}$ 이 일차종속이 되어버린다. 하지만 $L$ 은 일차독립이라고 하였으므로 모순이다. 그러므로 $m \neq n$ 이고 $m < n \iff m + 1 \leq n$ 이다. ▲ 
+    $\text{card}(L') \leq \text{card}(G) \iff m \leq n$ 인데 $n = m$ 이면 $v _{m+1}$ 이 $v_1, \dots, v_m$ 의 일차결합이 되므로 정리 1.7 "벡터공간 $\mathbb{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbb{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $v _{m+1} \in \text{span}(L')$ 에서 $L = L' \cup \{v _{m+1}\}$ 이 일차종속이 되어버린다. 하지만 $L$ 은 일차독립이라고 하였으므로 모순이다. 그러므로 $m \neq n$ 이고 $m < n \iff m + 1 \leq n$ 이다. 즉, $\text{card}(L') + 1 = \text{card}(L) \leq \text{card}(G)$ 이 성립한다. ▲ 
 
     만약 $b_i$ 들이 모두 $0$ 이면 위와 같은 모순이 또 발생하므로 $b_i$ 중 하나는 반드시 $0$ 이 아니다. 그것을 $b_1$ 이라 하면 
 
@@ -1094,19 +1098,55 @@
 
     $$ \{v_1, \dots, v_m, u_1, \dots, u _{n-m}\} \subseteq \text{span}(L \cup H) $$
 
-    이다. 이 정리가 $m$ 에 대하여 성립한다고 가정했으므로 $\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbb{V}$ 인데, 정리 1.5 "$S$ 를 포함하는 $\mathbb{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다." 에 의하여 $\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbb{V} \subset \text{span}(L \cup H)$ 이다. $\text{span}(L \cup H) \subset \mathbb{V}$ 은 자명하므로 결국 $\text{span}(L \cup H)= \mathbb{V}$ 이다. ▲ 
+    이다. $(1)$ 에서 $\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbb{V}$ 인데, 정리 1.5 "$S$ 를 포함하는 $\mathbb{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다." 에 의하여 $\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbb{V} \subset \text{span}(L \cup H)$ 이다. $\text{span}(L \cup H) \subset \mathbb{V}$ 은 자명하므로 결국 $\text{span}(L \cup H)= \mathbb{V}$ 이다. ▲ 
 
-    그러면 집합 $H \subset \{u_1, u_2, \dots, u _{n-m}\} \subset G$ 에서 $H$ 는 $G$ 의 부분집합이고 $n - (m + 1)$ 개의 벡터를 원소로 가지므로 모든 증명이 끝났다. ■ 
+    그러면 집합 $H \subset \{u_1, u_2, \dots, u _{n-m}\} \subset G$ 이고 $\text{card}(H) = n - (m + 1) = \text{card}(G) - \text{card}(L)$ 이다. 그러면 수학적 귀납법에 의하여 모든 증명이 끝났다. ■ 
+
+- 이 정리에서 집합 $G$ 를 벡터공간 $\mathbb{V}$ 를 생성하는 극소 생성집합, 즉 기저라고 생각하는 것이 편하다. 왜냐하면 $\mathbb{V}$ 를 생성하는 임의의 생성집합 $G$ 에 대하여 
+
+    $$ \text{card}(L) \leq \text{card}(G) $$
+
+    라는 부등식이 성립해야 하는데, 이 부등식은 어차피 극소 생성집합(기저)인 $G'$ 에 의하여 
+
+    $$ \text{card}(L) \leq \text{card}(G') = \dim(\mathbb{V} ) $$
+
+    로 스케일링되기 때문이다. 그러니까 $\mathbb{V}$ 를 생성하는 집합 $G$ 와 일차독립 $L$ 이 주어졌다고 하자. 그러면 위의 1) 를 만족하므로 
+
+    $$ \text{card}(L) \leq \text{card}(G) $$
+
+    인데 이 1) 는 $\mathbb{V}$ 를 생성하는 $G' \subset G$ 에서도 성립하므로
+    
+    $$ \text{card}(L) \leq \text{card}(G') = \dim(\mathbb{V} ) \leq \text{card}(G) $$
+
+    가 된다. 음.. 하지만 2) 의 경우 $G$ 에서 성립하므로
+
+    $$\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbb{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$$
+
+    인데 $G' \subset G$ 에서도 성립하므로
+
+    $$\exists H' \subset G' \text{ s.t. } \text{span}(L \cup H') = \mathbb{V} \land \text{card}(H') = \text{card}(G') - \text{card}(L)$$
+
+    가 되겠구나. 그러면 $H$ 가 존재한다는 것과 전혀 다른 $H'$ 가 존재한다는 것이니까 연관성을 주장할 수 없어 보이네. 그러면 이 정리의 $G$ 가 기저여야만 한다고 주장하는 것도 타당해보이지는 않고.
+
+    하지만 1) 의 경우에서는 $G$ 보다 더 작은 생성집합에 대하여 부등식이 스케일링되기 때문에 $G$ 를 기저라고 생각하는 게 편하다. 그러면 1) 을 통하여 
+
+    $$ \exists S \subset \mathbb{V}, \text{card}(S) > \dim(\mathbb{V} ) \implies S \text{ is not linearly independent } $$
+
+    라고 말할 수 있다.
 
 !!! tldr "정리 1.10 따름정리 1"
 
-    벡터공간 $\mathbb{V}$ 가 유한집합인 기저를 포함하면 $\mathbb{V}$ 의 모든 기저는 유한집합이며, 같은 개수의 벡터로 이루어져있다.
+    벡터공간 $\mathbb{V}$ 가 유한집합인 기저를 포함하면 $\mathbb{V}$ 의 모든 기저는 유한집합이며, 기수가 같다.
 
 - 이 정리는 벡터공간의 기저의 기수가 벡터공간의 본질적인 성질임을 말해준다. 그래서 이 정리 덕분에 아래와 같은 차원, 유한차원, 무한차원을 정의할 수 있다.
 
 - 증명
 
-    $\beta$ 가 $\mathbb{V}$ 의 기저이고, $\gamma$ 가 $\text{card}(\gamma ) > \text{card}(\beta )$ 인 $\mathbb{V}$ 의 기저라고 하면, $\exists S \subset \gamma \text{ s.t. } \text{card}(S) = \text{card}(\beta )+1$ 이다. $S$ 는 일차독립이고 $\text{span}(\beta) = \mathbb{V}$ 이므로 정리 1.10 "대체정리(replacement theorem) : $n$ 개의 벡터로 이루어진 집합 $G$ 가 벡터공간 $\mathbb{V}$ 를 생성할 때, $L$ 이 $m$ 개의 일차독립인 벡터로 이루어진 $\mathbb{V}$ 의 부분집합이면 $m \leq n$ 이다." 에 의하여 $\text{card}(S) = \text{card}(\beta ) + 1 \leq \text{card}(\beta )$ 인데, 이는 모순이다. 그러므로 $\text{card}(\gamma) \leq \text{card}(\beta )$ 이다. ▲ 
+    $\beta$ 가 $\mathbb{V}$ 의 기저이고, $\gamma$ 가 $\text{card}(\gamma ) > \text{card}(\beta )$ 인 $\mathbb{V}$ 의 기저라고 하면, $\exists S \subset \gamma \text{ s.t. } \text{card}(S) = \text{card}(\beta )+1$ 이다. $S$ 는 일차독립이고 $\text{span}(\beta) = \mathbb{V}$ 이므로 정리 1.10 
+    
+    "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbb{V}$ 에 대하여 $\text{span}(G) = \mathbb{V}$ 이고 $L \subset \mathbb{V}$ 이 일차독립이면 다음이 성립한다. $\text{card}(L) \leq \text{card}(G)$"
+    
+    에 의하여 $\text{card}(S) = \text{card}(\beta ) + 1 \leq \text{card}(\beta )$ 인데, 이는 모순이다. 그러므로 $\text{card}(\gamma) \leq \text{card}(\beta )$ 이다. ▲ 
 
     같은 논리로 $\text{card}(\beta ) \leq \text{card}(\gamma )$ 를 도출할 수 있다. ▲ 
 
@@ -1136,7 +1176,9 @@
 
     유한차원(finite dimension) : 기저가 유한집합인 벡터공간이다.
 
-- 정리 1.10 "대체정리(replacement theorem) : $n$ 개의 벡터로 이루어진 집합 $G$ 가 벡터공간 $\mathbb{V}$ 를 생성할 때, $L$ 이 $m$ 개의 일차독립인 벡터로 이루어진 $\mathbb{V}$ 의 부분집합이면 $m \leq n$ 이다." 를 차원의 관점에서 다시 말해보면
+- 정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbb{V}$ 에 대하여 $\text{span}(G) = \mathbb{V}$ 이고 $L \subset \mathbb{V}$ 이 일차독립이면 다음이 성립한다. 1. $\text{card}(L) \leq \text{card}(G)$ 2. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbb{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$"
+
+    를 차원의 관점에서 다시 말해보면
 
     "유한차원 벡터공간 $\mathbb{V}$ 에서 $\dim(\mathbb{V} )$ 보다 더 많은 개수의 벡터를 가지는 부분집합은 일차독립이 아니다."
 
@@ -1168,10 +1210,66 @@
 
 - 증명 
 
-    벡터공간 $\mathbb{V}$ 의 기저를 $\beta$ 라고 하자.
+    우선 벡터공간 $\mathbb{V}$ 의 기저를 $\beta$ 라고 하면 $\text{card}(\beta ) = \dim(\mathbb{V})$ 이다.
 
+    $\mathbb{V}$ 의 유한 생성집합을 $G$ 라고 하면 정리 1.9 "유한집합 $S$ 가 벡터공간 $\mathbb{V}$ 를 생성하면 $S$ 의 부분집합 중에 $\mathbb{V}$ 의 기저가 존재한다." 에 의하여 $G$ 의 부분집합이자 $\mathbb{V}$ 의 기저인 $H$ 가 존재한다. 정리 1.10 따름정리 1 "벡터공간 $\mathbb{V}$ 가 유한집합인 기저를 포함하면 $\mathbb{V}$ 의 모든 기저는 유한집합이며, 기수가 같다." 에 의하여 $\text{card}(H) = \dim(\mathbb{V} )$ 이다. 따라서 $\dim(\mathbb{V} )\leq \text{card}(G)$ 이고 만약 $\dim(\mathbb{V} ) = \text{card}(G)$ 이면 $G = H$ 으로써 $G$ 는 $\mathbb{V}$ 의 기저이다. ▲ 
 
+    $L \subset \mathbb{V}$ 이 일차독립이고 $\text{card}(L) = \dim(\mathbb{V} )$ 라고 하자. 정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbb{V}$ 에 대하여 $\text{span}(G) = \mathbb{V}$ 이고 $L \subset \mathbb{V}$ 이 일차독립이면 다음이 성립한다. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbb{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$" 에 의하여 
+
+    $$ \exists H \subset \beta  \text{ s.t. } \text{span}(L \cup H) = \mathbb{V} \land \text{card}(H) = \text{card}(\beta) - \text{card}(L)  $$
+
+    인데 $\text{card}(H) = \text{card}(\beta) - \text{card}(L) = \dim(\mathbb{V} ) - \dim(\mathbb{V} ) = 0$ 이다. $\text{card}(H) = 0 \iff H = \varnothing$ 이므로 $\text{span}(L) = \mathbb{V}$ 이고 $L$ 은 일차독립이므로 $L$ 은 $\mathbb{V}$ 의 기저이다. ▲ 
+
+    $L \subset \mathbb{V}$ 가 일차독립이면 정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbb{V}$ 에 대하여 $\text{span}(G) = \mathbb{V}$ 이고 $L \subset \mathbb{V}$ 이 일차독립이면 다음이 성립한다. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbb{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$" 에 의하여 
+
+    $$ \exists H \subset \beta  \text{ s.t. } \text{span}(L \cup H) = \mathbb{V} \land \text{card}(H) = \text{card}(\beta) - \text{card}(L)  $$
+
+    이다. $\text{card}(L \cup H) \leq \text{card}(L) + \text{card}(H) = \text{card}(\beta) = \dim(\mathbb{V} )$ 이다. 1) 은 이미 증명되었으므로 1) 을 사용하면
     
+    $$\dim(\mathbb{V} ) \leq \text{card}(L \cup H) \leq \dim(\mathbb{V} )$$
 
+    이므로 $\text{card}(L \cup H) = \dim(\mathbb{V} )$ 이고, $L \subset L \cup H$ 는 $\mathbb{V}$ 의 기저가 된다. ■ 
+
+- 예시 
+
+    집합 
+
+    $$ \{x ^{2} + 3x-2, 2x ^{2} + 5x - 3, -x ^{2} - 4x + 4\} $$
+
+    는 벡터공간 $\mathbb{P} _2(\R)$ 을 생성하는데 이 벡터공간의 차원은 $3$ 이므로 1) 에 의하여 이 집합은 $\mathbb{P} _2(\R)$ 의 기저이다.
+
+- 예시 
+
+    집합 
+
+    $$ \{(1,0,0,-1), (0,1,0,-1), (0,0,1,-1), (0,0,0,1)\} $$
+
+    은 일차독립인데 $\dim(\R ^{4}) = 4$ 이므로 2) 에 의하여 이 집합은 $\R ^{4}$ 의 기저이다.
+
+!!! tldr ""
+
+    벡터공간의 일차독립 집합을 $D$, 기저의 집합을 $B$, 생성집합을 $S$ 라고 하면 다음이 성립한다. 
+
+    $$ B = D \cap S $$
+
+- 지금까지의 논의를 통하여 이 정리가 성립함을 자명하게 알 수 있다.
+
+!!! tldr "정리 1.11"
+
+    유한차원 $\mathbb{V}$ 의 부분공간 $\mathbb{W}$ 에 대하여 다음이 성립한다.
+    
+    1. $\mathbb{W}$ 는 유한차원이고, $\dim(\mathbb{W} ) \leq \dim(\mathbb{V} )$ 이다.
+
+    2. $\dim(\mathbb{W} ) = \dim(\mathbb{V} ) \implies \mathbb{W} = \mathbb{V}$ 
+
+- 증명 
+
+    $\mathbb{W} = \{0\}$ 이면 $\mathbb{W}$ 는 유한차원이고 $\dim(\mathbb{W} ) = 0 \leq \dim(\mathbb{V} )$ 이다. ▲ 
+
+    $\mathbb{W} \neq \{0\}$ 이면 영이 아닌 벡터 $x_1$ 가 $x_1 \in \mathbb{W}$ 이다. 이때 $\{x_1\}$ 은 일차독립인데 이 집합이 일차독립이 되도록 $\mathbb{W}$ 에서 $x_1, x_2, \dots, x_k$ 를 꺼내서 $\{x_1, \dots, x_k\}$ 를 만들자. $\mathbb{V}$ 의 일차독립인 집합의 기수는 $\dim(\mathbb{V} )$ 와 같거나 작으므로 $k \leq \dim(\mathbb{V} )$ 이다. 이제 이 집합에 $\mathbb{W}$ 의 임의의 벡터를 하나만 더해도 일차종속이 된다. 
+    
+    그러면 정리 1.7 "벡터공간 $\mathbb{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbb{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $\text{span}(\{x_1, \dots, x_k\}) = \mathbb{W}$ 이므로 이는 $\mathbb{W}$ 의 기저이다. 그러므로 $k = \dim(\mathbb{W} ) \leq \dim(\mathbb{V} )$ 이다. ▲ 
+
+    $\dim(\mathbb{W} ) = \dim(\mathbb{V} )$ 이면 $\mathbb{W}$ 의 기저의 기수는 $\dim(\mathbb{V} )$ 이고, 일차독립인 $\mathbb{V}$ 의 부분집합이다.
 
 # 일차독립인 극대 부분집합
