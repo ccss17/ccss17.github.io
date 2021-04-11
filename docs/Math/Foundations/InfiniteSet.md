@@ -2,6 +2,10 @@
 
     [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html) 를 공부하면서 노트정리 한 내용입니다.
 
+!!! note
+
+    아래의 논의의 "순서관계" 란 부분순서관계를 뜻한다.
+
 # 선택공리
 
 !!! tldr ""
@@ -160,7 +164,7 @@
 
 !!! tldr ""
 
-    하우스도르프 극대 원리(Hausdorff maximal principle) : 임의의 순서집합 $X$ 는 극대 사슬을 가진다.
+    하우스도르프 극대 원리(Hausdorff maximal principle) : 임의의 순서집합는 극대 사슬을 가진다.
 
 - 선택공리과 동치인 명제로써 수학의 여러 분야에서 널리 쓰인다.
 

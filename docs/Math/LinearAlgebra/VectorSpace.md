@@ -1172,6 +1172,32 @@
 
         실수체 $\R$ 에서 복소수 벡터공간의 차원은 $2$ 이고 기저는 $\{1, i\}$ 이다.
 
+- 예시 
+
+    벡터공간 $\mathbb{F} ^{5}$ 의 부분공간 
+
+    $$ \mathbb{W} = \{(a_1, a_2, a_3, a_4, a_5) \in \mathbb{F} ^{5} : a_1 + a_3 + a_5 = 0, a_2 = a_4 \} $$
+
+    의 기저는 $\{(-1, 0, 1, 0, 0,), (-1, 0, 0, 0, 1), (0, 1, 0, 1, 0)\}$ 이므로 $\dim(\mathbb{W} ) = 3$ 이다. 
+
+- 예시 
+
+    $n \times n$ 대각행렬 집합 $\mathbb{W}$ 은 $\mathbb{M} _{n \times n}(\mathbb{F} )$ 의 부분공간인데 $\mathbb{W}$ 의 기저는 $\{E ^{11}, E ^{22}, \dots, E ^{nn}\}$ 이다. $E ^{ij}$ 란 $i$ 행 $j$ 열 성분이 $1$ 이고 나머지 성분이 모두 $0$ 인 행렬이다. 
+
+    그러므로 $\dim(\mathbb{W} ) = n$ 이다. 
+
+- 예시 
+
+    $n \times n$ 대칭행렬 집합 $\mathbb{W}$ 는 $\mathbb{M} _{n \times n}(\mathbb{F} )$ 의 부분공간인데, $\mathbb{W}$ 의 기저는 $i$ 행 $j$ 열과 $j$ 행 $i$ 열의 성분만 $1$ 이고 나머지는 $0$ 인 $n \times n$ 행렬 $A ^{ij}$ 에 대하여 
+
+    $$ \{A ^{ij} : 1 \leq i \leq j \leq n\} $$
+
+    이므로 
+
+    $$ \dim(\mathbb{W} ) = n + (n-1) + \dots + 1 = \dfrac{n(n+1)}{2} $$
+
+    이다.
+
 !!! tldr ""
 
     유한차원(finite dimension) : 기저가 유한집합인 벡터공간이다.
@@ -1266,10 +1292,152 @@
 
     $\mathbb{W} = \{0\}$ 이면 $\mathbb{W}$ 는 유한차원이고 $\dim(\mathbb{W} ) = 0 \leq \dim(\mathbb{V} )$ 이다. ▲ 
 
-    $\mathbb{W} \neq \{0\}$ 이면 영이 아닌 벡터 $x_1$ 가 $x_1 \in \mathbb{W}$ 이다. 이때 $\{x_1\}$ 은 일차독립인데 이 집합이 일차독립이 되도록 $\mathbb{W}$ 에서 $x_1, x_2, \dots, x_k$ 를 꺼내서 $\{x_1, \dots, x_k\}$ 를 만들자. $\mathbb{V}$ 의 일차독립인 집합의 기수는 $\dim(\mathbb{V} )$ 와 같거나 작으므로 $k \leq \dim(\mathbb{V} )$ 이다. 이제 이 집합에 $\mathbb{W}$ 의 임의의 벡터를 하나만 더해도 일차종속이 된다. 
+    $\mathbb{W} \neq \{0\}$ 이면 영이 아닌 벡터 $x_1$ 에 대하여 $x_1 \in \mathbb{W}$ 이다. 이때 $\{x_1\}$ 은 일차독립인데 이 집합이 일차독립이 되도록 $\mathbb{W}$ 에서 $x_1, x_2, \dots, x_k$ 를 꺼내서 $\{x_1, \dots, x_k\}$ 를 만들자. $\mathbb{V}$ 의 일차독립인 집합의 기수는 $\dim(\mathbb{V} )$ 와 같거나 작으므로 $k \leq \dim(\mathbb{V} )$ 이다. 이제 이 집합에 $\mathbb{W}$ 의 임의의 벡터를 하나만 더해도 일차종속이 된다. 
     
     그러면 정리 1.7 "벡터공간 $\mathbb{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbb{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $\text{span}(\{x_1, \dots, x_k\}) = \mathbb{W}$ 이므로 이는 $\mathbb{W}$ 의 기저이다. 그러므로 $k = \dim(\mathbb{W} ) \leq \dim(\mathbb{V} )$ 이다. ▲ 
 
-    $\dim(\mathbb{W} ) = \dim(\mathbb{V} )$ 이면 $\mathbb{W}$ 의 기저의 기수는 $\dim(\mathbb{V} )$ 이고, 일차독립인 $\mathbb{V}$ 의 부분집합이다.
+    $\dim(\mathbb{W} ) = \dim(\mathbb{V} )$ 이면 $\mathbb{W}$ 의 기저의 기수는 $\dim(\mathbb{V} )$ 이고, 일차독립인 $\mathbb{V}$ 의 부분집합이다. 그러면 정리 1.10 따름정리 2 "벡터공간 $\mathbb{V}$ 에 대하여 다음이 성립한다. $S \subset \mathbb{V}$ 가 일차독립이고 $\text{card}(S) = \dim(\mathbb{V} )$ 이면 기저이다." 에 의하여 $\mathbb{W}$ 의 기저는 $\mathbb{V}$ 의 기저가 되고, 결국 $\mathbb{W} = \mathbb{V}$ 가 된다. ■ 
+
+- 예시 
+
+    $\R ^{2}$ 은 $2$ 차원 벡터공간이므로 부분공간의 차원은 $0, 1, 2$ 이 될 수 있다. $0$차원 부분공간은 $\{0\}$ 이고, $2$차원 부분공간은 $\R ^{2}$ 이다. $1$차원 부분공간은 벡터 $v \in \R ^{2}$ 와 스칼라 $c \in \mathbb{F}$ 에 대한 집합 $\{c \cdot v : c \in \mathbb{F} \}$ 이다.
+
+    벡터공간 $\R ^{2}$ 의 벡터들을 유클리드 공간의 점으로 대응시키면 이 벡터공간을 기하학적으로 해석할 수 있다. 즉, $0$차원 부분공간을 유클리드 공간의 원점으로, $1$차원 부분공간을 유클리드 공간의 원점을 지나는 직선으로, $2$차원 부분공간을 유클리드 평면 전체로 해석할 수 있다.
+
+- 예시 
+
+    위의 예시와 마찬가지로 $\R ^{3}$ 의 부분공간의 차원은 $0,1,2,3$ 이 될 수 있고 $2$차원인 부분공간은 유클리드 공간에서 평면으로, $3$차원 부분공간을 유클리드 공간 전체로 볼 수 있다.
+
+!!! tldr "정리 1.11 따름정리"
+
+    유한차원 $\mathbb{V}$ 의 벡터공간 $\mathbb{W}$ 에 대하여 $\mathbb{W}$ 의 임의의 기저를 확장하여 $\mathbb{V}$ 의 기저를 얻을 수 있다.
+
+- 증명 
+
+    $\mathbb{W}$ 의 기저를 $S$ 라 하면 $S$ 는 $\mathbb{V}$ 의 일차독립인 부분집합이므로 정리 1.10 따름정리 2 "벡터공간 $\mathbb{V}$ 에 대하여 다음이 성립한다. $L \subset \mathbb{V}$ 이 일차독립이면 $L \subset \beta$ 인 $\mathbb{V}$ 의 기저 $\beta$ 가 존재한다." 에 의하여 $\mathbb{V}$ 의 기저로 확장할 수 있다. ■ 
+
+- 예시 
+
+    체 $\mathbb{F}$ 의 스칼라 $a _{18}, a _{16}, \dots, a_2, a_0 \in \mathbb{F}$ 에 대한 다항식 
+
+    $$ a _{18} x ^{18} + a _{16} x ^{16} + \dots + a _{2} x ^{2} + a_0 $$
+
+    을 원소로 갖는 벡터공간 $\mathbb{W}$ 은 $\mathbb{P} _{18}(\mathbb{F} )$ 의 부분공간이다. $\mathbb{W}$ 의 기저는 $\{1, x ^{2}, \dots, x ^{16}, x ^{18}\}$ 인데 이는 $\mathbb{P} _{18}(\mathbb{F} )$ 의 표준기저 $\{1,x,x ^{2}, \dots, x ^{18}\}$ 의 부분집합이다.
+
+> 라그랑주 보간법 pass. 이해는 다 해서 언제나 정리할 수 있음
 
 # 일차독립인 극대 부분집합
+
+여기에서는 1.6 절의 정리들을 무한차원에서 성립하도록 일반화한다. 이것의 최종 목표는 모든 벡터공간에 기저가 존재함을 보이는 것이다. 이 사실은 무한차원을 다룰 때 중요한데, 왜냐하면 무한차원의 기저를 구체적으로 기술하기란 어렵기 때문이다. 가령 유리수체의 실수 벡터공간의 기저가 어떤 모양인지 상상이 안가지만, 어쨌든 존재하기는 한다. 이제 무한차원으로 일반화를 할텐데 수학적 귀납법을 더 이상 사용할 수 없으므로 그 대신 하우스도르프 극대원리를 사용한다.
+
+!!! note
+
+    아래의 논의는 순서관계를 포함관계로 상정한다.
+
+!!! tldr ""
+
+    극대(maximal) : 집합족 $\mathcal{F}$ 에 대하여 $S \in \mathcal{F}, M \subset S \implies S = M$ 이면 $M$ 을 포함관계에 의한 극대라고 한다.
+
+- 예시 
+
+    집합 $S$ 에 대하여 집합족 $\mathcal{F} = 2 ^{S}$ 을 정의하면 이것의 극대원소는 자명하게 $S$ 이다.
+
+- 예시 
+
+    무한집합 $S$ 에 대하여 $\mathcal{F} = 2 ^{S}$ 을 정의하면 이것의 극대원소는 존재하지 않는다. 
+    
+    $$ \forall M \in \mathcal{F}, \exists s \text{ s.t. } s \in S \land s \not\in M \implies M \cup \{s\} \in 2 ^{S}$$
+
+    이기 때문이다.
+
+!!! tldr ""
+
+    사슬(chain) : 집합족 $\mathcal{C}$ 에 대하여 
+
+    $$ \forall A, B \in \mathcal{C}, A \subset B \lor B \subset A $$
+
+    이면 $\mathcal{C}$ 를 사슬이라 한다. 
+
+- 사슬이란 그 속의 원소가 항상 비교가능한 집합을 뜻한다.
+
+- 예시 
+
+    집합 $A_n = \{1,2,\dots,n\}$ 에 대한 집합족 $\mathcal{C} = \{A_n : n = 1,2,3, \dots\}$ 은 사슬이다.
+
+!!! tldr ""
+
+    하우스도르프 극대원리 : 집합족 $\mathcal{F}$ 의 임의의 사슬 $\mathcal{C}$ 에 대하여 $\exists U \in \mathcal{F} \text{ s.t. } \mathcal{C} \subset U$ 이면 $\mathcal{F}$ 에는 극대원소가 있다. 
+
+- (*보통 하우스도르프 극대원리는 부분순서집합은 극대사슬을 가진다고 표현되지만, 이 책에서는 포함관계에 의한 부분순서관계를 표현하려고 집합족 $\mathcal{F}$ 의 임의의 사슬 $\mathcal{C}$ 에 대하여 $\mathcal{C}$ 을 포함하는 사슬 $U$ 가 존재한다고 말한 것 같다. 이렇게 말하면 집합족 $\mathcal{F}$ 에 포함관계에 의한 부분순서가 부여되고, 하우스도르프 극대원리에 의하여 $\mathcal{F}$ 에 극대원소가 있음을 말할 수 있다.*)
+
+- 하우스도르프 극대원리는 집합족이 특정 조건을 만족하면 극대원소를 가짐을 말해준다.
+
+!!! tldr ""
+
+    벡터공간의 기저는 일차독립인 극대 부분집합이다.
+
+- 증명 
+
+    벡터공간 $\mathbb{V}$ 와 그 기저 $\beta$ 에 대하여 기저의 정의에 따라 $\beta$ 는 일차독립이다. ▲ 
+    
+    $v \in \mathbb{V}, v \not\in \beta$ 이면 $\text{span}(\beta ) = \mathbb{V}$ 에서 정리 1.7 "벡터공간 $\mathbb{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbb{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $\beta \cup \{v\}$ 는 일차종속이므로 $\beta$ 가 일차독립인 극대 부분집합이다. ■ 
+
+!!! tldr "정리 1.12"
+
+    벡터공간 $\mathbb{V}$ 와 $\text{span}(S) = \mathbb{V}$ 인 $S \subset V$ 에 대하여 $\beta$ 가 $S$ 의 일차독립인 극대 부분집합이면 $\beta$ 는 $\mathbb{V}$ 의 기저이다.
+
+- 증명
+
+    $S \not \subset \text{span}(\beta )$ 이면 $v \in S \text{ \textbackslash } \text{span}(\beta )$ 가 존재하여 정리 1.7 "벡터공간 $\mathbb{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbb{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $\beta \cup \{v\}$ 를 일차독립으로 만든다. 이는 $\beta$ 가 일차독립인 극대 부분집합이라는 것에 모순이다.
+
+    그러므로 $S \subset \text{span}(\beta )$ 이다. 이때 $\text{span}(S) = \mathbb{V}$ 이므로 정리 1.5 "벡터공간 $\mathbb{V}$ 의 임의의 부분집합 $S$ 에 대하여 $S$ 를 포함하는 $\mathbb{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다." 에 의하여 $\text{span}(S) = \mathbb{V} \subset \text{span}(\beta )$ 이다. $\text{span}(\beta ) \subset \mathbb{V}$ 은 자명하므로 $\text{span}(\beta ) = \mathbb{V}$ 이다. ■ 
+
+!!! tldr ""
+
+    일차독립인 극대 부분집합(maximal linearly independent subset) : 벡터공간 $\mathbb{V}$ 의 부분집합 $S$ 에 대하여 $S$ 의 부분집합 $B$ 가 다음을 만족하면 일차독립인 극대 부분집합이다.
+
+    1. $B$ 는 일차독립이다. 
+
+    2. $B$ 를 포함하고 일차독립인 $S$ 의 부분집합은 오직 $B$ 이다.
+
+- $S$ 가 $\mathbb{V}$ 를 생성한다면, 이 정의는 정리 1.12 에 의하여 기저의 정의와 같다. 
+
+!!! tldr ""
+
+    벡터공간의 기저와 벡터공간의 일차독립인 극대부분집합은 동치이다. 
+
+- 이 정리는 지금까지의 논의에 의하여 자명하다.
+
+- 이 정리는 모든 벡터공간마다 일차독립인 극대부분집합이 존재함을 보이는 것이 모든 벡터공간이 기저를 가짐을 보이는 것과 같다는 것을 말해준다. 그러므로 지금의 최대 목표인 "모든 벡터공간에 기저가 존재한다" 를 보이기 위하여 바로 다음의 정리를 증명하자.
+
+!!! tldr "정리 1.13"
+
+    벡터공간은 일차독립인 극대 부분집합을 갖는다. 
+
+- 증명 
+
+    벡터공간 $\mathbb{V}$ 과 일차독립인 집합 $S \subset \mathbb{V}$ 에 대하여 $S$ 를 포함하는 일차독립인 $\mathbb{V}$ 의 부분집합을 원소로 갖는 집합족 $\mathcal{F}$ 을 정의하자.
+    
+    이제 $\mathcal{F}$ 의 임의의 사슬 $\mathcal{C}$ 에 대하여 $\exists U \in \mathcal{F} \text{ s.t. } \mathcal{C} \subset U$ 임을 보일 것이다. 그러면 하우스도르프 극대원리에 의하여 $\mathcal{F}$ 가 극대원소를 가짐을 보일 수 있고 모든 증명이 끝난다.
+
+    $\mathcal{C} = \varnothing$ 이면 
+
+!!! tldr "정리 1.13 따름정리"
+
+    벡터공간은 기저를 갖는다.
+
+- 증명 
+
+    정리 1.13 과 정리 "벡터공간의 기저와 벡터공간의 일차독립인 극대부분집합은 동치이다." 에 의하여 증명이 끝난다. ■ 
+
+!!! tldr ""
+
+    무한차원 벡터공간의 모든 기저의 기수가 같다.
+
+- 정리 1.10 따름정리 1 "벡터공간 $\mathbb{V}$ 가 유한집합인 기저를 포함하면 $\mathbb{V}$ 의 모든 기저는 유한집합이며, 기수가 같다." 을 무한차원으로 유추해보면 이 명제를 얻을 수 있다. 
+
+- 이때 무한집합의 기수를 비교할 때에는 이미 잘 알고 있듯이 전단사 사상이 존재함을 보이면 기수가 서로 같다고 말할 수 있다.
+
+- 증명 
+
+    N. Jacobson, Lectures in Abstract Algebra, vol. 2, Linear Algebra, D. Van Nostrand Company, New York, 1953, p. 240 에서 증명을 확인할 수 있다.

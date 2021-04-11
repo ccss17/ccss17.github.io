@@ -101,7 +101,7 @@ Git 과 Github 못다한 이야기(Git Branch, Github pull request, Git Stash, G
 
 ## 조금은 철학적인 이야기
 
-- [수학의 역사](../Math/math.md)
+- [수학의 역사](../Math/MathHistory.md)
 
 - [괴델의 불완전성 정리](../Math/incompleteness.md)
 
