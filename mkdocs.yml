@@ -21,6 +21,7 @@ nav:
       - ZFC axiom system: Math/Foundations/ZFC.md
     - Linear Algebra: 
       - Vector Space: Math/LinearAlgebra/VectorSpace.md
+      - Linear Transformation: Math/LinearAlgebra/LinearTransformation.md
     - 옛날 수학공부 노트정리:
       - 산술/대수학: 
         - 기초 산술: Math/Algebra/arithmetic.md

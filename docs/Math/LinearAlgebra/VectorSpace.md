@@ -1445,3 +1445,31 @@
 - 증명 
 
     N. Jacobson, Lectures in Abstract Algebra, vol. 2, Linear Algebra, D. Van Nostrand Company, New York, 1953, p. 240 에서 증명을 확인할 수 있다.
+
+!!! tldr ""
+
+    무한차원 벡터공간 $\mathbb{V}$ 에 대하여 다음은 동치이다.
+    
+    1. $\beta (\subset \mathbb{V})$ 가 기저이다. 
+
+    2. 영이 아닌 벡터 $v \in \mathbb{V}$ 에 대하여 $v = c_1u_1 + c_2u_2 + \dots + c_nu_n$ 을 만족하는 벡터 $u_1, u_2, \dots, u_n \in \beta$ 와 영이 아닌 스칼라 $c_1, c_2, \dots, c_n$ 이 유일하게 존재한다.
+
+- 이 정리는 정리 1.8 "벡터공간 $\mathbb{V}$ 와 서로 다른 벡터 $u_1, u_2, \dots, u_n \in \mathbb{V}$ 에 대한 집합 $\beta = \{u_1, u_2, \dots, u_n\}$ 가 $\mathbb{V}$ 에 대하여 다음은 동치이다. 1. 집합 $\beta = \{u_1, u_2, \dots, u_n\}$ 가 $\mathbb{V}$ 의 기저이다. 2. 임의의 $v \in \mathbb{V}$ 를 유일한 스칼라 $a_1, a_2, \dots, a_n$ 에 대한 $\beta$ 의 일차결합으로 나타낼 수 있다." 을 무한차원으로 일반화한 것이다.
+
+- 증명 
+
+!!! tldr ""
+
+    벡터공간 $\mathbb{V}$ 의 부분집합 $S_1, S_2$ 에 대하여 $S_1 \subset S_2$ 이고, $S_1$ 이 일차독립이고, $\text{span}(S_2) = \mathbb{V}$ 이면 $S_1 \subset \beta \subset S_2$ 인 기저 $\beta$ 가 존재한다.
+
+- 이 정리는 정리 1.9 "유한집합 $S$ 가 벡터공간 $\mathbb{V}$ 를 생성하면 $S$ 의 부분집합 중에 $\mathbb{V}$ 의 기저가 존재한다." 를 무한차원으로 일반화한 것이다.
+
+- 증명
+
+!!! tldr ""
+
+    벡터공간 $\mathbb{V}$ 의 기저 $\beta$ 와 $\mathbb{V}$ 의 일차독립인 부분집합 $S$ 에 대하여 $S \cup S_1$ 가 $\mathbb{V}$ 의 기저인 $S_1 \subset \beta$ 이 존재한다.
+
+- 이 정리는 정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbb{V}$ 에 대하여 $\text{span}(G) = \mathbb{V}$ 이고, $L \subset \mathbb{V}$ 이 일차독립이면 다음이 성립한다. 1. $\text{card}(L) \leq \text{card}(G)$ 2. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbb{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$" 을 무한차원으로 일반화한 것이다. 
+
+- 증명
