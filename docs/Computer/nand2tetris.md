@@ -539,7 +539,62 @@ C-instruction 의 문법은 `dest = comp;jump` 이다. `comp` 는 ALU 에게 무
 
 ### Symbols
 
+어셈블리 명령어는 상수나 기호(Symbols)를 사용하여 메모리 주소를 표현할 수 있다. 기호는 다음과 같은 3가지 방법으로 표현된다. 
 
+1. Predefined symbols: RAM 주소의 특별한 부분집합은 다음과 같은 Predefined symbols 로 표현된다. 
+
+    - Virtual registers: 어셈블리 프로그래밍을 단순화하기 위하여 `R0` 부터 `R15` 는 각각 RAM 주소의 0 부터 15 를 표현하기 위해 사용된다.
+
+    - Predefined pointers: `SP, LCL, ARG, THIS, THAT` 은 각각 RAM 주소의 `0` 부터 `5` 을 표현한다. 가령 주소 2 는 `R2` 로도 지칭할 수 있고 `ARG` 로도 지칭할 수 있다.
+
+    - I/O pointers: `SCREEN, KBD` 는 각각 RAM 주소의 16384(0x4000) 과 24576(0x6000) 을 지칭한다.
+
+2. Label symbols: `goto` 명령의 label 목적지를 표현하기 위한 사용자정의 기호이다. 이 기호는 `Xxx` 로 정의된다.
+
+3. Variable symbols: `Xxx` 로 정의된 사용자정의 기호는 variable 로 여겨지며 어셈블러가 RAM 주소 16(0x0010) 로 시작되는 주소값을 부여한다.
+
+### Input/Output Handling
+
+Hack 플랫폼은 screen 과 keyboard 에 연결된다. 이 두 IO 장비는 memory map 을 통하여 컴퓨터와 상호작용한다. 가령 스크린에 픽셀을 그리기 위하여 스크린과 연관된 메모리에 바이너리 값을 써야한다는 것이다. 또 키보드의 입력을 받는 것은 키보드와 연관된 메모리의 값을 읽는 것이다. IO 장비와 연관된 메모리 맵은 refresh loop 에 의하여 동기화된다.
+
+- Screen: Hack 컴퓨터는 512 픽셀을 갖는 256 행으로 구성되고 각 픽셀은 검정이나 흰색을 가진다. 스크린의 내용은 8K 메모리 맵으로 이루어지고, 이 맵은 RAM 주소 16384(0x4000) 에서 시작한다. 물리적 스크린의 각 행은 왼쪽 위에서부터 시작하고 이는 32개의 16비트 word 들로 표현된다. 
+
+    즉, 한 행이 512 픽셀로 구성되었지만, 이것이 16비트 word 의 32개 블록으로 구성되었으므로 $r$ 행을 선택하기 위하여 $16384 + r \cdot 32$ 의 주소를 택한다. 그리고 512 픽셀의 열을 택하기 위하여 32개의 블록 중 $c/16$ 을 더하여 해당 블록을 택한다. 따라서 $16384 + r \cdot 32 + c / 16$ 으로 16비트 블록을 택할 수 있다. 이 블록 중에서 16비트 중 한 픽셀을 읽거나 쓰기 위하여 $c\%16$ 비트를 택하면 된다.
+
+    따라서 r 행의 c 열은 $16384+r \cdot 32 + c/16$ 주소의 $c\%16$ 비트로 매핑된다. 스크린에 흑백을 쓰거나 읽기 위하여 이 메모리에 비트를 다음과 같이 쓰면된다. 1 을 쓰면 흑이고 0 을 쓰면 백이다.
+
+    ```assembly
+    @SCREEN
+    M=1
+    ```
+
+    예를 들어서 0 행의 400 열을 읽거나 쓰기 위하여 $16384 + 0 \cdot 32 + 400 / 16 = 16384 + 0 + 25 = 16409$ 의 블록을 택하고, 이 블록은 16비트로 이루어져있으므로 이 블록 중에서 $400 \% 16 = 0$ 번째 픽셀이 비로소 0 행 400 열의 픽셀이 된다.
+
+- Keyboard: Hack 컴퓨터의 키보드는 RAM 의 24576(0x6000) 의 한 word 에 매핑이된다. 키보드의 키를 누르면 이것은 16 비트 ascii 코드가 RAM[24576] 의 16비트 블록에 배핑이된다. 키보드를 누르지 않으면 이 블록에 0 이라는 값이 존재한다. 대표적인 ascii 코드는 다음과 같다.
+
+    ![image](https://user-images.githubusercontent.com/16812446/114293822-52edea00-9ad4-11eb-96cd-c05813e5e4ff.png)
+
+### Syntax Conventions and File Format
+
+- Binary Code Files: 이 파일은 텍스트 라인들로 구성된다. 각 라인은 16 개의 0 또는 1 의 아스키 캐릭터 수열이다. 이 수열이 하나의 기계어를 나타낸다. 전체의 라인은 기계어 프로그램을 나타낸다. n 번째 라인이 n 번째 기계어 코드를 나타낸다. Hack 플랫폼의 기계어 프로그램은 `hack` 이라는 확장자를 가진다. 가령 `Prog.hack` 처럼.
+
+- Assembly Language Files: 어셈블리 프로그램은 `asm` 확장자에 저장된다. 가령 `Prog.asm`. 어셈브릴 프로그램은 instruction 또는 symbol 을 나타내는 텍스트 라인으로 구성된다. instruction 은 A-instruction 혹은 C-instruction 을 뜻한다. symbol 은 label `Symbol` 에 메모리 주소값을 부여한다.
+
+아래의 컨벤션은 어셈블리 프로그램에 적용되는 것들이다.
+
+- Constants and Symbols: Constants 는 음이 아닌 수이다. 사용자 정의 symbol 은 글자, 숫자, "_", ".", "$", ":" 이 될 수 있다.
+
+- Comments: // 은 주석이다.
+
+- White Space: 공백문자는 무시된다.
+
+- Case Conventions: 모든 assembly mnemonics 은 대문자이다. 다른 것들, 즉 사용자 정의 label 과 변수이름같은 것들은 case sensitive 하다. label 에는 대문자를 사용하고 변수 이름에는 lowercase 를 사용한다.
+
+## Perspective
+
+Hack 기계어는 정말 단순한 기계어이다. 다른 컴퓨터들은 더 많은 instruction, 더 많은 데이터 타입, 더 많은 registers, 더 많은 instruction format, 더 많은 주소값 지칭 모드를 가진다. 하지만 Hack 플랫폼에서 지원하지 않는 기능들은 소프트웨어에서 구현될 것이다. 가령 Hack 은 곱셈과 나눗셈을 지원하지 않는데 이는 OS 수준에서 구현될 것이다.
+
+Hack 은 `@xxx` 뒤에 나오는 `D=D+M` 같은 기계어를 지원하는데 이것이 귀찮으므로 `D=D+M[xxx]` 으로 쓸 수 있고 `@yyy` 뒤에 나오는 `GOTO` 대신 `GOTO yyy` 로 쓸 수 있다.
 
 # 5. Computer Architecture
 
