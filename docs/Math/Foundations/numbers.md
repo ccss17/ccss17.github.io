@@ -1277,6 +1277,76 @@
 
 !!! tldr ""
 
+    proper subset : 집합 $T$ 의 부분집합 $S$ 에 대하여 
+
+    $$ S \neq T, S \neq \varnothing $$
+
+    이면 $S$ 를 $T$ 의 proper subset 이라 한다.
+
+- 반대로 $S = T \lor S = \varnothing$ 이면 $S$ 를 improper subset 이라 한다.
+
+!!! tldr ""
+
+    실수 집합과 데데킨트 절단 집합 사이에 전단사 사상이 존재한다.
+
+- 이 증명은 모든 실수가 데데킨드 절단으로 하나도 빠짐없이 대응되고, 그 역도 성립함을 말해준다.
+
+- 증명 (https://proofwiki.org/wiki/Reals_are_Isomorphic_to_Dedekind_Cuts)
+
+    $\R$ 과 데데킨트 절단 집합 $\mathscr{D}$ 사이의 사상 $f:\R \to \mathscr{D}$
+
+    $$ \forall x \in \R: f(x) = \{y \in \mathbb{Q} : y < x\} $$
+
+    이 전단사임을 보이자.
+
+    먼저 $\forall x \in \R : f(x) \in \mathscr{D}$ 를 보일 것이다. $x \in \R$ 라고 하자. 우리는 $f(x)$ 가 
+
+    $$ \forall z \in f(x) : \forall y \in \mathbb{Q} : y < z \implies y \in f(x) \tag{1} $$
+
+    $$ \forall z \in f(x) : \exists y \in f(x) : z < y \tag{2} $$
+
+    인 $\mathbb{Q}$ 의 proper subset 임을 보여야 한다. 우선 $f$ 의 정의에 의하여 $x \not\in f(x) = \{y \in \mathbb{Q} : y < x\}$ 이므로 $f$ 는 $\mathbb{Q}$ 의 proper subset 이다. ▲ 
+
+    $z \in f(x), y \in \mathbb{Q} \text{ s.t. } y < z$ 이라고 하자. 그러면 $f(x)$ 의 정의 에 의하여 $z < x$ 이므로 $y < z < x$ 인데, $f(x)$ 의 정의에 의하여 $y \in f(x)$ 이다. 이로써 $(1)$ 이 증명되었다. ▲ 
+
+    $f(x)$ 의 정의에 의하여 $z < x$ 인데 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+
+    $$ \exists r \in \mathbb{Q} : z < r < x $$
+
+    이다. 그러면 $f(x)$ 의 정의에 의하여 $r \in f(x)$ 이므로 $\exists r \in f(x) : z < r$ 이 되어 $(2)$ 가 증명되었다. ▲ 
+
+    이제 $f$ 가 단사이면서 전사임을 보이면 된다. 
+    
+    먼저 $f: \R \to \mathscr{D}$ 가 단사임을 보이자. $x_1, x_2 \in \R$ 에 대하여 $f(x_1) = f(x_2) \implies x_1 \neq x_2$ 라고 하자. 이때 $x_1 < x_2$ 라고 가정해도 무방하므로 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+
+    $$ \exists r \in \mathbb{Q} : x_1 < r < x_2 $$
+
+    이다. 그러면 $f(x)$ 의 정의에 의하여 $r \not\in f(x_1) \land r \in f(x_2)$ 이다. 이는 $f(x_1) = f(x_2)$ 에 모순이다. 그러므로 $x_1 = x_2$ 이다. 그러므로 $f$ 는 단사이다. ▲ 
+
+    이제 $f: \R \to \mathscr{D}$ 가 전사임을 보일 것이다. 이를 위하여 $L \in \mathscr{D}$ 에 대하여 $\exists  x \in \R \text{ s.t. } f(x) = L$ 임을 보이면 된다. 절단의 정의에 의하여 $L$ 은 $\mathbb{Q}$ 의 proper subset 이고 proper subset 의 정의에 의하여 
+
+    $$ \exists r \in \mathbb{Q} : r \not\in L $$
+
+    이다. 그러면 절단의 정의에 의하여 
+
+    $$ \forall x \in L : \forall y \in \mathbb{Q} : y < x \implies y \in L \tag{3} $$
+
+    이므로 $\forall x \in L : r \not < x \land r \neq x$ 이고, 결국 $\forall x \in L : x < r$ 이다. 그러면 $L$ 은 위로 유계이고 $\sup (L) \leq r$ 이 성립한다. 한편 절단의 상한이 실수에 대응되므로 $\sup (L) \in \R$ 이다. 이때 상한의 정의에 의하여 
+
+    $$ \forall x \in L : x < \sup (L) $$
+
+    이다. 이제 다음을 증명할 것이다. 이것이 증명되면 $L$ 에 대응되는 실수가 $\sup (L)$ 임이 증명되어 $L = f(\sup (L))$ 이므로 공역의 임의의 원소에 대응되는 정의역의 원소가 존재한다고 할 수 있다. 그러면 $f: \R \to \mathscr{D}$ 이 전사임이 증명되고, 이로써 모든 증명이 끝난다.
+
+    $$ \forall x \in \mathbb{Q} : x < \sup (L) \implies x \in L $$
+
+    $x \in \mathbb{Q}$ 가 $x < \sup (L)$ 인데 $x \not\in L$ 이라고 하자. 
+    
+    $x$ 이 $L$ 에 속하지 않으므로 절단의 정의 $(3)$ 에 의하여 $\forall y \in L : x \geq y$ 이다. 그러면 $x$ 은 $L$ 의 상계이고 $x \geq \sup (L)$ 이다. 이는 $x < \sup (L)$ 와 모순이다. ■ 
+
+    - 아.. proofwiki 에서 마지막 부분에 $x$ 를 $r$ 로 써놔서 엄청 헷갈렸네. 아으..
+
+!!! tldr ""
+
     실수의 순서관계 : 두 절단 $\alpha , \beta$ 에 대하여 
 
     $$ \alpha \leq \beta \iff \alpha \subset \beta $$

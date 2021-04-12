@@ -164,7 +164,7 @@
 
 !!! tldr ""
 
-    벡터공간(vector space) 또는 선형공간(linear space) : 체 $\mathbb{F}$ 에서의 벡터공간 $\mathbb{V}$ 는 다음 8가지 조건을 만족하는 두 연산(합과 스칼라곱)을 가지는 집합이다. 
+    벡터공간(vector space) 또는 선형공간(linear space) : 체 $\mathbb{F}$ 에서의 벡터공간 $\mathbb{V}$ 는 다음 8가지 조건을 만족하는 두 연산 합 $+ : \mathbb{V} \times \mathbb{V} \to \mathbb{V}$ 과 스칼라곱 $\times : \mathbb{F} \times \mathbb{V} \to \mathbb{V}$ 을 가지는 집합이다. 
 
     1. $\forall  x, y \in \mathbb{V}, x+y=y+x$ (덧셈의 교환법칙)
 

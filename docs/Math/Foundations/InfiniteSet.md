@@ -1564,6 +1564,10 @@
 
     $$ 2 ^{\aleph_0} = \mathfrak{c} $$
 
+- 증명 (https://proofwiki.org/wiki/Continuum_equals_Cardinality_of_Power_Set_of_Naturals)
+
+    전순서 유리수 집합 $(\mathbb{Q} , \leq )$ 의 데데킨트 절단 집합 $\mathscr{D}$ 에 대하여 $\R$ 과 $\mathscr{D}$ 사이에 전단사 사상 $f: \R \to \mathscr{D}$ 이 존재한다.
+
 - 증명 ($2 ^{\N}$ 를 $\R$ 으로 단사시키는 부분은 내가 만든 증명이라 오류가 있을 수 있음)
 
     먼저 $\R$ 을 $2 ^{\mathbb{Q} }$ 로 단사시킬 수 있는데, 이는 $r \in \R$ 이 $\{q \in \mathbb{Q} : q < r\}$ 로 대응되기 때문이다. 이는 데데킨트 절단으로 실수를 구성하는 개념과도 같다. 그러므로 단사함수 $\R \to 2 ^{\mathbb{Q} }$ 가 존재하는데 $\N \approx \mathbb{Q}$ 이므로 $\R$ 을 $2 ^{\N}$ 으로 단사시킬 수 있다. 그러므로 
