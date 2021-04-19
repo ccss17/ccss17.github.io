@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import glob
-from fnv64basedhash import *
 import hashlib
 
 def hash(w):
