@@ -448,7 +448,7 @@
 
 !!! tldr ""
 
-    사전순서 : 순서집합 $A,B$ 의 곱집합 $A \times B$ 의 두 원소 $(a_1, b_1) \in A \times B, (a_2, b_2) \in A \times B$ 에 대하여 
+    사전순서(lexicographical order) : 순서집합 $A,B$ 의 곱집합 $A \times B$ 의 두 원소 $(a_1, b_1) \in A \times B, (a_2, b_2) \in A \times B$ 에 대하여 
 
     $$ a_1 < a_2 \text{ or } a_1 = a_2, b_1 \leq b_2 $$
 
@@ -1566,73 +1566,34 @@
 
 - 증명 (https://proofwiki.org/wiki/Continuum_equals_Cardinality_of_Power_Set_of_Naturals)
 
-    전순서 유리수 집합 $(\mathbb{Q} , \leq )$ 의 데데킨트 절단 집합 $\mathscr{D}$ 에 대하여 $\R$ 과 $\mathscr{D}$ 사이에 전단사 사상 $f: \R \to \mathscr{D}$ 이 존재한다.
+    정리 "실수 집합과 데데킨트 절단 집합 사이에 전단사 사상이 존재한다." 에 의하여 전단사 사상 
 
-- 증명 ($2 ^{\N}$ 를 $\R$ 으로 단사시키는 부분은 내가 만든 증명이라 오류가 있을 수 있음)
+    $$ f: \R \to \mathscr{D} $$
 
-    먼저 $\R$ 을 $2 ^{\mathbb{Q} }$ 로 단사시킬 수 있는데, 이는 $r \in \R$ 이 $\{q \in \mathbb{Q} : q < r\}$ 로 대응되기 때문이다. 이는 데데킨트 절단으로 실수를 구성하는 개념과도 같다. 그러므로 단사함수 $\R \to 2 ^{\mathbb{Q} }$ 가 존재하는데 $\N \approx \mathbb{Q}$ 이므로 $\R$ 을 $2 ^{\N}$ 으로 단사시킬 수 있다. 그러므로 
+    가 존재한다. 절단은 $\mathbb{Q}$ 의 부분집합이므로 $\mathscr{D} \subset 2 ^{\mathbb{Q}}$ 이고, 곧 $\text{card}(\mathscr{D}) \leq \text{card}(2 ^{\mathbb{Q} })$ 이다. $\mathbb{Q} \approx \mathbb{N}$ 이므로 $2 ^{\N} \approx 2 ^{\mathbb{Q} }$ 이고, $\mathscr{D} \approx \R$ 이므로
 
-    $$ \R \preccurlyeq 2 ^{\N} $$
+    $$ \text{card}(\R) \leq \text{card}(2 ^{\N}) \iff \mathfrak{c} \leq 2 ^{\aleph _0} $$
 
     이다. ▲ 
 
-    이제 $2 ^{\N}$ 을 $\R$ 으로 단사시킬 수 있음을 보이자. 소수는 무한하므로 무한한 소수의 수열을 $p_n$ 이라고 하자. 그리고 $x \in 2 ^{\N}$ 에 오름차순 순서를 부여하면 $x_i \in x$ 를 작은순대로 $x_1, x_2, x_3, \dots$ 와 같이 나타낼 수 있다. 이때 함수 $f: 2 ^{\N} \to \R$ 을
+    사상 $h: \text{Fin}(\N) \times  2 ^{\N} \to \R ^{+}$ 을 
 
-    $$ f(x) = \prod_{i=1}^{|x|} p_i ^{x_i} $$
+    $$ \forall F \in \text{Fin}(\N), A \in 2 ^{\N} : h(F, A) = \sum_{i \in F} 2 ^{i} + \sum_{i \in A} \bigg (\dfrac{1}{2}\bigg ) ^{i} $$
 
-    와 같이 정의하면, 
+    와 같이 정의하자. $\text{Fin}(\N)$ 은 $\N$ 의 모든 유한 부분집합의 집합이다.
 
-    $$ \forall x, y \in 2 ^{\N}, x \neq y \implies f(x) \neq f(y) $$
+    그러면 $(F, A)$ 는 실수 $h(F, A)$ 로 대응된다. 이는 $h$ 가 전사 사상임을 뜻한다. 전사 사상의 정의역과 공역은 
 
-    이다. 따라서 함수 $f$ 는 단사함수가 되고, 그러므로 
+    $$ \text{card}(\text{Fin}(\N) \times 2 ^{\N}) \leq \text{card}(\R ^{+}) $$
 
-    $$ 2 ^{\N} \preccurlyeq \R $$
-    
+    의 관계를 갖는다. 이때 정의에 의하여 $\text{Fin}(\N) \subset 2 ^{\N}$ 이므로 $\text{card}(\text{Fin}(\N)) \leq \text{card}(2 ^{\N})$ 이다. 임의의 무한 기수 $a$ 와 유한 기수 $b$ 에 대하여 $ab = a$ 이므로 $\text{card}(\text{Fin}(\N) \times 2 ^{\N}) = \text{card}(2 ^{\N})$ 이고, $\R ^{+} \subset \R$ 이므로 $\text{card}(\R ^{+}) \leq \text{card}(\R)$ 이다. 그러므로 
+
+    $$ \text{card}(2 ^{\N}) \leq \text{card}(\R) \iff 2 ^{\aleph _0} \leq \mathfrak{c} $$
+
     이다. ▲ 
 
-    그러므로 정리 "베른슈타인의 정리(Schröder–Bernstein theorem) : 집합 $A, B$ 에 대한 다음의 동치명제이다. 1. 단사함수 $f: A \to B, g:B \to A$ 가 존재하면 전단사함수 $h: A \to B$ 가 존재한다. 2. $A \preccurlyeq B \land B \preccurlyeq A \implies A \approx B$" 에 의하여 $2 ^{\N}$ 과 $\R$ 사이의 전단사 함수가 존재하고, 이로써 
+    그러므로 $2 ^{\aleph _0} = \mathfrak{c}$ 이다. ■ 
 
-    $$ 2 ^{\N} \approx \R $$
-
-    이며, 그러므로
-
-    $$ \therefore  2 ^{\aleph  _0} = \mathfrak{c} $$
-
-    이다. ■ 
-
-- $2 ^{\N} \to \R$ 가 단사라는 또 다른 증명 
-
-    $[0, 1] \approx \R$ 이므로 $\R$ 대신 $[0, 1]$ 을 생각하자. 한편 임의의 $r \in [0, 1]$ 은 이진법 무한소수로 표현가능하다. 가령 $\dfrac{1}{2} = 0.1 \bar{0}_2$ 이다. 
-
-    이때 $2 ^{\aleph _0}$ 은 자연수집합 $\N$ 을 $\{0,1\}$ 로 보내는 함수 전체의 집합 $2 ^{\N}$ 의 초한기수로도 생각할 수 있다. 가령 어떤 함수 $f : \N \to \{0,1\}$ 는 다음과 같이 자연수 전체를 $\{0,1\}$ 로 사상시키는 전단사 함수이다.
-
-    $$ 0 \mapsto 1, 1 \mapsto 0, 2 \mapsto 0, 3 \mapsto 1, 4 \mapsto 0, \dots $$
-
-    우리는 이 함수 $f$ 를 다음과 같이 이진법 무한소수라고 생각할 수 있다.
-
-    $$ 0.f(0)f(1)f(2)f(3)f(4)\dots = 0.10010 \dots$$
-
-    그러므로 함수 $f \in 2 ^{\N}$ 를 이진법 무한소수로 표현된 실수 $r \in [0, 1]$ 로 대응시킬 수 있으므로 함수 
-
-    $$ g: 2 ^{\N} \to \R $$
-
-    를 생각할 수 있다. 이때 $g$ 는 단사함수이다. ■ 
-
-    - 근데 $\dfrac{1}{2} = 0.1 \bar{0}_2 = 0.0 \bar{1}_2$ 니까 단사가 아니잖아. 이 증명은 틀린 것 같은데. 뭔가 엄밀함이 떨어지는 것 같다.
-
-- 그러니까 요점은 어차피 $\R$ 을 $2 ^{\N}$ 으로 단사시키는 건 데데킨트 절단에 의하여 자명하니까, 결국 $2 ^{\N}$ 을 $\R$ 으로 단사시키는 아이디어만 떠올리면 되는데, 이는 임의의 자연수 집합을 유일한 실수로 대응시키는 방법을 찾는 것과 같다. 
-
-    그래서 어떤 사람들은 $x \in 2 ^{\N}, r \in [0, 1)$ 를 
-
-    $$ r = \sum_{n \in \N} \dfrac{f(x)}{2 ^{n}} $$
-
-    으로 대응시키고, 어떤 사람은 $x \in 2 ^{\N}$ 을 수열 $x$ 로 정의된 소수로 생각하여 실수 
-
-    $$ r = \sum \dfrac{x(n)}{3 ^{n+1}} \in [0, 1] $$
-
-    로 대응시키더라구.
-
-    그래서 나도 위의 증명에서 자연수 집합을 괴델수로 만들어서 실수에 대응시키려 했는데 이게 올바른 증명인지는 모르겠네.
 
 # 서수와 기수
 
