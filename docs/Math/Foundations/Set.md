@@ -866,37 +866,13 @@
 
 !!! tldr ""
 
-    역함수 : 함수 $f: X \to Y$ 에 대하여 
+    역함수(inverse function) : 함수 $f: X \to Y$ 에 대하여 
     
     $$ g \circ f = 1 _{X}, f \circ g = 1 _{Y} $$
     
     인 $g: Y \to X$ 가 존재하면 이를 $f$ 의 역함수라 한다.
 
-- 역함수는 유일하다. 
-
-    - 증명 
-
-        $g$ 와 $h$ 가 $f$ 의 역함수라면 
-        
-        $$ g = 1 _{X} \circ g = (h \circ f) \circ g = h \circ (f \circ g) = h \circ 1 _{Y} = h \tag{1} $$
-
-        가 된다.
-
 - $f$ 의 역함수 $g$ 를 $f ^{-1} : Y \to X$ 로 표기한다.
-
-- 함수 $f: X \to Y$ 가 역함수를 가지면 전단사함수이다. 
-
-    - 증명 
-
-        다음 두 정리 
-
-        함수 $f: X \to Y$ 에 대하여 다음은 동치이다. "$f$ 는 전사함수이다. $\iff$ $f \circ g = 1 _{Y}$ 를 만족하는 함수 $g: Y \to X$ 가 존재한다."
-
-        함수 $f: X \to Y$ 에 대하여 다음은 동치이다. "$f$ 는 단사함수이다. $\iff$ $g \circ f = 1 _{X}$ 를 만족하는 함수 $g: Y \to X$ 가 존재한다."
-
-        에 의하여 증명이 된다.
-
-- 함수 $f: X \to Y$ 가 전단사 함수이면 $h \circ f = 1 _{X}$ 인 $h: Y \to X$ 와 $f \circ g = 1 _{Y}$ 인 $g: Y \to X$ 가 존재하는데, $(1)$ 에 의하여 $g = h$ 가 되어 $f$ 의 역함수가 된다. 
 
 - 예시 
 
@@ -909,6 +885,28 @@
     $$ g(n) = 2n-1, g(-n) = 2n $$
 
     가 된다. 
+
+!!! tldr ""
+
+    역함수는 유일하다. 
+
+- 증명 
+
+    $g$ 와 $h$ 가 $f$ 의 역함수라면 
+    
+    $$ g = 1 _{X} \circ g = (h \circ f) \circ g = h \circ (f \circ g) = h \circ 1 _{Y} = h \tag{1} $$
+
+    가 된다.
+
+!!! tldr ""
+
+    함수가 역함수를 가지면 그 함수는 전단사함수이다. 
+
+- 증명 
+
+    [정리 1.2.2](#5869db153) 와 [정리 1.2.3](#d9b0737d6) 에 의하여 증명이 된다.
+
+- 함수 $f: X \to Y$ 가 전단사 함수이면 $h \circ f = 1 _{X}$ 인 $h: Y \to X$ 와 $f \circ g = 1 _{Y}$ 인 $g: Y \to X$ 가 존재하는데, $(1)$ 에 의하여 $g = h$ 가 되어 $f$ 의 역함수가 된다. 
 
 - 함수 $f: X \to Y$ 와 $A \subset X, B \subset Y$ 에 대하여 
 
@@ -1578,69 +1576,69 @@
 
     위로 유계(bounded from above) : 순서집합의 부분집합이 상계를 가지면 이 집합을 위로 유계라고 한다.
 
-- 정리 
+!!! tldr ""
 
     정수집합 $\Z$ 과 $\Z$ 의 순서관계 $\leq$ 에 대하여
     
     $\emptyset \subset S \subseteq \Z$ 인 집합 $S$ 가 $(\Z, \leq )$ 에서 위로 유계라면 $S$ 는 가장 큰 원소를 갖는다.
 
-    - 증명 
+- 증명 
 
-        $S$ 가 위로 유계이므로 $\exists M \in \Z: \forall s \in S: s \leq M$ 이다. 즉, 모든 $S$ 의 원소 $s$ 에 대하여 적당한 정수 $M$ 이 존재하여 항상 $s \leq M$ 라는 것이다.
+    $S$ 가 위로 유계이므로 $\exists M \in \Z: \forall s \in S: s \leq M$ 이다. 즉, 모든 $S$ 의 원소 $s$ 에 대하여 적당한 정수 $M$ 이 존재하여 항상 $s \leq M$ 라는 것이다.
 
-        그러므로 $\forall s \in S: 0 \leq M - s$ 이다. 그러면 집합 $T$ 를 이렇게 정의해보자.
+    그러므로 $\forall s \in S: 0 \leq M - s$ 이다. 그러면 집합 $T$ 를 이렇게 정의해보자.
 
-        $$ T = \{M - s : s \in S\} \subseteq \mathbb{N} $$
+    $$ T = \{M - s : s \in S\} \subseteq \mathbb{N} $$
 
-        그러면 [Well-Ordering Principle](https://proofwiki.org/wiki/Well-Ordering_Principle) 에 의하여 $T$ 는 가장 작은 원소를 갖는다. 그것을 $b _{T} \in T$ 라고 하자.
+    그러면 [Well-Ordering Principle](https://proofwiki.org/wiki/Well-Ordering_Principle) 에 의하여 $T$ 는 가장 작은 원소를 갖는다. 그것을 $b _{T} \in T$ 라고 하자.
 
-        > **Well-Ordering Principle 구체화 필요**
+    > **Well-Ordering Principle 구체화 필요**
 
-        그렇다면 
+    그렇다면 
 
-        $$ (\forall s \in S: b _{T} \leq M - s) \land (\exists g _{S} \in S:b _{T} = M - g _{S}) $$
+    $$ (\forall s \in S: b _{T} \leq M - s) \land (\exists g _{S} \in S:b _{T} = M - g _{S}) $$
 
-        이다. 즉, $S$ 의 모든 원소 $s$ 에 대하여 $M-s$ 는 $b _{T}$ 와 같거나 크고, $S$ 의 원소 $g _{S}$ 가 존재하여 $b _{T} = M - g _{S}$ 가 된다는 것이다.
+    이다. 즉, $S$ 의 모든 원소 $s$ 에 대하여 $M-s$ 는 $b _{T}$ 와 같거나 크고, $S$ 의 원소 $g _{S}$ 가 존재하여 $b _{T} = M - g _{S}$ 가 된다는 것이다.
 
-        그러므로 
+    그러므로 
 
-        $$ \forall s \in S : b _{T} \leq M - s $$
+    $$ \forall s \in S : b _{T} \leq M - s $$
 
-        $$ \iff  \forall s \in S : M - g _{S} \leq M - s $$
+    $$ \iff  \forall s \in S : M - g _{S} \leq M - s $$
 
-        $$ \iff  \forall s \in S : - g _{S} \leq - s $$
+    $$ \iff  \forall s \in S : - g _{S} \leq - s $$
 
-        $$ \iff  \forall s \in S : g _{S} \geq s $$
+    $$ \iff  \forall s \in S : g _{S} \geq s $$
 
-        $$ \iff g _{S} \in S \land (\forall s \in S : g _{S} \geq s ) $$
+    $$ \iff g _{S} \in S \land (\forall s \in S : g _{S} \geq s ) $$
 
-        이다. 즉, $S$ 의 모든 원소 $s$ 보다 큰 원소 $g _{S}$ 가 존재한다는 것이다.
+    이다. 즉, $S$ 의 모든 원소 $s$ 보다 큰 원소 $g _{S}$ 가 존재한다는 것이다.
 
-        그러므로 $S$ 의 가장 큰 원소 $g _{S}$ 가 존재한다.
+    그러므로 $S$ 의 가장 큰 원소 $g _{S}$ 가 존재한다.
 
 !!! tldr ""
 
     위로 무계(unbounded from above) : 순서집합 $(S, \leq )$ 의 부분집합 $T \subseteq S$ 이 위로 유계가 아니면 위로 무계이다.
 
-- 정리 
-
+!!! tldr ""
+    
     $x \in \mathbb{R}$ 이 $x > 1$ 일 때 집합 $S = \{x ^{n}:n \in \mathbb{N}\}$ 은 위로 무계 집합이다.
 
-    - 증명 
+- 증명 
 
-        $S$ 가 위로 유계라고 하자. 그러면 $S$ 는 상한 $B = \sup S$ 를 갖는다.
+    $S$ 가 위로 유계라고 하자. 그러면 $S$ 는 상한 $B = \sup S$ 를 갖는다.
 
-        $x > 1$ 이므로 $\dfrac{x}{B} > \dfrac{1}{B}$ 에서 $\dfrac{B}{x} < B$ 이다.
+    $x > 1$ 이므로 $\dfrac{x}{B} > \dfrac{1}{B}$ 에서 $\dfrac{B}{x} < B$ 이다.
 
-        $B$ 가 최소상계, 즉 상한인데도 $\dfrac{B}{x} < B$ 이므로 $\dfrac{B}{x}$ 는 상계가 될 수 없다. 그러므로 
+    $B$ 가 최소상계, 즉 상한인데도 $\dfrac{B}{x} < B$ 이므로 $\dfrac{B}{x}$ 는 상계가 될 수 없다. 그러므로 
 
-        $$ \exists n \in \mathbb{N}: x ^{n} > \dfrac{B}{x} \implies x ^{n+1} > B $$
+    $$ \exists n \in \mathbb{N}: x ^{n} > \dfrac{B}{x} \implies x ^{n+1} > B $$
 
-        이다. 즉, $\dfrac{B}{x}$ 가 상계가 아니므로 와 적당한 자연수 $n$ 에 대한 $x ^{n}$ 이 존재하여 $x ^{n} > \dfrac{B}{x}$ 인데, 이는 곧 $x ^{n+1} > B$ 이 된다. 그런데 $B$ 를 최소상계라고 했으므로 이는 모순이다.
+    이다. 즉, $\dfrac{B}{x}$ 가 상계가 아니므로 와 적당한 자연수 $n$ 에 대한 $x ^{n}$ 이 존재하여 $x ^{n} > \dfrac{B}{x}$ 인데, 이는 곧 $x ^{n+1} > B$ 이 된다. 그런데 $B$ 를 최소상계라고 했으므로 이는 모순이다.
 
-        그러므로 $B$ 는 상계가 아니다. 
+    그러므로 $B$ 는 상계가 아니다. 
 
-        이로써 $S$ 가 위로 유계라는 가정 또한 모순이다. 그러므로 $S$ 는 위로 무계 집합이다.
+    이로써 $S$ 가 위로 유계라는 가정 또한 모순이다. 그러므로 $S$ 는 위로 무계 집합이다.
 
 !!! tldr ""
 

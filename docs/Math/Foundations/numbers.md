@@ -94,6 +94,14 @@
 
     이다. 그렇다면 조건 $(1)$ 를 모든 자연수가 만족한다는 것이다. 그러므로 증명이 끝났다. 
 
+!!! tldr ""
+
+    $$ n \in \N, x \in n \implies x \subset n $$
+
+- 증명 
+
+    (위에서 증명되었다.)
+
 !!! tldr "정리 2.1.2"
 
     집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 
@@ -456,9 +464,9 @@
 
 - 증명 
 
-    집합 $A$ 의 상계 전체의 집합을 $B$ 라 두면, 가정에 의하여 $B \neq \varnothing$ 이고 정리 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다." 에 의하여 $B$ 는 최소 원소 $k \in \N$ 를 가진다. $\forall n \in A, n \leq k$ 이므로 이므로 $k \in A$ 임을 보이면 $k$ 가 $A$ 의 최대원소임이 증명된다.
+    집합 $A$ 의 상계 전체의 집합을 $B$ 라 두면, 가정에 의하여 $B \neq \varnothing$ 이고 [정리 2.1.4 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다."](#5efd87f3f)  에 의하여 $B$ 는 최소 원소 $k \in \N$ 를 가진다. $\forall n \in A, n \leq k$ 이므로 이므로 $k \in A$ 임을 보이면 $k$ 가 $A$ 의 최대원소임이 증명된다.
 
-    $k \not \in A$ 라고 가정하자. 그러면 $n \in A$ 을 하나 잡았을 때 $k > n \geq 0$ 이고 따라서 정리 "$n \in \N \implies n = 0 \lor (\exists m \in \N, n = m ^{+})$" 에 의하여 $k = s ^{+}$ 이다. 
+    $k \not \in A$ 라고 가정하자. 그러면 $n \in A$ 을 하나 잡았을 때 $k > n \geq 0$ 이고 따라서 [2.7](#11d0778c6) 에 의하여 $k = s ^{+}$ 이다. 
 
     만약 $s \not \in B$ 이면 $s < t$ 인 $t \in A$ 가 존재(**이해 안되는 부분**)하고 
 
@@ -498,9 +506,9 @@
 
     $$ X = \{l \in \N, m+l \geq n\} $$
 
-    라 두면 $n \in X \implies X \neq \varnothing$ 이다. 따라서 정리 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다." 에 의하여 $X$ 는 최소 원소 $k \in X$ 를 가지는데, $n = m+k$ 를 증명하면 된다. 
+    라 두면 $n \in X \implies X \neq \varnothing$ 이다. 따라서 [정리 2.1.4 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다."](#5efd87f3f) 에 의하여 $X$ 는 최소 원소 $k \in X$ 를 가지는데, $n = m+k$ 를 증명하면 된다. 
 
-    먼저 $m+k>n$ 라고 가정하자. (*이는 $n = m+k$ 를 만족하는 $k$ 가 존재하지 않는다고 가정하는 것이다. 그러므로 이 가정으로부터 모순이 도출된다면 $k$ 는 존재한다는 것이 증명된다.*) $k=0$ 이면 $m>n$ 이 가정 $n \geq m$ 에 위배되므로 $k \neq 0$ 이고 정리 "$n \in \N \implies n = 0 \lor (\exists m \in \N, n = m ^{+})$" 에 의하여 $s \in \N, k = s ^{+}$ 이다. 그러면 
+    먼저 $m+k>n$ 라고 가정하자. (*이는 $n = m+k$ 를 만족하는 $k$ 가 존재하지 않는다고 가정하는 것이다. 그러므로 이 가정으로부터 모순이 도출된다면 $k$ 는 존재한다는 것이 증명된다.*) $k=0$ 이면 $m>n$ 이 가정 $n \geq m$ 에 위배되므로 $k \neq 0$ 이고 [2.7](#11d0778c6) 에 의하여 $s \in \N, k = s ^{+}$ 이다. 그러면 
 
     $$ (m + s) ^{+} = m + s ^{+} = m + k > n $$
 
@@ -546,11 +554,11 @@
 
 - 존재성 증명 
 
-    집합 $P = \{k \in \N:mk \leq l\}$ 는 $1 \in P$ 이므로 $P \neq \varnothing$ 이다. 또한 $\forall k \in P, k \leq mk \leq l$ 이므로 $P$ 는 위로 유계이다. 그러므로 정리 "위로 유계이며 비어있지 않은 자연수들의 집합 $A \subset \N$ 는 최대 원소를 가진다." 에 의하여 $P$ 는 최대원소 $n$ 을 가진다. 그러면 
+    집합 $P = \{k \in \N:mk \leq l\}$ 는 $1 \in P$ 이므로 $P \neq \varnothing$ 이다. 또한 $\forall k \in P, k \leq mk \leq l$ 이므로 $P$ 는 위로 유계이다. 그러므로 [따름정리 2.1.6 "위로 유계이며 비어있지 않은 자연수들의 집합 $A \subset \N$ 는 최대 원소를 가진다."](#749829205) 에 의하여 $P$ 는 최대원소 $n$ 을 가진다. 그러면 
 
     $$ mn \leq l < mn ^{+} = mn + m $$
 
-    이므로 (*이렇게 되는 것은 매우 간단한데, $l \geq mn ^{+}$ 가 성립한다면 $n$ 이 최대원소라는 가정에 모순이기 때문이다.*) 정리 "$m,n \in \N$ 에 대하여 $n \geq m$ 이면 $n=m+k$ 를 만족하는 자연수 $k \in \N$ 가 유일하게 존재한다." 에 의하여 
+    이므로 (*이렇게 되는 것은 매우 간단한데, $l \geq mn ^{+}$ 가 성립한다면 $n$ 이 최대원소라는 가정에 모순이기 때문이다.*) [정리 2.1.7 "$m,n \in \N$ 에 대하여 $n \geq m$ 이면 $n=m+k$ 를 만족하는 자연수 $k \in \N$ 가 유일하게 존재한다."](#3bc9769c2) 에 의하여 
 
     $$ l = mn + r $$
 
@@ -636,11 +644,7 @@
 
     $$ m+n' = n + m', k+l'=l+k' $$
 
-    인데 정리 
-
-    "$\forall n,m,k \in \N, n = m + k \to n \geq m$ 이고, 역으로 두 자연수 $m,n \in \N$ 에 대하여 $n \geq m$ 이면 $n=m+k$ 를 만족하는 자연수 $k \in \N$ 가 유일하게 존재한다."
-
-    에 의하여 
+    인데 [정리 2.1.2 "$\forall n,m,k \in \N, n = m + k \to n \geq m$ 이고, 역으로 두 자연수 $m,n \in \N$ 에 대하여 $n \geq m$ 이면 $n=m+k$ 를 만족하는 자연수 $k \in \N$ 가 유일하게 존재한다."](#e4dca26d8) 에 의하여 
 
     $$ m+l \geq n+k \iff m'+l' \geq n'+k' $$
 
@@ -1005,15 +1009,7 @@
 
 - 증명 
 
-    임의의 순서체 $F$ 는 더하기와 곱하기의 항등원 $0$ 과 $1$ 을 가진다. 정리
-
-    "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 
-
-    $$ \gamma (0) = a, \qquad \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n)) $$
-
-    을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다."
-
-    에 의하여 성질 
+    임의의 순서체 $F$ 는 더하기와 곱하기의 항등원 $0$ 과 $1$ 을 가진다. [정리 2.1.2 "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 $\gamma (0) = a, \qquad \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$ 을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다."](#e4dca26d8) 에 의하여 성질 
 
     $$ \gamma (0) = 0 $$
 
@@ -1213,7 +1209,7 @@
 
     $q < p \in \alpha$ 일 때 $q \leq 0 \to q \in \alpha$ 이고, $0 < q < p \land p ^{2} < 2 \to q ^{2} < 2$ 이므로 $q \in \alpha$ 이다. 이로써 절단의 조건 2) 를 만족한다. 
 
-    $p \in \alpha$ 에 대하여 $p \leq 0 \to p < 1 \in \alpha$ 이다. 한편 $0 < p, p ^{2} < 2$ 이면 정리 "유리수체는 아르키메데스의 성질을 만족한다." 를 적용하여 
+    $p \in \alpha$ 에 대하여 $p \leq 0 \to p < 1 \in \alpha$ 이다. 한편 $0 < p, p ^{2} < 2$ 이면 [정리 2.2.5 "유리수체는 아르키메데스의 성질을 만족한다."](#225d37510) 를 적용하여 
     
     $$\dfrac{1}{n}(2p+1) < 2 - p ^{2}$$ 
     
@@ -1303,7 +1299,7 @@
 
     $z \in f(x), y \in \mathbb{Q} \text{ s.t. } y < z$ 이라고 하자. 그러면 $f(x)$ 의 정의 에 의하여 $z < x$ 이므로 $y < z < x$ 인데, $f(x)$ 의 정의에 의하여 $y \in f(x)$ 이다. 이로써 $(1)$ 이 증명되었다. ▲ 
 
-    $f(x)$ 의 정의에 의하여 $z < x$ 인데 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+    $f(x)$ 의 정의에 의하여 $z < x$ 인데 [정리 2.5.2 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다."](#849201a15) 에 의하여 
 
     $$ \exists r \in \mathbb{Q} : z < r < x $$
 
@@ -1311,7 +1307,7 @@
 
     이제 $f$ 가 단사이면서 전사임을 보이면 된다. 
     
-    먼저 $f: \R \to \mathscr{D}$ 가 단사임을 보이자. $x_1, x_2 \in \R$ 에 대하여 $f(x_1) = f(x_2) \implies x_1 \neq x_2$ 라고 하자. 이때 $x_1 < x_2$ 라고 가정해도 무방하므로 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+    먼저 $f: \R \to \mathscr{D}$ 가 단사임을 보이자. $x_1, x_2 \in \R$ 에 대하여 $f(x_1) = f(x_2) \implies x_1 \neq x_2$ 라고 하자. 이때 $x_1 < x_2$ 라고 가정해도 무방하므로 [정리 2.5.2 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다."](#849201a15) 에 의하여 
 
     $$ \exists r \in \mathbb{Q} : x_1 < r < x_2 $$
 
@@ -1403,9 +1399,7 @@
     
     $$\delta < \alpha$$
     
-    와 같이 두자. 그러면 $\delta \subsetneq \alpha$ 이므로 유리수 $r \in \alpha \text{ \textbackslash }\delta$ 가 존재한다. 이때 $r \in \alpha$ 로부터 $r \in \beta$ 인 $\beta \in A$ 가 존재한다. 그렇다면 $r \in \beta \land r \not\in \delta \implies \beta \not \leq \delta$ 이고 정리 
-
-    "$\forall \alpha , \beta \in \R$ 에 대하여 다음 중 한 명제만 성립한다. $\alpha > \beta ,  \alpha = \beta ,  \alpha < \beta$"
+    와 같이 두자. 그러면 $\delta \subsetneq \alpha$ 이므로 유리수 $r \in \alpha \text{ \textbackslash }\delta$ 가 존재한다. 이때 $r \in \alpha$ 로부터 $r \in \beta$ 인 $\beta \in A$ 가 존재한다. 그렇다면 $r \in \beta \land r \not\in \delta \implies \beta \not \leq \delta$ 이고 [정리 2.3.1 "$\forall \alpha , \beta \in \R$ 에 대하여 다음 중 한 명제만 성립한다. $\alpha > \beta ,  \alpha = \beta ,  \alpha < \beta$"](#0cca38690)
 
     에 의하여 $\delta < \beta$ 이다. 그런데 $\beta \in A$ 이므로 $\delta$ 는 자명하게 $A$ 의 최소상계가 아니다. 이는 가정 "$\delta$ 가 최소상계이다" 에 모순이므로 $\delta$ 가 $A$ 의 최소상계라면 
     
@@ -1527,11 +1521,11 @@
 
         $$ A = \{n \in \mathbb{Z} : nt \in \alpha \} $$
 
-        라 두자. 이때 $A$ 가 위로 유계가 아니라고 가정하자. (*하지만 집합 $A$ 의 정수 $n$ 는 절단 $\alpha$ 에 $nt$ 가 속할 때 정의되므로 $n$ 에 상계가 있을 것으로 보인다.*) 그러면 정리 "유리수체는 아르키메데스의 성질을 만족한다." 에 의하여 $\forall q \in \mathbb{Q}, q < mt$ 인 $m \in \N$ 이 존재한다. 그런데 $A$ 가 위로 무계라고 가정하였으므로 $m$ 은 $A$ 의 상계가 아니고, $m < n$ 인 $n \in A$ 이 존재한다. 결국 $q < nt$ 이고, $nt \in \alpha$ 이므로 
+        라 두자. 이때 $A$ 가 위로 유계가 아니라고 가정하자. (*하지만 집합 $A$ 의 정수 $n$ 는 절단 $\alpha$ 에 $nt$ 가 속할 때 정의되므로 $n$ 에 상계가 있을 것으로 보인다.*) 그러면 [정리 2.2.5 "유리수체는 아르키메데스의 성질을 만족한다."](#225d37510) 에 의하여 $\forall q \in \mathbb{Q}, q < mt$ 인 $m \in \N$ 이 존재한다. 그런데 $A$ 가 위로 무계라고 가정하였으므로 $m$ 은 $A$ 의 상계가 아니고, $m < n$ 인 $n \in A$ 이 존재한다. 결국 $q < nt$ 이고, $nt \in \alpha$ 이므로 
         
         $$\forall q \in \mathbb{Q}, q \in \alpha \implies \alpha = \mathbb{Q}$$
 
-        가 되어 모순이다. 그러므로 $A$ 는 위로 유계이고, 정리 "위로 유계이며 비어있지 않은 자연수들의 집합 $A \subset \N$ 는 최대 원소를 가진다." 에 의하여 즉, $n_0t \in \alpha \land (n_0+1)t \not\in \alpha$ 이다. 이제 
+        가 되어 모순이다. 그러므로 $A$ 는 위로 유계이고, [따름정리 2.1.6 "위로 유계이며 비어있지 않은 자연수들의 집합 $A \subset \N$ 는 최대 원소를 가진다."](#749829205) 에 의하여 즉, $n_0t \in \alpha \land (n_0+1)t \not\in \alpha$ 이다. 이제 
 
         $$ r = s - n_0 t = -(n_0 + 2)t $$
 
@@ -1719,7 +1713,7 @@
 
     $$ |x(i) - x(j)| \leq |x(i) - a| + |x(j) - a| < \dfrac{e}{2} + \dfrac{e}{2} = e $$
 
-    가 되어 $x$ 는 코시 수열이다. (*$\because$ 정리 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$"*) $\blacktriangle$ 
+    가 되어 $x$ 는 코시 수열이다. (*$\because$ [정리 2.2.2 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$"](#84983902d)*) $\blacktriangle$ 
 
     이제 역으로 $x$ 가 코시 수열이라고 가정하면
 
@@ -1985,7 +1979,7 @@
 
     - 증명 
     
-        정리 "순서체 $F$ 의 수열 $x : \N \to F$ 가 수렴하면 코시수열이다. 또한 임의의 코시 수열은 유계이다." 에 의하여 $i \in \N$ 에 대하여 
+        [정리 2.4.1 "순서체 $F$ 의 수열 $x : \N \to F$ 가 수렴하면 코시수열이다. 또한 임의의 코시 수열은 유계이다."](#0be354c69) 에 의하여 $i \in \N$ 에 대하여 
 
         $$ |\alpha (i)| \leq M_1, |\beta (i)| \leq M_2 $$
 
@@ -1999,7 +1993,7 @@
 
         $$ |\alpha (i)\beta (i) - \alpha (j)\beta (j)| \leq |\alpha (i)\beta (i) - \alpha (i)\beta (j)| + |\alpha (i)\beta (j) - \alpha (j)\beta (j)| $$
 
-        인데(*$\because$ 정리 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$" 에 의하여*), 
+        인데(*$\because$ [정리 2.2.2 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$"](#84983902d) 에 의하여*), 
 
         $$ = |\alpha (i)||\beta (i) - \beta (j)| + |\beta (j)||\alpha (i)-\alpha (j)| $$
 
@@ -2017,7 +2011,7 @@
 
     - 증명 
 
-        $[a] \neq 0 ^{*}$ 이면 정리 "$\forall [\alpha ], [\beta ] \in \R$ 에 대하여 $[\alpha ] > [\beta ], [\alpha ] = [\beta ], [\alpha ] < [\beta ]$ 중 오직 하나만 성립한다." 에 의하여 $[\alpha ] > 0 ^{*}$ 또는 $[\alpha ] < 0 ^{*}$ 이 둘 중 하나만 성립한다. 그러므로 적당한 유리수 $d>0$ 와 $N_1 \in \N$ 에 대하여 
+        $[a] \neq 0 ^{*}$ 이면 [정리 2.4.2 "$\forall [\alpha ], [\beta ] \in \R$ 에 대하여 $[\alpha ] > [\beta ], [\alpha ] = [\beta ], [\alpha ] < [\beta ]$ 중 오직 하나만 성립한다."](#d99d004df) 에 의하여 $[\alpha ] > 0 ^{*}$ 또는 $[\alpha ] < 0 ^{*}$ 이 둘 중 하나만 성립한다. 그러므로 적당한 유리수 $d>0$ 와 $N_1 \in \N$ 에 대하여 
 
         $$ i \geq N_1 \implies \alpha (i) > d $$
 
@@ -2143,7 +2137,7 @@
 
     $$ [\alpha _n] \neq [\alpha _{n+1}] $$
 
-    라고 하면 정리 "$\forall [\alpha ], [\beta ] \in \R$ 에 대하여 $[\alpha ] > [\beta ],  [\alpha ] = [\beta ],  [\alpha ] < [\beta ]$ 중 오직 하나만 성립한다." 에 의하여 $[\alpha _n]$ 과 $[\alpha _{n+1}]$ 사이의 유리수 $r(n) \in \mathbb{Q}$ 가 존재한다. 이때
+    라고 하면 [정리 2.4.2 "$\forall [\alpha ], [\beta ] \in \R$ 에 대하여 $[\alpha ] > [\beta ],  [\alpha ] = [\beta ],  [\alpha ] < [\beta ]$ 중 오직 하나만 성립한다."](#d99d004df) 에 의하여 $[\alpha _n]$ 과 $[\alpha _{n+1}]$ 사이의 유리수 $r(n) \in \mathbb{Q}$ 가 존재한다. 이때
 
     $$ |[\alpha _n] - [r(n)^{*}]|<|[\alpha _n]-[\alpha _{n+1}]| $$
 
@@ -2169,7 +2163,7 @@
 
     이 성립하는 자연수 $I(n)$ 이 존재한다.(*이는 $(1)$ 에서 결정된 자연수 $n \geq N$ 으로 결정된 실수의 기본열 $\alpha _n(i)$ 가 기본열 $r(n)$ 과 또 다시 내부적으로 무한히 가깝게 근사된다는 말이다.*)
 
-    이제 $n \geq \sup \{N, M\}$ 인 $n \in \N$ 을 선택하면, 각 $i \geq \sup \{I_0, I(n), M\}$ 에 대하여 정리 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$" 에 의하여 
+    이제 $n \geq \sup \{N, M\}$ 인 $n \in \N$ 을 선택하면, 각 $i \geq \sup \{I_0, I(n), M\}$ 에 대하여 [정리 2.2.2 "순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. $|a-c| \leq |a-b| + |b-c|$"](#84983902d) 에 의하여 
 
     $$ |\alpha _n(i) - r(i)| \leq |\alpha _n -r(n)| + |r(n) - r(i)| $$
 
@@ -2203,7 +2197,7 @@
 
     3. 임의의 코시 수열 $x: \N \to F$ 가 $F$ 안에서 수렴한다. 
 
-- 정리 "$A \neq \varnothing$ 인 집합 $A \subset \R$ 가 위로 유계이면 $A$ 는 최소상계를 갖는다." 는 데데킨트 절단으로 정의된 실수체 $\R$ 이 완비순서체임을 말해준다.
+- [정리 2.3.2 "$A \neq \varnothing$ 인 집합 $A \subset \R$ 가 위로 유계이면 $A$ 는 최소상계를 갖는다."](#febb2f17d) 는 데데킨트 절단으로 정의된 실수체 $\R$ 이 완비순서체임을 말해준다.
 
     또한 아래 증명을 통해 코시 수열로 구성한 실수체도 완비순서체임이 증명된다. 
 
@@ -2249,11 +2243,7 @@
 
         $$ f:(a,b) \mapsto (g((a,b)), h((a,b))) \tag{1}  $$
 
-        로 정의하자. 이때 $A$ 의 원소가 $1$개면 증명할 것이 없으므로(*왜냐하면 $A$ 의 원소가 하나이면 자동적으로 유계이며, 상한을 가지기 때문에 완비순서체의 조건 3) 에서 1) 을 바로 도출할 수 있기 때문이다.*), $A$ 의 원소가 $2$ 개 이상이라고 하자. 그러면 $A$ 의 상계가 아닌 $a_0 \in A$ 와 $A$ 의 상계 $b_0$ 가 존재한다. 그러면 정리 "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 
-
-        $$ \gamma (0) = a, \qquad \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n)) $$
-
-        을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다." 를 적용하여 
+        로 정의하자. 이때 $A$ 의 원소가 $1$개면 증명할 것이 없으므로(*왜냐하면 $A$ 의 원소가 하나이면 자동적으로 유계이며, 상한을 가지기 때문에 완비순서체의 조건 3) 에서 1) 을 바로 도출할 수 있기 때문이다.*), $A$ 의 원소가 $2$ 개 이상이라고 하자. 그러면 $A$ 의 상계가 아닌 $a_0 \in A$ 와 $A$ 의 상계 $b_0$ 가 존재한다. 그러면 [정리 2.1.2 "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 $\gamma (0) = a, \qquad \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$ 을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다."](#e4dca26d8) 를 적용하여 
         
         $$\gamma (0) = (a_0, b_0), \qquad \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))\tag{2}$$
         
@@ -2311,9 +2301,9 @@
 
     - 증명 
 
-        순서체 $F$ 의 코시 수열 $\alpha : \N \to F$ 가 존재할때 정리 "순서체 $F$ 의 코시 수열 $x$ 의 한 부분수열 $x \circ i$ 가 $a \in F$ 로 수렴하면 $x$ 도 $a \in F$ 로 수렴한다." 에 의하여 수열 $\alpha$ 가 수렴하는 부분수열을 가짐을 증명하면 된다. 
+        순서체 $F$ 의 코시 수열 $\alpha : \N \to F$ 가 존재할때 [도움정리 2.4.4 "순서체 $F$ 의 코시 수열 $x$ 의 한 부분수열 $x \circ i$ 가 $a \in F$ 로 수렴하면 $x$ 도 $a \in F$ 로 수렴한다."](#3a5110cb6) 에 의하여 수열 $\alpha$ 가 수렴하는 부분수열을 가짐을 증명하면 된다. 
 
-        $A = \{\alpha (n) : n \in \N\}$ 이 유한집합이면 간단하고, $A$ 가 무한집합이면 정리 "순서체 $F$ 의 수열 $x : \N \to F$ 가 수렴하면 코시수열이다. 또한 임의의 코시 수열은 유계이다." 에 의하여 $A$ 는 위로 유계이고 아래로 유계이이다. 그러면 집합 $A$ 의 하계 $a_0$ 와 상계 $b_0$ 를 택하고 조건 1) 에서 3) 을 도출했을 때처럼 구간을 반으로 계속 분할해 나가는데, $A$ 의 원소가 무한개 속하는 쪽을 계속 선택한다. 
+        $A = \{\alpha (n) : n \in \N\}$ 이 유한집합이면 간단하고, $A$ 가 무한집합이면 [정리 2.4.1 "순서체 $F$ 의 수열 $x : \N \to F$ 가 수렴하면 코시수열이다. 또한 임의의 코시 수열은 유계이다."](#0be354c69) 에 의하여 $A$ 는 위로 유계이고 아래로 유계이이다. 그러면 집합 $A$ 의 하계 $a_0$ 와 상계 $b_0$ 를 택하고 조건 1) 에서 3) 을 도출했을 때처럼 구간을 반으로 계속 분할해 나가는데, $A$ 의 원소가 무한개 속하는 쪽을 계속 선택한다. 
 
         그러면 이 구간들의 왼쪽 끝점의 집합은 유계이고 조건 1) 을 가정했으므로 상한 $a$ 를 가진다. 또한 구간들의 오른쪽 끝점들의 집합은 아래로 유계이므로 조건 1) 과 동치인 2) 에의하여 하한 $b$ 를 가진다. 
 
@@ -2367,17 +2357,17 @@
 
 - 증명
 
-    $x = 0$ 이면 정리 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다." 와 정리 "순서체 $F$ 에 대하여 다음이 동치이고, 이 조건을 만족하는 순서체 $F$ 를 아르키메데스의 성질을 만족한다고 한다. $x>0 \implies  \exists n \in \N \text{ \textbackslash }\{0\} \text{ s.t.  }\  x > \dfrac{1}{n}$" 를 적용하면 된다. $\blacktriangle$ 
+    $x = 0$ 이면 [정리 2.5.1 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다."](#1963be39a) 와 [정리 2.2.4 "순서체 $F$ 에 대하여 다음이 동치이고, 이 조건을 만족하는 순서체 $F$ 를 아르키메데스의 성질을 만족한다고 한다. $x>0 \implies  \exists n \in \N \text{ \textbackslash }\{0\} \text{ s.t.  }\  x > \dfrac{1}{n}$"](#584af2c07) 를 적용하면 된다. $\blacktriangle$ 
 
-    이제 $0<x<y$ 라고 하면 다시 정리 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다." 에 의하여 
+    이제 $0<x<y$ 라고 하면 다시 [정리 2.5.1 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다."](#1963be39a) 에 의하여 
 
     $$ n \in \N \text{ s.t.  }\  0 < \dfrac{1}{n} < y - x $$
 
-    이다. 이때 $\dfrac{1}{n} \in P _{F}$ 와 $x \in P _{F}$ 에 대하여 정리 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다." 를 또 적용하면 
+    이다. 이때 $\dfrac{1}{n} \in P _{F}$ 와 $x \in P _{F}$ 에 대하여 [정리 2.5.1 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다."](#1963be39a) 를 또 적용하면 
 
     $$ \{k \in \N : k \cdot \dfrac{1}{n} > x \} \neq \varnothing $$
 
-    이다. 그러면 정리 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다." 에 의하여 이 집합은 최솟값을 갖는데, 이 최솟값을 $m$ 이라 두면 
+    이다. 그러면 [정리 2.1.4 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다."](#5efd87f3f) 에 의하여 이 집합은 최솟값을 갖는데, 이 최솟값을 $m$ 이라 두면 
 
     $$ \dfrac{m-1}{n} \leq x < \dfrac{m}{n} $$
 
@@ -2451,13 +2441,7 @@
 
 - 증명
 
-    정리 "임의의 순서체 $F$ 에 대하여 
-
-    1. $\forall r, s \in \mathbb{Q}, \quad  \gamma (r+s)=\gamma (r)+\gamma (s), \quad  \gamma (rs) = \gamma (r) \gamma (s)$
-
-    2. $\gamma (P _{\mathbb{Q}}) = \gamma (\mathbb{Q}) \cap P _{F}$
-
-    을 만족하는 단사함수 $\gamma : \mathbb{Q} \to  F, r \mapsto r \cdot 1_F$ 가 유일하게 존재한다." 에 의하여 
+    [정리 2.2.3](#116d61a96) 에 의하여 
 
     $$ \begin{equation}\begin{split} & \gamma (r+s) = \gamma (r) + \gamma (s), \quad \gamma (rs) = \gamma (r)\gamma (s), \quad \gamma (P _{\mathbb{Q}}) = \gamma (\mathbb{Q})\cap P _{F}\\ &\delta (r+s) = \delta (r) + \delta (s), \quad \delta (rs) = \delta (r)\delta (s), \quad \delta (P _{\mathbb{Q}}) = \delta (\mathbb{Q})\cap P _{G} \end{split}\end{equation} \tag{1} $$
 
@@ -2471,7 +2455,7 @@
 
     $$ A_x = \{\delta (r) \in G : r \in \mathbb{Q}, \gamma (r) < x\} $$
 
-    라 정의하면 정리 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다." 에 의하여 완비순서체 $F$ 에 대하여 
+    라 정의하면 [정리 2.5.1 "완비순서체 $F$ 는 아르키메데스의 성질을 만족한다."](#1963be39a) 에 의하여 완비순서체 $F$ 에 대하여 
 
     $$ \exists n \in \N \text{ s.t. }\  n \cdot 1_F > -x $$
 
@@ -2507,7 +2491,7 @@
 
     $$ \mathbb{Q} \xrightarrow{\gamma } F, \mathbb{Q} \xrightarrow{\delta  } G, F \xleftrightarrow[f]{g} G $$
 
-    이제 $f(x+y) = f(x)+f(y)$ 임을 보이는데 함수 $f$ 의 정의와 정리 "순서체 $F$ 의 부분집합 $S, T \subset F$ 에 대하여 $S + T = \{s + t \in F : s \in S, t \in T\}$ 라고 정의했을 때 $\sup (S+T) = \sup S + \sup T$ 이다." 에 의하여 
+    이제 $f(x+y) = f(x)+f(y)$ 임을 보이는데 함수 $f$ 의 정의와 [정리 2.33 "순서체 $F$ 의 부분집합 $S, T \subset F$ 에 대하여 $S + T = \{s + t \in F : s \in S, t \in T\}$ 라고 정의했을 때 $\sup (S+T) = \sup S + \sup T$ 이다."](#e1b32aaed) 에 의하여 
 
     $$ f(x) + f(y) = \sup A_x + \sup A_y = \sup (A_x + A_y) = \sup A _{x+y} = f(x + y) $$
 
@@ -2519,7 +2503,7 @@
 
     $$ \delta (r)+\delta (s)=\delta (r+s), \quad \gamma (r+s)=\gamma (r)+\gamma (s) < x+y $$
 
-    에서 $\delta (r)+\delta (s)\in A _{x+y}$ 이다. 역으로 $\delta (t) \in A _{x+y} \implies \gamma (t) < x+y$ 인데 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+    에서 $\delta (r)+\delta (s)\in A _{x+y}$ 이다. 역으로 $\delta (t) \in A _{x+y} \implies \gamma (t) < x+y$ 인데 [정리 2.5.2 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다."](#849201a15) 에 의하여 
 
     $$ \exists s \in \mathbb{Q} \text{ s.t. }\ r(t)-y<r(s)<x $$
 
@@ -2529,17 +2513,17 @@
 
     에서 $\delta (t) = \delta (s) + \delta (t-s)\in A_x+A_y$ 이다. $\blacktriangle$ 
 
-    이제 $f(xy) = f(x)f(y)$ 임을 보이기 위하여 $x,y \in P_F$ 인 경우부터 생각하면 다시 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+    이제 $f(xy) = f(x)f(y)$ 임을 보이기 위하여 $x,y \in P_F$ 인 경우부터 생각하면 다시 [정리 2.5.2 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다."](#849201a15) 에 의하여 
 
     $$ A_x \cap P_G \neq \varnothing , A_y \cap P_G \neq \varnothing $$
 
-    이므로 정리 "순서체 $F$ 의 부분집합 $S, T \subset P _{F}$ 에 대하여 $ST = \{st \in P _{F} : s \in S, t \in T\}$ 라고 정의했을 때 $\sup ST = \sup S \sup T$ 이다." 를 적용하면 된다. 이로써 1) 의 증명이 끝났다. $\blacktriangle$ 
+    이므로 [정리 2.34 "순서체 $F$ 의 부분집합 $S, T \subset P _{F}$ 에 대하여 $ST = \{st \in P _{F} : s \in S, t \in T\}$ 라고 정의했을 때 $\sup ST = \sup S \sup T$ 이다."](#85dc4bdbb) 를 적용하면 된다. 이로써 1) 의 증명이 끝났다. $\blacktriangle$ 
 
     이제 
 
     $$ x > 0 \iff f(x) > 0 $$
 
-    을 보일텐데 먼저 $x>0$ 이면 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+    을 보일텐데 먼저 $x>0$ 이면 [정리 2.5.2 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다."](#849201a15) 에 의하여 
 
     $$ \exists r \in \mathbb{Q} \text{ s.t. }\ 0 < \gamma (r) < x $$
 
@@ -2569,7 +2553,7 @@
 
     이다. 그러면 $\gamma (r) \gamma (s) \implies \gamma (r) < x$ 이다. 이로써 a) 가 증명되었다. $\blacktriangle$ 
 
-    이제 $z<x$ 라고 하면 정리 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다." 에 의하여 
+    이제 $z<x$ 라고 하면 [정리 2.5.2 "완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 $x<r<y$ 를 만족하는 유리수 $r \in \mathbb{Q} \subset F$ 이 존재한다."](#849201a15) 에 의하여 
     
     $$ \exists r \in \mathbb{Q} \text{ s.t. }\  z < \gamma (r) < x$$
 

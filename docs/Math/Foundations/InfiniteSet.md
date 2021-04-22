@@ -44,7 +44,7 @@
     
 - 아래의 2) 에서 3) 을 도출하는 증명에서 $h(A) \in A$ 를 만족하는 함수 $h$ 를 집합 $X$ 의 선택함수라고 하고, 3) 을 선택공리라고 부른다.
 
-- 선택공리가 수학에서 사용될 때 대부분 순서와 관련된다. 아래에서 살펴볼 소른 도움정리와 하우스도르프 극대 원칙은 선택공리과 동치인 명제인데 수학의 여러 분야에서 널리 쓰인다.
+- 선택공리가 수학에서 사용될 때 대부분 순서와 관련된다. 아래에서 살펴볼 [정리 3.1.1 초른 보조정리](#8e7118900)와 [정리 3.1.2 하우스도르프 극대 원리](#b2fd61dd6)은 선택공리과 동치인 명제인데 수학의 여러 분야에서 널리 쓰인다.
 
     선택공리를 사용하는 정리들은 수학의 각 분야에서 매우 중요한 역할을 하는 경우가 많다. 
 
@@ -192,17 +192,17 @@
 
 - 초른의 보조정리에서 하우스도르프 극대 원리를 도출하는 증명 
 
-    우선 초른의 보조정리를 가정하자. 그리고 포함관계에 의한 순서를 부여받은 순서집합 $X$ 의 모든 사슬을 모은 순서집합 $\mathcal{C}(X)$ 에 초른의 보조정리를 적용해보고, 하우스도르프 극대 원리가 도출되는지 보자. 
+    우선 [정리 3.1.1 초른 보조정리](#8e7118900)를 가정하자. 그리고 포함관계에 의한 순서를 부여받은 순서집합 $X$ 의 모든 사슬을 모은 순서집합 $\mathcal{C}(X)$ 에 [정리 3.1.1 초른 보조정리](#8e7118900)를 적용해보고, [정리 3.1.2 하우스도르프 극대 원리](#b2fd61dd6)가 도출되는지 보자. 
 
-    정리 "포함관계에 의하여 순서가 부여된 집합 $X$ 의 사슬의 집합 $\mathcal{C}(X)$ 의 사슬 $\mathcal{C}$ 에 대하여 모든 사슬 $\mathcal{C}$ 의 원소의 합집합 $\bigcup_{}^{}\mathcal{C} (\subset X)$ 은 $X$ 의 사슬이다." 에서
+    [정리 "포함관계에 의하여 순서가 부여된 집합 $X$ 의 사슬의 집합 $\mathcal{C}(X)$ 의 사슬 $\mathcal{C}$ 에 대하여 모든 사슬 $\mathcal{C}$ 의 원소의 합집합 $\bigcup_{}^{}\mathcal{C} (\subset X)$ 은 $X$ 의 사슬이다."](#460d5f66d) 에서
 
     $$ C = \bigcup_{}^{}\mathcal{C} $$
 
-    라고 두면 $C$ 는 $\mathcal{C}$ 들의 합집합이므로 $\mathcal{C} \subset \mathcal{C}(X)$ 의 상계임이 자명하다. 그러므로 순서집합 $\mathcal{C}(X)$ 는 초른의 보조정리의 가정을 만족하고, $\mathcal{C}(X)$ 는 초른의 보조정리의 귀결(극대원소를 가진다) 또한 만족한다. 이처럼 $\mathcal{C}(X)$ 이 초른의 보조정리를 만족하는데, 위의 증명이 보인 것은 $\mathcal{C}(X)$ 이 극대 사슬 $C$ 를 가진다는 것이다. 따라서 초른의 보조정리를 가정하면 하우스도르프 극대 원리가 성립한다. ■ 
+    라고 두면 $C$ 는 $\mathcal{C}$ 들의 합집합이므로 $\mathcal{C} \subset \mathcal{C}(X)$ 의 상계임이 자명하다. 그러므로 순서집합 $\mathcal{C}(X)$ 는 [정리 3.1.1 초른 보조정리](#8e7118900)의 가정을 만족하고, $\mathcal{C}(X)$ 는 [정리 3.1.1 초른 보조정리](#8e7118900)의 귀결(극대원소를 가진다) 또한 만족한다. 이처럼 $\mathcal{C}(X)$ 이 [정리 3.1.1 초른 보조정리](#8e7118900)를 만족하는데, 위의 증명이 보인 것은 $\mathcal{C}(X)$ 이 극대 사슬 $C$ 를 가진다는 것이다. 따라서 [정리 3.1.1 초른 보조정리](#8e7118900)를 가정하면 [정리 3.1.2 하우스도르프 극대 원리](#b2fd61dd6)가 성립한다. ■ 
 
-- 하우스도르프 극대 원리에서 초른의 보조정리를 도출하는 증명 
+- [정리 3.1.2 하우스도르프 극대 원리](#b2fd61dd6)에서 [정리 3.1.1 초른 보조정리](#8e7118900)를 도출하는 증명 
 
-    $X$ 의 모든 사슬이 상계를 가진다고 가정하자. 그러면 하우스도르프 극대 원리에 의하여 $X$ 는 극대 사슬 $C$ 를 가지는데 가정에 의하여 이것의 상계 $m \in X$ 또한 존재한다. 이제 이 $m$ 이 극대원소임을 보이면 된다.
+    $X$ 의 모든 사슬이 상계를 가진다고 가정하자. 그러면 [정리 3.1.2 하우스도르프 극대 원리](#b2fd61dd6)에 의하여 $X$ 는 극대 사슬 $C$ 를 가지는데 가정에 의하여 이것의 상계 $m \in X$ 또한 존재한다. 이제 이 $m$ 이 극대원소임을 보이면 된다.
 
     먼저 $x \in X, x > m$ 이라고 가정하자. 그러면 $x$ 는 $C$ 의 임의의 원소와 비교 가능하고, 따라서 $C \cup \{x\}$ 도 사슬이다. 그런데 $C \subsetneq C \cup \{x\}$ 이므로 $C$ 가 극대사슬이라는 것에 모순이다. 따라서 $x$ 는 존재하지 않으며 $m$ 이 $X$ 의 극대원소가 된다. ■ 
 
@@ -216,7 +216,7 @@
 
     을 만족하면 $\mathcal{X}$ 는 극대원소를 가진다. 
 
-- 정리 "초른의 보조정리는 하우스도르프 극대 원리와 동치이다." 의 증명과정에서 살펴보았듯 포함관계에 의한 순서가 부여된 $X$ 의 사슬 집합 $\mathcal{C}(X)$ 는 본 정리의 두 가지 조건을 만족한다. 
+- [정리 "초른 보조정리는 하우스도르프 극대 원리와 동치이다."](#a4f694c36) 의 증명과정에서 살펴보았듯 포함관계에 의한 순서가 부여된 $X$ 의 사슬 집합 $\mathcal{C}(X)$ 는 본 정리의 두 가지 조건을 만족한다. 
 
     따라서 하우스드로프 극대 원리는 이 정리에서 바로 도출된다.
 
@@ -260,7 +260,7 @@
 
     $$ \mathcal{U} = \{A \in \mathcal{Y}_0 : A \subset C \lor g(C) \subset A\} $$
 
-    에 대하여 $(1)$ 을 보이려 한다. 이때 $(1)$ 의 첫째 조건은 자명하고, 정리 "포함관계에 의하여 순서가 부여된 집합 $X$ 의 사슬의 집합 $\mathcal{C}(X)$ 의 사슬 $\mathcal{C}$ 에 대하여 모든 사슬 $\mathcal{C}$ 의 원소의 합집합 $\bigcup_{}^{}\mathcal{C} (\subset X)$ 은 $X$ 의 사슬이다." 에 의하여 $\mathcal{Y}$ 의 모든 사슬의 합집합 $\bigcup_{}^{}C$ 은 $\mathcal{Y}$ 의 사슬인데 $\mathcal{Y}$ 는 조건 2) 를 만족하므로 $(1)$ 의 셋째 조건도 자명하다. 
+    에 대하여 $(1)$ 을 보이려 한다. 이때 $(1)$ 의 첫째 조건은 자명하고, [정리 "포함관계에 의하여 순서가 부여된 집합 $X$ 의 사슬의 집합 $\mathcal{C}(X)$ 의 사슬 $\mathcal{C}$ 에 대하여 모든 사슬 $\mathcal{C}$ 의 원소의 합집합 $\bigcup_{}^{}\mathcal{C} (\subset X)$ 은 $X$ 의 사슬이다."](#460d5f66d) 에 의하여 $\mathcal{Y}$ 의 모든 사슬의 합집합 $\bigcup_{}^{}C$ 은 $\mathcal{Y}$ 의 사슬인데 $\mathcal{Y}$ 는 조건 2) 를 만족하므로 $(1)$ 의 셋째 조건도 자명하다. 
 
     둘째 조건을 보이기 위하여 $\forall A \in \mathcal{Y}_0$ 에 대하여 
 
@@ -292,7 +292,7 @@
 
 - 정렬 집합의 순서관계를 정렬 순서라 한다. 
 
-- 정리 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다." 는 자연수집합 $\N$ 이 정렬 집합임을 말해준다.
+- [정리 2.1.4 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다."](../numbers#5efd87f3f) 는 자연수집합 $\N$ 이 정렬 집합임을 말해준다.
 
 - 정렬 집합은 그 자체로서 사슬이 된다.
 
@@ -305,7 +305,7 @@
 
     체르멜로 정렬정리(Well-ordering theorem, Zermelo's theorem) : 임의의 집합에는 정렬순서가 존재한다.
 
-- 아래의 증명은 초른의 보조정리를 사용하는데 이는 초른의 보조정리가 적용되는 대표적인 사례이다.
+- 아래의 증명은 [정리 3.1.1 초른 보조정리](#8e7118900)를 사용하는데 이는 [정리 3.1.1 초른 보조정리](#8e7118900)가 적용되는 대표적인 사례이다.
 
 
 - 증명
@@ -316,7 +316,7 @@
 
     를 만족할 때 $(A, G) \leq (B, H)$ 라 정의하면 순서관계가 됨을 바로 확인할 수 있다.
 
-    순서집합 $\mathcal{X}$ 에 초른의 보조정리를 적용하기 위하여 $\mathcal{C}$ 가 $\mathcal{X}$ 의 사슬이라고 하고 
+    순서집합 $\mathcal{X}$ 에 [정리 3.1.1 초른 보조정리](#8e7118900)를 적용하기 위하여 $\mathcal{C}$ 가 $\mathcal{X}$ 의 사슬이라고 하고 
 
     $$ A_0 = \bigcup_{}^{}\{A \subset X:(A,G) \in \mathcal{C}\} $$
 
@@ -344,7 +344,7 @@
 
     이제 $(A_0, G_0) \in \mathcal{X}$ 가 $\mathcal{C}$ 의 상계임을 보이려 하는데 방금 증명한 방법과 비슷하기에 생략한다. ▲ 
 
-    지금까지 순서집합 $\mathcal{X}$ 가 초른의 보조정리의 가정부를 만족함을 보였다. 그러므로 $\mathcal{X}$ 는 극대원소 $(D, L) \in \mathcal{X}$ 을 가진다. 이제 $D=X$ 임을 보일 것이다. $D \subsetneq X$ 이면 $x \in X \text{ \textbackslash }D$ 를 잡고 
+    지금까지 순서집합 $\mathcal{X}$ 가 [정리 3.1.1 초른 보조정리](#8e7118900)의 가정부를 만족함을 보였다. 그러므로 $\mathcal{X}$ 는 극대원소 $(D, L) \in \mathcal{X}$ 을 가진다. 이제 $D=X$ 임을 보일 것이다. $D \subsetneq X$ 이면 $x \in X \text{ \textbackslash }D$ 를 잡고 
 
     $$ E = D \cup \{x\}, \quad M = L \cup \{(a,x):a \in D\} \cup \{(x,x)\} $$
 
@@ -352,17 +352,17 @@
 
 !!! tldr ""
 
-    선택공리, 초른의 보조정리, 하우스도르프 극대원리, 체르멜로 정렬정리는 모두 동치이다.
+    선택공리, 초른 보조정리, 하우스도르프 극대 원리, 체르멜로 정렬정리는 모두 동치이다.
 
 - 증명 
 
-    체르멜로 정렬정리를 가정하면 선택공리를 쉽게 얻을 수 있다. 
+    [정리 3.1.4 체르멜로 정렬정리](#0d9cd4880) 를 가정하면 선택공리를 쉽게 얻을 수 있다. 
 
     집합 $X$ 가 정렬집합일 때 임의의 $A \in 2 ^{X}\text{ \textbackslash }\{\varnothing \}$ 에 대하여 $A$ 의 최소원소를 $h(A)$ 라 하면 
 
     $$ h: 2 ^{X}\text{ \textbackslash }\{\varnothing \} \to X $$
 
-    는 선택함수이다. 그러므로 선택공리, 초른의 보조정리, 하우스도르프 극대원리, 체르멜로 정렬정리가 모두 동치임을 알 수 있다. ■ 
+    는 선택함수이다. 그러므로 선택공리, [정리 3.1.1 초른 보조정리](#8e7118900), [정리 3.1.2 하우스도르프 극대 원리](#b2fd61dd6), [정리 3.1.4 체르멜로 정렬정리](#0d9cd4880)가 모두 동치임을 알 수 있다. ■ 
 
 !!! tldr ""
 
@@ -786,7 +786,7 @@
 
     로 정의한다. 
 
-- 정리 "두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 1. $A \approxeq B$ 2. $b \in B, A \approxeq S_b$ 3. $a \in A, S_a \approxeq B$" 는 임의의 서수 $\alpha , \beta$ 에 대하여 
+- [정리 3.3.1 "두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 1. $A \approxeq B$ 2. $b \in B, A \approxeq S_b$ 3. $a \in A, S_a \approxeq B$"](#c4af96c6c) 는 임의의 서수 $\alpha , \beta$ 에 대하여 
 
     $$ \alpha < \beta , \quad  \alpha = \beta , \quad  \alpha > \beta $$
 
@@ -1080,7 +1080,7 @@
     
     이다.
 
-    - 정리 "비둘기 집 원리(Pigeonhole principle) : $n = \{0,1,2, \dots, n-1\} \in \N$ 에 대한 임의의 단사함수 $f: n \to n$ 가 전사이다." 는 집합 $n$ 에서 $n$ 으로 가는 단사 함수라면 전사함수이라고 말하고 있고, 이 정리는 $n$ 에서 $A (\subset n)$ 으로 가는 전단사함수가 존재하면 $n=A$ 라고 말하고 있네. 그럼 이 둘이 서로 역인데, 어떻게 비둘기 집 원리 정리를 적용할 수 있을까.
+    - [정리 "비둘기 집 원리(Pigeonhole principle) : $n = \{0,1,2, \dots, n-1\} \in \N$ 에 대한 임의의 단사함수 $f: n \to n$ 가 전사이다."](#794c1114c) 는 집합 $n$ 에서 $n$ 으로 가는 단사 함수라면 전사함수이라고 말하고 있고, 이 정리는 $n$ 에서 $A (\subset n)$ 으로 가는 전단사함수가 존재하면 $n=A$ 라고 말하고 있네. 그럼 이 둘이 서로 역인데, 어떻게 비둘기 집 원리 정리를 적용할 수 있을까.
 
         위 증명은 어떻게 비둘기 집 원리 정리가 본 정리의 증명에 적용되는지 모르겠어서 내가 만든 것이므로 오류가 있을 수 있다.
 
@@ -1092,11 +1092,11 @@
 
     이면 $X$ 를 유한집합이라 한다. 
 
-- 정리 "자연수 $n = \{0, 1, 2, \dots, n-1\}$ 의 부분집합 $A$ 에 대하여 $n \approx A \implies n = A$ 이다." 는 어떤 자연수 $n$ 도 무한집합의 특성을 만족하지 않음을 말한다.
+- [정리 3.4.3 "자연수 $n = \{0, 1, 2, \dots, n-1\}$ 의 부분집합 $A$ 에 대하여 $n \approx A \implies n = A$ 이다."](#3ac467af0) 는 어떤 자연수 $n$ 도 무한집합의 특성을 만족하지 않음을 말한다.
 
-    따라서 정리 "집합 $X$ 가 무한 집합의 특성을 만족하고 $X \approx Y$ 이면 $Y$ 도 무한 집합의 특성을 만족한다." 를 적용하면 임의의 유한집합은 무한집합의 특성을 만족하지 않는다. 이제 이 역을 보이려 하는데, 유한집합이 아니면 무한집합의 특성을 만족한다는 것을 보이려 하는 것이다. 
+    따라서 [도움정리 3.4.1 "집합 $X$ 가 무한 집합의 특성을 만족하고 $X \approx Y$ 이면 $Y$ 도 무한 집합의 특성을 만족한다."](#b089e5e57) 를 적용하면 임의의 유한집합은 무한집합의 특성을 만족하지 않는다. 이제 이 역을 보이려 하는데, 유한집합이 아니면 무한집합의 특성을 만족한다는 것을 보이려 하는 것이다. 
 
-    정리 "집합 $X$ 가 무한 집합의 특성을 만족하고 $X \subset  Y$ 이면 $Y$ 도 무한 집합의 특성을 만족한다." 가 있으므로 이미 $\N$ 이 무한집합의 특성을 만족한다는 것을 알게 되었다. 그러므로 다음 정리를 증명하면 된다. 
+    [도움정리 3.4.2 "집합 $X$ 가 무한 집합의 특성을 만족하고 $X \subset  Y$ 이면 $Y$ 도 무한 집합의 특성을 만족한다."](#447bf159b) 가 있으므로 이미 $\N$ 이 무한집합의 특성을 만족한다는 것을 알게 되었다. 그러므로 다음 정리를 증명하면 된다. 
 
 !!! tldr "도움정리 3.4.4"
 
@@ -1104,7 +1104,7 @@
 
 - 증명     
 
-    먼저 선택공리에 의하여 집합 $X$ 의 선택함수 $h: 2 ^{X} \text{ \textbackslash }\{\varnothing \} \to X$ 를 택하자. $X$ 의 모든 유한 부분집합들의 모임 $\mathcal{F}(X)$ 에 대하여 정리 "    집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 $\gamma (0) = a$, $\forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$ 을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다." 를 적용할 것이다. $X$ 는 유한집합이 아니므로 임의의 $A \in \mathcal{F}(X)$ 에 대하여 $X \text{ \textbackslash }A \neq \varnothing$ 이고 따라서 $h(X \text{ \textbackslash }A) \in X \text{ \textbackslash }A$ 이다. 이제 함수 $F: \mathcal{F}(X) \to \mathcal{F}(X)$ 를 $A \in \mathcal{F}(X)$ 에 대하여
+    먼저 선택공리에 의하여 집합 $X$ 의 선택함수 $h: 2 ^{X} \text{ \textbackslash }\{\varnothing \} \to X$ 를 택하자. $X$ 의 모든 유한 부분집합들의 모임 $\mathcal{F}(X)$ 에 대하여 [정리 2.1.2 "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 $\gamma (0) = a$, $\forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$ 을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다."](../numbers#e4dca26d8) 를 적용할 것이다. $X$ 는 유한집합이 아니므로 임의의 $A \in \mathcal{F}(X)$ 에 대하여 $X \text{ \textbackslash }A \neq \varnothing$ 이고 따라서 $h(X \text{ \textbackslash }A) \in X \text{ \textbackslash }A$ 이다. 이제 함수 $F: \mathcal{F}(X) \to \mathcal{F}(X)$ 를 $A \in \mathcal{F}(X)$ 에 대하여
 
     $$ F(A) = A \sqcup \{h(X \text{ \textbackslash }A)\} $$
 
@@ -1170,7 +1170,7 @@
 
 - 기수란 집합에 들어있는 원소의 갯수를 의미한다.
 
-- 이 정의는 아래에서 살펴볼 정리 "비어있지 않은 임의의 서수들의 집합은 최소원소를 가진다." 를 기반으로 한다.
+- 이 정의는 아래에서 살펴볼 [정리 3.6.4 "비어있지 않은 임의의 서수들의 집합은 최소원소를 가진다."](#f69fd2ad6) 를 기반으로 한다.
     
 - 유한집합에 대해서는 기수의 정의를 다음과 같이 쉽게 생각해도 된다.
 
@@ -1288,9 +1288,9 @@
 
 - 증명
 
-    임의의 집합 $A, B$ 에 대하여 정리 "체르멜로 정렬정리 : 임의의 집합에는 정렬순서가 존재한다." 를 적용하여 정렬순서를 부여하자. 
+    임의의 집합 $A, B$ 에 대하여 [정리 3.1.4 체르멜로 정렬정리](#0d9cd4880) 를 적용하여 정렬순서를 부여하자. 
 
-    그러면 정리 "두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 1. $A \approxeq B$ 2. $b \in B, A \approxeq S_b$ 3. $a \in A, S_a \approxeq B$" 에 의하여 $A \approx B$ 이거나 적절한 $a \in A, b \in B$ 에 대하여 $A \approx S_b \subset B$ 혹은 $B \approx S_a \subset A$ 가 성립한다.
+    그러면 [정리 3.3.1 "두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 1. $A \approxeq B$ 2. $b \in B, A \approxeq S_b$ 3. $a \in A, S_a \approxeq B$"](#c4af96c6c) 에 의하여 $A \approx B$ 이거나 적절한 $a \in A, b \in B$ 에 대하여 $A \approx S_b \subset B$ 혹은 $B \approx S_a \subset A$ 가 성립한다.
 
 !!! tldr "정리 3.5.2"
 
@@ -1304,7 +1304,7 @@
 
 - 증명 
 
-    단사함수 $f: A \to B, g: B \to A$ 를 두고, 정리 "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 $\gamma (0) = a, \enspace \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$ 을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다." 를 적용하여 $A$ 의 부분집합 $C_n$ 과 $B$ 의 부분집합 $D_n$ 을 $n \in \N$ 에 대하여
+    단사함수 $f: A \to B, g: B \to A$ 를 두고, [정리 2.1.2 "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 $\gamma (0) = a, \enspace \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$ 을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다."](#e4dca26d8) 를 적용하여 $A$ 의 부분집합 $C_n$ 과 $B$ 의 부분집합 $D_n$ 을 $n \in \N$ 에 대하여
 
     $$ C_0 = A \text{ \textbackslash }g(B), \enspace D_0 = f(C_0) $$
 
@@ -1368,7 +1368,7 @@
 
 - 증명
 
-    $X$ 가 무한집합이면 정리 "집합 $X$ 가 유한집합이 아니면, $\exists A \subset X \text{ s.t. }\ \N \approx A$ 이다." 에 의하여 단사함수 $f: \N \to X$ 가 존재한다. ■ 
+    $X$ 가 무한집합이면 [도움정리 3.4.4 "집합 $X$ 가 유한집합이 아니면, $\exists A \subset X \text{ s.t. }\ \N \approx A$ 이다."](#8ab5072fc) 에 의하여 단사함수 $f: \N \to X$ 가 존재한다. ■ 
 
 !!! tldr ""
 
@@ -1430,7 +1430,7 @@
 
 - 증명 
 
-    $\text{card }(A)  = a$ 인 무한집합 $A$ 를 잡으면 정리 "집합 $X$ 가 유한집합이 아니면, $\exists A \subset X \text{ s.t. }\ \N \approx A$ 이다." 에 의하여 $\exists D \subset A \text{ s.t. }\  D \approx \N$ 이다. 이때 $\N \times \N \approx \N$ 이므로 $D \approx D \times D$ 가 되어 전단사 함수 $f: D \to D \times D$ 가 존재한다. 이때 
+    $\text{card }(A)  = a$ 인 무한집합 $A$ 를 잡으면 [도움정리 3.4.4 "집합 $X$ 가 유한집합이 아니면, $\exists A \subset X \text{ s.t. }\ \N \approx A$ 이다."](#8ab5072fc) 에 의하여 $\exists D \subset A \text{ s.t. }\  D \approx \N$ 이다. 이때 $\N \times \N \approx \N$ 이므로 $D \approx D \times D$ 가 되어 전단사 함수 $f: D \to D \times D$ 가 존재한다. 이때 
 
     $$ D \subset B \subset A, \quad  g|_D=f, \quad g:B \to B \times B \text{ is bijection } $$
 
@@ -1438,7 +1438,7 @@
 
     $$ (B_1, g_1) \leq (B_2, g_2) \iff B_1 \subset B_2, g_2| _{B_1} = g_1 $$
 
-    와 같은 순서를 부여하면 $\mathcal{B}$ 는 순서집합이 된다. 또 이로써 초른의 보조정리의 조건부가 만족된다. 그러므로 $\mathcal{B}$ 에는 극대원소 $(C, h)$ 가 존재한다.
+    와 같은 순서를 부여하면 $\mathcal{B}$ 는 순서집합이 된다. 또 이로써 [정리 3.1.1 초른 보조정리](#8e7118900)의 조건부가 만족된다. 그러므로 $\mathcal{B}$ 에는 극대원소 $(C, h)$ 가 존재한다.
 
     이제 $\text{card }(C) = c$ 로 두고, $c=a$ 을 보이면 증명이 끝난다. ▲ 
 
@@ -1450,7 +1450,7 @@
 
     $$ a = b + c \leq c + c = c $$
 
-    이므로 $a \leq c$ 가 되어 모순이므로 정리 "임의의 집합 $A, B$ 에 대하여 $A \preccurlyeq B \lor B \preccurlyeq A$ 이다." 에 의하여 $c < b$ 이다. $C$ 보다 $A \text{ \textbackslash }C$ 가 더 크므로 $C \approx E$ 인 $E \subset A \text{ \textbackslash }C$ 가 존재한다. 이때 합집합과 곱집합의 분배법칙에 의하여
+    이므로 $a \leq c$ 가 되어 모순이므로 [정리 3.5.1 "임의의 집합 $A, B$ 에 대하여 $A \preccurlyeq B \lor B \preccurlyeq A$ 이다."](#4c8481f72) 에 의하여 $c < b$ 이다. $C$ 보다 $A \text{ \textbackslash }C$ 가 더 크므로 $C \approx E$ 인 $E \subset A \text{ \textbackslash }C$ 가 존재한다. 이때 합집합과 곱집합의 분배법칙에 의하여
 
     $$ (C \sqcup E) \times (C \sqcup E) = (C \times C) \sqcup (C \times E) \sqcup (E \times C) \sqcup (E \times E) $$
 
@@ -1524,7 +1524,7 @@
 
 - 증명 (https://proofwiki.org/wiki/Continuum_equals_Cardinality_of_Power_Set_of_Naturals)
 
-    정리 "실수 집합과 데데킨트 절단 집합 사이에 전단사 사상이 존재한다." 에 의하여 전단사 사상 
+    [정리 "실수 집합과 데데킨트 절단 집합 사이에 전단사 사상이 존재한다."](../numbers#458a3d85a) 에 의하여 전단사 사상 
 
     $$ f: \R \to \mathscr{D} $$
 
@@ -1578,7 +1578,7 @@
 
     이다. ▲ 
 
-    이는 어떤 원소가 $\xi$ 에 속하면 $f(\xi)$ 에 속하고, 역으로 $f(\xi)$ 에 속하면 $\xi$ 에도 속함을 뜻한다. 그러므로 $\xi = f(\xi )$ 즉, $\xi \in X$ 이다. 그러면 정리 "정렬집합 $A$ 의 부분집합 $B$ 가 $x \in A, S_x \subset B \implies x \in B$ 이면 $B=A$ 이다." 에 의하여 $X = \alpha$ 이다. ■ 
+    이는 어떤 원소가 $\xi$ 에 속하면 $f(\xi)$ 에 속하고, 역으로 $f(\xi)$ 에 속하면 $\xi$ 에도 속함을 뜻한다. 그러므로 $\xi = f(\xi )$ 즉, $\xi \in X$ 이다. 그러면 [정리 3.3.2 "정렬집합 $A$ 의 부분집합 $B$ 가 $x \in A, S_x \subset B \implies x \in B$ 이면 $B=A$ 이다."](#3754aba9c) 에 의하여 $X = \alpha$ 이다. ■ 
 
 !!! tldr "도움정리 3.6.2"
 
@@ -1590,11 +1590,11 @@
 
 - 증명 
 
-    $\alpha < \beta \implies \gamma \in \beta \text{ s.t. }\ \alpha \approxeq S _{\gamma }$ 이다. 이때 $\alpha , S _{\gamma }$ 가 서수이므로 정리 "서수 $\alpha , \beta$ 에 대하여 $\alpha \approxeq \beta \implies \alpha = \beta$ 이다." 에 의하여 $\alpha = S _{\gamma } = \gamma \in \beta$ 이다. ▲ 
+    $\alpha < \beta \implies \gamma \in \beta \text{ s.t. }\ \alpha \approxeq S _{\gamma }$ 이다. 이때 $\alpha , S _{\gamma }$ 가 서수이므로 [도움정리 3.6.1 "서수 $\alpha , \beta$ 에 대하여 $\alpha \approxeq \beta \implies \alpha = \beta$ 이다."](#6d3c99905) 에 의하여 $\alpha = S _{\gamma } = \gamma \in \beta$ 이다. ▲ 
 
     $\alpha \in \beta$ 이면 $\alpha = S _{\alpha } \subsetneq \beta$ 이다. ▲ 
 
-    $\alpha \subsetneq \beta$ 라고 하자. $\exists \gamma \in \alpha \text{ s.t. }\ \beta \approxeq S _{\gamma }$ 이면 $\beta = S _{\gamma } = \gamma \subset \alpha$ 가 되어 모순이다. (*즉 $\beta$ 가 $\alpha$ 의 절편과 순서동형인가 했더니 모순이라는 것이다.*) 따라서 정리 "두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 1. $A \approxeq B$ 2. $b \in B, A \approxeq S_b$ 3. $a \in A, S_a \approxeq B$" 에 의하여 $\alpha$ 는 $\beta$ 의 절편과 순서동형이고, 따라서 $\alpha < \beta$ 이다. ■ 
+    $\alpha \subsetneq \beta$ 라고 하자. $\exists \gamma \in \alpha \text{ s.t. }\ \beta \approxeq S _{\gamma }$ 이면 $\beta = S _{\gamma } = \gamma \subset \alpha$ 가 되어 모순이다. (*즉 $\beta$ 가 $\alpha$ 의 절편과 순서동형인가 했더니 모순이라는 것이다.*) 따라서 [정리 3.3.1 "두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 1. $A \approxeq B$ 2. $b \in B, A \approxeq S_b$ 3. $a \in A, S_a \approxeq B$"](#c4af96c6c) 에 의하여 $\alpha$ 는 $\beta$ 의 절편과 순서동형이고, 따라서 $\alpha < \beta$ 이다. ■ 
 
 - $A \iff B \iff C$ 를 보이기 위하여 $A \implies B \implies C \implies A$ 를 증명했네. 이러면 $B \implies C \land C \implies A \implies B$ 니까 $B \iff C$ 이고, 결국 $A \iff B \iff C$ 가 증명되는 식인가.
 
@@ -1604,17 +1604,17 @@
 
 - 증명
 
-    먼저 유일성 증명은 정리 "서수 $\alpha , \beta$ 에 대하여 $\alpha \approxeq \beta \implies \alpha = \beta$ 이다." 에 의하여 해결되므로 존재성 증명만 하면 된다.
+    먼저 유일성 증명은 [도움정리 3.6.1 "서수 $\alpha , \beta$ 에 대하여 $\alpha \approxeq \beta \implies \alpha = \beta$ 이다."](#6d3c99905) 에 의하여 해결되므로 존재성 증명만 하면 된다.
 
     $\forall a \in A$ 에 대하여 $S_a$ 가 어떤 서수 $\alpha (a)$ 가 존재하여 $S_a \approxeq \alpha (a)$ 를 만족한다고 가정하자. 그러면 
 
     $$ S = \{\alpha (a):a \in A\} $$
 
-    를 정의할 수 있다. 이때 정리 "정렬집합에 관한 성질 $P$ 와 임의의 정렬집합 $X$ 에 대하여 '$X$ 의 모든 절편이 $P$ 를 만족하면 $X$ 도 $P$ 를 만족한다.' 이면 임의의 정렬집합이 $P$ 를 만족한다." 에 의하여 $S$ 가 서수이고 $S \approxeq A$ 을 보이면 임의의 정렬집합과 순서동형인 서수가 존재한다는 것이 증명된다. ▲ 
+    를 정의할 수 있다. 이때 [정리 3.3.3 "정렬집합에 관한 성질 $P$ 와 임의의 정렬집합 $X$ 에 대하여 '$X$ 의 모든 절편이 $P$ 를 만족하면 $X$ 도 $P$ 를 만족한다.' 이면 임의의 정렬집합이 $P$ 를 만족한다."](#8b6d31e56) 에 의하여 $S$ 가 서수이고 $S \approxeq A$ 을 보이면 임의의 정렬집합과 순서동형인 서수가 존재한다는 것이 증명된다. ▲ 
 
     먼저 $\alpha (a) \leq \alpha (b) \iff a \leq b$ 라 정의하면 $S$ 는 정렬집합이 된다. ▲ 
 
-    임의의 $b \in A$ 에 대하여 정리 "서수 $\alpha ,\beta$ 에 대하여 $\alpha < \beta \iff \alpha \in \beta \iff \alpha \subsetneq \beta$ 이다." 에 의하여
+    임의의 $b \in A$ 에 대하여 [도움정리 3.6.2 "서수 $\alpha ,\beta$ 에 대하여 $\alpha < \beta \iff \alpha \in \beta \iff \alpha \subsetneq \beta$ 이다."](#a4c513032) 에 의하여
 
     $$ \alpha (b) \in \alpha (a) \iff \alpha (b) < \alpha (a) \iff \alpha (b) \in S _{\alpha (a)} $$
 
@@ -1658,7 +1658,7 @@
 
 - 증명 
 
-    정리 "비어있지 않은 임의의 서수들의 집합은 최소원소를 가진다." 에 의하여 서수들의 집합 $C$ 에 대한 집합
+    [정리 3.6.4 "비어있지 않은 임의의 서수들의 집합은 최소원소를 가진다."](#f69fd2ad6) 에 의하여 서수들의 집합 $C$ 에 대한 집합
 
     $$ \alpha  = \bigcup_{}^{}\{\xi :\xi \in C\} $$
 
@@ -1702,7 +1702,7 @@
 
     $$ \aleph _n := \min \{\xi : \aleph _{n-1} < \text{card }(\xi ) \leq 2 ^{\aleph _{n-1}} \} $$
 
-- 이 정의는 정리 "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 $\gamma (0) = a$, $\forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$ 을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다." 를 사용하여 $\aleph _1$ 의 정의를 임의의 자연수 $n = 1, 2, \dots$ 에 대하여 확장한 것이다.
+- 이 정의는 [정리 2.1.2 "집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질 $\gamma (0) = a$, $\forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))$ 을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다."](../numbers#e4dca26d8) 를 사용하여 $\aleph _1$ 의 정의를 임의의 자연수 $n = 1, 2, \dots$ 에 대하여 확장한 것이다.
 
 - 또한 $\aleph _{\omega } = \sup \{\aleph _n:n < \omega \}$ 라 두면 새로운 기수를 계속해서 얻을 수 있다.
 
@@ -1738,7 +1738,7 @@
 
     임의의 벡터공간에 기저가 존재한다. 
 
-- 이 정리는 초른의 보조정리를 사용하여 증명되는데, 이런 증명 패턴이 수학의 여러 분야에서 전형적으로 쓰인다.
+- 이 정리는 [정리 3.1.1 초른 보조정리](#8e7118900)를 사용하여 증명되는데, 이런 증명 패턴이 수학의 여러 분야에서 전형적으로 쓰인다.
 
 - 조건 2) 는 $V = \text{span } B$ 라는 것을 말하고 있다. 
 
@@ -1760,7 +1760,7 @@
 
     이다.(*왜지?*) ▲ 
     
-    그러면 $C$ 가 1) 을 만족하고 순서집합 $\mathcal{X}$ 가 초른의 보조정리의 가정을 만족하므로 $\mathcal{X}$ 에는 극대 원소 $B$ 가 존재한다. 이제 $B$ 가 2) 를 만족함을 보이면 증명이 끝난다.
+    그러면 $C$ 가 1) 을 만족하고 순서집합 $\mathcal{X}$ 가 [정리 3.1.1 초른 보조정리](#8e7118900)의 가정을 만족하므로 $\mathcal{X}$ 에는 극대 원소 $B$ 가 존재한다. 이제 $B$ 가 2) 를 만족함을 보이면 증명이 끝난다.
 
     $B$ 가 2) 를 만족하지 않는다고 하면 2) 의 형태로 표시되지 않는 원소 $v  \in V$ 가 존재한다. 이때 $B \sqcup \{v\}$ 가 1) 을 만족함을 보이면 $B$ 가 $\mathcal{X}$ 의 극대원소라는 것에 모순이 되어 증명이 끝난다.
 
