@@ -6,7 +6,7 @@
 
 !!! tldr ""
 
-    선형변환(linear transformation) : $\mathbb{V} , \mathbb{W}$ 이 $\mathbb{F}$-벡터공간이라고 하자. $\forall x, y \in \mathbb{V} , \forall c \in \mathbb{F}$ 에 대하여 다음을 만족하는 함수 $T: \mathbb{V} \to \mathbb{W}$ 를 $\mathbb{V}$ 에서 $\mathbb{W}$ 로 가는 선형변환이라 한다. 
+    선형변환(linear transformation) : $\mathbf{V} , \mathbf{W}$ 이 $\mathbf{F}$-벡터공간이라고 하자. $\forall x, y \in \mathbf{V} , \forall c \in \mathbf{F}$ 에 대하여 다음을 만족하는 함수 $T: \mathbf{V} \to \mathbf{W}$ 를 $\mathbf{V}$ 에서 $\mathbf{W}$ 로 가는 선형변환이라 한다. 
 
     1. $T(x + y) = T(x) + T(y)$
 
@@ -16,23 +16,23 @@
 
     미분연산자나 적분연산자가 선형변환의 대표적인 예시이다. 이런 연산자는 미분방정식과 적분방정식을 특정한 벡터공간에서 정의된 선형변환으로 이해할 수 있게 해준다. 기하학에서의 선형변환은 회전, 대칭, 사영 같은 것들이 있다.
 
-    - $x, y \in \mathbb{V} \implies x+y \in \mathbb{V}$ 인데 $T(x), T(y) \in \mathbb{W} \implies T(x+y) \in \mathbb{W}$ 이므로 $T$ 가 벡터공간의 구조를 보존한다고 하는 것이다. 스칼라곱에 대해서도 마찬가지.
+    - $x, y \in \mathbf{V} \implies x+y \in \mathbf{V}$ 인데 $T(x), T(y) \in \mathbf{W} \implies T(x+y) \in \mathbf{W}$ 이므로 $T$ 가 벡터공간의 구조를 보존한다고 하는 것이다. 스칼라곱에 대해서도 마찬가지.
 
-- $\mathbb{F} = \mathbb{Q}$ 이면 2) 는 1) 에서 도출된다. 그러나 일반적으로 1) 과 2) 는 독립된 명제이다.
+- $\mathbf{F} = \mathbb{Q}$ 이면 2) 는 1) 에서 도출된다. 그러나 일반적으로 1) 과 2) 는 독립된 명제이다.
 
 - $T$ 가 선형변환이라는 것을 편의상 "$T$ 는 선형(linear) 이다" 라고 한다.
 
 !!! tldr ""
 
-    선형변환의 성질 : 선형변환 $T: \mathbb{V} \to \mathbb{W}$ 는 다음 성질을 만족한다. 
+    선형변환의 성질 : 선형변환 $T: \mathbf{V} \to \mathbf{W}$ 는 다음 성질을 만족한다. 
 
     1. $T$ 가 선형이면 $T(0) = 0$ 이다.
 
-    2. $T$ 가 선형이기 위한 필요충분조건은 $\forall x, y \in \mathbb{V} , \forall c \in \mathbb{F} : T(cx + y) = cT(x) + T(y)$ 이다.
+    2. $T$ 가 선형이기 위한 필요충분조건은 $\forall x, y \in \mathbf{V} , \forall c \in \mathbf{F} : T(cx + y) = cT(x) + T(y)$ 이다.
 
-    3. $T$ 가 선형이면 $\forall x, y \in \mathbb{V} : T(x -y) = T(x) - T(y)$ 이다.
+    3. $T$ 가 선형이면 $\forall x, y \in \mathbf{V} : T(x -y) = T(x) - T(y)$ 이다.
 
-    4. $T$ 가 선형이기 위한 필요충분조건은 $\forall x_1, \dots, x_n \in \mathbb{V}, \forall a_1, \dots, a_n \in \mathbb{F}$ 에 대하여 다음이 성립하는 것이다. 
+    4. $T$ 가 선형이기 위한 필요충분조건은 $\forall x_1, \dots, x_n \in \mathbf{V}, \forall a_1, \dots, a_n \in \mathbf{F}$ 에 대하여 다음이 성립하는 것이다. 
 
         $$ T \bigg (\sum_{i=1}^{n}a_ix_i\bigg ) = \sum_{i=1}^{n}a_iT(x_i) $$
 
@@ -82,11 +82,11 @@
 
 - 예시 
 
-    $T: \mathbb{M} _{m \times n} (\mathbb{F} ) \to \mathbb{M} _{n \times m}(\mathbb{F} ), A \mapsto A ^{t}$ 는 선형변환이다.
+    $T: \mathbf{M} _{m \times n} (\mathbf{F} ) \to \mathbf{M} _{n \times m}(\mathbf{F} ), A \mapsto A ^{t}$ 는 선형변환이다.
 
 - 예시 
 
-    무한번 미분가능한 함수 $f: \R \to \R$ 의 집합 $\mathbb{V}$ 을 정의하면 $\mathbb{V}$ 는 $\R$-벡터공간이된다. 이때 $T: \mathbb{V} \to \mathbb{V} , f \mapsto f'$ 로 정의하면
+    무한번 미분가능한 함수 $f: \R \to \R$ 의 집합 $\mathbf{V}$ 을 정의하면 $\mathbf{V}$ 는 $\R$-벡터공간이된다. 이때 $T: \mathbf{V} \to \mathbf{V} , f \mapsto f'$ 로 정의하면
 
     $$ T(ag+h) = (ag+h)' = ag'+h'=aT(g) +T(h) $$
 
@@ -94,7 +94,7 @@
 
 - 예시 
 
-    $\mathbb{V}$ 를 $\R$ 에서 정의한 모든 연속함수 집합으로 정의하고, $a, b \in \R, a < b$ 에 대하여 $T: \mathbb{V} \to \R, f \mapsto \int_{a}^{b}f(t)dt$ 로 정의하면 이는 선형변환이다. 왜냐하면 
+    $\mathbf{V}$ 를 $\R$ 에서 정의한 모든 연속함수 집합으로 정의하고, $a, b \in \R, a < b$ 에 대하여 $T: \mathbf{V} \to \R, f \mapsto \int_{a}^{b}f(t)dt$ 로 정의하면 이는 선형변환이다. 왜냐하면 
 
     $$ \int_{a}^{b}\{pf(t) + qg(t)\}dt = p \int_{a}^{b}f(t)dt + q \int_{a}^{b}g(t)dt $$
 
@@ -102,69 +102,69 @@
 
 !!! tldr ""
 
-    항등변환(identity transformation) : $\mathbb{F}$-벡터공간 $\mathbb{V}$ 에 대하여 $I _{\mathbb{V} }: \mathbb{V} \to \mathbb{V}, x \mapsto x$ 로 정의된 선형변환이다.
+    항등변환(identity transformation) : $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에 대하여 $I _{\mathbf{V} }: \mathbf{V} \to \mathbf{V}, x \mapsto x$ 로 정의된 선형변환이다.
 
-- 항등변환 $I _{\mathbb{V} }$ 을 편의상 $I$ 라 표기하기도 한다.
+- 항등변환 $I _{\mathbf{V} }$ 을 편의상 $I$ 라 표기하기도 한다.
     
 !!! tldr ""
 
-    영변환(zero transformation) : $\mathbb{F}$-벡터공간 $\mathbb{V} , \mathbb{W}$ 에 대하여 $T _{ 0}: \mathbb{V} \to \mathbb{W}, x \mapsto 0$ 로 정의된 선형변환이다.
+    영변환(zero transformation) : $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $T _{ 0}: \mathbf{V} \to \mathbf{W}, x \mapsto 0$ 로 정의된 선형변환이다.
 
 !!! tldr ""
 
-    영공간(null space, kernel) : 벡터공간 $\mathbb{V}, \mathbb{W}$ 와 선형변환 $T: \mathbb{V} \to \mathbb{W}$ 에 대하여 영공간은 집합 
+    영공간(null space, kernel) : 벡터공간 $\mathbf{V}, \mathbf{W}$ 와 선형변환 $T: \mathbf{V} \to \mathbf{W}$ 에 대하여 영공간은 집합 
     
-    $$ N(T) = \{x \in \mathbb{V} : T(x) = 0\}$$
+    $$ N(T) = \{x \in \mathbf{V} : T(x) = 0\}$$
     
     이다.
 
-- 선형변환 $T: \mathbb{V} \to \mathbb{W}$ 의 영공간을 $N(T)$ 또는 $\text{Null}(T)$ 또는 $\text{ker}(T)$ 로 표기한다.
+- 선형변환 $T: \mathbf{V} \to \mathbf{W}$ 의 영공간을 $N(T)$ 또는 $\text{Null}(T)$ 또는 $\text{ker}(T)$ 로 표기한다.
 
 - 예시 
 
-    항등변환 $I : \mathbb{V} \to \mathbb{V}$ 에 대하여 $N(I) = \{0\}$ 이다.
+    항등변환 $I : \mathbf{V} \to \mathbf{V}$ 에 대하여 $N(I) = \{0\}$ 이다.
 
-    영변환 $T_0 : \mathbb{V} \to \mathbb{W}$ 에 대하여 $N(T_0) = \mathbb{V}$ 이다.
+    영변환 $T_0 : \mathbf{V} \to \mathbf{W}$ 에 대하여 $N(T_0) = \mathbf{V}$ 이다.
 
 !!! tldr ""
 
-    상공간(range, image) : 벡터공간 $\mathbb{V}, \mathbb{W}$ 와 선형변환 $T: \mathbb{V} \to \mathbb{W}$ 에 대하여 상공간은 집합 
+    상공간(range, image) : 벡터공간 $\mathbf{V}, \mathbf{W}$ 와 선형변환 $T: \mathbf{V} \to \mathbf{W}$ 에 대하여 상공간은 집합 
     
-    $$ R(T) = \{T(x) \in \mathbb{W} : x \in \mathbb{V} \}$$
+    $$ R(T) = \{T(x) \in \mathbf{W} : x \in \mathbf{V} \}$$
     
     이다.
 
-- 선형변환 $T: \mathbb{V} \to \mathbb{W}$ 의 상공간을 $R(T)$ 또는 $\text{ran}(T)$ 으로 표기한다.
+- 선형변환 $T: \mathbf{V} \to \mathbf{W}$ 의 상공간을 $R(T)$ 또는 $\text{ran}(T)$ 으로 표기한다.
 
 - 예시 
 
-    항등변환 $I : \mathbb{V} \to \mathbb{V}$ 에 대하여 $R(I) = \mathbb{V}$ 이다.
+    항등변환 $I : \mathbf{V} \to \mathbf{V}$ 에 대하여 $R(I) = \mathbf{V}$ 이다.
 
-    영변환 $T_0 : \mathbb{V} \to \mathbb{W}$ 에 대하여 $R(T_0) = \{0\}$ 이다.
+    영변환 $T_0 : \mathbf{V} \to \mathbf{W}$ 에 대하여 $R(T_0) = \{0\}$ 이다.
 
 !!! tldr "정리 2.1"
 
-    벡터공간 $\mathbb{V} ,\mathbb{W}$ 와 선형변환 $T:\mathbb{V} \to \mathbb{W}$ 에 대하여 $N(T), R(T)$ 는 각각 $\mathbb{V} , \mathbb{W}$ 의 부분공간이다.
+    벡터공간 $\mathbf{V} ,\mathbf{W}$ 와 선형변환 $T:\mathbf{V} \to \mathbf{W}$ 에 대하여 $N(T), R(T)$ 는 각각 $\mathbf{V} , \mathbf{W}$ 의 부분공간이다.
 
 - 증명 
 
-    $\mathbb{V} , \mathbb{W}$ 의 영벡터를 각각 $0 _{\mathbb{V} },0 _{\mathbb{W} }$ 라 하자.
+    $\mathbf{V} , \mathbf{W}$ 의 영벡터를 각각 $0 _{\mathbf{V} },0 _{\mathbf{W} }$ 라 하자.
 
-    $T(0 _{\mathbb{V} }) = 0 _{\mathbb{W} }$ 이므로 $0 _{\mathbb{V} } \in N(T)$ 이다. $x, y \in N(T)$, $c \in \mathbb{F}$ 에 대하여 
+    $T(0 _{\mathbf{V} }) = 0 _{\mathbf{W} }$ 이므로 $0 _{\mathbf{V} } \in N(T)$ 이다. $x, y \in N(T)$, $c \in \mathbf{F}$ 에 대하여 
 
-    $$ T(x+y)=T(x)+T(y)=0 _{\mathbb{W} }+0 _{\mathbb{W} }=0 _{\mathbb{W} }, \enspace T(cx) = cT(x) = c 0 _{\mathbb{W} } = 0 _{\mathbb{W} } $$
+    $$ T(x+y)=T(x)+T(y)=0 _{\mathbf{W} }+0 _{\mathbf{W} }=0 _{\mathbf{W} }, \enspace T(cx) = cT(x) = c 0 _{\mathbf{W} } = 0 _{\mathbf{W} } $$
 
-    이므로 $x+y \in N(T), cx \in N(T)$ 이다. 따라서 $N(T)$ 은 $\mathbb{V}$ 의 부분공간이다. ▲ 
+    이므로 $x+y \in N(T), cx \in N(T)$ 이다. 따라서 $N(T)$ 은 $\mathbf{V}$ 의 부분공간이다. ▲ 
 
-    $T(0 _{\mathbb{V} }) = 0 _{\mathbb{W} }$ 이므로 $0 _{\mathbb{W} } \in R(T)$ 이다. $x, y \in R(T), c \in \mathbb{F} : \exists v, w \in \mathbb{V} \text{ s.t. }  T(v) = x, T(w) = y$ 이다. 따라서 
+    $T(0 _{\mathbf{V} }) = 0 _{\mathbf{W} }$ 이므로 $0 _{\mathbf{W} } \in R(T)$ 이다. $x, y \in R(T), c \in \mathbf{F} : \exists v, w \in \mathbf{V} \text{ s.t. }  T(v) = x, T(w) = y$ 이다. 따라서 
 
     $$ T(v+w) =T(v) +T(w) = x+y, \enspace T(cv) = cT(v) = cx $$
 
-    이고, $x+y \in R(T), cx \in R(T)$ 이다. 그러므로 $R(T)$ 는 $\mathbb{W}$ 의 부분공간이다. ■ 
+    이고, $x+y \in R(T), cx \in R(T)$ 이다. 그러므로 $R(T)$ 는 $\mathbf{W}$ 의 부분공간이다. ■ 
 
 !!! tldr "정리 2.2"
 
-    벡터공간 $\mathbb{V} ,\mathbb{W}$ 와 선형변환 $T: \mathbb{V} \to \mathbb{W}$ 와 $\mathbb{V}$ 의 기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 에 대하여 다음이 성립한다. 
+    벡터공간 $\mathbf{V} ,\mathbf{W}$ 와 선형변환 $T: \mathbf{V} \to \mathbf{W}$ 와 $\mathbf{V}$ 의 기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 에 대하여 다음이 성립한다. 
 
     $$ R(T) = \text{span}(T(\beta )) = \text{span}(\{T(v_1), T(v_2), \dots, T(v_n)\}) $$
 
@@ -178,13 +178,13 @@
 
 - 증명 
 
-    $\forall i, T(v_i) \in R(T)$ 이다. $R(T)$ 가 부분공간이므로 정리 1.5 "벡터공간 $\mathbb{V}$ 의 임의의 부분집합 $S$ 의 생성공간 $\text{span}(S)$ 는 $S$ 를 포함하는 $\mathbb{V}$ 의 부분공간이다. $S$ 를 포함하는 $\mathbb{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다." 에 의하여
+    $\forall i, T(v_i) \in R(T)$ 이다. $R(T)$ 가 부분공간이므로 정리 1.5 "벡터공간 $\mathbf{V}$ 의 임의의 부분집합 $S$ 의 생성공간 $\text{span}(S)$ 는 $S$ 를 포함하는 $\mathbf{V}$ 의 부분공간이다. $S$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다." 에 의하여
 
     $$ \text{span}(\{T(v_1), T(v_2), \dots, T(v_n)\}) =\text{span}(T(\beta )) \subset R(T)  $$
 
     이다. 상공간 $R(T)$ 은 $T(\beta )$ 를 포함하면서 부분공간이므로 $\text{span}(T(\beta ))$ 도 포함하기 때문이다. ▲ 
 
-    $w \in R(T) \implies \exists v \in \mathbb{V} \text{ s.t. } w = T(v)$ 인데 $\beta$ 가 $\mathbb{V}$ 의 기저이므로 $a_1, a_2, \dots, a_n \in \mathbb{F}$ 에 대하여
+    $w \in R(T) \implies \exists v \in \mathbf{V} \text{ s.t. } w = T(v)$ 인데 $\beta$ 가 $\mathbf{V}$ 의 기저이므로 $a_1, a_2, \dots, a_n \in \mathbf{F}$ 에 대하여
 
     $$ v = \sum_{i=1}^{n}a_iv_i $$
 
@@ -204,11 +204,11 @@
 
 - 예시 
 
-    선형변환 $T: \mathbb{P} _2(\R) \to \mathbb{M} _{2 \times 2}(\R)$ 을 
+    선형변환 $T: \mathbf{P} _2(\R) \to \mathbf{M} _{2 \times 2}(\R)$ 을 
 
     $$ T(f(x)) = \begin{pmatrix} f(1)-f(2) & 0\\ 0 & f(0)\\ \end{pmatrix} $$
 
-    와 같이 정의하자. $\mathbb{P} _2(\R)$ 의 기저는 $\beta = \{1,x,x ^{2}\}$ 이므로 이 정리를 사용하여 $R(T)$ 를 다음과 같이 나타낼 수 있다.
+    와 같이 정의하자. $\mathbf{P} _2(\R)$ 의 기저는 $\beta = \{1,x,x ^{2}\}$ 이므로 이 정리를 사용하여 $R(T)$ 를 다음과 같이 나타낼 수 있다.
 
     $$ \begin{equation}\begin{split}   R(T) &= \text{span}(T(\beta )) = \text{span}(\{T(1), T(x), T(x ^{2})\}) \\ &= \text{span}\bigg (\bigg \{ \begin{pmatrix} 0 & 0\\ 0 & 1\\ \end{pmatrix}, \begin{pmatrix} -1 & 0\\ 0 & 0\\ \end{pmatrix}, \begin{pmatrix} -3 & 0\\ 0 & 0\\ \end{pmatrix} \bigg \}\bigg ) \\ &= \text{span}\bigg (\bigg \{ \begin{pmatrix} 0 & 0\\ 0 & 1\\ \end{pmatrix}, \begin{pmatrix} -1 & 0\\ 0 & 0\\ \end{pmatrix} \bigg \}\bigg ) \end{split}\end{equation}\tag*{} $$
 
@@ -240,11 +240,11 @@
 
     이다. 따라서 $N(T)$ 의 기저는 $\{-3x + x ^{2}\}$ 이다. ▲ 
 
-- 위 예시에서 $\dim(N(T)) + \dim(R(T)) = 1 + 2 = 3 = \dim(\mathbb{P} _2(\R))$ 이 성립하였는데 이는 정리 2.3 에서와 같이 일반적으로 성립한다.
+- 위 예시에서 $\dim(N(T)) + \dim(R(T)) = 1 + 2 = 3 = \dim(\mathbf{P} _2(\R))$ 이 성립하였는데 이는 정리 2.3 에서와 같이 일반적으로 성립한다.
 
 !!! tldr ""
 
-    nullity(영공간의 차원) : 벡터공간 $\mathbb{V} , \mathbb{W}$ 와 선형변환 $T: \mathbb{V} \to \mathbb{W}$ 에 대하여 $N(T)$ 가 유한차원 일 때 $N(T)$ 의 차원을 
+    nullity(영공간의 차원) : 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $T: \mathbf{V} \to \mathbf{W}$ 에 대하여 $N(T)$ 가 유한차원 일 때 $N(T)$ 의 차원을 
 
     $$  \text{nullity}(T) = \dim(N(T)) $$
 
@@ -254,7 +254,7 @@
 
 !!! tldr ""
 
-    랭크(rank), 계수 : 벡터공간 $\mathbb{V} , \mathbb{W}$ 와 선형변환 $T: \mathbb{V} \to \mathbb{W}$ 에 대하여 $R(T)$ 가 유한차원 일 때 $R(T)$ 의 차원을 
+    랭크(rank), 계수 : 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $T: \mathbf{V} \to \mathbf{W}$ 에 대하여 $R(T)$ 가 유한차원 일 때 $R(T)$ 의 차원을 
 
     $$ \text{rank}(T) = \dim(R(T)) $$
 
@@ -266,9 +266,9 @@
 
 !!! tldr "정리 2.3"
 
-    차원정리(dimension theorem) : 벡터공간 $\mathbb{V} , \mathbb{W}$ 와 선형변환 $T: \mathbb{V} \to \mathbb{W}$ 에 대하여 $\mathbb{V}$ 가 유한차원이면 
+    차원정리(dimension theorem) : 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $T: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한차원이면 
 
-    $$ \text{nullity}(T)+\text{rank}(T)= \dim(\mathbb{V} ) $$
+    $$ \text{nullity}(T)+\text{rank}(T)= \dim(\mathbf{V} ) $$
 
     이다.
 
