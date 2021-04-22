@@ -2,7 +2,7 @@
 
     [프리드버그 선형대수학](https://book.naver.com/bookdb/book_detail.nhn?bid=16374070) 를 공부하면서 노트정리 한 내용입니다.
 
-2
+3
 
 # 벡터공간 
 
