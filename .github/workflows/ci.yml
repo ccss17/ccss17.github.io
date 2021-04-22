@@ -12,8 +12,9 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material ghp-import
-      - run: mkdocs build
-      - run: python config.py
-      - run: ghp-import site
-      - run: git push -f origin gh-pages
+      - run: |
+          mkdocs build
+          python config.py
+          ghp-import site
+          git push -f origin gh-pages
       # - run: mkdocs gh-deploy --force
