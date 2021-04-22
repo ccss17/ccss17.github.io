@@ -178,7 +178,7 @@
 
 - 증명 
 
-    $\forall i, T(v_i) \in R(T)$ 이다. $R(T)$ 가 부분공간이므로 정리 1.5 "벡터공간 $\mathbf{V}$ 의 임의의 부분집합 $S$ 의 생성공간 $\text{span}(S)$ 는 $S$ 를 포함하는 $\mathbf{V}$ 의 부분공간이다. $S$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다." 에 의하여
+    $\forall i, T(v_i) \in R(T)$ 이다. $R(T)$ 가 부분공간이므로 [정리 1.5 "벡터공간 $\mathbf{V}$ 의 임의의 부분집합 $S$ 의 생성공간 $\text{span}(S)$ 는 $S$ 를 포함하는 $\mathbf{V}$ 의 부분공간이다. $S$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다."](../VectorSpace#aad599671) 에 의하여
 
     $$ \text{span}(\{T(v_1), T(v_2), \dots, T(v_n)\}) =\text{span}(T(\beta )) \subset R(T)  $$
 
@@ -216,23 +216,11 @@
 
     이제 $N(T)$ 의 기저를 찾아보자. $2 \times 2$ 영행렬 $O$ 에 대하여 $f(x) \in N(T) \iff T(f(x)) = O$ 이므로 
 
-    $$ f(x) \in N(T) \iff \begin{pmatrix}
-    f(1) - f(2) & 0\\
-    0 & f(0)\\
-    \end{pmatrix} = 
-    \begin{pmatrix}
-    0&0\\
-    0&0\\
-    \end{pmatrix}
-    $$
+    $$ f(x) \in N(T) \iff \begin{pmatrix} f(1) - f(2) & 0\\ 0 & f(0)\\ \end{pmatrix} = \begin{pmatrix} 0&0\\ 0&0\\ \end{pmatrix} $$
 
     이다. $f(x) = a + bx + cx ^{2}$ 라 하면
 
-    $$ \begin{equation}\begin{split}   
-    0&= f(1) - f(2) = -b -3c\\
-    0 &= f(0) = a
-    \end{split}\end{equation}\tag*{}
-    $$
+    $$ \begin{equation}\begin{split}   0&= f(1) - f(2) = -b -3c\\ 0 &= f(0) = a \end{split}\end{equation}\tag*{} $$
 
     이므로 
 
@@ -240,7 +228,7 @@
 
     이다. 따라서 $N(T)$ 의 기저는 $\{-3x + x ^{2}\}$ 이다. ▲ 
 
-- 위 예시에서 $\dim(N(T)) + \dim(R(T)) = 1 + 2 = 3 = \dim(\mathbf{P} _2(\R))$ 이 성립하였는데 이는 정리 2.3 에서와 같이 일반적으로 성립한다.
+- 위 예시에서 $\dim(N(T)) + \dim(R(T)) = 1 + 2 = 3 = \dim(\mathbf{P} _2(\R))$ 이 성립하였는데 이는 [정리 2.3](#cc24674bf) 에서와 같이 일반적으로 성립한다.
 
 !!! tldr ""
 

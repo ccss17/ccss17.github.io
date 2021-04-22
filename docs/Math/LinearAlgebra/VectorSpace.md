@@ -472,7 +472,7 @@
 
         $$ v + 0 = v = v + 0' \iff v + 0 = v + 0' $$
 
-        인데, 정리 "벡터 합의 소거법칙 : 벡터 공간 $\mathbf{V}$ 에 대하여 $x,y,z \in \mathbf{V}, x + z = y + z \implies x = y$ 이다." 에 의하여 
+        인데, [정리 1.1 "벡터 합의 소거법칙 : 벡터 공간 $\mathbf{V}$ 에 대하여 $x,y,z \in \mathbf{V}, x + z = y + z \implies x = y$ 이다."](#a459b6117) 에 의하여 
 
         $$ \therefore  0 = 0' $$
 
@@ -496,7 +496,7 @@
 
         $$ x + y = 0 = x + y' \iff x + y = x + y' $$
 
-        인데, 정리 "벡터 합의 소거법칙 : 벡터 공간 $\mathbf{V}$ 에 대하여 $x,y,z \in \mathbf{V}, x + z = y + z \implies x = y$ 이다." 에 의하여 
+        인데, [정리 1.1 "벡터 합의 소거법칙 : 벡터 공간 $\mathbf{V}$ 에 대하여 $x,y,z \in \mathbf{V}, x + z = y + z \implies x = y$ 이다."](#a459b6117) 에 의하여 
 
         $$ \therefore  y = y' $$
 
@@ -514,7 +514,7 @@
 
 - 증명 
 
-    $0x + 0x = (0 + 0)x = 0x = 0x + 0 = 0 + 0x$ 인데 정리 "벡터 합의 소거법칙 : 벡터 공간 $\mathbf{V}$ 에 대하여 $x,y,z \in \mathbf{V}, x + z = y + z \implies x = y$ 이다." 에 의하여 $0x = 0$ 이다. ▲ 
+    $0x + 0x = (0 + 0)x = 0x = 0x + 0 = 0 + 0x$ 인데 [정리 1.1 "벡터 합의 소거법칙 : 벡터 공간 $\mathbf{V}$ 에 대하여 $x,y,z \in \mathbf{V}, x + z = y + z \implies x = y$ 이다."](#a459b6117) 에 의하여 $0x = 0$ 이다. ▲ 
 
     벡터 $-(ax)$ 는 $ax + \{-(ax)\} = 0$ 인 유일한 벡터인데 $ax + (-a)x = 0$ 이면 덧셈에 대한 역벡터는 유일하므로 $(-a)x = -(ax)$ 이다.
 
@@ -954,7 +954,7 @@
 
     $$ 0 = b_1v_1 +b_2v_2 + \dots +b_mv_m +(-1)v$$
 
-    이다. 그런데 $v \not\in S$ 이고 $v$ 의 계수가 $0$ 이 아니므로 집합 $\{v_1,v_2, \dots,v_m,v\} \subset S \cup \{v\}$ 은 일차종속이다. 그러면 정리 "$\mathbf{V}$ 가 벡터공간이고 $S_1 \subseteq S_2 \subseteq \mathbf{V}$ 일 때 $S_1$ 이 일차종속이면 $S_2$ 도 일차종속이다." 에 의하여 $S \cup \{v\}$ 도 일차종속이다. ■ 
+    이다. 그런데 $v \not\in S$ 이고 $v$ 의 계수가 $0$ 이 아니므로 집합 $\{v_1,v_2, \dots,v_m,v\} \subset S \cup \{v\}$ 은 일차종속이다. 그러면 [정리 1.6 "$\mathbf{V}$ 가 벡터공간이고 $S_1 \subseteq S_2 \subseteq \mathbf{V}$ 일 때 $S_1$ 이 일차종속이면 $S_2$ 도 일차종속이다."](#01156053b) 에 의하여 $S \cup \{v\}$ 도 일차종속이다. ■ 
 
 # 기저와 차원 
 
@@ -1032,9 +1032,9 @@
 
     $\beta = S$ 라면 $S$ 는 일차독립이고 $\mathbf{V}$ 의 생성집합이므로 $\mathbf{V}$ 의 기저이다. ▲ 
 
-    $\beta \subsetneq S$ 라면 정리 1.5 "$S$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다." 에서 $\text{span}(S) = \mathbf{V}$ 이므로 $S \subset \text{span}(\beta )$ 를 보이면 $\text{span}(S) = \mathbf{V} \subset \text{span}(\beta )$ 인데, $\text{span}(\beta ) \subset \text{span}(S)$ 임은 자명하므로 $\text{span}(\beta ) = \mathbf{V}$ 이 되어 $\beta$ 가 $\mathbf{V}$ 의 기저임이 증명된다.
+    $\beta \subsetneq S$ 라면 [정리 1.5 "$S$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다."](#aad599671) 에서 $\text{span}(S) = \mathbf{V}$ 이므로 $S \subset \text{span}(\beta )$ 를 보이면 $\text{span}(S) = \mathbf{V} \subset \text{span}(\beta )$ 인데, $\text{span}(\beta ) \subset \text{span}(S)$ 임은 자명하므로 $\text{span}(\beta ) = \mathbf{V}$ 이 되어 $\beta$ 가 $\mathbf{V}$ 의 기저임이 증명된다.
 
-    먼저 $v \in S$ 에 대하여 $v \in \beta \implies v \in \text{span}(\beta )$ 이다. $v \not\in \beta$ 이면 $\beta \cup \{v\}$ 는 $\beta$ 의 정의에 의하여 일차종속이므로 정리 1.7 "벡터공간 $\mathbf{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbf{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $v \in \text{span}(\beta )$ 이다. 그러므로 어느 경우에나 $\forall v \in S, v \in \text{span}(\beta )$ 이므로 $S \subset \text{span}(\beta )$ 이다. ■ 
+    먼저 $v \in S$ 에 대하여 $v \in \beta \implies v \in \text{span}(\beta )$ 이다. $v \not\in \beta$ 이면 $\beta \cup \{v\}$ 는 $\beta$ 의 정의에 의하여 일차종속이므로 [정리 1.7 "벡터공간 $\mathbf{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbf{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다."](#0c0767388) 에 의하여 $v \in \text{span}(\beta )$ 이다. 그러므로 어느 경우에나 $\forall v \in S, v \in \text{span}(\beta )$ 이므로 $S \subset \text{span}(\beta )$ 이다. ■ 
 
 - 위 증명과정은 $\mathbf{V}$ 의 유한 생성집합을 축소하여 $\mathbf{V}$ 의 기저를 얻는 방법을 말해준다.
 
@@ -1076,7 +1076,7 @@
 
     $\text{card}(L') = m \geq 0$ 에 대하여 성립한다고 가정하고 $\text{card}(L) = m + 1$ 에 대하여 성립함을 보이자. 이때 편의상 $\text{card}(G) = n$ 이라고 하자. 
     
-    $L = \{v_1, v_2, \dots, v _{m+1}\}$ 에 대하여 정리 1.6 따름정리 "$\mathbf{V}$ 가 벡터공간이고 $S_1 \subseteq S_2 \subseteq \mathbf{V}$ 일 때 $S_2$ 이 일차독립이면 $S_1$ 도 일차독립이다." 에 의하여 $L' = \{v_1, v_2, \dots, v _{m}\}$ 은 일차독립이다.
+    $L = \{v_1, v_2, \dots, v _{m+1}\}$ 에 대하여 [정리 1.6 따름정리 "$\mathbf{V}$ 가 벡터공간이고 $S_1 \subseteq S_2 \subseteq \mathbf{V}$ 일 때 $S_2$ 이 일차독립이면 $S_1$ 도 일차독립이다."](#01156053b) 에 의하여 $L' = \{v_1, v_2, \dots, v _{m}\}$ 은 일차독립이다.
 
     $m$ 에 대해서는 성립한다고 가정했으므로 집합 $H' = \{u_1, u_2, \dots, u _{n-m}\} \subset G$ 이 존재하여 
     
@@ -1086,7 +1086,7 @@
 
     $$ a_1v_1 + \dots +a_mv_m + b_1u_1 + \dots + b _{n-m}u _{n-m} = v _{m+1} $$
 
-    $\text{card}(L') \leq \text{card}(G) \iff m \leq n$ 인데 $n = m$ 이면 $v _{m+1}$ 이 $v_1, \dots, v_m$ 의 일차결합이 되므로 정리 1.7 "벡터공간 $\mathbf{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbf{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $v _{m+1} \in \text{span}(L')$ 에서 $L = L' \cup \{v _{m+1}\}$ 이 일차종속이 되어버린다. 하지만 $L$ 은 일차독립이라고 하였으므로 모순이다. 그러므로 $m \neq n$ 이고 $m < n \iff m + 1 \leq n$ 이다. 즉, $\text{card}(L') + 1 = \text{card}(L) \leq \text{card}(G)$ 이 성립한다. ▲ 
+    $\text{card}(L') \leq \text{card}(G) \iff m \leq n$ 인데 $n = m$ 이면 $v _{m+1}$ 이 $v_1, \dots, v_m$ 의 일차결합이 되므로 [정리 1.7 "벡터공간 $\mathbf{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbf{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다."](#0c0767388) 에 의하여 $v _{m+1} \in \text{span}(L')$ 에서 $L = L' \cup \{v _{m+1}\}$ 이 일차종속이 되어버린다. 하지만 $L$ 은 일차독립이라고 하였으므로 모순이다. 그러므로 $m \neq n$ 이고 $m < n \iff m + 1 \leq n$ 이다. 즉, $\text{card}(L') + 1 = \text{card}(L) \leq \text{card}(G)$ 이 성립한다. ▲ 
 
     만약 $b_i$ 들이 모두 $0$ 이면 위와 같은 모순이 또 발생하므로 $b_i$ 중 하나는 반드시 $0$ 이 아니다. 그것을 $b_1$ 이라 하면 
 
@@ -1098,7 +1098,7 @@
 
     $$ \{v_1, \dots, v_m, u_1, \dots, u _{n-m}\} \subseteq \text{span}(L \cup H) $$
 
-    이다. $(1)$ 에서 $\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbf{V}$ 인데, 정리 1.5 "$S$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다." 에 의하여 $\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbf{V} \subset \text{span}(L \cup H)$ 이다. $\text{span}(L \cup H) \subset \mathbf{V}$ 은 자명하므로 결국 $\text{span}(L \cup H)= \mathbf{V}$ 이다. ▲ 
+    이다. $(1)$ 에서 $\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbf{V}$ 인데, [정리 1.5 "$S$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다."](#aad599671) 에 의하여 $\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbf{V} \subset \text{span}(L \cup H)$ 이다. $\text{span}(L \cup H) \subset \mathbf{V}$ 은 자명하므로 결국 $\text{span}(L \cup H)= \mathbf{V}$ 이다. ▲ 
 
     그러면 집합 $H \subset \{u_1, u_2, \dots, u _{n-m}\} \subset G$ 이고 $\text{card}(H) = n - (m + 1) = \text{card}(G) - \text{card}(L)$ 이다. 그러면 수학적 귀납법에 의하여 모든 증명이 끝났다. ■ 
 
@@ -1142,11 +1142,7 @@
 
 - 증명
 
-    $\beta$ 가 $\mathbf{V}$ 의 기저이고, $\gamma$ 가 $\text{card}(\gamma ) > \text{card}(\beta )$ 인 $\mathbf{V}$ 의 기저라고 하면, $\exists S \subset \gamma \text{ s.t. } \text{card}(S) = \text{card}(\beta )+1$ 이다. $S$ 는 일차독립이고 $\text{span}(\beta) = \mathbf{V}$ 이므로 정리 1.10 
-    
-    "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고 $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다. $\text{card}(L) \leq \text{card}(G)$"
-    
-    에 의하여 $\text{card}(S) = \text{card}(\beta ) + 1 \leq \text{card}(\beta )$ 인데, 이는 모순이다. 그러므로 $\text{card}(\gamma) \leq \text{card}(\beta )$ 이다. ▲ 
+    $\beta$ 가 $\mathbf{V}$ 의 기저이고, $\gamma$ 가 $\text{card}(\gamma ) > \text{card}(\beta )$ 인 $\mathbf{V}$ 의 기저라고 하면, $\exists S \subset \gamma \text{ s.t. } \text{card}(S) = \text{card}(\beta )+1$ 이다. $S$ 는 일차독립이고 $\text{span}(\beta) = \mathbf{V}$ 이므로 [정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고 $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다. $\text{card}(L) \leq \text{card}(G)$"](#e102d4179) 에 의하여 $\text{card}(S) = \text{card}(\beta ) + 1 \leq \text{card}(\beta )$ 인데, 이는 모순이다. 그러므로 $\text{card}(\gamma) \leq \text{card}(\beta )$ 이다. ▲ 
 
     같은 논리로 $\text{card}(\beta ) \leq \text{card}(\gamma )$ 를 도출할 수 있다. ▲ 
 
@@ -1202,7 +1198,7 @@
 
     유한차원(finite dimension) : 기저가 유한집합인 벡터공간이다.
 
-- 정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고 $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다. 1. $\text{card}(L) \leq \text{card}(G)$ 2. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$"
+- [정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고 $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다. 1. $\text{card}(L) \leq \text{card}(G)$ 2. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$"](#e102d4179)
 
     를 차원의 관점에서 다시 말해보면
 
@@ -1238,15 +1234,15 @@
 
     우선 벡터공간 $\mathbf{V}$ 의 기저를 $\beta$ 라고 하면 $\text{card}(\beta ) = \dim(\mathbf{V})$ 이다.
 
-    $\mathbf{V}$ 의 유한 생성집합을 $G$ 라고 하면 정리 1.9 "유한집합 $S$ 가 벡터공간 $\mathbf{V}$ 를 생성하면 $S$ 의 부분집합 중에 $\mathbf{V}$ 의 기저가 존재한다." 에 의하여 $G$ 의 부분집합이자 $\mathbf{V}$ 의 기저인 $H$ 가 존재한다. 정리 1.10 따름정리 1 "벡터공간 $\mathbf{V}$ 가 유한집합인 기저를 포함하면 $\mathbf{V}$ 의 모든 기저는 유한집합이며, 기수가 같다." 에 의하여 $\text{card}(H) = \dim(\mathbf{V} )$ 이다. 따라서 $\dim(\mathbf{V} )\leq \text{card}(G)$ 이고 만약 $\dim(\mathbf{V} ) = \text{card}(G)$ 이면 $G = H$ 으로써 $G$ 는 $\mathbf{V}$ 의 기저이다. ▲ 
+    $\mathbf{V}$ 의 유한 생성집합을 $G$ 라고 하면 [정리 1.9 "유한집합 $S$ 가 벡터공간 $\mathbf{V}$ 를 생성하면 $S$ 의 부분집합 중에 $\mathbf{V}$ 의 기저가 존재한다."](#2d3716e93) 에 의하여 $G$ 의 부분집합이자 $\mathbf{V}$ 의 기저인 $H$ 가 존재한다. [정리 1.10 따름정리 1 "벡터공간 $\mathbf{V}$ 가 유한집합인 기저를 포함하면 $\mathbf{V}$ 의 모든 기저는 유한집합이며, 기수가 같다."](#2f5eb1649) 에 의하여 $\text{card}(H) = \dim(\mathbf{V} )$ 이다. 따라서 $\dim(\mathbf{V} )\leq \text{card}(G)$ 이고 만약 $\dim(\mathbf{V} ) = \text{card}(G)$ 이면 $G = H$ 으로써 $G$ 는 $\mathbf{V}$ 의 기저이다. ▲ 
 
-    $L \subset \mathbf{V}$ 이 일차독립이고 $\text{card}(L) = \dim(\mathbf{V} )$ 라고 하자. 정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고 $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$" 에 의하여 
+    $L \subset \mathbf{V}$ 이 일차독립이고 $\text{card}(L) = \dim(\mathbf{V} )$ 라고 하자. [정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고 $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$"](#e102d4179) 에 의하여 
 
     $$ \exists H \subset \beta  \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land \text{card}(H) = \text{card}(\beta) - \text{card}(L)  $$
 
     인데 $\text{card}(H) = \text{card}(\beta) - \text{card}(L) = \dim(\mathbf{V} ) - \dim(\mathbf{V} ) = 0$ 이다. $\text{card}(H) = 0 \iff H = \varnothing$ 이므로 $\text{span}(L) = \mathbf{V}$ 이고 $L$ 은 일차독립이므로 $L$ 은 $\mathbf{V}$ 의 기저이다. ▲ 
 
-    $L \subset \mathbf{V}$ 가 일차독립이면 정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고 $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$" 에 의하여 
+    $L \subset \mathbf{V}$ 가 일차독립이면 [정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고 $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$"](#e102d4179) 에 의하여 
 
     $$ \exists H \subset \beta  \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land \text{card}(H) = \text{card}(\beta) - \text{card}(L)  $$
 
@@ -1294,9 +1290,9 @@
 
     $\mathbf{W} \neq \{0\}$ 이면 영이 아닌 벡터 $x_1$ 에 대하여 $x_1 \in \mathbf{W}$ 이다. 이때 $\{x_1\}$ 은 일차독립인데 이 집합이 일차독립이 되도록 $\mathbf{W}$ 에서 $x_1, x_2, \dots, x_k$ 를 꺼내서 $\{x_1, \dots, x_k\}$ 를 만들자. $\mathbf{V}$ 의 일차독립인 집합의 기수는 $\dim(\mathbf{V} )$ 와 같거나 작으므로 $k \leq \dim(\mathbf{V} )$ 이다. 이제 이 집합에 $\mathbf{W}$ 의 임의의 벡터를 하나만 더해도 일차종속이 된다. 
     
-    그러면 정리 1.7 "벡터공간 $\mathbf{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbf{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $\text{span}(\{x_1, \dots, x_k\}) = \mathbf{W}$ 이므로 이는 $\mathbf{W}$ 의 기저이다. 그러므로 $k = \dim(\mathbf{W} ) \leq \dim(\mathbf{V} )$ 이다. ▲ 
+    그러면 [정리 1.7 "벡터공간 $\mathbf{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbf{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다."](#0c0767388) 에 의하여 $\text{span}(\{x_1, \dots, x_k\}) = \mathbf{W}$ 이므로 이는 $\mathbf{W}$ 의 기저이다. 그러므로 $k = \dim(\mathbf{W} ) \leq \dim(\mathbf{V} )$ 이다. ▲ 
 
-    $\dim(\mathbf{W} ) = \dim(\mathbf{V} )$ 이면 $\mathbf{W}$ 의 기저의 기수는 $\dim(\mathbf{V} )$ 이고, 일차독립인 $\mathbf{V}$ 의 부분집합이다. 그러면 정리 1.10 따름정리 2 "벡터공간 $\mathbf{V}$ 에 대하여 다음이 성립한다. $S \subset \mathbf{V}$ 가 일차독립이고 $\text{card}(S) = \dim(\mathbf{V} )$ 이면 기저이다." 에 의하여 $\mathbf{W}$ 의 기저는 $\mathbf{V}$ 의 기저가 되고, 결국 $\mathbf{W} = \mathbf{V}$ 가 된다. ■ 
+    $\dim(\mathbf{W} ) = \dim(\mathbf{V} )$ 이면 $\mathbf{W}$ 의 기저의 기수는 $\dim(\mathbf{V} )$ 이고, 일차독립인 $\mathbf{V}$ 의 부분집합이다. 그러면 [정리 1.10 따름정리 2 "벡터공간 $\mathbf{V}$ 에 대하여 다음이 성립한다. $S \subset \mathbf{V}$ 가 일차독립이고 $\text{card}(S) = \dim(\mathbf{V} )$ 이면 기저이다."](#e477fd68a) 에 의하여 $\mathbf{W}$ 의 기저는 $\mathbf{V}$ 의 기저가 되고, 결국 $\mathbf{W} = \mathbf{V}$ 가 된다. ■ 
 
 - 예시 
 
@@ -1314,7 +1310,7 @@
 
 - 증명 
 
-    $\mathbf{W}$ 의 기저를 $S$ 라 하면 $S$ 는 $\mathbf{V}$ 의 일차독립인 부분집합이므로 정리 1.10 따름정리 2 "벡터공간 $\mathbf{V}$ 에 대하여 다음이 성립한다. $L \subset \mathbf{V}$ 이 일차독립이면 $L \subset \beta$ 인 $\mathbf{V}$ 의 기저 $\beta$ 가 존재한다." 에 의하여 $\mathbf{V}$ 의 기저로 확장할 수 있다. ■ 
+    $\mathbf{W}$ 의 기저를 $S$ 라 하면 $S$ 는 $\mathbf{V}$ 의 일차독립인 부분집합이므로 [정리 1.10 따름정리 2 "벡터공간 $\mathbf{V}$ 에 대하여 다음이 성립한다. $L \subset \mathbf{V}$ 이 일차독립이면 $L \subset \beta$ 인 $\mathbf{V}$ 의 기저 $\beta$ 가 존재한다."](#e477fd68a) 에 의하여 $\mathbf{V}$ 의 기저로 확장할 수 있다. ■ 
 
 - 예시 
 
@@ -1380,7 +1376,7 @@
 
     벡터공간 $\mathbf{V}$ 와 그 기저 $\beta$ 에 대하여 기저의 정의에 따라 $\beta$ 는 일차독립이다. ▲ 
     
-    $v \in \mathbf{V}, v \not\in \beta$ 이면 $\text{span}(\beta ) = \mathbf{V}$ 에서 정리 1.7 "벡터공간 $\mathbf{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbf{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $\beta \cup \{v\}$ 는 일차종속이므로 $\beta$ 가 일차독립인 극대 부분집합이다. ■ 
+    $v \in \mathbf{V}, v \not\in \beta$ 이면 $\text{span}(\beta ) = \mathbf{V}$ 에서 [정리 1.7 "벡터공간 $\mathbf{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbf{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다."](#0c0767388) 에 의하여 $\beta \cup \{v\}$ 는 일차종속이므로 $\beta$ 가 일차독립인 극대 부분집합이다. ■ 
 
 !!! tldr "정리 1.12"
 
@@ -1388,9 +1384,9 @@
 
 - 증명
 
-    $S \not \subset \text{span}(\beta )$ 이면 $v \in S \text{ \textbackslash } \text{span}(\beta )$ 가 존재하여 정리 1.7 "벡터공간 $\mathbf{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbf{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다." 에 의하여 $\beta \cup \{v\}$ 를 일차독립으로 만든다. 이는 $\beta$ 가 일차독립인 극대 부분집합이라는 것에 모순이다.
+    $S \not \subset \text{span}(\beta )$ 이면 $v \in S \text{ \textbackslash } \text{span}(\beta )$ 가 존재하여 [정리 1.7 "벡터공간 $\mathbf{V}$ 와 일차독립인 부분집합 $S$ 와 벡터 $v \in \mathbf{V} \text{ \textbackslash } S$ 에 대하여 $S \cup \{v\}$ 가 일차종속이기 위한 필요충분조건은 $v \in \text{span}(S)$ 이다."](#0c0767388) 에 의하여 $\beta \cup \{v\}$ 를 일차독립으로 만든다. 이는 $\beta$ 가 일차독립인 극대 부분집합이라는 것에 모순이다.
 
-    그러므로 $S \subset \text{span}(\beta )$ 이다. 이때 $\text{span}(S) = \mathbf{V}$ 이므로 정리 1.5 "벡터공간 $\mathbf{V}$ 의 임의의 부분집합 $S$ 에 대하여 $S$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다." 에 의하여 $\text{span}(S) = \mathbf{V} \subset \text{span}(\beta )$ 이다. $\text{span}(\beta ) \subset \mathbf{V}$ 은 자명하므로 $\text{span}(\beta ) = \mathbf{V}$ 이다. ■ 
+    그러므로 $S \subset \text{span}(\beta )$ 이다. 이때 $\text{span}(S) = \mathbf{V}$ 이므로 [정리 1.5 "벡터공간 $\mathbf{V}$ 의 임의의 부분집합 $S$ 에 대하여 $S$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다."](#aad599671) 에 의하여 $\text{span}(S) = \mathbf{V} \subset \text{span}(\beta )$ 이다. $\text{span}(\beta ) \subset \mathbf{V}$ 은 자명하므로 $\text{span}(\beta ) = \mathbf{V}$ 이다. ■ 
 
 !!! tldr ""
 
@@ -1400,7 +1396,7 @@
 
     2. $B$ 를 포함하고 일차독립인 $S$ 의 부분집합은 오직 $B$ 이다.
 
-- $S$ 가 $\mathbf{V}$ 를 생성한다면, 이 정의는 정리 1.12 에 의하여 기저의 정의와 같다. 
+- $S$ 가 $\mathbf{V}$ 를 생성한다면, 이 정의는 [정리 1.12](#0891c672a) 에 의하여 기저의 정의와 같다. 
 
 !!! tldr ""
 
@@ -1432,13 +1428,13 @@
 
 - 증명 
 
-    정리 1.13 과 정리 "벡터공간의 기저와 벡터공간의 일차독립인 극대부분집합은 동치이다." 에 의하여 증명이 끝난다. ■ 
+    [정리 1.13](#608799181) 과 [정리 "벡터공간의 기저와 벡터공간의 일차독립인 극대부분집합은 동치이다."](#a437f748d) 에 의하여 증명이 끝난다. ■ 
 
 !!! tldr ""
 
     무한차원 벡터공간의 모든 기저의 기수가 같다.
 
-- 정리 1.10 따름정리 1 "벡터공간 $\mathbf{V}$ 가 유한집합인 기저를 포함하면 $\mathbf{V}$ 의 모든 기저는 유한집합이며, 기수가 같다." 을 무한차원으로 유추해보면 이 명제를 얻을 수 있다. 
+- [정리 1.10 따름정리 1 "벡터공간 $\mathbf{V}$ 가 유한집합인 기저를 포함하면 $\mathbf{V}$ 의 모든 기저는 유한집합이며, 기수가 같다."](#2f5eb1649) 을 무한차원으로 유추해보면 이 명제를 얻을 수 있다. 
 
 - 이때 무한집합의 기수를 비교할 때에는 이미 잘 알고 있듯이 전단사 사상이 존재함을 보이면 기수가 서로 같다고 말할 수 있다.
 
@@ -1454,7 +1450,7 @@
 
     2. 영이 아닌 벡터 $v \in \mathbf{V}$ 에 대하여 $v = c_1u_1 + c_2u_2 + \dots + c_nu_n$ 을 만족하는 벡터 $u_1, u_2, \dots, u_n \in \beta$ 와 영이 아닌 스칼라 $c_1, c_2, \dots, c_n$ 이 유일하게 존재한다.
 
-- 이 정리는 정리 1.8 "벡터공간 $\mathbf{V}$ 와 서로 다른 벡터 $u_1, u_2, \dots, u_n \in \mathbf{V}$ 에 대한 집합 $\beta = \{u_1, u_2, \dots, u_n\}$ 가 $\mathbf{V}$ 에 대하여 다음은 동치이다. 1. 집합 $\beta = \{u_1, u_2, \dots, u_n\}$ 가 $\mathbf{V}$ 의 기저이다. 2. 임의의 $v \in \mathbf{V}$ 를 유일한 스칼라 $a_1, a_2, \dots, a_n$ 에 대한 $\beta$ 의 일차결합으로 나타낼 수 있다." 을 무한차원으로 일반화한 것이다.
+- 이 정리는 [정리 1.8 "벡터공간 $\mathbf{V}$ 와 서로 다른 벡터 $u_1, u_2, \dots, u_n \in \mathbf{V}$ 에 대한 집합 $\beta = \{u_1, u_2, \dots, u_n\}$ 가 $\mathbf{V}$ 에 대하여 다음은 동치이다. 1. 집합 $\beta = \{u_1, u_2, \dots, u_n\}$ 가 $\mathbf{V}$ 의 기저이다. 2. 임의의 $v \in \mathbf{V}$ 를 유일한 스칼라 $a_1, a_2, \dots, a_n$ 에 대한 $\beta$ 의 일차결합으로 나타낼 수 있다."](#8a514fc5c) 을 무한차원으로 일반화한 것이다.
 
 - 증명 
 
@@ -1462,7 +1458,7 @@
 
     벡터공간 $\mathbf{V}$ 의 부분집합 $S_1, S_2$ 에 대하여 $S_1 \subset S_2$ 이고, $S_1$ 이 일차독립이고, $\text{span}(S_2) = \mathbf{V}$ 이면 $S_1 \subset \beta \subset S_2$ 인 기저 $\beta$ 가 존재한다.
 
-- 이 정리는 정리 1.9 "유한집합 $S$ 가 벡터공간 $\mathbf{V}$ 를 생성하면 $S$ 의 부분집합 중에 $\mathbf{V}$ 의 기저가 존재한다." 를 무한차원으로 일반화한 것이다.
+- 이 정리는 [정리 1.9 "유한집합 $S$ 가 벡터공간 $\mathbf{V}$ 를 생성하면 $S$ 의 부분집합 중에 $\mathbf{V}$ 의 기저가 존재한다."](#2d3716e93) 를 무한차원으로 일반화한 것이다.
 
 - 증명
 
@@ -1470,6 +1466,6 @@
 
     벡터공간 $\mathbf{V}$ 의 기저 $\beta$ 와 $\mathbf{V}$ 의 일차독립인 부분집합 $S$ 에 대하여 $S \cup S_1$ 가 $\mathbf{V}$ 의 기저인 $S_1 \subset \beta$ 이 존재한다.
 
-- 이 정리는 정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고, $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다. 1. $\text{card}(L) \leq \text{card}(G)$ 2. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$" 을 무한차원으로 일반화한 것이다. 
+- 이 정리는 [정리 1.10 "대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고, $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다. 1. $\text{card}(L) \leq \text{card}(G)$ 2. $\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land \text{card}(H) = \text{card}(G) - \text{card}(L)$"](#e102d4179) 을 무한차원으로 일반화한 것이다. 
 
 - 증명
