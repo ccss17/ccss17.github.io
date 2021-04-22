@@ -1,3 +1,4 @@
 site/
 *.exe
 a.out
+__pycache__/
