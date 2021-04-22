@@ -156,13 +156,13 @@
 
     일 때 $n$ 을 $X$ 의 극대원소라 한다.
 
-!!! tldr ""
+!!! tldr "정리 3.1.1"
 
     초른의 보조정리(Zorn lemma) : 공집합이 아닌 순서집합 $X$ 의 모든 사슬이 상계를 가지면 $X$ 는 극대원소를 가진다.
 
 - 선택공리과 동치인 명제로써 수학의 여러 분야에서 널리 쓰인다.
 
-!!! tldr ""
+!!! tldr "정리 3.1.2"
 
     하우스도르프 극대 원리(Hausdorff maximal principle) : 임의의 순서집합는 극대 사슬을 가진다.
 
@@ -206,7 +206,7 @@
 
     먼저 $x \in X, x > m$ 이라고 가정하자. 그러면 $x$ 는 $C$ 의 임의의 원소와 비교 가능하고, 따라서 $C \cup \{x\}$ 도 사슬이다. 그런데 $C \subsetneq C \cup \{x\}$ 이므로 $C$ 가 극대사슬이라는 것에 모순이다. 따라서 $x$ 는 존재하지 않으며 $m$ 이 $X$ 의 극대원소가 된다. ■ 
 
-!!! tldr ""
+!!! tldr "도움정리 3.1.3"
 
     순서집합 $X$ 의 부분집합족 $\mathcal{X} \subset 2 ^{X}$ 가 
 
@@ -301,7 +301,7 @@
     정렬 순서(well ordered) : 정렬 집합이 갖는 순서관계이다.
 
 
-!!! tldr ""
+!!! tldr "정리 3.1.4"
 
     체르멜로 정렬정리(Well-ordering theorem, Zermelo's theorem) : 임의의 집합에는 정렬순서가 존재한다.
 
@@ -488,7 +488,7 @@
 
     이다.
 
-!!! tldr ""
+!!! tldr "정리 3.3.1"
 
     두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 
 
@@ -670,57 +670,13 @@
 
     을 얻고, 이런식으로 반복하면
 
-    $$ 
-    \omega ^{2} + 1,
-    \omega ^{2} + 2, \dots
-    \omega ^{2} + \omega ,
-    \omega ^{2} + \omega + 1,
-    \omega ^{2} + \omega + 2,
-    \omega ^{2} + \omega 2,
-    $$
+    $$ \omega ^{2} + 1, \omega ^{2} + 2, \dots \omega ^{2} + \omega , \omega ^{2} + \omega + 1, \omega ^{2} + \omega + 2, \omega ^{2} + \omega 2, $$
 
-    $$ 
-    \omega ^{2}+ \omega 2+1,
-    \omega ^{2}+ \omega 3,
-    \dots,
-    \omega ^{2}+ \omega 4,
-    \omega ^{2}2,
-    \dots,
-    \omega ^{3},
-    \dots,
-    \omega ^{4},
-    \dots,
-    $$
+    $$ \omega ^{2}+ \omega 2+1, \omega ^{2}+ \omega 3, \dots, \omega ^{2}+ \omega 4, \omega ^{2}2, \dots, \omega ^{3}, \dots, \omega ^{4}, \dots, $$
 
-    $$ 
-    \omega ^{\omega },
-    \dots,
-    \omega ^{\omega ^{\omega } },
-    \dots,
-    \omega ^{\omega ^{\omega ^{\omega } } },
-    \dots,
-    \epsilon_0,
-    \epsilon_0 + 1,
-    \epsilon_0 + 2,
-    \dots,
-    \epsilon_0 + \omega ,
-    $$
+    $$ \omega ^{\omega }, \dots, \omega ^{\omega ^{\omega } }, \dots, \omega ^{\omega ^{\omega ^{\omega } } }, \dots, \epsilon_0, \epsilon_0 + 1, \epsilon_0 + 2, \dots, \epsilon_0 + \omega , $$
 
-    $$ 
-    \epsilon_0 + \omega 2 ,
-    \dots,
-    \epsilon_0 + \omega ^{2} ,
-    \dots,
-    \epsilon_0 + \omega ^{\omega } ,
-    \dots,
-    \epsilon_0 2
-    \dots,
-    \epsilon_0 \omega 
-    \epsilon_0 \omega ^{\omega }
-    \dots,
-    \epsilon_0 ^{2}
-    \dots,
-    $$
+    $$ \epsilon_0 + \omega 2 , \dots, \epsilon_0 + \omega ^{2} , \dots, \epsilon_0 + \omega ^{\omega } , \dots, \epsilon_0 2 \dots, \epsilon_0 \omega \epsilon_0 \omega ^{\omega } \dots, \epsilon_0 ^{2} \dots, $$
 
     와 같이 계속 된다.
 
@@ -836,7 +792,7 @@
 
     중 하나가 성립함을 말해준다. 
 
-!!! tldr ""
+!!! tldr "정리 3.3.2"
 
     정렬집합 $A$ 의 부분집합 $B$ 가 
 
@@ -850,7 +806,7 @@
 
     $A \text{ \textbackslash }B \neq \varnothing$ 이면 최소원소 $a \in A \text{ \textbackslash }B$ 를 가진다. 그러면 $S_a \subset B$ 이고 $a \in B$ 가 되어 모순이다. 그러므로 $A \text{ \textbackslash }B = \varnothing$ 이다. ■ 
 
-!!! tldr ""
+!!! tldr "정리 3.3.3"
 
     정렬집합에 관한 성질 $P$ 와 임의의 정렬집합 $X$ 에 대하여 
 
@@ -1002,7 +958,7 @@
     
     - 일반적으로 $\N ^{n} \approx \N$ 이 성립한다.
 
-!!! tldr ""
+!!! tldr "3.16"
 
     무한 집합의 특성 : 자기자신과 대등한 진부분집합이 존재한다. 즉, 집합 $X$ 가 무한집합이면 
 
@@ -1026,9 +982,9 @@
 
         이다.
 
-!!! tldr ""
+!!! tldr "도움정리 3.4.1"
 
-    집합 $X$ 가 "무한 집합의 특성" 을 만족하고 $X \approx Y$ 이면 $Y$ 도 "무한 집합의 특성" 을 만족한다.
+    집합 $X$ 가 [무한 집합의 특성](#3d6001dd6) 을 만족하고 $X \approx Y$ 이면 $Y$ 도 [무한 집합의 특성](#3d6001dd6) 을 만족한다.
 
 - 증명 
 
@@ -1046,9 +1002,9 @@
 
     이다. ■ 
 
-!!! tldr ""
+!!! tldr "도움정리 3.4.2"
 
-    집합 $X$ 가 "무한 집합의 특성" 을 만족하고 $X \subset  Y$ 이면 $Y$ 도 "무한 집합의 특성" 을 만족한다.
+    집합 $X$ 가 [무한 집합의 특성](#3d6001dd6) 을 만족하고 $X \subset  Y$ 이면 $Y$ 도 [무한 집합의 특성](#3d6001dd6) 을 만족한다.
 
 - 증명 
 
@@ -1094,7 +1050,7 @@
     
     따라서 $(f \circ g)|_n:n \to n$ 에 귀납법의 가정(*$f$ 가 $n$ 에서 전단사라는 가정*)을 적용하면 $(f \circ g)|_n$ 이 전단사임을 알 수 있다. (*이로써 $(f \circ g)(n) = n \subset n ^{+}$ 이 보장되는 거지. 그래서 이제 함수의 제한을 풀고 $(f \circ g)(n) = n \in n ^{+}$ 만 보이면 전사함수가 되는데 이건 이미 위에서 보였으니까*) 따라서 $f \circ g$ 는 전단사이고, $f = (f \circ g) \circ g ^{-1}$ 도 전단사이다.(*$g$ 가 전단사이므로 $g ^{-1}$ 도 전단사니까*) ■ 
 
-!!! tldr ""
+!!! tldr "정리 3.4.3"
 
     자연수 $n = \{0, 1, 2, \dots, n-1\}$ 의 부분집합 $A$ 에 대하여 
 
@@ -1142,7 +1098,7 @@
 
     정리 "집합 $X$ 가 무한 집합의 특성을 만족하고 $X \subset  Y$ 이면 $Y$ 도 무한 집합의 특성을 만족한다." 가 있으므로 이미 $\N$ 이 무한집합의 특성을 만족한다는 것을 알게 되었다. 그러므로 다음 정리를 증명하면 된다. 
 
-!!! tldr ""
+!!! tldr "도움정리 3.4.4"
 
     집합 $X$ 가 유한집합이 아니면, $\exists A \subset X \text{ s.t. }\ \N \approx A$ 이다.
 
@@ -1188,15 +1144,19 @@
 
     을 만들자. 그러면 $A$ 는 $X$ 의 부분집합이고 $A \approx \N$ 이다. 이렇게 무한히 선택할 수 있다는 것이 선택공리가 주장하는 것이다.
 
-!!! tldr ""
+!!! tldr "정리 3.4.5"
 
-    무한집합(infinite set) : 다음 동치조건을 만족하는 집합 $X$ 이다. 
+    집합 $X$ 에 대하여 다음은 동치이다.
 
     1. $X$ 가 유한집합이 아니다. 즉, $\forall n \in \N, X \not \approx n$ 이다.
 
     2. $\exists A \subsetneq X \text{ s.t. }\ X \approx A$
 
 - 지금까지의 정리들의 결론이 이 무한집합의 정의이다.
+
+!!! tldr ""
+    
+    무한집합(infinite set) : [정리 3.4.5](#e9e1ff3c5) 의 동치조건을 만족하는 집합이다. 
 
 # 기수
 
@@ -1318,7 +1278,7 @@
 
     이다.
 
-!!! tldr ""
+!!! tldr "정리 3.5.1"
 
     임의의 집합 $A, B$ 에 대하여 
 
@@ -1332,13 +1292,13 @@
 
     그러면 정리 "두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 1. $A \approxeq B$ 2. $b \in B, A \approxeq S_b$ 3. $a \in A, S_a \approxeq B$" 에 의하여 $A \approx B$ 이거나 적절한 $a \in A, b \in B$ 에 대하여 $A \approx S_b \subset B$ 혹은 $B \approx S_a \subset A$ 가 성립한다.
 
-!!! tldr ""
+!!! tldr "정리 3.5.2"
 
-    베른슈타인의 정리(Schröder–Bernstein theorem) : 집합 $A, B$ 에 대한 다음의 동치명제이다.
+    베른슈타인의 정리(Schröder–Bernstein theorem) : 집합 $A, B$ 에 대하여 다음이 성립한다. 
+    
+    $$A \preccurlyeq B \land B \preccurlyeq A \implies A \approx B$$
 
-    1. 단사함수 $f: A \to B, g:B \to A$ 가 존재하면 전단사함수 $h: A \to B$ 가 존재한다.
-
-    2. $A \preccurlyeq B \land B \preccurlyeq A \implies A \approx B$
+- 이 정리는 쉽게 말해 두 집합 $A, B$ 사이에 $A \to B$ 로 가는 단사함수와 $B \to A$ 로 가는 단사함수가 존재하면 $A, B$ 사이에 전단사 함수가 존재함을 말해준다.
 
 - 이 정리는 기수의 연산에서 핵심적인 역할을 한다.
 
@@ -1412,9 +1372,9 @@
 
 !!! tldr ""
 
-    가장 작은 초한기수 : 자연수의 초한기수를 다음과 같이 나타낸다.
+    자연수의 초한기수 : $\aleph _0 = \text{card }(\N)$
 
-    $$ \aleph _0 = \text{card }(\N) $$
+- 이는 가장 작은 초한기수이다.
 
 - $\N \approx \mathbb{Z} \approx \mathbb{Q}$ 이므로 
 
@@ -1424,9 +1384,7 @@
 
 !!! tldr ""
 
-    실수의 초한기수를 다음과 같이 나타낸다.
-
-    $$ \mathfrak{c} = \text{card }(\R) $$
+    실수의 초한기수 : $\mathfrak{c} = \text{card }(\R)$
 
 - 단사함수 $f: \N \to \R$ 은 존재하지만 $\R$ 을 $\N$ 으로 보내는 단사함수는 존재하지 않으므로 
 
@@ -1466,7 +1424,7 @@
 
     $$ \because \N \times \N \approx \N $$
 
-!!! tldr ""
+!!! tldr "정리 3.5.3"
 
     임의의 무한기수 $a$ 에 대하여 $aa = a$ 이다.
 
@@ -1594,10 +1552,9 @@
 
     그러므로 $2 ^{\aleph _0} = \mathfrak{c}$ 이다. ■ 
 
-
 # 서수와 기수
 
-!!! tldr ""
+!!! tldr "도움정리 3.6.1"
 
     서수 $\alpha , \beta$ 에 대하여 $\alpha \approxeq \beta \implies \alpha = \beta$ 이다.
 
@@ -1623,7 +1580,7 @@
 
     이는 어떤 원소가 $\xi$ 에 속하면 $f(\xi)$ 에 속하고, 역으로 $f(\xi)$ 에 속하면 $\xi$ 에도 속함을 뜻한다. 그러므로 $\xi = f(\xi )$ 즉, $\xi \in X$ 이다. 그러면 정리 "정렬집합 $A$ 의 부분집합 $B$ 가 $x \in A, S_x \subset B \implies x \in B$ 이면 $B=A$ 이다." 에 의하여 $X = \alpha$ 이다. ■ 
 
-!!! tldr ""
+!!! tldr "도움정리 3.6.2"
 
     서수 $\alpha ,\beta$ 에 대하여 
 
@@ -1641,7 +1598,7 @@
 
 - $A \iff B \iff C$ 를 보이기 위하여 $A \implies B \implies C \implies A$ 를 증명했네. 이러면 $B \implies C \land C \implies A \implies B$ 니까 $B \iff C$ 이고, 결국 $A \iff B \iff C$ 가 증명되는 식인가.
 
-!!! tldr ""
+!!! tldr "정리 3.6.3"
 
     임의의 정렬집합 $A$ 에 대하여 $A \approxeq \alpha$ 인 서수 $\alpha$ 가 유일하게 존재한다.
 
@@ -1665,7 +1622,7 @@
 
     $a \mapsto \alpha (a)$ 가 $A$ 에서 $S$ 로 가는 순서동형이므로 $A \approxeq S$ 이다. ■ 
 
-!!! tldr ""
+!!! tldr "정리 3.6.4"
 
     비어있지 않은 임의의 서수들의 집합은 최소원소를 가진다. 
 
@@ -1695,7 +1652,7 @@
 
     역으로, $\alpha$ 가 시작서수이면 $\alpha = \text{card }(\alpha)$ 이므로 기수가 된다. 즉, 임의의 시작서수는 기수이다.
 
-!!! tldr ""
+!!! tldr "정리 3.6.5"
 
     임의의 서수들의 집합은 최소상계를 가진다.
 
@@ -1727,11 +1684,7 @@
 
 !!! tldr ""
 
-    연속체 가설(Continuum hypothesis) : 연속체 가설은 
-
-    $$ \aleph _1 = 2 ^{\aleph _0} $$
-
-    이다.
+    연속체 가설(Continuum hypothesis) : $\aleph _1 = 2 ^{\aleph _0}$
 
 - 이 정리는 쉽게 말해 자연수의 개수보다 많고 실수의 개수보다 적은 집합이 존재하지 않음을 말한다.
 

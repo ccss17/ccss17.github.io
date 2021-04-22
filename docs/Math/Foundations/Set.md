@@ -1011,37 +1011,35 @@
 
 !!! tldr ""
 
-    관계(relation) : 두 집합 $X, Y$ 의 곱집합 $X \times Y$ 의 부분집합이다.
-
-- 더 엄밀한 정의는 다음과 같다. 
-
-    집합족 $\{X_i\}_{i \in I}$ 위의 관계는 곱집합의 부분집합
+    관계(relation) : 집합족 $\{X_i\}_{i \in I}$ 위의 관계는 곱집합의 부분집합
 
     $$ R \subseteq \prod_{i \in I}^{}X_i $$
 
     이다.
 
-    - 이를 통해 순서수 $\alpha$ 에 대하여 집합 $X$ 위의 $\alpha$항 관계를 거듭제곱 집합의 부분집합
+- 이를 통해 순서수 $\alpha$ 에 대하여 집합 $X$ 위의 $\alpha$항 관계를 거듭제곱 집합의 부분집합
 
-        $$ R \subseteq X ^{\times \alpha } $$
+    $$ R \subseteq X ^{\times \alpha } $$
 
-        로 정의한다.
+    로 정의한다.
 
-    - 예시 
+- 예시 
 
-        집합 $X$ 위의 영항관계(nullary relation) 은 $R \subseteq \{\cdot \}$ 즉, $R = \emptyset$ 이다.
+    집합 $X$ 위의 영항관계(nullary relation) 은 $R \subseteq \{\cdot \}$ 즉, $R = \emptyset$ 이다.
 
-        집합 $X$ 위의 단항관계(unary relation) 은 $R \subseteq X$ 이다.
+    집합 $X$ 위의 단항관계(unary relation) 은 $R \subseteq X$ 이다.
 
-        집합 $X$ 위의 이항관계(binary relation) 은 $R \subseteq X \times X$ 이다. 특히 이항관계에서 $(x, y) \in R$ 일 경우 $xRy$ 와 같이 자주 표기한다. 
-        
-        - 가령 집합 $\mathbb{N}$ 위의 이항관계 $+ \subseteq \mathbb{N} \times \mathbb{N}$ 에서 $(1, 2) \in \mathbb{N}$ 을 $1 + 2$ 로 표기한다.
+    집합 $X$ 위의 이항관계(binary relation) 은 $R \subseteq X \times X$ 이다. 특히 이항관계에서 $(x, y) \in R$ 일 경우 $xRy$ 와 같이 자주 표기한다. 
+    
+    - 가령 집합 $\mathbb{N}$ 위의 이항관계 $+ \subseteq \mathbb{N} \times \mathbb{N}$ 에서 $(1, 2) \in \mathbb{N}$ 을 $1 + 2$ 로 표기한다.
 
-        집합 $X$ 위의 삼항관계(ternary relation) 은 $R \subseteq X \times X \times X$ 이다. 
-        
-        - 프로그래밍 언어에서 $x = (condition) ? a : b;$ 와 같이 사용되기도 한다.
-        
-        집합 $X$ 위의 $n$항관계(n-ary relation) 은 $R \subseteq X ^{\times n}$ 이다. 이때 $(x_1, \dots, x_n) \in R$ 을 $R(x_1, \dots, x_n)$ 와 같이 표기한다.
+    집합 $X$ 위의 삼항관계(ternary relation) 은 $R \subseteq X \times X \times X$ 이다. 
+    
+    - 프로그래밍 언어에서 $x = (condition) ? a : b;$ 와 같이 사용되기도 한다.
+    
+    집합 $X$ 위의 $n$항관계(n-ary relation) 은 $R \subseteq X ^{\times n}$ 이다. 이때 $(x_1, \dots, x_n) \in R$ 을 $R(x_1, \dots, x_n)$ 와 같이 표기한다.
+
+- 두 집합 $X, Y$ 의 곱집합 $X \times Y$ 의 부분집합이다.
 
 - 집합 $X$ 에 관계가 주어졌다는 것은 곱집합 $X \times X$ 의 부분집합이 주어졌다는 것이다.
     
@@ -1093,30 +1091,6 @@
     
     를 $x$ 의 동치류라 한다.
 
-- 동치류에서 
-
-    $$ x \sim y \iff [x]=[y], \qquad x \not \sim y \iff [x] \cap [y] = \varnothing \tag{1} $$
-
-    이 성립한다. 
-
-    - 증명 
-    
-        또한 $x \sim y$ 이면 동치관계의 성질 2), 3) 에 의하여 
-
-        $$ z \in [x] \iff z \sim x \iff z \sim y \iff z \in [y] $$
-
-        이다. 역으로 $[x] = [y]$ 이면 $x \sim x$ 이므로 $x \in [x] = [y]$ 가 되고 따라서 $x \sim y$ 임을 알 수 있다. 
-
-        두번째 성질을 증명하기 위하여 
-
-        $$ [x] \cap [y] \neq \varnothing \implies [x] = [y] $$
-
-        임을 보이자. 만약 $z \in [x] \cap [y]$ 이면 $z \sim x, z \sim y$ 가 성립하고 따라서 $x \sim y$ 이다. $\forall x \in X, x \in [x]$ 이므로 성질 $(1)$ 에 의해 집합 $X$ 는 집합족
-
-        $$ \{[x]:x \in X\} $$
-
-        으로 분할됨을 알 수 있다. 
-    
 - 예시 
 
     집합 $X = \{a,b,c\}$ 에 
@@ -1132,6 +1106,28 @@
     $$ \{\{a,b\}, \{c\}\} $$
 
     으로 분할된다. 
+
+!!! tldr ""
+
+    $$ x \sim y \iff [x]=[y], \qquad x \not \sim y \iff [x] \cap [y] = \varnothing $$
+
+- 증명 
+
+    $x \sim y$ 이면 동치관계의 성질 2), 3) 에 의하여 
+
+    $$ z \in [x] \iff z \sim x \iff z \sim y \iff z \in [y] $$
+
+    이다. 역으로 $[x] = [y]$ 이면 $x \sim x$ 이므로 $x \in [x] = [y]$ 가 되고 따라서 $x \sim y$ 임을 알 수 있다. 
+
+    두번째 성질을 증명하기 위하여 
+
+    $$ [x] \cap [y] \neq \varnothing \implies [x] = [y] $$
+
+    임을 보이자. 만약 $z \in [x] \cap [y]$ 이면 $z \sim x, z \sim y$ 가 성립하고 따라서 $x \sim y$ 이다. $\forall x \in X, x \in [x]$ 이므로 성질 $(1)$ 에 의해 집합 $X$ 는 집합족
+
+    $$ \{[x]:x \in X\} $$
+
+    으로 분할됨을 알 수 있다. 
 
 !!! tldr ""
 
@@ -1211,8 +1207,7 @@
 
     로 생각하면 이는 $a \in \N \times \N$ 의 첫번째 원소와 두번째 원소의 차이값이다. 
 
-
-!!! tldr ""
+!!! tldr "정리 1.3.1"
 
     집합 $X$ 에 정의된 동치관계 $\sim$ 에 대하여 $\sim = \sim _{(X/\sim )}$ 이 성립한다.
 
@@ -1298,7 +1293,7 @@
 
     역으로 $\tilde{f}\circ q = f$ 가 성립하는 함수 $\tilde{f}:X/\sim \to Y$ 가 존재하면 조건 $(1)$ 이 성립하는 것은 자명하다. 
 
-!!! tldr ""
+!!! tldr "정리 1.3.2"
 
     집합 $X$ 와 동치관계 $\sim$ 와 함수 $f: X \to Y$ 에 대하여 다음 명제들은 서로 동치이다.
 
@@ -1319,6 +1314,24 @@
     임을 보이면 된다. 
 
     (*음.. 어려운데? $q$ 의 정의역을 축소하여 전단사사상으로 바꾸면 $q ^{-1}$ 를 정의할 수 있지만, $q$ 의 정의역을 축소하는 것이 올바른지 검증하는 게 어렵네 일단 시간이 너무 없긴 해서 넘어가야할듯*)
+
+- 예시 
+
+    좌표평면 $\R ^{2}$ 의 한 점 $A = (a_1, a_2)$ 에서 출발하여 $B = (b_1, b_2)$ 로 가는 화살표 $\overrightarrow{AB}$ 전체의 집합을 $X$ 라 하고, $X$ 에 관계 
+
+    $$ \overrightarrow{AB} \sim \overrightarrow{CD} \iff B-A = D-C $$
+
+    를 정의하자. 그러면 이 관계는 동치관계가 된다. 
+
+    이때 $\forall \overrightarrow{AB} \in X$ 에 대하여 $A+C=B$ 인 $C = \in \R ^{2}$ 를 잡으면 $O = (0, 0)$ 에 대하여 $\bigg [\overrightarrow{AB}\bigg ] = \bigg [\overrightarrow{OC}\bigg ]$ 이다. 따라서 
+
+    $$ X/\sim = \bigg \{\bigg [\overrightarrow{OC}\bigg ] : C \in \R ^{2} \bigg \} $$
+
+    이다. 이때 함수 
+
+    $$ C \mapsto \bigg [\overrightarrow{OC}\bigg ] : \R ^{2} \to X/\sim $$
+
+    은 전단사함수이다. 즉, 좌표평면 위의 모든 벡터는 한 점에 의하여 결정되므로 점 $(a_1, a_2) \in \R ^{2}$ 을 벡터라 부른다. 이는 원점에서 그 점으로 가는 화살표로 이해하려는 것이다.
 
 - 예시 
 
@@ -1348,45 +1361,11 @@
 
     임을 알 수 있다. 
 
+!!! note
+
+    이 책에서 "순서" 라고 함은 부분순서를 뜻하는 것으로 보인다.
+
 # 순서
-
-!!! tldr ""
-
-    클래스(class) : 집합 $A$ 와 자유변수 $x \in A$ 에 대하여 조건 $p(x)$ 으로 변수 $x$ 를 모은 것
-    
-    $$ \{x:p(x)\} $$
-    
-    이다.
-
-!!! tldr ""
-
-    endorelation : 집합 $S$ 에 대한 곱집합 $S \times S$ 에 대한 관계 $\mathcal{R}$ 를 $S$ 의 endorelation 이라고 한다.
-
-- endorelation 은 순서쌍 $3$-튜플로도 정의된다. $R \subseteq S \times S$ 에 대하여 
-
-    $$ \mathcal{R} = (S,S,R) $$
-
-    이다.
-
-- endorelation 의 일반적인 정의는 다음과 같다. 
-
-    cartesian space $S ^{n}$ 에 대한 $n$항관계 $\mathcal{R}$ 은 $R \subseteq S ^{n}$ 에 대한 $S$ 의 $n$-ary endorelation
-
-    $$ \mathcal{R} = (S,S,\dots,S,R) $$
-
-    이다.
-
-- 예시 
-
-    $V_0 = \{a,b,c\}$ 에 대한 endorelation 중 하나는
-
-    $$ R = \{(a,a),(b,b),(b,c),(c,b)\} $$
-
-    이다.
-
-!!! tldr ""
-
-    관계 구조(relational structure) : 집합 $S$ 과 $S$ 의 endorelation $\mathcal{R}$ 에 대한 순서쌍 $(S, \mathcal{R})$ 이다.
 
 !!! tldr ""
 
@@ -1757,20 +1736,116 @@
 
 !!! tldr ""
 
-    볼록집합 : 좌표공간 $\R ^{\mathcal{v}}$ 의 부분집합 $C \subset \R ^{\mathcal{v}}$ 가 
+    볼록집합(convex set) : 좌표공간 $\R ^{\mathcal{v}}$ 의 부분집합 $C \subset \R ^{\mathcal{v}}$ 가 
 
     $$ x,y \in C, 0 \leq t \leq 1 \to tx + (1-t)y \in C $$
 
     를 만족하면 이를 볼록집합이라 한다.
 
-!!! tldr ""
+- 볼록집합은 쉽게 말해 유클리드 공간 속의 집합에서 임의의 두 점을 골랐을 때 둘을 연결하는 선분이 그 집합에 포함되면 볼록집합이다.
 
-    볼록집합의 면 : 블록집합 $C$ 의 볼록부분집합 $F$ 가 
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Convex_polygon_illustration1.svg/440px-Convex_polygon_illustration1.svg.png" width="70%" />
+      <figcaption><i>볼록 집합</i></figcaption>
+    </figure>
 
-    "$x,y \in C, tx + (1-t)y \in F$ 인 $t \in (0,1)$ 가 존재하면 $x,y \in F$ 이다."
+    <figure>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Convex_polygon_illustration2.svg/440px-Convex_polygon_illustration2.svg.png" width="70%" />
+      <figcaption><i>볼록 집합이 아닌 예</i></figcaption>
+    </figure>
+
+- 블록집합 $C$ 의 볼록부분집합 $F$ 가 
+
+    $\exists t \in (0, 1) \text{ s.t. } x,y \in C, tx + (1-t)y \in F \implies x,y \in F$ 
 
     를 만족하면 $F$ 를 $C$ 의 면이라고 한다.
 
+- 한 점으로 이루어진 볼록집합의 면을 꼭지점이라 하다.
+
 !!! tldr ""
 
-    볼록집합의 꼭지점 : 한 점으로 이루어진 볼록집합의 면을 꼭지점이라 하다.
+    격자(lattice) : 순서집합 $X$ 에서 $\forall x, y \in X$ 에 대하여 $x \lor y$ 와 $x \land y$ 가 존재하면 $X$ 를 격자라 한다.
+
+- 이 정의에서 주의할 점은 $x \lor y = \sup \{x, y\}$ 와 $x \land y = \inf \{x, y\}$ 로 정의한다는 것이다.
+
+!!! tldr ""
+
+    완비격자(complete lattice) : 임의의 부분집합이 상한과 하한을 가지는 격자이다.
+
+!!! tldr ""
+
+    이항연산(binary operation) : 함수 $X \times X \to X$ 이다.
+
+- 자연수의 덧셈이나 곱셈 등은 모두 이항연산이다.
+
+- 위에서 말한 상한의 정의를 다시 반복하면 $x \lor y$ 은 
+
+    $$ x \leq x \lor y, \quad y \leq x \lor y $$
+
+    $$ x \leq z, y \leq z \to x \lor y \leq z $$
+
+    를 만족한다. 이때 
+
+    $$ (x, y) \mapsto x \lor y, \quad (x, y) \mapsto x \land y $$
+
+    은 이항연산이다.
+
+!!! tldr "1.22"
+
+    $\forall x, y, z \in X$ 에 대하여 다음이 성립한다.
+
+    1. $x \lor x = x, \quad x \land x = x$
+
+    2. $x \lor y = y \lor x, \quad x \land y = y \land x$
+
+    3. $(x \lor y) \lor z = x \lor (y \lor z), \quad (x \land y) \land z = x \land (y \land z)$
+
+    4. $(x \lor y) \land x = x, \quad (x \land y) \lor x = x$
+
+- 증명 
+
+    1), 2) 는 자명하다. $\lor$ 의 결합법칙을 보이기 위하여 
+
+    $$ (x \lor y) \lor z \leq x \lor (y \lor z) \tag{1} $$
+
+    를 보이자. 먼저 $x \leq x \lor (y \lor z)$ 와 $y \leq y \lor z \leq x \lor (y \lor z)$ 에서 
+
+    $$ x \lor y \leq x \lor (y \lor z) $$
+
+    가 성립한다. 또한 $z \leq y \lor z \leq x \lor (y \lor z)$ 을 함께 생각하면 $(1)$ 이 성립함을 알 수 있다. 반대 부등식도 같은 방식으로 증명되고 $\land$ 의 결합법칙도 같은 방식으로 증명된다.
+
+    마지막 명제 $(x \lor y) \land x = x$ 를 보이기 위해서 
+
+    $$ x \leq x, \quad x \leq x \lor y $$
+
+    $$ z \leq x, z \leq x \lor y \to z \leq x $$
+
+    를 보이면 되는데 이는 자명하다. ■ 
+
+!!! tldr "정리 1.4.1"
+
+    순서집합 $X$ 의 $\forall x, y \in X$ 에 대하여 $x \lor y$ 와 $x \land y$ 가 존재하면 [1.22](#9f4b6b716) 가 성립한다. 역으로 집합 $X$ 에 이항연산 $\lor , \land$ 가 정의되어 [1.22](#9f4b6b716) 를 만족한다고 할 때 
+
+    $$ x \leq y \iff x \lor y = y $$
+
+    라 정의하면 $X$ 는 순서집합이 되고 이 순서에 대한 격자가 된다.
+
+- 증명 
+
+    첫째 명제는 위에서 이미 증명하였고, $x \leq x$ 는 [1.22](#9f4b6b716) 의 첫째 성질에서 나온다. $x \leq y, y \leq x$ 이면 $x \lor y = y$ 이고 $y \lor x = x$ 이다. 이때 $\lor$ 이 교환법칙을 만족하므로 $x=y$ 이다. 만약 $x \leq y, y \leq z$ 이면 
+
+    $$ x \lor z = x \lor (y \lor z) = (x \lor y) \lor z = y \lor z = z $$
+
+    이므로 $x \leq z$ 가 성립한다. 이제 $\sup \{x, y\} = x \lor y$ 임을 보이자. 먼저 
+
+    $$ x \lor (x \lor y) = (x \lor x) \lor y = x \lor y $$
+
+    이므로 $x \leq x \lor y$ 가 성립하고 $x$ 와 $y$ 의 역할을 바꾸면 
+
+    $$ y \leq y \lor x = x \lor y $$
+
+    이다. 마지막으로 $x \leq z, y \leq z$ 이면 
+
+    $$ (x \lor y) \lor z = x \lor (y \lor z) = x \lor z = z $$
+
+    이다. 따라서 $x \lor y \leq z$ 이다. 그러므로 $\sup \{x, y\} = x \lor y$ 이다. ■ 
