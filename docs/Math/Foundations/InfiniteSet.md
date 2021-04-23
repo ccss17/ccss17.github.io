@@ -670,15 +670,58 @@
 
     을 얻고, 이런식으로 반복하면
 
-    $$ \omega ^{2} + 1, \omega ^{2} + 2, \dots \omega ^{2} + \omega , \omega ^{2} + \omega + 1, \omega ^{2} + \omega + 2, \omega ^{2} + \omega 2, $$
+    $$ \omega ^{2} + 1, \omega ^{2} + 2, \dots, \omega ^{2} + \omega , \omega ^{2} + \omega + 1, \omega ^{2} + \omega + 2, \omega ^{2} + \omega 2, $$
 
-    $$ \omega ^{2}+ \omega 2+1, \omega ^{2}+ \omega 3, \dots, \omega ^{2}+ \omega 4, \omega ^{2}2, \dots, \omega ^{3}, \dots, \omega ^{4}, \dots, $$
+    $$ \omega ^{2}+ \omega 2+1, \omega ^{2}+ \omega 3, \dots, \omega ^{2}+ \omega 4, \omega ^{2}2, \dots, \omega ^{3}, \dots, \omega ^{4}, \dots $$
 
     $$ \omega ^{\omega }, \dots, \omega ^{\omega ^{\omega } }, \dots, \omega ^{\omega ^{\omega ^{\omega } } }, \dots, \epsilon_0, \epsilon_0 + 1, \epsilon_0 + 2, \dots, \epsilon_0 + \omega , $$
 
-    $$ \epsilon_0 + \omega 2 , \dots, \epsilon_0 + \omega ^{2} , \dots, \epsilon_0 + \omega ^{\omega } , \dots, \epsilon_0 2 \dots, \epsilon_0 \omega \epsilon_0 \omega ^{\omega } \dots, \epsilon_0 ^{2} \dots, $$
+    $$ \epsilon_0 + \omega 2 , \dots, \epsilon_0 + \omega ^{2} , \dots, \epsilon_0 + \omega ^{\omega } , \dots, \epsilon_0 2, \dots, \epsilon_0 \omega, \epsilon_0 \omega ^{\omega } ,\dots, \epsilon_0 ^{2} \dots $$
 
-    와 같이 계속 된다.
+    와 같이 계속 된다. $\epsilon_0$ 은 엄밀하게 
+
+    $$ \epsilon _0 = \sup \{0, \omega ^{0}=1, \omega ^{1}=\omega , \omega ^{\omega }, \omega ^{\omega ^{\omega }}, \dots\} $$
+
+    와 같이 정의되며, 
+
+    $$ \omega ^{\alpha } = \alpha \tag{1} $$
+    
+    를 만족하는 가장 작은 $\alpha$ 로 여겨진다. $\epsilon _1$ 는 $(1)$ 를 만족하는 두번째 $\alpha$ 이다. $\epsilon _1$ 는 $\epsilon _0$ 처럼 $0$ 부터 시작하는 수열의 상한이 아닌 $\epsilon _0+1$ 부터 시작하는 수열의 상한
+
+    $$ \epsilon _1 = \sup \{\epsilon _0 + 1, \omega ^{\epsilon _0 + 1}, \omega ^{\omega ^{\epsilon _0 + 1}}, \dots\} $$
+
+    으로 정의된다. 이때 
+
+    $$ \omega ^{\epsilon _0 + 1} = \omega ^{\epsilon _0} \omega $$
+
+    $$ \omega ^{\omega ^{\epsilon _0 + 1}} = \omega ^{\epsilon _0 \omega } = (\omega ^{\epsilon _0})^{\omega }=\epsilon _0 ^{\omega } $$
+
+    $$ \omega ^{\omega ^{\omega ^{\epsilon _0+1}}} = \omega ^{\epsilon _0 ^{\omega }} = \omega ^{\epsilon _0 ^{1 + \omega }} = \omega ^{\epsilon _0 \epsilon _0 ^{\omega }} = (\omega ^{\epsilon _0}) ^{\epsilon _0 ^{\omega }} = \epsilon _0 ^{\epsilon _0} ^{\omega } $$
+
+    이므로 $\epsilon _1$ 을 다음과 같은 수열의 상한으로도 정의할 수 있다.
+
+    $$ \epsilon _1 = \sup \{0,1,\epsilon _0, \epsilon _0 ^{\epsilon _0}, \epsilon _0 ^{\epsilon _0 ^{\epsilon _0}}, \dots\} $$
+
+    일반적으로 엡실론 수 $\epsilon _{\alpha +1}$ 은 다음과 같이 정의된다.
+
+    $$ 
+    \begin{equation} \begin{split}   
+    \epsilon _{\alpha +1} &= \sup \{\epsilon _{\alpha +1}, \omega ^{\epsilon _{\alpha } + 1}, \omega ^{\omega ^{\epsilon _{\alpha } + 1}}\}\\
+      &= \sup \{0, 1, \epsilon _{\alpha }, \epsilon _{\alpha } ^{\epsilon _{\alpha }}, \epsilon _{\alpha } ^{\epsilon _{\alpha } ^{\epsilon _{\alpha }}}\}
+    \end{split} \end{equation} \tag*{}
+    $$
+
+    이때 다음과 같이 엡실론 수의 수열의 극한 으로 $\epsilon _{\omega }$ 을 얻는다.
+
+    $$ \epsilon _{\omega } = \sup \{\epsilon _0, \epsilon _1, \epsilon _2, \dots\} $$
+
+    비슷한 방식으로 $\epsilon _{\epsilon _0}$ 을 정의할 수 있고, 이를 기반으로 $\zeta _0$ 를 다음과 같이 정의한다.
+
+    $$ \zeta _0 = \sup \{0, \epsilon _0, \epsilon _{\epsilon _0}, \epsilon _{\epsilon _{\epsilon _0}}, \dots\} $$
+
+    $\epsilon _0$ 이 최초로 $\omega ^{\alpha } = \alpha$ 를 만족하는 서수라는 것과 같이 $\zeta _0$ 를 최초로 $\epsilon _{\alpha } = \alpha$ 를 만족하는 서수이다. 
+    
+    그러나 그리스 알파벳은 초한서수들을 모두 나타내기에 부족하므로 초한서수들을 나타내기에 적합한 강력한 표현법인 [Veblen function](https://en.wikipedia.org/wiki/Veblen_function) 이 고안되었다. 이 함수는 $\varphi _{\gamma }(\beta )$ 의 형태로 초한귀납적으로 정의되어 $\varphi _0(\beta a) = \omega ^{\beta }$ 와 $\varphi _1(\beta ) = \epsilon _{\beta }, \varphi _2(\beta ) = \zeta _{\alpha }, \dots$ 이 된다.
 
 !!! tldr ""
 
