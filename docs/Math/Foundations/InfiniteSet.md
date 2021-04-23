@@ -696,7 +696,7 @@
 
     $$ \omega ^{\omega ^{\epsilon _0 + 1}} = \omega ^{\epsilon _0 \omega } = (\omega ^{\epsilon _0})^{\omega }=\epsilon _0 ^{\omega } $$
 
-    $$ \omega ^{\omega ^{\omega ^{\epsilon _0+1}}} = \omega ^{\epsilon _0 ^{\omega }} = \omega ^{\epsilon _0 ^{1 + \omega }} = \omega ^{\epsilon _0 \epsilon _0 ^{\omega }} = (\omega ^{\epsilon _0}) ^{\epsilon _0 ^{\omega }} = \epsilon _0 ^{\epsilon _0} ^{\omega } $$
+    $$ \omega ^{\omega ^{\omega ^{\epsilon _0 + 1}}} = \omega ^{\epsilon _0 ^{\omega }} = \omega ^{\epsilon _0 ^{1 + \omega }} = \omega ^{\epsilon _0 \epsilon _0 ^{\omega }} = (\omega ^{\epsilon _0}) ^{\epsilon _0 ^{\omega }} = \epsilon _0 ^{\epsilon _0 ^{\omega }} $$
 
     이므로 $\epsilon _1$ 을 다음과 같은 수열의 상한으로도 정의할 수 있다.
 
