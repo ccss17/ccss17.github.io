@@ -716,7 +716,7 @@
 
     $\epsilon _0$ 이 최초로 $\omega ^{\alpha } = \alpha$ 를 만족하는 서수라는 것과 같이 $\zeta _0$ 를 최초로 $\epsilon _{\alpha } = \alpha$ 를 만족하는 서수이다. 
     
-    그러나 그리스 알파벳은 초한서수들을 모두 나타내기에 부족하므로 초한서수들을 나타내기에 적합한 강력한 표현법인 [Veblen function](https://en.wikipedia.org/wiki/Veblen_function) 이 고안되었다. 이 함수는 $\varphi _{\gamma }(\beta )$ 의 형태로 초한귀납적으로 정의되어 $\varphi _0(\beta ) = \omega ^{\beta }$ 와 $\varphi _1(\beta ) = \epsilon _{\beta }, \varphi _2(\beta ) = \zeta _{\alpha }, \dots$ 이 된다.
+    그러나 그리스 알파벳은 초한서수들을 모두 나타내기에 부족하므로 초한서수들을 나타내기에 적합한 강력한 표현법인 [Veblen function](https://en.wikipedia.org/wiki/Veblen_function) 이 고안되었다. 이 함수는 $\varphi _{\gamma }(\beta )$ 의 형태로 초한귀납적으로 정의되어 초깃값으로 $\varphi _0(\beta ) = \omega ^{\beta }$ 을 정의한 후 $\varphi _1(\beta ) = \epsilon _{\beta }, \varphi _2(\beta ) = \zeta _{\beta }, \dots$ 와 같이 정의 된다.
 
 !!! tldr ""
 
