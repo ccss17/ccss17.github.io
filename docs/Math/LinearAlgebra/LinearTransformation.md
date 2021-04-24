@@ -178,11 +178,11 @@
 
 - 증명 
 
-    $\forall i, \mathbf{T}(v_i) \in \mathbf{R}(\mathbf{T})$ 이다. $\mathbf{R}(\mathbf{T})$ 가 부분공간이므로 [정리 1.5 "벡터공간 $\mathbf{V}$ 의 임의의 부분집합 $S$ 의 생성공간 $\text{span}(S)$ 는 $S$ 를 포함하는 $\mathbf{V}$ 의 부분공간이다. $S$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\text{span}(S)$ 을 포함한다."](../VectorSpace#aad599671) 에 의하여
+    $\mathbf{T}(\beta) \subset \mathbf{R}(\mathbf{T})$ 이고 $\mathbf{R}(\mathbf{T})$ 가 부분공간이므로 [정리 1.5](../VectorSpace#aad599671) 에 의하여
 
     $$ \text{span}(\{\mathbf{T}(v_1), \mathbf{T}(v_2), \dots, \mathbf{T}(v_n)\}) =\text{span}(\mathbf{T}(\beta )) \subset \mathbf{R}(\mathbf{T})  $$
 
-    이다. 상공간 $\mathbf{R}(\mathbf{T})$ 은 $\mathbf{T}(\beta )$ 를 포함하면서 부분공간이므로 $\text{span}(\mathbf{T}(\beta ))$ 도 포함하기 때문이다. ▲ 
+    이다. ▲
 
     $w \in \mathbf{R}(\mathbf{T}) \implies \exists v \in \mathbf{V} \text{ s.t. } w = \mathbf{T}(v)$ 인데 $\beta$ 가 $\mathbf{V}$ 의 기저이므로 $a_1, a_2, \dots, a_n \in \mathbf{F}$ 에 대하여
 
@@ -191,14 +191,12 @@
     이다. $\mathbf{T}$ 는 선형이므로 
     
     $$w = \mathbf{T}(v) = \mathbf{T} \bigg (\sum_{i=1}^{n}a_iv_i\bigg ) = \sum_{i=1}^{n}a_i\mathbf{T}(v_i) \in \text{span}(\mathbf{T}(\beta ))$$
-    
-    이다. 이는 상공간의 원소가 $\text{span}(\mathbf{T}(\beta ))$ 의 원소임을 뜻하고, 곧 
+   
+    이다. 이는 $\forall w \in \mathbf{R}(\mathbf{T}) \implies w \in \text{span}(\mathbf{T}(\beta ))$ 을 뜻하므로
 
     $$ \mathbf{R}(\mathbf{T}) \subset \text{span}(\mathbf{T}(\beta )) = \text{span}(\{\mathbf{T}(v_1), \mathbf{T}(v_2), \dots, \mathbf{T}(v_n)\}) $$
 
-    을 뜻한다. ▲ 
-
-    그러므로 증명이 끝났다. ■ 
+    이 된다. ■ 
 
 - 다음 예시는 이 정리를 사용하여 $\mathbf{R}(\mathbf{T})$ 의 기저와 $\mathbf{N}(\mathbf{T})$ 의 기저를 쉽게 찾을 수 있다는 것을 말해준다.
 
@@ -250,8 +248,6 @@
 
 - 지금까지 우리는 부분공간의 크기를 가늠할 때 차원을 사용했다. 상공간의 차원은 특히 중요하므로 새로운 이름 $\text{rank}$ 을 붙혀서 다룬다.
 
-- 직관적으로 선형변환에서 nullity 가 커질수록 랭크는 작아진다. 즉, 더 많은 벡터가 영벡터 $0$ 로 갈수록 상공간은 작아진다. 역으로 랭크가 커질수록 nullity 는 작아진다. 아래의 정리가 랭크과 nullity 의 관계를 말해준다. 
-
 !!! tldr "정리 2.3"
 
     차원정리(dimension theorem) : 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한차원이면 
@@ -260,10 +256,51 @@
 
     이다.
 
+- 직관적으로 선형변환에서 nullity 가 커질수록 랭크는 작아진다. 즉, 더 많은 벡터가 영벡터 $0$ 로 갈수록 상공간은 작아진다. 역으로 랭크가 커질수록 nullity 는 작아진다. 이 정리가 랭크과 nullity 의 관계를 말해준다. 
+
 - 증명 
 
+    $\dim(\mathbf{V} ) = n, \dim(\mathbf{N}(\mathbf{T} )) = k$ 라 하고 $\mathbf{N}(\mathbf{T} )$ 의 기저를 $\{v_1, v_2, \dots, v_k\}$ 라 하면 [정리 1.11 따름정리](../VectorSpace#73d920332) 에 의하여 $\{v_1, v_2, \dots, v_k\}$ 를 확장하여 $\mathbf{V}$ 의 기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 을 얻을 수 있다. ▲ 
 
+    그러면 
     
+    $$S = \mathbf{T} (\beta - \{v_1, \dots, v_k\}) = \{\mathbf{T} (v _{k+1}), \mathbf{T} (v _{k+2}), \dots, \mathbf{T} (v _{n})\}$$
+    
+    이 $\mathbf{R}(\mathbf{T} )$ 의 기저임을 보이자. 먼저 $\text{span}(S) = \mathbf{R}(\mathbf{T} )$ 임을 보이기 위하여 $1 \leq i \leq k : \mathbf{T} (v_i) = 0$ 과 [정리 2.2](#f380ab529) 를 사용하면 
+
+    $$ \begin{equation}\begin{split}   \mathbf{R}(\mathbf{T} ) &= \text{span}(\{\mathbf{T} (v_1), \mathbf{T} (v_2), \dots, \mathbf{T} (v_n)\}) \\ &= \text{span}(\{\mathbf{T} (v _{k+1}), \mathbf{T} (v _{k+2}), \dots, \mathbf{T} (v_n)\}) = \text{span}(S) \\ \end{split}\end{equation}\tag*{} $$
+
+    이다. ▲ 
+
+    $S$ 가 선형독립임을 보이기 위하여 $b _{k+1}, \dots, b _{n} \in \mathbf{F}$ 에 대하여 $\displaystyle \sum_{i=k+1}^{n}b_i \mathbf{T} (v_i) = 0$ 라고 하면 $\mathbf{T}$ 가 선형이므로 
+
+    $$ \mathbf{T} \bigg (\sum_{i=k+1}^{n}b_iv_i\bigg ) = 0 \iff \sum_{i=k+1}^{n}b_iv_i \in \mathbf{N}(\mathbf{T} ) $$
+
+    이다. 그러면 다음 식을 만족하는 $c_1, \dots, c_k \in \mathbf{F}$ 가 존재한다.
+
+    $$ \sum_{i=k+1}^{n}b_iv_i = \sum_{i=1}^{k}c_iv_i \iff \sum_{i=1}^{k}(-c_i)v_i + \sum_{i=k+1}^{n}b_iv_i = 0 $$
+
+    이때 $\beta$ 가 기저, 즉 일차독립이므로 이 식이 성립하려면 반드시 $-c_1 = \dots = -c_k = b _{k+1} = \dots = b_n = 0$ 이어야 한다. 그러므로 $S$ 는 일차독립이다. 그러므로 $S$ 는 $\mathbf{R}(\mathbf{T} )$ 의 기저이다. ▲ 
+
+    $S = \mathbf{T} (\beta - \{v_1, \dots, v_k\})$ 가 $\mathbf{R}(\mathbf{T} )$ 의 기저이므로 $\mathbf{T}$ 는 최소한 
+
+    $$ \text{card}(\{v _{k+1}, \dots, v_n\}) = \text{card}(\{\mathbf{T} (v _{k+1}) , \dots, \mathbf{T} (v_n)\}) $$
+
+    을 보장한다. 그러므로 $\text{card}(S) = \text{card}(\beta ) - \text{card}(\{v_1, \dots, v_k\})$ 라고 할 수 있고, 이에 따라 
+
+    $$ \therefore  \text{rank}(\mathbf{T} ) = \dim(\mathbf{V} ) - \text{nullity}(\mathbf{T} ) $$
+
+    이다. ■ 
+
+!!! tldr "정리 2.4"
+
+    벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음은 동치이다. 
+
+    1. $\mathbf{T}$ 가 단사사상이다.
+
+    2. $\mathbf{N}(\mathbf{T} ) = \{0\}$
+
+- 증명
 
 # 선형변환의 행렬표현
 
