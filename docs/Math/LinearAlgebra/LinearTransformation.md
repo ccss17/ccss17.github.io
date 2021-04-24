@@ -320,9 +320,103 @@
 
     3. $\text{rank}(\mathbf{T} ) = \dim(\mathbf{V} )$
 
+- 이 정리는 차원이 같은 유한차원 사이의 선형사상이 단사이면 전단사임을 말해준다. 그러나 무한차원 $\mathbf{V}$ 에 대한 선형사상 $\mathbf{T} : \mathbf{V} \to \mathbf{V}$ 에 대해서는 단사와 전사가 동치가 아니다.
+
 - 증명 
 
+    [차원정리](#b9412bb64) 에 의하여 $\text{rank}(\mathbf{T} )+\text{nullity}(\mathbf{T} ) = \dim(\mathbf{V} )$ 인데, [정리 2.4](#7d40e8276) 에 의하여 
 
+    $$ \mathbf{T} \text{ is injection } \iff \mathbf{N}(\mathbf{T} ) = \{0\} $$
+
+    $$ \iff \text{nullity}(\mathbf{T} ) = 0 \iff \text{rank}(\mathbf{T} ) = \dim(\mathbf{V} ) $$
+
+    $$ \iff \text{rank}(\mathbf{T} ) = \dim(\mathbf{W} ) \iff \dim(\mathbf{R}(\mathbf{T} )) = \dim(\mathbf{W} ) $$
+
+    이다. 그런데 [정리 1.11](../VectorSpace/#26f9238cb) 에 의하여 
+
+    $$ \iff \mathbf{R}(\mathbf{T} ) = \mathbf{W} $$
+
+    이다. 상공간과 공역이 같으므로 $\mathbf{T}$ 는 전사이다. ■ 
+
+- 예시 
+
+    선형변환 $\mathbf{T} : \mathbf{F} ^{2} \to \mathbf{F} ^{2}$ 이 
+
+    $$ \mathbf{T} (v, w) = (v+w, v) $$
+
+    와 같이 정의되면 $\mathbf{N}(\mathbf{T} ) = \{0\}$ 이므로 $\mathbf{T}$ 는 전단사이다.
+
+!!! tldr ""
+
+    벡터공간 $\mathbf{V} ,\mathbf{W}$ 의 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 과 $\mathbf{V}$ 의 부분집합 $S$ 에 대하여 다음이 동치이다.
+    
+    1. $S$ 가 일차독립이다.
+
+    2. $\mathbf{T} (S)$ 가 일차독립이다.
+
+- 증명
+
+- 예시 
+
+    선형변환 $\mathbf{T} : \mathbf{P} _2(\R) \to \R ^{3}$ 이 
+
+    $$ \mathbf{T} (a_0+a_1x+a_2x ^{2}) = (a_0, a_1, a_2) $$
+
+    와 같이 정의되면 $\mathbf{T}$ 는 단사이다. $S = \{2-x+3x ^{2}, x+x ^{2}, 1-2x ^{2}\}$ 라고 하면 $\mathbf{T} (S) = \{(2,-1,3), (0,1,1), (1,0,-2)\}$ 가 $\R ^{3}$ 에서 일차독립이므로 $S$ 도 일차독립이다.
+
+!!! tldr "정리 2.6"
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 와 $\mathbf{V}$ 의 기저 $\{v_1, \dots, v_n\}$ 와 벡터 $w_1, \dots, w_n \in \mathbf{W}$ 에 대하여 
+
+    $$ i \in \{1,2,\dots, n\} : \mathbf{T} (v_i) = w_i $$
+
+    을 만족하는 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 가 유일하게 존재한다.
+
+- 이 정리는 선형변환이 기저에 따라 어떻게 행동할지 완벽하게 결정된다는 것을 말해준다. 이 정리와 따름정리는 매우 중요해서 선형대수학 전반에 널리 사용된다.
+
+- 증명 
+
+    $x \in \mathbf{V}$ 를 다음과 같이 $a_1, \dots, a_n \in \mathbf{F}$ 에 대하여 기저의 유일한 일차결합 표현으로 나타낼 수 있다. 
+
+    $$ x = \sum_{i=1}^{n}a_iv_i $$
+
+    이때 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 를 $\mathbf{T} (x) = \sum_{i=1}^{n} a_iw_i$ 로 정의하자. ▲ 
+
+    그리고 먼저 $\mathbf{T}$ 가 선형임을 보이자. $u, v \in \mathbf{V} , d \in \mathbf{F}$ 와 $b_1, \dots, b_n \in \mathbf{F}$ 와 $c_1, \dots, c_n \in \mathbf{F}$ 에 대하여 
+
+    $$ u = \sum_{i=1}^{n}b_iv_i, \enspace v = \sum_{i=1}^{n}c_iv_i $$
+
+    이다. 그러면 $du + v = \sum_{i=1}^{n} (db_i+c_i)v_i$ 이므로 
+
+    $$ \mathbf{T} (du+v) = \sum_{i=1}^{n}(db_i+c_i)w_i = d \sum_{i=1}^{n}b_iw_i + \sum_{i=1}^{n}c_iw_i = d \mathbf{T} (u) + \mathbf{T} (v) $$
+
+    이다. ▲ 
+
+    또한 정의에 의하여 $i \in \{1, \dots, n\} : \mathbf{T} (v_i) = w_i$ 이다. ▲ 
+
+    마지막으로 $\mathbf{T}$ 의 유일성을 보이자. 선형변환 $\mathbf{U}:\mathbf{V} \to \mathbf{W}$ 가 $i \in \{1, \dots, n\} : \mathbf{T} (v_i) = w_i$ 를 만족한다고 하면 $x = \sum_{i=1}^{n}a_iv_i \in \mathbf{V}$ 에 대하여
+
+    $$ \mathbf{U} (x) = \sum_{i=1}^{n}a_i \mathbf{U} (v_i) = \sum_{i=1}^{n}a_iw_i = \mathbf{T} (x) $$
+
+    이므로 $\mathbf{U} =\mathbf{T}$ 이다. ■ 
+
+!!! tldr "정리 2.6 따름정리"
+
+    벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한집합 기저 $\{v_1, \dots, v_n\}$ 을 가지면 두 선형변환 $\mathbf{U} , \mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 
+
+    $$ i \in \{1, \dots, n\} : \mathbf{U} (v_i) = \mathbf{T} (v_i) \implies \mathbf{U} = \mathbf{T}  $$
+
+    이다.
+
+- 이 정리는 두 선형변환이 기저에서 상이 같으면 같은 선형변홤임을 말하고 있다.
+
+- 예시
+
+    선형변환 $\mathbf{T} :\R ^{2} \to \R ^{2}$ 이 
+
+    $$ \mathbf{T} (a_1, a_2) = (2a_2 - a_1, 3a_1) $$
+
+    와 같이 정의되었다고 하자. 그러면 $\{(1,2), (1,1)\}$ 이 $\R ^{2}$ 의 기저이므로 선형변환 $\mathbf{U} : \R ^{2} \to \R ^{2}$ 이 $\mathbf{U} (1,2)=(3,3), \mathbf{U} (1,1)=(1,3)$ 이면 $\mathbf{U} =\mathbf{T}$ 이다.
     
 # 선형변환의 행렬표현
 
