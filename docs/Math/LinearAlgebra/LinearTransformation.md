@@ -420,6 +420,52 @@
     
 # 선형변환의 행렬표현
 
+이 절에서는 선형변환과 행렬이 일대일 대응됨을 알아본다.
+
+!!! tldr ""
+
+    순서기저(ordered basis) : 유한차원 벡터공간의 순서가 주어진 기저이다.
+
+- 즉, 순서기저란 일차독립이고 벡터공간을 생성하는 수열이다.
+
+- 예시 
+
+    $\mathbf{F} ^{3}$ 에서 $\beta = \{e_1, e_2, e_3\}, \gamma = \{e_2, e_1, e_3\}$ 은 순서기저이다. 순서기저의 관점에서 $\beta \neq \gamma$ 이다.
+
+- 표준기저와 마찬가지로 표준순서기저(standard ordered basis)도 정의할 수 있다.
+
+    - 예시 
+    
+        벡터공간 $\mathbf{F} ^{n}$ 에서 $\{e_1, e_2, \dots, e_n\}$ 을 표준순서기저라고 한다.
+
+        벡터공간 $\mathbf{P}_n(\mathbf{F} )$ 에서 $\{1, x, \dots, x ^{n}\}$ 이 표준순서기자이다.
+
+!!! tldr ""
+
+    좌표벡터(coordinate vector) : 유한차원 벡터공간 $\mathbf{V}$ 의 순서기저 $\beta = \{u_1, u_2, \dots, u_n\}$ 와 벡터 $x \in \mathbf{V}$ 에 대하여 $x = \displaystyle  \sum_{i=1}^{n}a_iu_i$ 을 만족하는 유일한 스칼라 $a_1, a_2, \dots, a_n$ 가 존재한다. 이때 $\beta$ 에 대한 $x$ 의 좌표벡터 $[x] _{\beta }$ 를 
+
+    $$ [x] _{\beta } = \begin{pmatrix}
+    a_1\\
+    a_2\\
+    \vdots\\
+    a_n
+    \end{pmatrix}
+    $$
+
+    와 같이 정의한다.
+
+- 변환 $\mathbf{V} \to \mathbf{F} ^{n}, x \mapsto [x] _{\beta }$ 는 선형변환이다.
+
+    - 증명
+
+- 예시 
+
+    순서기저 $\beta = \{1, x, x ^{2}\}$ 를 가지는 벡터공간 $\mathbf{V} = \mathbf{P} _2 (\R)$ 에 대하여 
+
+    $$ f(x) = 4+6x-7x ^{2} \iff [f] _{\beta } = \begin{pmatrix} 4\\ 6\\ -7\\ \end{pmatrix} $$
+
+    이다.
+
 # 선형변환의 합성과 행렬 곱
 
 # 가역성과 동형사상
