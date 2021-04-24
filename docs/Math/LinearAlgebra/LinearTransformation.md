@@ -302,6 +302,28 @@
 
 - 증명
 
+    $x \in \mathbf{N}(\mathbf{T} )$ 이면 $\mathbf{T} (x) = 0 = \mathbf{T} (0)$ 인데, $\mathbf{T}$ 가 [단사](../../Foundations/Set/#b9a0b7bf1)이므로 $x = 0$ 이다. 또한 이는 $\forall x \in \mathbf{N}(\mathbf{T} ) : x = 0$ 을 의미하므로 $\mathbf{N}(\mathbf{T} ) = \{0\}$ 이다. ▲ 
+
+    역으로 $\mathbf{N}(\mathbf{T} ) = \{0\}$ 과 $\mathbf{T} (x) = \mathbf{T} (y)$ 을 가정하자. [선형변환의 성질 3)](#2dff80fb4) 에 의하여 $0 = \mathbf{T} (x) - \mathbf{T} (y) = \mathbf{T} (x - y)$ 이므로 
+
+    $$ x - y \in \mathbf{N}(\mathbf{T} ) = \{0\} \iff x - y = 0 $$
+
+    이다. 즉, $x = y$ 이므로 $\mathbf{T}$ 는 단사함수이다. ■ 
+
+!!! tldr "정리 2.5"
+
+    유한차원 벡터공간 $\mathbf{V} ,\mathbf{W}$ 에 대하여 $\dim(\mathbf{V} ) = \dim(\mathbf{W} )$ 이면 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음 명제가 동치이다. 
+
+    1. $\mathbf{T}$ 는 단사이다.
+
+    2. $\mathbf{T}$ 는 전사이다.
+
+    3. $\text{rank}(\mathbf{T} ) = \dim(\mathbf{V} )$
+
+- 증명 
+
+
+    
 # 선형변환의 행렬표현
 
 # 선형변환의 합성과 행렬 곱
