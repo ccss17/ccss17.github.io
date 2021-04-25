@@ -102,9 +102,9 @@
 
 !!! tldr ""
 
-    항등변환(identity transformation) : $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에 대하여 $I _{\mathbf{V} }: \mathbf{V} \to \mathbf{V}, x \mapsto x$ 로 정의된 선형변환이다.
+    항등변환(identity transformation) : $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{I} _{\mathbf{V} }: \mathbf{V} \to \mathbf{V}, x \mapsto x$ 로 정의된 선형변환이다.
 
-- 항등변환 $I _{\mathbf{V} }$ 을 편의상 $I$ 라 표기하기도 한다.
+- 항등변환 $\mathbf{I} _{\mathbf{V} }$ 을 편의상 $\mathbf{I}$ 라 표기하기도 한다.
     
 !!! tldr ""
 
@@ -122,7 +122,7 @@
 
 - 예시 
 
-    항등변환 $I : \mathbf{V} \to \mathbf{V}$ 에 대하여 $\mathbf{N}(I) = \{0\}$ 이다.
+    항등변환 $\mathbf{I} : \mathbf{V} \to \mathbf{V}$ 에 대하여 $\mathbf{N}(\mathbf{I}) = \{0\}$ 이다.
 
     영변환 $\mathbf{T}_0 : \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{N}(\mathbf{T}_0) = \mathbf{V}$ 이다.
 
@@ -138,7 +138,7 @@
 
 - 예시 
 
-    항등변환 $I : \mathbf{V} \to \mathbf{V}$ 에 대하여 $\mathbf{R}(I) = \mathbf{V}$ 이다.
+    항등변환 $\mathbf{I} : \mathbf{V} \to \mathbf{V}$ 에 대하여 $\mathbf{R}(\mathbf{I}) = \mathbf{V}$ 이다.
 
     영변환 $\mathbf{T}_0 : \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{R}(\mathbf{T}_0) = \{0\}$ 이다.
 
@@ -465,6 +465,111 @@
     $$ f(x) = 4+6x-7x ^{2} \iff [f] _{\beta } = \begin{pmatrix} 4\\ 6\\ -7\\ \end{pmatrix} $$
 
     이다.
+
+!!! tldr ""
+
+    선형변환의 행렬표현(matrix representation) : 유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 의 각각의 순서기저 $\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}$ 에 대하여 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 을 정의하면 
+
+    $$ \mathbf{T} (v_j) = \sum_{i=1}^{m}a _{ij}w_i \qquad j \in \{1,\dots,n\}, i \in \{1, \dots, m\} $$
+
+    을 만족하는 유일한 스칼라 $a _{ij}\in \mathbf{F}$ 가 존재하는데, 이때 성분이 $A _{ij} = a _{ij}$ 인 $m \times n$ 행렬 $A$ 를 순서기저 $\beta , \gamma$ 에 대한 선형변환 $\mathbf{T}$ 의 행렬표현
+
+    $$ \boxed{A = [\mathbf{T} ] ^{\gamma } _{\beta } }$$ 
+
+    라 한다.
+
+- $\mathbf{V} = \mathbf{W} \land \beta = \gamma$ 이면 간단하게 $A = [\mathbf{T} ]_{\beta }$ 라고 표기한다.
+
+- $A$ 의 $j$ 열은 $[\mathbf{T} (v_j)] _{\gamma }$ 이다.
+
+- 선형변환 $\mathbf{U} : \mathbf{V} \to \mathbf{W}$ 가 $[\mathbf{U} ] ^{\gamma } _{\beta } = [\mathbf{T} ]^{\gamma }_{\beta }$ 를 만족하면 [정리 2.6 따름정리](#759379ac7) 에 의하여 $\mathbf{U} = \mathbf{T}$ 이다.
+
+- 예시 
+
+    선형변환 $\mathbf{T} : \R ^{2} \to \R ^{3} , (a_1, a_2) \mapsto (a_1 + 3a_2, 0, 2a_1 - 4a_2)$ 를 정의하고 $\R ^{2}, \R ^{3}$ 의 순서기저 $\beta , \gamma$ 를 각각의 표준순서기저로 두면 
+
+    $$ \mathbf{T} (1, 0) = (1, 0, 2) = 1e_1 + 0e_2 + 2e_3 $$ 
+
+    $$ \mathbf{T} (0, 1) = (3, 0, -4) = 3e_1 + 0e_2 - 4e_3 $$ 
+
+    가 성립하므로 
+
+    $$ [\mathbf{T} ]^{\gamma } _{\beta } = \begin{pmatrix} 1&3\\ 0&0\\ 2&4\\ \end{pmatrix} $$
+
+    이다. 만약 $\R ^{3}$ 의 순서기저로써 $\gamma ' = \{e_3, e_2, e_1\}$ 를 가져오면 
+
+    $$ [\mathbf{T} ] ^{\gamma '} _{\beta } =\begin{pmatrix} 2&-4\\ 0&0\\ 1&3\\ \end{pmatrix} $$
+
+    이 된다.
+
+- 예시 
+
+    선형변환 $\mathbf{T} : \mathbf{P} _3(\R) \to \mathbf{T} _2(\R)$ 가 $\mathbf{T} (f(x)) = f'(x)$ 와 같이 정의되었고,  $\mathbf{P} _3(\R), \mathbf{P} _2(\R)$ 의 순서기저 $\beta , \gamma$ 를 표준순서기저라 하면 
+
+    $$ \mathbf{T} (1) = 0 \cdot 1 + 0 \cdot x + 0 \cdot x ^{2} $$
+
+    $$ \mathbf{T} (x) = 1 \cdot 1 + 0 \cdot x + 0 \cdot x ^{2} $$
+
+    $$ \mathbf{T} (x ^{2}) = 0 \cdot 1 + 2 \cdot x + 0 \cdot x ^{2} $$
+
+    $$ \mathbf{T} (x ^{3}) = 0 \cdot 1 + 0 \cdot x + 3 \cdot x ^{2} $$
+
+    이 성립하므로 
+
+    $$ [\mathbf{T} ]^{\gamma } _{\beta } = \begin{pmatrix} 0&1&0&0\\ 0&0&2&0\\ 0&0&0&3\\ \end{pmatrix} $$
+
+    이다.
+
+- 예시 
+
+    유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 의 순서기저를 $\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}$ 이라 하면 
+
+    $$ \mathbf{T} _0(v_j) = 0 = 0w_1+\dots+0w_m $$
+
+    이므로 $[\mathbf{T} _0] ^{\gamma } _{\beta } = O$ 이다. $O$ 는 $m \times n$ 영행렬이다.
+
+    또한 
+
+    $$ \mathbf{I} _{\mathbf{V} }(v_j) = v_j = 0v_1 + \dots + 0v _{j-1} + 1v_j+ 0 v _{j+1}  \dots + 0 v_n $$
+
+    이므로 $\mathbf{I} _{\mathbf{V} }$ 의 $j$ 열은 $e_j$ 이다. 따라서 
+
+    $$ [\mathbf{I} _{\mathbf{V} }]_{\beta } = \begin{pmatrix} 1&0&\dots&0\\ 0&1&\dots&0\\ \vdots & \vdots & \ddots & \vdots \\ 0&0&\dots&1\\ \end{pmatrix} $$ 
+
+    이다. $[\mathbf{I} _{\mathbf{V} }]_{\beta }$ 는 $n \times n$ 항등행렬이다.
+
+- 위 예시는 영변환의 행렬표현이 영행렬이고, 항등변환의 행렬표현이 항등행렬임을 말해준다.
+
+!!! tldr ""
+
+    크로네커 델타(Kronecker delta) : 크로네커 델타는 다음과 같이 정의한다.
+    
+    $$\delta _{ij} = \begin{cases} 1 & i = j\\ 0 & i \neq j\\ \end{cases}$$
+
+- 예시 
+
+    $n \times n$ 항등행렬 $I_n$ 의 성분은 $(I_n) _{ij} = \delta _{ij}$ 이다.
+
+!!! tldr ""
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 정의된 임의의 함수 $\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}$ 와 스칼라 $a \in \mathbf{F}$ 와 $\forall x \in \mathbf{V}$ 에 대하여 두 함수의 합과 스칼라곱을 다음과 같이 정의한다.
+
+    - $\mathbf{T} + \mathbf{U} : \mathbf{V} \to \mathbf{W}$ 의 정의는 다음과 같다. 
+    
+        $$ (\mathbf{T} + \mathbf{U} )(x) = \mathbf{T} (x) + \mathbf{U} (x)$$
+
+    - $a \mathbf{T} : \mathbf{V} \to \mathbf{W}$ 의 정의는 다음과 같다. 
+    
+        $$ (a \mathbf{T} )(x) = a \mathbf{T} (x)$$
+
+- 이는 함수의 합의 스칼라 곱에 대한 보편적 정의인데 선형변환의 합과 스칼라 곱이 여전히 선형임을 다음 정리가 말해준다.
+
+!!! tldr "정리 2.7"
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음이 성립한다.
+
+    1. $\forall a \in \mathbf{F} ,$
+
 
 # 선형변환의 합성과 행렬 곱
 
