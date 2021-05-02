@@ -666,8 +666,6 @@
 
 # 선형변환의 합성과 행렬 곱
 
-이전 절에서는 행렬의 합과 스칼라 곱을 선형변환의 합과 스칼라 곱으로 대응시켜서 행렬과 선형변환을 연결해보았다. 이제 선형변환의 합성에 대응하는 행렬의 연산인 행렬곱에 대하여 살펴보자.
-
 !!! tldr "정리 2.9"
 
     $\mathbf{F}$-벡터공간 $\mathbf{W} ,\mathbf{W} , \mathbf{Z}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 에 대하여 두 선형변환의 합성 $\mathbf{U} \mathbf{T} : \mathbf{V} \to \mathbf{Z}$ 는 선형이다.
@@ -720,11 +718,13 @@
 
 !!! tldr ""
 
-    $m \times n$ 행렬 $A$ 와 $n \times p$ 행렬 $B$ 에 대하여 두 행렬 $A, B$ 의 곱 $AB$ 는 $1 \leq i \leq m, 1 \leq j \leq p$ 에 대하여
+    행렬곱(matrix multiplication, matrix product) : $m \times n$ 행렬 $A$ 와 $n \times p$ 행렬 $B$ 에 대하여 두 행렬 $A, B$ 의 곱 $AB$ 는 $1 \leq i \leq m, 1 \leq j \leq p$ 에 대하여
 
     $$ (AB) _{ij} = \sum_{k=1}^{n}A _{ik}B _{kj} $$
 
     인 $m \times p$ 행렬이다.
+
+- [이전 절](#_2)에서는 행렬의 합과 스칼라 곱을 선형변환의 합과 스칼라 곱으로 대응시켜서 행렬과 선형변환을 연결해보았다. 이제 선형변환의 합성에 대응하는 행렬의 연산인 행렬곱에 대하여 살펴보자.
 
 - 행렬 곱은 어째서 이렇게 정의되었나?
 
@@ -734,17 +734,87 @@
 
     $$ \text{ordered basis of } \mathbf{W} : \beta = \{w_1, \dots, w_m\} $$
 
-    $$ \text{ordered basis of } \mathbf{Z} : \alpha = \{z_1, \dots, z_p\} $$
+    $$ \text{ordered basis of } \mathbf{Z} : \gamma = \{z_1, \dots, z_p\} $$
 
     으로 정의하고 선형변환 $\mathbf{T} , \mathbf{U}$ 의 행렬표현을 
 
-    $$ A = [\mathbf{U} ] ^{\gamma}_{\beta}, B = [\mathbf{T} ] ^{\beta }_{\alpha } $$
+    $$ p \times m \text{ 행렬 } A = [\mathbf{U} ] ^{\gamma}_{\beta} $$
+    
+    $$ m \times n \text{ 행렬 } B = [\mathbf{T} ] ^{\beta }_{\alpha } $$
 
-    라고 하자. 그러면 
+    라고 하자. 그러면 $\mathbf{U} \mathbf{T} : \mathbf{V} \to \mathbf{Z}$ 에 대하여
 
     $$ \boxed{ AB = [\mathbf{U} \mathbf{T} ] ^{\gamma}_{\alpha }} $$
 
-    가 성립하려면 행렬곱 $AB$ 가 어떻게 정의되어야 하겠는가?
+    가 성립하도록 행렬곱 $AB$ 를 정의하면 된다. $j = 1, 2, \dots, n$ 에 대하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}   (\mathbf{U} \mathbf{T} ) (v_j) &= \mathbf{U} (\mathbf{T} (v_j)) = \mathbf{U} \bigg (\sum_{k=1}^{m}B _{kj} w_k\bigg ) = \sum_{k=1}^{m}B _{kj}\mathbf{U} (w_k)  \\ &= \sum_{k=1}^{m}B _{kj} \bigg (\sum_{i=1}^{p}A _{ik}z_i\bigg ) = \sum_{i=1}^{p} \bigg (\sum_{k=1}^{m}A _{ik}B _{kj}\bigg ) z_i \\ \end{split}\end{equation}\tag*{} $$
+
+    그러므로 행렬곱 $AB$ 를 $p \times n$ 행렬 
+
+    $$ (AB) _{ij} = \sum_{k=1}^{m}A _{ik} B _{kj} $$
+
+    라고 정의할 수 있다.
+
+- $(AB) _{ij}$ 를 $A$ 의 $i$ 행과 $B$ 의 $j$ 열에 대응하는 성분들을 곱하고 합한 것이다.
+
+- 행렬 $A, B$ 의 형상이 다음과 같이 맞아야 행렬곱 연산을 할 수 있다. 
+
+    $$ (m \times n) \cdot (n \times p) = (m \times p) $$
+
+    내부 차원이 맞아야 행렬 곱 $AB$ 가 정의되고, 외부 차원이 행렬 $AB$ 의 크기를 결정한다. 
+
+    - 예시 
+
+        다음과 같이 $(2 \times 3) \cdot (3 \times 1) = 2 \times 1$ 이다.
+
+        $$ \begin{pmatrix} 1&2&1\\ 0&4&-1\\ \end{pmatrix} \cdot \begin{pmatrix} 4\\ 2\\ 5\\ \end{pmatrix} = \begin{pmatrix} 13\\ 3\\ \end{pmatrix} $$
+
+- 함수의 합성에 교환법칙이 성립하지 않으므로 행렬곱에도 교환법칙이 성립하지 않는다.
+
+    - 예시 
+
+        다음은 두 행렬 $A,B$ 가 $AB \neq BA$ 을 만족한다.
+
+        $$ \begin{pmatrix} 1&1\\ 0&0\\ \end{pmatrix} \begin{pmatrix} 0 & 1\\ 1 & 0\\ \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 0 & 0\\ \end{pmatrix} , \quad  \begin{pmatrix} 0&1\\ 1&0\\ \end{pmatrix} \begin{pmatrix} 1&1\\ 0&0\\ \end{pmatrix} = \begin{pmatrix} 0&0\\ 1&1\\ \end{pmatrix} $$
+
+!!! tldr ""
+
+    $$ (AB) ^{t} = B ^{t} A ^{t} $$
+
+- 증명 
+
+    $(AB) ^{t} _{ij} = (AB) _{ji} = \sum_{k=1}^{n}A _{jk}B _{ki}$
+
+    $(B ^{t} A ^{t}) _{ij} =  \sum_{k=1}^{n}B ^{t} _{ik}(A ^{t}) _{jk}$
+
+!!! tldr "정리 2.11"
+
+    유한차원 벡터공간 $\mathbf{V} , \mathbf{W} , \mathbf{Z}$ 와 각각의 순서기저 $\alpha , \beta , \gamma$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 에 대하여 다음이 성립한다. 
+
+    $$ [\mathbf{U} \mathbf{T} ] ^{\gamma}_{\alpha } = [\mathbf{U} ] ^{\gamma}_{\beta} [\mathbf{T} ] ^{\beta }_{\alpha } $$
+
+- 증명 
+
+    행렬곱의 정의에 의하여 이 정리가 성립함을 쉽게 알 수 있다.
+
+- 예시 
+
+    선형변환 $\mathbf{U}: \mathbf{P} _3(\R), \mathbf{T}:\mathbf{P} _2(\R) \to \mathbf{P} _3(\R)$ 를 
+
+    $$ \mathbf{U} (f(x)) = f'(x), \quad \mathbf{T} (f(x)) = \int_{0}^{x}f(t)dt $$
+
+    로 정의하면 $\mathbf{U} \mathbf{T} = \mathbf{I}$ 이다. $\alpha , \beta$ 를 $\mathbf{P} _3(\R), \mathbf{P} _2(\R)$ 의 표준순서기저라 하면 
+
+    $$ [\mathbf{U} \mathbf{T} ] _{\beta } = [\mathbf{U} ] ^{\beta }_{\alpha }[\mathbf{T} ]^{\alpha } _{\beta } = \begin{pmatrix} 0&1&0&0\\ 0&0&2&0\\ 0&0&0&3\\ \end{pmatrix}\begin{pmatrix} 0&0&0\\ 1&0&0\\ 0&\dfrac{1}{2}&0\\ 0&0&\dfrac{1}{3}\\ \end{pmatrix} = \begin{pmatrix} 1&0&0\\ 0&1&0\\ 0&0&1\\ \end{pmatrix} = [\mathbf{I} ] _{\beta } $$
+
+    이 성립한다.
+
+!!! tldr "정리 2.11 따름정리"
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 순서기저 $\beta$ 와 선형연산자 $\mathbf{T} , \mathbf{U} \in \mathcal{L}(\mathbf{V} )$ 에 대하여 다음이 성립한다. 
+
+    $$ [\mathbf{U} \mathbf{T} ] _{\beta } = [\mathbf{U} ] _{\beta }[\mathbf{T} ] _{\beta } $$
 
 # 가역성과 동형사상
 
