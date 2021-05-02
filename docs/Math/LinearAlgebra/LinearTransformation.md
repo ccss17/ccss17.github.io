@@ -466,6 +466,18 @@
 
     이다.
 
+- 예시 
+
+    표준순서기저를 순서기저 $\beta$ 로 갖는 벡터공간 $\R ^{3}$ 에 대하여 벡터 $x \in \R ^{3}$ 가 $x = (-100, 2, 50)$ 이라면 
+
+    $$ x = -100  e_1 + 2  e_2 + 50  e_3 $$
+
+    이므로 
+
+    $$ [x] _{\beta } = \begin{pmatrix} -100\\ 2\\ 50\\ \end{pmatrix} $$
+
+    이 된다.
+
 !!! tldr ""
 
     선형변환의 행렬표현(matrix representation) : 유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 의 각각의 순서기저 $\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}$ 에 대하여 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 을 정의하면 
@@ -477,6 +489,8 @@
     $$ \boxed{A = [\mathbf{T} ] ^{\gamma } _{\beta } }$$ 
 
     라 한다.
+
+- 우리는 이렇게 행렬과 선형변환을 연결했는데, [정리 2.8](#aa431d8ac) 은 이 연결이 합과 스칼라 곱을 보존함을 말해준다. 이를 위해 먼저 선형변환의 합과 스칼라 곱을 정의해볼 것이다.
 
 - $\mathbf{V} = \mathbf{W} \land \beta = \gamma$ 이면 간단하게 $A = [\mathbf{T} ]_{\beta }$ 라고 표기한다.
 
@@ -494,7 +508,7 @@
 
     가 성립하므로 
 
-    $$ [\mathbf{T} ]^{\gamma } _{\beta } = \begin{pmatrix} 1&3\\ 0&0\\ 2&4\\ \end{pmatrix} $$
+    $$ [\mathbf{T} ]^{\gamma } _{\beta } = \begin{pmatrix} 1&3\\ 0&0\\ 2&-4\\ \end{pmatrix} $$
 
     이다. 만약 $\R ^{3}$ 의 순서기저로써 $\gamma ' = \{e_3, e_2, e_1\}$ 를 가져오면 
 
@@ -504,7 +518,7 @@
 
 - 예시 
 
-    선형변환 $\mathbf{T} : \mathbf{P} _3(\R) \to \mathbf{T} _2(\R)$ 가 $\mathbf{T} (f(x)) = f'(x)$ 와 같이 정의되었고,  $\mathbf{P} _3(\R), \mathbf{P} _2(\R)$ 의 순서기저 $\beta , \gamma$ 를 표준순서기저라 하면 
+    선형변환 $\mathbf{T} : \mathbf{P} _3(\R) \to \mathbf{P} _2(\R)$ 가 $\mathbf{T} (f(x)) = f'(x)$ 와 같이 정의되었고,  $\mathbf{P} _3(\R), \mathbf{P} _2(\R)$ 의 순서기저 $\beta , \gamma$ 를 표준순서기저라 하면 
 
     $$ \mathbf{T} (1) = 0 \cdot 1 + 0 \cdot x + 0 \cdot x ^{2} $$
 
@@ -542,9 +556,7 @@
 
 !!! tldr ""
 
-    크로네커 델타(Kronecker delta) : 크로네커 델타는 다음과 같이 정의한다.
-    
-    $$\delta _{ij} = \begin{cases} 1 & i = j\\ 0 & i \neq j\\ \end{cases}$$
+    크로네커 델타(Kronecker delta) : $\delta _{ij} = \begin{cases} 1 & i = j\\ 0 & i \neq j\\ \end{cases}$
 
 - 예시 
 
@@ -552,26 +564,187 @@
 
 !!! tldr ""
 
-    $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 정의된 임의의 함수 $\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}$ 와 스칼라 $a \in \mathbf{F}$ 와 $\forall x \in \mathbf{V}$ 에 대하여 두 함수의 합과 스칼라곱을 다음과 같이 정의한다.
+    $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 에서 정의된 임의의 함수 $\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}$ 와 $a \in \mathbf{F}$ 와 $\forall x \in \mathbf{V}$ 에 대하여 두 함수의 합과 스칼라곱을 다음과 같이 정의한다.
 
-    - $\mathbf{T} + \mathbf{U} : \mathbf{V} \to \mathbf{W}$ 의 정의는 다음과 같다. 
-    
-        $$ (\mathbf{T} + \mathbf{U} )(x) = \mathbf{T} (x) + \mathbf{U} (x)$$
+    - $\mathbf{T} + \mathbf{U} : \mathbf{V} \to \mathbf{W}, (\mathbf{T} + \mathbf{U} )(x) = \mathbf{T} (x) + \mathbf{U} (x)$
 
-    - $a \mathbf{T} : \mathbf{V} \to \mathbf{W}$ 의 정의는 다음과 같다. 
-    
-        $$ (a \mathbf{T} )(x) = a \mathbf{T} (x)$$
+    - $a \mathbf{T} : \mathbf{V} \to \mathbf{W}, (a \mathbf{T} )(x) = a \mathbf{T} (x)$
 
-- 이는 함수의 합의 스칼라 곱에 대한 보편적 정의인데 선형변환의 합과 스칼라 곱이 여전히 선형임을 다음 정리가 말해준다.
+- 이는 함수의 합의 스칼라 곱에 대한 보편적 정의인데 선형변환의 합과 스칼라 곱이 여전히 선형임을 [다음 정리](#91b876399)가 말해준다.
 
 !!! tldr "정리 2.7"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음이 성립한다.
 
-    1. $\forall a \in \mathbf{F} ,$
+    1. $\forall a \in \mathbf{F}$ 에 대하여 $a \mathbf{T} + \mathbf{U}$ 은 선형이다.
 
+    2. $\mathbf{V} \to \mathbf{W}$ 에서 정의된 모든 선형변환의 집합은 $\mathbf{F}$-벡터공간이다.
+
+- 1) 의 증명
+
+    $x, y \in \mathbf{V} , c \in \mathbf{F}$ 에 대하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}   (a \mathbf{T} + \mathbf{U} )(cx+y)&=a \mathbf{T} (cx+y) + \mathbf{U} (cx + y)\\ &=a[\mathbf{T} (cx+y)] + c \mathbf{U} (x) + \mathbf{U} (y)\\ &=a[c\mathbf{T} (x) + \mathbf{T}(y)] + c \mathbf{U} (x) + \mathbf{U} (y)\\ &=ac\mathbf{T} (x) + c\mathbf{U}(x) + a \mathbf{T} (y) + \mathbf{U} (y)\\ &=c(a\mathbf{T} + \mathbf{U} ) (x) + (a \mathbf{T} + \mathbf{U} )(y)\\ \end{split}\end{equation}\tag*{} $$
+
+    그러므로 $a \mathbf{T} + \mathbf{U}$ 는 선형이다. ■ 
+
+- 2) 의 증명 
+
+    [위의 정의](#63a07e35d)는 임의의 함수에 대한 두 함수의 합, 스칼라 곱을 정의한 것이므로 선형변환의 합과 스칼라곱에도 적용된다. 그러므로 이 합과 스칼라 곱을 만족하는 선형변환 집합이 [벡터공간의 8 가지 조건](../VectorSpace#e992d1df1)을 만족하는지 확인하면 된다. 
+
+    $\mathbf{V} \to \mathbf{W}$ 에서 정의된 모든 선형변환의 집합을 $\mathcal{L}$ 라고 하자. 그러면 영변환 $\mathbf{L} _0: \mathbf{V} \to \mathbf{W}$ 는 $\mathcal{L}$ 에서 영벡터의 역할을 한다. 또한 $\mathcal{L}$ 가 벡터공간의 8 가지 조건을 만족한다는 것을 쉽게 확인할 수 있다. 
+
+    그러므로 $\mathcal{L}$ 는 $\mathbf{F}$-벡터공간이다. ■ 
+
+!!! tldr ""
+
+    벡터공간 $\mathcal{L}(\mathbf{V} , \mathbf{W} )$ : $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{V} \to \mathbf{W}$ 에서 정의된 모든 선형변환의 집합이다.
+
+- $\mathbf{V} = \mathbf{W}$ 이면 간단하게 $\mathcal{L}(\mathbf{V} )$ 라 표기한다.
+
+- 참고로 2.4 절에서 차원 $\dim(\mathbf{V} ) = n, \dim(\mathbf{W} ) = m$ 인 벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathcal{L}(\mathbf{V} , \mathbf{W} )$ 와 $\mathbf{M} _{m \times n}(\mathbf{F} )$ 가 본질적으로 같다는 것을 보일 것이다.
+
+!!! tldr "정리 2.8"
+
+    체 $\mathbf{F}$ 에 대한 유한차원 $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 와 각각의 순서기저 $\beta , \gamma$ 와 선형변환 $\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음이 성립한다. 
+
+    1. $[\mathbf{T} + \mathbf{U} ] ^{\gamma } _{\beta } = [\mathbf{T} ] ^{\gamma } _{\beta } + [\mathbf{U} ] ^{\gamma } _{\beta }$
+
+    2. $\forall a \in \mathbf{F} ,[a \mathbf{T} ] ^{\gamma } _{\beta } = a[ \mathbf{T} ] ^{\gamma } _{\beta }$
+
+- 증명
+
+    $\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}$ 에 대하여 
+
+    $$ \mathbf{T} (v_j) = \sum_{i=1}^{m}a _{ij}w_i, \enspace  \mathbf{U} (v_j) = \sum_{i=1}^{m}b _{ij}w_i, \qquad j \in \{1, \dots, n\} $$
+
+    을 만족하는 유일한 스칼라 $a _{ij}, b _{ij} \enspace (i \leq i \leq m, 1 \leq j \leq n)$ 가 존재한다. 즉, 
+
+    $$ (\mathbf{T} + \mathbf{U} ) (v_j) = \sum_{i=1}^{m}(a _{ij} + b _{ij}) w_i $$
+
+    이고 
+
+    $$ ([\mathbf{T} + \mathbf{U} ] ^{\gamma } _{\beta }) _{ij} = a _{ij} + b _{ij} = ([\mathbf{T} ] ^{\gamma } _{\beta } + [\mathbf{U} ] ^{\gamma } _{\beta }) _{ij} $$
+
+    이다. ▲ 
+
+    두번째도 행렬의 원소가 같다는 것을 보이는 방식으로 증명가능하다. ■ 
+
+- 예시 
+
+    선형변환 $\mathbf{T} : \R ^{2} \to \R ^{3}, \mathbf{U} : \R ^{2} \to \R ^{3}$ 을 
+
+    $$ \mathbf{T} (a_1, a_2) = (a_1 + 3a_2, 0, 2a_1 - 4a_2), \enspace \mathbf{U} (a_1, a_2) = (a_1 - a_2, 2a_1, 3a_1 + 2a_2) $$
+
+    와 같이 정의하고, $\R ^{2}, \R ^{3}$ 의 순서기저로써 각각의 표준순서기저 $\beta , \gamma$ 를 두면 
+
+    $$ \mathbf{T} (1, 0) = (1, 0, 2) = 1e_1 + 0e_2 + 2e_3 $$
+    
+    $$ \mathbf{T} (0, 1) = (3, 0, -4) = 3e_1 + 0e_2 + -4e_3 $$
+
+    이고, $\mathbf{U}$ 의 경우도 표준순서기저의 일차결합의 스칼라를 구해보면
+    
+    $$ [\mathbf{T} ] ^{\gamma } _{\beta } = \begin{pmatrix} 1&3\\ 0&0\\ 2&-4\\ \end{pmatrix}, [\mathbf{U} ] ^{\gamma } _{\beta } = \begin{pmatrix} 1&-1\\ 2&0\\ 3&2\\ \end{pmatrix} $$
+
+    이 성립한다.  ▲ 
+
+    $\mathbf{T} + \mathbf{U}$ 는 [정의](#63a07e35d)에 따라 
+
+    $$ (\mathbf{T} + \mathbf{U} )(a_1, a_2) = (2a_1 + 2a_2, 2a_1, 5a_1 - 2a_2) $$
+
+    이다. 그러면 
+
+    $$ (\mathbf{T} + \mathbf{U} )(1, 0) = (2, 2, 5) = 2e_1 + 2e_2 + 5e_3 $$
+
+    $$ (\mathbf{T} + \mathbf{U} )(0, 1) = (2, 0, -2) = 2e_1 + 0e_2 - 2e_3 $$
+
+    이므로
+
+    $$ [\mathbf{T} + \mathbf{U} ] ^{\gamma } _{\beta } = \begin{pmatrix} 2&2\\ 2&0\\ 5&-2\\ \end{pmatrix} $$
+
+    이다. 그러므로 $[\mathbf{T} + \mathbf{U} ] ^{\gamma}_{\beta} = [\mathbf{T} ] ^{\gamma}_{\beta}+[\mathbf{U} ]^{\gamma}_{\beta}$ 임을 알 수 있다. ■ 
 
 # 선형변환의 합성과 행렬 곱
+
+이전 절에서는 행렬의 합과 스칼라 곱을 선형변환의 합과 스칼라 곱으로 대응시켜서 행렬과 선형변환을 연결해보았다. 이제 선형변환의 합성에 대응하는 행렬의 연산인 행렬곱에 대하여 살펴보자.
+
+!!! tldr "정리 2.9"
+
+    $\mathbf{F}$-벡터공간 $\mathbf{W} ,\mathbf{W} , \mathbf{Z}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 에 대하여 두 선형변환의 합성 $\mathbf{U} \mathbf{T} : \mathbf{V} \to \mathbf{Z}$ 는 선형이다.
+
+- 두 선형변환 $\mathbf{U} , \mathbf{T}$ 의 합성 $\mathbf{U} \circ \mathbf{T}$ 을 편의상 $\mathbf{U} \mathbf{T}$ 로 표기하자.
+
+- 증명
+
+    $x, y \in \mathbf{V} , a \in \mathbf{F}$ 에 대하여 
+
+    $$ \begin{equation}\begin{split}   \mathbf{U} \mathbf{T} (ax + y)&= \mathbf{U} (\mathbf{T} (ax +y)) \\ &= \mathbf{U} (a \mathbf{T} (x) + \mathbf{T} (y))\\ &=a \mathbf{U} (\mathbf{T} (x)) + \mathbf{U} (\mathbf{T} (y)) \\ &=a (\mathbf{U} \mathbf{T} )(x) + \mathbf{U} \mathbf{T} (y) \\ \end{split}\end{equation}\tag*{} $$
+
+    이 성립한다. ■ 
+
+!!! tldr "정리 2.10"
+
+    체 $\mathbf{F}$ 에 대한 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 선형변환 $\mathbf{T} , \mathbf{U} _1, \mathbf{U} _2 \in \mathcal{L}(\mathbf{V} )$ 에 대하여 다음이 성립한다.
+
+    1. $\mathbf{T} (\mathbf{U} _1 + \mathbf{U} _2) = \mathbf{T} \mathbf{U} _1 + \mathbf{T} \mathbf{U} _2, \enspace  (\mathbf{U} _1 + \mathbf{U} _2)\mathbf{T} = \mathbf{U} _1 \mathbf{T} +\mathbf{U} _2 \mathbf{T}$
+
+    2. $\mathbf{T} (\mathbf{U} _1 \mathbf{U} _2) = (\mathbf{T} \mathbf{U} _1) \mathbf{U} _2$
+
+    3. $\mathbf{T} \mathbf{I} = \mathbf{I} \mathbf{T} = \mathbf{T}$
+
+    4. $\forall a \in \mathbf{F} , a(\mathbf{U} _1 \mathbf{U} _2) = (a \mathbf{U} _1)\mathbf{U} _2 = \mathbf{U} _1(a \mathbf{U} _2)$
+
+- 증명
+
+- 이 정리는 선형변환의 정의역과 공역이 같은 경우를 말하고 있지만, 선형변환의 정의역과 공역이 같지 않으면 더 일반적인 결과가 성립한다. 
+
+    - 증명
+
+!!! tldr ""
+
+    벡터공간 $\mathbf{V}$ 에서 정의된 선형변환 $\mathbf{T} \in \mathcal{L}(\mathbf{V} )$ 와 $k \in \N$ 에 대하여 
+
+    $$ \mathbf{T} ^{k} = \begin{cases} \mathbf{T} ^{k-1} \mathbf{T}  & k \geq 2\\ \mathbf{T}  & k = 1\\ \mathbf{I} _{\mathbf{V} }  & k = 0\\ \end{cases} $$
+
+    라고 정의한다.
+
+- 예시 
+
+    무한번 미분가능한 실함수 집합 $\mathbf{V}$ 에 대하여 $\mathbf{T} : \mathbf{V} \to \mathbf{V}, \mathbf{T} (f) = f'$ 와 같이 정의된 선형변환의 합성을 표현할 때 
+
+    $$ \mathbf{T} \mathbf{T} (f) = \mathbf{T} ^{2} (f) = \mathbf{T} (f') = (f')' = f'' $$
+
+    $$ \mathbf{T} \mathbf{T} \mathbf{T}  (f) = \mathbf{T} ^{3} (f) = \mathbf{T} ^{2} (f') = \mathbf{T}  (f'') = f''' $$
+
+    와 같이 표현한다.
+
+!!! tldr ""
+
+    $m \times n$ 행렬 $A$ 와 $n \times p$ 행렬 $B$ 에 대하여 두 행렬 $A, B$ 의 곱 $AB$ 는 $1 \leq i \leq m, 1 \leq j \leq p$ 에 대하여
+
+    $$ (AB) _{ij} = \sum_{k=1}^{n}A _{ik}B _{kj} $$
+
+    인 $m \times p$ 행렬이다.
+
+- 행렬 곱은 어째서 이렇게 정의되었나?
+
+    유한차원 벡터공간 $\mathbf{V} ,\mathbf{W} ,\mathbf{Z}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 를 생각하자. 이때 $\mathbf{V}, \mathbf{W}, \mathbf{Z}$ 의 순서기저를 각각 
+
+    $$ \text{ordered basis of } \mathbf{V} : \alpha = \{v_1, \dots, v_n\} $$
+
+    $$ \text{ordered basis of } \mathbf{W} : \beta = \{w_1, \dots, w_m\} $$
+
+    $$ \text{ordered basis of } \mathbf{Z} : \alpha = \{z_1, \dots, z_p\} $$
+
+    으로 정의하고 선형변환 $\mathbf{T} , \mathbf{U}$ 의 행렬표현을 
+
+    $$ A = [\mathbf{U} ] ^{\gamma}_{\beta}, B = [\mathbf{T} ] ^{\beta }_{\alpha } $$
+
+    라고 하자. 그러면 
+
+    $$ \boxed{ AB = [\mathbf{U} \mathbf{T} ] ^{\gamma}_{\alpha }} $$
+
+    가 성립하려면 행렬곱 $AB$ 가 어떻게 정의되어야 하겠는가?
 
 # 가역성과 동형사상
 
