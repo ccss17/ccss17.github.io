@@ -816,6 +816,69 @@
 
     $$ [\mathbf{U} \mathbf{T} ] _{\beta } = [\mathbf{U} ] _{\beta }[\mathbf{T} ] _{\beta } $$
 
+p113. 정리 2.10, 정리 2.16 의 메타데이터
+
+!!! tldr "정리 2.12"
+
+    $A$ 가 $m \times n$ 행렬, $B$ 와 $C$ 가 $n \times p$ 행렬, $D$ 와 $E$ 가 $q \times m$ 행렬일 때, 다음이 성립한다.
+
+    1. $A(B+C) = AB+AC, (D+E)A = DA+EA$
+
+    2. 임의의 스칼라 $a$ 에 대하여 $a(AB) = (aA)B=A(aB)$
+
+    3. $I_mA = A=AI_n$
+
+- 1) 의 증명
+
+    $$ \begin{equation}\begin{split}   
+    [A(B+C)] _{ij} &= \sum_{k=1}^{n}A _{ik}(B+C) _{kj} = \sum_{k=1}^{n}A _{ik}(B _{kj} + C _{kj})  \\
+    &= \sum_{k=1}^{n} (A _{ik}B _{kj} + A _{ik}C _{kj}) = \sum_{k=1}^{n} A _{ik} B _{kj} + \sum_{k=1}^{n} A _{ik} C _{kj} \\
+    &= (AB) _{ij} + (AC) _{ij} = [AB +AC] _{ij}
+    \end{split}\end{equation}\tag*{}
+    $$
+
+    $$ \iff A(B+C) = AB+AC $$
+
+- 3) 의 증명 
+
+    $\displaystyle (I_mA) _{ij} = \sum_{k=1}^{m}(I_m) _{ik}A _{kj} = \sum_{k=1}^{m}\delta _{ik}A _{kj} = A _{ij}$
+
+!!! tldr "정리 2.12 따름정리"
+
+    $m \times n$ 행렬 $A$ 와 $n \times p$ 행렬 $B_1, B_2, \dots, B_k$ 와 $q \times m$ 행렬 $C_1, C_2, \dots, C_k$ 와 스칼라 $a_1, a_2, \dots, a_k$ 에 대하여 다음이 성립한다. 
+
+    $$ A \bigg (\sum_{i=1}^{k}a_iB_i\bigg ) = \sum_{i=1}^{k}a_iAB_i, \quad \bigg (\sum_{i=1}^{k}a_iC_i\bigg )A = \sum_{i=1}^{k}a_iC_iA $$
+
+- 증명
+
+!!! tldr ""
+
+    $n \times n$ 행렬 $A$ 에 대하여 행렬의 지수를 다음과 같이 정의한다.
+
+    $$ A ^{k} = \begin{cases} A ^{k-1}A & k \geq 2\\ A & k = 1\\ I_n & k = 0\\ \end{cases} $$
+
+!!! tldr ""
+
+    행렬곱에서 소거법칙이 성립하지 않는다.
+
+- 증명
+
+    $A = \begin{pmatrix} 0&0\\ 1&0\\ \end{pmatrix} \implies A \neq O \land A ^{2} = O$ 이다. 이때 소거법칙이 성립한다고 가정하면
+
+    $$ A \cdot A = A ^{2} = O = A \cdot O \implies A = O $$
+
+    이다. 이는 모순이다. ■ 
+
+!!! tldr "정리 2.13"
+
+    $m \times n$ 행렬 $A$ 와 $n \times p$ 행렬 $B$ 와 $j = 1, 2, \dots, p$ 에 대하여 $AB$ 의 $j$ 열을 $u_j$, $B$ 의 $j$ 열을 $v_j$ 이라 하면 다음이 성립한다. 
+
+    1. $u_j = Av_j$
+
+    2. $v_j = Be_j$ (단, $e_j$ 는 $\mathbf{F} ^{p}$ 의 $j$ 번째 표준벡터)
+
+- 증명
+
 # 가역성과 동형사상
 
 # 좌표변환 행렬
