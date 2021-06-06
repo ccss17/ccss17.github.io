@@ -19,6 +19,7 @@ nav:
       - Number Theory: Math/Foundations/numbers.md
       - Infinite Set: Math/Foundations/InfiniteSet.md
       - ZFC axiom system: Math/Foundations/ZFC.md
+    - Surreal Numbers: Math/SurrealNumbers.md
     - Linear Algebra: 
       - Vector Space: Math/LinearAlgebra/VectorSpace.md
       - Linear Transformation: Math/LinearAlgebra/LinearTransformation.md
