@@ -72,26 +72,26 @@ nav:
     - Quadruplet (2017): paper/quadruplet.md
     - BlueBorne: paper/blueborne.md
     - Meltdown: paper/meltdown.md
-  - Project:
-    - ProgrammerBase: project/ProgrammerBase.md
-    - security-tutorial: project/security-tutorial.md
-    - WICWIU: project/WICWIU.md
-    - ml: project/ml.md
-    - ubuntu-unminimize: project/ubuntu-unminimize.md
-    - bof: project/bof.md
-    - nonogram: project/nonogram.md
-    - older-glibc: project/older-glibc.md
-    - test_virt_memory: project/test_virt_memory.md
-    - genie: project/genie.md
-    - homework: project/homework.md
-    - ddtector: project/ddtector.md
-    - dogdoor: project/dogdoor.md
-    - auto-connect-raspberry: project/auto-connect-raspberry.md
-    - kill-idle-tty: project/kill-idle-tty.md
-    - standalone: project/standalone.md
-    - justforfun: project/justforfun.md
-    - dotfiles: project/dotfiles.md
-    - servercat: project/servercat.md
+  # - Project:
+  #   - ProgrammerBase: project/ProgrammerBase.md
+  #   - security-tutorial: project/security-tutorial.md
+  #   - WICWIU: project/WICWIU.md
+  #   - ml: project/ml.md
+  #   - ubuntu-unminimize: project/ubuntu-unminimize.md
+  #   - bof: project/bof.md
+  #   - nonogram: project/nonogram.md
+  #   - older-glibc: project/older-glibc.md
+  #   - test_virt_memory: project/test_virt_memory.md
+  #   - genie: project/genie.md
+  #   - homework: project/homework.md
+  #   - ddtector: project/ddtector.md
+  #   - dogdoor: project/dogdoor.md
+  #   - auto-connect-raspberry: project/auto-connect-raspberry.md
+  #   - kill-idle-tty: project/kill-idle-tty.md
+  #   - standalone: project/standalone.md
+  #   - justforfun: project/justforfun.md
+  #   - dotfiles: project/dotfiles.md
+  #   - servercat: project/servercat.md
   - Computer:
     # - base: Computer/base.md
     - Nand to Tetris: Computer/nand2tetris.md
@@ -127,48 +127,48 @@ nav:
     - Day8 Exploit 3: security-tutorial/08-Exploit3/README.md
     - Day9 Exploit 4: security-tutorial/09-Exploit4/README.md
     - Day10 Pentesting: security-tutorial/10-Pentesting/README.md
-  - 사소한것들:
-    - hai:
-      - base: hai/base.md
-      - BLAS: hai/BLAS.md
-    - Philosophy: 
-      - 철학 메모: Philosophy/philosophy.md
-      - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
-    - 취약점 관련 사소한 생각들: 
-      - memo: vul/memo.md
-    - TS 관련 사소한 생각들:
-      - 1. 기초: TS/base.md
-      - 2. 생각: TS/think.md
-      - 3. 실행: TS/doit.md
-      - 수학의 역사: TS/history_math.md
-      - 4. 수학역사 1차 추상화: TS/abstract_history_math.md
-      - 과학의 역사: TS/history_science.md
-      - 기술의 역사: TS/history_technology.md
-      - 컴퓨터의 역사(wikipedia 내용 정리): TS/history_computer_wiki.md
-      - 컴퓨터역사1(괴델의 불완전성 정리): TS/history_computer1.md
-      - 컴퓨터역사2(튜링의 불완전성 증명): TS/history_computer2.md
-      - 컴퓨터역사3(튜링기계의 구현): TS/history_computer3.md
-      - 컴퓨터역사4(소프트웨어와 알고리즘): TS/history_computer4.md
-      - 컴퓨터역사5(초지능): TS/history_computer5.md
-      - 인공지능의 역사: TS/history_ai.md
-    - Deep Learning: 
-      - DL from stratch 메모: AI/dl_from_scratch.md
-      - DL from stratch 메모2: AI/dl_from_scratch2.md
-      - DL from stratch 메모3: AI/dl_from_scratch3.md
-      - DL from stratch 메모4: AI/dl_from_scratch4.md
-      - 인공지능 메모3: AI/ai.md
-    - Tools: 
-      - Makefile: Tools/makefile.md
-      - Git: Tools/git.md
-      - Docker: Tools/docker.md
-      - CUDA: Tools/cuda.md
-    - ArchLinux: 
-      - 설치: archlinux/install.md
-      - VM 설치: archlinux/vminstall.md
-    - Tex 수학기호: tex.md
-    - Algorithm:
-      - 시간복잡도: Algorithm/timecomplexity.md
-      - Leetcode: Algorithm/leetcode.md
+  # - 사소한것들:
+  #   - hai:
+  #     - base: hai/base.md
+  #     - BLAS: hai/BLAS.md
+  #   - Philosophy: 
+  #     - 철학 메모: Philosophy/philosophy.md
+  #     - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
+  #   - 취약점 관련 사소한 생각들: 
+  #     - memo: vul/memo.md
+  #   - TS 관련 사소한 생각들:
+  #     - 1. 기초: TS/base.md
+  #     - 2. 생각: TS/think.md
+  #     - 3. 실행: TS/doit.md
+  #     - 수학의 역사: TS/history_math.md
+  #     - 4. 수학역사 1차 추상화: TS/abstract_history_math.md
+  #     - 과학의 역사: TS/history_science.md
+  #     - 기술의 역사: TS/history_technology.md
+  #     - 컴퓨터의 역사(wikipedia 내용 정리): TS/history_computer_wiki.md
+  #     - 컴퓨터역사1(괴델의 불완전성 정리): TS/history_computer1.md
+  #     - 컴퓨터역사2(튜링의 불완전성 증명): TS/history_computer2.md
+  #     - 컴퓨터역사3(튜링기계의 구현): TS/history_computer3.md
+  #     - 컴퓨터역사4(소프트웨어와 알고리즘): TS/history_computer4.md
+  #     - 컴퓨터역사5(초지능): TS/history_computer5.md
+  #     - 인공지능의 역사: TS/history_ai.md
+  #   - Deep Learning: 
+  #     - DL from stratch 메모: AI/dl_from_scratch.md
+  #     - DL from stratch 메모2: AI/dl_from_scratch2.md
+  #     - DL from stratch 메모3: AI/dl_from_scratch3.md
+  #     - DL from stratch 메모4: AI/dl_from_scratch4.md
+  #     - 인공지능 메모3: AI/ai.md
+  #   - Tools: 
+  #     - Makefile: Tools/makefile.md
+  #     - Git: Tools/git.md
+  #     - Docker: Tools/docker.md
+  #     - CUDA: Tools/cuda.md
+  #   - ArchLinux: 
+  #     - 설치: archlinux/install.md
+  #     - VM 설치: archlinux/vminstall.md
+  #   - Tex 수학기호: tex.md
+  #   - Algorithm:
+  #     - 시간복잡도: Algorithm/timecomplexity.md
+  #     - Leetcode: Algorithm/leetcode.md
 theme: 
   name: material
   palette:
