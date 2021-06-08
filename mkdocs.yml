@@ -177,12 +177,12 @@ theme:
   font:
     text: Nanum Gothic
   language: kr
-  # logo: assets/images/bolt-solid.svg
-  # favicon: assets/images/bolt-solid.svg
+  logo: assets/images/bolt-solid.svg
+  favicon: assets/images/bolt-solid.svg
   # logo: assets/images/snowflake-regular.svg
   # favicon: assets/images/snowflake-regular.svg
-  logo: assets/images/umbrella-beach-solid.svg
-  favicon: assets/images/umbrella-beach-solid.svg
+  # logo: assets/images/umbrella-beach-solid.svg
+  # favicon: assets/images/umbrella-beach-solid.svg
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js
