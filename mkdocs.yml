@@ -97,6 +97,7 @@ nav:
     - Nand to Tetris: Computer/nand2tetris.md
     - Information Theory: Computer/information.md
     - Technological Singularity: Computer/future.md
+    - Rust StudyNote: Computer/Rust.md
   - ProgrammerBase: 
     - README: ProgrammerBase/README.md
     - Contents:
