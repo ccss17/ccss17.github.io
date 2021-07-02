@@ -6,15 +6,15 @@
 
 !!! tldr ""
 
-    체(field) : 두 연산 $+, \cdot$ (덧셈, 곱셈)이 주어진 집합으로써 $\exists x, y \in \mathbf{F}$ 에 대하여 $x+y, x \cdot y$ 가 $\mathbf{F}$ 에 유일하게 존재하고, $\forall a,b,c \in \mathbf{F}$ 에 대하여 다음이 성립한다.
+    체(field) : 두 연산 $+, \cdot$ (덧셈, 곱셈)이 주어진 집합 $\mathbf{F}$ 로써 $x, y \in \mathbf{F}$ 에 대하여 $x+y, x \cdot y$ 가 $\mathbf{F}$ 에 유일하게 존재하고, $\forall a,b,c \in \mathbf{F}$ 에 대하여 다음이 성립한다.
 
-    - F1) 덧셈과 곱셈에 대한 교환법칙 : $a+b=b+a,a \cdot b = b \cdot a$
+    - F1) 덧셈과 곱셈의 교환법칙 : $a+b=b+a,a \cdot b = b \cdot a$
 
-    - F2) 덧셈과 곱셈에 대한 결합법칙 : $(a+b)+c=a+(b+c),(a \cdot b) \cdot c = a \cdot (b \cdot c)$
+    - F2) 덧셈과 곱셈의 결합법칙 : $(a+b)+c=a+(b+c),(a \cdot b) \cdot c = a \cdot (b \cdot c)$
 
-    - F3) 덧셈과 곱셈에 대한 항등원 : $0 + a = a, 1 \cdot a = a$ 인 $0 \in \mathbf{F}$ 와 $1 \in \mathbf{F}$ 가 존재한다. 단 $1 \neq 0$ 이다.
+    - F3) 덧셈과 곱셈의 항등원 : $0 + a = a, 1 \cdot a = a$ 인 $0 \in \mathbf{F}$ 와 $1 \in \mathbf{F}$ 가 존재한다. 단 $1 \neq 0$ 이다.
 
-    - F4) 덧셈과 곱셈에 대한 역원 : 각 $a \in \mathbf{F}$ 와 영이 아닌 $b \in \mathbf{F}$ 에 대하여 $a+c=0, b \cdot d = 1$ 인 $c \in \mathbf{F}$ 와 $d \in \mathbf{F}$ 가 존재한다
+    - F4) 덧셈과 곱셈의 역원 : 각 $a \in \mathbf{F}$ 와 영이 아닌 $b \in \mathbf{F}$ 에 대하여 $a+c=0, b \cdot d = 1$ 인 $c \in \mathbf{F}$ 와 $d \in \mathbf{F}$ 가 존재한다
 
     - F5) 덧셈에 대한 곱셈의 분배법칙 : $a \cdot (b+c) = a \cdot b + a \cdot c$
 
@@ -664,7 +664,7 @@
 
 !!! tldr "정리 1.4"
 
-    벡터공간 $V$ 의 임의의 교집합은 $V$ 의 부분공간이다. 
+    벡터공간 $\mathbf{V}$ 의 임의의 교집합은 $\mathbf{V}$ 의 부분공간이다. 
 
 - 이 정리는 주어진 부분공간으로 새로운 부분공간을 만드는 방법을 제시해준다. 
 
@@ -692,7 +692,13 @@
 
 !!! tldr ""
 
-    생성공간(span) : 벡터공가 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대하여 $S$ 의 벡터로 만든 모든 일차결합의 집합을 생성공간 $\text{span}(S)$ 라 표기한다.
+    생성공간(span) : $\mathbf{F}-$벡터공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대하여
+
+    $$ \text{span } (S) = \bigg \{\sum_{i=1}^{k}a_iv_i \bigg | k \in \N, v_i \in S, a_i \in \mathbf{F} \bigg \} $$
+
+    이다.
+    
+- 즉, $S$ 의 벡터로 만든 모든 일차결합의 집합이 생성공간 $\text{span}(S)$ 이다. 
 
 - $\text{span}(\varnothing ) = \{0\}$ 으로 정의한다. 이 $0$ 은 영벡터를 뜻한다.
 
@@ -1380,7 +1386,7 @@
 
 !!! tldr "정리 1.12"
 
-    벡터공간 $\mathbf{V}$ 와 $\text{span}(S) = \mathbf{V}$ 인 $S \subset V$ 에 대하여 $\beta$ 가 $S$ 의 일차독립인 극대 부분집합이면 $\beta$ 는 $\mathbf{V}$ 의 기저이다.
+    벡터공간 $\mathbf{V}$ 와 $\text{span}(S) = \mathbf{V}$ 인 $S \subset \mathbf{V}$ 에 대하여 $\beta$ 가 $S$ 의 일차독립인 극대 부분집합이면 $\beta$ 는 $\mathbf{V}$ 의 기저이다.
 
 - 증명
 
@@ -1396,7 +1402,7 @@
 
     2. $B$ 를 포함하고 일차독립인 $S$ 의 부분집합은 오직 $B$ 이다.
 
-- $S$ 가 $\mathbf{V}$ 를 생성한다면, 이 정의는 [정리 1.12](#0891c672a) 에 의하여 기저의 정의와 같다. 
+- $S$ 가 $\mathbf{V}$ 를 생성한다면, 이 정의는 정리 1.12 에 의하여 기저의 정의와 같다. 
 
 !!! tldr ""
 

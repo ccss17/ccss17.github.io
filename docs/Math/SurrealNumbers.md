@@ -4,7 +4,7 @@
 
 # 초현실수 개론
 
-!!! tldr ""
+!!! tldr "초현실수의 정의"
 
     초현실수(surreal number) : 초현실수 집합 $L, R$ 에 대하여 
     
@@ -20,7 +20,7 @@
 
 - Conway used surreal numbers to describe various aspects of game theory.
 
-- 초현실수 집합 $L, R$ 이 $(1.1)$ 을 만족하면 새로운 초현실수 $\{L|R\}$ 을 구성할 수 있다. 이제 $(1.1)$ 이 잘 구성된 집합 쌍을 특정짓는다고 하자. 그러면 오직 잘 구성된 집합 쌍만이 초현실수를 구성한다고 할 수 있다.
+- 초현실수 집합 $L, R$ 이 $(1.1)$ 을 만족하면 새로운 초현실수 $\{L|R\}$ 을 구성할 수 있다. 이제 $(1.1)$ 이 well-formed 된 집합 쌍을 특정짓는다고 하자. 그러면 오직 well-formed 된 집합 쌍만이 초현실수를 구성한다고 할 수 있다.
 
 !!! tldr "최초의 초현실수"
 
@@ -32,7 +32,7 @@
 
     라고 표기한다. 
 
-- 이 초현실수를 구성하는 집합 쌍은 잘 구성되었다. 왜냐하면 두 집합 쌍이 모두 공집합이므로 조건 $(1.1)$ 을 위배하는 원소가 존재하지 않기 때문이다. 
+- 이 초현실수를 구성하는 집합 쌍은 well-formed 이다. 왜냐하면 두 집합 쌍이 모두 공집합이므로 조건 $(1.1)$ 을 위배하는 원소가 존재하지 않기 때문이다. 
 
 - 우리는 $\{|\}$ 을 영이라고 부르기로 하고 앞으로 이 초현실수를 기호 $0$ 로 표기하기로 한다. 
 
@@ -164,7 +164,7 @@
 
     $$ \{|0\} < \{0|\} $$
 
-!!! tldr ""
+!!! tldr "서로 같은 초현실수의 정의"
 
     $$ x \leq y \land y \leq x \iff x = y $$
 
@@ -200,7 +200,7 @@
 
     $$ -1 < 1 $$
 
-- 이렇게 우리는 세 가지 초현실수 $-1, 0, 1$ 을 생성해내었다. 이것을 기반으로 새로운 60 가지 집합쌍을 만들 수 있고 이 중 아래와 같은 17 가지 집합쌍이 잘 구성된 초현실수가 된다.
+- 이렇게 우리는 세 가지 초현실수 $-1, 0, 1$ 을 생성해내었다. 이것을 기반으로 새로운 60 가지 집합쌍을 만들 수 있고 이 중 아래와 같은 17 가지 집합쌍이 well-formed 된 초현실수가 된다.
 
     $$ \{-1|\}, \{|-1\} $$
 
@@ -356,7 +356,7 @@
 
         $\{3,5\} \leq 4$ 은 거짓인 반면 $\{3,5\} \not \leq 4$ 도 거짓이다. 
     
-!!! tldr ""
+!!! tldr "서로 같은 초현실수 집합의 정의"
 
     초현실수 집합 $A, B$ 에 대하여 다음과 같이 정의한다.
 
@@ -390,15 +390,9 @@
 
     $$ x \leq y \iff y \not \leq X_L \land Y_R \not \leq x $$
 
-!!! tldr "초현실수의 동등함"
+!!! tldr "$\equiv$ 의 정의"
 
-    $$ \begin{equation}\begin{split}
-    x \equiv y \iff &\forall x_L \in X_L : x_L \in Y_L \quad \land \\
-    &\forall x_R \in X_R : x_R \in Y_R \quad \land \\
-    &\forall y_L \in Y_L : y_L \in X_L \quad \land \\
-    &\forall y_R \in Y_R : y_R \in X_R 
-    \end{split}\end{equation} \tag*{}
-    $$
+    $$ \begin{equation}\begin{split} x \equiv y \iff &\forall x_L \in X_L : x_L \in Y_L \quad \land \\ &\forall x_R \in X_R : x_R \in Y_R \quad \land \\ &\forall y_L \in Y_L : y_L \in X_L \quad \land \\ &\forall y_R \in Y_R : y_R \in X_R \end{split}\end{equation} \tag*{} $$
 
 - 우리는 지금까지 $\equiv$ 이 단지 초현실수의 동등함을 나타낸다고 비형식적으로 정의했지만 이제 이것을 형식적으로 정의할 때가 되었다. 
 
@@ -412,12 +406,134 @@
 
     이는 모든 초현실수가 원시 초현실수인 $\{|\}$ 에 도달할 때까지 그들의 parents 를 역추적해나갈 수 있다는 것을 말해준다. 
 
-- 또한 우리는 정리의 증명을 위하여 다음을 사용할 것이다.
+!!! tldr "정리 증명 도구"
+
+    정리의 증명을 위하여 다음을 사용할 것이다.
 
     1. $\{|\}$ 에 대하여 정리가 참이다.
 
     2. 초현실수 $x$ 의 parents 에 대하여 정리가 참이면 $x$ 에 대하여 정리가 참이다.
 
+- 2) 를 사용하여 수학적 귀납법을 전개할 수 있다. 
+
+!!! tldr ""
+
+    $$ x \not \leq y \iff \exists x_L \in X_L : y \leq x_L \lor \exists y_R \in Y_R : y_R \leq x \tag{2.5} $$
+
+- 증명
+
+    $$ \because  x \leq y \iff  \lnot \exists x_L \in X_L : y \leq x_L \land \lnot \exists y_R \in Y_R : y_R \leq x \tag{2.4} $$
+
+    이는 $(1.4)$ 를 다시 가져온 것이다.
+
 !!! tldr "정리 1"
 
     $x$ 가 초현실수이면 $x \leq x$ 이다.
+
+- 증명 
+
+    먼저 $0 \leq 0$ 은 [$(1.3)$]() 에 의하여 이미 증명되었다. ▲ 
+    
+    이 정리가 $x$ 의 parents 에 대하여 참이라고 하자. 즉, $X_L \cup X_R$ 의 모든 원소에 대하여 참이라고 가정하는 것이다. 
+
+    우선 $(2.4)$ 에 의하여 $x \leq x$ 는 다음과 동치이다. 
+
+    $$ \lnot \exists x_L \in X_L : x \leq x_L \land \lnot \exists x_R \in X_R : x_R \leq x \tag{2.6} $$
+
+    $(2.6)$ 의 왼쪽 명제는 $\forall x_L \in X_L : x \not \leq x_L$ 과 같다. 그러면 $(2.5)$ 에 의하여 이는 
+
+    $$ \forall x_L \in X_L : ( \exists a \in X_L : x_L \leq a \lor \exists b \in X _{LR} : b \leq x) \tag{2.7} $$
+
+    와 같다. 그런데 우리는 $x$ 의 parents 에 대하여 이 정리가 성립한다고 가정했다. 그러므로 $x_L \leq x_L$ 이다. 
+
+    그러면 $X_L$ 의 원소 $x_L$ 에 대하여 $a \equiv x_L$ 로 두면 왼쪽 명제가 참이 된다. $a$ 를 당연히 $x_L$ 로 둘 수 있는데 $a$ 는 $X_L$ 의 원소이기 때문이다. 그러므로 $X_L$ 의 원소 $x_L$ 이 정해질 때마다 $a \equiv x_L$ 로 두면 왼쪽 명제가 참이 되는 것이다. 그러므로 $(2.7)$ 명제 전체가 참이 된다. 이것으로 $(2.6)$ 의 왼쪽 명제를 증명하였다. ▲ 
+
+    이제 $(2.6)$ 의 오른쪽 명제를 증명할 차례이다. $(2.6)$ 의 오른쪽 명제는 $\forall x_R \in X_R : x_R \not \leq x$ 와 같다. $(2.5)$ 에 의하여 이는 
+
+    $$ \forall x_R \in X_R : (\exists c \in X _{RL} : x \leq c \lor \exists d \in X_R : d \leq x_R) \tag{2.8} $$
+
+    가 된다. $x$ 의 parents 에 대하여 이 정리가 참이므로 $x_R \leq x_R$ 이고 $d \equiv x_R$ 로 두면 $(2.8)$ 이 참이된다. 이로써 $(2.6)$ 의 오른쪽 명제가 증명되었다. ▲ 
+
+    그러므로 $(2.6)$ 은 참이고, 모든 증명이 끝났다. ■ 
+
+- 우리는 지금까지 이 정리를 초현실수가 well-formed 라는 가정 없이 증명했다는 것을 유의하라. 이 사실은 나중에 유용하게 사용된다.
+    
+!!! tldr "따름정리 2"
+
+    $x$ 가 초현실수이면 $x = x$ 이다. 
+
+- 증명 
+
+    이 정리는 [서로 같은 초현실수의 정의]()에 의하여 곧바로 도출된다. ■ 
+
+!!! tldr "정리 3"
+
+    초현실수 집합 $A,A',B,B'$ 에 대하여
+
+    $$ \forall a \in A \exists a' \in A' : a \leq a' \land \forall b' \in B' \exists b \in B : b \leq b' $$
+
+    이면 
+
+    $$ \{A|B\} \leq \{A'|B'\} \tag{2.9} $$
+
+    이다. 
+
+- 증명 
+
+    $(2.9)$ 를 증명하려면 $(2.4)$ 에 의하여 
+
+    $$ \lnot \exists a \in A : \{A'|B'\} \leq a \land \lnot \exists b' \in B' : b' \leq \{A|B\} \tag{2.10} $$
+
+    을 증명하면 증명이 끝난다. ▲ 
+
+    $\exists a \in A : \{A'|B'\} \leq a$ 라고 가정하면 또 다시 $(2.4)$ 에 의하여 
+
+    $$ \lnot \exists a' \in A' : a \leq a' \land \lnot \exists a_R \in A_R : a_R \leq \{A'|B'\} \tag{2.11} $$
+
+    이다. 그러므로 $(2.11)$ 의 왼쪽 명제는 결국 항상 $a' < a$ 이라고 말하는 것이다. 그런데 이는 가정의 왼쪽 명제와 모순된다. 그러므로 $(2.11)$ 은 모순이고 $(2.10)$ 의 왼쪽 명제는 참이다. ▲ 
+
+    $\exists b' \in B' : b' \leq \{A|B\}$ 라고 가정하면 $(2.4)$ 에 의하여 
+
+    $$ \lnot \exists b'_l \in B'_L : \{A|B\} \leq b'_L \land \lnot \exists b \in B:b \leq b' \tag{2.12} $$
+
+    이다. $(2.12)$ 의 오른쪽 명제는 결국 항상 $b' < b$ 이라고 말하는 것이다. 하지만 이는 가정의 오른쪽 명제와 모순된다. 그러므로 $(2.12)$ 는 모순이고 $(2.10)$ 의 오른쪽 명제는 참이다. ▲ 
+
+    그러므로 $(2.10)$ 는 참이고 모든 증명이 끝났다. ■ 
+
+    - 이 증명도 $\{A|B\}$ 가 well-formed 된 초현실수라는 가정이 없네. 이러면 전체 이론이 불안정해지지 않을까? 왜 strict 한 가정 없이 이론을 전개하는거지. 
+
+!!! tldr "정리 4"
+
+    $$ A = A' \land B = B' \implies \{A|B\} = \{A'|B'\} $$
+
+- 증명
+
+    [서로 같은 초현실수 집합의 정의]() 에 의하여 $A = A'$ 는
+
+    $$ \forall a \in A \exists a' \in A' : a = a' \land \forall a' \in A' \exists a \in A : a = a' $$
+
+    을 뜻하고, [서로 같은 초현실수의 정의]() 에 의하여 $a = a'$ 는
+
+    $$ a \leq a' \land a' \leq a $$
+
+    을 뜻한다. 그러므로 우리는 
+
+    $$ \forall a \in A \exists a' \in A' : a \leq a' \tag{2.14} $$
+
+    $$ \forall a \in A \exists a' \in A' : a' \leq a \tag{2.15} $$
+
+    $$ \forall a' \in A' \exists a \in A : a \leq a' \tag{2.16} $$
+
+    $$ \forall a' \in A' \exists a \in A : a' \leq a \tag{2.17} $$
+
+    을 얻는다. ▲ 
+
+    같은 방식으로 $B = B'$ 로부터 
+
+    $$ \forall b \in B \exists b' \in B' : b \leq b' \tag{2.18} $$
+
+    $$ \forall b \in B \exists b' \in B' : b' \leq b \tag{2.19} $$
+
+    $$ \forall b' \in B' \exists b \in B : b \leq b' \tag{2.20} $$
+
+    $$ \forall b' \in B' \exists b \in A : b' \leq b \tag{2.21} $$

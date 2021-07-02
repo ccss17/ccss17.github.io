@@ -1843,3 +1843,36 @@ let sum: u32 = Counter::new()
     .sum();
 assert_eq!(18, sum);
 ```
+
+# Improving Our I/O Project
+
+iterator 로 minigrep 을 개선해보자. 
+
+```rust
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    let mut results = Vec::new();
+
+    for line in contents.lines() {
+        if line.contains(query) {
+            results.push(line);
+        }
+    }
+
+    results
+}
+```
+
+위와 같은 코드를 iterator 로 개선할 수 있다. 
+
+```rust
+pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+    contents
+        .lines()
+        .filter(|line| line.contains(query))
+        .collect()
+}
+```
+
+이렇게 함수형 언어 특징으로 mutable state 를 최대한 줄이는 것이 좋다. 왜냐면 나중에 병렬 처리를 할 때 접근 관리를 해주어야 하는 영역을 최소화할 수 있기 때문이다. 
+
+심지어 for-loop 같은 것들 보다 iterator 를 사용하는게 성능이 좀 더 빠르다. 
