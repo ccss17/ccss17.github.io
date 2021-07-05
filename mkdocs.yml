@@ -203,8 +203,6 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/ccss17
 
-use_directory_urls: true
-
 markdown_extensions:
   - toc:
       permalink: "&para;"
