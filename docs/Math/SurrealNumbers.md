@@ -562,11 +562,7 @@
 
     초현실수는 그것의 left set 보다 크고, 그것의 right set 보다 작다. 즉, 
 
-    $$ \begin{equation}\begin{split}   
-    \forall a \in A : a < \{A|B\}&  \\
-    \forall b \in B : \{A|B\} < b &  \\
-    \end{split}\end{equation}\tag{2.24}
-    $$
+    $$ \begin{equation}\begin{split}   \forall a \in A : a < \{A|B\}&  \\ \forall b \in B : \{A|B\} < b &  \\ \end{split}\end{equation}\tag{2.24} $$
 
     이다. 집합 부등식으로 표현하면 
 
@@ -575,3 +571,15 @@
     이다.
 
 - 증명 
+
+    $(2.24)$ 의 첫번째 명제를 증명하기 위하여 [$<$ 의 정의]() 에 따라 
+
+    $$ \forall a \in A : a \leq \{A|B\} \tag{2.26} $$
+
+    $$ \forall a \in A : \{A|B\}  \not \leq a \tag{2.27} $$
+
+    를 증명해야 한다. ▲ 
+
+    $(2.26)$ 을 귀납법으로 증명해보자. $A= \varnothing$ 일 경우 자명하게 참이다. $(2.26)$ 은 [초현실수의 비교]() 에 의하여 
+
+    $$ \lnot \exists a_L \in A_L : \{A|B\} \leq a_L \land \lnot \exists b \in B : b \leq a \tag{2.28} $$
