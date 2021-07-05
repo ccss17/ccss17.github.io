@@ -150,7 +150,7 @@
 
 - 기호 $\geq$ 는 "보다 크거나 같다" 는 뜻이다. 
 
-!!! tldr ""
+!!! tldr "$<$ 의 정의"
 
     $$ x \leq y \land y \not \leq x \iff x < y $$
 
@@ -575,3 +575,9 @@
     이다.
 
 - 증명 
+
+    $(2.24)$ 의 첫번째 명제를 증명하기 위하여 [$<$ 의 정의]() 에 의하여 
+
+    $$ \forall a \in A : a \leq \{A|B\} \tag{2.26} $$
+
+    $$ \forall a \in A : \{A|B\} \not \leq a \tag{2.27} $$
