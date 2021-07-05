@@ -537,3 +537,41 @@
     $$ \forall b' \in B' \exists b \in B : b \leq b' \tag{2.20} $$
 
     $$ \forall b' \in B' \exists b \in A : b' \leq b \tag{2.21} $$
+
+    을 얻는다. ▲ 
+
+    $(2.14)$ 와 $(2.20)$ 과 [정리 3]() 에 의하여 
+
+    $$ \{A|B\} \leq \{A'|B'\} \tag{2.22} $$
+
+    를 얻고, $(2.17)$ 과 $(2.19)$ 와 [정리 3]() 에 의하여 
+
+    $$ \{A'|B'\} \leq \{A|B\} \tag{2.23} $$
+
+    을 얻는다. ▲ 
+
+    그러므로 
+
+    $$ \therefore \{A|B\} = \{A'|B'\} $$
+
+    이다. ■ 
+
+- 우리가 정리 3 과 정리 4 를 초현실수가 well-formed 라는 가정 없이 증명했다는 것에 유의하라.
+
+!!! tldr "정리 5"
+
+    초현실수는 그것의 left set 보다 크고, 그것의 right set 보다 작다. 즉, 
+
+    $$ \begin{equation}\begin{split}   
+    \forall a \in A : a < \{A|B\}&  \\
+    \forall b \in B : \{A|B\} < b &  \\
+    \end{split}\end{equation}\tag{2.24}
+    $$
+
+    이다. 집합 부등식으로 표현하면 
+
+    $$ A < \{A|B\} \land \{A|B\} < B \tag{2.25} $$
+
+    이다.
+
+- 증명 
