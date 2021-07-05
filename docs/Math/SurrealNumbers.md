@@ -583,3 +583,5 @@
     $(2.26)$ 을 귀납법으로 증명해보자. $A= \varnothing$ 일 경우 자명하게 참이다. $(2.26)$ 은 [초현실수의 비교]() 에 의하여 
 
     $$ \lnot \exists a_L \in A_L : \{A|B\} \leq a_L \land \lnot \exists b \in B : b \leq a \tag{2.28} $$
+
+
