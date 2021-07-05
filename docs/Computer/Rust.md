@@ -1912,3 +1912,69 @@ re-export 를 하면 실제 Module 경로가 매우 복잡해도 `use crate::pat
 `cargo publish` 로 crate 를 publish 하라.
 
 `cargo yank` 로 미래의 프로젝트들이 이전 버전의 crate 를 의존성으로 두는 것을 방지할 수 있다. 
+
+# Cargo Workspaces
+
+library crate 가 점점 더 커지면 이것을 다른 package 로 분리하고 싶어질 때가 온다. 이를 위해 Cargo 는 여러 package 를 관리하게 해주는 Workspaces 를 제공한다. 
+
+Workspaces 는 같은 `Cargo.lock` 과 같은 output 디렉토리를 공유하는 package 집합이다.
+
+이제 실행기능을 제공하는 Binary crate 와 1 을 더하는 기능을 제공하는 library crate, 2 를 더하는 기능을 제공하는 library crate, 이 세 가지 crate 를 같은 Workspaces 로 관리해보자. 
+
+```shell
+$ mkdir add
+$ cd add
+$ cat > Cargo.toml
+[workspace]
+
+members = [
+    "adder",
+]
+$ cargo new adder
+```
+
+이제 `cargo build` 로 빌드 할 수 있다. 이제 library crate 를 추가해보자. `Cargo.toml` 을 다음과 같이 고치고, 
+
+```toml
+[workspace]
+
+members = [
+    "adder",
+    "add-one",
+]
+```
+
+다음 명령어로 library crate 를 만든다. 
+
+```shell
+$ cargo new add-one --lib
+     Created library `add-one` package
+```
+
+`add-one/src/lib.rs` 는 다음과 같이 채우자.
+
+```rust
+pub fn add_one(x: i32) -> i32 {
+    x + 1
+}
+```
+
+이제 이 library crate 를 Binary crate 에서 사용하기 위하여 `adder/Cargo.toml` 에 다음을 추가하자. 
+
+```toml
+[dependencies]
+
+add-one = { path = "../add-one" }
+```
+
+workspace 는 하나의 `Cargo.lock` 을 공유하기 때문에 한 crate 에서 어떤 package 의존성을 선언하면 다른 crate 에서도 해당 버전의 package 를 사용하게 된다. 만약 `add-one` 에서 다음과 같은 
+
+```toml
+[dependencies]
+rand = "0.8.3"
+```
+
+package 를 사용하면 다른 crate 에서도 동일한 버전을 사용해야 한다. 하지만 이 dependencies 를 해당 crate 의 `Cargo.toml` 에 추가해주어야 사용할 수 있다. 
+
+# Smart Pointers
+
