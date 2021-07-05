@@ -1,5 +1,7 @@
 site_name: ccss17
 site_author: ccsss
+site_url: https://ccss17.github.io/
+
 # repo_name: ccss17.github.io
 # repo_url: https://github.com/ccss17/ccss17.github.io
 
@@ -200,6 +202,8 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/ccss17
+
+use_directory_urls: true
 
 markdown_extensions:
   - toc:
