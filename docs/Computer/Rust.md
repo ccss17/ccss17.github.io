@@ -1876,3 +1876,39 @@ pub fn search<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 이렇게 함수형 언어 특징으로 mutable state 를 최대한 줄이는 것이 좋다. 왜냐면 나중에 병렬 처리를 할 때 접근 관리를 해주어야 하는 영역을 최소화할 수 있기 때문이다. 
 
 심지어 for-loop 같은 것들 보다 iterator 를 사용하는게 성능이 좀 더 빠르다. 
+
+# More About Cargo and Crates.io
+
+## Customizing Builds with Release Profiles
+
+Cargo 는 디폴트로 dev 레벨로 컴파일을 하는데 이는 최적화 레벨이 낮은 대신 컴파일 속도가 빨라서 디버깅을 빨리 할 수 있다. release 를 할때가 되었으면 release 레벨로 컴파일을 해라. 그러면 최적화를 빡세게 해서 프로그램의 성능을 높일 수 있다. dev 레벨과 release 레벨의 디폴트 최적화 단계는 각각 0, 3 단계이다. 그러나 이 최적화 단계 또한 커스터마이징 가능하다. 
+
+[Cargo 의 모든 빌드 옵션](https://doc.rust-lang.org/cargo/reference/profiles.html) 을 살펴보라.
+
+## Making Useful Documentation Comments
+
+```rust
+/// Adds one to the number given.
+///
+/// # Examples
+///
+/// ```
+/// let arg = 5;
+/// let answer = my_crate::add_one(arg);
+///
+/// assert_eq!(6, answer);
+/// ```
+pub fn add_one(x: i32) -> i32 {
+    x + 1
+}
+```
+
+위와 같이 `///` 으로 주석을 달면 Markdown 형식으로 HTML 변환이 되어 문서로 만들어진다. `cargo doc --open` 으로 확인하라. 
+
+`//!` 는 아이템을 만드는 주석이고 `pub use` 로 선언된 Module 들도 자동으로 문서화가 된다. 
+
+re-export 를 하면 실제 Module 경로가 매우 복잡해도 `use crate::path` 할 때 경로를 짧게 만들 수 있다. 
+
+`cargo publish` 로 crate 를 publish 하라.
+
+`cargo yank` 로 미래의 프로젝트들이 이전 버전의 crate 를 의존성으로 두는 것을 방지할 수 있다. 
