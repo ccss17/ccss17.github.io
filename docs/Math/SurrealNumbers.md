@@ -22,6 +22,8 @@
 
 - 초현실수 집합 $L, R$ 이 $(1.1)$ 을 만족하면 새로운 초현실수 $\{L|R\}$ 을 구성할 수 있다. 이제 $(1.1)$ 이 well-formed 된 집합 쌍을 특정짓는다고 하자. 그러면 오직 well-formed 된 집합 쌍만이 초현실수를 구성한다고 할 수 있다.
 
+- 초현실수는 실수를 비롯하여 
+
 !!! tldr "최초의 초현실수"
 
     $$ 0 \equiv \{|\} $$
@@ -608,8 +610,69 @@
 
     이로써 $(2.24)$ 의 첫번째 명제가 증명되었는데, 두번째 명제도 비슷한 방식으로 증명할 수 있다. ■ 
 
-!!! tldr "정리 6 The transitive law"
+!!! tldr "정리 6"
+
+    The transitive law : 초현실수 $x,y,z$ 에 대하여
 
     $$ x \leq y \land y \leq z \implies x \leq z $$
 
+    이다.
+
 - 증명
+
+    이 정리가 거짓이라고 하면 
+
+    $$ x \leq y \land y \leq z \land x \not \leq z \tag{2.33} $$
+
+    을 만족하는 초현실수 $x,y,z$ 가 존재한다. 이제 Boolean function $p(x,y,z)$ 를 다음과 같이 정의하자. 
+
+    $$ p(x,y,z) \iff x \leq y \land y \leq z \land x \not \leq z \tag{2.34} $$
+
+    $(2.33)$ 은 [초현실수의 비교]() 와 [$(2.5)$]() 에 의하여 
+
+    $$ \lnot \exists x_L \in X_L : y \leq x_L \tag{2.35} $$
+
+    $$ \lnot \exists y_R \in Y_R : y_R \leq x \tag{2.36} $$
+
+    $$ \lnot \exists y_L \in Y_L : z \leq y_L \tag{2.37} $$
+
+    $$ \lnot \exists z_R \in Z_R : z_R \leq y \tag{2.38} $$
+
+    $$ \exists x_L \in X_L : z \leq x_L \lor \exists z_R \in Z_R : z_R \leq x \tag{2.39} $$
+
+    이 참이면 참이 된다. ▲ 
+
+    먼저 $(2.39)$ 의 왼쪽 명제가 참이라고 하자. $(2.35)$ 는 
+
+    $$ \forall x_L \in X_L : y \not \leq x_L \tag{2.40} $$
+
+    과 동치이다. 이때 $(2.40)$ 의 $x_L$ 을 $(2.39)$ 의 왼쪽 명제의 $x_L$ 과 동일하게 잡으면 이 명제들을 $(2.33)$ 의 $y \leq z$ 와 결합하여 
+
+    $$ y \leq z \land z \leq x_L \land y \not \leq x_L \tag{2.41} $$
+
+    을 얻을 수 있는데, 이는 
+
+    $$ p(y, z, x_L) $$
+
+    과 동치이다. ▲ 
+
+    $(2.39)$ 의 오른쪽 명제가 참이라고 하자. $(2.38)$ 은
+
+    $$ \forall z_R \in Z_R : z_R \not \leq y \tag{2.42} $$
+
+    와 동치이다. 이때 $(2.42)$ 의 $z_R$ 을 $(2.39)$ 의 오른쪽 명제의 $z_R$ 과 동일하게 잡으면 이 명제들을 $(2.33)$ 의 $x \leq y$ 와 결합하여 
+
+    $$ z_R \leq x \land x \leq y \land z_R \not \leq y \tag{2.43} $$
+
+    을 얻을 수 있는데, 이는 
+
+    $$ p(z_R, x, y) $$
+
+    과 동치이다. ▲ 
+
+    그러므로 
+
+    $$ p(x, y, z) \implies \exists x_L \in X_L : p(y, z, x_L) \lor \exists z_R \in Z_R : p(z_R, x, y) \tag{2.44} $$
+
+    이다. $x_L, z_R$ 은 각각 $x, z$ 의 parents 이므로 우리는 $x, z$ 의 parents 를 거슬러 올라가다보면 최초의 초현실수 $\{|\}$ 에 도달하게 된다. 그러나 $\{|\}$ 의 parents 는 존재하지 않으므로 $(2.44)$ 가 거짓이 된다. 이는 최초의 가정인 $(2.33)$ 도 거짓임을 말해주고, 결국 이 정리가 참이라는 것을 알 수 있다. ■ 
+
