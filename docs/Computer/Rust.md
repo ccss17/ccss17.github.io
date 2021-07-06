@@ -2053,3 +2053,42 @@ println!("b = {}", b);
 
 재귀 타입 데이터는 데이터 구조 내부에 자기 자신의 타입을 갖는다. 이러한 타입은 이론적으로 무한히 끝나지 않기에 Rust 가 데이터 크기를 가늠할 수 없다. 그래서 재귀 타입에 대하여 Rust 는 에러를 발생시킨다. 그러나 Box 를 사용하면 정확한 크기를 알 수 있기 때문에 재귀 타입 데이터를 사용할 수 있다. 정확한 크기를 알 수 있기 때문에 재귀 타입 데이터를 사용할 수 있다. 
 
+함수형 프로그래밍에서 자주 사용되는 cons 리스트를 예시로 들어보자. 다음과 같이 cons 리스트를 표현할 enum 을 정의하면 Rust 가 컴파일 시 사이즈를 가늠할 수 없기에 에러가 발생한다. 
+
+```rust
+enum List {
+    Cons(i32, List),
+    Nil,
+}
+```
+
+하지만 일단 이 enum 을 기반으로 cons 리스트를 형식적으로라도 만들어보자. 
+
+```rust
+use crate::List::{Cons, Nil};
+
+fn main() {
+    let list = Cons(1, Cons(2, Cons(3, Nil)));
+}
+```
+
+물론 에러가 발생한다. 에러 타입은 "데이터 타입이 무한한 크기를 지닌다" 는 것이다. 
+
+이것을 해결하는 방법은 `List` 를 재귀적으로 `List` 에 포함시키는 것이 아니라 `Box<List>` 를 포함시키는 것이다. Box smart pointer 는 pointer 이기 때문에 데이터의 크기과 관계 없이 항상 동일한 사이즈를 갖는다. 
+
+```rust
+enum List {
+    Cons(i32, Box<List>),
+    Nil,
+}
+
+use crate::List::{Cons, Nil};
+
+fn main() {
+    let list = Cons(1, Box::new(Cons(2, Box::new(Cons(3, Box::new(Nil))))));
+}
+```
+
+이렇게 하면 Rust 는 `List` 의 사이즈가 `i32` 와 pointer 크기 만큼이라는 것을 알 수 있고 정상적으로 컴파일을 할 수 있게 된다. 
+
+# Treating Smart Pointers Like Regular References with the Deref Trait
