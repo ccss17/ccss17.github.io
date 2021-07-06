@@ -442,7 +442,7 @@
 
     $$ \lnot \exists x_L \in X_L : x \leq x_L \land \lnot \exists x_R \in X_R : x_R \leq x \tag{2.6} $$
 
-    $(2.6)$ 의 왼쪽 명제는 $\forall x_L \in X_L : x \not \leq x_L$ 과 같다. 그러면 [$\lnot \leq$ 의 정의]() 에 의하여 이는 
+    $(2.6)$ 의 왼쪽 명제는 $\forall x_L \in X_L : x \not \leq x_L$ 과 같다. 그러면 [$\not \leq$ 의 정의]() 에 의하여 이는 
 
     $$ \forall x_L \in X_L : ( \exists a \in X_L : x_L \leq a \lor \exists b \in X _{LR} : b \leq x) \tag{2.7} $$
 
@@ -450,7 +450,7 @@
 
     그러면 $X_L$ 의 원소 $x_L$ 에 대하여 $a \equiv x_L$ 로 두면 왼쪽 명제가 참이 된다. $a$ 를 당연히 $x_L$ 로 둘 수 있는데 $a$ 는 $X_L$ 의 원소이기 때문이다. 그러므로 $X_L$ 의 원소 $x_L$ 이 정해질 때마다 $a \equiv x_L$ 로 두면 왼쪽 명제가 참이 되는 것이다. 그러므로 $(2.7)$ 명제 전체가 참이 된다. 이것으로 $(2.6)$ 의 왼쪽 명제를 증명하였다. ▲ 
 
-    이제 $(2.6)$ 의 오른쪽 명제를 증명할 차례이다. $(2.6)$ 의 오른쪽 명제는 $\forall x_R \in X_R : x_R \not \leq x$ 와 같다. [$\lnot \leq$ 의 정의]() 에 의하여 이는 
+    이제 $(2.6)$ 의 오른쪽 명제를 증명할 차례이다. $(2.6)$ 의 오른쪽 명제는 $\forall x_R \in X_R : x_R \not \leq x$ 와 같다. [$\not \leq$ 의 정의]() 에 의하여 이는 
 
     $$ \forall x_R \in X_R : (\exists c \in X _{RL} : x \leq c \lor \exists d \in X_R : d \leq x_R) \tag{2.8} $$
 
@@ -592,7 +592,7 @@
 
     $$ \forall a_L \in A_L : \{A|B\} \not \leq a_L \tag{2.29} $$
 
-    와 같고, [$\lnot \leq$ 의 정의]() 에 의하여 
+    와 같고, [$\not \leq$ 의 정의]() 에 의하여 
 
     $$ \forall a_L \in A_L : (\exists a' \in A : a_L \leq a' \lor \exists a _{LR} \in A _{LR} : a _{LR} \leq \{A|B\}) \tag{2.30} $$
 
@@ -602,7 +602,7 @@
 
     로 바꿀 수 있는데, 이 명제의 형태는 이것들의 left set parents 에 의하여 변수가 치환된 것을 제외하고 $(2.26)$ 과 완전히 동일하다. 그런데 우리는 $A_L \cup A_R$ 에 대하여 $(2.26)$ 이 성립함을 가정했다. 그러므로 $(2.26)$ 의 [논의 영역]() $A$ 를 $A_L$ 로 치환한 $(2.31)$ 은 참이다. 그러므로 (*$(2.30)$ 도 참이고.. $(2.28)$ 도 참이니까..*) 결국 $(2.26)$ 의 증명이 끝났다. ▲ 
 
-    $(2.27)$ 은 [$\lnot \leq$ 의 정의]() 에 의하여 $A$ 의 모든 $a$ 에 대하여 
+    $(2.27)$ 은 [$\not \leq$ 의 정의]() 에 의하여 $A$ 의 모든 $a$ 에 대하여 
 
     $$ \exists a' \in A : a \leq a' \lor \exists a_R \in A_R : a_R \leq \{A|B\} \tag{2.32} $$
 
@@ -628,7 +628,7 @@
 
     $$ p(x,y,z) \iff x \leq y \land y \leq z \land x \not \leq z \tag{2.34} $$
 
-    $(2.33)$ 은 [초현실수의 비교]() 와 [$\lnot \leq$ 의 정의]() 에 의하여 
+    $(2.33)$ 은 [초현실수의 비교]() 와 [$\not \leq$ 의 정의]() 에 의하여 
 
     $$ \lnot \exists x_L \in X_L : y \leq x_L \tag{2.35} $$
 
@@ -686,4 +686,104 @@
 
 - 증명 
 
+    $x \not \leq y$ 은 [\not \leq 의 정의]() 에 의하여 
+
+    $$ \exists x_L \in X_L : y \leq x_L \tag{2.45} $$
+
+    $$ \exists y_R \in Y_R : y_R \leq x \tag{2.46} $$
+
+    중 하나 이상이 반드시 참임을 주장하는 것이다. ▲ 
+
+    $(2.45)$ 가 참이라고 하면 $y \leq x_L$ 을 만족하는 $x_L$ 을 잡을 수 있다. 또한 $(2.26)$ 에 의하여 $x_L \leq x$ 이므로 [The transitive law]() 에 의하여 $y \leq x$ 을 얻는다. ▲ 
+
+    $(2.46)$ 가 참이라고 하면 $y_R \leq x$ 을 만족하는 $y_R$ 을 잡을 수 있다. 또한 [정리 5]() 에 의하여 $y \leq y_R$ 이므로 [The transitive law]() 에 의하여 $y \leq x$ 을 얻는다. ■ 
     
+!!! tldr "단순화된 $<$ 의 정의"
+
+    $$ x < y \iff y \not \leq x \tag{2.48} $$
+
+- 증명
+
+    [정리 7]() 에 의하여 [$<$ 의 정의]() 
+
+    $$ x \leq y \land y \not \leq x \iff x < y \tag{2.47} $$
+
+    에서 $y \not \leq x$ 가 $x \leq y$ 를 함의하므로 
+
+    $$ y \not \leq x \iff x < y  $$
+
+    로 단순화시켜도 무방하다. ■  
+
+!!! tldr "정리 8"
+
+    $$ x<y \land y<z \implies x<z $$
+
+- 증명
+
+    이 정리가 거짓이면 
+
+    $$ x < y \land y < z \land x \not < z \tag{2.49} $$
+
+    가 참이고, 이것과 동치 명제인 
+
+    $$ y \not \leq x \land z \not \leq y \land z \leq x \tag{2.50} $$
+
+    도 참이다. [정리 6]() 의 대우 명제는 임의의 초현실수 $b$ 에 대하여 
+
+    $$ a \not \leq c \implies a \not \leq b \lor b \not \leq c \tag{2.51} $$
+
+    임을 주장한다. $a \equiv y, b \equiv z, c \equiv x$ 라고 두고 $(2.51)$ 을 $(2.50)$ 의 $y \not \leq x$ 에 적용하면 
+
+    $$ (y \not \leq z \lor z \not \leq x) \land z \not \leq y \land z \leq x \tag{2.52} $$
+
+    를 얻는다. 그러나 이 명제는 참거짓이 서로 상반되는 두 명제를 동시에 주장하므로 모순이다. 그러므로 이 정리는 참이다. ■ 
+
+!!! tldr "정리 9"
+
+    초현실수 $x$ 에 대하여 $x$ 의 값을 보존하면서
+
+    $$ \exists x_L \in X_L : x_L < \xi $$
+    
+    을 만족하는 임의의 left set 원소 $\xi$ 를 제거할 수 있고,
+
+    $$ \exists x_R \in X_R : \eta < x_R $$
+    
+    을 만족하는 임의의 right set 원소 $\eta$ 를 제거할 수 있다. 
+
+- 이 정리는 초현실수를 단순화시킬 수 있는 방법을 말해준다.
+
+- 예시 
+
+    $$ \{1,2,3|4,5,6\} = \{1,3|4,6\} = \{3|4\} $$
+
+- 증명 
+
+    이 정리의 첫번째 반쪽을 증명해보자. 초현실수 $x$ 에 대하여 
+
+    $$ x = \{x_1, x_2, \dots | X_R\} $$
+
+    이라고 하고 $x_1 < x_2$ 라고 하자. 증명해야 할 것은 $\{x_1,x_2, \dots|X_R\}=\{x_2, \dots|X_R\}$ 이다. ▲ 
+
+    [$=$ 의 정의]() 에 의하여 
+
+    $$ \{x_1,x_2, \dots|X_R\} \leq \{x_2, \dots|X_R\} \land \{x_1,x_2, \dots|X_R\} \geq \{x_2, \dots|X_R\} $$
+
+    을 증명해야 한다. 그런데 이 두 부등식은 모두 [정리 3]() 으로부터 도출된다.(*$\dots$ 에 대한 언급이 너무 모호한 것 같은데, 왜 이 증명만 이렇게 허술할까? 좀 더 엄밀해야 할 것 같은데*) ▲ 
+
+    나머지 반쪽도 비슷하게 증명가능하다. ■ 
+
+!!! tldr "따름정리 10"
+
+    $A$ 가 가장 큰 원소 $a _{\max}$ 를 가지면 
+
+    $$ \{A|B\} = \{a _{\max} | B\} $$
+
+    이다. $B$ 가 가장 작은 원소 $b _{\min}$ 을 가지면 
+
+    $$ \{A|B\} = \{A | b _{\min}\} $$
+
+    이다.
+
+- 증명 
+
+    [정리 9]() 로부터 바로 도출된다. ■ 
