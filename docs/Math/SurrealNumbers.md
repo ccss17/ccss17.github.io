@@ -418,7 +418,7 @@
 
 - 2) 를 사용하여 수학적 귀납법을 전개할 수 있다. 즉, $\varnothing$ 에 대하여 참임을 증명한 다음, 정리가 parents 에 대하여 참임을 가정하고 parents 로 구성된 초현실수에 대하여 참임을 증명하면 모든 초현실수에 대하여 정리가 참임을 증명할 수 있다. 
 
-!!! tldr ""
+!!! tldr "$\not \leq$ 의 정의"
 
     $$ x \not \leq y \iff \exists x_L \in X_L : y \leq x_L \lor \exists y_R \in Y_R : y_R \leq x \tag{2.5} $$
 
@@ -442,7 +442,7 @@
 
     $$ \lnot \exists x_L \in X_L : x \leq x_L \land \lnot \exists x_R \in X_R : x_R \leq x \tag{2.6} $$
 
-    $(2.6)$ 의 왼쪽 명제는 $\forall x_L \in X_L : x \not \leq x_L$ 과 같다. 그러면 $(2.5)$ 에 의하여 이는 
+    $(2.6)$ 의 왼쪽 명제는 $\forall x_L \in X_L : x \not \leq x_L$ 과 같다. 그러면 [$\lnot \leq$ 의 정의]() 에 의하여 이는 
 
     $$ \forall x_L \in X_L : ( \exists a \in X_L : x_L \leq a \lor \exists b \in X _{LR} : b \leq x) \tag{2.7} $$
 
@@ -450,7 +450,7 @@
 
     그러면 $X_L$ 의 원소 $x_L$ 에 대하여 $a \equiv x_L$ 로 두면 왼쪽 명제가 참이 된다. $a$ 를 당연히 $x_L$ 로 둘 수 있는데 $a$ 는 $X_L$ 의 원소이기 때문이다. 그러므로 $X_L$ 의 원소 $x_L$ 이 정해질 때마다 $a \equiv x_L$ 로 두면 왼쪽 명제가 참이 되는 것이다. 그러므로 $(2.7)$ 명제 전체가 참이 된다. 이것으로 $(2.6)$ 의 왼쪽 명제를 증명하였다. ▲ 
 
-    이제 $(2.6)$ 의 오른쪽 명제를 증명할 차례이다. $(2.6)$ 의 오른쪽 명제는 $\forall x_R \in X_R : x_R \not \leq x$ 와 같다. $(2.5)$ 에 의하여 이는 
+    이제 $(2.6)$ 의 오른쪽 명제를 증명할 차례이다. $(2.6)$ 의 오른쪽 명제는 $\forall x_R \in X_R : x_R \not \leq x$ 와 같다. [$\lnot \leq$ 의 정의]() 에 의하여 이는 
 
     $$ \forall x_R \in X_R : (\exists c \in X _{RL} : x \leq c \lor \exists d \in X_R : d \leq x_R) \tag{2.8} $$
 
@@ -592,7 +592,7 @@
 
     $$ \forall a_L \in A_L : \{A|B\} \not \leq a_L \tag{2.29} $$
 
-    와 같고, [$(2.5)$]() 에 의하여 
+    와 같고, [$\lnot \leq$ 의 정의]() 에 의하여 
 
     $$ \forall a_L \in A_L : (\exists a' \in A : a_L \leq a' \lor \exists a _{LR} \in A _{LR} : a _{LR} \leq \{A|B\}) \tag{2.30} $$
 
@@ -602,7 +602,7 @@
 
     로 바꿀 수 있는데, 이 명제의 형태는 이것들의 left set parents 에 의하여 변수가 치환된 것을 제외하고 $(2.26)$ 과 완전히 동일하다. 그런데 우리는 $A_L \cup A_R$ 에 대하여 $(2.26)$ 이 성립함을 가정했다. 그러므로 $(2.26)$ 의 [논의 영역]() $A$ 를 $A_L$ 로 치환한 $(2.31)$ 은 참이다. 그러므로 (*$(2.30)$ 도 참이고.. $(2.28)$ 도 참이니까..*) 결국 $(2.26)$ 의 증명이 끝났다. ▲ 
 
-    $(2.27)$ 은 [$(2.5)$]() 에 의하여 $A$ 의 모든 $a$ 에 대하여 
+    $(2.27)$ 은 [$\lnot \leq$ 의 정의]() 에 의하여 $A$ 의 모든 $a$ 에 대하여 
 
     $$ \exists a' \in A : a \leq a' \lor \exists a_R \in A_R : a_R \leq \{A|B\} \tag{2.32} $$
 
@@ -628,7 +628,7 @@
 
     $$ p(x,y,z) \iff x \leq y \land y \leq z \land x \not \leq z \tag{2.34} $$
 
-    $(2.33)$ 은 [초현실수의 비교]() 와 [$(2.5)$]() 에 의하여 
+    $(2.33)$ 은 [초현실수의 비교]() 와 [$\lnot \leq$ 의 정의]() 에 의하여 
 
     $$ \lnot \exists x_L \in X_L : y \leq x_L \tag{2.35} $$
 
@@ -676,3 +676,14 @@
 
     이다. $x_L, z_R$ 은 각각 $x, z$ 의 parents 이므로 우리는 $x, z$ 의 parents 를 거슬러 올라가다보면 최초의 초현실수 $\{|\}$ 에 도달하게 된다. 그러나 $\{|\}$ 의 parents 는 존재하지 않으므로 $(2.44)$ 가 거짓이 된다. 이는 최초의 가정인 $(2.33)$ 도 거짓임을 말해주고, 결국 이 정리가 참이라는 것을 알 수 있다. ■ 
 
+- 이 정리도 초현실수가 well-formed 라는 가정없이 증명되었다. 
+
+!!! tldr "정리 7"
+
+    $$ x \not \leq y \implies y \leq x $$
+
+- 이 정리는 모든 초현실수가 $\leq$ 관계로 연결 되어있음을 말해준다. 
+
+- 증명 
+
+    
