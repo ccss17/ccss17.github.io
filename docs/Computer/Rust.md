@@ -2092,3 +2092,116 @@ fn main() {
 이렇게 하면 Rust 는 `List` 의 사이즈가 `i32` 와 pointer 크기 만큼이라는 것을 알 수 있고 정상적으로 컴파일을 할 수 있게 된다. 
 
 # Treating Smart Pointers Like Regular References with the Deref Trait
+
+`Deref` trait 를 구현하는 것은 dereference operator `*` 의 행동을 커스터마이징하게 해준다. `Deref` 를 구현함으로써 smart pointer 를 reference 처럼 사용할 수 있다. 
+
+## Following the Pointer to the Value with the Dereference Operator
+
+reference 는 기본적으로 pointer 이다. 그러므로 실제 값을 가져오기 위하여 `*` 를 사용해야 한다. 
+
+```rust
+let x = 5;
+let y = &x;
+
+assert_eq!(5, x);
+assert_eq!(5, *y);
+```
+
+이제 reference 대신 Box smart pointer 를 사용해보자. 
+
+```rust
+let x = 5;
+let y = Box::new(x);
+
+assert_eq!(5, x);
+assert_eq!(5, *y);
+```
+
+Box smart pointer 에서도 reference 에서와 같이 dereference operator `*` 을 사용할 수 있다.
+
+## Defining Our Own Smart Pointer
+
+Box smart pointer 를 새로 구현해보면서 dereference operator 를 관찰해보자. 
+
+```rust
+struct MyBox<T>(T);
+
+impl<T> MyBox<T> {
+    fn new(x: T) -> MyBox<T> {
+        MyBox(x)
+    }
+}
+```
+
+이 `MyBox` 에는 아직 `*` 를 사용할 수 없다. 그러니 `Deref` trait 를 다음과 같이 구현해보자. 
+
+```rust
+use std::ops::Deref;
+
+impl<T> Deref for MyBox<T> {
+    type Target = T;
+
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+```
+
+실제로 `*y` 는 Rust 가 내부적으로 $*(y.deref())$ 로 치환해주는 것이다. `deref` Method 가 reference 를 반환하기에 `*` 가 여전히 필요하다. `deref` 가 데이터 자체를 반환한다면 ownership 이 넘어가버린다. 
+
+하지만 그렇다면 `deref` 가 무한히 호출되지 않을까. 
+
+## Implicit Deref Coercions with Functions and Methods
+
+Deref coercion 은 `Deref` trait 가 구현된 타입에서 작동한다. 이것은 reference 인 타입을 다른 타입으로 변환해준다. 
+
+가령 `&String` 을 `&str` 로 변환해준다. `String` 이 `Deref` trait 를 구현했기 때문이고 그것이 `str` 을 반환하기 때문이다. 
+
+Deref coercion 은 reference 를 타입이 맞지 않는 파라미터로 전달했을 때 자동으로 일어난다. 
+
+```rust
+fn hello(name: &str) {
+    println!("Hello, {}!", name);
+}
+```
+
+위와 같은 함수는 string slice 를 파라미터로 받도록 정의되었지만 Deref coercion 덕분에 Mybox 타입의 값에 대한 reference 로도 호출될 수 있다. 
+
+```rust
+let m = MyBox::new(String::from("Rust"));
+hello(&m);
+```
+
+위 코드는 `MyBox<String>` 의 reference 를 `hello` 로 전달한다. MyBox 에는 `Deref` trait 가 구현되어 있기 때문에 Deref coercion 가 작동한다. 즉, `deref` 가 호출됨으로써 `&MyBox<String>` 가 `&String` 으로 변환된다.
+
+표준 라이브러리는 `String` 에 `Deref` 를 구현해놓았기 때문에 `deref` 가 또 호출되어 `&String` 이 `&str` 로 변환된다. 
+
+만약 Rust 에 Deref coercion 이 없었다면 다음과 같이 `hello` 를 호출해야 한다. 
+
+```rust
+let m = MyBox::new(String::from("Rust"));
+hello(&(*m)[..]);
+```
+
+`(*m)` 이 `MyBox<String>` 을 `String` 으로 바꾼다. 이후에 `&` 과 `[..]` 이 `String` 을 `&str` 로 바꾼다. 
+
+## How Deref Coercion Interacts with Mutability
+
+`Deref` trait 가 immutable reference 에 대한 `*` 의 작동을 override 하는 것이라면,
+
+`DerefMut` trait 는 mutable reference 에 대한 `*` 의 작동을 override 하는 것이다. 
+
+일반적으로 Rust 는 다음의 데이터 타입이 감지되면 deref coercion 을 작동시킨다. 
+
+- From `&T` to `&U` when `T: Deref<Target=U>`  
+
+- From `&mut T` to `&mut U` when `T: DerefMut<Target=U>`
+
+- From `&mut T` to `&U` when `T: Deref<Target=U>`
+
+처음 두 케이스는 mutablility 를 제외하고 동일하다. `U` 를 향한 `Deref` 가 구현된 `T` 의 reference 인 `&T` 를 만난다면 Rust 는 `&U` 로 변환해준다.
+
+세번째 경우는 Rust 가 mutable 을 immutable 로 deref coercion 해준다는 것을 말해준다. 그러나 Rust 는 절대로 immutable 을 mutable 로 변환하지 않는다. 
+
+# Running Code on Cleanup with the Drop Trait
+
