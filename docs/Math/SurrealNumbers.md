@@ -608,8 +608,12 @@
 
     이로써 $(2.24)$ 의 첫번째 명제가 증명되었는데, 두번째 명제도 비슷한 방식으로 증명할 수 있다. ■ 
 
-!!! tldr "정리 6 The transitive law"
+!!! tldr "정리 6"
+
+    The transitive law : 초현실수 $x, y, z$ 에 대하여 
 
     $$ x \leq y \land y \leq z \implies x \leq z $$
+
+    이다.
 
 - 증명
