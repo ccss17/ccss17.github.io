@@ -668,7 +668,7 @@
 
 !!! tldr "정리 2.9"
 
-    $\mathbf{F}$-벡터공간 $\mathbf{W} ,\mathbf{W} , \mathbf{Z}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 에 대하여 두 선형변환의 합성 $\mathbf{U} \mathbf{T} : \mathbf{V} \to \mathbf{Z}$ 는 선형이다.
+    $\mathbf{F}$-벡터공간 $\mathbf{V} ,\mathbf{W} , \mathbf{Z}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 에 대하여 두 선형변환의 합성 $\mathbf{U} \mathbf{T} : \mathbf{V} \to \mathbf{Z}$ 는 선형이다.
 
 - 두 선형변환 $\mathbf{U} , \mathbf{T}$ 의 합성 $\mathbf{U} \circ \mathbf{T}$ 을 편의상 $\mathbf{U} \mathbf{T}$ 로 표기하자.
 
