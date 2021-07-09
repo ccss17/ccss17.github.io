@@ -962,6 +962,8 @@
 
     $x$ 가 $a$ 와 $b$ 사이에 있는 가장 오래된 초현실수이면 $\{a|b\} = x$ 이다. 
 
+- 이 정리는 초현실수의 집합쌍이 어떤 값을 갖는지 알려준다. 
+
 - 예시 
 
     우리는 $\{-1|1\} = 0$ 을 살펴보았는데 이는 $0$ 이 $-1$ 과 $1$ 사이에 있는 가장 오래된 초현실수라는 사실로부터도 도출된다. 
@@ -997,6 +999,143 @@
     - 증명
 
 # 초현실수의 덧셈, 뺄셈
+
+!!! tldr "초현실수와 초현실수 집합의 덧셈"
+
+    초현실수 $n$ 과 초현실수 집합 $S$ 에 대하여 
+
+    $$ n+S = \{n + a : a \in S\}
+
+    이다.
+
+- $n-S$ 나 $S-n$ 도 동일한 방식으로 정의한다. $Sn$ 또한 동일하게 정의할 것이다. 
+
+- 예시 
+
+    $$ 6 + \{3,5,8\} = \{9,11,14\} $$
+
+    $$ 6 - \{3,5,8\} = \{3,1,-2\} $$
+
+    $$ \{3,5,8\} - 6 = \{-3,-1,2\} $$
+
+    $$ 6 \times \{3,5,8\} = \{18,30,48\} $$
+
+- 특히, 공집합에 대한 연산의 결과는 공집합으로 정의한다.
+
+    - 예시 
+
+        $$ n + \varnothing = \varnothing $$
+
+        $$ n - \varnothing = \varnothing $$
+
+        $$ n \varnothing = \varnothing $$
+
+!!! tldr "초현실수 집합의 덧셈"
+
+    초현실수 집합 $S, T$ 에 대하여 
+
+    $$ S + T = \{s + t : s \in S, t \in T\}
+
+    이다.
+
+- 예시 
+
+    $$ \{10,20\} + \{3,5,8\} = \{13,15,18,23,25,28\} $$
+
+- 똑같은 집합이 집합 연산에 사용되면 다음과 같이 한다.(*이거 이해가 안되네*)
+
+    - 예시 
+
+        집합 $S = \{1,2\}, T = \{10, 20\}$ 에 대하여 
+
+        $$ S + T + S = \{12,14,22,24\} $$
+
+!!! tldr "초현실수의 덧셈"
+
+    초현실수 $a, b$ 에 대하여
+
+    $$ a + b = \begin{cases} \{A_L + b, a + B_L | A_R + b, a + B_R\}  & a \neq \varnothing \land  b \neq \varnothing \\ \varnothing  & a = \varnothing \lor b = \varnothing \\ \end{cases} $$
+
+    이다. 
+
+- 예시 
+
+    $1 + \dfrac{1}{2}$ 를 계산해보자. $1 \equiv \{0|\}, \dfrac{1}{2} \equiv \{0|1\}$ 이므로 먼저 
+
+    $$ \begin{equation}\begin{split}   1 + \dfrac{1}{2} &=  \bigg \{0+\dfrac{1}{2}, 1 + 0 \bigg | \varnothing + \dfrac{1}{2}, 1 + 1\bigg \}\\ &= \bigg \{0 + \dfrac{1}{2} , 1 + 0 \bigg | 1 + 1\bigg \} \\ \end{split}\end{equation}\tag*{} $$
+
+    이다. 
+    
+    $0 + \dfrac{1}{2}$ 를 계산해보자. $0 \equiv \{|\}$ 이므로 
+
+    $$ \begin{equation}\begin{split}   0 + \dfrac{1}{2} &= \{\varnothing +\dfrac{1}{2}, 0 + 0 \bigg | \varnothing + \dfrac{1}{2}, 0 + 1\}  \\ &= \{0+0|0+1\} \\ \end{split}\end{equation}\tag*{} $$
+
+    이다. 
+
+    $0 + 0$ 을 계산해보자. 
+
+    $$ \begin{equation}\begin{split}   0 + 0 &= \{\varnothing +0,0+\varnothing |\varnothing +0,0+\varnothing \} \\ &= \{|\} \\ &= 0 \\ \end{split}\end{equation}\tag*{} $$
+
+    $0+1$ 을 계산해보자. 
+
+    $$ \begin{equation}\begin{split}   0 + 1 &= \{\varnothing +1,0+0|\varnothing +1,0+\varnothing \}  \\ &= \{0|\} \\ &= 1 \\ \end{split}\end{equation}\tag*{} $$
+
+    같은 방식으로 $1+0=1$ 임을 알 수 있다. 이로써 
+
+    $$ \begin{equation}\begin{split}   0 + \dfrac{1}{2} &= \{0+0|0+1\}  \\ &= \{0|1\} \\ &= \dfrac{1}{2}\\ \end{split}\end{equation}\tag*{} $$
+
+    라는 결론을 내릴 수 있다. 
+
+    이제 $1+1$ 을 계산해보자. 
+
+    $$ \begin{equation}\begin{split}   1 + 1 &= \{0+1,1+1|\varnothing +1,1+\varnothing \} \\ &= \{1|\} \\ &= 2 \\ \end{split}\end{equation}\tag*{} $$
+
+    최종적으로 
+
+    $$ \begin{equation}\begin{split}   1 + \dfrac{1}{2}&= \bigg \{0 + \dfrac{1}{2}, 1+0 \bigg |1+1\bigg \}  \\ &= \bigg \{\dfrac{1}{2}, 1 \bigg | 2\bigg \}\\ &= \{ 1 | 2\}\\ &= 1 \dfrac{1}{2} = \dfrac{3}{2} \\ \end{split}\end{equation}\tag*{} $$
+
+    라는 것을 알 수 있다. 
+
+!!! tldr ""
+
+    초현실수 $a,b$ 에 대하여 
+
+    $$ a+b = b+a $$
+
+    이다.
+
+- 증명
+
+    $$ a + b = \{A_L + b, a + B_L | A_R + b, a + B_R\} = \{B_L + a, b + A_L | B_R + a, b + A_R\} = b + a $$
+
+- 예시 
+
+    $$ \begin{equation}\begin{split}   \dfrac{1}{2} + \dfrac{1}{2} &= \bigg \{0 + \dfrac{1}{2}, \dfrac{1}{2} + 0 \bigg | 1 + \dfrac{1}{2}, \dfrac{1}{2} + 1\bigg \}  \\ &= \bigg \{\dfrac{1}{2}\bigg |\dfrac{3}{2}\bigg \} \\ \end{split}\end{equation}\tag*{} $$
+
+    - $\bigg \{\dfrac{1}{2}\bigg |\dfrac{3}{2}\bigg \}$ 의 값이 뭘까? [따름정리 13](#c9737ce31) 에 따르면 $\dfrac{1}{2}$ 과 $\dfrac{3}{2}$ 사이에 있는 가장 오래된 초현실수인 $1$ 이 그 값이 된다.
+
+        그러므로 $\dfrac{1}{2} + \dfrac{1}{2} = 1$ 로 정의된다는 것이다. 이런 이유로 $\{0|1\} = \dfrac{1}{2}$ 로 정의한 것이다. 
+
+초현실수의 덧셈이 well-formed 인 초현실수를 생성하는지 검증해야 하고, 덧셈의 정의가 올바른지 검증해야 한다. 
+
+!!! tldr "정리 14"
+
+    $$ x \leq x' \land y \leq y' \implies x + y \leq x'+y' $$
+
+!!! tldr "정리 15"
+
+    $$ x+y \geq x'+y' \land y \leq y' \implies x \geq x' $$
+
+- 증명 
+
+    정리 14 와 정리 15 를 같이 증명해보자. 이 둘을 Boolean function $p, q$ 로 정의한다. 
+
+    $$ p(x,x',y,y') \iff (x \leq x' \land y \leq y' \implies x + y \leq x'+y') $$
+
+    $$ q(x,x',y,y') \iff (x+y \geq x'+y' \land y \leq y' \implies x \geq x') $$
+
+    사실 우리는 지금까지 초현실수의 덧셈이 well-formed 을 생성한다는 것을 증명하지 않았기 때문에 초현실수의 well-formedness 에 의존성이 있는 그 어떠한 정리도 사용할 수 없다. 즉, 우리는 정리 1, 3, 4, 6 만을 사용할 수 있다. (well-formedness 에 의존성이 없는 이 정리들이 나중에 유용할 것이라고 언급했었는데 바로 여기에서 유용하다는 것이다.)
+
 
 # 초현실수의 곱셈
 
