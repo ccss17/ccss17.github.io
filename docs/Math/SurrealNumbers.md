@@ -1116,7 +1116,7 @@
 
         그러므로 $\dfrac{1}{2} + \dfrac{1}{2} = 1$ 로 정의된다는 것이다. 이런 이유로 $\{0|1\} = \dfrac{1}{2}$ 로 정의한 것이다. 
 
-초현실수의 덧셈이 well-formed 인 초현실수를 생성하는지 검증해야 하고, 덧셈의 정의가 올바른지 검증해야 한다. 
+초현실수의 덧셈이 well-formed 인 초현실수를 생성하는지 검증해야 하고, 덧셈의 정의가 make sense 한지 검증해야 한다. 
 
 !!! tldr "정리 14"
 
@@ -1244,7 +1244,182 @@
 
 - 이 정리 또한 초현실수의 well-formedness 에 의존하지 않고 증명되었다. 
 
+!!! tldr "따름정리 16"
 
+    $$ x=x' \land y = y' \implies x+y = x' + y' $$
+
+- 증명 
+
+    정리 14 로부터 바로 증명된다. ■ 
+
+- 이 정리로부터 만약 $2+3$ 을 계산했을 때 $2$ 나 $3$ 을 표현하는 어떤 초현실수를 택하더라도 그 결과가 항상 같은 값임을 보장받을 수 있다. 
+
+!!! tldr "정리 17"
+
+    $$ x < x' \land y \leq y' \implies x + y < x' + y' $$
+
+- 증명 
+
+    [$<$ 의 정의](#d9cc5fe30) 에 의하여 $x < x'$ 는 $x \leq x', x \not \geq x'$ 를 뜻한다.
+    
+    (여기서 [단순화된 $<$ 의 정의](#d0af3b928) 도 사용할 수 없는데 이 정리가 초현실수의 well-formed 에 의존하기 때문이다. 우리는 아직 초현실수의 덧셈이 well-formed 초현실수를 생성한다는 것을 증명하지 않았다. )
+
+    $x \leq x', y \leq y'$ 이므로 [정리 14](#19305c513) 로부터 
+
+    $$ x + y \leq x'+y' \tag{3.37} $$
+
+    을 얻는다. [정리 15](#6cef2829a) 의 대우 
+
+    $$ x \not \geq x' \implies x + y \not \geq x'+y' \lor y \not \leq y' \tag{3.38} $$
+
+    에서 $x \not \geq x'$ 이므로 $x + y \not \geq x'+y' \lor y \not \leq y'$ 인데 $y \leq y'$ 이므로 
+
+    $$ x + y \not \geq x' + y' \tag{3.39} $$
+
+    이다. $(3.37)$ 과 $(3.39)$ 와 [$<$ 의 정의](#d9cc5fe30) 에 의하여 
+
+    $$ \therefore x + y < x' + y' $$
+
+    이다. ■ 
+
+이제 초현실수의 덧셈이 well-formed 인 초현실수를 생성한다는 것을 증명할 수 있다. 
+
+!!! tldr "정리 18"
+
+    초현실수 $a, b$ 에 대하여 
+
+    $$ \{A_L + b, a + B_L | A_R + b, a + B_R\} $$
+
+    은 well-formed 이다. 
+
+- 증명
+
+    [well-formedness 의 정의](#06f455e4b) 에 의하여 
+
+    $$ A_L + b < A_R + b \tag{3.40} $$
+
+    $$ A_L + b < a + B_R \tag{3.41} $$
+
+    $$ a + B_L < A_R + b \tag{3.42} $$
+
+    $$ a + B_L < a + B_R \tag{3.43} $$
+
+    이 증명되면 초현실수 덧셈이 well-formed 인 초현실수를 생성한다는 것이 증명된다. ▲ 
+
+    $(3.40), (3,43)$ 은 초현실수 $a, b$ 의 well-formedness 를 정리 17 와 연결하면 곧바로 도출된다. 즉, $A_L < A_R$ 와 $b \leq b$ 에서 $A_L + b < A_R + b$ 가 도출되고 $(3.43)$ 도 비슷하게 증명된다. ▲ 
+
+    $(3.41)$ 을 증명해보자. [정리 5](#c076cc283) 에 의하여 $A_L < a$ 이고 정리 17 에 의하여 
+
+    $$ A_L + b < a + b \tag{3.44} $$
+
+    이다. 같은 원리로 
+
+    $$ a + b < a + B_R \tag{3.45} $$
+
+    를 얻는다. $(3.44), (3.45)$ 와 [The transitive law](#70892e5fd) 에 의하여 $(3.41)$ 을 얻는다. ▲ 
+
+    $(3.42)$ 도 비슷하게 증명된다. ■ 
+
+- 이로써 초현실수 덧셈 연산이 well-formedness 를 만족한다는 것을 보장받았다. 이제 초현실수 덧셈이 make sense 한지 따져보기만 하면 된다. 
+
+    그에 앞서 몇가지 대수학 이론을 살펴보자. 
+
+!!! tldr ""
+
+    군(group) : 집합 $X$ 와 집합 $X$ 의 원소를 연산하는 대수적 연산자 $\star$ 에 대하여 
+
+    - (associative law) $a,b,c \in X : (a \star b) \star c = a \star (b \star c)$
+
+    - (neutral element) $\exists e \in X \text{ s.t. }\ \forall a \in X : a \star e = a \land e \star a = a$ 
+
+    - (inverse element) $\exists \bar{a} \in X \text{ s.t. }\ \forall a \in X : a \star \bar{a} = e$
+
+    이 성립하면 $(X, \star )$ 를 군이라고 한다.
+
+!!! tldr ""
+
+    가환군(commutative group), 아벨군(abelian group) : 집합 $X$ 와 집합 $X$ 의 원소를 연산하는 대수적 연산자 $\star$ 에 대하여 군의 조건이 성립되면서
+
+    - (commutative law) $a \star b = b \star a$
+
+    이 성립하면 $(X, \star )$ 를 아벨군이라 한다. 
+
+- 예시 
+
+    $(\R, +)$ 는 항등원 $0$ 와 $x$ 의 역원 $-x$ 를 갖는 가환군이다. 
+
+    $(\R, \times )$ 는 군이 아닌데 항등원을 갖지만 모든 실수에 대한 역원이 존재하지는 않기 때문이다. 즉  $\not \exists  x \in \R \text{ s.t. }\ 0 \times x = 1$ 이다. 
+
+!!! tldr "정리 19"
+
+    $0$ 은 초현실수 덧셈의 항등원이다. 즉, 
+
+    $$ 0 + x = x \land x + 0 = x $$
+
+    이다.
+
+- 증명 
+
+    명백하게 $0 + 0 = 0$ 이다. 이제 $x$ 에 대하여 $x$ 의 parents 에서 이 정리가 성립한다고 가정하자. 
+
+    $$ \begin{equation}\begin{split} 0 + x& = \{\varnothing + x, 0 + X_L | \varnothing + x, 0 + X_R\}\\ & = \{0+X_L | 0 + X_R\} \end{split}\end{equation} \tag{3.46} $$
+
+    인데 $x$ 의 parents 에 대하여 이 정리가 성립하므로 $0 + X_L = X_L \land 0 + X_R = X_R$ 이다. 따라서 
+
+    $$ \{0 + X_L | 0 + X_R\} = \{X_L | X_R\} = x $$
+
+    를 얻고, $0+x=x$ 가 증명된다. ▲ 
+
+    $x+0=x$ 도 비슷하게 증명할 수 있다. ■ 
+
+!!! tldr "정리 20"
+
+    초현실수의 덧셈은 commutative law 를 만족한다. 즉, 
+
+    $$ x + y = y + x $$
+
+    이다. 
+
+- 증명 
+
+    $x, y$ 의 parents 에 대하여 commutative law 가 성립한다고 가정하면 $+$ 의 정의에 의하여 $x, y$ 에 대하여 commutative law 가 성립함을 자명하게 알 수 있다. 
+    
+    그러므로 귀납법을 쓰기 위하여 $0+x=x+0$ 만 증명하면 되는데 이는 정리 19 에 의하여 자명하게 참이다. ■ 
+
+!!! tldr ""
+
+    초현실수의 덧셈은 associative law 를 만족한다. 즉, 
+
+    $$ (x + y) + z = x + (y + z) $$
+
+    이다. 
+
+- 증명
+
+    $$ (x + y) + z = \{(x+y)_L + z, (x+y)+Z_L | (x+y)_R + z, (x+y)+Z_R\} $$
+
+    $$ = \{(X_L + y) + z, (x + Y_L) + z, (x+y) + Z_L | (X_R+y) + z, (x+Y_R) + z, (x+y) + Z_R\} \tag{3.47} $$
+
+    $$ x + (y + z) = \{X_L + (y+z), x+(y+z)L | X_R + (y+z), x+(y+z)_R\} $$
+
+    $$ = \{X_L + (y+z), x+(Y_L+z), x+(y+Z_L) | X_R + (y+z), x+(Y_R+z), x+(y+Z_R)\} \tag{3.48} $$
+
+    에서 $(3.47), (3.48)$ 이 $x, y, z$ 의 parents 에 대한 associative 가 성립함을 가정하면 성립한다는 것을 알 수 있다. 
+
+    그러므로 parents 의 parents 를 거슬러 올라가면서 이 정리의 참거짓을 결정하게 된다. 그런데 이 초현실수가 $0$ 로 치환되면 참이므로 결국 참임을 알 수 있다. 그러므로 이 정리는 참이다. ■ 
+
+
+!!! tldr ""
+
+    초현실수 덧셈의 make sense : 초현실수 덧셈 $(\mathbb{S}, +)$ 이 
+
+    - $(\mathbb{S} , +)$ 이 가환군을 이룬다.
+
+    - Dali function 이 실수 덧셈 $+_r$ 과 초현실수 덧셈 $+_s$ 에 대하여 $(\R, + _{r})$ 에서 $(\mathbb{S} , + _{s})$ 로 가는 준동형사상이다. 
+    
+    를 만족할 때 make sense 하다고 한다.
+
+- 초현실수 덧셈이 make sense 하다는 것은 쉽게 말해 덧셈이 우리가 예상한대로 행동하느냐는 것이다. 
 
 # 초현실수의 곱셈
 
