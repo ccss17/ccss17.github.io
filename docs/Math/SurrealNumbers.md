@@ -346,7 +346,7 @@
 
 여기서부터 초현실수를 나타내기 위하여 소문자를 사용하고, 초현실수 집합을 나타내기 위하여 대문자를 사용한다. 또한 초현실수 $x$ 의 left set 을 나타내기 위하여 $X_L$ 를, right set 을 위하여 $X_R$ 을 사용한다.
 
-!!! tldr ""
+!!! tldr "초현실수와 초현실수 집합의 비교"
 
     초현실수 집합 $A, B$ 와 초현실수 $c$ 에 대하여 다음과 같이 정의한다.
 
@@ -360,7 +360,7 @@
 
     $$ \varnothing \leq b, \varnothing \not \leq b, \varnothing > b, \dots $$
 
-    등등이 모든 부등식 관계기호에 대하여 성립한다.
+    등등이 Vacuous Truth 에 의하여 모든 부등식 관계기호에 대하여 참이 된다. 
 
 - 예시 
 
@@ -1004,7 +1004,7 @@
 
     초현실수 $n$ 과 초현실수 집합 $S$ 에 대하여 
 
-    $$ n+S = \{n + a : a \in S\}
+    $$ n+S = \{n + a : a \in S\} $$
 
     이다.
 
@@ -1034,7 +1034,7 @@
 
     초현실수 집합 $S, T$ 에 대하여 
 
-    $$ S + T = \{s + t : s \in S, t \in T\}
+    $$ S + T = \{s + t : s \in S, t \in T\} $$
 
     이다.
 
@@ -1135,6 +1135,115 @@
     $$ q(x,x',y,y') \iff (x+y \geq x'+y' \land y \leq y' \implies x \geq x') $$
 
     사실 우리는 지금까지 초현실수의 덧셈이 well-formed 을 생성한다는 것을 증명하지 않았기 때문에 초현실수의 well-formedness 에 의존성이 있는 그 어떠한 정리도 사용할 수 없다. 즉, 우리는 정리 1, 3, 4, 6 만을 사용할 수 있다. (well-formedness 에 의존성이 없는 이 정리들이 나중에 유용할 것이라고 언급했었는데 바로 여기에서 유용하다는 것이다.)
+
+    정리 14 의 $x + y \leq x' + y'$ 를 증명하기 위하여 
+
+    $$ \lnot \exists \alpha \in \{X_L + y, x+Y_L\} : x'+y' \leq \alpha \land \lnot \exists \beta \in \{X'_R+y', x'+Y'_R\} : \beta \leq x+y \tag{3.14} $$
+
+    를 증명해야 하는데 이는
+
+    $$ \forall \alpha \in \{X_L + y, x+Y_L\} : x'+y' \not \leq \alpha \land \forall  \beta \in \{X'_R+y', x'+Y'_R\} : \beta \not \leq x+y \tag{3.14} $$
+
+    이고
+
+    $$ x + y = \{X_L + y, x+Y_L | X_R + y, x+Y_R\} $$
+
+    $$ x' + y' = \{X'_L + y', x' + Y'_L | X'_R + y', x' + Y'_R\} $$
+
+    이므로 $(3.14)$ 는 
+
+    $$ x' + y' \not \leq X_L + y \tag{3.15} $$
+
+    $$ x' + y' \not \leq x + Y_L \tag{3.16} $$
+
+    $$ X'_R + y' \not \leq x + y \tag{3.17} $$
+
+    $$ x' + Y'_R \not \leq x + y \tag{3.18} $$
+
+    이 참일 때 참이 된다. ▲ 
+
+    $(3.15)$ 가 거짓이라고 가정하자. 그러면 정리 14 의 조건부에서 $y \leq y'$ 가 참이므로 이를 연결하여 
+
+    $$ X_l + y \geq x' + y' \land y \leq y' \tag{3.19} $$
+
+    를 얻는다. 이는 Boolean function $q(X_L, x', y, y')$ 의 조건부와 같으므로 $X_L \geq x'$ 를 함의한다. 그러나 정리 5 에 의하여 $X_L < x$ 이고 정리 14 의 조건부에 의하여 $x \leq x'$ 이므로 $X_L < x'$ 이고, 이는 모순이다. Boolean function $q$ 가 참이라고 가정하면 $(3.15)$ 를 거짓이라고 가정한 것이 잘못되었음을 알 수 있다. 그러므로 $(3.15)$ 는 참이다. ▲ 
+
+    비슷하게 $q(X_L, x', y, y')$ 가 참이라고 가정하면 $(3.16)$ 도 참이다. ▲ 
+
+    비슷하게 $q(x, X'_R, y, y')$ 가 참이라고 가정하면 $(3.17)$ 도 참이다. ▲ 
+
+    비슷하게 $q(y, Y'_R, x, x')$ 가 참이라고 가정하면 $(3.18)$ 도 참이다. ▲ 
+
+    그러므로 $(3.14)$ 는 참이다. 이로써 정리 14 는 정리 15 를 가정하였을 때 참임이 증명되었다. ▲ 
+
+    정리 15 의 조건부 $x + y \geq x'+y'$ 와 $\geq$ 의 정의로부터 다음이 참임을 알 수 있다.
+
+    $$ X'_L + y' \not \geq x+y \tag{3.20} $$
+
+    $$ x' + Y'_L \not \geq x+y \tag{3.21} $$
+
+    $$ x' + y' \not \geq X_R+y \tag{3.22} $$
+
+    $$ x' + y' \not \geq x+Y_R \tag{3.23} $$
+
+    정리 15 가 틀렸다고 가정하면 조건부 $y \leq y'$ 와 부정된 결론부 $x \not \geq x'$ 를 얻는다. $x \not \geq x'$ 는 [$\not \leq$ 의 정의](#19992ce0d) 에 의하여
+
+    $$ \exists x'_L \in X'_L : x \leq x'_L \lor \exists x_R \in X_R : x_R \leq x' \tag{3.24} $$
+
+    와 동치이다. $(3.24)$ 의 왼쪽 명제 $x \leq x'_L$ 와 $y \leq y'$ 를 결합하면 $p(x, x'_L, y, y')$ 의 조건부를 얻는데 이는 곧 $x + y \leq x'_L + y'$ 를 함의한다. 그런데 이는 $(3.20)$ 과 모순이다. 그러므로 Boolean function $p$ 가 참임을 가정하면 정리 15 는 참이다. ▲ 
+
+    비슷하게 $(3.24)$ 의 오른쪽 명제를 $y \leq y'$ 와 결합하면 $p(x_R, x', y, y')$ 의 조건부를 얻는데 이는 $x_R + y \leq x'+y'$ 를 함의한다. 그런데 이는 $(3.22)$ 와 모순이다. 그러므로 정리 14 를 가정하면 정리 15 가 참임을 알 수 있다. ▲ 
+
+    그러므로 정리 14 와 정리 15 는 동치이다. 즉, 
+
+    $$ p \iff q $$
+
+    이다. 이제 정리 14 나 정리 15 둘 중 하나를 증명하면 모든 증명이 끝난다. ▲ 
+
+    정리하자면, $p(x,y,x',y')$ 는 $q(X_L, x', y, y'), q(Y_l, y', x, x'), q(x, X'_R, y, y'), q(y, Y'_R, x, x')$ 를 가정하면 참이다.
+    
+    $q(x, x', y, y')$ 는 $p(x, x'_L, y, y'), p(x_R, x', y, y')$ 를 가정하면 참이다. 
+
+    그러므로 $p(x, y, x', y')$ 는 다음을 가정하면 참이다. 
+
+    $$ p(X_L, x'_L, y, y') \tag{3.25} $$
+
+    $$ p(X _{LR}, x', y, y') \tag{3.26} $$
+
+    $$ p(Y_L, y'_L, x, x') \tag{3.27} $$
+
+    $$ p(Y _{LR}, y', x, x') \tag{3.28} $$
+
+    $$ p(x, X' _{RL}, y, y') \tag{3.29} $$
+
+    $$ p(x_R, X'_R, y, y') \tag{3.30} $$
+
+    $$ p(y, Y' _{RL}, x, x') \tag{3.31} $$
+
+    $$ p(y_R, Y'_R, x, x') \tag{3.32} $$
+
+    그런데 이 명제들은 모두 다 $p(x, y, x', y')$ 의 첫번째와 두번째 파라미터를 그것의 parents 로 치환하였다. 이 사실은 $p(x, y, x', y')$ 가 결국 최초의 parents 를 파라미터로 갖는 $p$ 의 진리값에 의존한다는 것을 알려준다. 다시말해, $p(x, x', y, y')$ 는 
+
+    $$ p(x, \varnothing , y, y') \tag{3.33} $$
+
+    $$ p(\varnothing, x', y, y') \tag{3.34} $$
+
+    이 참일 때 참이 된다. 이는 
+
+    $$ x \leq \varnothing \land y \leq y' \implies x + y \leq \varnothing + y' \tag{3.35} $$
+
+    $$ \varnothing \leq x' \land y \leq y' \implies \varnothing + y \leq x' + y' \tag{3.36} $$
+
+    이 참일 때 정리 14 가 증명됨을 뜻한다. $\varnothing$ 과의 연산은 $\varnothing$ 이므로 $(3.35), (3.36)$ 의 결론부는 각각
+
+    $$ x + y \leq \varnothing $$
+
+    $$ \varnothing \leq x' + y' $$
+
+    이 되고, [초현실수와 초현실수 집합의 비교]() 에 의하여 $\varnothing$ 과의 부등식 관계기호는 항상 참이므로 결국 $(3.35), (3.36)$ 이 참임을 알 수 있다. 그러므로 $(3.33), (3.34)$ 도 참이고 이로써 정리 14 가 증명되었다. 이로써 모든 증명이 끝났다. ■  
+
+- 이 정리 또한 초현실수의 well-formedness 에 의존하지 않고 증명되었다. 
+
 
 
 # 초현실수의 곱셈
