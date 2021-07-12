@@ -992,13 +992,21 @@
 
 - 이 함수가 정의되었으니 $\{4|\}$ 를 쓰기 위하여 엄밀하게 $\{\delta (4)|\}$ 로 써야 하지만 편의상 전자의 방식을 고수한다. 
 
-- Dali function 은 실수의 순서를 보존한다. 즉, Dali function 으로 사상된 실수들의 순서는 초현실수의 순서와 같다. 이는 실수 $x,y$ 에 대하여 
+- 그러나 무리수를 초현실수로 보내는 경우가 Dali function 에서 정의되지 않았다. 이를 위해 이후에 Dali function 을 다시 다룰 것이다. 
+
+!!! tldr ""
+
+    Dali function 은 실수의 순서를 보존한다. 즉, 실수 $x,y$ 에 대하여 
 
     $$ x < y \iff \delta (x) < \delta (y) $$
 
     이라고 표현할 수 있다. 
 
-    - 증명
+- 즉, Dali function 으로 사상된 실수들의 순서는 초현실수의 순서와 같다.
+
+- 증명
+
+    [정리 5](#c076cc283) 와 Dali function 의 정의에 의하여 쉽게 증명된다. 
 
 # 초현실수의 덧셈
 
@@ -1360,11 +1368,7 @@
 
 !!! tldr "정리 19"
 
-    $0$ 은 초현실수 덧셈의 항등원이다. 즉, 
-
-    $$ 0 + x = x \land x + 0 = x $$
-
-    이다.
+    $0$ 은 초현실수 덧셈의 항등원이다. 즉, $0 + x = x \land x + 0 = x$ 이다.
 
 - 증명 
 
@@ -1382,11 +1386,7 @@
 
 !!! tldr "정리 20"
 
-    초현실수의 덧셈은 commutative law 를 만족한다. 즉, 
-
-    $$ x + y = y + x $$
-
-    이다. 
+    초현실수의 덧셈은 commutative law 를 만족한다. 즉, $x + y = y + x$ 이다. 
 
 - 증명 
 
@@ -1396,11 +1396,7 @@
 
 !!! tldr "정리 21"
 
-    초현실수의 덧셈은 associative law 를 만족한다. 즉, 
-
-    $$ (x + y) + z = x + (y + z) $$
-
-    이다. 
+    초현실수의 덧셈은 associative law 를 만족한다. 즉, $(x + y) + z = x + (y + z)$ 이다. 
 
 - 증명
 
@@ -1544,57 +1540,298 @@
 
     $a = 0 \lor b = 0$:
 
+    [정리 19](#820dbbc7f) 에 의하여 초현실수의 항등원은 $\{|\}$ 이고, 실수의 항등원은 $0$ 이다. 그러므로 
+
+    $$ \delta (0+b) = \delta (b) = \{|\} + \delta (b) = \delta (0) + \delta (b) $$
+
+    이다. ▲ 
+
     $a, b \in \mathbb{Z} _{+}$:
+
+    [Dali function](#b3aed9bc1) 의 정의에 의하여 
+
+    $$ \delta (a) = \{\delta (a-1)|\}, \delta (b) = \{\delta (b-1)|\}, \delta (a+b) = \{\delta (a+b-1)|\} $$
+
+    이다. 또한 $a = 0, b = 0$ 에 대하여 이 정리가 성립함을 이미 증명했다. 이제 귀납법을 사용할텐데 지금까지처럼 parents 에 대하여 귀납법을 전개하는 것이 아니라 양의 정수에 대하여 귀납법을 전개할 것이다. 
+
+    $a-1, b-1$ 에 대하여 정리가 성립함을 가정하면 
+
+    $$ \delta (a-1+b) = \delta (a-1) + \delta (b) \tag{3.56} $$
+
+    $$ \delta (a+b-1) = \delta (a) + \delta (b-1) \tag{3.57} $$
+
+    이다. 그러므로 
+    
+    $$ \begin{equation}\begin{split} \delta (a) + \delta (b)& = \{\delta (a)_L + \delta (b), \delta (a) + \delta (b)_L | \delta (a)_R + \delta (b), \delta (a) + \delta (b)_R\} \\ & = \{\delta (a-1) + \delta (b), \delta (a) + \delta(b-1)| \}\\ & = \{\delta (a-1+b) , \delta (a+b-1)| \}\\ & = \delta (a+b) \end{split}\end{equation} \tag{3.58} $$
+
+    이다. 이에 따라 귀납법에 의하여 이 경우가 증명되었다. ▲ 
 
     $a, b \in \mathbb{Z} _{-}$:
 
+    [Dali function](#b3aed9bc1) 의 정의에 의하여 
+
+    $$ \delta (a) = \{|\delta (a+1)\}, \delta (b) = \{|\delta (b+1)\}, \delta (a+b) = \{|\delta (a+b+1)\} $$
+
+    이다. 또한 $a = 0, b = 0$ 에 대하여 이 정리가 성립함을 이미 증명했다. 이제 귀납법을 사용할텐데 지금까지처럼 parents 에 대하여 귀납법을 전개하는 것이 아니라 음의 정수에 대하여 귀납법을 전개할 것이다. 
+
+    $a+1, b+1$ 에 대하여 정리가 성립함을 가정하면 
+
+    $$ \delta (a+1+b) = \delta (a+1) + \delta (b) \tag{3.59} $$
+
+    $$ \delta (a+b+1) = \delta (a) + \delta (b+1) \tag{3.60} $$
+
+    이다. 그러므로 
+    
+    $$ \begin{equation}\begin{split} \delta (a) + \delta (b)& = \{\delta (a)_L + \delta (b), \delta (a) + \delta (b)_L | \delta (a)_R + \delta (b), \delta (a) + \delta (b)_R\} \\ & = \{|\delta (a+1) + \delta (b), \delta (a) + \delta(b+1) \}\\ & = \{|\delta (a+1+b) , \delta (a+b+1) \}\\ & = \delta (a+b) \end{split}\end{equation} \tag{3.61} $$
+
+    이다. 이에 따라 귀납법에 의하여 이 경우가 증명되었다. ▲ 
+
     $a \in \mathbb{Z} _{+}, b \in \mathbb{Z} _{-}$:
+
+    [Dali function](#b3aed9bc1) 의 정의에 의하여 $\delta (a) = \{\delta (a-1)|\}, \delta (b) = \{|\delta (b+1)\}$ 이다. 정리 [Dali function 은 실수의 순서를 보존한다]() 에 의하여
+
+    $$ \delta (a+b-1) < \delta (a+b) < \delta (a+b+1) \tag{3.62} $$
+
+    이다. $a+b$ 의 부호에 따라서 다음의 결과를 얻는다. 
+
+    - $a+b>0$ 이면 $\delta (a+b) = \{\delta (a+b-1)|\}$ 이다. [정리 11](#6c1e1f527) 과 $(3.62)$ 에 의하여 $\delta (a+b) = \{\delta (a+b-1) | \delta (a+b+1)\}$
+
+    - $a+b=0$ 이면 $\delta (a+b) = \{|\}$ 이다. [정리 11](#6c1e1f527) 과 $(3.62)$ 에 의하여 $\delta (a+b) = \{\delta (a+b-1) | \delta (a+b+1)\}$
+
+    - $a+b<0$ 이면 $\delta (a+b) = \{|\delta (a+b+1)\}$ 이다. [정리 11](#6c1e1f527) 과 $(3.62)$ 에 의하여 $\delta (a+b) = \{\delta (a+b-1) | \delta (a+b+1)\}$
+
+    그러므로 모든 경우에서 
+
+    $$ \delta (a+b) = \{\delta (a+b-1) | \delta (a+b+1)\} \tag{3.63} $$
+
+    를 얻는다. 이 정리가 $a = 0, b = 0$ 에서 성립한다는 것을 이미 증명했다. 이제 $a-1$ 과 $b+1$ 에서 이 정리가 성립한다고 가정하자. 즉, 
+
+    $$ \delta (a-1+b) = \delta (a-1) + \delta (b) \tag{3.64} $$
+
+    $$ \delta (a+b+1) = \delta (a) + \delta (b+1) \tag{3.65} $$
+
+    를 가정한다. 이를 기반으로 
+
+    $$ \begin{equation}\begin{split} \delta (a) + \delta (b)& = \{\delta (a)_L + \delta (b), \delta (a) + \delta (b)_L | \delta (a)_R + \delta (b), \delta (a) + \delta (b)_R\} \\ & = \{\delta (a-1)+\delta (b)|\delta (a) + \delta (b+1) \}\\ & = \{\delta (a-1+b)| \delta (a+b+1) \}\\ & = \delta (a+b) \end{split}\end{equation} \tag{3.66} $$
+
+    를 얻는다. 이에 따라 귀납법에 의하여 이 경우가 증명되었다. ▲ 
 
     $a \in \mathbb{Z} _{+}, b = \dfrac{j}{2^k} \text{ s.t. }\ j \in \mathbb{Z} , k \in \mathbb{Z} _{+}$:
 
     (이때 $\dfrac{j}{2^k}$ 는 기약분수이다.)
 
+    [Dali function](#b3aed9bc1) 의 정의에 의하여 $\delta (a) = \{\delta (a-1)|\}, \delta (b) = \bigg \{\delta \bigg (\dfrac{j-1}{2 ^{k}}\bigg )\bigg |\delta \bigg (\dfrac{j+1}{2^k}\bigg )\bigg \}$ 이다. 또한 
+
+    $$ a+b = a+ \dfrac{j}{2^k} = \dfrac{2^ka + j}{2^k} \tag{3.67} $$
+
+    이므로 [Dali function](#b3aed9bc1) 에 의하여
+
+    $$ \delta (a+b) = \bigg \{\delta \bigg (\dfrac{2^ka+j-1}{2^k}\bigg )\bigg |\delta \bigg (\dfrac{2^ka+j+1}{2^k}\bigg )\bigg \} \tag{3.68} $$
+
+    이다. 우리는 이 정리가 $a = 0$ 이고 $b$ 가 정수일 때, 즉 $k = 0$ 일 때 성립한다는 것을 이미 증명했다. 이제 이 정리가 $a - 1, k - 1$ 에서 성립한다고 가정하고 $a, k$ 에 대하여 성립함을 보이자. 그러면
+
+    $$ \begin{equation}\begin{split} \delta (a) + \delta (b) & = \{\delta (a) _L + \delta (b), \delta (a) + \delta (b)_L | \delta (a)_R + \delta (b) , \delta (a) + \delta (b) _R\} \\ & = \bigg \{\delta (a-1) + \delta \bigg (\dfrac{j}{2^k}\bigg ), \delta (a) + \delta \bigg (\dfrac{j-1}{2^k}\bigg )\bigg |\delta (a) + \delta \bigg (\dfrac{j+1}{2^k}\bigg )\bigg \} \\ & = \bigg \{\delta \bigg (a - 1 + \dfrac{j}{2^k}\bigg ), \delta \bigg (a + \dfrac{j-1}{2^k}\bigg )\bigg |\delta \bigg (a + \dfrac{j+1}{2^k}\bigg )\bigg \} \end{split}\end{equation} \tag{3.69} $$
+
+    가 성립한다. 마지막 연산이 가능한 이유는 $\dfrac{j-1}{2^k}, \dfrac{j+1}{2^k}$ 가 최소 $2$ 로 약분되므로 분모가 최대 $2 ^{k-1}$ 가 되기 때문이다. 더욱 단순화시켜보면 
+
+    $$ \begin{equation}\begin{split} \delta (a) + \delta (b) & = \bigg \{\delta \bigg ( \dfrac{2^ka -2^k + j}{2^k}\bigg ), \delta \bigg (\dfrac{2^ka + j-1}{2^k}\bigg )\bigg |\delta \bigg (\dfrac{2^ka + j+1}{2^k}\bigg )\bigg \} \\ & = \bigg \{\delta \bigg (\dfrac{2^ka + j-1}{2^k}\bigg )\bigg |\delta \bigg (\dfrac{2^ka + j+1}{2^k}\bigg )\bigg \} \end{split}\end{equation} \tag{3.70} $$
+
+    이 된다. 마지막 단순화는 $k \leq 0 \iff 2 ^{k} \geq 1$ 를 기반으로 [따름정리 10](#810bebedd) 에 의하여 이루어진다. $(3.70)$ 은 $(3.68)$ 과 같으므로 이 경우에서 $\delta (a)+\delta (b) = \delta (a+b)$ 가 증명되었다. ▲ 
+
     $a \in \mathbb{Z} _{-}, b = \dfrac{j}{2^k} \text{ s.t. }\ j \in \mathbb{Z} , k \in \mathbb{Z} _{+}$:
 
     (이때 $\dfrac{j}{2^k}$ 는 기약분수이다.)
 
-    $a = \dfrac{j_a}{2 ^{k_a}} \text{ s.t. }\ j_a \in \mathbb{Z} , k_a \in \mathbb{Z} _{+} , b = \dfrac{j_b}{2^k_b} \text{ s.t. }\ j_b \in \mathbb{Z} , k_b \in \mathbb{Z} _{+}$:
+    이전의 경우와 증명이 매우 비슷하므로 생략한다. ▲ 
+
+    $a = \dfrac{j_a}{2 ^{k_a}} \text{ s.t. }\ j_a \in \mathbb{Z} , k_a \in \mathbb{Z} _{+} , b = \dfrac{j_b}{2 ^{k_b}} \text{ s.t. }\ j_b \in \mathbb{Z} , k_b \in \mathbb{Z} _{+}$:
 
     (이때 $\dfrac{j_a}{2^k_a}, \dfrac{j_b}{2^k_b}$ 는 기약분수이다.)
 
-!!! tldr ""
+    [Dali function](#b3aed9bc1) 에 의하여 $\delta (a) = \bigg \{\delta \bigg (\dfrac{j_a-1}{2 ^{k_a}}\bigg )\bigg |\delta \bigg (\dfrac{j_a+1}{2 ^{k_a}}\bigg )\bigg \}$ 이고 $\delta (b) = \bigg \{\delta \bigg (\dfrac{j_b-1}{2 ^{k_b}}\bigg )\bigg |\delta \bigg (\dfrac{j_b+1}{2 ^{k_b}}\bigg )\bigg \}$ 이다. 일반성을 훼손하지 않고 $k_a \geq k_b$ 라고 가정할 수 있으며 이 경우 
 
-    초현실수 덧셈의 make sense : 초현실수 덧셈 $(\mathbb{S}, +)$ 이 
+    $$ \begin{equation}\begin{split} a + b & = \dfrac{j_a}{2 ^{k_a}} + \dfrac{j_b}{2 ^{k_b}}\\ & = \dfrac{j_a + 2 ^{k_a - k_b}j_b}{2 ^{k_a}} \end{split}\end{equation} \tag{3.71} $$
+
+    이므로 
+
+    $$ \delta (a+b) = \bigg \{\delta \bigg (\dfrac{j_a + 2 ^{k_a-k_b}j_b - 1}{2 ^{k_a}}\bigg ) \bigg | \delta \bigg (\dfrac{j_a + 2 ^{k_a-k_b}j_b+1}{2 ^{k_a}}\bigg )\bigg \} \tag{3.72} $$
+
+    이다. 우리는 이미 이 정리가 $a, b$ 가 정수일 때, 즉 $k_a = 0, k_b = 0$ 일 때 성립한다는 것을 증명했다. 그러므로 이 정리가 $k_a - 1, k_b - 1$ 에서 성립한다는 것을 가정하고 $k_a, k_b$ 에서 성립함을 보이자. 
+
+    $$ \begin{equation}\begin{split} \delta (a) + \delta (b) & = \{\delta (a)_L + \delta (b), \delta (a) + \delta (b)_L | \delta (a)_R + \delta (b), \delta (a) + \delta (b)_R\}\\ & = \bigg \{\delta \bigg (\dfrac{j_a-1}{2 ^{k_a}}\bigg )+\delta \bigg (\dfrac{j_b}{2 ^{k_b}}\bigg ), \delta \bigg (\dfrac{j_a}{2 ^{k_a}}\bigg ) + \delta \bigg (\dfrac{j_b-1}{2 ^{k_b}}\bigg )\bigg | \\ & \qquad \qquad  \delta \bigg (\dfrac{j_a+1}{2 ^{k_a}}\bigg )+\delta \bigg (\dfrac{j_b}{2 ^{k_b}}\bigg ), \delta \bigg (\dfrac{j_a}{2 ^{k_a}}\bigg ) + \delta \bigg (\dfrac{j_b+1}{2 ^{k_b}}\bigg )\bigg\} \\ & = \bigg \{\delta \bigg (\dfrac{j_a-1}{2 ^{k_a}} + \dfrac{j_b}{2 ^{k_b}}\bigg ), \delta \bigg (\dfrac{j_a}{2 ^{k_a}}+\dfrac{j_b-1}{2 ^{k_b}}\bigg )\bigg | \delta \bigg (\dfrac{j_a+1}{2 ^{k_a}} + \dfrac{j_b}{2 ^{k_b}}\bigg ), \delta \bigg (\dfrac{j_a}{2 ^{k_a}} + \dfrac{j_b+1}{2 ^{k_b}}\bigg )\bigg\} \\ \end{split}\end{equation} \tag*{} $$
+
+    에서 마지막 연산은 $\dfrac{j_a-1}{2 ^{k_a}}$ 가 최소 $2$ 로 약분되서 분모가 최대 $2 ^{k_a-1}$ 로 바뀌기 때문이다. 더욱 단순화를 시켜보면
+
+    $$ \begin{equation}\begin{split} \delta (a) + \delta (b) & = \bigg \{\delta \bigg( \dfrac{(j_a-1) + 2 ^{k_a-k_b}j_b}{2 ^{k_a}} \bigg ), \delta \bigg (\dfrac{j_a + (j_b -1) 2 ^{k_a-k_b}}{2 ^{k_a}}\bigg ) \bigg | \\ & \qquad \qquad  \delta \bigg (\dfrac{(j_a+1) + 2 ^{k_a-k_b}j_b}{2 ^{k_a}}\bigg ), \delta \bigg (\dfrac{j_a+(j_b + 1)2 ^{k_a-k_b}}{2 ^{k_a}}\bigg )\bigg \}\\ & = \bigg \{\delta \bigg( \dfrac{j_a + 2 ^{k_a-k_b}j_b}{2 ^{k_a}} -1 \bigg ), \delta \bigg (\dfrac{j_a +  2 ^{k_a-k_b}j_b - 2 ^{k_a-k_b}}{2 ^{k_a}}\bigg ) \bigg | \\ &\qquad \qquad \delta \bigg (\dfrac{j_a + 2 ^{k_a-k_b}j_b + 1}{2 ^{k_a}}\bigg ), \delta \bigg (\dfrac{j_a+2 ^{k_a-k_b}j_b + 2 ^{k_a-k_b}}{2 ^{k_a}}\bigg )\bigg \}\\ & = \bigg \{\delta \bigg( \dfrac{j_a + 2 ^{k_a-k_b}j_b}{2 ^{k_a}} -1 \bigg )\bigg | \delta \bigg (\dfrac{j_a + 2 ^{k_a-k_b}j_b + 1}{2 ^{k_a}}\bigg )\bigg \}\\ \end{split}\end{equation} \tag{3.74} $$
+
+    이 된다. 마지막 단순화는 $k_a \geq k_b \iff 2 ^{k_a-k_b} \geq 1$ 를 기반으로 [따름정리 10](#810bebedd) 에 의하여 이루어진다. $(3.74)$ 은 $(3.72)$ 과 같으므로 이 경우에서 $\delta (a)+\delta (b) = \delta (a+b)$ 가 증명되었다. ▲ 
+
+    이로써 가능한 모든 경우에서 증명이 끝났다. ■ 
+
+!!! tldr "초현실수 덧셈의 make sense"
+
+    초현실수 덧셈 $(\mathbb{S}, +)$ 은 다음을 만족한다.
 
     - $(\mathbb{S} , +)$ 이 가환군을 이룬다.
 
     - Dali function 이 실수 덧셈 $+_r$ 과 초현실수 덧셈 $+_s$ 에 대하여 $(\R, + _{r})$ 에서 $(\mathbb{S} , + _{s})$ 로 가는 준동형사상이다. 
     
-    를 만족할 때 make sense 하다고 한다.
+- 이 정리는 초현실수 덧셈이 make sense 하다는 것을 말해준다. 초현실수 덧셈이 make sense 하다는 것은 쉽게 말해 덧셈이 우리가 예상한대로 행동하느냐는 것이다. 
 
 - 증명 
 
     정리 19, 20, 21, 22 에 의하여 $(\mathbb{S} , +)$ 는 아벨군이다. ▲ 
 
-    정리 22 에 의하여 Dali function 은 $(\R, +)$ 을 $(\mathbb{S} ,+)$ 로 보내는 준동형사상이다. ▲ 
+    정리 22 에 의하여 [Dali function](#b3aed9bc1) 은 $(\R, +)$ 을 $(\mathbb{S} ,+)$ 로 보내는 준동형사상이다. ▲ 
 
     그러므로 초현실수 덧셈 연산은 make sense 하다. ■ 
 
-- 초현실수 덧셈이 make sense 하다는 것은 쉽게 말해 덧셈이 우리가 예상한대로 행동하느냐는 것이다. 
-
 - 초현실수 덧셈 $(\mathbb{S} , +)$ 이 아벨군을 이룬다는 것은 $(\R, +)$ 와 대수적으로 동일한 성질을 띈다는 것이다. 
 
-- Dali functoin 이 $(\R, +_r)$ 를 $(\mathbb{S} , +_s)$ 로 보내는 준동형사상이라는 조건은 
+- [Dali function](#b3aed9bc1) 이 $(\R, +_r)$ 를 $(\mathbb{S} , +_s)$ 로 보내는 준동형사상이라는 조건은 
 
     $$ \delta (a +_r b) = \delta (a) +_s \delta (b) $$
 
-    을 만족한다는 것이다. 이 조건이 필요한 것은 Dali function 이 실수덧셈군의 구조를 보존하면서 두 수의 덧셈 연산을 초현실수덧셈군으로 보낼 수 있다는 것이다. 
+    을 만족한다는 것이다. 이 조건이 필요한 것은 [Dali function](#b3aed9bc1) 이 실수덧셈군의 구조를 보존하면서 두 수의 덧셈 연산을 초현실수덧셈군으로 보낼 수 있다는 것이다. 
     
-    구조를 보존한다는 조건이 필요한 이유는 Dali function 이 초현실수에 $0, 1, 2$ 같은 이름을 부여했으므로 실수에서 $2 + 3 = 5$ 라는 결과를 내는 것과 같이 초현실수에서도 $2 + 3 = 5$ 가 되어야 하기 때문이다. 
+    구조를 보존한다는 조건이 필요한 이유는 [Dali function](#b3aed9bc1) 이 초현실수에 $0, 1, 2$ 같은 이름을 부여했으므로 실수에서 $2 + 3 = 5$ 라는 결과를 내는 것과 같이 초현실수에서도 $2 + 3 = 5$ 가 되어야 하기 때문이다. 
     
     그러므로 $\delta (2 + 3) = \delta (5)$ 가 초현실수 $5$ 라는 이름을 부여받듯이 $\delta (2) + \delta (3)$ 가 초현실수 이름 $2$ 와 $3$ 을 부여받은 덧셈 결과 $5$ 로 연산되어야 한다는 것이다. 
 
 # 초현실수의 곱셈
+
+!!! tldr "초현실수의 곱셈"
+
+    초현실수 $a, b$ 에 대하여 
+
+    $$ ab = \{A_Lb+aB_L - A_LB_L, A_Rb+aB_R -A_RB_R|A_Lb+aB_R-A_LB_R, A_Rb+aB_L-A_RB_L\} $$
+
+    라고 정의한다. 
+
+- 덧셈에서와 같이 이 곱셈 연산이 올바른가, 즉 well-formed 인 초현실수를 생성하는가 물어보아야 한다. 또한 이 곱셈 연산이 make sense 한지 검증해야 한다. 
+
+    그러나 곱셈의 well-formedness 에 대해서는 생략한다.
+
+- 특히 $0$ 은 곱셈연산에서 특별한 역할을 한다. 
+
+!!! tldr "정리 24"
+
+    $$ 0 \times x = x \times  0 = 0 $$
+
+- 증명 
+
+    $$ \begin{equation}\begin{split} 0x & = \{\varnothing x + 0X_L - \varnothing X_L, \varnothing x + 0 X_R - \varnothing X_R | \varnothing x + 0X_R - \varnothing X_R, \varnothing x + 0X_L - \varnothing X_L\}\\ & = \{|\} \\ & 0 \end{split}\end{equation} \tag{4.2} $$
+
+    $x0=0$ 또한 비슷하게 증명가능하다. ■ 
+
+!!! tldr "정리 25"
+
+    곱셈의 항등원은 $1$ 이다. 즉, $1 \times x = x \land x \times 1 = x$ 이다. 
+
+- 증명
+
+    $$ 
+    \begin{equation}\begin{split}
+    1x &= \{0x+1X_L -0X_L, \varnothing x +1X_R- \varnothing X_R | 0b+1X_R-00_R, \varnothing x+1X_L-\varnothing X_L\}\\
+    & = \{1X_L|1X_R\}
+    \end{split}\end{equation} \tag{4.3}
+    $$
+
+    $x$ 의 parents 에 대하여 이 정리가 성립한다고 하면 $\{1X_L|1X_R\} = x$ 이다. $x = 0$ 일 때 이 정리가 자명하게 성립하므로 $1x = x$ 이다. ▲ 
+
+    $x1 = x$ 도 비슷하게 증명가능하다. ■ 
+
+!!! tldr "정리 26"
+
+    초현실수 곱셈은 commutative law 를 만족한다. 즉, $xy = yx$ 이다.
+
+- 증명
+
+    $x, y$ 의 parents 에 대하여 성립함을 가정하면 이는 곱셈의 정의에 의하여 자명하게 성립한다. ▲ 
+
+    $0x = x0$ 의 증명은 정리 24 에 의하여 자명하다. ■ 
+
+!!! tldr "정리 27"
+
+    초현실수 곱셈은 associative law 를 만족한다. 즉, $(xy)z = x(yz)$
+
+- 증명
+
+!!! tldr "정리 28"
+
+    초현실수 곱셈과 덧셈은 distributive law 를 만족한다. 즉, $x(y+z) = xy+xz$ 이다.
+    
+- 증명
+
+!!! tldr "정리 29"
+
+    $0$ 을 제외한 임의의 초현실수 $x$ 는 $x \times \dfrac{1}{x} = 1$ 을 만족하는 곱셈의 역원 $\dfrac{1}{x}$ 을 가진다. 
+
+- 증명
+
+- 이 정리의 증명은 다음 장에서 논의할 것이다. 그때까지 우리는 분모가 $2$ 의 배수인 분수만 다룰 것이다. 사실 우리는 아직 $\dfrac{1}{3}$ 같은 초현실수가 어떤 것인지 다루지 않았다. 
+
+!!! tldr "정리 30"
+
+    초현실수 $a, b$ 와 Dali function $\delta$ 에 대하여 $\delta (ab) = \delta (a)\delta (b)$ 이다.
+
+- 증명
+
+!!! tldr "초현실수 곱셈의 make sense"
+
+    초현실수 곱셈 $(\mathbb{S} \text{ \textbackslash }\{0\}, \times )$ 은 다음을 만족한다.
+
+    - $(\mathbb{S} \text{ \textbackslash }\{0\} , \times )$ 이 아벨군을 이룬다.
+
+    - Dali function 이 실수 곱셈 $\times  _r$ 과 초현실수 곱셈 $\times  _s$ 에 대하여 $(\R , \times  _{r})$ 에서 $(\mathbb{S}  , \times  _{s})$ 로 가는 준동형사상이다. 
+    
+- 이 정리는 초현실수 곱셈이 make sense 하다는 것을 말해준다. 초현실수 곱셈이 make sense 하다는 것은 쉽게 말해 곱셈이 우리가 예상한대로 행동하느냐는 것이다. 
+
+- 증명 
+
+    정리 25, 26, 27, 29 에 의하여 $(\mathbb{S} \text{ \textbackslash }\{0\} , \times )$ 은 아벨군을 이룬다. ▲ 
+
+    정리 30 에 의하여 [Dali function](#b3aed9bc1) 은 $(\R, \times )$ 을 $(\mathbb{S} , \times )$ 로 보내는 준동형사상이다. ▲ 
+
+    그러므로 초현실수 곱셈 연산은 make sense 하다. ■ 
+
+!!! tldr ""
+
+    환(ring) : 집합 $R$ 이 두 이항연산 $+, \cdot$ 에 대하여 다음을 만족하면 환이다.
+
+    1. $R$ 은 덧셈 $+$ 에 대하여 아벨군이다. 
+
+        - associative : $\forall a,b,c \in R : (a+b)+c=a+(b+c)$
+
+        - commutative : $\forall a,b \in R : a+b=b+a$
+
+        - additive identity : $\exists 0 \in R \text{ s.t. }\ \forall a \in R : a + 0 = a$
+
+        - additive inverse : $\exists -a \in R \text{ s.t. }\ \forall a \in R : a + -a = 0$
+    
+    2. $R$ 은 곱셈 $\cdot$ 에 대하여 모노이드이다.
+
+        - associative : $(a \cdot b) \cdot c = a \cdot (b \cdot c)$
+
+        - multiplicative identity : $\exists 1 \in R \text{ s.t. }\ \forall a \in R : a \cdot 1 = a \land 1 \cdot a = a$
+    
+    3. 곱셉 $\cdot$ 이 덧셈 $\times$ 에 대한 결합법칙을 만족한다.
+
+        - left distributivity : $\forall a, b, c \in R : a \cdot (b+c) = (a \cdot b) + (a \cdot c)$
+
+        - right distributivity : $\forall a, b, c \in R : (b+c) \cdot a = (b \cdot a) + (c \cdot a)$
+
+!!! tldr ""
+
+    $(\mathbb{S}, +, \times)$ 는 환이다.
+
+- 증명
+
+    [초현실수 덧셈의 make sense]() 와 [초현실수 곱셈의 make sense]() 에 의하여 초현실수의 덧셈 $\times$ 과 곱셈 $\cdot$ 은 아벨군을 이룬다. 이로써 환의 조건 1), 2) 가 성립한다. ▲ 
+
+    [정리 28]() 에 의하여 환의 조건 3) 이 성립한다. ■ 
+
+- 초현실수 곱셈 $(\mathbb{S} \text{ \textbackslash } \{0\} , \times )$ 이 아벨군을 이룬다는 것은 $(\R, +)$ 와 대수적으로 동일한 성질을 띈다는 것이다. 
 
 # 무한, 그리고 그 너머로
 
