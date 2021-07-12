@@ -982,9 +982,11 @@
 
     Dali function : 실수 집합 $\R$ 을 초현실수 집합 $\mathbb{S}$ 으로 보내는 사상 
 
-    $$ \delta (x) = \begin{cases} \{|\} & x = 0\\ \{\delta (x-1)|\} & x \in \mathbb{Z} ^{+} \\ \{|\delta (x+1)\} & x \in \mathbb{Z} ^{-} \\ \bigg \{\delta \bigg (\dfrac{j-1}{2^k}\bigg )\bigg |\delta \bigg (\dfrac{j+1}{2^k}\bigg )\bigg \} & x = \dfrac{j}{2^k} \text{ s.t. } \dfrac{j}{2^k} \text{ is irreducible fraction }, j \in \mathbb{Z}, k \in \mathbb{Z} ^{+} \\ \end{cases} $$
+    $$ \delta (x) = \begin{cases} \{|\} & x = 0\\ \{\delta (x-1)|\} & x \in \mathbb{Z} ^{+} \\ \{|\delta (x+1)\} & x \in \mathbb{Z} ^{-} \\ \bigg \{\delta \bigg (\dfrac{j-1}{2^k}\bigg )\bigg |\delta \bigg (\dfrac{j+1}{2^k}\bigg )\bigg \} & x = \dfrac{j}{2^k} \text{ s.t. } j \in \mathbb{Z}, k \in \mathbb{Z} ^{+} \\ \end{cases} $$
 
     이다. 
+
+- 이때 $\dfrac{j}{2^k}$ 는 기약분수(irreducible fraction)이다. 
 
 - 지금까지 우리는 다양한 초현실수에 $0, 1, -\dfrac{1}{2}$ 같은 이름을 부여했다. 이제 초현실수에 어떤 수로 이름을 부여하는지 이 함수를 통하여 형식적으로 엄밀히 정의한다.
 
@@ -998,7 +1000,7 @@
 
     - 증명
 
-# 초현실수의 덧셈, 뺄셈
+# 초현실수의 덧셈
 
 !!! tldr "초현실수와 초현실수 집합의 덧셈"
 
@@ -1058,6 +1060,10 @@
 
     이다. 
 
+- 이제 초현실수의 덧셈이 well-formed 인 초현실수를 생성하는지 검증해야 하고, 덧셈의 정의가 make sense 한지 검증해야 한다. 
+
+    그에 앞서 필요한 몇가지 정리들을 증명해보고, 덧셈의 well-formedness 와 make sense 를 검증해보자. 
+
 - 예시 
 
     $1 + \dfrac{1}{2}$ 를 계산해보자. $1 \equiv \{0|\}, \dfrac{1}{2} \equiv \{0|1\}$ 이므로 먼저 
@@ -1116,7 +1122,7 @@
 
         그러므로 $\dfrac{1}{2} + \dfrac{1}{2} = 1$ 로 정의된다는 것이다. 이런 이유로 $\{0|1\} = \dfrac{1}{2}$ 로 정의한 것이다. 
 
-초현실수의 덧셈이 well-formed 인 초현실수를 생성하는지 검증해야 하고, 덧셈의 정의가 make sense 한지 검증해야 한다. 
+## well-formedness
 
 !!! tldr "정리 14"
 
@@ -1288,7 +1294,7 @@
 
     초현실수 $a, b$ 에 대하여 
 
-    $$ \{A_L + b, a + B_L | A_R + b, a + B_R\} $$
+    $$ a + b = \{A_L + b, a + B_L | A_R + b, a + B_R\} $$
 
     은 well-formed 이다. 
 
@@ -1323,6 +1329,8 @@
 - 이로써 초현실수 덧셈 연산이 well-formedness 를 만족한다는 것을 보장받았다. 이제 초현실수 덧셈이 make sense 한지 따져보기만 하면 된다. 
 
     그에 앞서 몇가지 대수학 이론을 살펴보자. 
+
+## make sense
 
 !!! tldr ""
 
@@ -1382,11 +1390,11 @@
 
 - 증명 
 
-    $x, y$ 의 parents 에 대하여 commutative law 가 성립한다고 가정하면 $+$ 의 정의에 의하여 $x, y$ 에 대하여 commutative law 가 성립함을 자명하게 알 수 있다. 
+    $x, y$ 의 parents 에 대하여 commutative law 가 성립한다고 가정하면 [$+$ 의 정의에 의하여 $x, y$ 에 대하여 commutative law 가 성립함을 자명하게 알 수 있다.](#cf34e3c3f) 
     
     그러므로 귀납법을 쓰기 위하여 $0+x=x+0$ 만 증명하면 되는데 이는 정리 19 에 의하여 자명하게 참이다. ■ 
 
-!!! tldr ""
+!!! tldr "정리 21"
 
     초현실수의 덧셈은 associative law 를 만족한다. 즉, 
 
@@ -1406,8 +1414,153 @@
 
     에서 $(3.47), (3.48)$ 이 $x, y, z$ 의 parents 에 대한 associative 가 성립함을 가정하면 성립한다는 것을 알 수 있다. 
 
-    그러므로 parents 의 parents 를 거슬러 올라가면서 이 정리의 참거짓을 결정하게 된다. 그런데 이 초현실수가 $0$ 로 치환되면 참이므로 결국 참임을 알 수 있다. 그러므로 이 정리는 참이다. ■ 
+    그러므로 parents 의 parents 를 거슬러 올라가면서 이 정리의 참거짓을 결정하게 된다. 그런데 이 초현실수가 $0$ 로 치환되면 참이므로 결국 참임을 알 수 있다. $0$ 는 최초의 초현실수이다. 그러므로 이 정리는 참이다. ■ 
 
+!!! tldr "정리 22"
+
+    임의의 초현실수 $x$ 는 
+
+    - $x + (-x) = 0$ 
+    
+    - $-x = \{-X_R | -X_L\}$ 
+
+    를 만족하는 덧셈의 역원 $-x$ 를 가진다. 
+
+- 증명
+
+    먼저 $-x$ 의 존재성, 즉 $-x$ 가 well-formed 인 초현실수임을 증명해야 한다. 그리고 $x + (-x) = 0$ 임을 증명하면 증명이 끝난다. 
+
+    논의를 진행하기 앞서 먼저 $(-X)_L = -X_R$ 이고 $(-X)_R = -X_L$ 라고 받아들이자.(*이걸 이렇게 가정하는 게 타당할까?*)
+
+    $-x$ 의 well-formedness 를 증명하기 위하여 $X_L < X_R$ 를 기반으로 
+
+    $$ -X_R < -X_L \tag{3.49} $$
+
+    를 증명해야 한다. 이는 결국 $a \leq b \iff -b \leq -a$ 의 증명을 요구한다. $a \leq b$ 는 
+
+    $$ \lnot \exists \alpha \in A_L : b \leq \alpha \land \lnot \exists \beta \in B_R : \beta \leq a \tag{3.50} $$
+
+    을 뜻하고 $-b \leq -a$ 는 
+
+    $$ \lnot \exists \xi \in (-B)_L : -a \leq \xi \land \lnot \exists \eta \in (-A)_R : \eta \leq -b \tag{3.51} $$
+
+    을 뜻한다. $(3.51)$ 은 
+
+    $$ \lnot \exists \xi \in -B_R : -a \leq \xi \land \lnot \exists \eta \in -A_L : \eta \leq -b \tag{3.52} $$
+
+    와 같다. 
+
+    이때 $(3.50)$ 의 왼쪽 명제와 $(3.52)$ 의 오른쪽 명제를 $\alpha = - \eta$ 를 택하여 비교해보자. 
+
+    $$ \lnot \exists -\eta \in A_L : b \leq - \eta , \lnot \exists \eta \in -A_L : \eta \leq -b $$
+    
+    또한 $(3.50)$ 의 오른쪽 명제와 $(3.52)$ 의 왼쪽 명제를 $\xi = - \beta$ 를 택하여 비교해보자. 
+
+    $$ \lnot \exists \beta \in B_R : \beta \leq a , \lnot \exists - \beta \in -B_R : -a \leq - \beta $$
+    
+    그러면 $a,b$ 의 parents 에 대하여 참임을 가정하면 $a \leq b \iff -b \leq -a$ 가 참이 됨을 알 수 있다. (*근데 이것도 은연중에 가정하고 있는 전제가 있는 것 같은데. 즉 $- a \in A$ 와 $a \in -A$ 가 같다는 전제가 있는 것 같다.  $-$ 는 일단 초현실수의 덧셈의 역원으로 정의되었으니까, 지금 은연중에 가정하고 있는 건 초현실수 집합 $A$ 에 대하여 $-A$ 란 역원의 집합이라는 것이다. 어쨌든 $-a \in A \iff a \in -A$ 를 가정하고, $A_L, B_R$ 에 대하여 성립함을 가정하면 $a,b$ 에 대해서도 성립한다고 할 수 있지. 그렇게 되면 $0$ 에 대해서만 성립함을 보이면 귀납법에 의하여 증명되었다고 할 수 있고.*)
+
+    비슷한 과정을 통하여 $a \leq 0 \iff 0 \leq  -a$ 가 $a$ 의 parents 에 대하여 성립하면 성립함을 보일 수 있다. 
+
+    마지막으로 $0 \leq -0$ 는 자명하다. 그러므로 $-x$ 는 well-formed 이다. ▲ 
+
+    이제 $x + (-x) = 0$ 을 증명해보자. $x = 0$ 이면 $-x = 0$ 임이 자명하므로 성립한다. 
+    
+    $x$ 의 parents 에 대하여 성립함을 가정하자.
+
+    $$ x + (-x) = \{X_L + (-x), x+(-X_R) | X_R + (-x), x + (-X_L) \} \tag{3.53} $$
+
+    에서 left set 의 첫번째 원소는 
+
+    $$ X_L + (-x) = \{X _{LL} + (-x), X_L + (-X_R) | X _{LR} + (-x) , X_L + (-X_L)\} \tag{3.54} $$
+
+    이다. $x$ 의 parents 에 대하여 성립하므로 $X_L + (-X_L) = 0$ 인데 [정리 5](#c076cc283) 에 의하여 초현실수는 right set 의 모든 원소보다 작으므로 
+
+    $$ X_L + (-x) < 0 $$
+
+    이다. $(3.53)$ 의 left set 의 두번째 원소는 
+
+    $$ x + (-X_R) = \{X_L + (-X_R) , x + (-X _{RR}) | X_R + (-X_R), x + (-X _{RL})\} \tag{3.55} $$
+
+    인데 또 다시 [정리 5](#c076cc283) 를 적용하여 
+    
+    $$x + (-X_R) < 0$$
+    
+    를 얻을 수 있다. 같은 방식으로 $X_R + (-x) > 0, x + (-X_L) > 0$ 를 얻을 수 있다. 즉, $(3.53)$ 의 left set 의 모든 원소가 $0$ 보다 작고, right set 의 모든 원소가 $0$ 보다 크다는 결론을 내릴 수 있다. 
+
+    그러면 [따름정리 13](#c9737ce31) 에 의하여 left set 과 right set 사이의 가장 오래된 원소 $0$ 가 $x + (-x)$ 의 값이다. 그러므로
+
+    $$ \therefore x + (-x) = 0 $$
+
+    이다. ■ 
+
+- 그런데 왜 $-x = \{-X_R | -X_L\}$ 로 정의된다는 것은 증명하지 않을까? 
+
+!!! tldr ""
+
+    $$ a + (-b) \iff a - b $$
+
+!!! tldr ""
+
+    준동형사상(homomorphism) : 집합 $A$ 와 $B$ 에서 정의된 항수 $k$ 를 갖는 연산 $\mu$ 에 대하여 사상 $f : A \to B$ 가 
+
+    $$ \forall a_1, \dots, a_k \in A : f(\mu _A(a_1, \dots, a_k)) = \mu _B(f(a_1), \dots, f(a_k)) $$
+
+    를 만족할 때 $f$ 를 준동형사상이라 한다. 
+
+- 준동형사상은 두 대수 구조의 연산 구조를 보존하는 사상이다. 가령 이항 연산 $\cdot$ 이 두 집합 $A, B$ 에서 연산될 때 사상 $f : A \to B$ 가 
+
+    $$ f(x \cdot y) = f(x) \cdot f(y) $$
+
+    를 만족하면 $f$ 가 연산 구조를 보존한다고 말한다.
+
+- 예시 
+
+    실수 집합 $\R$ 은  덧셈과 곱셈이 정의된 환(ring)이다. $2 \times 2$ 행렬의 집합 $\R _{2 \times 2}$ 또한 덧셈과 곱셈이 정의된 환(ring)이다. 사상 $f: \R \to \R _{2 \times 2}$ 를 
+
+    $$ f(r) = \begin{pmatrix} r&0\\ 0&r\\ \end{pmatrix} $$
+
+    와 같이 정의하면 
+
+    $$ f(r + s) = \begin{pmatrix} r+s&0\\ 0&r+s\\ \end{pmatrix} = \begin{pmatrix} r&0\\ 0&r\\ \end{pmatrix} + \begin{pmatrix} s&0\\ 0&s\\ \end{pmatrix} = f(r) + f(s) $$
+
+    이고 
+
+    $$ f(rs) = \begin{pmatrix} rs&0\\ 0&rs\\ \end{pmatrix} = \begin{pmatrix} r&0\\ 0&r\\ \end{pmatrix} \begin{pmatrix} s&0\\ 0&s\\ \end{pmatrix} = f(r) f(s) $$
+
+    이므로 사상 $f$ 는 환 $\R$ 을 환 $\R _{2 \times 2}$ 로 보내면서 연산 구조를 보존한다. 그러므로 $f$ 는 실수집합환과 $2 \times 2$ 행렬집합환의 준동형사상이다.
+
+- 전단사 준동형사상을 동형사상(isomorphism) 이라 한다. 
+
+!!! tldr "정리 23"
+
+    Dali function 은 $(\R, +)$ 을 $(\mathbb{S} , +)$ 로 보내는 준동형사상이다. 즉, 실수 $a, b$ 와 Dali function $\delta$ 에 대하여 
+
+    $$ \delta (a + b) = \delta (a) + \delta (b) $$
+
+    이다.
+
+- 증명
+
+    $a = 0 \lor b = 0$:
+
+    $a, b \in \mathbb{Z} _{+}$:
+
+    $a, b \in \mathbb{Z} _{-}$:
+
+    $a \in \mathbb{Z} _{+}, b \in \mathbb{Z} _{-}$:
+
+    $a \in \mathbb{Z} _{+}, b = \dfrac{j}{2^k} \text{ s.t. }\ j \in \mathbb{Z} , k \in \mathbb{Z} _{+}$:
+
+    (이때 $\dfrac{j}{2^k}$ 는 기약분수이다.)
+
+    $a \in \mathbb{Z} _{-}, b = \dfrac{j}{2^k} \text{ s.t. }\ j \in \mathbb{Z} , k \in \mathbb{Z} _{+}$:
+
+    (이때 $\dfrac{j}{2^k}$ 는 기약분수이다.)
+
+    $a = \dfrac{j_a}{2 ^{k_a}} \text{ s.t. }\ j_a \in \mathbb{Z} , k_a \in \mathbb{Z} _{+} , b = \dfrac{j_b}{2^k_b} \text{ s.t. }\ j_b \in \mathbb{Z} , k_b \in \mathbb{Z} _{+}$:
+
+    (이때 $\dfrac{j_a}{2^k_a}, \dfrac{j_b}{2^k_b}$ 는 기약분수이다.)
 
 !!! tldr ""
 
@@ -1419,7 +1572,27 @@
     
     를 만족할 때 make sense 하다고 한다.
 
+- 증명 
+
+    정리 19, 20, 21, 22 에 의하여 $(\mathbb{S} , +)$ 는 아벨군이다. ▲ 
+
+    정리 22 에 의하여 Dali function 은 $(\R, +)$ 을 $(\mathbb{S} ,+)$ 로 보내는 준동형사상이다. ▲ 
+
+    그러므로 초현실수 덧셈 연산은 make sense 하다. ■ 
+
 - 초현실수 덧셈이 make sense 하다는 것은 쉽게 말해 덧셈이 우리가 예상한대로 행동하느냐는 것이다. 
+
+- 초현실수 덧셈 $(\mathbb{S} , +)$ 이 아벨군을 이룬다는 것은 $(\R, +)$ 와 대수적으로 동일한 성질을 띈다는 것이다. 
+
+- Dali functoin 이 $(\R, +_r)$ 를 $(\mathbb{S} , +_s)$ 로 보내는 준동형사상이라는 조건은 
+
+    $$ \delta (a +_r b) = \delta (a) +_s \delta (b) $$
+
+    을 만족한다는 것이다. 이 조건이 필요한 것은 Dali function 이 실수덧셈군의 구조를 보존하면서 두 수의 덧셈 연산을 초현실수덧셈군으로 보낼 수 있다는 것이다. 
+    
+    구조를 보존한다는 조건이 필요한 이유는 Dali function 이 초현실수에 $0, 1, 2$ 같은 이름을 부여했으므로 실수에서 $2 + 3 = 5$ 라는 결과를 내는 것과 같이 초현실수에서도 $2 + 3 = 5$ 가 되어야 하기 때문이다. 
+    
+    그러므로 $\delta (2 + 3) = \delta (5)$ 가 초현실수 $5$ 라는 이름을 부여받듯이 $\delta (2) + \delta (3)$ 가 초현실수 이름 $2$ 와 $3$ 을 부여받은 덧셈 결과 $5$ 로 연산되어야 한다는 것이다. 
 
 # 초현실수의 곱셈
 
