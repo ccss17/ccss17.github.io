@@ -1773,7 +1773,7 @@
 
 !!! tldr "초현실수 곱셈의 make sense"
 
-    초현실수 곱셈 $(\mathbb{S} \text{ \textbackslash }\{0\}, \times )$ 은 다음을 만족한다.
+    초현실수 곱셈은 다음을 만족한다.
 
     - $(\mathbb{S} \text{ \textbackslash }\{0\} , \times )$ 이 아벨군을 이룬다.
 
@@ -1821,7 +1821,7 @@
 
 - 증명
 
-    [초현실수 덧셈의 make sense](#def5835c5) 와 [초현실수 곱셈의 make sense](#cac5ed8f8) 에 의하여 초현실수의 덧셈 $\times$ 과 곱셈 $\cdot$ 은 아벨군을 이룬다. 이로써 환의 조건 1), 2) 가 성립한다. ▲ 
+    [초현실수 덧셈의 make sense](#def5835c5) 와 [초현실수 곱셈의 make sense]() 에 의하여 초현실수의 덧셈 $\times$ 과 곱셈 $\cdot$ 은 아벨군을 이룬다. 이로써 환의 조건 1), 2) 가 성립한다. ▲ 
 
     [정리 28](#d5f07d137) 에 의하여 환의 조건 3) 이 성립한다. ■ 
 
