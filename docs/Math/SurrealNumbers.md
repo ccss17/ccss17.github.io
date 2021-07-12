@@ -22,6 +22,8 @@
 
 - 초현실수 집합 $L, R$ 이 $(1.1)$ 을 만족하면 새로운 초현실수 $\{L|R\}$ 을 구성할 수 있다. 이제 $(1.1)$ 이 well-formed 된 집합 쌍을 특정짓는다고 하자. 그러면 오직 well-formed 된 집합 쌍만이 초현실수를 구성한다고 할 수 있다.
 
+- 초현실수는 쉽게 말해서 left set 과 right set 이 공집합이 아닐 경우 아래에서 살펴볼 [정리 5](#c076cc283) 에 의하여 left set 의 최댓값보다 크고 right set 의 최소값보다 작은 어떤 값이라고 생각해도 된다. 
+
 - 초현실수는 실수를 비롯하여 
 
 !!! tldr "최초의 초현실수"
@@ -48,7 +50,7 @@
 
     $$ \{0|\}, \{|0\}, \{0|0\} $$
 
-    으로 표기한다. 이때 처음 두 집합쌍은 초현실수가 되지만 마지막 집합쌍은 $0 \leq 0$ 이므로 초현실수가 될 수 없다. 그 대신 $\{0|0\}$ 같은 집합쌍을 거짓수(pseudo number) 라고 부른다. 
+    으로 표기한다. 이때 처음 두 집합쌍은 초현실수가 되지만 마지막 집합쌍은 $0 \leq 0$ 이므로 초현실수가 될 수 없다. 그 대신 $\{0|0\}$ 같은 집합쌍을 pseudo number  라고 부른다. 
 
 !!! tldr "$\leq$ 의 정의"
 
@@ -968,15 +970,7 @@
 
     우리는 $\{-1|1\} = 0$ 을 살펴보았는데 이는 $0$ 이 $-1$ 과 $1$ 사이에 있는 가장 오래된 초현실수라는 사실로부터도 도출된다. 
 
-    비슷하게 이 정리를 통하여 
-
-    $$ \{\dfrac{1}{4} | 2\} = 1 $$
-
-    과 
-
-    $$ \{\dfrac{1}{4}|1\} = \dfrac{1}{2} $$
-
-    같은 결론을 내릴 수 있다. 
+    비슷하게 이 정리를 통하여 $\bigg \{\dfrac{1}{4} | 2 \bigg \} = 1$ 과 $\bigg \{\dfrac{1}{4}|1 \bigg \} = \dfrac{1}{2}$ 같은 결론을 내릴 수 있다. 
 
 !!! tldr "초현실수의 값"
 
@@ -1704,7 +1698,7 @@
 
     초현실수 $a, b$ 에 대하여 
 
-    $$ ab = \{A_Lb+aB_L - A_LB_L, A_Rb+aB_R -A_RB_R|A_Lb+aB_R-A_LB_R, A_Rb+aB_L-A_RB_L\} $$
+    $$ \begin{equation}\begin{split} ab &= \{A_Lb+aB_L - A_LB_L, A_Rb+aB_R -A_RB_R |\\ & \qquad \qquad  A_Lb+aB_R-A_LB_R, A_Rb+aB_L-A_RB_L\} \end{split}\end{equation} \tag*{} $$
 
     라고 정의한다. 
 
@@ -1835,4 +1829,128 @@
 
 # 무한, 그리고 그 너머로
 
-# 거짓수(Pseudo-numbers) 와 Games
+!!! tldr ""
+
+    정수 집합(set of integers) : 정수 집합 $\mathbb{Z}$ 를 다음과 같이 구성한다. 
+
+    $$ 0 \in \mathbb{Z} $$
+
+    $$ n \in \mathbb{Z} \implies \{n|\} \in \mathbb{Z} $$
+
+    $$ n \in \mathbb{Z} \implies \{|n\} \in \mathbb{Z} $$
+
+- 최초로 $0 = \{|\}$ 이 $\mathbb{Z}$ 에 포함되었으니까 $1 = \{0|\}, -1 = \{|0\}$ 도 $\mathbb{Z}$ 에 포함되고, 이를 기반으로 $2 = \{1|\}, -2 = \{|-1\}$ 도 포함된다.
+
+- 이렇게 초현실수로 이루어진 정수 집합 $\mathbb{Z}$ 은 Dali function 에 평범한 정수들을 입력함으로써 평범한 정수 집합 $\mathbb{Z}$ 과 완전히 같아졌다. 
+
+!!! tldr ""
+
+    $$ \omega \equiv \{\mathbb{Z} | \} $$
+
+- $\mathbb{Z}$ 또한 명백히 초현실수 집합이므로 이를 기반으로 새로운 초현실수를 생성해낼 수 있다. 
+
+    이렇게 생성된 초현실수 $\omega$ 는 명백히 초현실수이다. left set, right set 모두 초현실수 집합이고, well-formed 이기 때문이다. 
+
+- 이 수는 [정리 5](#c076cc283) 에 의하여 모든 양의 정수보다 크다. 즉, $\omega$ 는 무한대(infinity)이다. 
+
+    일반적인 실수체에는 무한대가 존재하지 않는다. 
+
+- 그 표기법에서 예상할 수 있듯 $\omega$ 는 자연수를 서수로 이해할 때의 $\omega$ 와 매칭된다. 
+
+    서수에 대한 이야기는 여기서 줄이겠지만, 존재하는 모든 서수를 초현실수로 표현할 수 있다는 것만 언급해둔다.
+
+- 물론 $\omega$ 는 다른 표현을 가진다. 
+
+    $$ \begin{equation}\begin{split} \omega & = \{\mathbb{Z} | \}\\ & = \{1,2,3, \dots|\}\\ & = \{2,4,6, \dots|\}\\ & = P\\ \end{split}\end{equation} \tag*{} $$
+
+    $P$ 는 소수의 집합이다. [정리 9](#7817bc62f) 는 $\omega$ 의 left set 중에서 어떤 것보다 더 큰 원소를 남겨두기만 한다면 그 이외의 원소를 제거해도 된다는 것을 알려준다. 이로써 무수히 많은 $\omega$ 표현이 존재함을 알 수 있다. 
+
+!!! tldr ""
+
+    $$ \omega -1 = \{\mathbb{Z} | \omega \} $$
+
+- 증명
+
+    $$ \begin{equation}\begin{split} \omega - 1& = \omega + (-1) \\ & = \{\mathbb{Z} - 1| \omega -  0 \} \end{split}\end{equation} \tag*{} $$
+
+!!! tldr ""
+
+    $$ \omega + 1 = \{\omega | \} $$
+
+- 증명 
+
+    $$ \begin{equation}\begin{split} \omega + 1 & = \{\mathbb{Z} + 1, \omega + 0 | \}\\ & = \{\mathbb{Z} , \omega | \} \\ & = \{\omega | \} \end{split}\end{equation} \tag*{} $$
+
+    (마지막 연산은 $\omega$ 가 모든 정수보다 크기 때문에 [따름정리 10](#810bebedd) 에 의하여 도출된다.)
+
+!!! tldr ""
+
+    $$ \omega + 2 = \{\omega + 1 | \} $$
+
+    $$ \omega + 3 = \{\omega + 2 | \} $$
+
+    $$ \omega - 2 = \{\mathbb{Z}  | \omega -1 \} $$
+
+    $$ \omega - 3 = \{\mathbb{Z}  | \omega -2 \} $$
+
+    $$ \omega + \omega = \{\omega + \mathbb{Z} | \} $$
+
+- 증명 
+
+    $\omega ,\omega + 1, \omega + 2, \omega - 1, \omega -2$ 의 정의로부터 다 쉽게 도출된다. 
+
+!!! tldr ""
+
+    $$ \omega + \mathbb{Z} = \{\dots, \omega -2, \omega -1, \omega , \omega +1, \omega +2, \dots\} $$
+
+!!! tldr ""
+
+    $$ 2 \omega = \{\omega + \mathbb{Z} |\} $$
+
+    $$ 3 \omega = \{2\omega + \mathbb{Z} |\} $$
+
+    $$ 4 \omega = \{3\omega + \mathbb{Z} |\} $$
+
+    $$ \omega ^{2} = \{\omega , 2 \omega , 3 \omega , 4 \omega , \dots |\} $$
+
+    $$ \omega ^{\omega } = \{\omega , \omega ^{2} , \omega ^{3} , \omega ^{4} , \dots |\} $$
+
+    $$ \dfrac{\omega }{2} = \{\mathbb{Z} | \omega - \mathbb{Z} \} $$
+
+    $$ \sqrt[]{\omega } = \{\mathbb{Z} | \omega , \dfrac{\omega }{2}, \dfrac{\omega }{3},\dfrac{\omega }{4}, \dots\} $$
+
+    $$ - \omega  = \{| \mathbb{Z} \} $$
+
+- 물론 이 수들도 다른 표현을 가진다. 
+
+- 이로써 우리는 초현실수가 평범한 실수 이외의 수들도 포함할 수 있다는 것을 알았다. 
+
+!!! tldr "무한소의 정의"
+
+    $$ \varepsilon = \bigg \{0 \bigg | 1, \dfrac{1}{2}, \dfrac{1}{4}, \dfrac{1}{8}, \dfrac{1}{16}, \dots \bigg \} $$
+
+- 이 수 또한 well-formed 이므로 엄연히 초현실수이다. 그런데 이 수는 [정리 5](#c076cc283) 에 의하여 $0$ 보다 크면서 모든 양의 분수보다 작다. 
+
+    이러한 수를 무한소(infinitesimal) 라고 한다. 무한소는 보통 $0$ 이 아니면서 모든 양수보다 작은 수로 이해된다. 
+
+    일반적인 실수체에는 무한소가 존재하지 않는다. 
+
+- 이 수의 값을 살펴보면 $\varepsilon = \dfrac{1}{\omega }$ 인데 이로써 우리는 무한대의 역수를 얻는다. 
+
+!!! tldr ""
+
+    $$ \varepsilon + 1 = \bigg \{1\bigg |2, \dfrac{3}{2}, \dfrac{5}{4}, \dfrac{9}{8}, \dfrac{17}{16}, \dots \bigg \} $$
+
+- 이 수는 $1$ 보다 크고 $1$ 보다 큰 모든 실수보다 작은 수이다. 
+
+!!! tldr ""
+
+    $$ 2 \varepsilon = \bigg \{\varepsilon \bigg | 1 + \varepsilon , \dfrac{1}{2} + \varepsilon , \dfrac{1}{4} + \varepsilon , \dfrac{1}{8} + \varepsilon , \dfrac{1}{16} + \varepsilon , \dots \bigg \} $$
+
+    $$ \dfrac{\varepsilon }{2} = \{0 | \varepsilon \} $$
+
+    $$ \sqrt[]{\varepsilon }=\bigg  \{\varepsilon ,2 \varepsilon , 3 \varepsilon , 4 \varepsilon , \dots\ \bigg |1, \dfrac{1}{2}, \dfrac{1}{4}, \dfrac{1}{8}, \dfrac{1}{16}, \dots\bigg \} $$
+
+- 이렇게 초현실수가 무한대와 무한소를 포함하므로 초현실수의 미분이나 적분의 유용한 정의를 찾기가 어렵다. 가령 $x, y$ 가 무한소의 일부일 때 $\dfrac{dy}{dx}$ 를 정의하는 것은 쉽지 않다. 
+
+# Pseudo numbers and Games

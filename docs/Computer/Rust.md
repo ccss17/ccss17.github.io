@@ -2300,3 +2300,115 @@ let y = &mut x;
 ```
 
 하지만 `RefCell` 을 사용하면 Interior mutability 가 가능하다. 그러나 `RefCell` 이 borrow rule 을 어기면 런타임 상에서 패닉에 빠진다. 
+
+## A Use Case for Interior Mutability: Mock Objects
+
+test double 은 testing 상황에서 사용되는 일반적인 프로그래밍 개념이다. Mock object 는 test 중에 일어나는 일을 기록하는데 이로써 올바른 행동이 취해졌는지 확인 가능하다. 
+
+가령 어떤 값을 추적하여 메시지를 보내는 object 를 만들어보자. 
+
+```rust
+pub trait Messenger {
+    fn send(&self, msg: &str);
+}
+
+pub struct LimitTracker<'a, T: Messenger> {
+    messenger: &'a T,
+    value: usize,
+    max: usize,
+}
+
+impl<'a, T> LimitTracker<'a, T>
+where
+    T: Messenger,
+{
+    pub fn new(messenger: &T, max: usize) -> LimitTracker<T> {
+        LimitTracker {
+            messenger,
+            value: 0,
+            max,
+        }
+    }
+
+    pub fn set_value(&mut self, value: usize) {
+        self.value = value;
+
+        let percentage_of_max = self.value as f64 / self.max as f64;
+
+        if percentage_of_max >= 1.0 {
+            self.messenger.send("Error: You are over your quota!");
+        } else if percentage_of_max >= 0.9 {
+            self.messenger
+                .send("Urgent warning: You've used up over 90% of your quota!");
+        } else if percentage_of_max >= 0.75 {
+            self.messenger
+                .send("Warning: You've used up over 75% of your quota!");
+        }
+    }
+}
+```
+
+중요한 것은 `Messenger` trait 가 `send` 에서 immutable reference 와 메시지를 받는다는 것이다. 이 trait 가 우리가 예로 들 Mock object 가 구현할 대상이다. 이때 `set_value` 는 아무런 assertion 이 없다. 그러므로 다음과 같은 Mock object 를 만들어서 `set_value` 를 호출할 때 메시지를 `MockMessenger` 의 `sent_messages` 에 저장하도록 한다. 
+
+```rust
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    struct MockMessenger {
+        sent_messages: Vec<String>,
+    }
+
+    impl MockMessenger {
+        fn new() -> MockMessenger {
+            MockMessenger {
+                sent_messages: vec![],
+            }
+        }
+    }
+
+    impl Messenger for MockMessenger {
+        fn send(&self, message: &str) {
+            self.sent_messages.push(String::from(message));
+        }
+    }
+
+    #[test]
+    fn it_sends_an_over_75_percent_warning_message() {
+        let mock_messenger = MockMessenger::new();
+        let mut limit_tracker = LimitTracker::new(&mock_messenger, 100);
+
+        limit_tracker.set_value(80);
+
+        assert_eq!(mock_messenger.sent_messages.len(), 1);
+    }
+}
+```
+
+그러나 이는 컴파일 에러가 발생한다. `send` 메소드가 immutable reference 받기 때문에 `MockMessenger` 를 수정할 수 없기 때문이다. 그러나 `send` 의 `&self` 를 `&mut sef` 로 고칠 수도 없는게 trait 에서 Method 의 정의가 고정되어있기 때문이다. 
+
+따라서 interior mutability 의 도움을 받을 차례이다. 
+
+```rust
+use std::cell::RefCell;
+
+struct MockMessenger {
+    sent_messages: RefCell<Vec<String>>,
+}
+
+impl MockMessenger {
+    fn new() -> MockMessenger {
+        MockMessenger {
+            sent_messages: RefCell::new(vec![]),
+        }
+    }
+}
+
+impl Messenger for MockMessenger {
+    fn send(&self, message: &str) {
+        self.sent_messages.borrow_mut().push(String::from(message));
+    }
+}
+```
+
+위와 같이 `RefCell` 을 사용하도록 고치면 interior mutability 를 사용할 수 있다. 
