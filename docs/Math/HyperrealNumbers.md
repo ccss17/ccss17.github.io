@@ -47,7 +47,7 @@
 
     $\N$ 의 free ultrafilter $\mathcal{F}$ 에 대한 함수 집합 $\R ^{\N}$ 의 동치관계 $\equiv$ 를 다음과 같이 정의한다. 
 
-    $$ (r_n) \equiv (s_n) \iff \{n \in \N | r_n = s_n\} \in \mathcal{F} $$
+    $$ (r_n) \equiv (s_n) \iff \{n \in \N : r_n = s_n\} \in \mathcal{F} $$
 
 - 초실수를 정의하기 위한 $\R ^{\N}$ 에서의 이 [동치관계](../Foundations/Set/#6a7f4dd92)는 서로 동치인 집합을 잡아내기 위하여 ultrafilter 를 사용한다. 
 
@@ -63,21 +63,21 @@
 
 - 증명
 
-    $\{n \in \N | r_n = r_n\} = \N$ 이고 $\N \in \mathcal{F}$ 이므로 $\equiv$ 는 reflexive 하다. ▲ 
+    $\{n \in \N : r_n = r_n\} = \N$ 이고 $\N \in \mathcal{F}$ 이므로 $\equiv$ 는 reflexive 하다. ▲ 
 
-    $\{ n \in \N | r_n = s_n\} = \{n \in \N | s_n = r_n\}$ 이므로 어느 한쪽이 $\mathcal{F}$ 에 속하면 다른 한쪽도 속한다. 그러므로 $\equiv$ 는 symmetric 하다. ▲ 
+    $\{ n \in \N : r_n = s_n\} = \{n \in \N : s_n = r_n\}$ 이므로 어느 한쪽이 $\mathcal{F}$ 에 속하면 다른 한쪽도 속한다. 그러므로 $\equiv$ 는 symmetric 하다. ▲ 
 
     $(r_n) \equiv (s_n) \land (s_n) = (t_n)$ 라고 하면 
 
-    $$ \{n \in \N | r_n = s_n\}  \in \mathcal{F} \land \{n \in \N | s_n = t_n\} \in \mathcal{F} $$
+    $$ \{n \in \N : r_n = s_n\}  \in \mathcal{F} \land \{n \in \N : s_n = t_n\} \in \mathcal{F} $$
 
     이다. 
 
-    $$ \{n \in \N | r_n = s_n\}  \cap  \{n \in \N | s_n = t_n\} \subseteq \{n \in \N | r_n = t_n\} $$
+    $$ \{n \in \N : r_n = s_n\}  \cap  \{n \in \N : s_n = t_n\} \subseteq \{n \in \N : r_n = t_n\} $$
 
     인데 $\mathcal{F}$ 는 ultrafilter 로써 교집합에 대하여 닫혀있고 superset 에 대하여 닫혀있으므로
 
-    $$  \{n \in \N | r_n = t_n\} \in \mathcal{F} $$
+    $$  \{n \in \N : r_n = t_n\} \in \mathcal{F} $$
 
     이다. 그러므로 $(r_n) \equiv (t_n)$ 이다. 즉, $\equiv$ 는 transitive 하다. ■ 
 
@@ -85,7 +85,7 @@
 
     Ultraproduct : ultrafilter 의 동치류 관계를 ultraproduct 라고 하고, 이를 $r \in \R ^{\N}$ 와 동치관계 $\equiv$ 에 대하여 정의된 동치류
 
-    $$ [r] = \{s \in \R ^{\N} | r \equiv s\} $$
+    $$ [r] = \{s \in \R ^{\N} : r \equiv s\} $$
 
     라고 표기한다.
 
@@ -93,7 +93,7 @@
 
     초실수(Hyperreal number) : 동치관계 $\equiv$ 와 $r \in \R ^{\N}$ 의 Ultraproduct $[r]$ 대한 집합
 
-    $$ ^{*}\R = \{[r] | r \in \R ^{\N}\} = \R ^{\N} \text{ \textbackslash }\equiv $$
+    $$ ^{*}\R = \{[r] : r \in \R ^{\N}\} = \R ^{\N} \text{ \textbackslash }\equiv $$
 
     이다. 
 
@@ -137,11 +137,25 @@
 
     $\N$ 에 대한 ultrafilter $\mathcal{F}$ 에 대하여 $<$ 를 다음과 같이 정의한다.
 
-    $$ [r] < [s] \iff \{n \in \N | r_n < s_n\} \in \mathcal{F} $$
+    $$ [r] < [s] \iff \{n \in \N : r_n < s_n\} \in \mathcal{F} $$
 
 !!! tldr ""
 
-    초실수 연산 $+, \cdot$ 은 well-defined 하고, $<$ 도 그렇다. 
+    두 수열 $(r_n), (s_n)$ 에 대하여 다음과 같이 정의한다. 
+
+    $$ \llbracket  r = s \rrbracket  := \{n \in \N : r_n = s_n\} $$
+
+    $$ \llbracket  r < s \rrbracket  := \{n \in \N : r_n < s_n\} $$
+
+- 이제부터 $\llbracket \rrbracket$ 를 다른 모든 관계기호에도 자유롭게 사용할 것이다. 
+
+    - 예시 
+
+        $$ \llbracket r \in A \rrbracket  = \{n \in \N : r_n \in A\} $$
+
+!!! tldr ""
+
+    초실수 연산 $+, \cdot$ 과 관계 $<$ 은 well-defined 하다.
 
 - 증명 
 
@@ -186,7 +200,11 @@
 
 - 증명
 
-    (*부등호에 대한 정의가 필요한데 너무 간략하고 모호하게 정의해서 이해가 안된다.*)
+    우선 $r \in \R$ 을 ${}^{*}\R$ 에서 $^{*}r \in {}^{*}\R$ 로 표현해야 하지만 편의상 $*$ 를 제거하고 실수 $r$ 을 초실수 $r$ 로 표현하자. 
+
+    $\epsilon = \bigg [\bigg (1, \dfrac{1}{2}, \dfrac{1}{3}, \dfrac{1}{4}, \dots\bigg )\bigg ] = \bigg [\bigg (\dfrac{1}{n}\bigg )\bigg ]$ 라고 두자. 그러면 임의의 $r \in \R$ 에 대하여 $\bigg \{n \in \N : \dfrac{1}{n} > r \bigg \}$ 은 유한집합이다. 그러므로 $\bigg\{n \in \N : \dfrac{1}{n} < r \bigg \} \in \mathcal{F}$ 이다. 그러므로 $\epsilon < r$ 이다. ▲ 
+
+    또한 $\{n \in \N : 0 < \frac{1}{n}\} = \N \in \mathcal{F}$ 이므로 $0 < \epsilon$ 이다. ■ 
 
 !!! tldr "무한대(unlimited)의 존재 정리"
 
@@ -194,7 +212,7 @@
 
 - 증명 
 
-    (*부등호에 대한 정의가 필요한데 너무 간략하고 모호하게 정의해서 이해가 안된다.*)
+    $\omega = [(1,2,3,\dots)] = [(n)]$ 라고 두자. 임의의 실수 $r$ 에 대하여 $\{n \in \N : r \geq n\}$ 은 유한집합이므로 $\{n \in \N : r < n\} \in \mathcal{F}$ 이다. 이는 $\omega > r$ 임을 말해준다. ■ 
 
 !!! tldr ""
 

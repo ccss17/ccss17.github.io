@@ -2431,4 +2431,5 @@ Memory leak: to accidentally create memory that is never cleaned up (known as a 
 
 cycle 속에서 서로를 참조하는 reference 들을 만들면 reference count 가 $0$ 이 되지 않아서 영원히 drop 되지 않고 결국 memory leak 이 발생한다. 
 
-(skip)
+pass
+
