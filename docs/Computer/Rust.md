@@ -2411,4 +2411,24 @@ impl Messenger for MockMessenger {
 }
 ```
 
-위와 같이 `RefCell` 을 사용하도록 고치면 interior mutability 를 사용할 수 있다. 
+위와 같이 `RefCell` 을 사용하도록 고치면 interior mutability 를 사용할 수 있다. `RefCell` 의 `borrow` 는 immutable reference 타입의 `Ref<T>` 를 반환한다. borrow rule 에 의하여 우리는 immutable reference 여러개 혹은 mutable reference 하나를 가질 수 있다. 
+
+`borrow_mut` 은 mutable reference `RefMut<T>` 을 반환하는데 borrow rule 에 의해 하나밖에 생성할 수 없다. 두번 이상 호출하면 에러가 발생한다. 
+
+## Having Multiple Owners of Mutable Data by Combining Rc<T> and RefCell<T>
+
+하지만 `Rc` 와 `RefCell` 을 결합하면 mutable reference 를 여러개 가질 수 있다. 
+
+(skip)
+
+# Reference Cycles Can Leak Memory
+
+Rust 가 memory-safe language 이지만 memory leak 이 불가능한 것이 아니라 memory leak 을 어렵게 만든 것이다. 
+
+Memory leak: to accidentally create memory that is never cleaned up (known as a memory leak)
+
+가령 `Rc<T>` 와 `RefCell<T>` 를 사용할 때 memory leak 이 발생할 수 있다. 
+
+cycle 속에서 서로를 참조하는 reference 들을 만들면 reference count 가 $0$ 이 되지 않아서 영원히 drop 되지 않고 결국 memory leak 이 발생한다. 
+
+(skip)

@@ -1821,7 +1821,7 @@
 
 - 증명
 
-    [초현실수 덧셈의 make sense](#def5835c5) 와 [초현실수 곱셈의 make sense]() 에 의하여 초현실수의 덧셈 $\times$ 과 곱셈 $\cdot$ 은 아벨군을 이룬다. 이로써 환의 조건 1), 2) 가 성립한다. ▲ 
+    [초현실수 덧셈의 make sense](#def5835c5) 와 [초현실수 곱셈의 make sense](#3a416bc8c) 에 의하여 초현실수의 덧셈 $\times$ 과 곱셈 $\cdot$ 은 아벨군을 이룬다. 이로써 환의 조건 1), 2) 가 성립한다. ▲ 
 
     [정리 28](#d5f07d137) 에 의하여 환의 조건 3) 이 성립한다. ■ 
 
@@ -1843,7 +1843,7 @@
 
 - 이렇게 초현실수로 이루어진 정수 집합 $\mathbb{Z}$ 은 Dali function 에 평범한 정수들을 입력함으로써 평범한 정수 집합 $\mathbb{Z}$ 과 완전히 같아졌다. 
 
-!!! tldr ""
+!!! tldr "무한대의 정의"
 
     $$ \omega \equiv \{\mathbb{Z} | \} $$
 
@@ -1952,5 +1952,21 @@
     $$ \sqrt[]{\varepsilon }=\bigg  \{\varepsilon ,2 \varepsilon , 3 \varepsilon , 4 \varepsilon , \dots\ \bigg |1, \dfrac{1}{2}, \dfrac{1}{4}, \dfrac{1}{8}, \dfrac{1}{16}, \dots\bigg \} $$
 
 - 이렇게 초현실수가 무한대와 무한소를 포함하므로 초현실수의 미분이나 적분의 유용한 정의를 찾기가 어렵다. 가령 $x, y$ 가 무한소의 일부일 때 $\dfrac{dy}{dx}$ 를 정의하는 것은 쉽지 않다. 
+
+!!! tldr ""
+
+    dyadic : $j \in \mathbb{Z} , k \in \mathbb{Z} _{\geq 0}$ 에 대하여 $\dfrac{j}{2^k}$ 형태의 분수이다. 
+
+- 우리가 지금까지 만들었던 초현실수 분수는 모두 다 dyadic 의 형태였다. 
+
+!!! tldr ""
+
+    조건
+    
+    을 만족하는 초현실수 $t = \{T_L | T_R\}$ 가 $\dfrac{1}{3}$ 로 정의된다. 즉, 
+
+    $$ t = 
+    $$
+
 
 # Pseudo numbers and Games
