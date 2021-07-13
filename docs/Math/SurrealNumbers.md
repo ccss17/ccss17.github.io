@@ -2,7 +2,7 @@
 
     https://www.tondering.dk/download/sur16.pdf
 
-# 초현실수 개론
+# 초현실수
 
 !!! tldr "초현실수의 정의"
 

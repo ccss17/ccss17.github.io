@@ -16,7 +16,7 @@
 
 > https://math.stackexchange.com/questions/2856263/contents-of-gentzens-consistency-proof-of-pa
 
-겐첸은 먼저 PA 의 PA 의 증명 집합 $P$ 와 서수 집합 $\Alpha = \{\alpha  : \alpha   < \epsilon _0 \}$ 에 대하여 원시 재귀 함수 $C:P \to \Alpha$ 와 $E: P \to P$ 를 정의했다. $\epsilon _0$ 은  $\omega , \omega ^{\omega }, \omega ^{\omega ^{\omega }}, \dots$ 의 극한에 있는 서수이다. 함수 $C$ 와 $E$ 는 $\forall p \in P$ 에 대하여 다음 성질을 만족한다.
+겐첸은 먼저 PA 의 증명 집합 $P$ 와 서수 집합 $\Alpha = \{\alpha  : \alpha   < \epsilon _0 \}$ 에 대하여 원시 재귀 함수 $C:P \to \Alpha$ 와 $E: P \to P$ 를 정의했다. $\epsilon _0$ 은  $\omega , \omega ^{\omega }, \omega ^{\omega ^{\omega }}, \dots$ 의 극한에 있는 서수이다. 함수 $C$ 와 $E$ 는 $\forall p \in P$ 에 대하여 다음 성질을 만족한다.
 
 1. $C(p)>0 \implies  C(E(p)) < C(p)$
 
