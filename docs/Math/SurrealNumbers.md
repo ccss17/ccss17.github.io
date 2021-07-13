@@ -24,7 +24,21 @@
 
 - 초현실수는 쉽게 말해서 left set 과 right set 이 공집합이 아닐 경우 아래에서 살펴볼 [정리 5](#c076cc283) 에 의하여 left set 의 최댓값보다 크고 right set 의 최소값보다 작은 어떤 값이라고 생각해도 된다. 
 
-- 초현실수는 실수를 비롯하여 
+- 초현실수는 모든 실수와 초실수의 무한대와 무한소까지 포함하도록 구성된 집합이 아닌 전순서 모임(totally ordered proper class) 이다. 
+
+    von Neumann–Bernays–Gödel 집합론에서 생각할 경우 초현실수 체 $\mathbb{S}$ 는 유리수 $\mathbb{Q}$, 실수 $\R$, 초실수 $^{*}\R$ 등등 모든 순서체를 부분 체로 포함한다. 
+
+    물론 모든 초한서수도 초현실수에 포함된다. 
+
+    즉, 초현실수는 모든 순서체를 포함할 수 있으므로 가장 큰 순서체(ordered field) 이다. 
+
+- 초현실수는 특유의 구성방법과 연산으로 인하여 전혀 다른 새로운 수가 정의된다. 가령 무한대 $\omega$ 도 하나의 수로 다룰 수 있고, 무한소 $\epsilon$ 과 $\dfrac{\epsilon }{2}$ 도 정의할 수 있다. 
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/4/49/Surreal_number_tree.svg)
+
+    초실수(hyperreal number) 도 무한대와 무한소를 하나의 수로 정의하지만 초현실수는 집합이 아닌 전순서 모임이다.
+
+    또한 초실수에서는 $0$ 과 무한소 $\epsilon$ 사이에 수가 존재하지 않지만, 초현실수에서는 $\dfrac{\epsilon }{2}$ 등 수많은 다른 수가 존재한다. 
 
 !!! tldr "최초의 초현실수"
 
@@ -2017,13 +2031,13 @@
 
     함수 $f(y, n) = 1 + \dfrac{y}{1!} +\dfrac{y ^{2}}{2!} +\dfrac{y ^{3}}{3!} + \dots + \dfrac{y ^{n}}{n!}$ 에 대한
 
-    $$ T_1 = \exp (X_L)(f(x-X_L, n)) \quad \text{ n assumes all positive integer values } $$
+    - $T_1 = \exp (X_L)(f(x-X_L, n)) \quad \text{ n assumes all positive integer values }$
 
-    $$ T_2 = \exp (X_R)(f(x-X_R, n)) \quad \text{ n assumes all positive odd integer values } $$
+    - $T_2 = \exp (X_R)(f(x-X_R, n)) \quad \text{ n assumes all positive odd integer values }$
 
-    $$ T_3 = \dfrac{\exp (X_R)}{f(X_R - x, n)} \quad \text{ n assumes all positive integer values } $$
+    - $T_3 = \dfrac{\exp (X_R)}{f(X_R - x, n)} \quad \text{ n assumes all positive integer values }$
 
-    $$ T_4 = \dfrac{\exp (X_L)}{f(X_L - x, n)} \quad \text{ n assumes all positive odd integer values } $$
+    - $T_4 = \dfrac{\exp (X_L)}{f(X_L - x, n)} \quad \text{ n assumes all positive odd integer values }$
 
     을 만족하는 집합 $T_1,T_2,T_3,T_4$ 에 대하여
 
