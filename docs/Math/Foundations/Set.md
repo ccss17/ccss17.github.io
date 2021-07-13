@@ -1,6 +1,6 @@
-!!! info
+!!! info "ref"
 
-    [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html) 를 공부하면서 노트정리 한 내용입니다.
+    [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)
 
 # 명제와 집합
 
