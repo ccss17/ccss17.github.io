@@ -1959,14 +1959,76 @@
 
 - 우리가 지금까지 만들었던 초현실수 분수는 모두 다 dyadic 의 형태였다. 
 
-!!! tldr ""
+!!! tldr "$\dfrac{1}{3}$ 의 정의"
 
-    조건
+    다음을 만족하는 초현실수 $t = \{T_L | T_R\}$ 를 $\dfrac{1}{3}$ 로 정의한다. 
+
+    - $T_L$ 은 $3j < 2 ^{k}$ 를 만족하는 모든 dyadic $\dfrac{j}{2^k}$ 의 집합이다.
+
+    - $T_R$ 은 $3j > 2 ^{k}$ 를 만족하는 모든 dyadic $\dfrac{j}{2^k}$ 의 집합이다.
+
+!!! tldr "$\pi$ 의 정의"
+
+    $\pi$ 보다 작은 모든 dyadic 의 집합 $L$ 과 $\pi$ 보다 큰 모든 dyadic 의 집합 $R$ 에 대하여
+
+    $$\pi = \{L|R\}$$
+
+    이다.
+
+- 전자의 $\pi$ 는 $\R$ 에 있고 후자의 $\pi$ 는 $\mathbb{S}$ 에 있다. 
+
+- $\dfrac{1}{3}$ 과 $\pi$ 같은 실수를 구성하는 방식은 데데킨트 절단을 연상시킨다. 
+
+!!! tldr "나눗셈의 정의"
+
+    초현실수 $x$ 와 조건
+
+    - $0 \in L$
+
+    - $\lambda \in L \implies \dfrac{1 + (X_R-x) \lambda }{X_R} \in L$
     
-    을 만족하는 초현실수 $t = \{T_L | T_R\}$ 가 $\dfrac{1}{3}$ 로 정의된다. 즉, 
+    - $\lambda \in L \implies \dfrac{1 + (X_L-x) \lambda }{X_L} \in R$
+    
+    - $\rho \in R \implies \dfrac{1 + (X_L-x) \rho  }{X_L} \in L$
+    
+    - $\rho \in R \implies \dfrac{1 + (X_R-x) \rho  }{X_R} \in R$
+    
+    을 만족하는 집합 $L, R$ 에 대하여 
 
-    $$ t = 
-    $$
+    $$ \dfrac{1}{x} = \{L|R\} $$
 
+    이다. 
 
-# Pseudo numbers and Games
+- 증명
+
+- 예시 
+
+    초현실수 $\dfrac{1}{5}$ 를 표현해보자. $x = 5$ 에서 $X_L = \{4\}, X_R = \varnothing$ 이므로 
+    
+    $$ 0 \in L $$
+
+    $$ \lambda \in L \implies \dfrac{1- \lambda }{4} \in R $$
+
+    $$ \rho \in R \implies \dfrac{1- \rho }{4} \in L $$
+
+    이다. 즉, $0 \in L, \dfrac{1}{4} \in R, \dfrac{3}{16} \in L, \dfrac{13}{64} \in R, \dots$ 이다. 
+
+!!! tldr "$e^{x} 의 정의$"
+
+    함수 $f(y, n) = 1 + \dfrac{y}{1!} +\dfrac{y ^{2}}{2!} +\dfrac{y ^{3}}{3!} + \dots + \dfrac{y ^{n}}{n!}$ 에 대한
+
+    $$ T_1 = \exp (X_L)(f(x-X_L, n)) \quad \text{ n assumes all positive integer values } $$
+
+    $$ T_2 = \exp (X_R)(f(x-X_R, n)) \quad \text{ n assumes all positive odd integer values } $$
+
+    $$ T_3 = \dfrac{\exp (X_R)}{f(X_R - x, n)} \quad \text{ n assumes all positive integer values } $$
+
+    $$ T_4 = \dfrac{\exp (X_L)}{f(X_L - x, n)} \quad \text{ n assumes all positive odd integer values } $$
+
+    을 만족하는 집합 $T_1,T_2,T_3,T_4$ 에 대하여
+
+    $$\exp (x) = \{0, T_1, T_2, | T_3, T_4\}$$
+
+    이다. 
+
+- 증명 
