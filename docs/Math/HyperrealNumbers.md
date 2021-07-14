@@ -49,7 +49,7 @@
 
     $\N$ 의 free ultrafilter $\mathcal{F}$ 에 대한 $\R ^{\N}$ 의 동치관계 $\equiv$ 를 다음과 같이 정의한다. 
 
-    $$ (r_n) \equiv (s_n) \iff \{n \in \N : r_n = s_n\} \in \mathcal{F} $$
+    $$ \big < r_n \big > \equiv \big < s_n \big > \iff \{n \in \N : r_n = s_n\} \in \mathcal{F} $$
 
 - 초실수를 정의하기 위한 $\R ^{\N}$ 에서의 이 [동치관계](../Foundations/Set/#6a7f4dd92)는 서로 동치인 집합을 잡아내기 위하여 ultrafilter 를 사용한다. 
 
@@ -57,7 +57,7 @@
 
 - 예시 
 
-    두 실수 무한 수열 $x = (1,2,3,4, \dots), y = (1,2,2,4, \dots)$ 가 오직 $3$ 번째 항에서 다르다면 $x \equiv y$ 라고 정의한다.
+    두 실수 무한 수열 $x = \big < 1,2,3,4, \dots \big >, y = \big < 1,2,2,4, \dots \big >$ 가 오직 $3$ 번째 항에서 다르다면 $x \equiv y$ 라고 정의한다.
 
 !!! tldr ""
 
@@ -69,7 +69,7 @@
 
     $\{ n \in \N : r_n = s_n\} = \{n \in \N : s_n = r_n\}$ 이므로 어느 한쪽이 $\mathcal{F}$ 에 속하면 다른 한쪽도 속한다. 그러므로 $\equiv$ 는 symmetric 하다. ▲ 
 
-    $(r_n) \equiv (s_n) \land (s_n) = (t_n)$ 라고 하면 
+    $\big < r_n \big > \equiv \big < s_n \big > \land \big < s_n \big > = \big < t_n \big >$ 라고 하면 
 
     $$ \{n \in \N : r_n = s_n\}  \in \mathcal{F} \land \{n \in \N : s_n = t_n\} \in \mathcal{F} $$
 
@@ -81,7 +81,7 @@
 
     $$  \{n \in \N : r_n = t_n\} \in \mathcal{F} $$
 
-    이다. 그러므로 $(r_n) \equiv (t_n)$ 이다. 즉, $\equiv$ 는 transitive 하다. ■ 
+    이다. 그러므로 $\big < r_n \big > \equiv \big < t_n \big >$ 이다. 즉, $\equiv$ 는 transitive 하다. ■ 
 
 !!! tldr "초실수의 정의"
 
@@ -99,9 +99,9 @@
 
         $=$ 좌측은 초실수이고 우측은 실수 무한수열의 동치류이다. 
 
-        $$ 0 = [(0, 0, 0, \dots)] $$
+        $$ 0 = [\big <0, 0, 0, \dots\big >] $$
 
-        $$ \pi  = [(\pi, \pi, \pi, \dots)] $$
+        $$ \pi  = [\big <\pi, \pi, \pi, \dots\big >] $$
 
 - 비표준해석학(Non-standard analysis)은 해석학을 연구하기 위하여 $\epsilon,\delta$ 와 거리함수를 사용하는 대신 초실수(주로 무한소)를 사용한다. 
 
@@ -123,9 +123,9 @@
 
     초실수 연산은 다음과 같이 componentwise 하게 정의된다.
 
-    $$ [r] + [s] = [(r_n + s_n)] $$
+    $$ [r] + [s] = [\big <r_n + s_n\big >] $$
 
-    $$ [r] \cdot [s] = [(r_n \cdot s_n)] $$
+    $$ [r] \cdot [s] = [\big <r_n \cdot s_n\big >] $$
 
 !!! tldr "$<$ 의 정의"
 
@@ -135,7 +135,7 @@
 
 !!! tldr ""
 
-    두 수열 $(r_n), (s_n)$ 에 대하여 다음과 같이 정의한다. 
+    두 수열 $\big <r_n\big >, \big <s_n\big >$ 에 대하여 다음과 같이 정의한다. 
 
     $$ \llbracket  r = s \rrbracket  := \{n \in \N : r_n = s_n\} $$
 
@@ -153,7 +153,7 @@
 
 - 증명 
 
-    $+$ 가 잘 정의되었음을 보이자. $(r_n) \equiv (r'_n), (s_n) \equiv (s'_n)$ 은 $\llbracket r = r' \rrbracket \in \mathcal{F}, \llbracket s = s' \rrbracket \in \mathcal{F}$ 을 뜻한다. 또 이는 [ultrafilter 의 성질]()에 의하여 $\llbracket r=r' \rrbracket \cap \llbracket s = s' \rrbracket \in \mathcal{F}$ 을 함의한다. 
+    $+$ 가 잘 정의되었음을 보이자. $\big <r_n\big > \equiv \big <r'_n\big >, \big <s_n\big > \equiv \big <s'_n\big >$ 은 $\llbracket r = r' \rrbracket \in \mathcal{F}, \llbracket s = s' \rrbracket \in \mathcal{F}$ 을 뜻한다. 또 이는 [ultrafilter 의 성질]()에 의하여 $\llbracket r=r' \rrbracket \cap \llbracket s = s' \rrbracket \in \mathcal{F}$ 을 함의한다. 
 
     우리가 보여야 할 것은 $\llbracket r + s = r' + s' \rrbracket \in \mathcal{F}$ 이다. 어떤 $k \in \N$ 에 대하여 
     
@@ -173,7 +173,7 @@
 
     $<$ 가 잘 정의되었다는 것은 
 
-    $$ (r_n) \equiv (r'_n) \land (s_n) \equiv (s'_n) \land \llbracket r<s \rrbracket  \in \mathcal{F} \implies \llbracket r' < s' \rrbracket \in \mathcal{F} $$
+    $$ \big <r_n\big > \equiv \big <r'_n\big > \land \big <s_n\big > \equiv \big <s'_n\big > \land \llbracket r<s \rrbracket  \in \mathcal{F} \implies \llbracket r' < s' \rrbracket \in \mathcal{F} $$
 
     이다. 이것을 증명해야 한다. 먼저 [ultrafilter 의 성질]() 과 가정에 의하여 
 
@@ -225,7 +225,7 @@
 
     우선 $r \in \R$ 을 ${}^{*}\R$ 에서 $^{*}r \in {}^{*}\R$ 로 표현해야 하지만 편의상 $*$ 를 제거하고 실수 $r$ 을 초실수 $r$ 로 표현하자. 
 
-    $\epsilon = \bigg [\bigg (1, \dfrac{1}{2}, \dfrac{1}{3}, \dfrac{1}{4}, \dots\bigg )\bigg ] = \bigg [\bigg (\dfrac{1}{n}\bigg )\bigg ]$ 라고 두자. 그러면 임의의 $r \in \R$ 에 대하여 $\bigg \{n \in \N : \dfrac{1}{n} > r \bigg \}$ 은 유한집합이다. 그러므로 $\bigg\{n \in \N : \dfrac{1}{n} < r \bigg \} \in \mathcal{F}$ 이다. 그러므로 $\epsilon < r$ 이다. ▲ 
+    $\epsilon = \bigg [\bigg <1, \dfrac{1}{2}, \dfrac{1}{3}, \dfrac{1}{4}, \dots\bigg >\bigg ] = \bigg [\bigg <\dfrac{1}{n}\bigg >\bigg ]$ 라고 두자. 그러면 임의의 $r \in \R$ 에 대하여 $\bigg \{n \in \N : \dfrac{1}{n} > r \bigg \}$ 은 유한집합이다. 그러므로 $\bigg\{n \in \N : \dfrac{1}{n} < r \bigg \} \in \mathcal{F}$ 이다. 그러므로 $\epsilon < r$ 이다. ▲ 
 
     또한 $\{n \in \N : 0 < \frac{1}{n}\} = \N \in \mathcal{F}$ 이므로 $0 < \epsilon$ 이다. ■ 
 
@@ -235,7 +235,7 @@
 
 - 증명 
 
-    $\omega = [(1,2,3,\dots)] = [(n)]$ 라고 두자. 임의의 실수 $r$ 에 대하여 $\{n \in \N : r \geq n\}$ 은 유한집합이므로 $\{n \in \N : r < n\} \in \mathcal{F}$ 이다. 이는 $\omega > r$ 임을 말해준다. ■ 
+    $\omega = [\big <1,2,3,\dots\big >] = [\big <n\big >]$ 라고 두자. 임의의 실수 $r$ 에 대하여 $\{n \in \N : r \geq n\}$ 은 유한집합이므로 $\{n \in \N : r < n\} \in \mathcal{F}$ 이다. 이는 $\omega > r$ 임을 말해준다. ■ 
 
 !!! tldr ""
 
@@ -246,3 +246,73 @@
 - 이 동치관계가 잘 정의되었음을 증명하는 것은 쉽다. 
 
 - $\epsilon \backsimeq 0$ 에서 "arbitrary close" 라는 개념이 나온다. 이것에 해석학의 증명의 핵심이 있기 때문에 잘 이해해야 한다.
+
+# Set Enlargement
+
+!!! tldr ""
+
+    Enlarged set : 집합 $A \subset \R$ 에 대하여 다음 조건이 충족되면 enlarged set $^{*}A \in {}^{*}\R$ 을 정의할 수 있다. 
+
+    $$ [r] \in {}^{*}A \iff \{n \in \N : r_n \in A\} \in \mathcal{F} $$
+
+- 예시 
+
+    $A = \N, \omega = \big <1,2,3,\dots\big >$ 로 두자. 그러면 
+
+    $$ \llbracket \omega \in \N \rrbracket  = \N \in \mathcal{F} \implies \omega \in {}^{*}\N $$
+
+    이다. $^{*}\N$ 을 초자연수(hypernatural) 이라고 한다. 
+
+- 예시 
+
+    $A = \{0, 1\}, r = \big <0.9, 0.99, 0.999, \dots\big >$ 로 두자. 그러면 
+
+    $$ \llbracket r \in \N \rrbracket  = \N \in \mathcal{F} \implies r \in {}^{*}\{0, 1\} $$
+
+    이다. 
+
+!!! tldr ""
+
+    Enlarged set 은 잘 정의되었다.
+
+- 증명 
+
+    $\llbracket r \in A \rrbracket = \{n \in \N : r_n \in A\}$ 에서 
+
+    $$ \llbracket r=r' \rrbracket \cap \llbracket r \in A \rrbracket \subseteq \llbracket r' \in A \rrbracket $$
+
+    이다. $r \equiv r' \land \llbracket r \in A \rrbracket \in \mathcal{F}$ 이면 $\llbracket r' \in A \rrbracket \in \mathcal{F}$ 이므로 증명이 끝났다. ■ 
+
+# Extending functions
+
+!!! tldr ""
+
+    Function extension : 함수가 실함수일 경우와 실가함수일 경우 다음과 같이 extension 이 이루어진다.
+    
+    - 실함수 $f: \R \to \R$ 를 초현실수를 표현하는 수열의 성분에 
+
+        $$ {}^{*}f([\big <r_1, r_2, \dots\big >]) = [\big <f(r_1), f(r_2), \dots\big >] $$
+    
+        와 같이 적용하여 $^{*}f: {}^{*}\R \to {}^{*}\R$ 를 얻는 것이다.
+    
+    - $A \subset \R$ 에 대한 실가함수 $f: A \to \R$ 의 extension $^{*}f: {}^{*}A \to {}^{*}\R$ 은 
+
+!!! tldr ""
+
+    Function extension 은 잘 정의되었다. 
+
+- 증명 
+
+    먼저 편의상 $f \circ r$ 을 초실수 $r$ 의 수열을 함수 $f$ 에 적용한 수열 
+
+    $$ f \circ r := \big <f(r_1), f(r_2), \dots\big > $$
+
+    로 정의하자. 
+
+    일반적으로 $\llbracket r=r' \rrbracket \subseteq \llbracket f \circ r = f \circ r' \rrbracket$ 가 성립한다. 그러므로 
+    
+    $$ r \equiv r' \implies {}^{*}f(r) = f \circ r \equiv f \circ r' = {}^{*}f(r')$$
+
+    이다. 그러므로 Funciton extension 은 잘 정의되었다. ■ 
+    
+    
