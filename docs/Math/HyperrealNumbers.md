@@ -557,10 +557,79 @@
 
 - 쉽게 말해 초실수 $b$ 의 halo 는 $b$ 와 무한히 가까운 모든 초실수의 집합이라는 것이다. 
 
-!!! tldr ""
+!!! tldr "정리 3.1"
 
     $$ \forall b, c \in \R : b \backsimeq c \implies b = c $$
 
 - 증명
 
     $b \backsimeq c \land b \neq c$ 를 가정하자. 그러면 $b - c = r \neq 0$ 이다. 하지만 $r$ 이 무한소가 아니므로 이는 $b \backsimeq c$ 이라는 가정과 모순이다. ■ 
+
+!!! tldr "정리 3.2"
+
+    유한 $b, c$ 에 대하여 다음이 성립한다. 
+
+    - $b \backsimeq b' \land c \backsimeq c' \implies b \pm c \backsimeq b' \pm c' \land b \cdot c \backsimeq b' \cdot c'$
+
+    - $b \backsimeq b' \land c \backsimeq c' \land c \not \backsimeq 0 \implies \frac{b}{c} \backsimeq \frac{b'}{c'}$
+
+- $b \backsimeq b' \land c \backsimeq c' \implies b \pm c \backsimeq b' \pm c'$ 은 $b,c$ 가 무한대일 때도 성립한다. 
+
+- 증명 
+
+    $b \pm c \backsimeq b' \pm c'$ 를 보이는 것은 $(b \pm c) - (b' \pm c')$ 이 무한소임을 보이는 것이다. 가정에 의하여 $b-b' = \epsilon _b, c-c' = \epsilon _c$ 이므로 
+
+    $$ (b \pm c) - (b' \pm c') = (b-b') \pm (c-c') = \epsilon _b \pm \epsilon _c$$
+
+    이다. [초실수 연산 규칙](#ee0ef370f) 에 의하여 이것은 무한소이다. 그러므로 증명이 끝났다. ▲ 
+
+    $b \cdot c \backsimeq b' \cdot c'$ 를 보이는 것도 비슷하다. 
+
+    $$ \begin{equation}\begin{split}   b \cdot c - b' \cdot c'&= b \cdot c - b \cdot c' + b \cdot c' - b' \cdot c' \\ &= b \cdot (c-c') + (b-b') \cdot c' \\ &= b \cdot \epsilon _c + \epsilon _b \cdot c' \\ \end{split}\end{equation}\tag*{} $$
+
+    이다. [초실수 연산 규칙](#ee0ef370f) 에 의하여 이것은 무한소이다. 그러므로 증명이 끝났다. ▲ 
+
+    마지막으로 
+
+    $$ \begin{equation}\begin{split}   \frac{b}{c} - \frac{b'}{c'}&= \frac{b \cdot c' - b' \cdot c}{c \cdot c'}  \\ &= \frac{b \cdot c' - b \cdot c + b \cdot c - b' \cdot c}{c \cdot c'}  \\ &= \frac{b \cdot (c' - c) + c \cdot (b - b')}{c \cdot c'}  \\ &= \frac{b \cdot \epsilon _c + c \cdot \epsilon _b}{c \cdot c'}  \\ \end{split}\end{equation}\tag*{} $$
+
+    이다. [초실수 연산 규칙](#ee0ef370f) 에 의하여 이것은 무한소이다. 그러므로 증명이 끝났다. ■  
+
+## Shadows
+
+!!! tldr "shadow 의 존재 정리"
+
+    모든 유한 초실수 $b$ 는 오직 하나의 실수 $s$ 와 무한히 가깝다. 
+    
+    이 실수를 $b$ 의 shadow 라고 하고 $\text{sh}(b)$ 라고 표기한다. 
+
+- 증명 
+
+    $A = \{r \in \R : r < b\}$ 로 두자. $A$ 는 공집합이 아니므로 상계를 가지고 [실수의 완비성 공리](../Foundations/numbers/#050ce8566)에 의하여 상한 $s$ 를 가진다. 
+
+    $b \backsimeq s$ 를 보여야 한다. 이는 $\forall \epsilon \in \R ^{+} : |b-s| < \epsilon$ 을 보이는 것이다. 임의의 실수로 $\epsilon$ 을 잡자. 그러면 $|b-s|<\epsilon$ 을 보이는 것은 $s - \epsilon < b < s + \epsilon$ 을 증명하는 것이다. ▲ 
+
+    먼저 $b < s + \epsilon$ 을 보이자. $s + \epsilon \leq b$ 라고 가정하자. 그러면 
+
+    $$ s < s + \frac{\epsilon }{2} < s + \epsilon \leq b $$
+
+    이다. $s, \epsilon \in \R \implies  s + \frac{\epsilon }{s} \in \R$ 이고 $s + \frac{\epsilon }{2} < b$ 이므로 
+
+    $$ s + \frac{\epsilon }{2} \in A $$
+
+    이다. 그런데 $s + \frac{\epsilon }{2} > s$ 이므로 $s$ 는 $A$ 의 상한이 될 수 없다. 하지만 이는 모순이다. ▲ 
+
+    $s - \epsilon < b$ 을 보이자. $b \leq  s - \epsilon$ 라고 가정하자. 그러면 
+
+    $$ b \leq s - \epsilon < s - \frac{\epsilon }{2} < s  $$
+
+    이다. $s - \frac{\epsilon }{2} \geq  b$ 이므로 $s - \frac{\epsilon }{2}$ 는 $A$ 의 상계이다. 그러나 
+
+    $$ s - \frac{\epsilon }{2} < s $$
+
+    이므로 $s$ 가 $A$ 의 상한이라는 것에 모순이다. ▲ 
+
+    마지막으로 $b$ 의 shadow 가 유일함을 보여야 한다. $b$ 에 무한히 가까운 실수 $s, s'$ 가 존재한다고 가정하자. 즉, $b \backsimeq s \land b \backsimeq s'$ 이다. 그러면 동치관계의 transitivity 에 의하여 $s \backsimeq s'$ 이다. 그러면 [정리 3.1]() 에 의하여 $s = s'$ 이다. ■ 
+
+# 초실수의 수렴
+
