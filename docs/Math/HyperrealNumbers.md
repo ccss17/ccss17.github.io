@@ -15,7 +15,7 @@
 
 !!! tldr ""
 
-    Ultrafilter : 집합 $X$ 에 대한 ultrafilter $\mathcal{F}$ 는 다음을 만족하는 $X$ 의 부분집합의 집합이다. 
+    Ultrafilter : 집합 $X$ 에 대한 ultrafilter 는 다음을 만족하는 $X$ 의 부분집합의 집합이다. 
 
     1. $X \in \mathcal{F}$
 
@@ -41,11 +41,13 @@
 
     ultrafilter 는 큰 집합이 필요할 때 작은 집합을 걸러내는 체처럼 사용된다.
 
+- 이제부터 $\N$ 의 free ultrafilter 를 $\mathcal{F}$ 로 두고 계속 사용할 것이다. 
+
 - 증명
 
 !!! tldr "$\equiv$ 의 정의"
 
-    $\N$ 의 free ultrafilter $\mathcal{F}$ 에 대한 함수 집합 $\R ^{\N}$ 의 동치관계 $\equiv$ 를 다음과 같이 정의한다. 
+    $\N$ 의 free ultrafilter $\mathcal{F}$ 에 대한 $\R ^{\N}$ 의 동치관계 $\equiv$ 를 다음과 같이 정의한다. 
 
     $$ (r_n) \equiv (s_n) \iff \{n \in \N : r_n = s_n\} \in \mathcal{F} $$
 
@@ -59,7 +61,7 @@
 
 !!! tldr ""
 
-    $\equiv$ 는 동치관계가 된다.
+    $\equiv$ 는 동치관계이다.
 
 - 증명
 
@@ -81,17 +83,9 @@
 
     이다. 그러므로 $(r_n) \equiv (t_n)$ 이다. 즉, $\equiv$ 는 transitive 하다. ■ 
 
-!!! tldr ""
-
-    Ultraproduct : ultrafilter 의 동치류 관계를 ultraproduct 라고 하고, 이를 $r \in \R ^{\N}$ 와 동치관계 $\equiv$ 에 대하여 정의된 동치류
-
-    $$ [r] = \{s \in \R ^{\N} : r \equiv s\} $$
-
-    라고 표기한다.
-
 !!! tldr "초실수의 정의"
 
-    초실수(Hyperreal number) : 동치관계 $\equiv$ 와 $r \in \R ^{\N}$ 의 Ultraproduct $[r]$ 대한 집합
+    초실수(Hyperreal number) : $\R ^{\N}$ 의 동치관계 $\equiv$ 에 대한 동치류 $[r] = \{s \in \R ^{\N} : r \equiv s\}$ 에 대한 집합
 
     $$ ^{*}\R = \{[r] : r \in \R ^{\N}\} = \R ^{\N} \text{ \textbackslash }\equiv $$
 
@@ -155,12 +149,41 @@
 
 !!! tldr ""
 
-    초실수 연산 $+, \cdot$ 과 관계 $<$ 은 well-defined 하다.
+    초실수 연산 $+, \cdot$ 과 관계 $<$ 은 잘 정의(well-defined)되었다.
 
 - 증명 
 
-    pass
+    $+$ 가 잘 정의되었음을 보이자. $(r_n) \equiv (r'_n), (s_n) \equiv (s'_n)$ 은 $\llbracket r = r' \rrbracket \in \mathcal{F}, \llbracket s = s' \rrbracket \in \mathcal{F}$ 을 뜻한다. 또 이는 [ultrafilter 의 성질]()에 의하여 $\llbracket r=r' \rrbracket \cap \llbracket s = s' \rrbracket \in \mathcal{F}$ 을 함의한다. 
 
+    우리가 보여야 할 것은 $\llbracket r + s = r' + s' \rrbracket \in \mathcal{F}$ 이다. 어떤 $k \in \N$ 에 대하여 
+    
+    $$r_k = r'_k, s_k = s'_k \implies r_k + s_k = r'_k + s'_k$$
+    
+    이므로 만약 $k \in \llbracket r=r' \rrbracket \cap \llbracket s = s' \rrbracket$ 이면 $k \in \llbracket r+s = r'+s' \rrbracket$ 이다. 이는 
+
+    $$ \llbracket r = r' \rrbracket \cap \llbracket s = s' \rrbracket \subseteq \llbracket r+s = r'+s' \rrbracket $$
+
+    임을 말해준다. $\llbracket r=r' \rrbracket \cap \llbracket s = s' \rrbracket \in \mathcal{F}$ 이므로 [ultrafilter 의 성질]()에 의하여 $\llbracket r+s = r'+s' \rrbracket$ 이다. 그러므로 
+
+    $$ r \equiv r' \land s \equiv s' \implies r+s \equiv r'+s' $$
+
+    이다. ▲ 
+
+    $\cdot$ 이 잘 정의되었다는 것도 비슷하게 증명된다. ▲ 
+
+    $<$ 가 잘 정의되었다는 것은 
+
+    $$ (r_n) \equiv (r'_n) \land (s_n) \equiv (s'_n) \land \llbracket r<s \rrbracket  \in \mathcal{F} \implies \llbracket r' < s' \rrbracket \in \mathcal{F} $$
+
+    이다. 이것을 증명해야 한다. 먼저 [ultrafilter 의 성질]() 과 가정에 의하여 
+
+    $$ \llbracket r=r' \rrbracket \cap \llbracket s=s' \rrbracket \cap \llbracket r<s \rrbracket \in \mathcal{F} $$
+
+    이다. 만약 $k \in \llbracket r=r' \rrbracket \cap \llbracket s=s' \rrbracket \cap \llbracket r<s \rrbracket$ 이면 $r_k = r'_k, s_k = s'_k, r_k < s_k$ 이고, 그러므로 $r'_k < s'_k$ 이다. 따라서 $k \in \llbracket r' < s' \rrbracket$ 이다. 이는 
+
+    $$ \llbracket r=r' \rrbracket \cap \llbracket s=s' \rrbracket \cap \llbracket r<s \rrbracket \subseteq \llbracket r' < s' \rrbracket $$
+
+    을 뜻하고, [ultrafilter 의 성질]() 에 의하여 $\llbracket r' < s' \rrbracket \in \mathcal{F}$ 이다. ■ 
 
 # Transfer Principle
 
@@ -188,7 +211,7 @@
 
     를 생각하자. 만약 1차 논리 명제 $\phi$ 가 각각의 $M_i$ 에 대하여 성립하고 ultrafilter 에 의하여 captured 된다면 $\phi$ 는 ultraproduct 에서도 성립한다. ■ 
 
-    - *ultrafilter 에 대한 이해가 부족해서 captured 된다는 것이 뭔지 잘 모르겠다*
+    - *ultrafilter, ultraproduct 에 대한 이해가 부족해서 captured 된다는 것이 뭔지 잘 모르겠다*
 
 # 무한소와 무한대 
 
