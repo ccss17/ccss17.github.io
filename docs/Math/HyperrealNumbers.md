@@ -1,11 +1,11 @@
 
-# 초실수
-
 !!! info "ref"
 
     https://sites.math.washington.edu/~morrow/336_15/papers/gianni.pdf
 
     https://arthasekuritas.com/researchpdf/arthalastcompany.pdf
+
+# 초실수
 
 !!! tldr ""
 
@@ -185,7 +185,7 @@
 
     을 뜻하고, [ultrafilter 의 성질](#67081dab0) 에 의하여 $\llbracket r' < s' \rrbracket \in \mathcal{F}$ 이다. ■ 
 
-# 무한소와 무한대 
+## 무한소와 무한대 
 
 !!! tldr "무한소(infinitesimal)의 존재 정리"
 
@@ -217,7 +217,9 @@
 
     ![](http://www.vias.org/calculus/img/01_real_and_hyperreal_numbers-83.gif)
 
-# Set Enlargement
+# 초실수로의 도약
+
+## Set Enlargement
 
 !!! tldr ""
 
@@ -253,7 +255,7 @@
 
     이다. $r \equiv r' \land \llbracket r \in A \rrbracket \in \mathcal{F}$ 이면 $\llbracket r' \in A \rrbracket \in \mathcal{F}$ 이므로 증명이 끝났다. ■ 
 
-# Extending functions
+## Extending functions
 
 !!! tldr ""
 
@@ -309,7 +311,7 @@
 
 - 실가함수의 function extension 이 잘 정의되어서 초수열 $s: {}^{*}\N \to {}^{*}\R$ 에서 $s_n$ 가 $n \in {}^{*}\N \text{ \textbackslash } \N$ 일 때도 초수열을 만들 수 있다. 
 
-# Transfer Principle
+## Transfer Principle
 
 !!! tldr ""
 
