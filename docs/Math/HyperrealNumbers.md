@@ -291,11 +291,11 @@
 
 - 예시 
 
-    $A = \{0, 1\}, r = \big <0.9, 0.99, 0.999, \dots\big >$ 로 두자. 그러면 
+    $A = (0, 1), r = \big <0.9, 0.99, 0.999, \dots\big >$ 로 두자. 그러면 
 
-    $$ \llbracket r \in \N \rrbracket  = \N \in \mathcal{F} \implies r \in {}^{*}\{0, 1\} $$
+    $$ \llbracket r \in (0, 1) \rrbracket  = \N \in \mathcal{F} \implies r \in {}^{*}(0, 1) $$
 
-    이다. (*이거 왜 이렇게 되는 거지?*)
+    이다.
 
 !!! tldr ""
 
