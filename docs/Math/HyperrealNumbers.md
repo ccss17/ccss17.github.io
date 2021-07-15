@@ -29,7 +29,7 @@
 
 - 초실수를 구성하기 위하여 우리는 $\N$ 에 대한 자유 극대필터를 사용한다.
 
-!!! tldr ""
+!!! tldr "$\mathcal{F}$ 의 정의"
 
     $\N$ 의 자유 극대 필터 $\mathcal{F}$ 가 존재한다. 
 
@@ -95,6 +95,10 @@
 
     이다. 
 
+- 초실수는 다음과 같이 정의할 수도 있다. 
+
+    $$ ^{*}\R = (\prod_{n \in N}^{\R}) / \mathcal{F} = \prod_{\mathcal{F}}^{}\R = \{[r] : r \in \R ^{\N}\} = \R ^{\N} \text{ \textbackslash }\equiv $$
+
 - 유리수가 실수의 부분체이듯이, 실수는 초실수의 부분체이다. 
 
 - 비표준해석학(Non-standard analysis)은 해석학을 연구하기 위하여 $\epsilon,\delta$ 와 거리함수를 사용하는 대신 초실수(주로 무한소)를 사용한다.  일반적인 실수체에서는 무한대와 무한소가 존재하지 않는데 초실수체에서는 무한대와 무한소가 존재하여 비표준해석학을 전개할 수 있다.
@@ -117,13 +121,13 @@
 
 !!! tldr "초실수의 기수"
 
-    $$ \text{card }({}^{*}\R ) = 2 ^{\aleph _0} $$
+    $$ |{}^{*}\R | = 2 ^{\aleph _0} $$
 
 - 증명 (https://math.stackexchange.com/questions/54059/cardinality-of-the-set-of-hyperreal-numbers)
 
-    초실수체 ${}^{*}\R$ 이 가산 index 집합 $\N$ 에 대한 실수 $\R$ 의 초거듭제곱(ultrapower) ${}^{*}\R = (\prod_{n \in \N}^{}\R) / \mathcal{F}$ 로 구성되었으므로 자명하게 $\text{card }(\R) \leq \text{card }({}^{*}\R )$ 이다.
+    초실수체 ${}^{*}\R$ 이 가산 index 집합 $\N$ 에 대한 실수 $\R$ 의 초거듭제곱(ultrapower) ${}^{*}\R = (\prod_{n \in \N}^{}\R) / \mathcal{F}$ 로 구성되었으므로 자명하게 $|\R| \leq |{}^{*}\R |$ 이다.
 
-    [실수의 기수가 $\text{card }(\R) = 2 ^{\aleph _0}$](../Foundations/InfiniteSet/#d91d642d4) 이고, $\text{card }({}^{*}\R )$ 이 실수체에 대한 가산 index 집합 $\N$ 의 거듭제곱이므로 
+    [실수의 기수가 $|\R| = 2 ^{\aleph _0}$](../Foundations/InfiniteSet/#d91d642d4) 이고, $|{}^{*}\R |$ 이 실수체에 대한 가산 index 집합 $\N$ 의 거듭제곱이므로 
 
     $$ 2 ^{\aleph _0} = |\R| \leq | {}^{*}\R | \leq (2 ^{\aleph _0}) ^{\aleph _0} = 2 ^{\aleph _0 \times \aleph _0} $$
 
@@ -162,8 +166,6 @@
     $$ (a_0, a_1, a_2, \dots) + (b_0, b_1, b_2, \dots) = (a_0 + b_0, a_1 + b_1, a_2 + b_2, \dots) $$
 
 !!! tldr "$<$ 의 정의"
-
-    $\N$ 에 대한 극대필터 $\mathcal{F}$ 에 대하여 $<$ 를 다음과 같이 정의한다.
 
     $$ [r] < [s] \iff \{n \in \N : r_n < s_n\} \in \mathcal{F} $$
 
@@ -253,7 +255,7 @@
 
 - 무한대, 무한소가 비표준 초실수이다. 
 
-- 무한대가 아닌 초실수를 유한 초실수(finite hyperreal)라고 한다. 아래 그림에서와 같이 [모든 유한 초실수 ${}^{*} r$ 은 실수 $r$ 과 무한소 초실수 $\epsilon$ 의 합으로 유일하게 나타낼 수 있다](#4a9ef809b). 이때 $r$ 을 ${}^{*} r$ 의 표준 부분(standard part) 이라고 하고 $\text{st} ({}^{*} r)$ 이라고 쓴다. 
+- 무한대가 아닌 초실수를 유한 초실수(finite hyperreal)라고 한다. 아래 그림에서와 같이 [모든 유한 초실수 ${}^{*} r$ 은 실수 $r$ 과 무한소 초실수 $\epsilon$ 의 합으로 유일하게 나타낼 수 있다](#a07c0135a). 이때 $r$ 을 ${}^{*} r$ 의 표준 부분(standard part) 이라고 하고 $\text{st} ({}^{*} r)$ 이라고 쓴다. 
 
 !!! tldr "초실수의 분류"
 
@@ -267,7 +269,7 @@
 
     - 무한소 초실수 
 
-- [초실수체에서의 실수는 이 함수가 표현](#c2a90879d)한다. 유한 초실수는 [아래 정리에서 살펴보듯이 실수와 무한소의 합으로 나타내어 진다](#4a9ef809b). [무한소는 이렇게 구성](#edc24402f)해보았다. [무한대는 이렇게 구성](#6e44b6764)해보았다. 
+- [초실수체에서의 실수는 이 함수가 표현](#c2a90879d)한다. 유한 초실수는 [아래 정리에서 살펴보듯이 실수와 무한소의 합으로 나타내어 진다](#a07c0135a). [무한소는 이렇게 구성](#edc24402f)해보았다. [무한대는 이렇게 구성](#6e44b6764)해보았다. 
 
     아래 그림은 초실선을 나타낸다.
 
@@ -293,7 +295,7 @@
 
     $$ \llbracket r \in \N \rrbracket  = \N \in \mathcal{F} \implies r \in {}^{*}\{0, 1\} $$
 
-    이다. 
+    이다. (*이거 왜 이렇게 되는 거지?*)
 
 !!! tldr ""
 
@@ -352,11 +354,7 @@
     
 !!! tldr ""
 
-    실가함수 확대(Extension of real-valued function) : $A \subset \R$ 에 대한 실가함수 $f: A \to \R$ 의 extension $^{*}f: {}^{*}A \to {}^{*}\R$ 은 수열
-
-    $$ s_n = \begin{cases} f(r_n) & r_n \in A \\ 0 & r_n \not\in A \\ \end{cases} $$
-
-    에 대하여 
+    실가함수 확대(Extension of real-valued function) : $A \subset \R$ 에 대한 실가함수 $f: A \to \R$ 의 extension $^{*}f: {}^{*}A \to {}^{*}\R$ 은 수열 $s_n = \begin{cases} f(r_n) & r_n \in A \\ 0 & r_n \not\in A \\ \end{cases}$ 에 대하여 
 
     $$ {}^{*}f([\big <r_n\big >]) = [\big <s_n\big >] $$
 
@@ -388,7 +386,7 @@
 
 - 이 정리는 실수에 대하여 잘 정의된 1차논리 명제를 $*$-변환(Set Enlargement, Function extension, etc.)으로 초실수에 대한 명제로 변환하면 두 명제의 진리값이 서로 같다는 것을 말해준다. 
 
-- $\phi$ 를 ${}^{*}\phi$ 로 ${}^{*}-$변환을 한 것은 Set Enlargement, Funciton extension 등을 사용하여 일차논리 명제 $\phi$ 가 포함하는 관계 $P$, 함수 $f$, 상수 $r$ 을 모두 ${}^{*}P, {}^{*}f, {}^{*}r$ 로 치환한다는 것이다. 
+- $\phi$ 를 ${}^{*}\phi$ 로 ${}^{*}$-변환을 한 것은 Set Enlargement, Funciton extension 등을 사용하여 일차논리 명제 $\phi$ 가 포함하는 관계 $P$, 함수 $f$, 상수 $r$ 을 모두 ${}^{*}P, {}^{*}f, {}^{*}r$ 로 치환한다는 것이다. 
 
     - 예시 
 
@@ -436,11 +434,11 @@
 
     이 정리가 왜 성립하는지에 대한 아이디어는 이해하기 쉽다. $M_i$ 의 곱집합에 대한 극대필터 $\mathcal{U}$ 
 
-    $$ \prod_{i \in \N}^{} M_i \text{ \textbackslash }\mathcal{U} $$
+    $$ \prod_{i \in \N}^{} M_i /\mathcal{U} $$
 
-    를 생각하자. 만약 1차 논리 명제 $\phi$ 가 각각의 $M_i$ 에 대하여 성립하고 극대필터에 의하여 captured 된다면 $\phi$ 는 ultraproduct 에서도 성립한다. ■ 
+    를 생각하자. 만약 1차 논리 명제 $\phi$ 가 각각의 $M_i$ 에 대하여 성립하고 극대필터에 의하여 captured 된다면 $\phi$ 는 ultraproduct $\prod_{i \in \N}^{} M_i /\mathcal{U}$ 에서도 성립한다. 
 
-    - *극대필터, ultraproduct 에 대한 이해가 부족해서 captured 된다는 것이 뭔지 잘 모르겠다*
+    이제 $M_i = \R, \mathcal{U} = \mathcal{F}$ 로 두고, 초실수의 정의 $^{*}\R = (\prod_{n \in N}^{\R}) / \mathcal{F}$ 를 생각하자. 그러면 위 논증에 의하여 1차 논리 명제 $\phi$ 가 $\R$에 서 성립하면 ${}^{*}\R$ 에서도 성립한다는 것이 조금은 이해될 것이다. 
 
 - 하지만 이 정리로 인하여 초실수체가 실수체와 완전히 동일하게 작동한다고 볼 수 있는 것은 아니다. 
 
@@ -452,7 +450,7 @@
 
 !!! tldr ""
 
-    structure $\big <{}^{*}\R ,+,\cdot ,<\big >$ 은 $+$ 의 항원원과 $\cdot$ 의 항등원을 갖는 순서체이다. 
+    structure $\big <{}^{*}\R ,+,\cdot ,<\big >$ 은 $+$ 와 $\cdot$ 의 항등원을 갖는 순서체이다. 
 
 - 증명 
 
@@ -470,7 +468,7 @@
 
 - 물론 [$\R$ 의 중요한 성질 중 하나는 실수체가 완비적](../Foundations/numbers/#050ce8566)이라는 것이다. 그러므로 $\R$ 의 공집합이 아니고 위로 유계인 부분집합은 상한을 가진다.
 
-    그러면 이상하다. [이 정리](../Foundations/numbers/#71e5fdcc6) 에 의하여 완비순서체는 오로지 실수체라는 것을 우리는 이미 알고 있다. 그런데 Transfer principle 로 실수의 완비성에 대한 명제를 초실수로 변환할 수 있지 않을까?
+    그러면 이상하다. [완비순서체는 오로지 실수체라는 것](../Foundations/numbers/#71e5fdcc6)을 우리는 이미 알고 있다. 그런데 Transfer principle 로 실수의 완비성에 대한 명제를 초실수로 변환할 수 있지 않을까?
 
     하지만 실수의 완비명제를 초실수로 변환하는 것은 불가능하다. 실수의 완비성이 초실수의 완비성으로 변환될 수 없는 이유는 초실수의 완비성이 오로지 2차 논리 명제로만 표현되기 때문이다. 왜냐하면 단순히 $\R$ 의 성분을 언급하는 것이 아니라 $\R$ 의 부분집합을 언급해야만 하기 때문이다. 
 
@@ -478,7 +476,7 @@
 
     - 예시 
 
-        개구간 $(0, 1) \in \R$ 은 ${}^{*}\R$ 에서 상한을 갖지 않는다. 
+        개구간 $(0, 1) \in \R$ 은 ${}^{*}\R$ 에서 상한을 갖지 않는다. (*이건 왜 그럴까*)
 
 !!! tldr ""
 
@@ -612,7 +610,7 @@
 
     ${}^{*}\R$ 에서의 동치관계 $\backsimeq$ 를 다음과 같이 정의한다. 
 
-    $$ x \backsimeq y \iff x - y = 0 \lor x - y \text{ is infinitesimal } $$
+    $$ x \backsimeq y \iff x - y \text{ is infinitesimal } $$
 
 - 이 동치관계가 잘 정의되었음을 증명하는 것은 쉽다. 
 
@@ -670,9 +668,9 @@
 
 ## Shadows(Standard part)
 
-!!! tldr "표준 부분 원리"
+!!! tldr "shadow 의 존재 정리, 표준 부분 원리"
 
-    shadow 의 존재 정리, 표준 부분 원리: 모든 유한 초실수 $b$ 는 오직 하나의 실수 $s$ 와 무한히 가깝다. 
+    모든 유한 초실수 $b$ 는 오직 하나의 실수 $s$ 와 무한히 가깝다. 
     
 - 이 정리는 쉽게 말해 임의의 유한 초실수 $b \in {}^{*}\R$ 에 대하여 $b = b_0 + \epsilon$ 을 만족하는 실수 $b_0$ 와 무한소 $\epsilon$ 이 유일하게 존재한다는 것이다.
 
