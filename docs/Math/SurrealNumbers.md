@@ -40,6 +40,10 @@
 
     또한 초실수에서는 $0$ 과 무한소 $\epsilon$ 사이에 수가 존재하지 않지만, 초현실수에서는 $\dfrac{\epsilon }{2}$ 등 수많은 다른 수가 존재한다. 
 
+- 아래 그림은 수 체계의 관계를 나타낸다. 
+
+    ![](https://www.researchgate.net/profile/Tee-Jay-Dack/publication/328107970/figure/fig1/AS:678473026793478@1538771983490/The-universe-of-non-complex-numbers.jpg)
+
 !!! tldr "최초의 초현실수"
 
     $$ 0 \equiv \{|\} $$

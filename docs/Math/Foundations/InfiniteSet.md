@@ -1408,9 +1408,9 @@
 
     $X$ 가 무한집합이면 [도움정리 3.4.4 "집합 $X$ 가 유한집합이 아니면, $\exists A \subset X \text{ s.t. }\ \N \approx A$ 이다."](#8ab5072fc) 에 의하여 단사함수 $f: \N \to X$ 가 존재한다. ■ 
 
-!!! tldr ""
+!!! tldr "자연수의 초한기수 "
 
-    자연수의 초한기수 : $\aleph _0 = \text{card }(\N)$
+    $$\aleph _0 = \text{card }(\N)$$
 
 - 이는 가장 작은 초한기수이다.
 
@@ -1420,9 +1420,9 @@
 
     이다.
 
-!!! tldr ""
+!!! tldr "실수의 초한기수 "
 
-    실수의 초한기수 : $\mathfrak{c} = \text{card }(\R)$
+    $$\mathfrak{c} = \text{card }(\R)$$
 
 - 단사함수 $f: \N \to \R$ 은 존재하지만 $\R$ 을 $\N$ 으로 보내는 단사함수는 존재하지 않으므로 
 
@@ -1556,7 +1556,7 @@
 
     그러므로 $f(x_0) = A$ 인 $x_0$ 는 존재하지 않고, $f$ 는 전사가 아니다. ■ 
 
-!!! tldr ""
+!!! tldr "$\R$ 의 기수"
 
     $$ 2 ^{\aleph_0} = \mathfrak{c} $$
 
@@ -1720,9 +1720,9 @@
 
     - 증명
 
-!!! tldr ""
+!!! tldr "연속체 가설(Continuum hypothesis)"
 
-    연속체 가설(Continuum hypothesis) : $\aleph _1 = 2 ^{\aleph _0}$
+    $$\aleph _1 = 2 ^{\aleph _0}$$
 
 - 이 정리는 쉽게 말해 자연수의 개수보다 많고 실수의 개수보다 적은 집합이 존재하지 않음을 말한다.
 
