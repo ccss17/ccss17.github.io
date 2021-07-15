@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/LinearAlgebra/la3/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>행렬식 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              행렬식
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          행렬식
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        행렬식
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    행렬식
+  </a>
+<nav aria-label="행렬식" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    행렬식 소개
+  </a>
+<nav aria-label="행렬식 소개" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-times-3">
+    \(3 \times 3\) 행렬의 행렬식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-n-n-1">
+    고차 행렬로의 일반화 - \(n\) 차 정방행렬의 행렬식을 \(n-1\) 차 정방행렬의 행렬식으로 표현하기
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32">
+    3.2 행렬식의 성질
+  </a>
+<nav aria-label="3.2 행렬식의 성질" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    열 연산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    행렬식 함수는 선형이다
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33">
+    3.3 크래머의 공식, 부피, 선형변환
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    행렬식
+  </a>
+<nav aria-label="행렬식" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    행렬식 소개
+  </a>
+<nav aria-label="행렬식 소개" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-times-3">
+    \(3 \times 3\) 행렬의 행렬식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-n-n-1">
+    고차 행렬로의 일반화 - \(n\) 차 정방행렬의 행렬식을 \(n-1\) 차 정방행렬의 행렬식으로 표현하기
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#32">
+    3.2 행렬식의 성질
+  </a>
+<nav aria-label="3.2 행렬식의 성질" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    열 연산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    행렬식 함수는 선형이다
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#33">
+    3.3 크래머의 공식, 부피, 선형변환
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>행렬식</h1>
+<h2 id="_1">행렬식<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>행렬식을 알아보고 정방 행렬의 역행렬 존재 조건과 야코비안 다변수 미적분에서 중요한 역할을 하는 아이디어에 대해 알아보자. </p>
+<h3 id="_2">행렬식 소개<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<a href="#31fb73e0a"><div class="admonition tldr" id="31fb73e0a">
+<p><span class="arithmatex">\(2 \times 2\)</span> 행렬 <span class="arithmatex">\(A\)</span> 의 행렬식 : 행렬 <span class="arithmatex">\(A\)</span></p>
+<div class="arithmatex">\[ A = \begin{bmatrix} a _{11} &amp; a _{12}\\a _{21} &amp; a _{22} \end{bmatrix} \]</div>
+<p>에 대한 행렬식은  </p>
+<div class="arithmatex">\[\det A = a_{11}a_{22} - a_{12}a_{21}\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(2 \times 2\)</span> 행렬이 역행렬을 가지기 위해서는 그것의 행렬식이 <span class="arithmatex">\(0\)</span> 이 아니어야 했다. </p>
+</li>
+<li>
+<p>이제 이것을 고차 행렬에 적용하기 위하여 <span class="arithmatex">\(n \times n\)</span> 행렬식의 일반적 정의를 알아보자. </p>
+</li>
+</ul>
+<h4 id="3-times-3"><span class="arithmatex">\(3 \times 3\)</span> 행렬의 행렬식<a class="headerlink" href="#3-times-3" title="Permanent link">¶</a></h4>
+<a href="#10be4e06c"><div class="admonition tldr" id="10be4e06c">
+<p><span class="arithmatex">\(3 \times 3\)</span> 행렬 <span class="arithmatex">\(A\)</span> 의 행렬식 : 행렬 <span class="arithmatex">\(A\)</span> </p>
+<div class="arithmatex">\[ \begin{bmatrix} a_{11}&amp;a_{12}&amp;a_{13}\\ a_{21}&amp;a_{22}&amp;a_{23}\\ a_{31}&amp;a_{32}&amp;a_{33}\\ \end{bmatrix} \]</div>
+<p>에 대한 행렬식은</p>
+<div class="arithmatex">\[\det A = a_{11}a_{22}a_{33} +a_{12}a_{23}a_{31} +a_{13}a_{21}a_{32} -a_{11}a_{23}a_{32} -a_{12}a_{21}a_{33} -a_{13}a_{22}a_{31}\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(a_{11} \neq 0\)</span> 인 행렬 <span class="arithmatex">\(A = \begin{bmatrix} a_{ij}\\ \end{bmatrix}\)</span> 를 생각하자. <span class="arithmatex">\(a_{11} \neq 0\)</span> 이므로 다음 연산이 가능하다.</p>
+<div class="arithmatex">\[ \begin{bmatrix} a_{11}&amp;a_{12}&amp;a_{13}\\ a_{11}a_{21}&amp;a_{11}a_{22}&amp;a_{11}a_{23}\\ a_{11}a_{31}&amp;a_{11}a_{32}&amp;a_{11}a_{33}\\ \end{bmatrix} \sim \begin{bmatrix} a_{11}&amp;a_{12}&amp;a_{13}\\ 0&amp;a_{11}a_{22} - a_{12}a_{21}&amp;a_{11}a_{23} - a_{13}a_{21}\\ 0&amp;a_{11}a_{32} - a_{12}a_{31}&amp;a_{11}a_{33} - a_{13}a_{31}\\ \end{bmatrix} \]</div>
+<p><span class="arithmatex">\(A\)</span> 의 역행렬이 존재하므로 <span class="arithmatex">\((2, 2)\)</span> 또는 <span class="arithmatex">\((3, 2)\)</span> 는 <span class="arithmatex">\(0\)</span> 이 아니다. <span class="arithmatex">\((2, 2)\)</span> 를 <span class="arithmatex">\(0\)</span> 이라 가정하자.(그렇지 않다면 행변환을 통하여 <span class="arithmatex">\(0\)</span> 이 되지 않도록 만들 수 있다.) 그러면 다음 연산이 가능하다. </p>
+<div class="arithmatex">\[ A \sim \begin{bmatrix} a_{11}&amp;a_{12}&amp;a_{13}\\ 0&amp;a_{11}a_{22} - a_{12}a_{21}&amp;a_{11}a_{23} - a_{13}a_{21}\\ 0&amp;0&amp;a_{11}\Delta \\ \end{bmatrix} \]</div>
+<div class="arithmatex">\[ \Delta = a_{11}a_{22}a_{33} +a_{12}a_{23}a_{31} +a_{13}a_{21}a_{32} -a_{11}a_{23}a_{32} -a_{12}a_{21}a_{33} -a_{13}a_{22}a_{31} \]</div>
+<p><span class="arithmatex">\(A\)</span> 의 역행렬이 존재하므로 <span class="arithmatex">\(\Delta\)</span> 도 <span class="arithmatex">\(0\)</span> 이 아니다. </p>
+<p>이렇게 구한 <span class="arithmatex">\(\Delta\)</span> 가 <span class="arithmatex">\(3 \times 3\)</span> 행렬의 행렬식이다.</p>
+</li>
+</ul>
+<a href="#17595f82b"><div class="admonition tldr" id="17595f82b">
+<p><span class="arithmatex">\(1 \times 1\)</span> 행렬 <span class="arithmatex">\(A\)</span> 의 행렬식 : <span class="arithmatex">\(1 \times 1\)</span> 행렬의 행렬식은 <span class="arithmatex">\(\det A = a_{11}\)</span> 로 정의한다.</p>
+</div></a>
+<a href="#8f8968fa5"><div class="admonition tldr" id="8f8968fa5">
+<p><span class="arithmatex">\(3\)</span> 차 정방행렬의 행렬식을 <span class="arithmatex">\(2\)</span> 차 정방행렬의 행렬식으로 표현하기 : <span class="arithmatex">\(3 \times 3\)</span> 행렬 <span class="arithmatex">\(A\)</span> 의 행렬식 </p>
+<div class="arithmatex">\[\det A = a_{11}a_{22}a_{33} +a_{12}a_{23}a_{31} +a_{13}a_{21}a_{32} -a_{11}a_{23}a_{32} -a_{12}a_{21}a_{33} -a_{13}a_{22}a_{31}\]</div>
+<p>을 <span class="arithmatex">\(2 \times 2\)</span> 행렬의 행렬식으로 표현하면</p>
+<div class="arithmatex">\[ \det A = a_{11}(a_{22}a_{33} - a_{23}a_{32} )-a_{12}(a_{21}a_{33} - a_{23}a_{31}) +a_{13}(a_{21}a_{32}  -a_{22}a_{31}) \]</div>
+<div class="arithmatex">\[ = a_{11} \cdot \det \begin{bmatrix} a_{22}&amp;a_{23}\\a_{32}&amp;a_{33} \end{bmatrix} - a_{12} \cdot \det \begin{bmatrix} a_{21} &amp; a_{23}\\a_{31} &amp; a_{33} \end{bmatrix} + a_{13} \cdot \det \begin{bmatrix} a_{21}&amp;a_{22}\\a_{31}&amp;a_{32} \end{bmatrix} \]</div>
+<div class="arithmatex">\[ = a_{11} \cdot \det A_{11} - a_{12} \cdot \det A_{12} + a_{13} \cdot \det A_{13} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(A_{ij}\)</span> 는 정방행렬 <span class="arithmatex">\(A = [a_{ij}]\)</span> 에서 <span class="arithmatex">\(i\)</span> 행과 <span class="arithmatex">\(j\)</span> 열을 제거한 부분행렬이다. </p>
+</li>
+<li>
+<p>따라서 <span class="arithmatex">\(A_{11}\)</span> 은 <span class="arithmatex">\(3 \times 3\)</span> 정방행렬 <span class="arithmatex">\(A\)</span> 에서 <span class="arithmatex">\(1\)</span> 행과 <span class="arithmatex">\(1\)</span> 열을 제거한 부분행렬이고, <span class="arithmatex">\(A_{12}\)</span> 과 <span class="arithmatex">\(A_{13}\)</span> 도 같은 의미가 적용된다. </p>
+</li>
+<li>
+<p>고차 행렬로의 일반화를 위하여 <span class="arithmatex">\(3 \times 3\)</span> 행렬의 행렬식을 <span class="arithmatex">\(2 \times 2\)</span> 행렬의 행렬식으로 표현하여 어떤 관계가 있는지 밝힌 것이다.</p>
+<p>그 관계가 <span class="arithmatex">\(n\)</span> 차 행렬의 행렬식을 <span class="arithmatex">\(n+1\)</span> 차 행렬의 행렬식으로 도약하게끔 할 수 있다면 그 관계로써 일반적인 행렬의 행렬식을 도출할 수도 있을 것이기 때문이다.</p>
+</li>
+</ul>
+<h4 id="-n-n-1">고차 행렬로의 일반화 - <span class="arithmatex">\(n\)</span> 차 정방행렬의 행렬식을 <span class="arithmatex">\(n-1\)</span> 차 정방행렬의 행렬식으로 표현하기<a class="headerlink" href="#-n-n-1" title="Permanent link">¶</a></h4>
+<a href="#5c0e0bff1"><div class="admonition tldr" id="5c0e0bff1">
+<p><span class="arithmatex">\(n \times n\)</span> 행렬의 행렬식 : <span class="arithmatex">\(n \geq 2\)</span> 에 대해서 <span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 의 행렬식은 양과 음 부호가 번갈아가며 나타나는 <span class="arithmatex">\(n\)</span> 개의 <span class="arithmatex">\(\pm a_{1j} \det A_{1j}\)</span> 항으로써 다음과 같이 정의된다. </p>
+<div class="arithmatex">\[ det A = a_{11} \det A_{11} - a_{12} \det A_{12} + \dots + (-1)^{1+n} a_{1n} \det A_{1n} \]</div>
+<div class="arithmatex">\[ = \sum_{j=1}^{n}(-1)^{1+j}a_{1j}\det A_{1j}\]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(n=3\)</span> 일 때 행렬 <span class="arithmatex">\(A\)</span> 의 행렬식 <span class="arithmatex">\(\det A\)</span> 는 <span class="arithmatex">\(2 \times 2\)</span> 부분행렬들인 <span class="arithmatex">\(A_{1j}\)</span> 행렬식으로 정의되었다.</p>
+<p>비슷하게 <span class="arithmatex">\(n=4\)</span> 일 때에는 <span class="arithmatex">\(3 \times 3\)</span> 행렬들의 부분행렬인 <span class="arithmatex">\(A_{1j}\)</span> 들로 정의된다.</p>
+<p>또한 일반적으로 비슷하게 <span class="arithmatex">\(n \times n\)</span> 행렬의 행렬식은 <span class="arithmatex">\((n-1) \times (n-1)\)</span> 행렬들의 부분행렬의 행렬식으로 정의한다. </p>
+</li>
+<li>
+<p>여기서 <span class="arithmatex">\(a_{11}, a_{12}, \dots, a_{1n}\)</span> 은 행렬 <span class="arithmatex">\(A\)</span> 의 첫번째 행 요소들이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음 행렬의 행렬식을 구하자.</p>
+<div class="arithmatex">\[ A = \begin{bmatrix} 1&amp;5&amp;0\\2&amp;4&amp;-1\\0&amp;-2&amp;0 \end{bmatrix} \]</div>
+<p>정의에 따라 행렬식은 다음과 같이 계산된다.</p>
+<div class="arithmatex">\[ \det A = 1 \cdot \det \begin{bmatrix} 4&amp;-1\\-2&amp;0 \end{bmatrix} -5 \cdot \det \begin{bmatrix} 2&amp;-1\\0&amp;0 \end{bmatrix} + 0 \cdot \det \begin{bmatrix} 2&amp;4\\0&amp;-2 \end{bmatrix} = -2 \]</div>
+<p>한편 행렬식을 표기하기 위한 특수한 방법으로 두 개의 수직선을 이용할 수도 있다. </p>
+<div class="arithmatex">\[ \det A = 1 \cdot \begin{vmatrix} 4&amp;-1\\-2&amp;0 \end{vmatrix} -5 \cdot \begin{vmatrix} 2&amp;-1\\0&amp;0 \end{vmatrix} + 0 \cdot \begin{vmatrix} 2&amp;4\\0&amp;-2 \end{vmatrix} = -2 \]</div>
+</li>
+</ul>
+<a href="#52b80c7af"><div class="admonition tldr" id="52b80c7af">
+<p>행렬식 표기법 : 행렬식 <span class="arithmatex">\(\det \begin{bmatrix} a&amp;b\\c&amp;d \end{bmatrix}\)</span> 를 두 수직선을 사용하여 <span class="arithmatex">\(\begin{vmatrix} a&amp;b\\c&amp;d \end{vmatrix}\)</span> 로 축약하여 사용할 수 있다.</p>
+</div></a>
+<a href="#fbb1735c2"><div class="admonition tldr" id="fbb1735c2">
+<p>여인수(cofactor) : 주어진 행렬 <span class="arithmatex">\(A=[a_{ij}]\)</span> 에 대하여 행렬 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\((i,j)\)</span> 여인수 <span class="arithmatex">\(C_{ij}\)</span> 는 <span class="arithmatex">\((-1)^{i+j} \det A_{ij}\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(C_{ij}= (-1)^{i+j} \det A_{ij}\)</span> </p>
+</li>
+<li>
+<p>예시 </p>
+<p>행렬 <span class="arithmatex">\(A\)</span> 의 행렬식은 다음과 같이 표현되며 <span class="arithmatex">\(1\)</span> 행에 관한 여인수 전개라 한다.</p>
+<div class="arithmatex">\[\det A = a_{11}C_{11} + a_{12}C_{12} + \dots + a_{1n}C_{1n}\]</div>
+</li>
+</ul>
+<a href="#56dbe942d"><div class="admonition tldr" id="56dbe942d">
+<p>여인수 전개(cofactor expansion)</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p><span class="arithmatex">\(3\)</span> 행에 관한 여인수 전개 : <span class="arithmatex">\(\det A = a_{31}C_{31} + a_{32}C_{32} + \dots + a_{3n}C_{3n}\)</span></p>
+<p><span class="arithmatex">\(7\)</span> 열에 관한 여인수 전개 : <span class="arithmatex">\(\det A = a_{17}C_{17} + a_{27}C_{27} + \dots + a_{n7}C_{n7}\)</span></p>
+</li>
+</ul>
+<a href="#3d053fcf3"><div class="admonition tldr" id="3d053fcf3">
+<p><strong>Theorem 1</strong> <span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 의 행렬식은 임의의 행 <span class="arithmatex">\(i\)</span> 또는 임의의 열 <span class="arithmatex">\(j\)</span> 에 대한 여인수 전개로 표현할 수 있다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(i\)</span> 번째 행에 대한 여인수 전개</p>
+<p><span class="arithmatex">\(\det A = a_{i1}C_{i1} + a_{i2}C_{i2} + \dots + a_{in}C_{in}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(i\)</span> 번째 행에 대한 여인수 전개</p>
+<p><span class="arithmatex">\(\det A = a_{1j}C_{1j} + a_{2j}C_{2j} + \dots + a_{nj}C_{nj}\)</span></p>
+</li>
+<li>
+<p>예시 : 다음 행렬의 행렬식을 구하라.</p>
+<div class="arithmatex">\[ A = \begin{bmatrix} 3&amp;-7&amp;8&amp;9&amp;-6\\ 0&amp;2&amp;-5&amp;7&amp;3\\ 0&amp;0&amp;1&amp;5&amp;0\\ 0&amp;0&amp;2&amp;4&amp;-1\\ 0&amp;0&amp;0&amp;-2&amp;0\\ \end{bmatrix} \]</div>
+<p>이 행렬의 <span class="arithmatex">\(1\)</span> 열은 첫 요소를 제외하면 <span class="arithmatex">\(0\)</span> 이기 때문에 <span class="arithmatex">\(1\)</span> 열에 대한 여인수 전개로 행렬식을 다음과 같이 표현할 수 있다.</p>
+<div class="arithmatex">\[ \det A = 3 \cdot \begin{vmatrix} 2&amp;-5&amp;7&amp;3\\ 0&amp;1&amp;5&amp;0\\ 0&amp;2&amp;4&amp;-1\\ 0&amp;0&amp;-2&amp;0 \end{vmatrix} + 0 \cdot C_{21} + 0 \cdot C_{31} + 0 \cdot C_{41} + 0 \cdot C_{51} \]</div>
+<p>그런데 또 다시 <span class="arithmatex">\(1\)</span> 열이 첫 요소를 제외하면 <span class="arithmatex">\(0\)</span> 이기에 같은 방법을 적용할 수 있다.</p>
+<div class="arithmatex">\[ \det A = 3 \cdot 2 \cdot \begin{vmatrix} 1&amp;5&amp;0\\ 2&amp;4&amp;-1\\ 0&amp;-2&amp;0 \end{vmatrix} = 3 \cdot 2 \cdot -2 \]</div>
+<p>그런데 이 예제로써 다음 정리가 성립함을 직관적으로 알 수 있다.</p>
+</li>
+</ul>
+<a href="#901fcfc6c"><div class="admonition tldr" id="901fcfc6c">
+<p><strong>Theorem 2</strong> 행렬 <span class="arithmatex">\(A\)</span> 가 삼각 행렬이면 행렬식 <span class="arithmatex">\(\det A\)</span> 는 주 대각요소들의 곱이다.</p>
+</div></a>
+<ul>
+<li>삼각행렬에 대한 <span class="arithmatex">\(1\)</span> 열 여인수 전개의 반복으로 가능하다. </li>
+</ul>
+<h3 id="32">3.2 행렬식의 성질<a class="headerlink" href="#32" title="Permanent link">¶</a></h3>
+<a href="#4ac8af4bd"><div class="admonition tldr" id="4ac8af4bd">
+<p><strong>Theorem 3</strong> 행연산과 행렬식의 관계 : <span class="arithmatex">\(A\)</span> 를 정방행렬이라 하자.</p>
+</div></a>
+<ul>
+<li>
+<p>(교체) 행렬 <span class="arithmatex">\(A\)</span> 의 한 행의 상수배를 다른 행에 더하여 행렬 <span class="arithmatex">\(B\)</span> 를 만들면, <span class="arithmatex">\(\det B = \det A\)</span> 이다.</p>
+</li>
+<li>
+<p>(교환) 행렬 <span class="arithmatex">\(A\)</span> 의 두 행을 교환하여 행렬 <span class="arithmatex">\(B\)</span> 를 만들면, <span class="arithmatex">\(\det B = - \det A\)</span> 이다.</p>
+</li>
+<li>
+<p>(스칼라곱) 행렬 <span class="arithmatex">\(A\)</span> 의 한 행을 <span class="arithmatex">\(k\)</span> 배 하여 행렬 <span class="arithmatex">\(B\)</span> 를 만들면, <span class="arithmatex">\(\det B = k \cdot \det A\)</span> 이다.</p>
+</li>
+<li>
+<p>증명</p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+<a href="#a74441a55"><div class="admonition tldr" id="a74441a55">
+<p><span class="arithmatex">\(\det A\)</span> 의 값 : 행렬 <span class="arithmatex">\(A\)</span> 를 행 교환과 행 교체에 의하여 사다리꼴 행렬 <span class="arithmatex">\(U\)</span> 로 변환하였다고 하고 행 교체가 <span class="arithmatex">\(r\)</span> 번 있었다고 하면 <span class="arithmatex">\(\det A\)</span> 는 다음과 같다.</p>
+</div></a>
+<ul>
+<li>
+<p>단, <span class="arithmatex">\(u_{ii}\)</span> 는 사다리꼴 행렬 <span class="arithmatex">\(U\)</span> 의 대각성분을 뜻한다.</p>
+<div class="arithmatex">\[ \det A = \begin{cases} (-1)^r \cdot (\prod_{i=1}^{n}u_{ii}) &amp;\text{A 의 역행렬이 존재할 때}\\ 0&amp;\text{A 의 역행렬이 존재하지 않을 때}\\ \end{cases} \]</div>
+</li>
+<li>
+<p>컴퓨터에서 일반적인 행렬 <span class="arithmatex">\(A\)</span> 의 행렬식을 계산할 때 바로 이 수식을 사용하여 계산한다. 가장 최적화되어 있기 때문이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음 행렬 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(\det A\)</span> 를 계산하라.</p>
+<div class="arithmatex">\[ A = \begin{bmatrix} 2&amp;-7&amp;6&amp;7\\3&amp;-9&amp;5&amp;10\\-3&amp;0&amp;1&amp;-2\\1&amp;-4&amp;0&amp;6 \end{bmatrix} \]</div>
+<p>행렬 <span class="arithmatex">\(A\)</span> 의 행렬식 <span class="arithmatex">\(\det A\)</span> 의 값은 <span class="arithmatex">\(1\)</span> 행에 관한 여인수 전개로 구한다면 어차피 첫째 행의 <span class="arithmatex">\(2\)</span> 를 곱하여야 하므로 계산을 편하게 할 수 있도록 첫째 행에서 <span class="arithmatex">\(2\)</span> 를 묶어낸다.</p>
+<div class="arithmatex">\[ \det A = 2 \begin{vmatrix} 1&amp;-4&amp;3&amp;4\\3&amp;-9&amp;5&amp;10\\-3&amp;0&amp;1&amp;-2\\1&amp;-4&amp;0&amp;6 \end{vmatrix} = 2 \begin{vmatrix} 1&amp;-4&amp;3&amp;4\\0&amp;3&amp;-4&amp;-2\\0&amp;-12&amp;10&amp;10\\0&amp;0&amp;-3&amp;2 \end{vmatrix} \sim 2 \begin{vmatrix} 1&amp;-4&amp;3&amp;4\\0&amp;3&amp;-4&amp;-2\\0&amp;0&amp;-6&amp;2\\0&amp;0&amp;0&amp;1 \end{vmatrix} = 2 \cdot (1)(3)(-6)(1) = -36 \]</div>
+</li>
+</ul>
+<a href="#8967e9d09"><div class="admonition tldr" id="8967e9d09">
+<p><strong>Theorem 4</strong> 정방행렬 <span class="arithmatex">\(A\)</span> 의 역행렬이 존재하면 <span class="arithmatex">\(\det A \neq 0\)</span> 이고 그 역도 성립한다.</p>
+</div></a>
+<h4 id="_3">열 연산<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<a href="#10820f82e"><div class="admonition tldr" id="10820f82e">
+<p><strong>Theorem 5</strong> 행렬 <span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(n \times n\)</span> 이면 <span class="arithmatex">\(\det A^T = \det A\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(n=1\)</span> 일 때 이 정리는 자명하다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(n=k\)</span> 일 때 이 정리가 성립한다고 가정하자.</p>
+<ul>
+<li>
+<p>그러면 <span class="arithmatex">\(n=k+1\)</span> 일 때 행렬 <span class="arithmatex">\(A\)</span> 에 속하는 여인수 <span class="arithmatex">\(a_{1j}\)</span> 는 <span class="arithmatex">\(A^T\)</span> 에 속한 여인수 <span class="arithmatex">\(a_{j1}\)</span> 과 같다. </p>
+</li>
+<li>
+<p>따라서 <span class="arithmatex">\(\det A\)</span> 를 구하기 위한 <span class="arithmatex">\(1\)</span> 행에 대한 여인수 전개는 <span class="arithmatex">\(1\)</span> 열에 대한 여인수 전개와 동일하다.</p>
+</li>
+<li>
+<p>그런데 <span class="arithmatex">\(1\)</span> 열에 대한 여인수 전개는 <span class="arithmatex">\(\det A^T\)</span> 를 계산하므로 <span class="arithmatex">\(\det A = \det A^T\)</span> 이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>그러므로 모든 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 본 명제는 참이다.</p>
+</li>
+</ul>
+<a href="#dfd21ef74"><div class="admonition tldr" id="dfd21ef74">
+<p><strong>Theorem 6</strong> 행렬식의 곱 : 행렬 <span class="arithmatex">\(A, B\)</span> 가 <span class="arithmatex">\(n \times n\)</span> 행렬이면 <span class="arithmatex">\(\det AB = (\det A)(\det B)\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+<h4 id="_4">행렬식 함수는 선형이다<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<p><span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(j\)</span> 번째 열을 제외한 나머지 열이 고정값이라고 하고 다음과 같이 표현하자.</p>
+<div class="arithmatex">\[ A = \begin{bmatrix} a_1&amp;\dots&amp;a_{j-1}&amp;x&amp;a_{j+1}&amp;\dots&amp;a_n \end{bmatrix} \]</div>
+<p>그리고 <span class="arithmatex">\(\mathbb{R} ^n\)</span> 에서 <span class="arithmatex">\(\mathbb{R}\)</span> 로 보내는 변환 <span class="arithmatex">\(T\)</span> 를 다음과 같이 행렬식 함수로 정의하자.</p>
+<div class="arithmatex">\[ T(x) = \det \begin{bmatrix} a_1&amp;\dots&amp;a_{j-1}&amp;x&amp;a_{j+1}&amp;\dots&amp;a_n \end{bmatrix} \]</div>
+<a href="#8d1ad814d"><div class="admonition tldr" id="8d1ad814d">
+<p>행렬식 함수의 선형성 : 그러면 다음이 성립한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(T(cx) = cT(x)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(T(u+v) = T(u) + T(v)\)</span></p>
+</li>
+</ul>
+<h3 id="33">3.3 크래머의 공식, 부피, 선형변환<a class="headerlink" href="#33" title="Permanent link">¶</a></h3>
+<a href="#2f0b17c1f"><div class="admonition tldr" id="2f0b17c1f">
+<p><span class="arithmatex">\(A_i(b)\)</span> : 임의의 <span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(\mathbb{R} ^n\)</span> 에 속한 임의의 <span class="arithmatex">\(b\)</span> 에 대해서 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 번째 열을 벡터 <span class="arithmatex">\(b\)</span> 로 바꾼 행렬이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(A_i(b) = \begin{bmatrix} a_1&amp;\dots&amp;b&amp;\dots&amp;a_n\\ \end{bmatrix}\)</span></p>
+<ul>
+<li><span class="arithmatex">\(b = col i\)</span></li>
+</ul>
+</li>
+</ul>
+<a href="#fc4fc7ca1"><div class="admonition tldr" id="fc4fc7ca1">
+<p>크래머의 공식(Cramer's rule) : 역행렬을 가지는 <span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(\mathbb{R} ^n\)</span> 에 속한 임의의 <span class="arithmatex">\(b\)</span> 에 대하여 <span class="arithmatex">\(Ax = b\)</span> 의 유일한 해 <span class="arithmatex">\(x\)</span> 는 다음과 같다.</p>
+<div class="arithmatex">\[x_i = \frac{\det A_i(b)}{\det A}, i = 1, 2, \dots, n\]</div>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+<a href="#14bb33187"><div class="admonition tldr" id="14bb33187">
+<p><span class="arithmatex">\(A^-1 를 위한 공식\)</span></p>
+</div></a>
+<a href="#0b3829d7e"><div class="admonition tldr" id="0b3829d7e">
+<p><strong>Theorem 8</strong></p>
+</div></a>
+<a href="#8803a9919"><div class="admonition tldr" id="8803a9919">
+<p><strong>Theorem 9</strong></p>
+</div></a>
+<p>선형변환</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 행렬대수" class="md-footer__link md-footer__link--prev" href="../la2/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              행렬대수
+            </div>
+</div>
+</a>
+<a aria-label="다음: 벡터공간" class="md-footer__link md-footer__link--next" href="../la4/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              벡터공간
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/security-tutorial/03-Computer2/HW-3/hy/" rel="canonical"/>
+<link href="../../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>GBC Security_03 - ccss17</title>
+<link href="../../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#gbc-security_03">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="ccss17">
+<img alt="logo" src="../../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              GBC Security_03
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="ccss17">
+<img alt="logo" src="../../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gbc-security_03">
+    GBC Security_03
+  </a>
+<nav aria-label="GBC Security_03" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hw-3">
+    HW #3
+  </a>
+<nav aria-label="HW #3" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-write-up">
+    1. 자신의 실험 결과에 대한 write-up
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>GBC Security_03</h1>
+<h2 id="gbc-security_03">GBC Security_03<a class="headerlink" href="#gbc-security_03" title="Permanent link">¶</a></h2>
+<h3 id="hw-3">HW #3<a class="headerlink" href="#hw-3" title="Permanent link">¶</a></h3>
+<h4 id="1-write-up">1. 자신의 실험 결과에 대한 write-up<a class="headerlink" href="#1-write-up" title="Permanent link">¶</a></h4>
+<hr/>
+<h5 id="1-review">1. Review<a class="headerlink" href="#1-review" title="Permanent link">¶</a></h5>
+<ul>
+<li>가상메모리는 커널 영역과 사용자 영역으로 나뉜다.</li>
+<li>커널 영역 : 커널 관련 메모리 로드, 시스템 콜을 통해서만 접근 가능</li>
+<li>사용자 영역 : stack(함수의 인자, 함수의 리턴 주소값, 지역 변수), heap(동적 할당 메모리), BSS(초기화x, 0으로 초기화된 전역, static변수), data(초기화된 전역, static 변수), text(실행될 어셈블리어들이 저장됨)</li>
+</ul>
+<h5 id="2-wirte-up-1">2. wirte-up (1)<a class="headerlink" href="#2-wirte-up-1" title="Permanent link">¶</a></h5>
+<ul>
+<li>스택 영역에 메모리가 저장되는 과정을 정확히 이해하지 못해서 다시 공부해보았다.  </li>
+<li>c코드로는 메모리 사용을 알 수 없는데, 어셈블리 코드로 보면 그 과정이 전부 나와있는 것을 알았다. </li>
+<li>함수 호출 시와 함수 인자 전달 시에, 스택에서 어떤 일들이 일어나는지 알아보고 싶어서 간단한 c코드를 gdb로 디버깅하여 어셈블리어 코드를 살펴보았다.</li>
+</ul>
+<blockquote>
+<p>다음과 같은 c코드를 gdb로 디버깅한다.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"result = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">result</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">){</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>컴파일 시, 디버그 모드로 컴파일하면 소스코드를 같이 볼 수 있다.</p>
+</blockquote>
+<p><img alt="hw0" src="https://user-images.githubusercontent.com/47182864/61030788-22f24e00-a3f9-11e9-893c-39468370e0c9.png"/></p>
+<blockquote>
+<p>c코드에서 int형 변수 x와 y를 각각 5와 10으로 초기화했는데, 어셈블리 코드에서는 *main+4의 sub rsp, 0x10으로 스택에 0x10만큼의 공간을 할당한 후, mov 명령어로 스택의 공간 [rbp-0xc]에 5를, [rbp-8]에 10을 넣어주고 있다. <em>변수를 2개 선언하면 스택의 2개의 공간에 저장된다.</em>
+0x10만큼의 공간에는 int형 변수를 4개까지 담을 수 있으며, 변수 선언을 5개 할 경우에는 스택에 할당하는 크기 또한 증가한다. (0x20)</p>
+</blockquote>
+<p><img alt="hw1" src="https://user-images.githubusercontent.com/47182864/61030790-238ae480-a3f9-11e9-8f07-b34bab8359a4.png"/></p>
+<p>??? 함수 호출 시, 스택의 이용을 보고 싶어서 해봤는데 지역변수 저장하는 것밖에 볼 수 없었다. 너무 간단한 함수라 그런가 호홓호ㅎ?ㅜㅜ</p>
+<blockquote>
+<p><code>ret</code>: CPU가 함수를 호출해서 프로그램의 흐름을 바꿀 때 <code>call</code>을 사용하고, 원래 있던 곳으로 되돌아 갈 때 <code>ret</code> 명령어를 사용한다. call 명령어가 스택에 저장해놓은 return 주소값을 Pop해서 rip레지스터에 저장해준다고 어제 찬솔님이 설명하셨다.</p>
+</blockquote>
+<p><img alt="hw1-2" src="https://user-images.githubusercontent.com/47182864/61031122-d4917f00-a3f9-11e9-9f35-121dcf0798d3.png"/></p>
+<ul>
+<li>찾다보다 보니 이거 c배울때 배웠던 것 같다ㅎㅎㅎ. 다시 보자!</li>
+</ul>
+<blockquote>
+<p>스택 프레임 : 함수 호출시 할당되는 메모리 블록
+함수 호출이 완료되면, 기존에 선언된 지역변수에 접근이 불가능하다. (할당된 메모리 반환되므로)
+아래 그림에서, fct2() 함수가 호출되면서 함수 내부에 선언된 변수 e, h가 스택에 할당 -&gt; 이 메모리 블록이 fct2()의 스택 프레임이라 한다.</p>
+</blockquote>
+<p><img alt="hw5" src="https://user-images.githubusercontent.com/47182864/61034071-88493d80-a3ff-11e9-9fe1-295ec58af534.png"/></p>
+<blockquote>
+<p>sp register : 스택 프레임을 가리키는 레지스터 (32bit : esp , 64bit : rsp)
+sp는 변수가 할당될 때마다 증가하면서, 다음 변수가 할당될 메모리 위치를 가리킨다.</p>
+</blockquote>
+<p><img alt="hw5-1" src="https://user-images.githubusercontent.com/47182864/61034067-87b0a700-a3ff-11e9-8bf2-809101316307.png"/></p>
+<ul>
+<li>breakpoint를 add()함수로 걸고 다시 어셈블리 코드를 살펴보면 스택 현황을 볼 수 있었다!!!</li>
+</ul>
+<p><img alt="add" src="https://user-images.githubusercontent.com/47182864/61036160-7ff30180-a403-11e9-975c-163ea1088c86.png"/></p>
+<h5 id="3-write-up-2">3. write-up (2)<a class="headerlink" href="#3-write-up-2" title="Permanent link">¶</a></h5>
+<ul>
+<li>malloc으로 할당한 메모리는 정말 힙 영역으로 구분되어 있을까 ?! 이것도 어셈블리 코드로 확인해보기로 했다!  </li>
+</ul>
+<blockquote>
+<p>이번에도 간단한 코드를 작성해서...</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">m</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="mi">20</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">free</span><span class="p">(</span><span class="n">m</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>debug 모드로 컴파일하여 gdb로 열어본다. for문을 돌면서 malloc을 이용한 배열 m[i]에 값을 할당해줄때, heap영역이 이용되는 것을 볼 수 있다. 파란색으로 표시된 것이 heap영역, 노란색으로 표시된 것이 stack영역이다.</p>
+</blockquote>
+<p><img alt="heap" src="https://user-images.githubusercontent.com/47182864/61032802-1b34a880-a3fd-11e9-9727-35e75fa48181.png"/></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

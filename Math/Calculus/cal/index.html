@@ -1,0 +1,2091 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Calculus/cal/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>극한 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              극한
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          극한
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        극한
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    극한
+  </a>
+<nav aria-label="극한" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    등비급수
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    함수의 극한
+  </a>
+<nav aria-label="함수의 극한" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-">
+    엡실론-델타 논법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    극한값이 존재하는 조건
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    극한의 성질
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    극한값을 구하는 방법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    극한의 비교
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    연속함수
+  </a>
+<nav aria-label="연속함수" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    여러가지 함수의 연속
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    연속함수의 성질
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-_1">
+    최대-최소 정리와 사이값 정리
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    극한
+  </a>
+<nav aria-label="극한" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    등비급수
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    함수의 극한
+  </a>
+<nav aria-label="함수의 극한" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-">
+    엡실론-델타 논법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    극한값이 존재하는 조건
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    극한의 성질
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    극한값을 구하는 방법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    극한의 비교
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    연속함수
+  </a>
+<nav aria-label="연속함수" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    여러가지 함수의 연속
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    연속함수의 성질
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-_1">
+    최대-최소 정리와 사이값 정리
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>극한</h1>
+<h2 id="_1">극한<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#190d78d87"><div class="admonition tldr" id="190d78d87">
+<p>극한(limit) : 사물이 진행하여 도달할 수 있는 최후의 단계나 지점이다.</p>
+</div></a>
+<ul>
+<li>
+<p>17세기 뉴턴과 라이프니츠가 극한의 정확한 이해를 바탕으로 미적분을 개발하였다. 그러나 그 시점에서도 극한은 수학적으로 완전히 정의되지 못하고 직관적으로 이해되면서 많은 오류를 야기했다. 이후 18세기 코시가 현대의 극한 개념을 정립했고 19세기 바이어슈트라스가 좀 더 엄격하게 극한을 규격화했다. 하지만 고대 그리스 시대에서도 아르키메데스는 원에 내접하는 정 <span class="arithmatex">\(n\)</span> 각형과 외접하는 정 <span class="arithmatex">\(n\)</span> 각형의 <span class="arithmatex">\(n\)</span> 을 점차 크게 하여 원주율을 구했고 순환소수, 무리수의 정의도 극한의 개념을 기반으로 하는 등 이미 수학은 극한의 개념을 내포하고 있었다. </p>
+</li>
+<li>
+<p>극한을 자신의 경험을 바탕으로 한 개인적인 직관으로 이해하려 했을 때 다음과 같이 범할 수 있는 오류가 존재한다. </p>
+<ul>
+<li>"한 없이 어떤 값에 가까워질 때, 어떤 값이 될 수는 없다." 고 생각할 수 있으나 수학은 그 값이 될 수도 있다고 정의한다. </li>
+</ul>
+</li>
+<li>
+<p>수학의 극한 개념은 수로 격하될 수 있는 자연 대상 중에서 한 대상이 어떤 대상에 가까워지는 것을 수학적으로 추상화시킬 수 있게 해준다. </p>
+<p>이 어떤 자연적 대상이 다른 대상에 한없이 가까이 다가가는 것을 극한으로써 표현할 수 있게 됨으로써 극한으로 미분의 개념도 발전되는 등 많은 효용이 발생했다.</p>
+<ul>
+<li><strong>이것으로보아 자연 대상을 끊임없이 수학적으로 모델링하여 추상화시키면 계속해서 많은 효용이 발생할 것이다.</strong></li>
+</ul>
+</li>
+</ul>
+<a href="#d35cb7380"><div class="admonition tldr" id="d35cb7380">
+<p>무한소(infinitesimal) : <span class="arithmatex">\(0\)</span> 에 한없이 가까워지는 상태를 나타낸다.</p>
+</div></a>
+<ul>
+<li><span class="arithmatex">\(0\)</span> 과 무한소는 구분 없이 <span class="arithmatex">\(0\)</span> 으로 표기한다.</li>
+</ul>
+<a href="#0214b6dd5"><div class="admonition tldr" id="0214b6dd5">
+<p>무한대 : 어떤 실수보다도 더 큰 상태를 뜻한다.</p>
+</div></a>
+<ul>
+<li>
+<p>한없이 커지는 상태를 나타낸다. 즉, 수가 아닌 상태를 표현하는 것이다.</p>
+</li>
+<li>
+<p>무한대는 <span class="arithmatex">\(\infty\)</span> 로 표기한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>힐베르트의 호텔은 대수학자 힐베르트가 종업원으로 일하고 있는 가상의 호텔이다. 이 호텔은 무한히 많은 객실을 갖고 있다.</p>
+<p>하루는 손님이 <span class="arithmatex">\(1\)</span> 명 왔는데 무한히 많은 객실에 모두 투숙객들이 있었기에 방을 내줄 수 없었다. 그런데 힐베르트는 안내방송으로 "죄송하지만 손님들께서는 옆 객실로 한 칸씩 이동해주십시오." 라고 부탁했다. 그러자 모든 투숙객이 옆 호실로 무사히 이동했고 <span class="arithmatex">\(1\)</span> 호실만 비어있는 상태가 되었다. 새로 온 손님은 무사히 비어있는 <span class="arithmatex">\(1\)</span> 호실로 들어갈 수 있었다. </p>
+<p>또 하루는 무한히 긴 열차를 타고 무한히 많은 손님이 힐베르트의 호텔을 찾아왔다. 힐베르트는 당황하지 않고 안내방송으로 "손님들께서는 불편하시겠지만 자기 호실 번호에 <span class="arithmatex">\(2\)</span> 를 곱하셔서 해당 객실로 옮겨주십시오." 라고 말했다. 무한히 많은 모든 투숙객들은 모두 무사히 새로운 호실로 옮겨갈 수 있었고 동시에 무한히 많은 홀수번 호실의 빈방이 생겼다. 힐베르트는 무한히 많은 새로온 손님들을 홀수 번호가 붙어있는 호실로 배정해주었다. </p>
+<p>이 힐베르트의 호텔의 일화는 <span class="arithmatex">\(\infty + 1 = \infty\)</span> 인 것과 <span class="arithmatex">\(\infty \times 2 = \infty\)</span> 를 보여준다.</p>
+<a href="#d41d8cd98"><div class="admonition tldr" id="d41d8cd98"></div></a>
+<p>수열의 수렴(convergence) : 수열 <span class="arithmatex">\(\{a_n\}\)</span> 에서 <span class="arithmatex">\(n\)</span> 이 한없이 커질 때, <span class="arithmatex">\(a_n\)</span> 의 값이 일정한 값 <span class="arithmatex">\(\alpha\)</span> 에 한없이 가까워지면 수열 <span class="arithmatex">\(\{a_n\}\)</span> 은 <span class="arithmatex">\(\alpha\)</span> 에 수렴한다고 한다.</p>
+</li>
+<li>
+<p>이때 <span class="arithmatex">\(\alpha\)</span> 를 수열 <span class="arithmatex">\(\{a_n\}\)</span> 의 극한값 또는 극한이라 하고 형식언어로 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} a_n = \alpha \]</div>
+<p>또는 </p>
+<div class="arithmatex">\[ n \to \infty \implies a_n \to \alpha \]</div>
+<p>라 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>일반항이 <span class="arithmatex">\(a_n = \frac{n}{n+1}\)</span> 인 수열에서 <span class="arithmatex">\(n\)</span> 이 한없이 커지면 다음 그래프와 같이 <span class="arithmatex">\(a_n\)</span> 값이 한없이 <span class="arithmatex">\(1\)</span> 에 가까워진다. </p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/76268242-dd03c780-62b0-11ea-8aab-2b34c7f5361e.png"/></p>
+<p>이것을</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \frac{n}{n+1} = 1 \]</div>
+<p>로 나타낸다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>일반항이 <span class="arithmatex">\(a_n = (\frac{1}{2}) ^{n}\)</span> 인 수열에서 <span class="arithmatex">\(n\)</span> 이 한없이 커지면 다음 그래프와 같이 <span class="arithmatex">\(a_n\)</span> 값이 한없이 <span class="arithmatex">\(0\)</span> 에 가까워진다. </p>
+<p><img alt="desmos-graph(1)" src="https://user-images.githubusercontent.com/16812446/76268429-7af79200-62b1-11ea-8653-1de7a7e2f2dc.png"/></p>
+<p>이것을</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \bigg (\frac{1}{2}\bigg  )^{n} = 0 \]</div>
+<p>로 나타낸다. </p>
+</li>
+<li>
+<p>위 예시에서 엄밀하게는 <span class="arithmatex">\(0\)</span> 이 아니라 무한소라 해야 한다. 무한소란 <span class="arithmatex">\(0\)</span> 에 한없이 가까워지는 상태를 나타낸다. <span class="arithmatex">\(0\)</span> 과 무한소는 구분 없이 <span class="arithmatex">\(0\)</span> 으로 표기한다.</p>
+</li>
+</ul>
+<a href="#2f371182e"><div class="admonition tldr" id="2f371182e">
+<p>수열의 발산(divergence) : 수열 <span class="arithmatex">\(\{a_n\}\)</span> 이 수렴하지 않을 때, 수열 <span class="arithmatex">\(\{a_n\}\)</span> 은 발산한다고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>수열의 발산은 <span class="arithmatex">\(3\)</span> 가지 경우로 그 대상을 단순화시킬 수 있다. </p>
+<ol>
+<li>
+<p>양의 무한대 <span class="arithmatex">\(\infty\)</span> 로 발산 </p>
+<ul>
+<li>
+<p>수열 <span class="arithmatex">\(\{a_n\}\)</span> 에서 <span class="arithmatex">\(n\)</span> 이 한없이 커질 때, <span class="arithmatex">\(a_n\)</span> 값도 한없이 커지면 수열 <span class="arithmatex">\(\{a_n\}\)</span> 은 양의 무한대 <span class="arithmatex">\(\infty\)</span> 로 발산한다고 한다.</p>
+</li>
+<li>
+<p>이것을 형식언어로 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} a_n = \infty \]</div>
+<p>또는 </p>
+<div class="arithmatex">\[ n \to \infty \implies a_n \to \infty \]</div>
+<p>로 나타낸다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>음의 무한대 <span class="arithmatex">\(-\infty\)</span> 로 발산 </p>
+<ul>
+<li>
+<p>수열 <span class="arithmatex">\(\{a_n\}\)</span> 에서 <span class="arithmatex">\(n\)</span> 이 한없이 커질 때, <span class="arithmatex">\(a_n\)</span> 값도 음수이면서 그 절대값이 한없이 커지면 수열 <span class="arithmatex">\(\{a_n\}\)</span> 은 음의 무한대 <span class="arithmatex">\(\infty\)</span> 로 발산한다고 한다.</p>
+</li>
+<li>
+<p>이것을 형식언어로 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} a_n = -\infty \]</div>
+<p>또는 </p>
+<div class="arithmatex">\[ n \to \infty \implies a_n \to -\infty \]</div>
+<p>로 나타낸다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>진동</p>
+<ul>
+<li>
+<p>수열 <span class="arithmatex">\(\{a_n\}\)</span> 이 수렴하지도 않고, 양의 무한대나 음의 무한대로 발산하지도 않으면 수열 <span class="arithmatex">\(\{a_n\}\)</span> 은 진동한다고 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>일반항이 <span class="arithmatex">\(a_n = (-1) ^{n-1}\)</span> 의 그래프를 그려보면 <span class="arithmatex">\(n\)</span> 에 한없이 커질 때 일정한 값에 수렴하지도 않고 무한대로 발산하지도 않는다는 것을 알 수 있다.</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<a href="#c762917be"><div class="admonition tldr" id="c762917be">
+<p>등비수열의 극한 : 등비수열 <span class="arithmatex">\(\{r^n\}\)</span> 은 공비 <span class="arithmatex">\(r\)</span> 의 값에 범위에 따라 다음과 같이 수렴 또는 발산한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(r&gt;1\)</span> 일 때, <span class="arithmatex">\(\lim_{n \to \infty} r ^{n} = \infty\)</span> (발산)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(r=1\)</span> 일 때, <span class="arithmatex">\(\lim_{n \to \infty} r ^{n} = 1\)</span> (수렴)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(-1&lt;r&lt;1\)</span> 일 때, <span class="arithmatex">\(\lim_{n \to \infty} r ^{n} = 0\)</span> (수렴) (등비수열의 수렴 조건 : <span class="arithmatex">\(-1&lt;r \leq 1\)</span> 이다.)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(r\leq-1\)</span> 일 때, 수열 <span class="arithmatex">\(\{r^n\}\)</span> 은 진동한다. (발산)</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(r&gt;1\)</span> 일 때 <span class="arithmatex">\(r=1+h(h&gt;0)\)</span> 로 두자. 그러면 <span class="arithmatex">\(h&gt;0\)</span> 일 때, 임의의 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 <span class="arithmatex">\((1+h) ^{n} \geq 1+nh\)</span> 가 성립하는 것을 수학적 귀납법으로 증명가능하기 때문에</p>
+<div class="arithmatex">\[ r ^{n} = (1+h) ^{n} \geq 1 + nh \]</div>
+<p>이다. 이때 <span class="arithmatex">\(h&gt;0\)</span> 이므로 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} (1+nh) = \infty \]</div>
+<p>이다. 최종적으로 </p>
+<div class="arithmatex">\[ \therefore  \lim_{n \to \infty} (r ^{n}) = \infty \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} r ^{n} = \lim_{n \to \infty} 1 = 1 \]</div>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(r=0\)</span> 이면 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} r ^{n} = \lim_{n \to \infty} 0 = 0 \]</div>
+<p>이다. </p>
+<p><span class="arithmatex">\(r \neq 0\)</span> 이면 <span class="arithmatex">\(\frac{1}{|r|} &gt; 1\)</span> 이므로 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \frac{1}{|r^n|} = \lim_{n \to \infty} (\frac{1}{|r|}) ^{n} = \infty \]</div>
+<p>이다. 따라서 <span class="arithmatex">\(\lim_{n \to \infty} |r ^{n}| = 0\)</span> 이므로 </p>
+<div class="arithmatex">\[ \therefore \lim_{n \to \infty} r ^{n} = 0 \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(r = -1\)</span> 이면 수열 <span class="arithmatex">\(\{r^n\}\)</span> 은 <span class="arithmatex">\(-1, 1, -1, 1, \dots\)</span> 이므로 진동한다. (발산)</p>
+<p><span class="arithmatex">\(r &lt; -1\)</span> 이면 <span class="arithmatex">\(|r| &gt; 1\)</span> 이므로 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} |r ^{n}| = \lim_{n \to \infty} |r| ^{n} = \infty \]</div>
+<p>인데, 수열 <span class="arithmatex">\(\{r^n\}\)</span> 의 각 항의 부호가 계속 바뀌므로 진동한다. (발산)</p>
+</li>
+</ul>
+<a href="#d077ac640"><div class="admonition tldr" id="d077ac640">
+<p><span class="arithmatex">\(r^n\)</span> 을 포함한 수열의 극한 : <span class="arithmatex">\(r^n\)</span> 을 포함한 수열의 극한은 <span class="arithmatex">\(r\)</span> 의 값의 범위를 </p>
+<div class="arithmatex">\[ |r| &lt; 1, r=1, |r| &gt; 1, r = -1 \]</div>
+<p>로 나누어 구한다.</p>
+</div></a>
+<a href="#fc2b3e874"><div class="admonition tldr" id="fc2b3e874">
+<p>급수의 수렴 : 급수 <span class="arithmatex">\(\sum_{n=1}^{\infty} a_n\)</span> 의 부분합 수열 <span class="arithmatex">\(\{S_n\}\)</span> 이 일정한 값 <span class="arithmatex">\(S\)</span> 에 수렴할 때, 즉 </p>
+<div class="arithmatex">\[ \lim_{mn \to \infty} S_n = \lim_{n \to \infty} \sum_{k=1}^{n}a_k = S \]</div>
+<p>일 때, 급수가 <span class="arithmatex">\(S\)</span> 에 수렴한다고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(S\)</span> 를 급수의 합이라 한다. </p>
+<ul>
+<li>
+<p>기호로 </p>
+<div class="arithmatex">\[ a_1 + a_2 + \dots + a_n + \dots = \sum_{k=1}^{\infty} a_n = S \]</div>
+<p>이라 한다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>수열 <span class="arithmatex">\(\{a_n\} = \dfrac{1}{n(n+1)}\)</span> 의 급수 </p>
+<div class="arithmatex">\[ \frac{1}{1 \circ 2} + \frac{1}{2 \circ 3} + \dots + \frac{1}{n(n+1)} + \dots \]</div>
+<p>가 수렴인지 발산인지 알아보고 수렴이면 그 값을 구해보자. </p>
+<p>먼저 수열의 <span class="arithmatex">\(n\)</span> 항 <span class="arithmatex">\(\frac{1}{n(n+1)}\)</span> 은 다음과 같다. </p>
+<div class="arithmatex">\[ a_n = \frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1} \]</div>
+<p>따라서 부분합 <span class="arithmatex">\(S_n\)</span> 은 다음과 같다. </p>
+<div class="arithmatex">\[ S_n = \sum_{k=1}^{n}a_k = \sum_{k=1}^{n}(\frac{1}{k}-\frac{1}{(k+1)}) = (\frac{1}{1}-\frac{1}{2})+(\frac{1}{2}-\frac{1}{3})+\dots+(\frac{1}{n}-\frac{1}{n+1}) = 1 - \frac{1}{n+1} \]</div>
+<p>그러므로 급수 <span class="arithmatex">\(\lim_{n \to \infty} S_n\)</span> 는 다음과 같다. </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} S_n = \lim_{n \to \infty} (1-\frac{1}{n+1}) = 1 \]</div>
+<p>따라서 급수는 수렴하고 그 합은 <span class="arithmatex">\(1\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#90ddbd936"><div class="admonition tldr" id="90ddbd936">
+<p>급수의 발산 : 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty} a_n\)</span> 의 부분합 수열 <span class="arithmatex">\(\{S_n\}\)</span> 이 발산할 때 이 급수는 발산한다고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>수열 <span class="arithmatex">\(\{a_n\} = \dfrac{1}{\sqrt[]{n+1} + \sqrt[]{n}}\)</span> 의 급수 </p>
+<div class="arithmatex">\[ \frac{1}{\sqrt[]{2}+\sqrt[]{1}} + \frac{1}{\sqrt[]{3}+\sqrt[]{2}} + \frac{1}{\sqrt[]{4}+\sqrt[]{3}} + \dots \frac{1}{\sqrt[]{n+1}+\sqrt[]{n}} + \dots \]</div>
+<p>가 수렴인지 발산인지 알아보고 수렴이면 그 값을 구해보자. </p>
+<p>먼저 수열의 <span class="arithmatex">\(n\)</span> 항 <span class="arithmatex">\(\frac{1}{\sqrt[]{n+1} + \sqrt[]{n}}\)</span> 은 다음과 같다. </p>
+<div class="arithmatex">\[ a_n = \frac{1}{\sqrt[]{n+1} + \sqrt[]{n}} = \frac{\sqrt[]{n+1}-\sqrt[]{n}}{(\sqrt[]{n+1} + \sqrt[]{n})(\sqrt[]{n+1}-\sqrt[]{n})} = \sqrt[]{n+1} - \sqrt[]{n} \]</div>
+<p>따라서 부분합 <span class="arithmatex">\(S_n\)</span> 은 다음과 같다. </p>
+<div class="arithmatex">\[ S_n = \sum_{k=1}^{n}a_k = \sum_{k=1}^{n}(\sqrt[]{n+1} - \sqrt[]{n}) = \sqrt[]{n+1} - 1 \]</div>
+<p>그러므로 급수 <span class="arithmatex">\(\lim_{n \to \infty} S_n\)</span> 는 다음과 같다. </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} S_n = \lim_{n \to \infty} (\sqrt[]{n+1} - 1) = \infty \]</div>
+<p>따라서 급수는 발산한다.</p>
+</li>
+</ul>
+<a href="#43af4712e"><div class="admonition tldr" id="43af4712e">
+<p>급수와 수열의 극한의 관계 : 급수 <span class="arithmatex">\(\displaystyle  \sum_{n=1}^{\infty}\)</span> 의 수렴, 발산과 수열 <span class="arithmatex">\(\{a_n\}\)</span> 의 극한 <span class="arithmatex">\(\displaystyle  \lim_{n \to \infty} a_n\)</span> 사이에 다음의 관계가 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p>급수 <span class="arithmatex">\(\displaystyle  \sum_{n=1}^{\infty}a_n\)</span> 이 수렴하면 <span class="arithmatex">\(\lim_{n \to \infty} a_n = 0\)</span> 이다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(2\)</span> 이상의 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 수열의 합 <span class="arithmatex">\(S_n\)</span> 과 일반항 <span class="arithmatex">\(a_n\)</span> 에는 다음의 관계가 있다. </p>
+<div class="arithmatex">\[ a_n = S_n - S _{n-1} \]</div>
+<p>또 수열 <span class="arithmatex">\(\{S_n\}\)</span> 이 수렴한다면 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} S_n = \lim_{n \to \infty} S _{n-1} = \alpha \]</div>
+<p>이다. 그러므로 수열 <span class="arithmatex">\(\{a_n\}\)</span> 의 극한은 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} a_n = \lim_{n \to \infty} (S_n - S _{n-1}) = \lim_{n \to \infty}  S_n - \lim_{n \to \infty} S _{n-1} = \alpha - \alpha = 0 \]</div>
+<p>이다. 따라서 급수 <span class="arithmatex">\(\sum_{n=1}^{\infty}a_n\)</span> 이 수렴하면 <span class="arithmatex">\(\lim_{n \to \infty} a_n = 0\)</span> 이다. </p>
+</li>
+<li>
+<p>이것의 역 "<span class="arithmatex">\(\lim_{n \to \infty} a_n = 0\)</span> 이면 급수 <span class="arithmatex">\(\sum_{n=1}^{\infty}a_n\)</span> 이 수렴한다" 는 성립하지 않는다. </p>
+<ul>
+<li>
+<p>그러므로 <span class="arithmatex">\(\lim_{n \to \infty} a_n\)</span> 값으로 급수 <span class="arithmatex">\(\sum_{n=1}^{\infty}a_n\)</span> 의 수렴 여부를 확인할 수 없다. </p>
+</li>
+<li>
+<p>예시 </p>
+</li>
+</ul>
+<p>수열 <span class="arithmatex">\(\{a_n\} = \frac{1}{\sqrt[]{n+1} + \sqrt[]{n}}\)</span> 는 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} a_n = 0 \]</div>
+<p>이다. 그러나 수열의 <span class="arithmatex">\(n\)</span> 항 <span class="arithmatex">\(\frac{1}{\sqrt[]{n+1} + \sqrt[]{n}}\)</span> 이</p>
+<div class="arithmatex">\[ a_n = \frac{1}{\sqrt[]{n+1} + \sqrt[]{n}} = \frac{\sqrt[]{n+1}-\sqrt[]{n}}{(\sqrt[]{n+1} + \sqrt[]{n})(\sqrt[]{n+1}-\sqrt[]{n})} = \sqrt[]{n+1} - \sqrt[]{n} \]</div>
+<p>이므로 부분합 <span class="arithmatex">\(S_n\)</span> 은 다음과 같다. </p>
+<div class="arithmatex">\[ S_n = \sum_{k=1}^{n}a_k = \sum_{k=1}^{n}(\sqrt[]{n+1} - \sqrt[]{n}) = \sqrt[]{n+1} - 1 \]</div>
+<p>그러므로 급수 <span class="arithmatex">\(\lim_{n \to \infty} S_n\)</span> 는 다음과 같다. </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} S_n = \lim_{n \to \infty} (\sqrt[]{n+1} - 1) = \infty \]</div>
+<p>따라서 <span class="arithmatex">\(\lim_{n \to \infty} a_n = 0\)</span> 인데도 급수는 발산한다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\lim_{n \to \infty} a_n \neq 0\)</span> 이면 급수 <span class="arithmatex">\(\sum_{n=1}^{\infty}a_n\)</span> 은 발산한다. </p>
+<ul>
+<li>두 관계는 서로 대우이다. </li>
+</ul>
+</li>
+</ul>
+<h3 id="_2">등비급수<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<a href="#c88bafc59"><div class="admonition tldr" id="c88bafc59">
+<p>등비급수(geometric series) : 첫째항이 <span class="arithmatex">\(a\)</span> 이고 공비가 <span class="arithmatex">\(r\)</span> 인 등비수열 <span class="arithmatex">\(\{ar ^{n-1}\}\)</span> 에서 얻은 급수 </p>
+<div class="arithmatex">\[ \sum_{n=1}^{\infty}ar ^{n-1} = a + ar + a r ^{2} + \dots + a r ^{n-1} + \dots \]</div>
+<p>을 첫째항이 <span class="arithmatex">\(a\)</span> 에고 공비가 <span class="arithmatex">\(r\)</span> 인 등비급수라 한다.</p>
+</div></a>
+<a href="#41673cf28"><div class="admonition tldr" id="41673cf28">
+<p>등비급수의 수렴과 발산 : 등비급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}ar ^{n-1}(a \neq 0)\)</span> 은 공비 <span class="arithmatex">\(r\)</span> 의 값의 범위에 따라 수렴 또는 발산한다. </p>
+</div></a>
+<ol>
+<li>
+<p><span class="arithmatex">\(|r| &lt; 1\)</span> 일 때, 수렴하고 그 합은 <span class="arithmatex">\(\frac{a}{1-r}\)</span> 이다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(|r|&lt;1\)</span> 일 때, <span class="arithmatex">\(\lim_{n \to \infty} r ^{n}=0\)</span> 이므로 </p>
+<div class="arithmatex">\[ \sum_{n=1}^{\infty} ar ^{n-1} = \lim_{n \to \infty} S_n = \lim_{n \to \infty} \frac{a(1-r^n)}{1-r} = \frac{a}{1-r} \]</div>
+<p>이다. 따라서 등비급수 <span class="arithmatex">\(\sum_{n=1}^{\infty}ar ^{n-1}\)</span> 는 수렴하고 그 값은 <span class="arithmatex">\(\frac{a}{1-r}\)</span> 이다. </p>
+<p><span class="arithmatex">\(|r|\geq1\)</span> 일 때, <span class="arithmatex">\(\lim_{n \to \infty} r ^{n} \neq  0\)</span> 이므로 수열과 극한의 관계 정리에 의하여 등비급수 <span class="arithmatex">\(\sum_{n=1}^{\infty}ar ^{n-1}\)</span> 는 발산한다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(|r| \geq 1\)</span> 일 때, 발산한다.</p>
+</li>
+</ol>
+<a href="#2f90c9644"><div class="admonition tldr" id="2f90c9644">
+<p>등비급수 수렴 조건 : 등비급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty} ar ^{n-1}\)</span> 이 수렴하기 위한 조건은 </p>
+<div class="arithmatex">\[ a=0 \lor -1&lt;r&lt;1 \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#e825e665b"><div class="admonition tldr" id="e825e665b">
+<p>등비급수를 순환소수에 활용하기 : 다음은 등비급수로 순환소수를 분수로 나타내는 알고리즘이다. </p>
+<ol>
+<li>
+<p>순환소수를 등비급수로 나타낸다. </p>
+</li>
+<li>
+<p>첫째항 <span class="arithmatex">\(a\)</span> 와 공비 <span class="arithmatex">\(r(|r| &lt; 1)\)</span> 를 구한다. </p>
+</li>
+<li>
+<p>등비급수의 합이 <span class="arithmatex">\(\frac{a}{1-r}\)</span> 임을 이용한다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ 0.\overline{32} = 0.323232 \dots = 0.32 + 0.0032 + \dots = \frac{32}{100} + \frac{32}{100^2} + \dots \]</div>
+<p>이므로 <span class="arithmatex">\(0.\overline{32}\)</span> 는 첫째항이 <span class="arithmatex">\(\frac{32}{100}\)</span> 이고 공비가 <span class="arithmatex">\(\frac{1}{100}\)</span> 인 등비급수의 합이다. </p>
+<div class="arithmatex">\[ \therefore 0.\overline{32} = \frac{\frac{32}{100}}{1- \frac{1}{100}} = \frac{32}{99} \]</div>
+</li>
+<li>
+<p>위 예시를 일반화하면 </p>
+<div class="arithmatex">\[ 0.\overline{a_1a_2 \dots a_n} = 0.a_1a_2 \dots a_n + 0.000 \dots 0.a_1a_2 \dots a_n + \dots \]</div>
+<div class="arithmatex">\[ = \frac{a_1a_2 \dots a_n}{10 ^{n}} + \frac{a_1a_2 \dots a_n}{10 ^{2n}} + \frac{a_1a_2 \dots a_n}{10 ^{3n}} + \dots \]</div>
+<div class="arithmatex">\[ = \frac{\frac{a_1a_2 \dots a_n}{10 ^{n}}}{1 - \frac{1}{10^n}} = \frac{a_1a_2 \dots a_n}{999 \dots 9} \]</div>
+<p>마지막 분수에서 분모 <span class="arithmatex">\(999 \dots 9\)</span> 의 <span class="arithmatex">\(9\)</span> 가 <span class="arithmatex">\(n\)</span> 개 있는 것이다.</p>
+</li>
+</ul>
+<a href="#a5471baef"><div class="admonition tldr" id="a5471baef">
+<p>등비급수를 도형에 활용하기 : 다음은 어떤 알고리즘(규칙)으로 처음 주어진 도형과 닮은 도형을 한없이 만들어 나갈 때, 모든 도형의 넓이의 합이나 길이의 합 같은 문제를 구하는 알고리즘이다. </p>
+<ol>
+<li>
+<p>도형이 일정하게 변하는 규칙을 찾는다. </p>
+</li>
+<li>
+<p>첫째항 <span class="arithmatex">\(a\)</span> 와 공비 <span class="arithmatex">\(r(|r| &lt; 1)\)</span> 를 구한다. </p>
+</li>
+<li>
+<p>등비급수의 합이 <span class="arithmatex">\(\frac{a}{1-r}\)</span> 임을 이용한다.</p>
+</li>
+</ol>
+</div></a>
+<h2 id="_3">함수의 극한<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<a href="#6c94dde1c"><div class="admonition tldr" id="6c94dde1c">
+<p>함수의 수렴(convergence) : 함수 <span class="arithmatex">\(f(x)\)</span> 에서 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 가 아니면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워질 때, <span class="arithmatex">\(f(x)\)</span> 의 값이 일정한 값 <span class="arithmatex">\(L\)</span> 에 한없이 가까워지면 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(L\)</span> 에 수렴한다고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 <span class="arithmatex">\(L\)</span> 을 함수 <span class="arithmatex">\(f(x)\)</span> 의 <span class="arithmatex">\(x=a\)</span> 에서의 극한값 또는 극한이라 한다. </p>
+</li>
+<li>
+<p>함수의 수렴은 다음과 같은 형식언어로 표현된다. </p>
+<div class="arithmatex">\[ \lim_{x \to a} f(x) = L \]</div>
+<p>또는 </p>
+<div class="arithmatex">\[ x \to a 일 때 f(x) \to L \]</div>
+</li>
+<li>
+<p>일반적으로 함수 <span class="arithmatex">\(f(x)\)</span> 가 다항함수 일 때 실수 <span class="arithmatex">\(a\)</span> 에 대하여 <span class="arithmatex">\(x \to a\)</span> 일 때의 <span class="arithmatex">\(f(x)\)</span> 의 극한값은 <span class="arithmatex">\(x=a\)</span> 에서의 함수값과 같다.</p>
+</li>
+<li>
+<p>상수함수 <span class="arithmatex">\(f(x) = c\)</span> 는 모든 실수 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(f(x)\)</span> 의 값이 항상 <span class="arithmatex">\(c\)</span> 이므로 실수 <span class="arithmatex">\(a\)</span> 에 대하여 <span class="arithmatex">\(x \to a\)</span> 일 때의 극한값이 항상 <span class="arithmatex">\(c\)</span> 이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음 세 함수를 생각하자. </p>
+<div class="arithmatex">\[ f_1(x) = x+1 \]</div>
+<div class="arithmatex">\[ f_2(x) = \frac{x^2-1}{x-1} \]</div>
+<p>$$ f_3(x) = \begin{cases}</p>
+<p>1 &amp;(x=1)\</p>
+<p>\frac{x^2-1}{x-1} &amp;(x \neq 1)\</p>
+<p>\end{cases}   $$</p>
+<p><img alt="desmos-graph(1)" src="https://user-images.githubusercontent.com/16812446/75511454-9ea91580-5a31-11ea-936d-4a2b540e2f4d.png"/></p>
+<p><span class="arithmatex">\(f_1(x)\)</span> 는 위와 같고 <span class="arithmatex">\(f_2(x)\)</span> 는 위와 비슷하지만 <span class="arithmatex">\(x = 1\)</span> 에서 정의되지 않는다. <span class="arithmatex">\(f_3(x)\)</span> 는 <span class="arithmatex">\(x=1\)</span> 에서 <span class="arithmatex">\(1\)</span> 로 정의된다. 하지만 세 함수 모두 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(1\)</span> 로 한없이 가까워지면 함수값이 <span class="arithmatex">\(2\)</span> 에 한없이 가까워진다. 그러므로 세 함수의 <span class="arithmatex">\(x \to 1\)</span> 일 때의 극한은 다음과 같다.</p>
+<div class="arithmatex">\[ \lim_{x \to 1} f_1(x) = 2, \lim_{x \to 1} f_2(x) = 2, \lim_{x \to 1} f_3(x) = 2 \]</div>
+<p><span class="arithmatex">\(f_2(x)\)</span> 의 경우에서 알 수 있듯이 함수값이 정의되지 않아도 극한값은 존재할 수 있다. 또 <span class="arithmatex">\(f_3(x)\)</span> 의 경우에서 알 수 있듯이 함수값은 극한값과 다를 수 있다.</p>
+</li>
+<li>
+<p>예시</p>
+<p>함수 <span class="arithmatex">\(f(x) = \frac{1}{x}\)</span> 의 <span class="arithmatex">\(x \to \infty, x \to - \infty\)</span> 에서의 극한은 각각 다음과 같다. </p>
+<div class="arithmatex">\[\lim_{x \to \infty} \frac{1}{x} = 0, \lim_{x \to -\infty} \frac{1}{x} = 0\]</div>
+<p><img alt="desmos-graph(2)" src="https://user-images.githubusercontent.com/16812446/75512013-6b678600-5a33-11ea-91d4-184c2d9473a7.png"/></p>
+<p><span class="arithmatex">\(f(x)\)</span> 의 그래프를 살펴보면 <span class="arithmatex">\(x\)</span> 의 값이 한없이 커질 때와 <span class="arithmatex">\(x\)</span> 값이 음수이면서 그 절대값이 한없이 커질 때 <span class="arithmatex">\(f(x)\)</span> 값이 <span class="arithmatex">\(0\)</span> 에 한없이 가까워짐을 알 수 있다.</p>
+</li>
+</ul>
+<a href="#5cf9c0b44"><div class="admonition tldr" id="5cf9c0b44">
+<p>함수의 발산(divergence) : 함수가 수렴하지 않으면 발산한다고 하며 발산은 다음의 두 가지 경우로 정의된다. </p>
+<ol>
+<li>
+<p>양의 무한대로 발산 : 함수 <span class="arithmatex">\(f(x)\)</span> 에서 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 가 아니면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워질 때, <span class="arithmatex">\(f(x)\)</span> 의 값이 한없이 커지면 함수 <span class="arithmatex">\(f(x)\)</span> 는 양의 무한대로 발산한다고 한다. </p>
+<ul>
+<li>
+<p>이것을 형식언어로 다음과 같이 나타낸다.</p>
+<div class="arithmatex">\[ \lim_{x \to a} f(x) = \infty \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ x \to a \implies f(x) \to \infty  \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>음의 무한대로 발산 : 함수 <span class="arithmatex">\(f(x)\)</span> 에서 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 가 아니면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워질 때, <span class="arithmatex">\(f(x)\)</span> 의 값이 음수이면서 그 절대값이 한없이 커지면 커지면 함수 <span class="arithmatex">\(f(x)\)</span> 는 음의 무한대로 발산한다고 한다. </p>
+<ul>
+<li>
+<p>이것을 형식언어로 다음과 같이 나타낸다.</p>
+<div class="arithmatex">\[ \lim_{x \to a} f(x) = -\infty \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ x \to a \implies f(x) \to -\infty  \]</div>
+</li>
+</ul>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p>함수 <span class="arithmatex">\(f_1(x) = \frac{1}{x^2}\)</span> 는 다음 그래프에서 볼 수 있듯이 <span class="arithmatex">\(x\)</span> 값이 <span class="arithmatex">\(0\)</span> 이 아니면서 <span class="arithmatex">\(0\)</span> 에 한없이 가까워지면 <span class="arithmatex">\(f_1(x)\)</span> 값은 한없이 커진다. 이것을 양의 무한대로 발산한다고 한다.</p>
+<div class="arithmatex">\[\lim_{x \to 0} \frac{1}{x^2} = \infty\]</div>
+<p><img alt="desmos-graph(3)" src="https://user-images.githubusercontent.com/16812446/75512242-19733000-5a34-11ea-96f4-8b9ab444bf08.png"/></p>
+</li>
+<li>
+<p>예시</p>
+<p>함수 <span class="arithmatex">\(f_2(x) = -\frac{1}{x^2}\)</span> 는 다음 그래프에서 볼 수 있듯이 <span class="arithmatex">\(x\)</span> 값이 <span class="arithmatex">\(0\)</span> 이 아니면서 <span class="arithmatex">\(0\)</span> 에 한없이 가까워지면 <span class="arithmatex">\(f_1(x)\)</span> 값은 음수이면서 그 절대값이 한없이 커진다. 이것을 음의 무한대로 발산한다고 한다.</p>
+<div class="arithmatex">\[\lim_{x \to 0} -\frac{1}{x^2} = -\infty\]</div>
+<p><img alt="desmos-graph(4)" src="https://user-images.githubusercontent.com/16812446/75512395-aae2a200-5a34-11ea-8581-985b6699ad91.png"/></p>
+</li>
+<li>
+<p>예시</p>
+<p>함수 <span class="arithmatex">\(f_1(x) = x^2\)</span> 는 다음 그래프에서 볼 수 있듯이 <span class="arithmatex">\(x\)</span> 값이 한없이 커지거나 음수이면서 그 절대값이 한없이 커지면 <span class="arithmatex">\(f_1(x)\)</span> 값은 한없이 커진다. 이것을 형식 언어로 각각 다음과 같이 표현한다.</p>
+<div class="arithmatex">\[\lim_{x \to \infty} x^2 = \infty, \lim_{x \to -\infty} x^2 = \infty\]</div>
+<p><img alt="desmos-graph(5)" src="https://user-images.githubusercontent.com/16812446/75512539-22183600-5a35-11ea-8346-1befd8833937.png"/></p>
+</li>
+<li>
+<p>예시</p>
+<p>함수 <span class="arithmatex">\(f_2(x) = -x^2\)</span> 는 다음 그래프에서 볼 수 있듯이 <span class="arithmatex">\(x\)</span> 값이 한없이 커지거나 음수이면서 그 절대값이 한없이 커지면 <span class="arithmatex">\(f_1(x)\)</span> 값은 음수이면서 그 절대값이 한없이 커진다. 이것을 형식 언어로 각각 다음과 같이 표현한다.</p>
+<div class="arithmatex">\[\lim_{x \to \infty} -x^2 = -\infty, \lim_{x \to -\infty} -x^2 = -\infty\]</div>
+<p><img alt="desmos-graph(6)" src="https://user-images.githubusercontent.com/16812446/75512673-820edc80-5a35-11ea-9113-9f4ec83a604c.png"/></p>
+</li>
+</ul>
+<h3 id="-">엡실론-델타 논법<a class="headerlink" href="#-" title="Permanent link">¶</a></h3>
+<a href="#703f0c467"><div class="admonition tldr" id="703f0c467">
+<p><span class="arithmatex">\(\epsilon-\delta\)</span> 논법으로 정의하는 수열의 수렴 : "수열 <span class="arithmatex">\(\{a_n\}\)</span> 이 <span class="arithmatex">\(\alpha\)</span> 에 수렴한다" 는 명제 즉, </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} a_n = \alpha \]</div>
+<p>는 "임의의 <span class="arithmatex">\(\epsilon &gt;0\)</span> 에 대하여 적당한 자연수 <span class="arithmatex">\(N(\epsilon)\)</span> 이 존재하여, <span class="arithmatex">\(n \geq N\)</span> 인 모든 <span class="arithmatex">\(n\)</span> 에 대하여 <span class="arithmatex">\(|a_n - \alpha | &lt; \epsilon\)</span> 이 성립한다" 와 동치이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(N(\epsilon)\)</span> 은 <span class="arithmatex">\(\epsilon\)</span> 에 따라 결정되는 <span class="arithmatex">\(N\)</span> 이라는 의미이다. </p>
+</li>
+<li>
+<p>이 정의는 다른 말로 다시 설명하면 다음과 같다.  </p>
+<p>수열 <span class="arithmatex">\(\{a_n\}\)</span> 이 극한 <span class="arithmatex">\(\alpha\)</span> 에 수렴한다는 것은 "임의의 <span class="arithmatex">\(\epsilon\)</span> 에 대하여 구간 <span class="arithmatex">\((\alpha-\epsilon, \alpha+\epsilon)\)</span> 을 잡았을 때 자연수 <span class="arithmatex">\(N(\epsilon)\)</span> 이 존재하여 수열 <span class="arithmatex">\(\{a_n\}\)</span> 의 <span class="arithmatex">\(N\)</span> 번째항 이후의 모든 항의 값이 구간 <span class="arithmatex">\((\alpha-\epsilon, \alpha+\epsilon)\)</span> 에 들어간다" 는 것과 동치이다. </p>
+</li>
+<li>
+<p>예시</p>
+<p>우리는 수열 <span class="arithmatex">\(a_n = \frac{2}{n}\)</span> 의 수렴을 직관적으로</p>
+<div class="arithmatex">\[\lim_{n \to \infty} \frac{2}{n} = 0\]</div>
+<p>라는 것을 알고 있다. 이것을 정의에 부합하게 엄밀하게 검증해보자. 임의의 <span class="arithmatex">\(\epsilon\)</span> 을 무한히 작게 만드는 상상을 하는 것이 이해의 시작이다. </p>
+<p><span class="arithmatex">\(\epsilon = 1.5\)</span> 라고 하자. 그러면 자연수 <span class="arithmatex">\(N=2\)</span> 가 존재해서 <span class="arithmatex">\(n \geq 2\)</span> 일 때(즉, <span class="arithmatex">\(2\)</span> 번째 항과 그 이후의 모든 항에 대하여) <span class="arithmatex">\(|a_n - 0| &lt; 1.5\)</span> 이다. </p>
+<p><span class="arithmatex">\(\epsilon = \frac{3}{4}\)</span> 라고 하자. 그러면 자연수 <span class="arithmatex">\(N=3\)</span> 가 존재해서 <span class="arithmatex">\(n \geq 3\)</span> 일 때(즉, <span class="arithmatex">\(3\)</span> 번째 항과 그 이후의 모든 항에 대하여) <span class="arithmatex">\(|a_n - 0| &lt; \frac{3}{4}\)</span> 이다. </p>
+<p><span class="arithmatex">\(\epsilon = \frac{7}{12}\)</span> 라고 하자. 그러면 자연수 <span class="arithmatex">\(N=4\)</span> 가 존재해서 <span class="arithmatex">\(n \geq 4\)</span> 일 때(즉, <span class="arithmatex">\(4\)</span> 번째 항과 그 이후의 모든 항에 대하여) <span class="arithmatex">\(|a_n - 0| &lt; \frac{7}{12}\)</span> 이다. </p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p><span class="arithmatex">\(\epsilon = 0.0000000000000000000000000000000000000000001\)</span> 라고 하자. 그러면 자연수 <span class="arithmatex">\(N=\Delta\)</span> 가 존재해서 <span class="arithmatex">\(n \geq \Delta\)</span> 일 때(즉, <span class="arithmatex">\(\Delta\)</span> 번째 항과 그 이후의 모든 항에 대하여) <span class="arithmatex">\(|a_n - 0| &lt; 0.0000000000000000000000000000000000000000001\)</span> 이다. </p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p>이 정의는 위와 같은 식으로 <span class="arithmatex">\(\epsilon\)</span> 을 무한히 작게 만들었는데도 어떤 자연수 <span class="arithmatex">\(N\)</span> 이 존재해서 <span class="arithmatex">\(N\)</span> 번째 항과 그 이후의 모든 항에 대하여 극한값 <span class="arithmatex">\(0\)</span> 과 수열의 값의 차이값이 무한히 작은 <span class="arithmatex">\(\epsilon\)</span> 보다 작게 된다는 것을 보여준다. </p>
+<p>그러므로 임의의 <span class="arithmatex">\(\epsilon\)</span> 을 무한소로 작게 만들면서 통하여 극한값과 수열의 값의 거리는 거의 <span class="arithmatex">\(0\)</span> 와 같아진다는 것이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\lim_{n \to \infty} \frac{1}{n} = 0\)</span> 임을 증명하자. </p>
+<p>임의의 양수 <span class="arithmatex">\(\epsilon\)</span> 에 대하여 어떤 자연수 <span class="arithmatex">\(N(\epsilon)\)</span> 이 존재하여 <span class="arithmatex">\(n \geq N\)</span> 인 일 때 </p>
+<div class="arithmatex">\[|a_n - \alpha| &lt; \epsilon\]</div>
+<p>를 만족하는 <span class="arithmatex">\(N\)</span> 이 존재한다는 것을 보이면 된다. </p>
+<p>왜냐하면 다시 말하지만 임의의 양수 <span class="arithmatex">\(\epsilon\)</span> 에 대하여 <span class="arithmatex">\(N\)</span> 에 존재한다는 것은 <span class="arithmatex">\(N\)</span> 번째 항과 그 이상의 모든 항이 극한값 <span class="arithmatex">\(\alpha\)</span> 에 대하여</p>
+<div class="arithmatex">\[ |a_n - \alpha| &lt; \epsilon \]</div>
+<p>을 만족한다는 것이므로 수열의 <span class="arithmatex">\(N\)</span> 번째 항 이후의 모든 항과 극한값 <span class="arithmatex">\(\alpha\)</span> 의 거리가 <span class="arithmatex">\(\epsilon\)</span> 보다 작다는 것이 된다. 따라서 <span class="arithmatex">\(\epsilon\)</span> 을 아무리 작게 만들어도 어떤 자연수 <span class="arithmatex">\(N\)</span> 이 존재하면 수열의 <span class="arithmatex">\(N\)</span> 번째 항 이후의 모든 항과 극한값 <span class="arithmatex">\(\alpha\)</span> 의 거리가 거의 무한소에 가까워진 <span class="arithmatex">\(\epsilon\)</span> 보다 작다는 것이다. 그러므로 이 작업을 무한히 반복하여 <span class="arithmatex">\(\epsilon\)</span> 을 무한히 작게 만들면 수열의 <span class="arithmatex">\(N\)</span> 번째 항 이후의 모든 항들과 극한값 <span class="arithmatex">\(\alpha\)</span> 와의 거리거 <span class="arithmatex">\(0\)</span> 나 다름없다는 것이다.</p>
+<p>그러면 본격적인 증명을 시작해서 임의의 양수 <span class="arithmatex">\(\epsilon\)</span> 에 대한 부등식을 풀면 </p>
+<div class="arithmatex">\[|a_n - \alpha| = |\frac{1}{n}-0| = \frac{1}{n} &lt; \epsilon\]</div>
+<p>이다. 따라서 <span class="arithmatex">\(n &gt; \frac{1}{\epsilon}\)</span> 이라고 할 수 있는데 이 <span class="arithmatex">\(n\)</span> 은 조건에 따라 <span class="arithmatex">\(n \geq N\)</span> 을 만족한다. 그렇다면 적당한 <span class="arithmatex">\(N\)</span> 값을 </p>
+<div class="arithmatex">\[ N &gt; \frac{1}{\epsilon} \]</div>
+<p>이라고 두자. 그러면 <span class="arithmatex">\(n &gt; \frac{1}{\epsilon}\)</span> 이 되고 곧 <span class="arithmatex">\(\frac{1}{n} = |a_n - 0| &lt; \epsilon\)</span> 이므로 정의에 따라 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \frac{1}{n} = 0 \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#778d4fbcf"><div class="admonition tldr" id="778d4fbcf">
+<p><span class="arithmatex">\(\epsilon-\delta\)</span> 논법으로 정의하는 함수의 수렴 : 함수 <span class="arithmatex">\(f(x)\)</span> 에 대하여 점 <span class="arithmatex">\(a\)</span> 에서 함수 <span class="arithmatex">\(f\)</span> 의 극한은 다음 조건을 만족시키는 실수 <span class="arithmatex">\(L\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>"임의의 <span class="arithmatex">\(\epsilon &gt; 0\)</span> 에 대하여, <span class="arithmatex">\(\delta &gt; 0\)</span> 가 존재하여, <span class="arithmatex">\(0&lt;|x-a|&lt;\delta\)</span> 이면 항상 <span class="arithmatex">\(|f(x)-L|&lt;\epsilon\)</span> 이 성립한다."</p>
+<p>또한 이것을 형식언어로 다음과 같이 정의한다.</p>
+<div class="arithmatex">\[ \lim_{x \to a} f(x) = L \]</div>
+</li>
+<li>
+<p>이것을 한정기호와 논리기호를 사용하여 자연어를 격하하면 다음과 같다. 함수 <span class="arithmatex">\(f(x)\)</span> 에서</p>
+<div class="arithmatex">\[\forall \epsilon &gt; 0, \exists \delta &gt; 0, 0&lt;|x-a|&lt;\delta \implies |f(x)-L|&lt; \epsilon\iff \lim_{x \to a} f(x) = L\]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>기존의 고등학교 수학의 극한의 정의의 "한없이 가까워진다" 는 표현은 수학적으로 엄밀하지 않다. 따라서 프랑스 수학자 코시가 이 기존의 정의를 엡실론-델타 논법으로 엄밀하게 정의하였다. 기존의 정의로부터 엄밀하게 정의된 극한에 도착하는 논증은 다음과 같다. </p>
+<ul>
+<li>
+<p>먼저 우리가 "<span class="arithmatex">\(a\)</span> 가 <span class="arithmatex">\(b\)</span> 에 한없이 가까워진다"는 것을 상상할 때 <span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(b\)</span> 와의 거리가 무한히 줄어드는 것을 상상한다. 따라서 이것을 "<span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(b\)</span> 의 거리가 <span class="arithmatex">\(1\)</span> 이다", "<span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(b\)</span> 의 거리가 <span class="arithmatex">\(0.0001\)</span> 이다", "<span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(b\)</span> 의 거리가 <span class="arithmatex">\(0.00000000000001\)</span> 이다", "<span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(b\)</span> 의 거리가 <span class="arithmatex">\(\dots\)</span> 이다" 라는 식으로 끝없이 줄어드는 거리로 표현할 수 있다. </p>
+<p>이 거리들을 수학적으로 <span class="arithmatex">\(|a-b| &lt; 1\)</span>(<span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(b\)</span> 의 거리가 <span class="arithmatex">\(1\)</span> 이다), <span class="arithmatex">\(|a-b| &lt; 0.0001\)</span>, <span class="arithmatex">\(|a-b| &lt; 0.000000000001\)</span>, <span class="arithmatex">\(\dots\)</span> 로 바꾸어 표현할 수 있다. </p>
+<p>그런데 이때 부등식의 우항이 되는 한없이 작아지는 거리 상수 <span class="arithmatex">\(1\)</span>, <span class="arithmatex">\(0.0001\)</span>, <span class="arithmatex">\(0.000000000001\)</span>, <span class="arithmatex">\(\dots\)</span> 들을 일반적으로 표현하기 위하여 임의의 양수 <span class="arithmatex">\(\epsilon\)</span> 으로 표현한다.</p>
+<p>그러면 명제 "<span class="arithmatex">\(a\)</span> 가 <span class="arithmatex">\(b\)</span> 에 한없이 가까워진다" 를 "<span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(b\)</span> 의 거리가 한없이 줄어든다" 로 바꾸어 표현할 수 있고 이것을 수학적으로 엄밀하게 "임의의 양수 <span class="arithmatex">\(\epsilon\)</span> 에 대하여 <span class="arithmatex">\(|a-b| &lt; \epsilon\)</span> 이다" 로 재정의할 수 있다. </p>
+</li>
+<li>
+<p>그러므로 이제 </p>
+<p>"함수 <span class="arithmatex">\(f(x)\)</span> 에서 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 가 아니면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워질 때, <span class="arithmatex">\(f(x)\)</span> 의 값이 일정한 값 <span class="arithmatex">\(L\)</span> 에 한없이 가까워지면 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(L\)</span> 에 수렴한다. <span class="arithmatex">\(\iff\)</span> <span class="arithmatex">\(\lim_{x \to a} f(x) = L\)</span>"</p>
+<p>를 </p>
+<p>"함수 <span class="arithmatex">\(f(x)\)</span> 에서 임의의 양수 <span class="arithmatex">\(\epsilon\)</span> 에 대하여 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 가 아니면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워질 때, <span class="arithmatex">\(|f(x) - L| &lt; \epsilon\)</span> 이면 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(L\)</span> 에 수렴한다. <span class="arithmatex">\(\iff \lim_{x \to a} f(x) = L\)</span>"</p>
+<p>로 재정의할 수 있다. </p>
+</li>
+<li>
+<p>또 "<span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 가 아니면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워질 때" 도 양수 <span class="arithmatex">\(\delta\)</span> 를 사용하여 <span class="arithmatex">\(|x-a| &lt; \delta\)</span> 로 치환할 수 있는데, <span class="arithmatex">\(x\)</span> 는 <span class="arithmatex">\(a\)</span> 가 아니어야 하기 때문에 <span class="arithmatex">\(0 &lt; |x-a|\)</span> 라는 제한조건을 추가하여 <span class="arithmatex">\(0&lt;|x-a|&lt;\delta\)</span> 로 정의할 수 있다.</p>
+<p>이에 따라 </p>
+<p>"함수 <span class="arithmatex">\(f(x)\)</span> 에서 임의의 양수 <span class="arithmatex">\(\epsilon\)</span> 에 대하여 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 가 아니면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워질 때, <span class="arithmatex">\(|f(x) - L| &lt; \epsilon\)</span> 이면 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(L\)</span> 에 수렴한다. <span class="arithmatex">\(\iff \lim_{x \to a} f(x) = L\)</span>"</p>
+<p>를 </p>
+<p>"<span class="arithmatex">\(0&lt;|x-a|&lt;\delta\)</span> 일때 <span class="arithmatex">\(|f(x)-L|&lt; \epsilon\)</span> 이면 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(L\)</span> 에 수렴한다. <span class="arithmatex">\(\iff \lim_{x \to a} f(x) = L\)</span>" 로 재정의할 수 있다. 한편 <span class="arithmatex">\(p \to q\)</span> 가 참일 때 <span class="arithmatex">\(p \implies q\)</span> 로 표기하는 것을 사용하여 최종적으로 </p>
+<div class="arithmatex">\[ 0&lt;|x-a|&lt;\delta \implies |f(x)-L|&lt; \epsilon \iff \lim_{x \to a} f(x) = L \]</div>
+<p>로 표현할 수 있다. </p>
+</li>
+<li>
+<p>그런데 임의의 양수 <span class="arithmatex">\(\epsilon\)</span> 값이 정해진 시점에서 그것에 종속된 함수값 <span class="arithmatex">\(f(x)\)</span> 이 제한되고 이에따라 함수값을 결정해야 하는 <span class="arithmatex">\(x\)</span> 도 종속된다. 또한 <span class="arithmatex">\(x\)</span> 값을 결정해야 하는 <span class="arithmatex">\(\delta\)</span> 도 <span class="arithmatex">\(x\)</span> 에 종속되어 있기에 결론적으로 <span class="arithmatex">\(\delta\)</span> 는 <span class="arithmatex">\(\epsilon\)</span> 에 종속되어 있다. 따라서 <span class="arithmatex">\(\delta\)</span> 는 <span class="arithmatex">\(\epsilon\)</span> 을 임의로 정했던 것과 달리 임의로 정할 수 없고 임의의 <span class="arithmatex">\(\epsilon\)</span> 값에 대하여 조건을 만족시키는 적절한 <span class="arithmatex">\(\delta\)</span> 값이 존재하면 된다. 따라서 </p>
+<div class="arithmatex">\[ 0&lt;|x-a|&lt;\delta \implies |f(x)-L|&lt; \epsilon \iff \lim_{x \to a} f(x) = L \]</div>
+<p>에 조건을 명확하게 명시하여</p>
+<p>"함수 $f(x)" 에서 임의의 양수 <span class="arithmatex">\(\epsilon\)</span> 와 적당한 양수 <span class="arithmatex">\(\delta\)</span> 에 대하여 <span class="arithmatex">\(0&lt;|x-a|&lt;\delta \implies |f(x)-L|&lt; \epsilon \iff \lim_{x \to a} f(x) = L\)</span>"</p>
+<p>와 같이 고칠 수 있다. 이때 "임의의" 를 <span class="arithmatex">\(Any\)</span> 의 앞글자를 딴 한정기호 <span class="arithmatex">\(\forall\)</span> 로, "존재한다" 의 <span class="arithmatex">\(Exist\)</span> 의 앞글자를 딴 한정기호 <span class="arithmatex">\(\exists\)</span> 로 고치면 최종적으로 </p>
+<p>"함수 f(x) 에서 <span class="arithmatex">\(\forall \epsilon &gt; 0, \exists \delta &gt; 0, 0&lt;|x-a|&lt;\delta \implies |f(x)-L|&lt; \epsilon \iff \lim_{x \to a} f(x) = L\)</span>"</p>
+<p>로 표현할 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>이 증명은 함수값 <span class="arithmatex">\(f(x)\)</span> 가 일정한 값 <span class="arithmatex">\(L\)</span> 로 한없이 다가갈 때(<span class="arithmatex">\(|f(x)-L|&lt;\epsilon\)</span>) <span class="arithmatex">\(x\)</span> 값은 그것보다 더 작은 범위 내에서 <span class="arithmatex">\(a\)</span> 로 다가간다(<span class="arithmatex">\(0&lt;|x-a|&lt;\delta\)</span>)는 뜻이다. 이로써 증명할 때 <span class="arithmatex">\(p \to q\)</span> 에서 명제 <span class="arithmatex">\(p\)</span> 를 만족하는 진리집합 <span class="arithmatex">\(P\)</span> 가 명제 <span class="arithmatex">\(q\)</span> 를 만족하는 진리집합 <span class="arithmatex">\(Q\)</span> 의 부분집합이면(<span class="arithmatex">\(P \subset Q\)</span>) 참임이 증명된다는 것이 이루어진다. </p>
+<p>왜냐하면 함수값이 <span class="arithmatex">\(L\)</span> 로 다가간다는 범위(<span class="arithmatex">\(\epsilon\)</span>) 내에서 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(a\)</span> 로 다가가는 범위(<span class="arithmatex">\(\delta\)</span>)를 한정했기 때문에 조건 <span class="arithmatex">\(|x -\delta|&lt;a\)</span> 을 만족시키는 진리집합의 원소 <span class="arithmatex">\(x\)</span> 값들은 반드시 <span class="arithmatex">\(|f(x)-L|&lt;\epsilon\)</span> 을 만족하는 진리집합에 속하기 때문이다. </p>
+</li>
+<li>
+<p>만약 <span class="arithmatex">\(\delta\)</span> 를 임의의 양수로 두고 <span class="arithmatex">\(\epsilon\)</span> 을 <span class="arithmatex">\(\delta\)</span> 에 따라 결정되는 적당한 양수로 두었다면 <span class="arithmatex">\(\epsilon\)</span> 이 결정하는 <span class="arithmatex">\(|f(x)-L|\)</span> 의 <span class="arithmatex">\(x\)</span> 값의 집합이 <span class="arithmatex">\(\delta\)</span> 가 결정하는 <span class="arithmatex">\(x\)</span> 값의 집합의 부분집합이 되어 </p>
+<div class="arithmatex">\[ f(x) \to L 일때 x \to a \]</div>
+<p>를 증명하는 꼴이 된다. 즉,</p>
+<div class="arithmatex">\[ \lim_{f(x) \to L} x = a \]</div>
+<p>가 성립함을 보이는 꼴이 된다. </p>
+</li>
+<li>
+<p>함수값 <span class="arithmatex">\(f(x)\)</span> 와 <span class="arithmatex">\(L\)</span> 과의 거리 <span class="arithmatex">\(\epsilon\)</span> 이 한없이 줄어드는데 <span class="arithmatex">\(x\)</span> 와 <span class="arithmatex">\(a\)</span> 와의 거리 <span class="arithmatex">\(\delta\)</span> 는 그것보다 더 작은 범위 내에서 줄어들고 있는 상황을 상상해야 한다. </p>
+</li>
+<li>
+<p>이 증명은 극한값을 찾는 것이 목적이 아니다. 우리가 직관적으로 극한값을 추정했던 것이 정말 그러한지 엄밀하게 검증하는 것이 목적이다. </p>
+</li>
+<li>
+<p>가장 면밀하고 깔끔한 설명은 <a href="https://www.youtube.com/watch?v=ydpEUIpXemA">여기에</a> 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(f(x) = 2x\)</span> 에서 <span class="arithmatex">\(x \to 2 \implies f(x) \to 4\)</span> 임을 직관적으로 알 수 있다. 그럼 이제 극한값이 <span class="arithmatex">\(4\)</span> 에 접근한다는 정보를 가지고 "<span class="arithmatex">\(f(x)\)</span> 와 <span class="arithmatex">\(4\)</span> 사이의 거리가 <span class="arithmatex">\(0.1\)</span> 보다 작게 되었다면 <span class="arithmatex">\(x\)</span> 는 <span class="arithmatex">\(2\)</span> 에 얼마나 근접해 있는가?" 라는 질문에 답해보자.</p>
+<p><span class="arithmatex">\(x\)</span> 와 <span class="arithmatex">\(2\)</span> 의 거리를 <span class="arithmatex">\(|x-2|\)</span> 로, <span class="arithmatex">\(f(x)\)</span> 와 <span class="arithmatex">\(4\)</span> 의 거리를 <span class="arithmatex">\(|f(x)-4|\)</span> 로 두면 위 질문을 "<span class="arithmatex">\(|x-2|&lt;\delta\)</span> 이고 <span class="arithmatex">\(x \neq 2\)</span> 이면 <span class="arithmatex">\(|f(x)-4|&lt;0.1\)</span> 인 <span class="arithmatex">\(\delta\)</span> 값은 얼마인가?" 로 바꿀 수 있다.</p>
+<div class="arithmatex">\[|f(x) - 4| &lt; 0.1 \iff |2x - 4| &lt; 0.1 \iff |x-2| &lt;\frac{0.1}{2} = 0.05 \]</div>
+<p>따라서 <span class="arithmatex">\(0 &lt; \delta &lt; 0.05\)</span> 이면 어떠한 <span class="arithmatex">\(x\)</span> 에 대하여서도 <span class="arithmatex">\(|f(x) -4| &lt; 0.1\)</span> 을 만족시킬 수 있다. 다시말해 <span class="arithmatex">\(x\)</span> 와 <span class="arithmatex">\(2\)</span> 사이의 거리거 <span class="arithmatex">\(0.05\)</span> 보다 작은 양수이면 <span class="arithmatex">\(f(x)\)</span> 와 <span class="arithmatex">\(4\)</span> 사이의 거리가 <span class="arithmatex">\(0.1\)</span> 보다 작게 된다.</p>
+</li>
+</ul>
+<a href="#91548edca"><div class="admonition tldr" id="91548edca">
+<p><span class="arithmatex">\(\epsilon-\delta\)</span> 논법으로 정의하는 함수의 발산 : 함수 <span class="arithmatex">\(f(x)\)</span> 를 <span class="arithmatex">\(a\)</span> 를 포함하는 어떤 개구간에서 정의된 함수라 하자. </p>
+<div class="arithmatex">\[ \lim_{x \to a} f(x) = \infty \]</div>
+<p>라는 것은 임의의 양수 <span class="arithmatex">\(\epsilon\)</span> 에 대하여 <span class="arithmatex">\(0&lt;|x-a|&lt;\delta\)</span> 일 때마다 <span class="arithmatex">\(f(x) &gt; \epsilon\)</span> 을 만족시키는 <span class="arithmatex">\(\delta &gt; 0\)</span> 가 존재함을 의미한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정의는 함수 <span class="arithmatex">\(y=f(x)\)</span> 의 그래프가 임의의 <span class="arithmatex">\(\epsilon\)</span> 으로 생성된 수평선 <span class="arithmatex">\(y=\epsilon\)</span> 보다 항상 위쪽에 놓이게 만드는 수 <span class="arithmatex">\(\delta &gt; 0\)</span> 가 존재한다는 것을 말한다. 더 큰 <span class="arithmatex">\(\epsilon\)</span> 을 택할 때마다 더 작은 <span class="arithmatex">\(\delta\)</span> 를 구할 수 있다. </p>
+</li>
+<li>
+<p>수렴에서의 <span class="arithmatex">\(\epsilon-\delta\)</span> 논법이 <span class="arithmatex">\(\epsilon\)</span> 을 임의로 둔 것이 한없이 작아지는 수를 표현하고자 한 것이라면 발산에서의 <span class="arithmatex">\(\epsilon-\delta\)</span> 논법은 한없이 커지는 수를 표현하고자 한 것이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(f(x) = \frac{1}{x-2}\)</span> 에서 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(2\)</span> 가 되지 않으면서 <span class="arithmatex">\(2\)</span> 와 가까워지면 함수값이 무한대로 발산한다는 것을 알 수 있다. 이때 <span class="arithmatex">\(x\)</span> 와 <span class="arithmatex">\(2\)</span> 와의 거리를 결정해주는 <span class="arithmatex">\(\delta\)</span> 가 작아질 수록 함수값은 한없이 커질 것이다.</p>
+<p>그래서 아무리 큰 임의의 <span class="arithmatex">\(\epsilon\)</span> 을 가져오더라도 더 작은 <span class="arithmatex">\(\delta\)</span> 를 항상 구할 수 있다고 말한 것이다. </p>
+</li>
+</ul>
+<h3 id="_4">극한값이 존재하는 조건<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<a href="#e0105e334"><div class="admonition tldr" id="e0105e334">
+<p>우극한과 좌극한 : "<span class="arithmatex">\(x\)</span> 값이 <span class="arithmatex">\(a\)</span> 이 아니면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워진다"는 것은 "<span class="arithmatex">\(x\)</span> 값이 <span class="arithmatex">\(a\)</span> 보다 크면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워진다(우극한)"는 것과 "<span class="arithmatex">\(x\)</span> 값이 <span class="arithmatex">\(a\)</span> 보다 작으면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워지는 것(좌극한)"으로 볼 수 있다.</p>
+</div></a>
+<ul>
+<li>
+<p>우극한 : 함수 <span class="arithmatex">\(f(x)\)</span> 에서 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 보다 크면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워질 때, <span class="arithmatex">\(f(x)\)</span> 의 값이 일정한 값 <span class="arithmatex">\(L\)</span> 에 한없이 가까워지면 <span class="arithmatex">\(L\)</span> 을 <span class="arithmatex">\(f(x)\)</span> 의 <span class="arithmatex">\(x=a\)</span> 에서의 우극한이라 한다.</p>
+<ul>
+<li>
+<p>이것을 형식언어로 다음과 같이 나타낸다.</p>
+<div class="arithmatex">\[ \lim_{x \to a+} f(x) = L \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ x \to a+ 일 때 f(x) \to L \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>좌극한 : 함수 <span class="arithmatex">\(f(x)\)</span> 에서 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 보다 작으면서 <span class="arithmatex">\(a\)</span> 에 한없이 가까워질 때, <span class="arithmatex">\(f(x)\)</span> 의 값이 일정한 값 <span class="arithmatex">\(M\)</span> 에 한없이 가까워지면 <span class="arithmatex">\(M\)</span> 을 <span class="arithmatex">\(f(x)\)</span> 의 <span class="arithmatex">\(x=a\)</span> 에서의 좌극한이라 한다.</p>
+<ul>
+<li>
+<p>이것을 형식언어로 다음과 같이 나타낸다.</p>
+<div class="arithmatex">\[ \lim_{x \to a-} f(x) = M \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ x \to a- 일 때 f(x) \to M \]</div>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#422946493"><div class="admonition tldr" id="422946493">
+<p>극한값이 존재하는 조건 : <span class="arithmatex">\(x \to a\)</span> 일 때 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(L\)</span> 로 수렴한다는 것은 우극한과 좌극한이 모두 존재하고 그 값이 <span class="arithmatex">\(L\)</span> 로 서로 같다는 것이다. </p>
+<div class="arithmatex">\[ \lim_{x \to a} f(x) = L \iff \lim_{x \to a+} f(x) = \lim_{x \to a-} f(x) = L \]</div>
+</div></a>
+<ul>
+<li>
+<p>함수가 선형적으로 매끄럽지 못하고 어느 지점에서 동떨어져 있으면 그 지점에서의 우극한과 좌극한은 다르다. 즉 그 지점에서 극한값은 존재하지 않는다. </p>
+</li>
+<li>
+<p>예시</p>
+<p>함수 <span class="arithmatex">\(f(x) = \dfrac{|x|}{x}\)</span> 의 그래프는 다음과 같다. </p>
+<p><img alt="desmos-graph(7)" src="https://user-images.githubusercontent.com/16812446/75512984-9acbc200-5a36-11ea-918a-83632f4d86ec.png"/></p>
+<p>이 함수의 <span class="arithmatex">\(x=0\)</span> 에서의 우극한과 좌극한은 각각 다음과 같다. </p>
+<div class="arithmatex">\[ \lim_{x \to 0+} f(x) = 1, \lim_{x \to 0-} f(x) = -1 \]</div>
+<p>이 함수는 <span class="arithmatex">\(x=0\)</span> 에서 우극한, 좌극한이 존재하지만 그 값이 다르기에 <span class="arithmatex">\(x \to 0\)</span> 일 때 극한값이 존재하지 않는다 .</p>
+</li>
+</ul>
+<h3 id="_5">극한의 성질<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<a href="#b2d6d828f"><div class="admonition tldr" id="b2d6d828f">
+<p>수열의 극한의 성질 : 두 수열 <span class="arithmatex">\(\{a_n\}, \{b_n\}\)</span> 에서 <span class="arithmatex">\(\lim_{n \to \infty} \{a_n\} = \alpha, \lim_{n \to \infty} \{b_n\} = \beta\)</span> 일 때 다음의 관계가 생성된다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\displaystyle \lim_{n \to \infty} ka_n = k \lim_{n \to \infty} a_n = k \alpha\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle \lim_{n \to \infty} (a_n \pm b_n) = \lim_{n \to \infty} a_n \pm \lim_{n \to \infty} b_n = \alpha \pm \beta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle  \lim_{n \to \infty} a_nb_n = \lim_{n \to \infty} a_n \circ \lim_{n \to \infty} b_n = \alpha \beta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle  \lim_{n \to \infty} \frac{a_n}{b_n} = \frac{\lim_{n \to \infty} a_n}{\lim_{n \to \infty} b_n}= \frac{\alpha}{\beta}\)</span></p>
+<ul>
+<li>증명은 고등학교 수학 범위를 벗어난다.</li>
+</ul>
+</li>
+</ul>
+<a href="#199c06015"><div class="admonition tldr" id="199c06015">
+<p>함수의 극한의 성질 : 두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 에서 <span class="arithmatex">\(\lim_{x \to a} f(x) = \alpha, \lim_{x \to a} g(x) = \beta\)</span> 일 때 극한의 정의로부터 다음의 관계가 생성된다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\displaystyle \lim_{x \to a} kf(x) = k \lim_{x \to a} f(x) = k \alpha\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle  \lim_{x \to a} \{f(x) \pm g(x)\} = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) = \alpha \pm \beta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle  \lim_{x \to a} f(x)g(x) = \lim_{x \to a} f(x) \circ \lim_{x \to a} g(x) = \alpha \beta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle  \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)}= \frac{\alpha}{\beta}\)</span></p>
+<ul>
+<li>증명은 고등학교 수학 범위를 벗어난다.</li>
+</ul>
+</li>
+</ul>
+<a href="#f8f254801"><div class="admonition tldr" id="f8f254801">
+<p>상수에 관한 무한대의 성질 : - 무한대란 "무한히 커지는 상태"로써 보통의 수처럼 다룰 수 없으나 상수 <span class="arithmatex">\(c\)</span> 에 대하여 다음의 결과가 나오는 것만큼은 직관적으로 이해할 수 있다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(c + \infty = \infty\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(c - \infty = - \infty\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(c \times \infty = \infty, c \times (-\infty) = -\infty\)</span> (단, <span class="arithmatex">\(c &gt; 0\)</span>)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(c \times \infty = -\infty, c \times (-\infty) = \infty\)</span> (단, <span class="arithmatex">\(c &lt; 0\)</span>)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\dfrac{c}{\infty} = 0, \dfrac{c}{-\infty} = 0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\dfrac{\infty}{c} = \infty, \dfrac{-\infty}{c}=-\infty\)</span> (단, <span class="arithmatex">\(c &gt; 0\)</span>)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\dfrac{\infty}{c} = -\infty, \dfrac{-\infty}{c}=\infty\)</span> (단, <span class="arithmatex">\(c &lt; 0\)</span>)</p>
+</li>
+</ol>
+</div></a>
+<h3 id="_6">극한값을 구하는 방법<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<a href="#458713ed0"><div class="admonition tldr" id="458713ed0">
+<p>부정형(indeterminate form) : 정의되지 않는 형태이다.</p>
+</div></a>
+<a href="#b0ac1a550"><div class="admonition tldr" id="b0ac1a550">
+<p>부정형 극한 : 원소에 따라 극한값이 하나로 정해지지 않는 꼴이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\infty - \infty\)</span> : 다항식이면 최고차항으로 묶고 근호가 있는 식이면 유리화 한다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \lim_{x \to \infty} (5x^3 - x^2) = \lim_{x \to \infty} x^3(5 - \frac{1}{x}) = \infty \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span> : 분모의 최고차항으로 분모, 분자를 나눈다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\((분자의 차수) &lt; (분모의 차수)\)</span> 는 <span class="arithmatex">\(0\)</span> 에 수렴한다. </p>
+<ul>
+<li>예시 </li>
+</ul>
+<div class="arithmatex">\[ \lim_{x \to \infty} \frac{x^2+3x-4}{2x^3-1} = \lim_{x \to \infty} \frac{1 + \frac{3}{x} - \frac{4}{x^2}}{2x - \frac{1}{x^2}} = 0 \]</div>
+<ul>
+<li>예시 </li>
+</ul>
+<p>$$</p>
+<p>\lim_{x \to \infty} (\sqrt[]{4x^2 - 3x} - 2x) = \lim_{x \to \infty} \frac{(\sqrt[]{4x^2 - 3x} - 2x)(\sqrt[]{4x^2 - 3x} + 2x)}{\sqrt[]{4x^2 - 3x} + 2x} =</p>
+<p>$$</p>
+<p>$$ \lim_{x \to \infty} \frac{-3x}{\sqrt[]{4x^2 - 3x} + 2x} = \lim_{x \to \infty} \frac{-3}{\sqrt[]{4 - 3/x} + 2} = -\frac{3}{4}</p>
+<p>$$</p>
+</li>
+<li>
+<p><span class="arithmatex">\((분자의 차수) = (분모의 차수)\)</span> 는 <span class="arithmatex">\(\frac{(분자의최고차항의계수)}{(분모의 최고차항의 계수)}\)</span> 에 수렴한다.</p>
+<ul>
+<li>예시 </li>
+</ul>
+<div class="arithmatex">\[ \lim_{x \to \infty} \frac{x^2+3x-4}{2x^2-1} = \lim_{x \to \infty} \frac{1 + \frac{3}{x} - \frac{4}{x^2}}{2 - \frac{1}{x^2}} = \frac{1}{2} \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\((분자의 차수) &gt; (분모의 차수)\)</span> 는 발산하여 <span class="arithmatex">\(\infty\)</span> 이 된다.</p>
+<ul>
+<li>예시 </li>
+</ul>
+<div class="arithmatex">\[ \lim_{x \to \infty} \frac{x^3+3x-4}{2x^2-1} = \lim_{x \to \infty} \frac{x + \frac{3}{x} - \frac{4}{x^2}}{2 - \frac{1}{x^2}} = \infty \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{0}{0}\)</span> : 인수분해하여 약분한다. 단, 분모 또는 분자에 근호가 포함되어 있으면 유리화한 후 약분한다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \lim_{x \to 2} \frac{x-2}{x^2-5x+6} = \lim_{x \to 2} \frac{x-2}{(x-2)(x-3)} = \lim_{x \to 2} \frac{1}{x-3} = -1\]</div>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \lim_{x \to 1} \frac{x^2-1}{\sqrt[]{x+3} -2} = \lim_{x \to 1} \frac{(x^2-1)(\sqrt[]{x+3} +2)}{(\sqrt[]{x+3} -2)(\sqrt[]{x+3} +2)} = \lim_{x \to 1} \frac{(x+1)(x-1)(\sqrt[]{x+3} +2)}{(x-1)} = \lim_{x \to 1} (x+1)(\sqrt[]{x+3}+2) = 8 \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\infty \times 0\)</span> : 함수식을 통한한 후 인수분해하거나 유리화하여 <span class="arithmatex">\(\frac{0}{0}\)</span> 또는 <span class="arithmatex">\(\frac{\infty}{\infty}\)</span> 의 꼴로 바꾼다. </p>
+<ul>
+<li>
+<p>이때 <span class="arithmatex">\(0\)</span> 은 숫자 <span class="arithmatex">\(0\)</span> 이 아닌 "극한을 취했을 때 <span class="arithmatex">\(0\)</span> 에 다가가는 값" 을 뜻하는 기호이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \lim_{x \to 0} \frac{1}{x}(1 - \frac{1}{\sqrt[]{x+1}}) = \lim_{x \to 0} (\frac{1}{x} \circ \frac{\sqrt[]{x+1}-1}{\sqrt[]{x+1}})= \lim_{x \to 0} (\frac{1}{x} \circ \frac{(\sqrt[]{x+1}-1)(\sqrt[]{x+1}+1)}{\sqrt[]{x+1}(\sqrt[]{x+1}+1)}) = \]</div>
+<div class="arithmatex">\[ = \lim_{x \to 0} \frac{1}{\sqrt[]{x+1}(\sqrt[]{x+1}+1)}= \frac{1}{2} \]</div>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_7">극한의 비교<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<a href="#25a125298"><div class="admonition tldr" id="25a125298">
+<p>함수의 극한의 대소 관계 : 두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 에서 <span class="arithmatex">\(\lim_{x \to a} f(x) = \alpha, \lim_{x \to a} g(x) = \beta\)</span> 일 때, <span class="arithmatex">\(a\)</span> 에 충분히 가까운 모든 실수 <span class="arithmatex">\(x\)</span> 에 대하여 다음이 성립한다.</p>
+</div></a>
+<ol>
+<li>
+<p><span class="arithmatex">\(f(x) \leq g(x)\)</span> 이면 <span class="arithmatex">\(\alpha \leq \beta\)</span> 이다. </p>
+<ul>
+<li>
+<p>이때 <span class="arithmatex">\(f(x) &lt; g(x)\)</span> 이지만 <span class="arithmatex">\(\alpha = \beta\)</span> 인 경우가 있다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(f(x) = \frac{1}{x}\)</span>, <span class="arithmatex">\(g(x) = \frac{2}{x}\)</span> 라 하면 <span class="arithmatex">\(x&gt;0\)</span> 범위에서 <span class="arithmatex">\(f(x) &lt; g(x)\)</span> 이지만</p>
+<div class="arithmatex">\[ \lim_{x \to \infty} f(x) = \lim_{x \to \infty} g(x) = 0 \]</div>
+<p>이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>샌드위치 정리 : 함수 <span class="arithmatex">\(h(x)\)</span> 에 대하여 <span class="arithmatex">\(f(x) \leq h(x) \leq g(x)\)</span> 이고 <span class="arithmatex">\(\alpha = \beta\)</span> 이면 </p>
+<div class="arithmatex">\[\lim_{x \to a} h(x) = \alpha\]</div>
+<p>이다. </p>
+<ul>
+<li>
+<p>증명</p>
+<p>함수 <span class="arithmatex">\(h(x)\)</span> 가 <span class="arithmatex">\(f(x)\leq h(x)\leq g(x)\)</span> 를 만족시키면 정의역 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(a\)</span> 에 한없이 가까워질 때 극한의 대소관계에 따라 </p>
+<div class="arithmatex">\[ \alpha \leq \lim_{x \to a} h(x) \leq \beta \]</div>
+<p>이다. 그런데 <span class="arithmatex">\(\alpha\)</span> 와 <span class="arithmatex">\(\beta\)</span> 가 서로 한없이 가까워질때 <span class="arithmatex">\(h(x)\)</span> 의 극한값의 범위도 한없이 줄어들고 언젠가 <span class="arithmatex">\(\alpha\)</span> 와 <span class="arithmatex">\(\beta\)</span> 가 서로 같아지면 <span class="arithmatex">\(h(x)\)</span> 의 극한값은 조건에 의하여 <span class="arithmatex">\(\alpha(=\beta)\)</span> 일수밖에 없게 된다. 따라서 <span class="arithmatex">\(h(x)\)</span> 도 <span class="arithmatex">\(\alpha\)</span> 로 수렴한다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<a href="#dfbc00318"><div class="admonition tldr" id="dfbc00318">
+<p>미정계수의 결정 : 두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 에 대하여 다음이 성립한다. </p>
+</div></a>
+<ol>
+<li>
+<p><span class="arithmatex">\(\dfrac{0}{0}\)</span> 꼴</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)} = \alpha  (\alpha 는 실수) 일때, \lim_{x \to a} g(x) = 0 이면 \lim_{x \to a} f(x) = 0 이다.\)</span></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\lim_{x \to a} \frac{f(x)}{g(x)}\)</span> 와 <span class="arithmatex">\(\lim_{x \to a} g(x)\)</span> 가 수렴하는데 <span class="arithmatex">\(f(x) = \frac{f(x)}{g(x)}g(x)\)</span> 로 나타낼 수 있기 때문에 </p>
+<div class="arithmatex">\[ \lim_{x \to a} \{\frac{f(x)}{g(x)}\times g(x)\} = \lim_{x \to a} \frac{f(x)}{g(x)} \times \lim_{x \to a} g(x) = \alpha \times 0 = 0 \]</div>
+<p>이다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \lim_{x \to 1} \frac{x^2 + ax}{x-1} = 1 \]</div>
+<p>이 성립하도록 하는 상수 <span class="arithmatex">\(a\)</span> 값을 구하자. </p>
+<p>분모가 <span class="arithmatex">\(0\)</span> 에 수렴하기 때문에 분자도 <span class="arithmatex">\(0\)</span> 에 수렴한다. 따라서 </p>
+<div class="arithmatex">\[ \lim_{x \to 1} (x^2+ax) = 0 \]</div>
+<p>을 만족해야 하고 이에 따라 <span class="arithmatex">\(1+a = 0\)</span> 이다. 그러므로 <span class="arithmatex">\(a=-1\)</span> 이다. </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle  \lim_{x \to a} \frac{f(x)}{g(x)} = \alpha  (\alpha 는 0 이 아닌 실수) 일때, \lim_{x \to a} f(x) = 0 이면 \lim_{x \to a} g(x) = 0 이다.\)</span></p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\lim_{x \to a} \frac{f(x)}{g(x)}\)</span> 와 <span class="arithmatex">\(\lim_{x \to a} f(x)\)</span> 가 수렴하는데 <span class="arithmatex">\(g(x) = \frac{g(x)}{f(x)}f(x)\)</span> 로 나타낼 수 있다. 한편 </p>
+<div class="arithmatex">\[ \lim_{x \to a} \frac{f(x)}{g(x)} = \alpha \to \lim_{x \to a} \frac{g(x)}{f(x)} = \frac{1}{\alpha} \]</div>
+<p>이기 때문에</p>
+<div class="arithmatex">\[ \lim_{x \to a} \{\frac{g(x)}{f(x)}\times f(x)\} = \lim_{x \to a} \frac{g(x)}{f(x)} \times \lim_{x \to a} f(x) = \frac{1}{\alpha} \times 0 = 0 \]</div>
+<p>이다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \lim_{x \to 3} \frac{x-3}{\sqrt[]{x-2}-a} = 2 \]</div>
+<p>분자가 <span class="arithmatex">\(0\)</span> 에 수렴하고 극한값이 <span class="arithmatex">\(0\)</span> 이 아니기 때문에 분모도 <span class="arithmatex">\(0\)</span> 에 수렴한다. 따라서 </p>
+<div class="arithmatex">\[ \lim_{x \to 3} (\sqrt[]{x-2}-a) = 0 \]</div>
+<p>이고 이에 따라 <span class="arithmatex">\(\sqrt[]{3 - 2} - a = 0\)</span> 에서 <span class="arithmatex">\(a=1\)</span> 이다. </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\dfrac{\infty}{\infty}\)</span> 꼴 </p>
+<p><span class="arithmatex">\(\displaystyle \lim_{x \to \infty} \frac{f(x)}{g(x)} = \alpha\)</span> (<span class="arithmatex">\(\alpha\)</span> 는 <span class="arithmatex">\(0\)</span> 이 아닌 실수)이고 <span class="arithmatex">\(f(x), g(x)\)</span> 가 다항함수면 두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 의 차수는 같고, 극한값 <span class="arithmatex">\(\alpha\)</span> 는 분자, 분모의 최고차항의 계수의 비와 같다. </p>
+<ul>
+<li>
+<p>만약 분모의 차수가 분자의 차수보다 크면 <span class="arithmatex">\(0\)</span> 으로 수렴한다. </p>
+</li>
+<li>
+<p>만약 분자의 차수가 분모의 차수보다 크면 <span class="arithmatex">\(\infty\)</span> 로 발산한다.</p>
+</li>
+<li>
+<p>따라서 분수식이 수렴한다면 분자와 분모의 차수가 같고 그 극한값은 최고차항의 계수의 비와 같다.</p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \lim_{x \to \infty} \frac{ax^2+bx+3}{2x-1}=1 \]</div>
+<p>일 때 분수식이 수렴하기 때문에 <span class="arithmatex">\(a=0\)</span> 이고 <span class="arithmatex">\(b=2\)</span> 이다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="_8">연속함수<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<a href="#267a078d4"><div class="admonition tldr" id="267a078d4">
+<p>함수의 연속(continuity) : 함수 <span class="arithmatex">\(f(x)\)</span> 가 실수 <span class="arithmatex">\(a\)</span> 에 대하여 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 정의되어 있고 <span class="arithmatex">\(\displaystyle \lim_{x \to a} f(x)\)</span> 가 존재하며 <span class="arithmatex">\(\displaystyle \lim_{x \to a} f(x) = f(a)\)</span> 일때 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 연속이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>직관적으로 쉽게 받아들일 수 있는 "그래프가 끊어지지 않고 연결되어 있다" 는 자연어를 수학적 형식 언어로 격하한 것이다. 다음은 격하의 과정이다. </p>
+<ul>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 연속이라는 것은 점 <span class="arithmatex">\((a, f(a))\)</span> 과 이 점 좌우가 끊어지지 않고 연결되어 있다는 것이다. 이것은 <span class="arithmatex">\(x=a\)</span> 에서의 점과 왼쪽으로부터 한없이 가깝게 이어지는 점과 오른쪽으로부터 한없이 가깝게 이어지는 점들이 연속되어 있다는 것이다.</p>
+<p>그러므로 이것을 수학적으로 격하하면 "<span class="arithmatex">\(x=a\)</span> 에서의 점 <span class="arithmatex">\((a, f(a))\)</span> 와 왼쪽에서 아주 가까운 점 <span class="arithmatex">\((x \to a-, \lim_{x \to a-} f(x))\)</span> 와 오른쪽에서 아주 가까운 점 <span class="arithmatex">\((x \to a+, \lim_{x \to a+} f(x))\)</span> 들이 서로 같다면 연속한다" 라고 할 수 있다. </p>
+<p>따라서 함수 <span class="arithmatex">\(f(x)\)</span> 가 실수 <span class="arithmatex">\(a\)</span> 에 대하여 함수값 <span class="arithmatex">\(f(a)\)</span> 가 존재하고, 극한값 <span class="arithmatex">\(\lim_{x \to a} f(x)\)</span> 이 존재(좌극한 <span class="arithmatex">\(=\)</span> 우극한)하며, 함수값과 극한값이 서로 같다면 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(a\)</span> 에서 연속이라고 정의한다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(f_1(x) = x+1\)</span> 은 <span class="arithmatex">\(1\)</span> 에서 연속이다.</p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/75954198-7a987900-5ef6-11ea-96b7-b28ee5a76006.png"/></p>
+<p>왜냐하면 <span class="arithmatex">\(1\)</span> 에서 함수값이 존재하고 극한값이 존재(좌극한 <span class="arithmatex">\(=\)</span> 우극한) 하며 함수값과 극한값이 같기 때문이다.</p>
+<p>반면 함수 <span class="arithmatex">\(f_2(x) = \frac{x^2-1}{x-1}\)</span> 은 함수 <span class="arithmatex">\(f_1\)</span> 와 거의 똑같지만 <span class="arithmatex">\(x=1\)</span> 에서 함수값이 정의되어 있지 않다.</p>
+<p>또 함수 </p>
+<div class="arithmatex">\[f_3(x) = \begin{cases} -x+2 &amp;x \geq 1\\ x+1 &amp;x &lt; 1\\ \end{cases}  \]</div>
+<p><img alt="desmos-graph(1)" src="https://user-images.githubusercontent.com/16812446/75954721-b122c380-5ef7-11ea-9280-3b607f68857c.png"/></p>
+<p>는 극한값이 존재하지 않는다(좌극한과 우극한이 다르다). </p>
+<p>또 함수 </p>
+<div class="arithmatex">\[f_4(x) = \begin{cases} \frac{x^2-1}{x-1} &amp;x \neq 1\\ 1 &amp;x = 1\\ \end{cases}  \]</div>
+<p>은 함수값과 극한값이 모두 존재하나 그 둘의 값이 서로 다르다(<span class="arithmatex">\(1 \neq 2\)</span>).</p>
+<p>따라서 함수 <span class="arithmatex">\(f_2, f_3, f_4\)</span> 는 모두 <span class="arithmatex">\(x=1\)</span> 에서 연속이 아니다.</p>
+</li>
+</ul>
+<a href="#6cae56795"><div class="admonition tldr" id="6cae56795">
+<p>함수의 불연속(discontinuity) : 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 연속이 아닐 때, <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 불연속이라 한다.</p>
+</div></a>
+<a href="#92587abfe"><div class="admonition tldr" id="92587abfe">
+<p>연속함수 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 어떤 구간에 속하는 모든 실수에서 연속일 때, <span class="arithmatex">\(f(x)\)</span> 는 그 구간에서 연속 또는 그 구간에서 연속함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 어떤 구간에서 연속이면 함수 <span class="arithmatex">\(f(x)\)</span> 가 그 구간에 속하는 모든 점에서 연속이므로 구간 내의 모든 실수 <span class="arithmatex">\(a\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \lim_{x \to a} f(x) = f(a) \]</div>
+<p>가 성립한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>다항함수 <span class="arithmatex">\(f(x) = x, g(x) = x^2\)</span> 는 모든 실수 <span class="arithmatex">\(x\)</span> 에 대하여, 즉 개구간 <span class="arithmatex">\((-\infty, \infty)\)</span> 에 대하여 연속이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>유리함수 <span class="arithmatex">\(h(x) = \frac{1}{x}\)</span> 는 <span class="arithmatex">\(x \neq 0\)</span> 인 실수, 즉 개구간 <span class="arithmatex">\((-\infty, 0), (0, \infty)\)</span> 에서 연속이다.</p>
+</li>
+</ul>
+<a href="#b2f085b69"><div class="admonition tldr" id="b2f085b69">
+<p>폐구간에서의 연속함수 : 폐구간 <span class="arithmatex">\([a,b]\)</span> 의 경우 <span class="arithmatex">\(x=a\)</span> 에서는 함수의 우극한만, <span class="arithmatex">\(x=b\)</span> 에서는 함수의 좌극한만 존재하므로 페구간에서의 연속함수를 다음과 같이 정의한다.</p>
+</div></a>
+<ul>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 개구간 <span class="arithmatex">\((a, b)\)</span> 에서 연속이고,</p>
+<div class="arithmatex">\[ \lim_{x \to a+} = f(a), \lim_{x \to b-} f(x) = f(b) \]</div>
+<p>이면 함수 <span class="arithmatex">\(f(x)\)</span> 는 폐구간 <span class="arithmatex">\([a,b]\)</span> 에서 연속이다. </p>
+</li>
+<li>
+<p>예시</p>
+<p>함수 <span class="arithmatex">\(f(x) = \sqrt[]{x+1}\)</span> 는 개구간 <span class="arithmatex">\((0, 5)\)</span> 에서 연속이고 </p>
+<div class="arithmatex">\[ \lim_{x \to 0+} \sqrt[]{x+1} = 1 =f(0), \lim_{x \to 5-} \sqrt[]{x+1} = \sqrt[]{6} = f(5) \]</div>
+<p>이므로 함수 <span class="arithmatex">\(f(x)\)</span> 는 폐구간 <span class="arithmatex">\([0,5]\)</span> 에서 연속이다. </p>
+</li>
+</ul>
+<h3 id="_9">여러가지 함수의 연속<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<a href="#553539b30"><div class="admonition tldr" id="553539b30">
+<p>다항함수의 연속 : 일차함수, 이차함수, <span class="arithmatex">\(n\)</span>차함수 <span class="arithmatex">\(\to (\infty, -\infty)\)</span> 에서 연속</p>
+</div></a>
+<a href="#4ffb6e4b0"><div class="admonition tldr" id="4ffb6e4b0">
+<p>유리함수의 연속 : <span class="arithmatex">\(y=\frac{f(x)}{g(x)} \to g(x) \neq 0\)</span> 인 점에서 연속</p>
+</div></a>
+<a href="#3f0687fb8"><div class="admonition tldr" id="3f0687fb8">
+<p>무리함수의 연속 : <span class="arithmatex">\(y=\sqrt[]{f(x)} \to f(x) \geq 0\)</span> 인 구간에서 연속</p>
+</div></a>
+<a href="#93442e502"><div class="admonition tldr" id="93442e502">
+<p>가우스함수의 연속 : <span class="arithmatex">\(y=[x] \to x \neq n\)</span> (<span class="arithmatex">\([x]\)</span> 는 <span class="arithmatex">\(x\)</span> 보다 크지 않은 최대의 정수) 에서 연속(단, <span class="arithmatex">\(n\)</span> 은 정수)</p>
+</div></a>
+<ul>
+<li>
+<p>가우스함수는 정수 <span class="arithmatex">\(n\)</span> 에 대하여 개구간 <span class="arithmatex">\((n,n+1)\)</span> 에서 연속이고 </p>
+<div class="arithmatex">\[ \lim_{x \to a+} f(x) = f(n) \]</div>
+<p>이므로 가우스함수 <span class="arithmatex">\(f(x)\)</span> 는 반개구간 <span class="arithmatex">\([n, n+1)\)</span> 에서 연속이다.</p>
+</li>
+</ul>
+<a href="#15ca6797d"><div class="admonition tldr" id="15ca6797d">
+<p>합성함수의 연속 : 두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 에 대하여 합성함수 <span class="arithmatex">\((f \circ g)(x)\)</span> 는 </p>
+<div class="arithmatex">\[ \lim_{x \to a+} f(g(x)) = \lim_{x \to a-} f(g(x)), \lim_{x \to a} f(g(x)) = f(g(a)) \]</div>
+<p>가 성립할 때 <span class="arithmatex">\(x=a\)</span> 에서 연속이다.</p>
+</div></a>
+<ul>
+<li>
+<p>두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 에 대하여 함수 <span class="arithmatex">\(g(x)\)</span> 의 치역이 함수 <span class="arithmatex">\(f(x)\)</span> 의 정의역에 포함되어야만 합성함수 <span class="arithmatex">\((f \circ g)(x)\)</span> 가 정의된다는 것을 기억하자. </p>
+</li>
+<li>
+<p>두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 가 모두 <span class="arithmatex">\(x=a\)</span> 에서 연속이더라도 합성함수 <span class="arithmatex">\((f \circ g)(x) = f(g(x))\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 항상 연속인 것은 아니다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(g(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 연속이고 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=g(a)\)</span> 에서 연속이면 <span class="arithmatex">\((f \circ g)(x)\)</span> 도 <span class="arithmatex">\(x=a\)</span> 에서 연속이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\lim_{x \to a} g(x) = b\)</span> 이고 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=b\)</span> 에서 연속이면 </p>
+<div class="arithmatex">\[ \lim_{x \to a} f(g(x)) = f(\lim_{x \to a} g(x)) \]</div>
+<p>이다. </p>
+<ul>
+<li>이것은 <span class="arithmatex">\(f(x)\)</span> 가 연속이고 <span class="arithmatex">\(g(x)\)</span> 의 극한이 존재하면 극한기호가 함수 <span class="arithmatex">\(f(x)\)</span> 안으로 이동할 수 있다는 것을 보여준다. 즉, 함수와 극한의 두 기호에 대한 순서를 바꿀 수 있다는 것이다. </li>
+</ul>
+</li>
+</ul>
+<h3 id="_10">연속함수의 성질<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<a href="#ef856acb8"><div class="admonition tldr" id="ef856acb8">
+<p>연속함수의 성질 : 두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 연속이면 다음 함수도 <span class="arithmatex">\(x=a\)</span> 에서 연속이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(cf(x)\)</span> (단, <span class="arithmatex">\(c\)</span>는 상수)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f(x) \pm g(x)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(f(x)g(x)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{f(x)}{g(x)}\)</span> (단, <span class="arithmatex">\(g(a) \neq 0\)</span>)</p>
+<ul>
+<li>
+<p>두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 가 각각 <span class="arithmatex">\(x=a\)</span> 에서 연속이면 </p>
+<div class="arithmatex">\[ \lim_{x \to a} f(x) = f(a), \lim_{x \to a} g(x) = g(a) \]</div>
+<p>가 성립하므로 함수의 극한의 성질에 의하여 </p>
+<div class="arithmatex">\[ \lim_{x \to a} cf(x) = c \lim_{x \to a} f(x) = cf(a) \]</div>
+<div class="arithmatex">\[ \lim_{x \to a} \{f(x)\pm g(x)\} = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x) = f(a) \pm g(a) \]</div>
+<div class="arithmatex">\[ \lim_{x \to a} f(x)g(x) = \lim_{x \to a} \circ \lim_{x \to a} g(x)=f(a)g(a) \]</div>
+<div class="arithmatex">\[ \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\lim_{x \to a} f(x)}{\lim_{x \to a} g(x)} = \frac{f(a)}{g(a)} \]</div>
+<p>이 성립한다. 따라서 <span class="arithmatex">\(f(x), g(x)\)</span> 가 각각 <span class="arithmatex">\(x=a\)</span> 에서 연속이면 <span class="arithmatex">\(cf(x)\)</span> (단, <span class="arithmatex">\(c\)</span>는 상수), <span class="arithmatex">\(f(x) \pm g(x)\)</span>, <span class="arithmatex">\(f(x)g(x)\)</span>, <span class="arithmatex">\(\frac{f(x)}{g(x)}\)</span> (단, <span class="arithmatex">\(g(a) \neq 0\)</span>) 도 <span class="arithmatex">\(x=a\)</span> 에서 연속이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>일차함수 <span class="arithmatex">\(y=x\)</span> 가 모든 실수 <span class="arithmatex">\((-\infty, \infty)\)</span> 에 대하여 연속이므로 <span class="arithmatex">\(3\)</span> 번째 연속함수의 성질에 의하여 <span class="arithmatex">\(n\)</span> 차함수 <span class="arithmatex">\(y=x^n\)</span> 도 모든 실수에서 연속이다.</p>
+<p>또한 이들 함수에 상수를 곱하여 더한 다항함수의 일반형태 </p>
+<div class="arithmatex">\[ f(x) = \sum_{k=1}^{n}a_kx^k = a_nx^n + \dots +a_1x + a_0\]</div>
+<p>도 모든 실수에서 연속이다. </p>
+</li>
+<li>
+<p>유리함수는 두 다항식 <span class="arithmatex">\(P(x), Q(x)\)</span> 에 대하여 <span class="arithmatex">\(\frac{P(x)}{Q(x)}\)</span> 의 꼴로 나타내므로 <span class="arithmatex">\(4\)</span> 번째 연속함수 성질에 의하여 분모를 <span class="arithmatex">\(0\)</span> 으로 하는 <span class="arithmatex">\(x\)</span> 값을 제외한 모든 실수에서 연속이다. </p>
+</li>
+</ul>
+<h3 id="-_1">최대-최소 정리와 사이값 정리<a class="headerlink" href="#-_1" title="Permanent link">¶</a></h3>
+<a href="#80d968014"><div class="admonition tldr" id="80d968014">
+<p>최대-최소 정리 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a,b]\)</span> 에서 연속이면 <span class="arithmatex">\(f(x)\)</span> 는 이 구간에서 반드시 최대값과 최소값을 갖는다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리의 증명은 고등학교 수학으로 불가능하다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>개구간 <span class="arithmatex">\((-1, 2)\)</span> 에서 함수 <span class="arithmatex">\(f(x) = x^2\)</span> 는 최대값을 갖지 않고 <span class="arithmatex">\(x=0\)</span> 에서 최소값 <span class="arithmatex">\(0\)</span> 만을 갖는다. </p>
+<p><img alt="desmos-graph(2)" src="https://user-images.githubusercontent.com/16812446/75963761-67db6f80-5f09-11ea-8bf2-ab0f310adc8b.png"/></p>
+<p>그러나 폐구간 <span class="arithmatex">\([-1, 2]\)</span> 에서는 <span class="arithmatex">\(x=2\)</span> 에서 최대값 <span class="arithmatex">\(4\)</span>, <span class="arithmatex">\(x=0\)</span> 에서 최소값 <span class="arithmatex">\(0\)</span> 을 갖는다. </p>
+<p>이처럼 일반적으로 폐구간에서 정의된 연속 함수는 항상 최대값과 최소값을 갖는다.</p>
+</li>
+<li>
+<p>반드시 폐구간이고 연속함수여야만 최대값과 최소값을 갖는 것은 아니다. 개구간에서 불연속함수여도 최대값과 최소값을 가질 수 있다. 다만 이 정리는 폐구간에 정의된 연속함수는 반드시 최대값과 최소값을 갖는다는 것을 의미한다. </p>
+<ul>
+<li>개구간과 반개구간에서 정의된 연속함수 또는 불연속함수일 경우 최대값과 최소값이 존재할 수도 있고 존재하지 않을 수도 있기 때문에 개별적 상황마다 일일히 최대값과 최소값의 존재를 확인해야한다.</li>
+</ul>
+</li>
+</ul>
+<a href="#0bc3ed789"><div class="admonition tldr" id="0bc3ed789">
+<p>사이값의 정리(intermediate value theorem) : 함수 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a,b]\)</span> 에서 연속이고 <span class="arithmatex">\(f(a) \neq f(b)\)</span> 이면 <span class="arithmatex">\(f(a)\)</span> 와 <span class="arithmatex">\(f(b)\)</span> 사이에 있는 임의의 값 <span class="arithmatex">\(k\)</span> 에 대하여 <span class="arithmatex">\(f(c) = k\)</span> 인 <span class="arithmatex">\(c\)</span> 가 <span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(b\)</span> 사이에 적어도 하나 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>당신은 오전 <span class="arithmatex">\(9\)</span> 시에 방안 온도를 측정하였고 <span class="arithmatex">\(25\degree\)</span> 라는 결과를 얻을 수 있었다. 당신은 오전 <span class="arithmatex">\(11\)</span> 에 또 다시 <span class="arithmatex">\(11\)</span> 시에 온도 측정을 하였고 그 결과 <span class="arithmatex">\(30 \degree\)</span> 를 얻었다. 그러면 <span class="arithmatex">\(9\)</span> 시와 <span class="arithmatex">\(11\)</span> 시 사이에 온도가 <span class="arithmatex">\(27 \degree\)</span> 였을 때가 반드시 존재한다. </p>
+<p>시간 <span class="arithmatex">\(t\)</span> 와 온도 <span class="arithmatex">\(C\)</span> 의 관계를 함수 <span class="arithmatex">\(f(t)\)</span> 로 나타내었을 때 함수 <span class="arithmatex">\(f(t)\)</span> 가 폐구간 <span class="arithmatex">\([9, 11]\)</span> 에서 연속이므로 <span class="arithmatex">\(f(9) \neq f(11)\)</span> 이면 <span class="arithmatex">\(f(9)\)</span> 와 <span class="arithmatex">\(f(11)\)</span> 사이값 <span class="arithmatex">\(27 \degree C\)</span> 에 대하여 <span class="arithmatex">\(f(c)=27\)</span> 인 <span class="arithmatex">\(c\)</span> 가 <span class="arithmatex">\(9\)</span> 와 <span class="arithmatex">\(11\)</span> 사이에 반드시 하나 이상 존재한다는 것이다. </p>
+</li>
+<li>
+<p>최대-최소 정리와 마찬가지로 폐구간에서 연속함수에 대하여 항상 성립하고, 개구간이나 불연속함수에 대해서는 성립할 수도 있고 성립하지 않을 수도 있다. </p>
+</li>
+<li>
+<p>사이값 정리로 방정식의 실근의 존재성이나 실근의 위치를 찾을 수 있다.</p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a,b]\)</span> 에서 연속이고 <span class="arithmatex">\(f(a)\)</span> 와 <span class="arithmatex">\(f(b)\)</span> 의 부호가 다르다, 즉 <span class="arithmatex">\(f(a)f(b) &lt; 0\)</span> 이면 반드시 그 사이에 <span class="arithmatex">\(0\)</span> 이 있으므로 사이값 정리에 의하여 <span class="arithmatex">\(f(c) = 0\)</span> 을 만족시키는 <span class="arithmatex">\(c\)</span> 가 개구간 <span class="arithmatex">\((a,b)\)</span> 에 적어도 하나 이상 존재한다. </p>
+<ul>
+<li>그러나 폐구간 경계의 함수값들이 서로 부호가 같거나 <span class="arithmatex">\(0\)</span> 이라고 해서 그 사이에 실근이 없다는 것은 아니다. 즉, <span class="arithmatex">\(f(a)f(b) &gt; 0\)</span> 이거나 <span class="arithmatex">\(f(a)f(b) = 0\)</span> 이라고 해서 실근이 반드시 없다는 것은 아니다. 있을 수도 있고 없을 수도 있으니 개별적인 경우에 따라 확인해보아야 한다. </li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>미지수 <span class="arithmatex">\(x\)</span> 에 대한 방정식 <span class="arithmatex">\(x ^{4} + 3 x ^{2} - x - 1 = 0\)</span> 이 개구간 <span class="arithmatex">\((0, 1)\)</span> 에서 적어도 하나의 실근을 가질까? </p>
+<p>함수 <span class="arithmatex">\(f(x) = x ^{4} + 3 x ^{2} - x - 1 = 0\)</span> 라 하면 <span class="arithmatex">\(f(x)\)</span> 는 다항함수이기에 모든 실수 범위, 즉 개구간 <span class="arithmatex">\((\infty, -\infty)\)</span> 에서 연속이므로 폐구간 <span class="arithmatex">\([0, 1]\)</span> 에서도 연속이다.</p>
+<p>또한 <span class="arithmatex">\(f(0) = -1, f(1) = 2\)</span> 으로써 폐구간 <span class="arithmatex">\([0, 1]\)</span> 경계의 함수값의 부호가 다르다. 따라서 <span class="arithmatex">\(f(c) = 0\)</span> 인 <span class="arithmatex">\(c\)</span> 가 개구간 <span class="arithmatex">\((0, 1)\)</span> 에 적어도 하나 이상 존재한다. </p>
+<p>이에따라 방정식 <span class="arithmatex">\(x ^{4} + 3 x ^{2} - x - 1 = 0\)</span> 는 개구간 <span class="arithmatex">\((0, 1)\)</span> 에서 적어도 하나의 실근을 갖는다.</p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 상관관계 분석" class="md-footer__link md-footer__link--prev" href="../../Statistics/stat6/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              상관관계 분석
+            </div>
+</div>
+</a>
+<a aria-label="다음: 미분" class="md-footer__link md-footer__link--next" href="../cal2/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              미분
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

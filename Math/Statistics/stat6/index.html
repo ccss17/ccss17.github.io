@@ -1,0 +1,1400 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Statistics/stat6/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>상관관계 분석 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              상관관계 분석
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          상관관계 분석
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        상관관계 분석
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    공분산과 상관계수
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    공분산과 상관계수
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>상관관계 분석</h1>
+<h2 id="_1">공분산과 상관계수<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#23c8b406e"><div class="admonition tldr" id="23c8b406e">
+<p>양의 관계 : 두 변수에 대하여 한 변수가 증가할 때 다른 변수가 증가하고 한 변수가 감소할 때 다른 변수도 감소하는 관계이다.</p>
+</div></a>
+<a href="#884daedbf"><div class="admonition tldr" id="884daedbf">
+<p>음의 관계 : 두 변수에 대하여 한 변수가 증가할 때 다른 변수가 감소하고 한 변수가 감소할 때 다른 변수가 증가하는 관계이다.</p>
+</div></a>
+<a href="#ef1be4a6d"><div class="admonition tldr" id="ef1be4a6d">
+<p>산점도(scatter plot, scatter graph, scatter chart, scattergram) : 직교 좌표계를 이용해 두 변수 간의 관계를 나타내는 방법이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>산점도는 다음과 같이 두 변수를 좌표계의 점으로 나타낸다. </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/ko/thumb/8/8a/Scatter_plot.png/240px-Scatter_plot.png"/> <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Scatter_diagram_for_quality_characteristic_XXX.svg/330px-Scatter_diagram_for_quality_characteristic_XXX.svg.png"/></p>
+<p>왼쪽 산점도는 두 변수가 양의 관계를 갖는다는 것을 알려준다. 이로써 두 변수 간의 관계서 선형적인지 비선형적인지 확인할 수 있다. </p>
+<p>오른쪽 산점도의 선형성을 통해 두 변수가 음의 관계를 갖는다는 것을 알 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Scatter_plot.jpg/360px-Scatter_plot.jpg"/></p>
+<p>위와 같은 공간좌표계에 산점도를 나타냄으로써 다변수에 대한 관계를 알 수 있다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><img height="400" src="https://user-images.githubusercontent.com/16812446/80305697-5e7bce80-87f9-11ea-8fd1-b19165bcdbaa.JPG" width="400"/> </p>
+<p>위 산점도는 선형적이지가 않아서 양의 관계인지 음의 관계인지 파악하기 힘들다.</p>
+</li>
+</ul>
+<a href="#bb95d3fac"><div class="admonition tldr" id="bb95d3fac">
+<p>공분산(covariance) : 두 가지 데이터의 직선관계가 어느 정도인지를 나타내는 통계값으로써 </p>
+<p><span class="arithmatex">\(n\)</span> 개의 <span class="arithmatex">\(2\)</span>-튜플 확률변수 </p>
+<div class="arithmatex">\[ (X, Y) = \{(x_1, y_1),(x_2, y_2),(x_3, y_3),\dots, (x_n, y_n)\} \]</div>
+<p>가 있을 때 <span class="arithmatex">\(X\)</span> 의 평균 <span class="arithmatex">\(\mu _{x}\)</span>, <span class="arithmatex">\(Y\)</span> 의 평균이 <span class="arithmatex">\(\mu _{y}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \text{Cov}(X, Y) = \dfrac{1}{n} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) = \dfrac{1}{n} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>설명</p>
+<p><img height="200" src=" https://user-images.githubusercontent.com/16812446/80305896-cbdc2f00-87fa-11ea-9953-4dc81538249e.PNG" width="200"/></p>
+<p><img height="200" src="https://user-images.githubusercontent.com/16812446/80305877-b23ae780-87fa-11ea-9069-67fa0ab80de0.PNG" width="200"/></p>
+<p>위와 같은 각각 양의 관계와 음의 관계를 보여주는 산점도를 생각하자. </p>
+<p>이때 변수의 직선관계가 위치에 따라서 변함이 없어야 하므로 그 직선관계를 변수 <span class="arithmatex">\(x, y\)</span> 의 평균 <span class="arithmatex">\(\mu _{x}, \mu _{y}\)</span> 를 기준으로 판단하는 것으로 한다.</p>
+<p>또한 양의 직선관계를 나타내는 왼쪽 그래프에서 그래프가 평균을 기준으로 데이터가 <span class="arithmatex">\(1\)</span> 사분면, <span class="arithmatex">\(3\)</span> 사분면에 많고 </p>
+<p>음의 직선관계를 나타내는 오른쪽 그래프에서 그래프가 평균을 기준으로 데이터가 <span class="arithmatex">\(2\)</span> 사분면, <span class="arithmatex">\(4\)</span> 사분면에 많다.</p>
+<p>또한 평균 <span class="arithmatex">\(\mu _{x}, \mu _{y}\)</span> 에서 멀어질수록 직선관계가 더욱 뚜렷해진다. </p>
+<p>이런 것들을 고려해보면 변수 <span class="arithmatex">\(x, y\)</span> 와 평균 <span class="arithmatex">\(\mu _{x}, \mu _{y}\)</span> 의 차이를 곱한</p>
+<div class="arithmatex">\[ (x_i - \mu _{x}) (y_i - \mu _{y}) \]</div>
+<p>가 직선관계를 가장 잘 나타내준다고 할 수 있다. 따라서 <span class="arithmatex">\(i = 1, 2, 3, \dots, n\)</span> 에 대한 데이터 <span class="arithmatex">\((x_i - \mu _{x}) (y_i - \mu _{y})\)</span> 로 를 구하고 그 평균을 구하면 전체 데이터가 얼마나 직선관계를 갖는지 가늠할 수 있다.</p>
+<p>그러므로 이 방식으로 데이터의 직선관계를 수식으로 나타낼 수 있도록 고안된 방법이 공분산</p>
+<div class="arithmatex">\[ \therefore  \text{Cov}(X, Y) = \dfrac{1}{n} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) \]</div>
+<p>이다. ■ </p>
+<p>한편 공분산은 다음 공식으로 간편화되어 사용된다. </p>
+<div class="arithmatex">\[ \text{Cov}(X, Y) = \dfrac{1}{n} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) \]</div>
+<div class="arithmatex">\[ = \dfrac{1}{n} \bigg  \{\sum_{i=1}^{n}(x_iy_i - \mu _{x}y_i+x_i \mu _{y} - \mu _{x} \mu _{y}) \bigg \}  \]</div>
+<div class="arithmatex">\[ = \dfrac{1}{n} \bigg  \{\sum_{i=1}^{n}x_iy_i - \mu _{x}\sum_{i=1}^{n} y_i + \mu _{y} \sum_{i=1}^{n}x_i - \sum_{i=1}^{n} \mu _{x} \mu _{y} \bigg \}  \]</div>
+<p>이다. 이때 <span class="arithmatex">\(\displaystyle \mu _{x} = \dfrac{1}{n} \sum_{i=1}^{n}x_i , \mu _{y} = \dfrac{1}{n} \sum_{i=1}^{n}y_i\)</span> 이므로 <span class="arithmatex">\(\displaystyle  \mu _{x}n = \sum_{i=1}^{n}x _{i}, \mu _{y}n = \sum_{i=1}^{n}y _{i}\)</span> 임을 이용하면</p>
+<div class="arithmatex">\[ = \dfrac{1}{n} \bigg  \{\sum_{i=1}^{n}x_iy_i - \mu _{x} \mu _{y}n + \mu _{y} \mu _{x}n - n \mu _{x} \mu _{y} \bigg \}  \]</div>
+<div class="arithmatex">\[ = \dfrac{1}{n} \bigg  \{\sum_{i=1}^{n}x_iy_i - n \mu _{x} \mu _{y} \bigg \}  \]</div>
+<div class="arithmatex">\[ = \dfrac{1}{n} \bigg  \{\sum_{i=1}^{n}x_iy_i - n \bigg ( \dfrac{1}{n}\sum_{i=1}^{n}x_i \bigg ) \bigg ( \dfrac{1}{n}\sum_{i=1}^{n}y_i \bigg ) \bigg \}  \]</div>
+<div class="arithmatex">\[ = \dfrac{1}{n} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  \]</div>
+<p>을 얻는다. 따라서</p>
+<div class="arithmatex">\[ \therefore  \text{Cov}(X, Y) = \dfrac{1}{n} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  \]</div>
+<p>이다.  ■ </p>
+</li>
+<li>
+<p>공분산이라는 말은 연산형태가 분산과 비슷한데 두 변수에 대한 연산이라는 것에서 착안하여 공분산이라는 이름이 붙혀졌다. </p>
+</li>
+<li>
+<p>공분산은 두 데이터의 상관관계를 조사해야 할 때 사용한다. </p>
+<ul>
+<li>
+<p>이때 단위가 전혀 다른 두 데이터에도 공분산을 구할 수 있다.</p>
+<p>가령 신장과 체중의 상관관계를 조사할 때에도 공분산을 구할 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>공분산은 양수가 될 수도 있고 음수가 될 수도 있다. </p>
+<ul>
+<li>
+<p>공분산이 양수일 때 두 데이터가 양의 관계에 있다고 한다.</p>
+<p>이것은 두 데이터 중 어느 한쪽이 증가하거나 감소할 때 다른 데이터도 증가하거나 감소하는 관계이다. </p>
+</li>
+<li>
+<p>공분산이 음수일 때 두 데이터가 음의 관계에 있다고 한다.</p>
+<p>이것은 두 데이터 중 어느 한쪽이 증가하거나 감소할 때 다른 데이터도 감소하거나 증가하는 관계이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>하지만 공분산의 절댓값이 양의 관계나 음의 관계의 강도를 나타내지는 않는다. 관계의 강도는 상관계수로 비교할 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>어떤 회사에서 고객들에 대한 매출량을 <span class="arithmatex">\(6\)</span> 개월동안 월별로 조사하여 다음 표를 만들었다. </p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"><span class="arithmatex">\(1\)</span> 월</th>
+<th align="center"><span class="arithmatex">\(2\)</span> 월</th>
+<th align="center"><span class="arithmatex">\(3\)</span> 월</th>
+<th align="center"><span class="arithmatex">\(4\)</span> 월</th>
+<th align="center"><span class="arithmatex">\(5\)</span> 월</th>
+<th align="center"><span class="arithmatex">\(6\)</span> 월</th>
+<th align="center">합계</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">고객 <span class="arithmatex">\(A\)</span></td>
+<td align="center"><span class="arithmatex">\(5000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(5000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(5000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(5000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(5000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(5000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(30000\)</span> 원</td>
+</tr>
+<tr>
+<td align="center">고객 <span class="arithmatex">\(B\)</span></td>
+<td align="center"><span class="arithmatex">\(10000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(3000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(1000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(1000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(15000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(0\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(30000\)</span> 원</td>
+</tr>
+<tr>
+<td align="center">고객 <span class="arithmatex">\(C\)</span></td>
+<td align="center"><span class="arithmatex">\(3000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(7000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(2000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(8000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(4000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(6000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(30000\)</span> 원</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td align="center">월매출</td>
+<td align="center"><span class="arithmatex">\(2500\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(4000\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(2000\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(5500\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(3500\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(4500\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(2\)</span> 억 <span class="arithmatex">\(2\)</span> 천만원</td>
+</tr>
+</tbody>
+</table>
+<p>이때 고객 <span class="arithmatex">\(A, B, C\)</span> 의 <span class="arithmatex">\(6\)</span> 개월간의 매출액은 <span class="arithmatex">\(30000\)</span> 원으로써 평균 월 매출이 각각 <span class="arithmatex">\(5000\)</span> 원이다. </p>
+<p>이제 고객 <span class="arithmatex">\(B\)</span> 의 매출과 와 월매출을 각각 확률변수 <span class="arithmatex">\(X, Y\)</span> 로 두고 공분산을 구해보자.</p>
+<p><span class="arithmatex">\(X\)</span> 의 평균은 먼저 <span class="arithmatex">\(\mu _{x} = 5000\)</span> 이고 </p>
+<p>편의를 위해 월 매출 <span class="arithmatex">\(Y\)</span> 를 백만원 단위로 계산하여 <span class="arithmatex">\(Y\)</span> 의 평균은 <span class="arithmatex">\(\mu _{y} = 22000 \div 6 = 36.666 \dots\)</span> 이다. </p>
+<p>그러면</p>
+<div class="arithmatex">\[ Cov(X, Y) = \dfrac{1}{n} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ = \dfrac{1}{6}\{(10000 - 5000)(25 - 36.66 \dots) + (3000 - 5000)(40 - 36.66 \dots) + \dots\} \]</div>
+<div class="arithmatex">\[ = -21667 \]</div>
+<p>임을 알 수 있다. ■ </p>
+<p>같은 방식으로 고객 <span class="arithmatex">\(A, B, C\)</span> 에 대한 원 매출, 분산, 표준편차, 공분산을 구해보면 다음과 같다. </p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">평균 매출</th>
+<th align="center">분산 <span class="arithmatex">\(\sigma ^{2}\)</span></th>
+<th align="center">표준편차 <span class="arithmatex">\(\sigma\)</span></th>
+<th align="center">공분산</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">고객 <span class="arithmatex">\(A\)</span></td>
+<td align="center"><span class="arithmatex">\(5000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(0\)</span> 원 <span class="arithmatex">\(^{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td align="center">고객 <span class="arithmatex">\(B\)</span></td>
+<td align="center"><span class="arithmatex">\(5000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(31,000,000\)</span> 원 <span class="arithmatex">\(^{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(5568\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(-21667\)</span></td>
+</tr>
+<tr>
+<td align="center">고객 <span class="arithmatex">\(C\)</span></td>
+<td align="center"><span class="arithmatex">\(5000\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(4,666,667\)</span> 원 <span class="arithmatex">\(^{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(2160\)</span> 원</td>
+<td align="center"><span class="arithmatex">\(24167\)</span></td>
+</tr>
+<tr>
+<td align="center">평균 월 매출</td>
+<td align="center"><span class="arithmatex">\(3666. 66\dots\)</span> 백만원</td>
+<td align="center"><span class="arithmatex">\(138.89\)</span> 백만원 <span class="arithmatex">\(^{2}\)</span></td>
+<td align="center">약 <span class="arithmatex">\(1200\)</span> 백만원</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<a href="#9d5990480"><div class="admonition tldr" id="9d5990480">
+<p>편차제곱의 합 표기 : 데이터 <span class="arithmatex">\(x, y\)</span> 와 그 각각의 평균 <span class="arithmatex">\(\mu _{x}, \mu _{y}\)</span> 에 대하여 편차제곱의 합을 일반적으로 <span class="arithmatex">\(S _{ab}\)</span> 의 형식으로 다음과 같이 표기한다.</p>
+<div class="arithmatex">\[ S _{xx} = \sum_{i=1}^{n}(x_i - \mu _{x}  ) ^{2} = \sum_{i=1}^{n}x_i ^{2} - n \mu _{x} ^{2} \]</div>
+<div class="arithmatex">\[ S _{yy} = \sum_{i=1}^{n}(y_i - \mu _{y}  ) ^{2} = \sum_{i=1}^{n}y_i ^{2} - n \mu _{y} ^{2} \]</div>
+<div class="arithmatex">\[ S _{xy} = \sum_{i=1}^{n}(x_i - \mu _{x}  )(y_i - \mu _{y}  )  = \sum_{i=1}^{n}x_iy_i  - n \mu _{x}\mu _{y}  \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[ S _{xx} = \sum_{i=1}^{n}(x_i - \mu _{x}  ) ^{2} = \sum_{i=1}^{n} (x_i ^{2} -2x_i \mu _{x} + \mu _{x} ^{2}) \]</div>
+<div class="arithmatex">\[ = \sum_{i=1}^{n}x_i ^{2} - \sum_{i=1}^{n}2x_i \mu _{x} + \sum_{i=1}^{n} \mu _{x} ^{2} \]</div>
+<div class="arithmatex">\[ = \sum_{i=1}^{n}x_i ^{2} - 2\mu _{x} \sum_{i=1}^{n}x_i + n \mu _{x} ^{2} \]</div>
+<p>이다. 이때 <span class="arithmatex">\(\displaystyle \mu _{x} = \dfrac{1}{n} \sum_{i=1}^{n}x_i\)</span> 이므로 <span class="arithmatex">\(\displaystyle  \mu _{x}n = \sum_{i=1}^{n}x _{i}\)</span> 임을 이용하면</p>
+<div class="arithmatex">\[ = \sum_{i=1}^{n}x_i ^{2} - 2\mu _{x} \cdot \mu _{x}n + n \mu _{x} ^{2} = \sum_{i=1}^{n}x_i ^{2} - 2 n \mu _{x} ^{2} + n \mu _{x} ^{2} \]</div>
+<div class="arithmatex">\[ = \sum_{i=1}^{n}x_i ^{2} - 2\mu _{x} \cdot \mu _{x}n + n \mu _{x} ^{2} = \sum_{i=1}^{n}x_i ^{2} - n \mu _{x} ^{2}\]</div>
+<p>을 얻는다. 즉, </p>
+<div class="arithmatex">\[ \therefore  S _{xx} = \sum_{i=1}^{n}(x_i - \mu _{x}  ) ^{2} = \sum_{i=1}^{n}x_i ^{2} - n \mu _{x} ^{2}\]</div>
+<p>이다. ■</p>
+</li>
+</ul>
+<a href="#3e8720d94"><div class="admonition tldr" id="3e8720d94">
+<p>상관계수(correlation coefficient) : 측정단위에 영향을 받아 선형관계의 강도를 명확히 알 수 없는 공분산의 단점을 해결하여 직선관계의 정도까지 나타내줄 수 있는 통계값으로써 </p>
+<p>확률변수 <span class="arithmatex">\(X\)</span> 와 <span class="arithmatex">\(Y\)</span> 의 분산이 양수일 때 각각의 표준편차 <span class="arithmatex">\(\sigma _{y}, \sigma _{y}\)</span> 와 공분산 <span class="arithmatex">\(\sigma _{xy}\)</span> 에 대한 무차원수</p>
+<div class="arithmatex">\[ \rho = \dfrac{1}{n} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}} \bigg ) \bigg (\dfrac{y_i - \mu _{y}}{\sigma _{y}} \bigg ) = \dfrac{\sigma _{xy}}{\sigma _{x} \sigma _{y}} = \dfrac{S _{xy}}{\sqrt[]{S _{xx}} \sqrt[]{ S _{yy}} } \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>설명 </p>
+<p>우리는 정규분포를 표준정규분포로 표준화할 때 확률변수 <span class="arithmatex">\(X\)</span> 에 평균 <span class="arithmatex">\(\mu\)</span> 를 빼고 표준편차 <span class="arithmatex">\(\sigma\)</span> 로 나누어 새로운 확률변수 <span class="arithmatex">\(Z = \dfrac{X - \mu}{\sigma }\)</span> 를 얻었다.</p>
+<p>이와 같은 방식으로 측정단위에 영향을 받는 공분산</p>
+<div class="arithmatex">\[ \text{Cov}(X, Y) = \sigma _{xy} = \dfrac{1}{n} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) \]</div>
+<p>을 표준화하기 위하여 확률변수 <span class="arithmatex">\(X\)</span> 를 <span class="arithmatex">\(\dfrac{X - \mu _{x}}{\sigma _{x}}\)</span> 로 표준화하고 확률변수 <span class="arithmatex">\(Y\)</span> 를 <span class="arithmatex">\(\dfrac{Y - \mu _{y}}{\sigma _{y}}\)</span> 로 표준화할 수 있다.</p>
+<p>그러므로 공분산에서 데이터와 평균을 뺀 값 <span class="arithmatex">\(x_i - \mu _{x}\)</span> 를 표준편차 <span class="arithmatex">\(\sigma _{x}\)</span> 로 나누고 <span class="arithmatex">\(y_i - \mu _{y}\)</span> 도 표준편차 <span class="arithmatex">\(\sigma _{y}\)</span> 로 나누어주면</p>
+<div class="arithmatex">\[ \therefore  \rho = \dfrac{1}{n} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}} \bigg ) \bigg (\dfrac{y_i - \mu _{y}}{\sigma _{y}} \bigg ) \]</div>
+<p>를 얻는다. ■ </p>
+<p>이것을 상관계수이다. 바로 이 상관계수가 단위의 영향력을 없애버린 무차원 수로써 표준화가 된 값인 것이다.</p>
+<p>이때 공분산 <span class="arithmatex">\(\displaystyle  \sigma _{xy} = \dfrac{1}{n} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y})\)</span> 을 이용하여 수식을 더욱 간단히 표현하면 </p>
+<div class="arithmatex">\[ \therefore  \rho = \dfrac{\sigma _{xy}}{\sigma _{x} \sigma _{y}} \]</div>
+<p>를 얻는다. ■ </p>
+<p>그리고 표준편차 <span class="arithmatex">\(\displaystyle \sigma _{x} = \sqrt[]{\dfrac{1}{n}\sum_{i=1}^{n}(x_i-\mu _{x}) ^{2}}, \sigma _{y}= \sqrt[]{\dfrac{1}{n}\sum_{i=1}^{n}(y_i-\mu _{y}) ^{2}}\)</span> 를 이용하여 식을 풀고 편차 제곱의 합 표기 </p>
+<div class="arithmatex">\[ S _{xx} = \sum_{i=1}^{n}(x_i - \mu _{x}  ) ^{2} , S _{yy} = \sum_{i=1}^{n}(y_i - \mu _{y}  ) ^{2} , S _{xy} = \sum_{i=1}^{n}(x_i - \mu _{x}  )(y_i - \mu _{y}  )  \]</div>
+<p>를 이용하면 </p>
+<div class="arithmatex">\[ \therefore  \rho = \dfrac{\displaystyle \sum_{i=1}^{n}(x_i-\mu _{x})(y_i - \mu _{y})}{\sqrt[]{\displaystyle \sum_{i=1}^{n}(x_i - \mu _{x})^{2}} \sqrt[]{\displaystyle \sum_{i=1}^{n}(y_i -  \mu _{y})^{2}}} = \dfrac{S _{xy}}{\sqrt[]{S _{xx}} \sqrt[]{ S _{yy}} } \]</div>
+<p>를 얻는다. ■ </p>
+</li>
+<li>
+<p>상관계수 <span class="arithmatex">\(\rho\)</span> 는 <span class="arithmatex">\(-1 \leq \rho \leq 1\)</span> 의 범위 내에서 존재한다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p>코시-슈바르츠 부등식은 <span class="arithmatex">\(\displaystyle \bigg ( \sum_{i=1}^{n}a_ib_i \bigg ) ^{2} \leq  \sum_{i=1}^{n}a_i ^{2} \sum_{i=1}^{n}b_i ^{2}\)</span> 의 관계를 보증한다. </p>
+<p>이때 상관계수의 정의</p>
+<div class="arithmatex">\[ \rho = \dfrac{\displaystyle \sum_{i=1}^{n}(x_i-\mu _{x})(y_i - \mu _{y})}{\sqrt[]{\displaystyle \sum_{i=1}^{n}(x_i - \mu _{x})^{2}} \sqrt[]{\displaystyle \sum_{i=1}^{n}(y_i -  \mu _{y})^{2}}}  \]</div>
+<p>에서 <span class="arithmatex">\(a_i = x_i - \mu _{x}, b_i = y_i - \mu _{y}\)</span> 로 두면 </p>
+<div class="arithmatex">\[ = \dfrac{\displaystyle \sum_{i=1}^{n}a_ib_i}{\sqrt[]{\displaystyle \sum_{i=1}^{n}a_i^{2}} \sqrt[]{\displaystyle \sum_{i=1}^{n}b_i^{2}}}  \]</div>
+<p>을 얻는다. 양변에 제곱을 취하면</p>
+<div class="arithmatex">\[ \rho ^{2} = \dfrac{\bigg (\displaystyle \sum_{i=1}^{n}a_ib_i \bigg ) ^{2}}{\displaystyle \sum_{i=1}^{n}a_i^{2} \displaystyle \sum_{i=1}^{n}b_i^{2}} \]</div>
+<p>을 얻는데 코시-슈바르츠 부등식 <span class="arithmatex">\(\displaystyle \bigg ( \sum_{i=1}^{n}a_ib_i \bigg ) ^{2} \leq  \sum_{i=1}^{n}a_i ^{2} \sum_{i=1}^{n}b_i ^{2}\)</span> 에서</p>
+<div class="arithmatex">\[ \rho ^{2} = \dfrac{\bigg (\displaystyle \sum_{i=1}^{n}a_ib_i \bigg ) ^{2}}{\displaystyle \sum_{i=1}^{n}a_i^{2} \displaystyle \sum_{i=1}^{n}b_i^{2}} \leq 1 \]</div>
+<p>임을 알 수 있다. 그러므로 <span class="arithmatex">\(\rho ^{2} \leq 1\)</span> 에서 </p>
+<div class="arithmatex">\[ \therefore -1 \leq \rho \leq 1 \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>일반적으로 상관계수의 절댓값이 <span class="arithmatex">\(0.7\)</span> 보다 크면 "상관관계가 강하다" 고 말한다.</p>
+</li>
+<li>
+<p>상관계수가 <span class="arithmatex">\(0\)</span> 에 가까우면 상관관계가 약하거나 거의 없다고 볼 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>상관계수가 <span class="arithmatex">\(-0.9\)</span> 라면 음의 상관관계가 강하다고 할 수 있다. </p>
+<p>상관계수가 <span class="arithmatex">\(0.8\)</span> 라면 양의 상관관계가 강하다고 할 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>상관계수로 공분산으로는 알 수 없었던 관계의 강도를 알 수 있다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>어떤 회사에서 <span class="arithmatex">\(6\)</span> 개월간의 수입과 지출을 정리한 표가 다음과 같다고 하자. </p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"><span class="arithmatex">\(1\)</span> 월</th>
+<th align="center"><span class="arithmatex">\(2\)</span> 월</th>
+<th align="center"><span class="arithmatex">\(3\)</span> 월</th>
+<th align="center"><span class="arithmatex">\(4\)</span> 월</th>
+<th align="center"><span class="arithmatex">\(5\)</span> 월</th>
+<th align="center"><span class="arithmatex">\(6\)</span> 월</th>
+<th align="center">평균</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">(수입) 월매출</td>
+<td align="center"><span class="arithmatex">\(2500\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(4000\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(2000\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(5500\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(3500\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(4500\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(3670\)</span> 만원</td>
+</tr>
+<tr>
+<td align="center">(지출) 광고비</td>
+<td align="center"><span class="arithmatex">\(200\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(100\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(400\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(300\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(200\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(200\)</span> 만원</td>
+<td align="center"><span class="arithmatex">\(233\)</span> 만원</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(PV\)</span>(광고조회수)</td>
+<td align="center"><span class="arithmatex">\(180\)</span> 만회</td>
+<td align="center"><span class="arithmatex">\(270\)</span> 만회</td>
+<td align="center"><span class="arithmatex">\(160\)</span> 만회</td>
+<td align="center"><span class="arithmatex">\(620\)</span> 만회</td>
+<td align="center"><span class="arithmatex">\(320\)</span> 만회</td>
+<td align="center"><span class="arithmatex">\(390\)</span> 만회</td>
+<td align="center"><span class="arithmatex">\(323\)</span> 만회</td>
+</tr>
+</tbody>
+</table>
+<p>이때 월매출이 광고비나 <span class="arithmatex">\(PV\)</span>(광고조회수) 와 관련이 있는지 예상이 되서 좀 더 엄밀하게 공분산을 구해보려 한다. </p>
+<p>월매출을 <span class="arithmatex">\(R\)</span>, 광고비를 <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(PV\)</span> 를 <span class="arithmatex">\(P\)</span> 로 두고 공분산 <span class="arithmatex">\(\text{Cov}(R,A), \text{Cov}(R,P)\)</span> 를 계산해보자.</p>
+<p>먼저 각 데이터에 대한 편차를 구해놓아야 한다. </p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"><span class="arithmatex">\(1\)</span> 월 편차</th>
+<th align="center"><span class="arithmatex">\(2\)</span> 월 편차</th>
+<th align="center"><span class="arithmatex">\(3\)</span> 월 편차</th>
+<th align="center"><span class="arithmatex">\(4\)</span> 월 편차</th>
+<th align="center"><span class="arithmatex">\(5\)</span> 월 편차</th>
+<th align="center"><span class="arithmatex">\(6\)</span> 월 편차</th>
+<th align="center">표준편차</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(R\)</span></td>
+<td align="center"><span class="arithmatex">\(-11.7\)</span></td>
+<td align="center"><span class="arithmatex">\(3.3\)</span></td>
+<td align="center"><span class="arithmatex">\(-16.7\)</span></td>
+<td align="center"><span class="arithmatex">\(18.3\)</span></td>
+<td align="center"><span class="arithmatex">\(-1.7\)</span></td>
+<td align="center"><span class="arithmatex">\(8.3\)</span></td>
+<td align="center"><span class="arithmatex">\(11.8\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(A\)</span></td>
+<td align="center"><span class="arithmatex">\(-0.33\)</span></td>
+<td align="center"><span class="arithmatex">\(-1.33\)</span></td>
+<td align="center"><span class="arithmatex">\(1.67\)</span></td>
+<td align="center"><span class="arithmatex">\(0.67\)</span></td>
+<td align="center"><span class="arithmatex">\(-0.33\)</span></td>
+<td align="center"><span class="arithmatex">\(-0.33\)</span></td>
+<td align="center"><span class="arithmatex">\(0.943\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(P\)</span></td>
+<td align="center"><span class="arithmatex">\(-143\)</span></td>
+<td align="center"><span class="arithmatex">\(-53\)</span></td>
+<td align="center"><span class="arithmatex">\(-163\)</span></td>
+<td align="center"><span class="arithmatex">\(297\)</span></td>
+<td align="center"><span class="arithmatex">\(-3\)</span></td>
+<td align="center"><span class="arithmatex">\(67\)</span></td>
+<td align="center"><span class="arithmatex">\(154\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>이를 바탕으로 공분산을 구해보면 </p>
+<div class="arithmatex">\[ \text{Cov}(R,A) = \dfrac{1}{6}\{(-11.7) \times (-0.33) + 3.3 \times (-1.33) + \dots + 8.3 \times (-0.33)\} = -3.056 \]</div>
+<div class="arithmatex">\[ \text{Cov}(R,P) = \dfrac{1}{6}\{(-11.7) \times (-143) + 3.3 \times (-53) + \dots + 8.3 \times 67\} = 1703 \]</div>
+<p>이다. 따라서 월매출과 광고비는 음의 관계이고 월매출과 광고조회수는 양의 관계임을 알 수 있다.</p>
+<p>그런데 이 상관관계가 얼마나 강한지는 알 수 없다. 왜냐하면 광고조회수의 데이터의 값이 단지 크기 때문에 <span class="arithmatex">\(1703\)</span> 이라는 큰 수가 계산된 것이기 때문이다. </p>
+<p>따라서 이것으로 월매출과 광고비의 공분산 <span class="arithmatex">\(-3.056\)</span> 보다 상관관계의 강도가 크다고 말할 수 없다.</p>
+<p>그렇다면 월매출과 광고비의 상관계수 <span class="arithmatex">\(\rho _{RA}\)</span> 와 월매출과 광고조회수의 상관계수 <span class="arithmatex">\(\rho _{RP}\)</span> 를 구해보면</p>
+<div class="arithmatex">\[ \therefore  \rho _{RA} = \dfrac{\text{Cov}(R,A)}{\sigma _{R} \sigma _{A}} = \dfrac{-3.056}{11.8 \times 0.943} = -0.2746 \]</div>
+<div class="arithmatex">\[ \therefore  \rho _{RP} = \dfrac{\text{Cov}(R,P)}{\sigma _{R} \sigma _{P}} = \dfrac{1703}{11.8 \times 154} = 0.9372 \]</div>
+<p>이다. ■ </p>
+<p>이에 따라 월매출과 광고조회수 <span class="arithmatex">\(PV\)</span> 가 강한 양의 상관관계에 있다고 생각할 수 있다. </p>
+<p>또 월매출과 광고비는 약한 음의 상관관계를 갖는다고 볼 수 있다.</p>
+</li>
+</ul>
+<a href="#4624c122a"><div class="admonition tldr" id="4624c122a">
+<p>표본공분산(sample covariance) : 추출된 표본의 두 가지 데이터의 직선관계가 어느 정도인지를 나타내는 통계값으로써 </p>
+<p><span class="arithmatex">\(n\)</span> 개의 <span class="arithmatex">\(2\)</span>-튜플 확률변수 </p>
+<div class="arithmatex">\[ (X, Y) = \{(x_1, y_1),(x_2, y_2),(x_3, y_3),\dots, (x_n, y_n)\} \]</div>
+<p>가 있을 때 <span class="arithmatex">\(X\)</span> 의 평균 <span class="arithmatex">\(\mu _{x}\)</span>, <span class="arithmatex">\(Y\)</span> 의 평균이 <span class="arithmatex">\(\mu _{y}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \text{Cov}(X, Y) = \dfrac{1}{n-1} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>공분산이 <span class="arithmatex">\(n\)</span> 으로 나눈 반면 표본공분산은 <span class="arithmatex">\(n-1\)</span> 로 나누었다는 것에 주의하자. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>표본공분산은 다음 공식으로 간편화되어 사용된다. </p>
+<div class="arithmatex">\[ \text{Cov}(X, Y) = \dfrac{1}{n-1} \sum_{i=1}^{n}(x_i - \mu _{x})(y_i - \mu _{y}) \]</div>
+<div class="arithmatex">\[ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}(x_iy_i - \mu _{x}y_i+x_i \mu _{y} - \mu _{x} \mu _{y}) \bigg \}  \]</div>
+<div class="arithmatex">\[ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \mu _{x}\sum_{i=1}^{n} y_i + \mu _{y} \sum_{i=1}^{n}x_i - \sum_{i=1}^{n} \mu _{x} \mu _{y} \bigg \}  \]</div>
+<p>이다. 이때 <span class="arithmatex">\(\displaystyle \mu _{x} = \dfrac{1}{n} \sum_{i=1}^{n}x_i , \mu _{y} = \dfrac{1}{n} \sum_{i=1}^{n}y_i\)</span> 이므로 <span class="arithmatex">\(\displaystyle  \mu _{x}n = \sum_{i=1}^{n}x _{i}, \mu _{y}n = \sum_{i=1}^{n}y _{i}\)</span> 임을 이용하면</p>
+<div class="arithmatex">\[ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \mu _{x} \mu _{y}n + \mu _{y} \mu _{x}n - n \mu _{x} \mu _{y} \bigg \}  \]</div>
+<div class="arithmatex">\[ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - n \mu _{x} \mu _{y} \bigg \}  \]</div>
+<div class="arithmatex">\[ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - n \bigg ( \dfrac{1}{n}\sum_{i=1}^{n}x_i \bigg ) \bigg ( \dfrac{1}{n}\sum_{i=1}^{n}y_i \bigg ) \bigg \}  \]</div>
+<div class="arithmatex">\[ = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  \]</div>
+<p>을 얻는다. 따라서</p>
+<div class="arithmatex">\[ \therefore  \text{Cov}(X, Y) = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  \]</div>
+<p>이다.  ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p>올림픽 육상 <span class="arithmatex">\(100\)</span> 미터 남자 우승기록에서 <span class="arithmatex">\(1900\)</span> 년부터 <span class="arithmatex">\(2016\)</span> 년까지의 표본은 다음과 같다. </p>
+<table>
+<thead>
+<tr>
+<th align="center">번호</th>
+<th align="center"><span class="arithmatex">\(X\)</span>(연도)</th>
+<th align="center"><span class="arithmatex">\(Y\)</span>(기록)</th>
+<th align="center"><span class="arithmatex">\(XY\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(1900\)</span></td>
+<td align="center"><span class="arithmatex">\(11\)</span></td>
+<td align="center"><span class="arithmatex">\(20900\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2\)</span></td>
+<td align="center"><span class="arithmatex">\(1904\)</span></td>
+<td align="center"><span class="arithmatex">\(11\)</span></td>
+<td align="center"><span class="arithmatex">\(20944\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(27\)</span></td>
+<td align="center"><span class="arithmatex">\(2016\)</span></td>
+<td align="center"><span class="arithmatex">\(9.81\)</span></td>
+<td align="center"><span class="arithmatex">\(19776.96\)</span></td>
+</tr>
+<tr>
+<td align="center">합계</td>
+<td align="center"><span class="arithmatex">\(52940\)</span></td>
+<td align="center"><span class="arithmatex">\(276.76\)</span></td>
+<td align="center"><span class="arithmatex">\(542291.2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>연도와 기록에 대한 표본공분산은</p>
+<div class="arithmatex">\[ \text{Cov}(X, Y) = \dfrac{1}{n-1} \bigg  \{\sum_{i=1}^{n}x_iy_i - \dfrac{1}{n}\sum_{i=1}^{n}x_i \sum_{i=1}^{n}y_i \bigg \}  \]</div>
+<p>에서</p>
+<div class="arithmatex">\[ \therefore  \text{Cov}(X,Y) = \dfrac{1}{27 - 1}\bigg \{ 542291.2 - \dfrac{1}{27}(52940)(276.76) \bigg \} = -13.98 \]</div>
+<p>이다. ■ </p>
+<p>즉 연도와 기록은 음의 관계를 갖고 연도가 높아질수록 기록이 줄어든다고 볼 수 있다. </p>
+<p>또 한편 공분산은 측정 데이터의 단위에 영향을 받으므로 <span class="arithmatex">\(-13.98\)</span> 이 선형관계의 강도를 보여줄 수 있는 것은 아니다. 실제로 기록을 나타내는 확률변수 <span class="arithmatex">\(Y\)</span> 의 단위를 초에서 분으로 바꾸면 데이터들에 <span class="arithmatex">\(\times \dfrac{1}{60}\)</span> 연산을 해주어야 하는데 이때 </p>
+<div class="arithmatex">\[ -13.98 \to -0.233 \]</div>
+<p>으로 공분산이 변한다. 따라서 공분산의 절댓값 크기에서 의미를 찾으려 들면 안된다!</p>
+</li>
+</ul>
+<a href="#7c8977847"><div class="admonition tldr" id="7c8977847">
+<p>표본상관계수(sample correlation coefficient) : 측정단위에 영향을 받아 선형관계의 강도를 명확히 알 수 없는 공분산의 단점을 해결하여 직선관계의 정도까지 나타내줄 수 있는 추출된 표본의 통계값으로써 </p>
+<p>확률변수 <span class="arithmatex">\(X\)</span> 와 <span class="arithmatex">\(Y\)</span> 의 분산이 양수일 때 각각의 표본표준편차 <span class="arithmatex">\(\sigma _{x}, \sigma _{y}\)</span> 와 표본공분산 <span class="arithmatex">\(\sigma _{xy}\)</span> 에 대한 무차원수</p>
+<div class="arithmatex">\[ \rho = \dfrac{1}{n-1} \sum_{i=1}^{n} \bigg ( \dfrac{x_i - \mu _{x}}{\sigma _{x}} \bigg ) \bigg (\dfrac{y_i - \mu _{y}}{\sigma _{y}} \bigg ) = \dfrac{\sigma _{xy}}{\sigma _{x} \sigma _{y}} = \dfrac{S _{xy}}{\sqrt[]{S _{xx}} \sqrt[]{ S _{yy}} } \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>표본상관계수도 마찬가지로 <span class="arithmatex">\(-1\)</span> 에서서 <span class="arithmatex">\(1\)</span> 의 값을 갖는다. </p>
+<ul>
+<li><span class="arithmatex">\(0\)</span> 에 가까우면 직선상관관계가 없다고 볼 수 있다. </li>
+</ul>
+</li>
+<li>
+<p>그러나 두 변수가 직선관계가 있다고 해서 잠복변수의 존재에 의하여 인과관계를 갖는다고 할 수는 없다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p>휴대전화 보급률과 기대수명에 대한 선형상관관계는 매우 높다.</p>
+<p>그렇다면 수명을 늘리기 위해 휴대전화 보급을 늘려야 하는가? 이 두 변수는 인과관계가 없기 때문에 올바르지 않는 결론이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#9c46fb4b6"><div class="admonition tldr" id="9c46fb4b6">
+<p>가능도(likelihood) :</p>
+</div></a>
+<p><strong>구체화 필요</strong></p>
+<a href="#9eff366e3"><div class="admonition tldr" id="9eff366e3">
+<p>최대가능도추정(maximum likelihood estimation) :</p>
+</div></a>
+<p><strong>구체화 필요</strong></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 통계적 추정" class="md-footer__link md-footer__link--prev" href="../stat5/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              통계적 추정
+            </div>
+</div>
+</a>
+<a aria-label="다음: 극한" class="md-footer__link md-footer__link--next" href="../../Calculus/cal/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              극한
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

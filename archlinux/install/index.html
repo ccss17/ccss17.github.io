@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/archlinux/install/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>Install Arch Linux - ccss17</title>
+<link href="../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#install-arch-linux">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Install Arch Linux
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-arch-linux">
+    Install Arch Linux
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+    1
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    2
+  </a>
+<nav aria-label="2" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    3
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+    5
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#de">
+    DE
+  </a>
+<nav aria-label="DE" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#i3-gapspolybar">
+    i3-gaps/polybar
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    한글 폰트 및 입력기
+  </a>
+<nav aria-label="한글 폰트 및 입력기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ibus">
+    ibus
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-util">
+    Core Util
+  </a>
+<nav aria-label="Core Util" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-devel">
+    Core Devel
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-cli">
+    Core CLI
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#core-gui">
+    Core GUI
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#font">
+    Font
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dotfiles">
+    dotfiles
+  </a>
+<nav aria-label="dotfiles" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#options">
+    Options
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Install Arch Linux</h1>
+<h2 id="install-arch-linux">Install Arch Linux<a class="headerlink" href="#install-arch-linux" title="Permanent link">¶</a></h2>
+<p>기본적으로 이곳 <a href="https://wiki.archlinux.org/index.php/Installation_guide">https://wiki.archlinux.org/index.php/Installation_guide</a> 의 가이드를 기반으로 설치 </p>
+<p><a href="install-vm.md">VirtualBox 에 Arch Linux 설치하기</a></p>
+<h2 id="1">1<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p><a href="https://www.archlinux.org/download">https://www.archlinux.org/download</a> 에서 <strong>Arch Linux</strong> iso 파일 다운로드 </p>
+</li>
+<li>
+<p>USB 플래싱 </p>
+<ul>
+<li>Arch Linux </li>
+</ul>
+<p><strong>Etcher</strong> 로 USB 플래싱 (<code>yay etcher</code> -&gt; <code>etcher-bin</code> 설치)</p>
+<ul>
+<li>Windows</li>
+</ul>
+<p><strong>Win32DiskImager</strong> 또는 <strong>rufus</strong> 로 USB 플래싱</p>
+</li>
+<li>
+<p>플래싱 된 <code>USB</code> 로 컴퓨터를 부팅</p>
+</li>
+</ol>
+<h2 id="2">2<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<ol>
+<li>
+<p>네트워크 확인</p>
+<ul>
+<li>
+<p><code>ping 8.8.8.8</code> 명령어로 인터넷 연결 상태 확인</p>
+</li>
+<li>
+<p>와이파이 사용 시 <code>wifi-menu</code> 로 확인. 명령어로 wifi 설정 후 확인해야 함</p>
+</li>
+<li>
+<p><strong>WPA Enterprise</strong> 사용시 <code>/etc/netctl/</code> 의 경로에 <code>profile</code> 파일을 만들고 다음의 내용으로 저장함.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nv">Description</span><span class="o">=</span><span class="s1">'Profile description'</span>
+<span class="nv">Interface</span><span class="o">=</span>wlan0 &lt;-- WIRELESS_INTERFACE
+<span class="nv">Connection</span><span class="o">=</span>wireless
+<span class="nv">Security</span><span class="o">=</span>wpa-configsection
+<span class="nv">IP</span><span class="o">=</span>dhcp
+<span class="nv">ESSID</span><span class="o">=</span>HGU_WLAN &lt;-- UNIVERSITY_SSID
+<span class="nv">WPAConfigSection</span><span class="o">=(</span>
+<span class="s1">'ssid="HGU_WLAN &lt;-- UNIVERSITY_SSID"'</span>
+<span class="s1">'proto=RSN'</span>
+<span class="s1">'key_mgmt=WPA-EAP'</span>
+<span class="s1">'eap=PEAP'</span>
+<span class="s1">'group=CCMP'</span>
+<span class="s1">'pairwise=CCMP'</span>
+<span class="s1">'identity="UNIVERSITY_USERNAME"'</span>
+<span class="s1">'password="UNIVERSITY_PASSWORD"'</span>
+<span class="s1">'phase2="auth=MSCHAPV2"'</span>
+<span class="o">)</span>
+</code></pre></div>
+<ul>
+<li><code>netctl start profile</code> 실행 </li>
+</ul>
+</li>
+<li>
+<p>시스템 시간 설정 : <code>timedatectl set-ntp true</code> 로 시스템 시간을 설정하고 <code>timedatectl status</code> 로 상태를 체크</p>
+</li>
+<li>
+<p>UEFI 부팅 가능 확인 : <code>ls /sys/firmware/efi</code> 명령어 입력 후 efivars 폴더가 있으면 UEFI 부팅 가능</p>
+</li>
+<li>
+<p><code>lsblk</code> 로 디바이스 확인 후 파티션 계획을 다음과 같이 세움. </p>
+<div class="highlight"><pre><span></span><code>/dev/sda1 - UEFI    512MB
+/dev/sda2 - SWAP    3GB (8GB 램에서)
+/dev/sda3 - ext4    나머지
+</code></pre></div>
+</li>
+<li>
+<p><code>cfdisk</code> 명령어로 위와 같은 파티션 구조로 설정</p>
+</li>
+<li>
+<p>모든 파티션을 <code>Delete</code> 해서 깨끗한 상태로 만듦 </p>
+</li>
+<li>
+<p><code>/dev/sda1 - UEFI</code> 파티션 </p>
+<ul>
+<li>
+<p><code>New</code> 버튼으로 크기를 <code>512M</code> 으로 지정</p>
+</li>
+<li>
+<p><code>primary</code> 선택 </p>
+</li>
+<li>
+<p><code>Type</code> 에서 <code>EFI</code> 선택  </p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>/dev/sda2 - SWAP</code> 파티션 </p>
+<ul>
+<li>
+<p><code>free -h</code> 명령어로 <strong>RAM</strong> 크기 확인 </p>
+</li>
+<li>
+<p><a href="https://itsfoss.com/swap-size/">https://itsfoss.com/swap-size/</a> 의 표를 참고해서 <code>SWAP</code> 사이즈 결정. 이 경우 <code>16GB</code> 램이기에 <code>20GB</code> 의 <code>SWAP</code> 사이즈로 결정함 </p>
+</li>
+<li>
+<p><code>New</code> 버튼으로 크기를 <code>20G</code> 으로 지정</p>
+</li>
+<li>
+<p><code>primary</code> 선택 </p>
+</li>
+<li>
+<p><code>Type</code> 에서 <code>Linux swap / Solaris</code> 선택  </p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>/dev/sda3 - ext4</code> 파티션 </p>
+<ul>
+<li>
+<p><code>New</code> 버튼으로 크기는 나머지 크기로 지정 </p>
+</li>
+<li>
+<p><code>primary</code> 선택 </p>
+</li>
+<li>
+<p><code>Type</code> 에서 <code>Linux</code> 선택. </p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>Write</code> 선택 후 <code>yes</code> 를 입력. 그리고 <code>Quit</code> 으로 <code>cfdisk</code> 종료 </p>
+</li>
+<li>
+<p>각각의 파일시스템으로 포맷</p>
+<div class="highlight"><pre><span></span><code>mkfs.fat -F32 /dev/sda1
+mkswap /dev/sda2
+swapon /dev/sda2
+mkfs.ext4 /dev/sda3
+</code></pre></div>
+</li>
+<li>
+<p>마운트 : 파티션을 사용하기 위해 리눅스 파일 시스템에 연결을 해야 함.</p>
+<div class="highlight"><pre><span></span><code>mount /dev/sda3 /mnt
+mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot
+</code></pre></div>
+</li>
+<li>
+<p><code>vi /etc/pacman.d/mirrorlist</code> 로 미러리스트를 열고 한국 미러링크인 <code>Server = http://mirror.premi.st/archlinux/$repo/os/$arch</code> 를 맨 위에 써줌. </p>
+</li>
+<li>
+<p>base 패키지 설치하기</p>
+</li>
+</ol>
+<p><code>pacstrap /mnt base base-devel linux linux-firmware</code></p>
+<ol>
+<li><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</code> 으로 <code>fstab (file system table)</code> 을 만듦. 파일 시스템이 어떻게 마운트되었나 알려주는 파일임. (genfstab : GENerate File System TABle)</li>
+</ol>
+<h3 id="3">3<a class="headerlink" href="#3" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>파일시스템 내부로 진입 <code>arch-chroot /mnt</code></p>
+</li>
+<li>
+<p>시간 설정 : <code>ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime</code> 명령어로 링크를 걸어줌. 이로써 /etc/localtime 을 다룰 때 <code>/usr/share/zoneinfo/Asia/Seoul</code> 이 참조됨.</p>
+</li>
+<li>
+<p><code>hwclock --systohc --utc</code> 명령어로 하드웨어 시간 설정을 해줌. </p>
+</li>
+<li>
+<p><code>pacman -S vim networkmanager grub efibootmgr</code> 로 필요 패키지 설치 </p>
+</li>
+<li>
+<p>로케일 설정 : <code>vim /etc/locale.gen</code> 로 파일에 들어가서 <strong>en_US.UTF-8 UTF-8</strong> 와 <strong>ko_KR.UTF-8 UTF-8</strong> 의 주석을 지워줌. 그리고 <code>locale-gen</code> 로 로케일을 생성해준다.</p>
+</li>
+<li>
+<p>언어설정 : <code>locale.conf</code> 를 설정해주는데 시스템 전반의 언어를 관리하는 파일임. <code>echo LANG=en_US.UTF-8 &gt; /etc/locale.conf</code> 로 설정해줌. 한글 디렉토리 이름을 선호하면 <code>ko_KR.UTF-8</code> 을 입력. <code>export LANG=en_US.UTF-8</code> 명령어로 현재 쉘의 언어를 선언해줌</p>
+</li>
+<li>
+<p>PC 이름 설정 : <code>echo ccsss &gt; /etc/hostname</code></p>
+</li>
+<li>
+<p>hosts 설정 : <code>vim /etc/hosts</code> 로 <code>hosts</code> 를 열고 다음과 같이 변경 </p>
+<div class="highlight"><pre><span></span><code><span class="m">127</span>.0.0.1   localhost
+::1         localhost
+<span class="m">127</span>.0.1.1   ccsss.localdomain   ccsss
+</code></pre></div>
+</li>
+<li>
+<p><code>passwd</code> 로 루트 비밀번호 설정 </p>
+</li>
+<li>
+<p><code>useradd -m -G users,wheel -s /bin/bash ccsss</code> 로 사용자 추가</p>
+<ul>
+<li>
+<p><code>-G</code> 옵션 : 뒤따라오는 옵션의 그룹에 ccsss 를 추가함. 이 경우 users 와 wheel 그룹에 추가됨.</p>
+</li>
+<li>
+<p><code>users</code> 그룹 : 표준 유저 그룹</p>
+</li>
+<li>
+<p><code>wheel</code> 그룹 : sudo 와 su 를 사용할 수 있는 그룹</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>passwd ccsss</code> 명령어로 비밀번호를 생성한다.</p>
+</li>
+<li>
+<p><code>visudo</code> 명령어로 파일을 열고 <code># %wheel ALL=(ALL) ALL</code> 이라고 주석처리된 문장의 주석을 해제하면 wheel 그룹에 sudo 권한이 주어짐. </p>
+</li>
+<li>
+<p>부트로더 설치 : <strong>grub</strong> 은 대부분 배보판에서 사용하기에 익혀두면 좋음. 그리고 <code>grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch --recheck</code> 로 grub 으로 부팅하도록 설정. 그리고 <code>grub-mkconfig -o /boot/grub/grub.cfg</code> 로 설정 파일을 만듦.</p>
+</li>
+<li>
+<p>리부팅 </p>
+<ul>
+<li>
+<p><code>exit</code> 로 쉘을 나가고</p>
+</li>
+<li>
+<p><code>umount -R /mnt</code> 로 장치를 언마운트</p>
+</li>
+<li>
+<p><code>reboot</code> 로 재부팅하고 컴퓨터가 종료되고 다시 시작될 때 usb 를 빼주면 됨.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="5">5<a class="headerlink" href="#5" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>sudo vim /etc/default/grub</code> 으로 <code>GRUB_TIMEOUT=5</code> 를 <code>GRUB_TIMEOUT=0</code> 로 변경 </li>
+</ul>
+<p><code>sudo vi /etc/pacman.conf</code> 로 설정파일에서 <code>Color</code> 의 주석해제 </p>
+<ul>
+<li>
+<p><code>sudo systemctl enable --now NetworkManager</code></p>
+</li>
+<li>
+<p>인터넷 연결 </p>
+<ul>
+<li><code>wpa2_enterprise</code> (대학교 WiFi 등) 을 사용할 시</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ nmcli con add <span class="nb">type</span> wifi ifname WIRELESS_INTERFACE con-name CONNECTION_NAME ssid SSID
+$ nmcli con edit id CONNECTION_NAME
+nmcli&gt; <span class="nb">set</span> ipv4.method auto
+nmcli&gt; <span class="nb">set</span> wifi-sec.key-mgmt wpa-eap
+nmcli&gt; <span class="nb">set</span> <span class="m">802</span>-1x.eap ttls
+nmcli&gt; <span class="nb">set</span> <span class="m">802</span>-1x.phase2-auth pap
+nmcli&gt; <span class="nb">set</span> <span class="m">802</span>-1x.identity USERNAME
+nmcli&gt; <span class="nb">set</span> <span class="m">802</span>-1x.pasword PASSWORD
+nmcli&gt; save
+nmcli&gt; activate
+</code></pre></div>
+<ul>
+<li><code>Wpa2 Enterprise</code> 가 아닐 시 단순히 <code>nmcli d wifi connect SSID password PASSWORD</code> 로 연결 </li>
+</ul>
+</li>
+<li>
+<p>pacman 최적화 및 업데이트</p>
+<p><code>sudo pacman -Syu</code></p>
+</li>
+<li>
+<p>미러리스트 최적화 </p>
+<p><code>sudo pacman -S reflector git</code></p>
+</li>
+</ul>
+<p><code>sudo reflector --sort rate --country China --country Japan --country "South Korea" --country "Hong Kong" --country India --save /etc/pacman.d/mirrorlist</code></p>
+<p>이거 설정하는건 GUI 설정한 다음 복붙할수있도록</p>
+<p><code>/usr/lib/systemd/system/reflector.service</code>
+</p><div class="highlight"><pre><span></span><code>[Unit]
+Description=Pacman mirrorlist update
+Documentation=https://wiki.archlinux.org/index.php/Reflector
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=/usr/share/reflector-timer/reflector.conf
+ExecStart=/usr/bin/reflector --country 'United States' --latest "50" --sort "rate" --save /etc/pacman.d/mirrorlist -p "http" -p "https" -p "rsync"
+</code></pre></div>
+<p><code>/usr/lib/systemd/system/reflector.timer</code>
+</p><div class="highlight"><pre><span></span><code>[Unit]
+Description=Weekly pacman mirrorlist refresh
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=1d
+
+[Install]
+WantedBy=timers.target
+</code></pre></div>
+<p><code>sudo systemctl enable --now reflector.timer</code></p>
+<ol>
+<li>
+<p><code>powerpill</code> 설치 </p>
+</li>
+<li>
+<p><strong>AUR</strong> installer <code>yay</code> 를 다음 명령어로 설치</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>git clone https://aur.archlinux.org/yay.git
+<span class="nb">cd</span> yay
+makepkg -si
+</code></pre></div>
+<p><code>yay -S --noconfirm powerpill</code></p>
+<ol>
+<li>Xorg 설치</li>
+</ol>
+<p><code>lspci | grep -e VGA -e 3D</code> 로 그래픽카드를 확인. </p>
+<p><strong>Intel</strong> 이면 <code>sudo powerpill -S --noconfirm xorg-server xf86-video-intel mesa</code> 디스플레이 서버, 그래픽카드드라이버를 설치 </p>
+<p><strong>AMD/ATI</strong> 이면 <code>sudo powerpill -S --noconfirm xorg-server xf86-video-ati mesa</code> 디스플레이 서버, 그래픽카드드라이버를 설치 </p>
+<h2 id="de">DE<a class="headerlink" href="#de" title="Permanent link">¶</a></h2>
+<h3 id="i3-gapspolybar">i3-gaps/polybar<a class="headerlink" href="#i3-gapspolybar" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><code>sudo powerpill -S --noconfirm i3-gaps rofi xorg-xrdb xdg-user-dirs ttf-inconsolata ttf-font-awesome xorg-xrandr</code></p>
+</li>
+<li>
+<p><code>yay -S --noconfirm polybar ly-git compton-tryone-git ttf-material-design-icons ttf-weather-icons ttf-monapo nerd-fonts-hack</code></p>
+</li>
+<li>
+<p><code>xdg-user-dirs-update</code></p>
+</li>
+<li>
+<p><code>sudo systemctl enable ly</code></p>
+</li>
+</ul>
+<h3 id="_1">한글 폰트 및 입력기<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<ul>
+<li><code>yay -S --noconfirm ttf-nanum</code> or <code>sudo powerpill -S --noconfirm noto-fonts-cjk</code></li>
+</ul>
+<h4 id="ibus">ibus<a class="headerlink" href="#ibus" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><code>sudo powerpill -S ibus ibus-hangul</code></p>
+</li>
+<li>
+<p><code>~/.xprofile</code> 에 다음 내용 입력. </p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>export QT_IM_MODULE=ibus
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+ibus-daemon -drx &amp;
+</code></pre></div>
+<ul>
+<li>
+<p><code>ibus-setup</code> </p>
+</li>
+<li>
+<p>General - Keyboard Shortcuts - Next input method: <shift>space 로 변경</shift></p>
+</li>
+<li>
+<p>Input Method - Add - "Korean - Hangul" 추가 </p>
+</li>
+<li>
+<p>Input Method - "Korean - Hangul" - Preferences - Start in Hangul Mode 체크 </p>
+</li>
+</ul>
+<h2 id="core-util">Core Util<a class="headerlink" href="#core-util" title="Permanent link">¶</a></h2>
+<h3 id="core-devel">Core Devel<a class="headerlink" href="#core-devel" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><code>sudo powerpill -S --noconfirm python python-pip python2 python2-pip jdk-openjdk nodejs npm</code></p>
+</li>
+<li>
+<p>$ sudo pip3 install i3altlayout</p>
+</li>
+<li>
+<p><code>sudo pip3 install i3altlayout</code></p>
+</li>
+</ul>
+<h3 id="core-cli">Core CLI<a class="headerlink" href="#core-cli" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><code>sudo powerpill -S --noconfirm zsh openssh tmux wget tcpdump gdb nmap radare2 lsd zip unzip neofetch scrot sshpass bat fd jq alsa-utils colordiff</code></p>
+</li>
+<li>
+<p><code>yay -S --noconfirm gotop pkgtop downgrade ttf-ubraille</code></p>
+</li>
+<li>
+<p><code>sudo mv /usr/share/fonts/gnu-free /tmp</code> : <code>gotop</code> 의 그래프 폰트를 랜더링해주는 <code>ttf-ubraille</code> 을 <code>gnu-free</code> 폰트가 씹어버리기 때문에 </p>
+</li>
+</ul>
+<h3 id="core-gui">Core GUI<a class="headerlink" href="#core-gui" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><code>sudo powerpill -S --noconfirm firefox vlc deepin-file-manager deepin-icon-theme mupdf feh alacritty network-manager-applet lxappearance</code></p>
+</li>
+<li>
+<p><code>yay -S --noconfirm visual-studio-code-bin google-chrome slack-desktop tusk posy-cursors</code></p>
+</li>
+</ul>
+<h3 id="font">Font<a class="headerlink" href="#font" title="Permanent link">¶</a></h3>
+<p><a href="https://www.reddit.com/r/archlinux/comments/5r5ep8/make_your_arch_fonts_beautiful_easily/">https://www.reddit.com/r/archlinux/comments/5r5ep8/make_your_arch_fonts_beautiful_easily/</a></p>
+<h2 id="dotfiles">dotfiles<a class="headerlink" href="#dotfiles" title="Permanent link">¶</a></h2>
+<h3 id="options">Options<a class="headerlink" href="#options" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><strong>Bluetooth</strong> 필요 시 <code>sudo powerpill -S bluez bluez-utils blueman</code> 로 설치 후 <code>sudo systemctl enable --now bluetooth</code></p>
+</li>
+<li>
+<p><strong>Dropbox</strong></p>
+</li>
+<li>
+<p><strong>Android Studio</strong> 필요 시 <code>yay android-studio</code> 로 설치 </p>
+</li>
+<li>
+<p><strong>Go</strong> 필요 시 <code>sudo powerpill -S go</code> 로 설치 </p>
+</li>
+<li>
+<p><strong>libreoffice</strong> 필요 시 <code>sudo powerpill -S libreoffice-fresh</code> 로 설치 </p>
+</li>
+<li>
+<p><a href="https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm">https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm</a> 에서 <strong>Microsoft-compatible fonts</strong> 를 다운로드 한 후 <code>pacman -Sy rpmextract xorg-font-utils fontconfig</code> 로 필요 패키지 설치</p>
+</li>
+<li>
+<p><code>rpmextract.sh msttcore-fonts-installer-2.6-1.noarch.rpm</code> 로 <code>etc</code>, <code>usr</code> 에 설치 될 파일을 추출한 후 메뉴얼하게 설치해야 함. </p>
+</li>
+<li>
+<p><a href="https://wiki.archlinux.org/index.php/Metasploit_Framework#Installation">https://wiki.archlinux.org/index.php/Metasploit_Framework#Installation</a> </p>
+</li>
+<li>
+<p><strong>metasploit</strong> 필요 시 <code>sudo powerpill -S metasploit</code> 로 설치 </p>
+</li>
+<li>
+<p><code>yay balena-etcher</code></p>
+</li>
+<li>
+<p><code>yay postman</code></p>
+</li>
+<li>
+<p><a href="https://wiki.archlinux.org/index.php/VirtualBox#Installation_steps_for_Arch_Linux_hosts">https://wiki.archlinux.org/index.php/VirtualBox#Installation_steps_for_Arch_Linux_hosts</a></p>
+</li>
+<li>
+<p><a href="https://wiki.archlinux.org/index.php/Qt#Installation">https://wiki.archlinux.org/index.php/Qt#Installation</a></p>
+</li>
+<li>
+<p><a href="https://wiki.archlinux.org/index.php/Wireshark#Installation">https://wiki.archlinux.org/index.php/Wireshark#Installation</a></p>
+</li>
+<li>
+<p><a href="https://wiki.archlinux.org/index.php/Tor#Installation">https://wiki.archlinux.org/index.php/Tor#Installation</a></p>
+</li>
+<li>
+<p><code>yay ida-free</code></p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

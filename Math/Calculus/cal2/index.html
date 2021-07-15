@@ -1,0 +1,1986 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Calculus/cal2/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>미분 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#calculus">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              미분
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          미분
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        미분
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculus">
+    미적분학 Calculus
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    미분
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    미분 가능성
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    도함수
+  </a>
+<nav aria-label="도함수" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    여러가지 함수의 도함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    도함수의 활용
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    롤의 정리, 평균값 정리
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    함수의 증가와 감소
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    함수의 극대와 극소
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-">
+    함수의 최대-최소
+  </a>
+<nav aria-label="함수의 최대-최소" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    함수의 그래프의 활용
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculus">
+    미적분학 Calculus
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    미분
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    미분 가능성
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    도함수
+  </a>
+<nav aria-label="도함수" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    여러가지 함수의 도함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    도함수의 활용
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    롤의 정리, 평균값 정리
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    함수의 증가와 감소
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    함수의 극대와 극소
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-">
+    함수의 최대-최소
+  </a>
+<nav aria-label="함수의 최대-최소" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    함수의 그래프의 활용
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>미분</h1>
+<h2 id="calculus">미적분학 Calculus<a class="headerlink" href="#calculus" title="Permanent link">¶</a></h2>
+<a href="#15ea6f496"><div class="admonition tldr" id="15ea6f496">
+<p>미적분학(Calculus) : 수학의 한 분야로 극한, 함수, 미분, 적분, 무한급수를 다루는 학문이다.</p>
+</div></a>
+<ul>
+<li>
+<p>미적분학은 속도나 가속도 같이 일정하게 변하는 대상들의 양의 값을 구한다.</p>
+<ul>
+<li>기하학이 모양에, 대수학이 관계에 관심을 두었다면 미적분학은 변화에 관심을 둔다. </li>
+</ul>
+</li>
+<li>
+<p>미적분학은 미분과 적분의 분야로 나뉜다.</p>
+<ul>
+<li>
+<p>미분은 국소적 변화를 다룬다.</p>
+</li>
+<li>
+<p>적분은 국소적 양의 집적을 다룬다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>함수의 원리를 기반으로 국소적 변화를 다루기 때문에 무한소 해석학이라는 명칭도 있다. </p>
+</li>
+<li>
+<p>미적분학의 의미에 관하여 다음과 같은 언급이 있다. </p>
+<ul>
+<li>
+<p>"미적분학 발명은 바퀴나 활자 인쇄의 발명만큼 극적이고 혁명적인 효과를 가져왔으며 그야말로 중력 등 보이지 않는 것을 볼 수 있게 한 것이다." "수학의 언어" 中</p>
+</li>
+<li>
+<p>"미적분이야말로 자연을 읽는 언어이다." 케임브리지대 피터 헤인즈 교수</p>
+</li>
+<li>
+<p>"우주는 '미분'으로 쓰여있고, 거기서부터 우리가 필요로 하는 위치를 추출해 내는 과정을 '적분'이라 부릅니다." 경희대 김상욱 교수</p>
+</li>
+<li>
+<p>미적분학 이전의 수학은 플라톤의 이데아론에서 말하듯 끝없이 변하는 현실 세계가 아닌 불변의 관념 세계를 다룬다고 여겨졌다. 그러나 "변화" 를 추상화시켜 수학적으로 다룰 수 있게 되자 현실과 동떨어진 관념 세계가 아닌 동적으로 변하는 현실 세계를 명확하게 밝힐 수 있게 되었다. 이에 따라 과학혁명을 비롯하여 과학과 공학이 발전하는 등 변하는 대상의 명확한 기술을 통한 강한 통제력을 행사할 수 있게 되었다. 이에 따라 변하는 존재를 수학적으로 모델링할 수 있게 되어 기술이 자연 대상을 더 빠르게 대체할 수 있게 되었다. </p>
+</li>
+<li>
+<p>미적분학을 수학 그 자체에서의 의미를 보면 "함수와 공간의 관계를 파악한다."로 요약된다. 고등학교 과정에서 나오는 미적분의 기본정리는 구간 [a, b]에서의 적분을 "원시함수의 양 끝점에서의 값의 차"로 나타낼 수 있다는 것을 의미하는데, 이것의 심화버전인 발산 정리와 스토크스 정리는 각각 2차원 곡면/1차원 곡선에서 벡터 함수의 적분을 해당 함수를 미분하여 3차원 공간/2차원 곡면에서 적분하는 것으로 바꿀 수 있다는 것을 의미한다. 이 때 미분한 함수의 적분 영역의 경계선/경계면이 원래 함수의 적분 영역이 된다는 것을 의미한다. 다시 말해 미적분의 기본정리는 넓은 의미에서 함수와 공간의 대응 관계와 경로 무관성을 보여 준다고 할 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시</p>
+<p>경제학 원리를 직관과 통찰을 통하여 이해하고 그것을 수학적으로 명확하게 밝히면 많은 효용이 발생한다. 왜냐하면 미적분으로 경제적 원리와 결과를 예측하고 설명할 수 있기 때문이다. </p>
+<p>기업이 이윤을 극대화할 수 있는 원리를 미분으로 밝힐 수 있다. 즉 고정비용, 가변비용, 총비용, 한계비용, 평균비용 등과 한계수입, 총수입 등의 관계를 함수로 표현하고 생산량을 아주 조금 변화시켰을 때 총수입이 어떻게 변하는지 알 수 있다. </p>
+<blockquote>
+<p>한편, 이러한 경제학 원리를 밝히는 데에 사용된 수식과 알고리즘은 또 다른 어떤 자연 대상들이 그와 같은 관계를 갖고 있으며 비슷한 목적을 달성하는 방법을 쓰고 있다면 그것에도 적용될 수 있다. 왜냐하면 수학은 자연 대상을 추상화시킨 것이므로 다른 자연 대상들에게 적용될 수 있기 때문이다.</p>
+<p>그러므로 수학을 구성하는 가장 기초적인 연산과 요소들은 세상에 존재하는 수많은 자연 대상의 행동을 구성할 수 있고 원리를 추상적으로 표현할 수 있다. 그렇다면 수학은 어느정도 수준까지 세상을 추상적으로 표현할 수 있는가? 모든 세상과 모든 대상들을 수학으로 표현할 수 있을까? 그렇다면 인공지능을 개발하는 사람들에게는 희소식이다. 왜냐하면 수학적 형식 언어로 표현된 알고리즘과 수식들은 비교적 코드로 자동화시키기 쉽기 때문이다. </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="_1">미분<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#123f171c2"><div class="admonition tldr" id="123f171c2">
+<p>미분(derivative) : 특정 함수의 어떤 지점에서의 접선(또는 접평면)을 구하는 연산이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 복잡한 함수를 선형근사시켜서 파악하려는 것이 미분이다. 따라서 미분은 선형사상이다.</p>
+</li>
+<li>
+<p>미분의 본질은 대상의 변화를 예측하는 것이다. </p>
+<p>그 대상이 아무리 작은 대상, 즉 원자일지라도 또는 아무리 큰 대상, 행성 같은 것일지라도 그것의 변화를 수학적으로 추상화시켜 명확히 밝히 보기 위하여 미분이 사용된다. </p>
+<p>미분을 통하여 목적에 부합하지 않는 행동을 가려낼 수 있게 되었다. 어떤 존재의 목적이 부여되었고 그 목적을 달성할 수 있는 정도를 수로 격하시킬 수 있다면 택할 수 있는 수많은 행동들이 목적에 미치는 영향력을 미분을 통하여 구할 수 있다. 행동-목적 함수로 바라보았을 때 행동이 변할 때 목적 달성도가 얼만큼 변하는지 미분으로 예측할 수 있기 때문이다. </p>
+<p>즉 미분은 대상의 움직임을 수학적으로 모델링할 수 있는 문을 열어주었다. 움직임이란  마음의 움직임, 몸의 움직임, 자연현상의 움직임, 분자의 움직임, 뉴런의 움직임, 행성의 움직임, 경제활동의 움직임 등등 모든 움직임 등등 세상 모든 움직임을 다 포함하는 것이다. 이러한 자연적 대상들의 움직임을 수학적으로 모델링하면 수학의 이점이 곧 바로 나타난다. 수학의 이점이란 대상의 특성을 추상화를 통해 단순화함으로써 명확히 밝혀서 볼 수 있게 하는 것이다. 명확히 볼 수 있는 것의 이점은 대상을 자유자재로 다룰 수 있게 된다는 것이다. 또 이러한 능력을 갖게 되는 것의 장점은 자신보다 덜 명확히 보는 사람들에 대한 지배력이 늘어난다는 것이다. </p>
+</li>
+<li>
+<p>기울기란 변화율이다. 변화율을 알면 미래를 예측할 수 있다. 우리는 현상을 예측하고 싶어하고 그 현상의 변화율, 즉 기울기를 알길 원하는 것이다. 이 기울기를 구하는 연산, 즉 예측을 할 수 있게 해주는 연산이 미분인 것이다.</p>
+<ul>
+<li>
+<p>자연 대상을 수학적 대상물로 사상시킨 다음 그것을 한 가지 속성으로 추상화 시키고 그 속성이 변하는 변화율을 구하는 것이 수학적으로 사상된 게 기울기를 구하는 미분인 것이다. </p>
+</li>
+<li>
+<p>자연 대상을 한 가지 속성과 한 가지 관점으로 추상화시킨 것이 "수" 라는 수학적 대상물로 사상되기 때문에 이런 일이 가능한 것이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#53f79ca90"><div class="admonition tldr" id="53f79ca90">
+<p>증분(increment) : 함수 <span class="arithmatex">\(y=f(x)\)</span> 에서 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(b\)</span> 까지 변할 때, <span class="arithmatex">\(x\)</span> 의 값의 변화량 <span class="arithmatex">\(b-a\)</span> 를 <span class="arithmatex">\(x\)</span> 의 증분, <span class="arithmatex">\(y\)</span> 값의 변화량 <span class="arithmatex">\(f(b) - f(a)\)</span> 를 <span class="arithmatex">\(y\)</span> 의 증분이라 한다.</p>
+</div></a>
+<ul>
+<li><span class="arithmatex">\(x\)</span> 의 증분과 <span class="arithmatex">\(y\)</span> 의 증분을 각각 <span class="arithmatex">\(\Delta x\)</span>, <span class="arithmatex">\(\Delta y\)</span> 로 표현한다.</li>
+</ul>
+<a href="#9f96f021a"><div class="admonition tldr" id="9f96f021a">
+<p>평균변화율(average rate of change) : 함수 <span class="arithmatex">\(y=f(x)\)</span> 에서 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(b\)</span> 까지 변할 때의 평균변화율은</p>
+<div class="arithmatex">\[ \frac{\Delta y}{\Delta x} = \frac{f(b)-f(a)}{b-a} = \frac{f(a+\Delta x)-f(a)}{\Delta x} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>그러니까 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(b\)</span> 까지 변할 때의 변화량은 <span class="arithmatex">\(1\)</span> 변했을 때 <span class="arithmatex">\(y\)</span> 가 <span class="arithmatex">\(\frac{\Delta y}{\Delta x}\)</span> 만큼 변한 셈이라는 뜻이다. </p>
+<ul>
+<li>다시 말해 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(b\)</span> 까지 변할 때의 변화량은 어떤 양 <span class="arithmatex">\(a\)</span> 만큼 변했을 때 <span class="arithmatex">\(y\)</span> 가 <span class="arithmatex">\(\frac{\Delta y}{\Delta x}a\)</span> 만큼 변한 셈이라는 뜻이다. </li>
+</ul>
+</li>
+<li>
+<p>이것은 곡선 <span class="arithmatex">\(y=f(x)\)</span> 위의 두 점 <span class="arithmatex">\((a,f(a)),(b,f(b))\)</span> 를 지나는 직선의 기울기를 의미한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(f(x) = x^2 + 2\)</span> 에 대하여 <span class="arithmatex">\(x\)</span> 값이 다음과 같이 변할 때 평균변화율이 어떻게 될까.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(0 \to 2\)</span> : 평균변화량이란 <span class="arithmatex">\(x\)</span> 값의 변화량에 대한 <span class="arithmatex">\(y\)</span> 값의 변화량의 비이기 때문에 </p>
+<div class="arithmatex">\[ \frac{\Delta y}{\Delta x} = \frac{f(2) - f(0)}{2 - 0} = \frac{(2^2+2)-2}{2} = 2 \]</div>
+<p>이다. 이는 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(1\)</span> 변할 때 <span class="arithmatex">\(y\)</span> 가 평균적으로 <span class="arithmatex">\(2\)</span> 변했다는 뜻이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#ec5bbfd5d"><div class="admonition tldr" id="ec5bbfd5d">
+<p>미분계수(derivative) 또는 순간변화율(instantaneous rate of change) : 함수 <span class="arithmatex">\(y=f(x)\)</span> 에서 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(a+\Delta x\)</span> 까지 변할 때의 평균변화율 <span class="arithmatex">\(\frac{\Delta y}{\Delta x}\)</span> 에서 <span class="arithmatex">\(\Delta x \to 0\)</span> 일 때의 극한값, 즉</p>
+<div class="arithmatex">\[ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(a+\Delta x)-f(a)}{\Delta x} = f'(a) \]</div>
+<p>가 존재할 때, 이 극한값을 함수 <span class="arithmatex">\(y=f(x)\)</span> 의 <span class="arithmatex">\(x=a\)</span> 에서의 미분계수(또는 순간변화율) 이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(x-a=\Delta x\)</span> 로 <span class="arithmatex">\(\Delta x\)</span> 를 풀어서 다음과 같이 나타낼 수도 있다. </p>
+<div class="arithmatex">\[ \lim_{x \to a} \frac{f(x)-f(a)}{x-a} = f'(a) \]</div>
+</li>
+<li>
+<p>종종 <span class="arithmatex">\(\Delta x\)</span> 를 <span class="arithmatex">\(h\)</span> 로 두어 다음과 같이 나타내기도 한다. </p>
+<div class="arithmatex">\[ \lim_{h \to 0} \frac{\Delta y}{h} = \lim_{h \to 0} \frac{f(a+h)-f(a)}{h} = f'(a)\]</div>
+</li>
+<li>
+<p>기호로 <span class="arithmatex">\(f'(a)\)</span> 로 나타내고 다음의 기호로도 나타낸다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(y' _{x=a}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\([\frac{dy}{dx}] _{x=a}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\([\frac{d}{dx}f(x)] _{x=a}\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>그러니까 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 아주 조금 변할 때의 변화량은 <span class="arithmatex">\(y\)</span> 의 변화량은 때 </p>
+<div class="arithmatex">\[ \lim_{\Delta x \to 0} \frac{f(a+\Delta x)-f(a)}{\Delta x} \]</div>
+<p>이라는 뜻이다. </p>
+<ul>
+<li>다시 말해 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(b\)</span> 까지 변할 때의 변화량은 어떤 양 <span class="arithmatex">\(a\)</span> 만큼 변했을 때 <span class="arithmatex">\(y\)</span> 가 <span class="arithmatex">\(\frac{\Delta y}{\Delta x}a\)</span> 만큼 변한 셈이라는 뜻이다. </li>
+</ul>
+</li>
+<li>
+<p>미분계수 <span class="arithmatex">\(f'(a)\)</span> 란 결국에 평균변화량의 <strong>"극한값"</strong> 이다. </p>
+</li>
+<li>
+<p>미분계수 <span class="arithmatex">\(f'(a)\)</span> 란 해석기하적으로 곡선 <span class="arithmatex">\(y=f(x)\)</span> 위의 점 <span class="arithmatex">\((a, f(a))\)</span> 에서의 접선의 기울기를 의미한다. </p>
+<ul>
+<li>
+<p>다음 그림에서 시각적으로 볼 수 있듯이 <span class="arithmatex">\(\Delta x\)</span> 가 <span class="arithmatex">\(0\)</span> 에 한없이 가까워질 때 평균평화율은 순간변화율이 되고 그것은 기하학적으로 접선의 기울기가 된다. </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Tangent_animation.gif/220px-Tangent_animation.gif"/></p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(f(x) = x^2 + 2x\)</span> 의 <span class="arithmatex">\(x=1\)</span> 에서의 미분계수를 구하자.</p>
+<div class="arithmatex">\[f'(1) = \lim_{\Delta x \to 0} \frac{f(1+\Delta x)-f(1)}{\Delta x} = \lim_{\Delta x \to 0} (4+\Delta x) = 4\]</div>
+<p>그렇다면 <span class="arithmatex">\(x=1\)</span> 에서 미분계수(순간변화율)이 <span class="arithmatex">\(4\)</span> 이므로 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(1\)</span> 만큼 변할 때 <span class="arithmatex">\(y\)</span> 는 <span class="arithmatex">\(4\)</span> 만큼 변하여 <span class="arithmatex">\(f(1) = 3\)</span> 에서 <span class="arithmatex">\(f(2) = 7\)</span> 이 될 것인가? 그렇지 않다. 실제로 <span class="arithmatex">\(f(2) = 8\)</span> 이다. 어떻게 중간에 <span class="arithmatex">\(7\)</span> 에 <span class="arithmatex">\(8\)</span> 이 되었을까? </p>
+<p>그 이유는 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(1\)</span> 에서 <span class="arithmatex">\(2\)</span> 로 변하는 과정에서 미분계수도 계속 변하여 <span class="arithmatex">\(x\)</span> 의 변화에 따른 <span class="arithmatex">\(y\)</span> 의 변화량을 높혀주었기 때문이다. </p>
+<p>실수는 연속적이기 때문에 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(1\)</span> 에서 <span class="arithmatex">\(2\)</span> 로 변할 때 그것의 최소 단계를 정의할 수 없을 것 같다. 그럼에도 불구하고 과감하게 실수의 최소단위를 <span class="arithmatex">\(\varepsilon\)</span> 이라고 가정하자. 그러면 <span class="arithmatex">\(\varepsilon\)</span> 은 존재하는 수 중에서 가장 작은 양수, 즉 한없이 작은 양수이다. 하지만 동시에 <span class="arithmatex">\(0\)</span> 은 아니다. 이 수는 어떠한 양수와 크기 비교를 해도 작다는 결론을 낼 것이다. 즉 이 수는 <span class="arithmatex">\(0\)</span> 에 가장 가까운 수이다. </p>
+<p>(그러나 어떤 수와 다른 수 사이에 그 어떤 수도 없다면 두 수는 같다는 결론이 나오기 때문에 이 가장 작은 양수 <span class="arithmatex">\(\varepsilon\)</span> 은 엄밀하게 따져보면 <span class="arithmatex">\(0\)</span> 과 같다는 결론이 나올 것이다. 따라서 <span class="arithmatex">\(\varepsilon\)</span> 이 존재한다는 가정은 거짓이다.)</p>
+<p>그러면 이제 <span class="arithmatex">\(\varepsilon\)</span> 으로 연속적으로 변하는 실수를 마치 이산적으로 변하는 것처럼 생각할 수 있다. <span class="arithmatex">\(x=1\)</span> 에서 <span class="arithmatex">\(x=2\)</span> 로 변할 때 미분계수가 변했기 때문에 <span class="arithmatex">\(y=7\)</span> 이 아닌 <span class="arithmatex">\(y=8\)</span> 이 나왔다. 즉 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(x+\varepsilon\)</span> 이 되었을 때 미분계수도 <span class="arithmatex">\(f'(1)\)</span> 에서 <span class="arithmatex">\(f'(1+\varepsilon)\)</span> 만큼 변했고, <span class="arithmatex">\(x\)</span> 에 <span class="arithmatex">\(x+1\)</span> 로 변하는 와중에 미분계수도 <span class="arithmatex">\(1 \times \varepsilon\)</span> 번 변하면서 <span class="arithmatex">\(x\)</span> 의 변화량을 계속 바꾸었다. </p>
+<p>(<span class="arithmatex">\(1\)</span> 이란 <span class="arithmatex">\(\varepsilon\)</span> 이 <span class="arithmatex">\(1\)</span> 만큼 모여있는 수라고 볼 수 있는가? 즉 <span class="arithmatex">\(1 = \varepsilon \times 1\)</span> 인가? 그러나 실제로 <span class="arithmatex">\(\varepsilon\)</span> 은 존재하지 않는다. 그렇다면 <span class="arithmatex">\(1\)</span> 은 어떻게 존재하는가? 불만족스럽지만 일단 <span class="arithmatex">\(1\)</span> 은 다른 어떤 존재에 의존하지 않고 스스로 존재한다고밖에 답할 수 없을 것 같다. 그런데 정말 그렇다면 <span class="arithmatex">\(1\)</span> 을 근거로 하여 다른 자연수가 존재한다는 설명도 틀렸다는 것이 된다. 이 생각에 따르면 모든 수는 다른 어떠한 최소단위로도 구성되지 않았다. 즉 다른 대상에 의존하여 존재하는 것이 아니라 단지 그것 스스로 존재한다.  -  내 생각에 수의 논리체계는 어차피 현실세계를 정확하게 반영하지 못하는 것 같다. 수의 논리체계로 구축된 세상에는 최소단위가 존재하지 않는다. 즉 어떤 수를 구성하는 수를 무한히 찾을 수 있고 쪼갤 수 있다. 하지만 현실에서는 그 어떤 대상도 무한번 쪼갤 수 없다. 혹시 현실에서도 최소단위가 존재하지 않는 것이 아닐까? 현실의 대상도 수의 세계처럼 무한번 쪼갤 수 있는 것이 아닐까? 그러나 최소단위가 존재하지 않으면 대상이 어떻게 실재할 수 있는가?)</p>
+<p><strong>최소 단계는 존재하지 않는가? 가장 작은 양수가 존재한다고 하자. 그러면 그 수와 <span class="arithmatex">\(0\)</span> 사이에는 그 어떤 수도 존재하지 않는다. 하지만 이로써 가장 작은 양수는 <span class="arithmatex">\(0\)</span> 과 동일하게 되었다. 이는 모순이다. 한편 가장 큰 수를 생각하고 그 수를 <span class="arithmatex">\(n\)</span> 이라고 하자. 그런데 <span class="arithmatex">\(n+1\)</span> 을 하여 가장 큰 수보다 더 큰 수를 얻었다. 그러므로 가장 큰 수가 존재한다는 것은 모순이다.</strong></p>
+<p><strong>가장 큰 수와 가장 작은 수는 존재하지 않는다. 즉 수의 경계란 없다. 그러나 만약 수의 경계가 존재하지 않는다면 최소단위도 존재하지 않는다. 그렇다면 수는 어떻게 변하는가? 나는 지금까지 대상이 다른 대상을 변할 때 변하는 최소단위가 존재하고 그 최소단위만큼 계속 계속 변하다가 결국 우리가 인지할 수 있는 유의미한 상태로까지 변한다고 믿었다. 그러나 최소단위가 존재하지 않는다면 대상이 다른 대상으로 변하는 것은 연속적으로 변하는 것이 아니라 이산적으로 변하는 것이다.</strong></p>
+<p><strong>만약 최소단위가 존재하여 대상이 최소단위만큼 계속해서 연속적으로 변했다고 할 수 있다. 그러나 최소단위가 존재하지 않는다고 한다면 대상은 연속적으로 변했다고 할 수 없다. 대상은 마치 다른 대상으로 일순간에 변신 한 것처럼 변한 것이다. 그런데 그 변신의 단계가 아주 많고 세밀하여 우리가 그것이 "연속적으로 변한다" 라고 착각한 것이다.</strong></p>
+<p><strong>다시 말하면 연속적으로 변한다는 생각을 갖고 있는한 수는 변할 수 없다. 즉 수는 작아질 수도 없고 커질 수도 없다. 가령 사람의 키는 커질 수 없다. 사람의 키는 어느 순간 마치 한 대상이 다른 대상으로 변신을 한 것처럼 한번에 커졌다. 그러나 그 변신이 매우 많이 일어났기 때문에 키가 연속적으로 커졌구나 라고 착각한 것이다.</strong></p>
+<p><strong>수와 달리 물리량에는 최소단위가 존재한다. 그래서 물리량은 그 최소단위만큼 변하며 동적일 수 있다. 하지만 수는 변할 수 없다. 최소단위가 존재하지 않는 수로 이루어진 이데아의 세계는 현실 세계와 다른 것 같다. 그렇다면 수학이 현실세계를 정확하게 반영할 수 있는가? 만약 수학이 자연 대상을 참되게 추상화시키지 못한다면 수학의 정당성을 어떻게 증명할 수 있는가? 수학이 거짓된 세상이고 우리는 마치 꿈 속이나 정신병 걸린 사람의 잘못된 정신세계라는 수학에서 뛰놀고 있었다는 것이 아니라는 것을 어떻게 증명할 수 있을까?</strong></p>
+</li>
+</ul>
+<h2 id="_2">미분 가능성<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<a href="#5ebdd4695"><div class="admonition tldr" id="5ebdd4695">
+<p>미분 가능한 함수 : 함수 <span class="arithmatex">\(f(x)\)</span> 의 <span class="arithmatex">\(x=a\)</span> 에서의 미분계수 <span class="arithmatex">\(f'(a)\)</span> 가 존재할 때, 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 미분가능하다고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>미분가능하다는 것은 미분계수가 존재한다는 것이다. 그런데 미분계수란 평균변화율의 극한값에 불과하다. 따라서 미분계수가 존재한다는 것은 평균변화율의 우극한과 좌극한이 같다는 것이다.</p>
+<p>그런데 평균변화율의 우극한은 우미분계수이고, 좌극한은 좌미분계수이다. 결론적으로 어떤 점에서 미분가능하다는 것은 그 점에서 좌미분계수와 우미분계수가 같다는 것이다. </p>
+</li>
+<li>
+<p>일반적으로 함수 <span class="arithmatex">\(f(x)\)</span> 가 구간에 속하는 모든 <span class="arithmatex">\(x\)</span> 에 대하여 미분가능할 때, 함수 <span class="arithmatex">\(f(x)\)</span> 는 그 구간에서 미분가능하다고 한다.</p>
+</li>
+<li>
+<p>또한 함수 <span class="arithmatex">\(f(x)\)</span> 가 모든 실수 <span class="arithmatex">\(x\)</span> 에 대하여, 즉 개구간 <span class="arithmatex">\((\infty, -\infty)\)</span> 에서 미분가능할 때, 함수 <span class="arithmatex">\(f(x)\)</span> 를 미분가능한 함수라고 한다.</p>
+</li>
+</ul>
+<a href="#2d850c955"><div class="admonition tldr" id="2d850c955">
+<p>미분가능성과 함수의 연속 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 미분가능하면 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 연속이다.</p>
+</div></a>
+<ul>
+<li>
+<p>그러나 그 역은 일반적으로 성립하지 않는다. </p>
+</li>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 미분가능하면 </p>
+<div class="arithmatex">\[ f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a} \]</div>
+<p>의 값이 존재한다. 그런데 <span class="arithmatex">\(x \to a\)</span> 일 때 분모 <span class="arithmatex">\(x-a\)</span> 의 값이 <span class="arithmatex">\(0\)</span> 에 수렴하기 때문에 미정계수의 극한값 결정에 관한 정리에 따라 분자도 <span class="arithmatex">\(0\)</span> 에 수렴해야 한다. 즉, </p>
+<div class="arithmatex">\[ \lim_{x \to a} \{f(x) - f(a)\} = 0 \]</div>
+<p>이어야 하고 이것은 곧 </p>
+<div class="arithmatex">\[ \lim_{x \to a} f(x) = f(a) \]</div>
+<p>임을 뜻하는데, 함수의 연속에 관한 정리에 의하여 이 결론으로부터 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 연속이라는 파생결론을 얻을 수 있다. </p>
+<p>따라서 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 미분가능하면 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 연속이다. </p>
+</li>
+<li>
+<p>일반적으로 함수의 집합을 <span class="arithmatex">\(P\)</span>, 연속함수의 집합을 <span class="arithmatex">\(Q\)</span>, 미분가능한 함수 집합을 <span class="arithmatex">\(R\)</span> 이라고 하면 다음 관계가 성립한다. </p>
+<div class="arithmatex">\[ P \subset Q \subset R \]</div>
+<p>즉, 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 연속이더라도 <span class="arithmatex">\(x=a\)</span> 에서 미분가능하지 않을 수도 있다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(f(x) = |x|\)</span> 는 <span class="arithmatex">\(x=0\)</span> 에서 연속이지만 다음과 같이 좌미분계수와 우미분계수가 달라서 <span class="arithmatex">\(x=0\)</span> 에서 미분가능하지 않다. </p>
+<p><img alt="desmos-graph(3)" src="https://user-images.githubusercontent.com/16812446/76055085-f9a0b680-5fb5-11ea-8aad-c10660207548.png"/></p>
+<p>좌미분계수:</p>
+<div class="arithmatex">\[ \lim_{x \to 0-} \frac{f(x)-f(0)}{x-0} = \lim_{x \to 0-} \frac{|x|-0}{x} = \lim_{x \to 0-} \frac{-x}{x} = -1 \]</div>
+<ul>
+<li><span class="arithmatex">\(x\)</span> 가 음수이면서 <span class="arithmatex">\(0\)</span> 에 다가가기 때문에 그것의 절대값 <span class="arithmatex">\(|x|\)</span> 는 양수 <span class="arithmatex">\(-x\)</span> 로 연산된다. </li>
+</ul>
+<p>우미분계수:</p>
+<div class="arithmatex">\[ \lim_{x \to 0+} \frac{f(x)-f(0)}{x-0} = \lim_{x \to 0+} \frac{|x|-0}{x} = \lim_{x \to 0+} \frac{x}{x} = 1 \]</div>
+<ul>
+<li><span class="arithmatex">\(x\)</span> 가 양수이면서 <span class="arithmatex">\(0\)</span> 에 다가가기 때문에 그것의 절대값 <span class="arithmatex">\(|x|\)</span> 는 양수 <span class="arithmatex">\(x\)</span> 로 연산된다. </li>
+</ul>
+<p>사실 미분계수가 접선의 기울기라는 기하학적인 이해가 있다면 좌미분계수와 우미분계수를 일일히 구하지 않아도 <span class="arithmatex">\(f(x) = |x|\)</span> 가 <span class="arithmatex">\(x=0\)</span> 에서 뾰족하기 때문에 접선을 그릴 수 없고 이에따라 미분계수가 존재하지 않다, 즉 미분 불가능하다는 것을 알 수 있다. </p>
+<p>즉 좌미분계수가 <span class="arithmatex">\(-1\)</span> 이었다는 것은 왼쪽에서 <span class="arithmatex">\(x=0\)</span> 의 접선을 그렸을 때 기울기가 <span class="arithmatex">\(-1\)</span> 인 접선이 나오고 우미분계수가 <span class="arithmatex">\(1\)</span> 이라는 것은 오른쪽에서 <span class="arithmatex">\(x=0\)</span> 의 접선을 그렸을 때 기울기가 <span class="arithmatex">\(1\)</span> 인 접선이 나온다는 것이다. </p>
+</li>
+<li>
+<p>위 예시로 불연속이 점, 뾰족한 점에서 접선을 그릴 수 없으므로(좌미분계수와 우미분계수가 다르므로) 미분계수가 존재하지 않는다, 즉 미분 불가능하다는 것을 이해하였다. 그러므로 연속이어도 미분 불가능(뾰족한 점일경우)할 수 있다.</p>
+</li>
+</ul>
+<h2 id="_3">도함수<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<a href="#7bd09da39"><div class="admonition tldr" id="7bd09da39">
+<p>도함수(derivatives, derived function, derivative of a function) : 미분가능한 함수 <span class="arithmatex">\(y=f(x)\)</span> 의 정의역의 각 원소 <span class="arithmatex">\(x\)</span> 에 미분계수 <span class="arithmatex">\(f'(x)\)</span> 를 대응시켜 만든 새로운 함수를 함수 <span class="arithmatex">\(y=f'(x)\)</span> 의 도함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이미 언급했지만 함수 <span class="arithmatex">\(y=f(x)\)</span> 가 어떤 구간에 대한 명시가 없이 단순히 "미분가능하다" 라고 하면 개구간 <span class="arithmatex">\((\infty, -\infty)\)</span> 에서, 즉 실수 범위에서 미분가능하다는 것이다. </p>
+</li>
+<li>
+<p>도함수를 기호로 <span class="arithmatex">\(f'(x)\)</span> 로 나타내고 다음의 기호로도 나타낸다. </p>
+<div class="arithmatex">\[ f'(x) = y' = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x} = \frac{dy}{dx} \]</div>
+<ul>
+<li>
+<p>뉴턴의 미분 기호 : <span class="arithmatex">\(y'\)</span></p>
+</li>
+<li>
+<p>라이프니츠의 미분 기호 : 라이프니츠의 미분기호는 </p>
+<div class="arithmatex">\[\frac{dy}{dx} = \frac{d}{dx}f(x) \]</div>
+<p>으로써 <span class="arithmatex">\(y\)</span> 의 식을 <span class="arithmatex">\(x\)</span> 로 나타내어 <span class="arithmatex">\(x\)</span> 에 대하여 미분한다는 뜻이다. </p>
+<ul>
+<li><span class="arithmatex">\(dx\)</span> 는 <span class="arithmatex">\(0\)</span> 에 한없이 다가가는 <span class="arithmatex">\(x\)</span> 의 증분 <span class="arithmatex">\(\Delta x\)</span> 이다. 또한 미분가능하다면 극한값이 존재하므로 분자인 <span class="arithmatex">\(\Delta x\)</span> 가 <span class="arithmatex">\(0\)</span> 에 한없이 다가가면 분모인 <span class="arithmatex">\(y\)</span> 의 증분 <span class="arithmatex">\(\Delta y\)</span> 도 <span class="arithmatex">\(0\)</span> 에 한없이 다가가므로 <span class="arithmatex">\(dy\)</span> 로 표현한다. </li>
+</ul>
+<div class="arithmatex">\[ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \frac{dy}{dx} \]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(d\)</span> 는 아주 작은 변화량을 뜻한다. 그래서 <span class="arithmatex">\(dy\)</span> 는 <span class="arithmatex">\(y\)</span> 의 아주 작은 변화량을, <span class="arithmatex">\(dx\)</span> 는 <span class="arithmatex">\(x\)</span> 의 아주 작은 변화량을 나타낸다. </p>
+</li>
+<li>
+<p>이 기호는 뉴턴의 미분 기호 <span class="arithmatex">\(y'\)</span> 와 달리 미분하는 변수를 알 수 있다는 장점이 있다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음 미분 기호는 "<span class="arithmatex">\(y\)</span> 를 <span class="arithmatex">\(x\)</span> 의 식으로 나타내어 <span class="arithmatex">\(x\)</span> 에 대하여 미분한다" 는 자연어를 형식언어로 나타낸 것이다.</p>
+<div class="arithmatex">\[ \frac{dy}{dx} \]</div>
+<p>다음 미분 기호는 "<span class="arithmatex">\(u\)</span> 를 <span class="arithmatex">\(x\)</span> 의 식으로 나타내어 <span class="arithmatex">\(x\)</span> 에 대하여 미분한다" 는 자연어를 형식언어로 나타낸 것이다.</p>
+<div class="arithmatex">\[ \frac{du}{dx} \]</div>
+<p>다음 미분 기호는 "<span class="arithmatex">\(y\)</span> 를 <span class="arithmatex">\(u\)</span> 의 식으로 나타내어 <span class="arithmatex">\(u\)</span> 에 대하여 미분한다" 는 자연어를 형식언어로 나타낸 것이다.</p>
+<div class="arithmatex">\[ \frac{dy}{du} \]</div>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \frac{d}{dx} x ^{2} = 2x \]</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>즉 도함수는 다음과 같다. </p>
+<div class="arithmatex">\[ f'(x) = \lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}  \]</div>
+<p><span class="arithmatex">\(\Delta x\)</span> 를 간단하게 <span class="arithmatex">\(h\)</span> 로 바꾸고 </p>
+<div class="arithmatex">\[ f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} \]</div>
+<p>로 표기하기도 한다. </p>
+<ul>
+<li>
+<p>미분계수란 함수 <span class="arithmatex">\(y=f(x)\)</span> 에서 <span class="arithmatex">\(x\)</span> 의 값이 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(a+\Delta x\)</span> 까지 변할 때의 평균변화율 <span class="arithmatex">\(\frac{\Delta y}{\Delta x}\)</span> 에서 <span class="arithmatex">\(\Delta x \to 0\)</span> 일 때의 극한값, 즉</p>
+<div class="arithmatex">\[ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{f(a+\Delta x)-f(a)}{\Delta x} \]</div>
+<p>가 존재할 때, 이 극한값을 함수 <span class="arithmatex">\(y=f(x)\)</span> 의 <span class="arithmatex">\(x=a\)</span> 에서의 미분계수(또는 순간변화율) 이었다.</p>
+<p>이때 상수 <span class="arithmatex">\(a\)</span> 를 그것이 속해있는 모집합인 실수로, 즉 일반적인 미지수 <span class="arithmatex">\(x\)</span> 로 회귀시킨(일반화시킨) 것이다. </p>
+<ul>
+<li>또한 이로써 한 단계 회귀시킨 대상을 또 다시 그 윗단계로 회귀시킬 수 있다는 가능성을 볼 수 있다. </li>
+</ul>
+<p>한편, 개별적 상황에서 미분계수를 구하는 과정의 상수 <span class="arithmatex">\(a\)</span> 를 실수집합을 정의역으로 하는 입력 <span class="arithmatex">\(x\)</span> 로 일반화시킨 함수로 변환했다고도 볼 수 있다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>미분계수를 일반화하여 도함수로 만든 것은 미지수가 속해있는 집합인 수 자체로 회귀시킨 것이다. 즉 추상화를 물질적이고 일률적으로 진행할 수 있는 단서가 원소가 속해있는 집합으로의 회귀가 맞다는 더 나은 증거를 얻은 셈이다.</strong></p>
+<p><strong>메타수학명제를 수학명제로 이끌어내렸을 때 수학적 연산을 메타명제에 수행할 수 있었듯이, 추상화 과정을 물질적으로 격하하면 그것을 자동화할 수 있다. 추상화와 일반화에 관한 자동화가 완성된다면 축복이 될 수도 있고 저주가 될 수도 있을 것이다. 따라서 그것을 잘 통제해야 한다.</strong></p>
+</blockquote>
+<ul>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 의 도함수 <span class="arithmatex">\(f'(x)\)</span> 를 구하는 것을 <span class="arithmatex">\(f(x)\)</span> 를 <span class="arithmatex">\(x\)</span> 에 대하여 미분한다고 말한다. </p>
+<ul>
+<li>또 그 계산법을 미분법이라 한다. </li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">여러가지 함수의 도함수<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<a href="#ae5fc54c5"><div class="admonition tldr" id="ae5fc54c5">
+<p><span class="arithmatex">\(n\)</span> 차 단항 함수 <span class="arithmatex">\(y = x ^{n}\)</span> 의 도함수 : <span class="arithmatex">\(n\)</span> 이 정수일 때, <span class="arithmatex">\(y' = f'(x) = nx ^{n-1}\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[ f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = \lim_{x \to 0} \frac{(x+h)^n-x^n}{h} \]</div>
+<div class="arithmatex">\[ = \lim_{h \to 0} \frac{\{(x+h)-x\}\{(x+h)^{n-1}+(x+h)^{n-2}x+\dots+(x+h)x ^{n-2}+x ^{n-1}\}}{h} \]</div>
+<div class="arithmatex">\[ = \lim_{h \to 0} \{(x+h)^{n-1}+(x+h)^{n-2}x+\dots+(x+h)x ^{n-2}+x ^{n-1}\} \]</div>
+<div class="arithmatex">\[ = \sum_{k=1}^{n}x ^{n-1} = nx ^{n-1} \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(x^n\)</span> 이 계속해서 <span class="arithmatex">\(nx ^{n-1}\)</span> 만큼 변화한다는 것이다.</p>
+</li>
+</ul>
+<a href="#0fbca0c5e"><div class="admonition tldr" id="0fbca0c5e">
+<p>상수 함수 <span class="arithmatex">\(y = c\)</span> 의 도함수 : <span class="arithmatex">\(y'=0\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<div class="arithmatex">\[ f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = \lim_{h \to 0} \frac{c-c}{h} = 0 \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ f(x) = c \times x ^{0} \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ f'(x) = c \times 0 \times x ^{-1} = 0\]</div>
+</li>
+<li>
+<p>상수함수는 변하지 않고 일정하기 때문에 그것의 변화량을 보여주는 도함수가 <span class="arithmatex">\(0\)</span> 인 것을 직관적으로 이해할 수 있다.</p>
+</li>
+</ul>
+<a href="#a8255c51b"><div class="admonition tldr" id="a8255c51b">
+<p>상수배 함수 <span class="arithmatex">\(y =cf(x)\)</span> 의 도함수 : <span class="arithmatex">\(y' = cf'(x)\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<div class="arithmatex">\[ \{cf(x)\}' = \lim_{h \to 0} \frac{cf(x+h)-cf(x)}{h} = c \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} = cf'(x) \]</div>
+</li>
+<li>
+<p>어떤 함수에 실수배를 하면 그 변화율이 정확히 실수배 된다는 것을 것을 알 수 있다.</p>
+</li>
+</ul>
+<a href="#f674a9656"><div class="admonition tldr" id="f674a9656">
+<p>합차 함수 <span class="arithmatex">\(y=f(x)\pm g(x)\)</span> 의 도함수 : <span class="arithmatex">\(y'=f'(x)\pm g'(x)\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<div class="arithmatex">\[ \{f(x)+g(x)\}' = \lim_{h \to 0} \frac{\{f(x+h)+g(x+h)\}-\{f(x)+g(x)\}}{h} \]</div>
+<div class="arithmatex">\[ = \lim_{h \to 0} \frac{\{f(x+h)-f(x)\}-\{g(x+h)-g(x)\}}{h} \]</div>
+<div class="arithmatex">\[ = \lim_{h \to 0} \frac{\{f(x+h)-f(x)\}}{h} + \lim_{h \to 0} \frac{\{g(x+h)-g(x)\}}{h} \]</div>
+<div class="arithmatex">\[ = f'(x)+g'(x) \]</div>
+</li>
+<li>
+<p>이를 통해 함수의 합과 차의 도함수는 각각의 함수의 도함수를 합과 차와 동일하다는 것을 알 수 있다.</p>
+</li>
+</ul>
+<a href="#7f511d305"><div class="admonition tldr" id="7f511d305">
+<p>곱 함수 <span class="arithmatex">\(y=f(x)g(x)\)</span> 의 도함수 : <span class="arithmatex">\(y'=f'(x)g(x)+f(x)g'(x)\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<div class="arithmatex">\[ \{f(x)g(x)\}' = \lim_{h \to 0} \frac{f (x+h)g (x+h)-f(x)g(x)}{h} \]</div>
+<div class="arithmatex">\[ = \lim_{h \to 0} \frac{f(x+h)g(x+h) - f(x)g (x+h)+f(x)g (x+h) - f(x)g(x)}{h} \]</div>
+<div class="arithmatex">\[ = \lim_{h \to 0} \frac{\{f (x+h)-f(x)\}g(x+h)+f(x) \{g (x+h)-g(x)\}}{h} \]</div>
+<div class="arithmatex">\[ = \lim_{h \to 0} \frac{f (x+h)-f(x)}{h} \lim_{h \to 0} g (x+h) + \lim_{h \to 0} f(x) \lim_{h \to 0} \frac{g(x+h)-g(x)}{h} \]</div>
+<div class="arithmatex">\[ = f'(x)g(x) + f(x)g'(x) \]</div>
+</li>
+</ul>
+<h5 id="chain-rule">연쇄법칙(Chain Rule)<a class="headerlink" href="#chain-rule" title="Permanent link">¶</a></h5>
+<a href="#f424e8f98"><div class="admonition tldr" id="f424e8f98">
+<p>합성함수 <span class="arithmatex">\(y=g(f(x))\)</span> 의 도함수(연쇄법칙, Chain Rule) : <span class="arithmatex">\(y' = g'(f(x))f'(x)\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>여러 개의 함수를 미분할 때 고리로 연결된 것처럼 연속적으로 작용한다는 형상에서 착안하여 합성함수의 미분법을 연쇄법칙(Chain Rule) 이라고도 한다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>두 함수 <span class="arithmatex">\(y=f(u), u=g(x)\)</span> 가 미분가능할 때, 합성함수 <span class="arithmatex">\(y=f(g(x))\)</span> 의 도함수를 구하자.</p>
+<p><span class="arithmatex">\(u=g(x)\)</span> 에서 <span class="arithmatex">\(x\)</span> 의 증분 <span class="arithmatex">\(\Delta x\)</span> 에 대한 <span class="arithmatex">\(u\)</span> 의 증분을 <span class="arithmatex">\(\Delta u\)</span>, <span class="arithmatex">\(y=f(u)\)</span> 에서 <span class="arithmatex">\(u\)</span> 의 증분 <span class="arithmatex">\(\Delta u\)</span> 에 대한 <span class="arithmatex">\(y\)</span> 의 증분을 <span class="arithmatex">\(\Delta y\)</span> 라 하면 </p>
+<div class="arithmatex">\[ \Delta u = g(x + \Delta x) - g(x), \Delta y = f(u+\Delta u) - f(u) \]</div>
+<p>이고 다음 식이 성립한다. </p>
+<div class="arithmatex">\[ \frac{\Delta y}{\Delta x} = \frac{\Delta y}{\Delta u} \circ \frac{\Delta u}{\Delta x} \]</div>
+<p>이때 두 함수 <span class="arithmatex">\(y=f(u), u=g(x)\)</span> 가 미분가능하므로 </p>
+<div class="arithmatex">\[ \lim_{\Delta u \to 0} \frac{\Delta y}{\Delta u} = \frac{dy}{du}, \lim_{\Delta x \to 0}  \frac{\Delta u}{\Delta x} = \frac{du}{dx} \]</div>
+<p>이다. (평균변화량의 증분 <span class="arithmatex">\(\Delta x, \Delta u\)</span> 가 <span class="arithmatex">\(0\)</span> 에 한없이 다가가기 때문에 아주 작은 변화량을 뜻하는 <span class="arithmatex">\(d\)</span> 를 붙혀서 <span class="arithmatex">\(dx, du, dy\)</span> 로 표현한 것이라는 사실을 떠올리자.) 이때</p>
+<div class="arithmatex">\[ \frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta u} \circ \frac{\Delta u}{\Delta x} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta u} \circ \lim_{\Delta x \to 0}  \frac{\Delta u}{\Delta x} \]</div>
+<p>에서 <span class="arithmatex">\(\Delta x \to 0\)</span> 이면 <span class="arithmatex">\(\Delta u = g(x+\Delta x)-g(x)\)</span> 이기 때문에 <span class="arithmatex">\(\Delta u \to 0\)</span> 이므로 </p>
+<div class="arithmatex">\[ \frac{dy}{dx} = \lim_{\Delta u \to 0} \frac{\Delta y}{\Delta u} \circ \lim_{\Delta x \to 0}  \frac{\Delta u}{\Delta x} = \frac{dy}{du} \circ \frac{du}{dx} \]</div>
+<p>이다. 그런데 </p>
+<div class="arithmatex">\[ \frac{dy}{du} = \frac{d}{du}f(u) = f'(u), \frac{du}{dx} = \frac{d}{dx}g(x) = g'(x) \]</div>
+<p>이므로</p>
+<div class="arithmatex">\[ \frac{dy}{dx} = \frac{dy}{du} \circ \frac{du}{dx} = f'(u)g'(x) = f'(g(x))g'(x) \]</div>
+<p>이다. 그러므로 최종적으로 합성함수의 도함수는</p>
+<div class="arithmatex">\[ \therefore \{f(g(x))\}' = \frac{dy}{dx} = f'(g(x))g'(x) \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>도함수의 정의에 의하여 </p>
+<div class="arithmatex">\[ \{f(g(x))\}' = \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{h} \]</div>
+<p>이다. 여기에서</p>
+<div class="arithmatex">\[ = \lim_{h \to 0} \frac{f(g(x+h)-f(g(x)))}{g(x+h)-g(x)} \circ \frac{g(x+h)-g(x)}{h} \]</div>
+<div class="arithmatex">\[ = \lim_{h \to 0} \frac{f(g(x+h))-f(g(x))}{g(x+h)-g(x)} \circ \frac{g(x+h)-g(x)}{h} \]</div>
+<p>를 얻는다. 이때 <span class="arithmatex">\(g(x+h) - g(x) = t(h)\)</span> 로 두면 <span class="arithmatex">\(h \to 0\)</span> 일 때 <span class="arithmatex">\(g(x)\)</span> 가 연속함수이므로 <span class="arithmatex">\(t(h) \to 0\)</span> 이다. 그러면 </p>
+<div class="arithmatex">\[ = \lim_{h \to 0} \frac{f(g(x)+t(h))-f(g(x))}{t(h)} \circ \frac{g(x+h)-g(x)}{h} \]</div>
+<div class="arithmatex">\[ = \lim_{h \to 0} \frac{f(g(x)+t(h))-f(g(x))}{t(h)} \circ \lim_{h \to 0}  \frac{g(x+h)-g(x)}{h} \]</div>
+<p>에서 최종적으로 </p>
+<div class="arithmatex">\[ \therefore \{f(g(x))\}' = f'(g(x))g'(x) \]</div>
+<p>을 얻는다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(y = 4 x ^{5}\)</span> 에서 <span class="arithmatex">\(u = x ^{5}\)</span> 로 정의하면 <span class="arithmatex">\(y = 4u\)</span> 이다. </p>
+<p>만약 <span class="arithmatex">\(u\)</span> 가 단순한 변수라면 <span class="arithmatex">\(y=4u\)</span> 를 <span class="arithmatex">\(u\)</span> 에 대하여 미분하여 <span class="arithmatex">\(y' = 4\)</span> 가 되었을 것이다. </p>
+<p>그러나 <span class="arithmatex">\(u\)</span> 는 <span class="arithmatex">\(x\)</span> 에 대한 함수로 정의되었기 때문에 합성함수의 미분을 적용하여</p>
+<div class="arithmatex">\[ y' = \frac{dy}{du} \circ \frac{du}{dx} \]</div>
+<p>가 된다. 즉, 합성함수의 미분을 적용하였기 때문에 <span class="arithmatex">\(\frac{dy}{du}\)</span> 로 인해 <span class="arithmatex">\(y = 4u\)</span> 를 그냥 <span class="arithmatex">\(u\)</span> 를 변수처럼 미분하고 <span class="arithmatex">\(\frac{du}{dx}\)</span> 로 인해 <span class="arithmatex">\(u\)</span> 를 <span class="arithmatex">\(x\)</span> 에 대하여 미분한 다음 그것을 곱해야 한다. </p>
+<div class="arithmatex">\[ \frac{dy}{du} \circ \frac{du}{dx} = 4 \circ 5x ^{4} = 20 x ^{4} \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(y = \frac{1}{(x ^{2}+2x-2) ^{3}}\)</span> 에서 <span class="arithmatex">\(u = x ^{2}+2x-2\)</span> 로 정의하면 <span class="arithmatex">\(y = \frac{1}{u ^{3}} = u ^{-3}\)</span> 이다. </p>
+<div class="arithmatex">\[ y' = \frac{dy}{du} \circ \frac{du}{dx} \]</div>
+<p>를 구해야 한다. 그러면</p>
+<div class="arithmatex">\[ \frac{dy}{du} = \frac{d}{du} u ^{-3} = -3 u ^{-4} \]</div>
+<p>이고 </p>
+<div class="arithmatex">\[ \frac{du}{dx} = \frac{d}{dx}(x ^{2}+2x-2) = 2x+2 \]</div>
+<p>이다. 따라서 </p>
+<div class="arithmatex">\[ \therefore  y' = \frac{dy}{du} \circ \frac{du}{dx} = -3u ^{-4}(2x+2) = -3(x ^{2}+2x-2) ^{-4}(2x+2) = -3 \frac{2x+2}{(x ^{2}+2x-2) ^{4}} \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(x\)</span> 에 대한 함수 <span class="arithmatex">\(y\)</span> 가 있을 때, 함수 <span class="arithmatex">\(y\)</span> 의 제곱함수 <span class="arithmatex">\(y^2\)</span> 의 도함수</p>
+<div class="arithmatex">\[ \frac{d}{dx}{y ^{2}} \]</div>
+<p>를 구하자. 위의 두 예시는 <span class="arithmatex">\(y\)</span> 와 <span class="arithmatex">\(x\)</span> 를 </p>
+<div class="arithmatex">\[y \sim u \sim x\]</div>
+<p>로 잇는 매개변수 <span class="arithmatex">\(u\)</span> 를 도입했다. (<span class="arithmatex">\(y \sim x\)</span> 을 <span class="arithmatex">\(x\)</span> 에 대한 함수 <span class="arithmatex">\(y\)</span> 의 관계를 표현하는 기호라 하자) 을  하지만 지금은 </p>
+<div class="arithmatex">\[u \sim y \sim x\]</div>
+<p>와 같이 이어주는 매개변수 <span class="arithmatex">\(u\)</span> 를 도입하여 <span class="arithmatex">\(y\)</span> 에 대한 함수 <span class="arithmatex">\(u\)</span> 를</p>
+<div class="arithmatex">\[u = y^2\]</div>
+<p>로 정의하자. 그러면 </p>
+<div class="arithmatex">\[ \frac{d}{dx} y ^{2} = \frac{du}{dx} \]</div>
+<p>에서 합성함수의 미분을 적용하여 </p>
+<div class="arithmatex">\[ \frac{du}{dx} = \frac{du}{dy} \circ \frac{dy}{dx} = \frac{d}{dy} y ^{2} \circ \frac{dy}{dx} = 2y \circ y' \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore \frac{d}{dx} y ^{2} = 2y \circ y' \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#a72fc053e"><div class="admonition tldr" id="a72fc053e">
+<p>함수 <span class="arithmatex">\(y=f(x)\)</span> 에 대한 제곱 함수 <span class="arithmatex">\(y ^{n} = \{f(x)\} ^{n}\)</span> 의 도함수 : </p>
+<div class="arithmatex">\[[\{f(x)\} ^{n}]' = n \{f(x)\} ^{n-1}f'(x) \]</div>
+<p>또는</p>
+<div class="arithmatex">\[(y ^{n})' = \frac{d}{dx}y ^{n} = n y ^{n-1}y' \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 (합성함수의 도함수로)</p>
+<p>합성함수 <span class="arithmatex">\(y=g(f(x))\)</span> 의 도함수 <span class="arithmatex">\(y' = g'(f(x))f'(x)\)</span> 에서 <span class="arithmatex">\(u = f(x)\)</span> 로 두면 <span class="arithmatex">\(y = u ^{n}\)</span> 이다. 이때 합성함수의 도함수를 이용하여 </p>
+<div class="arithmatex">\[ \frac{dy}{dx}=\frac{dy}{du}\circ \frac{du}{dx} \]</div>
+<p>를 구해야 하는데</p>
+<div class="arithmatex">\[ \frac{dy}{du} = nu ^{n-1}, \frac{du}{dx} = f'(x) \]</div>
+<p>이므로</p>
+<div class="arithmatex">\[ \frac{dy}{du}\circ \frac{du}{dx} = nu ^{n-1}f'(x) = n \{f(x)\} ^{n-1}f'(x) \]</div>
+<p>이다. 그러므로 제곱 함수의 도함수는 </p>
+<div class="arithmatex">\[ \therefore [\{f(x)\} ^{n}]' = n \{f(x)\} ^{n-1}f'(x) \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ \therefore (y ^{n})' = n y ^{n-1}y' \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>증명 (수학적 귀납법으로)</p>
+<p><span class="arithmatex">\(\{f(x)\} ^{n}\)</span> (<span class="arithmatex">\(n \geq 2\)</span> 인 자연수) 에 대하여 <span class="arithmatex">\([\{f(x)\} ^{n}]' = n \{f(x)\} ^{n-1}f'(x)\)</span> 이라고 가정하자. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(n=2\)</span> 일 때,</p>
+<div class="arithmatex">\[ [\{f(x)\} ^{2}]' = [f(x)f(x)]' = f'(x)f(x) + f(x)f'(x) = 2f(x)f'(x) = 2 \{f(x)\} ^{2 - 1} f'(x) \]</div>
+<p>이다. 따라서 이 경우 가정이 성립한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(n=k\)</span> 일 때 가정이 성립한다고 하자. 물론 이 시점에서 <span class="arithmatex">\(n=2\)</span> 인 경우만 참임이 증명되었다. 이제 <span class="arithmatex">\(n=k+1\)</span> 일 때를 살펴보자. </p>
+<div class="arithmatex">\[ \{f(x)\} ^{k+1} = f(x) \{f(x)\} ^{k} \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ [\{f(x)\} ^{k+1}]' = f'(x)\{f(x)\} ^{k} + f(x)[\{f(x)\} ^{k}]' \]</div>
+<div class="arithmatex">\[                    = f'(x)\{f(x)\} ^{k} + f(x)[k \{f(x)\} ^{k-1}f'(x)]\]</div>
+<div class="arithmatex">\[                    = (k+1)f'(x)\{f(x)\} ^{k}\]</div>
+<p>이다. 그러므로 만약 <span class="arithmatex">\(n=k\)</span> 일 때 가정이 성립한다고 하면 <span class="arithmatex">\(n=k+1\)</span> 일 때도 성립한다. 그런데 <span class="arithmatex">\(n=2\)</span> 인 경우 가정이 반드시 참이라는 것이 이미 증명되어 있다. 따라서 <span class="arithmatex">\(3\)</span> 도 참일 것이고 <span class="arithmatex">\(4\)</span> 도 참일 것이고 임의의 자연수 <span class="arithmatex">\(n\)</span> 이 참이라는 것이 <span class="arithmatex">\(n-1\)</span> 이 참이라는 것으로부터 증명될 것이다. 또 이 <span class="arithmatex">\(n-1\)</span> 이 참이라는 것은 최초의 <span class="arithmatex">\(2\)</span> 가 참이라는 것으로부터 증명된다. </p>
+</li>
+</ol>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(x\)</span> 에 대한 함수 <span class="arithmatex">\(y\)</span> 의 제곱함수 <span class="arithmatex">\(y^2\)</span> 의 도함수 </p>
+<div class="arithmatex">\[ \frac{d}{dx}y ^{2} \]</div>
+<p>는 제곱함수의 도함수의 정의에 의하여 </p>
+<div class="arithmatex">\[ (y ^{2})' = \frac{d}{dx}y ^{2} = 2 y \circ y' \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#e3ef7192d"><div class="admonition tldr" id="e3ef7192d">
+<p>몫 함수 <span class="arithmatex">\(y = \frac{1}{f(x)}\)</span> 의 미분법 : 몫 함수 <span class="arithmatex">\(y = \frac{1}{f(x)}(f(x) \neq 0)\)</span> 의 도함수는 다음과 같다. </p>
+<div class="arithmatex">\[ \{\frac{1}{f(x)}\}' = - \frac{f'(x)}{\{f(x)\}^{2}} \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 미분가능하고 <span class="arithmatex">\(f(x) \neq 0\)</span> 일 때 <span class="arithmatex">\(y = \frac{1}{f(x)}\)</span> 의 도함수는 도함수의 정의에 의하여 </p>
+<div class="arithmatex">\[ y' = \lim_{h \to 0} \frac{\frac{1}{f(x+h)} - \frac{1}{f(x)}}{h} = \lim_{h \to 0} \frac{-\frac{f(x+h)-f(x)}{f(x+h)f(x)}}{\frac{h}{1}} \]</div>
+<div class="arithmatex">\[ = -\lim_{h \to 0} \frac{f(x+h)-f(x)}{hf(x+h)f(x)} = - \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} \circ \frac{1}{f(x+h)f(x)} \]</div>
+<div class="arithmatex">\[= - \lim_{h \to 0} \frac{f(x+h)-f(x)}{h} \circ \lim_{h \to 0}  \frac{1}{f(x+h)f(x)} = - f'(x) \circ \frac{1}{\{f (x)\} ^{2}}\]</div>
+<p>이다. 따라서 최종적으로 </p>
+<div class="arithmatex">\[ y' = -\frac{f'(x)}{\{f(x)\}^{2}} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#42b25b761"><div class="admonition tldr" id="42b25b761">
+<p>분수 함수 <span class="arithmatex">\(y = \frac{f(x)}{g(x)}\)</span> 의 미분법 : 몫 함수 <span class="arithmatex">\(y = \frac{f(x)}{g(x)}(g(x) \neq 0)\)</span> 의 도함수는 다음과 같다. </p>
+<div class="arithmatex">\[ \{\frac{f(x)}{g(x)}\}' = \frac{f'(x)g(x)-f(x)g'(x)}{\{g(x)\} ^{2}} \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>두 함수 <span class="arithmatex">\(f(x),g(x)(g(x) \neq 0)\)</span> 가 미분가능하다고 할 때 분수함수의 도함수를 구해보자. 이때 곱의 미분법을 사용하면</p>
+<div class="arithmatex">\[ y' = \{\frac{f(x)}{g(x)}\}' = \{f(x) \circ \frac{1}{g(x)}\}' = f'(x) \circ \frac{1}{g(x)} + f(x) \circ \{\frac{1}{g(x)}\}' \]</div>
+<p>이고 몫의 미분을 사용하면 </p>
+<div class="arithmatex">\[ = \frac{f'(x)}{g(x)} - f(x) \circ \frac{g'(x)}{\{g(x)\} ^{2}} \]</div>
+<p>이므로 최종적으로 </p>
+<div class="arithmatex">\[ \therefore y' = \frac{f'(x)g(x) - f(x)g'(x)}{\{g(x)\} ^{2}} \]</div>
+</li>
+</ul>
+<h3 id="_5">도함수의 활용<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<a href="#8cbce3df1"><div class="admonition tldr" id="8cbce3df1">
+<p>접선의 방정식 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 미분가능할 때, 곡선 <span class="arithmatex">\(y=f(x)\)</span> 위의 점 <span class="arithmatex">\((a, f(a))\)</span> 에서의 접선의 기울기가 <span class="arithmatex">\(f'(a)\)</span> 이므로 이 점에서 접선의 방정식은 다음과 같다. </p>
+<div class="arithmatex">\[ y - f(a) = - \frac{1}{f'(a)}(x-a) (단, f'(a) \neq 0)\]</div>
+</div></a>
+<a href="#013dd4f3e"><div class="admonition tldr" id="013dd4f3e">
+<p>접선의 방정식을 특정하는 <span class="arithmatex">\(2\)</span> 가지 유형</p>
+</div></a>
+<ul>
+<li>
+<p>두 점 또는 한 점과 기울기로 직선을 결정할 수 있기 때문에 <span class="arithmatex">\(2\)</span> 가지 유형이다.</p>
+</li>
+<li>
+<p>곡선 <span class="arithmatex">\(y=f(x)\)</span> 에 접하고 기울기가 <span class="arithmatex">\(m\)</span> 인 접선의 방정식 : 이 경우 기울기 <span class="arithmatex">\(m\)</span> 이 주어졌다.</p>
+<ul>
+<li>
+<p>접점의 좌표를 미지수 <span class="arithmatex">\(a\)</span> 를 사용하여 <span class="arithmatex">\((a, f(a))\)</span> 로 둔다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(f'(a) = m\)</span> 을 이용하여 <span class="arithmatex">\(a\)</span> 를 구한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(y - f(a) = m(x-a)\)</span> 로 접선의 방정식을 구한다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>곡선 <span class="arithmatex">\(y=f(x)\)</span> 밖의 한 점 <span class="arithmatex">\((x_1, y_1)\)</span> 에서 곡선에 그은 방정식 : 이 경우 곡선 밖 한 점이 주어진다.</p>
+<ul>
+<li>
+<p>접점의 좌표를 미지수 <span class="arithmatex">\(a\)</span> 를 사용하여 <span class="arithmatex">\((a, f(a))\)</span> 로 둔다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(y-f(a) = f'(a)(x-a)\)</span> 에 <span class="arithmatex">\((x_1, y_1)\)</span> 를 대입하여 미지수 <span class="arithmatex">\(a\)</span> 를 구한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(y - f(a) = f'(a)(x-a)\)</span> 로 접선의 방정식을 구한다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#588662877"><div class="admonition tldr" id="588662877">
+<p>매개변수로 나타낸 곡선의 접선의 방정식 </p>
+<p><strong>(구체화 필요)</strong></p>
+</div></a>
+<a href="#b14babe27"><div class="admonition tldr" id="b14babe27">
+<p>음함수로 나타낸 곡선의 접선의 방정식 </p>
+<p><strong>(구체화 필요)</strong></p>
+</div></a>
+<a href="#52c7af13a"><div class="admonition tldr" id="52c7af13a">
+<p>실근의 근사값 구하기(뉴턴의 방법) : 뉴턴은 기하학적 아이디어로 실근의 근사값을 구하는 알고리즘을 고안했고 그 생각을 수학적으로 엄밀하게 정의한 것은 다음과 같다. </p>
+</div></a>
+<blockquote>
+<p>이처럼 기하학적 아이디어, 즉 어떤 대상을 동적으로 움직이며 상상하여 목적을 이루는 것은 알고리즘이 되고 그것을 수학적으로 엄밀하게 정의할 수 있다. 그리고 곧바로 코드로 쓸 수 있다. </p>
+</blockquote>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 개구간 <span class="arithmatex">\((a, b)\)</span> 에서 미분가능하고, 방정식 <span class="arithmatex">\(f(x) = 0\)</span> 의 실근 <span class="arithmatex">\(x=r\)</span> 가 이 구간에 <span class="arithmatex">\(1\)</span> 개 있고 구간 안의 모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(f'(x) \neq 0\)</span> 이라고 하자. </p>
+<ul>
+<li>함수 <span class="arithmatex">\(f(x)\)</span> 가 다항함수일 때 <span class="arithmatex">\(f'(x) = 0\)</span> 을 만족시키는 <span class="arithmatex">\(x\)</span> 의 값을 기준으로 구간을 나누면 각 구간에는 실근 <span class="arithmatex">\(f(x)=0\)</span> 이 존재하는 <span class="arithmatex">\(1\)</span> 개 또는 <span class="arithmatex">\(0\)</span> 개 존재한다. 이때 실근이 존재하는 구간을 선택하면 이 전제조건이 만족된다. </li>
+</ul>
+<p><img alt="" src="https://mblogthumb-phinf.pstatic.net/20140504_144/dydrogud22_1399170275775e2xeG_JPEG/%C1%A6%B8%F1_%BE%F8%C0%BD.jpg?type=w2"/></p>
+<p>위 그림과 같이 개구간 <span class="arithmatex">\((a, b)\)</span> 내에서 실근 <span class="arithmatex">\(r\)</span> 로 추정되는 값 <span class="arithmatex">\(x_0\)</span> 을 무작위로 잡는다. 그리고 <span class="arithmatex">\(x_0\)</span> 에서의 접선을 구하고 그 접선에서의 <span class="arithmatex">\(x\)</span> 절편 <span class="arithmatex">\(x_1\)</span> 을 구한다. 그러면 다시 <span class="arithmatex">\(x_1\)</span> 에서의 접선을 구하고 그 접선에서의 <span class="arithmatex">\(x\)</span> 절편 <span class="arithmatex">\(x_2\)</span> 를 구한다. 이 과정을 반복하면 <span class="arithmatex">\(x_n\)</span> 이 <span class="arithmatex">\(x _{n-1}\)</span> (<span class="arithmatex">\(n\)</span> 은 자연수) 보다 <span class="arithmatex">\(r\)</span> 에 더 가까워진다는 것을 시각적으로 확인할 수 있다. </p>
+<p>이것을 수식으로 표현하자. 함수 <span class="arithmatex">\(y = f(x)\)</span> 위의 어떤 점 <span class="arithmatex">\(P(x_n,f(x_n))\)</span> 에서의 접선의 방정식은 다음과 같다. </p>
+<div class="arithmatex">\[ y - f(x_n) = f'(x_n) (x-x_n) \]</div>
+<p>이 접선의 <span class="arithmatex">\(x\)</span> 절편을 <span class="arithmatex">\(x _{n+1}\)</span> 이라 하면 이 접선이 점 <span class="arithmatex">\((x _{n+1}, 0)\)</span> 을 지나기 때문에 </p>
+<div class="arithmatex">\[ x _{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} \]</div>
+<p>이 성립한다. 이제 이 연산을 계속해서 <span class="arithmatex">\(x _{n+1}\)</span> 을 실근에 근사시켜야 하는데, 이때 분모는 <span class="arithmatex">\(0\)</span> 이 되면 안되기에 <span class="arithmatex">\(f'(x) \neq 0\)</span> 이어야 한다. 따라서 이것을 만족시키는 수열 <span class="arithmatex">\(\{x_n\}\)</span> 을 구하면</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} x_n = r \]</div>
+<p>이 성립한다. </p>
+<blockquote>
+<p>이것은 극한이 한없이 가까워진다는 자연 대상을 수학적으로 추상화시켰다는 것에서 착안하여 <span class="arithmatex">\(x\)</span> 절편이 실근으로 한없이 가까워지는 알고리즘을 고안하여 그것을 수학의 형식 언어로 바꾼 것이다. 그리고 이것은 코드로 자동화 가능하다.</p>
+</blockquote>
+<h2 id="_6">롤의 정리, 평균값 정리<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<a href="#40624953b"><div class="admonition tldr" id="40624953b">
+<p>롤의 정리 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속이고 개구간 <span class="arithmatex">\((a, b)\)</span> 에서 미분가능할 때, <span class="arithmatex">\(f(a) = f(b)\)</span> 이면 <span class="arithmatex">\(f'(c) = 0\)</span> 인 <span class="arithmatex">\(c\)</span> 가 개구간 <span class="arithmatex">\((a, b)\)</span> 에 적어도 하나 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p>기하적으로 양 끝의 함수값이 서로 같은 구간에 <span class="arithmatex">\(x\)</span> 축과 평행하는 수평선이 하나 이상 존재한다는 정리이다. </p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/76074519-d2aaaa80-5fde-11ea-8048-8686e80ac41b.png"/></p>
+</li>
+<li>
+<p>폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속이고 개구간 <span class="arithmatex">\((a, b)\)</span> 에서 미분가능한 함수 <span class="arithmatex">\(f(x)\)</span> 가 상수함수인 경우와 상수함수가 아닌 경우로 상황을 단순화시켜 롤의 정리를 증명할 수 있다. </p>
+<ul>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 상수함수인 경우 </p>
+<p><span class="arithmatex">\(f(x) = c\)</span> 이면 <span class="arithmatex">\(f'(x) = 0\)</span> 이다. 즉 <span class="arithmatex">\(f(x)\)</span> 가 수평선이란 말이다. 따라서 개구간 <span class="arithmatex">\((a, b)\)</span> 에 속하는 모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(f'(x)= 0\)</span> 이므로 <span class="arithmatex">\(f'(x)=0\)</span> 인 <span class="arithmatex">\(c\)</span> 가 개구간 <span class="arithmatex">\((a, b)\)</span> 에 존재하는 것은 자명하다. </p>
+</li>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 상수함수가 아닌 경우 : 이 경우 최대-최소 정리에 따라 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 함수 <span class="arithmatex">\(f(x)\)</span> 는 최대값 또는 최소값을 갖는다. 그런데 함수 <span class="arithmatex">\(f(x)\)</span> 가 상수함수가 아니기 때문에 절대 수평선이 될 수 없고 동시에 <span class="arithmatex">\(f(a)=f(b)\)</span> 로 양끝점이 같은 함수값을 가지기 때문에 양끝점은 최대값이면서 동시에 최소값일 수 없다. 이에 따라 반드시 중간지점에 최대값 또는 최소값이 존재한다. </p>
+<p>그러므로 이 경우 <span class="arithmatex">\(x=c(a&lt;c&lt;b)\)</span> 가 최소값이거나 최대값일 경우로 나누어서 대상을 단순화시킬 수 있다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(x=c(a&lt;c&lt;b)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 정의된 함수 <span class="arithmatex">\(f(x)\)</span> 의 최대값인 경우 </p>
+<p><span class="arithmatex">\(a&lt;t&lt;b\)</span> 인 모든 <span class="arithmatex">\(t\)</span> 에 대하여 <span class="arithmatex">\(f(t) \leq f(c)\)</span> 이다. 이때 대상을 또 다시 <span class="arithmatex">\(t &lt; c\)</span> 또는 <span class="arithmatex">\(t &gt; c\)</span> 로 나누어 단순화시킬 수 있다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(t &lt; c\)</span> 일 때, <span class="arithmatex">\(\frac{f(t)-f(c)}{t-c} \geq 0\)</span> 이므로 </p>
+<div class="arithmatex">\[ \lim_{t \to c-} \frac{f(t)-f(c)}{t-c} \geq 0 \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(t &gt; c\)</span> 일 때, <span class="arithmatex">\(\frac{f(t)-f(c)}{t-c} \leq 0\)</span> 이므로 </p>
+<div class="arithmatex">\[ \lim_{t \to c-} \frac{f(t)-f(c)}{t-c} \leq 0 \]</div>
+<p>이다. </p>
+</li>
+</ul>
+<p>그런데 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=c\)</span> 에서 미분가능하므로 좌극한과 우극한이 같아야 하므로 </p>
+<div class="arithmatex">\[ f'(c) = \lim_{t \to c} \frac{f(t)-f(c)}{t-c} = 0\]</div>
+<p>이다. </p>
+<ul>
+<li><span class="arithmatex">\(x=c(a&lt;c&lt;b)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 정의된 함수 <span class="arithmatex">\(f(x)\)</span> 의 최소값인 경우 </li>
+</ul>
+<p>위와 비슷한 과정으로 <span class="arithmatex">\(f'(c) = 0\)</span> 임을 보일 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>위에서 단순화 시킨 모든 대상들에서 공통적으로 <span class="arithmatex">\(f'(c) = 0\)</span> 이 존재한다. 따라서 단순화된 개별적인 대상들을 일반화시켜 롤의 정리로 만든다.</p>
+</li>
+</ul>
+<a href="#ee1c4e67f"><div class="admonition tldr" id="ee1c4e67f">
+<p>평균값 정리 : 함수가 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속이고 개구간 <span class="arithmatex">\((a, b)\)</span> 에서 미분가능하면</p>
+<div class="arithmatex">\[ \frac{f(b)-f(a)}{b-a} = f'(c) \]</div>
+<p>인 <span class="arithmatex">\(c\)</span> 가 개구간 <span class="arithmatex">\((a,b)\)</span> 에 적어도 하나 존재한다.</p>
+</div></a>
+<ul>
+<li>다음 그림과 같이 기하적으로 어떤 폐구간에서 정의된 연속 함수 <span class="arithmatex">\(f(x)\)</span> 의 양끝점으로 결정된 직선의 기울기 <span class="arithmatex">\(\frac{f(b)-f(a)}{b-a}\)</span> 와 기울기가 같은 함수 <span class="arithmatex">\(f(x)\)</span> 의 접선이 하나 이상 존재한다는 의미이다. </li>
+</ul>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/76075441-65981480-5fe0-11ea-9e2e-79e76743553a.png"/></p>
+<ul>
+<li>
+<p>위 그림에서 곡선을 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 정의된 함수 <span class="arithmatex">\(f(x)\)</span> 라 하고 왼쪽 끝점을 <span class="arithmatex">\(A(a, f(a))\)</span> 오른쪽 끝점을 <span class="arithmatex">\(B(b, f(b))\)</span> 라 하자. 그리고 두 점 <span class="arithmatex">\(A, B\)</span> 를 지나는 직선의 방정식을 <span class="arithmatex">\(l(x)\)</span> 라 하자. 그러면 함수 <span class="arithmatex">\(f(x)\)</span> 와 함수 <span class="arithmatex">\(l(x)\)</span> 의 차로 정의된 함수 <span class="arithmatex">\(p(x) = f(x) - l(x)\)</span> 를 생각할 수 있다. </p>
+<p>이 함수 <span class="arithmatex">\(p(x)\)</span> 는 <span class="arithmatex">\(p(a) = f(a) - l(a) = 0, p(b) = f(b) - l(b) = 0\)</span> 이므로 <span class="arithmatex">\(p(a) = p(b)\)</span> 이고 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속이며 개구간 <span class="arithmatex">\((a, b)\)</span> 에서 미분가능하므로 롤의 정리에 의하여 <span class="arithmatex">\(p'(c) = 0\)</span> 인 <span class="arithmatex">\(c\)</span> 가 개구간 <span class="arithmatex">\((a, b)\)</span> 에 적어도 하나 존재한다. </p>
+<p>한편</p>
+<div class="arithmatex">\[ p(x) = f(x) - l(x) = f(x) - \{\frac{f(b)-f(a)}{b-a}(x-a)+f(a)\} \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ p'(x) = f'(x) - \frac{f(b)-f(a)}{b-a} \]</div>
+<p>이다. 그런데 이때 <span class="arithmatex">\(p'(c) = 0\)</span> 인데 </p>
+<div class="arithmatex">\[ p'(c) = f'(c) - \frac{f(b)-f(a)}{b-a} \]</div>
+<p>이므로 결국 </p>
+<div class="arithmatex">\[ p'(c) = 0 = f'(c) - \frac{f(b)-f(a)}{b-a} \]</div>
+<p>이다. 따라서 </p>
+<div class="arithmatex">\[ f'(c) = \frac{f(b)-f(a)}{b-a} \]</div>
+<p>인 것을 알 수 있다.</p>
+</li>
+</ul>
+<a href="#93425add6"><div class="admonition tldr" id="93425add6">
+<p>평균값 정리의 따름정리 : 평균값 정리를 통하여 곧바로 유도할 수 있는 중요한 정리가 있다. </p>
+</div></a>
+<ol>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속이고 개구간 <span class="arithmatex">\((a, b)\)</span> 에서 미분가능하며, 개구간 <span class="arithmatex">\((a, b)\)</span> 의 모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(f'(x) = 0\)</span> 이면 함수 <span class="arithmatex">\(f(x)\)</span> 는 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 상수함수이다. </p>
+<ul>
+<li>
+<p>반개구간 <span class="arithmatex">\((a, b]\)</span> (<span class="arithmatex">\(x=a\)</span> 이면 평균값 정리의 수식이 성립하지 않으므로 구간에서 제외한다) 에 속하는 임의의 값을 <span class="arithmatex">\(x\)</span> 라 하면 평균값 정리에 의하여 </p>
+<div class="arithmatex">\[ \frac{f(x)-f(a)}{x-a} = f'(c) \]</div>
+<p>인 <span class="arithmatex">\(c\)</span> 가 개구간 <span class="arithmatex">\((a, x)\)</span> 에 적어도 하나 존재한다. 그런데 <span class="arithmatex">\(f'(x) = 0\)</span> 이므로 </p>
+<div class="arithmatex">\[ \frac{f(x)-f(a)}{x-a} = 0 \therefore f(x) = f(a) \]</div>
+<p>이다. 그런데 <span class="arithmatex">\(f(a)\)</span> 는 상수이므로 함수 <span class="arithmatex">\(f(x)\)</span> 는 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 상수함수이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속이고 개구간 <span class="arithmatex">\((a, b)\)</span> 에서 미분가능하며, 개구간 <span class="arithmatex">\((a, b)\)</span> 의 모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(f'(x) = g'(x)\)</span> 이면 <span class="arithmatex">\(f(x) = g(x) + C\)</span> (<span class="arithmatex">\(C\)</span> 는 상수) 이다.</p>
+<ul>
+<li>
+<p>함수 <span class="arithmatex">\(h(x) = f(x) - g(x)\)</span> 를 생각하자. 반개구간 <span class="arithmatex">\((a, b]\)</span> 에 속하는 임의의 값을 <span class="arithmatex">\(x\)</span> 라 하면 </p>
+<div class="arithmatex">\[ h'(x) = f'(x) - g'(x) = g'(x) - g'(x) = 0 (\because f'(x) = g'(x)) \]</div>
+<p>이므로 함수 <span class="arithmatex">\(h(x)\)</span> 는 따름정리 <span class="arithmatex">\(1\)</span> 을 만족한다. 따라서 함수 <span class="arithmatex">\(h(x) = C\)</span>(<span class="arithmatex">\(C\)</span> 는 상수) 로 상수함수이다. 그런데 </p>
+<div class="arithmatex">\[ h(x) = f(x) - g(x) \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \therefore f(x) = g(x) + h(x) = g(x) + C \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>따름정리 <span class="arithmatex">\(2\)</span> 는 도함수가 같은 함수는 상수항 정도의 차이만 가진다는 것을 의미한다. </p>
+<ul>
+<li>
+<p>이는 부정적분에서 적분상수를 이용해 임의의 부정적분을 표기하는 것을 논리적으로 뒷받침해준다. </p>
+</li>
+<li>
+<p>또한 따름정리 <span class="arithmatex">\(2\)</span> 는 도함수가 같다고 해서 원래 함수와 같은 것은 아니라는 것을 말해준다. </p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="_7">함수의 증가와 감소<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
+<a href="#47a0766cc"><div class="admonition tldr" id="47a0766cc">
+<p>함수의 증가 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 어떤 구간에 속하는 임의의 두 실수 <span class="arithmatex">\(a, b\)</span> 에 대하여 <span class="arithmatex">\(a &lt; b\)</span> 일 때 <span class="arithmatex">\(f(a) &lt; f(b)\)</span> 이면 <span class="arithmatex">\(f(x)\)</span> 는 이 구간에서 증가한다고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>직관적으로 <span class="arithmatex">\(x\)</span> 값이 커질 때 <span class="arithmatex">\(f(x)\)</span> 가 커지면 함수는 증가한다는 것을 알 수 있다. </p>
+</li>
+<li>
+<p>일반적으로 함수 <span class="arithmatex">\(f(x)\)</span> 에서 충분히 작은 임의의 양수 <span class="arithmatex">\(h\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ f (a-h) &lt; f(a)&lt; f (a+h) \]</div>
+<p>가 성립하면 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 증가상태에 있다고 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(f(x) = x^2\)</span> 는 충분히 작은 임의의 양수 <span class="arithmatex">\(h\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ f (2-h) &lt; f(2)&lt; f (2+h) \]</div>
+<p>가 성립하므로 함수 <span class="arithmatex">\(f(x) = x^2\)</span> 는 <span class="arithmatex">\(x=2\)</span> 에서 증가상태에 있다.</p>
+</li>
+</ul>
+<a href="#58ca70c3c"><div class="admonition tldr" id="58ca70c3c">
+<p>함수의 감소 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 어떤 구간에 속하는 임의의 두 실수 <span class="arithmatex">\(a, b\)</span> 에 대하여 <span class="arithmatex">\(a &lt; b\)</span> 일 때 <span class="arithmatex">\(f(a) &gt; f(b)\)</span> 이면 <span class="arithmatex">\(f(x)\)</span> 는 이 구간에서 감소한다고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>직관적으로 <span class="arithmatex">\(x\)</span> 값이 커질 때 <span class="arithmatex">\(f(x)\)</span> 가 작아지면 함수는 증가한다는 것을 알 수 있다. </p>
+</li>
+<li>
+<p>일반적으로 함수 <span class="arithmatex">\(f(x)\)</span> 에서 충분히 작은 임의의 양수 <span class="arithmatex">\(h\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ f (a-h) &gt; f(a)&gt; f (a+h) \]</div>
+<p>가 성립하면 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 감소상태에 있다고 한다.</p>
+</li>
+</ul>
+<a href="#0178311fe"><div class="admonition tldr" id="0178311fe">
+<p>함수의 증가의 판정 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 어떤 개구간에서 미분가능할 때, 이 구간의 모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(f'(x) &gt; 0\)</span> 이면 <span class="arithmatex">\(f(x)\)</span> 는 이 구간에서 증가한다.</p>
+</div></a>
+<ul>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 어떤 구간에서 증가하면 이 구간의 모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(f'(x) \geq 0\)</span> 이다. </p>
+</li>
+<li>
+<p>어떤 점에서 미분계수가 양수면 그 점에서 함수는 증가한다.</p>
+</li>
+</ul>
+<blockquote>
+<p>"어떤 자연 대상이 증가한다" 는 자연어를 수학적으로 모델링한 것이다. 이로써 수로 격하될 수 있는 모든 자연적 대상이 증가하는 것을 이것으로 격하할 수 있고 자동화시킬 수 있다. </p>
+</blockquote>
+<ul>
+<li>
+<p>증명</p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 의 <span class="arithmatex">\(x=a\)</span> 에서의 미분계수 <span class="arithmatex">\(f'(a)\)</span> 가 양수면 미분계수의 정의에 따라 </p>
+<div class="arithmatex">\[ f'(a) = \lim_{\Delta  x \to 0}  \frac{f(a+\Delta x)-f(a)}{\Delta x} &gt; 0 \]</div>
+<p>인데, <span class="arithmatex">\(|\Delta x|\)</span> 가 충분히 작으면 </p>
+<div class="arithmatex">\[ f'(a) = \frac{f(a+\Delta x)-f(a)}{\Delta x} &gt; 0 \]</div>
+<p>로 생각할 수 있다. 따라서</p>
+<div class="arithmatex">\[ \frac{f(a+\Delta x)-f(a)}{\Delta x} &gt; 0 \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ \begin{cases} f(a+\Delta x)&gt;f(a) &amp;(\Delta x &gt; 0)\text{}\\ f(a+\Delta x)&lt;f(a) &amp;(\Delta x &lt; 0)\text{}\\ \end{cases} \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(|\Delta x| = h\)</span> 로 두어서 <span class="arithmatex">\(\Delta x\)</span> 가 양수일 때와 음수일 때를 일반화시켜 표현하면</p>
+<div class="arithmatex">\[ f(a-h) &lt; f(a) &lt; f(a+h) \]</div>
+<p>이므로(<span class="arithmatex">\(\Delta x\)</span> 가 음수면 절대값에 <span class="arithmatex">\(-\)</span> 를 붙혀서 양수로 표현함) 함수 <span class="arithmatex">\(f(x)\)</span> 는 증가상태에 있다. </p>
+<ul>
+<li>이와 비슷하게 감소상태의 판정도 증명 가능하다. </li>
+</ul>
+</li>
+<li>
+<p>평균값 정리로의 증명 </p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 어떤 개구간에서 미분가능 할 때, 이 구간에 속하는 임의의 두 실수 <span class="arithmatex">\(a, b\)</span> 에 대하여 <span class="arithmatex">\(a &lt; b\)</span> 이면 평균값 정리에 의하여 </p>
+<div class="arithmatex">\[ \frac{f(b)-f(a)}{b-a} = f'(c) \]</div>
+<p>인 <span class="arithmatex">\(c\)</span> 가 개구간 <span class="arithmatex">\((a, b)\)</span> 에 적어도 하나 존재한다. 이때 <span class="arithmatex">\(a&lt;b\)</span> 에서 <span class="arithmatex">\(b-a&gt;0\)</span> 이므로 <span class="arithmatex">\(f(b) - f(a)\)</span> 와 <span class="arithmatex">\(f'(c)\)</span> 의 부호는 같다.</p>
+<p>그런데 가정에 따라 어떤 개구간의 모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(f'(x) &gt; 0\)</span> 이다. 그러면 어떤 상수 <span class="arithmatex">\(c\)</span> 에대하여 <span class="arithmatex">\(f'(c) &gt; 0\)</span> 이다. 그런데 임의의 두 실수 <span class="arithmatex">\(a, b\)</span> 에 대하여 <span class="arithmatex">\(\frac{f(b)-f(a)}{b-a} = f'(c)\)</span> 을 만족하는 <span class="arithmatex">\(f'(c)\)</span> 와 <span class="arithmatex">\(f(b) - f(a)\)</span> 의 부호는 동일하다는 것이 이미 증명되었다. </p>
+<p>따라서 <span class="arithmatex">\(f(b) - f(a) &gt; 0\)</span> 이다. 결론적으로 </p>
+<p><span class="arithmatex">\(\therefore f(a) &lt; f(b)\)</span></p>
+<p>이므로 <span class="arithmatex">\(a&lt;b\)</span> 일 때 <span class="arithmatex">\(f(a) &lt; f(b)\)</span> 이다. 이것으로 함수 <span class="arithmatex">\(f(x)\)</span> 는 이 구간에서 증가한다는 것이 참임을 증명하였다. </p>
+<blockquote>
+<p>이제 우리는 이 증명으로 증가하는 것을 감소한다거나 감소하는 것을 증가한다는 거짓된 생각, 즉 잘못된 생각을 갖지 않게 되었다.</p>
+</blockquote>
+</li>
+</ul>
+<a href="#659d53f5b"><div class="admonition tldr" id="659d53f5b">
+<p>함수의 감소의 판정 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 어떤 개구간에서 미분가능할 때, 이 구간의 모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(f'(x) &lt; 0\)</span> 이면 <span class="arithmatex">\(f(x)\)</span> 는 이 구간에서 감소한다.</p>
+</div></a>
+<ul>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 어떤 구간에서 감소하면 이 구간의 모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(f'(x) \leq 0\)</span> 이다. </p>
+</li>
+<li>
+<p>어떤 점에서 미분계수가 음수면 그 점에서 함수는 감소한다. </p>
+</li>
+</ul>
+<h2 id="_8">함수의 극대와 극소<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<a href="#1fb9dadd2"><div class="admonition tldr" id="1fb9dadd2">
+<p>함수의 극대와 극소 : 함수 <span class="arithmatex">\(f(x)\)</span> 에서 <span class="arithmatex">\(x=a\)</span> 를 포함하는 어떤 개구간에 속하는 모든 <span class="arithmatex">\(x\)</span> 에 대하여</p>
+</div></a>
+<ul>
+<li>
+<p>함수의 극대(local maximum) : <span class="arithmatex">\(f(x) \leq f(a)\)</span> 이면 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 극대이다. </p>
+<ul>
+<li>또 <span class="arithmatex">\(f(a)\)</span> 를 극대값이라 한다. </li>
+</ul>
+</li>
+<li>
+<p>함수의 극소(local minimum) : <span class="arithmatex">\(f(x) \geq f(a)\)</span> 이면 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 극소이다. </p>
+<ul>
+<li>또 <span class="arithmatex">\(f(a)\)</span> 를 극소값이라 한다. </li>
+</ul>
+</li>
+<li>
+<p>극값(extreme values) : 극대값과 극소값을 통틀어 이르는 말이다. </p>
+<p><img alt="desmos-graph(1)" src="https://user-images.githubusercontent.com/16812446/76137353-5025f780-607f-11ea-8794-99ae3aaf9345.png"/></p>
+<p>위 함수의 그래프는 왼쪽 뾰족한 부위에 극대값이 있고 오른쪽 밑의 아래로 뾰족한 부분에 극소값이 있는 것이다.</p>
+</li>
+</ul>
+<a href="#39a255d9f"><div class="admonition tldr" id="39a255d9f">
+<p>함수의 극대와 극소의 판정 : 미분가능한 함수 <span class="arithmatex">\(f(x)\)</span> 에 대하여 <span class="arithmatex">\(f'(a) = 0\)</span> 일 때, <span class="arithmatex">\(x=a\)</span> 의 좌우에서</p>
+</div></a>
+<ul>
+<li>
+<p>함수의 극대 판정 : <span class="arithmatex">\(f'(x)\)</span> 의 부호가 <span class="arithmatex">\(+\)</span> 에서 <span class="arithmatex">\(-\)</span> 으로 바뀌면 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 극대이다. </p>
+<ul>
+<li>
+<p>극대값은 그 근반에서 가장 큰 값이므로 함수값이 증가하다가 감소한다. 이것은 접선의 기울기가 양에서 음으로 바뀌는 것이므로 미분계수의 부호가 양에서 음으로 바뀌는 지점이라고 볼 수 있다. </p>
+<blockquote>
+<p>그러므로 이러한 자연어 표현을 수학적 형식 언어로 격하할 수 있다. </p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>함수의 극소 판정 : <span class="arithmatex">\(f'(x)\)</span> 의 부호가 <span class="arithmatex">\(-\)</span> 에서 <span class="arithmatex">\(+\)</span> 으로 바뀌면 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 극소이다. </p>
+</li>
+<li>
+<p>미분가능한 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 극값을 가지면 <span class="arithmatex">\(f'(a) = 0\)</span> 이다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p>미분가능한 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 극대값을 갖는다고 하자. 그러면 <span class="arithmatex">\(x=a\)</span> 근방의 <span class="arithmatex">\(t&lt;a\)</span> 에 대하여 <span class="arithmatex">\(f(a) \geq f(t)\)</span> 이다. 그러므로 </p>
+<div class="arithmatex">\[ \frac{f(t)-f(a)}{t-a} \geq 0 \]</div>
+<p>으로부터 </p>
+<div class="arithmatex">\[ \lim_{t \to a-} \frac{f(t)-f(a)}{t-a} \geq 0 \]</div>
+<p>이다. 마찬가지로 <span class="arithmatex">\(x=a\)</span> 근방의 <span class="arithmatex">\(t&gt;a\)</span> 에 대하여 <span class="arithmatex">\(f(a) \leq f(t)\)</span> 이다. 그러므로 </p>
+<div class="arithmatex">\[ \frac{f(t)-f(a)}{t-a} \leq 0 \]</div>
+<p>으로부터 </p>
+<div class="arithmatex">\[ \lim_{t \to a+} \frac{f(t)-f(a)}{t-a} \leq 0 \]</div>
+<p>이다. 그런데 가정에 의해 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 미분가능하므로 <span class="arithmatex">\(f'(a)\)</span> 가 존재해야 한다. 따라서 좌극한과 우극한이 같아야 한다. 따라서 </p>
+<div class="arithmatex">\[ 0 \leq \lim_{t \to a-} \frac{f(t)-f(a)}{t-a} \geq 0 = \lim_{t \to a+} \frac{f(t)-f(a)}{t-a} \leq 0 \leq 0 \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \therefore \lim_{t \to a} \frac{f(t)-f(a)}{t-a} = f'(a) = 0 \]</div>
+<p>이다. 이것으로 극값이 <span class="arithmatex">\(0\)</span> 임이 증명되었다. </p>
+<blockquote>
+<p>자연어 표현들과 대상의 특징을 묘사하는 언어들을 수학적 형식언어로 바꾸어서 표현한 것 뿐이다. </p>
+</blockquote>
+</li>
+<li>
+<p>그 역은 성립하지 않는다. <span class="arithmatex">\(f'(a) = 0\)</span> 이라고 해서 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 극값을 갖는 것은 아니다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#450a992ba"><div class="admonition tldr" id="450a992ba">
+<p>이계도함수를 이용한 함수의 극대와 극소의 판정 : 함수 <span class="arithmatex">\(f(x)\)</span> 에 대하여 <span class="arithmatex">\(f'(x), f''(x)\)</span> 가 존재하고 <span class="arithmatex">\(f'(x)=0\)</span> 일 때,</p>
+<p><span class="arithmatex">\(f''(a)&lt;0\)</span> 이면 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 극대이고,</p>
+<p><span class="arithmatex">\(f''(a)&gt;0\)</span> 이면 함수 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 극소이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 에 대하여 <span class="arithmatex">\(f'(x),f''(x)\)</span> 가 존재하고 <span class="arithmatex">\(f'(a)=0\)</span> 이라고 가정하자. 그런데 함수의 증가-감소 판정법에 의하여 <span class="arithmatex">\(f''(x)&gt;0\)</span> 이면 <span class="arithmatex">\(f'(x)\)</span> 는 증가하고 <span class="arithmatex">\(f''(x)&lt;0\)</span> 이면 <span class="arithmatex">\(f'(x)\)</span> 는 감소한다. </p>
+<p>따라서 <span class="arithmatex">\(f'(a)=0\)</span> 이고 <span class="arithmatex">\(f''(a)&lt;0\)</span> 이면 <span class="arithmatex">\(f'(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 감소상태에 있다. 그런데 <span class="arithmatex">\(f'(a)=0\)</span> 이므로 <span class="arithmatex">\(x=a\)</span> 의 좌우에서 <span class="arithmatex">\(f'(x)\)</span> 가 <span class="arithmatex">\(+\)</span> 에서 <span class="arithmatex">\(-\)</span> 으로 바뀐다. 이는 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 극대임을 뜻한다. </p>
+<p>마찬가지로 <span class="arithmatex">\(f'(a)=0\)</span> 이고 <span class="arithmatex">\(f''(a)&gt;0\)</span> 이면 <span class="arithmatex">\(f'(x)\)</span> 는 <span class="arithmatex">\(x=a\)</span> 에서 증가상태에 있다. 그런데 <span class="arithmatex">\(f'(a)=0\)</span> 이므로 <span class="arithmatex">\(x=a\)</span> 의 좌우에서 <span class="arithmatex">\(f'(x)\)</span> 가 <span class="arithmatex">\(-\)</span> 에서 <span class="arithmatex">\(+\)</span> 으로 바뀐다. 이는 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 극소임을 뜻한다. </p>
+</li>
+</ul>
+<blockquote>
+<p>그러므로 수학적 대상들의 관계를 많이 더 많이 밝혀두면 둘수록 특정한 대상에 대한 계산이 훨씬 쉬울 때 그것과 그것과의 관계들을 통하여 결정되는 다른 대상들을 쉽게 알 수 있다. 따라서 대상의 수학적 관계를 최대한 많이 탐구해놓는 것은 많은 효용을 가져다준다. 이렇게 수학적 관계를 밝히는 인간의 사고과정도 자동화시키면 좋을 것이다.</p>
+</blockquote>
+<a href="#962334cc4"><div class="admonition tldr" id="962334cc4">
+<p>극값을 찾는 법 : 극값은 다음과 같이 찾을 수 있다. </p>
+<ol>
+<li>
+<p>도함수 <span class="arithmatex">\(f'(x)\)</span> 를 구한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(f'(x) = 0\)</span> 인 <span class="arithmatex">\(x\)</span> 값을 구한다. </p>
+</li>
+<li>
+<p>구한 <span class="arithmatex">\(x\)</span> 값의 좌우에서 <span class="arithmatex">\(f'(x)\)</span> 의 부호가 <span class="arithmatex">\(+\)</span> 에서 <span class="arithmatex">\(-\)</span> 로 바뀌는지, <span class="arithmatex">\(-\)</span> 에서 <span class="arithmatex">\(+\)</span> 로 바뀌는지 확인하여 극대값인지 극소값인지 확인한다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(f(x) = x ^{3} + 3 x ^{2} - 24x + 20\)</span> 의 극값을 구해보자. </p>
+<p><span class="arithmatex">\(f(x)\)</span> 의 도함수는 <span class="arithmatex">\(f'(x) = 3x ^{2} + 6x - 24 = 3(x+4)(x-2)\)</span> 이기 때문에 극값은 <span class="arithmatex">\(x=-4\)</span> 또는 <span class="arithmatex">\(x=2\)</span> 에서 존재한다. </p>
+<p>그런데 <span class="arithmatex">\(x=-4\)</span> 왼쪽의 어떤 점 <span class="arithmatex">\(x=-5\)</span> 에서 도함수 <span class="arithmatex">\(f'(x)\)</span> 의 함수값이 <span class="arithmatex">\(+\)</span> 이고 <span class="arithmatex">\(x=-4\)</span> 의 오른쪽 <span class="arithmatex">\(x=0\)</span> 에서 <span class="arithmatex">\(f'(x)\)</span> 가 <span class="arithmatex">\(-\)</span> 이다. 따라서 <span class="arithmatex">\(x=-4\)</span> 에서 극대값을 갖고 그 극대값은 <span class="arithmatex">\(f(-4) = 100\)</span>  임을 알 수 있다.</p>
+<p>동일한 방법으로 <span class="arithmatex">\(x=2\)</span> 에서 극소값을 가지며 <span class="arithmatex">\(f(2) = -8\)</span> 이라는 것을 알 수 있다. </p>
+<p>다음은 <span class="arithmatex">\(f(x)\)</span> 의 그래프이다. </p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/76137520-6634b780-6081-11ea-8c89-0b5cb3c02da3.png"/></p>
+</li>
+</ul>
+<h2 id="-">함수의 최대-최소<a class="headerlink" href="#-" title="Permanent link">¶</a></h2>
+<a href="#0106b376f"><div class="admonition tldr" id="0106b376f">
+<p>함수의 최대값-최소값 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속이면 이 구간에서 반드시 최대값과 최소값을 갖는다.</p>
+</div></a>
+<ul>
+<li>
+<p>함수의 최대값 : 이 구간에서 <span class="arithmatex">\(f(x)\)</span> 의 극값과 구간의 양 끝점의 함수값 <span class="arithmatex">\(f(a), f(b)\)</span> 중에서 가장 큰 값이 최대값이다. </p>
+</li>
+<li>
+<p>함수의 최소값 : 이 구간에서 <span class="arithmatex">\(f(x)\)</span> 의 극값과 구간의 양 끝점의 함수값 <span class="arithmatex">\(f(a), f(b)\)</span> 중에서 가장 작은 값이 최대값이다. </p>
+</li>
+<li>
+<p>주어진 구간이 폐구간이 아니라 개구간일 경우 가장 높은 점이 극대가 되거나 존재하지 않는다. 마찬가지로 가장 낮은 점은 극소일 때이거나 존재하지 않는다.</p>
+<ul>
+<li>
+<p>직관적으로 이해할 수 있다. </p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/76137623-99c41180-6082-11ea-8c56-90b54fad7474.png"/></p>
+<p>위 함수가 개구간에서 정의되었다면 극대는 존재하지 않고 극소값만 존재하는 것이다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>자연 대상들의 최대-최소를 판정할 때 했던 사고방식을 그대로 수학적으로 격하시킨 것이다. </p>
+<p>판단을 수학적으로 모델링하여 코드로 자동화할 때 자주 사용된다. 왜냐하면 수로 격하된 자연대상들은 수 간의 비교를 통하여 최선의 선택을 결정하게 되기 때문이다. 대상들의 관계를 일반화시킨 함수로 최선의 판단과 일어날 결과에 대한 목적달성도를 표현하여 최대값을 도출하는 선택을 쉽게 알 수 있다. </p>
+</blockquote>
+<h3 id="_9">함수의 그래프의 활용<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<a href="#4b6192a55"><div class="admonition tldr" id="4b6192a55">
+<p>방정식과 실근과 함수의 그래프 : 함수의 그래프를 이용하여 방정식의 실근의 개수를 알 수 있다. </p>
+<ol>
+<li>
+<p>방정식 <span class="arithmatex">\(f(x) = 0\)</span> 의 실근의 개수는 함수 <span class="arithmatex">\(y=f(x)\)</span> 의 그래프와 <span class="arithmatex">\(x\)</span> 축과의 교점의 개수이다.</p>
+</li>
+<li>
+<p>방정식 <span class="arithmatex">\(f(x) = g(x)\)</span> 의 실근의 개수는 두 함수 <span class="arithmatex">\(y=f(x)\)</span> 와 <span class="arithmatex">\(y=g(x)\)</span> 의 그래프의 교점의 개수이다.</p>
+</li>
+</ol>
+</div></a>
+<a href="#5c658e6ed"><div class="admonition tldr" id="5c658e6ed">
+<p>부등식에의 활용 :</p>
+</div></a>
+<ul>
+<li>
+<p>모든 실수 <span class="arithmatex">\(x\)</span> 에 대하여 부등식 <span class="arithmatex">\(f(x)&gt;0\)</span> 이 성립함을 보이려면 함수 <span class="arithmatex">\(f(x)\)</span> 에 대하여 <span class="arithmatex">\((f(x) 최소값) &gt; 0)\)</span> 임을 보이면 된다.</p>
+</li>
+<li>
+<p>모든 실수 <span class="arithmatex">\(x\)</span> 에 대하여 부등식 <span class="arithmatex">\(f(x)&lt;0\)</span> 이 성립함을 보이려면 함수 <span class="arithmatex">\(f(x)\)</span> 에 대하여 <span class="arithmatex">\((f(x) 최대값) &lt; 0)\)</span> 임을 보이면 된다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(x&gt;a\)</span> 에서 부등식 <span class="arithmatex">\(f(x)&gt;0\)</span> 이 성립함을 보이려면 </p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 의 극값이 존재할 때, <span class="arithmatex">\(x&gt;a\)</span> 에서 <span class="arithmatex">\((f(x) 의 최소값)&gt;0\)</span> 임을 보이면 된다. </p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 의 극값이 존재하지 않을 때, <span class="arithmatex">\(x&gt;a\)</span> 에서 <span class="arithmatex">\(f(x)\)</span> 가 증가하고, <span class="arithmatex">\(f(a) \geq 0\)</span> 임을 보이면 된다.</p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 극한" class="md-footer__link md-footer__link--prev" href="../cal/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              극한
+            </div>
+</div>
+</a>
+<a aria-label="다음: 적분" class="md-footer__link md-footer__link--next" href="../cal3/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              적분
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

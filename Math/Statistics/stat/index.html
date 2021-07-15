@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Statistics/stat/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>도수분포의 평균,분산,표준편차 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              도수분포의 평균,분산,표준편차
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          도수분포의 평균,분산,표준편차
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        도수분포의 평균,분산,표준편차
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    통계
+  </a>
+<nav aria-label="통계" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    기초 통계학 용어
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    대표값
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    도수분포
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    도수분포의 평균, 분산, 표준편차(산포도 측정)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    통계
+  </a>
+<nav aria-label="통계" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    기초 통계학 용어
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    대표값
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    도수분포
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    도수분포의 평균, 분산, 표준편차(산포도 측정)
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>도수분포의 평균,분산,표준편차</h1>
+<h2 id="_1">통계<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#37fa2df1d"><div class="admonition tldr" id="37fa2df1d">
+<p>통계학(statistics) : 산술적 방법으로 다량의 데이터를 관찰하고 분석하는 수학의 분야이다.</p>
+</div></a>
+<ul>
+<li>
+<p>통계학 statistics 의 어원은 라틴어 status 인데 이는 국가를 의미한다. 즉 통계학은 국가를 지배하는데에 필요한 학문으로써 발달하였다. </p>
+<ul>
+<li>
+<p>통계학을 쉽게 말해서 데이터와 자료를 연구하는 학문으로 볼 수 있다. </p>
+</li>
+<li>
+<p>통계학은 국가에서 수집된 다량의 데이터를 수집하고 분석하여 국가를 잘 지배할 수 있도록 최선의 결론을 도출하는 학문인 것이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>역사 </p>
+<p>케틀레(1796) 는 천문학에서 쓰이던 확률론을 사회 데이터에 적용하려 했다. </p>
+<p>그런데 프랑스 통계를 기초로 범죄 같은 사회적 현상이 마치 물리학 법칙처럼 규칙적으로 발생한다는 사실을 알아 내었다.</p>
+<p>그는 통계학으로써 사회의 법칙을 알아낼 수 있다고 생각하였다. </p>
+<blockquote>
+<p>이렇게 얻어낸 사회의 법칙은 사회를 지배하는데에 쓰일 수 있다. </p>
+</blockquote>
+</li>
+<li>
+<p>통계학을 배우는 목적을 자료로부터 필요한 정보를 찾고 그것으로부터 필요한 결론을 추론하여 내는 결정 능력을 기르는 것으로 삼으면 좋을 것이다.</p>
+</li>
+</ul>
+<a href="#49e5edda0"><div class="admonition tldr" id="49e5edda0">
+<p>자료(data, 데이터) : 수, 영상, 단어 등의 형태로 된 의미 단위이다.</p>
+</div></a>
+<ul>
+<li>보통 연구의 바탕이 되는 재료를 뜻하고 자료를 의미있게 정리하면 정보가 된다.</li>
+</ul>
+<a href="#a8cdc4d1e"><div class="admonition tldr" id="a8cdc4d1e">
+<p>질적 자료(qualitative data, 정성적 자료) : 수치로 측정이 불가능한 자료이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p>전화번호, 성별, 종교분류 등이 있다.</p>
+</li>
+</ul>
+<a href="#e3d5bd8f0"><div class="admonition tldr" id="e3d5bd8f0">
+<p>양적 자료(quantitative data, 정량적 자료) : 수치로 측정이 가능한 자료이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>온도, 지능지수, 매출액 등이 있다.</p>
+</li>
+</ul>
+<a href="#8e6107767"><div class="admonition tldr" id="8e6107767">
+<p>정보(information) : 특정 목적의 의사결정을 위하여 의미있게 자료를 가공한 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>정보는 판단을 위하여 존재하기 때문에 목적적합성과 신뢰성, 적시성이 중요하다. 목적적합성이 없다면 판단하는데 있어 의미있는 자료가 되지 못한다. 신뢰성이 없다면 판단할 때 사용할 수 없다. 적시성이 없으면 판단할 때가 이미 지나버려 무의미하게 된다. </p>
+</li>
+<li>
+<p>비교적 장기간 사용할 수 있는 정보를 지식으로 취급하기도 한다.</p>
+</li>
+</ul>
+<a href="#fa7c18e90"><div class="admonition tldr" id="fa7c18e90">
+<p>지식(knowledge) : 일반적으로 사용할 수 있는 정보, 또는 어떤 대상에 관하여 알고 있는 이해이다.</p>
+</div></a>
+<h3 id="_2">기초 통계학 용어<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<a href="#a2c1944f1"><div class="admonition tldr" id="a2c1944f1">
+<p>변량(variate) : 자료를 수량으로 나타낸 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>학생들의 수학 점수를 숫자로 환원하여 나열한 것 </p>
+<div class="arithmatex">\[ 92, 84, 88, 45, 12, 29, 39, \dots \]</div>
+<p>은 변량이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>각 국가별 행복도를 수치로 환원하여 나열한 것</p>
+<div class="arithmatex">\[ 15, 82, 10, 99, 28, \dots \]</div>
+<p>은 변량이다.</p>
+</li>
+</ul>
+<a href="#260ce826d"><div class="admonition tldr" id="260ce826d">
+<p>계급(class) : 변량을 일정한 간격으로 나눈 구간이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>학생들의 수학 점수를 나열한 변량 </p>
+<div class="arithmatex">\[ 92, 84, 88, 45, 12, 29, 39, \dots \]</div>
+<p>에 대하여 </p>
+<p><span class="arithmatex">\(10\)</span> 점대 <span class="arithmatex">\(x_1\)</span> 명,</p>
+<p><span class="arithmatex">\(20\)</span> 점대 <span class="arithmatex">\(x_2\)</span> 명,</p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p><span class="arithmatex">\(80\)</span> 점대 <span class="arithmatex">\(x _{n-1}\)</span> 명,</p>
+<p><span class="arithmatex">\(90\)</span> 점대 <span class="arithmatex">\(x_n\)</span> 명</p>
+<p>와 같이 일정 구간으로 나눈 것은 계급이라 한다.</p>
+</li>
+</ul>
+<a href="#9c0695288"><div class="admonition tldr" id="9c0695288">
+<p>계급의 크기(class interval) : 변량을 나눈 간격이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>학생들의 수학 점수를 <span class="arithmatex">\(0 \sim 10\)</span>, <span class="arithmatex">\(10 \sim 20\)</span> 와 같이 나누었다면 </p>
+<p>계급의 크기는 <span class="arithmatex">\(10\)</span> 이다. </p>
+</li>
+</ul>
+<h3 id="_3">대표값<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<a href="#561fbcf3c"><div class="admonition tldr" id="561fbcf3c">
+<p>대표값(representative value) : 어떤 데이터를 대표하는 값이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>대표값에는 대표적으로 계급값, 중앙값, 평균, 최빈값이 있다. </p>
+<p>또한 백분위수, 사분위수, 절사평균 등의 대표값이 존재한다.</p>
+</li>
+</ul>
+<a href="#f5a92dac9"><div class="admonition tldr" id="f5a92dac9">
+<p>계급값(class mark) : 계급을 대표하는 값으로써 계급의 중앙값이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>학생들의 수학 점수를 <span class="arithmatex">\(0 \sim 10\)</span>, <span class="arithmatex">\(10 \sim 20\)</span> 와 같이 나누었다면 </p>
+<p>계급값은 각각 <span class="arithmatex">\(5, 15\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#38069a09e"><div class="admonition tldr" id="38069a09e">
+<p>평균(mean) : 데이터를 모두 더한 것을 데이터의 개수로 나눈 값이다.</p>
+</div></a>
+<ul>
+<li>
+<p>일반적으로 평균이라고 부르는 것은 통계학에서 산술평균이라고 하는 것이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(4\)</span> 명의 한 달 소득이 만 원 단위로</p>
+<div class="arithmatex">\[ 100, 200, 128, 328 \]</div>
+<p>라면 이것의 평균은 </p>
+<div class="arithmatex">\[ \therefore  \dfrac{100+200+128+328}{4} = 189 \]</div>
+<p>이다. ■ </p>
+<p>그러니까 평균적으로 사람들이 <span class="arithmatex">\(189\)</span> 만원을 벌고 있다고 생각할 수 있는 것이다. </p>
+<p>이렇게 단순하게 생각할 수 있게 해주는 것이 대표값의 장점이다. </p>
+</li>
+</ul>
+<h2 id="_4">도수분포<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<a href="#9243458b4"><div class="admonition tldr" id="9243458b4">
+<p>도수(frequency) : 각 계급에 속하는 변량의 개수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>학생들의 수학 점수를 나열한 변량 </p>
+<div class="arithmatex">\[ 92, 84, 88, 45, 12, 29, 39\]</div>
+<p>에서 <span class="arithmatex">\(80\)</span> 점대(<span class="arithmatex">\(80 \sim 99\)</span>) 계급에 속하는 변량의 개수는 <span class="arithmatex">\(2\)</span> 이므로 </p>
+<p>도수가 <span class="arithmatex">\(2\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#695e4444d"><div class="admonition tldr" id="695e4444d">
+<p>도수분포표(frequency distribution) : 자료를 몇 개의 계급으로 나누고 각 계급의 도수를 정리한 표다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p>학생들에게 책을 멀리 던지라고 시키고 그 거리를 측정하여 변량으로 만든 후 그 변량을 거리에 따라 계급으로 나누었다고 하자.</p>
+<p>그러면 그 계급에 속하는 도수를 표로 정리하면 다음과 같은 도수분포표가 된다. </p>
+<table>
+<thead>
+<tr>
+<th align="center">거리(m)</th>
+<th align="center">도수(명)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0 ~ 10</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">10 ~ 20</td>
+<td align="center">6</td>
+</tr>
+<tr>
+<td align="center">20 ~ 30</td>
+<td align="center">10</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<a href="#d0da2de88"><div class="admonition tldr" id="d0da2de88">
+<p>히스토그램(histogram) : 도수분포표의 각 계급의 끝값을 가로축에 표시하고 도수를 세로축에 표시하여 직사각형으로 나타낸 그래프이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>다음 도수분포표를 생각하자.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Bin</th>
+<th align="center">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(-3.5\)</span></td>
+<td align="center"><span class="arithmatex">\(23\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(-2.5\)</span></td>
+<td align="center"><span class="arithmatex">\(32\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(-1.5\)</span></td>
+<td align="center"><span class="arithmatex">\(109\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(-0.5\)</span></td>
+<td align="center"><span class="arithmatex">\(180\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(0.5\)</span></td>
+<td align="center"><span class="arithmatex">\(132\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(1.5\)</span></td>
+<td align="center"><span class="arithmatex">\(34\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2.5\)</span></td>
+<td align="center"><span class="arithmatex">\(4\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(3.5\)</span></td>
+<td align="center"><span class="arithmatex">\(90\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>이에 대한 히스토그램은 다음과 같다. </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Example_histogram.png/220px-Example_histogram.png"/></p>
+</li>
+</ul>
+<a href="#1fbb4b27a"><div class="admonition tldr" id="1fbb4b27a">
+<p>상대도수(relative frequency) : 전체 도수에 대한 각 계급의 도수의 비율</p>
+<div class="arithmatex">\[ \boxed{(\text{계급의 상대도수}) = \dfrac{(\text{계급의 도수})}{(\text{도수의 총합})} } \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 전체 도수가 <span class="arithmatex">\(1\)</span> 일 때 그 계급의 도수의 값을 뜻한다. </p>
+</li>
+<li>
+<p>상대도수는 자료가 해당 계급에 속할 확률이기도 하다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>학생들의 수학점수에 대한 상대도수를 구하여 도수분포표에 추가해보면 다음과 같다. </p>
+<table>
+<thead>
+<tr>
+<th align="center">점수</th>
+<th align="center">학생 수(명)</th>
+<th align="center">상대도수</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(61 \sim 70\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(\dfrac{1}{20} = 0.05\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(71 \sim 80\)</span></td>
+<td align="center"><span class="arithmatex">\(3\)</span></td>
+<td align="center"><span class="arithmatex">\(\dfrac{3}{20} = 0.15\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(81 \sim 90\)</span></td>
+<td align="center"><span class="arithmatex">\(10\)</span></td>
+<td align="center"><span class="arithmatex">\(\dfrac{10}{20} = 0.5\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(91 \sim 100\)</span></td>
+<td align="center"><span class="arithmatex">\(6\)</span></td>
+<td align="center"><span class="arithmatex">\(\dfrac{16}{20} = 0.3\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>위와 같은 상대도수는 어떤 학생 <span class="arithmatex">\(1\)</span> 명을 골랐을 때 해당 계급에 속할 확률이라고 볼 수도 있다. </p>
+<p>즉, 어떤 학생 <span class="arithmatex">\(1\)</span> 명을 골랐는데 수학점수가 <span class="arithmatex">\(81 \sim 90\)</span> 일 확률은 <span class="arithmatex">\(0.5 = 50 \%\)</span> 이다. </p>
+</li>
+</ul>
+<h2 id="_5">도수분포의 평균, 분산, 표준편차(산포도 측정)<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<a href="#fb092ac11"><div class="admonition tldr" id="fb092ac11">
+<p>산포도(dispersion, variability, scatter, spread) : 데이터가 흩어져있는 정도를 나타내는 용어이다.</p>
+</div></a>
+<ul>
+<li>예시 </li>
+</ul>
+<p>범위, 분산, 표준편차, 절대 편차 등이 있다.</p>
+<a href="#5798acb8b"><div class="admonition tldr" id="5798acb8b">
+<p>편차(deviation) : 자료의 산포도를 나타내는 수치로써 </p>
+<p>자료의 한 변량에서 평균값을 뺀 값이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>회사 <span class="arithmatex">\(A\)</span> 와 회사 <span class="arithmatex">\(B\)</span> 에서 직원 <span class="arithmatex">\(5\)</span> 명의 연봉을 만원 단위로 다음과 같이 조사하였다고 하자. </p>
+<table>
+<thead>
+<tr>
+<th align="center">회사 <span class="arithmatex">\(A\)</span></th>
+<th align="center"><span class="arithmatex">\(1200\)</span></th>
+<th align="center"><span class="arithmatex">\(1600\)</span></th>
+<th align="center"><span class="arithmatex">\(5600\)</span></th>
+<th align="center"><span class="arithmatex">\(6000\)</span></th>
+<th align="center"><span class="arithmatex">\(7000\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">회사 <span class="arithmatex">\(B\)</span></td>
+<td align="center"><span class="arithmatex">\(4000\)</span></td>
+<td align="center"><span class="arithmatex">\(4500\)</span></td>
+<td align="center"><span class="arithmatex">\(4250\)</span></td>
+<td align="center"><span class="arithmatex">\(5000\)</span></td>
+<td align="center"><span class="arithmatex">\(3650\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>회사 <span class="arithmatex">\(A\)</span> 의 직원들의 연봉에서 직원마다의 차이가 회사 <span class="arithmatex">\(B\)</span> 보다 크다는 것에 주목하자.</p>
+<p>이때 회사 <span class="arithmatex">\(A\)</span> 와 회사 <span class="arithmatex">\(B\)</span> 의 평균은</p>
+<div class="arithmatex">\[ \dfrac{1200 + 1600 + 5600 + 6000 + 7000}{5} = \dfrac{4000 + 4500 + 4250 + 5000 + 3650}{5} =  4280 \]</div>
+<p>으로써 두 곳 다 <span class="arithmatex">\(4280\)</span> 만원이다.</p>
+<p>하지만 두 회사의 편차를 구해보면 다음과 같다. </p>
+<table>
+<thead>
+<tr>
+<th align="center">회사 <span class="arithmatex">\(A\)</span></th>
+<th align="center"><span class="arithmatex">\(1200\)</span></th>
+<th align="center"><span class="arithmatex">\(1600\)</span></th>
+<th align="center"><span class="arithmatex">\(5600\)</span></th>
+<th align="center"><span class="arithmatex">\(6000\)</span></th>
+<th align="center"><span class="arithmatex">\(7000\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">회사 <span class="arithmatex">\(A\)</span> 의 편차</td>
+<td align="center"><span class="arithmatex">\(-3080\)</span></td>
+<td align="center"><span class="arithmatex">\(-2680\)</span></td>
+<td align="center"><span class="arithmatex">\(+1320\)</span></td>
+<td align="center"><span class="arithmatex">\(+1720\)</span></td>
+<td align="center"><span class="arithmatex">\(+2720\)</span></td>
+</tr>
+<tr>
+<td align="center">회사 <span class="arithmatex">\(B\)</span></td>
+<td align="center"><span class="arithmatex">\(4000\)</span></td>
+<td align="center"><span class="arithmatex">\(4500\)</span></td>
+<td align="center"><span class="arithmatex">\(4250\)</span></td>
+<td align="center"><span class="arithmatex">\(5000\)</span></td>
+<td align="center"><span class="arithmatex">\(3650\)</span></td>
+</tr>
+<tr>
+<td align="center">회사 <span class="arithmatex">\(B\)</span> 의 편차</td>
+<td align="center"><span class="arithmatex">\(-280\)</span></td>
+<td align="center"><span class="arithmatex">\(+220\)</span></td>
+<td align="center"><span class="arithmatex">\(-30\)</span></td>
+<td align="center"><span class="arithmatex">\(+720\)</span></td>
+<td align="center"><span class="arithmatex">\(-630\)</span></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<a href="#ba66e4b6e"><div class="admonition tldr" id="ba66e4b6e">
+<p>분산(variance) : 어떤 대상의 산포도를 나타내는 수치로써 </p>
+<p>편차의 제곱의 합을 전체 변량의 개수로 나눈 값</p>
+<div class="arithmatex">\[\boxed{V = \frac{(편차)^2의 총합}{(변량)의 개수}} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 편차 제곱의 평균이다. </p>
+</li>
+<li>
+<p>원래 편차로부터 자료들의 산포도를 구할 수 있지만 모든 자료를 대표하는 산포도를 구하기 위하여 각 자료에 대한 편차를 더하면 <span class="arithmatex">\(0\)</span> 이 된다. </p>
+<p>따라서 이를 방지하기 위하여 각 자료에 대한 편차를 제곱해서 모두 양수로 바꿔준 후 더한다.</p>
+<p>이것에 자료의 개수를 나누어 평균을 구함으로써 전체 대상에 대한 산포도를 관찰하는 것이 바로 분산인 것이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>"편차" 의 예시에서 두 회사의 분산은 다음과 같다. </p>
+<p>먼저 회사 <span class="arithmatex">\(A\)</span> 의 분산은 </p>
+<div class="arithmatex">\[ V _{A} = \dfrac{(-3080) ^{2} + (-2680) ^{2} + 1320 ^{2} + 1720 ^{2} + 2720 ^{2}}{5} = 5753600 \]</div>
+<p>으로써 <span class="arithmatex">\(5753600\)</span> 만원 <span class="arithmatex">\(^{2}\)</span> 이고 회사 <span class="arithmatex">\(B\)</span> 의 분산은 </p>
+<div class="arithmatex">\[ V _{B} = \dfrac{(-280) ^{2} + 220 ^{2} + (-30) ^{2} + 720 ^{2} + (-630) ^{2}}{5} = 208600 \]</div>
+<p>으로써 <span class="arithmatex">\(208600\)</span> 만원 <span class="arithmatex">\(^{2}\)</span> 이다. </p>
+<p>회사 <span class="arithmatex">\(A\)</span> 의 분산이 회사 <span class="arithmatex">\(B\)</span> 의 분산보다 훨씬 더 높다.</p>
+<p>그러므로 회사 <span class="arithmatex">\(A\)</span> 의 직원들간의 연봉 차이가 회사 <span class="arithmatex">\(B\)</span> 의 직원들간의 연봉 차이보다 더 많다고 할 수 있다.</p>
+</li>
+</ul>
+<a href="#63a19c4d9"><div class="admonition tldr" id="63a19c4d9">
+<p>표준편차(standard deviation) : 어떤 대상의 산포도를 나타내는 수치로써 </p>
+<p>분산의 양의 제곱근</p>
+<div class="arithmatex">\[\sigma = \sqrt[]{V}\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>표준편차는 그리스 문자 <span class="arithmatex">\(\sigma\)</span> 로 표기한다. </p>
+</li>
+<li>
+<p>편차란 각 자료에 대한 산포도를 보여주지만 모두 더해서 전체 대상에 대한 산포도를 관찰하려 하면 <span class="arithmatex">\(0\)</span> 이 되버려서 산포도를 구할 수 없었다.</p>
+<p>이것을 보완하려고 분산을 도입하여 편차의 제곱의 평균으로 전체 대상에 대한 산포도를 관찰하였다.</p>
+<p>하지만 분산은 편차에 대한 제곱을 취하였기 때문에 원래의 단위에서 제곱이 취해졌고, 산포도 또한 불필요하게 커져버렸다. </p>
+<p>따라서 표준편차를 도입하여 분산에 제곱근을 취하여 원래의 단위로 되돌려주고, 과하게 커져버린 산포도를 원래의 양으로 되돌려준다!</p>
+</li>
+<li>
+<p>예시 </p>
+<p>"분산" 의 예시에서 두 회사의 분산에 이어 표준편차를 구해보면 다음과 같다. </p>
+<p>먼저 회사 <span class="arithmatex">\(A\)</span> 의 분산에 제곱근을 취하여 회사 <span class="arithmatex">\(A\)</span> 의 표준편차</p>
+<div class="arithmatex">\[ \therefore  \sigma _{A} = \sqrt[]{V_A} = \sqrt[]{5753600} \approx  2398 \]</div>
+<p>으로써 <span class="arithmatex">\(2398\)</span> 만원얻고 회사 <span class="arithmatex">\(B\)</span> 의 분산에 제곱근을 취하여 회사 <span class="arithmatex">\(B\)</span> 의 표준편차</p>
+<div class="arithmatex">\[ \therefore  \sigma _{B} = \sqrt[]{V_B} =  \sqrt[]{208600} \approx  456 \]</div>
+<p>으로써 <span class="arithmatex">\(456\)</span> 만원을 얻을 수 있다. ■ </p>
+<ul>
+<li>
+<p>분산으로 각 대상에 대한 산포도를 관찰하려 했을 때는 만원 <span class="arithmatex">\(^{2}\)</span> 이라는 이상한 단위가 나왔고, 또한 그 값이 너무 컸다. 회사 <span class="arithmatex">\(A\)</span> 의 분산과 회사 <span class="arithmatex">\(B\)</span> 의 분산은 </p>
+<div class="arithmatex">\[ V_A =  5753600 \text{ 만원} ^{2} , V_B = 208600 \text{ 만원} ^{2}\]</div>
+<p>이었다. 하지만 회사 <span class="arithmatex">\(A\)</span> 의 표준편차와 회사 <span class="arithmatex">\(B\)</span> 의 표준편차는 </p>
+<div class="arithmatex">\[ \sigma _{A} \approx  2398\text{ 만원} , \sigma _{B} \approx  456 \text{ 만원}\]</div>
+<p>이다. 이로써 만원 <span class="arithmatex">\(^{2}\)</span> 이라는 단위도 원래의 단위로 되돌아왔고 뻥튀기 된 산포도가 원래의 양으로 되돌아왔다. 이 표준편차로 회사 <span class="arithmatex">\(A\)</span> 연봉의 산포도가 회사 <span class="arithmatex">\(B\)</span> 연봉의 산포도보다 높다는 것을 쉽게 알 수 있다. </p>
+<p>실제로 다시 표</p>
+<table>
+<thead>
+<tr>
+<th align="center">회사 <span class="arithmatex">\(A\)</span></th>
+<th align="center"><span class="arithmatex">\(1200\)</span></th>
+<th align="center"><span class="arithmatex">\(1600\)</span></th>
+<th align="center"><span class="arithmatex">\(5600\)</span></th>
+<th align="center"><span class="arithmatex">\(6000\)</span></th>
+<th align="center"><span class="arithmatex">\(7000\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">회사 <span class="arithmatex">\(B\)</span></td>
+<td align="center"><span class="arithmatex">\(4000\)</span></td>
+<td align="center"><span class="arithmatex">\(4500\)</span></td>
+<td align="center"><span class="arithmatex">\(4250\)</span></td>
+<td align="center"><span class="arithmatex">\(5000\)</span></td>
+<td align="center"><span class="arithmatex">\(3650\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>를 관찰해보면 회사 <span class="arithmatex">\(A\)</span> 의 각 자료들이 평균 <span class="arithmatex">\(4280\)</span> 으로부터 약 <span class="arithmatex">\(2398\)</span> 만큼 떨어져있고 </p>
+<p>회사 <span class="arithmatex">\(B\)</span> 의 각 자료들이 평균 <span class="arithmatex">\(4280\)</span> 으로부터 약 <span class="arithmatex">\(456\)</span> 만큼 떨어져있다는 것도 알 수 있다.</p>
+</li>
+</ul>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 확률" class="md-footer__link md-footer__link--prev" href="../../Probability/prob/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              확률
+            </div>
+</div>
+</a>
+<a aria-label="다음: 이산확률변수의 평균,분산,표준편차" class="md-footer__link md-footer__link--next" href="../stat2/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              이산확률변수의 평균,분산,표준편차
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

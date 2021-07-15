@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Foundations/mathmatical_logic/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>Mathmatical logic - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Mathmatical logic
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    수리논리학의 증명법 및 논증법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    메타 정리
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Mathmatical logic</h1>
+<a href="#64d7b1ea5"><div class="admonition tldr" id="64d7b1ea5">
+<p>수리 논리학 : 수학의 기호로 논리학에서 사용하는 명제를 표시하여 연구하는 학문이다.</p>
+</div></a>
+<ul>
+<li>
+<p>수학에서 집합론과 더불어 수학 기초론을 이룬다. </p>
+</li>
+<li>
+<p>컴퓨터과학과 밀접하게 연관되어 있기에 컴퓨터공학과에서는 이산수학 교과로 일부를 다룬다.</p>
+</li>
+<li>
+<p>일반적으로 연역논리만을 다루며 그 중에서도 표준논리만을 다룬다. </p>
+</li>
+<li>
+<p>역사 </p>
+<ul>
+<li>
+<p>라이프니츠가 처음으로 논리학을 수학 기호로 전개할 수 있다는 것을 제안하였다.</p>
+</li>
+<li>
+<p>이후 부울이 진리값으로 논리를 대수처럼 계산하는 체계를 제시했다.</p>
+</li>
+<li>
+<p>프레게는 독립적으로 개념 또는 술어 수준에서 명제를 분석하는 양화 논리 체계를 개발했다.</p>
+</li>
+<li>
+<p>러셀은 모든 수학의 참인 명제를 논리학적 참으로 환원하는 논리주의를 제안했고 이는 수학 전체의 무모순적 공리 체계를 구축하려는 힐베르트의 형식주의에도 영향을 미쳤다.</p>
+</li>
+<li>
+<p>그러나 괴델의 불완전성 정리로 논리주의 및 형식주의의 초기 형태는 위기를 맞이하였고, 결국 괴델이 ZFC 공리계에서는 연속체 가설이 참이면서 동시에 거짓일 수 있음을 증명하였다.</p>
+</li>
+<li>
+<p>괴델의 불완전성 정리로 현대 수리논리학이 본격적으로 발전하였다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#7494191f1"><div class="admonition tldr" id="7494191f1">
+<p>명제와 조건의 부정 : 명제 또는 조건 <span class="arithmatex">\(p\)</span> 에 대하여 "<span class="arithmatex">\(p 가 아니다\)</span>" 를 <span class="arithmatex">\(p\)</span> 의 부정이라 하고 기호로 <span class="arithmatex">\(\sim p\)</span> 로 나타낸다.</p>
+</div></a>
+<ul>
+<li>
+<p>배중률에 의하여 <span class="arithmatex">\(p\)</span> 와 <span class="arithmatex">\(\sim p\)</span> 의 참, 거짓 관계는 항상 서로 반대된다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p>명제 <span class="arithmatex">\(p\)</span> 를 "독도는 한국땅이다." 라고 한다면 <span class="arithmatex">\(p\)</span> 의 부정 <span class="arithmatex">\(\sim p\)</span> 는 "독도는 한국땅이 아니다." 이다. 이때 반드시 두 명제 중 어느 것 하나만 참이고 다른 것은 거짓이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>전체집합을 <span class="arithmatex">\(U\)</span>, 조건 <span class="arithmatex">\(p\)</span> 의 진리집합을 <span class="arithmatex">\(P\)</span> 라 하면 <span class="arithmatex">\(\sim p\)</span> 의 진리집합은 <span class="arithmatex">\(P^C\)</span> 이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\sim(\sim p)\)</span> 의 진리집합은 <span class="arithmatex">\((P^C)^C = P\)</span> 이다.</p>
+<ul>
+<li>이에 따라 <span class="arithmatex">\(\sim(\sim p) = p\)</span> 이다.</li>
+</ul>
+</li>
+</ul>
+<a href="#6f32db855"><div class="admonition tldr" id="6f32db855">
+<p>명제 <span class="arithmatex">\(p \to q\)</span> : 명제 "<span class="arithmatex">\(p 이면 q 이다.\)</span>" 를 기호로 <span class="arithmatex">\(p \to q\)</span> 로 나타낸다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(p\)</span> 를 가정(hypothesis), <span class="arithmatex">\(q\)</span> 를 결론(conclusion)이라 한다. </p>
+</li>
+<li>
+<p>두 조건 <span class="arithmatex">\(p, q\)</span> 의 진리집합을 각각 <span class="arithmatex">\(P, Q\)</span> 라 할 때 다음이 성립한다.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(P \subset Q\)</span> 이면 명제 <span class="arithmatex">\(p \to q\)</span> 는 참이다. : <span class="arithmatex">\((P \subset Q) \to (p \to q)\)</span> </p>
+</li>
+<li>
+<p><span class="arithmatex">\(P \not \subset Q\)</span> 이면 명제 <span class="arithmatex">\(p \to q\)</span> 는 거짓이다. : <span class="arithmatex">\((P \not \subset Q) \to \sim(p \to q)\)</span> </p>
+</li>
+</ul>
+</li>
+<li>
+<p>즉, 가정(조건 <span class="arithmatex">\(p\)</span>)을 만족하는 모든 대상의 모임(집합)이 결론(조건 <span class="arithmatex">\(q\)</span>)을 만족하는 모든 대상의 모임(집합)의 부분집합이라는 뜻이다. </p>
+<ul>
+<li>
+<p>다시 말해 가정(조건 <span class="arithmatex">\(p\)</span>)을 만족하는 어떤 대상을 가져오더라도 반드시 결론(조건 <span class="arithmatex">\(q\)</span>)을 만족한다는 것이다. </p>
+</li>
+<li>
+<p>그러므로 이러한 명제가 참임을 증명하기 위해서는 가정(조건 <span class="arithmatex">\(p\)</span>)을 만족하는 모든 대상이 항상 결론(조건 <span class="arithmatex">\(q\)</span>)을 만족하는지 보이면 된다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>반면 명제 <span class="arithmatex">\(p \to q\)</span> 가 거짓임을 보일 때 조건 <span class="arithmatex">\(p\)</span> 는 만족하지만 조건 <span class="arithmatex">\(q\)</span> 는 만족하지 않는 대상이 있다는 것을 보이면 된다. </p>
+<ul>
+<li>
+<p>그러한 대상을 반례(counter example)라고 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>"모든 삼각형은 이등변삼각형이다" 라는 명제는 거짓이다. 삼각형이면서 이등변삼각형이 아닌 대상이 존재하기 때문이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>명제 <span class="arithmatex">\(p \to q\)</span> 가 참일 때 이것을 <span class="arithmatex">\(p \implies q\)</span> 라고 표현한다. </p>
+</li>
+<li>
+<p>명제 <span class="arithmatex">\(p \to q\)</span> 가 거짓일 때 이것을 <span class="arithmatex">\(p \not \implies q\)</span> 라고 표현한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>"<span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(4\)</span> 의 양의 배수이면 <span class="arithmatex">\(x\)</span> 는 <span class="arithmatex">\(2\)</span> 의 양의 배수이다" 라는 명제에서 "<span class="arithmatex">\(p : x 는 4 의 양의 배수이다.\)</span>" 와 "<span class="arithmatex">\(q : x 는 2 의 양의 배수이다.\)</span>" 는 두 조건 <span class="arithmatex">\(p, q\)</span> 를 추출하자. 그러면 <span class="arithmatex">\(p, q\)</span> 의 진리집합 <span class="arithmatex">\(P, Q\)</span> 는 다음과 같다. </p>
+<div class="arithmatex">\[ P = \{4, 8, 12, 16, \dots\} \]</div>
+<div class="arithmatex">\[ Q = \{2, 4, 6, 8, 10, \dots\} \]</div>
+<p>이때 <span class="arithmatex">\(P \subset Q\)</span> 이다. 즉 <span class="arithmatex">\(4\)</span> 의 양의 배수는 전부 다 <span class="arithmatex">\(2\)</span> 의 양의 배수이므로 <span class="arithmatex">\(p \to q\)</span> 는 참이다. 이 예시로부터 명제 <span class="arithmatex">\((P \subset Q) \to (p \to q)\)</span> 는 참임을 알 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>"<span class="arithmatex">\(p : x 는 3 의 양의 배수이다.\)</span>" 와 "<span class="arithmatex">\(q : x 는 6 의 양의 배수이다.\)</span>" 는 두 조건 <span class="arithmatex">\(p, q\)</span> 의 진리집합 <span class="arithmatex">\(P, Q\)</span> 는 다음과 같다. </p>
+<div class="arithmatex">\[ P = \{3, 6, 9, 12, \dots\} \]</div>
+<div class="arithmatex">\[ Q = \{6, 12, 18, 24, \dots\} \]</div>
+<p>이때 <span class="arithmatex">\(P\)</span> 의 원소 <span class="arithmatex">\(9\)</span> 가 <span class="arithmatex">\(Q\)</span> 에 속하지 않으므로 <span class="arithmatex">\(P \not \subset Q\)</span> 이다. 즉 <span class="arithmatex">\(3\)</span> 의 양의 배수 중 <span class="arithmatex">\(6\)</span> 의 양의 배수가 아닌 것이 있으므로 <span class="arithmatex">\(p \to q\)</span> 는 거짓이다. <strong>이처럼 명제 <span class="arithmatex">\(p \to q\)</span> 가 거짓임을 보일 때 가정 <span class="arithmatex">\(p\)</span> 를 만족하지만 결론 <span class="arithmatex">\(q\)</span> 를 만족하지 않는 예(반례, counter example)가 하나라도 있음을 보이면 된다.</strong></p>
+<p>이 예시로부터 명제 <span class="arithmatex">\((P \not \subset Q) \to \sim(p \to q)\)</span> 는 참임을 알 수 있다.</p>
+</li>
+</ul>
+<a href="#81014133c"><div class="admonition tldr" id="81014133c">
+<p>명제 <span class="arithmatex">\(p \to q\)</span> 의 부정 : 명제 <span class="arithmatex">\(p, q\)</span> 의 진리값에 따른 명제 <span class="arithmatex">\(p \to q\)</span> 의 진리값은 다음과 같다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(p \to q\)</span> 진리표 </p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(p\)</span></th>
+<th align="center"><span class="arithmatex">\(q\)</span></th>
+<th align="center"><span class="arithmatex">\(p \to q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>위 진리표에서 <span class="arithmatex">\(p, q\)</span> 가 각각 <span class="arithmatex">\(T, T\)</span> 이면 명제 <span class="arithmatex">\(p \to q\)</span> 가 <span class="arithmatex">\(T\)</span> 이고 <span class="arithmatex">\(p, q\)</span> 가 <span class="arithmatex">\(T, F\)</span> 이면 <span class="arithmatex">\(p \to q\)</span> 가 <span class="arithmatex">\(F\)</span> 인 것은 직관적으로 자명하지만 <span class="arithmatex">\(p\)</span> 가 <span class="arithmatex">\(F\)</span> 일 때 명제가 <span class="arithmatex">\(T\)</span> 가 되는 것은 직관적이지 않다. </p>
+<ul>
+<li>그러나 논리학의 명제는 정의에 따라 반드시 참(<span class="arithmatex">\(T\)</span>)과 거짓(<span class="arithmatex">\(F\)</span>) 중 하나의 진리값을 가져야 한다. 그런데 전제(<span class="arithmatex">\(p\)</span>) 가 거짓일 경우 근본적으로 전제로부터 결론에 이르는 논증(<span class="arithmatex">\(p \to q\)</span>) 의 진리값을 판명할 수 없다. 그렇지만 이런 경우에도 진리값이 존재해야 <span class="arithmatex">\(p \to q\)</span> 를 명제로 다룰 수 있기 때문에 <span class="arithmatex">\(p\)</span> 가 <span class="arithmatex">\(F\)</span> 일 때 <span class="arithmatex">\(p \to q\)</span> 를 <span class="arithmatex">\(T\)</span> 로 정의하기로 약속한다. 이와 같은 <span class="arithmatex">\(T\)</span> 를 공진리(vacuous truth) 또는 항진이라고 한다.</li>
+</ul>
+</li>
+<li>
+<p>집합의 포함관계의 관점에서 살펴보면 전제 <span class="arithmatex">\(p\)</span> 가 거짓일 때 <span class="arithmatex">\(p\)</span> 의 진리집합은 <span class="arithmatex">\(P = \emptyset\)</span> 이다. 따라서 결론 <span class="arithmatex">\(q\)</span> 의 진리집합 <span class="arithmatex">\(Q\)</span> 에 상관없이 관계 <span class="arithmatex">\(P \subset Q\)</span> 가 항상 성립한다. 따라서 가정 <span class="arithmatex">\(p\)</span> 가 거짓인 명제 <span class="arithmatex">\(p \to q\)</span> 는 항상 참(공진리)이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>명제 "날씨가 맑으면 현장실습을 간다." 는 명제에서 전제와 결론이 진리값 <span class="arithmatex">\(T, F\)</span> 들을 가질 때 명제의 참거짓을 판명해보자. </p>
+<ul>
+<li>
+<p>전제 "날씨가 맑다." 를 <span class="arithmatex">\(p\)</span> 라고 하고 "현장실습을 간다." 를 <span class="arithmatex">\(q\)</span> 라고 하면 명제를 <span class="arithmatex">\(p \to q\)</span> 로 표현할 수 있다. 이때 날씨가 맑은데 현장실습을 나갔다면 <span class="arithmatex">\(p \to q\)</span> 는 참이다. 반면 날씨가 맑은데도 현장실습을 나가지 않았다면 <span class="arithmatex">\(p \to q\)</span> 는 자명하게 거짓이다.</p>
+</li>
+<li>
+<p>그런데 날씨가 맑지 않은 경우에 명제 <span class="arithmatex">\(p \to q\)</span> 의 참거짓을 어떻게 판명해야 하는가? 솔직히 말해서 이 경우 "날씨가 맑다" 는 전제 <span class="arithmatex">\(p\)</span> 부터가 거짓이기 때문에 명제 <span class="arithmatex">\(p \to q\)</span> 는 성립하지 않는다. 따라서 근본적으로 명제 <span class="arithmatex">\(p \to q\)</span> 의 참거짓을 논할 수 없다.</p>
+</li>
+<li>
+<p>전제가 거짓일 경우 <span class="arithmatex">\(p \to q\)</span> 의 참거짓을 밝힐 수 없으므로 결론이 어떻게 도출되든 관계 없다. 그런데 배중률에 따라 모든 명제는 <span class="arithmatex">\(T\)</span> 또는 <span class="arithmatex">\(F\)</span> 값을 가져야 한다. 따라서 이 경우 그냥 <span class="arithmatex">\(p \to q\)</span> 를 참(공진리)이라고 약속한다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>하지만 위 예시에서 전제가 거짓인 시점에서 우리가 가진 단서는 <span class="arithmatex">\(\sim p\)</span> 일 뿐이며 <span class="arithmatex">\(p \to q\)</span> 를 판명할 논거가 불충분하다. 그래서 엄밀하게는 <span class="arithmatex">\(p \to q\)</span> 는 결정불가능하다. 이는 형식논리(formal logic)가 배중률(명제는 반드시 참 또는 거짓이다)을 기본원리로 받아들이기 때문에 발생하는 문제다. </p>
+</li>
+<li>
+<p>이 문제는 브라우어의 직관주의 수학(intuitionistic mathematics) 에서도 비판한다. 직관주의 수학은 수학계에서 비주류이긴 하지만 <span class="arithmatex">\(T, F\)</span> 진리값을 확장한 다치논리가 발전되면 기존 수학에서 더 발전된 수학이 나올 수도 있을 거라는 주장이 있다.</p>
+</li>
+</ul>
+<a href="#020b82331"><div class="admonition tldr" id="020b82331">
+<p>조건부 명제의 참, 거짓 : 전체집합 <span class="arithmatex">\(U\)</span> 에 대하여 조건 <span class="arithmatex">\(p\)</span> 의 진리집합을 <span class="arithmatex">\(P\)</span> 라 할 때, 다음이 성립한다.</p>
+</div></a>
+<ul>
+<li>
+<p>명제 "모든 <span class="arithmatex">\(x\)</span>에 대하여 <span class="arithmatex">\(p\)</span> 이다." 는 <span class="arithmatex">\(P=U\)</span> 일 때 참이다. 즉 <span class="arithmatex">\(p\)</span> 를 참이되게 하는 원소가 모인 진리집합 <span class="arithmatex">\(P\)</span> 가 전체집합 <span class="arithmatex">\(U\)</span> 과 동일해야 한다. </p>
+<ul>
+<li>
+<p>이 명제의 부정은 "어떤 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(\sim p\)</span> 이다." 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>명제 "모든 실수에 대하여 <span class="arithmatex">\(x^2&gt;0\)</span> 이다." 는 "모든" 이라는 조건으로 때문에 <span class="arithmatex">\(x\)</span> 가 될 수 있는 전체집합의 모든 원소에 대하여 <span class="arithmatex">\(x^2&gt;0\)</span> 이어야 참이다.</p>
+<p>하지만 실수 집합의 원소 <span class="arithmatex">\(0\)</span> 는 <span class="arithmatex">\(x^2&gt;0\)</span> 를 만족하지 않는다. 따라서 이 명제는 거짓이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>명제 "모든 학생은 거짓말쟁이다." 를 부정하려 한다면 모든 학생 중에 거짓말쟁이가 아닌 학생이 하나라도 있다는 것을 보이면 된다. 즉 "어떤 학생은 거짓말쟁이가 아니다" 가 참이라는 것을 증명하면 된다. </p>
+<p>이것을 일반화하면 "모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(p\)</span> 이다." 라는 명제의 부정이 "어떤 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(\sim p\)</span> 이다." 라는 것을 알 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>명제 "어떤 <span class="arithmatex">\(x\)</span>에 대하여 <span class="arithmatex">\(p\)</span> 이다." 는 <span class="arithmatex">\(P\neq \emptyset\)</span> 일 때 참이다. 즉 <span class="arithmatex">\(p\)</span> 를 참이되게 하는 원소가 모인 진리집합 <span class="arithmatex">\(P\)</span> 에 최소 <span class="arithmatex">\(1\)</span> 개 이상의 원소가 있으면 된다. </p>
+<ul>
+<li>
+<p>이 명제의 부정은 "모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(\sim p\)</span> 이다." 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>명제 "어떤 실수에 대하여 <span class="arithmatex">\(x^2&gt;0\)</span> 이다." 는 "어떤" 이라는 조건으로 때문에 <span class="arithmatex">\(x\)</span> 가 될 수 있는 전체집합 중에서 어느 한 원소만 <span class="arithmatex">\(x^2&gt;0\)</span> 을 만족하면 참이다.</p>
+<p>실수 집합의 원소 <span class="arithmatex">\(2\)</span> 는 <span class="arithmatex">\(x^2&gt;0\)</span> 를 만족한다. 따라서 이 명제는 참이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>명제 "어떤 학생은 거짓말쟁이다." 를 부정하려 한다면 모든 학생이 거짓말쟁이가 아니라는 것을 보이면 된다. 즉 "모든 학생은 거짓말쟁이가 아니다" 가 참이라는 것을 증명하면 된다. </p>
+<p>이것을 일반화하면 "어떤 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(p\)</span> 이다." 라는 명제의 부정이 "모든 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(\sim p\)</span> 이다." 라는 것을 알 수 있다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#b7453f8bf"><div class="admonition tldr" id="b7453f8bf">
+<p>명제의 역(converse) : 명제 <span class="arithmatex">\(p \to q\)</span> 에 대하여 <span class="arithmatex">\(q \to p\)</span> 를 명제의 역이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>어떤 명제 <span class="arithmatex">\(p\)</span> 와 그것의 역의 진리치는 일정한 관계를 갖지 않는다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>'모든 사람은 포유류다' 는 참이지만 그 역인 '포유류는 모두 사람이다' 는 거짓이다. </p>
+<p>'두 삼각형이 합동이면 대응하는 세 변의 길이가 각각 같다' 는 참이고 그 역인 '대응하는 세 변의 길이가 각각 같으면 두 삼각형은 합동이다' 도 참이다.</p>
+</li>
+</ul>
+<a href="#7da9acfcf"><div class="admonition tldr" id="7da9acfcf">
+<p>명제의 대우(contraposition) : 명제 <span class="arithmatex">\(p \to q\)</span> 에 대하여 <span class="arithmatex">\(\sim q \to \sim p\)</span> 를 명제의 대우라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>어떤 명제 <span class="arithmatex">\(p\)</span> 와 그것의 대우는 항상 똑같은 진리치를 갖는다. 즉 <span class="arithmatex">\(p\)</span> 가 참이면 그것의 대우도 참이고 거짓이면 그것의 대우도 거짓이다. 다시 말해 명제와 그 대우는 동치이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(p \implies q\)</span>, 즉 명제 <span class="arithmatex">\(p \to q\)</span> 가 참이면 <span class="arithmatex">\(P \subset Q\)</span> 이다. 또한 이에 따라 <span class="arithmatex">\(\sim q \to \sim p\)</span> 이기에 <span class="arithmatex">\(Q^C \subset P^C\)</span> 도 참이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(p \not \implies q\)</span>, 즉 명제 <span class="arithmatex">\(p \to q\)</span> 가 거짓이면 <span class="arithmatex">\(P \not \subset Q\)</span> 이다. 또한 <span class="arithmatex">\(Q^C \not \subset P^C\)</span> 도 참이며 이에 따라 <span class="arithmatex">\(\sim q \not \implies \sim p\)</span> 이다. </p>
+</li>
+<li>
+<p>따라서 명제 <span class="arithmatex">\(p \to q\)</span> 를 증명할 때 <span class="arithmatex">\(\sim q \to \sim p\)</span> 를 증명해도 된다. </p>
+</li>
+<li>
+<p>예시(삼단논법) </p>
+<p>"참을 깨달은 자는 배움이 있는 자이다. 책임의 소중함을 느끼는 자가 아니라면 겨레를 위해 희생을 각오한 자가 아니다. 진정한 지도자는 겨레를 위해 희생을 각오한 자이다." 로부터 "그러므로 진정한 지도자는 배움이 있는 자이다." 라는 결론이 도출되었다면 보충되어야할 전제가 무엇일까? </p>
+<p>먼저 전제를 "<span class="arithmatex">\(a \to b, \sim c \to \sim d, e \to d\)</span>" 라는 형식언어로 표현할 수 있고 결론을 <span class="arithmatex">\(e \to b\)</span> 로 표현할 수 있다. 전제와 결론을 선형적으로 정리하면 <span class="arithmatex">\(e \to d \to c \dots a \to b\)</span> 를 얻는다. 이것으로부터 명제 <span class="arithmatex">\(c\)</span> 와 <span class="arithmatex">\(a\)</span> 가 연결되지 않는다는 것을 알 수 있기 때문에 <span class="arithmatex">\(1\)</span> 차적으로는 보충되어야 할 전제를 <span class="arithmatex">\(c \to a\)</span> 라고 추측할 수 있다.</p>
+<p>즉 생략되어 보충되어야 할 전제란 "책임의 소중함을 느끼는 자는 참을 깨달은 자이다" 라고 말할 수 있다.</p>
+</li>
+</ul>
+<h3 id="_1">수리논리학의 증명법 및 논증법<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<a href="#8bbaa69c9"><div class="admonition tldr" id="8bbaa69c9">
+<p>수학에서의 증명 : 증명을 작성할 때 지켜야하는 규칙은 다음과 같다.</p>
+</div></a>
+<ol>
+<li>
+<p>증명되지 않은 명제를 사용하여 결론을 이끌어내서는 안된다.</p>
+<ul>
+<li>논증은 이미 참이라고 알려진 내용을 근거로 주장하는 바를 정립하는 것이기에 참거짓이 밝혀지지 않은 내용을 근거로 결론을 끌어내었다면 결론에 근거가 없는 것과 다름없기 때문이다. </li>
+</ul>
+</li>
+<li>
+<p>논증에 쓰는 문장이 옳음을 표현하는 방법은 다음과 같다. </p>
+<ul>
+<li>
+<p>"지금 증명하려는 정리의 가정에 의하여 ..."</p>
+</li>
+<li>
+<p>"공리에 의하여 ..."</p>
+</li>
+<li>
+<p>"앞에 증명된 정리에 의하여 ..."</p>
+</li>
+<li>
+<p>"정의에 의하여 ..."</p>
+</li>
+<li>
+<p>"이 증명중 이미 확립된 앞 단계에 의하여 ..."</p>
+</li>
+<li>
+<p>"논리 규칙에 의하여 ..."</p>
+</li>
+</ul>
+</li>
+<li>
+<p>(귀류법) 명제 "<span class="arithmatex">\(p\)</span> 이면 <span class="arithmatex">\(q\)</span> 이다" 를 증명하기 위해서는 조건 '<span class="arithmatex">\(q\)</span>' 가 성립하지 않으면 '<span class="arithmatex">\(p\)</span>' 또는 '<span class="arithmatex">\(p\)</span>' 로부터 연연되는 사실에 모순이 된다는 점을 보이면 된다.</p>
+<ul>
+<li>
+<p>결론을 부정하는 것으로부터 시작하여 추론 끝에 얻은 명제가 가정과 모순된다는 것을 보이면 처음에 결론을 부정했던 것 또한 거짓임을 보일 수 있다는 것에서 착안한 증명법이다.</p>
+</li>
+<li>
+<p>이것은 대우명제를 증명하는 것과 같다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>조건 <span class="arithmatex">\(p\)</span> 의 부정을 <span class="arithmatex">\(\sim p\)</span> 로 쓰는데 이때 <span class="arithmatex">\(\sim(\sim p)\)</span> 는 <span class="arithmatex">\(p\)</span> 와 같다.</p>
+<ul>
+<li>즉, 어떤 조건의 부정을 부정하면 원래의 조건과 같아진다.</li>
+</ul>
+</li>
+<li>
+<p>"<span class="arithmatex">\(p\)</span> 와 <span class="arithmatex">\(q\)</span> 가 동시에 성립한다" 는 조건의 부정은 "<span class="arithmatex">\(p\)</span> 와 <span class="arithmatex">\(q\)</span> 둘 중 최소한 하나는 성립하지 않는다" 이다. </p>
+<ul>
+<li>예시 </li>
+</ul>
+<p>"내 자동차가 하얗고 튼튼하다" 는 명제를 부정하려면 자동차가 하얗지 않거나 하얗더라도 튼튼하지 않으면 된다. </p>
+</li>
+<li>
+<p>(한정기호, quantifier) "임의의 <span class="arithmatex">\(x\)</span> 에 관하여 조건 <span class="arithmatex">\(p\)</span> 가 성립한다" 의 부정은 "어떤 <span class="arithmatex">\(x\)</span> 에 대하여 조건 <span class="arithmatex">\(p\)</span> 가 성립하지 않는다" 또는 "조건 <span class="arithmatex">\(p\)</span> 를 부정하는 특정한 <span class="arithmatex">\(x\)</span> 가 존재한다" 이다. </p>
+</li>
+<li>
+<p>(한정기호, quantifier) "특정한 <span class="arithmatex">\(x\)</span> 에 대하여 조건 <span class="arithmatex">\(p\)</span> 가 성립한다" 의 부정은 "임의의 <span class="arithmatex">\(x\)</span> 에 대하여 조건 <span class="arithmatex">\(p\)</span> 가 부정된다 " 또는 "조건 <span class="arithmatex">\(p\)</span> 를 만족하는 <span class="arithmatex">\(x\)</span> 는 아예 없다" 이다. </p>
+</li>
+<li>
+<p>(배반공리, law of excluded middle) 임의의 조건 <span class="arithmatex">\(p\)</span> 가 있다고 하자. 그러면 임의의 대상을 가져오더라도 이 대상은 <span class="arithmatex">\(p\)</span> 를 만족하든지 <span class="arithmatex">\(p\)</span> 를 만족하지 않든지, 둘 중 하나만 성립한다.</p>
+<ul>
+<li>
+<p>논리학에서 배중률로 설명되지만 배중률은 논리학계에서 다소 논란이 있다. 그러나 배반공리는 수학에서는 널리 사용된다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>조건 <span class="arithmatex">\(q_1, q_2, \dots, q_n\)</span> 들이 서로 배반적(mutually exclusive, 이들 중 어느 두 조건도 동시에 만족하는 대상이 있을 수 없음) 이며 동시에 임의의 대상이 이들 조건 중 하나는 만족해야 한다는 완벽성(exhaustiveness) 을 갖추고 있다고 하자.</p>
+<p>이때 "<span class="arithmatex">\(p\)</span> 를 만족하면서 동시에 <span class="arithmatex">\(q_k\)</span> 를 만족하는 대상은 없다" 는 명제를 <span class="arithmatex">\(k=1\)</span> 부터 <span class="arithmatex">\(k=n-1\)</span> 까지 모두 증명하였다면 결국 "<span class="arithmatex">\(p\)</span> 이면 <span class="arithmatex">\(q_n\)</span> 이다" 를 증명하게 된 것이다. 이것을 "proof by cases" 라고 하는데 사실 귀류법을 여러번 사용한 것에 불과하다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>위와 같은 수학의 명제를 증명하는 논증에 사용되는 논리 규칙들보다 더 정확하고 자세한 내용을 형식논리학에서 알아볼 수 있다. </p>
+</li>
+<li>
+<p>정리의 증명에서 용어의 정의를 확실히 이해해야 한다. 왜냐하면 정리의 증명은 사실상 한 정의로부터 다른 정의로 논리적으로 옮겨가는 과정을 모아둔 것이기 때문이다.</p>
+</li>
+</ol>
+<a href="#cc7c657b5"><div class="admonition tldr" id="cc7c657b5">
+<p>직접증명법 : 명제 <span class="arithmatex">\(p\)</span> 가 참이라는 가정으로부터 <span class="arithmatex">\(q\)</span> 가 참이라는 결론에 도달하여 명제 <span class="arithmatex">\(p \to q\)</span> 가 참임을 증명하는 방법이다.</p>
+</div></a>
+<a href="#4b509ea7c"><div class="admonition tldr" id="4b509ea7c">
+<p>간접증명법 : 명제를 증명할 때 직접 증명하지 않고 간접적으로 증명하는 방법이다.</p>
+</div></a>
+<ul>
+<li>대우를 이용한 증명이나 귀류법이 이에 속한다.</li>
+</ul>
+<a href="#337947bde"><div class="admonition tldr" id="337947bde">
+<p>대우를 이용한 증명법(proof by contraposition) : 주어진 명제의 대우가 참임을 보임으로써 그 명제가 참임을 보이는 것이다.</p>
+</div></a>
+<ul>
+<li><span class="arithmatex">\(p \to q\)</span> 를 증명하기 어려울 때 <span class="arithmatex">\(\sim q \to \sim p\)</span> 가 참임을 증명함으로써 원래의 명제를 증명하는 것이다.</li>
+</ul>
+<a href="#35753b5ac"><div class="admonition tldr" id="35753b5ac">
+<p>귀류법 : 주어진 명제의 결론을 부정한 후 모순이 생기는 것을 보임으로써 결론을 부정하지 않는 명제가 참임을 증명하는 방법이다.</p>
+</div></a>
+<ul>
+<li>
+<p>어떤 주장에 대해 함의하는 내용을 따라가다보면 모순에 도달한다는 것을 보여서 주장이 잘못된 것임을 보이는 증명법이다. </p>
+</li>
+<li>
+<p>수학에서도 자주 사용될 뿐아니라 논리학에서도 사용되는 증명법이다. </p>
+<ul>
+<li>일상생활에서도 자주 볼 수 있는데 "당신의 말이 맞다고 칩시다. 그러면 이러이러한 문제가 발생합니다. 그러므로 당신의 주장은 틀렸습니다." 라는 식이다.</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>학문의 시작이란 결과(현상, 대상 등)에 원인(근거)이 존재한다는 것이다. 부모에게 부모가 있고 그 부모에게는 또 다시 부모가 있듯이 그 원인에는 그 원인을 낳은 또 다른 원인이 있다. 자연현상에 대한 관찰을 시작으로 이와 같은 역추적 과정을 계속하는 것이 지식 발전의 과정이다. 그런데 부모의 부모를 무한히 거슬러 올라갈 수 없듯이 원인의 원인을 역추적 해나가다보면 언젠가 더 이상의 근거에 의지하여 존재하지 않고 스스로 존재하는 최초의 원인(혹은 사실, 대상)이 발견될 것이다. 논리적 사고와 추론을 통하여 진리를 탐구하고자 했던 데카르트는 귀류법으로 그러한 최초의 원인에 대한 자신의 결론에 도달하였다. 다음은 데카르트가 귀류법으로 최초의 원인에 대한 결론을 내리는 논증이다.</p>
+<p>"나는 생각한다."를 부정해보자. 그렇다면 "나는 생각하지 않는다." 이다. 그런데 이 순간 나는 "나는 생각하지 않는다." 라고 생각하는 셈이다. 이것은 모순이다. 따라서 "나는 생각한다." 를 부정할 수 없다. 그렇다면 생각을 하는 나의 존재 또한 부정할 수 없다. 그러므로 "나는 생각한다. 고로 존재한다(I think, therefore I am)." 는 더 이상 의심할 수 없고 부정할 수 없는 최초의 지식이다. 이것을 사유의 제 <span class="arithmatex">\(1\)</span> 원리로 삼고 모든 지식이 쌓일 토대로 삼아야 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>소수(prime number) 의 개수가 유한하다고 하자. 그러면 유한개의 소수를 작은 순서로 <span class="arithmatex">\(p_1, p_2, \dots, p_n\)</span> 로 나타낼 수 있다. 이제 다음과 같이 정의된 수 <span class="arithmatex">\(P\)</span> 를 생각하자.</p>
+<div class="arithmatex">\[P = \prod_{k=1}^{n}p_k + 1\]</div>
+<p><span class="arithmatex">\(P\)</span> 는 <span class="arithmatex">\(p_1\)</span> 로 나누었을 때 <span class="arithmatex">\(1\)</span> 이 남는다. </p>
+<p><span class="arithmatex">\(P\)</span> 는 <span class="arithmatex">\(p_2\)</span> 로 나누었을 때 <span class="arithmatex">\(1\)</span> 이 남는다. </p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p><span class="arithmatex">\(P\)</span> 는 <span class="arithmatex">\(p_n\)</span> 로 나누었을 때 <span class="arithmatex">\(1\)</span> 이 남는다. </p>
+<p>즉, <span class="arithmatex">\(P\)</span> 는 어떤 소수로 나누어도 나누어 떨어지지 않는다. 따라서 <span class="arithmatex">\(P\)</span> 는 모든 소수와 서로소이다. 이에 따라 <span class="arithmatex">\(P\)</span> 는 <span class="arithmatex">\(p_1, p_2, \dots, p_n\)</span> 와는 다른 소수라는 것을 알 수 있다. 그런데 이 결론은 소수가 유한개로써 <span class="arithmatex">\(p_1, p_2, \dots, p_n\)</span> 만 존재한다는 전제와 모순된다. 따라서 소수는 무한히 많다.</p>
+</li>
+</ul>
+<a href="#68f1c3019"><div class="admonition tldr" id="68f1c3019">
+<p>수학적 귀납법(mathematical induction) : 자연수 <span class="arithmatex">\(k\)</span> 에 대한 명제 <span class="arithmatex">\(p(k)\)</span> 이 <span class="arithmatex">\(n\)</span> 번째 명제를 표시한다고 하자. 이때 모든 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 아래 두 조건</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(n=1\)</span> 일 때 명제 <span class="arithmatex">\(p(1)\)</span> 이 성립한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(n=k-1\)</span> 일 때 명제 <span class="arithmatex">\(p(k-1)\)</span> 이 성립하면 <span class="arithmatex">\(n=k\)</span> 일 때도 명제 <span class="arithmatex">\(p(k)\)</span> 이 성립한다.</p>
+</li>
+</ol>
+<p>이 참이면, 명제 <span class="arithmatex">\(p(n)\)</span> 이 임의의 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 참이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 수학적 귀납법도 "<span class="arithmatex">\(p 이면 q 이다(p \to q)\)</span>" 형태이다. </p>
+</li>
+<li>
+<p>수학적 귀납법의 증명(귀류법)</p>
+<p>귀류법으로 증명하기 위하여 결론을 부정하여 명제 <span class="arithmatex">\(p(k)\)</span> 를 거짓이 되게 하는 자연수 <span class="arithmatex">\(k\)</span> 가 존재한다고 가정하자. 그리고 이 가정에 따라 생성된 집합 <span class="arithmatex">\(A\)</span> 를 </p>
+<div class="arithmatex">\[ A = \{자연수 m | p(m) 은 거짓명제\} \]</div>
+<p>로 정의하자. 가정에 따라 <span class="arithmatex">\(A\)</span> 는 공집합이 아니다.</p>
+<p><span class="arithmatex">\(A\)</span> 에 속한 원소 중 가장 작은 자연수를 <span class="arithmatex">\(n\)</span> 이라고 하자. 그렇다면 조건 1. 때문에 <span class="arithmatex">\(n \geq 2\)</span> 이다. 한편 <span class="arithmatex">\(n-1\)</span> 도 자연수인데 이것은 <span class="arithmatex">\(n\)</span> 보다 작기에 <span class="arithmatex">\(A\)</span> 에 속하지 않는다. 이에 따라 명제 <span class="arithmatex">\(p(n-1)\)</span> 는 참이다. </p>
+<p>그런데 조건 2. 로 때문에 명제 <span class="arithmatex">\(p(n-1)\)</span> 이 참이면 <span class="arithmatex">\(p(n)\)</span> 도 참이다. <span class="arithmatex">\(p(n)\)</span> 은 배중률로 인하여 반드시 참이거나 거짓이어야 하는데 참이면서 동시에 거짓이게 되었다. 따라서 이것은 공리에 위배되며 그 원인은 <span class="arithmatex">\(p(n)\)</span> 이 거짓이라는 가정 <span class="arithmatex">\(n \in A\)</span> 때문이다.</p>
+<p><span class="arithmatex">\(\therefore\)</span> 처음의 가정은 거짓이며 이로써 수학적 귀납법의 거짓을 주장하는 명제의 거짓이 증명되었다. </p>
+</li>
+<li>
+<p>일반적인 수학에서의 증명은 연역 논리에 의존한다. 그러나 귀납 논리로 수학 명제를 증명할 때도 있다. 귀납법이란 실존하는 모든 대상에 대하여 어떤 주장에 대한 반례가 없음을 보이는 것으로 자신의 주장이 참임을 증명하는 것이라고 이미 언급했다. 현실 세상에서는 이처럼 존재하는 모든 대상을 검증하여 주장하는 바가 참이라는 것을 증명할 수 없었다. 그러나 수학에서는 위와 같이 <strong>이전의 대상이 참이라면 그 다음 대상도 참이라는 관계를 증명하는 것으로 무한히 많은 대상일지라도 모두 참이라는 것을 증명할 수 있다.</strong></p>
+</li>
+</ul>
+<a href="#d70b9478e"><div class="admonition tldr" id="d70b9478e">
+<p>충분조건(sufficiency) : <span class="arithmatex">\(p \implies q\)</span> 이면 <span class="arithmatex">\(p\)</span> 는 <span class="arithmatex">\(q\)</span> 이기 위한 충분조건이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(P \subset Q\)</span> 이면 <span class="arithmatex">\(p \implies q\)</span> 이기 때문에 <span class="arithmatex">\(p\)</span> 를 참이 되게하는 진리집합 <span class="arithmatex">\(P\)</span> 가 <span class="arithmatex">\(q\)</span> 를 참이 되게하는 진리집합 <span class="arithmatex">\(Q\)</span> 에 속한다. 따라서 <span class="arithmatex">\(p\)</span> 가 참이라는 것이 보장되면 진리집합이 <span class="arithmatex">\(q\)</span> 를 참이 되게하는 진리집합에 포함되므로 <span class="arithmatex">\(q\)</span> 도 참이라는 것이 충분히 보장된다. 쉽게 말해 <span class="arithmatex">\(p \implies q\)</span> 는 "<span class="arithmatex">\(p\)</span> 이면 무조건 <span class="arithmatex">\(q\)</span> 이다" 라는 것이기 때문에 <span class="arithmatex">\(p\)</span> 는 <span class="arithmatex">\(q\)</span> 가 참이 되기 위한 충분한 조건을 이미 충족한다. 따라서 <span class="arithmatex">\(p \implies q\)</span> 일 때, <span class="arithmatex">\(p\)</span> 를 <span class="arithmatex">\(q\)</span> 이기 위한 충분조건이라고 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>명제 <span class="arithmatex">\(p:x^2-4=0\)</span> 는 명제 <span class="arithmatex">\(q:x^3-4x=0\)</span> 에 대하여 어떤 조건인가?</p>
+<p><span class="arithmatex">\(p : x^2-4=0 = (x+2)(x-2)\)</span> 에서 <span class="arithmatex">\(x=-2\)</span> 또는 <span class="arithmatex">\(x=2\)</span> 이므로 <span class="arithmatex">\(P=\{-2, 2\}\)</span> 이다. </p>
+<p>한편 <span class="arithmatex">\(q : x^3-4x=0 = x(x+2)(x-2)\)</span> 에서 <span class="arithmatex">\(x=0\)</span> 또는 <span class="arithmatex">\(x=-2\)</span> 또는 <span class="arithmatex">\(x=2\)</span> 이므로 <span class="arithmatex">\(Q=\{0, -2, 2\}\)</span> 이다. </p>
+<p>이때 각 명제의 진리집합 <span class="arithmatex">\(P, Q\)</span> 는 <span class="arithmatex">\(P \subset Q\)</span> 의 관계를 갖는다. 따라서 <span class="arithmatex">\(p\)</span> 는 <span class="arithmatex">\(q\)</span> 이기 위한 충분조건이다.</p>
+</li>
+</ul>
+<a href="#e4cc9cbfd"><div class="admonition tldr" id="e4cc9cbfd">
+<p>필요조건(necessity) : <span class="arithmatex">\(p \implies q\)</span> 이면 <span class="arithmatex">\(q\)</span> 는 <span class="arithmatex">\(p\)</span> 이기 위한 필요조건이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(P \subset Q\)</span> 이면 <span class="arithmatex">\(p \implies q\)</span> 이기 때문에 <span class="arithmatex">\(p\)</span> 를 참이 되게하는 진리집합 <span class="arithmatex">\(P\)</span> 가 <span class="arithmatex">\(q\)</span> 를 참이 되게하는 진리집합 <span class="arithmatex">\(Q\)</span> 에 속한다. 이는 <span class="arithmatex">\(q\)</span> 를 참이 되게 하는 진리집합이 반드시 <span class="arithmatex">\(p\)</span> 를 참이 되게 한다는 보장은 없지만 <span class="arithmatex">\(p\)</span> 를 참이 되게 하기 위해서는 필요하기는 한 조건임을 의미한다. 따라서 <span class="arithmatex">\(q\)</span> 를 <span class="arithmatex">\(p\)</span> 가 참이기 위한 필요조건이라 한다. (충분한 조건, 즉 충분 조건은 아닌 것이 <span class="arithmatex">\(q\)</span> 의 진리집합의 모든 원소가 <span class="arithmatex">\(p\)</span> 를 항상 만족하지 않기 때문이다.)</p>
+</li>
+<li>
+<p>예시 </p>
+<p>두 조건 <span class="arithmatex">\(p, q\)</span> 의 진리집합을 <span class="arithmatex">\(P, Q\)</span> 가 다음과 같이 정의되었을 때 명제 <span class="arithmatex">\(p\)</span> 는 명제 <span class="arithmatex">\(q\)</span> 에 대하여 어떤 조건일까? </p>
+<div class="arithmatex">\[P=\{x|x&lt;3\}, Q=\{x|-2 \leq x \leq 2\}\]</div>
+<p>두 진리집합 <span class="arithmatex">\(P, Q\)</span> 는 <span class="arithmatex">\(Q \subset P\)</span> 의 관계를 갖는다. 따라서 <span class="arithmatex">\(p\)</span> 는 <span class="arithmatex">\(q\)</span> 이기 위한 필요조건이다.</p>
+</li>
+</ul>
+<a href="#8fa571a67"><div class="admonition tldr" id="8fa571a67">
+<p>필요충분조건(necessity and sufficiency) : <span class="arithmatex">\(p \implies q\)</span> 이고 <span class="arithmatex">\(q \implies p\)</span> 이면 <span class="arithmatex">\(p\)</span> 는 <span class="arithmatex">\(q\)</span> 이기 위한 필요충분조건이다.</p>
+</div></a>
+<ul>
+<li>
+<p>필요충분조건을 <span class="arithmatex">\(p \iff q\)</span> 라고 나타낸다. </p>
+<ul>
+<li>또한 "if and only if" 로도 나타내고 줄임말로 "<span class="arithmatex">\(iff\)</span>" 로 나타낸다.</li>
+</ul>
+</li>
+<li>
+<p>필요충분조건은 두 명제의 진리집합이 동일함을 뜻하고 두 명제가 동치라는 것을 뜻한다. </p>
+</li>
+<li>
+<p>즉, <span class="arithmatex">\(P \subset Q\)</span> 이면 <span class="arithmatex">\(p \implies q\)</span> 이고 <span class="arithmatex">\(Q \subset P\)</span> 이면 <span class="arithmatex">\(q \implies p\)</span> 이므로 <span class="arithmatex">\(P=Q\)</span> 이며 이것을 <span class="arithmatex">\(p \iff q\)</span> 라고 표현한다.</p>
+</li>
+</ul>
+<a href="#577df5e7f"><div class="admonition tldr" id="577df5e7f">
+<p>수리 논리학의 논증 : 수리 논리학의 논증이란 특정한 명제 집합(전제)과 특정한 문장(결론)으로 구성된다.</p>
+</div></a>
+<ul>
+<li>
+<p>문자의 조합으로 이루어진 문장은 무수히 많고 그 문장으로 이루어진 논증 또한 무수히 많지만, 그 무한 논증 집합 중 일부만이 타당한 논증이다. </p>
+<ul>
+<li><strong>만약 무수히 많은 문장 경우의 수를 기계학습으로 학습할 수 있다면 타당한 논증을 컴퓨터에게 가르칠 수 있을까?</strong></li>
+</ul>
+</li>
+<li>
+<p>또한 그 타당성을 크게 의미론적 방식, 구문론적 방식으로 정의한다.</p>
+</li>
+</ul>
+<a href="#c7d923854"><div class="admonition tldr" id="c7d923854">
+<p>의미론적으로 타당한 논증 : 전제들이 모두 참일 경우 결론이 반드시 참인 논증이다.</p>
+</div></a>
+<ul>
+<li>
+<p>전제들이 모두 참인데도 결론이 거짓이면 그 논증은 부당한 논증이다. </p>
+</li>
+<li>
+<p>전제들이 모두 참이면서 결론이 참이라고 해서 논증이 타당한 것이 아니다. 전제가 모두 참이라면 결론이 반드시 참이어야 그 논증은 타당하다. </p>
+<ul>
+<li>
+<p>예시 (타당한 논증 )</p>
+<p>만약 소크라테스가 철학자라면, 소크라테스는 지혜를 사랑한다. 소크라테스는 철학자다. 따라서 소크라테스는 지혜를 사랑한다.</p>
+</li>
+<li>
+<p>예시 (타당하지 않는 논증 )</p>
+<p>소크라테스는 철학자다. 고래는 포유류다. 따라서 박지성은 축구선수다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>논증이 의미론적으로 타당할 경우 그 결론은 전제의 논리적 귀결이이라 한다. </p>
+<ul>
+<li>
+<p>결론 <span class="arithmatex">\(\phi\)</span> 가 전제의 전체집합 <span class="arithmatex">\(\Gamma\)</span> 의 논리적 귀결이라는 것을 <span class="arithmatex">\(\Gamma \models \phi\)</span> 으로 표현한다. </p>
+</li>
+<li>
+<p>전체집합 <span class="arithmatex">\(\Gamma\)</span> 가 공집합이면 논리적 귀결 <span class="arithmatex">\(\phi\)</span> 는 논리적 참이고 <span class="arithmatex">\(\models \phi\)</span> 로 표현한다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#d4232f7a3"><div class="admonition tldr" id="d4232f7a3">
+<p>구문론적으로 타당한 논증 : 전제나 결론의 참, 거짓을 따지지 않고 오직 주어진 추론규칙에 의거하여 전제들로부터 결론이 도출가능 또는 증명가능하면 타당하다고 보는 논증이다.</p>
+</div></a>
+<ul>
+<li>
+<p>전제나 결론의 참, 거짓을 모른채로 논증의 타당성을 따진다.</p>
+</li>
+<li>
+<p>결론 <span class="arithmatex">\(\phi\)</span> 가 집합 <span class="arithmatex">\(\Gamma\)</span> 로부터 도출가능하면 <span class="arithmatex">\(\Gamma \vdash \phi\)</span> 로 표현한다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>공리라고 불리는 일련의 명제와 전제의 전체 집합 <span class="arithmatex">\(\Gamma\)</span> 를 주어진 추론규칙을 적용하여 결론을 도출하는 연속된 문장들이다. </p>
+</li>
+</ul>
+<h3 id="_2">메타 정리<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<a href="#ee7b845d4"><div class="admonition tldr" id="ee7b845d4">
+<p>메타 정리 : 논리 체계 내부에 대한 정리가 아닌 논리 체계 그 자체를 다루는 정리이다.</p>
+</div></a>
+<ul>
+<li>
+<p>메타 정리들은 명제 논리와 1차 술어논리에서만 동시에 성립하며 2차 이상 논리체계에서는 동시에 성립할 수 없다.</p>
+</li>
+<li>
+<p>건전성, 완전성, 일관성(무모순성)이 동시에 성립하는 1차 술어논리는 가장 기초적인 논리 체계가 된다고 할 수 있다.</p>
+<ul>
+<li>따라서 지금까지도 수학의 기초로 활용된다.</li>
+</ul>
+</li>
+</ul>
+<a href="#30da9c13b"><div class="admonition tldr" id="30da9c13b">
+<p>메타 정리의 성질</p>
+</div></a>
+<ul>
+<li>
+<p>논리 체계의 건전성 : 문장집합 <span class="arithmatex">\(\Gamma\)</span> 로부터 명제 <span class="arithmatex">\(\phi\)</span> 가 도출되면 문장 <span class="arithmatex">\(\phi\)</span> 가 명제집합 <span class="arithmatex">\(\Gamma\)</span> 의 귀결이다.</p>
+<div class="arithmatex">\[ \Gamma \vdash \phi \implies \Gamma \models \phi\]</div>
+</li>
+<li>
+<p>논리 체계의 완전성 : 문장 <span class="arithmatex">\(\phi\)</span> 가 명제집합 <span class="arithmatex">\(\Gamma\)</span> 의 귀결이면 문장집합 <span class="arithmatex">\(\Gamma\)</span> 로부터 명제 <span class="arithmatex">\(\phi\)</span> 가 도출된다는 것이다.</p>
+<div class="arithmatex">\[ \Gamma \models \phi\implies \Gamma \vdash \phi \]</div>
+<ul>
+<li>
+<p>건정성과 완전성은 역 관계이며, 괴델의 완전성 정리에 의해 명제 논리와 1차 술어논리 체계에서 동치라는 것이 증명되었다. </p>
+</li>
+<li>
+<p>명제 논리와 1차 술어논리에서 모형이론적 진리와 증명이론적 진리는 서로 같다는 것이다. 즉 타당한 문장은 증명될 수 있고 증명될 수 있는 명제는 타당하다. </p>
+</li>
+</ul>
+<div class="arithmatex">\[ \Gamma \models \phi\iff  \Gamma \vdash \phi \]</div>
+</li>
+<li>
+<p>논리 체계의 일관성(무모순성) : 공집합으로부터 모순이 도출되지 않는다.</p>
+<div class="arithmatex">\[\emptyset \not\vdash \perp \]</div>
+<ul>
+<li>또한 표준 명제 논리와 1차 술어논리 체계는 일관적이고, 괴델의 완전성 정리에서 1차 논리가 일관성이 성립한다는 것이 증명되었다. </li>
+</ul>
+</li>
+<li>
+<p>콤팩트성 : 어떤 명제 <span class="arithmatex">\(\phi\)</span> 가 명제 집합 <span class="arithmatex">\(\Gamma\)</span> 의 귀결일 때, <span class="arithmatex">\(\Delta \models \phi\)</span> 를 만족시키는 <span class="arithmatex">\(\Gamma\)</span> 의 유한 부분집합 <span class="arithmatex">\(\Delta\)</span> 가 존재한다. </p>
+<ul>
+<li>
+<p>어떤 집합이 닫혀 있는 성질이라 할 수 있다. </p>
+</li>
+<li>
+<p>콤팩트성 정리에 따르면 논리 체계의 일관성은 콤팩트성과 동치이다. 콤팩트성이 성립하는 논리체계는 일관성(무모순성)이 성립하고 일관성(무모순성)이 성립하는 논리체계는 콤팩트성이 성립한다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>뢰벤하임-스콜렘 정리</p>
+</li>
+</ul>
+<p><strong>구체화 필요</strong></p>
+<ul>
+<li>괴델의 불완전성 정리 </li>
+</ul>
+<p><strong>구체화 필요</strong></p>
+<a href="#2e79ebd8d"><div class="admonition tldr" id="2e79ebd8d">
+<p>명제 논리 </p>
+<p><strong>구체화 필요</strong></p>
+</div></a>
+<a href="#b9f11897b"><div class="admonition tldr" id="b9f11897b">
+<p>양화 논리</p>
+</div></a>
+<ul>
+<li>1차 술어논리</li>
+</ul>
+<p><strong>구체화 필요</strong></p>
+<a href="#783e1a1a1"><div class="admonition tldr" id="783e1a1a1">
+<p>양상 논리</p>
+<p><strong>구체화 필요</strong></p>
+</div></a>
+<a href="#6188ad82e"><div class="admonition tldr" id="6188ad82e">
+<p>수리 논리학의 기호 </p>
+<table>
+<thead>
+<tr>
+<th align="center">언어</th>
+<th align="center">기호</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">그리고</td>
+<td align="center"><span class="arithmatex">\(\land\)</span></td>
+</tr>
+<tr>
+<td align="center">또는</td>
+<td align="center"><span class="arithmatex">\(\lor\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(A\)</span> 이면 <span class="arithmatex">\(B\)</span> 이다.</td>
+<td align="center"><span class="arithmatex">\(A \subset B, A \to B\)</span></td>
+</tr>
+<tr>
+<td align="center">아니다</td>
+<td align="center"><span class="arithmatex">\(\neg\)</span></td>
+</tr>
+</tbody>
+</table>
+</div></a>
+<a href="#b9b4b58b0"><div class="admonition tldr" id="b9b4b58b0">
+<p>추론 형식 </p>
+<table>
+<thead>
+<tr>
+<th align="center">형식</th>
+<th align="center">구조</th>
+<th align="center">추론</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">F1</td>
+<td align="center">전가언 3단논법</td>
+<td align="center">간접추론</td>
+</tr>
+<tr>
+<td align="center">F2</td>
+<td align="center">혼합가언 전건긍정 3단논법(대전제 가언, 소전제 정언 명제)</td>
+<td align="center">간접추론</td>
+</tr>
+<tr>
+<td align="center">F3</td>
+<td align="center">혼합가언 후건부정 3단논법(대전제 가언, 소전에 정언)</td>
+<td align="center">간접추론</td>
+</tr>
+<tr>
+<td align="center">F4</td>
+<td align="center">혼합선언 부정3단논법(대전제 선언 명제, 소전제 정언)</td>
+<td align="center">간접추론</td>
+</tr>
+<tr>
+<td align="center">F5</td>
+<td align="center">드모르간의 법칙</td>
+<td align="center">직접추론</td>
+</tr>
+<tr>
+<td align="center">F6</td>
+<td align="center">연언 명제</td>
+<td align="center">직접추론</td>
+</tr>
+<tr>
+<td align="center">F7</td>
+<td align="center">연언 명제의 분리</td>
+<td align="center">직접추론</td>
+</tr>
+<tr>
+<td align="center">F8</td>
+<td align="center">이중부정</td>
+<td align="center">직접추론</td>
+</tr>
+</tbody>
+</table>
+</div></a>
+<a href="#891dd0d78"><div class="admonition tldr" id="891dd0d78">
+<p>고전 논리학의 자연언어를 수학적 기호로 추상화시킨 예시</p>
+</div></a>
+<ul>
+<li>
+<p>전제1 - 만약 A가 B라면 C가 아니거나 D이다.</p>
+<p><span class="arithmatex">\(B \supset (-C \lor D)\)</span></p>
+</li>
+<li>
+<p>전제2 - A는 E이거나 또는 C이다.</p>
+<p><span class="arithmatex">\(E \land C\)</span></p>
+</li>
+<li>
+<p>전제3 - A는 B이다.</p>
+<p><span class="arithmatex">\(B\)</span></p>
+</li>
+<li>
+<p>전제4 - A는 D가 아니다.</p>
+<p><span class="arithmatex">\(-D\)</span></p>
+</li>
+<li>
+<p>결론1 - A는 C가 아니다.</p>
+<p><span class="arithmatex">\(-C\)</span></p>
+</li>
+<li>
+<p>결론2 - A는 E이다.</p>
+<p><span class="arithmatex">\(E\)</span></p>
+</li>
+<li>
+<p>이처럼 수리논리학은 자연언어를 수학 기호로 격하한 다음 타당성 검증에 사용되는 추론 형식을 적용하여 연역 논증을 자동으로 전제들로부터 참과 거짓인 결론을 이끌어낼 수 있다는 가능성을 보여준다.</p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

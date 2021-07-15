@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/lecture/20-2/cal2/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>역삼각함수 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              역삼각함수
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    역삼각함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    역삼각함수 미분
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hyperbolic-function">
+    쌍곡함수(hyperbolic function)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    쌍곡함수의 적분
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    역쌍곡함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    역쌍곡함수 미분
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    미분 방정식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    수열의 수렴
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    무한급수 수렴판정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    멱급수와 수렴반경
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    벡터
+  </a>
+<nav aria-label="벡터" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#n">
+    \(n\) 차원 공간
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    극좌표
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>역삼각함수</h1>
+<h2 id="_1">역삼각함수<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#ccbbd4b7c"><div class="admonition tldr" id="ccbbd4b7c">
+<p>역함수(inverse function) : 함수 <span class="arithmatex">\(f: A \to B\)</span> 에 대해 함수 <span class="arithmatex">\(g: B \to A\)</span> 가 있어서 <span class="arithmatex">\(\forall a \in A, g(f(a)) = a \land \forall \in B f(g(b)) = b\)</span> 이면 <span class="arithmatex">\(g\)</span> 를 <span class="arithmatex">\(f\)</span> 의 역함수라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(f\)</span> 의 역함수를 <span class="arithmatex">\(f ^{-1}\)</span> 라고 표시한다.</p>
+</li>
+<li>
+<p>어떤 함수가 역함수를 가지려면 일대일 대응이어야 한다. </p>
+</li>
+</ul>
+<a href="#49539343e"><div class="admonition tldr" id="49539343e">
+<p>역사인함수(arcsine) : 정의역 <span class="arithmatex">\(\bigg [- \dfrac{\pi }{2}, \dfrac{\pi }{2}\bigg ]\)</span> 을 갖는 사인함수 <span class="arithmatex">\(f:\bigg [-\dfrac{\pi }{2},\dfrac{\pi }{2}\bigg ] \to [-1, 1], x \mapsto \sin x\)</span> 의 역함수 </p>
+<div class="arithmatex">\[f ^{-1}: [-1, 1] \to \bigg [- \dfrac{\pi }{2}, \dfrac{\pi }{2}\bigg ], x \mapsto \arcsin x = \sin ^{-1}x\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>역함수는 일대일 대응이므로 특별한 언급이 없는 한 역사인함수를 정의하기 위하여 사인함수의 정의역을 <span class="arithmatex">\(\bigg [- \dfrac{\pi }{2}, \dfrac{\pi }{2}\bigg ]\)</span> 로 한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \arcsin 1 = \dfrac{\pi }{2}, \sin ^{-1} \dfrac{1}{2} = \dfrac{\pi }{6} \]</div>
+</li>
+</ul>
+<a href="#ebb3deb86"><div class="admonition tldr" id="ebb3deb86">
+<p>역코사인함수(arccosine) : 정의역 <span class="arithmatex">\([0, \pi]\)</span> 을 갖는 코사인함수 <span class="arithmatex">\(y = f(x) = \cos x\)</span> 의 역함수 </p>
+<div class="arithmatex">\[f ^{-1}: [-1, 1] \to [0, \pi], x \mapsto \arccos x = \cos ^{-1}x\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>다음 그림을 보자.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Arcsine_Arccosine.svg/252px-Arcsine_Arccosine.svg.png"/></p>
+</li>
+</ul>
+<a href="#ac6fd6001"><div class="admonition tldr" id="ac6fd6001">
+<p>역탄젠트함수(arctangent) : 정의역 <span class="arithmatex">\(\bigg (-\dfrac{\pi }{2}, \dfrac{\pi }{2}\bigg )\)</span> 을 갖는 탄젠트함수 <span class="arithmatex">\(y = f(x) = \tan x\)</span> 의 역함수 </p>
+<div class="arithmatex">\[f ^{-1}: \R \to \bigg (-\dfrac{\pi }{2}, \dfrac{\pi }{2}\bigg ), x \mapsto \arctan x = \tan ^{-1}x\]</div>
+<p>이다.</p>
+</div></a>
+<a href="#851c98e73"><div class="admonition tldr" id="851c98e73">
+<p>역코탄젠트함수(arccotangent) : 정의역 <span class="arithmatex">\([0, \pi]\)</span> 을 갖는 코탄젠트함수 <span class="arithmatex">\(y = f(x) = \cot x\)</span> 의 역함수 </p>
+<div class="arithmatex">\[ f ^{-1}: \R \to (0, \pi), x \mapsto \operatorname{arccot} x = \cot ^{-1} x \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>다음 그림을 보자.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Arctangent_Arccotangent.svg/441px-Arctangent_Arccotangent.svg.png"/></p>
+</li>
+</ul>
+<a href="#35cde9d18"><div class="admonition tldr" id="35cde9d18">
+<p>역시컨트함수(arcsecant) : 시컨트함수 <span class="arithmatex">\(y = f(x) = \sec x\)</span> 의 역함수 </p>
+<div class="arithmatex">\[ f ^{-1}: (\infty, -1] \cup [1, \infty) \to \bigg [- \dfrac{\pi }{2}, 0 \bigg ) \cup \bigg (0,\dfrac{\pi }{2}\bigg], x \mapsto \operatorname{arcsec} x = \sec ^{-1} x \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#357e1e9d4"><div class="admonition tldr" id="357e1e9d4">
+<p>역코시컨트함수(arcsecant) : 코시컨트함수 <span class="arithmatex">\(y = f(x) = \csc x\)</span> 의 역함수 </p>
+<div class="arithmatex">\[ f ^{-1}: (\infty, -1] \cup [1, \infty) \to \bigg [0, - \dfrac{\pi }{2}\bigg ) \cup \bigg (\dfrac{\pi }{2}, \pi \bigg], x \mapsto \operatorname{arccsc} x = \csc ^{-1} x \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>다음 그림을 보자.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Arcsecant_Arccosecant.svg/441px-Arcsecant_Arccosecant.svg.png"/></p>
+</li>
+</ul>
+<h2 id="_2">역삼각함수 미분<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<a href="#ff32a3874"><div class="admonition tldr" id="ff32a3874">
+<p>역사인함수의 미분 : <span class="arithmatex">\(y = \arcsin x\)</span> 의 미분은 </p>
+<div class="arithmatex">\[ (\arcsin x)' = \dfrac{1}{\sqrt[]{1-x ^{2}}} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p>함수 <span class="arithmatex">\(y = \arcsin x\)</span> 에 대하여 <span class="arithmatex">\(\sin y = \sin (\arcsin x) = x\)</span> 이다. 양변을 <span class="arithmatex">\(x\)</span> 로 미분하면 합성함수의 미분에 의하여 </p>
+<div class="arithmatex">\[ \cos y \dfrac{dy}{dx} = 1 \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(\cos y \neq 0\)</span> 일 때 </p>
+<div class="arithmatex">\[ \dfrac{dy}{dx} = \dfrac{1}{\cos y} = \dfrac{1}{\pm \sqrt[]{1 - \sin ^{2}y}} = \dfrac{1}{\pm \sqrt[]{1- x ^{2}}}   \]</div>
+<p>이다. 그런데 <span class="arithmatex">\(y = \arcsin x\)</span> 의 치역이 <span class="arithmatex">\(- \pi /2 \leq y \leq \pi /2\)</span> 이므로 <span class="arithmatex">\(\cos y \geq 0\)</span> 이다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore \dfrac{d}{dx}\arcsin x = \dfrac{1}{\pm \sqrt[]{1- x ^{2}}} , |x| &lt; 1\]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#c4cda5cde"><div class="admonition tldr" id="c4cda5cde">
+<p>역코사인함수의 미분 : <span class="arithmatex">\(y = \arccos x\)</span> 의 미분은 </p>
+<div class="arithmatex">\[ (\arccos x)' = - \dfrac{1}{\sqrt[]{1-x ^{2}}} \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#d1e032992"><div class="admonition tldr" id="d1e032992">
+<p>역탄젠트함수의 미분 : <span class="arithmatex">\(y = \arctan x\)</span> 의 미분은 </p>
+<div class="arithmatex">\[ (\arctan x)' = \dfrac{1}{\sqrt[]{1+x ^{2}}} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[ y = \arctan x \implies \tan y = x \]</div>
+<div class="arithmatex">\[ \implies \dfrac{d \tan y}{dx} = \sec ^{2}y \dfrac{dy}{dx}=1 \]</div>
+<div class="arithmatex">\[ \therefore \dfrac{dy}{dx} = \dfrac{1}{\sec ^{2}y} = \dfrac{1}{1+x ^{2}} \]</div>
+</li>
+</ul>
+<a href="#b8ed6ba9b"><div class="admonition tldr" id="b8ed6ba9b">
+<p>역코탄젠트함수의 미분 : <span class="arithmatex">\(y = \operatorname{arccot}  x\)</span> 의 미분은 </p>
+<div class="arithmatex">\[ (\operatorname{arccot}  x)' = -\dfrac{1}{\sqrt[]{1+x ^{2}}} \]</div>
+<p>이다.</p>
+</div></a>
+<h2 id="hyperbolic-function">쌍곡함수(hyperbolic function)<a class="headerlink" href="#hyperbolic-function" title="Permanent link">¶</a></h2>
+<a href="#01687c892"><div class="admonition tldr" id="01687c892">
+<p>쌍곡사인함수(hyperbolic sine) : <span class="arithmatex">\(\sinh x = \dfrac{e ^{x} - e ^{-x}}{2}\)</span></p>
+</div></a>
+<a href="#5e0c2b7d5"><div class="admonition tldr" id="5e0c2b7d5">
+<p>쌍곡코사인함수(hyperbolic cosine) : <span class="arithmatex">\(\cosh x = \dfrac{e ^{x} + e ^{-x}}{2}\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>쌍곡함수를 <span class="arithmatex">\(x = \cosh u, y = \sinh u\)</span> 로 두면</p>
+<div class="arithmatex">\[ x ^{2} - y ^{2} = \cosh ^{2}u - \sinh ^{2}u = \dfrac{1}{4}(e ^{2u} + 2 + e ^{-2u}) - \dfrac{1}{4}(e ^{2u} - 2 + e ^{-2u}) =  1 \]</div>
+<p>이 되어 쌍곡선에 대한 적절한 매개화(parametrization) 이 가능하게 되어 쌍곡 함수라는 이름이 붙었다.</p>
+<p>다음 그래프는 쌍곡선을 이루는 <span class="arithmatex">\(x ^{2} - y ^{2} = 1\)</span> 의 그래프이다.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Hyperbolic_functions-2.svg/465px-Hyperbolic_functions-2.svg.png"/></p>
+</li>
+</ul>
+<a href="#93a84e8a1"><div class="admonition tldr" id="93a84e8a1">
+<p>쌍곡탄젠트함수(hyperbolic tangent) : <span class="arithmatex">\(\tanh x = \dfrac{\sinh x}{\cosh x} = \dfrac{e ^{x} - e ^{-x}}{e ^{x}+e ^{-x}}\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>그래프 </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Sinh_cosh_tanh.svg/450px-Sinh_cosh_tanh.svg.png"/></p>
+</li>
+</ul>
+<a href="#7c4aa2883"><div class="admonition tldr" id="7c4aa2883">
+<p>쌍곡코시컨트함수(hyperbolic cosecant) : <span class="arithmatex">\(\operatorname{csch} x = \dfrac{1}{\sinh x} = \dfrac{2}{e ^{x} - e ^{-x}}\)</span></p>
+</div></a>
+<a href="#2949f1916"><div class="admonition tldr" id="2949f1916">
+<p>쌍곡시컨트함수(hyperbolic secant) : <span class="arithmatex">\(\operatorname{sech} x = \dfrac{1}{\cosh x} = \dfrac{2}{e ^{x} + e ^{-x}}\)</span></p>
+</div></a>
+<a href="#c4c5ebe8d"><div class="admonition tldr" id="c4c5ebe8d">
+<p>쌍곡코탄젠트함수(hyperbolic cotangent) : <span class="arithmatex">\(\coth  x = \dfrac{\cosh  x}{\sinh  x} = \dfrac{e ^{x} + e ^{-x}}{e ^{x}-e ^{-x}}\)</span></p>
+</div></a>
+<a href="#c05b418e0"><div class="admonition tldr" id="c05b418e0">
+<p>쌍곡함수 성질 : 쌍곡함수에 관해 다음 성질이 성립한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\cosh ^{x} - \sinh ^{2}x = 1\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(1 - \tanh ^{2} = \operatorname{sech} ^{2}x\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\coth ^{2}x -1 = \operatorname{csch} ^{2}x\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\cosh x\)</span> 는 짝함수이다.</p>
+<div class="arithmatex">\[ \because \cosh (-x) = \dfrac{e ^{-x} + e ^{-(-x)}}{2} = \dfrac{e ^{-x} + e ^{x}}{2} = \cosh x \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(\sinh x\)</span> 는 홀함수이다.</p>
+<div class="arithmatex">\[ \because \sinh (-x) = \dfrac{e ^{-x} - e ^{-(-x)}}{2} = - \bigg (\dfrac{e ^{-x} - e ^{x}}{2}\bigg ) = -\sinh x \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(\sinh (x+y) = \sinh x \cosh y + \cosh x \sinh y \implies  \sinh 2x = 2 \sinh x \cosh x\)</span></p>
+<div class="arithmatex">\[ \because \sinh x \cosh y + \cosh x \sinh y = \dfrac{e ^{x}-e ^{-x}}{2}\dfrac{e ^{y}+e ^{-y}}{2} +  \dfrac{e ^{x}+e ^{-x}}{2}\dfrac{e ^{y}-e ^{-y}}{2} \]</div>
+<div class="arithmatex">\[ = \dfrac{1}{4}(e ^{x+y}+e ^{x-y}-e ^{-x+y}- e ^{-x-y} + e ^{x+y}-e ^{x-y}+e ^{-x+y} - e ^{-x-y}) \]</div>
+<div class="arithmatex">\[ \dfrac{2}{4}(e ^{x+y} - e ^{-(x+y)}) = \sinh (x+y) \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(\cosh  (x+y) = \cosh  x \cosh y + \sinh  x \sinh y \implies  \cosh  2x = \cosh ^{2} x + \sinh ^{2} x\)</span></p>
+</li>
+</ul>
+<a href="#1a30254ab"><div class="admonition tldr" id="1a30254ab">
+<p>쌍곡사인함수의 미분 : <span class="arithmatex">\((\sinh x)' = \cosh x\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<div class="arithmatex">\[\dfrac{d}{dx}\sinh x = \dfrac{d}{dx} \dfrac{e ^{x}-e ^{-x}}{2} = \dfrac{e ^{x} + e ^{-x}}{2} = \cosh x\]</div>
+</li>
+</ul>
+<a href="#9d5b1d668"><div class="admonition tldr" id="9d5b1d668">
+<p>쌍곡코사인함수의 미분 : <span class="arithmatex">\((\cosh x)' = \sinh x\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<div class="arithmatex">\[\dfrac{d}{dx}\cosh x = \dfrac{d}{dx} \dfrac{e ^{x}+e ^{-x}}{2} = \dfrac{e ^{x} - e ^{-x}}{2} = \sinh x\]</div>
+</li>
+</ul>
+<a href="#4c14bd9c8"><div class="admonition tldr" id="4c14bd9c8">
+<p>쌍곡탄젠트함수의 미분 : <span class="arithmatex">\((\tanh  x)' = \operatorname{sech} ^{2} x\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<div class="arithmatex">\[\dfrac{d}{dx}\tanh  x = \dfrac{d}{dx} \dfrac{\sinh x}{\cosh x} = \dfrac{\cosh x \cosh x - \sinh x \sinh x}{\cosh ^{2}x} = \operatorname{sech} ^{2} x\]</div>
+</li>
+</ul>
+<h2 id="_3">쌍곡함수의 적분<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<a href="#0cdd22853"><div class="admonition tldr" id="0cdd22853">
+<p>쌍곡사인함수의 부정적분 : <span class="arithmatex">\(\displaystyle \int_{}^{}\sinh x dx = \cosh x + C\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \int_{}^{}\sinh ^{2}xdx = \int_{}^{}\bigg (\dfrac{e ^{x} - e ^{-x}}{2}\bigg )^{2}dx = \int_{}^{}\dfrac{e ^{2x} + e ^{-2x} -2}{4}dx \]</div>
+<div class="arithmatex">\[ \dfrac{1}{8} ( e ^{2x} - e ^{-2x}) - \dfrac{1}{2}x + C = \dfrac{\sinh 2x}{4} - \dfrac{x}{2} + C \]</div>
+</li>
+</ul>
+<a href="#b496f8794"><div class="admonition tldr" id="b496f8794">
+<p>쌍곡코사인함수의 부정적분 : <span class="arithmatex">\(\displaystyle \int_{}^{}\cosh  x dx = \sinh x + C\)</span></p>
+</div></a>
+<a href="#65d9a36cf"><div class="admonition tldr" id="65d9a36cf">
+<p>쌍곡탄젠트함수의 부정적분 : <span class="arithmatex">\(\displaystyle \int_{}^{}\tanh xdx = \ln (\cosh x) + C\)</span></p>
+</div></a>
+<a href="#b05b62b23"><div class="admonition tldr" id="b05b62b23">
+<p>쌍곡시컨트 제곱함수의 부정적분 : <span class="arithmatex">\(\displaystyle \int_{}^{}\operatorname{sech} ^{2} x dx = \tanh  x + C\)</span></p>
+</div></a>
+<a href="#0971bfb0a"><div class="admonition tldr" id="0971bfb0a">
+<p>쌍곡코탄젠트함수의 부정적분 : <span class="arithmatex">\(\displaystyle \int_{}^{}\operatorname{coth} x dx = \ln |\sinh x|+ C\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\int_{}^{}\coth x dx = \int_{}^{}\dfrac{\cosh x}{\sinh x}dx\)</span> 이므로 <span class="arithmatex">\(u = \sinh x, du = \cosh x dx\)</span> 로 두면</p>
+<div class="arithmatex">\[ \therefore \int_{}^{}\dfrac{du}{u} = ln|u| + C = \ln |\sinh x|+C \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<h2 id="_4">역쌍곡함수<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<a href="#e2fa1dd5a"><div class="admonition tldr" id="e2fa1dd5a">
+<p>역쌍곡사인함수 : 쌍곡사인함수 <span class="arithmatex">\(y = \sinh x\)</span> 의 역함수는</p>
+<div class="arithmatex">\[ y = \sinh ^{-1} x = \ln (x + \sqrt[]{x ^{2} + 1}) \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(y = \sinh x\)</span> 는 일대일 대응이므로 역함수를 갖는다.</p>
+</li>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(y = \sinh ^{-1} x\)</span> 에서 <span class="arithmatex">\(\sinh y = x\)</span> 이므로 <span class="arithmatex">\(\sinh y = \dfrac{e ^{y} - e ^{-y}}{2} = x\)</span> 을 얻는다. 양변에 <span class="arithmatex">\(2 e ^{y}\)</span> 를 곱하여</p>
+<div class="arithmatex">\[ e ^{2y} - 2x e ^{y} - 1 = 0 \]</div>
+<p>를 얻고 이에 따라 </p>
+<div class="arithmatex">\[ e ^{y} = \dfrac{2x \pm \sqrt[]{4 x ^{2} + 4}}{2} = x \pm \sqrt[]{x ^{2} + 1} \]</div>
+<p>을 얻는데, <span class="arithmatex">\(e ^{y}\)</span> 는 항상 양수이므로 </p>
+<div class="arithmatex">\[ e ^{y} = x + \sqrt[]{x ^{2} + 1} \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore y = \ln (x + \sqrt[]{x ^{2} + 1}) \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#e2fb6aee8"><div class="admonition tldr" id="e2fb6aee8">
+<p>역쌍곡코사인함수 : 쌍곡코사인함수 <span class="arithmatex">\(y = \cosh x\)</span> 의 역함수는 정의역 <span class="arithmatex">\(x \geq 1\)</span> 에서</p>
+<div class="arithmatex">\[ y = \cosh ^{-1} x = \ln (x + \sqrt[]{x ^{2} - 1}) \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(y = \cosh ^{-1} x\)</span> 에서 <span class="arithmatex">\(\cosh y = x\)</span> 이므로 <span class="arithmatex">\(\cosh y = \dfrac{e ^{y} + e ^{-y}}{2} = x\)</span> 을 얻는다. 양변에 <span class="arithmatex">\(2 e ^{y}\)</span> 를 곱하여</p>
+<div class="arithmatex">\[ e ^{2y} - 2x e ^{y} + 1 = 0 \]</div>
+<p>를 얻고 이에 따라 </p>
+<div class="arithmatex">\[ e ^{y} = \dfrac{2x \pm \sqrt[]{4 x ^{2} - 4}}{2} = x \pm \sqrt[]{x ^{2} - 1} \qquad (x \geq 1) \]</div>
+<p>을 얻는다. 이때 <span class="arithmatex">\(y \geq 0\)</span> 이므로 <span class="arithmatex">\(e ^{y} \geq 1\)</span> 인데 <span class="arithmatex">\(x &gt; 1\)</span> 일 때 <span class="arithmatex">\(x - \sqrt[]{x ^{2} - 1}\)</span> 이므로</p>
+<div class="arithmatex">\[ e ^{y} = x + \sqrt[]{x ^{2} - 1} \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore y = \ln (x + \sqrt[]{x ^{2} - 1}) \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#67ec150c2"><div class="admonition tldr" id="67ec150c2">
+<p>역쌍곡탄젠트함수 : 쌍곡탄젠트함수 <span class="arithmatex">\(y = \tanh x\)</span> 의 역함수는 정의역 <span class="arithmatex">\(|x| &lt; 1\)</span> 에서</p>
+<div class="arithmatex">\[ y = \tanh ^{-1} x = \dfrac{1}{2} \ln \dfrac{1+x}{1-x} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(-1 &lt; \tanh y &lt; 1\)</span> 이므로 <span class="arithmatex">\(|x| &lt; 1\)</span> 이다. <span class="arithmatex">\(\tanh y = \dfrac{e ^{y} - e ^{-y}}{e ^{y} + e ^{-y}} = x\)</span> 에 <span class="arithmatex">\(e ^{y}\)</span> 를 곱하면</p>
+<div class="arithmatex">\[ \dfrac{e ^{2y} - 1}{e ^{2y} + 1} = x \]</div>
+<p>을 얻는다. 이로부터</p>
+<div class="arithmatex">\[ e ^{2y} - 1 = x e ^{2y} + x \implies (1 - x) e ^{2y} = x + 1 \implies e ^{2y} = \dfrac{1+x}{1-x} \]</div>
+<div class="arithmatex">\[ \therefore y = \dfrac{1}{2}\ln \bigg (\dfrac{1+x}{1-x}\bigg ) \quad (|x| &lt; 1) \]</div>
+<p>을 얻는다.</p>
+</li>
+</ul>
+<h2 id="_5">역쌍곡함수 미분<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<a href="#5462e9169"><div class="admonition tldr" id="5462e9169">
+<p>역쌍곡사인함수 미분 : <span class="arithmatex">\(\displaystyle \frac{d}{dx} (\sinh ^{-1} x) = \dfrac{1}{\sqrt[]{x^2 + 1}}\)</span></p>
+</div></a>
+<ul>
+<li>역쌍곡함수들의 미분은 로그함수를 이용한 역함수 표현법을 사용하면 쉽게 구할 수 있다.</li>
+</ul>
+<a href="#83a5df774"><div class="admonition tldr" id="83a5df774">
+<p>역쌍곡코사인함수 미분 : <span class="arithmatex">\(\displaystyle \frac{d}{dx} (\cosh ^{-1} x) = \dfrac{1}{\sqrt[]{x ^{2} -1 }} \quad (x &gt; 1)\)</span></p>
+</div></a>
+<a href="#9950680cf"><div class="admonition tldr" id="9950680cf">
+<p>역쌍곡탄젠트함수 미분 : <span class="arithmatex">\(\displaystyle \frac{d}{dx} (\tanh ^{-1} x) = \dfrac{1}{1 - x ^{2}} \quad (|x| &lt; 1)\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<div class="arithmatex">\[ \frac{d}{dx}  (\tanh ^{-1} x) = \dfrac{1}{2}\dfrac{d}{dx} (\ln (1+x) - \ln (1-x)) = \dfrac{1}{2} \bigg (\dfrac{1}{1+x}+\dfrac{1}{1-x}\bigg ) \]</div>
+<div class="arithmatex">\[ \dfrac{1}{2}\bigg (\dfrac{2}{1 - x ^{2}}\bigg ) = \dfrac{1}{1-x ^{2}} \]</div>
+</li>
+</ul>
+<a href="#a8c0627b7"><div class="admonition tldr" id="a8c0627b7">
+<p>역쌍곡코탄젠트함수 미분 : <span class="arithmatex">\(\displaystyle \frac{d}{dx} (\coth ^{-1} x) = \dfrac{1}{1 - x ^{2}} \quad (|x| &gt; 1)\)</span></p>
+</div></a>
+<a href="#37ebdcd49"><div class="admonition tldr" id="37ebdcd49">
+<p>역쌍곡시컨트함수 미분 : <span class="arithmatex">\(\displaystyle \frac{d}{dx} (\operatorname{sech} ^{-1} x) = \dfrac{1}{x \sqrt[]{1 - x ^{2}} } \quad (0 &lt; x &lt; 1)\)</span></p>
+</div></a>
+<a href="#5be87382e"><div class="admonition tldr" id="5be87382e">
+<p>역쌍곡코시컨트함수 미분 : <span class="arithmatex">\(\displaystyle \frac{d}{dx} (\operatorname{csch} ^{-1} x) = \dfrac{1}{|x| \sqrt[]{1 + x ^{2}} } \quad (x \neq 0)\)</span></p>
+</div></a>
+<h2 id="_6">미분 방정식<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<a href="#b35cfa2f9"><div class="admonition tldr" id="b35cfa2f9">
+<p>미분 방정식 : 미분이 들어간 방정식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p><span class="arithmatex">\(\dfrac{dy}{dx} = e ^{x}\)</span> 는 미분이 들어간 방정식이다. 이 방정식을 푼다는 것은 <span class="arithmatex">\(y\)</span> 가 무엇인지 구하는 것이다. 따라서 적분을 하면 미분방정식의 해 <span class="arithmatex">\(y = e ^{x} + C\)</span> 를 얻는다.</p>
+<p><span class="arithmatex">\(\dfrac{dy}{dt} = \sinh t\)</span> 는 변수 <span class="arithmatex">\(t\)</span> 에 대한 미분방정식이다. 이 방정식을 풀면 미분방정식의 해 <span class="arithmatex">\(y = \cosh t + C\)</span> 를 얻는다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\dfrac{dy}{dt} = 3y\)</span> 의 해는 <span class="arithmatex">\(y = e ^{3t}\)</span> 가 될 수도 있고, <span class="arithmatex">\(y = 5e ^{3t}\)</span> 가 될 수도 있다. 그러므로 이 해들을 일반적으로 <span class="arithmatex">\(y = C e ^{3t}\)</span> 라고 표현하고 이것을 일반해라고 한다.</p>
+<p>이때 초깃값을 가령 <span class="arithmatex">\(y(0) = 1\)</span> 로 주면 <span class="arithmatex">\(y(0) = C e ^{0} = C\)</span> 가 되어 <span class="arithmatex">\(C = 1\)</span> 을 얻는다. 이렇게 초깃값이 주어지면 초깃값 문제라고 한다.</p>
+<p>이 미분방정식을 적분을 통하여 풀 수도 있다. 좌변에 모두 <span class="arithmatex">\(y\)</span> 가 있게 하고 우변에 모두 독립변수 <span class="arithmatex">\(t\)</span> 가 있게 하면</p>
+<div class="arithmatex">\[ \dfrac{dy}{dt} = 3y \iff \dfrac{1}{y}dy = 3dt \]</div>
+<p>인데, 좌변과 우변을 적분하면 </p>
+<div class="arithmatex">\[ \int_{}^{}\dfrac{1}{y}dy = \int_{}^{}3dt \iff \ln |y| = 3t + C\]</div>
+<p>를 얻는다. 명시하지는 않았지만 이 미분방정식은 인구 비례 형태를 나타내는 것이므로 <span class="arithmatex">\(y\)</span> 가 양수이다. 따라서 </p>
+<div class="arithmatex">\[ \ln y = 3t + C \iff y = e ^{3t + C} = e ^{C} \cdot e ^{3t} \]</div>
+<p>을 얻는데 <span class="arithmatex">\(e ^{C}\)</span> 는 상수이므로 그냥 <span class="arithmatex">\(C\)</span> 로 표현하면 </p>
+<div class="arithmatex">\[ \therefore  y = C e ^{3t} \]</div>
+<p>를 얻는다.</p>
+</li>
+</ul>
+<a href="#b27bc2e2a"><div class="admonition tldr" id="b27bc2e2a">
+<p>1계 미분방정식 : <span class="arithmatex">\(\dfrac{dy}{dt} = y'\)</span> 로 두었을 때 방정식에 <span class="arithmatex">\(y', y\)</span> 가 있는 방정식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(10 + t ^{2}\sin t + e ^{t}y' = 0\)</span> 은 1계 미분방정식이다.</p>
+</li>
+</ul>
+<a href="#ec0c3f405"><div class="admonition tldr" id="ec0c3f405">
+<p>2계 미분방정식 : <span class="arithmatex">\(\bigg (\dfrac{d ^{2}y}{d t ^{2}}, \dfrac{dy}{dt}, y\bigg ) = (y'', y', y)\)</span> 로 두었을 때 방정식에 <span class="arithmatex">\(y'',y',y\)</span> 가 있는 방정식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\((\ln t) ^{2}y + y' + y'' = 3\)</span> 은 2계 미분방정식이다.</p>
+</li>
+</ul>
+<a href="#0e72c7029"><div class="admonition tldr" id="0e72c7029">
+<p>선형 1계 미분방정식 : <span class="arithmatex">\(y', y\)</span> 와 <span class="arithmatex">\(t\)</span> 에 대한 함수 <span class="arithmatex">\(A(t), B(t), C(t)\)</span> 대하여 1차식 </p>
+<div class="arithmatex">\[ A(t) y' + B(t) y + C(t) = 0 \]</div>
+<p>꼴로 주어진 미분방정식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>보통 <span class="arithmatex">\(A(t) y' + B(t) y + C(t) = 0\)</span> 꼴을 편의상 <span class="arithmatex">\(y' + P(t) y = Q(t)\)</span> 로 고쳐서 사용한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>1계 선형 미분방정식 <span class="arithmatex">\(y' = \dfrac{1}{t} y = t \quad (t&gt; 0)\)</span> 를 풀어보자.</p>
+<div class="arithmatex">\[ ty' + y = t ^{2} \]</div>
+</li>
+</ul>
+<a href="#568402e64"><div class="admonition tldr" id="568402e64">
+<p>1계 미분방정식의 해 : 미분방정식 <span class="arithmatex">\(\dfrac{dy}{dt} + P(t)y = Q(t)\)</span> 에 대하여 적분인자(integrating factor) </p>
+<div class="arithmatex">\[ \mu = \pm e ^{\int_{}^{}P(t)dt} \]</div>
+<p>를 양변에 곱하면 미분방정식의 해를 간단히 구할 수 있다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p>미분방정식 <span class="arithmatex">\(\dfrac{dy}{dt} + \dfrac{1}{t}y = t \quad (t &gt; 0)\)</span> 의 일반해를 구해보자. 양변에 <span class="arithmatex">\(t\)</span> 를 곱하면 </p>
+<div class="arithmatex">\[ t \dfrac{dy}{dt} + y = t ^{2} \]</div>
+<p>이다. 이때 좌변은 <span class="arithmatex">\(ty\)</span> 를 <span class="arithmatex">\(t\)</span> 에 대하여 합성함수의 미분한 결과</p>
+<div class="arithmatex">\[ \dfrac{d}{dt}(ty) = t'y + ty' = y + t \dfrac{dy}{dt} = t \dfrac{dy}{dt} + y \]</div>
+<p>와 같다. 그러므로 미분방정식을 </p>
+<div class="arithmatex">\[ \dfrac{d}{dt}(ty) = t ^{2} \]</div>
+<p>로 쓸 수 있다. 이때 양변을 <span class="arithmatex">\(t\)</span> 에 대하여 적분하면</p>
+<div class="arithmatex">\[ \int_{}^{}\dfrac{d}{dt}(ty) dt = \int_{}^{} t ^{2}dt \]</div>
+<div class="arithmatex">\[ \iff ty = \dfrac{1}{3}t ^{3} + C \]</div>
+<p>를 얻는다. 따라서 일반해는</p>
+<div class="arithmatex">\[ \therefore \dfrac{1}{3}t ^{2} + \dfrac{C}{t} \quad (t &gt; 0) \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p>1계 미분방정식 </p>
+<div class="arithmatex">\[\dfrac{dy}{dt} + P(t)y = Q(t)\]</div>
+<p>의 해를 구하는 방법을 살펴보자. 먼저 위 예시로 우리가 알 수 있는 것은 미분방정식에 적당한 함수 <span class="arithmatex">\(\mu (t)\)</span> 를 곱하면 좌변이 어떤 함수의 미분 꼴이 되어 양변을 적분하여 간단히 해를 구할 수 있게 된다는 것이다. 이것을 식으로 표현하면 </p>
+<div class="arithmatex">\[ \mu (t) \bigg (\dfrac{dy}{dt} + P(t)y\bigg ) = \mu (t)Q(t) \]</div>
+<p>인데, 우리가 원하는 것은 결과적으로 </p>
+<div class="arithmatex">\[ \mu (t) \bigg (\dfrac{dy}{dt} + P(t)y\bigg ) = \dfrac{d}{dt}(\mu (t) y) \]</div>
+<p>이 되는 <span class="arithmatex">\(\mu (t)\)</span> 이다. 이 식을 전개해보면</p>
+<div class="arithmatex">\[ \iff \mu y' + \mu P(t)y = \mu y' + \mu ' y \]</div>
+<div class="arithmatex">\[ \iff \mu P(t) y = \mu ' y \iff \mu ' = \mu P(t) \]</div>
+<div class="arithmatex">\[ \iff \dfrac{d \mu }{dt} = \mu P(t) \iff \dfrac{1}{\mu }d \mu = P(t) dt \]</div>
+<p>이다. 이것을 그대로 적분하면</p>
+<div class="arithmatex">\[ \int_{}^{}\dfrac{1}{\mu }d \mu = \int_{}^{}P(t)dt \]</div>
+<div class="arithmatex">\[ \ln |\mu | = \int_{}^{}P(t)dt \]</div>
+<div class="arithmatex">\[ \therefore \mu = \pm e ^{\int_{}^{}P(t)dt} \]</div>
+<p>를 얻는다.</p>
+<p>즉, 1계 선형 미분방정식에서 <span class="arithmatex">\(y\)</span> 의 계수인 함수 <span class="arithmatex">\(P(t)\)</span> 를 적분하여 <span class="arithmatex">\(e\)</span> 의 지수함수에 올린 형태 <span class="arithmatex">\(\mu = \exp \bigg (\int_{}^{}P(t)dt\bigg )\)</span> 를 곱하면 미분방정식의 해를 간단히 구할 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>미분방정식 <span class="arithmatex">\(t \dfrac{dy}{dt} = t ^{2} + 3y \quad (t &gt; 0)\)</span> 의 일반해를 구해보자. 먼저 방정식을 표준형으로 쓰면</p>
+<div class="arithmatex">\[ \dfrac{dy}{dt} - \dfrac{3}{t}y = t \]</div>
+<p>이다. 이때 적분인자는 </p>
+<div class="arithmatex">\[ e ^{- \int_{}^{}\dfrac{3}{t}dt} = e ^{-3 \ln t} = e ^{\ln t ^{-3}} = t ^{-3} \quad (t &gt; 0) \]</div>
+<p>이다. 이 적분인자를 미분방정식 양변에 곱하면</p>
+<div class="arithmatex">\[ t ^{-3}(y'-\dfrac{3}{t}y) = t ^{-2} \iff \dfrac{d}{dt}(t ^{-3}y) = t ^{-2} \]</div>
+<p>를 얻는다. 양변을 적분하면 일반해는 </p>
+<div class="arithmatex">\[ \int_{}^{} \dfrac{d}{dt}(t ^{-3}y) = \int_{}^{} t ^{-2} \]</div>
+<div class="arithmatex">\[ \iff t ^{-3}y = \int_{}^{}t ^{-2}dt = - \dfrac{1}{t} + C \]</div>
+<div class="arithmatex">\[ \iff y = -t ^{2} + C t ^{3} \quad (t &gt; 0) \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<h2 id="_7">수열의 수렴<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
+<a href="#1221ae1d0"><div class="admonition tldr" id="1221ae1d0">
+<p>수열의 수렴 : <span class="arithmatex">\(n \in \N\)</span> 에 대하여 수열 <span class="arithmatex">\(a_n\)</span> 이 수렴한다는 것은 어떤 실수 <span class="arithmatex">\(L \in \R\)</span> 이 존재하여 임의의 양수 <span class="arithmatex">\(\epsilon\)</span> 에 대하여</p>
+<p><span class="arithmatex">\(n &gt; N _{\epsilon }\)</span> 이기만 하면 <span class="arithmatex">\(|a_n -L | &lt; \epsilon\)</span> 이 성립하도록 하는 양수 <span class="arithmatex">\(N _{\epsilon }\)</span> 이 존재한다는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p>(중복)</p>
+</li>
+</ul>
+<a href="#c53f51944"><div class="admonition tldr" id="c53f51944">
+<p>유계 증가수열 원리(Monotonic Sequence Principle) : 대한 수열 <span class="arithmatex">\(a_n\)</span> 이 </p>
+<div class="arithmatex">\[\forall n \in \N, a_n \leq a _{n+1} \land \exists M \in \R, \forall n \in \N, a_n \leq M\]</div>
+<p>이면 수열 <span class="arithmatex">\(a_n\)</span> 은 반드시 수렴한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이는 실수의 완비성이라 부르는 실수 체계의 공리이다.</p>
+</li>
+<li>
+<p>증명</p>
+<p><strong>구체화 필요</strong></p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \sqrt[m]{a_n} = \sqrt[m]{l} \]</div>
+</li>
+</ul>
+<a href="#9183bb181"><div class="admonition tldr" id="9183bb181">
+<p>수렴하는 수열의 성질 : 수렴하는 두 수열 <span class="arithmatex">\(\{a_n\},\{b_n\}\)</span> 에 대하여 <span class="arithmatex">\(\displaystyle \lim_{n \to \infty} a_n = l, \lim_{n \to \infty} b_n = l'\)</span> 일 때 다음 성질이 성립한다.</p>
+</div></a>
+<ol>
+<li>
+<p><span class="arithmatex">\(\displaystyle \lim_{n \to \infty} (a_n + b_n) = l + l'\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle \lim_{n \to \infty} (a_n \cdot b_n) = l \cdot  l'\)</span></p>
+</li>
+<li>
+<p>상수 <span class="arithmatex">\(c\)</span> 에 대하여 <span class="arithmatex">\(\displaystyle \lim_{n \to \infty} ca_n = cl\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(f\)</span> 가 <span class="arithmatex">\(\R\)</span> 위에서 정의된 연속함수라면 <span class="arithmatex">\(\displaystyle  \lim_{n \to \infty}f(a_n) = f(l)\)</span> 이다.</p>
+</li>
+<li>
+<p>수열 <span class="arithmatex">\(\{c_n\}\)</span> 이 있어서 어떤 양수 <span class="arithmatex">\(N\)</span> 보다 큰 모든 <span class="arithmatex">\(n\)</span> 에 대해 <span class="arithmatex">\(\displaystyle  a_n \leq c_n \leq b_n \land l=l' \implies \lim_{n \to \infty} c_n =l\)</span> 이다.</p>
+</li>
+</ol>
+<h2 id="_8">무한급수 수렴판정<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<a href="#636b624fc"><div class="admonition tldr" id="636b624fc">
+<p>무한급수 (infinite series) : 무한수열의 합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>수열 <span class="arithmatex">\(\{a_n\}\)</span> 에 대한 무한급수는 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty} a_n\)</span> 이다.</p>
+<p>이 수열의 부분합은 <span class="arithmatex">\(\displaystyle  k \in \N, S_k = \sum_{n=1}^{k}a_n\)</span> 인데, 무한급수가 수렴한다는 것은 수열 <span class="arithmatex">\(\{S_k\}\)</span> 가 수렴한다는 것, 즉 <span class="arithmatex">\(\displaystyle \exists L \in \R, \lim_{k \to \infty} S_k = \sum_{n=1}^{\infty} a_n = L\)</span> 라는 것이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=2}^{\infty}\dfrac{1}{n(n-1)} = \sum_{n=2}^{\infty}\bigg (\dfrac{1}{n-1}-\dfrac{1}{n}\bigg )\)</span> 은 수렴한다. 왜냐하면</p>
+<div class="arithmatex">\[ S_n = 1 - \dfrac{1}{n} \implies  \lim_{n \to \infty}S_n = 1 \implies  \sum_{n=2}^{\infty}\dfrac{1}{n(n-1)}=1 \]</div>
+<p>이기 때문이다.</p>
+</li>
+</ul>
+<a href="#a41206806"><div class="admonition tldr" id="a41206806">
+<p>수렴하는 급수의 성질 : 수렴하는 두 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}a_n, \sum_{n=1}^{\infty} b_n\)</span> 에 대하여 다음 성질이 성립한다.</p>
+</div></a>
+<ol>
+<li>
+<p>상수 <span class="arithmatex">\(A\)</span> 에 대해 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}Aa_n = A \sum_{n=1}^{\infty}a_n\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}a_n + \sum_{n=1}^{\infty}b_n = \sum_{n=1}^{\infty}(a_n + b_n)\)</span></p>
+</li>
+</ol>
+<a href="#6eac348bc"><div class="admonition tldr" id="6eac348bc">
+<p>일반항 판정법(n-th term test) : 일반항 <span class="arithmatex">\(a_n\)</span> 이 <span class="arithmatex">\(\displaystyle  n \to \infty \implies \lim_{n \to \infty} a_n \neq 0\)</span> 이면 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> 이 발산한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>무한급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{n ^{2}}{4 + 2 n ^{2}}\)</span> 가 수렴하는지 조사하자.</p>
+<p><span class="arithmatex">\(\displaystyle \lim_{n \to \infty} \dfrac{n ^{2}}{4 + 2 n ^{2}} = \lim_{n \to \infty}\dfrac{1}{4/n ^{2} + 2}  = \dfrac{1}{2}\)</span> 이므로 일반항이 <span class="arithmatex">\(0\)</span> 으로 수렴하지 않는다. 그러므로 급수가 발산한다.</p>
+</li>
+</ul>
+<a href="#24cdfd9cc"><div class="admonition tldr" id="24cdfd9cc">
+<p>등비급수(geometric series) 의 수렴 : <span class="arithmatex">\(a \neq 0\)</span> 와 공비(ratio) <span class="arithmatex">\(r \in \R\)</span> 에 대한 등비급수</p>
+<div class="arithmatex">\[ S = a + ar + ar ^{2} + ar ^{3} + \dots + a r ^{n} + \dots = \sum_{k=0}^{\infty}a r ^{k} \]</div>
+<p>는 <span class="arithmatex">\(r = 1\)</span> 인 경우 부분합이 <span class="arithmatex">\(S_k = ka\)</span> 이 되어 발산하고,</p>
+<p><span class="arithmatex">\(r \neq 1\)</span> 인 경우 부분합이 <span class="arithmatex">\(S_k = \dfrac{a(1-r ^{k})}{1-r}\)</span> 이 되므로 <span class="arithmatex">\(|r|&lt;1\)</span> 일 때 <span class="arithmatex">\(\displaystyle \lim_{k \to \infty} S_k = \dfrac{a}{1-r}\)</span> 이 되어 수렴하고, <span class="arithmatex">\(|r| &gt; 1\)</span> 일 때는 발산한다.</p>
+</div></a>
+<ul>
+<li>
+<p>부분합 <span class="arithmatex">\(S_k\)</span> 는 다음과 같이 얻는다.</p>
+<div class="arithmatex">\[ rS_k = ar + \dots + ar ^{k} \]</div>
+<div class="arithmatex">\[ S_k - rS_k = (1-r)S_k = a - ar ^{k}  \iff S_k = \dfrac{a(1-r ^{k})}{1-r} \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p>등비급수 <span class="arithmatex">\(\displaystyle \sum_{k=1}^{\infty}\bigg (\dfrac{1}{2}\bigg )^{k}\)</span> 의 수렴을 조사하자.</p>
+<p>공비가 <span class="arithmatex">\(\dfrac{1}{2}\)</span> 이므로 수렴한다.</p>
+</li>
+</ul>
+<a href="#8999179dd"><div class="admonition tldr" id="8999179dd">
+<p>비교판정법(comparison test) : 모든 <span class="arithmatex">\(n\)</span> 에 대해 <span class="arithmatex">\(0 \leq a_n \leq b_n\)</span> 이면</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty} b_n\)</span> 이 수렴하면 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty} a_n\)</span> 도 수렴한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty} b_n\)</span> 이 발산하면 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty} a_n\)</span> 도 발산한다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>1 증명 </li>
+</ul>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty} b_n = M\)</span> 으로 두면 </p>
+<p>$$ \sum_{n=1}^{k} a_n \leq \sum_{n=1}^{k} b_n \leq \sum_{n=1}^{\infty} b_n = M $$</p>
+<p>이 되어 유계 증가수열의 원리에 의해 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty} a_n\)</span> 이 수렴한다.</p>
+<ul>
+<li>
+<p>2 증명 </p>
+<p>(1 의 증명과 비슷하게 할 수 있다.)</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n ^{2}}\)</span> 은 비교 판정법에 의하여 수렴한다.</p>
+<p>왜냐하면 <span class="arithmatex">\(n \geq 2\)</span> 일 때 <span class="arithmatex">\(\dfrac{1}{n ^{2}} &lt; \dfrac{1}{n(n-1)}\)</span> 이고 <span class="arithmatex">\(\sum_{n=2}^{\infty} = 1\)</span> 이기 때문이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>조화급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n}\)</span> 은 비교 판정법에 의하여 발산한다.</p>
+<p>왜냐하면 </p>
+<div class="arithmatex">\[ 1 + \dfrac{1}{2} + \dfrac{1}{3} + \dots &gt; 1 + \dfrac{1}{2} + \bigg (\dfrac{1}{4} + \dfrac{1}{4} \bigg ) + \dots \]</div>
+<div class="arithmatex">\[ = 1 + \dfrac{1}{2} + 2 \times \dfrac{1}{4} + 4 \times \dfrac{1}{8} = 1 + \dfrac{1}{2} + \dfrac{1}{2} + \dots = \infty \]</div>
+<p>이기 때문이다.</p>
+</li>
+</ul>
+<a href="#0826ed4ce"><div class="admonition tldr" id="0826ed4ce">
+<p>극한 비교판정법(limit comparison test) : <span class="arithmatex">\(\forall n \in \N, a_n &gt; 0, b_n &gt; 0\)</span> 일 때 <span class="arithmatex">\(\displaystyle \lim_{n \to \infty} \dfrac{a_n}{b_n} = c \land c &gt; 0\)</span> 이면 <span class="arithmatex">\(\sum a_n, \sum b_n\)</span> 은 둘 다 수렴하거나 둘 다 발산한다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>극한 <span class="arithmatex">\(\displaystyle \lim_{n \to \infty} \dfrac{a_n}{b_n}\)</span> 이 유한값 <span class="arithmatex">\(c\)</span> 라고 하면 극한의 정의에 따라 조건 <span class="arithmatex">\(n \geq N\)</span> 을 만족하는 <span class="arithmatex">\(\forall n \in \N\)</span> 에 대하여 부등식</p>
+<div class="arithmatex">\[ a_n \leq (c+1) b_n \]</div>
+<p>이 항상 성립하게 하는 자연수 <span class="arithmatex">\(N\)</span> 이 존재하게 된다. 그러면</p>
+<div class="arithmatex">\[ \sum_{n=1}^{\infty} a_n = \sum_{n=1}^{N-1}a_n + \sum_{n=N}^{\infty}a_n \leq \sum_{n=1}^{N-1}a_n + (c+1) \sum_{n=N}^{\infty}b_n \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(\sum b_n\)</span> 이 수렴하면 <span class="arithmatex">\(\sum a_n\)</span> 이 수렴한다.</p>
+<p><span class="arithmatex">\(\sum b_n\)</span> 이 발산한다고 가정하면, 극한의 정의에 따라 조건 <span class="arithmatex">\(n \geq N_1\)</span> 을 만족하는 임의의 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 부등식 </p>
+<div class="arithmatex">\[ \dfrac{c}{2}b_n \leq a_n \]</div>
+<p>이 항상 성립하게 하는 자연수 <span class="arithmatex">\(N_1\)</span> 이 존재하게 된다 그러면 </p>
+<div class="arithmatex">\[ \sum_{n=N_1}^{\infty} \dfrac{c}{2}b_n \leq \sum_{n=N_1}^{\infty} a_n \]</div>
+<p>의 좌변이 발산하므로 <span class="arithmatex">\(\sum a_n\)</span> 은 발산한다.</p>
+<p>(이해 안 됨 강의 봐야할듯)</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{2 n ^{2} + 3n}{\sqrt[]{5 + n ^{5}}}\)</span> 가 수렴하는지 조사하자.</p>
+<p><span class="arithmatex">\(a_n = \dfrac{2 n ^{2} + 3n}{\sqrt[]{5 + n ^{5}}}, b_n = \dfrac{2 n ^{2}}{n ^{5/2}} = \dfrac{2}{\sqrt[]{2}}\)</span> 라고 하면 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \dfrac{a_n}{b_n} = \lim_{n \to \infty}  \dfrac{2 n ^{2} + 3n}{\sqrt[]{5 + n ^{5}}}\dfrac{n ^{1/2}}{2} = \lim_{n \to \infty}  \dfrac{n ^{5/2} + \dfrac{3}{2} n ^{3/2}}{\sqrt[]{5 + n ^{5}}} \]</div>
+<div class="arithmatex">\[ = \lim_{n \to \infty} \dfrac{1 + \dfrac{3}{2}n ^{3/2-5/2}}{\sqrt[]{\dfrac{5+n ^{5}}{n ^{5}}}} = \lim_{n \to \infty} \dfrac{1 + \dfrac{3}{2}n ^{-1}}{\sqrt[]{1+5 /n ^{5}}} = 1 \]</div>
+<p>이므로 극한 비교판정법을 사용할 수 있다.</p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty} \dfrac{2}{\sqrt[]{n}}\)</span> 이 발산하므로 극한 비교판정법에 의하여 처음의 급수도 발산한다.</p>
+</li>
+</ul>
+<a href="#1b6394cdc"><div class="admonition tldr" id="1b6394cdc">
+<p>비율 판정법(raio test) : <span class="arithmatex">\(\forall n \in \N, a_n &gt; 0\)</span> 에 대하여 극한값</p>
+<div class="arithmatex">\[ r = \lim_{m \to \infty} \dfrac{a _{m+1}}{a_m} \]</div>
+<p>이 존재할 때 <span class="arithmatex">\(r &lt; 1\)</span> 이면 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> 가 수렴하고,</p>
+<p><span class="arithmatex">\(r &gt; 1\)</span> 이면 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> 가 발산한다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p>ㅇㅇ 
+(이해 안 됨 강의 봐야할듯)</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=0}^{\infty} \dfrac{n}{3 ^{n}}\)</span> 이 수렴하는지 조사하자.</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \dfrac{\dfrac{n+1}{3 ^{n+1}}}{\dfrac{n}{3 ^{n}}}  = \lim_{n \to \infty} \dfrac{n+1}{n} \dfrac{3 ^{n}}{3 ^{n+1}} = \dfrac{1}{3} \]</div>
+<p>이므로 주어진 급수는 비율 판정법에 의하여 수렴한다.</p>
+</li>
+</ul>
+<a href="#e9565bdbc"><div class="admonition tldr" id="e9565bdbc">
+<p>거듭제곱근 판정법(root test) : <span class="arithmatex">\(\displaystyle \forall n \in \N, a_n&gt;0 \land \exists r \in \R, r = \lim_{m \to \infty} (a_m) ^{1/m} \implies r &lt; 1\)</span> 이면 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> 이 수렴하고, <span class="arithmatex">\(r&gt;1\)</span> 이면 발산한다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><strong>구체화 필요</strong></p>
+</li>
+<li>
+<p><span class="arithmatex">\(r=1\)</span> 일 경우 수렴, 발산에 대한 결론을 얻을 수 없다는 단점이 있다. 이런 경우 다음에 소개할 적분판정법을 사용할 수 있다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=2}^{\infty}\dfrac{1}{(\ln n) ^{n}}\)</span> 이 수렴하는지 조사하자.</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \sqrt[n]{\dfrac{1}{(\ln n) ^{n}}}  = \lim_{n \to \infty} \dfrac{1}{\ln n}  = 0 \]</div>
+<p>이므로 거듭제곱근 판정법에 의해 수렴한다.</p>
+</li>
+</ul>
+<a href="#9d14dca8d"><div class="admonition tldr" id="9d14dca8d">
+<p>단조감소함수 : 다음 조건을 만족하는 함수 <span class="arithmatex">\(f(x)\)</span> 를 단조감수함수라고 한다.</p>
+<div class="arithmatex">\[ x_1 &lt; x_2 \to f(x_1) &gt; f(x_2) \]</div>
+</div></a>
+<a href="#56aa57e4d"><div class="admonition tldr" id="56aa57e4d">
+<p>적분판정법(integral test) : <span class="arithmatex">\(x&gt;0\)</span> 에서 정의된 단조감소함수 <span class="arithmatex">\(f(x)\)</span> 와 수열 <span class="arithmatex">\(a_n\)</span> 에 대하여 <span class="arithmatex">\(f(x) \geq 0 \land \forall n \in \N, a_n = f(n)\)</span> 일 때 극한</p>
+<div class="arithmatex">\[ \lim_{R \to \infty}\int_{1}^{R}f(x)dx \]</div>
+<p>가 수렴하면 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> 도 수렴하고,</p>
+<p>무한대로 발산하면 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> 도 발산한다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><strong>구체화 필요</strong></p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\exists p \in \R\)</span> 에 대하여 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n^p}\)</span> 는 <span class="arithmatex">\(p \leq 1\)</span> 이면 발산하고, <span class="arithmatex">\(p&gt;1\)</span> 이면 수렴하는데, 이 사실을 증명해보자.</p>
+<p>먼저 수열 <span class="arithmatex">\(a_n = \dfrac{1}{n^p}\)</span> 에 대하여 <span class="arithmatex">\(p \leq 0\)</span> 이면 <span class="arithmatex">\(\forall n \in \N, a_n &gt; 1\)</span> 이므로 급수가 무조건 발산하므로, <span class="arithmatex">\(p &gt; 0\)</span> 인 경우만 상정하자.</p>
+<p>함수 <span class="arithmatex">\(f(x) = x ^{-p}\)</span> 에 대하여</p>
+<div class="arithmatex">\[p \neq 1 \implies \int_{1}^{R}x ^{-p}dx = \bigg [\dfrac{1}{1-p}x ^{1-p}\bigg ] ^{R} _{1} = \dfrac{1}{1-p}(R ^{1-p} - 1) \]</div>
+<p>이다. 이때 </p>
+<div class="arithmatex">\[ p&gt;1 \iff 1-p&lt;0 \implies \lim_{R \to \infty} \int_{1}^{R}x ^{-p}dx = \lim_{R \to \infty} \dfrac{1}{1-p}(R ^{1-p} - 1) = \dfrac{1}{p-1} \]</div>
+<p>이므로 이 값은 유한하다. 그러므로 <span class="arithmatex">\(p&gt;1\)</span> 이면 <span class="arithmatex">\(\sum \dfrac{1}{n^p}\)</span> 는 수렴한다. ■ </p>
+<p>한편, </p>
+<div class="arithmatex">\[ 0 &lt; p &lt; 1 \implies \lim_{R \to \infty} \int_{1}^{R} x ^{-p}dx \to \infty  \]</div>
+<p>이므로 <span class="arithmatex">\(0&lt;p&lt;1\)</span> 이면 <span class="arithmatex">\(\sum \dfrac{1}{n^p}\)</span> 는 발산한다. ■ </p>
+<p>또</p>
+<div class="arithmatex">\[ p = 1 \implies \lim_{R \to \infty} \int_{1}^{R}x ^{-1}dx = \lim_{R \to \infty}  \ln R \to \infty \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(p=1\)</span> 이면 <span class="arithmatex">\(\sum \dfrac{1}{n^p}\)</span> 는 발산한다. ■ </p>
+</li>
+</ul>
+<a href="#06a634cc9"><div class="admonition tldr" id="06a634cc9">
+<p>절대수렴(converges absolutely) : 임의의 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> 이 주어졌을 때, 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}|a_n|\)</span> 이 수렴하면, 급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}a_n\)</span> 이 절대수렴한다.</p>
+</div></a>
+<a href="#2683e70b2"><div class="admonition tldr" id="2683e70b2">
+<p>절대수렴판정법(absolute convergence test) : 절대수렴하는 급수는 수렴한다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><strong>구체화 필요</strong></p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{\sin n}{n ^{2}}\)</span> 에서 <span class="arithmatex">\(a_n = \dfrac{\sin n}{n ^{2}}\)</span> 로 두자. <span class="arithmatex">\(\sin n\)</span> 은 <span class="arithmatex">\(-1 \sim  +1\)</span> 의 값을 가지므로 다루기 어렵다. 그러므로 <span class="arithmatex">\(|\sin n|\)</span> 로 두면 <span class="arithmatex">\(1\)</span> 과 같거나 작은 양수로 생각할 수 있다. 그러므로</p>
+<div class="arithmatex">\[\displaystyle \sum_{n=1}^{\infty}|a_n| = \sum_{n=1}^{\infty}\dfrac{|\sin n|}{n ^{2}} \leq \sum_{n=1}^{\infty}\dfrac{1}{n ^{2}}\]</div>
+<p>인데 <span class="arithmatex">\(\dfrac{1}{n ^{2}}\)</span> 이 수렴하므로 비교판정법에 의하여 <span class="arithmatex">\(\dfrac{|\sin n|}{n ^{2}}\)</span> 도 수렴한다. </p>
+<p>이에 따라 절대수렴 판정법에 의하여 <span class="arithmatex">\(\dfrac{\sin n}{n ^{2}}\)</span> 도 수렴한다.</p>
+</li>
+</ul>
+<a href="#195dad314"><div class="admonition tldr" id="195dad314">
+<p>교대급수(alternating series) : <span class="arithmatex">\(\forall n \in \N, a_n &gt; 0 \implies \sum(-1) ^{n+1} a_n\)</span> 꼴의 급수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ 1 - \dfrac{1}{2} + \dfrac{1}{3} - \dfrac{1}{4} + \dots \]</div>
+</li>
+</ul>
+<a href="#e47c9ab98"><div class="admonition tldr" id="e47c9ab98">
+<p>교대급수 판정법(alternating series test) : <span class="arithmatex">\(\forall n \in \N, a_n &gt; 0 \land a_n \geq a _{n+1}\)</span> 이면 <span class="arithmatex">\(\sum (-1) ^{n+1} a_n\)</span> 은 수렴한다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><strong>구체화 필요</strong></p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(1 - \dfrac{1}{2} + \dfrac{1}{3} - \dfrac{1}{4} + \dots\)</span> 은 교대급수판정법에 의하여 수렴한다.</p>
+</li>
+</ul>
+<a href="#7f40b34be"><div class="admonition tldr" id="7f40b34be">
+<p>절대수렴 판정법과 비율판정법 : <span class="arithmatex">\(\displaystyle \lim_{n \to \infty} \dfrac{| a _{n+1}|}{|a_n|} = r\)</span> 에서 비율판정법으로 <span class="arithmatex">\(r &lt; 1\)</span> 인 경우 <span class="arithmatex">\(|a_n|\)</span> 이 수렴한다는 사실을 얻고, </p>
+<p>이에 따라 절대수렴 판정법으로 <span class="arithmatex">\(a_n\)</span> 이 수렴한다는 결론을 얻는다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{(-10) ^{n}}{n!}\)</span> 에서 <span class="arithmatex">\(|a_n| = \dfrac{10 ^{n}}{n!}\)</span> 로 두면 </p>
+<div class="arithmatex">\[ \dfrac{|a _{n+1}|}{|a_n|} = \dfrac{10}{n+1} \implies \lim_{n \to \infty} \dfrac{10}{n+1} = 0 &lt; 1 \]</div>
+<p>이므로 <span class="arithmatex">\(|a_n|\)</span> 이 비율판정법에 의하여 수렴하고,</p>
+<p>절대수렴 판정법에 의하여 <span class="arithmatex">\(a_n\)</span> 이 수렴한다.</p>
+</li>
+</ul>
+<a href="#7c83d0ba7"><div class="admonition tldr" id="7c83d0ba7">
+<p>절대수렴 판정법과 거듭제곱근 판정법 : <span class="arithmatex">\(\lim_{n \to \infty} \sqrt[n]{|a_n|} = r\)</span> 에서 <span class="arithmatex">\(r &lt; 1\)</span> 이면 거듭제곱근 판정법에 의하여 <span class="arithmatex">\(|a_n|\)</span> 이 수렴한다는 사실을 얻고,</p>
+<p>이에 따라 절대수렴 판정법으로 <span class="arithmatex">\(a_n\)</span> 이 수렴한다는 결론을 얻는다.</p>
+</div></a>
+<a href="#a083d8ea5"><div class="admonition tldr" id="a083d8ea5">
+<p>절대수렴 판정법과 적분 판정법 : <span class="arithmatex">\(\lim_{n \to \infty} |a_n| = f(x)\)</span> 로 두었을 때 <span class="arithmatex">\(f(x)\)</span> 가 단조감소함수이고, <span class="arithmatex">\(f(x) \geq 0\)</span> 이면서 <span class="arithmatex">\(\displaystyle \lim_{R \to \infty}\int_{1}^{R}f(x)dx\)</span> 가 수렴한다면,  적분 판정법에 의하여 <span class="arithmatex">\(|a_n|\)</span> 이 수렴한다는 사실을 얻고,</p>
+<p>이에 따라 절대수렴 판정법으로 <span class="arithmatex">\(a_n\)</span> 이 수렴한다는 결론을 얻는다.</p>
+</div></a>
+<h2 id="_9">멱급수와 수렴반경<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
+<a href="#fa3239ae2"><div class="admonition tldr" id="fa3239ae2">
+<p>멱급수(power series) : 변수 <span class="arithmatex">\(x\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \sum_{n=0}^{\infty}a_n x ^{n} = a_0 + a_1x + a_2 x ^{2} + \dots \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>멱급수에 값을 대입하면 함숫값을 알 수 있는 경우가 있다.</p>
+<p>멱급수 <span class="arithmatex">\(\displaystyle \sum_{n=0}^{\infty}x ^{n}\)</span> 를 함수 <span class="arithmatex">\(f(x)\)</span> 로 두자.</p>
+<p>그러면 <span class="arithmatex">\(f(1/2) = 1 + \dfrac{1}{2} + \bigg (\dfrac{1}{2}\bigg )^{2} + \dots = \dfrac{1}{1-1/2}=2\)</span> 가 된다. 반면 <span class="arithmatex">\(f(-1) = 1 - 1 + 1 - 1 + \dots = ?\)</span> 가 되는 경우가 있다.</p>
+<p>그러므로 멱급수의 수렴 반경(수렴 구간) 을 찾아야 한다. 찾는 방법은 비율 판정법이다. 비율 판정법이 어렵다면 거듭제곱 판정법을 사용하자.</p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=0}^{\infty}a_n x^n\)</span> 에서 <span class="arithmatex">\(b_n = a_n x ^{n}\)</span> 이라고 뒀을 때 <span class="arithmatex">\(\displaystyle \lim_{n \to \infty} \dfrac{|b _{n+1}|}{|b_n|} = r &lt; 1\)</span> 이라면 비율판정법과 절대수렴 판정법에 의하여 급수가 수렴한다.</p>
+<p>반면 <span class="arithmatex">\(r&gt;1\)</span> 인 경우는 발산한다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+<p><span class="arithmatex">\(r=1\)</span> 인 경우 수렴인지 발산인지 일반적으로 판단할 수 없어서 직접 판정해주어야 한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>멱급수 <span class="arithmatex">\(\displaystyle \sum_{n=0}^{\infty}x ^{n}\)</span> 는 <span class="arithmatex">\(\lim_{n \to \infty}\dfrac{|x ^{n+1}|}{|x ^{n}|} = |x|\)</span> 이므로 <span class="arithmatex">\(|x| &lt; 1\)</span> 일때 수렴하고 <span class="arithmatex">\(|x| &gt; 1\)</span> 일 때 발산한다.</p>
+<p><span class="arithmatex">\(|x| = 1\)</span> 일 때는 직접 판정해준다. <span class="arithmatex">\(x = 1\)</span> 일 경우 <span class="arithmatex">\(\displaystyle \sum_{n=0}^{\infty}1 = 1 + 1 + \dots\)</span> 이므로 발산한다.</p>
+<p><span class="arithmatex">\(x = -1\)</span> 일 경우 <span class="arithmatex">\(\displaystyle \sum_{n=0}^{\infty} (-1) ^{n} = 1 - 1 + 1 - 1 + \dots\)</span> 이므로 진동 발산한다.</p>
+<p>결국 수렴 구간은 <span class="arithmatex">\((-1, 1)\)</span> 이고 수렴반경은 <span class="arithmatex">\(1\)</span> 이다.</p>
+</li>
+<li>
+<p>예시</p>
+<p>멱급수 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{x ^{n}}{n}\)</span> 의 수렴조사.</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \dfrac{|b _{n+1}|}{|b_n|} = \lim_{n \to \infty} \dfrac{|x ^{n+1}|}{n+1}\dfrac{n}{|x ^{n}|} = |x| &lt; 1 \]</div>
+<p>이므로 <span class="arithmatex">\(|x| &lt; 1\)</span> 이면 수렴하고, <span class="arithmatex">\(|x| &gt; 1\)</span> 이면 발산한다. <span class="arithmatex">\(|x| = 1\)</span> 일 때는 직접 조사해본다.</p>
+<p><span class="arithmatex">\(x = 1\)</span> 이면 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n}\)</span> 가 적분판정법에 의해 발산한다.</p>
+<p><span class="arithmatex">\(x = -1\)</span> 이면 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}(-1) ^{n}\dfrac{1}{n}\)</span> 가 교대급수판정법에 의해 수렴한다.</p>
+<p>결국 수렴구간은 <span class="arithmatex">\([-1, 1)\)</span> 이고 수렴반경은 <span class="arithmatex">\(1\)</span> 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=0}^{\infty}\dfrac{x ^{n}}{n!}\)</span> 수렴 조사.</p>
+<p><span class="arithmatex">\(b_n = \dfrac{x ^{n}}{n!}\)</span> 으로 두면</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \dfrac{|b _{n+1}|}{|b_n|} = \lim_{n \to \infty} \dfrac{| x ^{n+1}|}{(n+1)!} \dfrac{n!}{|x ^{n}|} = \lim_{n \to \infty} \dfrac{|x|}{n+1} = 0 &lt; 1\]</div>
+<p>이므로 <span class="arithmatex">\(x\)</span> 가 모든 실수에서 수렴한다.</p>
+<p>수렴구간은 <span class="arithmatex">\(\R = (- \infty , \infty )\)</span> 이고 수렴 반경은 <span class="arithmatex">\(\infty\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#e0c2b228e"><div class="admonition tldr" id="e0c2b228e">
+<p>수렴 반경(radius of convergence) : 멱급수가 원점을 중심으로 반지름이 <span class="arithmatex">\(R\)</span> 인 구간에서 수렴할 때 <span class="arithmatex">\(R\)</span> 을 수렴반경이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>설명 </p>
+<p>멱급수 <span class="arithmatex">\(\displaystyle \sum_{m=0}^{\infty}a_mx ^{m}\)</span> 가 주어졌을 때 </p>
+<div class="arithmatex">\[ R = \lim_{m \to \infty} \dfrac{|a_m|}{|a _{m+1}|} \]</div>
+<p>의 값이 존재하면 주어진 멱급수는 범위 <span class="arithmatex">\(|x| &lt; R\)</span> 에서 절대수렴하고 범위 <span class="arithmatex">\(|x| &gt; R\)</span> 에서는 발산한다.</p>
+<p><span class="arithmatex">\(R\)</span> 이 표시하는 극한값이 <span class="arithmatex">\(\infty\)</span> 라면 주어진 멱급수는 실수범위에서 절대 수렴한다. 이 멱급수가 <span class="arithmatex">\(x = 0\)</span> 에서는 무조건 수렴하고 원점을 중심으로 반지름이 <span class="arithmatex">\(R\)</span> 인 구간에서 수렴하기 때문에 <span class="arithmatex">\(R\)</span> 을 수렴반경이라고 한다. </p>
+<p>또 수렴하는 모든 점의 집합을 수렴구간이라고 한다.</p>
+</li>
+</ul>
+<a href="#6ce39cd4d"><div class="admonition tldr" id="6ce39cd4d">
+<p>수렴구간(interval of convergence) : 멱급수가 수렴하는 모든 점의 집합을 수렴구간이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>베셀함수 <span class="arithmatex">\(J_0(x) := \displaystyle \sum_{n=0}^{\infty}\dfrac{(-1) ^{n}x ^{2n}}{2 ^{2n}(n!) ^{2}} = 1 - \dfrac{x ^{2}}{4} + \dfrac{x ^{4}}{64} - \dfrac{x ^{6}}{2304} + \dots\)</span> 의 수렴구간을 구해보자.</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \bigg |\dfrac{\dfrac{x ^{2n+2}}{2 ^{2n+2}(n+1)! ^{2}}}{\dfrac{x ^{2n}}{2 ^{2n}(n!)^{2}}}\bigg | = \lim_{n \to \infty} \dfrac{|x| ^{2}2 ^{2n}(n!)^{2}}{2 ^{2n+2}(n+1)! ^{2}} = \lim_{n \to \infty} \dfrac{|x|^{2}}{4(n+1)^{2}} = 0 \]</div>
+<p>따라서 수렴반경은 <span class="arithmatex">\(\infty\)</span> 이고, 수렴구간은 실수이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=0}^{\infty}\dfrac{x ^{n}}{n!}\)</span> 의 수렴구간 찾기.</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} \bigg |\dfrac{x ^{n+1}}{(n+1)!}\bigg |\bigg |\dfrac{n!}{x ^{n}}\bigg | = \lim_{n \to \infty} \dfrac{|x|}{n+1} = 0 \]</div>
+<p>이므로 모든 실수 <span class="arithmatex">\(x\)</span> 에서 수렴한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1) ^{n}x ^{n}}{n}\)</span> 의 수렴구간 찾기.</p>
+<p>수렴반경은 <span class="arithmatex">\(1\)</span> 이므로 수렴구간의 양 끝에서 수렴하는지 확인해야 한다. </p>
+<p><span class="arithmatex">\(x = 1\)</span> 일 때 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{(-1) ^{n}}{n}\)</span> 이 교대급수로써 수렴한다. <span class="arithmatex">\(x = -1\)</span> 일 때는 <span class="arithmatex">\(\displaystyle \sum_{n=1}^{\infty}\dfrac{1}{n}\)</span> 이 되어 발산한다.</p>
+</li>
+</ul>
+<a href="#94805a802"><div class="admonition tldr" id="94805a802">
+<p>테일러 급수 : (생략)</p>
+</div></a>
+<a href="#b84008743"><div class="admonition tldr" id="b84008743">
+<p>매클로린 급수 : (생략)</p>
+</div></a>
+<a href="#e1bcce1e1"><div class="admonition tldr" id="e1bcce1e1">
+<p>테일러 정리 : <span class="arithmatex">\(f\)</span> 가 <span class="arithmatex">\(c\)</span> 를 포함하는 개구간 <span class="arithmatex">\(I\)</span> 에서 정의되고, <span class="arithmatex">\(n\)</span>번 미분가능한 함수라고 할 때, 임의의 <span class="arithmatex">\(x \in I\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ f(x) = f(c) + f'(c)(x-c) + \dfrac{f''(c)}{2!}(x-c)^{2} + \dots + \dfrac{f ^{(n-1)} (c)}{(n-1)!}(x-c) ^{n-1} + \dfrac{f ^{(n)}(x ^{*})}{n!}(x-c) ^{n} \]</div>
+<p>를 만족하는 <span class="arithmatex">\(x ^{*}\)</span> 가 <span class="arithmatex">\(c\)</span> 와 <span class="arithmatex">\(x\)</span> 사이에 존재한다.</p>
+</div></a>
+<a href="#666ca293d"><div class="admonition tldr" id="666ca293d">
+<p>나머지항(remainder term) 또는 오차항(error term) : 테일러 정리에서 </p>
+<div class="arithmatex">\[ R_n(x) = \dfrac{f ^{(n)}(x ^{*})}{n!}(x-c) ^{n} \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#097bb313b"><div class="admonition tldr" id="097bb313b">
+<p>테일러 전개식(Taylor expansion) : 테일러 정리에서 테일러 다항식과 나머지 항의 합</p>
+<div class="arithmatex">\[ f(x) = f(c) + f'(c)(x-c) + \dfrac{f''(c)}{2!}(x-c)^{2} + \dots + \dfrac{f ^{(n-1)} (c)}{(n-1)!}(x-c) ^{n-1} + \dfrac{f ^{(n)}(x ^{*})}{n!}(x-c) ^{n} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(f(x) = e ^{x}\)</span> 의 <span class="arithmatex">\(c = 0\)</span> 에서의 테일러 전개식을 구해보자. </p>
+<p><span class="arithmatex">\(f ^{(n)}(x) = e ^{x}, f ^{(n)}(0) = 1\)</span> 이므로 테일러 다항식은 </p>
+<div class="arithmatex">\[ T_nf(x) = \sum_{k=0}^{n}\dfrac{f ^{(k)}(0)}{k!}x ^{k} = \sum_{k=0}^{n}\dfrac{1}{k!}x ^{k} = 1 + x + \dfrac{1}{2!}x ^{2} + \dots + \dfrac{1}{n!}x ^{n} \]</div>
+<p>이고, 나머지 항은 <span class="arithmatex">\(R_n(x) = \dfrac{e ^{x ^{*}}}{n!}x ^{n}\)</span> 이다. 이때 <span class="arithmatex">\(x ^{*}\)</span> 은 <span class="arithmatex">\(0\)</span> 과 <span class="arithmatex">\(x\)</span> 사이의 수이다.</p>
+<p>이에 따라 </p>
+<div class="arithmatex">\[ e ^{x} = \sum_{k=0}^{n}\dfrac{1}{k!}x ^{k}  + R_n(x) \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<h2 id="_10">벡터<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
+<h3 id="n"><span class="arithmatex">\(n\)</span> 차원 공간<a class="headerlink" href="#n" title="Permanent link">¶</a></h3>
+<a href="#0166f9523"><div class="admonition tldr" id="0166f9523">
+<p>순서쌍(ordered pair) : 순서가 다르면 같은 성분이어도 다른 원소인 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ (x, y) \neq (y, x) \]</div>
+<div class="arithmatex">\[ (x_1, y_1) = (x_2, y_2) \iff x_1 = x_2 \land y_1 = y_2 \]</div>
+</li>
+</ul>
+<a href="#e4f9c5c3c"><div class="admonition tldr" id="e4f9c5c3c">
+<p>데카르트 곱(Cartesian product) : 두 집합 <span class="arithmatex">\(X, Y\)</span> 에 대한 </p>
+<div class="arithmatex">\[ X \times Y = \{(x, y) | x \in X, y \in Y\} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\((x, y)\)</span> 는 순서쌍이고, <span class="arithmatex">\(x, y\)</span> 를 <span class="arithmatex">\((x, y)\)</span> 의 성분이라 한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>실수 순서쌍 전체의 집합은 </p>
+<div class="arithmatex">\[ \R \times \R = \{(a_1, a_2) | a_1 \in \R, a_2 \in \R\} \]</div>
+<p>이고 이것을 <span class="arithmatex">\(\R ^{2}\)</span> 로 나타낸다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\((\R \times \R) \times \R\)</span> 을 <span class="arithmatex">\(\R ^{3}\)</span> 으로 나타내고 그 원소는 세 실수의 순서모음</p>
+<div class="arithmatex">\[ (a_1, a_2, a_3) \]</div>
+<p>이다.</p>
+<p>이 원소들이 공간에 직교좌표계를 설정할 때 공간의 한 점과 일대일 대응된다.</p>
+</li>
+</ul>
+<a href="#32156dc89"><div class="admonition tldr" id="32156dc89">
+<p><span class="arithmatex">\(n\)</span> 차원 공간 <span class="arithmatex">\(\R ^{n}\)</span> (혹은 <span class="arithmatex">\(n\)</span> 차원 좌표공간) : <span class="arithmatex">\(\forall n \in \N\)</span> 에 대하여 <span class="arithmatex">\(n\)</span> 개의 실수의 순서모음을 모은 것을</p>
+<div class="arithmatex">\[ \R ^{n} = \{(a_1, \dots, a_n) | a_i \in \R, i \in \{1, \dots, n\}\} \]</div>
+<p>으로 나타낸다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 집합의 두 원소가 동등한 것을</p>
+<div class="arithmatex">\[ (a_1, \dots, a_n) = (b_1, \dots, b_n) \iff a_1 = b_1 , \dots, a_n = b_n \]</div>
+<p>으로 나타낸다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(n\)</span>-차원 공간의 원소 </p>
+<div class="arithmatex">\[ (a_1, \dots, a_n) \]</div>
+<p>을 그 공간의 점이라고 한다.</p>
+</li>
+</ul>
+<a href="#1af5ea3c5"><div class="admonition tldr" id="1af5ea3c5">
+<p><span class="arithmatex">\(n\)</span> 차원 공간의 덧셈 : <span class="arithmatex">\(n\)</span> 차원 공간의 임의의 두 원소 </p>
+<div class="arithmatex">\[ \forall  a = (a_1, \dots, a_n) , b = (b_1, \dots, b_n) \in \R ^{n} \]</div>
+<p>에 대하여 </p>
+<div class="arithmatex">\[ a+b := (a_1 + b_1, a_2 + b_2, \dots, a_n + b_n) \in \R ^{n} \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#e92461712"><div class="admonition tldr" id="e92461712">
+<p><span class="arithmatex">\(n\)</span> 차원 공간의 스칼라곱 : <span class="arithmatex">\(n\)</span> 차원 공간의 임의의 원소 </p>
+<div class="arithmatex">\[ \forall  a = (a_1, \dots, a_n) \]</div>
+<p>와 실수 <span class="arithmatex">\(k\)</span> 에 대하여</p>
+<div class="arithmatex">\[ ka := (ka_1, ka_2, \dots, ka_n ) \in \R ^{n} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>실수 <span class="arithmatex">\(k\)</span> 를 <span class="arithmatex">\(n\)</span>차원 공간의 원소와 구분하여 스칼라(scalar) 라고 부른다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(a = (1, 2, 3), b =(-1, 1, 2) \in \R ^{3}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ a+b =(0, 3,5 ), 3a = (3, 6, 9) \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#6fdf5c35b"><div class="admonition tldr" id="6fdf5c35b">
+<p>벡터공간 (vector space) : 어떤 집합에 다음 성질을 갖는 두 가지 연산이 정의되면 그 집합을 벡터공간이라고 하고, 이 집합의 원소를 벡터라고 한다.</p>
+<ol>
+<li>
+<p>덧셈의 교환법칙 : <span class="arithmatex">\(a+b = b+a\)</span></p>
+</li>
+<li>
+<p>덧셈의 결합법칙 : <span class="arithmatex">\((a+b) + c = a + (b+c)\)</span></p>
+</li>
+<li>
+<p>덧셈의 항등원 존재 : <span class="arithmatex">\(\overrightarrow{0} = (0, \dots, 0)\)</span> (<span class="arithmatex">\(0\)</span>- 벡터) <span class="arithmatex">\(a + \overrightarrow{0} = a\)</span></p>
+</li>
+<li>
+<p>덧셈의 역원 존재 : <span class="arithmatex">\(-a\)</span> 은 <span class="arithmatex">\(a\)</span> 의 역원이다. 즉, <span class="arithmatex">\(a + (-1) a = \overrightarrow{0}\)</span></p>
+</li>
+<li>
+<p>스칼라 곱의 결합법칙 : <span class="arithmatex">\(k_1(k_2a) = (k_1k_2)a\)</span></p>
+</li>
+<li>
+<p>덧셈과 스칼라 곱에 대한 분배법칙 : <span class="arithmatex">\(k_1(a+b) = k_1a+k_1b, (k_1+k_2)a = k_1a+k_2a\)</span></p>
+</li>
+<li>
+<p>스칼라 곱의 항등원 존재 : <span class="arithmatex">\(1a = a\)</span></p>
+</li>
+</ol>
+</div></a>
+<h3 id="_11">극좌표<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<a href="#042c217b0"><div class="admonition tldr" id="042c217b0">
+<p>극좌표(polar coordinates) : 평면 위의 한 점을 원점 <span class="arithmatex">\(O\)</span> 로 두고 이 점에서 반직선(극축)을 그려서 점 <span class="arithmatex">\(O\)</span> 로부터의 거리 <span class="arithmatex">\(r\)</span> 과 극축으로부터의 각 <span class="arithmatex">\(\theta\)</span> 에 대하여 평면 위의 한 점을 <span class="arithmatex">\((r, \theta)\)</span> 로 표현하는 좌표계이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(O\)</span> 를 극점, 반직선을 극축이라 한다.</p>
+</li>
+<li>
+<p>좌표 평면의 점 <span class="arithmatex">\(P = (x, y)\)</span> 에 대응되는 극좌표 <span class="arithmatex">\((r, \theta)\)</span> 는</p>
+<div class="arithmatex">\[ x = r \cos \theta, y = r \sin \theta \]</div>
+<p>또는 </p>
+<div class="arithmatex">\[ r ^{2} = x ^{2} + y ^{2}, \tan \theta = \dfrac{y}{x} \]</div>
+<p>의 관계가 성립한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>직교좌표의 점 <span class="arithmatex">\((1, 1)\)</span> 의 극좌표는 <span class="arithmatex">\(\bigg (\sqrt[]{r}, \dfrac{\pi }{4}\bigg )\)</span> 이다.</p>
+<div class="arithmatex">\[ \because r = \sqrt[]{1+1}=\sqrt[]{2} \]</div>
+<div class="arithmatex">\[ \because \tan \theta = \dfrac{y}{x} = 1 \iff \theta= \arctan 1 = \dfrac{\pi }{4} \]</div>
+</li>
+<li>
+<p>극좌표에서 <span class="arithmatex">\(r\)</span> 으로 음수를 사용하면 <span class="arithmatex">\(\theta\)</span> 가 가르키는 방향과 반대방향으로 거리 <span class="arithmatex">\(-r\)</span> 만큼 떨어진 점이다. 즉,</p>
+<div class="arithmatex">\[ (r, \theta) = (-r, \theta+\pi ) \]</div>
+<p>이다. 또 <span class="arithmatex">\(\theta\)</span> 의 음수를 취하면 반시계방향이 아니라 시계방향으로 동떨어진 점을 뜻한다.</p>
+</li>
+<li>
+<p>극좌표의 점 <span class="arithmatex">\((r, \theta)\)</span> 은 자연수 <span class="arithmatex">\(n\)</span> 에 대한 점들과 같다. 즉,</p>
+<div class="arithmatex">\[ (r, \theta) = (r, \theta + 2n \pi ) \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>극좌표는 원의 방정식을 간단히 표현할 수 있게 해준다. 원점을 중심으로 하고 반지름을 <span class="arithmatex">\(a\)</span> 로 하는 원의 방정식 </p>
+<div class="arithmatex">\[ x ^{2} + y ^{2} = a ^{2} \]</div>
+<p>를 극좌표로 표현하면 </p>
+<div class="arithmatex">\[  r = a \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>극좌표 <span class="arithmatex">\(\theta = \dfrac{\pi }{3}\)</span> 로 주어진 도형은 원점을 지나고 기울기가 <span class="arithmatex">\(\tan \dfrac{\pi }{3} = \sqrt[]{3}\)</span> 인 직선 </p>
+<div class="arithmatex">\[ y = \sqrt[]{3}x \]</div>
+<p>이다. </p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

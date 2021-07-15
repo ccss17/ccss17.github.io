@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Probability/comb/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>조합 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              조합
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          조합
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        조합
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    확률론
+  </a>
+<nav aria-label="확률론" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    합사건, 곱사건, 여사건
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    경우의 수 계산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    순열
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    조합
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    이항정리
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    확률론
+  </a>
+<nav aria-label="확률론" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    합사건, 곱사건, 여사건
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    경우의 수 계산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    순열
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    조합
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    이항정리
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>조합</h1>
+<h2 id="_1">확률론<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#e96cb37c7"><div class="admonition tldr" id="e96cb37c7">
+<p>이산수학(discrete mathematics) : 실수라는 마당(field) 위에서 전개되는 것이 아닌 자연수라는 이산(discrete)적 마당 위에서 전개되는 수학이다.</p>
+</div></a>
+<ul>
+<li>
+<p>모든 컴퓨터 프로그램은 항상 이산적 알고리즘에 의존한다. 따라서 컴퓨터 의존성이 심해질수록 이산수학의 중요도도 높아진다.</p>
+</li>
+<li>
+<p>자연수라는 이산적 기반 위에서의 주요한 화제는 "특정 조건을 만족시키는 배열이 존재하는가? 존재하면 몇 개나 존재하는가?" 이다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(M=\{1,2,3,4,5,6,7,8\}\)</span> 의 부분집합의 원소가 <span class="arithmatex">\(3\)</span> 개인 집합의 개수를 구하자. </p>
+<blockquote>
+<p><strong>하지만 직접 구하는 계산이 복잡해보인다. 이 경우 주어진 집합을 적당한 부분집합으로 단순화시키고 가변요소를 불변요소로 상정한다. 그래도 주어진 계산이 복잡하면 가변요소들을 끝없이 단순화하고 일부의 가변요소를 불변요소로 가정하자. 그러면 어느시점에서 계산이 단순한 연산으로 처리할 수 있을만큼 간단해진다.</strong></p>
+<p><strong>왜냐하면 불변요소는 더 이상 사고영역에 포함시키지 않아도 되기 때문이다. 이 시점에서 그것은 바꿀 수 없는 것이기 때문에 더 이상 우리가 관여할 바가 아니다. 왜냐하면 불변하는 존재이므로 목적을 위하여 대상을 바꾸는 것에 있어 그것을 포함시키는 것은 무의미하기 때문이다.</strong></p>
+<p><strong>단순해진 가변요소에 대한 계산이 끝나면 지금까지 수차례의 가정이 있어왔기 때문에 이 단순한 연산을 불변요소로 상정한 가변요소들에 원래의 가변성을 다시 부여하면서 일반화시켜 나가야 한다. 왜냐하면 처음의 문제로 되돌아감으로써 현실성을 부여해야 하기 때문이다. 가변요소들을 불변하다고 상정한 것에 대한 해결은 인공적이고 안전한 실험실에 적용되는 것에 불과하다. 그러나 그 과정은 한 단계 한 단계씩 복잡해지기 때문에 일반화가 불가능할 정도로 매우 복잡한 연산과 알고리즘을 요구당하지는 않을 것이다.</strong></p>
+</blockquote>
+<p>그러면 이제 집합 <span class="arithmatex">\(M\)</span> 을 다음 두 집합으로 분할(partition) 하자.</p>
+<div class="arithmatex">\[ A = \{1,2,3,4\}, B=\{5,6,7,8\} \]</div>
+<p>이때 분할된 부분집합을 기반으로 집합 <span class="arithmatex">\(M\)</span> 에서 원소 <span class="arithmatex">\(3\)</span> 개를 택하여 부분집합을 만드는 목적도 다음과 같이 분할 할 수 있다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(A\)</span> 에서 <span class="arithmatex">\(3\)</span> 개의 원소를 택할 경우</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> 에서 <span class="arithmatex">\(2\)</span> 개의 원소를, <span class="arithmatex">\(B\)</span> 에서 <span class="arithmatex">\(1\)</span> 개의 원소를 택할 경우</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> 에서 <span class="arithmatex">\(1\)</span> 개의 원소를, <span class="arithmatex">\(B\)</span> 에서 <span class="arithmatex">\(2\)</span> 개의 원소를 택할 경우</p>
+</li>
+<li>
+<p><span class="arithmatex">\(B\)</span> 에서 <span class="arithmatex">\(3\)</span> 개의 원소를 택할 경우</p>
+</li>
+</ol>
+<p>이제 분할된 각각의 경우를 계산한 다음 일반화시키기만 하면된다. 그런데 분할된 경우들을 보면 처음의 집합보다 더 단순해졌기 때문에 계산이 훨씬 쉬워졌다는 것을 알 수 있다. </p>
+<p>첫번째 분할 목적을 해결할 때에 나머지 <span class="arithmatex">\(3\)</span> 가지 경우는 불변요소가 된다. 따라서 최소한 이 시점에서 더 이상 불변요소를 고려하지 않아도 된다. 두번째 분할 목적을 해결할 때에도 나머지 <span class="arithmatex">\(3\)</span> 가지 분할목적들은 고려하지 않아도 된다. 그리고 집합 <span class="arithmatex">\(A\)</span> 에서 <span class="arithmatex">\(2\)</span> 개의 원소의 부분집합의 경우의 수를 구할 때 집합 <span class="arithmatex">\(B\)</span> 도 불변요소가 되며 고려하지 않아도 된다. </p>
+<p>각각의 경우를 다 계산하였다면 일반화를 시켜야 한다. 각각의 분할 목적에 대한 계산들은 인공적인 실험실에 적용되는 계산에 불과한다. 이 상황에서 일반화란 단순히 모든 분할 목적들의 경우의 수를 더하는 것이다.</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>위 예시에서 알 수 있는 것은 이산수학에서 가장 중요한 것은 순열, 조합, 명제 같은 것들이 아니라 현실 문제를 분석하여 어떻게 더 작은 요소들로 나누고 일부의 요소들을 불변하다고 상정하느냐 이다. 그렇게 함으로써 문제를 끝없이 단순화시키고 더 이상 단순화시킬 수 없을 때까지 단순화시키면, 물론 인공적이고 안전한 실험실의 상황과 비슷하겠지만 계산은 매우 단순해질 것이다. 이후에는 차례차례 안전한 실험실에서 벗어나서(불변이라고 상정했던 가변요소에 다시 가변성을 부여함으로써) 현실문제로 회귀시켜서 일반적인 해결을 구하는 것이다.</strong></p>
+</blockquote>
+<ul>
+<li>
+<p>아인슈타인은 이렇게 말했다. <strong>"문제를 단순화할 수 없을 때까지 단순화시켜라."</strong></p>
+</li>
+<li>
+<p>그러나 그는 또 이렇게 말했다. "모든 사람은 세상을 자기에게 유리한 방식으로 단순화시킨 후 이해하려 하고 그렇게 훼손된 세상을 자기 마음 속에 들여서 현실 세상을 대체하려고 한다."</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#489bac7f2"><div class="admonition tldr" id="489bac7f2">
+<p>시행(experiment) : 같은 조건에서 반복할 수 있고 그 결과가 우연에 의하여 좌우되는 실험이나 관찰이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>주사위를 던지면 <span class="arithmatex">\(1\)</span> 부터 <span class="arithmatex">\(6\)</span> 까지의 숫자가 나온다. </p>
+<p>이 시행은 같은 조건에서 반복할 수 있고 그 결과가 우연에 의하여 좌우되므로 시행이다.</p>
+</li>
+</ul>
+<a href="#e1a687e3e"><div class="admonition tldr" id="e1a687e3e">
+<p>표본공간(sample space) : 어떤 시행에서 일어날 수 있는 모든 가능한 결과 전체의 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>각 면에 <span class="arithmatex">\(1\)</span> 에서 <span class="arithmatex">\(4\)</span> 까지 적혀있는 정사면체를 던져 바닥에 닿는 수를 구하는 시행에 대하여 </p>
+<p>표본공간 <span class="arithmatex">\(S\)</span> 와 짝수가 나오는 사건 <span class="arithmatex">\(A\)</span> 는 다음과 같다. </p>
+<div class="arithmatex">\[ S = \{1,2,3,4\}, A = \{2,4\} \]</div>
+</li>
+</ul>
+<a href="#f2f1a0be2"><div class="admonition tldr" id="f2f1a0be2">
+<p>사건(event) : 시행에서 관찰자가 관심을 갖는 결과의 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>같은 조건에서 실험이나 관찰에 의하여 나타나는 결과이다. </p>
+</li>
+<li>
+<p>예시</p>
+<p>주사위를 한 번 던지는 시행에서 홀수의 눈이 나오는 사건은 <span class="arithmatex">\(\{1,3,5\}\)</span> 이다. </p>
+</li>
+<li>
+<p>이 예시와 정의에서 알 수 있듯 사건은 집합으로 나타내고 집합과 매우 유사한 성질을 갖는다.</p>
+</li>
+</ul>
+<a href="#92f74cb6b"><div class="admonition tldr" id="92f74cb6b">
+<p><span class="arithmatex">\(\sim\)</span> 사건 : 어떤 시행에서 <span class="arithmatex">\(\sim\)</span> 을 만족하는 결과의 집합이다.</p>
+</div></a>
+<ul>
+<li>즉 표본공간의 부분집합이다.</li>
+</ul>
+<a href="#473cae51f"><div class="admonition tldr" id="473cae51f">
+<p>근원사건(fundamental event) : 어떤 시행에서 얻을 수 있는 사건 중 더 이상 나눌 수 없는 기본적인 사건이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 표본공간의 부분집합 중 원소가 <span class="arithmatex">\(1\)</span> 개 인 집합이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>주사위를 던지는 시행에서 표본공간 <span class="arithmatex">\(S\)</span> 는 </p>
+<div class="arithmatex">\[ S = \{1,2,3,4,5,6\} \]</div>
+<p>에서 사건 <span class="arithmatex">\(\{1\}\)</span> 은 원소가 <span class="arithmatex">\(1\)</span> 인 부분집합이므로 근원사건이다.</p>
+</li>
+</ul>
+<a href="#cc0a2d404"><div class="admonition tldr" id="cc0a2d404">
+<p>전사건(whole event) : 어떤 시행에서 반드시 일어나는 사건이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 표본공간이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>주사위를 던지는 시행에서 "<span class="arithmatex">\(6\)</span> 이하의 눈이 나오는 사건" 은 전사건이다.</p>
+</li>
+</ul>
+<a href="#330d7d176"><div class="admonition tldr" id="330d7d176">
+<p>공사건 : 어떤 시행에서 절대 일어날 수 없는 사건이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 공집합이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>주사위를 던지는 시행에서 "<span class="arithmatex">\(7\)</span> 이상의 눈이 나오는 사건" 은 공사건이다.</p>
+</li>
+</ul>
+<a href="#f23670133"><div class="admonition tldr" id="f23670133">
+<p>경우의 수 : 어떤 사건이 일어날 수 있는 경우의 가짓수를 수로 표현한 것이다.</p>
+</div></a>
+<h3 id="_2">합사건, 곱사건, 여사건<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<a href="#dde46cda7"><div class="admonition tldr" id="dde46cda7">
+<p>합사건(sum event) : 두 사건 <span class="arithmatex">\(A, B\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 또는 <span class="arithmatex">\(B\)</span> 가 일어나는 사건을 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(B\)</span> 의 합사건이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>기호로 </p>
+<div class="arithmatex">\[ A \cup B \]</div>
+<p>로 나타낸다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>주사위를 던지는 시행에서 다음 두 사건 <span class="arithmatex">\(A, B\)</span> 를 생각하자. </p>
+<div class="arithmatex">\[ A = \{1,2,4\}, B = \{1,3,5\} \]</div>
+<p><span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(4\)</span> 의 약수가 나오는 사건, <span class="arithmatex">\(B\)</span> 는 홀수가 나오는 사건으로 해석할 수 있다.</p>
+<p><span class="arithmatex">\(A\)</span> 또는 <span class="arithmatex">\(B\)</span> 가 일어나는 사건은 두 사건 <span class="arithmatex">\(A, B\)</span> 의 합사건이므로 </p>
+<div class="arithmatex">\[ \therefore  A \cup B = \{1,2,4\} \cup \{1,3,5\} = \{1,2,3,4,5\} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#3bc3028dc"><div class="admonition tldr" id="3bc3028dc">
+<p>곱사건(product event) : 두 사건 <span class="arithmatex">\(A, B\)</span> 에 대하여 <span class="arithmatex">\(A, B\)</span> 가 동시에 일어나는 사건을 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(B\)</span> 의 곱사건이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>기호로 </p>
+<div class="arithmatex">\[ A \cap B \]</div>
+<p>로 나타낸다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>주사위를 던지는 시행에서 다음 두 사건 <span class="arithmatex">\(A, B\)</span> 를 생각하자. </p>
+<div class="arithmatex">\[ A = \{1,2,4\}, B = \{1,3,5\} \]</div>
+<p><span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(4\)</span> 의 약수가 나오는 사건, <span class="arithmatex">\(B\)</span> 는 홀수가 나오는 사건으로 해석할 수 있다.</p>
+<p><span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(B\)</span> 가 동시에 일어나는 사건은 두 사건 <span class="arithmatex">\(A, B\)</span> 의 곱사건이므로 </p>
+<div class="arithmatex">\[ \therefore  A \cap B = \{1,2,4\} \cap \{1,3,5\} = \{1\} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#84e58cfba"><div class="admonition tldr" id="84e58cfba">
+<p>배반사건 : <span class="arithmatex">\(A, B\)</span> 가 동시에 일어나지 않을 때 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(B\)</span> 를 배반사건이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 배반사건이란 </p>
+<div class="arithmatex">\[ A \cap B = \emptyset \]</div>
+<p>일 때의 <span class="arithmatex">\(A, B\)</span> 의 관계를 뜻한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>주사위를 던지는 시행에서 다음 두 사건 <span class="arithmatex">\(A, B\)</span> 를 생각하자. </p>
+<div class="arithmatex">\[ A = \{1,2,4\}, B = \{1,3,5\} \]</div>
+<p><span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(4\)</span> 의 약수가 나오는 사건, <span class="arithmatex">\(B\)</span> 는 홀수가 나오는 사건으로 해석할 수 있다.</p>
+<p><span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(B\)</span> 가 동시에 일어나지 않는 사건은 두 사건 <span class="arithmatex">\(A, B\)</span> 의 배반사건이므로 </p>
+<div class="arithmatex">\[ A \cap B = \emptyset \]</div>
+<p>일 때 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(B\)</span> 를 배반이라 한다.</p>
+<p>하지만 실제로는</p>
+<div class="arithmatex">\[ A \cap B = \{1\} \neq \emptyset \]</div>
+<p>이므로 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(B\)</span> 는 배반이 아니다.</p>
+</li>
+</ul>
+<a href="#5fa6d5429"><div class="admonition tldr" id="5fa6d5429">
+<p>여사건(complementary event) : 두 사건 <span class="arithmatex">\(A, B\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 가 일어나지 않는 사건을 <span class="arithmatex">\(A\)</span> 의 여사건이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>기호로 </p>
+<div class="arithmatex">\[ A ^{C}\]</div>
+<p>로 나타낸다.</p>
+</li>
+<li>
+<p>전사건은 공사건의 여사건이고 공사건은 전사건의 여사건이다. </p>
+<p>즉, </p>
+<div class="arithmatex">\[ \emptyset ^{C} = S, S ^{C} = \emptyset \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>주사위를 던지는 시행에서 다음 두 사건 <span class="arithmatex">\(A, B\)</span> 를 생각하자. </p>
+<div class="arithmatex">\[ A = \{1,2,4\}\]</div>
+<p><span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(4\)</span> 의 약수가 나오는 사건으로 해석할 수 있다.</p>
+<p>이때 사건 <span class="arithmatex">\(A\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 가 일어나지 않는 사건, 즉 여사건은 </p>
+<div class="arithmatex">\[ A ^{C} = S - A = \{1,2,3,4,5,6\} - \{1,2,4\} = \{3,5,6\} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<h3 id="_3">경우의 수 계산<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<a href="#e804e7060"><div class="admonition tldr" id="e804e7060">
+<p>합의 법칙(rule of sum) : 사건 <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> 이 동시에 일어나지 않을 때</p>
+<p>사건 <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> 이 일어나는 경우의 수가 각각 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 이면 </p>
+<p>사건 "<span class="arithmatex">\(A_1\)</span>, 또는 <span class="arithmatex">\(A_2\)</span>, 또는 <span class="arithmatex">\(\dots\)</span> 또는 <span class="arithmatex">\(A_n\)</span>" 이 일어나는 모든 경우의 수는 </p>
+<div class="arithmatex">\[ \boxed{\sum_{k=1}^{n}a_k = a_1 + a_2 + \dots + a_n } \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>독립사건들이 서로 영향을 주지 않을 때 모든 경우의 수를 계산한다면, 독립사건들의 경우의 수를 합하여 계산한다.</p>
+</li>
+<li>
+<p>사건은 시행 결과의 집합, 즉 집합이다.</p>
+<p>따라서 "<span class="arithmatex">\(A \cap B = \emptyset\)</span> 이면 <span class="arithmatex">\(n(A \cup B) = n(A) + n(B)\)</span> 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>주사위가 <span class="arithmatex">\(1\)</span> 또는 <span class="arithmatex">\(6\)</span> 이 나올 경우의 수는 <span class="arithmatex">\(1\)</span> 나올 경우, <span class="arithmatex">\(6\)</span> 이 나올 경우로 <span class="arithmatex">\(1 + 1 = 2\)</span> 가지이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>주사위 <span class="arithmatex">\(2\)</span>개를 던져서 나온 눈의 수의 합이 <span class="arithmatex">\(7\)</span> 또는 <span class="arithmatex">\(8\)</span> 인 경우의 수를 구하기 위해서는 두 독립사건 '주사위의 합이 <span class="arithmatex">\(7\)</span> 이 될 경우의 수'와 '주사위의 합이 <span class="arithmatex">\(8\)</span> 이 될 경우의 수'의 경우의 수를 합하면 된다.</p>
+</li>
+</ul>
+<a href="#c29714ed6"><div class="admonition tldr" id="c29714ed6">
+<p>곱의 법칙(rule of product) : 사건 <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> 이 연이어 일어날 때</p>
+<p>사건 <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> 이 일어나는 경우의 수가 각각 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 이면</p>
+<p>사건 <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> 이 연이어 일어나는 모든 경우의 수는 </p>
+<div class="arithmatex">\[ \boxed{\displaystyle \prod_{k=1}^{n}a_k = a_1 \times  a_2 \times  \dots \times  a_n } \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>다시 말하지만 사건은 시행 결과의 집합이다. </p>
+<p>그러면 두 사건 집합 <span class="arithmatex">\(A=\{x_1, \dots, x_m\}, B=\{y_1, \dots, y_n\}\)</span> 이 있다고 생각할 때 연이어 발생하는 사건을 각 집합의 원소의 순서쌍 <span class="arithmatex">\((x, y)\)</span> 으로 생각할 수 있다.</p>
+<p>즉 곱의 법칙은 두 사건 집합 <span class="arithmatex">\(A, B\)</span> 의 곱집합 <span class="arithmatex">\(A \times B = \{(x, y) | x \in A, y \in B\}\)</span> 이다. 그리고 곱집합에 대하여 다음 식이 성립한다. </p>
+<div class="arithmatex">\[ n(A \times B)  = n(A) \times n(B) \]</div>
+<p>이것을 일반화한 것이 곱의 법칙의 정의 <span class="arithmatex">\(\displaystyle \prod_{k=1}^{n}a_k\)</span> 이다. </p>
+</li>
+<li>
+<p>사건들이 서로 영향을 줄 때 모든 경우의 수를 계산한다면, 사건들의 경우의 수를 곱하여 계산한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>주사위를 <span class="arithmatex">\(2\)</span> 번 던져 짝수가 나온 후 홀수가 나올 경우의 수는 짝수가 나올 경우의 수 <span class="arithmatex">\(3\)</span> 가지 (<span class="arithmatex">\(2, 4, 6\)</span>)에 홀수가 나올 경우의 수 <span class="arithmatex">\(3\)</span> 가지(<span class="arithmatex">\(1, 3, 5\)</span>) 를 곱하여 <span class="arithmatex">\(3 \times 3 = 9\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#9cddff4c3"><div class="admonition tldr" id="9cddff4c3">
+<p>합의 법칙의 역연산 : 사건 <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> 이 동시에 일어나지 않을 때</p>
+<p>사건 <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> 이 일어나는 경우의 수가 각각 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 이면 </p>
+<p>사건 "<span class="arithmatex">\(A_1\)</span>, 또는 <span class="arithmatex">\(A_2\)</span>, 또는 <span class="arithmatex">\(\dots\)</span> 또는 <span class="arithmatex">\(A_n\)</span>" 에서 특정 사건 <span class="arithmatex">\(A_i(1 \leq i \leq n)\)</span> 가 일어나지 않는 경우의 수는 </p>
+<div class="arithmatex">\[ \boxed{\sum_{k=1}^{n}a_k - a_i = (a_1 + a_2 + \dots + a_n) - a_i } \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 전체 사건에서 특정 사건의 경우의 수를 빼는 것(덧셈의 역연산)으로써 </p>
+<p>합의 법칙에서 특정 사건이 일어나는 것을 제거하기 위하여 사용하면 된다.</p>
+</li>
+</ul>
+<a href="#ea94a7132"><div class="admonition tldr" id="ea94a7132">
+<p>곱의 법칙의 역연산 : 사건 <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> 이 연이어 일어날 때</p>
+<p>사건 <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> 이 일어나는 경우의 수가 각각 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 이면</p>
+<p>사건 <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> 에서 특정 사건 <span class="arithmatex">\(A_i(1 \leq i \leq n)\)</span> 가 일어나지 않는 경우의 수는 </p>
+<div class="arithmatex">\[ \boxed{\frac{\displaystyle \prod_{k=1}^{n}a_k}{a_i} = \frac{a_1 \times  a_2 \times  \dots \times  a_n}{a_i} } \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 전체 사건에서 특정 사건의 경우의 수를 나누는 것(곱셈의 역연산)으로써 </p>
+<p>합의 법칙에서 특정 사건이 일어나는 것을 제거하기 위하여 사용하면 된다.</p>
+</li>
+</ul>
+<a href="#3609d4b46"><div class="admonition tldr" id="3609d4b46">
+<p>계승(factorial) : <span class="arithmatex">\(1\)</span> 부터 <span class="arithmatex">\(n\)</span> 까지의 모든 자연수의 곱</p>
+<div class="arithmatex">\[ \boxed{n! = n(n-1)(n-2) \times \dots \times 2 \times 1 = \prod_{k=1}^{n}k } \]</div>
+<p>을 <span class="arithmatex">\(n\)</span> 의 계승이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>기호로 <span class="arithmatex">\(n!\)</span> 로 나타낸다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(0! = 1\)</span> 로 정의한다. </p>
+</li>
+<li>
+<p>자연수를 정의역으로 가지는 감마함수이다. </p>
+<ul>
+<li>감마함수는 계승 함수의 정의역을 복소수로 확장시킨 함수다. </li>
+</ul>
+</li>
+</ul>
+<h3 id="_4">순열<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<a href="#d5a28a31a"><div class="admonition tldr" id="d5a28a31a">
+<p>순열(비복원추출, permutation)  : 서로 다른 <span class="arithmatex">\(n\)</span> 개에서 중복되지 않게 <span class="arithmatex">\(r\)</span> 개를 택하여 일렬로 나열하는 것을 <span class="arithmatex">\(n\)</span> 에서 <span class="arithmatex">\(r\)</span> 개를 택하는 순열이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>기호로 <span class="arithmatex">\({}_nP_r\)</span> 으로 나타낸다. </p>
+</li>
+<li>
+<p>순열은 곱의 법칙에서 <span class="arithmatex">\(a_1 = n, a_2 = n-1, \dots, a_r = n-r+1\)</span> 로 순차적으로 <span class="arithmatex">\(1\)</span> 씩 줄어드는 경우이므로 그 값은 다음과 같다. </p>
+<div class="arithmatex">\[ \boxed{ {}_nP_r=n(n-1)(n-2)\times \dots \times (n-r+1) = \frac{n!}{(n-r)!} (단, 0 \leq r \leq n) } \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\({}_nP_0 = 1\)</span> 이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>학생 <span class="arithmatex">\(6\)</span> 명을 한줄로 세우려 하는 방법의 수는 </p>
+<div class="arithmatex">\[ 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 6! =720\]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\({}_6P_3 = 6 \times 5 \times 4\)</span></p>
+</li>
+<li>
+<p>예시 </p>
+<p>남학생 <span class="arithmatex">\(5\)</span> 명과 여학생 <span class="arithmatex">\(3\)</span> 명을 줄을 세우려 한다. </p>
+<p>여학생끼리 이웃하도록하는 줄을 세우는 방법의 수를 세보자. </p>
+<p>그러면 여학생 <span class="arithmatex">\(3\)</span> 명을 순서를 정렬할 때 하나의 개체로 둘 수 있으므로 남학생을 포함하여 <span class="arithmatex">\(6\)</span> 을 줄 세우는 경우 </p>
+<div class="arithmatex">\[ 6! = 720 \]</div>
+<p>에 여학생 <span class="arithmatex">\(3\)</span> 명을 그 안에서 줄을 세우는 경우 </p>
+<div class="arithmatex">\[ 3! = 6 \]</div>
+<p>에 곱의 법칙을 적용하여 </p>
+<div class="arithmatex">\[ \therefore  720 \times 6 = 4320 \]</div>
+<p>이다. ■ </p>
+<p>한편 여학생끼리 이웃하지 않도록 줄을 세우는 방법의 수를 세보자. </p>
+<p>그러면 남학생이 먼저 줄을 세운 후 그 사이와 양 끝에 여학생이 들어가는 경우를 세면 되므로 </p>
+<p>남학생의 줄을 세운 경우의 수 </p>
+<div class="arithmatex">\[ 5! = 120 \]</div>
+<p>에 남학생 사이의 공간과 양끝의 공간 <span class="arithmatex">\(6\)</span> 개 중에서 <span class="arithmatex">\(3\)</span> 개를 택하여 일렬로 나열하는 경우 </p>
+<div class="arithmatex">\[ {}_{6}P_{3} = 120 \]</div>
+<p>에 곱의 법칙을 적용하여 </p>
+<div class="arithmatex">\[ \therefore 120 \times 120 = 14400 \]</div>
+<p>을 얻는다. ■</p>
+</li>
+</ul>
+<a href="#973ba1c9e"><div class="admonition tldr" id="973ba1c9e">
+<p>원순열(circular permutation) : 서로 다른 <span class="arithmatex">\(n\)</span> 개를 원형으로 배열하는 경우의 수</p>
+<div class="arithmatex">\[ \boxed{ \frac{{}_{n}P_{n}}{n} = \frac{n!}{n} = (n-1)! } \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>원순열은 서로 다른 것을 일렬로 나열하는 것이 아닌 원형으로 배열하는 것이다.</p>
+<p>나열해야 할 원소를 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 이라고 하자. </p>
+<p>이때 서로 다른 <span class="arithmatex">\(n\)</span> 개를 일렬로 나열하는 하나의 경우의 수</p>
+<div class="arithmatex">\[ (a_1, a_2, a_3, \dots, a _{n-1}, a_n) \]</div>
+<p>를 생각하자. 그리고 이 나열에서 모든 원소를 한칸씩 왼쪽으로 밀려나게 한 경우의 수들</p>
+<div class="arithmatex">\[ (a_2, a_3, a_4, \dots, a _{n}, a_1) \]</div>
+<div class="arithmatex">\[ (a_3, a_4, a_5, \dots, a _1, a_2) \]</div>
+<div class="arithmatex">\[ \vdots \]</div>
+<div class="arithmatex">\[ (a_n, a_1, a_2, \dots, a _{n-2}, a _{n-1}) \]</div>
+<p>을 생각하자. 그런데 이 나열들의 양끝을 이어주기만 하면 원형의 나열이 되므로</p>
+<p>원순열에서 위 <span class="arithmatex">\(n\)</span> 개의 나열 방법은 서로 같은 것이 된다. </p>
+<p>그러므로 원순열의 경우의 수는 서로 다른 <span class="arithmatex">\(n\)</span> 개를 일렬로 나열한 것에서 <span class="arithmatex">\(n\)</span> 을 나눈 </p>
+<div class="arithmatex">\[ \frac{n!}{n} = (n-1)! \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p>사람 <span class="arithmatex">\(A, B, C, D\)</span> 가 있다. 이때 <span class="arithmatex">\(A, B\)</span> 가 서로 이웃하면서 사람들을 원형으로 배열하는 경우의 수를 구해보자.</p>
+<p>먼저 <span class="arithmatex">\(A, B\)</span> 가 반드시 이웃해야 하므로 순서를 배치함에 있어서 하나의 개체로 생각할 수 있다. 따라서 <span class="arithmatex">\(3\)</span> 명의 원순열은 </p>
+<div class="arithmatex">\[ 2! = 2 \]</div>
+<p>이고 <span class="arithmatex">\(A, B\)</span> 가 자리를 바꾸는 경우 </p>
+<div class="arithmatex">\[ 2! = 2 \]</div>
+<p>에 곱의 법칙을 적용하여</p>
+<div class="arithmatex">\[ \therefore 2 \times 2 = 4 \]</div>
+<p>이다. ■</p>
+</li>
+</ul>
+<a href="#c3383c276"><div class="admonition tldr" id="c3383c276">
+<p>중복순열(복원추출)(repeated permutation) : 서로 다른 <span class="arithmatex">\(n\)</span> 개에서 중복을 허락하여 <span class="arithmatex">\(r\)</span> 개를 택하여 일렬로 나열하는 것을 <span class="arithmatex">\(n\)</span> 개에서 <span class="arithmatex">\(r\)</span> 개를 택하는 경우의 수 </p>
+<div class="arithmatex">\[ \boxed{ {}_{n}\Pi_{r} = n \times n \times \dots \times n = n ^{r} } \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>그러나 사실상 순열과 중복순열이라는 개념은 없고 곱의 법칙만 있을 뿐이라고 생각해도 된다.</p>
+<p>모든 것은 결국 합의 법칙과 곱의 법칙으로 귀결된다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>서로 다른 <span class="arithmatex">\(n\)</span> 개에서 중복을 허락하며 <span class="arithmatex">\(r\)</span> 개를 택하여 일렬로 나열하는 것이다.</p>
+<p>앞에서부터 차례대로 올 수 있는 경우의 수는 항상 <span class="arithmatex">\(n\)</span> 가지이고 </p>
+<p>곱의 법칙에 의하여 서로 다른 <span class="arithmatex">\(r\)</span> 개를 택하는 경우는 </p>
+<div class="arithmatex">\[ \underbrace{n \times n \times \dots \times n}_{\text{r 개}} = n ^{r} = {}_{n}\Pi_{r}\]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p>서로 다른 <span class="arithmatex">\(5\)</span> 통의 편지를 <span class="arithmatex">\(4\)</span> 개의 우체통에 넣는 방법의 수를 구해보자. </p>
+<p>중복이 허락되므로 편지를 <span class="arithmatex">\(4\)</span> 개의 우체통에 넣는 가지수는 매번 <span class="arithmatex">\(4\)</span> 개이다.</p>
+<p>이것을 <span class="arithmatex">\(5\)</span> 번 반복하므로 곱의 법칙에 의하여 </p>
+<div class="arithmatex">\[ \underbrace{4 \times 4 \times \dots \times 4}_{5 번} = 4 ^{5} = {}_{4}\Pi_{5} \]</div>
+<p>이다. 따라서 </p>
+<div class="arithmatex">\[ \therefore  {}_{4}\Pi_{5} = 1024 \]</div>
+<p>이다. ■</p>
+</li>
+</ul>
+<a href="#456c27b47"><div class="admonition tldr" id="456c27b47">
+<p>같은 것이 있는 순열 : <span class="arithmatex">\(n\)</span> 개 중에 서로 같은 것이 각각 <span class="arithmatex">\(p\)</span> 개, <span class="arithmatex">\(q\)</span> 개, <span class="arithmatex">\(\dots\)</span>, <span class="arithmatex">\(r\)</span> 개씩 있고 <span class="arithmatex">\(p + q + \dots + r = n\)</span> 일 때 </p>
+<p><span class="arithmatex">\(n\)</span> 개를 일렬로 나열하는 방법의 수는 </p>
+<div class="arithmatex">\[ \frac{n!}{p!q! \dots r!} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(5\)</span> 개의 문자 <span class="arithmatex">\(a,a,a,b,b\)</span> 를 일렬로 나열하는 경우를 생각하자. </p>
+<p>이것은 <span class="arithmatex">\(5\)</span> 개의 문자를 먼저 모두 일렬로 나열한 다음 중복되는 순서를 제거하면 된다. </p>
+<p><span class="arithmatex">\(5\)</span> 개의 문자를 일렬로 나열하는 경우는 </p>
+<div class="arithmatex">\[ 5! \]</div>
+<p>이다. 여기에서 <span class="arithmatex">\(3\)</span> 개의 <span class="arithmatex">\(a\)</span> 가 나열되면서 <span class="arithmatex">\(3!\)</span> 만큼 중복되었으므로 <span class="arithmatex">\(a\)</span> 가 일렬로 나열된 경우의 수를 나누어서</p>
+<div class="arithmatex">\[ \frac{5!}{3!} \]</div>
+<p>로 만든다. 또한 <span class="arithmatex">\(2\)</span> 개의 <span class="arithmatex">\(b\)</span> 가 나열되면서 <span class="arithmatex">\(2!\)</span> 만큼 중복되었으므로 <span class="arithmatex">\(b\)</span> 가 일렬로 나열된 경우의 수를 나누어서</p>
+<div class="arithmatex">\[ \frac{5!}{3!2!} \]</div>
+<p>로 만든다. ■ </p>
+<p>이 과정을 일반적으로 생각하면 <span class="arithmatex">\(n\)</span> 개 중에 서로 같은 것이 <span class="arithmatex">\(p\)</span> 개, <span class="arithmatex">\(q\)</span> 개, <span class="arithmatex">\(\dots\)</span>, <span class="arithmatex">\(r\)</span> 개씩 있을 때 즉,</p>
+<p>$$ p + q + \dots + r = n $$ 일때</p>
+<p><span class="arithmatex">\(n\)</span> 개를 일렬로 나열하는 방법은 </p>
+<div class="arithmatex">\[ \therefore \frac{n!}{p!q! \dots r!} \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(8\)</span> 개의 문자 <span class="arithmatex">\(a, a, a, b, b, b, c, c\)</span> 를 일렬로 나열하는 경우의 수는 </p>
+<p><span class="arithmatex">\(8\)</span> 개의 문자를 일렬로 나열하는 경우 <span class="arithmatex">\(8!\)</span> 에서 중복되는 <span class="arithmatex">\(3\)</span> 개의 <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(3\)</span> 개의 <span class="arithmatex">\(b\)</span>, <span class="arithmatex">\(2\)</span> 개의 <span class="arithmatex">\(c\)</span> 의 나열을 제거한 </p>
+<div class="arithmatex">\[ \therefore  \frac{8!}{3!3!2!} = 560 \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<h3 id="_5">조합<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<a href="#cc5f9b6e1"><div class="admonition tldr" id="cc5f9b6e1">
+<p>조합(combination) : 서로 다른 <span class="arithmatex">\(n\)</span> 개에서 순서를 생각하지 않고 중복되지 않게 <span class="arithmatex">\(r\)</span> 개를 택하는 것을 <span class="arithmatex">\(n\)</span> 개에서 <span class="arithmatex">\(r\)</span> 개를 택하는 조합</p>
+<div class="arithmatex">\[ \boxed{ {}_nC_r=\frac{{}_nP_r}{r!} = \binom{n}{r} = \frac{n!}{(n-r)!r!} (단, 0 \leq r \leq n) }\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>기호로 <span class="arithmatex">\({}_nC_r\)</span> 또는 <span class="arithmatex">\(\displaystyle \binom{n}{r}\)</span> 로 나타낸다. </p>
+</li>
+<li>
+<p>순열에서 <span class="arithmatex">\(r\)</span> 개의 순서를 제거한 것이기 때문에 </p>
+<div class="arithmatex">\[ {}_nC_r=\frac{{}_nP_r}{r!} (단, 0 \leq r \leq n) \]</div>
+<p>로도 나타낼 수 있다.</p>
+</li>
+<li>
+<p>순서를 생각하지 않고 <span class="arithmatex">\(n\)</span> 개에서 <span class="arithmatex">\(r\)</span> 개를 택하는 것이기에 조합은 <span class="arithmatex">\(n\)</span> 개의 원소를 가지는 전체집합에서 원소가 <span class="arithmatex">\(r\)</span> 개인 부분집합의 개수를 찾는 것과 같다.</p>
+</li>
+<li>
+<p>조합의 정의에서 다음 관계가 생성된다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\({}_nC_0=1\)</span> </p>
+<p><span class="arithmatex">\(\because\)</span> 원소가 <span class="arithmatex">\(0\)</span> 개인 부분집합은 공집합 뿐이기 때문이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\({}_nC_n = 1\)</span> </p>
+<p><span class="arithmatex">\(\because\)</span> 원소가 <span class="arithmatex">\(n\)</span> 개인 부분집합은 전제집합 뿐이기 때문이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\({}_nC_1 = n\)</span> </p>
+<p><span class="arithmatex">\(\because\)</span> 원소가 <span class="arithmatex">\(1\)</span> 개인 부분집합은 <span class="arithmatex">\(n\)</span> 개이기 때문이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\({}_nC_r = {}_nC_{n-r}\)</span> </p>
+<p><span class="arithmatex">\(\because\)</span> 원소가 <span class="arithmatex">\(r\)</span> 개인 부분집합 <span class="arithmatex">\(A\)</span> 가 결정될 때마다 부분집합의 여집합 <span class="arithmatex">\(A ^{c}=(U-A)\)</span> 도 유일하게 결정되기 때문이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\({}_{n}C_{r} = {}_{n-1}C_{r-1} + {}_{n-1}C_{r}(단, 1 \leq r &lt; n)\)</span></p>
+<p><span class="arithmatex">\(\because\)</span> <span class="arithmatex">\(n\)</span> 개의 원소를 가지는 전체집합 <span class="arithmatex">\(U\)</span> 의 첫번째 원소를 <span class="arithmatex">\(a\)</span> 라 할 때 원소가 <span class="arithmatex">\(r\)</span> 개인 부분집합의 개수 <span class="arithmatex">\({}_{n}C_{r}\)</span> 다음 두 경우로 분할하여 단순화시킬 수 있다. </p>
+<p>원소 <span class="arithmatex">\(a\)</span> 를 포함하는 경우 : 원소 <span class="arithmatex">\(a\)</span> 를 불변요소로 단순화시켰기 때문에 사고대상영역에서 <span class="arithmatex">\(a\)</span> 를 제거해도 된다. 그러면 <span class="arithmatex">\(n-1\)</span> 의 집합에서 <span class="arithmatex">\(r-1\)</span> 개의 부분집합의 개수는 <span class="arithmatex">\({}_{n-1}C_{r-1}\)</span> 이다.</p>
+<p>원소 <span class="arithmatex">\(a\)</span> 를 포함하지 않는 경우 : 위와 같은 논리로 <span class="arithmatex">\(n-1\)</span> 의 집합에서 <span class="arithmatex">\(r\)</span> 개의 부분집합의 개수는 <span class="arithmatex">\({}_{n-1}C_{r}\)</span> 이다. </p>
+<p>이 경우 불변요소에 다시 가변성을 부여하여 일반화시키는 것은 두 사건이 동시에 일어나지 않으므로 합의 법칙에 의하여 단순히 더해주는 것이다. 따라서 <span class="arithmatex">\({}_{n}C_{r} = {}_{n-1}C_{r-1} + {}_{n-1}C_{r}(단, 1 \leq r &lt; n)\)</span> 이다. </p>
+</li>
+</ol>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(5\)</span> 명의 학생 "<span class="arithmatex">\(A, B, C, D, E\)</span>" 중 청소를 할 <span class="arithmatex">\(2\)</span> 명의 학생을 선택할 경우의 수는 순서를 고려하지 않으므로 <span class="arithmatex">\({}_{5}C_{2} = \dfrac{5 \times 4}{2 \times 1}\)</span> 이다. </p>
+</li>
+<li>
+<p>시행에서 사건을 결과의 집합이라 했었는데 사건을 파악하기 위하여 수학 기호로 추상화시켜 표현해야 한다. 이때 동시에 일어나는 사건은 순서가 있는 순서쌍 <span class="arithmatex">\((1,1),(3,5)\)</span> 으로 표현한다. 순열도 순서가 있는 사건을 표현해야 하므로 순서쌍으로 표기하면 된다. 반면 조합은 순서가 상관 없기에 시행의 결과를 <span class="arithmatex">\(\{A,B\} \{A, C\}\)</span> 같이 집합으로 표현하면 된다. 집합은 <span class="arithmatex">\(\{A,B\}=\{B,A\}\)</span> 이기 때문이다.</p>
+</li>
+</ul>
+<a href="#50364cdd1"><div class="admonition tldr" id="50364cdd1">
+<p>중복조합(repeated combination) : 서로 다른 <span class="arithmatex">\(n\)</span> 개에서 순서를 생각하지 않고 중복을 허락하여 <span class="arithmatex">\(r\)</span> 개를 택하는 경우의 수</p>
+<div class="arithmatex">\[ \boxed{ {}_{n}H_{r} = {}_{n+r-1}C_{r} }  \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>중복조합이란 조합에서 중복 선택을 허용하는 것이다. </p>
+<p>먼저 중복조합의 단순한 샘플을 살펴보면서 경우의 수를 알아낼 수 있는 방법을 생각해보자. </p>
+<p><span class="arithmatex">\(3\)</span> 개의 숫자 <span class="arithmatex">\(1, 2, 3\)</span> 에서 중복적으로 <span class="arithmatex">\(2\)</span> 개를 택하는 중복조합 <span class="arithmatex">\({}_{3}H_{2}\)</span> 은 다음과 같다. </p>
+<div class="arithmatex">\[ \{1,1\},\{1,2\},\{1,3\},\{2,2\},\{2,3\},\{3,3\} \]</div>
+<p>중복조합, 즉 조합은 순서가 없기에 집합으로 표현했다. 이제 첫번째 자리에 <span class="arithmatex">\(0\)</span> 을, 두번째 자리에 <span class="arithmatex">\(1\)</span> 을 각각 더하면 다음과 같다. </p>
+<div class="arithmatex">\[ \{1,2\},\{1,3\},\{1,4\},\{2,3\},\{2,4\},\{3,4\} \]</div>
+<p>그런데 이것은 <span class="arithmatex">\(4\)</span> 개의 숫자 <span class="arithmatex">\(1, 2, 3, 4\)</span> 에서 <span class="arithmatex">\(2\)</span> 개를 택하는 조합의 경우 <span class="arithmatex">\({}_{4}C_{2}\)</span> 와도 같다. </p>
+<p>따라서 </p>
+<div class="arithmatex">\[ \therefore  {}_{3}H_{2} = {}_{4}C_{2} \]</div>
+<p>이다. ■ </p>
+<p>이제 이것을 일반화하여 생각하자.</p>
+<p>그러면 <span class="arithmatex">\(n\)</span> 개의 숫자 <span class="arithmatex">\(1, 2, 3, \dots, n\)</span> 에서 중복적으로 <span class="arithmatex">\(r\)</span> 개를 택하는 경우의 수 <span class="arithmatex">\({}_{n}H_{r}\)</span> 는 다음과 같다.</p>
+<div class="arithmatex">\[ \{1,1,1, \dots, 1\} \\ \{1,1,1, \dots, 2\} \\ \vdots \\ \{2,2,2, \dots, 2\} \\ \vdots \\ \underbrace{\{n,n,n, \dots, n\}}_{\text{r개}}  \\ \]</div>
+<p>여기에서 각 자리에 각각 </p>
+<div class="arithmatex">\[ 0, 1, 2, \dots, r-1 \]</div>
+<p>을 더하면</p>
+<div class="arithmatex">\[ \{1,2,3, \dots, r\} \\ \{1,2,3, \dots, r+1\} \\ \vdots  \\ \{2,3,4, \dots, r+1\} \\ \vdots \\ \underbrace{\{n,n+1,n+2, \dots, n+r-1\}}_{\text{r개}}  \\ \]</div>
+<p>을 얻을 수 있는데 이것은 <span class="arithmatex">\(n+r-1\)</span> 의 숫자에서 <span class="arithmatex">\(r\)</span> 개를 택하는 조합 <span class="arithmatex">\({}_{n+r-1}C_{r}\)</span> 와 같다.</p>
+<p>따라서 </p>
+<div class="arithmatex">\[ \therefore  {}_{n}H_{r} = {}_{n+r-1}C_{r} \]</div>
+<p>이다. ■</p>
+</li>
+</ul>
+<a href="#809fcbc8f"><div class="admonition tldr" id="809fcbc8f">
+<p>순열, 중복순열, 조합, 중복조합의 비교 </p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">중복 X</th>
+<th align="center">중복 O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">순서 O</td>
+<td align="center">순열 <span class="arithmatex">\({}_{n}P_{r} = \dfrac{n!}{(n-r)!}\)</span></td>
+<td align="center">중복순열 <span class="arithmatex">\({}_{n}\Pi_{r} = n ^{r}\)</span></td>
+</tr>
+<tr>
+<td align="center">순서 X</td>
+<td align="center">조합 <span class="arithmatex">\({}_{n}C_{r}= \dfrac{n!}{(n-r)!r!}\)</span></td>
+<td align="center">중복조합 <span class="arithmatex">\({}_{n}H_{r} = {}_{n+r-1}C_{r}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(a, b, c\)</span> 에서 <span class="arithmatex">\(2\)</span> 개를 뽑는 각각의 경우를 비교해보자. </p>
+<ul>
+<li>
+<p>순열 </p>
+<p>서로 다른 <span class="arithmatex">\(3\)</span> 개에서 순서를 고려하여 중복되지 않게 <span class="arithmatex">\(2\)</span> 개를 선택하는 경우는 </p>
+<div class="arithmatex">\[ab, ba, ac, ca, bc, cb \to {}_{3}P_{2} = 3 \times 2 = 6\]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>중복순열 </p>
+<p>서로 다른 <span class="arithmatex">\(3\)</span> 개에서 순서를 고려하여 중복을 허락하여 <span class="arithmatex">\(2\)</span> 개를 선택하는 경우는 </p>
+<div class="arithmatex">\[ab, ba, ac, ca, bc, cb, aa, bb, cc \to {}_{3}\Pi_{2} = 3 ^{2}  = 9\]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>조합</p>
+<p>서로 다른 <span class="arithmatex">\(3\)</span> 개에서 순서를 고려하지 않고 중복되지 않게 <span class="arithmatex">\(2\)</span> 개를 선택하는 경우는 </p>
+<div class="arithmatex">\[ab, ac, ca \to {}_{3}C_{2} = \frac{{}_{3}P_{2}}{2!} = \frac{3 \times 2}{2!}  = 3\]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>중복조합</p>
+<p>서로 다른 <span class="arithmatex">\(3\)</span> 개에서 순서를 고려하지 않고 중복을 허락하여 <span class="arithmatex">\(2\)</span> 개를 선택하는 경우는 </p>
+<div class="arithmatex">\[ab, ac, ca, aa, bb, cc \to {}_{3}H_{2} = {}_{3 + 2 - 1}C_{2} = {}_{4}C_{2} = 6\]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">이항정리<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<a href="#32ab07a22"><div class="admonition tldr" id="32ab07a22">
+<p>이항정리(binomial theorem) : 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 <span class="arithmatex">\((a + b) ^{n}\)</span> 을 전개하면 </p>
+<div class="arithmatex">\[ \boxed{ (a+b) ^{n} = {}_{n}C_{0}a ^{n} + {}_{n}C_{1}a ^{n-1}b + {}_{n}C_{2}a ^{n-2}b ^{2}+ \dots + {}_{n}C_{r}a ^{n-r}b ^{r} + \dots + {}_{n}C_{n}b ^{n} = \sum_{r=0}^{n} {}_{n}C_{r} a ^{n-r} b ^{r} } \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\((a + b) ^{3}\)</span> 의 전개식은 다음과 같다. </p>
+<div class="arithmatex">\[ (a+b) ^{3} = a ^{3} + 3 a ^{2}b + 3 a b ^{2} + b ^{3} \]</div>
+<p>이때 <span class="arithmatex">\(a ^{2}b\)</span> 의 계수 <span class="arithmatex">\(3\)</span> 만 두고 생각해보자.</p>
+<p>이 <span class="arithmatex">\(3\)</span> 은 <span class="arithmatex">\(3\)</span> 개의 인수 <span class="arithmatex">\((a+b),(a+b),(a+b)\)</span> 에서 <span class="arithmatex">\(b\)</span> 를 <span class="arithmatex">\(1\)</span> 개 택하고 <span class="arithmatex">\(a\)</span> 를 <span class="arithmatex">\(2\)</span> 개 택한 후 곱하여 <span class="arithmatex">\(a ^{2}b\)</span> 를 만든 것으로 볼 수 있다. </p>
+<p>이것은 곧 <span class="arithmatex">\(3\)</span> 개의 인수 <span class="arithmatex">\((a+b),(a+b),(a+b)\)</span> 에서 <span class="arithmatex">\(b\)</span> 를 <span class="arithmatex">\(1\)</span> 개 택하는 경우의 수 <span class="arithmatex">\({}_{3}C_{1}\)</span> 과 같다. 이와 같은 관점으로 각각의 계수를 <span class="arithmatex">\(b\)</span> 를 택하는 조합의 경우의 수로 바라보자. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(a ^{3}\)</span> 의 계수는 <span class="arithmatex">\(3\)</span> 개의 인수 <span class="arithmatex">\((a+b),(a+b),(a+b)\)</span> 에서 <span class="arithmatex">\(b\)</span> 를 <span class="arithmatex">\(0\)</span> 개 택하는 경우의 수 <span class="arithmatex">\({}_{3}C_{0} = 1\)</span> 이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(a ^{2}b\)</span> 의 계수는 <span class="arithmatex">\(3\)</span> 개의 인수 <span class="arithmatex">\((a+b),(a+b),(a+b)\)</span> 에서 <span class="arithmatex">\(b\)</span> 를 <span class="arithmatex">\(1\)</span> 개 택하는 경우의 수 <span class="arithmatex">\({}_{3}C_{1} = 3\)</span> 이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(ab^{2}\)</span> 의 계수는 <span class="arithmatex">\(3\)</span> 개의 인수 <span class="arithmatex">\((a+b),(a+b),(a+b)\)</span> 에서 <span class="arithmatex">\(b\)</span> 를 <span class="arithmatex">\(2\)</span> 개 택하는 경우의 수 <span class="arithmatex">\({}_{3}C_{0} = 3\)</span> 이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(b ^{3}\)</span> 의 계수는 <span class="arithmatex">\(3\)</span> 개의 인수 <span class="arithmatex">\((a+b),(a+b),(a+b)\)</span> 에서 <span class="arithmatex">\(b\)</span> 를 <span class="arithmatex">\(3\)</span> 개 택하는 경우의 수 <span class="arithmatex">\({}_{3}C_{3} = 1\)</span> 이다. </p>
+</li>
+</ul>
+<p>그러므로 <span class="arithmatex">\((a + b) ^{3}\)</span> 의 전개식은 </p>
+<div class="arithmatex">\[ \therefore  (a+b) ^{3} = {}_{3}C_{0} a ^{3} + {}_{3}C_{1} a ^{2}b + {}_{3}C_{2} a b ^{2} + {}_{3}C_{3} b ^{3} \]</div>
+<p>이다. ■ </p>
+<p>이것을 <span class="arithmatex">\((a + b) ^{n}\)</span> 에 적용할 수 있도록 일반화하여 생각하면 각각의 계수는 <span class="arithmatex">\(n\)</span> 개의 인수 <span class="arithmatex">\((a +b)\)</span> 에서 <span class="arithmatex">\(b\)</span> 를 <span class="arithmatex">\(r\)</span> 개씩 택하여 곱한 <span class="arithmatex">\({}_{n}C_{r}\)</span> 이다.</p>
+<p>따라서 <span class="arithmatex">\((a+b) ^{n}\)</span> 의 전개식은 </p>
+<div class="arithmatex">\[ \therefore  (a+b) ^{n} = {}_{n}C_{0}a ^{n} + {}_{n}C_{1}a ^{n-1}b + {}_{n}C_{2}a ^{n-2}b ^{2}+ \dots + {}_{n}C_{r}a ^{n-r}b ^{r} + \dots + {}_{n}C_{n}b ^{n} = \sum_{r=0}^{n} {}_{n}C_{r} a ^{n-r} b ^{r} \]</div>
+<p>이 된다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\((x+2) ^{5}\)</span> 을 전개하면 </p>
+<div class="arithmatex">\[ (x+2) ^{5} = \sum_{r=0}^{5}{}_{5}C_{r}x ^{5-r}2 ^{r} \]</div>
+<div class="arithmatex">\[ = {}_{5}C_{0}x ^{5} + {}_{5}C_{1} x ^{4} \cdot 2 + {}_{5}C_{2} x ^{3} \cdot 2 ^{2} + {}_{5}C_{3}x ^{2} \cdot 2 ^{3} + {}_{5}C_{4} x \cdot 2 ^{4} + {}_{5}C_{5} 2 ^{5} \]</div>
+<div class="arithmatex">\[ = x ^{5} + 10 x ^{4} + 40 x ^{3} + 80 x ^{2} + 80 x + 32 \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#c068a3557"><div class="admonition tldr" id="c068a3557">
+<p>이항계수 : 이항정리의 정의에서 전개식 <span class="arithmatex">\((a+b) ^{n}\)</span> 의 계수들</p>
+<div class="arithmatex">\[ \boxed{ {}_{n}C_{0}, {}_{n}C_{1}, {}_{n}C_{2}, \dots , {}_{n}C_{r}, \dots , {}_{n}C_{n} }\]</div>
+<p>을 이항계수라 한다.</p>
+</div></a>
+<a href="#65a75d2dd"><div class="admonition tldr" id="65a75d2dd">
+<p>전개식의 일반항 : 이항정리의 정의에서 전개식 <span class="arithmatex">\((a+b) ^{n}\)</span> 의 일반항 </p>
+<div class="arithmatex">\[{}_{n}C_{r} a ^{n-r} b ^{r}\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\((x - 5y) ^{8}\)</span> 의 전개식에서 <span class="arithmatex">\(x ^{5} y ^{3}\)</span> 의 계수를 구해보자. </p>
+<p>먼저 전개식의 일반항은 </p>
+<div class="arithmatex">\[ {}_{8}C_{r}x ^{8-r}(-5y) ^{r} = {}_{8}C_{r}(-5) ^{r}x ^{8-r}y ^{r} \]</div>
+<p>이다. </p>
+<p>이때 <span class="arithmatex">\(r =3\)</span> 이면 </p>
+<div class="arithmatex">\[ {}_{8}C_{3}(-5)^{3}x ^{5} y ^{3} = 56 \times (-125)x ^{5}y ^{3} = -7000 x ^{5} y ^{3} \]</div>
+<p>이므로 계수는 <span class="arithmatex">\(-7000\)</span> 이다. ■</p>
+</li>
+</ul>
+<a href="#33a725959"><div class="admonition tldr" id="33a725959">
+<p>삼항정리(trinomial theorem)  : 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 <span class="arithmatex">\((a + b + c) ^{n}\)</span> 의 전개식에서 <span class="arithmatex">\(p+q+r = n\)</span> 에 대한 <span class="arithmatex">\(a ^{p}b ^{q} c ^{r}\)</span> 일반항은</p>
+<div class="arithmatex">\[ \boxed{ {}_{n}C_{p} \cdot {}_{n-p}C_{q} \cdot {}_{r}C_{r} a ^{p} b ^{q} c ^{r} = \frac{n!}{p!q!r!} {}_{r}C_{r} a ^{p} b ^{q} c ^{r} } \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>자연수 <span class="arithmatex">\(n\)</span> 에 대하여 <span class="arithmatex">\((a + b + c) ^{n}\)</span> 의 전개식에서 <span class="arithmatex">\(p+q+r = n\)</span> 에 대한 <span class="arithmatex">\(a ^{p}b ^{q} c ^{r}\)</span> 의 계수는 </p>
+<p><span class="arithmatex">\(n\)</span> 개의 인수 <span class="arithmatex">\((a+b+c)\)</span> 에서 <span class="arithmatex">\(p\)</span> 개의 인수에서 <span class="arithmatex">\(a\)</span> 를, <span class="arithmatex">\(q\)</span> 개의 인수에서 <span class="arithmatex">\(b\)</span> 를, <span class="arithmatex">\(r\)</span> 개의 인수에서 <span class="arithmatex">\(c\)</span> 를 택하는 조합이다.</p>
+<p>따라서 <span class="arithmatex">\(n\)</span> 개에서 <span class="arithmatex">\(p\)</span> 개를 택하고 <span class="arithmatex">\((n-p)\)</span> 개에서 <span class="arithmatex">\(q\)</span> 개를 택하고 나머지 <span class="arithmatex">\(r\)</span> 개에서 <span class="arithmatex">\(r\)</span> 개를 택하는 조합의 경우의 수 </p>
+<div class="arithmatex">\[ {}_{n}C_{p} \cdot {}_{n-p}C_{q} \cdot {}_{r}C_{r} \]</div>
+<p>가 된다. </p>
+<p>그런데 이것은 <span class="arithmatex">\(n\)</span> 개 중에서 서로 같은 <span class="arithmatex">\(p\)</span> 개, 서로 같은 <span class="arithmatex">\(q\)</span> 개, 서로 같은 <span class="arithmatex">\(r\)</span> 개를 택하여 일렬로 나열하는 경우와 같다. 왜냐하면 같은 것이 있는 순열은 같은 것들에 대하여 순서가 없으므로 조합으로 생각할 수 있기 때문이다.</p>
+<p>예를 들어서 같은 것이 있는 <span class="arithmatex">\(7\)</span> 개의 문자 <span class="arithmatex">\(a,a,a,b,b,c,c\)</span> 를 일렬로 나열하는 경우의 수는 물론</p>
+<div class="arithmatex">\[ \frac{7!}{3!2!2!} \]</div>
+<p>이다.</p>
+<p>하지만 이것은 <span class="arithmatex">\(7\)</span> 개의 빈칸에서 <span class="arithmatex">\(3\)</span> 개를 택하여 <span class="arithmatex">\(a\)</span> 를 넣고, 남은 자리에서 <span class="arithmatex">\(2\)</span> 개를 택하여 <span class="arithmatex">\(b\)</span> 를 넣고, 남은 자리에서 <span class="arithmatex">\(2\)</span> 개를 택하여 <span class="arithmatex">\(c\)</span> 를 넣는 경우로 볼 수 있으므로 </p>
+<div class="arithmatex">\[ {}_{7}C_{3} \times {}_{4}C_{2} \times {}_{2}C_{2} = \frac{7!}{3!4!} \times \frac{4!}{2!2!} \times 1 = \frac{7!}{3!2!2!} \]</div>
+<p>이 된다.</p>
+<p>이에 따라</p>
+<div class="arithmatex">\[ {}_{n}C_{p} \cdot {}_{n-p}C_{q} \cdot {}_{r}C_{r} = \frac{n!}{p!q!r!}\]</div>
+<p>이므로 </p>
+<p>최종적으로 <span class="arithmatex">\((a + b + c) ^{n}\)</span> 의 전개식에서 <span class="arithmatex">\(p+q+r = n\)</span> 에 대한 <span class="arithmatex">\(a ^{p}b ^{q} c ^{r}\)</span> 일반항은</p>
+<div class="arithmatex">\[ \therefore {}_{n}C_{p} \cdot {}_{n-p}C_{q} \cdot {}_{r}C_{r}a ^{p}b ^{q}c ^{r} = \frac{n!}{p!q!r!} a ^{p}b ^{q} c ^{r} \]</div>
+<p>이다. ■</p>
+</li>
+</ul>
+<a href="#fcad731c6"><div class="admonition tldr" id="fcad731c6">
+<p>이항계수의 성질 : 이항계수는 다음 성질을 갖는다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\({}_{n}C_{0} + {}_{n}C_{1} + {}_{n}C_{2} + \dots + {}_{n}C_{n} = 2 ^{n}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\({}_{n}C_{0} - {}_{n}C_{1} + {}_{n}C_{2} - {}_{n}C_{3} + \dots + (-1)^{n} \cdot  {}_{n}C_{n} = 0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\({}_{n}C_{0} + {}_{n}C_{2} + {}_{n}C_{4} + \dots = 2 ^{n-1}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\({}_{n}C_{1} + {}_{n}C_{3} + {}_{n}C_{5} + \dots = 2 ^{n-1}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\({}_{n}C_{0} + 2 \cdot  {}_{n}C_{1} + 3 \cdot  {}_{n}C_{2} + \dots + n \cdot  {}_{n}C_{n} = n \cdot 2 ^{n}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\({}_{n}C_{0} - 2 \cdot  {}_{n}C_{1} + 3 \cdot  {}_{n}C_{2} - \dots + (-1)^{n-1} n \cdot  {}_{n}C_{n} = 0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\({}_{n}C_{0} + \dfrac{{}_{n}C_{1} }{2} + \dfrac{{}_{n}C_{2}}{3}  + \dots + \dfrac{{}_{n}C_{n} }{n+1} = \dfrac{1}{n+1}(2 ^{n+1}-1)\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>이항정리에서 <span class="arithmatex">\((1+x) ^{n}\)</span> 을 전개하면 </p>
+<div class="arithmatex">\[ (1+x) ^{n} = {}_{n}C_{0}x ^{0} + {}_{n}C_{1} x ^{1} + {}_{n}C_{2} x ^{2} + \dots + {}_{n}C_{r} x ^{r} + \dots + {}_{n}C_{n} x ^{n} \]</div>
+<p>을 얻는다.</p>
+<p>여기에서 <span class="arithmatex">\(x=1\)</span> 이면 </p>
+<div class="arithmatex">\[\therefore  {}_{n}C_{0} + {}_{n}C_{1} + {}_{n}C_{2} + \dots + {}_{n}C_{n} = 2 ^{n} \tag{1} \]</div>
+<p>이다. ■ </p>
+<p><span class="arithmatex">\(x=-1\)</span> 이면 </p>
+<div class="arithmatex">\[\therefore  {}_{n}C_{0} - {}_{n}C_{1} + {}_{n}C_{2} - {}_{n}C_{3} + \dots + (-1)^{n} \cdot  {}_{n}C_{n} = 0 \tag{2} \]</div>
+<p>이다. ■ </p>
+<p><span class="arithmatex">\(((1) + (2)) \div 2\)</span> 을 하면</p>
+<div class="arithmatex">\[\therefore  {}_{n}C_{0} + {}_{n}C_{2} + {}_{n}C_{4} + \dots = 2 ^{n-1}\]</div>
+<p>이다. ■ </p>
+<p><span class="arithmatex">\(((1) - (2)) \div 2\)</span> 을 하면</p>
+<div class="arithmatex">\[ \therefore {}_{n}C_{1} + {}_{n}C_{3} + {}_{n}C_{5} + \dots = 2 ^{n-1}\]</div>
+<p>이다. ■ </p>
+<p>한편 <span class="arithmatex">\((1+x) ^{n}\)</span> 을 <span class="arithmatex">\(x\)</span> 에 대하여 미분하면 </p>
+<div class="arithmatex">\[ n(1+x) ^{n-1} = {}_{n}C_{1} + 2 \cdot  {}_{n}C_{2} x + \dots + r \cdot  {}_{n}C_{r} x ^{r-1} + \dots + n \cdot  {}_{n}C_{n} x ^{n-1} \]</div>
+<p>을 얻는다.</p>
+<p>여기에서 <span class="arithmatex">\(x=1\)</span> 이면 </p>
+<div class="arithmatex">\[ \therefore  {}_{n}C_{0} + 2 \cdot  {}_{n}C_{1} + 3 \cdot  {}_{n}C_{2} + \dots + n \cdot  {}_{n}C_{n} = n \cdot 2 ^{n}\]</div>
+<p>이다. ■ </p>
+<p><span class="arithmatex">\(x=-1\)</span> 이면 </p>
+<div class="arithmatex">\[\therefore  {}_{n}C_{0} - 2 \cdot  {}_{n}C_{1} + 3 \cdot  {}_{n}C_{2} - \dots + (-1)^{n-1} n \cdot  {}_{n}C_{n} = 0\]</div>
+<p>이다. ■ </p>
+<p>한편 <span class="arithmatex">\((1+x) ^{n}\)</span> 을 구간 <span class="arithmatex">\([0, 1]\)</span> 에서 적분하면 </p>
+<div class="arithmatex">\[ \int_{0}^{1}(1+x) ^{n}dx = \int_{0}^{1}\{ {}_{n}C_{0}x ^{0} + {}_{n}C_{1} x ^{1} + {}_{n}C_{2} x ^{2} + \dots + {}_{n}C_{r} x ^{r} + \dots + {}_{n}C_{n} x ^{n} \}dx \]</div>
+<div class="arithmatex">\[ \bigg [ \frac{1}{n+1}(1+x) ^{n+1} \bigg ] ^{1} _{0} = \bigg [ {}_{n}C_{0}x + \dfrac{{}_{n}C_{1} }{2} x ^{2} + \dfrac{{}_{n}C_{2}}{3} x ^{3}  + \dots + \dfrac{{}_{n}C_{n} }{n+1} x ^{n+1} \bigg ] ^{1}_{0} \]</div>
+<div class="arithmatex">\[ \therefore {}_{n}C_{0} + \dfrac{{}_{n}C_{1} }{2} + \dfrac{{}_{n}C_{2}}{3}  + \dots + \dfrac{{}_{n}C_{n} }{n+1} = \dfrac{1}{n+1}(2 ^{n+1}-1) \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \log_{2} ({}_{2008}C_{1} + {}_{2008}C_{3} + {}_{2008}C_{5} + \dots + {}_{2008}C_{2007}) \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ {}_{2008}C_{1} + {}_{2008}C_{3} + {}_{2008}C_{5} + \dots + {}_{2008}C_{2007} = 2 ^{2008 -1} = 2 ^{2007} \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \log_{2} ({}_{2008}C_{1} + {}_{2008}C_{3} + {}_{2008}C_{5} + \dots + {}_{2008}C_{2007}) = \log_{2} 2 ^{2007} = 2007 \]</div>
+<p>이다. ■</p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 함수" class="md-footer__link md-footer__link--prev" href="../../Analysis/function/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              함수
+            </div>
+</div>
+</a>
+<a aria-label="다음: 확률" class="md-footer__link md-footer__link--next" href="../prob/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              확률
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

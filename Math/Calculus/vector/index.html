@@ -1,0 +1,2642 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Calculus/vector/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>벡터해석학 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              벡터해석학
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          벡터해석학
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        벡터해석학
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    매개변수 방정식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    벡터
+  </a>
+<nav aria-label="벡터" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    여러가지 벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    벡터 대수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    위치벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    평면벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    공간벡터
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    벡터 해석학
+  </a>
+<nav aria-label="벡터 해석학" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    노름 거리
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    벡터 대수 연산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    내적, 외적
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    일차독립과 일차종속
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    \(3\)차원 좌표공간의 기저
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    벡터공간과 차원
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    좌표계
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    행렬
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    매개변수 방정식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    벡터
+  </a>
+<nav aria-label="벡터" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    여러가지 벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    벡터 대수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    위치벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    평면벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    공간벡터
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    벡터 해석학
+  </a>
+<nav aria-label="벡터 해석학" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    노름 거리
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    벡터 대수 연산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    내적, 외적
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    일차독립과 일차종속
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    \(3\)차원 좌표공간의 기저
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    벡터공간과 차원
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    좌표계
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    행렬
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>벡터해석학</h1>
+<h2 id="_1">매개변수 방정식<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>곡선을 두 독립변수 <span class="arithmatex">\(x, y\)</span> 로 나타내는 것이 아니라 매개변수를 통한 방정식으로 나타내면 훨씬 더 일반적인 곡선을 표현할 수 있다. </p>
+<a href="#592f3162f"><div class="admonition tldr" id="592f3162f">
+<p>매개변수 방정식(parametric equations) : <span class="arithmatex">\(x, y\)</span> 가 각각 구간 <span class="arithmatex">\(I\)</span> 의 <span class="arithmatex">\(t\)</span> 에 대한 함수 </p>
+<div class="arithmatex">\[ x = f(t), y = g(t) \]</div>
+<p>일 때, 위 방정식을 곡선의 매개변수 방정식이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>매개변수 방정식 예시 </p>
+<p>개구간 <span class="arithmatex">\((-\infty , \infty )\)</span> 에서 정의된 <span class="arithmatex">\(t\)</span> 에 대한 함수 </p>
+<div class="arithmatex">\[ x = t ^{2}, y = t+1 \]</div>
+<p>로 정의된 매개변수 방정식의 곡선을 그려보자. </p>
+<p><span class="arithmatex">\(t\)</span> 값에 따라 결정되는 <span class="arithmatex">\(x, y\)</span> 의 값을 살펴보면 다음과 같다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">t</th>
+<th align="center">x</th>
+<th align="center">y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">-3</td>
+<td align="center">9</td>
+<td align="center">-2</td>
+</tr>
+<tr>
+<td align="center">-2</td>
+<td align="center">4</td>
+<td align="center">-1</td>
+</tr>
+<tr>
+<td align="center">-1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">9</td>
+<td align="center">4</td>
+</tr>
+</tbody>
+</table>
+<p>따라서 <span class="arithmatex">\(xy\)</span> 평면에 그래프를 그려보면 아래와 같다. </p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/79000371-73185f80-7b87-11ea-946b-6f1c94583fb4.png"/></p>
+<p>이 그래프는 매개변수 방정식을 <span class="arithmatex">\(t\)</span> 에 대하여 풀어서 </p>
+<div class="arithmatex">\[ x = y ^{2} - 2y +1 \]</div>
+<p>를 얻음으로써 그릴 수도 있다.</p>
+</li>
+</ul>
+<a href="#373289246"><div class="admonition tldr" id="373289246">
+<p>매개변수 곡선(parametric curve) : 매개변수 방정식의 정의에서 매개변수 방정식으로 정의된 점들의 집합 <span class="arithmatex">\((x, y) = (f(t), g(t))\)</span> 을 매개변수 곡선이라 한다.</p>
+</div></a>
+<a href="#571a692ef"><div class="admonition tldr" id="571a692ef">
+<p>매개변수 구간(parametric interval) : 매개변수 방정식의 정의에서 정의역 <span class="arithmatex">\(I\)</span> 를 매개변수 구간이라 한다.</p>
+</div></a>
+<a href="#828e5bbe7"><div class="admonition tldr" id="828e5bbe7">
+<p>시점(initial point) : 매개변수 방정식의 정의에서 <span class="arithmatex">\(I\)</span> 가 폐구간이고 <span class="arithmatex">\(t\)</span> 가 <span class="arithmatex">\(a \leq t \leq b\)</span> 로 정의되었을 때 점 <span class="arithmatex">\((f(a), g(a))\)</span> 를 곡선의 시점이라 한다.</p>
+</div></a>
+<a href="#557af3390"><div class="admonition tldr" id="557af3390">
+<p>종점(terminal point) : 매개변수 방정식의 정의에서 <span class="arithmatex">\(I\)</span> 가 폐구간이고 <span class="arithmatex">\(t\)</span> 가 <span class="arithmatex">\(a \leq t \leq b\)</span> 로 정의되었을 때 점 <span class="arithmatex">\((f(b), g(b))\)</span> 를 곡선의 종점이라 한다.</p>
+</div></a>
+<h2 id="_2">벡터<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<a href="#2eb994b6c"><div class="admonition tldr" id="2eb994b6c">
+<p>평행이동 사상 : 좌표공간 <span class="arithmatex">\(\mathbb{R} ^{n}\)</span> 의 한 점 <span class="arithmatex">\(v\)</span> 에 대한 함수 </p>
+<div class="arithmatex">\[ T _{v}: \mathbb{R} ^{n} \to \mathbb{R} ^{n}, T _{v}(X) := X+v \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>일반적으로 두 점 <span class="arithmatex">\(v, w \in \mathbb{R} ^{n}\)</span> 에 대한 평행이동 <span class="arithmatex">\(T _{v}, T _{w}\)</span> 의 합성은 평행이동이고,</p>
+<div class="arithmatex">\[ T _{v} \circ T _{w} = T _{v+w} = T _{w} \circ T _{v} \]</div>
+<p>가 성립한다.</p>
+</li>
+<li>
+<p>원점 <span class="arithmatex">\(O\)</span> 에 대한 평행이동 <span class="arithmatex">\(T _{O}\)</span> 은 항등사상 <span class="arithmatex">\(id: \mathbb{R} ^{n}\to \mathbb{R} ^{n}\)</span> 와 같다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(T _{-v} = T _{v} ^{-1}\)</span> 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>좌표평면에서 사상 </p>
+<div class="arithmatex">\[ (x,y) \mapsto (x+1, y+2) \]</div>
+<p>은 각 점을 오른쪽으로 <span class="arithmatex">\(1\)</span>, 위쪽으로 <span class="arithmatex">\(2\)</span> 만큼 평행이동시키는 사상이다.</p>
+</li>
+</ul>
+<a href="#02bc13dbb"><div class="admonition tldr" id="02bc13dbb">
+<p>양 : 어떤 물체의 크기이다.</p>
+</div></a>
+<ul>
+<li>측정 가능한 양(물리량)과 측정 불가능한 양(비물리량)으로 나눌 수 있다.</li>
+</ul>
+<a href="#ef6bc176b"><div class="admonition tldr" id="ef6bc176b">
+<p>물리량 : 측정 가능한 양이다.</p>
+</div></a>
+<ul>
+<li>벡터와 스칼라로 나눌 수 있다.</li>
+</ul>
+<a href="#659df571b"><div class="admonition tldr" id="659df571b">
+<p>비물리량 : 측정 불가능한 양이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>"<span class="arithmatex">\(A\)</span> 의 키는 <span class="arithmatex">\(180\)</span> cm 이다." 에서 <span class="arithmatex">\(180\)</span> cm 의 키는 측정 가능한 물리량이다.</p>
+<p>반면 "<span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(B\)</span> 보다 더 리더십이 있다." 에서 리더십의 비교는 측정이 불가능한 비물리량이다. </p>
+<blockquote>
+<p>그러나 리더십이라는 대상에 대한 단순화 및 집합으로의 환원을 거쳐서 측정하능하게 만들 수 있다는 가능성을 볼 수 있다. 여기에서 더 나아가 철학적 관념 또한 단순화와 수학적 모델링을 거쳐서 측정가능한 수로 격하시킬 수 있는 가능성도 엿볼 수 있다.</p>
+</blockquote>
+</li>
+</ul>
+<a href="#c209d44fa"><div class="admonition tldr" id="c209d44fa">
+<p>평행이동 : 좌표공간, 즉 데카르트 공간 <span class="arithmatex">\(\mathbb{R} ^{n}\)</span> 의 한 점 <span class="arithmatex">\(v\)</span> 과 임의의 점 <span class="arithmatex">\(X\)</span> 에 대하여 함수</p>
+<div class="arithmatex">\[ T_v : \mathbb{R} ^{n} \to \mathbb{R} ^{n}, T_v(X) := X+v \]</div>
+<p>를 <span class="arithmatex">\(v\)</span> 만큼 평행이동하는 사상이라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>좌표평면에서 사상</p>
+<div class="arithmatex">\[ (x, y) \mapsto (x+1, y+2) \]</div>
+<p>은 각 점들을 오른쪽으로 <span class="arithmatex">\(1\)</span>, 위쪽으로 <span class="arithmatex">\(2\)</span> 만큼 평행이동하는 사상이다.</p>
+</li>
+</ul>
+<a href="#9a001f057"><div class="admonition tldr" id="9a001f057">
+<p>스칼라(scala) : 크기만 있고 방향성이 없는 물리량이다.</p>
+</div></a>
+<ul>
+<li>
+<p>길이, 넓이, 부피 등이 스칼라량에 속한다. </p>
+</li>
+<li>
+<p>그냥 단순히 실수로 생각하면 된다! </p>
+</li>
+<li>
+<p>예시 </p>
+<p>"<span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(20\)</span> 분을 뛰었다" 에서 <span class="arithmatex">\(20\)</span> 은 스칼라량이다.</p>
+</li>
+</ul>
+<a href="#3189c1e3d"><div class="admonition tldr" id="3189c1e3d">
+<p>벡터(vector) 또는 유향선분(directed segment) : 유클리드 공간 속 두 점 <span class="arithmatex">\(A,B\)</span> 를 잇는 유향선분 </p>
+<div class="arithmatex">\[ \overrightarrow{AB} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. </p>
+<p>데카르트가 점들을 대수화했듯이 라그랑주가 힘, 속도, 가속도 등을 벡터로 대수화한 것이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> 를 시점, <span class="arithmatex">\(B\)</span> 를 종점이라 한다.</p>
+</li>
+<li>
+<p>평행이동 사상 <span class="arithmatex">\(T\)</span> 는 점들을 이동시킬 뿐 아니라 유향선분도 이동시킨다. 즉,</p>
+<div class="arithmatex">\[ T(A)=A', T(B)=B' \]</div>
+<p>이면,</p>
+<div class="arithmatex">\[ T(\overrightarrow{AB})=\overrightarrow{A'B'} \]</div>
+<p>이다.</p>
+<ul>
+<li>
+<p>만약 유향선분 <span class="arithmatex">\(\overrightarrow{AB}\)</span> 를 평행이동하여 유향선분 <span class="arithmatex">\(\overrightarrow{A'B'}\)</span> 를 얻으면 두 유향선분을 동등하다고 하고,</p>
+<div class="arithmatex">\[ \overrightarrow{AB} \equiv \overrightarrow{A'B'} \]</div>
+<p>라고 쓴다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>서로 동등한 유향선분을 대표하는 것을 벡터(vector) 로 정의하는 의견도 있다.</p>
+<ul>
+<li>
+<p>즉, 유향선분은 시점과 종점을 가진 방향성이 있는 선분이다. 하지만 벡터는 그 모든 선분을 대표하는 추상대상물인 것이다.</p>
+<p>이 정의에 의하면 벡터를 시점을 원점 <span class="arithmatex">\((0, 0)\)</span> 으로 하는 유향선분으로 이해해야 하지만, 시점과 종점은 존재하지 않는다.</p>
+</li>
+<li>
+<p>이 정의에 의하면 임의의 유향선분은 원점을 시점으로 하는 유향선분과 동등하기 때문에, 벡터 전체 집합은 원점을 시점으로 하는 유향선분 전체의 집합과 같다. </p>
+</li>
+<li>
+<p>원점을 시점으로 한 유향선분의 종점은 <span class="arithmatex">\(\mathbb{R} ^{n}\)</span> 의 한 점이므로, <span class="arithmatex">\(\mathbb{R} ^{n}\)</span> 의 한 점을 벡터로 볼 수 있다.</p>
+<p>즉, <span class="arithmatex">\(\mathbb{R} ^{n}\)</span> 의 벡터의 전체 집합은 <span class="arithmatex">\(\mathbb{R} ^{n}\)</span> 과 일대일 대응이다.</p>
+</li>
+<li>
+<p>이 관점에서 유향선분 <span class="arithmatex">\(\overrightarrow{AB}\)</span> 가 표현하는 벡터는 점 <span class="arithmatex">\(B-A\)</span> 에 대응된다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>다음과 같이 점 <span class="arithmatex">\(A\)</span> 에서 점 <span class="arithmatex">\(B\)</span> 로 방향이 주어진 선분 <span class="arithmatex">\(AB\)</span> 를 벡터 <span class="arithmatex">\(AB\)</span> 라 한다.</p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C"/></p>
+<ul>
+<li>이것을 형식언어로 <span class="arithmatex">\(\overrightarrow{AB}\)</span> 로 표현한다. </li>
+</ul>
+</li>
+<li>
+<p>다음과 같이 벡터를 시점과 종점이 아닌 단일 문자로 나타낼 수도 있다. </p>
+<div class="arithmatex">\[ \overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}, \dots \]</div>
+</li>
+<li>
+<p><strong>벡터는 행렬과 같이 수와 다른 개념이므로 행렬에서처럼 연산법칙, 항등원, 역원, 단위(수에서 <span class="arithmatex">\(1\)</span>) 등을 새로 정의해야 한다.</strong></p>
+</li>
+<li>
+<p>크기와 방향성이 동시에 있는 물리량이다. </p>
+<blockquote>
+<p>크기와 방향성이 있는 자연대상을 수학적 추상대상물로 추상화한 것으로 볼 수 있을 것 같다. </p>
+</blockquote>
+<ul>
+<li>
+<p>스칼라량으로는 방향에 대한 정보가 부족하기에 방향에 대한 정보를 덧붙힌 것이 벡터이다. </p>
+<p>그래서 방향성이 있는 선분 "유향선분" 이라고도 부른다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>"<span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(20\)</span> 분을 뛰었다" 를 "<span class="arithmatex">\(A\)</span> 는 동쪽으로 <span class="arithmatex">\(20\)</span> 분을 뛰었다" 로 바꾸면 방향성이 추가되었기 때문에 벡터량이다. </p>
+</li>
+<li>
+<p>역사 </p>
+<p>물체에 두 힘을 동시에 가했을 때 물체의 힘의 크기를 나타내는 <span class="arithmatex">\(2\)</span> 개의 선분이 이루는 평행사변형의 대각선을 그릴 수 있다. 이 대각선의 방향으로 그 물체가 움직이게 되는데 이러한 벡터의 합성을 스테빈(1548), 갈릴레오(1546) 가 발견했다. </p>
+<p>뉴턴(1642)은 속도, 힘 등을 방향이 있는 선분으로 나타내어 벡터의 기초를 만들었다. </p>
+<p>가우스(1777)는 복소수평면을 생각하여 복소평면에서 벡터를 나타낼 수 있게 하였다.</p>
+<p>해밀턴(1805)은 벡터에 좌표를 결합하여 벡터공간의 기초를 만들었다.</p>
+<p>그리스만(1809)은 벡터의 내적과 외적을 정의하였다.</p>
+<p>라플라스(1749)는 벡터해석학에 기여했다.</p>
+<p>기브스(1849), 헤비사이드(1850) 는 벡터해석학을 완성했다. </p>
+<p>이 벡터해석학은 19세기 물리학을 대표하는 전자기학의 필수적인 수학적 도구가 되었다. 또 현대에 와서는 의학과 공학에도 널리 쓰이는 중요한 개념이 되었다.</p>
+</li>
+</ul>
+<a href="#b8ca2b22b"><div class="admonition tldr" id="b8ca2b22b">
+<p>벡터의 시점(initial point) : 다음과 같이 점 <span class="arithmatex">\(A\)</span> 에서 점 <span class="arithmatex">\(B\)</span> 로 방향이 주어진 선분 <span class="arithmatex">\(AB\)</span> 를 벡터 <span class="arithmatex">\(AB\)</span> 에서</p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C"/></p>
+<p>점 <span class="arithmatex">\(A\)</span> 를 벡터의 시점이라 한다.</p>
+</div></a>
+<a href="#1e92ea8e3"><div class="admonition tldr" id="1e92ea8e3">
+<p>벡터의 종점(terminal point) : 다음과 같이 점 <span class="arithmatex">\(A\)</span> 에서 점 <span class="arithmatex">\(B\)</span> 로 방향이 주어진 선분 <span class="arithmatex">\(AB\)</span> 를 벡터 <span class="arithmatex">\(AB\)</span> 에서</p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/267BE245539F79880C"/></p>
+<p>점 <span class="arithmatex">\(B\)</span> 를 벡터의 종점이라 한다.</p>
+</div></a>
+<a href="#57395d6e5"><div class="admonition tldr" id="57395d6e5">
+<p>스칼라 함수(scalar function) : 실숫값 함수와 같이 어떤 점을 하나의 스칼라에 대응시키는 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 여러 독립변수에 대응하는 하나의 함수 값이 스칼라가 된다. </p>
+</li>
+<li>
+<p>지금까지 살펴본 함수들이 스칼라 함수에 해당한다. </p>
+</li>
+<li>
+<p>실숫값 함수의 정의처럼 공역이 실수 집합 <span class="arithmatex">\(\mathbb{R}\)</span> 인 함수 </p>
+<div class="arithmatex">\[ f: X \to \mathbb{R} \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ y = x ^{2}, y = \sin x, y = \ln x \dots \]</div>
+</li>
+</ul>
+<a href="#581243238"><div class="admonition tldr" id="581243238">
+<p>벡터 함수(vector function) : 어떤 점을 하나의 벡터에 대응시키는 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>여러 독립변수를 하나의 함수값, 즉 벡터에 대응시키는 함수이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ r(t) = \bigg &lt; f(t), g(t), h(t) \bigg &gt; = f(t)i + g(t)j+h(t)k \]</div>
+</li>
+</ul>
+<a href="#c9ea01064"><div class="admonition tldr" id="c9ea01064">
+<p>장(field) : 공간에서 위치, 시간 등에 따라 그 성질을 다르게 나타내는 물리량이다.</p>
+</div></a>
+<ul>
+<li>
+<p>공간 내 점의 위치와 시간에 따라 다른 값을 가진다.</p>
+</li>
+<li>
+<p>공간의 모든 점에서 정의되는 물리량이다. </p>
+<ul>
+<li>물리량이므로 스칼라량, 벡터량을 지닌다.</li>
+</ul>
+</li>
+</ul>
+<a href="#a10465e26"><div class="admonition tldr" id="a10465e26">
+<p>스칼라 장(scalar field) : 공간 내 각 점의 위치, 시간 등에 따라 결정되는 크기를 갖는 스칼라를 나타내는 분포이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 공간 내 각 점에 물리적으로 스칼라 값을 대응시키는 스칼라 함수이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>대기의 각 점의 온도, 밀도, 압력 </p>
+</li>
+<li>
+<p>예시 </p>
+<p>전하가 있는 공간에서의 전위의 분포</p>
+</li>
+</ul>
+<a href="#0babad6e0"><div class="admonition tldr" id="0babad6e0">
+<p>벡터 장(vector field) : 공간 내 각 점의 위치, 시간 등에 따라 결정되는 크기와 방향을 갖는 벡터를 나타내는 분포이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>속도장, 역장(力場)은 크기 뿐만 아니라 방향을 가지므로 벡터장에 해당한다. </p>
+<ul>
+<li>
+<p>속도장은 각 점에서 속도 벡터를 대응시킨 것으로 해류 속도장, 풍속 속도장 등이 있다. </p>
+</li>
+<li>
+<p>역장은 각 점에서 힘 벡터를 대응시킨 것으로써 중력장, 전기장, 자기장 등이 있다.</p>
+<ul>
+<li>일례로 중력장은 중력이 미치는 공간 내 각 점에 중력 벡터를 대응시킨 벡터 함수이다. </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">여러가지 벡터<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<a href="#11a37cd2e"><div class="admonition tldr" id="11a37cd2e">
+<p>영벡터(zero vector) : 임의의 점 <span class="arithmatex">\(A\)</span> 에 대하여 <span class="arithmatex">\(\overrightarrow{AA}\)</span> 와 같이 시점과 종점이 일치하는 벡터를 영벡터라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>기호로 <span class="arithmatex">\(\overrightarrow{0}\)</span> 으로 나타낸다.</p>
+</li>
+<li>
+<p>영벡터는 크기가 <span class="arithmatex">\(0\)</span> 고 방향은 없다고 정의한다. </p>
+</li>
+<li>
+<p>실수연산에서 항등원 역할을 한다.</p>
+</li>
+</ul>
+<a href="#bebf0fd93"><div class="admonition tldr" id="bebf0fd93">
+<p>역벡터(inverse vector) : 벡터 <span class="arithmatex">\(\overrightarrow{AB}\)</span> 에 대하여 크기는 같고 방향이 반대인 벡터 <span class="arithmatex">\(\overrightarrow{BA}\)</span> 를 벡터 <span class="arithmatex">\(\overrightarrow{AB}\)</span> 의 역벡터라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\overrightarrow{AB}\)</span> 역벡터를 <span class="arithmatex">\(-\)</span> 를 붙혀서 <span class="arithmatex">\(-\overrightarrow{AB}\)</span> 로 나타낸다.</p>
+<div class="arithmatex">\[ \overrightarrow{BA} = -\overrightarrow{AB} \]</div>
+</li>
+<li>
+<p>실수연산에서 역원 역할을 한다.</p>
+</li>
+<li>
+<p>예시</p>
+<p><span class="arithmatex">\(\overrightarrow{a}+\overrightarrow{-a} = \overrightarrow{0}\)</span></p>
+</li>
+</ul>
+<a href="#c36c553fc"><div class="admonition tldr" id="c36c553fc">
+<p>단위벡터(unit vector) : 크기가 <span class="arithmatex">\(1\)</span> 인 벡터이다.</p>
+</div></a>
+<ul>
+<li>실수연산에서 <span class="arithmatex">\(1\)</span> 의 역할을 한다.</li>
+</ul>
+<a href="#966c41ad8"><div class="admonition tldr" id="966c41ad8">
+<p>평면벡터(plane vector) : 평면에서 정의된 벡터이다.</p>
+</div></a>
+<a href="#b7c22658c"><div class="admonition tldr" id="b7c22658c">
+<p>공간벡터(space vector) : 공간에서 정의된 벡터이다.</p>
+</div></a>
+<h3 id="_4">벡터 대수<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>실수에서 했던 연산들을 벡터에 대하여 재정의하고 있는 것이다.</p>
+<a href="#9d12db061"><div class="admonition tldr" id="9d12db061">
+<p>벡터의 크기 : 벡터 <span class="arithmatex">\(\overrightarrow{AB}\)</span> 에서 선분 <span class="arithmatex">\(AB\)</span> 의 길이를 벡터의 크기라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>형식언어로 <span class="arithmatex">\(|\overrightarrow{AB}|\)</span> 로 나타낸다. </p>
+</li>
+<li>
+<p>다음과 같이 벡터의 크기를 시점과 종점이 아닌 단일 문자로 나타낼 수도 있다. </p>
+<div class="arithmatex">\[ |\overrightarrow{a}|, |\overrightarrow{b}|, |\overrightarrow{c}|, \dots \]</div>
+</li>
+</ul>
+<a href="#199b676aa"><div class="admonition tldr" id="199b676aa">
+<p>벡터의 상등 : 두 벡터 <span class="arithmatex">\(\overrightarrow{AB}, \overrightarrow{CD}\)</span> 에 대하여 한 벡터를 평행이동 사상하여 다른 벡터를 얻을 수 있으면,</p>
+<p>두 벡터가 동등하다고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>시점과 종점의 위치에 관계 없이 두 벡터 <span class="arithmatex">\(\overrightarrow{a}, \overrightarrow{b}\)</span> 의 크기와 방향이 같으면 두 벡터 <span class="arithmatex">\(\overrightarrow{a}, \overrightarrow{b}\)</span> 를 같다고 한다.</p>
+</li>
+<li>
+<p>두 벡터 <span class="arithmatex">\(\overrightarrow{a}, \overrightarrow{b}\)</span> 가 각각 선분 <span class="arithmatex">\(\overline{AB}, \overleftrightarrow{CD}\)</span> 로 구성되었을 때 이 둘이 같다는 것을</p>
+<div class="arithmatex">\[ \overrightarrow{a} \equiv \overrightarrow{b} \iff \overrightarrow{AB} \equiv \overrightarrow{CD} \]</div>
+<p>로 표현한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><img alt="unnamed" src="https://user-images.githubusercontent.com/16812446/79002706-fd62c280-7b8b-11ea-8a50-45ca181784e1.gif"/></p>
+<p>위 세 벡터는 같은 방향과 같은 길이를 지니므로 모두 같다.</p>
+<p>즉, 왼쪽부터 차례로 <span class="arithmatex">\(\overrightarrow{AB}, \overrightarrow{CD}, \overrightarrow{OP}\)</span> 라고 한다면 </p>
+<div class="arithmatex">\[ \overrightarrow{AB} \equiv \overrightarrow{CD} \equiv \overrightarrow{OP} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#694a93c5d"><div class="admonition tldr" id="694a93c5d">
+<p>벡터의 덧셈 : 벡터의 덧셈은 다음 두 경우로 정의된다.</p>
+</div></a>
+<ul>
+<li>
+<p>삼각형에서의 덧셈 : 두 벡터 <span class="arithmatex">\(\overrightarrow{u} = \overrightarrow{AB}, \overrightarrow{v} = \overrightarrow{BC}\)</span> 에 대하여 벡터 <span class="arithmatex">\(\overrightarrow{w} = \overrightarrow{AC}\)</span> 를 두 벡터 <span class="arithmatex">\(\overrightarrow{u}, \overrightarrow{v}\)</span> 의 합이라 한다.</p>
+<ul>
+<li>
+<p>이것을 기호로 다음과 같이 나타낸다. </p>
+<div class="arithmatex">\[ \overrightarrow{u}+\overrightarrow{v}= \overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC} = \overrightarrow{w} \]</div>
+</li>
+<li>
+<p>그림</p>
+<p><img alt="캡처" src="https://user-images.githubusercontent.com/16812446/77826567-90930580-7153-11ea-98d2-da447edd015a.PNG"/></p>
+</li>
+</ul>
+</li>
+<li>
+<p>평행사변형에서의 덧셈 : 두 벡터 <span class="arithmatex">\(\overrightarrow{a} = \overrightarrow{AB}, \overrightarrow{b} = \overrightarrow{AC}\)</span> 에 대하여 평행사변형 <span class="arithmatex">\(ABDC\)</span> 를 만들 때, 벡터 <span class="arithmatex">\(\overrightarrow{AD}\)</span> 를 두 벡터 <span class="arithmatex">\(\overrightarrow{a}, \overrightarrow{b}\)</span> 의 합이라 한다.</p>
+<ul>
+<li>
+<p>이것을 기호로 다음과 같이 나타낸다. </p>
+<div class="arithmatex">\[ \overrightarrow{a}+\overrightarrow{b}= \overrightarrow{AB} + \overrightarrow{AC} = \overrightarrow{AD} \]</div>
+</li>
+<li>
+<p><strong>하지만 정말 벡터의 덧셈이 이 두 가지 경우로 따로 정의된 것이 아니다. 실제로 삼각형에서의 덧셈과 평행사변형에서의 덧셈은 본질적으로 동일하다.</strong></p>
+<p><img alt="" src="https://i.ytimg.com/vi/gdWfqihMW14/maxresdefault.jpg"/></p>
+<p>왜냐하면 위 그림에서 벡터 <span class="arithmatex">\(\overrightarrow{AC}\)</span> 를 벡터 <span class="arithmatex">\(\overrightarrow{BD}\)</span> 로 옮겨도 두 벡터가 방향과 크기가 같으므로 동일하기 때문이다. 그러므로 평행사변형에서의 덧셈도 결국 삼각형에서의 덧셈 <span class="arithmatex">\(\overrightarrow{AB} + \overrightarrow{BD} = \overrightarrow{AD}\)</span> 으로 변환할 수 있다.</p>
+<p>마찬가지의 방법으로 삼각형에서의 덧셈도 평행사변형에서의 덧셈으로 변환할 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>임의의 세 벡터 <span class="arithmatex">\(\overrightarrow{a}, \overrightarrow{b}, \overrightarrow{c}\)</span> 와 영벡터 <span class="arithmatex">\(\overrightarrow{0}\)</span> 에 대하여 다음이 성립한다.</p>
+<ul>
+<li>
+<p>교환법칙 : <span class="arithmatex">\(\overrightarrow{a}+\overrightarrow{b}=\overrightarrow{b}+\overrightarrow{a}\)</span></p>
+</li>
+<li>
+<p>결합법칙 : <span class="arithmatex">\((\overrightarrow{a}+\overrightarrow{b})+\overrightarrow{c}=\overrightarrow{a}+(\overrightarrow{b}+\overrightarrow{c})\)</span></p>
+</li>
+<li>
+<p>항등원 : <span class="arithmatex">\(\overrightarrow{a}+\overrightarrow{0}=\overrightarrow{0}+\overrightarrow{a} = \overrightarrow{a}\)</span></p>
+</li>
+<li>
+<p>역원 : <span class="arithmatex">\(\overrightarrow{a}+(-\overrightarrow{a})=-\overrightarrow{a}+\overrightarrow{a} = \overrightarrow{0}\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#8b12687ab"><div class="admonition tldr" id="8b12687ab">
+<p>벡터의 뺄셈 : 두 벡터 <span class="arithmatex">\(\overrightarrow{OA}, \overrightarrow{OB}\)</span> 에 대하여 <span class="arithmatex">\(\overrightarrow{a}\)</span> 와 <span class="arithmatex">\(\overrightarrow{-b}=\overrightarrow{BO}\)</span> 의 합 </p>
+<div class="arithmatex">\[ \overrightarrow{a}+(-\overrightarrow{b}) = \overrightarrow{OA}+\overrightarrow{BO} = \overrightarrow{BO} + \overrightarrow{OA} = \overrightarrow{BA} \]</div>
+<p>를 벡터 <span class="arithmatex">\(\overrightarrow{a}\)</span> 를 벡터 <span class="arithmatex">\(\overrightarrow{b}\)</span> 에서 뺀 차라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이것을 기호로 다음과 같이 나타낸다. </p>
+<div class="arithmatex">\[ \overrightarrow{a}-\overrightarrow{b}= \overrightarrow{OA} - \overrightarrow{OB} = \overrightarrow{BA} \]</div>
+</li>
+<li>
+<p>벡터의 뺄셈은 다음 그림으로 설명된다. 즉, 종점과 종점을 이은 벡터가 뺄셈의 결과이다.</p>
+<p><img alt="" src="https://i.ytimg.com/vi/kOCTTK3Cnto/maxresdefault.jpg"/></p>
+<p>위 그림에서는 <span class="arithmatex">\(\overrightarrow{OA} - \overrightarrow{OB} = \overrightarrow{BA}\)</span> 의 연산결과를 살펴보았다. 그런데 방향이 다른 벡터를 얻기 위하여</p>
+<div class="arithmatex">\[\overrightarrow{OB} - \overrightarrow{OA} = \overrightarrow{AB}\]</div>
+<p>를 연산하면된다.</p>
+<ul>
+<li>
+<p>설명 </p>
+<p>벡터 <span class="arithmatex">\(\overrightarrow{a}, \overrightarrow{b}\)</span> 뺄셈 <span class="arithmatex">\(\overrightarrow{a}-\overrightarrow{b}\)</span> 은 벡터 <span class="arithmatex">\(\overrightarrow{a}\)</span> 와 벡터 <span class="arithmatex">\(\overrightarrow{b}\)</span> 의 역벡터의 합으로 볼 수 있다. 즉, </p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/99845F335A03C4D528"/></p>
+<blockquote>
+<p><a href="https://waraccc.tistory.com/11">https://waraccc.tistory.com/11</a></p>
+</blockquote>
+<p>에서 벡터의 뺄셈 <span class="arithmatex">\(\overrightarrow{a}-\overrightarrow{b}\)</span> 을 다음과 같이 <span class="arithmatex">\(\overrightarrow{a}+(-\overrightarrow{b})\)</span> 로 볼 수 있다는 것이다.</p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/996A6F335A03CBC129"/></p>
+<blockquote>
+<p><a href="https://waraccc.tistory.com/11">https://waraccc.tistory.com/11</a></p>
+</blockquote>
+<p>그러면 벡터의 덧셈은 이미 알고있는대로 다음과 같이 진행된다.</p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/99454C335A03CC0719"/></p>
+<blockquote>
+<p><a href="https://waraccc.tistory.com/11">https://waraccc.tistory.com/11</a></p>
+</blockquote>
+<p>그런데 벡터는 평행이동 사상이 존재하면 동일한 것이므로 다음과 같이 원래의 벡터 <span class="arithmatex">\(\overrightarrow{b},\overrightarrow{a}\)</span> 의 종점을 이은 벡터를 뺄셈 결과로 볼 수 있는 것이다.</p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/998675335A03CC1A06"/></p>
+<blockquote>
+<p><a href="https://waraccc.tistory.com/11">https://waraccc.tistory.com/11</a></p>
+</blockquote>
+<p>마찬가지로 <span class="arithmatex">\(\overrightarrow{b}-\overrightarrow{a}\)</span> 의 연산결과는 다음과 같은 빨간 벡터가 된다.</p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/99D4A7335A03CC2C45"/></p>
+<blockquote>
+<p><a href="https://waraccc.tistory.com/11">https://waraccc.tistory.com/11</a></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#793f090e2"><div class="admonition tldr" id="793f090e2">
+<p>벡터의 실수배(스칼라배) : 임의의 실수 <span class="arithmatex">\(k\)</span> 와 벡터 <span class="arithmatex">\(\overrightarrow{a}\)</span> 의 곱 <span class="arithmatex">\(k \overrightarrow{a}\)</span> 를 벡터 <span class="arithmatex">\(\overrightarrow{a}\)</span> 의 실수배라 하고 다음과 같이 정의한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\overrightarrow{a} \neq \overrightarrow{0}\)</span> 인 경우 </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(k&gt;0\)</span> 이면 <span class="arithmatex">\(k \overrightarrow{a}\)</span> 는 <span class="arithmatex">\(\overrightarrow{a}\)</span> 와 방향이 같고 크기가 <span class="arithmatex">\(k |\overrightarrow{a}|\)</span> 인 벡터이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(k&lt;0\)</span> 이면 <span class="arithmatex">\(k \overrightarrow{a}\)</span> 는 <span class="arithmatex">\(\overrightarrow{a}\)</span> 와 방향이 반대이고 크기가 <span class="arithmatex">\(|k| |\overrightarrow{a}|\)</span> 인 벡터이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(k=0\)</span> 이면 <span class="arithmatex">\(k \overrightarrow{a} = \overrightarrow{0}\)</span> 이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\overrightarrow{a} = \overrightarrow{0}\)</span> 인 경우, 실수 <span class="arithmatex">\(k\)</span> 에 대하여 <span class="arithmatex">\(k \overrightarrow{a}=\overrightarrow{0}\)</span> 이다. </p>
+</li>
+<li>
+<p>벡터의 실수배의 성질 </p>
+<p>두 실수 <span class="arithmatex">\(k, l\)</span> 과 두 벡터 <span class="arithmatex">\(\overrightarrow{a}, \overrightarrow{b}\)</span> 에 대하여 다음이 성립한다.</p>
+<ul>
+<li>
+<p>벡터의 실수배의 결합법칙 : <span class="arithmatex">\(k(l \overrightarrow{a}) = (kl)\overrightarrow{a}\)</span></p>
+</li>
+<li>
+<p>벡터의 실수배의 분배법칙 </p>
+<p><span class="arithmatex">\((k+l) \overrightarrow{a} = k\overrightarrow{a}+l \overrightarrow{a}\)</span></p>
+<p><span class="arithmatex">\(k(\overrightarrow{a}+\overrightarrow{b}) = k\overrightarrow{a}+k \overrightarrow{b}\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#10ddcdeaa"><div class="admonition tldr" id="10ddcdeaa">
+<p>벡터의 평행 : 다음 두 경우에서 두 벡터는 평행한다고 정의한다.</p>
+</div></a>
+<ul>
+<li>
+<p>영벡터가 아닌 두 벡터 <span class="arithmatex">\(\overrightarrow{a}, \overrightarrow{b}\)</span> 와 <span class="arithmatex">\(0\)</span> 이 아닌 실수 <span class="arithmatex">\(k\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \overrightarrow{a}//\overrightarrow{b} \iff \overrightarrow{b} = k \overrightarrow{a} \]</div>
+</li>
+</ul>
+<a href="#373c58a98"><div class="admonition tldr" id="373c58a98">
+<p>세 점이 한 직선 위에 있을 조건 : 서로 다른 세점 <span class="arithmatex">\(A, B, C\)</span> 가 한 직선 위에 존재하기 위한 필요충분조건은 <span class="arithmatex">\(0\)</span> 이 아닌 실수 <span class="arithmatex">\(k\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \overrightarrow{AC} = k \overrightarrow{AB} \]</div>
+<p>이다.</p>
+</div></a>
+<h3 id="_5">위치벡터<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<a href="#53623f0a0"><div class="admonition tldr" id="53623f0a0">
+<p>위치벡터 : 원점 <span class="arithmatex">\(O\)</span> 를 시점으로 하고 임의의 한 점 <span class="arithmatex">\(A\)</span> 를 종점으로 하는 벡터 <span class="arithmatex">\(\overrightarrow{OA}\)</span> 를 </p>
+<p>점 <span class="arithmatex">\(O\)</span> 에 대한 점 <span class="arithmatex">\(A\)</span> 의 위치벡터라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>그냥 좌표공간에서 점을 벡터로 이해할 때 그것을 위치벡터라고 부르는 것이다.</p>
+</li>
+<li>
+<p>점 <span class="arithmatex">\(O\)</span> 에 대한 점 <span class="arithmatex">\(A\)</span> 의 위치벡터를 간단하게 점 <span class="arithmatex">\(A\)</span> 의 위치벡터로 부른다.</p>
+</li>
+<li>
+<p>점 <span class="arithmatex">\(O\)</span> 의 위치벡터는 <span class="arithmatex">\(\overrightarrow{0}\)</span> 이다.</p>
+</li>
+<li>
+<p>두 점 <span class="arithmatex">\(A, B\)</span> 의 위치벡터가 각각 <span class="arithmatex">\(\overrightarrow{a}, \overrightarrow{b}\)</span> 일 때 </p>
+<div class="arithmatex">\[ \overrightarrow{AB} = \overrightarrow{OB} - \overrightarrow{OA} = \overrightarrow{b} - \overrightarrow{a} \]</div>
+<p>이다. </p>
+</li>
+</ul>
+<h3 id="_6">평면벡터<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<a href="#cfffc411d"><div class="admonition tldr" id="cfffc411d">
+<p>평면벡터 : 위치벡터의 개념을 좌표평면 위로 옮겨서 시점을 원점 <span class="arithmatex">\(O(0, 0)\)</span> 으로 고정시킨 벡터이다.</p>
+</div></a>
+<ul>
+<li>
+<p>종점의 좌표 <span class="arithmatex">\(2-\)</span>튜플을 평면벡터를 대표하는 값으로 삼는다. </p>
+</li>
+<li>
+<p>평면벡터 성분 표현 </p>
+<p>임의의 평면벡터 <span class="arithmatex">\(\overrightarrow{a}\)</span> 에 대하여 <span class="arithmatex">\(\overrightarrow{a} = \overrightarrow{OA}\)</span> 의 종점이 점이 <span class="arithmatex">\(A(a_1, a_2)\)</span> 일 때, 두 점 <span class="arithmatex">\(E_1(1, 0), E_2(0, 1)\)</span> 의 위치벡터 <span class="arithmatex">\(\overrightarrow{e_1}, \overrightarrow{e_2}\)</span> 를 이용하여 벡터 <span class="arithmatex">\(\overrightarrow{a}\)</span> 를 다음과 같이 나타낼 수 있다. </p>
+<div class="arithmatex">\[ \overrightarrow{a} = \overrightarrow{OA} = \overrightarrow{OA_1} + \overrightarrow{OA_2} = a_1\overrightarrow{e_1} + a_2 \overrightarrow{e_2} \]</div>
+<ul>
+<li>
+<p>이때 두 실수 <span class="arithmatex">\(a_1, a_2\)</span> 를 평면벡터 <span class="arithmatex">\(\overrightarrow{a}\)</span> 의 성분이라 한다. </p>
+</li>
+<li>
+<p>또 성분만을 이용해서 평면벡터 <span class="arithmatex">\(\overrightarrow{a}\)</span> 를 두 수의 순서쌍(<span class="arithmatex">\(2-\)</span>튜플)</p>
+<div class="arithmatex">\[ \overrightarrow{a} = (a_1,a_2) \]</div>
+<p>로 나타낼 수 있다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#7e91bc565"><div class="admonition tldr" id="7e91bc565">
+<p>평면벡터의 크기 : <span class="arithmatex">\(\overrightarrow{a} = (a_1,a_2)\)</span>  의 크기는 </p>
+<div class="arithmatex">\[ |\overrightarrow{a}| = \sqrt[]{a^{2}_{1}+a^{2}_{2}} \]</div>
+</div></a>
+<a href="#50490aede"><div class="admonition tldr" id="50490aede">
+<p>평면벡터의 같음 : <span class="arithmatex">\(\overrightarrow{a} = (a_1,a_2),\overrightarrow{b} = (b_1,b_2)\)</span>  가 같을 조건은</p>
+<div class="arithmatex">\[ \overrightarrow{a} = \overrightarrow{b} \iff a_1=b_1, a_2 = b_2 \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#7c5279879"><div class="admonition tldr" id="7c5279879">
+<p>평면벡터의 연산 : <span class="arithmatex">\(\overrightarrow{a} = (a_1,a_2),\overrightarrow{b} = (b_1,b_2)\)</span> 에 대하여</p>
+</div></a>
+<ul>
+<li>
+<p>덧셈 : <span class="arithmatex">\(\overrightarrow{a}+\overrightarrow{b}=(a_1+b_1, a_2+b_2)\)</span></p>
+</li>
+<li>
+<p>뺄셈 : <span class="arithmatex">\(\overrightarrow{a}-\overrightarrow{b}=(a_1-b_1, a_2-b_2)\)</span></p>
+</li>
+<li>
+<p>실수배 : <span class="arithmatex">\(k\overrightarrow{a}=(ka_1, ka_2)\)</span></p>
+</li>
+</ul>
+<a href="#46533dc36"><div class="admonition tldr" id="46533dc36">
+<p>두 점에 대한 평면벡터의 성분 : 좌표평면 위의 두 점 <span class="arithmatex">\(A(a_1,a_2),B(b_1,b_2)\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \overrightarrow{AB} = \overrightarrow{OB}-\overrightarrow{OA}=(b_1,a_1, b_2-a_2) \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#bead320fb"><div class="admonition tldr" id="bead320fb">
+<p>두 점에 대한 평면벡터의 크기 : 좌표평면 위의 두 점 <span class="arithmatex">\(A(a_1,a_2),B(b_1,b_2)\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ |\overrightarrow{AB}| = \sqrt[]{(b_1-a_1)^{2}+(b_2-a_2)^{2}} \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#63ab21096"><div class="admonition tldr" id="63ab21096">
+<p>두 평면벡터의 평행 : 영벡터가 아닌 두 평면벡터 <span class="arithmatex">\(\overrightarrow{a} = (a_1,a_2),\overrightarrow{b} = (b_1,b_2)\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \overrightarrow{a}//\overrightarrow{b} \iff \overrightarrow{b} = k \overrightarrow{a} \iff \begin{cases} b_1 = ka_1 &amp;\text{}\\ b_2=ka_2 &amp;\text{}\\ \end{cases} \]</div>
+</div></a>
+<h3 id="_7">공간벡터<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<p><strong>구체화 필요</strong></p>
+<h2 id="_8">벡터 해석학<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<p>과학 공학, 금융, 의학, 더 높은 수준의 수학 같은 현실 세계에서는 일변수 함수가 아닌 다변수 함수가 훨씬 자주 쓰인다. 이 파트는 다변수 함수의 미적분을 소개하기 위한 사전 지식을 가르친다.</p>
+<a href="#f91a43412"><div class="admonition tldr" id="f91a43412">
+<p>표준점(standard point) 에 위치한 벡터 : 시점이 원점에 위치한 벡터이다.</p>
+</div></a>
+<ul>
+<li>
+<p>벡터의 속성은 크기와 방향이다. 즉, 위치는 벡터의 속성이 아니다. 이때 벡터를 정확하게 대수적으로 기술하기 위하여 시점을 원점에 위치시킨 다음 종점의 좌표로 벡터를 특정한다.</p>
+<ul>
+<li>이것을 표준점에 위치한 벡터라고 한다.</li>
+</ul>
+</li>
+</ul>
+<a href="#5f8b5a51b"><div class="admonition tldr" id="5f8b5a51b">
+<p>벡터 성분 표기(component form) : <span class="arithmatex">\(2\)</span> 차원, <span class="arithmatex">\(3\)</span> 차원일 경우 각각 다음과 같이 정의된다.</p>
+</div></a>
+<ul>
+<li>
+<p>벡터 <span class="arithmatex">\(v\)</span> 가 <span class="arithmatex">\(2\)</span> 차원 평면에서 정의된 벡터이고 그 시점을 원점에 위치했을 때 종점의 좌표 <span class="arithmatex">\((v_1, v_2)\)</span> 라고 하면 </p>
+<p>벡터 <span class="arithmatex">\(v\)</span> 의 성분을 실수 순서쌍(2-튜플)</p>
+<div class="arithmatex">\[ \big &lt; v_1, v_2 \big &gt; \]</div>
+<p>로 표기한다. </p>
+</li>
+<li>
+<p>벡터 <span class="arithmatex">\(v\)</span> 가 <span class="arithmatex">\(3\)</span> 차원 공간에서 정의된 벡터이고 그 시점을 원점에 위치했을 때 종점의 좌표 <span class="arithmatex">\((v_1, v_2, v_3)\)</span> 라고 하면 </p>
+<p>벡터 <span class="arithmatex">\(v\)</span> 의 성분을 실수 순서쌍(3-튜플)</p>
+<div class="arithmatex">\[ \big &lt; v_1, v_2, v_3 \big &gt; \]</div>
+<p>로 표기한다. </p>
+</li>
+<li>
+<p>이때 <span class="arithmatex">\(v_1, v_2, v_3\)</span> 을 벡터의 성분(component) 이라 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(3\)</span> 차원 공간에서 정의된 벡터 <span class="arithmatex">\(v\)</span> 의 시점이 <span class="arithmatex">\(P(x_1, y_1, z_1)\)</span> 이고 종점이 <span class="arithmatex">\(Q(x_2, y_2, z_2)\)</span> 라 하자. </p>
+<p>이 벡터 <span class="arithmatex">\(v\)</span> 의 성분은 시점을 원점에 위치시킨 후의 종점의 좌표이기 때문에</p>
+<div class="arithmatex">\[ v_1 = x_2 - x_1, v_2 = y_2 - y_1, v_3 = z_2 - z_1 \]</div>
+<p>이다. 따라서 </p>
+<div class="arithmatex">\[ v = \big&lt;x_2-x_1, y_2-y_1, z_2-z_1 \big&gt; \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#237bc1ae3"><div class="admonition tldr" id="237bc1ae3">
+<p>벡터의 성분(component) : 벡터 성분 표기에서 <span class="arithmatex">\(v_1, v_2, v_3\)</span> 을 벡터의 성분이라 한다.</p>
+</div></a>
+<a href="#e764e0f10"><div class="admonition tldr" id="e764e0f10">
+<p>영 벡터(zero vector) : 길이가 <span class="arithmatex">\(0\)</span> 인 벡터로써 </p>
+<div class="arithmatex">\[ \big&lt;0, 0 \big&gt; \]</div>
+<p>또는 </p>
+<div class="arithmatex">\[ \big&lt; 0,0,0 \big &gt; \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#f3803365b"><div class="admonition tldr" id="f3803365b">
+<p><span class="arithmatex">\(2\)</span> 차원 벡터의 길이(magnitude or length of vector) : <span class="arithmatex">\(2\)</span> 차원 공간에서 정의된 임의의 벡터 <span class="arithmatex">\(\overrightarrow{PQ}\)</span> 를 표준점에 위치시켜서 그 성분을</p>
+<div class="arithmatex">\[ v = \big&lt;x_2-x_1, y_2-y_1\big&gt; \]</div>
+<p>로 표기할 수 있다면 벡터의 길이는 </p>
+<div class="arithmatex">\[ |v| = ||v|| = \sqrt[]{v _{1} ^{2} + v _{2} ^{2} } = \sqrt[]{(x _{2} - x _{1}) ^{2} + (y _{2} - y _{1}) ^{2} } \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#cb1d1a34c"><div class="admonition tldr" id="cb1d1a34c">
+<p><span class="arithmatex">\(3\)</span> 차원 벡터의 길이(magnitude or length of vector) : <span class="arithmatex">\(3\)</span> 차원 공간에서 정의된 임의의 벡터 <span class="arithmatex">\(\overrightarrow{PQ}\)</span> 를 표준점에 위치시켜서 그 성분을</p>
+<div class="arithmatex">\[ v = \big&lt;x_2-x_1, y_2-y_1, z_2-z_1 \big&gt; \]</div>
+<p>로 표기할 수 있다면 벡터의 길이는 </p>
+<div class="arithmatex">\[ |v| = ||v|| = \sqrt[]{v _{1} ^{2} + v _{2} ^{2} + v _{3} ^{2}} = \sqrt[]{(x _{2} - x _{1}) ^{2} + (y _{2} - y _{1}) ^{2} + (z _{2} - z _{1}) ^{2}} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>벡터 <span class="arithmatex">\(v\)</span> 의 길이를 <span class="arithmatex">\(|v|\)</span> 또는 <span class="arithmatex">\(||v||\)</span> 로 표기한다.</li>
+</ul>
+<a href="#57418a20a"><div class="admonition tldr" id="57418a20a">
+<p><span class="arithmatex">\(n\)</span>-공간의 벡터의 크기, 길이, 또는 절댓값 : 유향선분 <span class="arithmatex">\(\overrightarrow{AB}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ |\overrightarrow{AB}| := |B-A| \]</div>
+<p>또는 좌표 <span class="arithmatex">\((v_1, \dots, v_n)\)</span> 으로 표현한 벡터 <span class="arithmatex">\(v\)</span> 에 대하여</p>
+<div class="arithmatex">\[ |v| = \sqrt[]{v_1 ^{2}+\dots+v_n ^{2}} \]</div>
+<p>이다.</p>
+</div></a>
+<h3 id="_9">노름 거리<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<a href="#eb99de806"><div class="admonition tldr" id="eb99de806">
+<p><span class="arithmatex">\(L_1\)</span> 노름(norm) 거리 또는 맨해튼 거리 : 벡터 <span class="arithmatex">\(a\)</span> 에 대한 <span class="arithmatex">\(L_1\)</span> 노름은 </p>
+<div class="arithmatex">\[ ||a|| _{1} = |a_1| + |a_2| + |a_3| + \dots + |a_n| = \sum_{i=1}^{n}|a_i| \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p>벡터 <span class="arithmatex">\(a = (4, 3)\)</span> 에 대한 <span class="arithmatex">\(L_1\)</span> 노름은 오른쪽으로 <span class="arithmatex">\(4\)</span>, 위로 <span class="arithmatex">\(3\)</span> 움직인 것과 같이 <span class="arithmatex">\(7\)</span> 이다.</p>
+<p>이처럼 <span class="arithmatex">\(L_1\)</span> 노름은 </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Manhattan_distance.svg/300px-Manhattan_distance.svg.png"/></p>
+<p>와 같이 바둑판 모양으로 움직인 최단거리를 뜻한다.</p>
+</li>
+</ul>
+<a href="#45a250922"><div class="admonition tldr" id="45a250922">
+<p><span class="arithmatex">\(L_2\)</span> 노름(norm) 거리 또는 유클리드 거리 : 벡터 <span class="arithmatex">\(a\)</span> 에 대한 <span class="arithmatex">\(L_2\)</span> 노름은 벡터의 크기에서의 정의와 동일하게 </p>
+<div class="arithmatex">\[ ||a|| _{2} = \sqrt[]{\sum_{i=1}^{n}a _ i ^{2}} = \sqrt[]{a_1 ^{2}+a_2 ^{2}+\dots+a_n ^{2}} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(L_2\)</span> 노름은 유클리드 기하학에서 사용하던 거리와 똑같고 </p>
+<p>우리가 일상생활에서 직관적으로 생각하던 거리와 동일하다!</p>
+</li>
+<li>
+<p><span class="arithmatex">\(L_1, L_2\)</span> 노름은 선형회귀 모델의 정규화 항에서 사용된다.</p>
+</li>
+</ul>
+<a href="#8b18f2099"><div class="admonition tldr" id="8b18f2099">
+<p><span class="arithmatex">\(L_p\)</span> 노름 : 점 <span class="arithmatex">\((x_1, x_2, \dots, x_n)\)</span> 과 점 <span class="arithmatex">\((y_1, y_2, \dots, y_n)\)</span> 의 <span class="arithmatex">\(L_p\)</span> 노름 거리는 다음과 같이 정의된다. </p>
+<div class="arithmatex">\[ \Bigg ( \sqrt[]{\sum_{i=1}^{n}|x_i - y_i| ^{p}} \Bigg ) ^{1/p} \]</div>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(L_1\)</span> 노름 거리가 </p>
+<div class="arithmatex">\[ \sum_{i=1}^{n}|x_i - y_i| ^{p} \]</div>
+<p>로 정의되고 <span class="arithmatex">\(L_2\)</span> 노름 거리가 </p>
+<div class="arithmatex">\[ \Bigg ( \sqrt[]{\sum_{i=1}^{n}|x_i - y_i| ^{2}} \Bigg ) ^{1/2} \]</div>
+<p>로 정의된 것에서 일반화 된 것이다.</p>
+</li>
+</ul>
+<a href="#d92c9a278"><div class="admonition tldr" id="d92c9a278">
+<p>무한 <span class="arithmatex">\(L _{\infty }\)</span> 노름 : 점 <span class="arithmatex">\((x_1, x_2, \dots, x_n)\)</span> 과 점 <span class="arithmatex">\((y_1, y_2, \dots, y_n)\)</span> 의 <span class="arithmatex">\(L _{\infty }\)</span> 노름 거리는 다음과 같이 정의된다. </p>
+<div class="arithmatex">\[ \lim_{p \to \infty}  \Bigg ( \sqrt[]{\sum_{i=1}^{n}|x_i - y_i| ^{p}} \Bigg ) ^{1/p} \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ = \max (|x_1 -y_1|, |x_2 - y_2|, \dots, |x_n - y_n|) \]</div>
+</div></a>
+<ul>
+<li>
+<p>보통 <span class="arithmatex">\(L_1\)</span> 노름거리과 <span class="arithmatex">\(L_2\)</span> 노름거리, 무한 노름거리 외에는 잘 사용되지 않는다. </p>
+</li>
+<li>
+<p>무한노름거리는 체비쇼프 거리(chebyshev distance) 거리로도 불린다. </p>
+</li>
+</ul>
+<h3 id="_10">벡터 대수 연산<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<p>(스칼라는 단순히 실수로 생각하면 된다.)</p>
+<a href="#759a9eaaa"><div class="admonition tldr" id="759a9eaaa">
+<p>벡터 덧셈 : <span class="arithmatex">\(u = \big &lt;u_1, u_2, u_3 \big &gt;, v = \big &lt; v_1, v_2, v_3 \big &gt;\)</span> 인 벡터 <span class="arithmatex">\(u, v\)</span> 에 대하여 </p>
+<div class="arithmatex">\[u + v = \big &lt;u_1+v_1, u_2+v_2 + u_3+v_3 \big &gt;\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>해석기학적인 벡터 덧셈은 논증기하적으로 벡터 덧셈을 정의했을 때와 같이 </p>
+<p>벡터 <span class="arithmatex">\(u, v\)</span> 를 더해 벡터 <span class="arithmatex">\(w\)</span> 가 나오는데, 각각</p>
+<p>삼각형의 형태로 덧셈이 이루어지는 경우</p>
+<p><img alt="캡처" src="https://user-images.githubusercontent.com/16812446/79008020-73205b80-7b97-11ea-9e2a-b085f47baf47.PNG"/></p>
+<p>와 평행사변형의 형태로 덧셈이 이루어지는 경우</p>
+<p><img alt="캡처" src="https://user-images.githubusercontent.com/16812446/79008186-c5617c80-7b97-11ea-8f0a-4bba658bd881.PNG"/></p>
+<p>와 같다. </p>
+</li>
+<li>
+<p>특히 위 예시에서 덧셈의 결과인 <span class="arithmatex">\(w\)</span> 를 합 벡터(resultant vector) 라 한다.</p>
+</li>
+</ul>
+<a href="#de5eb69aa"><div class="admonition tldr" id="de5eb69aa">
+<p>벡터 스칼라배 : <span class="arithmatex">\(u = \big &lt;u_1, u_2, u_3 \big &gt;, v = \big &lt; v_1, v_2, v_3 \big &gt;\)</span> 인 벡터 <span class="arithmatex">\(u, v\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ku = \big &lt;ku_1, ku_2, ku_3 \big &gt;\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>벡터 <span class="arithmatex">\(u\)</span> 에 스칼라배를 하면 벡터가 늘어날 수도 있고 줄어들 수도 있다.</p>
+</li>
+<li>
+<p>특히 스칼라 <span class="arithmatex">\(k\)</span> 가 음수면 벡터의 방향이 바뀐다.</p>
+</li>
+</ul>
+<a href="#27477a42c"><div class="admonition tldr" id="27477a42c">
+<p>스칼라배 벡터의 길이 : 벡터 <span class="arithmatex">\(u\)</span> 에 스칼라배 <span class="arithmatex">\(k\)</span> 를 한 벡터 <span class="arithmatex">\(ku\)</span> 의 길이 <span class="arithmatex">\(|ku|\)</span> 는 </p>
+<div class="arithmatex">\[ |ku| = \sqrt[]{(ku_1) ^{2}+(ku_2) ^{2}+(ku_3)^{2}} = \sqrt[]{k ^{2}(u_1 ^{2}+u_2 ^{2}+u_3 ^{2})} \]</div>
+<div class="arithmatex">\[ = \sqrt[]{k ^{2}}\sqrt[]{u_1 ^{2}+u_2 ^{2}+u_3 ^{2}} = |k||u| \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, <span class="arithmatex">\(ku\)</span> 의 길이는 벡터 <span class="arithmatex">\(u\)</span> 의 길이에 정확히 <span class="arithmatex">\(k\)</span> 배한 길이와 같다. </p>
+</li>
+<li>
+<p>특히 벡터 <span class="arithmatex">\(u\)</span> 에 <span class="arithmatex">\(-1\)</span> 스칼라를 곱한 벡터 <span class="arithmatex">\(-u\)</span> 는 같은 길이에 정반대 방향을 가르킨다.</p>
+</li>
+</ul>
+<a href="#812472078"><div class="admonition tldr" id="812472078">
+<p>단위 벡터(unit vector) : 길이가 <span class="arithmatex">\(1\)</span> 인 벡터이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 단위 벡터란 벡터</p>
+<div class="arithmatex">\[ v = \big&lt;x_2-x_1, y_2-y_1, z_2-z_1 \big&gt; \]</div>
+<p>에 대한 벡터 길이</p>
+<div class="arithmatex">\[ |v| = \sqrt[]{(x _{2} - x _{1}) ^{2} + (y _{2} - y _{1}) ^{2} + (z _{2} - z _{1}) ^{2}} = 1 \]</div>
+<p>을 만족하는 모든 벡터를 뜻한다.</p>
+</li>
+</ul>
+<a href="#2ed0da6fe"><div class="admonition tldr" id="2ed0da6fe">
+<p><span class="arithmatex">\(3\)</span>차원 공간에서의 표준 단위 벡터(standard unit vector) : 표준 단위 벡터는 길이가 <span class="arithmatex">\(1\)</span> 인 다음의 특수한 <span class="arithmatex">\(3\)</span> 가지 경우의 벡터를 뜻한다. </p>
+<div class="arithmatex">\[ i := \big &lt;1, 0, 0 \big &gt;, j := \big &lt;0, 1, 0 \big &gt;, k := \big &lt;0, 0, 1 \big &gt; \]</div>
+</div></a>
+<ul>
+<li>
+<p>벡터 <span class="arithmatex">\(i,j,k\)</span> 는 사원수체에서 허수부의 기저이다.</p>
+</li>
+<li>
+<p>그 어떠한 벡터도 표준 단위 벡터의 선형결합으로 표현될 수 있다. 그러므로 표준 단위 벡터는 모든 벡터를 생성한다. </p>
+</li>
+<li>
+<p>예시</p>
+<p>즉, 임의의 벡터 <span class="arithmatex">\(v = \big &lt;v_1,v_2, v_3 \big &gt;\)</span> 는 다음과 같이 표준 단위 벡터의 선형 결합으로 표현될 수 있다. </p>
+<div class="arithmatex">\[ v = \big &lt;v_1,v_2, v_3 \big &gt; = \big &lt;v_1,0,0\big &gt; + \big &lt;0,v_2,0\big &gt; + \big &lt;0,0,v_3\big &gt; \]</div>
+<div class="arithmatex">\[ = v_1\big &lt;1,0,0\big &gt; + v_2\big &lt;0,1,0\big &gt; + v_3\big &lt;0,0,1\big &gt; \]</div>
+<div class="arithmatex">\[ = v_1i + v_2j + v_3k \]</div>
+</li>
+</ul>
+<a href="#d4366635b"><div class="admonition tldr" id="d4366635b">
+<p>벡터의 <span class="arithmatex">\(i\)</span> 성분(i-component) : 표준 단위 벡터의 예시에서 스칼라 <span class="arithmatex">\(v_1\)</span> 을 벡터 <span class="arithmatex">\(v\)</span> 의 <span class="arithmatex">\(i\)</span> 성분이라한다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 <span class="arithmatex">\(i\)</span> 성분은 <span class="arithmatex">\((1, 0, 0)\)</span> 또는 <span class="arithmatex">\(\big &lt; 1, 0, 0 \big &gt;\)</span> 이다.</p>
+</li>
+<li>
+<p>또 <span class="arithmatex">\(i\)</span> 벡터를 <span class="arithmatex">\(x\)</span> 축 상의 단위벡터라고도 한다.</p>
+</li>
+</ul>
+<a href="#0aa1a747d"><div class="admonition tldr" id="0aa1a747d">
+<p>벡터의 <span class="arithmatex">\(j\)</span> 성분(j-component) : 표준 단위 벡터의 예시에서 스칼라 <span class="arithmatex">\(v_2\)</span> 을 벡터 <span class="arithmatex">\(v\)</span> 의 <span class="arithmatex">\(j\)</span> 성분이라한다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 <span class="arithmatex">\(j\)</span> 성분은 <span class="arithmatex">\((0, 1, 0)\)</span> 또는 <span class="arithmatex">\(\big &lt; 0, 1, 0 \big &gt;\)</span> 이다.</p>
+</li>
+<li>
+<p>또 <span class="arithmatex">\(j\)</span> 벡터를 <span class="arithmatex">\(y\)</span> 축 상의 단위벡터라고도 한다.</p>
+</li>
+</ul>
+<a href="#f9b66ea0f"><div class="admonition tldr" id="f9b66ea0f">
+<p>벡터의 <span class="arithmatex">\(k\)</span> 성분(k-component) : 표준 단위 벡터의 예시에서 스칼라 <span class="arithmatex">\(v_3\)</span> 을 벡터 <span class="arithmatex">\(v\)</span> 의 <span class="arithmatex">\(k\)</span> 성분이라한다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 <span class="arithmatex">\(k\)</span> 성분은 <span class="arithmatex">\((0, 0, 1)\)</span> 또는 <span class="arithmatex">\(\big &lt; 0, 0, 1 \big &gt;\)</span> 이다.</p>
+</li>
+<li>
+<p>또 <span class="arithmatex">\(k\)</span> 벡터를 <span class="arithmatex">\(z\)</span> 축 상의 단위벡터라고도 한다.</p>
+</li>
+</ul>
+<a href="#7c2917422"><div class="admonition tldr" id="7c2917422">
+<p>벡터의 <span class="arithmatex">\(i,j,k\)</span> 성분으로의 벡터 표기 : 점 <span class="arithmatex">\(P_1(x_1, y_1, z_1)\)</span> 에서 점 <span class="arithmatex">\(P_2(x_2, y_2, z_2)\)</span> 으로 이어져있는 벡터는 </p>
+<div class="arithmatex">\[ \overrightarrow{P_1P_2} = (x_2 - x_1)i + (y_2-y_1)j+(z_2-z_1)k \]</div>
+<p>로 표기할 수 있다.</p>
+</div></a>
+<ul>
+<li>
+<p>따라서</p>
+<div class="arithmatex">\[ \overrightarrow{P_1P_2} = \big &lt;x_2 - x_1 , y_2-y_1,z_2-z_1 \big &gt;  = (x_2 - x_1)i + (y_2-y_1)j+(z_2-z_1)k \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#ef06b4f9e"><div class="admonition tldr" id="ef06b4f9e">
+<p><span class="arithmatex">\(n\)</span>-공간에서의 표준단위벡터 : <span class="arithmatex">\(n\)</span>-공간에서 벡터</p>
+<div class="arithmatex">\[ e_1 := (1,0,0,\dots,0) \]</div>
+<div class="arithmatex">\[ e_2 := (0,1,0,\dots,0) \]</div>
+<div class="arithmatex">\[ \vdots \]</div>
+<div class="arithmatex">\[ e_n := (0,0,0,\dots,1) \]</div>
+<p>를 표준단위벡터라고 한다.</p>
+</div></a>
+<a href="#10872ff2c"><div class="admonition tldr" id="10872ff2c">
+<p>나란한 벡터 : 영벡터가 아닌 두 벡터 <span class="arithmatex">\(v, w\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ v = tw \]</div>
+<p>인 실수 <span class="arithmatex">\(t\)</span> 가 존재하면, <span class="arithmatex">\(v, w\)</span> 를 나란하다고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이때 <span class="arithmatex">\(t&gt;0\)</span> 이면 <span class="arithmatex">\(v,w\)</span> 는 같은 방향이라 하고,</p>
+<p><span class="arithmatex">\(t&lt;0\)</span> 이면 <span class="arithmatex">\(v,w\)</span> 는 반대 방향이라 한다.</p>
+</li>
+<li>
+<p>영벡터는 모든 벡터와 나란하다고 정의한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>벡터 <span class="arithmatex">\(v = (1,2,3)\)</span> 과 같은 방향의 단위벡터를 구해보자.</p>
+<p><span class="arithmatex">\(v\)</span> 의 절댓값(크기)를 <span class="arithmatex">\(t\)</span> 라고 하고 <span class="arithmatex">\(v\)</span> 와 같은 방향의 단위벡터를 <span class="arithmatex">\(a\)</span> 라고 하자. 그러면 </p>
+<div class="arithmatex">\[ \sqrt[]{1 ^{2}+2 ^{2}+3 ^{3}} = t \]</div>
+<p>이고 </p>
+<div class="arithmatex">\[ (1,2,3) = ta \]</div>
+<p>이다. 따라서 </p>
+<div class="arithmatex">\[ a = \dfrac{1}{t}(1,2,3) = \dfrac{1}{\sqrt[]{14}}(1,2,3) \]</div>
+<p>이다.</p>
+<ul>
+<li>벡터 <span class="arithmatex">\(v\)</span> 방향으로의 단위벡터는 다음의 정의에서 좀 더 구체적으로 살펴보자.</li>
+</ul>
+</li>
+</ul>
+<a href="#31b87ab6b"><div class="admonition tldr" id="31b87ab6b">
+<p>벡터 방향으로의 단위 벡터 : 영벡터가 아닌 벡터 <span class="arithmatex">\(v \neq 0\)</span> 와 길이 <span class="arithmatex">\(|v|\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \frac{v}{|v|} \]</div>
+<p>가 벡터 <span class="arithmatex">\(v\)</span> 방향으로의 단위 벡터이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p>단위 벡터는 어떤 방향이든지 길이가 <span class="arithmatex">\(1\)</span> 인 벡터인 것을 기억하자.</p>
+<p>그러면 임의의 벡터 <span class="arithmatex">\(u\)</span> 에 그것의 길이 <span class="arithmatex">\(|u|\)</span> 의 역수 <span class="arithmatex">\(|\frac{1}{u}|\)</span> 을 스칼라배 한다면 벡터 <span class="arithmatex">\(u\)</span> 의 길이는 <span class="arithmatex">\(1\)</span> 이 된다.</p>
+<div class="arithmatex">\[ \because  \bigg | \frac{1}{|v|}v \bigg | = \frac{1}{|v|}|v| = 1 \]</div>
+<p>이기 때문이다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\bigg | \frac{1}{|v|}v \bigg |\)</span> 는 벡터 <span class="arithmatex">\(v\)</span> 에 스칼라배 <span class="arithmatex">\(\frac{1}{|v|}\)</span> 를 한 길이를 뜻한다.</p>
+<ul>
+<li>기호 <span class="arithmatex">\(||\)</span> 의 의미를 기억하자!</li>
+</ul>
+</li>
+<li>
+<p>그리고 임의의 벡터 <span class="arithmatex">\(u\)</span> 에 스칼라배 <span class="arithmatex">\(k\)</span> 를 한 벡터 <span class="arithmatex">\(ku\)</span> 의 길이 <span class="arithmatex">\(|ku|\)</span> 는 </p>
+<div class="arithmatex">\[ |ku| = |k||u| \]</div>
+<p>임을 기억하자. 이 정리에서</p>
+<div class="arithmatex">\[ k = \frac{1}{|v|}, u = v \]</div>
+<p>로 두면</p>
+<div class="arithmatex">\[ \bigg | \frac{1}{|v|}v \bigg | = \frac{1}{|v|}|v| \]</div>
+<p>임을 알 수 있다.</p>
+</li>
+<li>
+<p>마지막으로 <span class="arithmatex">\(|v|\)</span> 와 <span class="arithmatex">\(\frac{1}{|v|}\)</span> 는 단지 스칼라, 즉 실수이므로 우리가 너무 잘 아는 실수의 곱을 적용하여 </p>
+<div class="arithmatex">\[ \frac{1}{|v|}|v| = 1\]</div>
+<p>이 된다. </p>
+</li>
+</ol>
+</li>
+<li>
+<p>예시 </p>
+<p>점 <span class="arithmatex">\(P_1(1,0,1)\)</span> 에서 점 <span class="arithmatex">\(P_2(3,2,0)\)</span> 로 이어진 벡터 <span class="arithmatex">\(v\)</span> 방향으로의 단위벡터 <span class="arithmatex">\(u\)</span> 를 찾자.</p>
+<div class="arithmatex">\[ \overrightarrow{P_1P_2} = (3-1)i+(2-0)j+(0-1)k = 2i+2j-k \]</div>
+<div class="arithmatex">\[ |\overrightarrow{P_1P_2}| = \sqrt[]{2 ^{2} + 2 ^{2} +(-1)^{2}} = \sqrt[]{4+4+1} = \sqrt[]{9} = 3 \]</div>
+<p>이므로</p>
+<div class="arithmatex">\[ \therefore  u = \frac{\overrightarrow{P_1P_2}}{|\overrightarrow{P_1P_2}|} = \frac{2i+2j-k}{3} = \frac{2}{3}i + \frac{2}{3}j - \frac{1}{3}k \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<h3 id="_11">내적, 외적<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<a href="#db14cf6e3"><div class="admonition tldr" id="db14cf6e3">
+<p>내적(inner product) : <span class="arithmatex">\(n\)</span>-공간 의 두 벡터 <span class="arithmatex">\(u ,v\)</span> 가 <span class="arithmatex">\(u = \big &lt; u_1, u_2, u_3, \dots, u_n \big &gt;, v = \big  &lt;v_1, v_2, v_3, \dots, v_n \big  &gt;\)</span> 일 때, </p>
+<p>두 벡터 <span class="arithmatex">\(u, v\)</span> 의 내적은 두 벡터 <span class="arithmatex">\(u, v\)</span> 가 이루는 각 <span class="arithmatex">\(\theta\)</span> 에 대하여 스칼라</p>
+<div class="arithmatex">\[ u \cdot v := u_1v_1+u_2v_2+u_3v_3+\dots+u_nv_n = \sum_{i=1}^{n}u_iv_i = |u||v|\cos \theta \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>내적은 두 벡터 <span class="arithmatex">\(u, v\)</span> 가 이루는 각에 대한 관계식</p>
+<div class="arithmatex">\[ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) \]</div>
+<p>을 이용하여 두 벡터의 각이 <span class="arithmatex">\(\theta\)</span> 일 때 </p>
+<div class="arithmatex">\[ u \cdot v = |u||v| \cos \theta \]</div>
+<p>으로 정의할 수도 있다. </p>
+<ul>
+<li>
+<p>증명  </p>
+<div class="arithmatex">\[ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ \cos \theta = \frac{u \cdot v}{|u||v|} \]</div>
+<p>이므로</p>
+<div class="arithmatex">\[ \therefore  u \cdot v = |u||v| \cos \theta \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>내적의 성질 : 임의의 벡터 <span class="arithmatex">\(u, v, w\)</span> 와 스칼라 <span class="arithmatex">\(c\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(u \cdot v = v \cdot u\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((cu)\cdot v = u \cdot (cv) = c(u \cdot v)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(u \cdot (v + w) = u \cdot v + u \cdot w\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(u \cdot u = |u| ^{2}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(0 \cdot u = 0\)</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p>내적은 두 벡터</p>
+<div class="arithmatex">\[ a = \begin{bmatrix} a_1\\a_2\\\vdots \\a_n \end{bmatrix}, b = \begin{bmatrix} b_1\\b_2\\\vdots \\b_n \end{bmatrix} \]</div>
+<p>에 대하여 </p>
+<div class="arithmatex">\[ \big&lt; a, b \big &gt; = a_1b_1 + a_2b_2 + \dots + a_n b_n = \sum_{i=1}^{n}a_ib_i \]</div>
+<p>로 표기할 수도 있다. </p>
+<ul>
+<li><span class="arithmatex">\(\big &lt; \big &gt;\)</span> 기호를 벡터 표기가 아닌 내적 표기로 사용할 수도 있다는 것에 주의하자. </li>
+</ul>
+</li>
+<li>
+<p>점곱(dot product), 스칼라곱(scalar product), 영사곱(projection product) 으로도 불린다. </p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \big &lt; 1, -2, 1\big &gt; \cdot \big &lt; -6, 2, -3\big &gt; = (1)(-6)+(-2)(2)+(-1)(-3) = -7 \]</div>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \bigg ( \frac{1}{2}i + 3j + k \bigg ) \cdot (4i-j+2k) = \bigg (\frac{1}{2}\bigg )(4)+(3)(-1)+(1)(2) = 1 \]</div>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ a = \begin{bmatrix} 1\\2\\3 \end{bmatrix}, b=\begin{bmatrix} 4\\5\\6 \end{bmatrix} \]</div>
+<p>에 대한 내적은</p>
+<div class="arithmatex">\[ \big &lt; a, b \big &gt; = (1)(4)+(2)(5)+(3)(6)=4+10+18=32 \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#7374f213b"><div class="admonition tldr" id="7374f213b">
+<p>정사영(orthogonal projection) : 영이 아닌 벡터 <span class="arithmatex">\(a\)</span> 와 임의의 벡터 <span class="arithmatex">\(b\)</span> 에 대하여, 벡터 <span class="arithmatex">\(b\)</span> 에서 직선 <span class="arithmatex">\(\{ta|t \in \mathbb{R}\}\)</span> 에 내린 수선의 발</p>
+<div class="arithmatex">\[ P _{a}(b) = \text{proj} _{a}b =  \dfrac{a \cdot b}{a \cdot a}a \]</div>
+<p>을 <span class="arithmatex">\(a\)</span> 에 대한 <span class="arithmatex">\(b\)</span> 의 정사영이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>실수(스칼라) <span class="arithmatex">\(\dfrac{a \cdot b}{a \cdot a}\)</span> 를 벡터 <span class="arithmatex">\(b\)</span> 의 <span class="arithmatex">\(a\)</span> 성분이라고 한다.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(a\)</span> 가 단위벡터라면 </p>
+<div class="arithmatex">\[ a \cdot b \]</div>
+<p>가 <span class="arithmatex">\(b\)</span> 의 <span class="arithmatex">\(a\)</span> 성분이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>즉, <span class="arithmatex">\(a\)</span> 에 대한 <span class="arithmatex">\(b\)</span> 의 정사영은 영이 아닌 벡터 <span class="arithmatex">\(a\)</span> 와 임의의 벡터 <span class="arithmatex">\(b\)</span> 에 대하여, <span class="arithmatex">\(a\)</span> 와 나란한 벡터 중 <span class="arithmatex">\(b\)</span> 와의 거리가 가장 가까운 벡터인 것이다.</p>
+<p><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARwAAACyCAMAAACnS4D4AAAAw1BMVEX///+/AADu0dHa2toAAAAvLy/m5ubp6ent7e2/v7+oqKi4uLj8/Pzw8PDf39/j4+NBQUGqAAD39/fFxcVra2vWu7vPz89XV1ezs7OWlpZSUlJJSUnLy8uGhoZEREQ8PDwpKSmhoaEjIyN5eXmYmJgUFBRWVlaOjo41NTVjY2N1dXWCgoJmZmYREREoLS3/3t7/mZn/0dHEqKhTHBzyra3zKyvyWlrympqUAADPAADDDQ0QGBj/Li7/PT3/dHT/qan/6up/IHvnAAAF3UlEQVR4nO2da4OqNhCG03K/agNF7qjoAu5ut9v2tD29//9fVRT3HG8gIggJ83xxAWXHGGcykzcRIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIGDhb4tGC4Oy6Zi30YMFIvNmfVtxUBxto3Dqn2bMUykbdtM+7ZimNjuOm8cpm8zhojiTiPenuG+7RggjDf1pnLfVgyVLPRMhFStbzuGiMKFUT7Ckby+DRkgi6Wl2fmjAaOcMwJOL/6Q3H4NGSBm+OFqMCQPx2B3BoPiEoRo8/XAN/szZIAwy+TgSAKHfICxPhr5gUM+QF4bR8e81JMhAySZQ5pZRjw9rYrqkF4V4OzpLAUHn1MgehfCtvT0eEMGCJMmF85al06ODn++6NuEwWIvlYvnNf3BhgyQFWddvgD1HBREZR1k9PUc1XRLCxNjz620p5eKGYZxFy8m0+eqy6NuHItbVV02skcZMkCkuV15fcwOWeaM6ieMOLdK0msVCnGsJQx144FuqwScZddFAiNNPHkvrhGmx1myuFyhOGOUDtmY16t/MiMsZNhzmFXIuTiOccoqFGcIV8ZBhKL61hYjPr/0HE7q3oVSn6MyDKPruhWcxiT8Mqsv16K4ZMHg86+V6Jo3ZNoGvUKCGX92So+CHgwZIuf1BuvGSQaVWqUtnvonBQmlZJKhFHoL7JKNjt/bYu7feAt66zkBj9Kj4/TmWShKQ3mOo8kHPUU1vdvVj/QuRlOlg56C3WzUxfIq+OjCUPk6fqNXEQYzdxq9bgz1nBMZZH3odchfOJVB1mdy47iIPEAGWc4mar6AQa+e8yMddXbPSkS6fY4Y3lV0oDpa6dx9FQqrUoJBNv5yhLMHNbHX90ZirXa1mTRWy7qTDKVQW895ju7/2Cmt56gvbgtrwunsOZr7AhWKEiYRxTH4Tqx5pQyyPhRO6ilXZJD1oc8h3z7JUAp1udV1GWR9xLtHSoNC3TSYZBgJeFZDBlkfplnpeZjwYbvTBTSVLJi05U+aIodcVwZZH3oEkzIHMsgynLT9uCu0NmLql7i+DLI+dPgcnN0gg6wPFbmV6G46qVDQIJhkonGubqmDz3UVcckXTNrzzqb7iR8hL7ju4i3p9ZzyvRZagOwCe9VeCy1AtGCyeq+FcXNlr4X7IVhIcGWvhRYgN1pJy851V8TmVvKy+zWGpAomEw5kkGVswkdE2QmJgkl8lwyyPiT6HDHcXH9SGxCYPhzsteB324FsNpx+QIZvVtgvizcTsdtlLZKr7JEyIja4ddjgIw+3Fqhbp6B4olCgmSQ0TszaWJ4XRdFM67hxZJbfI5LQODPWEHnNKyxNLbnb5Ed+FchpHMyxlsjzgsJtjzQTJd3urCq/ktNzBDad7D5KrfA6Me54fwHJJabnWKwrFMaK8U4xwHQ9gJWeiGgcRhEN1tT2pgr2Y+qX9lrsrHFUqa3EOdj+9l+i7eOqIBo/tHTjy7z9+L6Nh2L46oith3Jb3jpKIX9DXCv303c/Gvn9V376+dsu+eXTp0+//vYeTb31SioGgbNEZ1pBj6MoipWn7TtqpVi3+9FI9vfvDvimSz5//mP78GcYTtkP1lw7pGvXC6N0d89WUkRte6dlG3eqx9tff//z7xsy5xF7vgfPvSSpFyjizlG0k68Zeds8cLP4/96Lx8VzB//U2mll1Cx3om3dkr4pGFi5AlBGQ/mgSpfc/xJOkqS3ujC+GKQ4lCgoq7hdlDQx/BwroFfNKxcBwmmYCVgaprjj7ActcjPPEeOYpnlERTB4rGgSRryRN4y1b5yN0aR1bBmZFA22fCNGL76sLARmhTaqoWYI44mGPDVpIOhOeGSSrGU6ZcGgJXrJ/5gjlGE0SZBgLSYTB8UNsgJLkgKatkfOkB7s5idSpM7yL4aPdMtHloIaTWRiugb8ni8jcatRVoxtoMr7UIBlhGUZVjqerJaS8sbRbNum6uNvzuqocRxZy9tLgF/JAwAAAAAAAAAAAAAAAAAAAAAAAIAm/A9OZ1YJp/cf9AAAAABJRU5ErkJggg=="/></p>
+</li>
+<li>
+<p>증명</p>
+<p>벡터 <span class="arithmatex">\(a\)</span> 와 나란한 벡터 <span class="arithmatex">\(ta\)</span> 중에서 <span class="arithmatex">\(b\)</span> 와 거리가 가장 가까운 것을 구하면 된다.</p>
+<p>벡터 <span class="arithmatex">\(b\)</span> 와 <span class="arithmatex">\(ta\)</span> 사이의 거리의 제곱은 </p>
+<div class="arithmatex">\[ f(x) = |ta-b| ^{2} = (ta-b)\cdot (ta-b) \]</div>
+<div class="arithmatex">\[ = (a \cdot a) t^{2} - 2(a \cdot b)t+b \cdot b \]</div>
+<p>이다. 그러면 <span class="arithmatex">\(f(t)\)</span> 는 임의의 실수 <span class="arithmatex">\(t\)</span> 에 대한 <span class="arithmatex">\(2\)</span>차 다항함수이고, 최고차 항의 계수가 양수이다.</p>
+<p>그러므로 <span class="arithmatex">\(f(t)\)</span> 는 </p>
+<div class="arithmatex">\[ 0 = f'(t) = 2(a \cdot a)t - 2(a \cdot b) \]</div>
+<p>일 때, 즉 </p>
+<div class="arithmatex">\[ t = \dfrac{a \cdot b}{a \cdot a} \]</div>
+<p>일 때 최솟값을 가진다.</p>
+<p><span class="arithmatex">\(\therefore\)</span> 그러므로 벡터 <span class="arithmatex">\(b\)</span> 와 거리가 가장 가까운 벡터 <span class="arithmatex">\(ta\)</span> 는 <span class="arithmatex">\(\dfrac{a \cdot b}{a \cdot a} a\)</span> 이다. ■</p>
+</li>
+</ul>
+<a href="#a0d52675f"><div class="admonition tldr" id="a0d52675f">
+<p>두 벡터의 각도(angle between two vectors) : 시점이 같은 영벡터가 아닌 두 벡터 <span class="arithmatex">\(u, v\)</span> 가 <span class="arithmatex">\(u = \big &lt; u_1, u_2, u_3 \big &gt;, v = \big  &lt;v_1, v_2, v_3 \big  &gt;\)</span> 일 때, </p>
+<p>두 벡터 <span class="arithmatex">\(u ,v\)</span> 가 이루는 각 <span class="arithmatex">\(0 \leq  \theta \leq \pi\)</span> 는 </p>
+<div class="arithmatex">\[ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>다음과 같이 쓸 수도 있다.</p>
+<div class="arithmatex">\[ \theta = \cos ^{-1} \bigg ( \frac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \bigg ) \]</div>
+</li>
+<li>
+<p>증명 </p>
+<p>시점이 같은 임의의 두 벡터 <span class="arithmatex">\(u = \big &lt;u_1,u_2,u_3\big &gt;, v=\big &lt;v_1,v_2,v_3\big &gt;\)</span> 가 이루는 각 <span class="arithmatex">\(0 \leq \theta \leq \pi\)</span> 를 구해보자. </p>
+<p><img height="auto" src="https://user-images.githubusercontent.com/16812446/86887866-392e0980-c134-11ea-9889-3e42cf40f31a.png" width="50%"/></p>
+<blockquote>
+<p>출처 : <a href="https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078">Thomas' CALCULUS</a> Figure12.21</p>
+</blockquote>
+<p>두 벡터의 크기 <span class="arithmatex">\(|u|, |v|\)</span> 와 두 벡터의 뺄셈으로 얻은 벡터 </p>
+<div class="arithmatex">\[w = u-v=\big &lt;u_1-v_1,u_2-v_2,u_3-v_3\big &gt;\]</div>
+<p>에 대하여 코사인 법칙</p>
+<div class="arithmatex">\[ |w| ^{2} = |u|^{2}+|v|^{2}-2|u||v|\cos \theta \]</div>
+<div class="arithmatex">\[ 2|u||v|\cos \theta= |u|^{2}+|v|^{2} - |w| ^{2} \]</div>
+<p>이 성립한다. 이때 벡터 <span class="arithmatex">\(u, v, w\)</span> 의 크기 제곱은</p>
+<div class="arithmatex">\[ |u| ^{2} = \bigg (\sqrt[]{u_1 ^{2}+u_2 ^{2}+u_3 ^{2}} \bigg )^{2}=u_1 ^{2}+u_2 ^{2}+u_3 ^{2} \]</div>
+<div class="arithmatex">\[ |v| ^{2} = v_1 ^{2}+v_2 ^{2}+v_3 ^{2} \]</div>
+<div class="arithmatex">\[ |w| ^{2} = (u_1-v_1) ^{2}+(u_2 - v_2) ^{2}+(u_3 - v_3) ^{2} \]</div>
+<div class="arithmatex">\[ = u_1 ^{2}-2u_1v_1 + v_1 ^{2} +u_2 ^{2}-2u_2v_2 + v_2 ^{2} +u_3 ^{2}-2u_3v_3 + v_3 ^{2} \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ |u|^{2}+|v|^{2} - |w| ^{2} = 2(u_1v_1+u_2v_2+u_3v_3) \]</div>
+<p>이다. 그러므로</p>
+<div class="arithmatex">\[ 2|u||v|\cos \theta= |u|^{2}+|v|^{2} - |w| ^{2} = 2(u_1v_1+u_2v_2+u_3v_3) \]</div>
+<div class="arithmatex">\[ \cos \theta = \dfrac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \]</div>
+<p>이다. 그런데 <span class="arithmatex">\(\theta\)</span> 가 두 벡터가 이루는 각이므로 <span class="arithmatex">\(0 \leq 0 &lt; \pi\)</span> 이다. 따라서 최종적으로 두 벡터 <span class="arithmatex">\(u,v\)</span> 가 이루는 각 <span class="arithmatex">\(\theta\)</span> 는</p>
+<div class="arithmatex">\[ \therefore \theta = \cos ^{-1}\bigg ( \dfrac{u_1v_1+u_2v_2+u_3v_3}{|u||v|} \bigg ) = \cos ^{-1}\bigg ( \dfrac{u \cdot v}{|u||v|} \bigg ) \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p>두 벡터 </p>
+<div class="arithmatex">\[ u = i - 2j - 2k, v = 6i + 3j + 2k \]</div>
+<p>가 이루는 각을 구해보자.</p>
+<div class="arithmatex">\[ u \cdot v = (1)(6)+(-2)(3)+(-2)(2) = -4 \]</div>
+<div class="arithmatex">\[ |u| = \sqrt[]{(1)^{2}+(-2)^{2}+(-2)^{2}} = \sqrt[]{9} = 3 \]</div>
+<div class="arithmatex">\[ |v| = \sqrt[]{(6)^{2}+(3)^{2}+(2)^{2}} = \sqrt[]{49} = 7 \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) = \cos ^{-1} \bigg ( \frac{-4}{3 \cdot 7} \bigg ) \approx 100.98 \degree \]</div>
+</li>
+</ul>
+<a href="#acf6bbc56"><div class="admonition tldr" id="acf6bbc56">
+<p>코사인 유사도(cosine similarity) : 영벡터가 아닌 두 벡터 <span class="arithmatex">\(u, v\)</span> 가 <span class="arithmatex">\(u = \big &lt; u_1, u_2, \dots, u_n \big &gt;, v = \big  &lt;v_1, v_2, \dots, v_n \big  &gt;\)</span> 일 때, </p>
+<div class="arithmatex">\[ \cos  \theta = \frac{u \cdot v}{|u||v|} \]</div>
+<p>또는 </p>
+<div class="arithmatex">\[ \cos  (u, v) := \frac{u \cdot v}{|u||v|} \]</div>
+<p>를 코사인 유사도라고 정의한다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>코사인 유사도 <span class="arithmatex">\(\cos  \theta = \dfrac{u \cdot v}{|u||v|}\)</span> 는 두 벡터의 각도 <span class="arithmatex">\(\theta = \cos ^{-1} \bigg ( \dfrac{u \cdot v}{|u||v|} \bigg )\)</span> 에서 </p>
+<div class="arithmatex">\[ \therefore  \cos \theta = \frac{u \cdot v}{|u||v|} \]</div>
+<p>와 같이 쉽게 유도된다. </p>
+</li>
+<li>
+<p>다음의 기호로도 표기할 수 있다. </p>
+<div class="arithmatex">\[ \cos \theta = \frac{u \cdot v }{||u|| \cdot  ||v||} = \frac{ \displaystyle \sum_{i=1}^{n}a_ib_i}{ \displaystyle \sqrt[]{\sum_{i=1}^{n}a_i ^{2}} \sqrt[]{\sum_{i=1}^{n}b_i ^{2}}} \]</div>
+</li>
+<li>
+<p>코사인 유사도는 폐구간 <span class="arithmatex">\([-1, 1]\)</span> 에 존재한다. </p>
+<p>즉 <span class="arithmatex">\(-1 \leq \cos (u, v) \leq 1\)</span> 이다.</p>
+<ul>
+<li>
+<p>코사인 유사도가 <span class="arithmatex">\(-1\)</span> 일 때 두 벡터가 서로 반대방향이다.</p>
+</li>
+<li>
+<p>코사인 유사도가 <span class="arithmatex">\(0\)</span> 일 때 두 벡터가 직교한다.</p>
+</li>
+<li>
+<p>코사인 유사도가 <span class="arithmatex">\(1\)</span> 일 때 두 벡터가 서로 같은 방향으로 평행이 된다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>이와 같이 코사인 유사도가 높다는 것은 두 벡터가 더 비슷하다는 것이다. </p>
+</li>
+</ul>
+<blockquote>
+<p>인공지능이 자연어를 처리할 때 단어와 문장을 벡터로 처리하는데 벡터로 환원된 단어와 문장의 관계성을 파악할 때 코사인 유사도가 사용된다. 코사인 유사도가 높을수록 해당 단어와 문장이 더 가까운 관계라는 것이다. </p>
+<p>벡터 해석학으로 격하된 자연대상은 벡터 해석학의 법칙에 순응하기 때문이다. </p>
+<p>이것은 수학 사상사에서 배웠던 수학적 추상대상물로 환원된 자연대상을 수학의 추상 법칙으로 다룰 수 있다는 것의 논거 및 개별 대상이 될 수 있다. </p>
+</blockquote>
+<ul>
+<li>
+<p>예시 </p>
+<p>두 벡터 <span class="arithmatex">\(a = (1, 2, 3), b = (6, 5, 4)\)</span> 의 코사인 유사도를 구해보자. </p>
+<div class="arithmatex">\[ a \cdot b = (1)(6)+(2)(5)+(3)(4) = 28 \]</div>
+<div class="arithmatex">\[ |a| = \sqrt[]{1^2+2^2+3^2} = \sqrt[]{14} \]</div>
+<div class="arithmatex">\[ |b| = \sqrt[]{6^2+5^2+4^2} = \sqrt[]{77} \]</div>
+<p>이므로 코사인 유사도 <span class="arithmatex">\(\cos (a, b)\)</span> 는</p>
+<div class="arithmatex">\[ \therefore \cos (a, b) = \frac{28}{\sqrt[]{14} \sqrt[]{77}} = \frac{2 \sqrt[]{22}}{11} \approx 0.8528 \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#67cf7d581"><div class="admonition tldr" id="67cf7d581">
+<p>벡터의 직교(orthogonal vectors) : 두 벡터 <span class="arithmatex">\(u, v\)</span> 가 직교하는 조건은</p>
+<div class="arithmatex">\[ u \cdot v = 0 \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>두 벡터가 이루는 각이 <span class="arithmatex">\(90 \degree\)</span> 일 때 직교한다고 한다. </p>
+</li>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[ \cos \bigg ( \frac{\pi }{2} \bigg ) = 0 , \cos ^{-1} 0 = \frac{\pi }{2} \]</div>
+<p>이므로 벡터 <span class="arithmatex">\(u, v\)</span> 가 이루는 각이 <span class="arithmatex">\(90 \degree = \dfrac{\pi }{2}\)</span> 라면</p>
+<div class="arithmatex">\[ \theta = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ \frac{\pi }{2}  = \cos ^{-1} 0 = \cos ^{-1} \bigg ( \frac{u \cdot v}{|u||v|} \bigg ) \]</div>
+<div class="arithmatex">\[ 0 = \frac{u \cdot v}{|u||v|} \]</div>
+<p>이다. 그러므로</p>
+<div class="arithmatex">\[ \therefore u \cdot v = 0 \]</div>
+<p>이다. ■</p>
+</li>
+</ul>
+<a href="#0adce73cc"><div class="admonition tldr" id="0adce73cc">
+<p>외적(outer product) : 벡터 <span class="arithmatex">\(u, v\)</span> 가 이루는 각이 <span class="arithmatex">\(\theta\)</span> 이고 벡터 <span class="arithmatex">\(u, v\)</span> 가 이루는 평면에 수직한 단위 벡터 <span class="arithmatex">\(n\)</span> 에 대하여 </p>
+<p>벡터 <span class="arithmatex">\(u, v\)</span> 의 외적은 벡터 </p>
+<div class="arithmatex">\[ u \times v = (|u||v| \sin \theta) n \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>교차곱(cross product), 벡터곱(vector product), 텐서곱(tensor product) 으로도 불린다. </p>
+</li>
+<li>
+<p>내적의 결과가 스칼라인 반면 외적의 결과는 벡터이다. </p>
+<ul>
+<li>이로 인해 외적은 벡터곱(vector product) 이라고 불리기도 한다. </li>
+</ul>
+</li>
+<li>
+<p>벡터의 외적 <span class="arithmatex">\(u \times v\)</span> 는 <span class="arithmatex">\(u, v\)</span> 에 직교(orthogonal) 한다. </p>
+<p><img alt="" src="https://www.sharetechnote.com/image/EngMath_Matrix_CrossProduct_01.png"/></p>
+<ul>
+<li>
+<p>왜냐하면 위 그림과같이 외적이란 벡터 <span class="arithmatex">\(n\)</span> 의 스칼라배에 불과하기 때문이다. </p>
+</li>
+<li>
+<p>위 그림의 빨간선이 벡터 <span class="arithmatex">\(u, v\)</span> 가 이루는 평면에 직교하는 단위벡터 <span class="arithmatex">\(n\)</span> 이다! </p>
+</li>
+</ul>
+</li>
+<li>
+<p>외적의 성질 : 임의의 벡터 <span class="arithmatex">\(u, v, w\)</span> 와 임의의 스칼라 <span class="arithmatex">\(r, s\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\((ru) \times (sv) = (rs)(u \times v)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(u \times (v + w) = u \times v + u \times w\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(v \times u = -(u \times v)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((v+w)\times u = v \times u + w \times u\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(0 \times u=0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(u \times (v \times w) = (u \cdot w)v - (u \cdot v)w\)</span></p>
+</li>
+</ol>
+</li>
+</ul>
+<a href="#4d32d815f"><div class="admonition tldr" id="4d32d815f">
+<p>외적의 크기 : 벡터 <span class="arithmatex">\(u, v\)</span> 의 외적의 크기는 </p>
+<div class="arithmatex">\[ |u \times v| = |u||v| \sin \theta \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>외적의 정의</p>
+<div class="arithmatex">\[ u \times v = (|u||v| \sin \theta) n \]</div>
+<p>에서 <span class="arithmatex">\(n\)</span> 은 단위벡터이므로 크기가 <span class="arithmatex">\(1\)</span> 이다. 따라서 외적의 크기는 </p>
+<div class="arithmatex">\[ |u \times v| = |u||v| |\sin \theta| |n| \]</div>
+<p>에서</p>
+<div class="arithmatex">\[ \therefore  |u \times v| = |u||v| \sin \theta \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>외적의 크기는 벡터 <span class="arithmatex">\(u, v\)</span> 가 이루는 평행사변형(parallogram)의 크기와 같다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p>평행사변형의 밑변이 <span class="arithmatex">\(|u|\)</span> 이 되고 높이가 <span class="arithmatex">\(|v||\sin \theta|\)</span> 가 되므로 외적의 크기 </p>
+<div class="arithmatex">\[ |u \times v| = |u||v| \sin \theta \]</div>
+<p>는 두 벡터 <span class="arithmatex">\(u, v\)</span> 가 이루는 평행사변형의 넓이와 같다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#05184faeb"><div class="admonition tldr" id="05184faeb">
+<p>평행 벡터(parallel vectors) : 두 벡터 <span class="arithmatex">\(u, v\)</span> 가 평행인 것은</p>
+<div class="arithmatex">\[ u \times v = 0 \]</div>
+<p>와 동치이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\sin \theta\)</span> 에서 <span class="arithmatex">\(\theta\)</span> 가 <span class="arithmatex">\(0, \pi\)</span> 일 때 <span class="arithmatex">\(0\)</span> 이므로 두 벡터 <span class="arithmatex">\(u, v\)</span> 가 평행할 때 </p>
+<div class="arithmatex">\[u \times v = 0\]</div>
+<p>이다. 이것의 역도 성립한다.</p>
+<ul>
+<li>
+<p>두 벡터 <span class="arithmatex">\(u, v\)</span> 중 하나가 영벡터라면 역시 </p>
+<div class="arithmatex">\[u \times v = 0\]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>즉 <span class="arithmatex">\(u \times v = 0\)</span> 은 평행일 필요충분조건이다. </p>
+</li>
+<li>
+<p>형식언어로</p>
+<div class="arithmatex">\[ u // v \iff u \times v \]</div>
+<p>로 표현할 수 있다. </p>
+</li>
+</ul>
+<h2 id="_12">일차독립과 일차종속<a class="headerlink" href="#_12" title="Permanent link">¶</a></h2>
+<a href="#61156a00a"><div class="admonition tldr" id="61156a00a">
+<p><span class="arithmatex">\(3\)</span>차원 좌표공간의 표준단위벡터의 일차결합(linear combination) : <span class="arithmatex">\(3\)</span>차원 좌표공간의 임의의 벡터 </p>
+<div class="arithmatex">\[ v = (v_1, v_2, v_3) \]</div>
+<p>은 표준단위벡터 <span class="arithmatex">\(i = (1,0,0),j = (1,0,0),k = (1,0,0)\)</span> 에 의하여 </p>
+<div class="arithmatex">\[ a = a_1i + a_2j + a_3 k \]</div>
+<p>로 표현할 수 있는데, 이와 같은 표현을 벡터 <span class="arithmatex">\(i,j,k\)</span> 의 일차결합이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(2\)</span>차원 좌표평면에서의 벡터 <span class="arithmatex">\(i, j\)</span> 를 <span class="arithmatex">\(1\)</span>시방향 벡터 </p>
+<div class="arithmatex">\[ h_1 := (\cos 60 \degree , \sin 60 \degree ) = \dfrac{1}{2}(1, \sqrt[]{3}) \]</div>
+<p>와 <span class="arithmatex">\(5\)</span>시방향 벡터</p>
+<div class="arithmatex">\[ h_5 := (\cos 60 \degree , -\sin 60 \degree ) = \dfrac{1}{2}(1, -\sqrt[]{3}) \]</div>
+<p>의 일차결합으로 표현하면</p>
+<div class="arithmatex">\[ i = h_1+h_5, j = \dfrac{1}{\sqrt[]{3}}h_1 - \dfrac{1}{\sqrt[]{3}}h_5 \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#b7e06b55b"><div class="admonition tldr" id="b7e06b55b">
+<p>일차결합 또는 선형결합(linear combination) : 임의의 자연수 <span class="arithmatex">\(k\)</span> 에 대한 임의의 실수 <span class="arithmatex">\(t_1, \dots, t_k\)</span> 에 대하여 벡터 </p>
+<div class="arithmatex">\[ t_1a_1 + \dots + t_ka_k \]</div>
+<p>를 <span class="arithmatex">\(a_1, \dots, a_k\)</span> 의 일차결합이라 한다.</p>
+</div></a>
+<a href="#5ad065861"><div class="admonition tldr" id="5ad065861">
+<p>일차종속 또는 선형종속(linearly dependent) : 일차결합의 정의에서 <span class="arithmatex">\(a_1, \dots, a_k\)</span> 중 어느 벡터 <span class="arithmatex">\(a_i\)</span> 가 나머지 벡터들의 일차결합이면 <span class="arithmatex">\(a_1, \dots, a_k\)</span> 를 일차종속이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(a_1, \dots, a_k\)</span> 에서 <span class="arithmatex">\(a_1\)</span> 이 <span class="arithmatex">\(a_2, \dots, a_k\)</span> 의 일차결합이면 <span class="arithmatex">\(a_1, \dots, a_k\)</span> 는 일차종속이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>벡터 <span class="arithmatex">\(a=(1,2,3),b=(2,4,6)\)</span> 에서 <span class="arithmatex">\(b=2a\)</span> 이므로 이들은 일차종속이다.</p>
+</li>
+</ul>
+<a href="#a4730e276"><div class="admonition tldr" id="a4730e276">
+<p>일차독립 또는 선형독립(linearly independent) : 일차결합의 정의에서 <span class="arithmatex">\(a_1, \dots, a_k\)</span> 가 일차종속이 아니면 <span class="arithmatex">\(a_1, \dots, a_k\)</span> 을 일차독립이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>어떤 벡터 <span class="arithmatex">\(a\)</span> 가 일차독립이라는 것은 <span class="arithmatex">\(a \neq 0\)</span> 임을 뜻한다.</p>
+</li>
+<li>
+<p>자연수 <span class="arithmatex">\(k\)</span> 에 대한 벡터 <span class="arithmatex">\(a_1, \dots, a_k\)</span> 가 일차독립일 필요충분조건은 방정식 </p>
+<div class="arithmatex">\[ x_1a_1 + x_2a_2 + \dots + x_ka_k = 0 \]</div>
+<p>의 해가 자명한 해 즉, <span class="arithmatex">\(x_1=x_2=\dots=x_k=0\)</span> 뿐인 것이다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p>이 명제의 대우를 증명하려 해보자. 즉, 귀류법을 사용하자. 그러면 방정식</p>
+<div class="arithmatex">\[ x_1a_1 + x_2a_2 + \dots + x_ka_k = 0 \]</div>
+<p>은 자명하지 않은 해 <span class="arithmatex">\((x_1, \dots, x_k)\)</span> 를 갖는다. 즉, 어떤 <span class="arithmatex">\(i \in \{1, \dots, k\}\)</span> 에 대하여 <span class="arithmatex">\(x_i \neq 0\)</span> 이다. 그러므로 </p>
+<div class="arithmatex">\[ a_i = -\dfrac{x_1}{x_i}a_1 - \dots -\dfrac{x _{i-1}}{x_i}a _{i-1}-\dfrac{x _{i+1}}{x_i}a _{i+1} - \dots - -\dfrac{x _{k}}{x_i}a _{k} \]</div>
+<p>인데 이것은 곧 <span class="arithmatex">\(a_1, \dots, a_k\)</span> 가 일차종속이라는 것이다.</p>
+<p>가정과 모순이므로 벡터 <span class="arithmatex">\(a_1, \dots, a_k\)</span> 가 일차독립이면 방정식</p>
+<div class="arithmatex">\[ x_1a_1 + x_2a_2 + \dots + x_ka_k = 0 \]</div>
+<p>은 자명한 해만을 갖는다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3"><span class="arithmatex">\(3\)</span>차원 좌표공간의 기저<a class="headerlink" href="#3" title="Permanent link">¶</a></h2>
+<a href="#86d679ba5"><div class="admonition tldr" id="86d679ba5">
+<p><span class="arithmatex">\(3\)</span>차원 좌표공간의 생성 : <span class="arithmatex">\(3\)</span>차원 좌표공간에서 실수 <span class="arithmatex">\(v_1, v_2, v_3 \in \mathbb{R}\)</span> 에 대한 벡터 <span class="arithmatex">\(v=(v_1, v_2, v_3)\)</span> 는 표준단위벡터 <span class="arithmatex">\(i,j,k\)</span> 의 일차결합인데,</p>
+<p>이때 <span class="arithmatex">\(i,j,k\)</span> 가 <span class="arithmatex">\(3\)</span>차원 좌표공간을 생성한다고 한다.</p>
+</div></a>
+<a href="#39fb76b0f"><div class="admonition tldr" id="39fb76b0f">
+<p><span class="arithmatex">\(n\)</span>-공간의 생성 : <span class="arithmatex">\(n\)</span>-공간의 모든 벡터가 벡터 <span class="arithmatex">\(a_1,\dots,a_n\)</span> 의 일차결합이면,</p>
+<p><span class="arithmatex">\(a_1,\dots,a_n\)</span> 는 <span class="arithmatex">\(n\)</span>-공간을 생성한다.</p>
+</div></a>
+<ul>
+<li>
+<p>좌표평면에서는 <span class="arithmatex">\(i,j\)</span> 가 평면을 생성한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(n\)</span>-공간의 임의의 벡터 <span class="arithmatex">\(a=(a_1,\dots,a_n)\)</span> 는 표준단위벡터들의 일차결합이다. 즉, </p>
+<div class="arithmatex">\[ a=a_1e_1+a_2e_2+\dots+a_ne_n \]</div>
+<p>이다. 그러므로 표준단위벡터 <span class="arithmatex">\(e_1, \dots, e_n\)</span> 는 <span class="arithmatex">\(n\)</span>-공간을 생성한다.</p>
+</li>
+</ul>
+<a href="#7b20a2369"><div class="admonition tldr" id="7b20a2369">
+<p><span class="arithmatex">\(n\)</span>-공간의 기저(basis) : 일차독립이면서 <span class="arithmatex">\(n\)</span>-공간을 생성하는 벡터 집합을 <span class="arithmatex">\(n\)</span>-공간의 기저라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(n\)</span>-공간의 임의의 벡터 <span class="arithmatex">\(a=(a_1,\dots,a_n)\)</span> 는 표준단위벡터들의 일차결합이다. 즉, </p>
+<div class="arithmatex">\[ a=a_1e_1+a_2e_2+\dots+a_ne_n \]</div>
+<p>이다. 그러므로 표준단위벡터 <span class="arithmatex">\(e_1, \dots, e_n\)</span> 는 <span class="arithmatex">\(n\)</span>-공간을 생성한다.</p>
+<p>그런데 벡터 <span class="arithmatex">\(e_2, \dots, e_n\)</span> 의 어떤 일차결합도 첫번째 성분이 <span class="arithmatex">\(0\)</span> 이 되므로 <span class="arithmatex">\(e_1\)</span> 의 일차결합이 될 수 없다. 같은 원리로 <span class="arithmatex">\(e_i\)</span> 는 <span class="arithmatex">\(e_1, \dots, e _{i-1},e _{i+1}, \dots,e_n\)</span> 의 일차결합일 수 없다. 그러므로 표준단위벡터 <span class="arithmatex">\(e_1, \dots, e_n\)</span> 은 서로 일차독립이다.</p>
+<p>표준단위벡터는 일차독립이면서 <span class="arithmatex">\(n\)</span>-공간을 생성한다. 따라서 표준단위벡터는 <span class="arithmatex">\(n\)</span>-공간의 기저이다. ■ </p>
+</li>
+</ul>
+<h2 id="_13">벡터공간과 차원<a class="headerlink" href="#_13" title="Permanent link">¶</a></h2>
+<a href="#99654462c"><div class="admonition tldr" id="99654462c">
+<p>벡터공간(vector space) : <span class="arithmatex">\(\mathbb{R} ^{n}\)</span> 처럼 원소의 합과 상수배가 정의되어 있는 집합, 즉 대수구조이다.</p>
+</div></a>
+<ul>
+<li>
+<p>선형대수학이란 벡터공간을 연구하는 학문이다.</p>
+</li>
+<li>
+<p>이 집합의 원소를 벡터라고 한다.</p>
+</li>
+<li>
+<p>좌표공간에서처럼 일반적인 벡터공간 <span class="arithmatex">\(V\)</span> 에서도 기저를 보일 수 있다.</p>
+</li>
+</ul>
+<a href="#0a7dc6ecb"><div class="admonition tldr" id="0a7dc6ecb">
+<p>차원(dimension) : 벡터공간 <span class="arithmatex">\(V\)</span> 과 자연수 <span class="arithmatex">\(n, k\)</span> 에 대한 임의의 두 기저</p>
+<div class="arithmatex">\[ v_1, \dots, v_n \]</div>
+<div class="arithmatex">\[ w_1, \dots, w_k \]</div>
+<p>에 대하여 항상 <span class="arithmatex">\(n=k\)</span> 인데, </p>
+<p>이 <span class="arithmatex">\(n\)</span> 을 <span class="arithmatex">\(V\)</span> 의 차원이라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>벡터 <span class="arithmatex">\(v_1, \dots, v_n\)</span> 는 벡터공간 <span class="arithmatex">\(V\)</span> 의 기저이므로 <span class="arithmatex">\(V\)</span> 를 생성한다. 그러므로 벡터공간 <span class="arithmatex">\(V\)</span> 의 모든 벡터를 <span class="arithmatex">\(v_1, \dots, v_n\)</span> 의 일차결합으로 나타낼 수 있다. </p>
+<p>따라서 <span class="arithmatex">\(i \in \{1, \dots, k\}, j \in \{1,\dots,n\}\)</span> 에 대한 임의의 실수 <span class="arithmatex">\(a _{ij}\)</span> 에 대하여</p>
+<div class="arithmatex">\[ w _{i} = \sum_{j=1}^{n}a _{ij}v _{j} \]</div>
+<p>로 나타낼 수 있다.</p>
+<p>한편 이때 방정식</p>
+<div class="arithmatex">\[ x_1w_1 + x_2w_2 + \dots + x_kw_k = 0 \]</div>
+<p>은 </p>
+<div class="arithmatex">\[ \sum_{i=1}^{k}x_iw_i = x_1w_1 +x_2w_2+\dots +x_kw_k \]</div>
+<div class="arithmatex">\[ = x_1(a _{11}v_1 + a _{12}v_2 + a _{1n}v_n) + \]</div>
+<div class="arithmatex">\[   x_2(a _{21}v_1 + a _{22}v_2 + a _{2n}v_n) + \]</div>
+<div class="arithmatex">\[ \vdots \]</div>
+<div class="arithmatex">\[   x_k(a _{k1}v_1 + a _{k2}v_2 + a _{kn}v_n) \]</div>
+<p>이다. 이것은 <span class="arithmatex">\(x_1a_{11}v_1\)</span> 에서 <span class="arithmatex">\(x_ka_{kn}v_n\)</span> 까지 더한 것이므로 </p>
+<div class="arithmatex">\[ = \sum_{j=1}^{n}\bigg (\sum_{i=1}^{k}x_ia_{ij}\bigg )v_j \]</div>
+<p>이다. 그런데 이 방정식은 <span class="arithmatex">\(w_1, \dots, w_k\)</span> 가 기저이고, 이에따라 일차독립이므로 자명한 해 <span class="arithmatex">\(x_1 = x_2 = \dots = x_k = 0\)</span>  만 가진다.</p>
+<p>그러므로 </p>
+<div class="arithmatex">\[ (a _{11}v_1, a _{12}v_2, a _{1n}v_n), \dots, (a _{k1}v_1, a _{k2}v_2, a _{kn}v_n) \]</div>
+<p>는 일차독립이다.</p>
+<p>그러므로 </p>
+<div class="arithmatex">\[ (a _{11}, a _{12}, a _{1n}), \dots, (a _{k1}, a _{k2}, a _{kn}) \]</div>
+<p>는 일차독립이다.</p>
+<p><strong>??????? 벡터공간의 차원 정리에 대한 다른 증명을 찾아보자..</strong></p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\mathbb{R} ^{n}\)</span> 의 차원은 <span class="arithmatex">\(n\)</span> 이다.</p>
+</li>
+</ul>
+<h2 id="_14">좌표계<a class="headerlink" href="#_14" title="Permanent link">¶</a></h2>
+<a href="#d22c15830"><div class="admonition tldr" id="d22c15830">
+<p>좌표(coordinates) : <span class="arithmatex">\(n\)</span>-공간의 의 벡터 <span class="arithmatex">\(b_1, \dots, b_n\)</span> 와 <span class="arithmatex">\(n\)</span>-공간의 한 기저 <span class="arithmatex">\(\mathcal{B}:= (b_1, \dots, b_n)\)</span> 에 대하여 임의의 벡터 <span class="arithmatex">\(v \in \mathbb{R} ^{n}\)</span> 을 <span class="arithmatex">\(\mathcal{B}:= (b_1, \dots, b_n)\)</span> 로 표현하는 방법은</p>
+<div class="arithmatex">\[ v = c_1b_1 + c_2b_2 + \dots + c_nb_n \]</div>
+<p>로써 유일한데, 이때 <span class="arithmatex">\((c_1, \dots, c_n) \in \mathbb{R} ^{n}\)</span> 을 기저 <span class="arithmatex">\(\mathcal{B}:= (b_1, \dots, b_n)\)</span> 에 대한 벡터 <span class="arithmatex">\(v\)</span> 의 좌표라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>지금까지 줄곧 사용하던 좌표평면의 좌표 <span class="arithmatex">\((a,b)\)</span> 와 좌표공간의 좌표 <span class="arithmatex">\((a,b,c)\)</span> 을 일반화한 것이다.</p>
+<ul>
+<li>우리가 일반적으로 사용해왔던 좌표평면의 기저는 <span class="arithmatex">\(\bigg (\begin{bmatrix} 1\\0 \end{bmatrix}, \begin{bmatrix} 0\\1 \end{bmatrix}\bigg )\)</span> 이고, 좌표공간의 기저는 <span class="arithmatex">\(\bigg ( \begin{bmatrix} 1\\0\\0 \end{bmatrix}, \begin{bmatrix} 0\\1\\0 \end{bmatrix}, \begin{bmatrix} 0\\0\\1 \end{bmatrix} \bigg )\)</span> 인 것이다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="_15">행렬<a class="headerlink" href="#_15" title="Permanent link">¶</a></h2>
+<a href="#50b838cf3"><div class="admonition tldr" id="50b838cf3">
+<p>행렬곱 : <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A=(a_{ij})\)</span> 와 <span class="arithmatex">\(n \times l\)</span> 행렬 <span class="arithmatex">\(B = (b _{jk})\)</span> 에 대한 곱 <span class="arithmatex">\(AB\)</span> 는</p>
+<p><span class="arithmatex">\(m \times l\)</span> 행렬 <span class="arithmatex">\(A \times B = C = (c _{ik})\)</span> 로써 <span class="arithmatex">\((i, k)\)</span> 항이 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span>번째 행 벡터와 <span class="arithmatex">\(B\)</span> 의 <span class="arithmatex">\(k\)</span> 번째 열 벡터의 내적 </p>
+<div class="arithmatex">\[ \sum_{j=1}^{n}a _{ij}b _{jk} \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#3752d6a56"><div class="admonition tldr" id="3752d6a56">
+<p>정사각행렬, or 정방행렬(square matrix), or <span class="arithmatex">\(n\)</span>차 정사각행렬 : 행의 수와 열의 수가 <span class="arithmatex">\(n\)</span> 으로 같은 행렬이다.</p>
+</div></a>
+<a href="#9e81ae8ad"><div class="admonition tldr" id="9e81ae8ad">
+<p><span class="arithmatex">\(n\)</span>차 단위 행렬, or 항등행렬 : 대각선의 항들, 즉 <span class="arithmatex">\((i,i)\)</span> 항이 모두 <span class="arithmatex">\(1\)</span> 이고 나머지 항은 <span class="arithmatex">\(0\)</span> 인 <span class="arithmatex">\(n\)</span>차 정사각행렬 <span class="arithmatex">\(I_n\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>혹은 간단히 <span class="arithmatex">\(I\)</span> 로도 표기한다.</li>
+</ul>
+<a href="#7d70ed9fb"><div class="admonition tldr" id="7d70ed9fb">
+<p>선형사상(linear map) : <span class="arithmatex">\(\forall x, y \in \mathbb{R} ^{n}\)</span> 와 <span class="arithmatex">\(t \in \mathbb{R}\)</span> 에 대한 사상 <span class="arithmatex">\(L\)</span> 이 </p>
+<div class="arithmatex">\[ L(\mathbf{x}+\mathbf{y}) = L(\mathbf{x}) + L(\mathbf{y}), L(t \mathbf{x}) = tL(\mathbf{x}) \]</div>
+<p>이면 <span class="arithmatex">\(L\)</span> 을 선형사상이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>항등사상(identity map)</p>
+<div class="arithmatex">\[ \text{id}:\mathbb{R} ^{n}\to \mathbb{R} ^{n}, \text{id}(\mathbf{x}):=\mathbf{x} \]</div>
+<p>은 선형사상이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>점대칭변환</p>
+<div class="arithmatex">\[ -\text{id}:\mathbb{R} ^{n}\to \mathbb{R} ^{n}, \mathbf{x}\mapsto -x\]</div>
+<p>은 선형사상이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(a_1, \dots, a_n \in \mathbb{R}\)</span> 와 <span class="arithmatex">\((x_1, \dots, x_n) \in \mathbb{R} ^{n}\)</span> 대한 함수 </p>
+<div class="arithmatex">\[ l(x_1, \dots, x_n) := a_1x_1 + \dots+a_nx_n \]</div>
+<p>은 선형사상이다.</p>
+</li>
+</ul>
+<a href="#1c7c814a5"><div class="admonition tldr" id="1c7c814a5">
+<p>선형사상으로 정의하는 행렬 : <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 는 벡터 <span class="arithmatex">\(\mathbf{x}\in \mathbb{R} ^{n}, A \mathbf{x}\in \mathbb{R} ^{m}\)</span> 에 대한 사상</p>
+<div class="arithmatex">\[ L_A : \mathbb{R} ^{n} \to \mathbb{R} ^{m}, \mathbf{x} \mapsto A \mathbf{x} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>설명 </p>
+<p><span class="arithmatex">\(n\)</span>-공간의 원소 열벡터 <span class="arithmatex">\(\begin{pmatrix} x_1\\ \vdots \\x_n \end{pmatrix}\)</span> 를 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A = (a _{ij})\)</span> 와 곱하여 <span class="arithmatex">\(m\)</span>-공간의 원소, 즉 벡터를 얻는다. 즉, </p>
+<div class="arithmatex">\[ \begin{pmatrix} a _{11} &amp; \dots &amp; a _{1n}\\ \vdots &amp; \ddots &amp; \vdots \\ a _{m1} &amp; \dots &amp; a _{mn}\\ \end{pmatrix} \begin{pmatrix} x_1\\\vdots \\x_n \end{pmatrix} = \begin{pmatrix} a _{11}x_1 + \dots + a _{1n}x_n\\ \vdots \\ a _{m1}x_1 + \dots + a _{mn}x_n\\ \end{pmatrix} \in \mathbb{R} ^{m} \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 는 벡터 <span class="arithmatex">\(\mathbf{x}\in \mathbb{R} ^{m}\)</span> 에 대한 사상</p>
+<div class="arithmatex">\[ L_A := A \mathbf{x} \]</div>
+<p>으로 정의할 수 있다.</p>
+</li>
+</ul>
+<a href="#b497a6711"><div class="admonition tldr" id="b497a6711">
+<p>치환(permutation) : <span class="arithmatex">\(n \in \mathbb{N}\)</span> 에 대한 집합 <span class="arithmatex">\(\{1,2,\dots,n\}\)</span> 에서 집합 <span class="arithmatex">\(\{1,2,\dots,n\}\)</span> 으로 가는 전단사 사상을 <span class="arithmatex">\(n\)</span>-치환이라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>항등치환 <span class="arithmatex">\(id\)</span> 는 </p>
+<div class="arithmatex">\[ \text{id}(k) = k \]</div>
+<p>이고, 치환이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\sigma\)</span> 가 <span class="arithmatex">\(n\)</span>-치환일 때 <span class="arithmatex">\(n\)</span>-치환을</p>
+<div class="arithmatex">\[ \begin{pmatrix} 1&amp;2&amp;3&amp;\dots&amp;n\\ \sigma(1)&amp; \sigma(2)&amp; \sigma(3)&amp; \dots&amp; \sigma(n) \end{pmatrix} \]</div>
+<p>로 나타낸다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \begin{pmatrix} 1&amp;2&amp;3&amp;4&amp;5\\ 5&amp; 4&amp; 3&amp; 2&amp; 1 \end{pmatrix} \]</div>
+<p>은 <span class="arithmatex">\(1,2,3,4,5\)</span> 를 <span class="arithmatex">\(5,4,3,2,1\)</span> 로 보내는 치환이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#cda3e970e"><div class="admonition tldr" id="cda3e970e">
+<p>항등치환 <span class="arithmatex">\(\varepsilon\)</span> : 항등치환은 </p>
+<div class="arithmatex">\[ \varepsilon = \begin{pmatrix} 1&amp;2&amp;3&amp;\dots&amp;n\\ 1&amp;2&amp;3&amp;\dots&amp;n\\ \end{pmatrix} \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#2d95645a5"><div class="admonition tldr" id="2d95645a5">
+<p>치환의 부호 : 치환 <span class="arithmatex">\(\sigma\)</span> 를 항등치환 <span class="arithmatex">\(\varepsilon\)</span> 으로 바꾸기 위한 조작횟수 <span class="arithmatex">\(N(\sigma )\)</span> 에 대하여 치환의 부호는</p>
+<div class="arithmatex">\[ \text{sgn}(\sigma ) = (-1) ^{N(\sigma )} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>치환 <span class="arithmatex">\(\sigma = \begin{pmatrix} 1&amp;2&amp;3\\3&amp;2&amp;1 \end{pmatrix}\)</span> 을 항등치환으로 바꾸기 위한 조작 횟수 <span class="arithmatex">\(N(\sigma )\)</span> 은 두번째 행의 <span class="arithmatex">\(3\)</span> 과 <span class="arithmatex">\(1\)</span> 을 <span class="arithmatex">\(1\)</span>번 바꾸면 되기 때문에 </p>
+<div class="arithmatex">\[ N(\sigma ) = 1 \]</div>
+<p>이다. 그러므로 치환의 부호는 </p>
+<div class="arithmatex">\[ \text{sgn} (\sigma ) = (-1) ^{N(\sigma )} = (-1) ^{1} = -1 \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>치환 <span class="arithmatex">\(\sigma = \begin{pmatrix} 1&amp;2&amp;3\\2&amp;3&amp;1 \end{pmatrix}\)</span> 을 항등치환으로 바꾸기 위한 조작 횟수 <span class="arithmatex">\(N(\sigma )\)</span> 은 두번째 행의 <span class="arithmatex">\(3\)</span> 과 <span class="arithmatex">\(1\)</span> 을 <span class="arithmatex">\(1\)</span>번 바꾸고 <span class="arithmatex">\(1\)</span> 과 <span class="arithmatex">\(2\)</span> 를 바꾸어야 하므로</p>
+<div class="arithmatex">\[ N(\sigma ) = 2 \]</div>
+<p>이다. 그러므로 치환의 부호는 </p>
+<div class="arithmatex">\[ \text{sgn} (\sigma ) = (-1) ^{N(\sigma )} = (-1) ^{2} = 1 \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 적분2" class="md-footer__link md-footer__link--prev" href="../cal5/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              적분2
+            </div>
+</div>
+</a>
+<a aria-label="다음: 미적분" class="md-footer__link md-footer__link--next" href="../cal6/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              미적분
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/AI/dl_from_scratch4/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>합성곱 신경망 CNN - ccss17</title>
+<link href="../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#cnn">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              합성곱 신경망 CNN
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cnn">
+    합성곱 신경망 CNN
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cnn_1">
+    여러 CNN
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    정확도 향상 팁
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    딥러닝 고속화
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>합성곱 신경망 CNN</h1>
+<h2 id="cnn">합성곱 신경망 CNN<a class="headerlink" href="#cnn" title="Permanent link">¶</a></h2>
+<a href="#6e387c997"><div class="admonition tldr" id="6e387c997">
+<p>완전연결, fully-connected, 전결합 : 인접하는 계층의 모든 뉴런이 결합되어 있는 신경망이다.</p>
+</div></a>
+<ul>
+<li>
+<p>완전 연결 신경망을 Affine 계층으로 구현했었다.</p>
+</li>
+<li>
+<p>완전 연결 신경망(Affine)은 모든 데이터셋을 1차원 데이터로 평탄화하기 때문에 고차원 데이터의 형상과 구조에 담겨있는 패턴과 의미를 포착할 수 없다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>고차원 데이터의 구조와 형상에 의미와 패턴이 있다고 전제하고 있다. 그러나 이것에 대한 엄말한 논의가 필요하다.</p>
+</div>
+</li>
+</ul>
+<a href="#01f582f06"><div class="admonition tldr" id="01f582f06">
+<p>합성곱 신경망, convolutional neural network, CNN : 합성곱 계층으로 이루어진 신경망이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이미지 인식, 음성 인식 등 다양한 곳에서 사용되는데 특히 이미지 분야에서의 딥러닝은 거의 다 CNN 을 기초로 한다.</p>
+</li>
+<li>
+<p>합성곱은 공학과 물리학에서 널리 쓰이는 수학적 개념이다. 수학적으로 "두 함수 중 하나를 반전(reverse), 이동(shift) 시켜가며 함수와의 곱을 연이어 적분한다" 고 정의할 수 있다.</p>
+</li>
+<li>
+<p>Affine 계층을 사용했을 때 가령 신경망을 다음과 같이 이룰 수 있었다.</p>
+<p><img alt="" src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/msyksphinz/20170622/20170622015132.png"/></p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/997AE03A5AAAA64C2A?download"/></p>
+<p>CNN 구조는 다음과 같이 구성할 수 있다.</p>
+<p><img alt="" src="https://media.vlpt.us/post-images/dscwinterstudy/118fa610-4199-11ea-9e80-2dba9507cf00/fig-7-2.png"/></p>
+<p>이처럼 CNN 에서는 합성곱 계층 Conv 와 풀링 계층 Pooling 이 추가된다. 지금까지의 [Affine-ReLU] 연결이 [Conv-ReLU-(Pooling)] 연결로 바뀐 것이다. Pooling 은 생략되기도 한다.</p>
+</li>
+<li>
+<p>Affine 계층으로 이루어진 신경망은 가령 MNIST 데이터셋의 형상 <span class="arithmatex">\(1 \times 28 \times 28\)</span> 을 1차원 형상 <span class="arithmatex">\(1 \times 1 \times 784\)</span> 로 평탄화시켰다. 그러나 합성곱 계층은 데이터의 형상을 유지한다. 이미지도 3차원으로 받고 다음 계층에도 3차원 데이터로 전달한다.</p>
+<p>이로써 엄밀히 증명된 것은 아니지만 CNN 이 이미지 형상을 제대로 이해할 것 같다.</p>
+</li>
+<li>
+<p>CNN 에서 합성곱 계층의 입출력 데이터를 특징 맵feature map 이라고 한다.</p>
+<p>합성곱 계층의 입력 데이터를 입력 특징 맵input feature map, 출력 데이터를 출력 특징 맵output feature map 이라고 한다.</p>
+</li>
+<li>
+<p>합성곱 계층에서는 다음과 같이 합성곱 연산을 수행하는데 이는 이미지 처리에서 필터 연산과도 같다.</p>
+<p>왼쪽 행렬(<span class="arithmatex">\(4 \times 4\)</span>)이 입력 데이터이고 가운데 행렬(<span class="arithmatex">\(3 \times 3\)</span>)이 필터(or 커널 kernel) 이며 오른쪽 행렬(<span class="arithmatex">\(2 \times 2\)</span>)이 출력이다.</p>
+<p><img alt="" src="https://media.vlpt.us/post-images/dscwinterstudy/1d4ed9d0-4199-11ea-8bd7-d9eb4a57ded4/fig-7-4.png"/></p>
+<p>합성곱 연산은 위와 같이 필터의 윈도우(window) 를 일정 간격으로 이동해가면 단일 곱셈-누산(fused multiply-add, FMA) 를 연산하고 그 결과를 출력에 저장한다.</p>
+<p><strong>그리고 <span class="arithmatex">\(1 \times 1\)</span> 형상의 편향 bias 를 모든 출력에 더해준다!</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>이 합성곱 연산을 과학용 파이썬 라이브러리 SciPy 의 2차원 합성곱 함수(<code>scipy.signal.convolve2d</code>) 로 수행하면 결과가 다르게 나온다. 교차상관(cross-correlation) 함수인 <code>scipy.signal.correlate2d</code> 를 사용해야 결과가 똑같이 나온다. </p>
+<p>이는 딥러닝에서 합성곱과 교차상관을 잘 구분하지 않기 때문이다. 주어진 필터를 flipping 하면 합성곱이 되고 하지 않으면 교차상관이 되기 때문이다.</p>
+<p>flipping 이란 행렬의 원소를 좌우, 상하로 한 번씩 뒤집는 것이다. 딥러닝 라이브러리들의 합성곱 함수들은 flipping 을 하지 않거나 flipping 여부를 파라미터로 받는다.</p>
+</div>
+</li>
+<li>
+<p>합성곱 연산을 수행하기 전 입력 데이터의 주변을 <span class="arithmatex">\(0\)</span> 으로 채워서 확장하여 패딩을 만들기도 한다.</p>
+<p><img alt="" src="https://media.vlpt.us/post-images/dscwinterstudy/282b27a0-4199-11ea-8bd7-d9eb4a57ded4/fig-7-6.png"/> </p>
+<p>위 사진은 <span class="arithmatex">\((4, 4)\)</span> 크기의 입력 데이터에 폭이 <span class="arithmatex">\(1\)</span> 인 패딩을 적용여 <span class="arithmatex">\((6, 6)\)</span> 으로 만든 것이다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>패딩은 출력 크기를 조정할 목적으로 사용된다. </p>
+<p><span class="arithmatex">\(n &gt; m\)</span> 인 <span class="arithmatex">\(n, m \in \N\)</span> 에 대하여 <span class="arithmatex">\((n, n)\)</span> 입력 데이터에 <span class="arithmatex">\((m, m)\)</span> 커널을 적용하면 </p>
+<div class="arithmatex">\[(n - m + 1, n - m + 1)\]</div>
+<p>형상이 된다. </p>
+<p>어쩄든 이로써 입력 데이터의 형상이 끊임없이 줄어들어 언젠가 <span class="arithmatex">\((1, 1)\)</span> 이 될 수도 있다. 이렇게 되면 더 이상 합성곱 연산을 적용할 수 없으므로 큰 문제가 된다. 따라서 패딩 <span class="arithmatex">\(p\)</span> 를 적용함으로써 형상을</p>
+<div class="arithmatex">\[(n + 2p - m + 1, n + 2p - m + 1)\]</div>
+<p>로 확장해주는 것이다.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">사소하고 어설픈 증명</p>
+<p><span class="arithmatex">\((n, n)\)</span> 입력 데이터에 <span class="arithmatex">\((m, m)\)</span> 커널을 몇번 적용할 수 있는지 조사하기 위하여 집합</p>
+<div class="arithmatex">\[ A = \{x + (m - 1) | x \in \N,  x + (m - 1) \leq n\} \]</div>
+<p>을 정의해보자. 이 집합은 입력 데이터에 필터가 적용되는 마지막 좌표를 갖는다.</p>
+<p>가령 <span class="arithmatex">\((7, 7)\)</span> 에 필터 <span class="arithmatex">\((3, 3)\)</span> 을 적용하면 집합 <span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(1 + (m - 1) = m = 3\)</span> 을 시작으로 <span class="arithmatex">\(7\)</span> 까지의 원소를 가지므로 <span class="arithmatex">\(A = \{3, 4, 5, 6, 7\}\)</span> 이다. </p>
+<p>이 집합의 기수 자체가 필터가 적용되는 횟수이다. 그러므로 집합 <span class="arithmatex">\(A\)</span> 가 의존하는 독립변수 <span class="arithmatex">\(x \in \N\)</span> 를 조사하면</p>
+<div class="arithmatex">\[  x + (m - 1) \leq n \iff  x \leq n - (m - 1) \iff x \leq n - m + 1 \]</div>
+<p>이다. 이는 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(1\)</span> 부터 <span class="arithmatex">\(n - m + 1\)</span> 까지의 자연수라는 말이므로 집합 <span class="arithmatex">\(|A| = n - m + 1\)</span> 이고, 결과적으로 커널이 적용되는 횟수가 <span class="arithmatex">\(n - m + 1\)</span> 번이라는 것이다. 그러므로 <span class="arithmatex">\(n - m + 1\)</span> 개의 커널 적용 결과가 생성되고 이는 <span class="arithmatex">\(y\)</span> 축 방향으로도 마찬가지이므로 최종적으로 형상 <span class="arithmatex">\((n-m+1, n-m+1)\)</span> 이 생성된다. </p>
+</div>
+</li>
+<li>
+<p>지금까지 스트라이드stride 는 암묵적으로 <span class="arithmatex">\(1\)</span> 이 었다. 스트라이드란 필터를 적용하는 위치의 간격이다. 만약 스트라이드를 <span class="arithmatex">\(2\)</span> 로 하면 필터를 적용하는 윈도우가 두 칸씩 이동한다.</p>
+<p><img alt="" src="https://media.vlpt.us/post-images/dscwinterstudy/3084e940-4199-11ea-b8c9-7f7f97d846d5/fig-7-7.png"/></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="arithmatex">\(n &gt; m\)</span> 인 <span class="arithmatex">\(n, m \in \N\)</span> 에 대하여 <span class="arithmatex">\((n, n)\)</span> 입력 데이터에 <span class="arithmatex">\((m, m)\)</span> 커널과 패딩 <span class="arithmatex">\(p\)</span> 와 스트라이드 <span class="arithmatex">\(s\)</span> 까지 적용하면 그 형상이</p>
+<div class="arithmatex">\[ \bigg (\dfrac{n + 2p - m}{s} + 1, \dfrac{n + 2p - m }{s}+ 1  \bigg )\]</div>
+<p>가 된다. 따라서 이 분수값이 정수로 나누어 떨어져야 하는 것이 중요하다. 딥러닝 프레임워크들은 형상이 나누어떨어지지 않을 때 반올림을 하는 등 에러를 발생시키지 않고 그냥 진행하기도 한다.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">사소하고 어설픈 증명</p>
+<p><span class="arithmatex">\((n, n)\)</span> 입력 데이터에 스트라이드 <span class="arithmatex">\(s\)</span> 로 <span class="arithmatex">\((m, m)\)</span> 커널을 몇번 적용할 수 있는지 조사하기 위하여 집합</p>
+<div class="arithmatex">\[ A = \{s(x - 1) + m | x \in \N,  s(x - 1) + m \leq n\} \]</div>
+<p>을 정의하자. 이 집합은 입력 데이터에 필터가 적용되는 마지막 좌표를 갖는다.</p>
+<p>가령 <span class="arithmatex">\((7, 7)\)</span> 에 스트라이드 <span class="arithmatex">\(s = 2\)</span> 로 필터 <span class="arithmatex">\((3, 3)\)</span> 을 적용하면 집합 <span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(s(x - 1) + m = 2 \cdot 0 + m = 3\)</span> 을 시작으로 <span class="arithmatex">\(3, 5, 7\)</span> 의 원소를 갖는다. </p>
+<p>이 집합의 기수 자체가 필터가 적용되는 횟수이다. 그러므로 집합 <span class="arithmatex">\(A\)</span> 가 의존하는 독립변수 <span class="arithmatex">\(x \in \N\)</span> 를 조사하면</p>
+<div class="arithmatex">\[  s(x - 1) + m \leq n \iff  x \leq \dfrac{n-m}{s} + 1 \]</div>
+<p>이는 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(1\)</span> 부터 <span class="arithmatex">\(\dfrac{n-m}{s} + 1\)</span> 까지의 자연수라는 말이므로 집합 <span class="arithmatex">\(|A| = \dfrac{n-m}{s} + 1\)</span> 이고, 결과적으로 커널이 적용되는 횟수가 <span class="arithmatex">\(\dfrac{n-m}{s} + 1\)</span> 라는 것이다. 그러므로 <span class="arithmatex">\(\dfrac{n-m}{s} + 1\)</span> 개의 커널 적용 결과가 생성되고, 이는 <span class="arithmatex">\(y\)</span> 축 방향으로도 마찬가지이므로 최종적으로 형상 <span class="arithmatex">\(\bigg (\dfrac{n-m}{s} + 1, \dfrac{n-m}{s} + 1\bigg )\)</span> 이 생성된다.</p>
+</div>
+</li>
+<li>
+<p>일반적으로 입력 데이터 <span class="arithmatex">\((H, W)\)</span>, 커널 <span class="arithmatex">\((FH, FW)\)</span>, 출력 데이터 <span class="arithmatex">\((OH, OW)\)</span>, 패딩 <span class="arithmatex">\(P\)</span>, 스트라이드 <span class="arithmatex">\(S\)</span> 는 다음의 관계를 갖는다.</p>
+<div class="arithmatex">\[ (OH, OW) = \bigg ( \dfrac{H+2P-FH}{S} + 1, \dfrac{W + 2P - FW}{S} + 1\bigg ) \]</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>입력 <span class="arithmatex">\((28, 31)\)</span>, 패딩 <span class="arithmatex">\(2\)</span>, 스트라이드 <span class="arithmatex">\(3\)</span>, 필터 <span class="arithmatex">\((5, 5)\)</span> 에 대한 출력은 </p>
+<div class="arithmatex">\[ \bigg (\dfrac{28 + 2 \cdot 2 - 5}{3} + 1, \dfrac{31 + 2 \cdot 2 - 5}{3} + 1\bigg ) = (10, 11) \]</div>
+<p>이다.</p>
+</div>
+</li>
+</ul>
+<a href="#604e45ac5"><div class="admonition tldr" id="604e45ac5">
+<p><span class="arithmatex">\(3\)</span> 차원 데이터 합성곱 연산 : <span class="arithmatex">\((H, W)\)</span> 형상에서 채널 축이 추가된 <span class="arithmatex">\((C, H, W)\)</span> 형상에 대한 합성곱 연산으로써 각각의 필터의 합성곱 연산을 수행하고 그 결과를 더하여 하나의 출력을 계산한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이때 물론 입력 데이터의 채널 수와 필터의 채널 수가 같아야 한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음과 같이 각각의 필터에 대하여 합성곱 연산을 수행하고 그 결과를 모두 더하여 하나의 출력으로 계산한다.</p>
+<p><img alt="" src="https://media.vlpt.us/post-images/dscwinterstudy/4d744a50-4199-11ea-8bd7-d9eb4a57ded4/fig-7-9.png"/></p>
+<p>위의 예시는 입력 데이터의 채널 수와 필터의 채널 수가 <span class="arithmatex">\(3\)</span> 으로 일치한다.</p>
+</li>
+<li>
+<p>이러한 3차원 합성곱 연산을 직육면체 블록으로 추상화 시키면 생각하기 쉽다.</p>
+<p><img alt="" src="https://3.bp.blogspot.com/-vwlVvtTGnSE/WYJsaj5E2EI/AAAAAAAALNs/qlHKYaW6R0AukJ3qKdReTkuiugqkFfUWgCK4BGAYYCw/s400/o11.PNG"/></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="arithmatex">\(3\)</span> 차원 데이터를 다차원 배열로 나타낼 때 여기에서는 (channel, height, width) 순서로 쓴다.</p>
+</div>
+<p>이렇게 <span class="arithmatex">\(3\)</span> 차원 입력 데이터에 <span class="arithmatex">\(3\)</span> 차원 필터로 합성곱 연산을 하면 <span class="arithmatex">\(2\)</span> 차원 특징 맵이 출력된다. 그런데 이렇게 차원 수가 줄어들게 되면 언젠가 <span class="arithmatex">\(1\)</span> 차원이 되어버리고 신경망을 깊게 만들 수 없다. </p>
+<p>따라서 필터를 <span class="arithmatex">\(4\)</span> 차원으로 하여 출력 특징 맵이 <span class="arithmatex">\(2\)</span> 차원이 아니라 <span class="arithmatex">\(3\)</span> 차원으로 나올 수 있도록 할 수 있다.</p>
+<p><img alt="" src="https://3.bp.blogspot.com/-Sd2tEjB9ZLQ/WYJtnAea0LI/AAAAAAAALN4/7BFnDCofuusdoPYPB88xUWWIlC5qZzcawCK4BGAYYCw/s400/o12.PNG"/></p>
+<p>위와 같이 <span class="arithmatex">\(4\)</span> 차원 필터를 적용하면 <span class="arithmatex">\(FN\)</span> 개 채널을 가지는 출력 데이터가 연산된다.</p>
+</li>
+<li>
+<p>마지막으로 다음과 같이 합성곱 연산을 끝낸 후 편향 블록을 더해줌으로써 최종 출력 데이터를 만들어낸다.</p>
+<p><img alt="" src="https://1.bp.blogspot.com/-O60db3qXQws/WYJw8NMcTzI/AAAAAAAALOI/7oF6RD68VV08XcOSHdd1vyzfuwTwRiZtwCK4BGAYYCw/s400/o13.PNG"/></p>
+<p>위 그림과 같이 편향은 채널 하나 당 하나의 값으로 구성된다.</p>
+</li>
+<li>
+<p>완전연결 신경망에서 매번 하나의 데이터만을 연산하니까 속도가 너무 느려서 배치 처리를 했었다. 같은 이유로 합성곱 연산에서도 배치 처리가 필요하다. 합성곱 연산에서의 배치처리는 단순히 입력 데이터의 차원을 하나 더 늘려서 <span class="arithmatex">\(4\)</span> 차원 데이터를 만드는 것이다. </p>
+<p>즉, (channel, height, width) 형상을 (데이터 개수, channel, height, width) 로 바꾸는 것이다.</p>
+<p><img alt="" src="https://1.bp.blogspot.com/-O60db3qXQws/WYJw8NMcTzI/AAAAAAAALOI/7oF6RD68VV08XcOSHdd1vyzfuwTwRiZtwCK4BGAYYCw/s400/o13.PNG"/></p>
+</li>
+</ul>
+<a href="#c0ef03cd0"><div class="admonition tldr" id="c0ef03cd0">
+<p>풀링(Pooling) : 세로, 가로 방향의 공간을 줄이는 연산이다.</p>
+</div></a>
+<ul>
+<li>
+<p>풀링에서의 윈도우 크기와 스트라이드는 같은 값으로 설정하는 것이 일반적이다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>풀링 윈도우가 <span class="arithmatex">\(3 \times 3\)</span> 이면 스트라이드를 <span class="arithmatex">\(3\)</span> 으로, 풀링 윈도우가 <span class="arithmatex">\(4 \times 4\)</span> 이면 스트라이드를 <span class="arithmatex">\(4\)</span> 로 정한다.</p>
+</div>
+</li>
+</ul>
+<a href="#51846f175"><div class="admonition tldr" id="51846f175">
+<p>최대 풀링(max pooling) : 풀링 윈도우에서 최댓값을 구하여 새로운 데이터 원소로 정하는 연산이다.</p>
+</div></a>
+<ul>
+<li>
+<p>다음 그림은 <span class="arithmatex">\(2 \times 2\)</span> 최대 풀링을 스트라이드 <span class="arithmatex">\(2\)</span> 로 처리하는 과정을 보여준다.</p>
+<p><img alt="" src="https://media.vlpt.us/post-images/dscwinterstudy/590eb800-4199-11ea-8bd7-d9eb4a57ded4/fig-7-14.png"/></p>
+<p>단순히 <span class="arithmatex">\(2 \times 2\)</span> 영역에서 가장 큰 값을 새로운 데이터의 원소로 정한다.</p>
+</li>
+</ul>
+<a href="#b49ec068a"><div class="admonition tldr" id="b49ec068a">
+<p>평균 풀링(average pooling) : 풀링 윈도우에서 평균을 구하여 새로운 데이터 원소로 정하는 연산이다.</p>
+</div></a>
+<ul>
+<li>하지만 이미지 인식 분야에서는 보통 max pooling 을 사용한다.</li>
+</ul>
+<a href="#979de5aee"><div class="admonition tldr" id="979de5aee">
+<p>최소 풀링(min pooling) : 풀링 윈도우에서 최소값을 구하여 새로운 데이터 원소로 정하는 연산이다.</p>
+</div></a>
+<ul>
+<li>하지만 이미지 인식 분야에서는 보통 max pooling 을 사용한다.</li>
+</ul>
+<a href="#7f50e27b9"><div class="admonition tldr" id="7f50e27b9">
+<p>풀링 계층 : 풀링 연산을 하는 신경망 계층이다.</p>
+</div></a>
+<ul>
+<li>
+<p>풀링 계층에서는 가중치 매개변수가 없고, 학습해야할 것도 없다.</p>
+</li>
+<li>
+<p>풀링 계층을 지나쳐도 채널 수는 변하지 않는다.</p>
+</li>
+<li>
+<p>입력 데이터가 조금 변해도 풀링의 결과는 잘 변하지 않는다.</p>
+</li>
+</ul>
+<a href="#a2fcc3256"><div class="admonition tldr" id="a2fcc3256">
+<p>im2col : CNN 의 <span class="arithmatex">\(4\)</span> 차원 데이터를 <span class="arithmatex">\(2\)</span> 차원 행렬로 변형시키고 <span class="arithmatex">\(4\)</span> 차원 필터도 <span class="arithmatex">\(2\)</span> 차원 행렬로 변환시켜서 합성곱 연산을 행렬곱으로 단순화시키는 트릭이다.</p>
+</div></a>
+<ul>
+<li>
+<p><a href="https://leonardoaraujosantos.gitbook.io/artificial-inteligence/machine_learning/deep_learning/convolution_layer/making_faster">https://leonardoaraujosantos.gitbook.io/artificial-inteligence/machine_learning/deep_learning/convolution_layer/making_faster</a></p>
+</li>
+<li>
+<p>im2col 은 입력 데이터에서 필터를 적용하는 3차원 블록 영역을 한 줄로 늘어뜨린다. 이것을 필터가 적용되는 모든 영역에서 수행한다.</p>
+</li>
+<li>
+<p>다음 그림은 그냥 보기 좋게끔 필터의 적용 영역이 겹치지 않도록 스트라이드를 적절히 설정하여 im2col 을 전개한 모습이다.</p>
+<p><img alt="" src="https://petewarden.files.wordpress.com/2015/04/im2col_corrected.png?w=550&amp;h=252"/></p>
+<p><em>출처: <a href="https://petewarden.com/2015/04/20/why-gemm-is-at-the-heart-of-deep-learning/">https://petewarden.com/2015/04/20/why-gemm-is-at-the-heart-of-deep-learning/</a></em></p>
+<p>그러나 실제로는 영역이 겹치는 경우가 대부분이다. 따라서 필터 적용 영역이 중복될 때 im2col 을 전개하면 원소 수가 원래의 블록의 원소 보다 많아진다. 이로써 메모리가 낭비된다.</p>
+<p>그럼에도 im2col 을 사용하는 것은 컴퓨터 자체가 큰 행렬을 묶어서 계산하는데 탁월하기 때문이다. 행렬 계산 라이브러리, 선형 대수 라이브러리 등은 큰 행렬을 빠르게 계산할 수 있도록 최적화되어 있다. </p>
+</li>
+<li>
+<p>입력 데이터를 im2col 로 전개한 다음에 필터(가중치)를 1열로 전개하고 두 행렬곱을 계산하면 된다.</p>
+<p><img alt="" src="https://petewarden.files.wordpress.com/2015/04/im2colmult_corrected1.png?w=550&amp;h=331"/></p>
+<p><em>출처: <a href="https://petewarden.com/2015/04/20/why-gemm-is-at-the-heart-of-deep-learning/">https://petewarden.com/2015/04/20/why-gemm-is-at-the-heart-of-deep-learning/</a></em></p>
+<p>위 그림과 같이 입력 데이터가 행으로 변환된 행렬이 되었고, 커널이 열로 변환된 행렬이 되었다. 합성곱을 수행하는 것이 이제 행렬곱이 되었다!</p>
+</li>
+<li>
+<p><strong>이 행렬곱 연산의 결과는 <span class="arithmatex">\(2\)</span> 차원 출력 데이터가 된다.</strong> <ins>CNN 은 데이터를 <span class="arithmatex">\(4\)</span> 차원 배열로 저장하기 때문에 이것을 다시 <span class="arithmatex">\(4\)</span> 차원으로 reshape 해주는 것으로 합성곱 계층의 구현이 마무리된다.</ins></p>
+</li>
+<li>
+<p>코드 구현 </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">im2col_no_stride_pad</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">filter_h</span><span class="p">,</span> <span class="n">filter_w</span><span class="p">):</span>
+    <span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="n">input_data</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">out_h</span> <span class="o">=</span> <span class="p">(</span><span class="n">H</span> <span class="o">-</span> <span class="n">filter_h</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">out_w</span> <span class="o">=</span> <span class="p">(</span><span class="n">W</span> <span class="o">-</span> <span class="n">filter_w</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="s1">'constant'</span><span class="p">)</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">filter_h</span><span class="p">,</span> <span class="n">filter_w</span><span class="p">,</span> <span class="n">out_h</span><span class="p">,</span> <span class="n">out_w</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">filter_h</span><span class="p">):</span>
+        <span class="n">y_max</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">out_h</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">filter_w</span><span class="p">):</span>
+            <span class="n">x_max</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">out_w</span>
+            <span class="n">col</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">y</span><span class="p">:</span><span class="n">y_max</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span><span class="n">x_max</span><span class="p">:</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">col</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">out_h</span><span class="o">*</span><span class="n">out_w</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">col</span>
+
+<span class="k">def</span> <span class="nf">im2col</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">filter_h</span><span class="p">,</span> <span class="n">filter_w</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    input_data : 4차원 배열 형태의 입력 데이터(이미지 수, 채널 수, 높이, 너비)</span>
+<span class="sd">    filter_h : 필터의 높이</span>
+<span class="sd">    filter_w : 필터의 너비</span>
+<span class="sd">    stride : 스트라이드</span>
+<span class="sd">    pad : 패딩</span>
+<span class="sd">    """</span>
+    <span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="n">input_data</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">out_h</span> <span class="o">=</span> <span class="p">(</span><span class="n">H</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">pad</span> <span class="o">-</span> <span class="n">filter_h</span><span class="p">)</span><span class="o">//</span><span class="n">stride</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">out_w</span> <span class="o">=</span> <span class="p">(</span><span class="n">W</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">pad</span> <span class="o">-</span> <span class="n">filter_w</span><span class="p">)</span><span class="o">//</span><span class="n">stride</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">pad</span><span class="p">,</span> <span class="n">pad</span><span class="p">),</span> <span class="p">(</span><span class="n">pad</span><span class="p">,</span> <span class="n">pad</span><span class="p">)],</span> <span class="s1">'constant'</span><span class="p">)</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">filter_h</span><span class="p">,</span> <span class="n">filter_w</span><span class="p">,</span> <span class="n">out_h</span><span class="p">,</span> <span class="n">out_w</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">filter_h</span><span class="p">):</span>
+        <span class="n">y_max</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">stride</span><span class="o">*</span><span class="n">out_h</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">filter_w</span><span class="p">):</span>
+            <span class="n">x_max</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">stride</span><span class="o">*</span><span class="n">out_w</span>
+            <span class="n">col</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">y</span><span class="p">:</span><span class="n">y_max</span><span class="p">:</span><span class="n">stride</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span><span class="n">x_max</span><span class="p">:</span><span class="n">stride</span><span class="p">]</span>
+
+    <span class="n">col</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">N</span><span class="o">*</span><span class="n">out_h</span><span class="o">*</span><span class="n">out_w</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">col</span>
+
+
+<span class="k">def</span> <span class="nf">col2im</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">input_shape</span><span class="p">,</span> <span class="n">filter_h</span><span class="p">,</span> <span class="n">filter_w</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    col : 2차원 배열(입력 데이터)</span>
+<span class="sd">    input_shape : 원래 이미지 데이터의 형상（예：(10, 1, 28, 28)）</span>
+<span class="sd">    filter_h : 필터의 높이</span>
+<span class="sd">    filter_w : 필터의 너비</span>
+<span class="sd">    stride : 스트라이드</span>
+<span class="sd">    pad : 패딩</span>
+<span class="sd">    """</span>
+    <span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="n">input_shape</span>
+    <span class="n">out_h</span> <span class="o">=</span> <span class="p">(</span><span class="n">H</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">pad</span> <span class="o">-</span> <span class="n">filter_h</span><span class="p">)</span><span class="o">//</span><span class="n">stride</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">out_w</span> <span class="o">=</span> <span class="p">(</span><span class="n">W</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">pad</span> <span class="o">-</span> <span class="n">filter_w</span><span class="p">)</span><span class="o">//</span><span class="n">stride</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">out_h</span><span class="p">,</span> <span class="n">out_w</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">filter_h</span><span class="p">,</span> <span class="n">filter_w</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="n">img</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">H</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">pad</span> <span class="o">+</span> <span class="n">stride</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">W</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">pad</span> <span class="o">+</span> <span class="n">stride</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">filter_h</span><span class="p">):</span>
+        <span class="n">y_max</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">stride</span><span class="o">*</span><span class="n">out_h</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">filter_w</span><span class="p">):</span>
+            <span class="n">x_max</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">stride</span><span class="o">*</span><span class="n">out_w</span>
+            <span class="n">img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">y</span><span class="p">:</span><span class="n">y_max</span><span class="p">:</span><span class="n">stride</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span><span class="n">x_max</span><span class="p">:</span><span class="n">stride</span><span class="p">]</span> <span class="o">+=</span> <span class="n">col</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:]</span>
+
+    <span class="k">return</span> <span class="n">img</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">pad</span><span class="p">:</span><span class="n">H</span> <span class="o">+</span> <span class="n">pad</span><span class="p">,</span> <span class="n">pad</span><span class="p">:</span><span class="n">W</span> <span class="o">+</span> <span class="n">pad</span><span class="p">]</span>
+</code></pre></div>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(4 \times 4 \times 3\)</span> 형상의 입력에 <span class="arithmatex">\(3 \times 3 \times 3\)</span> 필터를 스트라이드 <span class="arithmatex">\(s = 1\)</span> 로 적용한다고 하자. </p>
+<p>그러면 먼저 각 채널 마다, 즉 <span class="arithmatex">\(3\)</span> 개의 필터 적용 부분공간을 하나의 벡터로 만든다. 이 작업으로 <span class="arithmatex">\(1\)</span> 개의 벡터가 생성되는 것이다.</p>
+<p>그리고 그 다음 필터 적용 부분공간을 하나의 벡터로 만들고, 또 그 다음 필터 적용 부분공간을 하나의 벡터로 만든다.</p>
+<p>최종적으로 생성된 벡터들을 다음과 같이 하나의 행렬로 만든다. </p>
+<p><img alt="" src="https://praisethemoon.org/wp-content/uploads/2019/04/im2col-3d-1024x510.png"/></p>
+<p><img alt="" src="https://praisethemoon.org/wp-content/uploads/2019/04/im2col-3d1-1024x510.png"/></p>
+<p><img alt="" src="https://praisethemoon.org/wp-content/uploads/2019/04/im2col-3d2-1024x510.png"/></p>
+<p><img alt="" src="https://praisethemoon.org/wp-content/uploads/2019/04/im2col-3d3-1024x510.png"/></p>
+<p><em><a href="https://praisethemoon.org/demystifying-the-math-and-implementation-of-convolutions-part-iii/">https://praisethemoon.org/demystifying-the-math-and-implementation-of-convolutions-part-iii/</a></em></p>
+<p>그런 다음 각 채널에 적용될 커널도 하나의 벡터로 만든다. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>커널을 여러개 두었다면 행렬이 생성되겠지만, 여기에서는 단순한 예시이므로 하나의 벡터가 생성되었다. 하지만 실제로 이렇게 하면 입력 데이터의 차원이 계속 줄어드니까 안된다.</p>
+</div>
+<p><img alt="" src="https://praisethemoon.org/wp-content/uploads/2019/04/im2col-filter-3d-1.png"/></p>
+<p><em><a href="https://praisethemoon.org/demystifying-the-math-and-implementation-of-convolutions-part-iii/">https://praisethemoon.org/demystifying-the-math-and-implementation-of-convolutions-part-iii/</a></em></p>
+<p>마지막으로 단지 행렬곱을 하면 된다. 그리고 원래의 입력 형상을 복원해준다.</p>
+<p><img alt="" src="https://praisethemoon.org/wp-content/uploads/2019/04/conv-im2col-1-filter-3d-1024x351.png"/></p>
+<p><em><a href="https://praisethemoon.org/demystifying-the-math-and-implementation-of-convolutions-part-iii/">https://praisethemoon.org/demystifying-the-math-and-implementation-of-convolutions-part-iii/</a></em></p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(227 \times 227 \times 3\)</span> 형상의 입력에 <span class="arithmatex">\(11 \times 11 \times 3\)</span> 필터가 스트라이드 <span class="arithmatex">\(s = 4\)</span> 와 패딩 <span class="arithmatex">\(p = 0\)</span> 으로 적용된다고 하자.</p>
+<p>그러면 우선 입력 데이터에 필터가 적용되는 <span class="arithmatex">\(11 \times 11 \times 3\)</span> 블록을 벡터로 쭉 늘어뜨리게 된다. 그러므로 늘어뜨린 벡터 크기는 <span class="arithmatex">\(11 \times 11 \times 3 = 363\)</span> 이 된다. 또 필터 적용 횟수는 곧 출력 데이터 형상 <span class="arithmatex">\(\bigg (\dfrac{227 - 11}{4} + 1, \dfrac{227 - 11}{4} + 1\bigg ) = (55, 55)\)</span> 에서 <span class="arithmatex">\(55 \times 55 = 3025\)</span> 와 같기 때문에 <span class="arithmatex">\(363\)</span> 사이즈 벡터가 <span class="arithmatex">\(3025\)</span> 개 생성된다. 그러므로 입력 데이터를 행렬로 바꾸면 <span class="arithmatex">\(363 \times 3025\)</span> 형상의 행렬이 생성된다.</p>
+<p>이제 필터를 행렬로 바꾸어야 한다. <span class="arithmatex">\(11 \times 11 \times 3\)</span> 필터를 <span class="arithmatex">\(96\)</span> 개를 적용한다고 하면 <span class="arithmatex">\(4\)</span> 차원 필터 <span class="arithmatex">\(96 \times 11 \times 11 \times 3\)</span> 을 적용하게 되는 것이다. 그러므로 <span class="arithmatex">\(11 \times 11 \times 3\)</span> 을 먼저 벡터로 바꾸어 <span class="arithmatex">\(363\)</span> 사이즈 벡터를 만들고 <span class="arithmatex">\(96\)</span> 개의 벡터로 행렬을 만들어서 최종적으로 <span class="arithmatex">\(96 \times 363\)</span> 의 행렬을 생성한다.</p>
+<p>이후 가중치 행렬 <span class="arithmatex">\(96 \times 363\)</span> 와 입력 데이터 행렬 <span class="arithmatex">\(363 \times 3025\)</span> 를 행렬곱을 하여 <span class="arithmatex">\(96 \times 3025\)</span> 의 행렬이 나온다. 이것이 합성곱 연산 결과와 같다. 이 행렬을 <span class="arithmatex">\(55 \times 55 \times 96\)</span> 형상으로 바꾸어 주기만 하면 된다. 이 바꾸는 연산은 <code>col2im</code> 함수로 할 수 있다.</p>
+<p>코드구현</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">im2col</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">hh</span><span class="p">,</span><span class="n">ww</span><span class="p">,</span><span class="n">stride</span><span class="p">):</span>
+    <span class="sd">"""</span>
+<span class="sd">    Args:</span>
+<span class="sd">    x: image matrix to be translated into columns, (C,H,W)</span>
+<span class="sd">    hh: filter height</span>
+<span class="sd">    ww: filter width</span>
+<span class="sd">    stride: stride</span>
+<span class="sd">    Returns:</span>
+<span class="sd">    col: (new_h*new_w,hh*ww*C) matrix, each column is a cube that will convolve with a filter</span>
+<span class="sd">            new_h = (H-hh) // stride + 1, new_w = (W-ww) // stride + 1</span>
+<span class="sd">    """</span>
+
+    <span class="n">c</span><span class="p">,</span><span class="n">h</span><span class="p">,</span><span class="n">w</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">new_h</span> <span class="o">=</span> <span class="p">(</span><span class="n">h</span><span class="o">-</span><span class="n">hh</span><span class="p">)</span> <span class="o">//</span> <span class="n">stride</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">new_w</span> <span class="o">=</span> <span class="p">(</span><span class="n">w</span><span class="o">-</span><span class="n">ww</span><span class="p">)</span> <span class="o">//</span> <span class="n">stride</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">new_h</span><span class="o">*</span><span class="n">new_w</span><span class="p">,</span><span class="n">c</span><span class="o">*</span><span class="n">hh</span><span class="o">*</span><span class="n">ww</span><span class="p">])</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">new_h</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">new_w</span><span class="p">):</span>
+            <span class="n">patch</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="o">...</span><span class="p">,</span><span class="n">i</span><span class="o">*</span><span class="n">stride</span><span class="p">:</span><span class="n">i</span><span class="o">*</span><span class="n">stride</span><span class="o">+</span><span class="n">hh</span><span class="p">,</span><span class="n">j</span><span class="o">*</span><span class="n">stride</span><span class="p">:</span><span class="n">j</span><span class="o">*</span><span class="n">stride</span><span class="o">+</span><span class="n">ww</span><span class="p">]</span>
+            <span class="n">col</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">new_w</span><span class="o">+</span><span class="n">j</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">patch</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">col</span>
+</code></pre></div>
+</li>
+<li>
+<p>즉, <code>im2col</code> 연산은 다음과 같이 진행된다.</p>
+<p><img alt="" src="https://gblobscdn.gitbook.com/assets%2F-LvMRntv-nKvtl7WOpCz%2F-LvMRp9FltcwEeVxPYFs%2F-LvMRrx8aKg05MeAZ3ds%2FConv_Graph_Im2col.png?alt=media"/></p>
+<p><em><a href="https://leonardoaraujosantos.gitbook.io/artificial-inteligence/machine_learning/deep_learning/convolution_layer/making_faster">https://leonardoaraujosantos.gitbook.io/artificial-inteligence/machine_learning/deep_learning/convolution_layer/making_faster</a></em></p>
+</li>
+</ul>
+<a href="#d694a9330"><div class="admonition tldr" id="d694a9330">
+<p>합성곱 계층 구현 : <code>im2col</code> 을 사용하면 합성곱 계층을 간단하게 구현할 수 있다. </p>
+</div></a>
+<ul>
+<li>
+<p>합성곱 순전파 구현</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Convolution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">W</span> <span class="o">=</span> <span class="n">W</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">=</span> <span class="n">stride</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pad</span> <span class="o">=</span> <span class="n">pad</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">FN</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">FH</span><span class="p">,</span> <span class="n">FW</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">out_h</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">int</span><span class="p">((</span><span class="n">H</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">pad</span> <span class="o">-</span> <span class="n">FH</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">)</span>
+        <span class="n">out_w</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="nb">int</span><span class="p">((</span><span class="n">W</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">pad</span> <span class="o">-</span> <span class="n">FW</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">)</span>
+
+<span class="hll">        <span class="n">col</span> <span class="o">=</span> <span class="n">im2col</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">FH</span><span class="p">,</span> <span class="n">FW</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pad</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">col_W</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">FN</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</span><span class="hll">        <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">col_W</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span>
+</span><span class="hll">        <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">out_h</span><span class="p">,</span> <span class="n">out_w</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">col</span> <span class="o">=</span> <span class="n">col</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">col_W</span> <span class="o">=</span> <span class="n">col_W</span>
+
+        <span class="k">return</span> <span class="n">out</span>
+</code></pre></div>
+</td></tr></table>
+<p>결국 14~17 이 합성곱 계층의 핵심이다. 4차원 데이터를 2차원 데이터로 평탄화 시킨 후 단지 행렬곱으로 합성곱을 효율적으로 수행한 후 다시 데이터를 원래 형상으로 바꾸어 준다. 마지막으로 <code>transpose</code> 함수로 축 순서를 변경하여 <code>(N, H, W, C)</code> 형상을 <code>(N, C, H, W)</code> 로 되돌려 준다.</p>
+</li>
+<li>
+<p>합성곱 역전파 구현</p>
+<p>CNN 순전파가 행렬곱으로 이루어진 탓에 Affine 계층과 순전파가 비슷하고 역전파도 비슷하다. 단, <code>im2col</code> 연산을 역으로 처리해주어야 한다. 이는 <code>col2im</code> 함수를 이용하면 된다. <code>col2im</code> 을 사용한다는 점만 제외하면 Affine 계층과 역전파가 똑같다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Convolution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">W</span> <span class="o">=</span> <span class="n">W</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">=</span> <span class="n">stride</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pad</span> <span class="o">=</span> <span class="n">pad</span>
+
+        <span class="c1"># 중간 데이터（backward 시 사용）</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>   
+        <span class="bp">self</span><span class="o">.</span><span class="n">col</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">col_W</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="c1"># 가중치와 편향 매개변수의 기울기</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dW</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="p">):</span>
+        <span class="n">FN</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">FH</span><span class="p">,</span> <span class="n">FW</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">dout</span> <span class="o">=</span> <span class="n">dout</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">FN</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dout</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dW</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">col</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dW</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dW</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">FN</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">FH</span><span class="p">,</span> <span class="n">FW</span><span class="p">)</span>
+
+        <span class="n">dcol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">col_W</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">col2im</span><span class="p">(</span><span class="n">dcol</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">FH</span><span class="p">,</span> <span class="n">FW</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pad</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">dx</span>
+</code></pre></div>
+</li>
+</ul>
+<a href="#ef980d7e1"><div class="admonition tldr" id="ef980d7e1">
+<p>풀링 계층 구현 : <code>im2col</code> 을 사용해 입력 데이터를 전개하는 식으로 구현하면 된다.</p>
+</div></a>
+<ul>
+<li>
+<p>입력 데이터를 다음과 같이 전개하면 행렬에서 행별 최댓값을 구할 수 있다.</p>
+<p><img alt="" src="https://images4.programmersought.com/849/18/180c55f02633bec41d7daa3c2a20ba81.png"/></p>
+<p>풀링 계층은 위와 같이 채널을 독립적으로 <code>im2col</code> 을 전개한다. 그리고 다음과 같이 형상을 다시 맞춰준다. </p>
+<p><img alt="" src="https://media.vlpt.us/post-images/dscwinterstudy/943b08c0-4199-11ea-9479-ad3ff669a3cd/fig-7-22.png"/></p>
+</li>
+<li>
+<p>코드 구현 </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Pooling</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pool_h</span><span class="p">,</span> <span class="n">pool_w</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pool_h</span> <span class="o">=</span> <span class="n">pool_h</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pool_w</span> <span class="o">=</span> <span class="n">pool_w</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stride</span> <span class="o">=</span> <span class="n">stride</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pad</span> <span class="o">=</span> <span class="n">pad</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arg_max</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">N</span><span class="p">,</span> <span class="n">C</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">W</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">out_h</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">H</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_h</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">)</span>
+        <span class="n">out_w</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">W</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_w</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">)</span>
+
+<span class="hll">        <span class="n">col</span> <span class="o">=</span> <span class="n">im2col</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_w</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pad</span><span class="p">)</span>
+</span><span class="hll">        <span class="n">col</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_h</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">pool_w</span><span class="p">)</span>
+</span>
+        <span class="n">arg_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">out_h</span><span class="p">,</span> <span class="n">out_w</span><span class="p">,</span> <span class="n">C</span><span class="p">)</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">arg_max</span> <span class="o">=</span> <span class="n">arg_max</span>
+
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="p">):</span>
+        <span class="n">dout</span> <span class="o">=</span> <span class="n">dout</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">pool_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_h</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_w</span>
+        <span class="n">dmax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">dout</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="n">pool_size</span><span class="p">))</span>
+        <span class="n">dmax</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">arg_max</span><span class="o">.</span><span class="n">size</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">arg_max</span><span class="o">.</span><span class="n">flatten</span><span class="p">()]</span> <span class="o">=</span> <span class="n">dout</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+        <span class="n">dmax</span> <span class="o">=</span> <span class="n">dmax</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">dout</span><span class="o">.</span><span class="n">shape</span> <span class="o">+</span> <span class="p">(</span><span class="n">pool_size</span><span class="p">,))</span> 
+
+        <span class="n">dcol</span> <span class="o">=</span> <span class="n">dmax</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">dmax</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">dmax</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">dmax</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">col2im</span><span class="p">(</span><span class="n">dcol</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_h</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_w</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stride</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pad</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">dx</span>
+</code></pre></div>
+</td></tr></table>
+<p>풀링 계층의 구현은 위에서 강조한 코드가 핵심이다. 행별 맥스 풀링을 구하고 형상을 원래대로 되돌려 준다.</p>
+</li>
+<li>
+<p>역전파</p>
+<p>풀링 계층의 역전파는 ReLU 계층을 구현할 때 사용한 max 의 역전파와 비슷하다.</p>
+</li>
+</ul>
+<a href="#9c9c17c3d"><div class="admonition tldr" id="9c9c17c3d">
+<p>CNN 구현 : CNN 구현은 보통 [Conv(합성곱)-ReLU-Pooling] - [Conv(합성곱)-ReLU-Pooling] - ... - [Conv(합성곱)-ReLU-Pooling] - [Fc(완전연결 Affine)-ReLu] - [Fc - Softmax] 로 이루어진다.</p>
+</div></a>
+<ul>
+<li>
+<p>Simple CNN 코드 구현 </p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SimpleConvNet</span><span class="p">:</span>
+    <span class="sd">"""단순한 합성곱 신경망</span>
+
+<span class="sd">    conv - relu - pool - affine - relu - affine - softmax</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    input_size : 입력 크기（MNIST의 경우엔 784）</span>
+<span class="sd">    hidden_size_list : 각 은닉층의 뉴런 수를 담은 리스트（e.g. [100, 100, 100]）</span>
+<span class="sd">    output_size : 출력 크기（MNIST의 경우엔 10）</span>
+<span class="sd">    activation : 활성화 함수 - 'relu' 혹은 'sigmoid'</span>
+<span class="sd">    weight_init_std : 가중치의 표준편차 지정（e.g. 0.01）</span>
+<span class="sd">        'relu'나 'he'로 지정하면 'He 초깃값'으로 설정</span>
+<span class="sd">        'sigmoid'나 'xavier'로 지정하면 'Xavier 초깃값'으로 설정</span>
+<span class="sd">    """</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_dim</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">),</span> 
+                <span class="n">conv_param</span><span class="o">=</span><span class="p">{</span><span class="s1">'filter_num'</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span> <span class="s1">'filter_size'</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">'pad'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'stride'</span><span class="p">:</span><span class="mi">1</span><span class="p">},</span>
+                <span class="n">hidden_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">output_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">weight_init_std</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+        <span class="n">filter_num</span> <span class="o">=</span> <span class="n">conv_param</span><span class="p">[</span><span class="s1">'filter_num'</span><span class="p">]</span>
+        <span class="n">filter_size</span> <span class="o">=</span> <span class="n">conv_param</span><span class="p">[</span><span class="s1">'filter_size'</span><span class="p">]</span>
+        <span class="n">filter_pad</span> <span class="o">=</span> <span class="n">conv_param</span><span class="p">[</span><span class="s1">'pad'</span><span class="p">]</span>
+        <span class="n">filter_stride</span> <span class="o">=</span> <span class="n">conv_param</span><span class="p">[</span><span class="s1">'stride'</span><span class="p">]</span>
+        <span class="n">input_size</span> <span class="o">=</span> <span class="n">input_dim</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">conv_output_size</span> <span class="o">=</span> <span class="p">(</span><span class="n">input_size</span> <span class="o">-</span> <span class="n">filter_size</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">filter_pad</span><span class="p">)</span> <span class="o">/</span> <span class="n">filter_stride</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">pool_output_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">filter_num</span> <span class="o">*</span> <span class="p">(</span><span class="n">conv_output_size</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">conv_output_size</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+</code></pre></div>
+</td></tr></table>
+<p>합성곱 계층의 하이퍼파라미터를 받아서 저장하고 합성곱 계층의 출력 크기를 계산한다.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>        <span class="c1"># 가중치 초기화</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">weight_init_std</span> <span class="o">*</span> \
+                            <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">filter_num</span><span class="p">,</span> <span class="n">input_dim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">filter_size</span><span class="p">,</span> <span class="n">filter_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">filter_num</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">weight_init_std</span> <span class="o">*</span> \
+                            <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">pool_output_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W3'</span><span class="p">]</span> <span class="o">=</span> <span class="n">weight_init_std</span> <span class="o">*</span> \
+                            <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b3'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">output_size</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>학습에 필요한 매개변수는 첫번째 층의 합성곱 계층 (<code>self.params['W1'], self.params['b1']</code>) 과 나머지 두 완전연결(Fc, Affine) 계층의 가중치와 편향(<code>self.params['W2'], self.params['b2'], self.params['W3'], self.params['b3']</code>)이다.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>        <span class="c1"># 계층 생성</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Conv1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Convolution</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">],</span>
+                                        <span class="n">conv_param</span><span class="p">[</span><span class="s1">'stride'</span><span class="p">],</span> <span class="n">conv_param</span><span class="p">[</span><span class="s1">'pad'</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Relu1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Relu</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Pool1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Pooling</span><span class="p">(</span><span class="n">pool_h</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">pool_w</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Affine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Relu2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Relu</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Affine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W3'</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b3'</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">last_layer</span> <span class="o">=</span> <span class="n">SoftmaxWithLoss</span><span class="p">()</span>
+</code></pre></div>
+</td></tr></table>
+<p>정의된 하이퍼파라미터와 가중치를 통해 계층을 Simple Convolution Network 를 생성한다.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span>
+
+    <span class="k">def</span> <span class="nf">loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_layer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>추론을 수행하는 <code>predict</code> 와 손실값을 구하는 <code>loss</code> 를 구현한다. <code>x</code> 로 입력 데이터를 받고 <code>t</code> 로 정답 레이블을 전달 받는다. <code>loss</code> 가 <code>predict</code> 를 내부적으로 호출한다.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">gradient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="c1"># forward</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+
+        <span class="c1"># backward</span>
+        <span class="n">dout</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">dout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_layer</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">dout</span><span class="p">)</span>
+
+        <span class="n">layers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">:</span>
+            <span class="n">dout</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">dout</span><span class="p">)</span>
+
+        <span class="c1"># 결과 저장</span>
+        <span class="n">grads</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">],</span> <span class="n">grads</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Conv1'</span><span class="p">]</span><span class="o">.</span><span class="n">dW</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Conv1'</span><span class="p">]</span><span class="o">.</span><span class="n">db</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">],</span> <span class="n">grads</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine1'</span><span class="p">]</span><span class="o">.</span><span class="n">dW</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine1'</span><span class="p">]</span><span class="o">.</span><span class="n">db</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'W3'</span><span class="p">],</span> <span class="n">grads</span><span class="p">[</span><span class="s1">'b3'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine2'</span><span class="p">]</span><span class="o">.</span><span class="n">dW</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine2'</span><span class="p">]</span><span class="o">.</span><span class="n">db</span>
+
+        <span class="k">return</span> <span class="n">grads</span>
+</code></pre></div>
+</td></tr></table>
+<p>오차역전파법으로 기울기를 구하는 메소드 <code>gradient</code> 를 구현한다. <code>x</code> 로 입력 데이터를 받고 <code>t</code> 로 정답 레이블을 받는다. 이 메소드가 <code>loss</code> 메소드를 내부적으로 호출하고 있다.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>    <span class="k">def</span> <span class="nf">accuracy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">acc</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">batch_size</span><span class="p">)):</span>
+            <span class="n">tx</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">batch_size</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">batch_size</span><span class="p">]</span>
+            <span class="n">tt</span> <span class="o">=</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="n">batch_size</span><span class="p">:(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">batch_size</span><span class="p">]</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">tx</span><span class="p">)</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">acc</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="n">tt</span><span class="p">)</span> 
+
+        <span class="k">return</span> <span class="n">acc</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">numerical_gradient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="sd">"""기울기를 구한다（수치미분）.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        x : 입력 데이터</span>
+<span class="sd">        t : 정답 레이블</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        각 층의 기울기를 담은 사전(dictionary) 변수</span>
+<span class="sd">            grads['W1']、grads['W2']、... 각 층의 가중치</span>
+<span class="sd">            grads['b1']、grads['b2']、... 각 층의 편향</span>
+<span class="sd">        """</span>
+        <span class="n">loss_w</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">w</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+
+        <span class="n">grads</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+            <span class="n">grads</span><span class="p">[</span><span class="s1">'W'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)]</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">loss_w</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)])</span>
+            <span class="n">grads</span><span class="p">[</span><span class="s1">'b'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)]</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">loss_w</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">idx</span><span class="p">)])</span>
+
+        <span class="k">return</span> <span class="n">grads</span>
+
+    <span class="k">def</span> <span class="nf">save_params</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"params.pkl"</span><span class="p">):</span>
+        <span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">'wb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_params</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="s2">"params.pkl"</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">params</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s1">'Conv1'</span><span class="p">,</span> <span class="s1">'Affine1'</span><span class="p">,</span> <span class="s1">'Affine2'</span><span class="p">]):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">W</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
+</code></pre></div>
+</td></tr></table>
+<p>편의 함수를 구현한다. <code>accuracy</code> 메소드로 모델의 정확도를 측정하고 <code>numerical_gradient</code> 로 기울기가 잘 구해지는지 비교해볼 수 있다. <code>save_params</code> 과 <code>load_params</code> 로 긴 학습시간을 반복하지 않도록 가중치를 저장하고 불러올 수 있다.</p>
+</li>
+<li>
+<p>이 Simple Convolution Network 로 MNIST 를 학습하면 훈련데이터의 정확도가 99.82% 가 나오고 시험데이터의 정확도가 98.96% 가 나온다. 층을 더욱 깊게 만들면 정확도를 99% 로 만들 수 있다.</p>
+</li>
+</ul>
+<a href="#764c9a2a1"><div class="admonition tldr" id="764c9a2a1">
+<p>CNN 시각화 : CNN 이 실제로 이미지 데이터에서 무엇을 학습하는지 알 수 있게 해주는 기법이다.</p>
+</div></a>
+<ul>
+<li>
+<p>위에서 구현한 Simple Convolution Network 의 첫번째 계층, 즉 합성곱 계층의 가중치가 무엇을 학습하는지 알아보자. 가중치 형상은 <code>(1,5,5)</code> 에 <code>30</code> 개 필터라서 형상이 <code>(30, 1, 5, 5)</code> 였다.</p>
+<p><img alt="" src="https://media.vlpt.us/post-images/dscwinterstudy/b0d98ab0-4199-11ea-bed1-737062fffe57/fig-7-24.png"/></p>
+<p>학습 전에는 왼쪽 그림과 같이 가중치가 불규칙하게 설정되어 있지만 학습 후에는 오른쪽 그림과 같이 규칙성 있는  이미지가 되었다. 가중치의 숫자가 <code>0</code> 에 가까울수록 검은색으로 <code>255</code> 에 가까울수록 흰색으로 표현했다.</p>
+<p>왼쪽 절반이 흰색이고 오른쪽 절반이 검은색인 필터는 세로 방향의 테두리에 반응하고</p>
+<p>아래쪽 절반이 흰색이고 위쪽 절반이 검은색인 필터는 가로 방향의 테두리에 반응한다.</p>
+<p><strong>구체화 필요</strong></p>
+</li>
+<li>
+<p>이렇게 1층 합성곱 계층에서는 엣지(색상이 바뀌는 경계선)와 블롭(국소적으로 덩어리진 영역) 등의 저수준 정보가 추출된다.</p>
+<p>그런데 CNN 층을 깊게 만들면 추출되는 정보들이 더 고차원적으로 추상화된다는 연구결과가 있다.</p>
+<p>AlexNet 이라는 8층 CNN 을 구성할 경우 1층에서 에지와 블롭, 3층에서 텍스쳐, 5층에서 사물의 일부, 마지막 완전연결 층에서는 사물의 클래스에 뉴런이 반응했다.</p>
+<p>즉, 층이 깊어지면 뉴런이 반응하는 대상이 단순한 모양(저차원적 대상) 에서 추상적인 정보로 변화해간다. 다시 말해 사물의 의미를 이해하도록 변화하는 것이다.</p>
+</li>
+</ul>
+<h2 id="cnn_1">여러 CNN<a class="headerlink" href="#cnn_1" title="Permanent link">¶</a></h2>
+<p>CNN 네트워크를 어떻게 구성해야 할지에 대한 제안은 다양하다.</p>
+<a href="#8cdc97929"><div class="admonition tldr" id="8cdc97929">
+<p>LeNet : 1998년에 제안된 손글씨 인식 CNN 네트워크이다.</p>
+</div></a>
+<ul>
+<li>
+<p>합성곱 계층과 풀링 계층(원소를 줄이기만 하는 서브샘플링 계층)을 반복하다가 마지막에 완전연결 계층을 거치면서 결과를 출력한다.</p>
+</li>
+<li>
+<p>LeNet 은 현재의 CNN 과 차이가 있는데, 첫번째 차이는 Sigmoid 활성화 함수를 사용한다는 것이다. 현재는 주로 ReLU 를 사용한다.</p>
+<p>또 LeNet 은 서브샘플리을 하여 중간 데이터를 줄이지만, 현재는 맥스 풀링이 주류이다.</p>
+</li>
+</ul>
+<a href="#9bca17b01"><div class="admonition tldr" id="9bca17b01">
+<p>AlexNet : 2012년에 제안된 CNN 네트워크이다.</p>
+</div></a>
+<ul>
+<li>
+<p>LeNet 과 크게 다르지는 않다. AlexNet 도 합성곱 계층과 풀링 계층을 거듭하며 마지막에 완전연결 게층을 거쳐 결과를 출력한다.</p>
+</li>
+<li>
+<p>다만 차이점은 활성화 함수로 ReLU 를 사용하고,</p>
+<p>LRN(Local Response Normalization) 이라는 국소적 정규화 계층을 사용하며,</p>
+<p>드롭아웃을 사용한다.</p>
+</li>
+<li>
+<p>비록 20세기에 지안된 LeNet 과 큰 차이가 있지는 않지만 AlexNet 으로 인하여 딥러닝 열풍이 시작되었다.</p>
+</li>
+</ul>
+<h2 id="_1">정확도 향상 팁<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#613250b6b"><div class="admonition tldr" id="613250b6b">
+<p>What is the class of this image? : 다양한 데이터셋을 대상으로 논문 등에서 발표한 기법들의 정확도 순위를 보여주는 사이트이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 사이트의 상위 기법들을 참고하면 정확도를 높일 수 있는 기술이나 힌트를 얻을 수 있다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>앙상블 학습, 학습률 감소, 데이터 확장 등이 정확도 향상에 도움이 된다.</p>
+</div>
+</li>
+</ul>
+<a href="#77f852003"><div class="admonition tldr" id="77f852003">
+<p>데이터 확장(data augmentation) : 입력 이미지를 인위적으로 확장한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이미지를 회전하거나 세로로 이동하는 등 미세한 변화를 주어 이미지 개수를 늘리는 것이다. 이는 데이터가 몇 개 없을 때 매우 효과적이다.</p>
+</li>
+<li>
+<p>가령 이미지 일부를 잘라내는 <strong>crop</strong> 이나 좌우를 뒤집는 <strong>flip</strong> 등이 적용된다.</p>
+</li>
+</ul>
+<a href="#ef4e894d8"><div class="admonition tldr" id="ef4e894d8">
+<p>딥러닝 : 층을 깊게 한 신경망이다.</p>
+</div></a>
+<ul>
+<li>
+<p>층을 깊게 하는 이유에 대한 논리적이고 수학적인 설명과 이론적 근거는 솔직히 아직 부족하다. 그러나 연구와 실험적으로 설명할 수 있는 것들은 몇 가지 있다.</p>
+<ul>
+<li>
+<p>ILSVRC 로 대표되는 대규모 이미지 인식 대회의 상위 기법들이 대부분 딥러닝이다. 그리고 그 경향은 층을 더 깊게 만드는 방향으로 가고 있다. 즉, 층의 깊이에 비례하여 정확도도 좋아진다는 추론을 할 수 있다.</p>
+</li>
+<li>
+<p>층을 깊게하면 신경망 매개변수가 줄어든다.</p>
+<p>층을 깊게한 신경망은 깊지 않은 경우보다 적은 매개변수로 같거나 뛰어난 표현력을 달성할 수 있다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>가령 CNN 에서 <span class="arithmatex">\(5 \times 5\)</span> 필터를 사용하는 1개 층을 사용할 경우 <span class="arithmatex">\(5 \times 5\)</span> 영역을 <span class="arithmatex">\(1 \times 1\)</span> 출력 영역으로 계산하는데 <span class="arithmatex">\(25\)</span> 개 매개변수가 필요하다. 그러나 <span class="arithmatex">\(3 \times 3\)</span> 필터를 사용하는 2개 층을 사용할 경우 똑같은 <span class="arithmatex">\(5 \times 5\)</span> 영역을 <span class="arithmatex">\(2\)</span> 개의 층을 거쳐 <span class="arithmatex">\(1 \times 1\)</span> 출력 영역으로 계산하지만, <span class="arithmatex">\(18\)</span> 개의 매개변수가 필요하다.</p>
+<p>마찬가지로 <span class="arithmatex">\(3 \times 3\)</span> 합성곱 연산을 <span class="arithmatex">\(3\)</span> 회 반복하면 매개변수가 <span class="arithmatex">\(27\)</span> 개지만 같은 크기의 영역을 <span class="arithmatex">\(1\)</span> 회의 합성곱 연산으로 보기 위해서는 <span class="arithmatex">\(7 \times 7\)</span> 필터, 즉 매개변수 <span class="arithmatex">\(49\)</span> 개가 필요하다.</p>
+</div>
+<p>이로써 적은 매개변수로 넓은 수용 영역(receptive field, 뉴런에 변화를 일으키는 국소 영역) 를 소화할 수 있다.</p>
+<p>또한 층 사이에 ReLU 활성화 함수를 끼워넣어 신경망 표현력을 개선시킬 수 있다. 왜냐하면 활성화 함수가 신경망에 비선형 힘을 가하고, 비선형 함수가 겹치면서 더 복잡한 것도 표현할 수 있게 되기 때문이다. </p>
+</li>
+<li>
+<p>층을 깊게하면 학습 효율성도 높아진다. CNN 을 시각적으로 표현했을 때 층이 깊어질 수록 더 추상화되고 고차원적인 표현력이 이루어진다는 것을 알아보았기 때문이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#214519ffd"><div class="admonition tldr" id="214519ffd">
+<p>ILSVRC(ImageNet Large Scale Visual Recongintion Challenge) : 딥러닝의 열풍을 일으킨 이미지 인식 대회이다.</p>
+</div></a>
+<ul>
+<li>
+<p>2012년 AlexNet 이 압도적인 성적으로 우승하면서 딥러닝이 트렌드가 되었다.</p>
+</li>
+<li>
+<p>이 대회에서는 ImageNet 이라는 100만장이 넘는 이미지 데이터셋을 사용하는데 이 거대한 데이터셋으로 신경망의 성능을 겨룬다.</p>
+</li>
+<li>
+<p>2010 년 NEC America, 2011 년 Xerox, 2012년 AlexNet, 2013년 Clarifi, 2014년 VGG, 2015년 GoogLeNet, 2015년 ResNet 이 우승하였다.</p>
+<p>특히 ResNet 은 오류율을 3.5% 까지 낮췄는데 이는 인간의 인식 능력을 넘어선 것이다.</p>
+</li>
+</ul>
+<a href="#295e4685f"><div class="admonition tldr" id="295e4685f">
+<p>VGG : 합성곱 계층과 풀링 계층으로 구성되는 기본적인 CNN 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>비중이 있는 층(합성곱 계층, 완전연결 계층)을 16층 혹은 19층으로 심화한 것이 특징이다. 각각 VGG16, VGG19 로 구분한다.</p>
+</li>
+<li>
+<p>VGG 는 <span class="arithmatex">\(3 \times 3\)</span> 의 작은 필터로 합성곱 계층을 쌓는다. </p>
+</li>
+<li>
+<p>VGG 는 2014 년 대회에서 2위에 올랐고 GoogLeNet 이 1위를 했지만 구성하기가 쉬워 널리 사용된다.</p>
+<p><img alt="" src="https://neurohive.io/wp-content/uploads/2018/11/vgg16-1-e1542731207177.png"/></p>
+</li>
+</ul>
+<a href="#d4506634d"><div class="admonition tldr" id="d4506634d">
+<p>GoogLeNet : 세로 방향의 층을 깊게할 뿐 아니라 가로방향 층도 깊게한 CNN 신경망이다.</p>
+</div></a>
+<ul>
+<li>
+<p>GoogLeNet 은 가로 방향에 폭이 있다. 이것을 인셉션 구조라고 한다.</p>
+<p><img alt="" src="https://www.researchgate.net/publication/327249814/figure/fig4/AS:754608565678080@1556924110809/Image-of-GoogLeNet-architecture-17.jpg"/></p>
+</li>
+<li>
+<p>입센션 구조는 앞 계층의 입력을 받아서 <span class="arithmatex">\(1 \times 1\)</span> 합성곱, <span class="arithmatex">\(3 \times 3\)</span> 합성곱, <span class="arithmatex">\(5 \times 5\)</span> 합성곱, <span class="arithmatex">\(3 \times 3\)</span> 맥스 풀링으로 가로 층을 확장한다.</p>
+<p><img alt="" src="https://pytorch.org/assets/images/googlenet1.png"/></p>
+<p>인셉션 구조는 다음과 같이 더욱 확장 및 응용될 수 있다. </p>
+<p><img alt="" src="https://qph.fs.quoracdn.net/main-qimg-729049bf3f099a675d80c09eaf897e21"/></p>
+<p>인셉션 구조는 위와 같이 크기가 다른 필터와 풀링을 여러 개 적용하고 그 결과를 결합한다. 이 인셉션 구조를 하나의 빌딩 블록(구성요소) 로 사용하는 것이 GoogLeNet 의 특징이다.</p>
+<p>또 <span class="arithmatex">\(1 \times 1\)</span> 크기 필터를 사용하는 합성곱 계층을 사용하기도 하는데 이는 채널 쪽 크기를 줄이는 것으로 매개변수 제거와 고속 처리에 기여한다. (Going Deeper With Convolutions(2015))</p>
+</li>
+</ul>
+<a href="#41d91494c"><div class="admonition tldr" id="41d91494c">
+<p>ResNet : MS 에서 개발한 CNN 네트워크이다.</p>
+</div></a>
+<ul>
+<li>
+<p>층을 깊게 할 수 있는 특별한 장치를 도입한 것이 특징이다. 층을 깊게하면 성능이 향상되기는 하지만 층이 너무 깊으면 학습이 잘 되지 않고 오히려 성능이 떨어질 때도 있다.</p>
+<p>이를 해결하기 위해 ResNet 은 스킵 연결(skip connection) 을 도입했다. 이 구조가 층의 깊이에 비례해 성능을 향상시킬 수 있게 하는 장치이다. 물론 그래도 여전히 층을 깊게 하는 것에 한계는 존재한다.</p>
+</li>
+<li>
+<p>스킵 연결이란 입력 데이터를 합성곱 계층을 건너뛰어 출력에 바로 더하는 구조이다.</p>
+<p><img alt="" src="https://miro.medium.com/max/1140/1*D0F3UitQ2l5Q0Ak-tjEdJg.png"/></p>
+<p>weight layer 는 합성곱 계층을 뜻한다. 위 그림은 입력 <span class="arithmatex">\(x\)</span> 를 연속한 두 합성곱 계층을 건너뛰어 출력에 바로 연결한다. 단축 연결이 없었다면 출력이 <span class="arithmatex">\(F(x)\)</span> 가 되지만, 스킵 연결로 인하여 출력이 <span class="arithmatex">\(F(x) + x\)</span> 가 된다.</p>
+<p>이 스킵 연결이 층이 깊어져도 학습을 효율적으로 할 수 있게 해준다. 왜냐하면 역전파 때 스킵 연결이 신호 감쇠를 막아주기 때문이다. 스킵 연결은 입력 데이터를 그대로 흘려주는데 역전파 때도 상류의 기울기를 그대로 하류로 내보내준다. 그래서 기울기가 과도하게 작아지거나 커지지 않고 의미있는 기울기가 전달될 수 있다.</p>
+<p>즉, 스킵 연결이 실제로 하는 일이란 층을 깊게 할수록 기울기가 작아지는 소실 문제를 완화시켜주는 것이다.</p>
+</li>
+<li>
+<p>ResNet 은 다음과 같이 VGG 를 기반으로 스킵 연결을 도입하여 층을 깊게 만들 수 있었다.</p>
+<p><img alt="" src="https://kharshit.github.io/img/resnet_50.png"/></p>
+<p>ResNet 은 위와 같이 합성곱 계층을 2개 층마나 스킵하면서 층을 깊게 만든다.</p>
+<p>실험결과 150층 이상으로 해도 정확도가 올랐다. 그리고 ILSVRC 대회에서 오류율이 3.5% 라는 경이로운 성과를 낼 수 있었다.</p>
+</li>
+</ul>
+<a href="#f3dff935b"><div class="admonition tldr" id="f3dff935b">
+<p>전이 학습(transfer learning) : 거대한 데이터셋을 학습한 가중치를 다른 신경망에 복사하여 그 상태에서 재학습을 수행하는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>가령 VGG 와 구성이 같은 신경망을 준비하고 미리 학습된 가중치를 초깃값으로 설정한 후, 새로운 데이터셋을 대상으로 재학습(fine tuning) 을 수행하는 것이다.</p>
+</li>
+<li>
+<p>전이 학습은 데이터셋이 적을 때 유용하다.</p>
+</li>
+</ul>
+<h2 id="_2">딥러닝 고속화<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<a href="#7301ab917"><div class="admonition tldr" id="7301ab917">
+<p>GPU 고속화 : GPU 병렬 수치 연산으로 순전파를 효율적으로 처리하는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>딥러닝은 대량의 단일 곱셈-누산(혹은 큰 행렬곱)을 처리하는데 이는 GPU 의 특기다.</p>
+</li>
+<li>
+<p>CPU 로 40일 걸리는 연산을 GPU 로 6일만에 처리할 수 있다.</p>
+</li>
+<li>
+<p>합성곱 계층의 im2col 연산은 큰 행렬의 곱으로 변환할 수 있는데 이는 GPU 가 최적으로 수행할 수 있다. GPU 는 작은 단위 연산보다 큰 덩어리의 연산에 유리하기 때문이다.</p>
+<p>im2col 의 큰 행렬곱을 GPU 가 한 번에 처리할 수 있다.</p>
+</li>
+</ul>
+<a href="#cb84ddfe3"><div class="admonition tldr" id="cb84ddfe3">
+<p>분산학습 : 딥러닝 학습을 다수의 GPU 로 분산하여 처리하는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>GPU 로 딥러닝 처리를 고속화할 수 있지만, 여러 GPU 로 딥러닝 시간을 더욱 단축할 수 있다.</p>
+</li>
+<li>
+<p>구글의 TensorFlow 나 MS 의 CNTK 가 분산학습에 중점을 두고 개발된 딥러닝 프레임워크이다.</p>
+</li>
+<li>
+<p>7일짜리 연산을 GPU 100 개를 사용하여 3시간만에 끝낼 수 있다.</p>
+</li>
+<li>
+<p>분산 학습 관련 기술은 TensorFlow 기술 논문 등을 참고할 수 이싿. </p>
+<ul>
+<li>논문 : TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems</li>
+</ul>
+</li>
+</ul>
+<a href="#44437f441"><div class="admonition tldr" id="44437f441">
+<p>메모리 절약 : 계산 능력 외에도 메모리 용량과 버스 대역폭 등이 딥러닝 고속화에 병목이 될 수 있기 때문에 메모리 용량을 최적화 시키는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>딥러닝은 대량의 가중치 매개변수를 저장해야 한다. 64비트나 32비트 부동소수점으로 실수를 표현할 수 있는데, 비트 수를 높일수록 정확도가 늘어나지만 그만큼 메모리 사용량이 늘고 버스대역폭에 부담이 간다.</p>
+<p>다행히 딥러닝은 높은 수치 정밀도를 요구하지 않는다. 왜냐하면 신경망은 견고성이라는 성질을 갖기 때문이다. 이는 입력에 노이즈가 좀 섞여도 출력이 잘 달라지지 않는다는 특징이다.</p>
+</li>
+<li>
+<p>컴퓨터는 실수를 32비트 단정밀도(single-precision) 와 64비트 배정밀도(double-precision) 등으로 표현하지만, 지금까지의 실험으로는 16비트 반정밀도(half-precision) 만 사용해도 학습에 문제가 없다고 알려져 있다. (논문: Deep learning with limited numerical precision)</p>
+</li>
+<li>
+<p>2016년부터 엔비디아의 GPU 인 파스칼 아키텍쳐부터 16비트 반정밀도를 지원하기 시작했다. 맥스웰 아키텍쳐도 반정밀도 스토리지를 지원하고는 있었지만 연산 자체를 16비트로 수행하지는 않았다. 그러나 파스칼 아키텍쳐가 연산도 16비트로 하기 시작하자 성능이 2배 정도 빨라졌다.</p>
+</li>
+<li>
+<p>파이썬은 기본적으로 64비트 배정밀도 부동소수점을 사용하지만, NumPy 에서 16비트 반정밀도 부동소수점으로 딥러닝을 하면 정확도가 떨어지지 않는대신 속도는 올라간다는 것을 알 수 있다.</p>
+</li>
+<li>
+<p>최근에는 가중치와 중간 데이터를 1비트로 표현하는 <strong>Binarized Neural Networks</strong> 라는 방법도 등장했다. (논문: Binarized Neural Network: Training Deep Neural Networks with Weights and Activations Constrained to+1 or-1)</p>
+</li>
+<li>
+<p>메모리 절약은 딥러닝 고속화를 위하여 중요하게 생각해야 하며, 특히 임베디드 딥러닝에 있어서 매우 중요한 주제이다.</p>
+</li>
+</ul>
+<a href="#21eda1c9b"><div class="admonition tldr" id="21eda1c9b">
+<p>사물 검출 : </p>
+</div></a>
+<a href="#165db18d6"><div class="admonition tldr" id="165db18d6">
+<p>분할(segmentation) :</p>
+</div></a>
+<a href="#29688029f"><div class="admonition tldr" id="29688029f">
+<p>이미지 생성 : </p>
+</div></a>
+<a href="#441d3f4d1"><div class="admonition tldr" id="441d3f4d1">
+<p>강화학습 : </p>
+</div></a>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

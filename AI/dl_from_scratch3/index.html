@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/AI/dl_from_scratch3/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>Deep Learning from Scratch - ccss17</title>
+<link href="../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#deep-learning-from-scratch">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Deep Learning from Scratch
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deep-learning-from-scratch">
+    Deep Learning from Scratch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    가중치 최적화
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    가중치 초기값
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Deep Learning from Scratch</h1>
+<h2 id="deep-learning-from-scratch">Deep Learning from Scratch<a class="headerlink" href="#deep-learning-from-scratch" title="Permanent link">¶</a></h2>
+<p><a href="https://book.naver.com/bookdb/book_detail.nhn?bid=11492334">밑바닥부터 시작하는 딥러닝</a>의 개인 메모입니다.</p>
+<h2 id="_1">가중치 최적화<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#74a262bd3"><div class="admonition tldr" id="74a262bd3">
+<p>최적화(optimization) : 신경망 학습의 목적, 즉 손실 함수의 값을 최대한 낮추기 위하여 최적의 가중치 매개변수를 찾는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>가중치 매개변수 공간은 매우 넓고 복잡해서 수식을 풀어 단번에 손실함수의 최소값을 구하는 방법은 존재하지 않는다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p>SGD, 모멘텀, AdaGrad, Adam 등 최적화 기법이 존재하지만 모든 문제에서 항상 최고의 성능을 보이는 최적화 기법은 아직까지 존재하지 않는다. 문제와 상황에 따라서 좋은 성능을 보이는 최적화 기법이 각각 따로 존재한다. </p>
+<ul>
+<li>
+<p>아직까지 많은 연구에서 SGD 를 사용하며, 최근에는 Adam 으로 좋은 성과가 많이 나오기도 한다.</p>
+</li>
+<li>
+<p>하지만 일반적으로 거칠게 말해서 SGD 보다 모멘텀, AdaGrad, Adam 등이 학습이 더 빠르고 최종 정확도도 더 높다.</p>
+</li>
+<li>
+<p>증명</p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#1bf041ad2"><div class="admonition tldr" id="1bf041ad2">
+<p>확률적 경사 하강법(SGD, Stochastic Gradient Descent) : 최적화(최적의 매개변수 찾기)를 위하여 미분을 사용하여 매개변수 기울기 <span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{W}}\)</span> 를 구하고, 기울기 방향으로 매개변수 <span class="arithmatex">\(\mathbf{W}\)</span> 를 </p>
+<div class="arithmatex">\[ \mathbf{W} := \mathbf{W} - \eta \dfrac{\partial L}{\partial \mathbf{W}} \]</div>
+<p>와 같이 갱신하는 일을 에폭 만큼, 또는 설정된 정확도가 나올 때까지 반복하는 최적화 기법이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 SGD 를 지금까지 한 것이다.</p>
+</li>
+<li>
+<p>SGD 는 단순하지만 강력하다. 하지만 단점도 존재한다. 따라서 상황에 따라 다른 최적화 기법을 적용해야만 한다.</p>
+<ul>
+<li>
+<p>SGD 의 단점 </p>
+<p>SGD 의 단점이란 지도가 없는 장님이 광활한 산맥에서 가장 낮은 골짜기를 찾으려는 것과 똑같다. </p>
+<p>지도가 없다는 것은 가장 낮은 골짜기가 정확히 어딘지 모른다는 것이고,</p>
+<p>장님이라는 것은 단서가 오로지 현재 서있는 땅의 기울기밖에 없다는 것이다.</p>
+<p>학습률 <span class="arithmatex">\(\eta\)</span> 란 기울기 방향으로 얼만큼 발걸음을 옮기느냐 이고, </p>
+<p>에폭이란 이 지랄을 몇 번 반복할 것이냐 이다.</p>
+<p>이 무식한 방법으로 "운 좋으면" 가장 낮은 골짜기를 찾을 수 있을 것이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>코드 구현 </p>
+<p>SGD 는 다음과 같이 간단히 구현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SGD</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lr</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lr</span> <span class="o">=</span> <span class="n">lr</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">grads</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span> <span class="n">keys</span><span class="p">():</span>
+            <span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lr</span> <span class="o">*</span> <span class="n">grads</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</code></pre></div>
+<p>이 코드를 다음과 같이 간단히 사용할 수 있다. </p>
+<div class="highlight"><pre><span></span><code><span class="n">network</span> <span class="o">=</span> <span class="n">TwoLayerNet</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">SGD</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="n">x_batch</span><span class="p">,</span> <span class="n">t_batch</span> <span class="o">=</span> <span class="n">get_mini_batch</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="n">grads</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">x_batch</span><span class="p">,</span> <span class="n">t_batch</span><span class="p">)</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">params</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">grads</span><span class="p">)</span>
+    <span class="o">...</span>
+</code></pre></div>
+</li>
+</ul>
+<a href="#8230b5502"><div class="admonition tldr" id="8230b5502">
+<p>모멘텀(momentum) : 최적화(최적의 매개변수 찾기)를 위하여 미분을 사용하여 매개변수 기울기 <span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{W}}\)</span> 를 구하고, 속도 <span class="arithmatex">\(\mathbf{v}\)</span> 에 대하여 기울기 방향으로 매개변수 <span class="arithmatex">\(\mathbf{W}\)</span> 를 </p>
+<div class="arithmatex">\[ \mathbf{v} := \alpha \mathbf{v} - \eta \dfrac{\partial L}{\partial \mathbf{W}} \]</div>
+<div class="arithmatex">\[ \mathbf{W} := \mathbf{W} + \mathbf{v} \]</div>
+<p>와 같이 갱신하는 일을 에폭 만큼, 또는 설정된 정확도가 나올 때까지 반복하는 최적화 기법이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\alpha \mathbf{v}\)</span> 는 물체가 아무런 힘을 받지 않을 때 서서히 하강시키는 역할을 한다. </p>
+<p><span class="arithmatex">\(\alpha = 0.9\)</span> 로 설정하는 것이 일반적이다.</p>
+</li>
+<li>
+<p>코드 구현 </p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Momentum</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">momentum</span><span class="o">=</span><span class="mf">0.9</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lr</span> <span class="o">=</span> <span class="n">lr</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">momentum</span> <span class="o">=</span> <span class="n">momentum</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">grads</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>                                
+                <span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">momentum</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">lr</span><span class="o">*</span><span class="n">grads</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> 
+            <span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+</code></pre></div>
+<p>속도벡터 <span class="arithmatex">\(\mathbf{v}\)</span> 는 처음에는 영벡터로 시작하여 첫 가중치 업데이트 때 매개변수 데이터를 저장하고 </p>
+<div class="arithmatex">\[ \mathbf{v} := \alpha \mathbf{v} - \eta \dfrac{\partial L}{\partial \mathbf{W}} \]</div>
+<div class="arithmatex">\[ \mathbf{W} := \mathbf{W} + \mathbf{v} \]</div>
+<p>의 수식에 따라 가중치 업데이트를 진행한다.</p>
+</li>
+<li>
+<p><strong>모멘텀이 SGD 보다 왜 더 좋은지, 수식을 기반으로 좀 더 구체화 필요</strong></p>
+</li>
+</ul>
+<a href="#c3eab68f8"><div class="admonition tldr" id="c3eab68f8">
+<p>AdaGrad : 가중치 행렬 <span class="arithmatex">\(\mathbf{W}\)</span>, 학습률 <span class="arithmatex">\(\eta\)</span>, 손실함수 출력 스칼라 <span class="arithmatex">\(L\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \mathbf{h} := \mathbf{h} + \dfrac{\partial L}{\partial \mathbf{W}} \odot \dfrac{\partial L}{\partial \mathbf{W}} \]</div>
+<div class="arithmatex">\[ \mathbf{W} := \mathbf{W} - \eta \dfrac{1}{\sqrt[]{\mathbf{h}}}\dfrac{\partial L}{\partial \mathbf{W}}
+\]</div>
+<p>와 같이 처음에는 큰 학습률로 학습하다가 점차 작은 학습률로 매개변수 가중치를 조정하는 최적화 기법이다.</p>
+</div></a>
+<ul>
+<li>
+<p>기호 <span class="arithmatex">\(\odot\)</span> 은 행렬의 원소별 곱셈을 뜻한다. 그러므로 <span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{W}} \odot \dfrac{\partial L}{\partial \mathbf{W}}\)</span> 는 행렬 <span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{W}}\)</span> 의 원소별 제곱을 의미한다.</p>
+<p>이에 따라 <span class="arithmatex">\(\mathbf{h}\)</span> 에는 <span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{W}}\)</span> 의 제곱이 계속 더해진다. 그리고 학습률을 <span class="arithmatex">\(\eta := \dfrac{\eta }{\sqrt[]{h}}\)</span> 로 줄여준다.</p>
+<ul>
+<li>
+<p>이것은 매개변수 가중치 행렬에서 많이 갱신된 원소일수록 학습률을 낮추어준다는 의미이다.</p>
+<p>즉, 매개변수 가중치 행렬의 원소마다 학습률 감소를 다르게 적용하겠다는 의미이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>AdaGrad 는 이전 가중치 매개변수 행렬의 원소를 제곱하여 더해주므로 학습이 진행될 수록 학습률이 낮아진다. 이는 학습률 <span class="arithmatex">\(\eta\)</span> 가 <span class="arithmatex">\(0\)</span> 에 수렴하게 될 수도 있다는 것을 의미한다. 즉, 더 이상 학습이 되지 않는 상태에 도달할 수도 있다는 것이다. </p>
+<ul>
+<li>
+<p>이를 해결하기 위하여 <strong>RMSProp</strong> 기법이 개발되었다. 이는 과거의 모든 기울기에 대한 학습률을 균일하게 낮추는 것이 아니라, 먼 과거의 기울기는 서서히 잊고 새로운 기울기 정보를 크게 반영하는 최적화 기법이다.</p>
+<p>이를 지수이동평균(EMA, Exponential Moving Average) 라고 하여 과거 기울기 반영 규모를 기하급수적으로 감소시킨다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>코드 구현 </p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AdaGrad</span><span class="p">:</span>
+
+<span class="sd">"""AdaGrad"""</span>
+
+<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">lr</span> <span class="o">=</span> <span class="n">lr</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">h</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">grads</span><span class="p">):</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">h</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">h</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">h</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">h</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">+=</span> <span class="n">grads</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">*</span> <span class="n">grads</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lr</span> <span class="o">*</span> <span class="n">grads</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">h</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="o">+</span> <span class="mf">1e-7</span><span class="p">)</span>
+</code></pre></div>
+<p>수식을 그냥 코드로 구현한 것이다. 다만 <code>1e-7</code> 을 더해주어 최악의 상황에서 <span class="arithmatex">\(0\)</span> 으로 나누어지는 것을 방지한다.</p>
+<ul>
+<li>이 값 <code>1e-7</code> 은 딥러닝 프레임워크에서는 파라미터로 직접 설정할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<a href="#363117701"><div class="admonition tldr" id="363117701">
+<p>Adam : 거칠게 말해서 모멘텀과 AdaGrad 를 융합하여 만들어진 최적화 기법이다.</p>
+</div></a>
+<ul>
+<li>
+<p>Adam 은 직관적으로는 모멘텀과 AdaGrad 를 융합하고, 하이퍼파라미터(학습률 <span class="arithmatex">\(\alpha\)</span>, 일차 모멘텀 계수 <span class="arithmatex">\(\beta _{1}\)</span>, 이차 모멘텀 계수 <span class="arithmatex">\(\beta _{2}\)</span>)의 편향 보정이 적용하여 가중치 매개변수를 갱신한다.</p>
+</li>
+<li>
+<p>Adam 의 실제 이론은 논문을 참조하자.</p>
+<ul>
+<li>논문에 따르면 기본 설정값을 <span class="arithmatex">\(\beta _{1} =0.9, \beta _{2} = 0.999\)</span> 로 설정했다. 대부분의 경우 이 기본값을 따르면 좋은 결과를 얻을 수 있다.</li>
+</ul>
+</li>
+<li>
+<p>코드 구현 </p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Adam</span><span class="p">:</span>
+
+    <span class="sd">"""Adam (http://arxiv.org/abs/1412.6980v8)"""</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">beta1</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">beta2</span><span class="o">=</span><span class="mf">0.999</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lr</span> <span class="o">=</span> <span class="n">lr</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beta1</span> <span class="o">=</span> <span class="n">beta1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">beta2</span> <span class="o">=</span> <span class="n">beta2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">iter</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">grads</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">m</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">v</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">m</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">iter</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="n">lr_t</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lr</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">beta2</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">iter</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">beta1</span><span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">iter</span><span class="p">)</span>         
+
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="c1">#self.m[key] = self.beta1*self.m[key] + (1-self.beta1)*grads[key]</span>
+            <span class="c1">#self.v[key] = self.beta2*self.v[key] + (1-self.beta2)*(grads[key]**2)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">m</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">beta1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">grads</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">+=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">beta2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">grads</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+            <span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">-=</span> <span class="n">lr_t</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">v</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="o">+</span> <span class="mf">1e-7</span><span class="p">)</span>
+
+            <span class="c1">#unbias_m += (1 - self.beta1) * (grads[key] - self.m[key]) # correct bias</span>
+            <span class="c1">#unbisa_b += (1 - self.beta2) * (grads[key]*grads[key] - self.v[key]) # correct bias</span>
+            <span class="c1">#params[key] += self.lr * unbias_m / (np.sqrt(unbisa_b) + 1e-7)</span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="_2">가중치 초기값<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<a href="#b36f3ca4f"><div class="admonition tldr" id="b36f3ca4f">
+<p>가중치 초기값 : 초기에 설정되는 가중치로써 신경망 학습에 중요한 영향을 끼친다.</p>
+</div></a>
+<ul>
+<li>
+<p>가중치 초기값이 <span class="arithmatex">\(0\)</span> 인 경우 </p>
+<p>과적합이 발생하는 것을 방지하지 위하여 가중치 값을 작게 만들 수 있다. 따라서 최대한 작은 가중치 값으로 학습을 시작하는 것도 좋은 방법이라고 할 수 있다. </p>
+<p>그러나 가중치가 <span class="arithmatex">\(0\)</span> 이면 학습이 제대로 이루어지지 않는다. 역전파 때 모든 가중치 값들이 똑같이 갱신되기 때문이다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p>2층 신경망에서 첫번째, 두번째 층의 가중치가 <span class="arithmatex">\(0\)</span> 이면 순전파 때 가중치가 <span class="arithmatex">\(0\)</span> 이므로 같은 값(<span class="arithmatex">\(0\)</span>)이 다음 레이어로 전달된다. 이것은 가중치가 모두 똑같이 갱신된다는 의미이다. </p>
+<p>이로써 가중치를 여러개 둔 의미도, 층을 깊게 한 의미도 사라진다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#0b59ee85e"><div class="admonition tldr" id="0b59ee85e">
+<p>은닉층의 활성화값 분포 :  활성화 함수의 출력 데이터이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이것을 관찰하면 가중치 초깃값에 따라 활성화값들이 어떻게 변화하는지 관찰할 수 있다.</p>
+</li>
+<li>
+<p>표준편차가 1 인 정규분포인 가중치 사용</p>
+<div class="highlight"><pre><span></span><code><span class="n">input_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># 1000개의 데이터</span>
+<span class="n">node_num</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># 각 은닉층의 노드(뉴런) 수</span>
+<span class="n">hidden_layer_size</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># 은닉층이 5개</span>
+<span class="n">activations</span> <span class="o">=</span> <span class="p">{}</span>  <span class="c1"># 이곳에 활성화 결과를 저장</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">input_data</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hidden_layer_size</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">activations</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">node_num</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">activations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">z</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">activations</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">activations</span><span class="p">),</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"-layer"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([],</span> <span class="p">[])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">flatten</span><span class="p">(),</span> <span class="mi">30</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91309429-8a30b480-e7eb-11ea-89bc-937f452e1076.png"/></p>
+<p>여기에서 시그모이드 함수는 출력이 <span class="arithmatex">\(0\)</span> 또는 <span class="arithmatex">\(1\)</span> 에 가까워지자 미분이 <span class="arithmatex">\(0\)</span> 에 다가간다.</p>
+<p>그래서 데이터가 <span class="arithmatex">\(0\)</span> 과 <span class="arithmatex">\(1\)</span> 에 치우쳐 분포하면 기울기가 작아지다가 사라진다. 이것이 기울시 소실gradient vanishing 문제이다.</p>
+</li>
+<li>
+<p>표준편차가 <span class="arithmatex">\(0.01\)</span> 인 정규분포인 가중치 사용</p>
+<div class="highlight"><pre><span></span><code><span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">node_num</span><span class="p">,</span> <span class="n">node_num</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.01</span>
+</code></pre></div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91309782-fca19480-e7eb-11ea-90e5-1660e21c2cf9.png"/></p>
+<p>이번에는 <span class="arithmatex">\(0.5\)</span> 부근에 활성화 값이 집중되어 기울기 소실 문제는 일어나지 않지만 활성화 값이 너무 치우쳐서 표현력에 문제가 생긴다. 즉 대부분의 뉴런이 같은 값을 출력하고 있기에 뉴런을 여러개를 둔 의미가 없어지는 것이다.</p>
+</li>
+</ul>
+<a href="#6139175d8"><div class="admonition tldr" id="6139175d8">
+<p>Xavier 초깃값 : Xavier Glorot 의 논문에서 권장하는 가중치 초깃값으로써 앞 계층의 노드 <span class="arithmatex">\(n\)</span> 에 대하여 표준편차가 <span class="arithmatex">\(\dfrac{1}{\sqrt[]{n}}\)</span> 인 분포를 사용하면 활성화값들이 광범위하게 분포된다는 초깃값이다.</p>
+</div></a>
+<ul>
+<li>
+<p>Xavier 분포인 가중치 사용</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91311152-b51c0800-e7ed-11ea-8a2d-a486e72582db.png"/></p>
+<p>층이 깊어질수록 형태가 다소 일그러지지만 확실히 넓게 분포되었다.</p>
+<p>이 일그러짐은 sigmoid 함수 대신 tanh 함수를 사용하면 말끔한 종 모양으로 분포되어 개선된다. tanh 함수가 원점 <span class="arithmatex">\((0,0)\)</span> 에서 대칭인 반면 sigmoid 는 <span class="arithmatex">\((0,0.5)\)</span> 에서 대칭이다. 활성화 함수용으로는 원점에서 대칭인 함수를 사용하는 것이 더 낫다고 알려져 있다. </p>
+</li>
+<li>
+<p>Xavier 분포인 가중치와 tanh 함수 사용</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91311702-586d1d00-e7ee-11ea-8c26-7d89068f1bc1.png"/></p>
+</li>
+</ul>
+<a href="#f3f75181b"><div class="admonition tldr" id="f3f75181b">
+<p>He 초깃값 : 앞 계층의 노드가 <span class="arithmatex">\(n\)</span> 일 때 표준편차가 <span class="arithmatex">\(\sqrt[]{\dfrac{2}{n}}\)</span> 인 정규분포를 사용하는 가중치 분포이다.</p>
+</div></a>
+<ul>
+<li>
+<p>Xavier 초깃값은 활성화 함수가 선형일 때 유용하다. sigmoid 와 tanh 는 좌우 대치잉라 중앙 부근이 선형인 함수로 볼 수 있다. 반면 ReLU 를 사용할 때 특화된 초깃값은 He 초깃값이다. </p>
+</li>
+<li>
+<p>ReLU 는 음의 영역이 <span class="arithmatex">\(0\)</span> 이라 더 넓기 분포시키기 위하여 <span class="arithmatex">\(2\)</span> 배의 계수가 필요하다고 볼 수 있다.</p>
+</li>
+<li>
+<p>ReLU 함수를 표준편차가 <span class="arithmatex">\(0.01\)</span> 인 정규분포를 가중치 초깃값으로 사용한 경우</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91312302-0d9fd500-e7ef-11ea-9d99-86db07198fc5.png"/></p>
+<p>활성화값들이 매우 작은 값으로 흐르고 있다. 이는 역전파 때 기울기도 작아진다는 것으로 학습도 거의 이루어지지 않는다.</p>
+</li>
+<li>
+<p>ReLU 함수를 Xavier 분포 가중치 초깃값으로 사용한 경우</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91312539-4fc91680-e7ef-11ea-871d-2b1198f00f9c.png"/></p>
+<p>층이 깊어지면서 치우침이 커진다. 이는 기울기 소실 문제를 일으킨다.</p>
+</li>
+<li>
+<p>ReLU 함수를 He 분포 가중치 초깃값으로 사용한 경우</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91312708-7d15c480-e7ef-11ea-8700-bb20e59cdd7a.png"/></p>
+<p>활성화값이 균일하게 분포되었다. 역전파 때도 적절한 값이 나올 것이다.</p>
+</li>
+<li>
+<p>이로써 ReLU 를 사용할 때는 He 초깃값을 사용하고, sigmoid 나 tanh 등의 S자 모양 곡선을 활성화 함수로 사용하면 Xavier 초깃값을 사용하는 것이 좋다고 할 수 있다.</p>
+</li>
+<li>
+<p>MNIST 데이터셋으로 뉴런 수가 <span class="arithmatex">\(100\)</span> 개인 <span class="arithmatex">\(5\)</span> 층 신경망에서 ReLU 를 활성화 함수로 사용했을 때 가중치 분포에 따른 활성화 값 관찰</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91388093-9d866300-e871-11ea-8e51-919b61a12ebc.png"/></p>
+<p>표준편차가 <span class="arithmatex">\(0.01\)</span> 일 때 학습이 전혀 이루어지지 않는다. 앞의 실험에서와 같이 순전파 때 너무 작은 값, 즉 <span class="arithmatex">\(0\)</span> 에 가까운 값이 흐르기 때문이다. 이 때문에 역전파 때의 기울기도 작아져서 가중치가 거의 갱신되지 않는다.</p>
+<p>Xavier 도 학습이 잘 되지만 He 가 학습이 더 빠르게 잘 된다.</p>
+</li>
+</ul>
+<a href="#fc3939ddc"><div class="admonition tldr" id="fc3939ddc">
+<p>배치 정규화(Batch Normalization) : 학습 시 미니배치 단위로 데이터 분포가 정규분포가 되도록 정규화시키는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>가중치의 초깃값을 적절히 설정함으로써 각 층의 활성화값 분포가 적당히 퍼지도록 하여 학습이 원활하게 진행되도록 했다. 여기에서 착안하여 각 층의 활성화 값을 강제로 퍼뜨려보는 것이다.</p>
+</li>
+<li>
+<p>2015년에 제안된 신생 기술인데 많은 연구자들이 사용하고 있다.</p>
+</li>
+<li>
+<p>장점 </p>
+<ul>
+<li>
+<p>학습 속도가 빨라진다.</p>
+</li>
+<li>
+<p>초깃값 의존도가 사라진다. </p>
+</li>
+<li>
+<p>오버피팅을 억제한다.(드롭아웃 필요성 감소)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>배치 정규화 층 예시 </p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/997AE03A5AAAA64C2A?download"/></p>
+<p>위와 같이 배치 정규화를 사용한다. </p>
+</li>
+<li>
+<p>배치 정규화는 우선 <span class="arithmatex">\(m \in \N\)</span> 개의 입력 데이터 집합 미니배치 <span class="arithmatex">\(B = \{x_1, x_2, \dots, x_m\}\)</span> 에 대하여 평균과 분산</p>
+<div class="arithmatex">\[ \mu _{B} := \dfrac{1}{m}\sum_{i=1}^{m}x_i \]</div>
+<div class="arithmatex">\[ \sigma ^{2} _{B} := \dfrac{1}{m}\sum_{i=1}^{m}(x_i - \mu _{B}) ^{2} \]</div>
+<p>을 구한다. 그리고 이를 통하여 입력 데이터 <span class="arithmatex">\(x_i\)</span> 를 다음과 같이 정규화한다.</p>
+<div class="arithmatex">\[ \hat{x}_{i} := \dfrac{x_i - \mu _{B}}{\sqrt[]{\sigma ^{2}_{B}+ \epsilon }} \]</div>
+<p><span class="arithmatex">\(\epsilon\)</span> 은 매우 작은 값, 가령 <span class="arithmatex">\(10 \text{e} -7\)</span> 이다. 이는 <span class="arithmatex">\(0\)</span> 으로 나누어지는 사고를 예방한다.</p>
+<ul>
+<li>
+<p>결국에 배치 정규화란 입력 데이터 집합 <span class="arithmatex">\(\{x_1, x_2, \dots, x_m\}\)</span> 을 정규분포를 따르는 집합 <span class="arithmatex">\(\{\hat{x_1}, \hat{x_2}, \dots, \hat{x_m}\}\)</span> 으로 사상시키는 함수</p>
+<div class="arithmatex">\[ f: \R ^{m} \to \R ^{m}, x \mapsto \hat{x} \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>배치 정규화층을 활성화 함수 앞 또는 뒤에 삽입합으로써 데이터 분포가 덜 치우치게 할 수 있다.</p>
+<ul>
+<li>활성화 함수 앞에 넣을 것인지 뒤에 넣을 것인지에 대한 논의와 실험은 지금도 진행중이다.(arxiv:1502.03167, arxiv:1511.06422)</li>
+</ul>
+</li>
+</ul>
+<p>그리고 최종적으로 배치 정규화 계층은 정규화된 데이터에 고유한 확대(scale) 와 이동(shift) 변환을 수행한다.</p>
+<div class="arithmatex">\[ y_i := \gamma \hat{x}_{i}+\beta \]</div>
+<p><span class="arithmatex">\(\gamma\)</span> 가 확대를 하고 <span class="arithmatex">\(\beta\)</span> 가 이동을 한다. 이 값의 초깃값은 <span class="arithmatex">\(\gamma = 1, \beta = 0\)</span> 이고, 학습하면서 적절한 값으로 조정해나간다.</p>
+</li>
+<li>
+<p>배치 정규화의 역전파</p>
+<p><a href="https://kratzert.github.io/2016/02/12/understanding-the-gradient-flow-through-the-batch-normalization-layer.html">https://kratzert.github.io/2016/02/12/understanding-the-gradient-flow-through-the-batch-normalization-layer.html</a></p>
+<p><a href="https://kevinzakka.github.io/2016/09/14/batch_normalization/">https://kevinzakka.github.io/2016/09/14/batch_normalization/</a></p>
+</li>
+<li>
+<p>배치 정규화를 사용하지 않으면 가중치 초깃값이 잘 분포되어 있지 않으면 학습이 잘 되지 않는다. </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91393412-2eab0900-e875-11ea-9015-fb8edb359323.png"/></p>
+<p>또 위와 같이 실험 결과 배치 정규화를 사용하면 가중치 초깃값에 크게 의존하지 않아도 된다는 것이 밝혀졌다.</p>
+</li>
+</ul>
+<a href="#f2a192191"><div class="admonition tldr" id="f2a192191">
+<p>과적합(overfitting) : 신경망이 훈련데이터에 지나치게 적응되어 다른 데이터에 제대로 대응하지 못하는 상태이다.</p>
+</div></a>
+<ul>
+<li>
+<p>오버피팅은 다음 두 경우 발생한다.</p>
+<ol>
+<li>
+<p>매개변수가 많고 표현력이 높은 모델일 때</p>
+</li>
+<li>
+<p>훈련 데이터가 적을 때</p>
+</li>
+</ol>
+</li>
+<li>
+<p>오버피팅을 일부러 발생시키기 위하여 다음의 코드로 실험해보자. 오버피팅 조건을 충족시키기 위하여 60000개의 MNIST 의 데이터셋을 300개만 사용하고, 7층의 네트워크를 사용해 복잡도가 높은 네트워크를 사용한다.</p>
+<div class="highlight"><pre><span></span><code><span class="o">...</span>
+<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">t_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">t_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">load_mnist</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># 오버피팅을 재현하기 위해 학습 데이터 수를 줄임</span>
+<span class="n">x_train</span> <span class="o">=</span> <span class="n">x_train</span><span class="p">[:</span><span class="mi">300</span><span class="p">]</span>
+<span class="n">t_train</span> <span class="o">=</span> <span class="n">t_train</span><span class="p">[:</span><span class="mi">300</span><span class="p">]</span>
+
+<span class="n">network</span> <span class="o">=</span> <span class="n">MultiLayerNet</span><span class="p">(</span><span class="n">input_size</span><span class="o">=</span><span class="mi">784</span><span class="p">,</span> <span class="n">hidden_size_list</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span> <span class="n">output_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">weight_decay_lambda</span><span class="o">=</span><span class="n">weight_decay_lambda</span><span class="p">)</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">SGD</span><span class="p">(</span><span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span> <span class="c1"># 학습률이 0.01인 SGD로 매개변수 갱신</span>
+
+<span class="n">max_epochs</span> <span class="o">=</span> <span class="mi">201</span>
+<span class="n">train_size</span> <span class="o">=</span> <span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">train_loss_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">train_acc_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">test_acc_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">iter_per_epoch</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">train_size</span> <span class="o">/</span> <span class="n">batch_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">epoch_cnt</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000000000</span><span class="p">):</span>
+    <span class="n">batch_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">train_size</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
+    <span class="n">x_batch</span> <span class="o">=</span> <span class="n">x_train</span><span class="p">[</span><span class="n">batch_mask</span><span class="p">]</span>
+    <span class="n">t_batch</span> <span class="o">=</span> <span class="n">t_train</span><span class="p">[</span><span class="n">batch_mask</span><span class="p">]</span>
+
+    <span class="n">grads</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">x_batch</span><span class="p">,</span> <span class="n">t_batch</span><span class="p">)</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">params</span><span class="p">,</span> <span class="n">grads</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="n">iter_per_epoch</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">train_acc</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">t_train</span><span class="p">)</span>
+        <span class="n">test_acc</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">t_test</span><span class="p">)</span>
+        <span class="n">train_acc_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train_acc</span><span class="p">)</span>
+        <span class="n">test_acc_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_acc</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"epoch:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">epoch_cnt</span><span class="p">)</span> <span class="o">+</span> <span class="s2">", train acc:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">train_acc</span><span class="p">)</span> <span class="o">+</span> <span class="s2">", test acc:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">test_acc</span><span class="p">))</span>
+
+        <span class="n">epoch_cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">epoch_cnt</span> <span class="o">&gt;=</span> <span class="n">max_epochs</span><span class="p">:</span>
+            <span class="k">break</span>
+</code></pre></div>
+<p>결과는 다음과 같다.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91396736-433bd100-e876-11ea-91d4-dd4f01ca6358.png"/></p>
+<p>훈련 정확도는 매우 높지만 시험 데이터의 정확도는 낮다. 훈련 데이터에 너무 적응(fitting) 되어 버렸기 때문이다.</p>
+</li>
+</ul>
+<a href="#efd61a8dc"><div class="admonition tldr" id="efd61a8dc">
+<p>가중치 감소(weight decay) : 가중치를 감소시켜 오버피팅을 억제하는 기법이다.</p>
+</div></a>
+<ul>
+<li>
+<p>가중치 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대하여 L2 노름에 따른 가중치 감소는 <span class="arithmatex">\(\dfrac{1}{2}\lambda \mathbf{W}^{2}\)</span> 이 된다. </p>
+<p><span class="arithmatex">\(\lambda\)</span> 는 정규화의 세기를 조절하는 하이퍼 파라미터이다. <span class="arithmatex">\(\dfrac{1}{2}\)</span> 은 미분의 결과를 편의상 조정하는 상수이다. </p>
+<p>가중치 감소는 모든 가중치 가각의 손실함수에 <span class="arithmatex">\(\dfrac{1}{2}\lambda \mathbf{W}^{2}\)</span> 를 더한다. 즉 가중치의 기울기를 구하는 계산에서 역전파 법에 따라 정규화항에 미분한 <span class="arithmatex">\(\lambda \mathbf{W}\)</span> 을 더한다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>정규화항으로 L2 노름, L1 노름, L <span class="arithmatex">\(\infty\)</span> 노름을 사용할 수 있다. L2 노름은 각 원소의 제곱을 더한 것에 제곱근을 취한다. 가령 가중치가 <span class="arithmatex">\(\mathbf{W} = (w_1, w_2, \dots, w_n)\)</span> 이었다면 L2 노름에서는 <span class="arithmatex">\(\sqrt[]{w_1 ^{2} + w_2 ^{2} + \dots + w_n ^{2}}\)</span> 으로 계산할 수 있다.</p>
+<p>L1 노름은 절댓값의 합, <span class="arithmatex">\(|w_1| + |w_2| + \dots + |w_n|\)</span> 이다. L <span class="arithmatex">\(\infty\)</span> 노름은 Max 노름으로써 각 원소의 절댓값중 가장 큰 것이다.</p>
+<p>일반적으로 L2 노름을 자주 쓴다.</p>
+</div>
+</li>
+<li>
+<p>오버피팅은 가중치 매개변수의 값이 커서 발생하는 경우가 많기 때문에 가중치 감소를 사용하기도 한다.</p>
+</li>
+<li>
+<p>손실 함수에 가중치의 L2 노름을 더한 가중치 감소를 적용한 실험 결과</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91395674-f0fab000-e875-11ea-989d-226fc14cb6f2.png"/></p>
+<p>오버피팅이 그나마 억제되었다.</p>
+</li>
+</ul>
+<a href="#5ba9b1c86"><div class="admonition tldr" id="5ba9b1c86">
+<p>드롭아웃(Dropout) : 뉴런을 무작위로 삭제하면서 학습하는 방법이다.</p>
+</div></a>
+<ul>
+<li>
+<p>신경망 모델이 복잡해지면 가중치 감소만으로 오버피팅을 억제하기 힘들어진다. 이럴 때 드롭아웃을 사용한다.</p>
+</li>
+<li>
+<p>드롭아웃은 훈련 때 삭제할 뉴런을 무작위로 선택하고, 검증 때 모든 뉴런에 신호를 전달한다.</p>
+<p>단, 시험 때 각 뉴런의 출력에 훈련 때 삭제한 비율을 곱하여 출력한다.</p>
+<p>그런데 실제 딥러닝 프레임워크들은 삭제한 비율을 곱하지 않기도 한다. 효율적인 구현에 대해서는 chainer.org 의 드롭아웃 구현을 참고하면 좋다.</p>
+</li>
+</ul>
+<a href="#8fdb3a604"><div class="admonition tldr" id="8fdb3a604">
+<p>앙상블 학습(ensemble learning) : 개별적으로 학습시킨 여러 모델의 출력의 평균을 내어 추론하는 방식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>앙상블 학습을 사용하면 신경망의 정확도가 몇% 개선된다고 실험적으로 알려져 있다.</p>
+</li>
+<li>
+<p>가령 같거나 비슷한 구조의 모델을 5개를 따로 학습시키고 5개의 출력의 평균을 내어 답을 내는 것이다.</p>
+</li>
+</ul>
+<a href="#e05f72cde"><div class="admonition tldr" id="e05f72cde">
+<p>하이퍼파라미터 : 뉴런의 개수, 배치의 크기, 매개변수 갱신 학습률 등의 변수들이다.</p>
+</div></a>
+<ul>
+<li>
+<p>하이퍼파라미터 성능을 평가할 때는 시험 데이터를 사용하면 안된다. 하이퍼파라미터를 시험 데이터로 조정하면 시험 데이터에 오버피팅 되기 때문이다.</p>
+<p>따라서 하이퍼파라미터 전용 데이터를 따로 두고 이것을 검증 데이터라고 부른다. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>그러므로 데이터를 다음과 같이 분류할 수 있다. </p>
+<ul>
+<li>
+<p>훈련 데이터 : 매개변수(가중치, 편향) 학습용</p>
+</li>
+<li>
+<p>검증 데이터 : 하이퍼파라미터 성능 평가용</p>
+</li>
+<li>
+<p>시험 데이터 : 신경망 전반 성능 평가용</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>보통 훈련 데이터의 20% 정도를 검증 데이터로 분리시켜 학습한다.</p>
+</li>
+</ul>
+<a href="#83e23ce8f"><div class="admonition tldr" id="83e23ce8f">
+<p>하이퍼파라미터 최적화 : 하이퍼파라미터를 최적화 시킬 때는 최적값이 존재하는 범위를 조금씩 줄여나간다.</p>
+</div></a>
+<ul>
+<li>
+<p>가령 하이퍼파라미터를 <span class="arithmatex">\(0.001\)</span> 에서 <span class="arithmatex">\(1000\)</span> 사이의 <span class="arithmatex">\(10\)</span> 의 거듭제곱 단위 범위로 정하고 학습을 시켜보면서 정확도를 평가한다.</p>
+<p>이때 하이퍼파라미터를 최적화시킬 때 시간이 매우 오래 걸린다. 따라서 아닌 것 같은 값은 일찍 포기해야 하고, 에폭을 작게하여 1회 평가 시간을 단축시켜야 한다.</p>
+</li>
+<li>
+<p>물론 이 방식은 과학이라기보다 실용, 지혜, 직관에 의존한다. 더 세련된 기법을 소개하자면 베이즈 최적화가 있다. 이는 베이즈 정리를 기반으로 더 엄밀하고 효율적인 최적화를 수행한다.</p>
+</li>
+<li>
+<p>코드 구현</p>
+<p>다음과 같이 하이퍼파라미터를 로그 스케일 범위에서 무작위로 추출하는 코드를 간단히 짤 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="n">weight_decay</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<p>이렇게 균등분포로 하이퍼파라미터를 무작위로 추출하고 학습하여 정확도 순으로 그래프를 그려보면 다음과 같다.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/91628211-83c35800-e9f8-11ea-97c7-6c229af1645e.png"/></p>
+<p>이때 상위 5개의 하이퍼파라미터를 추출하면 그 결과가 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code>val acc:0.06 <span class="p">|</span> lr:2.1046950927191495e-06, weight decay:2.3489822114211226e-06
+<span class="o">===========</span> Hyper-Parameter Optimization <span class="nv">Result</span> <span class="o">===========</span>
+Best-1<span class="o">(</span>val acc:0.79<span class="o">)</span> <span class="p">|</span> lr:0.008855979078312936, weight decay:2.9750325705175363e-08
+Best-2<span class="o">(</span>val acc:0.78<span class="o">)</span> <span class="p">|</span> lr:0.008001814164776825, weight decay:2.5759378936377233e-07
+Best-3<span class="o">(</span>val acc:0.78<span class="o">)</span> <span class="p">|</span> lr:0.0066928694143954985, weight decay:9.585002121120948e-07
+Best-4<span class="o">(</span>val acc:0.77<span class="o">)</span> <span class="p">|</span> lr:0.006031604802007462, weight decay:1.3351736344247978e-06
+Best-5<span class="o">(</span>val acc:0.76<span class="o">)</span> <span class="p">|</span> lr:0.005313421478478791, weight decay:3.0638643452015215e-05
+</code></pre></div>
+<p>그러면 좁혀진 이 범위 내에서 또 다시 균등분포를 통해 하이퍼파라미터를 뭐 100 개 쯤 추출하고 똑같은 작업을 반복하는 것이다.</p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

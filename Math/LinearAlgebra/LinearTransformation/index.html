@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/LinearAlgebra/LinearTransformation/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>Linear Transformation - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Linear Transformation
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Linear Transformation
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Linear Transformation
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    선형변환
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    영공간, 상공간
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    선형변환의 행렬표현
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    선형변환의 합성과 행렬 곱
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    가역성과 동형사상
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    좌표변환 행렬
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    쌍대공간
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    계수가 상수인 동차 선형 미분방정식
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    선형변환
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    영공간, 상공간
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    선형변환의 행렬표현
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    선형변환의 합성과 행렬 곱
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    가역성과 동형사상
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    좌표변환 행렬
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    쌍대공간
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    계수가 상수인 동차 선형 미분방정식
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Linear Transformation</h1>
+<div class="admonition info">
+<p class="admonition-title">ref</p>
+<p><a href="https://book.naver.com/bookdb/book_detail.nhn?bid=16374070">프리드버그 선형대수학</a> </p>
+</div>
+<h2 id="_1">선형변환<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#15606d5a9"><div class="admonition tldr" id="15606d5a9">
+<p>선형변환(linear transformation) : <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 이 <span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간이라고 하자. <span class="arithmatex">\(\forall x, y \in \mathbf{V} , \forall c \in \mathbf{F}\)</span> 에 대하여 다음을 만족하는 함수 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \mathbf{W}\)</span> 를 <span class="arithmatex">\(\mathbf{V}\)</span> 에서 <span class="arithmatex">\(\mathbf{W}\)</span> 로 가는 선형변환이라 한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\mathbf{T}(x + y) = \mathbf{T}(x) + \mathbf{T}(y)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{T}(cx) = c\mathbf{T}(x)\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>지금까지 벡터공간을 살펴보았는데 이제 벡터공간의 구조를 보존하는 함수를 다룬다. 이런 함수를 선형변환이라고 한다. </p>
+<p>미분연산자나 적분연산자가 선형변환의 대표적인 예시이다. 이런 연산자는 미분방정식과 적분방정식을 특정한 벡터공간에서 정의된 선형변환으로 이해할 수 있게 해준다. 기하학에서의 선형변환은 회전, 대칭, 사영 같은 것들이 있다.</p>
+<ul>
+<li><span class="arithmatex">\(x, y \in \mathbf{V} \implies x+y \in \mathbf{V}\)</span> 인데 <span class="arithmatex">\(\mathbf{T}(x), \mathbf{T}(y) \in \mathbf{W} \implies \mathbf{T}(x+y) \in \mathbf{W}\)</span> 이므로 <span class="arithmatex">\(\mathbf{T}\)</span> 가 벡터공간의 구조를 보존한다고 하는 것이다. 스칼라곱에 대해서도 마찬가지.</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{F} = \mathbb{Q}\)</span> 이면 2) 는 1) 에서 도출된다. 그러나 일반적으로 1) 과 2) 는 독립된 명제이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 선형변환이라는 것을 편의상 "<span class="arithmatex">\(\mathbf{T}\)</span> 는 선형(linear) 이다" 라고 한다.</p>
+</li>
+</ul>
+<a href="#2dff80fb4"><div class="admonition tldr" id="2dff80fb4">
+<p>선형변환의 성질 : 선형변환 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \mathbf{W}\)</span> 는 다음 성질을 만족한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 선형이면 <span class="arithmatex">\(\mathbf{T}(0) = 0\)</span> 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 선형이기 위한 필요충분조건은 <span class="arithmatex">\(\forall x, y \in \mathbf{V} , \forall c \in \mathbf{F} : \mathbf{T}(cx + y) = c\mathbf{T}(x) + \mathbf{T}(y)\)</span> 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 선형이면 <span class="arithmatex">\(\forall x, y \in \mathbf{V} : \mathbf{T}(x -y) = \mathbf{T}(x) - \mathbf{T}(y)\)</span> 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 선형이기 위한 필요충분조건은 <span class="arithmatex">\(\forall x_1, \dots, x_n \in \mathbf{V}, \forall a_1, \dots, a_n \in \mathbf{F}\)</span> 에 대하여 다음이 성립하는 것이다. </p>
+<div class="arithmatex">\[ \mathbf{T} \bigg (\sum_{i=1}^{n}a_ix_i\bigg ) = \sum_{i=1}^{n}a_i\mathbf{T}(x_i) \]</div>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>1) 의 <span class="arithmatex">\(0\)</span> 은 영벡터이다.</p>
+</li>
+<li>
+<p>어떤 함수가 선형임을 보일 때 주로 2) 를 사용한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\mathbf{T}: \R ^{2} \to \R ^{2}\)</span> 을 <span class="arithmatex">\(\mathbf{T}(a_1, a_2) = (2a_1 + a_2, a_1)\)</span> 이라 정의하고 이것이 선형인지 확인하자. </p>
+<p><span class="arithmatex">\(c \in \R, x = (b_1, b_2), y = (d_1, d_2)\)</span> 라 하면 <span class="arithmatex">\(cx + y = (cb_1 + d_1, cb_2 + d_2)\)</span> 이므로 </p>
+<div class="arithmatex">\[ \mathbf{T}(cx + y) = (2(cb_1 + d_1) + cb_2 + d_2, cb_1 + d_1) \]</div>
+<p>이고 <span class="arithmatex">\(c\mathbf{T}(x) + \mathbf{T}(y)\)</span> 도 </p>
+<div class="arithmatex">\[ c\mathbf{T}(x) + \mathbf{T}(y) = (2(cb_1 + d_1) + cb_2 + d_2, cb_1 + d_1) \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(\mathbf{T}\)</span> 는 선형이다.</p>
+</li>
+<li>
+<p>선형대수학은 기하학에서 널리 사용되는데, 이는 중요한 기하 변환들이 선형이기 때문이다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p>각 <span class="arithmatex">\(\theta\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T} _{\theta }: \R ^{2} \to \R ^{2}\)</span> 을 </p>
+<div class="arithmatex">\[ \mathbf{T} _{\theta } (a_1, a_2) = \begin{cases}
+(a_1, a_2) \text{ 를 반시계 방향으로 } \theta \text{ 만큼 회전한 벡터} &amp; (a_1, a_2) \neq (0, 0)\\
+(0, 0) &amp; (a_1, a_2) = (0, 0) \\
+\end{cases} 
+\]</div>
+<p>와 같이 정의하면 <span class="arithmatex">\(\mathbf{T} _{\theta}: \R ^{2} \to \R ^{2}\)</span> 는 2차원 좌표평면의 벡터를 <span class="arithmatex">\(\theta\)</span> 만큼 회전하는 선형변환이다. 참고로 <span class="arithmatex">\(\mathbf{T} _{\theta}\)</span> 는 형식적으로</p>
+<div class="arithmatex">\[ \mathbf{T} _{\theta}(a_1, a_2) = (a_1 \cos \theta - a_2 \sin \theta, a_1 \sin \theta + a_2 \cos \theta) \]</div>
+<p>로 정의할 수 있다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\mathbf{T}: \R ^{2} \to \R ^{2} , (a_1, a_2) \mapsto (a_1, -a_2)\)</span> 는 <span class="arithmatex">\(x\)</span>축 대칭(reflection about x-axis)이라는 선형변환이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\mathbf{T}: \R ^{2} \to \R ^{2} , (a_1, a_2) \mapsto (a_1, 0)\)</span> 는 <span class="arithmatex">\(x\)</span>축으로 사영(projection on the x-axis)이라는 선형변환이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\mathbf{T}: \mathbf{M} _{m \times n} (\mathbf{F} ) \to \mathbf{M} _{n \times m}(\mathbf{F} ), A \mapsto A ^{t}\)</span> 는 선형변환이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>무한번 미분가능한 함수 <span class="arithmatex">\(f: \R \to \R\)</span> 의 집합 <span class="arithmatex">\(\mathbf{V}\)</span> 을 정의하면 <span class="arithmatex">\(\mathbf{V}\)</span> 는 <span class="arithmatex">\(\R\)</span>-벡터공간이된다. 이때 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \mathbf{V} , f \mapsto f'\)</span> 로 정의하면</p>
+<div class="arithmatex">\[ \mathbf{T}(ag+h) = (ag+h)' = ag'+h'=a\mathbf{T}(g) +\mathbf{T}(h) \]</div>
+<p>이므로 선형변환이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\mathbf{V}\)</span> 를 <span class="arithmatex">\(\R\)</span> 에서 정의한 모든 연속함수 집합으로 정의하고, <span class="arithmatex">\(a, b \in \R, a &lt; b\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \R, f \mapsto \int_{a}^{b}f(t)dt\)</span> 로 정의하면 이는 선형변환이다. 왜냐하면 </p>
+<div class="arithmatex">\[ \int_{a}^{b}\{pf(t) + qg(t)\}dt = p \int_{a}^{b}f(t)dt + q \int_{a}^{b}g(t)dt \]</div>
+<p>이기 때문이다.</p>
+</li>
+</ul>
+<a href="#c604a0153"><div class="admonition tldr" id="c604a0153">
+<p>항등변환(identity transformation) : <span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{I} _{\mathbf{V} }: \mathbf{V} \to \mathbf{V}, x \mapsto x\)</span> 로 정의된 선형변환이다.</p>
+</div></a>
+<ul>
+<li>항등변환 <span class="arithmatex">\(\mathbf{I} _{\mathbf{V} }\)</span> 을 편의상 <span class="arithmatex">\(\mathbf{I}\)</span> 라 표기하기도 한다.</li>
+</ul>
+<a href="#56c6081f5"><div class="admonition tldr" id="56c6081f5">
+<p>영변환(zero transformation) : <span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T} _{ 0}: \mathbf{V} \to \mathbf{W}, x \mapsto 0\)</span> 로 정의된 선형변환이다.</p>
+</div></a>
+<h2 id="_2">영공간, 상공간<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<a href="#ea09561f1"><div class="admonition tldr" id="ea09561f1">
+<p>영공간(null space, kernel) : 벡터공간 <span class="arithmatex">\(\mathbf{V}, \mathbf{W}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 영공간은 집합 </p>
+<div class="arithmatex">\[ \mathbf{N}(\mathbf{T}) = \{x \in \mathbf{V} : \mathbf{T}(x) = 0\}\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>선형변환 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \mathbf{W}\)</span> 의 영공간을 <span class="arithmatex">\(\mathbf{N}(\mathbf{T})\)</span> 또는 <span class="arithmatex">\(\text{Null}(\mathbf{T})\)</span> 또는 <span class="arithmatex">\(\text{ker}(\mathbf{T})\)</span> 로 표기한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>항등변환 <span class="arithmatex">\(\mathbf{I} : \mathbf{V} \to \mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{N}(\mathbf{I}) = \{0\}\)</span> 이다.</p>
+<p>영변환 <span class="arithmatex">\(\mathbf{T}_0 : \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{N}(\mathbf{T}_0) = \mathbf{V}\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#97e240677"><div class="admonition tldr" id="97e240677">
+<p>상공간(range, image) : 벡터공간 <span class="arithmatex">\(\mathbf{V}, \mathbf{W}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 상공간은 집합 </p>
+<div class="arithmatex">\[ \mathbf{R}(\mathbf{T}) = \{\mathbf{T}(x) \in \mathbf{W} : x \in \mathbf{V} \}\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>선형변환 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \mathbf{W}\)</span> 의 상공간을 <span class="arithmatex">\(\mathbf{R}(\mathbf{T})\)</span> 또는 <span class="arithmatex">\(\text{ran}(\mathbf{T})\)</span> 으로 표기한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>항등변환 <span class="arithmatex">\(\mathbf{I} : \mathbf{V} \to \mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{R}(\mathbf{I}) = \mathbf{V}\)</span> 이다.</p>
+<p>영변환 <span class="arithmatex">\(\mathbf{T}_0 : \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{R}(\mathbf{T}_0) = \{0\}\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#eb957cbf0"><div class="admonition tldr" id="eb957cbf0">
+<p class="admonition-title">정리 2.1</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V} ,\mathbf{W}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T}:\mathbf{V} \to \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{N}(\mathbf{T}), \mathbf{R}(\mathbf{T})\)</span> 는 각각 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 의 부분공간이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 의 영벡터를 각각 <span class="arithmatex">\(0 _{\mathbf{V} },0 _{\mathbf{W} }\)</span> 라 하자.</p>
+<p><span class="arithmatex">\(\mathbf{T}(0 _{\mathbf{V} }) = 0 _{\mathbf{W} }\)</span> 이므로 <span class="arithmatex">\(0 _{\mathbf{V} } \in \mathbf{N}(\mathbf{T})\)</span> 이다. <span class="arithmatex">\(x, y \in \mathbf{N}(\mathbf{T})\)</span>, <span class="arithmatex">\(c \in \mathbf{F}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \mathbf{T}(x+y)=\mathbf{T}(x)+\mathbf{T}(y)=0 _{\mathbf{W} }+0 _{\mathbf{W} }=0 _{\mathbf{W} }, \enspace \mathbf{T}(cx) = c\mathbf{T}(x) = c 0 _{\mathbf{W} } = 0 _{\mathbf{W} } \]</div>
+<p>이므로 <span class="arithmatex">\(x+y \in \mathbf{N}(\mathbf{T}), cx \in \mathbf{N}(\mathbf{T})\)</span> 이다. 따라서 <span class="arithmatex">\(\mathbf{N}(\mathbf{T})\)</span> 은 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이다. ▲ </p>
+<p><span class="arithmatex">\(\mathbf{T}(0 _{\mathbf{V} }) = 0 _{\mathbf{W} }\)</span> 이므로 <span class="arithmatex">\(0 _{\mathbf{W} } \in \mathbf{R}(\mathbf{T})\)</span> 이다. <span class="arithmatex">\(x, y \in \mathbf{R}(\mathbf{T}), c \in \mathbf{F} : \exists v, w \in \mathbf{V} \text{ s.t. }  \mathbf{T}(v) = x, \mathbf{T}(w) = y\)</span> 이다. 따라서 </p>
+<div class="arithmatex">\[ \mathbf{T}(v+w) =\mathbf{T}(v) +\mathbf{T}(w) = x+y, \enspace \mathbf{T}(cv) = c\mathbf{T}(v) = cx \]</div>
+<p>이고, <span class="arithmatex">\(x+y \in \mathbf{R}(\mathbf{T}), cx \in \mathbf{R}(\mathbf{T})\)</span> 이다. 그러므로 <span class="arithmatex">\(\mathbf{R}(\mathbf{T})\)</span> 는 <span class="arithmatex">\(\mathbf{W}\)</span> 의 부분공간이다. ■ </p>
+</li>
+</ul>
+<a href="#f380ab529"><div class="admonition tldr" id="f380ab529">
+<p class="admonition-title">정리 2.2</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V} ,\mathbf{W}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \mathbf{W}\)</span> 와 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저 <span class="arithmatex">\(\beta = \{v_1, v_2, \dots, v_n\}\)</span> 에 대하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ \mathbf{R}(\mathbf{T}) = \text{span}(\mathbf{T}(\beta )) = \text{span}(\{\mathbf{T}(v_1), \mathbf{T}(v_2), \dots, \mathbf{T}(v_n)\}) \]</div>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 선형변환의 상공간을 생성하는 방법을 알려준다.</p>
+</li>
+<li>
+<p>이 정리는 <span class="arithmatex">\(\beta\)</span> 가 무한집합일 때도 성립한다. 즉, </p>
+<div class="arithmatex">\[ \mathbf{R}(\mathbf{T}) = \text{span}(\{\mathbf{T}(v) : v \in \beta \}) \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\mathbf{T}(\beta) \subset \mathbf{R}(\mathbf{T})\)</span> 이고 <span class="arithmatex">\(\mathbf{R}(\mathbf{T})\)</span> 가 부분공간이므로 <a href="../VectorSpace#aad599671">정리 1.5</a> 에 의하여</p>
+<div class="arithmatex">\[ \text{span}(\{\mathbf{T}(v_1), \mathbf{T}(v_2), \dots, \mathbf{T}(v_n)\}) =\text{span}(\mathbf{T}(\beta )) \subset \mathbf{R}(\mathbf{T})  \]</div>
+<p>이다. ▲</p>
+<p><span class="arithmatex">\(w \in \mathbf{R}(\mathbf{T}) \implies \exists v \in \mathbf{V} \text{ s.t. } w = \mathbf{T}(v)\)</span> 인데 <span class="arithmatex">\(\beta\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저이므로 <span class="arithmatex">\(a_1, a_2, \dots, a_n \in \mathbf{F}\)</span> 에 대하여</p>
+<div class="arithmatex">\[ v = \sum_{i=1}^{n}a_iv_i \]</div>
+<p>이다. <span class="arithmatex">\(\mathbf{T}\)</span> 는 선형이므로 </p>
+<div class="arithmatex">\[w = \mathbf{T}(v) = \mathbf{T} \bigg (\sum_{i=1}^{n}a_iv_i\bigg ) = \sum_{i=1}^{n}a_i\mathbf{T}(v_i) \in \text{span}(\mathbf{T}(\beta ))\]</div>
+<p>이다. 이는 <span class="arithmatex">\(\forall w \in \mathbf{R}(\mathbf{T}) \implies w \in \text{span}(\mathbf{T}(\beta ))\)</span> 을 뜻하므로</p>
+<div class="arithmatex">\[ \mathbf{R}(\mathbf{T}) \subset \text{span}(\mathbf{T}(\beta )) = \text{span}(\{\mathbf{T}(v_1), \mathbf{T}(v_2), \dots, \mathbf{T}(v_n)\}) \]</div>
+<p>이 된다. ■ </p>
+</li>
+<li>
+<p>다음 예시는 이 정리를 사용하여 <span class="arithmatex">\(\mathbf{R}(\mathbf{T})\)</span> 의 기저와 <span class="arithmatex">\(\mathbf{N}(\mathbf{T})\)</span> 의 기저를 쉽게 찾을 수 있다는 것을 말해준다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>선형변환 <span class="arithmatex">\(\mathbf{T}: \mathbf{P} _2(\R) \to \mathbf{M} _{2 \times 2}(\R)\)</span> 을 </p>
+<div class="arithmatex">\[ \mathbf{T}(f(x)) = \begin{pmatrix} f(1)-f(2) &amp; 0\\ 0 &amp; f(0)\\ \end{pmatrix} \]</div>
+<p>와 같이 정의하자. <span class="arithmatex">\(\mathbf{P} _2(\R)\)</span> 의 기저는 <span class="arithmatex">\(\beta = \{1,x,x ^{2}\}\)</span> 이므로 이 정리를 사용하여 <span class="arithmatex">\(\mathbf{R}(\mathbf{T})\)</span> 를 다음과 같이 나타낼 수 있다.</p>
+<div class="arithmatex">\[ \begin{equation}\begin{split}   \mathbf{R}(\mathbf{T}) &amp;= \text{span}(\mathbf{T}(\beta )) = \text{span}(\{\mathbf{T}(1), \mathbf{T}(x), \mathbf{T}(x ^{2})\}) \\ &amp;= \text{span}\bigg (\bigg \{ \begin{pmatrix} 0 &amp; 0\\ 0 &amp; 1\\ \end{pmatrix}, \begin{pmatrix} -1 &amp; 0\\ 0 &amp; 0\\ \end{pmatrix}, \begin{pmatrix} -3 &amp; 0\\ 0 &amp; 0\\ \end{pmatrix} \bigg \}\bigg ) \\ &amp;= \text{span}\bigg (\bigg \{ \begin{pmatrix} 0 &amp; 0\\ 0 &amp; 1\\ \end{pmatrix}, \begin{pmatrix} -1 &amp; 0\\ 0 &amp; 0\\ \end{pmatrix} \bigg \}\bigg ) \end{split}\end{equation}\tag*{} \]</div>
+<p>이로써 <span class="arithmatex">\(\mathbf{R}(\mathbf{T})\)</span> 의 기저를 찾았고 <span class="arithmatex">\(\dim(\mathbf{R}(\mathbf{T})) = 2\)</span> 임을 알 수 있다. ▲ </p>
+<p>이제 <span class="arithmatex">\(\mathbf{N}(\mathbf{T})\)</span> 의 기저를 찾아보자. <span class="arithmatex">\(2 \times 2\)</span> 영행렬 <span class="arithmatex">\(O\)</span> 에 대하여 <span class="arithmatex">\(f(x) \in \mathbf{N}(\mathbf{T}) \iff \mathbf{T}(f(x)) = O\)</span> 이므로 </p>
+<div class="arithmatex">\[ f(x) \in \mathbf{N}(\mathbf{T}) \iff \begin{pmatrix} f(1) - f(2) &amp; 0\\ 0 &amp; f(0)\\ \end{pmatrix} = \begin{pmatrix} 0&amp;0\\ 0&amp;0\\ \end{pmatrix} \]</div>
+<p>이다. <span class="arithmatex">\(f(x) = a + bx + cx ^{2}\)</span> 라 하면</p>
+<div class="arithmatex">\[ \begin{equation}\begin{split}   0&amp;= f(1) - f(2) = -b -3c\\ 0 &amp;= f(0) = a \end{split}\end{equation}\tag*{} \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ f(x) = c(-3x + x ^{2}) \]</div>
+<p>이다. 따라서 <span class="arithmatex">\(\mathbf{N}(\mathbf{T})\)</span> 의 기저는 <span class="arithmatex">\(\{-3x + x ^{2}\}\)</span> 이다. ▲ </p>
+</li>
+<li>
+<p>위 예시에서 <span class="arithmatex">\(\dim(\mathbf{N}(\mathbf{T})) + \dim(\mathbf{R}(\mathbf{T})) = 1 + 2 = 3 = \dim(\mathbf{P} _2(\R))\)</span> 이 성립하였는데 이는 <a href="#cc24674bf">정리 2.3</a> 에서와 같이 일반적으로 성립한다.</p>
+</li>
+</ul>
+<a href="#b88447cc2"><div class="admonition tldr" id="b88447cc2">
+<p>nullity(영공간의 차원) : 벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{N}(\mathbf{T})\)</span> 가 유한차원 일 때 <span class="arithmatex">\(\mathbf{N}(\mathbf{T})\)</span> 의 차원을 </p>
+<div class="arithmatex">\[  \text{nullity}(\mathbf{T}) = \dim(\mathbf{N}(\mathbf{T})) \]</div>
+<p>라고 한다. </p>
+</div></a>
+<ul>
+<li>지금까지 우리는 부분공간의 크기를 가늠할 때 차원을 사용했다. 영공간의 차원은 특히 중요하므로 새로운 이름 <span class="arithmatex">\(\text{nullity}\)</span> 을 붙혀서 다룬다.</li>
+</ul>
+<a href="#f72c12f82"><div class="admonition tldr" id="f72c12f82">
+<p>랭크(rank), 계수 : 벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{R}(\mathbf{T})\)</span> 가 유한차원 일 때 <span class="arithmatex">\(\mathbf{R}(\mathbf{T})\)</span> 의 차원을 </p>
+<div class="arithmatex">\[ \text{rank}(\mathbf{T}) = \dim(\mathbf{R}(\mathbf{T})) \]</div>
+<p>라고 한다. </p>
+</div></a>
+<ul>
+<li>지금까지 우리는 부분공간의 크기를 가늠할 때 차원을 사용했다. 상공간의 차원은 특히 중요하므로 새로운 이름 <span class="arithmatex">\(\text{rank}\)</span> 을 붙혀서 다룬다.</li>
+</ul>
+<a href="#b9412bb64"><div class="admonition tldr" id="b9412bb64">
+<p class="admonition-title">정리 2.3</p>
+<p>차원정리(dimension theorem) : 벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T}: \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{V}\)</span> 가 유한차원이면 </p>
+<div class="arithmatex">\[ \text{nullity}(\mathbf{T})+\text{rank}(\mathbf{T})= \dim(\mathbf{V} ) \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>직관적으로 선형변환에서 nullity 가 커질수록 랭크는 작아진다. 즉, 더 많은 벡터가 영벡터 <span class="arithmatex">\(0\)</span> 로 갈수록 상공간은 작아진다. 역으로 랭크가 커질수록 nullity 는 작아진다. 이 정리가 랭크과 nullity 의 관계를 말해준다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\dim(\mathbf{V} ) = n, \dim(\mathbf{N}(\mathbf{T} )) = k\)</span> 라 하고 <span class="arithmatex">\(\mathbf{N}(\mathbf{T} )\)</span> 의 기저를 <span class="arithmatex">\(\{v_1, v_2, \dots, v_k\}\)</span> 라 하면 <a href="../VectorSpace#73d920332">정리 1.11 따름정리</a> 에 의하여 <span class="arithmatex">\(\{v_1, v_2, \dots, v_k\}\)</span> 를 확장하여 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저 <span class="arithmatex">\(\beta = \{v_1, v_2, \dots, v_n\}\)</span> 을 얻을 수 있다. ▲ </p>
+<p>그러면 </p>
+<div class="arithmatex">\[S = \mathbf{T} (\beta - \{v_1, \dots, v_k\}) = \{\mathbf{T} (v _{k+1}), \mathbf{T} (v _{k+2}), \dots, \mathbf{T} (v _{n})\}\]</div>
+<p>이 <span class="arithmatex">\(\mathbf{R}(\mathbf{T} )\)</span> 의 기저임을 보이자. 먼저 <span class="arithmatex">\(\text{span}(S) = \mathbf{R}(\mathbf{T} )\)</span> 임을 보이기 위하여 <span class="arithmatex">\(1 \leq i \leq k : \mathbf{T} (v_i) = 0\)</span> 과 <a href="#f380ab529">정리 2.2</a> 를 사용하면 </p>
+<div class="arithmatex">\[ \begin{equation}\begin{split}   \mathbf{R}(\mathbf{T} ) &amp;= \text{span}(\{\mathbf{T} (v_1), \mathbf{T} (v_2), \dots, \mathbf{T} (v_n)\}) \\ &amp;= \text{span}(\{\mathbf{T} (v _{k+1}), \mathbf{T} (v _{k+2}), \dots, \mathbf{T} (v_n)\}) = \text{span}(S) \\ \end{split}\end{equation}\tag*{} \]</div>
+<p>이다. ▲ </p>
+<p><span class="arithmatex">\(S\)</span> 가 선형독립임을 보이기 위하여 <span class="arithmatex">\(b _{k+1}, \dots, b _{n} \in \mathbf{F}\)</span> 에 대하여 <span class="arithmatex">\(\displaystyle \sum_{i=k+1}^{n}b_i \mathbf{T} (v_i) = 0\)</span> 라고 하면 <span class="arithmatex">\(\mathbf{T}\)</span> 가 선형이므로 </p>
+<div class="arithmatex">\[ \mathbf{T} \bigg (\sum_{i=k+1}^{n}b_iv_i\bigg ) = 0 \iff \sum_{i=k+1}^{n}b_iv_i \in \mathbf{N}(\mathbf{T} ) \]</div>
+<p>이다. 그러면 다음 식을 만족하는 <span class="arithmatex">\(c_1, \dots, c_k \in \mathbf{F}\)</span> 가 존재한다.</p>
+<div class="arithmatex">\[ \sum_{i=k+1}^{n}b_iv_i = \sum_{i=1}^{k}c_iv_i \iff \sum_{i=1}^{k}(-c_i)v_i + \sum_{i=k+1}^{n}b_iv_i = 0 \]</div>
+<p>이때 <span class="arithmatex">\(\beta\)</span> 가 기저, 즉 일차독립이므로 이 식이 성립하려면 반드시 <span class="arithmatex">\(-c_1 = \dots = -c_k = b _{k+1} = \dots = b_n = 0\)</span> 이어야 한다. 그러므로 <span class="arithmatex">\(S\)</span> 는 일차독립이다. 그러므로 <span class="arithmatex">\(S\)</span> 는 <span class="arithmatex">\(\mathbf{R}(\mathbf{T} )\)</span> 의 기저이다. ▲ </p>
+<p><span class="arithmatex">\(S = \mathbf{T} (\beta - \{v_1, \dots, v_k\})\)</span> 가 <span class="arithmatex">\(\mathbf{R}(\mathbf{T} )\)</span> 의 기저이므로 <span class="arithmatex">\(\mathbf{T}\)</span> 는 최소한 </p>
+<div class="arithmatex">\[ \text{card}(\{v _{k+1}, \dots, v_n\}) = \text{card}(\{\mathbf{T} (v _{k+1}) , \dots, \mathbf{T} (v_n)\}) \]</div>
+<p>을 보장한다. 그러므로 <span class="arithmatex">\(\text{card}(S) = \text{card}(\beta ) - \text{card}(\{v_1, \dots, v_k\})\)</span> 라고 할 수 있고, 이에 따라 </p>
+<div class="arithmatex">\[ \therefore  \text{rank}(\mathbf{T} ) = \dim(\mathbf{V} ) - \text{nullity}(\mathbf{T} ) \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<a href="#7d40e8276"><div class="admonition tldr" id="7d40e8276">
+<p class="admonition-title">정리 2.4</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 다음은 동치이다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 단사사상이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{N}(\mathbf{T} ) = \{0\}\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(x \in \mathbf{N}(\mathbf{T} )\)</span> 이면 <span class="arithmatex">\(\mathbf{T} (x) = 0 = \mathbf{T} (0)\)</span> 인데, <span class="arithmatex">\(\mathbf{T}\)</span> 가 <a href="../../Foundations/Set/#b9a0b7bf1">단사</a>이므로 <span class="arithmatex">\(x = 0\)</span> 이다. 또한 이는 <span class="arithmatex">\(\forall x \in \mathbf{N}(\mathbf{T} ) : x = 0\)</span> 을 의미하므로 <span class="arithmatex">\(\mathbf{N}(\mathbf{T} ) = \{0\}\)</span> 이다. ▲ </p>
+<p>역으로 <span class="arithmatex">\(\mathbf{N}(\mathbf{T} ) = \{0\}\)</span> 과 <span class="arithmatex">\(\mathbf{T} (x) = \mathbf{T} (y)\)</span> 을 가정하자. <a href="#2dff80fb4">선형변환의 성질 3)</a> 에 의하여 <span class="arithmatex">\(0 = \mathbf{T} (x) - \mathbf{T} (y) = \mathbf{T} (x - y)\)</span> 이므로 </p>
+<div class="arithmatex">\[ x - y \in \mathbf{N}(\mathbf{T} ) = \{0\} \iff x - y = 0 \]</div>
+<p>이다. 즉, <span class="arithmatex">\(x = y\)</span> 이므로 <span class="arithmatex">\(\mathbf{T}\)</span> 는 단사함수이다. ■ </p>
+</li>
+</ul>
+<a href="#dfd4ff297"><div class="admonition tldr" id="dfd4ff297">
+<p class="admonition-title">정리 2.5</p>
+<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V} ,\mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\dim(\mathbf{V} ) = \dim(\mathbf{W} )\)</span> 이면 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 다음 명제가 동치이다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\mathbf{T}\)</span> 는 단사이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{T}\)</span> 는 전사이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\text{rank}(\mathbf{T} ) = \dim(\mathbf{V} )\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 차원이 같은 유한차원 사이의 선형사상이 단사이면 전단사임을 말해준다. 그러나 무한차원 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대한 선형사상 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{V}\)</span> 에 대해서는 단사와 전사가 동치가 아니다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p><a href="#b9412bb64">차원정리</a> 에 의하여 <span class="arithmatex">\(\text{rank}(\mathbf{T} )+\text{nullity}(\mathbf{T} ) = \dim(\mathbf{V} )\)</span> 인데, <a href="#7d40e8276">정리 2.4</a> 에 의하여 </p>
+<div class="arithmatex">\[ \mathbf{T} \text{ is injection } \iff \mathbf{N}(\mathbf{T} ) = \{0\} \]</div>
+<div class="arithmatex">\[ \iff \text{nullity}(\mathbf{T} ) = 0 \iff \text{rank}(\mathbf{T} ) = \dim(\mathbf{V} ) \]</div>
+<div class="arithmatex">\[ \iff \text{rank}(\mathbf{T} ) = \dim(\mathbf{W} ) \iff \dim(\mathbf{R}(\mathbf{T} )) = \dim(\mathbf{W} ) \]</div>
+<p>이다. 그런데 <a href="../VectorSpace/#26f9238cb">정리 1.11</a> 에 의하여 </p>
+<div class="arithmatex">\[ \iff \mathbf{R}(\mathbf{T} ) = \mathbf{W} \]</div>
+<p>이다. 상공간과 공역이 같으므로 <span class="arithmatex">\(\mathbf{T}\)</span> 는 전사이다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p>선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{F} ^{2} \to \mathbf{F} ^{2}\)</span> 이 </p>
+<div class="arithmatex">\[ \mathbf{T} (v, w) = (v+w, v) \]</div>
+<p>와 같이 정의되면 <span class="arithmatex">\(\mathbf{N}(\mathbf{T} ) = \{0\}\)</span> 이므로 <span class="arithmatex">\(\mathbf{T}\)</span> 는 전단사이다.</p>
+</li>
+</ul>
+<a href="#6ee8f9290"><div class="admonition tldr" id="6ee8f9290">
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V} ,\mathbf{W}\)</span> 의 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W}\)</span> 과 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분집합 <span class="arithmatex">\(S\)</span> 에 대하여 다음이 동치이다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(S\)</span> 가 일차독립이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{T} (S)\)</span> 가 일차독립이다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+</li>
+<li>
+<p>예시 </p>
+<p>선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{P} _2(\R) \to \R ^{3}\)</span> 이 </p>
+<div class="arithmatex">\[ \mathbf{T} (a_0+a_1x+a_2x ^{2}) = (a_0, a_1, a_2) \]</div>
+<p>와 같이 정의되면 <span class="arithmatex">\(\mathbf{T}\)</span> 는 단사이다. <span class="arithmatex">\(S = \{2-x+3x ^{2}, x+x ^{2}, 1-2x ^{2}\}\)</span> 라고 하면 <span class="arithmatex">\(\mathbf{T} (S) = \{(2,-1,3), (0,1,1), (1,0,-2)\}\)</span> 가 <span class="arithmatex">\(\R ^{3}\)</span> 에서 일차독립이므로 <span class="arithmatex">\(S\)</span> 도 일차독립이다.</p>
+</li>
+</ul>
+<a href="#f2d6e699f"><div class="admonition tldr" id="f2d6e699f">
+<p class="admonition-title">정리 2.6</p>
+<p><span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 와 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저 <span class="arithmatex">\(\{v_1, \dots, v_n\}\)</span> 와 벡터 <span class="arithmatex">\(w_1, \dots, w_n \in \mathbf{W}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ i \in \{1,2,\dots, n\} : \mathbf{T} (v_i) = w_i \]</div>
+<p>을 만족하는 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W}\)</span> 가 유일하게 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 선형변환이 기저에 따라 어떻게 행동할지 완벽하게 결정된다는 것을 말해준다. 이 정리와 따름정리는 매우 중요해서 선형대수학 전반에 널리 사용된다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(x \in \mathbf{V}\)</span> 를 다음과 같이 <span class="arithmatex">\(a_1, \dots, a_n \in \mathbf{F}\)</span> 에 대하여 기저의 유일한 일차결합 표현으로 나타낼 수 있다. </p>
+<div class="arithmatex">\[ x = \sum_{i=1}^{n}a_iv_i \]</div>
+<p>이때 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W}\)</span> 를 <span class="arithmatex">\(\mathbf{T} (x) = \sum_{i=1}^{n} a_iw_i\)</span> 로 정의하자. ▲ </p>
+<p>그리고 먼저 <span class="arithmatex">\(\mathbf{T}\)</span> 가 선형임을 보이자. <span class="arithmatex">\(u, v \in \mathbf{V} , d \in \mathbf{F}\)</span> 와 <span class="arithmatex">\(b_1, \dots, b_n \in \mathbf{F}\)</span> 와 <span class="arithmatex">\(c_1, \dots, c_n \in \mathbf{F}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ u = \sum_{i=1}^{n}b_iv_i, \enspace v = \sum_{i=1}^{n}c_iv_i \]</div>
+<p>이다. 그러면 <span class="arithmatex">\(du + v = \sum_{i=1}^{n} (db_i+c_i)v_i\)</span> 이므로 </p>
+<div class="arithmatex">\[ \mathbf{T} (du+v) = \sum_{i=1}^{n}(db_i+c_i)w_i = d \sum_{i=1}^{n}b_iw_i + \sum_{i=1}^{n}c_iw_i = d \mathbf{T} (u) + \mathbf{T} (v) \]</div>
+<p>이다. ▲ </p>
+<p>또한 정의에 의하여 <span class="arithmatex">\(i \in \{1, \dots, n\} : \mathbf{T} (v_i) = w_i\)</span> 이다. ▲ </p>
+<p>마지막으로 <span class="arithmatex">\(\mathbf{T}\)</span> 의 유일성을 보이자. 선형변환 <span class="arithmatex">\(\mathbf{U}:\mathbf{V} \to \mathbf{W}\)</span> 가 <span class="arithmatex">\(i \in \{1, \dots, n\} : \mathbf{T} (v_i) = w_i\)</span> 를 만족한다고 하면 <span class="arithmatex">\(x = \sum_{i=1}^{n}a_iv_i \in \mathbf{V}\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \mathbf{U} (x) = \sum_{i=1}^{n}a_i \mathbf{U} (v_i) = \sum_{i=1}^{n}a_iw_i = \mathbf{T} (x) \]</div>
+<p>이므로 <span class="arithmatex">\(\mathbf{U} =\mathbf{T}\)</span> 이다. ■ </p>
+</li>
+</ul>
+<a href="#759379ac7"><div class="admonition tldr" id="759379ac7">
+<p class="admonition-title">정리 2.6 따름정리</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{V}\)</span> 가 유한집합 기저 <span class="arithmatex">\(\{v_1, \dots, v_n\}\)</span> 을 가지면 두 선형변환 <span class="arithmatex">\(\mathbf{U} , \mathbf{T} : \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ i \in \{1, \dots, n\} : \mathbf{U} (v_i) = \mathbf{T} (v_i) \implies \mathbf{U} = \mathbf{T}  \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 두 선형변환이 기저에서 상이 같으면 같은 선형변홤임을 말하고 있다.</p>
+</li>
+<li>
+<p>예시</p>
+<p>선형변환 <span class="arithmatex">\(\mathbf{T} :\R ^{2} \to \R ^{2}\)</span> 이 </p>
+<div class="arithmatex">\[ \mathbf{T} (a_1, a_2) = (2a_2 - a_1, 3a_1) \]</div>
+<p>와 같이 정의되었다고 하자. 그러면 <span class="arithmatex">\(\{(1,2), (1,1)\}\)</span> 이 <span class="arithmatex">\(\R ^{2}\)</span> 의 기저이므로 선형변환 <span class="arithmatex">\(\mathbf{U} : \R ^{2} \to \R ^{2}\)</span> 이 <span class="arithmatex">\(\mathbf{U} (1,2)=(3,3), \mathbf{U} (1,1)=(1,3)\)</span> 이면 <span class="arithmatex">\(\mathbf{U} =\mathbf{T}\)</span> 이다.</p>
+</li>
+</ul>
+<h2 id="_3">선형변환의 행렬표현<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>이 절에서는 선형변환과 행렬이 일대일 대응됨을 알아본다.</p>
+<a href="#286d838e2"><div class="admonition tldr" id="286d838e2">
+<p>순서기저(ordered basis) : 유한차원 벡터공간의 순서가 주어진 기저이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, 순서기저란 일차독립이고 벡터공간을 생성하는 수열이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\mathbf{F} ^{3}\)</span> 에서 <span class="arithmatex">\(\beta = \{e_1, e_2, e_3\}, \gamma = \{e_2, e_1, e_3\}\)</span> 은 순서기저이다. 순서기저의 관점에서 <span class="arithmatex">\(\beta \neq \gamma\)</span> 이다.</p>
+</li>
+<li>
+<p>표준기저와 마찬가지로 표준순서기저(standard ordered basis)도 정의할 수 있다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 에서 <span class="arithmatex">\(\{e_1, e_2, \dots, e_n\}\)</span> 을 표준순서기저라고 한다.</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{P}_n(\mathbf{F} )\)</span> 에서 <span class="arithmatex">\(\{1, x, \dots, x ^{n}\}\)</span> 이 표준순서기자이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#15c775afe"><div class="admonition tldr" id="15c775afe">
+<p>좌표벡터(coordinate vector) : 유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저 <span class="arithmatex">\(\beta = \{u_1, u_2, \dots, u_n\}\)</span> 와 벡터 <span class="arithmatex">\(x \in \mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(x = \displaystyle  \sum_{i=1}^{n}a_iu_i\)</span> 을 만족하는 유일한 스칼라 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 가 존재한다. 이때 <span class="arithmatex">\(\beta\)</span> 에 대한 <span class="arithmatex">\(x\)</span> 의 좌표벡터 <span class="arithmatex">\([x] _{\beta }\)</span> 를 </p>
+<div class="arithmatex">\[ [x] _{\beta } = \begin{pmatrix}
+a_1\\
+a_2\\
+\vdots\\
+a_n
+\end{pmatrix}
+\]</div>
+<p>와 같이 정의한다.</p>
+</div></a>
+<ul>
+<li>
+<p>변환 <span class="arithmatex">\(\mathbf{V} \to \mathbf{F} ^{n}, x \mapsto [x] _{\beta }\)</span> 는 선형변환이다.</p>
+<ul>
+<li>증명</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>순서기저 <span class="arithmatex">\(\beta = \{1, x, x ^{2}\}\)</span> 를 가지는 벡터공간 <span class="arithmatex">\(\mathbf{V} = \mathbf{P} _2 (\R)\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ f(x) = 4+6x-7x ^{2} \iff [f] _{\beta } = \begin{pmatrix} 4\\ 6\\ -7\\ \end{pmatrix} \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>표준순서기저를 순서기저 <span class="arithmatex">\(\beta\)</span> 로 갖는 벡터공간 <span class="arithmatex">\(\R ^{3}\)</span> 에 대하여 벡터 <span class="arithmatex">\(x \in \R ^{3}\)</span> 가 <span class="arithmatex">\(x = (-100, 2, 50)\)</span> 이라면 </p>
+<div class="arithmatex">\[ x = -100  e_1 + 2  e_2 + 50  e_3 \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ [x] _{\beta } = \begin{pmatrix} -100\\ 2\\ 50\\ \end{pmatrix} \]</div>
+<p>이 된다.</p>
+</li>
+</ul>
+<a href="#9a08985c1"><div class="admonition tldr" id="9a08985c1">
+<p>선형변환의 행렬표현(matrix representation) : 유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 의 각각의 순서기저 <span class="arithmatex">\(\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}\)</span> 에 대하여 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W}\)</span> 을 정의하면 </p>
+<div class="arithmatex">\[ \mathbf{T} (v_j) = \sum_{i=1}^{m}a _{ij}w_i \qquad j \in \{1,\dots,n\}, i \in \{1, \dots, m\} \]</div>
+<p>을 만족하는 유일한 스칼라 <span class="arithmatex">\(a _{ij}\in \mathbf{F}\)</span> 가 존재하는데, 이때 성분이 <span class="arithmatex">\(A _{ij} = a _{ij}\)</span> 인 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 를 순서기저 <span class="arithmatex">\(\beta , \gamma\)</span> 에 대한 선형변환 <span class="arithmatex">\(\mathbf{T}\)</span> 의 행렬표현</p>
+<div class="arithmatex">\[ \boxed{A = [\mathbf{T} ] ^{\gamma } _{\beta } }\]</div>
+<p>라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>우리는 이렇게 행렬과 선형변환을 연결했는데, <a href="#aa431d8ac">정리 2.8</a> 은 이 연결이 합과 스칼라 곱을 보존함을 말해준다. 이를 위해 먼저 선형변환의 합과 스칼라 곱을 정의해볼 것이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{V} = \mathbf{W} \land \beta = \gamma\)</span> 이면 간단하게 <span class="arithmatex">\(A = [\mathbf{T} ]_{\beta }\)</span> 라고 표기한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(j\)</span> 열은 <span class="arithmatex">\([\mathbf{T} (v_j)] _{\gamma }\)</span> 이다.</p>
+</li>
+<li>
+<p>선형변환 <span class="arithmatex">\(\mathbf{U} : \mathbf{V} \to \mathbf{W}\)</span> 가 <span class="arithmatex">\([\mathbf{U} ] ^{\gamma } _{\beta } = [\mathbf{T} ]^{\gamma }_{\beta }\)</span> 를 만족하면 <a href="#759379ac7">정리 2.6 따름정리</a> 에 의하여 <span class="arithmatex">\(\mathbf{U} = \mathbf{T}\)</span> 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>선형변환 <span class="arithmatex">\(\mathbf{T} : \R ^{2} \to \R ^{3} , (a_1, a_2) \mapsto (a_1 + 3a_2, 0, 2a_1 - 4a_2)\)</span> 를 정의하고 <span class="arithmatex">\(\R ^{2}, \R ^{3}\)</span> 의 순서기저 <span class="arithmatex">\(\beta , \gamma\)</span> 를 각각의 표준순서기저로 두면 </p>
+<div class="arithmatex">\[ \mathbf{T} (1, 0) = (1, 0, 2) = 1e_1 + 0e_2 + 2e_3 \]</div>
+<div class="arithmatex">\[ \mathbf{T} (0, 1) = (3, 0, -4) = 3e_1 + 0e_2 - 4e_3 \]</div>
+<p>가 성립하므로 </p>
+<div class="arithmatex">\[ [\mathbf{T} ]^{\gamma } _{\beta } = \begin{pmatrix} 1&amp;3\\ 0&amp;0\\ 2&amp;-4\\ \end{pmatrix} \]</div>
+<p>이다. 만약 <span class="arithmatex">\(\R ^{3}\)</span> 의 순서기저로써 <span class="arithmatex">\(\gamma ' = \{e_3, e_2, e_1\}\)</span> 를 가져오면 </p>
+<div class="arithmatex">\[ [\mathbf{T} ] ^{\gamma '} _{\beta } =\begin{pmatrix} 2&amp;-4\\ 0&amp;0\\ 1&amp;3\\ \end{pmatrix} \]</div>
+<p>이 된다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{P} _3(\R) \to \mathbf{P} _2(\R)\)</span> 가 <span class="arithmatex">\(\mathbf{T} (f(x)) = f'(x)\)</span> 와 같이 정의되었고,  <span class="arithmatex">\(\mathbf{P} _3(\R), \mathbf{P} _2(\R)\)</span> 의 순서기저 <span class="arithmatex">\(\beta , \gamma\)</span> 를 표준순서기저라 하면 </p>
+<div class="arithmatex">\[ \mathbf{T} (1) = 0 \cdot 1 + 0 \cdot x + 0 \cdot x ^{2} \]</div>
+<div class="arithmatex">\[ \mathbf{T} (x) = 1 \cdot 1 + 0 \cdot x + 0 \cdot x ^{2} \]</div>
+<div class="arithmatex">\[ \mathbf{T} (x ^{2}) = 0 \cdot 1 + 2 \cdot x + 0 \cdot x ^{2} \]</div>
+<div class="arithmatex">\[ \mathbf{T} (x ^{3}) = 0 \cdot 1 + 0 \cdot x + 3 \cdot x ^{2} \]</div>
+<p>이 성립하므로 </p>
+<div class="arithmatex">\[ [\mathbf{T} ]^{\gamma } _{\beta } = \begin{pmatrix} 0&amp;1&amp;0&amp;0\\ 0&amp;0&amp;2&amp;0\\ 0&amp;0&amp;0&amp;3\\ \end{pmatrix} \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 의 순서기저를 <span class="arithmatex">\(\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}\)</span> 이라 하면 </p>
+<div class="arithmatex">\[ \mathbf{T} _0(v_j) = 0 = 0w_1+\dots+0w_m \]</div>
+<p>이므로 <span class="arithmatex">\([\mathbf{T} _0] ^{\gamma } _{\beta } = O\)</span> 이다. <span class="arithmatex">\(O\)</span> 는 <span class="arithmatex">\(m \times n\)</span> 영행렬이다.</p>
+<p>또한 </p>
+<div class="arithmatex">\[ \mathbf{I} _{\mathbf{V} }(v_j) = v_j = 0v_1 + \dots + 0v _{j-1} + 1v_j+ 0 v _{j+1}  \dots + 0 v_n \]</div>
+<p>이므로 <span class="arithmatex">\(\mathbf{I} _{\mathbf{V} }\)</span> 의 <span class="arithmatex">\(j\)</span> 열은 <span class="arithmatex">\(e_j\)</span> 이다. 따라서 </p>
+<div class="arithmatex">\[ [\mathbf{I} _{\mathbf{V} }]_{\beta } = \begin{pmatrix} 1&amp;0&amp;\dots&amp;0\\ 0&amp;1&amp;\dots&amp;0\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0&amp;0&amp;\dots&amp;1\\ \end{pmatrix} \]</div>
+<p>이다. <span class="arithmatex">\([\mathbf{I} _{\mathbf{V} }]_{\beta }\)</span> 는 <span class="arithmatex">\(n \times n\)</span> 항등행렬이다.</p>
+</li>
+<li>
+<p>위 예시는 영변환의 행렬표현이 영행렬이고, 항등변환의 행렬표현이 항등행렬임을 말해준다.</p>
+</li>
+</ul>
+<a href="#059400286"><div class="admonition tldr" id="059400286">
+<p class="admonition-title">크로네커 델타(Kronecker delta)</p>
+<div class="arithmatex">\[\delta _{ij} = \begin{cases} 1 &amp; i = j\\ 0 &amp; i \neq j\\ \end{cases}\]</div>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(n \times n\)</span> 항등행렬 <span class="arithmatex">\(I_n\)</span> 의 성분은 <span class="arithmatex">\((I_n) _{ij} = \delta _{ij}\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#63a07e35d"><div class="admonition tldr" id="63a07e35d">
+<p><span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 에서 정의된 임의의 함수 <span class="arithmatex">\(\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}\)</span> 와 <span class="arithmatex">\(a \in \mathbf{F}\)</span> 와 <span class="arithmatex">\(\forall x \in \mathbf{V}\)</span> 에 대하여 두 함수의 합과 스칼라곱을 다음과 같이 정의한다.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\mathbf{T} + \mathbf{U} : \mathbf{V} \to \mathbf{W}, (\mathbf{T} + \mathbf{U} )(x) = \mathbf{T} (x) + \mathbf{U} (x)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(a \mathbf{T} : \mathbf{V} \to \mathbf{W}, (a \mathbf{T} )(x) = a \mathbf{T} (x)\)</span></p>
+</li>
+</ul>
+</div></a>
+<ul>
+<li>이는 함수의 합의 스칼라 곱에 대한 보편적 정의인데 선형변환의 합과 스칼라 곱이 여전히 선형임을 <a href="#91b876399">다음 정리</a>가 말해준다.</li>
+</ul>
+<a href="#91b876399"><div class="admonition tldr" id="91b876399">
+<p class="admonition-title">정리 2.7</p>
+<p><span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 다음이 성립한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall a \in \mathbf{F}\)</span> 에 대하여 <span class="arithmatex">\(a \mathbf{T} + \mathbf{U}\)</span> 은 선형이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{V} \to \mathbf{W}\)</span> 에서 정의된 모든 선형변환의 집합은 <span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간이다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>1) 의 증명</p>
+<p><span class="arithmatex">\(x, y \in \mathbf{V} , c \in \mathbf{F}\)</span> 에 대하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ \begin{equation}\begin{split}   (a \mathbf{T} + \mathbf{U} )(cx+y)&amp;=a \mathbf{T} (cx+y) + \mathbf{U} (cx + y)\\ &amp;=a[\mathbf{T} (cx+y)] + c \mathbf{U} (x) + \mathbf{U} (y)\\ &amp;=a[c\mathbf{T} (x) + \mathbf{T}(y)] + c \mathbf{U} (x) + \mathbf{U} (y)\\ &amp;=ac\mathbf{T} (x) + c\mathbf{U}(x) + a \mathbf{T} (y) + \mathbf{U} (y)\\ &amp;=c(a\mathbf{T} + \mathbf{U} ) (x) + (a \mathbf{T} + \mathbf{U} )(y)\\ \end{split}\end{equation}\tag*{} \]</div>
+<p>그러므로 <span class="arithmatex">\(a \mathbf{T} + \mathbf{U}\)</span> 는 선형이다. ■ </p>
+</li>
+<li>
+<p>2) 의 증명 </p>
+<p><a href="#63a07e35d">위의 정의</a>는 임의의 함수에 대한 두 함수의 합, 스칼라 곱을 정의한 것이므로 선형변환의 합과 스칼라곱에도 적용된다. 그러므로 이 합과 스칼라 곱을 만족하는 선형변환 집합이 <a href="../VectorSpace#e992d1df1">벡터공간의 8 가지 조건</a>을 만족하는지 확인하면 된다. </p>
+<p><span class="arithmatex">\(\mathbf{V} \to \mathbf{W}\)</span> 에서 정의된 모든 선형변환의 집합을 <span class="arithmatex">\(\mathcal{L}\)</span> 라고 하자. 그러면 영변환 <span class="arithmatex">\(\mathbf{L} _0: \mathbf{V} \to \mathbf{W}\)</span> 는 <span class="arithmatex">\(\mathcal{L}\)</span> 에서 영벡터의 역할을 한다. 또한 <span class="arithmatex">\(\mathcal{L}\)</span> 가 벡터공간의 8 가지 조건을 만족한다는 것을 쉽게 확인할 수 있다. </p>
+<p>그러므로 <span class="arithmatex">\(\mathcal{L}\)</span> 는 <span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간이다. ■ </p>
+</li>
+</ul>
+<a href="#452ae71ca"><div class="admonition tldr" id="452ae71ca">
+<p>벡터공간 <span class="arithmatex">\(\mathcal{L}(\mathbf{V} , \mathbf{W} )\)</span> : <span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{V} \to \mathbf{W}\)</span> 에서 정의된 모든 선형변환의 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\mathbf{V} = \mathbf{W}\)</span> 이면 간단하게 <span class="arithmatex">\(\mathcal{L}(\mathbf{V} )\)</span> 라 표기한다.</p>
+</li>
+<li>
+<p>참고로 2.4 절에서 차원 <span class="arithmatex">\(\dim(\mathbf{V} ) = n, \dim(\mathbf{W} ) = m\)</span> 인 벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathcal{L}(\mathbf{V} , \mathbf{W} )\)</span> 와 <span class="arithmatex">\(\mathbf{M} _{m \times n}(\mathbf{F} )\)</span> 가 본질적으로 같다는 것을 보일 것이다.</p>
+</li>
+</ul>
+<a href="#aa431d8ac"><div class="admonition tldr" id="aa431d8ac">
+<p class="admonition-title">정리 2.8</p>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 에 대한 유한차원 <span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 와 각각의 순서기저 <span class="arithmatex">\(\beta , \gamma\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\([\mathbf{T} + \mathbf{U} ] ^{\gamma } _{\beta } = [\mathbf{T} ] ^{\gamma } _{\beta } + [\mathbf{U} ] ^{\gamma } _{\beta }\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall a \in \mathbf{F} ,[a \mathbf{T} ] ^{\gamma } _{\beta } = a[ \mathbf{T} ] ^{\gamma } _{\beta }\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \mathbf{T} (v_j) = \sum_{i=1}^{m}a _{ij}w_i, \enspace  \mathbf{U} (v_j) = \sum_{i=1}^{m}b _{ij}w_i, \qquad j \in \{1, \dots, n\} \]</div>
+<p>을 만족하는 유일한 스칼라 <span class="arithmatex">\(a _{ij}, b _{ij} \enspace (i \leq i \leq m, 1 \leq j \leq n)\)</span> 가 존재한다. 즉, </p>
+<div class="arithmatex">\[ (\mathbf{T} + \mathbf{U} ) (v_j) = \sum_{i=1}^{m}(a _{ij} + b _{ij}) w_i \]</div>
+<p>이고 </p>
+<div class="arithmatex">\[ ([\mathbf{T} + \mathbf{U} ] ^{\gamma } _{\beta }) _{ij} = a _{ij} + b _{ij} = ([\mathbf{T} ] ^{\gamma } _{\beta } + [\mathbf{U} ] ^{\gamma } _{\beta }) _{ij} \]</div>
+<p>이다. ▲ </p>
+<p>두번째도 행렬의 원소가 같다는 것을 보이는 방식으로 증명가능하다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p>선형변환 <span class="arithmatex">\(\mathbf{T} : \R ^{2} \to \R ^{3}, \mathbf{U} : \R ^{2} \to \R ^{3}\)</span> 을 </p>
+<div class="arithmatex">\[ \mathbf{T} (a_1, a_2) = (a_1 + 3a_2, 0, 2a_1 - 4a_2), \enspace \mathbf{U} (a_1, a_2) = (a_1 - a_2, 2a_1, 3a_1 + 2a_2) \]</div>
+<p>와 같이 정의하고, <span class="arithmatex">\(\R ^{2}, \R ^{3}\)</span> 의 순서기저로써 각각의 표준순서기저 <span class="arithmatex">\(\beta , \gamma\)</span> 를 두면 </p>
+<div class="arithmatex">\[ \mathbf{T} (1, 0) = (1, 0, 2) = 1e_1 + 0e_2 + 2e_3 \]</div>
+<div class="arithmatex">\[ \mathbf{T} (0, 1) = (3, 0, -4) = 3e_1 + 0e_2 + -4e_3 \]</div>
+<p>이고, <span class="arithmatex">\(\mathbf{U}\)</span> 의 경우도 표준순서기저의 일차결합의 스칼라를 구해보면</p>
+<div class="arithmatex">\[ [\mathbf{T} ] ^{\gamma } _{\beta } = \begin{pmatrix} 1&amp;3\\ 0&amp;0\\ 2&amp;-4\\ \end{pmatrix}, [\mathbf{U} ] ^{\gamma } _{\beta } = \begin{pmatrix} 1&amp;-1\\ 2&amp;0\\ 3&amp;2\\ \end{pmatrix} \]</div>
+<p>이 성립한다.  ▲ </p>
+<p><span class="arithmatex">\(\mathbf{T} + \mathbf{U}\)</span> 는 <a href="#63a07e35d">정의</a>에 따라 </p>
+<div class="arithmatex">\[ (\mathbf{T} + \mathbf{U} )(a_1, a_2) = (2a_1 + 2a_2, 2a_1, 5a_1 - 2a_2) \]</div>
+<p>이다. 그러면 </p>
+<div class="arithmatex">\[ (\mathbf{T} + \mathbf{U} )(1, 0) = (2, 2, 5) = 2e_1 + 2e_2 + 5e_3 \]</div>
+<div class="arithmatex">\[ (\mathbf{T} + \mathbf{U} )(0, 1) = (2, 0, -2) = 2e_1 + 0e_2 - 2e_3 \]</div>
+<p>이므로</p>
+<div class="arithmatex">\[ [\mathbf{T} + \mathbf{U} ] ^{\gamma } _{\beta } = \begin{pmatrix} 2&amp;2\\ 2&amp;0\\ 5&amp;-2\\ \end{pmatrix} \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\([\mathbf{T} + \mathbf{U} ] ^{\gamma}_{\beta} = [\mathbf{T} ] ^{\gamma}_{\beta}+[\mathbf{U} ]^{\gamma}_{\beta}\)</span> 임을 알 수 있다. ■ </p>
+</li>
+</ul>
+<h2 id="_4">선형변환의 합성과 행렬 곱<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<a href="#6ffb392af"><div class="admonition tldr" id="6ffb392af">
+<p class="admonition-title">정리 2.9</p>
+<p><span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V} ,\mathbf{W} , \mathbf{Z}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}\)</span> 에 대하여 두 선형변환의 합성 <span class="arithmatex">\(\mathbf{U} \mathbf{T} : \mathbf{V} \to \mathbf{Z}\)</span> 는 선형이다.</p>
+</div></a>
+<ul>
+<li>
+<p>두 선형변환 <span class="arithmatex">\(\mathbf{U} , \mathbf{T}\)</span> 의 합성 <span class="arithmatex">\(\mathbf{U} \circ \mathbf{T}\)</span> 을 편의상 <span class="arithmatex">\(\mathbf{U} \mathbf{T}\)</span> 로 표기하자.</p>
+</li>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(x, y \in \mathbf{V} , a \in \mathbf{F}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \begin{equation}\begin{split}   \mathbf{U} \mathbf{T} (ax + y)&amp;= \mathbf{U} (\mathbf{T} (ax +y)) \\ &amp;= \mathbf{U} (a \mathbf{T} (x) + \mathbf{T} (y))\\ &amp;=a \mathbf{U} (\mathbf{T} (x)) + \mathbf{U} (\mathbf{T} (y)) \\ &amp;=a (\mathbf{U} \mathbf{T} )(x) + \mathbf{U} \mathbf{T} (y) \\ \end{split}\end{equation}\tag*{} \]</div>
+<p>이 성립한다. ■ </p>
+</li>
+</ul>
+<a href="#efb283fdc"><div class="admonition tldr" id="efb283fdc">
+<p class="admonition-title">정리 2.10</p>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 에 대한 <span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T} , \mathbf{U} _1, \mathbf{U} _2 \in \mathcal{L}(\mathbf{V} )\)</span> 에 대하여 다음이 성립한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\mathbf{T} (\mathbf{U} _1 + \mathbf{U} _2) = \mathbf{T} \mathbf{U} _1 + \mathbf{T} \mathbf{U} _2, \enspace  (\mathbf{U} _1 + \mathbf{U} _2)\mathbf{T} = \mathbf{U} _1 \mathbf{T} +\mathbf{U} _2 \mathbf{T}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{T} (\mathbf{U} _1 \mathbf{U} _2) = (\mathbf{T} \mathbf{U} _1) \mathbf{U} _2\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{T} \mathbf{I} = \mathbf{I} \mathbf{T} = \mathbf{T}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall a \in \mathbf{F} , a(\mathbf{U} _1 \mathbf{U} _2) = (a \mathbf{U} _1)\mathbf{U} _2 = \mathbf{U} _1(a \mathbf{U} _2)\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+</li>
+<li>
+<p>이 정리는 선형변환의 정의역과 공역이 같은 경우를 말하고 있지만, 선형변환의 정의역과 공역이 같지 않으면 더 일반적인 결과가 성립한다. </p>
+<ul>
+<li>증명</li>
+</ul>
+</li>
+</ul>
+<a href="#41dc9dc1f"><div class="admonition tldr" id="41dc9dc1f">
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 에서 정의된 선형변환 <span class="arithmatex">\(\mathbf{T} \in \mathcal{L}(\mathbf{V} )\)</span> 와 <span class="arithmatex">\(k \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \mathbf{T} ^{k} = \begin{cases} \mathbf{T} ^{k-1} \mathbf{T}  &amp; k \geq 2\\ \mathbf{T}  &amp; k = 1\\ \mathbf{I} _{\mathbf{V} }  &amp; k = 0\\ \end{cases} \]</div>
+<p>라고 정의한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>무한번 미분가능한 실함수 집합 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{V}, \mathbf{T} (f) = f'\)</span> 와 같이 정의된 선형변환의 합성을 표현할 때 </p>
+<div class="arithmatex">\[ \mathbf{T} \mathbf{T} (f) = \mathbf{T} ^{2} (f) = \mathbf{T} (f') = (f')' = f'' \]</div>
+<div class="arithmatex">\[ \mathbf{T} \mathbf{T} \mathbf{T}  (f) = \mathbf{T} ^{3} (f) = \mathbf{T} ^{2} (f') = \mathbf{T}  (f'') = f''' \]</div>
+<p>와 같이 표현한다.</p>
+</li>
+</ul>
+<a href="#57b7b60d9"><div class="admonition tldr" id="57b7b60d9">
+<p>행렬곱(matrix multiplication, matrix product) : <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(n \times p\)</span> 행렬 <span class="arithmatex">\(B\)</span> 에 대하여 두 행렬 <span class="arithmatex">\(A, B\)</span> 의 곱 <span class="arithmatex">\(AB\)</span> 는 <span class="arithmatex">\(1 \leq i \leq m, 1 \leq j \leq p\)</span> 에 대하여</p>
+<div class="arithmatex">\[ (AB) _{ij} = \sum_{k=1}^{n}A _{ik}B _{kj} \]</div>
+<p>인 <span class="arithmatex">\(m \times p\)</span> 행렬이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\((AB) _{ij}\)</span> 를 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 행과 <span class="arithmatex">\(B\)</span> 의 <span class="arithmatex">\(j\)</span> 열의 성분들을 곱하고 합한 것으로 보면 편하다. </p>
+</li>
+<li>
+<p>행렬곱이 실제로 어떻게 이루어지는지 살펴보자. <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(n \times p\)</span> 행렬 <span class="arithmatex">\(B\)</span> 의 실제모습을 다음과 같이 살펴보자. </p>
+<div class="arithmatex">\[ A = \begin{pmatrix} a _{11} &amp; a _{12} &amp; \dots &amp; a _{1n}\\ a _{21} &amp; a _{22} &amp; \dots &amp; a _{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ a _{m1} &amp; a _{m2} &amp; \dots &amp; a _{mn}\\ \end{pmatrix}, B = \begin{pmatrix} b_{11} &amp; b_{12} &amp; \dots &amp; b_{1p}\\ b_{21} &amp; b_{22} &amp; \dots &amp; b_{2p}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ b_{n1} &amp; b_{n2} &amp; \dots &amp; b_{np}\\ \end{pmatrix}, \]</div>
+<p>이 두 행렬의 행렬곱 <span class="arithmatex">\(m \times p\)</span> 행렬 <span class="arithmatex">\(AB\)</span> 의 실제 모습은 다음과 같다. </p>
+<div class="arithmatex">\[ \begin{equation}\begin{split} AB &amp;= \begin{pmatrix} a _{11} b _{11} + \dots + a _{1n} b _{n1} &amp; a _{11} b _{12} + \dots + a _{1n} b _{n2} &amp; \dots&amp; a _{11} b _{1p} + \dots + a _{1n} b _{np} \\ a _{21} b _{21} + \dots + a _{2n} b _{n1} &amp; a _{21} b _{12} + \dots + a _{2n} b _{n2} &amp; \dots&amp; a _{21} b _{1p} + \dots + a _{2n} b _{np} \\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ a _{m1} b _{11} + \dots + a _{mn} b _{n1} &amp; a _{m1} b _{12} + \dots + a _{mn} b _{n2} &amp; \dots&amp; a _{m1} b _{1p} + \dots + a _{mn} b _{np} \\ \end{pmatrix}\\ &amp;= \begin{pmatrix} \sum_{k=1}^{n} a _{1k}b _{k1} &amp; \sum_{k=1}^{n} a _{1k}b _{k2} &amp; \dots&amp; \sum_{k=1}^{n} a _{1k}b _{kp} \\ \sum_{k=1}^{n} a _{2k}b _{k1} &amp; \sum_{k=1}^{n} a _{2k}b _{k2} &amp; \dots&amp; \sum_{k=1}^{n} a _{2k}b _{kp} \\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ \sum_{k=1}^{n} a _{mk}b _{k1} &amp; \sum_{k=1}^{n} a _{mk}b _{k2} &amp; \dots&amp; \sum_{k=1}^{n} a _{mk}b _{kp} \\ \end{pmatrix} \end{split}\end{equation} \tag*{} \]</div>
+<p>그러므로 <span class="arithmatex">\(m \times p\)</span> 행렬 <span class="arithmatex">\(AB\)</span> 의 <span class="arithmatex">\(i\)</span> 열 <span class="arithmatex">\(j\)</span> 행 성분은 </p>
+<div class="arithmatex">\[ (AB) _{ij} = \sum_{k=1}^{n} a _{ik}b _{kj} \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>지금까지 하고 있는 일은 선형변환과 행렬 간의 대응관계를 연구하는 것이다. 먼저 <a href="#9a08985c1">선형변환과 행렬의 대응</a>을 살펴보았다. 그리고 <a href="#63a07e35d">선형변환의 합과 스칼라곱을 정의</a>한 다음 <a href="#aa431d8ac">이 연산이 행렬에서의 합과 스칼라곱의 구조를 보존한다</a>는 것을 증명했다. 이제 두 선형변환의 합성에 어떤 행렬의 연산이 대응되는지 연구해야 한다. 즉, 행렬곱에 대하여 정의할 차례인 것이다.</p>
+<p>그렇다면 행렬 곱은 어째서 이렇게 정의되었나? 행렬 곱 정의가 두 선형변환의 합성의 구조를 보존해야 하기 때문이다. </p>
+<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V} ,\mathbf{W} ,\mathbf{Z}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}\)</span> 를 생각하자. 이때 <span class="arithmatex">\(\mathbf{V}, \mathbf{W}, \mathbf{Z}\)</span> 의 순서기저를 각각 </p>
+<div class="arithmatex">\[ \text{ordered basis of } \mathbf{V} : \alpha = \{v_1, \dots, v_n\} \]</div>
+<div class="arithmatex">\[ \text{ordered basis of } \mathbf{W} : \beta = \{w_1, \dots, w_m\} \]</div>
+<div class="arithmatex">\[ \text{ordered basis of } \mathbf{Z} : \gamma = \{z_1, \dots, z_p\} \]</div>
+<p>으로 정의하고 선형변환 <span class="arithmatex">\(\mathbf{T} , \mathbf{U}\)</span> 의 행렬표현을 </p>
+<div class="arithmatex">\[ m \times n \text{ 행렬 } B = [\mathbf{T} ] ^{\beta }_{\alpha } \]</div>
+<div class="arithmatex">\[ p \times m \text{ 행렬 } A = [\mathbf{U} ] ^{\gamma}_{\beta} \]</div>
+<p>라고 하자. 그러면 <span class="arithmatex">\(\mathbf{U} \mathbf{T} : \mathbf{V} \to \mathbf{Z}\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \boxed{ AB = [\mathbf{U} \mathbf{T} ] ^{\gamma}_{\alpha }} \]</div>
+<p>가 성립하도록 행렬곱 <span class="arithmatex">\(AB\)</span> 를 정의하면 된다. <span class="arithmatex">\(j = 1, 2, \dots, n\)</span> 에 대하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ \begin{equation}\begin{split}   (\mathbf{U} \mathbf{T} ) (v_j) &amp;= \mathbf{U} (\mathbf{T} (v_j)) = \mathbf{U} \bigg (\sum_{k=1}^{m}B _{kj} w_k\bigg ) = \sum_{k=1}^{m}B _{kj}\mathbf{U} (w_k)  \\ &amp;= \sum_{k=1}^{m}B _{kj} \bigg (\sum_{i=1}^{p}A _{ik}z_i\bigg ) = \sum_{i=1}^{p} \bigg (\sum_{k=1}^{m}A _{ik}B _{kj}\bigg ) z_i \\ \end{split}\end{equation}\tag*{} \]</div>
+<p>그러므로 행렬곱 <span class="arithmatex">\(AB\)</span> 를 <span class="arithmatex">\(p \times n\)</span> 행렬 </p>
+<div class="arithmatex">\[ (AB) _{ij} = \sum_{k=1}^{m}A _{ik} B _{kj} \]</div>
+<p>라고 정의할 수 있다.</p>
+</li>
+<li>
+<p>행렬 <span class="arithmatex">\(A, B\)</span> 의 형상이 다음과 같이 맞아야 행렬곱 연산을 할 수 있다. </p>
+<div class="arithmatex">\[ (m \times n) \cdot (n \times p) = (m \times p) \]</div>
+<p>내부 차원이 맞아야 행렬 곱 <span class="arithmatex">\(AB\)</span> 가 정의되고, 외부 차원이 행렬 <span class="arithmatex">\(AB\)</span> 의 크기를 결정한다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p>다음과 같이 <span class="arithmatex">\((2 \times 3) \cdot (3 \times 1) = 2 \times 1\)</span> 이다.</p>
+<div class="arithmatex">\[ \begin{pmatrix} 1&amp;2&amp;1\\ 0&amp;4&amp;-1\\ \end{pmatrix} \cdot \begin{pmatrix} 4\\ 2\\ 5\\ \end{pmatrix} = \begin{pmatrix} 13\\ 3\\ \end{pmatrix} \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>함수의 합성에 교환법칙이 성립하지 않으므로 행렬곱에도 교환법칙이 성립하지 않는다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>다음은 두 행렬 <span class="arithmatex">\(A,B\)</span> 가 <span class="arithmatex">\(AB \neq BA\)</span> 을 만족한다.</p>
+<div class="arithmatex">\[ \begin{pmatrix} 1&amp;1\\ 0&amp;0\\ \end{pmatrix} \begin{pmatrix} 0 &amp; 1\\ 1 &amp; 0\\ \end{pmatrix} = \begin{pmatrix} 1 &amp; 1\\ 0 &amp; 0\\ \end{pmatrix} , \quad  \begin{pmatrix} 0&amp;1\\ 1&amp;0\\ \end{pmatrix} \begin{pmatrix} 1&amp;1\\ 0&amp;0\\ \end{pmatrix} = \begin{pmatrix} 0&amp;0\\ 1&amp;1\\ \end{pmatrix} \]</div>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#3fe7e9e98"><div class="admonition tldr" id="3fe7e9e98">
+<div class="arithmatex">\[ (AB) ^{t} = B ^{t} A ^{t} \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[(AB) ^{t} _{ij} = (AB) _{ji} = \sum_{k=1}^{n}A _{jk}B _{ki}\]</div>
+<div class="arithmatex">\[(B ^{t} A ^{t}) _{ij} =  \sum_{k=1}^{n}(B ^{t})_{ik}(A ^{t}) _{kj} = \sum_{k=1}^{n}B _{ki}A ss    jkA \]</div>
+</li>
+</ul>
+<a href="#2fc8f26aa"><div class="admonition tldr" id="2fc8f26aa">
+<p class="admonition-title">정리 2.11</p>
+<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W} , \mathbf{Z}\)</span> 와 각각의 순서기저 <span class="arithmatex">\(\alpha , \beta , \gamma\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}\)</span> 에 대하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ [\mathbf{U} \mathbf{T} ] ^{\gamma}_{\alpha } = [\mathbf{U} ] ^{\gamma}_{\beta} [\mathbf{T} ] ^{\beta }_{\alpha } \]</div>
+</div></a>
+<ul>
+<li>이 정리가 행렬 곱 연산이 두 선형변환의 합성의 구조를 보존한다는 것을 말해준다. </li>
+<li>
+<p>증명 </p>
+<p>행렬곱의 정의에 의하여 이 정리가 성립함을 쉽게 알 수 있다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>선형변환 <span class="arithmatex">\(\mathbf{U}: \mathbf{P} _3(\R), \mathbf{T}:\mathbf{P} _2(\R) \to \mathbf{P} _3(\R)\)</span> 를 </p>
+<div class="arithmatex">\[ \mathbf{U} (f(x)) = f'(x), \quad \mathbf{T} (f(x)) = \int_{0}^{x}f(t)dt \]</div>
+<p>로 정의하면 <span class="arithmatex">\(\mathbf{U} \mathbf{T} = \mathbf{I}\)</span> 이다. <span class="arithmatex">\(\alpha , \beta\)</span> 를 <span class="arithmatex">\(\mathbf{P} _3(\R), \mathbf{P} _2(\R)\)</span> 의 표준순서기저라 하면 </p>
+<div class="arithmatex">\[ [\mathbf{U} \mathbf{T} ] _{\beta } = [\mathbf{U} ] ^{\beta }_{\alpha }[\mathbf{T} ]^{\alpha } _{\beta } = \begin{pmatrix} 0&amp;1&amp;0&amp;0\\ 0&amp;0&amp;2&amp;0\\ 0&amp;0&amp;0&amp;3\\ \end{pmatrix}\begin{pmatrix} 0&amp;0&amp;0\\ 1&amp;0&amp;0\\ 0&amp;\dfrac{1}{2}&amp;0\\ 0&amp;0&amp;\dfrac{1}{3}\\ \end{pmatrix} = \begin{pmatrix} 1&amp;0&amp;0\\ 0&amp;1&amp;0\\ 0&amp;0&amp;1\\ \end{pmatrix} = [\mathbf{I} ] _{\beta } \]</div>
+<p>이 성립한다.</p>
+</li>
+</ul>
+<a href="#143fdacba"><div class="admonition tldr" id="143fdacba">
+<p class="admonition-title">정리 2.11 따름정리</p>
+<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 순서기저 <span class="arithmatex">\(\beta\)</span> 와 선형연산자 <span class="arithmatex">\(\mathbf{T} , \mathbf{U} \in \mathcal{L}(\mathbf{V} )\)</span> 에 대하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ [\mathbf{U} \mathbf{T} ] _{\beta } = [\mathbf{U} ] _{\beta }[\mathbf{T} ] _{\beta } \]</div>
+</div></a>
+<blockquote>
+<p>p113. 정리 2.10, 정리 2.16 의 메타데이터</p>
+</blockquote>
+<a href="#e08d1e569"><div class="admonition tldr" id="e08d1e569">
+<p class="admonition-title">정리 2.12</p>
+<p><span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(m \times n\)</span> 행렬, <span class="arithmatex">\(B\)</span> 와 <span class="arithmatex">\(C\)</span> 가 <span class="arithmatex">\(n \times p\)</span> 행렬, <span class="arithmatex">\(D\)</span> 와 <span class="arithmatex">\(E\)</span> 가 <span class="arithmatex">\(q \times m\)</span> 행렬일 때, 다음이 성립한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(A(B+C) = AB+AC, (D+E)A = DA+EA\)</span></p>
+</li>
+<li>
+<p>임의의 스칼라 <span class="arithmatex">\(a\)</span> 에 대하여 <span class="arithmatex">\(a(AB) = (aA)B=A(aB)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(I_mA = A=AI_n\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>1) 의 증명</p>
+<div class="arithmatex">\[ \begin{equation}\begin{split}   
+[A(B+C)] _{ij} &amp;= \sum_{k=1}^{n}A _{ik}(B+C) _{kj} = \sum_{k=1}^{n}A _{ik}(B _{kj} + C _{kj})  \\
+&amp;= \sum_{k=1}^{n} (A _{ik}B _{kj} + A _{ik}C _{kj}) = \sum_{k=1}^{n} A _{ik} B _{kj} + \sum_{k=1}^{n} A _{ik} C _{kj} \\
+&amp;= (AB) _{ij} + (AC) _{ij} = [AB +AC] _{ij}
+\end{split}\end{equation}\tag*{}
+\]</div>
+<div class="arithmatex">\[ \iff A(B+C) = AB+AC \]</div>
+</li>
+<li>
+<p>3) 의 증명 </p>
+<p><span class="arithmatex">\(\displaystyle (I_mA) _{ij} = \sum_{k=1}^{m}(I_m) _{ik}A _{kj} = \sum_{k=1}^{m}\delta _{ik}A _{kj} = A _{ij}\)</span></p>
+</li>
+</ul>
+<a href="#1f115ed22"><div class="admonition tldr" id="1f115ed22">
+<p class="admonition-title">정리 2.12 따름정리</p>
+<p><span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(n \times p\)</span> 행렬 <span class="arithmatex">\(B_1, B_2, \dots, B_k\)</span> 와 <span class="arithmatex">\(q \times m\)</span> 행렬 <span class="arithmatex">\(C_1, C_2, \dots, C_k\)</span> 와 스칼라 <span class="arithmatex">\(a_1, a_2, \dots, a_k\)</span> 에 대하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ A \bigg (\sum_{i=1}^{k}a_iB_i\bigg ) = \sum_{i=1}^{k}a_iAB_i, \quad \bigg (\sum_{i=1}^{k}a_iC_i\bigg )A = \sum_{i=1}^{k}a_iC_iA \]</div>
+</div></a>
+<ul>
+<li>증명</li>
+</ul>
+<a href="#d9e83caf4"><div class="admonition tldr" id="d9e83caf4">
+<p><span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 에 대하여 행렬의 지수를 다음과 같이 정의한다.</p>
+<div class="arithmatex">\[ A ^{k} = \begin{cases} A ^{k-1}A &amp; k \geq 2\\ A &amp; k = 1\\ I_n &amp; k = 0\\ \end{cases} \]</div>
+</div></a>
+<a href="#833ec3fd5"><div class="admonition tldr" id="833ec3fd5">
+<p>행렬곱에서 소거법칙이 성립하지 않는다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(A = \begin{pmatrix} 0&amp;0\\ 1&amp;0\\ \end{pmatrix} \implies A \neq O \land A ^{2} = O\)</span> 이다. 이때 소거법칙이 성립한다고 가정하면</p>
+<div class="arithmatex">\[ A \cdot A = A ^{2} = O = A \cdot O \implies A = O \]</div>
+<p>이다. 이는 모순이다. ■ </p>
+</li>
+</ul>
+<a href="#546d2897f"><div class="admonition tldr" id="546d2897f">
+<p class="admonition-title">정리 2.13</p>
+<p><span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(n \times p\)</span> 행렬 <span class="arithmatex">\(B\)</span> 와 <span class="arithmatex">\(j = 1, 2, \dots, p\)</span> 에 대하여 <span class="arithmatex">\(AB\)</span> 의 <span class="arithmatex">\(j\)</span> 열을 <span class="arithmatex">\(u_j\)</span>, <span class="arithmatex">\(B\)</span> 의 <span class="arithmatex">\(j\)</span> 열을 <span class="arithmatex">\(v_j\)</span> 이라 하면 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(u_j = Av_j\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(v_j = Be_j\)</span> (단, <span class="arithmatex">\(e_j\)</span> 는 <span class="arithmatex">\(\mathbf{F} ^{p}\)</span> 의 <span class="arithmatex">\(j\)</span> 번째 표준벡터)</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>1) 의 증명</p>
+<div class="arithmatex">\[ u_j = \begin{pmatrix} (AB) _{1j}\\ (AB) _{2j}\\ \vdots \\ (AB) _{mj}\\ \end{pmatrix} = \begin{pmatrix} \sum_{k=1}^{n}A _{1k}B _{kj}\\ \sum_{k=1}^{n}A _{2k}B _{kj}\\ \vdots\\ \sum_{k=1}^{n}A _{mk}B _{kj}\\ \end{pmatrix} = A \begin{pmatrix} B _{1j}\\ B _{2j}\\ \vdots \\ B _{nj}\\ \end{pmatrix} = A v_j \]</div>
+</li>
+<li>
+<p>2) 의 증명</p>
+</li>
+</ul>
+<a href="#93b3bc7a2"><div class="admonition tldr" id="93b3bc7a2">
+<p class="admonition-title">정리 2.14</p>
+<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 과 각각의 순서기저 <span class="arithmatex">\(\beta , \gamma\)</span> 에 대한 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W}\)</span> 과 <span class="arithmatex">\(u \in \mathbf{V}\)</span> 에 대하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ [\mathbf{T} (u)] _{\gamma } = [\mathbf{T} ] ^{\gamma}_{\beta} [u] _{\beta } \]</div>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 선형변환에 어떤 벡터를 입력하여 행렬로 표현한 것과 선형변환과 벡터를 행렬로 표현한 후 행렬곱 한 것이 같음을 말해준다. </p>
+</li>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(u \in \mathbf{V}\)</span> 를 고정하고 다음과 같은 선형변환 <span class="arithmatex">\(f: F \to \mathbf{V} , g: F \to \mathbf{W}\)</span> 를 정의하자. </p>
+<div class="arithmatex">\[ \forall a \in F : f(a) = au, g(a) = a \mathbf{T} (u) \]</div>
+<p><span class="arithmatex">\(F\)</span> 의 표준순서기저를 <span class="arithmatex">\(\alpha = \{1\}\)</span> 라고 하자. <a href="">선형변환의 조건</a> 에 의하여 <span class="arithmatex">\(g(a) = a \mathbf{T} (u) = \mathbf{T} (au) = \mathbf{T} f(a)\)</span> 이므로 <span class="arithmatex">\(g = \mathbf{T} f\)</span> 이다. </p>
+<p>행렬의 각 열을 벡터로 보고 <a href="#2fc8f26aa">정리 2.11</a> 을 적용하면 다음이 성립한다. </p>
+<div class="arithmatex">\[ [\mathbf{T} (u)] _{\gamma } = [g(1)] _{\gamma } = [g] ^{\gamma}_{\alpha }  = [\mathbf{T} f] ^{\gamma}_{\alpha }  = [\mathbf{T} ] ^{\gamma}_{\beta} [f] ^{\beta }_{\alpha } = [\mathbf{T} ] ^{\gamma}_{\beta} [f(1)] _{\beta } = [\mathbf{T} ]^{\gamma}_{\beta} [u] _{\beta } \tag*{■} \]</div>
+</li>
+</ul>
+<a href="#dd406d3f6"><div class="admonition tldr" id="dd406d3f6">
+<p>좌측 곱 변환(left multiplication transformation) : 체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 성분을 가져온 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 에 대하여 선형변환 </p>
+<div class="arithmatex">\[ \mathbf{L} _{A} : \mathbf{F} ^{n} \to \mathbf{F} ^{m}, x \mapsto Ax \]</div>
+<p>을 좌측 곱 변환이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(x\)</span> 는 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 열벡터이다. </p>
+</li>
+<li>
+<p>좌측 곱 변환은 선형변환의 성질로 행렬의 성질을 유추하거나, 행렬의 성질로 선형변환의 성질을 유추할 때 유용하게 사용되는 도구이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(A = \begin{pmatrix} 1&amp;2&amp;1\\ 0&amp;1&amp;2\\ \end{pmatrix}, x= \begin{pmatrix} 1\\ 3\\ -1\\ \end{pmatrix}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{L} _A(x) = Ax = \begin{pmatrix} 1&amp;2&amp;1\\ 0&amp;1&amp;2\\ \end{pmatrix}\begin{pmatrix} 1\\ 3\\ -1\\ \end{pmatrix} = \begin{pmatrix} 6\\ 1\\ \end{pmatrix}\)</span> 이다. </p>
+</li>
+</ul>
+<a href="#c3298a7b3"><div class="admonition tldr" id="c3298a7b3">
+<p class="admonition-title">정리 2.15</p>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 성분을 가져온 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 에 대하여 좌측 곱 변환 <span class="arithmatex">\(\mathbf{L} _{A}: \mathbf{F} ^{n} \to  \mathbf{F} ^{m}\)</span> 은 선형이다.</p>
+<p>또한 체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 성분을 가져온 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(B\)</span> 와 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 표준순서기저 <span class="arithmatex">\(\beta\)</span>, <span class="arithmatex">\(\mathbf{F} ^{m}\)</span> 의 표준순서기저 <span class="arithmatex">\(\gamma\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\([\mathbf{L} _A] ^{\gamma}_{\beta} = A\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{L} _A = \mathbf{L} _B \iff A = B\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{L} _{A+B} = \mathbf{L} _A + \mathbf{L} _B\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall a \in \mathbf{F} : \mathbf{L} _{aA} = a \mathbf{L} _A\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{T} : \mathbf{F} ^{n} \to \mathbf{F} ^{m}\)</span> 이 선형이면 <span class="arithmatex">\(\mathbf{T} = \mathbf{L} _C\)</span> 인 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(C\)</span> 가 유일하게 존재한다. 또한 <span class="arithmatex">\(C = [\mathbf{T} ] ^{\gamma}_{\beta}\)</span> 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(n \times p\)</span> 행렬 <span class="arithmatex">\(E\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{L} _{AE} = \mathbf{L} _A \mathbf{L} _E\)</span> 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(m = n \implies \mathbf{L} _{I_n} = \mathbf{I} _{\mathbf{F} ^{n}}\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 <span class="arithmatex">\(\mathbf{L} _A\)</span> 가 선형이고 유용한 도구를 많이 제공한다는 것을 말해준다. </p>
+</li>
+<li>
+<p>증명</p>
+<p><a href="">정리 2.12</a> 에 의하여 <span class="arithmatex">\(A(B+C) = AB+AC\)</span> 이다. 이는 <span class="arithmatex">\(\mathbf{L} _A(x + y) = A(x+y) = Ax + Ay = \mathbf{L} (x) + \mathbf{L} (y)\)</span> 임을 뜻한다. </p>
+<p>또한 <a href="">정리 2.12</a> 에 의하여 스칼라 <span class="arithmatex">\(a\)</span> 에 대하여 <span class="arithmatex">\(A(aB) = a(AB)\)</span> 이다. 이는 <span class="arithmatex">\(\mathbf{L} _A(cx) = A(cx) = c(Ax) = c\mathbf{L} (x)\)</span> 임을 뜻한다. 그러므로 <span class="arithmatex">\(\mathbf{L} _A\)</span> 는 선형이다. ▲ </p>
+</li>
+</ul>
+<h2 id="_5">가역성과 동형사상<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<h2 id="_6">좌표변환 행렬<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<h2 id="_7">쌍대공간<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
+<h2 id="_8">계수가 상수인 동차 선형 미분방정식<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: Vector Space" class="md-footer__link md-footer__link--prev" href="../VectorSpace/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              Vector Space
+            </div>
+</div>
+</a>
+<a aria-label="다음: 기초 산술" class="md-footer__link md-footer__link--next" href="../../Algebra/arithmetic/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              기초 산술
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

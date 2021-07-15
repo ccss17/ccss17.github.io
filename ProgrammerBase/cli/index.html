@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/ProgrammerBase/cli/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>CLI - ccss17</title>
+<link href="../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#day4">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              CLI
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        CLI
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4">
+     ☀️ ️여기서부터 Day4   ☀️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cli">
+    CLI
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cli_1">
+    CLI 업그레이드하기
+  </a>
+<nav aria-label="CLI 업그레이드하기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dotfiles">
+    dotfiles
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alias-">
+    alias - 더 빨라진 명령 입력
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ls-lsd">
+    ls ➜ lsd
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cat-bat">
+    cat ➜ bat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xxd-hexyl">
+    xxd ➜ hexyl
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find-fd">
+    find ➜ fd
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#top-htop-gotop">
+    top ➜ htop ➜ gotop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#man-tldr">
+    man ➜ tldr
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-bpython">
+    python ➜ bpython
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fzf">
+    fzf
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bash-zsh-">
+    bash ➜ zsh - 더 빨라진 쉘
+  </a>
+<nav aria-label="bash ➜ zsh - 더 빨라진 쉘" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    테마
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tab-completion">
+    tab-completion 기능
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#auto-completion">
+    auto-completion 기능
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z">
+    z 명령어
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#auto-suggestions">
+    auto-suggestions 기능
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4_1">
+     🌜 ️여기까지 Day4     🌜️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day5">
+     ☀️ ️여기서부터 Day5   ☀️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#funny-cli">
+    Funny CLI
+  </a>
+<nav aria-label="Funny CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asciiquarium">
+    asciiquarium
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nyancat">
+    nyancat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sl">
+    sl
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#christbashtree">
+    ChristBASHTree
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unimatrix">
+    unimatrix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lolcat">
+    lolcat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipesh">
+    pipe.sh
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yulelog">
+    YuleLog
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nonogram">
+    nonogram
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day5_1">
+     🌜 ️여기까지 Day5     🌜️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4">
+     ☀️ ️여기서부터 Day4   ☀️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cli">
+    CLI
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cli_1">
+    CLI 업그레이드하기
+  </a>
+<nav aria-label="CLI 업그레이드하기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dotfiles">
+    dotfiles
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alias-">
+    alias - 더 빨라진 명령 입력
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ls-lsd">
+    ls ➜ lsd
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cat-bat">
+    cat ➜ bat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xxd-hexyl">
+    xxd ➜ hexyl
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#find-fd">
+    find ➜ fd
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#top-htop-gotop">
+    top ➜ htop ➜ gotop
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#man-tldr">
+    man ➜ tldr
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-bpython">
+    python ➜ bpython
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fzf">
+    fzf
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bash-zsh-">
+    bash ➜ zsh - 더 빨라진 쉘
+  </a>
+<nav aria-label="bash ➜ zsh - 더 빨라진 쉘" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    테마
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tab-completion">
+    tab-completion 기능
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#auto-completion">
+    auto-completion 기능
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#z">
+    z 명령어
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#auto-suggestions">
+    auto-suggestions 기능
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4_1">
+     🌜 ️여기까지 Day4     🌜️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day5">
+     ☀️ ️여기서부터 Day5   ☀️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#funny-cli">
+    Funny CLI
+  </a>
+<nav aria-label="Funny CLI" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#asciiquarium">
+    asciiquarium
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nyancat">
+    nyancat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sl">
+    sl
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#christbashtree">
+    ChristBASHTree
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unimatrix">
+    unimatrix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lolcat">
+    lolcat
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pipesh">
+    pipe.sh
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#yulelog">
+    YuleLog
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nonogram">
+    nonogram
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day5_1">
+     🌜 ️여기까지 Day5     🌜️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>CLI</h1>
+<h3 id="day4"><strong><div align="center"> ☀️ ️여기서부터 Day4   ☀️ </div></strong><a class="headerlink" href="#day4" title="Permanent link">¶</a></h3>
+<h2 id="cli">CLI<a class="headerlink" href="#cli" title="Permanent link">¶</a></h2>
+<p><strong>CLI</strong> 란 <strong>Command Line Interface</strong> 의 줄임말로써 말 그대로 터미널 인터페이스만 제공하는 프로그램을 뜻합니다. 반대로 <strong>GUI</strong>, 즉 <strong>Graphic User Interface</strong> 에는 우리가 이미 익숙해져 있습니다. 카카오톡, 배틀그라운드, 한컴, 파워포인트, <code>VSCode</code> 같은 게 전부 다 <strong>GUI</strong> 이기 때문이죠. </p>
+<p>여기에서는 다양한 <strong>CLI</strong> 들을 알아보고 지금까지 배웠던 몇몇 <strong>CLI</strong> 들은 업그레이드를 해보겠습니다.</p>
+<hr/>
+<h2 id="cli_1">CLI 업그레이드하기<a class="headerlink" href="#cli_1" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>참고/출처 : <a href="https://wiki.archlinux.org/index.php/Core_utilities#Alternatives">https://wiki.archlinux.org/index.php/Core_utilities#Alternatives</a></p>
+<p>참고/출처 : <a href="https://missing.csail.mit.edu/">https://missing.csail.mit.edu/</a> </p>
+</blockquote>
+<p>여러분은 지금까지 리눅스 교재와 이곳의 내용들을 통해서 <code>bash</code> 쉘, <code>git</code>, <code>find</code>, <code>cat</code>, <code>ls</code>, <code>vim</code>, <code>tmux</code> 같은 CLI 툴을 알아보았습니다. </p>
+<p>지금부터 이 CLI 툴들을 사용하기 편리하도록 업그레이드 해보겠습니다.</p>
+<h3 id="dotfiles">dotfiles<a class="headerlink" href="#dotfiles" title="Permanent link">¶</a></h3>
+<p>그러기 위해서 먼저 다음의 명령어들을 입력해서 각각의 툴들을 먼저 업그레이드 해야 합니다. </p>
+<div class="highlight"><pre><span></span><code>$ sudo apt-get -y -qq install git zsh vim tmux unzip curl wget 
+$ <span class="nv">ZIPFILE</span><span class="o">=</span><span class="s2">"fd.deb"</span>
+$ <span class="nv">VERSION</span><span class="o">=</span><span class="sb">`</span>curl -s https://github.com/sharkdp/fd/releases/latest <span class="p">|</span> cut -d <span class="s1">'"'</span> -f <span class="m">2</span> <span class="p">|</span> cut -d <span class="s1">'/'</span> -f <span class="m">8</span><span class="sb">`</span>
+$ wget -q -O <span class="nv">$ZIPFILE</span> -q https://github.com/sharkdp/fd/releases/download/<span class="nv">$VERSION</span>/fd_<span class="si">${</span><span class="nv">VERSION</span><span class="p">:</span><span class="nv">1</span><span class="si">}</span>_amd64.deb
+$ sudo dpkg -i <span class="nv">$ZIPFILE</span>
+$ <span class="nv">DEBFILE</span><span class="o">=</span><span class="s2">"bat.deb"</span>
+$ <span class="nv">VERSION</span><span class="o">=</span><span class="sb">`</span>curl -s https://github.com/sharkdp/bat/releases/latest <span class="p">|</span> cut -d <span class="s1">'"'</span> -f <span class="m">2</span> <span class="p">|</span> cut -d <span class="s1">'/'</span> -f <span class="m">8</span><span class="sb">`</span>
+$ wget -q -O <span class="nv">$DEBFILE</span> -q https://github.com/sharkdp/bat/releases/download/<span class="nv">$VERSION</span>/bat_<span class="si">${</span><span class="nv">VERSION</span><span class="p">:</span><span class="nv">1</span><span class="si">}</span>_amd64.deb
+$ sudo dpkg -i <span class="nv">$DEBFILE</span>
+$ <span class="nv">DEBFILE</span><span class="o">=</span><span class="s2">"lsd.deb"</span>
+$ <span class="nv">VERSION</span><span class="o">=</span><span class="sb">`</span>curl -s https://github.com/Peltoche/lsd/releases/latest <span class="p">|</span> cut -d <span class="s1">'"'</span> -f <span class="m">2</span> <span class="p">|</span> cut -d <span class="s1">'/'</span> -f <span class="m">8</span><span class="sb">`</span>
+$ wget -q -O <span class="nv">$DEBFILE</span> -q https://github.com/Peltoche/lsd/releases/download/<span class="nv">$VERSION</span>/lsd_<span class="si">${</span><span class="nv">VERSION</span><span class="si">}</span>_amd64.deb
+$ sudo dpkg -i <span class="nv">$DEBFILE</span>
+$ wget -q <span class="s2">"https://github.com/sharkdp/hexyl/releases/download/v0.6.0/hexyl_0.6.0_amd64.deb"</span>
+$ sudo dpkg -i hexyl_0.6.0_amd64.deb
+$ wget -q -O install_ohmyzsh.sh https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+$ sh install_ohmyzsh.sh --unattended
+$ rm install_ohmyzsh.sh
+$ git clone -q --recurse-submodules https://github.com/eendroroy/alien-minimal.git ~/.oh-my-zsh/custom/themes/alien-minimal
+$ git clone -q https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/plugins/zsh-autosuggestions
+$ curl -sfLo ~/.vim/autoload/onedark.vim --create-dirs https://raw.githubusercontent.com/joshdick/onedark.vim/master/autoload/onedark.vim
+$ curl -sfLo ~/.vim/colors/onedark.vim --create-dirs https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim
+$ curl -sfLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+$ vim +PlugInstall +qall
+</code></pre></div>
+<p>하지만 이 명령어들을 다 입력해야 한다니 정말 의욕이 사라지지 않나요? 그래서 제가 이것을 한 방에 설치할 수 있도록 쉘스크립트를 만들어두었습니다. </p>
+<div class="admonition danger">
+<p class="admonition-title">Speed up!!</p>
+<p>이러한 CLI 툴들의 설치와 설정들을 매번 설치하기가 너무 귀찮아서 죽을 수도 있기 때문에 사람들은 <code>dotfiles</code> 라는 이름의 레포지토리에 일관적으로 정리해놓습니다. </p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>대표적으로 <a href="https://github.com/jessfraz/dotfiles">https://github.com/jessfraz/dotfiles</a>, <a href="https://github.com/jessfraz/.vim">https://github.com/jessfraz/.vim</a> 같은 레포지토리가 유명한 <code>dotfiles</code> 레포지토리입니다. 이렇게 개인적인 설정과 개인적인 CLI 툴 업그레이드를 만들어주어도, 사람들이 그것을 보고 사용하다가 편리하면 그냥 갖다 쓰기도 합니다. </p>
+</div>
+<p>그럼 이제 다음 명령어를 통하여 저의 <code>dotfiles</code> 를 통해 CLI 들을 업그레이드해보겠습니다. 도커 컨테이너에 접속해서 진행해주세요. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>물론 여러분도 툴들을 사용하면서 개인적으로 업그레이드하고 싶은 부분이나 마음에 드는 설정을 <code>dotfiles</code> 레포지토리에 저장해놓을 수 있습니다.</p>
+</div>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ git clone https://github.com/ccss17/dotfiles-cli
+$ <span class="nb">cd</span> dotfiles-cli
+$ ./updatepkg.sh
+$ ./install.sh
+$ chsh -s /usr/bin/zsh    <span class="c1"># 기본 쉘을 bash 에서 zsh 로 바꿉니다. 비밀번호를 물으면 당연히 "a" 를 입력하면 됩니다. </span>
+</code></pre></div>
+<p>그런 다음 명령어로 다시 도커 컨테이너에 접속해보세요. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>컨테이너 아이디 <code>e7bdf01c0acb</code> 는 다들 다를거에요.</p>
+</div>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">exit</span>
+$ docker ps -a 
+CONTAINER ID        IMAGE                      COMMAND                  CREATED              STATUS                     PORTS               NAMES
+e7bdf01c0acb        ccss17/ubuntu              <span class="s2">"/start.sh"</span>              About a minute ago   Exited <span class="o">(</span><span class="m">0</span><span class="o">)</span> <span class="m">2</span> seconds ago                       hungry_albattani
+$ docker start -ai e
+</code></pre></div>
+<p>그러면 더 이상 <code>bash</code> 가 아닌 <code>zsh</code> 쉘로 로그인 되고 모든 CLI 들과 설정들이 업그레이드된 환경이 자동으로 세팅되어 있습니다.</p>
+<p>이제 어떻게 업그레이드 되었는지, 그리고 얼마나 편리해졌는지 하나씩 알아보겠습니다. </p>
+<h3 id="alias-">alias - 더 빨라진 명령 입력<a class="headerlink" href="#alias-" title="Permanent link">¶</a></h3>
+<p>먼저 몇가지 <code>alias</code> 들을 설정함으로써 명령어를 입력하는 타자 횟수를 절약해봅시다. 설정된 <code>alias</code> 들은 <code>~/.zsh_aliases</code> 파일에 저장되어 있습니다. 그리고 <code>~/.zsh_aliases</code> 는 <code>~/.zshrc</code> 의 </p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span> ~/.zsh_aliases
+</code></pre></div>
+<p>로써 적용됩니다. <code>.zshrc</code> 는 <code>bash</code> 가 실행될 때 <code>.bashrc</code> 를 실행하는 것처럼 <code>zsh</code> 이 실행될 때 실행시키는 명령어들을 모아둔 설정 파일입니다. </p>
+<ul>
+<li>
+<p><code>~/.zsh_aliases</code> 파일에 </p>
+<div class="highlight"><pre><span></span><code><span class="nb">alias</span> <span class="nv">clear</span><span class="o">=</span>c
+</code></pre></div>
+<p>를 설정해두어서 <code>clear</code> 를 매번 누르지 않고 <code>c</code> 만 눌러도 되게끔 할 수 있습니다. 하지만 개인적으로 다음의 <code>alias</code> 를 훨씬 더 많이 쓰게 되는데 </p>
+<div class="highlight"><pre><span></span><code><span class="nb">alias</span> <span class="nv">cl</span><span class="o">=</span><span class="s1">'clear;ls'</span>
+</code></pre></div>
+<p><code>clear</code> 를 하고 <code>ls</code> 를 실행함으로써 파일 목록을 바로 볼 수 있기 때문이죠. 다음을 실행하여 실제로 확인해보세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ c
+$ cl
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Speed up!!</p>
+<p>이로써 만약 여러분이 살아가는 전체 시간동안 <code>clear</code> 명령어를 <strong>1만</strong> 번 실행시킨다고 가정한다면 <strong>10000 * 5 = 5만</strong> 번 키보드를 입력해야 하는 것을 <strong>10000 * 1 = 1만</strong> 번으로 절약하여 <strong>4만 번의 타수를 절약</strong> 했습니다. </p>
+</div>
+</li>
+</ul>
+<p>이러한 <code>alias</code> 들을 자기 입맛대로 설정하여 긴 명령어를 단축해서 누를 수 있습니다. 그렇게 제가 저의 입맛대로 설정한 <code>alias</code> 들의 목록이 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th align="left"><code>alias</code></th>
+<th align="left"><code>command</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>t</code></td>
+<td align="left"><code>tmux</code></td>
+</tr>
+<tr>
+<td align="left"><code>v</code></td>
+<td align="left"><code>vim</code></td>
+</tr>
+<tr>
+<td align="left"><code>c</code></td>
+<td align="left"><code>clear</code></td>
+</tr>
+<tr>
+<td align="left"><code>cs</code></td>
+<td align="left"><code>cd ..</code></td>
+</tr>
+<tr>
+<td align="left"><code>ls</code></td>
+<td align="left"><code>lsd --icon never</code></td>
+</tr>
+<tr>
+<td align="left"><code>cl</code></td>
+<td align="left"><code>clear;ls</code></td>
+</tr>
+<tr>
+<td align="left"><code>l</code></td>
+<td align="left"><code>ls</code></td>
+</tr>
+<tr>
+<td align="left"><code>la</code></td>
+<td align="left"><code>ls -a</code></td>
+</tr>
+<tr>
+<td align="left"><code>ll</code></td>
+<td align="left"><code>ls -la</code></td>
+</tr>
+<tr>
+<td align="left"><code>lt</code></td>
+<td align="left"><code>ls --tree</code></td>
+</tr>
+<tr>
+<td align="left"><code>g</code></td>
+<td align="left"><code>git</code></td>
+</tr>
+<tr>
+<td align="left"><code>q</code></td>
+<td align="left"><code>exit</code></td>
+</tr>
+</tbody>
+</table>
+<p>실제로 위 표의 <code>alias</code> 들이 <code>~/.zsh_aliases</code> 에 설정되어 있고 도커 컨테이너에서 실행해볼 수 있습니다. </p>
+<p>특히 <code>alias ls=lsd</code> 로 <code>ls</code> 가 <code>lsd</code> 로 바꾼 것을 알 수 있습니다. 더 이상 <code>ls</code> 자체를 사용하지 않고 <code>ls</code> 를 입력하면 <code>lsd</code> 라는 프로그램이 실행되도록 한 것입니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>lsd</code> 가 어떤 프로그램이길래 원래 있던 <code>ls</code> 를 버리고 <code>lsd</code> 를 쓰는지는 아래에서 설명합니다. </p>
+<p>또한 <code>lsd --icon never</code> 의 <code>--icon never</code> 옵션은 단지 아이콘이 출력되지 않도록 하는 옵션이므로 신경 쓰지 않아도 됩니다. </p>
+</div>
+<p>이렇게 <code>ls</code> 가 <code>lsd</code> 로 치환되기 때문에 </p>
+<p><strong><code>alias l=ls</code> 로 <code>l</code> 을 입력하면 <code>lsd</code> 로 치환되고</strong></p>
+<p><strong><code>alias ll=ls -la</code> 로 <code>ll</code> 을 입력하면 <code>lsd -la</code> 로 바뀝니다.</strong> </p>
+<h3 id="ls-lsd"><code>ls</code> ➜ <code>lsd</code><a class="headerlink" href="#ls-lsd" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://github.com/Peltoche/lsd"><code>lsd</code></a></strong> 는 구식인 <code>ls</code> 명령어를 최신식으로 대체한 프로그램입니다. <code>vim</code> 을 연습할 때 사용했던 <code>lolcat</code> 의 디렉토리로 이동해서 다음 명령어로 <code>ls</code> 와 <code>lsd</code> 를 비교하며 실행해보세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ /bin/ls
+$ l
+$ /bin/ls -al
+$ ll
+</code></pre></div>
+<p>그러면 실행결과가 다음과 같을 겁니다.</p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/81694909-dd7d3200-949c-11ea-902b-d0d11c496f44.png" width="50%"/>
+</div>
+<p>이렇게 컬러풀하게 출력결과를 보여줘서 가독성이 훨씬 올려줍니다. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>lsd --icon never</code> 에서 <code>--icon never</code> 옵션이 아이콘을 출력하지 않는 옵션이라고 했습니다. 이는 CLI 환경에서 필요한 옵션이기 때문에 만약 <strong>macOS</strong> 나 리눅스 데스크탑 환경에서 <code>--icon never</code> 옵션을 제거하고 <code>lsd</code> 를 실행하면 다음과 같이 아이콘도 함께 출력되어 가독성이 훨씬 올라가는 것을 알 수 있습니다. </p>
+</div>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/81695205-45cc1380-949d-11ea-96e9-21f0f3c56dca.png" width="50%"/>
+</div>
+<h3 id="cat-bat"><code>cat</code> ➜ <code>bat</code><a class="headerlink" href="#cat-bat" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://github.com/Peltoche/lsd"><code>bat</code></a></strong> 는 구식인 <code>cat</code> 명령어를 최신식으로 대체한 프로그램입니다. 그럼 <code>cat</code> 와 <code>bat</code> 를 비교해봅시다. <code>vim</code> 때 <code>clone</code> 해놨던 <code>lolcat</code> 디렉토리로 가서 실습해주세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ cat Makefile
+$ bat Makefile
+</code></pre></div>
+<p><code>cat</code> 이 다음과 같이 밋밋하게 출력되는 반면,</p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/81692467-672b0080-9499-11ea-9b6e-7a8c72773467.png" width="40%"/>
+</div>
+<p><code>bat</code> 이 다음과 같이 컬러풀하게 출력됩니다. </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/81692558-8c1f7380-9499-11ea-9ef7-c3ed402a14f8.png" width="40%"/>
+</div>
+<p><code>bat</code> 으로 <code>lolcat.c</code> 같은 <code>C</code> 언어 소스코드도 출력해보세요. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>bat</code> 은 <code>more</code> 이나 <code>less</code> 처럼 <kbd>e</kbd> 와 <kbd>y</kbd> 를 누르면 위아래로 움직일 수 있고 <kbd>Spacebar</kbd> 와 <kbd>u</kbd> 를 누르면 페이지 단위로 위아래로 이동할 수 있으며 <code>vim</code> 처럼 <code>/</code> 로 특정 문자열을 검색할 수 있고 <code>q</code> 로 종료할 수 있습니다. </p>
+</div>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ bat lolcat.c
+</code></pre></div>
+<h3 id="xxd-hexyl"><code>xxd</code> ➜ <code>hexyl</code><a class="headerlink" href="#xxd-hexyl" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://github.com/sharkdp/hexyl"><code>hexyl</code></a></strong> 는 구식인 <code>xxd</code> 명령어를 최신식으로 대체한 프로그램입니다. <code>xxd</code> 가 리눅스 교재에서 설명되어있는지 잘 모르겠지만, 어쨌든 파일의 데이터를 헥사값으로 보여주는 프로그램인 것만 알면 됩니다. 그럼 <code>xxd</code> 와 <code>heyyl</code> 를 비교해봅시다. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>텍스트 파일보다는 바이너리 파일의 헥사값을 보는 것이 유의미하기 때문에 이미 컴파일이 된 <code>lolcat</code> 을 살펴보겠습니다. </p>
+</div>
+<div class="highlight"><pre><span></span><code>$ xxd lolcat 
+$ hexyl lolcat 
+</code></pre></div>
+<p>하지만 파일 크기가 너무 커서 앞부분을 제대로 보지 못하니 <code>less</code> 로 출력을 디라이렉트해보겠습니다. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ xxd lolcat <span class="p">|</span> less
+$ hexyl lolcat <span class="p">|</span> less
+</code></pre></div>
+<p><code>less</code> 도 <code>bat</code> 처럼 <kbd>e</kbd> 와 <kbd>y</kbd> 로 위아래로 움직일 수 있고 <kbd>Spacebar</kbd> 와 <kbd>u</kbd> 로 페이지 단위로 위아래로 이동할 수 있으며 <code>q</code> 로 종료할 수 있습니다. </p>
+<p><code>xxd</code> 와 <code>hexyl</code> 의 실행결과는 다음과 같습니다. </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/81699533-76fb1280-94a2-11ea-914c-d531063d59b9.png" width="70%"/>
+</div>
+<h3 id="find-fd"><code>find</code> ➜ <code>fd</code><a class="headerlink" href="#find-fd" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://github.com/sharkdp/fd"><code>fd</code></a></strong> 는 구식인 <code>find</code> 명령어를 최신식으로 대체한 프로그램입니다. <code>find</code> 를 리눅스 교재에서 어느정도 연습하셨을 거라고 생각합니다. <code>fd</code> 는 <code>find</code> 보다 <strong>5배</strong> 정도 빠르고 좀 더 유저들이 사용하기 편하도록 인터페이스가 대폭 개선된 모던한 프로그램입니다. </p>
+<p><code>fd</code> 는 <code>find</code> 와 상세하게 비교하기보다 다음의 사용예를 가볍게 한번 살펴보는 것으로 마무리하겠습니다. </p>
+<div align="center">
+<img height="auto" src="https://raw.githubusercontent.com/sharkdp/fd/master/doc/screencast.svg?sanitize=true" width="50%"/>
+</div>
+<blockquote>
+<p>이미지 출처 : <a href="https://github.com/sharkdp/fd">https://github.com/sharkdp/fd</a></p>
+</blockquote>
+<p><code>fd</code> 의 상세한 설명을 알고 싶다면 공식 레포지토리 <a href="https://github.com/sharkdp/fd">https://github.com/sharkdp/fd</a> 를 참고해주세요.</p>
+<h3 id="top-htop-gotop"><code>top</code> ➜ <code>htop</code> ➜ <code>gotop</code><a class="headerlink" href="#top-htop-gotop" title="Permanent link">¶</a></h3>
+<p><code>top</code> 명령어는 시스템의 리소스 상태(RAM, CPU 등) 을 출력해주는 좋은 프로그램입니다. 기존의 <code>top</code> 은 다음과 같이 약간은 밋밋하게 시스템의 상태를 출력해주었습니다.</p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82143677-8f8f7200-9880-11ea-9f4e-7cbf6ed05b69.gif" width="50%"/>
+</div>
+<p>하지만 <a href="https://github.com/hishamhm/htop"><code>htop</code></a> 은 다음과 같이 색깔도 칠하고 메모리와 CPU 상태를 핸드폰 배터리 바처럼 보여줍니다. </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82143686-a3d36f00-9880-11ea-8b4c-941f6b640b1e.gif" width="50%"/>
+</div>
+<p>마지막으로 <a href="https://github.com/cjbassi/gotop"><code>gotop</code></a> 은 다음과 같이 완벽한 그래프로 시스템의 상태를 직관적으로 출력해줍니다.</p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82143720-f3b23600-9880-11ea-9f1b-7a24784cf541.gif" width="70%"/>
+</div>
+<p>도커 컨테이너에도 <code>gotop</code> 이 이미 설치되어 있으니 시험삼아 실행해보세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ gotop
+</code></pre></div>
+<p>시스템 상태를 출력해줄 수 있는 유틸리티는 개인적인 선호에 따라 좋고 나쁨이 결정되므로 확실히 어떤 게 좋다라고 말할 수 없습니다. 따라서 그냥 개인적으로 더 나은 것 같은 CLI 를 사용하면 됩니다. </p>
+<h3 id="man-tldr"><code>man</code> ➜ <code>tldr</code><a class="headerlink" href="#man-tldr" title="Permanent link">¶</a></h3>
+<p><code>man</code> 은 명령어의 사용법을 출력하는 매우 좋은 프로그램입니다. 하지만 <code>man</code> 의 한 가지 단점은 그 사용법이 너무 방대하고 장황하다는 것입니다. 그래서 프로그램의 핵심 사용법을 쉽고 빠르게 알고 싶은 사용자들은 그 방대한 사용법에서 자신이 원하는 핵심 사용법을 이리저리 찾고 있어야만 했습니다. </p>
+<p>하지만 <a href="https://github.com/tldr-pages/tldr"><code>tldr</code></a> 은 <code>man</code> 처럼 방대한 사용법을 보여주는 것이 아니라 매우 간단한 핵심 사용법만을 알려줍니다. <code>tldr</code> 은 사용자들의 주도로 만들어져서 개발자들이 경험적으로 <strong>"이게 가장 핵심적인 사용법이다!"</strong> 라는 사용법만 간단하게 출력합니다.</p>
+<ul>
+<li>
+<p>실습 </p>
+<p><code>tar</code> 명령어는 파일과 디렉토리를 압축할 수 있는 좋은 명령어입니다. 그러나 여러가지 옵션이 약간 복잡해서 기억하기 힘들 때가 있습니다. 그럴 때는 다음 명령어를 통해 <code>tar</code> 의 사용법을 확인해야 합니다. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ man tar
+</code></pre></div>
+<p>그러면 다음과 같이 <code>tar</code> 의 <strong>모든 사용법</strong> 이 출력됩니다. </p>
+<p></p><div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82149528-ecdfef00-9891-11ea-8f14-4d98291fb144.png" width="70%"/>
+</div>
+<p>이런... 하지만 <code>man</code> 으로 <code>tar</code> 를 보니 설명이 매우 방대하고 매우 연역적으로, 그러니까 약간은 추상적으로 설명되어 있습니다. 그렇다면 다음 명령어를 실행하여 <code>tldr</code> 로 <code>tar</code> 의 사용법을 보겠습니다. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ tldr tar
+</code></pre></div>
+<p>그러면 다음과 같이 개발자들이 자주 사용하는 <code>tar</code> 의 핵심 기능들이 약간 귀납적으로, 즉 상당히 구체적으로 설명된 사용법이 출력됩니다. </p>
+<p></p><div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82149895-5829c100-9892-11ea-9147-b97e122a265c.png" width="70%"/>
+</div>
+</li>
+</ul>
+<h3 id="python-bpython"><code>python</code> ➜ <code>bpython</code><a class="headerlink" href="#python-bpython" title="Permanent link">¶</a></h3>
+<p>이번에는 파이썬 인터프리터 <code>python</code> 에 코드 하이라이팅과 자동완성 기능 등의 편리한 기능이 추가된 <code>bpython</code> 입니다.</p>
+<p>기존의 파이썬 인터프리터는 다음과 같이 실행됬었습니다.</p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/84473704-7b466580-acc4-11ea-99b0-c8b69d923f3c.gif" width="70%"/>
+</div>
+<p>하지만 <code>bpython</code> 을 사용하면 다음과 같이 코드 하이라이팅, 자동 완성, 함수 추천 기능, 자동 인덴트 등의 기능을 사용할 수 있습니다. </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/84473719-84373700-acc4-11ea-91a8-d0985210e9ce.gif" width="70%"/>
+</div>
+<p>희미한 글씨로 자동 완성 추천 기능이 발동되면 방향키 <kbd>→</kbd> 를 눌러서 자동완성을 시켜보세요.</p>
+<h3 id="fzf">fzf<a class="headerlink" href="#fzf" title="Permanent link">¶</a></h3>
+<p><a href="https://github.com/junegunn/fzf"><code>fzf</code></a> 는 다음과 같은 범용 fuzzy finder 입니다. </p>
+<p><img alt="" src="https://raw.githubusercontent.com/junegunn/i/master/fzf-preview.png"/></p>
+<blockquote>
+<p>이미지 출처 : <a href="https://github.com/junegunn/fzf">https://github.com/junegunn/fzf</a></p>
+</blockquote>
+<p>다음 명령어로 <code>fzf</code> 를 실행하고 <code>.c</code> 를 입력해서 <strong>C 언어 소스 파일</strong> 찾아보세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ fzf
+</code></pre></div>
+<p>너무 편해요! 더 많은 기능과 설명은 공식 레포지토리를 참고하세요. </p>
+<h2 id="bash-zsh-"><code>bash</code> ➜ <code>zsh</code> - 더 빨라진 쉘<a class="headerlink" href="#bash-zsh-" title="Permanent link">¶</a></h2>
+<p><code>zsh</code> 은 수많은 플러그인과 테마가 지원되는 쉘입니다. 이제 <code>bash</code> 쉘을 그만 쓰고 <code>zsh</code> 을 사용해보겠습니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>zsh</code> 의 기능이 하도 많아서 <code>zsh</code> 를 사용하는 저도 기능의 반의 반도 알지 못하지만 다시는 <code>bash</code> 를 쓸 수 없는 몸이 되버렸습니다. <code>zsh</code> 이 너무 편하기 때문이죠. </p>
+<p>2019년에 출시된 <strong>macOS Catalina</strong> 에서도 <code>bash</code> 를 버리고 <code>zsh</code> 을 기본쉘로 채택했다니까 맥유저들은 <code>zsh</code> 기능을 알면 더욱 좋겠네요. </p>
+<p><code>zsh</code> 말고도 <a href="https://fishshell.com/"><strong><code>fish</code></strong></a> 쉘도 많이 쓰입니다. </p>
+</div>
+<p><code>zsh</code> 은 <code>oh-my-zsh</code> 을 설치해야만 그 진가를 발휘하는데, 여러분의 도커 컨테이너에는 <code>dotfiles</code> 을 설치 할 때 <code>zsh</code> 과 <code>oh-my-zsh</code> 이 다 설치되어 있으니까 걱정하지 마세요. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>설치법도 다 알아보아야 하지만, <code>5</code> 일이라는 매우 제한적인 시간 때문에 부득이하게 설치법은 전부 다 생략했습니다. 설치법이 궁금하다면 <strong>Google</strong> 에 검색해서 공식 레포지토리들을 방문해보면 됩니다. </p>
+</div>
+<h3 id="_1">테마<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<p><code>zsh</code> 은 정말 수많은 테마를 갖고 있습니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes">https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes</a> 에 들어가서 마음에 드는 테마가 있는지 볼 수 있어요. </p>
+</div>
+<p>현재 도커 컨테이너에 설치되어 있는 <code>zsh</code> 테마는 다음과 같은 <a href="https://github.com/eendroroy/alien-minimal">alien-minimal</a> 입니다.</p>
+<p><a href="https://asciinema.org/a/264037"><img height="auto" src="http://asciinema.org/a/264037.svg" width="50%"/></a></p>
+<p><code>zsh</code> 테마는 단순히 <code>bash</code> 쉘 프롬프트보다 더 멋있기 때문에 사용해야 하는 것도 있지만 수많은 기능들도 제공하기 때문에 사용해야 합니다. 그 수많은 기능 중 다음 두 가지 기능만 알아보겠습니다. </p>
+<ul>
+<li>
+<p><code>git</code> 브랜치를 프롬프트에 보여준다. </p>
+<p><img height="auto" src="https://user-images.githubusercontent.com/16812446/81711439-a748ae00-94ae-11ea-87b3-2d044af66c6a.png" width="70%"/></p>
+<ul>
+<li>
+<p>위와 같이 프롬프트 우측에 <code>master</code> 가 <code>dev</code> 로 바뀌고 다시 <code>master</code>로 바뀌었습니다.</p>
+</li>
+<li>
+<p>이렇게 <code>git</code> 으로 레포지토리를 관리하다가 실험적인 기능을 테스트해야 해서 새로운 <code>branch</code> 인 <code>dev</code> 를 만들고 이주했을 때, <code>zsh</code> 의 프롬프트가 우측에 현재 상주하고 있는 <code>branch</code> 정보를 알려줍니다. </p>
+</li>
+<li>
+<p>그래서 매번 <code>git branch</code> 를 입력하여 현재 상주하고 있는 <code>branch</code> 가 어떤 건지 확인할 필요가 없습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>프로그램의 리턴값이 정상값 <code>0</code> 이 아닐경우 프롬프트에 보여준다. </p>
+<p><img height="auto" src="https://user-images.githubusercontent.com/16812446/81711915-0e666280-94af-11ea-9da8-d30192e5e16e.png" width="50%"/></p>
+<ul>
+<li>
+<p>위와 같이 <code>ls</code> 명령어를 입력하면 정상 종료 코드 <code>0</code> 가 반환되지만 존재하지 않는 명령어 <code>lss</code> 가 입력되면 비정상 종료 코드 <code>127</code> 이 반환됩니다. </p>
+</li>
+<li>
+<p><code>zsh</code> 프롬프트는 그러한 비정상 종료 코드를 보여주고 프로그램이 비정상적으로 종료되었을 때 프롬프트 색깔을 다른 색깔로 바꿔줍니다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="tab-completion"><code>tab-completion</code> 기능<a class="headerlink" href="#tab-completion" title="Permanent link">¶</a></h3>
+<p>이 기능은 명령어의 부분만 입력하고 <kbd>Tab</kbd> 을 눌렀을 때 <code>zsh</code> 이 알아서 명령어를 추천해주는 기능입니다. </p>
+<ul>
+<li>
+<p>다음과 같이 <code>cd</code> 만 누르고 <kbd>Tab</kbd> 을 누르면 명령어를 추천을 해주고, <code>cd</code> 를 선택하고 다시 <kbd>Tab</kbd> 을 누르니까 이동할 레포지토리를 추천해줍니다. 우리가 해야 할 일은 단지 <kbd>Enter</kbd> 를 누르는 것 뿐이죠. </p>
+<p><img alt="render1589349092346" src="https://user-images.githubusercontent.com/16812446/81776326-98531180-9529-11ea-871e-d3001579bfe2.gif"/></p>
+</li>
+<li>
+<p>다음과 같이 특정 디렉토리만 입력하고 나서 <kbd>Tab</kbd> 을 누르면 하위 디렉토리를 추천해줍니다. </p>
+<p><img alt="render1589349132365" src="https://user-images.githubusercontent.com/16812446/81776480-cf292780-9529-11ea-8ffd-4e457a71e6de.gif"/></p>
+</li>
+</ul>
+<h3 id="auto-completion"><code>auto-completion</code> 기능<a class="headerlink" href="#auto-completion" title="Permanent link">¶</a></h3>
+<p>이 기능은 사용자가 길고 복잡한 경로를 이동해야 할때 그것을 특정할 수 있는 문자만 입력하고 <kbd>Tab</kbd> 을 누르면 자동으로 완성해주는 <code>zsh</code> 의 기능입니다. </p>
+<ul>
+<li>
+<p><code>/usr/lib/gcc/x86_64-linux-gnu/9.3.0</code> 의 경로로 이동해야 하는 경우라고 가정하겠습니다.</p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> /usr/lib/gcc/x86_64-linux-gnu/9.3.0
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Speed up!!</p>
+<p>하지만 이건 너무 길어서 짜증나서 견딜 수가 없습니다. </p>
+</div>
+<p>그러니까 다음 명령어만 입력하고 <kbd>Tab</kbd> 을 누릅니다. </p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> /u/l/g/x/9
+</code></pre></div>
+<p>그러면 다음과 같이 <code>zsh</code> 이 경로를 지가 알아서 완성시켜 줍니다. </p>
+<p><img alt="" src="https://user-images.githubusercontent.com/16812446/81776742-51b1e700-952a-11ea-986d-4169235ff0ef.gif"/></p>
+</li>
+</ul>
+<h3 id="z"><code>z</code> 명령어<a class="headerlink" href="#z" title="Permanent link">¶</a></h3>
+<p><code>z</code> 명령어는 사용자가 자주 이동하는 디렉토리 경로의 통계를 내어서 사용자가 이동하는 경로를 특정할 수 있는 짧은 경로만 입력해도 이동할 수 있게끔 해주는 <strong>너무너무 편리</strong> 한 <code>zsh</code> 플러그인입니다. </p>
+<p>단 <code>z</code> 명령어를 사용하기 위해서는 반드시 한 번 이상은 그 경로로 이동한 적이 있어야 합니다. 왜냐하면 <code>z</code> 이 사용자가 이동한 경로를 분석하고 통계를 낼 기회를 줘야하기 때문이죠.</p>
+<div class="admonition danger">
+<p class="admonition-title">Speed up!!</p>
+<p>경로 입력 타수의 최소화!</p>
+</div>
+<ul>
+<li>
+<p>방금 전에 <code>/usr/lib/gcc/x86_64-linux-gnu/9.3.0</code> 라는 경로로 이동했었으니까 이 경로를 아마도 <code>9</code> 이 특정할 수 있을 것 같으니까 다음 명령어를 실행해봅니다. </p>
+<div class="highlight"><pre><span></span><code>$ z <span class="m">9</span>
+</code></pre></div>
+<p>실행 결과는 다음과 같습니다. </p>
+<p><img alt="render1589349777003" src="https://user-images.githubusercontent.com/16812446/81776971-d997f100-952a-11ea-8b23-0995cbb69876.gif"/></p>
+</li>
+<li>
+<p>또 우리는 <code>lolcat</code> 디렉토리를 왔다갔다 거렸습니다. 아마도 <code>lol</code> 로 이 디렉토리 경로를 특정할 수 있을 것 같네요. 그러면 다음 명령어를 입력해보세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ z lol
+</code></pre></div>
+</li>
+</ul>
+<h3 id="auto-suggestions"><code>auto-suggestions</code> 기능<a class="headerlink" href="#auto-suggestions" title="Permanent link">¶</a></h3>
+<p>이 기능은 가장 최근에 실행한 명령어를 기억하여 사용자가 그 명령어와 비슷한 타자를 친다면 자동으로 완성된 명령어를 추천해주는 <code>zsh</code> 플러그인입니다. </p>
+<div class="admonition danger">
+<p class="admonition-title">Speed up!!</p>
+<p>이 기능은 긴 명령어를 반복해야 할 때 <strong>너무 편합</strong> 니다. 명령어 입력 타수의 최소화!</p>
+</div>
+<p>사용법도 매우 간단합니다. 명령어를 입력하다 보면 <code>auto-suggestions</code> 이 희미한 글씨로 완성된 명령어를 추천하는데 그것을 실행하길 원했다면 <kbd>→</kbd> 를 눌러서 명령어를 완성시키면 됩니다.</p>
+<p>만약 <code>auto-suggestions</code> 이 추천한 명령어 전부를 원하지 않고 부분적인 것만 원한다면 <kbd>Ctrl</kbd>+<kbd>→</kbd> 를 누르면 됩니다. </p>
+<ul>
+<li>
+<p>이 <strong>GBC</strong> 과정을 만드느라 저는 도커 컨테이너를 여러번 종료했다가 재시작했어야만 했는데 그럴때마다 <code>docker start -ai b</code> 명령어를 반복적으로 입력했어야 했습니다.</p>
+<p>하지만 다음과 같이 <code>auto-suggestions</code> 이 반복되는 명령어를 추천해주기 때문에 매번 입력할 필요 없이 <code>d</code> 만 누르고 <kbd>→</kbd> 를 누르면 됩니다.</p>
+<p><code>docker start -ai b</code> 을 일일이 다 입력해야 하는 것과 비교해봅니다.</p>
+<p><img alt="render1589350187427" src="https://user-images.githubusercontent.com/16812446/81777473-dcdfac80-952b-11ea-9936-0cc6df268b47.gif"/></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>q</code> 명령어는 <code>alias</code> 파트에서 <code>alias q=exit</code> 라고 정의된 것을 확인했었습니다.</p>
+</div>
+</li>
+</ul>
+<h3 id="day4_1"><strong><div align="center"> 🌜 ️여기까지 Day4     🌜️ </div></strong><a class="headerlink" href="#day4_1" title="Permanent link">¶</a></h3>
+<h3 id="day5"><strong><div align="center"> ☀️ ️여기서부터 Day5   ☀️ </div></strong><a class="headerlink" href="#day5" title="Permanent link">¶</a></h3>
+<h2 id="funny-cli">Funny CLI<a class="headerlink" href="#funny-cli" title="Permanent link">¶</a></h2>
+<p>이제 여기까지 달려온 여러분들을 위해 머리를 좀 식히자는 의미에서 <strong>퍼니 CLI</strong>, 즉 실용성이 없이 순전히 재미를 목적으로 만들어진 <strong>CLI</strong> 들을 알아보겠습니다. </p>
+<p>이 부분은 <strong>실용성이 전혀 없기 때문에</strong> 직접 실습하셔도 되고 안하셔도 됩니다. 또 <strong>시간이 아깝다면 Funny CLI 부분을 넘겨도 됩니다</strong>. 즉, 아예 안봐도 됩니다.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>이 <strong>Funny CLI</strong> 들 또한 이미 도커 컨테이너에 설치되어 있기 때문에 설치법은 모두 생략합니다. 각각의 공식 레포지토리에 들어가면 설치법을 알 수 있습니다. </p>
+</div>
+<p>그러면 이제 도커 컨테이너에 접속해서 진행해주세요. </p>
+<h3 id="asciiquarium">asciiquarium<a class="headerlink" href="#asciiquarium" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://github.com/cmatsuoka/asciiquarium"><code>asciiquarium</code></a></strong> 은 아스키 코드로 만들어진 아쿠아리움을 뜻합니다. </p>
+<p>이 명령어를 실행해보면 </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ asciiquarium
+</code></pre></div>
+<p>다음과 같은 아스키로 이루어진 아쿠아리움이 나옵니다. </p>
+<p><img alt="render1588863585888" src="https://user-images.githubusercontent.com/16812446/81310305-e21da100-90be-11ea-9b15-ed6de1c600ca.gif"/></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>q</code> 로 종료할 수 있어요. </p>
+</div>
+<h3 id="nyancat">nyancat<a class="headerlink" href="#nyancat" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://github.com/klange/nyancat"><code>nyancat</code></a></strong> 은 <strong>CLI</strong> 로 고양이가 뛰어다니는 것을 보여주는 미친 프로그램입니다. </p>
+<p>이 명령어를 실행해보면 </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ nyancat
+</code></pre></div>
+<p>다음과 같은 미친 고양이가 뛰어놉니다. </p>
+<p><img alt="render1588863923651" src="https://user-images.githubusercontent.com/16812446/81310941-b5b65480-90bf-11ea-9540-641c5c71b96b.gif"/></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><kbd>Ctrl</kbd>+<kbd>c</kbd> 로 종료할 수 있어요. </p>
+</div>
+<h3 id="sl">sl<a class="headerlink" href="#sl" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://github.com/mtoyoda/sl"><code>sl</code></a></strong> 은 <strong>CLI</strong> 로 기차를 보여주는 프로그램입니다.</p>
+<p>이 명령어를 실행해보면 </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ /usr/games/sl
+</code></pre></div>
+<p>다음과 같이 기차가 지나갑니다. </p>
+<p><img alt="render1588864227794" src="https://user-images.githubusercontent.com/16812446/81311546-805e3680-90c0-11ea-8bcb-fb64b154053f.gif"/></p>
+<h3 id="christbashtree">ChristBASHTree<a class="headerlink" href="#christbashtree" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://github.com/sergiolepore/ChristBASHTree"><code>ChristBASHTree</code></a></strong> 은 <strong>CLI</strong> 로 크리스마스 트리를 보여주는 프로그램입니다.</p>
+<p>이 명령어를 실행해보면 </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ ChristBASHTree
+</code></pre></div>
+<p>다음과 같이 크리스마스 트리가 나타납니다. </p>
+<p><img alt="render1588865712684" src="https://user-images.githubusercontent.com/16812446/81314439-134ca000-90c4-11ea-9ef0-2ab491c70090.gif"/></p>
+<h3 id="unimatrix">unimatrix<a class="headerlink" href="#unimatrix" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://github.com/will8211/unimatrix"><code>unimatrix</code></a></strong> 은 <strong>CLI</strong> 로 매트릭스를 보여주는 프로그램입니다. </p>
+<p>이 명령어를 실행해보면 </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ unimatrix -c red
+</code></pre></div>
+<p>다음과 같이 붉은 매트릭스 나타납니다. </p>
+<p><img alt="7tIs8Ca4Xm" src="https://user-images.githubusercontent.com/16812446/81960485-fbd56000-964b-11ea-9c7b-40ff88e2f42f.gif"/></p>
+<h3 id="lolcat">lolcat<a class="headerlink" href="#lolcat" title="Permanent link">¶</a></h3>
+<p><a href="https://github.com/jaseg/lolcat"><code>lolcat</code></a> 은 우리가 이미 <code>vim</code> 을 연습할 때 설치하고 테스트 해봤던 프로그램입니다. 따라서 설치법과 실행법은 생략하고 다음의 실행결과만 가볍게 살펴보고 넘어가겠습니다.</p>
+<p><img alt="render1589351764615" src="https://user-images.githubusercontent.com/16812446/81779347-7d839b80-952f-11ea-891e-1f29490c678d.gif"/></p>
+<h3 id="pipesh">pipe.sh<a class="headerlink" href="#pipesh" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://github.com/pipeseroni/pipes.sh"><code>pipe.sh</code></a></strong> 는 <strong>CLI</strong> 로 파이프를 보여주는 프로그램입니다.</p>
+<p>다음 명령어를 실행해보면 </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ pipes.sh
+</code></pre></div>
+<p>이렇게 파이프가 나타납니다. </p>
+<p><img alt="render1588866558609" src="https://user-images.githubusercontent.com/16812446/81316124-2496ac00-90c6-11ea-8c0e-b66bc92029fe.gif"/></p>
+<h3 id="yulelog">YuleLog<a class="headerlink" href="#yulelog" title="Permanent link">¶</a></h3>
+<p><strong><a href="https://github.com/Duroktar/YuleLog"><code>YuleLog</code></a></strong> 는 <strong>CLI</strong> 로 따뜻한 장작을 보여주는 프로그램입니다.</p>
+<p>다음 명령어를 실행해보면 </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ YuleLog
+</code></pre></div>
+<p>따뜻한 장작이 나타납니다. </p>
+<p><img alt="render1588865888181" src="https://user-images.githubusercontent.com/16812446/81315262-0ed4b700-90c5-11ea-92e6-c6e91cfabbf0.gif"/></p>
+<h3 id="nonogram">nonogram<a class="headerlink" href="#nonogram" title="Permanent link">¶</a></h3>
+<p>마지막으로 <strong><a href="https://github.com/ccss17/nonogram"><code>nonogram</code></a></strong> 는 네모로직 수학퍼즐을 지알아서 풀어서 <strong>CLI</strong> 로 결과를 출력해주는 제가 만든 프로그램입니다. 설치법은 다음과 같습니다.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<p></p><div class="highlight"><pre><span></span><code>$ g cl https://github.com/ccss17/nonogram
+</code></pre></div>
+그런 다음 이 명령어를 실행해보면 
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> nonogram
+$ python3 main.py test/55.txt
+$ python3 main.py test/1010.txt
+$ python3 main.py test/1515.txt
+$ python3 main.py test/2020.txt
+$ python3 main.py test/2525.txt
+$ python3 main.py test/3030.txt
+</code></pre></div>
+<p>다음과 같이 프로그램이 각각의 샘플 네모로직 수학퍼즐이 지알아서 풀고 출력합니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>소스코드와 더 자세한 설명을 원한다면 <a href="https://github.com/ccss17/nonogram">https://github.com/ccss17/nonogram</a> 를 참고해주세요. </p>
+</div>
+<p><img alt="1cbY6BnXq5" src="https://user-images.githubusercontent.com/16812446/81961266-1825cc80-964d-11ea-82c1-96c9d26eed7f.gif"/></p>
+<p>가령 <code>15x15</code> 네모로직 수학퍼즐의 샘플의 구조를 특정하고 있는 <code>test/1515.txt</code> 파일은 </p>
+<p><img alt="" src="https://user-images.githubusercontent.com/16812446/72774545-5a667080-3c4e-11ea-951d-7668876134ac.png"/></p>
+<blockquote>
+<p>출처 : <a href="http://nemonemologic.com/play_logic.php?quid=10170&amp;page=0&amp;size=15">http://nemonemologic.com/play_logic.php?quid=10170&amp;page=0&amp;size=15</a></p>
+</blockquote>
+<p>의 데이터를 담고 있는데 이것을 자동으로 풀기 위하여 <code>python3 main.py test/1515.txt</code> 를 입력하면 되는 것입니다. </p>
+<h3 id="day5_1"><strong><div align="center"> 🌜 ️여기까지 Day5     🌜️ </div></strong><a class="headerlink" href="#day5_1" title="Permanent link">¶</a></h3>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: Vim" class="md-footer__link md-footer__link--prev" href="../vim/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              Vim
+            </div>
+</div>
+</a>
+<a aria-label="다음: README" class="md-footer__link md-footer__link--next" href="../../security-tutorial/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              README
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

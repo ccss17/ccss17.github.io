@@ -1,0 +1,2078 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/AI/dl_from_scratch/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>Deep Learning from Scratch - ccss17</title>
+<link href="../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#deep-learning-from-scratch">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Deep Learning from Scratch
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deep-learning-from-scratch">
+    Deep Learning from Scratch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#perceptron">
+    퍼셉트론 Perceptron
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    신경망
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    순전파
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    기계학습
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    손실함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    미분
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Deep Learning from Scratch</h1>
+<h2 id="deep-learning-from-scratch">Deep Learning from Scratch<a class="headerlink" href="#deep-learning-from-scratch" title="Permanent link">¶</a></h2>
+<p><a href="https://book.naver.com/bookdb/book_detail.nhn?bid=11492334">밑바닥부터 시작하는 딥러닝</a>의 개인 메모입니다.</p>
+<h2 id="perceptron">퍼셉트론 Perceptron<a class="headerlink" href="#perceptron" title="Permanent link">¶</a></h2>
+<a href="#c3727e843"><div class="admonition tldr" id="c3727e843">
+<p>계단 함수(step function) : 입력 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(0\)</span> 을 넘으면 <span class="arithmatex">\(y = 1\)</span> 을 출력하고, <span class="arithmatex">\(0\)</span> 과 같거나 작으면 <span class="arithmatex">\(y = 0\)</span> 을 출력하는 함수</p>
+<div class="arithmatex">\[ y = \begin{cases} 1\ (x &gt; 0) &amp;\text{}\\ 0\ (x \leq 0) &amp;\text{}\\ \end{cases} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>코드로도 간단하게 구현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">step_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div>
+<p>위 코드는 <code>numpy</code> 의 행렬(배열)을 인수로 받을 수 없다. 따라서 다음과 같이 고칠 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">step_function</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">y</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+</code></pre></div>
+</li>
+</ul>
+<a href="#1b011f232"><div class="admonition tldr" id="1b011f232">
+<p>시그모이드 함수(sigmoid function) : 정의역 <span class="arithmatex">\((- \infty , \infty )\)</span> 과 치역 <span class="arithmatex">\((0, 1)\)</span> 을 가지는 함수로써 </p>
+<p>입력 <span class="arithmatex">\(x\)</span> 에 대하여 다음의 출력 <span class="arithmatex">\(y\)</span> 를 계산하는 함수이다.</p>
+<div class="arithmatex">\[ y = \zeta (x) = \dfrac{1}{1+e ^{-x}} \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ y = \zeta (x) =\dfrac{1}{1+\text{exp}(-x)} \]</div>
+</div></a>
+<ul>
+<li>
+<p>편의상 표준 시그모이드 함수를 단순히 시그모이드 함수라고 부르는 것이다.</p>
+</li>
+<li>
+<p>음의 무한대 <span class="arithmatex">\(- \infty\)</span> 에 가까울 수록 <span class="arithmatex">\(0\)</span> 에 수렴하고,</p>
+<p>양의 무한대 <span class="arithmatex">\(\infty\)</span> 에 가까울 수록 <span class="arithmatex">\(1\)</span> 에 수렴하고,</p>
+<p>그 중간인 <span class="arithmatex">\(0\)</span> 이면 <span class="arithmatex">\(\dfrac{1}{2}\)</span> 을 출력한다.</p>
+</li>
+<li>
+<p>시그모이드라는 이름 <strong>sigmoid</strong> 는 단순히 함수가 "S자 모양" 이라는 뜻이다. 계단 함수처럼 함수의 개형을 보고 이름을 붙힌 것이다. </p>
+<p>그러니까 시그모이드 함수라고 하면 그냥 <strong>"S자 모양 함수이다."</strong> 라고 이해하면 된다. </p>
+<ul>
+<li>
+<p>다음과 같이 표준 시그모이드 함수는 S 자 모양을 그린다.</p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/77422864-87333180-6e11-11ea-8200-6f070e22c6d9.png"/></p>
+</li>
+</ul>
+</li>
+<li>
+<p>시그모이드 함수는 다음과 같이 간단히 코드로 구현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+</code></pre></div>
+</li>
+</ul>
+<a href="#1acc383f5"><div class="admonition tldr" id="1acc383f5">
+<p>퍼셉트론(perceptron) 또는 인공뉴런 : 임의의 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 <span class="arithmatex">\(n\)</span> 개의 실수 <span class="arithmatex">\(x\)</span>(입력) 와 그 입력에 각각 대응되는 실수 <span class="arithmatex">\(w\)</span>(가중치) 를 곱한 것을 모두 더한 실수 <span class="arithmatex">\(z\)</span>(순입력) 가</p>
+<p>실수 <span class="arithmatex">\(\theta\)</span>(임계값) 보다 크면 <span class="arithmatex">\(y=0\)</span> 을 계산(출력)하고, 같거나 작으면 <span class="arithmatex">\(y=1\)</span> 을 계산(계단함수)하는 알고리즘(계산과정)이다.</p>
+<div class="arithmatex">\[ y = \begin{cases} 1\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} &gt; \theta \bigg ) &amp;\text{}\\ 0\ \bigg (\displaystyle z = \sum_{i=1}^{n}w _{i} x _{i} \leq \theta \bigg ) &amp;\text{}\\ \end{cases} \]</div>
+</div></a>
+<ul>
+<li>
+<p>또는 <span class="arithmatex">\(b = -\theta\)</span> 에 대하여</p>
+<div class="arithmatex">\[ y = \begin{cases} 1\ \bigg (\displaystyle b + \sum_{i=1}^{n}w _{i} x _{i} &gt; 0 \bigg ) &amp;\text{}\\ 0\ \bigg (\displaystyle b + \sum_{i=1}^{n}w _{i} x _{i} \leq 0 \bigg ) &amp;\text{}\\ \end{cases} \]</div>
+<p>로 표현할 수 있다.</p>
+<ul>
+<li>
+<p>이때 <span class="arithmatex">\(b\)</span> 를 편향(bias) 라고 한다.</p>
+</li>
+<li>
+<p>그러므로 원래는 <span class="arithmatex">\(n\)</span> 차원 벡터 <span class="arithmatex">\(x = \begin{bmatrix} x_1\\x_2\\\dots\\x_n\end{bmatrix}\)</span> (입력) 의 전치와 <span class="arithmatex">\(n\)</span> 차원 벡터 <span class="arithmatex">\(w = \begin{bmatrix} w_1\\w_2\\\dots\\w_n\end{bmatrix}\)</span> (가중치) 의 행렬곱(순입력)</p>
+<div class="arithmatex">\[ x ^{T}w = \sum_{i=1}^{n} w _{i} x _{i} = z \]</div>
+<p>이 <span class="arithmatex">\(z &gt; \theta\)</span> 이면 <span class="arithmatex">\(y=1\)</span> 로, <span class="arithmatex">\(z \leq  \theta\)</span> 이면 <span class="arithmatex">\(y=0\)</span> 로 계산했었다.</p>
+</li>
+<li>
+<p>그러나 임계값 <span class="arithmatex">\(\theta\)</span> 를 편향 <span class="arithmatex">\(b\)</span> 로 바꾸어 표현한 모델에서는 입력 <span class="arithmatex">\(x_0 = 1\)</span> 와 가중치 <span class="arithmatex">\(w_0 = b\)</span> 를 추가하여 </p>
+<p><span class="arithmatex">\(x_0=1\)</span> 에 대한 <span class="arithmatex">\(n+1\)</span> 차원 벡터 <span class="arithmatex">\(x = \begin{bmatrix} x_0\\x_1\\x_2\\\dots\\x_n\end{bmatrix}\)</span> (입력) 의 전치와 </p>
+<p><span class="arithmatex">\(w_0 = b\)</span> 에 대한 <span class="arithmatex">\(n+1\)</span> 차원 벡터 <span class="arithmatex">\(w = \begin{bmatrix} w_0 \\ w_1\\w_2\\\dots\\w_n\end{bmatrix}\)</span> (가중치) 의 행렬곱(순입력)</p>
+<div class="arithmatex">\[ x ^{T}w = b + \sum_{i=1}^{n} w _{i} x _{i} =  \sum_{i=0}^{n} w _{i} x _{i} = z (\because b = x_0w_0 = 1 \cdot b)\]</div>
+<p>이 <span class="arithmatex">\(z &gt; 0\)</span> 이면 <span class="arithmatex">\(y=1\)</span> 로, <span class="arithmatex">\(z \leq  0\)</span> 이면 <span class="arithmatex">\(y=0\)</span> 로 계산한다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>퍼셉트론이란 1957년 프랑크 로젠블라트(Frank Rosenblatt) 가 논문 《The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain》  고안한 알고리즘이다.</p>
+</li>
+<li>
+<p>이 퍼셉트론이 신경망(딥러닝)의 기원이 되는 알고리즘이다.</p>
+</li>
+<li>
+<p>이 퍼셉트론을 <strong>인공뉴런</strong>, **단순 퍼셉트론**으로 부르지면 여기서는 단순히 **퍼셉트론**이라고 하자.</p>
+</li>
+<li>
+<p>이 퍼셉트론 알고리즘으로 할 수 있는 일이란 입력을 직선으로(선형적으로) 두 가지로 분류하는 것이다.</p>
+<ul>
+<li>
+<p>퍼셉트론 알고리즘으로 직선으로, 즉 선형적으로 분류가 가능한 다음과 같은 단순한 문제들을 풀 수 있다. </p>
+<p>이것은 퍼셉트론 알고리즘이 매개변수(가중치 <span class="arithmatex">\(w\)</span>, 임계값 <span class="arithmatex">\(\theta\)</span>)를 조정하는 것으로써 다양한 알고리즘(AND 게이트, OR 게이트, NAND 게이트)로 사상될 수 있다는 것을 의미한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>**AND 게이트**는 다음과 같이 <span class="arithmatex">\(2\)</span> 개의 입력에 대하여 <span class="arithmatex">\(1\)</span> 개의 출력을 계산한다.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(x_1\)</span></th>
+<th align="center"><span class="arithmatex">\(x_2\)</span></th>
+<th align="center"><span class="arithmatex">\(y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>퍼셉트론으로 AND 게이트를 표현하려 한다. 그렇다면 <span class="arithmatex">\(2\)</span> 개의 입력 <span class="arithmatex">\(x\)</span> 와 그에 대응되는 가중치 <span class="arithmatex">\(w\)</span> 를 곱한 것을 모두 더한 <span class="arithmatex">\(y\)</span> 가 임계값 <span class="arithmatex">\(\theta\)</span> 보다 클 때 <span class="arithmatex">\(1\)</span>, 같거나 작을 때 <span class="arithmatex">\(0\)</span> 을 출력하게 하면 된다. </p>
+<p>입력 <span class="arithmatex">\(x\)</span> 는 임의의 수 <span class="arithmatex">\(0, 1\)</span> 이고 이것을 가중치 <span class="arithmatex">\(w\)</span> 로 계산하고 임계값 <span class="arithmatex">\(\theta\)</span> 와 비교하므로 결국 <strong>가중치 <span class="arithmatex">\(w\)</span> 와 임계값 <span class="arithmatex">\(\theta\)</span> 을 조정하는 것으로 퍼셉트론을 특정해주어야</strong> 한다.</p>
+<p>이 경우 <span class="arithmatex">\((w _{1}, w _{2}, \theta) = (0.5, 0.5, 0.7)\)</span> 로 설정하면 퍼셉트론이 AND 게이트와 같은 출력(계산결과)를 낼 수 있다.</p>
+<blockquote>
+<p>그런데 이로써 어떤 대상에게는 불변요소(변하지 않는 요소, 변하지만 우리가 임의로 조작할 수 없는 요소 등)와 가변요소(우리가 임의로 조작할 수 있는 요소) 가 있다는 것을 알 수 있다. 실제로 우리는 모든 대상을 불변 혹은 가변이라는 기준으로 분석할 수 있다. 그런데 이 대상은 물론 계산 가능하다는 범주 안에 포함되어야만 한다. 이 분류가 이루어진다면, 위의 퍼셉트론 알고리즘 또한 이 모델로 추상화가 가능하다. 그리고 추상화된 모델로써 그 안에 포함된 모든 알고리즘(계산과정) 모델을 단번에 다룰 수 있다. 이것의 효용은 우리가 광범위한 알고리즘 모델을 또 다시 추상화시켜서 수없이 많은 대상을 자동화할 수 있다는 것이다.</p>
+</blockquote>
+</li>
+<li>
+<p>예시 </p>
+<p>**NAND 게이트**는 다음과 같이 <span class="arithmatex">\(2\)</span> 개의 입력에 대하여 <span class="arithmatex">\(1\)</span> 개의 출력을 계산한다.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(x_1\)</span></th>
+<th align="center"><span class="arithmatex">\(x_2\)</span></th>
+<th align="center"><span class="arithmatex">\(y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>퍼셉트론으로 NAND 게이트를 표현하려 한다. 이 경우 <span class="arithmatex">\((w _{1}, w _{2}, \theta) = (-0.5, -0.5, -0.7)\)</span> 로 설정하면  된다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>**OR 게이트**는 다음과 같이 <span class="arithmatex">\(2\)</span> 개의 입력에 대하여 <span class="arithmatex">\(1\)</span> 개의 출력을 계산한다.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(x_1\)</span></th>
+<th align="center"><span class="arithmatex">\(x_2\)</span></th>
+<th align="center"><span class="arithmatex">\(y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>퍼셉트론으로 OR 게이트를 표현하려 한다. 이 경우 <span class="arithmatex">\((w _{1}, w _{2}, \theta) = (1, 1, 0.8)\)</span> 로 설정하면 된다.</p>
+</li>
+</ul>
+<p>이것은 퍼셉트론으로 데이터를 분류하는 직선을 생성하는(선형 이진 분류기) 것과 같다. 다음과 같이 AND 게이트를 퍼셉트론이 분류하는 것이다.</p>
+<p><img alt="" src="https://miro.medium.com/max/1914/1*Tc8UgR_fjI_h0p3y4H9MwA.png"/> </p>
+<p>하지만 XOR 게이트는 직선으로 분류할 수 없으므로 퍼셉트론으로 XOR 게이트를 표현할 수 없다.</p>
+</li>
+<li>
+<p>퍼셉트론의 기하학적 의미</p>
+<p>퍼셉트론의 기하학적 의미를 이해하는 것은 중요한 의미를 갖는다.</p>
+<p><img alt="" src="https://miro.medium.com/max/764/1*C5LeL8JDfoGbkUg0cu1M-w.png"/></p>
+<p>퍼셉트론의 n개의 입력과 n개의 가중치는 n차원 공간에서의 벡터로 볼 수 있고, 그것을 각각 곱하여 합한 것은 내적으로 볼 수 있다.</p>
+<p>또 퍼셉트론은 최종적으로 데이터를 2 종류로 분류할 수 있는 직선을 표현하는 가중치, 즉 직선의 기울기를 찾아내는 것이다. </p>
+<p><strong>이렇게 퍼셉트론의 구성요소를 대수학과 벡터해석학 등의 수학으로 해석하면 수학적 의미를 찾아낼 수 있어서 많은 효용을 얻을 수 있다.</strong></p>
+</li>
+<li>
+<p>퍼셉트론은 계산 가능하므로 코드로 자동화시킬 수 있다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">AND</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">):</span>
+    <span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="n">theta</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.7</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">x1</span><span class="o">*</span><span class="n">w1</span> <span class="o">+</span> <span class="n">x2</span><span class="o">*</span><span class="n">w2</span> <span class="o">&gt;</span> <span class="n">theta</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>퍼셉트론 코드를 다음과 같이 일반적으로 나타낼 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">perceptron</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">xi</span><span class="p">,</span> <span class="n">yi</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">xi</span> <span class="o">=</span> <span class="n">xi</span>
+    <span class="k">return</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#0a580c282"><div class="admonition tldr" id="0a580c282">
+<p>퍼셉트론 학습 알고리즘(Perceptron Learning Algorithm) : 퍼셉트론을 통하여 선형 분리 가능 문제를 해결하기 위한 가중치를 수렴시키는 알고리즘(계산과정)이다.</p>
+</div></a>
+<ul>
+<li>
+<p>퍼셉트론 학습 알고리즘은 다음과 같다. 이때 퍼셉트론 알고리즘의 목적은 입력 벡터 <span class="arithmatex">\(x\)</span> 를 올바르게 선형 분리하는 가중치 벡터 <span class="arithmatex">\(w\)</span> 를 구하는 것임을 상기하자.</p>
+</li>
+<li>
+<p>(공리)</p>
+<p>임의의 자연수 <span class="arithmatex">\(m\)</span> 과 <span class="arithmatex">\(i \in \{1,\dots,m\}\)</span> 에 대한 <span class="arithmatex">\(m\)</span> 개의 불변요소인 입력 벡터 <span class="arithmatex">\(\mathbf{x}^{(i)} \in \mathbb{R} ^{n}\)</span>, </p>
+<p>무작위 값으로 초기화된 가변요소인 가중치 벡터 <span class="arithmatex">\(\mathbf{w} \in \mathbb{R} ^{n}\)</span>, </p>
+<p><span class="arithmatex">\(m\)</span> 개의 입력 벡터에 대응되는 <span class="arithmatex">\(i \in \{1,\dots,m\}\)</span> 에 대한 클래스 레이블 <span class="arithmatex">\(y ^{(i)} \in \{0,1\}\)</span>, </p>
+<p>학습률 <span class="arithmatex">\(\eta \in \mathbb{R}\)</span> 가 있다. </p>
+</li>
+<li>
+<p>(연역) </p>
+<p>계단함수 <span class="arithmatex">\(h: \mathbb{R} \to \{0,1\}\)</span> 와 <span class="arithmatex">\(i\)</span> 번째 입력벡터 <span class="arithmatex">\(\mathbf{x}^{(i)}\)</span> 대하여 출력(예측값) </p>
+<div class="arithmatex">\[\hat{y} ^{(i)} = h(\mathbf{x} ^{(i)} \cdot \mathbf{w})\]</div>
+<p>을 계산할 수 있다. </p>
+<p>그런데 출력 <span class="arithmatex">\(\hat{y} ^{(i)}\)</span> 이 클레스 레이블 <span class="arithmatex">\(y ^{(i)}\)</span> 과 다르면 가변요소 가중치 벡터 <span class="arithmatex">\(\mathbf{w}\)</span> 를 조정해야 한다. 이때 로젠블라트는 다음과 같은 규칙으로 가중치를 조정하기로 결정했다.</p>
+<blockquote>
+<p>근데 뭔가 너무 "되겠지?.." 하고 던지는 마인드이긴 하다. 원래 정확한 계산을 통하여 얼마나 조정해야 하는지 알아낸 다음 그만큼 조정해야 하잖아. CTF 풀 때 입력 바이트를 0바이트부터 1000바이트까지 때려넣는 거랑 약간 비슷하네.</p>
+</blockquote>
+</li>
+<li>
+<p>에폭(학습횟수)이 남았거나 종료 조건(출력이 실제값과 다른 허용할만한 정도)이 충족되지 않으면 가중치 벡터 <span class="arithmatex">\(\mathbf{w}\)</span> 를 다음과 같이 조정한다.</p>
+<div class="arithmatex">\[ \mathbf{w} := \mathbf{w} + \eta (y ^{(i)} - \hat{y} ^{(i)})\mathbf{x}^{(i)} \]</div>
+<p>그러므로 자연수 <span class="arithmatex">\(j \in \{1,\dots,n\}\)</span> 에 대한 가중치 벡터의 <span class="arithmatex">\(j\)</span> 번째 원소 <span class="arithmatex">\(w_j\)</span> 는 <span class="arithmatex">\(i\)</span> 번째 입력벡터 <span class="arithmatex">\(\mathbf{x}^{(i)}\)</span> 의 <span class="arithmatex">\(j\)</span> 번째 원소 <span class="arithmatex">\(x_j ^{(i)}\)</span> 에 대하여</p>
+<div class="arithmatex">\[ w_j := w_j + \eta (y ^{(i)} - \hat{y}^{(i)}) x_j ^{(i)} \]</div>
+<p>와 같이 조정된다. <span class="arithmatex">\(\Delta w_j = \eta (y ^{(i)} - \hat{y}^{(i)}) x_j ^{(i)}\)</span> 로 두면</p>
+<div class="arithmatex">\[ w_j := w_j + \Delta w_j \]</div>
+<p>로 쓸 수 있다.</p>
+<ul>
+<li>
+<p>만약 정답 레이블 <span class="arithmatex">\(y ^{(i)}\)</span> 와 출력(예측값) <span class="arithmatex">\(\hat{y} ^{(i)}\)</span> 가 같으면 <span class="arithmatex">\(\Delta w_j = 0\)</span> 이 되므로 가중치는 </p>
+<div class="arithmatex">\[w_j := w_j + 0\]</div>
+<p>이 되어 조정되지 않는다.</p>
+</li>
+<li>
+<p>만약 정답 레이블 <span class="arithmatex">\(y ^{(i)}\)</span> 이 출력(예측값) <span class="arithmatex">\(\hat{y} ^{(i)}\)</span> 보다 크면 <span class="arithmatex">\(\Delta w_j = \eta ( 1 - (-1) ) x _j ^{(i)} = 2\eta x _j ^{(i)}\)</span> 이 되어 가중치가</p>
+<div class="arithmatex">\[ w_j := w_j + 2 \eta x _j ^{(i)}\]</div>
+<p>로 조정되면서 <span class="arithmatex">\(2 \eta x _j ^{(i)}\)</span> 만큼 증가한다.</p>
+</li>
+<li>
+<p>만약 정답 레이블 <span class="arithmatex">\(y ^{(i)}\)</span> 이 출력(예측값) <span class="arithmatex">\(\hat{y} ^{(i)}\)</span> 보다 작으면 <span class="arithmatex">\(\Delta w_j = \eta ( -1 - 1 ) x _{j}^{(i)} = -2\eta x _j ^{(i)}\)</span> 이 되어 가중치가</p>
+<div class="arithmatex">\[ w_j := w_j - 2 \eta x _j ^{(i)} \]</div>
+<p>로 조정되면서 <span class="arithmatex">\(2 \eta x _{j}^{(i)}\)</span> 만큼 감소한다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>이때 <span class="arithmatex">\(i\)</span> 번째 입력벡터 <span class="arithmatex">\(\mathbf{x}^{(i)}\)</span> 의 <span class="arithmatex">\(0\)</span> 번째 입력을 <span class="arithmatex">\(x_0 = 1\)</span>, <span class="arithmatex">\(0\)</span> 번째 가중치를 <span class="arithmatex">\(w_0 = b\)</span> 로 두어 인공뉴런의 편향을 벡터의 내적 계산에 포함시켜서 편하게 계산하기도 한다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\mathbb{R} ^{3}\)</span> 공간의 입력벡터 <span class="arithmatex">\(\mathbf{x}\)</span>, 가중치벡터 <span class="arithmatex">\(\mathbf{w}\)</span> 를 학습시킨다면(가중치를 조정한다면)</p>
+<div class="arithmatex">\[ \Delta w_0 = \eta (y ^{(i)} - \hat{y}^{(i)}) \]</div>
+<div class="arithmatex">\[ \Delta w_1 = \eta (y ^{(i)} - \hat{y}^{(i)})x_1 ^{(i)} \]</div>
+<div class="arithmatex">\[ \Delta w_2 = \eta (y ^{(i)} - \hat{y}^{(i)})x_2 ^{(i)} \]</div>
+<p>와 같이 조정된다는 것이다. <span class="arithmatex">\(0\)</span>번째 입력 <span class="arithmatex">\(x_0 ^{(i)}\)</span> 은 편향 <span class="arithmatex">\(w_0 = b\)</span> 를 나타내기 위하여 항상 <span class="arithmatex">\(1\)</span> 이기 때문이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>학습을 통하여 <span class="arithmatex">\(\mathbb{R} ^{5}\)</span> 공간의 예측 벡터 <span class="arithmatex">\(\hat{y}\)</span> 가 출력되었는데, 정답 벡터 <span class="arithmatex">\(y\)</span> 가 다음과 같다고 하자.</p>
+<div class="arithmatex">\[ \hat{y} = (\hat{y_1},\hat{y_2},\hat{y_3},\hat{y_4},\hat{y_5}) = (1,-1,1,1,-1) \]</div>
+<div class="arithmatex">\[ y = (y_1,y_2,y_3,y_4,y_5) = (1,-1,-1,1,-1) \]</div>
+<p>그러면 <span class="arithmatex">\(3\)</span> 번째 샘플이 다르기 때문에 <span class="arithmatex">\(3\)</span> 번째 가중치만 조정(학습)된다.</p>
+<div class="arithmatex">\[\Delta w_3 = \eta ( -1 - 1 ) x = -2\eta x\]</div>
+</li>
+<li>
+<p>예시 </p>
+<p>편향을 나타내기 위한 고정된 입력 <span class="arithmatex">\(x_0 = 1\)</span> 과 편향 <span class="arithmatex">\(w_0 = b\)</span> 과 계단함수 <span class="arithmatex">\(h(x)\)</span> 와 학습률 <span class="arithmatex">\(\eta =1\)</span> 에 대하여</p>
+<p>퍼셉트론의 입력 벡터 <span class="arithmatex">\(x = (x_0 = 1, x_1 = 2, x_2 = 1)\)</span>, 가중치 <span class="arithmatex">\(w = (w_0 = -1, w_1 = 0.5, w_2 = 0.3)\)</span> 에 대한 출력(예측값)은 </p>
+<div class="arithmatex">\[ \hat{y} = h(x \cdot w) = h(-1 + 2 \cdot 0.5 + 1 \cdot 0.3) = h(0.3) = 1 \]</div>
+<p>이다. 그런데 정답이 <span class="arithmatex">\(y = 0\)</span> 이라면 가중치는 다음과 같이 조정(학습)된다.</p>
+<div class="arithmatex">\[ w_j = w_j + \eta (y - \hat{y})x \]</div>
+<div class="arithmatex">\[ w_0 = -1 + 1 \cdot (0 - 1) \cdot 1 = -2 \]</div>
+<div class="arithmatex">\[ w_1 = 0.5 + 1 \cdot (0 - 1) \cdot 2 = -1.5 \]</div>
+<div class="arithmatex">\[ w_2 = 0.3 + 1 \cdot (0 - 1) \cdot 1 = -0.7 \]</div>
+</li>
+</ul>
+<a href="#83afedc3b"><div class="admonition tldr" id="83afedc3b">
+<p>퍼셉트론 수렴 정리(perceptron convergence theorem) : 퍼셉트론이 선형 분리 가능 문제들, 즉 직선으로 분류가 가능한 데이터를</p>
+<p>유한번의 학습으로 데이터를 잘 분류하는 가중치를 수렴시킬 수 있다 는 정리이다.</p>
+</div></a>
+<ul>
+<li>
+<p>퍼셉트론 수렴 정리는 다시 말해 퍼셉트론 학습 알고리즘이 선형적으로 분리할 수 있는 데이터를 올바르게 분류할 수 있는 가중치 벡터를 반드시 수렴시킬 수 있다는 것이다.</p>
+<p>선형적으로 분리 가능하다는 것은 특징(features) 의 선형결합을 통하여 데이터를 분류할 수 있다는 것이다.</p>
+</li>
+<li>
+<p>그러나 비선형 분리 문제는 퍼셉트론이 자동으로 학습할 수 없다.</p>
+</li>
+<li>
+<p>정리 </p>
+<blockquote>
+<p>참고/출처 : <a href="https://nbviewer.jupyter.org/github/metamath1/ml-simple-works/blob/master/perceptron/perceptron.ipynb">https://nbviewer.jupyter.org/github/metamath1/ml-simple-works/blob/master/perceptron/perceptron.ipynb</a></p>
+</blockquote>
+<p>"<span class="arithmatex">\(\|\mathbf{w} ^{*}\|=1\)</span> 인 계수벡터 <span class="arithmatex">\(\mathbf{w} ^{*}\)</span> 와 <span class="arithmatex">\(\forall k \in \{1, \dots, n\}\)</span> 에 대한 <span class="arithmatex">\(k\)</span> 번째 입력벡터 <span class="arithmatex">\(\mathbf{x}_{k}\)</span> 와 <span class="arithmatex">\(k\)</span> 번째 출력값을 나타내는 번째 스칼라 <span class="arithmatex">\(y_k \in \{-1,1\}\)</span> 에 대하여 </p>
+<p><span class="arithmatex">\(y_k(\mathbf{x}_{k}\cdot \mathbf{w}^{*}) \geq \gamma &gt; 0\)</span> 을 만족하는 <span class="arithmatex">\(\gamma \in \mathbb{R}\)</span> 가 존재하고, </p>
+<p><span class="arithmatex">\(\|\mathbf{x}_{k}\| \leq R\)</span> 인 <span class="arithmatex">\(R \in \mathbb{R}\)</span> 이 존재하면,</p>
+<p>퍼셉트론 알고리즘의 에러 <span class="arithmatex">\(y_k \neq \hat{y}_{k} = \mathbf{x}_{k}\cdot \mathbf{w}^{*}\)</span> 에 대한 에러 발생횟수 <span class="arithmatex">\(\epsilon\)</span> 은 <span class="arithmatex">\(\epsilon \leq \dfrac{R ^{2}}{\gamma ^{2}}\)</span> 이다."</p>
+<ul>
+<li>
+<p>정리의 이해</p>
+<p>먼저 여기에서는 활성화함수로 양극성 계단함수 <span class="arithmatex">\(\displaystyle y = h(x) = \begin{cases} 1 &amp;x &gt; 0\\ -1 &amp;x \leq 0\\ \end{cases}\)</span> 를 사용한다. 퍼셉트론 수렴 정리를 한줄씩 풀어서 이해해보자.</p>
+<p><img alt="" src="https://nbviewer.jupyter.org/github/metamath1/ml-simple-works/blob/master/perceptron/fig1.png"/></p>
+<p>위 그림에서 <span class="arithmatex">\(\mathbf{w} ^{*}\)</span> 에 의해 결정되는 직선의 방정식은 붉은선이다. 이 붉은선이 모든 데이터를 올바르게 선형 분리하는 선이라고 하자. 그 직선의 방정식을 편향을 나타내기 위한 <span class="arithmatex">\(w_0 = b, x_0 = 1\)</span> 와 자유변수 <span class="arithmatex">\(x_1, x_2\)</span> 에 대한 <span class="arithmatex">\(\mathbf{x} = \big &lt;1, x_1, x_2\big &gt;\)</span> 와 가중치 벡터 <span class="arithmatex">\(\mathbf{w} ^{*}=\big &lt;b, w_1, w_2\big &gt;\)</span> 에 대하여 <span class="arithmatex">\(x_1x_2\)</span> 평면 위의 직선의 방정식</p>
+<div class="arithmatex">\[ \mathbf{w} ^{*}\cdot \mathbf{x} = b + w_1x_1 + w_2x_2 = 0 \]</div>
+<p>으로 나타낼 수 있다. </p>
+<p>퍼셉트론 알고리즘은 이와같은 가중치 벡터 <span class="arithmatex">\(\mathbf{w} ^{*}\)</span> 를 찾는 것이다. 만약 가중치 벡터 <span class="arithmatex">\(\mathbf{w} ^{*}\)</span> 를 찾았다면 이것을 사용하여 <span class="arithmatex">\(k\)</span>번째 입력벡터 <span class="arithmatex">\(\mathbf{x}_{k}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{w} ^{*}\cdot \mathbf{x} _{k} &gt; 0\)</span> 이면 빨간 직선의 위쪽, <span class="arithmatex">\(\mathbf{w} ^{*}\cdot \mathbf{x} _{k} &lt; 0\)</span> 이면 빨간 직선의 아래쪽에 위치한다고 판별할 수 있다.</p>
+<p>그렇다면 가중치 벡터 <span class="arithmatex">\(\mathbf{w}^{*}\)</span> 가 존재하여 <span class="arithmatex">\(y_k(\mathbf{w}^{*}\cdot \mathbf{x}_{k}) = y_k \hat{y_k} \geq \gamma &gt; 0\)</span> 인 <span class="arithmatex">\(\gamma\)</span> 가 있다는 것은 <span class="arithmatex">\(\mathbf{w}^{*}\)</span> 가 데이터를 <span class="arithmatex">\(2\)</span>개의 클래스로 잘 선형분리 하고 있다는 것이다.</p>
+<p>왜냐하면 <span class="arithmatex">\(y_k\)</span> 가 직선의 방정식 위쪽에 위치했다면 <span class="arithmatex">\(y_k &gt; 0\)</span> 인데 예측값 <span class="arithmatex">\(\hat{y_k} = \mathbf{w}^{*}\cdot \mathbf{x}_k\)</span> 도 데이터가 위쪽에 있다고 판별했으면 <span class="arithmatex">\(\hat{y_k} = \mathbf{w}^{*}\cdot \mathbf{x}_k &gt; 0\)</span> 이 되어 <span class="arithmatex">\(y_k \hat{y_k} &gt; 0\)</span> 이 되고,</p>
+<p><span class="arithmatex">\(y_k\)</span> 가 직선의 방정식 아래쪽에 위치했다면 <span class="arithmatex">\(y_k &lt; 0\)</span> 인데 예측값 <span class="arithmatex">\(\hat{y_k} = \mathbf{w}^{*}\cdot \mathbf{x}_k\)</span> 도 데이터가 아래쪽에 있다고 판별했으면 <span class="arithmatex">\(\hat{y_k} = \mathbf{w}^{*}\cdot \mathbf{x}_k &lt; 0\)</span> 이 되어 <span class="arithmatex">\(y_k \hat{y_k} &gt; 0\)</span> 이 되기 때문에</p>
+<p><span class="arithmatex">\(\mathbf{w}^{*}\)</span> 가 데이터를 잘 선형분리하고 있다면 항상 <span class="arithmatex">\(y_k \hat{y_k} &gt; 0\)</span> 가 될 것이기 때문이다.</p>
+<p>이때 결과값, 즉 <span class="arithmatex">\(\mathbf{w}^{*}\cdot \mathbf{x}_{k}\)</span> 이 <span class="arithmatex">\(0\)</span> 에 가까울수록 직선의 방정식과의 거리가 가까워진다. 그러므로 <span class="arithmatex">\(\gamma\)</span> 는 아무리 커봤자 직선의 방정식과 거리가 가장 가까운 입력 벡터 <span class="arithmatex">\(\mathbf{x}_{k}\)</span> 와 직선의 방정식과의 거리이다. </p>
+<p>또한 입력 벡터 <span class="arithmatex">\(\mathbf{x}_{k}\)</span> 의 크기, 즉 <span class="arithmatex">\(\|\mathbf{x}_{k}\|\)</span> 와 같거나 큰 <span class="arithmatex">\(R \in \mathbb{R}\)</span> 을 정할 수 있다.</p>
+<p>이 조건이 충족되면 퍼셉트론 알고리즘이 최대 <span class="arithmatex">\(\dfrac{R ^{2}}{\gamma ^{2}}\)</span> 번만에 데이터를 잘 선형분리하는 계수 벡터 <span class="arithmatex">\(\mathbf{w}^{*}\)</span> 를 찾을 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>증명</p>
+<blockquote>
+<p>참고/출처 : <a href="https://nbviewer.jupyter.org/github/metamath1/ml-simple-works/blob/master/perceptron/perceptron.ipynb">https://nbviewer.jupyter.org/github/metamath1/ml-simple-works/blob/master/perceptron/perceptron.ipynb</a></p>
+<p>참고/출처 : 알고리즘 중심의 머신러닝 가이드Machine Learning: An Algorithmic Perspective, 2<sup>nd</sup> ed., 스티븐 마슬랜드</p>
+<p>참고/출처 : <a href="http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf">http://www.cs.columbia.edu/~mcollins/courses/6998-2012/notes/perc.converge.pdf</a></p>
+</blockquote>
+<p><span class="arithmatex">\(y_k(\mathbf{x}_{k}\cdot \mathbf{w}^{*}) \geq \gamma &gt; 0\)</span> 을 만족하는 <span class="arithmatex">\(\gamma \in \mathbb{R}\)</span> 가 존재하므로 데이터를 잘 선형분리시킬 수 있는 <span class="arithmatex">\(\mathbf{w}^{*}\)</span> 가 존재한다. 퍼셉트론 알고리즘은 가중치 학습을 반복하면서 <span class="arithmatex">\(\mathbf{w} ^{*}\)</span> 을 찾으려할텐데 이때 <span class="arithmatex">\(t\)</span>번째 학습에서의 가중치 <span class="arithmatex">\(\mathbf{w} ^{(t)}\)</span> 가 <span class="arithmatex">\(\mathbf{w}^{*}\)</span> 와 평행하다면 두 벡터의 사이각이 <span class="arithmatex">\(0\)</span> 가 되어 <span class="arithmatex">\(\mathbf{w}^{*}\cdot \mathbf{w} ^{(t)}\)</span> 값이 최대가 된다.</p>
+<p>그러므로 매 학습마다 두 벡터 <span class="arithmatex">\(\mathbf{w}^{*}, \mathbf{w} ^{(t)}\)</span> 의 내적값이 증가함을 보이면 가중치가 수렴하고 있음을 보인느 것이 된다. 이때 두 벡터의 각도가 줄어듦으로써 내적값이 증가하는 것이 아니라 <span class="arithmatex">\(\mathbf{w} ^{(t)}\)</span> 의 값 자체가 커져서 내적값이 증가할 수도 있기 때문에 <span class="arithmatex">\(\mathbf{w} ^{(t)}\)</span> 의 크기 상한값도 함께 보여야 가중치가 수렴한다고 말할 수 있다.</p>
+<p>만약 <span class="arithmatex">\(t\)</span>번째 반복에서 <span class="arithmatex">\(k\)</span>번째 입력 벡터 <span class="arithmatex">\(\mathbf{x}_{k}\)</span> 와 그것의 클래스 레이블 <span class="arithmatex">\(y _{k}\)</span> 에 대하여 <span class="arithmatex">\(y _{k}(\mathbf{w} ^{(t-1)} \cdot \mathbf{x}_{k}) &lt; 0\)</span> 이 되었다면 에러가 발생한 것이므로 가중치를 조정해야 한다. 퍼셉트론 알고리즘에서 가중치 조정은 </p>
+<div class="arithmatex">\[ \mathbf{w} ^{(t)} := \mathbf{w}^{(t-1)} + \eta (y _{k} - \hat{y} _{k})\mathbf{x}_{k} \]</div>
+<p>와 같이 이루어졌다는 것을 기억하자. 이때 <span class="arithmatex">\(\eta = 1\)</span> 로 두고 퍼셉트론의 예측값 <span class="arithmatex">\(\hat{y}_{k}\)</span> 는 편의를 위하여 제거하자. 그렇게 해도 양이 어느정도 바뀔 뿐 부호는 바뀌지 않으므로 가중치 조정이 가능하기 때문이다. 그러면 가중치 조정은</p>
+<div class="arithmatex">\[ \mathbf{w}^{(t)} := \mathbf{w}^{(t-1)} + y _{k}\mathbf{x}_{k} \]</div>
+<p>와 같이 이루어진다. 그러면 이때 두 벡터 <span class="arithmatex">\(\mathbf{w}^{*}, \mathbf{w}^{(t)}\)</span> 의 내적값을 계산해보면</p>
+<div class="arithmatex">\[ \mathbf{w}^{*}\cdot \mathbf{w}^{(t)} = \mathbf{w}^{*}\cdot (\mathbf{w}^{(t-1)}+y _{k} \mathbf{x}_{k}) \]</div>
+<div class="arithmatex">\[ = \mathbf{w}^{*}\cdot \mathbf{w}^{(t-1)}+y _{k} \mathbf{w}^{*}\cdot \mathbf{x}_{k} \]</div>
+<div class="arithmatex">\[ \geq  \mathbf{w}^{*}\cdot \mathbf{w}^{(t-1)} + \gamma \ \ (\because y_k(\mathbf{x}_{k}\cdot \mathbf{w}^{*}) \geq \gamma ) \]</div>
+<p>이다. 즉, <span class="arithmatex">\(\mathbf{w}^{*}\cdot \mathbf{w}^{(t)}- \mathbf{w}^{*}\cdot \mathbf{w}^{(t-1)} \geq  \gamma &gt; 0\)</span> 이므로 <span class="arithmatex">\(\mathbf{w}^{*}\cdot \mathbf{w}^{(t)}\)</span> 이 <span class="arithmatex">\(\mathbf{w}^{*}\cdot \mathbf{w}^{(t-1)}\)</span> 보다 <span class="arithmatex">\(\gamma\)</span> 이상 크다는 것이다. 이로써 매 학습마다 <span class="arithmatex">\(\mathbf{w}^{*}\cdot \mathbf{w}^{(t)}\)</span> 가 증가한다는 것이, 즉 가중치 벡터가 수렴되고 있다는 것이 증명되었다. ▲ </p>
+<p>매 학습마다 내적 <span class="arithmatex">\(\mathbf{w}^{*}\cdot \mathbf{w}^{(t)}\)</span> 의 값이 최소 <span class="arithmatex">\(\gamma\)</span> 이상 증가하기 때문에 초기 가중치 벡터를 <span class="arithmatex">\(\|\mathbf{w}^{0}\| = 0\)</span> 로 두면 <span class="arithmatex">\(t\)</span>번 학습 후 내적값이 </p>
+<div class="arithmatex">\[ \mathbf{w}^{*}\cdot \mathbf{w}^{(t)} \geq t \gamma \]</div>
+<p>이라는 것 즉, 최소 <span class="arithmatex">\(t \gamma\)</span> 이상이라는 것을 알 수 있다. 그런데 코시-슈바르츠 부등식에 의해 </p>
+<div class="arithmatex">\[ \|\mathbf{w}^{*}\|\|\mathbf{w}^{(t)}\| \geq \mathbf{w}^{*}\cdot \mathbf{w}^{(t)} \]</div>
+<p>인데 <span class="arithmatex">\(\|\mathbf{w}^{*}\| = 1\)</span> 이므로 <span class="arithmatex">\(\|\mathbf{w}^{(t)}\| \geq \mathbf{w}^{*}\cdot \mathbf{w}^{(t)} \geq t \gamma\)</span> 에서 </p>
+<div class="arithmatex">\[\|\mathbf{w}^{(t)}\| \geq t \gamma\]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(t \gamma\)</span> 가 <span class="arithmatex">\(\|\mathbf{w}^{(t)}\|\)</span> 의 최대하계, 즉 하한</p>
+<div class="arithmatex">\[ \therefore \inf \| \mathbf{w}^{(t)}\| = t \gamma \]</div>
+<p>이 된다. ▲ </p>
+<p><span class="arithmatex">\(t\)</span>번째 학습 이후 가중치 벡터 <span class="arithmatex">\(\mathbf{w}^{(t)}\)</span> 의 길이의 제곱은 </p>
+<div class="arithmatex">\[ \|\mathbf{w}^{(t)}\|^{2} = \|\mathbf{w}^{(t-1)} + y _{k} \mathbf{x} _{k}\|^{2} \]</div>
+<div class="arithmatex">\[ = \|\mathbf{w}^{(t-1)}\| ^{2} + y _{k} ^{2} \|\mathbf{x} _{k}\| ^{2} + 2y _{k} \mathbf{w}^{(t-1)}\cdot  \mathbf{x} _{k} \]</div>
+<p>인데 <span class="arithmatex">\(y _{k} \in \{-1,1\}\)</span> 이므로 <span class="arithmatex">\(y _{k}^{2} = 1\)</span> 이고 <span class="arithmatex">\(\|x _{k}\| \leq R \implies \|x _{k}\|^{2}\leq R ^{2}\)</span> 이고 예측값이 출력값과 틀렸으므로 <span class="arithmatex">\(y _{k} \mathbf{w}^{(t-1)} \cdot \mathbf{x} = y _{k}\hat{y}_{k} &lt; 0\)</span> 이다. 따라서</p>
+<div class="arithmatex">\[ \|\mathbf{w}^{(t)}\| ^{2} \leq  \|\mathbf{w}^{(t-1)}\| ^{2} + R ^{2} \]</div>
+<p>이다. 즉, <span class="arithmatex">\(\|\mathbf{w}^{(t)}\| ^{2} - \|\mathbf{w}^{(t-1)}\| ^{2} \leq  R ^{2}\)</span> 이므로 초기 가중치 벡터를 <span class="arithmatex">\(\| \mathbf{w}^{0}\| = 0\)</span> 로 두면 <span class="arithmatex">\(t\)</span> 번은 학습은 다음과 같이 이루어진다.</p>
+<div class="arithmatex">\[ \|\mathbf{w}^{1}\|^{2} - \|\mathbf{w}^{0}\| ^{2} \leq R ^{2} \]</div>
+<div class="arithmatex">\[ \|\mathbf{w}^{2}\|^{2} - \|\mathbf{w}^{1}\| ^{2} \leq R ^{2} \]</div>
+<div class="arithmatex">\[ \dots \]</div>
+<div class="arithmatex">\[ \|\mathbf{w}^{(t)}\|^{2} - \|\mathbf{w}^{(t-1)}\| ^{2} \leq R ^{2} \]</div>
+<p>이것들을 모두 더하면</p>
+<div class="arithmatex">\[ \|\mathbf{w}^{(t)}\|^{2} \leq t R ^{2} \]</div>
+<p>을 얻는다. 이것이 <span class="arithmatex">\(\|\mathbf{w}\|^{2}\)</span> 의 최소상계, 즉 상한</p>
+<div class="arithmatex">\[ \sup \|\mathbf{w}^{(t)}\| ^{2} = t R ^{2} \]</div>
+<p>이다. ▲ </p>
+<p>상한과 하한을 같은 부등식에 쓰면 다음과 같다. </p>
+<div class="arithmatex">\[ (\inf \|\mathbf{w}^{(t)}\|) ^{2} \leq \|\mathbf{w}^{(t)}\|^{2} \leq \sup \|\mathbf{w}^{(t)}\|^{2} \]</div>
+<div class="arithmatex">\[ \iff t ^{2} \gamma ^{2} \leq \|\mathbf{w}^{(t)}\|^{2} \leq t R ^{2} \]</div>
+<p>여기에서 </p>
+<div class="arithmatex">\[ \iff t \leq \dfrac{R ^{2}}{\gamma ^{2}} \]</div>
+<p>를 얻는다. 이것은 곧 학습 횟수 <span class="arithmatex">\(t\)</span> 가 상계를 갖는다는 것이므로 </p>
+<p>결과적으로 선형분리 가능 데이터에 조건 <span class="arithmatex">\(\eta =1, \|\mathbf{w}^{0}\| = 0\)</span> 을 적용하면 퍼셉트론 알고리즘이 유한번의 학습으로, 즉 최대 <span class="arithmatex">\(\dfrac{R ^{2}}{\gamma ^{2}}\)</span> 번의 학습으로(에러로) 가중치 매개변수 <span class="arithmatex">\(\mathbf{w}\)</span> 를 최적의 가중치 벡터 <span class="arithmatex">\(\mathbf{w}^{*}\)</span> 로 수렴시킬 수 있다는 것이다. ■   </p>
+<ul>
+<li>이는 분류해야 하는 클래스간 거리가 가까울수록 알고리즘 반복 횟수(학습횟수, 에러횟수)는 늘어나지만 어쨌든 수렴은 한다는 것을 보여준다.</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\(\gamma\)</span> 가 늘어날수록 학습횟수가 줄어들고, <span class="arithmatex">\(R\)</span> 이 늘어날수록 학습횟수가 많아지는구나.</p>
+<p>또한 그렇다면 이것은 선형분리가 불가능한 문제이더라도 좌표변환으로써 결국 선형분리 문제로 회귀시키면 비선형문제라도 잘 분류할 수 있는 가중치 벡터를 수렴시킬 수 있다는 뜻이구나. 가령 <span class="arithmatex">\(XOR\)</span> 문제를 좌표변환으로써 선형분리 문제로 사상시키는 것이다.</p>
+<p>벡터의 크기의 제곱의 연산에 대한 정리, 코시-슈바르츠 부등식의 벡터 표현 -&gt; semi-inner-product , 하한의 제곱</p>
+<p>코시 슈바르츠 부등식 <a href="https://namu.wiki/w/%EC%BD%94%EC%8B%9C-%EC%8A%88%EB%B0%94%EB%A5%B4%EC%B8%A0%20%EB%B6%80%EB%93%B1%EC%8B%9D#toc">https://namu.wiki/w/%EC%BD%94%EC%8B%9C-%EC%8A%88%EB%B0%94%EB%A5%B4%EC%B8%A0%20%EB%B6%80%EB%93%B1%EC%8B%9D#toc</a> , <a href="https://proofwiki.org/wiki/Cauchy-Bunyakovsky-Schwarz_Inequality">https://proofwiki.org/wiki/Cauchy-Bunyakovsky-Schwarz_Inequality</a></p>
+</blockquote>
+</li>
+<li>
+<p><strong>그러면 이로썬 선형분리 문제는 항상 가중치를 수렴시킬 수 있다는 것을 알게 되었다. 그러면 임의의 데이터가 선형분리되는지 판단할 수 있는 알고리즘은 존재할까?</strong> </p>
+<p><strong>만약 존재하지 않으면 레이어를 하나 더 추가하여 좌표변환(공간변환)을 해보고, 또 존재하지 않으면 레이어를 또 추가해서 공간변환을 또 해보고... 그렇게 자동으로 네트워크를 생성해볼 수 있으니까.</strong></p>
+</li>
+</ul>
+<a href="#2dac92dbe"><div class="admonition tldr" id="2dac92dbe">
+<p>다층 퍼셉트론(multi-layer perceptron) : 퍼셉트론을 여러개 쌓은 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>퍼셉트론으로 XOR 게이트를 표현할 수 없었지만 AND 게이트, NAND 게이트, OR 게이트를 표현한 퍼셉트론을 연결하면 XOR 게이트를 표현할 수 있다. 이렇게 연결된 퍼셉트론(인공뉴런)을 다층 퍼셉트론이라고 한다.</p>
+<ul>
+<li>
+<p>퍼셉트론은 직교좌표계에서 단일 직선을 의미했다. 하지만 다층 퍼셉트론은 두 개의 출력을 냄으로써 두 개의 직선을 만든다.</p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/266ECC42535A2A2A1E"/></p>
+<blockquote>
+<p><a href="https://roboticist.tistory.com/492">https://roboticist.tistory.com/492</a></p>
+</blockquote>
+<p>그리고 이 두 직선을 기반으로 영역을 나누면 XOR 게이트를 분류할 수 있게 된다. </p>
+<p>이 새로운 두 직선을 기반으로 좌표계를 변환해보면 XOR 게이트를 선형분류 문제로 환원시키는 것으로 볼 수도 있다는 것을 알 수 있다.</p>
+<p><img alt="" src="https://t1.daumcdn.net/cfile/tistory/265AA236535A2A2B2C"/></p>
+<blockquote>
+<p><a href="https://roboticist.tistory.com/492">https://roboticist.tistory.com/492</a></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>이 다층 퍼셉트론을 활용하여 모든 논리 회로를 표현할 수 있다. 왜냐하면 모든 논리 게이트를 표현할 수 있게 되었기 때문이다.</p>
+<p>여기서 알 수 있는 중요한 의의는 이에 따라 퍼셉트론이 모든 튜링기계와 만능기계(컴퓨터) 까지도 표현가능하다는 것이다. 왜냐하면 NAND 게이트 만으로도 현대의 최신 보편만능기계(컴퓨터) 도 구현 가능한데, 퍼셉트론으로 NAND 게이트를 구성할 수 있기 때문이다.</p>
+<ul>
+<li>
+<p>2층 퍼셉트론, 정확히는 시그모이드 함수를 활성화 함수로 사용한다면 2층 퍼셉트론 구조로 임의의 함수를 표현할 수 있다는 사실이 증명되었다. </p>
+<p>AND 게이트와 OR 게이트로 반가산기와 전가산기를 만들고, 그것으로 산술 논리 연산 장치(ALU)를 만들고 이것으로 CPU 를 만들 수 있다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#7b7612e69"><div class="admonition tldr" id="7b7612e69">
+<p>활성화 함수(activate function) : n차원 벡터 입력 <span class="arithmatex">\(x\)</span> 와 n차원 벡터 가중치 <span class="arithmatex">\(x\)</span> 의 내적인 순입력 <span class="arithmatex">\(z\)</span> 를 </p>
+<p>계산하여 뉴런(노드)의 출력을 결정하는 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>퍼셉트론은 활성화 함수로써 계단함수를 채택하였다.</p>
+<ul>
+<li>하지만 퍼셉트론 알고리즘에서 계단함수를 임의의 활성화 함수로 일반화시켜야 신경망으로 나아갈 수 있다.</li>
+</ul>
+</li>
+</ul>
+<a href="#90b82deeb"><div class="admonition tldr" id="90b82deeb">
+<p>ReLU 함수 : 입력이 <span class="arithmatex">\(0\)</span> 을 넘으면 입력을 그대로 출력하고, <span class="arithmatex">\(0\)</span> 이하면 <span class="arithmatex">\(0\)</span> 을 출력하는 함수이다.</p>
+<div class="arithmatex">\[ y = \begin{cases}
+x\ (x&gt;0) &amp;\text{}\\
+0\ (x \leq 0) &amp;\text{}\\
+\end{cases} 
+\]</div>
+</div></a>
+<ul>
+<li>
+<p>전통적으로 기계학습에서 학습을 위해 시그모이드 함수를 사용했으나 최근에는 이 ReLU 함수를 주로 사용하는 추세이다.</p>
+</li>
+<li>
+<p>ReLU 란 Rectified 란 뜻으로 "정류된" 이라는 말이다. 이것은 반파정류회로(half-wave rectification circuit) 가 <span class="arithmatex">\(+/-\)</span> 가 반복되는 교류에서 <span class="arithmatex">\(-\)</span> 흐름을 차단하여 정류시키는 것에서 유래되었다.</p>
+</li>
+<li>
+<p>코드로 쉽게 구현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">relu</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="_1">신경망<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#4c6512bd7"><div class="admonition tldr" id="4c6512bd7">
+<p>신경망(neural network) : 퍼셉트론이 사용하는 계단함수를 일반적인 활성화 함수로 일반화 시키고, </p>
+<p>퍼셉트론의 가중치 매개변수를 수동으로 입력하는 것이 아니라 데이터로부터 자동으로 결정하게 하는 알고리즘이다.</p>
+</div></a>
+<ul>
+<li>
+<p>퍼셉트론이 활성화 함수로 계단 함수를 사용하는 것과 달리 신경망에서는 시그모이드 함수나 ReLU 함수 등을 사용하여 출력 신호를 변환한다.</p>
+<ul>
+<li>
+<p>계단함수가 <span class="arithmatex">\(0, 1\)</span> 의 값만 출력하는 반면 시그모이드 함수는 매끄러운 모양새로 개구간 <span class="arithmatex">\((0, 1)\)</span> 의 실수(<span class="arithmatex">\(0.731, 0.880\)</span> 등)를 반환한다.</p>
+<p>시그모이드 함수의 이 매끄러움이 신경망 학습에서 중요한 역할을 한다.</p>
+</li>
+<li>
+<p>즉, 퍼셉트론에서는 <span class="arithmatex">\(0, 1\)</span> 이 흘렀다면, 신경망에서는 시그모이드 함수로 인해 개구간 <span class="arithmatex">\((0,1)\)</span> 의 연속적인 실수가 흐른다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>퍼셉트론이 처음 제시되었을 때 암묵적으로 채택되었던 "활성화 함수" 인 "계단 함수" 를 일반적인 "활성화 함수" 로 일반화시킴으로써 더욱 강력한 추상 구조인 신경망이 탄생하였다. 그렇다면 다른 구성 요소도 일반화시켜서 더 광범위한 계산 능력을 가진 추상 모델을 만들 수 있는 가능성을 볼 수 있다. </p>
+</blockquote>
+<ul>
+<li>
+<p>퍼셉트론에서 입력과 가중치를 벡터의 내적으로 표현했었는데, </p>
+<p>신경망에서는 다층 퍼셉트론의 수많은 계산을 수행해야 하기 때문에 가장 간소하게 표현할 수 있는 행렬 연산으로 표현하면 좋다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>가령 입력 벡터를 <span class="arithmatex">\(1 \times 2\)</span> 행렬 <span class="arithmatex">\(X = \begin{pmatrix} x_1&amp;x_2 \end{pmatrix}\)</span>, 가중치를 <span class="arithmatex">\(2 \times 3\)</span> 행렬 <span class="arithmatex">\(W=\begin{pmatrix} w _{11}&amp;w _{21}&amp;w _{31}\\w _{12}&amp;w _{22}&amp;w _{32} \end{pmatrix}\)</span>, 편향을 <span class="arithmatex">\(1 \times 3\)</span> 행렬 <span class="arithmatex">\(B = \begin{pmatrix} b _{1}&amp;b _{2} &amp; b _{3}\\ \end{pmatrix}\)</span> 으로 나타낸다면, 순입력 <span class="arithmatex">\(Z = \begin{pmatrix} z_1&amp;z_2&amp;z_3\\ \end{pmatrix}\)</span> 를 다음과 같이 계산할 수 있다. </p>
+<div class="arithmatex">\[ Z = XW + B \]</div>
+<p>이 순입력 <span class="arithmatex">\(Z\)</span> 에 활성화 함수로 시그모이드 함수를 적용한 코드는 다음과 같다.</p>
+<ul>
+<li>
+<p>코드 </p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
+<span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">]])</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">])</span>
+
+<span class="n">Z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="n">B</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">Z</span><span class="p">)</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>신경망은 분류와 회귀 모두에 이용할 수 있다. </p>
+<p>이때 어떤 문제이냐에 따라 출력층에서 사용하는 활성화 함수가 달라진다.</p>
+<ul>
+<li>
+<p>보통 회귀 문제에서 항등 함수를 사용하고, 분류에서 소프트맥스 함수를 사용한다.</p>
+<ul>
+<li>
+<p>분류란 데이터가 어느 클래스에 속하느냐는 문제이다.</p>
+</li>
+<li>
+<p>회귀는 입력 데이터에서 수치를 예측하는 문제이다. </p>
+<p>가령 사진 속 인물의 몸무게를 맞추는 문제이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#9b3746adc"><div class="admonition tldr" id="9b3746adc">
+<p>소프트맥스 함수(softmax function) : 분류에서 사용되는 함수</p>
+<div class="arithmatex">\[ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>코드</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">softmax</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+</code></pre></div>
+</li>
+<li>
+<p>소프트맥스의 출력은 모든 입력신호로부터 영향을 받는다.</p>
+</li>
+<li>
+<p>소프트맥스 함수는 지수함수를 사용하는데 지수함수는 매우 쉽게 커진다. 가령 <span class="arithmatex">\(e ^{100}\)</span> 은 <span class="arithmatex">\(0\)</span> 이 <span class="arithmatex">\(40\)</span> 개가 넘는 큰 값이다. 이로인해 오버플로우가 쉽게 발생한다. 그런데 소프트맥스 함수는 어차피 비율을 계산하는 것이므로 다음과 같이 수식을 개선할 수 있다. </p>
+<p>먼저</p>
+<div class="arithmatex">\[ y _{k} = \dfrac{\exp (a _{k})}{\displaystyle \sum_{i=1}^{n} \exp (a _{i})}  \]</div>
+<p>에 임의의 정수 <span class="arithmatex">\(C\)</span> 를 분자와 분모에 곱하여</p>
+<div class="arithmatex">\[ = \dfrac{C\exp (a _{k})}{\displaystyle C\sum_{i=1}^{n} \exp (a _{i})} \]</div>
+<p>를 얻고 <span class="arithmatex">\(C\)</span> 를 지수함수로 옮겨 <span class="arithmatex">\(\log_{} C\)</span> 로 만들면 다음을 얻는다.</p>
+<div class="arithmatex">\[ = \dfrac{\exp (a _{k} + \log_{} C)}{\displaystyle \sum_{i=1}^{n} \exp (a _{i} + \log_{} C)} \]</div>
+<p>이때 <span class="arithmatex">\(\log_{} C = C'\)</span> 로 두면</p>
+<div class="arithmatex">\[ = \dfrac{\exp (a _{k} + C')}{\displaystyle \sum_{i=1}^{n} \exp (a _{i} + C')} \]</div>
+<p>을 얻는데, 이것은 소프트맥스 함수에 임의의 <span class="arithmatex">\(C'\)</span> 를 분자와 분모에 더해도 관계없다는 뜻이 된다.</p>
+<p>따라서 오버플로우를 방지하기 위하여 입력값에 임의의 수를 빼줄 수 있는 것이다. 일반적으로 임의의 수로 입력 신호 중 최댓값을 채택한다. 가령 가장 큰 입력값이 <span class="arithmatex">\(a_m\)</span> 이라면 </p>
+<div class="arithmatex">\[ \dfrac{\exp (a _{k} - a_m)}{\displaystyle \sum_{i=1}^{n} \exp (a _{i} - a_m)} \]</div>
+<p>을 사용하는 것이다.</p>
+<ul>
+<li>
+<p>따라서 가령 다음과 같은 코드처럼 소프트맥스 함수를 개선할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">softmax</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+    <span class="n">exp_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">exp_a</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">exp_a</span><span class="p">)</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>신경망을 이용한 분류에서 일반적으로 가장 큰 출력을 내는 뉴런(노드)에 해당하는 클래스만 인식한다.</p>
+<p>그런데 소프트맥스는 단조증가함수이므로 출력이 가장 큰 뉴런의 위치는 달라지지 않는다. </p>
+<p>그러므로 신경망 분류에서 소프트맥스 함수를 생략해도 관계없다.</p>
+<ul>
+<li>
+<p>기계학습 문제풀이는 학습과 추론 두 단계로 이뤄진다. 학습 단계에서 모델을 학습하고, 추론 단계에서 미지의 데이터를 분류(추론) 한다.</p>
+<p>신경망을 학습시킬 때에는 출력층에서 소프트맥스를 사용한다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#2b355daf3"><div class="admonition tldr" id="2b355daf3">
+<p>단조증가함수 : 정의역 원소 <span class="arithmatex">\(a, b\)</span> 가 <span class="arithmatex">\(a \leq b\)</span> 일 때, <span class="arithmatex">\(f(a) \leq f(b)\)</span> 가 성립하는 함수이다.</p>
+</div></a>
+<h2 id="_2">순전파<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<a href="#880345b66"><div class="admonition tldr" id="880345b66">
+<p>순전파(forward propagation) : 신경망의 학습과 추론 두 단계 중 추론과정이다.</p>
+</div></a>
+<ul>
+<li>
+<p>기계학습과 마찬가지로 신경망도 두 단계로 문제를 해결한다. </p>
+<p>먼저 훈련데이터로 학습하며 가중치 매개변수를 결정하고, </p>
+<p>추론 단계에서 학습한 매개변수를 사용해 입력 데이터를 분류한다.</p>
+</li>
+<li>
+<p>이미 학습된 가중치 매개변수로 MNIST 같은 데이터셋을 테스트해볼 수 있다.</p>
+<ul>
+<li>
+<p><code>sample_weight.pkl</code> 에 이미 학습된 가중치가 있다. 이 가중치는 은닉층 2개로 숫자 0 부터 숫자 9 를 분류하는 신경망이다.</p>
+<p>첫번째 은닉층에서는 50개의 뉴런을 배치하고, 두번째 뉴런에서는 100개의 뉴런을 배치한다. </p>
+<p>최초의 입력층은 28x28 픽셀의 손글씨 이미지이므로 784 크기의 벡터이다. 그렇다면 다음과 같이 코드를 짤 수 있다. </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="n">network</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="n">W1</span><span class="p">,</span> <span class="n">W2</span><span class="p">,</span> <span class="n">W3</span> <span class="o">=</span> <span class="n">network</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">],</span> <span class="n">network</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">],</span> <span class="n">network</span><span class="p">[</span><span class="s1">'W3'</span><span class="p">]</span>
+    <span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="n">b3</span> <span class="o">=</span> <span class="n">network</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">],</span> <span class="n">network</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">],</span> <span class="n">network</span><span class="p">[</span><span class="s1">'b3'</span><span class="p">]</span>
+
+    <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W1</span><span class="p">)</span> <span class="o">+</span> <span class="n">b1</span>
+    <span class="n">z1</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+    <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">z1</span><span class="p">,</span> <span class="n">W2</span><span class="p">)</span> <span class="o">+</span> <span class="n">b2</span>
+    <span class="n">z2</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span>
+    <span class="n">a3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">z2</span><span class="p">,</span> <span class="n">W3</span><span class="p">)</span> <span class="o">+</span> <span class="n">b3</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">softmax</span><span class="p">(</span><span class="n">a3</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y</span>
+
+<span class="c1"># 앞의 두 반환값 _, _ 은 훈련 데이터와 훈련 정답 레이블이다. 여기서는 이미 훈련된 가중치로 추론, 즉 순전파만 테스트할 것이기 때문에 시험 데이터 x 와 시험 정답 레이블 t 만 가져온다.</span>
+<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">load_mnist</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">flatten</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">one_hot_label</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"sample_weight.pkl"</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">network</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">accuracy_cnt</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">network</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1"># 확률이 가장 높은 원소의 인덱스를 얻는다.</span>
+    <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+        <span class="n">accuracy_cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Accuracy:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">accuracy_cnt</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+</code></pre></div>
+<p>이 코드는 학습과정은 건너뛰고 이미 학습된 가중치를 불러와서 추론과정(순전파)만 수행해본다.</p>
+<p>그리고 정확도를 측정해서 출력한다.</p>
+</li>
+<li>
+<p>하지만 위 코드를 적당한 단위로 묶어서 다음과 같이 한번에 처리해주는 배치(batch) 처리를 할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="n">x</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">()</span>
+<span class="n">network</span> <span class="o">=</span> <span class="n">init_network</span><span class="p">()</span>
+
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># 배치 크기</span>
+<span class="n">accuracy_cnt</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">batch_size</span><span class="p">):</span>
+    <span class="n">x_batch</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">batch_size</span><span class="p">]</span>
+    <span class="n">y_batch</span> <span class="o">=</span> <span class="n">predict</span><span class="p">(</span><span class="n">network</span><span class="p">,</span> <span class="n">x_batch</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y_batch</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">accuracy_cnt</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">p</span> <span class="o">==</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">batch_size</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Accuracy:"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">accuracy_cnt</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#d6049d46b"><div class="admonition tldr" id="d6049d46b">
+<p>배치(batch) : 입력 데이터를 하나로 묶은 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>입력 데이터를 배치로 처리하면 다음과 같은 여러 이점이 있다.</p>
+<ul>
+<li>
+<p>이미지 1장당 처리 시간을 대폭 줄여준다.</p>
+</li>
+<li>
+<p>수치 계산 라이브러리(numpyu, pytorch 등) 대부분이 큰 배열을 효율적으로 처리할 수 있도록 고도로 최적화되어있다.</p>
+</li>
+<li>
+<p>큰 신경망에서는 데이터 병목이 자주 발생하는데, 배치 처리를 함으로써 I/O 버스에 부하를 줄여줄 수 있다.</p>
+<ul>
+<li>더 정확히 말하면 느린 I/O 를 통해 데이터를 읽는 횟수를 줄여서, 빠른 CPU 나 GPU 의 순수계산 비율을 높이는 것이다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#4cb51ba42"><div class="admonition tldr" id="4cb51ba42">
+<p>원-핫 인코딩(one-hot encoding) : 정답을 뜻하는 원소만 <span class="arithmatex">\(1\)</span> 로, 나머지는 모두 <span class="arithmatex">\(0\)</span> 인 배열로 저장하는 방식이다.</p>
+</div></a>
+<a href="#0bb2fc560"><div class="admonition tldr" id="0bb2fc560">
+<p>전처리(pre-processing) : 신경망의 입력 데이터에 특정 변환을 가하는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 전처리는 활발히 사용되는데, 입력 데이터에 적절한 변환을 가함으로써 식별 능력을 개선하고 학습 속도를 높일 수 있기 때문이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>데이터 전체 평균과 표준편차를 이용하여 데이터들이 <span class="arithmatex">\(0\)</span> 을 중심으로 분포하도록 이동한다. </p>
+<p>데이터의 확산 범위를 제한하는 정규화를 수행한다. </p>
+<p>전체 데이터를 균일하게 분포시키는 데이터 백색화(whitening) 를 진행한다.</p>
+</li>
+</ul>
+<a href="#f48d347e5"><div class="admonition tldr" id="f48d347e5">
+<p>정규화(normalization) : 전처리 과정 중 하나로 입력 데이터를 특정 범위로 변환하는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>폐구간 <span class="arithmatex">\([0, 255]\)</span> 에 존재하는 정수 데이터를 폐구간 <span class="arithmatex">\([0, 1]\)</span> 에 존재하는 실수로 변환한다.</p>
+</li>
+</ul>
+<h2 id="_3">기계학습<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<a href="#23ee43127"><div class="admonition tldr" id="23ee43127">
+<p>학습(learning) : 신경망 학습에서 학습이란, </p>
+<p>손실함수의 값을 가장 작게 만드는 가중치 매개변수의 최적값을 훈련 데이터로부터 자동으로 찾는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>손실 함수의 값을 작게만드는 기법 중 하나로 함수의 기울기를 활용하는 경사법이 있다.</p>
+</li>
+<li>
+<p>신경망은 데이터에서 자동으로 학습하는데, 이는 수천만개의 가중치를 수작업으로 조정할 필요 없이 자동으로 조정할 수 있다는 뜻이다.</p>
+<ul>
+<li>
+<p>퍼셉트론도 선형 분리 가능 문제들, 즉 직선으로 분류가 가능한 데이터는 데이터로부터 자동으로 학습할 수 있다. 이것이 퍼셉트론 수렴 정리(perceptron convergence theorem) 이다.</p>
+<p>그러나 퍼셉트론은 XOR 게이트 같은 비선형 분리 문제는 자동으로 학습할 수 없다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>위에서 순전파로 이미 학습된 가중치로 MNIST 손글씨 데이터를 추론했었다.</p>
+<p>이제 실제로 숫자 <span class="arithmatex">\(5\)</span> 를 인식하는 프로그램을 만들어보아야 한다.</p>
+<p>그런데 대체 어떻게 만들어야할까? <span class="arithmatex">\(5\)</span> 를 인식하는 알고리즘을 밑바닥부터 짜는 것보다 이미지에서 특징(feature) 를 추출하고 그 특징의 패턴을 기계학습으로 가중치에 학습시키는 것이 좋다.</p>
+<ul>
+<li>
+<p>여기서 말한 특징(feature)이란 입력 데이터(이미지) 에서 본질적인 데이터(중요한 데이터) 를 추출한 변환기이다.</p>
+</li>
+<li>
+<p>이미지의 특징은 보통 벡터로 표현한다.</p>
+</li>
+<li>
+<p>컴퓨터 비전에서는 SIFT, SURF, HOG 등의 특징을 많이 사용한다.</p>
+<p>이 특징을 사용하여 이미지를 벡터로 변환하고, </p>
+<p>변환된 벡터를 가지고 지도 학습 방식의 대표 분류 기법인 SVM, KNN 등으로 학습할 수 있다.</p>
+</li>
+<li>
+<p>하지만 이 특징 기법의 단점은 특징까지는 여전히 사람이 설계하기 때문에 문제에 적합한 특징을 쓰지 않으면 좋은 결과를 얻을 수 없다는 것이다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">유형</th>
+<th align="center">입력 데이터</th>
+<th align="center">알고리즘</th>
+<th align="center">출력 데이터</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">손글씨 <span class="arithmatex">\(5\)</span></td>
+<td align="center">사람이 명시한 규칙(알고리즘)</td>
+<td align="center">결과</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">손글씨 <span class="arithmatex">\(5\)</span></td>
+<td align="center">사람이 생각한 특징(SIFT, HOG 등) → 기계학습(SVM, KNN 등)</td>
+<td align="center">결과</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">손글씨 <span class="arithmatex">\(5\)</span></td>
+<td align="center">신경망(딥러닝)</td>
+<td align="center">결과</td>
+</tr>
+</tbody>
+</table>
+<p>유형 1 은 순수하게 사람이 제작한 알고리즘으로 손글씨 <span class="arithmatex">\(5\)</span> 를 5 라고 판단하는 것이고,</p>
+<p>유형 2 은 사람이 생각한 특징을 기반으로 기계학습을 하여 손글씨 <span class="arithmatex">\(5\)</span> 를 5 라고 판단하는 것이고,</p>
+<p>유형 3 은 순수하게 컴퓨터가 딥러닝으로 손글씨 <span class="arithmatex">\(5\)</span> 를 5 라고 판단하는 것이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>위의 이유 때문에 딥러닝을 종단간 기계학습(end-to-end machine learning) 이라고도 한다.</p>
+<p>이것은 "처음부터 끝까지" 사람의 개입없이 결과를 얻는다는 뜻을 갖고 있다.</p>
+</li>
+</ul>
+<a href="#cf8031d43"><div class="admonition tldr" id="cf8031d43">
+<p>과적합(overfitting) : 신경망이 특정 데이터셋에 과하게 최적화된 상태이다.</p>
+</div></a>
+<h2 id="_4">손실함수<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<a href="#6da0b73f8"><div class="admonition tldr" id="6da0b73f8">
+<p>손실함수(loss function) : 현재의 신경망이 데이터를 얼마나 처리하지 못하는지를 출력하는 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 손실함수를 통하여 가중치 매개변수들을 얼마나 조정해야 하는지 알 수 있다.</p>
+</li>
+<li>
+<p>손실함수로 임의의 함수를 사용할 수 있으나, </p>
+<p>일반적으로 평균 제곱 오차와 교차 엔트로피 오차를 사용한다.</p>
+</li>
+<li>
+<p>출력의 정확도라는 지표 대신 손실함수 값이라는 간접적인 지표를 사용하는 이유는 이렇다.</p>
+<p>신경망 학습에서는 최적의 매개변수(가중치, 편향(임계값)) 을 찾기 위하여 손실 함수 값을 최대한 적게 만드는 매개변수 값을 찾는다. 이때 매개변수의 미분(기울기)를 계산하여 그 미분값을 단서로 매개변수의 값을 서서히 갱신해나간다.</p>
+<p>즉, 어떤 신경망의 가중치 매개변수의 손실 함수의 미분이란 "이 가중치 매개변수를 아주 조금 변화시켰을 때, 손실 함수가 어떻게 변하는가" 에 대한 대답입니다.</p>
+<p>미분 값이 음수면 그 가중치를 양의 방향으로 변화시켜 손실함수 값을 줄이고, </p>
+<p>미분 값이 양수면 그 가중치를 음의 반향으로 변화시켜 손실함수 값을 줄인다.</p>
+<p>그런데 미분 값이 <span class="arithmatex">\(0\)</span> 이면 가중치를 바꿔도 손실함수 값이 바뀌지 않으므로 가중치 갱신(학습) 이 끝난다.</p>
+<p>그런데 "출력의 정확도" 를 지표로 삼으면 미분 값이 대부분의 장소에서 <span class="arithmatex">\(0\)</span> 이 되어 매개변수를 제대로 갱싱할 수 없다.</p>
+<ul>
+<li>
+<p>"출력의 정확도" 를 지표로 매개변수의 미분을 구하면 대부분의 장소에서 <span class="arithmatex">\(0\)</span> 이 되는 이유는 이렇다.</p>
+<p>어떤 신경망이 <span class="arithmatex">\(100\)</span> 개의 훈련 데이터 중에서 <span class="arithmatex">\(12\)</span> 개만 제대로 인식한다고 가정하자. 이때의 정확도는 <span class="arithmatex">\(12\%\)</span> 이다. 만약 정확도가 지표였다면 가중치 매개변수의 값을 조금 조정해도 정확도는 여전히 <span class="arithmatex">\(12\%\)</span> 이다. </p>
+<p>정확도가 개선된다고 하더라도 그 값이 <span class="arithmatex">\(12.023\%\)</span> 같은 연속적인 값이 아니라 <span class="arithmatex">\(13\%\)</span> 같은 불연속적인 값으로 변한다. 이에 따라 가중치를 조금 바꾸어도 정확도가 변하지 않는다는 결론이 나와버리는 것이다. </p>
+<ul>
+<li>그리고 이것은 계단 함수를 활성화함수로 사용하지 않게 된 이유와도 같다.</li>
+</ul>
+<p>계단함수는 불연속적으로 갑자기 변하지만, 시그모이드 함수는 출력이 연속적으로 변하고 기울기도 연속적으로 변한다. 이에 따라 시그모이드 함수의 미분은 어느 장소에서도 <span class="arithmatex">\(0\)</span> 이 되지 않는다.</p>
+<p>기울기가 <span class="arithmatex">\(0\)</span> 이 되지 않아서 시그모이드 함수로 신경망이 올바르게 학습할 수 있는 것이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>아 이게 시그모이드 함수를 활성화 함수로 사용하는 이유구나.</p>
+</blockquote>
+<a href="#0de2f16d6"><div class="admonition tldr" id="0de2f16d6">
+<p>평균 제곱 오차(mean squared error, MSE) : 신경망의 출력 <span class="arithmatex">\(y _{k}\)</span>, 정답 레이블 <span class="arithmatex">\(t _{k}\)</span>, 데이터의 차원 수 <span class="arithmatex">\(k\)</span> 에 대한 손실함수</p>
+<div class="arithmatex">\[ E = \dfrac{1}{2}  \sum_{k}^{}(y _{k} - t _{k}) ^{2} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>가장 자주 쓰이는 손실 함수이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>손글씨 숫자 인식 MNIST 데이터셋 테스트에서 신경망의 출력층의 소프트맥스 함수의 출력 <span class="arithmatex">\(y _{k}\)</span> 를</p>
+<div class="highlight"><pre><span></span><code><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+</code></pre></div>
+<p>이라고 하자. 출력 <span class="arithmatex">\(y _{k}\)</span> 는 손글씨가 각각의 숫자일 확률이다. 그래서 이미지가 <span class="arithmatex">\(0\)</span> 일 확률은 <span class="arithmatex">\(0.1\)</span> 로 계산한 것이다. 따라서 신경망이 손글씨가 <span class="arithmatex">\(2\)</span> 일 확률이 <span class="arithmatex">\(60\%\)</span> 로 가장 높다고 판단한 것이다.</p>
+<p>원핫인코딩으로 인코딩된 정답을 가르키는 정답 레이블 <span class="arithmatex">\(t _{k}\)</span> 를 </p>
+<div class="highlight"><pre><span></span><code><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+<p>이라고 하자. </p>
+<p>이때 평균 제곱 오차는 각 원소의 출력(추정값)과 정답 레이블의 차(<span class="arithmatex">\(y _{k} - t _{k})\)</span> 를 제곱한 후 그 총합을 구하는 것이다. 따라서 </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">MSE</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<p>로 간단히 구현할 수 있다. 출력과 정답의 평균오차제곱을 구해보면 <span class="arithmatex">\(2\)</span> 를 가장 높은 확률로 추론했으므로 다음과 같이 손실값이 작게 나온다.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">MSE</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+<span class="c1"># 0.0975...</span>
+</code></pre></div>
+</li>
+</ul>
+<a href="#64f9fc751"><div class="admonition tldr" id="64f9fc751">
+<p>교차 엔트로피 오차(cross entropy error, CEE) : 신경망의 출력 <span class="arithmatex">\(y _{k}\)</span>, 원-핫 인코딩된 정답 레이블 <span class="arithmatex">\(t _{k}\)</span>, 데이터의 차원 수 <span class="arithmatex">\(k\)</span> 에 대한 손실함수</p>
+<div class="arithmatex">\[ E = - \sum_{k}^{} t _{k}\ln_{} y _{k} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>교차 엔트로피 오차 함수에서 정답레이블의 <span class="arithmatex">\(t _{k}\)</span> 는 원-핫 인코딩된 레이블이다. 따라서 정답 인덱스만 <span class="arithmatex">\(1\)</span> 이고 나머지는 <span class="arithmatex">\(0\)</span> 이다.</p>
+<p>그런데 정답 레이블와 출력을 곱하고 있으므로 정답에 해당하는 출력 이외의 값들은 <span class="arithmatex">\(0\)</span> 과 곱해져서 <span class="arithmatex">\(0\)</span> 이 된다. 즉, 정답이 아닌 출력은 손실함수에 영향을 끼지지 않는다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>손글씨 숫자가 어떤 숫자인지 추정할 때 정답이 <span class="arithmatex">\(2\)</span> 였는데, <span class="arithmatex">\(2\)</span> 에 해당하는 출력값이 <span class="arithmatex">\(0.6\)</span> 이었다고 하자. 즉 <span class="arithmatex">\(2\)</span> 일 확률이 <span class="arithmatex">\(60\%\)</span> 라고 추론한 것이다.</p>
+<p>이때 교차 엔트로피 함수는 단순히 </p>
+<div class="arithmatex">\[ E = - \ln_{} (0.6) = 0.51 \]</div>
+<p>이 된다. 반면 <span class="arithmatex">\(2\)</span> 에 해당하는 출력값이 <span class="arithmatex">\(0.1\)</span> 이었다면</p>
+<div class="arithmatex">\[ E = - \ln_{} (0.1) = 2.30 \]</div>
+<p>이 되어 손실값이 커지게 된다.</p>
+</li>
+<li>
+<p>교차 엔트로피 오차함수는 다음과 같이 코드로 간단히 구현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">CEE</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="n">delta</span> <span class="o">=</span> <span class="mf">1e-7</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">t</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="n">delta</span><span class="p">))</span>
+</code></pre></div>
+<p>그런데 위 코드를 보면 원래의 수식 </p>
+<div class="arithmatex">\[ E = - \sum_{k}^{} t _{k}\ln_{} y _{k} \]</div>
+<p>으로 오차를 계산하는 것이 아니라</p>
+<div class="arithmatex">\[ E = - \sum_{k}^{} t _{k}\ln_{} (y _{k} + 0.00000001) \]</div>
+<p>로 계산하는 것을 알 수 있다.</p>
+<p>이것은 <span class="arithmatex">\(\log_{}\)</span> 함수에 <span class="arithmatex">\(0\)</span> 을 입력하면 음의 무한대가 되기 때문에 절대 <span class="arithmatex">\(0\)</span> 이 되지 않도록 아주 작은 값을 더해주는 가벼운 트릭이다.</p>
+</li>
+<li>
+<p>그러나 손실함수는 실제로 하나의 훈련 데이터만을 계산하는 것이 아니라,</p>
+<p>모든 훈련 데이터를 대상으로 손실 함수 값을 구해야만 한다. </p>
+<p>쉽게 말해 훈련 데이터가 100개면 이것을 기반으로 100개의 손실 함수 값의 합을 가중치 매개변수 조정의 기준으로 삼아야 한다는 것이다.</p>
+<ul>
+<li>
+<p>교차엔트로피 함수의 훈련 데이터 모두에 대한 손실함수의 합은 </p>
+<p><span class="arithmatex">\(N\)</span> 개의 데이터, 데이터의 차원 수 <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\(n\)</span> 번째 데이터의 <span class="arithmatex">\(k\)</span> 번째 데이터의 정답 레이블 <span class="arithmatex">\(t _{nk}\)</span>, 신경망의 출력 <span class="arithmatex">\(y _{nk}\)</span> 에 대하여</p>
+<div class="arithmatex">\[ E = - \dfrac{1}{N}\sum_{n}^{}\sum_{k}^{}t _{nk}\log_{} y _{nk} \]</div>
+<p>이다.</p>
+<p>수식이 복잡해보여도 단순히 교차 엔트로피 함수를 <span class="arithmatex">\(N\)</span> 개의 데이터에 대하여 확장했을 뿐이다! 마지막에는 <span class="arithmatex">\(N\)</span> 으로 나누어 값을 정규화시켰다.</p>
+</li>
+<li>
+<p>이렇게 <span class="arithmatex">\(N\)</span> 을 나눔으로써 "평균 손실 함수", 즉 손실 함수의 평균값이 구해지는 것이다.</p>
+</li>
+<li>
+<p>우리는 이로써 훈련 데이터의 개수에 관계없이 언제나 통일되고 일관된 손실함수 지표를 얻을 수 있게 되었다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#9b4f0ad49"><div class="admonition tldr" id="9b4f0ad49">
+<p>미니배치 학습(mini-batch) : 실제로 수없이 많은 모든 데이터를 대상으로 손실함수의 합을 구하기에는 시간이 걸리기 때문에,</p>
+<p>훈련 데이터의 일부만 추려서 "근사치" 로 손실함수를 계산하며 학습하는 과정이다.</p>
+</div></a>
+<ul>
+<li>
+<p>만약 데이터가 <span class="arithmatex">\(20,0000\)</span> 개가 있다면 이 모든 데이터에 대한 손실함수의 합의 평균을 구하면 너무 좋겠지만, </p>
+<p>매번 그렇게 하기에 시간이 너무 오래걸린다. </p>
+<p>따라서 가령 <span class="arithmatex">\(100\)</span> 개를 적절히 추출하여 그것에 대한 손실함수의 합의 평균으로 가중치 매개변수를 조정함으로써 학습하는 것이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>무작위로 100개의 데이터를 추출하는 미니배치 과정을 다음과 같이 간단히 구현할 수 있다. </p>
+<p>위에서 계속 사용했었던 MNIST 손글씨 인식 코드의 맥락에서 작성된 코드이다.</p>
+<div class="highlight"><pre><span></span><code><span class="n">train_size</span> <span class="o">=</span> <span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">batch_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">train_size</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
+<span class="n">x_batch</span> <span class="o">=</span> <span class="n">x_train</span><span class="p">[</span><span class="n">batch_mask</span><span class="p">]</span>
+<span class="n">t_batch</span> <span class="o">=</span> <span class="n">t_train</span><span class="p">[</span><span class="n">batch_mask</span><span class="p">]</span>
+</code></pre></div>
+<p>가령 <code>np.random.choice(100, 3)</code> 은 <span class="arithmatex">\(0 \sim 99\)</span> 에서 <span class="arithmatex">\(3\)</span> 개의 무작위 수를 반환한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>미니배치를 했을 때 교차 엔트로피 오차를 구하는 코드는 다음과 같다. 교차 엔트로피의 원래 코드에서처럼 신경망의 출력 <code>y</code>, 정답 레이블 <code>t</code> 에 대한 코드이다. </p>
+<p>만약 <code>y</code> 가 1차원이면, 즉 배치가 없다면, 즉, 데이터 하나당 교차 엔트로피 오차를 구하는 경우, <code>reshape</code> 함수로 데이터의 형상을 바꾸어 준다.</p>
+<p>계산이 다 되면 <code>batch_size</code> 로 나누어 정규화해줌으로써 이미지 1장당 평균 교차 엔트로피 오차, 즉 입력 하나 당 평균 교차 엔트로피 오차를 계산한다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">CEE</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">y</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">batch_size</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">t</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span> <span class="o">+</span> <span class="mf">1e-7</span><span class="p">))</span> <span class="o">/</span> <span class="n">batch_size</span>
+</code></pre></div>
+</li>
+<li>
+<p>예시</p>
+<p>반면 교차 엔트로피 오차 함수에 정답 레이블이 원-핫 인코딩이 아닌 숫자 <span class="arithmatex">\(2\)</span>, 또는 <span class="arithmatex">\(7\)</span> 로 주어졌다면 다음과 같이 구현해야 한다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">CEE</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">y</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+    <span class="n">batch_size</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">batch_size</span><span class="p">),</span> <span class="n">t</span><span class="p">]</span> <span class="o">+</span> <span class="mf">1e-7</span><span class="p">))</span> <span class="o">/</span> <span class="n">batch_size</span>
+</code></pre></div>
+<p>이처럼 데이터에 따라 같은 교차 엔트로피 오차 함수 계산을 할 때도 처리를 다르게 해주어야 한다.</p>
+<ul>
+<li>
+<p><code>y[np.arange(batch_size), t]</code> 의 의미는 배치처리에서도 다음과 같다. </p>
+<p>먼저 <code>np.arange(50)</code> 은 다음과 같이 <span class="arithmatex">\(0\)</span> 부터 <span class="arithmatex">\(49\)</span> 까지의 배열을 생성한다.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span>
+    <span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">49</span><span class="p">])</span>
+</code></pre></div>
+<p>이것을 <code>a = np.arange(50).reshape([25, 2])</code> 로 저장한다고 하자. 그러면 <span class="arithmatex">\(25\)</span> 행, <span class="arithmatex">\(2\)</span> 열인 행렬이 생성된다. </p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">32</span><span class="p">,</span> <span class="mi">33</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">35</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">37</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">39</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">41</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">42</span><span class="p">,</span> <span class="mi">43</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">44</span><span class="p">,</span> <span class="mi">45</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">46</span><span class="p">,</span> <span class="mi">47</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">48</span><span class="p">,</span> <span class="mi">49</span><span class="p">]])</span>
+</code></pre></div>
+<p>이제 이 행렬에서 <span class="arithmatex">\(0\)</span> 행을 가져오자.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">array</span><span class="p">([</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">])</span>
+</code></pre></div>
+<p>이때 <span class="arithmatex">\(0\)</span> 행 <span class="arithmatex">\(1\)</span> 열을 가져오면 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">])[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="mi">1</span>
+</code></pre></div>
+<p>넘파이는 임의의 행을 가져올 수 있는 인덱싱 방식을 제공한다. <span class="arithmatex">\(0\)</span> 행과 <span class="arithmatex">\(1\)</span> 행을 가져와보자.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">])[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+</code></pre></div>
+<p>마찬가지로 다음과 같이 <span class="arithmatex">\(0\)</span> 행과 <span class="arithmatex">\(5\)</span> 행도 가져올 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">])[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">]])</span>
+</code></pre></div>
+<p>그러므로 다음 코드는 <span class="arithmatex">\(0,1,2\)</span> 행을 가져온다.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">])[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+</code></pre></div>
+<p>이렇게 가져와진 <span class="arithmatex">\(0,1,2\)</span> 해에서 <span class="arithmatex">\(0\)</span> 열을 가져오면 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">])[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</code></pre></div>
+<p>다음과 같이 <span class="arithmatex">\(1\)</span> 열도 가져올 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">])[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</code></pre></div>
+<p>그런데 열을 가져오는 인덱싱에도 숫자가 아닌 배열을 전달하면 각각의 행에 부합하는 원소를 인덱싱할 수 있다. 다음과 같이 <span class="arithmatex">\(0,1,2\)</span> 행에 대하여 <span class="arithmatex">\(0,1,1\)</span> 열을 가져올 수 있다는 것이다.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">2</span><span class="p">])[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>   
+</code></pre></div>
+</li>
+<li>
+<p>그러므로 <code>y[np.arange(batch_size), t]</code> 의 의미는 <code>y</code> 에서 <code>0</code> 행부터 <code>batch_size-1</code> 행에서 <code>t</code> 열을 가져온 것이다. </p>
+<p>그런데 <code>y</code> 는 출력이었고, <code>t</code> 는 손글씨의 정답 레이블로써 <code>[2,7,0,9,4]</code> 였다. 그러므로 결과적으로 출력층에서 정답에 해당하는 출력을 가져온 것이 된다.</p>
+<p>즉, <code>[y[0, 2], y[1, 7], y[2, 0], y[3, 9], y[4, 4]]</code> 인 배열을 생성한 것이 된다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">미분<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<a href="#b5c9ee403"><div class="admonition tldr" id="b5c9ee403">
+<p>해석적 미분 : 수학에서의 미분으로써 한순간의 변화량을 표현한 것</p>
+<div class="arithmatex">\[ \dfrac{df(x)}{dx} = \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>달리기 선수가 <span class="arithmatex">\(10\)</span>분에 <span class="arithmatex">\(2\)</span> km 를 뛰었다고 하자. 그러면 속도는 <span class="arithmatex">\(\dfrac{2}{10} = 0.2\)</span> [km/m] 그런데 이것은 평균 속도, 즉 평균 변화량이다. </p>
+<p>우리는 <span class="arithmatex">\(10\)</span>분이라는 시간을 <span class="arithmatex">\(1\)</span>분동안 달린 거리, <span class="arithmatex">\(1\)</span>초 동안 달린 거리, <span class="arithmatex">\(0.1\)</span>초 동안 달린 거리, <span class="arithmatex">\(\dots\)</span> 로 줄여나가면서 순간적인 속도, 즉 순간 변화량을 구하려 한다.</p>
+<p>이것은 다음과 같이</p>
+<div class="arithmatex">\[ \dfrac{df(x)}{dx} = \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h} \]</div>
+<p>시간 <span class="arithmatex">\(x\)</span> 의 아주 작은 변화량 <span class="arithmatex">\(dx\)</span> 에 따라서 거리 <span class="arithmatex">\(f(x)\)</span> 의 아주 작은 변화량 <span class="arithmatex">\(df(x)\)</span> 가 얼마나 변했는지 표현할 수 있다. 그리고 이것을 수식적으로 시간 <span class="arithmatex">\(h\)</span> 가 <span class="arithmatex">\(0\)</span> 에 수렴할 때 평균변화량 이 순간변화량이 되기 때문에</p>
+<div class="arithmatex">\[ \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h} \]</div>
+<p>라고 표현할 수도 있다.</p>
+</li>
+</ul>
+<a href="#20e8c71a4"><div class="admonition tldr" id="20e8c71a4">
+<p>수치 미분(numerical differentiation) : 컴퓨터에서 미분을 계산할 때 실제로 <span class="arithmatex">\(0\)</span> 에 수렴하는 차분을 사용할 수 없으므로 매우 작은 차분을 사용하여 미분을 하는 것</p>
+<div class="arithmatex">\[ \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>해석적 미분의 달리기 선수 예시의 순간변화량을 코드로 </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">df</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mf">10e-50</span> <span class="c1"># 거의 0 에 수렴하는 엄청 작은 값</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+</code></pre></div>
+<p>라고 구현하면 다음의 두 가지가 에러가 발생한다.</p>
+<ol>
+<li>
+<p>반올림 오차가 발생한다. 반올림 오차는 작은 값이 생략되어 최종 계산 결과에 오차가 생기게 되는 것이다.</p>
+<p>따라서 반올림 오차가 발생하지 않도록 너무 작은 값을 사용하는 것보다 <span class="arithmatex">\(10 ^{-4}\)</span> 정도의 값을 사용해야 한다.</p>
+</li>
+<li>
+<p>수학에서 엄밀한 미분이란 <span class="arithmatex">\(h\)</span> 가 <span class="arithmatex">\(0\)</span> 에 진정으로 수렴하기 때문에 <span class="arithmatex">\(x+h\)</span> 와 <span class="arithmatex">\(x\)</span> 로 수식을 표현할 수 있었다.</p>
+<p>하지만 코드에서는 <span class="arithmatex">\(h\)</span> 를 <span class="arithmatex">\(0\)</span> 으로 수렴시키지 못하기 때문에 <span class="arithmatex">\(x+h\)</span> 와 <span class="arithmatex">\(x\)</span> 로 순간변화율을 구하는 것이 아니라 <span class="arithmatex">\(x+h\)</span> 와 <span class="arithmatex">\(x-h\)</span> 로 순간변화율을 구해야 한다.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>그래서 이 두 가지 에러를 해결하여 </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">df</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mf">1e-4</span> <span class="c1">#0.0001</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">h</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="p">)</span>
+</code></pre></div>
+<p>로 최종 미분 코드를 짤 수 있다.</p>
+</li>
+</ul>
+<a href="#b8a0f2d23"><div class="admonition tldr" id="b8a0f2d23">
+<p>반올림 오차 : 작은 값이 생략되어 최종 계산 결과에 오차가 생기게 되는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>아주 작은 값을 컴퓨터가 처리하기 어려워서 다음과 같이 오차가 생기는 것이다.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">(</span><span class="mf">1e-50</span><span class="p">)</span>
+<span class="mf">0.0</span>
+</code></pre></div>
+</li>
+<li>
+<p>컴퓨터로 미분할 때 엄청나게 작은 값을 사용하는 게 아니라 <span class="arithmatex">\(10 ^{-4}\)</span> 정도의 값을 사용하면 반올림 오차도 생기지 않고 적당히 좋은 결과를 얻는다는 사실이 알려져있다.</p>
+</li>
+</ul>
+<a href="#e8c9327d2"><div class="admonition tldr" id="e8c9327d2">
+<p>중심 차분(중앙 차분) : 미분 <span class="arithmatex">\(\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h}\)</span> 을 컴퓨터 코드로 구현할 때 <span class="arithmatex">\(h\)</span> 를 실제로 <span class="arithmatex">\(0\)</span> 에 수렴시키지 못하기 때문에</p>
+<div class="arithmatex">\[\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}\]</div>
+<p>로 미분을 구하여 오차를 최소화시키는 방식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>설명 </p>
+<p>수학에서의 원래 미분은 차분 <span class="arithmatex">\(h\)</span> 를 <span class="arithmatex">\(0\)</span> 에 수렴시킬 수 있기 때문에</p>
+<div class="arithmatex">\[\displaystyle \dfrac{df(x)}{dx} = \lim_{h \to 0} \dfrac{f(x+h)-f(x)}{h}\]</div>
+<p>를 사용했었다. 이것은 두 점 <span class="arithmatex">\((x, f(x)), (x+h, f(x+h))\)</span> 으로 생성된 직선을 <span class="arithmatex">\(h\)</span> 를 <span class="arithmatex">\(0\)</span> 으로 수렴시켜 접선으로 만들어 기울기를 구하는 것이었다.</p>
+<p>하지만 수치미분에서 기울기의 오차를 줄이기 위하여 두 점 <span class="arithmatex">\((x-h, f(x-h)), (x+h, f(x+h))\)</span> 으로 생성된 직선의 기울기를 구한다. 따라서 </p>
+<div class="arithmatex">\[ \dfrac{f(x+h) - f(x-h)}{(x+h) - (x-h)} = \dfrac{f(x+h)-f(x-h)}{2h} \]</div>
+<p>에서 <span class="arithmatex">\(h\)</span> 를 <span class="arithmatex">\(0\)</span> 으로 최대한 수렴시킨 </p>
+<div class="arithmatex">\[\displaystyle \lim_{h \to 0} \dfrac{f(x+h)-f(x-h)}{2h}\]</div>
+<p>을 사용하는 것이다.</p>
+</li>
+</ul>
+<a href="#847ded4a8"><div class="admonition tldr" id="847ded4a8">
+<p>편미분 코드 구현</p>
+</div></a>
+<ul>
+<li>
+<p>먼저 이변수 함수 <span class="arithmatex">\(f(x_0, x_1) = x _{0} ^{2} + x _{1} ^{2}\)</span> 는 <code>numpy</code> 배열 <code>x</code> 에 대하여 다음과 같이 간단히 코드로 사상시킬 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span>
+    <span class="c1"># return np.sum(x ** 2)</span>
+</code></pre></div>
+<ul>
+<li>
+<p>이때 점 <span class="arithmatex">\((x _{0}, x _{1}) = (3, 4)\)</span> 에서 <span class="arithmatex">\(x _{0}\)</span> 에 대한 편미분계수를 구해보자.</p>
+<p>이변수 함수 <span class="arithmatex">\(f(x _{0}, x _{1})\)</span> 를 <span class="arithmatex">\(x _{0}\)</span> 에 대하여 편미분 하면 </p>
+<div class="arithmatex">\[ f _{x_0}(x _{0}, x _{1}) = \dfrac{\partial f(x _{0}, x _{1})}{\partial x _{0}} = 2 x _{0} \]</div>
+<p>이다. 이것은 변수 <span class="arithmatex">\(x _{0}\)</span> 에 따른, 곡면 <span class="arithmatex">\(f(x _{0}, x _{1})\)</span> 과 <span class="arithmatex">\(x _{0}\)</span> 축에 평행한 평면과의 교선의 접선의 기울기이다. 이것을 다음과 같이 간단히 코드로 구현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">x1</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x0</span>
+</code></pre></div>
+<p>이변수니까 명목상 <span class="arithmatex">\(x _{0}, x _{1}\)</span> 을 입력으로 받지만 <span class="arithmatex">\(x _{1}\)</span> 는 편미분과정에서 사라져서 아무 처리를 받지 않는 것이다.</p>
+<p>그러면 그냥 단순히 <code>f1(3, 4)</code> 를 구하면 <code>6</code> 이 계산된다. 이것은 해석적 미분과 동일한 값이다.</p>
+</li>
+<li>
+<p>이제 수치미분으로 점 <span class="arithmatex">\((x _{0}, x _{1}) = (3, 4)\)</span> 에서 <span class="arithmatex">\(x _{0}\)</span> 에 대한 편미분계수를 구해보자.</p>
+<p>수치 미분에서 완성한 코드</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">df</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mf">1e-4</span> <span class="c1">#0.0001</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">h</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="p">)</span>
+</code></pre></div>
+<p>를 사용하자.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#f35346f60"><div class="admonition tldr" id="f35346f60">
+<p>기울기 벡터 코드 구현</p>
+</div></a>
+<ul>
+<li>
+<p>예시  </p>
+<p>점 <span class="arithmatex">\(P(x_0, x_1) = (3, 4)\)</span> 에서 이변수 함수 <span class="arithmatex">\(f\)</span> 에 대한 기울기 <span class="arithmatex">\(\bigg (\dfrac{\partial f}{\partial  x_0}, \dfrac{\partial f}{\partial x_1}\bigg )\)</span> 을 계산해보자.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">def</span> <span class="nf">numerical_gradient</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mf">1e-4</span>
+    <span class="n">grad</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+        <span class="n">tmp_val</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="c1"># f(x+h) 계산</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp_val</span><span class="o">+</span><span class="n">h</span>
+        <span class="n">fxh1</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="c1"># f(x-h) 계산</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp_val</span><span class="o">-</span><span class="n">h</span>
+        <span class="n">fxh2</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="n">grad</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">fxh1</span> <span class="o">-</span> <span class="n">fxh2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="n">h</span><span class="p">)</span>
+        <span class="n">x</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">tmp_val</span> <span class="c1"># 값 복원</span>
+
+    <span class="k">return</span> <span class="n">grad</span>
+</code></pre></div>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Analysis/function/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>함수 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              함수
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          함수
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        함수
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    도형의 방정식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    여러가지 함수
+  </a>
+<nav aria-label="여러가지 함수" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    다항함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    유리함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    무리함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    지수함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    로그함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    특별한 함수
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    도형의 방정식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    여러가지 함수
+  </a>
+<nav aria-label="여러가지 함수" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    다항함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    유리함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    무리함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    지수함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    로그함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    특별한 함수
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>함수</h1>
+<h2 id="_1">도형의 방정식<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#f3d80c739"><div class="admonition tldr" id="f3d80c739">
+<p>함수의 그래프 : <span class="arithmatex">\(x\)</span> 축을 독립변수로 하고 각각의 <span class="arithmatex">\(x\)</span>값에 대응하는 <span class="arithmatex">\(y\)</span> 값의 모든 순서쌍 <span class="arithmatex">\((x, y)\)</span> 을 좌표평면에서 시각적으로 나타낸 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>함수 <span class="arithmatex">\(f\)</span> 의 그래프 <span class="arithmatex">\(G\)</span> 는 엄밀하게 다음과 같이 정의된다.</p>
+<ul>
+<li>함수 <span class="arithmatex">\(f: X \to Y\)</span> 에서 정의역 <span class="arithmatex">\(X\)</span> 의 원소 <span class="arithmatex">\(x\)</span> 와 이에 대응하는 함숫값 <span class="arithmatex">\(f(x)\)</span> 의 순서쌍 전체의 집합 <span class="arithmatex">\(G = \{(x, f(x)) | x \in X\}\)</span> 를 함수 <span class="arithmatex">\(f\)</span> 의 그래프 <span class="arithmatex">\(G\)</span> 라 한다. </li>
+</ul>
+</li>
+<li>
+<p>예시</p>
+<ul>
+<li>다음은 함수 <span class="arithmatex">\(f(x) = 2x+1\)</span> 의 그래프를 <span class="arithmatex">\(\mathbb{R}^2\)</span>(2차원 좌표계) 에서 시각화한 것이다. </li>
+</ul>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/75017426-52f5e980-54d0-11ea-9e69-e8a8e3df403d.png"/></p>
+</li>
+</ul>
+<a href="#fdf062ae5"><div class="admonition tldr" id="fdf062ae5">
+<p>직선의 방정식 : 직선의 방정식은 좌표평면에서 두 점을 곧게 이은 선분을 양 끝으로 무한히 늘린 직선을 나타내는 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>직선은 두 점으로 유일하게 특정될 뿐 아니라 한 점과 기울기로도 유일하게 특정되므로 직선의 방정식은 다음과 같이 정의된다. </p>
+<ul>
+<li>
+<p>한 점과 기울기로 정의 : 좌표평면에 한 점 <span class="arithmatex">\(A(x_1, y_1)\)</span> 과 기울기 <span class="arithmatex">\(m\)</span> 이 주어졌다고 하자. 이때 기울기는 직선 위의 어떤 점으로 구해도 일정하므로 직선 위의 임의의 점 <span class="arithmatex">\(P(x, y)\)</span> 에 대하여 <span class="arithmatex">\(m = \frac{y-y_1}{x-x_1}\)</span> 이 성립한다. 따라서 직선의 방정식은 <span class="arithmatex">\(y = mx - mx_1 + y_1\)</span> 으로써 <span class="arithmatex">\(f(x) = y = mx + a\)</span> 의 꼴이 된다.</p>
+</li>
+<li>
+<p>두 점으로 정의 : 좌표평면에 두 점 <span class="arithmatex">\(A(x_1, y_1)\)</span> 과 <span class="arithmatex">\(B(x_2, y_2)\)</span> 이 주어졌다고 하자. 이때 기울기는 <span class="arithmatex">\(m = \frac{y_2-y_1}{x_2-x_1}\)</span> 이다. 따라서 다시 한 점과 기울기로 직선을 특정하는 정의로 회귀하여 임의의 점 <span class="arithmatex">\(P(x, y)\)</span> 에 대하여 직선의 방정식은 <span class="arithmatex">\(y = mx + a\)</span> 이다. </p>
+<ul>
+<li>
+<p>두 점이 <span class="arithmatex">\(y_1 = y_2\)</span> 의 관계를 가질 경우 : 기울기 <span class="arithmatex">\(m\)</span> 이 <span class="arithmatex">\(0\)</span> 가 되어 직선의 방정식이 <span class="arithmatex">\(y = a\)</span> 가 된다.</p>
+</li>
+<li>
+<p>두 점이 <span class="arithmatex">\(x_1 = x_2\)</span> 의 관계를 가질 경우 : 기울기를 정의할 수 없지만 이러한 직선 위의 모든 점은 같은 <span class="arithmatex">\(x\)</span> 좌표를 갖는다는 유일한 성질을 사용하여 직선의 방정식을 <span class="arithmatex">\(x=x_1\)</span> 로 정의한다. </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>이로부터 모든 직선의 방정식을 대표하는 일차방정식 <span class="arithmatex">\(ax + by + c = 0\)</span> 를 얻는다. (단, <span class="arithmatex">\(a \neq 0 또는 b \neq 0\)</span>)</p>
+</li>
+</ul>
+<a href="#e2ff8c4e2"><div class="admonition tldr" id="e2ff8c4e2">
+<p>원의 방정식 : 중심이 <span class="arithmatex">\(C(a, b)\)</span> 이고 반지름의 길이가 <span class="arithmatex">\(r(r&gt;0)\)</span> 인 원의 방정식은 <span class="arithmatex">\((x-a)^2 + (y-b)^2 = r^2\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>원이란 중심을 기준으로 일정한 거리에 있는 점들의 모임이다. 이 정의에 따라 중심 <span class="arithmatex">\(C(a, b)\)</span> 로부터 <span class="arithmatex">\(r\)</span> 만큼 떨어진 임의의 점 <span class="arithmatex">\((x, y)\)</span> 을 피타고라스의 정리를 통하여 <span class="arithmatex">\((x-a)^2 + (y-b)^2 = r^2\)</span> 로 표현할 수 있다.</li>
+</ul>
+<a href="#d2d11e2cd"><div class="admonition tldr" id="d2d11e2cd">
+<p>점의 평행이동 : 좌표평면 위의 한 점 <span class="arithmatex">\(P(x, y)\)</span> 를 <span class="arithmatex">\(x\)</span> 축의 방향으로 <span class="arithmatex">\(a\)</span> 만큼, <span class="arithmatex">\(y\)</span> 축의 방향으로 <span class="arithmatex">\(b\)</span> 만큼 평행이동한 점 <span class="arithmatex">\(Q\)</span> 의 좌표는 <span class="arithmatex">\(Q(x+a, y+b)\)</span> 이다.</p>
+</div></a>
+<a href="#54f739032"><div class="admonition tldr" id="54f739032">
+<p>도형의 평행이동 : 방정식 <span class="arithmatex">\(f(x, y) = 0\)</span> 이 나타내는 도형을 <span class="arithmatex">\(x\)</span> 축의 방향으로 <span class="arithmatex">\(a\)</span> 만큼, <span class="arithmatex">\(y\)</span> 축의 방향으로 <span class="arithmatex">\(b\)</span> 만큼 평행이동한 도형의 방정식은 <span class="arithmatex">\(f(x-a, y-b) = 0\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>도형 위의 임의의 점을 <span class="arithmatex">\(P(x, y)\)</span> 라 할 때 도형을 <span class="arithmatex">\(x\)</span> 축의 방향으로 <span class="arithmatex">\(a\)</span> 만큼, <span class="arithmatex">\(y\)</span> 축의 방향으로 <span class="arithmatex">\(b\)</span> 만큼 평행이동하면 도형 위의 임의의 점 <span class="arithmatex">\(P\)</span> 도 평행이동한다. 그 결과 점 <span class="arithmatex">\(P\)</span> 가 <span class="arithmatex">\(P'(X, Y)\)</span> 가 되었다고 하면 다음이 성립한다. </p>
+<div class="arithmatex">\[ X = x+a \]</div>
+<div class="arithmatex">\[ Y = y+b \]</div>
+<p>이때 <span class="arithmatex">\(x, y\)</span> 는 도형의 방정식 <span class="arithmatex">\(f(x, y) = 0\)</span> 을 만족하는 미지수이므로 <span class="arithmatex">\(x = X-a, y = Y-b\)</span> 를 도형의 방정식에 대입하면 <span class="arithmatex">\(f(X-a, Y-b) = 0\)</span> 이 된다. 그런데 이것은 임의의 점 <span class="arithmatex">\(P'(X, Y)\)</span> 가 <span class="arithmatex">\(f(X-a, Y-b) = 0\)</span> 를 항상 만족하는 것을 의미하기 때문에 이 방정식이 평행이동한 도형의 방정식이 된다. </p>
+<p>한편 도형의 방정식을 일반적으로 <span class="arithmatex">\(x, y\)</span> 를 통하여 나타내기 때문에 <span class="arithmatex">\(X, Y\)</span> 를 <span class="arithmatex">\(x, y\)</span> 를 고쳐 최종적으로 평행이동한 도형의 방정식 <span class="arithmatex">\(f(x-a, y-b)=0\)</span> 를 얻는다.</p>
+</li>
+</ul>
+<a href="#1861aaadb"><div class="admonition tldr" id="1861aaadb">
+<p>대칭 : 중심선을 기준으로 양 측이 동일한 대상이다.</p>
+</div></a>
+<a href="#c2f154eca"><div class="admonition tldr" id="c2f154eca">
+<p>점의 대칭이동 : 좌표평면 위의 임의의 한 점 <span class="arithmatex">\((x, y)\)</span> 를 대칭이동한 결과는 다음과 같다.</p>
+</div></a>
+<ul>
+<li>
+<p>원점에 대하여 대칭이동한 점의 좌표 : <span class="arithmatex">\((-x, -y)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(x\)</span>축에 대하여 대칭이동한 점의 좌표 : <span class="arithmatex">\((x, -y)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(y\)</span>축에 대하여 대칭이동한 점의 좌표 : <span class="arithmatex">\((-x, y)\)</span></p>
+</li>
+<li>
+<p>직선 <span class="arithmatex">\(y=x\)</span>에 대하여 대칭이동한 점의 좌표 : <span class="arithmatex">\((y, x)\)</span></p>
+</li>
+</ul>
+<a href="#4d757302f"><div class="admonition tldr" id="4d757302f">
+<p>도형의 대칭이동 : 도형의 방정식 <span class="arithmatex">\(f(x, y) = 0\)</span> 이 나타내는 도형을 대칭이동한 결과는 다음과 같다.</p>
+</div></a>
+<ul>
+<li>
+<p>원점에 대하여 대칭이동한 도형의 방정식 : <span class="arithmatex">\(f(-x, -y)=0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(x\)</span>축에 대하여 대칭이동한 도형의 방정식 : <span class="arithmatex">\(f(x, -y)=0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(y\)</span>축에 대하여 대칭이동한 도형의 방정식 : <span class="arithmatex">\(f(-x, y)=0\)</span></p>
+</li>
+<li>
+<p>직선 <span class="arithmatex">\(y=x\)</span>에 대하여 대칭이동한 도형의 방정식 : <span class="arithmatex">\(f(y, x)=0\)</span></p>
+</li>
+</ul>
+<h2 id="_2">여러가지 함수<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<a href="#564f11f13"><div class="admonition tldr" id="564f11f13">
+<p>항등함수 : 함수 <span class="arithmatex">\(f: X \to Y\)</span> 에서 정의역 <span class="arithmatex">\(X\)</span> 의 각 원소가 자기 자신으로 대응되는 함수를 항등함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 <span class="arithmatex">\(f: X \to Y, x \mapsto x\)</span> 인 함수 <span class="arithmatex">\(f(x) = x\)</span> 를 항등함수라 한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<ul>
+<li>파이썬 프로그래밍 언어로 정의된 함수 <code>def f(x): return x</code> 는 항등함수이다.</li>
+</ul>
+</li>
+</ul>
+<a href="#cc9d1ff1d"><div class="admonition tldr" id="cc9d1ff1d">
+<p>상수함수 : 함수 <span class="arithmatex">\(f: X \to Y\)</span> 에서 정의역 <span class="arithmatex">\(X\)</span> 의 모든 원소가 공역의 단 하나의 원소로 대응되는 함수, 즉 <span class="arithmatex">\(f(x) = c\)</span> (<span class="arithmatex">\(c\)</span> 는 상수) 인 함수 <span class="arithmatex">\(f\)</span> 를 상수함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(f(x) = 5\)</span></p>
+</li>
+</ul>
+<a href="#41e8732e5"><div class="admonition tldr" id="41e8732e5">
+<p>합성함수(composite function) : 두 함수 <span class="arithmatex">\(f: X \to Y, g: Y \to Z\)</span> 가 주어졌을 때, 두 함수 <span class="arithmatex">\(f\)</span> 와 <span class="arithmatex">\(g\)</span> 를 통하여 집합 <span class="arithmatex">\(X\)</span> 의 임의의 원소 <span class="arithmatex">\(x\)</span> 에 집합 <span class="arithmatex">\(Z\)</span> 의 원소 <span class="arithmatex">\(g(f(x))\)</span> 를 대응시킨 새로운 함수를 <span class="arithmatex">\(f\)</span> 와 <span class="arithmatex">\(g\)</span> 의 합성함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>합성함수를 기호로 <span class="arithmatex">\(g \circ f: X \to Z\)</span> 로 표현한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(X\)</span> 의 임의의 원소 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\((g \circ f)(x) = g(f(x))\)</span> 이 성립한다. </p>
+</li>
+<li>
+<p>일반적인 경우에 두 함수 <span class="arithmatex">\(f, g\)</span> 로 이룰 수 있는 합성함수는 교환법칙이 성립하지 않는다.</p>
+<ul>
+<li>즉, <span class="arithmatex">\(g \circ f \neq f \circ g\)</span> 이다. </li>
+</ul>
+</li>
+<li>
+<p>일반적인 경우에 세 함수 <span class="arithmatex">\(f, g, h\)</span> 로 이룰 수 있는 합성함수는 결합법칙이 성립한다. </p>
+<ul>
+<li>즉, <span class="arithmatex">\((h \circ g) \circ f = h \circ (g \circ f)\)</span> 이다. </li>
+</ul>
+</li>
+<li>
+<p>함수가 두 자연대상의 관계를 추상화하여 수학적 형식언어로 명확하게 표현할 수 있었다. 즉 단순한 "원인에 대한 결과" 라는 인과관계를 표현할 수 있었다. 한편 합성함수는 셋 이상의 자연 대상의 복합관계를 표현할 수 있게 해준다. 즉 "원인에 대한 결과, 그리고 그 결과로부터 영향을 받아 발생한 또 다른 현상" 과 같은 복잡한 인과관계를 표현할 수 있다. </p>
+<ul>
+<li><strong>뉴런이 서로에게 미치는 영향을 합성합수로 효과적으로 표현할 수 있어서 인간의 뇌를 구성하는 뉴런의 네트워크를 함수로 표현할 수 있다. 수학의 형식언어로 표현된 것은 코드로 쉽게 변환할 수 있기에 인간의 뇌가 이루는 지능을 합성함수를 통하여 자동화할 수 있는 가능성이 있다.</strong></li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>거시경제학은 통화정책에 관하여 "통화공급량이 증가하면 국민소득이 증가한다." 라고 말한다. 이 명제를 <span class="arithmatex">\(p \to q\)</span> 라고 표현하고 <span class="arithmatex">\(p\)</span> 를 참이되게 하는 진리집합과 <span class="arithmatex">\(q\)</span> 를 참이되게 하는 진리집합을 각각 <span class="arithmatex">\(P, Q\)</span> 라 하자. 그리고 <span class="arithmatex">\(P\)</span> 의 원소 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(Q\)</span> 의 원소 <span class="arithmatex">\(y\)</span> 로 대응되는 이항관계를 함수 <span class="arithmatex">\(f\)</span> 라 하고 <span class="arithmatex">\(f: P \to Q, x \mapsto y\)</span> 로 표현한다. 즉 "통화공급량의 증가" 와 "국민소득 증가" 라는 자연대상 사이의 관계를 추상화하여 함수라는 수학적 형식 언어로 격하시킨 것이다. </p>
+<p>그런데 경제학자들은 함수 <span class="arithmatex">\(f\)</span> 를 좀 더 세부적으로 분석하여 함수 <span class="arithmatex">\(f\)</span> 가 내부적으로 더 작은 함수들의 복합관계로 이루어졌다는 것을 밝혀내었다. 즉, 경제학자들은 "통화공급량이 증가하면 이자율이 하락하고 이자율이 하락하면 기업의 투자가 증가하고 기업의 투자가 증가하면 총수요가 증가하며 총수요가 증가하면 결과적으로 국민소득이 증가한다." 라는 것을 밝혀내었다. </p>
+<p>"통화공급량이 증가하면 이자율이 하락한다" 는 명제를 함수 <span class="arithmatex">\(f_1: X_1 \to X_2, x_1 \mapsto x_2\)</span> 로 나타내자. </p>
+<p>"이자율이 하락하면 기업의 투자가 증가한다" 는 명제를 함수 <span class="arithmatex">\(f_2: X_2 \to X_3, x_2 \mapsto x_3\)</span> 로 나타내자. </p>
+<p>"기업의 투자가 증가하면 총수요가 증가한다" 는 명제를 함수 <span class="arithmatex">\(f_3: X_3 \to X_4, x_3 \mapsto x_4\)</span> 로 나타내자. </p>
+<p>"총수요가 증가하면 국민소득이 증가한다" 는 명제를 함수 <span class="arithmatex">\(f_4: X_4 \to X_5, x_4 \mapsto x_5\)</span> 로 나타내자. </p>
+<p>그러면 결과적으로 함수 <span class="arithmatex">\(f\)</span> 는 <span class="arithmatex">\(f=f_4 \circ f_3 \circ f_2 \circ f_1\)</span> 이라는 합성함수였음을 알 수 있다. 또한 이 시점에서 합성함수 <span class="arithmatex">\(f\)</span> 를 구성하고 있는 함수들 <span class="arithmatex">\(f_n\)</span> 들 또한 더 세부적인 함수로 나뉘어질 수도 있다는 가능성을 볼 수 있다.</p>
+<p>합성함수란 이처럼 수로 표현할 수 있는 셋 이상의 임의의 자연대상들의 복합적 인과관계를 수학적 추상 대상물로 격하시킬 수 있게 해주는 효과적인 도구이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>세 함수 <span class="arithmatex">\(f(x) = 2x, g(x) = x+1, h(x) = x^2\)</span> 로 합성함수와 교환법칙과 결합법칙에 관하여 실험해보자. </p>
+<ul>
+<li>
+<p>교환법칙 실험 </p>
+<p><span class="arithmatex">\((g \circ f)(x) = g(f(x)) = g(2x) = 2x + 1\)</span> 인데 비해</p>
+<p><span class="arithmatex">\((f \circ g)(x) = f(g(x)) = f(x+1)=2(x+1) = 2x+2\)</span> 이다. </p>
+<p>따라서 교환법칙은 성립하지 않는다. </p>
+</li>
+<li>
+<p>결합법칙 실험 </p>
+<p><span class="arithmatex">\((h \circ (g \circ f))(x) = h((g \circ f)(x)) = h(2x+1) = (2x+1)^2\)</span> 이다.</p>
+<p>그런데 <span class="arithmatex">\(((h \circ g) \circ f)(x) = (h \circ g)(f(x)) = (h \circ g)(2x) = (2x+1)^2\)</span> 이다.</p>
+<p><span class="arithmatex">\(\because (h \circ g)(x) = h(g(x)) = h(x+1) = (x+1)^2\)</span></p>
+<p>따라서 결합법칙이 성립한다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#83f2f7054"><div class="admonition tldr" id="83f2f7054">
+<p>역함수(inverse function) : 함수 <span class="arithmatex">\(f: X \to Y\)</span> 가 일대일대응이면 집합 <span class="arithmatex">\(Y\)</span> 의 임의의 원소 <span class="arithmatex">\(y\)</span> 에 <span class="arithmatex">\(f(x) = y\)</span> 인 집합 <span class="arithmatex">\(X\)</span> 의 원소 <span class="arithmatex">\(x\)</span> 를 대응시킨 함수 <span class="arithmatex">\(f^{-1}: Y \to X\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>함수 <span class="arithmatex">\(f\)</span> 의 역함수를 <span class="arithmatex">\(f^{-1}\)</span> 로 표현한다. </p>
+</li>
+<li>
+<p>역함수에 관한 연구는 자연대상의 원인, 뿌리에 관한 역추적(궁극적으로는 모든 것의 토대를 향한 역추적)과 비슷하다. 자연대상의 원인에 대한 의문과 분석은 자주 보이는 사유의 방식 중 하나이고 이 사유의 방식에 해당하는 수학 대상물이 역함수이다.</p>
+<ul>
+<li>"주가가 폭등한 나라는 하나같이 실물경기가 불안하다." 는 명제의 원인을 역추적하면 "일정 수익을 올리면 털고 떠나는 단기자금이 하루에도 수십조 원씩 초 단위로 세계 주식시장을 넘나든다." 는 명제를 밝힐 수 있다. </li>
+</ul>
+</li>
+<li>
+<p>역함수로부터 다음의 관계가 발견되었다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(y=f(x) \iff x=f^{-1}(y)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((f^{-1})^{-1} = f\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((g\circ f)^{-1} = f^{-1} \circ g ^{-1}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(f ^{-1} \circ f = I_X\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(f \circ f ^{-1} = I_Y\)</span></p>
+<ul>
+<li>집합 <span class="arithmatex">\(X\)</span> 에서의 항등함수를 <span class="arithmatex">\(I_X\)</span> 로, 집합 <span class="arithmatex">\(Y\)</span> 에서의 항등함수를 <span class="arithmatex">\(I_Y\)</span> 로 표기한다. </li>
+</ul>
+</li>
+<li>
+<p>함수 <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> 에 대하여 <span class="arithmatex">\(y=f(x)\)</span> 의 그래프와 그 역함수 <span class="arithmatex">\(y = f ^{-1}(x)\)</span> 의 그래프는 직선 <span class="arithmatex">\(y=x\)</span> 에 대하여 서로 대칭이다.</p>
+<ul>
+<li><span class="arithmatex">\(y=f(x)\)</span> 그래프에서 <span class="arithmatex">\(y=f ^{-1}(x)\)</span> 를 구하기 위해서 <span class="arithmatex">\(y\)</span> 축을 정의역으로 취급하고 <span class="arithmatex">\(x\)</span> 축을 공역으로 취급하기 때문이다. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>역함수 구하기 : 함수 <span class="arithmatex">\(y = f(x)\)</span> 의 역함수는 다음과 같이 구한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(y=f(x)\)</span> 를 <span class="arithmatex">\(x\)</span> 에 대하여 풀어 <span class="arithmatex">\(x=f ^{-1}(y)\)</span> 를 얻는다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(x=f ^{-1}(y)\)</span> 에서 <span class="arithmatex">\(x\)</span> 와 <span class="arithmatex">\(y\)</span> 를 서로 바꿔서 <span class="arithmatex">\(y=f ^{-1}(x)\)</span> 를 얻는다. </p>
+</li>
+</ol>
+</li>
+<li>
+<p>예시 </p>
+<ul>
+<li>함수 <span class="arithmatex">\(f(x) = y = 3x-2\)</span> 의 역함수는 무엇인가. 함수 <span class="arithmatex">\(f\)</span> 를 <span class="arithmatex">\(x\)</span> 에 대하여 풀면 <span class="arithmatex">\(x = \frac{1}{3}y + \frac{2}{3}\)</span> 이므로 역함수는 <span class="arithmatex">\(f ^{-1}(x) = \frac{1}{3}x+\frac{2}{3}\)</span> 이다.</li>
+</ul>
+</li>
+</ul>
+<a href="#614f3a68b"><div class="admonition tldr" id="614f3a68b">
+<p>양함수(explicit function) : 하나의 변수 <span class="arithmatex">\(y\)</span> 가 다른 한 변수 <span class="arithmatex">\(x\)</span> 에 대한 식으로 제시된 함수일 때, <span class="arithmatex">\(y\)</span> 를 <span class="arithmatex">\(x\)</span> 의 양함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>지금까지 살펴본 대부분의 함수가 양함수이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(y = x + 3\)</span></p>
+</li>
+</ul>
+<a href="#e5e97d203"><div class="admonition tldr" id="e5e97d203">
+<p>음함수(implicit function) : <span class="arithmatex">\(x\)</span> 에 대한 함수 <span class="arithmatex">\(y\)</span> 가 두 변수 <span class="arithmatex">\(x, y\)</span> 의 항을 모두 좌변으로 이항하여 <span class="arithmatex">\(f(x, y) = 0\)</span> 꼴로 주어질 때 <span class="arithmatex">\(y\)</span> 를 <span class="arithmatex">\(x\)</span> 의 음함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>양함수는 항상 음함수로 바꿀 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[y = 2x-1 \implies 2x-y-1 = 0\]</div>
+</li>
+<li>
+<p>예시</p>
+<div class="arithmatex">\[ x ^{2} + 2xy + y ^{3} = 0 \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p>원의 방정식 <span class="arithmatex">\(x ^{2}+y ^{2}-1=0\)</span> 같은 음함수는 함수가 아니다. <span class="arithmatex">\(x\)</span> 의 값에 <span class="arithmatex">\(2\)</span> 개의 <span class="arithmatex">\(y\)</span> 값이 대응되어 함수의 정의에 어긋나기 때문이다. 그러나 <span class="arithmatex">\(x, y\)</span> 값의 범위를 적절히 설정하면 함수가 되기 때문에 음함수도 함수로 쳐준다. </p>
+<p>가령 이 원의 방정식의 <span class="arithmatex">\(y\)</span> 값의 범위를 <span class="arithmatex">\(y \geq 0\)</span> 와 <span class="arithmatex">\(y \leq 0\)</span> 로 정한다. 그러면 </p>
+<p><span class="arithmatex">\(y \geq 0\)</span> 일 때, <span class="arithmatex">\(y = \sqrt[]{1-x^2}\)</span> 이고 </p>
+<p><span class="arithmatex">\(y \leq 0\)</span> 일 때, <span class="arithmatex">\(y = -\sqrt[]{1-x^2}\)</span> 이다. </p>
+<p>이것들은 모두 폐구간 <span class="arithmatex">\([-1, 1]\)</span> 에서 <span class="arithmatex">\(x\)</span> 에 대한 함수가 된다.</p>
+</li>
+</ul>
+<a href="#0cacfaa95"><div class="admonition tldr" id="0cacfaa95">
+<p>초월함수(transcendental function) : 계수가 유리수인 다항함수의 사칙연산(거듭제곱근 연산을 포함)을 유한번 이내에서 아무리 적용하여도 만들 수 없는 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>지수함수 <span class="arithmatex">\(y = 2 ^{x}\)</span> 는 초월함수이다. </p>
+<p>로그함수 <span class="arithmatex">\(y = \log_{4} x\)</span> 는 초월함수이다. </p>
+<p>삼각함수 <span class="arithmatex">\(y = \sin x\)</span> 는 초월함수이다. </p>
+</li>
+</ul>
+<h3 id="_3">다항함수<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<a href="#c448c84c6"><div class="admonition tldr" id="c448c84c6">
+<p>다항함수(polynomial function) : 다음과 같은 꼴의 함수 <span class="arithmatex">\(f(x)\)</span> 를 <span class="arithmatex">\(x\)</span> 에 대한 <span class="arithmatex">\(n\)</span> 차 다항함수(nth degree polynomial function)라 한다. </p>
+<div class="arithmatex">\[ f(x) = \sum_{k=0}^{n}a _{k}x ^{k} = a_nx^n + a _{n-1}x ^{n-1} + a _{n-2}x ^{n-2} + \dots + a _{0}x ^{0}  (단, a _{n} \neq 0, n 은 자연수, a _{i}(0 \leq i \leq n) 는 상수) \]</div>
+</div></a>
+<a href="#cc4335211"><div class="admonition tldr" id="cc4335211">
+<p>이차함수 </p>
+<p><strong>구체화 필요</strong></p>
+</div></a>
+<a href="#ad6dd44f7"><div class="admonition tldr" id="ad6dd44f7">
+<p>삼차함수 </p>
+<p><strong>구체화 필요</strong></p>
+</div></a>
+<a href="#9a995184e"><div class="admonition tldr" id="9a995184e">
+<p>사차함수 </p>
+<p><strong>구체화 필요</strong></p>
+</div></a>
+<a href="#42af7a789"><div class="admonition tldr" id="42af7a789">
+<p>함수의 최대값 : 어떤 함수의 모든 함수값 중에서 가장 큰 값을 함수의 최대값이라 한다.</p>
+</div></a>
+<a href="#401618727"><div class="admonition tldr" id="401618727">
+<p>함수의 최소값 : 어떤 함수의 모든 함수값 중에서 가장 작은 값을 함수의 최소값이라 한다.</p>
+</div></a>
+<a href="#8a12192dd"><div class="admonition tldr" id="8a12192dd">
+<p>이차함수의 최대값과 최소값</p>
+<p><strong>구체화 필요</strong></p>
+</div></a>
+<a href="#0c8f36c57"><div class="admonition tldr" id="0c8f36c57">
+<p>홀함수(기함수, odd function) : 원점에 대하여 대칭인 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, <span class="arithmatex">\(f(-x) = -f(x)\)</span> 가 성립하는 함수이다.</p>
+</li>
+<li>
+<p>단어 그대로 홀수차항만 있는 다항함수가 홀함수이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(y = 2x\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(y = x^3 - 2x\)</span></p>
+</li>
+</ul>
+<p><img alt="desmos-graph(7)" src="https://user-images.githubusercontent.com/16812446/75110012-f3ccdc00-566b-11ea-801b-97894c2b66c0.png"/></p>
+</li>
+</ul>
+<a href="#f755563fa"><div class="admonition tldr" id="f755563fa">
+<p>짝함수(우함수, even function) : <span class="arithmatex">\(y\)</span> 축에 대하여 대칭인 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, <span class="arithmatex">\(f(-x) = f(x)\)</span> 가 성립하는 함수이다. </p>
+</li>
+<li>
+<p>단어 그대로 짝수차항만 있는 다항함수가 홀함수이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(y=1\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(y=x^2-2\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(y=x^2-x\)</span> 는 짝수차항과 홀수차항이 모두 있기 때문에 홀함수도 아니고 짝함수도 아니다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#2a72add00"><div class="admonition tldr" id="2a72add00">
+<p>매개변수 방정식(parameter equation) : 점 <span class="arithmatex">\(P(x, y)\)</span> 에 대하여 <span class="arithmatex">\(x=g(t), y=h(t)\)</span> 이면 함수 <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R} ^{2}, t \mapsto (x, y)\)</span> 를 생각할 수 있다. 이때 <span class="arithmatex">\(x=g(t), y=h(t)\)</span> 를 <span class="arithmatex">\(t\)</span> 를 매개변수로 하는 도형의 매개변수 방정식이라 한다.</p>
+</div></a>
+<h3 id="_4">유리함수<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<a href="#62fb7c13e"><div class="admonition tldr" id="62fb7c13e">
+<p>유리함수(rational function) : 함수 <span class="arithmatex">\(y=f(x)\)</span> 에서 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x\)</span> 에 대한 유리식일 때, 이 함수를 유리함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x\)</span> 에 대한 다항식이면 다항함수(polynomial function)라 하는 것이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x\)</span> 에 대한 분수식이면 분수함수(fractional function)라 하는 것이다. </p>
+<ul>
+<li>다항함수와 분수함수의 차이점은 다항함수의 정의역이 실수 전체 집합인데 비해 분수함수의 정의역은 분모를 <span class="arithmatex">\(0\)</span> 이 되게 하는 실수를 제외한 실수 전체 집합이라는 것이다.</li>
+</ul>
+</li>
+</ul>
+<a href="#b8b6e456e"><div class="admonition tldr" id="b8b6e456e">
+<p>유리함수의 그래프 : <span class="arithmatex">\(y = \frac{ax+b}{cx+d}\)</span>(단, <span class="arithmatex">\(ad-bc \neq 0, c \neq 0\)</span>)의 그래프는 함수 <span class="arithmatex">\(y = \frac{k}{x-p}+q\)</span>(단, <span class="arithmatex">\(k \neq 0\)</span>) 의 꼴로 변형할 수 있으므로 다음이 성립한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(y = \frac{k}{x}\)</span> 의 그래프를 <span class="arithmatex">\(x\)</span> 축 방향으로 <span class="arithmatex">\(p\)</span> 만큼, <span class="arithmatex">\(y\)</span> 축 방향으로 <span class="arithmatex">\(q\)</span> 만큼 평행이동한 것이다.</p>
+</li>
+<li>
+<p>정의역 : <span class="arithmatex">\(\{x|x \neq p 인 실수\}\)</span>, 치역 : <span class="arithmatex">\(\{y|y \neq q 인 실수\}\)</span></p>
+</li>
+<li>
+<p>점근선은 두 직선 <span class="arithmatex">\(x=p, y=q\)</span> 이다.</p>
+</li>
+<li>
+<p>점 <span class="arithmatex">\((p, q)\)</span> 에 대하여 대칭이고, 점 <span class="arithmatex">\((p, q)\)</span> 를 지나고 기울기가 <span class="arithmatex">\(1\)</span> 또는 <span class="arithmatex">\(-1\)</span> 인 두 직선에 대하여도 대칭인 쌍곡선이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(y = \frac{2}{x}\)</span> 의 그래프이다. <span class="arithmatex">\(y = \frac{k}{x-p}+q\)</span>(단, <span class="arithmatex">\(k \neq 0\)</span>) 의 꼴 유리함수는 이와 같은 꼴에서 <span class="arithmatex">\(x\)</span> 축으로 <span class="arithmatex">\(p\)</span> 만큼, <span class="arithmatex">\(y\)</span> 축으로 <span class="arithmatex">\(q\)</span> 만큼 평행이동한 것이다.</p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/75099281-255d8d00-5603-11ea-98fd-89c968af8de2.png"/></p>
+</li>
+</ul>
+<h3 id="_5">무리함수<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<a href="#7e5487afb"><div class="admonition tldr" id="7e5487afb">
+<p>무리함수 : 함수 <span class="arithmatex">\(y=f(x)\)</span> 에서 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x\)</span> 에 대한 무리식일 때, 이 함수를 무리함수라 한다.</p>
+</div></a>
+<a href="#9ddea14a9"><div class="admonition tldr" id="9ddea14a9">
+<p>무리함수의 그래프 : <span class="arithmatex">\(y = \sqrt[]{ax+b}+c\)</span>(단, <span class="arithmatex">\(a \neq 0\)</span>) 의 그래프는 <span class="arithmatex">\(y=\sqrt[]{a(x-p)}+c\)</span> 로 변형할 수 있으므로 다음이 성립한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(y=\sqrt[]{ax}\)</span> 의 그래프를 <span class="arithmatex">\(x\)</span> 축의 방향으로 <span class="arithmatex">\(p\)</span> 만큼, <span class="arithmatex">\(y\)</span> 축의 방향으로 <span class="arithmatex">\(q\)</span> 만큼 평행이동한 것이다.</p>
+</li>
+<li>
+<p>정의역 : <span class="arithmatex">\(a&gt;0\)</span> 일 때 <span class="arithmatex">\(\{x|x \geq p 인 실수\}\)</span>, <span class="arithmatex">\(a&lt;0\)</span> 일 때 <span class="arithmatex">\(\{x|x \leq p 인 실수\}\)</span></p>
+<ul>
+<li>즉, 무리함수의 정의역은 근호 안의 식의 값이 <span class="arithmatex">\(0\)</span> 또는 양수가 되게 하는 모든 실수 집합이다. </li>
+</ul>
+</li>
+<li>
+<p>치역 : <span class="arithmatex">\(\{y|y \geq q 인 실수\}\)</span></p>
+</li>
+<li>
+<p>점 <span class="arithmatex">\((p,q)\)</span> 가 그래프의 시작점이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음은 <span class="arithmatex">\(y=\sqrt[]{ax}\)</span> 꼴의 무리함수이다. <span class="arithmatex">\(y=\sqrt[]{a(x-p)}+q\)</span> 는 이 꼴에서 <span class="arithmatex">\(x\)</span> 축으로 <span class="arithmatex">\(p\)</span> 만큼, <span class="arithmatex">\(y\)</span> 축으로 <span class="arithmatex">\(q\)</span> 만큼 평행이동한 것이다.</p>
+<ul>
+<li>
+<p>차례로 <span class="arithmatex">\(y = \sqrt[]{2x}\)</span> 와 <span class="arithmatex">\(y = \sqrt[]{-2x}\)</span> 의 그래프이다. </p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/75109533-ab132400-5667-11ea-8468-c25c60012256.png"/> <img alt="desmos-graph(2)" src="https://user-images.githubusercontent.com/16812446/75109563-da299580-5667-11ea-981c-50847527be13.png"/></p>
+</li>
+<li>
+<p>차례로 <span class="arithmatex">\(y = -\sqrt[]{2x}\)</span> 와 <span class="arithmatex">\(y = -\sqrt[]{-2x}\)</span> 의 그래프이다. </p>
+<p><img alt="desmos-graph(3)" src="https://user-images.githubusercontent.com/16812446/75109568-f3cadd00-5667-11ea-80f9-c5fa4b9a8055.png"/> <img alt="desmos-graph(4)" src="https://user-images.githubusercontent.com/16812446/75109577-09d89d80-5668-11ea-829e-5ed51029ae00.png"/></p>
+</li>
+<li>
+<p>차례로 <span class="arithmatex">\(y = \sqrt[]{3^2-x^2}\)</span> 와 <span class="arithmatex">\(y = -\sqrt[]{3^2-x^2}\)</span> 의 그래프이다. </p>
+<p><img alt="desmos-graph(5)" src="https://user-images.githubusercontent.com/16812446/75109648-9c793c80-5668-11ea-8542-9369bc611610.png"/> <img alt="desmos-graph(6)" src="https://user-images.githubusercontent.com/16812446/75109660-b87cde00-5668-11ea-897c-4eaf836d5a0b.png"/></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">지수함수<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<a href="#99f308d87"><div class="admonition tldr" id="99f308d87">
+<p>지수함수 : <span class="arithmatex">\(a\)</span> 가 <span class="arithmatex">\(1\)</span> 이 아닌 양수일 때, 임의의 실수 <span class="arithmatex">\(x\)</span> 에 <span class="arithmatex">\(a^x\)</span> 를 대응시킨 함수 <span class="arithmatex">\(y = a^x\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>지수함수의 그래프는 <span class="arithmatex">\(a &gt; 1\)</span> 일 때와 <span class="arithmatex">\(0 &lt; a &lt; 1\)</span> 일 때 달라진다. </p>
+</li>
+<li>
+<p>밑이 무리수 <span class="arithmatex">\(e\)</span> 인 지수함수 <span class="arithmatex">\(y = e^x\)</span> 를</p>
+<div class="arithmatex">\[ y = \exp x \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ y = \exp (x) \]</div>
+<p>로 표현하기도 한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(a &gt; 1\)</span> 일 때, <span class="arithmatex">\(y = 2^x\)</span></p>
+<p><img alt="desmos-graph(1)" src="https://user-images.githubusercontent.com/16812446/73837365-a9b6be80-4854-11ea-8d3b-d1e3d3972bdc.png"/></p>
+</li>
+<li>
+<p><span class="arithmatex">\(0 &lt; a &lt; 1\)</span> 일 때, <span class="arithmatex">\(y = (1/2)^x\)</span></p>
+<p><img alt="desmos-graph(2)" src="https://user-images.githubusercontent.com/16812446/73837415-c652f680-4854-11ea-8eac-410e5f17204b.png"/></p>
+</li>
+</ul>
+<a href="#404299cef"><div class="admonition tldr" id="404299cef">
+<p>지수방정식(exponential equation) : 지수에 미지수를 포함하고 있는 방정식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(x^{x+3} = x^{2x-1}\)</span></p>
+</li>
+</ul>
+<a href="#9b89a33bc"><div class="admonition tldr" id="9b89a33bc">
+<p>지수부등식(exponential inequality) : 지수에 미지수를 포함하고 있는 부등식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>지수부등식의 밑이 <span class="arithmatex">\(a\)</span> 일때, 밑의 범위가 <span class="arithmatex">\(a &gt; 1\)</span> 인지 <span class="arithmatex">\(0 &lt; a &lt;1\)</span> 인지에 따라 지수의 대수 관계가 바뀌므로 주의해야 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(2^{x^2-4} \geq 8^x\)</span></p>
+</li>
+</ul>
+<h3 id="_7">로그함수<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<a href="#e04433c49"><div class="admonition tldr" id="e04433c49">
+<p>로그함수 : <span class="arithmatex">\(a\)</span> 가 <span class="arithmatex">\(1\)</span> 이 아닌 양수일 때, 임의의 양의 실수 <span class="arithmatex">\(x\)</span> 에 <span class="arithmatex">\(\log_{a} x\)</span> 를 대응시키는 함수 <span class="arithmatex">\(y = \log_{a} x\)</span> 를 <span class="arithmatex">\(a\)</span> 를 밑으로 하는 로그함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>로그함수 <span class="arithmatex">\(y = \log_{a} x(a&gt;0, a \neq 1)\)</span> 은 지수함수 <span class="arithmatex">\(y = a^x(a&gt;0, a \neq 1)\)</span> 의 역함수이다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p>지수함수 <span class="arithmatex">\(y = 2^x\)</span> 의 역함수 <span class="arithmatex">\(x = 2^y\)</span> 를 <span class="arithmatex">\(y\)</span> 에 대하여 풀면 <span class="arithmatex">\(y = \log_{2} x\)</span> 이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>따라서 로그함수는 지수함수와 직선 <span class="arithmatex">\(y=x\)</span> 에 대하여 대칭이다. 이에따라 지수함수와 마찬가지로 <span class="arithmatex">\(a &gt; 1\)</span> 일 때와 <span class="arithmatex">\(0 &lt; a &lt; 1\)</span> 일 때 달라진다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(a &gt; 1\)</span> 일 때, <span class="arithmatex">\(y = \log_{2} x\)</span></p>
+<p><img alt="desmos-graph(4)" src="https://user-images.githubusercontent.com/16812446/73849124-b2b38a00-486c-11ea-9385-7b2aff924a78.png"/></p>
+</li>
+<li>
+<p><span class="arithmatex">\(0 &lt; a &lt; 1\)</span> 일 때, <span class="arithmatex">\(y = (1/2)^x\)</span></p>
+<p><img alt="desmos-graph(5)" src="https://user-images.githubusercontent.com/16812446/73849242-f0b0ae00-486c-11ea-8587-58a29b4e4606.png"/></p>
+</li>
+</ul>
+<a href="#82529cab5"><div class="admonition tldr" id="82529cab5">
+<p>로그방정식(logarithm equation) : 로그의 진수(<span class="arithmatex">\(value\)</span>) 또는 밑(<span class="arithmatex">\(base\)</span>)에 미지수를 포함하고 있는 방정식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\log_{2} (x+2) = \log_{2} 2x\)</span></p>
+</li>
+</ul>
+<a href="#1aece4fd9"><div class="admonition tldr" id="1aece4fd9">
+<p>로그부등식(logarithm inequality) : 로그의 진수 또는 밑에 미지수를 포함하고 있는 부등식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>로그부등식의 밑이 <span class="arithmatex">\(a\)</span> 일때, 밑의 범위가 <span class="arithmatex">\(a &gt; 1\)</span> 인지 <span class="arithmatex">\(0 &lt; a &lt;1\)</span> 인지에 따라 지수의 대수 관계가 바뀌므로 주의해야 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\log_{3} (x^2-2x) &gt; \log_{3} (2-x)+1\)</span></p>
+</li>
+</ul>
+<h3 id="_8">특별한 함수<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<a href="#858e6d059"><div class="admonition tldr" id="858e6d059">
+<p>가우스 함수 : 실수 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(x\)</span> 보다 크지 않은 최대의 정수를 대응시키는 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(f(x) = [x]\)</span> 로 표기한다. </p>
+</li>
+<li>
+<p>한 마디로 <span class="arithmatex">\(x\)</span> 를 정수부, 소수부로 쪼개고 소수부를 버리는 함수이다. 이때 소수부란 <span class="arithmatex">\(0\)</span> 보다 크거나 같고 <span class="arithmatex">\(1\)</span> 보다 작은 수이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\([1.23] = 1, [-1.23] = -2\)</span> </p>
+</li>
+<li>
+<p>이 함수를 가우스 함수라 부르는 것은 대한민국을 제외하면 보편적이지 않으니 주의해야 한다. 버림함수 또는 바닥함수라고도 불리운다.</p>
+</li>
+</ul>
+<a href="#018e146b9"><div class="admonition tldr" id="018e146b9">
+<p>주기함수 : <span class="arithmatex">\(y = f(x)\)</span> 의 정의역에 속하는 모든 실수 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(f(x+p) = f(x)\)</span> 를 만족시키는 <span class="arithmatex">\(0\)</span> 이 아닌 상수 <span class="arithmatex">\(p\)</span> 가 존재할 때 이 함수를 주기함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>또한 이러한 상수 <span class="arithmatex">\(p\)</span> 중에서 최소인 양수를 그 함수의 주기라고 한다. </p>
+</li>
+<li>
+<p>두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 가 주기함수라면 <span class="arithmatex">\(f(x) + g(x)\)</span> 도 주기함수고 그 주기는 <span class="arithmatex">\(f(x)\)</span> 의 주기와 <span class="arithmatex">\(g(x)\)</span> 의 주기의 최소공배수이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(y = \sin x\)</span> 는 주기가 <span class="arithmatex">\(2 \pi\)</span> 인 주기함수이다. 즉 모든 실수 <span class="arithmatex">\(x\)</span> 에 대하여 관계 <span class="arithmatex">\(\sin x = \sin(x + 2\pi)\)</span> 가 성립한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(y = \tan x\)</span> 는 주기가 <span class="arithmatex">\(\pi\)</span> 인 주기함수이다. 모든 실수 <span class="arithmatex">\(x\)</span> 에 대하여 관계 <span class="arithmatex">\(\tan x = \tan(x + \pi)\)</span> 가 성립한다.</p>
+</li>
+</ul>
+<a href="#27c6382c3"><div class="admonition tldr" id="27c6382c3">
+<p>뉴턴의 다항식 보간법(polynomial interpolation) : <span class="arithmatex">\((n+1)\)</span> 개의 점을 지나는 <span class="arithmatex">\(n\)</span> 차 다항함수의 정확한 식을 얻는 방법이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 예시 뉴턴의 다항식 보간법을 사용하지 않고 연립방정식으로 구하는 방법이다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p>세 점 <span class="arithmatex">\((1, 7), (-1, 5), (-2, -5)\)</span> 를 지나는 포물선을 그래프로 하는 이차함수 <span class="arithmatex">\(ax^2 +bx+c\)</span> 를 구하여라.</p>
+<div class="arithmatex">\[ \begin{cases} 5 = a-b+c&amp;\text{}\\ 7 = a+b+c&amp;\text{}\\ -5 = 4a-2b+c&amp;\text{}\\ \end{cases} \]</div>
+<p>위 연립방정식을 풀어서 <span class="arithmatex">\(a, b, c\)</span> 를 얻으면 이차함수가 <span class="arithmatex">\(y=-3x ^{2}+x+9\)</span> 라는 것을 알 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(f(x) = ax^2 + bx+c\)</span> 가 <span class="arithmatex">\(f(2.17)=7\)</span>, <span class="arithmatex">\(f(3.17)=1\)</span>, <span class="arithmatex">\(f(4.17)=3\)</span> 을 만족시킬 때 <span class="arithmatex">\(a\)</span> 값을 구해보자. </p>
+<p>먼저 두 점 <span class="arithmatex">\((2.17, 7), (3.17,1)\)</span> 을 지나는 직선을 그래프로 하는 일차함수 식을 구하자. </p>
+<div class="arithmatex">\[ g(x) = -6(x-3.17)+1 \]</div>
+<p>그런데 이 직선의 그래프 <span class="arithmatex">\(g(x)\)</span> 와 <span class="arithmatex">\(f(x)\)</span> 와의 교점은 <span class="arithmatex">\((2.17, 7), (3.17,1)\)</span> 이므로 이 두 점에서 두 함수의 함수값은 같다. 따라서 이 두 점에서 두 함수의 차이는 <span class="arithmatex">\(0\)</span> 이어야 한다. 따라서 다항식 <span class="arithmatex">\(f(x)-g(x)\)</span> 은 다음과 같이 인수분해된다. </p>
+<div class="arithmatex">\[ f(x)-g(x)=a(x-2.17)(x-3.17) \]</div>
+<p>그런데 <span class="arithmatex">\(g(x)\)</span> 를 이미 알고 있으므로 <span class="arithmatex">\(g(x)\)</span> 를 소거할 수 있다.</p>
+<div class="arithmatex">\[ f(x)+6(x-3.17)= + a(x-2.17)(x-3.17) \]</div>
+<p>이제 이 이차함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\((4.17, 3)\)</span> 을 지나는 것을 이용하여 마지막 미지수 <span class="arithmatex">\(a\)</span> 가 <span class="arithmatex">\(4\)</span> 라는 것을 밝힐 수 있다.</p>
+</li>
+</ul>
+<a href="#673cc3804"><div class="admonition tldr" id="673cc3804">
+<p>시그모이드 함수(sigmoid function) : 다음과 같이 표현되는 함수를 시그모이드 함수라 한다. </p>
+<div class="arithmatex">\[ \zeta _a(x) = \frac{1}{1+\exp(-ax)} \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ \zeta _a(x) = \frac{1}{1+ e ^{-ax} } \]</div>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(a\)</span> 를 게인(gain) 이라 한다.</p>
+</li>
+<li>
+<p>시그모이드 함수는 다음의 특성을 갖는다.</p>
+<ul>
+<li>
+<p>점근선 <span class="arithmatex">\(y = 0, y = 1\)</span> 을 갖는다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle x = 0 \to \zeta _a(0) = \frac{1}{2}\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#e6baa8093"><div class="admonition tldr" id="e6baa8093">
+<p>표준 시그모이드 함수 : <span class="arithmatex">\(a=1\)</span> 일 때의 시그모이드 함수, 즉</p>
+<div class="arithmatex">\[ \zeta (x) = \frac{1}{1+\exp (-x)} \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ \zeta (x) = \frac{1}{1+e ^{-x}} \]</div>
+<p>를 표준 시그모이드 함수라 한다.</p>
+</div></a>
+<a href="#d327b3dcd"><div class="admonition tldr" id="d327b3dcd">
+<p>밑이 무리수 <span class="arithmatex">\(e\)</span> 인 지수함수의 그래프 연구 k</p>
+</div></a>
+<ul>
+<li>
+<p>다음 그래프에서 빨간 곡선이 <span class="arithmatex">\(y = e^x\)</span>, 파란 곡선이 <span class="arithmatex">\(y=e^{-x}\)</span> 를 나타낸다. </p>
+<p><img alt="desmos-graph(5)" src="https://user-images.githubusercontent.com/16812446/77422130-51da1400-6e10-11ea-8468-7ab5610f410b.png"/></p>
+</li>
+<li>
+<p>다음 그래프에서 빨간 곡선이 <span class="arithmatex">\(y = \frac{1}{e^x}\)</span>, 파란 곡선이 <span class="arithmatex">\(y= \frac{1}{e^{-x}}\)</span> 를 나타낸다. </p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/77422280-88b02a00-6e10-11ea-98e3-6cee1b599740.png"/></p>
+<ul>
+<li><span class="arithmatex">\(y = e ^{x} = \frac{1}{e ^{-x}}\)</span> 를 알 수 있다. </li>
+</ul>
+</li>
+<li>
+<p>다음 그래프는 </p>
+<div class="arithmatex">\[y = \frac{1}{1+e ^{-x}}\]</div>
+<p>이다. </p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/77422864-87333180-6e11-11ea-8200-6f070e22c6d9.png"/></p>
+<ul>
+<li>함수값의 경계가 <span class="arithmatex">\((0, 1)\)</span> 임을 알 수 있다. </li>
+</ul>
+</li>
+<li>
+<p>다음 그래프는 </p>
+<div class="arithmatex">\[y = \frac{1}{\frac{1}{2}+e ^{-x}}\]</div>
+<p>이다. </p>
+<p><img alt="desmos-graph(1)" src="https://user-images.githubusercontent.com/16812446/77423021-d8432580-6e11-11ea-94fa-92cdd15ef17a.png"/></p>
+<ul>
+<li>함수값의 경계가 <span class="arithmatex">\((0, 2)\)</span> 임을 알 수 있다. </li>
+</ul>
+</li>
+<li>
+<p>다음 그래프는 </p>
+<div class="arithmatex">\[y = \frac{1}{\frac{1}{4}+e ^{-x}}\]</div>
+<p>이다. </p>
+<p><img alt="desmos-graph(2)" src="https://user-images.githubusercontent.com/16812446/77423171-13455900-6e12-11ea-94c9-84ae6d46ff38.png"/></p>
+<ul>
+<li>함수값의 경계가 <span class="arithmatex">\((0, 4)\)</span> 임을 알 수 있다. </li>
+</ul>
+</li>
+<li>
+<p>여기까지의 그래프 연구를 통하여 </p>
+<div class="arithmatex">\[ y = \frac{1}{\frac{1}{n}+e ^{-x}} \]</div>
+<p>의 함수값의 경계가 <span class="arithmatex">\((0, n)\)</span> 이라는 귀납적 가설을 세울 수 있다.</p>
+</li>
+<li>
+<p>다음 그래프는 </p>
+<div class="arithmatex">\[y = \frac{1}{1+e ^{-5x}}\]</div>
+<p>이다. </p>
+<p><img alt="desmos-graph(3)" src="https://user-images.githubusercontent.com/16812446/77423392-72a36900-6e12-11ea-80e0-b3baf537b86b.png"/></p>
+<ul>
+<li>게인 <span class="arithmatex">\(a\)</span> 의 값을 <span class="arithmatex">\(1\)</span> 에서 <span class="arithmatex">\(5\)</span> 로 높혔더니 함수의 휘어지는 정도가 커졌다는 것을 알 수 있다. <span class="arithmatex">\(x\)</span> 축을 압축시켰다고도 할 수 있다.</li>
+</ul>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 삼각함수" class="md-footer__link md-footer__link--prev" href="../trig/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              삼각함수
+            </div>
+</div>
+</a>
+<a aria-label="다음: 조합" class="md-footer__link md-footer__link--next" href="../../Probability/comb/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              조합
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

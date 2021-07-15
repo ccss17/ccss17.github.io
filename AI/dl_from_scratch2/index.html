@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/AI/dl_from_scratch2/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>Deep Learning from Scratch - ccss17</title>
+<link href="../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#deep-learning-from-scratch">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Deep Learning from Scratch
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deep-learning-from-scratch">
+    Deep Learning from Scratch
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    경사 하강법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    오차역전파
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#affine-layer">
+    affine layer 메모
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Deep Learning from Scratch</h1>
+<h2 id="deep-learning-from-scratch">Deep Learning from Scratch<a class="headerlink" href="#deep-learning-from-scratch" title="Permanent link">¶</a></h2>
+<p><a href="https://book.naver.com/bookdb/book_detail.nhn?bid=11492334">밑바닥부터 시작하는 딥러닝</a>의 개인 메모입니다.</p>
+<h2 id="_1">경사 하강법<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#c7910d9f5"><div class="admonition tldr" id="c7910d9f5">
+<p>경사법 : 기울기 벡터를 사용하여 손실함수 값을 최소로 만드는 방법을 찾는 알고리즘이다.</p>
+</div></a>
+<ul>
+<li>
+<p>하지만 기울기가 가리키는 곳에 함수의 최솟값이 존재하는지 확신할 수 없다. 실제로 복잡한 함수에서는 기울기가 가르키는 방향에 최솟값이 없는 경우가 대부분이다. 또 복잡하고 찌그러진 함수에서 평평한 곳으로 파고들면 고원(plateau)이라고 하는 학습이 정체되는 공간에 수렴할 수도 있다.</p>
+<p>기울기의 방향이 반드시 최소값을 가르키는 것은 아니지만 일단 그 방향으로 가면 함수의 값을 줄일 수 있기 때문에 일단 기울기를 단서로 나아갈 방향을 정하는 것이다.</p>
+<p>경사법에서는 그 기울기 방향으로 일정 거리만큼 이동하여 또 기울기를 구한다. 그런데 기울어져 있으면 또 그방향으로 일정 거리 나아가본다. 이렇게 계속 기울기 방향으로 나아가서 손실 함수 값을 줄여보는 것이 경사법이다.</p>
+</li>
+<li>
+<p>최솟값을 찾는다면 그것을 경사하강법(gradient descent method)이라고 하고, 최댓값을 찾는다면 경사 상승법(gradient ascent method)이라고한다.</p>
+</li>
+<li>
+<p>경사법을 수식으로 나타내면 학습률 <span class="arithmatex">\(\eta \in \mathbb{R}\)</span> 과 가중치 벡터 <span class="arithmatex">\(\mathbf{w} \in \mathbb{R} ^{n}\)</span> 에 대하여</p>
+<blockquote>
+<p>학습률은 하이퍼파라미터이다. 이는 가중치와 편향 같은 신경망 내부에서 자동으로 결정되는 매개변수와는 달리 사람이 직접 설정해야 하는 매개변수이다.</p>
+</blockquote>
+<div class="arithmatex">\[ \mathbf{w} := \mathbf{w} - \eta \dfrac{\partial f}{\partial \mathbf{w}} \]</div>
+<p>이다. 즉, 가중치 벡터 <span class="arithmatex">\(\mathbf{w}\)</span> 의 <span class="arithmatex">\(k\)</span>번째 원소에 대하여</p>
+<div class="arithmatex">\[ w_k := w_k - \eta \dfrac{\partial f}{\partial w_k} \]</div>
+<p>이다. </p>
+<ul>
+<li>
+<p>이것을 최적화하려는 함수 <code>f</code>, 초기값 <code>init_x</code>, 학습률 <code>lr</code>, 경사법 반복 회수 <code>epoch</code> 에 대하여 다음과 같이 코드로 간단히 구현할 수 있다. </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">gradient_descent</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">init_x</span><span class="p">,</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">epoch</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">init_x</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epoch</span><span class="p">):</span>
+        <span class="n">grad</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">-=</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">grad</span>
+    <span class="k">return</span> <span class="n">x</span>
+</code></pre></div>
+<p>이 함수로 극소값을 구할 수 있고, 운좋으면 최소값을 구할 수 있다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>신경망에서의 경사법은 손실함수 <span class="arithmatex">\(L\)</span> 에 대하여 가중치 행렬 <span class="arithmatex">\(W\)</span> 의 미분을 구하는 것이다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(2 \times 3\)</span> 행렬 <span class="arithmatex">\(W\)</span> 가 </p>
+<div class="arithmatex">\[ W = \begin{pmatrix} w _{11}&amp;w _{12}&amp;w _{13}\\w _{21}&amp; w _{22}&amp; w _{23} \end{pmatrix} \]</div>
+<p>일 때 기울기는 </p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial W} = \begin{pmatrix} \dfrac{\partial L}{\partial w _{11}}&amp; \dfrac{\partial L}{\partial w _{12}}&amp; \dfrac{\partial L}{\partial w _{13}} \\ \dfrac{\partial L}{\partial w _{21}}&amp; \dfrac{\partial L}{\partial w _{22}}&amp; \dfrac{\partial L}{\partial w _{23}} \end{pmatrix} \]</div>
+<p>이다. 1행의 첫번째 원소 <span class="arithmatex">\(\dfrac{\partial L}{\partial w _{11}}\)</span> 는 <span class="arithmatex">\(w _{11}\)</span> 을 아주 조금 변경했을 때 손실함수값 <span class="arithmatex">\(L\)</span> 이 얼마나 변하는지를 나타내준다.</p>
+</li>
+<li>
+<p>코드 구현 </p>
+<p>신경망의 기울기를 구하는 코드를 실제로 구현해보자.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">simpleNet</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">W</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">softmax</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">CEE</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">loss</span>
+
+
+<span class="n">net</span> <span class="o">=</span> <span class="n">simpleNet</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span>  <span class="c1"># 입력</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>   <span class="c1"># 정답 레이블</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">w</span><span class="p">:</span> <span class="n">net</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+
+<span class="n">dW</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">net</span><span class="o">.</span><span class="n">W</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dW</span><span class="p">)</span> <span class="c1"># 기울기 벡터 출력</span>
+<span class="c1"># [[0.21, 0.14, -0.36] </span>
+<span class="c1">#  [0.32, 0.21, -0.54]]</span>
+</code></pre></div>
+<p>이를 통해 <span class="arithmatex">\(\dfrac{\partial L}{\partial w _{11}} \approx 0.2\)</span> 임을 알 수 있다. 이는 <span class="arithmatex">\(w _{11}\)</span> 을 <span class="arithmatex">\(h\)</span> 만큼 늘리면 손실함수 값은 <span class="arithmatex">\(0.2h\)</span> 만큼 증가한다는 것이다.</p>
+<p>또한 <span class="arithmatex">\(\dfrac{\partial L}{\partial w _{23}} \approx -0.5\)</span> 임을 알 수 있다. 이는 <span class="arithmatex">\(w _{23}\)</span> 을 <span class="arithmatex">\(h\)</span> 만큼 늘리면 손실함수 값은 <span class="arithmatex">\(-0.5h\)</span> 만큼 증가한다는 것이다.</p>
+<p>이로써 <span class="arithmatex">\(w _{11}\)</span> 는 음의 방향으로 갱신해야 손실함수 값이 감소하고, <span class="arithmatex">\(w _{23}\)</span> 은 양의 방향으로 조정해야 손실함수 값이 감소함을 알 수 있다. </p>
+<p>또한 <span class="arithmatex">\(\bigg |\dfrac{\partial L}{\partial w _{11}}\bigg | &lt; \bigg |\dfrac{\partial L}{\partial w _{23}}\bigg |\)</span> 이므로 <span class="arithmatex">\(w _{23}\)</span> 을 갱신할 때 <span class="arithmatex">\(w _{11}\)</span> 보다 손실함수 값이 더 예민하게 움직인다는 것을 알 수 있다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#e6e8ca98d"><div class="admonition tldr" id="e6e8ca98d">
+<p>신경망 학습 알고리즘 : 신경망 학습 알고리즘은 다음의 1~3단계를 에폭만큼, 또는 수용가능 오차도가 산출될때까지 반복하여 가중치와 편향을 훈련 데이터에 적합하도록 조정하는 알고리즘이다.</p>
+<ol>
+<li>
+<p>(미니배치) 훈련 데이터 중 일부를 무작위로 추출한다. 이 일부 데이터를 미니배치라고 하며, 이 미니배치의 손실 함수 값을 줄이는 것이 신경망 학습의 목표이다.</p>
+</li>
+<li>
+<p>(기울기 산출) 손실함수에 대한 가중치 행렬의 기울기를 구한다. 이 기울기 벡터로 손실함수 값을 줄이는 방향에 대한 단서를 얻는다. </p>
+</li>
+<li>
+<p>(가중치 학습) 가중치 매개변수를 기울기 방향으로 학습률만큼 갱신한다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>이때 미니배치를 무작위로 선정하므로 확률적 경사 하강법(SGD, stochastic gradient descent)라고 한다.</p>
+</li>
+<li>
+<p>코드 구현 </p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">TwoLayerNet</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">,</span> <span class="n">weight_init_std</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+        <span class="c1"># {params} 입력층의 뉴런수, 은닉층의 뉴런 수, 출력증의 뉴럭수</span>
+        <span class="c1"># 가중치 초기화</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">weight_init_std</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">weight_init_std</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">output_size</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="c1"># 예측(추론)을 수행한다.</span>
+        <span class="n">W1</span><span class="p">,</span> <span class="n">W2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">]</span>
+        <span class="n">b1</span><span class="p">,</span> <span class="n">b2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">]</span>
+
+        <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W1</span><span class="p">)</span> <span class="o">+</span> <span class="n">b1</span>
+        <span class="n">z1</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+        <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">z1</span><span class="p">,</span> <span class="n">W2</span><span class="p">)</span> <span class="o">+</span> <span class="n">b2</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">softmax</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">y</span>
+
+    <span class="k">def</span> <span class="nf">loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="c1"># {params} x : 입력 데이터, t : 정답 레이블</span>
+        <span class="c1"># 손실함수 값을 계산한다.</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">cross_entropy_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">accuracy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="c1"># 정확도를 구한다.</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">accuracy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="n">t</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">accuracy</span>
+
+    <span class="k">def</span> <span class="nf">numerical_gradient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="c1"># {params} x : 입력 데이터, t : 정답 레이블</span>
+        <span class="c1"># 가중치 행렬의 기울기 벡터를 구한다.</span>
+        <span class="n">loss_W</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">W</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+
+        <span class="n">grads</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">loss_W</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">])</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">loss_W</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">])</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">loss_W</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">])</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">loss_W</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">grads</span>
+
+    <span class="k">def</span> <span class="nf">gradient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="c1"># 오차 역전파로 가중치 행렬의 기울기 벡터를 빠르게 구한다.</span>
+        <span class="n">W1</span><span class="p">,</span> <span class="n">W2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">]</span>
+        <span class="n">b1</span><span class="p">,</span> <span class="n">b2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">]</span>
+        <span class="n">grads</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="n">batch_num</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="c1"># forward</span>
+        <span class="n">a1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">W1</span><span class="p">)</span> <span class="o">+</span> <span class="n">b1</span>
+        <span class="n">z1</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>
+        <span class="n">a2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">z1</span><span class="p">,</span> <span class="n">W2</span><span class="p">)</span> <span class="o">+</span> <span class="n">b2</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">softmax</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span>
+
+        <span class="c1"># backward</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">t</span><span class="p">)</span> <span class="o">/</span> <span class="n">batch_num</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">z1</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dy</span><span class="p">)</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">da1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dy</span><span class="p">,</span> <span class="n">W2</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+        <span class="n">dz1</span> <span class="o">=</span> <span class="n">sigmoid_grad</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span> <span class="o">*</span> <span class="n">da1</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dz1</span><span class="p">)</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dz1</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">grads</span>
+
+<span class="k">def</span> <span class="nf">test_dummy</span><span class="p">():</span>
+    <span class="c1"># 더미 데이터와 더미 정답 레이블로 학습해본다.</span>
+    <span class="n">net</span> <span class="o">=</span> <span class="n">TwoLayerNet</span><span class="p">(</span><span class="n">input_size</span><span class="o">=</span><span class="mi">784</span><span class="p">,</span> <span class="n">hidden_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">output_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">784</span><span class="p">)</span> <span class="c1"># 더미 데이터 손글씨 사진 100장</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># 더미 데이터 100장에 대한 더미 정답 레이블 </span>
+    <span class="n">grads</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">numerical_gradient</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+    <span class="c1"># ...</span>
+
+<span class="k">def</span> <span class="nf">test_mnist</span><span class="p">():</span>
+    <span class="kn">from</span> <span class="nn">dataset.mnist</span> <span class="kn">import</span> <span class="n">load_mnist</span>
+    <span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">t_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">t_test</span><span class="p">)</span> <span class="o">=</span> \
+        <span class="n">load_mnist</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">one_hot_label</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="n">train_loss_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">epoch</span> <span class="o">=</span> <span class="mi">10000</span>
+    <span class="n">train_size</span> <span class="o">=</span> <span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">lr</span> <span class="o">=</span> <span class="mf">0.1</span>
+    <span class="n">net</span> <span class="o">=</span> <span class="n">TwoLayerNet</span><span class="p">(</span><span class="n">input_size</span><span class="o">=</span><span class="mi">784</span><span class="p">,</span> <span class="n">hidden_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">output_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+    <span class="c1"># net = TwoLayerNet(input_size=784, hidden_size=100, output_size=10)</span>
+    <span class="n">train_acc_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">test_acc_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">epoch</span><span class="p">):</span>
+        <span class="n">batch_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">train_size</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
+        <span class="n">x_batch</span> <span class="o">=</span> <span class="n">x_train</span><span class="p">[</span><span class="n">batch_mask</span><span class="p">]</span>
+        <span class="n">t_batch</span> <span class="o">=</span> <span class="n">t_train</span><span class="p">[</span><span class="n">batch_mask</span><span class="p">]</span>
+
+        <span class="n">grad</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">numerical_gradient</span><span class="p">(</span><span class="n">x_batch</span><span class="p">,</span> <span class="n">t_batch</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">'W1'</span><span class="p">,</span> <span class="s1">'b1'</span><span class="p">,</span> <span class="s1">'W2'</span><span class="p">,</span> <span class="s1">'b2'</span><span class="p">):</span>
+            <span class="n">net</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">-=</span> <span class="n">lr</span> <span class="o">*</span> <span class="n">grad</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x_batch</span><span class="p">,</span> <span class="n">t_batch</span><span class="p">)</span>
+        <span class="n">train_loss_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+
+        <span class="c1"># 정확도 계산 </span>
+        <span class="n">train_acc</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">t_train</span><span class="p">)</span>
+        <span class="n">test_acc</span> <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">t_test</span><span class="p">)</span>
+        <span class="n">train_acc_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train_acc</span><span class="p">)</span>
+        <span class="n">test_acc_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_acc</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"tarin acc, test acc : "</span><span class="p">,</span> <span class="n">train_acc</span><span class="p">,</span> <span class="n">test_acc</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
+    <span class="n">test_mnist</span><span class="p">()</span>
+</code></pre></div>
+<ul>
+<li>위 코드에서 <code>numerical_gradient(self, x, t)</code> 의 수치미분으로 가중치의 기울기를 계산하는데, 실제로는 오차역전파로 기울기 계산을 빠르게 수행한다.</li>
+</ul>
+</li>
+<li>
+<p>오차역전파가 적용된 코드 구현</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">TwoLayerNet</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">,</span> <span class="n">weight_init_std</span> <span class="o">=</span> <span class="mf">0.01</span><span class="p">):</span>
+        <span class="c1"># 가중치 초기화</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">weight_init_std</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">input_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">weight_init_std</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">output_size</span><span class="p">)</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">output_size</span><span class="p">)</span>
+
+        <span class="c1"># 계층 생성</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Affine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Relu1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Relu</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">Affine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">])</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">lastLayer</span> <span class="o">=</span> <span class="n">SoftmaxWithLoss</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">x</span>
+
+    <span class="c1"># x : 입력 데이터, t : 정답 레이블</span>
+    <span class="k">def</span> <span class="nf">loss</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastLayer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">accuracy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">t</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+        <span class="n">accuracy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="n">t</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">accuracy</span>
+
+    <span class="c1"># x : 입력 데이터, t : 정답 레이블</span>
+    <span class="k">def</span> <span class="nf">numerical_gradient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="n">loss_W</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">W</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+
+        <span class="n">grads</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">loss_W</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">])</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">]</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">loss_W</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">])</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">loss_W</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">])</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">numerical_gradient</span><span class="p">(</span><span class="n">loss_W</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="n">grads</span>
+
+    <span class="k">def</span> <span class="nf">gradient</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="c1"># forward</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+
+        <span class="c1"># backward</span>
+        <span class="n">dout</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">dout</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lastLayer</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">dout</span><span class="p">)</span>
+
+        <span class="n">layers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+        <span class="n">layers</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">:</span>
+            <span class="n">dout</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">dout</span><span class="p">)</span>
+
+        <span class="c1"># 결과 저장</span>
+        <span class="n">grads</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'W1'</span><span class="p">],</span> <span class="n">grads</span><span class="p">[</span><span class="s1">'b1'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine1'</span><span class="p">]</span><span class="o">.</span><span class="n">dW</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine1'</span><span class="p">]</span><span class="o">.</span><span class="n">db</span>
+        <span class="n">grads</span><span class="p">[</span><span class="s1">'W2'</span><span class="p">],</span> <span class="n">grads</span><span class="p">[</span><span class="s1">'b2'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine2'</span><span class="p">]</span><span class="o">.</span><span class="n">dW</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[</span><span class="s1">'Affine2'</span><span class="p">]</span><span class="o">.</span><span class="n">db</span>
+
+        <span class="k">return</span> <span class="n">grads</span>
+</code></pre></div>
+<p>이 역전파를 사용하는 신경망 학습을 실제로 사용하는 코드는 다음과 같다. </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># coding: utf-8</span>
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">pardir</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">dataset.mnist</span> <span class="kn">import</span> <span class="n">load_mnist</span>
+<span class="kn">from</span> <span class="nn">two_layer_net</span> <span class="kn">import</span> <span class="n">TwoLayerNet</span>
+
+<span class="c1"># 데이터 읽기</span>
+<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">t_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">t_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">load_mnist</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">one_hot_label</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">network</span> <span class="o">=</span> <span class="n">TwoLayerNet</span><span class="p">(</span><span class="n">input_size</span><span class="o">=</span><span class="mi">784</span><span class="p">,</span> <span class="n">hidden_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">output_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">iters_num</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">train_size</span> <span class="o">=</span> <span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+<span class="n">train_loss_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">train_acc_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">test_acc_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">iter_per_epoch</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">train_size</span> <span class="o">/</span> <span class="n">batch_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">iters_num</span><span class="p">):</span>
+    <span class="n">batch_mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">train_size</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">)</span>
+    <span class="n">x_batch</span> <span class="o">=</span> <span class="n">x_train</span><span class="p">[</span><span class="n">batch_mask</span><span class="p">]</span>
+    <span class="n">t_batch</span> <span class="o">=</span> <span class="n">t_train</span><span class="p">[</span><span class="n">batch_mask</span><span class="p">]</span>
+
+    <span class="c1"># 기울기 계산</span>
+    <span class="c1">#grad = network.numerical_gradient(x_batch, t_batch) # 수치 미분 방식</span>
+    <span class="n">grad</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">x_batch</span><span class="p">,</span> <span class="n">t_batch</span><span class="p">)</span> <span class="c1"># 오차역전파법 방식(훨씬 빠르다)</span>
+
+    <span class="c1"># 갱신</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">'W1'</span><span class="p">,</span> <span class="s1">'b1'</span><span class="p">,</span> <span class="s1">'W2'</span><span class="p">,</span> <span class="s1">'b2'</span><span class="p">):</span>
+        <span class="n">network</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">-=</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">grad</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">loss</span><span class="p">(</span><span class="n">x_batch</span><span class="p">,</span> <span class="n">t_batch</span><span class="p">)</span>
+    <span class="n">train_loss_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">loss</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="n">iter_per_epoch</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">train_acc</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">t_train</span><span class="p">)</span>
+        <span class="n">test_acc</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">t_test</span><span class="p">)</span>
+        <span class="n">train_acc_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train_acc</span><span class="p">)</span>
+        <span class="n">test_acc_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_acc</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">train_acc</span><span class="p">,</span> <span class="n">test_acc</span><span class="p">)</span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="_2">오차역전파<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<a href="#b056bb7ad"><div class="admonition tldr" id="b056bb7ad">
+<p>오차역전파 : 신경망 학습에서 수치미분보다 효율적으로 기울기를 계산하는 방법이다.</p>
+</div></a>
+<ul>
+<li>
+<p>오차역전파는 계산 그래프로 순전파를 계산한다.</p>
+<ul>
+<li>
+<p>계산 그래프는 연산 노드(덧셈, 곱셈 등등)에 입력을 주고 출력을 상위 연산 노드로 전달하는 알고리즘이다.</p>
+</li>
+<li>
+<p>계산 그래프를 통한 중간 노드로 국소적 계산을 하면 여러 이점이 있다. </p>
+<ol>
+<li>
+<p>네트워크가 아무리 복잡해도 각 노드에서는 단순한 국소적 계산만 하면 된다. </p>
+</li>
+<li>
+<p>중간 계산 과정을 저장할 수 있다. </p>
+</li>
+<li>
+<p>역전파를 통해 미분을 효율적으로 빠르게 계산할 수 있다.</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>계산 그래프의 역전파는 입력 <span class="arithmatex">\(x\)</span> 와 출력 <span class="arithmatex">\(y\)</span> 을 갖는 노드에 전달된 상위 노드에서 전달된 값 <span class="arithmatex">\(E\)</span> 에 대하여</p>
+<div class="arithmatex">\[ E \dfrac{\partial y}{\partial x} \]</div>
+<p>을 이전 노드로 전달한다.</p>
+<ul>
+<li>
+<p>이렇게 미분을 구하는 것이 가능한 이유는 합성함수의 미분, 즉 연쇄법칙 때문이다.</p>
+<ul>
+<li>예시 </li>
+</ul>
+<p>이독립변수와 일매개변수와 대한 합성함수</p>
+<div class="arithmatex">\[ z = t ^{2} \]</div>
+<div class="arithmatex">\[ t = x + y \]</div>
+<p>의 도함수는 <span class="arithmatex">\(x\)</span> 에 대한 미분</p>
+<div class="arithmatex">\[ \dfrac{\partial z}{\partial x} = \dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} \]</div>
+<p>과 <span class="arithmatex">\(y\)</span> 에 대한 미분</p>
+<div class="arithmatex">\[ \dfrac{\partial z}{\partial x} = \dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} \]</div>
+<p>이다.</p>
+<p>가장 상위 노드에서, 즉 출력층에서 이전 노드로 미분 <span class="arithmatex">\(\dfrac{\partial z}{\partial z}\)</span> 를 전달한다.</p>
+<p>그러면 이전 노드가 상위 노드의 미분 <span class="arithmatex">\(\dfrac{\partial z}{\partial z}\)</span> 을 받고 <span class="arithmatex">\(z\)</span> 에 대한 <span class="arithmatex">\(t\)</span> 의 미분 <span class="arithmatex">\(\dfrac{\partial z}{\partial t}\)</span> 를 곱하여 <span class="arithmatex">\(\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\)</span> 를 만들어서 또 이전 노드로 전달한다. </p>
+<p>그러면 이전 노드가 상위 노드의 미분 <span class="arithmatex">\(\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\)</span> 을 받고 각각 <span class="arithmatex">\(t\)</span> 에 대한 <span class="arithmatex">\(x\)</span> 의 미분 
+과 <span class="arithmatex">\(t\)</span> 에 대한 <span class="arithmatex">\(y\)</span> 의 미분을 곱하여</p>
+<div class="arithmatex">\[ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} \]</div>
+<div class="arithmatex">\[ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial y} \]</div>
+<p>을 만든다. 그러면 이 결과는 곧</p>
+<div class="arithmatex">\[ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial x} = \dfrac{\partial z}{\partial x}\]</div>
+<div class="arithmatex">\[ \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial t}\dfrac{\partial t}{\partial y} = \dfrac{\partial z}{\partial y}\]</div>
+<p>가 되어 각각 <span class="arithmatex">\(z\)</span> 에 대한 <span class="arithmatex">\(x\)</span> 의 미분, <span class="arithmatex">\(z\)</span> 에 대한 <span class="arithmatex">\(y\)</span> 의 미분 결과값이 되는 것이다.</p>
+<p>이렇게 각각의 노드가 상위 노드에서 받은 미분값을 자신의 미분에 곱하기만 하면, 최종 손실함수가 자신의 변화에 대하여 얼마나 변하는지 보여주는 순간변화율, 즉 미분값을 구할 수 있는 것이다.</p>
+<blockquote>
+<p>모든 합성함수의 미분, 즉 연쇄법칙은 독립변수에 대한 미분이고, 전체함수 <span class="arithmatex">\(f\)</span> 를 매개변수로 미분하고, 매개변수를 독립변수로 미분한 것을 곱하면 된다. 다음의 다변수 합성함수의 편도함수를 보자.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#37ec2db0e"><div class="admonition tldr" id="37ec2db0e">
+<p><span class="arithmatex">\(n\)</span> 개의 독립변수와 <span class="arithmatex">\(m\)</span> 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 <span class="arithmatex">\(x_1, x_2, \dots, x_m\)</span> 에 대한 다변수 함수 <span class="arithmatex">\(w = f(x_1, x_2, \dots, x_m)\)</span> 가 미분가능하고,</p>
+<p><span class="arithmatex">\(n\)</span> 개의 독립변수 <span class="arithmatex">\(p_1, p_2, \dots, p_n\)</span> 에 대한 함수 <span class="arithmatex">\(x_1, x_2, \dots, x_m\)</span> 도 미분가능하면,</p>
+<p><span class="arithmatex">\(w\)</span> 가 미분가능하고 <span class="arithmatex">\(p_1, p_2, \dots, p_n\)</span> 에 대한 함수들도 미분가능하며</p>
+<p>각각의 독립변수에 대한 <span class="arithmatex">\(w\)</span> 의 편도함수는 다음과 같다. </p>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}\]</div>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}\]</div>
+<div class="arithmatex">\[ \vdots \]</div>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}\]</div>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>이독립변수와 이매개변수에 대한 합성함수 </p>
+<div class="arithmatex">\[ z = x + y \]</div>
+<div class="arithmatex">\[ x = 2r s\]</div>
+<div class="arithmatex">\[ y = r s\]</div>
+<p>의 도함수는 <span class="arithmatex">\(r\)</span> 에 대한 미분 </p>
+<div class="arithmatex">\[ \dfrac{\partial z}{\partial r} = \dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial r} + \dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial r} \]</div>
+<p>과 <span class="arithmatex">\(s\)</span> 에 대한 미분</p>
+<div class="arithmatex">\[ \dfrac{\partial z}{\partial s} = \dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial s} + \dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial s} \]</div>
+<p>이다.</p>
+<p>가장 상위 노드에서, 즉 출력층에서 이전 노드로 미분 <span class="arithmatex">\(\dfrac{\partial z}{\partial z}\)</span> 를 전달한다.</p>
+<p>그러면 이전 노드가 상위 노드의 미분 <span class="arithmatex">\(\dfrac{\partial z}{\partial z}\)</span> 을 받고 각각 <span class="arithmatex">\(z\)</span> 에 대한 <span class="arithmatex">\(x\)</span> 의 미분과 <span class="arithmatex">\(z\)</span> 에 대한 <span class="arithmatex">\(y\)</span> 의 미분을 곱하여</p>
+<div class="arithmatex">\[\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}\]</div>
+<div class="arithmatex">\[\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}\]</div>
+<p>를 전달한다. 그러면 이전 그 이전 노드는 각각 <span class="arithmatex">\(x\)</span> 에 대한 <span class="arithmatex">\(r\)</span> 의 미분을 <span class="arithmatex">\(\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}\)</span> 에 곱한 것과 <span class="arithmatex">\(y\)</span> 에 대한 <span class="arithmatex">\(r\)</span> 의 미분을 <span class="arithmatex">\(\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}\)</span> 에 곱한 것을 더하고</p>
+<p><span class="arithmatex">\(x\)</span> 에 대한 <span class="arithmatex">\(s\)</span> 의 미분을 <span class="arithmatex">\(\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}\)</span> 에 곱한 것과 <span class="arithmatex">\(y\)</span> 에 대한 <span class="arithmatex">\(s\)</span> 의 미분을 <span class="arithmatex">\(\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}\)</span> 에 곱한 것을 더하여 </p>
+<div class="arithmatex">\[\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial r} + \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial r}\]</div>
+<div class="arithmatex">\[\dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial x}\dfrac{\partial x}{\partial s}  + \dfrac{\partial z}{\partial z}\dfrac{\partial z}{\partial y}\dfrac{\partial y}{\partial s}\]</div>
+<p>를 구할 수 있다.</p>
+<ul>
+<li>
+<p><strong>이로써 우리는 상위 노드로부터 전달된 모든 미분 값에 그 상위 노드에 대한 자신의 미분을 곱하고 모두 더해야 한다는 것을 알 수 있다.</strong></p>
+<p><strong>즉, <span class="arithmatex">\(n \in \mathbb{R}\)</span> 개의 상위 노드로부터 전달된 미분 <span class="arithmatex">\(\dfrac{\partial L}{\partial u_1},\dfrac{\partial L}{\partial u_2}, \dots, \dfrac{\partial L}{\partial u_n}\)</span> 에 각각의 상위 노드에 대한 자신 <span class="arithmatex">\(v\)</span> 의 미분 <span class="arithmatex">\(\dfrac{\partial u_1}{\partial v},\dfrac{\partial u_2}{\partial v}, \dots, \dfrac{\partial u_n}{\partial v}\)</span> 를 곱하고 모두 더한 값</strong></p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial u_1}\dfrac{\partial u_1}{\partial v} +\dfrac{\partial L}{\partial u_2}\dfrac{\partial u_2}{\partial v} +\dots+\dfrac{\partial L}{\partial u_n}\dfrac{\partial u_n}{\partial v} \]</div>
+<p><strong>을 최종적으로 자신의 미분값, 즉 자신이 조금 변했을 때 손실함수가 얼마나 변하는지에 대한 단서로 삼아야 한다.</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#7ff8f7ca3"><div class="admonition tldr" id="7ff8f7ca3">
+<p>기울기 확인(gradient check) : 오차역전파를 구현하고 제대로 구현했는지 확인하기 위하여 수치미분과 대조하는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p><strong>오차역전파는 수치미분의 느린 속도 때문에 개발되었으나 수치미분이 딥러닝에서 완전히 폐기되는 것은 아니다. 왜냐하면 수치 미분으로 오차역전파가 정확하게 구현되었는지 확인할 수 있기 때문이다.</strong></p>
+<p>수치미분은 구현하기가 상대적으로 쉬워서 코드에 버그가 있기 어려운 반면, 오차역전파의 구현은 다소 복잡해서 버그가 있을 수도 있다.</p>
+</li>
+<li>
+<p>코드 구현 </p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 데이터 읽기</span>
+<span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">t_train</span><span class="p">),</span> <span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">t_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">load_mnist</span><span class="p">(</span><span class="n">normalize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">one_hot_label</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">network</span> <span class="o">=</span> <span class="n">TwoLayerNet</span><span class="p">(</span><span class="n">input_size</span><span class="o">=</span><span class="mi">784</span><span class="p">,</span> <span class="n">hidden_size</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">output_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">x_batch</span> <span class="o">=</span> <span class="n">x_train</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">t_batch</span> <span class="o">=</span> <span class="n">t_train</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="n">grad_numerical</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">numerical_gradient</span><span class="p">(</span><span class="n">x_batch</span><span class="p">,</span> <span class="n">t_batch</span><span class="p">)</span>
+<span class="n">grad_backprop</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">x_batch</span><span class="p">,</span> <span class="n">t_batch</span><span class="p">)</span>
+
+<span class="c1"># 각 가중치의 절대 오차의 평균을 구한다.</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">grad_numerical</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">grad_backprop</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">-</span> <span class="n">grad_numerical</span><span class="p">[</span><span class="n">key</span><span class="p">])</span> <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span> <span class="o">+</span> <span class="s2">":"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">diff</span><span class="p">))</span>
+</code></pre></div>
+<p>위 코드의 출력이 </p>
+<div class="highlight"><pre><span></span><code><span class="n">b1</span><span class="p">:</span><span class="mf">9.7e-13</span>
+<span class="n">W1</span><span class="p">:</span><span class="mf">8.4e-13</span>
+<span class="n">b2</span><span class="p">:</span><span class="mf">1.1e-10</span>
+<span class="n">W2</span><span class="p">:</span><span class="mf">2.2e-13</span>
+</code></pre></div>
+<p>로 나왔다면 오차가 <span class="arithmatex">\(0\)</span> 에 수렴하므로 역전파가 잘 구현되어 있는 것이다.</p>
+</li>
+</ul>
+<a href="#ad9381d53"><div class="admonition tldr" id="ad9381d53">
+<p>덧셈 노드의 역전파 : 입력을 더하여 상위 연산 노드로 전달하는 덧셈 연산 노드의 역전파는 그 미분이 <span class="arithmatex">\(1\)</span> 이므로 상위 연산 노드에서 전달된 미분에 <span class="arithmatex">\(1\)</span> 을 곱하여 하위 연산 노드로 전달한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(n\)</span> 개의 입력 <span class="arithmatex">\(x_1, x_2, \dots, x_n\)</span> 을 받아 상위 연산 노드로 전달하는 덧세 연산 노드는 함수 <span class="arithmatex">\(y  = x_1+x_2+\dots+x_n\)</span> 로 표현되는데 각 독립변수에 대한 미분은</p>
+<div class="arithmatex">\[ \dfrac{\partial y}{\partial x_1} = 1, \dfrac{\partial y}{\partial x_2} = 1, \dots, \dfrac{\partial y}{\partial x_n} = 1 \]</div>
+<p>로써 모두 <span class="arithmatex">\(1\)</span> 이다.</p>
+<p>그러므로 덧셈 노드의 역전파는 단지 상위 노드에서 온 미분값에 <span class="arithmatex">\(1\)</span> 을 곱해주는 것이다. 그런데 <span class="arithmatex">\(1\)</span> 을 곱하는 것은 무의미하므로 그냥 전달된 값을 아무 연산 없이 그대로 다시 전달하면 된다.</p>
+<ul>
+<li>
+<p><strong>물론 상위 노드에서 <span class="arithmatex">\(n\)</span> 개의 미분이 전달되면 그것들에 상위 노드에 대한 자신의 미분을 곱하여 더해주어야 하기 때문에</strong></p>
+<p><strong>덧셈 노드의 경우 그냥 상위 노드에서 전달된 미분들을 더하기만 하면 된다는 것이다.</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(z = x+y\)</span> 의 역전파를 조사하자. <span class="arithmatex">\(z\)</span> 의 미분은 다음과 같다. </p>
+<div class="arithmatex">\[ \dfrac{\partial z}{\partial x} = 1 \]</div>
+<div class="arithmatex">\[ \dfrac{\partial z}{\partial y} = 1 \]</div>
+<p>그러므로 상류에서 전해진 미분 <span class="arithmatex">\(\dfrac{\partial L}{\partial z}\)</span> 에 단지 <span class="arithmatex">\(1\)</span> 을 곱하여 하류로 전달하면 된다. <span class="arithmatex">\(L\)</span> 은 손실함수를 뜻한다.</p>
+<ul>
+<li>
+<p>코드 구현 </p>
+<p>이 예시를 다음과 같이 코드로 간단히 구현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">AddLayer</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="p">):</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">dout</span> <span class="o">*</span> <span class="mi">1</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="n">dout</span> <span class="o">*</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(u = x+y+z+w\)</span> 의 역전파를 조사하자. <span class="arithmatex">\(u\)</span> 의 미분은 다음과 같다. </p>
+<div class="arithmatex">\[ \dfrac{\partial u}{\partial x} = 1, \dfrac{\partial u}{\partial y} = 1, \dfrac{\partial u}{\partial z} = 1, \dfrac{\partial u}{\partial w} = 1 \]</div>
+<p>그러므로 상류에서 전해진 미분 <span class="arithmatex">\(\dfrac{\partial L}{\partial u}\)</span> 에 단지 <span class="arithmatex">\(1\)</span> 을 곱하여 하류로 전달하면 된다. <span class="arithmatex">\(L\)</span> 은 손실함수를 뜻한다.</p>
+</li>
+</ul>
+<a href="#cd6fe9b1b"><div class="admonition tldr" id="cd6fe9b1b">
+<p>곱셈 노드의 역전파 : 입력을 곱하여 상위 연산 노드로 전달하는 곱셈 연산 노드의 역전파는 순전파 때의 그 입력을 제외한 나머지 입력을 곱한 것을 상위 노드에서 역전파된 미분에 곱하여 하위 노드로 전달한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(z = xy\)</span> 에 대한 미분은 </p>
+<div class="arithmatex">\[ \dfrac{\partial z}{\partial x} = y , \dfrac{\partial z}{\partial y} = x \]</div>
+<p>이다. </p>
+<p>그러므로 우리는 순전파 때의 입력들을 서로 바꾼 값을 상위 노드에서 역전파된 미분에 곱하여 하위 노드로 전달하면 된다는 것을 알 수 있다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>곱셈 노드가 순전파때 입력 <span class="arithmatex">\(10,5\)</span> 를 받아 상위노드로 <span class="arithmatex">\(50\)</span> 을 전달했는데, </p>
+<p>역전파 때 상위노드에서 미분 <span class="arithmatex">\(1.3\)</span> 을 전달했다면 </p>
+<p><span class="arithmatex">\(10\)</span> 의 입력을 전달한 하위 노드에 <span class="arithmatex">\(6.5\)</span> 를 전달하고</p>
+<p><span class="arithmatex">\(5\)</span> 의 입력을 전달한 하위 노드에 <span class="arithmatex">\(13\)</span> 를 전달하는 것이다.</p>
+</li>
+<li>
+<p>코드 구현 </p>
+<p>이 예시를 다음과 같이 간단하게 코드로 구현할 수 있다. </p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MulLayer</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>                
+        <span class="n">out</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="p">):</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">dout</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span>  <span class="c1"># x와 y를 바꾼다.</span>
+        <span class="n">dy</span> <span class="o">=</span> <span class="n">dout</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span>
+
+        <span class="k">return</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span>
+</code></pre></div>
+<p>이 코드를 사용하여 사과 <span class="arithmatex">\(100\)</span> 원 짜리 사과를 <span class="arithmatex">\(2\)</span> 개 사고 <span class="arithmatex">\(10\%\)</span> 의 세금이 부과된 상황을 순전파로 구현하고, 역전파로 미분을 구해보자.</p>
+<div class="highlight"><pre><span></span><code><span class="n">apple</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">apple_num</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">tax</span> <span class="o">=</span> <span class="mf">1.1</span>
+
+<span class="n">mul_apple_layer</span> <span class="o">=</span> <span class="n">MulLayer</span><span class="p">()</span>
+<span class="n">mul_tax_layer</span> <span class="o">=</span> <span class="n">MulLayer</span><span class="p">()</span>
+
+<span class="c1"># 순전파</span>
+<span class="n">apple_price</span> <span class="o">=</span> <span class="n">mul_apple_layer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">apple</span><span class="p">,</span> <span class="n">apple_num</span><span class="p">)</span>
+<span class="n">price</span> <span class="o">=</span> <span class="n">mul_tax_layer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">apple_price</span><span class="p">,</span> <span class="n">tax</span><span class="p">)</span>
+
+<span class="c1"># 역전파</span>
+<span class="n">dprice</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># 최종 노드가 price 인데 price 에 대한 price 의 미분은 1 이다.</span>
+<span class="n">dapple_price</span><span class="p">,</span> <span class="n">dtax</span> <span class="o">=</span> <span class="n">mul_tax_layer</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">dprice</span><span class="p">)</span>
+<span class="n">dapple</span><span class="p">,</span> <span class="n">dapple_num</span> <span class="o">=</span> <span class="n">mul_apple_layer</span><span class="o">.</span><span class="n">backward</span><span class="p">(</span><span class="n">dapple_price</span><span class="p">)</span>
+</code></pre></div>
+<p>역전파 <code>backward</code> 의 입력은 순전파의 출력에 대한 미분이라는 것을 기억하자.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(u = xyzw\)</span> 에 대한 미분은 </p>
+<div class="arithmatex">\[ \dfrac{\partial u}{\partial x} = yzw , \dfrac{\partial u}{\partial y} = xzw, \dfrac{\partial u}{\partial z} = xyw , \dfrac{\partial u}{\partial w} = xyz \]</div>
+<p>이다. </p>
+<p>그러므로 우리는 순전파 때의 그 입력을 제외한 나머지 입력을 곱한 것을 상위 노드에서 역전파된 미분에 곱하여 하위 노드로 전달하면 된다는 것을 알 수 있다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>곱셈 노드가 순전파때 입력 <span class="arithmatex">\(1,2,3,4\)</span> 를 받아 상위노드로 <span class="arithmatex">\(24\)</span> 을 전달했는데, </p>
+<p>역전파 때 상위노드에서 미분 <span class="arithmatex">\(2.7\)</span> 을 전달했다면 </p>
+<p><span class="arithmatex">\(1\)</span> 의 입력을 전달한 하위 노드에 <span class="arithmatex">\(2.7 \times (2 \times 3 \times 4)\)</span> 를 전달하고</p>
+<p><span class="arithmatex">\(2\)</span> 의 입력을 전달한 하위 노드에 <span class="arithmatex">\(2.7 \times (1 \times 3 \times 4)\)</span> 를 전달하고</p>
+<p><span class="arithmatex">\(3\)</span> 의 입력을 전달한 하위 노드에 <span class="arithmatex">\(2.7 \times (1 \times 2 \times 4)\)</span> 를 전달하고</p>
+<p><span class="arithmatex">\(4\)</span> 의 입력을 전달한 하위 노드에 <span class="arithmatex">\(2.7 \times (1 \times 2 \times 3)\)</span> 를 전달하는 것이다.</p>
+</li>
+<li>
+<p>코드 구현 </p>
+<p>이 예시를 다음과 같이 간단하게 코드로 구현할 수 있다. </p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="k">class</span> <span class="nc">MulLayer</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">input</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input</span> <span class="o">=</span> <span class="nb">input</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">input</span><span class="p">):</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">input</span>
+            <span class="k">del</span> <span class="n">tmp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dout</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">tmp</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">result</span>
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#f0faebf2c"><div class="admonition tldr" id="f0faebf2c">
+<p>나눗셈 노드의 역전파 : 입력 <span class="arithmatex">\(x\)</span> 의 곱셈의 역원 <span class="arithmatex">\(\dfrac{1}{x}\)</span> 을 상위 연산 노드로 전달하는 나눗셈 연산 노드의 역전파는 상위노드에 <span class="arithmatex">\(-\dfrac{1}{x ^{2}}\)</span> 를 곱하여 하류로 전달한다.</p>
+</div></a>
+<ul>
+<li>함수 <span class="arithmatex">\(y = \dfrac{1}{x}\)</span> 의 미분은 <span class="arithmatex">\(\dfrac{dy}{dx} = -\dfrac{1}{x ^{2}}\)</span> 이다. 그러므로 역전파 때 상위 노드에서 전달된 값에 <span class="arithmatex">\(-\dfrac{1}{x ^{2}}\)</span> 를 곱하여 하위 노드로 전달한다.</li>
+</ul>
+<a href="#cf6254736"><div class="admonition tldr" id="cf6254736">
+<p><span class="arithmatex">\(\exp\)</span> 노드의 역전파 : 입력 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(\exp(x)\)</span> 를 상위 연산 노드로 전달하는 <span class="arithmatex">\(\exp\)</span> 연산 노드의 역전파는 상위노드에 <span class="arithmatex">\(\exp (x)\)</span> 를 곱하여 하류로 전달한다.</p>
+</div></a>
+<ul>
+<li>함수 <span class="arithmatex">\(y = \exp (x)\)</span> 의 미분은 <span class="arithmatex">\(\dfrac{dy}{dx} = \exp (x)\)</span> 이다. 그러므로 역전파 때 상위 노드에서 전달된 값에 <span class="arithmatex">\(\exp (x)\)</span> 를 곱하여 하위 노드로 전달한다.</li>
+</ul>
+<a href="#2cb1ac5bb"><div class="admonition tldr" id="2cb1ac5bb">
+<p>표준 Sigmoid 활성화 함수의 역전파 : 표준 Sigmoid 함수 <span class="arithmatex">\(y = \zeta (x) = \text{sigmoid}(x) =: \dfrac{1}{1 + \exp (-x)}\)</span> 의 역전파는 상위노드에 <span class="arithmatex">\(y(1-y)\)</span> 를 곱하여 하류로 전달한다.</p>
+</div></a>
+<ul>
+<li>
+<p>함수 <span class="arithmatex">\(y = \zeta (x) =: \dfrac{1}{1+\exp (-x)}\)</span> 의 미분은 <span class="arithmatex">\(\{\zeta (x)\}' = \zeta (x)\{1-\zeta (x)\}\)</span> 이다. 그러므로 역전파 때 상위 노드에서 전달된 값에 <span class="arithmatex">\(y(1-y)\)</span> 를 곱하여 하위 노드로 전달한다.</p>
+</li>
+<li>
+<p>코드 구현 </p>
+<p>시그모이드 함수 레이어는 다음과 같이 간단하게 구현할 수 있다. </p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sigmoid</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out</span> <span class="o">=</span> <span class="n">out</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="p">):</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">dout</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">out</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">out</span>
+
+        <span class="k">return</span> <span class="n">dx</span>
+</code></pre></div>
+</li>
+</ul>
+<a href="#c219b8c2e"><div class="admonition tldr" id="c219b8c2e">
+<p>ReLU 활성화 함수의 역전파 : ReLU 함수 <span class="arithmatex">\(y = \begin{cases} x &amp;(x&gt;0)\\ 0 &amp;(x \leq 0)\\ \end{cases}\)</span> 의 미분은 </p>
+<div class="arithmatex">\[ \dfrac{dy}{dx} = \begin{cases} 1 &amp;(x&gt;0)\\ 0 &amp;(x \leq 0)\\ \end{cases} \]</div>
+<p>이므로 순전파 때 입력 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(0\)</span> 보다 크면 <span class="arithmatex">\(1\)</span> 을 곱하여 하위 노드로 전달하고 <span class="arithmatex">\(0\)</span> 이하면 <span class="arithmatex">\(0\)</span> 을 곱하여 하위 노드로 전달한다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, 순전파 때 입력이 <span class="arithmatex">\(0\)</span> 보다 크면 상류의 값을 그대로 하류로 전달하고 </p>
+<p><span class="arithmatex">\(0\)</span> 이하면 하류로 아무것도 전달하지 않는다.</p>
+</li>
+<li>
+<p>코드 구현 </p>
+<p>ReLU 함수 레이어는 다음과 같이 간단하게 코드로 구현할 수 있다. </p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Relu</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">out</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="p">):</span>
+        <span class="n">dout</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">dout</span>
+
+        <span class="k">return</span> <span class="n">dx</span>
+</code></pre></div>
+</li>
+</ul>
+<a href="#f560c5161"><div class="admonition tldr" id="f560c5161">
+<p>신경망 순전파 흐름 : <span class="arithmatex">\(n, m \in \mathbb{N}\)</span> 에 대한 <span class="arithmatex">\(1 \times n\)</span> 입력행렬 <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(n \times m\)</span> 가중치행렬 <span class="arithmatex">\(W\)</span>, <span class="arithmatex">\(1 \times m\)</span> 편향행렬 <span class="arithmatex">\(B\)</span> 에 대하여 <span class="arithmatex">\(1 \times m\)</span> 순입력행렬</p>
+<div class="arithmatex">\[ Z = X W + B \]</div>
+<p>를 활성화 함수 <span class="arithmatex">\(h:\mathbb{R} ^{m} \to \mathbb{R} ^{m}\)</span> 에 입력하여 얻은 <span class="arithmatex">\(1 \times m\)</span> 출력행렬 <span class="arithmatex">\(Y\)</span> 를 다음 층으로 전달하는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>신경망 순전파의 행렬곱을 기하학에서 아핀 변환(affine transformation) 이라고 한다.</p>
+<blockquote>
+<p>아핀 기하학이 유클리드 기하학보다 논리적으로 선행한다는 것을 수학사에서 살펴본 적이 있다.</p>
+</blockquote>
+<ul>
+<li>그래서 아핀 변환(행렬곱)을 처리하는 레이어를 Affine 계층이라는 이름으로 구현한다.</li>
+</ul>
+</li>
+</ul>
+<a href="#d2520780f"><div class="admonition tldr" id="d2520780f">
+<p>Affine 변환의 역전파 : 입력 행렬 <span class="arithmatex">\(\mathbf{X,W}\)</span> 과 출력행렬 <span class="arithmatex">\(\mathbf{Y} = \mathbf{XW}\)</span> 를 갖는 Affine 레이어의 역전파는 손실값 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{Y}\)</span> 의 미분 <span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{Y}}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\cdot \mathbf{W} ^{\intercal } \]</div>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{W}} = \mathbf{X}^{\intercal } \dfrac{\partial L}{\partial \mathbf{Y}} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>아핀 변환 신경망 구성</p>
+<p><img alt="" src="https://cdn-ak.f.st-hatena.com/images/fotolife/m/msyksphinz/20170622/20170622015132.png"/></p>
+</li>
+<li>
+<p>코드 구현 </p>
+<p>행렬곱 연산과 행렬덧셈 연산을 하는 Affine 레이어는 다음과 같이 코드로 구현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Affine</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">W</span> <span class="o">=</span> <span class="n">W</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dW</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> 
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="p">):</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dW</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dout</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># 살짝 이해 안됨.</span>
+        <span class="k">return</span> <span class="n">dx</span>
+</code></pre></div>
+<p>다음 코드는 입력 데이터가 행렬이 아니라 텐서인 경우, 즉 4차원 데이터인 경우도 처리할 수 있도록 구현한 것이다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Affine</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">W</span> <span class="o">=</span> <span class="n">W</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">original_x_shape</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dW</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="c1"># 텐서 대응</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">original_x_shape</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># 이 부분 이해 안됨.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="c1"># 입력 행렬을 데이터별로 벡터로 만들고 행렬곱을 개별 가중치 벡터로 한다고? 이해 안됨.</span>
+        <span class="k">return</span> <span class="n">out</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span><span class="p">):</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dout</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">W</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dW</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">dout</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">db</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">dout</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">dx</span> <span class="o">=</span> <span class="n">dx</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">original_x_shape</span><span class="p">)</span>  <span class="c1"># 입력 데이터 모양 변경(텐서 대응)</span>
+        <span class="k">return</span> <span class="n">dx</span>
+</code></pre></div>
+</li>
+<li>
+<p>행렬곱 미분 정리</p>
+<p><a href="http://cs231n.stanford.edu/handouts/derivatives.pdf">http://cs231n.stanford.edu/handouts/derivatives.pdf</a></p>
+<p><a href="http://cs231n.stanford.edu/handouts/linear-backprop.pdf">http://cs231n.stanford.edu/handouts/linear-backprop.pdf</a></p>
+<p><span class="arithmatex">\(n \times d\)</span> 입력 행렬 <span class="arithmatex">\(\mathbf{X}\)</span>, <span class="arithmatex">\(d \times m\)</span> 가중치 행렬 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대한 <span class="arithmatex">\(n \times m\)</span> 행렬 <span class="arithmatex">\(\mathbf{Y=XW}\)</span> 과 손실함수 <span class="arithmatex">\(l\)</span> 에 대한 스칼라 <span class="arithmatex">\(L=l(\mathbf{Y})\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{X}\)</span> 의 미분 (1) 은 </p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\mathbf{W}^{\intercal } \]</div>
+<p>이고, <span class="arithmatex">\(\mathbf{W}\)</span> 의 미분 (2) 은</p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{W}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{W}} = \mathbf{X}^{\intercal } \dfrac{\partial L}{\partial \mathbf{Y}}\]</div>
+<p>이다.</p>
+<ul>
+<li>
+<p>(1) 증명</p>
+<p><span class="arithmatex">\(n \times d\)</span> 입력 행렬 <span class="arithmatex">\(\mathbf{X}\)</span>, <span class="arithmatex">\(d \times m\)</span> 가중치 행렬 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대한 행렬곱 <span class="arithmatex">\(\mathbf{Y}\)</span> 는 <span class="arithmatex">\(n \times m\)</span> 행렬</p>
+<div class="arithmatex">\[ \mathbf{Y} = \mathbf{XW} = \begin{pmatrix} x _{11}&amp;x _{12}&amp;\dots&amp;x _{1d}\\ x _{21}&amp;x _{22}&amp;\dots&amp;x _{2d}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ x _{n1}&amp;x _{n2}&amp;\dots&amp;x _{nd}\\ \end{pmatrix} \begin{pmatrix} w _{11} &amp; w _{12} &amp;\dots &amp; w _{1m} \\ w _{21} &amp; w _{22} &amp;\dots &amp; w _{2m} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ w _{d1} &amp; w _{d2} &amp;\dots &amp; w _{dm} \\ \end{pmatrix} \]</div>
+<div class="arithmatex">\[ = \begin{pmatrix} \displaystyle \sum_{k=1}^{d}x _{1k} w _{k1} &amp; \displaystyle \sum_{k=1}^{d}x _{1k} w _{k2} &amp; \dots &amp; \displaystyle \sum_{k=1}^{d}x _{1k} w _{km} \\ \displaystyle \sum_{k=1}^{d}x _{2k} w _{k1} &amp; \displaystyle \sum_{k=1}^{d}x _{2k} w _{k2} &amp; \dots &amp; \displaystyle \sum_{k=1}^{d}x _{2k} w _{km} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \displaystyle \sum_{k=1}^{d}x _{nk} w _{k1} &amp; \displaystyle \sum_{k=1}^{d}x _{nk} w _{k2} &amp; \dots &amp; \displaystyle \sum_{k=1}^{d}x _{nk} w _{km} \\ \end{pmatrix} \]</div>
+<p>이다. 이 순전파 출력 <span class="arithmatex">\(\mathbf{Y}\)</span> 이 손실함수 <span class="arithmatex">\(l\)</span> 로 전달되어 최종적으로 스칼라 <span class="arithmatex">\(L\)</span> 이 되었다고 하면 </p>
+<div class="arithmatex">\[ L = l(\mathbf{Y}) = l(\mathbf{XW}) \]</div>
+<p>이다.</p>
+<p><span class="arithmatex">\(L\)</span> 이 스칼라고 <span class="arithmatex">\(\mathbf{Y}\)</span> 는 <span class="arithmatex">\(n \times m\)</span> 행렬이므로 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{Y}\)</span> 의 미분은 <span class="arithmatex">\(n \times m\)</span> 행렬 </p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{Y}} = \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}&amp; \dfrac{\partial L}{\partial y _{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}&amp; \dfrac{\partial L}{\partial y _{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{2m}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial y _{n1}}&amp; \dfrac{\partial L}{\partial y _{n2}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix} \]</div>
+<p>이다. <span class="arithmatex">\(\mathbf{Y}\)</span> 는 <span class="arithmatex">\(\mathbf{X, W}\)</span> 에 대한 함수이므로 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{X, W}\)</span> 의 미분은 이독립변수와 일매개변수의 합성함수의 미분</p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{X}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}}, \dfrac{\partial L}{\partial \mathbf{W}} = \dfrac{\partial L}{\partial \mathbf{Y}}\dfrac{\partial \mathbf{Y}}{\partial \mathbf{W}} \]</div>
+<p>이다. 이때 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{X}\)</span> 의 미분은 행렬 미분의 정의에 의하여 야코비 행렬</p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{X}} = \begin{pmatrix} \dfrac{\partial L}{\partial x _{11}}&amp; \dfrac{\partial L}{\partial x _{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial x _{1d}}\\ \dfrac{\partial L}{\partial x _{21}}&amp; \dfrac{\partial L}{\partial x _{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial x _{2d}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial x _{n1}}&amp; \dfrac{\partial L}{\partial x _{n2}}&amp; \dots&amp; \dfrac{\partial L}{\partial x _{nd}}\\ \end{pmatrix} \]</div>
+<p>이다. 이때 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{X}\)</span> 의 <span class="arithmatex">\((1,1)\)</span> 원소 <span class="arithmatex">\(x_{11}\)</span> 의 미분은</p>
+<p><span class="arithmatex">\(\mathbf{Y}\)</span> 를 행렬이 아니라 매개변수의 나열로 본다면, <span class="arithmatex">\(\dfrac{\partial L}{\partial x _{11}}\)</span> 에 대한 매개변수를 갖는 합성함수의 편미분으로 나타낼 수 있으므로 스칼라</p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial x _{11}} = \sum_{i=1}^{n}\sum_{j=1}^{m}\dfrac{\partial L}{\partial y _{ij}}\dfrac{\partial y _{ij}}{\partial x _{11}} \]</div>
+<p>이다. 그런데 귀찮은 덧셈 연산을 피하기 위하여 모든 스칼라 <span class="arithmatex">\(\dfrac{\partial L}{\partial y _{ij}}\)</span> 들을 행렬 <span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{Y}}\)</span> 로 쓰고, 모든 스칼라 <span class="arithmatex">\(\dfrac{\partial y _{ij}}{\partial x _{11}}\)</span> 들을 행렬 <span class="arithmatex">\(\dfrac{\partial \mathbf{Y}}{\partial x _{11}}\)</span> 로 쓰면 이것을 Frobenius 내적</p>
+<div class="arithmatex">\[ = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{11}} \bigg  &gt; _{\mathbf{F}}\]</div>
+<p>으로 나타낼 수 있다. 이때 </p>
+<div class="arithmatex">\[ \dfrac{\partial \mathbf{Y}}{\partial x _{11}} = \begin{pmatrix} w _{11}&amp; w _{12}&amp; \dots&amp; w _{1m} \\ 0&amp; 0&amp; \dots&amp; 0\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0&amp; 0&amp; \dots&amp; 0\\ \end{pmatrix} \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \bigg &lt; \dfrac{\partial L}{\partial Y} , \dfrac{\partial Y}{\partial x _{11}} \bigg &gt; _{\mathbf{F}} = \Bigg &lt; \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}&amp; \dfrac{\partial L}{\partial y _{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}&amp; \dfrac{\partial L}{\partial y _{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{2m}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial y _{n1}}&amp; \dfrac{\partial L}{\partial y _{n2}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}, \begin{pmatrix} w _{11}&amp; w _{12}&amp; \dots&amp; w _{1m} \\ 0&amp; 0&amp; \dots&amp; 0\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0&amp; 0&amp; \dots&amp; 0\\ \end{pmatrix}  \Bigg &gt; _{\mathbf{F}} \]</div>
+<div class="arithmatex">\[ = \dfrac{\partial L}{\partial y _{11}} w _{11} + \dfrac{\partial L}{\partial y _{12}} w _{12} + \dots+ \dfrac{\partial L}{\partial y _{1m}} w _{1m} = \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k} \]</div>
+<p>이다. 즉, <span class="arithmatex">\(\displaystyle \dfrac{\partial L}{\partial x _{11}} = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{11}} \bigg  &gt; _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k}\)</span> 이다. 마찬가지로 </p>
+<div class="arithmatex">\[\displaystyle \dfrac{\partial L}{\partial x _{12}} = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{12}} \bigg  &gt; _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{2k}\]</div>
+<div class="arithmatex">\[\displaystyle \dfrac{\partial L}{\partial x _{21}} = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{21}} \bigg  &gt; _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{1k}\]</div>
+<div class="arithmatex">\[ \vdots \]</div>
+<div class="arithmatex">\[\displaystyle \dfrac{\partial L}{\partial x _{ij}} = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial x _{ij}} \bigg  &gt; _{\mathbf{F}}= \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{ik}}w _{jk}\]</div>
+<p>이다. 그렇다면 최종적으로 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{X}\)</span> 의 미분은 <span class="arithmatex">\(n \times d\)</span> 행렬</p>
+<div class="arithmatex">\[ \therefore  \dfrac{\partial L}{\partial \mathbf{X}} = \begin{pmatrix} \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{1k}&amp; \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{2k}&amp; \dots&amp; \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{1k}}w _{dk} \\ \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{1k}&amp; \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{2k}&amp; \dots&amp; \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{2k}}w _{dk} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{1k}&amp; \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{2k}&amp; \dots&amp; \displaystyle \sum_{k=1}^{m}\dfrac{\partial L}{\partial y _{nk}}w _{dk} \\ \end{pmatrix}\]</div>
+<div class="arithmatex">\[ = \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}&amp; \dfrac{\partial L}{\partial y _{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}&amp; \dfrac{\partial L}{\partial y _{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{2m}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial y _{n1}}&amp; \dfrac{\partial L}{\partial y _{n2}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}\begin{pmatrix} w_{11}&amp; w_{21}&amp; \dots &amp; w_{d1} \\ w_{12}&amp; w_{22}&amp; \dots &amp; w_{d2} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ w_{1m}&amp; w_{2m}&amp; \dots &amp; w_{dm} \\ \end{pmatrix} \]</div>
+<div class="arithmatex">\[ = \boxed{\dfrac{\partial L}{\partial \mathbf{Y}}\mathbf{W}^{\intercal } } \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>(2) 증명</p>
+<p>마찬가지로 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{W}\)</span> 의 미분은 행렬 미분의 정의에 의하여 야코비 행렬</p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{W}} = \begin{pmatrix} \dfrac{\partial L}{\partial w_{11}}&amp; \dfrac{\partial L}{\partial w_{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial w_{1m}}\\ \dfrac{\partial L}{\partial w_{21}}&amp; \dfrac{\partial L}{\partial w_{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial w_{2m}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial w_{d1}}&amp; \dfrac{\partial L}{\partial w_{d2}}&amp; \dots&amp; \dfrac{\partial L}{\partial w_{dm}}\\ \end{pmatrix} \]</div>
+<p>인데 이때 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{W}\)</span> 의 <span class="arithmatex">\((1,1)\)</span> 원소 <span class="arithmatex">\(w _{11}\)</span> 의 미분은 </p>
+<p><span class="arithmatex">\(\mathbf{Y}\)</span> 를 행렬이 아니라 매개변수의 나열로 본다면, <span class="arithmatex">\(\dfrac{\partial L}{\partial w _{11}}\)</span> 에 대한 매개변수를 갖는 합성함수의 편미분으로 나타낼 수 있으므로 스칼라</p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial w_{11}} = \sum_{i=1}^{n}\sum_{j=1}^{m}\dfrac{\partial L}{\partial y _{ij}}\dfrac{\partial y _{ij}}{\partial w_{11}} \]</div>
+<p>이다. 이것도 마찬가지로 Frobenius 내적 </p>
+<div class="arithmatex">\[ = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  &gt; _{\mathbf{F}}\]</div>
+<p>으로 나타낼 수 있다. 그러면 마찬가지로</p>
+<div class="arithmatex">\[ \dfrac{\partial \mathbf{Y}}{\partial w _{11}} = \begin{pmatrix} x _{11}&amp; 0&amp; \dots&amp; 0 \\ x _{21}&amp; 0&amp; \dots&amp; 0\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ x _{n1}&amp; 0&amp; \dots&amp; 0\\ \end{pmatrix} \]</div>
+<p>이므로</p>
+<div class="arithmatex">\[ \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  &gt; _{\mathbf{F}} = \Bigg &lt; \begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}&amp; \dfrac{\partial L}{\partial y _{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}&amp; \dfrac{\partial L}{\partial y _{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{2m}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial y _{n1}}&amp; \dfrac{\partial L}{\partial y _{n2}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix}, \begin{pmatrix} x _{11}&amp; 0&amp; \dots&amp; 0 \\ x _{21}&amp; 0&amp; \dots&amp; 0\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ x _{n1}&amp; 0&amp; \dots&amp; 0\\ \end{pmatrix} \Bigg &gt; _{\mathbf{F}} \]</div>
+<div class="arithmatex">\[ = \dfrac{\partial L}{\partial y _{11}}x _{11} + \dfrac{\partial L}{\partial y _{21}}x _{21} + \dots+ \dfrac{\partial L}{\partial y _{n1}}x _{n1}  = \sum_{k=1}^{n} \dfrac{\partial L}{\partial y _{k1}}x _{k1} \]</div>
+<p>이다. 즉, <span class="arithmatex">\(\displaystyle \dfrac{\partial L}{\partial w _{11}} = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{11}} \bigg  &gt; _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k1}}x _{k1}\)</span> 이다. 마찬가지로 </p>
+<div class="arithmatex">\[\displaystyle \dfrac{\partial L}{\partial w _{12}} = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{12}} \bigg  &gt; _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k2}}x_{k1}\]</div>
+<div class="arithmatex">\[\displaystyle \dfrac{\partial L}{\partial w _{21}} = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{21}} \bigg  &gt; _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{k1}}x_{k2}\]</div>
+<div class="arithmatex">\[ \vdots \]</div>
+<div class="arithmatex">\[\displaystyle \dfrac{\partial L}{\partial w _{ij}} = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Y}} , \dfrac{\partial \mathbf{Y}}{\partial w _{ij}} \bigg  &gt; _{\mathbf{F}}= \sum_{k=1}^{n}\dfrac{\partial L}{\partial y _{kj}}x_{ki}\]</div>
+<p>이다. 그렇다면 최종적으로 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{W}\)</span> 의 미분은 <span class="arithmatex">\(d \times m\)</span> 행렬</p>
+<div class="arithmatex">\[ \therefore \dfrac{\partial L}{\partial \mathbf{W}} = \begin{pmatrix} \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{k1}&amp; \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{k1}&amp; \dots&amp; \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{k1} \\ \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{k2}&amp; \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{k2}&amp; \dots&amp; \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{k2} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k1}}x_{kd}&amp; \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{k2}}x_{kd}&amp; \dots&amp; \displaystyle \sum_{k=1}^{n}\dfrac{\partial L}{\partial y_{km}}x_{kd} \\ \end{pmatrix}\]</div>
+<div class="arithmatex">\[ = \begin{pmatrix} x_{11}&amp; x_{21}&amp; \dots &amp; x_{n1} \\ x_{12}&amp; x_{22}&amp; \dots &amp; x_{n2} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ x_{1d}&amp; x_{2d}&amp; \dots &amp; x_{nd} \\ \end{pmatrix}\begin{pmatrix} \dfrac{\partial L}{\partial y _{11}}&amp; \dfrac{\partial L}{\partial y _{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{1m}}\\ \dfrac{\partial L}{\partial y _{21}}&amp; \dfrac{\partial L}{\partial y _{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{2m}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial y _{n1}}&amp; \dfrac{\partial L}{\partial y _{n2}}&amp; \dots&amp; \dfrac{\partial L}{\partial y _{nm}}\\ \end{pmatrix} \]</div>
+<div class="arithmatex">\[ = \boxed{\mathbf{X}^{\intercal }\dfrac{\partial L}{\partial \mathbf{Y}}} \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+</li>
+<li>
+<p>행렬덧셈 미분 정리</p>
+<p><span class="arithmatex">\(n \times m\)</span> 출력 행렬 <span class="arithmatex">\(\mathbf{Y}\)</span>, <span class="arithmatex">\(n \times m\)</span> 편향 행렬 <span class="arithmatex">\(\mathbf{B}\)</span> 에 대한 <span class="arithmatex">\(n \times m\)</span> 순입력 행렬 <span class="arithmatex">\(\mathbf{Z=Y + B}\)</span> 과 손실함수 <span class="arithmatex">\(l\)</span> 에 대한 스칼라 <span class="arithmatex">\(L=l(\mathbf{Y})\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{Y}\)</span> 의 미분 (1) 은 </p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{Y}} = \dfrac{\partial L}{\partial \mathbf{Z}} \]</div>
+<p>이고, <span class="arithmatex">\(\mathbf{W}\)</span> 의 미분 (2) 은</p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{B}} = \dfrac{\partial L}{\partial \mathbf{Z}} \]</div>
+<p>이다.</p>
+<ul>
+<li>
+<p>(1) 증명</p>
+<p><span class="arithmatex">\(n \times m\)</span> 출력 행렬 <span class="arithmatex">\(\mathbf{Y}\)</span>, <span class="arithmatex">\(n \times m\)</span> 편향 행렬 <span class="arithmatex">\(\mathbf{B}\)</span> 에 대한 행렬 <span class="arithmatex">\(\mathbf{Z = Y + B}\)</span> 는 <span class="arithmatex">\(n \times m\)</span> 행렬</p>
+<div class="arithmatex">\[ \mathbf{Z} = \mathbf{Y + B} = \begin{pmatrix} y_{11}&amp;y_{12}&amp;\dots&amp;y_{1m}\\ y_{21}&amp;y_{22}&amp;\dots&amp;y_{2m}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ y_{n1}&amp;y_{n2}&amp;\dots&amp;y_{nm}\\ \end{pmatrix} + \begin{pmatrix} b_{11} &amp; b_{12} &amp;\dots &amp; b_{1m} \\ b_{21} &amp; b_{22} &amp;\dots &amp; b_{2m} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ b_{n1} &amp; b_{n2} &amp;\dots &amp; b_{nm} \\ \end{pmatrix} \]</div>
+<div class="arithmatex">\[ = \begin{pmatrix} \displaystyle y_{11}+b_{11} &amp; \displaystyle y_{12}+b_{12} &amp; \dots &amp; \displaystyle y_{1m}+b_{1m} \\ \displaystyle y_{21}+b_{21} &amp; \displaystyle y_{22}+b_{22} &amp; \dots &amp; \displaystyle y_{2m}+b_{2m} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \displaystyle y_{n1}+b_{n1} &amp; \displaystyle y_{n2}+b_{n2} &amp; \dots &amp; \displaystyle y_{nm}+b_{nm} \\ \end{pmatrix} \]</div>
+<p>이다. 이 <span class="arithmatex">\(\mathbf{Z}\)</span> 이 손실함수 <span class="arithmatex">\(l\)</span> 로 전달되어 최종적으로 스칼라 <span class="arithmatex">\(L\)</span> 이 되었다고 하면 </p>
+<div class="arithmatex">\[ L = l(\mathbf{Z}) = l(\mathbf{Y + B}) \]</div>
+<p>이다.</p>
+<p><span class="arithmatex">\(L\)</span> 이 스칼라고 <span class="arithmatex">\(\mathbf{Z}\)</span> 는 <span class="arithmatex">\(n \times m\)</span> 행렬이므로 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{Z}\)</span> 의 미분은 <span class="arithmatex">\(n \times m\)</span> 행렬 </p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{Z}} = \begin{pmatrix} \dfrac{\partial L}{\partial z_{11}}&amp; \dfrac{\partial L}{\partial z_{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial z_{1m}}\\ \dfrac{\partial L}{\partial z_{21}}&amp; \dfrac{\partial L}{\partial z_{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial z_{2m}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial z_{n1}}&amp; \dfrac{\partial L}{\partial z_{n2}}&amp; \dots&amp; \dfrac{\partial L}{\partial z_{nm}}\\ \end{pmatrix} \]</div>
+<p>이다. <span class="arithmatex">\(\mathbf{Z}\)</span> 는 <span class="arithmatex">\(\mathbf{Y, B}\)</span> 에 대한 함수이므로 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{Y, B}\)</span> 의 미분은 이독립변수와 일매개변수의 합성함수의 미분</p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{Y}} = \dfrac{\partial L}{\partial \mathbf{Z}}\dfrac{\partial \mathbf{Z}}{\partial \mathbf{Y}}, \dfrac{\partial L}{\partial \mathbf{B}} = \dfrac{\partial L}{\partial \mathbf{Z}}\dfrac{\partial \mathbf{Z}}{\partial \mathbf{B}} \]</div>
+<p>이다. 이때 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{Y}\)</span> 의 미분은 행렬 미분의 정의에 의하여 야코비 행렬</p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial \mathbf{Y}} = \begin{pmatrix} \dfrac{\partial L}{\partial y_{11}}&amp; \dfrac{\partial L}{\partial y_{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial y_{1m}}\\ \dfrac{\partial L}{\partial y_{21}}&amp; \dfrac{\partial L}{\partial y_{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial y_{2m}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial y_{n1}}&amp; \dfrac{\partial L}{\partial y_{n2}}&amp; \dots&amp; \dfrac{\partial L}{\partial y_{nm}}\\ \end{pmatrix} \]</div>
+<p>이다. 이때 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{Y}\)</span> 의 <span class="arithmatex">\((1,1)\)</span> 원소 <span class="arithmatex">\(y_{11}\)</span> 의 미분은</p>
+<p><span class="arithmatex">\(\mathbf{Z}\)</span> 를 행렬이 아니라 매개변수의 나열로 본다면, <span class="arithmatex">\(\dfrac{\partial L}{\partial y_{11}}\)</span> 에 대한 매개변수를 갖는 합성함수의 편미분으로 나타낼 수 있으므로 스칼라</p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial y_{11}} = \sum_{i=1}^{n}\sum_{j=1}^{m}\dfrac{\partial L}{\partial z _{ij}}\dfrac{\partial z _{ij}}{\partial y_{11}} \]</div>
+<p>이다. 그런데 귀찮은 덧셈 연산을 피하기 위하여 모든 스칼라 <span class="arithmatex">\(\dfrac{\partial L}{\partial z _{ij}}\)</span> 들을 행렬 <span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{Z}}\)</span> 로 쓰고, 모든 스칼라 <span class="arithmatex">\(\dfrac{\partial z _{ij}}{\partial y_{11}}\)</span> 들을 행렬 <span class="arithmatex">\(\dfrac{\partial \mathbf{Z}}{\partial y_{11}}\)</span> 로 쓰면 이것을 Frobenius 내적</p>
+<div class="arithmatex">\[ = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Z}} , \dfrac{\partial \mathbf{Z}}{\partial y_{11}} \bigg  &gt; _{\mathbf{F}}\]</div>
+<p>으로 나타낼 수 있다. 이때 </p>
+<div class="arithmatex">\[ \dfrac{\partial \mathbf{Z}}{\partial y_{11}} = \begin{pmatrix} 1 &amp; 0&amp; \dots&amp; 0 \\ 0&amp; 0&amp; \dots&amp; 0\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0&amp; 0&amp; \dots&amp; 0\\ \end{pmatrix} \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Z}} , \dfrac{\partial \mathbf{Z}}{\partial y _{11}} \bigg  &gt; _{\mathbf{F}} = \Bigg &lt; \begin{pmatrix} \dfrac{\partial L}{\partial z_{11}}&amp; \dfrac{\partial L}{\partial z_{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial z_{1m}}\\ \dfrac{\partial L}{\partial z_{21}}&amp; \dfrac{\partial L}{\partial z_{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial z_{2m}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial z_{n1}}&amp; \dfrac{\partial L}{\partial z_{n2}}&amp; \dots&amp; \dfrac{\partial L}{\partial z_{nm}}\\ \end{pmatrix}, \begin{pmatrix} 1&amp; 0&amp; \dots&amp; 0 \\ 0&amp; 0&amp; \dots&amp; 0\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ 0&amp; 0&amp; \dots&amp; 0\\ \end{pmatrix} \Bigg &gt; _{\mathbf{F}} \]</div>
+<div class="arithmatex">\[ = \dfrac{\partial L}{\partial z_{11}} \]</div>
+<p>이다. 즉, <span class="arithmatex">\(\displaystyle \dfrac{\partial L}{\partial y _{11}} = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Z}} , \dfrac{\partial \mathbf{Z}}{\partial y _{11}} \bigg  &gt; _{\mathbf{F}}= \dfrac{\partial L}{\partial z _{11}}\)</span> 이다. 마찬가지로 </p>
+<div class="arithmatex">\[\displaystyle \dfrac{\partial L}{\partial y _{ij}} = \bigg &lt; \dfrac{\partial L}{\partial \mathbf{Z}} , \dfrac{\partial \mathbf{Z}}{\partial y _{ij}} \bigg  &gt; _{\mathbf{F}}= \dfrac{\partial L}{\partial z _{ij}}\]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(L\)</span> 에 대한 <span class="arithmatex">\(\mathbf{Y}\)</span> 의 미분은 <span class="arithmatex">\(n \times m\)</span> 행렬 </p>
+<div class="arithmatex">\[ \therefore \dfrac{\partial L}{\partial \mathbf{Y}} = \begin{pmatrix} \dfrac{\partial L}{\partial z _{11}}&amp; \dfrac{\partial L}{\partial z _{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial z _{1m}}\\ \dfrac{\partial L}{\partial z _{21}}&amp; \dfrac{\partial L}{\partial z _{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial z _{2m}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial z _{n1}}&amp; \dfrac{\partial L}{\partial z _{n2}}&amp; \dots&amp; \dfrac{\partial L}{\partial z _{nm}}\\ \end{pmatrix} = \dfrac{\partial L}{\partial \mathbf{Z}} \]</div>
+<p>이다. ■</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#f1e5562e7"><div class="admonition tldr" id="f1e5562e7">
+<p>CrossEntropyError 레이어 역전파 : 신경망의 출력벡터 <span class="arithmatex">\(\mathbf{y} \in \mathbb{R} ^{k}\)</span>, 원-핫 인코딩된 정답 레이블 <span class="arithmatex">\(\mathbf{t} \in \mathbb{R} ^{k}\)</span> 에 대한 손실함수</p>
+<div class="arithmatex">\[ E(\mathbf{t}, \mathbf{y}) = - \sum_{i}^{} t _{i}\ln_{} y _{i} \]</div>
+<p>CrossEntropyError 함수의 역전파는 상위 노드에서 역전파된 미분에 </p>
+<div class="arithmatex">\[ - \dfrac{t_i}{y_i} \]</div>
+<p>를 곱하여 하위 노드로 역전파한다.</p>
+</div></a>
+<ul>
+<li>
+<p>신경망의 출력벡터 <span class="arithmatex">\(\mathbf{y}\)</span> 는 CrossEntropyError 레이어의 입력 벡터임을 주의하자.</p>
+</li>
+<li>
+<p>CrossEntropyError 함수는 출력벡터 <span class="arithmatex">\(\mathbf{y} \in \mathbb{R} ^{k}\)</span>, 정답벡터 <span class="arithmatex">\(\mathbf{t} \in \mathbb{R} ^{k}\)</span>, <span class="arithmatex">\(i\)</span> 번째 뉴런 에 대하여 </p>
+<div class="arithmatex">\[ E(\mathbf{t, y}) = - \sum_{i}^{}t_i \ln y_i \]</div>
+<p>이다. 이것의 미분은 </p>
+<div class="arithmatex">\[ \dfrac{\partial E(\mathbf{t},\mathbf{o})}{\partial y_i} = \boxed{- \dfrac{t_i}{y_i}} \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>그러므로 만약 정답 레이블이 아니라면 <span class="arithmatex">\(t_i = 0\)</span> 이므로 상위 노드에서 역전파된 미분에 <span class="arithmatex">\(0\)</span> 을 곱하여 하위 노드로 전달한다. 이는 가중치 조정이 <span class="arithmatex">\(0\)</span> 이 된다는 것이다.</p>
+</li>
+<li>
+<p>이것은 곱셈 노드, 덧셈 노드, 로그 노드의 국소적 역전파로 구성될 수 있다.</p>
+</li>
+</ul>
+<a href="#5e14295f8"><div class="admonition tldr" id="5e14295f8">
+<p>Softmax 레이어 역전파 : <span class="arithmatex">\(n \in \mathbb{N}\)</span> 개의 입력 <span class="arithmatex">\(a_1, \dots, a_n\)</span> 에 대한 <span class="arithmatex">\(k\)</span> 번째 입력 <span class="arithmatex">\(a_k\)</span> 에 대하여 <span class="arithmatex">\(k\)</span> 번째 출력 <span class="arithmatex">\(y_k\)</span> </p>
+<div class="arithmatex">\[ y_k = \dfrac{\exp (a_k)}{\displaystyle \sum_{i=1}^{n}\exp (a_i)} \]</div>
+<p>을 갖는 Softmax 함수의 역전파는 상위 노드에서 역전파된 미분에</p>
+<div class="arithmatex">\[ y_k(1 - y_k) \]</div>
+<p>를 곱하여 하위 노드로 전달한다.</p>
+<blockquote>
+<p><span class="arithmatex">\(-y_ky_j\)</span> 라는 미분 결과에 대해서도 처리할 수 있어야 하는데, 여러개의 역전파 값에 대하여 일반적인 역전파 정의를 다시 해야 할 듯.</p>
+</blockquote>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>Softmax 함수는 <span class="arithmatex">\(n \in \mathbb{N}\)</span> 개의 입력 <span class="arithmatex">\(a_1, \dots, a_n\)</span> 에 대한 <span class="arithmatex">\(k\)</span> 번째 입력 <span class="arithmatex">\(a_k\)</span> 에 대하여 <span class="arithmatex">\(k\)</span> 번째 출력 <span class="arithmatex">\(y_k\)</span> </p>
+<div class="arithmatex">\[ y_k = \dfrac{\text{exp}( a_k)}{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)} \]</div>
+<p>을 갖는다. 이것의 미분은 </p>
+<div class="arithmatex">\[ \dfrac{\partial y_k}{\partial a_j} = \dfrac{\partial }{\partial a_j}\bigg (\dfrac{\text{exp}( a_k)}{\sum_{i=1}^{n}\text{exp}(a_i)} \bigg ) \]</div>
+<p>이다. <span class="arithmatex">\(k = j\)</span> 일 경우 <span class="arithmatex">\(\dfrac{\partial \text{exp}( a_k)}{\partial a_j} = \text{exp}( a_k)\)</span> 이므로 분수함수의 미분에 의하여 </p>
+<div class="arithmatex">\[ = \dfrac{\text{exp}( a_k)\sum_{i=1}^{n}\text{exp}(a_i) - \text{exp}( a_j)\text{exp}( a_k)}{\bigg (\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)\bigg ) ^{2}} = \dfrac{\text{exp}( a_k)(\sum_{i=1}^{n}\text{exp}(a_i) - \text{exp}( a_j))}{\bigg (\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)\bigg ) ^{2}} \]</div>
+<div class="arithmatex">\[ = \dfrac{\text{exp}( a_k)}{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)}\times \dfrac{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i) - \text{exp}( a_j)}{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)} = y_k(1 - y_j)= \boxed{y_k(1 - y_k)}  \]</div>
+<p>이다. ▲ </p>
+<p><span class="arithmatex">\(k \neq j\)</span> 일 경우 <span class="arithmatex">\(\dfrac{\partial \text{exp}( a_k)}{\partial a_j} = 0\)</span> 이므로 </p>
+<div class="arithmatex">\[ \dfrac{\partial y_k}{\partial a_j} = \dfrac{0 - \text{exp}( a_j)\text{exp}( a_k)}{\bigg (\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)\bigg ) ^{2}} = -\dfrac{\text{exp}( a_k)}{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)}\dfrac{\text{exp}( a_j)}{\displaystyle \sum_{i=1}^{n}\text{exp}(a_i)} = \boxed{-y_ky_j}  \]</div>
+<p>이다. ▲ </p>
+<p>그러므로 Softmax 함수의 미분은 </p>
+<div class="arithmatex">\[ \therefore \dfrac{\partial y_k}{\partial a_j} = \begin{cases} y_k(1 - y_k) &amp;(j=k)\\ -y_ky_j &amp;(j \neq k)\\ \end{cases} \]</div>
+<p>이다. ■ </p>
+<p>또는 크로네커 델타 <span class="arithmatex">\(\delta _{ij} = \begin{cases} 1 &amp;(i=j)\\ 0 &amp;(i\neq j)\\ \end{cases}\)</span>  를 사용하여 </p>
+<div class="arithmatex">\[ \therefore \dfrac{\partial y_k}{\partial a_j} = y_k(\delta _{kj} - y_j) \]</div>
+<p>로 정의할 수도 있다.</p>
+</li>
+</ul>
+<a href="#06650dffc"><div class="admonition tldr" id="06650dffc">
+<p>Softmax-with-CrossEntropyError-Loss 레이어 역전파 : Softmax 함수로 입력을 정규화하고 CrossEntropyError 로 손실값까지 구해주는 레이어의 역전파는 상위노드에서 전달된 미분에 </p>
+<div class="arithmatex">\[ y_k - t_k \]</div>
+<p>를 곱하여 하위노드로 전달한다.</p>
+</div></a>
+<ul>
+<li>
+<p>출력층에서 사용하는 Softmax 레이어는 출력을 정규화해준다.</p>
+<p>신경망이 하는 일이란 학습과 추론인데, 추론할 때는 출력이 정규화되지 않아도 된다. 왜냐하면 그냥 가장 높은 값만 알면 되기 때문이다. </p>
+<p>반면 학습할 때에는 Softmax 레이어로 출력을 정규화해주어야 한다.</p>
+<ul>
+<li>왜??</li>
+</ul>
+</li>
+<li>
+<p>증명 </p>
+<p>Softmax 함수는 <span class="arithmatex">\(n \in \mathbb{N}\)</span> 개의 입력 <span class="arithmatex">\(a_1, \dots, a_n\)</span> 에 대한 <span class="arithmatex">\(k\)</span> 번째 입력 <span class="arithmatex">\(a_k\)</span> 에 대하여 <span class="arithmatex">\(k\)</span> 번째 출력 <span class="arithmatex">\(y_k\)</span> </p>
+<div class="arithmatex">\[ y_k = \dfrac{\exp (a_k)}{\displaystyle \sum_{i=1}^{n} \exp (a_i)} \]</div>
+<p>을 갖는다. 이 <span class="arithmatex">\(y_k\)</span> 는 정답 벡터 <span class="arithmatex">\(\mathbf{t} \in \mathbb{R} ^{n}\)</span> 에 대하여 CrossEntropyError 함수 </p>
+<div class="arithmatex">\[ L = E(\mathbf{t, y}) := - \sum_{i=1}^{n}t_i \ln y_i \]</div>
+<p>로 전달되고 최종적으로 손실값 <span class="arithmatex">\(L\)</span> 이 계산된다. 이 <span class="arithmatex">\(L\)</span> 에 대한 입력 벡터 <span class="arithmatex">\(\mathbf{a} \in \mathbb{R} ^{n}\)</span> 의 <span class="arithmatex">\(k\)</span> 번째 입력 <span class="arithmatex">\(a_k\)</span> 의 미분은</p>
+<div class="arithmatex">\[ \dfrac{\partial L}{\partial a_k} = - \sum_{i=1}^{n}t_i \dfrac{\partial \ln y_i}{\partial a_k}= - \sum_{i=1}^{n}t_i \dfrac{\partial \ln y_i}{\partial y_i}\dfrac{\partial y_i}{\partial a_k} = - \sum_{i=1}^{n}t_i \dfrac{1}{y_i}\dfrac{\partial y_i}{\partial a_k} \]</div>
+<div class="arithmatex">\[ = -t_k(1-y_k)- \sum_{i \in \{1,\dots,(k-1),(k+1),\dots,n\}}^{}\dfrac{t_i}{y_i}(-y_iy_k) \]</div>
+<div class="arithmatex">\[ = -t_k+t_ky_k+ \sum_{i \in \{1,\dots,(k-1),(k+1),\dots,n\}}^{}t_iy_k \]</div>
+<div class="arithmatex">\[ = -t_k+y_k \bigg (t_k+ \sum_{i \in \{1,\dots,(k-1),(k+1),\dots,n\}}^{}t_i \bigg ) = -t_k+y_k \sum_{i =  1}^{n}t_i \]</div>
+<p>인데, 정답 벡터 <span class="arithmatex">\(\mathbf{t} \in \mathbb{R} ^{n}\)</span> 은 원-핫 인코딩되어 있으므로 <span class="arithmatex">\(\sum_{k=1}^{n}t_k = 1\)</span> 이다. 따라서</p>
+<div class="arithmatex">\[ = -t_k+y_k  = \boxed{y_k - t_k} \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>코드 구현 </p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">SoftmaxCrossEntropyError</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">loss</span> <span class="o">=</span> <span class="kc">None</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="kc">None</span>     <span class="c1"># softmax 출력</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="kc">None</span>     <span class="c1"># 정답 레이블(원-핫 벡터)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">t</span> <span class="o">=</span> <span class="n">t</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">softmax</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">slef</span><span class="o">.</span><span class="n">loss</span> <span class="o">=</span> <span class="n">cross_entropy_error</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">loss</span>
+
+    <span class="k">def</span> <span class="nf">backward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dout</span> <span class="o">=</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">batch_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">size</span><span class="p">:</span> <span class="c1"># 정답 레이블이 원-핫 벡터일 때</span>
+            <span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">)</span> <span class="o">/</span> <span class="n">batch_size</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">dx</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">batch_size</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">t</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span> <span class="c1"># 이해 안됨</span>
+            <span class="n">dx</span> <span class="o">=</span> <span class="n">dx</span> <span class="o">/</span> <span class="n">batch_size</span>
+        <span class="k">return</span> <span class="n">dx</span>
+</code></pre></div>
+</li>
+</ul>
+<hr/>
+<h2 id="affine-layer">affine layer 메모<a class="headerlink" href="#affine-layer" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{Y}}\)</span> 를 전달하는 이유는 최종적으로 <span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{X}}, \dfrac{\partial L}{\partial \mathbf{W}}\)</span>  를 계산하기 위함이다.</p>
+</li>
+<li>
+<p>마찬가지로 <span class="arithmatex">\(L\)</span> 이 스칼라므로 <span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{X}}\)</span> 의 형상은 <span class="arithmatex">\(\mathbf{X}\)</span> 와 동일하게 <span class="arithmatex">\(n \times d\)</span> 이고, <span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{W}}\)</span> 의 형상은 <span class="arithmatex">\(\mathbf{W}\)</span> 와 동일하게 <span class="arithmatex">\(d \times m\)</span> 이다.</p>
+</li>
+<li>
+<p>이미 잘 알고 있듯 <span class="arithmatex">\(\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}}, \dfrac{\partial \mathbf{Y}}{\partial \mathbf{W}}\)</span> 는 야코비안 행렬이다. 그런데 이것을 명시적으로 나타내기란 매우 어렵다. 통상적인 신경망에서 <span class="arithmatex">\(n=64,m=d=4096\)</span> 으로 둔다면 <span class="arithmatex">\(\mathbf{X}\)</span> 는 <span class="arithmatex">\(n \times d =64 \times 4096\)</span> 행렬이 되고, <span class="arithmatex">\(\mathbf{Y}\)</span> 는 <span class="arithmatex">\(n \times m = 64 \times 4096\)</span> 행렬이 되므로 <span class="arithmatex">\(\dfrac{\partial \mathbf{Y}}{\partial  \mathbf{X}}\)</span> 은 <span class="arithmatex">\(64 \cdot 4096 \cdot 64 \cdot 4096\)</span> 의 스칼라 값을 갖기 때문이다.</p>
+</li>
+<li>
+<p>만약 벡터 <span class="arithmatex">\(\mathbf{v} \in \mathbb{R} ^{n}, \mathbf{w} \in \mathbb{R} ^{m}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{v}\)</span> 가 <span class="arithmatex">\(\mathbf{w}\)</span> 에 종속되어 있다면 <span class="arithmatex">\(\mathbf{v}\)</span> 에 대한 <span class="arithmatex">\(\mathbf{w}\)</span> 의 미분은 <span class="arithmatex">\(m \times n\)</span> 야코비안 행렬이 된다.</p>
+<p>마찬가지로 스칼라(<span class="arithmatex">\(1 \times 1\)</span> 행렬) <span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(n \times m\)</span> 행렬 <span class="arithmatex">\(\mathbf{A}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{A}\)</span> 가 스칼라 <span class="arithmatex">\(a\)</span> 의 독립변수라면 <span class="arithmatex">\(a\)</span> 에 대한 <span class="arithmatex">\(\mathbf{A}\)</span> 의 미분은 <span class="arithmatex">\(n \times m\)</span> 야코비안 행렬이 된다.</p>
+<p>마찬가지로 <span class="arithmatex">\(n \times m\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(s \times t\)</span> 행렬 <span class="arithmatex">\(B\)</span> 가 서로 종속일 때 <span class="arithmatex">\(A\)</span> 에 대한 <span class="arithmatex">\(B\)</span> 의 미분으로 얻어진 야코비안 행렬의 원소 개수는 <span class="arithmatex">\(n \times m \times s \times t\)</span> 이다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p>행렬 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\((i, j)\)</span> 원소 <span class="arithmatex">\(a _{ij}\)</span> 를 행렬 <span class="arithmatex">\(B\)</span> 에 대하여 미분하면 야코비안 행렬</p>
+<div class="arithmatex">\[ \dfrac{\partial a _{ij}}{\partial B} = \begin{pmatrix} \dfrac{\partial a _{ij}}{\partial b _{11}} &amp; \dfrac{\partial a _{ij}}{\partial b _{12}} &amp; \dots&amp; \dfrac{\partial a _{ij}}{\partial b _{1t}}  \\ \dfrac{\partial a _{ij}}{\partial b _{21}} &amp; \dfrac{\partial a _{ij}}{\partial b _{22}} &amp; \dots&amp; \dfrac{\partial a _{ij}}{\partial b _{2t}}  \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial a _{ij}}{\partial b _{s1}} &amp; \dfrac{\partial a _{ij}}{\partial b _{s2}} &amp; \dots&amp; \dfrac{\partial a _{ij}}{\partial b _{st}}  \\ \end{pmatrix} \]</div>
+<p>을 얻는다. 그러므로 행렬 <span class="arithmatex">\(A\)</span> 의 모든 원소에 대하여 <span class="arithmatex">\(B\)</span> 를 미분하면 야코비안 행렬을 부분행렬로 갖는 행렬 </p>
+<div class="arithmatex">\[ \dfrac{\partial A}{\partial B} = \begin{pmatrix} \dfrac{\partial a _{11}}{\partial B}&amp; \dfrac{\partial a _{12}}{\partial B}&amp; \dots&amp; \dfrac{\partial a _{1m}}{\partial B} \\ \dfrac{\partial a _{21}}{\partial B}&amp; \dfrac{\partial a _{22}}{\partial B}&amp; \dots&amp; \dfrac{\partial a _{2m}}{\partial B} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial a _{n1}}{\partial B}&amp; \dfrac{\partial a _{n2}}{\partial B}&amp; \dots&amp; \dfrac{\partial a _{nm}}{\partial B} \\ \end{pmatrix} \]</div>
+<p>이다. <span class="arithmatex">\(s \times t\)</span> 행렬이 <span class="arithmatex">\(n \times m\)</span> 행렬의 원소로 있으므로 모든 원소의 개수는 <span class="arithmatex">\((s \times t) n \times m\)</span> 이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>하지만 다행히도 야코비안 행렬 <span class="arithmatex">\(\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}}\)</span> 를 명시적으로 표현하지 않고, 심지어 계산하지도 않고 식 <span class="arithmatex">\(\dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}}\)</span> 을 다룰 수 있다. </p>
+</li>
+</ul>
+<hr/>
+<p>에 대한 <span class="arithmatex">\(1 \times m\)</span> 행렬 <span class="arithmatex">\(\mathbf{Y} = \mathbf{XW+B}\)</span> </p>
+<p>$$ \mathbf{Y} = \mathbf{XW}+\mathbf{B} = \begin{pmatrix} \displaystyle \sum_{k=1}^{n}x_kw <em k="1">{k1} + b_1 &amp; \displaystyle \sum</em>^{n}x_kw <em k="1">{k2} + b_2 &amp; \dots &amp; \displaystyle \sum</em>^{n}x_kw _{km} + b_m \ \end{pmatrix} $$</p>
+<p>이 존재한다. 스칼라 <span class="arithmatex">\(L = Y \Psi\)</span> 가 존재한다. ▲ </p>
+<p>그러므로 <span class="arithmatex">\(\mathbf{Y}\)</span> 의 <span class="arithmatex">\(i\)</span>번째 원소 <span class="arithmatex">\(y_i = \displaystyle \sum_{k=1}^{n}x_kw _{ki}+b_i\)</span> 에 대한 <span class="arithmatex">\(x_j\)</span> 의 미분은</p>
+<p>$$ \dfrac{\partial  y_i}{\partial x_j} = w _{ji} $$</p>
+<p>이다. 그렇다면 <span class="arithmatex">\(\mathbf{Y}\)</span> 에 대한 <span class="arithmatex">\(\mathbf{X}\)</span> 의 미분은 야코비행렬 </p>
+<p>$$ \dfrac{\partial \mathbf{Y}}{\partial \mathbf{X}} = \begin{pmatrix} \dfrac{\partial y_1}{\partial x_1} &amp; \dfrac{\partial y_1}{\partial x_2} &amp; \dots&amp; \dfrac{\partial y_1}{\partial x_n} \ \dfrac{\partial y_2}{\partial x_1} &amp; \dfrac{\partial y_2}{\partial x_2} &amp; \dots&amp; \dfrac{\partial y_2}{\partial x_n} \ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \ \dfrac{\partial y_m}{\partial x_1} &amp; \dfrac{\partial y_m}{\partial x_2} &amp; \dots&amp; \dfrac{\partial y_m}{\partial x_n} \ \end{pmatrix} = \begin{pmatrix} w _{11} &amp; w _{21}&amp; \dots &amp; w _{n1} \ w _{12} &amp; w _{22}&amp; \dots &amp; w _{n2} \ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \ w _{1m} &amp; w _{2m}&amp; \dots &amp; w _{nm} \ \end{pmatrix} = \mathbf{W} ^{\intercal } $$</p>
+<p>이다. ▲ </p>
+<ul>
+<li>신경망 순전파 때 사용되는 행렬곱을 기하학에서 어파인 변환(affine transformation) 이라고 한다.</li>
+</ul>
+<hr/>
+<p>정리 6 (매개변수를 갖는 행렬방정식의 미분) "벡터 <span class="arithmatex">\(\mathbf{y} \in \mathbb{R} ^{m}\)</span>(<span class="arithmatex">\(m \times 1\)</span> 행렬), <span class="arithmatex">\(\mathbf{x} \in \mathbb{R} ^{n}\)</span>(<span class="arithmatex">\(n \times 1\)</span> 행렬) 와 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(\mathbf{A}\)</span> 이 존재할때 <span class="arithmatex">\(\mathbf{x}\)</span> 가 벡터 <span class="arithmatex">\(\mathbf{z}\)</span> 에 대한 함수라면 행렬방정식 <span class="arithmatex">\(\mathbf{y} = \mathbf{Ax}\)</span> 의 미분은 <span class="arithmatex">\(\dfrac{\partial \mathbf{y}}{\partial \mathbf{z}} = \dfrac{\partial \mathbf{y}}{\partial \mathbf{x}}\dfrac{\partial \mathbf{x}}{\partial \mathbf{z}} = \mathbf{A}\dfrac{\partial \mathbf{x}}{\partial \mathbf{z}}\)</span>  이다." 에 의하여</p>
+<p><span class="arithmatex">\(1 \times 1\)</span> 행렬 <span class="arithmatex">\(L\)</span> </p>
+<p>$$ \dfrac{\partial L}{\partial \mathbf{X}} = 
+  $$</p>
+<p>먼저 </p>
+<p>먼저 <span class="arithmatex">\(L\)</span> 을 <span class="arithmatex">\(\mathbf{X}\)</span> 의 <span class="arithmatex">\((i, j)\)</span> 원소로 미분하면 <span class="arithmatex">\(L = l(\mathbf{Y}) = l(\mathbf{XW})\)</span> 이므로 매개변수 <span class="arithmatex">\(\mathbf{Y}\)</span> 에 대한 합성함수 미분, 즉 </p>
+<p>$$ \dfrac{\partial L}{\partial x _{ij}} = 
+  $$</p>
+<p><span class="arithmatex">\(\dfrac{\partial L}{\partial \mathbf{X}} = \begin{pmatrix} \dfrac{\partial L}{\partial x _{11}}&amp; \dfrac{\partial L}{\partial x _{12}}&amp; \dots&amp; \dfrac{\partial L}{\partial x _{1d}} \\ \dfrac{\partial L}{\partial x _{21}}&amp; \dfrac{\partial L}{\partial x _{22}}&amp; \dots&amp; \dfrac{\partial L}{\partial x _{2d}}\\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \dfrac{\partial L}{\partial x _{n1}}&amp; \dfrac{\partial L}{\partial x _{n2}}&amp; \dots&amp; \dfrac{\partial L}{\partial x _{nd}}\\ \end{pmatrix}\)</span> 이다.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

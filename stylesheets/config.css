@@ -1,0 +1,58 @@
+div.arithmatex {
+  overflow: visible !important;
+}
+
+.md-typeset div.arithmatex > * {
+  padding: 0 !important;
+}
+
+.hangul_fallback {
+  font-family: "Nanum Gothic",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif !important;
+  font-size: 0.68rem !important;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.katex-display {
+  overflow: visible !important;
+  width: auto !important;
+}
+
+.md-typeset {
+  font-size: .68rem !important;
+}
+
+div.admonition.tldr {
+  /* background-color: azure !important; */
+  font-weight: 900 !important;
+  font-size: .78rem !important;
+  /* font-size: .64rem; */
+  border-bottom: .05rem solid #448aff !important;
+  box-shadow: 0 1.5rem 1.9rem rgba(0,0,0,.05),0 0 1.1rem rgba(0,0,0,.1) !important;
+}
+
+.md-typeset table:not([class]) th {
+  min-width: auto !important;
+  color: black !important;
+  background-color: whitesmoke !important;
+}
+
+.md-header-nav__title {
+  line-height: 2.0rem !important;
+}
+
+.md-header {
+  height: 2.0rem !important;
+}
+
+.md-header-nav__button {
+  margin: .1rem !important;
+}
+
+.md-header-nav__title {
+  font-size: .7rem !important;
+}

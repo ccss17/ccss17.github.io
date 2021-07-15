@@ -1,0 +1,2963 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Foundations/numbers/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>Number Theory - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Number Theory
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Number Theory
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Number Theory
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    자연수의 정의
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    정수의 정의
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    유리수의 정의
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    데데킨트 절단을 기반으로 정의하는 실수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    코시 수열을 기반으로 정의하는 실수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    완비순서체
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    자연수의 정의
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    정수의 정의
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    유리수의 정의
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    데데킨트 절단을 기반으로 정의하는 실수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    코시 수열을 기반으로 정의하는 실수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    완비순서체
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Number Theory</h1>
+<div class="admonition info">
+<p class="admonition-title">ref</p>
+<p><a href="http://www.math.snu.ac.kr/~kye/book/set-number.html">집합과 수의 체계</a></p>
+</div>
+<h2 id="_1">자연수의 정의<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#d2d49cc9b"><div class="admonition tldr" id="d2d49cc9b">
+<p>집합 <span class="arithmatex">\(A ^{+}\)</span> : 집합 <span class="arithmatex">\(A\)</span> 에 대한 집합 <span class="arithmatex">\(A ^{+}\)</span> 을 </p>
+<div class="arithmatex">\[ A ^{+} = A \cup \{A\} \]</div>
+<p>으로 정의한다. </p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(0 = \varnothing\)</span> 으로 두고,</p>
+<div class="arithmatex">\[ 1 = 0 ^{+}, 2 = 1 ^{+}, 3 = 2 ^{+}, \dots \]</div>
+<p>으로 정의하면 </p>
+<div class="arithmatex">\[ 0 = \varnothing \]</div>
+<div class="arithmatex">\[ 1 = 0 ^{+} = 0 \cup \{0\} = \varnothing \cup \{0\} = \{0\} \]</div>
+<div class="arithmatex">\[ 2 = 1 ^{+} = 1 \cup \{1\} = \{0\} \cup \{1\} = \{0, 1\} \]</div>
+<div class="arithmatex">\[ 3 = 2 ^{+} = 2 \cup \{2\} = \{0, 1\} \cup \{2\} = \{0, 1, 2\} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#75c139b38"><div class="admonition tldr" id="75c139b38">
+<p>자연수 집합(natural number set) : 다음 두 가지 성질 </p>
+<div class="arithmatex">\[ \varnothing \in \mathcal{A}, \quad  A \in \mathcal{A} \implies A ^{+} \in \mathcal{A} \]</div>
+<p>을 가지는 집합 <span class="arithmatex">\(\mathcal{A}\)</span> 에 대하여 집합</p>
+<div class="arithmatex">\[ \N := \bigcap_{}^{}\mathcal{A} \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#917f3699c"><div class="admonition tldr" id="917f3699c">
+<p>자연수(natural number) : 자연수 집합 <span class="arithmatex">\(\N\)</span> 의 원소이다.</p>
+</div></a>
+<a href="#2ad934686"><div class="admonition tldr" id="2ad934686">
+<p class="admonition-title">정리 2.1.1</p>
+<p>페아노 공리계(Peano's axioms) : 집합 <span class="arithmatex">\(\N\)</span> 은 다음 성질을 만족하고, 이 성질을 페아노 공리계라고 한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(0 \in \N\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(n \in \N \implies n ^{+} \in \N\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall n \in \N, n ^{+} \neq 0\)</span></p>
+</li>
+<li>
+<p>집합 <span class="arithmatex">\(X \subset \N\)</span> 이 다음 두 성질 </p>
+<div class="arithmatex">\[ 0 \in X, \qquad  n \in X \implies n ^{+}\in X \]</div>
+<p>을 만족하면 <span class="arithmatex">\(X = \N\)</span> 이다. </p>
+</li>
+<li>
+<p>만일 <span class="arithmatex">\(m, n \in \N\)</span> 에 대하여 <span class="arithmatex">\(m ^{+} = n ^{+}\)</span> 이면 <span class="arithmatex">\(m=n\)</span> 이다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>세번째 성질은 <span class="arithmatex">\(n ^{+} = n \cup \{n\} \neq \varnothing\)</span> 이므로 당연하고, </p>
+<p>네번째 성질은 수학적 귀납법을 통하여 증명된다. </p>
+<p>다섯번째 성질의 증명은 다음과 같다. 먼저 </p>
+<div class="arithmatex">\[ n \in n ^{+} = m ^{+} = m \cup \{m\} \]</div>
+<p>이므로 <span class="arithmatex">\(n \in m \lor n = m\)</span> 이다. 마찬가지로 <span class="arithmatex">\(m \in n \lor n = m\)</span> 이다. 그러므로 <span class="arithmatex">\(n \in m\)</span> 과 <span class="arithmatex">\(m \in n\)</span> 에서 <span class="arithmatex">\(n = m\)</span> 을 이끌어내면 된다. 그렇다면</p>
+<div class="arithmatex">\[ n \in \N, x \in n \implies x \subset n \tag{1}  \]</div>
+<p>을 증명하면 <span class="arithmatex">\(n \subset m \land m \subset n\)</span> 이 성립하여 <span class="arithmatex">\(n = m\)</span> 을 이끌어낼 수 있다. </p>
+<p>일단 </p>
+<div class="arithmatex">\[ X = \{n \in \N : x \in n \implies x \subset n\} \]</div>
+<p>으로 두자. 먼저 <span class="arithmatex">\(0 \in X\)</span> 이다. <span class="arithmatex">\(x \in \varnothing \implies x \subset \varnothing\)</span> 이기 때문이다.</p>
+<p>이제 수학적 귀납법으로 증명을 하기 위하여 <span class="arithmatex">\(n \in X\)</span> 라고 하자. 만약 <span class="arithmatex">\(x \in n ^{+} = n \cup \{n\}\)</span> 이면 <span class="arithmatex">\(x \in n \lor x = n\)</span> 이다. </p>
+<p><span class="arithmatex">\(x = n\)</span> 이면 <span class="arithmatex">\(x = n \subset n ^{+}\)</span> 이고, <span class="arithmatex">\(x \in n\)</span> 이면 집합 <span class="arithmatex">\(X\)</span> 의 조건에 의하여 <span class="arithmatex">\(x \subset n\)</span> 이므로 <span class="arithmatex">\(x \subset n \subset n ^{+}\)</span> 이다. 그러므로</p>
+<div class="arithmatex">\[ \therefore X = \N \]</div>
+<p>이다. 그렇다면 조건 <span class="arithmatex">\((1)\)</span> 를 모든 자연수가 만족한다는 것이다. 그러므로 증명이 끝났다. </p>
+</li>
+</ul>
+<a href="#cb57dc660"><div class="admonition tldr" id="cb57dc660">
+<div class="arithmatex">\[ n \in \N, x \in n \implies x \subset n \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>(위에서 증명되었다.)</p>
+</li>
+</ul>
+<a href="#e4dca26d8"><div class="admonition tldr" id="e4dca26d8">
+<p class="admonition-title">정리 2.1.2</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 의 한 원소 <span class="arithmatex">\(a \in X\)</span> 와 함수 <span class="arithmatex">\(f: X \to X\)</span> 에 대하여 다음 성질 </p>
+<div class="arithmatex">\[ \gamma (0) = a \tag{1} \]</div>
+<div class="arithmatex">\[ \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n)) \tag{2}\]</div>
+<p>을 만족하는 함수 <span class="arithmatex">\(\gamma : \N \to X\)</span> 가 유일하게 존재한다. </p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 집합 <span class="arithmatex">\(X\)</span> 의 원소 <span class="arithmatex">\(\gamma (0), \gamma (1), \gamma (2), \dots\)</span> 가 특정 점화식을 만족하도록 귀납적으로 정의할 수 있음을 말해준다. 이는 자연수의 연산을 정의하는데 중요한 역할을 한다. </p>
+</li>
+<li>
+<p>그러니까 쉽게 말하면 <span class="arithmatex">\(\gamma\)</span> 함수는 자연수 집합에 정의하고자 하는 덧셈이나 곱셈같은 연산의 추상적 대상이다. 그래서 <span class="arithmatex">\(0\)</span> 에 대응되는 <span class="arithmatex">\(\gamma\)</span> 함수의 값을 정의하고, 모든 자연수에서 <span class="arithmatex">\(\gamma\)</span> 가 값을 갖게 하기 위하여 귀납적으로 <span class="arithmatex">\(n ^{+}\)</span> 에서의 <span class="arithmatex">\(\gamma\)</span> 의 값을 </p>
+<div class="arithmatex">\[ f(\gamma (n)) \]</div>
+<p>으로 정의한 것이다. 이는 <span class="arithmatex">\(n ^{+}\)</span> 의 <span class="arithmatex">\(\gamma\)</span> 함수값을 바로 이전 자연수인 <span class="arithmatex">\(n\)</span> 의 <span class="arithmatex">\(\gamma (n)\)</span> 를 기반으로 정의한다는 것이다. 그리고 물론 <span class="arithmatex">\(\gamma (n)\)</span> 의 값이 그대로 <span class="arithmatex">\(\gamma (n ^{+})\)</span> 이 되는 건 의미가 없으니까 "어떤 연산" 을 취할 것인데, 그 연산을 추상적으로 함수 <span class="arithmatex">\(f\)</span> 라고 표현한 것이다. </p>
+</li>
+<li>
+<p>유일성 증명 </p>
+<p><span class="arithmatex">\((1),(2)\)</span> 를 동시에 만족하는 함수 <span class="arithmatex">\(\gamma _1, \gamma _2\)</span> 가 있다고 가정하고 </p>
+<div class="arithmatex">\[ Z = \{n \in \N: \gamma _1(n) = \gamma _2(n)\} \]</div>
+<p>라고 하자.</p>
+<p>일단 <span class="arithmatex">\(\gamma _1 (0) = a = \gamma _2(0)\)</span> 이므로 <span class="arithmatex">\(0 \in Z\)</span> 이다. 만약 <span class="arithmatex">\(n \in Z\)</span> 이면 </p>
+<div class="arithmatex">\[ \gamma _1(n ^{+}) = f(\gamma _1(n)) = f(\gamma _2(n)) = \gamma _2(n ^{+}) \]</div>
+<p>이므로 <span class="arithmatex">\(n ^{+} \in Z\)</span> 이다. 그러므로 수학적 귀납법에 의하여 </p>
+<div class="arithmatex">\[ Z = \N \]</div>
+<p>이고 </p>
+<div class="arithmatex">\[ \therefore \forall n \in \N, \gamma _1(n) = \gamma _2(n) \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>존재성 증명</p>
+<p>이제 존재성을 보이기 위하여 다음 성질 </p>
+<div class="arithmatex">\[ (0, a) \in A\tag{1.1} \]</div>
+<div class="arithmatex">\[  (n, x) \in A \implies (n ^{+}, f(x)) \in A \tag{1.2} \]</div>
+<p>을 만족하는 <span class="arithmatex">\(A \subset \N \times X\)</span> 전체의 집합을 <span class="arithmatex">\(\mathcal{A}\)</span> 라 두면 이 성질을 만족하는 모든 집합이 <span class="arithmatex">\(\mathcal{A}\)</span> 에 속하게 되므로 <span class="arithmatex">\(\N \times X\)</span> 도 <span class="arithmatex">\(\mathcal{A}\)</span> 에 속한다. 즉, <span class="arithmatex">\(\N \times X \in \mathcal{A}\)</span> 이다. 따라서 <span class="arithmatex">\(\mathcal{A}\)</span> 는 비어있지 않다. </p>
+<p><em>(이러한 <span class="arithmatex">\(A\)</span> 는 곱집합의 부분집합인 함수 <span class="arithmatex">\(\gamma\)</span> 의 기반을 정의하기 위해서 생성되었다. 그러므로 이제 집합 <span class="arithmatex">\(A\)</span> 가 같은 입력에 대하여 다른 출력을 가지지 않는다는 것을 증명하면 함수의 조건이 충족된다.)</em></p>
+<p>이제 <span class="arithmatex">\(\gamma = \bigcap_{}^{}\mathcal{A}\)</span> 라고 두자. 만일 <span class="arithmatex">\(\gamma \subset \N \times X\)</span> 가 함수이면 </p>
+<div class="arithmatex">\[ \gamma (n) = x \implies (n, x) \in \gamma \]</div>
+<div class="arithmatex">\[ \implies (n ^{+}, f(x)) \in \gamma  \]</div>
+<div class="arithmatex">\[ \implies \gamma (n ^{+}) = f(x) = f( \gamma (n)) \]</div>
+<p>이다. </p>
+<p><em>(이로써 <span class="arithmatex">\(\N \times X\)</span> 의 부분집합 <span class="arithmatex">\(\gamma = \bigcap_{}^{}\mathcal{A}\)</span> 가 함수라면 자연수 전체에서 성립함을 보였다. 그러므로 <span class="arithmatex">\(\gamma\)</span> 가 함수임을 증명하기만 하면 된다.)</em></p>
+<p>그러므로 <span class="arithmatex">\(\gamma \subset \N \times X\)</span> 가 함수임을 보이면 증명이 끝난다. 이를 위하여 <span class="arithmatex">\(\gamma\)</span> 가 함수임을 보장하는 입력 집합</p>
+<div class="arithmatex">\[ \mathcal{X} = \{n \in \N:(n,x) \in \gamma \text{ 를 만족하는 } x \in X \text{ 가 유일하게 존재한다}\} \]</div>
+<p>을 정의하고 귀납법을 사용하자. 만약 <span class="arithmatex">\(0 \not \in \mathcal{X}\)</span> 라면 <span class="arithmatex">\((0,b) \in \gamma , b \neq a\)</span> 인 <span class="arithmatex">\(b \in X\)</span> 가 존재한다. 왜냐하면 <span class="arithmatex">\(0\)</span> 이 <span class="arithmatex">\(\gamma\)</span> 가 함수임을 보장하는 입력 집합에 속하지 않았으므로 <span class="arithmatex">\(0\)</span> 을 <span class="arithmatex">\(\gamma\)</span> 에 입력하면 출력이 2개 이상 나올 것이기 때문이다. </p>
+<p>그런데 <span class="arithmatex">\(b \neq a\)</span> 이므로 페아노 공리계 성질 3) <span class="arithmatex">\(\forall n \in \N, n ^{+} \neq 0\)</span> 에 의하여 <span class="arithmatex">\(\gamma \text{ \textbackslash } \{(0,b)\} \subset \N \times X\)</span> 도 <span class="arithmatex">\((1.1), (1.2)\)</span> 을 만족한다. 이는 <span class="arithmatex">\(\gamma = \bigcap_{}^{}\mathcal{A}\)</span> 에 모순이다. </p>
+<p><em>(<span class="arithmatex">\((1.1), (1.2)\)</span> 을 만족하는 집합 <span class="arithmatex">\(A\)</span> 중에는 <span class="arithmatex">\((0, b) \in A\)</span> 인 집합과 <span class="arithmatex">\((0, b) \not \in A\)</span> 인 집합도 존재한다. 그러므로 <span class="arithmatex">\(\gamma = \bigcap_{}^{} \mathcal{A}\)</span> 에는 <span class="arithmatex">\((0,b)\)</span> 가 존재하지 않다. 즉, <span class="arithmatex">\((0, b) \not \in \gamma\)</span> 이다. 즉, 증명에서 이것을 <span class="arithmatex">\(\gamma\)</span> 에 <span class="arithmatex">\((0, b)\)</span> 를 제외한 집합 <span class="arithmatex">\(\gamma \text{ \textbackslash }\{(0,b)\}\)</span> 도 <span class="arithmatex">\((1.1), (1.2)\)</span> 을 만족한다면 <span class="arithmatex">\(\gamma = \bigcap_{}^{}\mathcal{A}\)</span> 에 모순이라는 식으로 보인 것이다. 왜냐하면 어떤 원소를 <span class="arithmatex">\(\gamma\)</span> 에서 제외해도 <span class="arithmatex">\((1.1), (1.2)\)</span> 이 성립한다면 교집합에 포함되지 않을 것이기 때문에 집합족의 교집합으로 정의한 <span class="arithmatex">\(\gamma\)</span> 집합의 조건에 위배되기 때문이다.)</em></p>
+<p>그러므로 </p>
+<div class="arithmatex">\[ 0 \in \mathcal{X} \]</div>
+<p>이다.</p>
+<p>이제 <span class="arithmatex">\(n \in \mathcal{X}\)</span> 이지만 <span class="arithmatex">\(n ^{+} \not \in \mathcal{X}\)</span> 라고 하면 <span class="arithmatex">\((n ^{+}, f(x)) \in \gamma\)</span> 이므로 <span class="arithmatex">\((n ^{+}, y) \in \gamma , y \neq f(x)\)</span> 인 <span class="arithmatex">\(y \in X\)</span> 가 존재한다. 그러면 마찬가지로 <span class="arithmatex">\(\gamma \text{ \textbackslash }\{(n ^{+}, y)\} \in \mathcal{A}\)</span> 임을 보이면 <span class="arithmatex">\(\gamma = \bigcap_{}^{}\mathcal{A}\)</span> 에 모순이고, 결국 <span class="arithmatex">\(y\)</span> 는 존재하지 않으며 최종적으로 </p>
+<div class="arithmatex">\[ n \in \mathcal{X} \implies n ^{+} \in \mathcal{X} \]</div>
+<p>이 증명된다. 그렇게 되면 <span class="arithmatex">\(\gamma\)</span> 가 함수임을 보장하는 공간 <span class="arithmatex">\(\mathcal{X}\)</span> 는</p>
+<div class="arithmatex">\[ \mathcal{X} = \N \]</div>
+<p>이고, 결국 <span class="arithmatex">\(\gamma\)</span> 는 항상 함수가 되어 모든 증명이 끝난다.</p>
+<p><em>(즉, 이제 <span class="arithmatex">\(\gamma \text{ \textbackslash }\{(n ^{+}, y)\}\)</span> 가 <span class="arithmatex">\((1.1), (1.2)\)</span> 을 만족함을 보이면 되는 것이다.)</em></p>
+<p>일단 <span class="arithmatex">\(n ^{+} \neq 0\)</span> 이므로 <span class="arithmatex">\((0, a) \in \gamma \text{ \textbackslash }\{(n ^{+}, y)\}\)</span> 이다. 이제 </p>
+<div class="arithmatex">\[ (m, z) \in \gamma \text{ \textbackslash }\{(n ^{+}, y)\} \]</div>
+<p>라고 하자. 만약 <span class="arithmatex">\(m = n\)</span> 이면 <span class="arithmatex">\(z = x\)</span> 이고, 또한 <span class="arithmatex">\(y \neq f(x)\)</span> 이므로 <span class="arithmatex">\((m ^{+}, f(z)) = (n ^{+}, f(x)) \in \gamma \text{ \textbackslash }\{(n ^{+}, y)\}\)</span> 이다. 만약 <span class="arithmatex">\(m \neq n\)</span> 이면 페아노 공리계 성질 5) 에 의하여 <span class="arithmatex">\(m ^{+} \neq n ^{+}\)</span> 이고, 따라서 </p>
+<div class="arithmatex">\[ (m ^{+}, f(z)) \in \gamma \text{ \textbackslash }\{(n ^{+}, y)\} \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(\forall (n, x) \in \gamma \text{ \textbackslash }\{(n ^{+}, y)\}\)</span> 에 대하여 <span class="arithmatex">\((1.2)\)</span> 가 성립한다. 이것으로 모든 증명이 끝났다. ■ </p>
+</li>
+</ul>
+<a href="#5ab9ee627"><div class="admonition tldr" id="5ab9ee627">
+<p>더하기 : 각 자연수 <span class="arithmatex">\(m \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \gamma _m(0) = m, \qquad n \in \N \implies \gamma _m(n ^{+}) = [\gamma _m(n)]^{+} \]</div>
+<p>를 만족하면서 유일하게 존재하는 함수 <span class="arithmatex">\(\gamma _m:\N \to \N\)</span> 에 대하여 자연수의 더하기를 <span class="arithmatex">\(m, n \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ m + n = \gamma _m(n) \]</div>
+<p>라고 정의한다. </p>
+</div></a>
+<ul>
+<li>
+<p>그러면 <span class="arithmatex">\(m, n \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ m + 0 = m, \qquad m + n ^{+} = (m + n) ^{+} \]</div>
+<p>이 성립한다.</p>
+</li>
+<li>
+<p>이런 성질은 <span class="arithmatex">\(n \in \N\)</span> 에 대하여</p>
+<div class="arithmatex">\[ n ^{+} = 1 + n \]</div>
+<p>이다 를 기반으로 한다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p>먼저 </p>
+<div class="arithmatex">\[ 0 ^{+} = 1 = 1 + 0 \]</div>
+<p>이다. 왜냐하면 더하기의 정의에 따라 <span class="arithmatex">\(1+0 = \gamma _1(0) = 1\)</span> 이기 때문이다. 한편 이 등식이 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 성립한다고 가정하면 다음과 같이 <span class="arithmatex">\(n+1\)</span> 에서도 성립한다.</p>
+<div class="arithmatex">\[ (n ^{+}) ^{+} = (1 + n) ^{+} = 1 + n ^{+} \]</div>
+<p>그러므로 수학적 귀납법을 적용할 수 있으므로 증명이 끝났다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#f085411f0"><div class="admonition tldr" id="f085411f0">
+<p>곱하기 : 각 자연수 <span class="arithmatex">\(m \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \delta _m(0) = 0, \qquad n \in \N \implies \delta _m(n ^{+}) = \delta _m(n)+m \]</div>
+<p>를 만족하면서 유일하게 존재하는 함수 <span class="arithmatex">\(\delta _m: \N \to \N\)</span> 에 대하여 자연수의 곱하기를 <span class="arithmatex">\(m,n \in \N\)</span> 에 대하여</p>
+<div class="arithmatex">\[ mn = \delta _m(n) \]</div>
+<p>라고 정의한다. </p>
+</div></a>
+<ul>
+<li>
+<p>그러면 <span class="arithmatex">\(m, n \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ m0 = 0, \qquad mn ^{+} = mn + m \]</div>
+<p>이 성립한다. </p>
+</li>
+</ul>
+<a href="#c8b52857b"><div class="admonition tldr" id="c8b52857b">
+<p class="admonition-title">정리 2.1.3</p>
+<p><span class="arithmatex">\(\forall m,n,k \in \N\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(0+n=n, (m+n)+k=m+(n+k), m+n=n+m\)</span> (더하기의 항등원/결합법칙/교환법칙)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(0n=0, 1n = n, (mn)k=m(nk), mn=nm\)</span> (곱하기의 항등원/결합법칙/교환법칙)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(m(n+k)=mn+mk, (n+k)m=nm+km\)</span> (더하기와 곱하기의 분배법칙)</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>수학적 귀납법으로 모든 명제를 증명할 수 있다. 가령 이미 참임을 알고 있는 명제 <span class="arithmatex">\(0 + 0 = 0\)</span> 에서 출발하여 </p>
+<div class="arithmatex">\[ 0 + n = n \implies 0 + n ^{+} = (0 + n) ^{+} = n ^{+} \]</div>
+<p>이므로 1) 의 첫째 명제가 증명된다.</p>
+<p>둘째 명제는 <span class="arithmatex">\(m,n\)</span> 을 고정하고 <span class="arithmatex">\(k\)</span> 에 대한 귀납법을 사용한다.</p>
+</li>
+</ul>
+<a href="#6fa617aba"><div class="admonition tldr" id="6fa617aba">
+<p>자연수의 순서 : 두 자연수 <span class="arithmatex">\(m, n \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ m \leq n \iff m \in n \lor m = n \]</div>
+<p>이다. </p>
+</div></a>
+<ul>
+<li>
+<p>자연수의 순서의 정의에 따라 다음과 같은 성질이 생긴다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(m \leq m\)</span> 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(m \leq n \land n \leq m \implies m = n\)</span> 이다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(m \neq n\)</span> 이면 <span class="arithmatex">\(m \in n \land n \in m\)</span> 인데 페아노 공리계의 5번째 성질을 증명할 때 사용했던 정리 </p>
+<div class="arithmatex">\[ n \in \N, x \in n \implies x \subset n \]</div>
+<p>에 의하여 <span class="arithmatex">\(m \subset n, n \subset m\)</span> 이 성립하므로 </p>
+<div class="arithmatex">\[ m = n \]</div>
+<p>이 된다. 이는 처음의 가정과 모순이다. 그러므로 <span class="arithmatex">\(m = n\)</span> 이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(m \leq n, n \leq k \implies m \leq k\)</span> 이다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(m \leq n, n \leq k\)</span> 는 다음 4가지 경우를 내포한다. </p>
+<div class="arithmatex">\[ m \in n, n \in k, \qquad m \in n, n = k, \qquad m = n, n \in k, \qquad m = n, n = k \]</div>
+<p>처음 3가지 경우에서 <span class="arithmatex">\(m \in k\)</span> 가 성립하고, 마지막 경우에는 <span class="arithmatex">\(m = k\)</span> 가 성립하므로 </p>
+<div class="arithmatex">\[ \therefore m \leq k \]</div>
+<p>이다. ■ </p>
+<p>또한 이로써 <span class="arithmatex">\(\leq\)</span> 는 순서관계가 된다.</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<a href="#9aa06ba3d"><div class="admonition tldr" id="9aa06ba3d">
+<div class="arithmatex">\[\forall n \in \N, n \not \in n\]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>이것을 수학적 귀납법으로 보이기 위하여 </p>
+<div class="arithmatex">\[ n \not \in n \implies n ^{+} \not \in n ^{+} \]</div>
+<p>임을 보이면 되는데, 이것의 대우 명제인 </p>
+<div class="arithmatex">\[ n ^{+} \in n ^{+} \implies n \in n \]</div>
+<p>을 보여도 된다. 만약 <span class="arithmatex">\(n ^{+} \in n ^{+} = n \cup \{n\}\)</span> 이면 <span class="arithmatex">\(n ^{+} \in n \lor n ^{+} = n\)</span> 이다. 이때 <span class="arithmatex">\(n ^{+}\in n\)</span> 이면 페아노 공리계의 5번째 성질을 증명할 때 사용했던 정리 </p>
+<div class="arithmatex">\[ n \in \N, x \in n \implies x \subset n \]</div>
+<p>에 의하여 <span class="arithmatex">\(n \subset n ^{+} \subset n\)</span> 이므로 <span class="arithmatex">\(n ^{+} = n\)</span> 이다. 그러므로 항상 </p>
+<div class="arithmatex">\[ n ^{+} = n \]</div>
+<p>인데, 이것에서부터 <span class="arithmatex">\(n \cup \{n\} = n ^{+} = n\)</span> 을 도출할 수 있다. 그렇다면 <span class="arithmatex">\(\{n\}\)</span> 이 <span class="arithmatex">\(n\)</span> 의 부분집합이 되므로 </p>
+<div class="arithmatex">\[ \{n\} \subset n \]</div>
+<p>이고 이에따라 <span class="arithmatex">\(n \in n\)</span> 이다. 그러므로 증명이 끝났다. ■ </p>
+</li>
+<li>
+<p>또한 <span class="arithmatex">\(\forall n \in \N, n \not \in n\)</span> 이 증명되었으므로 </p>
+<div class="arithmatex">\[ m \leq n, m \neq n \iff m \in n \]</div>
+<p>이 성립함을 알 수 있다. </p>
+</li>
+</ul>
+<a href="#d0ef7a712"><div class="admonition tldr" id="d0ef7a712">
+<p>두 자연수 <span class="arithmatex">\(m,n \in \N\)</span> 이 <span class="arithmatex">\(m \in n\)</span> 일 때 </p>
+<div class="arithmatex">\[ m &lt; n \]</div>
+<p>이라고 쓴다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리에 따라 </p>
+<div class="arithmatex">\[ m \leq n, m \neq n \iff m &lt; n \]</div>
+<p>이 성립한다.</p>
+</li>
+<li>
+<p>이 정리는 자연수 집합에 정의된 순서관계의 핵심적인 성질이다.</p>
+</li>
+</ul>
+<a href="#5efd87f3f"><div class="admonition tldr" id="5efd87f3f">
+<p class="admonition-title">정리 2.1.4</p>
+<p>비어있지 않은 자연수들의 집합은 최소 원소를 가진다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>비어있지 않은 자연수들의 집합 <span class="arithmatex">\(A \subset \N\)</span> 가 최소 원소를 가지지 않는다고 하고 </p>
+<div class="arithmatex">\[ X = \{n \in \N: m \in A \implies n \leq m\} \]</div>
+<p>이라고 두자. 즉, <span class="arithmatex">\(X\)</span> 는 집합 <span class="arithmatex">\(A\)</span> 의 최소 원소보다 같거나 작은 자연수로 구성된다. 만약 <span class="arithmatex">\(k \in X \cap A\)</span> 이면 <span class="arithmatex">\(k\)</span> 는 <span class="arithmatex">\(A\)</span> 의 최소 원소가 되므로 <span class="arithmatex">\(X \cap A = \varnothing\)</span> 이어야 한다. 여기서 귀납법으로 <span class="arithmatex">\(X = \N\)</span> 임을 보이면 <span class="arithmatex">\(A = \varnothing\)</span> 이 되어 모순을 얻는다. </p>
+<p>그러므로 먼저 <span class="arithmatex">\(0 \in X\)</span> 라고 가정하자. 즉, <span class="arithmatex">\(\forall m \in \N\)</span> 에 대하여 <span class="arithmatex">\(0 \leq m\)</span> 임을 보이는 것이다. 이렇게 <span class="arithmatex">\(\forall m \in \N\)</span> 인 <span class="arithmatex">\(m\)</span> 에 대하여 보이게 되면 <span class="arithmatex">\(A\)</span> 가 어떤 원소로 구성되었든 간에 안정적으로 <span class="arithmatex">\(0 \in X\)</span> 를 보일 수 있다. 이것 또한 귀납법으로 보이게 된다. 먼저 <span class="arithmatex">\(0 \leq 0\)</span> 은 자명하다. 만약 <span class="arithmatex">\(0 \leq m\)</span> 이면 <span class="arithmatex">\(m \in m ^{+}\)</span> 에서 <span class="arithmatex">\(m \leq m ^{+}\)</span> 이므로 <span class="arithmatex">\(0 \leq m ^{+}\)</span> 을 얻는다. 그러므로 <span class="arithmatex">\(0 \in X\)</span> 이 증명되었다. </p>
+<p>이제 <span class="arithmatex">\(n \in X \implies n ^{+} \in X\)</span> 을 보이기 위하여 <span class="arithmatex">\(n \in X\)</span> 라고 가정하자. 즉, </p>
+<div class="arithmatex">\[ m \in A \implies n \leq m \]</div>
+<p>이라고 두는 것이다. 만약 <span class="arithmatex">\(n \in A\)</span> 이면 <span class="arithmatex">\(n\)</span> 은 <span class="arithmatex">\(A\)</span> 의 최소원소가 되고 이는 가정에 어긋난다. 그러므로 <span class="arithmatex">\(n \not \in A\)</span> 이고 </p>
+<div class="arithmatex">\[ m \in A \implies n &lt; m \]</div>
+<p>이 성립한다. 이제 </p>
+<div class="arithmatex">\[ n &lt; m \implies n ^{+} \leq m \]</div>
+<p>을 보이면 <span class="arithmatex">\(X = \N\)</span> 이 되어 모든 증명이 끝난다. 이것에도 귀납법을 사용하는데, <span class="arithmatex">\(n\)</span> 을 고정하고 <span class="arithmatex">\(m\)</span> 에 대한 귀납법을 사용하기 위하여 </p>
+<div class="arithmatex">\[ Y = \{m \in \N : n &lt; m \implies n ^{+} \leq m\} \]</div>
+<p>라고 두자. 먼저 <span class="arithmatex">\(n &lt; 0\)</span> 이면 <span class="arithmatex">\(n \in \varnothing\)</span> 인데 이런 원소 <span class="arithmatex">\(n\)</span> 이 없으므로 <span class="arithmatex">\(0 \in Y\)</span> 임은 자명하다.(<strong>이해 안되는 부분</strong>) </p>
+<p>이제 <span class="arithmatex">\(m \in Y\)</span> 라고 가정하고, <span class="arithmatex">\(m ^{+} \in Y\)</span> 임을 보이자. <span class="arithmatex">\(n &lt; m ^{+}\)</span> 이면, </p>
+<div class="arithmatex">\[n \in m ^{+} = m \cup \{m\} \implies n \in m \lor n = m\]</div>
+<p>이다. 먼저 <span class="arithmatex">\(n \in m\)</span> 이면 <span class="arithmatex">\(n &lt; m\)</span> 이므로 귀납법의 가정 <span class="arithmatex">\(m \in Y\)</span> 에 의하여 </p>
+<div class="arithmatex">\[ n ^{+} \leq m &lt; m ^{+} \]</div>
+<p>이고, <span class="arithmatex">\(n = m\)</span> 이면 <span class="arithmatex">\(n ^{+} = m ^{+}\)</span> 이므로 항상 </p>
+<div class="arithmatex">\[ n ^{+} \leq m ^{+} \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ n &lt; m ^{+} \implies n ^{+}\leq m ^{+} \]</div>
+<p>가 성립하고 <span class="arithmatex">\(m ^{+} \in Y\)</span> 임에 따라</p>
+<div class="arithmatex">\[ Y = \N \]</div>
+<p>이고 이로써 모든 증명이 끝났다. ■ </p>
+</li>
+</ul>
+<a href="#93092f5e7"><div class="admonition tldr" id="93092f5e7">
+<p class="admonition-title">따름정리 2.1.5</p>
+<div class="arithmatex">\[\forall m,n \in \N, m \leq n \lor n \leq m\]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\forall  m,n \in \N\)</span> 에 대하여 <span class="arithmatex">\(\{m,n\} \subset \N\)</span> 은 최소원소를 갖는데, </p>
+<div class="arithmatex">\[ (\min \{m,n\} = m \implies m \leq n) \lor (\min \{m,n\} = n \implies n \leq m) \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#11d0778c6"><div class="admonition tldr" id="11d0778c6">
+<p class="admonition-title">2.7</p>
+<div class="arithmatex">\[ n \in \N \implies \exists m \in \N \text{ s.t. } n = 0 \lor n = m ^{+} \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 (이 증명의 풀이는 책에 나와있는게 아니라 문제로 되어있어서 내가 만든 것. 그래서 오류가 있을 수 있음)</p>
+<p><span class="arithmatex">\(n = 0\)</span> 일 경우 <span class="arithmatex">\(0 = 0\)</span> 이다.</p>
+<p><span class="arithmatex">\(n = x(x \neq 0)\)</span> 일 경우 성립한다고 가정하고 <span class="arithmatex">\(n = x ^{+}\)</span> 일때도 성립함을 보이자. <span class="arithmatex">\(n = x\)</span> 이면 </p>
+<div class="arithmatex">\[ \exists m \in \N, x = m ^{+} \]</div>
+<p>이다. 그러면 </p>
+<div class="arithmatex">\[ \iff x ^{+} = [m ^{+}] ^{+} \]</div>
+<p>인데 페아노 공리계 2) <span class="arithmatex">\(n \in \N \implies n ^{+} \in \N\)</span> 은 어떤 자연수 <span class="arithmatex">\(n\)</span> 에 <span class="arithmatex">\(^{+}\)</span> 를 취하면 그것도 자연수가 됨을 보증해준다. 그러므로 </p>
+<div class="arithmatex">\[ [m ^{+}] ^{+} \in \N \]</div>
+<p>이다. 이로써 모든 증명이 끝났다. ■ </p>
+</li>
+</ul>
+<a href="#749829205"><div class="admonition tldr" id="749829205">
+<p class="admonition-title">따름정리 2.1.6</p>
+<p>위로 유계이며 비어있지 않은 자연수들의 집합 <span class="arithmatex">\(A \subset \N\)</span> 는 최대 원소를 가진다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>집합 <span class="arithmatex">\(A\)</span> 의 상계 전체의 집합을 <span class="arithmatex">\(B\)</span> 라 두면, 가정에 의하여 <span class="arithmatex">\(B \neq \varnothing\)</span> 이고 <a href="#5efd87f3f">정리 2.1.4 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다."</a>  에 의하여 <span class="arithmatex">\(B\)</span> 는 최소 원소 <span class="arithmatex">\(k \in \N\)</span> 를 가진다. <span class="arithmatex">\(\forall n \in A, n \leq k\)</span> 이므로 이므로 <span class="arithmatex">\(k \in A\)</span> 임을 보이면 <span class="arithmatex">\(k\)</span> 가 <span class="arithmatex">\(A\)</span> 의 최대원소임이 증명된다.</p>
+<p><span class="arithmatex">\(k \not \in A\)</span> 라고 가정하자. 그러면 <span class="arithmatex">\(n \in A\)</span> 을 하나 잡았을 때 <span class="arithmatex">\(k &gt; n \geq 0\)</span> 이고 따라서 <a href="#11d0778c6">2.7</a> 에 의하여 <span class="arithmatex">\(k = s ^{+}\)</span> 이다. </p>
+<p>만약 <span class="arithmatex">\(s \not \in B\)</span> 이면 <span class="arithmatex">\(s &lt; t\)</span> 인 <span class="arithmatex">\(t \in A\)</span> 가 존재(<strong>이해 안되는 부분</strong>)하고 </p>
+<div class="arithmatex">\[ s ^{+} \leq t \leq k = s ^{+} \implies k = t \in A \]</div>
+<p>가 되어 모순이다. 그러므로 <span class="arithmatex">\(s \in B\)</span> 인데, <span class="arithmatex">\(s &lt; k\)</span> 이므로 이는 <span class="arithmatex">\(k\)</span> 가 최소원소라는 것에 모순이다.</p>
+<p>그러므로 </p>
+<div class="arithmatex">\[ k \in A \]</div>
+<p>이다. </p>
+</li>
+</ul>
+<a href="#3bc9769c2"><div class="admonition tldr" id="3bc9769c2">
+<p class="admonition-title">정리 2.1.7</p>
+<p><span class="arithmatex">\(\forall n,m,k \in \N, n = m + k \to n \geq m\)</span> 이고, </p>
+<p>역으로 두 자연수 <span class="arithmatex">\(m,n \in \N\)</span> 에 대하여 <span class="arithmatex">\(n \geq m\)</span> 이면 <span class="arithmatex">\(n=m+k\)</span> 를 만족하는 자연수 <span class="arithmatex">\(k \in \N\)</span> 가 유일하게 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 큰 수에서 작은 수를 뺄 수 있음을 말해주는데, 이는 정수를 정의하는데 중요한 역할을 한다. </p>
+</li>
+<li>
+<p>이 정리의 유일성은 </p>
+<div class="arithmatex">\[ \forall m,k,l \in \N, m + k = m + l \implies k = l \]</div>
+<p>로 명확하게 표현할 수 있다.</p>
+</li>
+<li>
+<p>첫번째 명제의 증명 </p>
+<p><span class="arithmatex">\(m+k \geq m\)</span> 을 보이면 되는데 <span class="arithmatex">\(k\)</span> 에 관한 귀납법을 사용한다. <span class="arithmatex">\(k=0\)</span> 이면 당연히 성립하고 <span class="arithmatex">\(m+k \geq m\)</span> 이라고 가정하면 </p>
+<div class="arithmatex">\[ m+k ^{+} = (m+k) ^{+} &gt; m+ k \geq m \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>두번째 명제의 존재성 증명 </p>
+<div class="arithmatex">\[ X = \{l \in \N, m+l \geq n\} \]</div>
+<p>라 두면 <span class="arithmatex">\(n \in X \implies X \neq \varnothing\)</span> 이다. 따라서 <a href="#5efd87f3f">정리 2.1.4 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다."</a> 에 의하여 <span class="arithmatex">\(X\)</span> 는 최소 원소 <span class="arithmatex">\(k \in X\)</span> 를 가지는데, <span class="arithmatex">\(n = m+k\)</span> 를 증명하면 된다. </p>
+<p>먼저 <span class="arithmatex">\(m+k&gt;n\)</span> 라고 가정하자. (<em>이는 <span class="arithmatex">\(n = m+k\)</span> 를 만족하는 <span class="arithmatex">\(k\)</span> 가 존재하지 않는다고 가정하는 것이다. 그러므로 이 가정으로부터 모순이 도출된다면 <span class="arithmatex">\(k\)</span> 는 존재한다는 것이 증명된다.</em>) <span class="arithmatex">\(k=0\)</span> 이면 <span class="arithmatex">\(m&gt;n\)</span> 이 가정 <span class="arithmatex">\(n \geq m\)</span> 에 위배되므로 <span class="arithmatex">\(k \neq 0\)</span> 이고 <a href="#11d0778c6">2.7</a> 에 의하여 <span class="arithmatex">\(s \in \N, k = s ^{+}\)</span> 이다. 그러면 </p>
+<div class="arithmatex">\[ (m + s) ^{+} = m + s ^{+} = m + k &gt; n \]</div>
+<p>에서 <span class="arithmatex">\(m + s \geq n\)</span> 이고, 이에따라 <span class="arithmatex">\(s \in X\)</span> 인데 <span class="arithmatex">\(s &lt; s ^{+} = k\)</span> 이므로 <span class="arithmatex">\(k\)</span> 가 <span class="arithmatex">\(X\)</span> 의 최소원소라는 데에 모순이다. ■ </p>
+</li>
+<li>
+<p>두번째 명제의 유일성 증명 </p>
+<p>두번째 명제의 유일성 증명은</p>
+<div class="arithmatex">\[ \forall m,k,l \in \N, m + k = m + l \implies k = l \]</div>
+<p>를 <span class="arithmatex">\(k\)</span> 에 관한 귀납법으로 보임으로써 완성된다. <span class="arithmatex">\(k=0\)</span> 이면 </p>
+<div class="arithmatex">\[ m + 0 + m + l \implies 0 = l \]</div>
+<p>이다. 만약 <span class="arithmatex">\(m=m+l\)</span> 인데 <span class="arithmatex">\(l \neq 0\)</span> 이면 <span class="arithmatex">\(l = s ^{+}\)</span> 이고,</p>
+<div class="arithmatex">\[ m = m+l = m + s ^{+} = (m+s) ^{+} \geq m ^{+} &gt; m \]</div>
+<p>이 되어 모순이다. 그러므로 <span class="arithmatex">\(l = 0\)</span> 이다.</p>
+<p>이제 <span class="arithmatex">\(k\)</span> 에 대하여 성립한다고 가정하고 <span class="arithmatex">\(k ^{+}\)</span> 에서 성립함을 보이면 된다. </p>
+<div class="arithmatex">\[ m + k ^{+} = m + l \]</div>
+<p>이라고 두자. 여기에서 <span class="arithmatex">\(l = 0\)</span> 이면 존재성 증명에서 보인바와 같이 <span class="arithmatex">\(k ^{+} = 0\)</span> 이므로 <span class="arithmatex">\(l \neq 0\)</span> 이고 <span class="arithmatex">\(l = t ^{+}\)</span> 이다. 그러면 </p>
+<div class="arithmatex">\[ (m+k)^{+}=m+k ^{+}=m+l=m+t ^{+}=(m+t)^{+} \]</div>
+<p>에서 <span class="arithmatex">\(m+k=m+t\)</span> 를 얻고, 가정에 의하여 <span class="arithmatex">\(k=t\)</span> 와 <span class="arithmatex">\(k ^{+}=t ^{+} = l\)</span> 을 얻는다. 이것으로써 </p>
+<div class="arithmatex">\[ \forall m,k,t \in \N, m + k ^{+} = m + t ^{+} \implies k ^{+} = t ^{+} \]</div>
+<p>를 얻었으므로 유일성 증명이 끝났다. ■ </p>
+</li>
+</ul>
+<a href="#5e6a5ce0a"><div class="admonition tldr" id="5e6a5ce0a">
+<p class="admonition-title">정리 2.1.8</p>
+<p><span class="arithmatex">\(m,l \in \N, 0 &lt; m \leq l\)</span> 이면 </p>
+<div class="arithmatex">\[ l=mn+r, \qquad 0 \leq r&lt;m \]</div>
+<p>을 만족하는 자연수 <span class="arithmatex">\(n,r \in \N\)</span> 이 유일하게 존재한다. </p>
+</div></a>
+<ul>
+<li>
+<p>존재성 증명 </p>
+<p>집합 <span class="arithmatex">\(P = \{k \in \N:mk \leq l\}\)</span> 는 <span class="arithmatex">\(1 \in P\)</span> 이므로 <span class="arithmatex">\(P \neq \varnothing\)</span> 이다. 또한 <span class="arithmatex">\(\forall k \in P, k \leq mk \leq l\)</span> 이므로 <span class="arithmatex">\(P\)</span> 는 위로 유계이다. 그러므로 <a href="#749829205">따름정리 2.1.6 "위로 유계이며 비어있지 않은 자연수들의 집합 <span class="arithmatex">\(A \subset \N\)</span> 는 최대 원소를 가진다."</a> 에 의하여 <span class="arithmatex">\(P\)</span> 는 최대원소 <span class="arithmatex">\(n\)</span> 을 가진다. 그러면 </p>
+<div class="arithmatex">\[ mn \leq l &lt; mn ^{+} = mn + m \]</div>
+<p>이므로 (<em>이렇게 되는 것은 매우 간단한데, <span class="arithmatex">\(l \geq mn ^{+}\)</span> 가 성립한다면 <span class="arithmatex">\(n\)</span> 이 최대원소라는 가정에 모순이기 때문이다.</em>) <a href="#3bc9769c2">정리 2.1.7 "<span class="arithmatex">\(m,n \in \N\)</span> 에 대하여 <span class="arithmatex">\(n \geq m\)</span> 이면 <span class="arithmatex">\(n=m+k\)</span> 를 만족하는 자연수 <span class="arithmatex">\(k \in \N\)</span> 가 유일하게 존재한다."</a> 에 의하여 </p>
+<div class="arithmatex">\[ l = mn + r \]</div>
+<p>인 <span class="arithmatex">\(r \in \N\)</span> 이 유일하게 존재한다. 이때 <span class="arithmatex">\(mn + r &lt; mn + m \implies r &lt; m\)</span> 이다. ■ </p>
+<p>한편 이 증명으로 <span class="arithmatex">\(n, r\)</span> 의 존재성 증명이 끝남과 동시에 <span class="arithmatex">\(r\)</span> 의 유일성 증명도 끝났으므로 <span class="arithmatex">\(n\)</span> 의 유일성 증명만 하면 된다.</p>
+</li>
+<li>
+<p>유일성 증명 </p>
+<div class="arithmatex">\[ l = mk+s, \qquad 0 \leq s &lt; m, \qquad k \neq n \]</div>
+<p>이라고 하자. 그러면 <span class="arithmatex">\(k &lt; n \lor k &gt; n\)</span> 이다. <span class="arithmatex">\(k &lt; n\)</span> 이면 <span class="arithmatex">\(k ^{+} \leq n\)</span> 이므로 <span class="arithmatex">\(mk ^{+} \leq mn \leq l\)</span> 인데</p>
+<div class="arithmatex">\[ l = mk + s &lt; mk + m = mk ^{+} \]</div>
+<p>이므로 모순이다. 같은 방식으로 <span class="arithmatex">\(k&gt;n\)</span> 도 모순을 도출한다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore k = n \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<h2 id="_2">정수의 정의<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<a href="#1d6d841c3"><div class="admonition tldr" id="1d6d841c3">
+<p>빼기 : <span class="arithmatex">\(n \leq m\)</span> 인 <span class="arithmatex">\(m,n \in \N\)</span> 은 정리 </p>
+<p>"두 자연수 <span class="arithmatex">\(m,n \in \N\)</span> 에 대하여 <span class="arithmatex">\(n \geq m\)</span> 이면 <span class="arithmatex">\(n=m+k\)</span> 를 만족하는 자연수 <span class="arithmatex">\(k \in \N\)</span> 가 유일하게 존재한다."</p>
+<p>에 의하여 <span class="arithmatex">\(m = n + k\)</span> 인 <span class="arithmatex">\(k \in \N\)</span> 가 유일하게 존재하는데 이 <span class="arithmatex">\(k\)</span> 를 </p>
+<div class="arithmatex">\[ k := m - n \]</div>
+<p>라고 정의한다. </p>
+</div></a>
+<a href="#738b11833"><div class="admonition tldr" id="738b11833">
+<p>정수 집합(integer set) : 동치관계 </p>
+<div class="arithmatex">\[ (m,n)\sim (m',n') \iff m+n'=n+m' \]</div>
+<p>가 부여된 집합 <span class="arithmatex">\(\N \times \N\)</span> 에 대하여 집합 </p>
+<div class="arithmatex">\[\N \times \N/ \sim\ = \mathbb{Z}\]</div>
+<p>을 정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 이라고 정의한다. </p>
+</div></a>
+<ul>
+<li>
+<p>이때 동치류 <span class="arithmatex">\([(m,n)]\)</span> 을 간단하게 <span class="arithmatex">\([m,n]\)</span> 로 표현하면 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 의 모든 원소를 자연수 <span class="arithmatex">\(n = 1,2,\dots\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ [n,0],[0,0],[0,n] \]</div>
+<p>으로 표현할 수 있다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\([n, 0]\)</span> 를 <span class="arithmatex">\(n\)</span> 으로, <span class="arithmatex">\([0, 0]\)</span> 을 <span class="arithmatex">\(0\)</span> 으로 <span class="arithmatex">\([0, n]\)</span> 을 <span class="arithmatex">\(-n\)</span> 으로 이해하면 편하다. 왜냐하면 정수 집합의 동치관계는 결국 </p>
+<div class="arithmatex">\[ (m,n) \sim (m',n') \iff m-n = m'-n' \]</div>
+<p>과 같기 때문이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbb{Z}\)</span> 의 원소를 정수(integer)라고 한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\([n, 0], [0, 0], [0, n] \in \mathbb{Z}\)</span> 를 </p>
+<div class="arithmatex">\[ [n, 0] := n, \qquad [0, 0] = 0, \qquad [0, n] = -n \]</div>
+<p>으로 표기한다.</p>
+</li>
+</ul>
+<a href="#2a8d9bf0e"><div class="admonition tldr" id="2a8d9bf0e">
+<p>정수의 순서관계 : 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 에 부여된 관계</p>
+<div class="arithmatex">\[ [m, n] \geq [k, l] \iff m+l \geq n+k \]</div>
+<p>이다. </p>
+</div></a>
+<ul>
+<li>
+<p>이 순서관계 또한</p>
+<div class="arithmatex">\[ [m, n] \geq [k, l] \iff m-n \geq k-l \]</div>
+<p>로 이해하면 편하다. </p>
+</li>
+<li>
+<p>만일 <span class="arithmatex">\((m,n) \sim (m',n')\)</span> 이고 <span class="arithmatex">\((k,l) \sim (k', l')\)</span> 이면(<em>이 동치관계를 <span class="arithmatex">\(m-n=m'-n'\)</span> 과 <span class="arithmatex">\(k-l=k'-l'\)</span> 로 이해하면 편하다.</em>)</p>
+<div class="arithmatex">\[ m+n' = n + m', k+l'=l+k' \]</div>
+<p>인데 <a href="#e4dca26d8">정리 2.1.2 "<span class="arithmatex">\(\forall n,m,k \in \N, n = m + k \to n \geq m\)</span> 이고, 역으로 두 자연수 <span class="arithmatex">\(m,n \in \N\)</span> 에 대하여 <span class="arithmatex">\(n \geq m\)</span> 이면 <span class="arithmatex">\(n=m+k\)</span> 를 만족하는 자연수 <span class="arithmatex">\(k \in \N\)</span> 가 유일하게 존재한다."</a> 에 의하여 </p>
+<div class="arithmatex">\[ m+l \geq n+k \iff m'+l' \geq n'+k' \]</div>
+<p>이므로(<em>이해 안되는 부분</em>) 순서관계가 잘 정의되어 있음을 알 수 있다. </p>
+</li>
+</ul>
+<a href="#76886b9c7"><div class="admonition tldr" id="76886b9c7">
+<p class="admonition-title">정리 2.2.1</p>
+<p>정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall a,b \in \mathbb{Z}, a \geq b \lor b \geq a\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(A \neq \varnothing\)</span> 인 <span class="arithmatex">\(A \subset \mathbb{Z}\)</span> 가 위로 유계이면 <span class="arithmatex">\(A\)</span> 가 최대원소를 가지고, 아래로 유계이면 최소원소를 가진다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(m \geq n\)</span> 이면 </p>
+<div class="arithmatex">\[ [m, 0] \geq [n, 0] \geq [0, 0] \geq [0, n] \geq [0, m] \]</div>
+<p>이므로 1) 이 증명된다(<em>이해 안되는 부분</em>).</p>
+<p>2) 를 증명하기 위해 <span class="arithmatex">\(A\)</span> 가 위로 유계라고 하고, <span class="arithmatex">\(A\)</span> 의 모든 정수를 <span class="arithmatex">\([n, 0]\)</span> 의 형태로 두어서 집합 <span class="arithmatex">\(B\)</span> 를 </p>
+<div class="arithmatex">\[ B = \{k \in \N : [k, 0] \in A\} \]</div>
+<p>로 정의하자. <span class="arithmatex">\(B \neq \varnothing\)</span> 이면 <span class="arithmatex">\(B\)</span> 가 위로 유계이므로 정리 "위로 유계이며 비어있지 않은 자연수들의 집합 <span class="arithmatex">\(A \subset \N\)</span> 는 최대 원소를 가진다." 에 의하여 최대 원소 <span class="arithmatex">\(n\)</span> 을 가지는데, 그러면 <span class="arithmatex">\([n,0]\)</span> 이 <span class="arithmatex">\(A\)</span> 의 최대원소가 된다.</p>
+<p>만약 <span class="arithmatex">\(B = \varnothing\)</span> 이면 <span class="arithmatex">\(A\)</span> 의 모든 원소들이 <span class="arithmatex">\([0, k]\)</span> 의 꼴로 표현되므로 집합 <span class="arithmatex">\(C\)</span> 를 </p>
+<div class="arithmatex">\[ C = \{k \in \N: [0, k] \in A\} \]</div>
+<p>로 정의하자. 이 <span class="arithmatex">\(C\)</span> 의 최소원소를 <span class="arithmatex">\(m\)</span> 이라 두면 <span class="arithmatex">\([0, m]\)</span> 이 <span class="arithmatex">\(A\)</span> 의 최대 원소가 된다.</p>
+<p>집합 <span class="arithmatex">\(A\)</span> 가 아래로 유계일 때도 비슷하게 증명할 수 있다. ■ </p>
+</li>
+</ul>
+<a href="#b8f8b3b87"><div class="admonition tldr" id="b8f8b3b87">
+<p>정수의 더하기 : <span class="arithmatex">\(m,n,k,l \in \mathbb{Z}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ [m,n]+[k,l] = [m+k,n+l] \]</div>
+<p>이다. </p>
+</div></a>
+<ul>
+<li>
+<p>이 연산은 잘 정의되어 있고 commutative 와 associative 가 성립한다.</p>
+</li>
+<li>
+<p>또한 <span class="arithmatex">\([0, 0] \in \mathbb{Z}\)</span> 이 항등원의 역할을 하고, <span class="arithmatex">\([n, m]\)</span> 의 역원은 <span class="arithmatex">\([m, n]\)</span> 이 된다. </p>
+</li>
+</ul>
+<a href="#3821ac7da"><div class="admonition tldr" id="3821ac7da">
+<p>정수의 곱하기 : 집합 <span class="arithmatex">\(\N \times \N\)</span> 의 원소 <span class="arithmatex">\([m, n]\)</span> 과 <span class="arithmatex">\([k, l]\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ [m, n] \cdot [k, l] = [mk + nl, ml + nk] \]</div>
+<p>이다. </p>
+</div></a>
+<ul>
+<li>
+<p>정수의 곱하기는 잘 정의되어 있고, commutative 와 associative 와 distributive 가 성립한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\([1, 0]\)</span> 은 곱하기의 항등원이다. 정수 곱하기의 역원은 존재하지 않는다.</p>
+</li>
+</ul>
+<a href="#7e50c2756"><div class="admonition tldr" id="7e50c2756">
+<p>더하기, 곱하기, 순서관계에 관한 한</p>
+<div class="arithmatex">\[ \N \subset \mathbb{Z} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p>함수 <span class="arithmatex">\(f: \N \to \mathbb{Z}\)</span> 를 </p>
+<div class="arithmatex">\[ f: n \mapsto [n, 0] \]</div>
+<p>로 정의하면 <span class="arithmatex">\(f\)</span> 는 단사함수이고, 각 자연수 <span class="arithmatex">\(m, n \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ f(m + n) = f(n) + f(m) \]</div>
+<div class="arithmatex">\[ f(mn) = f(m)f(n) \]</div>
+<div class="arithmatex">\[ m \geq n \iff f(m) \geq f(n) \]</div>
+<p>이 성립하기 때문이다.</p>
+</li>
+</ul>
+<a href="#9de71fcf0"><div class="admonition tldr" id="9de71fcf0">
+<p>체(field) : 집합 <span class="arithmatex">\(F\)</span> 에 두 이항연산 </p>
+<div class="arithmatex">\[ (x, y) \mapsto x+y, \qquad (x, y) \mapsto x \cdot y \]</div>
+<p>가 주어져서 다음 성질을 만족하면 이를 체라고 한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall a, b, c \in F, a+(b+c) = (a+b)+c\)</span> (더하기의 associative)</p>
+</li>
+<li>
+<p>다음 성질을 만족하는 원소 <span class="arithmatex">\(e \in F\)</span> 가 존재한다. (더하기의 항등원)</p>
+<div class="arithmatex">\[ \forall a \in F, a + e = e + a = a \]</div>
+</li>
+<li>
+<p>각 <span class="arithmatex">\(a \in F\)</span> 에 대하여 다음 성질을 만족하는 원소 <span class="arithmatex">\(x \in F\)</span> 가 존재한다. (더하기의 역원)</p>
+<div class="arithmatex">\[ a + x = x+ a = 0 \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall a, b \in F, a+b = b+a\)</span> (더하기의 commutative)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall a, b, c \in F, a(bc) = (ab)c\)</span> (곱하기의 associative)</p>
+</li>
+<li>
+<p>다음 성질을 만족하는 <span class="arithmatex">\(0\)</span> 이 아닌 원소 <span class="arithmatex">\(1 \in F\)</span> 이 존재한다. (곱하기의 항등원)</p>
+<div class="arithmatex">\[ \forall a \in F, a \cdot 1 = 1 \cdot a = a \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(a \in F \text{ \textbackslash }\{0\}\)</span> 에 대하여 성질 <span class="arithmatex">\(ax = xa = 1\)</span> 을 만족하는 원소 <span class="arithmatex">\(x \in F\)</span> 가 존재한다. (곱하기의 역원)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall a, b \in F, ab = ba\)</span> (곱하기의 commutative)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall a,b,c \in F, a(b+c) = ab + ac\)</span> (더하기와 곱하기의 distributive)</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(x \cdot y\)</span> 를 그냥 <span class="arithmatex">\(xy\)</span> 로 쓸 수 있다. </p>
+</li>
+<li>
+<p>성질 2) 의 더하기의 항등원 <span class="arithmatex">\(e\)</span> 는 유일하다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p>또 다른 항등원 <span class="arithmatex">\(e'\)</span> 가 있다면 </p>
+<div class="arithmatex">\[ e = e + e' = e' \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>더하기의 항등원 <span class="arithmatex">\(e\)</span> 를 <span class="arithmatex">\(0\)</span> 으로 쓰기로 한다. </p>
+</li>
+<li>
+<p>성질 3) 의 더하기의 역원은 유일하다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p>또 다른 역원 <span class="arithmatex">\(y \in F\)</span> 이 있다면 </p>
+<div class="arithmatex">\[ x = x + 0 = x + (a + y) = (x + a) + y = 0 + y = y \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(a \in F\)</span> 에 대한 더하기의 역원을 <span class="arithmatex">\(-a\)</span> 라고 쓰기로 한다. 또한 <span class="arithmatex">\(b + (-a)\)</span> 를 <span class="arithmatex">\(b-a\)</span> 로 쓰기로 한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(a \in F\)</span> 에 대한 곱하기의 역원을 <span class="arithmatex">\(a ^{-1}\)</span> 혹은 <span class="arithmatex">\(\dfrac{1}{a}\)</span> 라고 쓰기로 한다. </p>
+</li>
+<li>
+<p>어떤 집합이 체(field) 라고 함은 더하기와 곱하기가 정의되고, 덧셈/뺄셈/곱셈/나눗셈이 자유롭다는 뜻이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 의 세 원소 <span class="arithmatex">\(a, b, c \in \mathbb{Z}\)</span> 에 대하여 체의 조건 1) - 6) 과 8), 9) 가 성립한다.</p>
+</li>
+</ul>
+<a href="#717ad086f"><div class="admonition tldr" id="717ad086f">
+<p>순서체(ordered field) : 체 <span class="arithmatex">\(F\)</span> 의 부분집합 <span class="arithmatex">\(S\)</span> 에 대하여 집합 </p>
+<div class="arithmatex">\[ -S = \{-a: a \in S\} \]</div>
+<p>를 정의하였을 때, 체 <span class="arithmatex">\(F\)</span> 의 <span class="arithmatex">\(P \neq \varnothing\)</span> 인 <span class="arithmatex">\(P \subset F\)</span> 이 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(a, b \in P \implies a+b,ab \in P\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(F = P \cup \{0\} \cup (-P)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(P \cap \{0\} \cap -P = \varnothing\)</span></p>
+</li>
+</ol>
+<p>을 만족하면 <span class="arithmatex">\(F\)</span> 를 순서체라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이때 <span class="arithmatex">\(P\)</span> 의 원소를 양수(positive number) 라 한다. </p>
+</li>
+<li>
+<p>순서체 <span class="arithmatex">\(F\)</span> 의 두 원소 <span class="arithmatex">\(a, b \in F\)</span> 에 대하여 <span class="arithmatex">\(a -b \in P\)</span> 이면 <span class="arithmatex">\(a\)</span> 가 <span class="arithmatex">\(b\)</span> 보다 크다고 하고 이것을 </p>
+<div class="arithmatex">\[ a &gt; b, b &lt; a \]</div>
+<p>라고 쓴다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(0\)</span> 을 제외한 자연수 집합을 <span class="arithmatex">\(P _{\mathbb{Z}} \subseteq \mathbb{Z}\)</span> 라 두면 순서체 조건 1)-3) 이 성립한다. </p>
+</li>
+</ul>
+<a href="#697affdb3"><div class="admonition tldr" id="697affdb3">
+<p>절댓값(absolute value, modulus) : 순서체 <span class="arithmatex">\(F\)</span> 의 원소 <span class="arithmatex">\(a \in F\)</span> 의 절댓값 <span class="arithmatex">\(|a|\)</span> 를 </p>
+<div class="arithmatex">\[ |a| = \begin{cases} a &amp;a \geq 0\\ -a &amp; a &lt; 0\\ \end{cases} \]</div>
+<p>와 같이 정의한다.</p>
+</div></a>
+<ul>
+<li>절댓값은 실수를 구성할 때 중요한 역할을 한다. </li>
+</ul>
+<a href="#84983902d"><div class="admonition tldr" id="84983902d">
+<p class="admonition-title">정리 2.2.2</p>
+<p>순서체 <span class="arithmatex">\(F\)</span> 의 임의의 원소 <span class="arithmatex">\(a,b,c \in F\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(|a| \geq 0\)</span>, <span class="arithmatex">\(|a| = 0 \iff a = 0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(|ab| = |a| |b|\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(b \geq 0 \implies (|a| \leq b \iff -b \leq a \leq b)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(||a|-|b|| \leq |a \pm b| \leq |a| + |b|\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(|a-c| \leq |a-b| + |b-c|\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>1), 2), 3) 은 가능한 모든 경우를 따져보는 브루트 포싱으로 증명된다. </p>
+<p>3) 에서 <span class="arithmatex">\(b = a\)</span> 이고 <span class="arithmatex">\(b \geq 0\)</span> 라는 조건이 없을 때 </p>
+<div class="arithmatex">\[ -|a| \leq a \leq |a| \]</div>
+<p>임을 알 수 있고 <span class="arithmatex">\(b\)</span> 나 <span class="arithmatex">\(-b\)</span> 에서도 마찬가지이므로 </p>
+<div class="arithmatex">\[ -|b| \leq \pm b \leq |b| \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ -(|a| + |b|) \leq a \pm b \leq |a| + |b| \]</div>
+<div class="arithmatex">\[ \iff |a \pm b| \leq |a| + |b| \]</div>
+<p>이다. 이것으로 4) 의 우측 부등식이 증명되고, 이것에서 좌측 부등식도 쉽게 유도된다. (<em>어떻게 유도되지?</em>)</p>
+<p>5) 는 4) 에서 바로 나온다. (<em>어떻게?..</em>)</p>
+</li>
+</ul>
+<h2 id="_3">유리수의 정의<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<a href="#2b9285e85"><div class="admonition tldr" id="2b9285e85">
+<p>유리수 집합(rational number set) : 집합 <span class="arithmatex">\(\mathbb{Z} \times (\mathbb{Z} \text{ \textbackslash }\{0\})\)</span> 에 관계</p>
+<div class="arithmatex">\[ (a, b) \sim (c, d) \iff ad = cb \]</div>
+<p>를 부여하면 동치관계가 되고, 이것의 분할을 유리수 집합 <span class="arithmatex">\(\mathbb{Q}\)</span></p>
+<div class="arithmatex">\[ \mathbb{Z} \sim (\mathbb{Z} \text{ \textbackslash }\{0\})/\sim = \mathbb{Q} \]</div>
+<p>로 정의한다.</p>
+</div></a>
+<ul>
+<li>
+<p>정수 집합에 체의 조건 7) 이 성립하도록 확장한 것이 유리수 집합이다. 이 과정은 빼기를 하기 위하여 자연수를 정수로 확장한 과정과 비슷하다. </p>
+<p>즉, 유리수 집합 <span class="arithmatex">\(\mathbb{Q}\)</span> 부터는 덧셈/뺄셈/곱셈/나눗셈을 자유롭게 할 수 있는 체(field)이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbb{Q}\)</span> 의 원소 <span class="arithmatex">\([(a, b)]\)</span> 를 유리수라고 한다.</p>
+<ul>
+<li>
+<p>유리수 집합과 그 동치관계를 다룰 때에도 동치류 <span class="arithmatex">\([(a, b)]\)</span> 를 편하게 <span class="arithmatex">\([a, b]\)</span> 로 쓰도록 하자.</p>
+</li>
+<li>
+<p>또한 유리수 <span class="arithmatex">\([a, b]\)</span> 를 더욱 편하게 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 라고 쓰도록 한다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>유리수의 동치관계도 정수에서와 마찬가지로 </p>
+<div class="arithmatex">\[ \dfrac{a}{c} = \dfrac{b}{d} \]</div>
+<p>로 이해하면, 즉 두 정수의 비율로 이해하면 편하다. </p>
+</li>
+<li>
+<p>유리수의 더하기와 곱하기를 </p>
+<div class="arithmatex">\[ [a, b] + [c, d] = [ad + bc, bd], \qquad [a, b] \cdot [c, d] = [ac, bd] \]</div>
+<p>로 정의한다. </p>
+</li>
+<li>
+<p>각 <span class="arithmatex">\(a \in \mathbb{Z}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ a ^{*} = [a, 1] \]</div>
+<p>라고 정의하면 유리수의 더하기의 항등원과 곱하기의 항등원은 각각 </p>
+<div class="arithmatex">\[ 0 ^{*}, 1 ^{*} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#9feabd82d"><div class="admonition tldr" id="9feabd82d">
+<p><span class="arithmatex">\(\mathbb{Q}\)</span> 는 순서체이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(0\)</span> 을 제외한 자연수 집합을 정수 <span class="arithmatex">\(\mathbb{Z}\)</span> 의 양수라는 의미에서 <span class="arithmatex">\(P _{\mathbb{Z}}\)</span> 라고 썼었다. 이 <span class="arithmatex">\(P _{\mathbb{Z}}\)</span> 에 의하여 <span class="arithmatex">\(\mathbb{Z}\)</span> 는 </p>
+<div class="arithmatex">\[ \mathbb{Z} = P_{\mathbb{Z}} \cup \{0\} \cup (-P_{\mathbb{Z}}) \]</div>
+<p>로 분할된다. 그러면 유리수 집합 <span class="arithmatex">\(\mathbb{Q}\)</span> 는 </p>
+<div class="arithmatex">\[ \mathbb{Q} = \mathbb{Z} \times (\mathbb{Z} \text{ \textbackslash }\{0\}) \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ = (P_{\mathbb{Z}} \cup \{0\} \cup (-P_{\mathbb{Z}})) \times (P_{\mathbb{Z}} \cup (-P_{\mathbb{Z}})) \]</div>
+<p>집합 <span class="arithmatex">\(\mathbb{Q} = \mathbb{Z} \times (\mathbb{Z} \text{ \textbackslash }\{0\})\)</span> 의 모든 원소가 </p>
+<div class="arithmatex">\[ \{0\} \times (\mathbb{Z} \text{ \textbackslash }\{0\}), \quad  P_{\mathbb{Z}} \times P_{\mathbb{Z}}, \quad  P_{\mathbb{Z}} \times (-P_{\mathbb{Z}}), \quad  (-P_{\mathbb{Z}}) \times P_{\mathbb{Z}}, \quad  (-P_{\mathbb{Z}}) \times (-P_{\mathbb{Z}}) \]</div>
+<p>로 분할된다. 이때 </p>
+<div class="arithmatex">\[\forall (a, b) \in \mathbb{Z}\times (\mathbb{Z}\text{ \textbackslash }\{0\}), (a,b) \sim (-a, -b)\]</div>
+<p>이므로 임의의 유리수는 세 집합 </p>
+<div class="arithmatex">\[ \{0\} \times P_{\mathbb{Z}}, \qquad P_{\mathbb{Z}} \times P_{\mathbb{Z}}, \qquad (-P_{\mathbb{Z}}) \times P_{\mathbb{Z}} \]</div>
+<p>에 속하는 원소들을 대표원으로 하는 동치류에 의해 결정된다. 이제 </p>
+<div class="arithmatex">\[ P _{\mathbb{Q}} = \{[a, b]:(a,b) \in P_{\mathbb{Z}}\times P_{\mathbb{Z}}\} \]</div>
+<p>라 정의하면 순서체의 조건 2), 3) 이 만족된다. 또한 유리수의 더하기와 곱하기가 </p>
+<div class="arithmatex">\[ [a, b] + [c, d] = [ad + bc, bd], \qquad [a, b] \cdot [c, d] = [ac, bd] \]</div>
+<p>이렇게 정의되었으므로 <span class="arithmatex">\(P _{\mathbb{Q}}\)</span> 에 대하여 닫혀있다. 그러므로 순서체의 조건 1) 도 성립한다. </p>
+<p>그러므로 <span class="arithmatex">\(\mathbb{Q}\)</span> 는 순서체이다. ■ </p>
+</li>
+</ul>
+<a href="#4ce0b7784"><div class="admonition tldr" id="4ce0b7784">
+<p>순서체에 정의된 양수 집합 <span class="arithmatex">\(P\)</span> 에 </p>
+<div class="arithmatex">\[ a \leq b \iff b-a \in P \lor a=b \]</div>
+<p>를 정의하면, 이는 순서관계가 된다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+</li>
+<li>
+<p>또한 이 정리와 <span class="arithmatex">\(\mathbb{Q}\)</span> 가 순서체인 것에 의하여 <span class="arithmatex">\(\mathbb{Q}\)</span> 의 순서관계가 주어진다.</p>
+</li>
+</ul>
+<a href="#dc1b6336f"><div class="admonition tldr" id="dc1b6336f">
+<p>더하기, 곱하기, 순서에 관한한 <span class="arithmatex">\(\mathbb{Z} \subset \mathbb{Q}\)</span> 이다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>함수 <span class="arithmatex">\(a \mapsto a ^{*} = [a, 1] : \mathbb{Z} \to \mathbb{Q}\)</span> 가 단사함수임은 자명하다. 또한 </p>
+<div class="arithmatex">\[ (a+b) ^{*} = a ^{*} + b ^{*} \]</div>
+<div class="arithmatex">\[ (ab)^{*} = a ^{*}b ^{*} \]</div>
+<div class="arithmatex">\[ a \geq b \iff a ^{*} \geq b ^{*} \]</div>
+<p>가 성립하므로 더하기, 곱하기, 순서에 관한 한</p>
+<div class="arithmatex">\[ \mathbb{Z} \subset \mathbb{Q} \]</div>
+<p>이다. </p>
+</li>
+</ul>
+<a href="#116d61a96"><div class="admonition tldr" id="116d61a96">
+<p class="admonition-title">정리 2.2.3</p>
+<p>임의의 순서체 <span class="arithmatex">\(F\)</span> 에 대하여 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall r, s \in \mathbb{Q}, \quad  \gamma (r+s)=\gamma (r)+\gamma (s), \quad  \gamma (rs) = \gamma (r) \gamma (s)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\gamma (P _{\mathbb{Q}}) = \gamma (\mathbb{Q}) \cap P _{F}\)</span></p>
+</li>
+</ol>
+<p>을 만족하는 단사함수 <span class="arithmatex">\(\gamma : \mathbb{Q} \to  F, r \mapsto r \cdot 1_F\)</span> 가 유일하게 존재한다. </p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 임의의 순서체 <span class="arithmatex">\(F\)</span> 가 유리수체 <span class="arithmatex">\(\mathbb{Q}\)</span> 를 포함하며, 두 순서체의 연산과 순서를 구별할 필요가 없음을 말해준다. </p>
+<p>그러므로 임의의 순서체 <span class="arithmatex">\(F\)</span> 를 다룰 때 </p>
+<div class="arithmatex">\[ \mathbb{Q} \subset F \]</div>
+<p>으로 간주한다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>임의의 순서체 <span class="arithmatex">\(F\)</span> 는 더하기와 곱하기의 항등원 <span class="arithmatex">\(0\)</span> 과 <span class="arithmatex">\(1\)</span> 을 가진다. <a href="#e4dca26d8">정리 2.1.2 "집합 <span class="arithmatex">\(X\)</span> 의 한 원소 <span class="arithmatex">\(a \in X\)</span> 와 함수 <span class="arithmatex">\(f: X \to X\)</span> 에 대하여 다음 성질 <span class="arithmatex">\(\gamma (0) = a, \qquad \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))\)</span> 을 만족하는 함수 <span class="arithmatex">\(\gamma : \N \to X\)</span> 가 유일하게 존재한다."</a> 에 의하여 성질 </p>
+<div class="arithmatex">\[ \gamma (0) = 0 \]</div>
+<div class="arithmatex">\[ \gamma (n+1) = \gamma (n ^{+}) = \gamma (n) + 1, \qquad n \in \N \]</div>
+<p>을 만족하는 함수 <span class="arithmatex">\(\gamma : \N \to F\)</span> 가 유일하게 존재한다. 이때 좌변의 <span class="arithmatex">\(\gamma (n+1)\)</span> 의 더하기는 <span class="arithmatex">\(\N\)</span> 에서 정의된 더하기이고, 우변의 <span class="arithmatex">\(\gamma (n)+1\)</span> 는 순서체 <span class="arithmatex">\(F\)</span> 의 더하기이다. 또 우변의 <span class="arithmatex">\(0, 1\)</span> 은 순서체 <span class="arithmatex">\(F\)</span> 의 더하기와 곱하기의 항등원이다.</p>
+<p>이제 <span class="arithmatex">\(m,n \in \N\)</span> 에 대한</p>
+<div class="arithmatex">\[ \gamma (n+m) = \gamma (n) + \gamma (m) \tag{1} \]</div>
+<div class="arithmatex">\[ \gamma (nm) = \gamma (n)\gamma (m) \tag{2} \]</div>
+<p>이 성립함을 보일 것이다. 먼저 <span class="arithmatex">\(m = 0\)</span> 이면 자명하게 성립한다. 수학적 귀납법을 사용하기 위하여 <span class="arithmatex">\(m \in \N\)</span> 에서 성립한다고 가정하면 </p>
+<div class="arithmatex">\[ \gamma (n+m ^{+}) = \gamma ((n + m) ^{+}) = \gamma (n+m)+1 \]</div>
+<div class="arithmatex">\[ = \gamma (n) + \gamma (m) + 1 = \gamma (n) + \gamma (m ^{+}) \]</div>
+<p>이므로 임의의 <span class="arithmatex">\(m, n \in \N\)</span> 에서 <span class="arithmatex">\((1)\)</span> 이 성립함을 알 수 있다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p><span class="arithmatex">\((2)\)</span> 도 마찬가지로 <span class="arithmatex">\(m=0\)</span> 이면 자명하고 귀납법을 사용하여 </p>
+<div class="arithmatex">\[ \gamma (nm ^{+}) = \gamma (nm+n)= \gamma (nm)+\gamma (n) \]</div>
+<div class="arithmatex">\[ = \gamma (n)\gamma (m)+\gamma (n) = \gamma (n)[\gamma (m) +1] = \gamma (n)\gamma (m ^{+}) \]</div>
+<p>가 되어 증명된다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>한편, 임의의 순서체에서 <span class="arithmatex">\(0&lt;1 \implies 1 \in P _{F}\)</span> 이다. 그러므로 <span class="arithmatex">\(\gamma (n) \in P _{F}\)</span> 이면 <span class="arithmatex">\(\gamma (n ^{+}) = \gamma (n) + 1 \in P _{F}\)</span> 이 되어 <span class="arithmatex">\(n \in \N \text{ \textbackslash }\{0\}\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \gamma (n) \in P _{F} \tag{3} \]</div>
+<p>이다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>마지막으로 <span class="arithmatex">\(\gamma : \N \to F\)</span> 가 단사함수임을 보일 것이다. 먼저 <span class="arithmatex">\(n&gt; m, \gamma (n) = \gamma (m)\)</span> 이라고 가정하여 단사함수의 조건에 어긋나게 하자. 그러면 <span class="arithmatex">\(n = m + k\)</span> 인 <span class="arithmatex">\(k \in \N \text{ \textbackslash }\{0\}\)</span> 가 존재하여 </p>
+<div class="arithmatex">\[ \gamma (k) = [\gamma (m) + \gamma (k)] - \gamma (m) \]</div>
+<div class="arithmatex">\[ = \gamma (m+k) - \gamma (m) = \gamma (n) - \gamma (m) = 0 \not \in P _{F} \]</div>
+<p>인데, 이는 <span class="arithmatex">\((3)\)</span> 에 모순이므로 <span class="arithmatex">\(\gamma : \N \to F\)</span> 는 단사함수이다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>이제 <span class="arithmatex">\(\N \subset \mathbb{Z} \subset \mathbb{Q}\)</span> 를 염두하며 <span class="arithmatex">\(\gamma : \N \to F\)</span> 의 정의역을 <span class="arithmatex">\(\mathbb{Q}\)</span> 로 확장할 것이다. 먼저 <span class="arithmatex">\(\mathbb{Z}\)</span> 로 확장하여 함수 <span class="arithmatex">\(\gamma : \mathbb{Z} \to F\)</span> 를 <span class="arithmatex">\(n \in \N\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \gamma (n) = \gamma (n), \qquad \gamma (-n) = - \gamma (n) \]</div>
+<p>라 정의하자. 두 함수 <span class="arithmatex">\(\gamma : \N \to F, \gamma : \mathbb{Z} \to F\)</span> 는 함숫값이 <span class="arithmatex">\(\N\)</span> 위에서 똑같으므로 같은 기호를 사용해도 된다. 비슷하게 <span class="arithmatex">\(\gamma : \mathbb{Q} \to F\)</span> 를 </p>
+<div class="arithmatex">\[ \gamma \bigg (\dfrac{a}{b}\bigg ) = \dfrac{\gamma (a)}{\gamma (b)}, \qquad (a,b) \in \mathbb{Z}\times (\mathbb{Z}\text{ \textbackslash }\{0\}) \]</div>
+<p>로 정의하자. 그러면 이렇게 정의된 함수 <span class="arithmatex">\(\gamma : \mathbb{Q} \to F\)</span> 는 잘 정의되어 있고, <span class="arithmatex">\((1),(2),(3)\)</span> 을 만족하는 단사함수가 되지만 여백이 부족해서 증명을 마저 쓸 수가 없다. ■ </p>
+</li>
+<li>
+<p>순서체 <span class="arithmatex">\(F\)</span> 의 곱하기의 항등원을 <span class="arithmatex">\(1 _{F}\)</span> 라 두면 <span class="arithmatex">\(\forall r \in \mathbb{Q}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \gamma (r) = r \cdot 1_F \]</div>
+<p>이다. </p>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(\gamma : \N \to F\)</span> 는 다음과 같이 정의되었다.</p>
+<div class="arithmatex">\[ \gamma (0) = 0 \]</div>
+<div class="arithmatex">\[ \gamma (n+1) = \gamma (n ^{+}) = \gamma (n) + 1, \qquad n \in \N \]</div>
+<p>이 정의는 더하기의 정의 "각 자연수 <span class="arithmatex">\(m \in \N\)</span> 에 대하여 <span class="arithmatex">\(\gamma _m(0) = m, \qquad n \in \N \implies \gamma _m(n ^{+}) = [\gamma _m(n)]^{+}\)</span> 를 만족하면서 유일하게 존재하는 함수 <span class="arithmatex">\(\gamma _m:\N \to \N\)</span> 에 대하여 자연수의 더하기를 <span class="arithmatex">\(m, n \in \N\)</span> 에 대하여 <span class="arithmatex">\(m + n = \gamma _m(n)\)</span> 라고 정의한다." 에 의하여 </p>
+<div class="arithmatex">\[ \gamma _0(n) = 0 + n \]</div>
+<p>와도 같다. 그러므로 <span class="arithmatex">\(r \in \N, \gamma (r) = r\)</span> 이다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p><span class="arithmatex">\(\gamma : \mathbb{Z} \to F\)</span> 는 </p>
+<div class="arithmatex">\[ \gamma (n) = \gamma (n), \qquad \gamma (-n) = - \gamma (n) \]</div>
+<p>와 같이 정의되었는데, 이는 곧 </p>
+<div class="arithmatex">\[ \gamma (r) = \begin{cases} r &amp; r \in \N\\ - \gamma (-r) &amp; r \in \mathbb{Z} \text{\textbackslash}\N\\ \end{cases} \]</div>
+<p>이므로 <span class="arithmatex">\(r \in \mathbb{Z}, \gamma (r) = r\)</span> 이다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p><span class="arithmatex">\(\gamma : \mathbb{Q} \to F\)</span> 는 </p>
+<div class="arithmatex">\[ \gamma \bigg (\dfrac{a}{b}\bigg ) = \dfrac{\gamma (a)}{\gamma (b)}, \qquad (a,b) \in \mathbb{Z}\times (\mathbb{Z}\text{ \textbackslash }\{0\}) \]</div>
+<p>와 같이 정의되었는데 <span class="arithmatex">\(\gamma (a) \in \mathbb{Z}, \gamma (b) \in \mathbb{Z} \text{\textbackslash}\{0\}\)</span> 이므로 <span class="arithmatex">\(r \in \mathbb{Z}, \gamma (r) = r\)</span> 에서</p>
+<div class="arithmatex">\[ \gamma \bigg (\dfrac{a}{b}\bigg ) = \dfrac{a}{b} \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+</li>
+<li>
+<p>단사함수 <span class="arithmatex">\(\gamma\)</span> 는 반드시 <span class="arithmatex">\(\gamma (r) = r \cdot 1_F\)</span> 이다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\gamma\)</span> 가 항등함수가 아니라고 가정하면 <span class="arithmatex">\(\gamma (r) \neq r\)</span> 이다. 그런데도 </p>
+<div class="arithmatex">\[\forall r, s \in \mathbb{Q}, \quad  \gamma (r+s)=\gamma (r)+\gamma (s), \quad  \gamma (rs) = \gamma (r) \gamma (s)\]</div>
+<p>이 성립한다. 이때 <span class="arithmatex">\(s = 0\)</span> 라 두면 </p>
+<div class="arithmatex">\[ \gamma (r + 0) = \gamma (r) + \gamma (0) \iff  \gamma (r) = \gamma (r) + \gamma (0) \iff  0 = 0 + \gamma (0) \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ \gamma (0) = 0 \]</div>
+<p>이다. 그런데 <span class="arithmatex">\(\gamma (r) \neq r\)</span> 이므로 이는 모순이다. 그러므로 <span class="arithmatex">\(\gamma\)</span> 는 반드시 항등함수이다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#584af2c07"><div class="admonition tldr" id="584af2c07">
+<p class="admonition-title">정리 2.2.4</p>
+<p>순서체 <span class="arithmatex">\(F\)</span> 에 대하여 다음이 동치이고, 이 조건을 만족하는 순서체 <span class="arithmatex">\(F\)</span> 를 아르키메데스의 성질을 만족한다고 한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(x&gt;0 \implies  \exists n \in \N \text{ \textbackslash }\{0\} \text{ s.t.  }\  x &gt; \dfrac{1}{n}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(y&gt;0 \implies  \exists n \in \N \text{ \textbackslash }\{0\} \text{ s.t.  }\  y &lt; n\)</span></p>
+</li>
+<li>
+<p>집합 <span class="arithmatex">\(\N \subset F\)</span> 은 위로 유계가 아니다. </p>
+</li>
+<li>
+<p>임의의 <span class="arithmatex">\(x,y&gt;0\)</span> 에 대하여 <span class="arithmatex">\(y&lt;nx\)</span> 를 만족하는 자연수 <span class="arithmatex">\(n \in \N \text{ \textbackslash }\{0\}\)</span> 이 존재한다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>순서체 <span class="arithmatex">\(F\)</span> 가 이 동치 조건을 만족하면 아르키메데스의 성질을 만족한다고 한다. </p>
+</li>
+<li>
+<p>증명 </p>
+</li>
+</ul>
+<a href="#7ed1dd713"><div class="admonition tldr" id="7ed1dd713">
+<p>아르키메데스의 성질(Archimedean property) : 전순서를 가지는 군 <span class="arithmatex">\(G\)</span> 의 양의 원소 <span class="arithmatex">\(x, y\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ y &lt; n \cdot x \]</div>
+<p>를 만족하는 <span class="arithmatex">\(n \in \N\)</span> 이 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, 아무리 작은 원소라도 그것을 유한번 더하여 어떤 원소보다 커질 수 있다면 아르키메데스 성질을 가지고 있다는 것이다. </p>
+</li>
+<li>
+<p>전순서를 가지는 군 <span class="arithmatex">\(G\)</span> 의 양의 원소 <span class="arithmatex">\(x, y\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \forall n \in \N, nx &lt; y \]</div>
+<p>이면 <span class="arithmatex">\(x\)</span> 는 <span class="arithmatex">\(y\)</span> 의 무한소(infinitesimal) 이며, <span class="arithmatex">\(y\)</span> 는 <span class="arithmatex">\(x\)</span> 의 무한(infinite)이다. 즉, 무한소와 무한이 원소로써 존재하지 않는 군 <span class="arithmatex">\(G\)</span> 는 아르키메데스의 성질을 가진다는 것이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\mathbb{Z}, \mathbb{Q}, \R\)</span> 는 아르키메데스 성질을 만족한다.</p>
+<p>초실수체 <span class="arithmatex">\(^{*}\R\)</span> 은 아르키메데스의 체가 아니다.</p>
+</li>
+</ul>
+<a href="#225d37510"><div class="admonition tldr" id="225d37510">
+<p class="admonition-title">정리 2.2.5</p>
+<p>유리수체는 아르키메데스의 성질을 만족한다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[ m,n \in P _{\mathbb{Z}} \to \dfrac{n}{m}&lt;2n \]</div>
+<ul>
+<li>
+<p>내 생각에는..</p>
+<p>이 증명은 4 번째 명제가 유리수체에서 성립함을 보이려 한다. <span class="arithmatex">\(0\)</span> 이 아닌 자연수 <span class="arithmatex">\(m, n\)</span> 을 기반으로 유리수체의 원소 <span class="arithmatex">\(y := \dfrac{n}{m}\)</span> 를 정의하고, 유리수체의 원소 <span class="arithmatex">\(x := \dfrac{n}{1}\)</span> 를 정의하며, <span class="arithmatex">\(n := 2\)</span> 로 두었다.</p>
+<p>이로써 4 번째 명제가 "<span class="arithmatex">\(n, \dfrac{n}{m} &gt; 0\)</span> 에 대하여 <span class="arithmatex">\(\dfrac{n}{m} &lt; 2n\)</span> 을 만족하는 자연수 <span class="arithmatex">\(2 \in \N \text{ \textbackslash }\{0\}\)</span> 가 존재한다." 로 특수화되었다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_4">데데킨트 절단을 기반으로 정의하는 실수<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<a href="#219959e7e"><div class="admonition tldr" id="219959e7e">
+<p>데데킨트 절단(Dedekind Cut) : 유리수들의 집합 <span class="arithmatex">\(\alpha \subset \mathbb{Q}\)</span> 가 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\alpha \neq \varnothing , \alpha \neq \mathbb{Q}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(p \in \alpha , q \in \mathbb{Q}, q &lt; p \to q \in \alpha\)</span> (아래로 무계)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(p \in \alpha \to \exists r \in \alpha \text{ s.t.  }\  p &lt; r\)</span> (최댓값이 존재하지 않음)</p>
+</li>
+</ol>
+<p>를 만족하면 데데킨트 절단이라고 한다.</p>
+</div></a>
+<ul>
+<li>혹은 더욱 편하게 그냥 절단이라고도 한다. </li>
+</ul>
+<a href="#8053bcb34"><div class="admonition tldr" id="8053bcb34">
+<p><span class="arithmatex">\(\forall r \in \mathbb{Q}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ r ^{*} = \{p \in \mathbb{Q} : p &lt; r\} \]</div>
+<p>은 절단이다. </p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>집합 </p>
+<div class="arithmatex">\[ \alpha = \{p \in \mathbb{Q} : p \leq 0\} \cup \{p \in \mathbb{Q} : 0 &lt; p, p ^{2} &lt; 2\} \]</div>
+<p>이 절단임을 보이자.</p>
+<p><span class="arithmatex">\(0 \in \alpha , 2 \not \in \alpha\)</span> 이므로 절단의 조건 1) 을 만족한다. </p>
+<p><span class="arithmatex">\(q &lt; p \in \alpha\)</span> 일 때 <span class="arithmatex">\(q \leq 0 \to q \in \alpha\)</span> 이고, <span class="arithmatex">\(0 &lt; q &lt; p \land p ^{2} &lt; 2 \to q ^{2} &lt; 2\)</span> 이므로 <span class="arithmatex">\(q \in \alpha\)</span> 이다. 이로써 절단의 조건 2) 를 만족한다. </p>
+<p><span class="arithmatex">\(p \in \alpha\)</span> 에 대하여 <span class="arithmatex">\(p \leq 0 \to p &lt; 1 \in \alpha\)</span> 이다. 한편 <span class="arithmatex">\(0 &lt; p, p ^{2} &lt; 2\)</span> 이면 <a href="#225d37510">정리 2.2.5 "유리수체는 아르키메데스의 성질을 만족한다."</a> 를 적용하여 </p>
+<div class="arithmatex">\[\dfrac{1}{n}(2p+1) &lt; 2 - p ^{2}\]</div>
+<p>인 <span class="arithmatex">\(n \in \N\)</span> 을 잡을 수 있다. 그러면 </p>
+<div class="arithmatex">\[ \iff p ^{2} + \dfrac{2}{n}p + \dfrac{1}{n} &lt; 2 \]</div>
+<p>에서 <span class="arithmatex">\(\dfrac{1}{n} \leq \dfrac{1}{n ^{2}}\)</span> 이므로</p>
+<div class="arithmatex">\[ \iff  \bigg (p + \dfrac{1}{n}\bigg ) ^{2} \leq p ^{2} + \dfrac{2}{n}p + \dfrac{1}{n} &lt; 2 \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ p + \dfrac{1}{n} \in \alpha\]</div>
+<p>이다. 이로써 절단의 조건 3) 도 성립한다. </p>
+<p>그러므로 <span class="arithmatex">\(\alpha\)</span> 는 절단이다. ■ </p>
+<p>한편 이 절단 <span class="arithmatex">\(\alpha\)</span> 는 무리수 <span class="arithmatex">\(\sqrt[]{2}\)</span> 를 유리수로부터 정의하기 위하여 존재하는데, 더 명확하게 이를 보이기 위하여 </p>
+<div class="arithmatex">\[ \forall r \in \mathbb{Q}, \alpha \neq r ^{*} = \{p \in \mathbb{Q} : p &lt; r\}\]</div>
+<p>임을 보이자. 이를 위해 <span class="arithmatex">\(\alpha  = r ^{*}\)</span> 인 유리수 <span class="arithmatex">\(r \in \mathbb{Q}\)</span> 이 있다고 가정한다. 만약 <span class="arithmatex">\(r ^{2} &lt; 2\)</span> 이면 위에서 한 것처럼 </p>
+<div class="arithmatex">\[ \bigg (r + \dfrac{1}{n}\bigg )^{2} &lt; 2 \]</div>
+<p>인 자연수 <span class="arithmatex">\(n \in \N\)</span> 이 존재한다. 그러면 <span class="arithmatex">\(r + \dfrac{1}{n} \in \alpha \land r + \dfrac{1}{n} \not \in r ^{*}\)</span> 이 되어 모순이다. </p>
+<p>반대로 <span class="arithmatex">\(r ^{2} &gt; 2\)</span> 라고 가정하자. 그러면 비슷하게 </p>
+<div class="arithmatex">\[ \bigg (r - \dfrac{1}{m}\bigg )^{2} &gt; 2 \]</div>
+<p>인 자연수 <span class="arithmatex">\(m \in \N\)</span> 이 존재한다. 그러면 <span class="arithmatex">\(r - \dfrac{1}{m} \not\in \alpha \land r - \dfrac{1}{m} \in r ^{*}\)</span> 가 되어 모순이다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore r ^{2} = 2 \]</div>
+<p>인데 이와같은 <span class="arithmatex">\(r \in \mathbb{Q}\)</span> 는 존재하지 않는다. 왜냐하면 무리수이기 때문이다. ■ </p>
+</li>
+</ul>
+<a href="#1266a8873"><div class="admonition tldr" id="1266a8873">
+<p>절단 <span class="arithmatex">\(\alpha\)</span> 에 대하여 <span class="arithmatex">\(\alpha ^{c} = \mathbb{Q} \text{ \textbackslash }\alpha\)</span> 라 두면 </p>
+<div class="arithmatex">\[ p \in \alpha , q \in \alpha ^{c} \implies p &lt; q, \qquad r \in \alpha ^{c}, r &lt; s \implies s \in \alpha ^{c} \]</div>
+<p>가 성립한다.</p>
+</div></a>
+<ul>
+<li>
+<p>그러므로 두 집합 <span class="arithmatex">\(\alpha , \alpha ^{c}\)</span> 를 수직선 위의 점들로 보면, 다음과 같이 각각이 수직선을 왼쪽과 오른쪽으로 분할하는 것으로 표현된다. 단, 왼쪽 점들 <span class="arithmatex">\(\alpha\)</span> 는 절단의 조건 3) 에 의하여 최댓값을 가지지 않는다. </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Dedekind_cut_sqrt_2.svg"/></p>
+</li>
+</ul>
+<a href="#e5bf0a756"><div class="admonition tldr" id="e5bf0a756">
+<p>실수 집합(real number set) : 데데킨트 절단 전체의 집합 <span class="arithmatex">\(\R\)</span> 이다. </p>
+</div></a>
+<ul>
+<li>
+<p>유리수 <span class="arithmatex">\(\mathbb{Q}\)</span> 에 의하여 정의된 모든 절단들은 그 절단으로 자동으로 생성되는 오른쪽 절단과 함께 유리수나 무리수를 그 사이에 둘 수 있게 된다. 가령 위에서 살펴본 절단이 무리수 <span class="arithmatex">\(\sqrt[]{2}\)</span> 를 표현한 것처럼 말이다.</p>
+<p>이로써 모든 절단을 곧 모든 유리수와 모든 무리수로 대응시키는 전단사 함수를 만들 수 있다(<em>내 생각이라서 증명 필요</em>). 그러므로 실수(유리수와 무리수)를 데데킨트 절단으로 구성할 수 있다는 것이다. </p>
+</li>
+<li>
+<p>양의 실수를 <span class="arithmatex">\(0 ^{*} = \{p \in \mathbb{Q} : p &lt; 0\}\)</span> 에 대하여</p>
+<div class="arithmatex">\[ P _{\R} = \{\alpha \in \R : \alpha &gt; 0 ^{*}\} \]</div>
+<p>라고 둔다.</p>
+</li>
+</ul>
+<a href="#458a3d85a"><div class="admonition tldr" id="458a3d85a">
+<p>실수 집합과 데데킨트 절단 집합 사이에 전단사 사상이 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 증명은 모든 실수가 데데킨드 절단으로 하나도 빠짐없이 대응되고, 그 역도 성립함을 말해준다.</p>
+</li>
+<li>
+<p>증명 (<a href="https://proofwiki.org/wiki/Reals_are_Isomorphic_to_Dedekind_Cuts">https://proofwiki.org/wiki/Reals_are_Isomorphic_to_Dedekind_Cuts</a>)</p>
+<p><span class="arithmatex">\(\R\)</span> 과 데데킨트 절단 집합 <span class="arithmatex">\(\mathscr{D}\)</span> 사이의 사상 <span class="arithmatex">\(f:\R \to \mathscr{D}\)</span></p>
+<div class="arithmatex">\[ \forall x \in \R: f(x) = \{y \in \mathbb{Q} : y &lt; x\} \]</div>
+<p>이 전단사임을 보이자.</p>
+<p>먼저 <span class="arithmatex">\(\forall x \in \R : f(x) \in \mathscr{D}\)</span> 를 보일 것이다. <span class="arithmatex">\(x \in \R\)</span> 라고 하자. 우리는 <span class="arithmatex">\(f(x)\)</span> 가 </p>
+<div class="arithmatex">\[ \forall z \in f(x) : \forall y \in \mathbb{Q} : y &lt; z \implies y \in f(x) \tag{1} \]</div>
+<div class="arithmatex">\[ \forall z \in f(x) : \exists y \in f(x) : z &lt; y \tag{2} \]</div>
+<p>인 <span class="arithmatex">\(\mathbb{Q}\)</span> 의 진부분집합 임을 보여야 한다. 우선 <span class="arithmatex">\(f\)</span> 의 정의에 의하여 <span class="arithmatex">\(x \not\in f(x) = \{y \in \mathbb{Q} : y &lt; x\}\)</span> 이므로 <span class="arithmatex">\(f\)</span> 는 <span class="arithmatex">\(\mathbb{Q}\)</span> 의 진부분집합 이다. ▲ </p>
+<p><span class="arithmatex">\(z \in f(x), y \in \mathbb{Q} \text{ s.t. } y &lt; z\)</span> 이라고 하자. 그러면 <span class="arithmatex">\(f(x)\)</span> 의 정의 에 의하여 <span class="arithmatex">\(z &lt; x\)</span> 이므로 <span class="arithmatex">\(y &lt; z &lt; x\)</span> 인데, <span class="arithmatex">\(f(x)\)</span> 의 정의에 의하여 <span class="arithmatex">\(y \in f(x)\)</span> 이다. 이로써 <span class="arithmatex">\((1)\)</span> 이 증명되었다. ▲ </p>
+<p><span class="arithmatex">\(f(x)\)</span> 의 정의에 의하여 <span class="arithmatex">\(z &lt; x\)</span> 인데 <a href="#849201a15">정리 2.5.2 "완비순서체 <span class="arithmatex">\(F\)</span> 의 두 원소 <span class="arithmatex">\(x, y \in F\)</span> 가 <span class="arithmatex">\(x &lt; y\)</span> 이면 <span class="arithmatex">\(x&lt;r&lt;y\)</span> 를 만족하는 유리수 <span class="arithmatex">\(r \in \mathbb{Q} \subset F\)</span> 이 존재한다."</a> 에 의하여 </p>
+<div class="arithmatex">\[ \exists r \in \mathbb{Q} : z &lt; r &lt; x \]</div>
+<p>이다. 그러면 <span class="arithmatex">\(f(x)\)</span> 의 정의에 의하여 <span class="arithmatex">\(r \in f(x)\)</span> 이므로 <span class="arithmatex">\(\exists r \in f(x) : z &lt; r\)</span> 이 되어 <span class="arithmatex">\((2)\)</span> 가 증명되었다. ▲ </p>
+<p>이제 <span class="arithmatex">\(f\)</span> 가 단사이면서 전사임을 보이면 된다. </p>
+<p>먼저 <span class="arithmatex">\(f: \R \to \mathscr{D}\)</span> 가 단사임을 보이자. <span class="arithmatex">\(x_1, x_2 \in \R\)</span> 에 대하여 <span class="arithmatex">\(f(x_1) = f(x_2) \implies x_1 \neq x_2\)</span> 라고 하자. 이때 <span class="arithmatex">\(x_1 &lt; x_2\)</span> 라고 가정해도 무방하므로 <a href="#849201a15">정리 2.5.2 "완비순서체 <span class="arithmatex">\(F\)</span> 의 두 원소 <span class="arithmatex">\(x, y \in F\)</span> 가 <span class="arithmatex">\(x &lt; y\)</span> 이면 <span class="arithmatex">\(x&lt;r&lt;y\)</span> 를 만족하는 유리수 <span class="arithmatex">\(r \in \mathbb{Q} \subset F\)</span> 이 존재한다."</a> 에 의하여 </p>
+<div class="arithmatex">\[ \exists r \in \mathbb{Q} : x_1 &lt; r &lt; x_2 \]</div>
+<p>이다. 그러면 <span class="arithmatex">\(f(x)\)</span> 의 정의에 의하여 <span class="arithmatex">\(r \not\in f(x_1) \land r \in f(x_2)\)</span> 이다. 이는 <span class="arithmatex">\(f(x_1) = f(x_2)\)</span> 에 모순이다. 그러므로 <span class="arithmatex">\(x_1 = x_2\)</span> 이다. 그러므로 <span class="arithmatex">\(f\)</span> 는 단사이다. ▲ </p>
+<p>이제 <span class="arithmatex">\(f: \R \to \mathscr{D}\)</span> 가 전사임을 보일 것이다. 이를 위하여 <span class="arithmatex">\(L \in \mathscr{D}\)</span> 에 대하여 <span class="arithmatex">\(\exists  x \in \R \text{ s.t. } f(x) = L\)</span> 임을 보이면 된다. 절단의 정의에 의하여 <span class="arithmatex">\(L\)</span> 은 <span class="arithmatex">\(\mathbb{Q}\)</span> 의 진부분집합 이고 진부분집합 의 정의에 의하여 </p>
+<div class="arithmatex">\[ \exists r \in \mathbb{Q} : r \not\in L \]</div>
+<p>이다. 그러면 절단의 정의에 의하여 </p>
+<div class="arithmatex">\[ \forall x \in L : \forall y \in \mathbb{Q} : y &lt; x \implies y \in L \tag{3} \]</div>
+<p>이므로 <span class="arithmatex">\(\forall x \in L : r \not &lt; x \land r \neq x\)</span> 이고, 결국 <span class="arithmatex">\(\forall x \in L : x &lt; r\)</span> 이다. 그러면 <span class="arithmatex">\(L\)</span> 은 위로 유계이고 <span class="arithmatex">\(\sup (L) \leq r\)</span> 이 성립한다. 한편 절단의 상한이 실수에 대응되므로 <span class="arithmatex">\(\sup (L) \in \R\)</span> 이다. 이때 상한의 정의에 의하여 </p>
+<div class="arithmatex">\[ \forall x \in L : x &lt; \sup (L) \]</div>
+<p>이다. 이제 다음을 증명할 것이다. 이것이 증명되면 <span class="arithmatex">\(L\)</span> 에 대응되는 실수가 <span class="arithmatex">\(\sup (L)\)</span> 임이 증명되어 <span class="arithmatex">\(L = f(\sup (L))\)</span> 이므로 공역의 임의의 원소에 대응되는 정의역의 원소가 존재한다고 할 수 있다. 그러면 <span class="arithmatex">\(f: \R \to \mathscr{D}\)</span> 이 전사임이 증명되고, 이로써 모든 증명이 끝난다.</p>
+<div class="arithmatex">\[ \forall x \in \mathbb{Q} : x &lt; \sup (L) \implies x \in L \]</div>
+<p><span class="arithmatex">\(x \in \mathbb{Q}\)</span> 가 <span class="arithmatex">\(x &lt; \sup (L)\)</span> 인데 <span class="arithmatex">\(x \not\in L\)</span> 이라고 하자. </p>
+<p><span class="arithmatex">\(x\)</span> 이 <span class="arithmatex">\(L\)</span> 에 속하지 않으므로 절단의 정의 <span class="arithmatex">\((3)\)</span> 에 의하여 <span class="arithmatex">\(\forall y \in L : x \geq y\)</span> 이다. 그러면 <span class="arithmatex">\(x\)</span> 은 <span class="arithmatex">\(L\)</span> 의 상계이고 <span class="arithmatex">\(x \geq \sup (L)\)</span> 이다. 이는 <span class="arithmatex">\(x &lt; \sup (L)\)</span> 와 모순이다. ■ </p>
+<ul>
+<li>아.. proofwiki 에서 마지막 부분에 <span class="arithmatex">\(x\)</span> 를 <span class="arithmatex">\(r\)</span> 로 써놔서 엄청 헷갈렸네. 아으..</li>
+</ul>
+</li>
+</ul>
+<a href="#dfffe8044"><div class="admonition tldr" id="dfffe8044">
+<p>실수의 순서관계 : 두 절단 <span class="arithmatex">\(\alpha , \beta\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \alpha \leq \beta \iff \alpha \subset \beta \]</div>
+<p>로 정의한다.</p>
+</div></a>
+<ul>
+<li>
+<p>물론 <span class="arithmatex">\(\alpha \leq \beta \land \alpha \neq \beta\)</span> 를 </p>
+<div class="arithmatex">\[ \alpha &lt; \beta \]</div>
+<p>로 표기한다. </p>
+</li>
+</ul>
+<a href="#0cca38690"><div class="admonition tldr" id="0cca38690">
+<p class="admonition-title">정리 2.3.1</p>
+<p><span class="arithmatex">\(\forall \alpha , \beta \in \R\)</span> 에 대하여 다음 중 한 명제만 성립한다. </p>
+<div class="arithmatex">\[ \alpha &gt; \beta , \qquad \alpha = \beta , \qquad \alpha &lt; \beta \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>만약 <span class="arithmatex">\(\beta \subset \alpha\)</span> 이면 <span class="arithmatex">\(p \not \in \beta\)</span> 인 <span class="arithmatex">\(p \in \alpha\)</span> 가 존재한다. 이때 <span class="arithmatex">\(q \in \beta\)</span> 이면 <span class="arithmatex">\(p \not\in \beta\)</span> 로부터 <span class="arithmatex">\(q&lt;p\)</span> 임을 알 수 있으므로 <span class="arithmatex">\(q \in \alpha\)</span> 이다. </p>
+<p>즉, <span class="arithmatex">\(\alpha \subset \beta\)</span> 가 아니면 <span class="arithmatex">\(\beta \subset \alpha\)</span> 가 되므로 두 절단 <span class="arithmatex">\(\alpha , \beta\)</span> 가 주어지면 <span class="arithmatex">\(\alpha \leq \beta  \lor \alpha \geq \beta\)</span> 이다. ■ </p>
+</li>
+<li>
+<p>이 정리는 양의 실수 <span class="arithmatex">\(P _{\R} = \{\alpha \in \R : \alpha &gt; 0 ^{*}\}\)</span> 가 순서체의 조건 2), 3) 을 만족함을 말해준다. </p>
+</li>
+<li>
+<p>그냥, 어떤 절단들이 주어지면 최소상계가 더 오른쪽에 주어진 절단이 왼쪽의 절단을 전부 다 포함한다는 것을 떠올리면 된다. 이것이 아닐 경우 두 절단은 서로 같다.</p>
+</li>
+</ul>
+<a href="#4e470d808"><div class="admonition tldr" id="4e470d808">
+<div class="arithmatex">\[ P _{\R} := \{\alpha \in \R :\alpha &gt; 0 ^{*} \} \]</div>
+</div></a>
+<a href="#febb2f17d"><div class="admonition tldr" id="febb2f17d">
+<p class="admonition-title">정리 2.3.2</p>
+<p><span class="arithmatex">\(A \neq \varnothing\)</span> 인 집합 <span class="arithmatex">\(A \subset \R\)</span> 가 위로 유계이면 <span class="arithmatex">\(A\)</span> 는 최소상계를 갖는다. </p>
+</div></a>
+<ul>
+<li>
+<p>실수 <span class="arithmatex">\(\R\)</span> 을 데데킨트 절단 전체의 모임으로 정의했기 때문에 <span class="arithmatex">\(r \in \R\)</span> 은 절단 중 하나라고 생각하면 되고, <span class="arithmatex">\(A \subset \R\)</span> 은 몇몇 절단의 모임이라고 생각하면 편하다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>(<em><span class="arithmatex">\(A\)</span>: 실수의 부분집합. 즉, 절단들의 모임. 절단은 아래로 무계인 유리수 집합.</em>)</p>
+<p><span class="arithmatex">\(A\)</span> 가 위로 유계일 때, 즉 상계를 가질 때 <span class="arithmatex">\(\alpha  = \bigcup_{}^{}\{\beta \in A\}\)</span> 가 <span class="arithmatex">\(A\)</span> 의 최소상계임을 보이려 한다. </p>
+<p>(<em><span class="arithmatex">\(\alpha\)</span>: 실수의 부분집합의 합집합. 즉, 하나의 절단.</em>)</p>
+<p>먼저 <span class="arithmatex">\(\alpha \subset \mathbb{Q}\)</span> 가 절단임을 보이자. <span class="arithmatex">\(\beta \in A\)</span> 를 하나 잡으면 <span class="arithmatex">\(\alpha \supset \beta \neq \varnothing\)</span> 이고, <span class="arithmatex">\(A\)</span> 의 상계 <span class="arithmatex">\(\gamma \in \R\)</span> 를 하나 잡으면 <span class="arithmatex">\(\alpha \subset \gamma \subsetneq \mathbb{Q}\)</span> 이다. (<em>왜냐하면 절단이란 최댓값을 갖지 않고 아래로 무계인 유리수 집합이므로 <span class="arithmatex">\(\bigcup_{}^{}\{\beta \in A\}\)</span> 는 <span class="arithmatex">\(A\)</span> 에 속한 실수 중 가장 큰 실수, 즉 가장 우측에 수직선을 분할한 절단으로 여겨진다. 이는 모든 실수가 곧 절단이고, 그 절단들에 합집합 연산을 하면 수직선을 가장 오른쪽에 분할한 절단이 다른 모든 절단을 집어삼키기(?) 때문이다.</em>)</p>
+<p>만약 <span class="arithmatex">\(p \in \alpha\)</span> 이면 <span class="arithmatex">\(p  \in \beta\)</span> 인 <span class="arithmatex">\(\beta \in A\)</span> 가 존재한다. (<em>즉, <span class="arithmatex">\(\alpha\)</span> 라는 절단은 곧 유리수 집합이므로 <span class="arithmatex">\(\alpha\)</span> 에 속한 유리수가 곧 <span class="arithmatex">\(\beta\)</span> 에도 속하는 절단 <span class="arithmatex">\(\beta\)</span> 가 <span class="arithmatex">\(A\)</span> 에 존재한다는 것.</em>) </p>
+<p>이때 <span class="arithmatex">\(q &lt; p\)</span> 이면 <span class="arithmatex">\(q \in \beta \subset \alpha\)</span> 이므로 절단의 조건 2) 가 <span class="arithmatex">\(\alpha\)</span> 에 성립함이 증명된다.</p>
+<p>또한 <span class="arithmatex">\(p &lt; q\)</span> 인 <span class="arithmatex">\(q \in \beta\)</span> 를 잡으면 <span class="arithmatex">\(q \in \alpha\)</span> 이므로 절단의 조건 3) 이 <span class="arithmatex">\(\alpha\)</span> 에 성립하고, 그러므로 </p>
+<div class="arithmatex">\[\alpha \in \R\]</div>
+<p>이다.</p>
+<p>이제 <span class="arithmatex">\(\alpha\)</span> 가 <span class="arithmatex">\(A\)</span> 의 최소상계임을 보이자. 먼저 <span class="arithmatex">\(\alpha\)</span> 가 <span class="arithmatex">\(A\)</span> 의 상계임은 자명하다. (<em>상계의 정의에 따라 모든 <span class="arithmatex">\(A\)</span> 의 원소 <span class="arithmatex">\(a\)</span> 가 <span class="arithmatex">\(a \leq \alpha\)</span> 를 만족하기 때문.</em>) 이제 <span class="arithmatex">\(\alpha\)</span> 가 상계이지만 최소상계가 아니라고 가정하고 <span class="arithmatex">\(\delta\)</span> 를 최소상계라고 두자. 즉, </p>
+<div class="arithmatex">\[\delta &lt; \alpha\]</div>
+<p>와 같이 두자. 그러면 <span class="arithmatex">\(\delta \subsetneq \alpha\)</span> 이므로 유리수 <span class="arithmatex">\(r \in \alpha \text{ \textbackslash }\delta\)</span> 가 존재한다. 이때 <span class="arithmatex">\(r \in \alpha\)</span> 로부터 <span class="arithmatex">\(r \in \beta\)</span> 인 <span class="arithmatex">\(\beta \in A\)</span> 가 존재한다. 그렇다면 <span class="arithmatex">\(r \in \beta \land r \not\in \delta \implies \beta \not \leq \delta\)</span> 이고 <a href="#0cca38690">정리 2.3.1 "<span class="arithmatex">\(\forall \alpha , \beta \in \R\)</span> 에 대하여 다음 중 한 명제만 성립한다. <span class="arithmatex">\(\alpha &gt; \beta ,  \alpha = \beta ,  \alpha &lt; \beta\)</span>"</a></p>
+<p>에 의하여 <span class="arithmatex">\(\delta &lt; \beta\)</span> 이다. 그런데 <span class="arithmatex">\(\beta \in A\)</span> 이므로 <span class="arithmatex">\(\delta\)</span> 는 자명하게 <span class="arithmatex">\(A\)</span> 의 최소상계가 아니다. 이는 가정 "<span class="arithmatex">\(\delta\)</span> 가 최소상계이다" 에 모순이므로 <span class="arithmatex">\(\delta\)</span> 가 <span class="arithmatex">\(A\)</span> 의 최소상계라면 </p>
+<div class="arithmatex">\[\delta \geq \alpha\]</div>
+<p>이것은 명백하게 <span class="arithmatex">\(\alpha\)</span> 가 상한임을 말해준다. ■ </p>
+</li>
+</ul>
+<a href="#f3fb7625b"><div class="admonition tldr" id="f3fb7625b">
+<p>실수의 더하기 : <span class="arithmatex">\(\alpha , \beta \in \R\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \alpha + \beta = \{s + t \in \mathbb{Q} : s \in \alpha , t \in \beta \} \]</div>
+<p>이다. </p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\alpha + \beta \in \R\)</span> 이다. </p>
+<ul>
+<li>
+<p>이는 두 절단을 더한 결과도 절단임을 보증한다. 이로써 실수의 더하기는 닫혀있다고 할 수 있다. 즉, 잘 정의되어있다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\alpha + \beta \neq \varnothing\)</span> 은 자명하다. <span class="arithmatex">\(u \not\in \alpha , v \not\in \beta\)</span> 에 이면 임의의 <span class="arithmatex">\(s \in \alpha , t \in \beta\)</span> 에 대하여 <span class="arithmatex">\(u+v&gt;s+t\)</span> 인데 이는 임의의 <span class="arithmatex">\(r \in \alpha + \beta\)</span> 에 대하여 <span class="arithmatex">\(u+v &gt; r\)</span> 라는 말이다. 그러므로 <span class="arithmatex">\(u + v \not\in \alpha + \beta\)</span> 이고, <span class="arithmatex">\(\alpha + \beta \neq \mathbb{Q}\)</span> 이다. 이로써 절단의 조건 1) 이 증명되었다.</p>
+<p>이제 <span class="arithmatex">\(p \in \alpha + \beta\)</span> 라고 하자. 그러면 <span class="arithmatex">\(s \in \alpha , t \in \beta\)</span> 에 대하여 <span class="arithmatex">\(p = s + t\)</span> 이다. </p>
+<p><span class="arithmatex">\(q &lt; p\)</span> 이면 </p>
+<div class="arithmatex">\[ q &lt; p = s + t \iff  q - t &lt; s, s \in \alpha \]</div>
+<p>에서 <span class="arithmatex">\(q - t \in \alpha\)</span> 이고 <span class="arithmatex">\(t \in \beta\)</span> 이므로 </p>
+<div class="arithmatex">\[q = (q - t)+t \in \alpha + \beta\]</div>
+<p>가 성립한다. 그러므로 절단의 조건 2) 가 증명되었다.</p>
+<p>이때 <span class="arithmatex">\(s &lt; r\)</span> 인 <span class="arithmatex">\(r \in \alpha\)</span> 를 잡으면 <span class="arithmatex">\(p &lt; r + t\)</span> 이고 <span class="arithmatex">\(r+t \in \alpha + \beta\)</span> 이므로 절단의 조건 3) 이 증명되었다. ■ </p>
+</li>
+</ul>
+</li>
+<li>
+<p>실수의 더하기 연산은 체의 조건 1) 결합법칙과 체의 조건 4) 교환법칙을 만족한다.</p>
+<ul>
+<li>증명</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(0 ^{*} = \{p \in \mathbb{Q} : p&lt;0\} \in \R\)</span> 은 더하기의 항등원이다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\forall \alpha \in \R, \alpha + 0 ^{*} = \alpha\)</span> 임을 보이자. </p>
+<p>먼저 <span class="arithmatex">\(r \in \alpha , s \in 0 ^{*}\)</span> 에 대하여 <span class="arithmatex">\(r + s &lt; r\)</span> 이므로(<em><span class="arithmatex">\(s\)</span> 는 음수인 유리수임이 자명하기 때문</em>)  <span class="arithmatex">\(r+s \in \alpha\)</span> 이고(<em>절단의 조건 2) 에 의하여</em>), (<em>이는 절단 <span class="arithmatex">\(\alpha + 0 ^{*}\)</span> 의 원소가 <span class="arithmatex">\(\alpha\)</span> 에 속한다는 것이므로</em>) </p>
+<div class="arithmatex">\[ \alpha + 0 ^{*} \subset \alpha \tag{1} \]</div>
+<p>이다. <span class="arithmatex">\(p \in \alpha\)</span> 이면 (<em>절단의 조건 3) 에 의하여</em>) <span class="arithmatex">\(p &lt; r\)</span> 인 <span class="arithmatex">\(r \in \alpha\)</span> 가 존재한다. 그러면 <span class="arithmatex">\(p - r \in  0 ^{*}\)</span> 이므로 (<em><span class="arithmatex">\(r\)</span> 은 <span class="arithmatex">\(\alpha\)</span> 의 원소, <span class="arithmatex">\(p-r\)</span> 은 <span class="arithmatex">\(0 ^{*}\)</span> 의 원소이므로</em>)</p>
+<div class="arithmatex">\[ p = r + (p-r) \in \alpha + 0 ^{*} \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ \alpha \subset \alpha + 0 ^{*} \tag{2} \]</div>
+<p>이다. 그러면 최종적으로 <span class="arithmatex">\((1), (2)\)</span> 에 의하여 </p>
+<div class="arithmatex">\[ \therefore \alpha + 0 ^{*} = \alpha \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>실수의 더하기의 역원이 존재한다. </p>
+<ul>
+<li>
+<p>실수 <span class="arithmatex">\(\alpha\)</span> 의 더하기의 역원을 <span class="arithmatex">\(-\alpha\)</span> 라고 한다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p>각 <span class="arithmatex">\(\alpha \in \R\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \beta = \{p \in \mathbb{Q} : \exists r \in \mathbb{Q}, r &gt; p \land -r \not\in \alpha \} \]</div>
+<p>라 두고 <span class="arithmatex">\(\beta \in \R\)</span> 과 <span class="arithmatex">\(\alpha + \beta = 0 ^{*}\)</span> 임을 보일 것이다. </p>
+<p>이때 조건 <span class="arithmatex">\(-r \not\in \alpha\)</span> 은 <span class="arithmatex">\(-r\)</span> 이 절단 <span class="arithmatex">\(\alpha\)</span> 의 오른쪽에 존재한다는 것이다. 그렇다면 절단 <span class="arithmatex">\(\alpha\)</span> 오른쪽을 뜻하는 <span class="arithmatex">\(\mathbb{Q}\text{ \textbackslash }\alpha\)</span> 에 대하여 유리수 <span class="arithmatex">\(s \in \mathbb{Q}\text{ \textbackslash }\alpha\)</span> 를 택하면 이 <span class="arithmatex">\(s\)</span> 는 <span class="arithmatex">\(-r\)</span> 과 같다고 생각할 수 있으므로 <span class="arithmatex">\(-s &gt; p\)</span> 인 <span class="arithmatex">\(p \in \mathbb{Q}\)</span> 를 택하면 <span class="arithmatex">\(p \in \beta\)</span> 이다. (<em>이로써 절단의 조건 1) 의 첫째 명제 <span class="arithmatex">\(\beta \neq \varnothing\)</span> 가 증명되었다.</em>)</p>
+<p>또한 <span class="arithmatex">\(q \in \alpha\)</span> 에 대하여 <span class="arithmatex">\(-q\)</span> 보다 큰 유리수 <span class="arithmatex">\(r\)</span> 을 생각할 수 있다. 그러면 </p>
+<div class="arithmatex">\[ r &gt; -q \implies -r &lt; q \implies -r \in \alpha \]</div>
+<p>가 되는데, 이러한 유리수 <span class="arithmatex">\(r\)</span> 은 <span class="arithmatex">\(\beta\)</span> 의 조건 <span class="arithmatex">\(-r \not\in \alpha\)</span> 를 만족하지 않으므로 </p>
+<div class="arithmatex">\[ -q \not\in \beta \]</div>
+<p>이다. (<em>이로써 절단의 조건 1) 의 둘째 명제 <span class="arithmatex">\(\beta \neq \mathbb{Q}\)</span> 가 증명되었다.</em>)</p>
+<p>이제 <span class="arithmatex">\(p \in \beta\)</span> 라 하고 <span class="arithmatex">\(r &gt; p, -r \not\in \alpha\)</span> 인 <span class="arithmatex">\(r \in \mathbb{Q}\)</span> 를 잡자. 이때 <span class="arithmatex">\(q &lt; p \to r &gt; q, -r \not\in \alpha\)</span> 이므로 <span class="arithmatex">\(q \in \beta\)</span> 이다. (<em>이로써 절단의 조건 2) 아래로 무계가 증명되었다.</em>)</p>
+<p>만약 <span class="arithmatex">\(s = \dfrac{p+r}{2}\)</span> 라 두면</p>
+<div class="arithmatex">\[ r &gt; p \iff 2r &gt; p + r \iff r &gt; \dfrac{p+r}{2} = s \]</div>
+<p>임에 따라 <span class="arithmatex">\(r &gt; s, -r \not\in \alpha\)</span> 이므로 <span class="arithmatex">\(s \in \beta\)</span> 이고 <span class="arithmatex">\(p&lt;s\)</span> 이다. (<em>이로써 절단의 조건 3) 최댓값이 없음이 증명되었다.</em>) 그러므로 <span class="arithmatex">\(\beta\)</span> 가 절단이라는 것, 즉 </p>
+<div class="arithmatex">\[ \beta \in \R \]</div>
+<p>이 증명되었다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>이제 <span class="arithmatex">\(\alpha + \beta = 0 ^{*}\)</span> 을 보일텐데, <span class="arithmatex">\(q \in \alpha , p \in \beta\)</span> 이면 <span class="arithmatex">\(r &gt; p, -r \not\in \alpha\)</span> 인 <span class="arithmatex">\(r \in \mathbb{Q}\)</span> 이 다음과 같이 존재한다.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/110421597-2a439080-80e1-11eb-9e50-53f0d424795d.png"/></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/110421731-6aa30e80-80e1-11eb-8c98-a05c5b3a0232.png"/></p>
+<p>그러면 <span class="arithmatex">\(q \in \alpha , -r \not\in \alpha \implies q &lt; -r\)</span> 이다. 그러므로 </p>
+<div class="arithmatex">\[ -(q + p) = (r - p) + (-r - q) &gt; 0 \]</div>
+<p>이고, (<em>왜냐하면 <span class="arithmatex">\(0 &lt; -r -q, r - p &gt; 0\)</span> 이기 때문</em>) </p>
+<div class="arithmatex">\[ \iff  q + p &lt; 0 \]</div>
+<p>이므로 <span class="arithmatex">\(\alpha + \beta \subset 0 ^{*}\)</span> 이다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>이제 <span class="arithmatex">\(0 ^{*} \subset \alpha + \beta\)</span> 를 보이면 모든 증명이 끝난다. 이를 위하여 <span class="arithmatex">\(s \in 0 ^{*}\)</span> 에 대한 <span class="arithmatex">\(t = \dfrac{-s}{2} &gt; 0\)</span> 인 <span class="arithmatex">\(t \in \mathbb{Q}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ A = \{n \in \mathbb{Z} : nt \in \alpha \} \]</div>
+<p>라 두자. 이때 <span class="arithmatex">\(A\)</span> 가 위로 유계가 아니라고 가정하자. (<em>하지만 집합 <span class="arithmatex">\(A\)</span> 의 정수 <span class="arithmatex">\(n\)</span> 는 절단 <span class="arithmatex">\(\alpha\)</span> 에 <span class="arithmatex">\(nt\)</span> 가 속할 때 정의되므로 <span class="arithmatex">\(n\)</span> 에 상계가 있을 것으로 보인다.</em>) 그러면 <a href="#225d37510">정리 2.2.5 "유리수체는 아르키메데스의 성질을 만족한다."</a> 에 의하여 <span class="arithmatex">\(\forall q \in \mathbb{Q}, q &lt; mt\)</span> 인 <span class="arithmatex">\(m \in \N\)</span> 이 존재한다. 그런데 <span class="arithmatex">\(A\)</span> 가 위로 무계라고 가정하였으므로 <span class="arithmatex">\(m\)</span> 은 <span class="arithmatex">\(A\)</span> 의 상계가 아니고, <span class="arithmatex">\(m &lt; n\)</span> 인 <span class="arithmatex">\(n \in A\)</span> 이 존재한다. 결국 <span class="arithmatex">\(q &lt; nt\)</span> 이고, <span class="arithmatex">\(nt \in \alpha\)</span> 이므로 </p>
+<div class="arithmatex">\[\forall q \in \mathbb{Q}, q \in \alpha \implies \alpha = \mathbb{Q}\]</div>
+<p>가 되어 모순이다. 그러므로 <span class="arithmatex">\(A\)</span> 는 위로 유계이고, <a href="#749829205">따름정리 2.1.6 "위로 유계이며 비어있지 않은 자연수들의 집합 <span class="arithmatex">\(A \subset \N\)</span> 는 최대 원소를 가진다."</a> 에 의하여 즉, <span class="arithmatex">\(n_0t \in \alpha \land (n_0+1)t \not\in \alpha\)</span> 이다. 이제 </p>
+<div class="arithmatex">\[ r = s - n_0 t = -(n_0 + 2)t \]</div>
+<p>라 두면, <span class="arithmatex">\(-(n_0+1)t &gt; r \land (n_0+1)t \not\in \alpha\)</span> 이므로 <span class="arithmatex">\(r \in \beta\)</span> 임을 알 수 있다. 따라서 <span class="arithmatex">\(s \in 0 ^{*}\)</span> 이</p>
+<div class="arithmatex">\[ s = n_0t + r \in \alpha + \beta \]</div>
+<p>의 관계를 가지므로 <span class="arithmatex">\(\forall s \in 0 ^{*}, s \in \alpha + \beta\)</span> 를 알 수 있고, 이에 따라 </p>
+<div class="arithmatex">\[ 0 ^{*} \subset \alpha + \beta \]</div>
+<p>이며, 이로써 모든 증명이 끝났다. ■ </p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#a36de9d91"><div class="admonition tldr" id="a36de9d91">
+<p>실수의 곱하기 : 양의 실수 <span class="arithmatex">\(\alpha , \beta \in P _{\R}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \alpha \beta  = \{p \in \mathbb{Q} : p \leq rs \text{ 인 } r \in \alpha \cap P _{\mathbb{Q}}, s \in \beta \cap P _{\mathbb{Q}} \text{ 가 존재한다}\} \]</div>
+<p>로 정의하고, 일반적인 곱하기를 임의의 실수 <span class="arithmatex">\(\forall \alpha , \beta \in \R\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \alpha \beta = \begin{cases} 0 ^{*} &amp;\alpha = 0 ^{*} \lor \beta = 0 ^{*}\\ -(-\alpha )\beta  &amp;\alpha \in -P _{\R}, \beta \in P _{\R}\\ -\alpha (-\beta)  &amp;\alpha \in P _{\R}, \beta \in -P _{\R}\\ (-\alpha )(-\beta)  &amp;\alpha \in -P _{\R}, \beta \in -P _{\R}\\ \end{cases} \]</div>
+<p>와 같이 정의한다. </p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\alpha , \beta \in P _{\R}\)</span> 에 대하여 <span class="arithmatex">\(\alpha \beta \in \R\)</span> 이다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p>(아래에서 <span class="arithmatex">\(\R\)</span> 이 순서체임을 증명하는 부분에 있다.)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>곱하기에 대한 역원이 존재한다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p>각 <span class="arithmatex">\(\alpha \in P _{\R}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \gamma = 0 ^{*} \cup \{0\} \cup \{q \in P _{\mathbb{Q}} : r &gt; q, \dfrac{1}{r} \not\in \alpha \text{ 인 } r \in P _{\mathbb{Q}} \text{ 이 존재한다}\} \]</div>
+<p>라 정의하면 <span class="arithmatex">\(\gamma\)</span> 가 절단이고 <span class="arithmatex">\(\alpha \gamma = 1 ^{*}\)</span> 임을 보일 수 있지만, 조금 시간이 흐른 후 보이겠다. </p>
+<p>이제 <span class="arithmatex">\(\alpha \in -P _{\R}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \alpha \bigg (- \dfrac{1}{- \alpha }\bigg ) = - \alpha \bigg (\dfrac{1}{- \alpha }\bigg ) = (- \alpha )\bigg (\dfrac{1}{- \alpha }\bigg ) = 1 ^{*} \]</div>
+<p>이므로 최종적으로 <span class="arithmatex">\(\alpha \neq 0\)</span> 인 <span class="arithmatex">\(\alpha \in \R\)</span> 는 곱하기의 역원을 가진다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#e53c4f1e1"><div class="admonition tldr" id="e53c4f1e1">
+<p><span class="arithmatex">\(\R\)</span> 은 <a href="#febb2f17d">정리 2.3.2 <span class="arithmatex">\(A \neq \varnothing\)</span> 인 집합 <span class="arithmatex">\(A \subset \R\)</span> 가 위로 유계이면 <span class="arithmatex">\(A\)</span> 는 최소상계를 갖는다</a> 를 만족시키는 순서체이다. </p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\R\)</span> 은 순서체의 조건 1) 의 첫째 명제를 만족시킨다.</p>
+<ul>
+<li>
+<p>증명</p>
+<p>만약 <span class="arithmatex">\(\alpha &gt; 0 ^{*}\)</span> 이면 (<em>양수인</em>) <span class="arithmatex">\(p \in \alpha \text{ \textbackslash }0 ^{*}\)</span> 을 택할 수 있다. 이는 <span class="arithmatex">\(0 \leq p, p \in \alpha\)</span> 이므로 (<em>절단의 조건 2) 에 의하여</em>) <span class="arithmatex">\(0 \in \alpha\)</span> 이다. 반대로 <span class="arithmatex">\(0 \in \alpha\)</span> 이면 (<em>절단의 조건 2) 에 의하여</em>) <span class="arithmatex">\(p &lt; 0 \implies p \in \alpha\)</span> 인데 (<em>이는 절단 <span class="arithmatex">\(\alpha\)</span> 가 <span class="arithmatex">\(0\)</span> 을 포함하면서 아래로 무계인데 <span class="arithmatex">\(0 ^{*}\)</span> 는 <span class="arithmatex">\(0\)</span> 을 포함하지 않는 절단이므로</em>) 이는 <span class="arithmatex">\(0 ^{*} &lt; \alpha\)</span> 임을 뜻한다. 그러므로 </p>
+<div class="arithmatex">\[ 0 ^{*} &lt; \alpha \iff 0 \in \alpha \]</div>
+<p>이다. 이 결과로 순서체의 조건 1) 의 첫째명제 <span class="arithmatex">\(a, b \in P \implies a + b \in P\)</span> 가 성립됨을 바로 알 수 있다. 어떤 절단 <span class="arithmatex">\(a,b\)</span> 가 <span class="arithmatex">\(a &gt; 0 ^{*} \land b &gt; 0^{*}\)</span> 이면 <span class="arithmatex">\(0 \in a \land 0 \in b\)</span> 이므로 <span class="arithmatex">\(a &gt; 0, b &gt; 0\)</span> 이기 때문이다. ■ </p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\alpha , \beta \in P _{\R}\)</span> 에 대하여 <span class="arithmatex">\(\alpha \beta \in \R\)</span> 이다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(0 \in \alpha , 0 \in \beta \implies 0 \in \alpha \beta \implies \alpha \beta \neq \varnothing\)</span> 이므로 절단의 조건 1) 의 첫째 명제가 증명되었다. </p>
+<p><span class="arithmatex">\(u \not\in \alpha , v \not\in \beta \to uv \not\in \alpha \beta \implies \alpha \beta \neq \mathbb{Q}\)</span> 이므로 절단의 조건 1) 의 둘째 명제가 증명되었다. 실제로 <span class="arithmatex">\(\forall s \in \alpha , t \in \beta, s &lt; u \land t &lt; u \implies st &lt; uv\)</span> 이다. </p>
+<p>절단의 조건 2), 3) 은 정의에 의하여 자명하다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore \alpha \beta \in \R \]</div>
+<p>이다. ■ </p>
+<p>특히, 순서체의 조건 1) 의 둘째 명제 "<span class="arithmatex">\(a,b \in P, ab \in P\)</span> (곱하기에 대하여 닫혀있음)" 도 증명되었다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#73a49eed9"><div class="admonition tldr" id="73a49eed9">
+<p><span class="arithmatex">\(\forall r, s \in \mathbb{Q}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ r = s \iff  r ^{*} = s ^{*} \]</div>
+<div class="arithmatex">\[ (r + s ) ^{*} = r ^{*} + s ^{*} \]</div>
+<div class="arithmatex">\[ (rs) ^{*} = r ^{*} s ^{*} \]</div>
+<div class="arithmatex">\[ r \in P _{\mathbb{Q}} \iff r ^{*} \in P _{\R} \]</div>
+<p>이 성립한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 </p>
+<div class="arithmatex">\[ r \mapsto r ^{*} : \mathbb{Q} \to \R \]</div>
+<p>이 연산과 순서를 보존하는 단사함수임을 말해준다. </p>
+</li>
+</ul>
+<h2 id="_5">코시 수열을 기반으로 정의하는 실수<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<a href="#e014fc542"><div class="admonition tldr" id="e014fc542">
+<p>수열(sequence) : 집합 <span class="arithmatex">\(X\)</span> 에 대한 함수 </p>
+<div class="arithmatex">\[ x : \N \to X \]</div>
+<p>이다. </p>
+</div></a>
+<a href="#adb5a664b"><div class="admonition tldr" id="adb5a664b">
+<p>수렴(convergence) : 순서체 <span class="arithmatex">\(F\)</span> 의 수열 <span class="arithmatex">\(x : \N \to F\)</span> 와 <span class="arithmatex">\(a \in F\)</span> 가 주어졌을 때 <span class="arithmatex">\(\forall e \in P _{F}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ i \geq N \implies |x(i) - a| &lt; e \]</div>
+<p>을 만족하는 <span class="arithmatex">\(N \in \N\)</span> 이 존재하면 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(a \in F\)</span> 로 수렴한다고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정의에서 <span class="arithmatex">\(\forall e \in P _{F}\)</span> 의 의미는 체 <span class="arithmatex">\(F\)</span> 의 양의 원소 <span class="arithmatex">\(e\)</span> 가 아주 아주 작은 값으로 줄어든다는 것이고, <span class="arithmatex">\(|x(i) - a|\)</span> 는 수열의 값 <span class="arithmatex">\(x(i)\)</span> 와 <span class="arithmatex">\(a\)</span> 와의 차이값을 뜻한다. </p>
+<p>그러므로 얼마나 작은 <span class="arithmatex">\(e\)</span> 를 가져오든지간에 </p>
+<div class="arithmatex">\[  |x(i) - a| &lt; e \]</div>
+<p>를 만족시키는 자연수 <span class="arithmatex">\(N\)</span> 이 존재하여 수열이 <span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(e\)</span> 보다 가깝다는 것을 보여주는 정의이다. 이로써 이 정의는 수열 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(a\)</span> 와 무한히 가까워지는 형태를 표현할 수 있는 것이다.</p>
+</li>
+</ul>
+<a href="#1361e4f2e"><div class="admonition tldr" id="1361e4f2e">
+<p>코시 수열(cauchy sequence) : 체 <span class="arithmatex">\(F\)</span> 에 대한 <span class="arithmatex">\(\forall e \in P _{F}\)</span> 와 수열 <span class="arithmatex">\(x : \N \to F\)</span> 에 대하여</p>
+<div class="arithmatex">\[ i,j \geq N \implies |x(i) - x(j)| &lt; e \]</div>
+<p>를 만족하는 자연수 <span class="arithmatex">\(N\)</span> 이 존재하면 <span class="arithmatex">\(x\)</span> 를 코시 수열이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>쉽게 말해 수열의 항들이 임의의 거리 내로 수렴해가면 코시 수열이다. 즉, 다음은 코시 수열이지만 </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Cauchy_sequence_illustration.svg/375px-Cauchy_sequence_illustration.svg.png"/></p>
+<p>다음은 코시수열이 아니다.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Cauchy_sequence_illustration2.svg/375px-Cauchy_sequence_illustration2.svg.png"/></p>
+</li>
+<li>
+<p>예시 </p>
+<p>수열 <span class="arithmatex">\(a_n = \sqrt[]{n}\)</span> 은 코시 수열이다. 왜냐하면 다음과 같이 수열의 두 항의 차이값이 임의의 양수보다 작도록 수렴하기 때문이다. </p>
+<div class="arithmatex">\[ a _{n+1} - a_n = \sqrt[]{n+1} - \sqrt[]{n} = \dfrac{1}{\sqrt[]{n+1} + \sqrt[]{n}} &lt; \dfrac{1}{2 \sqrt[]{n}} \]</div>
+</li>
+</ul>
+<a href="#590944f38"><div class="admonition tldr" id="590944f38">
+<p>기본열 : 유리수의 코시 수열이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\forall r \in \mathbb{Q}\)</span> 와  <span class="arithmatex">\(i \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ r ^{*}(i) = r \]</div>
+<p>이라 정의하면 <span class="arithmatex">\(r ^{*}\)</span> 은 기본열이다.</p>
+</li>
+</ul>
+<a href="#a552c12f1"><div class="admonition tldr" id="a552c12f1">
+<p>유계 수열(bounded sequence) : 순서체 <span class="arithmatex">\(F\)</span> 의 수열 <span class="arithmatex">\(x\)</span> 와 <span class="arithmatex">\(i \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ |x(i)| \leq M \]</div>
+<p>를 만족하는 <span class="arithmatex">\(M \in F\)</span> 가 있으면 <span class="arithmatex">\(x\)</span> 는 유계수열이다.</p>
+</div></a>
+<ul>
+<li>
+<p>순서체 <span class="arithmatex">\(F\)</span> 의 수열 <span class="arithmatex">\(x : \N \to F\)</span> 가 유계일 필요충분조건은 집합 </p>
+<div class="arithmatex">\[ \{x(i) \in X : i \in \N\} \]</div>
+<p>이 위로 유계이고 동시에 아래로 유계인 것이다. </p>
+<ul>
+<li>증명</li>
+</ul>
+</li>
+</ul>
+<a href="#0be354c69"><div class="admonition tldr" id="0be354c69">
+<p class="admonition-title">정리 2.4.1</p>
+<p>순서체 <span class="arithmatex">\(F\)</span> 의 수열 <span class="arithmatex">\(x : \N \to F\)</span> 가 수렴하면 코시수열이다.</p>
+<p>또한 임의의 코시 수열은 유계이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>순서체 <span class="arithmatex">\(F\)</span> 의 수열 <span class="arithmatex">\(x : \N \to F\)</span> 가 <span class="arithmatex">\(\forall e \in P _{F}\)</span> 에 대하여 <span class="arithmatex">\(a \in F\)</span> 로 수렴한다고 하면</p>
+<div class="arithmatex">\[ i \geq N \implies |x(i) - a| &lt; \dfrac{e}{2} \]</div>
+<p>인 <span class="arithmatex">\(N \in \N\)</span> 이 존재한다. 그러면 임의의 <span class="arithmatex">\(i, j \geq N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ |x(i) - x(j)| \leq |x(i) - a| + |x(j) - a| &lt; \dfrac{e}{2} + \dfrac{e}{2} = e \]</div>
+<p>가 되어 <span class="arithmatex">\(x\)</span> 는 코시 수열이다. (<em><span class="arithmatex">\(\because\)</span> <a href="#84983902d">정리 2.2.2 "순서체 <span class="arithmatex">\(F\)</span> 의 임의의 원소 <span class="arithmatex">\(a,b,c \in F\)</span> 에 대하여 다음이 성립한다. <span class="arithmatex">\(|a-c| \leq |a-b| + |b-c|\)</span>"</a></em>) <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>이제 역으로 <span class="arithmatex">\(x\)</span> 가 코시 수열이라고 가정하면</p>
+<div class="arithmatex">\[ i, j \geq N \implies |x(i) - x(j)| &lt; 1 \]</div>
+<p>인 <span class="arithmatex">\(N \in \N\)</span> 이 존재한다. 그러면 임의의 자연수 <span class="arithmatex">\(i \geq N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[|x(i) - x(N)| &lt; 1 \iff |x(i)| &lt; |x(N)| + 1 \]</div>
+<p>이다. 이제 </p>
+<div class="arithmatex">\[ M = \sup \{|x(0)|, |x(1)|, \dots, |x(N-1)|, |x(N)|+1\} \]</div>
+<p>라 두면 </p>
+<div class="arithmatex">\[ \forall i \in \N, |x(i)| \leq M \]</div>
+<p>이다. ■ </p>
+<ul>
+<li>
+<p>뭔가 이상한데, </p>
+<div class="arithmatex">\[|x(i) - x(N)| &lt; 1 \iff |x(i)| \leq |x(N)| + 1 \]</div>
+<p>에서 <span class="arithmatex">\(|x(i)| = |x(N)| + 1\)</span> 라고 하면 </p>
+<div class="arithmatex">\[ ||x(N)|+1-x(N)|&lt;1 \iff -1 &lt; |x(N)| + 1 - x(N) &lt; 1\]</div>
+<div class="arithmatex">\[ \iff x(N)-2 &lt; |x(N)| &lt; x(N) \]</div>
+<p>가 나오는데 순서체 <span class="arithmatex">\(F\)</span> 의 원소 <span class="arithmatex">\(a \in F\)</span> 에 대하여</p>
+<div class="arithmatex">\[ |a| &lt; a \]</div>
+<p>가 말이 되나? <span class="arithmatex">\(a\)</span> 가 양의 원소 즉, <span class="arithmatex">\(a \in P _{F}\)</span> 일 경우 </p>
+<div class="arithmatex">\[ a &lt; a \]</div>
+<p>가 나온다. 이는 <span class="arithmatex">\(5 &lt; 5\)</span> 와도 같은 결과.</p>
+<p><span class="arithmatex">\(a\)</span> 가 음의 원소, 즉 <span class="arithmatex">\(a \in -P _{F}\)</span> 일 경우 </p>
+<div class="arithmatex">\[ -a &lt; a \]</div>
+<p>인데, 이는 <span class="arithmatex">\(5 &lt; -5\)</span> 와 같은 결과.</p>
+<p>뭐지? 뭘 놓치고 있는거지.</p>
+</li>
+<li>
+<p>아 알았다.. 삼각 부등식 정리 "두 벡터 <span class="arithmatex">\(x, y\)</span> 에 대하여 <span class="arithmatex">\(|x+y| \leq |x|+|y|\)</span>" 에 의하여 </p>
+<div class="arithmatex">\[ |s_n| = |s_n - s_m + s_m| \leq |s_n - s_m| + |s_m| \]</div>
+<div class="arithmatex">\[ \iff |s_n| - |s_m| \leq |s_n-s_m| &lt; 1 \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ |x(i) - x(N)| &lt; 1 \]</div>
+<p>이</p>
+<div class="arithmatex">\[ |x(i)| - |x(N)| \leq |x(i) - x(N)| &lt; 1 \]</div>
+<p>가 되어 결국 </p>
+<div class="arithmatex">\[ |x(i)| &lt; |x(N)| + 1 \]</div>
+<p>이 되는거구나. 근데 <span class="arithmatex">\(\leq\)</span> 가 아니라 <span class="arithmatex">\(&lt;\)</span> 로 쓰는게 맞는데 왜 <span class="arithmatex">\(\leq\)</span> 로 썼지.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#f86aac66c"><div class="admonition tldr" id="f86aac66c">
+<p>실수 집합(real number set) : 두 기본열 <span class="arithmatex">\(\alpha , \beta : \N \to \mathbb{Q}\)</span> 와 <span class="arithmatex">\(\forall e \in P _{\mathbb{Q}}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ i \geq N \implies |\alpha (i) - \beta (i)| &lt; e \]</div>
+<p>인 <span class="arithmatex">\(N \in \N\)</span> 이 존재할 때 <span class="arithmatex">\(\alpha \sim \beta\)</span> 라고 정의한 동치관계 <span class="arithmatex">\(\sim\)</span> 와 기본열 전체의 집합 <span class="arithmatex">\(\mathcal{F}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \R := \mathcal{F}/\sim \]</div>
+<p>이라고 정의한다.</p>
+</div></a>
+<ul>
+<li>
+<p>또한 이 몫집합 <span class="arithmatex">\(\R = \mathcal{F}/\sim\)</span> 의 원소를 실수(real number) 라고 한다.</p>
+</li>
+<li>
+<p>이와 같은 실수의 구성방법을 쉽게 말하면 이렇다. </p>
+<p>어떤 기본열이 제곱하여 <span class="arithmatex">\(2\)</span> 보다 작은 수로써 각 항 <span class="arithmatex">\(i\)</span> 마다 <span class="arithmatex">\(i-1\)</span> 번째까지 소수 자리를 갖는다고 하자. 그러면 이 기본열은 다음과 같은 형태를 가져서 제곱해도 <span class="arithmatex">\(2\)</span> 보다 작은 유리수로 구성된다.</p>
+<div class="arithmatex">\[ (1, 1.4, 1.41, 1.141, \dots) \]</div>
+<p>이러한 유리수열은 수열의 항 <span class="arithmatex">\(i\)</span> 가 매우 커짐에 따라 인접한 두 항의 차이값이 <span class="arithmatex">\(0\)</span> 로 수렴한다. 이것은 분명 유리수열이지만 그 항이 무한이 커짐에 따라 그 값이</p>
+<div class="arithmatex">\[ \sqrt[]{2} \]</div>
+<p>로 근사된다. 이처럼 유리수열이지만 무한한 항을 따져보면 무리수가 되는 것이 존재한다. 물론 무한한 항이 유리수인 기본열도 존재한다. </p>
+<p>코시수열에 의한 실수의 구성은 이러한 모든 기본열을 통틀어서 실수(유리수와 무리수)를 구성하는 것이다.</p>
+</li>
+<li>
+<p>한편, 방금 <span class="arithmatex">\((1, 1.4, 1.41, 1.141, \dots)\)</span> 이라는 기본열을 <span class="arithmatex">\(\sqrt[]{2}\)</span> 라는 실수로 근사시켰는데, 어떤 실수를 구성하기 위한 유리수열은 유일하지 않다. 즉, 실수 <span class="arithmatex">\(x \in \R\)</span> 로 수렴하는 모든 기본열이 <span class="arithmatex">\(x\)</span> 의 표현들이며, 이것들을 동치류로 묶어서 표현해버리는 것이다.</p>
+<p>가령 다음과 같이 실수 <span class="arithmatex">\(\pi\)</span> 를 구성하는 여러가지 방법이 존재한다. </p>
+<div class="arithmatex">\[ \pi = 4 \bigg (\dfrac{1}{1} - \dfrac{1}{3} + \dfrac{1}{5} - \dfrac{1}{7} + \dots\bigg ) \tag{1} \]</div>
+<div class="arithmatex">\[ \dfrac{\pi }{2} = \dfrac{2}{1}\cdot \dfrac{2}{3} \cdot \dfrac{4}{3} \cdot \dfrac{4}{5} \cdot \dfrac{6}{5} \cdot \dfrac{6}{7} \cdot \dots \tag{2} \]</div>
+<div class="arithmatex">\[ \dfrac{\pi ^{2}}{6} = \dfrac{1}{1 ^{2}} + \dfrac{1}{2 ^{2}} + \dfrac{1}{3 ^{2}} + \dfrac{1}{4 ^{2}} + \dots \tag{3} \]</div>
+<div class="arithmatex">\[ \dfrac{2}{\pi } = \dfrac{\sqrt[]{2}}{2} \cdot \dfrac{\sqrt[]{2 + \sqrt[]{2}}}{2} \cdot \dfrac{\sqrt[]{2+ \sqrt[]{2 + \sqrt[]{2}}}}{2} \dots \tag{4} \]</div>
+<p>위에서 보인 <span class="arithmatex">\(4\)</span> 가지 방법 이외에도 <span class="arithmatex">\(\pi\)</span> 라는 실수를 구성하는 기본열의 종류는 매우 다양하다. 가령 <span class="arithmatex">\((1)\)</span> 에서 나타난 기본열 </p>
+<div class="arithmatex">\[ \alpha(n) = 4 \sum_{k=1}^{n} (-1) ^{k+1} \dfrac{1}{2k - 1} \]</div>
+<p>은 <span class="arithmatex">\(n \to \infty \implies \alpha (n) \to \pi\)</span> 가 되는데, 이처럼 <span class="arithmatex">\(\pi\)</span> 로 근사되는 모든 기본열들을 동치관계로 묶어서 그 동치류를 실수 파이(<span class="arithmatex">\(\pi\)</span>)</p>
+<div class="arithmatex">\[ \pi = [\alpha (n)] \]</div>
+<p>로 표현하겠다는 것이다.</p>
+<ul>
+<li>
+<p>두 기본열의 무한항의 근사값이 똑같다는 표현을 두 기본열 <span class="arithmatex">\(\alpha , \beta\)</span> 가 </p>
+<div class="arithmatex">\[ \forall e \in P _{\mathbb{Q}}, |\alpha (i) - \beta (i)| &lt; e \]</div>
+<p>라고 표현한 것이다. <span class="arithmatex">\(e\)</span> 를 <span class="arithmatex">\(0\)</span> 에 수렴하는 양수라고 생각하면 되니까..</p>
+</li>
+</ul>
+</li>
+<li>
+<p>관계 <span class="arithmatex">\(\sim\)</span> 은 동치관계이다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\alpha \sim \alpha\)</span> 와 <span class="arithmatex">\(\alpha \sim \beta \implies \beta \sim \alpha\)</span> 가 성립함은 자명하므로 동치관계의 조건 1), 2) 가 성립한다. </p>
+<p><span class="arithmatex">\(\alpha \sim \beta, \beta \sim \gamma\)</span> 라 두면 </p>
+<div class="arithmatex">\[ i \geq N_1 \implies |\alpha (i) - \beta (i)| &lt; \dfrac{e}{2}, \qquad i \geq N_2 \implies |\beta (i) - \gamma (i)| &lt; \dfrac{e}{2} \]</div>
+<p>인 자연수 <span class="arithmatex">\(N_1, N_2 \in \N\)</span> 이 존재하는데 <span class="arithmatex">\(N = \sup \{N_1,N_2\}\)</span> 라 두면 임의의 <span class="arithmatex">\(i \geq N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ |\alpha (i) - \gamma (i)| \leq |\alpha (i) - \beta (i)| + |\beta (i) - \gamma (i)| &lt; \dfrac{e}{2} + \dfrac{e}{2} = e \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \alpha \sim \gamma \]</div>
+<p>이다. 이로써 동치관계의 조건 3) 도 성립함을 보였다. </p>
+<p>그러므로 관계 <span class="arithmatex">\(\sim\)</span> 은 기본열 전체의 집합 <span class="arithmatex">\(\mathcal{F}\)</span> 의 동치관계이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#e7e67e579"><div class="admonition tldr" id="e7e67e579">
+<p>실수의 순서관계 : 두 실수 <span class="arithmatex">\([\alpha ], [\beta ] \in \R\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ i \geq N \implies \alpha (i) - \beta (i) &gt; d \]</div>
+<p>를 만족하는 유리수 <span class="arithmatex">\(d &gt; 0\)</span> 와 자연수 <span class="arithmatex">\(N \in \N\)</span> 가 있을 때 </p>
+<div class="arithmatex">\[ [\alpha ] &gt; [\beta ] \]</div>
+<p>이다. </p>
+</div></a>
+<ul>
+<li>이 순서관계도 마찬가지로 기본열의 무한항(<span class="arithmatex">\(i\)</span> 가 무한히 커지는 것을 <span class="arithmatex">\(\exists N \in \N, i \geq N\)</span> 로 표현한 것)이 특정 값으로 근사되었을 때 그 차이값이 양의 유리수 <span class="arithmatex">\(d &gt; 0\)</span> 보다 크다는 것으로 실수의 순서를 정의한 것으로 이해하면 된다.</li>
+</ul>
+<a href="#d99d004df"><div class="admonition tldr" id="d99d004df">
+<p class="admonition-title">정리 2.4.2</p>
+<p><span class="arithmatex">\(\forall [\alpha ], [\beta ] \in \R\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ [\alpha ] &gt; [\beta ], \qquad [\alpha ] = [\beta ], \qquad [\alpha ] &lt; [\beta ] \]</div>
+<p>중 오직 하나만 성립한다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\forall e \in \mathbb{Q}, e &gt; 0\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ i \geq N_e \implies |\alpha (i) - \alpha (N_e)| &lt;e, |\beta (i) - \beta (N_e)| &lt;e \]</div>
+<p>가 성립하는 최소 자연수 <span class="arithmatex">\(N_e\)</span> 이 존재한다. <span class="arithmatex">\(N_e\)</span> 은 <span class="arithmatex">\(e\)</span> 에 대하여 결정된다. 그러면 각 <span class="arithmatex">\(i \geq N_e\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \alpha (N_e) - \beta (N_e) - 2e &lt; \alpha (i) - \beta (i) &lt;\alpha (N_e) - \beta (N_e) + 2e \tag{1} \]</div>
+<p>이다. 이제 </p>
+<div class="arithmatex">\[ d_e = \alpha (N_e) - \beta (N_e) -2e, \qquad d'_e = \alpha (N_e) - \beta (N_e) + 2e \]</div>
+<p>로 두자. </p>
+<p>그러면 적당한 유리수 <span class="arithmatex">\(e &gt; 0\)</span> 에 대하여 <span class="arithmatex">\(d_e &gt; 0\)</span> 인 경우 </p>
+<div class="arithmatex">\[ i \geq N_e \implies \alpha (i) - \beta (i) &gt; d_e \]</div>
+<p>이므로 <span class="arithmatex">\([\alpha ] &gt; [\beta ]\)</span> 이고, 또한 적당한 유리수 <span class="arithmatex">\(e&gt;0\)</span> 에 대하여 <span class="arithmatex">\(d'_e&lt;0\)</span> 이면 </p>
+<div class="arithmatex">\[ i \geq N_e \implies \beta  (i) - \alpha(i) &gt; -d'_e \]</div>
+<p>이므로 <span class="arithmatex">\([\beta ]&gt;[\alpha ]\)</span> 이다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>이제 이 두 가지 경우가 성립하지 않는다고 하면 임의의 유리수 <span class="arithmatex">\(e &gt; 0\)</span> 에 대하여 </p>
+<div class="arithmatex">\[d_e= \alpha (N_e) - \beta (N_e) -2e \leq 0,\qquad  d'_e= \alpha (N_e) - \beta (N_e) + 2e \geq 0\]</div>
+<p>이다. (<em>이때 <span class="arithmatex">\(d_e = d'_e = 0\)</span> 이면 <span class="arithmatex">\(e=0\)</span> 이 되어 모순이므로 둘 다 <span class="arithmatex">\(0\)</span> 이면 안된다 조건이 추가되어야 하지 않나</em>) 그러므로 </p>
+<div class="arithmatex">\[ \alpha (N_e) - \beta (N_e) \leq 2e, \qquad \beta (N_e) -  \alpha (N_2) \leq 2e \]</div>
+<div class="arithmatex">\[ \iff |\alpha (N_e) - \beta (N_e)| \leq 2e \]</div>
+<p>인데, </p>
+<p>(<em>이때 임의의 <span class="arithmatex">\(e&gt;0\)</span> 에 대하여 <span class="arithmatex">\(|\alpha (N_e) - \beta (N_e)| \leq 2e\)</span> 가 성립하므로 <span class="arithmatex">\(e\)</span> 가 <span class="arithmatex">\(0\)</span> 과 극도로 가까울 때에도 <span class="arithmatex">\(|\alpha (N_e) - \beta (N_e)|\)</span> 이 그것보다 같거나 작다는 것이므로 <span class="arithmatex">\(|\alpha (N_e) - \beta (N_e)| = 0\)</span> 이어야 한다. 왜냐하면 <span class="arithmatex">\(|\alpha (N_e) - \beta (N_e)| = \epsilon &gt; 0\)</span> 이라면 그것보다 작은 유리수 <span class="arithmatex">\(e\)</span> 가 존재하여 모순을 발생시키기 때문이다. 그러므로 <span class="arithmatex">\((1)\)</span> 을 사실상 <span class="arithmatex">\(|\alpha (i) - \beta (i)| &lt; 2e\)</span> 로 쓸 수 있으므로</em>)</p>
+<p><span class="arithmatex">\((1)\)</span> 에 의하여 </p>
+<div class="arithmatex">\[ i \geq N_e \implies |\alpha (i) - \beta (i)| \leq |\alpha (N_e) - \beta (N_e)| + 2 e \leq 4e &lt;5e \]</div>
+<p>이다. </p>
+<p>(<em>근데 그렇게 따지면 <span class="arithmatex">\(|\alpha (i) - \beta (i)| \leq |\alpha (N_e) - \beta (N_e)| + 2 e\)</span>  가 아니라 <span class="arithmatex">\(|\alpha (i) - \beta (i)| &lt; |\alpha (N_e) - \beta (N_e)| + 2 e\)</span> 이어야 하지 않나? 어쨌든..</em>)</p>
+<p>그러므로 <span class="arithmatex">\(\alpha \sim \beta\)</span> 가 되어 </p>
+<div class="arithmatex">\[ [\alpha ] = [\beta ] \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<a href="#c58ae079e"><div class="admonition tldr" id="c58ae079e">
+<p>실수의 더하기 : 유리수열 <span class="arithmatex">\(\alpha + \beta: i \mapsto \alpha (i) + \beta (i)\)</span> 에 대하여 실수의 더하기를 두 실수 <span class="arithmatex">\([\alpha], [\beta]\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ [\alpha ]+ [\beta ]=[\alpha + \beta ] \]</div>
+<p>로 정의한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\alpha + \beta\)</span> 는 기본열이다. 즉, 코시 수열의 덧셈은 닫혀있다.</p>
+</li>
+<li>
+<p>기본열 <span class="arithmatex">\(\alpha\)</span> 에 대하여 <span class="arithmatex">\((-\alpha )(i) = - \alpha (i)\)</span> 로 정의된 유리수열 <span class="arithmatex">\(-\alpha\)</span> 는 기본열이다. 또한 <span class="arithmatex">\([-\alpha]\)</span> 는 <span class="arithmatex">\([\alpha]\)</span> 의 더하기의 역원이다.</p>
+<ul>
+<li>증명 </li>
+</ul>
+</li>
+<li>
+<p>실수의 더하기는 잘 정의되어 있고, associative 와 commutative 를 만족한다. </p>
+<ul>
+<li>증명 </li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\([0 ^{*}]\)</span> 이 항등원이다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(0 ^{*}\)</span> 은 기본열의 정의에서 살펴본 것처럼 </p>
+<div class="arithmatex">\[ 0 ^{*}(i) = 0 \]</div>
+<p>으로 이해하면 된다.</p>
+</li>
+<li>
+<p>증명 </p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#5662509f1"><div class="admonition tldr" id="5662509f1">
+<p>실수의 곱하기 : <span class="arithmatex">\(\alpha , \beta \in \R\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ [\alpha ][\beta ]= [\alpha \beta ] \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>두 유리수열 <span class="arithmatex">\(\alpha, \beta : \N \to \mathbb{Q}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \alpha \beta : i \mapsto \alpha (i)\beta (i) \]</div>
+<p>라 정의하면, 기본열 <span class="arithmatex">\(\alpha , \beta\)</span> 에 대하여 <span class="arithmatex">\(\alpha \beta\)</span> 도 기본열이다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p><a href="#0be354c69">정리 2.4.1 "순서체 <span class="arithmatex">\(F\)</span> 의 수열 <span class="arithmatex">\(x : \N \to F\)</span> 가 수렴하면 코시수열이다. 또한 임의의 코시 수열은 유계이다."</a> 에 의하여 <span class="arithmatex">\(i \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ |\alpha (i)| \leq M_1, |\beta (i)| \leq M_2 \]</div>
+<p>인 <span class="arithmatex">\(M_1, M_2 \in \mathbb{Q}\)</span> 가 존재한다. 이때 <span class="arithmatex">\(M = \sup \{M_1, M_2\}\)</span> 라 두면</p>
+<div class="arithmatex">\[ i,j \geq N_1 \implies |\alpha (i) - \alpha (j)| &lt; \dfrac{e}{2M} \]</div>
+<div class="arithmatex">\[ i,j \geq N_2 \implies |\beta (i) - \beta (j)| &lt; \dfrac{e}{2M} \]</div>
+<p>인 <span class="arithmatex">\(N_1, N_2 \in \N\)</span> 가 존재한다. 이때 <span class="arithmatex">\(N = \sup \{N_1, N_2\}\)</span> 라 두면 임의의 <span class="arithmatex">\(i, j \geq N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ |\alpha (i)\beta (i) - \alpha (j)\beta (j)| \leq |\alpha (i)\beta (i) - \alpha (i)\beta (j)| + |\alpha (i)\beta (j) - \alpha (j)\beta (j)| \]</div>
+<p>인데(<em><span class="arithmatex">\(\because\)</span> <a href="#84983902d">정리 2.2.2 "순서체 <span class="arithmatex">\(F\)</span> 의 임의의 원소 <span class="arithmatex">\(a,b,c \in F\)</span> 에 대하여 다음이 성립한다. <span class="arithmatex">\(|a-c| \leq |a-b| + |b-c|\)</span>"</a> 에 의하여</em>), </p>
+<div class="arithmatex">\[ = |\alpha (i)||\beta (i) - \beta (j)| + |\beta (j)||\alpha (i)-\alpha (j)| \]</div>
+<p>(<em>에서 <span class="arithmatex">\(|\alpha (i)|\)</span> 와 <span class="arithmatex">\(|\beta (i)|\)</span> 의 상한이 <span class="arithmatex">\(M\)</span> 이므로</em>)</p>
+<div class="arithmatex">\[ &lt; M \dfrac{e}{2M} + M \dfrac{2}{2M} = e \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(\alpha \beta\)</span> 는 기본열이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>실수의 곱하기는 잘 정의되어 있고, associative, commutative, distributive 를 만족하고 항등원 <span class="arithmatex">\([1 ^{*}]\)</span> 을 가진다. </p>
+<ul>
+<li>증명</li>
+</ul>
+</li>
+<li>
+<p>실수의 곱하기는 역원을 가진다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\([a] \neq 0 ^{*}\)</span> 이면 <a href="#d99d004df">정리 2.4.2 "<span class="arithmatex">\(\forall [\alpha ], [\beta ] \in \R\)</span> 에 대하여 <span class="arithmatex">\([\alpha ] &gt; [\beta ], [\alpha ] = [\beta ], [\alpha ] &lt; [\beta ]\)</span> 중 오직 하나만 성립한다."</a> 에 의하여 <span class="arithmatex">\([\alpha ] &gt; 0 ^{*}\)</span> 또는 <span class="arithmatex">\([\alpha ] &lt; 0 ^{*}\)</span> 이 둘 중 하나만 성립한다. 그러므로 적당한 유리수 <span class="arithmatex">\(d&gt;0\)</span> 와 <span class="arithmatex">\(N_1 \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ i \geq N_1 \implies \alpha (i) &gt; d \]</div>
+<p>과 </p>
+<div class="arithmatex">\[ i \geq N_1 \implies \alpha (i) &lt; -d \]</div>
+<p>중 하나만 성립한다. 이때 기본열의 유한개의 항을 바꿔도 (<em>어차피 그것의 무한항이 근사되는 값은 바뀌지 않고 결국</em>) 그 동치류도 변하지 않으므로 그냥 </p>
+<div class="arithmatex">\[ \forall i \in \N, \alpha (i) \neq 0 \]</div>
+<p>라고 가정해도 좋다. 이제 </p>
+<div class="arithmatex">\[ \beta : i \mapsto \dfrac{1}{\alpha (i)} : \N \to \mathbb{Q} \]</div>
+<p>라는 유리수열을 정의하자. <span class="arithmatex">\(\beta\)</span> 가 기본열임을 보이면 </p>
+<div class="arithmatex">\[ [\alpha ][\beta ] = 1 ^{*} \]</div>
+<p>임은 자명하기에 모든 증명이 끝난다. 먼저 <span class="arithmatex">\(e \in P _{\mathbb{Q}}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ i \geq N_2 \implies |\alpha (i) - \alpha (j)| &lt; d ^{2}e \]</div>
+<p>인 <span class="arithmatex">\(N_2 \in \N\)</span> 가 존재한다. 이때 <span class="arithmatex">\(N = \sup \{N_1,N_2\}\)</span> 라고 하자. 그러면 임의의 <span class="arithmatex">\(i \geq N_1\)</span> 에 대하여 <span class="arithmatex">\(|\alpha (i)| &gt; d\)</span> 이므로 임의의 <span class="arithmatex">\(i, j \geq N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ |\beta (i) - \beta (j)| = \bigg |\dfrac{1}{\alpha (i)} - \dfrac{1}{\alpha (j)}\bigg | = \dfrac{1}{|\alpha (i)\alpha (j)|}|\alpha (i) - \alpha (j)| &lt; \dfrac{1}{d ^{2}}d ^{2}e = e \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(\beta\)</span> 는 기본열이다. ■ </p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#765b33eaf"><div class="admonition tldr" id="765b33eaf">
+<p>실수 집합 <span class="arithmatex">\(\R\)</span> 은 순서체이다.</p>
+</div></a>
+<ul>
+<li>
+<p>지금까지의 정리들을 기반으로 </p>
+<div class="arithmatex">\[ P _{\R} = \{[\alpha ] \in \R : [\alpha ] &gt; 0 ^{*}\} \]</div>
+<p>라 두면 순서체의 조건이 모두 성립한다.</p>
+</li>
+</ul>
+<a href="#823aabb47"><div class="admonition tldr" id="823aabb47">
+<p class="admonition-title">정리 2.4.3</p>
+<p>두 실수 <span class="arithmatex">\([\alpha ], [\beta ]\)</span> 가 <span class="arithmatex">\([\alpha ]&gt;[\beta ]\)</span> 이면 </p>
+<div class="arithmatex">\[ [\alpha ] &gt; [r ^{*}] &gt; [\beta ] \]</div>
+<p>를 만족하는 유리수 <span class="arithmatex">\(r \in \mathbb{Q}\)</span> 가 존재한다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>관계 </p>
+<div class="arithmatex">\[ i \geq N_1 \implies \alpha (i) - \beta (i) &gt; d \]</div>
+<p>가 성립하는 <span class="arithmatex">\(N_1 \in \N\)</span> 과 <span class="arithmatex">\(d &gt; 0\)</span> 인 <span class="arithmatex">\(d \in \mathbb{Q}\)</span> 가 존재한다. 또한 </p>
+<div class="arithmatex">\[ i,j \geq N_2 \implies |\alpha (i) - \alpha (j)| &lt; \dfrac{1}{4}d, \quad |\beta (i) - \beta (j)| &lt; \dfrac{1}{4}d \]</div>
+<p>이 성립하는 <span class="arithmatex">\(N_2 \in \N\)</span> 가 존재한다. 이때 <span class="arithmatex">\(N = \sup \{N_1,N_2\}\)</span> 라 두자. 만일 <span class="arithmatex">\(i \geq N\)</span> 이면 </p>
+<div class="arithmatex">\[ \alpha (i) - \bigg (\alpha (N) - \dfrac{1}{2}d\bigg ) = \dfrac{1}{2}d + (\alpha (i) - \alpha (N)) &gt; \dfrac{1}{4}\]</div>
+<p>이므로 (<em><span class="arithmatex">\(-\dfrac{1}{4}d &lt; \alpha (i) - \alpha (j) &lt; \dfrac{1}{4}d\)</span> 에서 <span class="arithmatex">\(\alpha (i) - \alpha (j) &gt; - \dfrac{1}{4}d\)</span> 이기 때문.</em>) </p>
+<div class="arithmatex">\[ [\alpha ] &gt; \bigg (\alpha (N) - \dfrac{1}{2}d\bigg ) ^{*} \]</div>
+<p>이다(<em>임의의 <span class="arithmatex">\(i \geq N\)</span> 에 대하여 기본열 <span class="arithmatex">\(\alpha (i)\)</span> 의 무한항의 근사가 기본열 <span class="arithmatex">\(\bigg (\alpha (N) - \dfrac{1}{2}d\bigg )\)</span> 의 무한항의 근사보다 크다는 사실이 도출되었기 때문</em>). </p>
+<p>또한 <span class="arithmatex">\(i \geq N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \bigg (\alpha (N) - \dfrac{1}{2}d\bigg ) - \beta (i) = (\alpha (N) - \beta (N)) + (\beta (N) - \beta (i)) - \dfrac{1}{2}d \]</div>
+<div class="arithmatex">\[ &gt; d - \dfrac{1}{4}d - \dfrac{1}{2}d = \dfrac{1}{4}d \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[  \bigg (\alpha (N) - \dfrac{1}{2}d\bigg ) ^{*} &gt; [\beta ] \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(\alpha (N) - \dfrac{1}{2}d \in \mathbb{Q}\)</span> 가 존재함을 증명하고자 했던 유리수이다. ■ </p>
+</li>
+</ul>
+<a href="#45986d46b"><div class="admonition tldr" id="45986d46b">
+<p>부분 수열(subsequence) : <span class="arithmatex">\(\forall k \in \{0, 1, 2, \dots\}\)</span> 에 대하여 <span class="arithmatex">\(i(k) &lt; i(k+1)\)</span> 인 함수 <span class="arithmatex">\(i : \N \to \N\)</span> 와 수열 <span class="arithmatex">\(x : i \mapsto x(i)\)</span> 의 합성 </p>
+<div class="arithmatex">\[ x \circ i : k \mapsto x(i(k)) \]</div>
+<p>를 <span class="arithmatex">\(x\)</span> 의 부분 수열이라 한다.</p>
+</div></a>
+<ul>
+<li>순서체 <span class="arithmatex">\(F\)</span> 의 수열 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(a \in F\)</span> 로 수렴하면, <span class="arithmatex">\(x\)</span> 의 모든 부분수열도 <span class="arithmatex">\(a\)</span> 로 수렴함은 자명하다.</li>
+</ul>
+<a href="#3a5110cb6"><div class="admonition tldr" id="3a5110cb6">
+<p class="admonition-title">도움정리 2.4.4</p>
+<p>순서체 <span class="arithmatex">\(F\)</span> 의 코시 수열 <span class="arithmatex">\(x\)</span> 의 한 부분수열 <span class="arithmatex">\(x \circ i\)</span> 가 <span class="arithmatex">\(a \in F\)</span> 로 수렴하면 <span class="arithmatex">\(x\)</span> 도 <span class="arithmatex">\(a \in F\)</span> 로 수렴한다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\forall e \in P _{F}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ i,j \geq N \implies |x(i) - x(j)| &lt; \dfrac{e}{2} \]</div>
+<p>가 성립하는 <span class="arithmatex">\(N \in \N\)</span> 이 존재한다. 또한 </p>
+<div class="arithmatex">\[ k \geq K \implies |x(i(k)) - a| &lt; \dfrac{e}{2}, \qquad i(K) \geq N \]</div>
+<p>이 성립하는 <span class="arithmatex">\(K \in \N\)</span> 가 존재한다. 이제 <span class="arithmatex">\(i \geq i(K)\)</span> 이면 </p>
+<div class="arithmatex">\[ |x(i) - a| \leq |x(i) - x(i(K))| + |x(i(K)) - a| &lt; \dfrac{e}{2} + \dfrac{e}{2} = e \]</div>
+<p>이 되어 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(a\)</span> 로 수렴함을 알 수 있다. ■ </p>
+</li>
+</ul>
+<a href="#73162e92f"><div class="admonition tldr" id="73162e92f">
+<p class="admonition-title">정리 2.4.5</p>
+<p><span class="arithmatex">\(n \in \{1,2,\dots\}\)</span> 에 대하여 <span class="arithmatex">\([ \alpha _n] \in \R\)</span> 일 때 </p>
+<div class="arithmatex">\[ n \mapsto [\alpha _n] \]</div>
+<p>을 <span class="arithmatex">\(\R\)</span> 의 코시수열이라고 하면, 이 수열은 <span class="arithmatex">\(\R\)</span> 안에서 수렴한다.</p>
+</div></a>
+<ul>
+<li>
+<p>유리수의 코시수열이 유리수 내부에서 수렴하는 것이 아니라 무리수로 수렴하여서 새로운 수체계가 정의되었지만, 실수의 코시수열은 그렇지 않고 항상 실수 내부에서 수렴한다는 것을 말해주는 정리이다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>우선 </p>
+<div class="arithmatex">\[ [\alpha _n] \neq [\alpha _{n+1}] \]</div>
+<p>라고 하면 <a href="#d99d004df">정리 2.4.2 "<span class="arithmatex">\(\forall [\alpha ], [\beta ] \in \R\)</span> 에 대하여 <span class="arithmatex">\([\alpha ] &gt; [\beta ],  [\alpha ] = [\beta ],  [\alpha ] &lt; [\beta ]\)</span> 중 오직 하나만 성립한다."</a> 에 의하여 <span class="arithmatex">\([\alpha _n]\)</span> 과 <span class="arithmatex">\([\alpha _{n+1}]\)</span> 사이의 유리수 <span class="arithmatex">\(r(n) \in \mathbb{Q}\)</span> 가 존재한다. 이때</p>
+<div class="arithmatex">\[ |[\alpha _n] - [r(n)^{*}]|&lt;|[\alpha _n]-[\alpha _{n+1}]| \]</div>
+<p>이므로 임의의 양의 실수 <span class="arithmatex">\([ \epsilon ] &gt; 0\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ n \geq N \implies |[\alpha _n] - [r(n) ^{*}]| &lt; \dfrac{1}{3}[\epsilon] \tag{1} \]</div>
+<p>이 성립하는 <span class="arithmatex">\(N \in \N\)</span> 이 존재한다.(<em>이것은 기본열 <span class="arithmatex">\(\alpha_n\)</span> 의 <span class="arithmatex">\(n\)</span> 번째 항과 <span class="arithmatex">\(n+1\)</span> 번째 항 사이에 반드시 어떤 유리수가 존재하고, 그러므로 어떤 실수를 나타내는 실수 수열 <span class="arithmatex">\([\alpha _n]\)</span> 과 또 실수 수열 <span class="arithmatex">\(r(n)^{*}\)</span> 의 무한항의 차이값이 <span class="arithmatex">\(0\)</span> 으로 근사된다는 의미이다.</em>)</p>
+<p>한편 <span class="arithmatex">\(0 &lt; [ \epsilon ]\)</span> 이므로 적당한 자연수 <span class="arithmatex">\(I_0\)</span> 과 유리수 <span class="arithmatex">\(d&gt;0\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ i \geq I_0 \implies \dfrac{1}{3}\epsilon (i) &gt; d \tag{2} \]</div>
+<p>이 성립한다.(<em>이떄의 <span class="arithmatex">\(\epsilon (i)\)</span> 는 <span class="arithmatex">\(\alpha_n\)</span> 의 <span class="arithmatex">\(i\)</span> 번째 항에 해당하는 <span class="arithmatex">\(\epsilon\)</span> 의 값인 것 같다. 아닌가?</em>)</p>
+<p>이때 유리수열 <span class="arithmatex">\(n \mapsto r(n)\)</span> 이 기본열임은 자명하므로 </p>
+<div class="arithmatex">\[ i, j \geq M \implies |r(i) - r(j)| &lt; d \tag{3} \]</div>
+<p>이 성립하는 자연수 <span class="arithmatex">\(M \in \N\)</span> 이 존재한다. 이때 <span class="arithmatex">\((1)\)</span> 의 자연수 <span class="arithmatex">\(n \geq N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ i \geq I(n) \implies |\alpha_n(i) - r(n)| &lt; \dfrac{1}{3}\epsilon (i) \tag{4} \]</div>
+<p>이 성립하는 자연수 <span class="arithmatex">\(I(n)\)</span> 이 존재한다.(<em>이는 <span class="arithmatex">\((1)\)</span> 에서 결정된 자연수 <span class="arithmatex">\(n \geq N\)</span> 으로 결정된 실수의 기본열 <span class="arithmatex">\(\alpha _n(i)\)</span> 가 기본열 <span class="arithmatex">\(r(n)\)</span> 과 또 다시 내부적으로 무한히 가깝게 근사된다는 말이다.</em>)</p>
+<p>이제 <span class="arithmatex">\(n \geq \sup \{N, M\}\)</span> 인 <span class="arithmatex">\(n \in \N\)</span> 을 선택하면, 각 <span class="arithmatex">\(i \geq \sup \{I_0, I(n), M\}\)</span> 에 대하여 <a href="#84983902d">정리 2.2.2 "순서체 <span class="arithmatex">\(F\)</span> 의 임의의 원소 <span class="arithmatex">\(a,b,c \in F\)</span> 에 대하여 다음이 성립한다. <span class="arithmatex">\(|a-c| \leq |a-b| + |b-c|\)</span>"</a> 에 의하여 </p>
+<div class="arithmatex">\[ |\alpha _n(i) - r(i)| \leq |\alpha _n -r(n)| + |r(n) - r(i)| \]</div>
+<p>인데 이때 <span class="arithmatex">\((3), (4)\)</span> 에 의하여 </p>
+<div class="arithmatex">\[ |\alpha _n -r(n)| + |r(n) - r(i)| &lt; \dfrac{1}{3}\epsilon (i) + d \]</div>
+<p>이고, 다시 <span class="arithmatex">\((2)\)</span> 에 의하여</p>
+<div class="arithmatex">\[  \dfrac{1}{3}\epsilon (i) + d &lt; \dfrac{1}{3}\epsilon (i) + \dfrac{1}{3}\epsilon (i) = \dfrac{2}{3} \epsilon (i) \]</div>
+<p>이므로 최종적으로 </p>
+<div class="arithmatex">\[ |\alpha _n(i) - r(i)| \leq \dfrac{2}{3}\epsilon (i) \]</div>
+<p>을 얻는다. 따라서 각 <span class="arithmatex">\(n \geq \sup \{N, M\}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ |[\alpha _n] - [r]| \leq \dfrac{2}{3}[\epsilon ] &lt; [\epsilon ] \]</div>
+<p>이므로 실수 수열 <span class="arithmatex">\(\big &lt;[\alpha _n]\big &gt;\)</span> 은 실수 <span class="arithmatex">\([r]\)</span> 로 수렴한다. ■ </p>
+</li>
+</ul>
+<h2 id="_6">완비순서체<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<a href="#050ce8566"><div class="admonition tldr" id="050ce8566">
+<p>완비순서체(completeness ordered field) 또는 실수의 완비성(completeness of the real numbers) : 순서체 <span class="arithmatex">\(F\)</span> 가 다음 세 동치 조건을 만족하면 이를 완비순서체라고 한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(A \neq \varnothing\)</span> 인 집합 <span class="arithmatex">\(A \subset F\)</span> 가 위로 유계이면 상한을 가진다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A \neq \varnothing\)</span> 인 집합 <span class="arithmatex">\(A \subset F\)</span> 가 아래로 유계이면 하한을 가진다.</p>
+</li>
+<li>
+<p>임의의 코시 수열 <span class="arithmatex">\(x: \N \to F\)</span> 가 <span class="arithmatex">\(F\)</span> 안에서 수렴한다. </p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p><a href="#febb2f17d">정리 2.3.2 "<span class="arithmatex">\(A \neq \varnothing\)</span> 인 집합 <span class="arithmatex">\(A \subset \R\)</span> 가 위로 유계이면 <span class="arithmatex">\(A\)</span> 는 최소상계를 갖는다."</a> 는 데데킨트 절단으로 정의된 실수체 <span class="arithmatex">\(\R\)</span> 이 완비순서체임을 말해준다.</p>
+<p>또한 아래 증명을 통해 코시 수열로 구성한 실수체도 완비순서체임이 증명된다. </p>
+</li>
+<li>
+<p>이것을 완비성이라고 한다. 완비성이란 쉽게 말해서 완비성을 갖는 집합의 원소로 수직선을 빈틈없이 채울 수 있다라는 것이다. 유리수는 조밀하지만, 완비적이지는 않다. 하지만 실수는 완비적이어서 좌표계를 메꿔질 구멍이 없이 채우는 것이 가능하다.</p>
+<p>어떤 집합이 갖는 완비성이라는 성질을 그냥 완비성이 아니라 굳이 "실수의" 완비성 이라고 하는 이유가 완비성이라는 성질을 갖는 집합이 실수체밖에 없기 때문이다.</p>
+</li>
+<li>
+<p>실수가 완비적이라는 것은 증명할 필요가 없는 공리이다.</p>
+</li>
+<li>
+<p>2) 가 1) 과 동치임은 자명하다.</p>
+</li>
+<li>
+<p>3) 을 만족하는 순서체는 완비순서체이다. 이는 조건 3) 으로부터 조건 1) 이 도출됨을 뜻한다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p>이제 아르키메데스의 성질과 3) 을 가정하고 1) 을 도출함으로써 코시 수열로 구성한 실수체가 완비순서체임을 보이자. 이를 위하여 순서체 <span class="arithmatex">\(F\)</span> 의 비어 있지 않은 부분집합 <span class="arithmatex">\(A \subset F\)</span>  가 위로 유계라고 하자(<em>이는 완비순서체의 조건 1) 의 조건절 "위로 유계이면" 으로부터 귀결절 "상한을 가진다" 를 이끌어내야 하기 때문에 조건절을 가정하는 것이다.</em>). 그리고 </p>
+<div class="arithmatex">\[ \mathcal{I} = \{(a, b) \in F \times F : a &lt; b\} \]</div>
+<p>에 대하여 두 함수 <span class="arithmatex">\(g,h: \mathcal{I} \to F\)</span> 를 </p>
+<div class="arithmatex">\[ g((a, b)) = \begin{cases} a &amp; \dfrac{a+b}{2} \text{ 가  } A \text{ 의 상계이다 }\\ \dfrac{a+b}{2} &amp; \dfrac{a+b}{2} \text{ 가  } A \text{ 의 상계가 아니다 }\end{cases} \]</div>
+<div class="arithmatex">\[ h((a, b)) = \begin{cases} \dfrac{a+b}{2} &amp; \dfrac{a+b}{2} \text{ 가  } A \text{ 의 상계이다 }\\ b &amp; \dfrac{a+b}{2} \text{ 가  } A \text{ 의 상계가 아니다 }\end{cases} \]</div>
+<p>로 정의하면, </p>
+<div class="arithmatex">\[ a \leq g((a, b)) &lt; h((a, b)) \leq b, \qquad h((a, b)) - g((a, b)) = \dfrac{1}{2}(b-1) \]</div>
+<p>이다.(<em>그냥 각 함수가 <span class="arithmatex">\(g((a,b))=a, h((a,b))=\dfrac{a+b}{2}\)</span> 일 때와 <span class="arithmatex">\(g((a,b))=\dfrac{a+b}{2}, h((a,b)) = b\)</span> 일 때를 따져보면 된다.</em>)</p>
+<p>또한 <span class="arithmatex">\(a\)</span> 가 <span class="arithmatex">\(A\)</span> 의 상계가 아니고, <span class="arithmatex">\(b\)</span> 가 <span class="arithmatex">\(A\)</span> 의 상계라고 하자. (<em>이때 <span class="arithmatex">\(\dfrac{a+b}{2}\)</span> 가 <span class="arithmatex">\(A\)</span> 의 상계일 경우 <span class="arithmatex">\(g((a,b)) = a\)</span> 이므로 <span class="arithmatex">\(g((a,b))\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상계가 아니고, <span class="arithmatex">\(h((a,b)) = \dfrac{a+b}{2}\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상계이다. 한편 <span class="arithmatex">\(\dfrac{a+b}{2}\)</span> 가 <span class="arithmatex">\(A\)</span> 의 상계가 아닐 경우 <span class="arithmatex">\(g((a,b)) = \dfrac{a+b}{2}\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상계가 아니고, <span class="arithmatex">\(h((a,b)) = b\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상계이다.</em>) 그러면 어느 경우든 <span class="arithmatex">\(g((a,b))\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상계가 아니고, <span class="arithmatex">\(h((a,b))\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상계이다. 그렇다면 <span class="arithmatex">\(A\)</span> 의 상계가 아닌 첫째 입력과 <span class="arithmatex">\(A\)</span> 의 상계인 둘째 입력을 받았을 때 함수 <span class="arithmatex">\(g, h\)</span> 의 성질은 다음과 같다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(g((a,b))\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상계가 아니고, <span class="arithmatex">\(h((a,b))\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상계이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(a \leq g((a, b)) &lt; h((a, b)) \leq b\)</span> </p>
+</li>
+<li>
+<p><span class="arithmatex">\(h((a, b)) - g((a, b)) = \dfrac{1}{2}(b-1)\)</span></p>
+</li>
+</ol>
+<p><br/></p>
+<p>이제 함수 <span class="arithmatex">\(f: \mathcal{I} \to \mathcal{I}\)</span> 를 </p>
+<div class="arithmatex">\[ f:(a,b) \mapsto (g((a,b)), h((a,b))) \tag{1}  \]</div>
+<p>로 정의하자. 이때 <span class="arithmatex">\(A\)</span> 의 원소가 <span class="arithmatex">\(1\)</span>개면 증명할 것이 없으므로(<em>왜냐하면 <span class="arithmatex">\(A\)</span> 의 원소가 하나이면 자동적으로 유계이며, 상한을 가지기 때문에 완비순서체의 조건 3) 에서 1) 을 바로 도출할 수 있기 때문이다.</em>), <span class="arithmatex">\(A\)</span> 의 원소가 <span class="arithmatex">\(2\)</span> 개 이상이라고 하자. 그러면 <span class="arithmatex">\(A\)</span> 의 상계가 아닌 <span class="arithmatex">\(a_0 \in A\)</span> 와 <span class="arithmatex">\(A\)</span> 의 상계 <span class="arithmatex">\(b_0\)</span> 가 존재한다. 그러면 <a href="#e4dca26d8">정리 2.1.2 "집합 <span class="arithmatex">\(X\)</span> 의 한 원소 <span class="arithmatex">\(a \in X\)</span> 와 함수 <span class="arithmatex">\(f: X \to X\)</span> 에 대하여 다음 성질 <span class="arithmatex">\(\gamma (0) = a, \qquad \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))\)</span> 을 만족하는 함수 <span class="arithmatex">\(\gamma : \N \to X\)</span> 가 유일하게 존재한다."</a> 를 적용하여 </p>
+<div class="arithmatex">\[\gamma (0) = (a_0, b_0), \qquad \forall n \in \N, \gamma (n ^{+}) = f(\gamma (n))\tag{2}\]</div>
+<p>인 유일하게 존재하는 함수 <span class="arithmatex">\(\gamma : \N \to \mathcal{I}\)</span> 를 정의할 수 있다. 이제 두 함수 <span class="arithmatex">\(\pi _1, \pi _2 : \mathcal{I}\to F\)</span> 를 <span class="arithmatex">\((a, b) \in \mathcal{I}\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \pi _1 : (a,b) \mapsto a, \quad \pi _2:(a,b) \mapsto b \tag{3} \]</div>
+<p>라고 정의하자. 그리고 </p>
+<div class="arithmatex">\[\alpha  = \pi _1 \circ \gamma , \beta = \pi _2 \circ \gamma \tag{4} \]</div>
+<p>라 두면 (<em>수열의 정의에 의하여</em>) <span class="arithmatex">\(\alpha , \beta\)</span> 는 <span class="arithmatex">\(F\)</span> 의 수열이 되며, (<em>정의 <span class="arithmatex">\((1), (2), (3), (4)\)</span> 과 <span class="arithmatex">\(\gamma (n) = (a_n,b_n)\)</span> 일 때 <span class="arithmatex">\(a_n = (\pi _1 \circ \gamma )(n) = \alpha (n), b_n = (\pi _2 \circ \gamma )(n) = \beta (n)\)</span> 인 것에 의하여</em>)</p>
+<div class="arithmatex">\[ \alpha (n ^{+}) = (\pi _1 \circ \gamma )(n ^{+}) = (\pi _1 \circ f)(\gamma (n)) = g(\gamma (n)) = g((\alpha (n), \beta (n))) \]</div>
+<div class="arithmatex">\[ \beta (n ^{+}) = (\pi _2 \circ \gamma )(n ^{+}) = (\pi _2 \circ f)(\gamma (n)) = h(\gamma (n)) = h((\alpha (n), \beta (n))) \]</div>
+<p>이 된다. <span class="arithmatex">\(\alpha, \beta\)</span> 함수에 대해서는 <span class="arithmatex">\(A\)</span> 의 상계가 아닌 <span class="arithmatex">\(a_0\)</span> 와 <span class="arithmatex">\(A\)</span> 의 상계 <span class="arithmatex">\(b_0\)</span> 에 대하여 초깃값이</p>
+<div class="arithmatex">\[ \alpha (0) = \pi _1 \circ \gamma (0) = a_0 , \quad \beta (0) = \pi _2 \circ \gamma (0) = b_0 \]</div>
+<p>이므로 <span class="arithmatex">\(\alpha (0), \beta (0)\)</span> 는 각각 <span class="arithmatex">\(A\)</span> 의 상계가 아닌 원소와 상계인 원소를 뜻하는데, 이후에는 <span class="arithmatex">\(\forall n \in \N \text{ \textbackslash }\{0\}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \alpha (n ^{+}) = g((\alpha (n), \beta (n))) , \quad \beta (n ^{+}) = h((\alpha (n), \beta (n))) \]</div>
+<p>이므로 위에서 첫번째 입력이 상계가 아니고, 두번째 입력이 상계일 때 도출해내었던 함수 <span class="arithmatex">\(g, h\)</span> 의 성질을 <span class="arithmatex">\(\alpha ,\beta\)</span> 함수가 그대로 갖게 된다. 그러므로 <span class="arithmatex">\(n \in \N\)</span> 에 대하여 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\alpha (n)\)</span> 은 <span class="arithmatex">\(A\)</span> 의 상계가 아니고, <span class="arithmatex">\(\beta (n)\)</span> 은 <span class="arithmatex">\(A\)</span> 의 상계이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\alpha (n) \leq \alpha (n ^{+}) &lt; \beta (n ^{+}) \leq \beta (n)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\beta (n ^{+}) - \alpha (n ^{+}) = \dfrac{1}{2}(\beta (n) - \alpha (n))\)</span></p>
+</li>
+</ol>
+<p>가 성립한다. 이때 아르키메데스의 성질에 의하여 <span class="arithmatex">\(\forall e \in P _{F}\)</span> 에 대하여 <span class="arithmatex">\(e \cdot N \geq \beta (0) - \alpha (0)\)</span> 인 자연수 <span class="arithmatex">\(N\)</span> 이 존재하므로 </p>
+<div class="arithmatex">\[ N \geq \dfrac{1}{e}[\beta (0) - \alpha (0)] \]</div>
+<p>이다. 이때 위의 성질 a), b), c) 와 <span class="arithmatex">\(\forall n \in \N, \dfrac{1}{2 ^{n}} \leq \dfrac{1}{n}\)</span> 인 것에 의하여, 각 <span class="arithmatex">\(m &gt; n \geq N\)</span> 에 대하여</p>
+<div class="arithmatex">\[ 0 \leq  \alpha (m) - \alpha (n) &lt; \beta (n) - \alpha (n) = \dfrac{1}{2 ^{n}}[\beta (0) - \alpha (0)] \leq \dfrac{1}{n}[\beta (0) - \alpha (0)] \]</div>
+<p>인데, <span class="arithmatex">\(e \geq \dfrac{1}{N} [\beta (0) - \alpha (0)] &gt; \dfrac{1}{n} [\beta (0) - \alpha (0)]\)</span> 이므로 </p>
+<div class="arithmatex">\[ \dfrac{1}{n}[\beta (0) - \alpha (0)] &lt; e \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(\alpha (m) - \alpha (n) &lt; e\)</span> 에서 <span class="arithmatex">\(\alpha: \N \to F\)</span> 는 코시 수열이고, 마찬가지로 <span class="arithmatex">\(\beta\)</span> 도 코시 수열임을 알 수 있다. </p>
+<p>그런데 완비순서체의 조건 3) 에 의하여 <span class="arithmatex">\(\alpha , \beta\)</span> 가 수렴함을 알 수 있으므로 각각의 극한값을 <span class="arithmatex">\(a, b\)</span> 라고 두자. 그러면 성질 c) 는 <span class="arithmatex">\(\alpha\)</span> 와 <span class="arithmatex">\(\beta\)</span> 의 차이값이 항이 높아질수록 <span class="arithmatex">\(1/2\)</span> 된다는 것을 말하고 있으므로 <span class="arithmatex">\(n \to \infty \implies \beta_n - \alpha_n \to 0\)</span> 이 됨을 알 수 있다. 이는 결국 <span class="arithmatex">\(a = b\)</span> 임을 뜻한다.</p>
+<p>한편 a) 에 의하여 <span class="arithmatex">\(\forall x \in A, n \in \N\)</span> 에 대하여 <span class="arithmatex">\(x \leq \beta (n)\)</span> 이므로 <span class="arithmatex">\(x \leq b\)</span> 이고, 이에 따라 <span class="arithmatex">\(b\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상계이다. 한편 <span class="arithmatex">\(e&gt;0\)</span> 이면 <span class="arithmatex">\(\exists  n \in \N \text{ s.t. }\ a - e &lt; \alpha (n) \leq  a = b\)</span> 인데, <span class="arithmatex">\(\alpha (n)\)</span> 이 <span class="arithmatex">\(A\)</span> 의 상계가 아니므로 <span class="arithmatex">\(\exists y \in A \text{ s.t. }\  \alpha (n) &lt; y\)</span> 이다. 그러면 <span class="arithmatex">\(a - e &lt; y\)</span> 이므로 <span class="arithmatex">\(a-e\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상계가 아니다. 그런데 <span class="arithmatex">\(a=b\)</span> 가 <span class="arithmatex">\(A\)</span> 의 상계라고 하였고 <span class="arithmatex">\(e\)</span> 는 임의의 양수이므로 <span class="arithmatex">\(a = b\)</span> 는 최소상계이다. 왜냐하면 아무리 작은 <span class="arithmatex">\(e\)</span> 에 의하여 <span class="arithmatex">\(a-e\)</span> 를 결정해도 그것은 상계가 아니기 때문이다. </p>
+<p>그렇다면 <span class="arithmatex">\(A\)</span> 가 상한을 가짐이 증명되었으므로 우리는 방금 완비순서체의 조건 3) 으로부터 1) 을 도출했다. ■ </p>
+</li>
+</ul>
+</li>
+<li>
+<p>조건 1) 으로부터 조건 3) 이 도출된다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p>순서체 <span class="arithmatex">\(F\)</span> 의 코시 수열 <span class="arithmatex">\(\alpha : \N \to F\)</span> 가 존재할때 <a href="#3a5110cb6">도움정리 2.4.4 "순서체 <span class="arithmatex">\(F\)</span> 의 코시 수열 <span class="arithmatex">\(x\)</span> 의 한 부분수열 <span class="arithmatex">\(x \circ i\)</span> 가 <span class="arithmatex">\(a \in F\)</span> 로 수렴하면 <span class="arithmatex">\(x\)</span> 도 <span class="arithmatex">\(a \in F\)</span> 로 수렴한다."</a> 에 의하여 수열 <span class="arithmatex">\(\alpha\)</span> 가 수렴하는 부분수열을 가짐을 증명하면 된다. </p>
+<p><span class="arithmatex">\(A = \{\alpha (n) : n \in \N\}\)</span> 이 유한집합이면 간단하고, <span class="arithmatex">\(A\)</span> 가 무한집합이면 <a href="#0be354c69">정리 2.4.1 "순서체 <span class="arithmatex">\(F\)</span> 의 수열 <span class="arithmatex">\(x : \N \to F\)</span> 가 수렴하면 코시수열이다. 또한 임의의 코시 수열은 유계이다."</a> 에 의하여 <span class="arithmatex">\(A\)</span> 는 위로 유계이고 아래로 유계이이다. 그러면 집합 <span class="arithmatex">\(A\)</span> 의 하계 <span class="arithmatex">\(a_0\)</span> 와 상계 <span class="arithmatex">\(b_0\)</span> 를 택하고 조건 1) 에서 3) 을 도출했을 때처럼 구간을 반으로 계속 분할해 나가는데, <span class="arithmatex">\(A\)</span> 의 원소가 무한개 속하는 쪽을 계속 선택한다. </p>
+<p>그러면 이 구간들의 왼쪽 끝점의 집합은 유계이고 조건 1) 을 가정했으므로 상한 <span class="arithmatex">\(a\)</span> 를 가진다. 또한 구간들의 오른쪽 끝점들의 집합은 아래로 유계이므로 조건 1) 과 동치인 2) 에의하여 하한 <span class="arithmatex">\(b\)</span> 를 가진다. </p>
+<p>그러면 3) 에서 1) 을 도출했을 때처럼 <span class="arithmatex">\(a=b\)</span> 가 되고 이 원소 근방에는 무한히 많은 <span class="arithmatex">\(A\)</span> 의 원소가 있으므로 <span class="arithmatex">\(A\)</span> 의 원소를 계속 택하여 수열을 만들어 <span class="arithmatex">\(a\)</span> 로 수렴하게 할 수 있다. 이 수열이 우리가 원하던 원래 <span class="arithmatex">\(\alpha\)</span> 의 수렴하는 부분수열이 된다. ■ </p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#1963be39a"><div class="admonition tldr" id="1963be39a">
+<p class="admonition-title">정리 2.5.1</p>
+<p>완비순서체 <span class="arithmatex">\(F\)</span> 는 아르키메데스의 성질을 만족한다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>집합 <span class="arithmatex">\(\N \subset F\)</span> 이 위로 유계라고 가정하면, 완비순서체의 조건 1) 에 의하여 <span class="arithmatex">\(\N\)</span> 의 최소상계 <span class="arithmatex">\(\alpha \in F\)</span> 가 존재한다. (<em>이 <span class="arithmatex">\(\alpha\)</span> 가 자연수라는 보장은 없다. 오히려 자연수가 아니라고 생각해야 모순이 없을듯.</em>)</p>
+<p>그러면 <span class="arithmatex">\(\alpha -1 &lt; \alpha\)</span> 이므로 <span class="arithmatex">\(\alpha -1\)</span> 는 <span class="arithmatex">\(\N\)</span> 의 상계가 아니다. 그렇다면 (<em><span class="arithmatex">\(\alpha -1\)</span> 보다 큰 자연수가 존재한다는 말이므로</em>)</p>
+<div class="arithmatex">\[ \exists n \in \N \text{ s.t.  }\  \alpha -1&lt;n \leq \alpha \]</div>
+<p>이다. 그러면 (<em>페아노 공리계의 공리 2) 에 의하여</em>)</p>
+<div class="arithmatex">\[ n + 1 \in \N \]</div>
+<p>임에도 불구하고 </p>
+<div class="arithmatex">\[ \alpha -1 &lt; n \iff n+1 &gt; \alpha \]</div>
+<p>이므로 <span class="arithmatex">\(\alpha\)</span> 가 <span class="arithmatex">\(\N\)</span> 의 상계라는 것에 모순이다. 그러므로 <span class="arithmatex">\(\N\)</span> 은 위로 유계가 아니다. ■ </p>
+</li>
+</ul>
+<a href="#849201a15"><div class="admonition tldr" id="849201a15">
+<p class="admonition-title">정리 2.5.2</p>
+<p>완비순서체 <span class="arithmatex">\(F\)</span> 의 두 원소 <span class="arithmatex">\(x, y \in F\)</span> 가 <span class="arithmatex">\(x &lt; y\)</span> 이면 </p>
+<div class="arithmatex">\[ x&lt;r&lt;y \]</div>
+<p>를 만족하는 유리수 <span class="arithmatex">\(r \in \mathbb{Q} \subset F\)</span> 이 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이것을 조밀성(dense)라고 한다. 유리수가 조밀하다 라는 것은 어떤 두 유리수 사이에 반드시 또 다른 유리수가 존재하다는 것이다. </p>
+<p>그러나 완비순서체의 유일성 증명에서 살펴보는 바와 같이 유리수는 완비적이지는 않다. 즉, 유리수로는 좌표계를 메꿔질 구멍이 없이 채우는 것이 불가능하다.</p>
+<ul>
+<li>
+<p>증명 </p>
+<p>유리수 집합 <span class="arithmatex">\(\mathbb{Q}\)</span> 가 조밀하면서, 완비적이라고 가정하자. 유리수 집합으로 완비성을 다시 따져보면 다음과 같다. </p>
+<p>"순서체 <span class="arithmatex">\(\mathbb{Q}\)</span> 가 다음 조건을 만족하면 완비순서체이다. <span class="arithmatex">\(A \neq \varnothing\)</span> 인 <span class="arithmatex">\(A \subset \mathbb{Q}\)</span> 가 위로 유계이면 상한을 가진다."</p>
+<p><span class="arithmatex">\(A \subset \mathbb{Q}\)</span> 를 <span class="arithmatex">\(A = \{x \in \mathbb{Q} : x &lt; \sqrt[]{2}\}\)</span> 라고 정의하면 <span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(A \neq \varnothing\)</span> 이고 위로 유계이다. 그러면 완비성의 조건 에 의하여 상한 <span class="arithmatex">\(\sup A \in \mathbb{Q}\)</span> 이 존재한다. <span class="arithmatex">\(\sup A\)</span> 는 유리수이므로 <span class="arithmatex">\(\sup A \neq \sqrt[]{2}\)</span> 이다. 그러면 <span class="arithmatex">\(\sup A &gt; \sqrt[]{2} \lor \sup A &lt; \sqrt[]{2}\)</span> 이다. </p>
+<p>그런데 <span class="arithmatex">\(\sup A &gt; \sqrt[]{2}\)</span> 일 경우 본 정리에 의하여 <span class="arithmatex">\(\exists r \in \mathbb{Q} \text{ s.t. }\  \sqrt[]{2} &lt; r &lt; \sup A\)</span> 이므로 <span class="arithmatex">\(\sup A\)</span> 가 최소상계라는 것에 모순이고, <span class="arithmatex">\(\sup A &lt; \sqrt[]{2}\)</span> 일 경우 다시 본 정리에 의하여 <span class="arithmatex">\(\exists r \in \mathbb{Q} \text{ s.t. }\  \sup A &lt; r &lt; \sqrt[]{2}\)</span> 이므로 상계보다 큰 원소가 존재하여 모순이다. </p>
+<p>그러므로 <span class="arithmatex">\(\sup A = \sqrt[]{2} \in \mathbb{Q}\)</span> 인데 실제로는 <span class="arithmatex">\(\sqrt[]{2} \not \in \mathbb{Q}\)</span> 이므로 모순이다. 그러므로 유리수 집합 <span class="arithmatex">\(\mathbb{Q}\)</span> 는 완비적이지 않다. ■ </p>
+</li>
+</ul>
+</li>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(x = 0\)</span> 이면 <a href="#1963be39a">정리 2.5.1 "완비순서체 <span class="arithmatex">\(F\)</span> 는 아르키메데스의 성질을 만족한다."</a> 와 <a href="#584af2c07">정리 2.2.4 "순서체 <span class="arithmatex">\(F\)</span> 에 대하여 다음이 동치이고, 이 조건을 만족하는 순서체 <span class="arithmatex">\(F\)</span> 를 아르키메데스의 성질을 만족한다고 한다. <span class="arithmatex">\(x&gt;0 \implies  \exists n \in \N \text{ \textbackslash }\{0\} \text{ s.t.  }\  x &gt; \dfrac{1}{n}\)</span>"</a> 를 적용하면 된다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>이제 <span class="arithmatex">\(0&lt;x&lt;y\)</span> 라고 하면 다시 <a href="#1963be39a">정리 2.5.1 "완비순서체 <span class="arithmatex">\(F\)</span> 는 아르키메데스의 성질을 만족한다."</a> 에 의하여 </p>
+<div class="arithmatex">\[ n \in \N \text{ s.t.  }\  0 &lt; \dfrac{1}{n} &lt; y - x \]</div>
+<p>이다. 이때 <span class="arithmatex">\(\dfrac{1}{n} \in P _{F}\)</span> 와 <span class="arithmatex">\(x \in P _{F}\)</span> 에 대하여 <a href="#1963be39a">정리 2.5.1 "완비순서체 <span class="arithmatex">\(F\)</span> 는 아르키메데스의 성질을 만족한다."</a> 를 또 적용하면 </p>
+<div class="arithmatex">\[ \{k \in \N : k \cdot \dfrac{1}{n} &gt; x \} \neq \varnothing \]</div>
+<p>이다. 그러면 <a href="#5efd87f3f">정리 2.1.4 "비어있지 않은 자연수들의 집합은 최소 원소를 가진다."</a> 에 의하여 이 집합은 최솟값을 갖는데, 이 최솟값을 <span class="arithmatex">\(m\)</span> 이라 두면 </p>
+<div class="arithmatex">\[ \dfrac{m-1}{n} \leq x &lt; \dfrac{m}{n} \]</div>
+<p>이고, 이에 따라 </p>
+<div class="arithmatex">\[ x &lt; \dfrac{m}{n} = \dfrac{m-1}{n} + \dfrac{1}{n} \leq x + \dfrac{1}{n} &lt; y \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(\dfrac{m}{n}\)</span> 이 바로 <span class="arithmatex">\(x\)</span> 와 <span class="arithmatex">\(y\)</span> 사이에 있는 유리수이다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p><span class="arithmatex">\(x&lt;0\)</span> 일 때는 <span class="arithmatex">\(\exists n \in \N \text{ s.t.  }\ -x&lt;n\)</span> 이므로 </p>
+<div class="arithmatex">\[ 0 &lt; x + n &lt; y + n \]</div>
+<p>인데, 방금 증명했듯이 </p>
+<div class="arithmatex">\[ \exists r \in \mathbb{Q} \text{ s.t.  }\  x + n &lt; r &lt; y + n\]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(r-n\)</span> 이 <span class="arithmatex">\(x\)</span> 와 <span class="arithmatex">\(y\)</span> 사이에 있는 유리수이다. ■ </p>
+</li>
+</ul>
+<a href="#e1b32aaed"><div class="admonition tldr" id="e1b32aaed">
+<p class="admonition-title">2.33</p>
+<p>순서체 <span class="arithmatex">\(F\)</span> 의 부분집합 <span class="arithmatex">\(S, T \subset F\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ S + T = \{s + t \in F : s \in S, t \in T\} \]</div>
+<p>라고 정의했을 때 </p>
+<div class="arithmatex">\[ \sup (S+T) = \sup S + \sup T \]</div>
+<p>이다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(\sup S = \alpha , \sup T = \beta\)</span> 라 두자. 그러면 일단 <span class="arithmatex">\(\forall s \in S, \forall t \in T\)</span> 에 대하여 <span class="arithmatex">\(s + t \leq \alpha + \beta\)</span> 이므로 <span class="arithmatex">\(\alpha + \beta\)</span> 는 <span class="arithmatex">\(S+T\)</span> 의 상계이다.</p>
+<p>이제 <span class="arithmatex">\(\alpha + \beta\)</span> 가 최소상계임을 보이기 위하여 <span class="arithmatex">\(\gamma &lt; \alpha + \beta\)</span> 이면 <span class="arithmatex">\(\gamma\)</span> 가 <span class="arithmatex">\(S+T\)</span> 의 상계가 아님을 보이려 한다. 즉, <span class="arithmatex">\(\gamma &lt; \alpha + \beta\)</span> 이면 <span class="arithmatex">\(\gamma &lt; s+t\)</span> 인 <span class="arithmatex">\(s \in S\)</span> 와 <span class="arithmatex">\(t \in T\)</span> 가 존재함을 보이는 것이다.</p>
+<p>이제 <span class="arithmatex">\(\epsilon = \alpha + \beta - \gamma\)</span> 라 두면 <span class="arithmatex">\(\epsilon &gt; 0 \implies \dfrac{\epsilon }{2} &gt; 0\)</span> 이고, 따라서 <span class="arithmatex">\(\alpha - \dfrac{\epsilon }{2} &lt; \alpha\)</span> 인데 <span class="arithmatex">\(\alpha\)</span> 는 <span class="arithmatex">\(S\)</span> 의 최소상계이므로 <span class="arithmatex">\(\alpha - \dfrac{\epsilon }{2}\)</span> 는 <span class="arithmatex">\(S\)</span> 의 상계가 아니다. 그러므로 <span class="arithmatex">\(\exists   s \in S \text{ s.t. }\ \alpha - \dfrac{\epsilon }{2} &lt; s\)</span> 이다. 마찬가지로 <span class="arithmatex">\(\exists t \in T \text{ s.t. }\ \beta - \dfrac{\epsilon }{2} &lt; t\)</span> 이다. 그러면 </p>
+<div class="arithmatex">\[ \gamma  = \alpha +\beta -\epsilon = \bigg (\alpha - \dfrac{\epsilon }{2}\bigg ) + \bigg (\beta - \dfrac{\epsilon }{2}\bigg ) &lt; s + t \]</div>
+<p>인데, 이 <span class="arithmatex">\(s \in S, t \in T\)</span> 가 존재성을 보이려 했던 것들이므로 증명이 끝났다. ■ </p>
+</li>
+</ul>
+<a href="#85dc4bdbb"><div class="admonition tldr" id="85dc4bdbb">
+<p class="admonition-title">2.34</p>
+<p>순서체 <span class="arithmatex">\(F\)</span> 의 부분집합 <span class="arithmatex">\(S, T \subset P _{F}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ ST = \{st \in P _{F} : s \in S, t \in T\} \]</div>
+<p>라고 정의했을 때 </p>
+<div class="arithmatex">\[ \sup ST = \sup S \sup T \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>증명</li>
+</ul>
+<a href="#71e5fdcc6"><div class="admonition tldr" id="71e5fdcc6">
+<p class="admonition-title">정리 2.5.3</p>
+<p>임의의 두 완비순서체 <span class="arithmatex">\(F, G\)</span> 가 주어지면 전단사 함수 <span class="arithmatex">\(f: F \to G\)</span> 가 존재하여 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall x,y \in F\)</span> 에 대하여 <span class="arithmatex">\(f(x+y)=f(x)+f(y), \quad f(xy)=f(x)f(y)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(f(P _{F}) = P _{G}\)</span></p>
+</li>
+</ol>
+<p>를 만족한다. </p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 완비순서체가 유일하게 존재함을 말한다. 즉, 완비순서체는 본질적으로 단 하나만 존재하고, 그것이 실수체 <span class="arithmatex">\(\R\)</span> 이라는 것이다. 만약 완비순서체의 조건을 만족하는 다른 체가 정의된다면, 그 체와 <span class="arithmatex">\(\R\)</span> 사이에 일대일 대응과 연산의 대응관계 같은 모든 구조를 그대로 보존하는 사상이 존재한다. 따라서 이 정리를 다음과 같이 이해하면 더욱 그 의미가 분명해질 것이다.</p>
+<p>임의의 완비순서체 <span class="arithmatex">\(F\)</span> 가 주어지면 전단사 함수 <span class="arithmatex">\(f: F \to \R\)</span> 가 존재하여 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall x,y \in F\)</span> 에 대하여 <span class="arithmatex">\(f(x+y)=f(x)+f(y), \quad f(xy)=f(x)f(y)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(f(P _{F}) = P _{\R}\)</span></p>
+</li>
+</ol>
+<p>를 만족한다. </p>
+</li>
+<li>
+<p>또한 이 정리로써 데데킨트 절단으로 구성한 실수체와 코시 수열로 구성한 실수체가 모두 완비순서체였고, 결국 이들은 본질적으로 같은 순서체임을 알 수 있다. </p>
+</li>
+<li>
+<p>증명</p>
+<p><a href="#116d61a96">정리 2.2.3</a> 에 의하여 </p>
+<div class="arithmatex">\[ \begin{equation}\begin{split} &amp; \gamma (r+s) = \gamma (r) + \gamma (s), \quad \gamma (rs) = \gamma (r)\gamma (s), \quad \gamma (P _{\mathbb{Q}}) = \gamma (\mathbb{Q})\cap P _{F}\\ &amp;\delta (r+s) = \delta (r) + \delta (s), \quad \delta (rs) = \delta (r)\delta (s), \quad \delta (P _{\mathbb{Q}}) = \delta (\mathbb{Q})\cap P _{G} \end{split}\end{equation} \tag{1} \]</div>
+<p>을 만족하는 단사함수 </p>
+<div class="arithmatex">\[ \gamma : \mathbb{Q} \to F, r \mapsto r \cdot 1_F \]</div>
+<div class="arithmatex">\[ \delta : \mathbb{Q} \to G, r \mapsto r \cdot 1_G \]</div>
+<p>가 존재한다. 이제 각 <span class="arithmatex">\(x \in F\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ A_x = \{\delta (r) \in G : r \in \mathbb{Q}, \gamma (r) &lt; x\} \]</div>
+<p>라 정의하면 <a href="#1963be39a">정리 2.5.1 "완비순서체 <span class="arithmatex">\(F\)</span> 는 아르키메데스의 성질을 만족한다."</a> 에 의하여 완비순서체 <span class="arithmatex">\(F\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \exists n \in \N \text{ s.t. }\  n \cdot 1_F &gt; -x \]</div>
+<p>이고, 이는 <span class="arithmatex">\(\gamma (-n) = (-n) \cdot 1_F &lt; x\)</span> 를 뜻하므로 (<em><span class="arithmatex">\(\delta (-n) \in A_x\)</span> 에서</em>) <span class="arithmatex">\(A_x \neq \varnothing\)</span> 이다. </p>
+<p>다시 아르키메데스의 법칙으로 <span class="arithmatex">\(m \cdot 1_F &gt; x\)</span> 인 <span class="arithmatex">\(m \in \N\)</span> 가 존재하는데, 이 <span class="arithmatex">\(m\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \delta (m) = m \cdot 1_G \]</div>
+<p>는 <span class="arithmatex">\(\gamma (m) = m \cdot 1_F &gt; x\)</span> 이므로 <span class="arithmatex">\(A_x\)</span> 의 상계이다. 그러면 <span class="arithmatex">\(A_x\)</span> 는 위로 유계이고 <span class="arithmatex">\(G\)</span> 는 완비순서체이므로 <span class="arithmatex">\(A_x\)</span> 는 최소상계를 갖는다. 이 <span class="arithmatex">\(x\)</span> 에 대하여 결정되는 <span class="arithmatex">\(A_x\)</span> 의 상한을 <span class="arithmatex">\(f(x)\)</span> 라고 쓰면 <span class="arithmatex">\(f\)</span> 는 <span class="arithmatex">\(F\)</span> 에서 <span class="arithmatex">\(G\)</span> 로 가는 함수이다. 즉, <span class="arithmatex">\(x \in F\)</span> 에 대하여 <span class="arithmatex">\(f: F \to G\)</span> 를 </p>
+<div class="arithmatex">\[ f(x) = \sup \{\delta (r) \in G: r \in \mathbb{Q}, \gamma (r) &lt; x\} = \sup A_x \in G \]</div>
+<p>와 같이 정의하는 것이다. 그러면 마찬가지로 <span class="arithmatex">\(G\)</span> 에서 <span class="arithmatex">\(F\)</span> 로 가는 함수 <span class="arithmatex">\(g: G \to F\)</span> 를 <span class="arithmatex">\(y \in G\)</span> 에 대하여</p>
+<div class="arithmatex">\[ g(y) = \sup \{\gamma (r) \in F: r \in \mathbb{Q}, \delta (r) &lt; y\} \in F \]</div>
+<p>와 같이 정의할 수 있다. </p>
+<p>먼저 <span class="arithmatex">\((1)\)</span> 에 의하여 각 유리수 <span class="arithmatex">\(r, s \in \mathbb{Q}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ r &lt; s \iff \gamma (r) &lt; \gamma (s) \iff \delta (r) &lt; \delta (s) \]</div>
+<p>가 성립한다. 따라서 </p>
+<div class="arithmatex">\[ \begin{equation}\begin{split} f(\gamma (s)) &amp;= \sup \{\delta (r) \in G: r \in \mathbb{Q}, \gamma (r) &lt; \gamma (s)\}  \\ &amp;= \sup \{\delta (r) \in G: r \in \mathbb{Q}, \delta (r) &lt; \delta (s)\} = \delta (s) \end{split}\end{equation} \tag*{} \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ f \circ \gamma = \delta , \quad g \circ \delta = \gamma \]</div>
+<p>이다. 그러면 다음과 같은 관계가 성립한다.</p>
+<div class="arithmatex">\[ \mathbb{Q} \xrightarrow{\gamma } F, \mathbb{Q} \xrightarrow{\delta  } G, F \xleftrightarrow[f]{g} G \]</div>
+<p>이제 <span class="arithmatex">\(f(x+y) = f(x)+f(y)\)</span> 임을 보이는데 함수 <span class="arithmatex">\(f\)</span> 의 정의와 <a href="#e1b32aaed">정리 2.33 "순서체 <span class="arithmatex">\(F\)</span> 의 부분집합 <span class="arithmatex">\(S, T \subset F\)</span> 에 대하여 <span class="arithmatex">\(S + T = \{s + t \in F : s \in S, t \in T\}\)</span> 라고 정의했을 때 <span class="arithmatex">\(\sup (S+T) = \sup S + \sup T\)</span> 이다."</a> 에 의하여 </p>
+<div class="arithmatex">\[ f(x) + f(y) = \sup A_x + \sup A_y = \sup (A_x + A_y) = \sup A _{x+y} = f(x + y) \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ A _{x+y} = A_x + A_y \]</div>
+<p>임을 보이면 된다. 먼저 <span class="arithmatex">\(\delta (r) \in A_x, \delta (s) \in A_y \implies \gamma (r) &lt; x, \gamma (s) &lt; y\)</span> 이므로 </p>
+<div class="arithmatex">\[ \delta (r)+\delta (s)=\delta (r+s), \quad \gamma (r+s)=\gamma (r)+\gamma (s) &lt; x+y \]</div>
+<p>에서 <span class="arithmatex">\(\delta (r)+\delta (s)\in A _{x+y}\)</span> 이다. 역으로 <span class="arithmatex">\(\delta (t) \in A _{x+y} \implies \gamma (t) &lt; x+y\)</span> 인데 <a href="#849201a15">정리 2.5.2 "완비순서체 <span class="arithmatex">\(F\)</span> 의 두 원소 <span class="arithmatex">\(x, y \in F\)</span> 가 <span class="arithmatex">\(x &lt; y\)</span> 이면 <span class="arithmatex">\(x&lt;r&lt;y\)</span> 를 만족하는 유리수 <span class="arithmatex">\(r \in \mathbb{Q} \subset F\)</span> 이 존재한다."</a> 에 의하여 </p>
+<div class="arithmatex">\[ \exists s \in \mathbb{Q} \text{ s.t. }\ r(t)-y&lt;r(s)&lt;x \]</div>
+<p>이다. 그러면 </p>
+<div class="arithmatex">\[ \gamma (s) &lt; x, \quad \gamma (t-s) = \gamma (t) - \gamma (s) &lt; y \]</div>
+<p>에서 <span class="arithmatex">\(\delta (t) = \delta (s) + \delta (t-s)\in A_x+A_y\)</span> 이다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>이제 <span class="arithmatex">\(f(xy) = f(x)f(y)\)</span> 임을 보이기 위하여 <span class="arithmatex">\(x,y \in P_F\)</span> 인 경우부터 생각하면 다시 <a href="#849201a15">정리 2.5.2 "완비순서체 <span class="arithmatex">\(F\)</span> 의 두 원소 <span class="arithmatex">\(x, y \in F\)</span> 가 <span class="arithmatex">\(x &lt; y\)</span> 이면 <span class="arithmatex">\(x&lt;r&lt;y\)</span> 를 만족하는 유리수 <span class="arithmatex">\(r \in \mathbb{Q} \subset F\)</span> 이 존재한다."</a> 에 의하여 </p>
+<div class="arithmatex">\[ A_x \cap P_G \neq \varnothing , A_y \cap P_G \neq \varnothing \]</div>
+<p>이므로 <a href="#85dc4bdbb">정리 2.34 "순서체 <span class="arithmatex">\(F\)</span> 의 부분집합 <span class="arithmatex">\(S, T \subset P _{F}\)</span> 에 대하여 <span class="arithmatex">\(ST = \{st \in P _{F} : s \in S, t \in T\}\)</span> 라고 정의했을 때 <span class="arithmatex">\(\sup ST = \sup S \sup T\)</span> 이다."</a> 를 적용하면 된다. 이로써 1) 의 증명이 끝났다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>이제 </p>
+<div class="arithmatex">\[ x &gt; 0 \iff f(x) &gt; 0 \]</div>
+<p>을 보일텐데 먼저 <span class="arithmatex">\(x&gt;0\)</span> 이면 <a href="#849201a15">정리 2.5.2 "완비순서체 <span class="arithmatex">\(F\)</span> 의 두 원소 <span class="arithmatex">\(x, y \in F\)</span> 가 <span class="arithmatex">\(x &lt; y\)</span> 이면 <span class="arithmatex">\(x&lt;r&lt;y\)</span> 를 만족하는 유리수 <span class="arithmatex">\(r \in \mathbb{Q} \subset F\)</span> 이 존재한다."</a> 에 의하여 </p>
+<div class="arithmatex">\[ \exists r \in \mathbb{Q} \text{ s.t. }\ 0 &lt; \gamma (r) &lt; x \]</div>
+<p>이다. 그러면 <span class="arithmatex">\(\delta (r) &gt; 0 \land \delta (r) \in A_x \implies f(x) &gt; 0\)</span> 이다.</p>
+<p>역으로 <span class="arithmatex">\(f(x)&gt;0\)</span> 이면 <span class="arithmatex">\(0\)</span> 은 집합 <span class="arithmatex">\(A_x\)</span> 의 상계가 아니다.따라서 </p>
+<div class="arithmatex">\[ \exists \delta (r) \in A_x \text{ s.t. }\ \delta (r) &gt; 0 \]</div>
+<p>이다. 그러면 <span class="arithmatex">\(0 &lt; \gamma (r)&lt;x\)</span> 이고, 이로써 2) 의 증명이 끝났다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>이제 <span class="arithmatex">\(f\)</span> 가 전단사함수임을 보이면 모든 증명이 끝난다. 이는 <span class="arithmatex">\(g \circ f = 1_F, f \circ g = 1_G\)</span> 를 보임으로써 이루어진다. <span class="arithmatex">\(g \circ f = 1_F\)</span> 를 보이기 위하여 <span class="arithmatex">\(f\)</span> 의 정의에 의하여 <span class="arithmatex">\(x \in F\)</span> 에 대하여</p>
+<div class="arithmatex">\[ x = \sup \{\gamma (r) \in F:r \in \mathbb{Q}, \delta (r) &lt; f(x)\} \tag{2} \]</div>
+<p>를 보이면 된다. (<em>왜냐하면 <span class="arithmatex">\(g\)</span> 에 <span class="arithmatex">\(f(x)\)</span> 라는 입력을 넣었을 때 <span class="arithmatex">\(x\)</span> 라는 출력이 나왔으면 최초에 <span class="arithmatex">\(f\)</span> 에 <span class="arithmatex">\(x\)</span> 라는 입력을 넣었으므로 항등함수 <span class="arithmatex">\(1_F\)</span> 가 되기 때문이다.</em>) 이는 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(r \in \mathbb{Q}, \delta (r) &lt; f(x) \implies \gamma (r) \leq x\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(z &lt; x \implies \exists r \in \mathbb{Q} \text{ s.t. }\ z &lt; \gamma (r), \delta (r) &lt; f(x)\)</span></p>
+</li>
+</ol>
+<p>를 보이는 것과 같다. a) 는 <span class="arithmatex">\(r\)</span> 이 <span class="arithmatex">\((2)\)</span> 를 만족하면 <span class="arithmatex">\(x\)</span> 가 최소상계이므로 <span class="arithmatex">\(\gamma (r) \leq x\)</span> 라는 이야기이고, b) 는 최소상계인 <span class="arithmatex">\(x\)</span> 보다 작은 <span class="arithmatex">\(z\)</span> 가 존재하면 <span class="arithmatex">\(z\)</span> 는 상계가 아니라는 말이다. </p>
+<p><span class="arithmatex">\(\delta (r) &lt; f(x)\)</span> 이면 <span class="arithmatex">\(\delta (r)\)</span> 은 <span class="arithmatex">\(A_x\)</span> 의 상계가 아니므로 </p>
+<div class="arithmatex">\[ \exists s \in \mathbb{Q}, \delta (r) &lt; \delta (s), \gamma (s) &lt; x \]</div>
+<p>이다. 그러면 <span class="arithmatex">\(\gamma (r) \gamma (s) \implies \gamma (r) &lt; x\)</span> 이다. 이로써 a) 가 증명되었다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p>이제 <span class="arithmatex">\(z&lt;x\)</span> 라고 하면 <a href="#849201a15">정리 2.5.2 "완비순서체 <span class="arithmatex">\(F\)</span> 의 두 원소 <span class="arithmatex">\(x, y \in F\)</span> 가 <span class="arithmatex">\(x &lt; y\)</span> 이면 <span class="arithmatex">\(x&lt;r&lt;y\)</span> 를 만족하는 유리수 <span class="arithmatex">\(r \in \mathbb{Q} \subset F\)</span> 이 존재한다."</a> 에 의하여 </p>
+<div class="arithmatex">\[ \exists r \in \mathbb{Q} \text{ s.t. }\  z &lt; \gamma (r) &lt; x\]</div>
+<p>이다. 그러면 <span class="arithmatex">\(\delta (r) = f(\gamma (r)) &lt; f(x)\)</span> 이므로 b) 가 증명되었다. <span class="arithmatex">\(\blacktriangle\)</span> </p>
+<p><span class="arithmatex">\(f \circ g = 1_G\)</span> 도 마찬가지의 방법으로 증명가능하고, 결국 <span class="arithmatex">\(f\)</span> 는 전단사함수임이 증명된다. 이로써 모든 증명이 끝났다. ■ </p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: Set" class="md-footer__link md-footer__link--prev" href="../Set/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              Set
+            </div>
+</div>
+</a>
+<a aria-label="다음: Infinite Set" class="md-footer__link md-footer__link--next" href="../InfiniteSet/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              Infinite Set
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

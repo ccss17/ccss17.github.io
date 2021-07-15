@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Algebra/abstract_algebra/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>추상대수학 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              추상대수학
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          추상대수학
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        추상대수학
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    대수학
+  </a>
+<nav aria-label="대수학" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    추상대수학
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    연산의 추상화
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    여러가지 대수구조
+  </a>
+<nav aria-label="여러가지 대수구조" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    군론
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    환론
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    체론
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    범주론
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    대수학
+  </a>
+<nav aria-label="대수학" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    추상대수학
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    연산의 추상화
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    여러가지 대수구조
+  </a>
+<nav aria-label="여러가지 대수구조" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    군론
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    환론
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    체론
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    범주론
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>추상대수학</h1>
+<h2 id="_1">대수학<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#ac50269ee"><div class="admonition tldr" id="ac50269ee">
+<p>대수학(代數學, Algebra) : 일련의 공리들을 만족하는 수학적 구조들의 일반적인 성질을 연구하는 수학의 한 분야이다.</p>
+</div></a>
+<ul>
+<li>
+<p>거칠게 말해서 대수학은 관계를 말한다. 그리고 선형대수학은 선형적 관계를 말한다. </p>
+</li>
+<li>
+<p>명칭 그대로 수를 대신하는 문자를 사용하는 방법으로써 방정식을 푸는 방법으로부터 시작되었다. </p>
+<ul>
+<li>
+<p>수를 문자로 추상화시키는 것에서 더 나아가 수학자들은 구조 자체를 추상화시키기 시작하였다. </p>
+</li>
+<li>
+<p>먼저 모든 대상을 집합으로 환원시킨 후 "수"와 "연산"을 "원소"와 "함수"로 추상화시켰다.</p>
+</li>
+<li>
+<p>이처럼 현대의 대수학은 추상적 성격이 강하기 때문에 추상대수학이라 부른다.</p>
+</li>
+<li>
+<p>추상대수학은 주로 집합과 집합에서 정의된 연산에 관하여 연구한다. </p>
+<ul>
+<li>예시 </li>
+</ul>
+<p>어떤 집합 <span class="arithmatex">\(S\)</span> 에 연산 <span class="arithmatex">\(\circ\)</span> 가 정의되었다면 그 연산이 닫혀있는지, 항등원이 존재하는지, 결합법칙이나 교환법칙이 성립하는지, 역원이 존재하는지 등을 연구한다. </p>
+</li>
+<li>
+<p>추상대수학이 주로 연산에 대하여 연구한다고 하였는데 그 연산 가운데 주로 이항연산을 연구한다.</p>
+<ul>
+<li>
+<p>좀 전에 구조 자체를 추상화시켜 연구한다고 했는데 이항연산이 정의되는 집합을 이항연산구조라고 부른다. </p>
+</li>
+<li>
+<p>즉 먼저 모든 대상을 집합으로 환원하고 그 집합에 적용되는 연산(함수(법칙)) 들이 이루는 구조를 연구하는 것이다. </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>대수로 세상을 격하하여 쉽게 다룰 수 있다는 장점이 있다. </p>
+<ul>
+<li>
+<p>어떤 사람의 묘에 다음과 같은 글이 새겨져 있다고 하자.</p>
+</li>
+<li>
+<p>"이 묘에 묻힌 사람은 생애의 <span class="arithmatex">\(6\)</span> 분의 <span class="arithmatex">\(1\)</span> 은 소년이었고, 그 후 <span class="arithmatex">\(12\)</span> 분의 <span class="arithmatex">\(1\)</span> 이 지나 수염이 났으며 또 다시 <span class="arithmatex">\(7\)</span> 분의 <span class="arithmatex">\(1\)</span> 이 지나서 결혼을 하였다. 결혼한 지 <span class="arithmatex">\(5\)</span> 년 뒤에 아들이 태어났으며 아들은 아버지의 반밖에 살지 못했다. 그는 아들이 죽은 후 <span class="arithmatex">\(4\)</span> 년 후에 세상을 떠났다."</p>
+</li>
+<li>
+<p>이 사람의 나이는 방정식 <span class="arithmatex">\(\frac{1}{6}x + \frac{1}{12}x + \frac{1}{7}x + 5 + \frac{1}{2}x + 4 = x\)</span> 으로 표현된다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>포함 : 추상대수학, 보편대수학, 선형대수학</p>
+</li>
+<li>
+<p>대수학 공부 순서 </p>
+<ol>
+<li>
+<p>집합론 : 칸토어가 집합론을 창조한 이후 모든 수학 시스템의 기초로 집합론이 사용되기 때문이다.</p>
+</li>
+<li>
+<p>미적분학 : 고등학교 때보다 더 엄밀하게 정의된 미적분을 다루고 다변수 함수에 대한 미분, 그리고 미분연산자로 정의된 미분방정식을 다룬다.</p>
+</li>
+<li>
+<p>해석학 : 미적분을 더욱 논리적으로 다룬다. 실해석학은 실변수함수의 해석을 다룬다. 복소해석학은 복소변수 함수의 해석을 다룬다.</p>
+</li>
+<li>
+<p>위상수학 : 다양한 집합상에서 극한을 다룰 수 있도록 추상화시킨 공간을 다룬다.</p>
+</li>
+<li>
+<p>선형대수학 : 벡터공간과 그 위에 정의된 특별한 함수인 선형사상을 다룬다.</p>
+</li>
+<li>
+<p>정수론 : 정수에 관한 연산, 수의 확장 등을 다룬다.</p>
+</li>
+<li>
+<p>추상대수학 : 수의 연산 체계를 추상화시켜 시스템을 구성하고 그 시스템에서 추상화된 방정식을 다룬다. </p>
+</li>
+<li>
+<p>...</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="_2">추상대수학<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<a href="#86c86b7e9"><div class="admonition tldr" id="86c86b7e9">
+<p>추상대수학(abstract algebra) : 대수 구조에 관련된 수학적 대상들을 연구하는 분야이다.</p>
+</div></a>
+<ul>
+<li>
+<p>추상대수학은 다루는 대수 구조에 따라 분류된다. </p>
+<ul>
+<li>
+<p>군론은 군을 연구한다.</p>
+</li>
+<li>
+<p>반군론은 군보다 성립조건이 더 없는(군보다 더 약한 성질을 갖는) 반군, 모노이드 등을 연구한다.</p>
+</li>
+<li>
+<p>가환대수학은 가환환과 그 위의 가군을 연구한다.</p>
+<ul>
+<li>선형대수학은 체 위의 가군에 대한, 가환대수학의 특수한 경우이다. </li>
+</ul>
+</li>
+<li>
+<p>환론은 (일반적으로 가환하지 않는) 환과 유사환, 가군을 연구한다.</p>
+</li>
+<li>
+<p>격자론은 격자, 헤이팅 대수, 불 대수를 연구한다.</p>
+</li>
+<li>
+<p>체론은 체를 연구한다.</p>
+<ul>
+<li>체론은 정수론과 연구가 자주 겹친다. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>역사</p>
+<p>역사적으로 대수학은 수를 대신하는 문자로 추상화하여 모든 수를 표현할 수 있도록 한 다음 어떠한 방정식이든 풀어낼 수 있는 추상적 방법을 연구하기 위하여 발전되었다. 개별적이고 특수한 상황에서 창의적인 아이디어를 내서 방정식과 문제를 풀어도 그 다음 상황에서 또 다른 문제를 매번 풀어냈어야 하기 때문이다. </p>
+<p>그런데 현대에는 수를 문자로 추상화하는 것에 그치지 않고 연산도 추상화하고 그 대상들 자체도 추상화하여 집합으로 만들기 시작하였다. 마치 모든 것에 적용 가능한 하나 또는 몇 개의 가장 추상적인 대상을 발견하기를 원하는 것처럼 말이다. </p>
+<p>만약 더 이상 추상화가 불가능한 가장 추상적인 법칙이 발견되면 그것으로부터 모든 것을 이끌어낼 수 있을 것이기 때문이다. </p>
+<blockquote>
+<p>또한 인공지능에 관하여 생각의 법칙을 끊임없이 추상화시키고 일반화시키는 작업의 목적이 이 이유이기도 하다. 생각 자체를 추상화시켜서 물질화시키면 언젠가 생각도 기계가 대체할 수 있지 않을까? 한편 이러한 작업을 하기 위하여 현대까지 발전되어온 추상화 자체에 대한 연구 즉 대수학을 심도있게 공부할 필요가 있어 보인다.</p>
+</blockquote>
+</li>
+</ul>
+<a href="#304703442"><div class="admonition tldr" id="304703442">
+<p>대수 구조(algebraic structure) : 일련의 연산이 정의된 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>집합에 연산이 잘 정의되어 있다는 말은 집합이 연산에 대하여 닫혀 있다는 말이다.</p>
+<ul>
+<li>
+<p>즉 원소에 어떤 연산을 가해도 집합을 벗어나지 않는다는 뜻이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>어떤 집합 <span class="arithmatex">\(A\)</span> 에 정의된 연산 <span class="arithmatex">\(\circ\)</span> 에 대하여 집합 <span class="arithmatex">\(A\)</span> 의 원소 <span class="arithmatex">\(a, b\)</span> 에 연산 <span class="arithmatex">\(\circ\)</span> 를 가하여 얻은 원소 <span class="arithmatex">\(a \circ b\)</span> 가 </p>
+<div class="arithmatex">\[ a \circ b \in A \]</div>
+<p>이면 연산 <span class="arithmatex">\(\circ\)</span> 가 집합 <span class="arithmatex">\(A\)</span> 에서 잘 정의되어 있다고 한다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>대표적으로 실수 집합 <span class="arithmatex">\(\mathbb{R}\)</span> 에는 덧셈(<span class="arithmatex">\(+\)</span>), 곱셈(<span class="arithmatex">\(\times\)</span>) 이 잘 정의되어 있고 덧셈, 곱셈에 대한 결합법칙, 교환법칙, 분배법칙이 성립하며, 항등원과 역원이 조화롭게 성립하여 대수적 구조를 만들어내었다. </p>
+<ul>
+<li>
+<p>초중고등학교 수학에서는 이와 같은 실수 대수 구조를 정의하지 않고 단지 직관적으로 덧셈과 뺄셈, 곱셈 등을 사용했지만 지금까지 두 실수를 자유롭게 사칙연산을 할 수 있었던 이유가 실수 집합 <span class="arithmatex">\(\mathbb{R}\)</span> 의 대수 구조 때문이었다. </p>
+</li>
+<li>
+<p>행렬과 벡터에서도 마찬가지로 그것에 대한 연산법칙이 잘 정의되어 있는 대수구조가 존재하기 때문에 행렬과 벡터를 자유롭게 다룰 수 있는 것이다. </p>
+</li>
+</ul>
+<blockquote>
+<p>이 대수구조로써 어떠한 집합에서든지간에 모든 연산관계를 설명할 수 있다면 집합으로 환원된 임의의 대상에 추상적 대수구조를 기반으로 그 대상의 모든 행동과 원리를 설명할 수 있는 기본 연산법칙을 정립할 수 있다. </p>
+<p>또한 이렇게 하는 것의 효용은 수학적 대상으로 환원된 모든 자연 대상을 추상 대수 구조를 사용하여 일률적으로 다룰 수 있는 방법론을 설계할 수 있다는 것이다. 이로써 이 세상에 존재하는 모든 행동, 모든 원리, 모든 대상들을 대수구조의 틀로 설명할 수 있는 가능성을 얻을 수 있다. </p>
+</blockquote>
+</li>
+<li>
+<p>예시 </p>
+<p>집합은 아무런 연산이 정의되어 있지 않은 대수 구조이다.</p>
+<ul>
+<li>한편 대수 구조는 일련의 연산이 정의된 집합임을 기억하자. </li>
+</ul>
+<p>모노이드 <span class="arithmatex">\((M, \circ, 1)\)</span> 은 다음의 연산들이 정의된 집합이다. </p>
+<ul>
+<li>
+<p>(곱셈) 이항연산 <span class="arithmatex">\(\circ : M \times M \to M\)</span></p>
+</li>
+<li>
+<p>(항등원) 영항 연산 <span class="arithmatex">\(1 \in M\)</span></p>
+</li>
+</ul>
+<p>군 <span class="arithmatex">\((G, \circ , {}^{-1}, 1)\)</span> 은 다음의 연산들이 정의된 집합이다. </p>
+<ul>
+<li>
+<p>(곱셈) 이항 연산 <span class="arithmatex">\(\circ : G \times G \to G\)</span></p>
+</li>
+<li>
+<p>(역원) 일항 연산 <span class="arithmatex">\({}^{-1}:G \to G\)</span></p>
+</li>
+<li>
+<p>(항등원) 영항 연산 <span class="arithmatex">\(1 \in G\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>다음은 일반적인 대수구조들이 갖는 관계도이다.</p>
+</li>
+</ul>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Algebraic_structures_system001.svg"/></p>
+<h3 id="_3">연산의 추상화<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<a href="#683d63437"><div class="admonition tldr" id="683d63437">
+<p>연산(operation) : 어떤 집합 <span class="arithmatex">\(A\)</span> 의 거듭제곱 집합 <span class="arithmatex">\(A^n\)</span> 에서 그 집합 <span class="arithmatex">\(A\)</span> 로 가는 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 연산은 다음과 같이 임의의 개수의 원소들의 순서쌍을 유일한 하나의 원소에 대응시키는 함수이다. </p>
+</li>
+<li>
+<p>연산은 집합 <span class="arithmatex">\(A\)</span> 의 거듭제곱 집합</p>
+<div class="arithmatex">\[A ^{n} = \{(a_1, a_2, \dots, a_n) |a_1, a_2, \dots, a_n \in A\}\]</div>
+<p>을 그 집합 </p>
+<div class="arithmatex">\[ A = \{a | a \in A\} \]</div>
+<p>으로 대응시키는 함수이다. </p>
+<ul>
+<li>
+<p>집합 <span class="arithmatex">\(A\)</span> 와 음이 아닌 정수 <span class="arithmatex">\(n \in Z _{\geq 0}\)</span> 에 대하여 <span class="arithmatex">\(n\)</span> 항 연산 <span class="arithmatex">\(\circ\)</span> 은 </p>
+<div class="arithmatex">\[ \circ:A ^{n} \to A, (a_1, a_2, \dots, a_n) \mapsto a \]</div>
+<p>으로 정의된 함수이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>집합 속 원소에 대한 연산 결과가 집합에 속해있다는 것을 연산에 대한 닫혀있다고 한다.</p>
+</li>
+</ul>
+<a href="#9f684cb16"><div class="admonition tldr" id="9f684cb16">
+<p><span class="arithmatex">\(n\)</span> 항 연산(n-ary operation) : 어떤 집합 <span class="arithmatex">\(S\)</span> 의 거듭제곱집합 <span class="arithmatex">\(S ^{n}\)</span> 의 <span class="arithmatex">\(n\)</span> 개의 원소들의 순서쌍을 집합 <span class="arithmatex">\(S\)</span> 의 원소에 대응시키는 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>집합 <span class="arithmatex">\(A\)</span> 와 음이 아닌 정수 <span class="arithmatex">\(n \in Z _{\geq 0}\)</span> 에 대하여 <span class="arithmatex">\(n\)</span> 항 연산 <span class="arithmatex">\(\circ\)</span> 은 </p>
+<div class="arithmatex">\[ \circ:A ^{n} \to A, (a_1, a_2, \dots, a_n) \mapsto a \]</div>
+<p>으로 정의된 함수이다.</p>
+</li>
+</ul>
+<a href="#aa5ee4318"><div class="admonition tldr" id="aa5ee4318">
+<p>영항 연산(0-ary operation) : 어떤 집합 <span class="arithmatex">\(S\)</span> 의 원소 <span class="arithmatex">\(s \in S\)</span> 이다.</p>
+</div></a>
+<a href="#ad0d17f54"><div class="admonition tldr" id="ad0d17f54">
+<p>일항 연산(unary operation) 또는 단항 연산 : 어떤 집합 <span class="arithmatex">\(S\)</span> 에 대하여 정의된 함수 <span class="arithmatex">\(S \to S\)</span> 이다.</p>
+</div></a>
+<a href="#f8ef821d7"><div class="admonition tldr" id="f8ef821d7">
+<p>이항 연산(binary operation) : 어떤 집합 <span class="arithmatex">\(S\)</span> 의 제곱집합 <span class="arithmatex">\(S ^{2}\)</span> 의 순서쌍으로부터 <span class="arithmatex">\(S\)</span> 의 한 원소를 얻는 함수 </p>
+<div class="arithmatex">\[S \times S \to S\]</div>
+<p>또는</p>
+<div class="arithmatex">\[S ^{2} \to S\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>일반적으로 이항 연산을 편의상 덧셈 또는 곱셈이라 한다.</p>
+</li>
+<li>
+<p>한편 이항연산을 갖춘 집합을 마그마라고 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>실수 집합 <span class="arithmatex">\(\mathbb{R}\)</span> 위에 정의된 사칙 연산은 다음과 같다. </p>
+<ul>
+<li>
+<p>덧셈은 다음과 같이 정의된 이항연산, 즉 함수이다.</p>
+<div class="arithmatex">\[+: \mathbb{R} \times \mathbb{R} \to \mathbb{R}, (r, s) \mapsto r + s\]</div>
+</li>
+<li>
+<p>뺄셈은 다음과 같이 정의된 이항연산, 즉 함수이다.</p>
+<div class="arithmatex">\[-: \mathbb{R} \times \mathbb{R} \to \mathbb{R}, (r, s) \mapsto r - s\]</div>
+</li>
+<li>
+<p>곱셈은 다음과 같이 정의된 이항연산, 즉 함수이다.</p>
+<div class="arithmatex">\[\times : \mathbb{R} \times \mathbb{R} \to \mathbb{R}, (r, s) \mapsto r \times  s\]</div>
+</li>
+<li>
+<p>나눗셈은 다음과 같이 정의된 함수이지만 <span class="arithmatex">\(0\)</span> 으로 나누기가 정의되어 있지 않기에 이항연산은 아니다.</p>
+<div class="arithmatex">\[\div  : \mathbb{R} \times \mathbb{R} ^{*} \to \mathbb{R}, (r, s) \mapsto r \div   s\]</div>
+<p>또는</p>
+<div class="arithmatex">\[\div  : \mathbb{R} \times \mathbb{R} \text{\textbackslash} \{0\} \to \mathbb{R}, (r, s) \mapsto r \div   s\]</div>
+<p>그러나 일반적으로 나눗셈도 넓은 의미에서 이항연산이라고 부른다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>수리논리학에서 명제에 대한 연산 논리합(<span class="arithmatex">\(\lor\)</span>) 과 논리곱(<span class="arithmatex">\(\land\)</span>) 가 이항연산으로 정의되어 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>군 위의 연산과 벡터 공간 위의 연산, 행렬에 대한 연산 등 직관적으로 알고 있는 실수 체계에 대한 연산 말고도 다양한 연산들이 정의되어 있다.</p>
+</li>
+</ul>
+<a href="#c15705dff"><div class="admonition tldr" id="c15705dff">
+<p>삼항 연산(ternary operation) : 어떤 집합 <span class="arithmatex">\(S\)</span> 의 세제곱집합 <span class="arithmatex">\(S ^{3}\)</span> 의 순서쌍으로부터 <span class="arithmatex">\(S\)</span> 의 한 원소를 얻는 함수 </p>
+<div class="arithmatex">\[S \times S \times S \to S\]</div>
+<p>또는</p>
+<div class="arithmatex">\[S ^{3} \to S\]</div>
+<p>이다.</p>
+</div></a>
+<h2 id="_4">여러가지 대수구조<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h3 id="_5">군론<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<a href="#cb9947c41"><div class="admonition tldr" id="cb9947c41">
+<p>군론(group theory) : 군을 연구하는 대수학의 한 분야이다.</p>
+</div></a>
+<ul>
+<li>
+<p>여러 수학 분야의 기초가 된다. </p>
+</li>
+<li>
+<p>역사 </p>
+<p><span class="arithmatex">\(4\)</span> 차 방정식까지는 대수적인 풀이법, 즉 근의 공식이 존재하지만 <span class="arithmatex">\(5\)</span> 차 방정식 이상의 대수적 해법, 즉 근의 공식이 존재하지 않는다는 것이 아벨에 의해 증명되었다. </p>
+<p>그런데 수학자들은 어떤 경우에 방정식이 대수적으로 풀어지고 어떤 경우에는 대수적으로 풀어지지 않는지 규명하기를 원했다. 이때 갈루아가 다항 방정식의 대수적 해법에 대한 일반적인 관계를 군론을 사용하여 증명하였다. </p>
+<blockquote>
+<p>갈루아 이론은 체의 확대를 그 자기동형군으로 연구하는 이론이다. 이후 갈루아 이론은 무한 차수의 갈루아 확대의 경우의 사유한군 이론의 도입으로 또 추상화되었다. 사유한군은 유한군의 사영극한으로 얻어지는 위상군인데, 유한군의 연구는 수학계에서도 매우 어렵다고 알려져있다. 다만 파이트-톰프슨 정리로 모든 유한단순군을 분류할 수는 있었다. 유한단순군으로 분류된 군 중 산재군이 있는데 다시 산재군으로 분류된 것 중에 괴물군이라는 군이 있다. 이 괴물군이 j-불변량과 밀접한 관계를 가진다는 것을 "대단한 헛소리(monstrous moonshine)" 이라 하는데 이것이 보손 끈 이론으로 증명되었다. 보손 끈 이론은 초대칭이 도입되지 않은 끈 이론이다. 결과적으로 군, 환, 체를 연구하는 갈루아 이론이 끈 이론까지 연결되어있다니 어떻게 이렇게 될 수 있을까? </p>
+</blockquote>
+<p><strong>수학자들이 개별적인 방정식의 해법을 풀다가 매번 풀기 지쳐서 일반적으로 방정식을 해결할 수 있도록 대수적인 해법을 만든 것처럼, 프로그래머도 프로그래밍 문제에 대한 개별적인 해법을 매번 생각하는 것이 아니라 대수적인 해법을 만들 수 있을까?</strong></p>
+<p><strong>또한 만약 그것이 가능해진 다음에 인공지능에게 프로그래밍의 대수적 해법을 학습하게 한다면 어떤 일이 일어날까?</strong></p>
+<p><strong>먼저 모든 프로그래밍 문제를 일련의 형태를 지닌 수학적 대상물로 추상화시켜서 환원시켜야만 한다. 그래야만 세상에 존재하는 모든 프로그래밍 문제를 하나 또는 몇개의 형태로 다룰 수 있다.</strong></p>
+<p><strong>그렇게 했다면 그 추상적 구조와 형태를 통하여 모든 프로그래밍 문제를 대표하게 된 대수적인 프로그래밍 문제 구조에 대한 일반적인 해법을 연구할 수 있다.</strong></p>
+<p><strong>프로그래밍 문제 자체를 일반화하여 세상에 존재하는 문제 자체를 대수적으로 환원시켜서 그 해법을 연구할 수도 있을까?</strong></p>
+<p><strong>먼저 프로그래밍 언어란 무엇인지 수학적으로 정의해야 한다. 그리고 프로그래밍 문제란 무엇인지 수학적으로 정의해야 한다. 말하자면 프로그래밍 자체를 수학과 결부시키는 그 연결점들을 모든 곳에 생성해야 한다. 그래야만 프로그래밍 자체를 수학으로 추상화시켜서 수학적으로 다룰 수 있다.</strong></p>
+<p><strong>그것을 할 수 있으려면 먼저 프로그래밍 언어가 탄생하기 된 기원에 관한 공부가 필요하다. 프로그래밍 언어의 원류와 본질이 무엇인지 이해해야 한다.</strong></p>
+<p><strong>현재 존재하는 프로그래머들은 마치 개별적인 방정식을 풀기 위하여 존재하는 개별자들이다. 그러나 수학자들은 일반적인 대수적 풀이로 세상 모든 방정식을 풀기 위하여 대수학을 발전시켰다. 그런 것처럼 프로그래밍 문제 또한 일반적인 풀이가 존재하지 않을까? 만약 존재하지 않는다고 해도 현 시점에서 그러하다거나 그러하지 않다는 것을 규명하는 것이 가장 중요하고 의미있는 일이 아닐까? 왜냐하면 만약 모든 프로그래밍 문제를 수학의 추상 대상물로 환원할 수 있고 그것에 관한 일반적인 해법을 밝혀낼 수 있다면 상당히 많은 일들과 노력들과 인력들이 무의미하다는 것이 분명해지기 때문이다.</strong></p>
+<p><strong>내 생각에 대수학자가 프로그래머가 되거나 프로그래머가 대수학자가 되면 뭔가 획기적인 걸 만들어낼 수 있을 거 같다.</strong></p>
+</li>
+</ul>
+<a href="#234165e2b"><div class="admonition tldr" id="234165e2b">
+<p>덧셈에 대한 항등원을 제외한 집합 : 집합 <span class="arithmatex">\(A\)</span> 에서 <span class="arithmatex">\(+\)</span> 에 대한 항등원 <span class="arithmatex">\(0\)</span> 을 제외한 집합을 <span class="arithmatex">\(A ^{*}\)</span> 으로 표기한다.</p>
+</div></a>
+<a href="#395780420"><div class="admonition tldr" id="395780420">
+<p>"연산이 잘 정의되었다" : 어떤 집합에서 연산이 잘 정의되었다는 것은 연산이 집합에 대하여 닫혀있다는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 연산 <span class="arithmatex">\(\circ\)</span> 이 집합 <span class="arithmatex">\(S\)</span> 에서 잘 정의되어있다는 것은 집합 <span class="arithmatex">\(S\)</span> 의 임의의 원소 <span class="arithmatex">\(s, t\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ (s \circ t) \in S \]</div>
+<p>라는 것이다.</p>
+</li>
+</ul>
+<a href="#28d3d6241"><div class="admonition tldr" id="28d3d6241">
+<p>집합(set) : 대수구조의 관점에서 집합은 아무런 연산이 정의되어 있지 않은 대수구조이다. (수학기초론 파트에서 집합의 정확한 정의를 기술해놓았다.)</p>
+</div></a>
+<ul>
+<li>모든 대상들의 가장 밑바닥에 존재하는 대수구조이다.</li>
+</ul>
+<a href="#393e6d67c"><div class="admonition tldr" id="393e6d67c">
+<p>마그마(magma) : 집합에서 닫혀있는 이항 연산이 정의되어있는 대수구조이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 집합 <span class="arithmatex">\(M\)</span> 에서 닫혀있는 이항연산 <span class="arithmatex">\(\circ\)</span> 을 갖춘 대수구조 <span class="arithmatex">\((M, \circ)\)</span> 를 마그마라고 한다.</p>
+<ul>
+<li>
+<p>임의의 원소 쌍 <span class="arithmatex">\(m, n \in M\)</span> 에 대하여 유일한 원소 </p>
+<div class="arithmatex">\[ m \circ n \in M \]</div>
+<p>을 대응시키는 함수(이항연산)이 정의된 집합이 마그마라는 것이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\((M, \circ)\)</span> 을 다음과 같이 표기하기도 한다. </p>
+<div class="arithmatex">\[ \langle  M, \circ \rangle  \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>대수구조 지도를 보면 집합 바로 밑에 있는 것을 확인할 수 있다. </p>
+</li>
+<li>
+<p>프랑스어로 잡동사니라는 뜻이다. </p>
+<ul>
+<li>즉 많은 대수구조가 그 뿌리를 마그마에 두고 있지만 마그마 자체는 그렇게까지 중요하지는 않다는 것이다. </li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>홀수 집합을 <span class="arithmatex">\(O\)</span> 라고 하면 <span class="arithmatex">\((O, \cdot )\)</span> 은 마그마이지만 <span class="arithmatex">\((O, +)\)</span> 은 마그마가 아니다. </p>
+<p>홀수는 곱셈에 대하여 닫혀있고 덧셈에 대하여 닫혀있지 않기 때문이다.</p>
+</li>
+</ul>
+<a href="#78fb8c008"><div class="admonition tldr" id="78fb8c008">
+<p>반군(semi group) : 마그마에서 결합 법칙이 성립하는 대수구조이다.</p>
+</div></a>
+<ul>
+<li>
+<p>대수학에서 결합법칙이 성립해야 한다는 것이 어떤 대수 구조에든지간에 기본이다.</p>
+<ul>
+<li>그래서 결합법칙조차 성립하지 않는 마그마는 그렇게까지 중요하지 않다는 것이다. </li>
+</ul>
+</li>
+<li>
+<p>즉 반군은 마그마  <span class="arithmatex">\((S, \circ)\)</span> 에 대하여 다음의 조건으로 구성되는 대수 구조이다.</p>
+<ul>
+<li>
+<p>이항연산 <span class="arithmatex">\(\circ : S \times S \to S\)</span> 가 임의의 원소 <span class="arithmatex">\(a,b,c\)</span> 에 대하여 결합법칙, 즉</p>
+<div class="arithmatex">\[ (a \circ b) \circ c = a \circ (b \circ c) \]</div>
+<p>을 만족한다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>마그마 <span class="arithmatex">\((\mathbb{N}, +)\)</span> 은 반군이다. </p>
+<ul>
+<li>
+<p>자연수의 덧셈에 대하여 닫혀있다.</p>
+</li>
+<li>
+<p>덧셈의 순서는 연산 결과에 아무런 영향을 끼치지 못하기에 결합법칙도 성립한다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#4d2e7c596"><div class="admonition tldr" id="4d2e7c596">
+<p>모노이드(monoid) : 반군에서 항등원을 갖는 대수구조이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 반군 <span class="arithmatex">\((M, \circ)\)</span> 의 모든 원소 <span class="arithmatex">\(a\)</span> 에 대하여 항등원 <span class="arithmatex">\(e\)</span> 를 가져서 </p>
+<div class="arithmatex">\[ a \circ e = e \circ a = a \]</div>
+<p>가 성립하면 모노이드라고 부른다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>정방행렬의 집합 <span class="arithmatex">\(\mathbb{R} ^{n \times n}\)</span> 은 행렬곱 연산 <span class="arithmatex">\(\cdot\)</span> 에 대하여 단위행렬 <span class="arithmatex">\(I_n\)</span> 을 항등원으로 가지므로 <span class="arithmatex">\((\mathbb{R}, \cdot)\)</span> 은 모노이드이다.</p>
+</li>
+</ul>
+<a href="#e62ba56c5"><div class="admonition tldr" id="e62ba56c5">
+<p>군(group) : 모노이드에서 역원을 갖는 대수구조이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 집합 <span class="arithmatex">\(G\)</span> 에 연산 <span class="arithmatex">\(\circ\)</span> 이 닫혀있고 다음 세 조건(G.1, G.2, G.3)이 성립할 때 <span class="arithmatex">\((G, \circ)\)</span> 를 연산 <span class="arithmatex">\(\circ\)</span> 를 갖는 군이라 한다. </p>
+<ul>
+<li>
+<p>G.1 (<span class="arithmatex">\(\circ\)</span> 에 대한 결합법칙) 모든 <span class="arithmatex">\(a, b, c \in G\)</span> 에 대하여 <span class="arithmatex">\((a \circ b) \circ c = a \circ (b \circ c)\)</span> 이다.</p>
+</li>
+<li>
+<p>G.2 (<span class="arithmatex">\(\circ\)</span> 에 대한 항등원) 모든 <span class="arithmatex">\(a \in G\)</span> 에 대하여 <span class="arithmatex">\(a \circ e = e \circ a\)</span> 를 만족하는 <span class="arithmatex">\(e \in G\)</span> 가 존재한다.</p>
+</li>
+<li>
+<p>G.3 (<span class="arithmatex">\(\circ\)</span> 에 대한 역원) 모든 <span class="arithmatex">\(a \in G\)</span> 에 대하여 <span class="arithmatex">\(a \circ b = b \circ a = e\)</span> 를 만족하는 <span class="arithmatex">\(b \in G\)</span> 가 존재한다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>한 가지 연산에 대한 대수적 구조를 가진 집합이다. </p>
+</li>
+<li>
+<p>대칭성을 다루는 특성으로 인해 화학과 물리학에서도 쓰인다. </p>
+<ul>
+<li>
+<p>군은 정의에 의하여 원소 <span class="arithmatex">\(a\)</span> 에 대하여 그 역원 <span class="arithmatex">\(a'\)</span> 이 반드시 존재한다. 또 <span class="arithmatex">\(a'\)</span> 에 대응하는 역원 <span class="arithmatex">\(a''=a\)</span> 가 존재한다. 이러한 관계에서 대칭성을 엿볼 수 있다. </p>
+</li>
+<li>
+<p>종종 군의 특성을 이해시키기 위하여 루빅스 큐브(<span class="arithmatex">\(3 \times 3 \times 3\)</span>)을 가만히 두는 것(항등원), 돌렸다가 다시 되돌리는 것(역원) 의 행동으로 설명하기도 한다. </p>
+</li>
+<li>
+<p>즉 대칭 구조를 가지는 세상 어떠한 대상일지라도 그것을 추상화하여 군에 대응시킬 수 있다는 것이다. </p>
+<ul>
+<li>
+<p>설령 아무 대칭구조가 없는 대상일지라도 원소가 항등원 하나인 자명군(trivial group) 으로 추상화할 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+</li>
+</ul>
+<p>정다각형, 정다면체, 원, 좌표평면, 다항식 같이 대칭 구조를 지니는 수학 대상을 연구하다가 군으로 추상화할 수 있었다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>덧셈(<span class="arithmatex">\(+\)</span>) 이 정의되어 있는 자연수 집합 <span class="arithmatex">\(\mathbb{N}\)</span> 은 군을 이루지 못한다.</p>
+<p>임의의 자연수 <span class="arithmatex">\(a, b, c\)</span> 를 생각하자.</p>
+<ul>
+<li>
+<p>덧셈은 <span class="arithmatex">\(\mathbb{N}\)</span> 에 대하여 닫혀있긴 하다.</p>
+<div class="arithmatex">\[ \because a + b = c \in \mathbb{N}  \]</div>
+</li>
+<li>
+<p>G.1 결합법칙도 성립한다. </p>
+<div class="arithmatex">\[ \because (a+b)+c = a+(b+c) \]</div>
+<p>즉 앞의 두 자연수를 먼저 더하든 뒤의 두 자연수를 먼저 더하든 관계없다.</p>
+</li>
+<li>
+<p>그러나 G.2 항등원이 존재하지 않는다. </p>
+<p>덧셈(<span class="arithmatex">\(+\)</span>) 에 대한 항등원은 <span class="arithmatex">\(0\)</span> 인데 <span class="arithmatex">\(0\)</span> 은 자연수 집합 <span class="arithmatex">\(\mathbb{N}\)</span> 에 속하지 않는다. </p>
+</li>
+<li>
+<p>G.3 역원도 존재하지 않는다.</p>
+<p>항등원이 존재하지 않기 때문에 임의의 자연수 <span class="arithmatex">\(a\)</span> 의 덧셈에 대한 역원을 생각할 수 없다.</p>
+</li>
+</ul>
+<p><span class="arithmatex">\(\therefore (\mathbb{N} , +)\)</span> 은 군이 아니다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>곱셈(<span class="arithmatex">\(\times\)</span>) 이 정의되어 있는 집합 <span class="arithmatex">\(\mathbb{Z}^{*}\)</span> 은 군이 아니다.</p>
+<p><span class="arithmatex">\(0\)</span> 이 아닌 임의의 정수 <span class="arithmatex">\(a, b, c\)</span> 를 생각하자.</p>
+<ul>
+<li>
+<p>곱셈은 <span class="arithmatex">\(\mathbb{Z}^{*}\)</span> 에 대하여 닫혀있다.</p>
+<div class="arithmatex">\[ \because a \times b = c \in \mathbb{Z}^{*} \]</div>
+</li>
+<li>
+<p>G.1 결합법칙이 성립한다. </p>
+<div class="arithmatex">\[ \because (a\times b)\times c = a\times (b\times c) \]</div>
+</li>
+<li>
+<p>G.2 항등원이 존재한다.</p>
+<div class="arithmatex">\[ \because 1 \in \mathbb{Z}^{*} \]</div>
+<p>곱셈(<span class="arithmatex">\(\times\)</span>) 에 대한 항등원은 <span class="arithmatex">\(1\)</span> 인데 <span class="arithmatex">\(1\)</span> 은 집합 <span class="arithmatex">\(\mathbb{Z}^{*}\)</span> 에 속해있다.</p>
+</li>
+<li>
+<p>하지만 G.3 역원이 존재하지 않는다.</p>
+<div class="arithmatex">\[ \because \frac{1}{a} \not \in \mathbb{Z} \]</div>
+<p><span class="arithmatex">\(a\)</span> 의 곱셈에 대한 역원은 <span class="arithmatex">\(\frac{1}{a}\)</span> 는 <span class="arithmatex">\(|a| \neq 1\)</span> 일 때 유리수이다. </p>
+</li>
+</ul>
+<p><span class="arithmatex">\(\therefore (\mathbb{Z}^{*}, \times)\)</span> 은 군이 아니다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>모노이드 <span class="arithmatex">\((\mathbb{Z}, +)\)</span> 는 군이다. </p>
+<p>연산에 대하여 닫혀있고, 결합법칙이 성립하고, 항등원 <span class="arithmatex">\(0\)</span> 가 존재하며, 역원이 존재하기 때문이다. </p>
+<p>사실 <span class="arithmatex">\((\mathbb{Z}, +)\)</span> 는 교환법칙도 성립하기 때문에 아벨군이기도 한다.</p>
+</li>
+</ul>
+<a href="#89f8e7d7c"><div class="admonition tldr" id="89f8e7d7c">
+<p>아벨군(abelian group) 또는 가환군(commutative group) : 군에서 교환법칙이 성립하는 대수구조이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 군의 정의에서 다음 조건(G.4)이 추가로 성립하는 군 <span class="arithmatex">\((G, \circ)\)</span> 을 연산 <span class="arithmatex">\(\circ\)</span> 를 갖는 아벨군이라 한다.</p>
+<ul>
+<li>G.4 (<span class="arithmatex">\(\circ\)</span> 에 대한 교환법칙) 모든 <span class="arithmatex">\(a, b \in G\)</span> 에 대하여 <span class="arithmatex">\(a \circ b = b \circ a\)</span> 가 성립한다.</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>덧셈이 정의되어 있는 정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 은 아벨군을 이룬다. </p>
+<p>임의의 정수 <span class="arithmatex">\(a, b, c\)</span> 를 생각하자.</p>
+<ul>
+<li>
+<p>덧셈은 <span class="arithmatex">\(\mathbb{Z}\)</span> 에 대하여 닫혀있다.</p>
+<div class="arithmatex">\[ \because a + b = c \in \mathbb{Z} \]</div>
+</li>
+<li>
+<p>G.1 결합법칙이 성립한다. </p>
+<div class="arithmatex">\[ \because (a+b)+c = a+(b+c) \]</div>
+<p>즉 앞의 두 정수를 먼저 더하든 뒤의 두 정수를 먼저 더하든 관계없다.</p>
+</li>
+<li>
+<p>G.2 항등원이 존재한다.</p>
+<div class="arithmatex">\[ \because 0 \in \mathbb{Z} \]</div>
+<p>덧셈(<span class="arithmatex">\(+\)</span>) 에 대한 항등원은 <span class="arithmatex">\(0\)</span> 인데 <span class="arithmatex">\(0\)</span> 은 정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 에 속해있다.</p>
+</li>
+<li>
+<p>G.3 역원이 존재한다.</p>
+<div class="arithmatex">\[ \because -a \in \mathbb{Z} \]</div>
+<p><span class="arithmatex">\(a\)</span> 의 덧셈에 대한 역원은 <span class="arithmatex">\(-a\)</span> 인데 <span class="arithmatex">\(-a\)</span> 는 정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 에 속해있다.</p>
+</li>
+<li>
+<p>G.4 교환법칙이 성립한다. </p>
+<div class="arithmatex">\[ \because a+b=b+a \]</div>
+</li>
+</ul>
+<p><span class="arithmatex">\(\therefore (\mathbb{Z} , +)\)</span> 은 아벨군이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>곱셈(<span class="arithmatex">\(\times\)</span>) 이 정의되어 있는 집합 <span class="arithmatex">\(\mathbb{Q}^{*}\)</span> 은 아벨군이다.</p>
+<p><span class="arithmatex">\(0\)</span> 이 아닌 임의의 유리수 <span class="arithmatex">\(a, b, c\)</span> 를 생각하자.</p>
+<ul>
+<li>
+<p>곱셈은 <span class="arithmatex">\(\mathbb{Q}^{*}\)</span> 에 대하여 닫혀있다.</p>
+<div class="arithmatex">\[ \because a \times b = c \in \mathbb{Q}^{*} \]</div>
+</li>
+<li>
+<p>G.1 결합법칙이 성립한다. </p>
+<div class="arithmatex">\[ \because (a\times b)\times c = a\times (b\times c) \]</div>
+</li>
+<li>
+<p>G.2 항등원이 존재한다.</p>
+<div class="arithmatex">\[ \because 1 \in \mathbb{Q}^{*} \]</div>
+<p>곱셈(<span class="arithmatex">\(\times\)</span>) 에 대한 항등원은 <span class="arithmatex">\(1\)</span> 인데 <span class="arithmatex">\(1\)</span> 은 집합 <span class="arithmatex">\(\mathbb{Q}^{*}\)</span> 에 속해있다.</p>
+</li>
+<li>
+<p>G.3 역원이 존재한다.</p>
+<div class="arithmatex">\[ \because \frac{1}{a} \in \mathbb{Q} ^{*} \]</div>
+</li>
+<li>
+<p>G.4 교환법칙이 성립한다. </p>
+<div class="arithmatex">\[ \because a \times  b=b \times  a \]</div>
+<p>임의의 두 유리수를 곱할 때 순서는 관계없다.</p>
+</li>
+</ul>
+<p><span class="arithmatex">\(\therefore (\mathbb{Q}^{*}, \times)\)</span> 은 아벨군이다.</p>
+</li>
+</ul>
+<a href="#576b90680"><div class="admonition tldr" id="576b90680">
+<p>순환군(cyclic group) : 하나의 원소에 의하여 생성된 군이다.</p>
+</div></a>
+<ul>
+<li>
+<p>군 <span class="arithmatex">\(G\)</span> 의 어떤 원소 <span class="arithmatex">\(a\)</span> 와 임의의 <span class="arithmatex">\(x \in G\)</span> 에 대하여 <span class="arithmatex">\(x = a ^{n}\)</span> 를 만족하는 정수 <span class="arithmatex">\(n\)</span> 이 존재하면 군 <span class="arithmatex">\(G\)</span> 의 모든 원소가 <span class="arithmatex">\(a\)</span> 의 거듭제곱에 의하여 나타내어질 수 있다고 볼 수 있다. </p>
+<p>이때 군 <span class="arithmatex">\(G\)</span> 를 순환군이라 하고 <span class="arithmatex">\(a\)</span> 를 생성원(generator) 라고 한다. </p>
+<ul>
+<li>
+<p>즉 순환군은 다음과 같이 정의된다. </p>
+<p>군의 원소 <span class="arithmatex">\(g \in G\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \langle g \rangle = \{g ^{n}:n \in \mathbb{Z}\} = \{\dots, g ^{-2}, g ^{-1}, 1, g, g ^{2}, \dots\} \leq G \]</div>
+<p>는 <span class="arithmatex">\(G\)</span> 의 부분군이다. </p>
+<p>이때 <span class="arithmatex">\(\langle a \rangle\)</span> 를 <span class="arithmatex">\(a\)</span> 에 의하여 생성된 순환군(cyclic group generated by a) 라 한다.</p>
+<p><span class="arithmatex">\(G = \langle a \rangle\)</span> 이면 <span class="arithmatex">\(G\)</span> 를 순환군이라 한다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>모든 순환군은 아벨군이다. </p>
+</li>
+<li>
+<p>순환군의 생성원이 유일하지 않아도 된다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>이항연산 <span class="arithmatex">\(+_{\mod n}\)</span> 을 다음과 같은 함수로 정의하자. 정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 의 임의의 두 원소 <span class="arithmatex">\(a, b \in \mathbb{Z}\)</span> 에 대하여</p>
+<div class="arithmatex">\[ +_{\mod n}: \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}, (a, b) \mapsto (a + b) \mod n \]</div>
+<p>이다. </p>
+<p>가령 <span class="arithmatex">\(3 + _{\mod 5} 4 = 2\)</span> 이다. 왜냐하면 <span class="arithmatex">\(3+4 = 7\)</span> 에서 <span class="arithmatex">\(\mod 5\)</span> 연산을 가하면 <span class="arithmatex">\(2\)</span> 가 되기 때문이다. </p>
+<p>이제 집합 <span class="arithmatex">\(\mathbb{Z} _{4} = \{0,1,2,3\}\)</span> 를 생각하자. </p>
+<p>그러면 군 <span class="arithmatex">\((\mathbb{Z} _{4}, + _{\mod 4})\)</span> 는 생성원 <span class="arithmatex">\(1, 3\)</span> 을 갖는 순환군이다. 즉</p>
+<div class="arithmatex">\[ \langle 1 \rangle = \langle 3 \rangle = (\mathbb{Z} _{4}, + _{\mod 4}) \]</div>
+<p>이다. </p>
+<p>먼저 <span class="arithmatex">\(1\)</span> 이 다음과 같이 <span class="arithmatex">\(\mathbb{Z}_{4}\)</span> 를 생성하므로 <span class="arithmatex">\(\langle  1 \rangle = (\mathbb{Z} _{4}, + _{\mod 4})\)</span> 이다.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(1 \mapsto 1 \mod 4 = 1\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(1 + _{\mod 4} 1 \mapsto 2 \mod 4 = 2\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(1 + _{\mod 4} 1 + _{\mod 4} 1 \mapsto  3 \mod 4 = 3\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(1 + _{\mod 4} 1 + _{\mod 4} 1 + _{\mod 4} 1 \mapsto  4 \mod 4 = 0\)</span></p>
+</li>
+</ul>
+<p><span class="arithmatex">\(3\)</span> 도 다음과 같이 <span class="arithmatex">\(\mathbb{Z}_{4}\)</span> 를 생성하므로 <span class="arithmatex">\(\langle  3 \rangle = (\mathbb{Z} _{4}, + _{\mod 4})\)</span> 이다.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(3 \mapsto 3 \mod 4 = 3\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(3 + _{\mod 4} 3 \mapsto 6 \mod 4 = 2\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(3 + _{\mod 4} 3 + _{\mod 4} 3 \mapsto  9 \mod 4 = 5 \mod 4 = 1\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(3 + _{\mod 4} 3 + _{\mod 4} 3 + _{\mod 4} 3 \mapsto  12 \mod 4 = 0\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">환론<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<a href="#d637760b6"><div class="admonition tldr" id="d637760b6">
+<p>환(ring) : 덧셈에 대한 아벨 군과 곱셈에 대한 모노이드의 구조를 동시에 가지며 두 연산에 분배법칙이 성립하여 두 구조가 서로 호환되는 대수 구조이다.</p>
+</div></a>
+<ul>
+<li>
+<p>환은 정수집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 을 추상화하여 얻은 대수구조이다. </p>
+</li>
+<li>
+<p>즉 환 <span class="arithmatex">\((R, +, \cdot)\)</span> 은 이항연산 </p>
+<div class="arithmatex">\[ +: R \times R \to R \\ \cdot : R \times R \to R \]</div>
+<p>을 갖추고 <span class="arithmatex">\(R\)</span> 의 원소 임의의 <span class="arithmatex">\(r, s, t \in R\)</span> 에 대하여 다음 공리들을 만족시키는 집합이다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\((R, +)\)</span> 는 아벨군이다.</p>
+<ul>
+<li>집합 <span class="arithmatex">\(R\)</span> 이 덧셈 <span class="arithmatex">\(+\)</span> 에 대하여 닫혀있다.</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\(\to\)</span> 마그마</p>
+</blockquote>
+<ul>
+<li>(덧셈 결합법칙) <span class="arithmatex">\((r+s)+t=r+(s+t)\)</span></li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\(\to\)</span> 반군</p>
+</blockquote>
+<ul>
+<li>(덧셈의 항등원) <span class="arithmatex">\(0_R+r=r\)</span> 인 원소 <span class="arithmatex">\(0_R \in R\)</span> 이 존재한다. </li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\(\to\)</span> 모노이드</p>
+</blockquote>
+<ul>
+<li>(덧셈의 역원) <span class="arithmatex">\(r+(-r)=0_R\)</span> 인 원소 <span class="arithmatex">\(-r \in R\)</span> 이 존재한다. </li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\(\to\)</span> 군</p>
+</blockquote>
+<ul>
+<li>(덧셈 교환법칙) <span class="arithmatex">\(r+s=s+r\)</span></li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\(\to\)</span> 아벨군</p>
+</blockquote>
+</li>
+<li>
+<p><span class="arithmatex">\((R, \cdot)\)</span> 는 모노이드이다.</p>
+<ul>
+<li>집합 <span class="arithmatex">\(R\)</span> 이 곱셈 <span class="arithmatex">\(\cdot\)</span> 에 대하여 닫혀있다.</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\(\to\)</span> 마그마</p>
+</blockquote>
+<ul>
+<li>(곱셈 결합법칙) <span class="arithmatex">\((rs)t=r(st)\)</span></li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\(\to\)</span> 반군</p>
+</blockquote>
+<ul>
+<li>(곱셈의 항등원) <span class="arithmatex">\((rs)t=r(st)\)</span></li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\(\to\)</span> 반군</p>
+</blockquote>
+</li>
+<li>
+<p><span class="arithmatex">\(+\)</span> 와 <span class="arithmatex">\(\cdot\)</span> 사이에 다음의 분배 법칙이 성립한다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(r(s+t) = rs + rt\)</span> </p>
+</li>
+<li>
+<p><span class="arithmatex">\((s+t)r = sr + tr\)</span> </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>군에서의 항등원을 <span class="arithmatex">\(e\)</span> 로 표현했지만 환에서는 연산이 <span class="arithmatex">\(2\)</span> 개 정의되어있으므로 어떤 연산에 대한 항등원인지 알기 위하여 구분되는 기호를 쓴다.</p>
+<ul>
+<li>
+<p>덧셈에 대한 항등원을 <span class="arithmatex">\(0\)</span> 으로 쓴다.</p>
+<ul>
+<li>이를 항등원(identity) 라고 부른다.</li>
+</ul>
+</li>
+<li>
+<p>곱셈에 대한 항등원이 존재한다면 <span class="arithmatex">\(1\)</span> 로 쓴다.</p>
+<ul>
+<li>이를 단위원(unity) 라고 부른다.</li>
+</ul>
+</li>
+<li>
+<p>환에 속하는 임의의 원소 <span class="arithmatex">\(a\)</span> 의 곱셈에 대한 역원이 존재할 때 <span class="arithmatex">\(a\)</span> 를 환의 가역원(invertible element, unit) 이라 한다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 은 환을 이룬다. </p>
+<p>사실 가환환이기도 하다.</p>
+</li>
+</ul>
+<a href="#235bb6262"><div class="admonition tldr" id="235bb6262">
+<p>유사환(pseudo ring) : 환에서 곱셈에 대한 구조가 모노이드가 아니라 반군일 때 유사환이라 한다.</p>
+</div></a>
+<a href="#33a7e1165"><div class="admonition tldr" id="33a7e1165">
+<p>가환환(commutative ring) : 환에서 곱셈에 대한 교환법칙이 성립하는 대수 구조이다.</p>
+</div></a>
+<a href="#0bfc75b12"><div class="admonition tldr" id="0bfc75b12">
+<p>자명환(trivial ring) : 하나의 원소만을 가지는 환이다.</p>
+</div></a>
+<ul>
+<li>
+<p>하나의 원소만을 가진 집합 <span class="arithmatex">\(\{0\}\)</span> 에는 유일한 환 구조가 존재한다. 즉</p>
+<div class="arithmatex">\[ 0 + 0 = 0 \cdot 0 = 0 \]</div>
+<p>이다. 이 환을 자명환이라 한다. </p>
+</li>
+<li>
+<p>자명환에서 덧셈에 대한 항등원과 곱셈에 대한 항등원이 같다. 즉</p>
+<div class="arithmatex">\[ 1 = 0 \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#2a748dda0"><div class="admonition tldr" id="2a748dda0">
+<p>단위원(unity) : 환 <span class="arithmatex">\((R, +, \cdot)\)</span> 에 곱셈에 대한 항등원 <span class="arithmatex">\(1 \in R\)</span> 을 가질 때, <span class="arithmatex">\(1\)</span> 을 단위원이라 한다.</p>
+</div></a>
+<a href="#37f4ad978"><div class="admonition tldr" id="37f4ad978">
+<p>가역원(invertible element) 또는 단원(unit) : 단위원을 가진 환 <span class="arithmatex">\(R\)</span> 에서 곱셈에 대한 역원이 있는 원소 <span class="arithmatex">\(r \neq 0 \in R\)</span> 들이다.</p>
+</div></a>
+<a href="#dc890db64"><div class="admonition tldr" id="dc890db64">
+<p>나눗셈환(division ring) : 단위원을 가지는 환에서 <span class="arithmatex">\(0\)</span> 이 아닌 모든 원소가 가역원인 대수 구조이다.</p>
+</div></a>
+<h3 id="_7">체론<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<a href="#5bdfd88e0"><div class="admonition tldr" id="5bdfd88e0">
+<p>체(field) : 가환환이면서 나눗셈환인 대수구조이다.</p>
+</div></a>
+<ul>
+<li>
+<p>가환환이라는 조건과 나눗셈환이라는 조건에서 <span class="arithmatex">\((F \text{\textbackslash}0, \cdot)\)</span> 이 모노이드에서 아벨군이 된다. </p>
+<ul>
+<li>
+<p>왜냐하면 나눗셈환이라는 조건에서 곱셈에 대한 역원이 존재하므로 모노이드에서 군이 되었고</p>
+<p>가환환이라는 조건에서 곱셉의 교환법칙이 성립하므로 군에서 아벨군이 되었기 때문이다. </p>
+</li>
+<li>
+<p>즉 체는 환에서 곱셈에 대한 역원과 교환법칙을 성립하게 만든 특수한 환이라는 것을 알 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>즉 체 <span class="arithmatex">\((F, +, \cdot)\)</span> 은 <span class="arithmatex">\(0\)</span> 이 아닌 모든 원소가 가역원인 가환환이다. </p>
+</li>
+<li>
+<p>부연설명 </p>
+<p>집합 <span class="arithmatex">\(F\)</span> 에 두 연산 <span class="arithmatex">\(+, \cdot\)</span> 이 잘 정의되어 있고, 즉 임의의 <span class="arithmatex">\(a, b \in F\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ a+b \in F, a \cdot b \in F \]</div>
+<p>이고 다음 세 조건이 성립할 때 <span class="arithmatex">\((F, +, \cdot)\)</span> 을 두 연산 <span class="arithmatex">\(+, \cdot\)</span> 을 갖는 체라고 한다.</p>
+<ul>
+<li>
+<p>F.1 <span class="arithmatex">\((F, +)\)</span> 은 아벨군이며 <span class="arithmatex">\(0\)</span> 은 항등원이다. </p>
+</li>
+<li>
+<p>F.2 <span class="arithmatex">\((F \text{\textbackslash} 0, \cdot)\)</span> 은 아벨군이며 <span class="arithmatex">\(1\)</span> 은 항등원이다. </p>
+</li>
+<li>
+<p>F.3 (<span class="arithmatex">\(+, \cdot\)</span> 의 분배법칙) 임의의 <span class="arithmatex">\(a,b,c \in F\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ a \cdot (b+c) = a \cdot b + a \cdot c, (a+b)\cdot c = a \cdot c + b \cdot c \]</div>
+<p>이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>사칙연산을 그 안에서 자유롭게 할 수 있는 집합이다.</p>
+</li>
+<li>
+<p>산술의 잘 알려진 규칙들을 만족하는 집합이다.</p>
+</li>
+<li>
+<p>덧셈 <span class="arithmatex">\(+\)</span> 과 항등원 <span class="arithmatex">\(0\)</span>, 곱셈 <span class="arithmatex">\(\cdot\)</span> 과 항등원 <span class="arithmatex">\(1\)</span> 은 실제 덧셈, <span class="arithmatex">\(0\)</span>, 곱셈, <span class="arithmatex">\(1\)</span> 이 아니라 임의의 두 연산과 그 항등원에 대한 것을 일반적으로 나타낸 것이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>유리수 집합 <span class="arithmatex">\(\mathbb{Q}\)</span> 는 체이다. </p>
+<p>실수 집합 <span class="arithmatex">\(\mathbb{R}\)</span> 은 체이다.</p>
+<ul>
+<li>실수체 <span class="arithmatex">\(\mathbb{R}\)</span> 에서 모든 원소 <span class="arithmatex">\(r \in \mathbb{R}\)</span> 에 대하여 역원 <span class="arithmatex">\(\frac{1}{r} \in \mathbb{R}\)</span> 이 존재하므로 모든 원소가 가역원이다.</li>
+</ul>
+<p>복소수 집합 <span class="arithmatex">\(\mathbb{C}\)</span> 는 체이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 은 체가 아니다. 정수집합에서 덧셈, 뺄셈, 곱셈은 닫혀있지만 나눗셈에 대하여서는 닫혀있지 않기 때문이다. </p>
+<p>자연수 집합 <span class="arithmatex">\(\mathbb{N}\)</span> 은 뺄셈에 대하여 닫혀있지 않기 때문에 체가 되지 못한다.</p>
+</li>
+</ul>
+<a href="#8f40d6607"><div class="admonition tldr" id="8f40d6607">
+<p>체의 확대(field extension) : 체에 원소를 추가하여 얻는 더 큰 체이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>유리수체 <span class="arithmatex">\(\mathbb{Q}\)</span> 의 원소 유리수 <span class="arithmatex">\(a, b\)</span> 에 대하여 새로운 원소 <span class="arithmatex">\(\sqrt[]{2}\)</span> 를 추가하여 모든 원소가 </p>
+<div class="arithmatex">\[ a + b \sqrt[]{2} \]</div>
+<p>꼴이 되도록 확장했다고 하자.</p>
+<p>이와 같은 꼴의 수는 덧셈, 뺄셈, 곱셈, 나눗셈에 대하여 모두 닫혀있다. 즉 사칙연산을 가해도 다시 </p>
+<div class="arithmatex">\[ a + b \sqrt[]{2} \]</div>
+<p>꼴이 된다. 이렇게 새롭게 얻은 체를 <span class="arithmatex">\(\mathbb{Q}\)</span> 의 체의 확대라고 한다. </p>
+<p>그리고 이 체를 <span class="arithmatex">\(\mathbb{Q}(\sqrt[]{2})\)</span> 라고 표기하자.</p>
+<p>이와 같이 <span class="arithmatex">\(a + b \sqrt[]{2} + c \sqrt[]{3}\)</span> 꼴의 <span class="arithmatex">\(\mathbb{Q}(\sqrt[]{2}, \sqrt[]{3})\)</span> 라는 체 확장도 생각할 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>위 예시에서 이해하였다면 실수체 <span class="arithmatex">\(\mathbb{R}\)</span> 의 체 확장 <span class="arithmatex">\(\mathbb{R}(i)\)</span> 이 복소수체 <span class="arithmatex">\(\mathbb{C}\)</span> 와 같다는 것을 쉽게 알 수 있다.</p>
+</li>
+</ul>
+<a href="#b9438e00d"><div class="admonition tldr" id="b9438e00d">
+<p>유한체(finite field) 또는 갈루아 체(Galois field) : 유한개의 원소를 가지는 유한집합인 체이다.</p>
+</div></a>
+<ul>
+<li>
+<p>처음 가우스가 유한체 개념을 생각했을 때 그것이 존재한다고 믿는 사람이 없었다. 그러나 이제 유한체가 존재할 뿐 아니라 그 유일한 형태까지 밝혀졌다. 그러므로 유한체를 더 이상 규명할 필요가 없다. </p>
+<p>위의 체의 예시에서 체들은 모두 무한집합이었다. 하지만 정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 을 사용하여 유한한 체를 만들 수 있다. 체도 아닌 정수집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 로 어떻게 체를 만들까? </p>
+<p>그것은 정수들을 소수 <span class="arithmatex">\(p\)</span> 로 나눈 나머지로 유한집합을 만드는 것이다. 그러면 이 유한집합은 체이다. 또 이 체는 소수 <span class="arithmatex">\(p\)</span> 로 나눈 나머지라는 유한한 원소를 지니므로 유한체이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>소수 <span class="arithmatex">\(p=7\)</span> 와 정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 의 모든 원소에 대하여 <span class="arithmatex">\(\mod p\)</span> 연산을 취하여 결과가 같으면 그냥 같은 수로 취급하는 집합을 생각하자. 가령 <span class="arithmatex">\(10, 17\)</span> 을 <span class="arithmatex">\(7\)</span> 로 나눈 나머지는 <span class="arithmatex">\(3\)</span> 으로써 같으므로 </p>
+<div class="arithmatex">\[ 10 \equiv 17 (\mod 7) \]</div>
+<p>로써 두 수가 같다고 취급한다.</p>
+<p>그러면 이제 무한집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 는 원소가 <span class="arithmatex">\(7\)</span> 뿐인 유한집합이 되었고 그것을 다음과 같이 표기하자.</p>
+<div class="arithmatex">\[ \mathbb{Z} _{7} = \{0, 1, 2, 3, 4, 5, 6\} \]</div>
+<p>이제 이 유한집합 <span class="arithmatex">\(\mathbb{Z} _{7}\)</span> 이 체인지 검증하기 위하여 덧셈, 뺄셈, 곱셈, 나눗셈에 대하여 체의 조건을 검사해야 한다.</p>
+<p>그런데 이 유한집합 <span class="arithmatex">\(\mathbb{Z} _{7}\)</span> 에서의 덧셈과 뺄셈과 곱셈과 나눗셈의 결과 또한 소수 <span class="arithmatex">\(p=7\)</span> 로 나눈 나머지 연산을 적용해야 한다. </p>
+<p>이 유한집합 <span class="arithmatex">\(\mathbb{Z} _{7}\)</span> 에서의 덧셈과 뺄셈과 곱셈은 정수집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 에서 덧셈과 뺄셈과 곱셈이 잘 정의되어 있던 것처럼 잘 정의되어 있다. 즉 체가 될 수 있는 조건을 만족한다.</p>
+<p>이제 나눗셈에 대한 체의 조건을 검증해야 하는데 <span class="arithmatex">\(\mathbb{Z} _{7}\)</span> 가 도출된 원래의 정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 에는 나눗셈이 정의되어 있지 않았다. 보통의 나눗셈은</p>
+<div class="arithmatex">\[ a \div b = a \times \frac{1}{b} \]</div>
+<p>로 설명될 수 있다. 그러므로 이제 나눗셈을 어떤 수 <span class="arithmatex">\(a\)</span> 의 곱셈에 대한 역원 <span class="arithmatex">\(\frac{1}{a}\)</span> 을 곱하는 것이라고 생각하자. 그러면 <span class="arithmatex">\(0\)</span> 이 아닌 모든 원소가 곱셈에 대한 역원을 가지면 그 집합에서 나눗셈이 가능하다는 것이 된다. 이것을 확장된 유클리드 알고리즘으로 보일 수 있다. 확장된 유클리드 알고리즘은 두 정수 <span class="arithmatex">\(a, b\)</span> 와 그 최대공약수 <span class="arithmatex">\(g\)</span> 에 대하여 </p>
+<div class="arithmatex">\[am + bn = g\]</div>
+<p>가 되는 정수 <span class="arithmatex">\(m, n\)</span> 을 언젠가 찾게 해주는 규칙(함수, 관계, 알고리즘)이다. </p>
+<p>이 확장된 유클리드 알고리즘을 사용하여 <span class="arithmatex">\(0\)</span> 이외의 모든 원소에 대한 역원을 찾아보자. 먼저 <span class="arithmatex">\(1, 2, 3, 4, 5, 6\)</span> 은 모두 <span class="arithmatex">\(p=7\)</span> 보다 작고 <span class="arithmatex">\(p=7\)</span> 은 소수이므로 <span class="arithmatex">\(1, 2, 3, 4, 5, 6\)</span> 과 <span class="arithmatex">\(7\)</span> 은 서로소이다. 즉 최대공약수 <span class="arithmatex">\(g=1\)</span> 을 갖는다는 말이다. </p>
+<p>이때 <span class="arithmatex">\(3\)</span> 의 역원을 찾는다고 해보자. 그러면 <span class="arithmatex">\(3\)</span> 과 <span class="arithmatex">\(p = 7\)</span> 을 확장된 유클리드 알고리즘에 대입하여 </p>
+<div class="arithmatex">\[ 3m + 7n = 1 \]</div>
+<p>을 얻는다. 이때 정수 <span class="arithmatex">\(m\)</span> 이 <span class="arithmatex">\(3\)</span> 의 역원이다. 왜냐하면 </p>
+<div class="arithmatex">\[ \because 3m \equiv 3m + 7n \equiv 1 (\mod 7) \]</div>
+<p>이기 때문이다. 즉 원소 <span class="arithmatex">\(a\)</span> 에 대하여 <span class="arithmatex">\(am\)</span> 을 얻기만 하면 그것에 소수 <span class="arithmatex">\(p\)</span> 에 대한 <span class="arithmatex">\(\mod p\)</span> 연산을 취할 것이기 때문에 </p>
+<div class="arithmatex">\[ am \equiv am + pn \]</div>
+<p>을 얻을 수 있다. 왜냐하면 <span class="arithmatex">\(\mod p\)</span> 연산으로 인하여 <span class="arithmatex">\(pn\)</span> 은 제거되기 때문이다. 그런데 확장된 유클리드 알고리즘으로써 </p>
+<div class="arithmatex">\[ am + pn = 1 \]</div>
+<p>임을 이미 알고 있다. 따라서</p>
+<div class="arithmatex">\[ am + pn \equiv 1 (\mod p) \]</div>
+<p>인데 <span class="arithmatex">\(\mod p\)</span> 연산으로 <span class="arithmatex">\(pn\)</span> 이 제거되므로</p>
+<div class="arithmatex">\[ \therefore  am \equiv 1 (\mod p) \]</div>
+<p>이다. 다시말해 원소 <span class="arithmatex">\(a\)</span> 에 <span class="arithmatex">\(m\)</span> 을 곱하면 곱셈에 대한 항등원 <span class="arithmatex">\(1\)</span> 을 얻는 것이다. 그러므로 <span class="arithmatex">\(m\)</span> 은 <span class="arithmatex">\(a\)</span> 의 곱셈에 대한 역원이다.</p>
+<p>그러므로 나눗셈이 유한집합에 대하여 가능하다. </p>
+<p>그러므로 유한집합이 체가 되기 위한 검증이 끝났고 유한집합은 체가 된다. 이 체는 원소가 유한하기에 유한체이다.</p>
+</li>
+</ul>
+<a href="#33adbe397"><div class="admonition tldr" id="33adbe397">
+<p>벡터공간(Vector Space) : 집합 <span class="arithmatex">\(V\)</span> 에 연산 <span class="arithmatex">\(+\)</span> 가 잘 정의되어 있고 즉 임의의 <span class="arithmatex">\(u, v \in V\)</span> 에 대하여 <span class="arithmatex">\(u + v \in V\)</span> 이고,</p>
+<p>체 <span class="arithmatex">\(F\)</span> 에 대하여 함수 <span class="arithmatex">\(\phi ((a, u)) = au(a \in F, u \in V, au \in V)\)</span> 가 존재하여 다음 다섯 조건이 성립할 때,</p>
+<p>집합 <span class="arithmatex">\(V\)</span> 를 체 <span class="arithmatex">\(F\)</span> 위의 벡터공간이라 한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\((V, +)\)</span> 은 아벨군이다.</p>
+</li>
+<li>
+<p>(스칼라배에 대한 결합법칙) 임의의 <span class="arithmatex">\(u \in V\)</span> 와 임의의 <span class="arithmatex">\(a, b \in F\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ (ab)u = a(bu) \]</div>
+<p>가 성립한다.</p>
+</li>
+<li>
+<p>(벡터의 덧셈에 대한 분배법칙) 임의의 <span class="arithmatex">\(u, v \in V\)</span> 와 임의의 <span class="arithmatex">\(a \in F\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ a(u+v) = au + av \]</div>
+<p>가 성립한다.</p>
+</li>
+<li>
+<p>(스칼라배의 덧셈에 대한 분배법칙) 임의의 <span class="arithmatex">\(u \in V\)</span> 와 임의의 <span class="arithmatex">\(a, b \in F\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ (a + b)u = au + bu \]</div>
+</li>
+<li>
+<p>체 <span class="arithmatex">\(F\)</span> 의 곱셈에 대한 항등원을 <span class="arithmatex">\(1\)</span> 이라 할 때, </p>
+<p>임의의 <span class="arithmatex">\(u \in V\)</span> 에 대하여 <span class="arithmatex">\(1u = u\)</span> 이다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>좌표평면에서의 위치벡터와 좌표공간에서의 위치벡터의 집합</p>
+<div class="arithmatex">\[ \mathbb{R}  ^{2} = \{(x, y) | x, y \in \mathbb{R} \} ,\mathbb{R}  ^{3} = \{(x, y, z) | x, y, z \in \mathbb{R} \} \]</div>
+<p>이 실수체 위에서 정의된 벡터공간 중 하나이다.</p>
+</li>
+<li>
+<p>또한 방향을 가진 선분, 위치벡터들을 벡터라고 정의하였는데 사실 이것들은 벡터공간에 속하는 원소 중 하나일 뿐이다.</p>
+<p>벡터공간의 대수적 구조를 만족하는 집합은 무한히 많고 그 원소도 무한히 많다. 그리고 그것들 모두가 벡터공간 구조 안에 있으므로 벡터라고 부른다.</p>
+</li>
+<li>
+<p>수학에서 엄밀하게 벡터란 다름 아닌 벡터 공간이 속하는 모든 원소가 바로 벡터다.</p>
+</li>
+</ul>
+<h2 id="_8">범주론<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<p><a href="https://github.com/pilgwon/CategoryTheory">https://github.com/pilgwon/CategoryTheory</a></p>
+<a href="#13d814904"><div class="admonition tldr" id="13d814904">
+<p>범주론 : 한편 이러한 모든 대수 구조에서 공통적인 특성들이 발견되어 그것을 한 단계 더 추상화시킨(추상대수학을 한단계 더 추상화시킨) 대상을 보편대수학과 범주론(category theory)에서 연구한다.</p>
+</div></a>
+<ul>
+<li>
+<p>대수 구조 자체가 수학적 대상들을 추상화시켜 집합과 함수로 보여지는 구조로 만든 것인데, 막상 그 구조들을 만들어놓고 보니까 그 구조들 사이에서 나타나는 공통적인 특성이 있으므로 한번 더 추상화시킨 것이 카테고리 이론(범주론) 이다. </p>
+</li>
+<li>
+<p>카테고리 이론은 프로그래밍에 직접적으로 많은 아이디어를 제공한다.</p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 기초 산술" class="md-footer__link md-footer__link--prev" href="../arithmetic/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              기초 산술
+            </div>
+</div>
+</a>
+<a aria-label="다음: 대수학" class="md-footer__link md-footer__link--next" href="../algebra/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              대수학
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

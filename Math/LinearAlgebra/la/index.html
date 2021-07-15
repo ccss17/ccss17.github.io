@@ -1,0 +1,2157 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/LinearAlgebra/la/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>선형방정식 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              선형방정식
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          선형방정식
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        선형방정식
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    선형대수학에서의 선형방정식
+  </a>
+<nav aria-label="선형대수학에서의 선형방정식" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    선형방정식계
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    행렬
+  </a>
+<nav aria-label="행렬" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    행렬표기법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    선형계 풀이법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    해의 존재성과 유일성
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    행 축약과 사다리꼴
+  </a>
+<nav aria-label="행 축약과 사다리꼴" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    추축위치
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    선형계의 해
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    해집합의 매개변수 표현
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    해의 존재성과 유일성
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    벡터방정식
+  </a>
+<nav aria-label="벡터방정식" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mathbbr2">
+    \(\mathbb{R}^2\)에서의 벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mathbbr3">
+    \(\mathbb{R}^3\)에서의 벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mathbbrn">
+    \(\mathbb{R}^n\)에서의 벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linear-combination">
+    일차결합(linear combination)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vector-equation">
+    벡터방정식 (vector equation)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ax-b">
+    행렬방정식 \(Ax = b\)
+  </a>
+<nav aria-label="행렬방정식 \(Ax = b\)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    해의 존재성
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ax">
+    행렬과 벡터 곱 \(Ax\) 의 성질
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    선형계의 해집합
+  </a>
+<nav aria-label="선형계의 해집합" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#homogeneous">
+    동차선형계 (homogeneous)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    매개변수 벡터 형식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    비동차계의 해집합
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    일차 독립
+  </a>
+<nav aria-label="일차 독립" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    두 개 이상의 벡터로 이루어진 집합의 일차 독립
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linear-transformation">
+    선형변환(linear transformation) 입문
+  </a>
+<nav aria-label="선형변환(linear transformation) 입문" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    행렬변환
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    선형변환
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    선형변환 행렬
+  </a>
+<nav aria-label="선형변환 행렬" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    존재성과 유일성 문제
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    선형대수학에서의 선형방정식
+  </a>
+<nav aria-label="선형대수학에서의 선형방정식" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    선형방정식계
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    행렬
+  </a>
+<nav aria-label="행렬" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    행렬표기법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    선형계 풀이법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    해의 존재성과 유일성
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    행 축약과 사다리꼴
+  </a>
+<nav aria-label="행 축약과 사다리꼴" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    추축위치
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    선형계의 해
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    해집합의 매개변수 표현
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    해의 존재성과 유일성
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    벡터방정식
+  </a>
+<nav aria-label="벡터방정식" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mathbbr2">
+    \(\mathbb{R}^2\)에서의 벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mathbbr3">
+    \(\mathbb{R}^3\)에서의 벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mathbbrn">
+    \(\mathbb{R}^n\)에서의 벡터
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linear-combination">
+    일차결합(linear combination)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vector-equation">
+    벡터방정식 (vector equation)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ax-b">
+    행렬방정식 \(Ax = b\)
+  </a>
+<nav aria-label="행렬방정식 \(Ax = b\)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    해의 존재성
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ax">
+    행렬과 벡터 곱 \(Ax\) 의 성질
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    선형계의 해집합
+  </a>
+<nav aria-label="선형계의 해집합" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#homogeneous">
+    동차선형계 (homogeneous)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    매개변수 벡터 형식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    비동차계의 해집합
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    일차 독립
+  </a>
+<nav aria-label="일차 독립" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    두 개 이상의 벡터로 이루어진 집합의 일차 독립
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linear-transformation">
+    선형변환(linear transformation) 입문
+  </a>
+<nav aria-label="선형변환(linear transformation) 입문" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    행렬변환
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    선형변환
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    선형변환 행렬
+  </a>
+<nav aria-label="선형변환 행렬" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    존재성과 유일성 문제
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>선형방정식</h1>
+<h2 id="_1">선형대수학에서의 선형방정식<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>선형방정식계는 선형대수학의 핵심이다.</p>
+<p>1.1절 과 1.2절에서 선형방정식계의 해를 구하는 방법을 소개한다.</p>
+<p>1.3절과 1.4절에서 선형방정식계가 어떻게 벡터방정식과 행렬방정식과 동치가 되는지 보여준다. 그리고 이 동치가 벡터의 일차결합에 관한 문제를 선형방정식계에 관한 문제로 축소시킨다. </p>
+<h3 id="_2">선형방정식계<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<a href="#55a24786e"><div class="admonition tldr" id="55a24786e">
+<p>선형방정식(linear equation) : 변수 <span class="arithmatex">\(x_1, \dots ,x_n\)</span> 에 대하여 다음과 같은 형태로 쓸 수 있는 방정식. (이때 <span class="arithmatex">\(b\)</span> 와 계수(coefficient) <span class="arithmatex">\(a_1, ..., a_n\)</span> 은 상수이고 <span class="arithmatex">\(n\)</span> 은 자연수)</p>
+<div class="arithmatex">\[a_1x_1 + a_2x_2 + \dots + a_nx_n = b\]</div>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(4x_1 - 5x_2 + 2 = x_1\)</span> </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(x_2 = 2(\sqrt 6 - x_1) + x_3\)</span></p>
+</li>
+</ul>
+<a href="#804b93192"><div class="admonition tldr" id="804b93192">
+<p>선형방정식계(system of linear equations) : 동일한 변수들(<span class="arithmatex">\(x_1, ..., x_n\)</span>) 을 포함하는 하나 이상의 선형방정식의 모임이다.</p>
+</div></a>
+<ul>
+<li>
+<p>선형계(linear system) 라고도 한다.</p>
+</li>
+<li>
+<p>예시</p>
+<div class="arithmatex">\[ 2x_1 - x_2 + 1.5x_3 = 8 \]</div>
+<div class="arithmatex">\[ x_1 - 4x_3 = -7 \tag{2}  \]</div>
+</li>
+</ul>
+<a href="#4373aa336"><div class="admonition tldr" id="4373aa336">
+<p>선형계의 해(solution) : 선형계의 변수 <span class="arithmatex">\(x_1, ..., x_n\)</span> 에 값 <span class="arithmatex">\(s_1, ..., s_n\)</span> 을 대입했을 때 모든 식이 참이되도록 하는 숫자 목록(<span class="arithmatex">\(s_1, ..., s_n\)</span>)이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>다음선형계의 해는 <span class="arithmatex">\((5, 6, 3)\)</span> 이다.</p>
+<div class="arithmatex">\[ x_1 - 4x_3 = -7 \tag{2} \]</div>
+</li>
+</ul>
+<a href="#bddedb1b1"><div class="admonition tldr" id="bddedb1b1">
+<p>해집합(solution set) : 가능한 모든 해들을 모아둔 집합.</p>
+</div></a>
+<a href="#36118a679"><div class="admonition tldr" id="36118a679">
+<p>선형계의 동치(equivalent) : 두 선형계가 동일한 해집합을 갖는 것.</p>
+</div></a>
+<a href="#60d1f5029"><div class="admonition tldr" id="60d1f5029">
+<p>선형계의 성질</p>
+</div></a>
+<ul>
+<li>
+<p>선형계는 다음 중 하나를 만족한다.</p>
+<ol>
+<li>
+<p>해를 갖지 않는다(inconsistent).</p>
+</li>
+<li>
+<p>하나의 해를 갖는다(consistent).</p>
+</li>
+<li>
+<p>무한히 많은 해를 갖는다. </p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="_3">행렬<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<a href="#208dd62e5"><div class="admonition tldr" id="208dd62e5">
+<p>행렬(matrix) : 수 또는 문자를 괄호 안에 직사각형 형태로 배열한 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>케일리는 연립 일차방정식의 풀이를 연구하면서 <span class="arithmatex">\(ad - bc\)</span> 의 값에 따라 연립방정식의 해의 존재 여부가 달라진다(궁극적으로는 행렬의 가역 여부)는 것을 발견하고 그것을 결정자(determinant) 라고 불렀다. 그리고 이것이 행렬식이 되었다. 그런데 해밀턴이 케일리의 연구를 보고 연립방정식의 계수만 따로 표기하는 방법을 고안하면서 행렬이 탄생하였다. </p>
+</li>
+<li>
+<p>행렬은 함수(사상)을 표현하기 위한 도구이다. 모든 선형 변환(일차 변환)은 행렬로 표현할 수 있고 그 역도 성립하기 때문이다. 즉 행렬은 선형변환이고 이것을 선형대수학의 기본정리라 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음은 여섯 개의 원소를 가진 <span class="arithmatex">\(2 \times 3\)</span> 행렬이다. </p>
+<div class="arithmatex">\[ \begin{bmatrix} 1&amp;9&amp;-13\\20&amp;5&amp;-16 \end{bmatrix} \]</div>
+</li>
+</ul>
+<a href="#122dac213"><div class="admonition tldr" id="122dac213">
+<p>행(row) : 행렬의 가로줄이다.</p>
+</div></a>
+<a href="#f884f80e1"><div class="admonition tldr" id="f884f80e1">
+<p>열(column) : 행렬의 세로줄이다.</p>
+</div></a>
+<h4 id="_4">행렬표기법<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<a href="#bf5698135"><div class="admonition tldr" id="bf5698135">
+<p>계수행렬(coefficient matrix) : 선형계의 각각의 변수를 열로 정렬한 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p>다음과 같은 선형계가 있다고 하자.</p>
+<div class="arithmatex">\[ x_1 - 2x_2 + x_3 = 0 \]</div>
+<div class="arithmatex">\[ 2x_2 - 8x_3 = 8 \]</div>
+<div class="arithmatex">\[ 5x_1 - 5x_3 = 10 \tag{3}  \]</div>
+<p>선형계(3) 의 계수 행렬은 다음과 같다. </p>
+<div class="arithmatex">\[ \begin{pmatrix} 1 &amp; -2 &amp; 1 \\ 0 &amp; 2  &amp;-8 \\ 5 &amp; 0 &amp; -5 \end{pmatrix} \]</div>
+</li>
+</ul>
+<a href="#59e47f3fc"><div class="admonition tldr" id="59e47f3fc">
+<p>첨가행렬(augmented matrix) : 계수행렬에 선형계 방정식의 우변의 상수들로 이루어진 열을 추가한 것.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>선형계(3) 의 첨가행렬은 다음과 같다. </p>
+<div class="arithmatex">\[ \begin{pmatrix} 1 &amp; -2 &amp; 1 &amp; 0\\ 0 &amp; 2  &amp; -8 &amp; 8\\ 5 &amp; 0 &amp; -5 &amp; 10 \end{pmatrix} \tag{4} \]</div>
+</li>
+</ul>
+<a href="#f0ee80c0c"><div class="admonition tldr" id="f0ee80c0c">
+<p>정방행렬(square matrix) : 같은 수의 행과 열을 같는 행렬이다.</p>
+</div></a>
+<ul>
+<li><span class="arithmatex">\(n \times n\)</span> 행렬로 대표된다.</li>
+</ul>
+<a href="#db49254a5"><div class="admonition tldr" id="db49254a5">
+<p>행렬의 크기 : 행렬이 <span class="arithmatex">\(m\)</span> 개의 행과 <span class="arithmatex">\(n\)</span> 개의 열로 이루어져 있을 때 행렬의 <span class="arithmatex">\(m \times n\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>첨가행렬 (4) 는 3개의 행과 4개의 열로 이루어져 있기 때문에 <span class="arithmatex">\(3 \times 4\)</span> 행렬이다. </p>
+</li>
+</ul>
+<h4 id="_5">선형계 풀이법<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<a href="#f67d73974"><div class="admonition tldr" id="f67d73974">
+<p>선형계 풀이법 : 선형계를 풀기 쉬운 동치인 선형계로 단순화 시키는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>첫번째 방정식의 <span class="arithmatex">\(x_1\)</span> 항으로 나머지 방정식의 <span class="arithmatex">\(x_1\)</span> 항을 소거한다.</p>
+<p>두번째 방정식의 <span class="arithmatex">\(x_2\)</span> 항으로 나머지 방정식의 <span class="arithmatex">\(x_2\)</span> 항을 소거한다.</p>
+<p>이를 계속하면 풀기 쉬운 동치인 선형계를 얻는다.</p>
+</li>
+</ul>
+<a href="#ffa788386"><div class="admonition tldr" id="ffa788386">
+<p>기본 행연산 : 선형계의 단순화 시 사용하는 세 가지 기본연산이다.</p>
+<ol>
+<li>
+<p>(교체) 하나의 방정식을 그 방정식을 상수배하여 합한 것으로 대체한다. </p>
+<ul>
+<li>
+<p><del><span class="arithmatex">\(i\)</span> 행에 상수 <span class="arithmatex">\(c\)</span> 를 곱하여 <span class="arithmatex">\(j\)</span> 행에 더하는 것을 <span class="arithmatex">\(A_{i, j}(c)\)</span> 로 표현한다.</del></p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\begin{bmatrix}1&amp;2&amp;3\\2&amp;3&amp;4\\3&amp;4&amp;5\end{bmatrix} \to \begin{bmatrix}1&amp;2&amp;3\\2&amp;3&amp;4\\0&amp;-2&amp;-5\end{bmatrix}\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>(교환) 두 방정식을 교환한다. </p>
+<ul>
+<li>
+<p><del><span class="arithmatex">\(i\)</span> 행과 <span class="arithmatex">\(j\)</span> 행을 교환하는 것을 <span class="arithmatex">\(A_{i, j}\)</span> 로 표현한다.</del></p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\begin{bmatrix}1&amp;2&amp;3\\2&amp;3&amp;4\\3&amp;4&amp;5\end{bmatrix} \to \begin{bmatrix}1&amp;2&amp;3\\3&amp;4&amp;5\\2&amp;3&amp;4\end{bmatrix}\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>(스칼라곱) 방정식의 모든 항에 0 이 아닌 상수를 곱한다. </p>
+<ul>
+<li><del><span class="arithmatex">\(i\)</span> 행에 <span class="arithmatex">\(0\)</span> 이 아닌 상수 <span class="arithmatex">\(c\)</span> 를 곱하는 것을 <span class="arithmatex">\(A_i(c), (c \neq 0)\)</span> 으로 표현한다.</del></li>
+</ul>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\begin{bmatrix}1&amp;2&amp;3\\2&amp;3&amp;4\\3&amp;4&amp;5\end{bmatrix} \to \begin{bmatrix}2&amp;4&amp;6\\2&amp;3&amp;4\\3&amp;4&amp;5\end{bmatrix}\)</span></p>
+</li>
+</ul>
+<a href="#d2c337a83"><div class="admonition tldr" id="d2c337a83">
+<p>행 동치(row equivalent) : 한 행렬에 기본 행 연산을 여러 번 적용하여 다른 행렬을 얻을 수 있을 때 두 행렬을 행 동치라 한다.</p>
+</div></a>
+<a href="#75a25674a"><div class="admonition tldr" id="75a25674a">
+<p>행 동치의 성질</p>
+</div></a>
+<ul>
+<li>두 선형계의 첨가행렬이 행 동치이면, 두 선형계는 동일한 해집합을 갖는다. </li>
+</ul>
+<h4 id="_6">해의 존재성과 유일성<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<a href="#a1d91ab17"><div class="admonition tldr" id="a1d91ab17">
+<p>선형계의 근본적인 문제</p>
+</div></a>
+<ul>
+<li>
+<p>(존재성) 선형계가 해를 갖는가?</p>
+</li>
+<li>
+<p>(유일성) 해가 존재하면 해가 하나뿐인가?</p>
+</li>
+</ul>
+<h3 id="_7">행 축약과 사다리꼴<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<a href="#0a42ae356"><div class="admonition tldr" id="0a42ae356">
+<p>영이 아닌(nonzero) 행 또는 열 : 적어도 하나의 영이 아닌 성분을 포함하는 행 또는 열.</p>
+</div></a>
+<a href="#73f9a67ef"><div class="admonition tldr" id="73f9a67ef">
+<p>선행 성분(leading entry) : 영이 아닌 행에서 가장 왼쪽의 영이 아닌 성분.</p>
+</div></a>
+<a href="#9f40254ce"><div class="admonition tldr" id="9f40254ce">
+<p>사다리꼴(echelon form) 행렬 : 다음 세 가지 성질을 갖는 직사각행렬이다.</p>
+<ol>
+<li>
+<p>영이 아닌 행은 모든 성분이 영인 행보다 항상 위에 있다. </p>
+</li>
+<li>
+<p>행의 선행 성분은 그 행보다 위에 있는 행의 선행 성분보다 더 오른쪽 열에 있다.</p>
+</li>
+<li>
+<p>선행 성분보다 아래에 있는 것은 모두 0 이다. </p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>행사다리꼴(row echelon form) 이라고도 한다. </p>
+</li>
+<li>
+<p>예시</p>
+<div class="arithmatex">\[ \begin{pmatrix} 2 &amp; -3 &amp; 2 &amp; 1 \\ 0 &amp; 1 &amp; -4 &amp; 8 \\ 0 &amp; 0 &amp; 0 &amp; 5/2 \end{pmatrix} \]</div>
+</li>
+</ul>
+<a href="#32815d759"><div class="admonition tldr" id="32815d759">
+<p>기약사다리꼴(reduced echelon form) 행렬  : 행사다리꼴의 정의를 포함하여 다음의 조건을 만족하는 직사각행렬이다.</p>
+<ol>
+<li>
+<p>영이 아닌 행의 선행 성분은 항상 1 이다.</p>
+</li>
+<li>
+<p>선행 성분 1 은 항상 그 열에서 유일한 영이 아닌 성분이다. </p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>기약행사다리꼴(reduced row echelon form) 이라고도 한다.</p>
+</li>
+<li>
+<p>예시</p>
+<div class="arithmatex">\[ \begin{pmatrix} 1 &amp; 0 &amp; 9 &amp; 0 &amp; 29 \\ 0 &amp; 1 &amp; 5 &amp; 0 &amp; 16 \\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 3 \end{pmatrix} \]</div>
+</li>
+</ul>
+<a href="#88630db3e"><div class="admonition tldr" id="88630db3e">
+<p><strong>Theorem 1</strong> 기약사다리꼴 행렬의 유일성 : 하나의 행렬과 행 동치인 기약사다리꼴 행렬은 오직 하나이다.</p>
+</div></a>
+<h4 id="_8">추축위치<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
+<a href="#7961afba1"><div class="admonition tldr" id="7961afba1">
+<p>추축위치(pivot position) : 행렬의 기약사다리꼴 행렬의 선행 성분 <span class="arithmatex">\(1\)</span> 에 대응하는 행렬 내부의 위치.</p>
+</div></a>
+<a href="#9c75b1ea8"><div class="admonition tldr" id="9c75b1ea8">
+<p>추축열(pivot column) : 추축위치를 포함하는 행렬의 열.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p>행렬 A 에 행연산을 수행하여 사다리꼴 행렬을 얻어서 A 의 추축위치와 추축열을 찾는다.</p>
+<div class="arithmatex">\[ A = \begin{pmatrix} 0 &amp; -3&amp; -6&amp; 4&amp; 9 \\ -1&amp; -2&amp; -1&amp; 3&amp; 1\\ -2&amp; -3&amp; 0&amp; 3&amp; -1\\ 1&amp; 4&amp; 5&amp; -9&amp; -7 \end{pmatrix} \]</div>
+<p>다음 사다리꼴에 따라서 추축열은 열 <span class="arithmatex">\(1\)</span>, 열 <span class="arithmatex">\(2\)</span>, 열 <span class="arithmatex">\(4\)</span> 이다. 추축위치는 <span class="arithmatex">\((1, 1), (2, 2), (3, 4)\)</span> 이다.</p>
+<div class="arithmatex">\[ \begin{pmatrix} 1 &amp; 4&amp; 5&amp; -9&amp; 7 \\ 0&amp; 2&amp; 4&amp; -6&amp; -6\\ 0&amp; 0&amp; 0&amp; -5&amp; 0\\ 0&amp; 0&amp; 0&amp; 0&amp; 0 \end{pmatrix} \]</div>
+</li>
+</ul>
+<h4 id="_9">선형계의 해<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
+<a href="#0f73ae87d"><div class="admonition tldr" id="0f73ae87d">
+<p>기본변수(basic variable) : 행렬의 추축열에 대응되는 변수.</p>
+</div></a>
+<a href="#f88b1a7a7"><div class="admonition tldr" id="f88b1a7a7">
+<p>자유변수(free variable) : 기본변수 이외의 변수로써 값이 임의로 정해지는 변수.</p>
+</div></a>
+<a href="#9b0296184"><div class="admonition tldr" id="9b0296184">
+<p>선형계의 해 : 첨가행렬을 행 축약하여 기약사다리꼴로 변환하면 해집합을 구할 수 있다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p>어떤 선형계의 첨가행렬이 다음의 기약사다리꼴로 변환되었다고 하자.</p>
+<div class="arithmatex">\[ \begin{pmatrix} 1 &amp; 0&amp; -5&amp; 1 \\ 0&amp; 1&amp; 1&amp; 4\\ 0&amp; 0&amp; 0&amp; 0 \end{pmatrix} \]</div>
+<p>이에 해당하는 방정식계는 다음과 같다. </p>
+<div class="arithmatex">\[ x_1 - 5x_3 = 1\]</div>
+<div class="arithmatex">\[ x_2 + x_3 = 4\]</div>
+<div class="arithmatex">\[ 0 = 0 \tag{4} \]</div>
+<p>이때 기본변수는 <span class="arithmatex">\(x_1\)</span> 과 <span class="arithmatex">\(x_2\)</span> 이고 자유변수는 <span class="arithmatex">\(x_3\)</span> 이다. </p>
+<div class="arithmatex">\[ \begin{cases} x_1 = 1 + 5x_3 \\ x_2 = 4 - x_3 \\ x_3 은 자유변수 \end{cases} \tag{5} \]</div>
+<p><span class="arithmatex">\(x_3\)</span> 은 자유변수이기에 값이 임의로 정해진다. 그리고 <span class="arithmatex">\(x_3\)</span> 에 따라 <span class="arithmatex">\(x_1\)</span> 과 <span class="arithmatex">\(x_2\)</span> 이 정해진다. </p>
+</li>
+</ul>
+<h4 id="_10">해집합의 매개변수 표현<a class="headerlink" href="#_10" title="Permanent link">¶</a></h4>
+<a href="#3281f0013"><div class="admonition tldr" id="3281f0013">
+<p>해집합의 매개변수 표현 : (5) 와 같이 표현한 것이다.</p>
+</div></a>
+<a href="#766ba99e6"><div class="admonition tldr" id="766ba99e6">
+<p>선형계를 푼다 : 해집합의 매개변수 표현을 구하거나 해집합이 공집합이라는 것을 판별하는 것이다.</p>
+</div></a>
+<h4 id="_11">해의 존재성과 유일성<a class="headerlink" href="#_11" title="Permanent link">¶</a></h4>
+<a href="#75783c12b"><div class="admonition tldr" id="75783c12b">
+<p><strong>Theorem 2</strong> 존재성과 유일성 정리 : 선형계가 해를 갖기 위한 필요충분조건은 첨가행렬의 가장 오른쪽 열이 추축열이 아닌 것이다. 즉 첨가행렬의 사다리꼴 행렬이 다음과 같은 형태의 행을 갖지 않는 것이다.</p>
+<div class="arithmatex">\[ \begin{pmatrix} 0 &amp; \dots &amp; 0 &amp; b \end{pmatrix} b \ne 0 \]</div>
+<p>이 경우 <span class="arithmatex">\(0 = b\)</span> 가 성립되어 선형계가 해를 갖지 않는다.</p>
+<p>하지만 해를 가지면 해집합은 (i) 자유변수가 없을 시 유일한 해를 갖고,</p>
+<p>(ii) 자유변수가 있을 시 무한히 많은 해를 갖는다.</p>
+</div></a>
+<h3 id="_12">벡터방정식<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<a href="#0a051fedf"><div class="admonition tldr" id="0a051fedf">
+<p>열벡터(column vector) 또는 벡터(vector): 하나의 열만을 갖는 행렬이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p><span class="arithmatex">\(u = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\)</span> </p>
+<p>이는 직교좌표계의 좌표(3, -1)로 생각할 수도 있다.</p>
+</li>
+</ul>
+<blockquote>
+<p>구글이 제안한 벡터에 단어를 대입하여 자연어를 처리하는 word2vec 방식이 있다.</p>
+<p>페이스북은 이것을 기반으로 fastText 기법을 만들었다. </p>
+<p>이것은 숫자에 대응시킬 수 있는 자연대상을 벡터 대수로 처리할 수 있다는 가능성을 보여준다. 즉, 자연어라는 자연대상을 수라는 집합으로 환원하고 그것에 적용되는 연산을 정의하여 대수구조로 만드는 것이다.</p>
+</blockquote>
+<a href="#f72fbc951"><div class="admonition tldr" id="f72fbc951">
+<p>행벡터(row vector) : 하나의 행만을 갖는 행렬이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p><span class="arithmatex">\(u = \begin{pmatrix} 3 &amp; -1 \\ \end{pmatrix}\)</span></p>
+</li>
+</ul>
+<a href="#e2f70c0ed"><div class="admonition tldr" id="e2f70c0ed">
+<p>영벡터(zero vector) : 모든 성분이 영인 벡터.</p>
+</div></a>
+<h4 id="mathbbr2"><span class="arithmatex">\(\mathbb{R}^2\)</span>에서의 벡터<a class="headerlink" href="#mathbbr2" title="Permanent link">¶</a></h4>
+<a href="#f5e73bdca"><div class="admonition tldr" id="f5e73bdca">
+<p><span class="arithmatex">\(\mathbb{R}^2\)</span> 의 정의 : <span class="arithmatex">\(2\)</span> 개의 성분을 갖는 모든 벡터의 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\mathbb{R}\)</span> 의 의미는 벡터의 성분이 실수라는 것이다.</p>
+</li>
+<li>
+<p>지수 <span class="arithmatex">\(2\)</span> 의 의미는 각각의 벡터가 <span class="arithmatex">\(2\)</span> 개의 성분을 갖는다는 뜻이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \begin{bmatrix} 1\\2 \end{bmatrix} \]</div>
+<p>이것은 <span class="arithmatex">\(\big &lt; 1, 2\big &gt;\)</span> 로도 표현할 수 있고 좌표평면에서의 종점의 좌표가 <span class="arithmatex">\((1, 2)\)</span> 인 벡터로 볼 수 있다. </p>
+</li>
+</ul>
+<h4 id="mathbbr3"><span class="arithmatex">\(\mathbb{R}^3\)</span>에서의 벡터<a class="headerlink" href="#mathbbr3" title="Permanent link">¶</a></h4>
+<a href="#22a5a1f9e"><div class="admonition tldr" id="22a5a1f9e">
+<p><span class="arithmatex">\(\mathbb{R}^3\)</span> 의 정의 : <span class="arithmatex">\(3\)</span> 개의 성분(<span class="arithmatex">\(3 \times 1\)</span> 열행렬)을 갖는 벡터의 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(a=\begin{pmatrix} 2 \\ 3 \\ 4 \end{pmatrix}\)</span></p>
+<p>이는 <span class="arithmatex">\(3\)</span>차원 좌표공간에서의 좌표 <span class="arithmatex">\((2, 3, 4)\)</span> 로 볼 수 있다.</p>
+</li>
+</ul>
+<h4 id="mathbbrn"><span class="arithmatex">\(\mathbb{R}^n\)</span>에서의 벡터<a class="headerlink" href="#mathbbrn" title="Permanent link">¶</a></h4>
+<a href="#f82a1a34c"><div class="admonition tldr" id="f82a1a34c">
+<p><span class="arithmatex">\(\mathbb{R}^n\)</span> 의 정의 : n 이 양의 정수일때, n 개의 실수로 이루어진 모든 순서 있는 n 짝(ordered n-tuples) 의 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>보통 다음과 같이 <span class="arithmatex">\(n \times 1\)</span> 열행렬로 표시한다.</p>
+<p><span class="arithmatex">\(u=\begin{pmatrix} u_1 \\ u_2 \\ \vdots \\ u_n \end{pmatrix}\)</span></p>
+<p>이는 <span class="arithmatex">\(n\)</span>차원 좌표공간에서의 좌표로 볼 수 있다.</p>
+</li>
+</ul>
+<a href="#65a8972aa"><div class="admonition tldr" id="65a8972aa">
+<p><span class="arithmatex">\(\mathbb{R}^n\)</span> 의 대수적 성질 : 임의의 벡터들 <span class="arithmatex">\(u, v, w \in \mathbb{R}^n\)</span> 과 임의의 수 c 와 d 에 대하여 다음이 성립한다.</p>
+</div></a>
+<ol>
+<li>
+<p><span class="arithmatex">\(u + v = v + u\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((u + v) + w = u + (v + w)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(u + 0 = 0 + u = u\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(u + (-u) = -u + u = 0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(c(u + v) = cv + cu\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((c + d)u = cv + cu\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(c(du) = (cd)u\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(lu = u\)</span></p>
+</li>
+</ol>
+<h4 id="linear-combination">일차결합(linear combination)<a class="headerlink" href="#linear-combination" title="Permanent link">¶</a></h4>
+<a href="#0e8b4868b"><div class="admonition tldr" id="0e8b4868b">
+<p>일차결합(linear combination) : 어떤 벡터 <span class="arithmatex">\(v_1, v_2, \dots, v_p \in \mathbb{R}^n\)</span> 와 스칼라 <span class="arithmatex">\(c_1, c_2, \dots, c_p\)</span> 에 대하여 </p>
+<p>다음과 같이 정의된 벡터 <span class="arithmatex">\(y\)</span> 를 가중치(weight) <span class="arithmatex">\(c_1, c_2, \dots, c_p\)</span> 를 갖는 <span class="arithmatex">\(v_1, v_2, \dots, v_p\)</span> 의 일차결합(linear combination) 이라 한다.</p>
+<div class="arithmatex">\[y = c_1v_1 + \dots + c_pv_p\]</div>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>다음은 <span class="arithmatex">\(v_1\)</span> 과 <span class="arithmatex">\(v_2\)</span> 의 일차결합이다. </p>
+<p><span class="arithmatex">\(\sqrt3v_1 + v_2\)</span></p>
+<p><span class="arithmatex">\(\frac{1}{2}v_1 (=\frac{1}{2}v_1 + 0v_2)\)</span></p>
+<p><span class="arithmatex">\(0 (= 0v_1 + 0v_2)\)</span></p>
+</li>
+</ul>
+<h4 id="vector-equation">벡터방정식 (vector equation)<a class="headerlink" href="#vector-equation" title="Permanent link">¶</a></h4>
+<a href="#f68be6983"><div class="admonition tldr" id="f68be6983">
+<p>벡터방정식 (vector equation) : 어떤 벡터 <span class="arithmatex">\(v_1, v_2, \dots, v_p \in \mathbb{R}^n\)</span> 와 변수 <span class="arithmatex">\(x_1, x_2, \dots, x_p\)</span> 에 대하여 </p>
+<p>다음과 같이 정의된 벡터 <span class="arithmatex">\(y\)</span> 를  벡터 방정식(vector equation) 이라 함. </p>
+<div class="arithmatex">\[y = x_1y_1 + \dots + x_pv_p\]</div>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<ul>
+<li><span class="arithmatex">\(a_1 = \begin{pmatrix} 1 \\ -2 \\ -5 \end{pmatrix}\)</span> , <span class="arithmatex">\(a_2 = \begin{pmatrix} 2 \\ 5 \\ 6 \end{pmatrix}\)</span> , <span class="arithmatex">\(b = \begin{pmatrix} 7 \\ 4 \\ -3 \end{pmatrix}\)</span> 이라 하자. <span class="arithmatex">\(b\)</span> 를 <span class="arithmatex">\(a_1\)</span> 과 <span class="arithmatex">\(a_2\)</span> 의 일차결합으로 표시할 수 있는지, 즉 다음 식을 만족하는 <span class="arithmatex">\(x_1\)</span> 과 <span class="arithmatex">\(x_2\)</span> 가 있는지 판별하자.</li>
+</ul>
+<div class="arithmatex">\[x_1a_1 + x_2a_2 = b \tag{1} \]</div>
+<p>주어진 벡터방정식은 다음과 같다. </p>
+<div class="arithmatex">\[ x_1\begin{pmatrix} 1 \\-2 \\ -5  \end{pmatrix} + x_2\begin{pmatrix} 2 \\5 \\ 6  \end{pmatrix} = \begin{pmatrix} 7 \\4 \\ -3  \end{pmatrix} \]</div>
+<p>이는 다음과 같이 쓸 수 있다. </p>
+<div class="arithmatex">\[ \begin{pmatrix} x_1 + 2x_2\\ -2x_1 +5x_2 \\-5x_1 + 6x_2  \end{pmatrix} = \begin{pmatrix} 7 \\4 \\ -3  \end{pmatrix} \tag{2} \]</div>
+<p>(2) 의 좌변과 우변의 벡터가 같게 되기 위해서는 성분이 같아야 한다. 그러므로 <span class="arithmatex">\(x_1\)</span> 과 <span class="arithmatex">\(x_2\)</span> 가 (1) 의 해가 되기 위해서는 다음 선형계의 해가 되어야 함. </p>
+<div class="arithmatex">\[x_1 + 2x_2 = 7\]</div>
+<div class="arithmatex">\[-2x_1 + 5x_2 = 4\]</div>
+<div class="arithmatex">\[-5x_1 + 6x_2 = -3 \tag{3} \]</div>
+<p>이 선형계를 풀기 위해 그것의 첨가행렬을 축약하자. </p>
+<div class="arithmatex">\[ \begin{pmatrix}1 &amp; 2 &amp; 7 \\ -2 &amp; 5 &amp; 4 \\ -5 &amp; 6 &amp; -3\end{pmatrix} \sim \begin{pmatrix}1 &amp; 0 &amp; 3 \\ 0 &amp; 1 &amp; 2 \\ 0 &amp; 0 &amp; 0\end{pmatrix} \]</div>
+<p>이때 (3) 의 해는 <span class="arithmatex">\(x_1 = 3\)</span>, <span class="arithmatex">\(x_2 = 2\)</span> 이기에 b 는 가중치 <span class="arithmatex">\(x_1 = 3\)</span>, <span class="arithmatex">\(x_2 = 2\)</span> 를 갖는 <span class="arithmatex">\(a_1\)</span> 과 <span class="arithmatex">\(a_2\)</span> 의 일차결합이다. </p>
+<p>그러면 (3) 의 첨가행렬은 단순히 벡터방정식(1) 로부터 얻을 수 있다. 첨가행렬을 단순히 다음과 같이 표현 할 수 있다. </p>
+<div class="arithmatex">\[\begin{pmatrix} a_1 &amp; a_2 &amp; b \end{pmatrix}\]</div>
+</li>
+</ul>
+<a href="#3410fc9d4"><div class="admonition tldr" id="3410fc9d4">
+<p>벡터방정식의 해집합 </p>
+<p>다음과 같은 벡터방정식이 있다고 생각하자. </p>
+<div class="arithmatex">\[x_1a_1 + x_2a_2 + \dots + x_na_n = b\]</div>
+<p>그러면 위의 논의로부터 방정식의 첨가행렬이 다음과 같은 선형계와 같은 해집합을 갖는다는 것을 알 수 있다.</p>
+<div class="arithmatex">\[\begin{pmatrix}a_1 &amp; a_2 &amp; \dots &amp; a_n &amp; b\end{pmatrix}\]</div>
+</div></a>
+<a href="#4b5ab21c6"><div class="admonition tldr" id="4b5ab21c6">
+<p>모든 벡터의 집합 <span class="arithmatex">\(Span\)</span> : 어떤 벡터 <span class="arithmatex">\(v_1, v_2, \dots, v_p \in \mathbb{R}^n\)</span> 에 대하여 </p>
+<p><span class="arithmatex">\(v_1, v_2, \dots, v_p\)</span> 의 모든 일차결합의 집합을 <span class="arithmatex">\(Span\{v_1, \dots, v_p\}\)</span> 이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 스칼라 <span class="arithmatex">\(c_1, \dots, c_p\)</span> 에 대하여 다음의 형태로 표현되는 모든 벡터의 집합이다. </p>
+<div class="arithmatex">\[c_1v_1 + c_2v_2 + \dots + c_pv_p\]</div>
+</li>
+<li>
+<p>예시</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(Span\{v\}\)</span> 의 의미</p>
+<p><span class="arithmatex">\(v\)</span> 가 <span class="arithmatex">\(\mathbb{R}^3\)</span> 에 속하는 영이 아닌 벡터라고하자.</p>
+<p><span class="arithmatex">\(Span\{v\}\)</span> 는 <span class="arithmatex">\(v\)</span> 의 모든 스칼라배의 집합이며, <span class="arithmatex">\(v\)</span> 과 <span class="arithmatex">\(0\)</span> 을 지나는 <span class="arithmatex">\(\mathbb{R}^3\)</span> 의 직선의 연장선상 위의 점들의 집합이다. </p>
+<p><img alt="3차원 직선" src="https://user-images.githubusercontent.com/16812446/74583507-095a5a00-500b-11ea-86fe-a1cb8faccfae.png"/></p>
+</li>
+<li>
+<p><span class="arithmatex">\(Span\{u, v\}\)</span> 의 의미</p>
+<p><span class="arithmatex">\(u, v\)</span> 가 <span class="arithmatex">\(\mathbb{R}^3\)</span> 에 속하는 영이 아닌 벡터라고 하자. </p>
+<p><span class="arithmatex">\(Span\{u, v\}\)</span> 는 <span class="arithmatex">\(u, v, 0\)</span> 를 포함하는 <span class="arithmatex">\(\mathbb{R}^3\)</span> 내의 평면이다.</p>
+<p><img alt="3차원 직선(1)" src="https://user-images.githubusercontent.com/16812446/74583586-d2387880-500b-11ea-8096-d51df7105043.png"/></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="ax-b">행렬방정식 <span class="arithmatex">\(Ax = b\)</span><a class="headerlink" href="#ax-b" title="Permanent link">¶</a></h3>
+<a href="#de2212e4e"><div class="admonition tldr" id="de2212e4e">
+<p>행렬방정식 <span class="arithmatex">\(Ax = b\)</span> : <span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(a_1, \dots, a_n\)</span> 을 열로 갖는 <span class="arithmatex">\(m \times n\)</span> 행렬</p>
+<div class="arithmatex">\[ A = \begin{pmatrix} a_1 &amp; a_2 &amp; \dots &amp; a_n \end{pmatrix}\]</div>
+<p>이고 <span class="arithmatex">\(x \in \mathbb{R}^n\)</span> </p>
+<div class="arithmatex">\[ x = \begin{pmatrix} x_1 \\ x_2 \\ \dots \\ x_n \end{pmatrix}\]</div>
+<p>이면 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(x\)</span> 의 곱 <span class="arithmatex">\(Ax\)</span> 는 다음과 같은 <span class="arithmatex">\(A\)</span> 의 열들과 이에 대응하는 <span class="arithmatex">\(x\)</span> 의 성분들을 가중치로 하는 일차결합이다. </p>
+<div class="arithmatex">\[ Ax = \begin{pmatrix} a_1 &amp; a_2 &amp; \dots &amp; a_n \end{pmatrix}\begin{pmatrix} x_1 \\ x_2 \\ \dots \\ x_n \end{pmatrix} = x_1a_1 + x_2a_2 + \dots + x_na_n\]</div>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<div class="arithmatex">\[ \begin{pmatrix} 1 &amp; 2 &amp; -1 \\ 0 &amp; -5 &amp; 3 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} 4 \\ 1 \end{pmatrix} \]</div>
+</li>
+</ul>
+<a href="#9dd2a716e"><div class="admonition tldr" id="9dd2a716e">
+<p><strong>Theorem 3</strong> 행렬방정식의 해집합(벡터방정식과 선형계와의 관계) : A 가 <span class="arithmatex">\(a_1, \dots, a_n\)</span> 을 열로 갖는 <span class="arithmatex">\(m \times n\)</span> 행렬이고, <span class="arithmatex">\(b \in \mathbb{R}^m\)</span> 이면 다음 행렬방정식</p>
+<div class="arithmatex">\[ Ax = b\]</div>
+<p>는 다음 벡터 방정식과 같은 해집합을 갖는다. </p>
+<div class="arithmatex">\[ x_1a_1 + x_2a_2 + \dots + x_na_n = b\]</div>
+<p>그리고 다음의 첨가행렬을 갖는 선형계와 같은 해집합을 갖는다. </p>
+<div class="arithmatex">\[ \begin{pmatrix} a_1 &amp; a_2 &amp; \dots &amp; a_n &amp; b\end{pmatrix}\]</div>
+<p>즉, 선형방정식계는 행렬방정식, 벡터방정식으로 볼 수 있다.</p>
+</div></a>
+<h4 id="_13">해의 존재성<a class="headerlink" href="#_13" title="Permanent link">¶</a></h4>
+<a href="#577a0c7a0"><div class="admonition tldr" id="577a0c7a0">
+<p>행렬방정식의 해의 존재성의 필요충분조건 : <span class="arithmatex">\(Ax = b\)</span> 가 해를 갖기 위한 필요충분조건은 <span class="arithmatex">\(b\)</span> 가 <span class="arithmatex">\(A\)</span> 의 열의 일차 결합인 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p><span class="arithmatex">\(A=\begin{pmatrix}1 &amp; 3 &amp; 4 \\ -4 &amp; 2 &amp; -6 \\ -3 &amp; -2 &amp; -7\end{pmatrix}, b = \begin{pmatrix}b_1\\ b_2 \\ b_3\end{pmatrix}\)</span> 이라 하면, 행렬방정식 <span class="arithmatex">\(Ax=b\)</span> 가 임의의 <span class="arithmatex">\(b_1, b_2, b_3\)</span> 에 대하여 해를 갖는가? </p>
+<p><span class="arithmatex">\(Ax = b\)</span> 에 대한 첨가행렬을 축약하면 다음과 같다.</p>
+<div class="arithmatex">\[ \begin{pmatrix}1 &amp; 3 &amp; 4 &amp; b_1 \\ -4 &amp; 2 &amp; -6 &amp; b_2 \\ -3 &amp; -2 &amp; -7 &amp; b_3\end{pmatrix} \sim \begin{pmatrix}1 &amp; 3 &amp; 4 &amp; b_1 \\ 0 &amp; 14 &amp; 10 &amp; b_2 + 4b_1 \\ 0 &amp; 0 &amp; 0 &amp; b_3+3b_1-\frac{1}{2}(b_2+4b_1)\end{pmatrix} \]</div>
+<p>열 4 의 3번쨰 성분이 <span class="arithmatex">\(b_3+3b_1-\frac{1}{2}(b_2+4b_1)\)</span> 인데 적당한 <span class="arithmatex">\(b\)</span> 에 대하여 <span class="arithmatex">\(b_3+3b_1-\frac{1}{2}(b_2+4b_1)\)</span> 이 영이 아니게 되면 <span class="arithmatex">\(0 = n (n\ne 0)\)</span> 라는 식의 모순이 발생한다.</p>
+<p><span class="arithmatex">\(\therefore\)</span> 임의의 <span class="arithmatex">\(b\)</span> 에 대하여 해를 갖는 것은 아니다. </p>
+<p>위 행렬방정식이 해를 갖기 위해서는 반드시 다음을 만족해야 한다. </p>
+<div class="arithmatex">\[b_1-\frac{1}{2}b_2+b_3 = 0\]</div>
+<p>위 행렬방정식 <span class="arithmatex">\(Ax = b\)</span> 에서 <span class="arithmatex">\(A\)</span> 의 <strong>사다리꼴 행렬</strong> 이 영인 행을 가지므로 모든 <span class="arithmatex">\(b\)</span> 에 대하여 항상 행을 가지지 않는 것이다. 만약 <span class="arithmatex">\(A\)</span> 의 3 개의 행에 모두 추축이 있었다면 첨가행렬에서 계산을 신경 쓰지 않았을 것이다. 왜냐하면 첨가행렬에 <span class="arithmatex">\(\begin{pmatrix}0&amp;0&amp;0&amp;1\end{pmatrix}\)</span> 같은 행이 없었을 것이기 때문이다.</p>
+</li>
+</ul>
+<a href="#bc4d02556"><div class="admonition tldr" id="bc4d02556">
+<p><strong>Theorem 4</strong> <span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(m \times n\)</span> 행렬이라 하자. 다음 명제들은 모두 동치이다. </p>
+<ol>
+<li>
+<p>임의의 <span class="arithmatex">\(b \in \mathbb{R}^m\)</span> 에 대하여, 방정식 <span class="arithmatex">\(Ax = b\)</span> 가 해를 갖는다. </p>
+</li>
+<li>
+<p>임의의 <span class="arithmatex">\(b \in \mathbb{R}^m\)</span> 는 <span class="arithmatex">\(A\)</span> 의 열들의 일차결합이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> 의 열들이 <span class="arithmatex">\(\mathbb{R}^m\)</span> 을 생성한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> 의 모든 행에 추축위치가 있다.</p>
+</li>
+</ol>
+</div></a>
+<a href="#e58a915da"><div class="admonition tldr" id="e58a915da">
+<p>항등행렬(identity matrix) 의 정의 : 대각성분이 모두 1 이고 나머지 성분은 0 인 행렬이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(n \times n\)</span> 항등행렬은 <span class="arithmatex">\(I_n\)</span> 으로 표기한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(I_3 = \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1\end{pmatrix}\)</span></p>
+</li>
+</ul>
+<a href="#b69bc25de"><div class="admonition tldr" id="b69bc25de">
+<p>항등행렬의 성질 : 모든 <span class="arithmatex">\(n \times n\)</span> 항등행렬에 대하여 <span class="arithmatex">\(I_nx = x\)</span>  이다.</p>
+</div></a>
+<h4 id="ax">행렬과 벡터 곱 <span class="arithmatex">\(Ax\)</span> 의 성질<a class="headerlink" href="#ax" title="Permanent link">¶</a></h4>
+<a href="#1d8adeb95"><div class="admonition tldr" id="1d8adeb95">
+<p><strong>Theorem 5</strong> <span class="arithmatex">\(A\)</span>가 <span class="arithmatex">\(m \times n\)</span> 행렬이고, <span class="arithmatex">\(u, v \in \mathbb{R}^n\)</span> 이며, <span class="arithmatex">\(c\)</span> 가 스칼라 일 때 다음이 성립한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(A(u+v) = Au + Av\)</span> 가 해를 갖는다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(A(cu) = c(Au)\)</span></p>
+</li>
+</ol>
+</div></a>
+<h3 id="_14">선형계의 해집합<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
+<h4 id="homogeneous">동차선형계 (homogeneous)<a class="headerlink" href="#homogeneous" title="Permanent link">¶</a></h4>
+<a href="#c5d24ca36"><div class="admonition tldr" id="c5d24ca36">
+<p>동차선형계(homogeneous) : <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 영벡터 <span class="arithmatex">\(0 \in \mathbb{R}^m\)</span> 에 대하여</p>
+<p><span class="arithmatex">\(Ax = 0\)</span> 형태로 쓸 수 있는 선형방정식계를 동차(homogeneous) 라 한다.</p>
+</div></a>
+<a href="#b16b822b1"><div class="admonition tldr" id="b16b822b1">
+<p>동차선형계(homogeneous) 의 성질</p>
+</div></a>
+<ul>
+<li>
+<p>동차선형계 <span class="arithmatex">\(Ax = 0\)</span> 은 항상 적어도 하나의 해, <span class="arithmatex">\(x = 0(\mathbb{R}^m 의 영벡터)\)</span>  를 갖는다. 그리고 이 해를 자명한 해(trivial solution) 라 한다.</p>
+</li>
+<li>
+<p>동차선형계 <span class="arithmatex">\(Ax = 0\)</span> 의 자명하지 않은 해(nontirival solution) 은 영이 아닌 벡터 <span class="arithmatex">\(x\)</span> 이다. </p>
+</li>
+<li>
+<p>동차선형계가 자명하지 않은 해(nontirival solution) 를 갖기 위한 필요충분조건은 그 방정식이 적어도 하나의 자유변수를 갖는 것이다. </p>
+</li>
+<li>
+<p>동차선형계의 유일한 해가 영벡터라면 해집합은 <span class="arithmatex">\(Span\{0\}\)</span> 이다.</p>
+</li>
+<li>
+<p>동차선형계 해의 자유변수가 <span class="arithmatex">\(1\)</span> 개라면 해집합(<span class="arithmatex">\(Span\{v\}\)</span>)은 기하학적으로 직선으로 표현된다.</p>
+</li>
+<li>
+<p>동차선형계 해의 자유변수가 <span class="arithmatex">\(2\)</span> 개라면 해집합(<span class="arithmatex">\(Span\{u, v\}\)</span>)은 기하학적으로 평면으로 표현된다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>(자명하지 않는 해를 갖는지 판별)</p>
+<p>다음 동차선형계가 자명하지 않은 해를 갖는지 판별하고 해집합을 구하자.</p>
+<div class="arithmatex">\[3x_1 + 5x_2 - 4x_3 = 0\]</div>
+<div class="arithmatex">\[-3x_1 - 2x_2 + 4x_3 = 0\]</div>
+<div class="arithmatex">\[6x_1 + x_2 - 8x_3 = 0\]</div>
+<p>위 선형계의 계수행렬을 <span class="arithmatex">\(A\)</span> 라 하고 첨가행렬 <span class="arithmatex">\(\begin{pmatrix}A &amp; 0\end{pmatrix}\)</span> 을 행축약하여 <strong>사다리꼴</strong> 로 변환하자.</p>
+<div class="arithmatex">\[ \begin{pmatrix} 3 &amp; 5 &amp; -4 &amp; 0 \\ -3 &amp; -2 &amp; 4 &amp; 0 \\ 6 &amp; 1 &amp; -8 &amp; 0 \\ \end{pmatrix} \sim \begin{pmatrix} 3 &amp; 5 &amp; -4 &amp; 0 \\ 0 &amp; 3 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ \end{pmatrix} \]</div>
+<p><span class="arithmatex">\(x_3\)</span> 이 자유변수이므로, <span class="arithmatex">\(Ax=0\)</span> 은 <span class="arithmatex">\(x_3\)</span> 의 값에 따라 한 개씩 정해지는 자명하지 않은 해를 갖는다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>(해집합을 구하는 과정)</p>
+<p>해집합을 구하기 위하여, <span class="arithmatex">\(\begin{pmatrix}A &amp; 0\end{pmatrix}\)</span> 을 계속해서 행축약하여 <strong>기약사다리꼴</strong> 로 만들자. </p>
+<div class="arithmatex">\[ \begin{pmatrix} 1 &amp; 0 &amp; -\frac{4}{3} &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ \end{pmatrix} \]</div>
+<div class="arithmatex">\[ x_1 - \frac{4}{3}x_3 = 0 \]</div>
+<div class="arithmatex">\[ x_2 = 0 \]</div>
+<div class="arithmatex">\[ 0 = 0 \]</div>
+<p>기본변수 <span class="arithmatex">\(x_1\)</span> 과 <span class="arithmatex">\(x_2\)</span> 를 풀어서 <span class="arithmatex">\(x_1 = \frac{4}{3}x_3\)</span>, <span class="arithmatex">\(x_2 = 0\)</span> 을 얻을 수 있다.</p>
+<p>이제 <span class="arithmatex">\(Ax=0\)</span> 의 일반해를 다음과 같은 벡터로 나타낼 수 있다. </p>
+<div class="arithmatex">\[ x = \begin{pmatrix}x_1 \\ x_2 \\ x_3\end{pmatrix} = \begin{pmatrix}\frac{4}{3}x_3 \\ 0 \\ x_3\end{pmatrix} = x_3\begin{pmatrix}\frac{4}{3} \\ 0 \\ 1\end{pmatrix} = x_3v \]</div>
+<p>이때</p>
+<div class="arithmatex">\[ v = \begin{pmatrix}\frac{4}{3} \\ 0 \\ 1\end{pmatrix} \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(x=x_3v\)</span> 가 되어 <span class="arithmatex">\(Ax=0\)</span> 의 모든 해는 <span class="arithmatex">\(v\)</span> 의 스칼라배(<span class="arithmatex">\(Span\{v\}\)</span>)이다. (물론 자명한 해는 자유변수 <span class="arithmatex">\(x_3\)</span> 을 <span class="arithmatex">\(x_3 = 0\)</span> 으로 택하여 얻을 수 있다)</p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음 동차선형계의 모든 해를 구하자.</p>
+<div class="arithmatex">\[10x_1 - 3x_2 - 2x_3 = 0 \tag{1} \]</div>
+<p>기본변수 <span class="arithmatex">\(x_1\)</span> 를 자유변수의 항으로 생각하면 일반해는 <span class="arithmatex">\(x_1 = .3x_2 + .2x_3\)</span> 이다. <span class="arithmatex">\(x_2\)</span> 와 <span class="arithmatex">\(x_3\)</span> 은 자유변수이다. 이 일반해를 벡터로 표현하면 다음과 같다.</p>
+<div class="arithmatex">\[ x = \begin{pmatrix}x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} .3x_2 + .2x_3 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix} .3x_2 \\ x_2 \\ 0\end{pmatrix} + \begin{pmatrix} .2x_3 \\ 0\\ x_3 \end{pmatrix} = x_2\begin{pmatrix} .3 \\ 1 \\ 0\end{pmatrix} + x_3\begin{pmatrix} .2 \\ 0\\ 1 \end{pmatrix} \tag{2} \]</div>
+<div class="arithmatex">\[ u = \begin{pmatrix} .3 \\ 1 \\ 0\end{pmatrix} v = \begin{pmatrix} .2 \\ 0\\ 1 \end{pmatrix} \]</div>
+<p>즉 해집합은 <span class="arithmatex">\(Span\{u, v\}\)</span> 이다.</p>
+</li>
+</ul>
+<h4 id="_15">매개변수 벡터 형식<a class="headerlink" href="#_15" title="Permanent link">¶</a></h4>
+<p>동차선형계 예시 2 에서 방정식을 풀어서 <span class="arithmatex">\(x = su + tv (s, t \in \mathbb{R})\)</span> 형식으로 나타낸 것을 매개변수 벡터방정식(parametric vector equation) 이라 한다. </p>
+<p>동차선형계 예시 1 에서 방정식 <span class="arithmatex">\(x = x_3v\)</span> 또는 <span class="arithmatex">\(x = tv (t\in\mathbb{R})\)</span> 는 직선의 매개변수 벡터방정식이다. </p>
+<p>이렇게 해집합이 벡터들로 명시적으로 표현되었다면 그 해가 매개변수 벡터 형식으로 주어졌다고 한다. </p>
+<h4 id="_16">비동차계의 해집합<a class="headerlink" href="#_16" title="Permanent link">¶</a></h4>
+<a href="#93e98a4d2"><div class="admonition tldr" id="93e98a4d2">
+<p>비동차계의 해집합 : 비동차계<span class="arithmatex">\((Ax = b)\)</span>의 일반해는 어떤 동차계에 임의의 일차결합을 더한 배개변수 벡터 형식으로 쓸 수 있다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(Ax = b\)</span> 가 다음과 같이 주어졌을 때 해집합을 구하자.</p>
+<div class="arithmatex">\[ A = \begin{pmatrix} 3 &amp; 5 &amp; -4 \\ -3 &amp;-2 &amp; 4 \\ 6 &amp; 1 &amp; -8 \\ \end{pmatrix} \]</div>
+<div class="arithmatex">\[ b = \begin{pmatrix} 7  \\ -1  \\ -4  \\ \end{pmatrix} \]</div>
+<p><span class="arithmatex">\(\begin{pmatrix} A &amp; b\end{pmatrix}\)</span> 에 행연산을 수행하여 다음을 얻자.</p>
+<div class="arithmatex">\[ \begin{pmatrix} 3 &amp; 5 &amp; -4 &amp; 7 \\ -3 &amp;-2 &amp; 4 &amp; -1\\ 6 &amp; 1 &amp; -8 &amp; -4\\ \end{pmatrix} \sim \begin{pmatrix} 1 &amp; 0 &amp; -\frac{4}{3} &amp; -1 \\ 0 &amp; 1 &amp; 0 &amp; 2\\ 0 &amp; 0 &amp; 0 &amp; 0\\ \end{pmatrix} \]</div>
+<div class="arithmatex">\[x_1 - \frac{4}{3}x_3 = -1 \]</div>
+<div class="arithmatex">\[x_2 = 2 \]</div>
+<div class="arithmatex">\[0 = 0 \]</div>
+<p>따라서 <span class="arithmatex">\(x_1\)</span>, <span class="arithmatex">\(x_2\)</span> 는 기본변수, <span class="arithmatex">\(x_3\)</span> 은 자유변수이다. </p>
+<p><span class="arithmatex">\(Ax=b\)</span> 의 일반해를 벡터형식으로 나타내보자. </p>
+<div class="arithmatex">\[ x = \begin{pmatrix}x_1 \\ x_2 \\ x_3 \end{pmatrix} = \begin{pmatrix}-1 + \frac{4}{3}x_3 \\ 2 \\ x_3 \end{pmatrix} = \begin{pmatrix}-1 \\ 2 \\ 0 \end{pmatrix} + x_3\begin{pmatrix}\frac{4}{3}  \\ 0 \\ 1 \end{pmatrix} \]</div>
+<p><span class="arithmatex">\(Ax=b\)</span> 의 해집합은 <span class="arithmatex">\(x = p + x_3v\)</span> 를 <span class="arithmatex">\(t\)</span> 를 매개변수로 하여 다음과 같이 매개변수 벡터 형식으로 나타낼 수 있다. </p>
+<div class="arithmatex">\[x = p + tv (t\in\mathbb{R})\]</div>
+<p>이는 동차선형계 예시 1 에서의 해집합 <span class="arithmatex">\(x = tv\)</span> 에 <span class="arithmatex">\(p\)</span> 를 더하여 얻어진 것이다. 기하학적으로는 <span class="arithmatex">\(x = tv\)</span> 에서 <span class="arithmatex">\(p\)</span> 만큼 평행이동하여 <span class="arithmatex">\(x = p + tv\)</span> 를 얻었다고 할 수 있다.</p>
+</li>
+</ul>
+<a href="#32f76a9e5"><div class="admonition tldr" id="32f76a9e5">
+<p><strong>Theorem 6</strong> 주어진 <span class="arithmatex">\(b\)</span> 에 대하여 방정식 <span class="arithmatex">\(Ax = b\)</span> 가 해를 갖고 그 해를 <span class="arithmatex">\(p\)</span> 라 하면, <span class="arithmatex">\(Ax = b\)</span> 의 해집합은 <span class="arithmatex">\(w = p + v_h\)</span> 형태인 모든 벡터들의 집합이다. <span class="arithmatex">\(v_h\)</span> 는 동차방정식 <span class="arithmatex">\(Ax = 0\)</span> 의 임의의 해이다.</p>
+</div></a>
+<h3 id="_17">일차 독립<a class="headerlink" href="#_17" title="Permanent link">¶</a></h3>
+<a href="#af8ac11df"><div class="admonition tldr" id="af8ac11df">
+<p>일차 독립(linearly independent) : 어떤 벡터방정식이 자명한 해만을 가질 때 그 방정식을 이루는 벡터들의 집합을 일차 독립이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>다음의 벡터방정식을 생각하자.</p>
+<div class="arithmatex">\[x_1v_1 + x_2v_2 + \dots + x_pv_p = 0\]</div>
+<p>이 방정식이 오직 자명한 해(<span class="arithmatex">\(x_1=x_2=\dots=x_p=0\)</span>)만을 가질 때 벡터들의 집합 <span class="arithmatex">\(\{v_1, \dots, v_p\} \in \mathbb{R}^n\)</span> 은 일차 독립이다.</p>
+</li>
+</ul>
+<a href="#f2ca328e0"><div class="admonition tldr" id="f2ca328e0">
+<p>일차 종속(linearly dependent) : 어떤 벡터방정식이 자명하지 않은 해를 가질 때 그 방정식을 이루는 벡터들의 집합을 일차 독립이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>다음의 벡터방정식을 생각하자.</p>
+<div class="arithmatex">\[x_1v_1 + x_2v_2 + \dots + x_pv_p = 0\]</div>
+<p>이 방정식이 적어도 하나는 영이 아닌 상수 <span class="arithmatex">\(c_1, \dots, c_p\)</span> 를 해로 가지면, 즉 다음 식</p>
+<div class="arithmatex">\[c_1v_1 + c_2v_2 + \dots + c_pv_p = 0\]</div>
+<p>을 만족하면 벡터들의 집합 <span class="arithmatex">\(\{v_1, \dots, v_p\} \in \mathbb{R}^n\)</span> 은 일차 종속이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음 벡터들을 생각하자.</p>
+<div class="arithmatex">\[ v_1 = \begin{pmatrix}1 \\ 2 \\ 3\end{pmatrix} v_2 = \begin{pmatrix}4 \\ 5 \\ 6\end{pmatrix} v_3 = \begin{pmatrix}2 \\ 1 \\ 0\end{pmatrix} \]</div>
+<p>집합 <span class="arithmatex">\(\{v_1, v_2, v_3\}\)</span> 이 일차 독립인지 판별하자. </p>
+<p>일차독립과 일차종속의 정의에 따라 다음 벡터방정식이 자명하지 않은 해를 갖는지 판단하면 된다. </p>
+<div class="arithmatex">\[ x_1\begin{pmatrix}1\\2\\3\end{pmatrix} + x_2\begin{pmatrix}4\\5\\6\end{pmatrix} + x_3\begin{pmatrix}2\\1\\0\end{pmatrix} = \begin{pmatrix}0\\0\\0\end{pmatrix} \]</div>
+<p>그러면 이 벡터방정식의 첨가행렬을 행연산하여 기약사다리꼴을 얻자. </p>
+<div class="arithmatex">\[ \begin{pmatrix} 1&amp;4&amp;2&amp;0\\ 2&amp;5&amp;1&amp;0\\ 3&amp;6&amp;0&amp;0\\ \end{pmatrix} \sim \begin{pmatrix} 1&amp;0&amp;-2&amp;0\\ 0&amp;1&amp;1&amp;0\\ 0&amp;0&amp;0&amp;0\\ \end{pmatrix} \]</div>
+<p>기본변수가 <span class="arithmatex">\(x_1, x_2\)</span> 임을 알 수 있고 <span class="arithmatex">\(x_3\)</span> 이 자유변수라는 것을 알 수 있다. 그러므로 영이 아닌 값 <span class="arithmatex">\(x_3\)</span> 마다 자명하지 않은 해 하나가 결정되므로 <span class="arithmatex">\(v_1, v_2, v_3\)</span> 은 일차 종속이다. </p>
+<p>이제 <span class="arithmatex">\(v_1, v_2, v_3\)</span> 사이의 일차 종속 관계를 구해보자. </p>
+<p><span class="arithmatex">\(x_3\)</span> 이 자유변수니까 그냥 <span class="arithmatex">\(x_3 = 5\)</span> 라고 생각하자. 그러면 <span class="arithmatex">\(x_1 = 2x_3\)</span>, <span class="arithmatex">\(x_2 = -x_3\)</span> 이기 때문에 다음과 같은 벡터방정식을 얻는다.</p>
+<div class="arithmatex">\[10v_1 - 5v_2 + 5v_3 = 0\]</div>
+<p>이것은 <span class="arithmatex">\(v_1, v_2, v_3\)</span> 사이의 무수히 많은 일차 종속 관계 중 하나다.</p>
+</li>
+</ul>
+<a href="#e28c0127a"><div class="admonition tldr" id="e28c0127a">
+<p>행렬 <span class="arithmatex">\(A\)</span> 의 열들이 일차 독립이기 위한 필요충분조건 : 방정식 <span class="arithmatex">\(Ax = 0\)</span> 이 자명한 해만을 갖는 것.</p>
+</div></a>
+<ul>
+<li>
+<p>벡터들의 집합 대신 행렬 <span class="arithmatex">\(A = \begin{pmatrix}a_1 \dots a_n\end{pmatrix}\)</span> 로 시작한다고 생각하면 행렬방정식 <span class="arithmatex">\(Ax = 0\)</span> 은 다음과 같이 쓸 수 있다. </p>
+<div class="arithmatex">\[x_1a_1 + x_2a_2 + \dots + x_na_n = 0\]</div>
+<p>그러므로 <span class="arithmatex">\(A\)</span> 의 열들의 일차 종속 관계는 <span class="arithmatex">\(Ax = 0\)</span> 의 자명하지 않은 해에 대응한다. 반대로 <span class="arithmatex">\(A\)</span> 의 열들이 일차 독립 관계이려면 <span class="arithmatex">\(Ax = 0\)</span> 이 자명한 해만을 가져야 한다.</p>
+</li>
+</ul>
+<a href="#400180d11"><div class="admonition tldr" id="400180d11">
+<p>한 개의 벡터로 이루어진 집합이 일차 독립이 되는 조건 : 하나의 벡터 <span class="arithmatex">\(v\)</span> 로 이루어진 집합이 일차 독립인 것은 <span class="arithmatex">\(v\)</span> 가 영벡터가 아닌 것이다.</p>
+</div></a>
+<ul>
+<li>왜냐하면 <span class="arithmatex">\(v \ne 0\)</span> 일 때 벡터방정식 <span class="arithmatex">\(x_1v = 0\)</span> 이 자명한 해만을 갖기 때문이다. <span class="arithmatex">\(v\)</span> 가 영벡터 일 경우 일차 종속이 되는데, <span class="arithmatex">\(x_10 = 0\)</span> 이 무수히 많은 자명하지 않은 해를 갖기 때문이다.</li>
+</ul>
+<a href="#47efcd997"><div class="admonition tldr" id="47efcd997">
+<p>두 개의 벡터로 이루어진 집합이 일차 독립이 되는 조건 : 두 벡터로 이루어진 집합 <span class="arithmatex">\(\{v_1, v_2\}\)</span> 은 하나의 벡터가 다른 벡터의 스칼라배일 때 일차 종속이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p>다음과 같이 서로 스칼라 배인 벡터 집합과 스칼라 배가 아닌 벡터 집합을 생각하자.</p>
+<div class="arithmatex">\[ v_1 = \begin{pmatrix}3 \\ 1\end{pmatrix} , v_2 = \begin{pmatrix}6 \\ 2\end{pmatrix} \tag{a} \]</div>
+<p>(a) 의 경우 <span class="arithmatex">\(v_2\)</span> 가 <span class="arithmatex">\(v_1\)</span> 의 스칼라배, 즉 <span class="arithmatex">\(v_2 = 2v_1\)</span> 이므로 <span class="arithmatex">\(-2v_1 + v_2 = 0\)</span> 이 성립한다. 그러므로 일차 종속의 정의에 따라 집합 <span class="arithmatex">\(\{v_1, v_2\}\)</span> 은 일차 종속이다. </p>
+<div class="arithmatex">\[ v_1 = \begin{pmatrix}3 \\ 2\end{pmatrix} , v_2 = \begin{pmatrix}6 \\ 2\end{pmatrix} \tag{b} \]</div>
+<p>(b) 의 경우 <span class="arithmatex">\(v_1\)</span> 와 <span class="arithmatex">\(v_2\)</span> 가 서로 스칼라배가 아니다. 그런데 (b) 가 일차 종속이 되려면 <span class="arithmatex">\(c\)</span> 와 <span class="arithmatex">\(d\)</span> 가 다음 식을 만족해야 한다.</p>
+<div class="arithmatex">\[cv_1 + dv_2 = 0\]</div>
+<p><span class="arithmatex">\(c \ne 0\)</span> 일 경우 <span class="arithmatex">\(v_1\)</span> 을 <span class="arithmatex">\(v_2\)</span> 로 표현하여 <span class="arithmatex">\(v_1 = (-\frac{d}{c})v_2\)</span> 로 나타낼 수 있다. 그러나 <span class="arithmatex">\(v_1\)</span> 이 <span class="arithmatex">\(v_2\)</span> 의 스칼라배가 아니므로 모순이다. 따라서 <span class="arithmatex">\(c = 0\)</span> 이며, 이에 따라 <span class="arithmatex">\(d = 0\)</span> 이다. 그러므로 (b) 는 일차 독립인 집합이다. </p>
+</li>
+</ul>
+<h4 id="_18">두 개 이상의 벡터로 이루어진 집합의 일차 독립<a class="headerlink" href="#_18" title="Permanent link">¶</a></h4>
+<a href="#72d38d14d"><div class="admonition tldr" id="72d38d14d">
+<p><strong>Theorem 7</strong> 일차 종속인 집합의 특성 두 개 이상의 벡터로 이루어진 집한 <span class="arithmatex">\(S = \{v_1, \dots, v_p\}\)</span> 가 일차 종속일 필요충분조건은 <span class="arithmatex">\(S\)</span> 에 있는 적어도 하나의 벡터가 다른 벡터들의 일차결합이 되는 것이다.</p>
+</div></a>
+<a href="#9d6c2ce84"><div class="admonition tldr" id="9d6c2ce84">
+<p><strong>Theorem 8</strong> 어떤 집합에 포함된 벡터의 수가 각 벡터에 있는 성분의 개수보다 많으면, 그 집합은 반드시 일차 종속이다. 즉, 어떤 집합 <span class="arithmatex">\(\{v_1, \dots, v_p\} \notin \mathbb{R}^n\)</span> 에 대하여 <span class="arithmatex">\(p &gt; n\)</span> 이면 그 집합은 일차 종속이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(A = \begin{pmatrix}v_1 &amp; \dots &amp; v_p \end{pmatrix}\)</span> 라 하면, <span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(n \times p\)</span> 행렬이고 방정식 <span class="arithmatex">\(Ax=0\)</span> 은 <span class="arithmatex">\(p\)</span> 개의 미지수를 갖는 <span class="arithmatex">\(n\)</span> 개의 방정식으로 이루어진 선형방정식이다. <span class="arithmatex">\(p &gt; n\)</span> 이면, 미지수의 개수가 방정식의 개수보다 많으므로 자유변수가 존재하고, 이에 따라 <span class="arithmatex">\(Ax=0\)</span>은 자명하지 않은 해가 존재한다. 그러므로 <span class="arithmatex">\(A\)</span> 의 열들은 일차 종속이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음 3 개의 벡터를 생각하자.</p>
+<div class="arithmatex">\[ \begin{pmatrix} 2 \\ 1 \end{pmatrix}, \begin{pmatrix} 4 \\ -1 \end{pmatrix}, \begin{pmatrix} -2 \\ 2 \end{pmatrix} \]</div>
+<p>위의 3개 벡터는 정리 8 에 의해 일차 종속이다. 각 벡터 성분이 2 개인데 3 개의 벡터가 집합에 포함되기 때문이다. 이때 어떤 벡터도 다른 벡터의 스칼라곱이 아님을 유의하자.</p>
+</li>
+</ul>
+<a href="#dfbbae090"><div class="admonition tldr" id="dfbbae090">
+<p><strong>Theorem 9</strong> <span class="arithmatex">\(\mathbb{R}^n\)</span>에 속하는 집합 <span class="arithmatex">\(S = \{v_1, \dots, v_p\}\)</span> 가 영벡터를 포함하면 <span class="arithmatex">\(S\)</span> 는 일차 종속이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>벡터의 한 요소 <span class="arithmatex">\(v_1\)</span> 을  <span class="arithmatex">\(v_1 = 0\)</span> 이라 가정하면, <span class="arithmatex">\(cv_1 + 0v2 + \dots + 0v_p = 0 (c\ne0)\)</span> 이 성립한다. 즉 일차 종속이다. </p>
+</li>
+</ul>
+<h3 id="linear-transformation">선형변환(linear transformation) 입문<a class="headerlink" href="#linear-transformation" title="Permanent link">¶</a></h3>
+<a href="#9e456ce0a"><div class="admonition tldr" id="9e456ce0a">
+<p>선형변환 <span class="arithmatex">\(T\)</span> : <span class="arithmatex">\(\mathbb{R}^n\)</span> 에서 <span class="arithmatex">\(\mathbb{R}^m\)</span> 으로의 변환 <span class="arithmatex">\(T\)</span> 는 <span class="arithmatex">\(\mathbb{R}^n\)</span> 에 속하는 모든 벡터에 <span class="arithmatex">\(\mathbb{R}^m\)</span> 에 속하는 벡터 <span class="arithmatex">\(T(x)\)</span> 를 각각 부여하는 규칙이다.</p>
+</div></a>
+<a href="#a7b833d98"><div class="admonition tldr" id="a7b833d98">
+<p>정의역(domain) : 선형변환 <span class="arithmatex">\(T\)</span> 의 정의에서 집합 <span class="arithmatex">\(\mathbb{R}^n\)</span> 을 <span class="arithmatex">\(T\)</span> 의 정의역이라 한다.</p>
+</div></a>
+<a href="#ec7a6faf5"><div class="admonition tldr" id="ec7a6faf5">
+<p>공역(codomain) : 선형변환 <span class="arithmatex">\(T\)</span> 의 정의에서 집합 <span class="arithmatex">\(\mathbb{R}^m\)</span> 을 <span class="arithmatex">\(T\)</span> 의 공역이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>선형변환 <span class="arithmatex">\(T\)</span> 의 정의역과 공역을 </p>
+<div class="arithmatex">\[T: \mathbb{R}^n \to \mathbb{R}^m\]</div>
+<p>로 표현하면 <span class="arithmatex">\(T\)</span> 의 정의역이 <span class="arithmatex">\(\mathbb{R}^n\)</span> 이고 공역이 <span class="arithmatex">\(\mathbb{R}^m\)</span> 임을 나타낸다.</p>
+</li>
+</ul>
+<a href="#1c312819d"><div class="admonition tldr" id="1c312819d">
+<p>상(image) : 선형변환 <span class="arithmatex">\(T\)</span> 의 정의에서 <span class="arithmatex">\(\mathbb{R}^n\)</span> 에 속하는 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(\mathbb{R}^m\)</span> 의 벡터 <span class="arithmatex">\(T(x)\)</span> 를 <span class="arithmatex">\(x\)</span> 의 상(image) 이라 한다.</p>
+</div></a>
+<ul>
+<li>함수값이라고도 한다.</li>
+</ul>
+<a href="#64063c66d"><div class="admonition tldr" id="64063c66d">
+<p>치역(range) : 선형변환 <span class="arithmatex">\(T\)</span> 의 정의에서 모든 상 <span class="arithmatex">\(T(x)\)</span> 들의 집합을 <span class="arithmatex">\(T\)</span> 의 치역(range) 라 한다.</p>
+</div></a>
+<ul>
+<li>그러므로 치역은 공역의 부분집합이 된다.</li>
+</ul>
+<h4 id="_19">행렬변환<a class="headerlink" href="#_19" title="Permanent link">¶</a></h4>
+<a href="#3d3a7fa9e"><div class="admonition tldr" id="3d3a7fa9e">
+<p>행렬변환 : <span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(m \times n\)</span> 일 때, <span class="arithmatex">\(\mathbb{R}^n\)</span> 에 속하는 각 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(T(x)\)</span> 는 <span class="arithmatex">\(Ax\)</span> 로 계산된다.</p>
+</div></a>
+<ul>
+<li>
+<p>행렬변환을 간단하게 <span class="arithmatex">\(x \mapsto Ax\)</span> 로 나타낸다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음과 같이 주어진 행렬을 생각하자. </p>
+<div class="arithmatex">\[ A = \begin{pmatrix} 1 &amp; -3 \\ 3 &amp; 5 \\ -1 &amp; 7 \\ \end{pmatrix}, u = \begin{pmatrix} 2 \\ -1 \\ \end{pmatrix}, b = \begin{pmatrix} 3 \\ 2 \\ -5 \\ \end{pmatrix} \]</div>
+<p>그리고 변환 <span class="arithmatex">\(T: \mathbb{R}^2 \to \mathbb{R}^3\)</span> 을 다음과 같이 <span class="arithmatex">\(T(x) = Ax\)</span> 로 정의하자. </p>
+<div class="arithmatex">\[ T(x) = Ax = \begin{pmatrix} 1 &amp; -3 \\ 3 &amp; 5 \\ -1 &amp; 7 \\ \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ \end{pmatrix} = \begin{pmatrix} x_1 - 3x_2 \\ 3x_1 + 5x_2 \\ -x_1 + 7x_2 \\ \end{pmatrix} \]</div>
+<p>변환 <span class="arithmatex">\(T\)</span> 에 의한 <span class="arithmatex">\(u\)</span> 의 상 <span class="arithmatex">\(T(u)\)</span> 를 구하자.</p>
+<div class="arithmatex">\[ T(u) = Au = \begin{pmatrix} 1 &amp; -3 \\ 3 &amp; 5 \\ -1 &amp; 7 \\ \end{pmatrix} \begin{pmatrix} 2 \\ -1 \\ \end{pmatrix} = \begin{pmatrix} 5 \\ 1 \\ -9 \\ \end{pmatrix} \]</div>
+<p>이제 <span class="arithmatex">\(T\)</span> 에 의한 상이 <span class="arithmatex">\(b\)</span> 가 되는 <span class="arithmatex">\(\mathbb{R}^2\)</span> 의 벡터 <span class="arithmatex">\(x\)</span> 를 구해보자. </p>
+<p><span class="arithmatex">\(T(x) = b\)</span> 의 해 <span class="arithmatex">\(x\)</span> 를 구한다. 즉, 아래와 같은 <span class="arithmatex">\(Ax = b\)</span> 를 풀자. </p>
+<div class="arithmatex">\[ \begin{pmatrix} 1 &amp; -3 \\ 3 &amp; 5 \\ -1 &amp; 7 \\ \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ \end{pmatrix} = \begin{pmatrix} 3 \\ 2 \\ -5 \\ \end{pmatrix} \]</div>
+<p>위 행렬방정식의 첨가행렬을 다음과 같이 행 축약하자. </p>
+<div class="arithmatex">\[ \begin{pmatrix} 1 &amp; -3 &amp; 3 \\ 3 &amp; 5 &amp; 2 \\ -1 &amp; 7 &amp; -5 \\ \end{pmatrix} \sim \begin{pmatrix} 1 &amp; 0 &amp; 1.5 \\ 0 &amp; 1 &amp; -.5 \\ 0 &amp; 0 &amp; 0 \\ \end{pmatrix} \]</div>
+<p>따라서 <span class="arithmatex">\(x_1 = 1.5, x_2 = -.5\)</span> 이고, <span class="arithmatex">\(x = \begin{pmatrix}1.5\\-.5\end{pmatrix}\)</span> 이다. (<span class="arithmatex">\(T\)</span> 에 의한 이 <span class="arithmatex">\(x\)</span> 의 상은 주어진 벡터 <span class="arithmatex">\(b\)</span> 이다)</p>
+</li>
+</ul>
+<h4 id="_20">선형변환<a class="headerlink" href="#_20" title="Permanent link">¶</a></h4>
+<a href="#4a470a9d7"><div class="admonition tldr" id="4a470a9d7">
+<p>선형(linear) : 변환 <span class="arithmatex">\(T\)</span> 가 다음을 만족하면 선형(linear) 라 한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(T\)</span> 의 정의역에 속하는 모든 <span class="arithmatex">\(u, v\)</span> 에 대하여 <span class="arithmatex">\(T(u + v) = T(u) + T(v)\)</span></p>
+</li>
+<li>
+<p>모든 스칼라 <span class="arithmatex">\(c\)</span> 와 <span class="arithmatex">\(T\)</span> 의 정의역에 속하는 모든 <span class="arithmatex">\(u\)</span> 에 대하여 <span class="arithmatex">\(T(cu) = cT(u)\)</span></p>
+</li>
+</ol>
+</div></a>
+<a href="#e3da257b3"><div class="admonition tldr" id="e3da257b3">
+<p>선형변환의 성질</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(T(0) = 0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(T\)</span> 의 정의역에 속하는 모든 벡터 <span class="arithmatex">\(u, v\)</span> 와 모든 스칼라 <span class="arithmatex">\(c, d\)</span> 에 대하여 다음이 성립한다. </p>
+<div class="arithmatex">\[T(cu + dv) = cT(u) + dT(v)\]</div>
+</li>
+<li>
+<p>중첩원리 </p>
+<div class="arithmatex">\[T(c_1v_1 + \dots + c_pv_p) = c_1T(v_1) + \dots + c_pT(v_p)\]</div>
+</li>
+</ol>
+</div></a>
+<h3 id="_21">선형변환 행렬<a class="headerlink" href="#_21" title="Permanent link">¶</a></h3>
+<a href="#580f33f27"><div class="admonition tldr" id="580f33f27">
+<p>선형변환 <span class="arithmatex">\(T\)</span> 가 결정되는 조건 : 선형변환 <span class="arithmatex">\(T\)</span> 는 <span class="arithmatex">\(n \times n\)</span> 항등행렬 <span class="arithmatex">\(I_n\)</span> 의 열들에 어떤 작용을 하는가에 의해 완전히 결정된다.</p>
+</div></a>
+<ul>
+<li>
+<p>다음 예시를 보면 <span class="arithmatex">\(T(e_1), T(e_2), \dots, T(e_n)\)</span> 에 의해 선형변환 <span class="arithmatex">\(T\)</span> 가 완전히 결정됨을 알 수 있다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(I_2=\begin{pmatrix}1 &amp; 0 \\ 0 &amp; 1\end{pmatrix}\)</span> 의 열은 <span class="arithmatex">\(e_1 = \begin{pmatrix}1 \\ 0\end{pmatrix}\)</span>,<span class="arithmatex">\(e_2=\begin{pmatrix}0\\1\end{pmatrix}\)</span> 이다. <span class="arithmatex">\(T\)</span> 는 <span class="arithmatex">\(\mathbb{R} ^2\)</span> 에서 <span class="arithmatex">\(\mathbb{R} ^3\)</span> 으로의 선형변환으로 다음을 만족한다. </p>
+<div class="arithmatex">\[ T(e_1)= \begin{pmatrix} 5\\-7\\2 \end{pmatrix} \]</div>
+<div class="arithmatex">\[ T(e_2)= \begin{pmatrix} -3\\8\\0 \end{pmatrix} \]</div>
+<p>이때 <span class="arithmatex">\(\mathbb{R} ^2\)</span> 에 속하는 임의의 벡터 <span class="arithmatex">\(x\)</span> 의 상을 얻는 식을 구해보자. <span class="arithmatex">\(x\)</span> 는 다음과 같이 쓸 수 있다.</p>
+<div class="arithmatex">\[ x = \begin{pmatrix} x_1\\x_2 \end{pmatrix} = x_1 \begin{pmatrix} 1\\0 \end{pmatrix} + x_2\begin{pmatrix} 0\\1 \end{pmatrix} = x_1e_1 + x_2e_2 \]</div>
+<p><span class="arithmatex">\(T\)</span> 는 선형변환이므로 다음을 얻는다. </p>
+<div class="arithmatex">\[T(x) = T(x_1e_1 + x_2e_2) = x_1T(e_1) + x_2T(e_2)\]</div>
+<div class="arithmatex">\[ = x_1 \begin{pmatrix} 5\\-7\\2 \end{pmatrix} +x_2 \begin{pmatrix} -3\\8\\0 \end{pmatrix} = \begin{pmatrix} 5x_1 - 3x_2\\ -7x_1 + 8x_2\\ 2x_1 + 0\\ \end{pmatrix} \]</div>
+</li>
+</ul>
+<a href="#fab12bd13"><div class="admonition tldr" id="fab12bd13">
+<p><strong>Theorem 10</strong> <span class="arithmatex">\(T: \mathbb{R} ^n \to \mathbb{R} ^m\)</span> 을 선형변환이라 하면 다음을 만족하는 유일한 행렬 <span class="arithmatex">\(A\)</span> 가 존재한다.</p>
+<div class="arithmatex">\[ T(x) = Ax, (x \in \mathbb{R} ^n ) \]</div>
+<p><span class="arithmatex">\(e_j \in \mathbb{R} ^n\)</span> 이 항등행렬의 <span class="arithmatex">\(j\)</span> 번째 열이라 하면 <span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(j\)</span>번째 열이 벡터 <span class="arithmatex">\(T(e_j)\)</span> 인 <span class="arithmatex">\(m \times n\)</span> 행렬이며 다음과 같이 쓸 수 있다. </p>
+<div class="arithmatex">\[ A = \begin{pmatrix} T(e_1) &amp; \dots &amp; T(e_n) \end{pmatrix} \]</div>
+</div></a>
+<a href="#de8480a07"><div class="admonition tldr" id="de8480a07">
+<p>선형변환 <span class="arithmatex">\(T\)</span> 에 대한 표준행렬(standard matrix for the linear transformation T) : 위와 같은 정리 10 에서의 행렬 A 를 선형변환 <span class="arithmatex">\(T\)</span> 에서의 표준행렬이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예제 </p>
+<p>팽창변환 <span class="arithmatex">\(T(x) = 3x, x \in \mathbb{R} ^2\)</span> 에 대한 표준행렬을 구하자.</p>
+<p>정의에 따라 벡터 <span class="arithmatex">\(T(e_1), T(e_2)\)</span> 을 열로 갖는 행렬 <span class="arithmatex">\(A\)</span> 를 구하면 된다. </p>
+<div class="arithmatex">\[ T(e_1) = 3e_1 = \begin{pmatrix} 3 \\ 0 \end{pmatrix}, T(e_2) = 3e_2 = \begin{pmatrix} 0 \\ 3 \end{pmatrix} \]</div>
+<div class="arithmatex">\[ A = \begin{pmatrix} 3 &amp; 0\\ 0 &amp; 3\\ \end{pmatrix} \]</div>
+</li>
+</ul>
+<h4 id="_22">존재성과 유일성 문제<a class="headerlink" href="#_22" title="Permanent link">¶</a></h4>
+<a href="#481a38a28"><div class="admonition tldr" id="481a38a28">
+<p>전사 변환(onto) : <span class="arithmatex">\(\mathbb{R} ^m\)</span> 에 속하는 각각의 <span class="arithmatex">\(b\)</span> 가 <span class="arithmatex">\(\mathbb{R} ^n\)</span> 에 속하는 적어도 한 <span class="arithmatex">\(x\)</span> 의 상이면, 변환 <span class="arithmatex">\(T: \mathbb{R} ^n \to \mathbb{R} ^m\)</span> 을 <span class="arithmatex">\(\mathbb{R} ^m\)</span> 으로의 전사(onto) 변환이라 한다.</p>
+</div></a>
+<ul>
+<li>즉 치역이 공역 <span class="arithmatex">\(\mathbb{R} ^m\)</span> 전체가 되면 <span class="arithmatex">\(T\)</span> 는 <span class="arithmatex">\(\mathbb{R} ^m\)</span> 으로의 전사변환이다.</li>
+</ul>
+<a href="#514e9f31e"><div class="admonition tldr" id="514e9f31e">
+<p>일대일 변환(one-to-one) : <span class="arithmatex">\(\mathbb{R} ^m\)</span> 에 속하는 각각의 <span class="arithmatex">\(b\)</span> 가 많아야 한 <span class="arithmatex">\(x \in \mathbb{R} ^n\)</span> 의 상이면, 변환 <span class="arithmatex">\(T: \mathbb{R} ^n \to \mathbb{R} ^m\)</span> 을 <span class="arithmatex">\(\mathbb{R} ^m\)</span> 으로의 일대일 변환(one-to-one) 이라 한다.</p>
+</div></a>
+<ul>
+<li>즉 <span class="arithmatex">\(\mathbb{R} ^m\)</span> 에 속하는 임의의 <span class="arithmatex">\(b\)</span> 에 대하여 <span class="arithmatex">\(T(x) = b\)</span> 를 만족하는 유일한 해가 존재하거나 하나도 없다면 <span class="arithmatex">\(T\)</span> 는 <span class="arithmatex">\(\mathbb{R} ^m\)</span> 으로의 일대일 변환이다.</li>
+</ul>
+<a href="#008ecd7b2"><div class="admonition tldr" id="008ecd7b2">
+<p><strong>Theorem 11</strong> : <span class="arithmatex">\(T: \mathbb{R} ^n \to  \mathbb{R} ^m\)</span> 이 선형변환 일 때, <span class="arithmatex">\(T\)</span> 가 일대일이 될 필요충분조건은 방정식 <span class="arithmatex">\(T(x) = 0\)</span> 이 자명한 해만을 갖는 것이다.</p>
+</div></a>
+<a href="#46b719f74"><div class="admonition tldr" id="46b719f74">
+<p><strong>Theorem 12</strong> : <span class="arithmatex">\(T: \mathbb{R} ^n \to  \mathbb{R} ^m\)</span> 이 선형변환 이고, <span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(T\)</span> 에 대한 표준행렬이면 다음이 성립한다.</p>
+</div></a>
+<ol>
+<li>
+<p><span class="arithmatex">\(T\)</span> 가 <span class="arithmatex">\(\mathbb{R} ^n\)</span> 에서 <span class="arithmatex">\(\mathbb{R} ^m\)</span> 으로의 전사변환이기 위한 필요충분조건은 <span class="arithmatex">\(A\)</span> 의 열들이 <span class="arithmatex">\(\mathbb{R} ^m\)</span> 을 생성한다는 것이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(T\)</span> 가 일대일 대응이기 위한 필요충분조건은 <span class="arithmatex">\(A\)</span> 의 열들이 일차 독립인 것이다. </p>
+</li>
+</ol>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 다변수함수의 미분의 일반적 정의" class="md-footer__link md-footer__link--prev" href="../../Calculus/cal7/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              다변수함수의 미분의 일반적 정의
+            </div>
+</div>
+</a>
+<a aria-label="다음: 행렬대수" class="md-footer__link md-footer__link--next" href="../la2/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              행렬대수
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

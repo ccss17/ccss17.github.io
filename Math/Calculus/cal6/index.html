@@ -1,0 +1,2367 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Calculus/cal6/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>미적분 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              미적분
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          미적분
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        미적분
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    이변수 함수의 극한
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    상미분과 편미분
+  </a>
+<nav aria-label="상미분과 편미분" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    여러가지 편도함수
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    다변수 합성 함수의 미분
+  </a>
+<nav aria-label="다변수 합성 함수의 미분" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    선형근사
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#differential">
+    미분(differential)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    미분 추정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    이변수함수의 미분가능성
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    기울기 벡터와 방향도함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    삼각함수로 정의한 방향도함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    선형화
+  </a>
+<nav aria-label="선형화" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    미분
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    이변수 함수 선형화
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    이변수 함수의 극한
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    상미분과 편미분
+  </a>
+<nav aria-label="상미분과 편미분" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    여러가지 편도함수
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    다변수 합성 함수의 미분
+  </a>
+<nav aria-label="다변수 합성 함수의 미분" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    선형근사
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#differential">
+    미분(differential)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    미분 추정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    이변수함수의 미분가능성
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    기울기 벡터와 방향도함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    삼각함수로 정의한 방향도함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    선형화
+  </a>
+<nav aria-label="선형화" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    미분
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    이변수 함수 선형화
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>미적분</h1>
+<h2 id="_1">이변수 함수의 극한<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#8ab20305b"><div class="admonition tldr" id="8ab20305b">
+<p>이변수함수 : 두 개의 변수에 의존하는 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>수직선 <span class="arithmatex">\(\mathbb{R}\)</span> 의 두 점 <span class="arithmatex">\(x,y\)</span> 에 대하여 이들 사이의 거리를 재는 함수 </p>
+<div class="arithmatex">\[ d(x, y) := |x - y| \]</div>
+<p>는 정의역이 실수쌍 <span class="arithmatex">\((x, y)\)</span> 전체로 이루어진 집합, 즉 좌표평면 <span class="arithmatex">\(\mathbb{R} ^{2}\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#218498a1e"><div class="admonition tldr" id="218498a1e">
+<p>다변수함수 또는 <span class="arithmatex">\(n\)</span>변수 함수 : <span class="arithmatex">\(n\)</span>-공간의 부분집합 <span class="arithmatex">\(U\)</span> 에서 <span class="arithmatex">\(U\)</span> 의 각 점 <span class="arithmatex">\(X = (x_1, x _{2}, \dots, x _{n})\)</span> 을 실수 <span class="arithmatex">\(f(x) = f(x_1, x _{2}, \dots, x _{n})\)</span> 에 대응시키는 함수</p>
+<div class="arithmatex">\[ f : U \to \mathbb{R} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(n\)</span>-공간의 부분집합 <span class="arithmatex">\(U\)</span> 에서 정의된 다변수함수 <span class="arithmatex">\(f\)</span> 를 이해하는 방법 중 하나는 그래프를 그려보는 것인데, <span class="arithmatex">\(f\)</span> 의 그래프는 </p>
+<div class="arithmatex">\[ \{(x_1, x_2, \dots, x_n, z) \in R ^{n+1} | (x_1, x_2, \dots, x_n) \in U, z = f(x_1, x_2, \dots, x_n)\} \]</div>
+<p>이다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>이변수함수 <span class="arithmatex">\(f(x, y) = x^2+ y ^{2}\)</span> 의 그래프는 방정식 <span class="arithmatex">\(z = x^2+ y ^{2}\)</span> 으로 표현되는 다음과 같은 회전포물변이다.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/86470649-cc52f200-bd76-11ea-9347-5421db411de9.png"/></p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#76170d85f"><div class="admonition tldr" id="76170d85f">
+<p>이변수 함수의 극한 : 함수 <span class="arithmatex">\(f(x, y)\)</span> 에서 <span class="arithmatex">\((x, y)\)</span> 이 <span class="arithmatex">\((x_0, y_0)\)</span> 에 한없이 다가갈 때 함수값이 극한값 <span class="arithmatex">\(L\)</span> 로 다가가는 것은 </p>
+<p>임의의 양수 <span class="arithmatex">\(\epsilon &gt; 0\)</span> 에 대하여 적당한 양수 <span class="arithmatex">\(\delta &gt; 0\)</span> 가 존재하여 정의역의 모든 <span class="arithmatex">\((x, y)\)</span> 에 대하여 다음을 만족하는 것이다. </p>
+<div class="arithmatex">\[  0 &lt; \sqrt[]{(x-x_0) ^{2} + (y - y_0) ^{2}} &lt; \delta \implies  |f(x, y) - L| &lt; \epsilon \]</div>
+</div></a>
+<ul>
+<li>
+<p>기호로 다음과 같이 표현한다. </p>
+<div class="arithmatex">\[ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L \]</div>
+</li>
+</ul>
+<a href="#ea338a47a"><div class="admonition tldr" id="ea338a47a">
+<p>일변수 함수의 일차함수의 기울기 : 일변수 함수의 일차함수 <span class="arithmatex">\(y = ax + b\)</span> 의 기울기는</p>
+<div class="arithmatex">\[ \dfrac{\Delta y}{\Delta x} = \dfrac{(a(x+\Delta x)+b) - (ax + b)}{\Delta x} = a \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#92ffd9918"><div class="admonition tldr" id="92ffd9918">
+<p>이변수함수의 일차함수의 기울기 : 이변수 함수의 일차함수 </p>
+<div class="arithmatex">\[ z = z(x, y) = ax + by + c \]</div>
+<p>의 기울기는 <span class="arithmatex">\(x\)</span> 축 방향 기울기와 <span class="arithmatex">\(y\)</span> 축 방향 기울기로 이루어진 벡터</p>
+<div class="arithmatex">\[ (a, b) = ai + bj \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>설명 </p>
+<div class="arithmatex">\[ \int_{-\infty }^{\infty }f(x)
+\]</div>
+<p>이변수 함수의 일차함수 </p>
+<div class="arithmatex">\[ z = z(x, y) = ax + by + c \]</div>
+<p>에 대하여 <span class="arithmatex">\(xy\)</span>-평면에서 <span class="arithmatex">\(x\)</span> 축과 나란한 직선 위에서의 기울기는 </p>
+<div class="arithmatex">\[ \dfrac{z(x+\Delta x, y) - z(x, y)}{\Delta x} = \dfrac{(a(x+\Delta x)+by+c) - (ax + by + c)}{\Delta x} = a \]</div>
+<p>이고 <span class="arithmatex">\(y\)</span> 축과 나란한 직선 위에서의 기울기는</p>
+<div class="arithmatex">\[ \dfrac{z(x, y + \Delta y) - z(x, y)}{\Delta y} = b \]</div>
+<p>이다. 그러므로 이것을 일반화하여 임의의 방향에 대한 기울기를 벡터</p>
+<div class="arithmatex">\[ (a, b) = ai+bj \]</div>
+<p>로 표현한다.</p>
+</li>
+</ul>
+<a href="#a34a819dd"><div class="admonition tldr" id="a34a819dd">
+<p>이변수 일차함수의 기울기 벡터 : 이변수 함수의 일차함수 <span class="arithmatex">\(z = z(x, y) = ax + by + c\)</span> 의 기울기를 나타내는 벡터</p>
+<div class="arithmatex">\[ (a, b) = ai+bj \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(z = 1 - x - y\)</span> 의 <span class="arithmatex">\(x\)</span> 축 방향, <span class="arithmatex">\(y\)</span> 축 방향의 기울기는 모두 <span class="arithmatex">\(-1\)</span> 이므로 기울기 벡터는</p>
+<div class="arithmatex">\[ (-1, -1) \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#fd0b13f59"><div class="admonition tldr" id="fd0b13f59">
+<p><span class="arithmatex">\(n\)</span>변수 일차함수의 기울기 : 벡터 <span class="arithmatex">\(a = (a_1, \dots, a_n), x = (x_1, \dots, x_n)\)</span> 와 단위벡터 <span class="arithmatex">\(v = (v_1, \dots, v_n)\)</span> 와 실수 <span class="arithmatex">\(c\)</span> 에 대한  <span class="arithmatex">\(n\)</span>변수 함수</p>
+<div class="arithmatex">\[ z = z(x) = a \cdot x = a_1x_1 + \dots + a_nx_n + c = a \cdot x + c \]</div>
+<p>의 <span class="arithmatex">\(v-\)</span>방향 기울기는</p>
+<div class="arithmatex">\[ a \cdot v = a_1v_1 + \dots + a_n v_n \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>설명 </p>
+<p>벡터 <span class="arithmatex">\(a = (a_1, \dots, a_n), x = (x_1, \dots, x_n), e_1 = (1, \dots, 0)\)</span> 와 실수 <span class="arithmatex">\(c\)</span> 에 대한  <span class="arithmatex">\(n\)</span>변수 함수</p>
+<div class="arithmatex">\[ z = z(x) = a_1x_1 + \dots + a_nx_n + c = a \cdot x + c \]</div>
+<p>의 첫번째 축 방향의 기울기는 </p>
+<div class="arithmatex">\[ \dfrac{z(x + te_1) - z(x)}{t} = \dfrac{(a \cdot (x + te_1) + c) - (a \cdot x+c)}{t} = a \cdot e_1 = a_1 \]</div>
+<p>이다.</p>
+<p>이 기울기는 함수의 그래프를 <span class="arithmatex">\(x_1z\)</span>-평면에서 살펴본 직선의 기울기이다. 마찬가지로 <span class="arithmatex">\(x_nz\)</span>-평면에서 살펴본 직선의 기울기, 즉 마지막 축 방향의 기울기는 <span class="arithmatex">\(a_n\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#fce4e13b8"><div class="admonition tldr" id="fce4e13b8">
+<p>이변수 함수의 극한의 성질 : 실수 <span class="arithmatex">\(L, M, k\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \lim_{(x, y) \to (x_0, y_0)} f(x, y) = L\\ \lim_{(x, y) \to (x_0, y_0)} g(x, y) = M \]</div>
+<p>일 때 다음이 성립한다.</p>
+</div></a>
+<ul>
+<li>
+<p>합의 법칙 </p>
+<div class="arithmatex">\[ \lim_{(x, y) \to (x_0, y_0)} (f(x, y)+g(x, y)) = L + M \]</div>
+</li>
+<li>
+<p>차의 법칙 </p>
+<div class="arithmatex">\[\lim_{(x, y) \to (x_0, y_0)} (f(x, y)-g(x, y)) = L - M\]</div>
+</li>
+<li>
+<p>실수배 법칙 </p>
+<div class="arithmatex">\[\lim_{(x, y) \to (x_0, y_0)} kf(x, y) = kL\]</div>
+</li>
+<li>
+<p>곱의 법칙 </p>
+<div class="arithmatex">\[\lim_{(x, y) \to (x_0, y_0)} (f(x, y)\cdot g(x, y)) = L \cdot M\]</div>
+</li>
+<li>
+<p>몫의 법칙 </p>
+<div class="arithmatex">\[\lim_{(x, y) \to (x_0, y_0)} \frac{f(x, y)}{g(x, y)} = \frac{L}{M}, M \neq 0\]</div>
+</li>
+<li>
+<p>제곱 법칙 </p>
+<div class="arithmatex">\[n \in \mathbb{Z}, n &gt; 0, \lim_{(x, y) \to (x_0, y_0)} [f(x, y)] ^{n} = L ^{n}\]</div>
+</li>
+<li>
+<p>제곱근 법칙 </p>
+<div class="arithmatex">\[n \in \mathbb{Z}, n &gt; 0, \lim_{(x, y) \to (x_0, y_0)} \sqrt[n]{f(x, y)} = L ^{\frac{1}{n}}\]</div>
+</li>
+<li>
+<p>증명 </p>
+<p>(생략)</p>
+</li>
+</ul>
+<a href="#237c750af"><div class="admonition tldr" id="237c750af">
+<p>이변수 함수의 연속 : 이변수 함수 <span class="arithmatex">\(f(x, y)\)</span> 가 점 <span class="arithmatex">\((x_0, y_0)\)</span> 에서 연속이라는 것은 다음 조건과 동치이다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(f\)</span> 가 <span class="arithmatex">\((x_0, y_0)\)</span> 에서 정의되어 있다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle \lim_{(x, y) \to (x_0, y_0)} f(x, y)\)</span> 극한값이 존재한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle \lim_{(x, y) \to (x_0, y_0)} f(x, y) = f(x_0, y_0)\)</span></p>
+</li>
+</ol>
+</div></a>
+<a href="#6892a55c6"><div class="admonition tldr" id="6892a55c6">
+<p>이변수 합성함수의 연속 : 이변수 함수 <span class="arithmatex">\(f\)</span> 가 <span class="arithmatex">\((x_0, y_0)\)</span> 에서 연속이고 일변수 함수 <span class="arithmatex">\(g\)</span> 가 <span class="arithmatex">\(x\)</span> 축 상의 점 <span class="arithmatex">\(f(x_0, y_0)\)</span> 에서 연속일 때,</p>
+<p><span class="arithmatex">\(h(x, y) = g(f(x, y))\)</span> 로 정의된 이변수 합성함수 <span class="arithmatex">\(h = g \circ f\)</span> 는 연속이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>합성함수 <span class="arithmatex">\(e ^{x-y}, \cos \frac{xy}{x^2+1}, \ln (1+x ^{2}y ^{2})\)</span> 는 개구간 <span class="arithmatex">\((-\infty , \infty)\)</span> 에서 연속이다.</p>
+</li>
+</ul>
+<a href="#3d2b5134b"><div class="admonition tldr" id="3d2b5134b">
+<p>다변수 함수의 극한과 연속 : 이변수 함수의 극한과 연속의 정의와 비슷하다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(P\)</span> 가 <span class="arithmatex">\((x, y, z)\)</span> 를 뜻할 때</p>
+<div class="arithmatex">\[ \lim_{P \to (1,0,-1)} \frac{e ^{x+z}}{z ^{2}+\cos \sqrt[]{xy}} = \frac{e ^{1-1}}{(-1)^{2}+\cos 0} = \frac{1}{2} \]</div>
+<p>이다. </p>
+</li>
+</ul>
+<h2 id="_2">상미분과 편미분<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>실제로 많은 함수들이 하나의 독립 변수에 의존하는 것이 아니라 두 개 이상의 독립 변수에 종속되기 때문에 많은 경우 일변수 함수에 대한 미분을 다변수 함수로 확장한 미분이 필요하다.</p>
+<a href="#2a05ae200"><div class="admonition tldr" id="2a05ae200">
+<p>상미분(ordinary derivative) : 변수가 하나만 있는 함수에 대한 미분이다.</p>
+</div></a>
+<ul>
+<li>지금까지 해오던 미분이 바로 상미분이다.</li>
+</ul>
+<a href="#f62fcc5f3"><div class="admonition tldr" id="f62fcc5f3">
+<p><span class="arithmatex">\(x\)</span> 에 대한 편미분계수 : 이변수 함수 <span class="arithmatex">\(z = f(x, y)\)</span> 의 점 <span class="arithmatex">\((x_0, y_0)\)</span> 에서의 <span class="arithmatex">\(x\)</span> 에 대한 편미분계수는 </p>
+<div class="arithmatex">\[ \frac{\partial f}{\partial x} \bigg | _{(x_0, y_0)} = \frac{d}{dx}f(x, y_0) \bigg | _{x=x_0} =  \lim_{h \to 0} \frac{f(x_0 + h, y_0)-f(x_0,y_0)}{h} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>기하학적 의미 </p>
+<p><img alt="캡처" src="https://user-images.githubusercontent.com/16812446/79021815-7deae880-7bb7-11ea-9ab7-4ed19accc346.PNG"/></p>
+<p><a href="https://www.youtube.com/watch?v=ehrGmxqQsjo&amp;t=98s">https://www.youtube.com/watch?v=ehrGmxqQsjo&amp;t=98s</a></p>
+<p>위와 같은 곡면의 그래프가 있을 때 <span class="arithmatex">\(x\)</span> 에 대한 편미분계수 </p>
+<div class="arithmatex">\[ \lim_{h \to 0} \frac{f(x_0 + h, y_0)-f(x_0,y_0)}{h} \]</div>
+<p>의 의미는 다음과 같다. </p>
+<p>먼저 점 <span class="arithmatex">\(P(x_0, y_0)\)</span> 가 상주하고 있는 교선 위의 또 다른 점 <span class="arithmatex">\(Q(x_0+h,y_0)\)</span> 를 생각하자. 그러면 점 <span class="arithmatex">\(P\)</span> 와 점 <span class="arithmatex">\(Q\)</span> 를 잇는 직선의 기울기는 </p>
+<div class="arithmatex">\[ \frac{f(x_0 + h, y_0)-f(x_0,y_0)}{h} \]</div>
+<p>와 같다. <span class="arithmatex">\(y\)</span> 는 고정되어 있기 때문에 두 점에서의 <span class="arithmatex">\(y\)</span> 좌표는 <span class="arithmatex">\(y_0\)</span> 으로 동일하다. </p>
+<p>이때 <span class="arithmatex">\(h\)</span> 를 <span class="arithmatex">\(0\)</span> 에 한없이 가깝게 만들어서 <span class="arithmatex">\(P\)</span> 와 <span class="arithmatex">\(Q\)</span> 를 거의 같게 만들면 두 점을 잇는 직선은 곧 곡면의 접선이 되고,</p>
+<p>그때의 기울기는 곧 접선의 기울기가 되는 것이다.</p>
+</li>
+</ul>
+<a href="#d5cd13eb4"><div class="admonition tldr" id="d5cd13eb4">
+<p><span class="arithmatex">\(y\)</span> 에 대한 편미분계수 : 이변수 함수 <span class="arithmatex">\(z = f(x, y)\)</span> 의 점 <span class="arithmatex">\((x_0, y_0)\)</span> 에서의 <span class="arithmatex">\(y\)</span> 에 대한 편미분계수는 </p>
+<div class="arithmatex">\[ \frac{\partial f}{\partial y} \bigg | _{(x_0, y_0)} = \frac{d}{dy}f(x_0, y) \bigg | _{y=y_0} =  \lim_{h \to 0} \frac{f(x_0, y_0+h)-f(x_0,y_0)}{h} \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#0fa6c8293"><div class="admonition tldr" id="0fa6c8293">
+<p>편도함수(partial derivative) : 이변수 함수 <span class="arithmatex">\(z = f(x, y)\)</span> 의 편도함수는 다음과 같이 정의된다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(x\)</span> 에 대한 편도함수는 </p>
+<div class="arithmatex">\[ f_x(x, y) = \frac{\partial z}{\partial x} = \lim_{h \to 0} \frac{f(x+h, y)-f(x, y)}{h} \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(y\)</span> 에 대한 편도함수는 </p>
+<div class="arithmatex">\[ f_y(x, y) = \frac{\partial z}{\partial y} = \lim_{h \to 0} \frac{f(x, y+h)-f(x, y)}{h} \]</div>
+<p>이다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>이변수 함수 <span class="arithmatex">\(f(x, y)\)</span> 의 편미분할 변수를 제외한 나머지 변수를 상수로 취급하여 미분하면 된다.</p>
+</li>
+<li>
+<p>변수 <span class="arithmatex">\(x\)</span> 에 대한 다변수 함수 <span class="arithmatex">\(f(x, y, \dots)\)</span> 의 편미분을 </p>
+<div class="arithmatex">\[ f'_x, f_x, \partial _x f, \frac{\partial }{\partial x}f, \frac{\partial f}{\partial x} \]</div>
+<p>등의 형식 언어로 표기한다.</p>
+<ul>
+<li>
+<p>혹은 함수로서 편미분이 종속되는 변수를 강조하기 위해 </p>
+<div class="arithmatex">\[ f'_x(x, y, \dots), \frac{\partial f}{\partial x}(x, y, \dots) \]</div>
+<p>로 표기할 수도 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>이변수 함수 <span class="arithmatex">\(f(x) = x ^{3}+x ^{2}y ^{3}-2y ^{2}\)</span> 일 때 </p>
+<div class="arithmatex">\[ f_x(x, y) = 3x ^{2} + 2xy ^{3} \implies f_x(2, 1) = 16 \]</div>
+<div class="arithmatex">\[ f_y(x, y) = 3x ^{2}y ^{2} - 4y \implies f_x(2, 1) = 8 \]</div>
+<p>이다.</p>
+<p>기하학적으로 각각 곡면 <span class="arithmatex">\(z = f(x, y)\)</span> 과 평면 <span class="arithmatex">\(y = 1\)</span> 과 교선 위의 점 <span class="arithmatex">\((2, 1, 10)\)</span> 에서의 접선의 기울기가 <span class="arithmatex">\(16\)</span> 이고 </p>
+<p>곡면 <span class="arithmatex">\(z = f(x, y)\)</span> 과 평면 <span class="arithmatex">\(x = 2\)</span> 과 교선 위의 점 <span class="arithmatex">\((2, 1, 10)\)</span> 에서의 접선의 기울기가 <span class="arithmatex">\(8\)</span> 이라는 뜻이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>밑면의 반지름이 <span class="arithmatex">\(r\)</span>, 높이가 <span class="arithmatex">\(h\)</span> 인 원뿔의 부피 <span class="arithmatex">\(V\)</span> 는 </p>
+<div class="arithmatex">\[ V = \frac{\pi r ^{2}h}{3} \]</div>
+<p>으로써 두 독립변수 <span class="arithmatex">\(r, h\)</span> 에 의존하는 종속변수이다.</p>
+<p>이 <span class="arithmatex">\(V\)</span> 를 다변수 함수로 보고 <span class="arithmatex">\(r\)</span> 에 대해 편미분하면</p>
+<div class="arithmatex">\[ \frac{\partial V}{\partial r} = \frac{2 \pi rh}{3} \]</div>
+<p>이고 <span class="arithmatex">\(h\)</span> 에 대해 편미분하면</p>
+<div class="arithmatex">\[ \frac{\partial V}{\partial h} = \frac{\pi r ^{2}}{3} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#42dd527f9"><div class="admonition tldr" id="42dd527f9">
+<p>편도함수의 기하학적 의미 : 이변수 함수 <span class="arithmatex">\(f(x, y)\)</span> 에 대하여 편도함수의 기하학적 의미는 각각 다음과 같다. </p>
+<p><img alt="2v" src="https://user-images.githubusercontent.com/16812446/78995906-63e0e400-7b7e-11ea-9f1e-76382bc9c548.jpg"/></p>
+</div></a>
+<ol>
+<li>
+<p><span class="arithmatex">\(x\)</span> 에 대한 편도함수 </p>
+<div class="arithmatex">\[ f_x(x, y) = \frac{\partial z}{\partial x} = \lim_{h \to 0} \frac{f(x+h, y)-f(x, y)}{h} \]</div>
+<p>의 기하학적 의미 : 곡면 <span class="arithmatex">\(f(x, y)\)</span> 와 <span class="arithmatex">\(x\)</span> 축에 평행한 평면과의 교선의 접선의 기울기이다. </p>
+<ul>
+<li>
+<p>위 그림의 왼쪽의 그래프의 곡면에서 <span class="arithmatex">\(xy\)</span> 평면에서 수직으로, <span class="arithmatex">\(x\)</span> 축과 평행하게 곡면을 자르게 되면 여러 개의 교선을 얻을 수 있다. </p>
+</li>
+<li>
+<p>그 교선 중 하나가 왼쪽 그래프의 점 <span class="arithmatex">\(P\)</span> 가 상주하고 있는 곡선이다.</p>
+<ul>
+<li>만약 그 곡선보다 좀 더 오른쪽에서 곡면을 자르면 더 짧은 교선을 얻을 수 있고 더 왼쪽에서 곡면을 자르면 더 긴 교선을 얻을 수 있을 것이다. </li>
+</ul>
+</li>
+<li>
+<p>이 교선에서 어떤 점 <span class="arithmatex">\(P\)</span> 를 잡아서 접선을 그었을 때 그 접선의 기울기가 편미분계수이다. </p>
+</li>
+<li>
+<p>그리고 그 기울기들에 대한 함수가 <span class="arithmatex">\(x\)</span> 에 대한 편도함수이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(y\)</span> 에 대한 편도함수</p>
+<div class="arithmatex">\[ f_y(x, y) = \frac{\partial z}{\partial y} = \lim_{h \to 0} \frac{f(x, y+h)-f(x, y)}{h} \]</div>
+<p>의 기하학적 의미 : 곡면 <span class="arithmatex">\(f(x, y)\)</span> 와 <span class="arithmatex">\(y\)</span> 축에 평행한 평면과의 교선의 접선의 기울기</p>
+<ul>
+<li>
+<p>위 그림의 오른쪽의 그래프의 곡면에서 <span class="arithmatex">\(xy\)</span> 평면에서 수직으로, <span class="arithmatex">\(y\)</span> 축과 평행하게 곡면을 자르게 되면 여러 개의 교선을 얻을 수 있다. </p>
+</li>
+<li>
+<p>그 교선 중 하나가 왼쪽 그래프의 점 <span class="arithmatex">\(P\)</span> 가 상주하고 있는 곡선이다.</p>
+</li>
+<li>
+<p>이 교선에서 어떤 점 <span class="arithmatex">\(P\)</span> 를 잡아서 접선을 그었을 때 그 접선의 기울기가 편미분계수이다. </p>
+</li>
+<li>
+<p>그리고 그 기울기들에 대한 함수가 <span class="arithmatex">\(y\)</span> 에 대한 편도함수이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>그러면 <span class="arithmatex">\(x\)</span> 축 방향으로 평행하지도 않고 <span class="arithmatex">\(y\)</span> 축 방향으로 평행하지도 않고 </p>
+<p><span class="arithmatex">\(x\)</span> 축으로부터 <span class="arithmatex">\(60 \degree\)</span> 벌어진 단위 벡터 <span class="arithmatex">\(u\)</span> 의 방향으로 교선을 잘라서 기울기를 구하는 상황도 생각할 수 있다.</p>
+<p>이것을 단위벡터 <span class="arithmatex">\(u\)</span> 의 방향도함수라 한다. </p>
+</li>
+</ol>
+<h3 id="_3">여러가지 편도함수<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<a href="#b71c93d09"><div class="admonition tldr" id="b71c93d09">
+<p>이계 편도함수(second-order partial derivative) : 이변수 함수 <span class="arithmatex">\(f(x, y)\)</span> 를 두번 미분한 것으로 다음 <span class="arithmatex">\(4\)</span> 가지 경우로 정의된다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(x\)</span> 에 대하여 두번 미분할 경우 </p>
+<div class="arithmatex">\[ \frac{\partial ^{2} f}{\partial x ^{2}} = \frac{\partial }{\partial x }(\frac{\partial f}{\partial x}) = (f_x)_x = f _{xx} \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(y\)</span> 에 대하여 두번 미분할 경우</p>
+<div class="arithmatex">\[ \frac{\partial ^{2} f}{\partial y ^{2}} = \frac{\partial }{\partial y ^{2}}(\frac{\partial f}{\partial y}) = (f_y)_y = f _{yy} \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(y\)</span> 에 대하여 미분하고 <span class="arithmatex">\(x\)</span> 에 대하여 미분할 경우</p>
+<div class="arithmatex">\[ \frac{\partial ^{2} f}{\partial x \partial y } = \frac{\partial }{\partial x}(\frac{\partial f}{\partial y}) = (f_y)_x = f _{yx} \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p>이변수 함수 <span class="arithmatex">\(f(x, y) = x \cos y + y e ^{x}\)</span> 의 이계 편도함수를 각각 구해보자.</p>
+<p>먼저 일계 편도함수를 구해놓자. </p>
+<div class="arithmatex">\[ \frac{\partial f}{\partial x} = \frac{\partial }{\partial x}(x \cos y + y e ^{x}) = \cos y + y e ^{x} \]</div>
+<div class="arithmatex">\[ \frac{\partial f}{\partial y} = \frac{\partial }{\partial y}(x \cos y + y e ^{x}) = -x\sin y + e ^{x} \]</div>
+<p>그러면 이계 편도함수는 다음과 같다. </p>
+<div class="arithmatex">\[ \frac{\partial ^{2}f}{\partial y \partial x} = \frac{\partial }{\partial y}(\frac{\partial f}{\partial x}) = -\sin y + e ^{x} \]</div>
+<div class="arithmatex">\[ \frac{\partial ^{2}f}{\partial x \partial y} = \frac{\partial }{\partial x}(\frac{\partial f}{\partial y}) = -\sin y + e ^{x} \]</div>
+<div class="arithmatex">\[ \frac{\partial ^{2}f}{\partial x ^{2}} = \frac{\partial }{\partial x}(\frac{\partial f}{\partial x}) = y e ^{x} \]</div>
+<div class="arithmatex">\[ \frac{\partial ^{2}f}{\partial y ^{2}} = \frac{\partial }{\partial y}(\frac{\partial f}{\partial y}) = -x \cos y \]</div>
+</li>
+</ul>
+<a href="#655417bf4"><div class="admonition tldr" id="655417bf4">
+<p>혼합 편미분(mixed derivative) : 이변수 함수 <span class="arithmatex">\(f(x, y)\)</span> 에 대하여 서로 다른 두 변수에 대한 편미분이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이계 편도함수에서 <span class="arithmatex">\(x\)</span> 에 대하여 미분하고 <span class="arithmatex">\(y\)</span> 에 대하여 미분한 경우</p>
+<div class="arithmatex">\[ \frac{\partial ^{2} f}{\partial y \partial x } = \frac{\partial }{\partial y}(\frac{\partial f}{\partial x}) = (f_x)_y = f _{xy} \]</div>
+<p>와 <span class="arithmatex">\(y\)</span> 에 대하여 미분하고 <span class="arithmatex">\(x\)</span> 에 대하여 미분한 경우</p>
+<div class="arithmatex">\[ \frac{\partial ^{2} f}{\partial x \partial y } = \frac{\partial }{\partial x}(\frac{\partial f}{\partial y}) = (f_y)_x = f _{yx} \]</div>
+<p>를 뜻한다.</p>
+</li>
+</ul>
+<a href="#6a9ffb434"><div class="admonition tldr" id="6a9ffb434">
+<p>혼합 편미분 정리(mixed derivative theorem) : 이변수 함수 <span class="arithmatex">\(f(x, y)\)</span> 와 그 편미분 <span class="arithmatex">\(f_x, f_y, f _{xy}, f _{yx}\)</span> 가 점 <span class="arithmatex">\((a, b)\)</span> 를 포함하는 개구간에서 정의되어 있고 점 <span class="arithmatex">\((a, b)\)</span> 에서 연속이라면 </p>
+<div class="arithmatex">\[ f _{xy}(a, b) = f _{yx}(a, b) \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>이계 편도함수의 예시에서 이변수 함수 <span class="arithmatex">\(f(x, y) = x \cos y + y e ^{x}\)</span> 의 혼합 편미분의 변수 순서가 다른 두 결과</p>
+<div class="arithmatex">\[ \frac{\partial ^{2}f}{\partial y \partial x} = \frac{\partial }{\partial y}(\frac{\partial f}{\partial x}) = -\sin y + e ^{x} \]</div>
+<div class="arithmatex">\[ \frac{\partial ^{2}f}{\partial x \partial y} = \frac{\partial }{\partial x}(\frac{\partial f}{\partial y}) = -\sin y + e ^{x} \]</div>
+<p>가 동일한 것은 우연의 일치가 아니다. 혼합 편미분 정리에 의하여 이 둘이 같은 것이다. </p>
+</li>
+</ul>
+<h2 id="_4">다변수 합성 함수의 미분<a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+<h3 id="_5">선형근사<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<a href="#88df6dcb7"><div class="admonition tldr" id="88df6dcb7">
+<p>선형화(linearization) : 함수 <span class="arithmatex">\(f\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 미분가능할 때 <span class="arithmatex">\(x=a\)</span> 에서의 접선의 방정식</p>
+<div class="arithmatex">\[ L(x) = f'(a)(x-a) + f(a) \]</div>
+<p>를 함수 <span class="arithmatex">\(f\)</span> 의 선형화라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>다음 그래프는 <span class="arithmatex">\(y = x^2, y = 2x-1\)</span> 이다. 그런데 <span class="arithmatex">\(x=1\)</span> 지점에서 그래프를 더 확대해보면 다음과 같다. </p>
+<p><img height="auto" src="https://user-images.githubusercontent.com/16812446/79032028-2b70f280-7bde-11ea-84c5-a63f705c0906.png" width="30%"/> <img height="auto" src="https://user-images.githubusercontent.com/16812446/79032042-43e10d00-7bde-11ea-94f6-9056afab3f22.png" width="30%"/> <img height="auto" src="https://user-images.githubusercontent.com/16812446/79032074-991d1e80-7bde-11ea-9a8f-3e636d9bb31b.png" width="30%"/></p>
+<p>그러면 거의 두 함수를 분간할 수가 없다. </p>
+<p>이것은 원함수의 임의의 점 <span class="arithmatex">\(x=a\)</span> 에서의 접선을 그렸을 때 <span class="arithmatex">\(x=a\)</span> 를 중심으로 그래프를 끝없이 확대해보면 원함수와 접선이 거의 똑같아지는 것을 의미한다.</p>
+</li>
+<li>
+<p>이 현상을 이용하여 <span class="arithmatex">\(x=a\)</span> 에서 원래의 함수를 선형 근사시킬 수 있는 방법을 <span class="arithmatex">\(x=a\)</span> 에서의 접선 </p>
+<div class="arithmatex">\[ L(x) = f'(a)(x-a) + f(a) \]</div>
+<p>을 구하는 것이라 할 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(y = \sqrt[]{1+x}\)</span> 을 <span class="arithmatex">\(x = 0\)</span> 에서 선형근사시켜보면 다음과 같다.</p>
+<div class="arithmatex">\[ \sqrt[]{1+x} \approx 1 + \frac{x}{2} \]</div>
+</li>
+</ul>
+<a href="#d13848755"><div class="admonition tldr" id="d13848755">
+<p>표준 선형 근사(standard linear approximation) : 선형화의 정의에서 <span class="arithmatex">\(x=a\)</span> 에서 함수 <span class="arithmatex">\(f\)</span> 의 함수 <span class="arithmatex">\(L\)</span> 에 의한 근사</p>
+<div class="arithmatex">\[ f(x) \approx L(x) \]</div>
+<p>를 표준 선형 근사라한다.</p>
+</div></a>
+<ul>
+<li>이때 <span class="arithmatex">\(x=a\)</span> 를 근사의 중심이라 한다. </li>
+</ul>
+<h3 id="differential">미분(differential)<a class="headerlink" href="#differential" title="Permanent link">¶</a></h3>
+<a href="#3ba36b993"><div class="admonition tldr" id="3ba36b993">
+<p>미분(differential) : <span class="arithmatex">\(y = f(x)\)</span> 를 미분가능한 함수이고 미분 <span class="arithmatex">\(dx\)</span> 가 독립변수일 때 미분 <span class="arithmatex">\(dy\)</span> 는 </p>
+<div class="arithmatex">\[ dy = f'(x)dx \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(dx\)</span> 와 <span class="arithmatex">\(x\)</span> 가 독립변수인 반면 <span class="arithmatex">\(dy\)</span> 는 종속변수이다. 즉, <span class="arithmatex">\(dy\)</span> 는 <span class="arithmatex">\(x, dx\)</span> 에 의해 결정된다.</p>
+</li>
+<li>
+<p>가끔 <span class="arithmatex">\(dy = f'(x)dx\)</span> 를 다음과 같이 미분 <span class="arithmatex">\(f\)</span> 로도 표현한다.</p>
+<div class="arithmatex">\[ df = f'(x)dx \]</div>
+</li>
+<li>
+<p>미분은 서로 다른 두 개념인 differentiation(미분) 과 differential(미분) 으로 동시에 쓰인다. 전자는 도함수를 얻는다는 뜻의 differentiate 의 명사형이다. 후자 differential 은 원함수의 선형근사함수를 뜻한다.</p>
+<p>가령 함수 <span class="arithmatex">\(f(x)\)</span> 의 한 점 <span class="arithmatex">\(a\)</span> 에서의 미분(differential) 은 </p>
+<div class="arithmatex">\[ df(\Delta x) = f'(a)\Delta x \]</div>
+<p>로 표현되는 선형근사함수이다. </p>
+</li>
+<li>
+<p>기하학적 의미 </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/86736612-a11a1c80-c06e-11ea-8b4f-20ed5748ea3c.png"/></p>
+<blockquote>
+<p>출처 : <a href="https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078">Thomas' CALCULUS</a> Figure3.55</p>
+</blockquote>
+<p>기하학적 의미는 이렇다.</p>
+<p>위 그림에서 <span class="arithmatex">\(x = a, dx = \Delta x\)</span> 로 두자. <span class="arithmatex">\(x\)</span> 의 증분 <span class="arithmatex">\(\Delta x\)</span> 는 <span class="arithmatex">\(x = a\)</span> 에서 <span class="arithmatex">\(x = a + \Delta x\)</span> 의 거리</p>
+<div class="arithmatex">\[ \Delta x = (\Delta x + a) - (a) \]</div>
+<p>로 두자. </p>
+<p><span class="arithmatex">\(x\)</span> 증분에 따른 <span class="arithmatex">\(y=f(x)\)</span> 의 변화는 <span class="arithmatex">\(\Delta y = f(a + dx) - f(a)\)</span> 이다. </p>
+<p><span class="arithmatex">\(x\)</span> 증분에 따른 접선 <span class="arithmatex">\(L(x) = f'(a)(x-a) + f(a)\)</span> 의 변화는 </p>
+<div class="arithmatex">\[\Delta L = L(a + dx) - L(a)\]</div>
+<div class="arithmatex">\[ = f'(a)\{(a+dx)-a\} +f(a) -f(a) \]</div>
+<div class="arithmatex">\[ = f'(a)dx \]</div>
+<p>이다.</p>
+<p>이것의 의미는 <span class="arithmatex">\(\Delta L = f'(a)dx = dy\)</span> 이므로 <span class="arithmatex">\(f\)</span> 의 선형화(접선 <span class="arithmatex">\(L\)</span>)의 변화가 정확하게 <span class="arithmatex">\(x=a, dx = \Delta x\)</span> 일때 미분(differential) <span class="arithmatex">\(dy\)</span> 와 똑같다는 것이다.</p>
+<p>그러므로 우리는 <span class="arithmatex">\(dx = \Delta x\)</span> 일때 미분(differential) <span class="arithmatex">\(dy\)</span> 가 정확하게 접선의 변화량을 나타내준다는 것을 알 수 있다.</p>
+<p>만약 <span class="arithmatex">\(dx \neq 0\)</span> 이라면 다음과 같이 미분(differential) <span class="arithmatex">\(dy\)</span> 를 <span class="arithmatex">\(dx\)</span> 로 나누어 얻은 것이 도함수 <span class="arithmatex">\(f'(x)\)</span> 와 정확하게 일치한다는 것을 알 수 있다.</p>
+<div class="arithmatex">\[ dy \div dx = \dfrac{f'(x)dx}{dx} = f'(x) = \dfrac{dy}{dx} \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(y = x ^{5} + 37x\)</span> 에서의 <span class="arithmatex">\(dy\)</span> 를 찾자. </p>
+<div class="arithmatex">\[ dy = (5x ^{4} + 37)dx \]</div>
+<p>이때 <span class="arithmatex">\(x=1,dx=0.1\)</span> 에서 <span class="arithmatex">\(dy\)</span> 값을 찾으면</p>
+<div class="arithmatex">\[ dy = (5 \cdot 1   ^{4} + 37)(0.2) = 8.4 \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p>합성함수 미분법(Chain Rule) 과 다른 미분법을 함께 사용할 수 있다. </p>
+<p>먼저 일반적인 미분(differentiation) 의 관점에서 <span class="arithmatex">\((\tan x)' = \sec ^{2}x\)</span> 이므로 <span class="arithmatex">\((\tan 2x)'\)</span> 에서 <span class="arithmatex">\(2x = t\)</span> 로 두면 </p>
+<div class="arithmatex">\[ \dfrac{d \tan 2x}{dx} = \dfrac{d \tan t}{dx} = \dfrac{d \tan t}{dt}\cdot \dfrac{d2x}{dx} = \sec ^{2}t \cdot 2 = 2 \sec ^{2}(2x) \]</div>
+<p>이다.</p>
+<p>이제 미분(differential) 의 관점에서</p>
+<div class="arithmatex">\[ d (\tan  2x) = \sec ^{2}(2x)d(2x) \]</div>
+<p>에서 <span class="arithmatex">\(d(2x)\)</span> 을 함수 <span class="arithmatex">\(y = 2x\)</span> 를 <span class="arithmatex">\(x\)</span> 에 대하여 하는 미분(differential) 으로 보면 <span class="arithmatex">\(d(2x) = (2x)'dx = 2dx\)</span> 이므로</p>
+<div class="arithmatex">\[ d (\tan 2x) = 2 \sec ^{2} (2x) dx \]</div>
+<p>이다. </p>
+</li>
+</ul>
+<h3 id="_6">미분 추정<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<a href="#79853f749"><div class="admonition tldr" id="79853f749">
+<p>미분의 추정(estimating with differentials) : 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x = a\)</span> 에서 미분가능할 때 <span class="arithmatex">\(x = a\)</span> 의 근방 <span class="arithmatex">\(x = a + dx\)</span> 에서 함수값이 변하는 정도 <span class="arithmatex">\(f(a + dx)\)</span> 는 근사적으로</p>
+<div class="arithmatex">\[ f(a + dx) \approx f(a) + dy \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(y\)</span> 의 증분은 <span class="arithmatex">\(\Delta y = f(a + \Delta x) - f(a)\)</span> 이다. 이때 <span class="arithmatex">\(dx= \Delta x\)</span> 가 충분히 작으면 <span class="arithmatex">\(y\)</span> 의 증분 <span class="arithmatex">\(\Delta y\)</span> 는 미분 <span class="arithmatex">\(dy\)</span> 와 거의 똑같아진다. 왜냐하면 함수 <span class="arithmatex">\(f\)</span> 의 접선 <span class="arithmatex">\(L\)</span> 의 증분 <span class="arithmatex">\(\Delta L = f'(a)dx = dy\)</span> 이 <span class="arithmatex">\(x = a\)</span> 의 근방에서 함수 <span class="arithmatex">\(f\)</span> 의 증분 <span class="arithmatex">\(\Delta y\)</span> 와 거의 똑같아지기 때문이다. 그러므로 <span class="arithmatex">\(x = a\)</span> 근방에서 </p>
+<div class="arithmatex">\[ f'(a)dx = dy \approx \Delta y \]</div>
+<p>라 할 수 있고, 이에 따라</p>
+<div class="arithmatex">\[ f(a + dx) = f(a) + \Delta y \]</div>
+<p>를 근사적으로 </p>
+<div class="arithmatex">\[ f(a + dx) \approx  f(a) + dy \]</div>
+<p>로 쓸 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(7.97 ^{\frac{1}{3}}\)</span> 을 추산해보자. </p>
+<p><span class="arithmatex">\(f(x) = x ^{\frac{1}{3}}\)</span> 의 미분(differential)은 <span class="arithmatex">\(dy = \dfrac{1}{3x ^{\frac{2}{3}}}dx\)</span> 이다. 이때 <span class="arithmatex">\(a = 8\)</span> 로 둔다면 <span class="arithmatex">\(7.97\)</span> 을 <span class="arithmatex">\(x = a\)</span> 근방의 함수 <span class="arithmatex">\(f\)</span> 의 접선의 함수값으로 생각할 수 있다. 그렇다면 <span class="arithmatex">\(dx = -0.03\)</span> 으로 둘 때 <span class="arithmatex">\(x = a\)</span> 에서의 함수값 <span class="arithmatex">\(f(7.97)\)</span> 을 다음과 같이 근사시킬 수 있다. </p>
+<div class="arithmatex">\[ f(7.97) = f(a + dx) \approx f(a) + dy \]</div>
+<p>그러면 <span class="arithmatex">\(f(a) + dy = f(a) + f'(a)dx\)</span> 에서 <span class="arithmatex">\(f'(x) = \frac{1}{3x ^{\frac{2}{3}}}\)</span> 이고 <span class="arithmatex">\(dx = -0.03\)</span> 으로 두었으므로</p>
+<div class="arithmatex">\[ = 8 ^{\frac{1}{3}} + \frac{1}{3(8)^{\frac{2}{3}}}(-0.03) = 1.9975 \]</div>
+<p>이다. 따라서 </p>
+<div class="arithmatex">\[ \therefore  7.97 ^{\frac{1}{3}} \approx 1.9975 \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>예시</p>
+<p>원의 반지름 <span class="arithmatex">\(r\)</span> 이 <span class="arithmatex">\(a=10\)</span> 에서 <span class="arithmatex">\(a=10.1\)</span> 로 변했을 때 원의 넓이 <span class="arithmatex">\(A\)</span> 를 추정해보자.</p>
+<p>먼저 원의 정확한 넓이는 <span class="arithmatex">\(A = \pi r ^{2}\)</span> 이고 <span class="arithmatex">\(a=10, dr = 0.1\)</span> 이므로 미분(differential) 을 구하여</p>
+<div class="arithmatex">\[ dA = A'(a)dr = 2 \pi adr = 2 \pi (10)(0.1) = 2 \pi \]</div>
+<p>을 얻는다.</p>
+<p>그런데 <span class="arithmatex">\(A(r + \Delta r) \approx A(r)+dA\)</span> 이므로 </p>
+<div class="arithmatex">\[ A(10 + 0.1) \approx A(10)+2 \pi = \pi (10)^{2}+2 \pi =102 \pi \]</div>
+<p>를 얻는다. 그러므로 반지름 <span class="arithmatex">\(r=10.1\)</span> 일 때 원의 넓이를 미분 추정해보면 <span class="arithmatex">\(102 \pi\)</span> 이다. ■ </p>
+<p>실제 넓이는 <span class="arithmatex">\(A(10.1) = \pi (10.1) ^{2} = 102.01 \pi\)</span> 이므로 오차는 <span class="arithmatex">\(\Delta A - dA = 0.01 \pi\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#81bf3287d"><div class="admonition tldr" id="81bf3287d">
+<p>미분근사의 오차(error in differential approximation) : 함수 <span class="arithmatex">\(y=f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 미분가능하고 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(a+\Delta x\)</span> 로 변할 때 함수 <span class="arithmatex">\(y\)</span> 의 변화량 <span class="arithmatex">\(\Delta y\)</span> 은</p>
+<p><span class="arithmatex">\(\Delta x \to 0 \implies \epsilon \to 0\)</span> 인 오차량 <span class="arithmatex">\(\epsilon = \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a)\)</span> 에대하여</p>
+<div class="arithmatex">\[ \Delta y = f'(a) = f'(a)\Delta x+\epsilon \Delta x \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>설명 </p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 미분가능하다고 하고 <span class="arithmatex">\(x\)</span> 의 변화량을 <span class="arithmatex">\(dx = \Delta x\)</span> 라고 하자.</p>
+<p>그러면 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(a+ \Delta x\)</span> 변할 때 함수 <span class="arithmatex">\(f\)</span> 의 변화를 표현하는 두 가지 방법이 있다.</p>
+<ol>
+<li>
+<p>진짜 변화량 : <span class="arithmatex">\(\Delta f = f(a+\Delta x)-f(a)\)</span></p>
+</li>
+<li>
+<p>미분 추정량 : <span class="arithmatex">\(df = f'(a)\Delta x\)</span></p>
+</li>
+</ol>
+<p>이때 미분 추정량 <span class="arithmatex">\(df\)</span> 는 진짜 변화량 <span class="arithmatex">\(\Delta f\)</span> 와 얼마나 차이가 날까? 이것은 단순히 <span class="arithmatex">\(\Delta f\)</span> 로부터 <span class="arithmatex">\(df\)</span> 를 빼보면 알 수 있다.</p>
+<p>그러므로 추정오차량은</p>
+<div class="arithmatex">\[ \text{(추정오차량)} = \Delta f - df = \Delta f - f'(a)\Delta x \]</div>
+<div class="arithmatex">\[ = f(a+\Delta x)-f(a)-f'(a)\Delta x \]</div>
+<div class="arithmatex">\[ = \bigg ( \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a) \bigg )\cdot \Delta x \]</div>
+<p>인데 오차량을 <span class="arithmatex">\(\epsilon = \bigg ( \dfrac{f(a+\Delta x) - f(a)}{\Delta x} - f'(a) \bigg )\)</span> 로 두면</p>
+<div class="arithmatex">\[ = \epsilon \cdot \Delta x \]</div>
+<p>이다.</p>
+<p>그런데 <span class="arithmatex">\(\Delta x \to 0\)</span> 일 때 미분계수의 정의에 따라 <span class="arithmatex">\(\dfrac{f(a+\Delta x) - f(a)}{\Delta x} \to f'(a)\)</span> 이다. 그러므로 실질적으로 <span class="arithmatex">\(\epsilon\)</span> 은 매우 작은양으로 줄어든다. 즉,</p>
+<div class="arithmatex">\[ \Delta x \to 0 \implies \epsilon \to 0 \]</div>
+<p>이다. 따라서 <span class="arithmatex">\(\Delta x\)</span> 가 매우 작으면 오차량 <span class="arithmatex">\(\epsilon\)</span> 도 함께 매우 작아진다. 이때 <span class="arithmatex">\(\Delta f - df = \epsilon \cdot \Delta x\)</span> 이므로 <span class="arithmatex">\(\Delta f = df + \epsilon \Delta x\)</span> 즉,</p>
+<div class="arithmatex">\[ \underbrace{\Delta f}_{\text{true change}} = \underbrace{f'(a)\Delta x}_{\text{estimated change}} + \underbrace{\epsilon \Delta x}_{error} \]</div>
+<p>를 얻는다.</p>
+</li>
+<li>
+<p>예시</p>
+<p>원의 반지름 <span class="arithmatex">\(r\)</span> 이 <span class="arithmatex">\(a=10\)</span> 에서 <span class="arithmatex">\(a=10.1\)</span> 로 변했을 때 원의 넓이 <span class="arithmatex">\(A\)</span> 를 추정해보고 오차를 조사하자.</p>
+<p>먼저 원의 정확한 넓이는 <span class="arithmatex">\(A = \pi r ^{2}\)</span> 이고 <span class="arithmatex">\(a=10, dr = 0.1\)</span> 이므로 미분(differential) 을 구하여</p>
+<div class="arithmatex">\[ dA = A'(a)dr = 2 \pi adr = 2 \pi (10)(0.1) = 2 \pi \]</div>
+<p>을 얻는다.</p>
+<p>그런데 <span class="arithmatex">\(A(r + \Delta r) \approx A(r)+dA\)</span> 이므로 </p>
+<div class="arithmatex">\[ A(10 + 0.1) \approx A(10)+2 \pi = \pi (10)^{2}+2 \pi =102 \pi \]</div>
+<p>를 얻는다. 그러므로 반지름 <span class="arithmatex">\(r=10.1\)</span> 일 때 원의 넓이를 미분 추정해보면 <span class="arithmatex">\(102 \pi\)</span> 이다. </p>
+<p>실제 넓이는 <span class="arithmatex">\(A(10.1) = \pi (10.1) ^{2} = 102.01 \pi\)</span> 이므로 </p>
+<div class="arithmatex">\[ \Delta A = (102.01 - 100) \pi = (\underbrace{2 \pi}_{dA}  + \underbrace{0.01 \pi}_{\text{error}}) \]</div>
+<p>에서 <span class="arithmatex">\(\Delta A - dA = \epsilon \Delta r = 0.01 \pi\)</span> 이다. 따라서 최종적으로 오차량 </p>
+<div class="arithmatex">\[\epsilon = \dfrac{0.01 \pi}{\Delta r} = \dfrac{0.01 \pi }{0.1} = 0.1 \pi\]</div>
+<p>을 얻는다. ■ </p>
+</li>
+</ul>
+<h3 id="_7">이변수함수의 미분가능성<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<a href="#aa9057b29"><div class="admonition tldr" id="aa9057b29">
+<p>이변수함수의 미분가능 : 점 <span class="arithmatex">\((x_0,y_0)\)</span> 에 대한 이변수함수 <span class="arithmatex">\(z=f(x,y)\)</span> 의 편미분 <span class="arithmatex">\(f_x(x_0, y_0), f_y(x_0,y_0)\)</span> 이 존재하고 함수 <span class="arithmatex">\(z\)</span> 의 변화량 <span class="arithmatex">\(\Delta z\)</span> 가 </p>
+<p><span class="arithmatex">\(\Delta x, \Delta y \to 0 \implies \epsilon _1, \epsilon _2 \to 0\)</span> 에 대한 방정식</p>
+<div class="arithmatex">\[ \Delta z = f_x(x_0,y_0)\Delta x+f_y(x_0,y_0)\Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y \]</div>
+<p>을 만족하면 <span class="arithmatex">\(f\)</span> 는 모든 정의역에서 미분가능하다.</p>
+</div></a>
+<ul>
+<li>그리고 미분가능한 이변수함수의 그래프를 매끄러운 곡면(smooth surface)이라고 한다.</li>
+</ul>
+<a href="#1ff1d9e2d"><div class="admonition tldr" id="1ff1d9e2d">
+<p>일독립변수와 이매개변수에 대한 도함수 : 이변수 함수 <span class="arithmatex">\(w = f(x, y)\)</span> 가 미분가능하고 <span class="arithmatex">\(t\)</span> 에 대한 함수 <span class="arithmatex">\(x = x(t), y = y(t)\)</span> 가 미분가능하면</p>
+<p><span class="arithmatex">\(t\)</span> 에 대한 이변수 합성함수 <span class="arithmatex">\(w = f(x(t), y(t))\)</span> 는 미분가능하며 그 도함수는 </p>
+<div class="arithmatex">\[ \frac{dw}{dt} = f_x(x(t), y(t)) \cdot x'(t) + f_y(x(t), y(t)) \cdot y'(t) \]</div>
+<p>또는 </p>
+<div class="arithmatex">\[ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w}{\partial y}\frac{dy}{dt} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>증명은 <span class="arithmatex">\(x,y\)</span> 가 <span class="arithmatex">\(t=t_0\)</span> 에서 미분가능하면 <span class="arithmatex">\(w\)</span> 도 <span class="arithmatex">\(t_0\)</span> 에서 미분가능하고 </p>
+<p>점 <span class="arithmatex">\(P_0 = (x(t_0),y(t_0))\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \bigg (\dfrac{dw}{dt}\bigg )_{t_0} = \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0} \bigg (\dfrac{d x}{d t}\bigg )_{t_0} +\bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \bigg (\dfrac{d y}{d t}\bigg )_{t_0} \]</div>
+<p>가 성립함을 보임으로써 완성된다.</p>
+<p>먼저 <span class="arithmatex">\(\Delta x, \Delta y, \Delta w\)</span> 를 <span class="arithmatex">\(t\)</span> 가 <span class="arithmatex">\(t_0\)</span> 에서 <span class="arithmatex">\(t_0 + \Delta t\)</span> 로 변할때의 증분이라고 하자. 이변수함수 <span class="arithmatex">\(f\)</span> 가 미분가능하다고 가정했으므로</p>
+<p><span class="arithmatex">\(\Delta x,y \to 0 \implies \epsilon _{1}, \epsilon _{2} \to 0\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \Delta w =  \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0}\Delta x+ \bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \Delta y+\epsilon _1 \Delta x+\epsilon _2 \Delta y \]</div>
+<p>이 성립한다.</p>
+<p>이 식을 <span class="arithmatex">\(\Delta t\)</span> 로 나누면</p>
+<div class="arithmatex">\[ \dfrac{\Delta w}{\Delta t}  =  \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0} \dfrac{\Delta x}{\Delta t} + \bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \dfrac{\Delta y}{\Delta t}+\epsilon _1  \dfrac{\Delta x}{\Delta t}+\epsilon _2 \dfrac{\Delta y}{\Delta t} \]</div>
+<p>를 얻는다. 이때 <span class="arithmatex">\(\Delta t \to 0\)</span> 이면</p>
+<div class="arithmatex">\[ \lim_{\Delta t \to 0} \dfrac{\Delta w}{\Delta t}  =  \bigg (\dfrac{\partial w}{\partial x}\bigg )_{P_0} \bigg (\dfrac{dx}{dt}\bigg )_{t_0} + \bigg (\dfrac{\partial w}{\partial y}\bigg )_{P_0} \bigg (\dfrac{dy}{dt}\bigg ) _{t_0}+0 \cdot  \dfrac{\Delta x}{\Delta t}+0 \cdot \dfrac{\Delta y}{\Delta t} \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(t\)</span> 에 대한 함수 <span class="arithmatex">\(x = \cos t, y = \sin t\)</span> 에 에 대한 이변수 합성함수 <span class="arithmatex">\(w = xy\)</span> 의 도함수를 구해보자.</p>
+<div class="arithmatex">\[ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w}{\partial y}\frac{dy}{dt} \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ = \frac{\partial (xy)}{\partial x} \cdot \frac{d}{dt}(\cos t) + \frac{\partial (xy)}{\partial y} \cdot \frac{d}{dt}(\sin t) \]</div>
+<div class="arithmatex">\[ = (y)(-\sin t) + (x)(\cos t) \]</div>
+<div class="arithmatex">\[ = (\sin t)(-\sin t) + (\cos t)(\cos t) \]</div>
+<div class="arithmatex">\[ =  -\sin ^{2}t+\cos ^{2}t\]</div>
+<div class="arithmatex">\[ = \cos 2t \]</div>
+<p>이다. </p>
+<p>이 결과는 더욱 <span class="arithmatex">\(w\)</span> 를 <span class="arithmatex">\(t\)</span> 에 대한 함수로 풀어서 구할 수도 있다. </p>
+<div class="arithmatex">\[ w = xy = \cos t \sin t = \frac{1}{2}\sin 2t \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ \frac{dw}{dt} = \frac{d}{dt}(\frac{1}{2}\sin 2t) = \frac{1}{2}\cdot 2 \cos 2t = \cos 2t \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#ad76cdfeb"><div class="admonition tldr" id="ad76cdfeb">
+<p>일독립변수와 삼매개변수에 대한 함성함수의 도함수(chain rule) : 삼변수 함수 <span class="arithmatex">\(w = f(x, y, z)\)</span> 가 미분가능하고 <span class="arithmatex">\(t\)</span> 에 대한 함수 <span class="arithmatex">\(x = x(t), y = y(t), z = z(t)\)</span> 가 미분가능하면</p>
+<p><span class="arithmatex">\(t\)</span> 에 대한 삼변수 합성함수 <span class="arithmatex">\(w = f(x(t), y(t), z(t))\)</span> 도 미분가능하며 그 도함수는 </p>
+<div class="arithmatex">\[ \frac{dw}{dt} = \frac{\partial w}{\partial x}\frac{dx}{dt} + \frac{\partial w}{\partial y}\frac{dy}{dt} + \frac{\partial w}{\partial z}\frac{dz}{dt}\]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>일독립변수와 이매개변수에 대한 도함수의 증명과 동일하다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음과 같이 함수가 주어졌을 때 </p>
+<div class="arithmatex">\[w = xy + z, x = \cos t, y = \sin t, z = t\]</div>
+<p><span class="arithmatex">\(dw/dt\)</span> 를 구해보자. </p>
+<div class="arithmatex">\[ \frac{dw}{dt} = \frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt} + \frac{\partial w}{\partial z}\frac{dz}{dt}\]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ = (y)(-\sin t) + (x)(\cos t)+(1)(1) \]</div>
+<div class="arithmatex">\[ = (\sin t)(-\sin t) + (\cos t)(\cos t)+1 \]</div>
+<div class="arithmatex">\[ = -\sin ^{2} t + \cos ^{2} t+1 \]</div>
+<div class="arithmatex">\[ = 1+\cos 2t \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \therefore \frac{dw}{dt} = 1+\cos 2t \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#0ff7caec1"><div class="admonition tldr" id="0ff7caec1">
+<p>이독립변수와 삼매개변수에 대한 함성함수의 편도함수(chain rule) : 삼변수 함수 <span class="arithmatex">\(w = f(x, y, z)\)</span> 가 미분가능하고 <span class="arithmatex">\(r, s\)</span> 에 대한 함수 <span class="arithmatex">\(x = x(r, s), y = y(r, s), z = z(r, s)\)</span> 가 미분가능하면,</p>
+<p>이 <span class="arithmatex">\(4\)</span> 가지 함수는 모두 미분 가능하고 <span class="arithmatex">\(w\)</span> 는 <span class="arithmatex">\(r\)</span> 과 <span class="arithmatex">\(s\)</span> 에 대하여 각각 다음의 편도함수를 가진다. </p>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial  r} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  r} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  r} + \frac{\partial w}{\partial z}\frac{\partial  z}{\partial  r}\]</div>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  s} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  s} + \frac{\partial w}{\partial z}\frac{\partial  z}{\partial  s}\]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>첫번째 편도함수는 <span class="arithmatex">\(s\)</span> 를 고정시킴으로써 <span class="arithmatex">\(r\)</span> 을 일독립변수와 삼매개변수에 대한 함성함수의 도함수의 <span class="arithmatex">\(t\)</span> 처럼 다룸으로써 얻을 수 있다. </p>
+<p>두번째 편도함수도 <span class="arithmatex">\(r\)</span> 를 고정시킴으로써 <span class="arithmatex">\(s\)</span> 을 일독립변수와 삼매개변수에 대한 함성함수의 도함수의 <span class="arithmatex">\(t\)</span> 처럼 다룸으로써 얻을 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ w = x + 2y + z ^{2}, x = \frac{r}{s}, y = r ^{2} + \ln s, z = 2r \]</div>
+<p>일때, <span class="arithmatex">\(\frac{\partial w}{\partial r}\)</span> 과 <span class="arithmatex">\(\frac{\partial w}{\partial s}\)</span> 을 구해보자. </p>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial  r} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  r} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  r} + \frac{\partial w}{\partial z}\frac{\partial  z}{\partial  r}\]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ = (1)(\frac{1}{s}) + (2)(2r) + (2z)(2) \]</div>
+<div class="arithmatex">\[ = \frac{1}{s} + 4r + (4r)(2) = \frac{1}{s} + 12r \]</div>
+<p>이다. </p>
+<p>그리고</p>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  s} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  s} + \frac{\partial w}{\partial z}\frac{\partial  z}{\partial  s}\]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ = (1)(-\frac{r}{s^2}) + (2)(\frac{1}{s}) + (2z)(0) = \frac{2}{s} - \frac{r}{s^2} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#837998682"><div class="admonition tldr" id="837998682">
+<p>이독립변수와 이매개변수에 대한 함성함수의 편도함수(chain rule) : 이변수 함수 <span class="arithmatex">\(w = f(x, y)\)</span> 가 미분가능하고 <span class="arithmatex">\(r, s\)</span> 에 대한 함수 <span class="arithmatex">\(x = x(r, s), y = y(r, s)\)</span> 가 미분가능하면,</p>
+<p>이 <span class="arithmatex">\(3\)</span> 가지 함수는 모두 미분 가능하고 <span class="arithmatex">\(w\)</span> 는 <span class="arithmatex">\(r\)</span> 과 <span class="arithmatex">\(s\)</span> 에 대하여 각각 다음의 편도함수를 가진다. </p>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial  r} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  r} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  r} \]</div>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial  s} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  s} + \frac{\partial w}{\partial y}\frac{\partial  y}{\partial  s} \]</div>
+</div></a>
+<a href="#8bd094a2a"><div class="admonition tldr" id="8bd094a2a">
+<p><span class="arithmatex">\(1\)</span> 개의 독립변수와 <span class="arithmatex">\(m\)</span> 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 <span class="arithmatex">\(x_1, x_2, \dots, x_m\)</span> 에 대한 다변수 함수 <span class="arithmatex">\(w = f(x_1, x_2, \dots, x_m)\)</span> 가 미분가능하고,</p>
+<p><span class="arithmatex">\(1\)</span> 개의 독립변수 <span class="arithmatex">\(p\)</span> 에 대한 함수 <span class="arithmatex">\(x_1, x_2, \dots, x_m\)</span> 도 미분가능하면,</p>
+<p><span class="arithmatex">\(w\)</span> 가 미분가능하고 <span class="arithmatex">\(p\)</span> 에 대한 함수들도 미분가능하며</p>
+<p>독립변수 <span class="arithmatex">\(p\)</span> 에 대한 편도함수는 다음과 같다. </p>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial p} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p} = \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p}\]</div>
+</div></a>
+<a href="#3d7890a38"><div class="admonition tldr" id="3d7890a38">
+<p><span class="arithmatex">\(n\)</span> 개의 독립변수와 <span class="arithmatex">\(1\)</span> 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : <span class="arithmatex">\(1\)</span> 개의 매개변수 <span class="arithmatex">\(x\)</span> 에 대한 일변수 함수 <span class="arithmatex">\(w = f(x)\)</span> 가 미분가능하고,</p>
+<p><span class="arithmatex">\(n\)</span> 개의 독립변수 <span class="arithmatex">\(p_1, p_2, \dots, p_n\)</span> 에 대한 다변수 함수 <span class="arithmatex">\(x\)</span> 도 미분가능하면,</p>
+<p><span class="arithmatex">\(w\)</span> 가 미분가능하고 <span class="arithmatex">\(p_1, p_2, \dots, p_n\)</span> 에 대한 함수 <span class="arithmatex">\(x\)</span> 도 미분가능하며</p>
+<p>각각의 독립변수에 대한 <span class="arithmatex">\(w\)</span> 의 편도함수는 다음과 같다. </p>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_1} \]</div>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_2} \]</div>
+<div class="arithmatex">\[ \vdots \]</div>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x}\frac{\partial  x}{\partial  p_n} \]</div>
+</div></a>
+<a href="#bdf99b8e7"><div class="admonition tldr" id="bdf99b8e7">
+<p><span class="arithmatex">\(n\)</span> 개의 독립변수와 <span class="arithmatex">\(m\)</span> 개의 매개변수에 대한 다변수 합성함수의 편도함수(chain rule) : 유한개의 매개변수 <span class="arithmatex">\(x_1, x_2, \dots, x_m\)</span> 에 대한 다변수 함수 <span class="arithmatex">\(w = f(x_1, x_2, \dots, x_m)\)</span> 가 미분가능하고,</p>
+<p><span class="arithmatex">\(n\)</span> 개의 독립변수 <span class="arithmatex">\(p_1, p_2, \dots, p_n\)</span> 에 대한 함수 <span class="arithmatex">\(x_1, x_2, \dots, x_m\)</span> 도 미분가능하면,</p>
+<p><span class="arithmatex">\(w\)</span> 가 미분가능하고 <span class="arithmatex">\(p_1, p_2, \dots, p_n\)</span> 에 대한 함수들도 미분가능하며</p>
+<p>각각의 독립변수에 대한 <span class="arithmatex">\(w\)</span> 의 편도함수는 다음과 같다. </p>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial p_1} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_1} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_1} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_1}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_1}\]</div>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial p_2} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_2} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_2} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_2}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_2}\]</div>
+<div class="arithmatex">\[ \vdots \]</div>
+<div class="arithmatex">\[ \frac{\partial  w}{\partial p_n} = \frac{\partial w}{\partial x_1}\frac{\partial  x_1}{\partial  p_n} + \frac{\partial w}{\partial x_2}\frac{\partial  x_2}{\partial  p_n} + \dots + \frac{\partial w}{\partial x_m}\frac{\partial  x_m}{\partial  p_n}= \sum_{k=1}^{m}\dfrac{\partial  w}{\partial x_k}\dfrac{\partial  x_k}{\partial p_n}\]</div>
+</div></a>
+<h2 id="_8">기울기 벡터와 방향도함수<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<a href="#c2bc49285"><div class="admonition tldr" id="c2bc49285">
+<p>스칼라장(scalar field) : 공간 상의 모든 점에 스칼라가 대응되어 있는 분포이다.</p>
+</div></a>
+<ul>
+<li>
+<p>유클리드 공간 <span class="arithmatex">\(\mathbb{R} ^{n}\)</span> 에서 스칼라장은 </p>
+<div class="arithmatex">\[ F: A \in \mathbb{R} ^{n} \to \mathbb{R}, (a_1, a_2, \dots, a_n) \mapsto a \]</div>
+<p>으로 정의되는 사상(함수) 로써 정의역 <span class="arithmatex">\(A\)</span> 의 모든 원소 <span class="arithmatex">\(x \in A\)</span> 에 스칼라(실수), 즉 <span class="arithmatex">\(F(x)\)</span> 를 대응시킨다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>공간 상의 온도 분포는 스칼라장의 일종이다.</p>
+<p>호수의 수압 분포도 스칼라장의 일종이다. </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Scalar_field.png/330px-Scalar_field.png"/></p>
+<p>위 그림은 스칼라장의 일종으로 색채에 대응하는 숫자를 색으로 표현한 것이다.</p>
+</li>
+</ul>
+<a href="#7932c4d29"><div class="admonition tldr" id="7932c4d29">
+<p>이변수함수의 <span class="arithmatex">\(u\)</span>-방향미분계수, 또는 <span class="arithmatex">\(u\)</span>-방향 순간변화율 : 데카르트 공간 <span class="arithmatex">\(\mathbb{R} ^{3}\)</span> 에서 정의된 이변수함수 <span class="arithmatex">\(f(x,y)\)</span> 와 한 점 <span class="arithmatex">\(P_0(x_0,y_0)\)</span> 와 단위벡터 <span class="arithmatex">\(u = u_1i+u_2j\)</span> 에 대한 극한값</p>
+<div class="arithmatex">\[ (D_uf)_{P_0} := \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{f(x_0+su_1, y_0 + su_2)-f(x_0,y_0)}{s} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>다음과 같이 표기하기도 한다.</p>
+<div class="arithmatex">\[ D_uf(P_0) := \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{f(x_0+su_1, y_0 + su_2)-f(x_0,y_0)}{s} \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(s\)</span> 는 점 <span class="arithmatex">\(P_0\)</span> 에서 <span class="arithmatex">\(u\)</span> 방향으로의 곡선의 길이를 뜻한다. </p>
+<p>그러므로 <span class="arithmatex">\(\dfrac{df}{ds}\)</span> 를 계산함으로써 <span class="arithmatex">\(P_0\)</span> 에서의 이변수함수 <span class="arithmatex">\(f\)</span> 의 순간변화율을 계산할 수 있는 것이다.</p>
+</li>
+<li>
+<p>편미분계수 <span class="arithmatex">\(f_x(x_0, y_0), f_y(x_0, y_0)\)</span> 은 각각 점 <span class="arithmatex">\(P_0\)</span> 에 대한 <span class="arithmatex">\(i\)</span>-방향미분계수, <span class="arithmatex">\(j\)</span>-방향미분계수 였던 것이다.</p>
+<p>일변수 함수에서는 방향이 오직 하나였지만, 다변수 함수에서는 방향이 무한하므로 벡터 <span class="arithmatex">\(u\)</span> 를 통하여 미분 방향, 즉 변화율을 조사할 방향을 설정해야 한다.</p>
+</li>
+<li>
+<p>기하학적 의미 </p>
+<p><img height="auto" src="https://user-images.githubusercontent.com/16812446/86775439-57dbc400-c092-11ea-94ea-ed93c3413888.png" width="70%"/></p>
+<blockquote>
+<p>출처 : <a href="https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078">Thomas' CALCULUS</a> Figure14.28</p>
+</blockquote>
+<p>위 그림과 같이 이변수 함수 <span class="arithmatex">\(z=f(x,y)\)</span> 는 곡면 <span class="arithmatex">\(S\)</span> 를 그린다.</p>
+<p><span class="arithmatex">\(z_0=f(x_0,y_0)\)</span> 으로 곡면 <span class="arithmatex">\(S\)</span> 위에 위치한 점 <span class="arithmatex">\(P(x_0,y_0,z_0)\)</span> 에서 수직평면 <span class="arithmatex">\(C\)</span> 가 벡터 <span class="arithmatex">\(u = u_1i+u_2j\)</span> 방향으로 곡면 <span class="arithmatex">\(S\)</span> 를 가로지르고 있다.</p>
+<p>벡터 <span class="arithmatex">\(u\)</span> 방향으로의 <span class="arithmatex">\(f\)</span> 의 변화율은 접평면 <span class="arithmatex">\(C\)</span> 가 점 <span class="arithmatex">\(P\)</span> 와 만나는 지점에서 <span class="arithmatex">\(u\)</span> 방향으로의 변화율을 뜻하는 것이다.</p>
+<p>만약 <span class="arithmatex">\(u=i\)</span> 라면 점 <span class="arithmatex">\(P_0\)</span> 에서의 방향미분계수, 즉 순간변화율은 <span class="arithmatex">\(\dfrac{\partial f}{\partial x} \bigg | _{(x_0, y_0)}\)</span> 과 같게 되는 것이다. 즉 <span class="arithmatex">\(x\)</span> 축 방향 벡터 <span class="arithmatex">\(u\)</span> 로의 <span class="arithmatex">\(f\)</span>의 순간변화율인 것이다.</p>
+<p>만약 <span class="arithmatex">\(u=j\)</span> 라면 점 <span class="arithmatex">\(P_0\)</span> 에서의 방향미분계수, 즉 순간변화율은 <span class="arithmatex">\(\dfrac{\partial f}{\partial y} \bigg | _{(x_0, y_0)}\)</span> 과 같게 되는 것이다. 즉 <span class="arithmatex">\(y\)</span> 축 방향 벡터 <span class="arithmatex">\(u\)</span> 로의 <span class="arithmatex">\(f\)</span>의 순간변화율인 것이다.</p>
+<p>방향미분계수는 이것을 일반화하여 임의의 방향 벡터 <span class="arithmatex">\(u\)</span> 로의 <span class="arithmatex">\(f\)</span>의 순간변화율을 계산할 수 있게 해주는 것이다.</p>
+<ul>
+<li>
+<p>한편 곡면 <span class="arithmatex">\(S\)</span> 의 점 <span class="arithmatex">\(P_0(x_0,y_0)\)</span> 에서 벡터 <span class="arithmatex">\(u\)</span> 방향으로의 직선을 <span class="arithmatex">\(xy\)</span> 평면에서 표현해보면 다음과 같다.</p>
+<p><img height="auto" src="https://user-images.githubusercontent.com/16812446/86777767-865a9e80-c094-11ea-8374-29a5d45204db.png" width="50%"/></p>
+<blockquote>
+<p>출처 : <a href="https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078">Thomas' CALCULUS</a> Figure14.27</p>
+</blockquote>
+<p>이 직선을 독립변수 <span class="arithmatex">\(s\)</span> 와 벡터 <span class="arithmatex">\(u=u_1i+u_2j\)</span> 에 대한 매개변수 방정식</p>
+<div class="arithmatex">\[ x = x_0+su_1, y = y_0 + su_2 \]</div>
+<p>으로 표현할 수 있다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>이변수함수 <span class="arithmatex">\(f(x,y) = x ^{2}+xy\)</span> 의 점 <span class="arithmatex">\(P_0(1,2)\)</span> 에서 벡터 <span class="arithmatex">\(u = (1/\sqrt[]{2})i+(1/\sqrt[]{2})j\)</span> 방향의 순간변화율을 구해보자.</p>
+<p>방향미분계수의 정의에 따라</p>
+<div class="arithmatex">\[ \bigg (\dfrac{df}{ds}\bigg )_{u,P_0} = \lim_{s \to 0} \dfrac{f(x_0+su_1, y_0 + su_2)-f(x_0,y_0)}{s} \]</div>
+<div class="arithmatex">\[ = \lim_{s \to 0} \dfrac{f(1+s \cdot \dfrac{1}{\sqrt[]{2}}, 2 + s \cdot \dfrac{1}{\sqrt[]{2}})-f(1,2)}{s} \]</div>
+<div class="arithmatex">\[ = \lim_{s \to 0} \dfrac{\bigg (1+s \cdot \dfrac{1}{\sqrt[]{2}} \bigg ) ^{2}+\bigg (1+s \cdot \dfrac{1}{\sqrt[]{2}} \bigg )\bigg (2 + s \cdot \dfrac{1}{\sqrt[]{2}}\bigg ) -3}{s} \]</div>
+<div class="arithmatex">\[ = \lim_{s \to 0} \dfrac{\dfrac{5s}{\sqrt[]{2}}+s ^{2}}{s} = \lim_{s \to 0} \bigg (\dfrac{5}{\sqrt[]{2}}+s\bigg ) = \dfrac{5}{\sqrt[]{2}}\]</div>
+<p>이다. ■</p>
+</li>
+</ul>
+<a href="#28c78afb9"><div class="admonition tldr" id="28c78afb9">
+<p>이변수함수의 방향도함수 : 데카르트 공간 <span class="arithmatex">\(\mathbb{R} ^{3}\)</span> 에서 정의된 이변수함수 <span class="arithmatex">\(f(x,y)\)</span> 단위벡터 <span class="arithmatex">\(u = u_1i+u_2j\)</span> 에 대하여</p>
+<p><span class="arithmatex">\(f\)</span> 의 정의역의 각 원소를 <span class="arithmatex">\(u\)</span>-방향미분계수에 대응시켜 만든 함수</p>
+<div class="arithmatex">\[ D_uf := \bigg (\dfrac{df}{ds}\bigg )_{u} = \lim_{s \to 0} \dfrac{f(x+su_1, y+ su_2)-f(x,y)}{s} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이때 <span class="arithmatex">\(x, y\)</span> 를 벡터 <span class="arithmatex">\(u = u_1i+u_2j\)</span> 방향으로 향하는 직선</p>
+<div class="arithmatex">\[ x = x_0 + su_1, y = y_0 + su_2 \]</div>
+<p>으로 한정시키자. 그래도 이변수 함수 <span class="arithmatex">\(f(x,y)\)</span> 의 벡터 <span class="arithmatex">\(u\)</span> 방향으로의 순간변화율을 구하기에 충분하다. 그러면 <span class="arithmatex">\(f\)</span> 의 <span class="arithmatex">\(u\)</span> 방향으로의 순간변화율은 독립변수 <span class="arithmatex">\(s\)</span> 에 의존하는 <span class="arithmatex">\(x,y\)</span> 를 변수로 갖는 이독립변수 일매개변수의 합성함수 미분으로 구할 수 있게 된다. 그러므로 </p>
+<div class="arithmatex">\[ \bigg (\dfrac{df}{ds}\bigg )_{u} = \bigg (\dfrac{\partial f}{\partial x}\bigg )\dfrac{dx}{ds}+\bigg (\dfrac{\partial f}{\partial y}\bigg )\dfrac{dy}{ds} \]</div>
+<p>인데 <span class="arithmatex">\(x = x_0 + su_1\)</span> 를 <span class="arithmatex">\(s\)</span> 에 대하여 미분하면 <span class="arithmatex">\(\dfrac{dx}{ds} = u_1\)</span> 이고 <span class="arithmatex">\(y = y_0 + su_2\)</span> 를 <span class="arithmatex">\(s\)</span> 에 대하여 미분하면 <span class="arithmatex">\(\dfrac{dy}{ds} = u_2\)</span> 이므로</p>
+<div class="arithmatex">\[ = \bigg (\dfrac{\partial f}{\partial x}\bigg )u_1+\bigg (\dfrac{\partial f}{\partial y}\bigg )u_2 \]</div>
+<p>인데 이것을 벡터 <span class="arithmatex">\(\bigg &lt;\dfrac{\partial f}{\partial x}, \dfrac{\partial f}{\partial y}\bigg &gt;\)</span> 와 벡터 <span class="arithmatex">\(\big &lt;u_1,u_2\big &gt;\)</span> 내적으로 표현하면</p>
+<div class="arithmatex">\[ = \bigg[ \bigg (\dfrac{\partial f}{\partial x}\bigg )i+\bigg (\dfrac{\partial f}{\partial y}\bigg )j \bigg ]\cdot \bigg [u_1i+u_2j\bigg ] = \nabla f \cdot u = \text{grad}\ f \cdot u \]</div>
+<p>이다.</p>
+<ul>
+<li>이것은 다변수함수 <span class="arithmatex">\(f\)</span> 의 <span class="arithmatex">\(u\)</span> 방향의 미분이 벡터 <span class="arithmatex">\(u\)</span> 와 기울기벡터의 내적임을 알려준다.</li>
+</ul>
+</li>
+</ul>
+<a href="#53872e4ae"><div class="admonition tldr" id="53872e4ae">
+<p>방향도함수의 계산 : 단위벡터 <span class="arithmatex">\(u\)</span> 방향의 방향도함수의 계산은 기울기 벡터 <span class="arithmatex">\(\nabla f\)</span> 와 벡터 <span class="arithmatex">\(u\)</span> 와 두 벡터가 이루는 각 <span class="arithmatex">\(\theta\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u = |\nabla f|\cos \theta \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<div class="arithmatex">\[ \bigg (\dfrac{df}{ds}\bigg )_{u} = D_uf = \nabla f \cdot u \]</div>
+<p>을 유도하는 과정은 이변수함수의 방향도함수에서 이미 다루었다.</p>
+<p>두 벡터 <span class="arithmatex">\(u, v\)</span> 가 이루는 코사인 유사도 <span class="arithmatex">\(\cos  \theta = \dfrac{u \cdot v}{|u||v|}\)</span> 에 두 벡터 <span class="arithmatex">\(\nabla f, u\)</span> 를 적용하면</p>
+<div class="arithmatex">\[ \cos \theta = \dfrac{\nabla f \cdot u}{|\nabla f||u|} \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \nabla f \cdot u = |\nabla f||u| \cos \theta \]</div>
+<p>를 얻는다. 따라서</p>
+<div class="arithmatex">\[ D_uf = \nabla f \cdot u = |\nabla f||u| \cos \theta \]</div>
+<p>에서 <span class="arithmatex">\(u\)</span> 는 단위벡터이므로 <span class="arithmatex">\(|u|=1\)</span> 을 이용하여</p>
+<div class="arithmatex">\[ \therefore D_uf = |\nabla f| \cos \theta \]</div>
+<p>를 얻는다. ■ </p>
+</li>
+<li>
+<p><strong>가장 급격하게 변화하는 방향으로의 방향도함수</strong></p>
+<p>방향도함수가 결국 </p>
+<div class="arithmatex">\[ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f|\cos \theta \]</div>
+<p>이므로 방향도함수의 방향을 나타내는 벡터 <span class="arithmatex">\(u\)</span> 와 기울기 벡터 <span class="arithmatex">\(\nabla f\)</span> 가 이루는 각 <span class="arithmatex">\(\theta\)</span> 가 <span class="arithmatex">\(0\)</span> 일때 방향도함수 값이 최대가 된다. 즉, 다변수 함수의 변화율이 최대가 된다. </p>
+<p>왜냐하면 <span class="arithmatex">\(\cos \theta\)</span> 함수값은 폐구간 <span class="arithmatex">\([-1, 1]\)</span> 에서 존재하는데, 최댓값 <span class="arithmatex">\(1\)</span> 을 내기 위해서는 <span class="arithmatex">\(\theta = 0\)</span> 이어야 하기 때문이다. </p>
+<p>이는 곧 방향도함수의 방향 <span class="arithmatex">\(u\)</span> 가 기울기벡터 <span class="arithmatex">\(\nabla f\)</span> 와 이루는 각이 <span class="arithmatex">\(0 \degree\)</span>, 즉 두 벡터가 동일할 때 다변수함수의 변화율이 가장 크다는 뜻이다.</p>
+<p>이것은 기울기벡터 <span class="arithmatex">\(\nabla f = \text{grad}\ f\)</span> 는 다변수 함수의 최대변화율의 방향을 나타내고 있다는 것이다.</p>
+</li>
+<li>
+<p><strong>가장 급격하게 감소하는 방향으로의 방향도함수</strong></p>
+<p>반대로 다변수 함수 <span class="arithmatex">\(f\)</span> 가 가장 급격하게 감소하는 방향벡터 <span class="arithmatex">\(u\)</span> 를 구해보자. 마찬가지로 방향도함수의 계산이 </p>
+<div class="arithmatex">\[ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f|\cos \theta \]</div>
+<p>인데 <span class="arithmatex">\(\cos \theta\)</span> 이 폐구간 <span class="arithmatex">\([-1, 1]\)</span> 에 존재하므로 <span class="arithmatex">\(\cos \theta = -1\)</span> 을 내기 위하여 방향벡터 <span class="arithmatex">\(u\)</span> 가 기울기 벡터 <span class="arithmatex">\(\nabla f\)</span> 와 이루는 각이 <span class="arithmatex">\(\theta=\pi\)</span> 가 되어야 한다.</p>
+<p>즉, 방향벡터 <span class="arithmatex">\(u\)</span> 가 기울기벡터와 정반대방향을 향하면 방향도함수가</p>
+<div class="arithmatex">\[ \bigg (\dfrac{df}{ds}\bigg )_{u} = -|\nabla f|\]</div>
+<p>가 되어 가장 급격하게 감소하는 방향으로의 변화율을 구할 수 있게 된다.</p>
+</li>
+<li>
+<p><strong>변하지않는 방향으로의 방향도함수</strong></p>
+<p>다변수 함수 <span class="arithmatex">\(f\)</span> 가 변하지 않는 방향으로의 방향벡터 <span class="arithmatex">\(u\)</span> 를 구해보자. 방향도함수의 계산이 </p>
+<div class="arithmatex">\[ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f|\cos \theta \]</div>
+<p>인데 <span class="arithmatex">\(\cos \theta\)</span> 이 폐구간 <span class="arithmatex">\([-1, 1]\)</span> 에 존재하므로 <span class="arithmatex">\(\cos \theta = 0\)</span> 이면 즉, 방향벡터 <span class="arithmatex">\(u\)</span> 가 기울기벡터와 직교하면 방향도함수가</p>
+<div class="arithmatex">\[ \bigg (\dfrac{df}{ds}\bigg )_{u} = |\nabla f| \cdot 0\]</div>
+<p>이 되어 변하지 않는 방향으로의 방향벡터 <span class="arithmatex">\(u\)</span> 를 구할 수 있게 된다. 이 조건은 <span class="arithmatex">\(\theta= \dfrac{\pi }{2} = 90 \degree\)</span> 이므로 결국 방향벡터 <span class="arithmatex">\(u\)</span> 와 기울기벡터 <span class="arithmatex">\(\nabla f\)</span> 가 직교하는 방향으로 향할 때 변하지 않는 방향으로의 변화율을 구할 수 있는 것이다.</p>
+</li>
+<li>
+<p>예시</p>
+<p>이변수함수 <span class="arithmatex">\(f(x, y) = xe ^{y}+\cos (xy)\)</span> 의 벡터 <span class="arithmatex">\(v = 3i-4j\)</span> 방향의 방향도함수의 점 <span class="arithmatex">\((2,0)\)</span> 에서의 방향미분계수를 구해보자.</p>
+<p>먼저 벡터 <span class="arithmatex">\(v\)</span> 를 단위벡터로 바꾸면 <span class="arithmatex">\(u = \dfrac{v}{|v|}=\dfrac{v}{5}=\dfrac{3}{5}i-\dfrac{4}{5}j\)</span>, 즉 <span class="arithmatex">\(\bigg &lt;\dfrac{3}{5},-\dfrac{4}{5}\bigg &gt;\)</span> 이다.</p>
+<p>또 기울기 벡터는 </p>
+<div class="arithmatex">\[ \bigg &lt;\dfrac{\partial  f}{\partial x},\dfrac{\partial f}{\partial y}\bigg &gt; = \big &lt; e ^{y}-y \sin (xy), x e ^{y}-x \sin (xy) \big &gt; \]</div>
+<p>이다.</p>
+<p>그러므로 방향도함수는 </p>
+<div class="arithmatex">\[ D_uf = \big &lt; e ^{y}-y \sin (xy), x e ^{y}-x \sin (xy) \big &gt; \cdot \bigg &lt;\dfrac{3}{5},-\dfrac{4}{5}\bigg &gt;\]</div>
+<div class="arithmatex">\[ = \dfrac{3}{5}(e ^{y}-y \sin (xy))-\dfrac{4}{5}(x e ^{y}-x \sin (xy)) \]</div>
+<p>이다. 따라서 점 <span class="arithmatex">\((2,0)\)</span> 에서 벡터 <span class="arithmatex">\(v\)</span> 방향으로의 방향미분계수는</p>
+<div class="arithmatex">\[ D_uf \bigg | _{(2,0)} = \dfrac{3}{5}(e ^{0}-0 \cdot \sin (2 \cdot 0))-\dfrac{4}{5}(2 \cdot e ^{0}- 2 \sin (2 \cdot 0)) \]</div>
+<div class="arithmatex">\[ = \dfrac{3}{5}(1 - 0) - \dfrac{4}{5}(2 - 0) = \dfrac{3-8}{5} = -1 \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<h2 id="_9">삼각함수로 정의한 방향도함수<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
+<a href="#f907ef304"><div class="admonition tldr" id="f907ef304">
+<p>삼각함수로 정의한 이변수 함수의 방향도함수(directional derivative) : 스칼라 함수 <span class="arithmatex">\(f(x, y)\)</span> 에 대하여 단위벡터 <span class="arithmatex">\(u = \big &lt; \cos \theta , \sin \theta \big &gt;\)</span> 방향의 방향도함수는 </p>
+<p>함수 <span class="arithmatex">\(f\)</span> 의 벡터 <span class="arithmatex">\(u\)</span> 방향으로의 순간변화율로써</p>
+<div class="arithmatex">\[ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h}  \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>위 정의는 다음 그림과 같이</p>
+<p><img alt="캡처" src="https://user-images.githubusercontent.com/16812446/79028349-9a445080-7bca-11ea-8ac9-596994fdd522.PNG"/></p>
+<p><a href="https://www.youtube.com/watch?v=ehrGmxqQsjo&amp;t=98s">https://www.youtube.com/watch?v=ehrGmxqQsjo&amp;t=98s</a></p>
+<p>단위벡터 <span class="arithmatex">\(u = \big &lt; \cos \theta , \sin \theta \big &gt;\)</span> 의 방향이 <span class="arithmatex">\(x\)</span> 축과 이루는 각이 <span class="arithmatex">\(\theta\)</span> 이고 두 점 <span class="arithmatex">\(P, Q\)</span> 와 의 거리를 <span class="arithmatex">\(h\)</span> 로 두었을 때</p>
+<div class="arithmatex">\[ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \cos (\frac{\pi }{2}-\theta) )-f(x, y)}{h} \]</div>
+<p>와 같이 정의된 방향도함수에서 </p>
+<div class="arithmatex">\[ \cos \bigg  (\frac{\pi }{2} - \theta \bigg ) = \sin \theta \]</div>
+<p>를 사용하여 간단하게 만든 것이다. </p>
+</li>
+<li>
+<p>증명</p>
+<p>위 그래프의 점 <span class="arithmatex">\(P, Q\)</span> 의 거리를 <span class="arithmatex">\(h\)</span> 라 하고 두 점을 <span class="arithmatex">\(xy\)</span> 평면으로 내려 떨어뜨리면</p>
+<p><img alt="캡처" src="https://user-images.githubusercontent.com/16812446/79028367-ae884d80-7bca-11ea-9268-0e46b10e1dd6.PNG"/></p>
+<p><a href="https://www.youtube.com/watch?v=ehrGmxqQsjo&amp;t=98s">https://www.youtube.com/watch?v=ehrGmxqQsjo&amp;t=98s</a></p>
+<p>이와 같이 되는 것을 생각하자. 노란선이 단위 벡터 <span class="arithmatex">\(u\)</span> 의 방향을 나타내며 지금 우리의 목적은 이 방향으로의 함수 <span class="arithmatex">\(f\)</span> 의 변화율을 구하는 것이다. </p>
+<p>이제 기존의 도함수의 정의</p>
+<div class="arithmatex">\[ \lim_{h \to 0} \frac{f(x + \Delta x, y + \Delta y )-f(x, y)}{h} \]</div>
+<p>에서 <span class="arithmatex">\(\Delta x, \Delta y\)</span> 를 푸는 것이 목적이다. </p>
+<p>단위벡터 <span class="arithmatex">\(u\)</span> 의 방향이 <span class="arithmatex">\(x\)</span> 축으로부터 <span class="arithmatex">\(\theta\)</span> 만큼 벌어져있기 때문에 위 그림처럼 한 각을 <span class="arithmatex">\(\theta\)</span> 로 하고 밑변과 높이의 길이를 <span class="arithmatex">\(\Delta x, \Delta y\)</span> 로 하는 직각 삼각형을 생각할 수 있다. 위 그림에서 빨간색 직각삼각형이 그것이다. </p>
+<p>이 직각삼각형의 빗변의 길이는 두 점 <span class="arithmatex">\(P, Q\)</span> 와의 거리와 같으므로 <span class="arithmatex">\(h\)</span> 이다. </p>
+<p>이때 이 직각삼각형의 한 각 <span class="arithmatex">\(\theta\)</span> 에서 <span class="arithmatex">\(\cos \theta\)</span> 는 <span class="arithmatex">\(\theta\)</span> 를 기준으로 빗변에 대한 밑변의 비율이기 때문에</p>
+<div class="arithmatex">\[ \cos \theta = \frac{\Delta x}{h} \]</div>
+<p>에서</p>
+<div class="arithmatex">\[ \therefore \Delta x = h \cdot \cos \theta \]</div>
+<p>이다. 또한 이 직각삼각형의 한 각 <span class="arithmatex">\(\theta\)</span> 에서 <span class="arithmatex">\(\sin \theta\)</span> 는 <span class="arithmatex">\(\theta\)</span> 를 기준으로 빗변에 대한 높이의 비율이기 때문에</p>
+<div class="arithmatex">\[ \sin \theta = \frac{\Delta y}{h} \]</div>
+<p>에서</p>
+<div class="arithmatex">\[ \therefore \Delta y = h \cdot \sin \theta \]</div>
+<p>이다.</p>
+<p>따라서 최종적으로 단위벡터 <span class="arithmatex">\(u = \big &lt; \cos \theta , \sin \theta \big &gt;\)</span> 의 방향에서 점 <span class="arithmatex">\(Q\)</span> 가 점 <span class="arithmatex">\(P\)</span> 에 한없이 다가갈 때, 즉 두 점의 거리 <span class="arithmatex">\(h\)</span> 가 <span class="arithmatex">\(0\)</span> 에 한없이 다가갈 때 일반적인 도함수의 정의는</p>
+<div class="arithmatex">\[ \lim_{h \to 0} \frac{f(x + \Delta x, y + \Delta y )-f(x, y)}{h} \]</div>
+<p>으로부터</p>
+<div class="arithmatex">\[ \therefore  D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} \]</div>
+<p>가 된다.</p>
+</li>
+<li>
+<p>따라서 <span class="arithmatex">\(x\)</span> 축과 이루는 각이 <span class="arithmatex">\(\alpha\)</span> 이고 <span class="arithmatex">\(y\)</span> 축과 이루는 각이 <span class="arithmatex">\(\beta\)</span> 일 때 </p>
+<div class="arithmatex">\[ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \alpha  , y + h \cos  \beta  )-f(x, y)}{h} \]</div>
+<p>라고 하기도 한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\dfrac{\partial f}{\partial x}\)</span> 의 기하학적 의미를 기억하자. </p>
+<p><img alt="2v" src="https://user-images.githubusercontent.com/16812446/78995906-63e0e400-7b7e-11ea-9f1e-76382bc9c548.jpg"/></p>
+<p>그것은 위 그림의 왼쪽 그래프와 같이 곡면 <span class="arithmatex">\(f(x, y)\)</span> 와 <span class="arithmatex">\(x\)</span> 축에 평행한 평면과의 교선의 접선의 기울기였다. </p>
+<p>그러한 교선은 수없이 많은데 <span class="arithmatex">\(y\)</span> 에 따라 점 <span class="arithmatex">\(P(x_0, y_0)\)</span> 가 상주하고 있는 교선을 얻었다고 하자.</p>
+<p>이제 이 교선에서 <span class="arithmatex">\(x\)</span> 에 따라 점 <span class="arithmatex">\(P\)</span> 가 결정되어서 이 <span class="arithmatex">\(P\)</span> 에서 <span class="arithmatex">\(x\)</span> 축에 평행한 접선의 기울기가 편미분계수 </p>
+<div class="arithmatex">\[ \frac{\partial f}{\partial x} \bigg | _{(x_0, x_0)} \]</div>
+<p>의 의미였다. </p>
+<p>그리고 그러한 특수한 점 <span class="arithmatex">\(P(x_0, y_0)\)</span> 을 일반화하여 일반적인 점 <span class="arithmatex">\(P(x, y)\)</span> 로 만들자. 이 독립변수 <span class="arithmatex">\(x, y\)</span> 로 결정되는 점 <span class="arithmatex">\(P\)</span> 에 따른 기울기를 함수로 표현한 것이 </p>
+<div class="arithmatex">\[ \frac{\partial f}{\partial x} \]</div>
+<p>의 의미였고 이것을 <span class="arithmatex">\(x\)</span> 에 관한 편도함수라고 불렀다. </p>
+<p>그런데 <span class="arithmatex">\(\dfrac{\partial f}{\partial x}\)</span> 을 벡터의 관점에서 표현하면 "함수 <span class="arithmatex">\(f\)</span> 의 표준 단위 벡터 <span class="arithmatex">\(i\)</span> 방향으로의 변화율" 이라고 표현 할 수 있다. </p>
+<ul>
+<li>
+<p>표준 단위 벡터 <span class="arithmatex">\(i\)</span> 는 <span class="arithmatex">\(\big &lt;1, 0, 0 \big &gt;\)</span> 이었고 이것은 <span class="arithmatex">\(x\)</span> 축 상의 단위벡터 였다.</p>
+<p>그런데 <span class="arithmatex">\(x\)</span> 에 관한 편도함수는 곡면을 <span class="arithmatex">\(x\)</span> 축과 평행하도록 잘라서 교선을 얻어서 그 위의 기울기를 구하는 것과 같다. </p>
+<p>또한 편도함수는 도함수의 일종이고 도함수는 함수의 변화율을 나타내는 것임을 기억하자.</p>
+<p>그렇다면 결론적으로 </p>
+<div class="arithmatex">\[\frac{\partial f}{\partial x}\]</div>
+<p>를 "<span class="arithmatex">\(x\)</span> 축과 평행하도록 교선을 만든다" 고 할 수 있고 </p>
+<p>이것을 다시 "함수 <span class="arithmatex">\(f\)</span> 의 벡터 <span class="arithmatex">\(i\)</span> 방향으로의 변화율" 을 구한다고 표현할 수 있다. </p>
+</li>
+<li>
+<p>따라서 <span class="arithmatex">\(\dfrac{\partial f}{\partial x}\)</span> 을 또 다시 방향도함수의 정의에 따라서 "함수 <span class="arithmatex">\(f\)</span> 의 벡터 <span class="arithmatex">\(i\)</span> 방향의 방향도함수" 라고도 표현할 수 있다. </p>
+<p>즉 함수 <span class="arithmatex">\(f\)</span> 의 <span class="arithmatex">\(x\)</span> 에 대한 편도함수는 방향도함수의 벡터 <span class="arithmatex">\(i\)</span> 방향으로의 아주 특수한 경우라고 할 수 있다. </p>
+</li>
+<li>
+<p>그러면 <span class="arithmatex">\(\dfrac{\partial f}{\partial y}\)</span> 도 마찬가지로 방향도함수의 정의에 따라서 "함수 <span class="arithmatex">\(f\)</span> 의 벡터 <span class="arithmatex">\(j\)</span> 방향의 방향도함수" 라고도 표현할 수 있다. </p>
+<p>표준 단위 벡터 <span class="arithmatex">\(j\)</span> 는 <span class="arithmatex">\(\big &lt;0, 1, 0 \big &gt;\)</span> 이었고 이것은 <span class="arithmatex">\(y\)</span> 축 상의 단위벡터 였다.</p>
+<p>즉 함수 <span class="arithmatex">\(f\)</span> 의 <span class="arithmatex">\(y\)</span> 에 대한 편도함수는 방향도함수의 벡터 <span class="arithmatex">\(j\)</span> 방향으로의 아주 특수한 경우라고 할 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\theta = 0\)</span> 일 때, 즉 <span class="arithmatex">\(u = i = \big &lt; 1, 0\big &gt;\)</span> 일 때, 그러니까 단위벡터 <span class="arithmatex">\(u\)</span> 의 방향이 <span class="arithmatex">\(x\)</span> 축 일때,</p>
+<p>함수 <span class="arithmatex">\(f(x, y)\)</span> 의 방향도함수는</p>
+<div class="arithmatex">\[ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} \]</div>
+<p>에서</p>
+<div class="arithmatex">\[ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h , y )-f(x, y)}{h} \]</div>
+<p>가 된다. </p>
+<p>이것은 이변수 함수의 <span class="arithmatex">\(x\)</span> 에 대한 편도함수</p>
+<div class="arithmatex">\[ \frac{\partial f}{\partial x} \]</div>
+<p>의 정의와 같다.</p>
+<p>그러므로 <span class="arithmatex">\(x\)</span> 에 대한 편도함수는 방향도함수의 매우 특수한 경우인 것이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\theta = \frac{\pi}{2}\)</span> 일 때, 즉 <span class="arithmatex">\(u = j = \big &lt; 0, 1\big &gt;\)</span> 일 때, 그러니까 단위벡터 <span class="arithmatex">\(u\)</span> 의 방향이 <span class="arithmatex">\(y\)</span> 축일 때,</p>
+<p>함수 <span class="arithmatex">\(f(x, y)\)</span> 의 방향도함수는</p>
+<div class="arithmatex">\[ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} \]</div>
+<p>에서</p>
+<div class="arithmatex">\[ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x , y + h )-f(x, y)}{h} \]</div>
+<p>가 된다. </p>
+<p>이것은 이변수 함수의 <span class="arithmatex">\(x\)</span> 에 대한 편도함수</p>
+<div class="arithmatex">\[ \frac{\partial f}{\partial y} \]</div>
+<p>의 정의와 같다.</p>
+</li>
+</ul>
+<a href="#2754ef4e3"><div class="admonition tldr" id="2754ef4e3">
+<p>기울기 벡터(gradient vector, gradient) : 스칼라 함수 <span class="arithmatex">\(f(x, y)\)</span> 의 기울기는 벡터함수 </p>
+<div class="arithmatex">\[ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j =  \bigg &lt;\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg &gt; \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>다음과 같이 표기하기도 한다.</p>
+<div class="arithmatex">\[  \nabla f(x, y) = \bigg &lt; f_x(x, y), f_y(x, y) \bigg &gt; \]</div>
+</li>
+<li>
+<p>기울기 벡터는 함수의 증가율이 최대가 되는 방향, 즉 스칼라장의 최대 증가율을 나타내는 벡터장이다. </p>
+<ul>
+<li>
+<p>증명</p>
+<p>방향도함수는 한 지점에서 함수의 무수히 많은 방향으로의 순간변화율을 알려준다. 지금의 목표는 방향도함수 값이 최대가 되는 방향의 단위벡터를 찾는 것이다. 그러면 그 방향으로의 순간변화율이 함수를 가장 많이 변화시키는 방향이 된다. </p>
+<p>임의의 방향의 단위 벡터 <span class="arithmatex">\(v\)</span> 에 대한 이 방향도함수의 계산은 다음과 같았다.</p>
+<div class="arithmatex">\[ D _{u}f (x, y) = \nabla f \cdot v \]</div>
+<p>이때 두 벡터 <span class="arithmatex">\(\nabla f, v\)</span> 가 이루는 각이 <span class="arithmatex">\(\theta\)</span> 일 때 두 벡터가 이루는 각을 이용한 내적의 계산법에 의하여</p>
+<div class="arithmatex">\[ \nabla f \cdot v = |\nabla f||v| \cos \theta \]</div>
+<p>이다. </p>
+<p>그런데 <span class="arithmatex">\(\cos \theta\)</span> 는 폐구간 <span class="arithmatex">\([-1, 1]\)</span> 에서 정의되므로 방향도함수 값이 최대가 되려면 </p>
+<div class="arithmatex">\[ \cos \theta = 1 \to \theta = 0 \]</div>
+<p>이어야 한다. </p>
+<p>이것은 곧 두 벡터 <span class="arithmatex">\(\nabla f, v\)</span> 가 이루는 각이 <span class="arithmatex">\(0\)</span> 일 때, 즉 두 벡터가 똑같을 때 방향도함수 값이 최대가 됨을 뜻한다. </p>
+<p>다시말해서 임의의 방향으로의 단위벡터 <span class="arithmatex">\(v\)</span> 가 기울기 벡터 <span class="arithmatex">\(\nabla f\)</span> 의 방향과 같을 때 방향도함수 값을 최대가 되고, 그 방향으로의 순간변화율이 함수를 가장 많이 변화시킨다. </p>
+<p>그러므로 기울기 벡터 <span class="arithmatex">\(\nabla f\)</span> 의 방향이 함수의 증가율이 최대가 되는 방향을 가르킨다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>다음 그림에서</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Gradient2.svg/450px-Gradient2.svg.png"/></p>
+<p>회색의 밝기가 큰 스칼라를 나타낸다. 이때 화살표는 기울기, 즉 스칼라장에서 최대 증가율을 나타낸다.</p>
+</li>
+<li>
+<p>형렬적 표기로</p>
+<div class="arithmatex">\[ \nabla f(x, y) = \begin{bmatrix} \dfrac{\partial f}{\partial x}\\ \\ \dfrac{\partial f}{\partial y} \end{bmatrix} \]</div>
+<p>로 쓸 수 있고 표준 단위 벡터 <span class="arithmatex">\(i = \big &lt;1, 0 \big &gt;, j = \big &lt; 0, 1\big &gt;\)</span> 를 각각 다음의 행렬로 표기할 수 있다. </p>
+<div class="arithmatex">\[ \begin{bmatrix} 1\\0 \end{bmatrix} , \begin{bmatrix} 0\\1 \end{bmatrix} \]</div>
+<p>이 행렬의 스칼라배로써 </p>
+<div class="arithmatex">\[ \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j \]</div>
+<p>의 표기가 나온 것이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(f(x, y, z) = xy ^{2} + 2x ^{2} + z ^{3}\)</span> 일 때 <span class="arithmatex">\(\nabla f(1, 2, 3)\)</span> 를 구해보자. </p>
+<p>먼저 기울기 벡터는 </p>
+<div class="arithmatex">\[ \nabla f = \bigg &lt; \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z} \bigg &gt; \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ = \bigg &lt; y ^{2}+4x, 2xy, 3z ^{2} \bigg &gt; \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore \nabla f(1, 2, 3) = \big &lt; 8, 4, 27\big &gt; \]</div>
+</li>
+</ul>
+<a href="#a6e52edd0"><div class="admonition tldr" id="a6e52edd0">
+<p>기울기 벡터 방향의 단위벡터 : 기울기 벡터 <span class="arithmatex">\(\nabla f\)</span> 방향으로의 단위벡터는</p>
+<div class="arithmatex">\[ \frac{\nabla f}{|\nabla f|} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p>임의의 벡터 <span class="arithmatex">\(v\)</span> 방향으로의 단위벡터는</p>
+<div class="arithmatex">\[ \frac{v}{|v|} \]</div>
+<p>이므로 기울기 벡터 <span class="arithmatex">\(\nabla f\)</span> 방향으로의 단위벡터는</p>
+<div class="arithmatex">\[ \therefore \frac{\nabla f}{|\nabla f|} \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>방향도함수에서 최대증가율을 의미하는 기울기벡터를 사용하여 함수가 최대로 변화는 방향을 알고 싶다고 하자.</p>
+<p>그런데 기울기벡터에는 그것이 단위벡터라는 보장이 없다. 하지만 방향도함수는 단위 벡터를 사용해야 한다. </p>
+<p>따라서 기울기 벡터를 단위벡터로 만들어주는 정규화과정을 거쳐야 한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>삼변수함수 <span class="arithmatex">\(f(x,y,z) = x ^{2}yz\)</span> 의 점 <span class="arithmatex">\((1, 1, 1)\)</span> 에서 변화율이 최대인 방향을 가르키는 단위벡터 <span class="arithmatex">\(\overrightarrow{u}\)</span> 를 구하자. </p>
+<p>먼저 기울기 벡터 </p>
+<div class="arithmatex">\[ \nabla f(x, y, z) = \big &lt; 2xyz, x ^{2}z, x ^{2}y \big &gt; \]</div>
+<p>에서</p>
+<div class="arithmatex">\[ \therefore \overrightarrow{u} = \frac{\nabla f(1, 1, 1)}{|\nabla f(1, 1, 1)|} = \frac{\big &lt; 2, 1, 1 \big &gt; }{\bigg |\big &lt; 2, 1, 1 \big &gt; \bigg |} = \frac{\big &lt;2, 1, 1 \big &gt;}{\sqrt[]{6}} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#90960684c"><div class="admonition tldr" id="90960684c">
+<p>방향도함수의 계산 : 이변수 함수 <span class="arithmatex">\(z = f(x, y)\)</span> 가 <span class="arithmatex">\(x, y\)</span> 에 관한 편도함수를 각각 가지면 임의의 단위벡터 <span class="arithmatex">\(u = \big &lt; \cos \theta, \sin \theta \big &gt;\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ D _{u}f(x, y) = f_x(x, y) \cos \theta + f_y(x, y) \sin \theta \]</div>
+<p>또는 </p>
+<div class="arithmatex">\[ D _{u}f(x, y) = \frac{\partial f}{\partial x} \cos \theta + \frac{\partial f}{\partial y} \sin \theta \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 관계식은 기울기벡터의 정의 </p>
+<div class="arithmatex">\[ \text{grad} f = \nabla f =  \bigg &lt;\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg &gt; \]</div>
+<p>와 단위벡터 <span class="arithmatex">\(u = \big &lt; \cos \theta, \sin \theta \big &gt;\)</span> 의 내적을 이용하여 더욱 간단하게 </p>
+<div class="arithmatex">\[ D _{u}f(x, y) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg &lt;\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\bigg &gt; \cdot u \]</div>
+<p>으로 표현할 수 있다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>함수 <span class="arithmatex">\(g(t) = f(x + t \cos \theta, y + t \sin \theta)\)</span> 를 정의하자. 그리고 편의상 <span class="arithmatex">\(A = x + t \cos \theta, B = y + t \sin \theta\)</span> 로 두자. 그러면 </p>
+<div class="arithmatex">\[ g(t) = f(A, B) \]</div>
+<p>이다. 이제 함수 <span class="arithmatex">\(g(t)\)</span> 를 미분하자. <span class="arithmatex">\(g(t)\)</span> 는 일독립변수 <span class="arithmatex">\(t\)</span> 와 이매개변수 <span class="arithmatex">\(A, B\)</span> 에 대한 합성함수이므로 </p>
+<div class="arithmatex">\[ g'(t) = \frac{d}{dt}f(A, B) = \frac{\partial }{\partial A}f(A, B) \frac{dA}{dt} + \frac{\partial }{\partial B}f(A,B)\frac{dB}{dt} \]</div>
+<p>이다. 그런데 </p>
+<div class="arithmatex">\[ \frac{dA}{dt} = \frac{d}{dt}(x+t \cos \theta) = \cos \theta\]</div>
+<div class="arithmatex">\[ \frac{dB}{dt} = \frac{d}{dt}(y+t \sin \theta) = \sin \theta\]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ g'(t) = \frac{\partial }{\partial A}f(A, B) \cos \theta + \frac{\partial }{\partial B}f(A,B) \sin \theta \]</div>
+<p>이다. 이때 </p>
+<div class="arithmatex">\[ t = 0 \to A = x, B = y \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ g'(0) = \frac{\partial }{\partial x}f(x, y) \cos \theta + \frac{\partial }{\partial y}f(x,y) \sin \theta \tag{1} \]</div>
+<p>이다. </p>
+<p>한편 도함수의 정의에 의한 <span class="arithmatex">\(g(t)\)</span> 의 도함수</p>
+<div class="arithmatex">\[ g'(t) = \lim_{h \to 0} \frac{g(t+h)-g(t)}{h} \]</div>
+<p>에서</p>
+<div class="arithmatex">\[ g'(0) = \lim_{h \to 0} \frac{g(h)-g(0)}{h} = \lim_{h \to 0} \frac{f(x + h \cos \theta, y + h \sin \theta)-f(x , y)}{h} \]</div>
+<p>인데 방향도함수의 정의</p>
+<div class="arithmatex">\[ D _{u} f(x, y) = \lim_{h \to 0} \frac{f(x + h \cos \theta , y + h \sin \theta )-f(x, y)}{h} \]</div>
+<p>에 의하여 </p>
+<div class="arithmatex">\[ g'(0) = D _{u}f(x, y) \]</div>
+<p>이다. 그러므로 (1) 에 의하여 최종적으로 </p>
+<div class="arithmatex">\[ \therefore D _{u}f(x, y) = \frac{\partial }{\partial x}f(x, y) \cos \theta + \frac{\partial }{\partial y}f(x,y) \sin \theta \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>이변수 함수 <span class="arithmatex">\(f(x, y) = x ^{2}y\)</span> 의 점 <span class="arithmatex">\((3, 4)\)</span> 에서 벡터 <span class="arithmatex">\(u = \bigg &lt; \dfrac{1}{\sqrt[]{5}}, \dfrac{2}{\sqrt[]{5}}\bigg &gt;\)</span> 방향으로의 방향도함수는</p>
+<div class="arithmatex">\[ f_x(3, 4) = 2xy \bigg  | _{(3, 4)} = 24 \]</div>
+<div class="arithmatex">\[ f_y(3, 4) =x ^{2} \bigg  | _{(3, 4)} = 9 \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ \therefore  D_u f(3, 4) = \nabla f \cdot u \bigg | _{(3, 4)} = \frac{24}{\sqrt[]{5}} + \frac{18}{\sqrt[]{5}} = \frac{42}{\sqrt[]{5}} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#4be86892e"><div class="admonition tldr" id="4be86892e">
+<p>삼변수 함수의 방향도함수 : 삼변수 함수 <span class="arithmatex">\(f(x, y, z)\)</span> 에 대하여 단위벡터 <span class="arithmatex">\(u = \big &lt; \cos \alpha , \cos \beta , \cos \gamma  \big &gt;\)</span> (단, <span class="arithmatex">\(\cos ^{2}\alpha +\cos ^{2}\beta +\cos ^{2}\gamma =1\)</span>) 방향으로의 방향도함수는</p>
+<div class="arithmatex">\[ D _{u}f(x,y,z) = \lim_{h \to 0} \frac{f(x+h \cos \alpha , y + h \cos \beta , z + h \cos \gamma )-f(x,y,z)}{h} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이때 <span class="arithmatex">\(\alpha\)</span> 는 단위벡터 <span class="arithmatex">\(u\)</span> 가 <span class="arithmatex">\(x\)</span> 축과 이루는 각,</p>
+<p><span class="arithmatex">\(\beta\)</span> 는 단위벡터 <span class="arithmatex">\(u\)</span> 가 <span class="arithmatex">\(y\)</span> 축과 이루는 각,</p>
+<p><span class="arithmatex">\(\gamma\)</span> 는 단위벡터 <span class="arithmatex">\(u\)</span> 가 <span class="arithmatex">\(z\)</span> 축과 이루는 각이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\cos ^{2}\alpha +\cos ^{2}\beta +\cos ^{2}\gamma =1\)</span> 의 조건은 단위벡터 <span class="arithmatex">\(u\)</span> 의 길이 <span class="arithmatex">\(|u|\)</span> 가 <span class="arithmatex">\(1\)</span> 임을 보장한다. </p>
+</li>
+<li>
+<p>즉 <span class="arithmatex">\(x, y, z\)</span> 의 증분을 각각 다음과 같이 정의한 것이다. </p>
+<div class="arithmatex">\[ \Delta x = h \cos \alpha , \Delta y = y + h \cos \beta , \Delta z= z + h \cos \gamma \]</div>
+</li>
+</ul>
+<a href="#89f10f8cb"><div class="admonition tldr" id="89f10f8cb">
+<p>삼변수 함수의 기울기 벡터(gradient vector) : 스칼라 함수 <span class="arithmatex">\(w = f(x, y, z)\)</span> 의 기울기는 벡터함수 </p>
+<div class="arithmatex">\[ \text{grad} f = \nabla f = \frac{\partial f}{\partial x}i + \frac{\partial f}{\partial y}j + \frac{\partial f}{\partial z} k=  \bigg &lt;\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\bigg &gt; \]</div>
+<p>또는 </p>
+<div class="arithmatex">\[ \nabla f(x, y, z) = \bigg &lt; f_x(x, y, z), f_y(x, y, z), f_z(x, y, z) \bigg &gt; \]</div>
+<p>로써 스칼라장의 최대 증가율을 나타내는 벡터장이다.</p>
+</div></a>
+<a href="#8f8641296"><div class="admonition tldr" id="8f8641296">
+<p>삼변수 함수의 방향도함수 계산 : 삼변수 함수 <span class="arithmatex">\(w = f(x, y, z)\)</span> 가 <span class="arithmatex">\(x, y, z\)</span> 에 관한 편도함수를 각각 가지면 임의의 단위벡터 <span class="arithmatex">\(u\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ D _{u}f(x, y, z) = \text{grad} f \cdot u = \nabla f \cdot u =  \bigg &lt;\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}, \frac{\partial f}{\partial z}\bigg &gt; \cdot u \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#297fc4945"><div class="admonition tldr" id="297fc4945">
+<p>열린집합 : 위상수학에서 열린집합은 스스로의 경계를 포함하지 않는 위상 공간의 부분집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시</p>
+<p>양수 <span class="arithmatex">\(r\)</span> 에 대하여 <span class="arithmatex">\(n\)</span>-공간의 한 점 <span class="arithmatex">\(P\)</span> 를 중심으로 반지름이 <span class="arithmatex">\(r\)</span> 인 열린공</p>
+<div class="arithmatex">\[ \mathbb{B} ^{n}(P, r) := \{X \in \mathbb{R} ^{n} \Big ||X-P| &lt; r\} \]</div>
+<p>은 열린 집합이다.</p>
+<p>다음은 2차원 열린 공으로써, 열린 원판 <span class="arithmatex">\(\mathbb{B} ^{2}\)</span> 이다.</p>
+<p><img alt="" src="https://mblogthumb-phinf.pstatic.net/20141228_119/dydrogud22_1419762043201Uk8cC_JPEG/2.jpg?type=w2"/></p>
+</li>
+</ul>
+<h2 id="_10">선형화<a class="headerlink" href="#_10" title="Permanent link">¶</a></h2>
+<a href="#88df6dcb7"><div class="admonition tldr" id="88df6dcb7">
+<p>선형화(linearization) : 함수 <span class="arithmatex">\(f\)</span> 가 <span class="arithmatex">\(x=a\)</span> 에서 미분가능할 때 <span class="arithmatex">\(x=a\)</span> 에서의 접선의 방정식</p>
+<div class="arithmatex">\[ L(x) = f'(a)(x-a) + f(a) \]</div>
+<p>를 함수 <span class="arithmatex">\(f\)</span> 의 선형화라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>다음 그래프는 <span class="arithmatex">\(y = x^2, y = 2x-1\)</span> 이다.</p>
+<p><img alt="desmos-graph(1)" src="https://user-images.githubusercontent.com/16812446/79032028-2b70f280-7bde-11ea-84c5-a63f705c0906.png"/></p>
+<p>그런데 <span class="arithmatex">\(x=1\)</span> 지점에서 그래프를 더 확대해보면 다음과 같다. </p>
+<p><img alt="desmos-graph(2)" src="https://user-images.githubusercontent.com/16812446/79032042-43e10d00-7bde-11ea-94f6-9056afab3f22.png"/></p>
+<p>여기에서 더 확대해보자. </p>
+<p><img alt="desmos-graph(3)" src="https://user-images.githubusercontent.com/16812446/79032074-991d1e80-7bde-11ea-9a8f-3e636d9bb31b.png"/></p>
+<p>그러면 거의 두 함수를 분간할 수가 없다. </p>
+<p>이것은 원함수의 임의의 점 <span class="arithmatex">\(x=a\)</span> 에서의 접선을 그렸을 때 <span class="arithmatex">\(x=a\)</span> 를 중심으로 그래프를 끝없이 확대해보면 원함수와 접선이 거의 똑같아지는 것을 의미한다.</p>
+</li>
+<li>
+<p>이 현상을 이용하여 <span class="arithmatex">\(x=a\)</span> 에서 원래의 함수를 선형 근사시킬 수 있는 방법을 <span class="arithmatex">\(x=a\)</span> 에서의 접선 </p>
+<div class="arithmatex">\[ L(x) = f'(a)(x-a) + f(a) \]</div>
+<p>을 구하는 것이라 할 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(y = \sqrt[]{1+x}\)</span> 을 <span class="arithmatex">\(x = 0\)</span> 에서 선형근사시켜보면 다음과 같다.</p>
+<div class="arithmatex">\[ \sqrt[]{1+x} \approx 1 + \frac{x}{2} \]</div>
+</li>
+</ul>
+<a href="#d13848755"><div class="admonition tldr" id="d13848755">
+<p>표준 선형 근사(standard linear approximation) : 선형화의 정의에서 <span class="arithmatex">\(x=a\)</span> 에서 함수 <span class="arithmatex">\(f\)</span> 의 함수 <span class="arithmatex">\(L\)</span> 에 의한 근사</p>
+<div class="arithmatex">\[ f(x) \approx L(x) \]</div>
+<p>를 표준 선형 근사라한다.</p>
+</div></a>
+<ul>
+<li>이때 <span class="arithmatex">\(x=a\)</span> 를 근사의 중심이라 한다. </li>
+</ul>
+<h3 id="_11">미분<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<a href="#3ba36b993"><div class="admonition tldr" id="3ba36b993">
+<p>미분(differential) : <span class="arithmatex">\(y = f(x)\)</span> 를 미분가능한 함수이고 미분 <span class="arithmatex">\(dx\)</span> 가 독립변수일 때 미분 <span class="arithmatex">\(dy\)</span> 는 </p>
+<div class="arithmatex">\[ dy = f'(x)dx \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>가끔 <span class="arithmatex">\(dy = f'(x)dx\)</span> 를 다음과 같이 미분 <span class="arithmatex">\(f\)</span> 로도 표현한다.</p>
+<div class="arithmatex">\[ df = f'(x)dx \]</div>
+</li>
+<li>
+<p>미분은 서로 다른 두 개념인 differentiation(미분) 과 differential(미분) 으로 동시에 쓰인다. 전자는 도함수를 얻는다는 뜻의 differentiate 의 명사형이다. 후자 differential 은 원함수의 선형근사함수를 뜻한다.</p>
+<p>가령 함수 <span class="arithmatex">\(f(x)\)</span> 의 한 점 <span class="arithmatex">\(a\)</span> 에서의 미분(differential) 은 </p>
+<div class="arithmatex">\[ df(\Delta x) = f'(a)\Delta x \]</div>
+<p>로 표현되는 선형근사함수이다. </p>
+</li>
+<li>
+<p>기하학적 의미 </p>
+<p><span class="arithmatex">\(x = a, dx = \Delta x\)</span> 로 두자. <span class="arithmatex">\(x\)</span> 의 증분 <span class="arithmatex">\(\Delta x\)</span> 는 <span class="arithmatex">\(x = a\)</span> 에서 <span class="arithmatex">\(x = a + \Delta x\)</span> 의 거리</p>
+<div class="arithmatex">\[ \Delta x = (\Delta x + a) - (a) \]</div>
+<p>로 두자.</p>
+<p>그러면 우선 <span class="arithmatex">\(y\)</span> 의 증분 </p>
+<div class="arithmatex">\[ \Delta y = f(a + \Delta x) - f(a) \]</div>
+<p>은</p>
+<div class="arithmatex">\[ \Delta y = f(a + dx) - f(a) \]</div>
+<p>이다. 한편 <span class="arithmatex">\(x = a\)</span> 에서 접선은 </p>
+<div class="arithmatex">\[ L(x) = f'(a)(x-a) + f(a) \]</div>
+<p>이므로 <span class="arithmatex">\(x = a\)</span> 근방에서 접선의 변화를 </p>
+<div class="arithmatex">\[ \Delta L = L(a + dx) - L(a) \]</div>
+<p>에서</p>
+<div class="arithmatex">\[ = f'(a)\{(a+dx)-a\} +f(a) -f(a) \]</div>
+<div class="arithmatex">\[ = f'(a)dx \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \Delta L = f'(a)dx = dy \]</div>
+<p>이다. </p>
+<p>이것은 함수 <span class="arithmatex">\(f\)</span> 의 <span class="arithmatex">\(x=a\)</span> 에서 선형근사함수 <span class="arithmatex">\(L(x)\)</span> 의 변화가 <span class="arithmatex">\(x = a\)</span> 이고 <span class="arithmatex">\(dx = \Delta x\)</span> 일 때 <span class="arithmatex">\(dy\)</span> 과 정확히 일치한다는 것이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(y = x ^{5} + 37x\)</span> 에서의 <span class="arithmatex">\(dy\)</span> 를 찾자. </p>
+<div class="arithmatex">\[ dy = (5x ^{4} + 37)dx \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p>합성함수 미분법(Chain Rule) 과 다른 미분법을 함께 사용할 수 있다. </p>
+<div class="arithmatex">\[ d (\tan  2x) = \sec ^{2}(2x)d(2x) \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ d(2x) = (2x)'dx = 2dx \]</div>
+<p>이므로</p>
+<div class="arithmatex">\[ d (\tan 2x) = 2 \sec ^{2} 2x dx \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#79853f749"><div class="admonition tldr" id="79853f749">
+<p>미분의 추정(estimating with differentials) : 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x = a\)</span> 에서 미분가능할 때 <span class="arithmatex">\(x = a\)</span> 의 근방 <span class="arithmatex">\(x = a + dx\)</span> 에서 함수값이 변하는 정도 <span class="arithmatex">\(f(a + dx)\)</span> 는 근사적으로</p>
+<div class="arithmatex">\[ f(a + dx) \approx f(a) + dy \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(y\)</span> 의 증분은 </p>
+<div class="arithmatex">\[ \Delta y = f(a + \Delta x) - f(a) \]</div>
+<p>이다. 이때 <span class="arithmatex">\(dx= \Delta x\)</span> 가 충분히 작으면 <span class="arithmatex">\(y\)</span> 의 증분 <span class="arithmatex">\(\Delta y\)</span> 는 미분 <span class="arithmatex">\(dy\)</span> 와 거의 똑같아진다. 왜냐하면 함수 <span class="arithmatex">\(f\)</span> 의 접선 <span class="arithmatex">\(L\)</span> 의 증분 </p>
+<div class="arithmatex">\[ \Delta L = f'(a)dx = dy\]</div>
+<p>가 <span class="arithmatex">\(x = a\)</span> 의 근방에서 함수 <span class="arithmatex">\(f\)</span> 의 증분 <span class="arithmatex">\(\Delta y\)</span> 와 거의 똑같아지기 때문이다. 그러므로 <span class="arithmatex">\(x = a\)</span> 근방에서 </p>
+<div class="arithmatex">\[ f'(a)dx = dy \approx \Delta y \]</div>
+<p>라 할 수 있고, 이에 따라</p>
+<div class="arithmatex">\[ f(a + dx) = f(a) + \Delta y \]</div>
+<p>를 근사적으로 </p>
+<div class="arithmatex">\[ f(a + dx) \approx  f(a) + dy \]</div>
+<p>로 쓸 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(7.97 ^{\frac{1}{3}}\)</span> 을 추산해보자. </p>
+<p><span class="arithmatex">\(f(x) = x ^{\frac{1}{3}}\)</span> 의 미분은 </p>
+<div class="arithmatex">\[ dy = \frac{1}{3x ^{\frac{2}{3}}}dx \]</div>
+<p>이다. </p>
+<p>이때 <span class="arithmatex">\(a = 8\)</span> 로 둔다면 <span class="arithmatex">\(7.97\)</span> 을 <span class="arithmatex">\(x = a\)</span> 근방의 함수 <span class="arithmatex">\(f\)</span> 의 접선의 함수값으로 생각할 수 있다. </p>
+<p>그렇다면 <span class="arithmatex">\(dx = -0.03\)</span> 으로 둘 때 <span class="arithmatex">\(x = a\)</span> 에서의 함수값 <span class="arithmatex">\(f(7.97)\)</span> 을 다음과 같이 근사시킬 수 있다. </p>
+<div class="arithmatex">\[ f(7.97) = f(a + dx) \approx f(a) + dy \]</div>
+<p>그러면</p>
+<div class="arithmatex">\[ f(a) + dy = f(a) + f'(a)dx \]</div>
+<p>에서 <span class="arithmatex">\(f'(x) = \frac{1}{3x ^{\frac{2}{3}}}\)</span> 이고 <span class="arithmatex">\(dx = -0.03\)</span> 으로 두었으므로</p>
+<div class="arithmatex">\[ = 8 ^{\frac{1}{3}} + \frac{1}{3(8)^{\frac{2}{3}}}(-0.03) \]</div>
+<div class="arithmatex">\[ = 1.9975 \]</div>
+<p>이다. 따라서 </p>
+<div class="arithmatex">\[ \therefore  7.97 ^{\frac{1}{3}} \approx 1.9975 \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<h3 id="_12">이변수 함수 선형화<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<a href="#4ff7df34a"><div class="admonition tldr" id="4ff7df34a">
+<p>접평면(tangent plane) : <span class="arithmatex">\(3\)</span> 차원 곡면의 한 접점에 존재하는 무수히 많은 접선들이 동시에 상주하고 있는 평면이다.</p>
+<p><img alt="index" src="https://user-images.githubusercontent.com/16812446/79077468-ec0ce800-7d3c-11ea-8d57-3c992ab66d6e.jpg"/></p>
+</div></a>
+<ul>
+<li>위 그림과 같이 어떤 곡면에는 접선이 무수히 많고 그 접선들이 상주하는 평면이 곡면의 접평면이다.</li>
+</ul>
+<a href="#da5789a51"><div class="admonition tldr" id="da5789a51">
+<p>법선벡터(normal vector) : 접평면에 직교하는 벡터이다.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Surface_normal_illustration.svg/220px-Surface_normal_illustration.svg.png"/></p>
+</div></a>
+<ul>
+<li>즉 법선벡터는 위 그림의 화살표 벡터와 같이 <span class="arithmatex">\(3\)</span> 차원 곡면의 한 접점에서의 모든 접선과 직교한다.</li>
+</ul>
+<a href="#b6f711e01"><div class="admonition tldr" id="b6f711e01">
+<p>이변수 함수 선형화 또는 접평면(tangent plane) : <span class="arithmatex">\(f\)</span> 의 연속인 편도함수들이 존재할 때 점 <span class="arithmatex">\(P(x_0, y_0, z_0)\)</span> 에서 곡면 <span class="arithmatex">\(z = f(x, y)\)</span> 에 대한 접평면의 방정식은 </p>
+<div class="arithmatex">\[ z - z_0 = f_x(x_0, y_0)(x- x_0) + f_y(x_0, y_0)(y - y_0) \]</div>
+<p>또는 </p>
+<div class="arithmatex">\[ L(x, y) = f(x_0, y_0) + f_x(x_0, y_0)(x-x_0) + f_y(x_0, y_0)(y - y_0) \]</div>
+<p>이고 이것은 이변수 함수 <span class="arithmatex">\(f(x, y)\)</span> 의 선형화이다.</p>
+</div></a>
+<ul>
+<li>
+<p>또한 점 <span class="arithmatex">\(P(x_0, y_0, z_0)\)</span> 근방에서 </p>
+<div class="arithmatex">\[ f(x, y) \approx L(x, y) \]</div>
+<p>이 성립한다.</p>
+<p>일변수 함수 <span class="arithmatex">\(f\)</span> 를 <span class="arithmatex">\(x=a\)</span> 에서 끝없이 확대했을 때 <span class="arithmatex">\(x=a\)</span> 에서 접선과 거의 똑같아지는 것과 같이 이변수 함수 <span class="arithmatex">\(f\)</span> 를 끝없이 확대하면 접평면의 방정식과 거의 똑같아지기 때문이다.</p>
+</li>
+</ul>
+<a href="#7ce2044bc"><div class="admonition tldr" id="7ce2044bc">
+<p>이변수 함수 미분 또는 전미분(total differential) : 점 <span class="arithmatex">\((x_0, y_0)\)</span> 에서 점 <span class="arithmatex">\((x_0 + dx, y_0 + dy)\)</span> 로 움직였을 때의 변화량 </p>
+<div class="arithmatex">\[ df = f_x(x_0, y_0)dx + f_y (x_0, y_0)dy \]</div>
+<p>또는</p>
+<div class="arithmatex">\[ df = \frac{\partial f}{\partial x} dx + \frac{\partial f}{\partial y} dy \]</div>
+<p>을 함수 <span class="arithmatex">\(f\)</span> 의 전미분이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(y = f(x, y)\)</span> 가 미분가능한 함수이면 점 <span class="arithmatex">\((x_0, y_0)\)</span> 에서 편미분계수가 존재한다. 이 점에서 조금 움직인 점 <span class="arithmatex">\((x_0+\Delta x, y_0+\Delta y)\)</span> 를 생각할 수 있고 이때의 함수 <span class="arithmatex">\(f\)</span> 의 변화량</p>
+<div class="arithmatex">\[ \Delta f =f(x_0+\Delta x, y_0+\Delta y)- f(x_0, y_0) \]</div>
+<p>을 생각할 수 있다. </p>
+<p>이때 접평면의 변화량 </p>
+<div class="arithmatex">\[ \Delta L = L(x_0 + \Delta x, y_0 + \Delta y) - L(x_0, y_0) \]</div>
+<p>을 접평면의 방정식을 사용하여 풀면</p>
+<div class="arithmatex">\[ = f_x(x_0, y_0)\Delta x + f_y(x_0, y_0)\Delta y \]</div>
+<p>이다. </p>
+<p>이때 <span class="arithmatex">\(dx, dy\)</span> 는 독립변수이므로 임의의 값을 대입할 수 있다. 또한 우리는 보통</p>
+<div class="arithmatex">\[ dx = \Delta x = x - x_0, dy = \Delta y = y - y_0 \]</div>
+<p>으로 정의한다.</p>
+</li>
+<li>
+<p>편미분이 변수 하나에 대한 함수의 변화량을 생각했다면 전미분은 모든 변수에 대한 변화량에 따라 함수가 얼마나 변하는지를 측정한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>반지름이 <span class="arithmatex">\(r = 1\)</span> 이고 높이가 <span class="arithmatex">\(h = 5\)</span> 인 원통이 있다고 하자. 이때 반지름과 높이를 변화시켜서 </p>
+<div class="arithmatex">\[ dr = +0.03, dh = -0.1 \]</div>
+<p>가 되게 한다고 하자. 이때 부피의 변화량을 구해보자. </p>
+<p>먼저 부피 <span class="arithmatex">\(V\)</span> 는 다음과 같은 이변수 함수다.</p>
+<div class="arithmatex">\[ V = V(r, h) = \pi r ^{2}h \]</div>
+<p><span class="arithmatex">\(V\)</span> 를 선형 근사시키면(전미분하면)</p>
+<div class="arithmatex">\[ \Delta V \approx dV = V_r(r_0, h_0)dr + V_h(r_0, h_0)dh \]</div>
+<p>이다.</p>
+<div class="arithmatex">\[ V_r = 2 \pi rh, V_h = \pi r ^{2} \]</div>
+<p>이므로</p>
+<div class="arithmatex">\[ dV = 2 \pi r_0h_0dr + \pi r_0 ^{2}dh = 2 \pi 1 \cdot 5 \cdot (0.03) + \pi (1) ^{2}(-0.1) = 0.3 \pi - 0.1 \pi = 0.2 \pi \approx 0.63 cm ^{3} \]</div>
+<p>을 얻는다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(2.5m\)</span> 높이와 <span class="arithmatex">\(0.5m\)</span> 반지름의 원뿔형 물탱크의 부피가 반지름과 높이의 변화에 얼마나 민감하게 변하는지 조사하려 한다.</p>
+<p>먼저 부피 <span class="arithmatex">\(V\)</span> 는 </p>
+<div class="arithmatex">\[ V = \pi r ^{2} h \]</div>
+<p>이며, 각 변수에 대한 전미분은 다음과 같다. </p>
+<div class="arithmatex">\[ dV = V_r(0.5, 2.5)dr + V_h(0.5,2.5)dh \]</div>
+<div class="arithmatex">\[ =(2 \pi rh)_{(0.5, 2.5)} dr + (\pi r ^{2})_{(0.5,2.5)}dh \]</div>
+<div class="arithmatex">\[ = 2.5 \pi dr + 0.25 \pi dh \]</div>
+<p>따라서 반지름 <span class="arithmatex">\(r\)</span> 의 단위 <span class="arithmatex">\(1\)</span> 변화는 전체 부피 <span class="arithmatex">\(V\)</span> 를 <span class="arithmatex">\(2.5 \pi\)</span> 변하게 하고</p>
+<p>높이 <span class="arithmatex">\(h\)</span> 의 단위 <span class="arithmatex">\(1\)</span> 변화는 전체 부피 <span class="arithmatex">\(V\)</span> 를 <span class="arithmatex">\(0.25\pi\)</span> 변하게 한다.</p>
+<p>이로보아 반지름이 변할 때 물탱크의 전체 부피가 훨씬 더 민감하게 변한다는 것을 알 수 있다.</p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 벡터해석학" class="md-footer__link md-footer__link--prev" href="../vector/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              벡터해석학
+            </div>
+</div>
+</a>
+<a aria-label="다음: 다변수함수의 미분의 일반적 정의" class="md-footer__link md-footer__link--next" href="../cal7/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              다변수함수의 미분의 일반적 정의
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

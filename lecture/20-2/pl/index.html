@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/lecture/20-2/pl/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>programming language - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#programming-language">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              programming language
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming-language">
+    programming language
+  </a>
+<nav aria-label="programming language" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why">
+    Why
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#how">
+    How
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    프로그래밍 언어의 기초 구성요소
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#racket">
+    Racket 기본 문법
+  </a>
+<nav aria-label="Racket 기본 문법" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#numbers-and-arithmetic">
+    Numbers and Arithmetic
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables-and-functions">
+    Variables and Functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conditional-expressions">
+    Conditional Expressions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conditional-functions">
+    Conditional Functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#symbols">
+    Symbols
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-definitions">
+    Type Definitions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-deconstruction">
+    Type Deconstruction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lists">
+    Lists
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modeling-syntax">
+    Modeling Syntax
+  </a>
+<nav aria-label="Modeling Syntax" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modeling-arithmetic-expression">
+    Modeling Arithmetic Expression
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#parser">
+    Parser
+  </a>
+<nav aria-label="Parser" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#backus-naur-form">
+    Backus-Naur Form
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bnf-for-ae">
+    BNF for AE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-parser">
+    Implementation Parser
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#interpreter">
+    Interpreter
+  </a>
+<nav aria-label="Interpreter" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implementation-interpreter">
+    Implementation Interpreter
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#substitution">
+    Substitution
+  </a>
+<nav aria-label="Substitution" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifier">
+    Identifier
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#concrete-syntax-for-wae-bnf">
+    Concrete Syntax for WAE (BNF)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifier-type">
+    Identifier Type
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstarct-syntax-for-wae">
+    Abstarct Syntax for WAE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implement-parser-for-wae">
+    Implement Parser for WAE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implement-substitution">
+    Implement Substitution
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implement-interpreter-for-wae">
+    Implement Interpreter for WAE
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function">
+    Function
+  </a>
+<nav aria-label="Function" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#concrete-syntax-for-function-bnf">
+    Concrete Syntax for Function (BNF)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#abstarct-syntax-for-function">
+    Abstarct Syntax for Function
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implement-parser-for-f1wae">
+    Implement Parser for F1WAE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implement-interpreter-for-f1wae">
+    Implement Interpreter for F1WAE
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#implement-substitution-for-f1wae">
+    Implement Substitution for F1WAE
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#deferring-substitution">
+    Deferring Substitution
+  </a>
+<nav aria-label="Deferring Substitution" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#improvement-example">
+    Improvement Example
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#improvement-example-2">
+    Improvement Example 2
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#representing-defered-substitution">
+    Representing Defered Substitution
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>programming language</h1>
+<h2 id="programming-language">programming language<a class="headerlink" href="#programming-language" title="Permanent link">¶</a></h2>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/2/25/Genealogical_tree_of_programming_languages.svg"/></p>
+<h3 id="why">Why<a class="headerlink" href="#why" title="Permanent link">¶</a></h3>
+<p>프로그래밍 언어의 기본 원리를 배워서 다른 언어를 빠르게 습득할 수 있도록 하고, 프로그래밍 언어의 기본 설계를 어떻게 해야 하는지 알 수 있도록.</p>
+<h3 id="how">How<a class="headerlink" href="#how" title="Permanent link">¶</a></h3>
+<p>인터프리터를 구현하면서.</p>
+<p>인터프리터를 만들면서 언어를 이해해본다. 인터프리터는 컴파일러로도 변환된다. 다음 두 프로그램 실행 유형을 보자.</p>
+<ul>
+<li>
+<p>Program → Parser → Interpreter → Results</p>
+</li>
+<li>
+<p>Program → Compiler → Running on a computer → Results</p>
+</li>
+</ul>
+<p>이 인터프리터를 다음과 같은 과정을 통하여 만들어 볼 것이다.</p>
+<ol>
+<li>
+<p>Racket tutorials</p>
+</li>
+<li>
+<p>Modeling languages</p>
+</li>
+<li>
+<p>Interpreting arithmetic</p>
+</li>
+<li>
+<p>Language principles</p>
+<ul>
+<li>
+<p>Substitution</p>
+</li>
+<li>
+<p>Function</p>
+</li>
+<li>
+<p>Deferring Substitution</p>
+</li>
+<li>
+<p>First-class Functions</p>
+</li>
+<li>
+<p>Laziness</p>
+</li>
+<li>
+<p>Recursion</p>
+</li>
+<li>
+<p>Mutable data structures</p>
+</li>
+<li>
+<p>Variables</p>
+</li>
+<li>
+<p>Continuations</p>
+</li>
+<li>
+<p>Garbege collection</p>
+</li>
+<li>
+<p>Semantics</p>
+</li>
+<li>
+<p>Type</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="_1">프로그래밍 언어의 기초 구성요소<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>Numbers and Arithmetic</p>
+</li>
+<li>
+<p>Variables and Functions</p>
+</li>
+<li>
+<p>Conditional Expressions</p>
+</li>
+<li>
+<p>Conditional Functions</p>
+</li>
+<li>
+<p>Symbols</p>
+</li>
+<li>
+<p>Type Definitions</p>
+</li>
+<li>
+<p>Type Deconstruction</p>
+</li>
+<li>
+<p>Lists</p>
+</li>
+</ul>
+<h2 id="racket">Racket 기본 문법<a class="headerlink" href="#racket" title="Permanent link">¶</a></h2>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">operator</span> <span class="n">operand1</span> <span class="n">operand2</span> <span class="k">...</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">+</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">; Summate 1, 2</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">f</span> <span class="n">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">+</span> <span class="mi">1</span> <span class="n">x</span><span class="p">))</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">f</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h3 id="numbers-and-arithmetic">Numbers and Arithmetic<a class="headerlink" href="#numbers-and-arithmetic" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">+</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">max</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="variables-and-functions">Variables and Functions<a class="headerlink" href="#variables-and-functions" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">; define a function</span>
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">function-name</span> <span class="n">param1</span> <span class="n">param2</span> <span class="k">...</span><span class="p">)</span>
+    <span class="n">body</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">; call the function</span>
+<span class="p">(</span><span class="n">function-name</span> <span class="n">args1</span> <span class="n">args2</span> <span class="k">...</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="nb">sqr</span> <span class="n">a</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">*</span> <span class="n">a</span> <span class="n">a</span><span class="p">))</span>
+</code></pre></div>
+</div>
+<h3 id="conditional-expressions">Conditional Expressions<a class="headerlink" href="#conditional-expressions" title="Permanent link">¶</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">and</span> <span class="p">(</span><span class="nb">&gt;</span> <span class="mi">4</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nb">&lt;=</span> <span class="mi">10</span> <span class="mi">100</span><span class="p">))</span>
+<span class="p">(</span><span class="k">or</span> <span class="p">(</span><span class="nb">&gt;</span> <span class="mi">4</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="nb">&lt;=</span> <span class="mi">10</span> <span class="mi">100</span><span class="p">))</span>
+<span class="p">(</span><span class="nb">not</span> <span class="p">(</span><span class="nb">=</span> <span class="mi">4</span> <span class="mi">3</span><span class="p">))</span>
+</code></pre></div>
+</div>
+<h3 id="conditional-functions">Conditional Functions<a class="headerlink" href="#conditional-functions" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">function-name</span> <span class="n">param1</span> <span class="n">param2</span> <span class="k">...</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">cond</span> 
+        <span class="p">[</span><span class="n">ce1</span> <span class="n">body1</span><span class="p">]</span>
+        <span class="p">[</span><span class="n">ce2</span> <span class="n">body2</span><span class="p">]</span>
+        <span class="k">...</span>
+        <span class="p">[</span><span class="k">else</span> <span class="n">body</span><span class="p">]))</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">interest-rate</span> <span class="n">amount</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">cond</span>
+        <span class="p">[(</span><span class="nb">&lt;=</span> <span class="n">amount</span> <span class="mi">1000</span><span class="p">)</span> <span class="mf">0.040</span><span class="p">]</span>
+        <span class="p">[(</span><span class="nb">&lt;=</span> <span class="n">amount</span> <span class="mi">5000</span><span class="p">)</span> <span class="mf">0.045</span><span class="p">]</span>
+        <span class="p">[</span><span class="k">else</span> <span class="mf">0.050</span><span class="p">]))</span>
+</code></pre></div>
+</div>
+<h3 id="symbols">Symbols<a class="headerlink" href="#symbols" title="Permanent link">¶</a></h3>
+<p>Racket 에서의 심볼이란 따옴표 뒤에 나오는 식별자이다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="o">'</span><span class="ss">the</span>
+<span class="o">'</span><span class="ss">dog</span>
+<span class="o">'</span><span class="ss">cat</span>
+<span class="o">'</span><span class="ss">two^3</span>
+</code></pre></div>
+</div>
+<p>심볼에는 오직 한 가지의 연산자 <code>symbol=?</code> 만이 적용된다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">reply</span> <span class="n">s</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">cond</span>
+        <span class="p">[(</span><span class="nb">symbol=?</span> <span class="n">s</span> <span class="o">'</span><span class="ss">GoodMorning</span><span class="p">)</span> <span class="o">'</span><span class="ss">Hi</span><span class="p">]</span>
+        <span class="p">[(</span><span class="nb">symbol=?</span> <span class="n">s</span> <span class="o">'</span><span class="ss">HowAreYou?</span><span class="p">)</span> <span class="o">'</span><span class="ss">Fine</span><span class="p">]</span>
+        <span class="p">[(</span><span class="nb">symbol=?</span> <span class="n">s</span> <span class="o">'</span><span class="ss">GoodAfternoon</span><span class="p">)</span> <span class="o">'</span><span class="ss">INeedANap</span><span class="p">]</span>
+        <span class="p">[(</span><span class="nb">symbol=?</span> <span class="n">s</span> <span class="o">'</span><span class="ss">GoodEvening</span><span class="p">)</span> <span class="o">'</span><span class="ss">BoyAmITired</span><span class="p">]))</span>
+</code></pre></div>
+</div>
+<h3 id="type-definitions">Type Definitions<a class="headerlink" href="#type-definitions" title="Permanent link">¶</a></h3>
+<p>타입: 데이터의 추상적 정의이다. Java 에서 <code>class</code> 와 비슷한 개념이다.</p>
+<p>Racket 의 타입 정의:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">define</span> <span class="n">type-id</span>
+    <span class="p">[</span><span class="n">variant_id1</span> <span class="p">(</span><span class="n">field11</span> <span class="n">contract_expr11</span><span class="p">)</span>
+                 <span class="k">...</span>
+                 <span class="p">(</span><span class="n">field1n</span> <span class="n">contract_expr1n</span><span class="p">)</span>
+    <span class="p">[</span><span class="n">variant_id2</span> <span class="p">(</span><span class="n">field21</span> <span class="n">contract_expr21</span><span class="p">)</span>
+                 <span class="k">...</span>
+                 <span class="p">(</span><span class="n">field2n</span> <span class="n">contract_expr2n</span><span class="p">)</span>
+    <span class="k">...</span>
+    <span class="p">[</span><span class="n">variant_idm</span> <span class="p">(</span><span class="n">fieldm1</span> <span class="n">contract_exprm1</span><span class="p">)</span>
+                 <span class="k">...</span>
+                 <span class="p">(</span><span class="n">fieldmn</span> <span class="n">contract_exprmn</span><span class="p">)])</span>
+</code></pre></div>
+<p>생성자 <code>variant_id1</code> 은 variant 를 정의한다. 각각의 생성자들은 variant 를 초기화하는 파라미터를 받는다. <code>field</code> 의 자료형은 <code>contract_expr</code> 로 검증된다.</p>
+<p><code>type_id?</code> 와 <code>variant_id?</code> 로 타입을 검사할 수 있고, <code>variant_id-field_id</code> 로 <code>field</code> 에 접근할 수 있다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">define-type</span> <span class="n">human</span>
+    <span class="p">[</span><span class="n">mother</span> <span class="p">(</span><span class="n">name</span> <span class="nb">string?</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">age</span> <span class="nb">number?</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">job</span> <span class="nb">string?</span><span class="p">)</span>
+    <span class="p">[</span><span class="n">father</span> <span class="p">(</span><span class="n">name</span> <span class="nb">string?</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">age</span> <span class="nb">number?</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">hobby</span> <span class="nb">string?</span><span class="p">)</span>
+    <span class="p">[</span><span class="n">child</span> <span class="p">(</span><span class="n">name</span> <span class="p">(</span><span class="nb">list</span> <span class="n">of</span> <span class="nb">string?</span><span class="p">))</span>
+           <span class="p">(</span><span class="nb">first</span> <span class="nb">integer?</span><span class="p">)])</span>
+
+<span class="p">(</span><span class="n">mother</span> <span class="s2">"A"</span> <span class="mi">40</span> <span class="s2">"B"</span><span class="p">)</span>
+<span class="p">(</span><span class="n">child</span> <span class="o">'</span><span class="p">(</span><span class="s2">"A"</span> <span class="s2">"B"</span><span class="p">)</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="k">define</span> <span class="n">m</span> <span class="p">(</span><span class="n">mother</span> <span class="s2">"A"</span> <span class="mi">40</span> <span class="s2">"B"</span><span class="p">))</span>
+<span class="p">(</span><span class="n">human?</span> <span class="n">m</span><span class="p">)</span>
+<span class="p">(</span><span class="n">mother?</span> <span class="n">m</span><span class="p">)</span>
+<span class="p">(</span><span class="n">mother-name?</span> <span class="n">m</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<h3 id="type-deconstruction">Type Deconstruction<a class="headerlink" href="#type-deconstruction" title="Permanent link">¶</a></h3>
+<p>Type Deconstruction 을 통하여 주어진 타입의 특정 값을 가져오거나 특정한 task 를 수행할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">type-case</span> <span class="n">type-id</span> <span class="n">expr</span>
+    <span class="p">[</span><span class="n">variant_id1</span> <span class="p">(</span><span class="n">field_id11</span> <span class="k">...</span><span class="p">)</span> <span class="n">expr1</span><span class="p">]</span>
+    <span class="k">...</span>
+    <span class="p">[</span><span class="n">variant_idm</span> <span class="p">(</span><span class="n">field_idm1</span> <span class="k">...</span><span class="p">)</span> <span class="n">exprm</span><span class="p">])</span>
+</code></pre></div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">define-type</span> <span class="n">GUI</span>
+    <span class="p">[</span><span class="n">label</span> <span class="p">(</span><span class="n">text</span> <span class="nb">string?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">button</span> <span class="p">(</span><span class="n">text</span> <span class="nb">string?</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">enabled?</span> <span class="nb">boolean?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">choice</span> <span class="p">(</span><span class="n">items</span> <span class="p">(</span><span class="nb">listof</span> <span class="nb">string?</span><span class="p">))</span>
+            <span class="p">(</span><span class="n">selected</span> <span class="nb">integer?</span><span class="p">)])</span>
+
+<span class="p">(</span><span class="k">define</span> <span class="n">ch</span> <span class="p">(</span><span class="n">choice</span> <span class="o">'</span><span class="p">(</span><span class="s2">"Apple"</span> <span class="s2">"Strawberry"</span> <span class="s2">"Banana"</span><span class="p">)</span> <span class="mi">0</span><span class="p">))</span>
+<span class="p">(</span><span class="n">choice?</span> <span class="n">ch</span><span class="p">)</span>
+<span class="p">(</span><span class="n">GUI?</span> <span class="n">ch</span><span class="p">)</span>
+<span class="p">(</span><span class="n">choice-selected</span> <span class="n">ch</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">GUI-to-list</span> <span class="n">g</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">type-case</span> <span class="n">GUI</span> <span class="n">g</span>
+        <span class="p">[</span><span class="n">label</span> <span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="p">(</span><span class="nb">list</span> <span class="n">t</span><span class="p">)]</span>
+        <span class="p">[</span><span class="n">button</span> <span class="p">(</span><span class="n">t</span> <span class="n">e?</span><span class="p">)</span> <span class="p">(</span><span class="nb">list</span> <span class="n">t</span><span class="p">)]</span>
+        <span class="p">[</span><span class="n">choice</span> <span class="p">(</span><span class="n">i</span> <span class="n">s</span><span class="p">)</span> <span class="n">i</span><span class="p">]))</span>
+</code></pre></div>
+</div>
+<h3 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">¶</a></h3>
+<p>배열과 같은 개념의 데이터 구조이다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">list</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>
+<span class="o">'</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<p>List 생성:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">cons</span> <span class="mi">1</span> <span class="nb">empty</span><span class="p">)</span>                  <span class="c1">; -&gt; (list 1)</span>
+<span class="p">(</span><span class="nb">list</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>                    <span class="c1">; -&gt; (list 1 2 3)</span>
+<span class="o">'</span><span class="p">(</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<p>List 확장:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">append</span> <span class="p">(</span><span class="nb">list</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="nb">empty</span><span class="p">)</span>       <span class="c1">; -&gt; (list 1 2)</span>
+<span class="p">(</span><span class="nb">append</span> <span class="p">(</span><span class="nb">list</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="nb">list</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">))</span>  <span class="c1">; -&gt; (list 1 2 3 4)</span>
+</code></pre></div>
+<p>List 접근:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">first</span> <span class="p">(</span><span class="nb">list</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">))</span>            <span class="c1">; 1</span>
+<span class="p">(</span><span class="nb">rest</span> <span class="p">(</span><span class="nb">list</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">))</span>             <span class="c1">; (list 2 3)</span>
+<span class="nb">map</span><span class="o">,</span> <span class="nb">foldl</span><span class="o">,</span> <span class="nb">foldr</span><span class="o">,</span> <span class="nb">filter</span>
+</code></pre></div>
+<h2 id="modeling-syntax">Modeling Syntax<a class="headerlink" href="#modeling-syntax" title="Permanent link">¶</a></h2>
+<p>인터프리터를 짜면서 프로그래밍 언어를 이해해보자고 했었다. 근데 프로그래밍 언어에서 가장 중요한 것은 문법이니 문법부터 짜볼 것이다.</p>
+<p>expression 의 종류는 다음 세 가지이고, 프로그래밍 언어는 이것들 중 최소한 하나 이상을 사용한다.</p>
+<ul>
+<li>
+<p>concrete syntax</p>
+<ul>
+<li>
+<p>infix: <code>3 + 4</code></p>
+</li>
+<li>
+<p>postfix: <code>3 4 +</code></p>
+</li>
+<li>
+<p>parenthesized prefix: <code>(+ 3 4)</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>이 문법을 트리 형태로 다음과 같이 추상화된 일반 형태로 표현할 수 있다.</p>
+<ul>
+<li>
+<p>abstract syntax</p>
+<div class="highlight"><pre><span></span><code>        3 ┬ 4
+        +
+</code></pre></div>
+</li>
+</ul>
+<h3 id="modeling-arithmetic-expression">Modeling Arithmetic Expression<a class="headerlink" href="#modeling-arithmetic-expression" title="Permanent link">¶</a></h3>
+<p>먼저 parenthesized prefix 로 AE(Arithmetic Expression) 를 다음과 같이 설계해보자.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">define-type</span> <span class="n">AE</span>
+    <span class="p">[</span><span class="n">num</span> <span class="p">(</span><span class="n">n</span> <span class="nb">number?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">add</span> <span class="p">(</span><span class="n">lhs</span> <span class="n">AE?</span><span class="p">)</span>
+         <span class="p">(</span><span class="n">rhs</span> <span class="n">AE?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">sub</span> <span class="p">(</span><span class="n">lhs</span> <span class="n">AE?</span><span class="p">)</span>
+         <span class="p">(</span><span class="n">rhs</span> <span class="n">AE?</span><span class="p">)])</span>
+</code></pre></div>
+<p>이 설계를 통하여 다음과 같은 덧셈, 뺄셈 연산 표현이 가능해진다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">num</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">1</span><span class="p">))</span>
+<span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">num</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">1</span><span class="p">))</span>
+<span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">num</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">1</span><span class="p">))</span> <span class="p">(</span><span class="n">num</span> <span class="mi">1</span><span class="p">))</span>
+</code></pre></div>
+</div>
+<h2 id="parser">Parser<a class="headerlink" href="#parser" title="Permanent link">¶</a></h2>
+<p>파서는 Interpreter 또는 Compiler 의 한 컴포넌트이다. 파서는 concrete syntax 를 abstract syntax 로 변환해주는 역할을 한다.</p>
+<p>그러므로 파서를 설계하기에 앞서 concrete syntax 의 명확한 상세가 필요하다. 이를 위하여 일반적으로 Backus-Naur Form(BNF) 가 사용된다.</p>
+<p>한편 BNF 는 concrete syntax 를 명확하게 정의해줄 뿐만 아니라 abstract syntax 까지 명시해주기 때문에 다른 언어들에서도 널리 사용된다.</p>
+<ul>
+<li>
+<p><a href="https://users-cs.au.dk/amoeller/RegAut/JavaBNF.html">https://users-cs.au.dk/amoeller/RegAut/JavaBNF.html</a></p>
+</li>
+<li>
+<p><a href="https://cs.wmich.edu/~gupta/teaching/cs4850/sumII06/The%20syntax%20of%20C%20in%20Backus-Naur%20form.htm">https://cs.wmich.edu/~gupta/teaching/cs4850/sumII06/The%20syntax%20of%20C%20in%20Backus-Naur%20form.htm</a></p>
+</li>
+<li>
+<p><a href="https://docs.python.org/3/reference/grammar.html">https://docs.python.org/3/reference/grammar.html</a></p>
+</li>
+</ul>
+<h3 id="backus-naur-form">Backus-Naur Form<a class="headerlink" href="#backus-naur-form" title="Permanent link">¶</a></h3>
+<p>BNF 를 통해 grammer 를 대수적으로 표현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nc">expr</span><span class="p">&gt;</span> <span class="o">::=</span> (<span class="p">&lt;</span><span class="nc">expr</span><span class="p">&gt;</span> + <span class="p">&lt;</span><span class="nc">expr</span><span class="p">&gt;</span>)
+         | (<span class="p">&lt;</span><span class="nc">expr</span><span class="p">&gt;</span> - <span class="p">&lt;</span><span class="nc">expr</span><span class="p">&gt;</span>)
+         | <span class="p">&lt;</span><span class="nc">num</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nc">num</span><span class="p">&gt;</span>  <span class="o">::=</span> 1, 42, 17, ...
+</code></pre></div>
+<ul>
+<li>
+<p><code>&lt;var&gt;</code> 은 재귀적으로 사용할 수 있는 메타 변수이다.</p>
+</li>
+<li>
+<p><code>::=</code> 는 "Can be written as" 라는 뜻이다.</p>
+</li>
+<li>
+<p><code>|</code> 는 또 다르게 "Can be written as" 될 수 있다는 것이다.</p>
+</li>
+</ul>
+<p>BNF 에서 <code>&lt;expr&gt;</code> 같은 메타 변수들은 집합을 정의하게 된다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>&lt;num&gt;</code> 은 모든 숫자의 집합을 의미하게 된다. 그러므로 </p>
+<div class="arithmatex">\[ 2 \in \text{&lt;num&gt;} \\ 298 \in \text{&lt;num&gt;} \]</div>
+<p>와 같이 표현할 수 있다.</p>
+</div>
+<p>위에서 정의한 BNF 에서 <code>&lt;expr&gt; ::= (&lt;expr&gt; + &lt;expr&gt;)</code> 는 덧셈 연산을 정의한 것이고, <code>| (&lt;expr&gt; - &lt;expr&gt;)</code> 는 뺄셈 연산을, <code>| &lt;num&gt;</code> 은 숫자를 정의한 것이다. </p>
+<p>그러므로 </p>
+<div class="arithmatex">\[ (\text{&lt;expr&gt;} + \text{&lt;expr&gt;}) \\ 8 \in \text{&lt;num&gt;} \subset \text{&lt;expr&gt;} \\ (8 + 8) \in \text{&lt;expr&gt;} \\ \]</div>
+<p>등과 같이 표현할 수 있다.</p>
+<h3 id="bnf-for-ae">BNF for AE<a class="headerlink" href="#bnf-for-ae" title="Permanent link">¶</a></h3>
+<p>우리는 간단한 산술 연산을 할 수 있는 AE 를 정의했는데, 이를 통하여 </p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="nb">-</span> <span class="mi">3</span> <span class="mi">4</span> <span class="p">)</span> <span class="mi">7</span><span class="p">)</span>
+</code></pre></div>
+<p>과 같은 연산을 할 수 있길 원한다. 그러므로 BNF 를 </p>
+<div class="highlight"><pre><span></span><code>&lt;AE&gt; ::= (&lt;AE&gt; + &lt;AE&gt;)
+         | (&lt;AE&gt; - &lt;AE&gt;)
+         | &lt;num&gt;
+</code></pre></div>
+<p>와 같이 정의하면 된다.</p>
+<h3 id="implementation-parser">Implementation Parser<a class="headerlink" href="#implementation-parser" title="Permanent link">¶</a></h3>
+<p>지금까지 BNF 를 통해 concrete syntax 를 명확하게 정의해보았다. Parser 의 역할이란 concrete syntax 를 abstract syntax 로 변환해주는 것이라고 하였다. 이 abstract syntax 가 Interpreter 로 입력되고 Interpreter 는 그것을 수행하여 결과를 출력하게 된다.</p>
+<p>input(concrete syntax(code)) → Parser → abstract syntax → Interpreter → output</p>
+<p>그러므로 Parser 는 기술적으로 expression 을 받아서 AE 로 변환하는 프로그램이다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>그러므로 Parser 는 다음과 같은 기능을 하게 된다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">3</span><span class="p">))</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">+</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">})</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">num</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">4</span><span class="p">)))</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">-</span> <span class="mi">4</span> <span class="mi">3</span><span class="p">})</span> <span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">num</span> <span class="mi">4</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">3</span><span class="p">)))</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">+</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">4</span> <span class="mi">3</span><span class="p">}</span> <span class="p">{</span><span class="ss">-</span> <span class="mi">4</span> <span class="mi">3</span><span class="p">}})</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">num</span> <span class="mi">4</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">3</span><span class="p">))</span> <span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">num</span> <span class="mi">4</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">3</span><span class="p">))))</span>
+</code></pre></div>
+</div>
+<p>이 Parser 는 다음과 같이 입력된 데이터의 타입에 따라서 그 데이터를 해당 AE 로 변환해주는 프로그램으로 구현할 수 있다. </p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">parse</span> <span class="n">sexp</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">cond</span> 
+        <span class="p">[(</span><span class="nb">number?</span> <span class="n">sexp</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="n">sexp</span><span class="p">)]</span>
+        <span class="p">[(</span><span class="nb">eq?</span> <span class="p">(</span><span class="nb">first</span> <span class="n">sexp</span><span class="p">)</span> <span class="o">'</span><span class="ss">+</span><span class="p">)</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">second</span> <span class="n">sexp</span><span class="p">))</span> 
+                                    <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">third</span> <span class="n">sexp</span><span class="p">)))]</span>
+        <span class="p">[(</span><span class="nb">eq?</span> <span class="p">(</span><span class="nb">first</span> <span class="n">sexp</span><span class="p">)</span> <span class="o">'</span><span class="ss">-</span><span class="p">)</span> <span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">second</span> <span class="n">sexp</span><span class="p">))</span> 
+                                    <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">third</span> <span class="n">sexp</span><span class="p">)))]))</span>
+</code></pre></div>
+<p>이 프로그램은 </p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">3</span><span class="p">))</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">+</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">})</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">num</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">4</span><span class="p">)))</span>
+</code></pre></div>
+<p>와 같은 입력을 잘 처리한다. 그러나 <code>(parse '{+ 3 4 5})</code> 와 같은 입력은 잘 처리하지 못한다. 그러므로 <code>sexp</code> 리스트의 길이가 <code>3</code> 이어야 한다는 조건을 추가하고, 그 이외의 입력은 에러로 처리하는 Parser 를 다음과 같이 구현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">parse</span> <span class="n">sexp</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">cond</span> 
+        <span class="p">[(</span><span class="nb">number?</span> <span class="n">sexp</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="n">sexp</span><span class="p">)]</span>
+        <span class="p">[(</span><span class="k">and</span> <span class="p">(</span><span class="nb">=</span> <span class="mi">3</span> <span class="p">(</span><span class="nb">length</span> <span class="n">sexp</span><span class="p">))</span> <span class="p">(</span><span class="nb">eq?</span> <span class="p">(</span><span class="nb">first</span> <span class="n">sexp</span><span class="p">)</span> <span class="o">'</span><span class="ss">+</span><span class="p">))</span>
+         <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">second</span> <span class="n">sexp</span><span class="p">))</span> <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">third</span> <span class="n">sexp</span><span class="p">)))]</span>
+        <span class="p">[(</span><span class="k">and</span> <span class="p">(</span><span class="nb">=</span> <span class="mi">3</span> <span class="p">(</span><span class="nb">length</span> <span class="n">sexp</span><span class="p">))</span> <span class="p">(</span><span class="nb">eq?</span> <span class="p">(</span><span class="nb">first</span> <span class="n">sexp</span><span class="p">)</span> <span class="o">'</span><span class="ss">-</span><span class="p">))</span>
+         <span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">second</span> <span class="n">sexp</span><span class="p">))</span> <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">third</span> <span class="n">sexp</span><span class="p">)))]</span>
+        <span class="p">[</span><span class="k">else</span> <span class="p">(</span><span class="nb">error</span> <span class="o">'</span><span class="ss">parse</span> <span class="s2">"bad syntax"</span><span class="p">)]))</span>
+</code></pre></div>
+<h2 id="interpreter">Interpreter<a class="headerlink" href="#interpreter" title="Permanent link">¶</a></h2>
+<p>우리는 concrete syntax(code) 를 받아서 abstract syntax(AE) 로 변환하는 Parser 를 구현해보았다. 그러면 이제 abstract syntax 를 받아서 실행하고 결과를 출력하는 Interpreter 를 구현할 차례이다. </p>
+<p>Interpreter 구현에 있어서 Type Deconstruction 이 사용된다. Type Deconstruction 이 abstract syntax(AE) 의 타입에 따라 특정 task 를 수행해주기 때문이다. </p>
+<h3 id="implementation-interpreter">Implementation Interpreter<a class="headerlink" href="#implementation-interpreter" title="Permanent link">¶</a></h3>
+<p>Type Deconstruction 을 기반으로 다음과 같이 Interpreter 를 구현할 수 있다. 이 Interpreter 는 AE 를 받아서 특정 task 를 수행한다.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">; interp: AE -&gt; number</span>
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">interp</span> <span class="n">an-ae</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">type-case</span> <span class="n">AE</span> <span class="n">an-ae</span>
+        <span class="p">[</span><span class="n">num</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="n">n</span><span class="p">]</span>    
+        <span class="p">[</span><span class="n">add</span> <span class="p">(</span><span class="n">l</span> <span class="n">r</span><span class="p">)</span> <span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="n">interp</span> <span class="n">l</span><span class="p">)</span> <span class="p">(</span><span class="n">interp</span> <span class="n">r</span><span class="p">))]</span>
+        <span class="p">[</span><span class="n">sub</span> <span class="p">(</span><span class="n">l</span> <span class="n">r</span><span class="p">)</span> <span class="p">(</span><span class="nb">-</span> <span class="p">(</span><span class="n">interp</span> <span class="n">l</span><span class="p">)</span> <span class="p">(</span><span class="n">interp</span> <span class="n">r</span><span class="p">))]))</span>
+</code></pre></div>
+<p>이 Interpreter 와 Parser 를 통해 다음과 같은 산술 연산을 수행할 수 있다. </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="mi">3</span><span class="p">))</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">+</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">}))</span> <span class="mi">7</span><span class="p">)</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">+</span> <span class="p">{</span><span class="ss">-</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">}</span> <span class="mi">7</span><span class="p">}))</span> <span class="mi">6</span><span class="p">)</span>
+</code></pre></div>
+<p><code>parse</code> 는 concrete syntax(code) 를 abstract syntax(AE) 로 변환하고, <code>interp</code> 는 abstract syntax(AE) 를 받아서 task 를 수행한다. </p>
+</div>
+<h2 id="substitution">Substitution<a class="headerlink" href="#substitution" title="Permanent link">¶</a></h2>
+<p>이제 기본적인 Parser, Interpreter 는 완성되었다. 이것들을 업그레이드 해나갈 건데, 먼저 Substitution 을 지원하는 Interpreter 를 만들어볼 것이다.</p>
+<p>Substitution 은 반복되는 expression 을 불필요하게 계산하지 않도록 도입된 개념이다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">totalSum</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">10</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">10</span><span class="p">);</span>
+</code></pre></div>
+<p>이 코드는 불필요한 연산이 2번 반복된다. 이 코드를 다음과 같이 최적화할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">partialSum</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">+</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">totalSum</span> <span class="o">=</span> <span class="n">partialSum</span> <span class="o">+</span> <span class="n">partialSum</span> <span class="o">+</span> <span class="n">partialSum</span><span class="p">;</span>
+</code></pre></div>
+</div>
+<p>이것이 Substitution 인데, Substitution 을 위해서는 identifier 가 필요하다. identifier 는 계산된 결과를 저장하는 장소이다. 위 예시에서 <code>partialSum</code> 이 identifier 이다.</p>
+<h3 id="identifier">Identifier<a class="headerlink" href="#identifier" title="Permanent link">¶</a></h3>
+<p>Identifier 란 expression 의 값의 이름이다. 이 이름(identifier)을 다른 곳에서 다시 사용할 수 있다.</p>
+<p>변수 vraiable 과 비슷한 개념이지만, 변수는 그 값이 변할 수 있다는 것에서 차이가 있다. Identifier 의 값은 불변한다.</p>
+<p>가령 </p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="nb">+</span> <span class="mi">5</span> <span class="mi">5</span><span class="p">)</span> <span class="p">(</span><span class="nb">+</span> <span class="mi">5</span> <span class="mi">5</span><span class="p">))</span>
+</code></pre></div>
+<p>와 같은 프로그램에서 <code>(+ 5 5)</code> 가 중복 계산되므로 이것을 identifier 에 저장하여 재사용하면 Substitution 을 하는 것이다. 이제 <code>with</code> 이라는 키워드가 identifier 를 정의한다고 하자. 그러면 위 프로그램을 다음과 같이 Substitution 할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">with</span> <span class="p">(</span><span class="n">x</span> <span class="p">(</span><span class="nb">+</span> <span class="mi">5</span> <span class="mi">5</span><span class="p">))</span> <span class="p">(</span><span class="nb">+</span> <span class="n">x</span> <span class="n">x</span><span class="p">))</span>
+</code></pre></div>
+<p>이처럼 identifier 를 지원하는 AE 를 WAE 라고 하자.</p>
+<h3 id="concrete-syntax-for-wae-bnf">Concrete Syntax for WAE (BNF)<a class="headerlink" href="#concrete-syntax-for-wae-bnf" title="Permanent link">¶</a></h3>
+<p>WAE 의 BNF 를 다음과 같이 만들 수 있다.</p>
+<div class="highlight"><pre><span></span><code>&lt;WAE&gt; ::= (&lt;WAE&gt; + &lt;WAE&gt;)
+         | (&lt;WAE&gt; - &lt;WAE&gt;)
+         | &lt;num&gt;
+         | (with (&lt;id&gt; &lt;WAE&gt;) &lt;WAE&gt;)
+         | &lt;id&gt;
+&lt;id&gt; ::= x, y, plus, factorial, ...
+</code></pre></div>
+<p>단지 기존의 AE 의 BNF 에 2 가지가 추가된 것이다. <code>| (with (&lt;id&gt; &lt;WAE&gt;) &lt;WAE&gt;)</code> 를 통하여 identifier 를 사용할 수 있게 되고 <code>| &lt;id&gt;</code> 를 통하여 identifier 를 WAE 로 정의할 수 있게 되었다. </p>
+<h3 id="identifier-type">Identifier Type<a class="headerlink" href="#identifier-type" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">with</span> <span class="p">(</span><span class="n">x</span> <span class="p">(</span><span class="nb">+</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">))</span>
+      <span class="p">(</span><span class="nb">+</span> <span class="n">x</span> <span class="n">x</span><span class="p">))</span>
+</code></pre></div>
+<p>의 결과는 6 이다. 이떄 <code>(with (x (+ 1 2))</code> 에서 identifier <code>x</code> 는 Binding instance 이고 <code>(+ x x))</code> 에서 identifier <code>x</code> 는 Bound instance 이다.</p>
+<p>만약 </p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">with</span> <span class="p">(</span><span class="n">x</span> <span class="p">(</span><span class="nb">+</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">))</span>
+      <span class="p">(</span><span class="nb">+</span> <span class="n">x</span> <span class="n">y</span><span class="p">))</span>
+</code></pre></div>
+<p>와 같이 되어있다면 <code>y</code> 라는 정의되지 않은 identifier 가 사용되었으므로 에러가 발생한다. 이 <code>y</code> 를 free identifier 라고 한다.</p>
+<h3 id="abstarct-syntax-for-wae">Abstarct Syntax for WAE<a class="headerlink" href="#abstarct-syntax-for-wae" title="Permanent link">¶</a></h3>
+<p>WAE 를 구현하기 위하여 먼저 WAE 라는 abstract syntax 를 정의하자.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">define-type</span> <span class="n">WAE</span>
+    <span class="p">[</span><span class="n">num</span> <span class="p">(</span><span class="n">n</span> <span class="nb">number?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">add</span> <span class="p">(</span><span class="n">lhs</span> <span class="n">WAE?</span><span class="p">)</span> <span class="p">(</span><span class="n">rhs</span> <span class="n">WAE?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">sub</span> <span class="p">(</span><span class="n">lhs</span> <span class="n">WAE?</span><span class="p">)</span> <span class="p">(</span><span class="n">rhs</span> <span class="n">WAE?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">with</span> <span class="p">(</span><span class="n">name</span> <span class="nb">symbol?</span><span class="p">)</span> <span class="p">(</span><span class="n">named-expr</span> <span class="n">WAE?</span><span class="p">)</span> <span class="p">(</span><span class="n">body</span> <span class="n">WAE?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">id</span> <span class="p">(</span><span class="n">name</span> <span class="nb">symbol?</span><span class="p">)])</span>
+</code></pre></div>
+<h3 id="implement-parser-for-wae">Implement Parser for WAE<a class="headerlink" href="#implement-parser-for-wae" title="Permanent link">¶</a></h3>
+<p>WAE 를 정의했으니 code(concrete syntax) 를 abstract syntax(WAE) 로 변환해주는 Parser 를 구현해보자.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">parse</span> <span class="n">sexp</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">cond</span>
+       <span class="p">[(</span><span class="nb">number?</span> <span class="n">sexp</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="n">sexp</span><span class="p">)]</span>
+       <span class="p">[(</span><span class="k">and</span> <span class="p">(</span><span class="nb">=</span> <span class="mi">3</span> <span class="p">(</span><span class="nb">length</span> <span class="n">sexp</span><span class="p">))</span> <span class="p">(</span><span class="nb">eq?</span> <span class="p">(</span><span class="nb">first</span> <span class="n">sexp</span><span class="p">)</span> <span class="o">'</span><span class="ss">+</span><span class="p">))</span>
+                            <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">second</span> <span class="n">sexp</span><span class="p">))</span> <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">third</span> <span class="n">sexp</span><span class="p">)))]</span>
+       <span class="p">[(</span><span class="k">and</span> <span class="p">(</span><span class="nb">=</span> <span class="mi">3</span> <span class="p">(</span><span class="nb">length</span> <span class="n">sexp</span><span class="p">))</span> <span class="p">(</span><span class="nb">eq?</span> <span class="p">(</span><span class="nb">first</span> <span class="n">sexp</span><span class="p">)</span> <span class="o">'</span><span class="ss">-</span><span class="p">))</span>
+                            <span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">second</span> <span class="n">sexp</span><span class="p">))</span> <span class="p">(</span><span class="n">parse</span> <span class="p">(</span><span class="nb">third</span> <span class="n">sexp</span><span class="p">)))]</span>
+       <span class="p">[</span><span class="k">...</span> <span class="p">(</span><span class="n">with</span> <span class="k">...</span><span class="p">)]</span>
+       <span class="p">[</span><span class="k">...</span> <span class="p">(</span><span class="n">id</span> <span class="k">...</span><span class="p">)]</span>
+       <span class="p">[</span><span class="k">else</span> <span class="p">(</span><span class="nb">error</span> <span class="o">'</span><span class="ss">parse</span> <span class="s2">"bad syntax:~a"</span> <span class="n">sexp</span><span class="p">)]))</span>
+</code></pre></div>
+<p>일단은 AE 를 위한 <code>parse</code> 를 기반으로 위와 같이 스켈레톤 코드를 짜볼 수 있을 것이다. 그런데 위 코드는 racket 의 <code>match</code> 키워드를 사용하여 최적화시킬 수 있다. 또한 동시에 <code>with</code> 와 <code>id</code> 의 케이스도 구현해보자.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">parse</span> <span class="n">sexp</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">match</span> <span class="n">sexp</span>
+       <span class="p">[(</span><span class="n">?</span> <span class="nb">number?</span><span class="p">)</span>    <span class="p">(</span><span class="n">num</span> <span class="n">sexp</span><span class="p">)]</span>
+       <span class="p">[(</span><span class="nb">list</span> <span class="o">'</span><span class="ss">+</span> <span class="n">l</span> <span class="n">r</span><span class="p">)</span>  <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">parse</span> <span class="n">l</span><span class="p">)</span> <span class="p">(</span><span class="n">parse</span> <span class="n">r</span><span class="p">))]</span>
+       <span class="p">[(</span><span class="nb">list</span> <span class="o">'</span><span class="ss">-</span> <span class="n">l</span> <span class="n">r</span><span class="p">)</span>  <span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">parse</span> <span class="n">I</span><span class="p">)</span> <span class="p">(</span><span class="n">parse</span> <span class="n">r</span><span class="p">))]</span>
+       <span class="p">[(</span><span class="nb">list</span> <span class="o">'</span><span class="ss">with</span> <span class="p">(</span><span class="nb">list</span> <span class="n">i</span> <span class="n">v</span><span class="p">)</span> <span class="n">e</span><span class="p">)</span> <span class="p">(</span><span class="n">with</span> <span class="n">i</span> <span class="p">(</span><span class="n">parse</span> <span class="n">v</span><span class="p">)</span> <span class="p">(</span><span class="n">parse</span> <span class="n">e</span><span class="p">))]</span>
+       <span class="p">[(</span><span class="n">?</span> <span class="nb">symbol?</span><span class="p">)</span> <span class="p">(</span><span class="n">id</span> <span class="n">sexp</span><span class="p">)]</span>
+       <span class="p">[</span><span class="k">else</span> <span class="p">(</span><span class="nb">error</span> <span class="o">'</span><span class="ss">parse</span> <span class="s2">"bad syntax:~a"</span> <span class="n">sexp</span><span class="p">)]))</span>
+</code></pre></div>
+<p>이 파서는 다음과 같이 concrete syntax(code) 를 abstract syntax(WAE) 로 바꿔준다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">+</span> <span class="p">{</span><span class="ss">-</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">}</span> <span class="mi">7</span><span class="p">})</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">num</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">4</span><span class="p">))</span> <span class="p">(</span><span class="n">num</span> <span class="mi">7</span><span class="p">)))</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">x</span> <span class="mi">5</span><span class="p">}</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">8</span> <span class="mi">2</span><span class="p">}})</span> <span class="p">(</span><span class="n">with</span> <span class="o">'</span><span class="ss">x</span> <span class="p">(</span><span class="n">num</span> <span class="mi">5</span><span class="p">)</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">num</span> <span class="mi">8</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">2</span><span class="p">))))</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">x</span> <span class="mi">5</span><span class="p">}</span> <span class="p">{</span><span class="ss">+</span> <span class="ss">x</span> <span class="ss">x</span><span class="p">}})</span> <span class="p">(</span><span class="n">with</span> <span class="o">'</span><span class="ss">x</span> <span class="p">(</span><span class="n">num</span> <span class="mi">5</span><span class="p">)</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">x</span><span class="p">)</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">x</span><span class="p">))))</span>
+</code></pre></div>
+</div>
+<h3 id="implement-substitution">Implement Substitution<a class="headerlink" href="#implement-substitution" title="Permanent link">¶</a></h3>
+<p>Parser 를 구현했으니 이제 Interpreter 를 구현하면 된다. 하지만 그전에 Substitution 을 구현해야 한다. 이 Substitution 이 Interpreter 로 전달되는 WAE 의 identifier 를 모두 identifier 가 아닌 WAE 로 바꿔준다. 그러면 Interpreter 는 순수한 산술 연산 코드만 받고 산술 연산만 진행할 수 있다.</p>
+<p>이 Substitution 을 함수 <code>subst</code> 로 구현할 것이다. 이 함수는 다음과 같은 기능을 하게 된다.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">; {with {x 10} 5}              ⇒        10 for x in 5               ⇒ 5</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">subst</span> <span class="p">(</span><span class="n">num</span> <span class="mi">5</span><span class="p">)</span> <span class="o">'</span><span class="ss">x</span> <span class="mi">10</span><span class="p">)</span>   <span class="p">(</span><span class="n">num</span> <span class="mi">5</span><span class="p">))</span> 
+<span class="c1">; {with {x 10} {+ 1 x}}         ⇒        10 for x in {+ 1 x}     ⇒  {+ 1 10}</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">subst</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">num</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">x</span><span class="p">))</span> <span class="o">'</span><span class="ss">x</span> <span class="mi">10</span><span class="p">)</span>   <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">num</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="mi">10</span><span class="p">)))</span>
+<span class="c1">; {with {x 10} x}                   ⇒        10 for x in x           ⇒ 10</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">subst</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">x</span><span class="p">)</span> <span class="o">'</span><span class="ss">x</span> <span class="mi">10</span><span class="p">)</span>   <span class="p">(</span><span class="n">num</span> <span class="mi">10</span><span class="p">))</span>
+<span class="c1">; {with {x 10} y}                  ⇒         10 for x in y          ⇒   y (no substitution)</span>
+<span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">subst</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">y</span><span class="p">)</span> <span class="o">'</span><span class="ss">x</span> <span class="mi">10</span><span class="p">)</span>   <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">y</span><span class="p">))</span>
+</code></pre></div>
+<p><code>subst</code> 를 다음과 같이 구현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">subst</span> <span class="n">wae</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">type-case</span> <span class="n">WAE</span> <span class="n">wae</span>
+        <span class="p">[</span><span class="n">num</span>    <span class="p">(</span><span class="n">n</span><span class="p">)</span>        <span class="n">wae</span><span class="p">]</span>
+        <span class="p">[</span><span class="n">add</span>    <span class="p">(</span><span class="n">l</span> <span class="n">r</span><span class="p">)</span>      <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">subst</span> <span class="n">l</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">)</span> <span class="p">(</span><span class="n">subst</span> <span class="n">r</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">))]</span>
+        <span class="p">[</span><span class="n">sub</span>    <span class="p">(</span><span class="n">l</span> <span class="n">r</span><span class="p">)</span>      <span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">subst</span> <span class="n">l</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">)</span> <span class="p">(</span><span class="n">subst</span> <span class="n">r</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">))]</span>
+        <span class="p">[</span><span class="n">with</span>   <span class="p">(</span><span class="n">i</span> <span class="n">v</span> <span class="n">e</span><span class="p">)</span>    <span class="p">(</span><span class="n">with</span> <span class="n">i</span> <span class="p">(</span><span class="n">subst</span> <span class="n">v</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">)</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">symbol=?</span> <span class="n">i</span> <span class="n">idtf</span><span class="p">)</span> <span class="n">e</span>
+                                   <span class="p">(</span><span class="n">subst</span> <span class="n">e</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">)))]</span>
+        <span class="p">[</span><span class="n">id</span>     <span class="p">(</span><span class="n">s</span><span class="p">)</span>        <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">symbol=?</span> <span class="n">s</span> <span class="n">idtf</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="n">val</span><span class="p">)</span> <span class="n">wae</span><span class="p">)]))</span>
+</code></pre></div>
+<h3 id="implement-interpreter-for-wae">Implement Interpreter for WAE<a class="headerlink" href="#implement-interpreter-for-wae" title="Permanent link">¶</a></h3>
+<p><code>subst</code> 를 기반으로 WAE 를 위한 Interpreter 를 다음과 같이 구현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">; interp: WAE -&gt; number</span>
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">interp</span> <span class="n">wae</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">type-case</span> <span class="n">WAE</span> <span class="n">wae</span>
+        <span class="p">[</span><span class="n">num</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="n">n</span><span class="p">]</span>
+        <span class="p">[</span><span class="n">add</span> <span class="p">(</span><span class="n">l</span> <span class="n">r</span><span class="p">)</span> <span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="n">interp</span> <span class="n">l</span><span class="p">)</span> <span class="p">(</span><span class="n">interp</span> <span class="n">r</span><span class="p">))]</span>
+        <span class="p">[</span><span class="n">sub</span> <span class="p">(</span><span class="n">l</span> <span class="n">r</span><span class="p">)</span> <span class="p">(</span><span class="nb">-</span> <span class="p">(</span><span class="n">interp</span> <span class="n">l</span><span class="p">)</span> <span class="p">(</span><span class="n">interp</span> <span class="n">r</span><span class="p">))]</span>
+        <span class="p">[</span><span class="n">with</span> <span class="p">(</span><span class="n">i</span> <span class="n">v</span> <span class="n">e</span><span class="p">)</span> <span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">subst</span> <span class="n">e</span> <span class="n">i</span> <span class="p">(</span><span class="n">interp</span> <span class="n">v</span><span class="p">)))]</span>
+        <span class="p">[</span><span class="n">id</span> <span class="p">(</span><span class="n">s</span><span class="p">)</span>        <span class="p">(</span><span class="nb">error</span> <span class="o">'</span><span class="ss">interp</span> <span class="s2">"free identifier"</span><span class="p">)]))</span>
+</code></pre></div>
+<p>이 WAE Interpreter 를 다음고 같이 사용할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">test</span> <span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">with</span> <span class="o">'</span><span class="ss">x</span> <span class="p">(</span><span class="n">num</span> <span class="mi">5</span><span class="p">)</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">x</span><span class="p">)</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">x</span><span class="p">))))</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="function">Function<a class="headerlink" href="#function" title="Permanent link">¶</a></h2>
+<p>이제 지금까지 만들어본 WAE 가 함수를 지원하도록 할 것이다. 따라서 우리의 프로그래밍 언어는 다음과 같이 발전해왔다.</p>
+<p>AE → WAE → F1WAE</p>
+<p>그러면 먼저 함수의 concrete syntax 와 abstract syntax 를 정의해보자.</p>
+<h3 id="concrete-syntax-for-function-bnf">Concrete Syntax for Function (BNF)<a class="headerlink" href="#concrete-syntax-for-function-bnf" title="Permanent link">¶</a></h3>
+<p>먼저 간단한 함수 </p>
+<div class="arithmatex">\[ \text{identity}(x) = x \\ \text{twice}(x) = x + x \]</div>
+<p>를 생각하자. twice 함수를 AE 로 표현하면 다음과 같다. </p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">+</span> <span class="mi">10</span> <span class="mi">10</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">+</span> <span class="mi">17</span> <span class="mi">17</span><span class="p">)</span>
+</code></pre></div>
+<p>twice 함수를 WAE 로 표현하면 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">with</span> <span class="p">(</span><span class="n">x</span> <span class="mi">10</span><span class="p">)</span> <span class="p">(</span><span class="nb">+</span> <span class="n">x</span> <span class="n">x</span><span class="p">))</span>
+<span class="p">(</span><span class="n">with</span> <span class="p">(</span><span class="n">x</span> <span class="mi">17</span><span class="p">)</span> <span class="p">(</span><span class="nb">+</span> <span class="n">x</span> <span class="n">x</span><span class="p">))</span>
+</code></pre></div>
+<p>이제 F1WAE 로 identity 함수와 twice 함수를 다음과 같은 concrete syntax 로 표현하기로 해보자.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">deffun</span> <span class="p">(</span><span class="nb">identity</span> <span class="n">x</span><span class="p">)</span> <span class="n">x</span><span class="p">)</span>
+<span class="p">(</span><span class="n">deffun</span> <span class="p">(</span><span class="n">twice</span> <span class="n">x</span><span class="p">)</span> <span class="p">(</span><span class="nb">+</span> <span class="n">x</span> <span class="n">x</span><span class="p">))</span>
+</code></pre></div>
+<p>그러면 다음과 같이 이 함수를 사용할 수 있다. </p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">identity</span> <span class="mi">8</span><span class="p">)</span>
+<span class="p">(</span><span class="n">twice</span> <span class="mi">10</span><span class="p">)</span>
+<span class="p">(</span><span class="n">twice</span> <span class="mi">17</span><span class="p">)</span>
+</code></pre></div>
+<p>이 concrete syntax 를 BNF 로 정의해보자.</p>
+<div class="highlight"><pre><span></span><code>&lt;FunDef&gt; ::= {deffun {&lt;id&gt; &lt;id&gt;} &lt;F1WAE&gt;}
+&lt;F1WAE&gt; ::= &lt;num&gt;
+            | {+ &lt;F1WAE&gt; &lt;F1WAE&gt;}
+            | {- &lt;F1WAE&gt; &lt;F1WAE&gt;}
+            | {with {&lt;id&gt; &lt;F1WAE&gt;} &lt;F1WAE&gt;}
+            | &lt;id&gt;
+            | {&lt;id&gt; &lt;F1WAE&gt;}
+</code></pre></div>
+<p><code>&lt;FunDef&gt; ::= {deffun {&lt;id&gt; &lt;id&gt;} &lt;F1WAE&gt;}</code> 가 함수 정의를 위한 규칙이고, <code>| {&lt;id&gt; &lt;F1WAE&gt;}</code> 는 함수 호출을 위한 규칙이다. </p>
+<h3 id="abstarct-syntax-for-function">Abstarct Syntax for Function<a class="headerlink" href="#abstarct-syntax-for-function" title="Permanent link">¶</a></h3>
+<p>concrete syntax 가 Parser 에 의하여 변환될 abstract syntax 를 다음과 같이 정의할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">define-type</span> <span class="n">FunDef</span>
+    <span class="p">[</span><span class="n">fundef</span> <span class="p">(</span><span class="n">fun-name</span> <span class="nb">symbol?</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">arg-name</span> <span class="nb">symbol?</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">body</span> <span class="n">F1WAE?</span><span class="p">)])</span>
+
+<span class="p">(</span><span class="n">define-type</span> <span class="n">F1WAE</span>
+    <span class="p">[</span><span class="n">num</span>    <span class="p">(</span><span class="n">n</span> <span class="nb">number?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">add</span>     <span class="p">(</span><span class="n">lhs</span> <span class="n">F1WAE?</span><span class="p">)</span> <span class="p">(</span><span class="n">rhs</span> <span class="n">F1WAE?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">sub</span>     <span class="p">(</span><span class="n">lhs</span> <span class="n">F1WAE?</span><span class="p">)</span> <span class="p">(</span><span class="n">rhs</span> <span class="n">F1WAE?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">with</span>    <span class="p">(</span><span class="n">name</span> <span class="nb">symbol?</span><span class="p">)</span> <span class="p">(</span><span class="n">named-expr</span> <span class="n">F1WAE?</span><span class="p">)</span> <span class="p">(</span><span class="n">body</span> <span class="n">F1WAE?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">id</span>        <span class="p">(</span><span class="n">name</span> <span class="nb">symbol?</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">app</span>     <span class="p">(</span><span class="n">ftn</span> <span class="nb">symbol?</span><span class="p">)</span>    <span class="p">(</span><span class="n">arg</span> <span class="n">F1WAE?</span><span class="p">)])</span>
+</code></pre></div>
+<p>함수 정의를 위하여 <code>FunDef</code> 를 추가했고, 함수 호출을 위하여 <code>[app     (ftn symbol?)    (arg F1WAE?)])</code> 가 추가되었다. </p>
+<p>이를 통해 다음과 같이 함수 선언 및 호출을 할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">fundef</span>    <span class="o">'</span><span class="ss">identify</span> <span class="o">'</span><span class="ss">x</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">x</span><span class="p">))</span>
+<span class="p">(</span><span class="n">app</span> <span class="o">'</span><span class="ss">identity</span> <span class="p">(</span><span class="n">num</span> <span class="mi">8</span><span class="p">))</span>
+
+<span class="p">(</span><span class="n">fundef</span> <span class="o">'</span><span class="ss">twice</span> <span class="o">'</span><span class="ss">x</span> <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">x</span><span class="p">)</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">x</span><span class="p">)))</span>
+<span class="p">(</span><span class="n">app</span> <span class="o">'</span><span class="ss">twice</span> <span class="p">(</span><span class="n">num</span> <span class="mi">10</span><span class="p">))</span>
+<span class="p">(</span><span class="n">app</span> <span class="o">'</span><span class="ss">twice</span> <span class="p">(</span><span class="n">num</span> <span class="mi">17</span><span class="p">))</span>
+<span class="p">(</span><span class="n">app</span> <span class="o">'</span><span class="ss">twice</span> <span class="p">(</span><span class="n">num</span> <span class="mi">3</span><span class="p">))</span>
+</code></pre></div>
+<h3 id="implement-parser-for-f1wae">Implement Parser for F1WAE<a class="headerlink" href="#implement-parser-for-f1wae" title="Permanent link">¶</a></h3>
+<p>이제 concrete syntax 를 abstract syntax 로 변환할 F1WAE 의 Parser 를 구현할 차례이다.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">; parse-fd: sexp -&gt; FunDef</span>
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">parse-fd</span> <span class="n">sexp</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">match</span> <span class="n">sexp</span>
+        <span class="p">[(</span><span class="nb">list</span> <span class="o">'</span><span class="ss">deffun</span> <span class="p">(</span><span class="nb">list</span> <span class="n">f</span> <span class="n">x</span><span class="p">)</span> <span class="n">b</span><span class="p">)</span>    <span class="p">(</span><span class="n">fundef</span> <span class="n">f</span> <span class="n">x</span> <span class="p">(</span><span class="n">parse</span> <span class="n">b</span><span class="p">))]))</span>
+
+<span class="c1">; parse : sexp -&gt; F1WAE</span>
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">parse</span> <span class="n">sexp</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">match</span> <span class="n">sexp</span>
+        <span class="p">[(</span><span class="n">?</span> <span class="nb">number?</span><span class="p">)</span>            <span class="p">(</span><span class="n">num</span> <span class="n">sexp</span><span class="p">)]</span>
+        <span class="p">[(</span><span class="nb">list</span> <span class="o">'</span><span class="ss">+</span> <span class="n">l</span> <span class="n">r</span><span class="p">)</span>            <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">parse</span> <span class="n">l</span><span class="p">)</span> <span class="p">(</span><span class="n">parse</span> <span class="n">r</span><span class="p">))]</span>
+        <span class="p">[(</span><span class="nb">list</span> <span class="o">'</span><span class="ss">-</span> <span class="n">l</span> <span class="n">r</span><span class="p">)</span>                <span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">parse</span> <span class="n">l</span><span class="p">)</span> <span class="p">(</span><span class="n">parse</span> <span class="n">r</span><span class="p">))]</span>
+        <span class="p">[(</span><span class="nb">list</span> <span class="o">'</span><span class="ss">with</span> <span class="p">(</span><span class="nb">list</span> <span class="n">i</span> <span class="n">v</span><span class="p">)</span> <span class="n">e</span><span class="p">)</span>    <span class="p">(</span><span class="n">with</span> <span class="n">i</span> <span class="p">(</span><span class="n">parse</span> <span class="n">v</span><span class="p">)</span> <span class="p">(</span><span class="n">parse</span> <span class="n">e</span><span class="p">))]</span>
+        <span class="p">[(</span><span class="n">?</span> <span class="nb">symbol?</span><span class="p">)</span>            <span class="p">(</span><span class="n">id</span> <span class="n">sexp</span><span class="p">)]</span>
+        <span class="p">[(</span><span class="nb">list</span> <span class="n">f</span> <span class="n">a</span><span class="p">)</span>                <span class="p">(</span><span class="n">app</span> <span class="n">f</span> <span class="p">(</span><span class="n">parse</span> <span class="n">a</span><span class="p">))]</span>
+        <span class="p">[</span><span class="k">else</span>                 <span class="p">(</span><span class="nb">error</span> <span class="o">'</span><span class="ss">parse</span> <span class="s2">"bad syntax: ~a"</span> <span class="n">sexp</span><span class="p">)]))</span>
+</code></pre></div>
+<p>함수 선언을 <code>fundef</code> 라는 abstract syntax(F1WAE) 로 변환할 <code>parse-fd</code> 를 정의했고, 함수 호출문을 abstract syntax(F1WAE) 로 변환할 <code>[(list f a) (app f (parse a))]</code> 가 추가되었다.</p>
+<h3 id="implement-interpreter-for-f1wae">Implement Interpreter for F1WAE<a class="headerlink" href="#implement-interpreter-for-f1wae" title="Permanent link">¶</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">; interp: F1WAE list-of-FuncDef -&gt; number</span>
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">interp</span> <span class="n">f1wae</span> <span class="n">fundefs</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">type-case</span> <span class="n">F1WAE</span> <span class="n">f1wae</span>
+        <span class="p">[</span><span class="n">num</span>    <span class="p">(</span><span class="n">n</span><span class="p">)</span>        <span class="n">n</span><span class="p">]</span>
+        <span class="p">[</span><span class="n">add</span>    <span class="p">(</span><span class="n">l</span> <span class="n">r</span><span class="p">)</span>      <span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="n">interp</span> <span class="n">l</span> <span class="n">fundefs</span><span class="p">)</span> <span class="p">(</span><span class="n">interp</span> <span class="n">r</span> <span class="n">fundefs</span><span class="p">))]</span>
+        <span class="p">[</span><span class="n">sub</span>    <span class="p">(</span><span class="n">l</span> <span class="n">r</span><span class="p">)</span>      <span class="p">(</span><span class="nb">-</span> <span class="p">(</span><span class="n">interp</span> <span class="n">l</span> <span class="n">fundefs</span><span class="p">)</span> <span class="p">(</span><span class="n">interp</span> <span class="n">r</span> <span class="n">fundefs</span><span class="p">))]</span>
+        <span class="p">[</span><span class="n">with</span>   <span class="p">(</span><span class="n">x</span> <span class="n">i</span> <span class="n">b</span><span class="p">)</span>    <span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">subst</span> <span class="n">b</span> <span class="n">x</span> <span class="p">(</span><span class="n">interp</span> <span class="n">i</span> <span class="n">fundefs</span><span class="p">))</span> <span class="n">fundefs</span><span class="p">)]</span>
+        <span class="p">[</span><span class="n">id</span>     <span class="p">(</span><span class="n">s</span><span class="p">)</span>        <span class="p">(</span><span class="nb">error</span> <span class="o">'</span><span class="ss">interp</span> <span class="s2">"free identifier"</span><span class="p">)]</span>
+        <span class="p">[</span><span class="n">app</span>    <span class="p">(</span><span class="n">f</span> <span class="n">a</span><span class="p">)</span>      
+                    <span class="p">(</span><span class="k">local</span> <span class="p">[(</span><span class="k">define</span> <span class="n">a_fundef</span> <span class="p">(</span><span class="n">lookup-fundef</span> <span class="n">f</span> <span class="n">fundefs</span><span class="p">))]</span>
+                             <span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">subst</span> <span class="p">(</span><span class="n">fundef-body</span> <span class="n">a_fundef</span><span class="p">)</span>
+                                          <span class="p">(</span><span class="n">fundef-arg-name</span> <span class="n">a_fundef</span><span class="p">)</span>
+                                             <span class="p">(</span><span class="n">interp</span> <span class="n">a</span> <span class="n">fundefs</span><span class="p">))</span>
+                                  <span class="n">fundefs</span><span class="p">))]))</span>
+<span class="c1">; lookup-fundef: symbol list-of-FunDef -&gt; FunDef</span>
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">lookup-fundef</span> <span class="n">name</span> <span class="n">fundefs</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">cond</span>
+        <span class="p">[(</span><span class="nb">empty?</span> <span class="n">fundefs</span><span class="p">)</span>
+            <span class="p">(</span><span class="nb">error</span> <span class="o">'</span><span class="ss">lookup-fundef</span> <span class="s2">"unknown function"</span><span class="p">)]</span>
+        <span class="p">[</span><span class="k">else</span>
+            <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">symbol=?</span> <span class="n">name</span> <span class="p">(</span><span class="n">fundef-fun-name</span> <span class="p">(</span><span class="nb">first</span> <span class="n">fundefs</span><span class="p">)))</span>
+                     <span class="p">(</span><span class="nb">first</span> <span class="n">fundefs</span><span class="p">)</span>
+                     <span class="p">(</span><span class="n">lookup-fundef</span> <span class="n">name</span> <span class="p">(</span><span class="nb">rest</span> <span class="n">fundefs</span><span class="p">)))]))</span>
+</code></pre></div>
+<h3 id="implement-substitution-for-f1wae">Implement Substitution for F1WAE<a class="headerlink" href="#implement-substitution-for-f1wae" title="Permanent link">¶</a></h3>
+<p><code>[app    (f a)        (app f    (subst a idtf val))]))</code> 가 추가되었다.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">; [contract] subst: F1WAE symbol number -&gt; F1WAE</span>
+<span class="p">(</span><span class="k">define</span> <span class="p">(</span><span class="n">subst</span> <span class="n">f1wae</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">type-case</span> <span class="n">F1WAE</span> <span class="n">f1wae</span>
+        <span class="p">[</span><span class="n">num</span>    <span class="p">(</span><span class="n">n</span><span class="p">)</span>        <span class="n">f1wae</span><span class="p">]</span>
+        <span class="p">[</span><span class="n">add</span>    <span class="p">(</span><span class="n">l</span> <span class="n">r</span><span class="p">)</span>         <span class="p">(</span><span class="n">add</span> <span class="p">(</span><span class="n">subst</span> <span class="n">l</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">)</span> <span class="p">(</span><span class="n">subst</span> <span class="n">r</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">))]</span>
+        <span class="p">[</span><span class="n">sub</span>        <span class="p">(</span><span class="n">l</span> <span class="n">r</span><span class="p">)</span>         <span class="p">(</span><span class="n">sub</span> <span class="p">(</span><span class="n">subst</span> <span class="n">l</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">)</span> <span class="p">(</span><span class="n">subst</span> <span class="n">r</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">))]</span>
+        <span class="p">[</span><span class="n">with</span>    <span class="p">(</span><span class="n">i</span> <span class="n">v</span> <span class="n">e</span><span class="p">)</span>     <span class="p">(</span><span class="n">with</span> <span class="n">i</span> <span class="p">(</span><span class="n">subst</span> <span class="n">v</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">)</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">symbol=?</span> <span class="n">i</span> <span class="n">idtf</span><span class="p">)</span> <span class="n">e</span>
+                                    <span class="p">(</span><span class="n">subst</span> <span class="n">e</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">)))]</span>
+        <span class="p">[</span><span class="n">id</span>        <span class="p">(</span><span class="n">s</span><span class="p">)</span>         <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">symbol=?</span> <span class="n">s</span> <span class="n">idtf</span><span class="p">)</span> <span class="p">(</span><span class="n">num</span> <span class="n">val</span><span class="p">)</span> <span class="n">f1wae</span><span class="p">)]</span>
+        <span class="p">[</span><span class="n">app</span>    <span class="p">(</span><span class="n">f</span> <span class="n">a</span><span class="p">)</span>        <span class="p">(</span><span class="n">app</span> <span class="n">f</span>    <span class="p">(</span><span class="n">subst</span> <span class="n">a</span> <span class="n">idtf</span> <span class="n">val</span><span class="p">))]))</span>
+</code></pre></div>
+<p>사용예시</p>
+<div class="highlight"><pre><span></span><code><span class="c1">; {with {x 1} {fn x}}    &lt;- function call in the body of 'with'.</span>
+<span class="p">(</span><span class="n">subst</span> <span class="p">(</span><span class="n">app</span> <span class="o">'</span><span class="ss">fn</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">x</span><span class="p">))</span> <span class="o">'</span><span class="ss">x</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">; (app 'fn (num 1))</span>
+<span class="c1">; {with {x 1} {fn {with {y 10} {+ y x}}}}    &lt;- function call in the body of 'with'.</span>
+<span class="p">(</span><span class="n">subst</span> <span class="p">(</span><span class="n">app</span> <span class="o">'</span><span class="ss">fn</span> <span class="p">(</span><span class="n">with</span> <span class="o">'</span><span class="ss">y</span> <span class="p">(</span><span class="n">num</span> <span class="mi">10</span><span class="p">)</span> <span class="p">(</span><span class="n">add</span>  <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">y</span><span class="p">)</span> <span class="p">(</span><span class="n">id</span> <span class="o">'</span><span class="ss">x</span><span class="p">))))</span> <span class="o">'</span><span class="ss">x</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1">; (app 'fn (with 'y (num 10) (add (id 'y) (num 1))))</span>
+</code></pre></div>
+<h2 id="deferring-substitution">Deferring Substitution<a class="headerlink" href="#deferring-substitution" title="Permanent link">¶</a></h2>
+<p>지금까지의 Substitution 은 실제로 identifier 를 치환할 때 다음과 같이 <span class="arithmatex">\(O(n ^{2})\)</span> 의 시간이 걸린다. </p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">x</span> <span class="mi">1</span><span class="p">}</span>
+                        <span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">y</span> <span class="mi">2</span><span class="p">}</span>
+                              <span class="p">{</span><span class="ss">+</span> <span class="mi">100</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">99</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">98</span> <span class="ss">...</span> <span class="p">{</span><span class="ss">+</span> <span class="ss">y</span> <span class="ss">x</span><span class="p">}</span><span class="ss">...</span><span class="p">}))</span>
+</code></pre></div>
+<p>⇒</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">y</span> <span class="mi">2</span><span class="p">}</span>
+                              <span class="p">{</span><span class="ss">+</span> <span class="mi">100</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">99</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">98</span> <span class="ss">...</span> <span class="p">{</span><span class="ss">+</span> <span class="ss">y</span> <span class="mi">1</span><span class="p">}</span> <span class="ss">...</span><span class="p">))</span>
+</code></pre></div>
+<p>⇒</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">+</span> <span class="mi">100</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">99</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">98</span> <span class="ss">…</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">2</span> <span class="mi">1</span><span class="p">}</span> <span class="ss">...</span><span class="p">}))</span>
+</code></pre></div>
+<h3 id="improvement-example">Improvement Example<a class="headerlink" href="#improvement-example" title="Permanent link">¶</a></h3>
+<p>이것을 개선하기 위하여 다음과 같이 치환되어야 하는 identifier 를 캐싱해두고 한꺼번에 치환하는 방법을 생각할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">x</span> <span class="mi">1</span><span class="p">}</span>             <span class="p">[</span> <span class="p">]</span>                
+                              <span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">y</span> <span class="mi">2</span><span class="p">}</span>
+                                   <span class="p">{</span><span class="ss">+</span> <span class="mi">100</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">99</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">98</span> <span class="ss">…</span> <span class="p">{</span><span class="ss">+</span> <span class="ss">y</span> <span class="ss">x</span><span class="p">}</span><span class="ss">...</span><span class="p">}))</span>
+</code></pre></div>
+<p>⇒</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">y</span> <span class="mi">2</span><span class="p">}</span>             <span class="p">[</span><span class="ss">x=1</span><span class="p">]</span>
+                              <span class="p">{</span><span class="ss">+</span> <span class="mi">100</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">99</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">98</span> <span class="ss">…</span> <span class="p">{</span><span class="ss">+</span> <span class="ss">y</span> <span class="ss">x</span><span class="p">}</span> <span class="ss">...</span><span class="p">}))</span>
+</code></pre></div>
+<p>⇒</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">+</span> <span class="mi">100</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">99</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">98</span> <span class="ss">...</span> <span class="p">{</span><span class="ss">+</span> <span class="ss">y</span> <span class="ss">x</span><span class="p">}</span> <span class="ss">...</span><span class="p">}</span> <span class="p">[</span><span class="ss">y=2</span> <span class="ss">x=1</span><span class="p">]</span> <span class="p">))</span>
+</code></pre></div>
+<h3 id="improvement-example-2">Improvement Example 2<a class="headerlink" href="#improvement-example-2" title="Permanent link">¶</a></h3>
+<p>다음 코드를 Deferring Substitution 을 해보자.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">x</span> <span class="mi">1</span><span class="p">}</span>             <span class="p">[</span> <span class="p">]</span>                
+                              <span class="p">{</span><span class="ss">+</span> <span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">x</span> <span class="mi">2</span><span class="p">}</span> <span class="ss">x</span><span class="p">}</span>
+                                   <span class="ss">x</span><span class="p">}}))</span>
+</code></pre></div>
+<p>먼저 <code>x = 1</code> 을 캐싱한다. 이것으로 <code>{with {x 1}</code> 코드는 불필요해졌기에 삭제한다.</p>
+<p>⇒</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">+</span> <span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">x</span> <span class="mi">2</span><span class="p">}</span> <span class="ss">x</span><span class="p">}</span>     <span class="p">[</span><span class="ss">x=1</span><span class="p">]</span>
+                               <span class="ss">x</span><span class="p">}))</span>
+</code></pre></div>
+<p><code>x=1</code> 의 스코프에 있는 바깥 코드를 분리시킨다.</p>
+<p>⇒</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">+</span>       <span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">x</span> <span class="mi">2</span><span class="p">}</span> <span class="ss">x</span><span class="p">}</span>     <span class="p">[</span><span class="n">x=1</span><span class="p">]</span> <span class="p">))</span>
+      <span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="ss">x</span>   <span class="p">[</span><span class="n">x=1</span><span class="p">])))</span>
+</code></pre></div>
+<p><code>x=2</code> 를 캐싱한다.</p>
+<p>⇒</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">+</span> <span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="ss">x</span>  <span class="p">[</span><span class="n">x=2</span> <span class="n">x=1</span><span class="p">]))</span> <span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="ss">x</span> <span class="p">[</span><span class="n">x=1</span><span class="p">])))</span>
+</code></pre></div>
+<p>캐싱된 것의 왼쪽에 있는 것으로 치환을 진행한다.</p>
+<p>⇒ </p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">+</span> <span class="mi">2</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="representing-defered-substitution">Representing Defered Substitution<a class="headerlink" href="#representing-defered-substitution" title="Permanent link">¶</a></h3>
+<p>지금까지의 인터프리터 </p>
+<div class="highlight"><pre><span></span><code><span class="c1">; interp : WAE -&gt; number</span>
+</code></pre></div>
+<p>를</p>
+<div class="highlight"><pre><span></span><code><span class="c1">; interp : WAE DefrdSub -&gt; number</span>
+</code></pre></div>
+<p>로 바꿀 것이다. 이것을 다음과 같이 표현할 수 있다.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">define-type</span> <span class="n">DefrdSub</span>
+    <span class="p">[</span><span class="n">mtSub</span><span class="p">]</span>
+    <span class="p">[</span><span class="n">aSub</span>      <span class="p">(</span><span class="n">name</span> <span class="nb">symbol?</span><span class="p">)</span>
+                    <span class="p">(</span><span class="n">value</span> <span class="nb">number?</span><span class="p">)</span>
+                    <span class="p">(</span><span class="n">saved</span> <span class="n">DefrdSub?</span><span class="p">)])</span>
+</code></pre></div>
+<p><code>mtSub</code> 는 비어있는 캐시를 뜻하고, <code>aSub</code> 는 비어있지 않은 캐시를 뜻한다. <code>aSub</code> 는 identifier 와 substitution 의 값 으로 이루어진 페어와 다음 페어를 저장한다.</p>
+<p>사용 예시:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">; example instance</span>
+<span class="p">(</span><span class="n">aSub</span> <span class="o">'</span><span class="ss">x</span> <span class="mi">1</span> <span class="p">(</span><span class="n">aSub</span> <span class="o">'</span><span class="ss">y</span> <span class="mi">4</span> <span class="p">(</span><span class="n">aSub</span> <span class="o">'</span><span class="ss">x</span> <span class="mi">2</span> <span class="p">(</span><span class="n">mtSub</span><span class="p">))))</span>
+</code></pre></div>
+<p>사용 예시:</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">x</span> <span class="mi">1</span><span class="p">}</span>
+                              <span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">y</span> <span class="mi">2</span><span class="p">}</span>
+                                   <span class="p">{</span><span class="ss">+</span> <span class="mi">100</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">99</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">98</span> <span class="ss">…</span> <span class="p">{</span><span class="ss">+</span> <span class="ss">y</span> <span class="ss">x</span><span class="p">}</span> <span class="ss">…</span> <span class="p">}}})(</span><span class="ss">mtSub</span><span class="p">))</span>
+</code></pre></div>
+<p>⇒</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">with</span> <span class="p">{</span><span class="ss">y</span> <span class="mi">2</span><span class="p">}</span>
+                        <span class="p">{</span><span class="ss">+</span> <span class="mi">100</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">99</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">98</span> <span class="ss">…</span> <span class="p">{</span><span class="ss">+</span> <span class="ss">y</span> <span class="ss">x</span><span class="p">}</span> <span class="ss">…</span> <span class="p">}}})</span>
+            <span class="p">(</span><span class="n">aSub</span> <span class="o">'</span><span class="ss">x</span> <span class="mi">1</span> <span class="p">(</span><span class="n">mtSub</span><span class="p">)))</span>
+</code></pre></div>
+<p>⇒</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="p">{</span><span class="ss">+</span> <span class="mi">100</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">99</span> <span class="p">{</span><span class="ss">+</span> <span class="mi">98</span> <span class="ss">…</span> <span class="p">{</span><span class="ss">+</span> <span class="ss">y</span> <span class="ss">x</span><span class="p">}</span> <span class="ss">…</span> <span class="p">}}})</span>
+            <span class="p">(</span><span class="n">aSub</span> <span class="o">'</span><span class="ss">y</span> <span class="mi">2</span> <span class="p">(</span><span class="n">aSub</span> <span class="o">'</span><span class="ss">x</span> <span class="mi">1</span> <span class="p">(</span><span class="n">mtSub</span><span class="p">))))</span>
+</code></pre></div>
+<p>⇒ …</p>
+<p>⇒ </p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="n">interp</span> <span class="p">(</span><span class="n">parse</span> <span class="o">'</span><span class="ss">y</span><span class="p">)</span> <span class="p">(</span><span class="n">aSub</span> <span class="o">'</span><span class="ss">y</span> <span class="mi">2</span> <span class="p">(</span><span class="n">aSub</span> <span class="o">'</span><span class="ss">x</span> <span class="mi">1</span> <span class="p">(</span><span class="n">mtSub</span><span class="p">))))</span>
+</code></pre></div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

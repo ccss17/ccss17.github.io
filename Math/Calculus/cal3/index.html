@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Calculus/cal3/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>적분 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              적분
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          적분
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        적분
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    적분
+  </a>
+<nav aria-label="적분" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    부정적분의 계산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    정적분
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    정적분의 성질
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    구분구적법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    정적분의 계산
+  </a>
+<nav aria-label="정적분의 계산" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    정적분과 미분의 관계
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    정적분으로 구하는 넓이
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    적분
+  </a>
+<nav aria-label="적분" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    부정적분의 계산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    정적분
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    정적분의 성질
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    구분구적법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    정적분의 계산
+  </a>
+<nav aria-label="정적분의 계산" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    정적분과 미분의 관계
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    정적분으로 구하는 넓이
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>적분</h1>
+<h2 id="_1">적분<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#ac8452f30"><div class="admonition tldr" id="ac8452f30">
+<p>적분(integral) : 기하학적으로 곡선과 좌표축으로 둘러싸인 영역의 면적을 구하는 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>적분이 어떤 자연 대상을 추상화시킨 것인지 확실하게 파악되지는 않고 있다. </p>
+<ul>
+<li>적분의 확실한 정의를 내린 최초의 사람은 리만이다. 그가 제안한 적분을 리만 적분이라 한다. </li>
+</ul>
+</li>
+<li>
+<p>수학을 공부할 때 미분을 먼저 공부하고 적분을 배우지만 역사적으로는 적분이 먼저 발견되었다. 적분은 다각형이 아닌 도형의 넓이를 구하는 과정에서 발견되었다.</p>
+<p>역사적으로 고대 그리스 시대로부터 시작된 적분은 토지의 소유 문제로 인하여 정확한 땅의 넓이를 측정해야 했다. 그런데 땅은 정사각형이나 삼각형으로 생기지 않았고 제멋대로 생겼다. 이렇게 제멋대로 생긴 도형의 넓이를 구할 수 있도록 넓이를 구하기 쉬운 사각형으로 땅의 넓이를 근사시켰는데 이것이 구분구적법이다. 그리고 이 구분구적법이 적분의 시초이다. </p>
+<p>뉴턴의 스승 배로(Barrow) 는 도형의 경계가 연속함수의 그래프인 경우 적분하여 넓이를 함수로 나타내고 다시 미분하여 원래의 연속함수가 되는 것을 발견했다. 이로써 서로 무관한듯 보이는 미분과 적분의 관계가 발견되었다. 미분은 대수적 사유에서 출발했고 적분은 기하학적 생각으로부터 나왔기에 둘은 다른 것으로 생각되었는데 관계를 갖고 있었던 것이다. </p>
+<blockquote>
+<p>이로써 접근방식과 관점이 다르다고 해서 완전히 다른 대상을 다루고 있다고 볼 수 없다. </p>
+</blockquote>
+<p>적분은 미분보다 비교적 복잡한데 적분과 미분의 관계가 발견되면서 상대적으로 쉬운 미분으로 적분 문제를 해결할 수 있게 되었고 수학의 발전이 빨라졌다. </p>
+<blockquote>
+<p>자연 대상과의 관계를 최대한 많이 규명해놓으면 알기 쉬운 대상으로부터 그것과 관계되어 있는 대상들을 밝힐 수 있다고 정리해놓은 것이 여기에서 또 다시 근거를 얻었다. </p>
+</blockquote>
+</li>
+<li>
+<p>미분은 어떤 대상에 대한 변화를 알 수 있게 해주었는데 적분은 그 변화로부터 어떤 현상이 일어날지 예측하게 해주었다. 미적분의 발달은 과학과 기술을 발달하게 하였다.</p>
+</li>
+</ul>
+<a href="#9f80b80a5"><div class="admonition tldr" id="9f80b80a5">
+<p>부정적분(indefinite integral, antiderivative) : 함수 <span class="arithmatex">\(f(x)\)</span> 에 대하여 <span class="arithmatex">\(F'(x) = f(x)\)</span> 가 성립할 때 함수 <span class="arithmatex">\(F(x)\)</span> 를 함수 <span class="arithmatex">\(f(x)\)</span> 의 부정적분이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, 미분(도함수를 구하는 연산)의 역연산이다. 다시 말해 어떤 함수를 도함수로 하는 모든 함수를 구하는 연산이다. </p>
+<ul>
+<li>위에서 적분과 미분이 어떤 관계를 가졌고 이에따라 비교적 어려운 적분 문제를 미분으로 풀 수 있었다고 말했는데 그 관계가 역연산을 뜻하는 것이다. </li>
+</ul>
+</li>
+<li>
+<p>부정적분 <span class="arithmatex">\(F(x)\)</span> 를 함수 <span class="arithmatex">\(f(x)\)</span> 의 원시함수(primitive function)라고도 한다. </p>
+<ul>
+<li>부정(indefinite) 는 어느 것 하나로 정할 수 없다는 뜻이다. 왜냐하면 어떤 함수를 도함수로 하는 함수는 적분상수로 인하여 무수히 많기 때문이다. </li>
+</ul>
+</li>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 의 부정적분 중 하나를 <span class="arithmatex">\(F(x)\)</span> 라 하면 </p>
+<div class="arithmatex">\[ \int_{}^{}f(x)dx=F(x)+C \]</div>
+<p>이다. (단, <span class="arithmatex">\(C\)</span> 는 적분상수)</p>
+<ul>
+<li>
+<p>증명 </p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 의 부정적분 <span class="arithmatex">\(F(x), G(x)\)</span> 를 생각하자. 그러면 </p>
+<div class="arithmatex">\[ \{G(x)-F(x)\}' = G'(x) - F'(x) = f(x) - f(x) = 0 \]</div>
+<p>이다. 그런데 미분하여 <span class="arithmatex">\(0\)</span> 이 되는 함수는 상수함수이기 때문에 그 상수를 <span class="arithmatex">\(C\)</span> 라 하면 </p>
+<div class="arithmatex">\[ G(x) - F(x) = C \]</div>
+<p>로써 <span class="arithmatex">\(G(x) = F(x) + C\)</span> 이다. 그러므로 함수 <span class="arithmatex">\(f(x)\)</span> 의 임의의 부정적분를 <span class="arithmatex">\(F(x) + C\)</span> 로 표한할 수 있다. 따라서 </p>
+<div class="arithmatex">\[ \int_{}^{}f(x)dx = F(x) + C \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 의 부정적분을 구하는 것을 "적분한다" 라고 한다. </p>
+<ul>
+<li>또 그 계산법을 적분법이라 한다. </li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>미분하여 <span class="arithmatex">\(2x\)</span> 가 되는 식은 <span class="arithmatex">\(2x\)</span> 의 부정적분으로써 </p>
+<div class="arithmatex">\[\int_{}^{}2xdx\]</div>
+<p>이다. 이떄 <span class="arithmatex">\(x^2\)</span> 를 미분하면 <span class="arithmatex">\(2x\)</span> 가 되니   </p>
+<div class="arithmatex">\[\int_{}^{}2xdx = x ^{2}\]</div>
+<p>로 생각할 수 있다. 그러나 미분하여 <span class="arithmatex">\(2x\)</span> 가 되는 식은 <span class="arithmatex">\(x^2 + C\)</span> (<span class="arithmatex">\(C\)</span> 는 상수) 이다. 왜냐하면 상수를 미분하면 <span class="arithmatex">\(0\)</span> 이 되기 때문이다. 따라서 올바른 부정적분 연산 결과는 다음과 같다. </p>
+<div class="arithmatex">\[\int_{}^{}2xdx = x ^{2} + C\]</div>
+</li>
+<li>
+<p>다음 그림에서 기하학적으로 볼 수 있듯이 어떤 대상의 높낮이에 관계없이 변화율이 동일하면 도함수(변화율의 변화를 관계)도 동일하다. </p>
+<p><img alt="desmos-graph(2)" src="https://user-images.githubusercontent.com/16812446/76163204-8353ae00-6187-11ea-83c2-1d611dcf608e.png"/></p>
+</li>
+</ul>
+<a href="#47c4c6241"><div class="admonition tldr" id="47c4c6241">
+<p>적분용어 : 다음 부정적분식을 생각하자. </p>
+<div class="arithmatex">\[ \int_{}^{}f(x)dx=F(x)+C \]</div>
+</div></a>
+<ul>
+<li>
+<p>적분상수(integral constant) : 위 부정적분에서 <span class="arithmatex">\(C\)</span> 를 적분상수라 한다. </p>
+</li>
+<li>
+<p>피적분함수(integrand) : 위 부정적분에서 <span class="arithmatex">\(f(x)\)</span> 를 피적분함수라 한다. </p>
+</li>
+<li>
+<p>적분변수 : 위 부정적분에서 <span class="arithmatex">\(dx\)</span> 란 <span class="arithmatex">\(x\)</span> 에 대하여 적분한다는 의미이고 이때의 <span class="arithmatex">\(x\)</span> 를 적분변수라 한다.</p>
+<ul>
+<li>적분할 때 적분변수 이외의 미지수는 상수로 취급한다.</li>
+</ul>
+</li>
+</ul>
+<a href="#db431fc61"><div class="admonition tldr" id="db431fc61">
+<p>부정적분과 미분의 관계 : 정의에 따라 부정적분과 미분의 관계는 역연산이다.</p>
+</div></a>
+<ul>
+<li>
+<p>자연어를 형식언어로 변환한 수식은 다음과 같다. </p>
+<ul>
+<li>
+<div class="arithmatex">\[ \frac{d}{dx} \{\int_{}^{}f(x)dx\} = f(x) \]</div>
+<ul>
+<li>증명 </li>
+</ul>
+<p>부정적분의 정의</p>
+<div class="arithmatex">\[ \int_{}^{}f(x)dx = F(x) + C \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ \frac{d}{dx} \{\int_{}^{}f(x)dx\} = \frac{d}{dx}\{F(x)+C\} = F'(x) = f(x) \]</div>
+<p>이다. </p>
+</li>
+<li>
+<div class="arithmatex">\[ \int_{}^{} \{\frac{d}{dx}f(x)\} = f(x) + C \]</div>
+<ul>
+<li>
+<p>(<span class="arithmatex">\(C\)</span> 는 적분상수)</p>
+</li>
+<li>
+<p>증명 </p>
+<p>미분의 정의</p>
+<div class="arithmatex">\[ \{f(x)\}' = \frac{d}{dx} f(x) \]</div>
+<p>에서 <span class="arithmatex">\(f(x)\)</span> 는 <span class="arithmatex">\(\frac{d}{dx}f(x)\)</span> 의 부정적분 중 하나이므로 </p>
+<div class="arithmatex">\[ \int_{}^{}\{\frac{d}{dx}f(x)\}dx = f(x) + C \]</div>
+<p>이다. </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>특히, 적분한 것을 미분하면 상수가 더해지지 않지만 미분한 것을 적분하면 적분상수가 더해지는 것을 주의해야 한다. </p>
+</li>
+</ul>
+<h3 id="_2">부정적분의 계산<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<a href="#29a3db300"><div class="admonition tldr" id="29a3db300">
+<p><span class="arithmatex">\(n\)</span> 차 단항 함수 <span class="arithmatex">\(y=x^n\)</span> 의 부정적분 : <span class="arithmatex">\(n\)</span> 이 음이 아닌 정수일 때, <span class="arithmatex">\(n\)</span> 차 단항 함수의 부정적분은 </p>
+<div class="arithmatex">\[ \int_{}^{}x ^{n} dx = \frac{1}{n+1} x ^{n+1} + C \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(n\)</span> 이 음이 아닌 정수일 때 </p>
+<div class="arithmatex">\[ (\frac{1}{n+1}x ^{n+1})' = x ^{n} \]</div>
+<p>이므로 역으로 함수 <span class="arithmatex">\(y= x ^{n}\)</span> 의 부정적분은 </p>
+<div class="arithmatex">\[ \int_{}^{}x ^{n}dx = \frac{1}{n+1} x ^{n+1} +C \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#e011b362c"><div class="admonition tldr" id="e011b362c">
+<p><span class="arithmatex">\(1\)</span> 의 부정적분 : <span class="arithmatex">\(\int_{}^{}1dx = x + C\)</span></p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[\int_{}^{}1dx = \int_{}^{}x ^{0}dx = \frac{1}{0 + 1} x ^{0+1} = x + C\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(1\)</span> 의 부정적분 <span class="arithmatex">\(\int_{}^{}1dx\)</span> 는 보통 다음과 같이 표기한다. </p>
+<div class="arithmatex">\[ \int_{}^{}dx \]</div>
+</li>
+</ul>
+<a href="#ada8fe5f6"><div class="admonition tldr" id="ada8fe5f6">
+<p>함수의 실수배, 합, 차의 부정적분 : 두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 의 부정적분이 존재할 때</p>
+</div></a>
+<ul>
+<li>
+<p>실수배(단, <span class="arithmatex">\(k\)</span> 는 <span class="arithmatex">\(0\)</span> 이 아닌 실수)</p>
+<div class="arithmatex">\[ \int_{}^{}kf(x)dx=k \int_{}^{}f(x)dx \]</div>
+<ul>
+<li>
+<p>증명 </p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 의 부정적분을 <span class="arithmatex">\(F(x)\)</span> 라 할 때 <span class="arithmatex">\(0\)</span> 이 아닌 실수 <span class="arithmatex">\(k\)</span> 에 대하여 <span class="arithmatex">\(\{kF(x)\}' = kF'(x) = kf(x)\)</span> 이므로 <span class="arithmatex">\(kF(x)\)</span> 는 <span class="arithmatex">\(kf(x)\)</span> 의 한 부정적분이 된다. </p>
+<div class="arithmatex">\[ \therefore \int_{}^{}kf(x)dx = kF(x) + C = k \{F(x)+C_1\} = k \int_{}^{}f(x)dx \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>함수의 합의 부정적분 </p>
+<div class="arithmatex">\[ \int_{}^{}\{f(x)+g(x)\}dx = \int_{}^{}f(x)dx + \int_{}^{}g(x)dx \]</div>
+<ul>
+<li>
+<p>증명 </p>
+<p>두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 의 부정적분을 각각 <span class="arithmatex">\(F(x), G(x)\)</span> 라 하면 </p>
+<div class="arithmatex">\[ \{F(x) + G(x)\}' = F'(x) + G'(x) = f(x)+g(x) \]</div>
+<p>이므로 <span class="arithmatex">\(F(x), G(x)\)</span> 는 <span class="arithmatex">\(f(x), g(x)\)</span> 의 한 부정적분이 된다.</p>
+<div class="arithmatex">\[ \therefore \int_{}^{}\{f(x)+g(x)\}dx = F(x)+G(x)+C = \{F(x)+C_1\} + \{G(x)+C_2\} = \int_{}^{}f(x)dx + \int_{}^{}g(x)dx \]</div>
+</li>
+<li>
+<p>위 증명으로 임의의 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 다음이 성립함을 보일 수 있다. </p>
+<div class="arithmatex">\[ \int_{}^{}\{f_1(x) + f_2(x) + \dots + f_n(x)\}dx = \int_{}^{}f_1(x)dx + \int_{}^{}f_2(x)dx + \dots + \int_{}^{}f_n(x)dx \]</div>
+<p>그러므로 다음이 성립한다. </p>
+<div class="arithmatex">\[ \therefore  \int_{}^{}\sum_{k=1}^{n}f_k(x)dx = \sum_{k=1}^{n}\int_{}^{}f_k(x)dx \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>함수의 차의 부정적분 </p>
+<div class="arithmatex">\[ \int_{}^{}\{f(x)-g(x)\}dx = \int_{}^{}f(x)dx - \int_{}^{}g(x)dx \]</div>
+<ul>
+<li>
+<p>증명 </p>
+<p>(함수의 합의 부정적분의 증명에서 <span class="arithmatex">\(+\)</span> 를 <span class="arithmatex">\(-\)</span> 로 바꾸어 생각하면 바로 증명된다)</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#d7ecfa573"><div class="admonition tldr" id="d7ecfa573">
+<p>함수 <span class="arithmatex">\(f'(g(x))g'(x)\)</span> 의 부정적분 : 함수 <span class="arithmatex">\(f'(g(x))g'(x)\)</span> 의 부정적분은 다음과 같다. (단, <span class="arithmatex">\(C\)</span> 는 적분상수)</p>
+<div class="arithmatex">\[ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C \]</div>
+</div></a>
+<ul>
+<li>
+<p>합성함수 <span class="arithmatex">\(f(g(x))\)</span> 를 미분하면 </p>
+<div class="arithmatex">\[\{f(g(x))\}' = f'(g(x))g'(x)\]</div>
+<p>이기 때문에 이것의 역연산인 부정적분은 </p>
+<div class="arithmatex">\[ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>부정적분 <span class="arithmatex">\(\int_{}^{}(2x+1)^{10}dx\)</span> 를 구하자. <span class="arithmatex">\(y=(2x+1) ^{10}\)</span> 는 함수 <span class="arithmatex">\(y=x ^{10}\)</span> 과 <span class="arithmatex">\(y=2x+1\)</span> 의 합성함수로 볼 수 있기 때문에 <span class="arithmatex">\(f'(x) = x ^{10}, g(x) = 2x + 1\)</span> 로 두면</p>
+<div class="arithmatex">\[ \int_{}^{}f'(g(x))g'(x)dx = f(g(x)) + C \]</div>
+<p>에서 </p>
+<div class="arithmatex">\[ \int_{}^{}(2x+1) ^{10} \circ 2 dx = \frac{1}{11}(2x+1) ^{11} + C \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \therefore \int_{}^{}(2x+1) ^{10} dx = \frac{1}{22}(2x+1) ^{11} + \frac{C}{2} \]</div>
+<p>이다. </p>
+<blockquote>
+<p>이를 통해 정립된 관계를 이용하여 계산할 때 소모되는 비용이 많이 드는 대상으로부터 다른 대상을 구하려는 것이 아니라 계산 비용이 가장 적은 대상으로부터 다른 대상을 구하는 것이 좋다는 것을 알 수 있다. </p>
+</blockquote>
+</li>
+<li>
+<p><strong>그리고 위 예시에서 한번 계산한 계산법을 또 다시 계산함으로써 낭비되는 비용을 원천적으로 없애기 위하여 계산법을 일반화하면 다음과 같이 새로운 관계를 정립해둘 수 있다.</strong></p>
+<blockquote>
+<p>그러므로 한번 소요된 계산 과정은 일반화를 통하여 다시는 계산되지 않을 수 있다. 이렇게 비용을 최적화시킬 수 있다. 처음에는 원 대상과 목적 대상의 관계를 모르기 때문에 일일히 계산하여 원 대상으로부터 목적 대상을 이끌어내야 하지만, 한번 계산하고 난 후 그 계산과정에 사용된 요소들을 그것이 속한 집합으로 회귀시켜 일반화하면 원 대상과 목적 대상과의 관계를 정립할 수 있기 때문이다. </p>
+<p>수학에서 정립된 공식들은 이런 이유로 발전되었고 탄생되어왔다. 그리고 이렇게 정립된 관계들로부터 발생하는 또 다른 이점은 계산에 소요되는 비용 감소 뿐만 아니라 정립된 관계들로부터 조합과 연구를 통해 새로운 관계가 발견되어질 수 있다는 것이다. </p>
+</blockquote>
+<p><span class="arithmatex">\(a \neq 0\)</span> 이고 <span class="arithmatex">\(n\)</span> 이 음이 아닌 정수일 때 </p>
+<div class="arithmatex">\[ \int_{}^{}(ax+b) ^{n} dx = \frac{1}{a} \circ \frac{1}{n+1}(ax+b) ^{n+1} + C \]</div>
+<p>이다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \int_{}^{}(2x+a) ^{10} dx = \frac{1}{2} \circ \frac{1}{10 + 1}(2x+1) ^{10 + 1} + C = \frac{1}{22}(2x+1) ^{11} + C \]</div>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#4815ce02d"><div class="admonition tldr" id="4815ce02d">
+<p>곱의 미분의 역연산을 이용한 부정적분 : 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 에 대한 곱함수의 미분법 </p>
+<div class="arithmatex">\[ \{f(x)g(x)\}' = f'(x)g(x) +f(x)g'(x) \]</div>
+<p>을 역으로 이용하여 <span class="arithmatex">\(f'(x)g(x) + f(x)g'(x)\)</span> 꼴 함수의 부정적분은</p>
+<div class="arithmatex">\[ \int_{}^{}\{f'(x)g(x)+f(x)g'(x)\}dx = f(x)g(x)+C \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \int_{}^{}f'(x)g(x)dx + \int_{}^{}f(x)g'(x)dx = f(x)g(x)+C \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>다항함수보다 지수함수, 로그함수, 삼각함수 등의 부정적분에 자주 쓰인다. </li>
+</ul>
+<h3 id="_3">정적분<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<a href="#486ab18ff"><div class="admonition tldr" id="486ab18ff">
+<p>정적분(definte integral) : 함수 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속일 때, 함수 <span class="arithmatex">\(f(x)\)</span> 의 한 부정적분 <span class="arithmatex">\(F(x)\)</span> 에 대하여 부정적분의 함수값의 차 <span class="arithmatex">\(F(b)-F(a)\)</span> 를 함수 <span class="arithmatex">\(f(x)\)</span> 의 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(b\)</span> 까지의 정적분이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이것을 형식언어로 다음과 같이 표현한다. </p>
+<div class="arithmatex">\[ \int_{a}^{b}f(x)dx \]</div>
+</li>
+<li>
+<p>정적분의 값 <span class="arithmatex">\(F(b)-F(a)\)</span> 를 <span class="arithmatex">\([f(x)] ^{b}_a\)</span> 로 나타내면 </p>
+<div class="arithmatex">\[ \int_{a}^{b}f(x) dx = \bigg[F(x) \bigg] ^{b} _{a} = F(b) -F(a) \]</div>
+<p>이다. </p>
+<ul>
+<li>
+<p>증명 </p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a,b]\)</span> 에서 연속이고 <span class="arithmatex">\(f(x)\)</span> 의 한 부정적분을 <span class="arithmatex">\(F(x) + C\)</span> 라 하면 <span class="arithmatex">\(x=a,x=b\)</span> 에서의 부정적분의 함수값의 차는 </p>
+<div class="arithmatex">\[ \{F(b) + C\} - \{F(a) + C\} = F(b) - F(a) \]</div>
+<p>가 된다. 즉 적분상수 <span class="arithmatex">\(C\)</span> 가 얼마로 주어지든간에 함수 <span class="arithmatex">\(f(x)\)</span> 의 정의역에 포함되는 두 수 <span class="arithmatex">\(a, b\)</span> 에 대하여 부정적분의 함수값의 차 <span class="arithmatex">\(F(b) - F(a)\)</span> 는 일정하다. </p>
+<p>이 일정한 값 <span class="arithmatex">\(F(b) - F(a)\)</span> 를 함수 <span class="arithmatex">\(f(x)\)</span> 의 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(b\)</span> 까지의 정적분이라 하고 </p>
+<div class="arithmatex">\[ \int_{a}^{b}f(x)dx \]</div>
+<p>로 나타낸다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>정적분 <span class="arithmatex">\(\int_{a}^{b}f(x)dx\)</span> 의 값을 구하는 것을 함수 <span class="arithmatex">\(f(x)\)</span> 를 <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(b\)</span> 까지 적분한다고 한다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(a\)</span> 를 아래끝이라 한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(b\)</span> 를 위끝이라 한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(b\)</span> 까지를 적분 구간이라 한다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(f(x) = x\)</span> 의 부정적분을 <span class="arithmatex">\(F(x) = \frac{1}{2}x ^{2}\)</span> 라 하자.</p>
+<p>함수 <span class="arithmatex">\(f(x)\)</span> 를 <span class="arithmatex">\(0\)</span> 부터 <span class="arithmatex">\(1\)</span> 까지 적분하면 다음과 같다. </p>
+<div class="arithmatex">\[ \int_{0}^{1}xdx = [\frac{1}{2}x ^{2}] ^{1} _{0} = \frac{1}{2}- 0 = \frac{1}{2} \]</div>
+<p>정적분 <span class="arithmatex">\(\int_{3}^{2}f(x)dx\)</span> 값을 구하면 다음과 같다. </p>
+<div class="arithmatex">\[ \int_{3}^{2}xdx = [\frac{1}{2}x ^{2}] ^{3} _{2} = \frac{9}{2} - \frac{4}{2} = \frac{5}{2} \]</div>
+</li>
+</ul>
+<a href="#bccb9e750"><div class="admonition tldr" id="bccb9e750">
+<p>여러가지 정적분</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(a\)</span> 부터 <span class="arithmatex">\(a\)</span> 까지의 정적분 </p>
+<div class="arithmatex">\[ \int_{a}^{a}f(x)dx = 0 \]</div>
+<ul>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[ \int_{a}^{a}f(x)dx = [F(x)] ^{a} _{a} = F(a) - F(a) = 0 \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(a\)</span> 부터 <span class="arithmatex">\(b\)</span> 까지의 정적분과 <span class="arithmatex">\(b\)</span> 부터 <span class="arithmatex">\(a\)</span> 까지의 정적분의 관계 </p>
+<div class="arithmatex">\[ \int_{b}^{a}f(x)dx = - \int_{a}^{b}f(x)dx \]</div>
+<ul>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[ \int_{b}^{a} f(x) dx = [F(x)] ^{b} _{a} = F(b) - F(a) = - \{F(a) - F(b)\} = - [F(x)] ^{a} _{b} = - \int_{a}^{b}f(x)dx \]</div>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#045d01e68"><div class="admonition tldr" id="045d01e68">
+<p>부정적분과 정적분의 관계 : 정적분은 부정적분이라는 함수로 얻을 수 있는 하나의 값이다.</p>
+</div></a>
+<ul>
+<li>
+<p>정적분은 부정적분을 그대로 이용한다. 부정적분을 구하면 정적분은 식의 값을 구하는 것일 뿐이다. </p>
+</li>
+<li>
+<p>부정적분 <span class="arithmatex">\(\int_{}^{}f(x)dx\)</span> 는 하나의 함수지만 정적분 <span class="arithmatex">\(\int_{b}^{a}f(x)dx\)</span> 는 하나의 수이다. </p>
+</li>
+</ul>
+<h3 id="_4">정적분의 성질<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<a href="#59201f440"><div class="admonition tldr" id="59201f440">
+<p>정적분의 성질 : 두 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 가 임의의 실수 <span class="arithmatex">\(a, b, c\)</span> 를 포함하는 폐구간에서 연속일 때 다음이 성립한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\int_{b}^{a}kf(x)dx = k \int_{b}^{a}f(x)dx\)</span></p>
+<ul>
+<li>
+<p>(<span class="arithmatex">\(k\)</span> 는 실수)</p>
+</li>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[ \int_{b}^{a}kf(x)dx = [kF(x)] ^{b} _{a} = kF(b) - kF(a) = k \{F(b) - F(a)\} = k [F(x)] ^{b} _{a} = k \int_{b}^{a}f(x)dx \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\int_{b}^{a}\{f(x)+g(x)\}dx = \int_{b}^{a}f(x)dx + \int_{b}^{a}g(x)dx\)</span></p>
+<div class="arithmatex">\[ \int_{b}^{a}f(x)+g(x)dx = [F(x)+G(x)] ^{b} _{a} = [F(b) + G(b)] - [F(a) - G(a)] = [F(b)-F(a)] - [G(b) - G(a)] \]</div>
+<div class="arithmatex">\[ = \int_{b}^{a}f(x)dx + \int_{b}^{a}g(x)dx \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(\int_{b}^{a}\{f(x)-g(x)\}dx = \int_{b}^{a}f(x)dx - \int_{b}^{a}g(x)dx\)</span></p>
+<ul>
+<li>(정적분의 합의 성질과 비슷하게 증명됨)</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\int_{c}^{a}f(x)dx + \int_{b}^{c}f(x)dx = \int_{b}^{a}f(x)dx\)</span></p>
+<ul>
+<li>
+<p>이 관계는 <span class="arithmatex">\(a,b,c\)</span> 의 대소에 상관없이 항상 성립한다. </p>
+</li>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[ \int_{c}^{a}f(x) dx + \int_{b}^{c}f(x)dx = [F(x)] ^{a} _{c} + [F(x)] ^{c} _{b} = F(a) - F(c) + F(c) - F(b) = F(a) - F(b) \]</div>
+<div class="arithmatex">\[ = \int_{a}^{b}f(x)dx \]</div>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#60d019e5e"><div class="admonition tldr" id="60d019e5e">
+<p>절대값 기호를 포함한 함수의 정적분 : 절대값 기호 안의 식의 값이 <span class="arithmatex">\(0\)</span> 이 되게 하는 <span class="arithmatex">\(x\)</span> 값을 경계로 적분 구간을 나누어 계산한다.</p>
+</div></a>
+<ul>
+<li>
+<p>만약 <span class="arithmatex">\(a\)</span> 부터 <span class="arithmatex">\(b\)</span> 까지 적분할 때 절대값 안의 기호를 <span class="arithmatex">\(0\)</span> 이 되게 하는 <span class="arithmatex">\(x\)</span> 값이 <span class="arithmatex">\(c\)</span> 라면 다음과 같이 적분구간을 나누고 음수구간에 <span class="arithmatex">\(-\)</span> 를 분혀서 절대값 기호를 상쇄하여 없애준다. </p>
+<div class="arithmatex">\[ \int_{a}^{b} f(x) dx = \int_{a}^{c} -f(x)dx + \int_{c}^{b} f(x)dx \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p><img alt="desmos-graph(3)" src="https://user-images.githubusercontent.com/16812446/76172488-f38b1f80-61d9-11ea-9486-7bfd30c4221d.png"/></p>
+<p>위 함수 <span class="arithmatex">\(f(x) = |x|\)</span> 를 <span class="arithmatex">\(-2\)</span> 부터 <span class="arithmatex">\(2\)</span> 까지 적분할 때, 즉 </p>
+<div class="arithmatex">\[ \int_{-2}^{2}f(x)dx \]</div>
+<p>를 구할 때 절대값 기호 안을 <span class="arithmatex">\(0\)</span> 으로 하는 <span class="arithmatex">\(x\)</span> 값을 기준으로 다음과 같이 적분구간을 나누어 음수구간에 <span class="arithmatex">\(-\)</span> 를 붙혀서 절대값 기호를 상쇄하여 없애준다. </p>
+<div class="arithmatex">\[ \int_{-2}^{2}|x|dx = \int_{-2}^{0} -xdx + \int_{0}^{2} xdx \]</div>
+</li>
+</ul>
+<h2 id="_5">구분구적법<a class="headerlink" href="#_5" title="Permanent link">¶</a></h2>
+<a href="#562b2f05c"><div class="admonition tldr" id="562b2f05c">
+<p>구분구적법(리만합, Riemann sum) : 어떤 도평의 넓이나 부피를 구할 때, 주어진 도형을 넓이 또는 부피를 쉽게 구할 수 있는 기본 도형으로 나누어서 기본 도형들의 넓이 또는 부피의 합을 구한 후 그 합의 극한값 구하여 기본 도형들의 넓이 또는 부피의 합을 주어진 도형의 넓이 또는 부피로 근사시키는 방법이다.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Riemann_sum_%28y%3Dx%5E2%29.gif/220px-Riemann_sum_%28y%3Dx%5E2%29.gif"/></p>
+</div></a>
+<ul>
+<li>
+<p>기본 도형들의 넓이의 합을 <span class="arithmatex">\(S_n\)</span> 이라 하면 주어진 도형의 넓이는 </p>
+<div class="arithmatex">\[ \lim_{n \to \infty} S_n = S \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>기본 도형들의 부피의 합을 <span class="arithmatex">\(V_n\)</span> 이라 하면 주어진 도형의 부피는</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} V_n = V \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>기본 도형으로써 직사각형, 이등변삼각형, 원기둥, 직육면체 등과 같이 넓이 또는 부피를 쉽게 구할 수 있는 도형들로 택하면 된다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Area-under-curve-for-x-squared.svg/220px-Area-under-curve-for-x-squared.svg.png"/></p>
+<p>위의 그래프와 같이 함수 <span class="arithmatex">\(y = x ^{2}\)</span> 와 <span class="arithmatex">\(x\)</span> 축과 직선 <span class="arithmatex">\(x=2\)</span> 로 둘러싸인 도형의 넓이를 구분구적법으로 구해보자. 그 도형을 <span class="arithmatex">\(n\)</span> 개의 직사각형으로 나누었다고 하자. 그러면 직사각형들의 넓이의 합은</p>
+<div class="arithmatex">\[S = \frac{2}{n} \times \bigg(\frac{2}{n}\bigg)^{2} + \frac{2}{n} \times \bigg(\frac{2}{n} \circ 2\bigg)^{2} + \frac{2}{n} \times \bigg(\frac{2}{n} \circ 3\bigg)^{2} + \dots + \frac{2}{n} \times \bigg(\frac{2}{n} \circ n\bigg)^{2}\]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ = \frac{8}{n^3}(1+2^2+3^2+\dots+n^2) \]</div>
+<div class="arithmatex">\[ = \frac{8}{n^3}\bigg(\frac{n(n+1)(2n+1)}{6}\bigg) \]</div>
+<div class="arithmatex">\[ = \frac{8}{n^3}\bigg(\frac{2n^3+3n^2+n}{6}\bigg) \]</div>
+<div class="arithmatex">\[ = \frac{8}{3} + \frac{4}{n}+\frac{4}{3n^2} \]</div>
+<p>이다. 이때 <span class="arithmatex">\(n \to \infty\)</span> 일 때 실제 도형의 넓이에 근사된다고 볼 수 있으므로 </p>
+<div class="arithmatex">\[ \therefore  \lim_{n \to \infty} S_n = \lim_{n \to \infty} \bigg(\frac{8}{3} + \frac{4}{n}+\frac{4}{3n^2} \bigg) = \frac{8}{3} \]</div>
+<p>이다. 이 결과는</p>
+<div class="arithmatex">\[ \int_{0}^{2}x^2dx = \frac{8}{3} \]</div>
+<p>과도 같다.</p>
+</li>
+</ul>
+<a href="#9098fac6f"><div class="admonition tldr" id="9098fac6f">
+<p>정적분과 급수의 합의 관계 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a,b]\)</span> 에서 연속이고 <span class="arithmatex">\(\Delta x = \frac{b-a}{n}, x_k = a+k \Delta x\)</span> 일 때</p>
+<div class="arithmatex">\[ \lim_{n \to \infty} S_n = \lim_{n \to \infty} \sum_{k=1}^{n} f(x_k)\Delta x = \int_{a}^{b}f(x)dx \]</div>
+<p>이다.</p>
+</div></a>
+<a href="#dce96a30e"><div class="admonition tldr" id="dce96a30e">
+<p>정적분으로 급수의 합 구하기</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\lim_{n \to \infty} \sum_{k=1}^{n}f(a+\frac{b-a}{n}k)\circ \frac{b-a}{n} = \int_{a}^{b}f(x)dx\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\lim_{n \to \infty} \sum_{k=1}^{n}f(a+\frac{p}{n}k)\circ \frac{p}{n} = \int_{a}^{a+p}f(x)dx=\int_{0}^{p}f(a+x)dx\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\lim_{n \to \infty} \sum_{k=1}^{n}f(a+\frac{p}{n}k)\circ \frac{p}{n} = \int_{0}^{1}pf(a+px)dx\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">정적분의 계산<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<a href="#b7cda523c"><div class="admonition tldr" id="b7cda523c">
+<p>정적분의 기하적 의미 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a,b]\)</span> 에서 연속이고 <span class="arithmatex">\(f(x) \geq 0\)</span> 일 때, 정적분</p>
+<div class="arithmatex">\[ \int_{a}^{b}f(x)dx \]</div>
+<p>는 함수 <span class="arithmatex">\(y=f(x)\)</span> 의 그래프와 <span class="arithmatex">\(x\)</span> 축 및 두 직선 <span class="arithmatex">\(x=a, x=b\)</span> 로 둘러싸인 도형의 넓이이다.</p>
+</div></a>
+<ul>
+<li>
+<p>함수가 <span class="arithmatex">\(f(x) &lt; 0\)</span> 일 때에는 </p>
+<div class="arithmatex">\[ \int_{a}^{b}f(x)dx \]</div>
+<p>값에 <span class="arithmatex">\(-\)</span> 를 붙혀서 도형의 넓이로 나타낸다. </p>
+</li>
+</ul>
+<blockquote>
+<p>넓이와 대상의 변화량이 역연산 관계에 있다는 것이다. 넓이와 대상의 변화율은 아무런 관계가 없어보이는데도.</p>
+</blockquote>
+<ul>
+<li>
+<p>정적분은 부정적분 함수의 함수값의 차로 정의되었다.</p>
+<p>즉 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 정의된 함수 <span class="arithmatex">\(f(x)\)</span> 의 부정적분이 <span class="arithmatex">\(F(x)\)</span> 일 때, <span class="arithmatex">\(a\)</span> 에서 <span class="arithmatex">\(b\)</span> 까지의 정적분은 다음과 같이 <span class="arithmatex">\(x=b, x=a\)</span> 일 때의 부정적분의 함수값의 차로 정의되었다. </p>
+<div class="arithmatex">\[ \int_{a}^{b} f(x) dx = F(b)-F(a) \]</div>
+<p>하지만 정적분은 처음에 직선으로 둘러싸인 도형이 아닌 곡선으로 둘러싸인 임의의 도형의 넓이를 구하기 위하여 고안되었다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(y=3\)</span> 을 <span class="arithmatex">\(0\)</span> 에서 <span class="arithmatex">\(3\)</span> 까지 정적분한 것은 다음과 같다. </p>
+<div class="arithmatex">\[ \int_{0}^{3}3dx=[3x] ^{3} _{0} = 9 \]</div>
+<p>그런데 <span class="arithmatex">\(y=3\)</span> 가 <span class="arithmatex">\(x=0\)</span> 에서 <span class="arithmatex">\(x=3\)</span> 까지 둘러싸인 넓이를 기하적으로 구하면 다음과 같다. </p>
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/76172763-62697800-61dc-11ea-9f47-fa641aef1c9b.png"/></p>
+<p>위 그래프에서 가로 곱하기 세로 <span class="arithmatex">\(3 \times 3\)</span> 는 <span class="arithmatex">\(9\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#815e3c4dd"><div class="admonition tldr" id="815e3c4dd">
+<p>짝함수의 정적분 : <span class="arithmatex">\(y\)</span> 축에 대칭인 짝함수의 정적분은 다음과 같다. </p>
+<div class="arithmatex">\[ \int_{-a}^{a} f(x)dx = 2 \int_{0}^{a}f(x)dx \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 (기하적 증명)</p>
+<p>짝함수는 <span class="arithmatex">\(f(-x) = f(x)\)</span> 를 만족하므로 구간 <span class="arithmatex">\([-a, 0]\)</span> 과 <span class="arithmatex">\([0, a]\)</span> 에서의 넓이가 같다. 즉 정적분 값이 같다. 그러므로 </p>
+<div class="arithmatex">\[ \int_{-a}^{0}f(x)dx = \int_{0}^{a}f(x)dx \]</div>
+<p>이다. 따라서 <span class="arithmatex">\(-a\)</span> 부터 <span class="arithmatex">\(a\)</span> 까지 하는 적분의 적분구간을 <span class="arithmatex">\([-a, 0]\)</span> 과 <span class="arithmatex">\([0, a]\)</span> 로 나누면 그 둘은 같다. 이것으로 증명이 끝났다. </p>
+</li>
+<li>
+<p>증명 (치환적분법)</p>
+<p>정적분의 성질에 의해</p>
+<div class="arithmatex">\[ \int_{a}^{-a}f(x)dx = \int_{-a}^{0}f(x)dx + \int_{0}^{a}f(x)dx \tag{1} \]</div>
+<p>가 성립한다. 이때 </p>
+<div class="arithmatex">\[ \int_{-a}^{0}f(x)dx \]</div>
+<p>에서 <span class="arithmatex">\(x=-t\)</span> 로 두면 <span class="arithmatex">\(\frac{dx}{dt}=-1\)</span> 이므로</p>
+<div class="arithmatex">\[ dx = (-1)dt \]</div>
+<p>이다. 또한 <span class="arithmatex">\(x=-a \to t=a, x=0 \to t=0\)</span> 이고 짝함수는 <span class="arithmatex">\(f(x)=f(-x)\)</span> 을 만족하므로</p>
+<div class="arithmatex">\[ \int_{-a}^{0}f(x)dx = \int_{a}^{0}f(-t) \circ (-1) dt = \int_{0}^{a}f(-t)dt = \int_{0}^{a}f(t)dt \]</div>
+<p>이다. 그런데 다음과 같이 함수식의 변수와 적분변수를 동시에 바꾸는 경우 두 정적분 값은 서로 같다.</p>
+<div class="arithmatex">\[ \int_{a}^{b}f(u)du = \int_{a}^{b}f(v)dv \]</div>
+<p>그러므로 <span class="arithmatex">\(t\)</span> 를 <span class="arithmatex">\(x\)</span> 로 바꾸어서</p>
+<div class="arithmatex">\[ = \int_{0}^{a}f(x)dx \]</div>
+<p>이다. 그러니까 결과적으로</p>
+<div class="arithmatex">\[ \int_{-a}^{0}f(x)dx = \int_{0}^{a}f(x)dx \]</div>
+<p>를 얻은 것이다. 이것을 (1) 에 대입하면 </p>
+<div class="arithmatex">\[ \int_{-a}^{0}f(x)dx + \int_{0}^{a}f(x)dx = \int_{0}^{a}f(x)dx + \int_{0}^{a}f(x)dx = 2 \int_{0}^{a}f(x)dx \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \therefore \int_{a}^{-a}f(x)dx = 2 \int_{0}^{a}f(x)dx \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \int_{-3}^{3}(x ^{2}+2)dx = 2 \int_{0}^{3}(x ^{2}+2)dx = 2 [ \frac{1}{3}x ^{3} + 2x] ^{3} _{0} = 2 \times (15 - 0) = 30 \]</div>
+</li>
+</ul>
+<a href="#407b7f510"><div class="admonition tldr" id="407b7f510">
+<p>홀함수의 정적분 : <span class="arithmatex">\(y=x\)</span> 에 대하여 대칭인 홀함수의 정적분은 다음과 같다. </p>
+<div class="arithmatex">\[ \int_{-a}^{a}f(x)dx=0 \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 (기하적 증명)</p>
+<p>홀함수는 원점에 대하여 대칭이므로 구간 <span class="arithmatex">\([-a, 0]\)</span> 과 <span class="arithmatex">\([0, a]\)</span> 에서의 넓이가 같지만 부호가 다르다. 즉 정적분 값의 절대값은 같으나 부호가 다르다. 그러므로 </p>
+<div class="arithmatex">\[ \int_{-a}^{0}f(x)dx = -\int_{0}^{a}f(x)dx \]</div>
+<p>이다. 따라서 <span class="arithmatex">\(-a\)</span> 부터 <span class="arithmatex">\(a\)</span> 까지 하는 적분의 적분구간을 <span class="arithmatex">\([-a, 0]\)</span> 과 <span class="arithmatex">\([0, a]\)</span> 로 나누면 그 둘은 서로 절대값은 같으나 부호가 다르다. 이것으로 증명이 끝났다. </p>
+</li>
+<li>
+<p>증명 (치환적분법)</p>
+<p>정적분의 성질에 의해</p>
+<p>$$ \int_{a}^{-a}f(x)dx = \int_{-a}^{0}f(x)dx + \int_{0}^{a}f(x)dx $$ (1)</p>
+<p>가 성립한다. 이때 </p>
+<div class="arithmatex">\[ \int_{-a}^{0}f(x)dx \]</div>
+<p>에서 <span class="arithmatex">\(x=-t\)</span> 로 두면 <span class="arithmatex">\(\frac{dx}{dt}=-1\)</span> 이므로</p>
+<div class="arithmatex">\[ dx = (-1)dt \]</div>
+<p>이다. 또한 <span class="arithmatex">\(x=-a \to t=a, x=0 \to t=0\)</span> 이고 홀함수는 <span class="arithmatex">\(f(x)=-f(-x)\)</span> 을 만족하므로</p>
+<div class="arithmatex">\[ \int_{-a}^{0}f(x)dx = \int_{a}^{0}f(-t) \circ (-1) dt = \int_{0}^{a}f(-t)dt = -\int_{0}^{a}f(t)dt \]</div>
+<p>이다. 그런데 다음과 같이 함수식의 변수와 적분변수를 동시에 바꾸는 경우 두 정적분 값은 서로 같다.</p>
+<div class="arithmatex">\[ \int_{a}^{b}f(u)du = \int_{a}^{b}f(v)dv \]</div>
+<p>그러므로 <span class="arithmatex">\(t\)</span> 를 <span class="arithmatex">\(x\)</span> 로 바꾸어서</p>
+<div class="arithmatex">\[ = -\int_{0}^{a}f(x)dx \]</div>
+<p>이다. 그러니까 결과적으로</p>
+<div class="arithmatex">\[ \int_{-a}^{0}f(x)dx = -\int_{0}^{a}f(x)dx \]</div>
+<p>를 얻은 것이다. 이것을 (1) 에 대입하면 </p>
+<div class="arithmatex">\[ \int_{-a}^{0}f(x)dx + \int_{0}^{a}f(x)dx = -\int_{0}^{a}f(x)dx + \int_{0}^{a}f(x)dx = 0 \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \therefore \int_{a}^{-a}f(x)dx = 0 \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \int_{-2}^{2} (x ^{3}+x ^{2}-x) dx = \int_{-2}^{2} (x ^{3} -x)dx + \int_{-2}^{2}x ^{2}dx = 0 + 2 \int_{0}^{2} x ^{2}dx = 2[\frac{1}{3}x ^{3}] ^{2} _{0} = 2(\frac{8}{3}-0) = \frac{16}{3} \]</div>
+</li>
+</ul>
+<a href="#fc1b88176"><div class="admonition tldr" id="fc1b88176">
+<p>주기함수의 정적분 : 주기가 <span class="arithmatex">\(p\)</span> 인 주기함수의 정적분은 다음과 같은 관계를 갖는다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\int_{a}^{b}f(x)dx = \int_{a+p}^{b+p}f(x)dx\)</span></p>
+<ul>
+<li>
+<p>이 성질은 구간 <span class="arithmatex">\([a, b]\)</span> 의 정적분 값이 그 구간에 주기 <span class="arithmatex">\(p\)</span> 를 더한 <span class="arithmatex">\([a+p,b+p]\)</span> 와 같다는 것이다. </p>
+</li>
+<li>
+<p>증명 (기하적 증명)</p>
+<p>(주기함수는 모든 원소 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(p \neq 0\)</span> 인 <span class="arithmatex">\(p\)</span> 에 대하여 <span class="arithmatex">\(f(x) = f(x+p)\)</span> 가 성립하는 함수이므로 그래프를 그려보면 직관적으로 이해할 수 있음)</p>
+</li>
+<li>
+<p>증명 (치환적분법)</p>
+<p><span class="arithmatex">\(\int_{a}^{b}f(x)dx\)</span> 에서 <span class="arithmatex">\(x=t-p\)</span> 로 두면 <span class="arithmatex">\(\frac{dx}{dt}=1\)</span> 이므로 </p>
+<div class="arithmatex">\[ dx = dt \]</div>
+<p>이다. 또한 <span class="arithmatex">\(x=a \to t=a+p, x=b \to t=b+p\)</span> 이고 주기함수는 <span class="arithmatex">\(a \neq 0\)</span> 인 <span class="arithmatex">\(a\)</span> 에 대하여 <span class="arithmatex">\(f(x) = f(x+a)\)</span> 를 만족하므로</p>
+<div class="arithmatex">\[ \int_{a}^{b}f(x)dx = \int_{a+p}^{b+p}f(t-p)dt = \int_{a+p}^{b+p}f(t)dt = \int_{a+p}^{b+p}f(x)dx \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore \int_{a}^{b}f(x)dx = \int_{a+p}^{b+p}f(x)dx \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\int_{a}^{a+p}f(x)dx = \int_{b}^{b+p}f(x)dx\)</span></p>
+<ul>
+<li>
+<p>이 성질은 한 주기에 해당하는 구간에서의 정적분 값은 항상 같다는 것이다. </p>
+</li>
+<li>
+<p>증명 (기하적 증명)</p>
+<p>(주기함수는 모든 원소 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(p \neq 0\)</span> 인 <span class="arithmatex">\(p\)</span> 에 대하여 <span class="arithmatex">\(f(x) = f(x+p)\)</span> 가 성립하는 함수이므로 그래프를 그려보면 직관적으로 이해할 수 있음)</p>
+</li>
+<li>
+<p>증명 (치환적분법)</p>
+<p><span class="arithmatex">\(\int_{a}^{a+p}f(x)dx\)</span> 에서 정적분의 성질에 의하여 </p>
+<div class="arithmatex">\[ \int_{a}^{a+p}f(x) = \int_{a}^{b}f(x)dx+\int_{b}^{b+p}f(x)dx+\int_{b+p}^{a+p}f(x)dx \]</div>
+<p>이다. 그런데 </p>
+<div class="arithmatex">\[\int_{a}^{b}f(x)dx = \int_{a+p}^{b+p}f(x)dx\]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \int_{a}^{a+p}f(x) = \int_{a}^{b}f(x)dx+\int_{b}^{b+p}f(x)dx+\int_{b}^{a}f(x)dx \]</div>
+<p>이고 정적분의 성질에 의하여 </p>
+<div class="arithmatex">\[ \int_{a}^{a+p}f(x) = \int_{a}^{b}f(x)dx+\int_{b}^{b+p}f(x)dx-\int_{a}^{b}f(x)dx \]</div>
+<p>이다. 따라서 </p>
+<div class="arithmatex">\[ \therefore \int_{a}^{a+p}f(x) = \int_{b}^{b+p}f(x)dx \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_7">정적분과 미분의 관계<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<a href="#3314940e7"><div class="admonition tldr" id="3314940e7">
+<p>정적분으로 나타내어진 함수 : 정적분의 위끝과 아래끝이 상수면 그 연산결과가 수가 되지만 그 둘 중 하나 이상을 적분변수가 아닌 미지수로 둔다면 정적분 연산결과는 수가 아니라 함수가 되는데, 이 함수를 정적분으로 나타내어진 함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>지금까지 살펴본 정적분의 위끝과 아래끝은 상수였고 이에 따라 정적분 연산결과도 하나의 수였다. </p>
+<p>그러나 다음은 상수 <span class="arithmatex">\(a\)</span> 를 아래끝으로 두고 적분변수 <span class="arithmatex">\(t\)</span> 와 다른 미지수 <span class="arithmatex">\(x\)</span> 를 위끝으로 둔 정적분이고 그 연산결과는 하나의 수가 아닌 함수이다. </p>
+<div class="arithmatex">\[ \int_{a}^{x}f(t)dt \]</div>
+</li>
+<li>
+<p>정적분으로 나타내어진 함수는 일반적으로 미분가능하다. 따라서 미분 연산을 가하여 미분과 정적분의 관계를 알 수 있다.</p>
+</li>
+</ul>
+<a href="#6a25b4302"><div class="admonition tldr" id="6a25b4302">
+<p>정적분과 미분의 관계 : 정적분으로 함수의 미분을 나타내면 다음과 같다.</p>
+</div></a>
+<ul>
+<li>정적분으로 나타내어진 함수에 미분을 하는 경우를 위끝에 변수가 오는 함수와 위끝과 아래끝 모두에 변수가 오는 함수로 나누어 단순화시켜 생각하자. </li>
+</ul>
+<blockquote>
+<p>대상과 대상의 관계란 수식으로 표현될 수 있다. 단 대상과 대상 사이에 어떠한 연산도 없이 수식으로 표현되면 그 둘은 똑같은 것이기 때문에 필연적으로 한 대상을 다른 대상으로 변환하는 연산이 필요하다. 그 연산이 많을수록 복잡한 관계라고 볼 수 있고 연산이 단순할 수록 가까운 관계라고 볼 수 있을까.</p>
+<p>한편 이렇게 관계되어 있는 수로 격하될 수 있는 세상 모든 대상들의 관계를 수식으로 표현하면 그 수식이 마치 거미줄처럼 대상과 대상 사이를 연결해주는 형상을 그릴 수 있지 않을까. </p>
+</blockquote>
+<ul>
+<li>
+<p>위끝에 변수가 오는 정적분으로 나타내어진 함수의 미분 (단, <span class="arithmatex">\(a\)</span> 는 상수)</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\frac{d}{dx}\int_{a}^{x}f(t)dt = f(x)\)</span></p>
+</li>
+<li>
+<p>증명 </p>
+<p>정의에 따라 연속함수 <span class="arithmatex">\(f(x)\)</span> 의 한 부정적분을 <span class="arithmatex">\(F(x)\)</span> 라 할 때 </p>
+<div class="arithmatex">\[ \int_{a}^{x}f(t)dt = F(x) - F(a) \]</div>
+<p>이다. 그런데 여기에 <span class="arithmatex">\(x\)</span> 에 대한 미분 연산을 가하면 </p>
+<div class="arithmatex">\[ \frac{d}{dx} \int_{a}^{x} f(t)dt = \frac{d}{dx}\{F(x) - F(a)\} = F'(x) = f(x) \]</div>
+<p>이다. 이로써 증명이 끝났다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>위끝과 아래끝 모두에 변수가 오는 정적분으로 나타내어진 함수의 미분 (단, <span class="arithmatex">\(a\)</span> 는 상수)</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\frac{d}{dx} \int_{x}^{x+a}f(t)dt = f(x+a)-f(x)\)</span></p>
+</li>
+<li>
+<p>증명 </p>
+<p>정의에 따라 연속함수 <span class="arithmatex">\(f(x)\)</span> 의 한 부정적분을 <span class="arithmatex">\(F(x)\)</span> 라 할 때 </p>
+<div class="arithmatex">\[ \int_{x}^{x+a} f(t)dt = F(x+a) - F(x) \]</div>
+<p>이다. 그런데 여기에 <span class="arithmatex">\(x\)</span> 에 대한 미분 연산을 가하면 </p>
+<div class="arithmatex">\[ \frac{d}{dx}\int_{x}^{x+a}f(t)dt = \frac{d}{dx}\{F(x+a)-F(x)\} = F'(x+a)-F'(x)=f(x+a)-f(x) \]</div>
+<p>이다. 이로써 증명이 끝났다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>정적분으로 나타내어진 함수를 미분할 때 다음을 주의하여야 한다. </p>
+<ul>
+<li>
+<p>피적분함수의 변수와 적분변수가 일치하는지, 즉, <span class="arithmatex">\(f(t)dt\)</span> 에서 두 변수 <span class="arithmatex">\(t\)</span> 가 일치하는지 확인해야 한다. </p>
+</li>
+<li>
+<p>적분 구간의 변수와 미분하고자 하는 변수가 일치하는지, 즉, </p>
+<div class="arithmatex">\[ \frac{d}{dx}\int_{a}^{x} \]</div>
+<p>에서 두 변수 <span class="arithmatex">\(x\)</span> 가 일치해야 한다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#87b894856"><div class="admonition tldr" id="87b894856">
+<p>정적분과 함수의 극한의 관계</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\lim_{x \to a} \frac{1}{x-a}\int_{a}^{x}f(t)dt=f(a)\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p>정의에 따라 연속함수 <span class="arithmatex">\(f(x)\)</span> 의 한 부정적분을 <span class="arithmatex">\(F(x)\)</span> 라 할 때 </p>
+<div class="arithmatex">\[ \int_{a}^{x} f(t)dt = F(x) - F(a) \]</div>
+<p>이다. 그런데 <span class="arithmatex">\(F(x)-F(a)\)</span> 꼴은 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 일 때 미분계수를 구하는 연산</p>
+<div class="arithmatex">\[ f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a} \]</div>
+<p>의 하나의 구성요소 <span class="arithmatex">\(f(x)-f(a)\)</span> 이다. 따라서 미분계수 연산의 이 구성요소를 정적분 연산으로 대체하면 </p>
+<blockquote>
+<p>따라서 어떤 "정립된 수식" 의 구성요소를 다른 수학적 대상물로 교체함으로써 파생되는 관계의 모든 경우의 수를 구할 수 있는 알고리즘을 곧바로 생각할 수 있다.</p>
+<p>이것을 일반화하면 정립된 자연 대상의 구성요소와 관계된 다른 자연 대상으로 그 구성요소를 교체하면 파생된 자연 대상을 생성할 수 있게 되고, 그 모든 경우의 수에 대하여 교체 작업을 행하면 모든 파생 대상물을 얻을 수 있다고 보여진다고 말할 수 있다. </p>
+</blockquote>
+<div class="arithmatex">\[ F'(a) = \lim_{x \to a} \frac{F(x)-F(a)}{x-a} = \lim_{x \to a} \frac{1}{x-a} \int_{a}^{x}f(t)dt \]</div>
+<p>이다. 그런데 <span class="arithmatex">\(F(x)\)</span> 는 <span class="arithmatex">\(f(x)\)</span> 의 원시함수이므로</p>
+<div class="arithmatex">\[ \therefore f(a) = \lim_{x \to a} \frac{1}{x-a} \int_{a}^{x}f(t)dt \]</div>
+<p>이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\lim_{x \to 0} \frac{1}{x}\int_{a}^{x+a}f(t)dt = f(a)\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p>정의에 따라 연속함수 <span class="arithmatex">\(f(x)\)</span> 의 한 부정적분을 <span class="arithmatex">\(F(x)\)</span> 라 할 때 </p>
+<div class="arithmatex">\[ \int_{a}^{x+a} f(t)dt = F(x+a) - F(a) \]</div>
+<p>이다. 그런데 <span class="arithmatex">\(F(x+a)-F(a)\)</span> 꼴은 함수 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(x=a\)</span> 일 때 미분계수를 구하는 연산</p>
+<div class="arithmatex">\[ F'(a) = \lim_{x \to 0} \frac{F(x+a)-F(a)}{x} \]</div>
+<p>의 하나의 구성요소 <span class="arithmatex">\(f(x+a)-f(a)\)</span> 이다. 따라서 미분계수 연산의 이 구성요소를 정적분 연산으로 대체하면 </p>
+<div class="arithmatex">\[ F'(a) = \lim_{x \to 0}  \frac{1}{x} \int_{a}^{x+a} f(t)dt \]</div>
+<p>이다. 그런데 <span class="arithmatex">\(F(x)\)</span> 는 <span class="arithmatex">\(f(x)\)</span> 의 원시함수이므로</p>
+<div class="arithmatex">\[ \therefore f(a) = \lim_{x \to 0}  \frac{1}{x} \int_{a}^{x+a} f(t)dt \]</div>
+<p>이다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">정적분으로 구하는 넓이<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<a href="#5874c0d52"><div class="admonition tldr" id="5874c0d52">
+<p>곡선과 <span class="arithmatex">\(x\)</span> 축 사이의 넓이 : 함수 <span class="arithmatex">\(f(x)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속일 때, 곡선 <span class="arithmatex">\(y=f(x)\)</span> 와 <span class="arithmatex">\(x\)</span>축 및 두 직선 <span class="arithmatex">\(x=a, x=b\)</span> 로 둘러싸인 도형의 넓이 <span class="arithmatex">\(S\)</span> 는 </p>
+<div class="arithmatex">\[ S = \int_{a}^{b}|f(x)|dx \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+<a href="#55c4b99a1"><div class="admonition tldr" id="55c4b99a1">
+<p>곡선과 <span class="arithmatex">\(y\)</span> 축 사이의 넓이 : 함수 <span class="arithmatex">\(f(y)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속일 때, 곡선 <span class="arithmatex">\(x=f(y)\)</span> 와 <span class="arithmatex">\(y\)</span>축 및 두 직선 <span class="arithmatex">\(y=a, y=b\)</span> 로 둘러싸인 도형의 넓이 <span class="arithmatex">\(S\)</span> 는 </p>
+<div class="arithmatex">\[ S = \int_{a}^{b}|f(y)|dy \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+<a href="#c0bdd67b0"><div class="admonition tldr" id="c0bdd67b0">
+<p><span class="arithmatex">\(x\)</span>축으로 둘러싼 두 곡선 사이의 넓이 : 함수 <span class="arithmatex">\(f(x), g(x)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속일 때, 곡선 <span class="arithmatex">\(y=f(x), y=g(x)\)</span> 와 두 직선 <span class="arithmatex">\(x=a, x=b\)</span> 로 둘러싸인 도형의 넓이 <span class="arithmatex">\(S\)</span> 는 </p>
+<div class="arithmatex">\[ S = \int_{a}^{b}|f(x)-g(x)|dx \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+<a href="#9678f1c15"><div class="admonition tldr" id="9678f1c15">
+<p><span class="arithmatex">\(y\)</span>축으로 둘러싼 두 곡선 사이의 넓이 : 함수 <span class="arithmatex">\(f(y), g(y)\)</span> 가 폐구간 <span class="arithmatex">\([a, b]\)</span> 에서 연속일 때, 곡선 <span class="arithmatex">\(x=f(y), x=g(y)\)</span> 와 두 직선 <span class="arithmatex">\(x=a, x=b\)</span> 로 둘러싸인 도형의 넓이 <span class="arithmatex">\(S\)</span> 는 </p>
+<div class="arithmatex">\[ S = \int_{a}^{b}|f(y)-g(y)|dy \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+<a href="#4e28aed29"><div class="admonition tldr" id="4e28aed29">
+<p>함수 <span class="arithmatex">\(y=f(x)\)</span> 와 그 역함수 <span class="arithmatex">\(y=g(x)\)</span> 로 둘러싼 두 곡선 사이의 넓이 : 곡선 <span class="arithmatex">\(y=f(x)\)</span> 과 그 역함수 <span class="arithmatex">\(y=g(x)\)</span> 로 둘러싼 도형의 넓이 <span class="arithmatex">\(S\)</span> 는 </p>
+<div class="arithmatex">\[ S = \int_{a}^{b}|f(x)-g(x)|dx = 2 \int_{a}^{b}|f(x)-x|dx \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><strong>구체화 필요</strong></p>
+</li>
+</ul>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 미분" class="md-footer__link md-footer__link--prev" href="../cal2/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              미분
+            </div>
+</div>
+</a>
+<a aria-label="다음: 미분2" class="md-footer__link md-footer__link--next" href="../cal4/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              미분2
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

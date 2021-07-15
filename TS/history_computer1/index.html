@@ -1,0 +1,2825 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/TS/history_computer1/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>수학의 확실성 - ccss17</title>
+<link href="../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              수학의 확실성
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    수학의 확실성
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    괴델의 불완전성 정리
+  </a>
+<nav aria-label="괴델의 불완전성 정리" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    더글러스 호프스태터와 네이글, 뉴먼의 견해차이
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    (중요) 컴퓨터가 어느정도 수정까지 고차원적인 자연대상을 기계화하여 자동화시킬 수 있는지에 대한 중요하고 핵심적인 단서
+  </a>
+<nav aria-label="(중요) 컴퓨터가 어느정도 수정까지 고차원적인 자연대상을 기계화하여 자동화시킬 수 있는지에 대한 중요하고 핵심적인 단서" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    배경
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    정합성 문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    정합성에 대한 절대적 증명
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    형식 논리학의 형식적 연역 체계화
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    정합성에 대한 절대적 증명의 성공 사례
+  </a>
+<nav aria-label="정합성에 대한 절대적 증명의 성공 사례" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    정합성의 절대적 증명 방법
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    정합성에 대한 절대적 증명을 끝내버린 괴델의 결론
+  </a>
+<nav aria-label="정합성에 대한 절대적 증명을 끝내버린 괴델의 결론" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    괴델의 결론
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    리샤르의 역설
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mapping">
+    사상(mapping) 에 관하여
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    다시 점검해보고 넘어가기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    괴델의 불완전성 정리
+  </a>
+<nav aria-label="괴델의 불완전성 정리" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#-uber-formal-unentscheidbare-satze-der-principia-mathematica-und-verwandter-systeme">
+    괴델의 논문 - Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme
+  </a>
+<nav aria-label="괴델의 논문 - Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pm">
+    수학의 모든 공리체계를 대표할 수 있는 PM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    괴델의 증명 과정
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+    1. 괴델 수 붙이기
+  </a>
+<nav aria-label="1. 괴델 수 붙이기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-1">
+    1-(1) 기본 기호에 괴델수 붙이기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-2">
+    1-(2) 형식문에 괴델수 붙이기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-3">
+    1-(3) 증명에 괴델수 붙이기
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    2. 상위 수학명제를 수학 명제로 사상시키기
+  </a>
+<nav aria-label="2. 상위 수학명제를 수학 명제로 사상시키기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    상위 수학의 산술학화의 의미
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    아, 그렇구나. 대응 보조 정리의 엄밀한 증명 과정에 대한 이해가 있다면 무의미한 기호들이 어떻게 원초 재귀적 진술들에 대응되고, 원초 재귀적 진술들은 또 어떻게 무의미한 기호들에 대응될 수 있는지에 대한 지각이 생기겠구나. 그렇다면 이 지각을 기반으로 일반적인 자연 대상을 어떻게, 또 얼마나 컴퓨터가 다룰 수 있는 수로 기계화시킬 수 있는지 알 수 있을 것 같다. 내가 찾는건 대응 보조 정리에 대한 깊은 이해였구나.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    증명함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    대입함수
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    3. 핵심 논증
+  </a>
+<nav aria-label="3. 핵심 논증" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-1-g">
+    3-(1) 자기 자신이 증명될 수 없다고 주장하는 형식문 \(G\)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-2-pm-g-pm">
+    3-(2) PM 이 정합적 체계라면 형식문 \(G\) 는 PM 에 의하여 증명될 수 없다.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-3-g">
+    3-(3) 형식문 \(G\) 는 증명될 수 없지만 참이다.
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-4-pm-pm-1">
+    3-(4) 그러므로 PM 이 정합적 체계라면 PM 은 불완전체계이다. (제 1 불완전성 정리)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-5-pm-pm-2">
+    3-(5) "PM 은 정합적 체계이다." 라는 주장은 PM 의 체계로는 증명할 수 없다. (제 2 불완전성 정리)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    불완전성 정리의 의미
+  </a>
+<nav aria-label="불완전성 정리의 의미" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    하지만 이 결론은 심지어 이 책의 개정판을 작업한 더글러스에 의해서도 곧바로 뒤집혔다. 또한 빌 조이와 레이 거즈와일 같은 현대의 컴퓨터 과학자들은 컴퓨터가 인간 지능을 초월하는 순간인 기술적 특이점을 강력한 여러 증거로 주장하고 있다.
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>수학의 확실성</h1>
+<h2 id="_1">수학의 확실성<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>1930년까지도 수학자는 여러 수학 기초론 가운데 하나를 받아들이고 자신의 증명이 학파의 주장에 부합한다고 하면 그만이었다. </p>
+<ul>
+<li>
+<p>그러나 괴델의 불완전성 정리로 여러 기초론 학파가 받아들이고 있는 논리학 원리로는 수학의 무모순성이 증명되지 않음이 밝혀졌다. </p>
+</li>
+<li>
+<p>공리적 연역 방식에도 결함이 있다는 것이 밝혀졌다.   </p>
+</li>
+</ul>
+</li>
+<li>
+<p>힐베르트는 수학자들이 수학을 발전시켜온 과정을 보니까 몇 개의 추론 규칙을 반복적으로 적용하는 것이 전부 다 인 것 같다는 생각을 하였고, 그러한 추론 규칙만 찾아낸다면 수학자가 더 이상 고생할 필요가 없어질 것이라고 생각했다. </p>
+</li>
+<li>
+<p>그리고 그는 1928년 세계수학자대회에서 공식적으로 이 문제를 제기했다. </p>
+</li>
+</ul>
+<hr/>
+<h2 id="_2">괴델의 불완전성 정리<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>참고 : <a href="https://book.naver.com/bookdb/book_detail.nhn?bid=6395428">괴델의 증명</a></p>
+</blockquote>
+<ul>
+<li>
+<p>20세기 초 수학계는 수학을 형식적 연역 체계로 구성하려고 노력했다.</p>
+<ul>
+<li>
+<p>수학적 사고를 순수한 기호 조작의 규칙에 의해 포착할 수 있다고 믿었기 때문이다. </p>
+</li>
+<li>
+<p>이 노력은 러셀과 화이트헤드의 『수학 원리』로 절정을 이루었다. </p>
+</li>
+<li>
+<p>러셀와 화이트헤드는 순수한 논리학 위에 수학을 건설했고 이 기초가 영원히 안전할 거라고 믿었고 앞으로 후손들이 이 기반 위에 안심하고 수학을 세워나갈 수 있을 거라 믿었다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>괴델은 『수학 원리』를 연구하면서 엄밀한 기호 패턴이 수 패턴과 똑같다는 생각을 했고 실제로 모든 기호를 수로 대체할 수 있다는 것을 깨달았다. </p>
+<ul>
+<li>
+<p>즉, 기호 조작을 수치 처리로 바꾸어 이해할 수 있다는 것이다.</p>
+</li>
+<li>
+<p>이 사실은 『수학 원리』의 주제가 "수" 인데, 『수학 원리』자체도 "수" 로 환원할 수 있기 때문에 『수학 원리』는 제 자신에 관해서 말하는 것으로 간주할 수 있다는 것을 의미했다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>그런데 『수학 원리』가 자기 자신을 언급한다는 것을 깨달은 시점에서 괴델은 옛부터 내려오던 "자기 언급의 역설", 특히 "이 진술은 그르다" 라는 역설을 검토하지 않을 수 없었다. </p>
+<ul>
+<li>
+<p>결국 괴델은 "이 명제를 『수학 원리』의 규칙으로 증명할 수 없다." 는 명제를 『수학 원리』속에서 만들어낼 수 있다는 것을 깨달았다. </p>
+</li>
+<li>
+<p>이것은 러셀와 화이트헤드에게 재앙이었는데, 왜냐하면 러셀와 화이트헤드가 『수학 원리』로써 "자기 언급의 악순환" 과의 싸움에서 완전히 승리했다고 확신했기 때문이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>괴델이 찾은 이 형식문은 기존의 역설과 차이가 있는데 『수학 원리』의 규칙을 사용하여 증명될 수 없는 <strong>"옳은 진술"</strong> 이기 때문이다. </p>
+</li>
+<li>
+<p>괴델의 이 증명은 『수학 원리』를 참담한 폐허로 만들었다.</p>
+<ul>
+<li>
+<p>뿐만 아니라 『수학 원리』가 달성하고자 하는 목표를 시도하려는 그 어떠한 체계에서든지 적용된다는 것을 증명했다. </p>
+</li>
+<li>
+<p>결과적으로 괴델은 수학적 사고가 공리적 체계에 의하여 포착될 수 있다는 믿음을 산산조각 냈다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>또 이로써 수학적 사고를 형식 체계의 규칙으로 자동화하여 기계화하려는 생각이 오만한 생각이었다는 것이 드러났고, 인간의 수학적 사고 능력이 얼마나 심오하고 고차원적인지 깨닫게 되었다.</p>
+</li>
+</ul>
+<h3 id="_3">더글러스 호프스태터와 네이글, 뉴먼의 견해차이<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>더글러스 호프스태터는 네이글, 뉴먼 교수로부터 괴델의 불완전성 정리를 배웠지만 그들 교수와는 사뭇 다른 견해를 가지게 되었다. </p>
+</li>
+<li>
+<p>네이글 교수와 뉴먼은 괴델의 발견으로부터 컴퓨터는 인간의 이성만큼 자유롭게 추론할 수 없다는 결론을 내렸다. </p>
+<ul>
+<li>
+<p>왜냐하면 컴퓨터가 일련의 명확한 명령들에 의하여 작동되기 때문이다. </p>
+</li>
+<li>
+<p>프로그램이란 일련의 명확한 공리와 추리 규칙이고, 컴퓨터의 행동이란 그 프로그램을 수행하는 것이다.</p>
+</li>
+<li>
+<p>따라서 결과적으로 컴퓨터는 형식적 체계 속에서 정리에 대한 증명을 규칙에 따라 산출하는 기계적 행동에 불과하다. </p>
+<blockquote>
+<p>그런데 괴델의 증명에 따르면 형식적 체계 속에서 공리에 추론 규칙을 연쇄적으로 적용하는 것은 수학의 모든 정리를 이끌어낼 수 없었으니까...</p>
+</blockquote>
+</li>
+<li>
+<p>그러므로 컴퓨터는 오직 수와 산술학적 사실을 다루는 기계로써 강력한 성능이나 다양한 기능, 혹은 발전 가능성을 가질 가능성이 낮다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>실제로 컴퓨터의 초기 연구자들은 컴퓨터를 공리적 체계의 연산을 수행하는 기계로 사용하였다. </p>
+<ul>
+<li>즉 컴퓨터는 부분적인 정리를 빠르게 증명하는 용도의 기계였다. </li>
+</ul>
+</li>
+<li>
+<p>결론적으로 컴퓨터가 인간 정신만큼 자유롭고 통찰력있는 사고를 못할 것이라는 네이글 교수와 뉴먼의 견해가 지금까지도 받아들여지고 있다. </p>
+</li>
+<li>
+<p>그러나 컴퓨터가 인간의 정신 과정을 모방할 수 있다는 여러 단서가 있다. </p>
+<ul>
+<li>
+<p>더글러스 레넛(1950~)이 1970년대에 만든 AM(Automated Mathematician) 을 생각하자. </p>
+<ul>
+<li>AM 은 정리를 논리적으로 증명하지 않고 "미학적 원시 코" 의 안내에 따라 패턴들의 냄새를 맡고 추측을 만들면서 수의 세계를 떠돌아 다녔다. </li>
+</ul>
+</li>
+<li>
+<p>또 신경망을 생각하자. </p>
+<ul>
+<li>
+<p>이것은 우리가 생각하는 논리, 공리, 정리, 증명, 형식체계라는 패러다임과 가장 멀리 떨어져있다. </p>
+</li>
+<li>
+<p>뇌 세포는 일정한 패턴으로 구성되고 연결되어있기 때문에 그 패턴이 어떤 것이든지간에 프로그램, 즉 "일련의 명확한 명령" 으로 대체할 수 있기 때문에 인지 과학자들은 인간의 학습 과정에서 생겨나는 패턴들이 정확하게 재현된다는 것을 발견했다. </p>
+</li>
+<li>
+<p>심지어 인간이 저지르는 실수까지도 말이다. </p>
+</li>
+</ul>
+<blockquote>
+<p>이런 일이 가능한 이유는 세상에 존재하는 자연 대상을 끊임없이 단순화하다보면 아무리 비논리적이고 아무리 불규칙해보이는 것일지라도 언젠가 그 최소단위에서 수학 명제, 형식적 규칙 체계, 논리적이고 규칙적인 패턴이 발견되기 때문이 아닐까? 그리고 그렇게 발견된 수학 명제는 컴퓨터의 일련의 명확한 규칙 체계로, 즉 프로그램으로 환원시킬 수 있기 때문에 보편만능기계가 입력받아 흉내낼 수 있는 또 하나의 튜링 머신이 될 수 있는 것이다. </p>
+<p>그렇다면 우리의 일은 인간의 뇌, 그리고 인간의 마음을 끝없이 단순화하는 것이다. 단순화할 수 없을 때까지 말이다. 수학 명제로 곧바로 치환할 수 있을 때까지.</p>
+</blockquote>
+</li>
+<li>
+<p>요점은 인간의 사고를 "일련의 명확한 명령" 이 모방할 수 있다는 것이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>우리는 수학의 역사를 통해 인간의 지능이 논리 엔진이 아니라 유추 엔진, 추측 엔진, 심미적 엔진, 자기 수정적 엔진이라는 것을 이해하고 있다.</p>
+<ul>
+<li>
+<p>그러므로 이런 기능을 실현시키는 "일련의 명확한 명령" 이 언젠가 만들어질 것이라고 확신할 수 있다. </p>
+</li>
+<li>
+<p>따라서 불완전성 정리로 인하여 실의에 빠질 것이 아니라 인간 지성이 창조적 이성이었다는 것을 인정하고 재빨리 올바른 방향을 잡아야 한다.</p>
+</li>
+</ul>
+<blockquote>
+<p>즉, 논리엔진으로써 이성을 프로그램으로 만드려는 시도는 헛수고라는 것을 괴델이 증명했으니 창조엔진, 추측엔진, 심미적 엔진으로 이성을 기술로 대체해야 한다.</p>
+</blockquote>
+</li>
+<li>
+<p>괴델은 **수가 모든 종류의 패턴을 표현할 수 있는 보편적인 매개 수단임**을 깨달았다. </p>
+<ul>
+<li>
+<p>그러므로 그는 심지어 다른 모든 영역에 관한 명제 또한 오직 수에 관한 것으로 환원할 수 있다는 것도 깨달았다.</p>
+</li>
+<li>
+<p>다시 말해 수가 모든 종류의 구조를 표현할 수 있다는 것을 깨달음으로써 수론의 경계를 넘어서 더 먼 곳까지 바라볼 수 있었다. </p>
+</li>
+<li>
+<p>이것을 컴퓨터에 적용한다면, 컴퓨터는 근본적으로 수를 다루고 있고 수는 **세상 모든 종류의 패턴**을 표현할 수 있는 보편적 매개수단이기 때문에, **컴퓨터는 논리적 패턴이든 비논리적 패턴이든 정합적 패턴이든 부정합적 패턴이든 관계없이 세상 모든 패턴을 다룰 수 있다**는 것을 우리는 알 수 있다. </p>
+</li>
+</ul>
+<blockquote>
+<h2 id="_4">(중요) <strong>컴퓨터가 어느정도 수정까지 고차원적인 자연대상을 기계화하여 자동화시킬 수 있는지에 대한 중요하고 핵심적인 단서</strong><a class="headerlink" href="#_4" title="Permanent link">¶</a></h2>
+</blockquote>
+</li>
+</ul>
+<h3 id="_5">배경<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>1931년 괴델은 독일 수학과 물리학 월간 학술지에 『『수학원리』및 그와 연관된 체계들 속에서 형식적으로 결정될 수 없는 명제에 관하여』 라는 논문을 냈다.</p>
+</li>
+<li>
+<p>고대 그리스 사람들은 공리적 방법으로 기하학을 체계적으로 발전시켰다. </p>
+<ul>
+<li>공리적 방법이란 어떤 명제들을 증명하지 않은 채 <strong>공리</strong> 로 받아들인 다음, 그 공리로부터 모든 다른 명제를 그 체계의 <strong>정리</strong> 로 연역하는 방법이다. </li>
+</ul>
+<blockquote>
+<p>그러나 이것은 수천년의 잘못된 믿음이었다. 실제로는 모든 명제가 <strong>공리</strong> 로부터 연역될 수 없다. </p>
+</blockquote>
+<ul>
+<li>즉 공리는 그 체계의 토대이고, 정리는 토대 위에 세워진 상부 구조이다. </li>
+</ul>
+</li>
+<li>
+<p>이에 따라 수학자들은 수학의 모든 분야가 이와같은 공리 체계로 구성될 수 있다고 믿게 되었다. </p>
+<ul>
+<li>
+<p>그러나 괴델은 이것이 이루어질 수 없다는 것을 증명한 것이다. </p>
+</li>
+<li>
+<p>공리적 방법은 한계를 갖고 있으며, 그 한계 때문에 자연수 체계조차 완벽하게 공리 체계화될 가능성이 전혀 없다는 것이다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">정합성 문제<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>유클리드는 공리적 방법으로 기하학 연역 체계를 구성하면서 평행선 공리를 도입했다. </p>
+</li>
+<li>
+<p>하지만 수학자들은 여러가지 이유로 이 평행선 공리의 자명성에 의혹을 제기해왔다.</p>
+<ul>
+<li>따라서 수학자들은 다른 공리로부터 평행선 공리를 연역해내려고 애써왔다.</li>
+</ul>
+</li>
+<li>
+<p>그러나 19세기에 이르러서야 평행선 공리가 다른 공리로부터 연역될 수 없다는 것이 가우스, 보여이, 로바체프스키, 리만의 연구를 통해 증명되었다.</p>
+<ul>
+<li>
+<p>이것은 수학의 역사에서 가장 중요한 업적이었는데, 왜냐하면 그것이 어떤 명제의 증명 불가능성을 증명할 수 있다는 것을 의미했기 때문이다.</p>
+</li>
+<li>
+<p>또 이로써 평행선 공리가 독립적인 명제라는 것이 밝혀졌기에 평행선 공리와 상충되는 다른 공리를 채택함으로써 전적으로 새로운 공리 체계를 만들어낼 수 있었고, 그것이 바로 비유클리드 기하학이었다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>또 수학의 토대에 관한 연구로 수학이 단지 양에 관한 학문이라고 생각해왔던 것이 부정확하다는 것이 드러났다. </p>
+<ul>
+<li>
+<p>왜냐면 지금까지 수학은 주어진 일련의 공리로부터 논리적으로 함의된 결론을 연역해내는 것이라고 생각해왔었는데, 실제로 수학적 추리의 타당성은 공리가 지니는 어떤 특별한 의미와 전혀 관계가 없다는 사실이 인정받게 되었기 때문이다. </p>
+</li>
+<li>
+<p>수학은 훨씬 더 추상적인 학문이었고 옛날부터 생각해오던 수학적 대상이라고 규정해온 몇몇 대상에 관한 진술들이 비단 그 대상들만의 진술이 아니라 <strong>"모든 대상"</strong> 에 관한 진술이라고 해석될 수 있다는 것이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>유클리드 기하학이 유일한 기하학이 아니라는 깨달음은 역사적으로 가장 충격적이고 혁명적인 깨달음이었다. </p>
+<ul>
+<li>
+<p>왜냐하면 대다수의 수학자들과 철학자들은 유클리드 기하학이 자연 대상과 물질 세계를 이상화한 수학적 공리 체계라고 보았기 때문이다. </p>
+</li>
+<li>
+<p>그러나 유클리드 기하학말고도 비유클리드 기하학이 존재하였고 심지어 그 비유클리드 기하학 또한 물리 세계에 적용될 수 있었다. </p>
+</li>
+<li>
+<p>이로써 유클리드 기하학과 수론, 해석학, 미적분학 등 모든 수학 체계들이 실제로는 인간이 만들어낸 인공적인 창작물이라는 것이 밝혀진 것이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>이에따라 이러한 공리체계가 내적정합성을 갖추고 있지 않아서 서로 모순되는 정리를 연역할 수도 있다는 우려가 생기기 시작했다. </p>
+<ul>
+<li>
+<p>왜냐하면 유클리드 기하학이 자연 세계를 이상화한 절대적이고 유일한 지식이라면 그것이 모순을 내뱉을 이유란 전혀 없기 때문이다.</p>
+</li>
+<li>
+<p>오히려 지금까지 유클리드 기하학이 서로 상충되는 정리를 도출할 거라고 생각하는 사람이 미친 사람이었다.</p>
+</li>
+<li>
+<p>그러나 비유클리드 기하학의 탄생으로써 유클리드 기하학이 유일하고도 절대적인 진리가 아니라 단지 인간의 인공적인 창작물이라는 것이 밝혀졌기 때문에, 그 공리체계는 내적 정합성을 보장하지 못하며 언젠가 모순되는 정리를 연역해낼 수도 있게 된 것이다.</p>
+</li>
+<li>
+<p>만약 언젠가 모순되는 정리가 연역된다면 지금까지 수학자들이 쌓아온 몇 천년간의 수고가 산산조각 날 것이 분명했다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>힐베르트는 먼저 내적 정합성의 절대적 증명보다는 상대적 증명을 택했다.</p>
+<ul>
+<li>
+<p>그는 비유클리드 기하학을 유클리드 기하학으로 환원하고, 유클리드 기하학을 다시 해석기하의 대수적 표현으로 환원함으로써 결국 대수학의 정합성만 증명하면 이 대수학에 의존하고 있는 나머지 공리체계의 정합성이 증명되도록 만들었다. </p>
+<ul>
+<li>예시</li>
+</ul>
+<p>비유클리드 기하학 중 하나인 평면 타원 기하학의 <strong>"대원"</strong> 은 유클리드 기하학의 <strong>"직선"</strong> 으로 환원할 수 있고, 이 <strong>"직선"</strong> 은 해석기하의 대수적 표현 <strong><span class="arithmatex">\(y=ax+b\)</span></strong> 등으로 환원될 수 있었다.</p>
+</li>
+<li>
+<p>하지만 이것은 상대적 증명일 뿐이었다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_7">정합성에 대한 절대적 증명<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>힐베르트는 어떤 체계의 정합성을 다른 체계의 정합성을 가정하지 않고도 확립할 수 있는 절대적 증명을 완성하려고 애썼다. </p>
+</li>
+<li>
+<p>힐베르트가 제안한 절대적 증명의 첫단계는 **연역 체계를 완벽하게 형식화하는 것**이었다. </p>
+<ul>
+<li>
+<p>즉 연역 체계 속에 등한하는 모든 표현이 지닌 의미를 없애는 것이다.</p>
+</li>
+<li>
+<p>이로써 연역 체계 속 모든 표현들은 그저 의미없는 기호가 되고, 이 기호들은 명확하게 진술된 일련의 규칙을 통해 결합되고 조작된다.</p>
+</li>
+<li>
+<p>이렇게 어떤 연역 체계가 완벽하게 형식적 연역 체계로 바뀌면, 그 체계의 공리로부터 정리를 연역하는 일이란 단지 일련의 기호 모임을 규칙에 따라서 다른 기호 모임으로 변형시키는 일일 뿐이다.</p>
+</li>
+<li>
+<p>이로써 직관적으로 부지불식간에 가정할 수 있는 경험 원리나 공인되지 않은 추론이 끼어들 수 있는 위험이 철저하게 제거된다. </p>
+</li>
+<li>
+<p>이 형식화된 연역 체계는 아무것도 주장하지 않는다. 단지 일정한 구조를 갖춘 추상적 디자인일 뿐이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>하지만 우리는 이 형식적 연역 체계의 조직 배열을 기술할 수 있고 그 배열들 간 다양한 관계에 관하여 진술할 수 있다. </p>
+<ul>
+<li>
+<p>이렇게 무의미한 형식화된 수학 체계에 관하여 언급하는 유의미한 진술 자체는 그 무의미한 형식 체계에 속하지 못한다. </p>
+</li>
+<li>
+<p>힐베르트는 이런 진술을 <strong>"수학에 관하여 언급하는 언어"</strong>, 즉 <strong>"상위수학"</strong> 이라고 규정하여 구별했다. </p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[2+3=5\]</div>
+<p>는 형식적 체계에 속하는 형식 언어, 즉 수학 명제이지만 </p>
+<div class="arithmatex">\["2+3=5" \text{는 산술학적 형식문이다.}\]</div>
+<p>는 형식언어에 속하지 못하는 상위수학 명제이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \text{만일 기호 '=' 가 산술학의 형식문에 사용된다면 이 기호의 왼쪽과 오른쪽에는 반드시 숫자가 있어야 한다.} \]</div>
+<p>도 상위수학명제이다.</p>
+</li>
+<li>
+<p>주의해야 할 것은 상위수학명제는 분명히 수학명제나 수학적 기호, 형식문을 전혀 포함하고 있지 않다는 것이다. </p>
+<ul>
+<li>
+<p>그러나 실제로 상위수학명제가 수학명제를 포함하고 있는 것처럼 보이기 때문에 헷갈릴 수 있는데, 상위수학명제는 오로지 산술학적 표현의 이름을 포함하고 있을 뿐 산술학적 표현 그 자체를 포함하고 있지는 않다.</p>
+</li>
+<li>
+<p>이것을 구별하기 위하여 표현의 앞뒤에 따옴표를 붙힌다. </p>
+</li>
+<li>
+<p>예시 </p>
+</li>
+</ul>
+<div class="arithmatex">\[ \text{도요새는 수컷이 알을 품는다.} \]</div>
+<p>는 동물학에 속하는 진술이지만</p>
+<div class="arithmatex">\[ \text{도요새에 관한 주장 "도요새는 수컷이 알을 품는다" 는 동물학이 엉터리 과학임을 증명한다.} \]</div>
+<p>는 도요새에 관한 진술이 아니라 도요새를 연구하는 동물학에 관한 진술이므로 상위 동물학에 속한다. </p>
+</li>
+<li>
+<p>힐베르트가 수학명제와 상위수학명제를 엄격히 구별한 것은 이 두 구분을 명확히 하지 않았을 때 여러 혼란과 역설이 발생하기 때문이었다. </p>
+</li>
+<li>
+<p>우리가 지금 마주한 문제인 정합성에 대한 "절대적 증명" 은 "형식적 연산 체계**의 진술**" 이 아니라 "형식적 연산 체계**에 관한 진술**" 이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>또한 힐베르트는 연산 체계의 공리로부터 **유한한 단계의 절차**를 통하여 서로 모순되는 정리가 연역될 수 없다는 것을 밝히고자 했다. </p>
+<blockquote>
+<p>왜냐하면 무한한 단계의 증명이나 무한집합에 관한 수학적 논법들은 많은 논란에 휩싸여있었기 때문이다. 수학의 역사 참고.</p>
+</blockquote>
+<ul>
+<li>이에따라 *형식화된 수론 체계의 정합성에 대한 절대적 증명*은 **유한한 단계를 가진 상위수학적 절차에 의하여 두 개의 모순되는 형식문이 연역될 수 없다는 것이 밝혀졌을 때 이루어질 것**이다. </li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">형식 논리학의 형식적 연역 체계화<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>괴델의 불완전성 정리를 온전히 이해하기 위해서는 </p>
+<p>(1) 먼저 화이트헤드와 러셀이 도대체 무슨 이유로 『수학 원리』를 저술했는지, 그리고 어떤 방법으로 저술했는지를 알아야 하고, 이로써 『수학 원리』를 이루고 있는 연역 체계의 형식화 작업을 간단한 예시를 통해 이해해보고,</p>
+<p>(2) 형식화된 연역 체계의 절대적 정합성이 어떤 방법으로 확립될 수 있는지 알아보아야 한다. </p>
+</li>
+<li>
+<p>고대 그리스로부터 내려온 아리스토텔레스의 정언 논리학은 완성된 학문이었고 1787년에 칸트도 더 이상의 진보가 있을 수 없는 무결한 학문체계라고 받아들어져 왔다. </p>
+<ul>
+<li>
+<p>하지만 실제로 전통 논리학은 심각하게 불완전한 논리학이었고, 매우 기초적인 수학적 추론에 사용되는 많은 추리 규칙조차 설명하지 못하는 논리학이었다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>전통 논리학은 "<span class="arithmatex">\(5\)</span> 는 <span class="arithmatex">\(3\)</span> 보다 크다. 그러므로 <span class="arithmatex">\(5\)</span> 의 제곱수는 <span class="arithmatex">\(3\)</span> 의 제곱수보다 크다." 는 추리를 가능하게 하는 원리조차 설명할 수 없다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>그런데 1847년 조지 불이 『논리학에 대한 수학적 분석』을 출간하면서 논리학은 새로운 현대적 관점에서 활발하게 연구되기 시작했다.</p>
+<ul>
+<li>불의 목표는 "논리 대수학" 을 발전시키는 것인데, "논리 대수학" 의 목표는 전통 논리학보다 훨씬 더 일반적이고 다양한 연역 논증을 다룰 수 있는 정확한 기호 표기 방법을 마련하는 것이었다. </li>
+</ul>
+</li>
+<li>
+<p>논리학에 대한 현대적 관점에서의 탐구에는 불 말고도 또 다른 노선이 있었는데 그것이 바로 화이트헤드와 러셀의 『수학 원리』(1910)였고 나중에 불의 프로그램과 연합하게 되었다. </p>
+<ul>
+<li>
+<p>러셀은 수학을 형식 논리학의 한 분야라는 것을 밝히려 했다. 즉, 수학의 기초가 논리학이라는 것을 밝히려 했다.</p>
+</li>
+<li>
+<p>러셀은 프레게(1848~1925)의 연구를 이어받아 모든 수론적 개념이 순수 논리학 개념으로 정의될 수 있고, 따라서 수론의 모든 공리가 논리적 진리임을 증명하려고 노력했다. </p>
+<ul>
+<li>
+<p>러셀은 집합이라는 개념도 일반 논리학으로 설명했다. 동등한 집합은 일대일 대응 관계를 뜻하는데 논리 개념으로 설명될 수 있었다. </p>
+</li>
+<li>
+<p>단위 집합은 단 하나의 원소를 가진 집합이고, 기수 <span class="arithmatex">\(1\)</span> 을 단위 집합과 동등한 모든 집합들의 집합으로 정의되었다. </p>
+</li>
+<li>
+<p>러셀은 덧셈과 곱셈같은 산술학적 연산도 형식 논리학 개념으로 정의했다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>러셀은 수학적 체계의 정합성 문제를 형식 논리학의 정합성으로 환원시켰다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>하지만 수학이 논리학의 한 분야라는 프레게-러셀의 주장은 여러 이유로 수학자들의 인정을 받지 못했다. </p>
+<ul>
+<li>또 러셀의 정합성 증명 또한 절대적 증명이 아닌 상대적 증명이었고, 오히려 정합성 문제가 더 일반적으로 드러나게 되었을 뿐이었다. </li>
+</ul>
+</li>
+<li>
+<p>그러나 『수학 원리』 가 아무리 비판받았다 해도 두 가지의 이루 말할 수 없는 귀중한 가치를 갖고 있었다. </p>
+<ul>
+<li>
+<p>첫째로 『수학 원리』 는 대단히 포괄적인 기호 표현 체계를 제공했고, 이 기초 체계로 수학의 모든 진술을 정돈할 수 있었다. </p>
+</li>
+<li>
+<p>둘째는 『수학 원리』 로 수학적 증명에 사용된 형식적 추론 규칙의 대부분이 명백하게 밝혀졌는데, 이로써 그 추리 규칙들이 훨씬 더 정밀하고 완벽하게 다듬어졌다. </p>
+</li>
+<li>
+<p>한 마디로 『수학 원리』 는 수론 체계 전체를 탐구하는데 반드시 필요한 도구를 제공해주었다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_9">정합성에 대한 절대적 증명의 성공 사례<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>이제 "(2) 형식화된 연역 체계의 절대적 정합성이 어떤 방법으로 확립될 수 있는지 알아보아야 한다." 를 성취해보려 한다. </p>
+</li>
+<li>
+<p>먼저 『수학 원리』 의 작은 부분을 차지하는 "기초 명제 논리학" 이 어떻게 형식적 연역 체계로 구성될 수 있었는지 알아야 한다. </p>
+</li>
+<li>
+<p>기초 명제 논리학의 형식화 작업은 <span class="arithmatex">\(4\)</span> 단계로 이루어진다. </p>
+<ol>
+<li>
+<p>그 연산 체계에서 사용될 기호들의 완벽한 목록을 작성해야 한다.</p>
+</li>
+<li>
+<p>"구성 규칙", 즉 어떤 기호 조합이 형식문으로 인정될 수 있는지 정해야 한다.</p>
+</li>
+<li>
+<p>"변형 규칙", 즉 어떤 형식문으로부터 다른 형식문이 어떻게 연역될 수 있는지를 정해야 한다.</p>
+</li>
+<li>
+<p>어떤 형식문을 "공리", 즉 "원초 형식문" 으로 선택해야 한다. </p>
+</li>
+</ol>
+</li>
+</ul>
+<p>이제 앞으로 사용할 용어들을 다음과 같이 정리해보겠습니다.</p>
+<ul>
+<li>
+<p><strong>기본 기호 : 연역 체계에서 사용할 유한 개의 기호들</strong></p>
+</li>
+<li>
+<p><strong>형식문(수학명제) : 기본 기호가 조합되어 만들어지는 명제</strong></p>
+</li>
+<li>
+<p><strong>추론규칙(연역규칙) : 어떤 형식문으로부터 다른 형식문에 연역되는 방식</strong></p>
+</li>
+<li>
+<p><strong>공리(원초 형식문) : 어떤 형식문으로부터도 연역되지 않았지만 올바르다고 받아들인 형식문</strong></p>
+</li>
+<li>
+<p><strong>정리 : 공리로부터 추론규칙에 의하여 연역된 형식문</strong></p>
+</li>
+<li>
+<p><strong>증명 : 공리로부터 정리를 연역하는 과정</strong></p>
+</li>
+<li>
+<p><strong>정합성(무모순성) : 연역 체계가 모순되는 형식문을 연역하지 않는다는 성질</strong></p>
+<ul>
+<li>참이면서 동시에 거짓인 형식문을 연역하지 않는다는 매우 중요한 성질입니다. 이 성질이 어찌나 중요한지 칸토어는 수학은 매우 자유롭고 창조적이나 오로지 무모순성이라는 성질에만 제약된다고 말했습니다. 또 모든 수학 기초론의 목표가 수학 체계의 정합성을 확립하는 것입니다. </li>
+</ul>
+</li>
+<li>
+<p><strong>완전성 : 연역 체계의 모든 형식문이 공리로부터 연역될 수 있다는 성질</strong></p>
+</li>
+<li>
+<p><strong>불완전성 : 연역 체계의 하나 이상의 올바른 형식문이 공리로부터 연역되지 않는다(증명되지 않는다)는 성질</strong></p>
+</li>
+<li>
+<p><strong>정합적 체계 : 모순 되는 형식문을 도출하지 않는, 즉 형식문과 그 부정문을 도출하지 않는 체계</strong></p>
+</li>
+<li>
+<p><strong>부정합 체계 : 모순을 도출하는, 즉 형식문과 그 부정문을 도출하는 체계</strong></p>
+</li>
+<li>
+<p><strong>완전 체계 : 모든 형식문을 공리로부터 연역(증명)할 수 있는 체계</strong></p>
+</li>
+<li>
+<p><strong>불완전 체계 : 하나 이상의 올바른 형식문을 공리로부터 연역(증명)할 수 없는 체계</strong></p>
+</li>
+</ul>
+<p>다음의 과정으로 <strong>"기초 명제 논리학"</strong> 은 완전히 <strong>형식화</strong> 된 <strong>형식적 연역 체계</strong> 가 됩니다.</p>
+<ol>
+<li>
+<p>연역 체계에서 사용할 <strong>기본 기호</strong> 채택하기 : 기초 명제 논리학의 기본 기호는 <strong>변항 기호(문장 변항)</strong> 와 <strong>상항 기호</strong> 로 구성됩니다.</p>
+<ul>
+<li>
+<p><strong>변항 기호(문장 변항)</strong> 는 형식문이 대입될 수 있는 변항으로써 알파벳 소문자 <span class="arithmatex">\(p,q,r\)</span> 등으로 나타낸다.</p>
+</li>
+<li>
+<p><strong>상항 기호</strong> 는 다음과 같이 구성된다.</p>
+<div align="center">
+<table>
+<thead>
+<tr>
+<th align="center">상항기호</th>
+<th align="center">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(\sim\)</span></td>
+<td align="center">아닌</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\lor\)</span></td>
+<td align="center">또는</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\land\)</span></td>
+<td align="center">그리고</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\to\)</span></td>
+<td align="center">만일 ~이면 ~이다</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>기본 기호들의 어떤 조합으로 형식문이 인정되는지 정하는 <strong>구성 규칙</strong> 만들기 : 기초 명제 논리학의 구성 규칙은 다음 두 가지입니다. </p>
+<ul>
+<li>
+<p><strong>개개의 문장 변항</strong> <span class="arithmatex">\(p,q,r\)</span> 등을 형식문으로 간주한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(S_1,S_2\)</span> 가 형식문이면 <strong>상항기호로 조합되는 <span class="arithmatex">\(\sim{S_1},S_{1}\lor{S_{2}},S_1\to{S_2},S_1\land{S_2}\)</span> 도 형식문</strong> 이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>어떤 형식문으로부터 다른 형식문이 연역되는지 정하는 <strong>추론 규칙(연역 규칙)</strong> 만들기 : 기초 명제 논리학의 연역 규칙은 <strong>대입규칙</strong> 과 <strong>분리규칙</strong> 으로 구성됩니다.</p>
+<ul>
+<li>
+<p><strong>대입규칙</strong> : 문장 변항을 포함하고 있는 형식문에 어떤 형식문이라도 대입하여 연역할 수 있다.</p>
+<p>가령 문장변항으로 이루어진 형식문 <span class="arithmatex">\(p\to{}q\)</span> 와 형식문 <span class="arithmatex">\(S\)</span> 가 있다면 대입규칙으로 $S\to{}q) 를 연역할 수 있다.</p>
+</li>
+<li>
+<p><strong>분리규칙</strong> : <span class="arithmatex">\(p,p\to{q}\)</span> 가 참이라면 <span class="arithmatex">\(q\)</span> 를 연역할 수 있다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>어떤 형식문을 <strong>공리</strong>, 즉 원초 형식문으로 채택하기 : 기초 명제 논리학은 다음 네 가지 자명한 형식문을 증명없이 받아들입니다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\((p\lor{}p)\to{}p\)</span> </p>
+<ul>
+<li>
+<p>p 이거나 p 이면 p 이다. </p>
+<p>임진왜란이 일어났거나 임진왜란이 일어났다면 임진왜란은 일어났다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(p\to(p\lor{}q)\)</span> </p>
+<ul>
+<li>
+<p>p 이면 p 이거나 q 이다. </p>
+<p>임진왜란이 일어났다면 임진왜란이 일어났거나 알파고가 이세돌을 이겼다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\((p\lor{}q)\to(q\lor{}p)\)</span> </p>
+</li>
+<li>
+<p>p 이거나 q 이면 q 이거나 p 이다. </p>
+<pre><code>임진왜란이 일어났거나 알파고가 이세돌을 이겼다면 알파고가 이세돌을 이겼거나 임진왜란이 일어났다.
+</code></pre>
+</li>
+<li>
+<p><span class="arithmatex">\((p\to{}q)\to((r\lor{}p)\to(r\lor{}q))\)</span> </p>
+</li>
+<li>
+<p>"p 이면 q 이다." 이면 "(r 또는 p) 이면 (r 또는 q) 이다." 이다.</p>
+<pre><code>"도박을 하면 돈을 잃는다." 라면 "고향집에 내려가거나 도박을 하면 고향집에 내려가거나 돈을 잃는 것이다" 이다.
+</code></pre>
+</li>
+</ul>
+</li>
+</ol>
+<p>이로써 <strong>"기초 명제 논리학"</strong> 은 무한히 많은 형식문들을 연역해낼 수 있습니다. 가령 너무나도 자명해보이는 추론 규칙과 공리로부터 전혀 자명하지 않은 형식문 </p>
+<div class="arithmatex">\[((p\to{}q)\to((r\to{}s)\to{}t))\to((u\to((r\to{}s)\to{}t))\to((p\to{}u)\to(s\to{}t)))\]</div>
+<p>을 연역해낼 수 있습니다. </p>
+<ul>
+<li>
+<p>하지만 지금 우리의 목표는 공리로부터 정리를 연역하는 것이 아니라 일련의 공리가 모순을 일으키지 않는다는 것, </p>
+<p>다시말해서 일련의 공리에 변형 규칙을 적용하여 형식문 <span class="arithmatex">\(S\)</span> 와 형식문 <span class="arithmatex">\(\sim S\)</span> 가 둘 다 연역될 수 없다는 것을 절대적으로 증명하는 것이다. </p>
+</li>
+</ul>
+<h4 id="_10">정합성의 절대적 증명 방법<a class="headerlink" href="#_10" title="Permanent link">¶</a></h4>
+<p>이제 <strong>이 연역체계가 정합적 체계인지 부정합 체계인지</strong>, 그리고 <strong>완전체계인지 불완전체계인지</strong> 살펴보겠습니다. 다음의 논증을 보겠습니다.</p>
+<ol>
+<li>
+<p>위 네 가지 공리로부터 정리 <span class="arithmatex">\(p\to{}(\sim{}p\to{}q)\)</span> 를 연역할 수 있다. </p>
+<ul>
+<li><strong>연역하는 과정을 보일 수 있지만 시간이 없으니 그렇다고 믿자.</strong> 구체적 과정은 <a href="https://book.naver.com/bookdb/book_detail.nhn?bid=6395428">『괴델의 증명』, 어니스트 네이글, 제임스 뉴먼, 더글러스 호프스태더</a> 참고.</li>
+</ul>
+</li>
+<li>
+<p>이 공리 체계에 정합성이 없다고, 즉 모순을 도출한다고 가정하면 이 공리 체계로부터 형식문 <span class="arithmatex">\(S\)</span> 와 부정문 <span class="arithmatex">\(\sim{}S\)</span> 가 동시에 연역된다.</p>
+</li>
+<li>
+<p>그렇다면 형식문 <span class="arithmatex">\(p\to{}(\sim{}p\to{}q)\)</span> 의 변항 <span class="arithmatex">\(p\)</span> 에 <span class="arithmatex">\(S\)</span> 를 대입하여 <span class="arithmatex">\(S\to{}(\sim{}S\to{}q)\)</span> 를 연역(<strong>대입규칙</strong>)할 수 있다. </p>
+</li>
+<li>
+<p>이때 <span class="arithmatex">\(S\)</span> 가 증명될 수 있으므로 <strong>분리규칙에 의하여</strong> <span class="arithmatex">\(\sim{}S\to{}q\)</span> 가 연역된다. </p>
+</li>
+<li>
+<p>그런데 <span class="arithmatex">\(\sim{}S\)</span> 도 증명될 수 있으므로 최종적으로 문장변항 <span class="arithmatex">\(q\)</span> 가 연역(증명)된다. </p>
+</li>
+<li>
+<p>이 변항에는 존재하는 모든 형식문이 대입될 수 있으므로 존재하는 모든 형식문이 증명가능한 정리가 된다. 심지어 공리도 정리가 된다.</p>
+</li>
+<li>
+<p>이것은 <strong>부정합 체계에서는 모든 형식문이 증명 가능하다</strong> 는 것이다.</p>
+</li>
+<li>
+<p>그러므로 <strong>공리 체계의 정합성의 증명은 공리로부터 연역되지 않는 형식문이 있다는 것을 보이는 것</strong> 이다.</p>
+</li>
+</ol>
+<p>이렇게 정합성이 없는 체계에서는 <strong>"나는 한동대생이다."</strong> 와 <strong>"나는 한동대생이 아니다."</strong> 라는 명제가 동시에 올바르면서 증명가능한 주장이 되는 것입니다. 뿐만 아니라 구성규칙과 추론규칙으로 잘 구성되기만 했다면 모든 문장이 증명가능한 명제가 되는 것입니다. </p>
+<p>따라서 기초 명제 논리학의 <strong>정합성의 증명은 그 체계로부터 연역될 수 없는 형식문이 적어도 하나 있다</strong> 는 것을 보이는 것이 됩니다. 이것은 <strong>네 가지 공리가 공유하는 유전적 특성을 갖지 않는 형식문을 찾는 것</strong> 으로 이루어집니다.</p>
+<ul>
+<li><strong>유전적 특성 : 네 가지 공리가 모두 공유하면서 연역 규칙(대입규칙과 분리규칙)의 적용으로 연역된 정리들에게도 함께 따라오는 속성이다.</strong></li>
+</ul>
+<p><strong>만약 우리가 유전적 특성을 갖지 않는 형식문을 발견한다면 공리로부터 연역된 형식문이 아니라는 말이 됩니다. 따라서 그 체계의 정합성을 확립한 것</strong> 이 됩니다. 여기에서는 네 공리가 공유하는 <strong>유전적 속성으로써 토톨로지(tautology)</strong> 를 택하겠습니다. </p>
+<blockquote>
+<p>이산수학을 수강한 분이라면 익숙한 토톨로지는 "비가 오거나 비가 오지 않는다.", "저 여자는 한동대생이거나 한동대생이 아니다." 와 같은 명제로써 모든 세계에서 항상 참이 되는 명제가 갖는 속성입니다. </p>
+</blockquote>
+<ul>
+<li>
+<p><strong>토톨로지(tautology) : 형식문의 구성성분의 참, 거짓에 관계없이 항상 참이 되는 형식문</strong></p>
+</li>
+<li>
+<p>실제로 네 가지 공리 </p>
+<p><span class="arithmatex">\((p\lor{}p)\to{}p,p\to(p\lor{}q),(p\lor{}q)\to(q\lor{}p),(p\to{}q)\to((r\lor{}p)\to(r\lor{}q))\)</span> </p>
+<p>는 구성성분 <span class="arithmatex">\(p,q,r\)</span> 에 관계없이 항상 참이므로 토톨로지이다.</p>
+</li>
+</ul>
+<p>이 토톨로지는 <strong>기초 명제 논리학</strong> 의 네 가지 공리가 모두 공유하며 추론 규칙에 의하여 공리에서 정리가 연역될 때 항상 따라오는 성질입니다.</p>
+<blockquote>
+<p>이것도 증명할 수 있지만 시간이 없으니 그렇다고 믿읍시다. 구체적 과정은 <a href="https://book.naver.com/bookdb/book_detail.nhn?bid=6395428">『괴델의 증명』, 어니스트 네이글, 제임스 뉴먼, 더글러스 호프스태더</a> 참고.</p>
+</blockquote>
+<p>그러므로 이 <strong>토톨로지가 없는 형식문을 찾으면 기초 명제 논리학은 모순을 도출하지 않는 정합적인 체계</strong> 가 됩니다. 그런데 토톨로지가 없는 형식문을 찾는 일은 너무너무 쉽습니다. </p>
+<ol>
+<li>
+<p>형식문 <span class="arithmatex">\(p\lor{}q\)</span> 는 <strong>기초 명제 논리학</strong> 의 구성규칙에 의해 형성된 올바른 형식문이다.</p>
+</li>
+<li>
+<p>그런데 구성성분 <span class="arithmatex">\(p\)</span> 와 <span class="arithmatex">\(q\)</span> 가 거짓이면 거짓이 되므로 형식문 <span class="arithmatex">\(p\lor{}q\)</span> 는 토톨로지가 아니다. </p>
+</li>
+<li>
+<p>그러므로 <strong>형식문 <span class="arithmatex">\(p\lor{}q\)</span> 은 네 가지 공리로부터 연역된 정리가 아니다.</strong> </p>
+</li>
+<li>
+<p>그러므로 <strong>기초 명제 논리학</strong> 은 모순을 일으키지 않는 <strong>정합적 체계</strong> 이다.</p>
+</li>
+</ol>
+<p>이제 이 연역 체계의 모든 정리는 토톨로지이며 <strong>기초 명제 논리학</strong> 의 공리들은 모든 토톨로지를 만들어내기에 충분한 <strong>완전 체계</strong> 라는 것이 증명되었습니다. 수학자들은 유클리드가 『원론』 에서 모든 정리들을 공리로부터 연역한 것처럼 모든 수학 분야를 완전 체계로 만들 수 있을 것이라고 수천년동안 믿어왔고, 이제 실제로 모든 수학 체계를 <strong>정합적인 완전 체계</strong> 로 구성하려고 시도 한 것입니다. </p>
+<blockquote>
+<p>하지만 <strong>기초 명제 논리학</strong> 은 기초 산술학을 전개하기에도 충분하지 못했습니다. 힐베르트는 수론 전체를 포괄할 수 있는 체계에 대한 정합성과 완전성을 확립하길 원했습니다. 왜냐하면 자연수 위에서 정수와 유리수와 무리수를 정의해하고, 그 위에 실수와 복소수를 정의해야 하고, 그 위에 기하학과 해석학을 건설해야 하기 때문입니다.</p>
+</blockquote>
+<ul>
+<li>
+<p>수학자들은 최근까지도 모든 수학 분야가 완전 체계가 될 수 있다고 생각했다. </p>
+<ul>
+<li>
+<p>수학자들은 만약 최악의 경우 어떤 수학의 분야가 공리로부터 절대로 연역될 수 없는 형식문을 갖고 있더라도 공리를 적당히 추가함으로써 그 형식문을 정리로 만들고, 결국에 완전 체계로 만들 수 있다고 믿었다. </p>
+</li>
+<li>
+<p>그러나 괴델은 이 생각이 실현될 수 없다는 것을 증명했다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_11">정합성에 대한 절대적 증명을 끝내버린 괴델의 결론<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>방금까지 살펴본 기초 명제 논리학, 즉 문장 연산 체계는 힐베르트의 증명 이론의 목표가 이루어진 수학의 한 실례이지만, 이 체계는 기초 산술학을 전개하기에도 충분하지 못했다. </p>
+</li>
+<li>
+<p>힐베르트의 프로그램은 훨씬 포괄적인 체계의 정합성(<em>공리로부터 모순이 도출되지 않는 것</em>)과 완전성(<em>모든 형식문이 공리로부터 연역된 정리라는 것</em>)을 밝히려고 제작된 것이었다.</p>
+</li>
+<li>
+<p>가령 힐베르트 프로그램으로 수론의 일부, 즉 덧셈만 할 수 있도록 만들어진 형식적 체계에서 정합성에 대한 절대적 증명이 이루어질 수 있었지만, 힐베르트는 수론 전체를 포괄할 수 있길 원했다. </p>
+</li>
+<li>
+<p>그러나 그러한 노력은 거듭 실패했고, 결국 괴델이 1931년에 발표한 불완전성 정리로 그 결론이 내려졌다. </p>
+</li>
+</ul>
+<h4 id="_12">괴델의 결론<a class="headerlink" href="#_12" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>괴델이 내린 결론은 다음과 같다. </p>
+</li>
+<li>
+<p><strong>『수학 원리』 처럼 산술학의 전개를 수용할 수 있을만큼 포괄적인 공리 체계는 그 어떠한 체계든지 본질적으로 불완전체계이다.</strong></p>
+<ul>
+<li>
+<p>이 결론이 매우 놀랍고 혁명적인데, 왜냐하면 그 체계 속에서 올바르지만 증명될 수 없는(연역될 수 없는) 명제가 항상 있다는 것이기 때문이다.</p>
+</li>
+<li>
+<p>이로써 지금까지 그 어떤 시도로도 증명할 수 없었던 진술들, 가령 골드바흐의 추측을 증명하려는 시도가 무의미한 것일 수도 있었고, 페르마의 마지막 정리(<em>물론 다행히 증명 되었지만</em>)를 증명하려는 시도도 무의미한 것일 수도 있었다. </p>
+</li>
+<li>
+<p>그렇다면 누구는 공리와 추론 규칙을 더 추가해서 골드바흐의 추측 같은 진술들을 연역가능한 정리로 만들자고 제안할 수도 있다. </p>
+</li>
+<li>
+<p>하지만 괴델은 그렇게 추가된 공리와 규칙으로 체계를 확장한다 하더라도 그 확장된 공리 체계에도 형식적으로 연역될 수 없는 진리가 반드시 있다는 것을 증명한 것이다. 이것이 "본질적으로 불완전체계이다." 라는 표현의 뜻이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>『수학 원리』 처럼 산술학 전체를 포함하기에 충분히 포괄적인 연산 체계의 정합성에 대한 상위 수학적 증명은 그 공리 체계의 공리와 변형 규칙으로는 증명될 수 없다.</strong></p>
+<ul>
+<li>즉, 그 연산 체계에서 정리를 연역하는 데 사용된 변형 규칙과는 근본적으로 다른 추리 규칙을 사용해야만 공리 체계의 정합성이 확립된다는 것이다.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>무정의 술어. 정의에 사용된 단어들 또한 이전에 정의되어 있어야만 연역체계의 연역 구조가 성립된다. 그런데 어떤 개념의 정의에 사용된 개념의 정의를 무한히 정의할 수는 없으므로 어떤 단어는 반드시 정의되지 않은 최초의 개념이 되어야만 하는데 그것을 무정의 술어라고 한다. 그렇지 않으면 정의가 서로 순환논증을 하게 된다. </p>
+<p>왜냐하면 단어의 정의를 역추적하다보면 언젠가 반드시 자연 대상으로부터 직접 추상화시킨 언어를 마주치게 되기 때문이다. 그 단어를 정의하는 단어란 존재하지 않는다. 그러므로 그런 단어는 정의될 수 없고, 반드시 맥락 가운데에서 그 의미가 드러나도록 해야 한다. 그런 단어를 정의하려고 시도하면 그 단어와 비슷한 단어로 순환 논증을 할 수밖에 없다.</p>
+<p>가령 <span class="arithmatex">\(A\)</span> 라는 단어와 <span class="arithmatex">\(B\)</span> 라는 단어가 자연 대상으로부터 직접 추상화한 단어이고, 서로 비슷한 의미를 가졌다면 <span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(B\)</span> 를 통하여 정의하고 <span class="arithmatex">\(B\)</span> 는 <span class="arithmatex">\(A\)</span> 를 통하여 정의할 수밖에 없는 것이다. </p>
+</blockquote>
+<ul>
+<li>
+<p>괴델은 이 결론을 어떻게 증명했을까?</p>
+</li>
+<li>
+<p>괴델의 논증 구조는 스스로 말한 바와 같이 1905년에 리샤르가 발표한 "리샤르 역설" 을 어느정도 모방한 것이다. </p>
+</li>
+</ul>
+<h4 id="_13">리샤르의 역설<a class="headerlink" href="#_13" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>리샤르의 역설은 먼저 수론에서의 정의들에 일련의 수를 부여하는 것으로 시작된다. </p>
+</li>
+<li>
+<p>수론의 정의 또한 언어의 일종이므로 유한개의 낱말로 이루어져있다. </p>
+</li>
+<li>
+<p>그러면 그 낱말들을 이루고 있는 문자들의 사전순서대로 순서를 매겨서 존재하는 모든 정의들을 정렬시킬 수 있다. </p>
+</li>
+<li>
+<p>이 순서를 통해 각각의 정의들에 정수를 순서대로 부여한다. </p>
+</li>
+<li>
+<p>그런데 각 정의마다 고유의 정수가 부여되었으므로 그 수가 부여된 정의가 언급하고 있는 속성을 그 고유의 수가 소유하고 있는 경우가 있을 수 있다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>"<span class="arithmatex">\(1\)</span> 과 제 자신 이외의 다른 정수로는 나뉘어지지 않는 <span class="arithmatex">\(2\)</span> 이상의 정수" 라는 정의가 부여받은 고유의 수가 <span class="arithmatex">\(17\)</span> 이라고 하자. 즉 이 정의가 <span class="arithmatex">\(17\)</span> 번째 정의라고 하는 것이다. 그런데 이때 <span class="arithmatex">\(17\)</span> 은 분명히 그 정의가 언급하는 속성을 가지고 있다. </p>
+<p>한편 "어떤 정수에 제 자신을 곱한 수" 라는 정의가 부여받은 수가 <span class="arithmatex">\(15\)</span> 라고 하자. 즉 이 정의가 <span class="arithmatex">\(15\)</span> 번째 정의라고 하는 것이다. 하지만 명백히 <span class="arithmatex">\(15\)</span> 는 그 정의가 말하는 속성을 갖고 있지 않다. </p>
+</li>
+<li>
+<p>이제 이와 같이 정의에 부여된 고유의 수가 정의가 말하는 속성을 가지고 있지 않은 수들을 리샤르 수라고 정의하자. </p>
+</li>
+<li>
+<p>즉, 위의 에시에서 <span class="arithmatex">\(17\)</span> 은 리샤르 수가 아니고, <span class="arithmatex">\(15\)</span> 는 리샤르 수이다. </p>
+</li>
+<li>
+<p>그렇다면 "<span class="arithmatex">\(x\)</span> 는 리샤르 수다." 라는 진술의 정의를 </p>
+<p>"<span class="arithmatex">\(x\)</span> 는 정의들의 순서열 속에 있으면서 <span class="arithmatex">\(x\)</span> 가 부여된 정의가 말하는 속성을 갖고 있지 않는 수이다."</p>
+<p>라고 내릴 수 있다. </p>
+</li>
+<li>
+<p>그런데 리샤르 수의 정의 또한 정수의 속성을 기술하므로 수론의 정의에 속하게 되고, 이에 따라 정의 순서열에서의 고유의 수를 부여받는다. </p>
+</li>
+<li>
+<p>그렇게 리샤르 수의 정의가 부여받은 고유의 수를 <span class="arithmatex">\(n\)</span> 이라고 하자. </p>
+</li>
+<li>
+<p>즉 리샤르 수의 정의가 수론의 정의열에서 <span class="arithmatex">\(n\)</span> 번째 정의라고 하는 것이다. </p>
+</li>
+<li>
+<p>이제 "<span class="arithmatex">\(n\)</span> 은 리샤르 수이다." 라는 진술을 생각하자. 쉽게 말해서 "<span class="arithmatex">\(n\)</span> 은 리샤르 수의 정의가 말하는 속성을 갖고 있다." 라는 명제를 생각해보자. </p>
+</li>
+<li>
+<p>우리는 이 명제가 참이면서 거짓인 모순이라는 것을 알 수 있다. </p>
+</li>
+<li>
+<p>왜냐하면 <span class="arithmatex">\(n\)</span> 이 리샤르 수일 경우에면 <span class="arithmatex">\(n\)</span> 은 리샤르 수의 정의가 말하는 속성을 갖고 있지 않기 때문이다.</p>
+</li>
+<li>
+<p>이 논증을 다시 정리해보면 다음과 같다.  </p>
+<ol>
+<li>
+<p>(리샤르 수의 정의) "<span class="arithmatex">\(x\)</span> 는 리샤르 수이다." 란 "<span class="arithmatex">\(x\)</span> 는 <span class="arithmatex">\(x\)</span> 번째 정의의 속성을 갖고 있지 않은 수이다." 라는 것이다.</p>
+</li>
+<li>
+<p>이제 "<span class="arithmatex">\(x\)</span> 가 리샤르 수이다." 라는 정의에 <span class="arithmatex">\(n\)</span> 이라는 수를 부여한다.</p>
+<ul>
+<li>즉, 수론의 정의열에서 <span class="arithmatex">\(n\)</span> 번째 정의가 리샤르 수를 정의하고 있다는 것이다. </li>
+</ul>
+</li>
+<li>
+<p>그리고 "<span class="arithmatex">\(n\)</span> 은 리샤르 수이다." 라고 가정하자.</p>
+</li>
+<li>
+<p>그러면 <span class="arithmatex">\(n\)</span> 은 <span class="arithmatex">\(n\)</span> 번째 정의, 즉 리샤르 수의 정의에 의하여 <span class="arithmatex">\(n\)</span> 번째 속성을 갖고 있지 않은 수이다.</p>
+</li>
+<li>
+<p>따라서 <span class="arithmatex">\(n\)</span> 은 <span class="arithmatex">\(n\)</span> 번째 정의의 속성, 즉 리샤르 수의 속성을 갖고 있지 않으므로 리샤르 수가 아니다.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>요점은 <span class="arithmatex">\(n\)</span> 이 리샤르 수가 아니어야만 <span class="arithmatex">\(n\)</span> 은 리샤르 수인 것이다. </p>
+</li>
+<li>
+<p>그러므로 "<span class="arithmatex">\(n\)</span> 은 리샤르 수다." 라는 진술은 참이면서 거짓이므로 모순이다. </p>
+</li>
+</ul>
+<h4 id="mapping">사상(mapping) 에 관하여<a class="headerlink" href="#mapping" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>그런데 사실 리샤르 수라는 속성에 대한 정의는 산술학적 속성을 진술하는데 사용된 언어에 관한 정의인데도, 우리는 순수한 산술학적 속성을 정의하는 정의만을 포함하는 수론의 정의열에 포함시켰다.</p>
+</li>
+<li>
+<p>순수한 산술학적 속성이란 <span class="arithmatex">\(+, \times\)</span> 같은 개념으로 간명하게 표현될 수 있는 속성들이다. </p>
+</li>
+<li>
+<p>따라서 리샤르 수에 관한 논증은 올바르지 못한 논증인데, 그 이유는 리샤르 수의 정의가 상위 수학적 개념을 포함하기 때문이다. </p>
+</li>
+<li>
+<p>그러므로 리샤르의 역설은 명백하게 잘못된 추론이다. </p>
+</li>
+<li>
+<p>하지만 리샤르의 역설은 상위 수학 명제를 그 형식적 체계 자체에 사상(mapping)시키는 것이 가능하다는 것을 보여준다. </p>
+</li>
+<li>
+<p>상위 수학 명제의 정의에도 사전순서대로 일련의 번호를 매길 수 있었기 때문이다. </p>
+</li>
+<li>
+<p>사실 우리는 사상(mapping) 을 많이 사용해왔다. </p>
+</li>
+<li>
+<p>우리는 실제 지구 표면을 지구본에 사상시켰다.</p>
+</li>
+<li>
+<p>또 좌표기하를 통해 기하학적 관계(<strong>원</strong>)를 대수학적 관계(<span class="arithmatex">\(x ^{2} + y ^{2} = 1\)</span>)로 사상시켰다.</p>
+</li>
+<li>
+<p>사상의 근본적 특징은 한 영역의 대상들 사이에 성립하고 있던 관계의 추상적인 구조가 그 대상들을 다른 영역으로 사상시켰을 때에도 성립한다는 것이다. </p>
+</li>
+<li>
+<p>괴델은 이 사상의 특징을 사용하여 형식적 산술학 체계에 관한 상위 수학 명제들이 그 산술학 체계 자체의 산술학적 진술로 사상될 수 있다면(번역될 수 있다면) 상위 수학 명제의 증명을 쉽게 할 수 있다는 이득을 얻을 수 있다는 것을 깨달았다. </p>
+</li>
+<li>
+<p>왜냐하면 기하학적 도형의 관계 자체를 다루는 것보다 그것을 대수학적으로 사상시킨 대수학 형식문을 다루는 것이 훨씬 더 쉬운 것과 마찬가지로, 논리적 관계 자체를 다루는 것보다 그 논리적 관계를 대신하는 산술학 표현을 다루는 것이 더 쉽기 때문이다.</p>
+</li>
+</ul>
+<blockquote>
+<p>아, 사상이란 어느 방향으로든 향할 수 있구나. 하지만 내가 물질화, 격하, 자동화라고 했던 것은 내가 주로 자연 대상을 프로그래밍으로 사상시켰기 때문이다. 이 행위에 의미를 부여하자면 "자연 대상" 이 "기계" 가 될 것이므로 "물질화", "자동화" 라고 부를 수 있었던 것이다. 하지만 실제로는 사상이란 그 어떠한 방향으로든 향할 수 있는 것이다. </p>
+<p>또한 더욱 놀라운 것은 이토록 추상적이고 역동적인 사상의 개념을 수학적으로 사상시킨 것이 "함수" 였던 것이다. </p>
+<p>이것은 내가 GBC 때 기술의 역사에 관하여 설명하고 나서 그 예로써 "대화하는 것을 수학 명제로 환원시킨 것은 다름아닌 카카오톡같은 메신저 프로그램인 것입니다." 라고 말할 때에도 적용된다. 생각을 말로, 말을 문자로 사상시킨 것이기 때문이다. 최초의 대상은 인간 마음 속의 사변적 관념이다. 하지만 이 관념을 직접 전달할 수 없으므로 우리는 말로, 문자로, 전기로, 소리로 이것을 사상시켜야만 했다.</p>
+<p>분노라는 감정과 고통 또한 인간 마음 속에만 존재하는 사변적 관념인데, 이것을 꼭 전달해야만 하는 상황에서 극단적으로 택할 수 있는 인간의 선택이 분노를 살인으로 사상시켜 전달하는 것이다. </p>
+<p>공학과 역공학도 사상의 방향만 다를 뿐이지, 다 똑같은 사상 과정이다. 왜냐하면 공학이란 어떤 창조물에 관한 인간의 사변적 관념을 물질로 변환하는 작업이고, 역공학(리버싱) 이란 물질로부터 그것을 창조한 인간의 사변적 관념을 이끌어내려는 과정이기 때문이다. 방향만 다를 뿐 공학과 역공학 또한 사상이다. </p>
+<p>또한 괴델이 상위 수학 명제를 수학 명제로 사상시켜서 얻으려 했던 이득이란, 현 시대 개발자들에게도 통용되는 이득이다. 즉, 개발자란 자연 대상을 코드로 사상시켜서 인간이 일을 하지 않아도 되도록 자동화시키고 기계화 시킬 수 있기 때문이다. </p>
+<p>이로보아 존재하는 자연 대상은 다른 자연 대상이나 인공적 대상물로 적절히 사상되었을 때 인간에게 중대한 이득을 가져다줄 수 있다. 이 사상 작업은 점차 가속화되고 있고, 점차 고차원적인 자연 대상을 물질화시키는 방향으로 나아가고 있다. </p>
+</blockquote>
+<ul>
+<li>
+<p>또한 괴델은 사상으로 리샤르 추론 과정을 모방하면서도 리샤르가 범한 오류를 피할 수 있었다. </p>
+</li>
+<li>
+<p>왜냐하면 상위 수학 명제, 즉 "형식화된 산술학 연산 체계에 <strong>관한</strong> 진술" 을 수학 명제, 즉 그 연산 체계 <strong>속의</strong> "산술학적 형식문" 이 실제로 대신할 수 있다는 것을 증명했기 때문이다. </p>
+</li>
+<li>
+<p>즉, 괴델은 상위 수학 명제를 성공적으로, 적절하게 수학 명제로 사상시킨 것이다. </p>
+</li>
+</ul>
+<h2 id="_14">다시 점검해보고 넘어가기<a class="headerlink" href="#_14" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>참고/출처 : <a href="https://book.naver.com/bookdb/book_detail.nhn?bid=10236389">『수학사상사 1』, 『수학사상사 2』, 『수학사상사 3』, 모리스 클라인</a></p>
+<p>참고/출처 : <a href="https://book.naver.com/bookdb/book_detail.nhn?bid=2900590">『수학의 확실성』, 모리스 클라인</a></p>
+</blockquote>
+<p><em>아래의 내용은 위 서적을 기반으로 작성되었습니다.</em></p>
+<p>좋습니다. 이제 <strong>괴델의 불완전성 정리</strong> 를 구체적으로 알아볼 것인데, 그 전에 이해를 돕기 위하여 지금까지의 내용을 정리해보겠습니다.</p>
+<ol>
+<li>
+<p><strong>(기원전 3000년 ~ 기원전 320년)</strong> 유클리드가 『원론』 을 집필하며 <strong>"수학이란 공리로부터 정리를 연역하는 연역 체계이다."</strong> 라는 인식을 전수함.</p>
+</li>
+<li>
+<p><strong>(기원전 27년 ~ 476년)</strong> 로마가 유럽을 지배하며 기독교를 국교로 제정하였고 이로써 수많은 그리스 책들이 불태워졌음.</p>
+</li>
+<li>
+<p><strong>(200년 ~ 1200년)</strong> 인도와 아라비아 인들이 그리스 수학을 잘 물려받았다가 유럽에게 물려줌.</p>
+</li>
+<li>
+<p><strong>(400년 ~ 1100년)</strong> 로마가 멸망하기 전에 유럽에 기독교를 전파했고 십자군 전쟁으로 유럽인들이 아라비아 땅으로 가서 그곳에 보존되어 있던 그리스 학문을 배우게 됨.</p>
+</li>
+<li>
+<p><strong>(1400년 ~ 1600년)</strong> 수학자들(케플러, 뉴턴, 데카르트, 라이프니츠 등)이 하나님이 온 우주를 수학적으로 창조했다고 믿고 그분의 영광을 드러내기 위해 수학 연구를 진행하였고, 이로써 <strong>수학이 자연의 불변의 법칙을 연구하는 학문</strong> 이라는 인식이 널리 퍼짐.</p>
+</li>
+<li>
+<p><strong>(1700년대)</strong> 이후 수학이란 자연을 추상화시킨 학문이고 하나님이 자연을 수학적으로 창조했다는 인식 때문에 <strong>수학자들이 엄밀하지 못한 논리적 토대 속에서도 열정만으로 수학을 발전</strong> 시킴.</p>
+</li>
+<li>
+<p><strong>(~ 1700년대)</strong> 수학자들은 유클리드의 기하학이 물리 공간을 올바르게 추상화한 체계라고 믿었지만 제 5 공리인 평행선 공리에는 다른 공리들이 갖고 있는 간결함이 없어서 평행선 공리를 다른 공리로부터 연역하려고 노력함.</p>
+</li>
+<li>
+<p><strong>(1800년대)</strong> 가우스와 로바체프스키, 보여이가 평행선 공리와 대치되는 공리를 택함으로써 <strong>유클리드 기하학과 전혀 다른 비유클리드 기하학을 창시함</strong> . 이로써 <strong>유클리드 기하학이 신이 창조한 유일하고도 불변하는 진리가 아니라 인간의 창조물이라는 것</strong> 이 밝혀짐. <strong>수학이 인간의 인위적인 창조물이라면 수학에 모순이 있을 수도 있다</strong> 는 문제가 제기됨. 가우스는 유클리드 기하학이 물리 세계의 진리가 아닐 수도 있다는 것을 깨닫고 수학의 진리를 산술, 즉 수론 체계에서 찾으려 했음.</p>
+<blockquote>
+<p>산술(정수 체계)는 우리가 초등학교 때 배웠던 숫자와 숫자의 계산(덧셈, 뺄셈, 곱셈, 나눗셈) 을 설명하는 수학 체계입니다.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>(1800년 ~)</strong> 수학자들은 가우스처럼 산술만큼은 참되다고 믿었기에 해석학의 논리적 토대로써 산술을 채택함.</p>
+<div class="admonition note">
+<p>해석학 ← 산술(정수 체계)</p>
+</div>
+</li>
+<li>
+<p><strong>(1843년)</strong> 해밀턴이 사원수를 발견함. 이로써 <strong>불변하는 신의 창조물이라고 여겨졌던 유일한 수 체계인 실수와 복소수 말고도 또 다른 수 체계가 존재한다</strong> 는 것이 밝혀졌고, <strong>수 체계도 신이 만든 진리가 아니라 인간이 만든 인위적인 창조물</strong> 이라는 것이 밝혀짐. </p>
+</li>
+<li>
+<p><strong>(1850년 ~)</strong> 수학자들은 믿었던 <strong>수 체계의 기초도 마련해야 한다</strong> 는 것을 깨닫고 실수 체계의 기초를 위하여 무리수의 기초를 마련하려 함. 칸토어와 데데킨트가 유리수를 기반으로 무리수 체계를 확립함. 칸토어가 집합론을 창시하고 실수집합 구조의 이해를 위하여 무한집합 개념을 도입함. 바이어슈트라스가 자연수를 기반으로 유리수 체계를 확립함. 페아노도 공리적 방식으로 자연수 체계를 확립함. 이로써 실수 체계의 기초가 산술에 의해 확립됨.</p>
+<div class="admonition note">
+<p>실수 체계 ← 무리수 체계 ← 유리수 체계 ← 정수 체계(산술)</p>
+</div>
+</li>
+<li>
+<p><strong>(1900년)</strong> 힐베르트는 <strong>비유클리드 기하학의 정합성을 유클리드 기하학의 정합성으로 환원</strong> 시키고 <strong>유클리드 기하학의 정합성을 대수학의 정합성</strong> 으로 환원시킴. </p>
+<table>
+<thead>
+<tr>
+<th align="center">수학적 대상</th>
+<th align="center">비유클리드 기하학</th>
+<th align="center">유클리드 기하학</th>
+<th align="center">대수학</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">직선</td>
+<td align="center"><img height="auto" src="https://user-images.githubusercontent.com/16812446/83409465-6e697c80-a44f-11ea-9b3f-c210fc2c954a.png" width="50%"/></td>
+<td align="center"><img height="auto" src="https://user-images.githubusercontent.com/16812446/83409429-58f45280-a44f-11ea-990c-87bf0db3d6d9.png" width="50%"/></td>
+<td align="center"><span class="arithmatex">\(y=x\)</span></td>
+</tr>
+<tr>
+<td align="center">삼각형</td>
+<td align="center"><img height="auto" src="https://user-images.githubusercontent.com/16812446/83410218-eedcad00-a450-11ea-85e1-03e4752cc625.png" width="50%"/></td>
+<td align="center"><img height="auto" src="https://user-images.githubusercontent.com/16812446/83410251-0025b980-a451-11ea-9308-89ff83dd5849.png" width="50%"/></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">원</td>
+<td align="center"><img height="auto" src="https://user-images.githubusercontent.com/16812446/83410439-627eba00-a451-11ea-8244-09a3fa065b6b.png" width="50%"/></td>
+<td align="center"><img height="auto" src="https://user-images.githubusercontent.com/16812446/83410382-40853780-a451-11ea-8b13-2b90a77fb9b0.png" width="50%"/></td>
+<td align="center"><span class="arithmatex">\(x^{2}+y^{2}=1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>그러므로 만약 대수학이 정합적 체계라면 유클리드 기하학도 모순을 내뱉지 않는 정합적 체계이고, 이에따라 비유클리드 기하학도 정합적인 체계가 되는 것임. <strong>대수학은 산술의 확장체이므로 힐베르트는 "기하학과 물리학의 무모순성(정합성)의 증명은 산술의 무모순성으로 귀결시킴으로써 성취된다."</strong> 고 말함. 즉 산술에 모순이 없다면 산술의 확장체인 기하학의 대수적인 구성에도 모순이 없게되기 때문에 <strong>이제 초미의 관심사는 산술의 정합성</strong> 이 되었음. </p>
+<div class="admonition note">
+<p>비유클리드 기하학 ← 유클리드 기하학 ← 대수학 ← 산술(정수 체계)</p>
+</div>
+</li>
+<li>
+<p><strong>(1901년)</strong> 러셀이 칸토어가 창시한 집합론에 역설이 존재함을 보임. 이제 수학의 기초를 마련해야 하는 문제가 가장 급한 문제가 되어 수학의 기초를 마련하려는 <strong>논리주의 학파, 형식주의 학파, 직관주의 학파</strong> 가 생겨남.</p>
+<ul>
+<li>
+<p>참고로 <strong>크로네커 등의 직관주의 학파</strong> 는 정수를 받아들이기 위해서 오로지 직관만이 필요하다고 주창하였다. 즉, 그 이상의 기초를 마련하는 것이 아니라 단지 받아들여야 한다는 것이었다.</p>
+<div class="admonition note">
+<p>산술(정수 체계) ← 직관</p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>(1910년)</strong> <strong>러셀의 논리주의 학파</strong> 는 논리학 공리로부터 산술을 연역하고 자연수 위에 실수, 복소수, 함수, 해석학, 기하학 전체를 연역해낼 수 있다는 내용을 『수학 원리』 에 담아 출판함. (이후 러셀은 1937년판 『수학 원리』 에서 논리학 공리가 진리라는 견해를 버림.)</p>
+<div class="admonition note">
+<p>산술(정수 체계) ← 논리학 체계</p>
+</div>
+</li>
+<li>
+<p><strong>(1920년)</strong> <strong>힐베르트와 형식주의 학파</strong> 가 모든 수학이 공리와 일련의 추론규칙으로 연역되는 완전한 형식적 체계로 환원시킬 수 있다는 힐베르트 프로그램을 발표함.</p>
+<div class="admonition note">
+<p>산술(정수 체계) ← 형식적 체계</p>
+</div>
+</li>
+<li>
+<p><strong>(1931년)</strong> <strong>괴델이 불완전성 정리를 발표</strong> 하여 유클리드가 수천년전부터 전수해온 <strong>"수학이란 공리로부터 정리를 연역하는 연역 체계이다."</strong> 라는 믿음을 박살내고, <strong>수학을 『수학원리』에서 말하는 논리적 연역 체계나 힐베르트 프로그램이 말하는 형식적 연역체계로 설명할 수 없다</strong> 는 것을 밝힘.</p>
+</li>
+</ol>
+<p>러셀은 『수학원리』로 논리학 공리 위에 수학을 건설함으로써 수학을 순수한 논리 체계로 환원시킬 수 있다고 믿었습니다. 힐베르트는 수학을 적절한 공리와 추론규칙을 설정한 다음 그것의 형식적인 조작을 통하여 연역되는 정리들의 집합체(형식적 연역체계)로 구성하려 했습니다. 즉, 힐베르트는 "<strong>어라? 수학자들이 지금까지 해온 연구과정을 보아하니, 유한한 공리와 몇가지 추론규칙을 통하여 수학의 모든 사실을 도출해내는 것을 자동으로 할 수 있을 것 같은데?</strong> " 라고 생각했습니다. 그래서 힐베르트가 이끄는 형식주의 학파는 <strong>이러한 자동기계를 만들기만 하면 근의 공식이나 도함수 구하는 공식같은 수학적 사실들이 모두 자동으로 만들어질 수 있을 것</strong> 이라고 생각했습니다. 설명이 필요없는 위대한 수학자 폰 노이만도 힐베르트의 제자로써 형식주의 학파였습니다. 이 생각들은 <strong>수학적 사고를 순수한 기호 조작의 규칙으로 규명할 수 있다는 믿음</strong> 에 근거하고 있었습니다. 그리고 이로써 수학자들은 수학의 기초를 확립하려 했습니다. </p>
+<p>하지만 이 상황에서 <strong>괴델이 불완전성 정리를 설명한 논문《Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme I》(『수학원리』 및 그와 연관된 체계들 속에서 형식적으로 결정될 수 없는 명제에 관하여) 을 발표</strong> 합니다. 괴델은 이 논문을 통하여 <strong>"자동적으로(기계적으로) 수학의 모든 사실들을 만들 수 없다!"</strong> 는 것을 증명했습니다.</p>
+<p>이 괴델의 <strong>불완전성 정리</strong> 가 어찌나 중요한지 <strong>모든 수학의 역사 속에서 가장 중요한 정리</strong> 라고 부르는 사람도 있습니다. 그리고 <strong>컴퓨터를 탄생시킨 튜링에게 직접적인 아이디어를 제공한 정리</strong> 이기도 하니까 프로그래머들에게도 그 중요성이 얼마나 큰지 짐작할 수 있을 것 같습니다.</p>
+<h2 id="_15">괴델의 불완전성 정리<a class="headerlink" href="#_15" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p>괴델의 논문은 수학자들 또한 매우 어렵다고 인정하였다.</p>
+</li>
+<li>
+<p>괴델의 논문을 이해하기 위해서, 아니 애초에 주요한 내용에 도달하기 46개의 예비 정의와 몇 개의 중요한 예비 정리를 모조리 숙지하지 않으면 안된다. </p>
+</li>
+<li>
+<p>실제로 괴델의 첫 발표를 듣고 그 자리에서 이해한 사람은 폰 노이만밖에 없었다는 일화가 있다.</p>
+<ul>
+<li>
+<p>폰 노이만도 힐베르트의 제자로써 힐베르트의 증명 이론을 발전시키려 애썼던 사람이다. </p>
+</li>
+<li>
+<p>폰 노이만은 그 발표를 듣고 "이제 다 끝났군요" 라고 말했다고 한다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>그러나 여기에서 매우 쉽게 설명할 것이고, 그럼에도 불구하고 괴델의 논증의 전체를 조감할 수 있도록 할 것이다. </p>
+</li>
+</ul>
+<h3 id="-uber-formal-unentscheidbare-satze-der-principia-mathematica-und-verwandter-systeme">괴델의 논문 - Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme<a class="headerlink" href="#-uber-formal-unentscheidbare-satze-der-principia-mathematica-und-verwandter-systeme" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p>영어로 "On Formally Undecidable Propositions of Principia Mathematica and Related Systems", 즉 "『수학원리』및 그와 연관된 체계들 속에서 형식적으로 결정될 수 없는 명제에 관하여" 라는 제목의 논문을 지금부터 매우 쉽게 살펴볼 것이다. </p>
+</li>
+<li>
+<p>괴델의 불완전성 정리는 다음 두 정리를 말하는 것이었음을 기억하자. 이제부터 이것을 증명할 것이다.</p>
+</li>
+</ul>
+<p>이제부터 괴델의 증명과정을 간단하게 알아보겠습니다. 실제 괴델의 불완전성 정리는 다음과 같습니다. </p>
+<a href="#f9afc59b6"><div class="admonition tldr" id="f9afc59b6">
+<ol>
+<li>
+<p><strong>제 1 불완전성 정리 : 『수학 원리』 처럼 산술을 포함할만큼 포괄적인 공리 체계는 그 어떤 체계든지 본질적으로 불완전체계이다.</strong></p>
+</li>
+<li>
+<p><strong>제 2 불완전성 정리 : 『수학 원리』 처럼 산술을 포함할만큼 포괄적인 공리 체계의 정합성은 그 공리 체계에 의하여 증명될 수 없다.</strong></p>
+</li>
+</ol>
+</div></a>
+<p>괴델은 『수학 원리』 를 연구하면서 형식화된 기호 패턴이 수 패턴과 똑같다고 생각했고 실제로 모든 기호를 수로 대체할 수 있다는 것을 깨달았습니다. 즉, 괴델은 <strong>수가 모든 종류의 패턴을 표현할 수 있는 보편적인 매개 수단이라는 것</strong> 을 깨달았고, 심지어 <strong>다른 모든 영역의 명제도 순수한 수로 환원할 수 있다</strong> 는 것을 깨달았습니다. </p>
+<blockquote>
+<p>나중에 알아볼 것이지만 이로써 다른 영역의 명제(은행 거래, 대화 나누기, 총 싸움하기, 뇌 세포(뉴런)의 동작 등등)도 수학 명제로 사상시킨 다음 프로그램으로 자동화시킬 수 있습니다.</p>
+</blockquote>
+<p>이는 『수학 원리』 의 주제가 "수" 인데, 『수학 원리』 자체도 "수" 로 환원시킬 수 있으므로 <strong>『수학 원리』 는 자기 자신에 관하여 언급하고 있다</strong> 는 것을 의미했습니다. 그런데 괴델은 <strong>이것을 깨달은 시점에서 옛날부터 내려오던 자기 언급의 역설, 특히 "이 명제는 거짓이다." 라는 역설을 검토</strong> 하지 않을 수 없었죠. </p>
+<blockquote>
+<p>"이 명제는 거짓이다." 가 참이라면 이 명제가 거짓이라고 한 것이 참이므로 이 명제는 거짓이 됩니다. 이것은 모순입니다. 반면 "이 명제는 거짓이다." 가 거짓이라면 이 명제가 참이 되므로 역시 모순입니다.</p>
+</blockquote>
+<p>여기에서 수학명제와 상위 수학명제(메타 수학명제)의 차이를 짚고 넘어가야 합니다. 힐베르트는 형식적 연역체계 속의 형식문은 수학명제이지만 그것에 <strong>관하여</strong> 언급하는 언어는 상위수학이라고 구별했습니다.</p>
+<ul>
+<li>
+<p>수학명제(형식문) : 형식적 연역체계 속의 순수한 형식적 기호로 이루어진 형식문</p>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(2+3=5\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>상위 수학명제 : 수학명제에 관하여 언급하는 명제</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>"<span class="arithmatex">\(2+3=5\)</span>" 는 산술학적 형식문이다.</p>
+<p>"<span class="arithmatex">\(2+3=5\)</span>" 의 두번째 기호는 + 이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="pm">수학의 모든 공리체계를 대표할 수 있는 <strong>PM</strong><a class="headerlink" href="#pm" title="Permanent link">¶</a></h4>
+<p>괴델은 먼저 『수학 원리』의 기호 체계를 약간 고쳐서 모든 산술학을 포괄할 수 있는 연산 체계 <strong>PM</strong> 을 만들었습니다. 이로써 <strong>PM</strong> 이 『수학원리』와 관련 체계를 대표할 수 있게 되었습니다. 그리고 괴델은 <strong>"PM 은 정합적 체계이다." 라는 상위 수학명제를 PM 속의 수학 명제로 사상(mapping)시켜서 논증을 진행</strong> 했습니다.</p>
+<p><strong>사상(mapping, 寫像)</strong> 은 사실 우리가 일상에서도 많이 사용하는 개념입니다. 우리는 실제 지구의 표면을 지구본에 사상시켰습니다. 그리고 비유클리드 기하학의 대원을 유클리드 기하학의 직선으로 사상시켰고 직선을 대수학의 관계(<span class="arithmatex">\(y=x\)</span>)로 사상시켰습니다. 그리고 애정을 뜻하는 마음 속 생각을 자연어 "사랑해" 로 사상시켰고 다시 "사랑해" 를 카톡으로 전달하기 위하여 유니코드 "<code>\xc0ac\xb791\xd574</code>" 로 사상시켰습니다. 이 모든 글도 저의 마음 속 생각을 한글로 사상시킨 것으로 볼 수 있습니다. 사상이란 당황스러울 정도로 쉬운 개념입니다.</p>
+<h4 id="_16">괴델의 증명 과정<a class="headerlink" href="#_16" title="Permanent link">¶</a></h4>
+<p>괴델은 다음과 같은 논증으로 불완전성 정리를 증명했습니다. 생각보다 간단합니다.</p>
+<ol>
+<li>
+<p>괴델 수 붙이기(<strong>수학명제를 수로 사상</strong> 시키기)</p>
+</li>
+<li>
+<p><strong>상위 수학명제를 수학명제로 사상</strong> 시키기</p>
+</li>
+<li>
+<p>핵심 논증 </p>
+<ol>
+<li>
+<p><strong>"형식문 <span class="arithmatex">\(G\)</span> 는 PM 으로 증명할 수 없다."</strong> 는 상위 수학명제를 <strong>PM</strong> 속의 수학명제로 사상시킨 형식문 <span class="arithmatex">\(G\)</span> 를 만들 수 있다.</p>
+</li>
+<li>
+<p>형식문 <span class="arithmatex">\(G\)</span> 는 그 부정문 $\sim{}G) 이 증명될 수 있을 때에만 증명될 수 있다.</p>
+</li>
+<li>
+<p>형식문 <span class="arithmatex">\(G\)</span> 는 증명될 수 없지만 올바른 형식문이다. </p>
+</li>
+<li>
+<p><strong>(제 1 불완전성 정리 증명)</strong> 형식문 <span class="arithmatex">\(G\)</span> 가 옳으면서도 증명될 수 없으므로 <strong>PM</strong> 은 불완전 체계이다.</p>
+</li>
+<li>
+<p><strong>(제 2 불완전성 정리 증명)</strong> "<strong>PM</strong> 은 정합적 체계이다." 라는 상위 수학명제를 <strong>PM</strong> 의 형식문 <span class="arithmatex">\(A\)</span> 로 사상시키고 형식문 <span class="arithmatex">\(A\to{}G\)</span> (<span class="arithmatex">\(A\)</span> 이면 <span class="arithmatex">\(G\)</span> 이다) 가 <strong>PM</strong> 속에서 증명될 수 있다는 것을 보인다. 그런데 <span class="arithmatex">\(A\)</span> 가 증명되면 이로써 <span class="arithmatex">\(G\)</span> 도 연역(증명)되는 셈이다. 그러므로 형식문 <span class="arithmatex">\(A\)</span> 는 <strong>PM</strong> 속에서 증명될 수 없다.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="1">1. 괴델 수 붙이기<a class="headerlink" href="#1" title="Permanent link">¶</a></h3>
+<p>모든 패턴과 구조를 수로 환원할 수 있다는 것을 깨달은 괴델은 『수학 원리』의 기호 체계를 약간 고쳐서 만든 형식적 연산 체계 <strong>PM</strong> 의 <strong>모든 형식문을 수로 사상(수학명제를 수로 사상) 시킬 수 있는 방법</strong> 을 보였습니다. 괴델은 (1) <strong>기본 기호</strong>, (2) <strong>기호의 모음인 형식문</strong>, (3) <strong>형식문의 모음인 증명</strong> 에 고유의 수를 부여할 수 있는 방법을 보여주었습니다. </p>
+<h4 id="1-1">1-(1) 기본 기호에 괴델수 붙이기<a class="headerlink" href="#1-1" title="Permanent link">¶</a></h4>
+<p>여기에서는 다음의 12개의 상항 기호를 상정하고 각각 1 에서 12 의 수를 부여하겠습니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">상항기호</th>
+<th align="center">괴델 수</th>
+<th align="center">일상적 의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(\sim\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center">아니다</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\lor\)</span></td>
+<td align="center"><span class="arithmatex">\(2\)</span></td>
+<td align="center">또는</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\to\)</span></td>
+<td align="center"><span class="arithmatex">\(3\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span> 이면 <span class="arithmatex">\(\dots\)</span> 이다.</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\exists\)</span></td>
+<td align="center"><span class="arithmatex">\(4\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span> 이 있다.</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(=\)</span></td>
+<td align="center"><span class="arithmatex">\(5\)</span></td>
+<td align="center">같다</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(6\)</span></td>
+<td align="center">영</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(s\)</span></td>
+<td align="center"><span class="arithmatex">\(7\)</span></td>
+<td align="center">바로 다음 수</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\((\)</span></td>
+<td align="center"><span class="arithmatex">\(8\)</span></td>
+<td align="center">왼쪽 괄호</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\()\)</span></td>
+<td align="center"><span class="arithmatex">\(9\)</span></td>
+<td align="center">오른쪽 괄호</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(,\)</span></td>
+<td align="center"><span class="arithmatex">\(10\)</span></td>
+<td align="center">쉼표</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(+\)</span></td>
+<td align="center"><span class="arithmatex">\(11\)</span></td>
+<td align="center">더하기</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\times\)</span></td>
+<td align="center"><span class="arithmatex">\(12\)</span></td>
+<td align="center">곱하기</td>
+</tr>
+</tbody>
+</table>
+<p>가령 "<span class="arithmatex">\(0+s0=s0\)</span>" 은 일상적인 의미로 0+1=1 을 뜻합니다.</p>
+<p>또한 숫자변항, 문장변항, 술어변항으로 구성되는 변항기호에도 괴델수를 부여할 수 있습니다. 다음과 같이 숫자변항에는 12 보다 큰 소수를 차례로 부여합니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">숫자변항</th>
+<th align="center">괴델 수</th>
+<th align="center">가능한 대입 실례</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(x\)</span></td>
+<td align="center"><span class="arithmatex">\(13\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(y\)</span></td>
+<td align="center"><span class="arithmatex">\(17\)</span></td>
+<td align="center"><span class="arithmatex">\(s0\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(z\)</span></td>
+<td align="center"><span class="arithmatex">\(19\)</span></td>
+<td align="center"><span class="arithmatex">\(y\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>다음과 같이 문장변항에는 12 보다 큰 소수의 제곱수를 부여합니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">문장변항</th>
+<th align="center">괴델 수</th>
+<th align="center">가능한 대입 실례</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(p\)</span></td>
+<td align="center"><span class="arithmatex">\(13^{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(0=0\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(q\)</span></td>
+<td align="center"><span class="arithmatex">\(17^{2}\)</span></td>
+<td align="center"><span class="arithmatex">\((\exists{}x)(x=sy)\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(r\)</span></td>
+<td align="center"><span class="arithmatex">\(19^{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(p\to{}q\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>다음과 같이 술어변항에는 12 보다 큰 소수의 세제곱수를 부여합니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">술어변항</th>
+<th align="center">괴델 수</th>
+<th align="center">가능한 대입 실례</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(P\)</span></td>
+<td align="center"><span class="arithmatex">\(13^{3}\)</span></td>
+<td align="center"><span class="arithmatex">\(x=sy\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(Q\)</span></td>
+<td align="center"><span class="arithmatex">\(17^{3}\)</span></td>
+<td align="center"><span class="arithmatex">\(~(x=ss0\times{}y)\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(R\)</span></td>
+<td align="center"><span class="arithmatex">\(19^{3}\)</span></td>
+<td align="center"><span class="arithmatex">\((\exists{}z)(x=y+sz)\)</span></td>
+</tr>
+</tbody>
+</table>
+<h5 id="_17">대응 보조 정리<a class="headerlink" href="#_17" title="Permanent link">¶</a></h5>
+<ul>
+<li>
+<p>위 기호들은 의미가 완전히 제거된 기호들이다.</p>
+<ul>
+<li>
+<p>그렇다면 무의미한 기호 "<span class="arithmatex">\(0\)</span>" 을 숫자 "영" 으로, 무의미한 기호 "<span class="arithmatex">\(+\)</span>" 를 "더하기" 로 해석할 수 있게 해주는 것은 무엇인가? 기호들이 무의미하기 때문에 최악의 경우 그 반대로도 해석될 수도 있을 것이다. </p>
+</li>
+<li>
+<p>이것에 대한 대답은 어떤 기호의 해석은 그 기호가 <span class="arithmatex">\(PM\)</span> 의 정리에서 어떻게 행동하느냐에 따라 결정되고, 그 행동은 <span class="arithmatex">\(PM\)</span> 의 공리와 추리 규칙에 의해 결정된다는 것이다. </p>
+<ul>
+<li>예시 </li>
+</ul>
+<p>우리는 형식적 체계의 규칙에 의하여 "<span class="arithmatex">\(0+0=0\)</span>", "<span class="arithmatex">\(0+s0=s0\)</span>" 등이 연역된다면, 누구나 무의미한 기호 "<span class="arithmatex">\(0\)</span>" 이 숫자 영(<span class="arithmatex">\(0\)</span>) 을 나타내고 무의미한 기호 "<span class="arithmatex">\(=\)</span>" 또한 같다는 것을 나타내는 기호라고 생각할 수 있다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>하지만 문제는 이러한 기호에 대한 해석이 해석을 암시하는 몇몇의 정리에 의존하게 된다면 그 해석이 절대적으로 확실하다는 확신을 가질 수 없다.</p>
+<ul>
+<li>
+<p>괴델은 이 문제를 해결하기 위하여, 즉 형식적 체계 <span class="arithmatex">\(PM\)</span> 속의 기호에 대한 표준 해석을 확정하기 위하여</p>
+<p><span class="arithmatex">\(PM\)</span> 의 정리는 무한히 많이 있고, </p>
+<p>그 정리들을 위 표의 "일상적 의미" 로 해석하면 각각의 모든 정리들이 산술학적 진리(원초 재귀적 진리 primitive recursive truth)를 표현한다는 것과</p>
+<p>그 진리들을 위 표를 통하여 형식적 진술로 되돌리면 개개의 산술학적 진리 모두가 <span class="arithmatex">\(PM\)</span> 의 정리를 만들어낸다는 것을 증명했다. </p>
+</li>
+<li>
+<p>무수히 많은 원초 재귀적 진리에는 올바른 덧셈, 올바른 곱셈, "17 은 일곱번째 소수이다.", "21 은 소수가 아니다" 같은 매우 다양한 진술들이 포함되어 있다. </p>
+</li>
+<li>
+<p>그런데 이 무수히 많은 모든 원초 재귀적 진리를 위 표를 통하여 <span class="arithmatex">\(PM\)</span> 의 정리, 즉 형식적 진술로 되돌릴 수 있다는 사실은 <span class="arithmatex">\(PM\)</span> 의 기호에 의미를 부여할 수 있다는 것을 보장하는 것이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>산술학적 진리와 무의미한 기호로 이뤄진 형식문 사이의 이 고도의 체계적인 대응성은 다음의 두 가지 의미를 우리에게 알려준다. </p>
+<ol>
+<li>
+<p>공리적 체계로서의 <span class="arithmatex">\(PM\)</span> 이 수론을 대신할 수 있는 힘을 갖고 있다는 것을 알려준다.</p>
+</li>
+<li>
+<p>개개의 기호 모두에 대한 관례적 해석을 분명하게 규정해준다. </p>
+</li>
+<li>
+<p>이렇게 괴델은 위 표의 무의미한 기호들이 세번째 열의 "일상적 의미" 를 지닌다는 것을 증명했는데, 이것을 대응 보조 정리(correspondence lemma) 라고 한다. </p>
+</li>
+</ol>
+</li>
+<li>
+<p>즉, 괴델의 대응 보조 정리는 다음의 이중의 대응 관계를 보장하는 것이다. </p>
+<ol>
+<li>
+<p>각각의 모든 원초 재귀적 진리가 형식적 연산 체계의 기호 묶음으로 바뀌면 정리가 된다. </p>
+</li>
+<li>
+<p>형식적 기호들이 일대일 대응 방식으로 예정된 해석에 따른 의미를 가질 수 있다. </p>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="1-2">1-(2) 형식문에 괴델수 붙이기<a class="headerlink" href="#1-2" title="Permanent link">¶</a></h4>
+<p>형식문에 괴델수를 붙이는 것은 매우 간답합니다. 가령 <span class="arithmatex">\(y\)</span> 바로 다음 수 <span class="arithmatex">\(x\)</span> 가 있다는 의미의 형식문 "<span class="arithmatex">\((\exists{}x)(x=sy)\)</span>" 의 기본 기호는 각각 괴델수</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\((\)</span></th>
+<th align="center"><span class="arithmatex">\(\exists\)</span></th>
+<th align="center"><span class="arithmatex">\(x\)</span></th>
+<th align="center"><span class="arithmatex">\()\)</span></th>
+<th align="center"><span class="arithmatex">\((\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">8</td>
+<td align="center">4</td>
+<td align="center">13</td>
+<td align="center">9</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(x\)</span></td>
+<td align="center"><span class="arithmatex">\(=\)</span></td>
+<td align="center"><span class="arithmatex">\(s\)</span></td>
+<td align="center"><span class="arithmatex">\(y\)</span></td>
+<td align="center"><span class="arithmatex">\()\)</span></td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="center">5</td>
+<td align="center">7</td>
+<td align="center">17</td>
+<td align="center">9</td>
+</tr>
+</tbody>
+</table>
+<p>를 갖는데 일련의 소수에 이 괴델수의 거듭제곱을 취하여 곱한 수</p>
+<div class="arithmatex">\[m=2^{8}\times{}3^{4}\times{}5^{13}\times{}7^{9}\times{}11^{8}\times{}13^{13}\times{}17^{5}\times{}19^{7}\times{}23^{17}\times{}29^{9}\]</div>
+<p>를 이 형식문에 부여하면 됩니다. 이 방식으로 <strong>PM</strong> 의 모든 형식문에 고유의 괴델수를 부여할 수 있습니다.</p>
+<h4 id="1-3">1-(3) 증명에 괴델수 붙이기<a class="headerlink" href="#1-3" title="Permanent link">¶</a></h4>
+<p>형식문이 기호의 모임이듯, 수학에서의 증명 또한 형식문의 모임입니다.</p>
+<blockquote>
+<p>나중에 알게 되겠지만 놀랍게도 형식문은 프로그램의 코드 한 줄에 대응되고, 프로그램은 수학에서의 논리적 증명에 완벽히 대응됩니다. </p>
+</blockquote>
+<p>증명에 괴델수를 붙이는 것은 매우 쉽습니다. 가령 다음과 같은 증명이 있다고 하겠습니다. 이 논증은 매우 쉬운데 <strong>"어떤 수에는 다음 수가 존재하므로 0 다음 수도 존재한다."</strong> 는 논증입니다. 즉, "<strong>1</strong> 이 존재한다." 에 대한 증명입니다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\((\exists{}x)(x=sy)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((\exists{}x)(x=s0)\)</span></p>
+</li>
+</ol>
+<p>이 증명은 두 개의 형식문으로 구성되어 있으므로 각각의 형식문에 괴델수를 부여할 수 있습니다. 첫번째 형식문의 괴델수는 앞서 <span class="arithmatex">\(m\)</span> 으로 이미 부여했으니 두번째 형식문에는 <span class="arithmatex">\(n\)</span> 이라는 괴델수를 부여하겠습니다. 그러면 이 일련의 소수에 형식문들의 괴델수로 거듭제곱을 취하여 얻은 수 <span class="arithmatex">\(k=2^{m}\times{}3^{n}\)</span> 를 이 증명의 괴델수로 부여하면 됩니다.</p>
+<p>이로써 <strong>형식적 연산 체계 전체를 완벽하게 수로 사상시킬 수 있게 되었습니다</strong> . 즉 <strong>모든 수학명제를 완벽하게 순수한 수로 환원시킬 수 있게 된 것</strong> 입니다. 또 거꾸로 어떤 수가 주어지면 그 수가 괴델수인지 결정할 수 있고, 괴델수라면 어떤 수학명제에 대응되는지 정확하게 알 수 있게 되었습니다. </p>
+<h3 id="2">2. 상위 수학명제를 수학 명제로 사상시키기<a class="headerlink" href="#2" title="Permanent link">¶</a></h3>
+<p>그런데 괴델은 <strong>수학명제에 관하여 언급하는 상위 수학명제란 형식적 표현과 그것들의 관계에 대하여 언급하는 명제</strong> 라는 것을 깨닫고, <strong>상위 수학명제를 그것에 대응하는 괴델수와 괴델수 간의 관계에 관하여 언급하는 수학명제로 사상</strong> 시켰습니다. 이 방식으로 괴델은 <strong>상위 수학을 완전하게 산술학으로 환원</strong> 시켰습니다. </p>
+<p>가령 "영은 영과 같지 않다." 고 말하는 수학명제 "<span class="arithmatex">\(\sim(0=0)\)</span>" 와 그것에 <strong>관하여</strong> 언급하는 상위 수학명제 <strong>"형식문 <span class="arithmatex">\(\sim(0=0)\)</span> 의 첫번째 기호는 틸드(~)이다."</strong> 를 예로 들어보겠습니다. 먼저 형식문(수학명제)의 괴델수는 </p>
+<div class="arithmatex">\[a=2^{1}\times{}3^{8}\times{}5^{6}\times{}7^{5}\times{}11^{6}\times{}13^{9}\]</div>
+<p>입니다. 그런데 상위 수학명제가 틸드(~)를 언급하므로 상위 수학명제가 <span class="arithmatex">\(a\)</span> 의 가장 작은 소수의 거듭제곱 <span class="arithmatex">\(2^1\)</span> 와 관계되어 있다는 것을 알 수 있습니다. 이것에 착안하여 상위 수학명제 <strong>"형식문 <span class="arithmatex">\(\sim(0=0)\)</span> 의 첫번째 기호는 틸드(~)이다."</strong> 를 수학명제 <strong>"형식문 <span class="arithmatex">\(\sim(0=0)\)</span> 의 괴델수 <span class="arithmatex">\(a\)</span> 의 첫번째 소수 <span class="arithmatex">\(2\)</span> 의 지수는 <span class="arithmatex">\(1\)</span> 이다."</strong> 로 사상시킬 수 있습니다. 이 수학명제는 <strong>"<span class="arithmatex">\(2\)</span> 는 <span class="arithmatex">\(a\)</span> 의 인수이고 <span class="arithmatex">\(2^{2}\)</span> 는 <span class="arithmatex">\(a\)</span> 의 인수가 아니다."</strong> 라는 수학명제와 동치입니다. </p>
+<p>그런데 수학명제 "<span class="arithmatex">\(x\)</span> 는 <span class="arithmatex">\(y\)</span> 의 인수이다." 는 수학명제 "<span class="arithmatex">\(x\)</span> 를 곱하면 <span class="arithmatex">\(y\)</span> 가 되는 수 <span class="arithmatex">\(z\)</span> 가 있다." 와 같으므로 형식문 <span class="arithmatex">\((\exists{}z)(y=z{}\times{}x)\)</span> 와 같습니다. 그러므로 결론적으로 수학명제 <strong>"<span class="arithmatex">\(2\)</span> 는 <span class="arithmatex">\(a\)</span> 의 인수이고 <span class="arithmatex">\(2^{2}\)</span> 는 <span class="arithmatex">\(a\)</span> 의 인수가 아니다."</strong> 에서 <strong>"<span class="arithmatex">\(2\)</span> 는 <span class="arithmatex">\(a\)</span> 의 인수이다."</strong> 는 형식문 </p>
+<div class="arithmatex">\[(\exists{}z)(\overbrace{sss\dots{}sss0}^{a}=z\times{}2)\]</div>
+<p>으로 사상되고 <strong>"<span class="arithmatex">\(2^{2}\)</span> 는 <span class="arithmatex">\(a\)</span> 의 인수가 아니다."</strong> 는</p>
+<div class="arithmatex">\[\sim(\exists{}z)(\overbrace{sss\dots{}sss0}^{a}=z\times(2\times{}2))\]</div>
+<p>로 사상됩니다. 이에 따라 최종적으로 상위 수학명제 <strong>"형식문 <span class="arithmatex">\(\sim(0=0)\)</span> 의 첫번째 기호는 틸드(~)이다."</strong> 를 수학명제 <strong>"<span class="arithmatex">\(2\)</span> 는 <span class="arithmatex">\(a\)</span> 의 인수이고 <span class="arithmatex">\(2^{2}\)</span> 는 <span class="arithmatex">\(a\)</span> 의 인수가 아니다."</strong> 로 사상시킨 형식문</p>
+<div class="arithmatex">\[(\exists{}z)(\overbrace{sss\dots{}sss0}^{a}=z\times{}2)\land\sim(\exists{}z)(\overbrace{sss\dots{}sss0}^{a}=z\times(2\times{}2))\]</div>
+<p>을 얻습니다. 또 이 형식문의 괴델수는 매우 크겠지만 지금까지의 방식으로 아주 쉽게 구할 수 있습니다. </p>
+<blockquote>
+<p><span class="arithmatex">\(\land\)</span> 는 "그리고" 를 뜻하는데 처음에 상정한 상항기호에는 "그리고" 가 없습니다. 그러나 이것을 기본 기호의 축약이라고 보면 됩니다. 가령 <span class="arithmatex">\(p\land{}q\)</span> 는 <span class="arithmatex">\(\sim(\sim{}p\lor{}q)\)</span> 의 축약인 것입니다. 마찬가지로 <span class="arithmatex">\(2\)</span> 도 <span class="arithmatex">\(ss0\)</span> 의 축약입니다.</p>
+<p>자연어 처리 방식을 이렇게 수학 명제로 사상시키는 것으로써 획기적으로 업그레이드 할 수 있지 않을까? </p>
+<p>이것을 위해서는 먼저 인간의 모든 자연어가 자연 대상에 관한 수학 명제로 환원될 수 있다는 가정이 필요하다. 또 이것을 위해서 먼저 수학 명제로 사상될 수 있는 모든 자연적 대상들을 규명하는 것이 선행되어야 한다. </p>
+<p>괴델은 아마 논문에서 상위 수학 명제를 수학 명제로 일률적으로, 그리고 확실하게 사상시킬 수 있다는 증거를 보여줬던 것 같다. 내가 보기에 이것을 깨닫는 것이 매우 중요하다. </p>
+<p>왜냐하면 컴퓨터가 자연 대상을 어느정도까지 수로 환원시킬 수 있는지, 그래서 어느정도까지의 고차원적인 대상을 기계확시킬 수 있는지에 대한 증거가 되기 때문이다. </p>
+</blockquote>
+<p>이로써 상위 수학을 완전하게 순수한 수학 명제로, 그리고 괴델수로 사상시킬 수 있게 되었습니다. 그러므로 우리는 <strong>PM</strong> 에 <strong>관하여</strong> 언급하는 <strong>상위 수학이 PM 속에서 형식적 체계로 구성될 수 있다</strong> 는 결론에 도달하게 됩니다.</p>
+<blockquote>
+<p>이것으로 우리가 얻을 수 있는 이득은 리샤르의 역설에서 범했던 오류, 즉 상위 수학 명제를 수학 명제의 체계 속으로 끌어내렸던 잘못을 피할 수 있는 것이다.</p>
+<p>그런데 이것이 실제로 형식문으로 환원될 수 있는지에 대한 증거와 증명이 필요하다. 아마 실제 논문에는 이 증명이 있는 것 같다. 그리고 이 증명을 이해하는 것이 매우 중요하다. </p>
+</blockquote>
+<h4 id="_18">상위 수학의 산술학화의 의미<a class="headerlink" href="#_18" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p>이렇게 상위 수학 명제(<span class="arithmatex">\(PM\)</span> 에 관하여 말하는 명제) 를 수학 명제(<span class="arithmatex">\(PM\)</span> 이 자기 자신에 관하여 말하는 명제) 로 환원시켜보았는데 이것이 가능했던 이유는 괴델 수 붙이기의 독창적인 사상 방법과 기호들이 의미를 갖는 것을 보장해주는 대응 보조 정리 때문이다. </p>
+<blockquote>
+<h4 id="_19">아, 그렇구나. 대응 보조 정리의 엄밀한 증명 과정에 대한 이해가 있다면 무의미한 기호들이 어떻게 원초 재귀적 진술들에 대응되고, 원초 재귀적 진술들은 또 어떻게 무의미한 기호들에 대응될 수 있는지에 대한 지각이 생기겠구나. 그렇다면 이 지각을 기반으로 일반적인 자연 대상을 어떻게, 또 얼마나 컴퓨터가 다룰 수 있는 수로 기계화시킬 수 있는지 알 수 있을 것 같다. 내가 찾는건 대응 보조 정리에 대한 깊은 이해였구나.<a class="headerlink" href="#_19" title="Permanent link">¶</a></h4>
+</blockquote>
+</li>
+<li>
+<p>즉, 괴델은 모든 상위 수학 명제가 괴델 수로 사상된 형식문이 지닌 거대한 수의 소인수 분해의 속성에 관하여 언급하고 있다는 것을 통찰했고,</p>
+<p>이로써 간접적이긴 하지만 완전하게 상위 수학 명제를 소인수분해 속성에 관하여 말하는 순수한 수학 명제로 사상시킬 수 있다는 것을 통찰한 것이다. </p>
+<blockquote>
+<p>상위 수학 명제가 수학 명제로 사상될 수 있는 것은, 여기에서는 소인수 분해의 속성을 중심으로 가능하다고 말했다. 하지만 좀 더 포괄적인 대상에 대한 명제를 수학 명제로 사상시킬 수 있는 일률적인 방법이 필요하다. 왜냐하면 그 방법으로써 인공지능으로 하여금 자기 스스로 자연 대상을 수로 환원시켜 기계화해나갈 수 있게 할 수 있기 때문이다. </p>
+</blockquote>
+</li>
+<li>
+<p>그러므로 우리는 <strong><span class="arithmatex">\(PM\)</span> 에 관하여 언급하는 상위 수학은 <span class="arithmatex">\(PM\)</span> 속에서 형식적 체계로 구성될 수 있다</strong> 는 결론에 도달하게 된다. </p>
+<blockquote>
+<p>이제는 상위 수학 명제가 수학 명제로 환원될 수 있다는 것이 아니라, "상위 수학" 자체가 수학으로 환원될 수 있다는 것이다. 여기에서는 매우 귀납적으로 살펴보았지만 괴델의 논문에서는 연역적인 엄밀한 증명이 있었겠지. 이 결론은 인공지능 공학자들에게 매우 중요한 단서가 된다. </p>
+<p>튜링도 이 아이디어를 통하여 튜링 머신을 텍스트로 환원시켜서 보편 만능 기계의 동작을 하는 튜링머신에 입력시킬 수 있다는 것을 통찰했구나ㅣ. 이 관점을 프로그래머의 프로그램에 적용시켜서 설명하여 그 본질적 의미를 설명해줄 수 있고, 이 본질적 의미를 아는 것이 어떤 이익을 가져다주는지도 말해줄 수 있다. </p>
+<p>특히, 내가 역사로부터 공부하려 했던 이유, 모든 지식의 윤곽이라도 그려서 빠뜨림없이 알기 위해서, 그리고 과거로부터 그 원류를 이해해서 본질적인 것에 대한 이해를 얻으려 했는 것, 그리고 이것으로 실제로 내가 얻은 효용을 설명할 수 있을 것 같다. </p>
+</blockquote>
+</li>
+</ul>
+<p>이제 매우 간단한 두 가지 함수를 정의하겠습니다.</p>
+<h4 id="_20">증명함수<a class="headerlink" href="#_20" title="Permanent link">¶</a></h4>
+<p>"<strong>1-(3) 증명에 괴델수를 붙이기</strong> " 에서 괴델수 <span class="arithmatex">\(n\)</span> 을 갖는 형식문의 증명의 괴델수 <span class="arithmatex">\(k=2^{m}\times{}3^{n}\)</span> 를 살펴보았습니다. 이렇게 어떤 <strong>증명에 해당하는 괴델수 <span class="arithmatex">\(k\)</span> 는 그 증명의 결론에 해당하는 형식문의 괴델수 <span class="arithmatex">\(n\)</span> 과 산술학적 관계</strong> 를 갖습니다.</p>
+<p>우리는 형식문 <span class="arithmatex">\(n\)</span> 을 증명하는 형식문 모임의 괴델수 <span class="arithmatex">\(k\)</span> 의 산술학적 관계(<span class="arithmatex">\(k=2^{m}\times{}3^{n})\)</span> 를 <span class="arithmatex">\(\text{dem}(k,n)\)</span> 으로 표현할 수 있습니다. 이 <span class="arithmatex">\(\text{dem}(k,n)\)</span> 은 단순히 <span class="arithmatex">\(k\)</span> 가 <span class="arithmatex">\(n\)</span> 의 증명이다 라고 말하고 있는 것입니다.</p>
+<p>그러면 이것을 일반화해서 "괴델수 <span class="arithmatex">\(x\)</span> 를 가지는 형식문 모임은 괴델수 <span class="arithmatex">\(z\)</span> 를 가진 형식문의 증명이다." 라는 상위 수학명제에서 <span class="arithmatex">\(x\)</span> 와 <span class="arithmatex">\(z\)</span> 의 관계를 <span class="arithmatex">\(\text{dem}(x,z)\)</span> 로 정의하겠습니다. </p>
+<ul>
+<li>
+<p><strong>증명함수 <span class="arithmatex">\(\text{dem}(x,z)\)</span> : 괴델수 <span class="arithmatex">\(x\)</span> 가 괴델수 <span class="arithmatex">\(z\)</span> 의 증명일 때 이 둘의 산술학적 관계이다.</strong></p>
+</li>
+<li>
+<p>그냥 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(z\)</span> 의 증명이다 라고 생각하면 된다.</p>
+</li>
+</ul>
+<blockquote>
+<p>증명(demonstration) 의 줄임말입니다.</p>
+</blockquote>
+<p>그리고 이 수론적 관계 <span class="arithmatex">\(\text{dem}(x,z)\)</span> 를 형식문으로 사상시킨 것을 <span class="arithmatex">\(\text{Dem}(x,z)\)</span> 라고 하겠습니다. </p>
+<blockquote>
+<p>또, 이 증명 함수 <span class="arithmatex">\(\text{dem} (x, z)\)</span> 는 산술학적 관계를 나타내므로 대응 보조 정리에 의해 <span class="arithmatex">\(PM\)</span> 에 그것의 형식적 표현이 존재하고 그것에 대응하는 괴델 수 또한 존재한다. <span class="arithmatex">\(\text{dem} (x, z)\)</span> 는 그 괴델수를 지칭한다고 생각하면 될 것 같다. </p>
+</blockquote>
+<ul>
+<li><strong><span class="arithmatex">\(\text{Dem}(x,z)\)</span> : 증명함수 <span class="arithmatex">\(\text{dem}(x,z)\)</span> 의 형식문이다.</strong></li>
+</ul>
+<blockquote>
+<p><span class="arithmatex">\(\text{dem}(x,z)\)</span> 가 형식문 <span class="arithmatex">\(\text{Dem}(x,z)\)</span> 으로 사상된 것은 <span class="arithmatex">\(3=1+2\)</span> 가 형식문 <span class="arithmatex">\(sss0=s0+ss0\)</span> 로 사상된 것과 비슷합니다. 그래서 사실은 <span class="arithmatex">\(\text{Dem}(x,z)\)</span> 를 <span class="arithmatex">\(\text{Dem}(\overbrace{sss\dots{}sss0}^{x},\overbrace{sss\dots{}sss0}^{z})\)</span> 로 써야 하지만 편의상 축약하여 쓰는 것입니다.</p>
+</blockquote>
+<h4 id="_21">대입함수<a class="headerlink" href="#_21" title="Permanent link">¶</a></h4>
+<p>"<strong>1-(2) 형식문에 괴델수 붙이기</strong> " 에서 형식문 "<span class="arithmatex">\((\exists{}x)(x=sy)\)</span>" 이 괴델수 <span class="arithmatex">\(m\)</span> 을 갖는다고 가정했었습니다. 이 형식문의 숫자변항 <span class="arithmatex">\(y\)</span> 에 <span class="arithmatex">\(2\)</span> 를 대입하면 <strong>"<span class="arithmatex">\(2\)</span> 다음 수 <span class="arithmatex">\(x\)</span> 가 존재한다."</strong> 고, 즉 <strong>"3 이 존재한다."</strong> 고 주장하는 형식문 </p>
+<div class="arithmatex">\[(\exists{}x)(x=\overbrace{sss0}^{3})\]</div>
+<p>을 얻을 수 있습니다. 이 형식문에도 괴델수를 붙힐 수 있으므로 그 괴델수를 <span class="arithmatex">\(t\)</span> 라고 하겠습니다. 똑같은 방식으로 형식문 "<span class="arithmatex">\((\exists{}x)(x=sy)\)</span>" 의 <span class="arithmatex">\(y\)</span> 에 괴델수 <span class="arithmatex">\(m\)</span> 을 대입하여 형식문</p>
+<div class="arithmatex">\[(\exists{}x)(x=\overbrace{sss\dots{}sss0}^{m+1})\]</div>
+<p>을 만들어보겠습니다. 그러면 이 형식문은 단순히 <strong>"<span class="arithmatex">\(m\)</span> 다음 수 <span class="arithmatex">\(x\)</span> 가 존재한다"</strong> 고, 즉 <strong>"<span class="arithmatex">\(m+1\)</span> 이 존재한다."</strong> 고 주장합니다. 이 형식문에도 괴델수를 붙힐 수 있으므로 그 괴델수를 <span class="arithmatex">\(r\)</span> 이라고 하겠습니다.</p>
+<p>이처럼 괴델수 <span class="arithmatex">\(m\)</span> 을 갖는 형식문에 등장하는 모든 <span class="arithmatex">\(y\)</span> 에 <span class="arithmatex">\(2\)</span> 를 대입하여 얻은 형식문의 괴델수 <span class="arithmatex">\(t\)</span> 와 <span class="arithmatex">\(m\)</span> 를 대입하여 얻은 형식문의 괴델수 <span class="arithmatex">\(r\)</span> 을 계산하는 함수를 각각</p>
+<div class="arithmatex">\[t=\text{sub}(m,17,2)\]</div>
+<div class="arithmatex">\[r=\text{sub}(m,17,m)\]</div>
+<p>라는 대입함수로 표현할 수 있습니다. <span class="arithmatex">\(y\)</span> 에 해당하는 괴델수가 <strong>17</strong> 이므로 두번째 인자가 <strong>17</strong> 인 것입니다.</p>
+<ul>
+<li><strong>대입함수 <span class="arithmatex">\(\text{sub}(x,17,x)\)</span> : 괴델수 <span class="arithmatex">\(x\)</span> 를 가진 형식문의 모든 숫자변항 <span class="arithmatex">\(y\)</span> 에 괴델수 <span class="arithmatex">\(x\)</span> 를 대입하여 얻은 형식문의 괴델수이다.</strong></li>
+</ul>
+<blockquote>
+<p>대입(substitution)의 줄임말입니다. </p>
+</blockquote>
+<p>이 대입함수 <span class="arithmatex">\(\text{sub}(x,17,x)\)</span> 또한 수들의 산술학적 관계를 표현하므로 형식문으로 사상될 수 있습니다. 그 형식문을 <span class="arithmatex">\(\text{Sub}(x,17,x)\)</span> 이라고 하겠습니다. </p>
+<ul>
+<li>
+<p><strong><span class="arithmatex">\(\text{Sub}(x,17,x)\)</span> : 대입함수 <span class="arithmatex">\(\text{sub}(x,17,x)\)</span> 의 형식문이다.</strong></p>
+</li>
+<li>
+<p>이 수 <span class="arithmatex">\(r\)</span> 은 <span class="arithmatex">\(m\)</span> 과 <span class="arithmatex">\(17\)</span> 의 수론적 함수(원초 재귀적 함수, primitive recursive function)의 값이다. </p>
+<blockquote>
+<p>원초 재귀적 함수란 원초 재귀적 진술이 산술학 진리를 뜻하는 것처럼 산술학적 함수를 뜻한다. </p>
+<p>괴델이 산술학적 진리를 계속 원초 재귀적인(primitive recursive) 이라고 표현하는 이유를 알 것 같다. 산술학적 진리는 <span class="arithmatex">\(PM\)</span> 이 자기 자신에 관하여 말할 수 있다는 것으로부터 산술학적 명제가 산술 자체를 언급할 수 있기 때문에 재귀적으로 자신을 언급한다고 해서 "재귀적인" 이라는 표현을 붙힐 수 있던 것이다. </p>
+<p>그리고 튜링이 괴델의 논문에서 primitive recursive 개념에서 착안하여 보편 만능 기계(컴퓨터) 를 만들었다고 했는데, 대충 알 것 같네. 보편 만능 기계 또한 튜링기계고 튜링기계를 입력받아서 그것을 흉내내는 것이니까. 원초 재귀적 진술이 자기 자신에 관하여 언급하는 아이디어가 착안되었다고 할 수 있네. </p>
+<p>하지만 더 정확한 대응과 비교를 위하여 괴델의 증명과 튜링의 논증을 비교해보아야겠다. 대응 보조 정리가 더 많이 사용되었을 것 같아서. 대응보조정리로써 임의의 튜링기계를 텍스트, 즉 무의미한 형식문으로 환원시킨 거잖아. </p>
+</blockquote>
+<ul>
+<li>
+<p>이 함수는 매우 복잡하기에 간단하게 알아보자. 먼저 형식문 <span class="arithmatex">\((\exists x)(x = sy)\)</span> 의 괴델 수 </p>
+<div class="arithmatex">\[ m = 2 ^{8} \times 3 ^{4} \times 5 ^{13} \times 7 ^{9} \times 11 ^{8} \times 13 ^{13} \times 17 ^{5} \times 19 ^{7} \times 23 ^{17} \times 29 ^{9} \]</div>
+<p>의 변항 <span class="arithmatex">\(y\)</span> 에 <span class="arithmatex">\(m\)</span> 이 대입된 형식문 <span class="arithmatex">\((\exists x)(x = sss \dots sss0)\)</span> 의 각 기호의 괴델 수는 다음과 같으므로</p>
+<div class="arithmatex">\[ 8, 4, 13, 9, 8, 13, 5, \overbrace{7,7,7,\dots,7,7,7}^{m+1},6,9 \]</div>
+<p>이로써 형식문의 괴델 수 <span class="arithmatex">\(r\)</span> 를 만들면 </p>
+<div class="arithmatex">\[ r = 2 ^{8} \times 3 ^{4} \times 5 ^{13} \times 7 ^{9} \times 11 ^{8} \times 13 ^{13} \times 17 ^{5} \times 19 ^{7} \times 23 ^{7} \times \dots \times (P _{m+9}) ^{6} \times (P _{m+10}) ^{9} \]</div>
+<p>이 된다. </p>
+<ul>
+<li><span class="arithmatex">\(P _{m+10}\)</span> 은 <span class="arithmatex">\((m+10)\)</span> 번째 소수를 뜻한다. </li>
+</ul>
+</li>
+<li>
+<p>이때 <span class="arithmatex">\(m\)</span> 은 <span class="arithmatex">\(17\)</span> 번 거듭제곱된 소인수를 갖고 있지만, <span class="arithmatex">\(r\)</span> 은 갖고 있지 않다. </p>
+</li>
+<li>
+<p>왜냐하면 <span class="arithmatex">\(r\)</span> 은 <span class="arithmatex">\(m\)</span> 의 <span class="arithmatex">\(17\)</span> 번 거듭제곱된 소인수를 다른 소인수로 대치(숫자 변항 <span class="arithmatex">\(y\)</span> 에 <span class="arithmatex">\(m\)</span> 을 대입) 함으로써 얻은 수였기 때문이다.</p>
+</li>
+<li>
+<p>이로써 <span class="arithmatex">\(m\)</span> 을 <span class="arithmatex">\(r\)</span> 로 변환하는 매우 복잡한 함수가 무엇인지 정확히 알 필요는 없이 단지 <span class="arithmatex">\(r\)</span> 이 <span class="arithmatex">\(m\)</span> 과 <span class="arithmatex">\(17\)</span> 의 함숫값이라는 것을 인지하기만 하면 된다.</p>
+<ul>
+<li>실제로 이 함수의 정확한 모습은 괴델의 논문에서 설명되어 있다. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>이제부터 그러한 함수를 대입 함수(sub function) 이라 하고, 기호 <span class="arithmatex">\(\text{sub}(a, b, c)\)</span> 가 "괴델 수 <span class="arithmatex">\(a\)</span> 를 가진 형식문 속에 등장하는 괴델 수 <span class="arithmatex">\(b\)</span> 에 해당하는 모든 변항에 수 <span class="arithmatex">\(c\)</span> 를 대입하여 얻은 형식문의 괴델수" 를 지칭한다고 하자. </p>
+<ul>
+<li>
+<p>그러므로 <span class="arithmatex">\(\text{sub}(x, 17, x)\)</span> 는 "괴델 수 <span class="arithmatex">\(x\)</span> 를 가진 형식문의 모든 <span class="arithmatex">\(y\)</span> 에 <span class="arithmatex">\(x\)</span> 를 대입하여 얻은 형식문의 괴델 수" 이다. </p>
+</li>
+<li>
+<p>이 대입 함수 <span class="arithmatex">\(\text{sub}(x, 17, x)\)</span> 는 원초 재귀적 함수이므로 대입 함수가 만들어지면 대응 보조 정리에 의하여 <span class="arithmatex">\(PM\)</span> 속에 형식적 표현이 존재한다. </p>
+</li>
+<li>
+<p>그러한 형식적 표현을 <span class="arithmatex">\(\text{Sub}(x, 17, x)\)</span> 이라고 하자. </p>
+</li>
+</ul>
+<blockquote>
+<p>이처럼 첫글자가 소문자이면 괴델수를 지칭하고 대문자이면 괴델수에 해당하는 형식문을 지칭한다고 생각하자. </p>
+</blockquote>
+<ul>
+<li>
+<p>예시</p>
+<p><span class="arithmatex">\(\text{sub}(243000000, 17, 243000000)\)</span> 는 수를 가르키고 <span class="arithmatex">\(\text{Sub}(243000000, 17, 243000000)\)</span> 는 <span class="arithmatex">\(PM\)</span> 의 형식문을 가르키는 것이다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>자, 이제 괴델의 증명을 이해할 준비가 모두 끝났습니다.</strong></p>
+<h3 id="3">3. 핵심 논증<a class="headerlink" href="#3" title="Permanent link">¶</a></h3>
+<p>괴델의 <strong>핵심 논증은 다음의 5 가지 단계</strong> 로 요약됩니다.</p>
+<ol>
+<li>
+<p>"형식문 <span class="arithmatex">\(G\)</span> 는 <strong>PM</strong> 으로 증명할 수 없다." 는 상위 수학명제를 <strong>PM</strong> 속의 수학명제로 사상시킨 형식문 <span class="arithmatex">\(G\)</span> 가 있다.</p>
+</li>
+<li>
+<p>형식문 <span class="arithmatex">\(G\)</span> 는 그 부정문 <span class="arithmatex">\(\sim G\)</span> 이 증명될 수 있을 때에만 증명될 수 있다.</p>
+</li>
+<li>
+<p>형식문 <span class="arithmatex">\(G\)</span> 는 증명될 수 없지만 올바른 형식문이다. </p>
+</li>
+<li>
+<p><strong>(제 1 불완전성 정리 증명)</strong> 형식문 <span class="arithmatex">\(G\)</span> 가 옳으면서도 증명될 수 없으므로 <strong>PM</strong> 은 불완전 체계이다.</p>
+</li>
+<li>
+<p><strong>(제 2 불완전성 정리 증명)</strong> "<strong>PM</strong> 은 정합적 체계이다." 라는 상위 수학명제를 <strong>PM</strong> 의 형식문 <span class="arithmatex">\(A\)</span> 로 사상시키고 형식문 <span class="arithmatex">\(A\to{}G\)</span> 가 <strong>PM</strong> 속에서 증명될 수 있다는 것을 보인다. 이로써 형식문 <span class="arithmatex">\(A\)</span> 가 <strong>PM</strong> 속에서 연역될 수 없다는 것을 보인다.</p>
+<ul>
+<li>즉, "공리<span class="arithmatex">\(\text{}\not\to{}A\to{}G\)</span>" 라는 것이다. 왜냐하면 <span class="arithmatex">\(A\)</span> 가 증명될 수 있다면 <strong>분리규칙에 의하여</strong> <span class="arithmatex">\(G\)</span> 도 증명되버리기 때문이다. 그런데 <span class="arithmatex">\(G\)</span> 가 증명된다면 <strong>PM</strong> 은 모순을 도출하는 체계가 된다. 그러므로 <strong>PM</strong> 의 정합성은 <strong>PM</strong> 자신의 형식적 추론으로 확립될 수 없다.</li>
+</ul>
+</li>
+</ol>
+<p>지금부터 <strong>5가지 논증을 간단하게</strong> 살펴보겠습니다.</p>
+<h4 id="3-1-g">3-(1) 자기 자신이 증명될 수 없다고 주장하는 형식문 <span class="arithmatex">\(G\)</span><a class="headerlink" href="#3-1-g" title="Permanent link">¶</a></h4>
+<p>상위 수학명제 <strong>"괴델수 <span class="arithmatex">\(z\)</span> 를 가진 형식문은 증명할 수 있다."</strong> 를 생각합시다. 이 상위 수학명제는 "<strong>괴델수 <span class="arithmatex">\(z\)</span> 를 가진 형식문을 증명하는 괴델수 <span class="arithmatex">\(x\)</span> 를 가진 형식문 모임(증명)이 존재한다."</strong> 와 같습니다. 그러므로 <strong>"<span class="arithmatex">\(z\)</span> 를 증명할 수 있다"</strong> 라는 상위 수학명제를 <strong><span class="arithmatex">\(z\)</span> 에 대한 증명 <span class="arithmatex">\(x\)</span> 가 존재한다</strong> 고 주장하는 형식문 </p>
+<div class="arithmatex">\[(\exists{}x)\text{Dem}(x,z)\]</div>
+<p>으로 사상시킬 수 있습니다. 그렇다면 <strong>"<span class="arithmatex">\(z\)</span> 를 증명할 수 없다."</strong> 라는 상위 수학명제는 <strong><span class="arithmatex">\(z\)</span> 를 증명하는 형식문 모임 <span class="arithmatex">\(x\)</span> 가 존재하지 않는다</strong> 고 주장하는 형식문</p>
+<div class="arithmatex">\[\sim(\exists{}x)\text{Dem}(x,z)\]</div>
+<p>으로 사상시킬 수 있습니다. 그러면 숫자변항 <span class="arithmatex">\(z\)</span> 에 괴델수 <span class="arithmatex">\(\text{sub}(y,17,y)\)</span> 를 가진 형식문을 대입하여</p>
+<div class="arithmatex">\[S(n):\sim(\exists{}x)\text{Dem}(x,\text{Sub}(y,17,y))\]</div>
+<p>를 만들 수 있습니다. 이 형식문을 <span class="arithmatex">\(S\)</span> 라고 하겠습니다. 형식문 <span class="arithmatex">\(S\)</span> 는 단순히 <strong>"괴델수 <span class="arithmatex">\(\text{sub}(y,17,y)\)</span> 를 가진 형식문은 증명될 수 없다."</strong> 라고 주장합니다. 형식문 <span class="arithmatex">\(S\)</span> 에 대응하는 괴델수를 <span class="arithmatex">\(n\)</span> 이라고 하겠습니다.</p>
+<blockquote>
+<p>"<span class="arithmatex">\(S(n):\)</span>" 은 단순히 형식문과 그 괴델수를 의미하며 실질적인 형식문에 포함되지 않습니다. 가독성을 높히기 위하여 편의상 추가한 것입니다. 콜론(:) 오른쪽 부분부터 실질적인 형식문입니다. </p>
+</blockquote>
+<p>그렇다면 형식문 <span class="arithmatex">\(S\)</span> 의 <strong>숫자변항 <span class="arithmatex">\(y\)</span> 에 괴델수 <span class="arithmatex">\(n\)</span> 을 대입하여 형식문</strong></p>
+<div class="arithmatex">\[G(g):\sim(\exists{}x)\text{Dem}(x,\text{Sub}(n,17,n))\]</div>
+<p><strong>을 만들 수 있습니다. 이 형식문을 <span class="arithmatex">\(G\)</span> 라고 하겠습니다.</strong> 그리고 <strong>형식문 <span class="arithmatex">\(G\)</span> 의 괴델수를 <span class="arithmatex">\(g\)</span> 라고 하겠습니다.</strong></p>
+<p>그런데 이 형식문 <span class="arithmatex">\(G\)</span> 는 괴델수 <span class="arithmatex">\(n\)</span> 을 가진 형식문의 모든 변항 <span class="arithmatex">\(y\)</span> 에 <span class="arithmatex">\(n\)</span> 을 대입하여 만들어졌기 때문에 대입함수 <span class="arithmatex">\(\text{sub}\)</span> 의 정의에 따라 괴델수 <span class="arithmatex">\(\text{sub}(n,17,n)\)</span> 를 가집니다. 그러므로</p>
+<div class="arithmatex">\[g=\text{sub}(n,17,n)\]</div>
+<p>입니다. 그렇다면 놀랍게도 형식문 <span class="arithmatex">\(G\)</span> 는</p>
+<div class="arithmatex">\[G(g):\sim(\exists{}x)\text{Dem}(x,g)\]</div>
+<p>가 되므로 **"괴델수 <span class="arithmatex">\(g\)</span> 를 가진 형식문은 증명될 수 없다.", 즉 "이 명제는 증명될 수 없다." 라고 주장하고 있는 것**입니다. 이 형식문 <span class="arithmatex">\(G\)</span> 는 자기 자신이 증명될 수 없는 형식문이라고 말하고 있는 것이죠.</p>
+<h4 id="3-2-pm-g-pm">3-(2) <strong>PM</strong> 이 정합적 체계라면 형식문 <span class="arithmatex">\(G\)</span> 는 <strong>PM</strong> 에 의하여 증명될 수 없다.<a class="headerlink" href="#3-2-pm-g-pm" title="Permanent link">¶</a></h4>
+<p>이제 우리는 <strong>PM</strong> 이 정합적 체계라면 형식문 <span class="arithmatex">\(G\)</span> 는 증명될 수 없다는 논증에 도착했는데, 이 논증은 매우 쉽습니다. 형식문 <span class="arithmatex">\(G\)</span> 와 그 부정문이 다음과 같은 의미를 가진다는 것만 기억하면 됩니다. </p>
+<table>
+<thead>
+<tr>
+<th align="center">형식문</th>
+<th align="center">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(G\)</span></td>
+<td align="center"><span class="arithmatex">\(G\)</span> 는 증명되지 않는다.</td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\sim{}G\)</span></td>
+<td align="center"><span class="arithmatex">\(G\)</span> 는 증명된다.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>만약 형식문 <span class="arithmatex">\(G\)</span> 가 증명된다면 <strong>"<span class="arithmatex">\(G\)</span> 는 증명된다."</strong> 고 말한 부정문 <span class="arithmatex">\(\sim{}G\)</span> 이 증명된다.</p>
+</li>
+<li>
+<p>반대로 <strong>"<span class="arithmatex">\(G\)</span> 는 증명된다."</strong> 고 말한 부정문 <span class="arithmatex">\(\sim{}G\)</span> 이 증명된다면 <span class="arithmatex">\(G\)</span> 가 증명되는 것이다.</p>
+</li>
+</ul>
+<p>그러므로 우리는 <strong>형식문 <span class="arithmatex">\(G\)</span> 가 그 부정문 <span class="arithmatex">\(\sim{}G\)</span> 이 증명될 경우에만 증명된다</strong> 는 결론을 얻습니다. 그런데 어떤 형식문과 그 부정문이 동시에 연역되면 그 형식 체계는 부정합 체계입니다. 따라서 우리는 <strong>PM 이 정합적 체계라면 형식문 <span class="arithmatex">\(G\)</span> 와 <span class="arithmatex">\(\sim{}G\)</span> 가 둘 다 PM 에 의하여 증명될 수 없다</strong> 는 결론에 도달합니다.</p>
+<h4 id="3-3-g">3-(3) 형식문 <span class="arithmatex">\(G\)</span> 는 증명될 수 없지만 참이다.<a class="headerlink" href="#3-3-g" title="Permanent link">¶</a></h4>
+<p>하지만 <strong>"나는 한동대생이다."</strong> 와 그 부정문 <strong>"나는 한동대생이 아니다."</strong> 중에서 단 하나만 올바른 명제가 되어야 하듯이 <strong>형식문 <span class="arithmatex">\(G\)</span> 와 부정문 <span class="arithmatex">\(\sim{}G\)</span> 은 둘 중 하나만 옳아야 합니다.</strong> </p>
+<blockquote>
+<p>이것을 <a href="https://ko.wikipedia.org/wiki/%EB%B0%B0%EC%A4%91%EB%A5%A0">배중률(Law of excluded middle)</a> 이라고 합니다.</p>
+</blockquote>
+<p>그런데 <span class="arithmatex">\(G\)</span> 와 <span class="arithmatex">\(\sim{}G\)</span> 가 둘 다 <strong>PM 에 의하여</strong> 증명될 수 없으므로 둘 중 무엇이 올바른지 알 수 없을 것만 같습니다. 하지만 이것을 밝히는 일은 생각보다 매우 간단하며 다음과 같이 수학명제에 <strong>관하여</strong> 언급하는 <strong>상위 수학명제들에 의하여</strong> 증명될 수 있습니다.</p>
+<ul>
+<li>
+<p>형식문 <span class="arithmatex">\(G\)</span> 의 상위 수학명제로써의 의미는 "<strong>PM</strong> 속에 <span class="arithmatex">\(G\)</span> 의 증명이 없다." 이다.</p>
+</li>
+<li>
+<p>그런데 우리는 방금전에 <strong>3-(2)</strong> 에서 "<strong>PM</strong> 이 정합적 체계라면 <span class="arithmatex">\(G\)</span> 가  <strong>PM</strong> 에 의하여 증명될 수 없다" 는 것을 밝혔는데, 이것이 바로 <span class="arithmatex">\(G\)</span> 가 주장하는 것이다.</p>
+</li>
+<li>
+<p>그러므로 <strong>PM 이 정합적 체계라는 가정 하에서 형식문 <span class="arithmatex">\(G\)</span> 는 참이다.</strong></p>
+</li>
+</ul>
+<p>또한 이로써 <strong>어떤 명제들은 공리 체계의 공리와 추론 규칙에 의하여 증명될 수 없고 그것에 관하여 언급하는 상위 논증을 통하여 증명된다</strong> 는 것을 알 수 있습니다.</p>
+<h4 id="3-4-pm-pm-1">3-(4) 그러므로 <strong>PM</strong> 이 정합적 체계라면 <strong>PM</strong> 은 불완전체계이다. (제 1 불완전성 정리)<a class="headerlink" href="#3-4-pm-pm-1" title="Permanent link">¶</a></h4>
+<p>드디어 우리는 괴델의 제 1 불완전성 정리의 증명에 도달했습니다. 그런데 여기까지 잘 따라왔다면 이 증명은 허무하리만치 너무 쉽습니다.</p>
+<ul>
+<li>
+<p>어떤 체계가 완전 체계라는 것은 그 체계에 의하여 표현될 수 있는 올바른 명제들이 그 공리와 추론규칙에 의하여 형식적으로 연역될 수 있다는 것이다. </p>
+</li>
+<li>
+<p>그런데 <strong>PM</strong> 이 정합적 체계라면 형식문 <span class="arithmatex">\(G\)</span> 는 <strong>PM</strong> 속에서 형식적으로 연역될 수 없다.</p>
+</li>
+<li>
+<p>그럼에도 불구하고 <span class="arithmatex">\(G\)</span> 는 참인 명제이다.</p>
+</li>
+<li>
+<p>그러므로 <strong>PM 이 정합적 체계라면 PM 은 불완전 체계이다.</strong> </p>
+</li>
+</ul>
+<p>이로써 <strong>제 1 불완전성 정리가 증명되었습니다.</strong> </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>이뿐 아니라 <strong>PM</strong> 이 불완전 체계인 것은 우연히 그렇게 된 것이 아니고 본질적으로 불완전하기 때문에 불완전 체계가 된 것입니다. 가령 형식문 <span class="arithmatex">\(G\)</span> 를 증명하기 위하여 공리와 추론규칙을 추가한다고 하더라도 또 다시 참이면서 증명할 수 없는 또 다른 형식문 <span class="arithmatex">\(G'\)</span> 가 탄생합니다.</p>
+<p>왜냐하면 또 다른 공리와 추론규칙이 추가된 체계에서의 증명 개념은 <strong>PM</strong> 보다 더 복잡할 것이지만, 그것으로 새로운 증명함수 <span class="arithmatex">\(\text{dem}'(x,z)\)</span> 로 표현할 수 있고, <strong>PM</strong> 에서 참이면서 형식적으로 결정될 수 없는 형식문 <span class="arithmatex">\(G\)</span> 를 만든 방식과 똑같은 방식으로 새로운 형식문 <span class="arithmatex">\(G'\)</span> 를 만들 수 있기 때문입니다.</p>
+<p>이렇게 공리와 추론규칙을 끝없이 추가한다고 하더라도 끝없이 참이지만 증명할 수 없는 형식문 <span class="arithmatex">\(G'',G''',G'''',\dots\)</span> 들이 탄생하게 됩니다. 이것이 <strong>PM</strong> 이 본질적으로 불완전 체계라는 의미입니다.</p>
+<p>이 사실은 수학자들에게 청천벽력이었습니다. 왜냐하면 이것은 <strong>PM</strong> 에만 적용되는 것이 아니라 러셀의 『수학 원리』 를 비롯하여 자연수의 덧셈과 곱셈같은 자연수의 기본속성을 포괄할 수 있는 모든 공리 체계에 적용되었기 때문입니다. </p>
+<p>이로써 수학을 완전한 연역 체계로 만들어서 완전 체계로 만들려는 꿈은 산산조각이 났고, 수천년전 고대 그리스로부터 내려오던 공리적 방식에 대한 믿음이 철저하게 배신당했습니다. 왜냐하면 모든 산술학적 진리를 <strong>PM</strong> 의 공리와 추론 규칙으로 연역할 수 없다는 것이 드러났기 때문입니다. 그런데 모든 수학 분야(기하학, 해석학 등)가 산술에 기초를 두고 있으므로 결국 모든 수학의 사실들을 그 체계의 공리와 추론규칙으로 연역할 수 없다는 것이 드러난 것입니다. 결론적으로 이것은 수학적 사고의 본질이 순수하게 형식화된 공리적인 추론이 아니었다는 것을 알려주었습니다.</p>
+<p>또한 이 사실은 수학의 본질이란 순수하게 형식적인 공리적 추론이 아니었다는 것이었다. </p>
+<p>괴델은 <span class="arithmatex">\(PM\)</span> 이 본질적으로 불완전 체계라는 것을 보였지만 이것은 정수를 설명할 수 있는 공리를 갖춘 체계에 모조리 적용되었다. 그런데 수학자들이 비유클리드 기하학의 정합성을 확립하기 위하여 유클리드 기하학에 의존했던 것을 기억하라. 그리고 수학자들은 또 다시 유클리드 기하학의 정합성을 확립하기 위하여 수론의 정합성에 의존했다. 하지만 수학자들은 걱정하지 않았다. 왜냐하면 수론만큼은 굳게 믿었기 때문이다. 하지만 수론은 불완전체계였다.</p>
+<p>해석학, 미적분학, 통계학, 확률론 같은 분야들의 정합성 또한 그 체계들이 정수의 기본 속성을 설명할 수 있을만큼 포괄적이므로 불완전체계임이 당연하다. </p>
+</div>
+<h4 id="3-5-pm-pm-2">3-(5) "<strong>PM</strong> 은 정합적 체계이다." 라는 주장은 <strong>PM</strong> 의 체계로는 증명할 수 없다. (제 2 불완전성 정리)<a class="headerlink" href="#3-5-pm-pm-2" title="Permanent link">¶</a></h4>
+<p>이제 우리는 <strong>"PM 이 정합적 체계이면 PM 은 불완전 체계이다."</strong> 라는 상위 수학명제를 얻었습니다. 이 상위 수학명제를 <span class="arithmatex">\(B\)</span> 라고 하겠습니다. 이때 <span class="arithmatex">\(B\)</span> 의 조건절 <strong>"PM 은 정합적 체계이다."</strong> 를 명제 <span class="arithmatex">\(A\)</span> 로 표현하고, <span class="arithmatex">\(B\)</span> 의 귀결절 <strong>"PM 은 불완전 체계이다."</strong> 를 명제 <span class="arithmatex">\(X\)</span> 로 표현하겠습니다. 그렇다면 <span class="arithmatex">\(B\)</span> 를 <span class="arithmatex">\(A\to{}X\)</span> 으로 표현할 수 있습니다. </p>
+<ul>
+<li>
+<p><strong><span class="arithmatex">\(B\)</span> 의 조건절 명제 <span class="arithmatex">\(A\)</span> "PM 은 정합적 체계이다." 를 형식문으로 사상시키기</strong></p>
+<p>그런데 상위 수학명제 <span class="arithmatex">\(A\)</span> 는 매우 쉽게 <strong>PM</strong> 속의 형식문으로 사상될 수 있습니다. 왜냐하면 <strong>PM</strong> 이 정합적 체계라는 것은 <strong>"PM 속에 증명될 수 없는(형식적으로 연역될 수 없는) 형식문이 적어도 하나 있다."</strong> 라는 상위 수학명제와 같기 때문입니다. </p>
+<p>이 진술은 <strong>"어떤 <span class="arithmatex">\(x\)</span> 와도 <span class="arithmatex">\(\text{dem}\)</span> 함수 관계를 맺지 못하는 괴델수 <span class="arithmatex">\(y\)</span> 가 적어도 하나 있다."</strong> 라는 수학명제로 사상됩니다. 쉽게 말해서 증명에 해당하는 괴델수 <span class="arithmatex">\(x\)</span> 가 없는 <span class="arithmatex">\(y\)</span> 가 존재한다는 말입니다.</p>
+<p>그렇다면 이 상위 수학명제 <span class="arithmatex">\(A\)</span> 는 <strong>"괴델수 <span class="arithmatex">\(y\)</span> 가 존재하는데, <span class="arithmatex">\(y\)</span> 는 증명에 해당하는 괴델수 <span class="arithmatex">\(x\)</span> 가 없는 괴델수야."</strong> 라고 주장하는 수학명제 </p>
+<div class="arithmatex">\[A:(\exists y)\sim(\exists x)\text{Dem}(x,y)\]</div>
+<p>으로 표현할 수 있습니다.</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(B\)</span> 의 귀결절 명제 <span class="arithmatex">\(X\)</span> "PM 은 불완전 체계이다." 를 형식문으로 사상시키기</strong></p>
+<p>상위 수학명제 <span class="arithmatex">\(X\)</span> 도 매우 쉽게 <strong>PM</strong> 속의 형식문으로 사상시킬 수 있습니다. 왜냐하면 <strong>"PM 은 불완전 체계이다."</strong> 라는 것은 <strong>올바르지만 증명될 수 없는 형식문 <span class="arithmatex">\(T\)</span> 에 대하여 "<span class="arithmatex">\(T\)</span> 는 PM 의 정리가 아니다." 라고 말하는 것</strong> 과 같기 때문입니다. </p>
+<p>그런데 우리는 형식문 <span class="arithmatex">\(T\)</span> 를 너무 잘 알고 있습니다. <strong><span class="arithmatex">\(T\)</span> 는 올바르지만 증명될 수 없는 형식문이기 때문에 지금까지 우리가 다뤄왔던 형식문 <span class="arithmatex">\(G\)</span> 입니다.</strong> 그러므로 "PM 은 불완전 체계이다." 라는 것은 <strong>"<span class="arithmatex">\(G\)</span> 는 **PM</strong> 의 정리가 아니다."** 와 같습니다. </p>
+<p>그런데 놀랍게도 <strong>형식문 <span class="arithmatex">\(G\)</span> 가 주장하는 것이 **"<span class="arithmatex">\(G\)</span> 는 증명될 수 없다."</strong> , 즉 <span class="arithmatex">\(G\)</span> 는 <strong>PM</strong> 의 정리가 아니라는 것** 이기 때문에 <strong>상위 수학명제 <span class="arithmatex">\(X\)</span> 는 곧 <span class="arithmatex">\(G\)</span> 입니다.</strong></p>
+<blockquote>
+<p>정리란 공리로부터 연역된 형식문, 즉 공리와 추론규칙을 통해 증명된 형식문임을 기억하세요. 따라서 증명될 수 없는 형식문은 정리가 아닙니다.</p>
+</blockquote>
+</li>
+</ul>
+<p>그러므로 우리가 얻은 상위 수학명제 <span class="arithmatex">\(B\)</span> <strong>"PM 이 정합적 체계이면 PM 은 불완전 체계이다."</strong> 를 완벽하게 순수한 수학명제 <span class="arithmatex">\(A\to{}G\)</span> 로 사상시킬 수 있습니다. 즉, 형식문</p>
+<div class="arithmatex">\[(\exists{}y)\sim(\exists{}x)\text{Dem}(x,y)\to\sim(\exists{}x)\text{Dem}(x,\text{Sub}(n,17,n))\]</div>
+<p>로 사상시킬 수 있는 것입니다. 이제 제 2 불완전성 정리를 증명하는 일만 남았는데, 여기까지 잘 따라왔다면 마찬가지로 매우 쉽습니다. </p>
+<ul>
+<li>
+<p>만약 <strong>PM</strong> 속에서 <span class="arithmatex">\(A\)</span> 가 증명될 수 있다면 <strong>분리규칙에 의하여</strong> <span class="arithmatex">\(G\)</span> 도 증명된다. </p>
+</li>
+<li>
+<p>그런데 <strong>PM</strong> 이 정합적 체계라면 <span class="arithmatex">\(G\)</span> 는 형식적으로 결정될 수 없어야 한다. 즉, <span class="arithmatex">\(G\)</span> 는 <strong>PM</strong> 에 의하여 증명될 수 없어야 한다.</p>
+</li>
+<li>
+<p>그러므로 <strong>PM</strong> 이 정합적 체계라면 <span class="arithmatex">\(A\)</span> 는 <strong>PM</strong> 에 의하여 증명될 수 없다.</p>
+</li>
+</ul>
+<p>결론적으로 "<strong>PM 은 정합적 체계이다.</strong>" 라고 말하는 <span class="arithmatex">\(A\)</span> 는 <strong>PM</strong> 에 의하여 증명될 수 없는 것입니다. <strong>이로써 제 2 불완전성 정리가 증명되었습니다.</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>이로써 우리는 <strong>PM</strong> 이 정합적 체계라면 <strong>PM</strong> 의 정합성이 <strong>PM</strong> 에 사상될 수 있는 그 어떠한 상위 수학적 추론으로도 증명될 수 없다는 결론에 도달합니다. 왜냐하면 <strong>PM</strong> 의 정합성에 대한 증명이 <strong>PM</strong> 의 수학명제로 환원된다면 그것은 $A) 를 증명하는 꼴이 되고 결국 $G) 도 증명하는 꼴이 되며 최종적으로 <strong>PM</strong> 에 정합성이 없다는 말이 되기 때문입니다. 하지만 <strong>3-(3)</strong> 에서 $G) 가 <strong>PM 에 의해서가 아니라 상위 수학적 추론에 의하여</strong> 참이라는 것이 증명된 것처럼 <strong>PM 의 정합성도 PM 으로 사상되지 않는 상위 수학적 추론에 의하여</strong> 증명될 수 있습니다.</p>
+<p>실제로 <strong>PM</strong> 과 관련 체계들의 정합성을 확립하는 상위 수학적 증명은 1936년 겐첸에 의하여 이루어졌고, 이후 다른 수학자들에 의해서도 이루어졌습니다. 겐첸은 <strong>PM</strong> 의 모든 증명을 "단순성" 의 정도에 따라 선형 순서로 배열한 다음 이 선형 순서에 "초한 귀납 원리" 라는 추리 규칙을 적용하여 <strong>PM</strong> 의 정합성을 증명했습니다. 이 논증은 <strong>PM</strong> 속으로 사상될 수 없는 것이었습니다. 겐첸의 상위 수학적 증명은 수학에서 매우 중요한데, 그 증명이 새로운 형태의 상위 수학적 체계를 보여주었고, 그 상위 수학적 체계가 <strong>PM</strong> 과 관련 체계의 정합성을 확립하기 위하여 추론 규칙을 어떻게 확장해야 하는지 보여주었기 때문입니다.</p>
+</div>
+<h3 id="_22">불완전성 정리의 의미<a class="headerlink" href="#_22" title="Permanent link">¶</a></h3>
+<p>이로써 괴델은 공리와 추론규칙으로 형식적으로 연역될 수 없지만 올바른 산술학적 진리가 무수히 많다는 것을 보였습니다. 이 사실은 유클리드가 시작하였고 고대 그리스로부터 1900년대까지 내려오던 <strong>"공리적 방식" 으로 수학을 연구한다면 수학의 본질을 완전히 해명할 수 없다는 혁명적이고 충격적인 결론</strong> 을 알려주었습니다.</p>
+<p>또 이 사실은 <strong>인간이 수학을 이해하는 방식이 형식화된 공리적 방법처럼 미리 정의된 명확한 공리와 변형규칙으로부터 결론에 도달하는 것과 일치하지 않는다</strong> 는 인공지능 연구자들에게도 중요한 사실을 알려주었습니다. 인간의 지능은 완전히 형식화될 수 없을만큼 깊이 있는 것입니다. </p>
+<p>나중에 살펴보겠지만 이 불완전성 정리에서 아이디어를 얻어서 튜링이 튜링기계를 만들고 그것이 결국 컴퓨터가 되었습니다. <strong>컴퓨터와 프로그램은 유한개의 명령을 따라 작동하는 기계인데, 이 유한개의 명령은 형식화된 공리 체계에서 사용하는 한정된 수의 공리와 추리 규칙에 해당합니다.</strong> 그런데 괴델의 불완전성 정리는 일정한 틀 속에서만 움직이는 공리적 방법으로는 해결할 수 없는 문제가 무수히 많다는 것을 알려주었고, <strong>프로그램이란 PM 속에서 진행하는 형식적 논증이기 때문에</strong> 프로그램으로는 모든 문제를 해결하고 자동화할 수 없다는 것을 알 수 있습니다.</p>
+<ul>
+<li>
+<p>괴델의 결론은 힐베르트가 제안한 모든 연역 체계의 정합성을 유한한 절차로 절대적 증명을 이루는 것이 불가능하지는 않지만 실제로는 거의 불가능하다는 것을 밝혔다. </p>
+<ul>
+<li>
+<p>괴델의 결론은 『수학 원리』 같은 형식적 체계의 정합성에 대한 유한한 단계의 증명이 <span class="arithmatex">\(PM\)</span> 속에 사상될 수 없다는 것을 밝힌 것이다. </p>
+</li>
+<li>
+<p>괴델의 결론은 『수학 원리』 같은 형식적 체계의 정합성을 유한한 단계로 확립하려는 절대적 증명을 불가능하다고 말하지는 않는다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>또한 괴델은 일련의 공리와 추리 규칙으로 형식적으로 연역될 수 없지만 올바른 산술학적 진리가 무수히 많다는 것도 밝혔다. </p>
+<ul>
+<li>
+<p>그러므로 고대 그리스 때로부터 1900년대까지 내려오던 "공리적 방법" 으로 수론을 연구하면 수론의 진리의 본질적 특성을 완전히 해명할 수 없다는 <strong>혁명적이고 충격적인 결론</strong> 에 도달하게 된다. </p>
+</li>
+<li>
+<p>또한 그러므로 타당한 수학적 증명의 정확한 논리적 형식에 대한 최종적인 설명은 있을 수 없었다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>그리고 이 결론은 <strong>우리가 수학을 이해하는 방식이 형식화된 공리적 방법처럼 미리 정의된 명확한 공리와 변형 규칙으로부터 결론에 도달하는 것과 일치하지 않는다</strong> 는 인공지능 연구자들에게도 중요한 사실을 알려준다.</p>
+<ul>
+<li>즉 어떠한 제약도 수학자들이 증명을 위한 새로운 규칙을 고안할 때의 창의력을 제한할 수 없었다. </li>
+</ul>
+</li>
+<li>
+<p>또 괴델의 결론은 인간의 지능과 같은 혹은 더 뛰어난 수학적 지능을 가진 컴퓨터가 만들어질 수 있는가 라는 문제와도 관련이 있다. </p>
+<ul>
+<li>
+<p>오늘날의 계산기와 컴퓨터는 유한개의 명령을 따라 작동하는 기계인데, 이 유한개의 명령은 형식화된 공리적 절차에서 사용되는 한정된 수의 추리 규칙에 해당한다. </p>
+</li>
+<li>
+<p>하지만 괴델의 불완전성 정리는 일정한 틀 속에서만 움직이는 공리적 방법으로는 해결할 수 없는 문제가 무수히 많다는 것을 알려준다. </p>
+</li>
+<li>
+<p>그러므로 가까운 미래에서는 인간 정신을 로봇이 대신할 가능성은 없다고 할 수 있다. </p>
+</li>
+</ul>
+<blockquote>
+<h4 id="_23">하지만 이 결론은 심지어 이 책의 개정판을 작업한 더글러스에 의해서도 곧바로 뒤집혔다. 또한 빌 조이와 레이 거즈와일 같은 현대의 컴퓨터 과학자들은 컴퓨터가 인간 지능을 초월하는 순간인 기술적 특이점을 강력한 여러 증거로 주장하고 있다.<a class="headerlink" href="#_23" title="Permanent link">¶</a></h4>
+</blockquote>
+</li>
+<li>
+<p>하지만 괴델의 증명은 우리가 형식적으로 증명될 수 없는 진리를 영원히 알 수 없거나 다른 신비로운 직관이 승인해야만 하는 것을 의미하며 우리를 절망에 빠뜨리는 것이 아니라 </p>
+<p>오히려 인간 지성의 창의력은 완전히 형식화되지 않았고, 또 형식화 될 수도 없으며, 수학에서는 새로운 증명의 원리가 발견되거나 발명되길 기다리고 있다는 것을 의미한다. </p>
+<ul>
+<li>우리는 앞서 <span class="arithmatex">\(PM\)</span> 의 정합성이 형식적 절차가 아닌 비형식적인 절차로 이루어지는 것을 보았는데, 이 비형식적 상위 수학적 추론이 오로지 직관에 근거를 두고 있다는 말은 무책임한 말일 것이다. </li>
+</ul>
+</li>
+<li>
+<p>이뿐 아니라 컴퓨터가 인간의 이성을 대신할 가능성이 전혀 없다는 뜻이 아니라 괴델의 불완전성 정리로 인간의 정신 구조가 생각보다 훨씬 더 정교하고 더 복잡하다는 것을 알게 된 것이므로 </p>
+<p>인간의 창조적 이성의 힘을 인정하고 다시 나아가야 할 것이다. </p>
+</li>
+</ul>
+<blockquote>
+<p>프로그램도 자연 대상을 수학 명제로 사상시킨 것이 아닐까? 그렇다면 프로그램은 공리체계에서의 연역 정리들인가?</p>
+</blockquote>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

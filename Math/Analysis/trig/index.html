@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Analysis/trig/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>삼각함수 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              삼각함수
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          삼각함수
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        삼각함수
+      </a>
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    도형
+  </a>
+<nav aria-label="도형" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    각
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    다각형
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    원
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    부채꼴 원
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    삼각비
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    삼각함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    삼각함수의 특수각
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    삼각함수의 성질
+  </a>
+<nav aria-label="삼각함수의 성질" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    삼각함수의 주기와 대칭성
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    삼각방정식과 삼각부등식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    삼각형과 삼각함수와의 관계
+  </a>
+<nav aria-label="삼각형과 삼각함수와의 관계" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    사각형과 삼각함수와의 관계
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    삼각함수의 덧셈정리
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    삼각함수의 합성
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    도형
+  </a>
+<nav aria-label="도형" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    각
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    다각형
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    원
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    부채꼴 원
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    삼각비
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    삼각함수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    삼각함수의 특수각
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    삼각함수의 성질
+  </a>
+<nav aria-label="삼각함수의 성질" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    삼각함수의 주기와 대칭성
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    삼각방정식과 삼각부등식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    삼각형과 삼각함수와의 관계
+  </a>
+<nav aria-label="삼각형과 삼각함수와의 관계" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    사각형과 삼각함수와의 관계
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    삼각함수의 덧셈정리
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    삼각함수의 합성
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>삼각함수</h1>
+<h2 id="_1">도형<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<a href="#7bf5c71b4"><div class="admonition tldr" id="7bf5c71b4">
+<p>점 : (원론) 쪼갤 수 없는 것이다.</p>
+</div></a>
+<a href="#171ca7596"><div class="admonition tldr" id="171ca7596">
+<p>선 : (원론) 폭이 없이 길이만 있는 것이다.</p>
+</div></a>
+<a href="#14e6ab97b"><div class="admonition tldr" id="14e6ab97b">
+<p>직선 : 곧게 뻗은 선을 추상화한 개념이다. (원론) 점들이 곧게 있는 것이다.</p>
+</div></a>
+<a href="#decb2efac"><div class="admonition tldr" id="decb2efac">
+<p>선분 : 양쪽에 끝나는 점이 있는 직선의 부분이다.</p>
+</div></a>
+<a href="#9a588a2d3"><div class="admonition tldr" id="9a588a2d3">
+<p>면 : (원론) 길이와 폭만 있는 것이다.</p>
+</div></a>
+<a href="#11e77ab1b"><div class="admonition tldr" id="11e77ab1b">
+<p>둘레(경계) : 도형의 경계의 길이를 뜻한다. (원론) 어떤 것의 끝이다.</p>
+</div></a>
+<a href="#13de6bed3"><div class="admonition tldr" id="13de6bed3">
+<p>도형 : 점(0), 선(1), 면(2), 입체(3), 초입방체(n) 의 집합이다. (원론) 둘레나 둘레들에 둘러싸인 것이다.</p>
+</div></a>
+<a href="#6db84e287"><div class="admonition tldr" id="6db84e287">
+<p>반직선 : 점 하나에서 시작하여 한 방향으로 무한히 뻗어 나가는 선이다.</p>
+</div></a>
+<h3 id="_2">각<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<a href="#f89b451c4"><div class="admonition tldr" id="f89b451c4">
+<p>각 : 같은 끝점을 갖는 두 반직선이 이루는 도형이다.</p>
+</div></a>
+<ul>
+<li>즉 반직선과 반직선이 맞붙었을 때 꼭짓점(맞붙은 점) 안팎에서 생기는 공간이다.</li>
+</ul>
+<a href="#5bd61acf3"><div class="admonition tldr" id="5bd61acf3">
+<p>각도 : 각을 이루는 두 반직선이 서로 기운 정도이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 반직선과 반직선 사이에 생긴 공간의 크기이다. </p>
+</li>
+<li>
+<p>가장 큰 각 : 두 반직선 사이의 공간을 계속 늘리면 두 반직선이 언젠가 맞닿게 되는데 그때 생긴 각이 가장 큰 각이다.</p>
+</li>
+</ul>
+<a href="#6c246e0b6"><div class="admonition tldr" id="6c246e0b6">
+<p>육십분법 : 가장 큰 각을 <span class="arithmatex">\(360\)</span> 등분하여 얻은 각도를 <span class="arithmatex">\(1\degree\)</span>(<span class="arithmatex">\(1\)</span>도) 라 부르는 각 크기 표현 방식이다.</p>
+</div></a>
+<ul>
+<li>가장 일반적으로 각의 크기를 표현할 때 사용하는 방식이다.</li>
+</ul>
+<a href="#0f885b42e"><div class="admonition tldr" id="0f885b42e">
+<p>직각 : 크기가 <span class="arithmatex">\(90\degree\)</span> 인 각이다.</p>
+</div></a>
+<ul>
+<li>(원론) 직선에 다른 직선을 세웠을 때 이웃한 각의 크기가 같으면 그 각을 직각이라 부른다.</li>
+</ul>
+<a href="#245ac51a7"><div class="admonition tldr" id="245ac51a7">
+<p>예각 : 크기가 <span class="arithmatex">\(0\degree\)</span> 보다 크고 <span class="arithmatex">\(90\degree\)</span> 보다 작은 각이다.</p>
+</div></a>
+<ul>
+<li>(원론) 직각보다 작은 각이다.</li>
+</ul>
+<a href="#758d9a573"><div class="admonition tldr" id="758d9a573">
+<p>둔각 : 크기가 <span class="arithmatex">\(90\degree\)</span> 보다 크고 <span class="arithmatex">\(180\degree\)</span> 보다 작은 각이다.</p>
+</div></a>
+<ul>
+<li>(원론) 직각보다 큰 각이다. </li>
+</ul>
+<h3 id="_3">다각형<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<a href="#8f42a2000"><div class="admonition tldr" id="8f42a2000">
+<p>다각형 : 직선들로 둘러싼 도형이다.</p>
+</div></a>
+<a href="#36368514c"><div class="admonition tldr" id="36368514c">
+<p>삼각형 : 세 개의 직선으로 둘러싼 도형이다.</p>
+</div></a>
+<a href="#d8e7398c0"><div class="admonition tldr" id="d8e7398c0">
+<p>사각형 : 네 개의 직선으로 둘러싼 도형이다.</p>
+</div></a>
+<a href="#3a8787ca5"><div class="admonition tldr" id="3a8787ca5">
+<p>넓이(면적) : 영역의 크기를 추상적으로 표현하는 양이다.</p>
+</div></a>
+<h3 id="_4">원<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<a href="#8a4c453bf"><div class="admonition tldr" id="8a4c453bf">
+<p>원 : (원론) 어떤 선에 둘러싸인 도형이 있어서, 한 점에서 그 도형으로 직선을 그었을 때 직선이 모두 같으면 그 도형을 원이라 한다.</p>
+</div></a>
+<a href="#f8021a1ff"><div class="admonition tldr" id="f8021a1ff">
+<p>지름 : 원의 중심을 지나는 직선이다.</p>
+</div></a>
+<a href="#3bcb3e3e1"><div class="admonition tldr" id="3bcb3e3e1">
+<p>반지름 : 원의 중심으로부터 경계에 이르는 선분이다. 지름의 절반이다.</p>
+</div></a>
+<a href="#38589c0e2"><div class="admonition tldr" id="38589c0e2">
+<p>원주 : 원의 둘레를 뜻한다.</p>
+</div></a>
+<ul>
+<li>원주율의 정의에 따라 원주 <span class="arithmatex">\(C\)</span> 는 <span class="arithmatex">\(C=d\pi=2r\pi\)</span> 이다. (<span class="arithmatex">\(r\)</span> 은 반지름)</li>
+</ul>
+<a href="#562be5f0c"><div class="admonition tldr" id="562be5f0c">
+<p>원주율(<span class="arithmatex">\(\pi\)</span>) : 원주와 지름의 비율이다. 즉 원의 지름에 대한 원의 둘레의 비율이다.</p>
+</div></a>
+<ul>
+<li>
+<p>약 <span class="arithmatex">\(3.141592653589793238...\)</span> 의 수이다.</p>
+</li>
+<li>
+<p>원의 지름을 기준으로 했을 때 원의 둘레의 크기의 정도는 <span class="arithmatex">\(3.141592653589793238...\)</span> 라는 것이다. </p>
+</li>
+<li>
+<p>이 비율은 항상 동일하다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\pi\)</span> 라 표기하며 정의에 따라 원주를 <span class="arithmatex">\(C\)</span> 원의 지름을 <span class="arithmatex">\(d\)</span> 라 하면 <span class="arithmatex">\(\pi=\frac{C}{d}\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#a2c972300"><div class="admonition tldr" id="a2c972300">
+<p>원의 넓이 : 원의 크기를 나타내며 <span class="arithmatex">\(r^2\pi\)</span> 이다. (<span class="arithmatex">\(r\)</span> 은 반지름)</p>
+</div></a>
+<h3 id="_5">부채꼴 원<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<a href="#6e7555008"><div class="admonition tldr" id="6e7555008">
+<p>호(<span class="arithmatex">\(arc\)</span>) : 이차원 평면 위의 미분가능한 곡선에서 닫힌 부분이다.</p>
+</div></a>
+<a href="#81192a9d5"><div class="admonition tldr" id="81192a9d5">
+<p>원호(<span class="arithmatex">\(circular arc\)</span>) : 원둘레의 일부분이다.</p>
+</div></a>
+<a href="#1bc3739ac"><div class="admonition tldr" id="1bc3739ac">
+<p>부채꼴(<span class="arithmatex">\(circular sector\)</span>) : 원에서 두 개의 반지름과 하나의 호로 둘러싸인 영역이다. </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Circle_arc.svg/300px-Circle_arc.svg.png"/></p>
+</div></a>
+<a href="#445495cc5"><div class="admonition tldr" id="445495cc5">
+<p>부채꼴의 호의 길이 : 원의 반지름을 <span class="arithmatex">\(r\)</span>, 부채꼴의 중심각을 <span class="arithmatex">\(\theta\)</span> 라 하면 부채꼴의 호의 길이 <span class="arithmatex">\(l\)</span> 은 <span class="arithmatex">\(l = r \theta\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>부채꼴의 중심각을 <span class="arithmatex">\(\theta\)</span> 라디안이라 하고 부채꼴의 호의 길이를 <span class="arithmatex">\(l\)</span> 이라고 하자. </p>
+<p>부채꼴의 호의 길이 <span class="arithmatex">\(l\)</span> 는 중심각의 크기 <span class="arithmatex">\(\theta\)</span> 에 비례하므로 원의 둘레 <span class="arithmatex">\(2 \pi r\)</span> 과의 비례식은 </p>
+<div class="arithmatex">\[ 2 \pi : 2 \pi r = \theta : l \]</div>
+<p>이다. 그러므로 호의 길이 <span class="arithmatex">\(l\)</span> 는</p>
+<div class="arithmatex">\[ \therefore  l = r \theta \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#101d52087"><div class="admonition tldr" id="101d52087">
+<p>부채꼴의 넓이 : 부채꼴의 크기를 나타내며 <span class="arithmatex">\(\frac{1}{2} r ^{2} \theta\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>부채꼴의 중심각을 <span class="arithmatex">\(\theta\)</span> 라디안이라 하고 원의 반지름을 <span class="arithmatex">\(r\)</span> 이라 하자.</p>
+<p>부채꼴의 넓이 <span class="arithmatex">\(S\)</span> 도 중심각 <span class="arithmatex">\(\theta\)</span> 에 비례하므로 원의 넓이 <span class="arithmatex">\(\pi r ^{2}\)</span> 와의 비례식은 </p>
+<div class="arithmatex">\[ 2 \pi : \pi r ^{2} = \theta : S \]</div>
+<p>이다. 그러므로 부채꼴의 넓이 <span class="arithmatex">\(S\)</span> 는 </p>
+<div class="arithmatex">\[ \therefore S = \frac{\pi r ^{2} \theta }{2 \pi } = \frac{1}{2} r ^{2} \theta \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#3739cee19"><div class="admonition tldr" id="3739cee19">
+<p>반원 : 위 그림에서 중심각 <span class="arithmatex">\(\theta\)</span> 가 <span class="arithmatex">\(180 \degree\)</span> 인 부채꼴이다.</p>
+</div></a>
+<a href="#6c246e0b6"><div class="admonition tldr" id="6c246e0b6">
+<p>육십분법 : 가장 큰 각을 <span class="arithmatex">\(360\)</span> 등분하여 얻은 각도를 <span class="arithmatex">\(1\degree\)</span>(<span class="arithmatex">\(1\)</span>도) 라 부르는 각 크기 표현 방식이다.</p>
+</div></a>
+<a href="#5ad9e3049"><div class="admonition tldr" id="5ad9e3049">
+<p>호도법(<span class="arithmatex">\(Radian\)</span>) : 반지름에 대한 호의 비율을 각으로 표현하는 각 크기 표현 방식이다.</p>
+</div></a>
+<ul>
+<li>반지름 <span class="arithmatex">\(r\)</span> 인 원에 어떤 부채꼴이 있을 때 이 부채꼴의 중심각 <span class="arithmatex">\(\theta\)</span> 이 마주보는 호의 길이를 <span class="arithmatex">\(l\)</span> 이라고 하자. 그러면 중심각 <span class="arithmatex">\(\theta\)</span> 의 라디안 값은 반지름에 대한 호의 비율 <span class="arithmatex">\(l/r\)</span> 이다. </li>
+</ul>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Circle_radians.gif/220px-Circle_radians.gif"/></p>
+<ul>
+<li>
+<p>반지름의 길이 <span class="arithmatex">\(r\)</span> 과 같은 호의 길이 <span class="arithmatex">\(r\)</span> 로 이루어진 부채꼴의 중심각 <span class="arithmatex">\(\theta\)</span> 가 <span class="arithmatex">\(1\)</span> 라디안이 된다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(360 \degree\)</span> 는 반지름에 대한 원둘레의 비율이므로 <span class="arithmatex">\(2 \pi\)</span> 라디안이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(1 \degree\)</span> 는 <span class="arithmatex">\(2 \pi\)</span> 라디안을 <span class="arithmatex">\(360\)</span> 등분한 것이므로 <span class="arithmatex">\((\pi/180)\)</span> 라디안이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(1\)</span> 라디안은 <span class="arithmatex">\(360 \degree\)</span> 를 <span class="arithmatex">\(2\pi\)</span> 등분한 것이므로 <span class="arithmatex">\((180/\pi) \degree\)</span> 이다. </p>
+</li>
+<li>
+<p>라디안은 길이와 길이의 비율로 정의되므로 무차원 수이며, 이에 따라 단위(차원)가 없는 순수한 수로 표현할 수 있기 때문에 수학적 기술이 용이해져 육십분법보다 자주 쓰인다. </p>
+</li>
+<li>
+<p>원주율의 단위도 라디안이다.</p>
+</li>
+</ul>
+<a href="#f3b374714"><div class="admonition tldr" id="f3b374714">
+<p>새로운 원주율(<span class="arithmatex">\(\tau\)</span>) : 라디안을 사용할 때 현재 사용하고 있는 원주율(<span class="arithmatex">\(\pi\)</span>) 가 라디안의 정의와 <span class="arithmatex">\(\frac{1}{2}\)</span> 차이가 나서 부자연스럽기 때문에 <span class="arithmatex">\(\pi\)</span> 에 <span class="arithmatex">\(2\)</span> 를 곱한 값을 사용하자고 주장된 원주율 <span class="arithmatex">\(\tau\)</span>(타우) 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>라디안은 **반지름**에 대한 호의 비로 정의되는데 원주율 <span class="arithmatex">\(\pi\)</span> 은 **지름**에 대한 원주의 비로 정의되기에 부자연스럽다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\tau = 2 \pi = 6.283185...\)</span> 의 값이다. </p>
+</li>
+<li>
+<p>타우 <span class="arithmatex">\(\tau\)</span> 를 사용하면 원주의 길이가 <span class="arithmatex">\(\tau r\)</span>, 원의 넓이가 <span class="arithmatex">\(\frac{1}{2}\tau r^2\)</span> 이 되고 이것이 훨씬 더 직관적이다. </p>
+</li>
+<li>
+<p>라디안에서 타우 <span class="arithmatex">\(\tau\)</span> 를 사용하면 한 바퀴가 <span class="arithmatex">\(\tau\)</span> 가 되고 삼각함수 <span class="arithmatex">\(\sin, \cos\)</span> 의 한 주기도 <span class="arithmatex">\(\tau\)</span> 가 된다. </p>
+</li>
+</ul>
+<blockquote>
+<p>하지만 원주율 <span class="arithmatex">\(\pi\)</span> 를 새로운 원주율 <span class="arithmatex">\(\tau\)</span> 로 바꾸는 효용보다 비용이 더 커서 아마 바뀌지 않을 거라고 예상된다. 사람은 최대이익과 최소비용의 방향으로 행동을 택하기 때문이다. 물론 <span class="arithmatex">\(\tau\)</span> 를 사용함에 있어서 그 효용이 막대하게 커지는 요인이 발생한다면 이야기는 달라질 것이다. </p>
+</blockquote>
+<h3 id="_6">삼각비<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<a href="#d062036ff"><div class="admonition tldr" id="d062036ff">
+<p>삼각법(trigonometry) : 삼각형의 변과 각 사이의 관계에 따른 여러가지 도형을 연구하는 수학의 한 분과이다.</p>
+</div></a>
+<a href="#1870f2931"><div class="admonition tldr" id="1870f2931">
+<p>삼각비(trigonometric ratio) : 직각삼각형의 두 변의 길이의 비례 관계를 나타내는 값이다.</p>
+</div></a>
+<ul>
+<li>
+<p>삼각비는 직각삼각형의 빗변은 항상 밑변, 높이와 일정 비율을 유지하고 있음을 보여준다. </p>
+</li>
+<li>
+<p>삼각법을 통해 각도만으로 변의 길이를 비교 계산할 수 있는 편리함이 있었기에 고대로부터 개발되었다. (<strong>수학의 발전 이유 중 하나는 관계에 관한 연구를 계속하는 것으로 한 요소를 밝혀내는 것으로 다른 요소를 알 수 있는 편리함이 있기 때문이다.</strong>)</p>
+</li>
+<li>
+<p>삼각비의 정의역은 <span class="arithmatex">\(0 \degree &lt; x &lt; 90 \degree\)</span> 이다. 따라서 <span class="arithmatex">\(0 \degree\)</span> 와 <span class="arithmatex">\(90 \degree\)</span> 에서는 정의되지 않는다. </p>
+</li>
+</ul>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Trigonometry_triangle.svg/225px-Trigonometry_triangle.svg.png"/></p>
+<a href="#6c103b123"><div class="admonition tldr" id="6c103b123">
+<p>주어진 각을 기준으로 직각삼각형의 특정 부분을 칭하는 방법</p>
+</div></a>
+<ul>
+<li>
+<p>밑변 : 주어진 각을 기준으로 직각삼각형의 직각으로 향하는 선분이다. </p>
+</li>
+<li>
+<p>빗변 : 주어진 각을 기준으로 직각삼각형의 직각으로 향하지 않는 선분이다. </p>
+</li>
+<li>
+<p>높이 : 주어진 각을 기준으로 그 각과 마주보는 선분이다.</p>
+</li>
+</ul>
+<a href="#3d5ee1443"><div class="admonition tldr" id="3d5ee1443">
+<p>사인(<span class="arithmatex">\(sine\)</span>) : 직각 삼각형의 빗변에 대한 높이의 비율이다.</p>
+</div></a>
+<ul>
+<li>위 그림에서 <span class="arithmatex">\(\sin A = \frac{a}{h}\)</span> 이다.</li>
+</ul>
+<a href="#c15a43631"><div class="admonition tldr" id="c15a43631">
+<p>코사인(<span class="arithmatex">\(cosine\)</span>) : 직각 삼각형의 빗변에 대한 밑변의 비율이다.</p>
+</div></a>
+<ul>
+<li>위 그림에서 <span class="arithmatex">\(\cos A = \frac{b}{h}\)</span> 이다.</li>
+</ul>
+<a href="#541f04119"><div class="admonition tldr" id="541f04119">
+<p>탄젠트(<span class="arithmatex">\(tangent\)</span>) : 직각 삼각형의 밑변에 대한 높이의 비율이다.</p>
+</div></a>
+<ul>
+<li>위 그림에서 <span class="arithmatex">\(\tan A = \frac{a}{b}\)</span> 이다.</li>
+</ul>
+<a href="#92ed2d954"><div class="admonition tldr" id="92ed2d954">
+<p>코시컨트(<span class="arithmatex">\(cosecant\)</span>) : 직각 삼각형의 높이에 대한 빗변의 비율이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(sin A\)</span> 의 역수이다. </p>
+</li>
+<li>
+<p>위 그림에서 <span class="arithmatex">\(\csc A = \frac{h}{a}\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#d2efd5fb6"><div class="admonition tldr" id="d2efd5fb6">
+<p>시컨트(<span class="arithmatex">\(secant\)</span>) : 직각 삼각형의 밑변 대한 빗변의 비율이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(cos A\)</span> 의 역수이다. </p>
+</li>
+<li>
+<p>위 그림에서 <span class="arithmatex">\(\csc A = \frac{h}{b}\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#d1786cd5f"><div class="admonition tldr" id="d1786cd5f">
+<p>코탄젠트(<span class="arithmatex">\(cotangent\)</span>) : 직각 삼각형의 높이에 대한 밑변의 비율이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(tan A\)</span> 의 역수이다. </p>
+</li>
+<li>
+<p>위 그림에서 <span class="arithmatex">\(\cot A = \frac{b}{a}\)</span> 이다.</p>
+</li>
+</ul>
+<h3 id="_7">삼각함수<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<a href="#3c7744567"><div class="admonition tldr" id="3c7744567">
+<p>단위원(Unit circle) : 은 반지름의 길이가 <span class="arithmatex">\(1\)</span> 인 원이다.</p>
+</div></a>
+<ul>
+<li>해석기하학에서는 원점 <span class="arithmatex">\((0, 0)\)</span> 을 중심으로 하는 반지름이 <span class="arithmatex">\(1\)</span> 인 원을 뜻한다.</li>
+</ul>
+<a href="#979e41fb9"><div class="admonition tldr" id="979e41fb9">
+<p>삼각함수(trigonometric functions) : 각의 크기를 삼각비로 나타내는 함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>삼각비는 직각삼각형의 세 변의 길이가 각에 대하여 일정한 비율을 유지하는 것을 보여준다. 이러한 각과 비율의 관계를 함수로 나타낸 것이 삼각함수이다. </p>
+</li>
+<li>
+<p>하지만 삼각비에서 육십분법을 사용하는 것과 달리 삼각함수는 라디안으로 나타낸 각을 사용한다.</p>
+</li>
+<li>
+<p>또한 삼각비의 정의역이 <span class="arithmatex">\(0 \degree &lt; x &lt; 90 \degree\)</span> 인 것에 비해 삼각함수의 정의역은 실수집합이 된다.</p>
+</li>
+</ul>
+<a href="#933585536"><div class="admonition tldr" id="933585536">
+<p>삼각함수의 단위원을 통한 정의 : 반지름 <span class="arithmatex">\(r\)</span> 의 길이가 <span class="arithmatex">\(1\)</span> 인 단위원 위의 점 A <span class="arithmatex">\((x, y)\)</span> 가 있다고 하자. 이때 <span class="arithmatex">\(x\)</span> 축과 점 <span class="arithmatex">\(A\)</span> 와 원점을 잇는 직선과의 각을 <span class="arithmatex">\(\theta\)</span> 라고하면 삼각함수를 다음과 같이 정의할 수 있다. </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Circle-trig6.svg/255px-Circle-trig6.svg.png"/></p>
+</div></a>
+<ul>
+<li>
+<p>사인함수(<span class="arithmatex">\(sin\theta\)</span>) : <span class="arithmatex">\(sin\theta = \frac{y}{r}\)</span></p>
+</li>
+<li>
+<p>코사인함수(<span class="arithmatex">\(cos\theta\)</span>) : <span class="arithmatex">\(cos\theta = \frac{x}{r}\)</span></p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Sine_function001.svg/500px-Sine_function001.svg.png"/></p>
+</li>
+<li>
+<p>탄젠트함수(<span class="arithmatex">\(tan\theta\)</span>) : <span class="arithmatex">\(tan\theta = \frac{sin \theta}{cos \theta} = \frac{y}{x}\)</span></p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Tangent.svg/350px-Tangent.svg.png"/></p>
+</li>
+<li>
+<p>코시컨트함수(<span class="arithmatex">\(csc\theta\)</span>) : <span class="arithmatex">\(csc\theta = \frac{1}{\sin \theta} = \frac{r}{y}\)</span></p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Csc_drawing_process.gif/350px-Csc_drawing_process.gif"/></p>
+</li>
+<li>
+<p>시컨트함수(<span class="arithmatex">\(sec\theta\)</span>) : <span class="arithmatex">\(sec\theta = \frac{1}{\cos \theta} = \frac{r}{x}\)</span></p>
+</li>
+<li>
+<p>코탄젠트함수(<span class="arithmatex">\(cot\theta\)</span>) : <span class="arithmatex">\(cot\theta = \frac{1}{\tan \theta} = \frac{x}{y}\)</span></p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Trigonometric_functions.svg/744px-Trigonometric_functions.svg.png"/></p>
+</li>
+</ul>
+<h3 id="_8">삼각함수의 특수각<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<a href="#09428e36b"><div class="admonition tldr" id="09428e36b">
+<p>삼각함수의 특수각 : 삼각함수는 특수한 각에 대하여 다음의 값을 갖는다. </p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"><span class="arithmatex">\(0 \degree\)</span></th>
+<th align="center"><span class="arithmatex">\(\frac{\pi }{6}(30 \degree)\)</span></th>
+<th align="center"><span class="arithmatex">\(\frac{\pi }{4}(45 \degree)\)</span></th>
+<th align="center"><span class="arithmatex">\(\frac{\pi }{3}(60 \degree)\)</span></th>
+<th align="center"><span class="arithmatex">\(\frac{\pi }{2}(90 \degree)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(\sin \theta\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(\frac{1}{\sqrt[]{2}}\)</span></td>
+<td align="center"><span class="arithmatex">\(\frac{\sqrt[]{3}}{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\cos \theta\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(\frac{\sqrt[]{3}}{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(\frac{1}{\sqrt[]{2}}\)</span></td>
+<td align="center"><span class="arithmatex">\(\frac{1}{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\tan \theta\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(\frac{1}{\sqrt[]{3}}\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(\sqrt[]{3}\)</span></td>
+<td align="center"><span class="arithmatex">\(undefined, \pm \infty\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\csc \theta\)</span></td>
+<td align="center"><span class="arithmatex">\(undefined\)</span></td>
+<td align="center"><span class="arithmatex">\(2\)</span></td>
+<td align="center"><span class="arithmatex">\(\sqrt[]{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(\frac{2}{\sqrt[]{3}}\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\sec \theta\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(\frac{2}{\sqrt[]{3}}\)</span></td>
+<td align="center"><span class="arithmatex">\(\sqrt[]{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(2\)</span></td>
+<td align="center"><span class="arithmatex">\(undefined\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\cot \theta\)</span></td>
+<td align="center"><span class="arithmatex">\(undefined\)</span></td>
+<td align="center"><span class="arithmatex">\(\sqrt[]{3}\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(\frac{1}{\sqrt[]{3}}\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+</tr>
+</tbody>
+</table>
+</div></a>
+<h3 id="_9">삼각함수의 성질<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<a href="#d566f53ed"><div class="admonition tldr" id="d566f53ed">
+<p>삼각함수 사이의 관계</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\tan \theta = \dfrac{\sin \theta }{\cos \theta }\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\sin ^2 \theta  + \cos ^2 \theta = 1\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p>반지름 길이가 <span class="arithmatex">\(r\)</span> 인 원에서 사인함수는 <span class="arithmatex">\(\sin \theta = \frac{y}{r}\)</span> 이고 코사인함수는 <span class="arithmatex">\(\cos \theta  = \frac{x}{r}\)</span> 이다. 이때 원의 방정식 <span class="arithmatex">\(x^2 + y^2 = r^2\)</span> 의 <span class="arithmatex">\(x, y\)</span> 를 각각 사인과 코사인에 대하여 풀면 <span class="arithmatex">\(r^2 \sin \theta + r^2 \cos \theta = r^2\)</span> 이므로 </p>
+<div class="arithmatex">\[ \therefore  \sin ^2 \theta  + \cos ^2 \theta = 1\]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(1 + \tan ^{2} \theta = \sec ^{2} \theta\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[\sin ^2 \theta  + \cos ^2 \theta = 1 \]</div>
+<div class="arithmatex">\[ \iff \]</div>
+<div class="arithmatex">\[\frac{1}{\cos ^{2} \theta}(\sin ^2 \theta  + \cos ^2 \theta) = \frac{1}{\cos ^{2} \theta} \]</div>
+<div class="arithmatex">\[ \iff \]</div>
+<div class="arithmatex">\[ \therefore \tan ^{2} \theta + 1 = \sec ^{2} \theta\]</div>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(1 + \cot ^{2} \theta = \csc ^{2} \theta\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[\sin ^2 \theta  + \cos ^2 \theta = 1 \]</div>
+<div class="arithmatex">\[ \iff \]</div>
+<div class="arithmatex">\[\frac{1}{\sin ^{2} \theta}(\sin ^2 \theta  + \cos ^2 \theta) = \frac{1}{\sin ^{2} \theta} \]</div>
+<div class="arithmatex">\[ \iff \]</div>
+<div class="arithmatex">\[ \therefore 1 + \cot ^{2} \theta = \csc ^{2} \theta\]</div>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="_10">삼각함수의 주기와 대칭성<a class="headerlink" href="#_10" title="Permanent link">¶</a></h4>
+<p>임의의 자연수 <span class="arithmatex">\(n\)</span> 에 대하여 다음이 성립한다.</p>
+<a href="#fa3469d88"><div class="admonition tldr" id="fa3469d88">
+<p><span class="arithmatex">\(2n \pi  + \theta\)</span></p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\sin (2n \pi + \theta) = \sin \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\cos (2n \pi + \theta) = \cos \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\tan (2n \pi + \theta) = \tan (n \pi + \theta) = \tan \theta\)</span></p>
+</li>
+</ul>
+<a href="#0f426c000"><div class="admonition tldr" id="0f426c000">
+<p><span class="arithmatex">\(-\theta\)</span></p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\sin (-\theta) = -\sin \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\cos (-\theta) = \cos \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\tan (-\theta) = -\tan \theta\)</span></p>
+</li>
+</ul>
+<a href="#ecc537258"><div class="admonition tldr" id="ecc537258">
+<p><span class="arithmatex">\(\pi \pm \theta\)</span></p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\sin (\pi + \theta) = -\sin \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\cos (\pi + \theta) = -\cos \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\tan (\pi + \theta) = \tan \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\sin (\pi - \theta) = \sin \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\cos (\pi - \theta) = -\cos \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\tan (\pi - \theta) = -\tan \theta\)</span></p>
+</li>
+</ul>
+<a href="#8f3754824"><div class="admonition tldr" id="8f3754824">
+<p><span class="arithmatex">\(\frac{\pi}{2} \pm \theta\)</span></p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\sin (\frac{\pi}{2} + \theta) = \cos \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\cos (\frac{\pi}{2} + \theta) = -\sin \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\tan (\frac{\pi}{2} + \theta) = -\frac{1}{\tan \theta}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\sin (\frac{\pi}{2} - \theta) = \cos \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\cos (\frac{\pi}{2} - \theta) = \sin \theta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\tan (\frac{\pi}{2} - \theta) = \frac{1}{\tan \theta}\)</span></p>
+</li>
+</ul>
+<h3 id="_11">삼각방정식과 삼각부등식<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<a href="#ef175ce4b"><div class="admonition tldr" id="ef175ce4b">
+<p>삼각방정식 : 각의 크기에 미지수가 있는 삼각함수를 포함하는 방정식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\sin x = \frac{1}{2}\)</span></p>
+</li>
+</ul>
+<a href="#6e63ef6aa"><div class="admonition tldr" id="6e63ef6aa">
+<p>삼각부등식 : 각의 크기에 미지수가 있는 삼각함수를 포함하는 부등식이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\cos x &gt; \frac{\sqrt[]{3}}{2}\)</span></p>
+</li>
+</ul>
+<h3 id="_12">삼각형과 삼각함수와의 관계<a class="headerlink" href="#_12" title="Permanent link">¶</a></h3>
+<a href="#62511a3d3"><div class="admonition tldr" id="62511a3d3">
+<p>삼각형과 삼각함수와의 관계 : 다음의 삼각형이 있을 때 삼각형과 삼각함수와의 일관된 관계가 존재한다. </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Acute_Triangle.svg/330px-Acute_Triangle.svg.png"/></p>
+</div></a>
+<a href="#44380f2a8"><div class="admonition tldr" id="44380f2a8">
+<p>사인법칙(Law of sines) : 삼각형 <span class="arithmatex">\(ABC\)</span> 의 외접원의 반지름의 길이를 <span class="arithmatex">\(R\)</span> 이라 하면 삼각형 <span class="arithmatex">\(ABC\)</span> 의 세 변의 길이와 세 각의 크기 사이에 다음 관계가 존재하고 이를 사인법칙이라 한다.</p>
+<div class="arithmatex">\[ \frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C} = 2R \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><img height="auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Law_of_sines_proof.svg/400px-Law_of_sines_proof.svg.png" width="50%"/></p>
+<p>삼각형 <span class="arithmatex">\(ABC\)</span> 의 변 <span class="arithmatex">\(c\)</span> 위의 높이를 <span class="arithmatex">\(h\)</span> 라고 하면 <span class="arithmatex">\(\sin A\)</span> 는 빗변 <span class="arithmatex">\(b\)</span> 에 대한 높이 <span class="arithmatex">\(h\)</span> 의 비율 <span class="arithmatex">\(\sin A = \dfrac{h}{b}\)</span> 이다. 그러므로 </p>
+<div class="arithmatex">\[ h = b \sin A \]</div>
+<p>인데, 이에따라 삼각형 <span class="arithmatex">\(ABC\)</span> 의 넓이 <span class="arithmatex">\(K\)</span> 는 </p>
+<div class="arithmatex">\[ K = \dfrac{1}{2}ch=\dfrac{1}{2}bc \sin A \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(2K = bc \sin A\)</span> 인데 마찬가지의 방법으로 </p>
+<div class="arithmatex">\[ 2K = bc \sin A = ac \sin B = ab \sin C \]</div>
+<p>를 얻는다. 이것을 <span class="arithmatex">\(abc\)</span> 로 나누면 <span class="arithmatex">\(\dfrac{\sin A}{a} =\dfrac{\sin B}{b} =\dfrac{\sin C}{c}\)</span> 을 얻고 이것의 역수를 취하면 사인법칙</p>
+<div class="arithmatex">\[\dfrac{a}{\sin A} =\dfrac{b}{\sin B} =\dfrac{c}{\sin C}\]</div>
+<p>을 얻는다. ■ </p>
+</li>
+<li>
+<p>그리고 이 관계로부터 다음의 관계들이 도출된다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\sin A = \frac{a}{2R}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\sin B = \frac{b}{2R}\)</span> </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\sin C = \frac{c}{2R}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(a = 2R \sin A\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(b = 2R \sin B\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(c = 2R \sin C\)</span></p>
+</li>
+</ul>
+<a href="#ae5a1e53d"><div class="admonition tldr" id="ae5a1e53d">
+<p>코사인법칙(Law of cosines) : 삼각형 <span class="arithmatex">\(ABC\)</span> 의 세 변의 길이와 세 각의 크기 사이에 다음의 관계가 존재하고 이를 코사인법칙이라 한다. </p>
+<div class="arithmatex">\[a^2 = b^2 + c^2 -2bc \cos A\]</div>
+<div class="arithmatex">\[b^2 = c^2 + a^2 -2ca \cos B\]</div>
+<div class="arithmatex">\[c^2 = a^2 + b^2 -2ab \cos C\]</div>
+</div></a>
+<ul>
+<li>
+<p>코사인 법칙은 시점이 같은 두 벡터 <span class="arithmatex">\(u, v\)</span> 와 두 벡터가 이루는 각 <span class="arithmatex">\(\theta\)</span> 와 두 벡터의 종점을 이은 벡터 <span class="arithmatex">\(w = u-v\)</span> 에 대하여서도 적용된다.</p>
+<p><img height="auto" src="https://user-images.githubusercontent.com/16812446/86887866-392e0980-c134-11ea-9889-3e42cf40f31a.png" width="50%"/></p>
+<blockquote>
+<p>출처 : <a href="https://www.amazon.com/Thomas-Calculus-Early-Transcendentals-13th/dp/0321884078">Thomas' CALCULUS</a> Figure12.21</p>
+</blockquote>
+<p>이때 벡터들의 길이 <span class="arithmatex">\(|u|, |v|, |w|\)</span> 와 <span class="arithmatex">\(u,v\)</span> 가 이루는 각 <span class="arithmatex">\(\theta\)</span> 에 대하여 코사인 법칙 </p>
+<div class="arithmatex">\[ |w| ^{2} = |u|^{2}+|v|^{2}-2|u||v|\cos \theta \]</div>
+<p>가 성립한다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p><img height="auto" src="https://w.namu.la/s/8cdb7e58c9045a93487b9344d5c293f6dbd4490cbcecd8bee4e150402bdde278e491b4d20d72ca08f27c2dedcc9f2e08a18bddaa4c0bda69db51fe80f13b8c8aa8b46e373b790be34442adff9d35034756944778474f7b75dd3f6246bfa1c09f" width="50%"/></p>
+<p>위 삼각형에서 각각의 각 <span class="arithmatex">\(A,B,C\)</span> 와 마주보는 변의 길이를 <span class="arithmatex">\(a,b,c\)</span> 라고 하자.</p>
+<p>삼각형 <span class="arithmatex">\(\Delta ABC\)</span> 에 대하여 <span class="arithmatex">\(\cos B = \dfrac{\overline{BH}}{c}, \cos C = \dfrac{\overline{CH}}{b}\)</span> 이므로</p>
+<div class="arithmatex">\[ a = \overline{BH}+\overline{CH} = c \cos B + b \cos C \]</div>
+<p>이 성립한다. 마찬가지의 방식으로</p>
+<div class="arithmatex">\[ a = c \cos B + b \cos C \]</div>
+<div class="arithmatex">\[ b = a \cos C + c \cos A \]</div>
+<div class="arithmatex">\[ c = a \cos B + b \cos A \]</div>
+<p>을 얻는다. 이 세 등식에 각각 <span class="arithmatex">\(a,b,c\)</span> 를 곱하면</p>
+<div class="arithmatex">\[ a ^{2} = ac \cos B + ab \cos C \]</div>
+<div class="arithmatex">\[ b ^{2} = ab \cos C + bc \cos A \]</div>
+<div class="arithmatex">\[ c ^{2} = ac \cos B + bc \cos A \]</div>
+<p>을 얻는다. 이때 첫째 등식에 둘째 등식과 셋째 등식을 빼면 <span class="arithmatex">\(a ^{2}-b ^{2}- c ^{2}=-2bc \cos A\)</span> 이므로</p>
+<div class="arithmatex">\[ \therefore  a^2 = b^2 + c^2 -2bc \cos A\]</div>
+<p>을 얻는다. ■ </p>
+<p>마찬가지의 방식으로 나머지 코사인 법칙도 쉽게 유도할 수 있다. ■ </p>
+</li>
+<li>
+<p>코사인 법칙으로부터 다음의 따름법칙을 쉽게 유도할 수 있다.</p>
+<div class="arithmatex">\[\cos A = \frac{b^2+c^2-a^2}{2bc}\]</div>
+<div class="arithmatex">\[\cos B = \frac{c^2+a^2-b^2}{2ca}\]</div>
+<div class="arithmatex">\[\cos C = \frac{a^2+b^2-c^2}{2ab}\]</div>
+</li>
+</ul>
+<a href="#9a09963bc"><div class="admonition tldr" id="9a09963bc">
+<p>삼각형의 넓이와 삼각함수와의 관계 : 삼각형 <span class="arithmatex">\(ABC\)</span> 의 넓비를 <span class="arithmatex">\(S\)</span> 라 하고 삼각형 <span class="arithmatex">\(ABC\)</span> 의 외접원의 반지름을 <span class="arithmatex">\(R\)</span>, 내접원의 반지름을 <span class="arithmatex">\(r\)</span> 이라 하면 다음의 관계가 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(S = \frac{1}{2}bc \sin A = \frac{1}{2} ca \sin B = \frac{1}{2} ab \sin C\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(S = \frac{abc}{4R} = 2R^2 \sin A \sin B \sin C\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(S = \frac{1}{2}r(a+b+c)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(S = \sqrt[]{s(s-a)(s-b)(s-c)}\)</span> (단, <span class="arithmatex">\(s = \frac{a+b+c}{2}\)</span>)</p>
+</li>
+</ul>
+<h4 id="_13">사각형과 삼각함수와의 관계<a class="headerlink" href="#_13" title="Permanent link">¶</a></h4>
+<a href="#72c782efa"><div class="admonition tldr" id="72c782efa">
+<p>사각형의 넓이 : 두 대각선 <span class="arithmatex">\(AC, BD\)</span> 의 길이와 두 대각선이 이루는 각 <span class="arithmatex">\(\theta\)</span>의 크기가 주어진 사각형 <span class="arithmatex">\(ABCD\)</span> 의 넓이 <span class="arithmatex">\(S\)</span> 는 다음과 같다.</p>
+<div class="arithmatex">\[ S = \frac{1}{2} \times \overline{AC} \times \overline{BD} \times \sin \theta \]</div>
+</div></a>
+<a href="#766708235"><div class="admonition tldr" id="766708235">
+<p>평행사변형의 넓이 : 이웃하는 두변 <span class="arithmatex">\(AB, BC\)</span> 의 길이와 그 끼인각 <span class="arithmatex">\(\theta\)</span> 의 크기가 주어진 평행사변형 <span class="arithmatex">\(ABCD\)</span> 의 넓이 <span class="arithmatex">\(S\)</span> 는 다음과 같다.</p>
+<div class="arithmatex">\[ S = \overline{AB} \times \overline{BC} \times \sin \theta \]</div>
+</div></a>
+<h3 id="_14">삼각함수의 덧셈정리<a class="headerlink" href="#_14" title="Permanent link">¶</a></h3>
+<a href="#ef6e400d5"><div class="admonition tldr" id="ef6e400d5">
+<p>삼각함수의 덧셈정리 : 두 각 <span class="arithmatex">\(\alpha, \beta\)</span> 에 대하여 <span class="arithmatex">\(\alpha + \beta, \alpha - \beta\)</span> 의 삼각함수를 <span class="arithmatex">\(\alpha, \beta\)</span> 의 삼각함수로 다음과 같이 나타낼 수 있다.</p>
+</div></a>
+<ul>
+<li>
+<p>사인함수의 덧셈정리 </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\sin(\alpha +\beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\sin (\alpha - \beta ) = \sin \alpha \cos \beta - \cos \alpha \sin \beta\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>코사인함수의 덧셈정리 </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\cos (\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\cos (\alpha - \beta ) = \cos \alpha \cos \beta + \sin \alpha \sin \beta\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>탄젠트함수의 덧셈정리 </p>
+<ul>
+<li>
+<div class="arithmatex">\[\tan (\alpha + \beta) = \frac{\tan \alpha + \tan \beta }{1 - \tan \alpha \tan \beta }\]</div>
+</li>
+<li>
+<div class="arithmatex">\[\tan (\alpha - \beta) = \frac{\tan \alpha - \tan \beta }{1 + \tan \alpha \tan \beta }\]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>우리는 특수각에 대한 삼각함수 값만을 알고 있었지만 이 덧셈정리들로 일반적인 각에 대한 삼각함수 값을 비교적 쉽게 구할 수 있게 되었다.</p>
+</li>
+<li>
+<p>이 덧셈정리는 삼각함수의 미분과 적분에 활용된다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p><img alt="" src="https://ww.namu.la/s/25287916f70ebb1ca9f932f4eb1edf48a08497c7bcb48cd58da722ebf3c5d4a7b86694ff5126861296b0642f3bd55f0db9aab0301cd1413a26c38641bffeb18ee6796941a31dff1b70d77a0f79e576c3d0e2422f7c553dc2953e8ceef220aedd"/></p>
+<p>위 그림에서 양의 <span class="arithmatex">\(x\)</span> 축을 시초선으로하고 각의 크기가 <span class="arithmatex">\(\beta\)</span> 인 동경이 단위원과 만나는 점을 <span class="arithmatex">\(B\)</span>, 각의 크기가 <span class="arithmatex">\(\alpha\)</span> 인 동경이 단위원과 만나는 점을 <span class="arithmatex">\(C\)</span> 라 하자. </p>
+<p>그러면 각각의 좌표는 <span class="arithmatex">\(B(\cos \beta, \sin \beta), C(\cos \alpha, \sin \alpha)\)</span> 이다. </p>
+<p>이때 두 점 사이의 거리는 </p>
+<div class="arithmatex">\[ \overline{BC} ^{2} = (\cos \beta - \cos \alpha) ^{2} + (\sin \beta -\sin \alpha ) ^{2} = (\cos ^{2} \alpha + \sin ^{2} \alpha ) + (\cos ^{2} \beta + \sin ^{2} \beta ) - 2(\cos \alpha \cos \beta + \sin \alpha \sin \beta ) \]</div>
+<div class="arithmatex">\[ = 1 + 1 - 2(\cos \alpha \cos \beta + \sin \alpha \sin \beta ) \]</div>
+<div class="arithmatex">\[ = 2 - 2(\cos \alpha \cos \beta + \sin \alpha \sin \beta ) \]</div>
+<p>이다. 그런데 삼각형의 세 변의 길이와 한 각의 크기 사이의 관계를 보여주는 코사인 법칙에 의하여 </p>
+<div class="arithmatex">\[ \overline{BC} ^{2} = 1 ^{2} + 1 ^{2} - 2 \circ 1 \circ 1 \cos (\alpha -\beta ) \]</div>
+<div class="arithmatex">\[ = 2 - 2 \cos (\alpha -\beta ) \]</div>
+<p>이다. 따라서 </p>
+<div class="arithmatex">\[ 2 - 2 \cos (\alpha -\beta ) = 2 - 2(\cos \alpha \cos \beta + \sin \alpha \sin \beta ) \]</div>
+<div class="arithmatex">\[ \iff \]</div>
+<div class="arithmatex">\[ \therefore  \cos (\alpha -\beta ) = \cos \alpha \cos \beta + \sin \alpha \sin \beta \]</div>
+<p>이다. 이 결론은 임의의 두 각 <span class="arithmatex">\(\alpha, \beta\)</span> 에 대하여 성립하므로 <span class="arithmatex">\(\beta\)</span> 를 <span class="arithmatex">\(- \beta\)</span> 로 두면 </p>
+<div class="arithmatex">\[ \therefore  \cos (\alpha +\beta ) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \]</div>
+<p>이다. 한편 <span class="arithmatex">\(\sin \theta = \cos (\frac{\pi}{2} - \theta)\)</span> 이므로</p>
+<div class="arithmatex">\[ \sin (\alpha + \beta) = \cos \{\frac{\pi}{2} - (\alpha + \beta)\}= \cos \{(\frac{\pi}{2} - \alpha) - \beta\} \]</div>
+<div class="arithmatex">\[ = \cos (\frac{\pi}{2}-\alpha)\cos \beta  + \sin (\frac{\pi}{2}-\alpha) \sin \beta \]</div>
+<p>그런데 <span class="arithmatex">\(\sin (\frac{\pi }{2} - \theta) = \cos \theta,\cos (\frac{\pi }{2} - \theta ) = \sin \theta\)</span> 이므로 </p>
+<div class="arithmatex">\[ \therefore \sin (\alpha + \beta) = \sin \alpha\cos \beta  + \cos \alpha \sin \beta \]</div>
+<p>이다. 이 결론은 임의의 두 각 <span class="arithmatex">\(\alpha, \beta\)</span> 에 대하여 성립하므로 <span class="arithmatex">\(\beta\)</span> 를 <span class="arithmatex">\(- \beta\)</span> 로 두면 </p>
+<div class="arithmatex">\[ \therefore \sin (\alpha - \beta) = \sin \alpha\cos \beta  - \cos \alpha \sin \beta \]</div>
+<p>한편 <span class="arithmatex">\(\tan \theta = \frac{\sin \theta }{\cos \theta }\)</span> 이므로 </p>
+<div class="arithmatex">\[ \tan (\alpha + \beta ) = \frac{\sin (\alpha + \beta )}{\cos (\alpha + \beta)} = \frac{\sin \alpha\cos \beta  + \cos \alpha \sin \beta }{\cos \alpha \cos \beta - \sin \alpha \sin \beta } \]</div>
+<div class="arithmatex">\[ = \frac{(\sin \alpha\cos \beta  + \cos \alpha \sin \beta )}{(\cos \alpha \cos \beta - \sin \alpha \sin \beta )} \frac{ \div \cos \alpha \cos \beta }{\div \cos \alpha \cos \beta } \]</div>
+<div class="arithmatex">\[ \iff \]</div>
+<div class="arithmatex">\[ \therefore \tan (\alpha + \beta ) = \frac{\tan \alpha - \tan \beta }{1 + \tan \alpha \tan \beta } \]</div>
+<p>이다. 이 결론은 임의의 두 각 <span class="arithmatex">\(\alpha, \beta\)</span> 에 대하여 성립하므로 <span class="arithmatex">\(\beta\)</span> 를 <span class="arithmatex">\(- \beta\)</span> 로 두면 </p>
+<div class="arithmatex">\[ \therefore \tan (\alpha - \beta ) = \frac{\tan \alpha + \tan \beta }{1 - \tan \alpha \tan \beta } \]</div>
+<blockquote>
+<p>증명 방향을 보면 알 수 있지만 한 각을 두 각으로 나눌 수 있게끔 하는 관계를 유도하는 것이 증명의 목표이다. 이처럼 증명과 그것에 따라 정립되는 수식은 목적에 따라 움직인다. </p>
+</blockquote>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \sin 75 \degree = \sin (45 \degree + 30 \degree) = \sin 45 \degree \cos 30 \degree + \cos 45 \degree \sin 30 \degree = \frac{\sqrt[]{2}}{2} \circ \frac{\sqrt[]{3}}{2} + \frac{\sqrt[]{2}}{2}\circ \frac{1}{2} = \frac{\sqrt[]{6}+\sqrt[]{2}}{4} \]</div>
+<div class="arithmatex">\[ \cos 75 \degree = \cos (45 \degree + 30 \degree) = \cos 45 \degree \cos 30 \degree - \sin 45 \degree \sin 30 \degree = \frac{\sqrt[]{2}}{2} \circ \frac{\sqrt[]{3}}{2} - \frac{\sqrt[]{2}}{2}\circ \frac{1}{2} = \frac{\sqrt[]{6}-\sqrt[]{2}}{4} \]</div>
+<div class="arithmatex">\[ \tan 15 \degree = \tan(45 \degree - 30 \degree ) = \frac{\tan 45 \degree - \tan 30  \degree }{1 + \tan 45 \degree \tan 30 \degree } = \frac{1 - \frac{1}{\sqrt[]{3}}}{1 + 1 \circ \frac{1}{\sqrt[]{3}}} = \frac{\sqrt[]{3}-1}{\sqrt[]{3}+1} = 2 - \sqrt[]{3} \]</div>
+</li>
+</ul>
+<a href="#ef41b0065"><div class="admonition tldr" id="ef41b0065">
+<p>배각의 공식 : 삼각함수의 덧셈정리로부터 다음의 파생 관계를 얻을 수 있다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\sin 2 \alpha = 2 \sin \alpha \cos \alpha\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p>사인함수의 덧셈정리</p>
+<div class="arithmatex">\[\sin(\alpha +\beta) = \sin \alpha \cos \beta + \cos \alpha \sin \beta\]</div>
+<p>는 임의의 두 각 <span class="arithmatex">\(\alpha, \beta\)</span> 에 대하여 성립하므로 <span class="arithmatex">\(\beta = \alpha\)</span> 로 두면 </p>
+<div class="arithmatex">\[ \therefore \sin 2 \alpha = 2 \sin \alpha \cos \alpha \]</div>
+<p>이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\cos 2 \alpha = \cos ^{2} \alpha - \sin ^{2} \alpha = 2 \cos ^{2} \alpha -1 = 1 - 2 \sin ^{2} \alpha\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p>코사인함수의 덧셈정리</p>
+<div class="arithmatex">\[\cos (\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta\]</div>
+<p>는 임의의 두 각 <span class="arithmatex">\(\alpha, \beta\)</span> 에 대하여 성립하므로 <span class="arithmatex">\(\beta = \alpha\)</span> 로 두면 </p>
+<div class="arithmatex">\[ \therefore \cos 2 \alpha = \cos ^{2}\alpha - \sin ^{2} \alpha  \]</div>
+<p>그런데 <span class="arithmatex">\(\sin ^{2}\theta  + \cos ^{2} \theta  = 1\)</span> 이므로 <span class="arithmatex">\(\sin ^{2}\theta  = 1 - \cos ^{2} \theta\)</span> 에서</p>
+<div class="arithmatex">\[ \therefore \cos 2 \alpha = 2\cos ^{2}\alpha - 1  \]</div>
+<p>이고 <span class="arithmatex">\(\cos ^{2} \theta  = 1 - \sin ^{2} \theta\)</span> 에서</p>
+<div class="arithmatex">\[ \therefore \cos 2 \alpha = 1 - 2\sin ^{2}\alpha \]</div>
+<p>이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\tan 2 \alpha = \frac{2 \tan \alpha }{1 - \tan ^{2}\alpha }\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p>탄젠트 함수의 덧셈정리</p>
+<div class="arithmatex">\[\tan (\alpha + \beta) = \frac{\tan \alpha + \tan \beta }{1 - \tan \alpha \tan \beta }\]</div>
+<p>는 임의의 두 각 <span class="arithmatex">\(\alpha, \beta\)</span> 에 대하여 성립하므로 <span class="arithmatex">\(\beta = \alpha\)</span> 로 두면 </p>
+<div class="arithmatex">\[ \therefore  \tan 2\alpha = \frac{2\tan \alpha}{1 - \tan ^{2} \alpha}\]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>이 공식은 차수가 <span class="arithmatex">\(2\)</span> 인 식과 차수가 <span class="arithmatex">\(1\)</span> 인 식이 갖는 관계를 보여주므로 차수를 변환시키면 유용한 상황에서 사용된다. </p>
+<blockquote>
+<p>따라서 임의의 차수를 원하는 차수로 변환하기 위한 목적으로 공식을 더 유용하게 변환할 수 있다. </p>
+</blockquote>
+<ul>
+<li>
+<p>삼각방정식, 적분법 등에서 사용된다. </p>
+</li>
+<li>
+<p>배각의 공식 뿐만 아니라 <span class="arithmatex">\(3\)</span> 배각의 공식, <span class="arithmatex">\(4\)</span> 배각의 공식, <span class="arithmatex">\(n\)</span> 배각의 공식이 존재한다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#171d1c89c"><div class="admonition tldr" id="171d1c89c">
+<p>반각의 공식 : 배각의 공식에서 다음의 파생관계를 얻을 수 있다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(\sin ^{2} \frac{\alpha }{2} = \frac{1 - \cos \alpha }{2}\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\cos 2 \alpha = 1 - 2 \sin ^{2} \alpha\)</span> 에서</p>
+<div class="arithmatex">\[ \sin ^{2} \alpha  = \frac{1 - \cos 2 \alpha }{2} \]</div>
+<p>를 얻는다. 이때 <span class="arithmatex">\(\alpha\)</span> 대신 <span class="arithmatex">\(\frac{\alpha }{2}\)</span> 를 대입하면</p>
+<div class="arithmatex">\[ \therefore  \sin ^{2} \frac{\alpha }{2} = \frac{1 - \cos \alpha }{2} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\cos ^{2}\frac{\alpha }{2} = \frac{1+\cos \alpha }{2}\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\cos 2 \alpha = 2 \cos ^{2} \alpha -1\)</span> 에서 </p>
+<div class="arithmatex">\[ \cos ^{2} \alpha = \frac{1 + \cos 2 \alpha}{2} \]</div>
+<p>를 얻는다. 이때 <span class="arithmatex">\(\alpha\)</span> 대신 <span class="arithmatex">\(\frac{\alpha }{2}\)</span> 를 대입하면</p>
+<div class="arithmatex">\[ \therefore  \cos ^{2}\frac{\alpha }{2} = \frac{1+\cos \alpha }{2} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(\tan ^{2} \frac{\alpha }{2} = \frac{1-\cos \alpha }{1+\cos \alpha }\)</span></p>
+<ul>
+<li>
+<p>증명 </p>
+<p>탄젠트는 코사인 값에 대한 사인 값의 비이므로 </p>
+<div class="arithmatex">\[ \tan ^{2} \frac{\alpha }{2} = \frac{\sin ^{2} \frac{\alpha }{2}}{\cos ^{2} \frac{\alpha }{2}} = \frac{\frac{1-\cos \alpha }{2}}{\frac{1+\cos \alpha }{2}} \]</div>
+<p>에서</p>
+<div class="arithmatex">\[ \therefore  \tan ^{2} \frac{\alpha }{2} = \frac{\sin ^{2} \frac{\alpha }{2}}{\cos ^{2} \frac{\alpha }{2}} = \frac{\frac{1-\cos \alpha }{2}}{\frac{1+\cos \alpha }{2}} = \frac{1-\cos \alpha }{1+\cos \alpha } \]</div>
+<p>이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>반각의 공식은 모든 식이 <span class="arithmatex">\(\cos \alpha\)</span> 로 표현된다. </p>
+<ul>
+<li>즉 이 관계 덕분에 <span class="arithmatex">\(\cos \alpha\)</span> 값만 알면 <span class="arithmatex">\(\sin ^{2} \frac{\alpha }{2}, \cos ^{2} \frac{\alpha }{2}, \tan ^{2} \frac{\alpha }{2}\)</span> 를 알 수 있다. </li>
+</ul>
+</li>
+</ul>
+<h3 id="_15">삼각함수의 합성<a class="headerlink" href="#_15" title="Permanent link">¶</a></h3>
+<p>삼각함수의 합성 </p>
+<p><strong>구체화 필요</strong></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="이전: 해석학" class="md-footer__link md-footer__link--prev" href="../anal/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                이전
+              </span>
+              해석학
+            </div>
+</div>
+</a>
+<a aria-label="다음: 함수" class="md-footer__link md-footer__link--next" href="../function/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                다음
+              </span>
+              함수
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

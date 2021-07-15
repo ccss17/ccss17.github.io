@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/vul/memo/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>해킹 가능 패턴 인식 - ccss17</title>
+<link href="../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              해킹 가능 패턴 인식
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    해킹 가능 패턴 인식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    다른 생각
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    보안이 지켜지는 것에 대한 생각
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#completeness-of-computer">
+    Completeness of Computer
+  </a>
+<nav aria-label="Completeness of Computer" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#axiom-of-computer">
+    Axiom of Computer
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#formalization">
+    Formalization
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    증명가능한 명제를 자동으로 증명하는 프로그램
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    취약점 존재성 증명
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    결론
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>해킹 가능 패턴 인식</h1>
+<h2 id="_1">해킹 가능 패턴 인식<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>컴퓨터란 본질적으로 수학자가 생성한 수학적 모델이다. 튜링은 튜링 머신을 고안하여 불완전성 정리를 증명해보였는데, 이 튜링 머신 중 universal machine 이 컴퓨터로 제작되었다. 튜링 머신은 수학적 모델이므로 현존하는 컴퓨터(universal machine)와 컴퓨터 내부에서 실행되는 튜링 머신을 대수적으로 추상화시켜서 한꺼번에 다룰 수 있다. 이는 모든 프로그래밍 언어와 모든 프로그램이 하나의 공리체계를 기반으로 표현될 수 있음을 시사하고, 아키텍처가 다른 컴퓨터일지라도 하나의 수학적인 추상 모델로 사상시켜서 다룰 수도 있다는 가능성을 보여준다. </p>
+<p>실제로 모든 프로그래밍 언어는 while-program 으로 추상화될 수 있다. 이는 모든 프로그래밍 언어를 하나의 공리체계를 기반으로 한 통일된 규칙체계로 환원시킬 수 있고, 또 그것을 기반으로 다른 언어로 번역될 수 있음을 뜻한다. 사실 튜링완전한 언어들은 서로 번역될 수 있지만, 그것은 이론적으로 가능하다는 것이었지 이렇게 구체적이고 현실적으로 가능하다는 생각은 심어주지 못했다. </p>
+<p>모든 프로그램이 설령 아키텍처가 다르더라도 하나의 초월적 모델로 환원시킬 수도 있다는 가능성이 0% 가 아니라는 것을 알게 되었다. 그렇다면 그러한 프로그램들은 그것이 지니고 있는 특성과 의미에 따라 일정한 패턴을 기반으로 기능을 하게 된다. 가령 프로그래밍 언어가 다르고 아키텍처가 다른 프로그램들이지만 "웹 서버" 라는 기능과 의미를 부여받은 프로그램들이 존재한다. 이것은 무의미한 기호체계로 구성된 공리체계에 상위체계에 거주하는 인간이 의미를 부여한 것처럼, GEB 에서 설명했듯이, 무의미한 어셈블리어와 무의미한 연산으로 구성된 프로그램들이 특정 패턴을 지니고 있을 때 의미를 "웹 서버" 라는 의미를 부여받은 것과 같다. </p>
+<p>상위체계에 살고 있는 인간은 무의미한 기호체계들에 의미를 부여해왔다. 가령 GEB 의 설명을 빌리자면 pq 체계에서의 -p--q--- 라는 무의미한 공리체계의 정리에 1 더하기 2 는 3 이다 라는 의미를 부여했다. 이렇게 수학에 의미를 부여했었고, 음악, 그림 등등 다양한 물리 세계의 특정 패턴을 보존하는 대상에 대하여 그 패턴에 이름을 붙이고 의미를 부여해왔다. 이는 어떤 존재와 대상이 특정 패턴와 특정 조건으로 구성되었을 때 그 존재성이 부여됨을 뜻한다. </p>
+<p>그렇다면 프로그램도 특정 패턴과 특정 조건을 만족시킬 때 그 존재성과 의미가 부여된다. 이 논의를 애써 펼친 이유는 프로그램이 어떤 존재성을 부여받음이 불규칙한 패턴과 혼돈 상태를 기반으로 하지 않는다는 것을 나와 독자에게 설득시키기 위함이다. 이런 이유로 인하여 "웹 서버" 라는 의미를 부여받은 프로그램은 그것의 고유한 특정한 패턴과 조건을 프로그래밍 언어라는 기호와 공리체계로 구성하였음을 알 수 있다. </p>
+<p>그러므로 "취약점", 즉 쉽게 말해서 "해킹 가능한" 이라는 의미를 부여받은 프로그램 또한 불규칙적인 패턴과 혼돈 상태를 기반으로 의미를 부여받은 것이 아니라고 생각할 수 있다. 이러한 의미를 부여받은 프로그램들 또한 그 의미의 존재성을 구성하는 특정하고 규칙적인 패턴과 조건이 성립되었기에 인간이 "해킹 가능하다" 는 의미를 무의미한 기호체계로 구성된 프로그램에 부여한 것이다. </p>
+<p>그렇다면 "해킹 가능한" 이라는 의미를 부여받은 패턴은 규명 가능하다. 또한 이 패턴이 규명 가능하면, 방금전에 모든 프로그램을 하나의 통일된 초월적 체계로 환원시킬 수 있다고 하였으므로, 모든 프로그램을 이러한 패턴을 기반으로 하나의 체계로 환원시켜서 동등하게 검증할 수 있게 된다. 물론 기술적으로, 그리고 현실적으로 이 작업이 얼마나 효율적이고 빠르게 될 수 있느냐가 관건일 것이다. </p>
+<p>한편 이러한 패턴이 존재한다면, 그 패턴을 인식하는 인공지능 모델 또한 만들어낼 수 있다. 이렇게 되면 바둑에서 이기는 수를 알파고가 학습하였듯이, 사람 대신 인공지능이 프로그램에 "해킹 가능한" 패턴이 존재하는 것을 사람보다 더 효율적이고 빠르게 인식해낼 수 있게 된다. 이 모델의 장점은 기존의 머신러닝이 이미지 인식, 음성 인식, 자연어 처리 등에서 사람과 동등한 또는 사람보다 조금 뛰어난 성능을 보였는데 반해, 코드 체계로부터 특정 패턴을 인식하는 분야에서는 사람이 본질적으로 그 끝없는 기계적인 작업에 힘을 발휘할 수 없으므로 약 인공지능이 지금까지의 다른 분야의 약 인공지능보다 상대적으로 더욱 큰 효용을 가져다준다고 보일 수밖에 없다. </p>
+<p>마찬가지로 논리로 "해킹 가능한" 패턴을 인식하는 인공지능 모델을 만들 수 있다면, 지금까지의 논의와 비슷한 원리로 "해킹 하는" 행동들, 즉 바둑으로 따지면 이기기 위한 수를 계획하듯이, 을 구축하는 모델도 어렵지 않게 떠올릴 수 있다. 물론 그것을 구현하고 현실적으로 효율적으로 작동시키는 것이 얼마나 어려운지 가늠할 수 없다. </p>
+<h2 id="_2">다른 생각<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<p>위에서 모든 프로그램, 설령 아키텍처가 다를지라도, 들을 하나의 초월적인 공리체계로 환원시킬 수 있다는 가능성을 살펴보았다. 이러한 접근 방식이 수학적인 접근방식과 비슷하지만 이번에는 정말 완전히 순수하게 수학적으로 해킹 가능한 곳을 찾아낼 수 있는 방법을 소개한다. </p>
+<p>수학에서는 역사적으로 그것이 신의 창조물로 인식되어왔기 때문에 수학자들이 수학을 발전시킬 때 엄밀한 논리 토대가 없이 발전시켰던 때가 있었다. 그런데 비유클리드 기하학이 발견됨으로써 유클리드 기하학이 신이 창조한 유일무이한 진리가 아니라 인간이 창조한 인공물임이 드러났다. 수학자과 철학자들은 진실을 하나고, 진리도 하나이고, 신도 한 분이라면 그분이 인간에게 계시한 유클리드 기하학만이 온 우주의 법칙을 알려주는 진리일 것이라고 믿었기 때문에 이것은 충격이었다. 그래서 가우스는 기하학이 아니라 수체계에서 진리를 찾고자 했다. 대수학자 가우스가 이러한 스탠스를 취하니까 다른 수학자들도 우리를 배신한 기하학에서 진리를 찾고자 하는 것이 아니라 수체계에서 진리를 찾고자 했다. 그러나 해밀턴이 사원수를 발견하자 우리가 알던 수체계 이외에 또 다른 수체계가 모순 없이 존재한다는 것이 밝혀졌고, 이후에는 팔원수, 십육원수, 초실수, 초현실수 등등 전혀 다른 수체계가 발견되었다.</p>
+<p>이로써 수학이란 신이 내려준 불변하고도 유일한 진리가 아니라는 것이 드러나자 수학자들의 마음은 급해지기 시작했다. 왜냐하면 수학이란 신이 내려준 진리라고 생각하고 엄밀한 기초없이 수학적 이론을 전개했던 부분이 많았기 때문이다. 이때부터 수학자들은 수학의 기초를 엄밀하게 쌓기 위한 노력을 하기 시작한다. 이러한 노력은 매우 근본적으로는 "옳다" 나 "그르다" 라고 말할 수 있는 수학적인 근거가 어디에 있는지 찾는 일과 수학자들이 이론을 전개할 때 "옳다" 고 믿거나 가정하고 전개 했던 부분들에 모순이 없는지 검증하는 일들로 이어졌다. </p>
+<p>만약 특정 공리체계를 기반으로하는 어떤 수학적 대상이 유일하다고 가정하고, 그것을 기반으로 다른 대상으로 가는 대응(또는 함수)을 만들었다고 하자. 만약 이것이 정말 유일하게 존재한다면 보안에 뛰어나기 때문에 그 수학적 추상 모델을 현실의 공학물로 구현하여 사용할 수도 있을 것이다. 하지만 현실을 살펴보면 개발자들이 유일하다고 가정했던, 혹은 믿고 싶었던 그러한 대상(혹은 경로)들이 유일하지 않았다는 것을 현재 해킹 가능한 프로그램과 취약점들의 근본적인 존재 원인이라고 짚으려 하는 것이 이 이야기를 통해서 내가 주장하고 싶은 것이다.</p>
+<p>커리-하워드 대응은 모든 프로그램이 수학에서의 논리적 증명과 완벽히 대응됨을 보여준다. 그렇다면 해킹 가능한 곳을 찾는 것이란 개발자가 "유일하게 존재한다" 고 잘못 가정한 곳을 찾아내는 것이고, 해킹 하는 행동이란 그 잘못 가정한 곳을 찾아낸 후 유일성을 부정하는 증명을 세우는 것이다. 유일성을 부정하는 증명 자체가 개발자가 유일하다고 가정한 대상과 다른 대상의 존재성을 보여주는데, 이로써 이 대상을 통해 권한이 없는 사용자가 개발자가 잘못 가정하여 부여한 권한을 사용할 수 있게 되는 것이다. </p>
+<h2 id="_3">보안이 지켜지는 것에 대한 생각<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<p>한편 이러한 철학이 검증된다면, 이것을 기반으로 보안이 지켜진다는 증명이 가능하다. 왜냐하면 해당 대상 혹은 경로가 유일하게 존재한다는 증명이 되었을 때 보안이 지켜지는 것이기 때문..</p>
+<h2 id="completeness-of-computer">Completeness of Computer<a class="headerlink" href="#completeness-of-computer" title="Permanent link">¶</a></h2>
+<h3 id="axiom-of-computer">Axiom of Computer<a class="headerlink" href="#axiom-of-computer" title="Permanent link">¶</a></h3>
+<p>요즘 nand2tetris 를 공부하고 있는데, 이 책은 <a href="https://news.ycombinator.com/item?id=13406638">해커 뉴스</a> 에서 가장 좋은 컴퓨터 공학 책으로도 언급되었을 정도로 가치 있는 책이다. 이 책의 특징은 테트리스 게임을 Nand 게이트로부터 구성해내는 과정을 이해시켜준다. 이 책을 아직 다 읽진 않았지만 많은 아이디어를 얻을 수 있었고, 방향성에 대한 힌트도 얻을 수 있었다. </p>
+<p>어떤 학문을 공부하든지 그것의 뿌리부터 이해해야 한다는 생각을 갖고 있다면, 어떤 대상을 이해하고 알기 위하여 그 대상의 본질과 원류가 무엇인지 역추적하려 할 것이다. 나는 컴퓨터 공학을 공부할 때 어디까지 역추적해야 하나, 어디까지 밑으로 내려가야 하나 라는 생각이 들었다. nand2tetris 는 And, Or, Not 같은 논리 게이트까지가 컴퓨터 공학의 가장 밑부분이라는 것을 알려주었다. </p>
+<p>왜냐하면 그러한 논리 게이트 보다 더 밑은 물리학과 전자공학의 영역이기 때문이다. 그 이유는 현재로써는 가장 효율적인 전자공학으로 논리 게이트가 구현되어 있지만, 논리 게이트를 구성할 수 있는 물리적 재료는 다양하기 때문이다. 전자공학 뿐만 아니라 물, 바람, 유기체, 양자역학으로도 논리 게이트를 구성할 수 있다. </p>
+<p>그러므로 컴퓨터 공학자들은 논리 게이트라는 추상화된 계층에서부터 시작하면 된다. 그 논리 게이트가 물리적으로 어떻게 구현되어있는지는 물리학자들에게 맡기는 것이다. 따라서 컴퓨터 공학의 밑바닥이란 논리 게이트이다. 이것은 나에게 정말 중요한 힌트였다. 밑바닥이 무엇인지 알게 해주었기 때문이다. </p>
+<p>nand2tetris 는 일반적인 컴퓨터가 논리 게이트로부터 ALU, RAM, ROM 등을 만들어내지만 특이하게도 Nand 게이트 하나로 다른 And, Or, Not 게이트를 구성해내 보였다. 그리고 이렇게 Nand 게이트를 출발점으로 삼는 것을 마치 수학의 공리체계가 어떤 공리를 채택하여 체계를 구성할 것인지 택하는 것과 같다고 말했다. 하나의 예시로 기하학의 예시를 들었는데 기하학의 평행선 공리를 다르게 채택함으로써 유클리드 기하학, 비유클리드 기하학, 쌍곡 기하학, 아핀 기하학 등의 다른 체계가 구성될 수 있기 때문이다. 이 책은 Nand 게이트를 공리로하여 컴퓨터라는 체계를 구성하는 과정을 보여주고 있었다. </p>
+<h3 id="formalization">Formalization<a class="headerlink" href="#formalization" title="Permanent link">¶</a></h3>
+<p>한편 이로써 컴퓨터가 완전체계임을 알고는 있었지만, 실제로 눈으로 보고 체험할 수 있게 되었다. 컴퓨터는 증명가능한 정리만 표현할 수 있는 완전체계이므로 불완전체계에 속하는, 즉 증명불가능한 명제인 정지 문제를 구성해낼 수 없다. 마찬가지의 이유로 컴퓨터가 수체계를 표현할 수 있을만큼 강력한 체계라고 할지라도 초한귀납법같은 명제 또한 표현할 수 없다. 왜냐하면 컴퓨터의 모든 것이 공리(논리 게이트)에서 구성된 증명가능한 정리들(튜링기계)이기 때문이다. </p>
+<p>한편 이러한 논리 게이트가 어떻게 튜링 기계를 구현할 수 있게 되었는지 잘 기억이 안나서 다시 살펴보았었는데, 논리 게이트가 튜링 기계의 5가지 부품을 전부 구현할 수 있기 때문에 그렇게 되었다는 것을 알게 되었다. 그러므로 튜링 기계 또한 완전 체계에 귀속된 증명가능한 정리이다. </p>
+<p>어쨌든 컴퓨터가 완전체계이므로 그것은 공리를 기반으로 순수한 기호로 완전하게 형식화될 수 있다. 가령 Nand 라는 공리는 </p>
+<div class="arithmatex">\[ \exists \text{ Nand }: \{0, 1\} ^{2} \to \{0, 1\} \]</div>
+<p>라는 식의 함수가 존재한다는 명제로 형식화가 가능하다. 이 함수를 기반으로 And, Or, Not 게이트도 완전히 형식화 가능하고, 그것으로 구성된 하드웨어 부품 또한 완전하게 형식화가 가능하다. </p>
+<p>하드웨어의 발판이 마련되면 소프트웨어들이 생성될 수 있는 마당이 마련되는데, 아마 Nand 라는 최초의 공리를 기반으로 형성된 하드웨어라는 공리체계위에 상위 공리체계가 생성되는 식인듯 하다. 왜냐하면 소프트웨어의 관점에서 Nand 라는 공리를 사용할 수 없기 때문이다. 다시 말해서 Nand 게이트라는 공리와 하드웨어 부품이라는 증명가능한 정리를 사용한다는 것은 새로운 하드웨어를 구성한다는 것인데, 그것은 소프트웨어 개발이 아니기 때문이다. </p>
+<p>그러므로 소프트웨어가 사용가능한 공리들은 하드웨어 완전체계가 제공하는 새로운 공리이다. 마치 집합론의 공리체계가 밑바닥을 형성해준 다음, 페아노 공리 체계가 자연수 체계를 구성하고, 실수 공리 체계가 실수도 구성하고, 해석학과 기하학이 그 위에서 더욱 상위 체계를 구성하는 것처럼 말이다. 소프트웨어는 하드웨어가 마련한 공리체계 위에 세워진 상위 공리체계이다. </p>
+<p>그러므로 소프트웨어도 완전하게 형식화할 수 있다. 그렇다면 이것을 바탕으로 위에서 언급하였던 취약점 또한 형식적으로 정의 가능하다. 형식적으로 정의 가능하다는 것은 다시 말하지만, 기계화될 수 있다는 것이고 수학적으로/기계적으로 생성할 수 있고 찾을 수 있고 다룰 수 있다는 것이다. 그러므로 취약점을 형식적으로 정의 가능하다는 것은 취약점을 자동으로 생성하거나 찾을 수 있는 프로그램을 만들 수 있다는 것이다. </p>
+<p>과거 힐베르트는 수학의 모든 명제를 기계적으로 생성해낼 수 있을 것이라는 아이디어를 제시했지만, 그것은 괴델의 불완전성 정리에 의하여 불가능하다는 것이 알려졌다. 왜냐하면 자연수 체계를 설명할 수 있을만큼 강력한 공리체계는 본질적으로 불완전 체계이므로 증명 불가능한 정리가 반드시 존재하기 때문이다. 그 증명 불가능한 정리를 증명 가능도록 공리와 추론 규칙을 추가하더라도 추가된 공리와 규칙으로 인하여 또다른 증명 불가능한 명제가 반드시 생성된다. </p>
+<h3 id="_4">증명가능한 명제를 자동으로 증명하는 프로그램<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>그렇다면 취약점이 존재한다는 것을 어떤 대상의 유일성 증명을 하는 것으로 본다면, 그 모든 것들이 항상 증명 가능하다는 보장이 있는가? 나는 아마도 있을 것 같다고 생각한다.</p>
+<p>한편, 사실 이것은 어떤 명제를 주고 그 명제를 증명하는 공리와 추론 규칙을 자동으로 구성하는 프로그램을 만들려고 하는 것과 같다. 물론 공리와 추론 규칙으로 가산 무한집합만큼의 프로그램을 생성해낼 수 있지만, 그것은 엄연히 무한이다. 그러므로 단순무식한 방법으로는 안되고, 인간이 어떤 형식문을 증명할 때 사용하는 지능을 가져오면 괜찮을 것 같다. 즉, 이것은 기본적으로 인공지능을 기반으로하는 프로그램이 될 것이다. 그러니 뚝딱하고 만들어지지는 않겠지. </p>
+<p>만약 어떤 형식문이 주어지면, 그것이 증명 가능하다는 가정 하에, 그것을 증명해내고 가장 단순한 증명법으로 최적화시키기까지 하는 프로그램이 완성되었다고 하자. 그러면 이 프로그램은 기본적으로 알고리즘 문제들을 잘 풀 수 있다. 왜냐하면 알고리즘 문제들은 기본적으로 해법이 존재하는 프로그래밍 문제들이므로 증명가능함이 그 주최자에 의하여 보장되기 때문이다. 되게 좋겠지. 자동으로 알고리즘 문제를 풀어주는 인공지능이니까. </p>
+<p>더욱 좋은 것은, 본론으로 되돌아가서, 이 프로그램이 어떤 대상 <span class="arithmatex">\(A\)</span> 가 유일하다는 증명을 하거나 유일하지 않다고 반박하는 증명을 해낼 수 있게 된다는 것이다. </p>
+<ul>
+<li>증명 문제 : <span class="arithmatex">\(\exists ! A\)</span></li>
+</ul>
+<p>이때부터는 궤도에 올라타서 속도가 붙기 시작하겠지. 왜냐하면 컴퓨터 보안의 지식으로 이 이론을 빠르게 발전시킬 수 있기 때문이다. 컴퓨터 보안의 근본이란 메모리 격리이다. 즉, readable, writable, executable 한 대상만이 그 메모리를 주어진 권한으로 조작할 수 있어야 한다. 물론 이 "의미" 를 무의미한 형식체계의 형식문을 인간이라는 상위 체계의 존재가 "해석" 함으로써 부여되지만, 내적 무모순성을 해결하려는 목적으로 자동으로 의미 부여를 할 수 있다. 외적 무모순성을 해결하기 위해서는 인간이 의미를 부여해주어야 하지만, 나중에 인공지능이 더 똑똑해지면 외적 무모순성도 혼자 해결할 수 있을 것이다. 왜냐하면 인간이 부여하는 의미들을 학습하는 것이 불가능하지 않기 때문이다. </p>
+<h3 id="_5">취약점 존재성 증명<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<p><span class="arithmatex">\(A\)</span> 라는 대상에 대하여 writable 한 유일한 대상이 <span class="arithmatex">\(B\)</span> 라고 하자. 그러면 개발자는 </p>
+<div class="arithmatex">\[ \exists ! B, \text{ writable }(A) \]</div>
+<p>라고 가정한 것이다. 즉, <span class="arithmatex">\(A\)</span> 의 writable 한 대상은 <span class="arithmatex">\(B\)</span> 가 유일하다는 것이다. 하지만 컴퓨터 공학이 발전해온 역사를 보면 실제로 이렇게 엄격하게 발전되어오지 않았다는 것을 쉽게 알 수 있다. 역사적으로 무수히 많은 취약점이 발견되었고, 모순들이 발견되었다. 이것의 근본적인 원인은 개발자가 상상했던 대상이 기본적으로 제대로 프로그램으로 구현되지 않았기 때문이다. 즉, 잘못 가정하거나 잘못된 직관에 의하여 형식체계를 발전시켜온 것이다. </p>
+<p>개발자는 <span class="arithmatex">\(A\)</span> 가 중요한 정보임을 알고 있지만, 그것에 접근가능한 대상 <span class="arithmatex">\(B\)</span> 가 유일하게 존재한다고 잘못 가정했다. 그러면 위 명제가 형식적으로 반박될 것이다. 그것은 <span class="arithmatex">\(A\)</span> 의 writable 한 유일한 대상 <span class="arithmatex">\(B\)</span> 이외에 <span class="arithmatex">\(B'\)</span> 이 존재함을 증명하는 것이 된다. 그러면, 놀랍게도 <span class="arithmatex">\(B'\)</span> 의 존재성 증명 과정이 완전히 형식화되었기 때문에, 그것은 "해킹 하는 과정" 또는 Proof-Of-Code 가 된다. </p>
+<p>한편, 한 공리체계 내부에서만 작동하는 이 프로그램은 물론 완성만 되면 강력하기는 하겠지만, 현실세계에서는 그렇게 사랑받지 못할 것이다. 왜냐하면 현실세계에서는 여러 공리체계들이 얽혀있는 형태를 띄기 때문이다. 그러므로 이 프로그램은 상위 체계로 도약하여 지금껏 다루었던 공리체계들을 메타-공리체계로 다룰 수 있는 능력을 가져야 한다.</p>
+<p>쉽게 말하면, 한 컴퓨터 내에서 존재하는 취약점을 자동으로 인식할 수 있어도 컴퓨터와 컴퓨터 사이에서 일어나는 취약점들을 인식하기 위해서는 컴퓨터를 메타적으로 인식할 수 있는 능력이 필요하다는 것이다. 이것이 가능하면 네트워크 상에서 일어나는 해킹과 취약점을 인식할 수 있게 된다.</p>
+<p>이제 우리가 할 일은 한 공리체계에서 메타 공리체계로 도약하는 능력 자체를 한번 더 메타적으로 추상화시켜주는 것이다. 그러면 더 이상 우리가 추상화시킬 것이 없다. 왜냐하면 쉽게 말해서, 1층에서 2층으로 올라가는 능력을 부여하고, 이것을 기반으로 <span class="arithmatex">\(n\)</span> 층에서 <span class="arithmatex">\(n+1\)</span>층으로 올라갈 수 있는 능력을 부여하고, 이 올라가는 상황 자체를 추상적 패턴으로 인식할 수 있는 능력을 부여한다면, "올라간다" 는 것에 관한 한 그 어떤 것도 가르칠 것이 없기 때문이다. 이것으로써 거의 모든 지식을 포괄하고 스스로 이해할 수 있는 능력을.</p>
+<h3 id="_6">결론<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
+<p>그러므로 초유의 관심사는 어떤 증명가능한 형식문을 가장 효율적이고 빠르게 증명할 수 있는 딥러닝 모델이 무엇인가 이다. </p>
+<p>딥러닝으로 꼭 해야하나? 일단 딥러닝이 제일 좋으니까..</p>
+<p>formal reasoning 쪽으로 지금까지 얼마나 발전되었나 알아보는게 좋겠지.</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>

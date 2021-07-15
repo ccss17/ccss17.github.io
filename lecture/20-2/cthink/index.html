@@ -1,0 +1,3312 @@
+<!DOCTYPE html>
+<html class="no-js" lang="kr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/lecture/20-2/cthink/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.1, mkdocs-material-7.1.10" name="generator"/>
+<title>P1 - ccss17</title>
+<link href="../../../assets/stylesheets/main.1fe995fd.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.f1a3b89f.min.css" rel="stylesheet"/>
+<meta content="#ffffff" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#p1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              P1
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="검색" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" data-md-state="active" name="query" placeholder="검색" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Trend
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Trend" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Trend
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2020/">
+        2020
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../trend/2021/">
+        2021
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1">
+        Foundation of Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2">
+        Foundation of math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Foundations/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" id="__nav_3_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6">
+        옛날 수학공부 노트정리
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="옛날 수학공부 노트정리" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_6">
+<span class="md-nav__icon md-icon"></span>
+          옛날 수학공부 노트정리
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_1" id="__nav_3_6_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_1">
+        산술/대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="산술/대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_1">
+<span class="md-nav__icon md-icon"></span>
+          산술/대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Algebra/arithmetic/">
+        기초 산술
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Algebra/abstract_algebra/">
+        추상대수학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Algebra/algebra/">
+        대수학
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_2" id="__nav_3_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_2">
+        해석학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="해석학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_2">
+<span class="md-nav__icon md-icon"></span>
+          해석학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Analysis/anal/">
+        해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Analysis/trig/">
+        삼각함수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Analysis/function/">
+        함수
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_3" id="__nav_3_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_3">
+        확률
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="확률" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_3">
+<span class="md-nav__icon md-icon"></span>
+          확률
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Probability/comb/">
+        조합
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Probability/prob/">
+        확률
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_4" id="__nav_3_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_4">
+        통계학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="통계학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_4">
+<span class="md-nav__icon md-icon"></span>
+          통계학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat/">
+        도수분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat2/">
+        이산확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat3/">
+        이항분포의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat4/">
+        연속확률변수의 평균,분산,표준편차
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat5/">
+        통계적 추정
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Statistics/stat6/">
+        상관관계 분석
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_5" id="__nav_3_6_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_5">
+        미적분
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="미적분" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_5">
+<span class="md-nav__icon md-icon"></span>
+          미적분
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal/">
+        극한
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal2/">
+        미분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal3/">
+        적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal4/">
+        미분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal5/">
+        적분2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/vector/">
+        벡터해석학
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal6/">
+        미적분
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/Calculus/cal7/">
+        다변수함수의 미분의 일반적 정의
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6_6" id="__nav_3_6_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_6_6">
+        선형대수학
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="선형대수학" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_6_6">
+<span class="md-nav__icon md-icon"></span>
+          선형대수학
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la_new.md">
+        선형대수학 다시정리1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la/">
+        선형방정식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la2/">
+        행렬대수
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la3/">
+        행렬식
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la4/">
+        벡터공간
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la5/">
+        고유벡터
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Math/LinearAlgebra/la6/">
+        직교
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/GEB/">
+        Gödel, Escher, Bach
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/meltdown/">
+        Meltdown
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/information/">
+        Information Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Technological Singularity
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust StudyNote
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_2" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="목차" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p1">
+    P1
+  </a>
+<nav aria-label="P1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    자연 대상을 수학 명제로 사상시키기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    정의
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    과정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    코드 구현
+  </a>
+<nav aria-label="코드 구현" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    시간 복잡도
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    성능 평가
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c1">
+    C1
+  </a>
+<nav aria-label="C1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    사전 수학 지식
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    자연 대상을 수학 명제로 사상시키기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    과정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    과정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    코드 구현
+  </a>
+<nav aria-label="코드 구현" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    시간 복잡도
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    시간 복잡도
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    성능 평가
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p2">
+    P2
+  </a>
+<nav aria-label="P2" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    분석
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    풀이
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c2">
+    C2
+  </a>
+<nav aria-label="C2" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    분석
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    풀이
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p3">
+    P3
+  </a>
+<nav aria-label="P3" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    분석
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    풀이
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    복잡도
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c3">
+    C3
+  </a>
+<nav aria-label="C3" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    분석
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    풀이
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p4">
+    P4
+  </a>
+<nav aria-label="P4" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_24">
+    분석
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_25">
+    풀이
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_26">
+    복잡도
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p5">
+    P5
+  </a>
+<nav aria-label="P5" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_27">
+    분석
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_28">
+    풀이
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_29">
+    복잡도
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c4">
+    C4
+  </a>
+<nav aria-label="C4" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_30">
+    분석
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_31">
+    풀이
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_32">
+    복잡도
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_33">
+    알고리즘 자동 생성
+  </a>
+<nav aria-label="알고리즘 자동 생성" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_34">
+    과정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_35">
+    추상화
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c5">
+    C5
+  </a>
+<nav aria-label="C5" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_36">
+    추상화
+  </a>
+<nav aria-label="추상화" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_37">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_38">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_39">
+    순수 수학으로 사상시키기
+  </a>
+<nav aria-label="순수 수학으로 사상시키기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_40">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_41">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_42">
+    문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상
+  </a>
+<nav aria-label="문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r_1">
+    \(r'_1\) 을 결정하는 과정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r_2">
+    \(r'_2\) 을 결정하는 과정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#r_n">
+    \(r'_n\) 를 결정하는 과정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_43">
+    실제 계산 과정
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p6">
+    P6
+  </a>
+<nav aria-label="P6" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_44">
+    추상화
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_45">
+    순수 수학으로 사상시키기
+  </a>
+<nav aria-label="순수 수학으로 사상시키기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_46">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_47">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_48">
+    문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_49">
+    자료구조
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2d-convolution">
+    2D Convolution
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_50">
+    수학적으로 사상된 알고리즘 문제 풀이법의 대수적 풀이
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c6">
+    C6
+  </a>
+<nav aria-label="C6" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_51">
+    추상화
+  </a>
+<nav aria-label="추상화" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_52">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_53">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_54">
+    순수 수학으로 사상시키기
+  </a>
+<nav aria-label="순수 수학으로 사상시키기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_55">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_56">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_57">
+    문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p7">
+    P7
+  </a>
+<nav aria-label="P7" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_58">
+    추상화
+  </a>
+<nav aria-label="추상화" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_59">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_60">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_61">
+    순수 수학으로 사상시키기
+  </a>
+<nav aria-label="순수 수학으로 사상시키기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_62">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_63">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_64">
+    문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c7">
+    C7
+  </a>
+<nav aria-label="C7" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_65">
+    추상화
+  </a>
+<nav aria-label="추상화" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_66">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_67">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_68">
+    순수 수학으로 사상시키기
+  </a>
+<nav aria-label="순수 수학으로 사상시키기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_69">
+    문제
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-i-b-i-i-1-a-_i-1-b-_i-1">
+    이다. \(A ^{(i)}, B ^{(i)}\) 는 \(i-1\) 번째 원소 \(a _{i-1}, b _{i-1}\) 까지의 수열의 원소들이 서로소 집합에 잘 포함된 상태의 서로소 집합을 뜻한다.
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p8">
+    P8
+  </a>
+<nav aria-label="P8" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_70">
+    추상화
+  </a>
+<nav aria-label="추상화" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_71">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_72">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_73">
+    순수 수학으로 사상시키기
+  </a>
+<nav aria-label="순수 수학으로 사상시키기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_74">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_75">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_76">
+    문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c8">
+    C8
+  </a>
+<nav aria-label="C8" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_77">
+    추상화
+  </a>
+<nav aria-label="추상화" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_78">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_79">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_80">
+    순수 수학으로 사상시키기
+  </a>
+<nav aria-label="순수 수학으로 사상시키기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_81">
+    문제
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_82">
+    정답
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_83">
+    문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_84">
+    잡다한 생각
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p9">
+    P9
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p10">
+    P10
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p9_1">
+    P9
+  </a>
+<nav aria-label="P9" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_85">
+    두 위치에 관하여
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_86">
+    세 위치에 관하여
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_87">
+    네 위치에 관하여
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_88">
+    시간에 대한 위치 변동 계산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_89">
+    주어진 시간에 따른 위치 변동 계산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_90">
+    주어진 시간에 따른 그룹 갯수만 계산
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c9">
+    C9
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#p11">
+    P11
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>P1</h1>
+<h2 id="p1">P1<a class="headerlink" href="#p1" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : 접속 횟수를 카운팅하는 어떤 웹사이트에 대한 카운팅 로직이 잘못되어 </p>
+<p><span class="arithmatex">\(3\)</span> 이 <span class="arithmatex">\(4\)</span> 로 증가하는 것이 아니라 <span class="arithmatex">\(5\)</span> 로 증가하는 상황에 대하여 </p>
+<p>웹사이트가 카운팅한 숫자를 올바르게 고쳐라.</p>
+</div>
+<h3 id="_1">자연 대상을 수학 명제로 사상시키기<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<p>이때 편의상 제한 조건도 함께 포함시켰다.</p>
+<div class="admonition note">
+<p class="admonition-title">수학 명제</p>
+<p><span class="arithmatex">\(0 &lt; n &lt; 10 ^{8}\)</span> 인 <span class="arithmatex">\(n \in \N\)</span> 을 <span class="arithmatex">\(1\)</span> 씩 증가시킬 때,</p>
+<p><span class="arithmatex">\(n\)</span> 을 구성하는 숫자 집합 <span class="arithmatex">\(S\)</span> 의 원소 <span class="arithmatex">\(m \in S\)</span> 이 <span class="arithmatex">\(n\)</span> 이 증가함에 따라 바뀌어야 하는데 <span class="arithmatex">\(m = 3\)</span> 에서 <span class="arithmatex">\(m = 5\)</span> 로 증가되었다면,</p>
+<p>이 <span class="arithmatex">\(n\)</span> 을 일반적인 자연수 증가 방식에 따른 증가 결과값으로 변환할 수 있다.</p>
+</div>
+<h3 id="_2">정의<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><span class="arithmatex">\(n\)</span> 의 <span class="arithmatex">\(10 ^{k-1}\)</span> 자리수: <span class="arithmatex">\(a_k\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(s\)</span> 의 <span class="arithmatex">\(10 ^{k-1}\)</span> 자리수: <span class="arithmatex">\(b_k\)</span></p>
+</li>
+</ul>
+<h3 id="_3">과정<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p><span class="arithmatex">\(a_k\)</span> 가 <span class="arithmatex">\(3\)</span> 보다 크면 <span class="arithmatex">\(a_k\)</span> 에 <span class="arithmatex">\(1\)</span> 을 빼주어 <span class="arithmatex">\(b_k\)</span> 를 만든다.</p>
+<p><span class="arithmatex">\(a_1\)</span> 이 <span class="arithmatex">\(3\)</span> 보다 크면 <span class="arithmatex">\(n\)</span> 에 <span class="arithmatex">\(1\)</span> 을 빼주어 <span class="arithmatex">\(b_1\)</span> 을 만든다.</p>
+<p><span class="arithmatex">\(a_2\)</span> 가 <span class="arithmatex">\(3\)</span> 보다 크면 <span class="arithmatex">\(n\)</span> 에 <span class="arithmatex">\(10\)</span> 을 빼주어 <span class="arithmatex">\(b_2\)</span> 를 만든다. 또 <span class="arithmatex">\(a_2\)</span> 로 <span class="arithmatex">\(n\)</span> 이 <span class="arithmatex">\(b_2\)</span> 만큼 증가했기 때문에 <span class="arithmatex">\(n\)</span> 에 <span class="arithmatex">\(b_2\)</span> 를 빼준다.</p>
+<p><span class="arithmatex">\(a_3\)</span> 이 <span class="arithmatex">\(3\)</span> 보다 크면 <span class="arithmatex">\(n\)</span> 에 <span class="arithmatex">\(100\)</span> 을 빼주어 <span class="arithmatex">\(b_3\)</span> 를 만든다. 또 <span class="arithmatex">\(a_3\)</span> 로 인하여 <span class="arithmatex">\(a_2\)</span> 가 <span class="arithmatex">\(b_3 \times 1\)</span> 만큼 증가하고 <span class="arithmatex">\(a_1\)</span> 이 <span class="arithmatex">\(b_3 \times 9\)</span> 만큼 증가했기 때문에 <span class="arithmatex">\(n\)</span> 에 <span class="arithmatex">\(b_3 \times (10 + 9)\)</span> 를 빼준다.</p>
+<p><span class="arithmatex">\(a_4\)</span> 이 <span class="arithmatex">\(3\)</span> 보다 크면 <span class="arithmatex">\(n\)</span> 에 <span class="arithmatex">\(1000\)</span> 을 빼주어 <span class="arithmatex">\(b_4\)</span> 를 만든다. 또 <span class="arithmatex">\(a_4\)</span> 로 인하여 <span class="arithmatex">\(a_3\)</span> 가 <span class="arithmatex">\(b_4 \times 1\)</span> 만큼 증가하고 <span class="arithmatex">\(a_2\)</span> 가 <span class="arithmatex">\(b_4 \times 9\)</span> 만큼 증가하고 <span class="arithmatex">\(a_1\)</span> 이 <span class="arithmatex">\(b_4 \times 9 ^{2}\)</span> 만큼 증가했기 때문에 <span class="arithmatex">\(n\)</span> 에 <span class="arithmatex">\(b_4 \times (10 ^{2} - 10 \times 9 - 9 ^{2})\)</span> 를 빼준다.</p>
+<p>즉, <span class="arithmatex">\(a_k\)</span> 가 <span class="arithmatex">\(3\)</span> 보다 크면 <span class="arithmatex">\(n\)</span> 에 <span class="arithmatex">\(10 ^{k-1}\)</span> 을 빼주어 <span class="arithmatex">\(b_k\)</span> 를 만든다. 또 <span class="arithmatex">\(a_k\)</span> 로 인하여 <span class="arithmatex">\(n\)</span> 이 <span class="arithmatex">\(b_k \bigg (\displaystyle \sum_{i=1}^{k-1}10 ^{k - 1 - i}  9 ^{i - 1}\bigg )\)</span> 만큼 증가했기 때문에 <span class="arithmatex">\(n\)</span> 에 <span class="arithmatex">\(b_k \bigg (\displaystyle \sum_{i=1}^{k-1}10 ^{k - 1 - i} 9 ^{i - 1}\bigg )\)</span> 를 빼준다.</p>
+<p>그러면</p>
+<div class="arithmatex">\[ \epsilon (k) = \sum_{i=1}^{k-1}10 ^{k - 1 - i} 9 ^{i - 1} \qquad (\text{단,}\ \epsilon (1) = 0) \tag{1} \]</div>
+<div class="arithmatex">\[ \delta (a_k, k) = \begin{cases} a_k \cdot  \epsilon (k) &amp;(a_k \leq 3)\\ (a_k - 1) \cdot  \epsilon (k) + 10 ^{k-1} &amp;(a_k &gt; 3)\\ \end{cases} \tag{2} \]</div>
+<p>을 정의하여 다음과 같이 <span class="arithmatex">\(n\)</span> 을 일반적인 자연수 증가에 따라 증가한 <span class="arithmatex">\(s\)</span> 로 변환할 수 있다.</p>
+<div class="arithmatex">\[ \therefore \boxed{s = f(n) = n - \sum_{i=1}^{k} \delta (a_i, i)} \tag{3} \]</div>
+<p>이때 <span class="arithmatex">\(k\)</span> 는 <span class="arithmatex">\(k-1 \leq \log_{10} n &lt; k\)</span> 인 자연수이며 <span class="arithmatex">\(n\)</span> 이 몇자리수인지 나타낸다.</p>
+<h3 id="_4">코드 구현<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>이로써 지금까지의 논의를 통하여 <span class="arithmatex">\((1), (2), (3)\)</span> 을 통하여 <span class="arithmatex">\(n\)</span> 을 <span class="arithmatex">\(s\)</span> 로 변환하는 코드를 구현할 수 있다. 그 코드를 기반으로 다음과 같이 <span class="arithmatex">\(n = 10 ^{780}\)</span> 일 때 <span class="arithmatex">\(s\)</span> 를 구해본다.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">10</span> <span class="o">^</span>\<span class="o">*^</span>\<span class="o">*</span> <span class="mi">780</span><span class="p">))</span>
+</code></pre></div>
+<p>결과는 다음과 같다. </p>
+<div class="highlight"><pre><span></span><code>$ python p1.py
+<span class="m">2037780315197892556463133335700635380122532471678485922648004456918809992935019135643479478078246565906165296282263122385787985242387701928332932535133688635977322498057452728630831016939272257639722590639153566567002245762974752162851505442814944872503319343836744343684004360040802629671155699491932432937478648612293143136134249925202264293193722846818778339430628590057642457584174161550795931249517276926748173826619664691399299273329525071890429580889953847584231952328499670508977797507927170176325249022214541461840579571437370012385539433374208563068774508585062930471816759157018697525790583152255331972563877521442497791877314907239666730626402169321547965841515048425884802382043399774178518004402650173003654516729233321758683263201</span>
+</code></pre></div>
+<h4 id="_5">시간 복잡도<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><code>epsilon</code> 함수 : <span class="arithmatex">\(O(n)\)</span></p>
+</li>
+<li>
+<p><code>delta</code> 함수 : <span class="arithmatex">\(O(1)\)</span></p>
+</li>
+<li>
+<p><code>f</code> 함수 : <span class="arithmatex">\(O(\log_{10} n)\)</span></p>
+<ul>
+<li><span class="arithmatex">\(k = C\log_{10} n\)</span> 이기 때문이다.</li>
+</ul>
+</li>
+</ul>
+<h4 id="_6">성능 평가<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<p><a href="https://github.com/sharkdp/hyperfine">hyperfine</a> 으로 <span class="arithmatex">\(n = 10 ^{780}\)</span> 에 대한 <span class="arithmatex">\(s\)</span> 를 구하는 성능을 벤치마킹 해보면 다음과 같이 평균적으로 약 <span class="arithmatex">\(0.9\)</span> 초 정도 걸린다.</p>
+<div class="highlight"><pre><span></span><code>$ hyperfine <span class="s1">'python p1.py'</span>
+Benchmark <span class="c1">#1: python p1.py</span>
+  Time <span class="o">(</span>mean ± σ<span class="o">)</span>:     <span class="m">987</span>.6 ms ±  <span class="m">14</span>.9 ms    <span class="o">[</span>User: <span class="m">983</span>.6 ms, System: <span class="m">2</span>.8 ms<span class="o">]</span>
+  Range <span class="o">(</span>min … max<span class="o">)</span>:   <span class="m">967</span>.0 ms … <span class="m">1015</span>.0 ms    <span class="m">10</span> runs
+</code></pre></div>
+<p><sup>*</sup>*Python<sup>*</sup>* 코드를 <sup>*</sup>*C++<sup>*</sup>* 로 포팅한 것으로 <span class="arithmatex">\(n = 999999\)</span> 에 대한 <span class="arithmatex">\(s\)</span> 를 구하는 성능을 벤치마킹해보면 다음과 같이 평균적으로 <span class="arithmatex">\(0.001\)</span> 초 걸린다. </p>
+<div class="highlight"><pre><span></span><code>$ hyperfine ./p1
+Benchmark <span class="c1">#1: ./p1</span>
+  Time <span class="o">(</span>mean ± σ<span class="o">)</span>:       <span class="m">1</span>.1 ms ±   <span class="m">0</span>.3 ms    <span class="o">[</span>User: <span class="m">0</span>.6 ms, System: <span class="m">0</span>.6 ms<span class="o">]</span>
+  Range <span class="o">(</span>min … max<span class="o">)</span>:     <span class="m">0</span>.8 ms …   <span class="m">6</span>.5 ms    <span class="m">1663</span> runs
+</code></pre></div>
+<p><sup>*</sup>*Python<sup>*</sup>* 코드로 <span class="arithmatex">\(n = 999999\)</span> 에 대한 <span class="arithmatex">\(s\)</span> 를 구하는 성능을 벤치마킹하면 다음과 같이 평균적으로 <span class="arithmatex">\(0.009\)</span> 초 걸린다. </p>
+<div class="highlight"><pre><span></span><code>$ hyperfine <span class="s1">'python p1.py'</span>
+Benchmark <span class="c1">#1: python p1.py</span>
+  Time <span class="o">(</span>mean ± σ<span class="o">)</span>:       <span class="m">9</span>.3 ms ±   <span class="m">0</span>.7 ms    <span class="o">[</span>User: <span class="m">6</span>.2 ms, System: <span class="m">3</span>.0 ms<span class="o">]</span>
+  Range <span class="o">(</span>min … max<span class="o">)</span>:     <span class="m">8</span>.2 ms …  <span class="m">13</span>.7 ms    <span class="m">276</span> runs
+</code></pre></div>
+<p><sup>*</sup>*C++<sup>*</sup>* 로 구현한 것이 <sup>*</sup>*Python<sup>*</sup>* 보다 <span class="arithmatex">\(9\)</span> 배 더 빠르다.</p>
+<hr/>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>직관에서 멀어지려고 오히려 이성으로, 기계적으로 풀려고 했었는데 결국 방향을 못정하게 되네. 그래서 다시 직관으로 돌아오니까 그제서야 방향이 보이네. 하지만 직관에만 의존하니까 기계적으로 푸는 방식에서의 엄밀함이 부족하네. 또 기억력에는 한계가 있어서 길을 잃어버리기 쉽네.</p>
+<p>이성에만 의존하면 길을 못정하고, 직관에만 의존하면 길을 열심히 갈 수는 있는데 길을 잃어버리네.</p>
+<p>그러면 하이브리드로 해야 하네. 둘 중 어느 것 하나에만 의존하는 태도 자체가 좋지 않네. 직관과 이성 둘 다 장단점이 있으니까.</p>
+<p>직관은 길의 방향을 잘 정하고, 이성은 길의 엄밀성을 높혀주니까 먼저 직관에게 방향키를 맡기긴해야겠네. 근데 직관이 폭주하지 않도록 어느정도 길을 간 후에 이성에게 다시 주권을 주는 식으로 해야겠네. 근데 이성은 길을 못정하니까 다시 직관에게 주권을 줘야하고.</p>
+<p>직관은 빠르고, 자유롭고, 틀에 얽매이지 않고, 문제를 모든 관점에서 바라보게 하네. 근데 휘발성이 크고, 그 빠름과 자유로움이 정리되지 않으면 난잡합이 되버리네.</p>
+<p>이성은 정확하고, 엄밀하고, 자동화될 수 있지만 느리고, 방향을 정하지 못하고, 이해력이 떨어지네.</p>
+<p>실제로 이성에 의존할 때 논의가 상당히 기계적으로 진행되다 보니까 <span class="arithmatex">\(1, 19, 271, \dots\)</span> 의 의미를 뭔지 몰라버렸잖아. 근데 직관으로 좀만 생각해보면 그 의미를 바로 알 수 있었네.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>기계적으로 푼다는 것 자체가 우리를 배신했다고 말할 수 있을 정도로 너무 비효율적이네. 이 문제를 높은 직관과 통찰로 푼 사람은 이렇게 개고생 안하고 정말 짧은 시간과 짧은 아이디어로 바로 풀어버렸네. 앞으로 다시는 이성에 의존하면 안되겠네. 무조건 직관과 통찰에 의존해야 겠네. </p>
+<p>그러면 초지능 자체도 기계적으로 문제를 해결한다면 인간을 뛰어넘을 수 없는데, 인간을 뛰어넘는 인공지능이 탄생했다고 말하려면 인간보다 더 뛰어난 직관과 통찰을 지니고 있어야 한다고 말할 수 있네. 그러면 결과적으로 내가 자동화시키고 싶은 건 이성이 아니라 직관과 통찰이었네. 왜냐하면 직관과 통찰이 이성을 무자비하게 무릎꿇리는 것을 몸으로 체험했으니까. 좋은 수확이었네. </p>
+<p>애초에 공리로부터 시작하여 연역적으로 결론을 자동으로 이끌어 낼 수 있는 생각은 불완전성 정리 때문에 가능하지도 않았고, 나는 그것이 알고리즘 문제에 대해서는 가능하다는 것을 알았지만, 알고리즘 문제 조차도 그렇게 푼다면 곧 바로 사람이 바보가 되어버리네.</p>
+<p>그러니까 결과적으로 고대 그리스로부터 전수되어 오던 "연역적 방식" 이란 나를 배신한 개쓰레기 악마같은 존재였네. 기계적 방식, 연역적 방식, 이성적 방식. 정말 그럴듯 해보이지만 그것은 고대 그리스 수학자들이 자신의 빛나는 직관과 통찰로 자연 대상을 수학으로 추상화시키고 오로지 마지막에 그것을 정리하여 전달할 때 연역적인 방식, 기계적인 방식을 사용한 것인데, </p>
+<p>결과적으로 우리 눈에 보인 것은 연역적인 방식이었다 라는 거네.</p>
+<p>땅을 기어다니는 1차원적이고 바보같은 연역적 방식, 기계적 방식, 이성적 방식 이건 오로지 마지막에 생각을 정리할 때 쓰여야 하네. 그곳에는 오직 하늘을 높이 올라가서 더더욱 자연 대상을 위에서 내려다보려고 하는 고차원적인 직관과 통찰 밖에 없더라구.</p>
+<p>그리고 결국 인공지능으로 연역적 이성, 기계적 이성을 자동화시켜야 하는 게 아니라 이 직관과 통찰을 자동화 시켜야 하는 거고.</p>
+<p>결과적으로 <span class="arithmatex">\(9 ^{k}\)</span> 차이가 나는 것을 이해하지 못했네. 그 모든 것을 관통하는 법칙을 시각적으로, 뭔가 1차원적으로 보는 게 아니라 더 고차원적인 형상으로 볼 때 보이는 거네.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>그리고 오히려 그런 일도 발생했네. 문제를 수학적으로 해결하려는 시도 자체가 수학에서 제공하는 형식적 언어를 계속 사용해야 한다는 거니까 사고가 좀 자유롭지 못하게 되어버렸네. 오히려 사고가 자유롭게 되지 못하고 수학에 존재하는 형식 언어 안에 갖혀버렸네.</p>
+<p>수학에서의 수식으로 생각한다는 것 자체가 애초에 형식 언어, 즉 언어니까 1차원적으로 생각하는 것에 갇혀버릴 수도 있다는 말이지. 그렇다면 기계적으로, 이성적으로, 논리적으로 생각한다는 것은 1차원적인 형태의 생각을 한다는 것이고, 직관적으로 통찰력있게 생각한다는 것은 1차원적 생각으로 형상된 대상을 고차원으로 도약시켜서 생각한다는 것인가? 1차원 형태로 전달받은 대상이 원래의 형태를 갖출 수 있도록 고차원적 대상으로 복원하여 생각하는 것이 직관적으로 생각하는 것인가?</p>
+<p>물론 모든 대상이 글과 말로 전달된다고 생각하면 입력되는 모든 대상을 1차원이라고 생각할 수 있지. 이 대상들을 고차원적 대상으로 복원해야 하는데 그러면 차원 도약을 얼마나 진행해야 하지? 가령 0차원 존재인 점은 1차원으로 표현하고 2차원으로 표현해도 그대로 점이다. 그러면 대상의 형태가 더 이상 변하지 않을 때까지 차원 도약을 진행하면 대상이 가장 단순하고 생각하지 좋은 형태로 바뀌는 것일까? 쉽지 않네. 직관과 통찰이 무엇인지 규명하는게.</p>
+</div>
+<hr/>
+<h2 id="c1">C1<a class="headerlink" href="#c1" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : 각각의 친구 관계를 맺고 있는 <span class="arithmatex">\(n\)</span> 명의 군인들에서 모든 군인이 최소한 <span class="arithmatex">\(k\)</span> 명의 친구를 갖도록 팀을 구성했을 때, 팀이 구성될 수 있는 최대 크기를 구해라.</p>
+</div>
+<ul>
+<li>
+<p>다음 그림을 보자.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/92441732-b4ba3e80-f1e9-11ea-9ee7-8fa1461a69d5.png"/></p>
+<p>위와 같은 선으로 연결된 친구관계를 갖고 있는 군인 <span class="arithmatex">\(1,2,3,4,5\)</span> 로부터 모든 군인이 최소한 <span class="arithmatex">\(k = 2\)</span> 명의 친구를 갖도록 팀을 구성하면 </p>
+<div class="arithmatex">\[ \{2,3,4\}, \{2,4,5\}, \{2,3,4,5\} \]</div>
+<p>가 될 수 있다. 이 중 가장 큰 팀은 <span class="arithmatex">\(\{2,3,4,5\}\)</span> 이므로 결과값은 <span class="arithmatex">\(4\)</span> 이다.</p>
+<p>이때 <span class="arithmatex">\(k = 3\)</span> 으로 두면 팀이 구성될 수 없으므로 결과값은 <span class="arithmatex">\(0\)</span> 이다.</p>
+</li>
+</ul>
+<h3 id="_7">사전 수학 지식<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
+<a href="#4e344f1d9"><div class="admonition tldr" id="4e344f1d9">
+<p>그래프(graph, undirected graph) : 그래프 <span class="arithmatex">\(G\)</span> 는 자연수의 집합 <span class="arithmatex">\(V\)</span> 와 <span class="arithmatex">\(V\)</span> 의 2-집합(two-sets) 의 집합 <span class="arithmatex">\(E\)</span> 에 대한 순서쌍</p>
+<div class="arithmatex">\[ G = (V, E) \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(V\)</span> 의 원소를 정점(vertex) 이라 부르고, <span class="arithmatex">\(E\)</span> 의 원소를 간선(edges) 이라 부른다.</p>
+</li>
+<li>
+<p>간선 <span class="arithmatex">\(\{v_1, v_2\} \in E\)</span> 을 흔히 <span class="arithmatex">\(v_1v_2\)</span> 로 표기한다.</p>
+</li>
+<li>
+<p>그래프 <span class="arithmatex">\(G = (V, E)\)</span> 의 정점의 집합을 <span class="arithmatex">\(V(G)\)</span> 로, 간선의 집합을 <span class="arithmatex">\(E(G)\)</span> 로 표기한다.</p>
+</li>
+</ul>
+<a href="#d1e83d942"><div class="admonition tldr" id="d1e83d942">
+<p>그래프 <span class="arithmatex">\(G\)</span> 의 꼭짓점 <span class="arithmatex">\(v \in V(G)\)</span> 의 차수(degree) : <span class="arithmatex">\(\deg v\)</span> 는 기수 </p>
+<div class="arithmatex">\[ \deg v = |\{u \in V(G): uv \in E(G) \} \text{\textbackslash} \{v\}| \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정의에 따라 자연스럽게 그래프 <span class="arithmatex">\(G\)</span> 의 최대 차수는</p>
+<div class="arithmatex">\[ \Delta (G)= \sup _{u \in V(G)} \deg (V) \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#01bdcfceb"><div class="admonition tldr" id="01bdcfceb">
+<p>부분 그래프 : 그래프 <span class="arithmatex">\(G\)</span> 의 부분 그래프 <span class="arithmatex">\(H \subset G\)</span> 는 다음을 만족시키는 그래프이다.</p>
+<div class="arithmatex">\[ V(H) \subset V(G) \]</div>
+<div class="arithmatex">\[ E(H) \subset E(G) \]</div>
+</div></a>
+<ul>
+<li>부분집합과 비슷한 개념이다.</li>
+</ul>
+<a href="#a80003150"><div class="admonition tldr" id="a80003150">
+<p>유도 부분 그래프(induced subgraph) : 그래프 <span class="arithmatex">\(G\)</span> 의 부분 그래프 <span class="arithmatex">\(H \subset G\)</span> 는 다음을 만족시키는 그래프이다.</p>
+<div class="arithmatex">\[ V(H) \subset V(G) \]</div>
+<div class="arithmatex">\[ uv \in E(H) \iff u, v \in V(H) \land uv \in E(G) \]</div>
+</div></a>
+<ul>
+<li>
+<p>다음 그림을 보자.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Teilgraphenbeziehungen.svg/1530px-Teilgraphenbeziehungen.svg.png"/></p>
+<p>^*from: <a href="https://ko.wikipedia.org/wiki/%EB%B6%80%EB%B6%84_%EA%B7%B8%EB%9E%98%ED%94%84">https://ko.wikipedia.org/wiki/%EB%B6%80%EB%B6%84_%EA%B7%B8%EB%9E%98%ED%94%84</a>^* </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(G_1, G_2, G_3\)</span> 는 모두 <span class="arithmatex">\(G\)</span> 의 부분 그래프이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(G_1\)</span> 은 간선 <span class="arithmatex">\(26\)</span> 을 포함하지 않기에 <span class="arithmatex">\(G\)</span> 의 유도 부분 그래프가 아니다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(G_2, G_3\)</span> 는 <span class="arithmatex">\(G\)</span> 의 유도 부분 그래프이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(G_3\)</span> 는 <span class="arithmatex">\(G_2\)</span> 의 유도 부분 그래프이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#c4e754924"><div class="admonition tldr" id="c4e754924">
+<p>완전 그래프(complete graph) : 집합 <span class="arithmatex">\(S\)</span> 에 대한 완전 그래프 <span class="arithmatex">\(K_S\)</span> 는</p>
+<div class="arithmatex">\[ V(K_S) = S \]</div>
+<div class="arithmatex">\[ uv \in E(K_S) \iff u \neq v \]</div>
+<p>를 만족하는 그래프이다.</p>
+</div></a>
+<ul>
+<li>
+<p>서로 다른 두 개의 정점이 반드시 하나의 간선으로 연결된 그래프이다.</p>
+</li>
+<li>
+<p>정점이 <span class="arithmatex">\(n\)</span> 면 간선은 <span class="arithmatex">\(\dfrac{n(n-1)}{2}\)</span> 개 이다.</p>
+</li>
+<li>
+<p>어떤 완전 그래프가 부분 그래프라면 유도 부분 그래프가 아닐 수 없다.</p>
+<p>왜냐하면 완전 그래프란 서로 다른 두 개의 정점이 반드시 하나의 간선으로 연결된 그래프인데, 유도 부분 그래프가 아니라면 서로 다른 두 정점에 대하여 간선이 없을 수도 있기 때문이다.</p>
+</li>
+</ul>
+<h3 id="_8">자연 대상을 수학 명제로 사상시키기<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">수학 명제</p>
+<p>자연수 집합 <span class="arithmatex">\(V\)</span> 와 <span class="arithmatex">\(V\)</span> 의 2-집합의 집합 <span class="arithmatex">\(E\)</span> 에 대한 순서쌍 <span class="arithmatex">\(G = (V, E)\)</span> 로 정의된 그래프 <span class="arithmatex">\(G\)</span> 의 모든 <sup>*</sup>*완전 <span class="arithmatex">\(k\)</span> 분 그래프<sup>*</sup>* 들의 정점의 집합 <span class="arithmatex">\(S\)</span> 에 대하여 기수 <span class="arithmatex">\(|S|\)</span> 를 구할 수 있다.</p>
+</div>
+<h3 id="_9">과정<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p><span class="arithmatex">\(G\)</span> 의 부분 그래프이면서 완전 그래프인 집합: <span class="arithmatex">\(K_1, K_2, \dots, K_n\)</span></p>
+</li>
+<li>
+<p>완전 그래프의 노드의 합집합: <span class="arithmatex">\(S = \displaystyle \bigcup_{i \in I}^{} V(K_i)\)</span></p>
+</li>
+<li>
+<p>집합 <span class="arithmatex">\(S\)</span> 의 기수(문제가 요구하는 것): <span class="arithmatex">\(|S|\)</span></p>
+</li>
+</ol>
+<p>하지만 완전 그래프의 정점의 집합만을 구할 거면 굳이 그래프의 모든 부분 그래프를 구한 다음 그것들이 완전 그래프인지 판단할 필요가 없다. </p>
+<p>왜냐하면 <span class="arithmatex">\(k\)</span> 보다 작은 엣지를 갖고 있는 노드는 어차피 완전 그래프를 절대로 이루지 못하는 노드이므로 삭제하면 되기 때문이다. 그런데 이 삭제된 노드로 인하여 자신의 엣지가 <span class="arithmatex">\(k\)</span> 값보다 작아진 노드들이 존재하게 된다. 따라서 이것들도 삭제한다. 이러다보면 언젠가 모든 노드들이 사라지거나 <span class="arithmatex">\(k\)</span> 값보다 큰 엣지를 갖게된다.</p>
+<p>그러면 이때의 그래프가 곧 <span class="arithmatex">\(k\)</span> 값에 대한 가장 큰 팀을 이룰 수 있는 그래프이므로 이때의 노드의 총 갯수를 구하면 된다.</p>
+<h3 id="_10">과정<a class="headerlink" href="#_10" title="Permanent link">¶</a></h3>
+<p><span class="arithmatex">\(k\)</span> 미만의 간선을 갖는 노드와 그 노드에 대한 모든 간선을 삭제한다.</p>
+<h3 id="_11">코드 구현<a class="headerlink" href="#_11" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p><span class="arithmatex">\(k\)</span> 보다 작은 엣지를 갖고 있는 노드를 구한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(k\)</span> 이 노드를 삭제한다.</p>
+</li>
+<li>
+<p>1 과 2 를 반복한다.</p>
+</li>
+</ol>
+<h4 id="_12">시간 복잡도<a class="headerlink" href="#_12" title="Permanent link">¶</a></h4>
+<p>최악의 경우를 상정하고 이 알고리즘이 얼마나 오래걸릴지 계산해본다. </p>
+<p><span class="arithmatex">\(n\)</span> 개의 노드와 <span class="arithmatex">\(\dfrac{n(n-1)}{2}\)</span> 개의 엣지를 갖는 그래프에서 모든 노드를 삭제해야 하는 상황이 최악의 상황일 것이다.</p>
+<p>최악의 상황: <span class="arithmatex">\(n\)</span> 개의 노드와 <span class="arithmatex">\(\dfrac{n(n-1)}{2}\)</span> 개의 엣지를 갖는 그래프에서 </p>
+<p>모든 노드를 삭제해야 하는 상황이 최악의 상황일 것이다.</p>
+<p><span class="arithmatex">\(n-1\)</span> 개의 노드에 대하여 <span class="arithmatex">\(1\)</span> 을 삭제</p>
+<p><span class="arithmatex">\(n-2\)</span> 개의 노드에 대하여 <span class="arithmatex">\(2\)</span> 을 삭제</p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p><span class="arithmatex">\(1\)</span> 개의 노드에 대하여 <span class="arithmatex">\(n-1\)</span> 을 삭제</p>
+<p>결국 이 연산을 <span class="arithmatex">\(\dfrac{n(n-1)}{2}\)</span> 번하는데</p>
+<p>삭제 연산이 <span class="arithmatex">\(O(n)\)</span> 이기 때문에 </p>
+<ul>
+<li><code>reduce_graph</code> 함수 : <span class="arithmatex">\(O(n ^{3})\)</span></li>
+</ul>
+<h4 id="_13">시간 복잡도<a class="headerlink" href="#_13" title="Permanent link">¶</a></h4>
+<ul>
+<li><code>epsilon</code> 함수 : <span class="arithmatex">\(O(n)\)</span></li>
+</ul>
+<h4 id="_14">성능 평가<a class="headerlink" href="#_14" title="Permanent link">¶</a></h4>
+<p><a href="https://github.com/sharkdp/hyperfine">hyperfine</a> 으로 </p>
+<div class="highlight"><pre><span></span><code>$ hyperfine <span class="s1">'python p1.py'</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>완전 그래프가 문제의 조건을 충족시킨다고 직관적으로 생각했는데 완전 이분 그래프 중에서 완전 그래프가 아니면서 문제의 조건을 충족시키는 경우가 있었네. 이번엔 직관이 배신했네. 그냥 문제의 조건을 충실하게 충족시킬 수 있는 방법이 최고겠네. 좀 느리더라도.</p>
+</div>
+<hr/>
+<h2 id="p2">P2<a class="headerlink" href="#p2" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : <span class="arithmatex">\(1 \leq n \leq 10 ^{7}\)</span> 개의 빌딩에 대하여 <span class="arithmatex">\(i\)</span> 번째 빌딩이 <span class="arithmatex">\(0 \leq x_i &lt; 10 ^{11}\)</span> 지점들에 서있고 <span class="arithmatex">\(i\)</span> 번째 빌딩에 <span class="arithmatex">\(1 \leq g_i \leq 10 ^{4}\)</span> 명의 사람이 살고 있다. 병원을 지으려고 하는데, 건물과 병원의 거리가 <span class="arithmatex">\(1 \leq k \leq 2 \cdot 10 ^{6}\)</span> 와 같거나 작을 경우 건물이 병원과 도보 거리에 있는 것이다. 최대한 많은 사람이 병원과의 도보 거리에 있도록 했을 경우 몇 명의 사람이 병원과 도보 거리에 있는지 구해야 한다.</p>
+</div>
+<p>첫 라인에 두 숫자가 <span class="arithmatex">\(n\)</span> 과 <span class="arithmatex">\(k\)</span> 로 주어진다. 이후 <span class="arithmatex">\(n\)</span> 개의 라인에 <span class="arithmatex">\(g_i\)</span> 와 <span class="arithmatex">\(x_i\)</span> 가 주어진다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">4</span> <span class="m">3</span>
+<span class="m">4</span> <span class="m">7</span>
+<span class="m">10</span> <span class="m">15</span>
+<span class="m">2</span> <span class="m">2</span>
+<span class="m">5</span> <span class="m">1</span>
+</code></pre></div>
+<p>위와 같은 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">11</span>
+</code></pre></div>
+</div>
+<h3 id="_15">분석<a class="headerlink" href="#_15" title="Permanent link">¶</a></h3>
+<p><span class="arithmatex">\(1\)</span> 차원 좌표계에 <span class="arithmatex">\(x_i\)</span> 들이 정의되면 임의의 <span class="arithmatex">\(n \in \Z _{\geq 0}\)</span> 에 대하여 </p>
+<p>폐구간 <span class="arithmatex">\([n, n+2k]\)</span> 에 존재하는 <span class="arithmatex">\(x_i\)</span> 들의 집합은 유한하게 특정된다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>위의 예시에서 임의의 <span class="arithmatex">\(n \in \Z _{&gt;0}\)</span> 에 대하여 폐구간 <span class="arithmatex">\([n, n+6]\)</span> 에 존재하는 <span class="arithmatex">\(x_i\)</span> 들의 집합은 다음과 같다.</p>
+<div class="arithmatex">\[ \{x_1, x_2\}, \{x_1, x_2,x_3\}, \{x_2, x_3\}, \{x_3\}, \{x_4\} \]</div>
+</div>
+<h3 id="_16">풀이<a class="headerlink" href="#_16" title="Permanent link">¶</a></h3>
+<p>임의의 <span class="arithmatex">\(n \in \Z _{\geq  0}\)</span> 에 대하여 폐구간 <span class="arithmatex">\([n, n+2k]\)</span> </p>
+<p>에 존재하는 <span class="arithmatex">\(x_i\)</span> 들의 집합을 구한다.</p>
+<p>이때 <span class="arithmatex">\(\{x_1, x_2\}, \{x_2, x_3\}, \{x_3\}\)</span> 들의 <span class="arithmatex">\(\sum g_i\)</span> 는 <span class="arithmatex">\(\{x_1, x_2,x_3\}\)</span> 의 <span class="arithmatex">\(\sum g_i\)</span> 보다 반드시 작기 때문에 상정할 필요 없다. </p>
+<p>이렇게 필요없는 폐구간 <span class="arithmatex">\([n, n+2k]\)</span> 에 존재하는 <span class="arithmatex">\(x_i\)</span> 들을 계산하지 않기 위하여 폐구간 <span class="arithmatex">\([n, n+2k]\)</span> 에 최대한의 <span class="arithmatex">\(x_i\)</span> 가 포함되도록 다음과 같은 군집(<sup>*</sup>*cluster<sup>*</sup>*) 를 <code>queue</code> 에 만든다.</p>
+<ol>
+<li>
+<p><code>queue</code> 에 <span class="arithmatex">\(x_i\)</span> 를 <code>push</code></p>
+</li>
+<li>
+<p><code>queue</code> 의 첫 원소와 마지막 원소의 거리를 <span class="arithmatex">\(2k\)</span> 와 비교한다.</p>
+<ol>
+<li>
+<p>같거나 작다면 1. 로 되돌아간다.</p>
+</li>
+<li>
+<p>크다면 마지막으로 더한 <span class="arithmatex">\(x_i\)</span> 를 제외하고 <span class="arithmatex">\(\sum g_i\)</span> 를 계산한다. 그리고 <code>queue</code> 의 거리가 <span class="arithmatex">\(2k\)</span> 를 넘지 않을 때까지 <code>pop</code> 한 다음 1. 로 되돌아간다.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><code>push</code> 한 <span class="arithmatex">\(x_i\)</span> 가 마지막 원소라면 <span class="arithmatex">\(\sum g_i\)</span> 를 계산하고 종료한다.</p>
+</li>
+</ol>
+<p>이렇게 하면 불필요한 <span class="arithmatex">\(x_i\)</span> 군집을 계산하지 않게 되고, 지금까지 계산된 <span class="arithmatex">\(\sum g_i\)</span> 중에서 최댓값을 구하기만 하면 된다. </p>
+<hr/>
+<h2 id="c2">C2<a class="headerlink" href="#c2" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : <span class="arithmatex">\(n \times n\)</span> 격자 모양의 산에 다음 조건을 만족시키는 스키 경로 <span class="arithmatex">\((s_1, s_2, \dots, s_n)\)</span> 를 만들려 한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(s_i\)</span> 와 <span class="arithmatex">\(s _{i+1}\)</span> 는 인접하다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(s_i\)</span> 의 고도가 <span class="arithmatex">\(s _{i+1}\)</span> 의 고도보다 높다.</p>
+</li>
+</ol>
+<p>difficulty 를 스키 경로의 두 인접 지점간의 고도 차의 합이라고 정의할 때 가장 difficulty 가 높았을 때의 difficulty 를 출력하라.</p>
+</div>
+<p>첫 라인에 <span class="arithmatex">\(1 \leq n \leq 500\)</span> 인 <span class="arithmatex">\(n \times n\)</span> 모양 산을 나타내는 정수 <span class="arithmatex">\(n \in \Z\)</span> 이 주어진다. 두번째 라인부터 <span class="arithmatex">\(n+1\)</span>번째 라인까지 산의 격자 모양 정보를 알려주는 <span class="arithmatex">\(n\)</span> 개의 수가 주어진다. <span class="arithmatex">\(i+1\)</span> 번째 라인의 <span class="arithmatex">\(j\)</span> 번째 값은 <span class="arithmatex">\([0, 10 ^{8}]\)</span> 에 존재하는 정수인 산의 <span class="arithmatex">\((i, j)\)</span> 지점의 고도를 나타낸다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">4</span>
+<span class="m">1</span> <span class="m">6</span> <span class="m">10</span> <span class="m">3</span>
+<span class="m">5</span> <span class="m">5</span> <span class="m">6</span> <span class="m">1</span>
+<span class="m">5</span> <span class="m">7</span> <span class="m">2</span> <span class="m">3</span>
+<span class="m">11</span> <span class="m">5</span> <span class="m">7</span> <span class="m">4</span>
+</code></pre></div>
+<p>위와 같은 입력에 대한 출력은 다음과 같다. 10-(4)-&gt;6-(5)-&gt;1</p>
+<div class="highlight"><pre><span></span><code><span class="m">9</span>
+</code></pre></div>
+</div>
+<h3 id="_17">분석<a class="headerlink" href="#_17" title="Permanent link">¶</a></h3>
+<p>이웃하는 항의 위치가 서로 인접하고 각 항이 고도를 나타내는 감소수열 <span class="arithmatex">\(a_n\)</span> 은 유한하게 특정된다. 그리고 수열 <span class="arithmatex">\(a_n\)</span> 에 대하여 각 항의 차의 총합을 계산하는 함수 <span class="arithmatex">\(d(a_n) = \displaystyle \sum_{i=1}^{n-1} (a _{i+1} - a _{i})\)</span> 를 정의할 수 있다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>위의 예시에서 수열 <span class="arithmatex">\(a_n\)</span> 은 다음과 같이 정해질 수 있다.</p>
+<p>수열의 원소의 개수가 <span class="arithmatex">\(1\)</span> 인 경우는 다음과 같다.</p>
+<div class="arithmatex">\[ \{a_n\} : 1 \qquad \{a_n\} : 6 \qquad \dots \qquad  \{a_n\} : 11 \]</div>
+<p>수열의 원소의 개수가 <span class="arithmatex">\(2\)</span> 인 경우는 다음과 같다.</p>
+<div class="arithmatex">\[ \{a_n\} : 6, 1 \qquad  \{a_n\} : 10, 6 \qquad \dots \qquad \{a_n\} : 11, 5 \]</div>
+<p>수열의 원소의 개수가 <span class="arithmatex">\(3\)</span> 인 경우는 다음과 같다.</p>
+<div class="arithmatex">\[ \{a_n\} : 10, 6, 1 \qquad \{a_n\} : 4, 3, 1 \qquad \dots \]</div>
+<p>이런식으로 수열 <span class="arithmatex">\(a_n\)</span> 을 유한하게 특정시킬 수 있다.</p>
+</div>
+<p>그런데 <span class="arithmatex">\(\{a_n\} : 6, 1\)</span> 의 <span class="arithmatex">\(d(a_n)\)</span> 은 <span class="arithmatex">\(\{a_n\} : 10, 6, 1\)</span> 의 <span class="arithmatex">\(d(a_n)\)</span> 보다 반드시 작다. 수열 <span class="arithmatex">\((6, 1)\)</span> 은 수열 <span class="arithmatex">\((10, 6, 1)\)</span> 에 포함되기 때문이다. 그러므로 이렇게 불필요한 수열 <span class="arithmatex">\(a_n\)</span> 을 구하지 않아야 한다. </p>
+<h3 id="_18">풀이<a class="headerlink" href="#_18" title="Permanent link">¶</a></h3>
+<p>따라서 기본적으로 다음의 과정을 따를 수 있다.</p>
+<ol>
+<li>
+<p>가장 큰 고도의 좌표에서 시작한다.</p>
+</li>
+<li>
+<p>각각의 좌표에서 감소하는 방향으로의 모든 경로를 찾고, 경로에 포함된 노드에 방문했다는 표시를 한다.</p>
+</li>
+<li>
+<p>그 경로에 존재하는 노드들의 차의 총합을 구한다.</p>
+</li>
+<li>
+<p>다음으로 큰 노드에 대하여 2. 를 수행한다. 이때 방문한 표시가 있으면 넘어간다.</p>
+</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Time out</p>
+<p>그런데 매번 모든 경로를 구할 필요 없이 각 항을 기초로 하여 감소하는 방향으로의 모든 경로의 항들의 차 중에서 가장 큰 값(difficulty)을 항들에 저장해두면, 항의 차의 총합을 구할 때 불필요한 연산을 하지 않을 수 있다. 그러므로 다음과 같이 할 수 있다.</p>
+<ol>
+<li>
+<p>가장 작은 항부터 시작한다.</p>
+</li>
+<li>
+<p>인접한 항에 대하여 작은 항에 대한 차이값 중 가장 큰 값과 작은 항이 지니고 있는 difficulty 를 더하여 저장한다.</p>
+</li>
+<li>
+<p>더 큰 항으로 이동한다.</p>
+</li>
+</ol>
+<p>이 과정이 끝난다면 모든 항들이 갖고 있는 difficulty 중 가장 큰 값을 출력하면 끝이다.</p>
+</div>
+<p>이 과정이 끝난다면 모든 항들이 갖고 있는 difficulty 중 가장 큰 값을 출력하면 끝이다.</p>
+<hr/>
+<h2 id="p3">P3<a class="headerlink" href="#p3" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : <span class="arithmatex">\(N\)</span> 개의 쇼핑백은 각각 <span class="arithmatex">\(M\)</span> 을 넘지 않는 <span class="arithmatex">\(w_1, w_2, \dots, w_N\)</span> 의 무게를 갖는다. 쇼핑백을 집으로 갖고 가기 위하여 하인을 고용하는데 기본적으로 하인은 쇼핑백을 <span class="arithmatex">\(1\)</span> 개만 들 수 있고, 만약 두 쇼핑백의 무게의 합이 <span class="arithmatex">\(M\)</span> 을 넘지 않는다면 <span class="arithmatex">\(2\)</span> 개를 들 수 있다. 쇼핑백을 들고 갈 가장 적은 수의 하인을 구해라.</p>
+</div>
+<p>첫라인에 <span class="arithmatex">\(M\)</span> 이 주어진다. 두번째 라인부터 임의의 라인까지 쇼핑백의 무게가 주어진다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">5</span>
+<span class="m">1</span>
+<span class="m">3</span>
+<span class="m">2</span>
+<span class="m">3</span>
+<span class="m">5</span>
+</code></pre></div>
+<p>위와 같은 입력에 대한 출력은 다음과 같다. (1, 3), (2, 3), 5</p>
+<div class="highlight"><pre><span></span><code><span class="m">3</span>
+</code></pre></div>
+</div>
+<h3 id="_19">분석<a class="headerlink" href="#_19" title="Permanent link">¶</a></h3>
+<p>집합 <span class="arithmatex">\(W = \{w_1, w_2, \dots, w_N\}\)</span> 에서 합이 <span class="arithmatex">\(M\)</span> 을 넘지 않도록 </p>
+<p>임의의 두 원소를 <span class="arithmatex">\(2\)</span>-튜플로 만들 수 있는 경우의 수는 유한하게 특정된다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>집합 <span class="arithmatex">\(W = \{1,1,1,4,4\}\)</span> 에서 합이 <span class="arithmatex">\(5\)</span> 를 넘지 않도록 </p>
+<p>그 원소로 <span class="arithmatex">\(2\)</span>-튜플을 만들 경우의 수는 다음과 같다.</p>
+<div class="arithmatex">\[ W^* = \{1,1,1,4,4\} \]</div>
+<div class="arithmatex">\[ W^* = \{(1,1),1,4,4\} = \{2,1,4,4\}\]</div>
+<div class="arithmatex">\[ W^* = \{(1,4),1,1,4\} = \{5,1,1,4\}\]</div>
+<div class="arithmatex">\[ W^* = \{(1,4),(1,4),1\} = \{5,5,1\}\]</div>
+</div>
+<p>위와 같은 경우에서 집합의 기수 <span class="arithmatex">\(|W^*|\)</span> 를 구할 수 있다.</p>
+<p>그런데 <span class="arithmatex">\(\{(1,4),1,1,4\}\)</span> 의 경우와 같이 <span class="arithmatex">\(2\)</span>-튜플을 만들 수 있는데도 만들지 않으면 최소의 <span class="arithmatex">\(|W^*|\)</span> 를 구할 수 없다. </p>
+<p>또, <span class="arithmatex">\(W^* = \{(1,1),1,4,4\} = \{2,1,4,4\}\)</span> 의 경우와 같이 작은 수끼리만 <span class="arithmatex">\(2\)</span>-튜플을 생성하면 <span class="arithmatex">\((1,4), (1,4)\)</span> 의 <span class="arithmatex">\(2\)</span>-튜플을 만들어서 <span class="arithmatex">\(|W^*|\)</span> 를 더욱 줄일 수 있었는데 못줄이게 된다.</p>
+<p>이때 <span class="arithmatex">\(\sup W = M\)</span> 이므로 위 예시에서 <span class="arithmatex">\((1, 1)\)</span> 로 튜플을 이룬 경우는 </p>
+<p><span class="arithmatex">\(M - 2 = 5 - 2 = 3\)</span> 의 공간낭비가 발생한다.</p>
+<p>이와 같은 공간낭비도를 최소화할 수 있다면 최소의 <span class="arithmatex">\(|W^*|\)</span> 를 찾을 수 있다. </p>
+<h3 id="_20">풀이<a class="headerlink" href="#_20" title="Permanent link">¶</a></h3>
+<p>공간낭비도를 최소화하기 위하여 다음의 과정을 따를 수 있다.</p>
+<p><span class="arithmatex">\(M = 8\)</span> 이 주어졌을 때 <span class="arithmatex">\(8\)</span> 이라는 수 자체는 공간낭비도가 <span class="arithmatex">\(0\)</span> 이므로 더 이상 상정할 필요 없다.</p>
+<p><span class="arithmatex">\(7\)</span> 은 그 자체로 <span class="arithmatex">\(1\)</span> 의 공간낭비도를 내포하고 있으므로 <span class="arithmatex">\(1\)</span> 과 <span class="arithmatex">\(2\)</span>-튜플을 맺을 수 있는지 알아보아야 한다.</p>
+<p><span class="arithmatex">\(6\)</span> 은 그 자체로 <span class="arithmatex">\(2\)</span> 의 공간낭비도를 내포하고 있으므로 먼저 <span class="arithmatex">\(2\)</span> 와 <span class="arithmatex">\(2\)</span>-튜플을 맺을 수 있는지 알아보아야 한다. 만약 <span class="arithmatex">\(2\)</span> 와 <span class="arithmatex">\(2\)</span>-튜플을 맺을 수 있다면 공간낭비도가 <span class="arithmatex">\(0\)</span> 가 되기 때문이다. 하지만 <span class="arithmatex">\(2\)</span> 가 없다면 <span class="arithmatex">\(1\)</span> 이라도 찾아서 공간낭비도가 <span class="arithmatex">\(1\)</span> 이라도 되게 해야 한다.</p>
+<p><span class="arithmatex">\(5\)</span> 도 마찬가지의 이유로 먼저 <span class="arithmatex">\(3\)</span> 이 있나 찾고, 없다면 <span class="arithmatex">\(2\)</span> 가 있나 찾고, 그것도 없다면 <span class="arithmatex">\(1\)</span> 이라도 있나 찾게 된다.</p>
+<p><span class="arithmatex">\(4\)</span> 도 마찬가지로 <span class="arithmatex">\(4\)</span> 가 있나 찾고, <span class="arithmatex">\(3\)</span> 이 있나 찾고, 없다면 <span class="arithmatex">\(2\)</span> 가 있나 찾고, 그것도 없다면 <span class="arithmatex">\(1\)</span> 이라도 있나 찾게 된다.</p>
+<p><span class="arithmatex">\(3\)</span> 도 마찬가지로 먼저 공간낭비도를 최소화할 수 있는 <span class="arithmatex">\(5\)</span> 가 있나 찾게 된다. 그런데 <span class="arithmatex">\(5\)</span> 가 <span class="arithmatex">\(3\)</span> 이 있는지 이미 찾았으므로 무의미하다. 따라서 <span class="arithmatex">\(M / 2\)</span> 미만의 수들은 더 이상 생각하지 않아도 된다.</p>
+<p>결론적으로 다음의 과정을 따를 수 있다.</p>
+<ol>
+<li>
+<p>집합 <span class="arithmatex">\(W\)</span> 을 <span class="arithmatex">\(\text{mid} = \dfrac{M+1}{2}\)</span> 에 대하여 </p>
+<p><span class="arithmatex">\(L = \{l \in W | l &lt; \text{mid}\}\)</span> 와 <span class="arithmatex">\(U = \{u \in W | u \geq \text{mid}\}\)</span> 로 분할한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(L\)</span> 을 내림차순으로 정렬된 <code>queue</code> 에 저장하고, </p>
+<p><span class="arithmatex">\(U\)</span> 를 오름차순으로 정렬된 <code>queue</code> 에 저장한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(U\)</span> 의 <code>queue</code> 를 <code>pop</code> 하여 <span class="arithmatex">\(u \in U\)</span> 를 얻는다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(L\)</span> 의 <code>queue</code> 를 <code>pop</code> 하여 <span class="arithmatex">\(l \in L\)</span> 을 얻는다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(u + l \leq M\)</span> 이라면 튜플 갯수 <span class="arithmatex">\(\text{tuple\_count}\)</span> 를 <span class="arithmatex">\(+1\)</span> 하고 </p>
+<p>3 으로 되돌아간다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(u + l &gt; M\)</span> 이라면 a 로 되돌아간다.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><span class="arithmatex">\(U\)</span> 의 <code>queue</code> 또는 <span class="arithmatex">\(L\)</span> 의 <code>queue</code> 가 모두 <code>pop</code> 되어 텅비면 종료한다.</p>
+</li>
+</ol>
+<p>이 과정이 끝나면 카운팅된 튜플 갯수 <span class="arithmatex">\(\text{tuple\_count}\)</span> 에 대하여 </p>
+<p>집합 <span class="arithmatex">\(W\)</span> 에서 <span class="arithmatex">\(2\)</span>-튜플이 이루어진 가장 작은 <span class="arithmatex">\(W^*\)</span> 의 기수를 다음과 같이 구할 수 있다.</p>
+<div class="arithmatex">\[ \therefore \boxed{\min |W^*| = |W| - \text{tuple\_count}} \]</div>
+<h3 id="_21">복잡도<a class="headerlink" href="#_21" title="Permanent link">¶</a></h3>
+<p>풀이는 집합 <span class="arithmatex">\(U\)</span> 의 <code>queue</code> 가 모두 <code>pop</code> 되거나 <span class="arithmatex">\(L\)</span> 의 <code>queue</code> 가 모두 <code>pop</code> 되면 종료된다.</p>
+<p>그러므로 <span class="arithmatex">\(n\)</span> 을 집합 <span class="arithmatex">\(W\)</span> 의 크기 <span class="arithmatex">\(n = |W|\)</span> 로 두면 시간복잡도는 <span class="arithmatex">\(O((n + 1) / 2) = O(n)\)</span> 이다.</p>
+<p>공간복잡도는 집합 <span class="arithmatex">\(W\)</span> 를 저장해야하므로 <span class="arithmatex">\(O(n)\)</span> 이다.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(t = M - 1\)</span> 부터 <span class="arithmatex">\(t = M / 2\)</span> 까지 다음의 과정을 진행한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(t\)</span> 가 발생시키는 공간낭비도를 가능한한 최소화할 수 있는 수를 찾는다.</p>
+<ol>
+<li>
+<p>있다면 튜플을 만들고 제외시킨다.</p>
+</li>
+<li>
+<p>없다면 <span class="arithmatex">\(t-1\)</span> 에 대하여 2 로 되돌아간다.</p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><span class="arithmatex">\(M = 6\)</span> 에 숫자가 <span class="arithmatex">\(2,3,4,5,6\)</span> 로 있다면 <span class="arithmatex">\(5\)</span> 부터 <span class="arithmatex">\(3\)</span> 까지 진행한다.</p>
+<p><span class="arithmatex">\(5\)</span> 의 공간낭비도를 최소화할 수 있는 수 <span class="arithmatex">\(1\)</span> 을 찾아본다. 없으므로 <span class="arithmatex">\(5\)</span> 를 제외시키고 <span class="arithmatex">\(4\)</span> 로 넘어간다.</p>
+<p><span class="arithmatex">\(4\)</span> 의 공간낭비도를 최소화할 수 있는 수 <span class="arithmatex">\(2\)</span> 을 찾는다. 있으므로 두 수를 제외시키고 <span class="arithmatex">\(3\)</span> 으로 넘어간다.</p>
+<p><span class="arithmatex">\(M = 7\)</span> 에 숫자가 <span class="arithmatex">\(1,2,3,4,5,6,7\)</span> 로 있다면 <span class="arithmatex">\(6\)</span> 부터 <span class="arithmatex">\(4\)</span> 까지 진행한다.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">직관이 또 배신했네</p>
+<p>공간낭비를 최소화할 수 있는 수란 기본적으로 <span class="arithmatex">\(n + m = M\)</span> 이 되는 수로써 위의 예시에서 <span class="arithmatex">\((1, 4), (2, 3)\)</span> 같은 <span class="arithmatex">\(2\)</span>-튜플이다. 이것은 <span class="arithmatex">\(M / 2\)</span> 를 기준으로 대칭이 되는 수의 <span class="arithmatex">\(2\)</span>-튜플이라고 볼 수 있다. 이와 같은 대칭수로 <span class="arithmatex">\(2\)</span>-튜플을 만든다면 공강낭비도가 <span class="arithmatex">\(0\)</span> 가 된다.</p>
+<p>그렇다면 기본적으로 집합 <span class="arithmatex">\(W\)</span> 에서 대칭수를 <span class="arithmatex">\(2\)</span>-튜플로 만들 수 있다. 가령 <span class="arithmatex">\(W = \{1,1,2,3,4,4,4,5\}\)</span> 에서 <span class="arithmatex">\(M = 6\)</span> 이라면 대칭수 <span class="arithmatex">\((1,5), (2,4)\)</span> 를 찾아서 <span class="arithmatex">\(W ^{*} = \{(1,5), (2,4), 1,3,4,4\}\)</span> 를 만들 수 있다. 이때 모든 대칭수들이 <span class="arithmatex">\(2\)</span>-튜플이 되었으므로 남은 <span class="arithmatex">\(\{1,3,4,4\}\)</span> 는 <span class="arithmatex">\(6 / 2 = 3\)</span> 을 기준으로 서로 대칭되지 않는 비대칭 수들이므로 가능한 <span class="arithmatex">\(2\)</span>-튜플 조합들의 공간낭비도가 절대 <span class="arithmatex">\(0\)</span> 가 될 수 없으나, 그래도 공간낭비도를 최소화시키는 방향으로 <span class="arithmatex">\(2\)</span>-튜플을 조합시킬 수 있다.</p>
+<p>먼저 <span class="arithmatex">\(s \in \N\)</span> 을 기준으로 비대칭 수 집합 <span class="arithmatex">\(\{a_1, a_2, \dots, a_n\}\)</span> 을 생각하자. 이때 <span class="arithmatex">\(s\)</span> 보다 작은 수들로 이루어진 부분집합 <span class="arithmatex">\(\{a_1, a_2, \dots, a_i\}\)</span> 을 하대칭집합 <span class="arithmatex">\(L\)</span> 이라고 부르자. 그리고 <span class="arithmatex">\(s\)</span> 보다 큰 수들로 이루어진 부분집합 <span class="arithmatex">\(\{a _{i+1}, a _{i+2}, \dots, a_n\}\)</span> 을 상대칭집합 <span class="arithmatex">\(U\)</span> 이라고 부르자. 그러면 이 비대칭 수 집합에서 알 수 있는 사실이 있다.</p>
+<ul>
+<li>
+<p>만약 <span class="arithmatex">\(a_1\)</span> 과 <span class="arithmatex">\(a_x \in U\)</span> 로 <span class="arithmatex">\((a_1, a_x)\)</span> 을 만들 수 있다고 하면, <span class="arithmatex">\(a_1\)</span> 은 자명하게 <span class="arithmatex">\(\{a_y \in U | a_y \leq a_x\}\)</span> 들과도 <span class="arithmatex">\((a_1, a_y)\)</span> 을 만들 수 있지만, 공간낭비도를 최소화하기 위하여 <span class="arithmatex">\(2\)</span>-튜플을 만들 수 있는 <span class="arithmatex">\(a_x \in U\)</span> 들 중 가장 큰 <span class="arithmatex">\(a_x\)</span> 와 <span class="arithmatex">\(2\)</span>-튜플을 이루어야 한다.</p>
+</li>
+<li>
+<p>그러므로 공간낭비도를 최소화하기 위하여 비대칭 수 집합에서 가장 작은 <span class="arithmatex">\(a_l \in L\)</span> 과 가장 큰 <span class="arithmatex">\(a_u \in U\)</span> 를 <span class="arithmatex">\(2\)</span>-튜플을 이루게 해야 한다.</p>
+</li>
+<li>
+<p>그런데 <span class="arithmatex">\(a_l\)</span> 이 <span class="arithmatex">\(a_l + a_u \leq M\)</span> 를 만족하는 어떠한 <span class="arithmatex">\(a_u\)</span> 도 찾지 못했다면 <span class="arithmatex">\(a_l\)</span> 보다 큰 <span class="arithmatex">\(L\)</span> 의 원소들은 어떤 <span class="arithmatex">\(U\)</span> 의 원소와도 <span class="arithmatex">\(2\)</span>-튜플을 이룰 수 없다.</p>
+</li>
+<li>
+<p>또 <span class="arithmatex">\(a_l\)</span> 이 특정한 <span class="arithmatex">\(a_x \in U\)</span> 와 <span class="arithmatex">\(2\)</span>-튜플을 이룰 수 없었지만 <span class="arithmatex">\(a_y &lt; a_x\)</span> 인 <span class="arithmatex">\(a_y \in U\)</span> 와 <span class="arithmatex">\(2\)</span>-튜플을 이루었다면 <span class="arithmatex">\(a_l\)</span> 보다 큰 <span class="arithmatex">\(L\)</span> 의 원소의 <span class="arithmatex">\(2\)</span>-튜플을 찾을 때 <span class="arithmatex">\(a_x\)</span> 는 더 이상 상정하지 않아도 된다.</p>
+</li>
+<li>
+<p>비대칭 수 집합에서 공간낭비도를 최소화하는 방향으로 모든 <span class="arithmatex">\(2\)</span>-튜플을 이루었다면 다음 <span class="arithmatex">\(3\)</span> 가지 상황이 된다.</p>
+<ol>
+<li>
+<p>모든 비대칭 수가 <span class="arithmatex">\(2\)</span>-튜플을 이루었다.</p>
+</li>
+<li>
+<p>모든 하대칭집합 <span class="arithmatex">\(L\)</span> 의 원소가 <span class="arithmatex">\(2\)</span>-튜플을 이루었고, 상대칭집합 <span class="arithmatex">\(U\)</span> 의 원소가 잔류하고 있다.</p>
+</li>
+<li>
+<p>모든 상대칭집합 <span class="arithmatex">\(U\)</span> 의 원소가 <span class="arithmatex">\(2\)</span>-튜플을 이루었고, 하대칭집합 <span class="arithmatex">\(L\)</span> 의 원소가 잔류하고 있다.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>a 의 경우 단지 계산과정이 끝난 것이다. b 의 경우 어차피 상대칭집합 <span class="arithmatex">\(U\)</span> 의 원소로 <span class="arithmatex">\(2\)</span>-튜플을 이루어보았자 반드시 <span class="arithmatex">\(M\)</span> 을 넘을 것이기 때문에 더 이상 할 일이 없다. c 의 경우 남은 <span class="arithmatex">\(L\)</span> 의 모든 원소들로 아무 조합으로나 <span class="arithmatex">\(2\)</span>-튜플을 이루면 된다. 어차피 <span class="arithmatex">\(L\)</span> 의 원소끼리는 어떤 조합으로도 서로 <span class="arithmatex">\(2\)</span>-튜플을 이룰 수 있으므로 <span class="arithmatex">\(2\)</span>-튜플의 총 개수는 불변하기 때문이다.</p>
+</li>
+<li>
+<p>비대칭 수 집합의 공간낭비도를 최소화하면서 <span class="arithmatex">\(2\)</span>-튜플을 구하고자 하는 이 방식은 대칭 수 집합에도 적용된다.</p>
+</li>
+</ul>
+<p>그러므로 다음과 같은 과정을 따라 공간낭비도를 최소화하도록 <span class="arithmatex">\(W\)</span> 의 원소로 <span class="arithmatex">\(2\)</span>-튜플을 구할 수 있다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(W\)</span> 를 순서대로 정렬한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(W\)</span> 를 <span class="arithmatex">\(M / 2\)</span> 를 기준으로 <span class="arithmatex">\(L\)</span> 과 <span class="arithmatex">\(U\)</span> 로 나눈다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(L\)</span> 의 가장 작은 원소부터 시작한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(L\)</span> 의 원소 <span class="arithmatex">\(l\)</span> 을 <span class="arithmatex">\(U\)</span> 의 가장 큰 원소 <span class="arithmatex">\(u\)</span> 부터 대응시켜 <span class="arithmatex">\(2\)</span>-튜플을 이루어본다.</p>
+</li>
+<li>
+<p>이룰 수 없다면 <span class="arithmatex">\(u\)</span> 는 그 어떤 <span class="arithmatex">\(L\)</span> 의 원소와도 <span class="arithmatex">\(2\)</span>-튜플을 이룰 수 없으므로 더 이상 상정하지 않는다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(l \in L\)</span> 이 <span class="arithmatex">\(u \in U\)</span> 와 <span class="arithmatex">\(2\)</span>-튜플을 이루었다면 <span class="arithmatex">\(l\)</span> 과 <span class="arithmatex">\(u\)</span> 를 제외하고 4. 로 되돌아 간다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(L\)</span> 또는 <span class="arithmatex">\(U\)</span> 의 원소가 모두 소모되면 마무리 과정을 다음과 같이 진행한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(L\)</span> 의 원소가 모두 소모되었다면 더 이상 할 일이 없으므로 종료한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(U\)</span> 의 원소가 모두 소모되었다면 남은 <span class="arithmatex">\(L\)</span> 의 원소들로 아무 조합으로나 <span class="arithmatex">\(2\)</span>-튜플을 이루고 종료한다.</p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>하지만 직관과 통찰이 배신했다고 알려주는 것도 직관과 통찰이었네. 직관이 완전하지는 않지만 완전함과 완벽함을 추구하는 이성과 논리와 기계적이고 정확한 방법은 직관이 배신했다고 알려주지 못했네. 직관이 완전하지는 않지만 새로운 지식과 개척적이고 발전적인 길을 알려주기는 하네. </p>
+</div>
+<hr/>
+<h2 id="c3">C3<a class="headerlink" href="#c3" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : <span class="arithmatex">\(N\)</span> 개의 도시가 집합 <span class="arithmatex">\(\{1,2,\dots,N\}\)</span> 에 일대일 대응 사상을 갖는다. <span class="arithmatex">\(N\)</span> 개의 도시 중 어느 두 도시들은 철도로 연결되어 있다. 두 기차 <span class="arithmatex">\(\alpha , \beta\)</span> 가 있는데, <span class="arithmatex">\(\alpha\)</span> 는 두 인접한 도시를 지나는데 <span class="arithmatex">\(p \in \N\)</span> 만큼의 연료를 소모하고 <span class="arithmatex">\(\beta\)</span> 는 <span class="arithmatex">\(q \in \N\)</span> 만큼의 연료를 소모한다. 그런데 두 기차가 서로 만나서 결합되면 <span class="arithmatex">\(r &lt; p + q\)</span> 만큼의 연료를 소모하여 인접 도시를 지나갈 수 있다. <span class="arithmatex">\(\alpha\)</span> 는 도시 <span class="arithmatex">\(1\)</span> 에서 출발하고, <span class="arithmatex">\(\beta\)</span> 는 도시 <span class="arithmatex">\(2\)</span> 에서 출발하는데 두 기차 모두 도시 <span class="arithmatex">\(N\)</span> 을 목적지로 한다면, 도시 <span class="arithmatex">\(N\)</span> 에 도착하기 위한 최소 연료 소모량을 구해보자.</p>
+</div>
+<p>첫라인에 <span class="arithmatex">\(p,q,r,N,M\)</span> 이 주어진다. <span class="arithmatex">\(2\)</span> 번째 라인부터 <span class="arithmatex">\(M+1\)</span> 번째 라인까지 두 연결된 도시의 <span class="arithmatex">\(2\)</span>-튜플이 주어진다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">4</span> <span class="m">4</span> <span class="m">5</span> <span class="m">8</span> <span class="m">8</span>
+<span class="m">1</span> <span class="m">4</span>
+<span class="m">2</span> <span class="m">3</span>
+<span class="m">3</span> <span class="m">4</span>
+<span class="m">4</span> <span class="m">7</span>
+<span class="m">2</span> <span class="m">5</span>
+<span class="m">5</span> <span class="m">6</span>
+<span class="m">6</span> <span class="m">8</span>
+<span class="m">7</span> <span class="m">8</span>
+</code></pre></div>
+<p>위와 같은 입력에 대한 출력은 다음과 같다. <span class="arithmatex">\(\alpha : 1-4(4)\)</span> <span class="arithmatex">\(\beta : 2-3-4(8)\)</span> <span class="arithmatex">\(\alpha + \beta : 4-7-8(10)\)</span> <span class="arithmatex">\(\to 22\)</span></p>
+<div class="highlight"><pre><span></span><code><span class="m">22</span>
+</code></pre></div>
+</div>
+<h3 id="_22">분석<a class="headerlink" href="#_22" title="Permanent link">¶</a></h3>
+<p>주어진 그래프에서 방문 노드를 다시는 방문하지 않는다는 가정 하에 엣지 <span class="arithmatex">\(1\)</span> 에서 <span class="arithmatex">\(N\)</span> 까지 가는 경로는 유한하게 결정되고, 엣지 <span class="arithmatex">\(2\)</span> 에서 <span class="arithmatex">\(N\)</span> 까지 가는 경로도 유한한게 결정된다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>위 예시에서 <span class="arithmatex">\(\alpha\)</span> 가 엣지 <span class="arithmatex">\(1\)</span> 에서 <span class="arithmatex">\(N\)</span> 으로 가는 경로는 다음과 같다.</p>
+<div class="arithmatex">\[ 1 \to 4 \to 7 \to 8 \]</div>
+<div class="arithmatex">\[ 1 \to 4 \to 3 \to 2 \to 5 \to 6 \]</div>
+<p>위 예시에서 <span class="arithmatex">\(\beta\)</span> 가 엣지 <span class="arithmatex">\(2\)</span> 에서 <span class="arithmatex">\(N\)</span> 으로 가는 경로는 다음과 같다.</p>
+<div class="arithmatex">\[ 2 \to 3 \to 4 \to 7 \to 8 \]</div>
+<div class="arithmatex">\[ 2 \to 5 \to 6 \to 8 \]</div>
+</div>
+<p>위의 예시에서 <span class="arithmatex">\(\alpha\)</span> 의 경로와 <span class="arithmatex">\(\beta\)</span> 의 경로의 조합도 유한하게 결정된다. 그러므로 모든 경로에 대한 조합 중에서 가장 연료 소모가 적은 경로가 잘 결정된다.</p>
+<h3 id="_23">풀이<a class="headerlink" href="#_23" title="Permanent link">¶</a></h3>
+<p>먼저 <span class="arithmatex">\(1 \sim N\)</span> 과 <span class="arithmatex">\(2\sim N\)</span> 의 최단거리를 구해야 한다. </p>
+<p>문제는 이 최단거리가 최소소모비용 거리가 아닐 수도 있다는 것이다. </p>
+<p><span class="arithmatex">\(\alpha , \beta\)</span> 를 억지로 만나게 한 다음 최단거리가 아닌 경로로 </p>
+<p>가게 하더라도 <span class="arithmatex">\(r\)</span> 값이 매우 작으면 최단거리보다 소모비용이 적게 들 수도 있기 때문이다.</p>
+<p>그러므로 기본적으로 다음의 과정을 따를 수 있다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(1 \sim N\)</span>, <span class="arithmatex">\(2 \sim N\)</span> 의 최단거리를 구한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\alpha, \beta\)</span> 가 최단거리가 아니더라도 억지로 만나게 해서 <span class="arithmatex">\(N\)</span> 까지 가는 경로를 구한다.</p>
+</li>
+<li>
+<p>모든 경로 중에서 최소소모비용을 구한다.</p>
+</li>
+</ol>
+<p><span class="arithmatex">\(\alpha , \beta\)</span> 를 만나게 하기 위해서는 <span class="arithmatex">\(1 \sim 2\)</span> 의 모든 경로를 구해야 한다. </p>
+<p>하지만 <span class="arithmatex">\(1 \sim 2\)</span> 의 모든 경로를 구하는 비용이 너무 크다. </p>
+<p>이럴거면 그냥 BFS 를 통하여 모든 노드에 대한 <span class="arithmatex">\(1\)</span> 과의 거리, <span class="arithmatex">\(2\)</span> 와의 거리, <span class="arithmatex">\(N\)</span> 과의 거리를 계산해두면 </p>
+<p><span class="arithmatex">\(1\)</span> 과 <span class="arithmatex">\(2\)</span> 가 <span class="arithmatex">\(i \in \{1, 2, \dots, N\}\)</span> 에서 만나는 모든 경우의 수에 대한 비용소모를 쉽게 계산할 수 있을 것이다. </p>
+<p>그러면 다음의 과정을 따를 수 있다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(1\)</span> 에서 BFS 를 통해 모든 노드에 대한 <span class="arithmatex">\(1\)</span> 과의 거리 <span class="arithmatex">\(d _{\alpha }\)</span> 를 저장해둔다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(2\)</span> 에서 BFS 를 통해 모든 노드에 대한 <span class="arithmatex">\(2\)</span> 과의 거리 <span class="arithmatex">\(d _{\beta }\)</span> 를 저장해둔다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(N\)</span> 에서 BFS 를 통해 모든 노드에 대한 <span class="arithmatex">\(N\)</span> 과의 거리 <span class="arithmatex">\(d _{N}\)</span> 를 저장해둔다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(1\)</span> 과 <span class="arithmatex">\(2\)</span> 가 <span class="arithmatex">\(x \in \{1,2, \dots, N\}\)</span> 번째 노드에서 만나서 <span class="arithmatex">\(N\)</span> 으로 가는 </p>
+<p>경로에 대한 소모비용 함수를</p>
+<div class="arithmatex">\[ f(x) = p \cdot d _{\alpha } + q \cdot  d _{\beta } + r \cdot d _{N} \]</div>
+<p>라고 정의하고, <span class="arithmatex">\(\boxed{\min _{x \in \{1,2,\dots,N\}} f(x) }\)</span> 를 구한다.</p>
+</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>일단 <span class="arithmatex">\(\alpha, \beta\)</span> 가 만나서 갈지, 안만나서 갈지 판단해야 할 것 같은데. 그러니까 결국 <span class="arithmatex">\(1-2\)</span> 의 경로를 구했는데 <span class="arithmatex">\(1-N\)</span> 이나 <span class="arithmatex">\(2-N\)</span> 의 경로보다 압도적으로 크면 그냥 따로 가는 게 비용이 적으니까.</p>
+<p>자, 일단 만날 경우 안 만날 경우 모두 한꺼번에 생각하면 너무 복잡하니까 인위적으로 무조건 <span class="arithmatex">\(\alpha , \beta\)</span> 가 만나야한다는 조건을 추가해버리자. 그러면 <span class="arithmatex">\(1\)</span> 과 <span class="arithmatex">\(2\)</span> 의 경로에 포함되 있는 어느 한 노드 <span class="arithmatex">\(\gamma\)</span> 에서부터 <span class="arithmatex">\(N\)</span> 까지의 최단경로를 구하는 문제로 단순화되지.</p>
+<p>그러면 일단 <span class="arithmatex">\(N\)</span> 이 포함되지 않은 <span class="arithmatex">\(1\)</span> 에서 <span class="arithmatex">\(2\)</span> 로 가는 경로 <span class="arithmatex">\(P _{\gamma}\)</span> 를 구해야지. 그러면 이 경로 <span class="arithmatex">\(P _{\gamma }\)</span> 에 포함된 노드들에서 <span class="arithmatex">\(N\)</span> 까지 가는 최단경로를 구할 수 있지.</p>
+<p>그러면 <span class="arithmatex">\(N\)</span> 으로부터 BFS 로 각 노드들에 <span class="arithmatex">\(N\)</span> 과의 최단거리 <span class="arithmatex">\(d_N\)</span> 를 부여하고, <span class="arithmatex">\(P _{\gamma }\)</span> 에서 <span class="arithmatex">\(N\)</span> 으로 가는 노드까지 <span class="arithmatex">\(\alpha\)</span> 와 <span class="arithmatex">\(\beta\)</span> 가 가야하는 비용 <span class="arithmatex">\(d _{\alpha }\cdot p + d _{\beta }\cdot q = C _{\alpha \beta }\)</span> 을 구할 수 있지.</p>
+<p>그러면 총 비용 <span class="arithmatex">\(C _{\alpha \beta } + d _{N}\cdot r\)</span> 을 구할 수 있으니까 이것들의 최솟값을 구할 수 있는거고.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>C2, P3 할 때 시간제약 때문에 너무 고통받아서 어떤 기능을 추가하는 것조차 망설여지네. 감정적인 것에 휘둘리지 않기 위해서 어떤 알고리즘을 구현해야 할 때 필수불가결한 기능, 즉 그 알고리즘을 구성하는 본질적인 기능을 가려내는 것도 중요하겠네. 만약 그 알고리즘을 구현하는데 있어 반드시 필요한 기능들로만 코드를 구성했는데 시간 제약을 벗어나지 못한다면, 알고리즘 자체를 근본적으로 바꾸어야 한다는 확신을 얻을 수 있도록. 그러니까 그 기능 문제가 아니라 알고리즘 문제 때문에 시간 제약에 걸렸다는 신뢰를 얻는 게 중요하네.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>그리고 직관과 통찰에 의존해서 자유롭게 고민을 하더라도 어느정도 생각이 진행 된 다음에 그것을 꼭 기록해둬야 하네. 왜냐면 똑같거나 비슷한 생각이 빙빙 돌 수도 있기 때문. 그래서 기록을 안해두고 이 생각을 이미 했다는 것을 망각하면 오히려 시간이 낭비 되네.</p>
+</div>
+<hr/>
+<h2 id="p4">P4<a class="headerlink" href="#p4" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : 하노이 탑의 3 개의 기둥에 원반이 무거운 순서대로 쌓여있다. 전통적인 하노이 탑에서는 특정 기둥에 모든 원반이 쌓여있지만 이 하노이 탑에서는 원반이 임의로 쌓여있는 것이다. 이때 원반을 특정 기둥으로 쌓을 때 원반의 최소 이동 횟수를 구하라.</p>
+</div>
+<p>첫라인에 원반 숫자를 의미하는 <span class="arithmatex">\(n\)</span> 과 목적지 원반을 의미하는 <span class="arithmatex">\(k\)</span> 가 주어진다. 두번째 라인부터 4번째 라인에 원반 숫자와 쌓여있는 원반의 무게가 주어진다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">4</span> <span class="m">2</span>
+<span class="m">2</span> <span class="m">4</span> <span class="m">3</span>
+<span class="m">1</span> <span class="m">2</span>
+<span class="m">1</span> <span class="m">1</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">13</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">4</span> <span class="m">3</span>
+<span class="m">4</span> <span class="m">4</span> <span class="m">3</span> <span class="m">2</span> <span class="m">1</span>
+<span class="m">0</span>
+<span class="m">0</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">15</span>
+</code></pre></div>
+</div>
+<h3 id="_24">분석<a class="headerlink" href="#_24" title="Permanent link">¶</a></h3>
+<p>기존의 하노이 탑에서 원반 <span class="arithmatex">\(1 \sim (n-1)\)</span> 을 옮기는 횟수를 <span class="arithmatex">\(a _{n-1}\)</span> 이라고 했을 때, </p>
+<p>원반 <span class="arithmatex">\(1 \sim n\)</span> 을 옮기기 위해서는 원반 <span class="arithmatex">\(1 \sim (n-1)\)</span> 을 다른 곳에 옮겨두고(<span class="arithmatex">\(+a _{n-1}\)</span>) </p>
+<p>원반 <span class="arithmatex">\(n\)</span> 을 목적지에 옮기고(<span class="arithmatex">\(+1\)</span>) 다시 원반 <span class="arithmatex">\(1 \sim (n-1)\)</span> 을 원반 <span class="arithmatex">\(n\)</span> 에 쌓으면(<span class="arithmatex">\(+a _{n-1}\)</span>) 되었다.</p>
+<p>그러므로 기존의 하노이 탑에서 원반 <span class="arithmatex">\(1 \sim n\)</span> 을 옮기기 위한 비용은 다음과 같다.</p>
+<div class="arithmatex">\[ a _n = \overbrace{a _{n-1}}^{1 \sim (n-1) \to \text{temp}} + \overbrace{1}^{n \to \text{dest}} + \overbrace{a _{n-1}}^{1 \sim (n-1) \to \text{dest}} = 2 ^{n} - 1 \quad (a_1 = 1) \]</div>
+<h3 id="_25">풀이<a class="headerlink" href="#_25" title="Permanent link">¶</a></h3>
+<p>이 하노이 탑에 위치 개념을 추가하고, 원반들이 임의의 기둥에 위치한다는 조건을 추가하자. </p>
+<p>그래도 원반 <span class="arithmatex">\(1 \sim n\)</span> 을 옮기기 위해서는 원반 <span class="arithmatex">\(1 \sim (n-1)\)</span> 을 한 곳으로 옮겨두고, </p>
+<p>원반 <span class="arithmatex">\(n\)</span> 을 목적지로 옮기고, 다시 원반 <span class="arithmatex">\(1 \sim (n-1)\)</span> 을 원반 <span class="arithmatex">\(n\)</span> 에 쌓아야 한다.</p>
+<p>그러므로 위치 <span class="arithmatex">\(l_x \in \{1,2,3\}\)</span> 를 갖는 원반 <span class="arithmatex">\(x\)</span> 를 목적지 <span class="arithmatex">\(d_x\in \{1,2,3\}\)</span> 로 옮기는 </p>
+<p>이동비용 계산함수를 다음과 같이 정의할 수 있다. </p>
+<div class="arithmatex">\[ f (x, d_x, l_x) = \overbrace{f(x-1, \text{temp}, l _{x-1})}^{1 \sim (x-1) \to \text{temp}} + \overbrace{1}^{x \to \text{dest}} + \overbrace{f (x-1, d_x, l_{x-1} )}^{1 \sim (x-1) \to \text{dest}}  \]</div>
+<p>그런데 새로운 하노이 탑에서는 원반 <span class="arithmatex">\(x\)</span> 가 임의의 기둥에 위치하므로 이미 목적지에 있을 수도 있다.</p>
+<p>이 경우 단지 그 다음 원반 <span class="arithmatex">\(x-1\)</span> 을 목적지 기둥으로 옮겨주면 된다. </p>
+<p>그러므로 최종적으로 원반 이동비용 계산함수를 다음과 같이 정의할 수 있다.</p>
+<div class="arithmatex">\[ \therefore \boxed{f (x, d_x, l_x) = \begin{cases} f (x-1, d_x, l _{x-1} ) &amp;(d_x = l_x)\\ f (x-1, \text{temp}, l _{x-1} ) + 1 + f (x-1, d_x, l_{x-1} ) &amp;(d_x \neq l_x)\\ \end{cases}}  \]</div>
+<p>단, <span class="arithmatex">\(\displaystyle f(1, d_1, l_1) = \begin{cases} 0 &amp; (d_1 = l_1) \\ 1 &amp; (d_1 \neq l_1)\\ \end{cases}\)</span> 이다.</p>
+<p><span class="arithmatex">\(1 \sim (x-1)\)</span> 을 목적지 기둥 <span class="arithmatex">\(\text{dest}\)</span> 이 아닌 임시 기둥 <span class="arithmatex">\(\text{temp}\)</span> 로 </p>
+<p>위치시켜야 하는데 이 <span class="arithmatex">\(\text{temp}\)</span> 를 어떻게 결정해야 할까? </p>
+<p>위치 <span class="arithmatex">\(l_x\in \{1,2,3\}\)</span> 를 갖는 원반 <span class="arithmatex">\(x\)</span> 의 목적지가 <span class="arithmatex">\(d_x\in \{1,2,3\}\)</span> 일 때 </p>
+<p>원반 <span class="arithmatex">\(x-1\)</span> 가 위치해야할 기둥 <span class="arithmatex">\(\text{temp}\)</span> 를 조사해보면 다음과 같다.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(l_x\)</span></th>
+<th align="center"><span class="arithmatex">\(d_x\)</span></th>
+<th align="center"><span class="arithmatex">\(l_x + d_x\)</span></th>
+<th align="center"><span class="arithmatex">\(d _{x-1}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(2\)</span></td>
+<td align="center"><span class="arithmatex">\(3\)</span></td>
+<td align="center"><span class="arithmatex">\(3\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(3\)</span></td>
+<td align="center"><span class="arithmatex">\(4\)</span></td>
+<td align="center"><span class="arithmatex">\(2\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(3\)</span></td>
+<td align="center"><span class="arithmatex">\(3\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(2\)</span></td>
+<td align="center"><span class="arithmatex">\(3\)</span></td>
+<td align="center"><span class="arithmatex">\(5\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(3\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(4\)</span></td>
+<td align="center"><span class="arithmatex">\(2\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(3\)</span></td>
+<td align="center"><span class="arithmatex">\(2\)</span></td>
+<td align="center"><span class="arithmatex">\(5\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>그러므로 <span class="arithmatex">\(\text{temp}\)</span> 를 구하는 함수 <span class="arithmatex">\(\text{temp} = t(d_x + l_x)\)</span> 를 정의역 <span class="arithmatex">\(\{3,4,5\}\)</span> 을 </p>
+<p>치역 <span class="arithmatex">\(\{1,2,3\}\)</span> 로 사상시키는 다음과 같은 함수로 정의할 수 있다.</p>
+<div class="arithmatex">\[ \therefore \text{temp} = t(d_x + l_x) = 6 - (d_x + l_x) \]</div>
+<p>로 정의할 수 있다.</p>
+<h3 id="_26">복잡도<a class="headerlink" href="#_26" title="Permanent link">¶</a></h3>
+<p>원반 <span class="arithmatex">\(n\)</span> 을 함수 <span class="arithmatex">\(f(x, d_x, l_x)\)</span> 에 입력했을 시 최악의 경우 <span class="arithmatex">\(2 ^{n - 1}\)</span> 번의 재귀 호출이 발생한다. </p>
+<p>함수 <span class="arithmatex">\(f\)</span> 는 단순히 덧셈 연산만 하므로 시간복잡도 자체는 <span class="arithmatex">\(O(1)\)</span> 이지만, </p>
+<p>재귀 호출을 곱하여 최종 시간복잡도 <span class="arithmatex">\(O(2 ^{n})\)</span> 을 얻을 수 있다.</p>
+<p>원반 <span class="arithmatex">\(n\)</span> 개의 위치정보를 저장해야 하므로 공간복잡도는 <span class="arithmatex">\(O(n)\)</span> 이다.</p>
+<hr/>
+<h2 id="p5">P5<a class="headerlink" href="#p5" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : <span class="arithmatex">\(A_0 = (- \infty , a_1), A_i = [a_i, a _{i+1}), A_k = [a_k, \infty )\)</span> 에 대한 집합 <span class="arithmatex">\(\displaystyle  X = \bigcup_{i=0}^{k}A_i\)</span> 와 <span class="arithmatex">\(C = \{c_i \in \Z | 0 \leq i \leq k\}\)</span> 에 대하여 계단함수 <span class="arithmatex">\(f: X \to C\)</span> 를 다음과 같이 정의하자. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\forall i \in \N ^{[0, k]}, \forall x \in A_i, f(x) = c_i\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(f\)</span> 는 음수가 아니고, 감소하지 않는다. 즉, <span class="arithmatex">\(c_0 = 0, c_i &lt; c _{i+1}\)</span></p>
+</li>
+</ul>
+<p>그러면 함수 <span class="arithmatex">\(f\)</span> 는 <span class="arithmatex">\(A_i\)</span> 들의 시작점과 그 상의 시퀸스</p>
+<div class="arithmatex">\[ ((a_1, c_1), (a_2, c_2), \dots, (a_k, c_k)) \]</div>
+<p>로 표현할 수 있다. 또한 더욱 쉽게 <span class="arithmatex">\(f\)</span> 를 </p>
+<div class="arithmatex">\[ f(x) = \begin{cases} c_0 &amp; \text{if} \  x \in (- \infty , a_1) \\ c_1 &amp; \text{if} \  x \in [a_1, a_2) \\ \vdots &amp;   \\ c_k &amp; \text{if} \  x \in [a_k, \infty) \\ \end{cases} \]</div>
+<p>로 표현할 수 있다.</p>
+<p>두 계단 함수 <span class="arithmatex">\(f, g\)</span> 와 <span class="arithmatex">\(p \leq q\)</span> 인 <span class="arithmatex">\(p, q \in \Z\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \bigg (\sum_{i=p}^{q} \max \{f(i), g(i)\} \bigg) \mod 10007 \]</div>
+<p>을 구해라.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><span class="arithmatex">\(A_0 = (- \infty , -3), A_1 = [-3, 3), A_2 = [3, 5), A_3 = [5, \infty )\)</span> 와 유한집합 <span class="arithmatex">\(C = \{c_0 = 0, c_1 = 2, c_2 = 3, c_3 = 6\}\)</span> 에 대하여 다음과 같은 함수로 표현할 수 있다.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/94483337-aaea9080-0215-11eb-80a9-b98ef18b670f.png"/></p>
+<p>이 함수는 <span class="arithmatex">\(((-3, 2), (3, 3), (5, 6))\)</span> 으로 표현가능하다. 또</p>
+<div class="arithmatex">\[ f(x) = \begin{cases} 0 &amp; \text{if} \  x \in (- \infty , -3) \\ 2 &amp; \text{if} \  x \in [-3, 3) \\ 3 &amp; \text{if} \  x \in [3, 5) \\ 6 &amp; \text{if} \  x \in [5, \infty) \\ \end{cases} \]</div>
+</div>
+<p>입력은 함수 <span class="arithmatex">\(f\)</span> 에 대한 정의, 함수 <span class="arithmatex">\(g\)</span> 에 대한 정의로 이루어진다.</p>
+<p>정의는 <span class="arithmatex">\(1 \leq k \leq 10 ^{6}\)</span> 인 <span class="arithmatex">\(k \in \N\)</span> 로 시작한다. <span class="arithmatex">\(k\)</span> 는 함수를 특정하는 시퀸스의 좌표 개수를 나타낸다. 이후 <span class="arithmatex">\(k\)</span> 개의 라인이 입력되고 <span class="arithmatex">\(i\)</span> 번째 라인은 <span class="arithmatex">\(1 \leq a_i \leq 2 \cdot 10 ^{9}, 1 \leq f(a_i) \leq 2 \cdot 10 ^{9}\)</span> 인 <span class="arithmatex">\(a_i, f(a_i)\)</span> 로 이루어진다.</p>
+<p>마지막 라인은 <span class="arithmatex">\(1 \leq p \leq q \leq 2 \cdot 10 ^{9}\)</span> 인 <span class="arithmatex">\(p, q\)</span> 로 이루어진다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">3</span>
+-3 <span class="m">2</span>
+<span class="m">3</span> <span class="m">3</span>
+<span class="m">5</span> <span class="m">6</span>
+<span class="m">1</span>
+<span class="m">4</span> <span class="m">5</span>
+<span class="m">1</span> <span class="m">5</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">18</span>
+</code></pre></div>
+</div>
+<h3 id="_27">분석<a class="headerlink" href="#_27" title="Permanent link">¶</a></h3>
+<p><span class="arithmatex">\(h(x) = \max \{f(x), g(x)\}\)</span> 를 정의하면 <span class="arithmatex">\(f(x)\)</span> 와 <span class="arithmatex">\(g(x)\)</span> 중에서</p>
+<p>함숫값이 더 큰 것으로 <span class="arithmatex">\(h(x)\)</span> 의 함숫값이 결정된다.</p>
+<p>즉, 상이 더 큰 함수의 시작점 <span class="arithmatex">\(a_i\)</span> 가 <span class="arithmatex">\(h(x)\)</span> 의 시작점 <span class="arithmatex">\(\alpha _i\)</span> 가 된다. </p>
+<p>그렇게 결정된 <span class="arithmatex">\(h(x)\)</span> 는 다음과 같을 것이다.</p>
+<div class="arithmatex">\[ h(x) = \begin{cases} h_0 &amp; \text{if} \  x \in (- \infty , \alpha_1) \\ h_1 &amp; \text{if} \  x \in [\alpha_1, \alpha_2) \\ \vdots &amp;   \\ h_k &amp; \text{if} \  x \in [\alpha_k, \infty) \\ \end{cases} \]</div>
+<p><span class="arithmatex">\(p \in [\alpha_n, \alpha_{n+1}), q \in [\alpha_m, \alpha_{m+1})\)</span> 이라고 하자. 그러면 문제의 요구는 다음과 같다.</p>
+<div class="arithmatex">\[ \sum_{i=p}^{q} \max \{f(i), g(i)\} = \sum_{i=p}^{q} h(i) = h(p) + h(p+1) + \dots + h(q) \]</div>
+<div class="arithmatex">\[ = (\alpha _{n+1} - p) h_n + (\alpha _{n+2} - \alpha _{n+1}) h _{n+1} + \dots + (q + 1 - \alpha _{m}) h _{m} \]</div>
+<h3 id="_28">풀이<a class="headerlink" href="#_28" title="Permanent link">¶</a></h3>
+<p>편의상 <span class="arithmatex">\([\alpha _{i}, \alpha _{i+1})\)</span> 을 <span class="arithmatex">\(h(x)\)</span> 의 국소구간이라고 하자.</p>
+<p>그러면 폐구간 <span class="arithmatex">\([p, q]\)</span> 에서 <span class="arithmatex">\(h(x)\)</span> 를 결정하는 시작점 <span class="arithmatex">\(\alpha _{i}\)</span> 들을 구하고,</p>
+<p>국소구간 <span class="arithmatex">\([\alpha _{i}, \alpha _{i+1})\)</span> 의 구간합 <span class="arithmatex">\((\alpha _{i+1} - \alpha _{i})h_i\)</span> 을 다음과 같이 모두 구할 수 있다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(x = p\)</span> 에서 더 큰 상을 갖는 함수를 <span class="arithmatex">\(u\)</span> 로 정하고, 더 낮은 것을 <span class="arithmatex">\(l\)</span> 로 정한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(u\)</span> 의 반폐구간 <span class="arithmatex">\([\alpha _{i}, \alpha _{i+1})\)</span> 의 구간합 <span class="arithmatex">\((\alpha _{i+1} - \alpha _{i})h_i\)</span> 을 구한다.</p>
+<ul>
+<li>물론 처음에는 국소구간 <span class="arithmatex">\([p, \alpha _{n+1})\)</span> 의 구간합 <span class="arithmatex">\((\alpha _{n+1} - p)h _{n}\)</span> 을 구해야 한다.</li>
+</ul>
+</li>
+<li>
+<p>그 다음 국소구간에서 <span class="arithmatex">\(l\)</span> 이 <span class="arithmatex">\(u\)</span> 보다 커졌으면 <span class="arithmatex">\(u\)</span> 와 <span class="arithmatex">\(l\)</span> 을 서로 바꾸고, 2 로 되돌아간다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(u\)</span> 와 <span class="arithmatex">\(l\)</span> 의 국소구간에 <span class="arithmatex">\(q\)</span> 가 포함되었다면 <span class="arithmatex">\([\alpha _{m}, q]\)</span> 의 구간합 <span class="arithmatex">\((q + 1 - \alpha _{m})h_m\)</span> 을 구한다.</p>
+</li>
+</ol>
+<p>이제 지금까지 구한 국소구간합 <span class="arithmatex">\((\alpha _{i+1} - \alpha _{i})h_i\)</span> 의 총합에 </p>
+<p><span class="arithmatex">\(\mod 10007\)</span> 연산 결과를 구하면 된다. 주의해야 할 점은 </p>
+<p>국소구간합 <span class="arithmatex">\((\alpha _{i+1} - \alpha _{i})h_i\)</span> 이 <code>int</code> 범위 <span class="arithmatex">\(2147483647\)</span> 를 초과할 수도 </p>
+<p>있다는 것이다. 그런데 다행히도 자연수 <span class="arithmatex">\(a, b, n \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ab \mod n = [(a \mod n)(b \mod n)] \mod n\]</div>
+<p>이므로 <span class="arithmatex">\((\alpha _{i+1} - \alpha _{i})h_i\)</span> 을 구하는 대신 다음을 구해도 된다.</p>
+<div class="arithmatex">\[\{[(\alpha _{i+1} - \alpha _{i}) \mod 10007] \cdot [h_i \mod 10007]\} \mod 10007\]</div>
+<h3 id="_29">복잡도<a class="headerlink" href="#_29" title="Permanent link">¶</a></h3>
+<p>풀이는 함수 <span class="arithmatex">\(h(x) = \max \{f(x), g(x)\}\)</span> 의 폐구간 <span class="arithmatex">\([p, q]\)</span> 에서의 </p>
+<p>모든 국소구간합을 구한다. <span class="arithmatex">\(f(x)\)</span> 의 어떤 국소구간이 <span class="arithmatex">\(g(x)\)</span> 의 어떤 국소구간보다 작다면</p>
+<p>그 <span class="arithmatex">\(f(x)\)</span> 의 국소구간은 무시된다. 그러나 최악의 경우 <span class="arithmatex">\(f(x)\)</span> 의 모든 국소구간과 </p>
+<p><span class="arithmatex">\(g(x)\)</span> 의 모든 국소구간이 <span class="arithmatex">\(h(x)\)</span> 의 국소구간으로 정해져서 모든 국소구간에 </p>
+<p>대한 구간합을 구해야 한다. 그러므로 시간복잡도는 <span class="arithmatex">\(f\)</span> 의 시작점 개수 <span class="arithmatex">\(k_f\)</span>, </p>
+<p><span class="arithmatex">\(g\)</span> 의 시작점 개수 <span class="arithmatex">\(k_g\)</span> 에 대하여 <span class="arithmatex">\(O(k_f + k_g)\)</span> 이다.</p>
+<p>공간복잡도는 함수 <span class="arithmatex">\(f\)</span> 와 <span class="arithmatex">\(g\)</span> 를 저장해야 하므로 <span class="arithmatex">\(O(k_f + g_f)\)</span> 이다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>함수 <span class="arithmatex">\(h(x) = \max \{f(x), g(x)\}\)</span> 를 정의하면</p>
+<div class="arithmatex">\[ \sum_{i=p}^{q} \max \{f(i), g(i)\} =  \sum_{i=p}^{q} h(x) \]</div>
+<p>이다.</p>
+<p>알고리즘이 최소한의 연산만 하는지, 최적화된 알고리즘인지 검증하기 위한 방법이 필요하다. 이를 위하여 한 가지 생각을 떠올렸다. 그것은 알고리즘이란 계산과정이고 그 계산과정의 결과로써 어떤 수학적 대상물이 정의된다는 것이다. 그렇다면 그 수학적 대상물을 정의할 때 최소한의 연산만을 사용하여 대상을 정의했는지 확인할 수 있다. 가령 <span class="arithmatex">\(n\)</span> 을 정의할 때 <span class="arithmatex">\(n = 2 + 2 + 2\)</span> 이라고 정의하는 것보다 <span class="arithmatex">\(n = 2 \cdot 3\)</span> 이라고 정의하는 것이 효율적이다. 또 <span class="arithmatex">\(2\)</span> 와 <span class="arithmatex">\(3\)</span> 이 변수가 아니므로 단지 <span class="arithmatex">\(n = 6\)</span> 으로 정의하는 것이 효율적이다. 만약 <span class="arithmatex">\(2\)</span> 를 미지수 <span class="arithmatex">\(a\)</span> 로 바꾸었다면 <span class="arithmatex">\(n = 3a\)</span> 로 정의해야 한다. 여기에서 더 이상 최적화시킬 수 없다. <span class="arithmatex">\(a\)</span> 가 미지수이므로 연산 불가능하기 때문이다. 단지 연산 직전 형태만을 유지시키는 것이 최선이다. </p>
+<p>그렇다면</p>
+<div class="arithmatex">\[ \sum_{i=p}^{q} \max \{f(i), g(i)\} \mod 10007 \]</div>
+<p>은 최소한의 형태로 정의된 것인가? 솔직히 코드로 구현하는 것은 쉽다. 그러나 우리에겐 최적화가 필요하다. 먼저 <span class="arithmatex">\(\displaystyle \sum_{i=p}^{q} \max \{f(i), g(i)\} = x\)</span> 라고 두자. 그러면 </p>
+<div class="arithmatex">\[ x \mod 10007 \]</div>
+<p>이다. <span class="arithmatex">\(x\)</span> 는 미지수이므로 이 정의 형태를 더 이상 최적화시킬 수 없다. 연산 직전 형태를 남겨둘 뿐이다.</p>
+<p>그렇다면 <span class="arithmatex">\(x = \displaystyle \sum_{i=p}^{q} \max \{f(i), g(i)\}\)</span> 은 과연 최소 연산만을 사용하는 정의 형태인가? 이때 </p>
+<div class="arithmatex">\[\forall i \in \N ^{[p, q]}, f(i) &gt; g(i) \to x = \displaystyle \sum_{i=p}^{q} \max \{f(i), g(i)\} = \displaystyle \sum_{i=p}^{q} f(i)\]</div>
+<p>이다. 그리고</p>
+<div class="arithmatex">\[ f(x) = \begin{cases} c_0 &amp; \text{if} \  x \in (- \infty , a_1) \\ c_1 &amp; \text{if} \  x \in [a_1, a_2) \\ \vdots &amp;   \\ c_k &amp; \text{if} \  x \in [a_k, \infty) \\ \end{cases} \]</div>
+<p>에 대하여 <span class="arithmatex">\(p \in [a_n, a _{n+1}), q \in [a_m, a _{m+1})\)</span> 이라고 하자. 그러면 </p>
+<div class="arithmatex">\[ \sum_{i=p}^{q} f(i) = f(p) + f(p+1) + f(p+2) +\dots + f(q) \]</div>
+<div class="arithmatex">\[ = f(a_n) + f(a_n) + \dots + f(a _{n+1}) + f(a _{n+1}) +\dots + f(a _{m}) \]</div>
+<div class="arithmatex">\[ = f(a_n) \cdot (a _{n+1} - p) + f(a _{n+1}) \cdot (a _{n+2} - a _{n+1}) + \dots + f(a _{m}) \cdot (q - a _{m}) \]</div>
+<p>이다. 구간을 결정하는 <span class="arithmatex">\(p, a _{n+1}, a _{n+2}, a _{m}, q\)</span> 등은 불규칙적으로 완전히 임의로 정해지는 미지수이다. 또한 <span class="arithmatex">\(f\)</span> 의 상 <span class="arithmatex">\(f(a_n), f(a _{n+1}), \dots, f(a_m)\)</span> 들도 완전히 임의로 정해지는 미지수이다. 그러므로 연산 직전의 이 형태에서 더 이상 최적화할 수 없다.</p>
+</div>
+<hr/>
+<h2 id="c4">C4<a class="headerlink" href="#c4" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : <span class="arithmatex">\(2 \leq n \leq k \leq 10 ^{5}\)</span> 인 <span class="arithmatex">\(n, k \in \N\)</span> 에 대하여 <span class="arithmatex">\(n\)</span> 개의 전봇대가 1차원 좌표계의 <span class="arithmatex">\(\N ^{[0, 10 ^{9}]}\)</span> 에 위치해 있다. <span class="arithmatex">\(n\)</span> 개의 전봇대 중 <span class="arithmatex">\(k\)</span> 개의 전봇대를 택하는데, <span class="arithmatex">\(k\)</span> 개의 전봇대의 최소거리가 최대가 되도록 택할 수 있다. 그렇게 택한 <span class="arithmatex">\(k\)</span> 개의 전봇대 중 두 전봇대의 최소거리를 구해라.</p>
+</div>
+<p>첫 라인에 <span class="arithmatex">\(n\)</span> 과 <span class="arithmatex">\(k\)</span> 가 주어지고, 그 다음 <span class="arithmatex">\(n\)</span> 개의 라인에 <span class="arithmatex">\(x_i \in \N ^{[1, 10 ^{9}]}\)</span> 에 대한 전봇대의 위치 <span class="arithmatex">\(x_i\)</span> 가 주어진다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">5</span> <span class="m">3</span>
+<span class="m">1</span>
+<span class="m">10</span>
+<span class="m">5</span>
+<span class="m">7</span>
+<span class="m">9</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">4</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">5</span> <span class="m">4</span>
+<span class="m">1</span>
+<span class="m">10</span>
+<span class="m">5</span>
+<span class="m">7</span>
+<span class="m">9</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">2</span>
+</code></pre></div>
+</div>
+<h3 id="_30">분석<a class="headerlink" href="#_30" title="Permanent link">¶</a></h3>
+<p>최단거리가 최대가되는 좌표 조합이 모든 상황에서 불변하는 불변성에 대한 연구.</p>
+<p>그 불변성을 밝혀내면 모든 상황 속에서 최단거리 최대좌표 조합을 구할 수 있다.</p>
+<p>먼저 최단거리 최대 좌표조합은 반드시 양끝 좌표를 지닌다.</p>
+<div class="admonition note">
+<p class="admonition-title">증명</p>
+<p>만약 최단거리 최대 좌표조합임에도 불구하고 양끝 좌표를 지니지 않는다고 해보자. </p>
+<p>그렇다면 그 좌표조합에서의 양끝 좌표를 좌표공간에서 양끝 좌표로 바꿈으로써 최단거리 최대 좌표조합을 생성할 수 있다.</p>
+<p>하지만 최단거리 최대 좌표조합은 양끝 좌표를 포함하지 않는다고 했으므로 이는 모순이다. </p>
+<p>그러므로 최단거리 최대 좌표조합은 항상 양끝 좌표를 지닌다.</p>
+</div>
+<p>최단거리 최대 좌표조합은 모든 좌표가 서로 멀어지려는 척력을 가진다고 생각하면 편하다. 그 척력은 거리가 멀수록 약해져서 모든 좌표의 거리가 가장 멀 때 이동이 끝난다.</p>
+<p>좌표계에 좌표가 주어지면 그 좌표는 서로 최대한 멀어지는 방향으로 움직인다.</p>
+<ul>
+<li>
+<p>좌표 <span class="arithmatex">\(1\)</span> 개가 주어지면 그냥 가운데에 위치한다고 하자.</p>
+</li>
+<li>
+<p>좌표 <span class="arithmatex">\(2\)</span> 개가 주어지면 양 끝에 위치하게 될 것이다.</p>
+</li>
+<li>
+<p>좌표 <span class="arithmatex">\(3\)</span> 개가 주어지면 양 끝에 위치한 후 나머지는 최대한 가운데에 위치하게 된다.</p>
+</li>
+<li>
+<p>좌표 <span class="arithmatex">\(4\)</span> 개가 주어지면 양 끝에 위치한 후 나머지도 </p>
+</li>
+</ul>
+<hr/>
+<p>함수 <span class="arithmatex">\(2 \leq k \leq n \leq 10 ^{5}\)</span> 인 <span class="arithmatex">\(n, k \in \N\)</span> 와 <span class="arithmatex">\(i \in \N ^{[1, n]}, x_i \in \N ^{[0, 10 ^{9}]}\)</span> 에 대하여 전봇대의 <span class="arithmatex">\(n\)</span> 개의 좌표를 수열 <span class="arithmatex">\((x_1, x_2, \dots, x_n)\)</span> 로 표현할 수 있다.</p>
+<p>그러나 <span class="arithmatex">\(n = 10^{9} + 1\)</span> 이라고 가정하면, 1차원 좌표계 <span class="arithmatex">\(\N ^{[0, 10 ^{9}]}\)</span> 의 모든 좌표에 <span class="arithmatex">\(x_i\)</span> 들이 빠짐없이 위치하게 된다. 이 경우 <span class="arithmatex">\(k\)</span> 개의 좌표를 택하여 생성되는 최단 거리가 최대가 되는 좌표 조합이란 모든 좌표들의 거리가 균일한 분포를 뜻한다. </p>
+<p>만약 모든 좌표들의 거리가 균일하지 않는데도 모든 좌표의 최단 거리가 최대가 되었다고 가정하자. 그렇다면 이 좌표 조합 중 어떤 좌표들의 위치를 바꿈으로써 거리 균일 분포로 바꿀 수 있다. 그 어떤 좌표란 것을 <span class="arithmatex">\(x_i\)</span> 라고 하고 바로 이전, 이후의 좌표를 <span class="arithmatex">\(x _{i-1}, x _{i+1}\)</span> 라고 하고, 이것들과의 거리를 <span class="arithmatex">\(d_1 &lt; d_2\)</span> 인 <span class="arithmatex">\(d_1, d_2 \in \N\)</span> 라고 하자. 그리고 이 좌표 조합에서의 최단 거리를 <span class="arithmatex">\(d_1\)</span> 이라고 해보자. </p>
+<p>이제 <span class="arithmatex">\(x_i\)</span> 의 위치를 <span class="arithmatex">\(a\)</span> 만큼 움직여서 이 좌표 조합을 거리 균일 분포로 만들었다고 하자. 그러면 <span class="arithmatex">\(x _{i-1}, x _{i+1}\)</span> 와의 거리가 <span class="arithmatex">\(d_1 \to d_1 + a, d_2 \to d_2 - a\)</span> 가 되고 <span class="arithmatex">\(d_1 + a = d_2 - a\)</span> 의 관계를 갖게 된다. 그런데 이때 기존의 최단거리 <span class="arithmatex">\(d_1\)</span> 이 최단거리가 아니게 되었다.</p>
+<p>거리 균일 분포가 아님에도 모든 좌표의 최단 거리가 최대가 되었다고 가정했지만, 균일 분포로 바꾸었을 때 최단 거리가 더욱 커졌으므로 이는 모순이다. 그러므로 <span class="arithmatex">\(n = 10^{9} + 1\)</span> 이고, 1차원 좌표계 <span class="arithmatex">\(\N ^{[0, 10 ^{9}]}\)</span> 의 모든 좌표에 <span class="arithmatex">\(x_i\)</span> 들이 빠짐없이 위치하였을 경우 최단 거리가 최대가 되려면 좌표 조합이 반드시 거리 균일 분포라야 한다.</p>
+<hr/>
+<p>좌표 <span class="arithmatex">\(x_1, x_2, \dots, x_n\)</span> 에 대한 거리 <span class="arithmatex">\(d_i = x _{i+1} - x_i\)</span> 를 정의하자. 그러면 거리 균등 분포란 조건 <span class="arithmatex">\(d_1 = d_2 = \dots = d _{n-1}\)</span> 을 만족하는 좌표 분포를 뜻한다.</p>
+<p>대체 거리 균등 분포란 이 조건을 만족 시킬 수 없는 상황에서 그나마 최대한 이 조건을 만족시키는 좌표 분포를 뜻한다. </p>
+<p>그러면 이 조건을 만족시키는 정도를 표현해야 한다. 먼저 거리 균등 분포란 <span class="arithmatex">\(d _{i+1} - d_i = 0\)</span> 을 뜻한다. 그렇다면 대체 거리 균등 분포란 <span class="arithmatex">\(d _{i+1} - d_i = \delta _i\)</span> 의 값이 최대한 <span class="arithmatex">\(0\)</span> 에 가까운 좌표 분포를 뜻한다.</p>
+<p>이제 만약 균등 분포가 불가능한 상황에서 대체 거리 균등 분포가 아닌데도 모든 좌표의 최단 거리가 최대가 되었다고 하자. 그러면 이 좌표 조합에서 어떤 좌표의 위치를 바꿈으로써 대체 거리 균등 분포로 만들 수 있다. 다시 말해서 어떤 좌표 <span class="arithmatex">\(x_i\)</span> 와 그 이전과 이후 좌표 <span class="arithmatex">\(x _{i-1}, x _{i+1}\)</span> 에 대하여 <span class="arithmatex">\(x_i\)</span> 의 좌표를 <span class="arithmatex">\(a\)</span> 만큼 이동함으로써 <span class="arithmatex">\(d_i - d_{i-1} = \delta _{i-1}\)</span> 의 값이 더욱 <span class="arithmatex">\(0\)</span> 에 가까워지게 만들 수 있다는 것이다.</p>
+<p>이때 거리 <span class="arithmatex">\(d _{i-1}, d _{i}\)</span> 가 <span class="arithmatex">\(d _{i-1} &lt; d_i\)</span> 의 관계를 갖고 최단 거리가 <span class="arithmatex">\(d _{i-1}\)</span> 이라고 가정하자. 이때의 거리차를 <span class="arithmatex">\(d_i - d _{i-1} = \alpha\)</span> 라고 하자. 그러면 좌표 <span class="arithmatex">\(x_i\)</span> 를 <span class="arithmatex">\(a\)</span> 만큼 이동시킴으로써 좌표 조합이 대체 균등 거리 분포가 되었고 <span class="arithmatex">\(d_i - d _{i-1} = \delta _{i-1}\)</span> 가 되었다. <span class="arithmatex">\(\alpha\)</span> 보다 <span class="arithmatex">\(\delta _{i-1}\)</span> 가 더욱 <span class="arithmatex">\(0\)</span> 에 가까우므로 <span class="arithmatex">\(\alpha &gt; \delta _{i-1}\)</span> 의 관계를 갖는다. 그런데 기존의 최단거리 <span class="arithmatex">\(d _{i-1} = d _{i} - \alpha\)</span> 가 <span class="arithmatex">\(d _{i-1} = d_i - \delta _{i-1}\)</span> 가 되었으므로 최단거리가 더 커졌다. </p>
+<p>대체 균등 분포가 아닌데도 최단 거리가 최대가 되었다고 가정했지만, 좌표 분포를 대체 균등 분포로 바꿈으로써 최단 거리가 더욱 커졌으므로 이는 모순이다. 그러므로 최단 거리를 최대로 만들려면 반드시 대체 거리 균등 분포라야 한다.</p>
+<hr/>
+<p>그러면 어떻게 대체 거리 균등 분포를 구할 수 있는가? 척력 개념을 다시 도입해볼까.</p>
+<p>가령 완전 좌표계에서의 거리 균등 분포 또한 구슬 하나 하나를 계속 굴려보는 것이다. 그런데 그 구슬이 서로 동일한 척력을 갖고 있어서 하나 하나가 추가될 때마다 구슬 간의 척력으로 인해 서로 균등한 거리를 이루게 되고, 안정 상태를 갖게 된다.</p>
+<p>불완전 좌표계에서도 마찬가지로 동일한 척력을 갖고 있는 구슬을 하나하나 굴려보면서 가장 서로의 척력이 대등한 상태에서 안정 상태를 갖게 되는 것이다.</p>
+<p>왼쪽 구슬이 멀면 왼쪽 구슬의 척력이 미약해지고, 오른쪽 구슬이 가까우면 오른쪽 구슬의 척력이 강해지니까 구슬은 왼쪽으로 이동한다. 왼쪽으로 이동하면 왼쪽 구슬의 척력이 더 강해지는 반면 오른쪽 구슬의 척력은 약해진다. 이 과정 끝에 척력이 대등해져서 이동이 끝나고 안정 상태를 이루게 된다. </p>
+<hr/>
+<p>먼저 불완전 좌표계가 <span class="arithmatex">\(x_1, x_2, \dots, x_n\)</span> 로 주어지면, 각 가용 좌표마다의 거리 <span class="arithmatex">\(d_1, d_2, \dots, d _{n-1}\)</span> 가 생성된다.</p>
+<p>이때 가장 작은 거리를 <span class="arithmatex">\(d_i\)</span> 라고 하자. 그러면 자명하게 <span class="arithmatex">\(x_i, x _{i+1}\)</span> 를 좌표로 택해서는 안된다. 왜냐하면 <span class="arithmatex">\(d_i = |x_i - x _{i+1}|\)</span> 이 최단 거리이기 때문이다. 이는 <span class="arithmatex">\(x_i\)</span> 또는 <span class="arithmatex">\(x _{i+1}\)</span> 중 한 좌표를 제외하는 것으로써 이루어진다.</p>
+<p>그러면 <span class="arithmatex">\(x_i\)</span> 와 <span class="arithmatex">\(x _{i+1}\)</span> 중 어느 좌표를 삭제해야 하는가? <span class="arithmatex">\(x_i\)</span> 가 삭제되었을 경우 불완전 좌표계의 가용 좌표는 </p>
+<div class="arithmatex">\[\dots, x _{i-1}, x _{i+1}, x _{i+2}, \dots\]</div>
+<p>이 되고, <span class="arithmatex">\(x _{i+1}\)</span> 가 삭제되었을 경우 </p>
+<div class="arithmatex">\[\dots, x _{i-1}, x_i, x _{i+2}, \dots\]</div>
+<p>가 된다.</p>
+<p><span class="arithmatex">\(x_i\)</span> 를 삭제했을 경우 새로 생성된 거리는 <span class="arithmatex">\(d _{i-1} + d_i, d _{i+1}\)</span> 가 된다. 이 둘 중 최단거리를 <span class="arithmatex">\(\alpha\)</span> 라고 하자. <span class="arithmatex">\(x _{i+1}\)</span> 를 삭제했을 경우 새로 생성된 거리는 <span class="arithmatex">\(d _{i-1}, d_i + d _{i+1}\)</span> 가 된다. 이 둘중 최단거리를 <span class="arithmatex">\(\beta\)</span> 라고 하자.</p>
+<p>그러면 <span class="arithmatex">\(\alpha , \beta\)</span> 중 더 큰 거리를 갖는 경우를 택하면 된다. 즉, <span class="arithmatex">\(\alpha\)</span> 가 더 클 경우 <span class="arithmatex">\(x_i\)</span> 를 삭제하면 되고, <span class="arithmatex">\(\beta\)</span> 가 더 클 경우 <span class="arithmatex">\(x _{i+1}\)</span> 를 삭제하면 된다.</p>
+<p>그 다음에 또 다시 최단거리를 찾아서 이 과정을 반복하여 좌표 하나를 삭제한다. 이것을 반복하다보면 언젠가 좌표의 갯수가 <span class="arithmatex">\(k\)</span> 와 같아진다. 그러면 더 이상 좌표를 삭제할 필요가 없다.</p>
+<p>이떄 삭제해야 할 두 좌표에 양 끝 좌표가 포함된다면, 양 끝 좌표는 절대 삭제하면 안된다.</p>
+<h3 id="_31">풀이<a class="headerlink" href="#_31" title="Permanent link">¶</a></h3>
+<p>좌표계에서 최단거리를 구해야 한다.</p>
+<ul>
+<li>
+<p>좌표와 좌표 사이의 거리를 구해야 한다.</p>
+</li>
+<li>
+<p>좌표들을 정렬해야 한다.</p>
+</li>
+<li>
+<p>좌표와 좌표 사이의 거리를 저장한다.</p>
+</li>
+<li>
+<p>최단거리와 그 최단거리를 지니는 두 좌표의 정보가 필요하다.</p>
+</li>
+<li>
+<p>좌표계를 입력받는다.</p>
+</li>
+<li>
+<p>좌표계를 좌표순으로 정렬하여 <span class="arithmatex">\(A\)</span> 에 저장한다.</p>
+</li>
+<li>
+<p>좌표계를 최단거리 순으로 정렬하여 <span class="arithmatex">\(B\)</span> 에 저장한다.</p>
+</li>
+<li>
+<p>최단거리 좌표 2개를 가져온다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> 에서 좌표를 삭제하고, 새로 생성된 거리를 <span class="arithmatex">\(B\)</span> 에 저장하고, 4 로 되돌아간다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> 의 크기가 <span class="arithmatex">\(k\)</span> 가 되면, 최단거리를 가져오고, 끝낸다.</p>
+</li>
+</ul>
+<hr/>
+<p>그냥 최단 거리 좌표에서 각 좌표가 왼쪽 오른쪽 에서 이루는 거리 중 짧은 거리를 길게 만들어줘야 하니까, 짧은 거리를 이루고 있는 좌표를 삭제해버리면 되겠네.</p>
+<ul>
+<li>최단 거리와 최단 거리 좌표, 이전 좌표와 이전 좌표의 거리, 이후 좌표와 이후 좌표의 거리.</li>
+</ul>
+<hr/>
+<p>좌표의 위치가 주어지면 좌표가 안정상태를 찾을 때까지 좌표를 음의 방향이나 양의 방향으로 이동시킬 수 있다. </p>
+<p>안정상태란 좌표 <span class="arithmatex">\(x_i\)</span> 가 좌표 <span class="arithmatex">\(x _{i-1}, x _{i+1}\)</span> 와 이루는 현재 거리 <span class="arithmatex">\(d _{i-1}, d_i\)</span> 에 대한 최단거리 <span class="arithmatex">\(\min \{d _{i-1}, d_i\}\)</span> 가 좌표를 음의 방향 또는 양의 방향으로 이동시켰을 때 더 커지지 않는 상태이다.</p>
+<p>이제 좌표들의 초기 위치가 중요한데, 좌표들이 만약 시작 좌표를 기점으로 빽빽하게 쏠려있거나 끝 좌표를 마지막으로 빽빽하게 쏠려있다면, 이동을 매우 많이 시켜야 ���다. 그러므로 초기값으로 균등 거리 분포를 택할 수 있다.</p>
+<p>좌표들의 초기 위치를 정한 다음, 좌표들이 안정상태를 찾을 때까지 한 좌표 한 좌표씩 이동시켜본다. 만약 어떤 좌표가 이동했다면 다른 좌표의 안정상태가 붕괴되었을 수도 있어서 다른 좌표도 안정상태를 갖는지 점검해보아야 한다.</p>
+<p>이 과정을 반복하면서 어느순간 모든 좌표가 안정상태를 찾았다면 종료시킬 수 있다.</p>
+<hr/>
+<p>안정상태 구하는 알고리즘</p>
+<div class="arithmatex">\[ \dots, x _{i-1}, x_i , x _{i+1}, \dots \]</div>
+<p>에서 <span class="arithmatex">\(x_i\)</span> 를 움직여서 안정상태를 찾고 싶다고 하자.</p>
+<p>그러면 현재 거리 균등도는 <span class="arithmatex">\(|d_i - d _{i-1}|\)</span> 이다. 이 균등도는 <span class="arithmatex">\(0\)</span> 에 가까울 수록 균등함을 의미한다.</p>
+<p>그러므로 <span class="arithmatex">\(x_i\)</span> 를 움직일 때 균등도가 떨어진다면 계속 이동시킬 가치가 있는 것이고, 균등도가 높아진다면 이동시키면 안되는 것이다. 즉, 이동시켰을 때의 균등도를 구해서 현재 균등도보다 낮아지면 실제로 이동시켜버리고, 높아졌으면 이동시키지말고 끝내는 것이다.</p>
+<h3 id="_32">복잡도<a class="headerlink" href="#_32" title="Permanent link">¶</a></h3>
+<p>ㅇㅇ</p>
+<hr/>
+<p>최단거리를 이루는 두 좌표는 절대로 선택되어서는 안된다. <span class="arithmatex">\(\to\)</span> 최단거리를 이루는 두 좌표가 동시에 선택되어서는 안된다.</p>
+<p><span class="arithmatex">\(n\)</span> 개의 좌표계에서 <span class="arithmatex">\(1\)</span> 개의 좌표를 삭제하면 <span class="arithmatex">\(n-1\)</span> 개의 좌표를 갖는 <span class="arithmatex">\(2\)</span> 개의 좌표계가 생성된다.</p>
+<p><span class="arithmatex">\(n-1\)</span> 개의 좌표계에서 <span class="arithmatex">\(1\)</span> 개의 좌표를 삭제하면 <span class="arithmatex">\(n-2\)</span> 개의 좌표를 갖는 <span class="arithmatex">\(4 = 2 ^{2}\)</span> 개의 좌표계가 생성된다.</p>
+<p><span class="arithmatex">\(n-2\)</span> 개의 좌표계에서 <span class="arithmatex">\(1\)</span> 개의 좌표를 삭제하면 <span class="arithmatex">\(n-3\)</span> 개의 좌표를 갖는 <span class="arithmatex">\(8 = 2 ^{3}\)</span> 개의 좌표계가 생성된다.</p>
+<p><span class="arithmatex">\(n-3\)</span> 개의 좌표계에서 <span class="arithmatex">\(1\)</span> 개의 좌표를 삭제하면 <span class="arithmatex">\(n-4\)</span> 개의 좌표를 갖는 <span class="arithmatex">\(16 = 2 ^{4}\)</span> 개의 좌표계가 생성된다.</p>
+<p><span class="arithmatex">\(n - (n - k - 1)\)</span> 개의 좌표계에서 <span class="arithmatex">\(1\)</span> 개의 좌표를 삭제하면 <span class="arithmatex">\(n - (n - k)\)</span> 개의 좌표를 갖는 <span class="arithmatex">\(2 ^{n - k}\)</span> 개의 좌표계가 생성된다.</p>
+<p><span class="arithmatex">\(k+1\)</span> 개의 좌표계에서 <span class="arithmatex">\(1\)</span> 개의 좌표를 삭제하면 <span class="arithmatex">\(k\)</span> 개의 좌표를 갖는 <span class="arithmatex">\(2 ^{n-k}\)</span> 개의 좌표계가 생성된다.</p>
+<hr/>
+<h2 id="_33">알고리즘 자동 생성<a class="headerlink" href="#_33" title="Permanent link">¶</a></h2>
+<h3 id="_34">과정<a class="headerlink" href="#_34" title="Permanent link">¶</a></h3>
+<p>알고리즘을 생성하는 알고리즘을 마련하고 싶다. 어떤 문제를 풀어야 할 때 가장 먼저 문제를 다루기 쉽도록 추상화시켜야 한다. 추상화 작업은 문제라는 원형적 대상에서 필요없는 부분을 제거하고 필요한 부분만을 남기는 작업이다. 이 작업이 필요한 이유는 사고대상영역을 최소화하기 위함이다. 사고대상영역은 작으면 작을수록 좋은데, 이는 기억력에 한계가 있기 때문이고, 사고대상영역에 포함된 피사고 대상이 적을수록 사고를 자유롭고 활발하게 할 수 있기 때문이다. 피사고 대상이 많을수록 기억에 어려움이 생겨 피사고 대상이 사고대상영역에서 자주 사라지고, 피사고 대상이 많으면 대상을 자유롭게 다루기 힘들다. </p>
+<p>자연대상을 추상화시켰다면 추상화된 부분적 대상을 순수한 수학적 대상물로 사상시켜야 한다. 부분 대상을 순수 수학 대상물로 사상시켜야 하는 이유는 수학이 추상화된 자연 대상을 명료하게 드러나게 하고, 신뢰할 수 있는 연산법칙들로 추상화된 부분 대상을 이리저리 변환시킬 수 있게 해주기 때문이다. 그리고 역사적으로 수학이 발전된 이유 자체가 자연 대상을 추상화시켜 명료하게 드러나게 하고, 추상화된 자연대상의 부분대상을 자유롭고 신뢰할 수 있게 변환시키게 해주기 때문이었다. </p>
+<p>부분 대상이 순수한 수학적 대상물로 사상되면, 자연에 존재하던 원형 대상 존재를 유일하게 특정할 수 있는 불변성을 유지하면서 수학적 법칙을 사용했다는 것이다. 그러므로 이제 순수한 수학적 대상물로 사상된 부분 대상을 문제가 요구하는 결론에 해당하는 수학적 대상물로 어떻게 사상시킬 수 있는지 연구하면 된다. 그런데 이 연구를 하기 전에 당연하게도 먼저 결론에 해당하는 자연 대상을 순수한 수학적 대상물로 사상시키는 일이 필요하다. 왜냐하면 우리가 다룰 대상이 수학적 대상물로 사상된 문제의 부분 대상이기 때문에 우리는 이 대상에 수학의 연산 법칙을 적용하여 다른 수학적 대상물을 생성해낼 것이기 때문이다. </p>
+<p>문제를 표현하는 자연 대상이 부분 대상으로 추상화된 것을 순수 수학적 대상물로 사상된 것, 그리고 문제의 정답에 해당하는 자연 대상이 순수 수학적 대상물로 사상된 것이 마련되면, 전자를 후자의 것으로 사상시킬 수 있는 대수적 연산 과정을 연구할 수 있다. 이 연산 과정이 마련되면 이것을 하나의 함수로 정의할 수 있다. 그러면 최종적으로 이 함수를 코드로 구현한다면, 알고리즘 문제를 푼 것이 된다.</p>
+<h3 id="_35">추상화<a class="headerlink" href="#_35" title="Permanent link">¶</a></h3>
+<p>위에서 말한 알고리즘 생성 과정을 추상화하면, 다음과 같다.</p>
+<ol>
+<li>
+<p>추상화</p>
+</li>
+<li>
+<p>순수 수학적 대상으로 사상</p>
+</li>
+<li>
+<p>문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상시키는 연산 과정 연구</p>
+</li>
+<li>
+<p>연산과정을 코드로 구현</p>
+</li>
+</ol>
+<p>그러므로 마련된 이 과정을 튜링기계로 표현할 수 있다면, 알고리즘 자동 생성 기계를 만들 수 있다. 하지만 모든 알고리즘을 생성하는 기계가 존재한다면, 정지문제까지 해결할 수 있으므로 그러한 기계는 존재할 수 없다는 것이 오래전에 증명되었다. 그러나 자명하게 인간은 알고리즘 문제에 대하여 이러한 일련의 과정을 따라 알고리즘을 생성한다. 인간을 알고리즘 자동 생성 기계라고 본다면, 인간이 알고리즘을 생성하는 일련의 지적 과정을 튜링기계로 사상시킬 수 없다고 말할 수 없다. </p>
+<p>첫번째 과정인 추상화 과정은 인간의 대뇌 신피질이 자연대상을 저차원적으로 입력받고 점점 고차원적 패턴으로 추상화시키는 과정으로 구현할 수 있다. 추상화된 대상을 순수 수학적 대상으로 사상시키는 과정은 어떤 대상을 어떤 집합으로 분류해내는 인간의 지능으로 구현될 수 있다. 세번째 과정인 공리를 결론으로 연역시키는 과정은 창의적인 과정이라 문득 기계로 표현하기 불가능하다고 생각할 수 있지만, 여기에 사용되는 지능이 규명되고 있으므로 충분히 가능하다고 볼 수 있다. 네번째 과정인 코드 구현은 수학적 대상물이 어떤 코드에 해당하는지 분류하는 인간의 지능으로 구현될 수 있다. </p>
+<hr/>
+<h2 id="c5">C5<a class="headerlink" href="#c5" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : 1차원 좌표계에 <span class="arithmatex">\(n\)</span> 개의 풍선이 주어진다. <span class="arithmatex">\(1 \leq i &lt; n\)</span> 인 <span class="arithmatex">\(i \in \N\)</span> 번째 풍선이 좌표 <span class="arithmatex">\(x_i\)</span> 에 주어진다. 풍선의 반지름은 공기가 들어오면 커진다. 처음에 모든 풍선의 반지름은 <span class="arithmatex">\(0\)</span> 이다. <span class="arithmatex">\(x_i\)</span> 는 <span class="arithmatex">\(x _{i+1}\)</span> 보다 작다. <span class="arithmatex">\(x_1\)</span> 번째 풍선부터 하나하나씩 공기를 넣는다. <span class="arithmatex">\(i\)</span> 번째 풍선은 다음 조건이 만족될 때까지 반지름이 커진다.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(i\)</span> 번째 풍선이 존재하는 풍선 중 하나와 맞닿을 때까지</p>
+</li>
+<li>
+<p><span class="arithmatex">\(i\)</span> 번째 풍선의 반지름이 반지름 경계 <span class="arithmatex">\(r_i\)</span> 이 될때 때까지</p>
+</li>
+</ul>
+<p>이때 풍선들의 반지름을 구하라.</p>
+</div>
+<p>첫 라인에 풍선의 개수를 뜻하는 <span class="arithmatex">\(n \in \N\)</span> 이 주어진다. <span class="arithmatex">\(n\)</span> 은 <span class="arithmatex">\(1 \leq n \leq 10 ^{5}\)</span> 를 만족한다. 그 다음 <span class="arithmatex">\(n\)</span> 개의 라인에 <span class="arithmatex">\(x_i\)</span> 와 <span class="arithmatex">\(r_i\)</span> 가 주어진다. <span class="arithmatex">\(x_i\)</span> 는 <span class="arithmatex">\(0 \leq x_i \leq 10 ^{9}\)</span> 를 만족하고, <span class="arithmatex">\(r_i\)</span> 는 <span class="arithmatex">\(1 \leq r_i \leq 10 ^{9}\)</span> 를 만족한다.</p>
+<p>출력은 <span class="arithmatex">\(n\)</span> 개의 풍선의 최종 반지름을 뜻하는 <span class="arithmatex">\(n\)</span> 개의 실수이다. <span class="arithmatex">\(0.001\)</span> 범위의 정확도의 실수이면 된다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">3</span>
+<span class="m">0</span> <span class="m">9</span>
+<span class="m">8</span> <span class="m">1</span>
+<span class="m">13</span> <span class="m">7</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">9</span>.000
+<span class="m">1</span>.000
+<span class="m">4</span>.694
+</code></pre></div>
+</div>
+<h3 id="_36">추상화<a class="headerlink" href="#_36" title="Permanent link">¶</a></h3>
+<h4 id="_37">문제<a class="headerlink" href="#_37" title="Permanent link">¶</a></h4>
+<p><span class="arithmatex">\(\R ^{2}\)</span> 의 <span class="arithmatex">\(y = 0\)</span> 에 <span class="arithmatex">\(i \in \{1, \dots, n\}\)</span> <span class="arithmatex">\(n\)</span> 개의 원의 중점 <span class="arithmatex">\(x_i\)</span> 이 주어진다. 따라서 각각의 원의 방정식 <span class="arithmatex">\(O _{i}\)</span> 은 중점 <span class="arithmatex">\((x_i, 0)\)</span> 을 갖는 <span class="arithmatex">\(O _{i}: (x - x_i) ^{2} + (y - 0) ^{2} = 0 ^{2}\)</span> 이다. 첫 원의 방정식 <span class="arithmatex">\(O_1\)</span> 부터 원의 방정식 <span class="arithmatex">\(O _{i}\)</span> 들의 반지름 <span class="arithmatex">\(r' _{i}\)</span> 을 다음 조건을 만족시키도록 정한다.</p>
+<ul>
+<li>
+<p>원의 방정식 <span class="arithmatex">\(O _{i}\)</span> 이 나머지 원의 방정식과 접하도록</p>
+</li>
+<li>
+<p>원의 방정식 <span class="arithmatex">\(O _{i}\)</span> 에 주어진 반지름 경계 <span class="arithmatex">\(r_i\)</span> 가 되도록</p>
+</li>
+</ul>
+<h4 id="_38">정답<a class="headerlink" href="#_38" title="Permanent link">¶</a></h4>
+<p>원 <span class="arithmatex">\(O_1, \dots, O_n\)</span> 들의 반지름 <span class="arithmatex">\(r'_1, \dots, r'_n\)</span> 들이 모두 결정된 최종 반지름 <span class="arithmatex">\(r'_1, \dots, r'_n\)</span> </p>
+<h3 id="_39">순수 수학으로 사상시키기<a class="headerlink" href="#_39" title="Permanent link">¶</a></h3>
+<h4 id="_40">문제<a class="headerlink" href="#_40" title="Permanent link">¶</a></h4>
+<p><span class="arithmatex">\(i \in \{1,2,\dots,n\}\)</span> 에 대한 <span class="arithmatex">\(n\)</span> 개의 원의 방정식 <span class="arithmatex">\(O_i: (x - x_i) ^{2} + (y - r'_i) ^{2} = (r'_i) ^{2}\)</span> 의 <span class="arithmatex">\(r'_i\)</span> 가 <span class="arithmatex">\(O_1\)</span> 부터 시작하여 <span class="arithmatex">\(O_n\)</span> 까지 <span class="arithmatex">\(u, v \in \N\)</span> 에 대한 원 <span class="arithmatex">\(O_u\)</span> 와 원 <span class="arithmatex">\(O_v\)</span> 와의 중점 거리 </p>
+<div class="arithmatex">\[d _{uv} = \overline{O_uO_v} = \sqrt[]{(x_u - x_v) ^{2} + (r'_u - r'_v) ^{2}}\]</div>
+<p>에 대하여 다음과 같이 결정된다.</p>
+<div class="arithmatex">\[ r'_i = \max \{r'_i \in \R | (r'_i \leq r_i) \land (r'_i + r'_1 \leq d _{i1}) \land (r'_i + r'_2 \leq d _{i2}) \\ \qquad \quad  \qquad \qquad \qquad  \land \dots \land (r'_i + r' _{i-1} \leq d _{i(i-1)}) \} \]</div>
+<h4 id="_41">정답<a class="headerlink" href="#_41" title="Permanent link">¶</a></h4>
+<p><span class="arithmatex">\(\{r'_1, r'_2, \dots, r'_n\} \in \R ^{n}\)</span> </p>
+<h3 id="_42">문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상<a class="headerlink" href="#_42" title="Permanent link">¶</a></h3>
+<h4 id="r_1"><span class="arithmatex">\(r'_1\)</span> 을 결정하는 과정<a class="headerlink" href="#r_1" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[ r'_1 = \max \{r'_1 \in \R | (r'_1 \leq r_1) \} \]</div>
+<div class="arithmatex">\[\therefore  r'_1 = r_1\]</div>
+<h4 id="r_2"><span class="arithmatex">\(r'_2\)</span> 을 결정하는 과정<a class="headerlink" href="#r_2" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[ r'_2 = \max \{r'_2 \in \R | (r'_2 \leq r_2) \land (r'_2 + r'_1 \leq d _{21}) \} \]</div>
+<p>이는 상수 <span class="arithmatex">\(r_2, x_1, x_2, r'_1\)</span> 에 대한 변수 <span class="arithmatex">\(r'_2\)</span> 의 최댓값을 계산하는 것이다.</p>
+<h4 id="r_n"><span class="arithmatex">\(r'_n\)</span> 를 결정하는 과정<a class="headerlink" href="#r_n" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[ r'_n = \max \{r'_n \in \R | (r'_n \leq r_n) \land (r'_n + r'_1 \leq d _{n1}) \land (r'_n + r'_2 \leq d _{n2}) \land \dots \land (r'_n + r' _{n-1} \leq d _{n(n-1)}) \} \]</div>
+<p>이는 상수 <span class="arithmatex">\(r_n, x_1, x_2, \dots, x_n, r'_1, r'_2, \dots, r' _{n-1}\)</span> 에 대한 변수 <span class="arithmatex">\(r'_n\)</span> 의 최댓값을 계산하는 것이다.</p>
+<h4 id="_43">실제 계산 과정<a class="headerlink" href="#_43" title="Permanent link">¶</a></h4>
+<p>이러한 계산 과정은 조건 </p>
+<div class="arithmatex">\[ (r'_i \leq r_i) \land (r'_i + r'_1 \leq d _{i1}) \land (r'_i + r'_2 \leq d _{i2}) \land \dots \land (r'_i + r' _{i-1} \leq d _{i(i-1)}) \]</div>
+<p>을 만족하는 최대의 <span class="arithmatex">\(r'_i \in \R\)</span> 를 찾는 과정이다. </p>
+<p>그러므로 일단 초보적으로, 원 <span class="arithmatex">\(O_i\)</span> 가 원 <span class="arithmatex">\(O_1\)</span> 과 외접할 경우, 원 <span class="arithmatex">\(O_2\)</span> 와 외접할 경우, <span class="arithmatex">\(\dots\)</span>, 원 <span class="arithmatex">\(O _{i-1}\)</span> 와 외접할 경우를 구할 수 있다. </p>
+<p>원 <span class="arithmatex">\(O_i\)</span> 가 <span class="arithmatex">\(j &lt; i\)</span> 인 원 <span class="arithmatex">\(O_j\)</span> 와 외접할 경우의 반지름은 다음과 같다.</p>
+<div class="arithmatex">\[ (r'_i + r'_j) = d _{ij} = \sqrt[]{(x_i - x_j) ^{2} + (r'_i - r'_j) ^{2}} \implies \boxed{r'_i = \dfrac{(x_i - x_j) ^{2}}{4r'_j}} \]</div>
+<p>그러므로 이 방정식을 통하여 <span class="arithmatex">\(O_1\)</span> 부터 <span class="arithmatex">\(O _{i-1}\)</span> 까지의 외접반지름을 구할 수 있다. 이때 구해진 외접반지름 <span class="arithmatex">\(r'_i\)</span> 에서 최소의 외접반지름을 택해야 한다. 왜냐하면 최소 외접반지름이 아니라면 하나 이상의 원의 경계를 침범하기 때문이다.</p>
+<p>하지만 <span class="arithmatex">\(r'_i\)</span> 를 결정하기 위하여 굳이 <span class="arithmatex">\(O_1\)</span> 부터 <span class="arithmatex">\(O _{i-1}\)</span> 까지의 외접반지름을 구할 필요가 없다. 왜냐하면 <span class="arithmatex">\(r'_i = r_i\)</span> 로 정했을 때 <span class="arithmatex">\(j &lt; i\)</span> 인 원 <span class="arithmatex">\(O_j\)</span> 의 <span class="arithmatex">\(x\)</span> 축 상계 <span class="arithmatex">\(x_j + r_j\)</span> 보다 원 <span class="arithmatex">\(O_i\)</span> 의 <span class="arithmatex">\(x\)</span> 축 하계 <span class="arithmatex">\(x_i - r_i\)</span> 가 같거나 크면 두 원은 반드시 서로 만나지 않기 때문이다. </p>
+<p>그러므로 <span class="arithmatex">\(x_j + r_j &gt; x_i - r_i\)</span> 를 만족하는 원들에 대한 외접반지름만 구하고, 그것들 중에서 최솟값으로 최종 반지름을 결정하면 된다.</p>
+<div class="admonition cite">
+<p class="admonition-title">Cite</p>
+<p>그런데 <span class="arithmatex">\(j &lt; k\)</span> 즉, <span class="arithmatex">\(x_j &lt; x_k\)</span> 에 대하여 원 <span class="arithmatex">\(O_i\)</span> 가 원 <span class="arithmatex">\(O_j\)</span> 또는 원 <span class="arithmatex">\(O_k\)</span> 와 외접할 때 <span class="arithmatex">\(O_i\)</span> 의 <span class="arithmatex">\(r'_i\)</span> 의 대소관계가 어떻게 될까? 먼저 원 <span class="arithmatex">\(O_u\)</span> 가 원 <span class="arithmatex">\(O_v\)</span> 와 외접할 때의 반지름을 </p>
+<div class="arithmatex">\[ r'_u \bigg | _{v} \]</div>
+<p>라고 하자. 그러면 원 <span class="arithmatex">\(O_i\)</span> 가 원 <span class="arithmatex">\(O_j\)</span> 와 외접할 때의 반지름과 원 <span class="arithmatex">\(O_i\)</span> 가 원 <span class="arithmatex">\(O_k\)</span> 와 외접할 때의 반지름은 각각</p>
+<div class="arithmatex">\[ r'_i \bigg |_j = \dfrac{(x_i - x_j) ^{2}}{4r'_j} \qquad r'_i \bigg |_k = \dfrac{(x_i - x_k) ^{2}}{4r'_k} \]</div>
+<p>이다. </p>
+<p>분자의 대소관계는 자명하게 <span class="arithmatex">\((x_i - x_j) ^{2} &gt; (x_i - x_k) ^{2}\)</span> 이므로 분모의 대소관계를 따져야 한다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(r'_j \leq r'_k\)</span> 일 경우 분자의 대소관계가 불변하므로 <span class="arithmatex">\(r'_i \bigg |_j &gt; r'_i \bigg |_k\)</span> 이다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(r'_i\)</span> 를 <span class="arithmatex">\(r'_i \bigg |_j\)</span> 로 택할 경우 <span class="arithmatex">\(r'_i \bigg |_j + r'_k &gt; d _{ik}\)</span> 가 되므로 원 <span class="arithmatex">\(O_i\)</span> 가 원 <span class="arithmatex">\(O_j\)</span> 와 외접할 경우 원 <span class="arithmatex">\(O_k\)</span> 를 침범한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(r'_i\)</span> 를 <span class="arithmatex">\(r'_i \bigg |_k\)</span> 로 택할 경우 <span class="arithmatex">\(r'_i \bigg |_k + r'_j &lt; d _{ij}\)</span> 가 되므로 원 <span class="arithmatex">\(O_i\)</span> 가 원 <span class="arithmatex">\(O_k\)</span> 와 외접할 경우 원 <span class="arithmatex">\(O_j\)</span> 와 만나지 않는다. </p>
+</li>
+</ul>
+<p>그러므로 이 경우 원 <span class="arithmatex">\(O_i\)</span> 의 반지름으로써 <span class="arithmatex">\(r'_i \bigg |_k\)</span> 를 택해야 한다.</p>
+<p>즉, 더 낮은 좌표에 있는 원의 반지름이 더 높은 좌표에 있는 원의 반지름보다 같거나 작다면 반드시 더 높은 좌표의 원과 외접하도록 반지름을 결정해야 한다. 이로써 어떤 원의 반지름보다 같거나 작은 반지름을 가지는 더 낮은 좌표의 모든 원을 외접할 후보 원에서 제외할 수 있다. 이 제외 작업이 끝나면 후보 원들은 반지름이 큰 순서대로 남아있을 것이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(r'_j &gt; r'_k\)</span> 일 경우 <span class="arithmatex">\(\bigg ( r'_i \bigg |_j = r'_i \bigg |_k \bigg ) \lor \bigg ( r'_i \bigg |_j &lt; r'_i \bigg |_k \bigg ) \lor \bigg ( r'_i \bigg |_j &gt; r'_i \bigg |_k \bigg )\)</span> 일 수 있다.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(r'_i \bigg |_j = r'_i \bigg |_k\)</span> 일 경우 <span class="arithmatex">\(r'_i \bigg |_k + r'_j = d _{ij},\ r'_i \bigg |_j + r'_k = d _{ik}\)</span> 가 된다. 즉, 원 <span class="arithmatex">\(O_i\)</span> 가 원 <span class="arithmatex">\(O_j, O_k\)</span> 에 문제없이 잘 외접한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(r'_i \bigg |_j &gt; r'_i \bigg |_k\)</span> 일때 <span class="arithmatex">\(r'_i\)</span> 를 <span class="arithmatex">\(r'_i \bigg |_j\)</span> 로 택할 경우 <span class="arithmatex">\(r'_i \bigg |_j + r'_k &gt; d _{ik}\)</span> 가 된다. 즉, 원 <span class="arithmatex">\(O_i\)</span> 가 원 <span class="arithmatex">\(O_j\)</span> 와 외접할 경우 원 <span class="arithmatex">\(O_k\)</span> 를 침범한다. 그러므로 이 경우 원 <span class="arithmatex">\(O_i\)</span> 의 반지름으로써 <span class="arithmatex">\(r'_i \bigg |_k\)</span> 를 택해야 한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(r'_i \bigg |_j &lt; r'_i \bigg |_k\)</span> 일때 <span class="arithmatex">\(r'_i\)</span> 를 <span class="arithmatex">\(r'_i \bigg |_k\)</span> 로 택할 경우 <span class="arithmatex">\(r'_i \bigg |_k + r'_j &gt; d _{ij}\)</span> 가 된다. 즉, 원 <span class="arithmatex">\(O_i\)</span> 가 원 <span class="arithmatex">\(O_k\)</span> 와 외접할 경우 원 <span class="arithmatex">\(O_j\)</span> 를 침범한다. 그러므로 이 경우 원 <span class="arithmatex">\(O_i\)</span> 의 반지름으로써 <span class="arithmatex">\(r'_i \bigg |_j\)</span> 를 택해야 한다.</p>
+</li>
+</ul>
+<p>그러므로 이 경우 모든 원에 대한 외접 반지름이 가장 작은 것으로 <span class="arithmatex">\(r'_i\)</span> 를 택해야 한다.</p>
+<p>그러므로 기본적으로 원 <span class="arithmatex">\(O_i\)</span> 의 반지름을 결정하기 위하여 후보원에 대한 모든 외접 반지름</p>
+<div class="arithmatex">\[ r'_i \bigg |_a = \dfrac{(x_i - x_a) ^{2}}{4r'_a}, r'_i \bigg |_b = \dfrac{(x_i - x_b) ^{2}}{4r'_b}, \dots, r'_i \bigg |_z = \dfrac{(x_i - x_z) ^{2}}{4r'_z} \]</div>
+<p>을 구하고 이중 최솟값을 <span class="arithmatex">\(r'_i\)</span> 로 택할 수 있다. </p>
+</li>
+</ul>
+<p>하지만 마지막 원 <span class="arithmatex">\(O_n\)</span> 의 외접반지름을 구해야 할 때 원 <span class="arithmatex">\(O_1, O_2, \dots, O _{n-1}\)</span> 과 외접할 때의 모든 반지름을 구하게 된다. 하지만 원 <span class="arithmatex">\(O_n\)</span> 의 반지름 <span class="arithmatex">\(r'_n\)</span> 은 아무리 커봤자 <span class="arithmatex">\(r_n\)</span> 이므로 모든 외접반지름을 구하는 것은 비효율적이다.</p>
+</div>
+<div class="admonition cite">
+<p class="admonition-title">보류 아이디어</p>
+<p>흠.. 초깃값을 <span class="arithmatex">\(r'_i = r_i\)</span> 또는 <span class="arithmatex">\(r'_i \bigg | _{i-1}\)</span> 로 잡으면 되나? 그러고 원을 침범한 것들에 대해서 새로운 <span class="arithmatex">\(r'_i\)</span> 를 구하는거지.</p>
+<p>그냥 초기에 <span class="arithmatex">\(r'_i = r_i\)</span> 로 두고, 침범한 원들에 대해서만 최소의 <span class="arithmatex">\(r'_i\)</span> 를 계산해볼까?</p>
+</div>
+<div class="admonition cite">
+<p class="admonition-title">보류 아이디어</p>
+<p>그렇다면 원 <span class="arithmatex">\(O_i\)</span> 의 반지름 <span class="arithmatex">\(r'_i\)</span> 를 결정하기 위한 이상의 내용을 다음과 같이 정리할 수 있다.</p>
+<ol>
+<li>
+<p>원 <span class="arithmatex">\(O_i\)</span> 와 외접할 후보 원들은 <span class="arithmatex">\(O_1, O_2, \dots, O _{i-1}\)</span> 이다. 우선 이 원들에서 어떤 원의 반지름보다 같거나 작은 반지름을 가지는 더 낮은 좌표의 모든 원들을 제외한다. 그러면 후보 원들이 반지름이 큰 순서대로 남게 된다.</p>
+</li>
+<li>
+<p>남아있는 원들과 원 <span class="arithmatex">\(O_i\)</span> 와의 외접 반지름을 구한 다음 최솟값을 구한다. 이 최솟값을 <span class="arithmatex">\(r'_i\)</span> 로 택한다면 모든 원들과 잘 외접하거나 잘 동떨어져있게 된다.</p>
+</li>
+<li>
+<p>그런데 <span class="arithmatex">\(r'_i\)</span> 가 <span class="arithmatex">\(r_i\)</span> 경계를 넘어섰다면, <span class="arithmatex">\(r'_i\)</span> 를 <span class="arithmatex">\(r_i\)</span> 로 정한다.</p>
+</li>
+</ol>
+<p>하지만 매번 원 <span class="arithmatex">\(O_i\)</span> 에 대한 후보 원 리스트를 계산하기보다 하나의 후보원 리스트를 계속 갖고 있어도 된다. 그러면 이 리스트는 원이 추가될 때마다 자기보다 같거나 작은 반지름을 갖는 원들을 삭제하고 리스트에 추가되게 된다.</p>
+</div>
+<div class="admonition cite">
+<p class="admonition-title">보류 아이디어</p>
+<p>쉽게 말해 처음에는 <span class="arithmatex">\(r'_i = r_i / 2\)</span> 로 두고 조건</p>
+<div class="arithmatex">\[ (r'_i + r'_1 \leq d _{i1}) \land (r'_i + r'_2 \leq d _{i2}) \land \dots \land (r'_i + r' _{i-1} \leq d _{i(i-1)}) \]</div>
+<p>이 참이 되는지 본다. 참이라면 <span class="arithmatex">\(r'_i = \dfrac{3}{4}r_i\)</span> 로 둬보고 다시 검사하고, 거짓이라면 <span class="arithmatex">\(r'_i = \dfrac{r_i}{4}\)</span> 으로 두고 다시 검사한다. 그러면 이진 탐색을 통하여 <span class="arithmatex">\(r'_i \in \R\)</span> 가 </p>
+</div>
+<hr/>
+<h2 id="p6">P6<a class="headerlink" href="#p6" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : <span class="arithmatex">\(4\)</span> 개의 polyomino 가 주어지면, 그것들을 통하여 정사각형을 만들어라.</p>
+</div>
+<p>첫 라인에 <span class="arithmatex">\(1 \leq n \leq 5\)</span> 인 polyomino 의 개수 <span class="arithmatex">\(n \in \N\)</span> 이 주어진다. 이후의 라인은 polyomino 의 형상을 기술한다.</p>
+<p>polyomino 의 형상 기술은 이렇게 이루어진다. 첫 라인에 <span class="arithmatex">\(1 \leq h \leq 4, \quad 1 \leq w \leq 4\)</span> 인 <span class="arithmatex">\(h\)</span> 와 <span class="arithmatex">\(w\)</span> 가 주어져서 polyomino 의 세로와 가로 길이를 특정한다. 이후 <span class="arithmatex">\(h\)</span> 개의 라인에 각각 <span class="arithmatex">\(w\)</span> 개의 이진수가 주어진다. 이진수가 <span class="arithmatex">\(1\)</span> 일 때에만 그 위치에 블록이 존재한다는 것이다.</p>
+<p>출력은 polyomino 를 사용하여 정사각형을 완성한 형태를 출력한다. polyomino 가 주어진 위치를 기반으로 정사각형을 polyomino 의 위치로 채우면 된다.</p>
+<p>만약 주어진 polyomino 로 정사각형을 만들 수 없다면, <code>No solution possible</code> 을 출력하면 된다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/95925933-001dc900-0df6-11eb-8ff5-7493c37fc2e7.png"/></p>
+<div class="highlight"><pre><span></span><code><span class="m">4</span>
+<span class="m">2</span> <span class="m">3</span>
+<span class="m">1</span> <span class="m">1</span> <span class="m">1</span>
+<span class="m">1</span> <span class="m">0</span> <span class="m">1</span>
+<span class="m">4</span> <span class="m">2</span>
+<span class="m">0</span> <span class="m">1</span>
+<span class="m">0</span> <span class="m">1</span>
+<span class="m">1</span> <span class="m">1</span>
+<span class="m">0</span> <span class="m">1</span>
+<span class="m">2</span> <span class="m">1</span>
+<span class="m">1</span>
+<span class="m">1</span>
+<span class="m">3</span> <span class="m">2</span>
+<span class="m">1</span> <span class="m">0</span>
+<span class="m">1</span> <span class="m">0</span>
+<span class="m">1</span> <span class="m">1</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">1</span> <span class="m">1</span> <span class="m">1</span> <span class="m">2</span>
+<span class="m">1</span> <span class="m">4</span> <span class="m">1</span> <span class="m">2</span>
+<span class="m">3</span> <span class="m">4</span> <span class="m">2</span> <span class="m">2</span>
+<span class="m">3</span> <span class="m">4</span> <span class="m">4</span> <span class="m">2</span>
+</code></pre></div>
+</div>
+<h3 id="_44">추상화<a class="headerlink" href="#_44" title="Permanent link">¶</a></h3>
+<p>주어진 polyomino 를 행렬로 표현할 수 있다. 이때 <span class="arithmatex">\(i\)</span> 번째 polyomino 를 행렬 <span class="arithmatex">\(A ^{(i)}\)</span> 라고 하자.</p>
+<h3 id="_45">순수 수학으로 사상시키기<a class="headerlink" href="#_45" title="Permanent link">¶</a></h3>
+<h4 id="_46">문제<a class="headerlink" href="#_46" title="Permanent link">¶</a></h4>
+<p><span class="arithmatex">\(i \in \N ^{[1,5]}\)</span> 에 대한 행렬 <span class="arithmatex">\(A_i\)</span> 들의 원소를 보존하면서 행렬 병합을 통하여 정사각행렬 <span class="arithmatex">\(X\)</span> 를 만들어라.</p>
+<h4 id="_47">정답<a class="headerlink" href="#_47" title="Permanent link">¶</a></h4>
+<p>정사각행렬 <span class="arithmatex">\(X\)</span></p>
+<h3 id="_48">문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상<a class="headerlink" href="#_48" title="Permanent link">¶</a></h3>
+<p>먼저 정사각행렬 <span class="arithmatex">\(X\)</span> 의 형상을 계산해야 한다. 이를 위하여 주어진 행렬 <span class="arithmatex">\(A ^{(i)}\)</span> 들의 <span class="arithmatex">\(0\)</span> 이 아닌 원소의 갯수를 모두 더한 값 <span class="arithmatex">\(x\)</span> 의 <span class="arithmatex">\(\sqrt[]{x}\)</span> 를 계산한다. <span class="arithmatex">\(\sqrt[]{x} \in \Z\)</span> 라면 정사각행렬 <span class="arithmatex">\(X\)</span> 의 형상은 <span class="arithmatex">\(\sqrt[]{x} \times \sqrt[]{x}\)</span> 로 정해진다. <span class="arithmatex">\(\sqrt[]{x} \not \in \Z\)</span> 라면 주어진 행렬 <span class="arithmatex">\(A_i\)</span> 의 원소를 보존하면서 행렬 병합을 통하여 절대로 정사각행렬을 만들 수 없다.</p>
+<p>정사각행렬 <span class="arithmatex">\(X\)</span> 를 영행렬로 만든다. </p>
+<p>그러면 <span class="arithmatex">\(i \in \{1,2,3,4,5 \}\)</span> 번째 행렬 <span class="arithmatex">\(A ^{(i)}\)</span> 을 커널 행렬로, <span class="arithmatex">\(X\)</span> 를 입력 행렬로 보고, 2D 합성곱 연산(<span class="arithmatex">\(\text{padding} = 0, \text{stride} = 1\)</span>)을 진행하여 출력 행렬 <span class="arithmatex">\(Y^{(i)}\)</span> 를 계산한다.</p>
+<p>만약 <span class="arithmatex">\(Y^{(i)} _{u,v} = 0\)</span> 라면 행렬 <span class="arithmatex">\(A ^{(i)}\)</span> 가 <span class="arithmatex">\(X\)</span> 에 원소 <span class="arithmatex">\(X _{u,v}\)</span> 의 위치를 기점으로 삽입될 공간이 존재한다는 것이고, <span class="arithmatex">\(Y^{(i)} _{u,v} \neq 0\)</span> 라면 삽입될 공간이 존재하지 않는다는 것이다. </p>
+<p><span class="arithmatex">\(Y^{(i)} _{u,v} \neq 0\)</span> 라면 이 경우는 무시하고 넘어간다. 하지만 <span class="arithmatex">\(Y^{(i)}_{u,v} = 0\)</span> 이면 행렬 <span class="arithmatex">\(X\)</span> 의 원소 <span class="arithmatex">\(X_{u,v}\)</span> 를 기점으로 행렬 <span class="arithmatex">\(A ^{(i)}\)</span> 를 삽입한다. 이는 행렬 <span class="arithmatex">\(X\)</span> 의 국소 영역에 행렬 <span class="arithmatex">\(i \cdot A ^{(i)}\)</span> 를 더하는 것으로 이루어질 수 있다. 이때 국소 영역이란 행렬 <span class="arithmatex">\(A ^{(i)}\)</span> 의 형상 <span class="arithmatex">\(n \times m\)</span> 에 대한 행렬 <span class="arithmatex">\(X\)</span> 의 부분 행렬 </p>
+<div class="arithmatex">\[ X[u, u+1, \dots, u+(n-1);\ v, v+1, \dots, v+(m-1)] = \\ \\ \begin{pmatrix} X _{u,v} &amp; X _{u,v+1} &amp; \dots&amp; X _{u,v+(m-1)} \\ X _{u+1,v} &amp; X _{u+1,v+1} &amp; \dots&amp; X _{u+1,v+(m-1)} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ X _{u+(n-1),v} &amp; X _{u+(n-1),v+1} &amp; \dots&amp; X _{u+(n-1),v+(m-1)} \\ \end{pmatrix} \]</div>
+<p>을 뜻하고, 이 부분 행렬에 행렬 <span class="arithmatex">\(i \cdot A ^{(i)}\)</span> 를 더하는 것이다.</p>
+<p>그러면 새롭게 생성된 행렬 <span class="arithmatex">\(X\)</span> 에 그 다음 polyomino 행렬 <span class="arithmatex">\(A ^{(i+1)}\)</span> 에 대해서도 동일한 과정을 진행할 수 있다. 행렬 <span class="arithmatex">\(A ^{(i+1)}\)</span> 를 행렬 <span class="arithmatex">\(X\)</span> 에 합성곱 연산을 하여 마찬가지로 <span class="arithmatex">\(0\)</span> 인 곳에만 국소 영역에 대한 덧셈을 진행한다.</p>
+<p>그러면 또 다시 새롭게 생성된 행렬 <span class="arithmatex">\(X\)</span> 에 대하여 행렬 <span class="arithmatex">\(A ^{(i+2)}\)</span> 에 대해서도 동일한 과정을 진행한다. </p>
+<p>만약 마지막 행렬까지 이 과정이 성공적으로 이루어졌다면 그때의 행렬 <span class="arithmatex">\(X\)</span> 를 출력하고 끝낸다. 하지만 이 과정이 모두 실패하였다면 <code>No solution possible</code> 을 출력하고 끝낸다.</p>
+<h3 id="_49">자료구조<a class="headerlink" href="#_49" title="Permanent link">¶</a></h3>
+<p>필요한 연산은 다음과 같다. </p>
+<ul>
+<li>
+<p>polyomino 를 의미하는 행렬 <span class="arithmatex">\(A ^{(i)}\)</span> 의 <span class="arithmatex">\(0\)</span> 이 아닌 원소의 갯수를 구해야 한다.</p>
+</li>
+<li>
+<p>정사각행렬 <span class="arithmatex">\(X\)</span> 를 영행렬로 만들어야 한다.</p>
+</li>
+<li>
+<p>정사각행렬 <span class="arithmatex">\(X\)</span> 에 행렬 <span class="arithmatex">\(A ^{(i)}\)</span> 를 커널로 하여 2D 합성곱 연산을 해야 한다.</p>
+</li>
+<li>
+<p>행렬 <span class="arithmatex">\(X\)</span> 의 국소영역에 대한 행렬 덧셈을 해야 한다.</p>
+</li>
+</ul>
+<p>그러면 일단 2차원 배열로 만들되, 형상 정보가 매번 필요하니까 형상 정보를 갖는 2차원 배열 구조체로 정의하면 편할 것 같긴 하다.</p>
+<h3 id="2d-convolution">2D Convolution<a class="headerlink" href="#2d-convolution" title="Permanent link">¶</a></h3>
+<p><span class="arithmatex">\((n, n)\)</span> 입력행렬에 <span class="arithmatex">\((m, k)\)</span> 커널 행렬로 합성곱 연산을 적용하면</p>
+<div class="arithmatex">\[ (n - m + 1, n - k + 1) \]</div>
+<p>형상의 출력 행렬이 생성된다.</p>
+<hr/>
+<h2 id="_50">수학적으로 사상된 알고리즘 문제 풀이법의 대수적 풀이<a class="headerlink" href="#_50" title="Permanent link">¶</a></h2>
+<p>알고리즘 문제를 순수한 수학적 대상물로 사상시키면, 문제에 해당하는 수학적 대상물과 정답에 해당하는 수학적 대상물이 생성된다. 이때 두 가지 풀이법이 있을 수 있는데, 문제를 불변하는 상수로 취급하고 문제를 통하여 정답을 연역시키는 방법과 정답을 불변하는 상수로 취급하고 그것에 문제를 끼워맞추는 방법이다. 기본적인 사고 순서는 문제로부터 어떻게 정답을 연역해내는가 고민해보는 것이고, 이 방법이 너무 까다로우면 정답을 불변하는 상수로 취급한 후 어떻게 문제를 끼워맞출 수 있나 고민해볼 수 있다.</p>
+<hr/>
+<h2 id="c6">C6<a class="headerlink" href="#c6" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : <span class="arithmatex">\(n \in \N ^{[1,5 \cdot 10 ^{4}]}\)</span> 개의 카드로 하는 싱글 플레이 카드 게임이 있다. 각각의 카드는 <span class="arithmatex">\(1\)</span> 에서 <span class="arithmatex">\(10 ^{9}\)</span> 의 값을 갖는다. 딜러는 플레이어에게 한번씩 <span class="arithmatex">\(n\)</span> 개의 카드들을 보여준다. 카드 <span class="arithmatex">\(C\)</span> 가 보여질 때, 플레이어는 다음 조건이 만족될 때 카드를 가져올 수 있다. </p>
+<ul>
+<li>
+<p>플레이어가 카드를 아직 가져오지 않았을 때.</p>
+</li>
+<li>
+<p>플레이어가 가져온 카드들은 오름차순이어야 하고, 현재 카드 <span class="arithmatex">\(C\)</span> 가 플레이어가 마지막으로 가져온 카드보다 클 때.</p>
+</li>
+<li>
+<p>플레이어가 마지막으로 가져온 카드보다 작은 카드를 취하면, 후에 택해질 카드는 가장 최근 취해진 카드보다 낮아야 한다.</p>
+</li>
+</ul>
+<p>플레이어는 위 조건이 충족되더라도 카드를 가져오지 않을 수 있다. 플레이어가 최종적으로 택한 카드들의 갯수가 곧 점수가 된다. 플레이어가 <span class="arithmatex">\(n\)</span> 개의 카드에서 얻을 수 있는 가장 큰 점수를 구하라.</p>
+</div>
+<p>첫 라인에 <span class="arithmatex">\(n \in \N ^{1, 5 \cdot 10 ^{4}}\)</span> 이 주어진다. 두번째부터 <span class="arithmatex">\(n+1\)</span> 라인까지 <span class="arithmatex">\(n\)</span> 개의 카드의 번호가 주어진다. <span class="arithmatex">\(i\)</span> 번째 라인에 <span class="arithmatex">\(i-1\)</span> 번째 카드 번호가 <span class="arithmatex">\(1\)</span> 부터 <span class="arithmatex">\(10 ^{9}\)</span> 까지의 정수로 주어진다.</p>
+<p><span class="arithmatex">\(n\)</span> 개의 카드에서 얻을 수 있는 최대 점수를 출력해야 한다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">11</span>
+<span class="m">0</span>
+<span class="m">1</span>
+<span class="m">0</span>
+<span class="m">2</span>
+<span class="m">3</span>
+<span class="m">1</span>
+<span class="m">8</span>
+<span class="m">3</span>
+<span class="m">3</span>
+<span class="m">6</span>
+<span class="m">6</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.(0, 1, 2, 3, 8, 6 or 0, 1, 2, 3, 8, 3)</p>
+<div class="highlight"><pre><span></span><code><span class="m">6</span>
+</code></pre></div>
+</div>
+<h3 id="_51">추상화<a class="headerlink" href="#_51" title="Permanent link">¶</a></h3>
+<h4 id="_52">문제<a class="headerlink" href="#_52" title="Permanent link">¶</a></h4>
+<p><span class="arithmatex">\(a_i \in \N ^{[1, 10 ^{9}]}, n \in \N ^{[1,50000]}\)</span> 에 대한 수열 </p>
+<div class="arithmatex">\[ \{a_1, a_2, a_3, \dots, a _{n-1}, a_n\} \]</div>
+<p>의 <span class="arithmatex">\(m \in \N ^{[1, n]}\)</span> 에 대한 부분수열</p>
+<div class="arithmatex">\[ \{\alpha _1, \alpha _2, \alpha _3, \dots, \alpha _{m-1}, \alpha _m\} \]</div>
+<p>중에서 조건</p>
+<ul>
+<li>부분수열의 최대 원소 <span class="arithmatex">\(\alpha _k\)</span> 에 대하여 <span class="arithmatex">\(\alpha _1 &lt; \alpha _2 &lt; \dots &lt; \alpha _k \land \alpha _k &gt; \alpha _{k+1} &gt; \dots \alpha _m\)</span></li>
+</ul>
+<p>을 만족시키는 부분수열이 존재한다.</p>
+<h4 id="_53">정답<a class="headerlink" href="#_53" title="Permanent link">¶</a></h4>
+<p>이 조건을 만족시키는 부분수열들 <span class="arithmatex">\(\alpha ^{(1)}, \alpha ^{(2)}, \dots, \alpha ^{(l)}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[\max \{|\alpha ^{(1)}|, |\alpha ^{(2)}|, \dots, |\alpha ^{(l)}| \}\]</div>
+<h3 id="_54">순수 수학으로 사상시키기<a class="headerlink" href="#_54" title="Permanent link">¶</a></h3>
+<h4 id="_55">문제<a class="headerlink" href="#_55" title="Permanent link">¶</a></h4>
+<h4 id="_56">정답<a class="headerlink" href="#_56" title="Permanent link">¶</a></h4>
+<h3 id="_57">문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상<a class="headerlink" href="#_57" title="Permanent link">¶</a></h3>
+<hr/>
+<h2 id="p7">P7<a class="headerlink" href="#p7" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : <span class="arithmatex">\(N\)</span> 개로 끊어진 <span class="arithmatex">\(s_i\)</span> 의 길이를 갖는 전선들을 이어붙여야 한다. <span class="arithmatex">\(s_i\)</span> 와 <span class="arithmatex">\(s _{i+1}\)</span> 를 이어붙이면 <span class="arithmatex">\((s_i + s _{i+1})\)</span> 시간 동안 결함을 확인해야 한다. 주어진 전선 조각 <span class="arithmatex">\(s_1, s_2, \dots, s_N\)</span> 을 이어붙일 수 있는 최단시간을 구하라.</p>
+</div>
+<p>첫 라인에 <span class="arithmatex">\(3 \leq N \leq 500\)</span> 이 주어진다. 두번째 라인에 전선 조각의 길이를 뜻하는 <span class="arithmatex">\(N\)</span> 개의 양의 정수가 주어진다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">4</span>
+<span class="m">3</span> <span class="m">4</span> <span class="m">4</span> <span class="m">2</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다. 3 4 4 2 -&gt; [6] 3 4 (6) -&gt; [7] (7) 6 -&gt; [13] (13)</p>
+<div class="highlight"><pre><span></span><code><span class="m">26</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">12</span>
+<span class="m">1</span> <span class="m">20</span> <span class="m">35</span> <span class="m">5</span> <span class="m">4</span> <span class="m">3</span> <span class="m">5</span> <span class="m">92</span> <span class="m">23</span> <span class="m">14</span> <span class="m">32</span> <span class="m">18</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">771</span>
+</code></pre></div>
+</div>
+<h3 id="_58">추상화<a class="headerlink" href="#_58" title="Permanent link">¶</a></h3>
+<h4 id="_59">문제<a class="headerlink" href="#_59" title="Permanent link">¶</a></h4>
+<p>끊어진 전선들을 수열 <span class="arithmatex">\(S = (s_1, s_2, \dots, s_n)\)</span> 으로 표현하고, 함수 <span class="arithmatex">\(f\)</span> 를 </p>
+<div class="arithmatex">\[ f(S, i) = (s_1, \dots, s_i + s _{i+1}, \dots, s_n) \]</div>
+<p>로 정의하자. 그러면 함수는 <span class="arithmatex">\(i\)</span> 번째 전선과 <span class="arithmatex">\(i+1\)</span> 번째 전선을 연결한 후의 수열을 반환한다.</p>
+<p>초기의 수열을 <span class="arithmatex">\(S ^{(1)} \in \mathbb{Z} ^{n}\)</span> 라고 하고, <span class="arithmatex">\(S ^{(k)} = f(S ^{(k-1)}, i) \in \mathbb{Z} ^{n - (k-1)}\)</span> 라고 하면 모두 연결된 전선의 상태를 <span class="arithmatex">\(S ^{(n)} = f(S ^{(n-1)}, i) \in \mathbb{Z}\)</span> 라고 할 수 있다.</p>
+<p>그러면 <span class="arithmatex">\(S ^{(k+1)} = f(S ^{(k)}, a_k)\)</span> 에서 연결시킨 전선의 인덱스를 <span class="arithmatex">\(a_k \in \{1,2, \dots, \dim S ^{(k)} - 1\}\)</span> 라고 하면 전선을 연결하는 모든 비용은 </p>
+<div class="arithmatex">\[ (S ^{(1)}_{a_1} + S ^{(1)}_{a_1+1})+ (S ^{(2)}_{a_2} + S ^{(2)}_{a_2+1})+ \dots+ (S ^{(k)}_{a_k} + S ^{(k)}_{a_k+1})+ \dots+ S ^{(n)} \\ = \sum_{k=1}^{n-1} (S ^{k}_{a_k} + S ^{k} _{a_k + 1}) + S ^{(n)} = \alpha \]</div>
+<p>이다. 왜냐하면 <span class="arithmatex">\(S ^{(k)}\)</span> 에서 <span class="arithmatex">\(a_k\)</span> 인덱스의 전선을 연결하면 <span class="arithmatex">\(S ^{(k)}_{a_k} + S ^{(k)}_{a_k+1}\)</span> 의 전선 검사 비용이 들기 때문이다.</p>
+<p>그렇다면 <span class="arithmatex">\(S ^{(k)}\)</span> 에서 <span class="arithmatex">\(a_k\)</span> 를 어떻게 설정해야 전선 검사 비용 <span class="arithmatex">\(\alpha\)</span> 가 최소가 될까? 초보적으로는 수열 <span class="arithmatex">\(S ^{(k)}\)</span> 에서 <span class="arithmatex">\(S ^{(k)}_{i} + S ^{(k)}_{i+1}\)</span> 가 최소가 되는 <span class="arithmatex">\(i\)</span> 를 <span class="arithmatex">\(a_k\)</span> 로 설정하면 된다.</p>
+<p>하지만 <span class="arithmatex">\(S ^{(k)}_{i} + S ^{(k)}_{i+1}\)</span> 가 최소가 되는 인덱스 <span class="arithmatex">\(i\)</span> 가 유일하지 않을 수도 있다. 그러면 <span class="arithmatex">\(S ^{(k)}_{i} + S ^{(k)}_{i+1}\)</span> 를 최소로 만드는 여러개의 <span class="arithmatex">\(i\)</span> 중에서 어떤 것을 택해야 할까?  </p>
+<p>만약 <span class="arithmatex">\(S ^{(k)}\)</span> 에서 <span class="arithmatex">\(d = S ^{(k)}_{i-1} +S ^{(k)}_{i} = S ^{(k)}_{i} +S ^{(k)}_{i + 1}\)</span> 가 최소 비용이라고 하자. 그러면 <span class="arithmatex">\(a_k = i-1\)</span> 로 설정할 수도 있고, <span class="arithmatex">\(a_k = i\)</span> 로 설정할 수도 있다.</p>
+<p><span class="arithmatex">\(a_k = i-1\)</span> 일 경우 새로운 수열 <span class="arithmatex">\(S ^{(k)}\)</span> 가 </p>
+<div class="arithmatex">\[ S ^{(k+1)} = (\dots, S ^{(k)}_{i-2}, d, S ^{(k)}_{i+1}, S ^{(k)}_{i+2}, \dots) \]</div>
+<p>가 되고, <span class="arithmatex">\(a_k = i\)</span> 일 경우 새로운 수열 <span class="arithmatex">\(S ^{(k)}\)</span> 가 </p>
+<div class="arithmatex">\[ S ^{(k+1)} = (\dots, S ^{(k)}_{i-2}, S ^{(k)}_{i-1}, d, S ^{(k)}_{i+2}, \dots) \]</div>
+<p>가 된다.</p>
+<p>이 두 수열 중에서 어떤 수열이 최소의 <span class="arithmatex">\(\alpha\)</span> 를 만드는지 미리 알 수 있을까? 그것을 알 수 있는 방법이 존재한다면, 대수적 풀이법이 존재하는 것이고, 존재하지 않으면 <span class="arithmatex">\(\alpha\)</span> 가 최소가 되는지 끝까지 계산해보고 비교해야 하는 브루스포스 방식으로 풀어야 한다. </p>
+<p>하지만 나는 끝까지 계산해보지 않고도 어떤 수열이 최소의 <span class="arithmatex">\(\alpha\)</span> 를 계산되게 하는지 알려주는 대수적 풀이법이 존재한다고 너무 굳게 믿고 그러한 방법이 무엇인지 계속 찾았다. 하지만 매번 어떤 수열이 최소의 <span class="arithmatex">\(\alpha\)</span> 를 계산하는지 알기 위해서는 실제로 끝까지 계산해보아야 한다는 결론에 도달했다. </p>
+<p>그러나 브루트 포스 방식은 내가 원하는 방식이 아니었고, 출제자의 요구도 아닐 거라는 너무 지나친 선입견이 있었던 것 같다. 아마 이 문제의 올바른 문제 풀이법은 새로운 두 수열 모두를 통하여 <span class="arithmatex">\(\alpha\)</span> 를 계산해보아야 하는 브루스 포스 방식으로 풀어야 했던 것 같다. </p>
+<p>실제로 수열의 크기가 <span class="arithmatex">\(3\)</span> 에서 <span class="arithmatex">\(500\)</span> 으로 매우 작았다. 이것을 통하여 이 문제가 대수적인 풀이법이 존재하지 않는 문제이고, 브루트 포스로 모든 경우를 다 계산해야 하는 문제일 것 같다는 추측을 했다. 하지만 이미 시간이 너무 흘러버렸었다.</p>
+<h4 id="_60">정답<a class="headerlink" href="#_60" title="Permanent link">¶</a></h4>
+<h3 id="_61">순수 수학으로 사상시키기<a class="headerlink" href="#_61" title="Permanent link">¶</a></h3>
+<h4 id="_62">문제<a class="headerlink" href="#_62" title="Permanent link">¶</a></h4>
+<h4 id="_63">정답<a class="headerlink" href="#_63" title="Permanent link">¶</a></h4>
+<h3 id="_64">문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상<a class="headerlink" href="#_64" title="Permanent link">¶</a></h3>
+<hr/>
+<h2 id="c7">C7<a class="headerlink" href="#c7" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : 제약사가 <span class="arithmatex">\(n\)</span> 개의 약을 처방하려 한다. 그는 부작용을 피하기 위해 <span class="arithmatex">\(m\)</span> 개의 페어의 충돌되는 약을 찾았다. 환자는 충돌되는 약을 같은 날에 먹으면 안된다. 환자는 이틀 안에 모든 약을 먹어야 하지만, 제약사는 충돌을 피하면서 <span class="arithmatex">\(n\)</span> 개의 약을 이틀 동안 분배하는 것이 불가능하다는 것을 발견했다. 이 문제를 보고하기 위하여 제약사는 첫번째로 충돌되는 약의 페어를 식별해야 한다. 효율적으로 충돌되는 약의 첫번째 페어를 찾아보자.</p>
+</div>
+<p>첫 라인에 약의 개수를 뜻하는 <span class="arithmatex">\(n \in \Z ^{[1, 10 ^{4}]}\)</span> 이 주어진다. 약의 ID 는 <span class="arithmatex">\(1\)</span> 부터 <span class="arithmatex">\(n\)</span> 까지 주어진다.</p>
+<p>두번째 라인에 충돌되는 약의 페어의 갯수를 뜻하는 <span class="arithmatex">\(m \in \Z ^{[1, 10 ^{5}]}\)</span> 이 주어진다.</p>
+<p>그 다음 <span class="arithmatex">\(m\)</span> 개의 라인에 충돌되는 약의 페어가 주어진다. 각 라인은 두 정수로 구성되고, 각각의 정수는 같은 날에 먹으면 안되는 약의 ID 이다.</p>
+<p><span class="arithmatex">\(1\)</span> 부터 <span class="arithmatex">\(m\)</span> 까지의 정수를 출력해야 한다. 이 정수는 첫번째로 충돌되는 충돌되는 약의 쌍의 인덱스를 뜻한다.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">4</span>
+<span class="m">5</span>
+<span class="m">4</span> <span class="m">3</span>
+<span class="m">1</span> <span class="m">2</span>
+<span class="m">4</span> <span class="m">1</span>
+<span class="m">2</span> <span class="m">3</span>
+<span class="m">1</span> <span class="m">3</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다. </p>
+<div class="highlight"><pre><span></span><code><span class="m">5</span>
+</code></pre></div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">4</span>
+<span class="m">4</span>
+<span class="m">1</span> <span class="m">2</span>
+<span class="m">1</span> <span class="m">3</span>
+<span class="m">1</span> <span class="m">4</span>
+<span class="m">2</span> <span class="m">3</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">4</span>
+</code></pre></div>
+</div>
+<p>시간 제한 : 0.5</p>
+<h3 id="_65">추상화<a class="headerlink" href="#_65" title="Permanent link">¶</a></h3>
+<h4 id="_66">문제<a class="headerlink" href="#_66" title="Permanent link">¶</a></h4>
+<p>서로소 집합 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(B\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 또는 <span class="arithmatex">\(B\)</span> 에 속하는 두 원소가 주어진다. 두 원소를 <span class="arithmatex">\(A\)</span> 또는 <span class="arithmatex">\(B\)</span> 에 포함시키는데, 어떤 집합에 포함시켜도 서로소 집합이 되지 않게 하는 두 원소를 찾아라.</p>
+<h4 id="_67">정답<a class="headerlink" href="#_67" title="Permanent link">¶</a></h4>
+<h3 id="_68">순수 수학으로 사상시키기<a class="headerlink" href="#_68" title="Permanent link">¶</a></h3>
+<h4 id="_69">문제<a class="headerlink" href="#_69" title="Permanent link">¶</a></h4>
+<p>수열 <span class="arithmatex">\(a_n, b_n\)</span> 의 <span class="arithmatex">\(i\)</span> 번째 원소 <span class="arithmatex">\(a_i, b_i\)</span> 는 서로소 집합 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(B\)</span> 둘 중 하나에 속한다. 즉, </p>
+<div class="arithmatex">\[ (a_i \in A ^{(i)} \land b_i \in B ^{(i)}) \lor (a_i \in B ^{(i)} \land b_i \in A ^{(i)}) \]</div>
+<h3 id="a-i-b-i-i-1-a-_i-1-b-_i-1">이다. <span class="arithmatex">\(A ^{(i)}, B ^{(i)}\)</span> 는 <span class="arithmatex">\(i-1\)</span> 번째 원소 <span class="arithmatex">\(a _{i-1}, b _{i-1}\)</span> 까지의 수열의 원소들이 서로소 집합에 잘 포함된 상태의 서로소 집합을 뜻한다.<a class="headerlink" href="#a-i-b-i-i-1-a-_i-1-b-_i-1" title="Permanent link">¶</a></h3>
+<h2 id="p8">P8<a class="headerlink" href="#p8" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : 한 회사가 <span class="arithmatex">\(m\)</span> 개의 작업을 계약했고, 그것을 내일부터 다음 <span class="arithmatex">\(n\)</span> 일동안 하기로 했다. 모든 작업은 하나의 불도저를 하루동안 써야 끝난다. 작업 <span class="arithmatex">\(t_i\)</span> 의 계약은 <span class="arithmatex">\(s_i\)</span> 일(내일을 기준으로 <span class="arithmatex">\(s_i\)</span> 일을 뜻함)부터 <span class="arithmatex">\(d\)</span> 일 안에 일이 끝나야 할 것을 명시했다. 모든 <span class="arithmatex">\(m\)</span> 개의 작업을 완수하기 위해 회사는 <span class="arithmatex">\(k\)</span> 개의 불도저를 <span class="arithmatex">\(n\)</span> 일동안 렌트했다. <span class="arithmatex">\(k\)</span> 개의 불도저로 최대 <span class="arithmatex">\(k\)</span> 개의 일이 하루동안 동시에 진행될 수 있다. 이때 <span class="arithmatex">\(s_i + d \leq n\)</span> 이다. 주어진 <span class="arithmatex">\(m\)</span> 개의 작업을 <span class="arithmatex">\(d\)</span> 일에 대한 <span class="arithmatex">\(n\)</span> 일 동안 완수하기 위한 최소 불도저 개수를 구하라.</p>
+</div>
+<p>첫 라인에 <span class="arithmatex">\(1 \leq n \leq 10 ^{5}, 1 \leq d &lt; n, 1 \leq m \leq 10 ^{5}\)</span> 인 <span class="arithmatex">\(n, d, m\)</span> 이 주어진다.</p>
+<p>두번째 라인에 <span class="arithmatex">\(t_i\)</span> 의 <span class="arithmatex">\(s_i\)</span> 를 뜻하는 <span class="arithmatex">\(m\)</span> 개의 정수가 주어진다.</p>
+<p><span class="arithmatex">\(m\)</span> 개의 일을 주어진 시간에 완수하기 위한 최소 불도저 개수를 출력해야 한다. 시간 제한은 <span class="arithmatex">\(0.5\)</span> 초.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code>8 2 12
+1 2 4 2 1 3 5 6 2 3 6 4
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">2</span>
+</code></pre></div>
+</div>
+<h3 id="_70">추상화<a class="headerlink" href="#_70" title="Permanent link">¶</a></h3>
+<h4 id="_71">문제<a class="headerlink" href="#_71" title="Permanent link">¶</a></h4>
+<p>행렬 <span class="arithmatex">\(A\)</span> 가 다음과 같이 주어진다.</p>
+<div class="arithmatex">\[ A = \begin{pmatrix} t_1 &amp; t_2 &amp; t_6 &amp; t_3 &amp; t_7 &amp; t_8 &amp; 0 &amp; 0 \\ t_5 &amp; t_4 &amp; t _{10} &amp; t _{12} &amp; 0 &amp; t _{11} &amp; 0 &amp; 0 \\ 0 &amp; t_9 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{pmatrix} \]</div>
+<p>주어진 행렬의 <span class="arithmatex">\(0\)</span> 이 아닌 원소를 우측 열로 최대 <span class="arithmatex">\(d\)</span> 만큼 움직일 수 있다. 열의 이동은 무제한이다. 이때 영벡터인 행을 무시하고, 행렬의 행을 계산한다면 최소가 되는 행렬의 행은 몇일까?</p>
+<p>즉, 행렬 <span class="arithmatex">\(A\)</span> 를 주어진 조건에 맞게 변형하면 </p>
+<div class="arithmatex">\[ A' = \begin{pmatrix} t_1 &amp; t_2 &amp; t_6 &amp; t_3 &amp; t_7 &amp; t_8 &amp; 0 &amp; 0 \\ t_5 &amp; t_4 &amp; t _{10} &amp; t_9 &amp; t _{12} &amp; t _{11} &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \end{pmatrix} \]</div>
+<p>가 된다. 이는 임의의 열이 갖고 있는 <span class="arithmatex">\(0\)</span> 이 아닌 원소의 갯수의 최댓값이 낮아진 것으로 해석할 수 있다. 왜냐하면 행렬 <span class="arithmatex">\(A\)</span> 의 열들이 갖고 있는 <span class="arithmatex">\(0\)</span> 이 아닌 원소의 갯수는 수열 </p>
+<div class="arithmatex">\[ 2\ 3 \ 2 \ 2 \ 1 \ 2 \ 0 \ 0 \]</div>
+<p>로 표현할 수 있는데, 변형된 행렬 <span class="arithmatex">\(A'\)</span> 의 수열은 </p>
+<div class="arithmatex">\[ 2 \ 2 \ 2 \ 2 \ 2 \ 2 \ 0 \ 0 \]</div>
+<p>이 되기 때문이다. 다시 말하면 <span class="arithmatex">\(n\)</span> 개의 원소를 갖는 수열 </p>
+<div class="arithmatex">\[ a_n = (a_1, a_2, \dots, a_i, \overbrace{0, 0, \dots, 0}^{d}) \]</div>
+<p>에서 각 원소의 수를 우측으로 최대 <span class="arithmatex">\(d\)</span> 만큼 옮길 수 있을 때 수열의 최댓값이 최소가 되는 값을 구해야 한다. </p>
+<hr/>
+<p>이렇게 접근할 수도 있다. <span class="arithmatex">\(2 + 3 + 2 + 2 + 1 + 2 = 12\)</span> 이기 때문에 <span class="arithmatex">\(12\)</span> 를 통하여 만들 수 있는 직사각 행렬의 형상은 가장 좋은 것 순으로 </p>
+<div class="arithmatex">\[ (1, 12), (2, 6), (3, 4), (4, 3), (6, 2), (12, 1) \]</div>
+<p>이다. 이때 주어진 열의 최댓값은 <span class="arithmatex">\(8\)</span> 이므로 열이 <span class="arithmatex">\(12\)</span> 인 형상 <span class="arithmatex">\((1, 12)\)</span> 는 불가능하다. 그러므로 <span class="arithmatex">\((2, 6)\)</span> 형상으로 만들 수 있는지 검사해볼 수 있다.</p>
+<p>그러면 문제는 주어진 행렬의 원소를 우측으로 <span class="arithmatex">\(d\)</span> 만큼 이동시킬 수 있을 때 주어진 형상으로 만들 수 있는지 검사하는 문제로 단순화된다. 그런데 이 문제는 매우 쉽다. 왜냐하면 행렬의 가장 우측 열에서부터 형상을 맞추어가면 되기 때문이다. </p>
+<p><span class="arithmatex">\((2, 6)\)</span> 형상의 직사각형이 아닐 수도 있다. 행이 <span class="arithmatex">\(2\)</span> 이면서 중간에 빈 열이 있다면 <span class="arithmatex">\((2, 7)\)</span> 또는 <span class="arithmatex">\((2, 8)\)</span> 이 되어야 할 수도 있다. 이때 불변하는 정보는 행이 <span class="arithmatex">\(2\)</span> 여야만 한다는 것이다. 그렇다면 행이 <span class="arithmatex">\(2\)</span> 가 되도록 그냥 우측에 있는 원소들을 가장 우측으로 밀 수 있는 만큼 밀어버릴 수 있다. 그렇게 해야 좌측 원소들이 우측으로 이동할 수 있는 최대한의 공간이 마련되기 때문이다. </p>
+<p>만약 현재 열에 있는 원소들을 우측으로 <span class="arithmatex">\(d\)</span> 만큼 옮김으로써 행을 <span class="arithmatex">\(2\)</span> 이하로 만들 수 없다면, 다음 형상으로 넘어가면 된다. 만약 끝까지 행을 <span class="arithmatex">\(2\)</span> 로 만들 수 있다면, 그 행을 출력하고 끝내면 된다. </p>
+<p>우측 <span class="arithmatex">\(d\)</span> 번째 열의 빈 공간의 개수가 현재 열에 있는 원소의 개수 보다 크다면 우측으로 이동시킬 수 있다는 것이다. 현재 열에 있는 원소를 최대한 우측으로 보낸 상황에서의 현재 열의 빈공간 정보를 넘겨주면 왼쪽 열을 우측으로 옮길 때의 상황도 잘 계산할 수 있다.</p>
+<p>결국 중요한 것은 우측 <span class="arithmatex">\(d\)</span> 열에 있는 빈 공간의 개수이다. 현재 열에서 우측으로 <span class="arithmatex">\(d\)</span> 만큼 옮길 수 있기 때문에 우측 <span class="arithmatex">\(d\)</span> 열의 빈 공간의 개수만 알면 된다. 우측 열들은 이미 주어진 형상되로 맞춰져 있기 때문에 빈 공간의 개수만 계산하면 된다. </p>
+<p>또한 사실은 최댓값이 <span class="arithmatex">\(1\)</span> 때부터 검증할 필요 없이 <span class="arithmatex">\(\left\lceil \dfrac{\max a_n}{d + 1} \right\rceil\)</span> 부터 검사하면 된다. </p>
+<p>왜냐하면 수열 <span class="arithmatex">\(a_n\)</span> 이 갖는 최댓값을 우측으로 <span class="arithmatex">\(d\)</span> 만큼 최대한 이동시키면</p>
+<p>크기가 <span class="arithmatex">\(\max a_n\)</span> 인 열벡터를 <span class="arithmatex">\(d + 1\)</span> 열을 갖는 행렬로 변환시키게 되는 것인데,</p>
+<p>이 행렬의 행을 <span class="arithmatex">\(x\)</span> 라고 한다면 <span class="arithmatex">\(x\)</span> 는 다음과 같기 때문이다. </p>
+<p>그러면 주어진 수열의 최댓값은 절대로 <span class="arithmatex">\(x\)</span> 보다 낮을 수 없다.</p>
+<div class="arithmatex">\[ x = \left\lceil \dfrac{\max a_n}{d + 1} \right\rceil  \]</div>
+<hr/>
+<p>그러면 수열 <span class="arithmatex">\(a_n\)</span> 의 <span class="arithmatex">\(i\)</span> 번째 원소 <span class="arithmatex">\(a_i\)</span> 를 <span class="arithmatex">\(i\)</span> 번째 날에 주어진 작업의 갯수라고 정의하자. 단, 맨 우측에서부터 <span class="arithmatex">\(a_n, a _{n-1}, \dots, a _{n-d+1}\)</span> 의 원소들만 <span class="arithmatex">\(0\)</span> 이다. </p>
+<ol>
+<li>
+<p>먼저 <span class="arithmatex">\(\displaystyle \sum_{i=1}^{n}a_i = \alpha\)</span> 을 통하여 만들 수 있는 직사각형 행렬의 후보들</p>
+<p><span class="arithmatex">\(\alpha &lt; 1 \times k\)</span> 인 <span class="arithmatex">\((1, k)\)</span>, </p>
+<p><span class="arithmatex">\(\alpha &lt; 2 \times k\)</span> 인 <span class="arithmatex">\((2, k)\)</span>, </p>
+<p><span class="arithmatex">\(\alpha &lt; 3 \times k\)</span> 인 <span class="arithmatex">\((3, k)\)</span>, </p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p><span class="arithmatex">\(\alpha &lt; k \times 1\)</span> 인 <span class="arithmatex">\((k, 1)\)</span> 을 따라서 이 형상의 직사각형을 만들 수 있는지 검사해본다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(k &gt; n\)</span> 일 경우 주어진 행렬을 초과하게 되므로 불가능하므로 넘어간다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(k \leq n\)</span> 일 경우 원소 <span class="arithmatex">\(a _{n-d}\)</span> 부터 우측으로 최대한 <span class="arithmatex">\(d\)</span> 만큼 이동시킴으로써 주어진 형상을 만들 수 있는지 검사한다. 왜냐하면 <span class="arithmatex">\(a _{n-d+1}\)</span> 이상의 원소들은 <span class="arithmatex">\(0\)</span> 이기 때문이다. </p>
+</li>
+</ol>
+</li>
+<li>
+<p>(주어진 형상 <span class="arithmatex">\((u, v)\)</span> 가 가능한지 알기 위하여 원소 <span class="arithmatex">\(a _i\)</span> 를 우측으로 최대한 이동시키는 알고리즘. 모든 행의 크기를 행 <span class="arithmatex">\(u\)</span> 로 만들어야 한다.) </p>
+<p>가장 우측에 있는 자리의 빈공간에 <span class="arithmatex">\(a_i\)</span> 를 최대한 채워나갔는데, <span class="arithmatex">\(a_i &gt; u\)</span> 이면 불가능하므로 넘어가고, <span class="arithmatex">\(a_i \leq u\)</span> 이면 가능하다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(a _{i+d}\)</span> 의 빈공간을 구하고, 그 빈공간에 <span class="arithmatex">\(a_i\)</span> 를 최대한 채운다. 즉, 빈공간 <span class="arithmatex">\(u - a _{i+d}\)</span> 만큼 <span class="arithmatex">\(a_i\)</span> 에서 가져와서 채운다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(a _{i+d-1}\)</span> 의 빈공간을 구하고, 그 빈공간에 <span class="arithmatex">\(a_i\)</span> 를 최대한 채운다. 즉, 빈공간 <span class="arithmatex">\(u - a _{i+d-1}\)</span> 만큼 <span class="arithmatex">\(a_i\)</span> 에서 가져와서 채운다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(a _{i+1}\)</span> 의 빈공간을 구하고, 그 빈공간에 <span class="arithmatex">\(a_i\)</span> 를 최대한 채운다. 즉, 빈공간 <span class="arithmatex">\(u - a _{i-1}\)</span> 만큼 <span class="arithmatex">\(a_i\)</span> 에서 가져와서 채운다. </p>
+</li>
+</ol>
+<p>이렇게까지 했는데 <span class="arithmatex">\(a_i &gt; u\)</span> 이면 주어진 형상 <span class="arithmatex">\((u, v)\)</span> 를 만드는 것이 불가능하므로 다음 형상을 검사해야 한다. 그런데 <span class="arithmatex">\(a_i \leq u\)</span> 이면 <span class="arithmatex">\(a _{i-1}\)</span> 을 검사해야 한다.</p>
+<p>이 과정이 <span class="arithmatex">\(a_1\)</span> 까지 실패하지 않고 잘 끝났다면 그때의 행 <span class="arithmatex">\(u\)</span> 를 출력하고 끝낸다.</p>
+</li>
+</ol>
+<h4 id="_72">정답<a class="headerlink" href="#_72" title="Permanent link">¶</a></h4>
+<h3 id="_73">순수 수학으로 사상시키기<a class="headerlink" href="#_73" title="Permanent link">¶</a></h3>
+<h4 id="_74">문제<a class="headerlink" href="#_74" title="Permanent link">¶</a></h4>
+<h4 id="_75">정답<a class="headerlink" href="#_75" title="Permanent link">¶</a></h4>
+<h3 id="_76">문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상<a class="headerlink" href="#_76" title="Permanent link">¶</a></h3>
+<hr/>
+<h2 id="c8">C8<a class="headerlink" href="#c8" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p>문제 : 이삭 부족과 아비멜렉 부족이 경계를 기준으로 이삭 는 아래쪽에, 아비멜렉 는 위쪽에 살고 있다. 아비멜렉 부족은 <span class="arithmatex">\(n \leq 10 ^{4}\)</span> 인 <span class="arithmatex">\(n\)</span> 개의 집을 형성하고 있다. 경계는 <span class="arithmatex">\(y = 0\)</span> 으로 표현할 수 있고, <span class="arithmatex">\(i\)</span> 번째 아비멜렉 부족의 집을 <span class="arithmatex">\(-10 ^{4} \leq x_i \leq 10 ^{4}\)</span>, <span class="arithmatex">\(0 \leq y_i \leq 10 ^{4}\)</span> 인 <span class="arithmatex">\((x_i, y_i)\)</span> 로 표현할 수 있다.</p>
+<p>아비멜렉 부족의 선물로써 이삭 부족장은 하나 이상의 우물을 경계에 파기로 했고, 이 우물들에 거리 <span class="arithmatex">\(d\)</span> 에 대하여 아비멜렉 부족의 모든 집이 하나 이상의 우물에 접근할 수 있도록 만들려 한다.</p>
+<p>최소한의 우물의 갯수를 구해라.</p>
+</div>
+<p>첫 라인에 <span class="arithmatex">\(n, d\)</span> 가 주어진다. <span class="arithmatex">\(n\)</span> 은 아비멜렉 부족의 집이고, <span class="arithmatex">\(d\)</span> 는 아비멜렉 부족와 우물과의 최대 거리를 뜻한다.</p>
+<p>두번째 라인부터 <span class="arithmatex">\(n+1\)</span> 라인까지 아비멜렉 부족의 집의 좌표를 뜻하는 <span class="arithmatex">\(x_i, y_i\)</span> 가 주어진다.</p>
+<p>최소 갯수의 우물을 출력해라. 시간제한 0.5 초</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="highlight"><pre><span></span><code><span class="m">3</span> <span class="m">2</span>
+<span class="m">1</span> <span class="m">2</span>
+-3 <span class="m">1</span>
+<span class="m">2</span> <span class="m">1</span>
+</code></pre></div>
+<p>위 입력에 대한 출력은 다음과 같다.</p>
+<div class="highlight"><pre><span></span><code><span class="m">2</span>
+</code></pre></div>
+</div>
+<h3 id="_77">추상화<a class="headerlink" href="#_77" title="Permanent link">¶</a></h3>
+<h4 id="_78">문제<a class="headerlink" href="#_78" title="Permanent link">¶</a></h4>
+<p>아비멜렉 부족의 집의 좌표를 중점으로 하고 반지름을 <span class="arithmatex">\(d\)</span> 로 하는 원의 방정식 </p>
+<div class="arithmatex">\[ (x - x_i) ^{2} + (y - y_i) ^{2} = d ^{2} \]</div>
+<p>를 그리면 이 원의 방정식과 직선 <span class="arithmatex">\(y = 0\)</span> 의 접점으로 생성되는 구간이 집 <span class="arithmatex">\((x_i, y_i)\)</span> 에서 접근 가능한 우물의 영역이다. </p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/98667198-711eb500-2391-11eb-84b7-f8b0d3a89f93.png"/></p>
+<p>실제로 주어진 테스트 케이스에 대한 원의 방정식들을 좌표평면에 그리면 위와 같은 모습이 나오고, 가능한 최소 우물 갯수는 <span class="arithmatex">\(2\)</span> 임을 알 수 있다. </p>
+<p>각 원의 방정식이 <span class="arithmatex">\(y=0\)</span> 와 접하는 구간은 원의 방정식에 대한 <span class="arithmatex">\(y=0\)</span> 의 <span class="arithmatex">\(x\)</span> 의 해 </p>
+<div class="arithmatex">\[ x = x_i \pm \sqrt[]{d ^{2} - y_i ^{2}} \]</div>
+<p>에 대하여 폐구간</p>
+<div class="arithmatex">\[ \mathcal{X}_i = \bigg [x_i - \sqrt[]{d ^{2} - y_i ^{2}} , x_i + \sqrt[]{d ^{2} - y_i ^{2}}\bigg ] \]</div>
+<p>이다. 함수 <span class="arithmatex">\(f(\mathcal{X_i})\)</span> 를 집합 <span class="arithmatex">\(\mathcal{X_i}\)</span> 를 받아서 그 집합의 원소 중 하나를 반환하는 함수라고 정의하자. </p>
+<p>그리고 집합에 대하여 </p>
+<div class="arithmatex">\[ A = \{ f(\mathcal{X_1}), f(\mathcal{X_2}), \dots, f(\mathcal{X_n}) \} \]</div>
+<p>다음과 같은 집합을 정의하자. </p>
+<div class="arithmatex">\[ B = \{\forall x, y \in A | x \neq y\} \]</div>
+<p>그러면 <span class="arithmatex">\(|B|\)</span> 을 최소로 만드는 함수 <span class="arithmatex">\(f\)</span> 를 찾아야 한다.</p>
+<hr/>
+<p>한 가지 확실한 것은 맨 첫번째 폐구간 <span class="arithmatex">\(1\)</span> 번째 폐구간 <span class="arithmatex">\(\mathcal{X}_1 = \bigg [x_1 - \sqrt[]{d ^{2} - y_1 ^{2}} , x_1 + \sqrt[]{d ^{2} - y_1 ^{2}}\bigg ]\)</span> 에서부터 우물을 정해야 한다고 한다면, <span class="arithmatex">\(\max \mathcal{X}_1\)</span> 으로 우물을 정해야 한다. 왜냐하면 그래야 다음 폐구간에서 그 우물을 공유하게 될 확률이 최대가 때문이다. </p>
+<p>단, 폐구간 <span class="arithmatex">\(\mathcal{X_1}\)</span> 에 완전히 포함된 잠복 구간, 즉 <span class="arithmatex">\(\min \mathcal{X_1} &lt; \min \mathcal{X_2} \land \max \mathcal{X_2} &lt; \max \mathcal{X_1}\)</span> 인 구간이 존재할 때 <span class="arithmatex">\(\max \mathcal{X_1}\)</span> 을 우물로 택한다면, <span class="arithmatex">\(\mathcal{X_2}\)</span> 에 우물이 포함되지 않는다. 그러므로 이 경우 우물로써 <span class="arithmatex">\(\max \mathcal{X_1}\)</span> 을 택하면 안된다. 그렇다면 이러한 잠복 구간이 존재한다면 어떤 점을 우물로 택해야 할까?</p>
+<p>한 가지 확실한 것은 잠복 구간 <span class="arithmatex">\(\mathcal{X}_2 = \bigg [x_2 - \sqrt[]{d ^{2} - y_2 ^{2}} , x_2 + \sqrt[]{d ^{2} - y_2 ^{2}}\bigg ]\)</span> 에서도 반드시 우물이 하나 이상 있어야 하고, 가장 우측에 있는 우물을 택해야 다른 구간들이 우물을 공유하게 될 가능성이 커진다. </p>
+<p>그런데 폐구간 <span class="arithmatex">\(\mathcal{X}_2 = \bigg [x_2 - \sqrt[]{d ^{2} - y_2 ^{2}} , x_2 + \sqrt[]{d ^{2} - y_2 ^{2}}\bigg ]\)</span> 에서도 잠복 구간이 존재할 수도 있다. 그렇다면, 그 잠복 구간에도 반드시 하나 이상의 우물이 존재해야 하고, 다른 구간이 그 우물을 공유할 가능성을 최대로 만들어야 하므로 가장 우측에 있는 우물을 택해야 한다. </p>
+<p>그렇다면 임의의 <span class="arithmatex">\(i\)</span> 번째 폐구간 </p>
+<div class="arithmatex">\[ \mathcal{X}_i = \bigg [x_i - \sqrt[]{d ^{2} - y_i ^{2}} , x_i + \sqrt[]{d ^{2} - y_i ^{2}}\bigg ] \]</div>
+<p>에서 다음과 같이 우물을 택할 수 있다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\mathcal{X_i}\)</span> 에서 가장 깊이 잠복해 있는 구간을 구한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathcal{X_i}\)</span> 의 잠복 구간이 존재한다면, 그 구간에서 <span class="arithmatex">\(\max\)</span> 값을 우물로 택한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathcal{X_i}\)</span> 의 잠복 구간이 존재하지 않는다면, <span class="arithmatex">\(\max \mathcal{X_i}\)</span> 를 우물로 택한다. </p>
+</li>
+<li>
+<p>우물이 정해졌다면, 그 우물이 포함된 구간을 모두 건너뛰고, 우물이 포함되지 않는 구간에 대하여 1,2,3 의 과정을 진행한다.</p>
+</li>
+</ol>
+<h4 id="_79">정답<a class="headerlink" href="#_79" title="Permanent link">¶</a></h4>
+<h3 id="_80">순수 수학으로 사상시키기<a class="headerlink" href="#_80" title="Permanent link">¶</a></h3>
+<h4 id="_81">문제<a class="headerlink" href="#_81" title="Permanent link">¶</a></h4>
+<h4 id="_82">정답<a class="headerlink" href="#_82" title="Permanent link">¶</a></h4>
+<h3 id="_83">문제에 해당하는 수학적 대상물을 정답에 해당하는 수학적 대상물로 사상<a class="headerlink" href="#_83" title="Permanent link">¶</a></h3>
+<hr/>
+<h2 id="_84">잡다한 생각<a class="headerlink" href="#_84" title="Permanent link">¶</a></h2>
+<p>괴델은 임의의 자연 대상에 수를 부여함으로써 상위 수학명제로, 그리고 수학명제로, 그리고 괴델수로 격하시키는 방법을 보였다. 튜링은 여기에서 착안하여 계산 가능한 자연대상을 튜링기계(괴델수)로 격하시키는 방법을 보였다. 과학기술의 발전은 점점 가속화되고 있는데, 그것은 저차원적인 자연 대상을 기계로 자동화시키면서 점점 더 고차원적인 자연 대상을 기계로 격하시켜 자동화시켜나가기 때문이다. 그런데 이 과학기술 발전에는 언젠가 특이점이 올 것이라고 폰 노이만, 빌 조이, 레이 커즈와일 등이 경고했다. 이 특이점이란 초지능의 탄생을 뜻한다. 초지능이란 인간의 지능을 초월하는 인공지능인데, 초지능의 탄생이 특이점이라 불리우는 이유는 그 시점이 오면 블랙홀이 들어갔을 때 더 이상 인간의 능력으로 도무지 돌이킬 수 없듯이, 다시는 그 이후의 세상을 과거의 세상으로 돌이킬 수 없기 때문이다.</p>
+<p>나는 이 초지능의 탄생이 과학기술 발전을 자동화시키는 시점이라고 생각한다. 또 과학기술 발전의 자동화는 인간이 역사적으로 기술공학을 발전시켜 오면서 자연대상을 기계로 자동화해온 과정 자체를 기계로 격하시키는 것이라고 생각한다. 나는 이것이 인간이 지금까지 해오던 자연 대상을 상위 수학명제로, 수학명제로, 괴델수(튜링기계) 로 격하시키는 과정 자체를 상위 수학명제로, 수학명제로, 괴델수(튜링기계) 로 격하시키는 것으로 성취될 수 있다고 생각한다.</p>
+<p>그러므로 자연대상을 상위 수학명제로, 수학명제로, 괴델수(튜링기계)로 격하시키는 패턴을 포착하기 위하여 이것에 관한 데이터가 필요하다.</p>
+<p>불완전 체계란 주어진 공리로부터 도달할 수 없는 참인 명제가 존재하는 체계이다. 수학은 불완전 체계다. 수학에서의 공리 체계를 기계로 대응시킨 것이 튜링 기계이다. 하워드-커리 동치는 프로그래밍이 수학에 완전히 대응된다는 것을 보여주었다. 그러면 프로그래밍은 그 안에서 완전 체계를 이룰까? 왜냐면 일련의 공리(데이터)를 연역 법칙(연산 법칙)을 통하여 결론(다른 데이터)를 도출하기 때문이다. 일반적인 문제같은 경우 프로그래밍으로 해결할 수 없다는 결론이 나올 수도 있다. 그러나 알고리즘 사이트에서 제공하는 프로그래밍 문제는 반드시 답을 갖는다. 그러면 이 문제들은 완전 체계에 속한다고 볼 수 있다. 반드시 그 결론에 도달할 수 있다고 그 사이트들의 신뢰성이 보장하기 때문이다. 그러면 그 문제들은 완전 체계에 존재하므로 기계적인 방법으로 그 문제들을 풀 수 있을 수도 있지 않을까? </p>
+<p>기계적인 방법으로 모든 문제를 풀지 못하는 이유는 불완전 체계에 속하는 문제가 존재한다는 것이 증명되었기 때문이다. 그런데 완전 체계에 속한 문제 들이라면 기계적으로 풀 수 있을까? </p>
+<hr/>
+<h2 id="p9">P9<a class="headerlink" href="#p9" title="Permanent link">¶</a></h2>
+<hr/>
+<h2 id="p10">P10<a class="headerlink" href="#p10" title="Permanent link">¶</a></h2>
+<p>암이 새로 발견됐다. 이것의 특성을 연구하기 위하여 생리학자가 <span class="arithmatex">\(2\)</span>차원 페트리 접시 위의 세포조직에 <span class="arithmatex">\(N\)</span> 개의 종양 세포를 배양했다. 생리학자가 페트리 접시를 열었을 때 종양 세포가 다양한 크기로 자라있었고, 종양세포들을 연결하는 혈관들이 생성되어 있었다. 생리학자는 종양 세포의 혈관이 다음의 특성을 갖는다는 것을 발견했다. </p>
+<ul>
+<li>
+<p>혈관은 항상 세포조직 위에 형성되었다. </p>
+</li>
+<li>
+<p>혈관은 오직 두 종양 세포를 연결했다. </p>
+</li>
+<li>
+<p>혈관은 다른 혈관을 가로지르지 않았다. </p>
+</li>
+</ul>
+<p>생리학자는 종양 세포의 weight 을 측정했고, 모든 종양세포의 쌍들이 혈관을 통해 서로를 연결하고 있다는 것을 발견했다. 만약 모든 종양 세포의 쌍이 혈관으로 서로 연결되어 있다면 그 종양 세포들을 종양 군집을 이루었다. 종양 군집의 weight 는 그것을 구성하는 종양 세포의 weight 의 합이다.</p>
+<p>주어진 종양 세포의 weight 과 혈관 연결 상태에 대하여 최대 종양 군집 weight 를 찾아라. </p>
+<p>첫 라인에 <span class="arithmatex">\(2 \leq N \leq 450, 1 \leq B \leq 900\)</span> 을 만족하는 정수 <span class="arithmatex">\(N, B\)</span> 가 주어진다. <span class="arithmatex">\(N\)</span> 은 종양 세포의 갯수이고, <span class="arithmatex">\(B\)</span> 는 혈관의 갯수이다. </p>
+<p>두번째 라인부터 <span class="arithmatex">\(N+1\)</span> 번째 라인에 종양 세포의 weight 이 주어지고, weight 은 <span class="arithmatex">\(100 \leq \text{weight} \leq 10000\)</span> 을 만족한다. <span class="arithmatex">\(i+1\)</span> 번째 라인은 <span class="arithmatex">\(i\)</span> 번째 종양 세포의 weight 을 뜻한다.</p>
+<p><span class="arithmatex">\(N+2\)</span> 번째 라인부터 <span class="arithmatex">\(N+B+1\)</span> 번째 라인에 혈관으로 연결되어 있는 종양 세포 의 ID 쌍이 주어진다. </p>
+<p>종양 군집의 최대 weight 를 출력해라. 시간 제한은 1 초.</p>
+<h2 id="p9_1">P9<a class="headerlink" href="#p9_1" title="Permanent link">¶</a></h2>
+<p>한 가족이 집으로 돌아가고 있다. 길이 너무 좁은 탓에 모든 사람이 각자의 템포로 동떨어져서 걷고 있었다. 그런데 해가 지고 너무 어두워져서 사람들이 두려움에 사로잡혔다. 그때부터 사람들은 일정한 속도로 앞으로 나아갔고, 다른 사람을 만났을 때 그룹을 이뤄서 그들 중 느린 속도로 걸어갔다. 해가 졌을 때의 가족들의 위치와 속도가 주어지면 일정 시간이 흘렀을 때 그들의 위치와 그룹을 예측할 수 있다. 일정 시간이 흘렀을 때 그룹의 갯수를 구하자.</p>
+<p>첫 라인에 <span class="arithmatex">\(1 \leq n \leq 10 ^{5}, 1 \leq t \leq 10 ^{9}\)</span> 인 <span class="arithmatex">\(n\)</span> 과 <span class="arithmatex">\(t\)</span> 가 주어진다. <span class="arithmatex">\(n\)</span> 은 사람 수이고, <span class="arithmatex">\(t\)</span> 는 흐른 시간이다. 두번째 라인부터 <span class="arithmatex">\(n+1\)</span> 번째 라인에 <span class="arithmatex">\(p_i, v_i \leq 10 ^{9}\)</span> 인 <span class="arithmatex">\(p_i, v_i\)</span> 가 주어진다. <span class="arithmatex">\(p_i\)</span> 는 위치이고, <span class="arithmatex">\(v_i\)</span> 는 해가 졌을 때의 속도이다. </p>
+<p><span class="arithmatex">\(t\)</span> 시간이 흘렀을 때의 그룹의 갯수를 출력해라. 0.5 초.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>in:</p>
+<div class="highlight"><pre><span></span><code><span class="m">5</span> <span class="m">3</span>
+<span class="m">0</span> <span class="m">1</span>
+<span class="m">1</span> <span class="m">2</span>
+<span class="m">2</span> <span class="m">3</span>
+<span class="m">3</span> <span class="m">2</span>
+<span class="m">6</span> <span class="m">1</span>
+</code></pre></div>
+<p>out:</p>
+<div class="highlight"><pre><span></span><code><span class="m">3</span>
+</code></pre></div>
+</div>
+<h3 id="_85">두 위치에 관하여<a class="headerlink" href="#_85" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[ p_i(v_i)\quad  p _{i+1}(v _{i+1}) \]</div>
+<p>에서 </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(v_i \leq v _{i+1}\)</span> 일 경우 거리가 같거나 멀어지므로 만날 수 없다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(v_i &gt; v _{i+1}\)</span> 일 경우 거리가 줄어들기 때문에 언젠가 만난다. <span class="arithmatex">\(t\)</span> 시간 후에 <span class="arithmatex">\(p_i\)</span> 의 위치는 <span class="arithmatex">\(p_i + v_it\)</span> 이고, <span class="arithmatex">\(p _{i+1}\)</span> 의 위치는 <span class="arithmatex">\(p _{i+1} + v _{i+1}t\)</span> 이므로 두 위치가 같다면 </p>
+<div class="arithmatex">\[p_i + v_it=p _{i+1} + v _{i+1}t \iff t = \dfrac{p _{i+1} - p_i}{v_i - v _{i+1}}\]</div>
+<p>이다. <span class="arithmatex">\(t\)</span> 가 만나는 시간이고 각 위치에 <span class="arithmatex">\(t\)</span> 를 대입하면 그때의 위치를 구할 수 있다. </p>
+</li>
+</ul>
+<p>그러므로 위치 <span class="arithmatex">\(p(v)\)</span> 와 위치 <span class="arithmatex">\(p'(v')\)</span> 가 만나는 시간을 구하는 함수 </p>
+<div class="arithmatex">\[ t = f(p, v, p', v') = \dfrac{p' - p}{v - v'} \]</div>
+<p>를 정의할 수 있다. </p>
+<h3 id="_86">세 위치에 관하여<a class="headerlink" href="#_86" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[ p _{i-1}(v _{i-1}) \quad p_i(v_i)\quad p _{i+1}(v _{i+1}) \]</div>
+<p>에서 </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(v _{i-1} \leq v_i \lor v_i \leq v _{i+1}\)</span> 일 경우 위 상황으로 귀결된다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(v _{i-1} &gt; v_i &gt; v _{i+1}\)</span> 일 경우 <span class="arithmatex">\(p _{i-1}\)</span> 와 <span class="arithmatex">\(p_i\)</span> 가 먼저 만나거나 <span class="arithmatex">\(p_i\)</span> 와 <span class="arithmatex">\(p _{i+1}\)</span> 가 먼저 만난다. <span class="arithmatex">\(p _{i-1}\)</span> 와 <span class="arithmatex">\(p_i\)</span> 가 만나는 시간은 </p>
+<div class="arithmatex">\[t = f(p _{i-1}, v _{i-1}, p_i, v_i) = \dfrac{p_i - p _{i-1}}{v _{i-1} - v_i}\]</div>
+<p>이고 <span class="arithmatex">\(p_i\)</span> 와 <span class="arithmatex">\(p _{i+1}\)</span> 가 만나는 시간은 </p>
+<div class="arithmatex">\[ t' = f(p _{i}, v _{i}, p _{i+1}, v _{i+1}) = \dfrac{p _{i+1} - p _{i}}{v _{i} - v _{i+1}}\]</div>
+<p>이다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(t = t'\)</span> 일 경우 <span class="arithmatex">\(p _{i-1}, p_i, p _{i+1}\)</span> 가 같은 시각에 같은 위치에서 만난다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(t &lt; t'\)</span> 일 경우 시각 <span class="arithmatex">\(t\)</span> 에 <span class="arithmatex">\(p _{i-1}\)</span> 와 <span class="arithmatex">\(p_i\)</span> 가 먼저 만나지만, 속도 <span class="arithmatex">\(v_i\)</span> 를 유지하게 되므로 시각 <span class="arithmatex">\(t'\)</span> 에 <span class="arithmatex">\(p _{i-1}, p_i, p _{i+1}\)</span> 가 만난다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(t &gt; t'\)</span> 일 경우 시각 <span class="arithmatex">\(t'\)</span> 에 <span class="arithmatex">\(p _{i}\)</span> 와 <span class="arithmatex">\(p _{i+1}\)</span> 가 먼저 만나고, <span class="arithmatex">\(p_i\)</span> 의 속도 <span class="arithmatex">\(v_i\)</span> 가 <span class="arithmatex">\(v _{i+1}\)</span> 로 느려진다. 그러므로 새로운 시각 </p>
+<div class="arithmatex">\[ \dfrac{p'_i - p' _{i-1}}{v _{i-1} - v _{i+1}}\]</div>
+<p>에 <span class="arithmatex">\(p _{i-1}, p_i, p _{i+1}\)</span> 가 만난다. <span class="arithmatex">\(p'_i, p' _{i-1}\)</span> 은 <span class="arithmatex">\(p_i, p _{i+1}\)</span> 가 만났을 때의 <span class="arithmatex">\(p_i, p _{i-1}\)</span> 의 변동된 위치이다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_87">네 위치에 관하여<a class="headerlink" href="#_87" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[ p _{i-1}(v _{i-1}) \quad p_i(v_i)\quad p _{i+1}(v _{i+1}) \quad p _{i+2}(v _{i+2}) \]</div>
+<p>에서 <span class="arithmatex">\(v _{i-1} &gt; v_i &gt; v _{i+1} &gt; v _{i+2}\)</span> 라고 했을 때, <span class="arithmatex">\(p _{i+1}\)</span> 와 <span class="arithmatex">\(p _{i+2}\)</span> 가 먼저 만났다고 하자. 이 시각에 네 위치는 세 위치 </p>
+<div class="arithmatex">\[ p' _{i-1}(v _{i-1}) \quad p'_i(v_i)\quad p' _{i+1}(v _{i+2}) \]</div>
+<p>가 된다. 이때 만나는 시간 변동이 있는 위치는 <span class="arithmatex">\(p'_i \sim p' _{i+1}\)</span> 이다. <span class="arithmatex">\(p' _{i-1} \sim p'_i\)</span> 가 만나는 시간은 두 위치의 속도가 변하지 않았기 때문에 불변한다. 그러나 <span class="arithmatex">\(p' _{i+1}\)</span> 의 속도가 <span class="arithmatex">\(v _{i+1}\)</span> 에서 <span class="arithmatex">\(v _{i+2}\)</span> 로 느려졌기 때문에 <span class="arithmatex">\(p'_i \sim p' _{i+1}\)</span> 가 만나는 시간은 다시 계산되어야 한다. </p>
+<h3 id="_88">시간에 대한 위치 변동 계산<a class="headerlink" href="#_88" title="Permanent link">¶</a></h3>
+<p>그러므로 우리는 모든 위치 </p>
+<div class="arithmatex">\[ p_1(v_1) \quad p_2(v_2) \quad \dots \quad p_n(v_n) \]</div>
+<p>에 대하여 <span class="arithmatex">\(p_i\)</span> 와 <span class="arithmatex">\(p _{i+1}\)</span> 가 만나는 시간 <span class="arithmatex">\(t_i = f(p_i, v_i, p _{i+1}, v _{i+1}) = \dfrac{p _{i+1} - p_i}{v_i - v _{i+1}}\)</span> 을 구할 수 있다. 이 시간들 </p>
+<div class="arithmatex">\[ t_1 \quad t_2 \quad \dots \quad t _{n-1} \]</div>
+<p>이 계산되면 이것으로 시간 집합 <span class="arithmatex">\(\mathcal{T} = \{ t_1 , t_2 , \dots , t _{n-1} \}\)</span> 을 정의할 수 있고, 이 시간 집합 <span class="arithmatex">\(\mathcal{T}\)</span> 에 대하여 <span class="arithmatex">\(\min \mathcal{T}\)</span> 이 최초로 두 위치가 만나는 시각이다. 그러면 이 시각 <span class="arithmatex">\(\min \mathcal{T}\)</span> 을 다른 위치들이 만나는 시각에서 빼되 이 시각에서 만난 위치에서 바로 좌측에 있는 위치의 시간만은 다시 계산되어야 한다. 왜냐하면 이 시각에서 만난 두 위치의 속도가 느려졌으므로 만나는 시간 계산 함수 </p>
+<div class="arithmatex">\[ t = f(p, v, p', v') = \dfrac{p' - p}{v - v'} \]</div>
+<p>의 <span class="arithmatex">\(v'\)</span> 가 변했기 때문이다. </p>
+<h3 id="_89">주어진 시간에 따른 위치 변동 계산<a class="headerlink" href="#_89" title="Permanent link">¶</a></h3>
+<p>그러므로 시간 <span class="arithmatex">\(t\)</span> 가 주어졌다면 시간 집합 <span class="arithmatex">\(\mathcal{T}\)</span> 에 대한 <span class="arithmatex">\(\min \mathcal{T}\)</span> 이 시간 <span class="arithmatex">\(t\)</span> 보다 작은지 같은지 큰지 검사한다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(t &lt; \min \mathcal{T}\)</span> 일 경우 가장 먼저 만나는 두 위치가 만나기도 전의 시각을 뜻하므로 <span class="arithmatex">\(n\)</span> 을 출력하고 끝낸다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(t = \min \mathcal{T}\)</span> 일 경우 가장 먼저 만나는 위치들이 정확히 만난 시각을 뜻하므로 만나는 위치들의 갯수 <span class="arithmatex">\(m\)</span> 에 대하여 <span class="arithmatex">\(n - m/2\)</span> 를 출력하고 끝낸다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(t &gt; \min \mathcal{T}\)</span> 일 경우 가장 먼저 만나는 위치들을 만나게 한 다음의 <span class="arithmatex">\(\min \mathcal{T}\)</span> 에 대하여 동일한 과정을 반복한다. </p>
+<p>즉, <span class="arithmatex">\(\mathcal{T}\)</span> 에서 <span class="arithmatex">\(\min \mathcal{T}\)</span> 를 제거하고, 속도가 느려졌으므로 바로 좌측에 있는 시간을 다시 계산하고, <span class="arithmatex">\(\min \mathcal{T}\)</span> 만큼 시간이 흘렀으므로 <span class="arithmatex">\(\mathcal{T}\)</span> 의 모든 원소의 시간에 <span class="arithmatex">\(\mid \mathcal{T}\)</span> 를 빼준다. 그리고 동일한 과정을 반복한다. </p>
+</li>
+</ul>
+<h3 id="_90">주어진 시간에 따른 그룹 갯수만 계산<a class="headerlink" href="#_90" title="Permanent link">¶</a></h3>
+<p>위와 같은 방식이 정석이긴 하지만, 우리에게 필요한 것은 그룹 갯수 뿐이다. 그렇다면 알고리즘을 훨씬 단순하게 짤 수 있다. 왜냐하면 "세 위치에 관하여" 에서  <span class="arithmatex">\(t &lt; t'\)</span> 일 경우 좌측에 있는 사람이 먼저 만날 경우 속도가 유지되기 때문이다. </p>
+<p>위치 <span class="arithmatex">\(p_i\)</span> 를 가진 사람이 <span class="arithmatex">\(t\)</span> 시간 후에 <span class="arithmatex">\(i &lt; j\)</span> 에 대한 위치 <span class="arithmatex">\(p_j\)</span> 를 가진 사람을 앞질렀다면 위치 <span class="arithmatex">\(p_i\)</span> 가 위치 <span class="arithmatex">\(p_j\)</span> 를 만났을 때 속도 <span class="arithmatex">\(v_i\)</span> 가 <span class="arithmatex">\(v_j\)</span> 로 동기화되고, 두 위치 <span class="arithmatex">\(p_i, p_j\)</span> 는 그룹을 이루게 된다. </p>
+<p>그러므로 위치 수열 </p>
+<div class="arithmatex">\[ p_1, p_2, \dots, p_i, \dots, p_n \]</div>
+<p>의 <span class="arithmatex">\(t\)</span> 시간 후의 위치를 나타내는 수열 <span class="arithmatex">\(p'_n := p_n + tv_n\)</span></p>
+<div class="arithmatex">\[ p'_1, p'_2, \dots, p'_i, \dots, p'_n \]</div>
+<p>를 정의하고, 이 수열을 오름차순으로 정렬한 수열 <span class="arithmatex">\(s_n\)</span> 을 정의해보자. 그러면 수열 <span class="arithmatex">\(s_n\)</span> 은 <span class="arithmatex">\(t\)</span> 시간 후의 사람들의 위치 정보를 순서대로 나타낸다. 이 수열 <span class="arithmatex">\(s_n\)</span> 에서 인접한 <span class="arithmatex">\(3\)</span> 항이 다음과 같다고 하자.</p>
+<div class="arithmatex">\[ s_5=p' _{71} \quad s_6=p'_{9} \quad s_7=p'_{3} \quad s_8 = p' _{89} \]</div>
+<p>그러면 이 상황은 초기에 <span class="arithmatex">\(3\)</span> 번째 있는 사람과 <span class="arithmatex">\(9\)</span> 번째 있던 사람이 <span class="arithmatex">\(t\)</span> 시간 후에 <span class="arithmatex">\(71\)</span> 번째 있던 사람을 앞질렀다는 것을 알려준다. 이 경우 <span class="arithmatex">\(p_3\)</span> 와 <span class="arithmatex">\(p_9\)</span> 의 속도 <span class="arithmatex">\(v_3, v_9\)</span> 가 <span class="arithmatex">\(71\)</span> 번째 있던 사람의 속도 <span class="arithmatex">\(v_{71}\)</span> 에 동기화되며 세 위치 <span class="arithmatex">\(p _{71}, p_9, p_3\)</span> 가 그룹을 이루게 된 것이다. </p>
+<p>그런데 이 그룹은 <span class="arithmatex">\(s_8 = p' _{89}\)</span> 을 앞질러 가지 못했다. 왜냐하면 <span class="arithmatex">\(s_5 = p' _{71} &lt; s_8 = p' _{89}\)</span> 이기 때문이다. 그러므로 <span class="arithmatex">\(89\)</span> 번째 사람이 이룬 그룹을 다시 조사해야 한다. </p>
+<p>그렇다면 수열 <span class="arithmatex">\(s_n\)</span> 이 입력되면 <span class="arithmatex">\(s_n = p'_x\)</span> 에 대하여 <span class="arithmatex">\(x\)</span> 를 반환하는 함수 </p>
+<div class="arithmatex">\[ f(s_n) = x \quad (s_n = p'_x) \]</div>
+<p>를 정의하고, 다음과 같이 그룹의 갯수 <code>group</code> 를 계산할 수 있다. </p>
+<ol>
+<li>
+<p>초기에는 <span class="arithmatex">\(f(s_1)\)</span> 을 <span class="arithmatex">\(\text{leader}\)</span> 로 만들고, <code>group = 1</code> 로 만든다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(s_i\)</span> 에 대하여 <span class="arithmatex">\(\text{leader} &lt; f(s_i)\)</span> 라면, <span class="arithmatex">\(f(s_i)\)</span> 를 <span class="arithmatex">\(\text{leader}\)</span> 로 만들고, <code>group</code> 을 <code>+1</code> 한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(s_i\)</span> 에 대하여 <span class="arithmatex">\(\text{leader} &gt; f(s_i)\)</span> 라면, 그냥 넘어간다. </p>
+</li>
+<li>
+<p>2 와 3 의 과정을 <span class="arithmatex">\(s_1\)</span> 부터 <span class="arithmatex">\(s_n\)</span> 까지 반복하고, <code>group</code> 을 출력한다. </p>
+</li>
+</ol>
+<hr/>
+<h2 id="c9">C9<a class="headerlink" href="#c9" title="Permanent link">¶</a></h2>
+<p><span class="arithmatex">\(P_i = (x_i, y_i)\)</span> 일 때 <span class="arithmatex">\(P_i, P_j\)</span> 가 (1) <span class="arithmatex">\(x_i &lt; y_j\)</span> 이고 <span class="arithmatex">\(y_i &gt; y_j\)</span> 이거나 (2) <span class="arithmatex">\(x_i &gt; y_j\)</span> 이고 <span class="arithmatex">\(y_i &lt; y_j\)</span> 이면 같은 그룹에 속한다.</p>
+<p><span class="arithmatex">\(x_i \neq  x_j, y_i \neq  y_j\)</span> 라고 가정하고, </p>
+<div class="arithmatex">\[ p = x_i &lt; x_j, q = y_i &gt; y_j \]</div>
+<p>라고 하자. 그러면 주어진 조건은 </p>
+<div class="arithmatex">\[ S = (x_i &lt; x_j \land y_i &gt; y_j) \lor (x_i &gt; x_j \land y_i &lt; y_j) \]</div>
+<div class="arithmatex">\[ \iff (p \land q) \lor (\lnot p \land \lnot q) \]</div>
+<div class="arithmatex">\[ \iff (p \land q) \lor \lnot (p \lor q) \]</div>
+<p>이다. <span class="arithmatex">\(p, q\)</span> 의 진리표에 따른 <span class="arithmatex">\(S\)</span> 의 결과값은 </p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(p\)</span></th>
+<th align="center"><span class="arithmatex">\(q\)</span></th>
+<th align="center"><span class="arithmatex">\(S\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\((T \land T) \lor  \dots = T\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\((T \land F) \lor \lnot (T \lor F) = F \lor \lnot (T) = F\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\((F \land T) \lor \lnot (F \lor T) = F \lor \lnot (T)= F\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\((F \land F) \lor \lnot (F \lor F) = T\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>이다. 즉, <span class="arithmatex">\(p \equiv q\)</span> 이면 <span class="arithmatex">\(S = T\)</span> 이고, <span class="arithmatex">\(p \not \equiv q\)</span> 이면 <span class="arithmatex">\(S = F\)</span> 이다. </p>
+<p>그러므로 </p>
+<div class="arithmatex">\[ \therefore S = p \equiv q \]</div>
+<p>이다. </p>
+<hr/>
+<h2 id="p11">P11<a class="headerlink" href="#p11" title="Permanent link">¶</a></h2>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+          Material for MkDocs
+        </a>
+</div>
+<div class="md-footer-social">
+<a class="md-footer-social__link" href="https://github.com/ccss17" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "en", "search.config.pipeline": " ", "search.config.separator": "[\\s\\-]+", "search.placeholder": "\uac80\uc0c9", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.ddd52ceb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js"></script>
+</body>
+</html>
