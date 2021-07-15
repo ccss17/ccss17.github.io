@@ -380,6 +380,8 @@
 
     로 정의되기 때문이다. 
 
+# 행렬
+
 !!! tldr ""
 
     행벡터(row vector) : 체 $\mathbf{F}$ 에 대한 $\mathbf{F} ^{n}$ 의 벡터 

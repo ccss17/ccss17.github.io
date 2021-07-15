@@ -2,7 +2,7 @@
 
     [프리드버그 선형대수학](https://book.naver.com/bookdb/book_detail.nhn?bid=16374070) 
 
-# 선형변환, 영공간, 상공간
+# 선형변환
 
 !!! tldr ""
 
@@ -109,6 +109,8 @@
 !!! tldr ""
 
     영변환(zero transformation) : $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{T} _{ 0}: \mathbf{V} \to \mathbf{W}, x \mapsto 0$ 로 정의된 선형변환이다.
+
+# 영공간, 상공간
 
 !!! tldr ""
 
@@ -554,9 +556,9 @@
 
 - 위 예시는 영변환의 행렬표현이 영행렬이고, 항등변환의 행렬표현이 항등행렬임을 말해준다.
 
-!!! tldr ""
+!!! tldr "크로네커 델타(Kronecker delta)"
 
-    크로네커 델타(Kronecker delta) : $\delta _{ij} = \begin{cases} 1 & i = j\\ 0 & i \neq j\\ \end{cases}$
+    $$\delta _{ij} = \begin{cases} 1 & i = j\\ 0 & i \neq j\\ \end{cases}$$
 
 - 예시 
 
@@ -724,9 +726,25 @@
 
     인 $m \times p$ 행렬이다.
 
-- [이전 절](#_2)에서는 행렬의 합과 스칼라 곱을 선형변환의 합과 스칼라 곱으로 대응시켜서 행렬과 선형변환을 연결해보았다. 이제 선형변환의 합성에 대응하는 행렬의 연산인 행렬곱에 대하여 살펴보자.
+- $(AB) _{ij}$ 를 $A$ 의 $i$ 행과 $B$ 의 $j$ 열의 성분들을 곱하고 합한 것으로 보면 편하다. 
 
-- 행렬 곱은 어째서 이렇게 정의되었나?
+- 행렬곱이 실제로 어떻게 이루어지는지 살펴보자. $m \times n$ 행렬 $A$, $n \times p$ 행렬 $B$ 의 실제모습을 다음과 같이 살펴보자. 
+
+    $$ A = \begin{pmatrix} a _{11} & a _{12} & \dots & a _{1n}\\ a _{21} & a _{22} & \dots & a _{2n}\\ \vdots& \vdots& \ddots& \vdots \\ a _{m1} & a _{m2} & \dots & a _{mn}\\ \end{pmatrix}, B = \begin{pmatrix} b_{11} & b_{12} & \dots & b_{1p}\\ b_{21} & b_{22} & \dots & b_{2p}\\ \vdots& \vdots& \ddots& \vdots \\ b_{n1} & b_{n2} & \dots & b_{np}\\ \end{pmatrix}, $$
+
+    이 두 행렬의 행렬곱 $m \times p$ 행렬 $AB$ 의 실제 모습은 다음과 같다. 
+
+    $$ \begin{equation}\begin{split} AB &= \begin{pmatrix} a _{11} b _{11} + \dots + a _{1n} b _{n1} & a _{11} b _{12} + \dots + a _{1n} b _{n2} & \dots& a _{11} b _{1p} + \dots + a _{1n} b _{np} \\ a _{21} b _{21} + \dots + a _{2n} b _{n1} & a _{21} b _{12} + \dots + a _{2n} b _{n2} & \dots& a _{21} b _{1p} + \dots + a _{2n} b _{np} \\ \vdots& \vdots& \ddots& \vdots \\ a _{m1} b _{11} + \dots + a _{mn} b _{n1} & a _{m1} b _{12} + \dots + a _{mn} b _{n2} & \dots& a _{m1} b _{1p} + \dots + a _{mn} b _{np} \\ \end{pmatrix}\\ &= \begin{pmatrix} \sum_{k=1}^{n} a _{1k}b _{k1} & \sum_{k=1}^{n} a _{1k}b _{k2} & \dots& \sum_{k=1}^{n} a _{1k}b _{kp} \\ \sum_{k=1}^{n} a _{2k}b _{k1} & \sum_{k=1}^{n} a _{2k}b _{k2} & \dots& \sum_{k=1}^{n} a _{2k}b _{kp} \\ \vdots& \vdots& \ddots& \vdots \\ \sum_{k=1}^{n} a _{mk}b _{k1} & \sum_{k=1}^{n} a _{mk}b _{k2} & \dots& \sum_{k=1}^{n} a _{mk}b _{kp} \\ \end{pmatrix} \end{split}\end{equation} \tag*{} $$
+
+    그러므로 $m \times p$ 행렬 $AB$ 의 $i$ 열 $j$ 행 성분은 
+
+    $$ (AB) _{ij} = \sum_{k=1}^{n} a _{ik}b _{kj} $$
+
+    이다. 
+
+- 지금까지 하고 있는 일은 선형변환과 행렬 간의 대응관계를 연구하는 것이다. 먼저 [선형변환과 행렬의 대응](#9a08985c1)을 살펴보았다. 그리고 [선형변환의 합과 스칼라곱을 정의](#63a07e35d)한 다음 [이 연산이 행렬에서의 합과 스칼라곱의 구조를 보존한다](#aa431d8ac)는 것을 증명했다. 이제 두 선형변환의 합성에 어떤 행렬의 연산이 대응되는지 연구해야 한다. 즉, 행렬곱에 대하여 정의할 차례인 것이다.
+
+    그렇다면 행렬 곱은 어째서 이렇게 정의되었나? 행렬 곱 정의가 두 선형변환의 합성의 구조를 보존해야 하기 때문이다. 
 
     유한차원 벡터공간 $\mathbf{V} ,\mathbf{W} ,\mathbf{Z}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 를 생각하자. 이때 $\mathbf{V}, \mathbf{W}, \mathbf{Z}$ 의 순서기저를 각각 
 
@@ -738,10 +756,10 @@
 
     으로 정의하고 선형변환 $\mathbf{T} , \mathbf{U}$ 의 행렬표현을 
 
-    $$ p \times m \text{ 행렬 } A = [\mathbf{U} ] ^{\gamma}_{\beta} $$
-    
     $$ m \times n \text{ 행렬 } B = [\mathbf{T} ] ^{\beta }_{\alpha } $$
 
+    $$ p \times m \text{ 행렬 } A = [\mathbf{U} ] ^{\gamma}_{\beta} $$
+    
     라고 하자. 그러면 $\mathbf{U} \mathbf{T} : \mathbf{V} \to \mathbf{Z}$ 에 대하여
 
     $$ \boxed{ AB = [\mathbf{U} \mathbf{T} ] ^{\gamma}_{\alpha }} $$
@@ -755,8 +773,6 @@
     $$ (AB) _{ij} = \sum_{k=1}^{m}A _{ik} B _{kj} $$
 
     라고 정의할 수 있다.
-
-- $(AB) _{ij}$ 를 $A$ 의 $i$ 행과 $B$ 의 $j$ 열에 대응하는 성분들을 곱하고 합한 것이다.
 
 - 행렬 $A, B$ 의 형상이 다음과 같이 맞아야 행렬곱 연산을 할 수 있다. 
 
@@ -784,9 +800,9 @@
 
 - 증명 
 
-    $(AB) ^{t} _{ij} = (AB) _{ji} = \sum_{k=1}^{n}A _{jk}B _{ki}$
+    $$(AB) ^{t} _{ij} = (AB) _{ji} = \sum_{k=1}^{n}A _{jk}B _{ki}$$
 
-    $(B ^{t} A ^{t}) _{ij} =  \sum_{k=1}^{n}B ^{t} _{ik}(A ^{t}) _{jk}$
+    $$(B ^{t} A ^{t}) _{ij} =  \sum_{k=1}^{n}(B ^{t})_{ik}(A ^{t}) _{kj} = \sum_{k=1}^{n}B _{ki}A ss    jkA $$
 
 !!! tldr "정리 2.11"
 
@@ -794,6 +810,7 @@
 
     $$ [\mathbf{U} \mathbf{T} ] ^{\gamma}_{\alpha } = [\mathbf{U} ] ^{\gamma}_{\beta} [\mathbf{T} ] ^{\beta }_{\alpha } $$
 
+- 이 정리가 행렬 곱 연산이 두 선형변환의 합성의 구조를 보존한다는 것을 말해준다. 
 - 증명 
 
     행렬곱의 정의에 의하여 이 정리가 성립함을 쉽게 알 수 있다.
@@ -816,7 +833,7 @@
 
     $$ [\mathbf{U} \mathbf{T} ] _{\beta } = [\mathbf{U} ] _{\beta }[\mathbf{T} ] _{\beta } $$
 
-p113. 정리 2.10, 정리 2.16 의 메타데이터
+> p113. 정리 2.10, 정리 2.16 의 메타데이터
 
 !!! tldr "정리 2.12"
 
@@ -877,7 +894,77 @@ p113. 정리 2.10, 정리 2.16 의 메타데이터
 
     2. $v_j = Be_j$ (단, $e_j$ 는 $\mathbf{F} ^{p}$ 의 $j$ 번째 표준벡터)
 
+- 1) 의 증명
+
+    $$ u_j = \begin{pmatrix} (AB) _{1j}\\ (AB) _{2j}\\ \vdots \\ (AB) _{mj}\\ \end{pmatrix} = \begin{pmatrix} \sum_{k=1}^{n}A _{1k}B _{kj}\\ \sum_{k=1}^{n}A _{2k}B _{kj}\\ \vdots\\ \sum_{k=1}^{n}A _{mk}B _{kj}\\ \end{pmatrix} = A \begin{pmatrix} B _{1j}\\ B _{2j}\\ \vdots \\ B _{nj}\\ \end{pmatrix} = A v_j $$
+
+- 2) 의 증명
+
+!!! tldr "정리 2.14"
+
+    유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 과 각각의 순서기저 $\beta , \gamma$ 에 대한 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 과 $u \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
+
+    $$ [\mathbf{T} (u)] _{\gamma } = [\mathbf{T} ] ^{\gamma}_{\beta} [u] _{\beta } $$
+
+- 이 정리는 선형변환에 어떤 벡터를 입력하여 행렬로 표현한 것과 선형변환과 벡터를 행렬로 표현한 후 행렬곱 한 것이 같음을 말해준다. 
+
 - 증명
+
+    $u \in \mathbf{V}$ 를 고정하고 다음과 같은 선형변환 $f: F \to \mathbf{V} , g: F \to \mathbf{W}$ 를 정의하자. 
+
+    $$ \forall a \in F : f(a) = au, g(a) = a \mathbf{T} (u) $$
+
+    $F$ 의 표준순서기저를 $\alpha = \{1\}$ 라고 하자. [선형변환의 조건]() 에 의하여 $g(a) = a \mathbf{T} (u) = \mathbf{T} (au) = \mathbf{T} f(a)$ 이므로 $g = \mathbf{T} f$ 이다. 
+
+    행렬의 각 열을 벡터로 보고 [정리 2.11](#2fc8f26aa) 을 적용하면 다음이 성립한다. 
+
+    $$ [\mathbf{T} (u)] _{\gamma } = [g(1)] _{\gamma } = [g] ^{\gamma}_{\alpha }  = [\mathbf{T} f] ^{\gamma}_{\alpha }  = [\mathbf{T} ] ^{\gamma}_{\beta} [f] ^{\beta }_{\alpha } = [\mathbf{T} ] ^{\gamma}_{\beta} [f(1)] _{\beta } = [\mathbf{T} ]^{\gamma}_{\beta} [u] _{\beta } \tag*{■} $$
+
+!!! tldr ""
+
+    좌측 곱 변환(left multiplication transformation) : 체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 에 대하여 선형변환 
+
+    $$ \mathbf{L} _{A} : \mathbf{F} ^{n} \to \mathbf{F} ^{m}, x \mapsto Ax $$
+
+    을 좌측 곱 변환이라 한다.
+
+- $x$ 는 $\mathbf{F} ^{n}$ 의 열벡터이다. 
+
+- 좌측 곱 변환은 선형변환의 성질로 행렬의 성질을 유추하거나, 행렬의 성질로 선형변환의 성질을 유추할 때 유용하게 사용되는 도구이다. 
+
+- 예시 
+
+    $A = \begin{pmatrix} 1&2&1\\ 0&1&2\\ \end{pmatrix}, x= \begin{pmatrix} 1\\ 3\\ -1\\ \end{pmatrix}$ 에 대하여 $\mathbf{L} _A(x) = Ax = \begin{pmatrix} 1&2&1\\ 0&1&2\\ \end{pmatrix}\begin{pmatrix} 1\\ 3\\ -1\\ \end{pmatrix} = \begin{pmatrix} 6\\ 1\\ \end{pmatrix}$ 이다. 
+
+!!! tldr "정리 2.15"
+
+    체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 에 대하여 좌측 곱 변환 $\mathbf{L} _{A}: \mathbf{F} ^{n} \to  \mathbf{F} ^{m}$ 은 선형이다.
+
+    또한 체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $B$ 와 $\mathbf{F} ^{n}$ 의 표준순서기저 $\beta$, $\mathbf{F} ^{m}$ 의 표준순서기저 $\gamma$ 에 대하여 다음이 성립한다. 
+
+    1. $[\mathbf{L} _A] ^{\gamma}_{\beta} = A$
+
+    2. $\mathbf{L} _A = \mathbf{L} _B \iff A = B$
+
+    3. $\mathbf{L} _{A+B} = \mathbf{L} _A + \mathbf{L} _B$
+
+    4. $\forall a \in \mathbf{F} : \mathbf{L} _{aA} = a \mathbf{L} _A$
+
+    5. $\mathbf{T} : \mathbf{F} ^{n} \to \mathbf{F} ^{m}$ 이 선형이면 $\mathbf{T} = \mathbf{L} _C$ 인 $m \times n$ 행렬 $C$ 가 유일하게 존재한다. 또한 $C = [\mathbf{T} ] ^{\gamma}_{\beta}$ 이다.
+
+    6. $n \times p$ 행렬 $E$ 에 대하여 $\mathbf{L} _{AE} = \mathbf{L} _A \mathbf{L} _E$ 이다.
+
+    7. $m = n \implies \mathbf{L} _{I_n} = \mathbf{I} _{\mathbf{F} ^{n}}$
+
+- 이 정리는 $\mathbf{L} _A$ 가 선형이고 유용한 도구를 많이 제공한다는 것을 말해준다. 
+
+- 증명
+
+    [정리 2.12]() 에 의하여 $A(B+C) = AB+AC$ 이다. 이는 $\mathbf{L} _A(x + y) = A(x+y) = Ax + Ay = \mathbf{L} (x) + \mathbf{L} (y)$ 임을 뜻한다. 
+    
+    또한 [정리 2.12]() 에 의하여 스칼라 $a$ 에 대하여 $A(aB) = a(AB)$ 이다. 이는 $\mathbf{L} _A(cx) = A(cx) = c(Ax) = c\mathbf{L} (x)$ 임을 뜻한다. 그러므로 $\mathbf{L} _A$ 는 선형이다. ▲ 
+
+
 
 # 가역성과 동형사상
 
