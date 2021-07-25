@@ -44,6 +44,8 @@
 
     ![](https://www.researchgate.net/profile/Tee-Jay-Dack/publication/328107970/figure/fig1/AS:678473026793478@1538771983490/The-universe-of-non-complex-numbers.jpg)
 
+## $0$ 의 정의
+
 !!! tldr "최초의 초현실수"
 
     $$ 0 \equiv \{|\} $$
@@ -69,6 +71,8 @@
     $$ \{0|\}, \{|0\}, \{0|0\} $$
 
     으로 표기한다. 이때 처음 두 집합쌍은 초현실수가 되지만 마지막 집합쌍은 $0 \leq 0$ 이므로 초현실수가 될 수 없다. 그 대신 $\{0|0\}$ 같은 집합쌍을 pseudo number  라고 부른다. 
+
+## 초현실수의 순서관계
 
 !!! tldr "$\leq$ 의 정의"
 
@@ -362,7 +366,15 @@
 
     이후에 $-1,0,1$ 을 기반으로 $-2,-\dfrac{1}{2}, \dfrac{1}{2},2$ 를 생성했으므로 이들은 day two 에 태어났다고 할 수 있다. 
 
-# 초현실수의 성질
+## 음의 초현실수
+
+!!! tldr "$-$ 의 정의"
+
+    $$ -x = \{-X_R | -X_L\} $$
+
+- 초현실수의 음수를 이렇게 정의한다. 
+
+## 초현실수의 성질
 
 여기서부터 초현실수를 나타내기 위하여 소문자를 사용하고, 초현실수 집합을 나타내기 위하여 대문자를 사용한다. 또한 초현실수 $x$ 의 left set 을 나타내기 위하여 $X_L$ 를, right set 을 위하여 $X_R$ 을 사용한다.
 
@@ -430,7 +442,7 @@
 
 !!! tldr "$\equiv$ 의 정의"
 
-    $$ \begin{equation}\begin{split} x \equiv y \iff &\forall x_L \in X_L : x_L \in Y_L \land \\ &\forall x_R \in X_R : x_R \in Y_R \land \\ &\forall y_L \in Y_L : y_L \in X_L \land \\ &\forall y_R \in Y_R : y_R \in X_R \end{split}\end{equation} \tag*{} $$
+    $$ \begin{equation}\begin{split} x \equiv y \iff &\forall x_L \in X_L : x_L \in Y_L \enspace \land \\ &\forall x_R \in X_R : x_R \in Y_R \enspace \land \\ &\forall y_L \in Y_L : y_L \in X_L \enspace \land \\ &\forall y_R \in Y_R : y_R \in X_R \end{split}\end{equation} \tag*{} $$
 
 - 우리는 지금까지 $\equiv$ 이 단지 초현실수의 동등함을 나타낸다고 비형식적으로 정의했지만 이제 이것을 형식적으로 정의할 때가 되었다. 
 
@@ -992,11 +1004,9 @@
 
 !!! tldr "초현실수의 값"
 
-    Dali function : 실수 집합 $\R$ 을 초현실수 집합 $\mathbf{No}$ 으로 보내는 사상 
+    Dali function : $\R$ 을 $\mathbf{No}$ 로 보내는 다음과 같은 사상이다.
 
     $$ \delta (x) = \begin{cases} \{|\} & x = 0\\ \{\delta (x-1)|\} & x \in \mathbb{Z} ^{+} \\ \{|\delta (x+1)\} & x \in \mathbb{Z} ^{-} \\ \bigg \{\delta \bigg (\dfrac{j-1}{2^k}\bigg )\bigg |\delta \bigg (\dfrac{j+1}{2^k}\bigg )\bigg \} & x = \dfrac{j}{2^k} \text{ s.t. } j \in \mathbb{Z}, k \in \mathbb{Z} ^{+} \\ \end{cases} $$
-
-    이다. 
 
 - 이때 $\dfrac{j}{2^k}$ 는 기약분수(irreducible fraction)이다. 
 
@@ -1423,12 +1433,6 @@
     에서 $(3.47), (3.48)$ 이 $x, y, z$ 의 parents 에 대한 associative 가 성립함을 가정하면 성립한다는 것을 알 수 있다. 
 
     그러므로 parents 의 parents 를 거슬러 올라가면서 이 정리의 참거짓을 결정하게 된다. 그런데 이 초현실수가 $0$ 로 치환되면 참이므로 결국 참임을 알 수 있다. $0$ 는 최초의 초현실수이다. 그러므로 이 정리는 참이다. ■ 
-
-!!! tldr "$-$ 의 정의"
-
-    $$ -x = \{-X_R | -X_L\} $$
-
-- 초현실수의 음수를 이렇게 정의한다. 
 
 !!! tldr "정리 22"
 
