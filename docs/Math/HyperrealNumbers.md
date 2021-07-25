@@ -115,7 +115,7 @@
 
 - 초실수의 구성은 자연수, 정수, 유리수, 실수의 구성 과정과 같은 맥락이다. 
 
-    우리는 [$\N$ 을 공집합으로부터 $S(x) = x \cup \{x\}$ 연산으로 구성](../Foundations/numbers/#75c139b38)해내었다. [$\N$ 을 기반으로하는 ordered pair 로 $\mathbb{Z}$ 를 구성](../Foundations/numbers/#402b9b429)해내었다. [$\mathbb{Q}$ 는 $\mathbb{Z}$ 를 기반으로 하는 동치류로 구성](../Foundations/numbers/#5d305fdb8)했었다. $\R$ 은 $\mathbb{Q}$ 를 기반으로 [데데킨트 절단으로 구성](../Foundations/numbers/#d93ba1738)할 수 있고 [코시 수열의 동치류로도 구성](../Foundations/numbers/#705ab442f)할 수 있었다. 
+    우리는 [$\N$ 을 공집합으로부터 $S(x) = x \cup \{x\}$ 연산으로 구성](../Foundations/numbers/#7c938e5ea)해내었다. [$\N$ 을 기반으로하는 ordered pair 로 $\mathbb{Z}$ 를 구성](../Foundations/numbers/#402b9b429)해내었다. [$\mathbb{Q}$ 는 $\mathbb{Z}$ 를 기반으로 하는 동치류로 구성](../Foundations/numbers/#5d305fdb8)했었다. $\R$ 은 $\mathbb{Q}$ 를 기반으로 [데데킨트 절단으로 구성](../Foundations/numbers/#d93ba1738)할 수 있고 [코시 수열의 동치류로도 구성](../Foundations/numbers/#41b17cc41)할 수 있었다. 
 
     초실수의 구성, 즉 $^{*}\R$ 의 구성은 코시 수열의 동치류로 $\R$ 을 구성했던 것과 비슷하다. 초실수의 구성은 무한한 실수 수열의 집합인 $\R ^{\N}$ 의 동치류를 기반으로 이루어진다. 이 동치관계를 정의하기 위하여 극대필터라는 수학적 장치가 필요한 것이다. 
 
@@ -315,10 +315,9 @@
 
     이다. 이는 
     
-    $$ {}^{*} \N = \{[s] \in {}^{*}\R : \{i \in \N : s_i \in S\} \in \mathcal{F}\} $$
+    $$ {}^{*} \N = \{[s] \in {}^{*}\R : \{i \in \N : s_i \in \N\} \in \mathcal{F}\} $$
 
     $^{*}\N$ 을 초자연수(hypernatural) 이라고 한다. 
-
 
 !!! tldr ""
 
@@ -400,11 +399,11 @@
 
     - 예시 
 
-        $$ \forall n \in \N \exists m \in \N : m > n $$
+        $$ \forall n \in \N, \exists m \in \N : m > n $$
 
         의 $*$-변환은 
 
-        $$ \forall n \in {}^{*}\N \exists m \in {}^{*}\N : m {}^{*}> n $$
+        $$ \forall n \in {}^{*}\N, \exists m \in {}^{*}\N : m {}^{*}> n $$
 
         이다.
 
@@ -416,7 +415,7 @@
 
         이다. 근데 일반적으로 편의상 상수와 함수와 부등호에 있는 $*$ 는 제거한다. 그래서 결국 
 
-        $$ \forall n \in {}^{*}\N \exists m \in {}^{*}\N : m>n $$
+        $$ \forall n \in {}^{*}\N, \exists m \in {}^{*}\N : m>n $$
 
         $$ \forall x \in {}^{*}\R : \sin (x) < 2 $$
 
