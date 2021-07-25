@@ -1,0 +1,238 @@
+site_name: ccss17
+site_author: ccsss
+site_url: https://ccss17.github.io/
+
+# repo_name: ccss17.github.io
+# repo_url: https://github.com/ccss17/ccss17.github.io
+
+nav:
+  - Home: index.md
+  - Trend: 
+    - 2020: trend/2020.md
+    - 2021: trend/2021.md
+  - Math: 
+    - Foundation of Foundation of Math: 
+      - History of Math: Math/MathHistory.md
+      - Formal System: Math/Logic/FormalSystem.md
+      - Incompleteness theorem: Math/incompleteness.md
+      - Turing's proof: Math/turing.md
+      - Consistency proof of Peano arithmetic: Math/gentzen.md
+    - Foundation of math: 
+      # - 논리학: Math/Foundations/logic.md
+      # - 수리논리학: Math/Foundations/mathmatical_logic.md
+      - Set: Math/Foundations/Set.md
+      - Number Theory: Math/Foundations/numbers.md
+      - Infinite Set: Math/Foundations/InfiniteSet.md
+      - ZFC axiom system: Math/Foundations/ZFC.md
+    - Hyperreal Numbers: Math/HyperrealNumbers.md
+    - Surreal Numbers: Math/SurrealNumbers.md
+    - Linear Algebra: 
+      - Vector Space: Math/LinearAlgebra/VectorSpace.md
+      - Linear Transformation: Math/LinearAlgebra/LinearTransformation.md
+      - Matrix Operation: Math/LinearAlgebra/MatrixOperation.md
+    # - 옛날 수학공부 노트정리:
+    #   - 산술/대수학: 
+    #     - 기초 산술: Math/Algebra/arithmetic.md
+    #     - 추상대수학: Math/Algebra/abstract_algebra.md
+    #     - 대수학: Math/Algebra/algebra.md
+    #   - 해석학: 
+    #     - 해석학: Math/Analysis/anal.md
+    #     - 삼각함수: Math/Analysis/trig.md
+    #     - 함수: Math/Analysis/function.md
+    #   - 확률: 
+    #     - 조합: Math/Probability/comb.md
+    #     - 확률: Math/Probability/prob.md
+    #   - 통계학: 
+    #     - 도수분포의 평균,분산,표준편차: Math/Statistics/stat.md
+    #     - 이산확률변수의 평균,분산,표준편차: Math/Statistics/stat2.md
+    #     - 이항분포의 평균,분산,표준편차: Math/Statistics/stat3.md
+    #     - 연속확률변수의 평균,분산,표준편차: Math/Statistics/stat4.md
+    #     - 통계적 추정: Math/Statistics/stat5.md
+    #     - 상관관계 분석: Math/Statistics/stat6.md
+    #   - 미적분: 
+    #     - 극한: Math/Calculus/cal.md
+    #     - 미분: Math/Calculus/cal2.md
+    #     - 적분: Math/Calculus/cal3.md
+    #     - 미분2: Math/Calculus/cal4.md
+    #     - 적분2: Math/Calculus/cal5.md
+    #     - 벡터해석학: Math/Calculus/vector.md
+    #     - 미적분: Math/Calculus/cal6.md
+    #     - 다변수함수의 미분의 일반적 정의: Math/Calculus/cal7.md
+    #     # - 텐서해석학: Math/Calculus/cal8.md
+    #   - 선형대수학: 
+    #     - 선형대수학 다시정리1: Math/LinearAlgebra/la_new.md
+    #     - 선형방정식: Math/LinearAlgebra/la.md
+    #     - 행렬대수: Math/LinearAlgebra/la2.md
+    #     - 행렬식: Math/LinearAlgebra/la3.md
+    #     - 벡터공간: Math/LinearAlgebra/la4.md
+    #     - 고유벡터: Math/LinearAlgebra/la5.md
+    #     - 직교: Math/LinearAlgebra/la6.md
+    # - 다중선형대수학: 
+    #   - (임시): Math/MultiLinearAlgebra/mla.md
+    # - 위상수학: 
+    #   - (임시): Math/Topology/topology.md
+  - Paper:
+    - "Gödel, Escher, Bach" : paper/GEB.md
+    - "Performance of Python runtimes on a non-numeric scientific code" : paper/1404.6388.md
+    - "The NumPy array: a structure for efficient numerical computation": paper/1102.1523.md
+    - Facenet (2015): paper/facenet.md
+    - Quadruplet (2017): paper/quadruplet.md
+    - BlueBorne: paper/blueborne.md
+    - Meltdown: paper/meltdown.md
+  # - Project:
+  #   - ProgrammerBase: project/ProgrammerBase.md
+  #   - security-tutorial: project/security-tutorial.md
+  #   - WICWIU: project/WICWIU.md
+  #   - ml: project/ml.md
+  #   - ubuntu-unminimize: project/ubuntu-unminimize.md
+  #   - bof: project/bof.md
+  #   - nonogram: project/nonogram.md
+  #   - older-glibc: project/older-glibc.md
+  #   - test_virt_memory: project/test_virt_memory.md
+  #   - genie: project/genie.md
+  #   - homework: project/homework.md
+  #   - ddtector: project/ddtector.md
+  #   - dogdoor: project/dogdoor.md
+  #   - auto-connect-raspberry: project/auto-connect-raspberry.md
+  #   - kill-idle-tty: project/kill-idle-tty.md
+  #   - standalone: project/standalone.md
+  #   - justforfun: project/justforfun.md
+  #   - dotfiles: project/dotfiles.md
+  #   - servercat: project/servercat.md
+  - Computer:
+    # - base: Computer/base.md
+    - Nand to Tetris: Computer/nand2tetris.md
+    - Information Theory: Computer/information.md
+    - Technological Singularity: Computer/future.md
+    - Rust StudyNote: Computer/Rust.md
+  - ProgrammerBase: 
+    - README: ProgrammerBase/README.md
+    - Contents:
+      - Day 1: ProgrammerBase/01-Day1/readme.md
+      - Day 2: ProgrammerBase/02-Day2/readme.md
+      - Day 3: ProgrammerBase/03-Day3/readme.md
+      - Day 4: ProgrammerBase/04-Day4/readme.md
+      - Day 5: ProgrammerBase/05-Day5/readme.md
+    - Docker: ProgrammerBase/docker.md
+    - Coding Convention: ProgrammerBase/codingconvention.md
+    - Build System: ProgrammerBase/build.md
+    - Information: ProgrammerBase/information.md
+    - Git: ProgrammerBase/git.md
+    - VSCode: ProgrammerBase/vscode.md
+    - Markdown: ProgrammerBase/markdown.md
+    - Tmux: ProgrammerBase/tmux.md
+    - Vim: ProgrammerBase/vim.md
+    - CLI: ProgrammerBase/cli.md
+  - security tutorial:
+    - README: security-tutorial/README.md
+    - Day1 Base: security-tutorial/01-Base/README.md
+    - Day2 Computer Principle 1: security-tutorial/02-Computer1/README.md
+    - Day3 Computer Principle 2: security-tutorial/03-Computer2/README.md
+    - Day4 Reversing 1: security-tutorial/04-Reversing1/README.md
+    - Day5 Reversing 2: security-tutorial/05-Reversing2/README.md
+    - Day6 Exploit 1: security-tutorial/06-Exploit1/README.md
+    - Day7 Exploit 2: security-tutorial/07-Exploit2/README.md
+    - Day8 Exploit 3: security-tutorial/08-Exploit3/README.md
+    - Day9 Exploit 4: security-tutorial/09-Exploit4/README.md
+    - Day10 Pentesting: security-tutorial/10-Pentesting/README.md
+  # - 사소한것들:
+  #   - hai:
+  #     - base: hai/base.md
+  #     - BLAS: hai/BLAS.md
+  #   - Philosophy: 
+  #     - 철학 메모: Philosophy/philosophy.md
+  #     - 정신지도규칙/방법서설 메모(데카르트): Philosophy/descartes.md
+  #   - 취약점 관련 사소한 생각들: 
+  #     - memo: vul/memo.md
+  #   - TS 관련 사소한 생각들:
+  #     - 1. 기초: TS/base.md
+  #     - 2. 생각: TS/think.md
+  #     - 3. 실행: TS/doit.md
+  #     - 수학의 역사: TS/history_math.md
+  #     - 4. 수학역사 1차 추상화: TS/abstract_history_math.md
+  #     - 과학의 역사: TS/history_science.md
+  #     - 기술의 역사: TS/history_technology.md
+  #     - 컴퓨터의 역사(wikipedia 내용 정리): TS/history_computer_wiki.md
+  #     - 컴퓨터역사1(괴델의 불완전성 정리): TS/history_computer1.md
+  #     - 컴퓨터역사2(튜링의 불완전성 증명): TS/history_computer2.md
+  #     - 컴퓨터역사3(튜링기계의 구현): TS/history_computer3.md
+  #     - 컴퓨터역사4(소프트웨어와 알고리즘): TS/history_computer4.md
+  #     - 컴퓨터역사5(초지능): TS/history_computer5.md
+  #     - 인공지능의 역사: TS/history_ai.md
+  #   - Deep Learning: 
+  #     - DL from stratch 메모: AI/dl_from_scratch.md
+  #     - DL from stratch 메모2: AI/dl_from_scratch2.md
+  #     - DL from stratch 메모3: AI/dl_from_scratch3.md
+  #     - DL from stratch 메모4: AI/dl_from_scratch4.md
+  #     - 인공지능 메모3: AI/ai.md
+  #   - Tools: 
+  #     - Makefile: Tools/makefile.md
+  #     - Git: Tools/git.md
+  #     - Docker: Tools/docker.md
+  #     - CUDA: Tools/cuda.md
+  #   - ArchLinux: 
+  #     - 설치: archlinux/install.md
+  #     - VM 설치: archlinux/vminstall.md
+  #   - Tex 수학기호: tex.md
+  #   - Algorithm:
+  #     - 시간복잡도: Algorithm/timecomplexity.md
+  #     - Leetcode: Algorithm/leetcode.md
+theme: 
+  name: material
+  palette:
+    primary: white
+    scheme: default
+  font:
+    text: Nanum Gothic
+  language: kr
+  logo: assets/images/bolt-solid.svg
+  favicon: assets/images/bolt-solid.svg
+  # logo: assets/images/snowflake-regular.svg
+  # favicon: assets/images/snowflake-regular.svg
+  # logo: assets/images/umbrella-beach-solid.svg
+  # favicon: assets/images/umbrella-beach-solid.svg
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js
+  - javascripts/config.js
+  - https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
+  # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github-gist.min.css
+  - stylesheets/config.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ccss17
+
+markdown_extensions:
+  - toc:
+      permalink: "&para;"
+      baselevel: 2
+      toc_depth: 2-4
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.critic
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - attr_list
+  - def_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.magiclink
+  - pymdownx.tasklist:
+      clickable_checkbox: false
+      custom_checkbox: true
+  - footnotes
