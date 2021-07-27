@@ -74,7 +74,7 @@
 
     [행렬곱 결과가 항등행렬인 두 정사각행렬은 모두 가역](../LinearTransformation/#0d6999da9)이므로 $E$ 는 가역이고, $E ^{-1} = \bar{E}$ 이다. ■ 
 
-# 행렬의 랭크와 역행렬
+# 행렬의 랭크
 
 !!! tldr "행렬의 랭크"
 
@@ -86,11 +86,9 @@
 
 !!! tldr ""
 
-    $n \times n$ 행렬 $A$ 에 대하여 다음은 동치이다.
+    $n \times n$ 행렬 $A$ 에 대하여 다음이 성립한다.
     
-    - $A$ 는 가역이다.
-    
-    - $\text{rank} (A) = n$
+    $$A \text{ is invertible } \iff \text{rank} (A) = n $$
 
 - 증명 
 
@@ -400,7 +398,31 @@
 
     4. $\text{rank} (AB ) \leq \text{rank} (B)$
 
+- 이제 [정리 3.4 따름정리](#108500177), [정리 3.5](#0ce821e3f), [정리 3.6](#71b0f55b7), [정리 3.6 따름정리 2](#a2df8a4e7) 을 기반으로 임의의 행렬의 랭크를 쉽게 구할 수 있는 많은 도구들이 마련되었다.
+
+    이 도구들을 통하여 기본연산을 행렬에 적용하여 $0$ 을 최대한 많이 가지도록 변형시키고 그 행렬의 극대 일차독립 집합의 기수를 파악하면 랭크를 쉽게 구할 수 있다. 
+
+    - 예시 
+
+        행렬 $A = \begin{pmatrix} 1&2&1&1\\ 1&1&-1&1\\ \end{pmatrix}$ 의 1행과 2행의 집합은 일차독립이므로 $\text{rank} (A) = 2$ 이다.
+    
+    - 예시 
+
+        행렬 $A = \begin{pmatrix}
+        1&2&3&1\\
+        2&1&1&1\\
+        1&-1&1&0\\
+        \end{pmatrix}$ 에 기본연산을 적용하여 다음과 같이 변형할 수 있다.
+
+        $$ A \to \begin{pmatrix} 1&2&3&1\\ 0&-3&-5&-1\\ 0&-3&-2&-1\\ \end{pmatrix} \to \begin{pmatrix} 1&2&3&1\\ 0&-3&-5&-1\\ 0&0&3&0\\ \end{pmatrix} $$
+
+        3개의 행이 일차독립이므로 $\text{rank} (A) = 3$ 이다.
+    
+    위 예시에서 알 수 있듯이 굳이 [정리 3.6](#71b0f55b7) 이 말하는 $D = \begin{pmatrix} I&O\\ O&O\\ \end{pmatrix}$ 을 얻을 때까지 기본연산을 하는 것이 아니라 일차독립인 행 또는 열들의 최대 갯수가 명확히 보일 때까지 기본연산을 해도 된다.
+
 - 증명
+
+    1:
 
     $\mathbf{R} (\mathbf{T}) \subseteq \mathbf{W}$ 이므로 다음이 성립한다. 
 
@@ -408,5 +430,262 @@
 
     따라서 $\text{rank} (\mathbf{U} \mathbf{T} )$ 는 다음과 같다. 
 
-    $$ \text{rank} (\mathbf{U} \mathbf{T} )  = \dim (\mathbf{R} (\mathbf{U}\mathbf{T} ) )
+    $$ \text{rank} (\mathbf{U} \mathbf{T} )  = \dim (\mathbf{R} (\mathbf{U}\mathbf{T} ) )\leq \dim (\mathbf{R} (\mathbf{U}) ) = \text{rank} (\mathbf{U} ) $$
+
+    3:
+
+    이제 1) 을 가정할 수 있으므로 $\text{rank} (AB)$ 는 다음과 같다. 
+
+    $$ \text{rank} (AB) = \text{rank} (\mathbf{L}_{AB})  = \text{rank} (\mathbf{L}_{A}\mathbf{L}_{B})  \leq \text{rank} (\mathbf{L}_{A}) = \text{rank} (A) $$
+
+    4:
+
+    이제 3) 을 가정할 수 있으므로 3) 과 [정리 3.6 따름정리 2](#a2df8a4e7) 에 의하여 다음이 성립한다. 
+
+    $$ \text{rank} (AB) = \text{rank} ((AB)^{t})  = \text{rank} (B ^{t}A ^{t})  \leq \text{rank} (B ^{t})  = \text{rank} (B) $$
+
+    2:
+
+    이제 4) 를 가정할 수 있다.
+
+    $\mathbf{V} , \mathbf{W} , \mathbf{Z}$ 의 순서기저 $\alpha , \beta , \gamma$ 에 대하여 $A' = [\mathbf{U} ]^{\gamma}_{\beta} , B' = [\mathbf{T} ] ^{\beta }_{\alpha }$ 라 하면 [정리 2.11](../LinearTransformation/#2fc8f26aa) 에 의하여 $A'B' = [\mathbf{U} \mathbf{T} ] ^{\gamma}_{\alpha }$ 이다. 
+
+    [정리 3.3](#af5c5b8cd) 과 4) 에 의하여 다음이 성립한다. 
+
+    $$ \text{rank} (\mathbf{U} \mathbf{T} )  = \text{rank} (A'B')  \leq \text{rank} (B') = \text{rank} (\mathbf{T} ) \tag*{■} $$
+
+# 역행렬 구하기
+
+!!! tldr "첨가행렬(augmented matrix) 의 정의"
+
+    $m \times n$ 행렬 $A$ 와 $m \times p$ 행렬 $B$ 에 대한 첨가행렬 $(A|B)$ 는 $m \times (n + p)$ 행렬 $(AB)$ 이다.
+
+    $(AB)$ 는 처음 $n$ 개 열이 $A$ 의 열이고, 나머지 $p$ 개 열이 $B$ 의 열인 행렬이다.
+
+!!! tldr "문제 3.2-15"
+
+    $n$ 개의 행을 가지는 행렬 $A, B$ 와 $m \times n$ 행렬 $M$ 에 대하여 다음이 성립한다. 
+
+    $$ M(A|B) = (MA|MB) $$
+
+- 증명
+
+    $A$ 의 열을 $p$, $B$ 의 열을 $q$ 라고 하면 $A$ 는 $n \times p$ 행렬, $B$ 는 $n \times q$ 행렬이다. 
+    
+    또한 $(A|B)$ 는 $n \times (p + q)$ 행렬, $M(A|B)$ 는 $m \times (p + q)$ 행렬이다. 다음이 성립한다.
+
+    $$ 
+    \begin{equation}\begin{split}
+    M(A|B)&= 
+    \begin{pmatrix}
+    M_{11}&M_{12}&\dots&M_{1n}\\
+    M_{21}&M_{22}&\dots&M_{2n}\\
+    \vdots& \vdots& \ddots& \vdots \\
+    M_{m1}&M_{m2}&\dots&M_{mn}\\
+    \end{pmatrix}
+    \left(\begin{array}{cccc|cccc}
+    A_{11} & A_{12} & \dots & A_{1p} & B_{11} & B_{12} & \dots & B_{1q} \\
+    A_{21} & A_{22} & \dots & A_{2p} & B_{21} & B_{22} & \dots & B_{2q} \\
+    \vdots & \vdots & \ddots & \vdots & \vdots& \vdots& \ddots& \vdots \\
+    A_{n1} & A_{n2} & \dots & A_{np} & B_{n1} & B_{n2} & \dots & B_{nq} \\
+    \end{array}\right) 
+    \\
+    &= 
+    \begin{pmatrix}
+    \sum_{i=1}^{n}M_{1i}A_{i1}& \dots& \sum_{i=1}^{n}M_{1i}A_{ip}& \sum_{i=1}^{n}M_{1i}B_{i1}& \dots& \sum_{i=1}^{n}M_{1i}B_{iq}& \\
+    \sum_{i=1}^{n}M_{2i}A_{i1}& \dots& \sum_{i=1}^{n}M_{2i}A_{ip}& \sum_{i=1}^{n}M_{2i}B_{i1}& \dots& \sum_{i=1}^{n}M_{2i}B_{iq}& \\
+    \vdots& \ddots& \vdots& \vdots & \ddots & \vdots& \\
+    \sum_{i=1}^{n}M_{mi}A_{i1}& \dots& \sum_{i=1}^{n}M_{mi}A_{ip}& \sum_{i=1}^{n}M_{mi}B_{i1}& \dots& \sum_{i=1}^{n}M_{mi}B_{iq}& \\
+    \end{pmatrix}
+    \end{split}\end{equation} \tag*{}
     $$
+
+    $m \times p$ 행렬 $MA$ 와 $m \times q$ 행렬 $MB$ 는 다음과 같다.
+
+    $$ MA = 
+    \begin{pmatrix}
+    M_{11}&M_{12}&\dots&M_{1n}\\
+    M_{21}&M_{22}&\dots&M_{2n}\\
+    \vdots& \vdots& \ddots& \vdots \\
+    M_{m1}&M_{m2}&\dots&M_{mn}\\
+    \end{pmatrix}
+    \begin{pmatrix}
+    A_{11}&A_{12}&\dots&A_{1p}\\
+    A_{21}&A_{22}&\dots&A_{2p}\\
+    \vdots& \vdots& \ddots& \vdots \\
+    A_{n1}&A_{n2}&\dots&A_{np}\\
+    \end{pmatrix} = 
+    \begin{pmatrix}
+    \sum_{i=1}^{n}M_{1i}A_{i1}& \dots& \sum_{i=1}^{n}M_{1i}A_{ip} \\
+    \sum_{i=1}^{n}M_{2i}A_{i1}& \dots& \sum_{i=1}^{n}M_{2i}A_{ip} \\
+    \vdots& \ddots& \vdots& \\
+    \sum_{i=1}^{n}M_{mi}A_{i1}& \dots& \sum_{i=1}^{n}M_{mi}A_{ip}\\
+    \end{pmatrix}
+    $$
+
+    $$ MB = 
+    \begin{pmatrix}
+    M_{11}&M_{12}&\dots&M_{1n}\\
+    M_{21}&M_{22}&\dots&M_{2n}\\
+    \vdots& \vdots& \ddots& \vdots \\
+    M_{m1}&M_{m2}&\dots&M_{mn}\\
+    \end{pmatrix}
+    \begin{pmatrix}
+    B_{11}&B_{12}&\dots&B_{1q}\\
+    B_{21}&B_{22}&\dots&B_{2q}\\
+    \vdots& \vdots& \ddots& \vdots \\
+    B_{n1}&B_{n2}&\dots&B_{nq}\\
+    \end{pmatrix} = 
+    \begin{pmatrix}
+    \sum_{i=1}^{n}M_{1i}B_{i1}& \dots& \sum_{i=1}^{n}M_{1i}B_{iq} \\
+    \sum_{i=1}^{n}M_{2i}B_{i1}& \dots& \sum_{i=1}^{n}M_{2i}B_{iq} \\
+    \vdots& \ddots& \vdots& \\
+    \sum_{i=1}^{n}M_{mi}B_{i1}& \dots& \sum_{i=1}^{n}M_{mi}B_{iq}\\
+    \end{pmatrix}
+    $$
+
+    따라서 다음이 성립한다.
+
+    $$ M(A|B) = (MA|MB) \tag*{■} $$
+
+!!! tldr ""
+
+    $n \times n$ 가역행렬 $A$ 와 첨가행렬 $(A|I_n)$ 에 대하여 다음이 성립한다.
+    
+    1. $(A|I_n)$ 에 유한 번의 기본행연산을 적용하여 첨가행렬 $(I_n|B)$ 을 얻을 수 있다면, $A$ 의 역행렬이 존재하고 $B = A ^{-1}$ 이다.
+
+    2. $(A|I_n)$ 에 유한 번의 기본행연산을 적용하여 첨가행렬 $(I_n|B)$ 을 얻을 수 없다면, $A$ 의 역행렬이 존재하지 않고 처음 $n$ 개의 성분이 모두 $0$ 인 행을 가진 행렬을 얻는다. 
+
+- 증명
+
+    1:
+
+    $n \times n$ 가역행렬 $A$ 에 대하여 $n \times 2n$ 첨가행렬 $C = (A|I_n)$ 을 가정하자. [문제 3.2-15]() 에 의하여 다음이 성립한다. 
+
+    $$ A ^{-1}C = (A ^{-1}A|A ^{-1}I_n) = (I_n | A ^{-1}) $$
+
+    [정리 3.6 따름정리 3](#18150efeb) 에 의하여 $A ^{-1}$ 은 기본행렬의 곱이다. $A ^{-1} = E_p \dots E_1$ 으로 두면 다음이 성립한다. 
+
+    $$ A ^{-1}C = E_p \dots E_1 C = E_p \dots E_1 (A|I_n) = (I_n | A ^{-1}) $$
+
+    기본행렬을 좌측에 곱하는 것은 기본행연산을 적용하는 것이므로 이 결과를 다음과 같이 정리할 수 있다. 
+
+    **$A$ 가 $n \times n$ 가역행렬이면 행렬 $(A|I_n)$ 에 기본행연산을 유한 번 적용하여 $(I_n|A ^{-1})$ 으로 변형할 수 있다.** ▲ 
+
+    역으로 가역행렬 $A$ 에 대하여 $(A|I_n)$ 에 기본행연산을 유한 번 적용하여 $(I_n|B)$ 로 변형할 수 있는 $n \times n$ 행렬 $B$ 가 존재한다고 하면, [정리 3.1](#1c860f354) 에 의하여 기본행연산들을 기본행렬 $E_1, \dots, E_p$ 로 나타낼 수 있으므로 다음이 성립한다. 
+
+    $$ E_p \dots E_1 (A|I_n) = (I_n | B) $$
+
+    $M = E_p \dots E_1$ 로 두면 [문제 3.2-15]() 에 의하여 다음이 성립한다. 
+
+    $$ M(A|I_n) = (MA|M) = (I_n | B) $$
+
+    따라서 [$MA = I_n, M = B$ 이므로 $M = B = A ^{-1}$](../LinearTransformation/#0d6999da9) 이다. 이 결과를 다음과 같이 정리할 수 있다. 
+
+    **$n \times n$ 가역행렬 $A$ 에 대하여 첨가행렬 $(A|I_n)$ 에 기본행연산을 유한번 적용하여 $(I_n|B)$ 로 변형할 수 있으면 $B = A ^{-1}$ 이다.** ■ 
+
+    2:
+
+    [$A$ 가 가역이 아니면 $\text{rank} (A) < n$ 이다](#f94f2d598). 또한 기본행연산으로 $(A|I_n)$ 을 $(I_n|B)$ 로 변형할 수 없다. [기본행연산은 행렬의 랭크를 보존하므로](#108500177) $\text{rank} (A) = n$ 이 되는데 이는 모순이기 때문이다. 이때 $A$ 를 변형하면 모든 성분이 $0$ 인 행을 포함하는 행렬을 얻는다. 
+
+    아래의 예시를 살펴보자. 
+
+- 예시 
+
+    행렬 $A = \begin{pmatrix} 0&2&4\\ 2&4&2\\ 3&3&1\\ \end{pmatrix}$ 에 대하여 $(A|I_n)$ 을 $(I_n|A ^{-1})$ 로 변형시켜보자. 
+
+    $$ 
+    \begin{pmatrix}
+    0&2&4&1&0&0\\
+    2&4&2&0&1&0\\
+    3&3&1&0&0&1\\
+    \end{pmatrix} \to 
+    \begin{pmatrix}
+    2&4&2&0&1&0\\
+    0&2&4&1&0&0\\
+    3&3&1&0&0&1\\
+    \end{pmatrix} \to 
+    \begin{pmatrix}
+    1&2&1&0&\frac{1}{2}&0\\
+    0&2&4&1&0&0\\
+    3&3&1&0&0&1\\
+    \end{pmatrix} \to 
+    $$ 
+
+    $$
+    \begin{pmatrix}
+    1&2&1&0&\frac{1}{2}&0\\
+    0&2&4&1&0&0\\
+    0&-3&-2&0&-\frac{3}{2}&1\\
+    \end{pmatrix} \to \dots \to 
+    \begin{pmatrix}
+    1&0&0&\frac{1}{8}&-\frac{1}{8}&\frac{3}{4}\\
+    0&1&0&-\frac{1}{4}&\frac{3}{4}&-\frac{1}{2}\\
+    0&0&1&\frac{3}{8}&-\frac{3}{8}&\frac{1}{4}\\
+    \end{pmatrix} 
+    $$
+
+    따라서 $A$ 의 역행렬은 다음과 같다. 
+
+    $$ A ^{-1} =
+    \begin{pmatrix}
+    \frac{1}{8}&-\frac{1}{8}&\frac{3}{4}\\
+    -\frac{1}{4}&\frac{3}{4}&-\frac{1}{2}\\
+    \frac{3}{8}&-\frac{3}{8}&\frac{1}{4}\\
+    \end{pmatrix} 
+    $$
+
+- 예시 
+
+    행렬 $A = \begin{pmatrix}
+    1&2&1\\
+    2&1&-1\\
+    1&5&4\\
+    \end{pmatrix}$ 에 대하여 $(A|I_n)$ 을 $(I_n|A ^{-1})$ 로 변형시켜보자. 
+
+    $$ 
+    \begin{pmatrix}
+    1&2&1&1&0&0\\
+    2&1&-1&0&1&0\\
+    1&5&4&0&0&1\\
+    \end{pmatrix} \to \dots \to 
+    \begin{pmatrix}
+    1&2&1&1&0&0\\
+    0&-3&-3&-2&1&0\\
+    0&0&0&-3&1&1\\
+    \end{pmatrix} 
+    $$ 
+
+    마지막 행렬의 3행의 앞쪽 $n = 3$ 개의 성분이 모두 $0$ 인 행을 가진 행렬을 얻었다. 따라서 $A$ 의 역행렬은 존재하지 않는다.
+
+- 이 정리로써 행렬이 가역인지 판단하고, 가역이면 역행렬을 구할 수 있다. 그런데 [정리 2.18](../LinearTransformation/#b7bc62d0d) 로써 선형변환의 가역성과 행렬의 가역성이 연결되었었다. 따라서 이 정리를 기반으로 선형변환의 가역성과 역변환도 밝힐 수 있다.
+
+    - 예시 
+
+        선형변환 $\mathbf{T} : \mathbf{P}_{2}(\R) \to \mathbf{P}_{2}(\R)$ 이 다음과 같이 정의되었다고 하자. 
+
+        $$ \mathbf{T} (f(x)) = f(x) + f'(x) + f''(x) $$
+
+        $\mathbf{P}_{2}(\R)$ 의 표준 순서기저를 $\beta = \{1, x, x ^{2}\}$ 라고 하면 [선형변환의 행렬표현](../LinearTransformation/#9a08985c1) 에 의하여 다음이 성립한다.
+
+        $$ f(1) = 1 = 1 \cdot 1 + 0 \cdot x + 0 \cdot x ^{2} $$
+
+        $$ f(x) = 1 = 1 \cdot 1 + 1 \cdot x + 0 \cdot x ^{2} $$
+
+        $$ f(x ^{2}) = 1 = 2 \cdot 1 + 2 \cdot x + 1 \cdot x ^{2} $$
+
+        $$ [\mathbf{T} ]_{\beta } = \begin{pmatrix} 1&1&2\\ 0&1&2\\ 0&0&1\\ \end{pmatrix} $$
+
+        본 정리의 방법을 사용하여 $([\mathbf{T} ] _{\beta }|I_3)$ 를 $(I_3 | ([\mathbf{T} ]_{\beta } )^{-1})$ 으로 변형하면 다음을 얻는다.
+
+        $$ ([\mathbf{T} ]_{\beta }) ^{-1} = \begin{pmatrix} 1&-1&0\\ 0&1&-2\\ 0&0&1\\ \end{pmatrix} $$
+
+        즉, $([\mathbf{T} ]_{\beta }) ^{-1}$ 는 가역이다. 그러면 [정리 2.18 따름정리 1](../LinearTransformation/#b7bc62d0d) 에 의하여 $\mathbf{T}$ 도 가역이고 $([\mathbf{T} ]_{\beta }) ^{-1} = [\mathbf{T} ^{-1}] _{\beta }$ 이다.
+
+        그러면 스칼라 $a_0, a_1, a_2$ 와 [정리 2.14](../LinearTransformation/#93b3bc7a2) 에 의하여 다음을 얻는다. 
+
+        $$ [\mathbf{T} ^{-1}(a_0 + a_1x + a_2 x ^{2})] _{\beta } = \begin{pmatrix} 1&-1&0\\ 0&1&-2\\ 0&0&1\\ \end{pmatrix} \begin{pmatrix} a_0\\ a_1\\ a_2\\ \end{pmatrix} = \begin{pmatrix} a_0-a_1\\ a_1-2a_2\\ a_2\\ \end{pmatrix} $$
+
+        따라서 다음과 같이 $\mathbf{T}$ 의 역변환까지 알 수 있다.
+
+        $$ \mathbf{T} ^{-1}(a_0 + a_1x + a_2x ^{2}) = (a_0 - a_1) + (a_1 - 2a_2)x + a_2 x ^{2} $$
