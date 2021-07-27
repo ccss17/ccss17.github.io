@@ -1,3 +1,6 @@
+!!! info "ref"
+
+    Stephen H. Friedberg, Linear Algebra, 4th Edition
 
 > metadata pass
 
@@ -83,11 +86,27 @@
 
 !!! tldr ""
 
-    $n \times n$ 행렬이 가역이기 위한 필요충분조건은 행렬의 랭크가 $n$ 인 것이다. 
+    $n \times n$ 행렬 $A$ 에 대하여 다음은 동치이다.
+    
+    - $A$ 는 가역이다.
+    
+    - $\text{rank} (A) = n$
 
 - 증명 
 
     $n \times n$ 행렬 $A$ 와 $\mathbf{L}_{A}: \mathbf{F} ^{n} \to \mathbf{F} ^{n}$ 는 [정리 2.18 따름정리 2](../LinearTransformation/#80bc2f76a) 에 의하여 $A$ 가 가역인 것과 $\mathbf{L}_{A}$ 가 가역인 것은 동치이다. [$\mathbf{L}_{A}$ 가 가역인 것과 $\text{rank} (\mathbf{L}_{A}) = \dim (\mathbf{F} ^{n}) = n$ 인 것은 동치이다](../LinearTransformation/#87356d7a4). 그러므로 행렬의 랭크의 정의에 의하여 $\text{rank} (A) = n$ 인 것과 $A$ 가 가역인 것은 동치이다. ■ 
+
+- "$n \times n$ 가역행렬의 랭크는 $n$ 이다" 의 증명
+
+    $A$ 가 $n \times n$ 가역행렬이면 다음이 성립한다. 
+
+    $$ A ^{-1}A = A ^{-1}A = I_n $$
+
+    [정리 3.4](#802aee216) 는 임의의 행렬에 가역행렬을 곱하는 것이 행렬의 랭크를 보존한다는 것을 말해준다. 이는 역으로 가역행렬이 곱해진 행렬곱에 가역행렬을 제거해도 행렬의 랭크가 보존됨을 뜻한다. 따라서 다음이 성립한다.
+
+    $$ \text{rank} (I_n) = \text{rank} (A ^{-1}A) = \text{rank} (A) $$
+
+    항등행렬 $I_n$ 의 랭크는 $n$ 이다. ■ 
 
 !!! tldr "정리 3.3"
 
@@ -195,11 +214,37 @@
 
     다음 행렬 $B$ 에 대하여 $\text{rank} (B) = r \implies \text{rank} (B') = r-1$ 이다.
 
-    $$ B = \left(\begin{array}{c|ccc} 0 & 0 & \dots & 0 \\ \hline 0 & & & \\ \vdots  & & B' & \\ 0 & & & \\ \end{array}\right) $$
+    $$ B = \left(\begin{array}{c|ccc} 1 & 0 & \dots & 0 \\ \hline 0 & & & \\ \vdots  & & B' & \\ 0 & & & \\ \end{array}\right) $$
 
 - 증명
 
+    다음과 같은 행렬 $B$ 의 1열은 다른 1열의 일차결합으로 표현될 수 없으므로 극대 일차독립 집합에 포함된다. 
 
+    $$ B = \begin{pmatrix}
+    1&0&\dots&0\\
+    0&B_{22}&\dots&B_{2n}\\
+    \vdots& \vdots& \ddots& \vdots \\
+    0&B_{n2}&\dots&B_{nn}\\
+    \end{pmatrix}
+    $$
+
+    따라서 행렬 $B$ 의 랭크는 다음 행렬 $B'$ 의 극대 일차독립 집합의 기수에 $1$ 을 더한 것이다. 즉, $1 + \text{rank} (B') = \text{rank} (B)$ 이다.
+
+    $$ B' = \begin{pmatrix} B_{22}&\dots&B_{2n}\\ \vdots& \ddots& \vdots \\ B_{n2}&\dots&B_{nn}\\ \end{pmatrix} $$
+
+    그러므로 $\text{rank} (B) = r \implies \text{rank} (B') = r-1$ 이다.
+
+!!! tldr ""
+
+    다음과 같은 $m \times n$ 행렬 $B'$ 와 $D$, 그리고 $(m + 1) \times (n + 1)$ 행렬 $B$ 와 $D$ 에 대하여 $B'$ 에 기본연산을 유한 번 적용하여 그것을 $D'$ 로 변환할 수 있으면, $B$ 에 기본연산을 유한 번 적용하여 그것을 $D$ 로 변환할 수 있다.
+
+    $$ B = \left(\begin{array}{c|ccc} 1 & 0 & \dots & 0 \\ \hline 0 & & & \\ \vdots & & B' & \\ 0 & & & \\ \end{array}\right), D = \left(\begin{array}{c|ccc} 1 & 0 & \dots & 0 \\ \hline 0 & & & \\ \vdots & & D' & \\ 0 & & & \\ \end{array}\right) $$
+
+- 증명
+
+    $B'$ 를 $D'$ 로 바꾸는 기본연산을 $B$ 에 동일하게 적용해도 $B$ 의 1행과 1열은 각각 보존된다. 그러므로 $B$ 에 기본연산을 유한번 적용하여 $D$ 로 변환할 수 있다.
+
+    더 나아가서 그 기본연산은 $B'$ 을 $D'$ 으로 변환시키는 기본연산과 같다.
 
 !!! tldr "정리 3.6"
 
@@ -208,6 +253,8 @@
     1. $r \leq m, r \leq n$
 
     2. 유한 번의 기본행[열]연산으로 항등행렬 $I_r$ 영행렬 $O_1, O_2, O_3$ 에 대하여 $A$ 를 행렬 $D = \begin{pmatrix} I_r&O_1\\ O_2&O_3\\ \end{pmatrix}$ 로 바꿀 수 있다.
+
+    3. $\text{rank} (A) = \text{rank} (D)$
 
 - 지금 정리 3.5 로부터 계속 하고 있는 일은 행렬의 랭크를 쉽게 구할 수 있도록 행렬의 랭크를 보존하면서 변형시킬 수 있는 방법들을 정리하는 것이다.
 
@@ -239,7 +286,7 @@
 
     $$ A \to \begin{pmatrix} 1&0&\dots&0\\ \end{pmatrix} = D = \begin{pmatrix} I_1&O_1\\ \end{pmatrix} $$
 
-    [정리 3.4 따름정리](#108500177) 와 정리 3.5 에 의하여 $\text{rank} (A) = 1$ 이다. ▲ 
+    [정리 3.4 따름정리](#108500177) 와 [정리 3.5](#0ce821e3f) 에 의하여 $\text{rank} (A) = 1$ 이다. ▲ 
 
     $m > 1$ 일 때 $m - 1$ 에 대하여 성립한다는 것을 가정하자. $A$ 가 $m \times  m$ 행렬이라고 하자. $n = 1$ 이면 $m = 1$ 일 때의 증명과 비슷하게 증명이 끝난다. ▲ 
 
@@ -248,3 +295,118 @@
     그러면 기본행연산 3형과 기본열연산 3형을 통하여 1행과 1열에서 1행 1열 성분을 제외하고 모두 다 $0$ 으로 만들 수 있다. 즉, $A \neq O$ 에 기본연산을 유한번 적용하여 다음 행렬 $B$ 를 얻는다. 
     
     $$ B = \left(\begin{array}{c|ccc} 1 & 0 & \dots & 0 \\ \hline 0 &   & & \\ \vdots  & & B' & \\ 0 & & & \\ \end{array}\right) $$
+
+    그러면 [$\text{rank} (B') = \text{rank} (B) - 1 = \text{rank} (A) - 1 = r - 1$ 이다](#fa846233d). 
+    
+    $m - 1$ 에 대하여 본 정리가 성립한다는 가정에 의하여 $r - 1 \leq m - 1, r - 1 \leq n - 1$ 이므로 $r \leq m, r \leq n$ 이다.
+
+    $m - 1$ 에 대하여 본 정리가 성립한다는 가정에 의하여 $(m - 1) \times (n - 1)$ 행렬인 $B'$ 에 대하여 본 정리가 성립하므로 $B'$ 를 영행령 $O_4, O_5, O_6$ 에 대하여 다음과 같은 행렬로 바꿀 수 있다. 
+
+    $$ D' = \begin{pmatrix} I _{r-1} & O_4\\ O_5 & O_6\\ \end{pmatrix} $$
+
+    이때 행렬 $D$ 를 다음과 같이 두자. 
+
+    $$ D = \left(\begin{array}{c|ccc} 1 & 0 & \dots & 0 \\ \hline 0 & & & \\ \vdots & & D' & \\ 0 & & & \\ \end{array}\right) $$
+
+    $B$ 에 기본연산을 유한번 적용하여 $D$ 를 얻을 수 있다면 증명이 끝난다. 본 정리가 $m - 1$ 에 대해서는 성립하므로 [$B'$ 에 기본연산을 유한 번 적용하여 그것을 $D'$ 으로 바꿀 수 있다. 그러므로 $B$ 에 기본연산을 유한번 적용하여 $D$ 로 바꿀 수 있다](#bb65cc453).
+
+    $A$ 에 기본연산을 적용하여 그것을 $B$ 로 변환할 수 있으므로 결국 $A$ 에 기본연산을 적용하여 그것을 $D$ 로 바꿀 수 있다. ▲ 
+
+    3) 은 [정리 3.4 따름정리](#108500177) 에서 바로 나온다. ■ 
+
+!!! tldr "정리 3.6 따름정리 1"
+
+    $A \in \mathbf{M}_{m \times n}, \text{rank} (A) = r$ 인 행렬 $A$ 에 대하여 다음을 만족하는 $m \times m$ 가역행렬 $B$ 와 $n \times n$ 가역행렬 $C$ 가 존재한다. 
+
+    $$ D = \begin{pmatrix} I_r&O_1\\ O_2&O_3\\ \end{pmatrix} = BAC $$
+
+- 증명
+
+    정리 3.6 은 $A$ 에 기본연산을 적용하여 그것을 $D$ 로 변환시킬 수 있음을 말해준다. 이때 [정리 3.1](#1c860f354) 에 의하여 기본행연산은 $A$ 의 우측에 곱해지는 행렬곱으로, 기본열연산은 $A$ 의 좌측에 곱해지는 행렬곱으로 표현가능하다. 즉, $m \times m$ 기본행렬 $E_1, E_2, \dots, E_p$ 와 $n \times n$ 기본행렬 $G_1, G_2, \dots, G_q$ 에 대하여 다음이 성립한다. 
+
+    $$ D = E_p E _{p-1} \dots E_2 E_1 A G_1 G_2 \dots G_q $$
+
+    [문제 2.4 - 4](../LinearTransformation/#843e52544) 에 의하여 다음과 같은 행렬 $B, C$ 는 가역이다.
+
+    $$ B = E_p E _{p-1} \dots E_2 E_1 $$
+
+    $$ C = G_1 G_2 \dots G_q $$
+
+    또한 $D = BAC$ 이다. ■ 
+
+!!! tldr "정리 3.6 따름정리 2"
+
+    $m \times n$ 행렬 $A$ 에 대하여 다음이 성립한다.
+
+    1. $\text{rank} (A ^{t}) = \text{rank} (A)$
+
+    2. 임의의 행렬의 랭크는 행들로 구성된 극대 일차독립 집합의 기수이다. 행렬의 랭크는 그 행에 의해 생성된 부분공간의 차원이다.
+
+    3. 임의의 행렬의 행과 열은 차원이 같은 부분공간을 생성한다. 차원은 행렬의 랭크와 같다.
+
+- 증명
+
+    정리 3.6 따름정리 1 에 의하여 $D = BAC$ 인 가역행렬 $B, C$ 가 존재한다. 이 행렬의 전치는 다음과 같다. 
+
+    $$ D ^{t} = (BAC) ^{t} = C ^{t}A ^{t}B ^{t} $$
+
+    [문제 2.4-5](../LinearTransformation/#a3809d4dc) 에 의하여 $B ^{t}, C ^{t}$ 는 가역이다. [정리 3.4](#802aee216) 에 의하여 다음이 성립한다. 
+
+    $$ \text{rank} (A ^{t}) = \text{rank} (C ^{t}A ^{t}B ^{t}) = \text{rank} (D ^{t}) $$
+
+    $\text{rank} (A) = r$ 이라고 하자. $D ^{t}$ 는 $n \times m$ 행렬로써 $D$ 의 전치이므로 영행렬 $O, O', O''$ 에 대하여 다음의 꼴이다.
+
+    $$ D ^{t} = \begin{pmatrix} I_r&O\\ O'&O''\\ \end{pmatrix} $$
+
+    정리 3.6 에 의하여 $\text{rank} (A) = r = \text{rank} (D)$ 인데 $D$ 의 전치는 $I_r$ 을 보존하므로 [정리 3.5](#0ce821e3f) 에 의하여 $\text{rank} (D) = \text{rank} (D ^{t})$ 이다. 따라서 다음이 성립한다. 
+
+    $$ \text{rank} (A ^{t}) = \text{rank} (D ^{t}) = r = \text{rank} (A) $$
+
+    이로써 1) 이 증명되었다. ▲ 
+
+    2) 는 행렬의 열에 대한 극대 일차독립 집합에 대한 [정리 3.5](#0ce821e3f) 를 단지 행에 대한 극대 일차독립 집합에 대한 명제로 바꾼 것이다. 정리 3.5 와 1) 이 참이라면 2) 는 1) 에서 바로 나온다. ▲ 
+
+    3) 은 정리 3.5 와 2) 에서 바로 나온다. ■ 
+
+!!! tldr "정리 3.6 따름정리 3"
+
+    가역행렬은 기본행렬의 곱이다.
+
+- 증명
+
+    $n \times n$ 가역행렬 $A$ 의 랭크는 $n$ 이다. 정리 3.6 따름정리 1 은 $A$ 를 $D$ 로 변환했을 때 $D = I_n$ 임을 말해준다. 그러면 $I_n = BAC$ 인 가역행렬 $B, C$ 가 존재한다.
+
+    정리 3.6 따름정리 1 의 증명과정에 의하면 가역행렬 $B, C$ 은 다음과 같은 기본행렬의 곱이다.
+
+    $$ B = E_p E _{p-1} \dots E_2 E_1 $$
+
+    $$ C = G_1 G_2 \dots G_q $$
+
+    따라서 $A = B ^{-1}I_n C ^{-1} = B ^{-1}C ^{-1}$ 이고, [문제 2.4-4](../LinearTransformation/#e53147e37) 에 의하여 다음이 성립한다. 
+
+    $$ A = E_1 ^{-1} E _2  ^{-1}\dots E_p  ^{-1} G_q ^{-1} G _{q-1}  ^{-1}\dots G_1  ^{-1} $$
+
+    [정리 3.2](#c576bf96c) 에 의하여 기본행렬의 역행렬도 기본행렬이다. 그러므로 $A$ 는 기본행렬의 곱이다. ■ 
+
+!!! tldr "정리 3.7"
+
+    유한차원 벡터공간 $\mathbf{V} , \mathbf{W} , \mathbf{Z}$ 사이에 정의 된 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 와 행렬곱 $AB$ 이 정의된 두 행렬 $A, B$ 에 대하여 다음이 성립한다. 
+
+    1. $\text{rank} (\mathbf{U} \mathbf{T} ) \leq \text{rank} (\mathbf{U} )$
+
+    2. $\text{rank} (\mathbf{U} \mathbf{T} ) \leq \text{rank} (\mathbf{T} )$
+
+    3. $\text{rank} (AB ) \leq \text{rank} (A)$
+
+    4. $\text{rank} (AB ) \leq \text{rank} (B)$
+
+- 증명
+
+    $\mathbf{R} (\mathbf{T}) \subseteq \mathbf{W}$ 이므로 다음이 성립한다. 
+
+    $$ \mathbf{R} (\mathbf{U}\mathbf{T} ) = \mathbf{U} \mathbf{T} (\mathbf{V} ) = \mathbf{U} (\mathbf{T} (\mathbf{V} )) = \mathbf{U} (\mathbf{R} (\mathbf{T}) ) \subseteq \mathbf{U} (\mathbf{W} ) = \mathbf{R} (\mathbf{U}) $$
+
+    따라서 $\text{rank} (\mathbf{U} \mathbf{T} )$ 는 다음과 같다. 
+
+    $$ \text{rank} (\mathbf{U} \mathbf{T} )  = \dim (\mathbf{R} (\mathbf{U}\mathbf{T} ) )
+    $$

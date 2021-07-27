@@ -1,6 +1,6 @@
 !!! info "ref"
 
-    [프리드버그 선형대수학](https://book.naver.com/bookdb/book_detail.nhn?bid=16374070)
+    Stephen H. Friedberg, Linear Algebra, 4th Edition
 
 # 체
 
