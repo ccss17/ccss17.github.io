@@ -20,7 +20,7 @@
 
 !!! tldr ""
 
-    $n \times n$ 기본행렬(elementary matrix) : 항등행렬 $I_n$ 에 기본연산을 적용하여 얻은 행렬이다.
+    기본행렬(elementary matrix) : 항등행렬에 기본연산을 적용하여 얻은 행렬이다.
 
 - $I_n$ 에 1형, 2형, 3형 연산을 하여 얻은 행렬을 각각 1형, 2형, 3형이라 한다.
 
@@ -689,3 +689,43 @@
         따라서 다음과 같이 $\mathbf{T}$ 의 역변환까지 알 수 있다.
 
         $$ \mathbf{T} ^{-1}(a_0 + a_1x + a_2x ^{2}) = (a_0 - a_1) + (a_1 - 2a_2)x + a_2 x ^{2} $$
+
+!!! tldr ""
+
+    $u, v \in \mathbf{F} ^{2}$ 에 대한 $\{u, v\}$ 와 행렬 $\begin{pmatrix} u\\ v\\ \end{pmatrix}$ 에 대하여 다음이 성립한다.
+
+    1. $\{u, v\}$ 가 일차독립이면 행렬 $\begin{pmatrix} u\\ v\\ \end{pmatrix}$ 은 가역이다.
+
+    2. $\{u, v\}$ 가 일차종속이면 행렬 $\begin{pmatrix} u\\ v\\ \end{pmatrix}$ 은 가역이 아니다.
+
+- 증명
+
+    1:
+
+    $u = (a_1, a_2), v = (b_1, b_2), A = \begin{pmatrix} a_1&a_2\\ b_1&b_2\\ \end{pmatrix}$ 라고 하자. $\{u, v\}$ 가 일차독립이라는 가정으로부터 다음이 성립한다.
+
+    $$ c_1(a_1, a_2) + c_2(b_1, b_2) = 0 \implies c_1 = c_2 = 0 $$
+
+    이는 다음이 성립함을 뜻한다. 
+    
+    $$a_1 \neq 0 \land b_1 \neq 0$$ 
+    
+    $$a_2 \neq 0 \land b_2 \neq 0$$ 
+
+    그러므로 다음이 성립한다.
+
+    $$ \begin{pmatrix} a_1&a_2\\ b_1&b_2\\ \end{pmatrix} \to \begin{pmatrix} a_1b_1&a_2b_1\\ a_1b_1&a_1b_2\\ \end{pmatrix} \to \begin{pmatrix} a_1b_1&a_2b_1\\ 0&a_1b_2 - a_1b_1\\ \end{pmatrix} \to \begin{pmatrix} 1& \frac{a_2b_1}{a_1b_1} \\ 0&1\\ \end{pmatrix} \to I_2 $$
+
+    [유한번의 기본행연산으로 $A$ 를 항등행렬로 변환하였으므로 $A$ 는 가역이다](MatrixOperation/#01cc5fcfe). 
+
+    2:
+
+    $\{u, v\}$ 가 일차종속이라는 가정으로부터 다음이 성립한다.
+
+    $$ v = cu $$
+
+    그러므로 다음이 성립한다.
+
+    $$ A = \begin{pmatrix} a_1&a_2\\ b_1&b_2\\ \end{pmatrix}  =\begin{pmatrix} a_1&a_2\\ ca_1&ca_2\\ \end{pmatrix} \to \begin{pmatrix} a_1&a_2\\ 0&0\\ \end{pmatrix} $$
+
+    [$A$ 를 항등행렬로 변환할 수 없으므로 $A$ 는 가역이 아니다](MatrixOperation/#01cc5fcfe). 
