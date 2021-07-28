@@ -170,7 +170,7 @@
 
     $$ \delta \begin{pmatrix} a&b\\ c&d\\ \end{pmatrix} = ad - bc $$
 
-    그러므로 $\delta = \det$ 이다. 그러므로 $A \in \mathbf{M}_{2 \times 2}\mathbf{F} : \delta (A) = \det(A)$ 이다. 조건 1) 은 이것의 특수한 경우이다. ▲ 
+    그러므로 $\delta = \det$ 이다. 그러므로 $A \in \mathbf{M}_{2 \times 2}(\mathbf{F}) : \delta (A) = \det(A)$ 이다. 조건 1) 은 이것의 특수한 경우이다. ▲ 
 
     조건 2) 는 $\det(AB) = \det(A) \det(B)$ 에서 바로 나온다. ■ 
 
