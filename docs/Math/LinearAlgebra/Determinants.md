@@ -204,9 +204,7 @@
 
 !!! tldr ""
 
-    $u, v$ 의 평행사변형의 넓이 $\mathcal{A} \begin{pmatrix} u\\ v\\ \end{pmatrix}$ 에 대하여 다음이 성립한다. 
-
-    $$ \mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix} = \mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix} \cdot \det\begin{pmatrix} u\\ v\\ \end{pmatrix} = \bigg |\det\begin{pmatrix} u\\ v\\ \end{pmatrix} \bigg | $$
+    $u, v$ 의 평행사변형의 넓이는 $\bigg |\det\begin{pmatrix} u\\ v\\ \end{pmatrix} \bigg |$ 이다.
 
 - 예시 
 
@@ -218,7 +216,11 @@
 
 - 증명
 
-    $\mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix} = \pm 1$ 이므로 본 정리에 이것을 곱한 식인 다음을 증명해도 된다.
+    $u, v$ 의 평행사변형의 넓이를 $\mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix}$ 라고 두면 향(orientation)의 정의에 의하여 본 정리는 다음과 같다.
+
+    $$ \mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix} = \bigg |\det\begin{pmatrix} u\\ v\\ \end{pmatrix} \bigg | = \mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix} \cdot \det\begin{pmatrix} u\\ v\\ \end{pmatrix} $$
+
+    $\mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix} = \pm 1$ 이므로 이것을 곱한 식인 다음을 증명해도 된다.
 
     $$ \mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix} \mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix} = \det \begin{pmatrix} u\\ v\\ \end{pmatrix} $$
 
