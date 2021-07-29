@@ -337,6 +337,14 @@
 
     $$ \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ u+kv\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} = \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ u\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} + k \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ v\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} $$
 
+- 이 정리는 2형 기본행연산과 행렬식 사이의 관계를 말해준다. 즉, 위 정리에서 $u=0$ 으로 두면 정리 4.3 따름정리에 의하여 다음이 성립한다.
+
+    $$ \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ kv\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} = k \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ v\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} $$
+
+    이는 행렬 $A$ 의 한 행에 스칼라 $k$ 를 곱하여 얻은 행렬 $B$ 에 대하여 다음이 성립함을 의미한다.
+
+    $$ \det(A) = k \det(B) $$
+
 - 증명 
 
     $n = 1$ 일 때 자명하게 성립한다. ▲ 
@@ -463,5 +471,115 @@
 
     $$ \det(A) = \sum_{j=1}^{n}A _{ij} \cdot \det(B_j) $$
 
+    정리 4.3 보조정리 1 은 $i$ 행이 $e_j$ 인 $B_j$ 에 대하여 $\det(B_j) = (-1) ^{i+j}\det(\tilde{B}_{ij})$ 임을 말해준다. $A$ 와 $B_j$ 는 $i$ 행을 제외하고 서로 같기 때문에 $\tilde{B}_{ij}=\tilde{A}_{ij}$ 이다. 그러므로 $\det(B_j) = (-1) ^{i+j}\det(\tilde{A}_{ij})$ 이고, 이에 따라 다음이 성립한다.
+
+
+    $$ \det(A) = \sum_{j=1}^{n}(-1)^{i+j}A _{ij} \cdot \det(\tilde{A}_{ij}) \tag*{■} $$
+
+!!! tldr "정리 4.4 따름정리"
+
+    $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 두 행이 같으면 $\det(A) = 0$ 이다.
+
+- 증명
+
+    $n = 2$ 일 때 자명하게 성립한다. ▲ 
+
+    $n \geq 3$ 일 때 $(n - 1) \times (n - 1)$ 행렬에 대하여 정리가 성립함을 가정하자. 서로 같은 두 행을 $r$행, $s$행이라 하자. $r, s$ 가 아니고 $1 \leq i \leq n$ 인 $i$ 에 대하여 정리 4.4 에 의하여 다음과 같이 $i$행에 대한 여인수 전개를 할 수 있다.
+
+    $$ \det(A) = \sum_{j=1}^{n}(-1)^{i+j}A _{ij} \cdot \det(\tilde{A}_{ij}) $$
+
+    $\tilde{A}_{ij}$ 는 $(n - 1) \times (n - 1)$ 행렬이고 서로 다른 두 행($r$ 행, $s$ 행)이 같으므로 가정에 의하여 $\det(\tilde{A}_{ij}) = 0$ 이다. 그러므로 $\det(A) = 0$ 이다. ■ 
+
+!!! tldr "정리 4.5"
+
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 두 행을 교환하여 얻은 행렬 $B$ 에 대하여 $\det(B) = - \det(A)$ 이다.
+
+- 이 정리는 1형 기본행연산과 행렬식 사이의 관계를 말해준다. 
+
+- 증명
+
+    $A$ 의 행 $a_1, a_2, \dots, a_n$ 에 대하여 $r < s$ 인 $r$행과 $s$ 행을 교환하여 얻은 $B$ 행은 다음과 같다. 
+
+    $$ A = \begin{pmatrix} a_1\\ \vdots \\ a_r\\ \vdots \\ a_s\\ \vdots \\ a_n \\ \end{pmatrix}, B = \begin{pmatrix} a_1\\ \vdots \\ a_s\\ \vdots \\ a_r\\ \vdots \\ a_n \\ \end{pmatrix} $$
+
+    $A$ 의 $r$행, $s$행을 $a_r+a_s$ 로 바꾼 행렬은 정리 4.4 따름정리에 의하여 행렬식이 $0$ 이 된다. 또한 [정리 4.3](#e013b5962) 에 의하여 다음이 성립한다. 
+
+    $$ 0 = \begin{pmatrix} a_1\\ \vdots \\ a_r+a_s\\ \vdots \\ a_r+a_s\\ \vdots \\ a_n \\ \end{pmatrix}= \begin{pmatrix} a_1\\ \vdots \\ a_r\\ \vdots \\ a_r+a_s\\ \vdots \\ a_n \\ \end{pmatrix}+ \begin{pmatrix} a_1\\ \vdots \\ a_s\\ \vdots \\ a_r+a_s\\ \vdots \\ a_n \\ \end{pmatrix} $$
+
+    $$ = \begin{pmatrix} a_1\\ \vdots \\ a_r\\ \vdots \\ a_r\\ \vdots \\ a_n \\ \end{pmatrix}+ \begin{pmatrix} a_1\\ \vdots \\ a_r\\ \vdots \\ a_s\\ \vdots \\ a_n \\ \end{pmatrix}+ \begin{pmatrix} a_1\\ \vdots \\ a_s\\ \vdots \\ a_r\\ \vdots \\ a_n \\ \end{pmatrix}+ \begin{pmatrix} a_1\\ \vdots \\ a_s\\ \vdots \\ a_s\\ \vdots \\ a_n \\ \end{pmatrix} = 0 + \det(A) + \det(B) + 0 $$
+
+    즉, $\det(B) = - \det(A)$ 이다. ■ 
+
+!!! tldr "정리 4.6"
+
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 와 $A$ 의 한 행에 다른 행의 스칼라 배를 더하여 얻은 행렬 $B$ 에 대하여 $\det(B) = \det(A)$ 이다.
+
+- 이 정리는 3형 기본행연산과 행렬식 사이의 관계를 말해준다.
+
+- 증명
+
+    $A$ 의 $s$행에 $r$행의 $k$배를 더하여 얻은 행렬을 $B$ 라 하자.
+
+    $A$ 의 행을 $a_1, a_2, \dots, a_n$, $B$ 의 행을 $b_1, b_2, \dots, b_n$ 이라 하자. 다음이 성립한다.
+
+    $$ \begin{cases}
+    a_i = b_i & i \neq s\\
+    b_s = a_s + ka_r & i = s\\
+    \end{cases} 
+    $$
+
+    $A$ 의 $s$ 행을 $a_r$ 로 바꾼 행렬을 $C$ 라 하면 $\det(C) = 0$ 이다. $B$ 의 $s$행에 [정리 4.3](#e013b5962) 을 적용하면 다음이 성립한다. 
+
+    $$ \det(B) = \det(A) +k \det(C) = \det(A) \tag*{■} $$
+
+!!! tldr "정리 4.6 따름정리"
+
+    $$A \in \mathbf{M}_{n \times n}(\mathbf{F} ) : \text{rank} (A) < n \implies \det(A) = 0 $$
+
+- 정리 4.2 는 $2 \times 2$ 행렬이 가역인 것과 행렬식이 $0$ 이 아닌 것은 동치임을 말해준다. 이는 $n \times n$ 행렬에 일반화된다. 이 정리는 $n \times n$ 행렬이 가역이면 행렬식이 $0$ 이 아님을 말해준다. 정리 4.7 의 따름정리는 그 역을 증명해준다.
+
+- 증명
+
+    행렬 $A$ 의 랭크가 $n$ 미만이면 
+
+    $\text{rank} (A) < n$ 이면 $A$ 의 행 $a_1, a_2, \dots, a_n$ 은 일차종속이다. 그러므로 어떤 행 $a_r$ 을 다음과 같이 다른 행들의 일차결합으로 나타낼 수 있다.
+
+    $$ a_r = c_1a_1 + \dots + c _{r-1}a _{r-1} + c _{r+1}a _{r+1} + \dots + c_na_n $$
+
+    $i \neq r$ 인 $i$ 에 대하여 $A$ 의 $r$행에 $i$행의 $-c_i$ 배를 더하여 얻은 행렬 $B$ 는 $b_r = 0$ 이므로 [정리 4.3 따름정리](#e337b8376)에 의하여 $\det(B) = 0$ 이다. 정리 4.6 에 의하여 $\det(B) = \det(A) = 0$ 이다. ■ 
+
+!!! tldr ""
+
+    기본행연산과 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 행렬식의 관계는 다음과 같다.
+
+    1. $A$ 의 두 행을 교환하여 얻은 행렬 $B$ 에 대하여 $\det(B) = -\det(A)$ 이다.
+
+    2. $A$ 의 한 행에 영이 아닌 스칼라 $k$ 를 곱하여 얻은 행렬 $B$ 에 대하여 $\det(B) = k \det(A)$ 이다.
+
+    3. $A$ 의 한 행에 다른 행의 스칼라 배를 더하여 얻은 행렬 $B$ 에 대하여 $\det(B) = \det(A)$ 이다.
+
+- 증명
+
+    정리 4.3(2형 기본행연산과 행렬식의 관계), 정리 4.5(1형 기본행연산과 행렬식의 관계), 정리 4.6(3형 기본행연산과 행렬식의 관계) 에 의하여 증명된다.
+
+!!! tldr "문제 4.2-23"
+
+    상삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(A) = \text{tr} (A)$ 이다.
+
+- 정사각행렬은 1형과 3형 기본행연산을 통하여 상삼각행렬이 된다. 그러므로 정사각행렬의 행렬식을 쉽게 구할 수 있다.
+
+- 증명
+
+- 예시 
+
+    $A = \begin{pmatrix} 1&3&-3\\ 0&4&-7\\ 0&0&10\\ \end{pmatrix}$  에 대하여 다음이 성립한다.
+
+    $$ \det(A) = \text{tr} (A) = 40 $$
+
+- 지금까지의 정리들은 여인수 전개를 통해 행렬식을 귀납적으로 구하는 것이 매우 번거롭기 때문에 행렬식을 효과적으로 구할 수 있도록 기본연산과 행렬식 간의 관계를 밝히기 위한 것들이었다.
+
+    그리고 이 정리는 상삼각행렬의 행렬식이 대각합으로 매우 쉽게 구해질 수 있다는 것을 말해줌으로써 기본연산의 목표를 상삼각행렬을 만드는 것으로 두는 것이 좋다는 결론을 알려준다.
+
+    $n \times n$ 행렬의 행렬식을 구하기 위해 여인수 전개를 사용하면 $n!$ 번 이상의 곱셈이 필요한데 비해 기본행연산으로 행렬식을 계산하면 $\frac{1}{3}(n ^{3}+2n-3)$ 번의 곱셈이 필요하다.
 
 # 행렬식의 성질
