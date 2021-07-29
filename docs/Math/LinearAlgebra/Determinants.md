@@ -277,6 +277,191 @@
 
     즉, $\delta (I_2) = 1$ 이다. 이로써 모든 증명이 끝났다. ■ 
 
-# n차 정사각행렬의 행렬식
+# 행렬식의 정의
+
+!!! tldr "$\tilde{A}$ 의 정의"
+
+    $n \geq 2$ 일 때 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $A$ 의 $i$ 행과 $j$ 열을 제거하여 얻은 $(n - 1) \times (n - 1)$ 행렬 $\tilde{A} _{ij}$ 라고 한다.
+
+- 예시 
+
+    $$A = \begin{pmatrix} 1&2&3\\ 4&5&6\\ 7&8&9\\ \end{pmatrix} \implies \tilde{A} _{11} = \begin{pmatrix} 5&6\\ 8&9\\ \end{pmatrix}$$
+
+!!! tldr "여인수(cofactor) 의 정의"
+
+    스칼라 $(-1) ^{i+j}\det(\tilde{A}_{ij})$ 를 $A$ 의 $i$ 행 $j$ 열 성분에 대한 여인수라고 한다. 
+
+!!! tldr "여인수 전개(cofactor expansion) 의 정의"
+
+    $A$ 의 $i$ 행에 대한 여인수 전개를 다음과 같이 정의한다.
+
+    $$ \det(A) = \sum_{j=1}^{n}(-1) ^{i + j}A _{ij} \cdot \det(\tilde{A}_{ij}) $$
+
+- 즉, $A$ 의 $i$ 행에 대한 여인수 전개는 $A$ 의 $i$ 행의 각 성분에 여인수를 곱하여 더한 결과이다.
+
+!!! tldr "행렬식(determinant) 의 정의"
+
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 행렬식 $\det: \mathbf{M}_{n \times n}(\mathbf{F} ) \to \mathbf{F}$ 은 다음과 같은 함수이다.
+
+    $$ \det(A) = \begin{cases} A _{11} & n = 1\\ \displaystyle \sum_{j=1}^{n}(-1) ^{1+j}A _{1j} \cdot \det(\tilde{A}_{1j}) &n \geq 2\\ \end{cases} $$
+
+- $A$ 의 $i$ 행 $j$ 열에 대한 여인수를 $c _{ij} = (-1) ^{i + j}\det(\tilde{A}_{ij})$ 로 표기하면 $A$ 의 행렬식을 다음과 같이 표현할 수 있다. 
+
+    $$ \det(A) = \sum_{j=1}^{n}A _{1j}c _{1j} $$
+
+    즉, $A$ 의 행렬식은 $A$ 의 1행의 각 성분에 여인수를 곱하여 더한 결과이다. 이는 행렬의 행렬식이란 1행에 대한 여인수 전개라는 것을 말해준다.
+
+- 예시 
+
+    $A \in \mathbf{M}_{2 \times 2}(\mathbf{F} )$ 에 대한 1행의 여인수 전개는 다음과 같다. 
+
+    $$ \det(A) = A _{11}(-1) ^{1 + 1}\det(\tilde{A}_{11}) + A _{12}(-1) ^{1 + 2}\det(\tilde{A}_{12}) = A _{11}A _{22} - A _{12}A _{21} $$
+
+    $2 \times 2$ 행렬의 행렬식 정의와 같다는 것을 알 수 있다.
+
+!!! tldr ""
+
+    $$ n \in \N : \det(I_n) = 1 $$
+
+- 증명
+
+    $n = 1$ 일 때 $I_n = (1) \implies \det(I_n) = 1$ 이다.
+
+    $n \geq 2$ 일 때 $\det(I _{n-1}) = 1$ 을 가정하자. $I$ 를 $n \times n$ 항등행렬이라고 하자. 그러면 $\tilde{I} _{11} = I _{n-1}$ 이다. 그러므로 다음이 성립한다. 
+
+    $$ \det(I) = (-1) ^{2}(1) \det(\tilde{I}_{11}) + (-1) ^{3}(0) \det(\tilde{I}_{12}) + \dots + (-1) ^{1+n}(0) \det(\tilde{I}_{1n}) = 1 + 0 + \dots + 0 = 1 \tag*{■} $$
+
+!!! tldr "정리 4.3"
+
+    $n \times n$ 행렬의 행렬식은 어떤 행을 제외한 나머지 행들이 고정되었을 때, 그 행에 대하여 선형함수이다. 즉, $1 \leq r \leq n$, 스칼라 $k$, 벡터 $u, v \in \mathbf{F} ^{n}$ 에 대하여 다음이 성립한다.
+
+    $$ \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ u+kv\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} = \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ u\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} + k \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ v\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} $$
+
+- 증명 
+
+    $n = 1$ 일 때 자명하게 성립한다. ▲ 
+
+    $n \geq 2$ 와 $(n - 1) \times (n - 1)$ 행렬에 대하여 성립함을 가정하자. 
+
+    $n \times n$ 행렬 $A$ 의 각 행 $a_1, a_2, \dots, a_n$ 과 $1 \leq r \leq n$ 인 $r$ 과 $u = (b_1, b_2, \dots, b_n), v = (c_1, c_2, \dots, c_n)$ 와 스칼라 $k$ 에 대하여 $a_r = u + kv$ 로 두자. $A$ 의 $r$ 행을 $u, v$ 로 바꾼 행렬을 각각 $B, C$ 로 두면 $\det(A) = \det(B) + k \det(C)$ 를 보이면 증명이 끝난다. 
+
+    $r = 1$ 일 경우를 증명해보자. $A$ 의 1행은 다음과 같다.
+
+    $$ a_1 = u + kv = (b_1+kc_1, b_2+kc_2, \dots, b_n+kc_n)  $$
+
+    이는 $A _{1j} = b_j + kc_j = B _{1j} + k C _{1j}$ 임을 뜻한다. 또한 $A, B, C$ 는 $1$ 행을 제외하고 서로 같으므로 $\tilde{A}_{1j} = \tilde{B}_{1j} = \tilde{C}_{1j} \iff \det(\tilde{A}_{1j}) = \det(\tilde{B}_{1j}) = \det(\tilde{C}_{1j})$ 이다. 그러므로 $\det(A)$ 는 다음과 같다.
+
+    $$ \begin{equation}\begin{split} \det(A) &= \sum_{j=1}^{n}(-1)^{1+j}A _{1j} \cdot \det(\tilde{A}_{1j})  \\ &= \sum_{j=1}^{n}(-1)^{1+j}(B _{1j} + k C _{1j}) \cdot \det(\tilde{A}_{1j})  \\ &= \sum_{j=1}^{n}(-1)^{1+j}B _{1j} \cdot \det(\tilde{A}_{1j}) +  k\sum_{j=1}^{n}(-1)^{1+j}C _{1j} \cdot \det(\tilde{A}_{1j}) \\ &= \sum_{j=1}^{n}(-1)^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j}) +  k\sum_{j=1}^{n}(-1)^{1+j}C _{1j} \cdot \det(\tilde{C}_{1j}) \\ &= \det(B) + k \det(C) \end{split}\end{equation} \tag*{} $$
+
+    그러므로 $n \geq 2, r = 1$ 일 때 $n \times n$ 행렬에 대하여 본 정리가 성립한다. ▲ 
+
+    $r > 1$ 인 경우 $1 \leq j \leq n$ 에 대하여 $\tilde{A}_{1j},\tilde{B}_{1j},\tilde{C}_{1j}$ 는 $r - 1$ 행을 제외한 나머지 행이 서로 같다. $\tilde{A}_{1j}$ 의 $r-1$ 행은 다음과 같다. 
+
+    $$ (b_1+kc_1, \dots, b _{j-1}+kc _{j-1}, b _{j+1} + kc _{j+1}, \dots, b_n + kc_n) $$
+
+    이는 $\tilde{B}_{1j}$ 의 $r-1$ 행과 $\tilde{C}_{1j}$ 의 $r-1$ 행의 $k$ 배와의 합이다. $\tilde{B}_{1j}, \tilde{C}_{1j}$ 는 $(n - 1) \times (n - 1)$ 행렬이므로 가정에 의하여 다음이 성립한다. 
+
+    $$ \det(\tilde{A}_{1j}) = \det(\tilde{B}_{1j}) + k \det(\tilde{C}_{1j}) $$
+
+    $r-1$ 행을 제외하면 $A, B, C$ 는 서로 같으므로 $A _{1j} = B _{1j} = C _{1j}$ 이다. 따라서 $\det(A)$ 는 다음과 같다. 
+
+    $$ \begin{equation}\begin{split} \det(A) &= \sum_{j=1}^{n}(-1) ^{1+j}A _{1j} \cdot \det(\tilde{A}_{1j})  \\ &= \sum_{j=1}^{n}(-1) ^{1+j}A _{1j} \cdot ( \det(\tilde{B}_{1j}) + k\det(\tilde{C}_{1j})) \\ &= \sum_{j=1}^{n}(-1) ^{1+j}A _{1j} \cdot \det(\tilde{B}_{1j}) + k\sum_{j=1}^{n}(-1) ^{1+j} A _{1j} \cdot  \det(\tilde{C}_{1j}) \\ &= \sum_{j=1}^{n}(-1) ^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j}) + k\sum_{j=1}^{n}(-1) ^{1+j} C _{1j} \cdot  \det(\tilde{C}_{1j}) \\ &= \det(B) + k \det(C) \end{split}\end{equation} \tag*{} $$
+
+    그러므로 $n \times n$ 행렬에 대해서도 성립한다. ■ 
+
+!!! tldr "정리 4.3 따름정리"
+
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 어느 행의 모든 성분이 $0$ 이면 $\det(A) = 0$ 이다.
+
+- 증명
+
+    스칼라 $k \neq 0$ 에 대하여 정리 4.3 에 의하여 다음이 성립한다.
+
+    $$ \det(A) = \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ 0+k \cdot 0\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} = \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ 0\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} + k \cdot \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ 0\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} $$
+
+    $$ \iff  \det(A)  = \det(A)  +k \det(A)  \iff k \det(A)  = 0 \iff \det(A)  = 0 \tag*{■} $$
+
+!!! tldr "정리 4.3 보조정리 1"
+
+    $n \geq 2$ 인 행렬 $B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 $i$ 행이 $1 \leq k \leq n$ 인 어떤 $k$ 에 대하여 $e_k$ 이면 다음이 성립한다. 
+    
+    $$ \det(B) = (-1)^{i+k}\det(\tilde{B}_{ik}) $$
+
+- 행렬식은 정사각행렬의 1행에 대한 여인수 전개로 정의되었지만, 이 정리는 임의의 행에 대한 여인수 전개 또한 행렬식이 된다는 것을 말해준다. 
+
+- 증명
+
+    $n = 2$ 일 때를 살펴보자. 행렬 $B \in \mathbf{M}_{2 \times 2}(\mathbf{F} )$ 의 $i$ 행이 $1 \leq k \leq 2$ 인 어떤 $k$ 에 대하여 $e_k$ 이면 $\det(B) = (-1)^{i+k}\det(\tilde{B}_{ik})$ 임을 보이면 된다. 
+
+    $1$ 행이 $e_1$ 일 경우, $1$ 행이 $e_2$ 일 경우, $2$ 행이 $e_1$ 일 경우, $2$ 행이 $e_2$ 일 경우에 각각 다음과 같이 성립한다.
+
+    $$ B = \begin{pmatrix} 1&0\\ c&d\\ \end{pmatrix} \implies \det(B) = (-1) ^{1 + 1} \det(\tilde{B}_{11}) = d $$
+
+    $$ B = \begin{pmatrix} 0&1\\ c&d\\ \end{pmatrix} \implies \det(B) = (-1) ^{1 + 2} \det(\tilde{B}_{12}) = -c $$
+
+    $$ B = \begin{pmatrix} a&b\\ 1&0\\ \end{pmatrix} \implies \det(B) = (-1) ^{2 + 1} \det(\tilde{B}_{21}) = -b $$
+
+    $$ B = \begin{pmatrix} a&b\\ 0&1\\ \end{pmatrix} \implies \det(B) = (-1) ^{2 + 2} \det(\tilde{B}_{22}) = a $$
+
+    그러므로 $n = 2$ 일 때 성립한다. ▲ 
+
+    $n > 2$ 일 때 $(n - 1) \times (n - 1)$ 행렬에 대하여 성립함을 가정하자.
+
+    행렬 $B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 $i$ 행이 $1 \leq k \leq n$ 인 어떤 $k$ 에 대하여 $e_k$ 이면 $\det(B) = (-1)^{i+k}\det(\tilde{B}_{ik})$ 임을 보이면 된다.
+
+    $i = 1$ 이면 $B _{1k} = 1$ 이고 $B$ 의 나머지 1행의 성분들은 모두 $0$ 이다. 그러므로 다음이 성립한다. 
+
+    $$ \det(B) = \sum_{j=1}^{n}(-1) ^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j}) = (-1) ^{1+k}\det(\tilde{B}_{1k}) $$
+
+    그러므로 $n > 2, i = 1$ 일 때 성립한다. ▲ 
+
+    $n > 2, 1 < i \leq n$ 을 가정하자. 
+
+    $(n - 2) \times (n - 2)$ 행렬 $C _{ij}$ 를 $B$ 의 $1$행, $i$행, $j$열, $k$열을 제거하여 얻은 행렬이라고 하자.
+
+    각 $j$ 에 대하여 $\tilde{B}_{1j}$ 의 $i - 1$ 행은 다음과 같은 벡터이다. 
+
+    $$ \begin{cases} e _{k-1} \in \mathbf{F} ^{n-1} &j < k\\ 0 \in \mathbf{F} ^{n-1} &j = k\\ e _{k} \in \mathbf{F} ^{n-1} &j > k\\ \end{cases} $$
+
+    $\tilde{B}_{1j}$ 는 위 벡터가 $i-1$ 행에 있는 $(n-1) \times (n-1)$ 행렬이다. 행렬 $\tilde{B}_{1j}$ 에서 $i-1$ 을 제거하는 것은 $B$ 의 $i$ 행을 제거하는 것이다. $j < k$ 의 경우 행렬 $\tilde{B}_{1j}$ 에서 $k-1$ 을 제거하는 것은 $B$ 에서 $k$ 를 제거하는 것인데 반해 $j > k$ 의 경우 행렬 $\tilde{B}_{1j}$ 에서 $k$ 을 제거하는 것은 $B$ 에서 $k$ 를 제거하는 것이다. 그러므로 정리 4.3 따름정리와 가정에 의하여 다음이 성립한다.
+
+    $$ \det(\tilde{B}_{1j})  = \begin{cases} (-1) ^{(i-1)+(k-1)}\det(C _{ij})  & j < k\\ 0  & j = k\\ (-1) ^{(i-1)+k}\det(C _{ij})  & j > k\\ \end{cases} $$
+
+    $n \in \N : (-1) ^{n-1} = (-1) ^{n+1}$ 이다. 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}
+    \det(B) &= \sum_{j=1}^{n}(-1) ^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j})  \\
+    &= \sum_{j<k}(-1) ^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j}) +\sum_{j>k}(-1) ^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j})  \\
+    &= \sum_{j<k}(-1) ^{1+j}B _{1j} \cdot \{(-1) ^{(i-1)+(k-1)}\det(C _{ij}) \}  \\
+    &\qquad + \sum_{j>k}(-1) ^{1+j}B _{1j} \cdot \{(-1) ^{(i-1)+k}\det(C _{ij})\}  \\
+    &= (-1) ^{i+k} \bigg \{\sum_{j<k}(-1) ^{1+j}B _{1j} \cdot \det(C _{ij}) + \sum_{j>k}(-1) ^{1+(j-1)}B _{1j} \cdot \det(C _{ij}) \bigg \} \\
+    &= (-1) ^{i+k} \bigg \{\sum_{j<k}(-1) ^{1+j}B _{1j} \cdot \det(C _{ij}) + \sum_{j=k+1}^{n}(-1) ^{1+(j-1)}B _{1j} \cdot \det(C _{ij}) \bigg \} \\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    중괄호 안의 식은 $\tilde{B}_{ik}$ 의 1행에 대한 여인수 전개이므로 다음이 성립한다. 
+
+    $$ \det(B) = (-1) ^{i+k}\det(\tilde{B}_{ik}) $$
+
+    그러므로 $n > 2, 1 < i \leq n$ 일 때 성립한다. ■ 
+
+!!! tldr "정리 4.4"
+
+    $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 와 $i \in \{1, \dots, n\}$ 에 대하여 다음이 성립한다. 
+
+    $$ \det(A) = \sum_{j=1}^{n}(-1)^{i+j}A _{ij} \cdot \det(\tilde{A}_{ij}) $$
+
+- 이 정리는 행렬식을 1행에 대한 여인수 전개로 얻을 수 있을 뿐만 아니라 임의의 행에 대한 여인수 전개로 구할 수 있음을 말해준다. 
+
+- 증명
+
+    $i = 1$ 일 때 행렬식의 정의와 같으므로 증명할 것이 없다. ▲ 
+
+    $i > 1$ 일 때를 증명해보자.
+
+    $1 \leq j \leq n$ 에 대하여 $A$ 의 $i$ 행을 $e_j$ 로 대체한 행렬을 $B_j$ 라고 하자. 정리 4.3 은 행렬식의 덧셈과 스칼라곱 대한 선형성을 보장해주므로 다음이 성립한다.
+
+    $$ \det(A) = \sum_{j=1}^{n}A _{ij} \cdot \det(B_j) $$
+
 
 # 행렬식의 성질
