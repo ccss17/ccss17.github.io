@@ -44,6 +44,8 @@
 
 - $I_n$ 에 기본연산을 적용하여 기본행렬 $E$ 를 얻었다면, $E$ 에 기본역연산을 적용하여 다시 $I_n$ 을 얻을 수 있다.
 
+## 기본연산과 기본행렬의 성질
+
 !!! tldr "정리 3.1"
 
     행렬 $A \in \mathbf{M}_{m \times n}(\mathbf{F} )$ 에 기본행[열]연산을 하여 행렬 $B$ 를 얻었다면, $B = EA[B = AE]$ 가 되는 $m \times m[n \times n]$ 기본행렬 $E$ 가 존재한다. 이때 $A$ 에서 $B$ 를 얻은 기본행[열]연산을 $I_m[I_n]$ 에 똑같이 적용하면 행렬 $E$ 가 된다. 
@@ -83,6 +85,8 @@
     $$ \text{rank} (A) := \text{rank} (\mathbf{L}_{A}) $$
 
 - 선형변환의 랭크에 대한 성질을 기반으로 행렬의 랭크에 대한 많은 정보를 얻을 수 있다. 
+
+## 행렬의 랭크의 성질
 
 !!! tldr ""
 
@@ -208,6 +212,8 @@
 
     $A = O$ 을 가정하면 극대 일차독립 집합이 공집합이므로 $\text{rank} (A) = 0$ 이 바로 나온다. ■ 
     
+## 행렬의 랭크 구하기
+
 !!! tldr ""
 
     다음 행렬 $B$ 에 대하여 $\text{rank} (B) = r \implies \text{rank} (B') = r-1$ 이다.
@@ -218,13 +224,7 @@
 
     다음과 같은 행렬 $B$ 의 1열은 다른 1열의 일차결합으로 표현될 수 없으므로 극대 일차독립 집합에 포함된다. 
 
-    $$ B = \begin{pmatrix}
-    1&0&\dots&0\\
-    0&B_{22}&\dots&B_{2n}\\
-    \vdots& \vdots& \ddots& \vdots \\
-    0&B_{n2}&\dots&B_{nn}\\
-    \end{pmatrix}
-    $$
+    $$ B = \begin{pmatrix} 1&0&\dots&0\\ 0&B_{22}&\dots&B_{2n}\\ \vdots& \vdots& \ddots& \vdots \\ 0&B_{n2}&\dots&B_{nn}\\ \end{pmatrix} $$
 
     따라서 행렬 $B$ 의 랭크는 다음 행렬 $B'$ 의 극대 일차독립 집합의 기수에 $1$ 을 더한 것이다. 즉, $1 + \text{rank} (B') = \text{rank} (B)$ 이다.
 
@@ -386,6 +386,8 @@
 
     [정리 3.2](#c576bf96c) 에 의하여 기본행렬의 역행렬도 기본행렬이다. 그러므로 $A$ 는 기본행렬의 곱이다. ■ 
 
+## 행렬곱의 랭크
+
 !!! tldr "정리 3.7"
 
     유한차원 벡터공간 $\mathbf{V} , \mathbf{W} , \mathbf{Z}$ 사이에 정의 된 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 와 행렬곱 $AB$ 이 정의된 두 행렬 $A, B$ 에 대하여 다음이 성립한다. 
@@ -474,75 +476,13 @@
     
     또한 $(A|B)$ 는 $n \times (p + q)$ 행렬, $M(A|B)$ 는 $m \times (p + q)$ 행렬이다. 다음이 성립한다.
 
-    $$ 
-    \begin{equation}\begin{split}
-    M(A|B)&= 
-    \begin{pmatrix}
-    M_{11}&M_{12}&\dots&M_{1n}\\
-    M_{21}&M_{22}&\dots&M_{2n}\\
-    \vdots& \vdots& \ddots& \vdots \\
-    M_{m1}&M_{m2}&\dots&M_{mn}\\
-    \end{pmatrix}
-    \left(\begin{array}{cccc|cccc}
-    A_{11} & A_{12} & \dots & A_{1p} & B_{11} & B_{12} & \dots & B_{1q} \\
-    A_{21} & A_{22} & \dots & A_{2p} & B_{21} & B_{22} & \dots & B_{2q} \\
-    \vdots & \vdots & \ddots & \vdots & \vdots& \vdots& \ddots& \vdots \\
-    A_{n1} & A_{n2} & \dots & A_{np} & B_{n1} & B_{n2} & \dots & B_{nq} \\
-    \end{array}\right) 
-    \\
-    &= 
-    \begin{pmatrix}
-    \sum_{i=1}^{n}M_{1i}A_{i1}& \dots& \sum_{i=1}^{n}M_{1i}A_{ip}& \sum_{i=1}^{n}M_{1i}B_{i1}& \dots& \sum_{i=1}^{n}M_{1i}B_{iq}& \\
-    \sum_{i=1}^{n}M_{2i}A_{i1}& \dots& \sum_{i=1}^{n}M_{2i}A_{ip}& \sum_{i=1}^{n}M_{2i}B_{i1}& \dots& \sum_{i=1}^{n}M_{2i}B_{iq}& \\
-    \vdots& \ddots& \vdots& \vdots & \ddots & \vdots& \\
-    \sum_{i=1}^{n}M_{mi}A_{i1}& \dots& \sum_{i=1}^{n}M_{mi}A_{ip}& \sum_{i=1}^{n}M_{mi}B_{i1}& \dots& \sum_{i=1}^{n}M_{mi}B_{iq}& \\
-    \end{pmatrix}
-    \end{split}\end{equation} \tag*{}
-    $$
+    $$ \begin{equation}\begin{split} M(A|B)&= \begin{pmatrix} M_{11}&M_{12}&\dots&M_{1n}\\ M_{21}&M_{22}&\dots&M_{2n}\\ \vdots& \vdots& \ddots& \vdots \\ M_{m1}&M_{m2}&\dots&M_{mn}\\ \end{pmatrix} \left(\begin{array}{cccc|cccc} A_{11} & A_{12} & \dots & A_{1p} & B_{11} & B_{12} & \dots & B_{1q} \\ A_{21} & A_{22} & \dots & A_{2p} & B_{21} & B_{22} & \dots & B_{2q} \\ \vdots & \vdots & \ddots & \vdots & \vdots& \vdots& \ddots& \vdots \\ A_{n1} & A_{n2} & \dots & A_{np} & B_{n1} & B_{n2} & \dots & B_{nq} \\ \end{array}\right) \\ &= \begin{pmatrix} \sum_{i=1}^{n}M_{1i}A_{i1}& \dots& \sum_{i=1}^{n}M_{1i}A_{ip}& \sum_{i=1}^{n}M_{1i}B_{i1}& \dots& \sum_{i=1}^{n}M_{1i}B_{iq}& \\ \sum_{i=1}^{n}M_{2i}A_{i1}& \dots& \sum_{i=1}^{n}M_{2i}A_{ip}& \sum_{i=1}^{n}M_{2i}B_{i1}& \dots& \sum_{i=1}^{n}M_{2i}B_{iq}& \\ \vdots& \ddots& \vdots& \vdots & \ddots & \vdots& \\ \sum_{i=1}^{n}M_{mi}A_{i1}& \dots& \sum_{i=1}^{n}M_{mi}A_{ip}& \sum_{i=1}^{n}M_{mi}B_{i1}& \dots& \sum_{i=1}^{n}M_{mi}B_{iq}& \\ \end{pmatrix} \end{split}\end{equation} \tag*{} $$
 
     $m \times p$ 행렬 $MA$ 와 $m \times q$ 행렬 $MB$ 는 다음과 같다.
 
-    $$ MA = 
-    \begin{pmatrix}
-    M_{11}&M_{12}&\dots&M_{1n}\\
-    M_{21}&M_{22}&\dots&M_{2n}\\
-    \vdots& \vdots& \ddots& \vdots \\
-    M_{m1}&M_{m2}&\dots&M_{mn}\\
-    \end{pmatrix}
-    \begin{pmatrix}
-    A_{11}&A_{12}&\dots&A_{1p}\\
-    A_{21}&A_{22}&\dots&A_{2p}\\
-    \vdots& \vdots& \ddots& \vdots \\
-    A_{n1}&A_{n2}&\dots&A_{np}\\
-    \end{pmatrix} = 
-    \begin{pmatrix}
-    \sum_{i=1}^{n}M_{1i}A_{i1}& \dots& \sum_{i=1}^{n}M_{1i}A_{ip} \\
-    \sum_{i=1}^{n}M_{2i}A_{i1}& \dots& \sum_{i=1}^{n}M_{2i}A_{ip} \\
-    \vdots& \ddots& \vdots& \\
-    \sum_{i=1}^{n}M_{mi}A_{i1}& \dots& \sum_{i=1}^{n}M_{mi}A_{ip}\\
-    \end{pmatrix}
-    $$
+    $$ \begin{equation}\begin{split} MA &= \begin{pmatrix} M_{11}&M_{12}&\dots&M_{1n}\\ M_{21}&M_{22}&\dots&M_{2n}\\ \vdots& \vdots& \ddots& \vdots \\ M_{m1}&M_{m2}&\dots&M_{mn}\\ \end{pmatrix} \begin{pmatrix} A_{11}&A_{12}&\dots&A_{1p}\\ A_{21}&A_{22}&\dots&A_{2p}\\ \vdots& \vdots& \ddots& \vdots \\ A_{n1}&A_{n2}&\dots&A_{np}\\ \end{pmatrix} \\ &= \begin{pmatrix} \sum_{i=1}^{n}M_{1i}A_{i1}& \dots& \sum_{i=1}^{n}M_{1i}A_{ip} \\ \sum_{i=1}^{n}M_{2i}A_{i1}& \dots& \sum_{i=1}^{n}M_{2i}A_{ip} \\ \vdots& \ddots& \vdots& \\ \sum_{i=1}^{n}M_{mi}A_{i1}& \dots& \sum_{i=1}^{n}M_{mi}A_{ip}\\ \end{pmatrix} \end{split}\end{equation} \tag*{} $$
 
-    $$ MB = 
-    \begin{pmatrix}
-    M_{11}&M_{12}&\dots&M_{1n}\\
-    M_{21}&M_{22}&\dots&M_{2n}\\
-    \vdots& \vdots& \ddots& \vdots \\
-    M_{m1}&M_{m2}&\dots&M_{mn}\\
-    \end{pmatrix}
-    \begin{pmatrix}
-    B_{11}&B_{12}&\dots&B_{1q}\\
-    B_{21}&B_{22}&\dots&B_{2q}\\
-    \vdots& \vdots& \ddots& \vdots \\
-    B_{n1}&B_{n2}&\dots&B_{nq}\\
-    \end{pmatrix} = 
-    \begin{pmatrix}
-    \sum_{i=1}^{n}M_{1i}B_{i1}& \dots& \sum_{i=1}^{n}M_{1i}B_{iq} \\
-    \sum_{i=1}^{n}M_{2i}B_{i1}& \dots& \sum_{i=1}^{n}M_{2i}B_{iq} \\
-    \vdots& \ddots& \vdots& \\
-    \sum_{i=1}^{n}M_{mi}B_{i1}& \dots& \sum_{i=1}^{n}M_{mi}B_{iq}\\
-    \end{pmatrix}
-    $$
+    $$ \begin{equation}\begin{split} MB &=  \begin{pmatrix} M_{11}&M_{12}&\dots&M_{1n}\\ M_{21}&M_{22}&\dots&M_{2n}\\ \vdots& \vdots& \ddots& \vdots \\ M_{m1}&M_{m2}&\dots&M_{mn}\\ \end{pmatrix} \begin{pmatrix} B_{11}&B_{12}&\dots&B_{1q}\\ B_{21}&B_{22}&\dots&B_{2q}\\ \vdots& \vdots& \ddots& \vdots \\ B_{n1}&B_{n2}&\dots&B_{nq}\\ \end{pmatrix} \\ &= \begin{pmatrix} \sum_{i=1}^{n}M_{1i}B_{i1}& \dots& \sum_{i=1}^{n}M_{1i}B_{iq} \\ \sum_{i=1}^{n}M_{2i}B_{i1}& \dots& \sum_{i=1}^{n}M_{2i}B_{iq} \\ \vdots& \ddots& \vdots& \\ \sum_{i=1}^{n}M_{mi}B_{i1}& \dots& \sum_{i=1}^{n}M_{mi}B_{iq}\\ \end{pmatrix} \end{split}\end{equation} \tag*{} $$
 
     따라서 다음이 성립한다.
 
@@ -594,67 +534,19 @@
 
     행렬 $A = \begin{pmatrix} 0&2&4\\ 2&4&2\\ 3&3&1\\ \end{pmatrix}$ 에 대하여 $(A|I_n)$ 을 $(I_n|A ^{-1})$ 로 변형시켜보자. 
 
-    $$ 
-    \begin{pmatrix}
-    0&2&4&1&0&0\\
-    2&4&2&0&1&0\\
-    3&3&1&0&0&1\\
-    \end{pmatrix} \to 
-    \begin{pmatrix}
-    2&4&2&0&1&0\\
-    0&2&4&1&0&0\\
-    3&3&1&0&0&1\\
-    \end{pmatrix} \to 
-    \begin{pmatrix}
-    1&2&1&0&\frac{1}{2}&0\\
-    0&2&4&1&0&0\\
-    3&3&1&0&0&1\\
-    \end{pmatrix} \to 
-    $$ 
+    $$ \begin{pmatrix} 0&2&4&1&0&0\\ 2&4&2&0&1&0\\ 3&3&1&0&0&1\\ \end{pmatrix} \to \begin{pmatrix} 2&4&2&0&1&0\\ 0&2&4&1&0&0\\ 3&3&1&0&0&1\\ \end{pmatrix} \to \begin{pmatrix} 1&2&1&0&\frac{1}{2}&0\\ 0&2&4&1&0&0\\ 3&3&1&0&0&1\\ \end{pmatrix} \to $$ 
 
-    $$
-    \begin{pmatrix}
-    1&2&1&0&\frac{1}{2}&0\\
-    0&2&4&1&0&0\\
-    0&-3&-2&0&-\frac{3}{2}&1\\
-    \end{pmatrix} \to \dots \to 
-    \begin{pmatrix}
-    1&0&0&\frac{1}{8}&-\frac{1}{8}&\frac{3}{4}\\
-    0&1&0&-\frac{1}{4}&\frac{3}{4}&-\frac{1}{2}\\
-    0&0&1&\frac{3}{8}&-\frac{3}{8}&\frac{1}{4}\\
-    \end{pmatrix} 
-    $$
+    $$ \begin{pmatrix} 1&2&1&0&\frac{1}{2}&0\\ 0&2&4&1&0&0\\ 0&-3&-2&0&-\frac{3}{2}&1\\ \end{pmatrix} \to \dots \to \begin{pmatrix} 1&0&0&\frac{1}{8}&-\frac{1}{8}&\frac{3}{4}\\ 0&1&0&-\frac{1}{4}&\frac{3}{4}&-\frac{1}{2}\\ 0&0&1&\frac{3}{8}&-\frac{3}{8}&\frac{1}{4}\\ \end{pmatrix} $$
 
     따라서 $A$ 의 역행렬은 다음과 같다. 
 
-    $$ A ^{-1} =
-    \begin{pmatrix}
-    \frac{1}{8}&-\frac{1}{8}&\frac{3}{4}\\
-    -\frac{1}{4}&\frac{3}{4}&-\frac{1}{2}\\
-    \frac{3}{8}&-\frac{3}{8}&\frac{1}{4}\\
-    \end{pmatrix} 
-    $$
+    $$ A ^{-1} = \begin{pmatrix} \frac{1}{8}&-\frac{1}{8}&\frac{3}{4}\\ -\frac{1}{4}&\frac{3}{4}&-\frac{1}{2}\\ \frac{3}{8}&-\frac{3}{8}&\frac{1}{4}\\ \end{pmatrix} $$
 
 - 예시 
 
-    행렬 $A = \begin{pmatrix}
-    1&2&1\\
-    2&1&-1\\
-    1&5&4\\
-    \end{pmatrix}$ 에 대하여 $(A|I_n)$ 을 $(I_n|A ^{-1})$ 로 변형시켜보자. 
+    행렬 $A = \begin{pmatrix} 1&2&1\\ 2&1&-1\\ 1&5&4\\ \end{pmatrix}$ 에 대하여 $(A|I_n)$ 을 $(I_n|A ^{-1})$ 로 변형시켜보자. 
 
-    $$ 
-    \begin{pmatrix}
-    1&2&1&1&0&0\\
-    2&1&-1&0&1&0\\
-    1&5&4&0&0&1\\
-    \end{pmatrix} \to \dots \to 
-    \begin{pmatrix}
-    1&2&1&1&0&0\\
-    0&-3&-3&-2&1&0\\
-    0&0&0&-3&1&1\\
-    \end{pmatrix} 
-    $$ 
+    $$ \begin{pmatrix} 1&2&1&1&0&0\\ 2&1&-1&0&1&0\\ 1&5&4&0&0&1\\ \end{pmatrix} \to \dots \to \begin{pmatrix} 1&2&1&1&0&0\\ 0&-3&-3&-2&1&0\\ 0&0&0&-3&1&1\\ \end{pmatrix} $$ 
 
     마지막 행렬의 3행의 앞쪽 $n = 3$ 개의 성분이 모두 $0$ 인 행을 가진 행렬을 얻었다. 따라서 $A$ 의 역행렬은 존재하지 않는다.
 

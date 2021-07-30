@@ -560,17 +560,25 @@
 
     3) 의 증명은 2) 와 비슷하다. ■ 
 
-## upper triangular matrix
+## 삼각행렬
 
 !!! tldr ""
 
-    상삼각행렬, 위삼각행렬(upper triangular matrix) : $m \times n$ 행렬 $A$ 의 대각성분 아래의 모든 성분이 $0$ 인행렬이다.
+    삼각행렬(triangular matrix) : 행렬의 대각성분 위쪽이나 아래쪽 항들이 모두 $0$ 인 행렬이다.
+
+!!! tldr ""
+
+    상삼각행렬, 위삼각행렬(upper triangular matrix) : 행렬의 대각성분 아래의 모든 성분이 $0$ 인행렬이다.
 
 - 즉, $i>j$ 에 대하여 $A _{ij} = 0$ 인 행렬이다.
 
 - 예시 
 
     $$  \begin{pmatrix} 1 & 2 & 3 & 4\\ 0 & 5 & 3 & 4\\ 0 & 0 & 3 & 4\\ \end{pmatrix} $$
+
+!!! tldr ""
+
+    하삼각행렬(lower triangular matrix) : 행렬의 대각성분 위의 모든 성분이 $0$ 인행렬이다.
 
 ## 대각행렬
 
