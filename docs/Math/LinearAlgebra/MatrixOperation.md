@@ -188,11 +188,11 @@
 
     $\mathbf{F} ^{n}$ 의 표준 순서기저 $\beta$ 는 $\mathbf{F} ^{n}$ 를 생성한다. [정리 2.2](../LinearTransformation/#f380ab529) 에 의하여 다음이 성립한다. 
 
-    $$ \mathbf{R} (\mathbf{L}_A) = \text{span } (\mathbf{L}_{A}(\beta ))  = \text{span } (\{\mathbf{L}_{A}(e_1, \mathbf{L}_{A}(e_2), \dots, \mathbf{L}_{A}(e_n)\}) $$
+    $$ \mathbf{R} (\mathbf{L}_A) = \text{span } (\mathbf{L}_{A}(\beta ))  = \text{span } (\{\mathbf{L}_{A}(e_1), \mathbf{L}_{A}(e_2), \dots, \mathbf{L}_{A}(e_n)\}) $$
 
     [정리 2.13 - 2](../LinearTransformation/#546d2897f) 에 의하여 $A$ 의 $j$ 열 $a_j$ 에 대하여 $\mathbf{L}_{A}(e_j) = Ae_j = a_j$ 이다. 따라서 다음이 성립한다.
     
-    $$ \text{rank} (A) = \mathbf{R} (\mathbf{L}_A) = \dim (\text{span } (\{a_1, a_2, \dots, a_n \})) \tag*{■} $$
+    $$ \text{rank} (A) = \dim (\mathbf{R} (\mathbf{L}_A)) = \dim (\text{span } (\{a_1, a_2, \dots, a_n \})) \tag*{■} $$
     
 - 예시 
 
@@ -638,7 +638,7 @@
 
 !!! tldr "계수행렬(coefficient matrix) 의 정의"
 
-    연립일차방정식의 계수로 구성된 다음과 같은 행렬이다.
+    $n$ 개의 미지수와 $m$ 개의 일차방정식으로 이루어진 연립일차방정식의 계수로 구성된 다음의 $m \times n$ 행렬이다.
 
     $$ A = \begin{pmatrix} a_{11}&a_{12}&\dots&a_{1n}\\ a_{21}&a_{22}&\dots&a_{2n}\\ \vdots& \vdots& \ddots& \vdots \\ a_{m1}&a_{m2}&\dots&a_{mn}\\ \end{pmatrix} $$
 
@@ -758,8 +758,60 @@
 
     $n$ 개의 미지수와 $n$ 개의 일차방정식으로 이루어진 연립일차방정식 $Ax = b$ 에 대하여 $A$ 가 가역이면 이 방정식은 유일한 해 $A ^{-1}b$ 를 가진다.
 
-    역으로 이 방정식의 해가 유일하면 $A$ 는 가역이다.
+    역으로 연립일차방정식의 해가 유일하면 계수행렬은 가역이다.
 
 - 이 정리는 가역인 정사각행렬을 계수행렬로 가지는 연립일차방정식의 해를 쉽게 구할 수 있는 방법을 알려준다.
+
+- 증명
+
+    $A$ 가 가역이면 역행렬 $A ^{-1}$ 가 존재하므로 $A(A ^{-1}b) = (AA ^{-1})b = b$ 가 성립한다. 그러므로 $A ^{-1}b$ 는 해이다. 이로써 존재성 증명이 끝났다. 
+    
+    이제 유일성을 증명하기 위하여 임의의 해 $s$ 에 대하여 $As = b$ 로 두면 $A ^{-1}As = A ^{-1}b \iff s = A ^{-1}b$ 가 성립한다. ▲ 
+
+    방정식의 유일한 해를 $s$ 로 두면 대응하는 동차 연립일차방정식 $Ax = 0$ 의 해집합 $\mathbf{K} _{\mathbf{H} }$ 에 대하여 [정리 3.9](#932b55b12) 에 의하여 $\mathbf{K} = \{s\} = \{s\} + \mathbf{K} _{\mathbf{H}} \iff \mathbf{K} _{\mathbf{H} } = \{0\}$ 이다. [정리 3.8](#b7b9c78d0) 에 의하여 $\mathbf{K} _{\mathbf{H} } = \{0\} = \mathbf{L}_{A}$ 이고, $\dim (\mathbf{K} _{\mathbf{H} }) = n - \text{rank} (\mathbf{L}_{A}) = 0 \iff \text{rank} (\mathbf{L}_{A}) = n$ 이므로 [$\text{rank} (A) = n$ 이다. 그러므로 $A$ 는 가역이다](#54a88bd9a).
+
+## 연립일차방정식의 해의 존재성
+
+!!! tldr "연립일차방정식의 첨가행렬"
+
+    연립일차방정식 $Ax = b$ 의 첨가행렬은 $(A|b)$ 이다.
+
+!!! tldr "문제 3.3-9"
+
+    연립일차방정식 $Ax = b$ 의 해가 있는 것과 $b \in \mathbf{R} (\mathbf{L}_A)$ 인 것은 동치이다.
+
+- 증명
+
+    해가 존재하면 $As = b$ 를 만족하는 $s$ 가 존재한다. 그러므로 $\mathbf{L}_{A}(s) = b \in \mathbf{R} (\mathbf{L}_A)$ 이다. ▲ 
+
+    $b \in \mathbf{R} (\mathbf{L}_A)$ 이면 $\mathbf{L}_{A}(s) = As = b$ 를 만족하는 $s$ 가 존재한다. 그러므로 연립일차방정식의 해가 존재한다. ■ 
+
+!!! tldr "정리 3.11"
+
+    연립일차방정식 $Ax = b$ 에 모순이 없는 것과 $\text{rank} (A) = \text{rank} (A|b)$ 인 것은 동치이다.
+
+- 증명
+
+    [정리 3.5](#0ce821e3f) 의 증명과정은 행렬 $A$ 의 $j$열 $a_j$ 에 대하여 $\mathbf{R} (\mathbf{L}_A)=\text{span } (\{a_1, a_2, \dots, a_n \})$ 임을 말해준다. 문제 3.3-9 에 의하여 $Ax = b$ 가 해가 있는 것은 $b \in \mathbf{R} (\mathbf{L}_A)$ 와 동치이다. 그러므로 $Ax = b$ 의 해가 있기 위하여 다음이 성립해야 한다. 
+
+    $$ b \in \text{span } (\{a_1, a_2, \dots, a_n \}) $$
+
+    그러므로 다음이 성립한다. 
+
+    $$ \text{span } (\{a_1, a_2, \dots, a_n \}) = \text{span } (\{a_1, a_2, \dots, a_n, b \}) $$
+
+    따라서 $\dim (\text{span } (\{a_1, a_2, \dots, a_n \}) )= \dim (\text{span } (\{a_1, a_2, \dots, a_n, b \}))$ 이다. [정리 3.5](#0ce821e3f) 에 의하여 다음이 성립한다.
+
+    $$ \text{rank} (A) = \text{rank} (A|b) \tag*{■} $$
+
+- 예시 
+
+    다음 연립방정식에 대하여 $A = \begin{pmatrix} 1&1\\ 1&1\\ \end{pmatrix}, (A|b) = \begin{pmatrix} 1&1&0\\ 1&1&1\\ \end{pmatrix}$ 이다.
+
+    $$ x_1 + x_2 = 0 $$
+
+    $$ x_1 + x_2 = 1 $$
+
+    그러므로 $\text{rank} (A) = 1, \text{rank} (A|b) = 2$ 이다. 정리에 의하여 이 방정식의 해가 없다.
 
 # end
