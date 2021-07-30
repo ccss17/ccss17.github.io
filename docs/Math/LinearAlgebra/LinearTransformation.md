@@ -266,13 +266,11 @@
 
 ## 차원정리
 
-!!! tldr "정리 2.3"
+!!! tldr "정리 2.3 차원정리(dimension theorem)"
 
-    차원정리(dimension theorem) : 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한차원이면 
+    벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한차원이면 다음이 성립한다.
 
     $$ \text{nullity}(\mathbf{T})+\text{rank}(\mathbf{T})= \dim(\mathbf{V} ) $$
-
-    이다.
 
 - 직관적으로 선형변환에서 nullity 가 커질수록 랭크는 작아진다. 즉, 더 많은 벡터가 영벡터 $0$ 로 갈수록 상공간은 작아진다. 역으로 랭크가 커질수록 nullity 는 작아진다. 이 정리가 랭크과 nullity 의 관계를 말해준다. 
 
@@ -344,7 +342,7 @@
 
 - 증명 
 
-    [차원정리](#b9412bb64) 에 의하여 $\text{rank}(\mathbf{T} )+\text{nullity}(\mathbf{T} ) = \dim(\mathbf{V} )$ 인데, [정리 2.4](#7d40e8276) 에 의하여 
+    [차원정리](#6187a9f9c) 에 의하여 $\text{rank}(\mathbf{T} )+\text{nullity}(\mathbf{T} ) = \dim(\mathbf{V} )$ 인데, [정리 2.4](#7d40e8276) 에 의하여 
 
     $$ \mathbf{T} \text{ is injection } \iff \mathbf{N}(\mathbf{T} ) = \{0\} $$
 
@@ -1246,7 +1244,7 @@
 
     $$ \text{rank} (\mathbf{T} ) = \dim (\mathbf{W} ) $$
 
-    이다. 그러면 [차원정리](#b9412bb64) 에 의하여 $\dim (\mathbf{W}) = \dim (\mathbf{V} )$ 임을 알 수 있다. ■ 
+    이다. 그러면 [차원정리](#6187a9f9c) 에 의하여 $\dim (\mathbf{W}) = \dim (\mathbf{V} )$ 임을 알 수 있다. ■ 
 
 !!! tldr ""
 

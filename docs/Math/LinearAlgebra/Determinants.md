@@ -671,7 +671,7 @@
 
     [$\text{rank} (A) = n$ 이면 $A$ 는 가역이다](../MatrixOperation/#54a88bd9a). 그러므로 [$A$ 는 기본행렬의 곱이다](../MatrixOperation/#18150efeb). $A = E_m \dots E_1$ 로 두자. 기본행렬에 대하여 본 정리를 가정할 수 있으므로 다음이 성립한다. 
 
-    $$ \begin{equation}\begin{split} \det(AB) &= \det(E_m \dots E_1B)  \\ &= \det(E_m) \det(E _{m-1} \dots E_1B)  \\ &= \det(E_m) \det(E _{m-1}) \det(E _{m-2} \dots E_1B)  \\ & \vdots  \\ &= \det(E_m) \dots \det(E _1)\det(B)  \\ &= \det(E_m \dots E _1)\det(B)  \\ &= \det(A)\det(B)  \\ \end{split}\end{equation} \tag*{} $$
+    $$ \begin{equation}\begin{split} \det(AB) &= \det(E_m \dots E_1B)  \\ &= \det(E_m) \det(E _{m-1} \dots E_1B)  \\ &= \det(E_m) \det(E _{m-1}) \det(E _{m-2} \dots E_1B)  \\ & \qquad \vdots  \\ &= \det(E_m) \dots \det(E _1)\det(B)  \\ &= \det(E_m \dots E _1)\det(B)  \\ &= \det(A)\det(B)  \\ \end{split}\end{equation} \tag*{} $$
 
     그러므로 $\text{rank} (A) = n$ 일 때 정리가 성립한다. ■ 
 
@@ -739,15 +739,7 @@
 
     기본행연산을 한번만 적용한 기본행렬의 행렬식이 전치행렬의 행렬식이 같다는 것과 정리 4.7 에 의하여 다음이 성립한다.
 
-    $$ \begin{equation}\begin{split}
-    \det(E)&= \det(E_1 E_2 \dots E_k) \\
-    &= \det(E_1) \det(E_2) \dots \det(E_k) \\
-    &= \det(E_1^{t}) \det(E_2^{t}) \dots \det(E_k^{t}) \\
-    &= \det(E_k^{t}) \det(E _{k-1}^{t}) \dots \det(E_1^{t}) \\
-    &= \det(E_k^{t}E _{k-1}^{t}\dots E_1^{t}) \\
-    &= \det(E^{t}) \\
-    \end{split}\end{equation} \tag*{}
-    $$
+    $$ \begin{equation}\begin{split} \det(E)&= \det(E_1 E_2 \dots E_k) \\ &= \det(E_1) \det(E_2) \dots \det(E_k) \\ &= \det(E_1^{t}) \det(E_2^{t}) \dots \det(E_k^{t}) \\ &= \det(E_k^{t}) \det(E _{k-1}^{t}) \dots \det(E_1^{t}) \\ &= \det(E_k^{t}E _{k-1}^{t}\dots E_1^{t}) \\ &= \det(E^{t}) \\ \end{split}\end{equation} \tag*{} $$
 
     이로써 모든 증명이 끝났다. ■ 
 
@@ -757,7 +749,29 @@
 
 - 지금까지의 정리들은 행에 대한 여인수 전개, 기본행연산과 행렬식의 관계 등등 행의 관점에서 행렬식을 연구한 결과이다. 그러나 이 정리는 지금까지의 정리들이 열의 관점에서도 그대로 성립함을 말해준다. $A$ 의 행이 $A ^{t}$ 에서는 열이기 때문이다.
 
+    즉, 열에 대한 여인수 전개로도 행렬식을 구할 수 있다. 또한 기본행연산 대신 기본열연산을 사용할 수도 있다. 기본열연산에 따른 행렬식의 변화는 기본행연산에 따른 행렬식의 변화와 같기 때문이다.
+
 - 증명
 
+    $A$ 가 가역이 아니면 $\text{rank} (A) < n$ 이다. [정리 3.6 따름정리 2](../MatrixOperation/#a2df8a4e7) 에 의하여 $\text{rank} (A) = \text{rank} (A ^{t})$ 이므로 $A ^{t}$ 도 가역이 아니다. [정리 4.6 따름정리](#e9f88afe6) 에 의하여 $\det(A) = 0 = \det(A ^{t})$ 이다. ▲ 
+
+    [$A$ 가 가역이면 $A$ 는 기본행렬의 곱](../MatrixOperation/#18150efeb)이다. $A = E_m \dots E_1$ 으로 두면 [문제 4.2-29](../#130d44678) 와 [정리 4.7](../#78275d0e3) 에 의하여 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split} \det(A)&= \det(E_m \dots E_1) \\ &= \det(E_m) \dots \det(E_1) \\ &= \det(E_m^{t}) \dots \det(E_1^{t}) \\ &= \det(E_1^{t}) \dots \det(E_m^{t}) \\ &= \det(E_1^{t}\dots E_m^{t}) \\ &= \det(A^{t}) \\ \end{split}\end{equation} \tag*{} $$
+
+    이로써 모든 증명이 끝났다. ■ 
+
+!!! tldr "정리 4.9 Cramer's Rule"
+
+    $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 와 $x = (x_1, x_2, \dots, x_n) ^{t}$ 에 대하여 $Ax = b$ 는 $n$ 개의 미지수를 가진 $n$ 개의 연립일차방정식의 행렬표현이다.
+
+    $\det(A) \neq 0$ 일 때 $A$ 의 $k$열을 $b$ 로 바꾼 행렬 $M_k$ 에 대하여 이 연립방정식은 다음과 같은 유일한 해가 있다.
+
+    $$ x_k = \dfrac{\det(M_k)}{\det(A)}
+    $$
+
+- 증명
+
+    
 
 # end

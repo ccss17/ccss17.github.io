@@ -621,3 +621,145 @@
     $$ A = \begin{pmatrix} a_1&a_2\\ b_1&b_2\\ \end{pmatrix}  =\begin{pmatrix} a_1&a_2\\ ca_1&ca_2\\ \end{pmatrix} \to \begin{pmatrix} a_1&a_2\\ 0&0\\ \end{pmatrix} $$
 
     [$A$ 를 항등행렬로 변환할 수 없으므로 $A$ 는 가역이 아니다](MatrixOperation/#01cc5fcfe). 
+
+# 연립일차방정식
+
+!!! tldr "연립일차방정식(system of linear equation) 의 정의"
+
+    $1 \leq i \leq m, 1 \leq j \leq n$ 에 대하여 스칼라 $a _{ij}, b_i \in \mathbf{F}$ 와 변수 $x_j \in \mathbf{F}$ 에 대한 다음의 연립방정식을 체 $\mathbf{F}$ 위 $n$ 개의 미지수와 $m$ 개의 일차방정식으로 이루어진 연립일차방정식으로 정의한다. 
+
+    $$ a _{11}x_1 + a _{12}x_2 + \dots + a _{1n}x_n = b_1 $$
+
+    $$ a _{21}x_1 + a _{22}x_2 + \dots + a _{2n}x_n = b_2 $$
+
+    $$ \vdots $$
+
+    $$ a _{m1}x_1 + a _{m2}x_2 + \dots + a _{mn}x_n = b_m $$
+
+!!! tldr "계수행렬(coefficient matrix) 의 정의"
+
+    연립일차방정식의 계수로 구성된 다음과 같은 행렬이다.
+
+    $$ A = \begin{pmatrix} a_{11}&a_{12}&\dots&a_{1n}\\ a_{21}&a_{22}&\dots&a_{2n}\\ \vdots& \vdots& \ddots& \vdots \\ a_{m1}&a_{m2}&\dots&a_{mn}\\ \end{pmatrix} $$
+
+- $n$ 개의 미지수와 $m$ 개의 일차방정식에 대한 계수행렬은 $m \times n$ 행렬이다. 이는 선형변환 $\mathbf{L}_{A}: \mathbf{F} ^{n} \to \mathbf{F} ^{m}$ 에 대응된다. 
+
+!!! tldr "연립일차방정식의 행렬표현"
+
+    계수행렬 $A$ 와 $x = \begin{pmatrix} x_{1}\\ x_{2}\\ \vdots\\ x_{n}\\ \end{pmatrix}, b = \begin{pmatrix} b_{1}\\ b_{2}\\ \vdots\\ b_{n}\\ \end{pmatrix}$ 에 대한 연립일차방정식의 행렬표현은 다음과 같다. 
+
+    $$ Ax = b $$
+
+!!! tldr "해(solution) 의 정의"
+
+    연립일차방정식의 해는 $Ax = b$ 에 대하여 $As = b$ 를 만족하는 $n$순서쌍 $s = \begin{pmatrix} s_{1}\\ s_{2}\\ \vdots\\ s_{n}\\ \end{pmatrix} \in \mathbf{F} ^{n}$ 이다.
+
+- 해는 존재할 수도 있고 존재하지 않을 수도 있다. 해가 존재한다면 유일할 수도 있고 유일하지 않을 수도 있다.
+
+!!! tldr "해집합(solution set) 의 정의"
+
+    연립일차방정식의 모든 해들의 집합이다.
+
+!!! tldr "연립일차방정식의 무모순성"
+
+    연립일차방정식의 해집합이 공집합이면 모순이 있다(inconsistent) 또는 해가 존재하지 않는다고 한다. 반면 해집합이 공집합이 아니면 모순이 없다(consistent) 또는 해가 존재한다고 한다.
+
+- 그러므로 연립일차방정식을 풀기 위하여 해가 존재하는지 살펴보고, 존재하는 모든 해를 구할 수 있어야 한다.
+
+!!! tldr "동차(homogeneouse) 와 비동차(nonhomogeneouse) 의 정의"
+
+    $n$ 개의 미지수와 $m$ 개의 일차방정식으로 이루어진 연립일차방정식 $Ax = b$ 는 $b = 0$ 일 때 동차라고 하고, $b \neq 0$ 이면 비동차라고 한다.
+
+## 연립일차방정식의 성질
+
+!!! tldr "정리 3.8"
+
+    체 $\mathbf{F}$ 에서 $n$ 개의 미지수와 $m$ 개의 일차방정식으로 이루어진 동차 연립일차방정식 $Ax = 0$ 와 해집합 $\mathbf{K}$ 에 대하여 $\mathbf{K} = \mathbf{N} (\mathbf{L}_A)$ 이다. 즉, 다음이 성립한다. 
+
+    1. $\mathbf{K}$ 는 $\mathbf{F} ^{n}$ 의 부분공간이다.
+
+    2. $\dim (\mathbf{K} ) = n - \text{rank} (\mathbf{L}_{A}) = n - \text{rank} (A)$
+
+- 증명
+
+    $\mathbf{K} = \{s \in \mathbf{F} ^{n} : As = 0\} = \mathbf{N} (\mathbf{L}_A)$ 인 것과 [차원정리](../LinearTransformation/#6187a9f9c) 와 [행렬의 랭크의 정의](#50228784b) 의하여 증명이 끝난다. ■ 
+
+- 예시 
+
+    다음과 같은 연립일차방정식이 존재한다. 
+
+    $$ x_1 + 2x_2 + x_3 = 0 $$
+
+    $$ x_1 - x_2 - x_3 = 0 $$
+
+    계수행렬 $A = \begin{pmatrix} 1&2&1\\ 1&-1&-1\\ \end{pmatrix}$ 에 대하여 $\text{rank} (A)  = 2$ 이다. 해집합 $\mathbf{K}$ 에 대하여 $\dim (\mathbf{K} ) = 3 - 2 = 1$ 이므로 영벡터가 아닌 임의의 해가 $\mathbf{K}$ 의 기저가 된다. 가령 $\begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix}$ 이 해이므로 $\text{span } \Bigg \{\begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix}\Bigg \} = \mathbf{K}$ 이다.
+
+!!! tldr "정리 3.8 따름정리"
+
+    $m < n$ 이면 연립방정식 $Ax = 0$ 은 영벡터가 아닌 해가 있다.
+
+- 이 정리는 일차방정식보다 미지수가 많으면 영이 아닌 벡터가 해로 존재한다는 것을 말해준다. 
+
+- 증명
+
+    $m < n$ 을 가정하고 $\mathbf{K} = \mathbf{N} (\mathbf{L}_A)$ 으로 두자.
+
+    연립일차방정식이 $n$ 개의 미지수와 $m$ 개의 일차방정식을 가지므로 $A$ 는 $m \times n$ 계수행렬이다. 그러므로 [$\mathbf{L}_{A}$ 는 $\mathbf{F} ^{n} \to \mathbf{F} ^{m}$ 위에서 정의된 좌측 곱 변환](../LinearTransformation/#dd406d3f6)이다. [$\mathbf{L}_{A}$ 의 상공간은 $\mathbf{F} ^{m}$ 의 부분공간](../LinearTransformation/#eb957cbf0)이다. [정리 1.11](../VectorSpace/#26f9238cb) 와 [행렬의 랭크의 정의](#50228784b) 에 의하여 다음이 성립한다.
+    
+    $$ \text{rank} (A) = \text{rank} (\mathbf{L}_{A}) \leq m $$
+
+    정리 3.8 에 의하여 다음이 성립한다. 
+
+    $$ \dim (\mathbf{K} ) = n - \text{rank} (\mathbf{L}_{A})  \geq n - m > 0 $$
+
+    이는 $\mathbf{K} \neq \{0\}$ 임을 뜻하고, 이에따라 영이 아닌 벡터 $s \in \mathbf{K}$ 가 존재한다. ■ 
+
+!!! tldr ""
+
+    $Ax = 0$ 을 $Ax = b$ 에 대응하는 동차 연립일차방정식이라 한다.
+
+!!! tldr "정리 3.9"
+
+    모순이 없는 연립일차방정식 $Ax = b$ 의 해집합 $\mathbf{K}$, 대응하는 연립일차방정식 $Ax = 0$ 의 해집합 $\mathbf{K} _{\mathbf{H} }$, $Ax = b$ 의 임의의 해 $s \in \mathbf{K}$ 에 대하여 다음이 성립한다.
+
+    $$ \mathbf{K} = \{s\} + \mathbf{K} _{\mathbf{H} } = \{s + k : k \in \mathbf{K} _{\mathbf{H} }\} $$
+
+- 이 정리는 비동차 연립일차방정식의 해집합을 동차 연립일차방정식의 해집합과 연결시켜준다.
+
+- 증명
+
+    $Ax + b$ 의 임의의 해 $s \in \mathbf{K}$ 를 택하자.
+
+    $w \in \mathbf{K}$ 를 가정하면 $Aw = b$ 이다. 그러면 $A(w-s) = Aw-As = b-b = 0 \implies w-s \in \mathbf{K} _{\mathbf{H} }$ 이다. $w - s = k \in \mathbf{K} _{\mathbf{H} }$ 로 두자. 그러면 $w = s + k \in \{s\} + \mathbf{K} _{\mathbf{H} }$ 이다. 이는 어떤 원소가 $\mathbf{K}$ 에 속하면 반드시 $\{s\} + \mathbf{K} _{\mathbf{H} }$ 에 속함을 뜻한다. 그러므로 다음이 성립한다.
+
+    $$ \mathbf{K} \subseteq \{s\} + \mathbf{K} _{\mathbf{H} } \tag*{▲} $$
+
+    $w \in \{s\} + \mathbf{K} _{\mathbf{H} }$ 를 가정하면 $w = s + k$ 를 만족하는 $k \in \mathbf{K} _{\mathbf{H} }$ 가 존재한다. 그러므로 다음이 성립한다. 
+
+    $$ Aw = A(s+k) = As + Ak = b + 0 = b $$
+    
+    즉, $w \in \mathbf{K}$ 이므로 $\{s\} + \mathbf{K} _{\mathbf{H} } \subseteq \mathbf{K}$ 이다. ▲ 
+    
+    따라서 $\mathbf{K} = \{s\} + \mathbf{K} _{\mathbf{H}}$ 이다. ■ 
+
+- 예시 
+
+    다음 연립일차방정식의 해는 $s = \begin{pmatrix} 1\\ 1\\ 4\\ \end{pmatrix} \in \mathbf{K}$ 이다.
+
+    $$ x_1 + 2x_2 + x_3 = 7 $$
+
+    $$ x_1 - x_2 - x_3 = -4 $$
+
+    대응하는 동차 연립일차방정식의 해는 $k = \begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix} \in \mathbf{K} _{\mathbf{H} }$ 이고 $\dim (\mathbf{K} _{\mathbf{H} }) = 1$ 이므로 $\mathbf{K} _{\mathbf{H} }= \{tk : t \in \R\}$ 이다. 그러므로 다음이 성립한다. 
+
+    $$ \mathbf{K} = \{s + tk : t \in \R\} $$
+
+!!! tldr "정리 3.10"
+
+    $n$ 개의 미지수와 $n$ 개의 일차방정식으로 이루어진 연립일차방정식 $Ax = b$ 에 대하여 $A$ 가 가역이면 이 방정식은 유일한 해 $A ^{-1}b$ 를 가진다.
+
+    역으로 이 방정식의 해가 유일하면 $A$ 는 가역이다.
+
+- 이 정리는 가역인 정사각행렬을 계수행렬로 가지는 연립일차방정식의 해를 쉽게 구할 수 있는 방법을 알려준다.
+
+# end
