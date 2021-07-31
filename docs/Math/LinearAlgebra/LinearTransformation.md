@@ -1820,9 +1820,9 @@
 
 ## 행렬의 닮음
 
-!!! tldr "닮음의 정의"
+!!! tldr "행렬의 닮음(matrix similarity)의 정의"
 
-    행렬의 닮음(matrix similarity) : $A, B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $B = Q ^{-1}AQ$ 인 가역행렬 $Q$ 가 존재하면 $A$ 와 $B$ 는 서로 닮음이다.
+    $A, B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $B = Q ^{-1}AQ$ 인 가역행렬 $Q$ 가 존재하면 $A$ 와 $B$ 는 서로 닮음이다.
 
 - 행렬의 닮음은 동치관계이다.
 

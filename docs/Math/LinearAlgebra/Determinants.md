@@ -401,7 +401,7 @@
     
     $$ \det(B) = (-1)^{i+k}\det(\tilde{B}_{ik}) $$
 
-- 행렬식은 정사각행렬의 1행에 대한 여인수 전개로 정의되었지만, 이 정리는 임의의 행에 대한 여인수 전개 또한 행렬식이 된다는 것을 말해준다. 
+- 행렬식은 정사각행렬의 1행에 대한 여인수 전개로 정의되었지만, 이 정리는 정사각행렬이 특정 조건을 만족할 경우 임의의 행에 대한 여인수 전개로도 행렬식을 구할 수 있다는 것을 말해준다. 
 
 - 증명
 
@@ -458,6 +458,8 @@
     $$ \det(B) = (-1) ^{i+k}\det(\tilde{B}_{ik}) $$
 
     그러므로 $n > 2, 1 < i \leq n$ 일 때 성립한다. ■ 
+
+## 행렬식의 재정의
 
 !!! tldr "정리 4.4"
 
@@ -761,15 +763,79 @@
 
     이로써 모든 증명이 끝났다. ■ 
 
+## Cramer's Rule
+
 !!! tldr "정리 4.9 Cramer's Rule"
 
     $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 와 $x = (x_1, x_2, \dots, x_n) ^{t}$ 에 대하여 $Ax = b$ 는 $n$ 개의 미지수를 가진 $n$ 개의 연립일차방정식의 행렬표현이다.
 
     $\det(A) \neq 0$ 이면 $A$ 의 $k$열을 $b$ 로 바꾼 행렬 $M_k$ 에 대하여 이 연립방정식은 다음과 같은 유일한 해를 가진다.
 
-    $$ x_k = \dfrac{\det(M_k)}{\det(A)}
-    $$
+    $$ x_k = \dfrac{\det(M_k)}{\det(A)} $$
+
+- 이 정리를 $\text{Cramer}: \mathbf{M}_{n \times n}(\mathbf{F} ) \times \mathbf{F} ^{n} \times \mathbf{F} ^{n} \to \mathbf{F} ^{n}$ 와 같이 정의된 함수로 표현할 수 있나?
 
 - 증명
 
     $\det(A) \neq 0$ 이면 [정리 4.7 따름정리](#b40051741) 에 의하여 $A$ 는 가역이다. 그러면 [정리 3.10](../MatrixOperation/#7fc4520a6) 에 의하여 $Ax = b$ 는 유일한 해를 가진다. 
+
+    $1 \leq k \leq n$ 에 대하여 $A$ 의 $k$열을 $a_k$ 라고 하고 $X_k$ 는 $I_n$ 의 $k$ 열을 $x$ 로 바꾼 행렬이라 하자. 그러면 $AX_k$ 의 $i$ 열은 $i \neq k$ 일 때 $A$ 를 $I_n$ 에 곱하는 것과 같으므로 $Ae_i = a_i$ 이다. 반면 $i = k$ 이면 $Ax = b$ 이다. 그러므로 $AX_k = M_k$ 이다.
+
+    $X_k$ 의 $k$ 행은 $k$ 번째 성분이 $x_k$ 이고 나머지는 $0$ 이다. 그러므로 $X_k$ 의 $k$ 행에 대한 여인수 전개에 의한 행렬식은 다음과 같다.
+
+    $$ \begin{equation}\begin{split}
+    \det(X_k)&= \sum_{j=1}^{n}(-1) ^{k + j} (X_k) _{kj} \cdot \det((\tilde{X_k})_{kj}) \\
+    &= (-1) ^{k+k}(X_k) _{kk} \cdot \det((\tilde{X_k})_{kk}) \\
+    &= x_k \cdot \det(I _{n-1}) = x_k \\
+    \end{split}\end{equation} \tag*{} $$
+
+    [정리 4.7](#78275d0e3) 은 행렬식의 곱의 보존을 보장한다. 그러므로 다음이 성립한다. 
+
+    $$ \det(M_k) = \det(AX_k) = \det(A) \det(X_k) = \det(A) \cdot x_k $$
+
+    그러므로 $x_k = \dfrac{\det(M_k) }{\det(A) }$ 이다. ■ 
+
+- 예시
+
+    다음과 같이 행렬표현으로 나타낸 연립일차방정식 $Ax = b$ 을 풀어보자.
+
+    $$ \begin{pmatrix} 1&2&3\\ 1&0&1\\ 1&1&-1\\ \end{pmatrix}\begin{pmatrix} x_{1}\\ x_{2}\\ x_{3}\\ \end{pmatrix} = \begin{pmatrix} 2\\ 3\\ 1\\ \end{pmatrix} $$
+
+    $\det(A) = 6 \neq 0$ 이므로 정리를 사용할 수 있다. 정리에 의하여 다음과 같은 유일한 해가 존재한다.
+
+    $$ x_1 = \dfrac{\det(M_1) }{\det(A) } = \dfrac{\det \begin{pmatrix} 2&2&3\\ 3&0&1\\ 1&1&-1\\ \end{pmatrix} }{\det(A) } = \frac{15}{6} = \frac{5}{2} $$
+
+    $$ x_2 = \dfrac{\det(M_2) }{\det(A) } = \dfrac{\det \begin{pmatrix} 1&2&3\\ 1&3&1\\ 1&1&-1\\ \end{pmatrix} }{\det(A) } = -\frac{6}{6} = -1 $$
+
+    $$ x_3 = \dfrac{\det(M_3) }{\det(A) } = \dfrac{\det \begin{pmatrix} 1&2&2\\ 1&0&3\\ 1&1&1\\ \end{pmatrix} }{\det(A) } = \frac{3}{6} = \frac{1}{2} $$
+
+## $n$-dimensional volume of parallelepiped
+
+!!! tldr "나란히꼴의 $n$차원 부피($n$-dimensional volume of parallelepiped)"
+
+    행렬 $A \in \mathbf{M}_{n \times n}(\R)$ 의 행 $a_1, a_2, \dots, a_n$ 에 대하여 벡터 $a_1, a_2, \dots, a_n$ 을 이웃한 변으로 가지는 나란히꼴의 $n$차원 부피는 $|\det(A)|$ 이다.
+
+- $2 \times 2$ 정사각행렬의 행렬식이 기하학에서 평행사변형의 넓이로 해석되었듯이 $n \times n$ 정사각행렬의 행렬식은 $n$차원 나란히꼴의 부피로 해석된다.
+    
+- 증명
+
+- 예시
+
+    행렬 $A = \begin{pmatrix} 1&-2&1\\ 1&0&-1\\ 1&1&1\\ \end{pmatrix}$ 의 행렬식의 절댓값은 $|\det(A)| = 6$ 이다. 따라서 벡터 $(1,-2,1), (1, 0, -1), (1,1,1)$ 을 이웃한 변으로 가지는 직육면체의 부피는 $6$ 이다.
+
+    실제로 다음 그림을 보면 해당 평행육면체의 세 변의 길이는 $\sqrt[]{6}, \sqrt[]{2}, \sqrt[]{3}$ 이므로 부피는 $6$ 이다.
+
+    ![image](https://user-images.githubusercontent.com/16812446/127725720-c3260b99-7cc4-4801-852f-20f727794890.png)
+
+## 닮은 행렬의 행렬식
+
+!!! tldr "문제 4.3-15"
+
+    두 행렬 $A, B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 가 닮음이면 $\det(A) = \det(B)$ 이다.
+
+- 증명
+
+    $A, B$ 가 닮음이면 $B = Q ^{-1}AQ$ 를 만족하는 $Q$ 가 존재한다. 그러므로 다음이 성립한다. 
+
+    $$ \det(B) = \det(Q ^{-1}AQ)  = \det(Q ^{-1}) \det(A) \det(Q) = \frac{1}{\det(Q) }\det(A) \det(Q) = \det(A) \tag*{■} $$
+
