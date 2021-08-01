@@ -31,6 +31,7 @@ nav:
       - Linear Transformation: Math/LinearAlgebra/LinearTransformation.md
       - Matrix Operation: Math/LinearAlgebra/MatrixOperation.md
       - Determinants: Math/LinearAlgebra/Determinants.md
+      - Diagonalization: Math/LinearAlgebra/Diagonalization.md
     # - 옛날 수학공부 노트정리:
     #   - 산술/대수학: 
     #     - 기초 산술: Math/Algebra/arithmetic.md

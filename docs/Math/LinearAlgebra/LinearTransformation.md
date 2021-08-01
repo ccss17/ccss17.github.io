@@ -1770,6 +1770,8 @@
 
     $$ [v] _{\beta } = Q[v]_{\beta '} \iff Q ^{-1} [v] _{\beta } = [v]_{\beta '} \tag*{■} $$
 
+## 선형연산자
+
 !!! tldr ""
 
     선형연산자(linear operator) : 벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{V} \to \mathbf{V}$ 에서 정의된 선형변환이다.
