@@ -548,8 +548,6 @@
 
 - 증명
 
-    행렬 $A$ 의 랭크가 $n$ 미만이면 
-
     $\text{rank} (A) < n$ 이면 $A$ 의 행 $a_1, a_2, \dots, a_n$ 은 일차종속이다. 그러므로 어떤 행 $a_r$ 을 다음과 같이 다른 행들의 일차결합으로 나타낼 수 있다.
 
     $$ a_r = c_1a_1 + \dots + c _{r-1}a _{r-1} + c _{r+1}a _{r+1} + \dots + c_na_n $$
@@ -762,6 +760,24 @@
     $$ \begin{equation}\begin{split} \det(A)&= \det(E_m \dots E_1) \\ &= \det(E_m) \dots \det(E_1) \\ &= \det(E_m^{t}) \dots \det(E_1^{t}) \\ &= \det(E_1^{t}) \dots \det(E_m^{t}) \\ &= \det(E_1^{t}\dots E_m^{t}) \\ &= \det(A^{t}) \\ \end{split}\end{equation} \tag*{} $$
 
     이로써 모든 증명이 끝났다. ■ 
+
+!!! tldr "문제 4.3-21"
+
+    정사각행렬 $A, C$ 에 대한 행렬 $M= \begin{pmatrix} A&B\\ O&C\\ \end{pmatrix} \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(M) = \det(A) \det(C)$ 이다.
+
+- 증명
+
+    $C$ 가 가역이 아니면 $C$ 의 행집합은 일차종속이다. 이는 $(O C)$ 의 행집합이 일차종속임을 뜻하고 결국 $M$ 이 가역이 아님을 뜻한다. 따라서 다음이 성립한다. 
+
+    $$ \det(A) \det(C) = \det(A) \cdot 0 = 0 = \det(M) $$
+
+    $C$ 가 가역이면 다음이 성립한다. 
+
+    $$ \begin{pmatrix} I&O\\ O&C ^{-1}\\ \end{pmatrix} \begin{pmatrix} A&B\\ O&C\\ \end{pmatrix} = \begin{pmatrix} A&B\\ O&I\\ \end{pmatrix} $$
+
+    삼각행렬의 행렬식은 대각합이므로 다음이 성립한다. 
+
+    $$ \det(C ^{-1}) \det(M) = \det(A) \iff \det(M) = \det(A) \det(C) $$
 
 ## Cramer's Rule
 
