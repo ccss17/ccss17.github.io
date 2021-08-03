@@ -1232,7 +1232,7 @@
 
 - 증명 
 
-    $\mathbf{V}$ 가 유한차원이라고 하고 기저를 $\beta = \{x_1, x_2, \dots, x_n\}$ 이라고 하자. $\mathbf{T}$ 가 전단사이므로 공역과 치역이 같다. 그러면 [정리 2.2](#f380ab529) 에 의하여 $\text{span } (\mathbf{T} (\beta )) = \mathbf{R} (\mathbf{T}) = \mathbf{W}$ 이다. 유한집합이 $\mathbf{W}$ 를 생성하므로 [정리 1.9](../VectorSpace/#2d3716e93) 에 의하여 $\mathbf{W}$ 는 유한차원이다. ▲ 
+    $\mathbf{V}$ 가 유한차원이라고 하고 기저를 $\beta = \{x_1, x_2, \dots, x_n\}$ 이라고 하자. $\mathbf{T}$ 가 전단사이므로 공역과 치역이 같다. 그러면 [정리 2.2](#f380ab529) 에 의하여 $\text{span} (\mathbf{T} (\beta )) = \mathbf{R} (\mathbf{T}) = \mathbf{W}$ 이다. 유한집합이 $\mathbf{W}$ 를 생성하므로 [정리 1.9](../VectorSpace/#2d3716e93) 에 의하여 $\mathbf{W}$ 는 유한차원이다. ▲ 
 
     역으로 $\mathbf{W}$ 가 유한차원임을 가정하면 $\mathbf{T} ^{-1}$ 를 사용하여 비슷한 논법으로 $\mathbf{V}$ 가 유한차원임을 증명할 수 있다. ▲ 
 
@@ -1456,7 +1456,7 @@
 
     $\dim (\mathbf{V} ) = \dim (\mathbf{W} )$ 를 가정하자. 그리고 $\mathbf{V}, \mathbf{W}$ 의 각각의 기저를 $\beta = \{v_1, v_2, \dots, v_n \}, \gamma = \{w_1, w_2, \dots, w_n \}$ 라고 하자. [정리 2.6](#f2d6e699f) 에 의하여 $\mathbf{T} (v_i) = w_i$ 인 선형변환이 유일하게 존재한다. [정리 2.2](#f380ab529) 에 의하면 
 
-    $$ \mathbf{R} (\mathbf{T}) = \text{span } (\mathbf{T} (\beta ))  = \text{span } (\gamma ) = \mathbf{W} $$
+    $$ \mathbf{R} (\mathbf{T}) = \text{span} (\mathbf{T} (\beta ))  = \text{span} (\gamma ) = \mathbf{W} $$
 
     이므로 $\mathbf{T}$ 는 전사이다. 그러면 [정리 2.5](#dfd4ff297) 에 의하여 $\mathbf{T}$ 는 단사이다. 그러므로 $\mathbf{T}$ 는 동형사상이고 결국 $\mathbf{V} \cong \mathbf{W}$ 이다. ■ 
 

@@ -274,7 +274,7 @@
 
 !!! tldr ""
 
-    $\R$-벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 고유벡터 $v$, 대응하는 고윳값 $\lambda$ 와 $v$ 에 의해 생성된 $\mathbf{V}$ 의 1차원 부분공간 $\mathbf{W} = \text{span } (\{v\})$ 은 $0$ 과 $v$ 를 지나는 직선이다. 이때 다음이 성립한다. 
+    $\R$-벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 고유벡터 $v$, 대응하는 고윳값 $\lambda$ 와 $v$ 에 의해 생성된 $\mathbf{V}$ 의 1차원 부분공간 $\mathbf{W} = \text{span} (\{v\})$ 은 $0$ 과 $v$ 를 지나는 직선이다. 이때 다음이 성립한다. 
 
     1. $\lambda > 1$ 일 때 $\mathbf{T}$ 는 $\mathbf{W}$ 의 벡터를 $0$ 에서 밀어낸다.
 
@@ -399,7 +399,7 @@
 
 - [정리 5.4](#2514593f4) 는 벡터 $v \in \mathbf{V}$ 가 고윳값 $\lambda$ 에 대응하는 고유벡터이려면 $(\mathbf{T} - \lambda \mathbf{I} _{\mathbf{V} })(v) = 0$ 이어야 함을 말해준다.
 
-- [정리 2.1](../LinearTransformation/#eb957cbf0) 에 의하여 $\mathbf{E}_{\lambda}$ 는 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터와 영벡터로 이루어진 $\mathbf{V}$ 의 부분공간이다.
+- [정리 2.1](../LinearTransformation/#eb957cbf0) 에 의하여 $\mathbf{E}_{\lambda}$ 는 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터와 영벡터로 이루어진 $\mathbf{V}$ 의 부분공간이다. 즉, $\mathbf{E}_{\lambda}$ 의 차원은 고윳값 $\lambda$ 에 대응하는 일차독립인 $\mathbf{T}$ 의 고유벡터의 최대 개수이다.
 
 !!! tldr "행렬의 고유공간(eigenspace) 의 정의"
 
@@ -410,6 +410,8 @@
 !!! tldr "정리 5.7"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 중복도가 $m$ 인 $\mathbf{T}$ 의 고윳값 $\lambda$ 에 대하여 $1 \leq \dim (\mathbf{E}_{\lambda} )\leq m$ 이다.
+
+- 이 정리는 $\mathbf{E}_{\lambda}$ 의 차원과 $\lambda$ 의 중복도의 관계를 말해준다.
 
 - 증명
 
@@ -469,3 +471,272 @@
 
 - 예시
 
+    $\R ^{3}$ 의 선형연산자 $\mathbf{T}$ 를 다음과 같이 정의하자. 
+
+    $$ \mathbf{T} \begin{pmatrix} a_1\\ a_2\\ a_3\\ \end{pmatrix} = \begin{pmatrix} 4a_1+a_3\\ 2a_1+3a_2+2a_3\\ a_1+4a_3\\ \end{pmatrix} $$
+
+    표준순서기저 $\beta$ 에 대한 $\mathbf{T}$ 의 행렬표현은 다음과 같다. 
+
+    $$ [\mathbf{T} ]_{\beta }=\begin{pmatrix} 4&0&1\\ 2&3&2\\ 1&0&4\\ \end{pmatrix} $$
+
+    $\mathbf{T}$ 의 특성다항식은 다음과 같다. 
+
+    $$ \det([\mathbf{T} ]_{\beta }-tI) = \det \begin{pmatrix} 4-t&0&1\\ 2&3-t&2\\ 1&0&4-t\\ \end{pmatrix} = -(t-5)(t-3)^{2} $$
+
+    고윳값 $\lambda _1 = 5$ 와 $\lambda _2 = 3$ 중복도는 각각 $1, 2$ 이므로 $\mathbf{E}_{\lambda_1}$ 와 $\mathbf{E}_{\lambda_2}$ 기저가 각각 $1, 2$ 이면 $\mathbf{T}$ 는 대각화 가능하다.
+
+    $\mathbf{E}_{\lambda_1}$ 는 다음과 같다. 
+
+    $$ \mathbf{E}_{\lambda_1} = \mathbf{N} (\mathbf{T}-\lambda _1 \mathbf{I})  = \Bigg \{\begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix}\in \R ^{3} : \begin{pmatrix} -1&0&1\\ 2&-2&2\\ 1&0&-1\\ \end{pmatrix}\begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix}=\begin{pmatrix} 0\\ 0\\ 0\\ \end{pmatrix}\Bigg \} $$
+
+    따라서 $\mathbf{E}_{\lambda_1}$ 은 다음 연립방정식의 해공간 $\mathbf{K} = \mathbf{E}_{\lambda_1}$ 이다.
+
+    $$ -x_1+x_3=0 $$
+    
+    $$ 2x_1-2x_2+2x_3=0 $$
+
+    $$ x_1-x_3=0 $$
+
+    계수행렬 $A$ 의 3행은 1행에 대하여 일차종속이므로 $\text{rank} (A) = 2$ 이다. [정리 3.8](../MatrixOperation/#b7b9c78d0) 에 의하여 $\dim (\mathbf{K} ) = \dim (\mathbf{E}_{\lambda_1}) = 3 - \text{rank} (A) = 3 - 2 = 1$ 이다. 기저를 구해보면 $\bigg \{\begin{pmatrix} 1\\ 2\\ 1\\ \end{pmatrix}\bigg \}$ 이다.
+
+    같은 방법으로 $\dim (\mathbf{E}_{\lambda_2}) = 2$ 를 알 수 있다. 기저를 구해보면 $\bigg \{\begin{pmatrix} 0\\ 1\\ 0\\ \end{pmatrix}, \begin{pmatrix} -1\\ 0\\ 1\\ \end{pmatrix}\bigg \}$ 이다.
+
+    그러면 각 고윳값 $\lambda _i$ 의 중복도가 고유공간 $\mathbf{E}_{\lambda_i}$ 의 차원과 같으므로 정리의 1) 에 의하여 $\mathbf{T}$ 는 대각화가능하다.
+
+    $\mathbf{T}$ 가 대각화가능이므로 $\mathbf{E}_{\lambda_1}, \mathbf{E}_{\lambda_2}$ 의 순서기저의 합집합 $\bigg \{\begin{pmatrix} 1\\ 2\\ 1\\ \end{pmatrix}, \begin{pmatrix} 0\\ 1\\ 0\\ \end{pmatrix}, \begin{pmatrix} -1\\ 0\\ 1\\ \end{pmatrix}\bigg \}$ 은 정리의 2) 에 의하여 $\mathbf{V}$ 의 순서기저이다.
+
+## 대각화 가능 판정법
+
+!!! tldr "대각화 가능 판정법"
+
+    $n$차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 대각화가능한 것과 다음 두 조건이 성립하는 것은 동치이다.
+
+    1. $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다.
+
+    2. $\mathbf{T}$ 의 고윳값 $\lambda$ 의 중복도가 $\text{nullity} (\mathbf{T} - \lambda \mathbf{I}) = n - \text{rank} (\mathbf{T} - \lambda \mathbf{I} )$ 와 같다.
+
+- 정사각행렬 $A$ 가 대각화가능한지 판정할 때도 이 방법을 사용한다. $A$ 의 대각화 가능성과 $\mathbf{L}_{A}$ 의 대각화 가능성이 동치이기 때문이다.
+
+- $\mathbf{T}$ 가 대각화가능한 연산자이고 $\beta _1, \dots, \beta _k$ 가 $\mathbf{T}$ 의 각각의 고유공간 $\mathbf{E}_{\lambda_i}$ 의 순서기저이면 [정리 5.8](#7050c2a83) 에 의해 $\beta = \bigcup_{}^{}\beta _i$ 는 $\mathbf{V}$ 의 기저이고, $[\mathbf{T} ]_{\beta }$ 는 대각행렬이다.
+
+    $\mathbf{T}$ 가 대각화가능한지 판정하려면 $\mathbf{V}$ 의 기저 $\alpha$ 에 대한 $B = [\mathbf{T} ]_{\alpha}$ 를 다룬다. $B$ 의 특성다항식이 완전히 인수분해되면 중복도가 $2$ 이상인 고윳값들이 $n - \text{rank} (B - \lambda I)$ 와 같은지 확인한다. 모두 같으면 $B$ 와 $\mathbf{T}$ 는 대각화 가능이다. (중복도가 $1$ 인 고윳값들은 [정리 5.7](#b5fbbceb6) 에 의하여 자동으로 조건 2) 를 만족하게 된다.)
+
+    $\mathbf{T}$ 의 대각화가능이 확인되었다면 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 기저 $\beta$ 를 찾아야 한다. 이를 위해 $B$ 의 각 고유공간에 대한 기저를 찾는다. 그러면 정리 5.8 에 의해 이 기저들의 합집합을 $B$ 의 고유벡터로 이루어진 $\mathbf{F} ^{n}$ 의 기저 $\gamma$ 로 둘 수 있다. 
+
+    $\gamma$ 의 각 벡터는 $\mathbf{T}$ 의 고유벡터로 이루어진 $\alpha$ 에 대한 좌표벡터이다. 따라서 $\gamma$ 를 통해 $\beta$ 를 구할 수 있다. 이 $\beta$ 를 통해 최종적으로 $\mathbf{T}$ 를 $[\mathbf{T} ]_{\beta }$ 로 대각화할 수 있다.
+
+- 증명
+
+    [정리 5.6](#867268fd3) 은 $\mathbf{T}$ 가 대각화가능이면 특성다항식이 완전히 인수분해됨을 말해준다. 그러나 완전히 인수분해된다고 해서 $\mathbf{T}$ 가 대각화가능인 것은 아니다. 하지만 완전히 인수분해된다는 조건은 $\mathbf{T}$ 가 대각화가능하기 위한 필요조건이다. 
+
+    $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되면 각각의 고윳값에 따른 중복도를 구할 수 있다. 이때 각 고윳값 $\lambda$ 의 중복도가 $\dim (\mathbf{E}_{\lambda})$ 와 같으면 [정리 5.8](#7050c2a83) 에 의하여 $\mathbf{T}$ 는 대각화가능이 된다.
+
+    $\dim (\mathbf{E}_{\lambda})$ 는 특성다항식 $\mathbf{T} - \lambda \mathbf{I} _{\mathbf{V} }$ 의 영공간의 차원이다. 또한 [정리 3.8](../MatrixOperation/#b7b9c78d0) 에 의하여 계수행렬 $\mathbf{T} - \lambda \mathbf{I}$ 를 가지는 일차연립방정식의 해공간이기도 하다. ■ 
+
+- 예시 
+
+    행렬 $A = \begin{pmatrix} 3&1&0\\ 0&3&0\\ 0&0&4\\ \end{pmatrix} \in \mathbf{M}_{3 \times 3}(\R)$ 의 대각화 가능성을 판정하자. $\det(A - tI) = -(t-4)(t-3)^{2}$ 이므로 $\lambda _1 = 4$ 는 조건 2) 를 자동으로 만족한다. $\lambda _2 = 3$ 에 대한 조건 2) 의 성립만 확인하면 $\mathbf{T}$ 는 대각화가능하다.
+
+    행렬 $A - \lambda _2I = \begin{pmatrix} 0&1&0\\ 0&0&0\\ 0&0&1\\ \end{pmatrix}$ 의 랭크가 $2$ 이므로 $3 - \text{rank} (A - \lambda _2I) = 1$ 은 $\lambda _2$ 의 중복도와 다르다. 따라서 $A$ 는 대각화 불가능이다.
+
+- 예시 
+
+    다음과 같은 벡터공간 $\mathbf{P}_{2}(\R)$ 의 선형연산자 $\mathbf{T}$ 가 존재한다. 
+
+    $$ \mathbf{T} (f(x)) = f(1) + f'(0)x + (f'(0)+f''(0))x ^{2} $$
+
+    $\mathbf{T}$ 의 대각화 가능성을 판정해보자. 표준순서기저 $\alpha$ 에 대하여 $B = [\mathbf{T} ]_{\alpha }= \begin{pmatrix} 1&1&1\\ 0&1&0\\ 0&1&2\\ \end{pmatrix}$ 이다. $B$ 와 $\mathbf{T}$ 의 특성다항식은 $-(t-1)^{2}(t-2)$ 으로써 완전히 인수분해된다. $\lambda _1=1$ 의 중복도는 $2$, $\lambda _2 = 2$ 의 중복도는 $1$ 이다. $\lambda _1=1$ 이 조건 2) 를 만족하는지 살펴보자. 
+
+    $$ 3 - \text{rank} (B - \lambda _1I)  = 3 - \text{rank} \begin{pmatrix} 0&1&1\\ 0&0&0\\ 0&1&1\\ \end{pmatrix}=3-1=2 $$
+
+    따라서 $\mathbf{T}$ 는 대각화 가능하다.
+
+    이제 $\mathbf{T}$ 를 대각화해보자. $\lambda _1 = 1$ 의 고유공간 $\mathbf{E}_{\lambda_1}$ 는 다음과 같다. 
+
+    $$ \mathbf{E}_{\lambda_1} = \bigg \{\begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix} \in \R ^{3} : \begin{pmatrix} 0&1&1\\ 0&0&0\\ 0&1&1\\ \end{pmatrix}\begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix} = 0\bigg \} $$
+
+    이 고유공간의 기저는 $\gamma _1 = \bigg \{\begin{pmatrix} 1\\ 0\\ 0\\ \end{pmatrix}, \begin{pmatrix} 0\\ -1\\ 1\\ \end{pmatrix}\bigg \}$ 이다.
+
+    $\mathbf{E}_{\lambda_2}$ 의 기저는 $\gamma _2 = \bigg \{\begin{pmatrix} 1\\ 0\\ 1\\ \end{pmatrix}\bigg \}$ 이다. $\gamma = \gamma _1 \cup \gamma _2 = \bigg \{\begin{pmatrix} 1\\ 0\\ 0\\ \end{pmatrix}, \begin{pmatrix} 0\\ -1\\ 1\\ \end{pmatrix}, \begin{pmatrix} 1\\ 1\\ 0\\ \end{pmatrix}\bigg \}$ 은 $B$ 의 고유벡터로 이루어진 $\R ^{3}$ 의 순서기저이다. $\gamma \in \mathbf{F} ^{3}$ 의 각 벡터는 $\beta = \{1, -x+x ^{2}, 1+x ^{2}\} \in \mathbf{P}_{2}(\R)$ 의 $\alpha$ 에 대한 좌표벡터이다. $\beta$ 는 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{P}_{2}(\R)$ 의 순서기저이므로 $\mathbf{T}$ 를 대각화해보면 다음과 같다.
+
+    $$ [\mathbf{T} ]_{\beta } = \begin{pmatrix} 1&0&0\\ 0&1&0\\ 0&0&2\\ \end{pmatrix} $$
+
+# Direct sum
+
+!!! tldr "집합의 덧셈의 정의, 합(sum) 의 정의"
+
+    벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 에 대하여 다음 집합을 부분공간의 합이라 한다.
+
+    $$ \sum_{i=1}^{k}\mathbf{W} _i := \bigg \{\sum_{i=1}^{k}v_i : v_i \in \mathbf{W} _i \bigg \} $$
+
+- 예시
+
+    $\R ^{3}$ 의 부분공간 $xy$ 평면 $\mathbf{W} _1$, $yz$ 평면 $\mathbf{W} _2$ 에 대하여 다음이 성립한다. 
+
+    $$ (a, b, c) = (a, 0, 0) + (0, b, c) \in \R ^{3} $$
+
+    $(a, 0, 0) \in \mathbf{W} _1, (0, b, c) \in \mathbf{W} _2$ 이므로 $\R ^{3} = \mathbf{W} _1, \mathbf{W} _2$ 이다.
+
+!!! tldr "직합(direct sum)의 정의"
+
+    벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 와 $i, j \in \{1,\dots,k\}$ 에 대하여 다음을 만족하는 $\mathbf{W}$ 를 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 의 직합이라 한다.
+
+    - $\mathbf{W} _i \subseteq \mathbf{W}$
+
+    - $\displaystyle \mathbf{W} = \sum_{i=1}^{k}\mathbf{W} _i$
+    
+    - $\displaystyle \mathbf{W} _j \cap \sum_{i \neq j}^{}\mathbf{W} _i = \{0\}$ 
+
+- **$\displaystyle \mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 의 직합을 $\mathbf{W} = \mathbf{W} _1 \oplus \mathbf{W} _2 \oplus \dots \oplus \mathbf{W} _k = \bigoplus_{i=1}^{k}\mathbf{W} _k$ 라고 표기한다.**
+
+- 직합은 $\mathbf{V}$ 를 간단한 부분공간으로 분해하는 방법을 제공한다. 이는 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 $\mathbf{V}$ 에 어떻게 작용하는지 파악할 수 있게 해준다.
+
+    또한 직합은 대각화 불가능한 선형연산자를 다룰 때 유용하게 사용된다.
+
+- 예시 
+
+    $\R ^{5}$ 의 $\mathbf{W} = \{(x_1, x_2, x_3, x_4, x_5) : x_5 = 0\}, \mathbf{W}_1 = \{(a, b, c, 0, 0) : a, b, c \in \R \}, \mathbf{W}_2 = \{(0, 0, 0, d, 0) : d \in \R \}$ 에 대하여 다음이 성립한다. 
+
+    $$ (a, b, c, d, 0) = (a, b, c, 0, 0) + (0, 0, 0, d, 0) \in \mathbf{W} _1 + \mathbf{W} 2 $$
+
+    따라서 $\mathbf{W} = \sum_{i=1}^{2}\mathbf{W} _i$ 이다.
+
+    또한 $\mathbf{W} _1 \cap \mathbf{W} _2 = \{0\}$ 이다. 따라서 $\displaystyle \bigoplus_{i=1}^{2}\mathbf{W} _i = \mathbf{W}$ 이다.
+
+## Properties of direct sum
+
+!!! tldr "문제 1.4-14"
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 부분집합 $S_1, S_2$ 에 대하여 $\text{span} (S_1 \cup S_2) = \text{span} (S_1) + \text{span} (S_2)$ 이다.
+
+- 증명
+
+    Let:
+
+    $$ S_1 = \{x_1, x_2, \dots, x_s\}, S_2 = \{x _{s+1}, x _{s+2}, \dots, x _{t}\} $$
+
+    By definition of span:
+
+    $$ \text{span} (S_1) = \bigg \{\sum_{i=1}^{s}b_ix_i : x_i \in S_1, b_i \in \mathbf{F} \bigg \} $$
+
+    $$ \text{span} (S_2) = \bigg \{\sum_{i=s+1}^{s + t}b_ix_i : x_i \in S_2, b_i \in \mathbf{F} \bigg \} $$
+
+    By definition of sum:
+
+    $$ \begin{equation}\begin{split}
+    \text{span} (S_1) + \text{span} (S_2) &= \bigg \{v + w : v \in \text{span} (S_1) , w \in \text{span} (S_2) \bigg \}\\
+    &= \bigg \{\sum_{i=1}^{t}b_ix_i : x_i \in S_1 \cup S_2, b_i \in \mathbf{F} \bigg \}\\
+    \end{split}\end{equation} \tag{1}
+    $$
+
+    $$ \bigg (\because v = \sum_{i=1}^{s}b_ix_i , w = \sum_{i=s+1}^{s + t}b_ix_i \implies v + w = \sum_{i=1}^{t}b_ix_i \bigg ) $$
+
+    By definition of union:
+
+    $$ S_1 \cup S_2 = \{x_1, x_2, \dots, x _{t}\} $$
+
+    By definition of span:
+
+    $$ \text{span} (S_1 \cup S_2) = \bigg \{\sum_{i=1}^{t}a_ix_i : x_i \in S_1 \cup S_2, a_i \in \mathbf{F} \bigg \} \tag{2} $$
+
+    By $(1), (2)$:
+
+    $$ \therefore \text{span} (S_1) + \text{span} (S_2) = \text{span} (S_1 \cup S_2) \tag*{■} $$
+
+!!! tldr "정리 5.9"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 와 $i \in \{1, \dots, k\}$ 에 대하여 다음은 동치이다.
+
+    1. $\displaystyle \mathbf{V} = \bigoplus_{i=1}^{k}\mathbf{W} _i$
+
+    2. $\displaystyle \mathbf{V} = \sum_{i=1}^{k}\mathbf{W} _i$ 이고 $v_i \in \mathbf{W} _i$ 에 대하여 $\displaystyle \sum_{i=1}^{k}v_i = 0$ 이면 $v_i = 0$ 이다.
+
+    3. $v \in \mathbf{V}$ 에 대하여 $v = \displaystyle \sum_{i=1}^{k}v_i$ 를 만족하는 $v_i \in \mathbf{W} _i$ 가 유일하게 존재한다.
+
+    4. $\mathbf{W} _i$ 의 순서기저 $\gamma _i$ 에 대하여 $\displaystyle \bigcup_{i=1}^{k}\gamma _i$ 는 $\mathbf{V}$ 의 순서기저이다.
+
+    5. $\displaystyle \bigcup_{i=1}^{k}\gamma _i$ 가 $\mathbf{V}$ 의 순서기저가 되게 하는 $\mathbf{W} _i$ 의 순서기저 $\gamma _i$ 가 존재한다.
+
+- 이 정리는 직합의 정의와 동치인 명제들을 말해준다.
+
+- 1 에서 2 를 도출하는 증명
+
+    직합의 정의에 의하여 $\mathbf{V} = \displaystyle \sum_{i=1}^{k}\mathbf{W} _i$ 이고 가정에 의하여 $v_i \in \mathbf{W} _i$ 에 대하여 $\displaystyle \sum_{i=1}^{k}v_i = 0$ 이다. 임의의 $j$ 에 대하여 합의 정의에 의하여 $-v_j = \displaystyle \sum_{i\neq j}^{} v_i \in \displaystyle \sum_{i\neq j}^{}\mathbf{W} _i$ 이다. 부분공간은 스칼라곱에 대하여 닫혀있으므로 $-v_j \in \mathbf{W} _j$ 이고, 직합의 정의에 의하여 $-v_j \in \mathbf{W} _j \cap \displaystyle \sum_{i\neq j}^{}\mathbf{W} _i = \{0\}$ 이다. 이는 $v_j = 0$ 임을 뜻한다. ■ 
+
+- 2 에서 3 를 도출하는 증명
+
+    2) 는 부분공간의 합이 곧 원래의 벡터공간이 됨을 말하므로 $v \in \mathbf{V}$ 와 $v_i \in \mathbf{W} _i$ 에 대하여 $v = v_1 + v_2 + \dots + v_k$ 인 벡터 $v_1, v_2, \dots, v_k$ 가 존재한다. 
+
+    존재성 증명이 되었으니 유일성을 증명하자. $v_i \neq w_i \in \mathbf{W} _i$ 에 대하여 $v = w_1 + w_2 + \dots + w_k$ 가 성립한다고 하면 다음이 성립한다. 
+
+    $$ (v_1 - w_1) + (v_2 - w_2) + \dots + (v_k - w_k) = v - v = 0 $$
+
+    $v_i - w_i \in \mathbf{W} _i$ 인데 2) 를 가정했으므로 $v_i - w_i = 0 \implies v_i = w_i$ 이다. 이는 모순이다. ■ 
+
+- 3 에서 4 를 도출하는 증명
+
+    3) 을 가정했으므로 $\mathbf{V} = \displaystyle \sum_{i=1}^{k}\mathbf{W} _i$ 이다. 집합 $\gamma _i$ 는 모든 $v_i \in \mathbf{W} _i$ 를 생성한다. 따라서 집합 $\displaystyle \bigcup_{}^{}\gamma _i$ 로 모든 $\displaystyle \sum_{i=1}^{k}v_i \in \mathbf{V}$ 를 생성할 수 있다.
+
+    이 생성집합이 일차독립임을 보이면 기저이므로 증명이 끝난다. $j \in \{1,2, \dots, |\gamma _i|\}$ 에 대한 $\displaystyle \sum_{i=1}^{k}\displaystyle \sum_{j=1}^{|\gamma _i|}a _{ij} v _{ij} = 0$ 인 벡터 $v _{ij} \in \gamma _i$ 와 스칼라 $a _{ij}$ 가 존재한다. $w_i = \displaystyle \sum_{j=1}^{|\gamma _i|}a _{ij}v _{ij}$ 로 두면 $w_i \in \text{span} (\gamma _i) = \mathbf{W} _i$ 이고 다음이 성립한다. 
+
+    $$ w_1 + w_2 + \dots + w_k = \sum_{i=1}^{k}\sum_{j=1}^{|\gamma _i|}a _{ij}v _{ij} = 0 $$
+
+    부분공간은 벡터공간이므로 $0 \in \mathbf{W} _i$ 이다. 따라서 $w_1 = 0, w_2 = 0, \dots, w_k = 0$ 을 가정할 경우 $w_1 + w_2 + \dots + w_k = 0+0+\dots+0 = 0$ 이다. 3) 을 가정했는데 3) 에 따르면 이 표현은 유일하다. 즉, $w_i \neq 0$ 일 경우 $w_1 + w_2 + \dots + w_k = 0$ 는 성립하지 않는다. 그러므로 $w_i = 0$ 이다. 이는 다음이 성립함을 뜻한다. 
+
+    $$  0 = w_i = \sum_{j=1}^{|\gamma _i|} a _{ij}v _{ij} $$
+
+    $\gamma _i$ 는 일차독립이므로 위 식이 성립하기 위한 스칼라는 영벡터의 자명한 표현 뿐이다. 즉, $a _{ij} = 0$ 이다. 이는 $\displaystyle \bigcup_{}^{}\gamma _i$ 가 일차독립임을 뜻한다. ■ 
+
+- 4 에서 5 를 도출하는 증명
+
+    4) 를 가정하면 5) 가 바로 나온다.
+
+- 5 에서 1 을 도출하는 증명
+
+    문제 1.4-14 에 의하여 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split}
+    \mathbf{V} &= \text{span} (\gamma _1 \cup \gamma _2 \cup \dots \cup \gamma _k) \\
+    &= \text{span} (\gamma _1) + \text{span} (\gamma _2) + \dots + \text{span} (\gamma _k) = \sum_{i=1}^{k}\mathbf{W} _i\\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    어떤 $j$ 와 영이 아닌 벡터 $v \in \mathbf{V}$ 에 대하여 $v \in \mathbf{W} _j \cap \displaystyle \sum_{i \neq j}^{}\mathbf{W} _i$ 를 가정하면 $v \in \mathbf{W} _j = \text{span} (\gamma _j) \land v \in \displaystyle \sum_{i \neq j}^{}\mathbf{W} _i = \text{span} \bigg (\bigcup_{i \neq j}^{}\gamma i\bigg )$ 이다. 따라서 $v$ 는 $\gamma _j$ 와 $\displaystyle \bigcup_{i \neq j}^{}\gamma _i$ 의 자명하지 않은 일차결합이다. 그러므로 $v$ 를 $\displaystyle \bigcup_{i=1}^{k}\gamma _i$ 의 일차결합으로 표현하는 방식이 유일하지 않다. 이는 [정리 1.8](../VectorSpace/#8a514fc5c) 에 의하여 모순이다. 따라서 $\mathbf{W} _j \cap \displaystyle \sum_{i \neq j}^{}\mathbf{W} _i = \{0\}$ 이다. ■ 
+
+!!! tldr "정리 5.10"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 대각화가능인 것과 $\mathbf{V}$ 가 $\mathbf{T}$ 의 고유공간의 직합인 것은 동치이다.
+
+- 증명
+
+    $\mathbf{T}$ 의 서로 다른 고윳값을 $\lambda _1, \lambda _2, \dots , \lambda _k$ 라 하자. 
+    
+    $\mathbf{T}$ 가 대각화가능임을 가정하자. 각 $i$ 에 대한 고유공간 $\mathbf{E}_{\lambda_i}$ 의 순서기저를 $\gamma _i$ 라 하자. [정리 5.8](#7050c2a83) 은 $\bigcup_{}^{}\gamma _i$ 가 $\mathbf{V}$ 의 기저임을 말해준다. 이로써 정리 5.9 의 4) 가 충족된다. 정리 5.9 의 1) 은 4) 와 진리값이 같으므로 $\mathbf{V} = \bigoplus_{}^{}\mathbf{E}_{\lambda_i}$ 이다. ▲ 
+
+    $\mathbf{V}$ 가 $\mathbf{T}$ 의 고유공간의 직합임을 가정하자. 각 $i$ 에 대하여 $\mathbf{E}_{\lambda_i}$ 의 순서기저 $\gamma _i$ 가 존재한다. 정리 5.9 의 1) 이 참이므로 4) 도 참이 되어 $\bigcup_{}^{}\gamma _i$ 는 $\mathbf{V}$ 의 기저가 된다. 이 기저는 $\mathbf{T}$ 의 고유벡터로 이루어진 기저이므로 $\mathbf{T}$ 는 대각화가능하다. ■ 
+
+- 예시 
+
+    다음과 같은 벡터공간 $\R ^{4}$ 의 선형연산자 $\mathbf{T}$ 가 존재한다. 
+
+    $$ \mathbf{T} (a,b,c,d)=(a,b,2c,3d) $$
+
+    지금까지 논의했던 방법으로 $\mathbf{T}$ 가 대각화가능인 것과 고윳값이 $\lambda _1=, \lambda _2=2, \lambda _3=3$ 인 것을 알 수 있다.
+
+    표준순서기저 $\beta$ 에 대한 $\mathbf{T}$ 의 행렬표현:
+
+    $$ \mathbf{T} (e_1) = (a, 0, 0, 0) = a \cdot e_1 + 0 \cdot e_2 + 0 \cdot e_3 + 0 \cdot e_4 $$
+
+    $$ \mathbf{T} (e_2) = (0, b, 0, 0) = 0 \cdot e_1 + b \cdot e_2 + 0 \cdot e_3 + 0 \cdot e_4 $$
+
+    $$ \mathbf{T} (e_3) = (0, 0, 2c, 0) = 0 \cdot e_1 + 0 \cdot e_2 + 2c \cdot e_3 + 0 \cdot e_4 $$
+
+    $$ \mathbf{T} (e_4) = (0, 0, 0, d) = 0 \cdot e_1 + 0 \cdot e_2 + 0 \cdot e_3 + 3d \cdot e_4 $$
+
+    $$ [\mathbf{T} ]_{\beta } = \begin{pmatrix}
+    a&0&0&0\\
+    0&b&0&0\\
+    0&0&2c&0\\
+    0&0&0&3d\\
+    \end{pmatrix}
+    $$

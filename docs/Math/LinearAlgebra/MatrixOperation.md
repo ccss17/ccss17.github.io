@@ -188,17 +188,17 @@
 
     $\mathbf{F} ^{n}$ 의 표준 순서기저 $\beta$ 는 $\mathbf{F} ^{n}$ 를 생성한다. [정리 2.2](../LinearTransformation/#f380ab529) 에 의하여 다음이 성립한다. 
 
-    $$ \mathbf{R} (\mathbf{L}_A) = \text{span } (\mathbf{L}_{A}(\beta ))  = \text{span } (\{\mathbf{L}_{A}(e_1), \mathbf{L}_{A}(e_2), \dots, \mathbf{L}_{A}(e_n)\}) $$
+    $$ \mathbf{R} (\mathbf{L}_A) = \text{span} (\mathbf{L}_{A}(\beta ))  = \text{span} (\{\mathbf{L}_{A}(e_1), \mathbf{L}_{A}(e_2), \dots, \mathbf{L}_{A}(e_n)\}) $$
 
     [정리 2.13 - 2](../LinearTransformation/#546d2897f) 에 의하여 $A$ 의 $j$ 열 $a_j$ 에 대하여 $\mathbf{L}_{A}(e_j) = Ae_j = a_j$ 이다. 따라서 다음이 성립한다.
     
-    $$ \text{rank} (A) = \dim (\mathbf{R} (\mathbf{L}_A)) = \dim (\text{span } (\{a_1, a_2, \dots, a_n \})) \tag*{■} $$
+    $$ \text{rank} (A) = \dim (\mathbf{R} (\mathbf{L}_A)) = \dim (\text{span} (\{a_1, a_2, \dots, a_n \})) \tag*{■} $$
     
 - 예시 
 
     행렬 $A = \begin{pmatrix} 1&0&1\\ 0&1&1\\ 1&0&1\\ \end{pmatrix}$ 의 1열과 2열은 일차독립이고 3열은 두 열의 일차결합이다. 그러므로 다음이 성립한다. 
 
-    $$ \text{rank} (A) = \dim \Bigg (\text{span } \Bigg (\Bigg \{\begin{pmatrix} 1\\ 0\\ 1\\ \end {pmatrix}, \begin{pmatrix} 0\\ 1\\ 0\\ \end{pmatrix}, \begin{pmatrix} 1\\ 1\\ 1\\ \end{pmatrix} \Bigg \}\Bigg ) \Bigg ) = 2 $$
+    $$ \text{rank} (A) = \dim \Bigg (\text{span} \Bigg (\Bigg \{\begin{pmatrix} 1\\ 0\\ 1\\ \end {pmatrix}, \begin{pmatrix} 0\\ 1\\ 0\\ \end{pmatrix}, \begin{pmatrix} 1\\ 1\\ 1\\ \end{pmatrix} \Bigg \}\Bigg ) \Bigg ) = 2 $$
 
 !!! tldr ""
 
@@ -692,7 +692,7 @@
 
     $$ x_1 - x_2 - x_3 = 0 $$
 
-    계수행렬 $A = \begin{pmatrix} 1&2&1\\ 1&-1&-1\\ \end{pmatrix}$ 에 대하여 $\text{rank} (A)  = 2$ 이다. 해집합 $\mathbf{K}$ 에 대하여 $\dim (\mathbf{K} ) = 3 - 2 = 1$ 이므로 영벡터가 아닌 임의의 해가 $\mathbf{K}$ 의 기저가 된다. 가령 $\begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix}$ 이 해이므로 $\text{span } \Bigg \{\begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix}\Bigg \} = \mathbf{K}$ 이다.
+    계수행렬 $A = \begin{pmatrix} 1&2&1\\ 1&-1&-1\\ \end{pmatrix}$ 에 대하여 $\text{rank} (A)  = 2$ 이다. 해집합 $\mathbf{K}$ 에 대하여 $\dim (\mathbf{K} ) = 3 - 2 = 1$ 이므로 영벡터가 아닌 임의의 해가 $\mathbf{K}$ 의 기저가 된다. 가령 $\begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix}$ 이 해이므로 $\text{span} \Bigg \{\begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix}\Bigg \} = \mathbf{K}$ 이다.
 
 !!! tldr "정리 3.8 따름정리"
 
@@ -792,15 +792,15 @@
 
 - 증명
 
-    [정리 3.5](#0ce821e3f) 의 증명과정은 행렬 $A$ 의 $j$열 $a_j$ 에 대하여 $\mathbf{R} (\mathbf{L}_A)=\text{span } (\{a_1, a_2, \dots, a_n \})$ 임을 말해준다. 문제 3.3-9 에 의하여 $Ax = b$ 가 해가 있는 것은 $b \in \mathbf{R} (\mathbf{L}_A)$ 와 동치이다. 그러므로 $Ax = b$ 의 해가 있기 위하여 다음이 성립해야 한다. 
+    [정리 3.5](#0ce821e3f) 의 증명과정은 행렬 $A$ 의 $j$열 $a_j$ 에 대하여 $\mathbf{R} (\mathbf{L}_A)=\text{span} (\{a_1, a_2, \dots, a_n \})$ 임을 말해준다. 문제 3.3-9 에 의하여 $Ax = b$ 가 해가 있는 것은 $b \in \mathbf{R} (\mathbf{L}_A)$ 와 동치이다. 그러므로 $Ax = b$ 의 해가 있기 위하여 다음이 성립해야 한다. 
 
-    $$ b \in \text{span } (\{a_1, a_2, \dots, a_n \}) $$
+    $$ b \in \text{span} (\{a_1, a_2, \dots, a_n \}) $$
 
     그러므로 다음이 성립한다. 
 
-    $$ \text{span } (\{a_1, a_2, \dots, a_n \}) = \text{span } (\{a_1, a_2, \dots, a_n, b \}) $$
+    $$ \text{span} (\{a_1, a_2, \dots, a_n \}) = \text{span} (\{a_1, a_2, \dots, a_n, b \}) $$
 
-    따라서 $\dim (\text{span } (\{a_1, a_2, \dots, a_n \}) )= \dim (\text{span } (\{a_1, a_2, \dots, a_n, b \}))$ 이다. [정리 3.5](#0ce821e3f) 에 의하여 다음이 성립한다.
+    따라서 $\dim (\text{span} (\{a_1, a_2, \dots, a_n \}) )= \dim (\text{span} (\{a_1, a_2, \dots, a_n, b \}))$ 이다. [정리 3.5](#0ce821e3f) 에 의하여 다음이 성립한다.
 
     $$ \text{rank} (A) = \text{rank} (A|b) \tag*{■} $$
 

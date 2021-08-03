@@ -746,9 +746,9 @@
 
 !!! tldr ""
 
-    생성공간(span) : $\mathbf{F}-$벡터공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대하여
+    생성공간(span) : $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대하여
 
-    $$ \text{span } (S) = \bigg \{\sum_{i=1}^{k}a_iv_i \bigg | k \in \N, v_i \in S, a_i \in \mathbf{F} \bigg \} $$
+    $$ \text{span} (S) = \bigg \{\sum_{i=1}^{|S|}a_iv_i : v_i \in S, a_i \in \mathbf{F} \bigg \} $$
 
     이다.
     
@@ -820,7 +820,7 @@
 
     $$ r(1, 1, 0) + s(1, 0, 1) + t(0, 1, 1) = (r_1, r_2, r_3) $$
 
-    을 만족하는 스칼라 $r,s,t$ 를 찾는 것으로 보일 수 있다. 그러면 $r = \dfrac{1}{2}(a_1+a_2-a_3, s = \dfrac{1}{2}(a_1-a_2+a_3), t = \dfrac{1}{2}(-a_1+a_2+a_3)$ 이다.
+    을 만족하는 스칼라 $r,s,t$ 를 찾는 것으로 보일 수 있다. 그러면 $r = \dfrac{1}{2}(a_1+a_2-a_3), s = \dfrac{1}{2}(a_1-a_2+a_3), t = \dfrac{1}{2}(-a_1+a_2+a_3)$ 이다.
 
 - 예시 
 
