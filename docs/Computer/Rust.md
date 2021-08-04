@@ -3178,4 +3178,906 @@ unsafe 코드를 작성하기 위하여 `unsafe` 키워드를 쓰고 블록을 �
 
 이제 5 가지의 unsafe superpower 들을 하나씩 살펴보자. 
 
-## Dereferencing a Raw Pointer
+## 1. Dereferencing a Raw Pointer
+
+Rust 는 reference 가 항상 valid 하다는 것을 보장한다. Unsafe Rust 에서는 새로운 reference 타입인 raw pointer 를 제공한다. reference 처럼 raw pointer 는 immutable 이 될 수도 있고 mutable 이 될 수도 있으며, 각각 `*const T` 와 `*mut T` 로 쓰일 수 있다. 여기에서 `*` 는 dereference pointer 가 아니라 타입의 이름이 된다. 
+
+reference 나 smart pointer 에 비하여 raw pointer 가 갖는 차이점은 다음과 같다. 
+
+- immutable 과 mutable 을 동시에 갖거나 여러개의 mutable pointer 를 같은 데이터에 대하여 가짐으로써 borrowing rule 을 무시할 수 있다. 
+
+- valid 한 메모리를 포인팅하고 있다는 것이 보장되지 않는다. 
+
+- null 값을 갖는 것이 허용된다. 
+
+- 자동 할당해제가 구현되어 있지 않다. 
+
+Rust 가 보장해주는 안정장치를 포기함으로써 raw pointer 를 통하여 더 나은 성능과 더 나은 기능을 코딩할 수 있다. 더 나은 기능이라 함은 다른 언어와의 인터페이스라든가, 하드웨어와의 인터페이스를 코딩할 수 있다는 것이다. 
+
+다음은 각각 immutable 한, mutable 한 raw pointer 를 만드는 예시이다. `as` 키워드로 immutable, mutable reference 를 각각 immutable, mutable raw pointer 로 형변환했다.
+
+```rust
+let mut num = 5;
+
+let r1 = &num as *const i32;
+let r2 = &mut num as *mut i32;
+```
+
+이처럼 `unsafe` 블록 없이도 raw pointer 를 만들 수 있다. 단지 raw pointer 를 dereference 하는 것을 unsafe 바깥에서 할 수 없을 뿐이다. 
+
+위 예시는 raw pointer 를 valid 함이 보장된 reference 를 기반으로 만들었으므로 raw pointer 의 valid 함이 보장된다. 그러나 모든 raw pointer 의 valid 가 항상 보장되는 것은 아니다. 
+
+```rust
+let address = 0x012345usize;
+let r = address as *const i32;
+```
+
+위 예시 또한 unsafe 블록 바깥에서 raw pointer 를 만들었지만 절대로 `r` 을 dereference 할 수는 없다. `0x012345` 주소에 무엇이 있을 줄 알고 dereference 를 해서 읽거나 쓴단 말인가. 또한 이 주소가 valid 하다는 것 또한 보장되지 않는다. 
+
+dereference 는 다음과 같이 valid 한 raw pointer 에 대하여 unsafe 블록 안에서만 가능하다. 
+
+```rust
+let mut num = 5;
+
+let r1 = &num as *const i32;
+let r2 = &mut num as *mut i32;
+
+unsafe {
+    println!("r1 is: {}", *r1);
+    println!("r2 is: {}", *r2);
+}
+```
+
+raw pointer 는 위와 같이 immutable, mutable pointer 를 같이 만들 수 있어서 data race 를 주의해야 한다. 
+
+그러나 이러한 위험에도 불구하고 raw pointer 를 사용해야 하는 가장 큰 이유 중 하나는 C 언어와의 인터페이스를 만들기 위함이다. 
+
+또 다른 이유는 borrow checker 가 이해하지 못하는 unsafe 위의 safe abstraction 을 만들기 위함이다. 
+
+## 2. Calling an Unsafe Function or Method
+
+unsafe 함수나 메소드를 사용하려면 `unsafe` 블록 안에서만 가능하다. unsafe 함수나 메소드란 함수 몸체 자체가 unsafe 블록인 함수이다. 
+
+```rust
+unsafe fn dangerous() {}
+
+unsafe {
+    dangerous();
+}
+```
+
+위 코드는 unsafe 함수를 선언하고 그것을 호출하고 있다. 이처럼 unsafe 함수는 반드시 unsafe 블록 안에서만 사용가능하다. unsafe 함수 내부는 unsafe 블록과 같기 때문에 unsafe 함수 내부에서 또 다시 unsafe 블록을 선언할 필요가 없다. 
+
+그러나 함수가 unsafe 코드를 포함한다고 해서 함수 전체를 unsafe 로 규정해야 하는 것은 아니다. unsafe 코드를 사용하는 함수를 safe 함수로 abstract 할 수 있다. 
+
+가령 표준라이브러리의 `split_at_mut` 함수는 다음과 같이 mutable reference 를 split 해준다.
+
+```rust
+    let mut v = vec![1, 2, 3, 4, 5, 6];
+
+    let r = &mut v[..];
+
+    let (a, b) = r.split_at_mut(3);
+
+    assert_eq!(a, &mut [1, 2, 3]);
+    assert_eq!(b, &mut [4, 5, 6]);
+```
+이것을 직접 구현해보자. 하지만 이 함수를 safe 코드만으로는 구현할 수 없다.
+
+```rust
+fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
+    let len = slice.len();
+
+    assert!(mid <= len);
+
+    (&mut slice[..mid], &mut slice[mid..])
+}
+```
+
+위 코드는 safe 코드만으로 split_at_mut 함수를 구현해본 건데 에러가 발생한다. mutable reference 를 2개나 만들었기 때문에 borrow rule 에 위배되기 때문이다. 
+
+Rust 가 이 에러를 발생시키는 이유는 mutable reference 가 동일한 부분의 데이터를 slice 했을 수도 있기 때문이다. 하지만 우리는 2개의 mutable reference 들이 서로 다른 파트를 slice 했다는 것을 안다. 그러나 Rust 는 이것을 판단할만큼 똑똑하지 못하다. 그러므로 다음과 같이 unsafe 코드를 사용할 때이다.
+
+```rust
+fn split_at_mut(slice: &mut [i32], mid: usize) -> (&mut [i32], &mut [i32]) {
+    let len = slice.len();
+    let ptr = slice.as_mut_ptr();
+
+    assert!(mid <= len);
+
+    unsafe {
+        (
+            slice::from_raw_parts_mut(ptr, mid),
+            slice::from_raw_parts_mut(ptr.add(mid), len - mid),
+        )
+    }
+}
+```
+
+이렇게 구현된 split_at_mut 함수는 unsafe 로 정의할 필요 없다. safe abstraction 이 만들어졌기 때문이다.
+
+unsafe 블록은 다른 프로그래밍 언어에서 정의된 함수를 사용할 때도 쓰인다. 이때 `extern` 키워드에 `"C"` 를 붙히면 C 표준 라이브러리를 사용한다는 것이고 함수 선언을 가져오면 unsafe 블록에서 함수를 사용할 수 있다.
+
+```rust
+extern "C" {
+    fn abs(input: i32) -> i32;
+}
+
+fn main() {
+    unsafe {
+        println!("Absolute value of -3 according to C: {}", abs(-3));
+    }
+}
+```
+
+extern 블록의 함수들은 반드시 unsafe 블록에서 사용되어야 하는데, 이는 다른 프로그래밍 언어들이 Rust 의 규칙을 따른다는 보장이 없기 때문이다.
+
+`"C"` 란 어떤 ABI(application binary interface) 를 통해 외부 함수를 사용할지 선언하는 부분이다. 즉, ABI 는 어셈블리 레벨에서 어떻게 함수를 호출할지 정의해준다. `"C"` ABI 가 가장 많이 쓰이고 C 언어 의 ABI 를 따른다.
+
+`extern` 키워드는 외부 인터페이스를 Rust 로 끌어들어오는 것뿐만 아니라 Rust 의 함수를 외부 인터페이스에서 사용할 수 있게 해준다. 이렇게 하려면 `extern` 블록 대신에 `fn` 키워드 앞에 `extern` 을 붙히고, `#[no_mangle]` annotation 을 단다. Mangling 이란 컴파일러가 우리가 함수에 붙힌 이름을 더 많은 정보를 포함시켜서 바꿔버리는 과정이다. 모든 컴파일러는 Mangling 을 조금씩 다르게 하므로 Rust 의 Mangling 을 비활성화시켜야 하는 것이다. 다음 예시를 보자.
+
+```rust
+#[no_mangle]
+pub extern "C" fn call_from_c() {
+    println!("Just called a Rust function from C!");
+}
+```
+
+이 함수는 shared library 로 컴파일하여 C 에서 링킹되면 `C` 언어에서 사용할 수 있다. 이런 형태의 `extern` 은 `unsafe` 가 필요없다.
+
+## 3. Access or modify a mutable static variable
+
+Rust 는 전역변수를 지원하지 않는다. Rust 의 ownership 에 위배될 가능성이 크기 때문이다. 가령 두 스레드가 하나의 mutable 전역변수에 접근하면 data race 가 생길 것이다.
+
+일단 Rust 는 global variable(전역변수)를 static variable 이라 부른다. 다음 예시는 static variable 을 사용하는 예를 보여준다.
+
+```rust
+static HELLO_WORLD: &str = "Hello, world!";
+
+fn main() {
+    println!("name is: {}", HELLO_WORLD);
+}
+```
+
+위 예시의 타입은 `&'static str` 이다. static variable 은 반드시 `'static` lifetime 을 갖는다.
+
+static variable 은 `const MAX_POINTS: u32 = 100_000;` 와 같이 정의되는 상수와 비슷하다. 하지만 다른점은 static variable 은 고정된 주소의 메모리에 저장된다는 것이다. 이는 static variable 을 사용하면 항상 같은 데이터에 접근하게 됨을 뜻한다. 반면 상수는 그것의 데이터를 언제든 복사할 수 있다. 
+
+상수와 static variable 의 또 다른 차이점은 static variable 이 mutable 하다는 것이다. 그러나 mutable static variable 에 접근하고 그것을 수정하는 것은 unsafe 하다. 다음 예시를 보자. 
+
+```rust
+static mut COUNTER: u32 = 0;
+
+fn add_to_count(inc: u32) {
+    unsafe {
+        COUNTER += inc;
+    }
+}
+
+fn main() {
+    add_to_count(3);
+
+    unsafe {
+        println!("COUNTER: {}", COUNTER);
+    }
+}
+```
+
+지금은 싱글 스레드가 `COUNTER` 에 접근하지만 여러 스레드가 접근하면 data race 가 발생할 수도 있다. Rust 가 mutable static variable 을 unsafe 블록 안에 넣는 이유가 data race 때문이다. 따라서 가능하면 thread-safe 한 smart pointer 를 사용해야 한다.
+
+## 4. Implement an unsafe trait
+
+`unsafe` 의 또 다른 사용예는 unsafe trait 를 구현할 때이다. unsafe trait 란 하나 이상의 Method 가 컴파일러가 검증할 수 없는 특징을 가지는 trait 이다. unsafe trait 는 다음과 같이 정의할 수 있다. 
+
+```rust
+unsafe trait Foo {
+    // methods go here
+}
+
+unsafe impl Foo for i32 {
+    // method implementations go here
+}
+```
+
+`unsafe impl` 을 통하여 우리는 컴파일러가 검증할 수 없는 특징을 유지할 것을 약속하게 된다.
+
+## 5. Access files of `union`s
+
+`union` 의 필드에 접근하는 것은 unsafe 하다. union 은 Rust tutorial 에서 다루지 않으므로 다음의 Rust reference 를 참조하자.
+
+https://doc.rust-lang.org/reference/items/unions.html
+
+---
+
+# Advanced Traits
+
+# Specifying Placeholder Types in Trait Definitions with Associated Types
+
+Associated type 은 trait 과 type placegholer 를 연결한다. 
+
+associated type 의 예시는 `Iterator` 의 `Item` 이다.
+
+```rust
+pub trait Iterator {
+    type Item;
+
+    fn next(&mut self) -> Option<Self::Item>;
+}
+```
+
+`Item` 은 Placeholder type 이고, `next` 의 `Self::Item` 에서 사용된다. Trait 를 구현할 때 다음과 같이 이 Placeholder type 이 구체적인 type 이 된다. 
+
+```rust
+struct Counter {
+    count: u32,
+}
+
+impl Iterator for Counter {
+    type Item = u32;
+
+    fn next(&mut self) -> Option<Self::Item> {
+        // --snip--
+```
+
+그래서 Placeholder type 은 마치 generic 같다. 그러면 왜 generic 대신 associated type 을 사용할까? 
+
+```rust
+pub trait Iterator<T> {
+    fn next(&mut self) -> Option<T>;
+}
+```
+
+위와 같은 generic 을 정의하면 각각의 구현마다 다른 type 으로 구현이 가능하다. 
+
+즉, 우리는 `Iterator<String> for Counter` 나 여타 다른 type 에 대하여 Counter 를 구현할 수 있다.
+
+하지만 associated type 에서는 type 지정을 한번만 할 수 있다. 따라서 
+
+## Default Generic Type Parameters and Operator Overloading
+
+Generic type 을 사용할 때 default type 을 지정할 수 있다. 형식은 `<PlaceholderType=ConcreteType>` 이다. 
+
+이것이 유용하게 사용되는 예시는 연산자 오버로딩이다. 연산자 오버로딩은 `+` 같은 연산자를 커스터마이징한다. Rust 는 `std::ops` 에 있는 연산자를 커스터마이징 하도록 허용한다. 다음은 `+` 를 커스터마이징 한 예시이다.
+
+```rust
+use std::ops::Add;
+
+#[derive(Debug, PartialEq)]
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+impl Add for Point {
+    type Output = Point;
+
+    fn add(self, other: Point) -> Point {
+        Point {
+            x: self.x + other.x,
+            y: self.y + other.y,
+        }
+    }
+}
+
+fn main() {
+    assert_eq!(
+        Point { x: 1, y: 0 } + Point { x: 2, y: 3 },
+        Point { x: 3, y: 3 }
+    );
+}
+```
+
+`Add` trait 는 다음과 같이 default generic type 을 갖는다.
+
+```rust
+trait Add<Rhs=Self> {
+    type Output;
+
+    fn add(self, rhs: Rhs) -> Self::Output;
+}
+```
+
+`Rhs` 가 default generic type 인데 위 구현에서 `Rhs` 의 특정한 타입을 구체화시키지 않았는데도 구현이 되었었다. `Self` 로 자동으로 구체화가 되었기 때문이다. `Self` 는 `Add` 가 구현될 타입이다. 
+
+default generic type 을 구체화시킨 예시는 다음과 같다. 
+
+```rust
+struct Millimeters(u32);
+struct Meters(u32);
+
+impl Add<Meters> for Millimeters {
+    type Output = Millimeters;
+
+    fn add(self, other: Meters) -> Millimeters {
+        Millimeters(self.0 + (other.0 * 1000))
+    }
+}
+```
+
+위 예시는 `Rhs` 의 디폴트인 `Self` 를 `Meters` 로 바꿨다. 
+
+## Fully Qualified Syntax for Disambiguation: Calling Methods with the Same Name
+
+Rust 는 같은 이름을 가진 Method 를 구현하는 것을 금지하지는 않는다. 다음 코드를 보자. 
+
+```rust
+trait Pilot {
+    fn fly(&self);
+}
+
+trait Wizard {
+    fn fly(&self);
+}
+
+struct Human;
+
+impl Pilot for Human {
+    fn fly(&self) {
+        println!("This is your captain speaking.");
+    }
+}
+
+impl Wizard for Human {
+    fn fly(&self) {
+        println!("Up!");
+    }
+}
+
+impl Human {
+    fn fly(&self) {
+        println!("*waving arms furiously*");
+    }
+}
+```
+
+`fly` 라는 메소드가 3개나 있다. 
+
+```rust
+fn main() {
+    let person = Human;
+    person.fly();
+}
+```
+
+이 경우 위와 같이 호출한다면 trait 의 method 가 아닌 본체 메소드를 호출하게 된다. trait 의 메소드를 호출하고 싶다면 다음과 같이 하면 된다.
+
+```rust
+fn main() {
+    let person = Human;
+    Pilot::fly(&person);
+    Wizard::fly(&person);
+    person.fly();
+}
+```
+
+이는 `fly` 메소드들이 `self` 를 파라미터로 받기에 가능한데, 만약 `self` 를 파라미터로 받지 않는다면 메소드 구분이 불가능하게 된다.
+
+```rust
+trait Animal {
+    fn baby_name() -> String;
+}
+
+struct Dog;
+
+impl Dog {
+    fn baby_name() -> String {
+        String::from("Spot")
+    }
+}
+
+impl Animal for Dog {
+    fn baby_name() -> String {
+        String::from("puppy")
+    }
+}
+
+fn main() {
+    println!("A baby dog is called a {}", Dog::baby_name());
+}
+```
+
+위 코드의 경우 `self` 를 파라미터로 받지 않기에 메소드 구분이 불가능하다. 이럴 때 다음과 같이 구분해야 한다.
+
+```rust
+fn main() {
+    println!("A baby dog is called a {}", <Dog as Animal>::baby_name());
+}
+```
+
+이 문법을 fully qualified syntax 라고 하며 문법은 다음과 같다. 
+
+```rust
+<Type as Trait>::function(receiver_if_method, next_arg, ...);
+```
+
+사실 우리는 이 fully qualified syntax 를 매번 축약하여 사용했던 것인데, Rust 가 알아서 구분해줬던 것이다. 
+
+## Using Supertraits to Require One Trait’s Functionality Within Another Trait
+
+특정 trait 를 구현한 struct 만 해당 trait 를 구현해야 할 때 다음 문법을 사용한다. 
+
+```rust
+use std::fmt;
+
+trait OutlinePrint: fmt::Display {
+    fn outline_print(&self) {
+        let output = self.to_string();
+        let len = output.len();
+        println!("{}", "*".repeat(len + 4));
+        println!("*{}*", " ".repeat(len + 2));
+        println!("* {} *", output);
+        println!("*{}*", " ".repeat(len + 2));
+        println!("{}", "*".repeat(len + 4));
+    }
+}
+```
+
+위 예시는 `OutlinePrint` triat 가 반드시 `Display` trait 를 구현한 Struct 만 구현해야한다는 문법을 보여준다. `trait OutlinePrint: fmt::Display` 이렇게 하면된다.
+
+## Using the Newtype Pattern to Implement External Traits on External Types
+
+orphan rule 은 trait 를 구현하려면 trait 나 type 이 로컬 crate 내부에 있어야 한다는 규칙이다. 이 규칙을 newtype pattern 으로 우회할 수 있다. 이는 tuple struct 를 type 의 Wrapper 로 사용하는 것이다. Wrapper type 으로 성능이 전혀 떨어지지 않으면 컴파일 시 Wrapper 가 생략된다. 
+
+가령 `Vec<T>` 에 `Display` 를 정의하고 싶지만 둘 다 외부 crate 에 정의되어 있어서 할 수가 없다. 그래서 다음과 같이 tuple struct 로 Wrapping 을 하면 된다.
+
+```rust
+use std::fmt;
+
+struct Wrapper(Vec<String>);
+
+impl fmt::Display for Wrapper {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "[{}]", self.0.join(", "))
+    }
+}
+
+fn main() {
+    let w = Wrapper(vec![String::from("hello"), String::from("world")]);
+    println!("w = {}", w);
+}
+```
+
+## Using the Newtype Pattern for Type Safety and Abstraction
+
+newtype pattern 으로 내부 구현을 숨길 수도 있다. 가령 `HashMap<i32, String>` 을 `People` tuple struct 로 wrapping 할 수 있다.
+
+## Creating Type Synonyms with Type Aliases
+
+다음과 같이 type alias 를 만들 수 있다.
+
+```rust
+type Kilometers = i32;
+
+let x: i32 = 5;
+let y: Kilometers = 5;
+
+println!("x + y = {}", x + y);
+```
+
+`x, y` 는 같은 타입이다. 하지만 이 방법은 newtype pattern 이 주는 타입 검사 효능을 얻지 못한다. 이 방법은 다음과 같이 긴 타입을 단축하는데 주로 쓰인다.
+
+```rust
+type Thunk = Box<dyn Fn() + Send + 'static>;
+```
+
+이는 가독성을 높일 뿐더러 코딩할 때도 편하다. 따라서 에러가 줄어들고 코드의 의미가 풍부해진다. `Result<T, E>` 가 너무 길기 때문에 다음과 같이 사용될 때도 있다.
+
+```rust
+use std::fmt;
+
+type Result<T> = std::result::Result<T, std::io::Error>;
+
+pub trait Write {
+    fn write(&mut self, buf: &[u8]) -> Result<usize>;
+    fn flush(&mut self) -> Result<()>;
+
+    fn write_all(&mut self, buf: &[u8]) -> Result<()>;
+    fn write_fmt(&mut self, fmt: fmt::Arguments) -> Result<()>;
+}
+```
+
+## The Never Type that Never Returns
+
+never type 은 다음과 같이 반환하지 않는 타입이다.
+
+```rust
+fn bar() -> ! {
+    // --snip--
+}
+```
+
+## Dynamically Sized Types and the Sized Trait
+
+dynamically sized type 은 DST 또는 unsized type 이라고도 하는데 변수의 크기가 런타임에서 결정되는 타입이다. 
+
+`str` 이 DST 의 예시이다. 우리는 `str` 의 크기를 런타임이 될때까지 모르기 때문에 그것을 생성할 수도 없고 파라미터로 쓸 수도 없다. 즉, 다음 코드는 에러이다.
+
+```rust
+let s1: str = "Hello there!";
+let s2: str = "How's it going?";
+```
+
+Rust 는 타입의 사이즈를 알고 할당해야 하며, 타입마다 사이즈는 같아야만 한다. `str` 변수를 생성할 수 있게 되면 위 변수들의 사이즈가 통일된다. 하지만 `s1` 은 12바이트가 필요하고 `s2` 는 15바이트가 필요하다. 그래서 `str` 을 직접 만드는 것이 허용되지 않는다.
+
+그렇기에 지금까지 `&str` 을 만들어왔던 것이다. `&str` 은 데이터의 주소값과 길이를 저장하므로 사이즈가 고정되어있다.
+
+사실 이 방식이 DST 타입이 사용되는 방식이다.
+
+`str` 은 `Box<str>` 이나 `Rc<str>` 같은 포인터와 연동될 수도 있다.
+
+triat 로 polymorphism 을 구현한 코드를 기억해보면, trait 도 사실 DST 임을 알 수 있다. 그때 우리는 `&dyn Trait` 나 `Box<dyn Trait>` 같은 걸 썼다. trait 구현체가 달라질 때마다 사이즈가 달라지는 DST 이므로 이렇게 쓴 것이다.
+
+DST 를 사용하기 위해서는 `Sized` 라는 trait 를 알아야 한다. 이것은 특정 타입의 사이즈가 컴파일 상에서 알 수 있는지 없는지 판단한다. 이 trait 는 컴파일 시에 사이즈를 알 수 있는 모든 타입에 자동으로 구현된다. 또한 Rust 는 모든 generic 함수에 이 trait bound 를 자동으로 추가한다. 그래서 사실 다음과 같은 generic 함수는 
+
+```rust
+fn generic<T>(t: T) {
+    // --snip--
+}
+```
+
+다음의 축약이었던 것이다. 
+
+```rust
+fn generic<T: Sized>(t: T) {
+    // --snip--
+}
+```
+
+generic 함수는 일반적으로 `Sized` 가 있는 타입에서만 정의되지만 다음과 같이 선언할 수도 있다. 
+
+```rust
+fn generic<T: ?Sized>(t: &T) {
+    // --snip--
+}
+```
+
+`?Sized` 는 `T` 의 사이즈를 컴파일 시에 알수도 있고 알수 없을 수도 있다는 것이다. 이때 `T` 도 `&T` 로 바꾸었음을 주목하자. 만약 `T` 가 `Sized` 가 아니라면 pointer 로 사용해야 하기 때문에 reference 로 바꾸어야 하는 것이다.
+
+---
+
+# Advanced Functions and Closures
+
+# Function Pointers
+
+함수에 closure 를 전달하는 법을 배웠는데, C언어 처럼 함수 포인터도 전달할 수 있다. 이 방식은 이미 정의된 함수들이 있을 때 굳이 closure 를 전달하는 게 아니라 기존의 함수들을 파라미터로 전달할 때 유용하다. 함수 포인터의 타입은 `fn` 이다. 다음 예시를 보자.
+
+```rust
+fn add_one(x: i32) -> i32 {
+    x + 1
+}
+
+fn do_twice(f: fn(i32) -> i32, arg: i32) -> i32 {
+    f(arg) + f(arg)
+}
+
+fn main() {
+    let answer = do_twice(add_one, 5);
+    println!("The answer is: {}", answer);
+}
+```
+
+함수 포인터는 closure trait `Fn`, `FnMut`, `FnOnce` 가 모두 구현되어 있어서 closure 파라미터에 전달 가능하다.
+
+closure 가 아니라 오직 `fn` 만 파라미터로 받아야 하는 경우의 한 가지 예시는 closure 를 갖지 않는 외부 코드와의 인터페이스에서 이다. 가령 C 언어 함수와 인터페이스를 할 때 closure 를 파라미터로 넘기면 안되고 함수 포인터를 넘겨야 한다.
+
+closure 나 함수를 사용할 수 있는 예시 중 하나는 `map` 이다.
+
+```rust
+let list_of_numbers = vec![1, 2, 3];
+let list_of_strings: Vec<String> =
+    list_of_numbers.iter().map(|i| i.to_string()).collect();
+```
+
+위의 `map` 에서는 closure 를 사용했고 다음은 함수를 사용했다. 
+
+```rust
+let list_of_numbers = vec![1, 2, 3];
+let list_of_strings: Vec<String> =
+    list_of_numbers.iter().map(ToString::to_string).collect();
+```
+
+다음과 같이 tuple struct 를 사용하는 패턴도 있다. initializer 를 함수 포인터처럼 map 에 전달하여 enum instance 를 반환하게 하는 패턴이다.
+
+```rust
+enum Status {
+    Value(u32),
+    Stop,
+}
+
+let list_of_statuses: Vec<Status> = (0u32..20).map(Status::Value).collect();
+```
+
+## Returning Closures
+
+closure 는 trait 로 표현되므로 closure 를 직접 반환할 수는 없다. 많은 경우 trait 를 반환하기 위하여 trait 를 구현한 특정 타입을 반환해야 한다. 
+
+그러나 closure 에서는 이런 방법을 쓸 수 없다. 또한 함수 포인터 `fn` 를 직접 반환하는 것은 허용되지 않는다. 다음 코드는 에러이다.
+
+```rust
+fn returns_closure() -> dyn Fn(i32) -> i32 {
+    |x| x + 1
+}
+```
+
+어떤 에러냐면 `Sized` 가 구현되지 않은 DST 를 다루고 있다는 에러다. 그러므로 다음과 같이 코드를 수정하면 된다.
+
+```rust
+fn returns_closure() -> Box<dyn Fn(i32) -> i32> {
+    Box::new(|x| x + 1)
+}
+```
+
+---
+
+# Macros
+
+매크로는 `println!` 같은 것들이다. 매크로는 `macro_rules!` 의 declarative 매크로와 다음의 procedural 매크로를 뜻한다.
+
+- 커스텀 `#[derive]` 매크로
+
+- Attribute-like 매크로
+
+- Function-like 매크로
+
+이 매크로들을 살펴볼 것인데 먼저 왜 매크로가 필요하지 알아보자. 
+
+## The Difference Between Macros and Functions
+
+매크로란 근본적으로 어떤 코드를 쓰는 코드를 쓰는 방식이다. 이를 메타프로그래밍이라한다. 메타프로그래밍은 많은 양의 코드를 줄여준다. 
+
+그러나 매크로는 이런 특징 외에 함수가 갖지 못하는 중요한 특징을 갖는다. 함수 선언은 특정 수의 파라미터와 타입을 갖는데 비해 매크로는 다양한 파라미터를 가질 수 있다.
+
+## Declarative Macros with macro_rules! for General Metaprogramming
+
+declarative 매크로는 `macro_rules!` 를 통해 정의된다. 다음과 같은 매크로로 벡터를 만들 수 있었다. 
+
+```rust
+let v: Vec<u32> = vec![1, 2, 3];
+```
+
+이 매크로 `vec!` 는 다음과 같이 정의된다. 
+
+```rust
+#[macro_export]
+macro_rules! vec {
+    ( $( $x:expr ),* ) => {
+        {
+            let mut temp_vec = Vec::new();
+            $(
+                temp_vec.push($x);
+            )*
+            temp_vec
+        }
+    };
+}
+```
+
+먼저 `#[macro_export]` 는 이 매크로가 정의된 crate 가 scope 안으로 들어오면 만드는 게 가능해야 한다는 것을 뜻한다. 이것이 없으면 매크로가 scope 안으로 들어오지 못한다. 
+
+`macro_rules!` 는 매크로의 정의의 시작을 뜻한다. 
+
+매크로 정의의 몸체는 마치 `match` 와 비슷하다. 이 경우 `( $( $x:expr ),* )` 이라는 하나의 arm 밖에 없다. `=>` 는 이 패턴이 매칭되었을 때 실행될 코드의 시작을 뜻한다. 
+
+매크로의 모든 패턴 문법은 레퍼런스 https://doc.rust-lang.org/reference/macros-by-example.html  를 확인하자.
+
+이제 패턴 `( $( $x:expr ),* )` 을 분석해본다. 괄호 `( )` 는 모든 패턴을 감싸준다. `$` 와 그 이후에 있는 괄호 즉, `$( )` 는 괄호 안에 있는 패턴에 매칭되는 값을 캡처하고 코드로 바꿔준다. `$x:expr` 은 모든 Rust 의 expression 과 매칭되고 그것에 `$x` 라는 이름을 준다. `$( )` 이후의 `,` 는 컴마 `,` 가 나타날 수도 있음을 뜻한다. `*` 는 그 앞에 있는 패턴이 0번 이상 반복된다는 것을 뜻한다.
+
+따라서 `vec![1, 2, 3]` 이라고 쓰면 `$x` 는 expression `1`, `2`, 그리고 `3` 에 3번 매칭된다. 
+
+이후에 코드 본체에 있는 `$( )` 안에는 `temp_vec.push($x)` 가 있다. 이 코드는 패턴이 몇 번 매칭되는지에 따라 자동으로 생성된다. 따라서 `vec![1, 2, 3]` 은 다음과 같아진다.
+
+```rust
+{
+    let mut temp_vec = Vec::new();
+    temp_vec.push(1);
+    temp_vec.push(2);
+    temp_vec.push(3);
+    temp_vec
+}
+```
+
+사실 `macro_rules!` 에는 몇가지 이상한 부분이 존재하기에, 이후에 Rust 는 declarative 매크로를 대신하는 새로운 매크로를 만들 것이다. 그때가 되면 `macro_rules!` 은 deprecated 될 것이다. 
+
+## Procedural Macros for Generating Code from Attributes
+
+매크로의 두번째 형태는 procedural 매크로이다. 이 매크로는 함수와 비슷한데, 코드를 입력으로 받고 코드를 출력한다. 이 매크로의 종류에는 custom derive, attribute-like, function-like 이 있다.
+
+procedural 매크로를 정의할 때 반드시 그 정의가 자기 자신의 crate 에 있어야 하고 그 crate 는 특별한 타입이어야 한다. 이는 복잡한 기술적 문제 때문이고, Rust 는 이 문제를 이후에 해결할 예정이다. 
+
+procedural 매크로는 다음과 같이 정의한다.
+
+```rust
+use proc_macro;
+
+#[some_attribute]
+pub fn some_name(input: TokenStream) -> TokenStream {
+}
+```
+
+함수가 `TokenStream` 을 입력받고 동일한 타입을 출력한다. `TokenStream` 은 `proc_macro` 에 포함되어 있다. 이 함수는 attribute 도 붙힐 수가 있다.
+
+이제 다음과 같은 procedural 매크로를 알아본다.
+
+- 커스텀 `#[derive]` 매크로
+
+- Attribute-like 매크로
+
+- Function-like 매크로
+
+## How to Write a Custom derive Macro
+
+`hello_macro` 라는 crate 를 만들고 `HelloMacro` 라는 trait 를 만들자. 이 trait 는 `hello_macro` 라는 asscoicated 함수를 갖는다. 이 crate 의 사용자가 다른 타입을 위하여 `HelloMacro` trait 를 구현하기 보다는 그들의 타입에 `#[derive(HelloMacro)]` 라는 주석을 달 수 있는 procedural 매크로를 제공하고 싶다. 이로써 `hello_macro` 의 디폴트 구현을 제공하는 것이다. 즉, 다음과 같은 기능을 제공하고 싶다.
+
+```rust
+#[derive(HelloMacro)]
+struct Pancakes;
+
+fn main() {
+    Pancakes::hello_macro();
+}
+```
+
+즉, 다음과 같은 trait 를 
+
+```rust
+pub trait HelloMacro {
+    fn hello_macro();
+}
+```
+
+다음과 같이 구현할 필요 없게끔 만들어보자.
+
+```rust
+struct Pancakes;
+
+impl HelloMacro for Pancakes {
+    fn hello_macro() {
+        println!("Hello, Macro! My name is Pancakes!");
+    }
+}
+
+fn main() {
+    Pancakes::hello_macro();
+}
+```
+
+이미 언급했듯이, 기술적인 문제 때문에 procedural 매크로는 자기 자신만의 crate 가 필요하다. 이 제한을 해결하려고 Rust 팀이 노력 중이며 나중에는 이 제한이 사라질 것이다. 그래서 위와 같은 `main` 함수 코드나 라이브러리 코드와는 전혀 다른 새로운 crate 를 만들어야 한다. 일단은, procedural 매크로에 대한 crate 컨벤션은 crate 이름이 `foo` 라면 procedural 매크로의 crate 는 `foo_derive` 가 되어야 한다는 것이다. 그러므로 위의 crate `hello_macro` 와 독립적인 crate 인 `hello_macro_derive` 를 만들자. 
+
+procedural 전용 crate 의 Cargo.toml 에는 다음과 같은 설정이 필요하다. 
+
+```toml
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = "1.0"
+quote = "1.0"
+```
+
+그리고 다음의 코드를 src/lib.rs 에 선언하면 procedural 매크로가 정의된다.
+
+```rust
+extern crate proc_macro;
+
+use proc_macro::TokenStream;
+use quote::quote;
+use syn;
+
+#[proc_macro_derive(HelloMacro)]
+pub fn hello_macro_derive(input: TokenStream) -> TokenStream {
+    // Construct a representation of Rust code as a syntax tree
+    // that we can manipulate
+    let ast = syn::parse(input).unwrap();
+
+    // Build the trait implementation
+    impl_hello_macro(&ast)
+}
+```
+
+이제 반환될 `impl_hello_macro` 함수를 정의해보자. 위 코드는 `TokenStream` 을 파싱하는 `hello_macro_derive` 함수와 syntax tree 을 변환할 `impl_hello_macro` 함수를 분리하였다. 이 구조가 편하다.
+
+`proc_macro` 는 Rust 자체에서 온 것이며, Rust 코드를 다룰 수 있게 해주는 컴파일러 API 이다. `syn` 은 string 을 파싱하여 데이터 구조로 바꿔준다. `quote` 는 `syn` 의 데이터 구조를 Rust 코드로 분해해준다.
+
+`hello_macro_derive` 함수는 사용자가 타입에 `#[derive(HelloMacro)]` 주석을 붙히면 호출된다. 이는 우리가 `hello_macro_derive` 함수에 `proc_macro_derive` 를 `HelloMacro` 이름과 함께 붙혔기 때문에 가능하다.
+
+`syn::parse` 함수가 입력된 `TokenStream` 을 받고 `DeriveInput` 데이터구조로 변환해준다. 이 데이터구조는 파싱된 Rust 코드이다.
+
+이때 함수의 출력도 `TokenStream` 이다. 반환된 `TokenStream` 은 이 crate 사용자의 코드에 추가되므로 `TokenStream` 을 수정할 기능을 제공해야 한다. 
+
+`unwrap` 을 사용하는 이유는 procedural 매크로 API 자체가 반드시 `TokenStream` 을 반환해야 하고 `Reulst<T, E>` 를 반환하면 안되기 때문이다. 현실에서는 `unwrap` 이 아닌 `panic!` 을 동반한 여러 에러코드 로직을 사용해야 할 것이다. 
+
+`DeriveInput` Struct 는 다음과 같이 구성되어 있다.
+
+```rust
+DeriveInput {
+    // --snip--
+
+    ident: Ident {
+        ident: "Pancakes",
+        span: #0 bytes(95..103)
+    },
+    data: Struct(
+        DataStruct {
+            struct_token: Struct,
+            fields: Unit,
+            semi_token: Some(
+                Semi
+            )
+        }
+    )
+}
+```
+
+이를 기반으로 `impl_hello_macro` 는 다음과 같이 구현한다.
+
+```rust
+fn impl_hello_macro(ast: &syn::DeriveInput) -> TokenStream {
+    let name = &ast.ident;
+    let gen = quote! {
+        impl HelloMacro for #name {
+            fn hello_macro() {
+                println!("Hello, Macro! My name is {}!", stringify!(#name));
+            }
+        }
+    };
+    gen.into()
+}
+```
+
+`Ident` struct 는 `ident` 필드에서 이름을 제공해준다. `quote!` 매크로는 반환할 Rust 코드를 정의하게 해준다. 이것을 `TokenStream` 으로 변환하기 위하여 `into` 메소드를 사용한다. `quote!` 매크로는 `#name` 을 `name` 의 값으로 치환해준다. `quote` crate 의 문서에서 더 많은 기능을 알 수 있다.
+
+`stringify!` 매크로는 Rust expression 을 받아서 string 으로 변환해준다. 가령 `1+2` 를 `"1+2"` 로 변환한다.
+
+이제 새로운 crate pancakes 를 만들어서 Cargo.toml 에 다음과 같은 의존성을 추가하자.
+
+```toml
+[dependencies]
+hello_macro = { path = "../hello_macro" }
+hello_macro_derive = { path = "../hello_macro/hello_macro_derive" }
+```
+
+이렇게 하면 원래의 코드였던 
+
+```rust
+#[derive(HelloMacro)]
+struct Pancakes;
+
+fn main() {
+    Pancakes::hello_macro();
+}
+```
+
+가 드디어 실행된다.
+
+## Attribute-like macros
+
+attribute-like 매크로는 커스텀 derive 매크로와 비슷하지만 derive 를 위하여 코드를 생성하는 대신 새로운 attribute 를 생성한다. derive 매크로는 는 struct 와 enum 에서만 기능하지만 attribute 매크로는 함수 등 모든 아이템에서 작동한다. 가령 다음과 같다.
+
+```rust
+#[route(GET, "/")]
+fn index() {
+```
+
+`#[route]` attribute 같은 경우 다음과 같이 procedural 매크로로 정의된다.
+
+```rust
+#[proc_macro_attribute]
+pub fn route(attr: TokenStream, item: TokenStream) -> TokenStream {
+```
+
+`attr` 파라미터는 `GET, "/"` 를 받고 `item` 파라미터는 함수의 본체를 받는다.
+
+## Function-like macros
+
+함수형 매크로는 함수처럼 작동한다. `println!` 같은 게 함수형 매크로였고 다음과 같이 사용할 수도 있다.
+
+```rust
+let sql = sql!(SELECT * FROM posts WHERE id=1);
+```
+
+이 매크로는 다음과 같이 정의될 것이다.
+
+```rust
+#[proc_macro]
+pub fn sql(input: TokenStream) -> TokenStream {
+```
