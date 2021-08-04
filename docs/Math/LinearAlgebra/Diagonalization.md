@@ -104,7 +104,7 @@
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $A$ 의 특성다항식은 다항식 $f(t) = \det(A - tI_n)$ 이다.
 
-- 정리 5.2 는 행렬의 고윳값이 특성다항식의 근임을 말해준다. 이는 특성다항식의 계산을 통하여 행렬 또는 선형연산자의 고윳값을 얻을 수 있음을 뜻한다. 
+- 정리 5.2 는 행렬의 고윳값이 특성다항식의 근임을 말해준다. 이는 특성다항식의 계산을 통하여 행렬 또는 선형연산자의 모든 고윳값을 얻을 수 있음을 뜻한다. 
 
 - 이때 $A - tI_n \not\in \mathbf{M}_{n \times n}(\mathbf{F} )$ 이다. 행렬 $A - tI_n$ 는 $\mathbf{F}$ 를 계수로 가지는 $t$ 에 대한 유리식으로 이루어진 체 $\mathbf{F} (t)$ 에 속해있다. 즉, $A - tI_n \in \mathbf{M}_{n \times n}(\mathbf{F}(t) )$ 이다.
 
@@ -397,9 +397,13 @@
 
     $$ \mathbf{E}_{\lambda} = \{x \in \mathbf{V} : \mathbf{T} (x) = \lambda x\} = \mathbf{N} (\mathbf{T}-\lambda \mathbf{I} _{\mathbf{V} }) $$
 
-- [정리 5.4](#2514593f4) 는 벡터 $v \in \mathbf{V}$ 가 고윳값 $\lambda$ 에 대응하는 고유벡터이려면 $(\mathbf{T} - \lambda \mathbf{I} _{\mathbf{V} })(v) = 0$ 이어야 함을 말해준다.
+- 즉, 고유공간은 특정 고윳값에 대응하는 모든 고유벡터를 모아둔 집합이다.
 
-- [정리 2.1](../LinearTransformation/#eb957cbf0) 에 의하여 $\mathbf{E}_{\lambda}$ 는 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터와 영벡터로 이루어진 $\mathbf{V}$ 의 부분공간이다. 즉, $\mathbf{E}_{\lambda}$ 의 차원은 고윳값 $\lambda$ 에 대응하는 일차독립인 $\mathbf{T}$ 의 고유벡터의 최대 개수이다.
+- 고유공간은 고윳값에 대응하는 모든 벡터의 집합인데 [정리 5.4](#2514593f4) 는 고윳값에 대응하는 모든 고유벡터를 찾는 방법을 알려준다. 따라서 고유공간은 정리 5.4 의 방법을 기반으로 정의된다.
+
+    정리 5.4 는 행렬에 대하여 고윳값에 대응하는 모든 벡터를 구하는 방법을 서술하지만, 동형사상인 표준표현 $\phi _{\beta }$ 로 인하여 이 정리를 동일하게 선형연산자에서 사용할 수 있다. 다시 말해 정리 5.4 가 $(A - \lambda I)v=0$ 을 풀어서 고윳값에 대응하는 모든 고유벡터를 구하라고 말하는데, 이것은 동형사상인 표준표현에 의하여 영공간 $\mathbf{N} (\mathbf{T} - \lambda \mathbf{I} _{\mathbf{V}})$ 을 구하는 것과 동치가 된다.
+
+- 이때 정리 5.4 와 달리 $v \neq 0$ 라는 제한이 없으므로 [정리 2.1](../LinearTransformation/#eb957cbf0) 에 의하여 $\mathbf{E}_{\lambda}$ 는 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터와 영벡터로 이루어진 $\mathbf{V}$ 의 부분공간이다. 즉, $\mathbf{E}_{\lambda}$ 의 차원은 고윳값 $\lambda$ 에 대응하는 일차독립인 $\mathbf{T}$ 의 고유벡터의 최대 개수이다.
 
 !!! tldr "행렬의 고유공간(eigenspace) 의 정의"
 
@@ -479,7 +483,7 @@
 
     $$ [\mathbf{T} ]_{\beta }=\begin{pmatrix} 4&0&1\\ 2&3&2\\ 1&0&4\\ \end{pmatrix} $$
 
-    $\mathbf{T}$ 의 특성다항식은 다음과 같다. 
+    $\mathbf{T}$ 의 특성다항식으로 모든 고윳값을 구해보자.
 
     $$ \det([\mathbf{T} ]_{\beta }-tI) = \det \begin{pmatrix} 4-t&0&1\\ 2&3-t&2\\ 1&0&4-t\\ \end{pmatrix} = -(t-5)(t-3)^{2} $$
 
@@ -513,7 +517,9 @@
 
     1. $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다.
 
-    2. $\mathbf{T}$ 의 고윳값 $\lambda$ 의 중복도가 $\text{nullity} (\mathbf{T} - \lambda \mathbf{I}) = n - \text{rank} (\mathbf{T} - \lambda \mathbf{I} )$ 와 같다.
+    2. $\mathbf{T}$ 의 고윳값 $\lambda$ 의 중복도가 $2$ 이상인 것들이 $\dim(\mathbf{E}_{\lambda}) = \text{nullity} (\mathbf{T} - \lambda \mathbf{I}) = n - \text{rank} (\mathbf{T} - \lambda \mathbf{I} )$ 와 같다.
+
+- 이 정리는 정리 5.8 의 첫번째 명제를 되풀어 말한 것 뿐이다.
 
 - 정사각행렬 $A$ 가 대각화가능한지 판정할 때도 이 방법을 사용한다. $A$ 의 대각화 가능성과 $\mathbf{L}_{A}$ 의 대각화 가능성이 동치이기 때문이다.
 
@@ -530,6 +536,8 @@
     [정리 5.6](#867268fd3) 은 $\mathbf{T}$ 가 대각화가능이면 특성다항식이 완전히 인수분해됨을 말해준다. 그러나 완전히 인수분해된다고 해서 $\mathbf{T}$ 가 대각화가능인 것은 아니다. 하지만 완전히 인수분해된다는 조건은 $\mathbf{T}$ 가 대각화가능하기 위한 필요조건이다. 
 
     $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되면 각각의 고윳값에 따른 중복도를 구할 수 있다. 이때 각 고윳값 $\lambda$ 의 중복도가 $\dim (\mathbf{E}_{\lambda})$ 와 같으면 [정리 5.8](#7050c2a83) 에 의하여 $\mathbf{T}$ 는 대각화가능이 된다.
+
+    중복도가 $1$ 인 고윳값들은 [정리 5.7](#b5fbbceb6) 에 의하여 자동으로 조건 2) 를 만족하게 된다.
 
     $\dim (\mathbf{E}_{\lambda})$ 는 특성다항식 $\mathbf{T} - \lambda \mathbf{I} _{\mathbf{V} }$ 의 영공간의 차원이다. 또한 [정리 3.8](../MatrixOperation/#b7b9c78d0) 에 의하여 계수행렬 $\mathbf{T} - \lambda \mathbf{I}$ 를 가지는 일차연립방정식의 해공간이기도 하다. ■ 
 
