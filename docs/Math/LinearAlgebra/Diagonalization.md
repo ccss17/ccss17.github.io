@@ -4,7 +4,7 @@
 
 # Diagonalizable
 
-!!! tldr "선형연산자의 대각화가능(diagonalizable) 의 정의"
+!!! tldr "선형연산자의 대각화가능(diagonalizable)"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $[\mathbf{T} ]_{\beta }$ 가 대각행렬이 되도록 하는 $\mathbf{V}$ 의 순서기저 $\beta$ 가 존재하면 $\mathbf{T}$ 를 대각화가능하다고 한다.
 
@@ -18,13 +18,13 @@
 
     선형연산자 $\mathbf{T}$ 가 대각화가능이면 기저 $\beta$ 의 각 벡터 $v$ 는 적절한 스칼라 $\lambda$ 에 대하여 $\mathbf{T} (v) = \lambda v$ 를 만족한다. $v$ 는 기저의 원소이므로 영벡터가 아니다. 이를 기반으로 고유벡터의 정의를 내릴 수 있다.
 
-!!! tldr "정사각행렬의 대각화가능(diagonalizable) 의 정의"
+!!! tldr "정사각행렬의 대각화가능(diagonalizable)"
 
     선형연산자 $\mathbf{L}_{A}$ 가 대각화가능이면 정사각행렬 $A$ 를 대각화가능이라고 한다.
 
 # Eigenvector
 
-!!! tldr "선형연산자의 고유벡터(eigenvector) 와 고윳값(eigenvalue) 의 정의"
+!!! tldr "선형연산자의 고유벡터(eigenvector) 와 고윳값(eigenvalue)"
 
     벡터공간 $\mathbf{V}$  의 선형연산자 $\mathbf{T}$ 에 대하여 다음과 같이 정의한다.
     
@@ -34,7 +34,7 @@
 
 - 고유벡터는 특성벡터(characteristic vector, proper vector), 고윳값은 특성값(characteristic value, proper value) 라고도 부른다.
 
-!!! tldr "정사각행렬의 고유벡터(eigenvector) 와 고윳값(eigenvalue) 의 정의"
+!!! tldr "정사각행렬의 고유벡터(eigenvector) 와 고윳값(eigenvalue)"
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 다음과 같이 정의한다. 
 
@@ -100,7 +100,7 @@
 
     $A - \lambda I_n$ 이 가역이면 $v = 0$ 이므로 모순이다. 즉, $A - \lambda I_n$ 는 가역이 아니다. [정리 4.7 따름정리](../Determinants/#b40051741) 에 의하여 $\det(A - \lambda I_n) = 0$ 이다.
 
-!!! tldr "정사각행렬의 특성다항식(Characteristic polynomial) 의 정의"
+!!! tldr "정사각행렬의 특성다항식(Characteristic polynomial) "
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $A$ 의 특성다항식은 다항식 $f(t) = \det(A - tI_n)$ 이다.
 
@@ -118,13 +118,13 @@
 
     정리 5.2 에 의하여 $A$ 의 고윳값은 $3, -1$ 뿐이다.
 
-!!! tldr "선형연산자의 행렬식(determinant) 의 정의"
+!!! tldr "선형연산자의 행렬식(determinant)"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 순서기저 $\beta$ 에 대하여 $\mathbf{T}$ 의 행렬식을 다음과 같이 정의한다.
 
     $$ \det(\mathbf{T} ) := \det([\mathbf{T} ]_{\beta }) $$
 
-!!! tldr "선형연산자의 특성다항식(Characteristic polynomial) 의 정의"
+!!! tldr "선형연산자의 특성다항식(Characteristic polynomial)"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 순서기저 $\beta$ 에 대하여 $\mathbf{T}$ 의 특성다항식을 다음과 같이 정의한다.
 
@@ -270,7 +270,7 @@
 
     $$ [\mathbf{T} ]_{\gamma } = \begin{pmatrix} 1&0&0\\ 0&2&0\\ 0&0&3\\ \end{pmatrix} $$
 
-## 선형연산자의 고유벡터에 대한 기하학적 의미
+## Geometric Interpretation of Eigenvector of Linear Operator
 
 !!! tldr ""
 
@@ -296,7 +296,7 @@
 
     $e_1$ 과 $e_2$ 는 각각 1차원 벡터공간 $x$ 축과 $y$ 축을 생성한다. $\mathbf{T}$ 는 $x$축에서 항등변환, $y$축에서 방향을 바꾸는 변환이다.
 
-# 대각화 가능성
+# Diagonalizability
 
 !!! tldr "정리 5.5"
 
@@ -365,7 +365,7 @@
 
 - 증명
 
-    $n$차원 벡터공간 $\mathbf{V}$ 의 대각화가능한 선형연사자를 $\mathbf{T}$ 라 하고 $[\mathbf{T} ]_{\beta } = D$ 가 대각행렬이 되도록 하는 $\mathbf{V}$ 의 순서기저를 $\beta$ 라 하면 $D$ 는 다음과 같다.
+    $n$차원 벡터공간 $\mathbf{V}$ 의 대각화가능한 선형연산자를 $\mathbf{T}$ 라 하고 $[\mathbf{T} ]_{\beta } = D$ 가 대각행렬이 되도록 하는 $\mathbf{V}$ 의 순서기저를 $\beta$ 라 하면 $D$ 는 다음과 같다.
 
     $$ D = \begin{pmatrix} \lambda _{1}&0&\dots&0\\ 0&\lambda _2&\dots&0\\ \vdots& \vdots& \ddots& \vdots \\ 0&0&\dots&\lambda _n\\ \end{pmatrix} $$
 
@@ -377,9 +377,9 @@
      
 - 한편 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되어도 $\mathbf{T}$ 가 대각화 불가능일 수도 있다.
 
-## 중복도
+## Algebraic Multiplicity
 
-!!! tldr "대수적 중복도(algebraic multiplicity) 의 정의"
+!!! tldr "대수적 중복도(algebraic multiplicity)"
 
     특성다항식이 $f(t)$ 인 선형연산자(또는 행렬)의 고윳값 $\lambda$ 에 대하여 $(t - \lambda )^{k}$ 가 $f(t)$ 의 인수가 되도록 하는 가장 큰 자연수 $k$ 를 $\lambda$ 의 대수적 중복도라고 한다.
 
@@ -391,7 +391,7 @@
 
 ## Eigenspace
 
-!!! tldr "선형연산자의 고유공간(eigenspace) 의 정의"
+!!! tldr "선형연산자의 고유공간(eigenspace)"
 
     벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 고윳값 $\lambda$ 에 대하여 다음 집합 $\mathbf{E}_{\lambda}$ 를 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유공간이라 한다.
 
@@ -405,7 +405,7 @@
 
 - 이때 정리 5.4 와 달리 $v \neq 0$ 라는 제한이 없으므로 [정리 2.1](../LinearTransformation/#eb957cbf0) 에 의하여 $\mathbf{E}_{\lambda}$ 는 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터와 영벡터로 이루어진 $\mathbf{V}$ 의 부분공간이다. 즉, $\mathbf{E}_{\lambda}$ 의 차원은 고윳값 $\lambda$ 에 대응하는 일차독립인 $\mathbf{T}$ 의 고유벡터의 최대 개수이다.
 
-!!! tldr "행렬의 고유공간(eigenspace) 의 정의"
+!!! tldr "행렬의 고유공간(eigenspace)"
 
     벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{L}_{A}$ 와 고윳값 $\lambda$ 에 대하여 다음 집합 $\mathbf{E}_{\lambda}$ 를 고윳값 $\lambda$ 에 대응하는 $A$ 의 고유공간이라 한다.
 
@@ -509,9 +509,9 @@
 
     $\mathbf{T}$ 가 대각화가능이므로 $\mathbf{E}_{\lambda_1}, \mathbf{E}_{\lambda_2}$ 의 순서기저의 합집합 $\bigg \{\begin{pmatrix} 1\\ 2\\ 1\\ \end{pmatrix}, \begin{pmatrix} 0\\ 1\\ 0\\ \end{pmatrix}, \begin{pmatrix} -1\\ 0\\ 1\\ \end{pmatrix}\bigg \}$ 은 정리의 2) 에 의하여 $\mathbf{V}$ 의 순서기저이다.
 
-## 대각화 가능 판정법
+## Diagonalizable Determination
 
-!!! tldr "대각화 가능 판정법"
+!!! tldr "대각화 가능 판정법(Diagonalizable Determination)"
 
     $n$차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 대각화가능한 것과 다음 두 조건이 성립하는 것은 동치이다.
 
@@ -571,7 +571,7 @@
 
 # Direct sum
 
-!!! tldr "집합의 덧셈의 정의, 합(sum) 의 정의"
+!!! tldr "집합의 덧셈, 합(sum) "
 
     벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 에 대하여 다음 집합을 부분공간의 합이라 한다.
 
@@ -585,7 +585,7 @@
 
     $(a, 0, 0) \in \mathbf{W} _1, (0, b, c) \in \mathbf{W} _2$ 이므로 $\R ^{3} = \mathbf{W} _1, \mathbf{W} _2$ 이다.
 
-!!! tldr "직합(direct sum)의 정의"
+!!! tldr "직합(direct sum)"
 
     벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 와 $i, j \in \{1,\dots,k\}$ 에 대하여 다음을 만족하는 $\mathbf{W}$ 를 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 의 직합이라 한다.
 
@@ -609,7 +609,7 @@
 
     따라서 $\mathbf{W} = \sum_{i=1}^{2}\mathbf{W} _i$ 이다.
 
-    또한 $\mathbf{W} _1 \cap \mathbf{W} _2 = \{0\}$ 이다. 따라서 $\displaystyle \bigoplus_{i=1}^{2}\mathbf{W} _i = \mathbf{W}$ 이다.
+    또한 $\mathbf{W} _1 \cap \mathbf{W} _2 = \{0\}$ 이다. 따라서 $\displaystyle \mathbf{W} _1 \oplus \mathbf{W} _2 = \mathbf{W}$ 이다.
 
 ## Properties of direct sum
 
@@ -725,26 +725,99 @@
 
 - 예시 
 
-    다음과 같은 벡터공간 $\R ^{4}$ 의 선형연산자 $\mathbf{T}$ 가 존재한다. 
+    벡터공간 $\R ^{5}$ 에 부분공간 $\mathbf{W} = \{(x_1, x_2, x_3, x_4, x_5) : x_5 = 0\}, \mathbf{W}_1 = \{(a, b, 0, 0, 0) : a, b \in \R\}, \mathbf{W}_2 = \{(0, 0, c, 0, 0) : c \in \R\}, \mathbf{W}_3 = \{(0, 0, 0, d, 0) : d \in \R\}$ 이 존재한다. $(a, b, c, d, 0) \in \mathbf{W}$ 에 대하여 다음이 성립한다. 
 
-    $$ \mathbf{T} (a,b,c,d)=(a,b,2c,3d) $$
+    $$ (a, b, c, d, 0) = (a, b, 0, 0, 0) + (0, 0, c, 0, 0) + (0, 0, 0, d, 0) \in \mathbf{W} _1 +\mathbf{W} _2 +\mathbf{W} _3 $$
 
-    지금까지 논의했던 방법으로 $\mathbf{T}$ 가 대각화가능인 것과 고윳값이 $\lambda _1=, \lambda _2=2, \lambda _3=3$ 인 것을 알 수 있다.
+    $$ \mathbf{W} _1 \cap (\mathbf{W} _2 + \mathbf{W} _3) = \mathbf{W} _2 \cap (\mathbf{W} _1 + \mathbf{W} _3) = \mathbf{W} _3 \cap (\mathbf{W} _1 + \mathbf{W} _2) =\{0\} $$
 
-    표준순서기저 $\beta$ 에 대한 $\mathbf{T}$ 의 행렬표현:
+    그러므로 $\mathbf{W} = \displaystyle \bigoplus_{i=1}^{3}\mathbf{W} _i$ 이다.
 
-    $$ \mathbf{T} (e_1) = (a, 0, 0, 0) = a \cdot e_1 + 0 \cdot e_2 + 0 \cdot e_3 + 0 \cdot e_4 $$
+    벡터공간 $\R ^{4}$ 의 선형연산자 $\mathbf{T} (a, b, c, d) = (a, b, 2c, 3d)$ 에 대하여 $\mathbf{T}$ 가 대각화가능이고 고윳값 $1, 2, 3$ 을 갖는다는 것을 알 수 있다. 이때 각 고윳값에 대응하는 고유공간들이 각각 $\mathbf{W} _1, \mathbf{W} _2, \mathbf{W} _3$ 와 같음을 알 수 있다. 이때 정리를 사용하면 $\R ^{4} = \mathbf{W} _1 \oplus \mathbf{W} _2 \oplus \mathbf{W} _3$ 임을 알 수 있다.
 
-    $$ \mathbf{T} (e_2) = (0, b, 0, 0) = 0 \cdot e_1 + b \cdot e_2 + 0 \cdot e_3 + 0 \cdot e_4 $$
+# Invariant subspace
 
-    $$ \mathbf{T} (e_3) = (0, 0, 2c, 0) = 0 \cdot e_1 + 0 \cdot e_2 + 2c \cdot e_3 + 0 \cdot e_4 $$
+!!! tldr "$\mathbf{T}$-불변 부분공간($\mathbf{T}$-invariant subspace)"
 
-    $$ \mathbf{T} (e_4) = (0, 0, 0, d) = 0 \cdot e_1 + 0 \cdot e_2 + 0 \cdot e_3 + 3d \cdot e_4 $$
+    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 부분공간 $\mathbf{W}$ 에 대하여 $\mathbf{T} (\mathbf{W} ) \subseteq \mathbf{W}$ 인 $\mathbf{W}$ 를 $\mathbf{V}$ 의 $\mathbf{T}$-불변 부분공간이라 한다.
 
-    $$ [\mathbf{T} ]_{\beta } = \begin{pmatrix}
-    a&0&0&0\\
-    0&b&0&0\\
-    0&0&2c&0\\
-    0&0&0&3d\\
-    \end{pmatrix}
-    $$
+- 즉, $\forall v \in \mathbf{W} : \mathbf{T} (v) \in \mathbf{W}$ 이면 $\mathbf{W}$ 가 $\mathbf{V}$ 의 $\mathbf{T}$-불변 부분공간이라는 것이다.
+
+    쉽게 말해, 부분공간의 원소가 $\mathbf{T}$ 를 통과해서 나왔는데도 부분공간에 속했으면 $\mathbf{T}$-불변이다.
+
+- 예시 
+
+    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음의 부분공간들이 $\mathbf{T}$-불변임을 확인해보자.
+
+    $\{0\}$:
+
+    [선형변환의 성질](../LinearTransformation/#841cc7807) 에 의하여 $\mathbf{T} (0) = 0 \in \{0\}$ 이므로 $\{0\}$ 는 $\mathbf{T}$-불변이다.
+
+    $\mathbf{V}$:
+
+    선형연산자 $\mathbf{T} : \mathbf{V} \to \mathbf{V}$ 의 공역이 $\mathbf{V}$ 이므로 $\mathbf{T} (\mathbf{V} ) \subset \mathbf{V}$ 이다. 따라서 $\mathbf{V}$ 는 $\mathbf{T}$-불변이다.
+
+    $\mathbf{R} (\mathbf{T})$:
+
+    $\mathbf{R} (\mathbf{T}) \subset \mathbf{V}$ 인 $\mathbf{V}$ 에 대하여 $\mathbf{T} (\mathbf{V} ) = \mathbf{R} (\mathbf{T})$ 이다. 따라서 $\mathbf{T} (\mathbf{R} (\mathbf{T}) ) \subset \mathbf{T} (\mathbf{V} ) = \mathbf{R} (\mathbf{T})$ 이다.
+
+    $\mathbf{N} (\mathbf{T})$:
+
+    $\mathbf{T} (\mathbf{N} (\mathbf{T}) ) = \{0\}$ 이므로 $\mathbf{T} (\mathbf{N} (\mathbf{T}) ) = \{0\} \subset \mathbf{N} (\mathbf{T})$ 이다.
+
+    $\mathbf{T}$ 의 고윳값 $\lambda$ 에 대한 $\mathbf{E}_{\lambda}$:
+
+    $x \in \mathbf{E}_{\lambda}$ 에 대하여 $\mathbf{T} (x) = \lambda x$ 이다. $\mathbf{T} (\lambda x) = \lambda \mathbf{T} (x) = \lambda \cdot \lambda x$ 이다. 벡터공간은 스칼라곱에 닫혀있으므로 $\lambda x \in \mathbf{V}$ 이다. 따라서 $\lambda x \in \mathbf{V} \implies \lambda x \in \mathbf{E}_{\lambda}$ 이다. 따라서 $\mathbf{T} (\mathbf{E}_{\lambda} ) \subset \mathbf{E}_{\lambda}$ 이다.
+
+!!! tldr "$\mathbf{T}$-순환 부분공간($\mathbf{T}$-cyclic subspace)"
+
+    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 영이 아닌 벡터 $x \in \mathbf{V}$ 에 대하여 다음과 같은 부분공간 $\mathbf{W}$ 를 $x$ 에 의해 생성된 $\mathbf{V}$ 의 $\mathbf{T}$-순환 부분공간이라 한다.
+
+    $$ \mathbf{W} = \text{span} (\{x, \mathbf{T} (x), \mathbf{T} ^{2}(x), \dots \}) $$
+
+- $\mathbf{T}$-순환 부분공간은 $x$ 를 포함하는 가장 작은 $\mathbf{T}$-불변 부분공간이다.
+
+- $x$ 를 포함하는 $\mathbf{T}$-불변 부분공간은 반드시 $x$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간을 포함한다.(문제 5.4-11)
+
+- 문제 5.4-31 은 순환 부분공간으로 행렬식 없이 선형연산자의 특성다항식을 구하는 방법을 말해준다.
+
+- 순환 부분공간은 대각화 불가능한 선형연산자의 행렬표현을 다룰 때 매우 중요한 역할을 한다.
+
+- 예시 
+
+    $\R ^{3}$ 의 선형연산자 $\mathbf{T}$ 를 $\mathbf{T}(a,b,c)=(-b+c,a+c,3c)$ 라고 정의하고 $e_1 = (1, 0, 0)$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간을 구해보자. 다음이 성립한다.
+
+    $$\mathbf{T}(e_1) = \mathbf{T}(1,0,0) = (0, 1,0) = e_2$$
+
+    $$\mathbf{T}^{2}(e_1) = \mathbf{T}(\mathbf{T}(e_1)) = \mathbf{T}(e_2) = (-1,0,0) = -e_1 $$
+
+    그러므로 $e_1$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간은 다음과 같다.
+
+    $$ \text{span} (\{e_1, \mathbf{T}(e_1), \mathbf{T}^{2}(e_1), \dots\}) = \text{span} (\{e_1, e_2\}) = \{(s, t, 0) : s, t \in \R\} $$
+
+!!! tldr "제한(restriction)"
+
+    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}:\mathbf{V} \to \mathbf{V}$ 와 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 에 대하여 $\mathbf{T}$ 를 $\mathbf{W}$ 로 제한한 $\mathbf{T}_{\mathbf{W}}$ 는 $\mathbf{T}$ 의 정의역과 공역을 $\mathbf{W}$ 로 제한한 함수 $\mathbf{T}_{\mathbf{W}}:\mathbf{W}\to \mathbf{W}$ 이다.
+
+- 함수의 제한은 정의역만 축소시키는 것으로 정의되지만, 이 경우 정의역이 $\mathbf{T}$-불변 부분공간으로 축소되므로 공역도 어차피 $\mathbf{T}$-불변 부분공간으로 축소된다.
+
+- $\mathbf{T}_{\mathbf{W}}$ 는 선형변환이다.(문제 5.4-7)
+
+- $\mathbf{T}_{\mathbf{W}}$ 는 $\mathbf{T}$ 의 성질을 그대로 상속한다.
+
+!!! tldr "문제 5.4-12"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 에 대한 $\mathbf{T}_{\mathbf{W}}$ 의 순서기저 $\gamma = \{v_1, v_2, \dots, v_k\}$ 를 확장하여 $\mathbf{V}$ 의 순서기저 $\beta = \{v_1, v_2, \dots, v_k, v _{k+1}, \dots, v_n\}$ 을 만들고 $A = [\mathbf{T}]_{\beta }, B_1 = [\mathbf{T}_{\mathbf{W}}]_{\gamma }$ 로 두자.
+
+    영행렬 $O$ 에 대하여 다음이 성립한다.
+
+    $$ A = \begin{pmatrix} B_1&B_2\\ O&B_3\\ \end{pmatrix} $$
+    
+!!! tldr "정리 5.20"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 에 대한 $\mathbf{T}_{\mathbf{W}}$ 의 특성다항식은 $\mathbf{T}$ 의 특성다항식을 나눈다.
+
+- 이 정리는 선형연산자와 $\mathbf{T}$-불변 부분공간에 의한 제한과의 관계를 말해준다.
+
+- 증명
+

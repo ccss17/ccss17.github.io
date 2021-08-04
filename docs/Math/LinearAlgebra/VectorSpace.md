@@ -2,9 +2,9 @@
 
     Stephen H. Friedberg, Linear Algebra, 4th Edition
 
-# 체
+# Field
 
-!!! tldr "체(field)의 정의"
+!!! tldr "체(field)"
 
     체 $\mathbf{F}$ 는 두 이항연산 합과 곱
     
@@ -162,11 +162,13 @@
 
 - 체의 지표가 $0$ 이 아니면(특히 지표가 $2$ 이면) 예상치 못한 일이 발생하기에 이 책이 소개하는 벡터공간에 대한 몇가지 정리는 지표가 $0$ 인 경우에만(또는 지표가 $2$ 가 아니면) 성립한다.
 
-# 벡터공간 
+# Vector Space
 
-!!! tldr "벡터공간의 정의"
+33d40353b replace
 
-    벡터공간(vector space), 선형공간(linear space) : 체 $\mathbf{F}$ 에서의 벡터공간 $\mathbf{V}$ 는 두 이항연산 합과 스칼라곱 
+!!! tldr "벡터공간(vector space), 선형공간(linear space)"
+
+    체 $\mathbf{F}$ 에서의 벡터공간 $\mathbf{V}$ 는 두 이항연산 합과 스칼라곱 
     
     $$ + : \mathbf{V} \times \mathbf{V} \to \mathbf{V}, (x, y) \mapsto x + y $$
     
@@ -386,33 +388,27 @@
 
     로 정의되기 때문이다. 
 
-# 행렬
+# Matrix
 
-!!! tldr ""
+!!! tldr "행벡터(row vector)"
 
-    행벡터(row vector) : 체 $\mathbf{F}$ 에 대한 $\mathbf{F} ^{n}$ 의 벡터 
+    행벡터는 다음과 같은 체 $\mathbf{F}$ 에 대한 $\mathbf{F} ^{n}$ 의 벡터이다.
 
     $$ \begin{pmatrix} a_1& a_2& \dots& a_n \end{pmatrix} $$ 
 
-    이다. 
+!!! tldr "열벡터(column vector)"
 
-!!! tldr ""
-
-    열벡터(column vector) : 체 $\mathbf{F}$ 에 대한 $\mathbf{F} ^{n}$ 의 벡터 
+    열벡터는 다음과 같은 체 $\mathbf{F}$ 에 대한 $\mathbf{F} ^{n}$ 의 벡터이다.
 
     $$ \begin{pmatrix} a_1\\a_2\\\vdots\\a_n \end{pmatrix} $$ 
 
-    이다. 
-
 - 보통 $\mathbf{F} ^{n}$ 의 벡터를 행벡터보다 이러한 열벡터로 표현한다. 
 
-!!! tldr ""
+!!! tldr "행렬(matrix)"
 
-    행렬(matrix) : 체 $\mathbf{F}$ 의 성분을 가져온 $m \times n$ 행렬은 $\forall a _{ij} \in \mathbf{F} (i \leq i \leq m, 1 \leq j \leq n)$ 에 대한 수학적 대상
+    체 $\mathbf{F}$ 의 성분을 가져온 $m \times n$ 행렬은 다음과 같은 $\forall a _{ij} \in \mathbf{F} (1 \leq i \leq m, 1 \leq j \leq n)$ 에 대한 수학적 대상이다.
 
     $$ \begin{pmatrix} a _{11}& a _{12}& \dots& a _{1n}\\ a _{21}& a _{22}& \dots& a _{2n}\\ \vdots& \vdots& \ddots& \vdots \\ a _{m1}& a _{m2}& \dots& a _{mn} \end{pmatrix} $$
-
-    이다.
 
 - 성분 $a _{i1}, a _{i2}, \dots, a _{in}$ 은 행렬의 $i$번째 행(row), 성분 $a _{1j}, a _{2j}, \dots, a _{mj}$ 은 행렬의 $j$번째 열(column) 이라고 한다.
 
@@ -444,15 +440,15 @@
 
 - 행렬의 합과 스칼라 곱 연산은 체 $\mathbf{F} ^{n}, \mathbf{F} ^{m}$ 에서 정의한 연산이 확장된 것이다. 
 
-## 영행렬, 항등행렬
+## Zero Matrix, Identity Matrix
 
-!!! tldr ""
+!!! tldr "영행렬(zero matrix)"
 
-    영행렬(zero matrix) : 모든 성분이 $0$ 인 $m \times n$ 행렬을 영행렬(zero matrix) 라고 하고 $O$ 라고 표기한다.
+    모든 성분이 $0$ 인 $m \times n$ 행렬을 영행렬(zero matrix) 라고 하고 $O$ 라고 표기한다.
 
-!!! tldr ""
+!!! tldr "항등행렬(identity matrix, unit matrix)"
 
-    항등행렬(identity matrix), unit matrix : 대각성분이 $1$ 이고 나머지 성분이 $0$ 인 정사각행렬이다.
+    항등행렬은 대각성분이 $1$ 이고 나머지 성분이 $0$ 인 정사각행렬이다.
     
 - 예시 
 
@@ -464,7 +460,7 @@
 
     $$ I_1 = (1), I_2 = \begin{pmatrix} 1&0\\ 0&1\\ \end{pmatrix} $$
 
-## 영벡터
+## Zero Vector
 
 !!! tldr "정리 1.1"
 
@@ -482,9 +478,9 @@
 
     이다. ■ 
 
-!!! tldr ""
+!!! tldr "영벡터(zero vector)"
 
-    영벡터(zero vector) : 벡터공간 $\mathbf{V}$ 의 임의의 원소 $\forall x \in \mathbf{V}$ 에 대하여 벡터공간의 성질 3) 
+    벡터공간 $\mathbf{V}$ 의 임의의 원소 $\forall x \in \mathbf{V}$ 에 대하여 벡터공간의 성질 3) 
 
     $$ x + 0 = x $$
     
@@ -508,7 +504,7 @@
 
     이다. ■ 
 
-## 역벡터
+## Inverse Vector
 
 !!! tldr ""
 
@@ -560,15 +556,15 @@
 
     3) 의 증명은 2) 와 비슷하다. ■ 
 
-## 삼각행렬
+## Triangular Matrix
 
-!!! tldr ""
+!!! tldr "삼각행렬(triangular matrix)"
 
-    삼각행렬(triangular matrix) : 행렬의 대각성분 위쪽이나 아래쪽 항들이 모두 $0$ 인 행렬이다.
+    삼각행렬은 행렬의 대각성분 위쪽이나 아래쪽 항들이 모두 $0$ 인 행렬이다.
 
-!!! tldr ""
+!!! tldr "상삼각행렬, 위삼각행렬(upper triangular matrix)"
 
-    상삼각행렬, 위삼각행렬(upper triangular matrix) : 행렬의 대각성분 아래의 모든 성분이 $0$ 인행렬이다.
+    상삼각행렬은 행렬의 대각성분 아래의 모든 성분이 $0$ 인행렬이다.
 
 - 즉, $i>j$ 에 대하여 $A _{ij} = 0$ 인 행렬이다.
 
@@ -576,15 +572,15 @@
 
     $$  \begin{pmatrix} 1 & 2 & 3 & 4\\ 0 & 5 & 3 & 4\\ 0 & 0 & 3 & 4\\ \end{pmatrix} $$
 
-!!! tldr ""
+!!! tldr "하삼각행렬(lower triangular matrix)"
 
-    하삼각행렬(lower triangular matrix) : 행렬의 대각성분 위의 모든 성분이 $0$ 인행렬이다.
+    하삼각행렬은 행렬의 대각성분 위의 모든 성분이 $0$ 인행렬이다.
 
-## 대각행렬
+## Diagonal Matrix
 
-!!! tldr ""
+!!! tldr "대각행렬(diagonal matrix)"
 
-    대각행렬(diagonal matrix) : 대각성분을 제외한 모든 성분이 $0$ 인 정사각행렬이다. 
+    대각행렬은 대각성분을 제외한 모든 성분이 $0$ 인 정사각행렬이다. 
 
 - 즉, $i \neq j$ 에 대하여 $M _{ij} = 0$ 인 $n \times n$ 행렬 $M$ 이다.
 
@@ -600,11 +596,11 @@
 
     이므로 대각행렬의 집합은 $\mathbf{M} _{n \times n}(\mathbf{F} )$ 의 부분공간이다.
 
-## 대각합
+## Trace
 
-!!! tldr ""
+!!! tldr "대각합(trace)"
 
-    대각합(trace) : $n \times n$ 행렬 $M$ 의 대각합은 모든 대각성분의 합 
+    $n \times n$ 행렬 $M$ 의 대각합은 모든 대각성분의 합 
 
     $$ \text{tr}(M) = \sum_{k=1}^{n}M _{kk} $$
 
@@ -612,19 +608,19 @@
 
 - 대각합이 $0$ 인 $n \times n$ 행렬의 집합은 자명하게 $\mathbf{M} _{n \times n}(\mathbf{F} )$ 의 부분공간이다.
 
-# 부분공간 
+# Subspace
 
-!!! tldr "부분공간의 정의"
+!!! tldr "부분공간(subspace)"
 
-    부분공간(subspace) : $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 부분집합 $\mathbf{W}$ 가 $\mathbf{V}$ 에서 정의한 합과 스칼라 곱을 가진 $\mathbf{F}$-벡터공간일 때 $\mathbf{W}$ 를 $\mathbf{V}$ 의 부분공간이라 한다.
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 부분집합 $\mathbf{W}$ 가 $\mathbf{V}$ 에서 정의한 합과 스칼라 곱을 가진 $\mathbf{F}$-벡터공간일 때 $\mathbf{W}$ 를 $\mathbf{V}$ 의 부분공간이라 한다.
 
 - 대수학의 주요 관심사는 어떤 집합의 부분집합이 서로 대수적 구조가 같은지 연구하는 것이다. 
 
 - 임의의 벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{V}$ 와 $\{0\}$ 은 부분공간이다. 특히 $\{0\}$ 은 점공간인 부분공간(zero subspace)이다.
 
-!!! tldr ""
+!!! tldr "점공간(zero vector space)"
 
-    점공간(zero vector space) : 영벡터 $0$ 만을 포함하는 벡터공간 $\{0\}$ 이다.
+    점공간은 영벡터 $0$ 만을 포함하는 벡터공간 $\{0\}$ 이다.
 
 - 이 벡터공간의 기저는 공집합이다. 그러므로 점공간은 $0$차원 벡터공간이다. 모든 벡터공간은 점공간과 동형인 부분공간을 갖는다.
 
@@ -698,19 +694,19 @@
 
     - $\mathbf{W} = \bigcup_{}^{}\mathcal{C}$ 가 부분공간이 된다는 보장은 없다. 영벡터를 포함하고, 스칼라곱에 대하여 닫혀있음은 쉽게 보일 수 있지만 합에 대하여 닫혀있다고 보장할 수 없기 때문이다. $\mathbf{V}$ 의 두 부분공간의 합집합이 부분공간이 되기 위한 필요충분조건은 한 부분공간이 다른 부분공간을 포함하고 있다는 것이다.
 
-## 전치행렬
+## Transpose Matrix
 
-!!! tldr ""
+!!! tldr "전치행렬(transpose matrix)"
 
-    전치행렬(transpose matrix) : $m \times n$ 행렬 $A$ 에 대한 전치행렬 $A ^{\operatorname{T} }$ 는 $A$ 의 행과 열을 바꾸어 얻은 $n \times m$ 행렬 $(A ^{\operatorname{T} }) _{ij} = A _{ji}$ 이다. 
+    $m \times n$ 행렬 $A$ 에 대한 전치행렬 $A ^{\operatorname{T} }$ 는 $A$ 의 행과 열을 바꾸어 얻은 $n \times m$ 행렬 $(A ^{\operatorname{T} }) _{ij} = A _{ji}$ 이다. 
 
 - 예시 
 
     $$ \begin{pmatrix} 1 & -2 &3\\ 0 & 5 &-1 \end{pmatrix} ^{\operatorname{T} } = \begin{pmatrix} 1 & 0\\ -2 & 5\\ 3 & -1\\ \end{pmatrix} $$
 
-!!! tldr ""
+!!! tldr "대칭행렬(symmetric matrix)"
 
-    대칭행렬(symmetric matrix) : $A ^{\operatorname{T} } = A$ 인 행렬이다.
+    대칭행렬은 $A ^{\operatorname{T} } = A$ 인 행렬이다.
 
 - 대칭행렬은 정사각행렬이다.
 
@@ -726,11 +722,11 @@
 
     먼저 영행렬의 전치행렬은 영행렬이다. ▲  행렬 $A, B$ 와 스칼라 $a, b$ 에 대하여 $(aA + bB) ^{\operatorname{T} } = aA ^{\operatorname{T} } + bB ^{\operatorname{T} }$ 을 생각하면 $A \in \mathbf{W} , B \in \mathbf{W} \implies (A + B) ^{\operatorname{T} } = A ^{\operatorname{T} } + B ^{\operatorname{T} } = A + B$ 이다. ▲  마지막으로 행렬 $A$ 와 스칼라 $a$ 에 대하여 $(aA) ^{\operatorname{T} } = a A ^{\operatorname{T} }$ 이므로 $A \in \mathbf{W} \implies (aA) ^{\operatorname{T} } = aA ^{\operatorname{T} } = aA$ 이다. ▲ 그러므로 부분공간의 조건 1), 2), 3) 을 만족하므로 $\mathbf{W}$ 은 부분공간이다. 
 
-# 일차결합
+# Linear Combination
 
-!!! tldr ""
+!!! tldr "일차결합(linear combination)"
 
-    일차결합(linear combination) : 벡터공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대한 유한개의 벡터 $u_1, u_2, \dots, u_n \in S$ 와 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 벡터
+    벡터공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대한 유한개의 벡터 $u_1, u_2, \dots, u_n \in S$ 와 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 벡터
 
     $$ v = a_1u_1 + a_2u_2 + \dots + a_nu_n \in \mathbf{V} $$
 
@@ -742,11 +738,11 @@
 
 > p43 연립방정식의 성질 pass 
 
-## 생성공간
+## Linear Span
 
-!!! tldr ""
+!!! tldr "생성공간(linear span, linear hull)"
 
-    생성공간(span) : $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대하여
+    생성공간은 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대하여
 
     $$ \text{span} (S) = \bigg \{\sum_{i=1}^{|S|}a_iv_i : v_i \in S, a_i \in \mathbf{F} \bigg \} $$
 
@@ -840,13 +836,13 @@
 
     $$ \bigg (\dfrac{1}{3}a _{11} - \dfrac{2}{3}a _{12} + \dfrac{1}{3}a _{21} + \dfrac{1}{3}a _{22}\bigg ) \begin{pmatrix} 1&0\\ 1&1\\ \end{pmatrix}+ \bigg (-\dfrac{2}{3}a _{11} + \dfrac{1}{3}a _{12} + \dfrac{1}{3}a _{21} + \dfrac{1}{3}a _{22}\bigg ) \begin{pmatrix} 0&1\\ 1&1\\ \end{pmatrix} $$
 
-## 일차종속
+## Linearly Dependent
 
 !!! tldr ""
 
     영벡터의 자명한 표현(trivial representation of $0$) : 임의의 벡터 $u_1, u_2, \dots, u_n$ 에 대하여 $a_1 = a_2 = \dots = a_n = 0$ 이면 $a_1u_1 + a_2u_2 + \dots + a_nu_n = 0$ 인데 이것은 너무 자명하므로 영벡터의 자명한 표현이라 한다.
 
-!!! tldr "일차종속(linearly dependent) 의 정의"
+!!! tldr "일차종속(linearly dependent) "
 
     벡터공간 $\mathbf{V}$ 의 부분집합 $S$ 에 대하여 
     
@@ -898,7 +894,7 @@
 
     변수가 4개인데 관계가 4개이므로 해를 찾을 수 있다. 자명하지 않은 해는 $a_1 = 4, a_2 = -3, a_3 = 2, a_4 = 0$ 이다. 즉 $S$ 는 $\R ^{4}$ 의 일차종속인 부분집합이다. 
 
-## 일차독립
+## Linearly Independent
 
 !!! tldr "일차독립(linearly independent)"
 
@@ -914,7 +910,7 @@
 
 - 일차독립은 쉽게 말해 벡터공간의 부분집합 $S$ 가 일차종속이 아니면 일차독립이다. 이때 $S$ 의 벡터 또한 일차독립이다.
 
-## 일차결합의 성질
+## Properties of Linear Combination
 
 !!! tldr ""
 
@@ -1034,11 +1030,11 @@
 
     이다. 그런데 $v \not\in S$ 이고 $v$ 의 계수가 $0$ 이 아니므로 집합 $\{v_1,v_2, \dots,v_m,v\} \subset S \cup \{v\}$ 은 일차종속이다. 그러면 [정리 1.6](#01156053b) 에 의하여 $S \cup \{v\}$ 도 일차종속이다. ■ 
 
-# 기저
+# Basis
 
-!!! tldr ""
+!!! tldr "기저(basis)"
 
-    기저(basis) : 벡터공간 $\mathbf{V}$ 와 부분집합 $\beta$ 에 대하여 $\beta$ 가 일차독립이고 $\mathbf{V} = \text{span}(\beta )$ 이면 $\beta$ 를 $\mathbf{V}$ 의 기저라고 한다.
+    벡터공간 $\mathbf{V}$ 와 부분집합 $\beta$ 에 대하여 $\beta$ 가 일차독립이고 $\mathbf{V} = \text{span}(\beta )$ 이면 $\beta$ 를 $\mathbf{V}$ 의 기저라고 한다.
 
 - 지금까지 부분공간 $\mathbf{W}$ 의 생성집합 $S$ 에 대한 임의의 $S' \subsetneq S$ 가 $\mathbf{W}$ 를 생성하지 못하면 $S$ 가 일차독립임을 살펴보았다. 또한 아래의 정리로부터 기저에 의한 해당 벡터공간의 벡터의 표현은 유일함을 알 수 있다. 이로써 일차독립인 생성집합은 그 벡터공간을 생성하는 가장 기본적인 레고 블록임을 알 수 있다. 따라서 일차독립인 생성집합을 "기저(basis)" 라고 부른다.
 
@@ -1054,9 +1050,9 @@
 
 ## 표준기저
 
-!!! tldr ""
+!!! tldr "표준기저(Standard basis, Natural basis, Canonical basis)"
 
-    표준기저(Standard basis), Natural basis, Canonical basis : 벡터공간의 표준기저는 단 하나의 성분이 $1$ 이고 나머지 성분이 $0$ 인 벡터들의 집합이다.
+    벡터공간의 표준기저는 단 하나의 성분이 $1$ 이고 나머지 성분이 $0$ 인 벡터들의 집합이다.
 
 - 3차원 공간의 표준 기저를 $i,j,k$ 로 나타낸 그림 
 
@@ -1172,11 +1168,13 @@
 
         가 된다. 
 
-## 대체정리
+## Replacement Theorem
 
-!!! tldr "정리 1.10"
+dfa035489 replace
 
-    대체정리(replacement theorem) : 집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고, $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다.
+!!! tldr "정리 1.10 대체정리(replacement theorem)"
+
+    집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고, $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다.
 
     1. $|L| \leq |G|$
 
@@ -1262,11 +1260,11 @@
 
     그러므로 $|\beta| = |\gamma|$ 이다. ■ 
 
-# 차원
+# Dimension
 
-!!! tldr ""
+!!! tldr "차원(dimension)"
 
-    차원(dimension) : 벡터공간의 기저의 기수이다.
+    벡터공간의 기저의 기수이다.
 
 - 벡터공간 $\mathbf{V}$ 의 차원을 $\dim(\mathbf{V} )$ 으로 표기한다.
 
@@ -1310,9 +1308,9 @@
 
     이다.
 
-!!! tldr ""
+!!! tldr "유한차원(finite dimension)"
 
-    유한차원(finite dimension) : 기저가 유한집합인 벡터공간이다.
+    기저가 유한집합인 벡터공간이다.
 
 - [대체정리](#dfa035489) 를 차원의 관점에서 다시 말해보면 다음과 같다.
 
@@ -1324,9 +1322,9 @@
 
     $$ \not \exists S \subset \mathbf{V} \text{ s.t. } |S| > \dim(\mathbf{V} ) \land S \text{ is linearly independent} $$
 
-!!! tldr ""
+!!! tldr "무한차원(infinite dimension)"
 
-    무한차원(infinite dimension) : 기저가 무한집합인 벡터공간이다.
+    기저가 무한집합인 벡터공간이다.
 
 - 예시 
 
@@ -1382,7 +1380,7 @@
 
     은 일차독립인데 $\dim(\R ^{4}) = 4$ 이므로 2) 에 의하여 이 집합은 $\R ^{4}$ 의 기저이다.
 
-## 일차독립 집합, 기저, 생성집합의 관계
+## Relation between Linear Dependent, Basis, Span
 
 !!! tldr ""
 
@@ -1398,7 +1396,7 @@
 
     $$ D \subset B \subset S $$
 
-## 부분공간의 차원과 기저
+## Dimension and Basis of Subspace
 
 !!! tldr "정리 1.11"
 
@@ -1446,7 +1444,7 @@
 
 > 라그랑주 보간법 pass. 이해는 다 해서 언제나 정리할 수 있음
 
-# 무한차원 벡터공간
+# Infinite Dimension Vector Space
 
 !!! note
 
@@ -1544,13 +1542,13 @@
 
     $U$ 의 임의의 서로 다른 벡터 $u_1, u_2, \dots, u_n \in U$ 와 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 $a_1u_1 + a_2u_2 +\dots +a_nu_n = 0$ 이라고 하자. 그러면 $u_i \in U \implies \exists A_i \in \mathcal{C} \text{ s.t. } u_i \in A_i$ 이다. $\mathcal{C}$ 는 포함관계에 의한 사슬이므로 $A_i$ 들을 모두 포함하는 $A_k$ 가 존재한다. 그러면 $\forall u_i, u_i \in A_k$ 이다. $A_k \in \mathcal{F}$ 이므로 $A_k$ 는 일차독립이고 따라서 $a_1u_1 + a_2u_2 +\dots +a_nu_n = 0 \implies a_1 = a_2 = \dots = a_n = 0$ 이다. 그러므로 $U$ 는 일차독립이다. ■ 
 
-## 최종결론
+## Conclusion
 
 !!! tldr "정리 1.13 따름정리"
 
     벡터공간은 기저를 갖는다.
 
-- 이 장의 최종목표가 이 정리이다. 
+- 지금까지의 논의의 최종 결론이 이 정리이다. 
 
     이 장에서는 "기저와 차원" 의 정리들을 무한차원에서 성립하도록 일반화한다. 이것의 최종 목표는 모든 벡터공간에 기저가 존재함을 보이는 것이다. 이 사실은 무한차원을 다룰 때 중요한데, 왜냐하면 무한차원의 기저를 구체적으로 기술하기란 어렵기 때문이다. 
     

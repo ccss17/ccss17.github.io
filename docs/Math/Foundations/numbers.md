@@ -28,7 +28,7 @@
 
     이다.
 
-!!! tldr "자연수 집합(natural number set) 의 정의"
+!!! tldr "자연수 집합(natural number set) "
 
     자연수 집합은 다음 성질을 만족하는 집합 $\mathcal{A}$ 에 대한 집합 $\N = \bigcap_{}^{}\mathcal{A}$ 이다.
 
@@ -200,7 +200,7 @@
 
     이다. 그러므로 $\forall (n, x) \in \gamma \setminus \{(n ^{+}, y)\}$ 에 대하여 $(1.2)$ 가 성립한다. 이것으로 모든 증명이 끝났다. ■ 
 
-!!! tldr "자연수 덧셈의 정의"
+!!! tldr "자연수 덧셈"
 
     더하기(addition) : 각 자연수 $n, m \in \N$ 에 대하여 다음을 만족하면서 유일하게 존재하는 함수 $\gamma _m:\N \to \N$ 에 대하여 자연수의 더하기를 $m + n = \gamma _m(n)$ 라고 정의한다. 
 
@@ -232,7 +232,7 @@
 
     그러므로 수학적 귀납법을 적용할 수 있으므로 증명이 끝났다. 
 
-!!! tldr "자연수 곱셈의 정의"
+!!! tldr "자연수 곱셈"
 
     곱하기(multiplication) : 각 자연수 $n, m \in \N$ 에 대하여 다음을 만족하면서 유일하게 존재하는 함수 $\delta _m: \N \to \N$ 에 대하여 자연수의 곱하기를 $mn = \delta _m(n)$ 라고 정의한다. 
 
@@ -268,7 +268,7 @@
 
 ## 자연수의 순서관계
 
-!!! tldr "자연수 순서관계(natural number order)의 정의"
+!!! tldr "자연수 순서관계(natural number order)"
 
     두 자연수 $m, n \in \N$ 에 대하여 다음과 같이 정의한다.
 
@@ -562,7 +562,7 @@
 
 # 정수의 정의
 
-!!! tldr "동치관계 $\sim$ 의 정의"
+!!! tldr "동치관계 $\sim$ "
 
     $m, n, m', n' \in \N$ 에 대하여 $\N \times \N$ 위에서 정의된 다음의 관계 $\sim$ 는 동치관계이다.
 
@@ -570,7 +570,7 @@
 
 - 증명
 
-!!! tldr "정수 집합(integer set) 의 정의"
+!!! tldr "정수 집합(integer set) "
 
     정수집합은 동치관계 $\sim$ 에 대한 몫집합 $\mathbb{Z} = \N \times \N/ \sim$ 이다.
 
@@ -592,7 +592,7 @@
 
 - 동치류 $[(a, b)]$ 를 편하게 $[a, b]$ 로 쓰기로 한다.
 
-!!! tldr "정수 뺄셈의 정의"
+!!! tldr "정수 뺄셈"
 
     빼기(subtraction) : $m, n \in \N : n \leq m$ 이면 $m = n + k$ 인 $k \in \N$ 가 유일하게 존재하는데 이 $k$ 를 다음과 같이 정의한다.
 
@@ -612,7 +612,7 @@
 
 ## 정수의 순서관계
 
-!!! tldr "정수 순서관계(integer order)의 정의"
+!!! tldr "정수 순서관계(integer order)"
 
     정수의 순서관계는 집합 $\mathbb{Z}$ 위의 다음과 같은 관계이다.
 
@@ -666,7 +666,7 @@
 
 ## 정수의 덧셈과 곱셈
 
-!!! tldr "정수 덧셈의 정의"
+!!! tldr "정수 덧셈"
 
     정수의 덧셈 $+$ 은 다음과 같이 정의된 함수 $+: \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$ 이다.
     
@@ -676,7 +676,7 @@
 
 - 또한 $[0, 0] \in \mathbb{Z}$ 이 항등원의 역할을 하고, $[n, m]$ 의 역원은 $[m, n]$ 이 된다. 
 
-!!! tldr "정수 곱셈의 정의"
+!!! tldr "정수 곱셈"
 
     정수의 곱셈 $\cdot$ 은 다음과 같이 정의된 함수 $\cdot : \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$ 이다.
 
@@ -708,7 +708,7 @@
 
 # 체
 
-!!! tldr "체(field)의 정의"
+!!! tldr "체(field)"
 
     체 $F$ 는 두 이항연산 합과 곱
     
@@ -772,7 +772,7 @@
     
     $$ -S = \{-a: a \in S\} $$
 
-!!! tldr "양수(positive number) 집합의 정의"
+!!! tldr "양수(positive number) 집합"
 
     체 $F$ 의 양수집합 $P$ 는 다음을 만족하는 집합이다.
 
@@ -790,7 +790,7 @@
 
 - **체 $F$ 의 양수집합 $P$ 를 보통 $P _{F}$ 라고 표기한다.**
 
-!!! tldr "순서체(ordered field)의 정의"
+!!! tldr "순서체(ordered field)"
 
     순서체는 양수집합이 존재하는 체이다.
 
@@ -800,7 +800,7 @@
 
 ## 순서체의 순서관계
 
-!!! tldr "순서체의 순서관계의 정의"
+!!! tldr "순서체의 순서관계"
 
     순서체 $F$ 의 두 원소 $a, b \in F$ 에 대하여 다음과 같이 정의한다. 
     
@@ -878,7 +878,7 @@
 
 # 유리수의 정의
 
-!!! tldr "동치관계 $\sim$ 의 정의"
+!!! tldr "동치관계 $\sim$ "
 
     $a, b, c, d \in \mathbb{Z}$ 에 대하여 $\mathbb{Z} \times (\mathbb{Z} \setminus \{0\})$ 에서 정의된 다음의 관계 $\sim$ 은 동치관계이다.
 
@@ -886,7 +886,7 @@
 
 - 증명
 
-!!! tldr "유리수 집합(rational number set)의 정의"
+!!! tldr "유리수 집합(rational number set)"
 
     유리수 집합은 동치관계 $\sim$ 에 대한 몫집합 $\mathbb{Q} = \mathbb{Z} \times  (\mathbb{Z} \setminus \{0\})/\sim$ 이다.
 
@@ -910,13 +910,13 @@
 
 ## 유리수의 덧셈과 곱셈
 
-!!! tldr "유리수 덧셈의 정의"
+!!! tldr "유리수 덧셈"
 
     유리수의 덧셈 $+$ 는 다음과 같이 정의된 함수 $+: \mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$ 이다.
 
     $$ [a, b] + [c, d] = [ad + bc, bd] $$
     
-!!! tldr "유리수 곱셈의 정의"
+!!! tldr "유리수 곱셈"
 
     유리수의 곱셈 $\cdot$ 는 다음과 같이 정의된 함수 $\cdot : \mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$ 이다.
 
@@ -1050,7 +1050,7 @@
 
     인데, 이는 $(3)$ 에 모순이므로 $\gamma : \N \to F$ 는 단사함수이다. $\blacktriangle$ 
 
-    이제 $\N \subset \mathbb{Z} \subset \mathbb{Q}$ 를 염두하며 $\gamma : \N \to F$ 의 정의역을 $\mathbb{Q}$ 로 확장할 것이다. 먼저 $\mathbb{Z}$ 로 확장하여 함수 $\gamma : \mathbb{Z} \to F$ 를 $n \in \N$ 에 대하여
+    이제 $\N \subset \mathbb{Z} \subset \mathbb{Q}$ 를 염두하며 $\gamma : \N \to F$ 역을 $\mathbb{Q}$ 로 확장할 것이다. 먼저 $\mathbb{Z}$ 로 확장하여 함수 $\gamma : \mathbb{Z} \to F$ 를 $n \in \N$ 에 대하여
 
     $$ \gamma (n) = \gamma (n), \qquad \gamma (-n) = - \gamma (n) \tag{4} $$
 
@@ -1268,7 +1268,7 @@
 
 ## 실수의 순서관계
 
-!!! tldr "실수의 순서관계의 정의"
+!!! tldr "실수의 순서관계"
 
     절단 $\alpha , \beta$ 에 대하여 다음과 같이 정의한다.
 
@@ -1334,7 +1334,7 @@
 
 ## 실수의 덧셈
 
-!!! tldr "실수 덧셈의 정의"
+!!! tldr "실수 덧셈"
 
     실수의 덧셈 $+$ 는 다음과 같이 정의된 함수 $+: \R \times \R \to \R$ 이다.
 
@@ -1474,7 +1474,7 @@
 
 ## 실수의 곱셈
 
-!!! tldr "실수 곱셈의 정의"
+!!! tldr "실수 곱셈"
 
     양의 실수의 곱셈 $\cdot$ 은 다음과 같이 정의된 함수 $\cdot : P_{\R} \times P_{\R} \to P_{\R}$ 이다.
 
@@ -1578,7 +1578,7 @@
 
     를 만족시키는 자연수 $N$ 이 존재하여 수열이 $a$ 와 $e$ 보다 가깝다는 것을 보여주는 정의이다. 이로써 이 정의는 수열 $x$ 가 $a$ 와 무한히 가까워지는 형태를 표현할 수 있는 것이다.
 
-!!! tldr "코시 수열(cauchy sequence)의 정의"
+!!! tldr "코시 수열(cauchy sequence)"
 
     체 $F$ 에 대한 $\forall e \in P _{F}$ 와 수열 $x : \N \to F$ 에 대하여 다음을 만족하는 자연수 $N$ 이 존재하면 $x$ 를 코시 수열이라 한다.
 
@@ -1598,7 +1598,7 @@
 
     $$ a _{n+1} - a_n = \sqrt[]{n+1} - \sqrt[]{n} = \dfrac{1}{\sqrt[]{n+1} + \sqrt[]{n}} < \dfrac{1}{2 \sqrt[]{n}} $$
 
-!!! tldr "기본열의 정의"
+!!! tldr "기본열"
 
     기본열은 코시수열 $x : \N \to \mathbb{Q}$ 이다.
 
@@ -1732,7 +1732,7 @@
 
 ## 실수의 순서관계
 
-!!! tldr "실수 순서관계의 정의"
+!!! tldr "실수 순서관계"
 
     $[\alpha ], [\beta ] \in \R$ 에 대하여 
 
@@ -1808,7 +1808,7 @@
 
 ## 실수의 덧셈
 
-!!! tldr "실수 덧셈의 정의"
+!!! tldr "실수 덧셈"
 
     기본열 $\alpha + \beta: i \mapsto \alpha (i) + \beta (i)$ 와 $[\alpha], [\beta] \in \R$ 에 대하여 다음과 같이 정의한다.
 
@@ -1844,7 +1844,7 @@
 
 ## 실수의 곱셈
 
-!!! tldr "실수 곱셈의 정의"
+!!! tldr "실수 곱셈"
 
     기본열 $\alpha \beta: i \mapsto \alpha (i) \beta (i)$ 와 $[\alpha] , [\beta] \in \R$ 에 대하여 다음과 같이 정의한다.
 

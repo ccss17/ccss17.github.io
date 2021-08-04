@@ -2,15 +2,15 @@
 
     Stephen H. Friedberg, Linear Algebra, 4th Edition
 
-# $2 \times 2$ 행렬의 행렬식
+# Determinants of $2 \times 2$ Matrix
 
-!!! tldr "$2 \times 2$ 행렬의 행렬식"
+!!! tldr "$2 \times 2$ 행렬의 행렬식(Determinants of $2 \times 2$ Matrix)"
 
     $2 \times 2$ 행렬 $A = \begin{pmatrix} a&b\\ c&d\\ \end{pmatrix}$ 에 대하여 행렬식 $\det: \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}$ 은 다음과 같이 정의된 함수이다.
 
     $$ \det (A) = ad - bc $$
 
-## $2 \times 2$ 행렬의 행렬식의 성질
+## Properties of Determinants of $2 \times 2$ Matrix
 
 !!! tldr ""
 
@@ -80,11 +80,9 @@
 
     즉, $\det(A) = A _{11}A _{22} - A _{12}A _{21} \neq 0$  이다. $A _{21} \neq 0$ 를 가정해도 비슷한 논리로 $\det(A) \neq 0$ 를 얻는다. ■ 
 
-## 평행사변형의 넓이
+## Area of a parallelogram
 
-이 절은 $2 \times 2$ 행렬의 행렬식을 기하학으로 특수화했을 때 어떤 의미를 가지는지 알아본다.
-
-!!! tldr "각(angle) 의 정의"
+!!! tldr "각(angle)"
 
     $\R ^{2}$ 의 두 벡터의 각은 같은 크기와 방향을 가지고 시점이 원점인 두 벡터가 이루는 각이다.
 
@@ -94,7 +92,7 @@
 
     ![image](https://user-images.githubusercontent.com/16812446/127306408-3ff07c6f-57a1-4658-a57a-bbde4e5e5878.png)
 
-!!! tldr "향(orientation) 의 정의"
+!!! tldr "향(orientation)"
 
     $\beta =\{u,v\}$ 가 $\R ^{2}$ 의 순서기저일 때 $\beta$ 의 향은 다음과 같은 실수이다. 
 
@@ -112,7 +110,7 @@
 
 - 증명
 
-!!! tldr "오른손 좌표계(right-handed coordinate system) 의 정의"
+!!! tldr "오른손 좌표계(right-handed coordinate system)"
 
     $\R ^{2}$ 의 순서기저 $\{u, v\}$ 에 대하여 벡터 $u$ 를 시계 반대방향으로 $\theta (0 < \theta < \pi)$ 만큼 회전하여 벡터 $v$ 에 포갤 수 있으면 좌표계 $\{u, v\}$ 는 오른손 좌표계이다.
 
@@ -120,7 +118,7 @@
 
     ![image](https://user-images.githubusercontent.com/16812446/127310867-dd35e776-5d31-49fd-8df5-b4e8ac3a6b56.png)
 
-!!! tldr "왼손 좌표계(left-handed coordinate system) 의 정의"
+!!! tldr "왼손 좌표계(left-handed coordinate system)"
 
     $\R ^{2}$ 의 순서기저 $\{u, v\}$ 에 대하여 벡터 $u$ 를 시계 방향으로 $\theta (0 < \theta < \pi)$ 만큼 회전하여 벡터 $v$ 에 포갤 수 있으면 좌표계 $\{u, v\}$ 는 왼손 좌표계이다.
 
@@ -194,7 +192,7 @@
 
 - 증명
 
-!!! tldr "평행사변형(parallelogram) 의 정의"
+!!! tldr "평행사변형(parallelogram) "
 
     원점을 시점으로 하는 벡터 $u, v \in \R ^{2}$ 에 대하여 이웃한 두 변 $u, v$ 를 가지는 평행사변형을 $u, v$ 의 평행사변형이라 한다.
 
@@ -279,9 +277,9 @@
 
     즉, $\delta (I_2) = 1$ 이다. 이로써 모든 증명이 끝났다. ■ 
 
-# 행렬식의 정의
+# Determinants
 
-!!! tldr "$\tilde{A}$ 의 정의"
+!!! tldr "$\tilde{A}$"
 
     $n \geq 2$ 일 때 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $A$ 의 $i$ 행과 $j$ 열을 제거하여 얻은 $(n - 1) \times (n - 1)$ 행렬 $\tilde{A} _{ij}$ 라고 한다.
 
@@ -289,11 +287,11 @@
 
     $$A = \begin{pmatrix} 1&2&3\\ 4&5&6\\ 7&8&9\\ \end{pmatrix} \implies \tilde{A} _{11} = \begin{pmatrix} 5&6\\ 8&9\\ \end{pmatrix}$$
 
-!!! tldr "여인수(cofactor) 의 정의"
+!!! tldr "여인수(cofactor)"
 
     스칼라 $(-1) ^{i+j}\det(\tilde{A}_{ij})$ 를 $A$ 의 $i$ 행 $j$ 열 성분에 대한 여인수라고 한다. 
 
-!!! tldr "여인수 전개(cofactor expansion) 의 정의"
+!!! tldr "여인수 전개(cofactor expansion)"
 
     $A$ 의 $i$ 행에 대한 여인수 전개를 다음과 같이 정의한다.
 
@@ -301,7 +299,7 @@
 
 - 즉, $A$ 의 $i$ 행에 대한 여인수 전개는 $A$ 의 $i$ 행의 각 성분에 여인수를 곱하여 더한 결과이다.
 
-!!! tldr "행렬식(determinant) 의 정의"
+!!! tldr "행렬식(determinant)"
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 행렬식 $\det: \mathbf{M}_{n \times n}(\mathbf{F} ) \to \mathbf{F}$ 은 다음과 같은 함수이다.
 
@@ -321,7 +319,7 @@
 
     $2 \times 2$ 행렬의 행렬식 정의와 같다는 것을 알 수 있다.
 
-## 항등행렬의 행렬식
+## Determinants of Identity Matrix
 
 !!! tldr ""
 
@@ -335,7 +333,7 @@
 
     $$ \det(I) = (-1) ^{2}(1) \det(\tilde{I}_{11}) + (-1) ^{3}(0) \det(\tilde{I}_{12}) + \dots + (-1) ^{1+n}(0) \det(\tilde{I}_{1n}) = 1 + 0 + \dots + 0 = 1 \tag*{■} $$
 
-## 행렬식의 성질
+## Properties of Determinant
 
 !!! tldr "정리 4.3"
 
@@ -459,7 +457,7 @@
 
     그러므로 $n > 2, 1 < i \leq n$ 일 때 성립한다. ■ 
 
-## 행렬식의 재정의
+## Redefining the Determinant
 
 !!! tldr "정리 4.4"
 
@@ -554,7 +552,7 @@
 
     $i \neq r$ 인 $i$ 에 대하여 $A$ 의 $r$행에 $i$행의 $-c_i$ 배를 더하여 얻은 행렬 $B$ 는 $b_r = 0$ 이므로 [정리 4.3 따름정리](#e337b8376)에 의하여 $\det(B) = 0$ 이다. 정리 4.6 에 의하여 $\det(B) = \det(A) = 0$ 이다. ■ 
 
-## 행렬식과 기본행연산의 관계
+## Relation between Determinant and Elementary Row Operation
 
 !!! tldr "기본행연산과 행렬식의 관계"
 
@@ -570,7 +568,7 @@
 
     [정리 4.3(2형 기본행연산과 행렬식의 관계)](#e013b5962), [정리 4.5(1형 기본행연산과 행렬식의 관계)](#f4dc3fe35), [정리 4.6(3형 기본행연산과 행렬식의 관계)](#031b9b6c8) 에 의하여 증명된다.
 
-## 상삼각행렬의 행렬식
+## Determinant of Upper Triangular Matrix
 
 !!! tldr "문제 4.2-23"
 
@@ -636,10 +634,10 @@
 
     하삼각행렬일 경우 문제 4.2-23 의 증명과정과 거의 비슷하게 증명 가능하다. ■ 
 
-## 기본행렬의 행렬식
+## Determinant of Elementary Matrix
 
 
-!!! tldr "기본행렬의 행렬식"
+!!! tldr "기본행렬의 행렬식(Determinant of Elementary Matrix)"
 
     1. $I$ 의 두 행의 위치를 바꾸어 얻은 기본행렬 $E$ 에 대하여 $\det(E) = -1$ 이다.
 
@@ -843,7 +841,7 @@
 
     ![image](https://user-images.githubusercontent.com/16812446/127725720-c3260b99-7cc4-4801-852f-20f727794890.png)
 
-## 닮은 행렬의 행렬식
+## Determinant of Similar Matrices
 
 !!! tldr "문제 4.3-15"
 

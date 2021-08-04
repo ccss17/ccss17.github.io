@@ -4,9 +4,9 @@
 
 # 초현실수
 
-!!! tldr "초현실수의 정의"
+!!! tldr "초현실수(surreal number)"
 
-    초현실수(surreal number) : 초현실수 집합 $L, R$ 에 대하여 
+    초현실수는 초현실수 집합 $L, R$ 에 대하여 
     
     $$ \forall l \in L, \forall r \in R : r \not \leq l \tag{1.1} $$
 
@@ -74,7 +74,7 @@
 
 ## 초현실수의 순서관계
 
-!!! tldr "$\leq$ 의 정의"
+!!! tldr "$\leq$ "
 
     초현실수 $x, y$ 와 $x$ 의 left set 인 $X_L$ 과 $y$ 의 right set 인 $Y_R$ 에 대하여 
 
@@ -176,7 +176,7 @@
 
 - 기호 $\geq$ 는 "보다 크거나 같다" 는 뜻이다. 
 
-!!! tldr "$<$ 의 정의"
+!!! tldr "$<$ "
 
     $$ x \leq y \land y \not \leq x \iff x < y $$
 
@@ -190,7 +190,7 @@
 
     $$ \{|0\} < \{0|\} $$
 
-!!! tldr "서로 같은 초현실수의 정의"
+!!! tldr "서로 같은 초현실수"
 
     $$ x \leq y \land y \leq x \iff x = y $$
 
@@ -368,7 +368,7 @@
 
 ## 음의 초현실수
 
-!!! tldr "$-$ 의 정의"
+!!! tldr "$-$ "
 
     $$ -x = \{-X_R | -X_L\} $$
 
@@ -440,7 +440,7 @@
 
     $$ x \leq y \iff y \not \leq X_L \land Y_R \not \leq x $$
 
-!!! tldr "$\equiv$ 의 정의"
+!!! tldr "$\equiv$ "
 
     $$ \begin{equation}\begin{split} x \equiv y \iff &\forall x_L \in X_L : x_L \in Y_L \enspace \land \\ &\forall x_R \in X_R : x_R \in Y_R \enspace \land \\ &\forall y_L \in Y_L : y_L \in X_L \enspace \land \\ &\forall y_R \in Y_R : y_R \in X_R \end{split}\end{equation} \tag*{} $$
 
@@ -466,7 +466,7 @@
 
 - 2) 를 사용하여 수학적 귀납법을 전개할 수 있다. 즉, $\varnothing$ 에 대하여 참임을 증명한 다음, 정리가 parents 에 대하여 참임을 가정하고 parents 로 구성된 초현실수에 대하여 참임을 증명하면 모든 초현실수에 대하여 정리가 참임을 증명할 수 있다. 
 
-!!! tldr "$\not \leq$ 의 정의"
+!!! tldr "$\not \leq$ "
 
     $$ x \not \leq y \iff \exists x_L \in X_L : y \leq x_L \lor \exists y_R \in Y_R : y_R \leq x \tag{2.5} $$
 
@@ -746,7 +746,7 @@
 
     $(2.46)$ 가 참이라고 하면 $y_R \leq x$ 을 만족하는 $y_R$ 을 잡을 수 있다. 또한 [정리 5](#c076cc283) 에 의하여 $y \leq y_R$ 이므로 [The transitive law](#80a2a11d6) 에 의하여 $y \leq x$ 을 얻는다. ■ 
     
-!!! tldr "단순화된 $<$ 의 정의"
+!!! tldr "단순화된 $<$ "
 
     $$ x < y \iff y \not \leq x \tag{2.48} $$
 
@@ -1875,7 +1875,7 @@
 
 ## 무한대의 정의
 
-!!! tldr "무한대의 정의"
+!!! tldr "무한대(unlimited)"
 
     $$ \omega \equiv \{\mathbb{Z} | \} $$
 
@@ -1959,7 +1959,7 @@
 
 ## 무한소의 정의
 
-!!! tldr "무한소의 정의"
+!!! tldr "무한소(infinitesimal)"
 
     $$ \varepsilon = \bigg \{0 \bigg | 1, \dfrac{1}{2}, \dfrac{1}{4}, \dfrac{1}{8}, \dfrac{1}{16}, \dots \bigg \} $$
 
@@ -1995,7 +1995,7 @@
 
 ## $\dfrac{1}{3}$ 의 정의
 
-!!! tldr "$\dfrac{1}{3}$ 의 정의"
+!!! tldr "$\dfrac{1}{3}$ "
 
     다음을 만족하는 초현실수 $t = \{T_L | T_R\}$ 를 $\dfrac{1}{3}$ 로 정의한다. 
 
@@ -2005,7 +2005,7 @@
 
 ## $\pi$ 의 정의
 
-!!! tldr "$\pi$ 의 정의"
+!!! tldr "$\pi$ "
 
     $\pi$ 보다 작은 모든 dyadic 의 집합 $L$ 과 $\pi$ 보다 큰 모든 dyadic 의 집합 $R$ 에 대하여
 
@@ -2019,7 +2019,7 @@
 
 ## 나눗셈의 정의
 
-!!! tldr "나눗셈의 정의"
+!!! tldr "나눗셈"
 
     초현실수 $x$ 와 조건
 
@@ -2053,9 +2053,9 @@
 
     이다. 즉, $0 \in L, \dfrac{1}{4} \in R, \dfrac{3}{16} \in L, \dfrac{13}{64} \in R, \dots$ 이다. 
 
-## $\exp (x)$ 의 정의
+## $\exp (x)$ 
 
-!!! tldr "$e^{x} 의 정의$"
+!!! tldr "$e^{x} $"
 
     함수 $f(y, n) = 1 + \dfrac{y}{1!} +\dfrac{y ^{2}}{2!} +\dfrac{y ^{3}}{3!} + \dots + \dfrac{y ^{n}}{n!}$ 에 대한
 

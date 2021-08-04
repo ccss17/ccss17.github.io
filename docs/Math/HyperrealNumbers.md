@@ -7,7 +7,7 @@
 
 # 초실수
 
-## 자유극대필터 $\mathcal{F}$ 의 정의
+## 자유극대필터 $\mathcal{F}$ 
 
 !!! tldr ""
 
@@ -31,7 +31,7 @@
 
 - 초실수를 구성하기 위하여 우리는 $\N$ 에 대한 자유 극대필터를 사용한다.
 
-!!! tldr "$\mathcal{F}$ 의 정의"
+!!! tldr "$\mathcal{F}$ "
 
     $\N$ 의 자유 극대 필터 $\mathcal{F}$ 가 존재한다. 
 
@@ -51,7 +51,7 @@
 
     그러나 이들을 명시적으로 구성하여 보일 수는 없다.
 
-!!! tldr "$\equiv$ 의 정의"
+!!! tldr "$\equiv$ "
 
     $\N$ 의 자유극대필터 $\mathcal{F}$ 에 대한 $\R ^{\N}$ 의 동치관계 $\equiv$ 를 다음과 같이 정의한다. 
 
@@ -91,9 +91,9 @@
 
 ## 초실수의 정의
 
-!!! tldr "초실수의 정의"
+!!! tldr "초실수 집합(Hyperreal Number Set)"
 
-    초실수(Hyperreal number) : $\R ^{\N}$ 의 동치관계 $\equiv$ 에 대한 동치류 $[r] = \{s \in \R ^{\N} : r \equiv s\}$ 에 대한 몫집합
+    초실수 집합은 $\R ^{\N}$ 의 동치관계 $\equiv$ 에 대한 동치류 $[r] = \{s \in \R ^{\N} : r \equiv s\}$ 에 대한 몫집합
 
     $$ ^{*}\R = \{[r] : r \in \R ^{\N}\} = \R ^{\N} / \equiv $$
 
@@ -159,7 +159,7 @@
 
 ## 초실수의 순서관계
 
-!!! tldr "$<$ 의 정의"
+!!! tldr "$<$ "
 
     $$ [r] < [s] \iff \{n \in \N : r_n < s_n\} \in \mathcal{F} $$
 
@@ -177,7 +177,7 @@
 
     $$ (a_0, a_1, a_2, \dots) + (b_0, b_1, b_2, \dots) = (a_0 + b_0, a_1 + b_1, a_2 + b_2, \dots) $$
 
-!!! tldr "$\llbracket \rrbracket$ 의 정의"
+!!! tldr "$\llbracket \rrbracket$ "
 
     두 수열 $\big <r_n\big >, \big <s_n\big >$ 에 대하여 다음과 같이 정의한다. 
 
@@ -613,7 +613,7 @@
 
 ## Halos
 
-!!! tldr "$\backsimeq$ 의 정의"
+!!! tldr "$\backsimeq$ "
 
     ${}^{*}\R$ 에서의 동치관계 $\backsimeq$ 를 다음과 같이 정의한다. 
 

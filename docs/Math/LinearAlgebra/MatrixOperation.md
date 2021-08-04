@@ -4,11 +4,11 @@
 
 > metadata pass
 
-# 기본행렬연산과 기본행렬
+# Elementary Operation, Elementary Matrix
 
-!!! tldr ""
+!!! tldr "기본행[열]연산(elementary row[column] operation)"
 
-    기본행[열]연산(elementary row[column] operation) : 체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 와 스칼라 $a \in \mathbf{F}$ 에 대하여 $A$ 의 행[열] 에 대한 다음 세 연산이다. 
+    체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 와 스칼라 $a \in \mathbf{F}$ 에 대하여 $A$ 의 행[열] 에 대한 다음 세 연산이다. 
 
     1. $A$ 의 두 행[열]을 교환하는 것
 
@@ -18,9 +18,9 @@
 
 - 행연산과 열연산을 기본연산(elementary operation)이라 한다. 또한 기본연산 1), 2), 3) 을 1형(type), 2형, 3형이라 한다.
 
-!!! tldr ""
+!!! tldr "기본행렬(elementary matrix)"
 
-    기본행렬(elementary matrix) : 항등행렬에 기본연산을 적용하여 얻은 행렬이다.
+    항등행렬에 기본연산을 적용하여 얻은 행렬이다.
 
 - $I_n$ 에 1형, 2형, 3형 연산을 하여 얻은 행렬을 각각 1형, 2형, 3형이라 한다.
 
@@ -30,9 +30,9 @@
 
     $$ E = \begin{pmatrix} 0&1&0\\ 1&0&0\\ 0&0&1\\ \end{pmatrix} $$
 
-!!! tldr ""
+!!! tldr "기본행[열]역연산(elementary row[column] inverse operation)"
 
-    기본행[열]역연산(elementary row[column] inverse operation) : 체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 와 스칼라 $a \in \mathbf{F}$ 에 대하여 $A$ 의 기본행[열]연산 에 대한 다음 세 연산이다. 
+    체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 와 스칼라 $a \in \mathbf{F}$ 에 대하여 $A$ 의 기본행[열]연산 에 대한 다음 세 연산이다. 
 
     1. $A$ 의 두 행[열]을 교환하는 것
 
@@ -44,7 +44,7 @@
 
 - $I_n$ 에 기본연산을 적용하여 기본행렬 $E$ 를 얻었다면, $E$ 에 기본역연산을 적용하여 다시 $I_n$ 을 얻을 수 있다.
 
-## 기본연산과 기본행렬의 성질
+## Properties of Elementary Operation, Elementary Matrix
 
 !!! tldr "정리 3.1"
 
@@ -76,9 +76,9 @@
 
     [행렬곱 결과가 항등행렬인 두 정사각행렬은 모두 가역](../LinearTransformation/#0d6999da9)이므로 $E$ 는 가역이고, $E ^{-1} = \bar{E}$ 이다. ■ 
 
-# 행렬의 랭크
+# Matrix Rank 
 
-!!! tldr "행렬의 랭크"
+!!! tldr "행렬의 랭크(matrix rank)"
 
     행렬 $A \in \mathbf{M}_{m \times n}(\mathbf{F} )$ 와 $\mathbf{L}_{A} : \mathbf{F} ^{n} \to \mathbf{F} ^{m}$ 에 대하여 다음과 같이 정의한다.
 
@@ -86,7 +86,7 @@
 
 - 선형변환의 랭크에 대한 성질을 기반으로 행렬의 랭크에 대한 많은 정보를 얻을 수 있다. 
 
-## 행렬의 랭크의 성질
+## Properties of Matrix Rank
 
 !!! tldr ""
 
@@ -212,7 +212,7 @@
 
     $A = O$ 을 가정하면 극대 일차독립 집합이 공집합이므로 $\text{rank} (A) = 0$ 이 바로 나온다. ■ 
     
-## 행렬의 랭크 구하기
+## Finding Matrix Rank
 
 !!! tldr ""
 
@@ -386,7 +386,7 @@
 
     [정리 3.2](#c576bf96c) 에 의하여 기본행렬의 역행렬도 기본행렬이다. 그러므로 $A$ 는 기본행렬의 곱이다. ■ 
 
-## 행렬곱의 랭크
+## Rank of Matrix Multiplication
 
 !!! tldr "정리 3.7"
 
@@ -456,9 +456,9 @@
 
     $$ \text{rank} (\mathbf{U} \mathbf{T} )  = \text{rank} (A'B')  \leq \text{rank} (B') = \text{rank} (\mathbf{T} ) \tag*{■} $$
 
-# 역행렬 구하기
+# Finding Inverse Matrix
 
-!!! tldr "첨가행렬(augmented matrix) 의 정의"
+!!! tldr "첨가행렬(augmented matrix)"
 
     $m \times n$ 행렬 $A$ 와 $m \times p$ 행렬 $B$ 에 대한 첨가행렬 $(A|B)$ 는 $m \times (n + p)$ 행렬 $(AB)$ 이다.
 
@@ -622,9 +622,9 @@
 
     [$A$ 를 항등행렬로 변환할 수 없으므로 $A$ 는 가역이 아니다](MatrixOperation/#01cc5fcfe). 
 
-# 연립일차방정식
+# System of Linear Equation
 
-!!! tldr "연립일차방정식(system of linear equation) 의 정의"
+!!! tldr "연립일차방정식(system of linear equation)"
 
     $1 \leq i \leq m, 1 \leq j \leq n$ 에 대하여 스칼라 $a _{ij}, b_i \in \mathbf{F}$ 와 변수 $x_j \in \mathbf{F}$ 에 대한 다음의 연립방정식을 체 $\mathbf{F}$ 위 $n$ 개의 미지수와 $m$ 개의 일차방정식으로 이루어진 연립일차방정식으로 정의한다. 
 
@@ -636,7 +636,7 @@
 
     $$ a _{m1}x_1 + a _{m2}x_2 + \dots + a _{mn}x_n = b_m $$
 
-!!! tldr "계수행렬(coefficient matrix) 의 정의"
+!!! tldr "계수행렬(coefficient matrix)"
 
     $n$ 개의 미지수와 $m$ 개의 일차방정식으로 이루어진 연립일차방정식의 계수로 구성된 다음의 $m \times n$ 행렬이다.
 
@@ -650,13 +650,13 @@
 
     $$ Ax = b $$
 
-!!! tldr "해(solution) 의 정의"
+!!! tldr "해(solution) "
 
     연립일차방정식의 해는 $Ax = b$ 에 대하여 $As = b$ 를 만족하는 $n$순서쌍 $s = \begin{pmatrix} s_{1}\\ s_{2}\\ \vdots\\ s_{n}\\ \end{pmatrix} \in \mathbf{F} ^{n}$ 이다.
 
 - 해는 존재할 수도 있고 존재하지 않을 수도 있다. 해가 존재한다면 유일할 수도 있고 유일하지 않을 수도 있다.
 
-!!! tldr "해집합(solution set) 의 정의"
+!!! tldr "해집합(solution set) "
 
     연립일차방정식의 모든 해들의 집합이다.
 
@@ -666,11 +666,11 @@
 
 - 그러므로 연립일차방정식을 풀기 위하여 해가 존재하는지 살펴보고, 존재하는 모든 해를 구할 수 있어야 한다.
 
-!!! tldr "동차(homogeneouse) 와 비동차(nonhomogeneouse) 의 정의"
+!!! tldr "동차(homogeneouse) 와 비동차(nonhomogeneouse) "
 
     $n$ 개의 미지수와 $m$ 개의 일차방정식으로 이루어진 연립일차방정식 $Ax = b$ 는 $b = 0$ 일 때 동차라고 하고, $b \neq 0$ 이면 비동차라고 한다.
 
-## 연립일차방정식의 성질
+## Properties of System of Linear Equation
 
 !!! tldr "정리 3.8"
 
@@ -770,7 +770,7 @@
 
     방정식의 유일한 해를 $s$ 로 두면 대응하는 동차 연립일차방정식 $Ax = 0$ 의 해집합 $\mathbf{K} _{\mathbf{H} }$ 에 대하여 [정리 3.9](#932b55b12) 에 의하여 $\mathbf{K} = \{s\} = \{s\} + \mathbf{K} _{\mathbf{H}} \iff \mathbf{K} _{\mathbf{H} } = \{0\}$ 이다. [정리 3.8](#b7b9c78d0) 에 의하여 $\mathbf{K} _{\mathbf{H} } = \{0\} = \mathbf{L}_{A}$ 이고, $\dim (\mathbf{K} _{\mathbf{H} }) = n - \text{rank} (\mathbf{L}_{A}) = 0 \iff \text{rank} (\mathbf{L}_{A}) = n$ 이므로 [$\text{rank} (A) = n$ 이다. 그러므로 $A$ 는 가역이다](#54a88bd9a).
 
-## 연립일차방정식의 해의 존재성
+## Existence of Solution of Linear Equation System
 
 !!! tldr "연립일차방정식의 첨가행렬"
 

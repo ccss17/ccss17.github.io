@@ -18,9 +18,9 @@
 
 - 아래의 선택공리에 의하여 공집합을 포함하지 않는 모든 집합족은 선택 함수를 갖는다.
 
-!!! tldr "선택공리의 정의"
+!!! tldr "선택공리(axiom of choice, AC)"
 
-    선택공리(axiom of choice, AC) : 공집합이 아닌 집합들의 집합이 주어지면, 각 원소로부터 한 원소를 택할 수 있고, 이를 무한히 반복할 수 있다는 공리
+    선택공리는 공집합이 아닌 집합들의 집합이 주어지면, 각 원소로부터 한 원소를 택할 수 있고, 이를 무한히 반복할 수 있다는 공리
 
     $$ \forall X \bigg [\varnothing \not \in X \implies \exists f: X \to \bigcup_{}^{}X \quad \forall A \in X(f(A) \in A) \bigg ] $$
 
@@ -1677,7 +1677,7 @@
 
 # 연속체 가설
 
-!!! tldr "$\aleph _1$ 의 정의"
+!!! tldr "$\aleph _1$ "
 
     $$ \aleph _1 := \min \{\xi : \aleph _0 < |\xi| \leq 2 ^{\aleph _0} \} $$
 
@@ -1709,7 +1709,7 @@
 
     연속체 가설이 기하학에서의 평행선 공리와 같은 위치에 있다.
 
-!!! tldr "$\aleph _n$ 의 정의"
+!!! tldr "$\aleph _n$ "
 
     $$ \aleph _n := \min \{\xi : \aleph _{n-1} < |\xi| \leq 2 ^{\aleph _{n-1}} \} $$
 

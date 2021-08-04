@@ -2,11 +2,11 @@
 
     Stephen H. Friedberg, Linear Algebra, 4th Edition
 
-# 선형변환
+# Linear Transformation
 
-!!! tldr ""
+!!! tldr "선형변환(linear transformation, linear map, vector space homomorphism)"
 
-    선형변환(linear transformation) : $\mathbf{V} , \mathbf{W}$ 이 $\mathbf{F}$-벡터공간이라고 하자. $\forall x, y \in \mathbf{V} , \forall c \in \mathbf{F}$ 에 대하여 다음을 만족하는 함수 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 를 $\mathbf{V}$ 에서 $\mathbf{W}$ 로 가는 선형변환이라 한다. 
+    $\mathbf{V} , \mathbf{W}$ 이 $\mathbf{F}$-벡터공간이라고 하자. $\forall x, y \in \mathbf{V} , \forall c \in \mathbf{F}$ 에 대하여 다음을 만족하는 함수 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 를 $\mathbf{V}$ 에서 $\mathbf{W}$ 로 가는 선형변환이라 한다. 
 
     1. $\mathbf{T}(x + y) = \mathbf{T}(x) + \mathbf{T}(y)$
 
@@ -21,6 +21,8 @@
 - $\mathbf{F} = \mathbb{Q}$ 이면 2) 는 1) 에서 도출된다. 그러나 일반적으로 1) 과 2) 는 독립된 명제이다.
 
 - $\mathbf{T}$ 가 선형변환이라는 것을 편의상 "$\mathbf{T}$ 는 선형(linear) 이다" 라고 한다.
+
+- 벡터공간의 준동형사상(vector space homomorphism) 이라는 정의는 준동형사상의 정의에 의하여 직관적을 알 수 있다.
 
 !!! tldr "선형변환의 성질"
 
@@ -122,15 +124,13 @@
 
     영변환(zero transformation) : $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{T} _{ 0}: \mathbf{V} \to \mathbf{W}, x \mapsto 0$ 로 정의된 선형변환이다.
 
-# 영공간, 상공간
+# Null Space, Range
 
-!!! tldr ""
+!!! tldr "영공간(null space, kernel)"
 
-    영공간(null space, kernel) : 벡터공간 $\mathbf{V}, \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 영공간은 집합 
+    벡터공간 $\mathbf{V}, \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 영공간은 다음과 같은 집합이다.
     
     $$ \mathbf{N}(\mathbf{T}) = \{x \in \mathbf{V} : \mathbf{T}(x) = 0\}$$
-    
-    이다.
 
 - 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 의 영공간을 $\mathbf{N}(\mathbf{T})$ 또는 $\text{Null}(\mathbf{T})$ 또는 $\text{ker}(\mathbf{T})$ 로 표기한다.
 
@@ -140,13 +140,11 @@
 
     영변환 $\mathbf{T}_0 : \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{N}(\mathbf{T}_0) = \mathbf{V}$ 이다.
 
-!!! tldr ""
+!!! tldr "상공간(range, image)"
 
-    상공간(range, image) : 벡터공간 $\mathbf{V}, \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 상공간은 집합 
+    벡터공간 $\mathbf{V}, \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 상공간은 다음과 같은 집합이다.
     
     $$ \mathbf{R}(\mathbf{T}) = \{\mathbf{T}(x) \in \mathbf{W} : x \in \mathbf{V} \}$$
-    
-    이다.
 
 - 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 의 상공간을 $\mathbf{R}(\mathbf{T})$ 또는 $\text{ran}(\mathbf{T})$ 으로 표기한다.
 
@@ -242,11 +240,11 @@
 
 - 위 예시에서 $\dim(\mathbf{N}(\mathbf{T})) + \dim(\mathbf{R}(\mathbf{T})) = 1 + 2 = 3 = \dim(\mathbf{P} _2(\R))$ 이 성립하였는데 이는 [정리 2.3](#cc24674bf) 에서와 같이 일반적으로 성립한다.
 
-## nullity, rank
+## Nullity, Rank
 
-!!! tldr ""
+!!! tldr "영공간의 차원(Nullity)"
 
-    nullity(영공간의 차원) : 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{N}(\mathbf{T})$ 가 유한차원 일 때 $\mathbf{N}(\mathbf{T})$ 의 차원을 
+    벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{N}(\mathbf{T})$ 가 유한차원 일 때 $\mathbf{N}(\mathbf{T})$ 의 차원을 
 
     $$  \text{nullity}(\mathbf{T}) = \dim(\mathbf{N}(\mathbf{T})) $$
 
@@ -254,9 +252,9 @@
 
 - 지금까지 우리는 부분공간의 크기를 가늠할 때 차원을 사용했다. 영공간의 차원은 특히 중요하므로 새로운 이름 $\text{nullity}$ 을 붙혀서 다룬다.
 
-!!! tldr ""
+!!! tldr "랭크(rank), 계수"
 
-    랭크(rank), 계수 : 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{R}(\mathbf{T})$ 가 유한차원 일 때 $\mathbf{R}(\mathbf{T})$ 의 차원을 
+    벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{R}(\mathbf{T})$ 가 유한차원 일 때 $\mathbf{R}(\mathbf{T})$ 의 차원을 
 
     $$ \text{rank}(\mathbf{T}) = \dim(\mathbf{R}(\mathbf{T})) $$
 
@@ -264,7 +262,7 @@
 
 - 지금까지 우리는 부분공간의 크기를 가늠할 때 차원을 사용했다. 상공간의 차원은 특히 중요하므로 새로운 이름 $\text{rank}$ 을 붙혀서 다룬다.
 
-## 차원정리
+## Dimension Theorem
 
 !!! tldr "정리 2.3 차원정리(dimension theorem)"
 
@@ -308,7 +306,7 @@
 
     이다. ■ 
 
-## 선형변환, 상공간, 영공간의 성질
+## Properties of Linear Map, Range, Null Space
 
 !!! tldr "정리 2.4"
 
@@ -436,11 +434,11 @@
 
     와 같이 정의되었다고 하자. 그러면 $\{(1,2), (1,1)\}$ 이 $\R ^{2}$ 의 기저이므로 선형변환 $\mathbf{U} : \R ^{2} \to \R ^{2}$ 이 $\mathbf{U} (1,2)=(3,3), \mathbf{U} (1,1)=(1,3)$ 이면 $\mathbf{U} =\mathbf{T}$ 이다.
     
-# 좌표벡터
+# Coordinate Vector
 
-!!! tldr ""
+!!! tldr "순서기저(ordered basis)"
 
-    순서기저(ordered basis) : 유한차원 벡터공간의 순서가 주어진 기저이다.
+    유한차원 벡터공간의 순서가 주어진 기저이다.
 
 - 즉, 순서기저란 일차독립이고 벡터공간을 생성하는 수열이다.
 
@@ -456,9 +454,11 @@
 
         벡터공간 $\mathbf{P}_n(\mathbf{F} )$ 에서 $\{1, x, \dots, x ^{n}\}$ 이 표준순서기자이다.
 
-!!! tldr ""
+809718f71 replace
 
-    좌표벡터(coordinate vector) : 유한차원 벡터공간 $\mathbf{V}$ 의 순서기저 $\beta = \{u_1, u_2, \dots, u_n\}$ 와 벡터 $x \in \mathbf{V}$ 에 대하여 $x = \displaystyle  \sum_{i=1}^{n}a_iu_i$ 을 만족하는 유일한 스칼라 $a_1, a_2, \dots, a_n$ 가 존재한다. 이때 $\beta$ 에 대한 $x$ 의 좌표벡터 $[x] _{\beta }$ 를 
+!!! tldr "좌표벡터(coordinate vector)"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 순서기저 $\beta = \{u_1, u_2, \dots, u_n\}$ 와 벡터 $x \in \mathbf{V}$ 에 대하여 $x = \displaystyle  \sum_{i=1}^{n}a_iu_i$ 을 만족하는 유일한 스칼라 $a_1, a_2, \dots, a_n$ 가 존재한다. 이때 $\beta$ 에 대한 $x$ 의 좌표벡터 $[x] _{\beta }$ 를 
 
     $$ [x] _{\beta } = \begin{pmatrix} a_1\\ a_2\\ \vdots\\ a_n \end{pmatrix} $$
 
@@ -504,11 +504,13 @@
 
     $$ x = \begin{pmatrix} x_1\\ x_2\\ \vdots \\ x_n\\ \end{pmatrix} = x_1 e_1 + x_2 e_2 + \dots + x_n e_n = \sum_{i=1}^{n}x_ie_i \implies [x] _{\beta } = \begin{pmatrix} x_1\\ x_2\\ \vdots \\ x_n\\ \end{pmatrix} \tag*{■} $$
 
-# 선형변환의 행렬표현
+# Matrix Representation of Linear Map
 
-!!! tldr ""
+9a08985c1 replace
 
-    선형변환의 행렬표현(matrix representation) : 유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 의 각각의 순서기저 $\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}$ 에 대하여 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 을 정의하면 
+!!! tldr "선형변환의 행렬표현(matrix representation)"
+
+    유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 의 각각의 순서기저 $\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}$ 에 대하여 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 을 정의하면 
 
     $$ \mathbf{T} (v_j) = \sum_{i=1}^{m}a _{ij}w_i \qquad j \in \{1,\dots,n\}, i \in \{1, \dots, m\} $$
 
@@ -598,9 +600,7 @@
 
     $n \times n$ 항등행렬 $I_n$ 의 성분은 $(I_n) _{ij} = \delta _{ij}$ 이다.
 
-# 선형변환의 연산
-
-## 선형변환의 덧셈과 곱셈
+# Addition, Multiples of Linear Maps
 
 !!! tldr ""
 
@@ -636,7 +636,7 @@
 
     그러므로 $\mathcal{L}$ 는 $\mathbf{F}$-벡터공간이다. ■ 
 
-!!! tldr "벡터공간 $\mathcal{L}(\mathbf{V} , \mathbf{W} )$ 의 정의"
+!!! tldr "벡터공간 $\mathcal{L}(\mathbf{V} , \mathbf{W} )$ "
 
     벡터공간 $\mathcal{L}(\mathbf{V} , \mathbf{W} )$ 은 $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{V} \to \mathbf{W}$ 에서 정의된 모든 선형변환의 집합이다.
 
@@ -704,7 +704,7 @@
 
     이다. 그러므로 $[\mathbf{T} + \mathbf{U} ] ^{\gamma}_{\beta} = [\mathbf{T} ] ^{\gamma}_{\beta}+[\mathbf{U} ]^{\gamma}_{\beta}$ 임을 알 수 있다. ■ 
 
-## 선형변환의 합성
+# Composition of Linear Map
 
 !!! tldr "정리 2.9"
 
@@ -810,11 +810,11 @@
 
     와 같이 표현한다.
 
-## 행렬곱
+## Matrix Multiplication
 
-!!! tldr ""
+!!! tldr "행렬곱(matrix multiplication, matrix product)"
 
-    행렬곱(matrix multiplication, matrix product) : $m \times n$ 행렬 $A$ 와 $n \times p$ 행렬 $B$ 에 대하여 두 행렬 $A, B$ 의 곱 $AB$ 는 $1 \leq i \leq m, 1 \leq j \leq p$ 에 대하여
+    $m \times n$ 행렬 $A$ 와 $n \times p$ 행렬 $B$ 에 대하여 두 행렬 $A, B$ 의 곱 $AB$ 는 $1 \leq i \leq m, 1 \leq j \leq p$ 에 대하여
 
     $$ (AB) _{ij} = \sum_{k=1}^{n}A _{ik}B _{kj} $$
 
@@ -1024,11 +1024,13 @@
 
     $$ [\mathbf{T} (u)] _{\gamma } = [g(1)] _{\gamma } = [g] ^{\gamma}_{\alpha }  = [\mathbf{T} f] ^{\gamma}_{\alpha }  = [\mathbf{T} ] ^{\gamma}_{\beta} [f] ^{\beta }_{\alpha } = [\mathbf{T} ] ^{\gamma}_{\beta} [f(1)] _{\beta } = [\mathbf{T} ]^{\gamma}_{\beta} [u] _{\beta } \tag*{■} $$
 
-## 좌측 곱 변환
+## Left Multiplication Transformation
 
-!!! tldr ""
+dd406d3f6 replace
 
-    좌측 곱 변환(left multiplication transformation) : 체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 에 대하여 선형변환 
+!!! tldr "좌측 곱 변환(left multiplication transformation)"
+
+    체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 에 대하여 선형변환 
 
     $$ \mathbf{L} _{A} : \mathbf{F} ^{n} \to \mathbf{F} ^{m}, x \mapsto Ax $$
 
@@ -1156,11 +1158,11 @@
 
 > p118 결합행렬을 현실세상에 응용하기
 
-# 가역성
+# Invertibility
 
-!!! tldr ""
+!!! tldr "역함수(inverse)"
 
-    역함수(inverse) : 벡터공간 $\mathbf{V} ,\mathbf{W}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 
+    벡터공간 $\mathbf{V} ,\mathbf{W}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 
     
     $$\mathbf{T} \mathbf{T^{-1}} = \mathbf{I} _{\mathbf{W} }, \mathbf{T^{-1}} \mathbf{T} = \mathbf{I} _{\mathbf{V} }$$
     
@@ -1262,11 +1264,11 @@
 
     [정리 2.5](#dfd4ff297) 에 의하면 같은 차원을 갖는 두 유한차원 벡터공간 사이에 정의된 선형변환에 대하여 단사, 전사가 동치이다. 이로써 전단사도 동치이며 가역도 동치이다.
 
-## 가역행렬
+## Invertible matrix
 
-!!! tldr ""
+!!! tldr "가역행렬(invertible matrix)"
 
-    가역행렬(invertible matrix) : $n \times n$ 행렬 $A$ 에 대하여 $AB=BA=I$ 인 $n \times n$ 행렬 $B$ 가 존재할 때 $A$ 를 가역이라고 한다.
+    $n \times n$ 행렬 $A$ 에 대하여 $AB=BA=I$ 인 $n \times n$ 행렬 $B$ 가 존재할 때 $A$ 를 가역이라고 한다.
 
 - 이는 역함수의 정의와 비슷하다. 선형변환을 행렬과 대응시키고 그 연산도 보존해보았듯이 선형변환과 행렬의 역연산도 연결시켜볼 것이다.
 
@@ -1290,7 +1292,7 @@
 
     로써 증명을 마친다. ■ 
 
-## 가역의 성질
+## Properties of Invertibility
 
 !!! tldr "정리 2.18"
 
@@ -1408,19 +1410,19 @@
 
     따라서 $(A ^{t}) ^{-1} = (A ^{-1}) ^{t}$ 이다.
 
-# 동형사상
+# Isomorphism
 
-!!! tldr ""
+!!! tldr "동형(isomorphic)"
 
-    동형(isomorphic) : 벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 가역인 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 가 존재하면 $\mathbf{V}$ 와 $\mathbf{W}$ 는 동형이다.
+    벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 가역인 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 가 존재하면 $\mathbf{V}$ 와 $\mathbf{W}$ 는 동형이다.
 
 - 예시 
 
     $\mathbf{M}_{2 \times 2}(\mathbf{F} )$ 의 원소 $\begin{pmatrix} a&b\\ c&d\\ \end{pmatrix}$ 를 $\mathbf{F} ^{4}$ 의 원소 $(a,b,c,d)$ 에 대응시키면 벡터 합과 스칼라 곱이 비슷하게 작동한다. 이는 두 벡터공간이 구조적으로 동형임을 뜻한다.
 
-!!! tldr ""
+!!! tldr "동형사상(isomorphism)"
 
-    동형사상(isomorphism) : 벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 가역인 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 이다.
+    벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 가역인 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 이다.
 
 - 일반적으로 동형사상은 전단사인 준동형사상으로 설명된다. 본 정의에서는 전단사라는 조건이 가역으로, 준동형사상이라는 조건이 선형변환으로 설명된 것뿐이다.
 
@@ -1518,9 +1520,9 @@
 
     $\mathcal{L}(\mathbf{V} , \mathbf{W} ) \cong \mathbf{M}_{m \times n}(\mathbf{F} )$ 이고 $\dim (\mathbf{M}_{m \times n}(\mathbf{F} )) = mn$ 이다. 그러면 정리 2.19 에 의하여 증명이 끝난다. ■ 
 
-## 표준표현
+## Standard Representation
 
-!!! tldr "표준표현(standard representation)의 정의"
+!!! tldr "표준표현(standard representation)"
 
     체 $\mathbf{F}$ 위의 $n$차원 벡터공간 $\mathbf{V}$ 의 순서기저를 $\beta$ 라고 하자. $\beta$ 에 대한 $\mathbf{V}$ 의 표준표현은 다음과 같은 함수이다.
 
@@ -1770,11 +1772,11 @@
 
     $$ [v] _{\beta } = Q[v]_{\beta '} \iff Q ^{-1} [v] _{\beta } = [v]_{\beta '} \tag*{■} $$
 
-## 선형연산자
+## Linear Operator
 
-!!! tldr ""
+!!! tldr "선형연산자(linear operator)"
 
-    선형연산자(linear operator) : 벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{V} \to \mathbf{V}$ 에서 정의된 선형변환이다.
+    벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{V}$ 의 선형연산자는 $\mathbf{V} \to \mathbf{V}$ 에서 정의된 선형변환이다.
 
 !!! tldr "정리 2.23"
 
@@ -1820,9 +1822,9 @@
 
     $$ [\mathbf{L}_{A}]_{\gamma } = Q ^{-1}AQ = \begin{pmatrix} 0&2&8\\ -1&4&6\\ 0&-1&-1\\ \end{pmatrix} $$
 
-## 행렬의 닮음
+## Matrix Similarity
 
-!!! tldr "행렬의 닮음(matrix similarity)의 정의"
+!!! tldr "행렬의 닮음(matrix similarity)"
 
     $A, B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $B = Q ^{-1}AQ$ 인 가역행렬 $Q$ 가 존재하면 $A$ 와 $B$ 는 서로 닮음이다.
 
