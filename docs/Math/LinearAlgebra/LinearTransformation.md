@@ -1,6 +1,6 @@
 !!! info "ref"
 
-    [프리드버그 선형대수학](https://book.naver.com/bookdb/book_detail.nhn?bid=16374070) 
+    Stephen H. Friedberg, Linear Algebra, 4th Edition
 
 # 선형변환
 
@@ -266,13 +266,11 @@
 
 ## 차원정리
 
-!!! tldr "정리 2.3"
+!!! tldr "정리 2.3 차원정리(dimension theorem)"
 
-    차원정리(dimension theorem) : 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한차원이면 
+    벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한차원이면 다음이 성립한다.
 
     $$ \text{nullity}(\mathbf{T})+\text{rank}(\mathbf{T})= \dim(\mathbf{V} ) $$
-
-    이다.
 
 - 직관적으로 선형변환에서 nullity 가 커질수록 랭크는 작아진다. 즉, 더 많은 벡터가 영벡터 $0$ 로 갈수록 상공간은 작아진다. 역으로 랭크가 커질수록 nullity 는 작아진다. 이 정리가 랭크과 nullity 의 관계를 말해준다. 
 
@@ -344,7 +342,7 @@
 
 - 증명 
 
-    [차원정리](#b9412bb64) 에 의하여 $\text{rank}(\mathbf{T} )+\text{nullity}(\mathbf{T} ) = \dim(\mathbf{V} )$ 인데, [정리 2.4](#7d40e8276) 에 의하여 
+    [차원정리](#6187a9f9c) 에 의하여 $\text{rank}(\mathbf{T} )+\text{nullity}(\mathbf{T} ) = \dim(\mathbf{V} )$ 인데, [정리 2.4](#7d40e8276) 에 의하여 
 
     $$ \mathbf{T} \text{ is injection } \iff \mathbf{N}(\mathbf{T} ) = \{0\} $$
 
@@ -906,7 +904,7 @@
 
     $$(AB) ^{t} _{ij} = (AB) _{ji} = \sum_{k=1}^{n}A _{jk}B _{ki}$$
 
-    $$(B ^{t} A ^{t}) _{ij} =  \sum_{k=1}^{n}(B ^{t})_{ik}(A ^{t}) _{kj} = \sum_{k=1}^{n}B _{ki}A ss    jkA $$
+    $$(B ^{t} A ^{t}) _{ij} =  \sum_{k=1}^{n}(B ^{t})_{ik}(A ^{t}) _{kj} = \sum_{k=1}^{n}B _{ki}A _{jk} $$
 
 !!! tldr "정리 2.11"
 
@@ -1234,7 +1232,7 @@
 
 - 증명 
 
-    $\mathbf{V}$ 가 유한차원이라고 하고 기저를 $\beta = \{x_1, x_2, \dots, x_n\}$ 이라고 하자. $\mathbf{T}$ 가 전단사이므로 공역과 치역이 같다. 그러면 [정리 2.2](#f380ab529) 에 의하여 $\text{span } (\mathbf{T} (\beta )) = \mathbf{R} (\mathbf{T}) = \mathbf{W}$ 이다. 유한집합이 $\mathbf{W}$ 를 생성하므로 [정리 1.9](../VectorSpace/#2d3716e93) 에 의하여 $\mathbf{W}$ 는 유한차원이다. ▲ 
+    $\mathbf{V}$ 가 유한차원이라고 하고 기저를 $\beta = \{x_1, x_2, \dots, x_n\}$ 이라고 하자. $\mathbf{T}$ 가 전단사이므로 공역과 치역이 같다. 그러면 [정리 2.2](#f380ab529) 에 의하여 $\text{span} (\mathbf{T} (\beta )) = \mathbf{R} (\mathbf{T}) = \mathbf{W}$ 이다. 유한집합이 $\mathbf{W}$ 를 생성하므로 [정리 1.9](../VectorSpace/#2d3716e93) 에 의하여 $\mathbf{W}$ 는 유한차원이다. ▲ 
 
     역으로 $\mathbf{W}$ 가 유한차원임을 가정하면 $\mathbf{T} ^{-1}$ 를 사용하여 비슷한 논법으로 $\mathbf{V}$ 가 유한차원임을 증명할 수 있다. ▲ 
 
@@ -1246,7 +1244,7 @@
 
     $$ \text{rank} (\mathbf{T} ) = \dim (\mathbf{W} ) $$
 
-    이다. 그러면 [차원정리](#b9412bb64) 에 의하여 $\dim (\mathbf{W}) = \dim (\mathbf{V} )$ 임을 알 수 있다. ■ 
+    이다. 그러면 [차원정리](#6187a9f9c) 에 의하여 $\dim (\mathbf{W}) = \dim (\mathbf{V} )$ 임을 알 수 있다. ■ 
 
 !!! tldr ""
 
@@ -1378,6 +1376,38 @@
 
     이다.
 
+!!! tldr "문제 2.4-4"
+
+    $A, B$ 가 $n \times n$ 가역행렬이면 다음이 성립한다.
+    
+    1. $AB$ 가 가역이다.
+
+    2. $(AB) ^{-1} = B ^{-1}A ^{-1}$
+
+- 증명
+
+    $A, B$ 가 가역이므로 $A A ^{-1} = A ^{-1} A = I_n$, $B B ^{-1} = B ^{-1} B = I_n$ 인 $A ^{-1}, B ^{-1}$ 가 존재한다. [정리 2.16 따름정리](#7cbb5cb1a) 에 의하여 행렬의 결합법칙이 성립하므로 다음이 성립한다.
+
+    $$ (AB) B ^{-1}A ^{-1} = AI_nA ^{-1} = I_n $$
+
+    $$  B ^{-1}A ^{-1} (AB) = BI_nB ^{-1} = I_n $$
+
+    그러므로 $AB$ 는 가역이고, $(AB) ^{-1} = B ^{-1} A ^{-1}$ 이다. ■ 
+
+!!! tldr "문제 2.4-5"
+
+    가역행렬 $A$ 에 대하여 $A ^{t}$ 가 가역이고 $(A ^{t}) ^{-1} = (A ^{-1}) ^{t}$ 이다.
+
+- 증명
+
+    $A A ^{-1} = A ^{-1}A = I$ 인 $A ^{-1}$ 가 존재한다. [$(AB) ^{t} = B ^{t} A ^{t}$](#3fe7e9e98) 이므로 다음이 성립한다.
+
+    $$(AA ^{-1}) ^{t} = (A ^{-1}) ^{t} A ^{t} = I$$
+
+    $$(A ^{-1} A ) ^{t} = A ^{t} (A ^{-1}) ^{t} = I$$
+
+    따라서 $(A ^{t}) ^{-1} = (A ^{-1}) ^{t}$ 이다.
+
 # 동형사상
 
 !!! tldr ""
@@ -1426,7 +1456,7 @@
 
     $\dim (\mathbf{V} ) = \dim (\mathbf{W} )$ 를 가정하자. 그리고 $\mathbf{V}, \mathbf{W}$ 의 각각의 기저를 $\beta = \{v_1, v_2, \dots, v_n \}, \gamma = \{w_1, w_2, \dots, w_n \}$ 라고 하자. [정리 2.6](#f2d6e699f) 에 의하여 $\mathbf{T} (v_i) = w_i$ 인 선형변환이 유일하게 존재한다. [정리 2.2](#f380ab529) 에 의하면 
 
-    $$ \mathbf{R} (\mathbf{T}) = \text{span } (\mathbf{T} (\beta ))  = \text{span } (\gamma ) = \mathbf{W} $$
+    $$ \mathbf{R} (\mathbf{T}) = \text{span} (\mathbf{T} (\beta ))  = \text{span} (\gamma ) = \mathbf{W} $$
 
     이므로 $\mathbf{T}$ 는 전사이다. 그러면 [정리 2.5](#dfd4ff297) 에 의하여 $\mathbf{T}$ 는 단사이다. 그러므로 $\mathbf{T}$ 는 동형사상이고 결국 $\mathbf{V} \cong \mathbf{W}$ 이다. ■ 
 
@@ -1542,7 +1572,7 @@
 
     정리 2.19 따름정리와 정리 2.21 에 의하여 증명이 끝난다. ■ 
 
-!!! tldr ""
+!!! tldr "그림 2.2"
 
     차원이 각각 $n, m$ 이고 순서기저가 각각 $\beta, \gamma$ 인 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 와 행렬 $A = [\mathbf{T} ] ^{\gamma}_{\beta}$ 에 대하여 다음이 성립한다. 즉, $\mathbf{L}_{A} \circ \phi _{\beta } = \phi _{\gamma } \circ \mathbf{T}$ 이다.
 
@@ -1610,7 +1640,7 @@
 
     1:
 
-    $\phi _{\beta }$ 가 전사이고 [$\mathbf{L}_{A} \circ \phi _{\beta } = \phi _{\gamma } \circ \mathbf{T}$](#8d38120bb) 이므로 다음을 얻는다.
+    $\phi _{\beta }$ 가 전사이고 [$\mathbf{L}_{A} \circ \phi _{\beta } = \phi _{\gamma } \circ \mathbf{T}$](#ea96f31c4) 이므로 다음을 얻는다.
 
     $$ \mathbf{R} (\mathbf{L}_A) = \mathbf{L}_{A}(\mathbf{F} ^{n}) = \mathbf{L}_{A}\phi _{\beta }(\mathbf{V} ) = \phi _{\gamma }\mathbf{T} (\mathbf{V} ) = \phi _{\gamma }(\mathbf{R} (\mathbf{T}) ) $$
 
@@ -1622,7 +1652,7 @@
 
     2:
 
-    $y \in \phi _{\beta }(\mathbf{N} (\mathbf{T}) )$ 이면 $x \in \mathbf{N} (\mathbf{T})$ 에 대하여 $y = \phi _{\beta }(x)$ 이다. 그러므로 [$\mathbf{L}_{A} \circ \phi _{\beta } = \phi _{\gamma } \circ \mathbf{T}$](#8d38120bb) 와 [$\phi _{\gamma }$ 가 선형](#51765b179) 인 것에 의하여 다음을 얻는다.
+    $y \in \phi _{\beta }(\mathbf{N} (\mathbf{T}) )$ 이면 $x \in \mathbf{N} (\mathbf{T})$ 에 대하여 $y = \phi _{\beta }(x)$ 이다. 그러므로 [$\mathbf{L}_{A} \circ \phi _{\beta } = \phi _{\gamma } \circ \mathbf{T}$](#ea96f31c4) 와 [$\phi _{\gamma }$ 가 선형](#51765b179) 인 것에 의하여 다음을 얻는다.
 
     $$ \mathbf{L}_{A}(y) = \mathbf{L}_{A}(\phi _{\beta }(x)) = \phi _{\gamma }\mathbf{T} (x) = \phi _{\gamma }(0) = 0 $$
 
@@ -1740,6 +1770,8 @@
 
     $$ [v] _{\beta } = Q[v]_{\beta '} \iff Q ^{-1} [v] _{\beta } = [v]_{\beta '} \tag*{■} $$
 
+## 선형연산자
+
 !!! tldr ""
 
     선형연산자(linear operator) : 벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{V} \to \mathbf{V}$ 에서 정의된 선형변환이다.
@@ -1790,9 +1822,9 @@
 
 ## 행렬의 닮음
 
-!!! tldr "닮음의 정의"
+!!! tldr "행렬의 닮음(matrix similarity)의 정의"
 
-    행렬의 닮음(matrix similarity) : $A, B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $B = Q ^{-1}AQ$ 인 가역행렬 $Q$ 가 존재하면 $A$ 와 $B$ 는 서로 닮음이다.
+    $A, B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $B = Q ^{-1}AQ$ 인 가역행렬 $Q$ 가 존재하면 $A$ 와 $B$ 는 서로 닮음이다.
 
 - 행렬의 닮음은 동치관계이다.
 

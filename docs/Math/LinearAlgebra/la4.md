@@ -460,7 +460,7 @@
 
 - 예시 
 
-    $H$ 를 $H = Span \{v_1, v_2\}$ 로 정의하고 
+    $H$ 를 $H = span\{v_1, v_2\}$ 로 정의하고 
 
     $$ v_1 = \begin{bmatrix} 3\\6\\2 \end{bmatrix}, v_2 = \begin{bmatrix} -1\\0\\1 \end{bmatrix} $$
 
@@ -538,7 +538,7 @@
 
     이때 $A$ 의 행공간은 $\{r_1, r_2, r_3\}$ 에 의하여 형성되는 $\mathbb{R} ^{3}$ 의 부분 공간
 
-    $$ Row A = Span \{r_1, r_2, r_3\} $$
+    $$ Row A = span\{r_1, r_2, r_3\} $$
 
     이다.
 
