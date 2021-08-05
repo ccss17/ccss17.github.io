@@ -12,7 +12,9 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material ghp-import bs4 lxml pyyaml
-      - run: easy_install -U treelib
+      - run: |
+          git clone https://github.com/caesar0301/treelib
+          python setup.py install
       - run: |
           mkdocs build
           python config.py
