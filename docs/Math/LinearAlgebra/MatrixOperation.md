@@ -558,7 +558,7 @@
 
         $$ \mathbf{T} (f(x)) = f(x) + f'(x) + f''(x) $$
 
-        $\mathbf{P}_{2}(\R)$ 의 표준 순서기저를 $\beta = \{1, x, x ^{2}\}$ 라고 하면 [선형변환의 행렬표현](../LinearTransformation/#9a08985c1) 에 의하여 다음이 성립한다.
+        $\mathbf{P}_{2}(\R)$ 의 표준 순서기저를 $\beta = \{1, x, x ^{2}\}$ 라고 하면 [선형변환의 행렬표현](../LinearTransformation/#62c3702a2) 에 의하여 다음이 성립한다.
 
         $$ f(1) = 1 = 1 \cdot 1 + 0 \cdot x + 0 \cdot x ^{2} $$
 
@@ -704,7 +704,7 @@
 
     $m < n$ 을 가정하고 $\mathbf{K} = \mathbf{N} (\mathbf{L}_A)$ 으로 두자.
 
-    연립일차방정식이 $n$ 개의 미지수와 $m$ 개의 일차방정식을 가지므로 $A$ 는 $m \times n$ 계수행렬이다. 그러므로 [$\mathbf{L}_{A}$ 는 $\mathbf{F} ^{n} \to \mathbf{F} ^{m}$ 위에서 정의된 좌측 곱 변환](../LinearTransformation/#dd406d3f6)이다. [$\mathbf{L}_{A}$ 의 상공간은 $\mathbf{F} ^{m}$ 의 부분공간](../LinearTransformation/#eb957cbf0)이다. [정리 1.11](../VectorSpace/#26f9238cb) 와 [행렬의 랭크의 정의](#50228784b) 에 의하여 다음이 성립한다.
+    연립일차방정식이 $n$ 개의 미지수와 $m$ 개의 일차방정식을 가지므로 $A$ 는 $m \times n$ 계수행렬이다. 그러므로 [$\mathbf{L}_{A}$ 는 $\mathbf{F} ^{n} \to \mathbf{F} ^{m}$ 위에서 정의된 좌측 곱 변환](../LinearTransformation/#78c54c688)이다. [$\mathbf{L}_{A}$ 의 상공간은 $\mathbf{F} ^{m}$ 의 부분공간](../LinearTransformation/#eb957cbf0)이다. [정리 1.11](../VectorSpace/#26f9238cb) 와 [행렬의 랭크의 정의](#50228784b) 에 의하여 다음이 성립한다.
     
     $$ \text{rank} (A) = \text{rank} (\mathbf{L}_{A}) \leq m $$
 

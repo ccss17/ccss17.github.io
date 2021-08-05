@@ -454,8 +454,6 @@
 
         벡터공간 $\mathbf{P}_n(\mathbf{F} )$ 에서 $\{1, x, \dots, x ^{n}\}$ 이 표준순서기자이다.
 
-809718f71 replace
-
 !!! tldr "좌표벡터(coordinate vector)"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 순서기저 $\beta = \{u_1, u_2, \dots, u_n\}$ 와 벡터 $x \in \mathbf{V}$ 에 대하여 $x = \displaystyle  \sum_{i=1}^{n}a_iu_i$ 을 만족하는 유일한 스칼라 $a_1, a_2, \dots, a_n$ 가 존재한다. 이때 $\beta$ 에 대한 $x$ 의 좌표벡터 $[x] _{\beta }$ 를 
@@ -505,8 +503,6 @@
     $$ x = \begin{pmatrix} x_1\\ x_2\\ \vdots \\ x_n\\ \end{pmatrix} = x_1 e_1 + x_2 e_2 + \dots + x_n e_n = \sum_{i=1}^{n}x_ie_i \implies [x] _{\beta } = \begin{pmatrix} x_1\\ x_2\\ \vdots \\ x_n\\ \end{pmatrix} \tag*{■} $$
 
 # Matrix Representation of Linear Map
-
-9a08985c1 replace
 
 !!! tldr "선형변환의 행렬표현(matrix representation)"
 
@@ -836,7 +832,7 @@
 
     이다. 
 
-- 지금까지 하고 있는 일은 선형변환과 행렬 간의 대응관계를 연구하는 것이다. 먼저 [선형변환과 행렬의 대응](#9a08985c1)을 살펴보았다. 그리고 [선형변환의 합과 스칼라곱을 정의](#63a07e35d)한 다음 [이 연산이 행렬에서의 합과 스칼라곱의 구조를 보존한다](#aa431d8ac)는 것을 증명했다. 이제 두 선형변환의 합성에 어떤 행렬의 연산이 대응되는지 연구해야 한다. 즉, 행렬곱에 대하여 정의할 차례인 것이다.
+- 지금까지 하고 있는 일은 선형변환과 행렬 간의 대응관계를 연구하는 것이다. 먼저 [선형변환과 행렬의 대응](#62c3702a2)을 살펴보았다. 그리고 [선형변환의 합과 스칼라곱을 정의](#63a07e35d)한 다음 [이 연산이 행렬에서의 합과 스칼라곱의 구조를 보존한다](#aa431d8ac)는 것을 증명했다. 이제 두 선형변환의 합성에 어떤 행렬의 연산이 대응되는지 연구해야 한다. 즉, 행렬곱에 대하여 정의할 차례인 것이다.
 
     그렇다면 행렬 곱은 어째서 이렇게 정의되었나? 행렬 곱 정의가 두 선형변환의 합성의 구조를 보존해야 하기 때문이다. 
 
@@ -1025,8 +1021,6 @@
     $$ [\mathbf{T} (u)] _{\gamma } = [g(1)] _{\gamma } = [g] ^{\gamma}_{\alpha }  = [\mathbf{T} f] ^{\gamma}_{\alpha }  = [\mathbf{T} ] ^{\gamma}_{\beta} [f] ^{\beta }_{\alpha } = [\mathbf{T} ] ^{\gamma}_{\beta} [f(1)] _{\beta } = [\mathbf{T} ]^{\gamma}_{\beta} [u] _{\beta } \tag*{■} $$
 
 ## Left Multiplication Transformation
-
-dd406d3f6 replace
 
 !!! tldr "좌측 곱 변환(left multiplication transformation)"
 
@@ -1500,7 +1494,7 @@ dd406d3f6 replace
 
     $$ j \in \{1,2,\dots,n\} : \mathbf{T} (v_j) = \sum_{i=1}^{m}A _{ij} w_j $$
 
-    그러면 [선형변환의 행렬표현](#9a08985c1) 에 의하여 $A = [\mathbf{T}] ^{\gamma}_{\beta} = \Phi ^{\gamma}_{\beta} (\mathbf{T} )$ 이다. 그러므로 $\Phi ^{\gamma}_{\beta}$ 은 전단사이고, 결국 동형사상이다. ■ 
+    그러면 [선형변환의 행렬표현](#62c3702a2) 에 의하여 $A = [\mathbf{T}] ^{\gamma}_{\beta} = \Phi ^{\gamma}_{\beta} (\mathbf{T} )$ 이다. 그러므로 $\Phi ^{\gamma}_{\beta}$ 은 전단사이고, 결국 동형사상이다. ■ 
 
 !!! tldr "정리 2.19 따름정리"
 
@@ -1562,7 +1556,7 @@ dd406d3f6 replace
 
     $\beta = \{v_1, v_2, \dots, v_n \}$ 라고 하자.
 
-    $[x] _{\beta } \in \mathbf{F} ^{n}$ 에 대하여 $x$ 가 유일하게 존재한다는 것을 보여야 한다. $[x] _{\beta } = \begin{pmatrix} a_{1}\\ a_{2}\\ \vdots\\ a_{n}\\ \end{pmatrix}$ 라고 하면 [좌표벡터의 정의](#809718f71) 에 의하여 $x = \sum_{i=1}^{n}a_iv_i$ 인 $x \in \mathbf{V}$ 가 존재한다.
+    $[x] _{\beta } \in \mathbf{F} ^{n}$ 에 대하여 $x$ 가 유일하게 존재한다는 것을 보여야 한다. $[x] _{\beta } = \begin{pmatrix} a_{1}\\ a_{2}\\ \vdots\\ a_{n}\\ \end{pmatrix}$ 라고 하면 [좌표벡터의 정의](#be888949c) 에 의하여 $x = \sum_{i=1}^{n}a_iv_i$ 인 $x \in \mathbf{V}$ 가 존재한다.
 
     벡터 $x$ 의 $\beta$ 일차결합 표현은 [정리 1.8](../VectorSpace/#8a514fc5c) 에 의하여 유일하다. ■ 
 
@@ -1708,7 +1702,7 @@ dd406d3f6 replace
 
 - 유한차원 벡터공간 $\mathbf{V}$ 가 차원이 $n$ 이고 서로 다른 기저 $\beta = (u_1, u_2, \dots, u_n), \beta ' = (w_1, w_2, \dots, w_n)$ 을 갖는다고 하자. 어떤 벡터 $v \in \mathbf{V}$ 가 $[v] _{\beta }$ 나 $[v] _{\beta '}$ 와 같은 좌표벡터로 표현되어 있을 때 이것으로부터 어떻게 다른 기저에 대한 좌표벡터를 구할 수 있을까? 이것을 [정리 2.14](#93b3bc7a2) 를 사용하지 말고 행렬 성분을 실제로 다뤄보면서 알아보자. 
 
-    먼저 [좌표벡터](#809718f71) 의 정의에 의하여 $[v] _{\beta }= \begin{pmatrix} c_1\\ c_2\\ \vdots \\ c_n\\ \end{pmatrix}$ 는 다음과 같은 기저 $\beta$ 의 일차결합이다. $c_1, c_2, \dots, c_n$ 은 스칼라이다.
+    먼저 [좌표벡터](#be888949c) 의 정의에 의하여 $[v] _{\beta }= \begin{pmatrix} c_1\\ c_2\\ \vdots \\ c_n\\ \end{pmatrix}$ 는 다음과 같은 기저 $\beta$ 의 일차결합이다. $c_1, c_2, \dots, c_n$ 은 스칼라이다.
 
     $$ v = c_1u_1 + c_2u_2 + \dots + c_nu_n $$
 
@@ -1732,7 +1726,7 @@ dd406d3f6 replace
 
     $$ \begin{equation}\begin{split} v = \enspace & (c_1a _{11}+ c_2a _{21}+ \dots+ c_na _{n1} )w_1 + \\ &(c_1a _{12}+ c_2a _{22}+ \dots+ c_na _{n2} )w_2 + \\ &\dots + \\ &(c_1a _{1n}+ c_2a _{2n}+ \dots+ c_na _{nn} )w_n \\ \end{split}\end{equation} \tag*{} $$
 
-    그렇다면 [좌표벡터](#809718f71) 의 정의에 의하여 
+    그렇다면 [좌표벡터](#be888949c) 의 정의에 의하여 
 
     $$ [v] _{\beta '} = \begin{pmatrix} c_1 a _{11} & c_2 a _{21} & \dots & c_n a _{n1} & \\ c_1 a _{12} & c_2 a _{22} & \dots & c_n a _{n2} & \\ \vdots \\ c_1 a _{1n} & c_2 a _{2n} & \dots & c_n a _{nn} & \\ \end{pmatrix} = \begin{pmatrix} a_{11}&a_{12}&\dots&a_{1n}\\ a_{21}&a_{22}&\dots&a_{2n}\\ \vdots& \vdots& \ddots& \vdots \\ a_{n1}&a_{n2}&\dots&a_{nn}\\ \end{pmatrix} \begin{pmatrix} c_{1}\\ c_{2}\\ \vdots\\ c_{n}\\ \end{pmatrix} = \begin{pmatrix} a_{11}&a_{12}&\dots&a_{1n}\\ a_{21}&a_{22}&\dots&a_{2n}\\ \vdots& \vdots& \ddots& \vdots \\ a_{n1}&a_{n2}&\dots&a_{nn}\\ \end{pmatrix} [v] _{\beta } $$
 
@@ -1746,7 +1740,7 @@ dd406d3f6 replace
 
     $$ \boxed{[\mathbf{I} _{\mathbf{V} }] ^{\beta'}_{\beta} = A _{\beta \to \beta '}} \tag{2}  $$ 
 
-    [선형변환의 행렬표현](#9a08985c1) 에 의하여 $[\mathbf{I} _{\mathbf{V} }] ^{\beta}_{\beta'}$ 의 $j$ 열은 $[\mathbf{I} _{\mathbf{V} }(u_j)] _{\beta '}$ 인데 [항등변환의 정의](#c604a0153)에 의하여 이는 곧 $[u_j] _{\beta '}$ 가 되고 [좌표벡터](#809718f71) 의 정의와 위에서 정의했었던 $(1)$ 의하여 결국
+    [선형변환의 행렬표현](#62c3702a2) 에 의하여 $[\mathbf{I} _{\mathbf{V} }] ^{\beta}_{\beta'}$ 의 $j$ 열은 $[\mathbf{I} _{\mathbf{V} }(u_j)] _{\beta '}$ 인데 [항등변환의 정의](#c604a0153)에 의하여 이는 곧 $[u_j] _{\beta '}$ 가 되고 [좌표벡터](#be888949c) 의 정의와 위에서 정의했었던 $(1)$ 의하여 결국
 
     $$ [u_j] _{\beta '} = \begin{pmatrix} a _{1j}\\ a _{2j}\\ \vdots \\ a _{nj}\\ \end{pmatrix} $$
 

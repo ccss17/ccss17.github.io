@@ -10,7 +10,7 @@
 
 - 유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 를 대각화가능하게 만드는, 즉 $[\mathbf{T} ]_{\beta}$ 가 대각행렬이 되게 하는 순서기저 $\beta = \{v_1, v_2, \dots, v_n \}$ 를 어떻게 찾을 수 있을까.
 
-    $D = [\mathbf{T} ] _{\beta }$ 가 대각행렬이면 [선형변환의 행렬표현](../LinearTransformation/#9a08985c1) 에 의하여 $v_j \in \beta$ 와 $\lambda _j = D _{jj}$ 에 대하여 $\mathbf{T} (v_j) = \displaystyle \sum_{i=1}^{n}D _{ij}v_j = \lambda _jv_j$ 이다. 
+    $D = [\mathbf{T} ] _{\beta }$ 가 대각행렬이면 [선형변환의 행렬표현](../LinearTransformation/#62c3702a2) 에 의하여 $v_j \in \beta$ 와 $\lambda _j = D _{jj}$ 에 대하여 $\mathbf{T} (v_j) = \displaystyle \sum_{i=1}^{n}D _{ij}v_j = \lambda _jv_j$ 이다. 
 
     역으로 스칼라 $\lambda _1, \lambda _2, \dots, \lambda _n$ 에 대하여 $\beta$ 가 $\mathbf{T} (v_j) = \lambda _jv_j$ 를 만족하면 다음이 성립한다. 
 
@@ -419,7 +419,7 @@
 
 - 증명
 
-    [정리 1.11 따름정리](../VectorSpace/#dd66d2443) 에 의하여 $\mathbf{E}_{\lambda}$ 의 순서기저 $\{v_1, v_2, \dots, v_p\}$ 를 확장하여 $\mathbf{V}$ 의 순서기저 $\beta = \{v_1, v_2, \dots, v_p, v _{p+1}, \dots, v_n\}$ 를 만들 수 있다. [선형변환의 행렬표현](../LinearTransformation/#9a08985c1) 에 의하여 $[\mathbf{T} ]_{\beta }=A$ 을 $1$ 열부터 $n$ 열까지는 다음과 같다. 
+    [정리 1.11 따름정리](../VectorSpace/#dd66d2443) 에 의하여 $\mathbf{E}_{\lambda}$ 의 순서기저 $\{v_1, v_2, \dots, v_p\}$ 를 확장하여 $\mathbf{V}$ 의 순서기저 $\beta = \{v_1, v_2, \dots, v_p, v _{p+1}, \dots, v_n\}$ 를 만들 수 있다. [선형변환의 행렬표현](../LinearTransformation/#62c3702a2) 에 의하여 $[\mathbf{T} ]_{\beta }=A$ 을 $1$ 열부터 $n$ 열까지는 다음과 같다. 
 
     $$ \mathbf{T} (v_1) = a _{11}v_1 = \lambda _1v_1 $$
 
@@ -463,7 +463,7 @@
 
     중복도는 그 정의에 의하여 모든 중복도의 합이 곧 특성다항식의 차수가 된다. $[\mathbf{T}]_{\beta} \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 특성다항식의 차수 $n$ 이므로 $\sum_{i=1}^{k}m_i = n$ 이다. 정리 5.5 는 $\beta _i$ 가 일차독립 집합임을 말해준다. 
 
-    일차독립 집합은 [정리 1.10](../VectorSpace/#dfa035489) 에 의하여 반드시 $\mathbf{E}_{\lambda_i}$ 의 차원과 기수가 같거나 작다. 또한 정리 5.7 에 의하여 $\mathbf{E}_{\lambda_i}$ 의 차원은 $\lambda _i$ 의 중복도 $m_i$ 와 같거나 작다. 따라서 다음이 성립한다. 
+    일차독립 집합은 [정리 1.10](../VectorSpace/#6cf7acf90) 에 의하여 반드시 $\mathbf{E}_{\lambda_i}$ 의 차원과 기수가 같거나 작다. 또한 정리 5.7 에 의하여 $\mathbf{E}_{\lambda_i}$ 의 차원은 $\lambda _i$ 의 중복도 $m_i$ 와 같거나 작다. 따라서 다음이 성립한다. 
 
     $$ n = \sum_{i=1}^{k}n_i \leq \sum_{i=1}^{k}d_i \leq \sum_{i=1}^{k}m_i = n $$
 
