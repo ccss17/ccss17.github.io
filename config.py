@@ -1,7 +1,9 @@
-from bs4 import BeautifulSoup
 import glob
 import hashlib
+import os
+
 import yaml
+from bs4 import BeautifulSoup
 from treelib import Node, Tree
 
 
@@ -50,21 +52,23 @@ def create_category():
     root = next(iter(nav))
     tree.create_node(root, root)
     create_tree_from_dict(tree, nav, root)
-    import os
-    if os.path.isfile('docs/index.md'):
-        os.remove('docs/index.md')
-    tree.save2file('docs/index.md', key=lambda x: x.bpointer,
+
+    index_path = 'docs/index.md'
+    if os.path.isfile(index_path):
+        os.remove(index_path)
+    tree.save2file(index_path, key=lambda x: x.bpointer,
                    line_type='ascii-exr')
 
-    with open('docs/index.md', encoding='utf-8') as f:
+    with open(index_path, encoding='utf-8') as f:
         index = f.read()
-    index = index.replace(' ', '&nbsp;')
-    index = index.replace('<a&nbsp;', '<a ')
-    result = []
-    for line in index.split('\n'):
-        result.append(line+'</p><p>')
-    with open('docs/index.md', 'w', encoding='utf-8') as f:
-        f.write('<div class="index"><p>' + '\n'.join(result) + '</p></div>')
+
+    index = index.replace(' ', '&nbsp;') \
+                 .replace('<a&nbsp;', '<a ') \
+                 .replace('\n', '</p><p>\n')
+    index = '<div class="index"><p>' + index + '</p></div>'
+
+    with open(index_path, 'w', encoding='utf-8') as f:
+        f.write(index)
 
 
 if __name__ == '__main__':
