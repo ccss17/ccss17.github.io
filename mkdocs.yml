@@ -200,6 +200,7 @@ extra_javascript:
   - javascripts/config.js
   - https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
   - https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
+  - https://kit.fontawesome.com/b27b3e6448.js
 
 extra_css:
   - https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css

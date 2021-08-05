@@ -812,7 +812,19 @@
     영행렬 $O$ 에 대하여 다음이 성립한다.
 
     $$ A = \begin{pmatrix} B_1&B_2\\ O&B_3\\ \end{pmatrix} $$
-    
+
+- 증명
+
+    $i \in \{1, \dots, k\}$ 에 대하여 $A$ 의 $i$ 열은 다음과 같다. 
+
+    $$ \mathbf{T}(v_i) = \sum_{i=1}^{n}a _{ij}v_i \in \mathbf{W} $$
+
+    $v_i \in \mathbf{W}$ 이므로 $\mathbf{T}(v_i) \in \mathbf{W}$ 이다. 만약 $\sum_{i=k+1}^{n}a _{ij}v_i \neq 0$ 이면 $v_i$ 를 $\mathbf{W}$ 의 기저로 표현하는 것이 불가능하므로 $v_i \not\in \mathbf{W}$ 이다. 이는 모순이다. 따라서 $\sum_{i=k+1}^{n}v_i = 0$ 이다. 그러므로 $A$ 의 $i$ 열은 다음과 같다.
+
+    $$ \mathbf{T}(v_i) = \sum_{i=1}^{k}a _{ij}v_i $$
+
+    이로써 모든 증명이 끝났다. ■ 
+
 !!! tldr "정리 5.20"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 에 대한 $\mathbf{T}_{\mathbf{W}}$ 의 특성다항식은 $\mathbf{T}$ 의 특성다항식을 나눈다.
@@ -820,4 +832,14 @@
 - 이 정리는 선형연산자와 $\mathbf{T}$-불변 부분공간에 의한 제한과의 관계를 말해준다.
 
 - 증명
+
+    $\mathbf{W}$ 의 순서기저를 $\gamma = \{v_1, v_2, \dots, v_k\}$ 라 하면 $\gamma$ 를 확장하여 $\mathbf{V}$ 의 순서기저 $\beta = \{v_1, v_2, \dots, v_k, v _{k+1}, \dots, v_n\}$ 을 만들 수 있다. $A = [\mathbf{T}]_{\beta }, B_1 = \{\mathbf{T}_{\mathbf{W}}\}_{\gamma }$ 라 하면 문제 5.4-12 에 의하여 다음이 성립한다. 
+
+    $$ A = \begin{pmatrix} B_1&B_2\\ O&B_3\\ \end{pmatrix} $$
+
+    $\mathbf{T}$ 의 특성다항식 $f(t)$, $\mathbf{T}_{\mathbf{W}}$ 의 특성다항식 $g(t)$ 에 대하여 [문제 4.3-21](../Determinants/#48155e536) 에 의하여 다음이 성립한다. 
+
+    $$ f(t) = \det(A - tI_n) = \det \begin{pmatrix} B_1-tI_k&B_2\\ O&B_3-tI _{n-k}\\ \end{pmatrix} = g(t) \det(B_3-tI _{n-k}) $$
+
+    따라서 $g(t)$ 는 $f(t)$ 를 나눈다. ■ 
 

@@ -65,7 +65,8 @@ def create_category():
 
     index = index.replace(' ', '&nbsp;') \
                  .replace('<a&nbsp;', '<a ') \
-                 .replace('\n', '</p><p>\n')
+                 .replace('\n', '</p><p>\n') \
+                 .replace('ccss17', '<i class="fas fa-fire"></i>')
     index = '<div class="index"><p>' + index + '</p></div>'
 
     with open(index_path, 'w', encoding='utf-8') as f:
@@ -73,5 +74,5 @@ def create_category():
 
 
 if __name__ == '__main__':
-    create_def_link()
+    # create_def_link()
     create_category()
