@@ -33,7 +33,8 @@ def create_tree_from_dict(tree, data, parent=None):
         child = next(iter(child_data))
         if isinstance(child_data[child], str):
             node = '<a href=' + \
-                child_data[child].split('.')[0]+'>'+str(child)+'</a>'
+                   child_data[child].rsplit('.', maxsplit=1)[0]+\
+                   '>'+str(child)+'</a>'
             tree.create_node(node, node, parent=parent)
             continue
         tree.create_node(child, child, parent=parent)
