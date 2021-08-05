@@ -4,7 +4,7 @@
 
 > metadata pass
 
-# Elementary Operation, Elementary Matrix
+# Elementary Operation
 
 !!! tldr "기본행[열]연산(elementary row[column] operation)"
 
@@ -17,6 +17,8 @@
     3. $A$ 의 한 행[열]에 다른 행[열]의 스칼라 $a$ 배를 더하는 것
 
 - 행연산과 열연산을 기본연산(elementary operation)이라 한다. 또한 기본연산 1), 2), 3) 을 1형(type), 2형, 3형이라 한다.
+
+## Elementary Matrix
 
 !!! tldr "기본행렬(elementary matrix)"
 

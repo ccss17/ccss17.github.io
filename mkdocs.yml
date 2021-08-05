@@ -7,9 +7,9 @@ site_url: https://ccss17.github.io/
 
 nav:
   - Home: index.md
-  - Trend: 
-    - 2020: trend/2020.md
-    - 2021: trend/2021.md
+  # - Trend: 
+  #   - 2020: trend/2020.md
+  #   - 2021: trend/2021.md
   - Math: 
     - Foundation of Foundation of Math: 
       - History of Math: Math/MathHistory.md
@@ -106,7 +106,7 @@ nav:
     - Nand to Tetris: Computer/nand2tetris.md
     - Information Theory: Computer/information.md
     - Technological Singularity: Computer/future.md
-    - Rust StudyNote: Computer/Rust.md
+    - Rust Memo: Computer/Rust.md
   - ProgrammerBase: 
     - README: ProgrammerBase/README.md
     - Contents:
@@ -179,6 +179,7 @@ nav:
   #   - Algorithm:
   #     - 시간복잡도: Algorithm/timecomplexity.md
   #     - Leetcode: Algorithm/leetcode.md
+
 theme: 
   name: material
   palette:
@@ -215,9 +216,9 @@ markdown_extensions:
       permalink: "&para;"
       baselevel: 2
       toc_depth: 2-4
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.emoji:
+      # emoji_index: !!python/name:materialx.emoji.twemoji
+      # emoji_generator: !!python/name:materialx.emoji.to_svg
   - admonition
   - pymdownx.details
   - pymdownx.superfences
