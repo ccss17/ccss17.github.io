@@ -54,7 +54,7 @@ def create_category():
     if os.path.isfile('docs/index.md'):
         os.remove('docs/index.md')
     tree.save2file('docs/index.md', key=lambda x: x.bpointer,
-                   line_type='ascii-ex')
+                   line_type='ascii-exr')
 
     with open('docs/index.md', encoding='utf-8') as f:
         index = f.read()
