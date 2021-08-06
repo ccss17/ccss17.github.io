@@ -583,19 +583,19 @@
 
     $$ (a, b, c) = (a, 0, 0) + (0, b, c) \in \R ^{3} $$
 
-    $(a, 0, 0) \in \mathbf{W} _1, (0, b, c) \in \mathbf{W} _2$ 이므로 $\R ^{3} = \mathbf{W} _1, \mathbf{W} _2$ 이다.
+    $(a, 0, 0) \in \mathbf{W} _1, (0, b, c) \in \mathbf{W} _2$ 이므로 $\R ^{3} = \mathbf{W} _1 + \mathbf{W} _2$ 이다.
 
 !!! tldr "직합(direct sum)"
 
     벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 와 $i, j \in \{1,\dots,k\}$ 에 대하여 다음을 만족하는 $\mathbf{W}$ 를 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 의 직합이라 한다.
 
-    - $\mathbf{W} _i \subseteq \mathbf{W}$
-
-    - $\displaystyle \mathbf{W} = \sum_{i=1}^{k}\mathbf{W} _i$
+    1. $\displaystyle \mathbf{W} = \sum_{i=1}^{k}\mathbf{W} _i$
     
-    - $\displaystyle \mathbf{W} _j \cap \sum_{i \neq j}^{}\mathbf{W} _i = \{0\}$ 
+    2. $\displaystyle \mathbf{W} _j \cap \sum_{i \neq j}^{}\mathbf{W} _i = \{0\}$ 
 
-- **$\displaystyle \mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 의 직합을 $\mathbf{W} = \mathbf{W} _1 \oplus \mathbf{W} _2 \oplus \dots \oplus \mathbf{W} _k = \bigoplus_{i=1}^{k}\mathbf{W} _k$ 라고 표기한다.**
+    또한 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 의 직합 $\mathbf{W}$ 를 다음과 같이 표기한다.
+
+    $$ \boxed{\mathbf{W} := \mathbf{W} _1 \oplus \mathbf{W} _2 \oplus \dots \oplus \mathbf{W} _k = \bigoplus_{i=1}^{k}\mathbf{W} _k} $$ 
 
 - 직합은 $\mathbf{V}$ 를 간단한 부분공간으로 분해하는 방법을 제공한다. 이는 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 $\mathbf{V}$ 에 어떻게 작용하는지 파악할 수 있게 해준다.
 
@@ -610,6 +610,8 @@
     따라서 $\mathbf{W} = \sum_{i=1}^{2}\mathbf{W} _i$ 이다.
 
     또한 $\mathbf{W} _1 \cap \mathbf{W} _2 = \{0\}$ 이다. 따라서 $\displaystyle \mathbf{W} _1 \oplus \mathbf{W} _2 = \mathbf{W}$ 이다.
+
+- 책에는 직합에 $\mathbf{W} _i \subseteq \mathbf{W}$ 라는 조건이 있다. 근데 내 생각에 이 조건은 1) 이 함의한다. 왜냐하면 영벡터 $0$ 이 다른 부분공간들을 대표하면 특정 $k$ 에 대하여 $\sum \mathbf{W}_i = \mathbf{W}_k \subset \mathbf{W}$ 가 되기 때문이다.
 
 ## Properties of direct sum
 
@@ -769,15 +771,13 @@
 
     $x \in \mathbf{E}_{\lambda}$ 에 대하여 $\mathbf{T} (x) = \lambda x$ 이다. $\mathbf{T} (\lambda x) = \lambda \mathbf{T} (x) = \lambda \cdot \lambda x$ 이다. 벡터공간은 스칼라곱에 닫혀있으므로 $\lambda x \in \mathbf{V}$ 이다. 따라서 $\lambda x \in \mathbf{V} \implies \lambda x \in \mathbf{E}_{\lambda}$ 이다. 따라서 $\mathbf{T} (\mathbf{E}_{\lambda} ) \subset \mathbf{E}_{\lambda}$ 이다.
 
+## $\mathbf{T}$-cyclic subspace
+
 !!! tldr "$\mathbf{T}$-순환 부분공간($\mathbf{T}$-cyclic subspace)"
 
     벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 영이 아닌 벡터 $x \in \mathbf{V}$ 에 대하여 다음과 같은 부분공간 $\mathbf{W}$ 를 $x$ 에 의해 생성된 $\mathbf{V}$ 의 $\mathbf{T}$-순환 부분공간이라 한다.
 
     $$ \mathbf{W} = \text{span} (\{x, \mathbf{T} (x), \mathbf{T} ^{2}(x), \dots \}) $$
-
-- $\mathbf{T}$-순환 부분공간은 $x$ 를 포함하는 가장 작은 $\mathbf{T}$-불변 부분공간이다.
-
-- $x$ 를 포함하는 $\mathbf{T}$-불변 부분공간은 반드시 $x$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간을 포함한다.(문제 5.4-11)
 
 - 문제 5.4-31 은 순환 부분공간으로 행렬식 없이 선형연산자의 특성다항식을 구하는 방법을 말해준다.
 
@@ -794,6 +794,40 @@
     그러므로 $e_1$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간은 다음과 같다.
 
     $$ \text{span} (\{e_1, \mathbf{T}(e_1), \mathbf{T}^{2}(e_1), \dots\}) = \text{span} (\{e_1, e_2\}) = \{(s, t, 0) : s, t \in \R\} $$
+
+!!! tldr "문제 5.4-11"
+
+    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 영이 아닌 벡터 $v \in \mathbf{V}$, $v$ 에 의해 생성된 $\mathbf{V}$ 의 $\mathbf{T}$-순환 부분공간 $\mathbf{W}$ 에 대하여 다음이 성립한다.
+
+    1. $\mathbf{W}$ 는 $\mathbf{T}$-불변이다.
+
+    2. $v$ 를 포함하는 $\mathbf{V}$ 의 임의의 $\mathbf{T}$-불변 부분공간은 $\mathbf{W}$ 를 포함한다.
+
+- 이 정리는 $\mathbf{T}$-순환 부분공간이 $\mathbf{T}$-불변임을 말해준다.
+
+- 이 정리는 $x$ 를 포함하는 $\mathbf{T}$-불변 부분공간이 반드시 $x$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간을 포함함을 말해준다. 즉, $\mathbf{T}$-순환 부분공간은 $x$ 를 포함하는 가장 작은 $\mathbf{T}$-불변 부분공간이다.
+
+    가령 벡터공간 $\mathbf{V}$ 의 $x$ 를 포함하는 $\mathbf{T}$-불변 부분공간 $\mathbf{W}_1, \mathbf{W}_2, \dots, \mathbf{W}_n$ 과 $x$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간 $\mathbf{Z}$ 를 가정하면 다음이 성립한다. 
+
+    $$ \mathbf{Z} \subset \mathbf{W}_1, \mathbf{Z} \subset \mathbf{W}_2, \dots, \mathbf{Z} \subset \mathbf{W}_n $$
+
+    이는 [정리 1.11](../VectorSpace/#26f9238cb) 와 그 따름정리에 의해 $\mathbf{Z}$ 의 기저가 다른 모든 $\mathbf{T}$-불변 부분공간의 기저에 포함됨을 뜻한다. 따라서 $\mathbf{T}$-순환 부분공간은 가장 작은 $\mathbf{T}$-불변 부분공간이 된다.
+
+- 증명
+
+    집합 $\beta = \{v, \mathbf{T}(v), \mathbf{T}^{2}(v), \dots\}$ 가 $\mathbf{W}$ 를 생성한다. 다음을 만족하는 무한한 스칼라 $a_0, a_1, a_2, \dots$ 가 존재한다.
+
+    $$ x \in \mathbf{W} \implies x = a_0v + a_1 \mathbf{T}(v) + a_2 \mathbf{T}^{2}(v) + \dots $$
+
+    $$ \implies \mathbf{T}(x) = a_0 \mathbf{T}(v) + a_1 \mathbf{T}^{2}(v) + a_2 \mathbf{T}^{3}(v) + \dots $$
+
+    $\mathbf{T}(x)$ 는 $\beta$ 에 의한 일차결합이므로 $\mathbf{T}(x) \in \mathbf{W}$ 이다. 따라서 $\mathbf{W}$ 는 $\mathbf{T}$-불변이다. ▲ 
+
+    $\mathbf{T}$-불변 부분공간 $\mathbf{Z}$ 가 $v \in \mathbf{Z}$ 를 만족하면 다음이 성립한다.
+
+    $$ v \in \mathbf{Z} \implies \mathbf{T}(v) \in \mathbf{Z} \implies \mathbf{T}^{2}(v) \in \mathbf{Z} \implies \dots $$
+
+    그러므로 $\beta \subset  \mathbf{Z}$ 이다. $\mathbf{Z}$ 가 $\mathbf{W}$ 의 기저를 포함하므로 $\mathbf{W}$ 의 모든 벡터는 $\mathbf{Z}$ 에 포함된다. 즉, $\mathbf{W} \subset \mathbf{Z}$ 이다. ■ 
 
 !!! tldr "제한(restriction)"
 
@@ -819,7 +853,7 @@
 
     $$ \mathbf{T}(v_i) = \sum_{i=1}^{n}a _{ij}v_i \in \mathbf{W} $$
 
-    $v_i \in \mathbf{W}$ 이므로 $\mathbf{T}(v_i) \in \mathbf{W}$ 이다. 만약 $\sum_{i=k+1}^{n}a _{ij}v_i \neq 0$ 이면 $v_i$ 를 $\mathbf{W}$ 의 기저로 표현하는 것이 불가능하므로 $v_i \not\in \mathbf{W}$ 이다. 이는 모순이다. 따라서 $\sum_{i=k+1}^{n}v_i = 0$ 이다. 그러므로 $A$ 의 $i$ 열은 다음과 같다.
+    $v_i \in \mathbf{W}$ 이므로 $\mathbf{T}(v_i) \in \mathbf{W}$ 이다. 만약 $\sum_{i=k+1}^{n}a _{ij}v_i \neq 0$ 이면 $\mathbf{T}(v_i)$ 를 $\mathbf{W}$ 의 기저로 표현하는 것이 불가능하므로 $\mathbf{T}(v_i) \not\in \mathbf{W}$ 이다. 이는 모순이다. 따라서 $\sum_{i=k+1}^{n}v_i = 0$ 이다. 그러므로 $A$ 의 $i$ 열은 다음과 같다.
 
     $$ \mathbf{T}(v_i) = \sum_{i=1}^{k}a _{ij}v_i $$
 
@@ -842,4 +876,261 @@
     $$ f(t) = \det(A - tI_n) = \det \begin{pmatrix} B_1-tI_k&B_2\\ O&B_3-tI _{n-k}\\ \end{pmatrix} = g(t) \det(B_3-tI _{n-k}) $$
 
     따라서 $g(t)$ 는 $f(t)$ 를 나눈다. ■ 
+
+!!! tldr "문제 5.4-19"
+
+    스칼라 $a_0, a_1, \dots, a _{k-1} \in \mathbf{F}$ 와 다음과 같이 정의된 행렬 $A \in \mathbf{M}_{k \times k}(\mathbf{F})$ 의 특성다항식은 $(-1) ^{k}(a_0+ a_1t+ \dots + a _{k-1}t^{k-1} + t ^{k})$ 이다.
+
+    $$ A= \begin{pmatrix} 0&0&\dots&0&-a_0\\ 1&0&\dots&0&-a_1\\ 0&1&\dots&0&-a_2\\ \vdots& \vdots& \ddots& \vdots& \vdots \\ 0&0&\dots&1&-a _{k-1}\\ \end{pmatrix} $$
+
+- 증명
+
+    $k = 2$ 을 가정하면 $A = \begin{pmatrix} 0&-a_0\\ 1&-a_1\\ \end{pmatrix}$ 이다. 다음이 성립한다. 
+    
+    $$f(t) = \det(A - tI_2) = \det \begin{pmatrix} -t&-a_0\\ 1&-a_1-t\\ \end{pmatrix} = t(a_1+t) + a_0 = (-1) ^{2}(a_0 + a_1t + t ^{2}) \tag*{▲} $$
+
+    $k-1$ 에서 정리가 성립함을 가정하고 $k$ 에서 정리가 성립함을 증명하자. $B = A - tI_k$ 로 두면 $A \in \mathbf{M}_{k \times k}(\mathbf{F})$ 의 특성다항식은 다음과 같다.
+
+    $$ \begin{equation}\begin{split} \det(B) &= \det \begin{pmatrix} -t&0&\dots&0&-a_0\\ 1&-t&\dots&0&-a_1\\ 0&1&\dots&0&-a_2\\ \vdots& \vdots& \ddots& \vdots& \vdots \\ 0&0&\dots&1&-a _{k-1}-t\\ \end{pmatrix} \\ &= (-1)^{1 + 1}B _{11} \det(\tilde{B}_{11})  + (-1) ^{1 + k}B _{1k}\det(\tilde{B}_{1k}) \\ &= -t \det(\tilde{B}_{11})  + (-1) ^{1 + k}\cdot (-a_0) \cdot 1 \\ \end{split}\end{equation} \tag*{} $$
+
+    $\tilde{B}_{11}$ 은 $\tilde{A}_{11}$ 의 특성다항식이다.  $k-1$ 에서 정리가 성립하므로 $\det(\tilde{B}_{11})$ 은 적절한 스칼라 $b_0, b_1, \dots, b_{k-1} \in \mathbf{F}$ 에 대하여 $(-1) ^{k-1}(b_0+ b_1t+ \dots + b_{k-2}t^{k-2} + t ^{k-1})$ 이다. 따라서 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split} \det(A - tI_k) &= -t \cdot (-1) ^{k-1}(b_0+ b_1t+ \dots + b_{k-2}t^{k-2} + t ^{k-1}) + (-1) ^{k}\cdot a_0 \\ &= (-1) ^{k}(b_0t+ b_1t ^{2}+ \dots + b_{k-2}t^{k-1} + t ^{k}) + (-1) ^{k}\cdot a_0 \\ &= (-1) ^{k}(a_0 + b_0t+ b_1t ^{2}+ \dots + b_{k-2}t^{k-1} + t ^{k}) \\ &= (-1) ^{k}(a_0 + a_1t+ a_2t ^{2}+ \dots + a_{k-1}t^{k-1} + t ^{k}) \\ \end{split}\end{equation} \tag*{} $$
+
+    단순히 $b_i = a _{i+1}$ 로 선택하면 위와 같은 결론을 얻을 수 있다. 정리가 임의의 스칼라들에 대하여 성립하므로 이렇게 선택해도 괜찮다. ■ 
+
+!!! tldr "정리 5.21"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 영이 아닌 벡터 $v \in \mathbf{V}$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간 $\mathbf{W}$ 에 대하여 $k = \dim (\mathbf{W})$ 이면 다음이 성립한다. 
+
+    1. $\{v, \mathbf{T}(v), \dots, \mathbf{T}^{k-1}(v)\}$ 는 $\mathbf{W}$ 의 기저이다. 
+
+    2. 스칼라 $a_0, a_1, \dots, a _{k-1}$ 에 대하여 $a_0v + a_1 \mathbf{T}(v) + \dots + a _{k-1}\mathbf{T}^{k-1}(v)+\mathbf{T}^{k}(v) = 0$ 이면 $\mathbf{T}_{\mathbf{W}}$ 의 특성다항식은 $f(t) = (-1)^{k}(a_0+a_1t+\dots+a _{k-1}t ^{k-1}+t ^{k})$ 이다.
+
+- 정리 5.20 은 $\mathbf{T}_{\mathbf{W}}$ 의 특성다항식으로 $\mathbf{T}$ 의 특성다항식의 정보를 얻게 해준다. 이 정리는 $\mathbf{T}_{\mathbf{W}}$ 의 특성다항식을 쉽게 얻게 해준다는 관점에서 순환 부분공간의 유용함을 증명해준다.
+
+    - 1) 는 $\mathbf{T}$-순환 부분공간을 정의하기 위하여 사용된 생성집합
+
+        $$ \text{span} (\{v, \mathbf{T} (v), \mathbf{T} ^{2}(v), \dots \}) $$
+
+        에서 $\mathbf{T}^{k}(v)$ 이상의 것들은 불필요함을 알려준다. 또한 $\mathbf{T}$-순환 부분공간의 기저를 쉽게 알 수 있는 방법을 알려준다.
+
+    - 2) 는 $\mathbf{T}_{\mathbf{W}}$ 의 특성다항식을 쉽게 구하는 방법을 알려준다. 즉 $\mathbf{T}^{k}(v)$ 를 기저로 표현하는 일차결합의 계수만 알아내면 특성다항식을 바로 구할 수 있다는 것이다. 너무 자명하지만, 이 일차결합 표현은 반드시 존재한다.
+
+- 증명
+
+    $v \neq 0$ 이므로 $\{v\}$ 는 일차독립이다. $\beta = \{v, \mathbf{T}(v), \dots, \mathbf{T}^{j-1}(v)\}$ 가 일차독립이 되게 하는 가장 큰 자연수 $j$ 가 존재한다. $\mathbf{V}$ 가 유한차원이므로 유한한 기저보다 기수가 작은 일차독립 집합들이 존재하기 때문이다. 
+
+    $\mathbf{Z}=\text{span} (\beta )$ 로 두면 $\beta$ 는 $\mathbf{Z}$ 의 기저이다. $j$ 가 $\beta$ 를 일차독립이 되게 하기 위한 마지막 자연수이므로 $j+1$ 에 대하여 일차종속이 되므로 $\beta$ 의 일차결합으로 $\mathbf{T}^{j}(v)$ 를 표현할 수 있다. 따라서 [정리 1.7](VectorSpace/#97eff1e4d) 의 세번째 명제에 의하여 $\mathbf{T}^{j}(v) \in \mathbf{Z}$ 이다.
+
+    $w \in \mathbf{Z}$ 이면 $w = b_0v + b_1 \mathbf{T}(v) + \dots + b_{j-1}\mathbf{T}^{j-1}(v)$ 인 스칼라 $b_0, b_1, \dots, b _{j-1}$ 가 존재한다. 이 식에 $\mathbf{T}$ 를 씌우면 다음과 같다. 
+
+    $$ \mathbf{T}(w) = b_0 \mathbf{T}(v) + b_1 \mathbf{T}^{2}(v) + \dots + b _{j-1} \mathbf{T}^{j}(v) $$
+
+    $\mathbf{T}(w)$ 는 $\mathbf{Z}$ 의 기저의 일차결합이므로 $\mathbf{T}(w) \in \mathbf{Z}$ 이다. 따라서 $\mathbf{Z}$ 는 $\mathbf{T}$-불변이다. 문제 5.4-11 에 의하여 $\mathbf{W}$ 는 $v$ 를 포함하는 가장 작은 $\mathbf{T}$-불변 부분공간이므로 $\mathbf{W}\subset \mathbf{Z}$ 이다.
+
+    그런데 $\mathbf{Z}$ 의 생성집합 $\beta$ 가 $\mathbf{W}$ 의 생성집합에 포함되므로 자명하게 $\mathbf{Z}\subset \mathbf{W}$ 이다. 따라서 $\mathbf{Z} = \mathbf{W}$ 이다. 그러므로 $\beta$ 는 $\mathbf{W}$ 의 기저이고 $\dim (\mathbf{W})=j=k$ 이다. ▲ 
+
+    이제 $\beta = \{v, \mathbf{T}_{\mathbf{W}}(v), \dots, \mathbf{T}_{\mathbf{W}}^{k-1}(v)\}$ 가 $\mathbf{W}$ 의 순서기저임을 가정할 수 있다. $[\mathbf{T}_{\mathbf{W}}]_{\beta }$ 는 다음과 같다. 
+
+    $$ \mathbf{T}_{\mathbf{W}}(v) = 1 \cdot \mathbf{T}_{\mathbf{W}}(v) $$
+
+    $$ \mathbf{T}_{\mathbf{W}}(\mathbf{T}_{\mathbf{W}}(v)) = 1 \cdot \mathbf{T}_{\mathbf{W}}^{2}(v) $$
+
+    $$ \mathbf{T}_{\mathbf{W}}(\mathbf{T}_{\mathbf{W}}^{k-2}(v)) = 1 \cdot \mathbf{T}_{\mathbf{W}}^{k-1}(v) $$
+
+    $$ \mathbf{T}_{\mathbf{W}}(\mathbf{T}_{\mathbf{W}}^{k-1}(v)) = \mathbf{T}_{\mathbf{W}}^{k}(v) = -a_0v - a_1 \mathbf{T}(v) - \dots - a _{k-1}\mathbf{T}^{k-1}(v) $$
+
+    $$ \implies [\mathbf{T}_{\mathbf{W}}]_{\beta } = \begin{pmatrix} 0&0&\dots&0&-a_0\\ 1&0&\dots&0&-a_1\\ \vdots& \vdots& \ddots& \vdots&\vdots  \\ 0&0&\dots&1&-a _{k-1}\\ \end{pmatrix} $$
+
+    문제 5.4-19 에 의하여 $[\mathbf{T}_{\mathbf{W}}]_{\beta }$ 의 특성다항식은 $f(t) = (-1)^{k}(a_0+a_1t+\dots+a _{k-1}t ^{k-1}+t ^{k})$ 이다. 선형연산자의 특성다항식은 선형연산자의 행렬표현의 특성다항식으로 정의되므로 증명이 끝났다. ■ 
+
+## Cayley-Hamilton theorem
+
+!!! tldr ""
+
+    체 $\mathbf{F}$ 의 원소를 계수로 하는 다음과 같은 다항식 $f(x)$ 가 존재한다.
+
+    $$ f(x) = a_0 + a_1x + \dots + a_nx ^{n} $$
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $f(\mathbf{T})$ 를 다음과 같이 정의한다.
+
+    $$ f(\mathbf{T}) = a_0 \mathbf{I} + a_1 \mathbf{T} + \dots + a_n \mathbf{T}^{n} $$
+
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 $f(A)$ 를 다음과 같이 정의한다.
+
+    $$ f(A) = a_0I_n + a_1A + \dots + a_nA ^{n} $$
+
+- 예시
+
+    $\R ^{2}$ 의 선형연산자 $\mathbf{T}(a, b) = (2a+b,a-b)$  와 $f(x) = x ^{2}+2x-3$ 를 가정하자. $\mathbf{T}^{2}(a,b) = (5a+b,a+2b)$ 이다. 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split} f(\mathbf{T})(a, b)&= (\mathbf{T}^{2}+2 \mathbf{T}-3 \mathbf{I})(a, b)\\ &= (5,a+b,a+2b)+(4a+2b,2a-2b)-3(a,b)\\ &= (6a+3b,3a-3b) \end{split}\end{equation} \tag*{} $$
+
+    행렬 $A = \begin{pmatrix} 2&1\\ 1&-1\\ \end{pmatrix}$ 에 대하여 다음이 성립한다. 
+
+    $$ f(A)=A ^{2}+2A-3I_2=\begin{pmatrix} 5&1\\ 1&2\\ \end{pmatrix}+2 \begin{pmatrix} 2&1\\ 1&-1\\ \end{pmatrix}-3 \begin{pmatrix} 1&0\\ 0&1\\ \end{pmatrix}= \begin{pmatrix} 6&3\\ 3&-3\\ \end{pmatrix} $$
+
+!!! tldr "정리 5.22 케일리-해밀턴 정리(Cayley-Hamilton theorem)"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{T}$ 의 특성다항식 $f(t)$ 에 대하여 $f(\mathbf{T}) = \mathbf{T}_0$ 이다.
+
+- 이 정리는 정리 5.21 의 중요성을 보여준다. 왜냐하면 이 정리가 널리 사용되기 때문이다.
+
+- 증명
+
+    $\forall v \in \mathbf{V}: f(\mathbf{T})(v) = 0$ 을 보이면 된다. $v = 0$ 를 가정하면 $f(\mathbf{T})$ 가 선형이므로 증명할 것이 없다. ▲ 
+
+    $v \neq 0$ 을 가정하자. $v$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간 $\mathbf{W}$ 를 가정하고 $\dim (\mathbf{W}) = k$ 로 두면 정리 5.21 의 첫번째 명제에 의하여 다음을 만족하는 스칼라 $a_0, a_1, a_2, \dots, a _{k-1}$ 가 존재한다. 
+
+    $$ a_0v + a_1 \mathbf{T}(v) + \dots + a _{k-1}\mathbf{T}^{k-1}(v) + \mathbf{T}^{k}(v) = 0 $$
+
+    정리 5.21 의 두번째 명제에 의하여 $\mathbf{T}_{\mathbf{W}}$ 의 특성다항식은 다음과 같다. 
+
+    $$ g(t) = (-1)^{k}(a_0 + a_1t+ \dots+ a _{k-1}t ^{k-1}+t ^{k}) $$
+
+    따라서 다음이 성립한다. 
+
+    $$ g(\mathbf{T})(t) = (-1)^{k}(a_0 \mathbf{I} + a_1 \mathbf{T}+ \dots+ a _{k-1} \mathbf{T} ^{k-1}+\mathbf{T}^{k})(v) = 0 $$
+
+    [정리 5.20](#3d097218e) 은 $g(t)$ 가 $f(t)$ 나눈다는 것을 알려준다. 즉, 다음이 성립한다. 
+
+    $$ f(\mathbf{T})(v) = q(\mathbf{T})g(\mathbf{T})(v) = q(\mathbf{T})(g(\mathbf{T})(v)) = q(\mathbf{T})(0)=0 $$
+
+    따라서 $f(\mathbf{T}) = \mathbf{T}_0$ 이다. ■ 
+
+- 예시 
+
+    $\R ^{2}$ 의 선형연산자 $\mathbf{T}(a,b)=(a+2b, -2a+b)$ 와 $\mathbf{T}$ 의 특성다항식 $f(t) = \det([\mathbf{T}]_{\beta }-tI) = \det \begin{pmatrix} 1-t&2\\ -2&1-t\\ \end{pmatrix}=t ^{2}-2t+5$ 에 대하여 $f(\mathbf{T}) = \mathbf{T}^{2}-2 \mathbf{T}+5 \mathbf{I} = \mathbf{T}_0$ 이다.
+
+!!! tldr "정리 5.22 따름정리"
+
+    $n \times n$ 행렬 $A$ 와 그 특성다항식 $f(t)$ 에 대하여 $f(A) = O$ 이다.
+
+- 증명
+
+## Invariant subspace and Direct sum 
+
+!!! tldr "정리 5.23"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $i \in \{1,\dots,k\}$ 에 대하여 $\mathbf{W}_i$ 가 $\mathbf{T}$-불변이고 $\mathbf{V} = \displaystyle \bigoplus_{i=1}^{k}\mathbf{W}_i$ 가 성립함을 가정하자.
+
+    $\mathbf{T}_{\mathbf{W}_i}$ 의 특성다항식 $f_i(t)$ 에 대하여 $f_1(t) \cdot f_2(t) \cdot \dots \cdot f_k(t)$ 는 $\mathbf{T}$ 의 특성다항식이다.
+
+- 유한차원 벡터공간 $\mathbf{V}$ 가 주어지면 이 공간을 가능한 많은 $\mathbf{T}$-불변 부분공간의 직합으로 분해하는 것이 좋다. $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 행동을 직합을 구성하는 각각의 부분공간에서 추론할 수 있기 때문이다. 가령 $\mathbf{T}$ 가 대각화가능한 것과 $\mathbf{V}$ 가 1차원 $\mathbf{T}$-불변 부분공간의 직합으로 완전히 분해되는 것은 동치이다.
+
+- $\mathbf{T}$ 가 유한차원 벡터공간 $\mathbf{V}$ 의 대각화가능한 선형연산자이고 서로 다른 고윳값을 $\lambda _1, \lambda _2, \dots, \lambda _k$ 로 두면 [정리 5.10](#fbcd60c9f) 에 의하여 $\mathbf{V}$ 는 $\mathbf{T}$ 의 고유공간의 직합이다. 즉, $\mathbf{V}= \displaystyle \bigoplus_{i=1}^{k}\mathbf{E}_{\lambda_i}$ 이다. [불변 부분공간](#2fec2004a) 의 예시에서 고유공간은 $\mathbf{T}$-불변임을 증명했었다. 따라서 각 고유공간들은 정리 5.23 의 가정을 충족시킨다.
+
+    [정리 5.8](#7050c2a83) 에 의하여 $\dim (\mathbf{E}_{\lambda_i} ) = m_i$ 는 $\lambda _i$ 의 중복도와 같다는 사실과 [정리 5.6](#867268fd3) 에 의하여 $\mathbf{T}$ 의 특성다항식 $f(t)$ 은 스칼라 $a$ 에 대하여 다음과 같이 완전히 인수분해된다. 
+
+    $$ f(t) = a \prod_{i=1}^{k}(t - \lambda _i) ^{m_i} $$
+
+    우리가 이미 잘 알고 있었던 이 결과를 본 정리를 통하여 다시 도출해보자.  각 고윳값 $\lambda _i$ 에 대하여 제한 $\mathbf{T}_{\mathbf{E}_{\lambda_i} }$ 을 만들면 이것의 특성다항식은 $(\lambda _i -t) ^{m_i}$ 이다. 본 정리에 의하여 $\mathbf{T}$ 의 특성다항식은 다음과 같다.
+
+    $$ f(t) = (\lambda _1 - t) ^{m_1} (\lambda _2 - t) ^{m_2} \dots (\lambda _k - t) ^{m_k} $$
+
+- 증명
+
+    $\mathbf{T}$ 의 특성다항식을 $f(t)$ 라고 하자. 
+    
+    $k = 2$ 일 때 $\mathbf{W}_1$ 의 순서기저를 $\beta _1$, $\mathbf{W}_2$ 의 순서기저를 $\beta _2$ 라 하고 $\beta = b_1 \cup b_2$ 로 두자. [정리 5.9(4)](#748907edc) 에 의하여 $\beta$ 는 $\mathbf{V}$ 의 순서기저이다. $A = [\mathbf{T}]_{\beta }, B_1 = [\mathbf{T}_{\mathbf{W}_1}]_{\beta _1}, B_2 = [\mathbf{T}_{\mathbf{W}_2}]_{\beta _2}$ 로 두면 정리 5.24 에 의하여 $A = \begin{pmatrix}
+    B_1&O\\
+    O'&B_2\\
+    \end{pmatrix}$ 이다. [정리 5.20](#3d097218e) 의 증명과정에서처럼 $f(t)$ 를 다음과 같이 전개할 수 있다.
+
+    $$ f(t) = \det(A - tI) = \det(B_1-tI) \det(B_2-tI) = f_1(t) \cdot f_2(t) $$
+
+    따라서 $k=2$ 일 때 정리가 참이다. ▲ 
+
+    $k-1 \geq 2$ 인 $k-1$ 에 대하여 정리가 성립함을 가정하고 $k$ 에 대하여 성립함을 보이자. $\mathbf{W} = \displaystyle \bigoplus_{i=1}^{k}\mathbf{W}_i$ 로 두면 $\mathbf{W}$ 가 $\mathbf{T}$-불변이고 $\mathbf{V}= \mathbf{W}\oplus \mathbf{W}_k$ 임은 자명하다. $k = 2$ 일 때를 가정할 수 있으므로 $\mathbf{T}_{\mathbf{W}}$ 의 특성다항식 $g(t)$ 에 대하여 $f(t) = g(t) \cdot f_k(t)$ 이다. $k-1$ 에서 정리가 성립하므로 $g(t) = f_1(t) \cdot f_2(t) \cdot \dots \cdot f _{k-1}(t)$ 이다. 그러므로 다음이 성립한다. 
+
+    $$ \therefore f(t) = g(t) \cdot f_k(t) = f_1(t) \cdot f_2(t) \cdot \dots \cdot f_k(t) \tag*{■} $$
+
+    - 정리 5.23 은 드물게 이후의 정리인 5.24 를 기반으로 증명되는데, 5.24 가 5.23 을 가정하지 않으므로 순환논리가 되지는 않는다. 즉, 논리적으로 문제는 없다.
+
+    - 원래 증명에서는 $\mathbf{W} = \displaystyle \sum_{i=1}^{k-1}\mathbf{W}_i$ 로 두는데 $\mathbf{V}= \displaystyle \bigoplus_{i=1}^{k}\mathbf{W}_i$ 라는 가정이 $i, j \in \{1, \dots, k-1\}$ 에 대하여 $\mathbf{W}_j \cap \displaystyle \sum_{i \neq j}\mathbf{W}_i = \{0\}$ 를 함의한다고 생각해서 그냥 $\mathbf{W} = \displaystyle \bigoplus_{i=1}^{k-1}\mathbf{W}_i$ 로 바꿨다.
+
+- 예시 
+
+    $\R ^{4}$ 의 선형연산자 $\mathbf{T}(a,b,c,d,) = (2a-b,a+b,c-d,c+d)$  와 $\mathbf{W}_1=\{(s,t,0,0) : s,t \in \R\}, \mathbf{W}_2=\{(0,0,s,t) : s,t \in \R\}$ 를 정의하면 $\mathbf{W}_1, \mathbf{W}_2$  는 $\mathbf{T}$-불변이고 $\R ^{4}= \mathbf{W}_1 \oplus \mathbf{W}_2$ 이다. $\beta _1=\{e_1,e_2\},\beta _2=\{e_3,e_4\},\beta =\beta_1 \cup \beta _2$ 로 두고 각각을 $\mathbf{W}_1, \mathbf{W}_2, \R ^{4}$ 의 순서기저로 두자. $A = [\mathbf{T}]_{\beta }, B_1 = [\mathbf{T}_{\mathbf{W}_1}]_{\beta _1}, B_2= [\mathbf{T}_{\mathbf{W}_2}]_{\beta _2}$ 는 다음과 같다.
+
+    $$ B_1 = \begin{pmatrix} 2&-1\\ 1&1\\ \end{pmatrix}, B_2 = \begin{pmatrix} 1&-1\\ 1&1\\ \end{pmatrix}, A = \begin{pmatrix} B_1&O\\ O&B_2\\ \end{pmatrix} = \begin{pmatrix} 2&-1&0&0\\ 1&1&0&0\\ 0&0&1&-1\\ 0&0&1&1\\ \end{pmatrix} $$
+
+    $\mathbf{T}$ , $\mathbf{T}_{\mathbf{W}_1}$ , $\mathbf{T}_{\mathbf{W}_2}$ 의 특성다항식을 $f(t),f_1(t),f_2(t)$ 로 두면 다음이 성립한다.
+
+    $$ f(t) = \det(A-tI) =\det(B_1-tI) \det(B_2-tI) =f_1(t) \cdot f_2(t) $$
+
+!!! tldr "두 행렬의 직합(direct sum of two matrices)"
+
+    $B_1 \in \mathbf{M}_{m \times m}(\mathbf{F}), B_2 \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 $B_1, B_2$ 의 직합은 다음과 같은 $(m + n) \times (m + n)$ 행렬 $A$ 로 정의하고 $B_1 \oplus B_2$ 로 표기한다.
+
+    $$ A _{ij} = \begin{cases} (B_1) _{ij} & 1 \leq i, j \leq m\\ (B_2) _{(i-m),(j-m)} & m+1 \leq i, j \leq n+m\\ 0 & \text{ otherwise }\\ \end{cases} $$
+
+- **즉, 적절한 영행렬 $O$ 에 대하여 $A = B_1 \oplus B_2 = \begin{pmatrix} B_1&O\\ O&B_2\\ \end{pmatrix}$ 라고 정의하는 것이다.**
+
+!!! tldr "행렬의 직합(direct sum of matrices)"
+
+    정사각행렬 $B_1, B_2, \dots, B_k$ 에 대하여 $B_1, B_2, \dots, B_k$ 의 직합은 재귀적으로 $\displaystyle \bigoplus_{i=1}^{k}B_i = \bigg (\bigoplus_{i=1}^{k-1}B_i\bigg ) \oplus B_k$ 라 정의한다.
+    
+- **즉, 적절한 영행렬 $O$ 에 대하여 $A = \displaystyle \bigoplus_{i=1}^{k}B_i$ 를 다음과 같이 정의하는 것이다.**
+
+    $$ A = \displaystyle \bigoplus_{i=1}^{k}B_i = \begin{pmatrix} B_1&O&\dots&O\\ O&B_2&\dots&O\\ \vdots& \vdots& \ddots& \vdots \\ O&O&\dots&B_k\\ \end{pmatrix} $$
+
+- 예시 
+
+    정사각행렬 $B_1 = \begin{pmatrix} 1&2\\ 1&1\\ \end{pmatrix}, B_2 = (3), B_3 = \begin{pmatrix} 1&2&1\\ 1&2&3\\ 1&1&1\\ \end{pmatrix}$ 에 대하여 $B_1 \oplus B_2 \oplus B_3$ 는 다음과 같다.
+
+    $$ \bigoplus_{i=1}^{3}B_i = \begin{pmatrix} 1&2&0&0&0&0\\ 1&1&0&0&0&0\\ 0&0&3&0&0&0\\ 0&0&0&1&2&1\\ 0&0&0&1&2&3\\ 0&0&0&1&1&1\\ \end{pmatrix} $$
+
+!!! tldr "정리 5.24"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}= \displaystyle \bigoplus_{i=1}^{k}\mathbf{W}_i$ 인 $\mathbf{T}$-불변 부분공간 $\mathbf{W}_1, \mathbf{W}_2, \dots, \mathbf{W}_k$ 에 대하여 각 $i$ 에 대한 $\beta _i$ 는 $\mathbf{W}_i$ 의 순서기저이고 $\beta = \displaystyle \bigcup_{i=1}^{k}\beta _i$ 라고 하고 $A = [\mathbf{T}]_{\beta }, B_i = [\mathbf{T}_{\mathbf{W}_i}]_{\beta _{i}}$ 라고 하면 다음이 성립한다.
+
+    $$ A = \bigoplus_{i=1}^{k} B_i $$
+
+- 증명
+
+    $k = 2$ 를 가정하자. 
+
+    [문제 5.4-12](#d5371600a) 의 증명과정은 $\mathbf{T}$-불변 부분공간의 순서기저로 이루어진 $\mathbf{V}$ 의 기저로 $\mathbf{T}$ 를 행렬표현하면 $\mathbf{T}$-불변의 기저로 표현된 열들이 반드시 $\mathbf{T}$-불변의 기저로만 표현되어야 함을 말해준다. 즉, $\beta _1 = \{v_1, \dots, v_s\}, \beta _2 = \{v _{s+1}, \dots, v_t\}$ 를 가정하면 $\beta = \beta _1 \cup \beta _2$ 는 $\mathbf{V}$ 의 순서기저가 되고 $A = [\mathbf{T}]_{\beta }$ 는 다음과 같다.
+
+    $$ \mathbf{T}(v_1) = \sum_{i=1}^{s}a _{i1}v_1 $$
+
+    $$ \vdots $$
+
+    $$ \mathbf{T}(v_s) = \sum_{i=1}^{s}a _{is}v_s $$
+
+    $$ \mathbf{T}(v _{s+1}) = \sum_{i=s+1}^{t}a _{i,s+1}v _{s+1} $$
+
+    $$ \vdots $$
+
+    $$ \mathbf{T}(v _{t}) = \sum_{i=t}^{t}a _{it}v _{t} $$
+
+    $$ \implies A = \begin{pmatrix} B_1&O\\ O&B_2\\ \end{pmatrix} $$
+
+    이는 $A = B_1 \oplus B_2$ 을 뜻한다. ▲ 
+
+    $k-1$ 에서 정리가 성립함을 가정하고 $k$ 에 대하여 성립함을 보이자. $\mathbf{W}=\displaystyle \bigoplus_{i=1}^{k-1}\mathbf{W}_i$ 에 대하여 $\beta ' = \displaystyle  \bigcup_{i=1}^{k-1}\beta _i$ 로 두면 다음이 성립한다.
+    
+    $$ [\mathbf{T}_{\mathbf{W}}]_{\beta '} = \bigoplus_{i=1}^{k-1}B_i = B' $$
+
+    [문제 5.4-12](#d5371600a) 의 증명과정은 $\mathbf{T}$-불변 부분공간의 순서기저로 이루어진 $\mathbf{V}$ 의 기저로 $\mathbf{T}$ 를 행렬표현하면 $\mathbf{T}$-불변의 기저로 표현된 열들이 반드시 $\mathbf{T}$-불변의 기저로만 표현되어야 함을 말해준다. 즉, $\beta ' = \{v_1, \dots, v_s\}, \beta _k = \{v _{s+1}, \dots, v_t\}$ 를 가정하면 $\beta = \beta ' \cup \beta _k$ 는 $\mathbf{V}$ 의 순서기저가 되고 $A = [\mathbf{T}]_{\beta }$ 는 다음과 같다.
+
+    $$ \mathbf{T}(v_1) = \sum_{i=1}^{s}a _{i1}v_1 $$
+
+    $$ \vdots $$
+
+    $$ \mathbf{T}(v_s) = \sum_{i=1}^{s}a _{is}v_s $$
+
+    $$ \mathbf{T}(v _{s+1}) = \sum_{i=s+1}^{t}a _{i,s+1}v _{s+1} $$
+
+    $$ \vdots $$
+
+    $$ \mathbf{T}(v _{t}) = \sum_{i=t}^{t}a _{it}v _{t} $$
+
+    $$ \implies A = \begin{pmatrix} B'&O\\ O&B_k\\ \end{pmatrix} $$
+
+    이는 $A = B' \oplus B_k$ 을 뜻한다. $\displaystyle  B' = \bigoplus_{i=1}^{k-1}B_i$ 이므로 다음이 성립한다. 
+
+    $$ \therefore A = \bigg (\bigoplus_{i=1}^{k-1}B_i\bigg ) \oplus B_k = \bigoplus_{i=1}^{k}B_i \tag*{■} $$
 

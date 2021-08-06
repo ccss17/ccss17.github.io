@@ -15,6 +15,7 @@ div.index {
   font-family: Consolas, "Courier New", monospace;
   line-height: 3.8px;
   font-size: 18px !important;
+  overflow-x: visible !important;
 }
 
 img {
