@@ -74,5 +74,5 @@ def create_category():
 
 
 if __name__ == '__main__':
-    # create_def_link()
+    create_def_link()
     create_category()
