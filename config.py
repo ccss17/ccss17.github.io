@@ -47,7 +47,7 @@ def create_category():
 
     nav = yaml.load(index)['nav']
     del nav[0]
-    nav = {'ccss17': nav}
+    nav = {'root': nav}
 
     tree = Tree()
     root = next(iter(nav))
@@ -74,5 +74,10 @@ def create_category():
 
 
 if __name__ == '__main__':
-    create_def_link()
-    create_category()
+    import sys
+    if sys.argv[1] == '-d':
+        create_def_link()
+    elif sys.argv[1] == '-c':
+        create_category()
+    else:
+        print('Invalid argument')

@@ -18,7 +18,8 @@
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/LinearTransformation>Linear&nbsp;Transformation</a></p><p>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/MatrixOperation>Matrix&nbsp;Operation</a></p><p>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/Determinants>Determinants</a></p><p>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/LinearAlgebra/Diagonalization>Diagonalization</a></p><p>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/Diagonalization>Diagonalization</a></p><p>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/LinearAlgebra/InnerProductSpaces>Inner&nbsp;Product&nbsp;Spaces</a></p><p>
 ├──&nbsp;Paper</p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/GEB>Gödel,&nbsp;Escher,&nbsp;Bach</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/1404.6388>Performance&nbsp;of&nbsp;Python&nbsp;runtimes&nbsp;on&nbsp;a&nbsp;non-numeric&nbsp;scientific&nbsp;code</a></p><p>

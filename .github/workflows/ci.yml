@@ -17,7 +17,8 @@ jobs:
           cd treelib
           python setup.py install
       - run: |
+          python config.py -c
           mkdocs build
-          python config.py
+          python config.py -d
           ghp-import site
           git push -f origin gh-pages
