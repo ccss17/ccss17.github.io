@@ -416,13 +416,13 @@
 
     이므로 $\mathbf{U} =\mathbf{T}$ 이다. ■ 
 
+759379ac7 replace
+
 !!! tldr "정리 2.6 따름정리"
 
-    벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한집합 기저 $\{v_1, \dots, v_n\}$ 을 가지면 두 선형변환 $\mathbf{U} , \mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 
+    벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한집합 기저 $\{v_1, \dots, v_n\}$ 을 가지면 두 선형변환 $\mathbf{U} , \mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음이 성립한다.
 
     $$ i \in \{1, \dots, n\} : \mathbf{U} (v_i) = \mathbf{T} (v_i) \implies \mathbf{U} = \mathbf{T}  $$
-
-    이다.
 
 - 이 정리는 두 선형변환이 기저에서 상이 같으면 같은 선형변환임을 말하고 있다.
 
@@ -607,6 +607,8 @@
     - $a \mathbf{T} : \mathbf{V} \to \mathbf{W}, (a \mathbf{T} )(x) = a \mathbf{T} (x)$
 
 - 이는 함수의 합의 스칼라 곱에 대한 보편적 정의인데 선형변환의 합과 스칼라 곱이 여전히 선형임을 [다음 정리](#91b876399)가 말해준다.
+
+## Set of All Linear Maps is Vector Space
 
 !!! tldr "정리 2.7"
 
@@ -1430,7 +1432,7 @@
 
     동형은 동치관계이다.
 
-- **앞으로 두 벡터공간이 동형이라는 것을 동치관계 $\cong$ 으로 표기한다.**
+- ^^**앞으로 두 벡터공간이 동형이라는 것을 동치관계 $\cong$ 으로 표기한다.**^^
 
 - 증명
 
@@ -1839,3 +1841,122 @@
 - 증명
 
 - 이 정리는 서로 다른 벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 정의된 선형변환에서도 성립한다. 이 경우 $\mathbf{V}$ 의 기저를 바꾸듯이 $\mathbf{W}$ 의 기저도 바꿀 수 있다. 
+
+# Dual Space
+
+!!! tldr "선형범함수(linear functional, linear form, one-form, covector)"
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에서 체 $\mathbf{F}$ 로 가는 선형변환이다.
+
+- 체 $\mathbf{F}$ 는 $\mathbf{F}$ 에서의 1차원 벡터공간이다.
+
+- 이제 선형범함수를 $$ \mathbf{f}, \mathbf{g}, \mathbf{h}, \dots $$ 와 같은 서체로 나타내자.
+
+- 예시
+
+    $\mathbf{V}= \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 함수 $\mathbf{f}: \mathbf{V}\to \mathbf{F}, A \to \text{tr} (A)$ 는 선형범함수이다.
+
+!!! tldr "푸리에 계수(Fourier coefficient)"
+
+    폐구간 $[0, 2 \pi ]$ 에서 정의된 연속인 실함수로 이루어진 벡터공간 $\mathbf{V}$ 에 대하여 $g \in \mathbf{V}$ 를 고정하여 다음과 같이 정의한 함수 $\mathbf{h}: \mathbf{V}\to \R$ 를 가정하자.
+
+    $$ \mathbf{h}(x) = \frac{1}{2 \pi }\int_{0}^{2 \pi }x(t)g(t)dt $$
+
+    $g(t) = \sin nt$ 또는 $g(t) = \cos nt$ 일 때 $\mathbf{h}(x)$ 를 $x$ 의 $n$번째 푸리에 계수라고 한다.
+
+- 함수 $\mathbf{h}$ 는 선형범함수의 예시이다.
+
+!!! tldr "좌표함수(coordinate function)"
+
+    순서기저 $\beta = \{x_1, x_2, \dots, x_n\}$ 를 가지는 유한차원 벡터공간 $\mathbf{V}$ 와 $i \in \{1,\dots,n\}$ 에 대하여 다음과 같이 정의된 함수 $\mathbf{f}_i: \mathbf{V}\to \mathbf{F}$ 를 기저 $\beta$ 에 대한 $i$번째 좌표함수라 한다.
+
+    $$ x \in \mathbf{V} : [x] _{\beta } = \begin{pmatrix} a_{1}\\ a_{2}\\ \vdots\\ a_{n}\\ \end{pmatrix} \implies \mathbf{f}_i(x) = a_i $$
+
+- 좌표함수는 $\mathbf{V}$ 의 선형범함수이다.
+
+- $\mathbf{f}_i(x_j) = \delta _{ij}$ 이다.
+
+!!! tldr "쌍대공간(dual space)"
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에 대한 벡터공간 $\mathbf{V}^{*} := \mathcal{L}(\mathbf{V},\mathbf{F})$ 를 $\mathbf{V}$ 의 쌍대공간이라 한다.
+
+- $\mathbf{V}^{*}$ 은 [함수의 합과 스칼라곱](#63a07e35d) 이 정의된 $\mathbf{V}$ 의 모든 선형범함수로 이루어진 벡터공간이다.
+
+!!! tldr ""
+
+    벡터공간 $\mathbf{V}$ 와 쌍대공간 $\mathbf{V}^{*}$ 에 대하여 다음이 성립한다.
+
+    $$ \mathbf{V} \cong \mathbf{V}{}^{*} $$
+
+- 증명
+
+    $\mathbf{F}$ 는 1차원 벡터공간이므로 $\dim (\mathbf{F}) = 1$ 이다. 따라서 [정리 2.20 따름정리](#25316452a) 에 의하여 다음이 성립한다. 
+
+    $$ \dim (\mathbf{V}{}^{*}) = \dim (\mathcal{L}(\mathbf{V}, \mathbf{F})) = \dim (\mathbf{V}) \dim (\mathbf{F}) = \dim (\mathbf{V}) $$
+
+    [정리 2.19](#af05a99e0) 에 의하여 $\mathbf{V}$ 와 $\mathbf{V}^{*}$ 은 동형이다. ■ 
+
+!!! tldr "이중 쌍대공간(double dual)"
+
+    벡터공간 $\mathbf{V}$ 의 쌍대공간 $\mathbf{V}^{*}$ 의 쌍대공간 $\mathbf{V}^{**}$ 을 $\mathbf{V}$ 의 이중 쌍대공간이라 한다.
+
+!!! tldr "정리 2.24"
+
+    순서기저 $\beta  = \{x_1, x_2, \dots, x_n \}$ 을 가지는 유한차원 벡터공간 $\mathbf{V}$ 와 $\beta$ 의 $i$번째 좌표함수 $\mathbf{f}_i$ 에 대하여 $\beta {}^{*} = \{\mathbf{f}_1, \mathbf{f}_2, \dots, \mathbf{f}_n \}$ 는 $\mathbf{V}^{*}$ 의 순서기저이다. 즉, 다음이 성립한다.
+
+    $$ \forall \mathbf{f} \in \mathbf{V}{}^{*} : \mathbf{f} = \sum_{i=1}^{n}\mathbf{f}(x_i)\mathbf{f}_i $$
+
+- 증명
+
+    $\dim (\mathbf{V}{}^{*}) = n$ 이므로 다음과 같이 $\beta {}^{*}$ 가 $\mathbf{V}^{*}$ 을 생성함을 보이면 증명이 끝난다.
+    
+    $$ \forall \mathbf{f}\in \mathbf{V}{}^{*} : \mathbf{f} = \sum_{i=1}^{n}\mathbf{f}(x_i)\mathbf{f}_i $$
+
+    $\displaystyle \mathbf{g} = \sum_{i=1}^{n}\mathbf{f}(x_i)\mathbf{f}_i$ 로 두면 $j \in \{1,\dots,n\}$ 에 대하여 [함수의 합의 정의](#63a07e35d) 에 의하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}
+    \mathbf{g}(x_j) &= \bigg (\sum_{i=1}^{n}\mathbf{f}(x_i)\mathbf{f}_i \bigg )(x_j) = \sum_{i=1}^{n}\mathbf{f}(x_i)\mathbf{f}_i(x_j) \\
+    &= \sum_{i=1}^{n}\mathbf{f}(x_i)\delta _{ij} = \mathbf{f}(x_j)\\
+    \end{split}\end{equation} \tag*{} $$
+
+    정리 2.6 따름정리에 의하여 $\mathbf{f} = \mathbf{g}$ 이다. ■ 
+
+!!! tldr "쌍대기저(dual basis)"
+
+    순서기저 $\beta  = \{x_1, x_2, \dots, x_n \}$ 을 가지는 유한차원 벡터공간 $\mathbf{V}$ 와 $i, j \in \{1,\dots,n\}$ 에 대하여 $\mathbf{f}_i(x_j) = \delta _{ij}$ 를 만족하는 $\mathbf{V}^{*}$ 의 순서기저 $\beta {}^{*} = \{\mathbf{f}_1, \mathbf{f}_2, \dots, \mathbf{f}_n \}$ 를 $\beta$ 의 쌍대기저라고 한다.
+
+- 순서기저 $\beta$ 의 원소 $x_j$ 에 대하여 $\mathbf{f}_i(x_j) = \delta _{ij}$ 인 것은 좌표함수라는 뜻이다. 따라서 쌍대기저의 정의는 정리 2.24 에서의 집합 $\beta {}^{*}$ 와 같다.
+
+    또한 정리 2.24 는 쌍대기저 $\beta {}^{*}$ 의 존재성을 보장해준다.
+
+    쌍대기저의 존재성이 보장된 것을 기반으로 이 쌍대기저의 정의는 정리 2.24 에서 말하는 쌍대공간 $\mathbf{V}^{*}$ 의 기저를 구하는 방법을 알려준다. 아래 예시를 보자.
+
+- 예시 
+
+    벡터공간 $\R ^{2}$ 의 순서기저 $\beta = \{(2,1), (3,1)\}$ 에 대한 $\beta$ 의 쌍대기저 $\beta {}^{*}=\{\mathbf{f}_1, \mathbf{f}_2\}$ 를 구해보자. 
+
+    $$ 1 = \mathbf{f}_1(2, 1) = \mathbf{f}_1(2e_1 + e_2) = 2 \mathbf{f}_1(e_1) + \mathbf{f}_1(e_2) $$
+
+    $$ 0 = \mathbf{f}_1(3, 1) = \mathbf{f}_1(3e_1 + e_2) = 3 \mathbf{f}_1(e_1) + \mathbf{f}_1(e_2) $$
+
+    연립방정식을 풀면 $\mathbf{f}_{1}(e_1) = -1, \mathbf{f}_{1}(e_2) = 3$ 을 얻는다. 따라서 $\mathbf{f}_{1}(x, y) = -x + 3y$ 이다. 같은 방식으로 $\mathbf{f}_{2}(x,y)=x-2y$ 를 얻을 수 있다. 
+
+!!! tldr ""
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 의 각각의 순서기저 $\beta , \gamma$ 와 선형변환 $\mathbf{T}: \mathbf{V}\to \mathbf{W}$ 에 대하여 다음을 만족하는 함수 $\mathbf{T}^{t}: \mathbf{W}{}^{*}\to \mathbf{V}{}^{*}$ 를 가정하자.
+
+    $$ \forall \mathbf{g}_{} \in \mathbf{W}{}^{*} : \mathbf{T}^{t}(\mathbf{g}_{}) = \mathbf{g}_{}\mathbf{T} $$
+
+    함수 $\mathbf{T}^{t}$ 는 선형변환이고, $[\mathbf{T}^{t}]^{\beta {}^{*}}_{\gamma {}^{*}} = ([\mathbf{T}]^{\gamma}_{\beta} )^{t}$ 를 만족한다.
+
+- [정리 2.20](#48fa4f52a) 은 선형변환 $\mathbf{T}$ 에 대응하는 행렬 $A = [\mathbf{T}]^{\gamma}_{\beta}$ 가 존재함을 말해준다. 이 정리는 $A ^{t}$ 에 대응하는 선형변환이 무엇인지 알려준다. 
+
+- 증명
+
+!!! tldr "선형변환의 전치(transpose of linear map)"
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 의 각각의 순서기저 $\beta , \gamma$ 와 선형변환 $\mathbf{T}: \mathbf{V}\to \mathbf{W}$ 에 대하여 다음을 만족하는 함수 $\mathbf{T}^{t}: \mathbf{W}{}^{*}\to \mathbf{V}{}^{*}$ 를 $\mathbf{T}$ 의 전치라 한다.
+
+    $$ \forall \mathbf{g}_{} \in \mathbf{W}{}^{*} : \mathbf{T}^{t}(\mathbf{g}_{}) = \mathbf{g}_{}\mathbf{T} $$
+
+    

@@ -16,7 +16,7 @@
 
 - **복소수 $z = a+bi$ 의 실수부를 $\Re (z) = \mathcal{Re}(z) = \text{Re}(z) = a$ 로 표기하고, 허수부를 $\Im (z) = \mathcal{Im}(z) = \text{Im}(z) = b$ 로 표기한다.**
 
-!!! tldr "복소수체 $\mathbb{C}$"
+!!! tldr "복소수체(Complex number field)"
 
     복소수체 $\mathbb{C}$ 는 두 복소수 $z = a+bi, w = c+di$ 에 대하여 다음의 합과 곱이 정의된 실수체의 확장체이다.
 
@@ -327,7 +327,7 @@
 
 !!! tldr "Antilinear map, 켤레선형(conjugate-linear)"
 
-    $\mathbf{F}=\R \lor \mathbf{F}=\mathbb{C}$ 인 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 와 벡터 $x, y \in \mathbf{V}$ 와 스칼라 $a, b \in \mathbf{F}$ 대하여 다음을 만족하는 함수 $f: \mathbf{V}\to \mathbf{W}$ 를 antilinear 또는 켤레 선형이라고 한다.
+    $\mathbf{F} \in \{\R, \mathbb{C}\}$ 인 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 와 벡터 $x, y \in \mathbf{V}$ 와 스칼라 $a, b \in \mathbf{F}$ 대하여 다음을 만족하는 함수 $f: \mathbf{V}\to \mathbf{W}$ 를 antilinear 또는 켤레 선형이라고 한다.
 
     $$ f(ax + by) = \overline{a}f(x) + \overline{b}f(y) $$
 
@@ -590,9 +590,132 @@
 
 # Orthogonal
 
+## Orthogonal in Euclidean Space
+
+!!! tldr "코사인(cosine)"
+
+    $C$ 가 직각인 삼각형 $ABC$ 에서 코사인 $A$ 는 다음과 같은 빗변에 대한 밑변의 비율이다.
+
+    $$ \cos A = \frac{\overline{AC}}{\overline{AB}} $$
+
+- 다음 그림은 $\cos A = \frac{b}{h}$ 가 빗변에 대한 밑변의 비율임을 보여준다.
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Trigonometry_triangle.svg/338px-Trigonometry_triangle.svg.png)
+
+!!! tldr "코사인 법칙(Law of cosines)"
+
+    삼각형 $ABC$ 의 세 각 $A, B, C$ 가 마주하는 변 $a, b, c$ 에 대하여 다음이 성립한다. 
+
+    $$ c ^{2} = a ^{2} + b ^{2} - 2ab \cos C $$
+
+- $C$ 가 직각일 경우 $\cos \dfrac{\pi }{2} = 0$ 이므로 다음과 같은 피타고라스의 정리를 얻는다.
+
+    $$ c ^{2} = a ^{2} + b ^{2} $$
+
+- 증명
+
+    다음 그림처럼 삼각형 $ABC$ 의 세 점 $A, B, C$ 의 각을 각각 $\alpha , \beta , \gamma$ 로 두고 마주하는 변을 각각 $a, b, c$ 로 두자. 
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Triangle_with_notations_2.svg/330px-Triangle_with_notations_2.svg.png)
+
+    다음 그림은 코사인의 정의에 의하여 $c = a \cos \beta + b \cos \alpha$ 가 성립함을 보여준다.
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Triangle-with-cosines.svg/450px-Triangle-with-cosines.svg.png)
+
+    같은 원리로 다음을 얻는다.
+
+    $$ a = c \cos \beta + b \cos \gamma $$
+
+    $$ b = c \cos \alpha + a \cos \gamma $$
+
+    이를 기반으로 다음이 성립한다.
+
+    $$ a ^{2} = ac \cos \beta + ab \cos \gamma \tag{1} $$
+
+    $$ b ^{2} = bc \cos \alpha + ab \cos \gamma \tag{2} $$
+
+    $$ c ^{2} = ac \cos \beta + bc \cos \alpha \tag{3} $$
+
+    $(1)$ 과 $(2)$ 를 더하고 $(3)$ 을 빼면 다음이 성립한다.
+
+    $$ a ^{2} + b ^{2} - c ^{2} = 2ab \cos \gamma $$
+
+    이것을 다음과 같이 정리하여 코사인 법칙을 얻는다.
+
+    $$ \therefore c ^{2} = a ^{2} + b ^{2} -2ab \cos C \tag*{■} $$
+
+!!! tldr "두 벡터가 이루는 각"
+
+    2차원 또는 3차원 유클리드 공간 $\mathbb{E} \in \{\R ^{2}, \R ^{3}\}$ 의 벡터 $x, y$ 가 이루는 각은 다음과 같다.
+
+    $$ \theta = \arccos \bigg (\dfrac{\big <u,v \big >}{\|u\|\|v\|} \bigg ) $$
+
+- 유클리드 공간에는 표준내적이 부여되어 있고 표준내적은 점곱(dot product) 로 표현되므로 자주 다음과 같이 정의되기도 한다.
+
+    $$ \theta = \arccos \bigg (\dfrac{u \cdot v}{\|u\|\|v\|} \bigg ) $$
+
+- 증명
+
+    3차원 유클리드 공간 $\R ^{3}$ 에서 증명하면 $\R ^{2}$ 에서는 당연히 성립한다.
+
+    벡터로 표현하는 직선의 방정식의 증명과정에서 보았었던 그림을 다시 보자.
+
+    ![](https://user-images.githubusercontent.com/16812446/113727560-32b6d780-9730-11eb-92c8-c3d69dd3c680.png)
+
+    $u$ 의 종점, 즉 $A$ 의 좌표를 $u = (u_1, u_2, u_3)$ 로 두고 $v$ 의 종점, 즉 $B$ 의 좌표를 $v = (v_1, v_2, v_3)$ 로 두자. 그러면 $w = (v_1-u_1, v_2-u_2, v_3-u_3)$ 이다.
+
+    위 그림에서 벡터 $u, v$ 가 이루는 각 $\theta$ 를 구해보자. 삼각형 $ABO$ 와 각 $\theta$ 에 대하여 코사인 법칙에 의하여 다음이 성립한다. 
+
+    $$\|v\| ^{2} + \|u\| ^{2} - \|w\| ^{2} = 2 \|v\|\|u\| \cos \theta \tag{1} $$
+
+    유클리드 공간에는 표준내적이 부여되었으므로 다음이 성립한다. 
+
+    $$ \|v\|^{2} = \big <v,v \big > = v_1 ^{2} + v_2 ^{2} + v_3 ^{2} \tag{2} $$
+
+    $$ \|u\|^{2} = \big <u,u \big > = u_1 ^{2} + u_2 ^{2} + u_3 ^{2} \tag{3} $$
+
+    $$ \begin{equation}\begin{split}
+    \|w\|^{2} &= \big <w,w \big > = (v_1-u_1) ^{2} + (v_2-u_2) ^{2} + (v_3-u_3) ^{2}\\
+    &= v_1 ^{2} - 2v_1u_1 + u_1 ^{2} + v_2 ^{2} - 2v_2u_2 + u_2 ^{2} + v_3 ^{2} - 2v_3u_3 + u_3 ^{2} \\
+    \end{split}\end{equation} \tag{4} $$
+
+    $(2)$ 과 $(3)$ 를 더하고 $(4)$ 을 빼면 다음이 성립한다. 
+
+    $$ \|v\|^{2} + \|u\|^{2} - \|w\|^{2} = 2v_1u_1 + 2v_2u_2 + 2v_3u_3 $$
+
+    그러면 이것을 $(1)$ 에 적용함으로써 다음이 성립함을 알 수 있다.
+
+    $$ 2 \|v\|\|u\| \cos \theta = 2v_1u_1 + 2v_2u_2 + 2v_3u_3 $$
+
+    $$ \iff \cos \theta = \dfrac{v_1u_1 + v_2u_2 + v_3u_3}{\|u\|\|v\|} = \dfrac{\big <v,u \big >}{\|v\|\|u\|}  $$
+
+    $\theta$ 는 두 벡터가 이루는 각이므로 $0 \leq \theta < \pi$ 를 만족한다. 따라서 두 벡터가 이루는 각은 다음과 같다. 
+
+    $$ \therefore \theta = \arccos \bigg ( \dfrac{\big <v,u \big >}{\|v\|\|u\|}\bigg ) \tag*{■} $$
+
+!!! tldr "유클리드 공간에서의 직교"
+
+    2차원 또는 3차원 유클리드 공간 $\mathbb{E} \in \{\R ^{2}, \R ^{3}\}$ 의 벡터 $x, y$ 가 직교인 것과 $\big <x,y \big > = 0$ 인 것은 동치이다.
+
+- 기본적으로 직교란 두 벡터가 이루는 각이 $90 \degree$ 인 것이다.
+
+- 증명
+
+    두 벡터가 이루는 각이 $90 \degree = \dfrac{\pi }{2}$ 이면 $\cos \dfrac{\pi }{2} = 0$ 이므로 두 벡터가 이루는 각에 의하여 다음이 성립한다. 
+
+    $$ \dfrac{\pi }{2} = \arccos \bigg (\dfrac{\big <u,v \big >}{\|u\|\|v\|} \bigg ) $$
+
+    $$ \iff \cos \frac{\pi }{2} = \dfrac{\big <u,v \big >}{\|u\|\|v\|} = 0 $$
+
+    $$ \iff \big <u,v \big > = 0 \tag*{■} $$
+
+## Definition of Orthogonal
+
 !!! tldr "직교(orthogonal), 수직(perpendicular)"
 
-    내적공간 $\mathbf{V}$ 와 $\mathbf{V}$ 의 벡터 $x, y$ 에 대하여 $\big <x,y \big > = 0$ 이면 두 벡터는 직교한다.
+    내적공간 $\mathbf{V}$ 와 벡터 $x, y \in \mathbf{V}$ 에 대하여 $\big <x,y \big > = 0$ 이면 두 벡터는 직교한다.
+
+- 유클리드 공간에서 두 벡터 $x, y$ 의 직교는 $\big <x,y \big > = 0$ 과 동치였다. 이 수직의 개념을 임의의 내적공간으로 일반화시킨 것이다. 
 
 - 벡터에 영이 아닌 스칼라를 곱해도 직교성은 불변한다.
 
@@ -602,7 +725,7 @@
 
 !!! tldr "단위벡터(unit vector)"
 
-    내적공간 $\mathbf{V}$ 에서 $\|x\| = 1$ 인 벡터를 단위벡터라 한다.
+    내적공간 $\mathbf{V}$ 에서 $\|x\| = 1$ 인 벡터이다.
 
 !!! tldr "정규직교집합(orthonormal)"
 
@@ -610,10 +733,25 @@
 
 - 집합 $S = \{v_1, v_2, \dots\}$ 가 정규직교집합인 것과 $\big <v_i,v_j \big > = \delta _{ij}$ 인 것은 동치이다. 
 
-!!! tldr ""
-
-    영이 아닌 벡터 $x$ 에 대하여 $\frac{x}{\|x\|}$ 는 단위벡터이다.
-
 !!! tldr "정규화(normalizing)"
 
-    영이 아닌 벡터에 노름의 역수를 곱하는 것이다.
+    내적공간 $\mathbf{V}$ 의 영이 아닌 벡터를 방향을 유지한채 크기만 단위벡터로 바꾸는 함수 $f: \mathbf{V} \setminus \{0\} \to \mathbf{V} \setminus \{0\}$ 로써 다음과 같이 정의된다.
+
+    $$ f(x) = \dfrac{x}{\|x\|} $$
+
+- 즉, 정규화란 영이 아닌 벡터에 노름의 역수를 곱하는 것이다. 이렇게 하면 원래 벡터 $x$ 의 방향이 보존된 단위벡터를 얻을 수 있다. 
+
+    - 증명
+
+        노름의 조건 2) 를 사용하여 임의의 벡터 $x$ 에 노름의 역수를 곱한 것의 노름을 구해보자.
+
+        $$ \bigg \| \dfrac{1}{\|x\|}x\bigg \| = \bigg |\frac{1}{\|x\|} \bigg |\|x\| = \frac{1}{\|x\|} \|x\| = 1 $$
+
+        즉, 임의의 벡터 $x$ 에 노름의 역수를 곱한 벡터의 노름은 $1$ 이다. 따라서 이렇게 얻어진 벡터는 단위벡터이다.
+
+- 예시 
+
+    $\mathbf{F}^{3}$ 의 부분집합 $\{(1,1,0), (1,-1,1), (-1,1,2)\}$ 은 직교집합이다. 이 집합을 정규화하면 다음과 같은 정규직교집합을 얻는다.
+
+    $$ \bigg \{\frac{1}{\sqrt[]{2}}(1,1,0), \frac{1}{\sqrt[]{3}}(1, -1, 1), \frac{1}{\sqrt[]{6}}(-1, 1, 2) \bigg \} $$
+

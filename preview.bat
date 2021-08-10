@@ -1,2 +1,3 @@
+python config.py -c
 mkdocs build
-python config.py
+python config.py -d

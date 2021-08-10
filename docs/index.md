@@ -1,4 +1,4 @@
-<div class="index"><p><i class="fas fa-fire"></i></p><p>
+<div class="index"><p>root</p><p>
 ├──&nbsp;Math</p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;Foundation&nbsp;of&nbsp;Foundation&nbsp;of&nbsp;Math</p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/MathHistory>History&nbsp;of&nbsp;Math</a></p><p>
