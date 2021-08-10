@@ -416,8 +416,6 @@
 
     이므로 $\mathbf{U} =\mathbf{T}$ 이다. ■ 
 
-759379ac7 replace
-
 !!! tldr "정리 2.6 따름정리"
 
     벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한집합 기저 $\{v_1, \dots, v_n\}$ 을 가지면 두 선형변환 $\mathbf{U} , \mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음이 성립한다.
@@ -522,7 +520,7 @@
 
 - $A$ 의 $j$ 열은 $[\mathbf{T} (v_j)] _{\gamma }$ 이다.
 
-- 선형변환 $\mathbf{U} : \mathbf{V} \to \mathbf{W}$ 가 $[\mathbf{U} ] ^{\gamma } _{\beta } = [\mathbf{T} ]^{\gamma }_{\beta }$ 를 만족하면 [정리 2.6 따름정리](#759379ac7) 에 의하여 $\mathbf{U} = \mathbf{T}$ 이다.
+- 선형변환 $\mathbf{U} : \mathbf{V} \to \mathbf{W}$ 가 $[\mathbf{U} ] ^{\gamma } _{\beta } = [\mathbf{T} ]^{\gamma }_{\beta }$ 를 만족하면 [정리 2.6 따름정리](#52dd3d90f) 에 의하여 $\mathbf{U} = \mathbf{T}$ 이다.
 
 - 예시 
 
@@ -1110,7 +1108,7 @@
 
     $$ \mathbf{L}_{AE}(e_j) = (AE)e_j = A(Ee_j) = \mathbf{L}_{A}(Ee_j) = \mathbf{L}_{A}(\mathbf{L}_{E}(e_j)) $$
 
-    이다. [정리 2.6 따름정리](#759379ac7) 에 의하여 $\mathbf{L}_{AE} = \mathbf{L}_{A}\mathbf{L}_{E}$ 이다. ▲ 
+    이다. [정리 2.6 따름정리](#52dd3d90f) 에 의하여 $\mathbf{L}_{AE} = \mathbf{L}_{A}\mathbf{L}_{E}$ 이다. ▲ 
 
     7: 
 
@@ -1919,7 +1917,7 @@
     &= \sum_{i=1}^{n}\mathbf{f}(x_i)\delta _{ij} = \mathbf{f}(x_j)\\
     \end{split}\end{equation} \tag*{} $$
 
-    정리 2.6 따름정리에 의하여 $\mathbf{f} = \mathbf{g}$ 이다. ■ 
+    [정리 2.6 따름정리](#52dd3d90f)에 의하여 $\mathbf{f} = \mathbf{g}$ 이다. ■ 
 
 !!! tldr "쌍대기저(dual basis)"
 
