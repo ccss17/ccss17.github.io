@@ -11,6 +11,11 @@ div.arithmatex {
   font-size: 0.68rem !important;
 }
 
+.md-nav {
+  font-size: .6rem !important;
+  line-height: 1.2 !important;
+}
+
 div.index {
   font-family: Consolas, "Courier New", monospace;
   line-height: 3.8px;

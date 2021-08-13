@@ -560,7 +560,7 @@
 
         $$ \mathbf{T} (f(x)) = f(x) + f'(x) + f''(x) $$
 
-        $\mathbf{P}_{2}(\R)$ 의 표준 순서기저를 $\beta = \{1, x, x ^{2}\}$ 라고 하면 [선형변환의 행렬표현](../LinearTransformation/#62c3702a2) 에 의하여 다음이 성립한다.
+        $\mathbf{P}_{2}(\R)$ 의 표준 순서기저를 $\beta = \{1, x, x ^{2}\}$ 라고 하면 [선형변환의 행렬표현](../LinearTransformation/#c16bc5e5b) 에 의하여 다음이 성립한다.
 
         $$ f(1) = 1 = 1 \cdot 1 + 0 \cdot x + 0 \cdot x ^{2} $$
 

@@ -114,15 +114,19 @@
 
     이기 때문이다.
 
-!!! tldr ""
+## Identity Transformation
 
-    항등변환(identity transformation) : $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{I} _{\mathbf{V} }: \mathbf{V} \to \mathbf{V}, x \mapsto x$ 로 정의된 선형변환이다.
+!!! tldr "항등변환(identity transformation)"
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{I} _{\mathbf{V} }: \mathbf{V} \to \mathbf{V}, x \mapsto x$ 로 정의된 선형변환이다.
 
 - 항등변환 $\mathbf{I} _{\mathbf{V} }$ 을 편의상 $\mathbf{I}$ 라 표기하기도 한다.
     
-!!! tldr ""
+## Zero Transformation
 
-    영변환(zero transformation) : $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{T} _{ 0}: \mathbf{V} \to \mathbf{W}, x \mapsto 0$ 로 정의된 선형변환이다.
+!!! tldr "영변환(zero transformation)"
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{T} _{ 0}: \mathbf{V} \to \mathbf{W}, x \mapsto 0$ 로 정의된 선형변환이다.
 
 # Null Space, Range
 
@@ -240,7 +244,7 @@
 
 - 위 예시에서 $\dim(\mathbf{N}(\mathbf{T})) + \dim(\mathbf{R}(\mathbf{T})) = 1 + 2 = 3 = \dim(\mathbf{P} _2(\R))$ 이 성립하였는데 이는 [정리 2.3](#cc24674bf) 에서와 같이 일반적으로 성립한다.
 
-## Nullity, Rank
+## Nullity
 
 !!! tldr "영공간의 차원(Nullity)"
 
@@ -251,6 +255,8 @@
     라고 한다. 
 
 - 지금까지 우리는 부분공간의 크기를 가늠할 때 차원을 사용했다. 영공간의 차원은 특히 중요하므로 새로운 이름 $\text{nullity}$ 을 붙혀서 다룬다.
+
+## Rank
 
 !!! tldr "랭크(rank), 계수"
 
@@ -502,17 +508,21 @@
 
 # Matrix Representation of Linear Map
 
+c16bc5e5b replace
+c16bc5e5b
 !!! tldr "선형변환의 행렬표현(matrix representation)"
 
-    유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 의 각각의 순서기저 $\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}$ 에 대하여 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 을 정의하면 
+    유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 의 각각의 순서기저 $\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}$ 에 대하여 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 을 정의하면 $j \in \{1,\dots,n\}, i \in \{1, \dots, m\}$ 에 대하여
 
-    $$ \mathbf{T} (v_j) = \sum_{i=1}^{m}a _{ij}w_i \qquad j \in \{1,\dots,n\}, i \in \{1, \dots, m\} $$
+    $$ \mathbf{T} (v_j) = \sum_{i=1}^{m}a _{ij}w_i $$
 
-    을 만족하는 유일한 스칼라 $a _{ij}\in \mathbf{F}$ 가 존재하는데, 이때 성분이 $A _{ij} = a _{ij}$ 인 $m \times n$ 행렬 $A$ 를 순서기저 $\beta , \gamma$ 에 대한 선형변환 $\mathbf{T}$ 의 행렬표현
+    을 만족하는 유일한 스칼라 $a _{ij}\in \mathbf{F}$ 가 존재한다. 성분이 $A _{ij} = a _{ij}$ 인 $m \times n$ 행렬 $A$ 를 순서기저 $\beta , \gamma$ 에 대한 선형변환 $\mathbf{T}$ 의 행렬표현
 
     $$ \boxed{A = [\mathbf{T} ] ^{\gamma } _{\beta } }$$ 
 
     라 한다.
+
+- 스칼라 $a _{ij}$ 의 유일성은 [정리 1.8](../VectorSpace/#8a514fc5c) 이 보장해준다. 
 
 - 우리는 이렇게 행렬과 선형변환을 연결했는데, [정리 2.8](#aa431d8ac) 은 이 연결이 합과 스칼라 곱을 보존함을 말해준다. 이를 위해 먼저 선형변환의 합과 스칼라 곱을 정의해볼 것이다.
 
@@ -832,7 +842,7 @@
 
     이다. 
 
-- 지금까지 하고 있는 일은 선형변환과 행렬 간의 대응관계를 연구하는 것이다. 먼저 [선형변환과 행렬의 대응](#62c3702a2)을 살펴보았다. 그리고 [선형변환의 합과 스칼라곱을 정의](#63a07e35d)한 다음 [이 연산이 행렬에서의 합과 스칼라곱의 구조를 보존한다](#aa431d8ac)는 것을 증명했다. 이제 두 선형변환의 합성에 어떤 행렬의 연산이 대응되는지 연구해야 한다. 즉, 행렬곱에 대하여 정의할 차례인 것이다.
+- 지금까지 하고 있는 일은 선형변환과 행렬 간의 대응관계를 연구하는 것이다. 먼저 [선형변환과 행렬의 대응](#c16bc5e5b)을 살펴보았다. 그리고 [선형변환의 합과 스칼라곱을 정의](#63a07e35d)한 다음 [이 연산이 행렬에서의 합과 스칼라곱의 구조를 보존한다](#aa431d8ac)는 것을 증명했다. 이제 두 선형변환의 합성에 어떤 행렬의 연산이 대응되는지 연구해야 한다. 즉, 행렬곱에 대하여 정의할 차례인 것이다.
 
     그렇다면 행렬 곱은 어째서 이렇게 정의되었나? 행렬 곱 정의가 두 선형변환의 합성의 구조를 보존해야 하기 때문이다. 
 
@@ -1498,7 +1508,7 @@
 
     $$ j \in \{1,2,\dots,n\} : \mathbf{T} (v_j) = \sum_{i=1}^{m}A _{ij} w_j $$
 
-    그러면 [선형변환의 행렬표현](#62c3702a2) 에 의하여 $A = [\mathbf{T}] ^{\gamma}_{\beta} = \Phi ^{\gamma}_{\beta} (\mathbf{T} )$ 이다. 그러므로 $\Phi ^{\gamma}_{\beta}$ 은 전단사이고, 결국 동형사상이다. ■ 
+    그러면 [선형변환의 행렬표현](#c16bc5e5b) 에 의하여 $A = [\mathbf{T}] ^{\gamma}_{\beta} = \Phi ^{\gamma}_{\beta} (\mathbf{T} )$ 이다. 그러므로 $\Phi ^{\gamma}_{\beta}$ 은 전단사이고, 결국 동형사상이다. ■ 
 
 !!! tldr "정리 2.19 따름정리"
 
@@ -1744,7 +1754,7 @@
 
     $$ \boxed{[\mathbf{I} _{\mathbf{V} }] ^{\beta'}_{\beta} = A _{\beta \to \beta '}} \tag{2}  $$ 
 
-    [선형변환의 행렬표현](#62c3702a2) 에 의하여 $[\mathbf{I} _{\mathbf{V} }] ^{\beta}_{\beta'}$ 의 $j$ 열은 $[\mathbf{I} _{\mathbf{V} }(u_j)] _{\beta '}$ 인데 [항등변환의 정의](#c604a0153)에 의하여 이는 곧 $[u_j] _{\beta '}$ 가 되고 [좌표벡터](#be888949c) 의 정의와 위에서 정의했었던 $(1)$ 의하여 결국
+    [선형변환의 행렬표현](#c16bc5e5b) 에 의하여 $[\mathbf{I} _{\mathbf{V} }] ^{\beta}_{\beta'}$ 의 $j$ 열은 $[\mathbf{I} _{\mathbf{V} }(u_j)] _{\beta '}$ 인데 [항등변환의 정의](#c604a0153)에 의하여 이는 곧 $[u_j] _{\beta '}$ 가 되고 [좌표벡터](#be888949c) 의 정의와 위에서 정의했었던 $(1)$ 의하여 결국
 
     $$ [u_j] _{\beta '} = \begin{pmatrix} a _{1j}\\ a _{2j}\\ \vdots \\ a _{nj}\\ \end{pmatrix} $$
 
@@ -1844,11 +1854,11 @@
 
 !!! tldr "선형범함수(linear functional, linear form, one-form, covector)"
 
-    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에서 체 $\mathbf{F}$ 로 가는 선형변환이다.
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{V}\to \mathbf{F}$ 에서 정의된 선형변환이다.
 
 - 체 $\mathbf{F}$ 는 $\mathbf{F}$ 에서의 1차원 벡터공간이다.
 
-- 이제 선형범함수를 $$ \mathbf{f}, \mathbf{g}, \mathbf{h}, \dots $$ 와 같은 서체로 나타내자.
+- 이제 선형범함수를 $\mathbf{f}, \mathbf{g}, \mathbf{h}, \dots$ 와 같은 서체로 나타내자.
 
 - 예시
 
@@ -1863,6 +1873,8 @@
     $g(t) = \sin nt$ 또는 $g(t) = \cos nt$ 일 때 $\mathbf{h}(x)$ 를 $x$ 의 $n$번째 푸리에 계수라고 한다.
 
 - 함수 $\mathbf{h}$ 는 선형범함수의 예시이다.
+
+## Coordinate Function
 
 !!! tldr "좌표함수(coordinate function)"
 
@@ -1882,7 +1894,7 @@
 
 !!! tldr ""
 
-    벡터공간 $\mathbf{V}$ 와 쌍대공간 $\mathbf{V}^{*}$ 에 대하여 다음이 성립한다.
+    유한차원 벡터공간 $\mathbf{V}$ 와 쌍대공간 $\mathbf{V}^{*}$ 에 대하여 다음이 성립한다.
 
     $$ \mathbf{V} \cong \mathbf{V}{}^{*} $$
 
@@ -1894,9 +1906,25 @@
 
     [정리 2.19](#af05a99e0) 에 의하여 $\mathbf{V}$ 와 $\mathbf{V}^{*}$ 은 동형이다. ■ 
 
+## Double Dual
+
 !!! tldr "이중 쌍대공간(double dual)"
 
     벡터공간 $\mathbf{V}$ 의 쌍대공간 $\mathbf{V}^{*}$ 의 쌍대공간 $\mathbf{V}^{**}$ 을 $\mathbf{V}$ 의 이중 쌍대공간이라 한다.
+
+!!! tldr ""
+
+    유한차원 벡터공간 $\mathbf{V}$ 에 대하여 다음이 성립한다.
+
+    $$ \mathbf{V}\cong \mathbf{V}{}^{*}\cong \mathbf{V}{}^{*}{}^{*}\cong \mathbf{V}{}^{*}{}^{*}{}^{*}\cong \dots $$
+
+- *$\mathbf{V}\cong \mathbf{V}{}^{*}$ 라는 정리에서 이 정리도 성립할 거라고 생각했는데 검증필요.*
+
+- 증명
+
+    $$ \because \mathbf{V}\cong \mathbf{V}{}^{*} $$
+
+- 여기에서 다루는 쌍대공간의 정리들은 이 정리만 제외하고 무한차원에서도 성립한다. 가령 쌍대공간의 존재성 정리나 쌍대기저의 존재성 정리 같은 것들은 무한차원에서도 성립하지만, 무한차원 벡터공간에서는 $\mathbf{V}, \mathbf{V}{}^{*}, \mathbf{V}{}^{*}{}^{*}$ 중 어느 두 공간도 동형이 아니다. 
 
 !!! tldr "정리 2.24"
 
@@ -1919,6 +1947,8 @@
 
     [정리 2.6 따름정리](#52dd3d90f)에 의하여 $\mathbf{f} = \mathbf{g}$ 이다. ■ 
 
+## Dual Basis
+
 !!! tldr "쌍대기저(dual basis)"
 
     순서기저 $\beta  = \{x_1, x_2, \dots, x_n \}$ 을 가지는 유한차원 벡터공간 $\mathbf{V}$ 와 $i, j \in \{1,\dots,n\}$ 에 대하여 $\mathbf{f}_i(x_j) = \delta _{ij}$ 를 만족하는 $\mathbf{V}^{*}$ 의 순서기저 $\beta {}^{*} = \{\mathbf{f}_1, \mathbf{f}_2, \dots, \mathbf{f}_n \}$ 를 $\beta$ 의 쌍대기저라고 한다.
@@ -1939,7 +1969,9 @@
 
     연립방정식을 풀면 $\mathbf{f}_{1}(e_1) = -1, \mathbf{f}_{1}(e_2) = 3$ 을 얻는다. 따라서 $\mathbf{f}_{1}(x, y) = -x + 3y$ 이다. 같은 방식으로 $\mathbf{f}_{2}(x,y)=x-2y$ 를 얻을 수 있다. 
 
-!!! tldr ""
+## Transpose of Linear Map
+
+!!! tldr "정리 2.25"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 의 각각의 순서기저 $\beta , \gamma$ 와 선형변환 $\mathbf{T}: \mathbf{V}\to \mathbf{W}$ 에 대하여 다음을 만족하는 함수 $\mathbf{T}^{t}: \mathbf{W}{}^{*}\to \mathbf{V}{}^{*}$ 를 가정하자.
 
@@ -1951,10 +1983,104 @@
 
 - 증명
 
+    $\mathbf{g}_{}\in \mathbf{W}{}^{*}$ 는 $\mathbf{W}\to \mathbf{F}$ 에서 정의된 선형변환이다. 따라서 $\mathbf{T}^{t}(\mathbf{g}_{})=\mathbf{g}_{}\mathbf{T}:\mathbf{V}\to \mathbf{F}$ 는 $\mathbf{V}$ 의 선형범함수이다. 그러므로  $\mathbf{g}_{}\mathbf{T}\in \mathbf{V}{}^{*}$ 이다. 따라서 $\mathbf{T}^{t}$ 는 $\mathbf{W}{}^{*}\to \mathbf{T}{}^{*}$ 에서 정의된 함수이다. ▲ 
+
+    이제 $\mathbf{T}^{t}$ 가 선형인지 확인하자. 먼저 $\mathbf{T}^{t}$ 의 정의에 의하여 다음이 성립한다.
+    
+    $$ \mathbf{T}^{t}(c \mathbf{g}_{1} + \mathbf{g}_{2})= (c \mathbf{g}_{1} + \mathbf{g}_{2}) \circ \mathbf{T} $$
+
+    그러면 $\mathbf{g}_{1}, \mathbf{g}_{2}\in \mathbf{W}{}^{*}$ 에 대하여 [함수의 합과 스칼라 곱의 정의](#63a07e35d)에 의하여 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split} (c \mathbf{g}_{1} + \mathbf{g}_{2}) \circ \mathbf{T}(x) &= (c \mathbf{g}_{1} + \mathbf{g}_{2}) (\mathbf{T}(x)) \\ &= (c \mathbf{g}_{1})(\mathbf{T}(x)) + (\mathbf{g}_{2}) (\mathbf{T}(x)) \\ &= c (\mathbf{g}_{1})(\mathbf{T}(x)) + (\mathbf{g}_{2}) (\mathbf{T}(x)) \\ &= c (\mathbf{g}_{1} \mathbf{T})(x) + (\mathbf{g}_{2}\mathbf{T})(x) \\ &= c (\mathbf{T}^{t}(\mathbf{g}_{1})) (x) + (\mathbf{T}^{t}(\mathbf{g}_{2}))(x) \\ \end{split}\end{equation} \tag*{} $$
+
+    그러므로 [함수의 합과 스칼라 곱의 정의](#63a07e35d)에 의하여 다음이 성립한다. 따라서 $\mathbf{T}^{t}$ 는 선형이다.
+
+    $$ \mathbf{T}^{t}(c \mathbf{g}_{1} + \mathbf{g}_{2})= (c \mathbf{g}_{1} + \mathbf{g}_{2}) \circ \mathbf{T} = c (\mathbf{T}^{t}(\mathbf{g}_{1}))  + (\mathbf{T}^{t}(\mathbf{g}_{2})) \tag*{▲} $$
+
+    순서기저를 $\beta = \{x_1, x_2, \dots, x_n \}$, $\gamma = \{y_1, y_2, \dots, y_m\}$ 으로 두고 각각의 쌍대기저를 $\beta {}^{*} = \{\mathbf{f}_{1}, \mathbf{f}_{2}, \dots, \mathbf{f}_{n}\}, \gamma {}^{*}= \{\mathbf{g}_{1}, \mathbf{g}_{2}, \dots, \mathbf{g}_{m}\}$ 로 두고 $A = [\mathbf{T}]^{\gamma}_{\beta}$ 로 두자. [선형변환의 행렬표현](#c16bc5e5b)을 구하기 위하여 $[\mathbf{T}^{t}]^{\beta {}^{*}}_{\gamma {}^{*}}$ 의 $j$ 열을 구하기 위해 $\mathbf{T}^{t}(\mathbf{g}_{j})$ 를 $\beta {}^{*}$ 의 일차결합으로 나타내자. $\mathbf{g}_{j}\mathbf{T}: \mathbf{V}\to \mathbf{F}\in \mathbf{V}{}^{*}$ 이므로 [정리 2.24](#f818af77d) 에 의하여 다음이 성립한다.
+
+    $$ \mathbf{T}^{t}(\mathbf{g}_{j}) = \mathbf{g}_{j}\mathbf{T} = \sum_{s=1}^{n}(\mathbf{g}_{j}\mathbf{T})(x_s)\mathbf{f}_{s} $$
+
+    $[\mathbf{T}^{t}]^{\beta {}^{*}}_{\gamma {}^{*}}$ 의 $j$ 열은 $[\mathbf{T}^{t}(\mathbf{g}_{j})]_{\beta {}^{*}}$ 이다. 따라서 $i$행 $j$열의 성분은 $s = i$ 일 때 $\beta {}^{*}$ 의 $i$번째 순서기저 $\mathbf{f}_{i}$ 를 제외한 스칼라 $(\mathbf{g}_{j}\mathbf{T})(x_i)$ 이다. 이때 [선형변환의 행렬표현](#c16bc5e5b) 에 의하여 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split} (\mathbf{g}_{j}\mathbf{T})(x_i) = \mathbf{g}_{j}(\mathbf{T}(x_i))&=\mathbf{g}_{j}\bigg (\sum_{k=1}^{m}A _{ki}y _{k} \bigg ) \\ &= \sum_{k=1}^{m}A _{ki}\mathbf{g}_{j}(y_k) = \sum_{k=1}^{m}A _{ki}\delta _{jk}=A _{ji} \\ \end{split}\end{equation} \tag*{} $$
+
+    따라서 $[\mathbf{T}^{t}]^{\beta {}^{*}}_{\gamma {}^{*}} = A ^{t}$ 이다. ■ 
+
 !!! tldr "선형변환의 전치(transpose of linear map)"
 
-    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 의 각각의 순서기저 $\beta , \gamma$ 와 선형변환 $\mathbf{T}: \mathbf{V}\to \mathbf{W}$ 에 대하여 다음을 만족하는 함수 $\mathbf{T}^{t}: \mathbf{W}{}^{*}\to \mathbf{V}{}^{*}$ 를 $\mathbf{T}$ 의 전치라 한다.
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 의 각각의 순서기저 $\beta , \gamma$ 와 선형변환 $\mathbf{T}: \mathbf{V}\to \mathbf{W}$ 에 대하여 다음을 만족하는 선형변환 $\mathbf{T}^{t}: \mathbf{W}{}^{*}\to \mathbf{V}{}^{*}$ 를 $\mathbf{T}$ 의 전치라 한다.
 
     $$ \forall \mathbf{g}_{} \in \mathbf{W}{}^{*} : \mathbf{T}^{t}(\mathbf{g}_{}) = \mathbf{g}_{}\mathbf{T} $$
 
+- 이렇게 정의한 $\mathbf{T}^{t}$ 가 $([\mathbf{T}]^{\gamma}_{\beta} )^{t} = [\mathbf{T}^{t}]^{\beta {}^{*}}_{\gamma {}^{*}}$ 를 만족하기 때문에 선형변환의 전치라고 부른다.
+
+- 예시
+
+    선형변환 $\mathbf{T}: \mathbf{P}_{1}(\R)\to \R ^{2}$ 를 $\mathbf{T}(p(x)) = (p(0), p(2))$ 로 정의하자. $\mathbf{P}_{1}(\R)$ 의 표준순서기저 $\beta$ 와 $\R ^{2}$ 의 표준순서기저 $\gamma$ 에 대하여 $[\mathbf{T}]^{\gamma}_{\beta} =\begin{pmatrix} 1&0\\ 1&2\\ \end{pmatrix}$ 이다. 이제 $[\mathbf{T}^{t}]^{\beta^{*}}_{\gamma^{*}}$ 를 구해보자. 
+
+    $\beta {}^{*}=\{\mathbf{f}_{1},\mathbf{f}_{2}\}$ 와 $\gamma {}^{*}=\{\mathbf{g}_{1}, \mathbf{g}_{2}\}$ 에 대하여 $[\mathbf{T}^{t}]^{\beta^{*}}_{\gamma^{*}} = \begin{pmatrix} a&b\\ c&d\\ \end{pmatrix}$ 로 두면 [선형변환의 행렬표현](#c16bc5e5b)에 의하여 다음이 성립한다. 
     
+    $$\mathbf{T}^{t}(\mathbf{g}_{1}) = a \mathbf{f}_{1} + c \mathbf{f}_{2}$$
+    
+    $$\mathbf{T}^{t}(\mathbf{g}_{2}) = b \mathbf{f}_{1} + d \mathbf{f}_{2}$$
+    
+    $\beta = \{1, x\}$ 이므로 $\mathbf{f}_{1}(1) = 1, \mathbf{f}_{2}(1) = 0, \mathbf{f}_{1}(x) = 0, \mathbf{f}_{2}(x) = 1$ 이다. 따라서 다음이 성립한다.
+
+    $$ \mathbf{T}^{t}(\mathbf{g}_{1})(1) = (a \mathbf{f}_{1}+ c \mathbf{f}_{2})(1) = a \mathbf{f}_{1}(1) + c \mathbf{f}_{2}(1) = a \cdot 1  + c \cdot 0 = a $$
+
+    또한 $\gamma = \{(1, 0), (0, 1)\}$ 이므로 $\mathbf{g}_{1}(1, 0) = 1 \mathbf{g}_{2}(1, 0) = 0, \mathbf{g}_{1}(0, 1) = 0, \mathbf{g}_{2}(0, 1) = 1$ 이다. 따라서 다음이 성립한다.
+
+    $$ (\mathbf{T}^{t}(\mathbf{g}_{1}))(1) = \mathbf{g}_{1}(\mathbf{T}(1)) = \mathbf{g}_{1}(1,1) = \mathbf{g}_{1}(e_1) + \mathbf{g}_{1}(e_2) = 1 $$
+
+    즉, $a = 1$ 이다. 같은 논리로 $c = 0, b = 1, d = 2$ 를 얻는다. 결국 $[\mathbf{T}^{t}]^{\beta {}^{*}}_{\gamma {}^{*}} = \begin{pmatrix} 1&1\\ 0&2\\ \end{pmatrix} = ([\mathbf{T}]^{\gamma}_{\beta} )^{t}$ 를 직접 계산으로 확인하였다. 이는 본 정리와 같은 결과이다.
+
+!!! tldr "정리 2.25 보조정리"
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 벡터 $x \in \mathbf{V}$ 와 $\mathbf{f}_{}\in \mathbf{V}{}^{*}$ 에 대하여 함수 $\hat{x}: \mathbf{V}{}^{*}\to \mathbf{F}$ 를 $\hat{x}(\mathbf{f}_{}) = \mathbf{f}_{}(x)$ 라 정의하면 다음이 성립한다.
+
+    $$ \hat{x}(\mathbf{f}_{}) = 0 \implies x = 0 $$
+
+- $\hat{x}$ 이 $\mathbf{V}^{*}$ 의 선형범함수라는 것은 쉽게 확인할 수 있다. 즉, $\hat{x} \in \mathbf{V}{}^{*}{}^{*}$ 이다.
+
+- 이 정리가 보여주는 $x$ 와 $\hat{x}$ 사이의 대응으로 유한차원 벡터공간 $\mathbf{V}$ 와 이중 쌍대공간 $\mathbf{V}^{**}$ 을 동일화하는 방법을 찾을 수 있다. 이는 두 벡터공간의 기저와 관계없이 $\mathbf{V}$ 와 $\mathbf{V}^{**}$ 사이의 동형사상이 존재함을 뜻한다. 즉, 이 정리로 다음을 증명할 수 있게 되었다.
+
+    $$ \mathbf{V}\cong \mathbf{V}{}^{*}{}^{*} $$
+
+- 증명
+
+    대우명제 $x \neq 0 \implies \hat{x}(\mathbf{f}_{}) = 0$ 를 보여도 된다. 즉, $x \neq 0$ 일 때 $\hat{x}(\mathbf{f}_{}) \neq 0$ 인 $\mathbf{f}_{}\in \mathbf{V}{}^{*}$ 가 존재함을 보이면 된다. 
+
+    $x_1 = x$ 인 $\mathbf{V}$ 의 순서기저 $\beta = \{x_1, x_2, \dots, x_n \}$ 가 존재한다. [정리 2.24](#f818af77d) 는 기저 $\beta$ 에 따른 쌍대기저 $\beta {}^{*} = \{\mathbf{f}_{1}, \mathbf{f}_{2}, \dots, \mathbf{f}_{n}\}$ 의 존재를 보장해준다. $\mathbf{f}_{1}(x_1) = \delta _{11} = 1 \neq 0$ 이다. $\mathbf{f}_{1} = \mathbf{f}_{}$ 로 두면 증명이 끝난다. ■ 
+
+    - *$x_1 = x$ 인 순서기저 $\beta$ 의 존재성을 보장하는 정리가 존재하지 않는다. 증명을 보완해야 함. 하지만 not now..*
+
+!!! tldr "정리 2.26"
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 $x \in \mathbf{V}$ 와 $\mathbf{f}_{}\in \mathbf{V}{}^{*}$ 에 대한 함수 $\hat{x}: \mathbf{V}{}^{*}\to \mathbf{F}, \mathbf{f}_{} \to \mathbf{f}_{}(x)$ 에 대하여 함수 $\psi : \mathbf{V}\to \mathbf{V}{}^{*}{}^{*}$ 를 $\psi (x) = \hat{x}$ 으로 정의하면 $\psi$ 는 동형사상이다.
+
+- 증명
+
+    $x, y \in \mathbf{V}, c \in \mathbf{F}$ 와 임의의 $\mathbf{f}_{}\in \mathbf{V}{}^{*}$ 에 대하여 [함수의 합의 정의](#63a07e35d) 에 의하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}
+    \psi (cx+y)(\mathbf{f}_{})&= \mathbf{f}_{}(cx+y) = c \mathbf{f}_{}(x) + \mathbf{f}_{}(y) = c \hat{x}(\mathbf{f}_{})+ \hat{y}(\mathbf{f}_{}) \\
+    &= (c \hat{x}+ \hat{y})(\mathbf{f}_{})\\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    즉, $\psi (cx + y) = c \hat{x} + \hat{y} = c \psi (x) + \psi (y)$ 이다. 따라서 $\psi$ 는 선형이다. ▲ 
+
+    $x \in \mathbf{V}$ 에 대하여 $\psi (x) \in \mathbf{V}{}^{*}{}^{*}$ 를 $\mathbf{V}{}^{*}\to \mathbf{F}, \hat{x}(\mathbf{f}_{}) \mapsto 0$ 으로 두자. 그러면 임의의 $\mathbf{f}_{}\in \mathbf{V}{}^{*}$ 에 대하여 $\hat{x}(\mathbf{f}_{}) = 0$ 이다. 정리 2.25 보조정리에 의하여 $x = 0$ 를 얻는다. 이는 $\mathbf{N} (\psi ) = \{0\}$ 을 뜻한다. [정리 2.4](#7d40e8276) 에 의하여 $\psi$ 는 단사이다. ▲ 
+
+    $\psi$ 가 단사이므로 [정리 2.5](#dfd4ff297) 에 의하여 [$\psi$ 는 가역](#373708dc7)이다. 또한 [$\dim (\mathbf{V}) = \dim (\mathbf{V}{}^{*}{}^{*})$ 이므로](#f61ee38ab) $\psi$ 는 동형사상이다. ■ 
+
+!!! tldr "정리 2.26 따름정리"
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 쌍대공간 $\mathbf{V}^{*}$ 에 대하여 $\mathbf{V}^{*}$ 의 모든 순서기저는 $\mathbf{V}$ 의 어떤 기저의 쌍대기저이다.
+
+- 증명
+
+    먼저 $x \in \mathbf{V}$ 와 $\mathbf{f}_{}\in \mathbf{V}{}^{*}$ 에 대한 함수 $\hat{x}: \mathbf{V}{}^{*}\to \mathbf{F}, \mathbf{f}_{} \to \mathbf{f}_{}(x)$ 를 정의하자. $\mathbf{V}^{*}$ 의 순서기저를 $\{\mathbf{f}_{1}, \mathbf{f}_{2}, \dots, \mathbf{f}_{n}\}$ 으로 두자. 
+    
+    [정리 2.24](#f818af77d) 와 정리 2.26 에 의하여 $\mathbf{V}^{*}$ 의 기저와 $i, j \in \{1, \dots, n\}$ 에 대하여 $\delta _{ij} = \hat{x_i}(\mathbf{f}_{i}) = \mathbf{f}_{j}(x_i)$ 인 쌍대기저 $\{\hat{x}_1, \hat{x}_2, \dots, \hat{x}_n\} \subset \mathbf{V}{}^{*}{}^{*}$ 가 존재한다. [쌍대기저의 정의](#3184d9033) 에 의하여 $\{\mathbf{f}_{1}, \mathbf{f}_{2}, \dots, \mathbf{f}_{n}\}$ 는 $\{x_1, x_2, \dots, x_n\}$ 의 쌍대기저이다. ■ 
