@@ -1522,7 +1522,9 @@ c16bc5e5b
 
 !!! tldr "정리 2.20 따름정리"
 
-    차원이 각각 $n,m$ 인 벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\dim (\mathcal{L}(\mathbf{V} , \mathbf{W} )) = nm$ 이다.
+    유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\dim (\mathcal{L}(\mathbf{V} , \mathbf{W} )) = \dim (\mathbf{V})\dim (\mathbf{V})$ 이다.
+
+- 이 정리는 차원이 각각 $n,m$ 인 벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\dim (\mathcal{L}(\mathbf{V} , \mathbf{W} )) = nm$ 임을 말해준다.
 
 - 증명 
 
@@ -1900,7 +1902,7 @@ c16bc5e5b
 
 - 증명
 
-    $\mathbf{F}$ 는 1차원 벡터공간이므로 $\dim (\mathbf{F}) = 1$ 이다. 따라서 [정리 2.20 따름정리](#25316452a) 에 의하여 다음이 성립한다. 
+    $\mathbf{F}$ 는 1차원 벡터공간이므로 $\dim (\mathbf{F}) = 1$ 이다. 따라서 [정리 2.20 따름정리](#955ca765c) 에 의하여 다음이 성립한다. 
 
     $$ \dim (\mathbf{V}{}^{*}) = \dim (\mathcal{L}(\mathbf{V}, \mathbf{F})) = \dim (\mathbf{V}) \dim (\mathbf{F}) = \dim (\mathbf{V}) $$
 
