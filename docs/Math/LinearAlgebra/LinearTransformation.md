@@ -524,9 +524,9 @@
 
 - 우리는 이렇게 행렬과 선형변환을 연결했는데, [정리 2.8](#aa431d8ac) 은 이 연결이 합과 스칼라 곱을 보존함을 말해준다. 이를 위해 먼저 선형변환의 합과 스칼라 곱을 정의해볼 것이다.
 
-- $\mathbf{V} = \mathbf{W} \land \beta = \gamma$ 이면 간단하게 $A = [\mathbf{T} ]_{\beta }$ 라고 표기한다.
+- **$\mathbf{V} = \mathbf{W} \land \beta = \gamma$ 이면 간단하게 $A = [\mathbf{T} ]_{\beta }$ 라고 표기한다.**
 
-- $A$ 의 $j$ 열은 $[\mathbf{T} (v_j)] _{\gamma }$ 이다.
+- **$A$ 의 $j$ 열은 $[\mathbf{T} (v_j)] _{\gamma }$ 이다.**
 
 - 선형변환 $\mathbf{U} : \mathbf{V} \to \mathbf{W}$ 가 $[\mathbf{U} ] ^{\gamma } _{\beta } = [\mathbf{T} ]^{\gamma }_{\beta }$ 를 만족하면 [정리 2.6 따름정리](#52dd3d90f) 에 의하여 $\mathbf{U} = \mathbf{T}$ 이다.
 
