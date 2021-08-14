@@ -2045,10 +2045,6 @@ c16bc5e5b
 
 - $\hat{x}$ 이 $\mathbf{V}^{*}$ 의 선형범함수라는 것은 쉽게 확인할 수 있다. 즉, $\hat{x} \in \mathbf{V}{}^{*}{}^{*}$ 이다.
 
-- 이 정리가 보여주는 $x$ 와 $\hat{x}$ 사이의 대응으로 유한차원 벡터공간 $\mathbf{V}$ 와 이중 쌍대공간 $\mathbf{V}^{**}$ 을 동일화하는 방법을 찾을 수 있다. 이는 두 벡터공간의 기저와 관계없이 $\mathbf{V}$ 와 $\mathbf{V}^{**}$ 사이의 동형사상이 존재함을 뜻한다. 즉, 이 정리로 다음을 증명할 수 있게 되었다.
-
-    $$ \mathbf{V}\cong \mathbf{V}{}^{*}{}^{*} $$
-
 - 증명
 
     대우명제 $x \neq 0 \implies \hat{x}(\mathbf{f}_{}) = 0$ 를 보여도 된다. 즉, $x \neq 0$ 일 때 $\hat{x}(\mathbf{f}_{}) \neq 0$ 인 $\mathbf{f}_{}\in \mathbf{V}{}^{*}$ 가 존재함을 보이면 된다. 
@@ -2060,6 +2056,8 @@ c16bc5e5b
 !!! tldr "정리 2.26"
 
     유한차원 벡터공간 $\mathbf{V}$ 와 $x \in \mathbf{V}$ 와 $\mathbf{f}_{}\in \mathbf{V}{}^{*}$ 에 대한 함수 $\hat{x}: \mathbf{V}{}^{*}\to \mathbf{F}, \mathbf{f}_{} \to \mathbf{f}_{}(x)$ 에 대하여 함수 $\psi : \mathbf{V}\to \mathbf{V}{}^{*}{}^{*}$ 를 $\psi (x) = \hat{x}$ 으로 정의하면 $\psi$ 는 동형사상이다.
+
+- 이 정리가 보여주는 $x$ 와 $\hat{x}$ 사이의 대응으로 유한차원 벡터공간 $\mathbf{V}$ 와 이중 쌍대공간 $\mathbf{V}^{**}$ 을 동일화하는 방법을 찾을 수 있다. 이는 두 벡터공간의 기저와 관계없이 $\mathbf{V}$ 와 $\mathbf{V}^{**}$ 사이의 동형사상이 존재함을 뜻한다.
 
 - 증명
 
@@ -2077,6 +2075,16 @@ c16bc5e5b
 
     $\psi$ 가 단사이므로 [정리 2.5](#dfd4ff297) 에 의하여 [$\psi$ 는 가역](#373708dc7)이다. 또한 [$\dim (\mathbf{V}) = \dim (\mathbf{V}{}^{*}{}^{*})$ 이므로](#f61ee38ab) $\psi$ 는 동형사상이다. ■ 
 
+!!! tldr ""
+
+    유한차원 벡터공간 $\mathbf{V}, \mathbf{W}$ 에 대하여 동형사상 $\psi_1 : \mathbf{V}\to \mathbf{V}{}^{*}{}^{*}, x \mapsto \hat{x}$ 과 동형사상 $\psi _2: \mathbf{W}\to \mathbf{W}{}^{*}{}^{*}, x \mapsto \hat{x}$ 을 정의하고, $\mathbf{T}: \mathbf{V}\to \mathbf{W}$ 가 선형일 때 $\mathbf{T}^{tt}=(\mathbf{T}^{t})^{t}$ 라 정의하면 다음과 같이 $\psi _2 \mathbf{T}= \mathbf{T}^{tt}\psi _1$ 가 성립한다.
+
+    $$ \begin{CD} \mathbf{V} @> \mathbf{T}  >> \mathbf{W}  \\ @V \psi _{1} VV @VV \psi _{2} V \\ \mathbf{V} {}^{*}{}^{*} @> \mathbf{T}^{tt} >> \mathbf{W}{}^{*}{}^{*} \end{CD} $$
+
+- 동형사상 $\psi _1, \psi _2$ 는 정리 2.26 과 같이 정의된 것이다.
+
+- 증명
+
 !!! tldr "정리 2.26 따름정리"
 
     유한차원 벡터공간 $\mathbf{V}$ 와 쌍대공간 $\mathbf{V}^{*}$ 에 대하여 $\mathbf{V}^{*}$ 의 모든 순서기저는 $\mathbf{V}$ 의 어떤 기저의 쌍대기저이다.
@@ -2086,3 +2094,71 @@ c16bc5e5b
     먼저 $x \in \mathbf{V}$ 와 $\mathbf{f}_{}\in \mathbf{V}{}^{*}$ 에 대한 함수 $\hat{x}: \mathbf{V}{}^{*}\to \mathbf{F}, \mathbf{f}_{} \to \mathbf{f}_{}(x)$ 를 정의하자. $\mathbf{V}^{*}$ 의 순서기저를 $\{\mathbf{f}_{1}, \mathbf{f}_{2}, \dots, \mathbf{f}_{n}\}$ 으로 두자. 
     
     [정리 2.24](#f818af77d) 와 정리 2.26 에 의하여 $\mathbf{V}^{*}$ 의 기저와 $i, j \in \{1, \dots, n\}$ 에 대하여 $\delta _{ij} = \hat{x_i}(\mathbf{f}_{i}) = \mathbf{f}_{j}(x_i)$ 인 쌍대기저 $\{\hat{x}_1, \hat{x}_2, \dots, \hat{x}_n\} \subset \mathbf{V}{}^{*}{}^{*}$ 가 존재한다. [쌍대기저의 정의](#3184d9033) 에 의하여 $\{\mathbf{f}_{1}, \mathbf{f}_{2}, \dots, \mathbf{f}_{n}\}$ 는 $\{x_1, x_2, \dots, x_n\}$ 의 쌍대기저이다. ■ 
+
+<!-- # Homogeneous Linear Differential Equations with Constant Coefficients
+
+!!! tldr "선형 미분방정식(linear differential equation)"
+
+    $t$ 에 대한 함수 $a_1, a_2, \dots, a_n$ 와 $f$, 그리고 $y$ 의 $k$계도함수 $y ^{(k)}$ 에 대하여 다음 형태의 미분방정식을 선형(linear)라 한다.
+
+    $$ a_ny ^{(n)} +a _{n-1} y ^{(n-1)} +\dots+a_1y ^{(1)} +a_0y = f \tag{2.4}  $$
+
+- 함수 $a_i$ 는 미분방정식 $(2.4)$ 의 계수(coefficient)이다. 함수 $f$ 가 영함수이면 동차 선형 미분방정식이고, $a_1, a_2, \dots, a_n$ 들이 상수이면 상수 계수를 갖는 동차 선형미분방정식이다. 여기에서는 미분방정식을 깊게 다루지 말고, 상수 계수를 갖는 동차 선형미분방정식을 선형대수학으로 푸는 방법만을 다뤄보자.
+
+- $a_n \neq 0$ 이면 $(2.4)$ 를 $n$계(order) 미분방정식이라 한다. 이 경우 양변을 $a_n$ 으로 나누어도 상관없으므로 $b_i = a_i/a_n$ 에 대하여 주로 다음 형태의 미분방정식을 다루는 것이 편하다.
+
+    $$ y ^{(n)} +b _{n-1} y ^{(n-1)} +\dots+b_1y ^{(1)} +b_0y = 0   $$
+
+- 미분방정식의 해는 $t$ 에 대한 영함수를 만드는 함수 $y = y(t)$ 이다.
+
+    - 예시
+
+        상수 $\frac{k}{m}$ 에 대하여 다음 미분방정식은 계수가 상수이고 함수 $f$ 가 영함수인 동차 선형 미분방정식이다.
+
+        $$ y'' + \frac{k}{m} y = 0 $$
+
+        함수 $y(t) = \sin \sqrt[]{\frac{k}{m}}t$ 를 미분방정식에 대입하면 다음이 성립한다.
+
+        $$ y''(t) + \frac{k}{m}y(t) = - \frac{k}{m}\sin \sqrt[]{\frac{k}{m}}t + \frac{k}{m}\sin \sqrt[]{\frac{k}{m}}t = 0 $$
+
+        하지만 $y(t) = t$ 를 대입하면 다음이 성립하고, 이는 영함수가 아니므로 $y(t) = t$ 는 해가 아니다. 
+
+        $$ y''(t) + \frac{k}{m}y(t) = \frac{k}{m}t $$
+
+!!! tldr ""
+
+    함수공간 $\mathcal{F}(\R, \mathbb{C})$ 에 대한 실변수 $t$ 에 대한 복소함수 $x \in \mathcal{F}(\R, \mathbb{C})$ 에 대하여 다음을 만족하는 실함수 $x_1, x_2$ 가 유일하게 존재한다.
+
+    $$ t \in \R : x(t) = x_1(t) + ix_2(t) $$
+
+- $x_1$ 과 $x_2$ 를 각각 실변수 복소함수 $x:\R \to \mathbb{C}$ 의 실수부, 허수부라고 한다.
+
+- 미분방정식을 다룰 때 방정식이 물리적으로 의미를 가지면 실함수라고 하더라도 복소함수로 다루면 편하다.
+
+- 증명
+
+!!! tldr "실변수 복소함수의 미분가능(differentiable)과 도함수(derivative)"
+
+    실수부가 $x_1$, 허수부가 $x_2$ 인 실변수 복소함수 $x \in \mathcal{F}(\R, \mathbb{C})$ 가 미분가능하다는 것과 $x_1, x_2$ 가 미분가능하다는 것은 동치이다.
+
+    미분가능한 실변수 복소함수 $x$ 의 도함수(derivative) $x'$ 는 다음과 같다. 
+
+    $$ x' = x'_1 + ix'_2 $$
+
+- 예시 
+
+    $x(t) = \cos 2t + i \sin 2t$ 의 도함수는 $x'(t) = -2 \sin 2t + 2i \cos 2t$ 이다.
+
+!!! tldr "정리 2.27"
+
+    계수가 상수인 동차 선형 미분방정식의 해는 무한히 미분가능하다. 즉, $x$ 가 방정식의 해이면 $k \in \N$ 에 대한 $x ^{(k)}$ 가 존재한다.
+
+- 이 정리는 $\mathcal{F}(\R, \mathbb{C})$ 보다 훨씬 작은 벡터공간을 조사해도 충분하다는 것을 말해준다.
+
+- 증명
+
+- 이 정리의 증명과정은 다음 예시에서 보여주는 귀납법과 비슷하다. 그러나 여기에서는 선형대수학이라는 논의 주제를 너무 벗어나므로 생략하자.
+
+- 예시
+
+    방정식 $y ^{(2)}+4y=0$ 에서 함수 $y$ 가 해이면 $y ^{(2)} = -4y$ 이다. 즉, $y$ 는 두번 미분가능해야 한다. $y ^{(2)}$ 가 두번 미분가능한 함수 $y$ 의 상수배이므로 $y ^{(2)}$ 는 두 번 이상 미분가능하고 $y ^{(4)}$ 가 존재한다. 즉, $y ^{(4)} = -4y ^{(2)}$ 이다. 그러면 같은 논리로 $y ^{(6)}$ 도 존재하고 무한히 미분가능하다는 것을 알 수 있다.  -->
