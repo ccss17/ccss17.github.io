@@ -508,8 +508,6 @@
 
 # Matrix Representation of Linear Map
 
-c16bc5e5b replace
-c16bc5e5b
 !!! tldr "선형변환의 행렬표현(matrix representation)"
 
     유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 의 각각의 순서기저 $\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}$ 에 대하여 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 을 정의하면 $j \in \{1,\dots,n\}, i \in \{1, \dots, m\}$ 에 대하여
