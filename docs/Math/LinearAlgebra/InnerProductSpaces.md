@@ -419,7 +419,7 @@
 
     $$ \bigg [\sum_{i=1}^{n}|a_i + b_i|^{2} \bigg ]^{1/2}\leq \bigg [\sum_{i=1}^{n}|a_i|^{2} \bigg ]^{1/2}+\bigg [\sum_{i=1}^{n}|b_i|^{2} \bigg ]^{1/2} $$
 
-## Norm of Euclidean Space
+## Euclidean Space
 
 !!! tldr "유클리드 공간(Euclidean vector space)"
 
@@ -437,6 +437,8 @@
 
     $$ \|x\| = 2|x_1| + \sqrt[]{3|x_2| ^{2} + \max (|x_3|, 2|x_4|) ^{2}}
     $$
+
+## Norm of Euclidean Space
 
 !!! tldr "유클리드 노름(Euclidean norm), $L_2$ 노름($L_2$ norm)"
 
@@ -701,11 +703,15 @@
 
     내적공간 $\mathbf{V}$ 에서 $\|x\| = 1$ 인 벡터이다.
 
+## Orthonormal
+
 !!! tldr "정규직교집합(orthonormal)"
 
     내적공간의 부분집합이 단위벡터로 구성된 직교집합이면 정규직교집합이라 한다.
 
 - 집합 $S = \{v_1, v_2, \dots\}$ 가 정규직교집합인 것과 $\big <v_i,v_j \big > = \delta _{ij}$ 인 것은 동치이다. 
+
+## Normalizing
 
 !!! tldr "정규화(normalizing)"
 
@@ -895,4 +901,201 @@
 
     정리 6.5 에 의해 $\mathbf{T}(v_j) = \displaystyle \sum_{i=1}^{n}\big <\mathbf{T}(v_j), v_i \big >v_i$ 이다. 즉, $A _{ij} = \big <\mathbf{T}(v_j), v_i \big >$ 이다.
 
+<!-- !!! tldr "푸리에 계수(Fourier coefficient)"
+
+    내적공간 $\mathbf{V}$ 의 정규직교 부분집합 $\beta$ 와 $x \in \mathbf{V}$ 와 $y \in \beta$ 에 대하여 $\big <x,y \big >$ 를 $\beta$ 에 대한 $x$ 의 푸리에 계수라 한다.
+
+- $\beta$ 가 무한집합일 수도 있다. -->
+
+    
+
+
 # Orthogonal Complements
+
+!!! tldr "직교여공간(Orthogonal complement)"
+
+    내적공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대하여 다음과 같이 정의된 집합 $S^{\perp}$ 을 $S$ 의 직교여공간이라 한다.
+
+    $$ S^{\perp} = \{x \in \mathbf{V} : \forall y \in S : \big <x,y \big >= 0 \} $$
+
+- 즉, 직교여공간은 $S$ 의 모든 벡터와 수직인 벡터 집합이다.
+
+!!! tldr ""
+
+    내적공간 $\mathbf{V}$ 의 부분집합 $S$ 의 직교여공간 $S^{\perp}$ 는 $\mathbf{V}$ 의 부분공간이다.
+
+- 증명
+
+- 예시
+
+    내적공간 $\mathbf{V}$ 에 대하여 $\{0\}^{\perp} = \mathbf{V}$ 이고 $\mathbf{V}^{\perp}=\{0\}$ 이다.
+
+- 예시 
+
+    내적공간 $\R ^{3}$ 의 부분집합 $S = \{e_3\}$ 에 대하여 $S ^{\perp}$ 는 $xy$평면이다. $x = (x_1, x_2, x_3)\in \R ^{3}$ 로 두면 $e_3$ 와 직교하기 위하여 $x_3 = 0$ 이어야 한다. 즉, 다음이 성립한다.
+
+    $$
+    \begin{equation}\begin{split}
+    S ^{\perp} &= \{x \in \R ^{3} : x \cdot (0, 0, 1) = 0\} \\
+    &=  \{(x, y, 0) \in \R ^{3} : x, y \in \R \} \\
+    \end{split}\end{equation} \tag*{} 
+    $$
+
+    사실은 직관적으로도 다음 그림과 같이 $z$축 선상에 존재하는 벡터와 직교인 벡터들을 모으면 너무 자명하게 $xy$ 평면이 된다.
+
+    ![image](https://user-images.githubusercontent.com/16812446/129469457-b819249c-188d-4258-9537-7c827dd9d579.png)
+
+## Orthogonal Projection
+
+!!! tldr "문제 6.2-7"
+
+    내적공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}$ 의 기저 $\beta$ 와 벡터 $z \in \mathbf{V}$ 에 대하여 다음이 성립한다.
+    
+    $$ z \in \mathbf{W}^{\perp} \iff \forall v \in \beta : \big <z,v \big >= 0 $$
+
+- 이 정리는 벡터가 $\mathbf{W}^{\perp}$ 에 속하기 위해서는 $\mathbf{W}$ 의 기저와 직교하기만 하면 된다는 것을 말해준다.
+
+- 증명
+
+    $z \in \mathbf{W}^{\perp} = \{x \in \mathbf{V}: \forall y \in \mathbf{W}:\big <x,y \big >= 0\}$ 를 가정하면 $\beta \subset \mathbf{W}$ 이므로 $\forall v \in \beta : \big <z,v \big > = 0$ 은 자명하다. ▲ 
+
+    $\forall v \in \beta : \big <z,v \big > = 0$ 을 가정하자. $\beta = \{w_1, w_2, \dots, w_n\}$ 로 두면 $y \in \mathbf{W}$ 와 스칼라 $a_1, a_2, \dots, a_n \in \mathbf{F}$ 에 대하여 $y = \displaystyle \sum_{i=1}^{n}a_iw_i$ 이므로 다음이 성립한다. 
+
+    $$ \big <y,z \big > = \big <\sum_{i=1}^{n}a_iw_i, z \big > = \sum_{i=1}^{n}a_i \big <w_i,z \big > = 0 \tag*{■} $$
+
+!!! tldr "정리 6.6"
+
+    내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 다음이 성립한다.
+    
+    1. $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 와 벡터 $u = \displaystyle \sum_{i=1}^{k}\big <y,v_i \big >v_i \in \mathbf{W}$ 에 대하여 $y - u \in \mathbf{W}^{\perp}$ 이다.
+
+    2. $y - u \in \mathbf{W}^{\perp}$ 을 만족하게 하는 벡터 $u \in \mathbf{W}$ 가 유일하게 존재한다. 
+
+- 가령 다음과 같이 내적공간 $\R ^{3}$ 에서 점 $P$ 와 평면 $\mathbf{W}$ 사이의 거리를 구하는 문제가 존재한다.
+
+    ![image](https://user-images.githubusercontent.com/16812446/129475802-dadd142b-071b-4810-b03b-6da575e6f1ae.png)
+
+    $\overline{OP}$ 을 벡터 $y$ 로 두면 이 문제는 $\mathbf{W}$ 의 벡터 중 $y$ 와 가장 가까운 벡터 $u$ 에 대하여 $\|y-u\|$ 를 계산하는 것이 된다. 위 그림이 보여주듯 $z = y-u$ 는 $\mathbf{W}$ 와 수직이다. 즉, $z \in \mathbf{W}^{\perp}$ 이다.
+
+    이 정리는 그러한 $u$ 를 구하는 방법을 일반화시킨 것이다. 이 정리의 1) 은 $z = y - u \in \mathbf{W}^{\perp}$ 이 되게 하는 $u$ 의 존재성을 말해주고, 2) 는 그 $u$ 의 유일성을 말해준다.
+
+- 증명
+
+    1:
+
+    $y \in \mathbf{V}, u \in \mathbf{W}$ 에 대하여 $z = y - u$ 라고 두고 $z \in \mathbf{W}^{\perp}$ 임을 보이자. 문제 6.2-7 에 의하여 $z$ 가 각 $v_j$ 에 수직임을 보이면 된다. $v_j$ 가 정규화된 기저이므로 $\big <v_j,v_j \big > = \|v_j\|^{2} = 1 ^{2} = 1$ 이므로 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split} \big <z,v_j \big >&= \bigg <\bigg ( y - \sum_{i=1}^{k}\big <y,v_i \big >v_i\bigg ), v_j \bigg > = \big <y,v_j \big >- \sum_{i=1}^{k}\big <y,v_i \big >\big <v_i,v_j \big > \\ &= \big <y,v_j \big >- \big <y,v_j \big > = 0\\ \end{split}\end{equation} \tag*{} $$
+
+    2:
+
+    $y - u' = z' \in \mathbf{W}^{\perp}$ 을 만족하는 $u' \in \mathbf{W}$ 가 존재하면 $y = u + z = u' + z'$ 이다. 부분공간은 합에 대하여 닫혀있으므로 $u - u' = z' - z \in \mathbf{W}\cap \mathbf{W}^{\perp} = \{0\}$ 이다. 즉, $u = u'$ 이다. ■ 
+
+- 프리드버그 선대수에서 서술한 원래의 정리 6.6 는 아래와 같다. 하지만 논리 관계가 이상한 것 같아서 임의로 정리를 수정했다.
+
+    *내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 인 벡터 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다.*
+
+    *$\{v_1, v_2, \dots, v_k\}$ 가 $\mathbf{W}$ 의 정규직교기저일 때 다음이 성립한다.*
+
+    $$ u = \sum_{i=1}^{k}\big <y,v_i \big >v_i $$
+
+!!! tldr "문제 6.1-10"
+
+    내적공간 $\mathbf{V}$ 와 서로 직교하는 두 벡터 $x, y \in \mathbf{V}$ 에 대하여 $\|x+y\|^{2} = \|x\|^{2} + \|y\|^{2}$ 이다.
+
+- 이 정리를 유클리드 공간 $\R ^{2}$ 로 특수화시키면 그 유명한 피타고라스의 정리를 얻는다.
+
+- 증명
+
+    $$ \|x+y\|^{2} = \big <x+y,x+y \big > = \big <x,x \big > + \big <x,y \big > + \big <y,x \big > + \big <y,y \big > = \|x\|^{2} + 0 + \overline{\big <x,y \big >} + \|y\|^{2} = \|x\|^{2} + \|y\|^{2} $$
+
+!!! tldr "정리 6.6 따름정리"
+    
+    내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 와 $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 와 벡터 $u = \displaystyle \sum_{i=1}^{k}\big <y,v_i \big >v_i \in \mathbf{W}$ 에 대하여 다음이 성립한다.
+
+    $$ \forall x \in \mathbf{W}: \|y - x\| \geq \|y-u\| $$
+
+    이때 $x = u$ 인 것과 $\|y-x\| = \|y-u\|$ 인 것은 동치이다.
+
+- 이 정리는 정리 6.6 의 $u$ 가 $\mathbf{W}$ 의 벡터 중 $y$ 에 가장 가까운 벡터임을 말해준다. 
+
+- 증명
+
+    정리 6.6 에서의 $u$ 는 $y \in \mathbf{V}$ 에 대하여 $z = y - u \in \mathbf{W}^{\perp}$ 을 보였다. 따라서 $x \in \mathbf{W}$ 에 대하여 다음이 성립한다.
+
+    $$ \big <u-x,z \big > = \big <u,z \big >- \big <x,z \big > = 0 - 0 = 0 $$
+
+    즉, $u - x$ 는 $z$ 와 직교한다. 문제 6.1-10 에 의하여 다음이 성립한다. 
+
+    $$ \|y-x\|^{2} = \|u+z-x\|^{2} = \|u-x\|^{2} + \|z\|^{2} \geq \|z\|^{2} = \|y-u\|^{2} \tag*{▲} $$
+
+    $\|y-x\| = \|y-u\|$ 로 두면 $\|u-x\|^{2} + \|z\|^{2} = \|z\|^{2}$ 이고 $\|u-x\| = 0 \iff x = u$ 이다. 이것의 역은 자명하다. ■ 
+
+!!! tldr "정사영(orthogonal projection)"
+
+    내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 와 $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 에 대하여 다음 벡터 $u$ 를 $y$ 의 $\mathbf{W}$ 에 대한 정사영이라 한다.
+
+    $$ u = \sum_{i=1}^{k}\big <y,v_i \big >v_i \in \mathbf{W} $$
+    
+- 정리 6.6 은 비유적으로 말해서 벡터 $y$ 의 종점에 부분공간 $\mathbf{W}$ 방향으로 빛을 비췄을 때 정사영 $u$ 가 부분공간 $\mathbf{W}$ 에 생기는 그림자이고, 그 그림자가 유일함을 말해준다. 
+
+    정리 6.6 따름정리는 벡터 $y$ 의 종점과 부분공간 $\mathbf{W}$ 사이의 최단거리가 정사영 $u$ 에 의하여 결정된다는 것을 말해준다.
+
+- 우리는 유클리드 공간 $\R ^{2}$ 에서 영이 아닌 벡터 $a \in \R ^{2}$ 와 직선을 이루는 부분공간 $y = \{ta : t \in \R\}$ 와 임의의 벡터 $b \in \R ^{2}$ 에 대하여 $y$ 에 대한 $b$ 의 정사영이 다음과 같다는 것을 아마도 배웠을 것이다.
+
+    $$ \dfrac{a \cdot b}{a \cdot a}a = \dfrac{\big <a,b \big >}{\big <a,a \big >}a = \dfrac{\big <a,b \big >}{\|a\|^{2}}a $$
+
+    직선을 이루는 부분공간 $y$ 는 1차원이므로 $k = 1$ 이다. 또한 $y$ 의 기저는 $\{a\}$ 이고 이것을 [그람-슈미트 직교화](#2135d3f87)를 해도 $\{a\}$ 이다. 따라서 [정규화](#ed05bfed9)로 정규직교기저를 만들면 $\bigg \{\dfrac{a}{\|a\|} \bigg \}$ 가 된다. 따라서 이 정리를 사용하여 정사영을 구해보면 [내적의 정의](#3874b2a1f) 와 [내적의 성질](#99baac14a) 에 의하여 다음과 같다. 
+
+    $$ \bigg <b, \dfrac{a}{\|a\|}\bigg > \dfrac{a}{\|a\|} = \overline{\dfrac{1}{\|a\|}} \overline{\big <a,b \big >}\dfrac{a}{\|a\|} = \dfrac{\big <a,b \big >}{\|a\|^{2}}a $$
+    
+    같은 결과가 나오는 것을 알 수 있다. 이 결과는 이 정의가 2차원 혹은 3차원 유클리드 공간에서 배웠던 정사영을 임의의 내적공간으로 추상화시킨 것임을 말해준다. 
+
+- 예시 
+
+    내적공간 $\mathbf{P}_{3}(\R)$ 와 벡터 $f(x), g(x) \in \mathbf{P}_{3}(\R)$ 에 대하여 $\mathbf{P}_{3}(\R)$ 에 내적 $\big <f(x),g(x) \big > = \displaystyle \int_{-1}^{1}f(t)g(t)dt$ 이 주어졌다고 하자. 함수 $f(x) = x ^{3} \in \mathbf{P}_{3}(\R)$ 의 $\mathbf{P}_{2}(\R)$ 에 대한 정사영 $f_1(x)$ 을 구해보자. 
+
+    $\big <u_1,u_2,u_3 \big > = \bigg \{\dfrac{1}{\sqrt[]{2}}, \sqrt[]{\dfrac{3}{2}}x, \sqrt[]{\dfrac{5}{8}}(3x ^{2} - 1) \bigg \}$ 은 $\mathbf{P}_{2}(\R)$ 의 정규직교기저이므로 다음이 성립한다. 
+
+    $$ \big <f(x),u_1 \big >=0 $$
+
+    $$ \big <f(x),u_2 \big >=\frac{\sqrt[]{6}}{5} $$
+
+    $$ \big <f(x),u_3 \big >=0 $$
+
+    따라서 $f_1(x) = 0 \cdot u_1 + \dfrac{\sqrt[]{6}}{5}u_2 + 0 \cdot u_3 = \dfrac{3}{5}x$ 이다.
+
+## Properties of Orthogonal Complements
+
+!!! tldr "문제 6.2-8"
+
+    영이 아닌 벡터로 이루어진 직교집합에 그람-슈미트 직교화를 하면 동일한 집합이 나온다.
+
+- 증명
+
+    영이 아닌 벡터로 이루어진 직교집합 $S = \{w_1, w_2, \dots, w_n\}$ 에 그람-슈미트 직교화를 적용하여 얻은 직교집합 $S' = \{v_1, v_2, \dots, v_n\}$ 에 대하여 $S = S'$ 임을 보이자. 
+
+!!! tldr "정리 6.7"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 정규직교집합 $S$ 에 대하여 다음이 성립한다. 
+
+    1. $S \subset \beta$ 인 $\mathbf{V}$ 의 정규직교기저 $\beta$ 가 존재한다.
+
+    2. $\mathbf{W}=\text{span} (S)$ 이면 $\beta \setminus S$ 는 $\mathbf{W}^{\perp}$ 의 정규직교기저이다.
+
+    3. $\mathbf{V}$ 의 임의의 부분공간 $\mathbf{W}$ 에 대하여 $\dim (\mathbf{V}) = \dim (\mathbf{W}) + \dim (\mathbf{W}^{\perp})$ 이다.
+
+- [대체정리 따름정리 2](../VectorSpace/#cd7879a47) 는 유한차원 벡터공간에서 임의의 일차독립 집합을 기저로 확장할 수 있음을 말해준다. 이 정리는 유한차원 내적공간의 정규직교 집합에 대하여 비슷한 결과가 성립함을 말해준다.
+
+- 증명
+
+    $\dim (\mathbf{V}) = n$ 으로 두고 $S = \{v_1, v_2, \dots, v_k\}$ 로 두자.
+
+    1:
+
+    [대체정리 따름정리 2](../VectorSpace/#cd7879a47) 와 [정리 6.3 따름정리 2](#562252827) 에 의하여 $S$ 를 확장하여 $\mathbf{V}$ 의 순서기저 $S' = \{v_1, v_2, \dots, v_k, w _{k+1}, \dots, w_n\}$ 을 얻을 수 있다. $S'$ 에 그람-슈미트 직교화를 적용하자. 이렇게 얻은 처음 $k$ 개의 벡터는 $S$ 의 벡터와 같으므로 나머지 $n - k$ 개의 벡터를 정규화하면 정규직교기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 를 얻는다.
+
+    2:
+
+    3:
+

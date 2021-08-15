@@ -33,35 +33,35 @@ nav:
       - Determinants: Math/LinearAlgebra/Determinants.md
       - Diagonalization: Math/LinearAlgebra/Diagonalization.md
       - Inner Product Spaces: Math/LinearAlgebra/InnerProductSpaces.md
-    # - 옛날 수학공부 노트정리:
-    #   - 산술/대수학: 
-    #     - 기초 산술: Math/Algebra/arithmetic.md
-    #     - 추상대수학: Math/Algebra/abstract_algebra.md
-    #     - 대수학: Math/Algebra/algebra.md
-    #   - 해석학: 
-    #     - 해석학: Math/Analysis/anal.md
-    #     - 삼각함수: Math/Analysis/trig.md
-    #     - 함수: Math/Analysis/function.md
-    #   - 확률: 
-    #     - 조합: Math/Probability/comb.md
-    #     - 확률: Math/Probability/prob.md
-    #   - 통계학: 
-    #     - 도수분포의 평균,분산,표준편차: Math/Statistics/stat.md
-    #     - 이산확률변수의 평균,분산,표준편차: Math/Statistics/stat2.md
-    #     - 이항분포의 평균,분산,표준편차: Math/Statistics/stat3.md
-    #     - 연속확률변수의 평균,분산,표준편차: Math/Statistics/stat4.md
-    #     - 통계적 추정: Math/Statistics/stat5.md
-    #     - 상관관계 분석: Math/Statistics/stat6.md
-    #   - 미적분: 
-    #     - 극한: Math/Calculus/cal.md
-    #     - 미분: Math/Calculus/cal2.md
-    #     - 적분: Math/Calculus/cal3.md
-    #     - 미분2: Math/Calculus/cal4.md
-    #     - 적분2: Math/Calculus/cal5.md
-    #     - 벡터해석학: Math/Calculus/vector.md
-    #     - 미적분: Math/Calculus/cal6.md
-    #     - 다변수함수의 미분의 일반적 정의: Math/Calculus/cal7.md
-    #     # - 텐서해석학: Math/Calculus/cal8.md
+    - To be deleted(OUTDATED, DEPRECATED):
+      - 산술/대수학: 
+        - 기초 산술: Math/Algebra/arithmetic.md
+        - 추상대수학: Math/Algebra/abstract_algebra.md
+        - 대수학: Math/Algebra/algebra.md
+      - 해석학: 
+        - 해석학: Math/Analysis/anal.md
+        - 삼각함수: Math/Analysis/trig.md
+        - 함수: Math/Analysis/function.md
+      - 확률: 
+        - 조합: Math/Probability/comb.md
+        - 확률: Math/Probability/prob.md
+      - 통계학: 
+        - 도수분포의 평균,분산,표준편차: Math/Statistics/stat.md
+        - 이산확률변수의 평균,분산,표준편차: Math/Statistics/stat2.md
+        - 이항분포의 평균,분산,표준편차: Math/Statistics/stat3.md
+        - 연속확률변수의 평균,분산,표준편차: Math/Statistics/stat4.md
+        - 통계적 추정: Math/Statistics/stat5.md
+        - 상관관계 분석: Math/Statistics/stat6.md
+      - 미적분: 
+        - 극한: Math/Calculus/cal.md
+        - 미분: Math/Calculus/cal2.md
+        - 적분: Math/Calculus/cal3.md
+        - 미분2: Math/Calculus/cal4.md
+        - 적분2: Math/Calculus/cal5.md
+        - 벡터해석학: Math/Calculus/vector.md
+        - 미적분: Math/Calculus/cal6.md
+        - 다변수함수의 미분의 일반적 정의: Math/Calculus/cal7.md
+        # - 텐서해석학: Math/Calculus/cal8.md
     #   - 선형대수학: 
     #     - 선형대수학 다시정리1: Math/LinearAlgebra/la_new.md
     #     - 선형방정식: Math/LinearAlgebra/la.md

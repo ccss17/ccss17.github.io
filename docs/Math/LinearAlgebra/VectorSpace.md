@@ -1454,9 +1454,9 @@
 
     아래의 논의는 순서관계를 포함관계로 상정한다.
 
-!!! tldr ""
+!!! tldr "극대(maximal)"
 
-    극대(maximal) : 집합족 $\mathcal{F}$ 에 대하여 $S \in \mathcal{F}, M \subset S \implies S = M$ 이면 $M$ 을 포함관계에 의한 극대라고 한다.
+    집합족 $\mathcal{F}$ 에 대하여 $S \in \mathcal{F}, M \subset S \implies S = M$ 이면 $M$ 을 포함관계에 의한 극대라고 한다.
 
 - 예시 
 
@@ -1470,9 +1470,9 @@
 
     이기 때문이다.
 
-!!! tldr ""
+!!! tldr "사슬(chain)"
 
-    사슬(chain) : 집합족 $\mathcal{C}$ 에 대하여 
+    집합족 $\mathcal{C}$ 에 대하여 
 
     $$ \forall A, B \in \mathcal{C}, A \subset B \lor B \subset A $$
 
@@ -1484,9 +1484,9 @@
 
     집합 $A_n = \{1,2,\dots,n\}$ 에 대한 집합족 $\mathcal{C} = \{A_n : n = 1,2,3, \dots\}$ 은 사슬이다.
 
-!!! tldr ""
+!!! tldr "하우스도르프 극대원리(Hausdorff maximal principle)"
 
-    하우스도르프 극대원리 : 집합족 $\mathcal{F}$ 의 임의의 사슬 $\mathcal{C}$ 에 대하여 $\exists U \in \mathcal{F} \text{ s.t. } \mathcal{C} \subset U$ 이면 $\mathcal{F}$ 에는 극대원소가 있다. 
+    집합족 $\mathcal{F}$ 의 임의의 사슬 $\mathcal{C}$ 에 대하여 $\exists U \in \mathcal{F} \text{ s.t. } \mathcal{C} \subset U$ 이면 $\mathcal{F}$ 에는 극대원소가 있다. 
 
 - (*보통 [하우스도르프 극대원리](../../Foundations/InfiniteSet/#4f540f90d)는 부분순서집합은 극대사슬을 가진다고 표현되지만, 이 책에서는 포함관계에 의한 부분순서관계를 표현하려고 집합족 $\mathcal{F}$ 의 임의의 사슬 $\mathcal{C}$ 에 대하여 $\mathcal{C}$ 을 포함하는 사슬 $U$ 가 존재한다고 말한 것 같다. 이렇게 말하면 집합족 $\mathcal{F}$ 에 포함관계에 의한 부분순서가 부여되고, 하우스도르프 극대원리에 의하여 $\mathcal{F}$ 에 극대원소가 있음을 말할 수 있다.*)
 
