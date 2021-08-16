@@ -189,7 +189,7 @@
     $$ \big <x,y \big >=(1+i)(2+3i)+4(4-5i)=15-15i
     $$
 
-## Conjugate Transpose
+## Adjoint of Matrix
 
 !!! tldr "켤레 전치행렬(conjugate transpose), 수반행렬(adjoint)"
 
@@ -769,7 +769,7 @@
 
     이 식의 특수한 경우인 $e ^{ib} = \cos b + i \sin b$ 를 오일러 식이라 한다. -->
 
-# Gram–Schmidt Process
+## Orthonormal Basis
 
 !!! tldr "정규직교기저(orthonormal basis)"
 
@@ -780,6 +780,8 @@
 - 예시 
 
     $\mathbf{F}^{n}$ 의 표준 순서기저는 $\mathbf{F} ^{n}$ 의 정규직교기저이다.
+
+# Gram–Schmidt Process
 
 !!! tldr "정리 6.3"
 
@@ -871,19 +873,23 @@
 
     같은 방식으로 $v_3 = x ^{2} - \frac{1}{3}$ 도 얻는다. 따라서 $\mathbf{P}_{2}(\R)$ 의 직교기저는 $\bigg \{1, x, x ^{2} - \dfrac{1}{3} \bigg \}$ 이다. 이를 정규화하면 $\bigg \{\dfrac{1}{\sqrt[]{2}}, \sqrt[]{\dfrac{3}{2}}x, \sqrt[]{\dfrac{5}{8}}(3x ^{2}-1)\bigg \}$ 을 얻는다. 이는 $\mathbf{P}_{2}(\R)$ 의 정규직교기저이다.
 
+## Legendre Polynomial
+
 !!! tldr "르장드르 다항식(Legendre polynomial)"
 
     $\mathbf{P}_{}(\R)$ 의 표준순서기저 $\{1,x,x ^{2}, \dots\}$ 에 그람-슈미트 직교화를 적용하여 얻은 직교기저 $\{v_1, v_2, \dots\}$ 에 대한 다항식 $\dfrac{v_k}{v_k(1)}$ 를 $k$차 르장드르 다항식이라 한다.
 
 - 처음 세 르장드르 다항식은 $1, x, \frac{1}{2}(3x ^{2}-1)$ 이다.
 
+## Inner Product Space has an Orthonormal Basis
+
 !!! tldr "정리 6.5"
 
-    점공간이 아닌 유한차원 내적공간 $\mathbf{V}$ 에 정규직교기저 $\beta$ 가 존재한다.
+    점공간이 아닌 유한차원 내적공간에는 정규직교기저가 존재한다.
 
-    $\beta = \{v_1, v_2, \dots, v_n\}$ 와 $x \in \mathbf{V}$ 에 대하여 $\displaystyle x = \sum_{i=1}^{n}\big <x,v_i \big >v_i$ 이다.
+    점공간이 아닌 유한차원 내적공간 $\mathbf{V}$ 에 정규직교기저 $\beta= \{v_1, v_2, \dots, v_n\}$ 와 $x \in \mathbf{V}$ 에 대하여 $\displaystyle x = \sum_{i=1}^{n}\big <x,v_i \big >v_i$ 이다.
 
-- 이 정리는 주어진 벡터를 정규직교기저의 일차결합으로 나타내는 방법을 말해준다.
+- 이 정리는 내적공간은 정규직교기저를 가진다는 중요한 사실을 말해준다. 또한 임의의 벡터를 정규직교기저의 일차결합으로 나타내는 방법을 말해준다.
 
 - 증명
 
@@ -906,9 +912,6 @@
     내적공간 $\mathbf{V}$ 의 정규직교 부분집합 $\beta$ 와 $x \in \mathbf{V}$ 와 $y \in \beta$ 에 대하여 $\big <x,y \big >$ 를 $\beta$ 에 대한 $x$ 의 푸리에 계수라 한다.
 
 - $\beta$ 가 무한집합일 수도 있다. -->
-
-    
-
 
 # Orthogonal Complements
 
@@ -1073,7 +1076,20 @@
 
 - 증명
 
-    영이 아닌 벡터로 이루어진 직교집합 $S = \{w_1, w_2, \dots, w_n\}$ 에 그람-슈미트 직교화를 적용하여 얻은 직교집합 $S' = \{v_1, v_2, \dots, v_n\}$ 에 대하여 $S = S'$ 임을 보이자. 
+    영이 아닌 벡터로 이루어진 직교집합 $S = \{w_1, w_2, \dots, w_k\}$ 에 그람-슈미트 직교화를 적용하여 얻은 직교집합 $S' = \{v_1, v_2, \dots, v_k\}$ 에 대하여 $S = S'$ 임을 보이자. 
+
+    $k = 1$ 을 가정하면 자명하게 성립한다. ▲ 
+
+    $k = n - 1$ 에서 정리가 성립함을 가정하면 [그람-슈미트 직교화](#2135d3f87) 에 의하여 다음이 성립한다.
+
+    $$ 
+    \begin{equation}\begin{split}
+    v_n &= w_n - \sum_{j=1}^{n-1}\dfrac{\big <w_n, v_j \big >}{\|v_j\|^{2}}v_j = w_n - \sum_{j=1}^{n-1}\dfrac{\big <v_n, v_j \big >}{\|v_j\|^{2}}v_j\\
+    &= w_n - \sum_{j=1}^{n-1}\dfrac{0}{\|v_j\|^{2}}v_j = w_n\\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    이로써 증명이 끝났다. ■ 
 
 !!! tldr "정리 6.7"
 
@@ -1093,9 +1109,28 @@
 
     1:
 
-    [대체정리 따름정리 2](../VectorSpace/#cd7879a47) 와 [정리 6.3 따름정리 2](#562252827) 에 의하여 $S$ 를 확장하여 $\mathbf{V}$ 의 순서기저 $S' = \{v_1, v_2, \dots, v_k, w _{k+1}, \dots, w_n\}$ 을 얻을 수 있다. $S'$ 에 그람-슈미트 직교화를 적용하자. 이렇게 얻은 처음 $k$ 개의 벡터는 $S$ 의 벡터와 같으므로 나머지 $n - k$ 개의 벡터를 정규화하면 정규직교기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 를 얻는다.
+    [대체정리 따름정리 2](../VectorSpace/#cd7879a47) 와 [정리 6.3 따름정리 2](#562252827) 에 의하여 $S$ 를 확장하여 $\mathbf{V}$ 의 순서기저 $S' = \{v_1, v_2, \dots, v_k, w _{k+1}, \dots, w_n\}$ 을 얻을 수 있다. $S'$ 에 그람-슈미트 직교화를 적용하자. 이렇게 얻은 처음 $k$ 개의 벡터는 문제 6.2-8 에 의하여 $S$ 의 벡터와 같으므로 나머지 $n - k$ 개의 벡터를 정규화하면 정규직교기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 를 얻는다.
 
     2:
 
+    $\beta \setminus S$ 는 기저의 부분집합이므로 일차독립이고, $S$ 와 직교하므로 [생성집합이 기저를 포함한다는 사실](../VectorSpace/#6cc9cb96b) 과 [문제 6.2-7](#a9dacd0a6) 에 의하여 $\beta \setminus S \subset \mathbf{W}^{\perp}$ 이다.
+
+    정리 6.5 에 의하여 $\forall x \in \mathbf{V} : \displaystyle \sum_{i=1}^{n}\big <x,v_i \big >v_i$ 이다. $w \in \mathbf{W}^{\perp}$ 라면 $i \in \{1,\dots,k\} : \big <x,v_i \big > = 0$ 이므로 다음이 성립한다. 
+
+    $$ x = \sum_{i=k+1}^{n}\big <x_i,v_i \big >v_i \in \text{span} (\beta \setminus S) $$
+
+    즉, $\beta \setminus S$ 는 $\mathbf{W}^{\perp}$ 를 생성한다. 따라서 $\beta \setminus S$ 는 $\mathbf{W}^{\perp}$ 의 정규직교기저이다.
+
     3:
 
+    $\mathbf{V}$ 의 부분공간 $\mathbf{W}$ 는 $\mathbf{V}$ 의 부분집합으로써 $\mathbf{V}$ 의 성질을 상속받는다. $\mathbf{V}$ 가 유한차원 내적공간이므로 $\mathbf{W}$ 도 유한차원 내적공간이다. 
+
+    정리 6.5 에 의하여 내적공간은 정규직교기저를 가지므로 $\mathbf{W}$ 는 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 를 가진다. 1) 과 2) 에 의하여 다음이 성립한다. 
+
+    $$ \dim (\mathbf{V}) = n = k + (n - k) = \dim (\mathbf{W}) + \dim (\mathbf{W}^{\perp}) \tag*{■} $$
+
+# Adjoint of Linear Operator
+
+!!! tldr "수반연산자(adjoint)"
+
+    내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 정규직교기저 $\beta$ 에 대한 행렬표현이 $[\mathbf{T}]{}^{*}_{\beta }$ 인 선형연산자를 $\mathbf{T}$ 의 수반연산자라 한다.

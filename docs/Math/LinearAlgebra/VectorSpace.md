@@ -1400,6 +1400,8 @@
 
     $$ D \subset B \subset S $$
 
+- 지금까지의 논의를 통하여 이 정리가 성립함을 자명하게 알 수 있다.
+
 ## Dimension and Basis of Subspace
 
 !!! tldr "정리 1.11"
@@ -1546,7 +1548,7 @@
 
     $U$ 의 임의의 서로 다른 벡터 $u_1, u_2, \dots, u_n \in U$ 와 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 $a_1u_1 + a_2u_2 +\dots +a_nu_n = 0$ 이라고 하자. 그러면 $u_i \in U \implies \exists A_i \in \mathcal{C} \text{ s.t. } u_i \in A_i$ 이다. $\mathcal{C}$ 는 포함관계에 의한 사슬이므로 $A_i$ 들을 모두 포함하는 $A_k$ 가 존재한다. 그러면 $\forall u_i, u_i \in A_k$ 이다. $A_k \in \mathcal{F}$ 이므로 $A_k$ 는 일차독립이고 따라서 $a_1u_1 + a_2u_2 +\dots +a_nu_n = 0 \implies a_1 = a_2 = \dots = a_n = 0$ 이다. 그러므로 $U$ 는 일차독립이다. ■ 
 
-## Conclusion
+## Vector Space has a Basis
 
 !!! tldr "정리 1.13 따름정리"
 

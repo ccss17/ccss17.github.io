@@ -6,11 +6,11 @@
 
     아래의 논의의 "순서관계" 란 부분순서관계를 뜻한다.
 
-# 선택공리
+# Axiom of Choice
 
-!!! tldr ""
+!!! tldr "선택 함수(choice function)"
 
-    선택 함수(choice function) : 집합족 $\{S_i\} _{i \in I}$ 위의 선택함수 $f: I \to \bigcup_{i \in I}^{}S_i$ 는 다음과 같이 정의된 함수이다.
+    집합족 $\{S_i\} _{i \in I}$ 위의 선택함수 $f: I \to \bigcup_{i \in I}^{}S_i$ 는 다음과 같이 정의된 함수이다.
 
     $$ \forall i \in I: f(i) \in S_i $$
 
@@ -108,9 +108,9 @@
 
     이다. 그러면 각 $A \in 2 ^{X} \setminus \{\varnothing \}$ 에 대하여 $h(A) \in A$ 이므로 $h$ 는 $X$ 의 선택함수이다. ■ 
 
-!!! tldr ""
+!!! tldr "사슬(chain)"
 
-    사슬(chain) : 순서집합 $X$ 의 부분집합 $A$ 가 다음을 만족하면 $A$ 를 $X$ 의 사슬이라 한다.
+    순서집합 $X$ 의 부분집합 $A$ 가 다음을 만족하면 $A$ 를 $X$ 의 사슬이라 한다.
 
     $$ a, b \in A \implies a \leq b \lor a \geq b $$
 
@@ -124,15 +124,15 @@
 
     등은 $2 ^{X}$ 의 사슬이고, $X$ 는 사슬의 상계이다.
 
-!!! tldr ""
+!!! tldr "반사슬(antichain)"
 
-    반사슬(antichain) : 순서집합 $X$ 의 부분집합 $A$ 의 서로 다른 두 원소를 비교할 순서관계가 없을 때 $A$ 를 $X$ 의 반사슬이라 한다.
+    순서집합 $X$ 의 부분집합 $A$ 의 서로 다른 두 원소를 비교할 순서관계가 없을 때 $A$ 를 $X$ 의 반사슬이라 한다.
 
 - 즉 반사슬 속의 서로 다른 두 원소는 비교 불가능하다.
 
-!!! tldr ""
+!!! tldr "극대원소(maximal element)"
 
-    극대원소(maximal element) : 순서집합 $X$ 의 원소 $m \in X$ 이 다음을 만족하면 $m$ 을 $X$ 의 극대원소라 한다.
+    순서집합 $X$ 의 원소 $m \in X$ 이 다음을 만족하면 $m$ 을 $X$ 의 극대원소라 한다.
 
     $$ x \in X, x \geq m \implies x = m $$
 
@@ -142,25 +142,29 @@
 
     한편 $\N$ 이나 $\mathbb{Z}$ 는 그 자체가 사슬이지만, 극대원소가 존재하지 않는다.
 
-!!! tldr ""
+!!! tldr "극소원소(minimal element)"
 
-    극소원소(minimal element) : 순서집합 $X$ 의 원소 $n \in X$ 이 다음을 만족하면 $n$ 을 $X$ 의 극대원소라 한다.
+    순서집합 $X$ 의 원소 $n \in X$ 이 다음을 만족하면 $n$ 을 $X$ 의 극대원소라 한다.
 
     $$ x \in X, x \leq n \implies x = n $$
 
-## 초른의 보조정리
+## Zorn Lemma
 
-!!! tldr "정리 3.1.1"
+replace 8e7118900
 
-    초른의 보조정리(Zorn lemma) : 공집합이 아닌 순서집합 $X$ 의 모든 사슬이 상계를 가지면 $X$ 는 극대원소를 가진다.
+!!! tldr "정리 3.1.1 초른의 보조정리(Zorn lemma)"
+
+    공집합이 아닌 순서집합 $X$ 의 모든 사슬이 상계를 가지면 $X$ 는 극대원소를 가진다.
 
 - 선택공리과 동치인 명제로써 수학의 여러 분야에서 널리 쓰인다.
 
-## 하우스도르프 극대 원리
+## Hausdorff maximal principle
 
-!!! tldr "정리 3.1.2"
+replace 4f540f90d
 
-    하우스도르프 극대 원리(Hausdorff maximal principle) : 임의의 순서집합은 극대 사슬을 가진다.
+!!! tldr "정리 3.1.2 하우스도르프 극대 원리(Hausdorff maximal principle)"
+
+    임의의 순서집합은 극대 사슬을 가진다.
 
 - 선택공리과 동치인 명제로써 수학의 여러 분야에서 널리 쓰인다.
 
@@ -278,11 +282,11 @@
 
 - 이 정리로부터 하우스드로프 극대 원리를 도출하는 증명
 
-# 정렬집합
+# Well Ordered Set
 
-!!! tldr ""
+!!! tldr "정렬 집합(well ordered set)"
 
-    정렬 집합(well ordered set) : 순서집합 $X$ 에서 $\forall A \in 2 ^{X}$ 에 대하여 $A \neq \varnothing$ 인 $A$ 가 최소 원소를 가지면 $X$ 를 정렬집합이라고 한다. 
+    순서집합 $X$ 에 대한 임의의 부분집합 $A \in 2 ^{X} \setminus \{\varnothing \}$ 가 최소 원소를 가지면 $X$ 를 정렬집합이라고 한다. 
 
 - 정렬 집합의 순서관계를 정렬 순서라 한다. 
 
@@ -290,18 +294,19 @@
 
 - 정렬 집합은 그 자체로서 사슬이 된다.
 
-!!! tldr ""
+!!! tldr "정렬 순서(well ordered)"
 
-    정렬 순서(well ordered) : 정렬 집합이 갖는 순서관계이다.
+    정렬 집합이 갖는 순서관계이다.
 
-## 체르멜로 정렬정리
+## Zermelo's theorem
 
-!!! tldr "정리 3.1.4"
+replace 0d9cd4880
 
-    체르멜로 정렬정리(Well-ordering theorem, Zermelo's theorem) : 임의의 집합에는 정렬순서가 존재한다.
+!!! tldr "정리 3.1.4 체르멜로 정렬정리(Well-ordering theorem, Zermelo's theorem)"
+
+    임의의 집합에는 정렬순서가 존재한다.
 
 - 아래의 증명은 [초른 보조정리](#8e7118900)를 사용하는데 이는 [초른 보조정리](#8e7118900)가 적용되는 대표적인 사례이다.
-
 
 - 증명
 
@@ -359,11 +364,11 @@
 
     는 선택함수이다. 그러므로 선택공리, [초른 보조정리](#8e7118900), [하우스도르프 극대 원리](#4f540f90d), [체르멜로 정렬정리](#0d9cd4880)가 모두 동치임을 알 수 있다. ■ 
 
-## 절편
+## Segment
 
-!!! tldr ""
+!!! tldr "정렬집합의 절편(segment)"
 
-    정렬집합의 절편(segment) : 정렬집합 $A$ 와 $x \in A$ 에 대하여 다음을 $x$ 에 의한 $A$ 의 절편이라 한다.
+    정렬집합 $A$ 와 $x \in A$ 에 대하여 다음을 $x$ 에 의한 $A$ 의 절편이라 한다.
 
     $$S_x = \{a \in A: a < x\}$$ 
 
@@ -381,13 +386,13 @@
 
     $\N$ 의 한 절편은 $S_3 = \{1,2\}$ 이다.
 
-!!! tldr ""
+!!! tldr "서로소 집합의 순서 "
 
-    서로소 집합의 순서 : 서로소인 두 정렬집합 $A, B$ 에 대하여 합집합 $A \sqcup B$ 에 대하여 다음을 $x \leq y$ 라고 정의한다.
+    서로소인 두 정렬집합 $A, B$ 에 대하여 합집합 $A \sqcup B$ 에 대하여 다음을 $x \leq y$ 라고 정의한다.
 
     $$ (x, y \in A : x \leq y) \lor (x, y \in B : x \leq y) \lor (x \in A, y \in B) $$
     
-- 그러면 이 관계는 정렬순서가 된다.
+- 이 관계는 정렬순서이다.
 
     - 증명 
 
@@ -399,9 +404,9 @@
 
         $$ \begin{equation}\begin{split} \omega : & 0, 1, 2, 3, \dots\\ \{x\} \sqcup \omega : & x, 0, 1, 2, \dots\\ \omega \sqcup \{x\} : & 0, 1, 2, 3, \dots, x \end{split}\end{equation} \tag*{} $$
 
-!!! tldr ""
+!!! tldr "증가함수(increasing function)"
 
-    증가함수(increasing function) : 순서집합 $A, B$ 사이에 정의된 함수 $f: A \to B$ 가 다음을 만족하면 증가함수라 한다.
+    순서집합 $A, B$ 사이에 정의된 함수 $f: A \to B$ 가 다음을 만족하면 증가함수라 한다.
 
     $$ x, y \in A, x \leq y \implies f(x) \leq f(y) $$
 
@@ -409,11 +414,11 @@
 
 - 이러한 함수 $f$ 에 대하여 $f$ 가 단조 증가(monotonically increasing) 한다고 한다.
 
-## 순서동형
+## Order Isomorphism
 
-!!! tldr ""
+!!! tldr "순서 동형(order isomorphism)"
 
-    순서 동형(order isomorphism) : 순서집합 $A, B$ 에 정의된 전단사 함수 $f: A \to B$ 가 증가함수이고 그 역함수 $f ^{-1}$ 도 증가함수이면 $A$ 와 $B$ 는 순서동형이다. 
+    순서집합 $A, B$ 에 정의된 전단사 함수 $f: A \to B$ 가 증가함수이고 그 역함수 $f ^{-1}$ 도 증가함수이면 $A$ 와 $B$ 는 순서동형이다. 
 
 - **두 순서 동형 집합 $A,B$ 를 $A \approxeq B$ 와 같이 표기한다.**
 
@@ -427,15 +432,15 @@
 
     이로써 $\{x\}\sqcup \omega$ 와 $\omega$ 가 순서동형이고, 본질적으로 서로 같은 집합임을 알 수 있다.
 
-!!! tldr ""
+!!! tldr "사전순서(lexicographical order)"
 
-    사전순서(lexicographical order) : 순서집합 $A,B$ 의 곱집합 $A \times B$ 의 두 원소 $(a_1, b_1) \in A \times B, (a_2, b_2) \in A \times B$ 에 대하여 다음이 성립할 때 $(a_1, b_1) \leq (a_2, b_2)$ 라고 정의된 순서를 사전순서라 한다.
+    순서집합 $A,B$ 의 곱집합 $A \times B$ 의 두 원소 $(a_1, b_1) \in A \times B, (a_2, b_2) \in A \times B$ 에 대하여 다음이 성립할 때 $(a_1, b_1) \leq (a_2, b_2)$ 라고 정의된 순서를 사전순서라 한다.
 
     $$ a_1 < a_2 \lor (a_1 = a_2 \land b_1 \leq b_2) $$
 
-!!! tldr ""
+!!! tldr "반사전순서(anti-lexicographical order)"
 
-    반사전순서(anti-lexicographical order) : 순서집합 $A,B$ 의 곱집합 $A \times B$ 의 두 원소 $(a_1, b_1) \in A \times B, (a_2, b_2) \in A \times B$ 에 대하여 다음이 성립할 때 $(a_1, b_1) \leq (a_2, b_2)$ 라고 정의된 순서를 사전순서라 한다.
+    순서집합 $A,B$ 의 곱집합 $A \times B$ 의 두 원소 $(a_1, b_1) \in A \times B, (a_2, b_2) \in A \times B$ 에 대하여 다음이 성립할 때 $(a_1, b_1) \leq (a_2, b_2)$ 라고 정의된 순서를 사전순서라 한다.
 
     $$ b_1 < b_2 \lor (b_1 = b_2 \land a_1 \leq a_2) $$
 
@@ -551,25 +556,13 @@
 
     이를 위하여 $x \in A, p \in B$ 에 대하여 $A$ 의 절편으로써의 $C = S_x$, $B$ 의 절편으로써의 $\phi (C) = S_p$ 라고 하자. 그러면 $C \approxeq \phi (C)$ 이므로 $S_x \approxeq S_p$ 이다. 그런데 $(4)$ 를 가정했으므로 이는 $x \in C = S_x$ 임을 뜻한다. 즉, $x < x$ 를 뜻하는데 이는 모순이다. 그러므로 d) 는 발생하지 않는다. 그러므로 모든 증명이 끝났다. ■ 
 
-- 아, 문장이 중의적이어서 착각했던 거구나.    
+<!-- > 집합론과 수체계를 공부하다보니 이러한 증명들이 완전하게 형식화되어 있어서 문득 이해하기 어렵지만, 실상 이 증명을 떠올린 수학자들은 오로지 무모순의 제약만 걸려있는 자유롭고 자유로운 상상의 세계에서 증명을 떠올렸지 않았을까. 그러면 내가 할 일은 그 자유로운 세계에서 떠올린 핵심 아이디어이다. 그것은 이러한 형식문처럼 딱딱하고 이해하기 어렵지 않다. 실상은 그러한 직관이 통찰한 핵심 아이디어를 엄밀하게 전달하기 위하여 이러한 딱딱한 형식문으로 형식화한 것이기 때문에, 내가 알아야 할 것은 수학자들이 원래 떠올렸던 직관이다.  -->
 
-    1. $A$ 와 $B$ 는 순서동형이다.
+# Ordinal
 
-    2. $A$ 는 $B$ 의 절편과 순서동형이다.
+!!! tldr "순서수, 서수(ordinal)"
 
-    3. $B$ 는 $A$ 의 절편과 순서동형이다.
-
-    여기에서 $A$ 는 $B$ 의 "절편" 과 "순서동형" 이다 가 아니라 $A$ 는 "$B$ 의 절편" 과 순서동형이다 라고 해석해야하구나. 역시 자연어로 쓰니까 이런 일이 발생하구나. 최대한 기호로 써야겠네.
-
-!!! note
-
-    집합론과 수체계를 공부하다보니 이러한 증명들이 완전하게 형식화되어 있어서 문득 이해하기 어렵지만, 실상 이 증명을 떠올린 수학자들은 오로지 무모순의 제약만 걸려있는 자유롭고 자유로운 상상의 세계에서 증명을 떠올렸지 않았을까. 그러면 내가 할 일은 그 자유로운 세계에서 떠올린 핵심 아이디어이다. 그것은 이러한 형식문처럼 딱딱하고 이해하기 어렵지 않다. 실상은 그러한 직관이 통찰한 핵심 아이디어를 엄밀하게 전달하기 위하여 이러한 딱딱한 형식문으로 형식화한 것이기 때문에, 내가 알아야 할 것은 수학자들이 원래 떠올렸던 직관이다. 
-
-# 서수
-
-!!! tldr ""
-
-    순서수, 서수(ordinal) : 정렬집합 $\alpha$ 가 다음을 만족하면 서수라고 한다. 
+    정렬집합 $\alpha$ 가 다음을 만족하면 서수라고 한다. 
 
     $$ \xi \in \alpha \implies S _{\xi } = \xi $$
 
@@ -601,31 +594,33 @@
     
     각 자연수 $n \in \omega$ 도 서수이다. $m \in n \implies  S_m = m$ 이기 때문이다.
 
-!!! tldr ""
+!!! tldr "절대적 무한(Absolute Infinite)"
 
-    절대적 무한(Absolute Infinite) : 이보다 더 큰 수가 존재하지 않는 무한수이다.
+    이것보다 더 큰 수가 존재하지 않는 수이다.
 
 - 절대 무한을 $\Omega$ 라고 표기한다.
 
 - 초한수 수열 $\aleph _0, \alpha _1, \alpha _2, \dots$ 을 극한으로 보낼 수 있고, $\alpha _{\alpha _0}, \alpha _{\alpha _1},\alpha _{\alpha _2},  \dots$ 수열도 극한으로 보낼 수 있는데, 이 과정 자체를 극한으로 보내면 $\Omega$ 에 도달할 수 있다.
 
-!!! tldr ""
+!!! tldr "초한수(Transfinite number)"
 
-    초한수(Transfinite number) : 절대적 무한이 아닌 무한이다.
+    절대적 무한이 아닌 무한이다.
 
-- 모든 유한수는 기수와 서수로 표현할 수 있는데 기수는 집합의 크기를 나타내고, 서수는 정렬집합에서의 순서 길이를 나타낸다.
+- 칸토어가 절대적 무한과 구별하기 위하여 사용한 용어가 초한수이다. 초한수는 모든 유한수보다 크지만 절대적 무한보다는 작다.
+
+- 모든 유한수는 기수와 서수로 표현할 수 있는데 기수는 집합의 크기를 나타내고, 서수는 정렬집합에서의 순서 길이를 나타낸다. 이를 확장하여 초한기수와 초한서수를 얻는다.
 
 - 자연수의 초한서수를 $\omega$, 초한기수를 $\aleph_0$ 으로 나타낸다.
 
-!!! tldr ""
+!!! tldr "유한서수 "
 
-    유한서수 : 자연수 $0,1,2,3,\dots$ 는 서수인데 이들을 유한서수라고 한다.
+    자연수 $0,1,2,3,\dots$ 는 서수인데 이들을 유한서수라고 한다.
 
-## 초한서수
+## Transfinite Ordinal Number
 
-!!! tldr ""
+!!! tldr "초한서수(Transfinite ordinal number)"
 
-    초한서수(Transfinite ordinal number), 초유한서수 : 무한 정렬 집합에서의 어떤 위치를 나타내는 수이다.
+    무한 정렬 집합에서의 어떤 위치를 나타내는 수이다.
 
 - 가장 작은 초한서수는 자연수 집합 $\N$ 을 정렬집합으로 이해할 때의 
 
@@ -691,25 +686,25 @@
     
     그러나 그리스 알파벳은 초한서수들을 모두 나타내기에 부족하므로 초한서수들을 나타내기에 적합한 강력한 표현법인 [Veblen function](https://en.wikipedia.org/wiki/Veblen_function) 이 고안되었다. 이 함수는 $\varphi _{\gamma }(\beta )$ 의 형태로 초한귀납적으로 정의되어 초깃값으로 $\varphi _0(\beta ) = \omega ^{\beta }$ 을 정의한 후 $\varphi _1(\beta ) = \epsilon _{\beta }, \varphi _2(\beta ) = \zeta _{\beta }, \dots$ 와 같이 정의 된다.
 
-!!! tldr ""
+!!! tldr "극한서수(limit ordinal)"
 
-    극한서수(limit ordinal) : 서수 $\alpha$ 가 $\alpha = \beta ^{+}$ 인 $\beta$ 를 가지지 않으면 $\alpha$ 를 극한서수라고 한다. 
+    서수 $\alpha$ 가 $\alpha = \beta ^{+}$ 인 $\beta$ 를 가지지 않으면 $\alpha$ 를 극한서수라고 한다. 
 
 - 가령 $\omega$ 는 $\omega = \alpha ^{+}$ 인 $\alpha$ 가 존재하지 않으므로 극한서수이다.
 
-!!! tldr ""
+!!! tldr "서로소 집합 함수"
 
-    서로소 집합 함수 : $g: A \to C, h: B \to D$ 에 대하여 함수 $g \sqcup h : A \sqcup B \to C \sqcup D$ 를 다음과 같이 정의한다.
+    $g: A \to C, h: B \to D$ 에 대하여 함수 $g \sqcup h : A \sqcup B \to C \sqcup D$ 를 다음과 같이 정의한다.
 
     $$ (g \sqcup h) (x) = \begin{cases} g(x) & x \in A\\ h(x) & x \in B\\ \end{cases} $$
 
 - $g,h$ 가 순서동형을 정의한다면 $g \sqcup h$ 도 순서동형을 정의한다.
 
-## 서수의 덧셈과 곱셈
+## Addition, Multiples of Ordinal Number
 
-!!! tldr ""
+!!! tldr "서수의 더하기(addition of ordinal number)"
 
-    서수의 더하기 : $\text{ord }(A) = \alpha , \text{ord }(B) = \beta$ 인 서로소인 정렬집합 $A, B$ 에 대하여 다음과 같이 정의한다.
+    $\text{ord }(A) = \alpha , \text{ord }(B) = \beta$ 인 서로소인 정렬집합 $A, B$ 에 대하여 다음과 같이 정의한다.
 
     $$ \alpha + \beta = \text{ord }(A \sqcup B) $$
 
@@ -729,9 +724,9 @@
 
     - 증명
 
-!!! tldr ""
+!!! tldr "서수의 곱하기(multiple of ordinal number)"
 
-    서수의 곱하기 : 반사전순서가 부여된 $A \times B$ 에 대하여 다음과 같이 정의한다.
+    반사전순서가 부여된 $A \times B$ 에 대하여 다음과 같이 정의한다.
 
     $$ \alpha \beta  = \text{ord }(A \times B) $$
 
@@ -765,17 +760,17 @@
 
         은 성립한다.
     
-!!! tldr ""
+!!! tldr "서수의 제곱 "
 
-    서수의 제곱 : 임의의 서수 $\alpha ,\beta$ 에 대하여 다음과 같이 정의한다.
+    임의의 서수 $\alpha ,\beta$ 에 대하여 다음과 같이 정의한다.
 
     $$ \alpha ^{\beta } = \begin{cases} \sup \{\alpha ^{\gamma } : \gamma < \beta \} & \beta \text{ 가 극한서수이다 }\\ \alpha ^{\gamma }\alpha & \beta = \gamma + 1\\ \end{cases} $$
     
-## 서수의 순서관계
+## Order of Ordinal Number
 
-!!! tldr ""
+!!! tldr "서수의 순서(order of ordinal number)"
 
-    서수의 순서 : 서수 $\alpha , \beta$ 에 대한 $\text{ord }(A) =\alpha ,\text{ord }(B) = \beta$ 인 정렬집합 $A, B$ 에 대하여 $A$ 가 $B$ 의 절편과 순서동형이면 다음과 같이 정의한다.
+    서수 $\alpha , \beta$ 에 대한 $\text{ord }(A) =\alpha ,\text{ord }(B) = \beta$ 인 정렬집합 $A, B$ 에 대하여 $A$ 가 $B$ 의 절편과 순서동형이면 다음과 같이 정의한다.
 
     $$ \alpha < \beta $$
 
@@ -821,17 +816,15 @@
 
     이고, $Y$ 는 최소원소 $a \in X$ 를 갖는다. 그러면 $S_a$ 의 모든 절편은 $P$ 를 만족하는데, 가정에 의하여 $S_a$ 도 $P$ 를 만족하므로 모순이다. ■ 
 
-# 무한집합
+# Infinite Set
 
-## 집합의 대등
+## Equinumerous
 
-!!! tldr ""
+!!! tldr "집합의 대등(equinumerous)"
 
-    집합의 대등(equinumerous) : 두 집합 $X$ 와 $Y$ 사이에 전단사함수가 존재하면 $X$ 와 $Y$ 가 대등하다고 하고,
+    두 집합 $X$ 와 $Y$ 사이에 전단사함수가 존재하면 $X$ 와 $Y$ 가 대등하다고 한다.
 
-    $$ X \approx Y $$
-
-    라고 쓴다.
+- **두 집합 $X$ 와 $Y$ 가 대등한 것을 $X \approx Y$ 와 같이 표기한다.**
 
 - 이는 집합 $A$ 의 크기 $|A|$ 를 비교하기 위한 정의로써 $A \approx B \iff |A| = |B|$ 가 성립한다.
 
@@ -973,9 +966,9 @@
 
     $$ \because \N \times \N \approx \N $$
 
-!!! tldr "3.16"
+!!! tldr "3.16 무한 집합의 특성"
 
-    무한 집합의 특성 : 자기자신과 대등한 진부분집합이 존재한다. 즉, 집합 $X$ 가 무한집합이면 다음이 만족한다.
+    자기자신과 대등한 진부분집합이 존재한다. 즉, 집합 $X$ 가 무한집합이면 다음이 만족한다.
 
     $$ \exists A \approx X \text{ s.t. }\ A \subset X $$
 
@@ -1031,9 +1024,9 @@
 
     이다. ■ 
 
-!!! tldr ""
+!!! tldr "비둘기 집 원리(Pigeonhole principle)"
 
-    비둘기 집 원리(Pigeonhole principle) : $n = \{0,1,2, \dots, n-1\} \in \N$ 에 대한 임의의 단사함수 $f: n \to n$ 가 전사이다.
+    $n = \{0,1,2, \dots, n-1\} \in \N$ 에 대한 임의의 단사함수 $f: n \to n$ 가 전사이다.
 
 - 증명
 
@@ -1091,11 +1084,11 @@
 
         위 증명은 어떻게 비둘기 집 원리 정리가 본 정리의 증명에 적용되는지 모르겠어서 내가 만든 것이므로 오류가 있을 수 있다.
 
-## 유한집합의 정의
+## Finite Set
 
-!!! tldr ""
+!!! tldr "유한집합(finite set)"
 
-    유한집합(finite set) : 집합 $X$ 가 다음을 만족하면 유한집합이라 한다. 
+    집합 $X$ 가 다음을 만족하면 유한집합이라 한다. 
 
     $$ \exists n \in \N \text{ s.t. }\ n \approx X $$
 
@@ -1151,11 +1144,11 @@
 
     을 만들자. 그러면 $A$ 는 $X$ 의 부분집합이고 $A \approx \N$ 이다. 이렇게 무한히 선택할 수 있다는 것이 선택공리가 주장하는 것이다.
 
-## 무한집합의 정의
+## Definition of Infinite Set
 
-!!! tldr "정리 3.4.5"
+!!! tldr "정리 3.4.5 무한집합(infinite set)"
 
-    집합 $X$ 에 대하여 다음은 동치이다.
+    다음 동치조건을 만족하는 집합 $X$ 를 무한집합이라 한다.
 
     1. $X$ 가 유한집합이 아니다. 즉, $\forall n \in \N, X \not \approx n$ 이다.
 
@@ -1163,15 +1156,11 @@
 
 - 지금까지의 정리들의 결론이 이 무한집합의 정의이다.
 
-!!! tldr ""
-    
-    무한집합(infinite set) : 정리 3.4.5 의 동치조건을 만족하는 집합이다. 
+# Cardinal Number
 
-# 기수
+!!! tldr "기수(cardinal number)"
 
-!!! tldr ""
-
-    기수(cardinal number) : 임의의 집합 $X$ 에 대하여 $X$ 와 동등한 서수 전체의 집합의 최소원소
+    임의의 집합 $X$ 에 대하여 $X$ 와 동등한 서수 전체의 집합의 최소원소
 
     $$ |X| := \min \{\xi : \xi \approx X, \xi \preccurlyeq 2 ^{X}\} $$
 
@@ -1197,11 +1186,11 @@
 
     를 만족해야 한다. 
 
-## 기수의 덧셈과 곱셈
+## Addition, Multiples of Cardinal Number
 
-!!! tldr ""
+!!! tldr "기수의 더하기(addition of cardinal number)"
 
-    기수의 더하기 : 서로소 집합 $A, B$ 와 그 기수 $a = |A| ,b = |B|$ 에 대하여 다음과 같이 정의한다.
+    서로소 집합 $A, B$ 와 그 기수 $a = |A| ,b = |B|$ 에 대하여 다음과 같이 정의한다.
 
     $$ a + b = |A \sqcup B| $$
 
@@ -1225,9 +1214,9 @@
 
         집합의 합집합의 결합법칙이 성립하므로 $(a+b)+c=a+(b+c)$ 도 성립한다.
 
-!!! tldr ""
+!!! tldr "기수의 곱하기(multiple of cardinal number)"
 
-    기수의 곱하기 : $|A| =a, |B| = b$ 인 집합 $A, B$ 에 대하여 다음과 같이 정의한다.
+    $|A| =a, |B| = b$ 인 집합 $A, B$ 에 대하여 다음과 같이 정의한다.
 
     $$ ab = |A \times B| $$
 
@@ -1235,9 +1224,9 @@
 
     - 증명 
 
-!!! tldr ""
+!!! tldr "기수의 제곱 "
 
-    기수의 제곱 : $|A| =a,|B| =b$ 에 대하여 다음과 같이 정의한다.
+    $|A| =a,|B| =b$ 에 대하여 다음과 같이 정의한다.
 
     $$ a ^{b} = |A ^{B}| $$
 
@@ -1277,7 +1266,7 @@
 
     pass
 
-## 베른슈타인의 정리
+## Cantor–Bernstein theorem
 
 !!! tldr ""
 
@@ -1305,9 +1294,9 @@
 
     그러면 [정리 3.3.1](#90ba9203e) 에 의하여 $A \approx B$ 이거나 적절한 $a \in A, b \in B$ 에 대하여 $A \approx S_b \subset B$ 혹은 $B \approx S_a \subset A$ 가 성립한다.
 
-!!! tldr "정리 3.5.2"
+!!! tldr "정리 3.5.2 베른슈타인의 정리(Cantor–Bernstein theorem)"
 
-    베른슈타인의 정리(Schröder–Bernstein theorem) : 집합 $A, B$ 에 대하여 다음이 성립한다. 
+    집합 $A, B$ 에 대하여 다음이 성립한다. 
     
     $$A \preccurlyeq B \land B \preccurlyeq A \implies A \approx B$$
 
@@ -1349,11 +1338,11 @@
 
     pass
 
-## 기수의 순서관계
+## Order of Cardinal Number
 
-!!! tldr ""
+!!! tldr "기수의 순서(order of cardinal number)"
 
-    기수의 순서 : 두 기수 $a = |A| , b = |B|$ 에 대하여 다음과 같이 정의한다.
+    두 기수 $a = |A| , b = |B|$ 에 대하여 다음과 같이 정의한다.
 
     $$ A \preccurlyeq B \iff a \leq b $$
 
@@ -1371,7 +1360,7 @@
 
     역으로 $c =|C|$ 인 집합 $C$ 가 존재하고 $f: A \sqcup C \to B$ 가 전단사이면 $f|_A: A \to B$ 는 단사이고 따라서 $a \leq b$ 이다. ■ 
 
-# 초한기수
+# Transfinite Cardinal Number
 
 !!! tldr ""
 
@@ -1383,7 +1372,7 @@
 
     $X$ 가 무한집합이면 [도움정리 3.4.4](#8ab5072fc) 에 의하여 단사함수 $f: \N \to X$ 가 존재한다. ■ 
 
-## 자연수의 초한기수
+## Size of Natual Number
 
 !!! tldr "자연수의 초한기수"
 
@@ -1397,7 +1386,7 @@
 
     이다.
 
-## 실수의 초한기수
+## Size of Real Number
 
 !!! tldr "실수의 초한기수"
 
@@ -1409,9 +1398,11 @@
 
     이다.
 
-!!! tldr ""
+## Countable Set
 
-    가산 집합(countable set) : 집합 $X$ 의 기수가 다음을 만족하면 $X$ 를 셀 수 있는 집합이라고 한다.
+!!! tldr "가산 집합(countable set)"
+
+    집합 $X$ 의 기수가 다음을 만족하면 $X$ 를 셀 수 있는 집합이라고 한다.
 
     $$ |X| \leq \aleph _0 $$
 
@@ -1419,15 +1410,17 @@
 
 - $\N , \mathbb{Z} , \mathbb{Q}$ 는 가산 무한집합이다. 가산 무한집합을 가부번 집합이라고도 한다.
 
-!!! tldr ""
+## Uncountable Set
 
-    비가산 집합(uncountable set) : 집합 $X$ 의 기수가 다음을 만족하면 $X$ 를 셀 수 없는 집합이라고 한다.
+!!! tldr "비가산 집합(uncountable set)"
+
+    집합 $X$ 의 기수가 다음을 만족하면 $X$ 를 셀 수 없는 집합이라고 한다.
 
     $$ |X| > \aleph _0 $$
 
 - $\R$ 는 비가산집합이다.
 
-## 초한기수의 성질
+## Properties of Transfinite Cardinal Number
 
 !!! tldr ""
 
@@ -1527,9 +1520,11 @@
 
     그러므로 $f(x_0) = A$ 인 $x_0$ 는 존재하지 않고, $f$ 는 전사가 아니다. ■ 
 
-## 실수의 크기
+## Relation between $|\N|$ and $|\R|$
 
-!!! tldr "$\R$ 의 기수"
+replace d91d642d4
+
+!!! tldr ""
 
     $$ 2 ^{\aleph_0} = \mathfrak{c} $$
 
@@ -1563,7 +1558,7 @@
 
     그러므로 $2 ^{\aleph _0} = \mathfrak{c}$ 이다. ■ 
 
-# 서수의 성질
+# Properties of Ordinal Number
 
 !!! tldr "도움정리 3.6.1"
 
@@ -1651,9 +1646,9 @@
 
 - 이는 기수의 정의에서 $\xi \approx X$ 인 $\xi$ 중 최소인 $\xi$ 가 $\alpha$ 라는 말이므로 $\beta \leq \alpha$ 가 $\beta \approx \alpha$ 이면 $\beta =\alpha$ 임이 당연하다.
 
-!!! tldr ""
+!!! tldr "시작서수"
 
-    시작서수 : 어떤 기수 $\alpha$ 에 대하여 기수의 정의에 의해 $\alpha$ 보다 작은 서수는 $\alpha$ 와 동등하지 않은데, 이러한 서수 $\alpha$ 를 시작서수라고 한다.
+    어떤 기수 $\alpha$ 에 대하여 기수의 정의에 의해 $\alpha$ 보다 작은 서수는 $\alpha$ 와 동등하지 않은데, 이러한 서수 $\alpha$ 를 시작서수라고 한다.
 
 - 즉, 모든 기수는 시작서수이다. 
 
@@ -1675,7 +1670,7 @@
 
     그러므로 $\alpha = \sup C$ 이다. ■ 
 
-# 연속체 가설
+# Continuum Hypothesis
 
 !!! tldr "$\aleph _1$ "
 

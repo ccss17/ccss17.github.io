@@ -2,7 +2,7 @@
 
     [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)
 
-# 자연수의 정의
+# Natural Numbers
 
 !!! tldr ""
 
@@ -36,9 +36,9 @@
     
     - $A \in \mathcal{A} \implies A ^{+} \in \mathcal{A}$
 
-!!! tldr ""
+!!! tldr "자연수(natural number)"
 
-    자연수(natural number) : 자연수 집합 $\N$ 의 원소이다.
+    자연수 집합 $\N$ 의 원소이다.
 
 !!! tldr "정리 2.1.1"
 
@@ -98,7 +98,7 @@
 
     (위에서 증명되었다.)
 
-## 자연수의 덧셈과 곱셈
+## Addition, Multiples of Natural Number
 
 !!! tldr "정리 2.1.2"
 
@@ -200,9 +200,9 @@
 
     이다. 그러므로 $\forall (n, x) \in \gamma \setminus \{(n ^{+}, y)\}$ 에 대하여 $(1.2)$ 가 성립한다. 이것으로 모든 증명이 끝났다. ■ 
 
-!!! tldr "자연수 덧셈"
+!!! tldr "자연수 덧셈(addition of natural number)"
 
-    더하기(addition) : 각 자연수 $n, m \in \N$ 에 대하여 다음을 만족하면서 유일하게 존재하는 함수 $\gamma _m:\N \to \N$ 에 대하여 자연수의 더하기를 $m + n = \gamma _m(n)$ 라고 정의한다. 
+    각 자연수 $n, m \in \N$ 에 대하여 다음을 만족하면서 유일하게 존재하는 함수 $\gamma _m:\N \to \N$ 에 대하여 자연수의 더하기를 $m + n = \gamma _m(n)$ 라고 정의한다. 
 
     - $\gamma _m(0) = m$ 
     
@@ -232,9 +232,9 @@
 
     그러므로 수학적 귀납법을 적용할 수 있으므로 증명이 끝났다. 
 
-!!! tldr "자연수 곱셈"
+!!! tldr "자연수 곱셈(multiplication of natural number)"
 
-    곱하기(multiplication) : 각 자연수 $n, m \in \N$ 에 대하여 다음을 만족하면서 유일하게 존재하는 함수 $\delta _m: \N \to \N$ 에 대하여 자연수의 곱하기를 $mn = \delta _m(n)$ 라고 정의한다. 
+    각 자연수 $n, m \in \N$ 에 대하여 다음을 만족하면서 유일하게 존재하는 함수 $\delta _m: \N \to \N$ 에 대하여 자연수의 곱하기를 $mn = \delta _m(n)$ 라고 정의한다. 
 
     - $\delta _m(0) = 0$
     
@@ -266,7 +266,7 @@
 
     둘째 명제는 $m,n$ 을 고정하고 $k$ 에 대한 귀납법을 사용한다.
 
-## 자연수의 순서관계
+## Order of Natural Number
 
 !!! tldr "자연수 순서관계(natural number order)"
 
@@ -560,7 +560,7 @@
 
     이다. ■ 
 
-# 정수의 정의
+# Integer
 
 !!! tldr "동치관계 $\sim$ "
 
@@ -586,15 +586,15 @@
 
         과 같기 때문이다. 
 
-!!! tldr ""
+!!! tldr "정수(integer)"
 
-    정수(integer) : $a, b \in \N$ 에 대한 $\mathbb{Z}$ 의 원소인 동치류 $[(a, b)]$ 이다.
+    $a, b \in \N$ 에 대한 $\mathbb{Z}$ 의 원소인 동치류 $[(a, b)]$ 이다.
 
 - 동치류 $[(a, b)]$ 를 편하게 $[a, b]$ 로 쓰기로 한다.
 
-!!! tldr "정수 뺄셈"
+!!! tldr "정수 뺄셈(subtraction of integer)"
 
-    빼기(subtraction) : $m, n \in \N : n \leq m$ 이면 $m = n + k$ 인 $k \in \N$ 가 유일하게 존재하는데 이 $k$ 를 다음과 같이 정의한다.
+    $m, n \in \N : n \leq m$ 이면 $m = n + k$ 인 $k \in \N$ 가 유일하게 존재하는데 이 $k$ 를 다음과 같이 정의한다.
 
     $$ k = m - n $$
 
@@ -610,7 +610,7 @@
     
     $$ [0, n] = -n $$
 
-## 정수의 순서관계
+## Order of Integer
 
 !!! tldr "정수 순서관계(integer order)"
 
@@ -664,9 +664,9 @@
 
     집합 $A$ 가 아래로 유계일 때도 비슷하게 증명할 수 있다. ■ 
 
-## 정수의 덧셈과 곱셈
+## Addition, Multiples of Integer
 
-!!! tldr "정수 덧셈"
+!!! tldr "정수 덧셈(addition of integer)"
 
     정수의 덧셈 $+$ 은 다음과 같이 정의된 함수 $+: \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$ 이다.
     
@@ -676,7 +676,7 @@
 
 - 또한 $[0, 0] \in \mathbb{Z}$ 이 항등원의 역할을 하고, $[n, m]$ 의 역원은 $[m, n]$ 이 된다. 
 
-!!! tldr "정수 곱셈"
+!!! tldr "정수 곱셈(multiple of integer)"
 
     정수의 곱셈 $\cdot$ 은 다음과 같이 정의된 함수 $\cdot : \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$ 이다.
 
@@ -706,7 +706,7 @@
 
     이 성립하기 때문이다.
 
-# 체
+# Field
 
 !!! tldr "체(field)"
 
@@ -764,7 +764,7 @@
 
     $$ -a = -a + 0 = -a + (a + -a') = (-a + a) + -a' = 0 + -a' = -a' \tag*{■} $$
 
-# 순서체
+# Ordered Field
 
 !!! tldr ""
 
@@ -798,7 +798,7 @@
 
     $P _{\mathbb{Z}} \subseteq \mathbb{Z} = \N \setminus  \{0\}$ 으로 두면 $\mathbb{Z}$ 에는 양수집합이 존재한다. $\mathbb{Z}$ 는 곱셈의 역원을 제외한 체의 모든 조건도 만족시킨다. 그래서 $\mathbb{Z}$ 는 체도 아니고 순서체도 아니다.
 
-## 순서체의 순서관계
+## Order of Ordered Field
 
 !!! tldr "순서체의 순서관계"
 
@@ -810,11 +810,11 @@
 
 - 아래에서 살펴보듯이 $\mathbb{Q}$ 가 순서체이므로 이 관계에 의하여 $\mathbb{Q}$ 의 순서관계가 주어진다.
 
-## 절댓값
+## Absolute Value
 
-!!! tldr ""
+!!! tldr "절댓값(absolute value, modulus)"
 
-    절댓값(absolute value, modulus) : 순서체 $F$ 의 원소 $a \in F$ 의 절댓값 $|a|$ 를 다음과 같이 정의한다.
+    순서체 $F$ 의 원소 $a \in F$ 의 절댓값 $|a|$ 를 다음과 같이 정의한다.
 
     $$ |a| = \begin{cases} a &a \geq 0\\ -a & a < 0\\ \end{cases} $$
 
@@ -876,7 +876,7 @@
 
     이므로 5) 가 증명되었다. ■ 
 
-# 유리수의 정의
+# Rational Numbers
 
 !!! tldr "동치관계 $\sim$ "
 
@@ -894,9 +894,9 @@
 
     즉, 유리수 집합 $\mathbb{Q}$ 부터는 덧셈, 뺄셈, 곱셈, 나눗셈을 자유롭게 할 수 있는 체(field)이다.
 
-!!! tldr ""
+!!! tldr "유리수(rational number)"
 
-    유리수(rational number) : $a, b \in \mathbb{Z}$ 에 대한 $\mathbb{Q}$ 의 원소인 동치류 $[(a, b)]$ 이다.
+    $a, b \in \mathbb{Z}$ 에 대한 $\mathbb{Q}$ 의 원소인 동치류 $[(a, b)]$ 이다.
 
 - 유리수 집합과 그 동치관계를 다룰 때 동치류 $[(a, b)]$ 를 편하게 $[a, b]$ 로 쓰기로 한다.
 
@@ -908,15 +908,15 @@
 
     로 이해하면, 즉 두 정수의 비율로 이해하면 편하다. 
 
-## 유리수의 덧셈과 곱셈
+## Addition, Multiples of Rational Number
 
-!!! tldr "유리수 덧셈"
+!!! tldr "유리수 덧셈(addition of rational number)"
 
     유리수의 덧셈 $+$ 는 다음과 같이 정의된 함수 $+: \mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$ 이다.
 
     $$ [a, b] + [c, d] = [ad + bc, bd] $$
     
-!!! tldr "유리수 곱셈"
+!!! tldr "유리수 곱셈(multiple of rational number)"
 
     유리수의 곱셈 $\cdot$ 는 다음과 같이 정의된 함수 $\cdot : \mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$ 이다.
 
@@ -950,7 +950,7 @@
 
     이다. 
 
-## 유리수 집합은 순서체이다
+## Rational Number Set is Ordered Field
 
 !!! tldr ""
 
@@ -1092,9 +1092,9 @@
 
 - 증명 
 
-!!! tldr ""
+!!! tldr "아르키메데스의 성질(Archimedean property)"
 
-    아르키메데스의 성질(Archimedean property) : 전순서를 가지는 군 $G$ 의 양의 원소 $x, y$ 에 대하여 다음을 만족하는 $n \in \N$ 이 존재한다.
+    전순서를 가지는 군 $G$ 의 양의 원소 $x, y$ 에 대하여 다음을 만족하는 $n \in \N$ 이 존재한다.
 
     $$ y < n \cdot x $$
 
@@ -1120,13 +1120,13 @@
 
     $$ m,n \in P _{\mathbb{Z}} \implies \dfrac{n}{m}<2n $$
 
-# 데데킨트 절단으로 정의하는 실수
+# Construction Real Number by Dedekind cuts
 
-## 데데킨트 절단
+## Dedekind cuts
 
-!!! tldr ""
+!!! tldr "데데킨트 절단(Dedekind Cut)"
 
-    데데킨트 절단(Dedekind Cut) : 유리수의 집합 $\alpha \subset \mathbb{Q}$ 가 다음을 만족하면 데데킨트 절단이라고 한다.
+    유리수의 집합 $\alpha \subset \mathbb{Q}$ 가 다음을 만족하면 데데킨트 절단이라고 한다.
 
     1. $\alpha \neq \varnothing , \alpha \neq \mathbb{Q}$
 
@@ -1190,7 +1190,7 @@
 
     ![](https://upload.wikimedia.org/wikipedia/commons/7/72/Dedekind_cut_sqrt_2.svg)
 
-## 실수의 정의
+## Definition of Real Number
 
 !!! tldr "데데킨트 절단으로 정의하는 실수 집합(real number set)"
 
@@ -1264,11 +1264,9 @@
     
     $x$ 이 $L$ 에 속하지 않으므로 절단의 정의 $(3)$ 에 의하여 $\forall y \in L : x \geq y$ 이다. 그러면 $x$ 은 $L$ 의 상계이고 $x \geq \sup (L)$ 이다. 이는 $x < \sup (L)$ 와 모순이다. ■ 
 
-    - 아.. proofwiki 에서 마지막 부분에 $x$ 를 $r$ 로 써놔서 엄청 헷갈렸네. 아으..
+## Order of Real Number
 
-## 실수의 순서관계
-
-!!! tldr "실수의 순서관계"
+!!! tldr "실수의 순서관계(order of real number)"
 
     절단 $\alpha , \beta$ 에 대하여 다음과 같이 정의한다.
 
@@ -1332,9 +1330,9 @@
     
     이것은 명백하게 $\alpha$ 가 상한임을 말해준다. ■ 
 
-## 실수의 덧셈
+## Addition of Real Number
 
-!!! tldr "실수 덧셈"
+!!! tldr "실수 덧셈(addition of real number)"
 
     실수의 덧셈 $+$ 는 다음과 같이 정의된 함수 $+: \R \times \R \to \R$ 이다.
 
@@ -1472,9 +1470,9 @@
 
     이며, 이로써 모든 증명이 끝났다. ■ 
 
-## 실수의 곱셈
+## Multiple of Real Number
 
-!!! tldr "실수 곱셈"
+!!! tldr "실수 곱셈(multiple of real number)"
 
     양의 실수의 곱셈 $\cdot$ 은 다음과 같이 정의된 함수 $\cdot : P_{\R} \times P_{\R} \to P_{\R}$ 이다.
 
@@ -1532,7 +1530,7 @@
 
     이다. 이 결과로 덧셈에 대하여 닫혀있음을 바로 알 수 있다. 어떤 절단 $a,b$ 가 $a > 0 ^{*} \land b > 0^{*}$ 이면 $0 \in a \land 0 \in b$ 이므로 $a > 0, b > 0$ 이기 때문이다. 
 
-## 실수는 순서체이다
+## Real Number Set is Ordered Field
 
 !!! tldr ""
 
@@ -1540,7 +1538,7 @@
 
 - 지금까지의 논의의 결과가 이 정리이다. 특히 $\R$ 이 정리 2.3.2 를 만족한다는 사실도 중요한데 이것과 $\R$ 이 순서체라는 것에 의하여 $\R$ 이 완비순서체가 되기 때문이다. 
 
-## 실수의 성질
+## Properties of Real Number
 
 !!! tldr ""
 
@@ -1556,17 +1554,17 @@
 
 - 이 정리는 $r \mapsto r ^{*} : \mathbb{Q} \to \R$ 이 연산과 순서를 보존하는 단사함수임을 말해준다. 
 
-# 코시 수열로 정의하는 실수
+# Construction Real Number from Cauchy sequences 
 
-## 코시 수열
+## Cauchy sequences 
 
-!!! tldr ""
+!!! tldr "수열(sequence)"
 
-    수열(sequence) : 집합 $X$ 에 대한 함수 $x : \N \to X$ 이다. 
+    집합 $X$ 에 대한 함수 $x : \N \to X$ 이다. 
 
-!!! tldr ""
+!!! tldr "수렴(convergence)"
 
-    수렴(convergence) : 순서체 $F$ 의 수열 $x : \N \to F$ 와 $a \in F$ 가 주어졌을 때 $\forall e \in P _{F}$ 에 대하여 다음을 만족하는 $N \in \N$ 이 존재하면 $x$ 가 $a \in F$ 로 수렴한다고 한다.
+    순서체 $F$ 의 수열 $x : \N \to F$ 와 $a \in F$ 가 주어졌을 때 $\forall e \in P _{F}$ 에 대하여 다음을 만족하는 $N \in \N$ 이 존재하면 $x$ 가 $a \in F$ 로 수렴한다고 한다.
 
     $$ i \geq N \implies |x(i) - a| < e $$
 
@@ -1608,9 +1606,9 @@
 
     $$ r ^{*}(i) = r $$
 
-!!! tldr ""
+!!! tldr "유계 수열(bounded sequence)"
 
-    유계 수열(bounded sequence) : 순서체 $F$ 의 수열 $x$ 와 $i \in \N$ 에 대하여 다음을 만족하는 $M \in F$ 가 있으면 $x$ 는 유계수열이다.
+    순서체 $F$ 의 수열 $x$ 와 $i \in \N$ 에 대하여 다음을 만족하는 $M \in F$ 가 있으면 $x$ 는 유계수열이다.
 
     $$ |x(i)| \leq M $$
 
@@ -1652,7 +1650,7 @@
 
     이다. ■ 
 
-## 실수의 정의
+## Definition of Real Number
 
 !!! tldr "기본열의 동치관계 $\sim$"
 
@@ -1730,9 +1728,9 @@
 
         라고 표현한 것이다. $e$ 를 $0$ 에 수렴하는 양수라고 생각하면 되니까..
 
-## 실수의 순서관계
+## Order of Real Number
 
-!!! tldr "실수 순서관계"
+!!! tldr "실수 순서관계(order of real number)"
 
     $[\alpha ], [\beta ] \in \R$ 에 대하여 
 
@@ -1806,9 +1804,9 @@
 
     이다. ■ 
 
-## 실수의 덧셈
+## Addition of Real Number
 
-!!! tldr "실수 덧셈"
+!!! tldr "실수 덧셈(addition of real number)"
 
     기본열 $\alpha + \beta: i \mapsto \alpha (i) + \beta (i)$ 와 $[\alpha], [\beta] \in \R$ 에 대하여 다음과 같이 정의한다.
 
@@ -1842,9 +1840,9 @@
 
 - 증명 
 
-## 실수의 곱셈
+## Multiple of Real Number
 
-!!! tldr "실수 곱셈"
+!!! tldr "실수 곱셈(multiple of real number)"
 
     기본열 $\alpha \beta: i \mapsto \alpha (i) \beta (i)$ 와 $[\alpha] , [\beta] \in \R$ 에 대하여 다음과 같이 정의한다.
 
@@ -1928,7 +1926,7 @@
 
     이다. 그러므로 $\beta$ 는 기본열이다. ■ 
 
-## 실수는 순서체이다
+## Real Number Set is Ordered Field
 
 !!! tldr ""
 
@@ -1936,7 +1934,7 @@
 
 - 지금까지의 정리들을 기반으로 $P _{\R} = \{[\alpha ] \in \R : [\alpha ] > 0 ^{*}\}$ 라 두면 순서체의 조건이 모두 성립한다.
 
-## 실수의 성질
+## Properties of Real Number
 
 !!! tldr "정리 2.4.3"
 
@@ -1978,9 +1976,9 @@
 
     이다. 그러므로 $\alpha (N) - \dfrac{1}{2}d \in \mathbb{Q}$ 가 존재함을 증명하고자 했던 유리수이다. ■ 
 
-!!! tldr ""
+!!! tldr "부분 수열(subsequence)"
 
-    부분 수열(subsequence) : $\forall k \in \{0, 1, 2, \dots\}$ 에 대하여 $i(k) < i(k+1)$ 인 함수 $i : \N \to \N$ 와 수열 $x : i \mapsto x(i)$ 의 합성 
+    $\forall k \in \{0, 1, 2, \dots\}$ 에 대하여 $i(k) < i(k+1)$ 인 함수 $i : \N \to \N$ 와 수열 $x : i \mapsto x(i)$ 의 합성 
 
     $$ x \circ i : k \mapsto x(i(k)) $$
 
@@ -2064,7 +2062,7 @@
 
     이므로 실수 수열 $\big <[\alpha _n]\big >$ 은 실수 $[r]$ 로 수렴한다. ■ 
 
-# 완비순서체 
+# Completeness Ordered Field
 
 !!! tldr "완비순서체(completeness ordered field) 또는 실수의 완비성 공리(completeness axiom of the real numbers)"
 
@@ -2075,10 +2073,6 @@
     2. $A \neq \varnothing$ 인 집합 $A \subset F$ 가 아래로 유계이면 하한을 가진다.
 
     3. 임의의 코시 수열 $x: \N \to F$ 가 $F$ 안에서 수렴한다. 
-
-- [정리 2.3.2](#febb2f17d) 는 데데킨트 절단으로 정의된 실수체 $\R$ 이 완비순서체임을 말해준다.
-
-    또한 아래 증명을 통해 코시 수열로 구성한 실수체도 완비순서체임이 증명된다. 
 
 - 이것을 완비성이라고 한다. 완비성이란 쉽게 말해서 완비성을 갖는 집합의 원소로 수직선을 빈틈없이 채울 수 있다라는 것이다. 유리수는 조밀하지만, 완비적이지는 않다. 하지만 실수는 완비적이어서 좌표계를 메꿔질 구멍이 없이 채우는 것이 가능하다.
 
@@ -2187,6 +2181,16 @@
         그러면 이 구간들의 왼쪽 끝점의 집합은 유계이고 조건 1) 을 가정했으므로 상한 $a$ 를 가진다. 또한 구간들의 오른쪽 끝점들의 집합은 아래로 유계이므로 조건 1) 과 동치인 2) 에의하여 하한 $b$ 를 가진다. 
 
         그러면 3) 에서 1) 을 도출했을 때처럼 $a=b$ 가 되고 이 원소 근방에는 무한히 많은 $A$ 의 원소가 있으므로 $A$ 의 원소를 계속 택하여 수열을 만들어 $a$ 로 수렴하게 할 수 있다. 이 수열이 우리가 원하던 원래 $\alpha$ 의 수렴하는 부분수열이 된다. ■ 
+
+## Real Number Field is Completeness Ordered Field
+
+!!! tldr ""
+
+    실수체는 완비순서체이다.
+
+- 증명
+
+    [정리 2.3.2](#febb2f17d) 는 데데킨트 절단으로 정의된 실수체 $\R$ 이 완비순서체임을 말해준다. 또한 완비순서체의 세 조건이 동치임을 증명하는 과정에서 코시 수열로 구성한 실수체도 완비순서체임이 증명되었다.
 
 !!! tldr "정리 2.5.1"
 
@@ -2304,7 +2308,7 @@
 
 - 증명
 
-## 최종결론
+## Completeness Ordered Field is Unique
 
 !!! tldr "정리 2.5.3"
 
