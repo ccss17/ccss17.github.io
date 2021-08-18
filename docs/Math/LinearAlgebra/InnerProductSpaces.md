@@ -887,7 +887,9 @@
 
     점공간이 아닌 유한차원 내적공간에는 정규직교기저가 존재한다.
 
-    점공간이 아닌 유한차원 내적공간 $\mathbf{V}$ 에 정규직교기저 $\beta= \{v_1, v_2, \dots, v_n\}$ 와 $x \in \mathbf{V}$ 에 대하여 $\displaystyle x = \sum_{i=1}^{n}\big <x,v_i \big >v_i$ 이다.
+    점공간이 아닌 유한차원 내적공간 $\mathbf{V}$ 의 정규직교기저 $\beta= \{v_1, v_2, \dots, v_n\}$ 에 대하여 다음이 성립한다.
+    
+    $$x \in \mathbf{V} : x = \sum_{i=1}^{n}\big <x,v_i \big >v_i $$
 
 - 이 정리는 내적공간은 정규직교기저를 가진다는 중요한 사실을 말해준다. 또한 임의의 벡터를 정규직교기저의 일차결합으로 나타내는 방법을 말해준다.
 
@@ -899,7 +901,7 @@
 
 !!! tldr "정리 6.5 따름정리"
 
-    정규직교기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 를 갖는 유한차원 벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 $A = [\mathbf{T}]_{\beta }$ 로 두면 임의의 $i, j$ 에 대하여 $A _{ij} = \big <\mathbf{T}(v_j), v_i \big >$ 이다.
+    정규직교기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 를 갖는 유한차원 내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 $A = [\mathbf{T}]_{\beta }$ 로 두면 임의의 $i, j$ 에 대하여 $A _{ij} = \big <\mathbf{T}(v_j), v_i \big >$ 이다.
 
 - 이 정리를 사용하면 선형연산자의 정규직교기저에 대한 행렬표현 성분을 쉽게 구할 수 있다.
 
@@ -1133,4 +1135,192 @@
 
 !!! tldr "수반연산자(adjoint)"
 
-    내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 정규직교기저 $\beta$ 에 대한 행렬표현이 $[\mathbf{T}]{}^{*}_{\beta }$ 인 선형연산자를 $\mathbf{T}$ 의 수반연산자라 한다.
+    내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 정규직교기저 $\beta$ 에 대한 행렬표현이 $[\mathbf{T}]{}^{*}_{\beta }$ 인 선형연산자를 $\mathbf{T}$ 의 수반연산자 $\mathbf{T}{}^{*}$ 라 한다.
+
+!!! tldr "정리 6.8"
+
+    유한차원 내적공간 $\mathbf{V}$ 와 정규직교기저 $\{v_1, v_2, \dots, v_n\}$ 와 $\mathbf{g}_{} \in \mathbf{V}{}^{*}$ 와 $y = \displaystyle \sum_{i=1}^{n}\overline{\mathbf{g}_{}(v_i)}v_i \in \mathbf{V}$ 와 $x \in \mathbf{V}$ 에 대하여 다음이 성립한다.
+
+    $$ \exists ! y \in \mathbf{V} : \mathbf{g}_{}(x) = \big <x,y \big > $$
+
+- 이 정리는 내적 $\big <\cdot ,\cdot  \big >:\mathbf{V}\times \mathbf{V}\to \mathbf{F}$ 이 정의된 유한차원 내적공간 $\mathbf{V}$ 의 모든 선형범함수 $\mathbf{V}\to \mathbf{F}$ 가 결국 $\big <x,y \big >$ 와 같음을 말해준다. 
+
+- 증명
+
+    함수 $\mathbf{h}_{}:\mathbf{V}\to \mathbf{F}, x \mapsto \big <x,y \big >$ 를 정의하면 $\mathbf{h}_{}$ 는 선형이다. 또한 $j \in \{1,\dots,n\}$ 에 대하여 [내적의 성질](#99baac14a)에 의하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}
+    \mathbf{h}_{}(v_j) = \big <v_j,y \big >&= \bigg <v_j,\sum_{i=1}^{n}\overline{\mathbf{g}_{}(v_i)}v_i \bigg > \\
+    &= \sum_{i=1}^{n}\mathbf{g}_{}(v_i)\big <v_j,v_i \big > =\mathbf{g}_{}(v_j)\\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    [정리 2.6 따름정리](../LinearTransformation/#52dd3d90f) 에 의하여 $\mathbf{g}_{}=\mathbf{h}_{}$ 이다. 이제 $y$ 의 유일성 증명만 하면 된다. ▲ 
+
+    이제 $\mathbf{g}_{}(x) = \big <x,y \big >$ 를 가정할 수 있다.  $\mathbf{g}_{}(x) = \big <x,y' \big >$ 를 만족하는 $y'$ 가 존재하면 모든 $x$ 에 대하여 $\big <x,y \big >=\big <x,y' \big > \implies y=y'$ 이다. ■ 
+
+!!! tldr "정리 6.9"
+
+    유한차원 내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 와 임의의 $x, y \in \mathbf{V}$ 에 대하여 $\big <\mathbf{T}(x),y \big > = \big <x,\mathbf{T}{}^{*}(y) \big >$ 인 선형변환 $\mathbf{T}{}^{*}:\mathbf{V}\to \mathbf{V}$ 가 유일하게 존재한다.
+
+- 이 정리는 선형연산자의 수반연산자의 존재성과 유일성을 보장해준다.
+
+- 무한차원 내적공간에서는 선형연산자의 수반연산자가 존재하지 않을 수도 있다. 그러나 특별한 언급이 없으면 무한차원 내적공간에 선형연산자의 수반연산자가 존재한다고 가정하겠다.
+
+- 증명
+
+    $y \in \mathbf{V}$ 를 고정하고 임의의 $x \in \mathbf{V}$ 에 대하여 함수 $\mathbf{g}_{}:\mathbf{V}\to \mathbf{F}, x \to \big <\mathbf{T}(x),y \big >$ 를 정의하자.
+    
+    $x_1, x_2 \in \mathbf{V}, c \in \mathbf{F}$ 에 대하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}
+    \mathbf{g}_{}(cx_1+x_2)&=\big <\mathbf{T}(cx_1+x_2),y \big > =\big <c \mathbf{T}(x_1) + \mathbf{T}(x_2),y \big >\\
+    &= c \big <\mathbf{T}(x_1),y \big >+\big <\mathbf{T}(x_2),y \big > = c \mathbf{g}_{}(x_1) + \mathbf{g}_{}(x_2)\\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    따라서 $\mathbf{g}_{}$ 는 선형이다. ▲ 
+
+    정리 6.8 에 의하여 $\mathbf{g}_{}(x) = \big <x,y' \big >$ 이 되는 유일한 $y'$ 가 존재하므로 $\big <\mathbf{T}(x),y \big > = \big <x,y' \big >$ 이다. 함수 $\mathbf{T}{}^{*}:\mathbf{V}\to \mathbf{V}, y \mapsto y'$ 를 정의하면 $\big <\mathbf{T}(x),y \big > = \big <x,\mathbf{T}{}^{*}(y) \big >$ 이다. ▲ 
+
+    $y_1, y_2 \in \mathbf{V}, c \in \mathbf{F}$ 를 고정하면 임의의 $x \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}
+    \big <x,\mathbf{T}{}^{*}(cy_1 + y_2) \big >&= \big <\mathbf{T}(x),cy_1 + y_2 \big > = \overline{c}\big <\mathbf{T}(x),y_1 \big > + \big <\mathbf{T}(x), y_2 \big >\\
+    &= \overline{c}\big <x,\mathbf{T}{}^{*}(y_1) \big > + \big <x,\mathbf{T}{}^{*}(y_2) \big > = \big <x, c \mathbf{T}{}^{*}(y_1) + \mathbf{T}{}^{*}(y_2)\big >\\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    따라서 $\mathbf{T}{}^{*}$ 는 선형이다. ▲ 
+
+    $\mathbf{U} :\mathbf{V}\to \mathbf{V}$ 가 선형이고 $\forall  x, y \in \mathbf{V}: \big <\mathbf{T}(x), y \big > = \big <x,\mathbf{U} (y) \big >$ 를 만족하면 $\big <x,\mathbf{T}{}^{*}(y) \big > = \big <x,\mathbf{U} (y) \big >$ 이다. 따라서 $\mathbf{T}{}^{*}$ 는 유일하다. ■ 
+
+!!! tldr ""
+
+    유한차원 내적공간의 선형연산자 $\mathbf{T}$ 에 대한 수반연산자 $\mathbf{T}{}^{*}$ 는 다음을 만족하는 유일한 $\mathbf{V}$ 의 연산자이다.
+
+    1. $\big <\mathbf{T}(x),y \big > = \big <x,\mathbf{T}{}^{*}(y) \big >$
+
+    2. $\big <x,\mathbf{T}(y) \big > = \big <\mathbf{T}{}^{*}(x),y \big >$
+
+- 이 정리는 내적 안에서 $\mathbf{T}$ 의 위치를 바꾸면 ${}^{*}$ 가 붙는다는 것을 말해준다.
+
+- 증명
+
+    1) 은 정리 6.9 가 보장해준다. 2) 는 내적의 성질에 의하여 다음이 성립하므로 증명된다. 
+
+    $$ \big <x,\mathbf{T}(y) \big > = \overline{\big <\mathbf{T}(y),x \big >} = \overline{\big <y, \mathbf{T}{}^{*}(x) \big >} = \big <\mathbf{T}{}^{*}(x),y \big > $$
+
+!!! tldr "정리 6.10"
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 정규직교기저 $\beta$, 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
+
+    $$ [\mathbf{T}{}^{*}]_{\beta }=[\mathbf{T}]{}^{*}_{\beta } $$
+
+- 이 정리는 수반연산자를 구하는 유용한 방법을 알려준다. 또한 이 정리는 수반연산자와 수반행렬의 관계를 알려준다.
+
+- 증명
+
+    $A = [\mathbf{T}]_{\beta }, B = [\mathbf{T}{}^{*}]_{\beta }, \beta =\{v_1, v_2, \dots, v_n\}$ 로 두면 [정리 6.5 따름정리](#d71d99f60) 와 [내적의 성질](#99baac14a)과 [수반행렬](#8f2c193aa)의 정의에 의하여 다음이 성립한다. 
+
+    $$ B _{ij} = \big <\mathbf{T}{}^{*}(v_j), v_i \big > = \overline{\big <v_i, \mathbf{T}{}^{*}(v_j) \big >} = \overline{\big <\mathbf{T}(v_i), v_j \big >} = \overline{A}_{ji} = (A {}^{*})_{ij} \tag*{■} $$
+
+- 예시 
+
+    $\mathbb{C}$-벡터공간 $\mathbb{C}^{2}$ 의 선형연산자 $\mathbf{T}(a_1, a_2) = (3a_2 + 2a_1i, a_1 - a_2)$  와 표준순서기저 $\beta = \{(1,0), (0,1)\}$ 에 대하여 [선형변환의 행렬표현](../LinearTransformation/#c16bc5e5b) 과 본 정리에 의하여 다음이 성립한다. 
+
+    $$ \mathbf{T}(1,0) = (2i, 1) $$
+
+    $$ \mathbf{T}(0,1) = (3, -1) $$
+
+    $$ [\mathbf{T}]_{\beta } = \begin{pmatrix} 2i&3\\ 1&-1\\ \end{pmatrix} \implies [\mathbf{T}{}^{*}]_{\beta } = \begin{pmatrix} -2i&1\\ 3&-1\\ \end{pmatrix} $$
+
+    따라서 $\mathbf{T}{}^{*}(a_1, a_2) = (a_2 -2a_1i, 3a_1 - a_2)$ 이다.
+
+    - $\R$-벡터공간 $\mathbb{C}^{2}$ 의 표준순서기저는 $\{(1,0),(0,1),(i,0),(0,i)\}$ 이며 선형변환의 행렬표현이 $4 \times 4$ 행렬이 된다.
+
+!!! tldr "정리 6.10 따름정리"
+
+    $$ A \in \mathbf{M}_{n \times n}(\mathbf{F}) : \mathbf{L}_{A {}^{*}} = (\mathbf{L}_{A}){}^{*} $$
+
+- 증명
+
+    $\mathbf{F}^{n}$ 의 표준순서기저를 $\beta$ 로 두면 [정리 2.15](../LinearTransformation/#c3298a7b3) 와 정리 6.10 에 의하여 $[\mathbf{L}_{A}]_{\beta }=A$ 이므로 다음이 성립한다. 
+
+    $$ [(\mathbf{L}_{A}){}^{*}]_{\beta } = [\mathbf{L}_{A}]{}^{*}_{\beta } = A {}^{*} = [\mathbf{L}_{A {}^{*}}]_{\beta } \tag*{■} $$
+
+!!! tldr "정리 6.11"
+
+    내적공간 $\mathbf{V}$ 와 수반연산자가 존재하는 선형연산자 $\mathbf{T}, \mathbf{U}$ 에 대하여 다음이 성립한다.
+
+    1. $\mathbf{T}+\mathbf{U}$ 의 수반연산자가 존재한다. $(\mathbf{T}+\mathbf{U}){}^{*}=\mathbf{T}{}^{*}+\mathbf{U}{}^{*}$ 이다.
+
+    2. 임의의 $c \in \mathbf{F}$ 에 대하여 $c \mathbf{T}$ 의 수반연산자가 존재한다. $(c \mathbf{T}){}^{*} = \overline{c}\mathbf{T}{}^{*}$ 이다.
+
+    3. $\mathbf{T}\mathbf{U}$ 의 수반연산자가 존재한다. $(\mathbf{T}\mathbf{U}){}^{*}=\mathbf{U}{}^{*}\mathbf{T}{}^{*}$ 이다.
+
+    4. $\mathbf{T}{}^{*}$ 의 수반연산자가 존재한다. $\mathbf{T}{}^{*}{}^{*}=\mathbf{T}$ 이다.
+
+    5. $\mathbf{I}$ 의 수반연산자가 존재한다. $\mathbf{I}{}^{*}=\mathbf{I}$ 이다.
+
+- 증명
+
+    1: 
+
+    $x,y \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
+
+    $$ 
+    \begin{equation}\begin{split}
+    \big <(\mathbf{T}+\mathbf{U})(x), y \big > = \big <x, (\mathbf{T}+\mathbf{U}){}^{*}(y) \big >&= \big <(\mathbf{T}+\mathbf{U})(x), y\big > = \big <\mathbf{T}(x) + \mathbf{U}(x),y \big >\\
+    &= \big <\mathbf{T}(x),y \big >+\big <\mathbf{U}(x), y\big > = \big <x,\mathbf{T}{}^{*}(y) \big > + \big <x, \mathbf{U}{}^{*}(y) \big >\\
+    &= \big <x,\mathbf{T}{}^{*}(y)+\mathbf{U}{}^{*}(y) \big > = \big <x, (\mathbf{T}{}^{*}+\mathbf{U}{}^{*})(y) \big >
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    4:
+
+    $$ x, y \in \mathbf{V} : \big <x,\mathbf{T}(y) \big > = \big <\mathbf{T}{}^{*}(x), y\big > = \big <x, \mathbf{T}{}^{*}{}^{*}(y) \big > $$
+
+!!! tldr "정리 6.11 따름정리"
+
+    $A, B \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 다음이 성립한다. 
+
+    1. $(A+B){}^{*}=A {}^{*}+B {}^{*}$
+
+    2. $c \in \mathbf{F} : (cA) {}^{*} = \overline{c}A {}^{*}$
+
+    3. $(AB) {}^{*} = B {}^{*}A {}^{*}$
+
+    4. $A {}^{*}{}^{*}=A$
+
+    5. $I {}^{*}=I$
+
+- 증명
+
+    3:
+
+    [정리 2.15](../LinearTransformation/#c3298a7b3) 에 의하여 다음이 성립한다.
+
+    $$ \mathbf{L}_{(AB){}^{*}} = (\mathbf{L}_{AB}){}^{*} = (\mathbf{L}_{A}\mathbf{L}_{B}) {}^{*} = (\mathbf{L}_{B}){}^{*}(\mathbf{L}_{A}){}^{*}=\mathbf{L}_{B {}^{*}}\mathbf{L}_{A {}^{*}} = \mathbf{L}_{B {}^{*}}\mathbf{L}_{A {}^{*}} $$
+
+- 편의상 정리 6.10 으로 증명이 이루어졌지만 수반행렬의 정의를 직접 사용하여 증명할 수도 있다.
+
+## Least Squares Approximation
+
+!!! tldr ""
+
+    $x, y \in \mathbf{F}^{n}$ 의 표준내적을 $\big <x,y \big >_{n}$ 라 표기하면 열벡터 $x, y$ 에 대하여 $\big <x,y \big >_{n} = y {}^{*}x$ 이다.
+
+- 증명
+
+    [표준 내적](#755926539) 과 [켤레 전치행렬](#8f2c193aa) 의 정의에 의하여 자명하게 성립한다. ■ 
+
+!!! tldr "보조정리 1"
+
+    $A \in \mathbf{M}_{m \times n}(\mathbf{F}), x \in \mathbf{F}^{n}, y \in \mathbf{F}^{m}$ 에 대하여 다음이 성립한다.
+
+    $$ \big <Ax, y \big >_{m} = \big <x, A {}^{*}y \big >_{n} $$
+
+- 증명
+
+    
