@@ -1022,7 +1022,7 @@
 
     이때 $x = u$ 인 것과 $\|y-x\| = \|y-u\|$ 인 것은 동치이다.
 
-- 이 정리는 정리 6.6 의 $u$ 가 $\mathbf{W}$ 의 벡터 중 $y$ 에 가장 가까운 벡터임을 말해준다. 
+- 이 정리는 정리 6.6 의 $u$ 가 $\mathbf{W}$ 의 벡터 중 $y$ 에 가장 가까운 유일한 벡터임을 말해준다. $\forall x \in \mathbf{W}: \|y - x\| \geq \|y-u\|$ 라는 조건이 유일성을 함의한다.
 
 - 증명
 
@@ -1135,8 +1135,10 @@
 
 !!! tldr "수반연산자(adjoint)"
 
-    내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 정규직교기저 $\beta$ 에 대한 행렬표현이 $[\mathbf{T}]{}^{*}_{\beta }$ 인 선형연산자를 $\mathbf{T}$ 의 수반연산자 $\mathbf{T}{}^{*}$ 라 한다.
+    내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 정규직교기저 $\beta$ 에 대하여 다음을 만족하는 선형연산자 $\mathbf{T}{}^{*}$ 를 $\mathbf{T}$ 의 수반연산자라고 한다.
 
+    $$ [\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}]{}^{*}_{\beta } $$
+    
 !!! tldr "정리 6.8"
 
     유한차원 내적공간 $\mathbf{V}$ 와 정규직교기저 $\{v_1, v_2, \dots, v_n\}$ 와 $\mathbf{g}_{} \in \mathbf{V}{}^{*}$ 와 $y = \displaystyle \sum_{i=1}^{n}\overline{\mathbf{g}_{}(v_i)}v_i \in \mathbf{V}$ 와 $x \in \mathbf{V}$ 에 대하여 다음이 성립한다.
@@ -1149,11 +1151,7 @@
 
     함수 $\mathbf{h}_{}:\mathbf{V}\to \mathbf{F}, x \mapsto \big <x,y \big >$ 를 정의하면 $\mathbf{h}_{}$ 는 선형이다. 또한 $j \in \{1,\dots,n\}$ 에 대하여 [내적의 성질](#99baac14a)에 의하여 다음이 성립한다. 
 
-    $$ \begin{equation}\begin{split}
-    \mathbf{h}_{}(v_j) = \big <v_j,y \big >&= \bigg <v_j,\sum_{i=1}^{n}\overline{\mathbf{g}_{}(v_i)}v_i \bigg > \\
-    &= \sum_{i=1}^{n}\mathbf{g}_{}(v_i)\big <v_j,v_i \big > =\mathbf{g}_{}(v_j)\\
-    \end{split}\end{equation} \tag*{}
-    $$
+    $$ \begin{equation}\begin{split} \mathbf{h}_{}(v_j) = \big <v_j,y \big >&= \bigg <v_j,\sum_{i=1}^{n}\overline{\mathbf{g}_{}(v_i)}v_i \bigg > \\ &= \sum_{i=1}^{n}\mathbf{g}_{}(v_i)\big <v_j,v_i \big > =\mathbf{g}_{}(v_j)\\ \end{split}\end{equation} \tag*{} $$
 
     [정리 2.6 따름정리](../LinearTransformation/#52dd3d90f) 에 의하여 $\mathbf{g}_{}=\mathbf{h}_{}$ 이다. 이제 $y$ 의 유일성 증명만 하면 된다. ▲ 
 
@@ -1161,11 +1159,17 @@
 
 !!! tldr "정리 6.9"
 
-    유한차원 내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 와 임의의 $x, y \in \mathbf{V}$ 에 대하여 $\big <\mathbf{T}(x),y \big > = \big <x,\mathbf{T}{}^{*}(y) \big >$ 인 선형변환 $\mathbf{T}{}^{*}:\mathbf{V}\to \mathbf{V}$ 가 유일하게 존재한다.
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $x, y \in \mathbf{V}$ 에 대하여 $\big <\mathbf{T}(x),y \big > = \big <x,\mathbf{T}{}^{*}(y) \big >$ 인 수반연산자 $\mathbf{T}{}^{*}$ 가 유일하게 존재한다.
 
-- 이 정리는 선형연산자의 수반연산자의 존재성과 유일성을 보장해준다.
+- 이 정리는 유한차원 내적공간에서 선형연산자의 수반연산자의 존재성과 유일성을 보장해준다.
 
-- 무한차원 내적공간에서는 선형연산자의 수반연산자가 존재하지 않을 수도 있다. 그러나 특별한 언급이 없으면 무한차원 내적공간에 선형연산자의 수반연산자가 존재한다고 가정하겠다.
+    무한차원 내적공간에서는 선형연산자의 수반연산자가 존재하지 않을 수도 있다. 그러나 특별한 언급이 없으면 무한차원 내적공간에 선형연산자의 수반연산자가 존재한다고 가정하겠다.
+
+- 이 정리에서 함수 $\mathbf{T}{}^{*}$ 의 존재성과 유일성과 선형성을 모두 증명했지만 다음 조건을 만족하는 수반연산자임은 증명하지 않았다. 
+
+    $$ [\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}]{}^{*}_{\beta } $$
+
+    정리 6.10 은 정리 6.9 에서 $\big <\mathbf{T}(x),y \big > = \big <x,\mathbf{T}{}^{*}(y) \big >$ 을 만족하도록 정의된 선형연산자 $\mathbf{T}{}^{*}$ 가 수반연산자임을 보장해준다.
 
 - 증명
 
@@ -1173,11 +1177,7 @@
     
     $x_1, x_2 \in \mathbf{V}, c \in \mathbf{F}$ 에 대하여 다음이 성립한다. 
 
-    $$ \begin{equation}\begin{split}
-    \mathbf{g}_{}(cx_1+x_2)&=\big <\mathbf{T}(cx_1+x_2),y \big > =\big <c \mathbf{T}(x_1) + \mathbf{T}(x_2),y \big >\\
-    &= c \big <\mathbf{T}(x_1),y \big >+\big <\mathbf{T}(x_2),y \big > = c \mathbf{g}_{}(x_1) + \mathbf{g}_{}(x_2)\\
-    \end{split}\end{equation} \tag*{}
-    $$
+    $$ \begin{equation}\begin{split} \mathbf{g}_{}(cx_1+x_2)&=\big <\mathbf{T}(cx_1+x_2),y \big > =\big <c \mathbf{T}(x_1) + \mathbf{T}(x_2),y \big >\\ &= c \big <\mathbf{T}(x_1),y \big >+\big <\mathbf{T}(x_2),y \big > = c \mathbf{g}_{}(x_1) + \mathbf{g}_{}(x_2)\\ \end{split}\end{equation} \tag*{} $$
 
     따라서 $\mathbf{g}_{}$ 는 선형이다. ▲ 
 
@@ -1185,11 +1185,7 @@
 
     $y_1, y_2 \in \mathbf{V}, c \in \mathbf{F}$ 를 고정하면 임의의 $x \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
 
-    $$ \begin{equation}\begin{split}
-    \big <x,\mathbf{T}{}^{*}(cy_1 + y_2) \big >&= \big <\mathbf{T}(x),cy_1 + y_2 \big > = \overline{c}\big <\mathbf{T}(x),y_1 \big > + \big <\mathbf{T}(x), y_2 \big >\\
-    &= \overline{c}\big <x,\mathbf{T}{}^{*}(y_1) \big > + \big <x,\mathbf{T}{}^{*}(y_2) \big > = \big <x, c \mathbf{T}{}^{*}(y_1) + \mathbf{T}{}^{*}(y_2)\big >\\
-    \end{split}\end{equation} \tag*{}
-    $$
+    $$ \begin{equation}\begin{split} \big <x,\mathbf{T}{}^{*}(cy_1 + y_2) \big >&= \big <\mathbf{T}(x),cy_1 + y_2 \big > = \overline{c}\big <\mathbf{T}(x),y_1 \big > + \big <\mathbf{T}(x), y_2 \big >\\ &= \overline{c}\big <x,\mathbf{T}{}^{*}(y_1) \big > + \big <x,\mathbf{T}{}^{*}(y_2) \big > = \big <x, c \mathbf{T}{}^{*}(y_1) + \mathbf{T}{}^{*}(y_2)\big >\\ \end{split}\end{equation} \tag*{} $$
 
     따라서 $\mathbf{T}{}^{*}$ 는 선형이다. ▲ 
 
@@ -1217,11 +1213,15 @@
 
     $$ [\mathbf{T}{}^{*}]_{\beta }=[\mathbf{T}]{}^{*}_{\beta } $$
 
+- 이 정리는 정리 6.9 에서 $\big <\mathbf{T}(x),y \big > = \big <x,\mathbf{T}{}^{*}(y) \big >$ 을 만족하도록 정의된 선형연산자 $\mathbf{T}{}^{*}$ 가 수반연산자임을 보장해준다.
+
 - 이 정리는 수반연산자를 구하는 유용한 방법을 알려준다. 또한 이 정리는 수반연산자와 수반행렬의 관계를 알려준다.
+
+- 아래의 정의에서 주의할 점은 $\mathbf{T}{}^{*}$ 가 수반연산자가 아니라 단지 정리 6.9 의 조건을 만족하도록 정의된 함수라는 것이 가정이라는 것이다. 정리 6.9 의 조건으로부터 수반연산자라는 것을 이끌어내는 증명이다.
 
 - 증명
 
-    $A = [\mathbf{T}]_{\beta }, B = [\mathbf{T}{}^{*}]_{\beta }, \beta =\{v_1, v_2, \dots, v_n\}$ 로 두면 [정리 6.5 따름정리](#d71d99f60) 와 [내적의 성질](#99baac14a)과 [수반행렬](#8f2c193aa)의 정의에 의하여 다음이 성립한다. 
+    $A = [\mathbf{T}]_{\beta }, B = [\mathbf{T}{}^{*}]_{\beta }, \beta =\{v_1, v_2, \dots, v_n\}$ 로 두면 [정리 6.5 따름정리](#a2290266a) 와 [내적의 성질](#99baac14a)과 정리 6.9 와 [수반행렬](#8f2c193aa)의 정의에 의하여 다음이 성립한다. 
 
     $$ B _{ij} = \big <\mathbf{T}{}^{*}(v_j), v_i \big > = \overline{\big <v_i, \mathbf{T}{}^{*}(v_j) \big >} = \overline{\big <\mathbf{T}(v_i), v_j \big >} = \overline{A}_{ji} = (A {}^{*})_{ij} \tag*{■} $$
 
@@ -1253,33 +1253,49 @@
 
     내적공간 $\mathbf{V}$ 와 수반연산자가 존재하는 선형연산자 $\mathbf{T}, \mathbf{U}$ 에 대하여 다음이 성립한다.
 
-    1. $\mathbf{T}+\mathbf{U}$ 의 수반연산자가 존재한다. $(\mathbf{T}+\mathbf{U}){}^{*}=\mathbf{T}{}^{*}+\mathbf{U}{}^{*}$ 이다.
+    1. $(\mathbf{T}+\mathbf{U}){}^{*}=\mathbf{T}{}^{*}+\mathbf{U}{}^{*}$
 
-    2. 임의의 $c \in \mathbf{F}$ 에 대하여 $c \mathbf{T}$ 의 수반연산자가 존재한다. $(c \mathbf{T}){}^{*} = \overline{c}\mathbf{T}{}^{*}$ 이다.
+    2. $\forall c \in \mathbf{F} : (c \mathbf{T}){}^{*} = \overline{c}\mathbf{T}{}^{*}$
 
-    3. $\mathbf{T}\mathbf{U}$ 의 수반연산자가 존재한다. $(\mathbf{T}\mathbf{U}){}^{*}=\mathbf{U}{}^{*}\mathbf{T}{}^{*}$ 이다.
+    3. $(\mathbf{T}\mathbf{U}){}^{*}=\mathbf{U}{}^{*}\mathbf{T}{}^{*}$
 
-    4. $\mathbf{T}{}^{*}$ 의 수반연산자가 존재한다. $\mathbf{T}{}^{*}{}^{*}=\mathbf{T}$ 이다.
+    4. $\mathbf{T}{}^{*}{}^{*}=\mathbf{T}$
 
-    5. $\mathbf{I}$ 의 수반연산자가 존재한다. $\mathbf{I}{}^{*}=\mathbf{I}$ 이다.
+    5. $\mathbf{I}{}^{*}=\mathbf{I}$
 
 - 증명
 
     1: 
 
-    $x,y \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
+    [함수의 합과 스칼라곱의 정의](../LinearTransformation/#63a07e35d) 과 [내적의 성질](#99baac14a) 에 의하여 $x,y \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
 
-    $$ 
-    \begin{equation}\begin{split}
-    \big <(\mathbf{T}+\mathbf{U})(x), y \big > = \big <x, (\mathbf{T}+\mathbf{U}){}^{*}(y) \big >&= \big <(\mathbf{T}+\mathbf{U})(x), y\big > = \big <\mathbf{T}(x) + \mathbf{U}(x),y \big >\\
-    &= \big <\mathbf{T}(x),y \big >+\big <\mathbf{U}(x), y\big > = \big <x,\mathbf{T}{}^{*}(y) \big > + \big <x, \mathbf{U}{}^{*}(y) \big >\\
-    &= \big <x,\mathbf{T}{}^{*}(y)+\mathbf{U}{}^{*}(y) \big > = \big <x, (\mathbf{T}{}^{*}+\mathbf{U}{}^{*})(y) \big >
+    $$ \begin{equation}\begin{split} \big <x, (\mathbf{T}+\mathbf{U}){}^{*}(y) \big >&= \big <(\mathbf{T}+\mathbf{U})(x), y\big > = \big <\mathbf{T}(x) + \mathbf{U}(x),y \big >\\ &= \big <\mathbf{T}(x),y \big >+\big <\mathbf{U}(x), y\big > = \big <x,\mathbf{T}{}^{*}(y) \big > + \big <x, \mathbf{U}{}^{*}(y) \big >\\ &= \big <x,\mathbf{T}{}^{*}(y)+\mathbf{U}{}^{*}(y) \big > = \big <x, (\mathbf{T}{}^{*}+\mathbf{U}{}^{*})(y) \big > \end{split}\end{equation} \tag*{} $$
+
+    2:
+
+    $$ \begin{equation}\begin{split}
+    \big <(c \mathbf{T}){}^{*}(x), y \big >&= \big <x, c \mathbf{T}{}(y) \big > = \overline{c}\big <x,\mathbf{T}(y) \big >\\
+    &= \overline{c}\big <\mathbf{T}{}^{*}(x),y \big > = \big <\overline{c}\mathbf{T}{}^{*}(x),y \big >\\
     \end{split}\end{equation} \tag*{}
     $$
+
+    3:
+
+    수반연산자의 정의와 [정리 2.11 따름정리](../LinearTransformation/#143fdacba) 에 의하여 다음이 성립한다.
+
+    $$ [(\mathbf{T}\mathbf{U}){}^{*}]_{\beta } = [\mathbf{T}\mathbf{U}]{}^{*} _{\beta } = ([\mathbf{T}]_{\beta }[\mathbf{U}]_{\beta }){}^{*} = [\mathbf{U}]{}^{*} _{\beta }[\mathbf{T}]{}^{*} _{\beta } $$
+
+    $$ [\mathbf{U}{}^{*}\mathbf{T}{}^{*}]_{\beta } = [\mathbf{U}{}^{*}]_{\beta }[\mathbf{T}{}^{*}]_{\beta } = [\mathbf{U}]{}^{*}_{\beta }[\mathbf{T}]{}^{*}_{\beta } $$
 
     4:
 
     $$ x, y \in \mathbf{V} : \big <x,\mathbf{T}(y) \big > = \big <\mathbf{T}{}^{*}(x), y\big > = \big <x, \mathbf{T}{}^{*}{}^{*}(y) \big > $$
+
+    5:
+
+    [항등변환의 행렬표현은 항등행렬이므로](../LinearTransformation/#2bb4853fd) 다음이 성립한다. 
+
+    $$ [\mathbf{I}{}^{*}]_{\beta } = [\mathbf{I}]{}^{*}_{\beta } = I {}^{*} = \overline{I^{t}} = I = [\mathbf{I}]_{\beta } $$
 
 !!! tldr "정리 6.11 따름정리"
 
@@ -1297,13 +1313,48 @@
 
 - 증명
 
-    3:
+    정리 6.11 과 [정리 2.15](../LinearTransformation/#c3298a7b3) 와 정리 6.10 따름정리에 의하여 다음이 성립한다. 이때 좌변과 우변을 $\beta$ 에 대한 행렬표현으로 변환하고 [정리 2.8](../LinearTransformation/#aa431d8ac) 과 [정리 2.11](../LinearTransformation/#2fc8f26aa) 을 적용한 다음 정리 2.15-(1) 을 적용하면 증명이 끝난다. 
 
-    [정리 2.15](../LinearTransformation/#c3298a7b3) 에 의하여 다음이 성립한다.
+    1:
+
+    $$ \mathbf{L}_{(A+B){}^{*}} = (\mathbf{L}_{(A+B)}){}^{*} = (\mathbf{L}_{A}+\mathbf{L}_{B}){}^{*} = (\mathbf{L}_{A}){}^{*}+(\mathbf{L}_{B}){}^{*} = \mathbf{L}_{A {}^{*}} + \mathbf{L}_{B {}^{*}} $$
+
+    2:
+
+    $$ \mathbf{L}_{(cA){}^{*}} = (\mathbf{L}_{cA}){}^{*} = (c \mathbf{L}_{A}){}^{*} = \overline{c}\mathbf{L}_{A {}^{*}} $$
+
+    3:
 
     $$ \mathbf{L}_{(AB){}^{*}} = (\mathbf{L}_{AB}){}^{*} = (\mathbf{L}_{A}\mathbf{L}_{B}) {}^{*} = (\mathbf{L}_{B}){}^{*}(\mathbf{L}_{A}){}^{*}=\mathbf{L}_{B {}^{*}}\mathbf{L}_{A {}^{*}} = \mathbf{L}_{B {}^{*}}\mathbf{L}_{A {}^{*}} $$
 
+    4:
+
+    $$ \mathbf{L}_{A {}^{*}{}^{*}} = (\mathbf{L}_{A {}^{*}}) {}^{*} = (\mathbf{L}_{A}){}^{*}{}^{*} = \mathbf{L}_{A} $$
+
+    5:
+
+    $$ \mathbf{L}_{I {}^{*}} = \mathbf{L}_{I}{}^{*} = \mathbf{I}{}^{*} = \mathbf{I} = \mathbf{L}_{I} $$
+
 - 편의상 정리 6.10 으로 증명이 이루어졌지만 수반행렬의 정의를 직접 사용하여 증명할 수도 있다.
+
+!!! tldr "문제 6.3-5-(b)"
+
+    적절한 형상을 갖는 임의의 행렬 $A, B$ 에 대하여 다음이 성립한다. 
+
+    1. $(A+B){}^{*}=A {}^{*}+B {}^{*}$
+
+    2. $c \in \mathbf{F} : (cA) {}^{*} = \overline{c}A {}^{*}$
+
+    3. $(AB) {}^{*} = B {}^{*}A {}^{*}$
+
+    4. $A {}^{*}{}^{*}=A$
+
+    5. $I {}^{*}=I$
+
+- 이 정리는 정사각행렬에서만 성립하는 정리 6.11 따름정리를 임의의 행렬에서 성립할 수 있도록 확장한 것이다.
+    
+- 증명
+
 
 ## Least Squares Approximation
 
@@ -1323,4 +1374,103 @@
 
 - 증명
 
+    문제 6.3-5-(b) 에 의하여 다음이 성립한다. 
+
+    $$ \big <Ax, y \big >_{m} = y {}^{*}(Ax) = (y {}^{*}A)x = (A {}^{*}y){}^{*}x = \big <x, A {}^{*}y \big >_{n} \tag*{■} $$
+
+!!! tldr "보조정리 2"
+
+    $$ A \in \mathbf{M}_{m \times n}(\mathbf{F}) : \text{rank} (A {}^{*}A) = \text{rank} (A) $$
+
+- 증명
+
+    차원정리와 행렬의 랭크의 정의에 의하여 다음이 성립한다. 
+
+    $$ \text{rank} (A) = \text{rank} (\mathbf{L}_{A}) = \dim (\mathbf{F}^{n}) - \text{nullity} (\mathbf{L}_{A}) = n - \text{nullity} (\mathbf{L}_{A}) $$
+
+    $$ \text{rank} (A {}^{*}A) = \text{rank} (\mathbf{L}_{A {}^{*}A}) = \dim (\mathbf{F}^{n}) - \text{nullity} (\mathbf{L}_{A {}^{*}A}) = n - \text{nullity} (\mathbf{L}_{A {}^{*}A}) $$
+
+    따라서 $A {}^{*}A$ 와 $A$ 의 영공간의 차원이 같음을 보이면 증명이 끝난다. 이는 다시 $A {}^{*}Ax = 0$ 인 것은 $Ax = 0$ 인 것과 동치임을 증명하는 문제가 된다. $Ax = 0$ 이 되게 하는 해공간의 차원이 존재하는데 $A {}^{*}Ax = 0$ 이기 위하여 반드시 $Ax = 0$ 이어야 한다면 $A {}^{*}Ax = 0$ 의 해공간의 차원이 동일해지기 때문이다.
+
+    $Ax = 0 \implies A {}^{*}A = 0$ 은 자명하다. $A {}^{*}A = 0$ 을 가정하면 보조정리 2 와 수반연산자의 성질과 문제 6.3-5-(b) 에 의하여 다음이 성립한다. 
+
+    $$ 0 = \big <A {}^{*}Ax, x \big >_{n} = \big <Ax, A {}^{*}{}^{*} \big >_{m} = \big <Ax, Ax\big >_{m}
+    $$
+
+    그러므로 내적의 성질에 의하여 $Ax = 0$ 이다. ■ 
+
+!!! tldr "따름정리"
+
+    $\text{rank} (A) = n$ 인 행렬 $A \in \mathbf{M}_{m \times n}(\mathbf{F})$ 에 대하여 $A {}^{*}A$ 는 가역이다.
+
+- 증명
+
+    [$n \times n$ 행렬의 랭크가 $n$ 이면 가역이다](../MatrixOperation/#8252ffa8b). 보조정리 2 에 의하여 $A {}^{*}A$ 의 랭크는 $n$ 이다. ■ 
+
+!!! tldr "정리 6.12 최소제곱법(least squares approximation)"
+
+    $A \in \mathbf{M}_{m \times n}(\mathbf{F}), y \in \mathbf{F}^{m}$ 에 대하여 다음을 만족하는 $x_0 \in \mathbf{F}^{n}$ 이 존재한다. 
+
+    1. $\forall x \in \mathbf{F}^{n} : \|Ax_0 - y\| \leq \|Ax - y\|$
+
+    2. $(A {}^{*}A)x_0 = A {}^{*}y$
+
+    특히 $\text{rank} (A) = n \implies x_0 = (A {}^{*}A) ^{-1}A {}^{*}y$ 이다.
+
+- 가령 매 시기마다의 실업률을 유클리드 공간 $\R ^{2}$ 의 좌표 $(t_1, y_1), (t_2, y_2), \dots, (t_m, y_m)$ 로 나타내다보니까 이 좌표들의 경향성이 마치 어떤 직선으로 근사될 수 있음을 깨달았다고 하자. 이 직선을 스칼라 $c, d \in \R$ 에 대한 $y = ct + d$ 로 두자.
+
+    ![image](https://user-images.githubusercontent.com/16812446/129932627-b5e4c6f0-1699-4de6-970f-b569e5e5e3d3.png)
+
+    데이터의 좌표와 직선 사이의 $x$축과 수직한 거리의 제곱의 합을 오차 $E$ 로 두고 이 $E$ 를 최소화시키는 스칼라 $c, d$ 를 찾음음로써 근사된 직선을 정의해보자. 따라서 이렇게 정의된 직선을 최소제곱 직선(least squares line) 이라고 부른다. 
     
+    먼저 $E$ 는 다음과 같이 정의된다. 
+
+    $$ E = \sum_{i=1}^{m}(y_i - ct_i - d) ^{2} $$
+
+    $A, x, y$ 를 다음과 같이 정의하면 유클리드 거리의 정의에 의하여 $E = \|y - Ax\|^{2}$ 가 된다.
+
+    $$ A = \begin{pmatrix} t_1&1\\ t_2&1\\ \vdots &\vdots \\ t_m&1\\ \end{pmatrix}, x = \begin{pmatrix} c\\ d\\ \end{pmatrix}, y = \begin{pmatrix} y_1\\ y_2\\ \vdots \\ y_m\\ \end{pmatrix} $$
+
+    이 $E$ 를 최소화하는 $x_0 \in \mathbf{F}^{n}$ 은 다음을 만족해야 한다.
+
+    $$ \boxed{\forall x \in \mathbf{F}^{n} : \|Ax_0 - y\| \leq \|Ax - y\|} \tag{1} $$
+
+    $\mathbf{F}^{m}$ 의 부분공간 $\mathbf{W} = \{Ax : x \in \mathbf{F}^{n}\}$ 을 정의하면 $\mathbf{W}= \mathbf{R} (\mathbf{L}_{A})$ 이다. [정리 6.6 따름정리](#bc913e284) 에 의하여 $y$ 에 가장 가까운 $\mathbf{W}$ 의 벡터가 유일하게 존재한다. 이 벡터를 $Ax_0$ 로 두면 $(1)$ 을 만족할 것이다. 그러면 이러한 벡터 $Ax_0$ 는 정리 6.6 에 의하여 $Ax_0 - y \in \mathbf{W}^{\perp}$ 이므로 임의의 $x \in \mathbf{F}^{n}$ 에 대하여 보조정리 1 과 내적의 성질에 의하여 다음이 성립한다.
+    
+    $$ \big <Ax, Ax_0 - y\big >_{m} = 0 $$
+
+    $$ \iff  \big <x, A {}^{*}(Ax_0 - y ) \big > _{n} = 0 $$
+
+    $$ \iff A {}^{*}(Ax_0 - y) = 0 $$
+
+    따라서 모든 문제는 결국 다음 방정식의 해 $x_0$ 를 구하는 것으로 귀결된다.
+    
+    $$ \boxed{A {}^{*}Ax = A {}^{*}y} $$
+
+    만약 $\text{rank} (A) = n$ 이면 보조정리 2 에 의하여 다음이 성립하므로 $x_0$ 를 구하는 일이 더욱 쉬워진다. 
+
+    $$ \boxed{x_0 = (A {}^{*}A)^{-1}A {}^{*}y} $$
+
+- 예시 
+
+    위의 설명에서 매 시기 별 실업률 데이터를 조사하는 상황을 예로 들었는데 그러한 데이터가 $(1, 2), (2, 3), (3, 5), (4, 7)$ 이라고 하면 $A, y$ 는 다음과 같다. 
+
+    $$ A = \begin{pmatrix} 1&1\\ 2&1\\ 3&1\\ 4&1\\ \end{pmatrix}, y = \begin{pmatrix} 2\\ 3\\ 5\\ 7\\ \end{pmatrix} $$
+
+    $\text{rank} (A) = 2$ 이므로 $A {}^{*}A$ 는 가역이다. 따라서 다음이 성립한다. 
+
+    $$ A {}^{*}A = \begin{pmatrix} 30&10\\ 10&4\\ \end{pmatrix}, (A {}^{*}A) ^{-1} = \frac{1}{20}\begin{pmatrix} 4&-10\\ -10&30\\ \end{pmatrix} $$
+
+    따라서 다음과 같이 $c, d$ 를 구하여 최소제곱 직선 $y = 1.7t$ 을 구할 수 있다.
+
+    $$ \begin{pmatrix} c\\ d\\ \end{pmatrix} = x_0 = \frac{1}{20}  \begin{pmatrix} 4&-10\\ -10&30\\ \end{pmatrix}\begin{pmatrix} 1&2&3&4\\ 1&1&1&1\\ \end{pmatrix} \begin{pmatrix} 2\\ 3\\ 5\\ 7\\ \end{pmatrix} = \begin{pmatrix} 1.7\\ 0\\ \end{pmatrix} $$
+
+    오차 $E$ 를 계산해보면 $\|Ax_0 - y\|^{2} = 0.3$ 이다.
+
+- 현실세계에서 최소제곱법을 사용하면 행렬 $A$ 의 랭크가 왠만하면 $2$ 가 된다. 왜냐하면 $2$ 가 아니라면 $1$ 열이 $2$ 열의 스칼라 배가 되는데 이는 $1$ 열의 데이터가 모두 같다는 의미가 되기 때문이다. 
+
+- 2차 다항식 $y = ct ^{2} + dt + e$ 으로 데이터를 근사시키고 싶다면 다음과 같이 모델링하면 된다. 
+
+    $$ x = \begin{pmatrix} c\\ d\\ c\\ \end{pmatrix}, y = \begin{pmatrix} y_{1}\\ y_{2}\\ \vdots\\ y_{m}\\ \end{pmatrix}, A = \begin{pmatrix} t_1 ^{2} & t_1 & 1\\ \vdots & \vdots & \vdots \\ t_m ^{2} & t_m & 1\\ \end{pmatrix} $$
+
+    2차원 유클리드 공간의 임의의 선은 무한차 다항식으로 근사시킬 수 있으므로 이 방식을 일반화시키면 선형분류 가능한 모든 데이터를 분류하는 함수를 만들 수 있다. 

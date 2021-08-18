@@ -92,9 +92,7 @@
 
 !!! tldr ""
 
-    $n \times n$ 행렬 $A$ 에 대하여 다음이 성립한다.
-    
-    $$A \text{ is invertible } \iff \text{rank} (A) = n $$
+    $$ A \in \mathbf{M}_{n \times n}(\mathbf{F}) : A \text{ is invertible } \iff \text{rank} (A) = n $$
 
 - 증명 
 
@@ -770,7 +768,7 @@
     
     이제 유일성을 증명하기 위하여 임의의 해 $s$ 에 대하여 $As = b$ 로 두면 $A ^{-1}As = A ^{-1}b \iff s = A ^{-1}b$ 가 성립한다. ▲ 
 
-    방정식의 유일한 해를 $s$ 로 두면 대응하는 동차 연립일차방정식 $Ax = 0$ 의 해집합 $\mathbf{K} _{\mathbf{H} }$ 에 대하여 [정리 3.9](#932b55b12) 에 의하여 $\mathbf{K} = \{s\} = \{s\} + \mathbf{K} _{\mathbf{H}} \iff \mathbf{K} _{\mathbf{H} } = \{0\}$ 이다. [정리 3.8](#b7b9c78d0) 에 의하여 $\mathbf{K} _{\mathbf{H} } = \{0\} = \mathbf{L}_{A}$ 이고, $\dim (\mathbf{K} _{\mathbf{H} }) = n - \text{rank} (\mathbf{L}_{A}) = 0 \iff \text{rank} (\mathbf{L}_{A}) = n$ 이므로 [$\text{rank} (A) = n$ 이다. 그러므로 $A$ 는 가역이다](#54a88bd9a).
+    방정식의 유일한 해를 $s$ 로 두면 대응하는 동차 연립일차방정식 $Ax = 0$ 의 해집합 $\mathbf{K} _{\mathbf{H} }$ 에 대하여 [정리 3.9](#932b55b12) 에 의하여 $\mathbf{K} = \{s\} = \{s\} + \mathbf{K} _{\mathbf{H}} \iff \mathbf{K} _{\mathbf{H} } = \{0\}$ 이다. [정리 3.8](#b7b9c78d0) 에 의하여 $\mathbf{K} _{\mathbf{H} } = \{0\} = \mathbf{L}_{A}$ 이고, $\dim (\mathbf{K} _{\mathbf{H} }) = n - \text{rank} (\mathbf{L}_{A}) = 0 \iff \text{rank} (\mathbf{L}_{A}) = n$ 이므로 [$\text{rank} (A) = n$ 이다. 그러므로 $A$ 는 가역이다](#8252ffa8b).
 
 ## Existence of Solution of Linear Equation System
 

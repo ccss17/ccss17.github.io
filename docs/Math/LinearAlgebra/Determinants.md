@@ -70,7 +70,7 @@
 
     $$ A = \begin{pmatrix} A _{11}&A _{12}\\ A _{21}&A _{22}\\ \end{pmatrix} $$
 
-    [$2 \times 2$ 행렬 $A$ 가 가역이면 $\text{rank} (A) = 2$](../MatrixOperation/#54a88bd9a) 이다. 이는 $A _{11} \neq 0 \lor A _{21} \neq 0$ 을 뜻한다. $A _{11} \neq 0$ 를 가정하면 $A$ 에 기본연산을 적용하여 다음 행렬을 얻는다.
+    [$2 \times 2$ 행렬 $A$ 가 가역이면 $\text{rank} (A) = 2$](../MatrixOperation/#8252ffa8b) 이다. 이는 $A _{11} \neq 0 \lor A _{21} \neq 0$ 을 뜻한다. $A _{11} \neq 0$ 를 가정하면 $A$ 에 기본연산을 적용하여 다음 행렬을 얻는다.
 
     $$ \begin{pmatrix} A _{11}& A _{12}\\ 0& A _{22} - \dfrac{A _{12} A _{21}}{A _{11}}\\ \end{pmatrix}$$
 
@@ -667,7 +667,7 @@
 
     [정리 4.6 따름정리](#e9f88afe6) 에 의하여 $\text{rank} (A) < n$ 이면 $\det(A) = 0$ 이다. [정리 3.7](../MatrixOperation/#68242c9ae) 에 의하여 $\text{rank} (AB) \leq \text{rank} (A) < n$ 이므로 $\det(AB) = 0$ 이다. 따라서 $\det(AB) = \det(A) \det(B)$ 이다. ▲ 
 
-    [$\text{rank} (A) = n$ 이면 $A$ 는 가역이다](../MatrixOperation/#54a88bd9a). 그러므로 [$A$ 는 기본행렬의 곱이다](../MatrixOperation/#18150efeb). $A = E_m \dots E_1$ 로 두자. 기본행렬에 대하여 본 정리를 가정할 수 있으므로 다음이 성립한다. 
+    [$\text{rank} (A) = n$ 이면 $A$ 는 가역이다](../MatrixOperation/#8252ffa8b). 그러므로 [$A$ 는 기본행렬의 곱이다](../MatrixOperation/#18150efeb). $A = E_m \dots E_1$ 로 두자. 기본행렬에 대하여 본 정리를 가정할 수 있으므로 다음이 성립한다. 
 
     $$ \begin{equation}\begin{split} \det(AB) &= \det(E_m \dots E_1B)  \\ &= \det(E_m) \det(E _{m-1} \dots E_1B)  \\ &= \det(E_m) \det(E _{m-1}) \det(E _{m-2} \dots E_1B)  \\ & \qquad \vdots  \\ &= \det(E_m) \dots \det(E _1)\det(B)  \\ &= \det(E_m \dots E _1)\det(B)  \\ &= \det(A)\det(B)  \\ \end{split}\end{equation} \tag*{} $$
 
