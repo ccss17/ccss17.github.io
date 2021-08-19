@@ -927,9 +927,17 @@
 
 !!! tldr ""
 
-    내적공간 $\mathbf{V}$ 의 부분집합 $S$ 의 직교여공간 $S^{\perp}$ 는 $\mathbf{V}$ 의 부분공간이다.
+    직교여공간은 부분공간이다.
 
 - 증명
+
+    [정리 1.3](../VectorSpace/#subspace) 을 기반으로 내적공간 $\mathbf{V}$ 의 부분집합 $S$ 에 대한 직교여공간 $S ^{\perp}$ 가 부분공간인지 판별해보면 된다. 
+
+    내적의 성질에 의하여 $\forall x \in S : \big <x, 0 \big > = 0$ 이므로 $0 \in S ^{\perp}$ 이다. ▲ 
+
+    $x \in S$ 에 대하여 $\big <x,y \big > = 0, \big <x,z \big > = 0$ 이면 $\big <x,y+z \big > = \big <x,y \big > + \big <x,z \big > = 0$ 이므로 $y+z \in S ^{\perp}$ 이다. ▲ 
+
+    $x \in S$ 에 대하여 $\big <x,y \big > = 0$ 이면 스칼라 $c$ 에 대하여 $\big <cy,x \big > = c \big <y,x \big > = c \overline{\big <x,y \big >} = c \cdot \overline{0} = 0$ 이므로 $cy \in S ^{\perp}$ 이다. ■ 
 
 - 예시
 
@@ -939,12 +947,7 @@
 
     내적공간 $\R ^{3}$ 의 부분집합 $S = \{e_3\}$ 에 대하여 $S ^{\perp}$ 는 $xy$평면이다. $x = (x_1, x_2, x_3)\in \R ^{3}$ 로 두면 $e_3$ 와 직교하기 위하여 $x_3 = 0$ 이어야 한다. 즉, 다음이 성립한다.
 
-    $$
-    \begin{equation}\begin{split}
-    S ^{\perp} &= \{x \in \R ^{3} : x \cdot (0, 0, 1) = 0\} \\
-    &=  \{(x, y, 0) \in \R ^{3} : x, y \in \R \} \\
-    \end{split}\end{equation} \tag*{} 
-    $$
+    $$ \begin{equation}\begin{split} S ^{\perp} &= \{x \in \R ^{3} : x \cdot (0, 0, 1) = 0\} \\ &=  \{(x, y, 0) \in \R ^{3} : x, y \in \R \} \\ \end{split}\end{equation} \tag*{} $$
 
     사실은 직관적으로도 다음 그림과 같이 $z$축 선상에 존재하는 벡터와 직교인 벡터들을 모으면 너무 자명하게 $xy$ 평면이 된다.
 
@@ -976,6 +979,8 @@
 
     2. $y - u \in \mathbf{W}^{\perp}$ 을 만족하게 하는 벡터 $u \in \mathbf{W}$ 가 유일하게 존재한다. 
 
+- **이 정리는 내적공간 $\mathbf{V}$ 의 임의의 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 를 만족하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재함을 말해준다. 즉, [집합의 합](../Diagonalization/#f68ccee5d) 에 대하여 $\mathbf{V} = \mathbf{W}+\mathbf{W}^{\perp}$ 라는 것이다. 앞으로 이 정리는 이러한 형태의 명제로 자주 사용될 것이다.**  1) 이 $y = u + z$ 을 말해주고 2) 가 $u$ 의 유일성을 말해주는데 $u$ 의 유일성이 $z$ 의 유일성을 함의하므로 정리에서는 생략되었다. 
+
 - 가령 다음과 같이 내적공간 $\R ^{3}$ 에서 점 $P$ 와 평면 $\mathbf{W}$ 사이의 거리를 구하는 문제가 존재한다.
 
     ![image](https://user-images.githubusercontent.com/16812446/129475802-dadd142b-071b-4810-b03b-6da575e6f1ae.png)
@@ -988,7 +993,7 @@
 
     1:
 
-    $y \in \mathbf{V}, u \in \mathbf{W}$ 에 대하여 $z = y - u$ 라고 두고 $z \in \mathbf{W}^{\perp}$ 임을 보이자. 문제 6.2-7 에 의하여 $z$ 가 각 $v_j$ 에 수직임을 보이면 된다. $v_j$ 가 정규화된 기저이므로 $\big <v_j,v_j \big > = \|v_j\|^{2} = 1 ^{2} = 1$ 이므로 다음이 성립한다.
+    $y \in \mathbf{V}, u \in \mathbf{W}$ 에 대하여 $z = y - u$ 라고 두고 $z \in \mathbf{W}^{\perp}$ 임을 보이자. 문제 6.2-7 에 의하여 $z$ 가 각 $v_j$ 에 수직임을 보이면 된다. $v_j$ 가 정규화된 기저이므로 $\big <v_j,v_j \big > = \|v_j\|^{2} = 1 ^{2} = 1$ 이고, 다음이 성립한다.
 
     $$ \begin{equation}\begin{split} \big <z,v_j \big >&= \bigg <\bigg ( y - \sum_{i=1}^{k}\big <y,v_i \big >v_i\bigg ), v_j \bigg > = \big <y,v_j \big >- \sum_{i=1}^{k}\big <y,v_i \big >\big <v_i,v_j \big > \\ &= \big <y,v_j \big >- \big <y,v_j \big > = 0\\ \end{split}\end{equation} \tag*{} $$
 
@@ -1392,9 +1397,9 @@
 
     따라서 $A {}^{*}A$ 와 $A$ 의 영공간의 차원이 같음을 보이면 증명이 끝난다. 이는 다시 $A {}^{*}Ax = 0$ 인 것은 $Ax = 0$ 인 것과 동치임을 증명하는 문제가 된다. $Ax = 0$ 이 되게 하는 해공간의 차원이 존재하는데 $A {}^{*}Ax = 0$ 이기 위하여 반드시 $Ax = 0$ 이어야 한다면 $A {}^{*}Ax = 0$ 의 해공간의 차원이 동일해지기 때문이다.
 
-    $Ax = 0 \implies A {}^{*}A = 0$ 은 자명하다. $A {}^{*}A = 0$ 을 가정하면 보조정리 2 와 수반연산자의 성질과 문제 6.3-5-(b) 에 의하여 다음이 성립한다. 
+    $Ax = 0 \implies A {}^{*}A = 0$ 은 자명하다. $A {}^{*}Ax = 0$ 을 가정하면 보조정리 2 와 수반연산자의 성질과 문제 6.3-5-(b) 에 의하여 다음이 성립한다. 
 
-    $$ 0 = \big <A {}^{*}Ax, x \big >_{n} = \big <Ax, A {}^{*}{}^{*} \big >_{m} = \big <Ax, Ax\big >_{m}
+    $$ 0 = \big <A {}^{*}Ax, x \big >_{n} = \big <Ax, A {}^{*}{}^{*} x \big >_{m} = \big <Ax, Ax\big >_{m}
     $$
 
     그러므로 내적의 성질에 의하여 $Ax = 0$ 이다. ■ 
@@ -1474,3 +1479,103 @@
     $$ x = \begin{pmatrix} c\\ d\\ c\\ \end{pmatrix}, y = \begin{pmatrix} y_{1}\\ y_{2}\\ \vdots\\ y_{m}\\ \end{pmatrix}, A = \begin{pmatrix} t_1 ^{2} & t_1 & 1\\ \vdots & \vdots & \vdots \\ t_m ^{2} & t_m & 1\\ \end{pmatrix} $$
 
     2차원 유클리드 공간의 임의의 선은 무한차 다항식으로 근사시킬 수 있으므로 이 방식을 일반화시키면 선형분류 가능한 모든 데이터를 분류하는 함수를 만들 수 있다. 
+
+## Minimal Solutions to Systems of Linear Equations
+
+!!! tldr "최소해(minimal solution)"
+
+    모순이 없는 연립일차방정식 $Ax = b$ 의 해가 유일하지 않을 때 방정식의 임의의 해 $u$ 에 대하여 $\|s\| \leq \|u\|$ 를 만족하는 $s$ 를 최소해라 한다.
+
+!!! tldr "문제 6.2-6"
+
+    내적공간 $\mathbf{V}$ 와 유한차원 부분공간 $\mathbf{W}$ 에 대하여 다음이 성립한다.
+    
+    1. $y \in \mathbf{W}^{\perp}\setminus \{0\}: x \in \mathbf{V} \setminus \mathbf{W} \iff \big <x,y \big > \neq 0$
+
+    2. $y \in \mathbf{W}\setminus \{0\}: x \in \mathbf{V} \setminus \mathbf{W}^{\perp} \iff \big <x,y \big > \neq 0$
+
+- **이 정리는 $\mathbf{W} ^{\perp}$ 와 직교하기 위해서는 반드시 $\mathbf{W}$ 에 속해야 함을 말해준다.** 
+
+    만약 $\mathbf{W}$ 가 부분공간이 아니라 유한집합 $S$ 였다면 $S ^{\perp}$ 와 직교하기 위하여 반드시 $S$ 에 속할 필요가 없을 수도 있다. $\mathbf{V}\setminus S$ 중에서 $S ^{\perp}$ 와 직교하는 벡터가 존재할 수도 있기 때문이다.
+
+- 증명
+
+    1:
+
+    $x \in \mathbf{V}\setminus \mathbf{W}$ 을 가정하면 $y \in \mathbf{W}^{\perp}$ 에 대하여 정리 6.6 에 의하여 $x = y + z$ 를 만족하는 $z \in \mathbf{W}$ 가 존재하므로 다음이 성립한다.
+
+    $$ \big <z, y \big > = \big <x - y, y \big > = \big <x, y \big > - \big <y, y\big > = 0 $$
+
+    $$ \iff \big <x, y \big > = \|y\|^{2} $$
+
+    $y = 0$ 이면 $x = 0 + z$ 인데 $x \not\in \mathbf{W}, z \in \mathbf{W}$ 이므로 모순이다. 따라서 $\|y\|^{2} > 0$ 이다. ▲ 
+
+    $\big <x,y \big >\neq 0$ 을 가정하면 $x \not\in \mathbf{W}$ 은 자명하다. ■ 
+
+    2:
+
+    2) 는 1) 에서 바로 나온다. ■ 
+
+- 프리드버그 선대수에서 말하는 원래의 정리는 다음과 같은데 논리관계가 이상한 것 같아서 임의로 고쳤다.
+
+    *내적공간 $\mathbf{V}$ 와 유한차원 부분공간 $\mathbf{W}$ 와 $x \in \mathbf{V} \setminus \mathbf{W}$ 에 대하여 $y \in \mathbf{W}^{\perp} \land \big <x,y \big > \neq 0$ 인 벡터 $y \in \mathbf{V}$ 가 존재한다.*
+
+!!! tldr "문제 6.2-13"
+
+    내적공간 $\mathbf{V}$ 의 두 부분집합 $S$ 와 $S_0$ 와 유한차원 부분공간 $\mathbf{W}$ 에 대하여 다음이 성립한다.
+
+    1. $S_0 \subset S \implies S ^{\perp} \subset S_0 ^{\perp}$
+
+    2. $S \subset (S ^{\perp})^{\perp}$
+    
+    3. $\text{span} (S) \subset (S ^{\perp})^{\perp}$
+
+    4. $\mathbf{W}=(\mathbf{W}^{\perp})^{\perp}$
+
+    5. $\mathbf{V}=\mathbf{W}\oplus \mathbf{W}^{\perp}$
+    
+- 증명
+
+    1:
+
+    $x \in \mathbf{V}$ 가 $\forall y \in S : \big <x,y \big > = 0$ 를 만족하면 $x \in S ^{\perp}$ 이다. 논의영역 $S$ 를 부분집합 $S_0$ 로 축소시킨 $\forall y \in S_0 : \big <x,y \big > = 0$ 은 참이므로 $x \in S_0 ^{\perp}$ 이다. 따라서 $S ^{\perp}\subset S_0 ^{\perp}$ 이다.
+
+    2:
+
+    $x \in S$ 이면 $\forall y \in S ^{\perp}: \big <x,y \big > = 0$ 이므로 $x$ 는 다음 집합에 포함될 조건을 만족한다. 따라서 $S \subset (S ^{\perp})^{\perp}$ 이다.
+
+    $$ (S ^{\perp})^{\perp} = \{x \in \mathbf{V} : \forall y \in S ^{\perp}: \big <x,y \big > = 0\} $$
+
+    3:
+
+    $S = \{v_1, v_2, \dots, v_n \}$ 로 두면 $w \in \text{span} (S)$ 를 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 $w = a_1v_1 + a_2v_2 + \dots + a_nv_n$ 로 나타낼 수 있으므로 임의의 $x \in S ^{\perp}$ 에 대하여 다음이 성립한다. 따라서 $w \in (S ^{\perp})^{\perp}$ 이다. 
+
+    $$ \big <w, x \big > = \sum_{i=1}^{n}a_i\big <v_i, x \big > = 0 $$
+
+    4:
+
+    문제 6.2-6 에 의하여 $x \in \mathbf{V}, y \in \mathbf{W}^{\perp}$ 에 대하여 $\big <x,y \big > = 0$ 이면 $x \in \mathbf{W}$ 이다. 따라서 $(\mathbf{W}^{\perp})^{\perp} = \mathbf{W}$ 이다.
+
+    5:
+
+    정리 6.6 은 $\mathbf{V}=\mathbf{W}+\mathbf{W}^{\perp}$ 임을 말해준다. $\mathbf{W}\cap \mathbf{W}^{\perp}=\{0\}$ 이므로 $\mathbf{V}=\mathbf{W}\oplus \mathbf{W}^{\perp}$ 이다.
+
+!!! tldr "문제 6.3-12"
+
+    내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
+
+    1. $\mathbf{R} (\mathbf{T}{}^{*})^{\perp} = \mathbf{N} (\mathbf{T})$
+
+    2. $\mathbf{V}$ 가 유한차원이면 $\mathbf{R} (\mathbf{T}{}^{*}) = \mathbf{N} (\mathbf{T})^{\perp}$ 이다.
+
+- 증명
+
+!!! tldr "문제 6.1-10"
+
+!!! tldr "정리 6.13"
+
+    $A \in \mathbf{M}_{m \times n}(\mathbf{F}), b \in \mathbf{F}^{m}$ 와 모순이 없는 연립일차방정식 $Ax = b$ 에 대하여 다음이 성립한다. 
+
+    1. $Ax = b$ 의 유일한 최소해 $s$ 가 존재한다. $s \in \mathbf{R} (\mathbf{L}_{A {}^{*}})$ 이다.
+
+    2. $(AA {}^{*})u = b$ 인 $u$ 에 대하여 $s = A {}^{*}u$ 이다.
