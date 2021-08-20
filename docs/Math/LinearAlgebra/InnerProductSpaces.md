@@ -1560,6 +1560,20 @@
 
     정리 6.6 은 $\mathbf{V}=\mathbf{W}+\mathbf{W}^{\perp}$ 임을 말해준다. $\mathbf{W}\cap \mathbf{W}^{\perp}=\{0\}$ 이므로 $\mathbf{V}=\mathbf{W}\oplus \mathbf{W}^{\perp}$ 이다.
 
+!!! tldr ""
+
+    내적공간 $\mathbf{V}$ 와 벡터 $x, y \in \mathbf{V}\setminus \{0\}$ 에 대하여 $\big <x,y \big >\neq 0$ 이다.
+
+- **이 정리는 $\big <x,y \big >=0$ 이면 반드시 $x = 0 \lor y = 0$ 가 성립한다는 것을 말해준다.**
+
+- 증명 
+
+    $\big <x,y \big > = 0$ 을 가정하자.  $x \neq 0 \land y \neq 0$ 이므로 벡터공간에 곱셈의 항등원의 존재 공리와 내적의 정의와 내적의 성질에 의하여 다음이 성립한다.
+
+    $$ \big <x,y \big > = \big <x \cdot 1, y \cdot 1 \big > = x \cdot \overline{y}\big <1,1 \big > = 0 $$
+
+    내적의 정의에 의하여 $\big <1,1 \big >\neq 0$ 이므로 $x \cdot \overline{y} = 0$ 이다. 그러나 이는 모순이다. 따라서 $\big <x,y \big >\neq 0$ 이다.
+
 !!! tldr "문제 6.3-12"
 
     내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
@@ -1570,7 +1584,27 @@
 
 - 증명
 
-!!! tldr "문제 6.1-10"
+    1:
+
+    $y \in \mathbf{R}(\mathbf{T}{}^{*})^{\perp}$ 를 고정하면 직교여공간의 정의와 상공간의 정의와 정리 6.9 에 의하여 다음이 성립한다.
+
+    $$ \forall x \in \mathbf{V} : \big <\mathbf{T}{}^{*}(x), y \big > = \big <x,\mathbf{T}(y) \big > = 0 $$
+
+    내적의 결과가 $0$ 이므로 첫번째 성분이 $0$ 이거나 두번째 성분이 $0$ 이다. $x \in \mathbf{V}\setminus \{0\}$ 이면 $\mathbf{T}(y) = 0$ 이므로 $y \in \mathbf{N}(\mathbf{T})$ 이다. 따라서 $\mathbf{R}(\mathbf{T}{}^{*}) ^{\perp}\subset \mathbf{N}(\mathbf{T})$ 이다. ▲ 
+
+    $y \in \mathbf{N}(\mathbf{T})$ 를 고정하면 $\mathbf{T}(y) = 0$ 이므로 다음이 성립한다.
+
+    $$ \forall x \in \mathbf{V} : \big <\mathbf{T}{}^{*}(x), y \big > = \big <x,\mathbf{T}(y) \big > = 0 $$
+
+    따라서 $y \in \mathbf{R}(\mathbf{T}{}^{*})^{\perp}$ 이다. 즉, $\mathbf{N}(\mathbf{T}) \subset \mathbf{R}(\mathbf{T}{}^{*})^{\perp}$ 이다. ■ 
+
+    2:
+
+    이제 1) 을 가정할 수 있으므로 문제 6.2-13-(4) 에 의하여 다음이 성립한다. 
+
+    $$ (\mathbf{R}(\mathbf{T}{}^{*})^{\perp})^{\perp} = (\mathbf{N}(\mathbf{T}))^{\perp} $$
+
+    $$ \therefore \mathbf{R}(\mathbf{T}{}^{*}) = (\mathbf{N}(\mathbf{T}))^{\perp} \tag*{■}$$
 
 !!! tldr "정리 6.13"
 
@@ -1578,4 +1612,55 @@
 
     1. $Ax = b$ 의 유일한 최소해 $s$ 가 존재한다. $s \in \mathbf{R} (\mathbf{L}_{A {}^{*}})$ 이다.
 
-    2. $(AA {}^{*})u = b$ 인 $u$ 에 대하여 $s = A {}^{*}u$ 이다.
+    2. $s$ 는 $\mathbf{R}(\mathbf{L}_{A {}^{*}})$ 에 속하는 $Ax = b$ 의 유일한 해이다. 
+    
+    3. $(AA {}^{*})u = b$ 인 $u$ 에 대하여 $s = A {}^{*}u$ 이다.
+
+- 증명
+
+    1:
+
+    $Ax = b$ 의 임의의 해 $x$ 에 대하여 정리 6.6 에 의하여 $x = s + y$ 가 되게 하는 $s \in \mathbf{R}(\mathbf{L}_{A {}^{*}})$ 와 $y \in \mathbf{R}(\mathbf{L}_{A {}^{*}})^{\perp}$ 가 존재한다. 문제 6.3-12 와 정리 6.10 따름정리에 의하여 $\mathbf{R}(\mathbf{L}_{A {}^{*}})^{\perp} = \mathbf{N}(\mathbf{L}_{A})$ 이다. 따라서 $b = Ax = As + Ay = As$ 이다. 그러므로 $s$ 는 $Ax = b$ 의 해이다. ▲ 
+
+    $u \in \mathbf{N}(\mathbf{L}_{A})$ 와 $Ax = b$ 의 임의의 해 $v$ 에 대하여 정리 3.9 에 의하여 $v = s + u$ 이다. 문제 6.3-12-(2) 에 의하여 $s \in \mathbf{N}(\mathbf{L}_{A})^{\perp}$ 이므로 문제 6.1-10 에 의하여 다음이 성립한다. 
+
+    $$ \|v\| ^{2} = \|s+u\|^{2} = \|s\|^{2} + \|u\|^{2} \geq \|s\| ^{2} $$
+
+    따라서 $s$ 는 임의의 해 $v$ 보다 항상 같거나 작다. 그러므로 $s$ 는 최소해이다. ▲ 
+
+    $s$ 와 노름이 같은 해가 존재하면 최소해가 된다. 그러니 $\|v\| = \|s\|$ 를 가정하자. 그러면 $u = 0 \implies v = s$ 이므로 최소해 $s$ 는 유일하다. ▲ 
+
+    2:
+
+    $v \in \mathbf{R}(\mathbf{L}_{A {}^{*}})$ 가 $Ax = b$ 의 해이면 부분공간은 합에 대하여 닫혀있으므로 $v - s \in \mathbf{R}(\mathbf{L}_{A {}^{*}})$ 이고 $A(v - s) = b - b = 0$ 이므로 $v - s \in \mathbf{N}(\mathbf{L}_{A})$ 이다. 따라서 다음이 성립한다. 
+
+    $$ v - s \in \mathbf{R}(\mathbf{L}_{A {}^{*}}) \cap \mathbf{N}(\mathbf{L}_{A}) = \mathbf{R}(\mathbf{L}_{A {}^{*}}) \cap \mathbf{R}(\mathbf{L}_{A {}^{*}}) = \{0\} $$
+
+    따라서 $v = s$ 이다. ▲ 
+
+    3:
+
+    $(AA {}^{*})u = b$ 를 만족하게 하는 $u$ 에 대하여 $v = A {}^{*}u$ 라고 하면 $v \in \mathbf{R}(\mathbf{L}_{A {}^{*}})$ 이고 $Av = b$ 이다. 그러면 2) 에 의하여 $v = s$ 이고 결국 $s = A {}^{*}u$ 이다. ■ 
+
+- 예시 
+
+    다음 연립일차방정식의 최소해를 찾자.
+
+    $$ x+2y+z = 4 $$
+
+    $$ x-y+2z = -11 $$
+
+    $$ x+5y = 19 $$
+
+    $A, b$ 를 다음과 같이 두면 정리를 사용할 수 있다. 
+
+    $$ A = \begin{pmatrix} 1&2&1\\ 1&-1&2\\ 1&5&0\\ \end{pmatrix}, b = \begin{pmatrix} 4\\ -11\\ 19\\ \end{pmatrix} $$
+
+    그러면 $AA {}^{*}x = b$ 의 해 $u$ 에 대하여 $s = A {}^{*}u$ 를 계산하면 최소해를 찾을 수 있다. $AA {}^{*}$ 는 다음과 같다. 
+
+    $$ AA {}^{*} = \begin{pmatrix} 6&1&11\\ 1&6&-4\\ 11&-4&26\\ \end{pmatrix} $$
+
+    $AA {}^{*}x = b$ 의 해는 $x \in \bigg \{ \begin{pmatrix} 1 - 2t\\ t - 2\\ t\\ \end{pmatrix} : t \in \R \bigg \}$ 이다.  $t = 0$ 일 때 $u = \begin{pmatrix} 1\\ -2\\ 0\\ \end{pmatrix}$ 이다. 정리에 의하여 $s = A {}^{*}u = \begin{pmatrix} -1\\ 4\\ -3\\ \end{pmatrix}$ 는 최소해가 된다. 다른 $u$ 를 택해도 상관 없다.
+
+# Normal and Self-Adjoint Operators
+

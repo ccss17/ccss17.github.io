@@ -1582,6 +1582,8 @@
 
     정리 2.19 따름정리와 정리 2.21 에 의하여 증명이 끝난다. ■ 
 
+## Relation between Linear Map and Matrix
+
 !!! tldr "그림 2.2"
 
     차원이 각각 $n, m$ 이고 순서기저가 각각 $\beta, \gamma$ 인 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 와 행렬 $A = [\mathbf{T} ] ^{\gamma}_{\beta}$ 에 대하여 다음이 성립한다. 즉, $\mathbf{L}_{A} \circ \phi _{\beta } = \phi _{\gamma } \circ \mathbf{T}$ 이다.
