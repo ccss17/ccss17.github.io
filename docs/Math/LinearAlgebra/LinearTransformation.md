@@ -324,7 +324,7 @@
 
 - 증명
 
-    $x \in \mathbf{N}(\mathbf{T} )$ 이면 $\mathbf{T} (x) = 0 = \mathbf{T} (0)$ 인데, $\mathbf{T}$ 가 [단사](../../Foundations/Set/#b9a0b7bf1)이므로 $x = 0$ 이다. 또한 이는 $\forall x \in \mathbf{N}(\mathbf{T} ) : x = 0$ 을 의미하므로 $\mathbf{N}(\mathbf{T} ) = \{0\}$ 이다. ▲ 
+    $x \in \mathbf{N}(\mathbf{T} )$ 이면 $\mathbf{T} (x) = 0 = \mathbf{T} (0)$ 인데, $\mathbf{T}$ 가 [단사](../../Set/Set/#b9a0b7bf1)이므로 $x = 0$ 이다. 또한 이는 $\forall x \in \mathbf{N}(\mathbf{T} ) : x = 0$ 을 의미하므로 $\mathbf{N}(\mathbf{T} ) = \{0\}$ 이다. ▲ 
 
     역으로 $\mathbf{N}(\mathbf{T} ) = \{0\}$ 과 $\mathbf{T} (x) = \mathbf{T} (y)$ 을 가정하자. 선형변환의 성질 3) 에 의하여 $0 = \mathbf{T} (x) - \mathbf{T} (y) = \mathbf{T} (x - y)$ 이므로 
 
@@ -738,13 +738,13 @@
 
     1:
 
-    [$\mathbf{U} \circ \mathbf{T}$ 가 단사이면 $\mathbf{S} \circ (\mathbf{U} \circ \mathbf{T} ) = \mathbf{I} _{\mathbf{V}}$ 을 만족하는 변환 $\mathbf{S}: \mathbf{Z} \to \mathbf{V}$ 가 존재](../../Foundations/Set/#5869db153)한다. [함수의 합성은 결합법칙을 만족](../../Foundations/Set/#ede6df07e)하므로
+    [$\mathbf{U} \circ \mathbf{T}$ 가 단사이면 $\mathbf{S} \circ (\mathbf{U} \circ \mathbf{T} ) = \mathbf{I} _{\mathbf{V}}$ 을 만족하는 변환 $\mathbf{S}: \mathbf{Z} \to \mathbf{V}$ 가 존재](../../Set/Set/#5869db153)한다. [함수의 합성은 결합법칙을 만족](../../Set/Set/#ede6df07e)하므로
 
     $$ \mathbf{S} \circ (\mathbf{U} \circ \mathbf{T} ) = (\mathbf{S} \circ \mathbf{U} ) \circ \mathbf{T}  = \mathbf{I} _{\mathbf{V} } $$
 
-    이다. [단사함수와의 동치명제에 대한 정리](../../Foundations/Set/#5869db153)에 의하여 $\mathbf{T}$ 는 단사이다. ▲ 
+    이다. [단사함수와의 동치명제에 대한 정리](../../Set/Set/#5869db153)에 의하여 $\mathbf{T}$ 는 단사이다. ▲ 
 
-    이로써 $\mathbf{UT}, \mathbf{T}$ 가 단사임을 가정할 수 있다. 이제 $\mathbf{UT}$ 가 단사이면 $\mathbf{U}$ 도 단사여야 하는지 살펴보자. $\mathbf{U}$ 가 [단사](../../Foundations/Set/#b9a0b7bf1)가 아니라고 가정하면 $\mathbf{U} (y_1) = \mathbf{U} (y_2) \implies y_1 \neq y_2$ 를 만족하는 $y_1, y_2 \in \mathbf{W}$ 가 존재한다. $y_1 = \mathbf{T} (x_1), y_2 = \mathbf{T} (x_2)$ 라고 하면 
+    이로써 $\mathbf{UT}, \mathbf{T}$ 가 단사임을 가정할 수 있다. 이제 $\mathbf{UT}$ 가 단사이면 $\mathbf{U}$ 도 단사여야 하는지 살펴보자. $\mathbf{U}$ 가 [단사](../../Set/Set/#b9a0b7bf1)가 아니라고 가정하면 $\mathbf{U} (y_1) = \mathbf{U} (y_2) \implies y_1 \neq y_2$ 를 만족하는 $y_1, y_2 \in \mathbf{W}$ 가 존재한다. $y_1 = \mathbf{T} (x_1), y_2 = \mathbf{T} (x_2)$ 라고 하면 
 
     $$ \mathbf{U} (\mathbf{T} (x_1)) = \mathbf{U} (\mathbf{T} (x_2)) $$
 
@@ -756,11 +756,11 @@
 
     2:
     
-    [$\mathbf{U} \circ \mathbf{T}$ 가 전사이면 $(\mathbf{U} \circ \mathbf{T} ) \circ \mathbf{S} = \mathbf{I} _{\mathbf{W}}$ 을 만족하는 변환 $\mathbf{S}: \mathbf{Z}\to \mathbf{V}$ 가 존재](../../Foundations/Set/#d9b0737d6)한다. [함수의 합성은 결합법칙을 만족](../../Foundations/Set/#ede6df07e)하므로
+    [$\mathbf{U} \circ \mathbf{T}$ 가 전사이면 $(\mathbf{U} \circ \mathbf{T} ) \circ \mathbf{S} = \mathbf{I} _{\mathbf{W}}$ 을 만족하는 변환 $\mathbf{S}: \mathbf{Z}\to \mathbf{V}$ 가 존재](../../Set/Set/#d9b0737d6)한다. [함수의 합성은 결합법칙을 만족](../../Set/Set/#ede6df07e)하므로
 
     $$ (\mathbf{U} \circ \mathbf{T} ) \circ \mathbf{S} = \mathbf{U} \circ  (\mathbf{T} \circ \mathbf{S} ) = \mathbf{I} _{\mathbf{W} } $$
 
-    이다. [전사함수와의 동치명제에 대한 정리](../../Foundations/Set/#d9b0737d6)에 의하여 $\mathbf{T}$ 는 단사이다. ▲ 
+    이다. [전사함수와의 동치명제에 대한 정리](../../Set/Set/#d9b0737d6)에 의하여 $\mathbf{T}$ 는 단사이다. ▲ 
 
     이로써 $\mathbf{UT}, \mathbf{T}$ 가 전사임을 가정할 수 있다. $\mathbf{T}$ 도 전사여야 하는지 살펴보자. $\mathbf{T}$ 가 전사가 아니라면 $x \in \mathbf{W} \land x \not\in \mathbf{R} (\mathbf{T})$ 인 $x$ 가 존재한다. $\mathbf{U}$ 가 전사이므로 $\mathbf{T}$ 의 함수값이 정의되지 않은 $x \in \mathbf{W}$ 에 대한 함수값 $\mathbf{U} (x) \in \mathbf{Z}$ 가 항상 존재한다. 따라서 $\mathbf{UT}$ 가 전사이기 위하여 $\mathbf{U} (x) = \mathbf{U} (\mathbf{T} (a))$ 를 만족하는 $a \in \mathbf{V}$ 가 존재해야 한다. 즉, 조건
 
@@ -772,13 +772,13 @@
 
     3:
 
-    $\mathbf{T} , \mathbf{U}$ 가 [전단사](../../Foundations/Set/#3a14a1347)이면 [역함수 $\mathbf{T}^{-1} : \mathbf{W} \to \mathbf{V} , \mathbf{U} ^{-1} : \mathbf{Z}\to \mathbf{W}$ 가 존재한다](../../Foundations/Set/#4d4309496). 또한 [함수의 합성은 결합법칙을 만족하므로](../../Foundations/Set/#ede6df07e)
+    $\mathbf{T} , \mathbf{U}$ 가 [전단사](../../Set/Set/#3a14a1347)이면 [역함수 $\mathbf{T}^{-1} : \mathbf{W} \to \mathbf{V} , \mathbf{U} ^{-1} : \mathbf{Z}\to \mathbf{W}$ 가 존재한다](../../Set/Set/#4d4309496). 또한 [함수의 합성은 결합법칙을 만족하므로](../../Set/Set/#ede6df07e)
 
     $$ (\mathbf{U} \circ \mathbf{T}) \circ (\mathbf{T} ^{-1} \circ \mathbf{U} ^{-1}) = \mathbf{U} \circ \mathbf{I} _{\mathbf{W}} \circ \mathbf{U} ^{-1} = \mathbf{I} _{\mathbf{Z}} $$
 
     $$ (\mathbf{T} ^{-1} \circ \mathbf{U} ^{-1}) \circ (\mathbf{U} \circ \mathbf{T}) = \mathbf{T} ^{-1} \circ \mathbf{I} _{\mathbf{W}} \circ \mathbf{T} = \mathbf{I} _{\mathbf{V} } $$
     
-    이다. [역함수가 존재함은 전단사 함수인 것과 동치](../../Foundations/Set/#4d4309496) 이므로 $\mathbf{U} \mathbf{T}$ 는 전단사이다. ■ 
+    이다. [역함수가 존재함은 전단사 함수인 것과 동치](../../Set/Set/#4d4309496) 이므로 $\mathbf{U} \mathbf{T}$ 는 전단사이다. ■ 
 
 !!! tldr "정리 2.10"
 
@@ -1138,7 +1138,7 @@
 
 - 2) 의 증명 
 
-    [함수의 합성은 결합법칙을 만족한다.](../../Foundations/Set/#ede6df07e) 또한 [정리 2.15 - 6](#c3298a7b3) 에 의하여 다음이 성립한다. 
+    [함수의 합성은 결합법칙을 만족한다.](../../Set/Set/#ede6df07e) 또한 [정리 2.15 - 6](#c3298a7b3) 에 의하여 다음이 성립한다. 
 
     $$ \mathbf{L}_{A(BC)} = \mathbf{L}_{A}\mathbf{L}_{BC} = \mathbf{L}_{A}(\mathbf{L}_{B}\mathbf{L}_{C}) = (\mathbf{L}_{A}\mathbf{L}_{B})\mathbf{L}_{C} = \mathbf{L}_{AC}\mathbf{L}_{C} = \mathbf{L}_{(AB)C} $$
 
@@ -1170,7 +1170,7 @@
     
     를 만족하는 함수 $\mathbf{T^{-1}} : \mathbf{W} \to \mathbf{V}$ 를 $\mathbf{T}$ 의 역함수라고 한다. 
 
-- 선형변환의 역함수 정의는 [일반적인 함수의 역함수 정의](../../Foundations/Set/#b64f666e2)와 같다.
+- 선형변환의 역함수 정의는 [일반적인 함수의 역함수 정의](../../Set/Set/#b64f666e2)와 같다.
 
 - 역함수가 존재하는 선형변환을 가역(invertible)이라 한다.
 
@@ -1180,7 +1180,7 @@
 
 - 증명
 
-    [함수의 역함수는 유일하다.](../../Foundations/Set/#41c513e50) 선형변환은 함수이다. ■ 
+    [함수의 역함수는 유일하다.](../../Set/Set/#41c513e50) 선형변환은 함수이다. ■ 
 
 !!! tldr ""
 
@@ -1188,7 +1188,7 @@
 
 - 증명 
 
-    [함수의 역함수가 존재하기 위한 필요충분조건은 전단사라는 것이다.](../../Foundations/Set/#4d4309496) 선형변환은 함수이다. ■ 
+    [함수의 역함수가 존재하기 위한 필요충분조건은 전단사라는 것이다.](../../Set/Set/#4d4309496) 선형변환은 함수이다. ■ 
 
 !!! tldr ""
 
@@ -1288,7 +1288,7 @@
 
 - 증명 
 
-    역행렬을 선형변환의 역함수와 연결시킨다면 [역함수가 유일하다](../../Foundations/Set/#41c513e50) 는 정리로도 증명가능하다. 그러나 일단은 $AC=CA = I$ 를 만족하는 또 다른 행렬 $C$ 가 존재한다면 
+    역행렬을 선형변환의 역함수와 연결시킨다면 [역함수가 유일하다](../../Set/Set/#41c513e50) 는 정리로도 증명가능하다. 그러나 일단은 $AC=CA = I$ 를 만족하는 또 다른 행렬 $C$ 가 존재한다면 
 
     $$ C = CI = C(AB) = (CA)B = IB = B $$
 
@@ -1370,7 +1370,7 @@
 
     1:
 
-    [정리 2.15 - 1](#c3298a7b3) 에 의하여 $AB = I_n$ 은 $\mathbf{L}_{AB} = \mathbf{L}_{I_n}$ 이다. 이는 [정리 2.15 - 6, 7](#c3298a7b3) 에 의하여 $\mathbf{L}_{A}\mathbf{L}_{B} = \mathbf{I} _{\mathbf{F} ^{n}}$ 가 된다. 그러므로 [$\mathbf{L}_{A}$ 는 전사](../../Foundations/Set/#5869db153)이고, [$\mathbf{L}_{B}$ 는 단사](../../Foundations/Set/#d9b0737d6)이다. 그런데 [$\dim (\mathbf{F} ^{n}) = \dim (\mathbf{F} ^{n})$ 이므로 $\mathbf{L}_{A}$ 와 $\mathbf{L}_{B}$ 는 가역이다](#08a4e4fdc). 그러면 [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $A$ 와 $B$ 도 가역이다. ■ 
+    [정리 2.15 - 1](#c3298a7b3) 에 의하여 $AB = I_n$ 은 $\mathbf{L}_{AB} = \mathbf{L}_{I_n}$ 이다. 이는 [정리 2.15 - 6, 7](#c3298a7b3) 에 의하여 $\mathbf{L}_{A}\mathbf{L}_{B} = \mathbf{I} _{\mathbf{F} ^{n}}$ 가 된다. 그러므로 [$\mathbf{L}_{A}$ 는 전사](../../Set/Set/#5869db153)이고, [$\mathbf{L}_{B}$ 는 단사](../../Set/Set/#d9b0737d6)이다. 그런데 [$\dim (\mathbf{F} ^{n}) = \dim (\mathbf{F} ^{n})$ 이므로 $\mathbf{L}_{A}$ 와 $\mathbf{L}_{B}$ 는 가역이다](#08a4e4fdc). 그러면 [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $A$ 와 $B$ 도 가역이다. ■ 
 
     2:
 

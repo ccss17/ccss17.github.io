@@ -47,7 +47,7 @@
 
 - 증명
 
-    [초른의 보조정리](../Foundations/InfiniteSet/#8e7118900) 를 사용하면 이를 만족하는 많은 $\mathcal{F}$ 가 존재한다는 것을 증명할 수 있다. 
+    [초른의 보조정리](../Set/InfiniteSet/#8e7118900) 를 사용하면 이를 만족하는 많은 $\mathcal{F}$ 가 존재한다는 것을 증명할 수 있다. 
 
     그러나 이들을 명시적으로 구성하여 보일 수는 없다.
 
@@ -57,7 +57,7 @@
 
     $$ \big < r_n \big > \equiv \big < s_n \big > \iff \{n \in \N : r_n = s_n\} \in \mathcal{F} $$
 
-- 초실수를 정의하기 위한 $\R ^{\N}$ 에서의 이 [동치관계](../Foundations/Set/#6a7f4dd92)는 서로 동치인 집합을 잡아내기 위하여 ultrafilter 를 사용한다. 
+- 초실수를 정의하기 위한 $\R ^{\N}$ 에서의 이 [동치관계](../Set/Set/#6a7f4dd92)는 서로 동치인 집합을 잡아내기 위하여 ultrafilter 를 사용한다. 
 
 - 쉽게 말해서 실수 수열이 유한하게 서로 다르다면 두 실수 무한수열(초실수)이 서로 같다고 정의한다는 것이다.
 
@@ -115,13 +115,13 @@
 
 - 초실수의 구성은 자연수, 정수, 유리수, 실수의 구성 과정과 같은 맥락이다. 
 
-    우리는 [$\N$ 을 공집합으로부터 $S(x) = x \cup \{x\}$ 연산으로 구성](../Foundations/numbers/#7c938e5ea)해내었다. [$\N$ 을 기반으로하는 ordered pair 로 $\mathbb{Z}$ 를 구성](../Foundations/numbers/#402b9b429)해내었다. [$\mathbb{Q}$ 는 $\mathbb{Z}$ 를 기반으로 하는 동치류로 구성](../Foundations/numbers/#5d305fdb8)했었다. $\R$ 은 $\mathbb{Q}$ 를 기반으로 [데데킨트 절단으로 구성](../Foundations/numbers/#d93ba1738)할 수 있고 [코시 수열의 동치류로도 구성](../Foundations/numbers/#41b17cc41)할 수 있었다. 
+    우리는 [$\N$ 을 공집합으로부터 $S(x) = x \cup \{x\}$ 연산으로 구성](../Set/numbers/#7c938e5ea)해내었다. [$\N$ 을 기반으로하는 ordered pair 로 $\mathbb{Z}$ 를 구성](../Set/numbers/#402b9b429)해내었다. [$\mathbb{Q}$ 는 $\mathbb{Z}$ 를 기반으로 하는 동치류로 구성](../Set/numbers/#5d305fdb8)했었다. $\R$ 은 $\mathbb{Q}$ 를 기반으로 [데데킨트 절단으로 구성](../Set/numbers/#d93ba1738)할 수 있고 [코시 수열의 동치류로도 구성](../Set/numbers/#41b17cc41)할 수 있었다. 
 
     초실수의 구성, 즉 $^{*}\R$ 의 구성은 코시 수열의 동치류로 $\R$ 을 구성했던 것과 비슷하다. 초실수의 구성은 무한한 실수 수열의 집합인 $\R ^{\N}$ 의 동치류를 기반으로 이루어진다. 이 동치관계를 정의하기 위하여 극대필터라는 수학적 장치가 필요한 것이다. 
 
 - 이러한 초실수체 ${}^{*}\R$ 은 사실 선택하는 자유 극대필터 $\mathcal{F}$ 에 따라서 달라진다. 
 
-    [연속체 가설](../Foundations/InfiniteSet/#90af6e075) 을 가정하면 모든 초실수체는 순서체로써 서로 동형이다. 그러나 [연속체 가설](../Foundations/InfiniteSet/#90af6e075) 을 부정한다면 서로 동형이 아닌 초실수체가 존재하게 된다. 
+    [연속체 가설](../Set/InfiniteSet/#90af6e075) 을 가정하면 모든 초실수체는 순서체로써 서로 동형이다. 그러나 [연속체 가설](../Set/InfiniteSet/#90af6e075) 을 부정한다면 서로 동형이 아닌 초실수체가 존재하게 된다. 
 
 !!! tldr "초실수의 기수"
 
@@ -131,11 +131,11 @@
 
     초실수체 ${}^{*}\R$ 이 가산 index 집합 $\N$ 에 대한 실수 $\R$ 의 초거듭제곱(ultrapower) ${}^{*}\R = (\prod_{n \in \N}^{}\R) / \mathcal{F}$ 로 구성되었으므로 자명하게 $|\R| \leq |{}^{*}\R |$ 이다.
 
-    [실수의 기수가 $|\R| = 2 ^{\aleph _0}$](../Foundations/InfiniteSet/#d91d642d4) 이고, $|{}^{*}\R |$ 이 실수체에 대한 가산 index 집합 $\N$ 의 거듭제곱이므로 
+    [실수의 기수가 $|\R| = 2 ^{\aleph _0}$](../Set/InfiniteSet/#d91d642d4) 이고, $|{}^{*}\R |$ 이 실수체에 대한 가산 index 집합 $\N$ 의 거듭제곱이므로 
 
     $$ 2 ^{\aleph _0} = |\R| \leq | {}^{*}\R | \leq (2 ^{\aleph _0}) ^{\aleph _0} = 2 ^{\aleph _0 \times \aleph _0} $$
 
-    이다. 그런데 [$\aleph _0 \times \aleph _0 = \aleph _0$](../Foundations/InfiniteSet/#7713aafcf) 이므로 결국 
+    이다. 그런데 [$\aleph _0 \times \aleph _0 = \aleph _0$](../Set/InfiniteSet/#7713aafcf) 이므로 결국 
 
     $$ 2 ^{\aleph _0} \leq | {}^{*}\R | \leq 2 ^{\aleph _0 } $$
 
@@ -451,9 +451,9 @@
 
 - 하지만 이 정리로 인하여 초실수체가 실수체와 완전히 동일하게 작동한다고 볼 수 있는 것은 아니다. 
 
-    가령 초실수체에서는 [아르키메데스 성질](../Foundations/numbers/#85de9fd3f)가 성립하지 않는다. 왜냐하면 양의 무한대는 $1$ 을 유한번 더한 값보다 항상 크기 때문이다. 
+    가령 초실수체에서는 [아르키메데스 성질](../Set/numbers/#85de9fd3f)가 성립하지 않는다. 왜냐하면 양의 무한대는 $1$ 을 유한번 더한 값보다 항상 크기 때문이다. 
     
-    또한 이 사실을 [아르키메데스 성질](../Foundations/numbers/#85de9fd3f)을 1차 논리로 기술할 수 없기 때문이라고도 설명할 수 있다. 1차 논리로 기술할 수 없기에 transfer principle 을 사용할 수 없다. 
+    또한 이 사실을 [아르키메데스 성질](../Set/numbers/#85de9fd3f)을 1차 논리로 기술할 수 없기 때문이라고도 설명할 수 있다. 1차 논리로 기술할 수 없기에 transfer principle 을 사용할 수 없다. 
 
 !!! tldr ""
 
@@ -461,7 +461,7 @@
 
 - 증명 
 
-    [절단에 의한 정리](../Foundations/numbers/#e53c4f1e1)와 [코시 수열에 의한 정리](../Foundations/numbers/#765b33eaf)에 의하여 $\R$ 은 순서체이다. 이는 일차논리에 의한 명제로 표현가능하다. 
+    [절단에 의한 정리](../Set/numbers/#e53c4f1e1)와 [코시 수열에 의한 정리](../Set/numbers/#765b33eaf)에 의하여 $\R$ 은 순서체이다. 이는 일차논리에 의한 명제로 표현가능하다. 
 
     $\R$ 의 commutativity 에 대한 정리를 transfer principle 로 다음과 같이 변환할 수 있다. 
 
@@ -469,13 +469,13 @@
 
     $$ \forall x,y \in {}^{*}\R : x + y = y + x $$
 
-    마찬가지로 [순서체의 조건](../Foundations/numbers/#2ce70158c)들은 1차 논리 명제이므로 transfer principle 로 초실수의 명제로 변환시킬 수 있다. 
+    마찬가지로 [순서체의 조건](../Set/numbers/#2ce70158c)들은 1차 논리 명제이므로 transfer principle 로 초실수의 명제로 변환시킬 수 있다. 
 
     그러므로 $\big <{}^{*}\R , +, \cdot , <\big >$ 은 순서체이다. ■ 
 
-- 물론 [$\R$ 의 중요한 성질 중 하나는 실수체가 완비적](../Foundations/numbers/#45dd9d81f)이라는 것이다. 그러므로 $\R$ 의 공집합이 아니고 위로 유계인 부분집합은 상한을 가진다.
+- 물론 [$\R$ 의 중요한 성질 중 하나는 실수체가 완비적](../Set/numbers/#45dd9d81f)이라는 것이다. 그러므로 $\R$ 의 공집합이 아니고 위로 유계인 부분집합은 상한을 가진다.
 
-    그러면 이상하다. [완비순서체는 오로지 실수체라는 것](../Foundations/numbers/#7b48c89b6)을 우리는 이미 알고 있다. 그런데 Transfer principle 로 실수의 완비성에 대한 명제를 초실수로 변환할 수 있지 않을까?
+    그러면 이상하다. [완비순서체는 오로지 실수체라는 것](../Set/numbers/#7b48c89b6)을 우리는 이미 알고 있다. 그런데 Transfer principle 로 실수의 완비성에 대한 명제를 초실수로 변환할 수 있지 않을까?
 
     하지만 실수의 완비명제를 초실수로 변환하는 것은 불가능하다. 실수의 완비성이 초실수의 완비성으로 변환될 수 없는 이유는 초실수의 완비성이 오로지 2차 논리 명제로만 표현되기 때문이다. 왜냐하면 단순히 $\R$ 의 성분을 언급하는 것이 아니라 $\R$ 의 부분집합을 언급해야만 하기 때문이다. 
 
@@ -497,7 +497,7 @@
 
 - 증명 
 
-    임의의 집합 $A, B \subset \R$ 에 대하여 [합집합의 정의](../Foundations/Set/#063667813) 에 의하여 
+    임의의 집합 $A, B \subset \R$ 에 대하여 [합집합의 정의](../Set/Set/#063667813) 에 의하여 
 
     $$ \forall x \in \R : ( x \in A \cup B  \iff x \in A \lor x \in B) $$
 
@@ -691,7 +691,7 @@
     
 - 증명 
 
-    $A = \{r \in \R : r < b\}$ 로 두자. $A$ 는 공집합이 아니므로 상계를 가지고 [실수의 완비성 공리](../Foundations/numbers/#45dd9d81f)에 의하여 상한 $s$ 를 가진다. 
+    $A = \{r \in \R : r < b\}$ 로 두자. $A$ 는 공집합이 아니므로 상계를 가지고 [실수의 완비성 공리](../Set/numbers/#45dd9d81f)에 의하여 상한 $s$ 를 가진다. 
 
     $b \backsimeq s$ 를 보여야 한다. 이는 $\forall \epsilon \in \R ^{+} : |b-s| < \epsilon$ 을 보이는 것이다. 임의의 실수로 $\epsilon$ 을 잡자. 그러면 $|b-s|<\epsilon$ 을 보이는 것은 $s - \epsilon < b < s + \epsilon$ 을 증명하는 것이다. ▲ 
 

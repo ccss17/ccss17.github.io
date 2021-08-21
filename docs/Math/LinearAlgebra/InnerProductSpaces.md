@@ -1490,17 +1490,13 @@
 
     내적공간 $\mathbf{V}$ 와 유한차원 부분공간 $\mathbf{W}$ 에 대하여 다음이 성립한다.
     
-    1. $y \in \mathbf{W}^{\perp}\setminus \{0\}: x \in \mathbf{V} \setminus \mathbf{W} \iff \big <x,y \big > \neq 0$
-
-    2. $y \in \mathbf{W}\setminus \{0\}: x \in \mathbf{V} \setminus \mathbf{W}^{\perp} \iff \big <x,y \big > \neq 0$
+    $$ y \in \mathbf{W}^{\perp}\setminus \{0\}: x \in \mathbf{V} \setminus \mathbf{W} \iff \big <x,y \big > \neq 0 $$
 
 - **이 정리는 $\mathbf{W} ^{\perp}$ 와 직교하기 위해서는 반드시 $\mathbf{W}$ 에 속해야 함을 말해준다.** 
 
     만약 $\mathbf{W}$ 가 부분공간이 아니라 유한집합 $S$ 였다면 $S ^{\perp}$ 와 직교하기 위하여 반드시 $S$ 에 속할 필요가 없을 수도 있다. $\mathbf{V}\setminus S$ 중에서 $S ^{\perp}$ 와 직교하는 벡터가 존재할 수도 있기 때문이다.
 
 - 증명
-
-    1:
 
     $x \in \mathbf{V}\setminus \mathbf{W}$ 을 가정하면 $y \in \mathbf{W}^{\perp}$ 에 대하여 정리 6.6 에 의하여 $x = y + z$ 를 만족하는 $z \in \mathbf{W}$ 가 존재하므로 다음이 성립한다.
 
@@ -1511,10 +1507,6 @@
     $y = 0$ 이면 $x = 0 + z$ 인데 $x \not\in \mathbf{W}, z \in \mathbf{W}$ 이므로 모순이다. 따라서 $\|y\|^{2} > 0$ 이다. ▲ 
 
     $\big <x,y \big >\neq 0$ 을 가정하면 $x \not\in \mathbf{W}$ 은 자명하다. ■ 
-
-    2:
-
-    2) 는 1) 에서 바로 나온다. ■ 
 
 - 프리드버그 선대수에서 말하는 원래의 정리는 다음과 같은데 논리관계가 이상한 것 같아서 임의로 고쳤다.
 
@@ -1562,17 +1554,31 @@
 
 !!! tldr ""
 
-    내적공간 $\mathbf{V}$ 와 벡터 $x, y \in \mathbf{V}\setminus \{0\}$ 에 대하여 $\big <x,y \big >\neq 0$ 이다.
+    내적공간 $\mathbf{V}$ 에 대하여 $\big <x, y \big > = 0$ 인 벡터 $x, y \in \mathbf{V}\setminus \{0\}$ 가 존재한다.
 
-- **이 정리는 $\big <x,y \big >=0$ 이면 반드시 $x = 0 \lor y = 0$ 가 성립한다는 것을 말해준다.**
+- **이 정리는 $x \neq 0 \land y \neq 0$ 이어도 $\big <x,y \big >=0$ 일 수도 있다는 것을 말해준다.**
 
 - 증명 
 
-    $\big <x,y \big > = 0$ 을 가정하자.  $x \neq 0 \land y \neq 0$ 이므로 벡터공간에 곱셈의 항등원의 존재 공리와 내적의 정의와 내적의 성질에 의하여 다음이 성립한다.
+    유클리드 공간 $\R ^{2}$ 의 표준기저 $e_1, e_2$ 에 대하여 다음이 성립한다. 
 
-    $$ \big <x,y \big > = \big <x \cdot 1, y \cdot 1 \big > = x \cdot \overline{y}\big <1,1 \big > = 0 $$
+    $$ e_1 \neq 0, e_2 \neq 0, \big <e_1,e_2 \big > = 1 \cdot 0 + 0 \cdot 1 = 0 $$
 
-    내적의 정의에 의하여 $\big <1,1 \big >\neq 0$ 이므로 $x \cdot \overline{y} = 0$ 이다. 그러나 이는 모순이다. 따라서 $\big <x,y \big >\neq 0$ 이다.
+!!! tldr ""
+
+    내적공간 $\mathbf{V}$ 와 벡터 $v \in \mathbf{V}$ 에 대하여 다음은 동치이다.
+
+    1. $\forall x \in \mathbf{V} : \big <x, y \big > = 0$
+    
+    2. $y = 0$
+
+- 이 정리는 **내적공간의 모든 벡터와 직교하는 벡터는 영벡터 $0$ 밖에 없다** 는 것을 말해준다. 
+
+- 증명 
+
+    $y = 0$ 을 가정하면 1) 이 바로 나온다. ▲ 
+
+    1) 을 가정하고 $y \neq 0$ 로 두자. 내적의 정의에 의하여 $\big <y,y \big > \neq 0$ 이다. 따라서 $y = 0$ 이다. ■ 
 
 !!! tldr "문제 6.3-12"
 
@@ -1590,7 +1596,7 @@
 
     $$ \forall x \in \mathbf{V} : \big <\mathbf{T}{}^{*}(x), y \big > = \big <x,\mathbf{T}(y) \big > = 0 $$
 
-    내적의 결과가 $0$ 이므로 첫번째 성분이 $0$ 이거나 두번째 성분이 $0$ 이다. $x \in \mathbf{V}\setminus \{0\}$ 이면 $\mathbf{T}(y) = 0$ 이므로 $y \in \mathbf{N}(\mathbf{T})$ 이다. 따라서 $\mathbf{R}(\mathbf{T}{}^{*}) ^{\perp}\subset \mathbf{N}(\mathbf{T})$ 이다. ▲ 
+    모든 $x \in \mathbf{V}$ 와 직교하는 벡터는 영벡터이므로 $\mathbf{T}(y) = 0$ 이므로 $y \in \mathbf{N}(\mathbf{T})$ 이다. 따라서 $\mathbf{R}(\mathbf{T}{}^{*}) ^{\perp}\subset \mathbf{N}(\mathbf{T})$ 이다. ▲ 
 
     $y \in \mathbf{N}(\mathbf{T})$ 를 고정하면 $\mathbf{T}(y) = 0$ 이므로 다음이 성립한다.
 
@@ -1610,11 +1616,15 @@
 
     $A \in \mathbf{M}_{m \times n}(\mathbf{F}), b \in \mathbf{F}^{m}$ 와 모순이 없는 연립일차방정식 $Ax = b$ 에 대하여 다음이 성립한다. 
 
-    1. $Ax = b$ 의 유일한 최소해 $s$ 가 존재한다. $s \in \mathbf{R} (\mathbf{L}_{A {}^{*}})$ 이다.
-
-    2. $s$ 는 $\mathbf{R}(\mathbf{L}_{A {}^{*}})$ 에 속하는 $Ax = b$ 의 유일한 해이다. 
+    1. $Ax = b$ 의 유일한 최소해 $s$ 가 존재한다. 
     
-    3. $(AA {}^{*})u = b$ 인 $u$ 에 대하여 $s = A {}^{*}u$ 이다.
+    2. $s \in \mathbf{R} (\mathbf{L}_{A {}^{*}})$
+
+    3. $s$ 는 $\mathbf{R}(\mathbf{L}_{A {}^{*}})$ 에 속하는 $Ax = b$ 의 유일한 해이다. 
+    
+    4. $(AA {}^{*})u = b$ 인 $u$ 에 대하여 $s = A {}^{*}u$ 이다.
+
+- 1), 2), 3) 이 연립일차방정식의 최소해의 유일성과 존재성을 보장해주고, 4) 가 최소해를 구하는 방법을 말해준다. 
 
 - 증명
 
@@ -1632,15 +1642,19 @@
 
     2:
 
+    1) 의 증명과정에서 증명된다.
+
+    3:
+
     $v \in \mathbf{R}(\mathbf{L}_{A {}^{*}})$ 가 $Ax = b$ 의 해이면 부분공간은 합에 대하여 닫혀있으므로 $v - s \in \mathbf{R}(\mathbf{L}_{A {}^{*}})$ 이고 $A(v - s) = b - b = 0$ 이므로 $v - s \in \mathbf{N}(\mathbf{L}_{A})$ 이다. 따라서 다음이 성립한다. 
 
     $$ v - s \in \mathbf{R}(\mathbf{L}_{A {}^{*}}) \cap \mathbf{N}(\mathbf{L}_{A}) = \mathbf{R}(\mathbf{L}_{A {}^{*}}) \cap \mathbf{R}(\mathbf{L}_{A {}^{*}}) = \{0\} $$
 
     따라서 $v = s$ 이다. ▲ 
 
-    3:
+    4:
 
-    $(AA {}^{*})u = b$ 를 만족하게 하는 $u$ 에 대하여 $v = A {}^{*}u$ 라고 하면 $v \in \mathbf{R}(\mathbf{L}_{A {}^{*}})$ 이고 $Av = b$ 이다. 그러면 2) 에 의하여 $v = s$ 이고 결국 $s = A {}^{*}u$ 이다. ■ 
+    $(AA {}^{*})u = b$ 를 만족하게 하는 $u$ 에 대하여 $v = A {}^{*}u$ 라고 하면 $v \in \mathbf{R}(\mathbf{L}_{A {}^{*}})$ 이고 $Av = b$ 이다. 그러면 3) 에 의하여 $v = s$ 이고 결국 $s = A {}^{*}u$ 이다. ■ 
 
 - 예시 
 
@@ -1660,7 +1674,26 @@
 
     $$ AA {}^{*} = \begin{pmatrix} 6&1&11\\ 1&6&-4\\ 11&-4&26\\ \end{pmatrix} $$
 
-    $AA {}^{*}x = b$ 의 해는 $x \in \bigg \{ \begin{pmatrix} 1 - 2t\\ t - 2\\ t\\ \end{pmatrix} : t \in \R \bigg \}$ 이다.  $t = 0$ 일 때 $u = \begin{pmatrix} 1\\ -2\\ 0\\ \end{pmatrix}$ 이다. 정리에 의하여 $s = A {}^{*}u = \begin{pmatrix} -1\\ 4\\ -3\\ \end{pmatrix}$ 는 최소해가 된다. 다른 $u$ 를 택해도 상관 없다.
+    $AA {}^{*}x = b$ 의 해는 $x \in \Bigg \{ \begin{pmatrix} 1 - 2t\\ t - 2\\ t\\ \end{pmatrix} : t \in \R \Bigg \}$ 이다.  $t = 0$ 일 때 $u = \begin{pmatrix} 1\\ -2\\ 0\\ \end{pmatrix}$ 이다. 정리에 의하여 $s = A {}^{*}u = \begin{pmatrix} -1\\ 4\\ -3\\ \end{pmatrix}$ 는 최소해가 된다. 다른 $u$ 를 택해도 상관 없다.
 
 # Normal and Self-Adjoint Operators
 
+!!! tldr "보조정리"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 고유벡터를 포함하면 $\mathbf{T}{}^{*}$ 도 고유벡터를 포함한다.
+
+- 증명
+
+    고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터를 $v$ 라 하면 임의의 $x \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
+
+    $$  \begin{equation}\begin{split}
+    0&= \big <0,x \big > = \big <(t - \lambda \mathbf{I})(v),x \big > \\
+    &=\big <v,(\mathbf{T}-\lambda \mathbf{I}){}^{*}(x) \big > = \big <v, (\mathbf{T}{}^{*}- \overline{\lambda }\mathbf{I})(x) \big >\\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    따라서 $v \in \mathbf{R}(\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I})^{\perp}$ 이다. 
+
+    고유벡터 $v$ 는 교유벡터의 정의에 의하여 영벡터가 아니다.
+
+    $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}$ 는 전사가 아니므로 단사도 아니고, 따라서 $\mathbf{N}(\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}) \neq \{0\}$ 이다. 이 영공간이 속하는 벡터는 고윳값 $\overline{\lambda }$ 에 대응하는 $\mathbf{T}{}^{*}$ 의 고유벡터이다. ■ 

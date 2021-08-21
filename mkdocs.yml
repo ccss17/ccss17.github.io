@@ -11,19 +11,19 @@ nav:
   #   - 2020: trend/2020.md
   #   - 2021: trend/2021.md
   - Math: 
-    - Foundation of Foundation of Math: 
+    - Foundation of Math: 
       - History of Math: Math/MathHistory.md
       - Formal System: Math/Logic/FormalSystem.md
       - Incompleteness theorem: Math/incompleteness.md
       - Turing's proof: Math/turing.md
       - Consistency proof of Peano arithmetic: Math/gentzen.md
-    - Foundation of math: 
-      # - 논리학: Math/Foundations/logic.md
-      # - 수리논리학: Math/Foundations/mathmatical_logic.md
-      - Set: Math/Foundations/Set.md
-      - Number Theory: Math/Foundations/numbers.md
-      - Infinite Set: Math/Foundations/InfiniteSet.md
-      - ZFC axiom system: Math/Foundations/ZFC.md
+    - Set Theory: 
+      # - 논리학: Math/Set/logic.md
+      # - 수리논리학: Math/Set/mathmatical_logic.md
+      - Set: Math/Set/Set.md
+      - Number Theory: Math/Set/numbers.md
+      - Infinite Set: Math/Set/InfiniteSet.md
+      - ZFC axiom system: Math/Set/ZFC.md
     - Hyperreal Numbers: Math/HyperrealNumbers.md
     - Surreal Numbers: Math/SurrealNumbers.md
     - Linear Algebra: 

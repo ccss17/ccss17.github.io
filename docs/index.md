@@ -7,10 +7,10 @@
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/turing>Turing's&nbsp;proof</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/gentzen>Consistency&nbsp;proof&nbsp;of&nbsp;Peano&nbsp;arithmetic</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;Foundation&nbsp;of&nbsp;math</p><p>
-│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Foundations/Set>Set</a></p><p>
-│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Foundations/numbers>Number&nbsp;Theory</a></p><p>
-│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Foundations/InfiniteSet>Infinite&nbsp;Set</a></p><p>
-│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/Foundations/ZFC>ZFC&nbsp;axiom&nbsp;system</a></p><p>
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/Set>Set</a></p><p>
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/numbers>Number&nbsp;Theory</a></p><p>
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/InfiniteSet>Infinite&nbsp;Set</a></p><p>
+│&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/Set/ZFC>ZFC&nbsp;axiom&nbsp;system</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/HyperrealNumbers>Hyperreal&nbsp;Numbers</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/SurrealNumbers>Surreal&nbsp;Numbers</a></p><p>
 │&nbsp;&nbsp;&nbsp;╰──&nbsp;Linear&nbsp;Algebra</p><p>
