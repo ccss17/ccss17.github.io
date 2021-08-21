@@ -1686,14 +1686,7 @@
 
     고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터를 $v$ 라 하면 임의의 $x \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
 
-    $$  \begin{equation}\begin{split}
-    0&= \big <0,x \big > = \big <(t - \lambda \mathbf{I})(v),x \big > \\
-    &=\big <v,(\mathbf{T}-\lambda \mathbf{I}){}^{*}(x) \big > = \big <v, (\mathbf{T}{}^{*}- \overline{\lambda }\mathbf{I})(x) \big >\\
-    \end{split}\end{equation} \tag*{}
-    $$
+    $$  \begin{equation}\begin{split} 0&= \big <0,x \big > = \big <(\mathbf{T} - \lambda \mathbf{I})(v),x \big > \\ &=\big <v,(\mathbf{T}-\lambda \mathbf{I}){}^{*}(x) \big > = \big <v, (\mathbf{T}{}^{*}- \overline{\lambda }\mathbf{I})(x) \big >\\ \end{split}\end{equation} \tag*{} $$
 
-    따라서 $v \in \mathbf{R}(\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I})^{\perp}$ 이다. 
+    따라서 $v$ 는 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}$ 의 치역과 직교한다. 만약 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I} = \mathbf{V}$ 가 되면 $\mathbf{V}$ 의 모든 벡터와 직교하는 벡터는 $0$ 밖에 없으므로 $v = 0$ 인데 이는 모순이다. 따라서 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}$ 는 전사가 아니다. 그러므로 단사도 아니고, $\mathbf{N}(\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}) \neq \{0\}$ 이다. 이 영공간이 속하는 벡터는 고윳값 $\overline{\lambda }$ 에 대응하는 $\mathbf{T}{}^{*}$ 의 고유벡터이다. ■ 
 
-    고유벡터 $v$ 는 교유벡터의 정의에 의하여 영벡터가 아니다.
-
-    $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}$ 는 전사가 아니므로 단사도 아니고, 따라서 $\mathbf{N}(\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}) \neq \{0\}$ 이다. 이 영공간이 속하는 벡터는 고윳값 $\overline{\lambda }$ 에 대응하는 $\mathbf{T}{}^{*}$ 의 고유벡터이다. ■ 
