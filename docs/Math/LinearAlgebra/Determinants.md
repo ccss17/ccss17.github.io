@@ -771,6 +771,24 @@
 
     이로써 모든 증명이 끝났다. ■ 
 
+!!! tldr "문제 4.3-20"
+
+    정사각행렬 $A$ 와 $n \times n$ 행렬 $M= \begin{pmatrix} A&B\\ O&I\\ \end{pmatrix}, M'= \begin{pmatrix} I&B\\ O&A\\ \end{pmatrix}$ 에 대하여 $\det(M) = \det(A), \det(M') = \det(A)$ 이다.
+
+- 증명
+
+    $s + t = n$ 에 대하여 $A$ 를 $s \times s$ 행렬 $I = I_t$ 라고 하자.
+
+    $s = 1$ 이면 [문제 4.2-23](#f334dfff7) 에 의하여 $\det(M) = \prod_{i=1}^{n}M _{ii} = A _{11}$ 이다. ▲ 
+
+    $s = k - 1$ 에서 성립함을 가정하고 $s = k$ 에서 정리를 증명해보자. $i \in \{k + 1, \dots, n\} : \det(\tilde{M})_{1i} = 0$ 이다. 왜냐하면 $\tilde{M}_{1i}$ 의 $i$ 행이 영행(zero row)이 되므로 정리 4.3 따름정리에 따라 행렬식이 $0$ 이 되기 때문이다. 따라서 다음이 성립한다. 
+
+    $$ \det(M) = \sum_{i=1}^{n}(-1) ^{1+i}M _{1i} \cdot \det(\tilde{M}_{1i}) = \sum_{i=1}^{k}(-1) ^{1+i}A _{1i} \cdot \det(\tilde{M}_{1i}) $$
+
+    $k - 1$ 에서 정리가 성립하므로 $i \in \{1, \dots, k \} : \det(\tilde{M}_{1i}) = \det(\tilde{A}_{1i})$ 이다. 따라서 다음이 성립한다. 
+
+    $$ \therefore \sum_{i=1}^{k}(-1) ^{1+i}A _{1i} \cdot \det(\tilde{M}_{1i}) = \sum_{i=1}^{k}(-1) ^{1+i} A _{1i} \cdot \det(\tilde{A}_{1i}) = \det(A) \tag*{■} $$
+
 !!! tldr "문제 4.3-21"
 
     정사각행렬 $A, C$ 에 대한 행렬 $M= \begin{pmatrix} A&B\\ O&C\\ \end{pmatrix} \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(M) = \det(A) \det(C)$ 이다.
@@ -785,7 +803,7 @@
 
     $$ \begin{pmatrix} I&O\\ O&C ^{-1}\\ \end{pmatrix} \begin{pmatrix} A&B\\ O&C\\ \end{pmatrix} = \begin{pmatrix} A&B\\ O&I\\ \end{pmatrix} $$
 
-    다음이 성립한다. 
+    문제 4.3-20 과 정리 4.7 따름정리에 의하여 다음이 성립한다. 
 
     $$ \det(C ^{-1}) \det(M) = \det(A) \iff \det(M) = \det(A) \det(C) $$
 
