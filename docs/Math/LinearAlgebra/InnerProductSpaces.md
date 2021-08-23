@@ -1694,14 +1694,25 @@
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $[\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 순서기저 $\beta$ 가 존재하면 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다.
 
+    상삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 의 특성다항식은 완전히 인수분해된다.
+
 - 증명
 
-    $\mathbf{T}$ 의 특성다항식 $f(t) = \det([\mathbf{T}]_{\beta } - tI_n)$ 의 $[\mathbf{T}]_{\beta }-tI_n$ 은 상삼각행렬이다. [문제 4.2-23](../Determinants/#f334dfff7) 에 의하여 $\det([\mathbf{T}]_{\beta }-tI_n) = \text{tr} ([\mathbf{T}]_{\beta } - tI_n)$ 이다.
+    $\dim (\mathbf{V}) = n$ 을 가정하자.
 
-    $$ \det \bigg ( \bigg )
-    $$
+    $\mathbf{T}$ 의 특성다항식 $f(t) = \det([\mathbf{T}]_{\beta } - tI_n)$ 의 $A = [\mathbf{T}]_{\beta }-tI_n$ 은 상삼각행렬이다. [문제 4.2-23](../Determinants/#f334dfff7) 에 의하여 $\det(A) = \prod_{i=1}^{n}A _{ii}$ 이다. 따라서 $\mathbf{T}$ 의 특성방정식은 완전히 인수분해된다. ▲ 
+
+    상삼각행렬의 특성다항식이 완전히 인수분해된다는 것도 같은 논리로 증명 가능하다. ■ 
 
 !!! tldr "문제 5.2-12"
+
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 의 특성다항식이 완전히 인수분해되면 $A$ 는 상삼각행렬과 닮은 행렬이다.
+
+- 증명
+
+    어떤 행렬을 상삼각행렬로 만들 수 없으면 특성다항식이 완전히 분해되지 않나?
+
+    일단 상삼각행렬이 되기만 하면 문제 5.2-9 에 의해 특성다항식이 완전히 인수분해된다. 그러므로 문제는 상삼각행렬이 될 수 없는 행렬
 
 !!! tldr "정리 6.14 슈어의 정리(Schur's theorem)"
 
