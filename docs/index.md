@@ -1,12 +1,12 @@
 <div class="index"><p>root</p><p>
 ├──&nbsp;Math</p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;Foundation&nbsp;of&nbsp;Foundation&nbsp;of&nbsp;Math</p><p>
+│&nbsp;&nbsp;&nbsp;├──&nbsp;Foundation&nbsp;of&nbsp;Math</p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/MathHistory>History&nbsp;of&nbsp;Math</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Logic/FormalSystem>Formal&nbsp;System</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/incompleteness>Incompleteness&nbsp;theorem</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/turing>Turing's&nbsp;proof</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/gentzen>Consistency&nbsp;proof&nbsp;of&nbsp;Peano&nbsp;arithmetic</a></p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;Foundation&nbsp;of&nbsp;math</p><p>
+│&nbsp;&nbsp;&nbsp;├──&nbsp;Set&nbsp;Theory</p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/Set>Set</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/numbers>Number&nbsp;Theory</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/InfiniteSet>Infinite&nbsp;Set</a></p><p>

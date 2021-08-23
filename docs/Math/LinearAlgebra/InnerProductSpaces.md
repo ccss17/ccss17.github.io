@@ -1566,7 +1566,7 @@
 
 !!! tldr ""
 
-    내적공간 $\mathbf{V}$ 와 벡터 $v \in \mathbf{V}$ 에 대하여 다음은 동치이다.
+    내적공간 $\mathbf{V}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 다음은 동치이다.
 
     1. $\forall x \in \mathbf{V} : \big <x, y \big > = 0$
     
@@ -1680,7 +1680,7 @@
 
 !!! tldr "보조정리"
 
-    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 고유벡터를 포함하면 $\mathbf{T}{}^{*}$ 도 고유벡터를 포함한다.
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 고유벡터를 가지면 $\mathbf{T}{}^{*}$ 도 고유벡터를 가진다.
 
 - 증명
 
@@ -1690,3 +1690,19 @@
 
     따라서 $v$ 는 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}$ 의 치역과 직교한다. 만약 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I} = \mathbf{V}$ 가 되면 $\mathbf{V}$ 의 모든 벡터와 직교하는 벡터는 $0$ 밖에 없으므로 $v = 0$ 인데 이는 모순이다. 따라서 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}$ 는 전사가 아니다. 그러므로 단사도 아니고, $\mathbf{N}(\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}) \neq \{0\}$ 이다. 이 영공간이 속하는 벡터는 고윳값 $\overline{\lambda }$ 에 대응하는 $\mathbf{T}{}^{*}$ 의 고유벡터이다. ■ 
 
+!!! tldr "문제 5.2-9"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $[\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 순서기저 $\beta$ 가 존재하면 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다.
+
+- 증명
+
+    $\mathbf{T}$ 의 특성다항식 $f(t) = \det([\mathbf{T}]_{\beta } - tI_n)$ 의 $[\mathbf{T}]_{\beta }-tI_n$ 은 상삼각행렬이다. [문제 4.2-23](../Determinants/#f334dfff7) 에 의하여 $\det([\mathbf{T}]_{\beta }-tI_n) = \text{tr} ([\mathbf{T}]_{\beta } - tI_n)$ 이다.
+
+    $$ \det \bigg ( \bigg )
+    $$
+
+!!! tldr "문제 5.2-12"
+
+!!! tldr "정리 6.14 슈어의 정리(Schur's theorem)"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되면 $[\mathbf{T}]_{\gamma }$ 가 상삼각행렬이 되게 하는 정규직교기저 $\gamma$ 가 존재한다.

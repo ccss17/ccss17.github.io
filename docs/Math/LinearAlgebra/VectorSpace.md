@@ -1621,3 +1621,43 @@
 - 이 정리는 [대체정리](#6cf7acf90) 을 무한차원으로 일반화한 것이다. 
 
 - 증명
+
+# Exercises
+
+!!! tldr "문제 1.4-14"
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 부분집합 $S_1, S_2$ 에 대하여 $\text{span} (S_1 \cup S_2) = \text{span} (S_1) + \text{span} (S_2)$ 이다.
+
+- 증명
+
+    Let:
+
+    $$ S_1 = \{x_1, x_2, \dots, x_s\}, S_2 = \{x _{s+1}, x _{s+2}, \dots, x _{t}\} $$
+
+    By definition of span:
+
+    $$ \text{span} (S_1) = \bigg \{\sum_{i=1}^{s}b_ix_i : x_i \in S_1, b_i \in \mathbf{F} \bigg \} $$
+
+    $$ \text{span} (S_2) = \bigg \{\sum_{i=s+1}^{s + t}b_ix_i : x_i \in S_2, b_i \in \mathbf{F} \bigg \} $$
+
+    By definition of sum:
+
+    $$ \begin{equation}\begin{split}
+    \text{span} (S_1) + \text{span} (S_2) &= \bigg \{v + w : v \in \text{span} (S_1) , w \in \text{span} (S_2) \bigg \}\\
+    &= \bigg \{\sum_{i=1}^{t}b_ix_i : x_i \in S_1 \cup S_2, b_i \in \mathbf{F} \bigg \}\\
+    \end{split}\end{equation} \tag{1}
+    $$
+
+    $$ \bigg (\because v = \sum_{i=1}^{s}b_ix_i , w = \sum_{i=s+1}^{s + t}b_ix_i \implies v + w = \sum_{i=1}^{t}b_ix_i \bigg ) $$
+
+    By definition of union:
+
+    $$ S_1 \cup S_2 = \{x_1, x_2, \dots, x _{t}\} $$
+
+    By definition of span:
+
+    $$ \text{span} (S_1 \cup S_2) = \bigg \{\sum_{i=1}^{t}a_ix_i : x_i \in S_1 \cup S_2, a_i \in \mathbf{F} \bigg \} \tag{2} $$
+
+    By $(1), (2)$:
+
+    $$ \therefore \text{span} (S_1) + \text{span} (S_2) = \text{span} (S_1 \cup S_2) \tag*{■} $$

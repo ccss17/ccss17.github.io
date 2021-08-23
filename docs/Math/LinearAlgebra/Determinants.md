@@ -572,7 +572,7 @@
 
 !!! tldr "문제 4.2-23"
 
-    상삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(A) = \text{tr} (A)$ 이다.
+    상삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(A) = \displaystyle \prod_{i=1}^{n} A _{ii}$ 이다.
 
 - 정사각행렬은 1형과 3형 기본행연산을 통하여 상삼각행렬이 된다. 그러므로 정사각행렬의 행렬식을 쉽게 구할 수 있다.
 
@@ -622,11 +622,11 @@
 
     $A = \begin{pmatrix} 1&3&-3\\ 0&4&-7\\ 0&0&10\\ \end{pmatrix}$  에 대하여 다음이 성립한다.
 
-    $$ \det(A) = \text{tr} (A) = 40 $$
+    $$ \det(A) = \prod_{i=1}^{3}A _{ii} = 40 $$
 
 !!! tldr ""
 
-    삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(A) = \text{tr} (A)$ 이다.
+    삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(A) = \displaystyle \prod_{i=1}^{n} A _{ii}$ 이다.
 
 - 증명
 
@@ -853,3 +853,6 @@
 
     $$ \det(B) = \det(Q ^{-1}AQ)  = \det(Q ^{-1}) \det(A) \det(Q) = \frac{1}{\det(Q) }\det(A) \det(Q) = \det(A) \tag*{■} $$
 
+# Exercises
+
+!!! tldr "문제 4.3-21"

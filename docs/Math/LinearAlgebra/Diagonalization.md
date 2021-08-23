@@ -160,7 +160,7 @@
 
     $$ [\mathbf{T} ]_{\beta } = \begin{pmatrix} 1&1&0\\ 0&2&2\\ 0&0&3\\ \end{pmatrix} $$
 
-    선형연산자 $\mathbf{T}$ 의 특성다항식의 정의와 [문제 4.2-23](../Determinants/#aad94de43) 에 의하여 다음이 성립한다.
+    선형연산자 $\mathbf{T}$ 의 특성다항식의 정의와 [문제 4.2-23](../Determinants/#f334dfff7) 에 의하여 다음이 성립한다.
 
     $$ \begin{equation}\begin{split} \det([\mathbf{T} ]_{\beta } - tI_3) &= \det \begin{pmatrix} 1-t&1&0\\ 0&2-t&2\\ 0&0&3-t\\ \end{pmatrix} \\ &= (1-t)(2-t)(3-t)\\ &= -(t-1)(2-t)(3-t)\\ \end{split}\end{equation} \tag*{} $$
 
@@ -613,44 +613,6 @@
 
 ## Properties of direct sum
 
-!!! tldr "문제 1.4-14"
-
-    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 부분집합 $S_1, S_2$ 에 대하여 $\text{span} (S_1 \cup S_2) = \text{span} (S_1) + \text{span} (S_2)$ 이다.
-
-- 증명
-
-    Let:
-
-    $$ S_1 = \{x_1, x_2, \dots, x_s\}, S_2 = \{x _{s+1}, x _{s+2}, \dots, x _{t}\} $$
-
-    By definition of span:
-
-    $$ \text{span} (S_1) = \bigg \{\sum_{i=1}^{s}b_ix_i : x_i \in S_1, b_i \in \mathbf{F} \bigg \} $$
-
-    $$ \text{span} (S_2) = \bigg \{\sum_{i=s+1}^{s + t}b_ix_i : x_i \in S_2, b_i \in \mathbf{F} \bigg \} $$
-
-    By definition of sum:
-
-    $$ \begin{equation}\begin{split}
-    \text{span} (S_1) + \text{span} (S_2) &= \bigg \{v + w : v \in \text{span} (S_1) , w \in \text{span} (S_2) \bigg \}\\
-    &= \bigg \{\sum_{i=1}^{t}b_ix_i : x_i \in S_1 \cup S_2, b_i \in \mathbf{F} \bigg \}\\
-    \end{split}\end{equation} \tag{1}
-    $$
-
-    $$ \bigg (\because v = \sum_{i=1}^{s}b_ix_i , w = \sum_{i=s+1}^{s + t}b_ix_i \implies v + w = \sum_{i=1}^{t}b_ix_i \bigg ) $$
-
-    By definition of union:
-
-    $$ S_1 \cup S_2 = \{x_1, x_2, \dots, x _{t}\} $$
-
-    By definition of span:
-
-    $$ \text{span} (S_1 \cup S_2) = \bigg \{\sum_{i=1}^{t}a_ix_i : x_i \in S_1 \cup S_2, a_i \in \mathbf{F} \bigg \} \tag{2} $$
-
-    By $(1), (2)$:
-
-    $$ \therefore \text{span} (S_1) + \text{span} (S_2) = \text{span} (S_1 \cup S_2) \tag*{■} $$
-
 !!! tldr "정리 5.9"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 와 $i \in \{1, \dots, k\}$ 에 대하여 다음은 동치이다.
@@ -735,7 +697,7 @@
 
     벡터공간 $\R ^{4}$ 의 선형연산자 $\mathbf{T} (a, b, c, d) = (a, b, 2c, 3d)$ 에 대하여 $\mathbf{T}$ 가 대각화가능이고 고윳값 $1, 2, 3$ 을 갖는다는 것을 알 수 있다. 이때 각 고윳값에 대응하는 고유공간들이 각각 $\mathbf{W} _1, \mathbf{W} _2, \mathbf{W} _3$ 와 같음을 알 수 있다. 이때 정리를 사용하면 $\R ^{4} = \mathbf{W} _1 \oplus \mathbf{W} _2 \oplus \mathbf{W} _3$ 임을 알 수 있다.
 
-# Invariant subspace
+# Invariant Subspace
 
 !!! tldr "$\mathbf{T}$-불변 부분공간($\mathbf{T}$-invariant subspace)"
 
@@ -827,13 +789,15 @@
 
     그러므로 $\beta \subset  \mathbf{Z}$ 이다. $\mathbf{Z}$ 가 $\mathbf{W}$ 의 기저를 포함하므로 $\mathbf{W}$ 의 모든 벡터는 $\mathbf{Z}$ 에 포함된다. 즉, $\mathbf{W} \subset \mathbf{Z}$ 이다. ■ 
 
+## restriction
+
 !!! tldr "제한(restriction)"
 
     벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}:\mathbf{V} \to \mathbf{V}$ 와 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 에 대하여 $\mathbf{T}$ 를 $\mathbf{W}$ 로 제한한 $\mathbf{T}_{\mathbf{W}}$ 는 $\mathbf{T}$ 의 정의역과 공역을 $\mathbf{W}$ 로 제한한 함수 $\mathbf{T}_{\mathbf{W}}:\mathbf{W}\to \mathbf{W}$ 이다.
 
 - 함수의 제한은 정의역만 축소시키는 것으로 정의되지만, 이 경우 정의역이 $\mathbf{T}$-불변 부분공간으로 축소되므로 공역도 어차피 $\mathbf{T}$-불변 부분공간으로 축소된다.
 
-- $\mathbf{T}_{\mathbf{W}}$ 는 선형변환이다.(문제 5.4-7)
+- $\mathbf{T}_{\mathbf{W}}$ 는 선형변환이다.(문제 5.4-7) 즉, $\mathbf{T}_{\mathbf{W}}$ 는 $\mathbf{W}$ 의 선형연산자이다.
 
 - $\mathbf{T}_{\mathbf{W}}$ 는 $\mathbf{T}$ 의 성질을 그대로 상속한다.
 
