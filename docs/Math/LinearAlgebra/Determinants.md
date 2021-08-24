@@ -773,7 +773,7 @@
 
 !!! tldr "문제 4.3-20"
 
-    정사각행렬 $A$ 와 $n \times n$ 행렬 $M= \begin{pmatrix} A&B\\ O&I\\ \end{pmatrix}, M'= \begin{pmatrix} I&B\\ O&A\\ \end{pmatrix}$ 에 대하여 $\det(M) = \det(A), \det(M') = \det(A)$ 이다.
+    정사각행렬 $A$ 와 $M= \begin{pmatrix} A&B\\ O&I\\ \end{pmatrix}, M'= \begin{pmatrix} I&B\\ O&A\\ \end{pmatrix}$ 에 대하여 $\det(M) = \det(M') = \det(A)$ 이다.
 
 - 증명
 
