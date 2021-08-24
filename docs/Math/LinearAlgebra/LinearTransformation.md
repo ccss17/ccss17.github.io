@@ -1822,13 +1822,19 @@
 
 - 증명
 
-    $\mathbf{F}^{n}$ 의 표준순서기저 $\beta$ 에 대하여 정리 2.23 에 의하여 $\beta$ 좌표를 $\gamma$ 좌표로 변환하는 좌표변환행렬 $Q$ 에 대하여 다음이 성립한다. 
+    정리 2.23 에 의하여 $\mathbf{F}^{n}$ 의 표준순서기저 $\beta$ 와 $\gamma$ 좌표를 $\beta$ 좌표로 변환하는 좌표변환행렬 $Q$ 에 대하여 다음이 성립한다. 
 
     $$ [\mathbf{L}_{A}]_{\gamma } = Q ^{-1}[\mathbf{L}_{A}]_{\beta }Q $$
 
     [정리 2.15-(1)](#c3298a7b3) 에 의하여 $[\mathbf{L}_{A}]_{\beta} = A$ 이므로 다음이 성립한다.
 
-    $$ \therefore [\mathbf{L}_{A}]_{\gamma } = Q ^{-1}AQ \tag*{■} $$
+    $$ [\mathbf{L}_{A}]_{\gamma } = Q ^{-1}AQ \tag*{▲} $$
+
+    $\gamma = \{v_1, v_2, \dots, v_n\}, v_j = \begin{pmatrix} a_{1j}\\ a_{2j}\\ \vdots\\ a_{nj}\\ \end{pmatrix}$ 로 두면 다음이 성립한다.
+
+    $$ \mathbf{I}_{\mathbf{V}}(v_j) = v_j = a_{1j} e_1 + a_{2j} e_2 + \dots + a_{nj}e_n = \sum_{i=1}^{n}a_{ij}e_i $$
+
+    따라서 $(Q)_{ij} = ([\mathbf{I}_{\mathbf{V}}]_{\gamma }^{\beta }) _{ij} = a_{ij}$ 이다. 즉, $Q$ 는 $\gamma$ 의 벡터들을 열로 구성한 행렬이다. ■ 
 
 - 예시 
 
