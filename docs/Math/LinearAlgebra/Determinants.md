@@ -771,6 +771,8 @@
 
     이로써 모든 증명이 끝났다. ■ 
 
+## Determinant of Submatrix
+
 !!! tldr "문제 4.3-20"
 
     정사각행렬 $A$ 와 $M= \begin{pmatrix} A&B\\ O&I\\ \end{pmatrix}, M'= \begin{pmatrix} I&B\\ O&A\\ \end{pmatrix}$ 에 대하여 $\det(M) = \det(M') = \det(A)$ 이다.
