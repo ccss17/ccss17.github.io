@@ -2445,3 +2445,135 @@
     이다. 그러면 $\delta (r) = f(\gamma (r)) < f(x)$ 이므로 b) 가 증명되었다. $\blacktriangle$ 
 
     $f \circ g = 1_G$ 도 마찬가지의 방법으로 증명가능하고, 결국 $f$ 는 전단사함수임이 증명된다. 이로써 모든 증명이 끝났다. ■ 
+
+# Complex Number
+
+!!! tldr "허수(imaginary number)"
+
+    허수는 $i = \sqrt[]{-1}$ 이다.
+
+!!! tldr "복소수(Complex Number)"
+
+    복소수는 실수 $a, b$ 와 허수 $i$ 에 대하여 $z = a+ bi$ 이다.
+
+- 제곱하여 음수인 $-1$ 이 나오는 실수는 존재하지 않는다. 그러나 대수학을 전개하다보면 실수체만으로는 일반적인 이론을 전개하기가 쉽지 않다. 가령 $x ^{2}+1$ 의 해를 표현할 때 실수체에서 계수를 가져온 다항식의 해는 존재하지 않는다. 따라서 존재하지 않는 수인 허수 $i$ 를 도입하여 실수체를 복소수체로 확장한다.
+
+- **복소수 $z = a+bi$ 의 실수부를 $\Re (z) = \mathcal{Re}(z) = \text{Re}(z) = a$ 로 표기하고, 허수부를 $\Im (z) = \mathcal{Im}(z) = \text{Im}(z) = b$ 로 표기한다.**
+
+!!! tldr "복소수체(Complex number field)"
+
+    복소수체 $\mathbb{C}$ 는 두 복소수 $z = a+bi, w = c+di$ 에 대하여 다음의 합과 곱이 정의된 실수체의 확장체이다.
+
+    1. $z+w = (a+bi) + (c+di) = (a+c) + (b+d)i$
+
+    2. $zw = (a+bi)(c+di) = (ac-bd) + (bc + ad)i$
+
+- 복소수체가 체라는 것은 쉽게 증명할 수 있다. 가령 실수 $0$ 은 덧셈의 항등원이고 실수 $1$ 은 곱셈의 항등원이며 $a+bi$ 의 덧셈의 역원은 $(-a)+(-b)i$ 이다. 또한 $0$ 이 아닌 복소수 $a+bi$ 의 곱셈의 역원은 $\dfrac{a}{a ^{2}+b ^{2}}+\bigg (\dfrac{b}{a ^{2}+b ^{2}}\bigg )i$ 이다. 체의 나머지 공리도 쉽게 증명가능하다.
+
+!!! tldr "켤레복소수(complex conjugate)"
+
+    복소수 $a+bi$ 의 켤레복소수는 $\overline{a+bi} = a-bi$ 이다.
+
+## Properties of Complex Number (1)
+
+!!! tldr "켤레복소수의 성질 (1)"
+
+    복소수 $z, w$ 에 대하여 다음이 성립한다. 
+
+    1. $\overline{\overline{z}} = z$
+
+    2. $\overline{z+w} = \overline{z}+\overline{w}$
+
+    3. $\overline{zw} = \overline{z}\cdot \overline{w}$
+
+    4. $w \neq 0 \implies \overline{\dfrac{z}{w}}= \dfrac{\overline{z}}{\overline{w}}$
+
+    5. $z \in \R \implies z = \overline{z}$
+
+- 증명
+
+    복소수의 정의와 복소수의 합과 곱의 정의, 그리고 켤레복소수의 정의에 의하여 다 매우 쉽게 증명 가능하다.
+
+## Absolute Value
+
+!!! tldr "복소수의 절댓값(absolute value) 또는 법(modulus)"
+
+    복소수 $z = a + bi$ 의 절댓값은 실수 $|z| = \sqrt[]{a ^{2}+b ^{2}}$ 이다.
+
+- 임의의 복소수 $z = a+bi$ 에 대하여 $z \overline{z}=(a+bi)(a-bi)=a ^{2}+b ^{2} \geq 0$ 이므로 $z \overline{z}$ 는 음이 아닌 실수이다. 
+
+!!! tldr "복소수의 절댓값의 성질"
+
+    복소수 $z$ 에 대하여 다음이 성립한다.
+
+    1. $z \overline{z} = |z| ^{2}$
+
+    2. $|z| = |\overline{z}|$
+
+- 증명
+
+    복소수의 정의와 절댓값의 정의에 의하여 쉽게 증명된다.
+
+## Properties of Complex Number (2)
+
+!!! tldr "켤레복소수의 성질 (2)"
+
+    두 복소수 $z, w$ 에 대하여 다음이 성립한다.
+
+    1. $|zw| = |z||w|$
+
+    2. $w \neq 0 \implies \bigg |\dfrac{z}{w} \bigg | = \dfrac{|z|}{|w|}$
+
+    3. $|z+w| \leq |z| + |w|$
+
+    4. $|z| - |w| \leq |z + w|$
+
+- 증명
+
+    1:
+
+    $$ |zw| ^{2} = zw \overline{zw} = zw \overline{z}\cdot \overline{w} = z \overline{z}w \overline{w} = |z|^{2}|w|^{2} \tag*{■}$$
+
+    2:
+
+    $$ |z| = \bigg |  \frac{z}{w}w\bigg | = \bigg |\frac{z}{w} \bigg ||w| = \bigg |\frac{1}{w}z \bigg ||w| = \bigg |\frac{1}{w} \bigg ||z||w| = \frac{1}{|w|}|z||w| $$
+
+    $$ \iff \bigg |\frac{z}{w} \bigg ||w| = \frac{1}{|w|}|z||w| \iff \bigg |\frac{z}{w} \bigg | = \frac{|z|}{|w|} \tag*{■}$$
+
+    3:
+
+    복소수 $x = a + bi$ 에 대하여 다음이 성립한다. 
+
+    $$ x + \overline{x} = (a+bi) +(a-bi) = 2a \leq 2 \sqrt[]{a ^{2} + b ^{2}} = 2|x| $$
+
+    즉, $x + \overline{x} \leq 2|x|$ 가 성립한다. 이 사실과 켤레복소수의 성질 (1) 과 이미 증명한 1) 에 의하여 적당한 복소수 $w, z$ 에 대하여 $x = w \overline{z}$ 를 가정하면 다음이 성립한다. 
+
+    $$ w \overline{z} + \overline{w}z \leq 2|w \overline{z}| = 2|w||\overline{z}| = 2|z||w| $$
+
+    즉, $w \overline{z}+ \overline{w}z \leq 2|z||w|$ 이다. 이 사실과 복소수의 절댓값의 성질과 켤레복소수의 성질 (1) 에 의하여 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split} |z+w| ^{2} &= (z+w)\overline{(z+w)}=(z+w)(\overline{z}+\overline{w}) = z \overline{z} + w \overline{z} + z \overline{w} + w \overline{w}\\ &\leq |z|^{2} + 2|z||w| + |w| ^{2} = (|z| + |w|) ^{2}\\ \end{split}\end{equation} \tag*{} $$
+
+    $$ \iff  |z+w|^{2} \leq (|z| + |w|) ^{2} \iff |z+w| \leq |z|+|w| \tag*{■} $$
+
+    4:
+
+    이미 증명한 1), 3) 에 의하여 다음이 성립한다. 
+
+    $$ |z| = |z+w-w| \leq |z+w| + |-w| = |z+w| + |w| $$
+
+    $$ \iff |z|-|w| \leq |z+w| \tag*{■} $$
+
+## Complex plane
+
+!!! tldr "복소평면(Complex plane)"
+
+    복소평면은 복소수체 $\mathbb{C}$ 를 $x$축을 실수부, $y$축을 허수부로하는 좌표평면 $\R ^{2}$ 에 대응시킨 좌표평면이다.
+
+- 정의에 의하여 $x$축을 실수축(real axis), $y$축을 허수축(imaginary axis)으로 부른다.
+
+- 복소수체 $\mathbb{C}$ 와 벡터공간 $\R ^{2}$ 는 동형사상 $f: \mathbb{C}\to \R ^{2}, x+yi \mapsto (x, y)$ 이 존재함으로 인하여 모든 구조와 성질이 그대로 보존되고, 복소수를 좌표평면의 좌표로 일대일 대응시킬 수 있다.
+
+- 복소평면에서 복소수 $z = x+iy$ 는 다음과 같이 벡터이다. 
+
+    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Complex_conjugate_picture.svg/330px-Complex_conjugate_picture.svg.png)
