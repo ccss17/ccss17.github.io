@@ -1230,7 +1230,7 @@
 
     선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 가 가역이면 다음이 성립한다. 
 
-    - $\mathbf{V}$ 가 유한차원인 것과 $\mathbf{W}$ 가 유한차원인 것은 동치이다. 
+    - $\mathbf{V}$ 가 유한차원인 ��과 $\mathbf{W}$ 가 유한차원인 것은 동치이다. 
 
     - $\mathbf{V} , \mathbf{W}$ 가 유한차원이면 $\dim (\mathbf{V} ) = \dim (\mathbf{W} )$ 이다.
 
@@ -1700,9 +1700,9 @@
 
     이다. ■ 
 
-!!! tldr ""
+!!! tldr "좌표변환 행렬(change of coordinate matrix, change of basis matrix)"
 
-    좌표변환 행렬(change of coordinate matrix, change of basis matrix) : 유한차원 벡터공간 $\mathbf{V}$ 의 두 순서기저 $\beta , \beta '$ 에 대하여 $\beta '$ 좌표를 $\beta$ 좌표로 변환하는 행렬 $Q  = [\mathbf{I} _{\mathbf{V} }] ^{\beta}_{\beta'}$ 이다.
+    유한차원 벡터공간 $\mathbf{V}$ 의 두 순서기저 $\beta , \beta '$ 에 대하여 $\beta '$ 좌표를 $\beta$ 좌표로 변환하는 행렬 $Q  = [\mathbf{I} _{\mathbf{V} }] ^{\beta}_{\beta'}$ 이다.
 
 - *정리 2.22 와 본 정의는 기저 $\beta '$ 를 $\beta$ 로 변환한다는 형식으로 논의되었는데, 이 정리와 본 정의가 도출된 과정을 설명하는 아래의 논의에서는 내가 실수로 $\beta$ 를 $\beta '$ 으로 변환한다는 형식을 사용해버렸다. 이제와서 고치기에 너무 늦었다.*
 
@@ -1818,6 +1818,18 @@
 
 - 증명
 
+    정리 2.15-(1) 에 의하여 $[\mathbf{L}_{A}]_{\gamma } = A$
+
+    $$ v_i = \begin{pmatrix} Q_{1i}\\ Q_{2i}\\ \vdots\\ Q_{ni}\\ \end{pmatrix}, \gamma = \{v_1, v_2, \dots, v_n\}, Q = (v_1, v_2, \dots, v_n) $$
+
+    $$ Q[\mathbf{L}_{A}]_{\gamma } = AQ \iff QA = AQ $$
+
+    $$ (QA) _{ij} = \sum_{k=1}^{n} Q _{ik}A _{kj} $$
+
+    $$ (AQ) _{ij} = \sum_{k=1}^{n} A _{ik}Q _{kj} $$
+
+    $$ \sum_{k=1}^{n} Q _{ik}A _{kj} = \sum_{k=1}^{n} A _{ik}Q _{kj} $$
+
 - 예시 
 
     다음과 같은 집합 $A$ 와 $\R ^{3}$ 의 순서기저를 생각하자. 
@@ -1837,6 +1849,8 @@
 !!! tldr "행렬의 닮음(matrix similarity)"
 
     $A, B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $B = Q ^{-1}AQ$ 인 가역행렬 $Q$ 가 존재하면 $A$ 와 $B$ 는 서로 닮음이다.
+
+- 행렬의 닮음은 두 행렬이 같은 선형변환의 서로 다른 기저에 대한 행렬표현임을 나타내는 관계이다.
 
 - 행렬의 닮음은 동치관계이다.
 
