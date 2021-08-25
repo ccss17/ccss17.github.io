@@ -24,6 +24,7 @@ nav:
       - Number Theory: Math/Set/numbers.md
       - Infinite Set: Math/Set/InfiniteSet.md
       - ZFC axiom system: Math/Set/ZFC.md
+    - Arithmetic Operations: Math/ArithmeticOperations.md
     - Hyperreal Numbers: Math/HyperrealNumbers.md
     - Surreal Numbers: Math/SurrealNumbers.md
     - Linear Algebra: 

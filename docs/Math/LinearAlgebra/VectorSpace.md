@@ -810,9 +810,9 @@
 
     이다. ■ 
 
-!!! tldr ""
+!!! tldr "벡터공간을 생성하는 집합(generation set)"
 
-    벡터공간을 생성하는 집합 : 벡터공간 $\mathbf{V}$ 의 부분집합 $S$ 에 대하여 $\text{span}(S)=\mathbf{V}$ 이면 $S$ 는 $\mathbf{V}$ 를 생성한다.
+    벡터공간 $\mathbf{V}$ 의 부분집합 $S$ 에 대하여 $\text{span}(S)=\mathbf{V}$ 이면 $S$ 는 $\mathbf{V}$ 를 생성한다.
 
 - 이것을 $S$ 의 벡터가 $\mathbf{V}$ 를 생성한다고 하기도 한다.
 
@@ -844,9 +844,9 @@
 
 ## Linearly Dependent
 
-!!! tldr ""
+!!! tldr "영벡터의 자명한 표현(trivial representation of $0$)"
 
-    영벡터의 자명한 표현(trivial representation of $0$) : 임의의 벡터 $u_1, u_2, \dots, u_n$ 에 대하여 $a_1 = a_2 = \dots = a_n = 0$ 이면 $a_1u_1 + a_2u_2 + \dots + a_nu_n = 0$ 인데 이것은 너무 자명하므로 영벡터의 자명한 표현이라 한다.
+    임의의 벡터 $u_1, u_2, \dots, u_n$ 에 대하여 $a_1 = a_2 = \dots = a_n = 0$ 이면 $a_1u_1 + a_2u_2 + \dots + a_nu_n = 0$ 인데 이것은 너무 자명하므로 영벡터의 자명한 표현이라 한다.
 
 !!! tldr "일차종속(linearly dependent) "
 

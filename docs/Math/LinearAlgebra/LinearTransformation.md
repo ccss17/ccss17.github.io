@@ -1874,6 +1874,42 @@
 
 - 이 정리는 서로 다른 벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 정의된 선형변환에서도 성립한다. 이 경우 $\mathbf{V}$ 의 기저를 바꾸듯이 $\mathbf{W}$ 의 기저도 바꿀 수 있다. 
 
+!!! tldr "문제 2.5-13"
+
+    유한차원 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 순서기저 $\beta = \{x_1, x_2, \dots, x_n\}$, 가역행렬 $Q \in \mathbf{M}_{n \times n}(\mathbf{F})$ 와 $j \in \{1, \dots, n\}$ 에 대하여 $x'_j$ 를 다음과 같이 정의하자. 
+
+    $$ x'_j = \sum_{i=1}^{n}Q _{ij}x_i $$
+
+    집합 $\beta ' = \{x'_1, x'_2, \dots, x'_n\}$ 은 $\mathbf{V}$ 의 기저이고 $Q$ 는 $\beta '$ 좌표를 $\beta$ 좌표로 변환하는 좌표변환 행렬이다.
+
+- 증명
+
+    $|\beta '| = n$ 이므로 $\beta '$ 가 일차독립임을 보이면 된다. $a_1, a_2, \dots, a_n \in \mathbf{F}$ 에 대하여 다음이 성립한다.
+    
+    $$ \begin{equation}\begin{split} a_1x'_1 + a_2x'_2 + \dots + a_nx'_n &= \sum_{j=1}^{n}a_jx'_j = \sum_{j=1}^{n}a_j \bigg ( \sum_{i=1}^{n}Q _{ij}x_i\bigg ) \\ &= \sum_{j=1}^{n}\sum_{i=1}^{n}a_jQ _{ij}x_i = \sum_{i=1}^{n}\sum_{j=1}^{n}a_j Q _{ij}x_i \\ &= \sum_{j=1}^{n} a_j Q _{1j}x_1 + \sum_{j=1}^{n} a_j Q _{2j}x_2 + \dots + \sum_{j=1}^{n} a_j Q _{nj}x_n = 0 \end{split}\end{equation} \tag*{} $$ 
+
+    $$ \implies \sum_{j=1}^{n}a_j Q _{1j} = \sum_{j=1}^{n}a_j Q _{2j} = \dots = \sum_{j=1}^{n}a_j Q _{nj} = 0 \tag{1} $$
+
+    $Q$ 의 $j$열을 $Q_j$ 라 하면 $Q_j = \begin{pmatrix} Q_{1j}\\ Q_{2j}\\ \vdots \\ Q_{nj}\\ \end{pmatrix}$ 이다. [$Q$ 가 가역이므로 $\text{rank} (Q) = n$](../MatrixOperation/#8252ffa8b) 이다. 또한 [랭크는 행렬의 열들의 극대 일차독립 집합의 기수](../MatrixOperation/#0ce821e3f)를 뜻하므로 $Q$ 의 모든 열이 일차독립이다. 즉, 다음이 성립한다.
+
+    $$ \forall c_1, c_2, \dots, c_n \in \mathbf{F} : c_1Q_1 + c_2Q_2 + \dots + c_nQ_n = 0 \implies c_1 = c_2 = \dots = c_2 = 0 $$ 
+
+    이는 다음이 성립함을 뜻한다.
+
+    $$ \sum_{i=1}^{n}c_i Q _{1i} = 0 \land \sum_{i=1}^{n}c_i Q _{2i} = 0 \land \dots \land \sum_{i=1}^{n}c_i Q _{ni} = 0 \implies c_1 = c_2 = \dots = c_2 = 0 $$
+
+    따라서 $(1)$ 에 의하여 다음이 성립한다.
+
+    $$ a_1 = a_2 = \dots = a_n = 0 $$
+
+    그러므로 $\beta '$ 는 기저이다. ▲ 
+
+    선형변환의 행렬표현에 의하여 다음이 성립한다는 것은 $[\mathbf{I}_{\mathbf{V}}] _{\beta '}^{\beta }$ 의 $i$행 $j$열 성분이 $Q _{ij}$ 임을 뜻한다. 
+
+    $$ \mathbf{I}_{\mathbf{V}}(x'_j) = x'_j = \sum_{i=1}^{n}Q _{ij}x_i $$
+
+    즉, $Q = [\mathbf{I}]_{\beta '} ^{\beta }$ 이다. 좌표변환 행렬의 정의에 의하여 $Q$ 는 $\beta '$ 좌표를 $\beta$ 좌표로 변환하는 좌표변환 행렬이다. ■ 
+
 # Dual Space
 
 !!! tldr "선형범함수(linear functional, linear form, one-form, covector)"

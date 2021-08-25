@@ -377,6 +377,70 @@
      
 - 한편 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되어도 $\mathbf{T}$ 가 대각화 불가능일 수도 있다.
 
+!!! tldr "문제 5.2-9"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $[\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 순서기저 $\beta$ 가 존재하면 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다.
+
+    상삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 의 특성다항식은 완전히 인수분해된다.
+
+- 증명
+
+    $\dim (\mathbf{V}) = n$ 을 가정하자.
+
+    $\mathbf{T}$ 의 특성다항식 $f(t) = \det([\mathbf{T}]_{\beta } - tI_n)$ 의 $A = [\mathbf{T}]_{\beta }-tI_n$ 은 상삼각행렬이다. [문제 4.2-23](../Determinants/#f334dfff7) 에 의하여 $\det(A) = \prod_{i=1}^{n}A _{ii}$ 이다. 따라서 $\mathbf{T}$ 의 특성방정식은 완전히 인수분해된다. ▲ 
+
+    상삼각행렬의 특성다항식이 완전히 인수분해된다는 것도 같은 논리로 증명 가능하다. ■ 
+
+!!! tldr "문제 5.2-12"
+
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 의 특성다항식이 완전히 인수분해되면 $A$ 는 상삼각행렬과 닮은 행렬이다.
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되면 $[\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 순서기저 $\beta$ 가 존재한다. 
+
+- 증명
+
+    1:
+
+    $n = 1$ 이면 $A$ 의 특성다항식은 $\det(A _{11} - tI_1) = A _{11} - tI_1$ 으로 완전히 인수분해된다. 또한 $A$ 는 상삼각행렬이다. ▲ 
+
+    $n - 1$ 에서 정리가 성립함을 가정하고 $n$ 에 대하여 증명하자. 가정에 의하여 $A$ 의 특성다항식은 완전히 인수분해된다. 이로써 최소 하나 이상의 고윳값 $\lambda$ 가 존재하고 이 고윳값에 대응하는 최소 하나 이상의 고유벡터 $v_1$ 가 존재한다.
+
+    $\{v_1\}$ 을 확장하여 $\mathbf{F}^{n}$ 의 기저 $\gamma = \{v_1, v_2, \dots, v_n\}$ 를 만들 수 있다. $j$열이 $v_j$ 인 $n \times n$ 행렬을 $P$ 로 두면 $[\mathbf{L}_{A}]_{\gamma } = P ^{-1}AP$ 이다. 
+
+    선형변환의 행렬표현에 의하여 다음이 성립한다.
+
+    $$ \mathbf{L}_{A}(v_1) = Av_1 = \lambda v_1 $$
+
+    $$ \mathbf{L}_{A}(v _{2}) = Av _{2} = \sum_{i=1}^{n} a _{i2}v_i $$
+
+    $$ \vdots $$
+
+    $$ \mathbf{L}_{A}(v _{n}) = Av _{n} = \sum_{i=1}^{n} a _{i,n}v_i $$
+
+    $$ \implies  [\mathbf{L}_{A}]_{\gamma } = \begin{pmatrix} \lambda & u\\ O & B \\ \end{pmatrix} \implies  [\mathbf{L}_{A}]_{\gamma } - tI = \begin{pmatrix} \lambda -t & u\\ O & B - tI \\ \end{pmatrix} $$
+
+    문제 4.3-21 에 의하여 다음이 성립한다.
+
+    $$ \det([\mathbf{L}_{A}]_{\gamma } - tI) = (\lambda - t) \det(B - tI) $$
+
+    $A$ 의 특성다항식이 완전히 인수분해되는데 $[\mathbf{L}_{A}]_{\gamma }$ 는 $A$ 와 닮은 행렬이므로 문제 5.1-13 에 의하여 $[\mathbf{L}_{A}]_{\gamma }$ 의 특성다항식은 완전히 인수분해된다. 따라서 $\det(B-tI)$ 도 완전히 인수분해된다. $B$ 는 $n -1 \times n-1$ 행렬이므로 귀납법의 가정에 의하여 가역행렬 $Q$ 에 대하여 $U = Q ^{-1}BQ$ 인 상삼각행렬이 존재한다.
+
+    $R = \begin{pmatrix} 1&O'\\ O&Q\\ \end{pmatrix}, R ^{-1} = \begin{pmatrix} 1&O'\\ O&Q ^{-1}\\ \end{pmatrix}$ 로 두고 $M = PR$ 로 두면 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} M ^{-1}AM &= R ^{-1}(P ^{-1}AP)R \\ &= \begin{pmatrix} 1&O'\\ O&Q ^{-1}\\ \end{pmatrix}\begin{pmatrix} \lambda & u\\ O&B\\ \end{pmatrix} \begin{pmatrix} 1&O'\\ O&Q\\ \end{pmatrix}\\ &= \begin{pmatrix} \lambda &uQ\\ O&U \\ \end{pmatrix}= U' \end{split}\end{equation} \tag*{} $$
+
+    즉, $A$ 가 상삼각행렬 $U'$ 와 닮음이니 모든 증명이 끝났다. ■ 
+
+    2:
+
+    $\mathbf{V}$ 의 순서기저 $\gamma = \{x_1, x_2, \dots, x_n\}$ 에 대하여 $A = [\mathbf{T}]_{\gamma }$ 로 두자. 정리의 가정에 의하여 $\mathbf{T}$ 의 특성다항식은 완전히 인수분해 되고 특성다항식의 정의에 의하여 $A$ 의 특성다항식도 완전히 인수분해된다. 따라서 이미 증명한 1) 에 의하여 $A$ 는 상삼각행렬 $U$ 와 닮은 행렬이다. 가역행렬 $Q$ 가 $U = Q ^{-1}AQ$ 를 만족한다고 하면 $j \in \{1,\dots,n\}$ 에 대하여 다음이 성립한다. 
+
+    $$ y_j = \sum_{i=1}^{n}Q _{ij}x_i $$
+
+    문제 2.5-13 에 의하여 $\beta = \{y_1, y_2, \dots, y_n\}$ 는 $\mathbf{V}$ 의 기저이고 $Q$ 는 $\beta$ 좌표를 $\gamma$ 좌표로 변환하는 좌표변환행렬이다. [정리 2.23](../LinearTransformation/#acf61b9cb) 에 의하여 다음이 성립한다. 
+
+    $$ \therefore [\mathbf{T}]_{\beta } = Q ^{-1}[\mathbf{T}]_{\gamma }Q = Q ^{-1}AQ = U \tag*{■} $$
+
 ## Algebraic Multiplicity
 
 !!! tldr "대수적 중복도(algebraic multiplicity)"

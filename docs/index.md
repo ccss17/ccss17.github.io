@@ -11,6 +11,7 @@
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/numbers>Number&nbsp;Theory</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/InfiniteSet>Infinite&nbsp;Set</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/Set/ZFC>ZFC&nbsp;axiom&nbsp;system</a></p><p>
+│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/ArithmeticOperations>Arithmetic&nbsp;Operations</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/HyperrealNumbers>Hyperreal&nbsp;Numbers</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/SurrealNumbers>Surreal&nbsp;Numbers</a></p><p>
 │&nbsp;&nbsp;&nbsp;╰──&nbsp;Linear&nbsp;Algebra</p><p>
