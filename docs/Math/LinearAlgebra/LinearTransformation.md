@@ -594,6 +594,24 @@
 
     이다. $[\mathbf{I} _{\mathbf{V} }]_{\beta }$ 는 $n \times n$ 항등행렬 $I_n$ 이다.
 
+!!! tldr "문제 2.2-12"
+
+    벡터공간 $\mathbf{V}$ 의 순서기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 와 선형연산자 $\mathbf{T}$ 와 $j \in \{1, \dots, n\}$ 에 대하여 $[\mathbf{T}]_{\beta }$ 가 상삼각행렬인 것과 $\mathbf{T}(v_j) \in \text{span} (\{v_1, v_2, \dots, v_j\})$ 인 것은 동치이다.
+
+- 증명
+
+    $[\mathbf{T}]_{\beta }$ 가 상삼각행렬이면 다음이 성립한다. 
+
+    $$ \mathbf{T}(v_j) = \sum_{i=1}^{j}a _{ij}v_i \in \text{span} (\{v_1, v_2, \dots, v_j\}) \tag*{▲} $$
+
+    $\mathbf{T}(v_j) \in \text{span} (\{v_1, v_2, \dots, v_j\})$ 를 가정하면 다음이 성립한다. 
+
+    $$ \mathbf{T}(v_j) = \sum_{i=1}^{j}a _{ij}v_i $$
+
+    따라서 $[\mathbf{T}]_{\beta }$ 는 상삼각행렬이다. ■ 
+
+# Kronecker delta
+
 !!! tldr "크로네커 델타(Kronecker delta)"
 
     $$\delta _{ij} = \begin{cases} 1 & i = j\\ 0 & i \neq j\\ \end{cases}$$

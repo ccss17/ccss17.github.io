@@ -695,7 +695,7 @@
 
 !!! tldr "정리 6.4 그람-슈미트 직교화(Gram-Schmidt process)"
 
-    내적공간 $\mathbf{V}$ 의 일차독립인 부분집합 $S = \{w_1, w_2, \dots, w_n\}$ 에 대하여 집합 $S' = \{v_1, v_2, \dots, v_n\}$ 을 다음과 같이 정의하면 $S'$ 는 $\text{span} (S') = \text{span} (S)$ 이고 영이 아닌 벡터로 이루어진 직교 집합이다.
+    내적공간 $\mathbf{V}$ 의 일차독립인 부분집합 $S = \{w_1, w_2, \dots, w_n\}$ 에 대하여 집합 $S' = \{v_1, v_2, \dots, v_n\}$ 을 다음과 같이 정의하면 $S'$ 는 영이 아닌 벡터로 이루어진 직교 집합이고 $\text{span} (S') = \text{span} (S)$ 를 만족한다.
 
     $$ v_k = \begin{cases} w_1 & k = 1\\ w_k - \displaystyle \sum_{j=1}^{k-1}\dfrac{\big <w_k,v_j \big >}{\|v_j\|^{2}}v_j & 2 \leq k \leq n\\ \end{cases} \tag{6.1} $$
 
@@ -923,7 +923,7 @@
 
     $$ \dfrac{a \cdot b}{a \cdot a}a = \dfrac{\big <a,b \big >}{\big <a,a \big >}a = \dfrac{\big <a,b \big >}{\|a\|^{2}}a $$
 
-    직선을 이루는 부분공간 $y$ 는 1차원이므로 $k = 1$ 이다. 또한 $y$ 의 기저는 $\{a\}$ 이고 이것을 [그람-슈미트 직교화](#2135d3f87)를 해도 $\{a\}$ 이다. 따라서 [정규화](#ed05bfed9)로 정규직교기저를 만들면 $\bigg \{\dfrac{a}{\|a\|} \bigg \}$ 가 된다. 따라서 이 정리를 사용하여 정사영을 구해보면 [내적의 정의](#3874b2a1f) 와 [내적의 성질](#99baac14a) 에 의하여 다음과 같다. 
+    직선을 이루는 부분공간 $y$ 는 1차원이므로 $k = 1$ 이다. 또한 $y$ 의 기저는 $\{a\}$ 이고 이것을 [그람-슈미트 직교화](#0ee45a6c5)를 해도 $\{a\}$ 이다. 따라서 [정규화](#ed05bfed9)로 정규직교기저를 만들면 $\bigg \{\dfrac{a}{\|a\|} \bigg \}$ 가 된다. 따라서 이 정리를 사용하여 정사영을 구해보면 [내적의 정의](#3874b2a1f) 와 [내적의 성질](#99baac14a) 에 의하여 다음과 같다. 
 
     $$ \bigg <b, \dfrac{a}{\|a\|}\bigg > \dfrac{a}{\|a\|} = \overline{\dfrac{1}{\|a\|}} \overline{\big <a,b \big >}\dfrac{a}{\|a\|} = \dfrac{\big <a,b \big >}{\|a\|^{2}}a $$
     
@@ -955,7 +955,7 @@
 
     $k = 1$ 을 가정하면 자명하게 성립한다. ▲ 
 
-    $k = n - 1$ 에서 정리가 성립함을 가정하면 [그람-슈미트 직교화](#2135d3f87) 에 의하여 다음이 성립한다.
+    $k = n - 1$ 에서 정리가 성립함을 가정하면 [그람-슈미트 직교화](#0ee45a6c5) 에 의하여 다음이 성립한다.
 
     $$ 
     \begin{equation}\begin{split}
@@ -1558,9 +1558,22 @@
 
     따라서 $v$ 는 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}$ 의 치역과 직교한다. 만약 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I} = \mathbf{V}$ 가 되면 $\mathbf{V}$ 의 모든 벡터와 직교하는 벡터는 $0$ 밖에 없으므로 $v = 0$ 인데 이는 모순이다. 따라서 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}$ 는 전사가 아니다. 그러므로 단사도 아니고, $\mathbf{N}(\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}) \neq \{0\}$ 이다. 이 영공간이 속하는 벡터는 고윳값 $\overline{\lambda }$ 에 대응하는 $\mathbf{T}{}^{*}$ 의 고유벡터이다. ■ 
 
+## Schur's theorem
+
 !!! tldr "정리 6.14 슈어의 정리(Schur's theorem)"
 
     유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되면 $[\mathbf{T}]_{\gamma }$ 가 상삼각행렬이 되게 하는 정규직교기저 $\gamma$ 가 존재한다.
 
 - 증명
 
+    [문제 5.2-12](../Diagonalization/#bd84c1d47) 에 의하여 $[\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 순서기저 $\beta = \{w_1, w_2, \dots, w_n\}$ 이 존재한다. 그람-슈미트 직교화를 통하여 $\beta$ 를 직교기저 $\beta ' = \{v_1, v_2, \dots, v_n\}$ 로 변환할 수 있다. $k \in \{1, \dots, n\}$ 에 대하여 $S_k, S'_k$ 를 다음과 같이 정의하자.
+
+    $$ S_k = \{w_1, w_2, \dots, w_k\}, S'_k = \{v_1, v_2, \dots, v_k\} $$
+
+    [정리 6.4](#0ee45a6c5) 에 의하여 $\text{span} (S_k) = \text{span} (S'_k)$ 이다. $[\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되므로 [문제 2.2-12](../LinearTransformation/#be8fe9c58) 에 의하여 $\mathbf{T}(w_k) \in \text{span} (S_k)$ 이다. [정리 6.4](#0ee45a6c5) 는 $v_k$ 가 $w_1, \dots, w_k$ 의 일차결합으로 표현됨을 말해준다. 따라서 스칼라 $a_1, \dots, a _{k-1}$ 에 대하여 $v_k = w_k + a _{k-1}w _{k-1} + \dots + a_1w_1$ 이다. 그러므로 다음이 성립한다. 
+
+    $$ \mathbf{T}(v_k) = \mathbf{T}(w_k + a _{k-1}w _{k-1} + \dots + a_1w_1) = \mathbf{T}(w_k) + a _{k-1}\mathbf{T}(w _{k-1}) + \dots + a_1 \mathbf{T}(w_1) \in \text{span} (S_k) = \text{span} (S'_k) $$
+
+    따라서 다시 문제 2.2-12 에 의하여 $[\mathbf{T}]_{\beta '}$ 은 상삼각행렬이다.
+
+    이제 $i \in \{1, \dots, n\}$ 에 대하여 $z_i = \dfrac{1}{\left\| v_i \right\| }v_i, \gamma = \{z_1, z_2, \dots, z_n\}$ 를 정의하면 $\gamma$ 는 $\mathbf{V}$ 의 정규직교기저이다. $z_i$ 는 $v_i$ 의 일차결합이므로 결국 $w_i$ 의 일차결합이다. 따라서 위와 같은 논리로 $\mathbf{T}(z_i) \in \text{span} (\{z_1, \dots, z_i\})$ 임을 보일 수 있고, 또 다시 문제 2.2-12 에 의하여 $[\mathbf{T}]_{\gamma }$ 는 상삼각행렬임을 알 수 있다. ■ 

@@ -744,7 +744,7 @@
 
 > p43 연립방정식의 성질 pass 
 
-## Linear Span
+## Span
 
 !!! tldr "생성공간(linear span, linear hull)"
 
