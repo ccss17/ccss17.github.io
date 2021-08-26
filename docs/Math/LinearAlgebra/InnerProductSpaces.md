@@ -169,7 +169,7 @@
 
 !!! tldr "Antilinear map, 켤레선형(conjugate-linear)"
 
-    $\mathbf{F} \in \{\R, \mathbb{C}\}$ 인 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 와 벡터 $x, y \in \mathbf{V}$ 와 스칼라 $a, b \in \mathbf{F}$ 대하여 다음을 만족하는 함수 $f: \mathbf{V}\to \mathbf{W}$ 를 antilinear 또는 켤레 선형이라고 한다.
+    체 $\mathbf{F} \in \{\R, \mathbb{C}\}$ 인 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 와 벡터 $x, y \in \mathbf{V}$ 와 스칼라 $a, b \in \mathbf{F}$ 대하여 다음을 만족하는 함수 $f: \mathbf{V}\to \mathbf{W}$ 를 antilinear 또는 켤레 선형이라고 한다.
 
     $$ f(ax + by) = \overline{a}f(x) + \overline{b}f(y) $$
 
@@ -402,7 +402,7 @@
 
     ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Vector_norms.svg/140px-Vector_norms.svg.png)
 
-!!! tldr "체비셰프 거리(Chebyshev distance), 최대 거리(maximum distance), $L _{\infty }$ 거리($L _{\infty }$ 거리)"
+!!! tldr "체비셰프 거리(Chebyshev distance), 최대 거리(maximum distance), $L _{\infty }$ 거리($L _{\infty }$ distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 체비셰프 거리는 다음과 같은 상한 거리 함수 $d _{\infty }: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
 
@@ -758,6 +758,8 @@
     점공간이 아닌 유한차원 내적공간 $\mathbf{V}$ 의 정규직교기저 $\beta= \{v_1, v_2, \dots, v_n\}$ 에 대하여 다음이 성립한다.
     
     $$x \in \mathbf{V} : x = \sum_{i=1}^{n}\big <x,v_i \big >v_i $$
+
+- **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.**
 
 - 이 정리는 내적공간은 정규직교기저를 가진다는 중요한 사실을 말해준다. 또한 임의의 벡터를 정규직교기저의 일차결합으로 나타내는 방법을 말해준다.
 
@@ -1594,7 +1596,7 @@
 
 !!! tldr "정규행렬(normal matrix)"
 
-    $\mathbf{F}\in \{\R, \mathbb{C}\}$ 에 대한 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 이 $AA {}^{*} = A {}^{*}A$ 를 만족하면 $A$ 를 정규행렬이라 한다. 
+    체 $\mathbf{F}\in \{\R, \mathbb{C}\}$ 에 대한 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 이 $AA {}^{*} = A {}^{*}A$ 를 만족하면 $A$ 를 정규행렬이라 한다. 
 
 !!! tldr ""
 
@@ -1628,7 +1630,7 @@
 
     3. $\mathbf{T}(x) = \lambda x \implies \mathbf{T}{}^{*}(x) = \overline{\lambda }x$
 
-    4. 고유벡터 $x_1, x_2$ 에 대응하는 $\mathbf{T}$ 의 고윳값 $\lambda _1, \lambda _2$ 에 대하여 $\lambda _1 \neq \lambda _2 \implies \big <x_1,x_2 \big > = 0$ 이다.
+    4. 고유벡터 $x_1, x_2$ 에 대응하는 $\mathbf{T}$ 의 고윳값 $\lambda _1, \lambda _2$ 에 대하여 $\lambda _1 \neq \lambda _2$ 이면 $x_1$ 과 $x_2$ 는 직교한다. 
 
 - 3) 은 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터 $x$ 가 고윳값 $\overline{\lambda }$ 에 대응하는 $\mathbf{T}{}^{*}$ 의 고유벡터임을 말해준다. 
 
@@ -1636,19 +1638,156 @@
 
     1:
 
-    $$ \left\| \mathbf{T}(x) \right\| ^{2} = \big <\mathbf{T}(x), \mathbf{T}(x) \big > = \big <\mathbf{T}{}^{*}\mathbf{T}(x), x \big > = \big <\mathbf{T}\mathbf{T}{}^{*}(x), x \big > = \big <\mathbf{T}{}^{*}(x), \mathbf{T}{}^{*}(x) \big > = \left\| \mathbf{T}{}^{*}(x) \right\| ^{2} $$
+    $$ \left\| \mathbf{T}(x) \right\| ^{2} = \big <\mathbf{T}(x), \mathbf{T}(x) \big > = \big <\mathbf{T}{}^{*}\mathbf{T}(x), x \big > = \big <\mathbf{T}\mathbf{T}{}^{*}(x), x \big > = \big <\mathbf{T}{}^{*}(x), \mathbf{T}{}^{*}(x) \big > = \left\| \mathbf{T}{}^{*}(x) \right\| ^{2} \tag*{▲} $$
 
     2:
 
-    정리 6.11 
+    [정리 6.11](#a9f161221) 에 의하여 다음이 성립한다.
 
-    $$ (\mathbf{T}-c \mathbf{I}) {}^{*} = \mathbf{T}{}^{*} -c \mathbf{I}{}^{*}
-    $$
+    $$ (\mathbf{T}-c \mathbf{I}) {}^{*} = \mathbf{T}{}^{*} -c \mathbf{I}{}^{*} $$
 
-    정리 2.10
+    [정리 2.10](../LinearTransformation/#273a736ad) 에 의하여 다음이 성립한다.
 
-    $$ \begin{equation}\begin{split}
-    (\mathbf{T} - c \mathbf{I})(\mathbf{T}-c \mathbf{I}){}^{*} &= (\mathbf{T} - c \mathbf{I})(\mathbf{T}{}^{*} -c \mathbf{I}{}^{*}) \\
-    &= (\mathbf{T} - c \mathbf{I})\mathbf{T}{}^{*} +
-    (\mathbf{T} - c \mathbf{I})(-c \mathbf{I}{}^{*}) \\
-    \end{split}\end{equation} \tag*{} $$
+    $$ \begin{equation}\begin{split} (\mathbf{T} - c \mathbf{I})(\mathbf{T}-c \mathbf{I}){}^{*} &= (\mathbf{T} - c \mathbf{I})(\mathbf{T}{}^{*} -c \mathbf{I}{}^{*}) \\ &= (\mathbf{T} - c \mathbf{I})\mathbf{T}{}^{*} -c (\mathbf{T} - c \mathbf{I})\mathbf{I}{}^{*} \\ &= \mathbf{T}\mathbf{T}{}^{*} -c\mathbf{I}\mathbf{T}{}^{*} -c \mathbf{T}  \mathbf{I}{}^{*} +c^{2} \mathbf{I} \mathbf{I}{}^{*} \\ &= \mathbf{T}{}^{*}\mathbf{T} -c\mathbf{T}{}^{*}\mathbf{I} -c \mathbf{I}{}^{*}\mathbf{T} +c^{2} \mathbf{I}{}^{*}\mathbf{I} \\ &= (\mathbf{T}{}^{*}-c \mathbf{I}{}^{*})\mathbf{T} -c (\mathbf{T}{}^{*}-c \mathbf{I}{}^{*}) \mathbf{I}\\ &= (\mathbf{T}{}^{*}-c \mathbf{I}{}^{*})(\mathbf{T} -c \mathbf{I})\\ &= (\mathbf{T}-c \mathbf{I}){}^{*}(\mathbf{T} -c \mathbf{I})\\ \end{split}\end{equation} \tag*{} $$
+
+    따라서 $\mathbf{T}-c \mathbf{I}$ 는 정규연산자이다. ▲ 
+
+    3:
+
+    어떤 $x \in \mathbf{V}$ 에 대하여 $\mathbf{T}(x) = \lambda x$ 라 하고 $\mathbf{U}=\mathbf{T}-\lambda \mathbf{I}$ 라 하면 $\mathbf{U}(x) = 0$ 이고 2) 에 의하여 $\mathbf{U}$ 는 정규연산자이다. 1) 에 의하여 다음이 성립한다. 
+
+    $$ 0 = \| \mathbf{U}(x) \| = \| \mathbf{U}{}^{*}(x) \| = \| (\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I})(x) \| = \| \mathbf{T}{}^{*}(x) - \overline{\lambda }x \| $$
+
+    즉, $\mathbf{T}{}^{*}(x) = \overline{\lambda }x$ 이다. ▲ 
+
+    4:
+
+    3) 에 의하여 다음이 성립한다. 
+
+    $$ \lambda _1 \big <x_1,x_2 \big > = \big <\lambda _1x_1, x_2 \big > = \big <\mathbf{T}(x_1), x_2 \big > = \big <x_1, \mathbf{T}{}^{*}(x_2) \big > = \big <x_1, \overline{\lambda _2}x_2 \big > = \lambda _2 \big <x_1,x_2 \big > $$
+
+    $\lambda _1 \neq \lambda_2$ 이므로 $\big <x_1,x_2 \big >= 0$ 이다. ■ 
+
+## Fundamental Theorem of Algebra
+
+!!! tldr "대수학의 기본 정리(fundamental theorem of algebra)"
+
+    $\mathbf{P}(\mathbb{C})$ 의 다항식 $p(z) = a_nz ^{n} + \dots + a_1z + a_0$ 의 차수가 $n \geq 1$ 이면 $p(z)$ 는 해가 있다.
+
+- 17세기부터 수학자들이 옳으리라고 추측했던 유명한 정리이다. 대수학의 기본 정리이지만 순수하게 대수적인 증명은 누구도 해내지 못했고, 훗날 위상수학과 해석학을 도입하여 증명을 할 수 있었다. 그래서 복소해석학에 의한 증명과 위상수학에 의한 증명이 존재한다.
+
+- **대수학의 기본정리는 복소내적공간의 선형연산자의 특성다항식이 반드시 완전히 인수분해됨을 말해준다.**
+
+- 증명
+
+## Diagonalizable Orthonormal Basis in Complex Inner Product Space
+
+!!! tldr "정리 6.16"
+
+    유한차원 복소내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 정규연산자인 것과 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다는 것은 동치이다.
+
+- 이 정리는 복소내적공간에서 정규성과 정규직교기저의 존재성이 동치임을 말해준다. 실내적공간에서는 정규직교기저의 존재성이 보장되면 정규성도 보장되지만, 정규성이 보장된다고 해서 정규직교기저의 존재성이 보장되지는 않는다.
+
+- 증명
+
+    $\mathbf{T}$ 를 복소내적공간의 정규연산자라 하자. 대수학의 기본정리에 의하여 $\mathbf{T}$ 의 특성다항식은 완전히 인수분해된다. 슈어의 정리에 의하여 $A = [\mathbf{T}]_{\beta }$ 를 상삼각행렬이 되게 하는 정규직교기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 가 존재한다. $A$ 가 상삼각행렬이므로 $v_1$ 은 $\mathbf{T}$ 의 고유벡터이다. 따라서 $v_1, v_2, \dots, v _{k-1}$ 이 $\mathbf{T}$ 의 고유벡터이면 $v_k$ 도 $\mathbf{T}$ 의 고유벡터라는 것을 보이면 $v_1, v_2, \dots, v_n$ 이 $\mathbf{T}$ 의 고유벡터가 된다. 
+
+    $j < k$ 에 대하여 고유벡터 $v_j$ 에 대응하는 $\mathbf{T}$ 의 고윳값을 $\lambda _j$ 라 하자. $A$ 가 상삼각행렬이므로 $\mathbf{T}(v_k)$ 는 다음과 같다. 
+
+    $$ \mathbf{T}(v_k) = A _{1k}v_1 + A _{2k}v_2 + \dots + A _{kk}v_k $$
+
+    [정리 6.5 따름정리](#a2290266a) 와 [정리 6.9](#01997fcc2) 정리 6.15-(3) 에 의하여 $\mathbf{T}{}^{*}(v_j) = \overline{\lambda}_jv_j$ 인 것에 의하여 다음이 성립한다. 
+
+    $$ A _{jk} = \big <\mathbf{T}(v_k), v_j \big > = \big <v_k, \mathbf{T}{}^{*}(v_j) \big > = \big <v_k, \overline{\lambda }_j v_j \big > = \lambda _j \big <v_k,v_j \big > = 0 $$
+
+    따라서 $\mathbf{T}(v_k) = A _{kk}v_k$ 이고 $\beta$ 는 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저임이 증명되었다. ▲ 
+
+    선형연산자 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저 $\beta$ 가 존재하면 $[\mathbf{T}]_{\beta }$ 는 대각행렬이고 $[\mathbf{T}]{}^{*}_{\beta } = [\mathbf{T}{}^{*}]_{\beta }$ 도 대각행렬이다. 대각행렬은 가환적이다. 즉, 교환법칙이 성립한다. 따라서 $\mathbf{T}$ 와 $\mathbf{T} {}^{*}$ 도 가환적이다. 그러므로 $\mathbf{T}\mathbf{T}{}^{*} = \mathbf{T}{}^{*}\mathbf{T}$ 이다. ■ 
+
+- 그러나 이 정리는 무한차원 복소내적공간에서는 성립하지 않는다. 
+
+    - 예시 
+
+## Hermitian, Hermitian matrix
+
+!!! tldr "자기수반연산자(self-adjoint), 에르미트 연산자(Hermitian)"
+
+    내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 $\mathbf{T}=\mathbf{T}{}^{*}$ 를 만족하면 자기수반연산자 또는 에르미트 연산자라 한다.
+
+- 정규성이 실내적공간의 고유벡터로 이루어진 정규직교기저가 존재하기 위한 충분조건이 아님을 이미 알아보았다. 그러나 정규성을 더욱 강한 조건인 $\mathbf{T}=\mathbf{T}{}^{*}$ 로 바꾸면 충분조건이 된다. 이를 만족하는 연산자를 에르미트 연산자라 한다. 정리 6.17 을 보자.
+
+!!! tldr "자기수반행렬(self-adjoint matrix), 에르미트 행렬(Hermitian matrix)"
+
+    체 $\mathbf{F}\in \{\R , \mathbb{C}\}$ 에 대한 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 가 $A = A {}^{*}$ 를 만족하면 자기수반행렬 또는 에르미트 행렬이라 한다.
+
+- 실행렬에서는 자기수반행렬인 조건을 [대칭행렬](../VectorSpace/#96a169304) 로 간소화할 수 있다.
+
+!!! tldr ""
+
+    내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 자기수반연산자인 것과 $[\mathbf{T}]_{\beta }$ 가 자기수반행렬인 것은 동치이다.
+    
+- 증명
+
+    $A = [\mathbf{T}]_{\beta }$ 가 자기수반행렬임을 가정하면 $A = A {}^{*}$ 이다. 그러면 정리 6.10 에 의하여 $[\mathbf{T}]_{\beta } = [\mathbf{T}{}^{*}]_{\beta }$ 이다. ▲ 
+
+    $\mathbf{T}$ 가 자기수반연산자임을 가정하면 비슷한 논리로 그 역을 쉽게 증명할 수 있다. ■ 
+
+## Diagonalizable Orthonormal Basis in Real Inner Product Space
+
+!!! tldr "보조정리"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 자기수반연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
+
+    1. $\mathbf{T}$ 의 모든 고윳값은 실수이다.
+
+    2. $\mathbf{V}$ 가 실내적공간이면 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다.
+
+- 실내적공간의 선형연산자가 실수인 고윳값만 갖다는 것은 당연하다. 복소내적공간의 자기수반연산자의 고윳값은 반드시 실수이다. 이것을 1) 이 말해준다. 
+
+- 대수학의 기본정리에 의하여 복소내적공간의 모든 선형연산자의 특성다항식이 완전히 인수분해됨은 당연하다. 실내적공간의 실자기수반연산자의 특성다항식도 완전히 인수분해된다. 이것을 2) 가 말해준다. 
+
+- 증명
+
+    1:
+
+    $x \neq 0$ 인 $x \in \mathbf{V}$ 에 대하여 $\mathbf{T}(x) = \lambda x$ 를 가정하자. 자기수반연산자는 정규연산자이므로 정리 6.15-(3) 에 의하여 $\lambda x = \mathbf{T}(x) = \mathbf{T}{}^{*}(x) = \overline{\lambda }x$ 가 성립한다. $\lambda = \overline{\lambda }$ 이므로 $\lambda$ 는 실수이다. ▲ 
+
+    2:
+
+    $\dim (\mathbf{V}) = n$ 라 하고 $\mathbf{V}$ 의 정규직교기저 $\beta$ 에 대하여 $A = [\mathbf{T}]_{\beta }$ 로 두자. $\mathbf{T}$ 가 자기수반연산자이므로 $A$ 는 자기수반행렬이다. $\mathbb{C}^{n}$ 의 선형연산자 $\mathbf{U}$ 를 다음과 같이 정의하자. 
+
+    $$ \forall x \in \mathbb{C}^{n} : \mathbf{U}(x) = Ax $$
+
+    $\mathbb{C}$-벡터공간 $\mathbb{C}^{n}$ 의 표준순서 정규직교기저 $\gamma= \{e_1, e_2, \dots, e_n\}$ 에 대하여 다음이 성립한다. 
+
+    $$ \mathbf{U}(e_j) = Ae_j = \sum_{i=1}^{n}A _{ij}e_j $$
+
+    따라서 $[\mathbf{U}]_{\gamma } = A$ 이고, $\mathbf{U}$ 는 자기수반행렬이다. 
+    
+    1) 에 의하여 $\mathbf{U}$ 의 고윳값 $\lambda$ 들은 실수이다. 대수학의 기본정리에 의하여 $\mathbf{U}$ 의 특성다항식은 $t - \lambda$ 의 곱으로 완전히 인수분해된다. 모든 $\lambda$ 가 실수이므로 특성다항식이 $\R$ 에서 완전히 인수분해된다. 
+
+    [특성다항식의 정의](../Diagonalization/#2f3482489)에 의하여 $\mathbf{U}$ 의 특성다항식은 $A$ 의 특성다항식이다. 다시 특성다항식의 정의에 의하여 $A$ 의 특성다항식은 $\mathbf{T}$ 의 특성다항식이다. 따라서 $\mathbf{T}$ 의 특성다항식은 완전히 인수분해된다. ■ 
+
+!!! tldr "정리 6.17"
+
+    유한차원 실내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $\mathbf{T}$ 가 자기수반연산자인 것과 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재하는 것은 동치이다.
+
+- **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.**
+
+- 정규성이 실내적공간의 고유벡터로 이루어진 정규직교기저가 존재하기 위한 충분조건이 아니었다. 그러나 복소내적공간에서는 정규성만으로도 고유벡터로 이루어진 정규직교기저의 존재성이 보장된다.
+
+    정규성을 더욱 강한 조건인 $\mathbf{T}=\mathbf{T}{}^{*}$ 로 바꾸면 실내적공간에서도 충분조건이 된다. 이것을 이 정리가 보장해준다. 
+
+- 증명
+
+    $\mathbf{T}$ 가 자기수반연산자임을 가정하자. 그러면 보조정리에 의하여 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다. 그러면 슈어의 정리에 의하여 $A = [\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 $\mathbf{V}$ 의 정규직교기저 $\beta$ 가 존재한다. 한편, 다음이 성립한다. 
+
+    $$ A {}^{*}= [\mathbf{T}]{}^{*}_{\beta } = [\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}]_{\beta } = A $$
+
+    $A$ 와 $A {}^{*}$ 가 상삼각행렬이므로 $A$ 는 대각행렬이다. $\mathbf{T}$ 를 $\beta$ 가 대각화했으므로 $\beta$ 는 $\mathbf{T}$ 의 고유벡터로 이루어져있다. ▲ 
+
+    이제 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재함을 가정하고 $\mathbf{T}$ 가 자기수반연산자임을 증명해보자. 
+
+    ...
+
+    ■ 
