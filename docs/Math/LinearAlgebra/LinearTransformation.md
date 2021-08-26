@@ -642,7 +642,9 @@
 
     2. $\mathbf{V} \to \mathbf{W}$ 에서 정의된 모든 선형변환의 집합은 $\mathbf{F}$-벡터공간이다.
 
-- 1) 의 증명
+- 증명
+
+    1:
 
     $x, y \in \mathbf{V} , c \in \mathbf{F}$ 에 대하여 다음이 성립한다. 
 
@@ -650,7 +652,7 @@
 
     그러므로 $a \mathbf{T} + \mathbf{U}$ 는 선형이다. ■ 
 
-- 2) 의 증명 
+    2:
 
     [위의 정의](#63a07e35d)는 임의의 함수에 대한 두 함수의 합, 스칼라 곱을 정의한 것이므로 선형변환의 합과 스칼라곱에도 적용된다. 그러므로 이 합과 스칼라 곱을 만족하는 선형변환 집합이 [벡터공간의 조건](../VectorSpace#57bd9d1ab)을 만족하는지 확인하면 된다. 
 
@@ -800,17 +802,63 @@
 
 !!! tldr "정리 2.10"
 
-    체 $\mathbf{F}$ 에 대한 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 선형변환 $\mathbf{T} , \mathbf{U} _1, \mathbf{U} _2 \in \mathcal{L}(\mathbf{V} )$ 에 대하여 다음이 성립한다.
+    체 $\mathbf{F}$ 에 대한 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T} , \mathbf{U} _1, \mathbf{U} _2$ 에 대하여 다음이 성립한다.
 
-    1. $\mathbf{T} (\mathbf{U} _1 + \mathbf{U} _2) = \mathbf{T} \mathbf{U} _1 + \mathbf{T} \mathbf{U} _2, \enspace  (\mathbf{U} _1 + \mathbf{U} _2)\mathbf{T} = \mathbf{U} _1 \mathbf{T} +\mathbf{U} _2 \mathbf{T}$
+    1. $\mathbf{T} (\mathbf{U} _1 + \mathbf{U} _2) = \mathbf{T} \mathbf{U} _1 + \mathbf{T} \mathbf{U} _2$
 
-    2. $\mathbf{T} (\mathbf{U} _1 \mathbf{U} _2) = (\mathbf{T} \mathbf{U} _1) \mathbf{U} _2$
+    2. $(\mathbf{U} _1 + \mathbf{U} _2)\mathbf{T} = \mathbf{U} _1 \mathbf{T} +\mathbf{U} _2 \mathbf{T}$
 
-    3. $\mathbf{T} \mathbf{I} = \mathbf{I} \mathbf{T} = \mathbf{T}$
+    3. $\mathbf{T} (\mathbf{U} _1 \mathbf{U} _2) = (\mathbf{T} \mathbf{U} _1) \mathbf{U} _2$
 
-    4. $\forall a \in \mathbf{F} , a(\mathbf{U} _1 \mathbf{U} _2) = (a \mathbf{U} _1)\mathbf{U} _2 = \mathbf{U} _1(a \mathbf{U} _2)$
+    4. $\mathbf{T} \mathbf{I} = \mathbf{I} \mathbf{T} = \mathbf{T}$
+
+    5. $\forall a \in \mathbf{F} : a(\mathbf{U} _1 \mathbf{U} _2) = (a \mathbf{U} _1)\mathbf{U} _2 = \mathbf{U} _1(a \mathbf{U} _2)$
 
 - 증명
+
+    1:
+
+    [함수의 덧셈의 정의](#63a07e35d)에 의하여 다음이 성립한다.
+
+    $$ \mathbf{T}(\mathbf{U}_{1} + \mathbf{U}_{2})(x) = \mathbf{T}(\mathbf{U}_{1}(x) + \mathbf{U}_{2}(x)) $$ 
+
+    이 결과는 [선형변환의 정의](#98f9dba02)에 의하여 다음과 같아진다.
+
+    $$ = \mathbf{T}(\mathbf{U}_{1}(x) + \mathbf{U}_{2}(x)) = \mathbf{T}(\mathbf{U}_{1}(x)) + \mathbf{T}(\mathbf{U}_{2}(x)) = (\mathbf{T}\mathbf{U}_{1})(x) + (\mathbf{T}\mathbf{U}_{2})(x) $$
+
+    이 결과는 다시 함수의 덧셈의 정의에 의하여 다음과 같아진다.
+
+    $$ = (\mathbf{T}\mathbf{U}_{1} + \mathbf{T}\mathbf{U}_{2})(x) $$
+
+    따라서 $\mathbf{T} (\mathbf{U} _1 + \mathbf{U} _2) = \mathbf{T} \mathbf{U} _1 + \mathbf{T} \mathbf{U} _2$ 이다. ▲ 
+
+    2: 
+
+    [함수의 덧셈의 정의](#63a07e35d)에 의하여 다음이 성립한다.
+
+    $$ (\mathbf{U}_{1} + \mathbf{U}_{2})(\mathbf{T}(x)) = \mathbf{U}_{1}(\mathbf{T}(x)) + \mathbf{U}_{2}(\mathbf{T}(x)) = (\mathbf{U}_{1}\mathbf{T})(x) + (\mathbf{U}_{2}\mathbf{T})(x) = (\mathbf{U}_{1}\mathbf{T} + \mathbf{U}_{2}\mathbf{T})(x) \tag*{▲} $$
+
+    3: 
+
+    [함수의 합성은 결합법칙을 만족한다.](../../Set/Set/#ede6df07e) 선형변환은 함수이다. ▲ 
+
+    4:
+
+    자명하다. ▲ 
+
+    5:
+
+    [함수의 스칼라곱의 정의](#63a07e35d)에 의하여 다음이 성립한다.
+
+    $$ ((a \mathbf{U}_{1})\mathbf{U}_{2})(x) = a (\mathbf{U}_{1}\mathbf{U}_{2})(x) $$
+
+    다시 [함수의 스칼라곱의 정의](#63a07e35d)에 의하여 다음이 성립한다. 
+
+    $$ (\mathbf{U}_{1}(a \mathbf{U}_{2}))(x) = \mathbf{U}_{1}(a \cdot \mathbf{U}_{2}(x)) $$
+
+    그러면 다음과 같이 선형변환의 정의에 의하여 스칼라 $a$ 를 바깥으로 뺄 수 있다.
+
+    $$ \mathbf{U}_{1}(a \cdot \mathbf{U}_{2}(x)) = a (\mathbf{U}_{1}(\mathbf{U}_{2}(x))) = a (\mathbf{U}_{1}\mathbf{U}_{2})(x) \tag*{■} $$
 
 - 이 정리는 선형변환의 정의역과 공역이 같은 경우를 말하고 있지만, 선형변환의 정의역과 공역이 같지 않으면 더 일반적인 결과가 성립한다. 
 

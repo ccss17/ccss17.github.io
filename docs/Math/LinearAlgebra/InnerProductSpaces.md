@@ -1577,3 +1577,78 @@
     따라서 다시 문제 2.2-12 에 의하여 $[\mathbf{T}]_{\beta '}$ 은 상삼각행렬이다.
 
     이제 $i \in \{1, \dots, n\}$ 에 대하여 $z_i = \dfrac{1}{\left\| v_i \right\| }v_i, \gamma = \{z_1, z_2, \dots, z_n\}$ 를 정의하면 $\gamma$ 는 $\mathbf{V}$ 의 정규직교기저이다. $z_i$ 는 $v_i$ 의 일차결합이므로 결국 $w_i$ 의 일차결합이다. 따라서 위와 같은 논리로 $\mathbf{T}(z_i) \in \text{span} (\{z_1, \dots, z_i\})$ 임을 보일 수 있고, 또 다시 문제 2.2-12 에 의하여 $[\mathbf{T}]_{\gamma }$ 는 상삼각행렬임을 알 수 있다. ■ 
+
+## Normal Operator, Normal Matrix
+
+!!! tldr "정규연산자(normal operator)"
+
+    내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 가 $\mathbf{T}\mathbf{T}{}^{*} = \mathbf{T}{}^{*}\mathbf{T}$ 를 만족하면 $\mathbf{T}$ 를 정규연산자라 한다.
+
+- 유한차원 내적공간 $\mathbf{V}$ 에서 선형연산자 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저 $\beta$ 가 존재하면 $[\mathbf{T}]_{\beta }$ 는 대각행렬이고 $[\mathbf{T}]{}^{*}_{\beta } = [\mathbf{T}{}^{*}]_{\beta }$ 도 대각행렬이다. 대각행렬은 가환적이다. 즉, 교환법칙이 성립한다. 따라서 $\mathbf{T}$ 와 $\mathbf{T} {}^{*}$ 도 가환적이고 다음 명제가 성립한다. 
+
+    "$\mathbf{V}$ 가 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저를 가지면 $\mathbf{T}\mathbf{T}{}^{*} = \mathbf{T}{}^{*}\mathbf{T}$ 이다."
+
+    선형연산자의 가환성 $\mathbf{T}\mathbf{T}{}^{*}=\mathbf{T}{}^{*}\mathbf{T}$ 을 정규성(normality) 라고 한다. 이러한 정규성을 갖는 연산자를 정규연산자라고 정의하는 것이다. 
+
+    그러나 위 명제의 역이 항상 성립하는 것은 아니다. 즉, 정규성을 가진다고 해서 고유벡터로 이루어진 정규직교기저가 반드시 존재한다는 보장은 없다. 
+
+!!! tldr "정규행렬(normal matrix)"
+
+    $\mathbf{F}\in \{\R, \mathbb{C}\}$ 에 대한 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 이 $AA {}^{*} = A {}^{*}A$ 를 만족하면 $A$ 를 정규행렬이라 한다. 
+
+!!! tldr ""
+
+    $\mathbf{T}$ 가 정규연산자인 것과 정규직교기저 $\beta$ 에 대하여 $[\mathbf{T}]_{\beta }$ 가 정규행렬인 것은 동치이다.
+
+- 증명
+
+    $A = [\mathbf{T}]_{\beta }$ 로 두자. $A$ 가 정규행렬이면 $AA {}^{*} = A {}^{*}A$ 이다. 그러면 [정리 6.10](#515861895) 에 의하여 $[\mathbf{T}]_{\beta }[\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}{}^{*}]_{\beta }[\mathbf{T}]_{\beta }$ 이다. [정리 2.11 따름정리](../LinearTransformation/#143fdacba) 에 의하여 $[\mathbf{T}\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}{}^{*}\mathbf{T}]_{\beta }$ 이다. ▲ 
+
+    $\mathbf{T}$ 가 정규연산자임을 가정하면 비슷한 논리로 $[\mathbf{T}] _{\beta }$ 가 정규행렬임이 바로 나온다. ■ 
+    
+- 예시 
+
+    $\mathbf{T}: \R ^{2} \to \R ^{2}$ 를 $0 < \theta < \pi$ 에 대하여 원점을 기준으로 반시계방향으로 $\theta$ 만큼 회전하는 선형변환이라 하자. 표준 순서기저에 대한 $\mathbf{T}$ 의 행렬표현은 다음과 같다. 
+
+    $$ A = \begin{pmatrix} \cos \theta& -\sin \theta\\ \sin \theta& \cos \theta\\ \end{pmatrix} $$
+
+    $AA {}^{*} = I = A {}^{*}A$ 가 성립하므로 $A$ 는 정규행렬이고 $\mathbf{T}$ 는 정규연산자이다.
+
+- 위 예시의 $\mathbf{T}$ 는 고유벡터를 가지지 않는다. 이는 실내적공간에서 정규성(normality)이 고유벡터로 이루어진 정규직교기저의 존재성을 보장해주지는 않는다는 것을 말해준다.
+
+    그러나 정리 6.16 에 의하여 $\mathbf{V}$ 가 복소내적공간이라면 정규성이 고유벡터로 이루어진 정규직교기저의 존재성을 보장해준다. 따라서 정규성과 고유벡터로 이루어진 정규직교의 존재성이 복소내적공간에서는 서로 동치이다. 
+
+!!! tldr "정리 6.15"
+
+    $\mathbf{F}$-내적공간 $\mathbf{V}$ 와 정규연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다.
+
+    1. $\forall x \in \mathbf{V} : \left\| \mathbf{T}(x) \right\| = \left\| \mathbf{T}{}^{*}(x) \right\|$
+
+    2. 임의의 $c \in \mathbf{F}$ 에 대하여 $\mathbf{T}-c \mathbf{I}$ 는 정규연산자이다. 
+
+    3. $\mathbf{T}(x) = \lambda x \implies \mathbf{T}{}^{*}(x) = \overline{\lambda }x$
+
+    4. 고유벡터 $x_1, x_2$ 에 대응하는 $\mathbf{T}$ 의 고윳값 $\lambda _1, \lambda _2$ 에 대하여 $\lambda _1 \neq \lambda _2 \implies \big <x_1,x_2 \big > = 0$ 이다.
+
+- 3) 은 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터 $x$ 가 고윳값 $\overline{\lambda }$ 에 대응하는 $\mathbf{T}{}^{*}$ 의 고유벡터임을 말해준다. 
+
+- 증명 
+
+    1:
+
+    $$ \left\| \mathbf{T}(x) \right\| ^{2} = \big <\mathbf{T}(x), \mathbf{T}(x) \big > = \big <\mathbf{T}{}^{*}\mathbf{T}(x), x \big > = \big <\mathbf{T}\mathbf{T}{}^{*}(x), x \big > = \big <\mathbf{T}{}^{*}(x), \mathbf{T}{}^{*}(x) \big > = \left\| \mathbf{T}{}^{*}(x) \right\| ^{2} $$
+
+    2:
+
+    정리 6.11 
+
+    $$ (\mathbf{T}-c \mathbf{I}) {}^{*} = \mathbf{T}{}^{*} -c \mathbf{I}{}^{*}
+    $$
+
+    정리 2.10
+
+    $$ \begin{equation}\begin{split}
+    (\mathbf{T} - c \mathbf{I})(\mathbf{T}-c \mathbf{I}){}^{*} &= (\mathbf{T} - c \mathbf{I})(\mathbf{T}{}^{*} -c \mathbf{I}{}^{*}) \\
+    &= (\mathbf{T} - c \mathbf{I})\mathbf{T}{}^{*} +
+    (\mathbf{T} - c \mathbf{I})(-c \mathbf{I}{}^{*}) \\
+    \end{split}\end{equation} \tag*{} $$
