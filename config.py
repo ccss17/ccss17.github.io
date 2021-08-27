@@ -53,6 +53,7 @@ def create_category():
     root = next(iter(nav))
     tree.create_node(root, root)
     create_tree_from_dict(tree, nav, root)
+    print(tree)
 
     index_path = 'docs/index.md'
     if os.path.isfile(index_path):
@@ -65,19 +66,22 @@ def create_category():
 
     index = index.replace(' ', '&nbsp;') \
                  .replace('<a&nbsp;', '<a ') \
-                 .replace('\n', '</p><p>\n') \
-                 .replace('ccss17', '<i class="fas fa-fire"></i>')
+                 .replace('\n', '</p><p>\n')
     index = '<div class="index"><p>' + index + '</p></div>'
 
     with open(index_path, 'w', encoding='utf-8') as f:
         f.write(index)
 
 
+def test():
+    create_category()
+
 if __name__ == '__main__':
-    import sys
-    if sys.argv[1] == '-d':
-        create_def_link()
-    elif sys.argv[1] == '-c':
-        create_category()
-    else:
-        print('Invalid argument')
+    # import sys
+    # if sys.argv[1] == '-d':
+    #     create_def_link()
+    # elif sys.argv[1] == '-c':
+    #     create_category()
+    # else:
+    #     print('Invalid argument')
+    test()

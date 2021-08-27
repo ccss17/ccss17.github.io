@@ -22,13 +22,11 @@
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/Diagonalization>Diagonalization</a></p><p>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/LinearAlgebra/InnerProductSpaces>Inner&nbsp;Product&nbsp;Spaces</a></p><p>
 ├──&nbsp;Paper</p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/GEB>Gödel,&nbsp;Escher,&nbsp;Bach</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/1404.6388>Performance&nbsp;of&nbsp;Python&nbsp;runtimes&nbsp;on&nbsp;a&nbsp;non-numeric&nbsp;scientific&nbsp;code</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/1102.1523>The&nbsp;NumPy&nbsp;array:&nbsp;a&nbsp;structure&nbsp;for&nbsp;efficient&nbsp;numerical&nbsp;computation</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/facenet>Facenet&nbsp;(2015)</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/quadruplet>Quadruplet&nbsp;(2017)</a></p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/blueborne>BlueBorne</a></p><p>
-│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=paper/meltdown>Meltdown</a></p><p>
+│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=paper/blueborne>BlueBorne</a></p><p>
 ├──&nbsp;Computer</p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/nand2tetris>Nand&nbsp;to&nbsp;Tetris</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/information>Information&nbsp;Theory</a></p><p>

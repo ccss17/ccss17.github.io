@@ -11,7 +11,6 @@ nav:
   #   - 2020: trend/2020.md
   #   - 2021: trend/2021.md
   - Math: 
-    - Math/index.md
     - Foundation of Math: 
       - History of Math: Math/MathHistory.md
       - Formal System: Math/Logic/FormalSystem.md
