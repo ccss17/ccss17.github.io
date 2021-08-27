@@ -580,7 +580,7 @@
 
 - 예시
 
-    유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 의 순서기저를 $\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_n\}$ 이라 하면 
+    유한차원 벡터공간 $\mathbf{V}$ 의 순서기저를 $\beta = \{v_1, \dots, v_n\}$ 이라 하면 
 
     $$ \mathbf{I} _{\mathbf{V} }(v_j) = v_j = 0v_1 + \dots + 0v _{j-1} + 1v_j+ 0 v _{j+1}  \dots + 0 v_n $$
 

@@ -46,18 +46,12 @@ div.arithmatex {
 div.md-main__inner.md-grid div.md-sidebar.md-sidebar--secondary {
   top: 1.4rem !important;
 }
-/* .md-nav__title {
-  display: none;
-} */
 
-/* div.md-sidebar {
-  top: 1.4rem !important;
-} */
-
-.md-nav {
+nav.md-nav.md-nav--secondary, nav.md-nav.md-nav--secondary ul.md-nav__list li.md-nav__item nav.md-nav ul.md-nav__list {
   font-size: .6rem !important;
   line-height: 1.2 !important;
 }
+
 
 div.index {
   font-family: Consolas, "Courier New", monospace;

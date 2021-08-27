@@ -1118,8 +1118,6 @@
 
 # Construction Real Number by Dedekind cuts
 
-## Dedekind cuts
-
 !!! def "데데킨트 절단(Dedekind Cut)"
 
     유리수의 집합 $\alpha \subset \mathbb{Q}$ 가 다음을 만족하면 데데킨트 절단이라고 한다.
@@ -1534,8 +1532,6 @@
 
 - 지금까지의 논의의 결과가 이 정리이다. 특히 $\R$ 이 정리 2.3.2 를 만족한다는 사실도 중요한데 이것과 $\R$ 이 순서체라는 것에 의하여 $\R$ 이 완비순서체가 되기 때문이다. 
 
-## Properties of Real Number
-
 !!! def ""
 
     $\forall r, s \in \mathbb{Q}$ 에 대하여 다음이 성립한다.
@@ -1551,8 +1547,6 @@
 - 이 정리는 $r \mapsto r ^{*} : \mathbb{Q} \to \R$ 이 연산과 순서를 보존하는 단사함수임을 말해준다. 
 
 # Construction Real Number from Cauchy sequences 
-
-## Cauchy sequences 
 
 !!! def "수열(sequence)"
 
@@ -2177,8 +2171,6 @@
         그러면 이 구간들의 왼쪽 끝점의 집합은 유계이고 조건 1) 을 가정했으므로 상한 $a$ 를 가진다. 또한 구간들의 오른쪽 끝점들의 집합은 아래로 유계이므로 조건 1) 과 동치인 2) 에의하여 하한 $b$ 를 가진다. 
 
         그러면 3) 에서 1) 을 도출했을 때처럼 $a=b$ 가 되고 이 원소 근방에는 무한히 많은 $A$ 의 원소가 있으므로 $A$ 의 원소를 계속 택하여 수열을 만들어 $a$ 로 수렴하게 할 수 있다. 이 수열이 우리가 원하던 원래 $\alpha$ 의 수렴하는 부분수열이 된다. ■ 
-
-## Real Number Field is Completeness Ordered Field
 
 !!! def ""
 

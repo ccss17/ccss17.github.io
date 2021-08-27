@@ -1542,7 +1542,7 @@
 
     $AA {}^{*}x = b$ 의 해는 $x \in \Bigg \{ \begin{pmatrix} 1 - 2t\\ t - 2\\ t\\ \end{pmatrix} : t \in \R \Bigg \}$ 이다.  $t = 0$ 일 때 $u = \begin{pmatrix} 1\\ -2\\ 0\\ \end{pmatrix}$ 이다. 정리에 의하여 $s = A {}^{*}u = \begin{pmatrix} -1\\ 4\\ -3\\ \end{pmatrix}$ 는 최소해가 된다. 다른 $u$ 를 택해도 상관 없다.
 
-# Normal and Self-Adjoint Operators
+# Normal Operators, Normal Matrix
 
 !!! def "보조정리"
 
@@ -1680,7 +1680,11 @@
 
 !!! def "정리 6.16"
 
-    유한차원 복소내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 정규연산자인 것과 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다는 것은 동치이다.
+    유한차원 복소내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다.
+    
+    - $\mathbf{T}$ 가 정규연산자이다.
+    
+    - $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다.
 
 - 이 정리는 복소내적공간에서 정규성과 정규직교기저의 존재성이 동치임을 말해준다. 실내적공간에서는 정규직교기저의 존재성이 보장되면 정규성도 보장되지만, 정규성이 보장된다고 해서 정규직교기저의 존재성이 보장되지는 않는다.
 
@@ -1704,7 +1708,7 @@
 
     - 예시 
 
-## Hermitian, Hermitian matrix
+# Hermitian, Hermitian matrix
 
 !!! def "자기수반연산자(self-adjoint), 에르미트 연산자(Hermitian)"
 
@@ -1766,7 +1770,11 @@
 
 !!! def "정리 6.17"
 
-    유한차원 실내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $\mathbf{T}$ 가 자기수반연산자인 것과 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재하는 것은 동치이다.
+    유한차원 실내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
+    
+    - $\mathbf{T}$ 가 자기수반연산자이다.
+    
+    - $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다.
 
 - **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.**
 
@@ -1792,9 +1800,13 @@
 
     - $\mathbf{F}=\R$ 일 때 $\forall x \in \mathbf{V} : \| \mathbf{T}(x) \| = \|x\|$ 인 $\mathbf{T}$ 를 직교연산자라 한다.
 
-- 지금까지 공간의 구조를 보존하는 여러 함수들을 다루어왔다. 선형연산자는 벡터 합과 스칼라 곱을 보존하고, 동형사상은 벡터공간의 모든 구조를 그대로 보존했다. 이제 내적공간에서 길이를 보존하는 선형연산자를 생각하는 것은 자연스럽다. 길이를 보존한다는 것은 모든 $x \in \mathbf{V}$ 에 대하여 $\|\mathbf{T}(x)\| = \|x\|$ 가 성립한다는 것이다.
+- 지금까지 공간의 구조를 보존하는 여러 함수들을 다루어왔다. 선형연산자는 벡터 합과 스칼라 곱을 보존하고, 동형사상은 벡터공간의 모든 구조를 그대로 보존했다. 이제 내적공간에서 길이(노름)를 보존하는 선형연산자를 생각하는 것은 자연스럽다. 길이를 보존한다는 것은 모든 $x \in \mathbf{V}$ 에 대하여 $\|\mathbf{T}(x)\| = \|x\|$ 가 성립한다는 것이다.
 
 - 무한차원 벡터공간에서 길이를 보존하는 연산자는 단사이고 등장 사상(isometry) 이라 한다. 등장 사상은 두 거리 공간의 거리를 보존하는 함수이다. 만약 전사이기까지 한다면 유니타리 연산자 또는 직교연산자라고 한다. 
+
+- 예시 
+
+    유클리드 공간에서 $0 < \theta<\pi$ 에 대하여 각도를 $\theta$ 만큼 회전하는 변환 $\mathbf{T}: \R ^{2}\to \R ^{2}$ 는 유클리드 노름을 보존한다. 즉, $\forall x \in \R ^{2} : \|\mathbf{T}(x)\| = \|x\|$ 이다. 
 
 !!! def "보조정리"
 
@@ -1822,22 +1834,118 @@
 
     6. $\forall x \in \mathbf{V} : \|\mathbf{T}(x)\| = \|x\|$
 
-- 즉, 이 6 가지 명제들은 유니타리 연산자 또는 직교연산자의 정의와 동치이다. 1) 과 2) 는 유니타리 연산자와 직교연산자가 정규연산자임을 말해준다. 
+- 이 6 가지 명제들은 유니타리 연산자 또는 직교연산자의 정의와 동치이다. 1) 과 2) 는 유니타리 연산자와 직교연산자가 정규연산자임을 말해준다. 
 
 - 증명
 
+    $\dim (\mathbf{V}) = n$ 를 가정하자.
+
     $1 \implies 2$:
 
-    $\dim (\mathbf{V}) = n$
-
-    $\mathbf{V}$ 의 표준순서기저 $\beta$ 에 대하여 [정리 2.11 따름정리](../LinearTransformation/#143fdacba), [정리 6.10](#515861895) 에 의하여 다음이 성립한다.
+    $\mathbf{V}$ 의 순서기저 $\beta$ 에 대하여 [정리 2.11 따름정리](../LinearTransformation/#143fdacba), [정리 6.10](#515861895) 에 의하여 다음이 성립한다.
 
     $$ [\mathbf{T}{}^{*}\mathbf{T}]_{\beta }=[\mathbf{I}]_{\beta } = I_n \iff [\mathbf{T}{}^{*}]_{\beta }[\mathbf{T}]_{\beta } = I_n \iff [\mathbf{T}]{}^{*}_{\beta }[\mathbf{T}]_{\beta } = I_n $$
 
     [문제 2.4-10](../LinearTransformation/#068bf6124) 에 의하여 $([\mathbf{T}]_{\beta })^{-1} = [\mathbf{T}]{}^{*}_{\beta }$ 이다. [역행렬의 정의](../LinearTransformation/#14b61be86) 에 의하여 $[\mathbf{T}]_{\beta }[\mathbf{T}{}^{*}]_{\beta } = I_n$ 이므로 다음이 성립한다. 
 
-    $$ [\mathbf{T}\mathbf{T}{}^{*}]_{\beta }=[\mathbf{I}]_{\beta } \iff \mathbf{T}\mathbf{T}{}^{*}=\mathbf{I} $$
+    $$ [\mathbf{T}\mathbf{T}{}^{*}]_{\beta }=[\mathbf{I}]_{\beta } \iff \mathbf{T}\mathbf{T}{}^{*}=\mathbf{I} \tag*{▲} $$
     
+    $2 \implies 3$:
+
+    이제 2) 를 가정하면 1) 을 가정할 수 있다. 2) 를 가정하고 3) 을 도출하자. 1) 과 [정리 6.9](#01997fcc2) 에 의하여 $x, y \in \mathbf{V}$ 에 대하여 다음이 성립한다.
+
+    $$ \big <x,y \big > = \big <\mathbf{I}(x), y \big > = \big <\mathbf{T}{}^{*}\mathbf{T}(x), y \big > = \big <\mathbf{T}(x), \mathbf{T}(y) \big > \tag*{▲} $$
+
+    $3 \implies 4$:
+
+    $\beta =\{v_1, v_2, \dots, v_n\}$ 에 대하여 $\mathbf{T}(\beta ) = \{\mathbf{T}(v_1), \mathbf{T}(v_2), \dots, \mathbf{T}(v_n)\}$ 이므로 다음이 성립한다.
+
+    $$ \big <\mathbf{T}(v_i), \mathbf{T}(v_j) \big > = \big <v_i, v_j \big > = \delta _{ij} $$
+
+    따라서 $\mathbf{T}(\beta )$ 는 정규직교기저이다. ▲ 
+
+    $4 \implies 5$:
+
+    4) 를 가정하면 [내적공간에는 정규직교기저가 존재](#482029816)하므로 $\mathbf{T}(\beta )$ 가 정규직교기저인 정규직교기저가 당연히 존재한다. ▲ 
+
+    $5 \implies 6$:
+
+    $x \in \mathbf{V}, \beta = \{v_1, v_2, \dots, v_n\}$ 로 두면 적절한 $a_i$ 에 대하여 $\displaystyle x = \sum_{i=1}^{n}a_iv_i$ 가 성립한다. $\beta$ 가 정규직교이므로 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} \|x\|^{2} &= \bigg <\sum_{i=1}^{n}a_iv_i, \sum_{j=1}^{n}a_jv_j \bigg > = \sum_{i=1}^{n}\sum_{j=1}^{n}a_i \overline{a_j}\big <v_i,v_j \big >\\ &= \sum_{i=1}^{n}\sum_{j=1}^{n}a_i \overline{a_j}\delta _{ij} = \sum_{i=1}^{n}|a_i|^{2} \\ \end{split}\end{equation} \tag*{} $$
+
+    위와 같은 계산은 $\displaystyle \mathbf{T}(x) = \sum_{i=1}^{n}a_i \mathbf{T}(v_i)$ 에도 똑같이 적용된다. $\mathbf{T}(\beta )$ 가 정규직교이기 때문이다. 즉, $\displaystyle \|\mathbf{T}(x)\|^{2} = \sum_{i=1}^{n}|a_i|^{2}$ 이다. 따라서 $\|\mathbf{T}(x)\| = \|x\|$ 이다. ▲ 
+
+    $6 \implies 1$:
+
+    임의의 $x \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
+
+    $$ \big <x,x \big > = \|x\| ^{2} = \|\mathbf{T}(x)\| ^{2} = \big <\mathbf{T}(x), \mathbf{T}(x) \big > = \big <x, \mathbf{T}{}^{*}\mathbf{T}(x) \big > $$
+
+    [정리 6.1](#99baac14a) 은 내적이 두번째 성분에 대한 덧셈의 선형성이 성립함을 말해준다. 따라서 $\big <x,x \big > = \big <x, \mathbf{T}{}^{*}\mathbf{T}(x) \big > \iff \big <x, (\mathbf{I}-\mathbf{T}{}^{*}\mathbf{T})(x) \big > = 0$ 이다. $\mathbf{U}=\mathbf{I}-\mathbf{T}{}^{*}\mathbf{T}$ 로 두면 [정리 6.11](#a9f161221) 에 의하여 $\mathbf{U}$ 가 자기수반연산자임을 쉽게 알 수 있다. 모든 $x$ 에 대하여 $\big <x, \mathbf{U}(x) \big > = 0$ 이므로 보조정리에 의하여 $\mathbf{U}= \mathbf{I}-\mathbf{T}{}^{*}\mathbf{T}=\mathbf{T}_0$ 이다. 그러므로 $\mathbf{T}{}^{*}\mathbf{T}=\mathbf{I}$ 이다. ■ 
+
+## Inner Product Preservation Operator
+
+!!! def "내적 보존 연산자(inner product preservation operator)"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 다음을 만족하면 내적을 보존하는 연산자라 한다. 
+
+    $$ \forall x, y \in \mathbf{V} : \big <\mathbf{T}(x), \mathbf{T}(y) \big > = \big <x,y \big > $$
+
+- 정리 6.18-(3) 을 만족하는 연산자를 내적을 보존하는 연산자라 한다.
+
+## Norm Preservation Operator
+
+!!! def "노름 보존 연산자(norm preservation operator)"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 다음을 만족하면 노름을 보존하는 연산자라 한다. 
+    
+    $$ \forall x \in \mathbf{V} : \|\mathbf{T}(x)\| = \|x\| $$
+
+- 유니타리 연산자와 직교연산자는 노름 보존 연산자이다.
+
+- 정리 6.18-(6) 을 만족하는 연산자를 노름을 보존하는 연산자라 한다.
+
+!!! def "정리 6.18 따름정리 1"
+
+    유한차원 실내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
+
+    - 절댓값이 $1$ 인 고윳값에 대응하는 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저가 $\mathbf{V}$ 에 존재한다.
+
+    - $\mathbf{T}$ 가 자기수반 직교연산자이다.
+
+- 증명
+
+    모든 $i$ 에 대하여 $\mathbf{V}$ 에 $\mathbf{T}(v_i) = \lambda _iv_i , |\lambda _i| = 1$ 인 정규직교기저 $\{v_1, v_2, \dots, v_n\}$ 가 존재함을 가정하면 정리 6.17 에 의하여 $\mathbf{T}$ 는 자기수반이다. 따라서 $(\mathbf{T}\mathbf{T}{}^{*})(v_i) = \mathbf{T}(\lambda _iv_i) = \lambda _i \lambda _iv_i = \lambda _i ^{2}v_i = v_i$ 이고, 이에 따라 $\mathbf{T}\mathbf{T}{}^{*}=\mathbf{I}$ 이다. 정리 6.18-(2) 와 정리 6.18-(6) 은 동치이므로 $\mathbf{T}$ 는 직교연산자이다. ▲ 
+
+    $\mathbf{T}$ 가 자기수반이면 정리 6.17 에 의하여 $\mathbf{V}$ 에 모든 $i$ 에 대하여 $\mathbf{T}(v_i) = \lambda _i v_i$ 인 정규직교기저 $\{v_1, v_2, \dots, v_n\}$ 가 존재한다. 이제 고윳값 $\lambda _i$ 의 절댓값이 $1$ 임을 증명하면 된다. $\mathbf{T}$ 가 직교연산자이므로 [정리 6.2](#618278d66) 에 의하여 다음이 성립한다. 
+
+    $$ |\lambda _i| \|v_i\| = \|\lambda _iv_i\| = \|\mathbf{T}(v_i)\| = \|v_i\| \implies |\lambda _i| = 1 \tag*{■} $$
+
+!!! def "정리 6.18 따름정리 2"
+
+    유한차원 복소내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다.
+    
+    - 절댓값이 $1$ 인 고윳값에 대응하는 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저가 $\mathbf{V}$ 에 존재한다.
+
+    - $\mathbf{T}$ 가 유니타리 연산자이다.
+
+- 증명
+
+    정리 6.18 따름정리 1 의 증명과 같은 논리로 증명 가능하다. 
+    
+    다만, 따름정리 1 에서는 자기수반이라는 조건이 필요한데 실내적공간의 고유벡터로 이루어진 정규직교기저 존재성을 보장해주는 정리 6.17 을 사용하기 위해서이다. 복소내적공간에서 고유벡터로 이루어진 정규직교기저 존재성을 보장해주는 정리 6.16 은 정규성이라는 조건만 있으면 되는데, 정규성은 정리 6.18 에 의하여 노름 보존 연산자의 정의와 동치이다. 즉, 유니타리 연산자의 정의와 정규성이 동치이기 때문에 정규성이라는 조건이 본 정리에서 불필요하다.
+
+!!! def ""
+
+    노름 보존 연산자의 고유벡터의 고윳값의 절댓값은 $1$ 이다.
+
+- 증명
+
+    유한차원 내적공간의 노름 보존 연산자 $\mathbf{T}$ 의 고윳값 $\lambda$ 에 대응하는 고유벡터 $v$ 에 대하여 직교연산자 또는 유니타리 연산자의 정의와 [노름의 성질](#618278d66)에 의하여 다음이 성립한다.
+
+    $$ \|v\| = \|\mathbf{T}(v)\| = \|\lambda v\| = |\lambda | \|v\| \implies |\lambda | = 1 \tag*{■} $$
+
 ---
 
 ref:
