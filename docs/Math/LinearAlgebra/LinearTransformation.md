@@ -744,7 +744,7 @@
 
     이 성립한다. ■ 
 
-!!! tldr ""
+!!! tldr "문제 2.3-12"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V} ,\mathbf{W} , \mathbf{Z}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 과 그 합성변환 $\mathbf{UT} : \mathbf{V} \to \mathbf{Z}$ 대하여 다음이 성립한다.
 
@@ -753,7 +753,7 @@
     2. $\mathbf{UT}$ 가 전사이면 $\mathbf{U}$ 도 전사이다.
 
     3. $\mathbf{T} , \mathbf{U}$ 가 전단사이면 $\mathbf{UT}$ 도 전단사이다.
-    
+
 - 증명
 
     1:
@@ -772,8 +772,6 @@
 
     그러나 $y_1 = \mathbf{T} (x_1), y_2 = \mathbf{T} (x_2)$ 를 가정할 수 없는 경우 즉, $\mathbf{T}$ 의 함수값이 $y_1, y_2$ 에서 정의되지 않은 경우 $\mathbf{U}$ 가 단사라는 것을 보장 할 수 없다. 실제로 $\mathbf{U}$ 가 $\mathbf{W} \to \mathbf{Z}$ 위에서 단사가 아니어도 $\mathbf{T}$ 의 함수값이 정의된 곳에서, 즉 $\mathbf{R} (\mathbf{T}) \to \mathbf{Z}$ 위에서는 $\mathbf{U}$ 가 단사라면 $\mathbf{UT}$ 가 단사라는 조건에 모순되지 않는다. 그러므로 $\mathbf{U}$ 가 반드시 단사라고 할 수 없다. ▲ 
 
-    - (*내가 만든 증명이라 검증 필요*)
-
     2:
     
     [$\mathbf{U} \circ \mathbf{T}$ 가 전사이면 $(\mathbf{U} \circ \mathbf{T} ) \circ \mathbf{S} = \mathbf{I} _{\mathbf{W}}$ 을 만족하는 변환 $\mathbf{S}: \mathbf{Z}\to \mathbf{V}$ 가 존재](../../Set/Set/#d9b0737d6)한다. [함수의 합성은 결합법칙을 만족](../../Set/Set/#ede6df07e)하므로
@@ -787,8 +785,6 @@
     $$ x \in \mathbf{W} \land x \not\in \mathbf{R} (\mathbf{T}) \implies a \in \mathbf{R} (\mathbf{T}) \land \mathbf{U} (\mathbf{T} (a)) = \mathbf{U} (x) $$
     
     이 만족된다면 $\mathbf{T}$ 가 전사일 필요는 없다. ▲ 
-
-    - (*내가 만든 증명이라 검증 필요*)
 
     3:
 
@@ -1296,7 +1292,7 @@
 
     선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 가 가역이면 다음이 성립한다. 
 
-    - $\mathbf{V}$ 가 유한차원인 ��과 $\mathbf{W}$ 가 유한차원인 것은 동치이다. 
+    - $\mathbf{V}$ 가 유한차원인 것과 $\mathbf{W}$ 가 유한차원인 것은 동치이다. 
 
     - $\mathbf{V} , \mathbf{W}$ 가 유한차원이면 $\dim (\mathbf{V} ) = \dim (\mathbf{W} )$ 이다.
 
@@ -1414,38 +1410,6 @@
 
 - 증명
 
-!!! tldr ""
-
-    $n \times n$ 행렬 $A, B$ 에 대하여 $AB$ 가 가역이면 $A, B$ 모두 가역이다.
-
-- 증명
-
-    [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $AB$ 가 가역이면 $\mathbf{L}_{AB}$ 도 가역이다. [정리 2.15 - 1](#c3298a7b3) 에 의하여 $\mathbf{L}_{AB}$ 는 $\mathbf{F} ^{n} \to \mathbf{F} ^{n}$ 위에서 정의된 선형변환이다. [정리 2.15 - 6](#c3298a7b3) 에 의하여 $\mathbf{L} _{AB} = \mathbf{L}_{A}\mathbf{L}_{B}$ 이다. 
-
-    [$\mathbf{L}_{A}\mathbf{L}_{B}$ 가 전단사이므로 $\mathbf{L}_{B}$ 가 단사이고, $\mathbf{L}_{A}$ 는 전사이다](#78d8c85ec). 그런데 [$\dim (\mathbf{F} ^{n}) = \dim (\mathbf{F} ^{n})$ 이므로 $\mathbf{L}_{A}$ 와 $\mathbf{L}_{B}$ 는 가역이다](#08a4e4fdc). 그러면 다시 [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $A$ 와 $B$ 도 가역이다. ■ 
-
-!!! tldr ""
-
-    $AB = I_n$ 인 $n \times n$ 행렬 $A, B$ 에 대하여 다음이 성립한다. 
-
-    1. $A, B$ 는 가역이다. 
-
-    2. $A = B ^{-1}$
-
-- 증명
-
-    1:
-
-    [정리 2.15 - 1](#c3298a7b3) 에 의하여 $AB = I_n$ 은 $\mathbf{L}_{AB} = \mathbf{L}_{I_n}$ 이다. 이는 [정리 2.15 - 6, 7](#c3298a7b3) 에 의하여 $\mathbf{L}_{A}\mathbf{L}_{B} = \mathbf{I} _{\mathbf{F} ^{n}}$ 가 된다. 그러므로 [$\mathbf{L}_{A}$ 는 전사](../../Set/Set/#5869db153)이고, [$\mathbf{L}_{B}$ 는 단사](../../Set/Set/#d9b0737d6)이다. 그런데 [$\dim (\mathbf{F} ^{n}) = \dim (\mathbf{F} ^{n})$ 이므로 $\mathbf{L}_{A}$ 와 $\mathbf{L}_{B}$ 는 가역이다](#08a4e4fdc). 그러면 [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $A$ 와 $B$ 도 가역이다. ■ 
-
-    2:
-
-    $A$ 가 가역이므로 $A ^{-1}A = I_n$ 인 $A ^{-1}$ 가 존재한다. 따라서 
-
-    $$ AB = I_n \iff A ^{-1}AB = A ^{-1} \iff B = A ^{-1} $$
-
-    이다.
-
 !!! tldr "문제 2.4-4"
 
     $A, B$ 가 $n \times n$ 가역행렬이면 다음이 성립한다.
@@ -1477,6 +1441,38 @@
     $$(A ^{-1} A ) ^{t} = A ^{t} (A ^{-1}) ^{t} = I$$
 
     따라서 $(A ^{t}) ^{-1} = (A ^{-1}) ^{t}$ 이다.
+
+!!! tldr "문제 2.4-9"
+
+    $n \times n$ 행렬 $A, B$ 에 대하여 $AB$ 가 가역이면 $A, B$ 모두 가역이다.
+
+- 증명
+
+    [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $AB$ 가 가역이면 $\mathbf{L}_{AB}$ 도 가역이다. [정리 2.15 - 1](#c3298a7b3) 에 의하여 $\mathbf{L}_{AB}$ 는 $\mathbf{F} ^{n} \to \mathbf{F} ^{n}$ 위에서 정의된 선형변환이다. [정리 2.15 - 6](#c3298a7b3) 에 의하여 $\mathbf{L} _{AB} = \mathbf{L}_{A}\mathbf{L}_{B}$ 이다. 
+
+    [$\mathbf{L}_{A}\mathbf{L}_{B}$ 가 전단사이므로 $\mathbf{L}_{B}$ 가 단사이고, $\mathbf{L}_{A}$ 는 전사이다](#de2683c1b). 그런데 [$\dim (\mathbf{F} ^{n}) = \dim (\mathbf{F} ^{n})$ 이므로 $\mathbf{L}_{A}$ 와 $\mathbf{L}_{B}$ 는 가역이다](#08a4e4fdc). 그러면 다시 [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $A$ 와 $B$ 도 가역이다. ■ 
+
+!!! tldr "문제 2.4-10"
+
+    $AB = I_n$ 인 $n \times n$ 행렬 $A, B$ 에 대하여 다음이 성립한다. 
+
+    1. $A, B$ 는 가역이다. 
+
+    2. $A = B ^{-1}$
+
+- 증명
+
+    1:
+
+    [정리 2.15 - 1](#c3298a7b3) 에 의하여 $AB = I_n$ 은 $\mathbf{L}_{AB} = \mathbf{L}_{I_n}$ 이다. 이는 [정리 2.15 - 6, 7](#c3298a7b3) 에 의하여 $\mathbf{L}_{A}\mathbf{L}_{B} = \mathbf{I} _{\mathbf{F} ^{n}}$ 가 된다. 그러므로 [$\mathbf{L}_{A}$ 는 전사](../../Set/Set/#5869db153)이고, [$\mathbf{L}_{B}$ 는 단사](../../Set/Set/#d9b0737d6)이다. 그런데 [$\dim (\mathbf{F} ^{n}) = \dim (\mathbf{F} ^{n})$ 이므로 $\mathbf{L}_{A}$ 와 $\mathbf{L}_{B}$ 는 가역이다](#08a4e4fdc). 그러면 [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $A$ 와 $B$ 도 가역이다. ■ 
+
+    2:
+
+    $A$ 가 가역이므로 $A ^{-1}A = I_n$ 인 $A ^{-1}$ 가 존재한다. 따라서 
+
+    $$ AB = I_n \iff A ^{-1}AB = A ^{-1} \iff B = A ^{-1} $$
+
+    이다.
 
 # Isomorphism
 

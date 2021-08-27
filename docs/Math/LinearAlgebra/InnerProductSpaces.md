@@ -1720,7 +1720,7 @@
 
     체 $\mathbf{F}\in \{\R , \mathbb{C}\}$ 에 대한 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 가 $A = A {}^{*}$ 를 만족하면 자기수반행렬 또는 에르미트 행렬이라 한다.
 
-- 실행렬에서는 자기수반행렬인 조건을 [대칭행렬](../VectorSpace/#96a169304) 로 간소화할 수 있다.
+- 실행렬에서는 자기수반행렬인 조건을 [대칭행렬](../VectorSpace/#96a169304) 로 간소화할 수 있다. 따라서 실대칭행렬은 자기수반행렬이고, 이에 따라 정규행렬이다. 그러나 복소 대칭행렬이 자기수반행렬이고, 정규행렬이라는 보장은 없다. 
 
 !!! tldr ""
 
@@ -1778,16 +1778,64 @@
 
     정규성을 더욱 강한 조건인 $\mathbf{T}=\mathbf{T}{}^{*}$ 로 바꾸면 실내적공간에서도 충분조건이 된다. 이것을 이 정리가 보장해준다. 
 
+- 정리 6.20 은 이 정리를 행렬의 관점에서 말해준다.
+
 - 증명
 
-    $\mathbf{T}$ 가 자기수반연산자임을 가정하자. 그러면 보조정리에 의하여 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다. 그러면 슈어의 정리에 의하여 $A = [\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 $\mathbf{V}$ 의 정규직교기저 $\beta$ 가 존재한다. 한편, 다음이 성립한다. 
+    $\mathbf{T}$ 가 자기수반연산자임을 가정하자. 그러면 보조정리에 의하여 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다. 그러면 슈어의 정리에 의하여 $A = [\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 $\mathbf{V}$ 의 정규직교기저 $\beta$ 가 존재한다. $\mathbf{T}$ 가 자기수반연산자이므로 $A$ 도 자기수반행렬이다. 즉, $A = A {}^{*}$ 이다. $A$ 와 $A {}^{*}$ 가 상삼각행렬이므로 $A$ 는 대각행렬이다. $\beta$ 가 $\mathbf{T}$ 를 대각화했으므로 $\beta$ 는 $\mathbf{T}$ 의 고유벡터로 이루어져있다. ▲ 
 
-    $$ A {}^{*}= [\mathbf{T}]{}^{*}_{\beta } = [\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}]_{\beta } = A $$
+    $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저 $\beta$ 가 존재함을 가정하면 $A = [\mathbf{T}]_{\beta }$ 는 대각행렬이다. 따라서 $A = A ^{t}$ 이다. 또한 실내적공간이므로 $A = A {}^{*}$ 이다. 따라서 $\mathbf{T}$ 는 자기수반연산자이다. ■ 
 
-    $A$ 와 $A {}^{*}$ 가 상삼각행렬이므로 $A$ 는 대각행렬이다. $\mathbf{T}$ 를 $\beta$ 가 대각화했으므로 $\beta$ 는 $\mathbf{T}$ 의 고유벡터로 이루어져있다. ▲ 
+# Unitary and Orthogonal Operators
 
-    이제 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재함을 가정하고 $\mathbf{T}$ 가 자기수반연산자임을 증명해보자. 
+!!! tldr "유니타리 연산자(unitary operator), 직교연산자(orthogonal operator)"
 
-    ...
+    유한차원 $\mathbf{F}$-내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음과 같이 정의한다.
 
-    ■ 
+    - $\mathbf{F}=\mathbb{C}$ 일 때 $\forall x \in \mathbf{V} : \| \mathbf{T}(x) \| = \|x\|$ 인 $\mathbf{T}$ 를 유니타리 연산자라 한다.
+
+    - $\mathbf{F}=\R$ 일 때 $\forall x \in \mathbf{V} : \| \mathbf{T}(x) \| = \|x\|$ 인 $\mathbf{T}$ 를 직교연산자라 한다.
+
+- 지금까지 공간의 구조를 보존하는 여러 함수들을 다루어왔다. 선형연산자는 벡터 합과 스칼라 곱을 보존하고, 동형사상은 벡터공간의 모든 구조를 그대로 보존했다. 이제 내적공간에서 길이를 보존하는 선형연산자를 생각하는 것은 자연스럽다. 길이를 보존한다는 것은 모든 $x \in \mathbf{V}$ 에 대하여 $\|\mathbf{T}(x)\| = \|x\|$ 가 성립한다는 것이다.
+
+- 무한차원 벡터공간에서 길이를 보존하는 연산자는 단사이고 등장 사상(isometry) 이라 한다. 등장 사상은 두 거리 공간의 거리를 보존하는 함수이다. 만약 전사이기까지 한다면 유니타리 연산자 또는 직교연산자라고 한다. 
+
+!!! tldr "보조정리"
+
+    내적공간 $\mathbf{V}$ 의 자기수반연산자 $\mathbf{U}$ 에 대하여 다음이 성립한다. 
+
+    $$ \forall x \in \mathbf{V} : \big <x, \mathbf{U}(x) \big > = 0 \implies \mathbf{U}=\mathbf{T}_0 $$
+
+- 증명
+
+    $\mathbf{U}(x) \in \mathbf{V}$ 이므로 $\big <\mathbf{U}(x), \mathbf{U}(x) \big > = 0$ 이다. 내적의 정의에 의하여 $\mathbf{U}(x) = 0$ 이다. ■ 
+
+!!! tldr "정리 6.18"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
+
+    1. $\mathbf{T}{}^{*}\mathbf{T} = \mathbf{I}$
+
+    2. $\mathbf{T}\mathbf{T}{}^{*}=\mathbf{I}$
+
+    3. $\forall x, y \in \mathbf{V} : \big <\mathbf{T}(x), \mathbf{T}(y) \big > = \big <x,y \big >$
+
+    4. 정규직교기저 $\beta$ 에 대하여 $\mathbf{T}(\beta )$ 도 정규직교기저이다.
+
+    5. $\mathbf{T}(\beta )$ 가 정규직교기저가 되게 하는 정규직교기저 $\beta$ 가 존재한다. 
+
+    6. $\forall x \in \mathbf{V} : \|\mathbf{T}(x)\| = \|x\|$
+
+- 즉, 이 6 가지 명제들은 유니타리 연산자 또는 직교연산자의 정의와 동치이다. 1) 과 2) 는 유니타리 연산자와 직교연산자가 정규연산자임을 말해준다. 
+
+- 증명
+
+    1) 에서 2) 를 도출하는 증명:
+
+    $\mathbf{V}$ 의 순서기저 $\beta$ 에 대하여 다음이 성립한다.
+
+    $$ [\mathbf{T}{}^{*}\mathbf{T}]_{\beta }=[\mathbf{I}]_{\beta } $$
+
+    $$ [\mathbf{T}{}^{*}]_{\beta }[\mathbf{T}]_{\beta }=[\mathbf{I}]_{\beta } $$
+
+    $$ [\mathbf{T}]{}^{*}_{\beta }[\mathbf{T}]_{\beta }=[\mathbf{I}]_{\beta } $$
