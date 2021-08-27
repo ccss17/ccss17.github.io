@@ -1,10 +1,6 @@
-!!! info "ref"
-
-    Stephen H. Friedberg, Linear Algebra, 4th Edition
-
 # Inner product
 
-!!! tldr "내적(inner product)"
+!!! def "내적(inner product)"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에서 정의된 내적은 $x, y, z \in \mathbf{V}, c \in \mathbf{F}$ 에 대한 다음의 조건을 만족하는 함수 $\big < \cdot , \cdot \big >: \mathbf{V} \times \mathbf{V}\to \mathbf{F}$ 이다.
 
@@ -40,7 +36,7 @@
 
 ## Standard Inner Product
 
-!!! tldr "표준 내적(standard inner product)"
+!!! def "표준 내적(standard inner product)"
 
     표준 내적은 $\mathbf{F}^{n}$ 의 두 벡터 $x = (a_1, a_2, \dots, a_n), y = (b_1, b_2, \dots, b_n)$ 에 대하여 다음과 같이 정의된 내적 $\big <\cdot , \cdot \big > : \mathbf{F}^{n} \times \mathbf{F}^{n} \to \mathbf{F}$ 이다.
 
@@ -59,7 +55,7 @@
 
 ## Adjoint of Matrix
 
-!!! tldr "켤레 전치행렬(conjugate transpose), 수반행렬(adjoint)"
+!!! def "켤레 전치행렬(conjugate transpose), 수반행렬(adjoint)"
 
     행렬 $A \in \mathbf{M}_{m \times n}(\mathbf{F})$ 와 각 $i, j$ 에 대하여 $(A ^{*}) _{ij} = \overline{A}_{ji}$ 인 $n \times m$ 행렬 $A ^{*}$ 를 $A$ 의 수반행렬이라 한다.
 
@@ -71,7 +67,7 @@
 
 ## Frobenius Inner Product
 
-!!! tldr "프로베니우스 내적(Frobenius inner product)"
+!!! def "프로베니우스 내적(Frobenius inner product)"
 
     프로베니우스 내적은 벡터공간 $\mathbf{V}=\mathbf{M}_{n \times n}(\mathbf{F})$ 와 두 행렬 $A, B \in \mathbf{V}$ 에 대한 내적 $\big <A,B \big >_{\text{F}}=\text{tr} (B {}^{*} A)$ 이다.
 
@@ -87,7 +83,7 @@
 
 ## Inner Product Space
 
-!!! tldr "내적공간(inner product space), 복소내적공간(complex inner product space), 실내적공간(real inner product)"
+!!! def "내적공간(inner product space), 복소내적공간(complex inner product space), 실내적공간(real inner product)"
 
     내적공간은 내적이 주어진 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 이다.
     
@@ -115,7 +111,7 @@
 
 ## Properties of Inner Product
 
-!!! tldr "정리 6.1"
+!!! def "정리 6.1"
 
     내적공간 $\mathbf{V}$ 와 벡터 $x,y,z \in \mathbf{V}$ 와 스칼라 $c \in \mathbf{F}$ 에 대하여 다음이 성립한다.
 
@@ -167,7 +163,7 @@
 
 ## Antilinear Map
 
-!!! tldr "Antilinear map, 켤레선형(conjugate-linear)"
+!!! def "Antilinear map, 켤레선형(conjugate-linear)"
 
     체 $\mathbf{F} \in \{\R, \mathbb{C}\}$ 인 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 와 벡터 $x, y \in \mathbf{V}$ 와 스칼라 $a, b \in \mathbf{F}$ 대하여 다음을 만족하는 함수 $f: \mathbf{V}\to \mathbf{W}$ 를 antilinear 또는 켤레 선형이라고 한다.
 
@@ -187,7 +183,7 @@
 
 # Norm
 
-!!! tldr "노름(norm), 길이(length)"
+!!! def "노름(norm), 길이(length)"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 노름은 $x, y \in \mathbf{V}$ 와 스칼라 $c \in \mathbf{F}$ 에 대하여 다음 조건을 만족하는 실가함수 $\|\cdot \|: \mathbf{V}\to \R ^{\geq 0}$ 이다. 
 
@@ -211,7 +207,7 @@
 
 ## Normed vector space
 
-!!! tldr "노름공간(Normed vector space)"
+!!! def "노름공간(Normed vector space)"
 
     노름이 정의된 벡터공간이다.
 
@@ -233,7 +229,7 @@
 
 ## Properties of Norm
 
-!!! tldr "정리 6.2"
+!!! def "정리 6.2"
 
     $\mathbf{F}$-내적공간 $\mathbf{V}$ 와 임의의 벡터 $x, y \in \mathbf{V}$, 스칼라 $c \in \mathbf{F}$ 와 노름 $\|x\|=\sqrt[]{\big <x,x \big >}$ 에 대하여 다음이 성립한다.
 
@@ -289,7 +285,7 @@
 
 ## Euclidean Space
 
-!!! tldr "유클리드 공간(Euclidean vector space)"
+!!! def "유클리드 공간(Euclidean vector space)"
 
     n차원 유클리드 공간 $\R ^{n}$ 은 표준내적이 부여된 유한차원 내적공간이다.
 
@@ -308,7 +304,7 @@
 
 ## Norm of Euclidean Space
 
-!!! tldr "유클리드 노름(Euclidean norm), $L_2$ 노름($L_2$ norm)"
+!!! def "유클리드 노름(Euclidean norm), $L_2$ 노름($L_2$ norm)"
 
     n차원 유클리드 공간 $\R ^{n}$ 의 벡터 $x = (x_1, x_2, \dots, x_n)$ 의 유클리드 노름은 다음과 같다. 
 
@@ -322,7 +318,7 @@
 
 - 유클리드 노름이 $\R ^{n}$ 에서 가장 자주 사용된다. 그러나 아래에서 볼 수 있듯이 $\R ^{n}$ 에는 다른 노름도 존재한다. 그러나 이 모든 노름들은 그것들이 모두 같은 위상에서 정의되었다는 점에서 본질적으로 같다.
 
-!!! tldr "유클리드 거리(Euclidean distance), $L_2$ 거리($L_2$ distance)"
+!!! def "유클리드 거리(Euclidean distance), $L_2$ 거리($L_2$ distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 유클리드 거리는 다음과 같은 거리함수 $d_2: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
 
@@ -340,7 +336,7 @@
 
     이것이 피타고라스의 정리에 의하여 도출되었으므로 피타고라스 거리(Pythagorean distance)라고도 부른다.
 
-!!! tldr "유클리드 거리 제곱(Squared Euclidean distance)"
+!!! def "유클리드 거리 제곱(Squared Euclidean distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 유클리드 거리 제곱은 다음과 같은 거리함수 $d_2 ^{2}: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
 
@@ -350,7 +346,7 @@
 
 - 유클리드 거리 제곱은 거리 공간(metric space)을 형성하지는 않는다. 삼각 부등식을 만족하지 못하기 때문이다.
 
-!!! tldr "Taxicab norm, 맨하튼 노름(Manhattan norm), $L_1$ 노름($L_1$ norm)"
+!!! def "Taxicab norm, 맨하튼 노름(Manhattan norm), $L_1$ 노름($L_1$ norm)"
 
     n차원 유클리드 공간 $\R ^{n}$ 의 벡터 $x = (x_1, x_2, \dots, x_n)$ 의 $L_1$ 노름은 다음과 같다. 
 
@@ -364,13 +360,13 @@
 
     초록선은 출발지에서 목적지까지 가는 유클리드 노름이다. 빨강, 노랑, 파란선은 $L_1$ 노름이다. 빨강, 노랑, 파란선의 길이가 모두 동일하다는 것에 주목하자.
 
-!!! tldr "Taxicab distance, 맨하튼 거리(Manhattan distance), $L_1$ 거리 ($L_1$ distance)"
+!!! def "Taxicab distance, 맨하튼 거리(Manhattan distance), $L_1$ 거리 ($L_1$ distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 $L_1$ 거리는 다음과 같은 거리함수 $d_1: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
 
     $$ d_1(x, y) = \|x-y\| _{1} = \sum_{i=1}^{n}|x_i-y_i| $$
 
-!!! tldr "p-norm, $L_p$ 노름($L_p$ norm)"
+!!! def "p-norm, $L_p$ 노름($L_p$ norm)"
 
     n차원 유클리드 공간 $\R ^{n}$ 의 벡터 $x = (x_1, x_2, \dots, x_n)$ 의 $L_p$ 노름은 다음과 같다. 
     
@@ -378,7 +374,7 @@
 
 - $p = 1$ 일 때 $L_1$ 노름이 되고 $p = 2$ 일 때 유클리드 노름이 된다.
 
-!!! tldr "민코프스키 거리(Minkowski distance), $L_p$ 거리($L_p$ distance)"
+!!! def "민코프스키 거리(Minkowski distance), $L_p$ 거리($L_p$ distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 민코프스키 거리는 다음과 같은 거리함수 $d_p: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
 
@@ -386,7 +382,7 @@
     
 - 민코프스키 거리는 유클리드 거리와 맨하튼 거리의 일반화이다.
 
-!!! tldr "무한 노름(infinity norm), 최대 노름(maximum norm), 상한 노름(supremum norm), $L _{\infty }$ 노름($L _{\infty }$ norm)"
+!!! def "무한 노름(infinity norm), 최대 노름(maximum norm), 상한 노름(supremum norm), $L _{\infty }$ 노름($L _{\infty }$ norm)"
 
     n차원 유클리드 공간 $\R ^{n}$ 의 벡터 $x = (x_1, x_2, \dots, x_n)$ 의 상한 노름은 다음과 같다. 
 
@@ -402,7 +398,7 @@
 
     ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Vector_norms.svg/140px-Vector_norms.svg.png)
 
-!!! tldr "체비셰프 거리(Chebyshev distance), 최대 거리(maximum distance), $L _{\infty }$ 거리($L _{\infty }$ distance)"
+!!! def "체비셰프 거리(Chebyshev distance), 최대 거리(maximum distance), $L _{\infty }$ 거리($L _{\infty }$ distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 체비셰프 거리는 다음과 같은 상한 거리 함수 $d _{\infty }: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
 
@@ -410,7 +406,7 @@
     
 - 체비셰프 거리는 민코프스키 거리에서 $p \to \infty$ 로 보낸 결과이다.
 
-!!! tldr "하한 노름(infimum norm), $L _{- \infty }$ 노름($L _{- \infty }$ norm)"
+!!! def "하한 노름(infimum norm), $L _{- \infty }$ 노름($L _{- \infty }$ norm)"
     
     n차원 유클리드 공간 $\R ^{n}$ 의 벡터 $x = (x_1, x_2, \dots, x_n)$ 의 하한 노름은 다음과 같다. 
 
@@ -424,7 +420,7 @@
 
     ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/2D_unit_balls.svg/1451px-2D_unit_balls.svg.png)
 
-!!! tldr "하한 거리(infimum distance), $L _{- \infty }$ 거리($L _{- \infty }$ distance)"
+!!! def "하한 거리(infimum distance), $L _{- \infty }$ 거리($L _{- \infty }$ distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 하한 거리는 다음과 같은 하한 거리 함수 $d _{-\infty }: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
     
@@ -436,7 +432,7 @@
 
 ## Orthogonal in Euclidean Space
 
-!!! tldr "코사인(cosine)"
+!!! def "코사인(cosine)"
 
     $C$ 가 직각인 삼각형 $ABC$ 에서 코사인 $A$ 는 다음과 같은 빗변에 대한 밑변의 비율이다.
 
@@ -446,7 +442,7 @@
 
     ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Trigonometry_triangle.svg/338px-Trigonometry_triangle.svg.png)
 
-!!! tldr "코사인 법칙(Law of cosines)"
+!!! def "코사인 법칙(Law of cosines)"
 
     삼각형 $ABC$ 의 세 각 $A, B, C$ 가 마주하는 변 $a, b, c$ 에 대하여 다음이 성립한다. 
 
@@ -488,7 +484,7 @@
 
     $$ \therefore c ^{2} = a ^{2} + b ^{2} -2ab \cos C \tag*{■} $$
 
-!!! tldr "두 벡터가 이루는 각"
+!!! def "두 벡터가 이루는 각"
 
     2차원 또는 3차원 유클리드 공간 $\mathbb{E} \in \{\R ^{2}, \R ^{3}\}$ 의 벡터 $x, y$ 가 이루는 각은 다음과 같다.
 
@@ -537,7 +533,7 @@
 
     $$ \therefore \theta = \arccos \bigg ( \dfrac{\big <v,u \big >}{\|v\|\|u\|}\bigg ) \tag*{■} $$
 
-!!! tldr "유클리드 공간에서의 직교"
+!!! def "유클리드 공간에서의 직교"
 
     2차원 또는 3차원 유클리드 공간 $\mathbb{E} \in \{\R ^{2}, \R ^{3}\}$ 의 벡터 $x, y$ 가 직교인 것과 $\big <x,y \big > = 0$ 인 것은 동치이다.
 
@@ -555,7 +551,7 @@
 
 ## Definition of Orthogonal
 
-!!! tldr "직교(orthogonal), 수직(perpendicular)"
+!!! def "직교(orthogonal), 수직(perpendicular)"
 
     내적공간 $\mathbf{V}$ 와 벡터 $x, y \in \mathbf{V}$ 에 대하여 $\big <x,y \big > = 0$ 이면 두 벡터는 직교한다.
 
@@ -563,17 +559,17 @@
 
 - 벡터에 영이 아닌 스칼라를 곱해도 직교성은 불변한다.
 
-!!! tldr "직교집합(orthogonal set)"
+!!! def "직교집합(orthogonal set)"
 
     내적공간 $\mathbf{V}$ 의 부분집합 $S$ 에 대하여 $S$ 에 속하는 서로 다른 임의의 두 벡터가 직교하면 $S$ 를 직교집합이라 한다.
 
-!!! tldr "단위벡터(unit vector)"
+!!! def "단위벡터(unit vector)"
 
     내적공간 $\mathbf{V}$ 에서 $\|x\| = 1$ 인 벡터이다.
 
 ## Orthonormal
 
-!!! tldr "정규직교집합(orthonormal)"
+!!! def "정규직교집합(orthonormal)"
 
     내적공간의 부분집합이 단위벡터로 구성된 직교집합이면 정규직교집합이라 한다.
 
@@ -581,7 +577,7 @@
 
 ## Normalizing
 
-!!! tldr "정규화(normalizing)"
+!!! def "정규화(normalizing)"
 
     내적공간 $\mathbf{V}$ 의 영이 아닌 벡터를 방향을 유지한채 크기만 단위벡터로 바꾸는 함수 $f: \mathbf{V} \setminus \{0\} \to \mathbf{V} \setminus \{0\}$ 로써 다음과 같이 정의된다.
 
@@ -603,7 +599,7 @@
 
     $$ \bigg \{\frac{1}{\sqrt[]{2}}(1,1,0), \frac{1}{\sqrt[]{3}}(1, -1, 1), \frac{1}{\sqrt[]{6}}(-1, 1, 2) \bigg \} $$
 
-<!-- !!! tldr "복소함수(function of a complex variable)"
+<!-- !!! def "복소함수(function of a complex variable)"
 
     복소함수는 정의역과 공역이 모두 복소수인 함수이다. 
 
@@ -615,11 +611,11 @@
 
     함수 $e ^{x+iy} = e ^{x}(\cos y + i \sin y)$ 는 복소함수이다.
 
-!!! tldr ""
+!!! def ""
 
     폐구간 $[0, 2 \pi ]$ 에서 연속인 복소함수들로 이루어진 집합에 내적 $\big <f,g \big >=\displaystyle \dfrac{1}{2 \pi }\int_{0}^{2 \pi }f(t)\overline{g(t)}dt$ 가 주어진 내적공간을 $\mathbf{H}$ 라 정의한다.
 
-!!! tldr ""
+!!! def ""
 
     복소함수 $f = f_1 + if_2$ 의 적분에 대하여 다음이 성립한다.
 
@@ -629,7 +625,7 @@
 
 - 복소해석학에 대한 자세한 증명과 설명은 생략한다. 복소함수의 적분에서는 허수 $i$ 가 상수취급되므로 위 정리가 성립한다.
 
-!!! tldr "오일러 식(Euler's formula)"
+!!! def "오일러 식(Euler's formula)"
 
     복소수 $c = a+ib$ 와 자연상수 $e$ 에 대하여 다음과 같이 정의한다.
 
@@ -639,7 +635,7 @@
 
 ## Orthonormal Basis
 
-!!! tldr "정규직교기저(orthonormal basis)"
+!!! def "정규직교기저(orthonormal basis)"
 
     내적공간의 부분집합이 정규직교집합이고 순서기저이면 정규직교기저라 한다.
 
@@ -651,7 +647,7 @@
 
 # Gram–Schmidt Process
 
-!!! tldr "정리 6.3"
+!!! def "정리 6.3"
 
     내적공간 $\mathbf{V}$ 와 영이 아닌 벡터로 이루어진 직교집합 $S = \{v_1, v_2, \dots, v_k\}$ 와 $y \in \text{span} (S)$ 에 대하여 다음이 성립한다. 
 
@@ -665,7 +661,7 @@
 
     즉, $a_j = \dfrac{\big <y,v_j \big >}{\|v_j\|^{2}}$ 이다. ■ 
 
-!!! tldr "정리 6.3 따름정리 1"
+!!! def "정리 6.3 따름정리 1"
 
     내적공간 $\mathbf{V}$ 와 영이 아닌 벡터로 이루어진 정규직교집합 $S = \{v_1, v_2, \dots, v_k\}$ 와 $y \in \text{span} (S)$ 에 대하여 다음이 성립한다. 
 
@@ -675,7 +671,7 @@
 
     $S$ 가 정규직교집합이므로 정리 6.3 에서 바로 증명된다. ■ 
 
-!!! tldr "정리 6.3 따름정리 2"
+!!! def "정리 6.3 따름정리 2"
     
     내적공간에서 영이 아닌 벡터로 이루어진 직교집합은 일차독립이다.
 
@@ -693,7 +689,7 @@
 
 <!-- > p366 벡터공간 H 관련 데이터 -->
 
-!!! tldr "정리 6.4 그람-슈미트 직교화(Gram-Schmidt process)"
+!!! def "정리 6.4 그람-슈미트 직교화(Gram-Schmidt process)"
 
     내적공간 $\mathbf{V}$ 의 일차독립인 부분집합 $S = \{w_1, w_2, \dots, w_n\}$ 에 대하여 집합 $S' = \{v_1, v_2, \dots, v_n\}$ 을 다음과 같이 정의하면 $S'$ 는 영이 아닌 벡터로 이루어진 직교 집합이고 $\text{span} (S') = \text{span} (S)$ 를 만족한다.
 
@@ -743,7 +739,7 @@
 
 ## Legendre Polynomial
 
-!!! tldr "르장드르 다항식(Legendre polynomial)"
+!!! def "르장드르 다항식(Legendre polynomial)"
 
     $\mathbf{P}_{}(\R)$ 의 표준순서기저 $\{1,x,x ^{2}, \dots\}$ 에 그람-슈미트 직교화를 적용하여 얻은 직교기저 $\{v_1, v_2, \dots\}$ 에 대한 다항식 $\dfrac{v_k}{v_k(1)}$ 를 $k$차 르장드르 다항식이라 한다.
 
@@ -751,7 +747,7 @@
 
 ## Inner Product Space has an Orthonormal Basis
 
-!!! tldr "정리 6.5"
+!!! def "정리 6.5"
 
     점공간이 아닌 유한차원 내적공간에는 정규직교기저가 존재한다.
 
@@ -769,7 +765,7 @@
     
     정규직교기저 $\beta$ 의 존재성 증명이 끝났으니 나머지 증명은 정리 6.3 따름정리 1 에서 바로 나온다. ■ 
 
-!!! tldr "정리 6.5 따름정리"
+!!! def "정리 6.5 따름정리"
 
     정규직교기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 를 갖는 유한차원 내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 $A = [\mathbf{T}]_{\beta }$ 로 두면 임의의 $i, j$ 에 대하여 $A _{ij} = \big <\mathbf{T}(v_j), v_i \big >$ 이다.
 
@@ -779,7 +775,7 @@
 
     정리 6.5 에 의해 $\mathbf{T}(v_j) = \displaystyle \sum_{i=1}^{n}\big <\mathbf{T}(v_j), v_i \big >v_i$ 이다. 즉, $A _{ij} = \big <\mathbf{T}(v_j), v_i \big >$ 이다.
 
-<!-- !!! tldr "푸리에 계수(Fourier coefficient)"
+<!-- !!! def "푸리에 계수(Fourier coefficient)"
 
     내적공간 $\mathbf{V}$ 의 정규직교 부분집합 $\beta$ 와 $x \in \mathbf{V}$ 와 $y \in \beta$ 에 대하여 $\big <x,y \big >$ 를 $\beta$ 에 대한 $x$ 의 푸리에 계수라 한다.
 
@@ -787,7 +783,7 @@
 
 # Orthogonal Complements
 
-!!! tldr "직교여공간(Orthogonal complement)"
+!!! def "직교여공간(Orthogonal complement)"
 
     내적공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대하여 다음과 같이 정의된 집합 $S^{\perp}$ 을 $S$ 의 직교여공간이라 한다.
 
@@ -795,7 +791,7 @@
 
 - 즉, 직교여공간은 $S$ 의 모든 벡터와 수직인 벡터 집합이다.
 
-!!! tldr ""
+!!! def ""
 
     직교여공간은 부분공간이다.
 
@@ -825,7 +821,7 @@
 
 ## Orthogonal Projection
 
-!!! tldr "문제 6.2-7"
+!!! def "문제 6.2-7"
 
     내적공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}$ 의 기저 $\beta$ 와 벡터 $z \in \mathbf{V}$ 에 대하여 다음이 성립한다.
     
@@ -841,7 +837,7 @@
 
     $$ \big <y,z \big > = \big <\sum_{i=1}^{n}a_iw_i, z \big > = \sum_{i=1}^{n}a_i \big <w_i,z \big > = 0 \tag*{■} $$
 
-!!! tldr "정리 6.6"
+!!! def "정리 6.6"
 
     내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 다음이 성립한다.
     
@@ -879,7 +875,7 @@
 
     $$ u = \sum_{i=1}^{k}\big <y,v_i \big >v_i $$
 
-!!! tldr "문제 6.1-10"
+!!! def "문제 6.1-10"
 
     내적공간 $\mathbf{V}$ 와 서로 직교하는 두 벡터 $x, y \in \mathbf{V}$ 에 대하여 $\|x+y\|^{2} = \|x\|^{2} + \|y\|^{2}$ 이다.
 
@@ -889,7 +885,7 @@
 
     $$ \|x+y\|^{2} = \big <x+y,x+y \big > = \big <x,x \big > + \big <x,y \big > + \big <y,x \big > + \big <y,y \big > = \|x\|^{2} + 0 + \overline{\big <x,y \big >} + \|y\|^{2} = \|x\|^{2} + \|y\|^{2} $$
 
-!!! tldr "정리 6.6 따름정리"
+!!! def "정리 6.6 따름정리"
     
     내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 와 $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 와 벡터 $u = \displaystyle \sum_{i=1}^{k}\big <y,v_i \big >v_i \in \mathbf{W}$ 에 대하여 다음이 성립한다.
 
@@ -911,7 +907,7 @@
 
     $\|y-x\| = \|y-u\|$ 로 두면 $\|u-x\|^{2} + \|z\|^{2} = \|z\|^{2}$ 이고 $\|u-x\| = 0 \iff x = u$ 이다. 이것의 역은 자명하다. ■ 
 
-!!! tldr "정사영(orthogonal projection)"
+!!! def "정사영(orthogonal projection)"
 
     내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 와 $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 에 대하여 다음 벡터 $u$ 를 $y$ 의 $\mathbf{W}$ 에 대한 정사영이라 한다.
 
@@ -947,7 +943,7 @@
 
 ## Properties of Orthogonal Complements
 
-!!! tldr "문제 6.2-8"
+!!! def "문제 6.2-8"
 
     영이 아닌 벡터로 이루어진 직교집합에 그람-슈미트 직교화를 하면 동일한 집합이 나온다.
 
@@ -968,7 +964,7 @@
 
     이로써 증명이 끝났다. ■ 
 
-!!! tldr "정리 6.7"
+!!! def "정리 6.7"
 
     유한차원 내적공간 $\mathbf{V}$ 의 정규직교집합 $S$ 에 대하여 다음이 성립한다. 
 
@@ -1008,13 +1004,13 @@
 
 # Adjoint of Linear Operator
 
-!!! tldr "수반연산자(adjoint)"
+!!! def "수반연산자(adjoint)"
 
     내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 정규직교기저 $\beta$ 에 대하여 다음을 만족하는 선형연산자 $\mathbf{T}{}^{*}$ 를 $\mathbf{T}$ 의 수반연산자라고 한다.
 
     $$ [\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}]{}^{*}_{\beta } $$
     
-!!! tldr "정리 6.8"
+!!! def "정리 6.8"
 
     유한차원 내적공간 $\mathbf{V}$ 와 정규직교기저 $\{v_1, v_2, \dots, v_n\}$ 와 $\mathbf{g}_{} \in \mathbf{V}{}^{*}$ 와 $y = \displaystyle \sum_{i=1}^{n}\overline{\mathbf{g}_{}(v_i)}v_i \in \mathbf{V}$ 와 $x \in \mathbf{V}$ 에 대하여 다음이 성립한다.
 
@@ -1032,7 +1028,7 @@
 
     이제 $\mathbf{g}_{}(x) = \big <x,y \big >$ 를 가정할 수 있다.  $\mathbf{g}_{}(x) = \big <x,y' \big >$ 를 만족하는 $y'$ 가 존재하면 모든 $x$ 에 대하여 $\big <x,y \big >=\big <x,y' \big > \implies y=y'$ 이다. ■ 
 
-!!! tldr "정리 6.9"
+!!! def "정리 6.9"
 
     유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $x, y \in \mathbf{V}$ 에 대하여 $\big <\mathbf{T}(x),y \big > = \big <x,\mathbf{T}{}^{*}(y) \big >$ 인 수반연산자 $\mathbf{T}{}^{*}$ 가 유일하게 존재한다.
 
@@ -1066,7 +1062,7 @@
 
     $\mathbf{U} :\mathbf{V}\to \mathbf{V}$ 가 선형이고 $\forall  x, y \in \mathbf{V}: \big <\mathbf{T}(x), y \big > = \big <x,\mathbf{U} (y) \big >$ 를 만족하면 $\big <x,\mathbf{T}{}^{*}(y) \big > = \big <x,\mathbf{U} (y) \big >$ 이다. 따라서 $\mathbf{T}{}^{*}$ 는 유일하다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     유한차원 내적공간의 선형연산자 $\mathbf{T}$ 에 대한 수반연산자 $\mathbf{T}{}^{*}$ 는 다음을 만족하는 유일한 $\mathbf{V}$ 의 연산자이다.
 
@@ -1082,7 +1078,7 @@
 
     $$ \big <x,\mathbf{T}(y) \big > = \overline{\big <\mathbf{T}(y),x \big >} = \overline{\big <y, \mathbf{T}{}^{*}(x) \big >} = \big <\mathbf{T}{}^{*}(x),y \big > $$
 
-!!! tldr "정리 6.10"
+!!! def "정리 6.10"
 
     유한차원 벡터공간 $\mathbf{V}$ 와 정규직교기저 $\beta$, 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
 
@@ -1114,7 +1110,7 @@
 
     - $\R$-벡터공간 $\mathbb{C}^{2}$ 의 표준순서기저는 $\{(1,0),(0,1),(i,0),(0,i)\}$ 이며 선형변환의 행렬표현이 $4 \times 4$ 행렬이 된다.
 
-!!! tldr "정리 6.10 따름정리"
+!!! def "정리 6.10 따름정리"
 
     $$ A \in \mathbf{M}_{n \times n}(\mathbf{F}) : \mathbf{L}_{A {}^{*}} = (\mathbf{L}_{A}){}^{*} $$
 
@@ -1124,7 +1120,7 @@
 
     $$ [(\mathbf{L}_{A}){}^{*}]_{\beta } = [\mathbf{L}_{A}]{}^{*}_{\beta } = A {}^{*} = [\mathbf{L}_{A {}^{*}}]_{\beta } \tag*{■} $$
 
-!!! tldr "정리 6.11"
+!!! def "정리 6.11"
 
     내적공간 $\mathbf{V}$ 와 수반연산자가 존재하는 선형연산자 $\mathbf{T}, \mathbf{U}$ 에 대하여 다음이 성립한다.
 
@@ -1172,7 +1168,7 @@
 
     $$ [\mathbf{I}{}^{*}]_{\beta } = [\mathbf{I}]{}^{*}_{\beta } = I {}^{*} = \overline{I^{t}} = I = [\mathbf{I}]_{\beta } $$
 
-!!! tldr "정리 6.11 따름정리"
+!!! def "정리 6.11 따름정리"
 
     $A, B \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 다음이 성립한다. 
 
@@ -1212,7 +1208,7 @@
 
 - 편의상 정리 6.10 으로 증명이 이루어졌지만 수반행렬의 정의를 직접 사용하여 증명할 수도 있다.
 
-!!! tldr "문제 6.3-5-(b)"
+!!! def "문제 6.3-5-(b)"
 
     적절한 형상을 갖는 임의의 행렬 $A, B$ 에 대하여 다음이 성립한다. 
 
@@ -1233,7 +1229,7 @@
 
 ## Least Squares Approximation
 
-!!! tldr ""
+!!! def ""
 
     $x, y \in \mathbf{F}^{n}$ 의 표준내적을 $\big <x,y \big >_{n}$ 라 표기하면 열벡터 $x, y$ 에 대하여 $\big <x,y \big >_{n} = y {}^{*}x$ 이다.
 
@@ -1241,7 +1237,7 @@
 
     [표준 내적](#755926539) 과 [켤레 전치행렬](#8f2c193aa) 의 정의에 의하여 자명하게 성립한다. ■ 
 
-!!! tldr "보조정리 1"
+!!! def "보조정리 1"
 
     $A \in \mathbf{M}_{m \times n}(\mathbf{F}), x \in \mathbf{F}^{n}, y \in \mathbf{F}^{m}$ 에 대하여 다음이 성립한다.
 
@@ -1253,7 +1249,7 @@
 
     $$ \big <Ax, y \big >_{m} = y {}^{*}(Ax) = (y {}^{*}A)x = (A {}^{*}y){}^{*}x = \big <x, A {}^{*}y \big >_{n} \tag*{■} $$
 
-!!! tldr "보조정리 2"
+!!! def "보조정리 2"
 
     $$ A \in \mathbf{M}_{m \times n}(\mathbf{F}) : \text{rank} (A {}^{*}A) = \text{rank} (A) $$
 
@@ -1274,7 +1270,7 @@
 
     그러므로 내적의 성질에 의하여 $Ax = 0$ 이다. ■ 
 
-!!! tldr "따름정리"
+!!! def "따름정리"
 
     $\text{rank} (A) = n$ 인 행렬 $A \in \mathbf{M}_{m \times n}(\mathbf{F})$ 에 대하여 $A {}^{*}A$ 는 가역이다.
 
@@ -1282,7 +1278,7 @@
 
     [$n \times n$ 행렬의 랭크가 $n$ 이면 가역이다](../MatrixOperation/#8252ffa8b). 보조정리 2 에 의하여 $A {}^{*}A$ 의 랭크는 $n$ 이다. ■ 
 
-!!! tldr "정리 6.12 최소제곱법(least squares approximation)"
+!!! def "정리 6.12 최소제곱법(least squares approximation)"
 
     $A \in \mathbf{M}_{m \times n}(\mathbf{F}), y \in \mathbf{F}^{m}$ 에 대하여 다음을 만족하는 $x_0 \in \mathbf{F}^{n}$ 이 존재한다. 
 
@@ -1352,11 +1348,11 @@
 
 ## Minimal Solutions to Systems of Linear Equations
 
-!!! tldr "최소해(minimal solution)"
+!!! def "최소해(minimal solution)"
 
     모순이 없는 연립일차방정식 $Ax = b$ 의 해가 유일하지 않을 때 방정식의 임의의 해 $u$ 에 대하여 $\|s\| \leq \|u\|$ 를 만족하는 $s$ 를 최소해라 한다.
 
-!!! tldr "문제 6.2-6"
+!!! def "문제 6.2-6"
 
     내적공간 $\mathbf{V}$ 와 유한차원 부분공간 $\mathbf{W}$ 에 대하여 다음이 성립한다.
     
@@ -1382,7 +1378,7 @@
 
     *내적공간 $\mathbf{V}$ 와 유한차원 부분공간 $\mathbf{W}$ 와 $x \in \mathbf{V} \setminus \mathbf{W}$ 에 대하여 $y \in \mathbf{W}^{\perp} \land \big <x,y \big > \neq 0$ 인 벡터 $y \in \mathbf{V}$ 가 존재한다.*
 
-!!! tldr "문제 6.2-13"
+!!! def "문제 6.2-13"
 
     내적공간 $\mathbf{V}$ 의 두 부분집합 $S$ 와 $S_0$ 와 유한차원 부분공간 $\mathbf{W}$ 에 대하여 다음이 성립한다.
 
@@ -1422,7 +1418,7 @@
 
     정리 6.6 은 $\mathbf{V}=\mathbf{W}+\mathbf{W}^{\perp}$ 임을 말해준다. $\mathbf{W}\cap \mathbf{W}^{\perp}=\{0\}$ 이므로 $\mathbf{V}=\mathbf{W}\oplus \mathbf{W}^{\perp}$ 이다.
 
-!!! tldr ""
+!!! def ""
 
     내적공간 $\mathbf{V}$ 에 대하여 $\big <x, y \big > = 0$ 인 벡터 $x, y \in \mathbf{V}\setminus \{0\}$ 가 존재한다.
 
@@ -1434,7 +1430,7 @@
 
     $$ e_1 \neq 0, e_2 \neq 0, \big <e_1,e_2 \big > = 1 \cdot 0 + 0 \cdot 1 = 0 $$
 
-!!! tldr ""
+!!! def ""
 
     내적공간 $\mathbf{V}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 다음은 동치이다.
 
@@ -1450,7 +1446,7 @@
 
     1) 을 가정하고 $y \neq 0$ 로 두자. 내적의 정의에 의하여 $\big <y,y \big > \neq 0$ 이다. 따라서 $y = 0$ 이다. ■ 
 
-!!! tldr "문제 6.3-12"
+!!! def "문제 6.3-12"
 
     내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
 
@@ -1482,7 +1478,7 @@
 
     $$ \therefore \mathbf{R}(\mathbf{T}{}^{*}) = (\mathbf{N}(\mathbf{T}))^{\perp} \tag*{■}$$
 
-!!! tldr "정리 6.13"
+!!! def "정리 6.13"
 
     $A \in \mathbf{M}_{m \times n}(\mathbf{F}), b \in \mathbf{F}^{m}$ 와 모순이 없는 연립일차방정식 $Ax = b$ 에 대하여 다음이 성립한다. 
 
@@ -1548,7 +1544,7 @@
 
 # Normal and Self-Adjoint Operators
 
-!!! tldr "보조정리"
+!!! def "보조정리"
 
     유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 고유벡터를 가지면 $\mathbf{T}{}^{*}$ 도 고유벡터를 가진다.
 
@@ -1562,7 +1558,7 @@
 
 ## Schur's theorem
 
-!!! tldr "정리 6.14 슈어의 정리(Schur's theorem)"
+!!! def "정리 6.14 슈어의 정리(Schur's theorem)"
 
     유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되면 $[\mathbf{T}]_{\gamma }$ 가 상삼각행렬이 되게 하는 정규직교기저 $\gamma$ 가 존재한다.
 
@@ -1582,7 +1578,7 @@
 
 ## Normal Operator, Normal Matrix
 
-!!! tldr "정규연산자(normal operator)"
+!!! def "정규연산자(normal operator)"
 
     내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 가 $\mathbf{T}\mathbf{T}{}^{*} = \mathbf{T}{}^{*}\mathbf{T}$ 를 만족하면 $\mathbf{T}$ 를 정규연산자라 한다.
 
@@ -1594,11 +1590,11 @@
 
     그러나 위 명제의 역이 항상 성립하는 것은 아니다. 즉, 정규성을 가진다고 해서 고유벡터로 이루어진 정규직교기저가 반드시 존재한다는 보장은 없다. 
 
-!!! tldr "정규행렬(normal matrix)"
+!!! def "정규행렬(normal matrix)"
 
     체 $\mathbf{F}\in \{\R, \mathbb{C}\}$ 에 대한 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 이 $AA {}^{*} = A {}^{*}A$ 를 만족하면 $A$ 를 정규행렬이라 한다. 
 
-!!! tldr ""
+!!! def ""
 
     $\mathbf{T}$ 가 정규연산자인 것과 정규직교기저 $\beta$ 에 대하여 $[\mathbf{T}]_{\beta }$ 가 정규행렬인 것은 동치이다.
 
@@ -1620,7 +1616,7 @@
 
     그러나 정리 6.16 에 의하여 $\mathbf{V}$ 가 복소내적공간이라면 정규성이 고유벡터로 이루어진 정규직교기저의 존재성을 보장해준다. 따라서 정규성과 고유벡터로 이루어진 정규직교의 존재성이 복소내적공간에서는 서로 동치이다. 
 
-!!! tldr "정리 6.15"
+!!! def "정리 6.15"
 
     $\mathbf{F}$-내적공간 $\mathbf{V}$ 와 정규연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다.
 
@@ -1670,7 +1666,7 @@
 
 ## Fundamental Theorem of Algebra
 
-!!! tldr "대수학의 기본 정리(fundamental theorem of algebra)"
+!!! def "대수학의 기본 정리(fundamental theorem of algebra)"
 
     $\mathbf{P}(\mathbb{C})$ 의 다항식 $p(z) = a_nz ^{n} + \dots + a_1z + a_0$ 의 차수가 $n \geq 1$ 이면 $p(z)$ 는 해가 있다.
 
@@ -1682,7 +1678,7 @@
 
 ## Diagonalizable Orthonormal Basis in Complex Inner Product Space
 
-!!! tldr "정리 6.16"
+!!! def "정리 6.16"
 
     유한차원 복소내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 정규연산자인 것과 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다는 것은 동치이다.
 
@@ -1710,19 +1706,19 @@
 
 ## Hermitian, Hermitian matrix
 
-!!! tldr "자기수반연산자(self-adjoint), 에르미트 연산자(Hermitian)"
+!!! def "자기수반연산자(self-adjoint), 에르미트 연산자(Hermitian)"
 
     내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 $\mathbf{T}=\mathbf{T}{}^{*}$ 를 만족하면 자기수반연산자 또는 에르미트 연산자라 한다.
 
 - 정규성이 실내적공간의 고유벡터로 이루어진 정규직교기저가 존재하기 위한 충분조건이 아님을 이미 알아보았다. 그러나 정규성을 더욱 강한 조건인 $\mathbf{T}=\mathbf{T}{}^{*}$ 로 바꾸면 충분조건이 된다. 이를 만족하는 연산자를 에르미트 연산자라 한다. 정리 6.17 을 보자.
 
-!!! tldr "자기수반행렬(self-adjoint matrix), 에르미트 행렬(Hermitian matrix)"
+!!! def "자기수반행렬(self-adjoint matrix), 에르미트 행렬(Hermitian matrix)"
 
     체 $\mathbf{F}\in \{\R , \mathbb{C}\}$ 에 대한 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 가 $A = A {}^{*}$ 를 만족하면 자기수반행렬 또는 에르미트 행렬이라 한다.
 
 - 실행렬에서는 자기수반행렬인 조건을 [대칭행렬](../VectorSpace/#96a169304) 로 간소화할 수 있다. 따라서 실대칭행렬은 자기수반행렬이고, 이에 따라 정규행렬이다. 그러나 복소 대칭행렬이 자기수반행렬이고, 정규행렬이라는 보장은 없다. 
 
-!!! tldr ""
+!!! def ""
 
     내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 자기수반연산자인 것과 $[\mathbf{T}]_{\beta }$ 가 자기수반행렬인 것은 동치이다.
     
@@ -1734,7 +1730,7 @@
 
 ## Diagonalizable Orthonormal Basis in Real Inner Product Space
 
-!!! tldr "보조정리"
+!!! def "보조정리"
 
     유한차원 내적공간 $\mathbf{V}$ 의 자기수반연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
 
@@ -1768,7 +1764,7 @@
 
     [특성다항식의 정의](../Diagonalization/#2f3482489)에 의하여 $\mathbf{U}$ 의 특성다항식은 $A$ 의 특성다항식이다. 다시 특성다항식의 정의에 의하여 $A$ 의 특성다항식은 $\mathbf{T}$ 의 특성다항식이다. 따라서 $\mathbf{T}$ 의 특성다항식은 완전히 인수분해된다. ■ 
 
-!!! tldr "정리 6.17"
+!!! def "정리 6.17"
 
     유한차원 실내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $\mathbf{T}$ 가 자기수반연산자인 것과 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재하는 것은 동치이다.
 
@@ -1788,7 +1784,7 @@
 
 # Unitary and Orthogonal Operators
 
-!!! tldr "유니타리 연산자(unitary operator), 직교연산자(orthogonal operator)"
+!!! def "유니타리 연산자(unitary operator), 직교연산자(orthogonal operator)"
 
     유한차원 $\mathbf{F}$-내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음과 같이 정의한다.
 
@@ -1800,7 +1796,7 @@
 
 - 무한차원 벡터공간에서 길이를 보존하는 연산자는 단사이고 등장 사상(isometry) 이라 한다. 등장 사상은 두 거리 공간의 거리를 보존하는 함수이다. 만약 전사이기까지 한다면 유니타리 연산자 또는 직교연산자라고 한다. 
 
-!!! tldr "보조정리"
+!!! def "보조정리"
 
     내적공간 $\mathbf{V}$ 의 자기수반연산자 $\mathbf{U}$ 에 대하여 다음이 성립한다. 
 
@@ -1810,7 +1806,7 @@
 
     $\mathbf{U}(x) \in \mathbf{V}$ 이므로 $\big <\mathbf{U}(x), \mathbf{U}(x) \big > = 0$ 이다. 내적의 정의에 의하여 $\mathbf{U}(x) = 0$ 이다. ■ 
 
-!!! tldr "정리 6.18"
+!!! def "정리 6.18"
 
     유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
 
@@ -1832,10 +1828,18 @@
 
     1) 에서 2) 를 도출하는 증명:
 
-    $\mathbf{V}$ 의 순서기저 $\beta$ 에 대하여 다음이 성립한다.
+    $\dim (\mathbf{V}) = n$
 
-    $$ [\mathbf{T}{}^{*}\mathbf{T}]_{\beta }=[\mathbf{I}]_{\beta } $$
+    $\mathbf{V}$ 의 표준순서기저 $\beta$ 에 대하여 다음이 성립한다.
 
-    $$ [\mathbf{T}{}^{*}]_{\beta }[\mathbf{T}]_{\beta }=[\mathbf{I}]_{\beta } $$
+    $$ [\mathbf{T}{}^{*}\mathbf{T}]_{\beta }=[\mathbf{I}]_{\beta } = I_n $$
 
-    $$ [\mathbf{T}]{}^{*}_{\beta }[\mathbf{T}]_{\beta }=[\mathbf{I}]_{\beta } $$
+    $$ [\mathbf{T}{}^{*}]_{\beta }[\mathbf{T}]_{\beta } = I_n $$
+
+    $$ [\mathbf{T}]{}^{*}_{\beta }[\mathbf{T}]_{\beta } = I_n $$
+
+---
+
+ref:
+
+:   Stephen H. Friedberg, Linear Algebra, 4th Edition

@@ -1,10 +1,6 @@
-!!! info "ref"
-
-    https://en.wikipedia.org/wiki/Summation
-
 # Summation
 
-!!! tldr "Summation"
+!!! def "Summation"
 
     Summation 은 수열 $g(i)$ 의 덧셈으로써 다음과 같이 재귀적으로 정의된다. 
 
@@ -52,37 +48,37 @@
 
 ## Properties of Summation
 
-!!! tldr "Distributivity (1)"
+!!! def "Distributivity (1)"
 
     $$ \sum_{n=s}^{t}C \cdot f(n) = C \cdot \sum_{n=s}^{t}f(n) $$
 
 - 증명
 
-!!! tldr "Commutativity and Associativity (1)"
+!!! def "Commutativity and Associativity (1)"
 
     $$ \sum_{n=s}^{t}f(n) \pm \sum_{n=s}^{t}g(n) = \sum_{n=s}^{t}(f(n) \pm g(n)) $$
 
 - 증명
 
-!!! tldr "Commutativity and Associativity (2)"
+!!! def "Commutativity and Associativity (2)"
 
     $$ \sum_{i=k_0}^{k_1}\sum_{j=l_0}^{l_1}a _{ij} = \sum_{j=l_0}^{l_1}\sum_{i=k_0}^{k_1}a _{ij} $$
 
 - 증명
 
-!!! tldr "Commutativity and Associativity (3)"
+!!! def "Commutativity and Associativity (3)"
 
     $$ \sum_{k \leq j \leq i \leq n}^{} a _{ij} = \sum_{i=k}^{n}\sum_{j=k}^{i}a _{ij}= \sum_{j=k}^{n}\sum_{i=j}^{n}a _{ij}= \sum_{j=0}^{n-k}\sum_{i=k}^{n-j}a _{i+j, i} $$
 
 - 증명
 
-!!! tldr "Distributivity (2)"
+!!! def "Distributivity (2)"
 
     $$ \bigg (\sum_{i=0}^{n}a_i \bigg ) \bigg (\sum_{j=0}^{n}b_j \bigg ) = \sum_{i=0}^{n}\sum_{j=0}^{n}a_ib_j $$
 
 - 증명
 
-!!! tldr "Distributivity (3)"
+!!! def "Distributivity (3)"
 
     $$ \bigg (\sum_{i=s}^{m}a_i \bigg ) \bigg (\sum_{j=t}^{n}b_j \bigg ) = \sum_{i=s}^{m}\sum_{j=t}^{n}a_ib_j $$
 
@@ -90,7 +86,7 @@
 
 ## Powers and logarithm of arithmetic progression
 
-!!! tldr "등차수열의 합(Sum of arithmetic progression)"
+!!! def "등차수열의 합(Sum of arithmetic progression)"
 
     자연수 $i, n \in \N$ 에 대하여 다음이 성립한다. 
 
@@ -98,7 +94,7 @@
 
 - 증명
 
-!!! tldr "홀수의 합(Sum of odd natural numbers)"
+!!! def "홀수의 합(Sum of odd natural numbers)"
 
     자연수 $i, n \in \N$ 에 대하여 다음이 성립한다. 
 
@@ -106,7 +102,7 @@
 
 - 증명
 
-!!! tldr "짝수의 합(Sum of even natural numbers)"
+!!! def "짝수의 합(Sum of even natural numbers)"
 
     자연수 $i, n \in \N$ 에 대하여 다음이 성립한다. 
 
@@ -114,7 +110,7 @@
 
 - 증명
 
-!!! tldr "제곱수의 합(Sum of squares)"
+!!! def "제곱수의 합(Sum of squares)"
 
     자연수 $i, n \in \N$ 에 대하여 다음이 성립한다. 
 
@@ -122,7 +118,7 @@
    
 - 증명
 
-!!! tldr "Nicomachus's theorem"
+!!! def "Nicomachus's theorem"
 
     자연수 $i, n \in \N$ 에 대하여 다음이 성립한다. 
 
@@ -130,7 +126,7 @@
    
 - 증명
 
-!!! tldr "Faulhaber's formula"
+!!! def "Faulhaber's formula"
 
     $p > 1$ 와 Bernoulli number $B_k$ 와 binomial coefficient $\displaystyle \binom{p}{k}$ 에 대하여 다음이 성립한다. 
 
@@ -140,7 +136,7 @@
 
 ## Summation index in exponents
 
-!!! tldr "등비수열의 합(sum of a geometric progression) (1)"
+!!! def "등비수열의 합(sum of a geometric progression) (1)"
 
     자연수 $i, n \in \N$ 에 대하여 다음이 성립한다. 
 
@@ -148,7 +144,7 @@
     
 - 증명
 
-!!! tldr "등비수열의 합(sum of a geometric progression) (2)"
+!!! def "등비수열의 합(sum of a geometric progression) (2)"
 
     자연수 $i, n \in \N$ 에 대하여 다음이 성립한다. 
 
@@ -156,7 +152,7 @@
 
 - 증명
 
-!!! tldr "산술기하수열의 합(sum of an arithmetico-geometric sequence)"
+!!! def "산술기하수열의 합(sum of an arithmetico-geometric sequence)"
 
     $$ \begin{equation}\begin{split} \sum_{i=0}^{n-1}(b + id)a ^{i} &= b \sum_{i=0}^{n-1}a ^{i} + d \sum_{i=0}^{n-1}ia ^{i} \\ &= b \bigg (  \dfrac{1 - a ^{n}}{1 - a} \bigg ) + d \bigg (\dfrac{a - na ^{n} + (n-1)a ^{n+1}}{(1 - a) ^{2}} \bigg )  \\ &= \dfrac{b(1-a ^{n}) - (n-1)da ^{n}}{1 - a} + \dfrac{da(1 - a ^{n-1})}{(1 - a) ^{2}} \\ \end{split}\end{equation} \tag*{} $$
 
@@ -164,7 +160,7 @@
 
 # Multiplication
 
-!!! tldr "곱셈(Multiplication)"
+!!! def "곱셈(Multiplication)"
 
     덧셈의 반복이다.
 
@@ -174,7 +170,7 @@
 
 - 곱셈(Multiplication) 의 결과를 product 라 한다.
 
-!!! tldr "수열의 곱셈(Product of a sequence)"
+!!! def "수열의 곱셈(Product of a sequence)"
 
     수열 $x_i$ 의 곱셈은 다음과 같이 정의된다.
 
@@ -188,7 +184,7 @@
 
 ## Properties of Multiplication
 
-!!! tldr "Properties of Multiplication"
+!!! def "Properties of Multiplication"
 
     실수체 또는 복소수체에서 곱셈에 대하여 다음이 성립한다.
 
@@ -206,20 +202,26 @@
 
     7. $0$ 이 아닌 $x$ 에 대하여 $x \cdot \bigg (\dfrac{1}{x} \bigg ) = 1$ 인 $\dfrac{1}{x}$ 가 존재한다. (Inverse element)
 
-!!! tldr "Associativity and Commutativity (1)"
+!!! def "Associativity and Commutativity (1)"
 
     $$ \prod_{i=1}^{n}x_iy_i = \bigg (\prod_{i=1}^{n}x_i \bigg )\bigg (\prod_{i=1}^{n}y_i \bigg ) $$
 
 - 증명
 
-!!! tldr "Associativity and Commutativity (2)"
+!!! def "Associativity and Commutativity (2)"
 
     $$ \bigg (\prod_{i=1}^{n}x_i \bigg ) ^{a} = \prod_{i=1}^{n}x_i ^{a} $$
 
 - 증명
 
-!!! tldr ""
+!!! def ""
 
     $$ a \in \N, x_i \in \R ^{+} : \prod_{i=1}^{n}x ^{a_i} = x ^{\sum_{i=1}^{n}a_i} $$
 
 - 증명
+
+---
+
+ref:
+
+:   https://en.wikipedia.org/wiki/Summation

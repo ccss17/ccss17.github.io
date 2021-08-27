@@ -4,7 +4,7 @@
 
 # Field
 
-!!! tldr "체(field)"
+!!! def "체(field)"
 
     체 $\mathbf{F}$ 는 두 이항연산 합과 곱
     
@@ -46,7 +46,7 @@
 
     $$ 0 \cdot 0 = 0, 0 \cdot 1 = 1 \cdot 0 = 0, 1 \cdot 1 = 1 $$
 
-!!! tldr "소거법칙(Cancellation Laws)"
+!!! def "소거법칙(Cancellation Laws)"
 
     체의 임의의 원소 $a, b, c$ 에 대하여 다음이 성립한다. 
 
@@ -84,7 +84,7 @@
 
     이다. 
 
-!!! tldr ""
+!!! def ""
 
     체의 덧셈의 항등원과 역원, 곱셈의 항등원과 역원은 유일하다.
 
@@ -100,7 +100,7 @@
 
     이다. 덧셈의 역원, 곱셈의 항등원과 역원의 유일성도 쉽게 증명된다.
 
-!!! tldr ""
+!!! def ""
 
     임의의 체의 임의의 원소 $a, b$ 에 대하여 다음이 성립한다. 
 
@@ -148,7 +148,7 @@
 
     이다. 
 
-!!! tldr "지표(characteristic)"
+!!! def "지표(characteristic)"
 
     임의의 체 $\mathbf{F}$ 에서 지표는 $1$ 을 $p$ 번 더했을 때 $0$ 이 되게 하는 가장 작은 자연수이다. 즉, 지표 $p$ 는 다음과 같다. 
 
@@ -172,7 +172,7 @@
 
 # Vector Space
 
-!!! tldr "벡터공간(vector space), 선형공간(linear space)"
+!!! def "벡터공간(vector space), 선형공간(linear space)"
 
     체 $\mathbf{F}$ 에서의 벡터공간 $\mathbf{V}$ 는 두 이항연산 합과 스칼라곱 
     
@@ -270,7 +270,7 @@
     
     그래서 임의의 체 $\mathbf{F}$ 는 자기 자신 위에서 벡터공간이다.
 
-!!! tldr "벡터(vector)"
+!!! def "벡터(vector)"
 
     벡터공간의 원소이다. 
 
@@ -296,7 +296,7 @@
 
     그러면 두 벡터 $(a_1, a_2), (b_1, b_2)$ 의 합은 $(a_1 + b_1, a_2 + b_2)$ 로 표현할 수 있고, $t$ 에 대한 스칼라곱은 $(ta_1, ta_2)$ 로 표현할 수 있다. 2차원 평면에서와 비슷하게 3차원 공간에서도 벡터 합과 스칼라 곱을 정의할 수 있다.
 
-!!! tldr "벡터로 표현하는 직선의 방정식"
+!!! def "벡터로 표현하는 직선의 방정식"
 
     시점이 $O$ 이고 종점이 각각 $A, B$ 인 두 벡터 $u, v$ 에 대하여 두 점 $A, B$ 를 지나는 직선의 방정식은 다음과 같다.
 
@@ -332,7 +332,7 @@
 
     이다.
 
-!!! tldr "벡터로 표현하는 공간의 방정식"
+!!! def "벡터로 표현하는 공간의 방정식"
 
     시점이 $A$ 이고 종점이 $B, C$ 인 벡터 $u, v$ 에 대하여 공간의 세 점 $A, B, C$ 으로 형성되는 공간의 방정식은 다음과 같다.
 
@@ -354,7 +354,7 @@
 
     로 표현할 수 있다.
 
-!!! tldr "$n$순서쌍($n$-tuple)"
+!!! def "$n$순서쌍($n$-tuple)"
 
     $a_1, a_2, \dots, a_n$ 이 체 $\mathbf{F}$ 의 원소일때 다음과 같은 수학적 대상을 체 $\mathbf{F}$ 의 $n$순서쌍이라 한다.
     
@@ -396,13 +396,13 @@
 
 # Matrix
 
-!!! tldr "행벡터(row vector)"
+!!! def "행벡터(row vector)"
 
     행벡터는 다음과 같은 체 $\mathbf{F}$ 에 대한 $\mathbf{F} ^{n}$ 의 벡터이다.
 
     $$ \begin{pmatrix} a_1& a_2& \dots& a_n \end{pmatrix} $$ 
 
-!!! tldr "열벡터(column vector)"
+!!! def "열벡터(column vector)"
 
     열벡터는 다음과 같은 체 $\mathbf{F}$ 에 대한 $\mathbf{F} ^{n}$ 의 벡터이다.
 
@@ -410,7 +410,7 @@
 
 - 보통 $\mathbf{F} ^{n}$ 의 벡터를 행벡터보다 이러한 열벡터로 표현한다. 
 
-!!! tldr "행렬(matrix)"
+!!! def "행렬(matrix)"
 
     체 $\mathbf{F}$ 의 성분을 가져온 $m \times n$ 행렬은 다음과 같은 $\forall a _{ij} \in \mathbf{F} (1 \leq i \leq m, 1 \leq j \leq n)$ 에 대한 수학적 대상이다.
 
@@ -448,11 +448,11 @@
 
 ## Zero Matrix, Identity Matrix
 
-!!! tldr "영행렬(zero matrix)"
+!!! def "영행렬(zero matrix)"
 
     모든 성분이 $0$ 인 $m \times n$ 행렬을 영행렬(zero matrix) 라고 하고 $O$ 라고 표기한다.
 
-!!! tldr "항등행렬(identity matrix, unit matrix)"
+!!! def "항등행렬(identity matrix, unit matrix)"
 
     항등행렬은 대각성분이 $1$ 이고 나머지 성분이 $0$ 인 정사각행렬이다.
     
@@ -468,7 +468,7 @@
 
 ## Zero Vector
 
-!!! tldr "정리 1.1"
+!!! def "정리 1.1"
 
     벡터 합의 소거법칙 : 벡터 공간 $\mathbf{V}$ 와 $x, y, z \in \mathbf{V}$ 에 대하여 다음이 성립한다.
 
@@ -484,7 +484,7 @@
 
     이다. ■ 
 
-!!! tldr "영벡터(zero vector)"
+!!! def "영벡터(zero vector)"
 
     벡터공간 $\mathbf{V}$ 의 임의의 원소 $\forall x \in \mathbf{V}$ 에 대하여 벡터공간의 성질 3) 
 
@@ -494,7 +494,7 @@
 
 - 즉, 벡터공간에서 덧셈에 대한 항등원이 영벡터인 것이다. 
 
-!!! tldr ""
+!!! def ""
 
     벡터공간의 영벡터는 유일하다. 
 
@@ -512,7 +512,7 @@
 
 ## Inverse Vector
 
-!!! tldr ""
+!!! def ""
 
     덧셈에 대한 역벡터(additive inverse) : 벡터공간 $\mathbf{V}$ 에 대한 $\forall x \in \mathbf{V}$ 에 대하여 벡터공간의 성질 4) 
 
@@ -522,7 +522,7 @@
 
 - 벡터공간 $\mathbf{V}$ 의 원소 $x \in \mathbf{V}$ 에 대한 덧셈에 대한 역벡터는 $-$ 를 붙여서 $-x$ 로 표기한다.
 
-!!! tldr ""
+!!! def ""
 
     덧셈에 대한 역벡터는 유일하다. 
 
@@ -538,7 +538,7 @@
 
     이다. ■ 
 
-!!! tldr "정리 1.2"
+!!! def "정리 1.2"
 
     체 $\mathbf{F}$ 위의 임의의 벡터공간 $\mathbf{V}$ 에 대하여 다음이 성립한다. 
 
@@ -564,11 +564,11 @@
 
 ## Triangular Matrix
 
-!!! tldr "삼각행렬(triangular matrix)"
+!!! def "삼각행렬(triangular matrix)"
 
     삼각행렬은 행렬의 대각성분 위쪽이나 아래쪽 항들이 모두 $0$ 인 행렬이다.
 
-!!! tldr "상삼각행렬, 위삼각행렬(upper triangular matrix)"
+!!! def "상삼각행렬, 위삼각행렬(upper triangular matrix)"
 
     상삼각행렬은 행렬의 대각성분 아래의 모든 성분이 $0$ 인행렬이다.
 
@@ -578,13 +578,13 @@
 
     $$  \begin{pmatrix} 1 & 2 & 3 & 4\\ 0 & 5 & 3 & 4\\ 0 & 0 & 3 & 4\\ \end{pmatrix} $$
 
-!!! tldr "하삼각행렬(lower triangular matrix)"
+!!! def "하삼각행렬(lower triangular matrix)"
 
     하삼각행렬은 행렬의 대각성분 위의 모든 성분이 $0$ 인행렬이다.
 
 ## Diagonal Matrix
 
-!!! tldr "대각행렬(diagonal matrix)"
+!!! def "대각행렬(diagonal matrix)"
 
     대각행렬은 대각성분을 제외한 모든 성분이 $0$ 인 정사각행렬이다. 
 
@@ -604,7 +604,7 @@
 
 ## Trace
 
-!!! tldr "대각합(trace)"
+!!! def "대각합(trace)"
 
     $n \times n$ 행렬 $M$ 의 대각합은 모든 대각성분의 합 
 
@@ -616,7 +616,7 @@
 
 # Subspace
 
-!!! tldr "부분공간(subspace)"
+!!! def "부분공간(subspace)"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 부분집합 $\mathbf{W}$ 가 $\mathbf{V}$ 에서 정의한 합과 스칼라 곱을 가진 $\mathbf{F}$-벡터공간일 때 $\mathbf{W}$ 를 $\mathbf{V}$ 의 부분공간이라 한다.
 
@@ -624,13 +624,13 @@
 
 - 임의의 벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{V}$ 와 $\{0\}$ 은 부분공간이다. 특히 $\{0\}$ 은 점공간인 부분공간(zero subspace)이다.
 
-!!! tldr "점공간(zero vector space)"
+!!! def "점공간(zero vector space)"
 
     점공간은 영벡터 $0$ 만을 포함하는 벡터공간 $\{0\}$ 이다.
 
 - 이 벡터공간의 기저는 공집합이다. 그러므로 점공간은 $0$차원 벡터공간이다. 모든 벡터공간은 점공간과 동형인 부분공간을 갖는다.
 
-!!! tldr "정리 1.3"
+!!! def "정리 1.3"
 
     벡터공간 $\mathbf{V}$ 와 부분집합 $\mathbf{W}$ 에 대하여 $\mathbf{W}$ 가 다음 조건을 만족하는 것과 $\mathbf{V}$ 의 부분공간인 것은 동치이다.
 
@@ -688,7 +688,7 @@
 
     - 벡터 $u, v$ 와 스칼라 $s, t$ 에 대한 표현 $su+tv$ 는 벡터공간을 다룰 때 중요하다.
 
-!!! tldr "정리 1.4"
+!!! def "정리 1.4"
 
     벡터공간 $\mathbf{V}$ 의 임의의 교집합은 $\mathbf{V}$ 의 부분공간이다. 
 
@@ -702,7 +702,7 @@
 
 ## Transpose Matrix
 
-!!! tldr "전치행렬(transpose matrix)"
+!!! def "전치행렬(transpose matrix)"
 
     $m \times n$ 행렬 $A$ 에 대한 전치행렬 $A ^{\operatorname{T} }$ 는 $A$ 의 행과 열을 바꾸어 얻은 $n \times m$ 행렬 $(A ^{\operatorname{T} }) _{ij} = A _{ji}$ 이다. 
 
@@ -710,7 +710,7 @@
 
     $$ \begin{pmatrix} 1 & -2 &3\\ 0 & 5 &-1 \end{pmatrix} ^{\operatorname{T} } = \begin{pmatrix} 1 & 0\\ -2 & 5\\ 3 & -1\\ \end{pmatrix} $$
 
-!!! tldr "대칭행렬(symmetric matrix)"
+!!! def "대칭행렬(symmetric matrix)"
 
     대칭행렬은 $A ^{\operatorname{T} } = A$ 인 행렬이다.
 
@@ -720,7 +720,7 @@
 
     $$ \begin{pmatrix} 1 & 2\\ 2 & 3 \end{pmatrix} = \begin{pmatrix} 1 & 2\\ 2 & 3 \end{pmatrix} $$
 
-!!! tldr ""
+!!! def ""
 
     $\mathbf{M} _{n \times n}(\mathbf{F} )$ 의 모든 대칭행렬의 집합 $\mathbf{W}$ 은 부분공간이다.
 
@@ -730,7 +730,7 @@
 
 # Linear Combination
 
-!!! tldr "일차결합(linear combination)"
+!!! def "일차결합(linear combination)"
 
     벡터공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대한 유한개의 벡터 $u_1, u_2, \dots, u_n \in S$ 와 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 벡터
 
@@ -746,7 +746,7 @@
 
 ## Span
 
-!!! tldr "생성공간(linear span, linear hull)"
+!!! def "생성공간(linear span, linear hull)"
 
     생성공간은 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대하여
 
@@ -766,7 +766,7 @@
 
     형태의 집합 $\text{span}(A) = \{(a, b, 0) \in \R ^{3} : a, b \in \R \}$ 이다. 이 생성공간 $\text{span}(A)$ 는 $xy$평면이고 $\R ^{3}$ 의 부분공간이다.
 
-!!! tldr "정리 1.5"
+!!! def "정리 1.5"
 
     벡터공간 $\mathbf{V}$ 의 임의의 부분집합 $S$ 의 생성공간 $\text{span}(S)$ 는 $S$ 를 포함하는 $\mathbf{V}$ 의 부분공간이다.
     
@@ -810,7 +810,7 @@
 
     이다. ■ 
 
-!!! tldr "벡터공간을 생성하는 집합(generation set)"
+!!! def "벡터공간을 생성하는 집합(generation set)"
 
     벡터공간 $\mathbf{V}$ 의 부분집합 $S$ 에 대하여 $\text{span}(S)=\mathbf{V}$ 이면 $S$ 는 $\mathbf{V}$ 를 생성한다.
 
@@ -844,11 +844,11 @@
 
 ## Linearly Dependent
 
-!!! tldr "영벡터의 자명한 표현(trivial representation of $0$)"
+!!! def "영벡터의 자명한 표현(trivial representation of $0$)"
 
     임의의 벡터 $u_1, u_2, \dots, u_n$ 에 대하여 $a_1 = a_2 = \dots = a_n = 0$ 이면 $a_1u_1 + a_2u_2 + \dots + a_nu_n = 0$ 인데 이것은 너무 자명하므로 영벡터의 자명한 표현이라 한다.
 
-!!! tldr "일차종속(linearly dependent) "
+!!! def "일차종속(linearly dependent) "
 
     벡터공간 $\mathbf{V}$ 의 부분집합 $S$ 에 대하여 
     
@@ -902,7 +902,7 @@
 
 ## Linearly Independent
 
-!!! tldr "일차독립(linearly independent)"
+!!! def "일차독립(linearly independent)"
 
     벡터공간의 부분집합 $S$ 가 임의의 서로 다른 벡터 $u_1, u_2, \dots, u_n \in S$ 와 스칼라 $a_1, a_2, \dots, a_n$ 에 대하여 
     
@@ -918,7 +918,7 @@
 
 ## Properties of Linear Combination
 
-!!! tldr ""
+!!! def ""
 
     다음이 벡터공간에서 성립한다.
 
@@ -948,7 +948,7 @@
 
         와 같다. 따라서 $a=b=c=d=0$ 이므로 $S$ 는 일차독립이다.
 
-!!! tldr "정리 1.6"
+!!! def "정리 1.6"
 
     $\mathbf{V}$ 가 벡터공간이고 $S_1 \subseteq S_2 \subseteq \mathbf{V}$ 일 때 $S_1$ 이 일차종속이면 $S_2$ 도 일차종속이다. 
 
@@ -968,7 +968,7 @@
 
     에서 그 계수들이 반드시 $b_1 = b_2 = \dots = b_n = 0$ 을 만족하는데, 이는 가정과 모순이다. 그러므로 $S_2$ 는 일차종속이다. ■ 
     
-!!! tldr "정리 1.6 따름정리"
+!!! def "정리 1.6 따름정리"
 
     $\mathbf{V}$ 가 벡터공간이고 $S_1 \subseteq S_2 \subseteq \mathbf{V}$ 일 때 $S_2$ 이 일차독립이면 $S_1$ 도 일차독립이다. 
 
@@ -988,7 +988,7 @@
 
     에서 그 계수들이 반드시 $a_1 = a_2 = \dots = a_n = 0$ 을 만족하는데, 이는 모순이다. 그러므로 $S_1$ 는 일차독립이다. ■ 
     
-!!! tldr ""
+!!! def ""
 
     무한체의 벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}$ 를 생성하는 집합 $S$ 가 일차독립이면 최소생성집합이다.
 
@@ -1004,7 +1004,7 @@
 
     이므로 $S' = \{u_1, u_2, u_4\} \subsetneq S$ 가 $S$ 와 같은 공간을 생성한다. 그러므로 $S$ 로 벡터공간을 표현하는 것은 비효율적이다.
 
-!!! tldr "정리 1.7"
+!!! def "정리 1.7"
 
     집합 $S$ 에 대하여 다음 명제들은 동치이다. 
 
@@ -1038,7 +1038,7 @@
 
 # Basis
 
-!!! tldr "기저(basis)"
+!!! def "기저(basis)"
 
     벡터공간 $\mathbf{V}$ 와 부분집합 $\beta$ 에 대하여 $\beta$ 가 일차독립이고 $\mathbf{V} = \text{span}(\beta )$ 이면 $\beta$ 를 $\mathbf{V}$ 의 기저라고 한다.
 
@@ -1056,7 +1056,7 @@
 
 ## Standard Basis
 
-!!! tldr "표준기저(Standard basis, Natural basis, Canonical basis)"
+!!! def "표준기저(Standard basis, Natural basis, Canonical basis)"
 
     벡터공간의 표준기저는 단 하나의 성분이 $1$ 이고 나머지 성분이 $0$ 인 벡터들의 집합이다.
 
@@ -1100,13 +1100,13 @@
 
         $$ e _{11} = \begin{pmatrix} 1&0\\ 0&0\\ \end{pmatrix}, e _{12} = \begin{pmatrix} 0&1\\ 0&0\\ \end{pmatrix}, e _{21} = \begin{pmatrix} 0 & 0\\ 1 & 0\\ \end{pmatrix}, e _{22} = \begin{pmatrix} 0 & 0\\ 0 & 1\\ \end{pmatrix} $$
 
-!!! tldr ""
+!!! def ""
 
     $\mathbf{F} ^{n}$ 에서 성분을 가져온 $n \times n$ 항등행렬 $I_n$ 과 $\mathbf{F} ^{n}$ 의 표준기저 $e_1, e_2, \dots, e_n$ 에 대하여 다음이 성립한다. 
 
     $$ I_n = (e_1, e_2, \dots, e_n) $$
 
-!!! tldr "정리 1.8"
+!!! def "정리 1.8"
 
     벡터공간 $\mathbf{V}$ 와 서로 다른 벡터 $u_1, u_2, \dots, u_n \in \mathbf{V}$ 에 대한 집합 $\beta = \{u_1, u_2, \dots, u_n\}$ 가 $\mathbf{V}$ 에 대하여 다음은 동치이다.
 
@@ -1132,7 +1132,7 @@
 
     이다. ■ 
 
-!!! tldr "정리 1.9"
+!!! def "정리 1.9"
 
     유한집합 $S$ 가 벡터공간 $\mathbf{V}$ 를 생성하면 $S$ 의 부분집합 중에 $\mathbf{V}$ 의 기저가 존재한다. 
 
@@ -1176,7 +1176,7 @@
 
 ## Replacement Theorem
 
-!!! tldr "정리 1.10 대체정리(replacement theorem)"
+!!! def "정리 1.10 대체정리(replacement theorem)"
 
     집합 $G$ 가 벡터공간 $\mathbf{V}$ 에 대하여 $\text{span}(G) = \mathbf{V}$ 이고, $L \subset \mathbf{V}$ 이 일차독립이면 다음이 성립한다.
 
@@ -1250,7 +1250,7 @@
 
     라고 말할 수 있다.
 
-!!! tldr "정리 1.10 따름정리 1"
+!!! def "정리 1.10 따름정리 1"
 
     벡터공간 $\mathbf{V}$ 가 유한집합인 기저를 포함하면 $\mathbf{V}$ 의 모든 기저는 유한집합이며, 기수가 같다.
 
@@ -1266,7 +1266,7 @@
 
 # Dimension
 
-!!! tldr "차원(dimension)"
+!!! def "차원(dimension)"
 
     벡터공간의 기저의 기수이다.
 
@@ -1312,7 +1312,7 @@
 
     이다.
 
-!!! tldr "유한차원(finite dimension)"
+!!! def "유한차원(finite dimension)"
 
     기저가 유한집합인 벡터공간이다.
 
@@ -1326,7 +1326,7 @@
 
     $$ \not \exists S \subset \mathbf{V} \text{ s.t. } |S| > \dim(\mathbf{V} ) \land S \text{ is linearly independent} $$
 
-!!! tldr "무한차원(infinite dimension)"
+!!! def "무한차원(infinite dimension)"
 
     기저가 무한집합인 벡터공간이다.
 
@@ -1334,7 +1334,7 @@
 
     벡터공간 $\mathbf{P} (\mathbf{F} )$ 는 무한집합 $\{x ^{n} : n \in \N\} = \{1, x, x ^{2}, \dots\}$ 을 기저로 가지므로 무한차원이다. 
 
-!!! tldr "정리 1.10 따름정리 2"
+!!! def "정리 1.10 따름정리 2"
 
     벡터공간 $\mathbf{V}$ 에 대하여 다음이 성립한다.
 
@@ -1386,7 +1386,7 @@
 
 ## Relation between Linear Dependent, Basis, Span
 
-!!! tldr ""
+!!! def ""
 
     벡터공간의 모든 일차독립 집합을 $D$, 모든 기저의 집합을 $B$, 모든 생성집합을 $S$ 라고 하면 다음이 성립한다. 
 
@@ -1394,7 +1394,7 @@
 
 - 지금까지의 논의를 통하여 이 정리가 성립함을 자명하게 알 수 있다.
 
-!!! tldr ""
+!!! def ""
 
     벡터공간의 어떤 일차독립 집합을 $D$, 어떤 기저를 $B$, 어떤 생성집합을 $S$ 라고 하면 다음이 성립한다. 
 
@@ -1404,7 +1404,7 @@
 
 ## Dimension and Basis of Subspace
 
-!!! tldr "정리 1.11"
+!!! def "정리 1.11"
 
     유한차원 $\mathbf{V}$ 의 부분공간 $\mathbf{W}$ 에 대하여 다음이 성립한다.
     
@@ -1432,7 +1432,7 @@
 
     위의 예시와 마찬가지로 $\R ^{3}$ 의 부분공간의 차원은 $0,1,2,3$ 이 될 수 있고 $2$차원인 부분공간은 유클리드 공간에서 평면으로, $3$차원 부분공간을 유클리드 공간 전체로 볼 수 있다.
 
-!!! tldr "정리 1.11 따름정리"
+!!! def "정리 1.11 따름정리"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}$ 에 대하여 $\mathbf{W}$ 의 임의의 기저를 확장하여 $\mathbf{V}$ 의 기저를 얻을 수 있다.
 
@@ -1456,7 +1456,7 @@
 
     아래의 논의는 순서관계를 포함관계로 상정한다.
 
-!!! tldr "극대(maximal)"
+!!! def "극대(maximal)"
 
     집합족 $\mathcal{F}$ 에 대하여 $S \in \mathcal{F}, M \subset S \implies S = M$ 이면 $M$ 을 포함관계에 의한 극대라고 한다.
 
@@ -1472,7 +1472,7 @@
 
     이기 때문이다.
 
-!!! tldr "사슬(chain)"
+!!! def "사슬(chain)"
 
     집합족 $\mathcal{C}$ 에 대하여 
 
@@ -1486,7 +1486,7 @@
 
     집합 $A_n = \{1,2,\dots,n\}$ 에 대한 집합족 $\mathcal{C} = \{A_n : n = 1,2,3, \dots\}$ 은 사슬이다.
 
-!!! tldr "하우스도르프 극대원리(Hausdorff maximal principle)"
+!!! def "하우스도르프 극대원리(Hausdorff maximal principle)"
 
     집합족 $\mathcal{F}$ 의 임의의 사슬 $\mathcal{C}$ 에 대하여 $\exists U \in \mathcal{F} \text{ s.t. } \mathcal{C} \subset U$ 이면 $\mathcal{F}$ 에는 극대원소가 있다. 
 
@@ -1494,7 +1494,7 @@
 
 - 하우스도르프 극대원리는 집합족이 특정 조건을 만족하면 극대원소를 가짐을 말해준다.
 
-!!! tldr ""
+!!! def ""
 
     벡터공간의 기저는 일차독립인 극대 부분집합이다.
 
@@ -1504,7 +1504,7 @@
     
     $v \in \mathbf{V}, v \not\in \beta$ 이면 $\text{span}(\beta ) = \mathbf{V}$ 에서 [정리 1.7](#97eff1e4d) 에 의하여 $\beta \cup \{v\}$ 는 일차종속이므로 $\beta$ 가 일차독립인 극대 부분집합이다. ■ 
 
-!!! tldr "정리 1.12"
+!!! def "정리 1.12"
 
     벡터공간 $\mathbf{V}$ 와 $\text{span}(S) = \mathbf{V}$ 인 $S \subset \mathbf{V}$ 에 대하여 $\beta$ 가 $S$ 의 일차독립인 극대 부분집합이면 $\beta$ 는 $\mathbf{V}$ 의 기저이다.
 
@@ -1514,7 +1514,7 @@
 
     그러므로 $S \subset \text{span}(\beta )$ 이다. 이때 $\text{span}(S) = \mathbf{V}$ 이므로 [정리 1.5](#aad599671) 에 의하여 $\text{span}(S) = \mathbf{V} \subset \text{span}(\beta )$ 이다. $\text{span}(\beta ) \subset \mathbf{V}$ 은 자명하므로 $\text{span}(\beta ) = \mathbf{V}$ 이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     일차독립인 극대 부분집합(maximal linearly independent subset) : 벡터공간 $\mathbf{V}$ 의 부분집합 $S$ 에 대하여 $S$ 의 부분집합 $B$ 가 다음을 만족하면 일차독립인 극대 부분집합이다.
 
@@ -1524,7 +1524,7 @@
 
 - $S$ 가 $\mathbf{V}$ 를 생성한다면, 이 정의는 정리 1.12 에 의하여 기저의 정의와 같다. 
 
-!!! tldr ""
+!!! def ""
 
     벡터공간의 기저와 벡터공간의 일차독립인 극대부분집합은 동치이다. 
 
@@ -1532,7 +1532,7 @@
 
 - 이 정리는 모든 벡터공간마다 일차독립인 극대부분집합이 존재함을 보이는 것이 모든 벡터공간이 기저를 가짐을 보이는 것과 같다는 것을 말해준다. 그러므로 지금의 최대 목표인 "모든 벡터공간에 기저가 존재한다" 를 보이기 위하여 바로 다음의 정리를 증명하자.
 
-!!! tldr "정리 1.13"
+!!! def "정리 1.13"
 
     벡터공간은 일차독립인 극대 부분집합을 갖는다. 
 
@@ -1550,7 +1550,7 @@
 
 ## Vector Space has a Basis
 
-!!! tldr "정리 1.13 따름정리"
+!!! def "정리 1.13 따름정리"
 
     벡터공간은 기저를 갖는다.
 
@@ -1564,7 +1564,7 @@
 
     [정리 1.13](#608799181) 에서 [벡터공간의 기저와 벡터공간의 일차독립인 극대부분집합은 동치이므로](#a437f748d) 증명이 끝난다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     무한차원 벡터공간의 모든 기저는 기수가 같다.
 
@@ -1594,7 +1594,7 @@
 
     이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     무한차원 벡터공간 $\mathbf{V}$ 에 대하여 다음은 동치이다.
     
@@ -1606,7 +1606,7 @@
 
 - 증명 
 
-!!! tldr ""
+!!! def ""
 
     벡터공간 $\mathbf{V}$ 의 부분집합 $S_1, S_2$ 에 대하여 $S_1 \subset S_2$ 이고, $S_1$ 이 일차독립이고, $\text{span}(S_2) = \mathbf{V}$ 이면 $S_1 \subset \beta \subset S_2$ 인 기저 $\beta$ 가 존재한다.
 
@@ -1614,7 +1614,7 @@
 
 - 증명
 
-!!! tldr ""
+!!! def ""
 
     벡터공간 $\mathbf{V}$ 의 기저 $\beta$ 와 $\mathbf{V}$ 의 일차독립인 부분집합 $S$ 에 대하여 $S \cup S_1$ 가 $\mathbf{V}$ 의 기저인 $S_1 \subset \beta$ 이 존재한다.
 
@@ -1624,7 +1624,7 @@
 
 # Exercises
 
-!!! tldr "문제 1.4-14"
+!!! def "문제 1.4-14"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 부분집합 $S_1, S_2$ 에 대하여 $\text{span} (S_1 \cup S_2) = \text{span} (S_1) + \text{span} (S_2)$ 이다.
 

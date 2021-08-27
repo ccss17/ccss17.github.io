@@ -6,7 +6,7 @@
 
 # Elementary Operation
 
-!!! tldr "기본행[열]연산(elementary row[column] operation)"
+!!! def "기본행[열]연산(elementary row[column] operation)"
 
     체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 와 스칼라 $a \in \mathbf{F}$ 에 대하여 $A$ 의 행[열] 에 대한 다음 세 연산이다. 
 
@@ -20,7 +20,7 @@
 
 ## Elementary Matrix
 
-!!! tldr "기본행렬(elementary matrix)"
+!!! def "기본행렬(elementary matrix)"
 
     항등행렬에 기본연산을 적용하여 얻은 행렬이다.
 
@@ -32,7 +32,7 @@
 
     $$ E = \begin{pmatrix} 0&1&0\\ 1&0&0\\ 0&0&1\\ \end{pmatrix} $$
 
-!!! tldr "기본행[열]역연산(elementary row[column] inverse operation)"
+!!! def "기본행[열]역연산(elementary row[column] inverse operation)"
 
     체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 와 스칼라 $a \in \mathbf{F}$ 에 대하여 $A$ 의 기본행[열]연산 에 대한 다음 세 연산이다. 
 
@@ -48,7 +48,7 @@
 
 ## Properties of Elementary Operation, Elementary Matrix
 
-!!! tldr "정리 3.1"
+!!! def "정리 3.1"
 
     행렬 $A \in \mathbf{M}_{m \times n}(\mathbf{F} )$ 에 기본행[열]연산을 하여 행렬 $B$ 를 얻었다면, $B = EA[B = AE]$ 가 되는 $m \times m[n \times n]$ 기본행렬 $E$ 가 존재한다. 이때 $A$ 에서 $B$ 를 얻은 기본행[열]연산을 $I_m[I_n]$ 에 똑같이 적용하면 행렬 $E$ 가 된다. 
 
@@ -62,7 +62,7 @@
 
     1형, 2형, 3형 기본행연산에 대하여 정리가 참임을 증명한 다음 전치행렬으로 열연산을 행연산으로 바꾸면 기본열연산에 대한 증명도 끝난다.
 
-!!! tldr "정리 3.2"
+!!! def "정리 3.2"
 
     기본행렬은 가역이다.
 
@@ -80,7 +80,7 @@
 
 # Matrix Rank 
 
-!!! tldr "행렬의 랭크(matrix rank)"
+!!! def "행렬의 랭크(matrix rank)"
 
     행렬 $A \in \mathbf{M}_{m \times n}(\mathbf{F} )$ 와 $\mathbf{L}_{A} : \mathbf{F} ^{n} \to \mathbf{F} ^{m}$ 에 대하여 다음과 같이 정의한다.
 
@@ -90,7 +90,7 @@
 
 ## Properties of Matrix Rank
 
-!!! tldr ""
+!!! def ""
 
     $$ A \in \mathbf{M}_{n \times n}(\mathbf{F}) : A \text{ is invertible } \iff \text{rank} (A) = n $$
 
@@ -110,7 +110,7 @@
 
     항등행렬 $I_n$ 의 랭크는 $n$ 이다. ■ 
 
-!!! tldr "정리 3.3"
+!!! def "정리 3.3"
 
     유한차원 벡터공간 사이에서 정의된 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 와 $\mathbf{V} , \mathbf{W}$ 의 순서기저 $\beta , \gamma$ 에 대하여 $\text{rank} (\mathbf{T} ) = \text{rank} ([\mathbf{T} ]^{\gamma}_{\beta} )$ 이다.
 
@@ -118,7 +118,7 @@
 
     [이 정리](../LinearTransformation/#cf9e1b36c) 에 의하여 증명이 끝난다. ■ 
 
-!!! tldr "정리 3.4"
+!!! def "정리 3.4"
 
     $m \times n$ 행렬 $A$, $m \times m$ 가역행렬 $P$, $n \times n$ 가역행렬 $Q$ 에 대하여 다음이 성립한다. 
 
@@ -156,7 +156,7 @@
 
     $$ \text{rank} (PAQ) = \text{rank} (AQ) = \text{rank} (A) \tag*{■} $$
 
-!!! tldr "정리 3.4 따름정리"
+!!! def "정리 3.4 따름정리"
 
     행렬의 기본행[열]연산은 랭크를 보존한다.
 
@@ -166,7 +166,7 @@
 
 - 우리는 행렬의 랭크를 보존하는 행렬연산 하나를 밝혀내었다. 따라서 랭크를 구하기 쉽게 변형된 행렬을 알아본다. 
 
-!!! tldr "정리 3.5"
+!!! def "정리 3.5"
 
     임의의 행렬의 랭크는 열들로 구성된 극대 일차독립 집합의 기수이다.
 
@@ -200,7 +200,7 @@
 
     $$ \text{rank} (A) = \dim \Bigg (\text{span} \Bigg (\Bigg \{\begin{pmatrix} 1\\ 0\\ 1\\ \end {pmatrix}, \begin{pmatrix} 0\\ 1\\ 0\\ \end{pmatrix}, \begin{pmatrix} 1\\ 1\\ 1\\ \end{pmatrix} \Bigg \}\Bigg ) \Bigg ) = 2 $$
 
-!!! tldr ""
+!!! def ""
 
     행렬 $A \in \mathbf{M}_{m \times n}(\mathbf{F})$ 에 대하여 다음이 성립한다.
 
@@ -214,7 +214,7 @@
     
 ## Finding Matrix Rank
 
-!!! tldr ""
+!!! def ""
 
     다음 행렬 $B$ 에 대하여 $\text{rank} (B) = r \implies \text{rank} (B') = r-1$ 이다.
 
@@ -232,7 +232,7 @@
 
     그러므로 $\text{rank} (B) = r \implies \text{rank} (B') = r-1$ 이다.
 
-!!! tldr ""
+!!! def ""
 
     다음과 같은 $m \times n$ 행렬 $B'$ 와 $D$, 그리고 $(m + 1) \times (n + 1)$ 행렬 $B$ 와 $D$ 에 대하여 $B'$ 에 기본연산을 유한 번 적용하여 그것을 $D'$ 로 변환할 수 있으면, $B$ 에 기본연산을 유한 번 적용하여 그것을 $D$ 로 변환할 수 있다.
 
@@ -244,7 +244,7 @@
 
     더 나아가서 그 기본연산은 $B'$ 을 $D'$ 으로 변환시키는 기본연산과 같다.
 
-!!! tldr "정리 3.6"
+!!! def "정리 3.6"
 
     $A \in \mathbf{M}_{m \times n}$ 에 대하여 $\text{rank} (A) = r$ 이면 다음이 성립한다.
 
@@ -312,7 +312,7 @@
 
     3) 은 [정리 3.4 따름정리](#108500177) 에서 바로 나온다. ■ 
 
-!!! tldr "정리 3.6 따름정리 1"
+!!! def "정리 3.6 따름정리 1"
 
     $A \in \mathbf{M}_{m \times n}, \text{rank} (A) = r$ 인 행렬 $A$ 에 대하여 다음을 만족하는 $m \times m$ 가역행렬 $B$ 와 $n \times n$ 가역행렬 $C$ 가 존재한다. 
 
@@ -332,7 +332,7 @@
 
     또한 $D = BAC$ 이다. ■ 
 
-!!! tldr "정리 3.6 따름정리 2"
+!!! def "정리 3.6 따름정리 2"
 
     $m \times n$ 행렬 $A$ 에 대하여 다음이 성립한다.
 
@@ -366,7 +366,7 @@
 
     3) 은 정리 3.5 와 2) 에서 바로 나온다. ■ 
 
-!!! tldr "정리 3.6 따름정리 3"
+!!! def "정리 3.6 따름정리 3"
 
     가역행렬은 기본행렬의 곱이다.
 
@@ -388,7 +388,7 @@
 
 ## Rank of Matrix Multiplication
 
-!!! tldr "정리 3.7"
+!!! def "정리 3.7"
 
     유한차원 벡터공간 $\mathbf{V} , \mathbf{W} , \mathbf{Z}$ 사이에 정의 된 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 와 행렬곱 $AB$ 이 정의된 두 행렬 $A, B$ 에 대하여 다음이 성립한다. 
 
@@ -458,13 +458,13 @@
 
 # Finding Inverse Matrix
 
-!!! tldr "첨가행렬(augmented matrix)"
+!!! def "첨가행렬(augmented matrix)"
 
     $m \times n$ 행렬 $A$ 와 $m \times p$ 행렬 $B$ 에 대한 첨가행렬 $(A|B)$ 는 $m \times (n + p)$ 행렬 $(AB)$ 이다.
 
     $(AB)$ 는 처음 $n$ 개 열이 $A$ 의 열이고, 나머지 $p$ 개 열이 $B$ 의 열인 행렬이다.
 
-!!! tldr "문제 3.2-15"
+!!! def "문제 3.2-15"
 
     $n$ 개의 행을 가지는 행렬 $A, B$ 와 $m \times n$ 행렬 $M$ 에 대하여 다음이 성립한다. 
 
@@ -488,7 +488,7 @@
 
     $$ M(A|B) = (MA|MB) \tag*{■} $$
 
-!!! tldr ""
+!!! def ""
 
     $n \times n$ 가역행렬 $A$ 와 첨가행렬 $(A|I_n)$ 에 대하여 다음이 성립한다.
     
@@ -582,7 +582,7 @@
 
         $$ \mathbf{T} ^{-1}(a_0 + a_1x + a_2x ^{2}) = (a_0 - a_1) + (a_1 - 2a_2)x + a_2 x ^{2} $$
 
-!!! tldr ""
+!!! def ""
 
     $u, v \in \mathbf{F} ^{2}$ 에 대한 $\{u, v\}$ 와 행렬 $\begin{pmatrix} u\\ v\\ \end{pmatrix}$ 에 대하여 다음이 성립한다.
 
@@ -624,7 +624,7 @@
 
 # System of Linear Equation
 
-!!! tldr "연립일차방정식(system of linear equation)"
+!!! def "연립일차방정식(system of linear equation)"
 
     $1 \leq i \leq m, 1 \leq j \leq n$ 에 대하여 스칼라 $a _{ij}, b_i \in \mathbf{F}$ 와 변수 $x_j \in \mathbf{F}$ 에 대한 다음의 연립방정식을 체 $\mathbf{F}$ 위 $n$ 개의 미지수와 $m$ 개의 일차방정식으로 이루어진 연립일차방정식으로 정의한다. 
 
@@ -636,7 +636,7 @@
 
     $$ a _{m1}x_1 + a _{m2}x_2 + \dots + a _{mn}x_n = b_m $$
 
-!!! tldr "계수행렬(coefficient matrix)"
+!!! def "계수행렬(coefficient matrix)"
 
     $n$ 개의 미지수와 $m$ 개의 일차방정식으로 이루어진 연립일차방정식의 계수로 구성된 다음의 $m \times n$ 행렬이다.
 
@@ -644,35 +644,35 @@
 
 - $n$ 개의 미지수와 $m$ 개의 일차방정식에 대한 계수행렬은 $m \times n$ 행렬이다. 이는 선형변환 $\mathbf{L}_{A}: \mathbf{F} ^{n} \to \mathbf{F} ^{m}$ 에 대응된다. 
 
-!!! tldr "연립일차방정식의 행렬표현"
+!!! def "연립일차방정식의 행렬표현"
 
     계수행렬 $A$ 와 $x = \begin{pmatrix} x_{1}\\ x_{2}\\ \vdots\\ x_{n}\\ \end{pmatrix}, b = \begin{pmatrix} b_{1}\\ b_{2}\\ \vdots\\ b_{n}\\ \end{pmatrix}$ 에 대한 연립일차방정식의 행렬표현은 다음과 같다. 
 
     $$ Ax = b $$
 
-!!! tldr "해(solution) "
+!!! def "해(solution) "
 
     연립일차방정식의 해는 $Ax = b$ 에 대하여 $As = b$ 를 만족하는 $n$순서쌍 $s = \begin{pmatrix} s_{1}\\ s_{2}\\ \vdots\\ s_{n}\\ \end{pmatrix} \in \mathbf{F} ^{n}$ 이다.
 
 - 해는 존재할 수도 있고 존재하지 않을 수도 있다. 해가 존재한다면 유일할 수도 있고 유일하지 않을 수도 있다.
 
-!!! tldr "해집합(solution set) "
+!!! def "해집합(solution set) "
 
     연립일차방정식의 모든 해들의 집합이다.
 
-!!! tldr "연립일차방정식의 무모순성"
+!!! def "연립일차방정식의 무모순성"
 
     연립일차방정식의 해집합이 공집합이면 모순이 있다(inconsistent) 또는 해가 존재하지 않는다고 한다. 반면 해집합이 공집합이 아니면 모순이 없다(consistent) 또는 해가 존재한다고 한다.
 
 - 그러므로 연립일차방정식을 풀기 위하여 해가 존재하는지 살펴보고, 존재하는 모든 해를 구할 수 있어야 한다.
 
-!!! tldr "동차(homogeneouse) 와 비동차(nonhomogeneouse) "
+!!! def "동차(homogeneouse) 와 비동차(nonhomogeneouse) "
 
     $n$ 개의 미지수와 $m$ 개의 일차방정식으로 이루어진 연립일차방정식 $Ax = b$ 는 $b = 0$ 일 때 동차라고 하고, $b \neq 0$ 이면 비동차라고 한다.
 
 ## Properties of System of Linear Equation
 
-!!! tldr "정리 3.8"
+!!! def "정리 3.8"
 
     체 $\mathbf{F}$ 에서 $n$ 개의 미지수와 $m$ 개의 일차방정식으로 이루어진 동차 연립일차방정식 $Ax = 0$ 와 해집합 $\mathbf{K}$ 에 대하여 $\mathbf{K} = \mathbf{N} (\mathbf{L}_A)$ 이다. 즉, 다음이 성립한다. 
 
@@ -694,7 +694,7 @@
 
     계수행렬 $A = \begin{pmatrix} 1&2&1\\ 1&-1&-1\\ \end{pmatrix}$ 에 대하여 $\text{rank} (A)  = 2$ 이다. 해집합 $\mathbf{K}$ 에 대하여 $\dim (\mathbf{K} ) = 3 - 2 = 1$ 이므로 영벡터가 아닌 임의의 해가 $\mathbf{K}$ 의 기저가 된다. 가령 $\begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix}$ 이 해이므로 $\text{span} \Bigg \{\begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix}\Bigg \} = \mathbf{K}$ 이다.
 
-!!! tldr "정리 3.8 따름정리"
+!!! def "정리 3.8 따름정리"
 
     $m < n$ 이면 연립방정식 $Ax = 0$ 은 영벡터가 아닌 해가 있다.
 
@@ -714,11 +714,11 @@
 
     이는 $\mathbf{K} \neq \{0\}$ 임을 뜻하고, 이에따라 영이 아닌 벡터 $s \in \mathbf{K}$ 가 존재한다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     $Ax = 0$ 을 $Ax = b$ 에 대응하는 동차 연립일차방정식이라 한다.
 
-!!! tldr "정리 3.9"
+!!! def "정리 3.9"
 
     모순이 없는 연립일차방정식 $Ax = b$ 의 해집합 $\mathbf{K}$, 대응하는 연립일차방정식 $Ax = 0$ 의 해집합 $\mathbf{K} _{\mathbf{H} }$, $Ax = b$ 의 임의의 해 $s \in \mathbf{K}$ 에 대하여 다음이 성립한다.
 
@@ -754,7 +754,7 @@
 
     $$ \mathbf{K} = \{s + tk : t \in \R\} $$
 
-!!! tldr "정리 3.10"
+!!! def "정리 3.10"
 
     $n$ 개의 미지수와 $n$ 개의 일차방정식으로 이루어진 연립일차방정식 $Ax = b$ 에 대하여 $A$ 가 가역이면 이 방정식은 유일한 해 $A ^{-1}b$ 를 가진다.
 
@@ -772,11 +772,11 @@
 
 ## Existence of Solution of Linear Equation System
 
-!!! tldr "연립일차방정식의 첨가행렬"
+!!! def "연립일차방정식의 첨가행렬"
 
     연립일차방정식 $Ax = b$ 의 첨가행렬은 $(A|b)$ 이다.
 
-!!! tldr "문제 3.3-9"
+!!! def "문제 3.3-9"
 
     연립일차방정식 $Ax = b$ 의 해가 있는 것과 $b \in \mathbf{R} (\mathbf{L}_A)$ 인 것은 동치이다.
 
@@ -786,7 +786,7 @@
 
     $b \in \mathbf{R} (\mathbf{L}_A)$ 이면 $\mathbf{L}_{A}(s) = As = b$ 를 만족하는 $s$ 가 존재한다. 그러므로 연립일차방정식의 해가 존재한다. ■ 
 
-!!! tldr "정리 3.11"
+!!! def "정리 3.11"
 
     연립일차방정식 $Ax = b$ 에 모순이 없는 것과 $\text{rank} (A) = \text{rank} (A|b)$ 인 것은 동치이다.
 

@@ -4,7 +4,7 @@
 
 # Linear Transformation
 
-!!! tldr "선형변환(linear transformation, linear map, vector space homomorphism)"
+!!! def "선형변환(linear transformation, linear map, vector space homomorphism)"
 
     $\mathbf{V} , \mathbf{W}$ 이 $\mathbf{F}$-벡터공간이라고 하자. $\forall x, y \in \mathbf{V} , \forall c \in \mathbf{F}$ 에 대하여 다음을 만족하는 함수 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 를 $\mathbf{V}$ 에서 $\mathbf{W}$ 로 가는 선형변환이라 한다. 
 
@@ -24,7 +24,7 @@
 
 - 벡터공간의 준동형사상(vector space homomorphism) 이라는 정의는 준동형사상의 정의에 의하여 직관적을 알 수 있다.
 
-!!! tldr "선형변환의 성질"
+!!! def "선형변환의 성질"
 
     선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 는 다음 성질을 만족한다. 
 
@@ -116,7 +116,7 @@
 
 ## Identity Transformation
 
-!!! tldr "항등변환(identity transformation)"
+!!! def "항등변환(identity transformation)"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{I} _{\mathbf{V} }: \mathbf{V} \to \mathbf{V}, x \mapsto x$ 로 정의된 선형변환이다.
 
@@ -124,13 +124,13 @@
     
 ## Zero Transformation
 
-!!! tldr "영변환(zero transformation)"
+!!! def "영변환(zero transformation)"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{T} _{ 0}: \mathbf{V} \to \mathbf{W}, x \mapsto 0$ 로 정의된 선형변환이다.
 
 # Null Space, Range
 
-!!! tldr "영공간(null space, kernel)"
+!!! def "영공간(null space, kernel)"
 
     벡터공간 $\mathbf{V}, \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 영공간은 다음과 같은 집합이다.
     
@@ -144,7 +144,7 @@
 
     영변환 $\mathbf{T}_0 : \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{N}(\mathbf{T}_0) = \mathbf{V}$ 이다.
 
-!!! tldr "상공간(range, image)"
+!!! def "상공간(range, image)"
 
     벡터공간 $\mathbf{V}, \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 상공간은 다음과 같은 집합이다.
     
@@ -158,7 +158,7 @@
 
     영변환 $\mathbf{T}_0 : \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{R}(\mathbf{T}_0) = \{0\}$ 이다.
 
-!!! tldr "정리 2.1"
+!!! def "정리 2.1"
 
     벡터공간 $\mathbf{V} ,\mathbf{W}$ 와 선형변환 $\mathbf{T}:\mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{N}(\mathbf{T}), \mathbf{R}(\mathbf{T})$ 는 각각 $\mathbf{V} , \mathbf{W}$ 의 부분공간이다.
 
@@ -178,7 +178,7 @@
 
     이고, $x+y \in \mathbf{R}(\mathbf{T}), cx \in \mathbf{R}(\mathbf{T})$ 이다. 그러므로 $\mathbf{R}(\mathbf{T})$ 는 $\mathbf{W}$ 의 부분공간이다. ■ 
 
-!!! tldr "정리 2.2"
+!!! def "정리 2.2"
 
     벡터공간 $\mathbf{V} ,\mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 와 $\mathbf{V}$ 의 기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 에 대하여 다음이 성립한다. 
 
@@ -246,7 +246,7 @@
 
 ## Nullity
 
-!!! tldr "영공간의 차원(Nullity)"
+!!! def "영공간의 차원(Nullity)"
 
     벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{N}(\mathbf{T})$ 가 유한차원 일 때 $\mathbf{N}(\mathbf{T})$ 의 차원을 
 
@@ -258,7 +258,7 @@
 
 ## Rank
 
-!!! tldr "랭크(rank), 계수"
+!!! def "랭크(rank), 계수"
 
     벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{R}(\mathbf{T})$ 가 유한차원 일 때 $\mathbf{R}(\mathbf{T})$ 의 차원을 
 
@@ -270,7 +270,7 @@
 
 ## Dimension Theorem
 
-!!! tldr "정리 2.3 차원정리(dimension theorem)"
+!!! def "정리 2.3 차원정리(dimension theorem)"
 
     벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한차원이면 다음이 성립한다.
 
@@ -314,7 +314,7 @@
 
 ## Properties of Linear Map, Range, Null Space
 
-!!! tldr "정리 2.4"
+!!! def "정리 2.4"
 
     벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음은 동치이다. 
 
@@ -332,7 +332,7 @@
 
     이다. 즉, $x = y$ 이므로 $\mathbf{T}$ 는 단사함수이다. ■ 
 
-!!! tldr "정리 2.5"
+!!! def "정리 2.5"
 
     유한차원 벡터공간 $\mathbf{V} ,\mathbf{W}$ 에 대하여 $\dim(\mathbf{V} ) = \dim(\mathbf{W} )$ 이면 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음 명제가 동치이다. 
 
@@ -368,7 +368,7 @@
 
     와 같이 정의되면 $\mathbf{N}(\mathbf{T} ) = \{0\}$ 이므로 $\mathbf{T}$ 는 전단사이다.
 
-!!! tldr ""
+!!! def ""
 
     벡터공간 $\mathbf{V} ,\mathbf{W}$ 의 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 과 $\mathbf{V}$ 의 부분집합 $S$ 에 대하여 다음이 동치이다.
     
@@ -386,7 +386,7 @@
 
     와 같이 정의되면 $\mathbf{T}$ 는 단사이다. $S = \{2-x+3x ^{2}, x+x ^{2}, 1-2x ^{2}\}$ 라고 하면 $\mathbf{T} (S) = \{(2,-1,3), (0,1,1), (1,0,-2)\}$ 가 $\R ^{3}$ 에서 일차독립이므로 $S$ 도 일차독립이다.
 
-!!! tldr "정리 2.6"
+!!! def "정리 2.6"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 와 $\mathbf{V}$ 의 기저 $\{v_1, \dots, v_n\}$ 와 벡터 $w_1, \dots, w_n \in \mathbf{W}$ 에 대하여 
 
@@ -422,7 +422,7 @@
 
     이므로 $\mathbf{U} =\mathbf{T}$ 이다. ■ 
 
-!!! tldr "정리 2.6 따름정리"
+!!! def "정리 2.6 따름정리"
 
     벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{V}$ 가 유한집합 기저 $\{v_1, \dots, v_n\}$ 을 가지면 두 선형변환 $\mathbf{U} , \mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음이 성립한다.
 
@@ -440,7 +440,7 @@
     
 # Coordinate Vector
 
-!!! tldr "순서기저(ordered basis)"
+!!! def "순서기저(ordered basis)"
 
     유한차원 벡터공간의 순서가 주어진 기저이다.
 
@@ -458,7 +458,7 @@
 
         벡터공간 $\mathbf{P}_n(\mathbf{F} )$ 에서 $\{1, x, \dots, x ^{n}\}$ 이 표준순서기자이다.
 
-!!! tldr "좌표벡터(coordinate vector)"
+!!! def "좌표벡터(coordinate vector)"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 순서기저 $\beta = \{u_1, u_2, \dots, u_n\}$ 와 벡터 $x \in \mathbf{V}$ 에 대하여 $x = \displaystyle  \sum_{i=1}^{n}a_iu_i$ 을 만족하는 유일한 스칼라 $a_1, a_2, \dots, a_n$ 가 존재한다. 이때 $\beta$ 에 대한 $x$ 의 좌표벡터 $[x] _{\beta }$ 를 
 
@@ -492,7 +492,7 @@
 
     이 된다.
 
-!!! tldr ""
+!!! def ""
 
     벡터공간 $\mathbf{F} ^{n}$ 와 표준순서기저 $\beta = \{e_1, e_2, \dots, e_n\}$ 와 벡터 $x \in \mathbf{F} ^{n}$ 에 대하여 
 
@@ -508,7 +508,7 @@
 
 # Matrix Representation of Linear Map
 
-!!! tldr "선형변환의 행렬표현(matrix representation)"
+!!! def "선형변환의 행렬표현(matrix representation)"
 
     유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 의 각각의 순서기저 $\beta = \{v_1, \dots, v_n\}, \gamma = \{w_1, \dots, w_m\}$ 에 대하여 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 을 정의하면 $j \in \{1,\dots,n\}, i \in \{1, \dots, m\}$ 에 대하여
 
@@ -566,7 +566,7 @@
 
     이다.
 
-!!! tldr ""
+!!! def ""
 
     영변환의 행렬표현은 영행렬이다.
 
@@ -578,7 +578,7 @@
 
     이므로 $[\mathbf{T} _0] ^{\gamma } _{\beta } = O$ 이다. $O$ 는 $m \times n$ 영행렬이다.
 
-!!! tldr ""
+!!! def ""
 
     항등변환의 행렬표현은 항등행렬이다.
 
@@ -594,7 +594,7 @@
 
     이다. $[\mathbf{I} _{\mathbf{V} }]_{\beta }$ 는 $n \times n$ 항등행렬 $I_n$ 이다.
 
-!!! tldr "문제 2.2-12"
+!!! def "문제 2.2-12"
 
     벡터공간 $\mathbf{V}$ 의 순서기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 와 선형연산자 $\mathbf{T}$ 와 $j \in \{1, \dots, n\}$ 에 대하여 $[\mathbf{T}]_{\beta }$ 가 상삼각행렬인 것과 $\mathbf{T}(v_j) \in \text{span} (\{v_1, v_2, \dots, v_j\})$ 인 것은 동치이다.
 
@@ -612,7 +612,7 @@
 
 # Kronecker delta
 
-!!! tldr "크로네커 델타(Kronecker delta)"
+!!! def "크로네커 델타(Kronecker delta)"
 
     $$\delta _{ij} = \begin{cases} 1 & i = j\\ 0 & i \neq j\\ \end{cases}$$
 
@@ -622,7 +622,7 @@
 
 # Addition, Multiples of Linear Maps
 
-!!! tldr ""
+!!! def ""
 
     $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 에서 정의된 임의의 함수 $\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}$ 와 $a \in \mathbf{F}$ 와 $\forall x \in \mathbf{V}$ 에 대하여 두 함수의 합과 스칼라곱을 다음과 같이 정의한다.
 
@@ -634,7 +634,7 @@
 
 ## Set of All Linear Maps is Vector Space
 
-!!! tldr "정리 2.7"
+!!! def "정리 2.7"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음이 성립한다.
 
@@ -660,7 +660,7 @@
 
     그러므로 $\mathcal{L}$ 는 $\mathbf{F}$-벡터공간이다. ■ 
 
-!!! tldr "벡터공간 $\mathcal{L}(\mathbf{V} , \mathbf{W} )$ "
+!!! def "벡터공간 $\mathcal{L}(\mathbf{V} , \mathbf{W} )$ "
 
     벡터공간 $\mathcal{L}(\mathbf{V} , \mathbf{W} )$ 은 $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{V} \to \mathbf{W}$ 에서 정의된 모든 선형변환의 집합이다.
 
@@ -668,7 +668,7 @@
 
 - 참고로 2.4 절에서 차원 $\dim(\mathbf{V} ) = n, \dim(\mathbf{W} ) = m$ 인 벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathcal{L}(\mathbf{V} , \mathbf{W} )$ 와 $\mathbf{M} _{m \times n}(\mathbf{F} )$ 가 본질적으로 같다는 것을 보일 것이다.
 
-!!! tldr "정리 2.8"
+!!! def "정리 2.8"
 
     체 $\mathbf{F}$ 에 대한 유한차원 $\mathbf{F}$-벡터공간 $\mathbf{V} , \mathbf{W}$ 와 각각의 순서기저 $\beta , \gamma$ 와 선형변환 $\mathbf{T} , \mathbf{U} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음이 성립한다. 
 
@@ -730,7 +730,7 @@
 
 # Composition of Linear Map
 
-!!! tldr "정리 2.9"
+!!! def "정리 2.9"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V} ,\mathbf{W} , \mathbf{Z}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 에 대하여 두 선형변환의 합성 $\mathbf{U} \mathbf{T} : \mathbf{V} \to \mathbf{Z}$ 는 선형이다.
 
@@ -744,7 +744,7 @@
 
     이 성립한다. ■ 
 
-!!! tldr "문제 2.3-12"
+!!! def "문제 2.3-12"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V} ,\mathbf{W} , \mathbf{Z}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 과 그 합성변환 $\mathbf{UT} : \mathbf{V} \to \mathbf{Z}$ 대하여 다음이 성립한다.
 
@@ -796,7 +796,7 @@
     
     이다. [역함수가 존재함은 전단사 함수인 것과 동치](../../Set/Set/#4d4309496) 이므로 $\mathbf{U} \mathbf{T}$ 는 전단사이다. ■ 
 
-!!! tldr "정리 2.10"
+!!! def "정리 2.10"
 
     체 $\mathbf{F}$ 에 대한 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T} , \mathbf{U} _1, \mathbf{U} _2$ 에 대하여 다음이 성립한다.
 
@@ -860,7 +860,7 @@
 
     - 증명
 
-!!! tldr ""
+!!! def ""
 
     벡터공간 $\mathbf{V}$ 에서 정의된 선형변환 $\mathbf{T} \in \mathcal{L}(\mathbf{V} )$ 와 $k \in \N$ 에 대하여 다음과 같이 정의한다.
 
@@ -878,7 +878,7 @@
 
 ## Matrix Multiplication
 
-!!! tldr "행렬곱(matrix multiplication, matrix product)"
+!!! def "행렬곱(matrix multiplication, matrix product)"
 
     $m \times n$ 행렬 $A$ 와 $n \times p$ 행렬 $B$ 에 대하여 두 행렬 $A, B$ 의 곱 $AB$ 는 $1 \leq i \leq m, 1 \leq j \leq p$ 에 대하여
 
@@ -954,7 +954,7 @@
 
         $$ \begin{pmatrix} 1&1\\ 0&0\\ \end{pmatrix} \begin{pmatrix} 0 & 1\\ 1 & 0\\ \end{pmatrix} = \begin{pmatrix} 1 & 1\\ 0 & 0\\ \end{pmatrix} , \quad  \begin{pmatrix} 0&1\\ 1&0\\ \end{pmatrix} \begin{pmatrix} 1&1\\ 0&0\\ \end{pmatrix} = \begin{pmatrix} 0&0\\ 1&1\\ \end{pmatrix} $$
     
-!!! tldr ""
+!!! def ""
 
     $m \times n$ 행렬과 항등행렬 $I_m, I_n$ 에 대하여 다음이 성립한다. 
 
@@ -962,7 +962,7 @@
 
 - 증명
 
-!!! tldr ""
+!!! def ""
 
     $$ (AB) ^{t} = B ^{t} A ^{t} $$
 
@@ -972,7 +972,7 @@
 
     $$(B ^{t} A ^{t}) _{ij} =  \sum_{k=1}^{n}(B ^{t})_{ik}(A ^{t}) _{kj} = \sum_{k=1}^{n}B _{ki}A _{jk} $$
 
-!!! tldr "정리 2.11"
+!!! def "정리 2.11"
 
     유한차원 벡터공간 $\mathbf{V} , \mathbf{W} , \mathbf{Z}$ 와 각각의 순서기저 $\alpha , \beta , \gamma$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}$ 에 대하여 다음이 성립한다. 
 
@@ -995,7 +995,7 @@
 
     이 성립한다.
 
-!!! tldr "정리 2.11 따름정리"
+!!! def "정리 2.11 따름정리"
 
     유한차원 벡터공간 $\mathbf{V}$ 와 순서기저 $\beta$ 와 선형연산자 $\mathbf{T} , \mathbf{U} \in \mathcal{L}(\mathbf{V} )$ 에 대하여 다음이 성립한다. 
 
@@ -1003,7 +1003,7 @@
 
 > p113. 정리 2.10, 정리 2.16 의 메타데이터
 
-!!! tldr "정리 2.12"
+!!! def "정리 2.12"
 
     $A$ 가 $m \times n$ 행렬, $B$ 와 $C$ 가 $n \times p$ 행렬, $D$ 와 $E$ 가 $q \times m$ 행렬일 때, 다음이 성립한다.
 
@@ -1028,7 +1028,7 @@
 
     $\displaystyle (I_mA) _{ij} = \sum_{k=1}^{m}(I_m) _{ik}A _{kj} = \sum_{k=1}^{m}\delta _{ik}A _{kj} = A _{ij}$
 
-!!! tldr "정리 2.12 따름정리"
+!!! def "정리 2.12 따름정리"
 
     $m \times n$ 행렬 $A$ 와 $n \times p$ 행렬 $B_1, B_2, \dots, B_k$ 와 $q \times m$ 행렬 $C_1, C_2, \dots, C_k$ 와 스칼라 $a_1, a_2, \dots, a_k$ 에 대하여 다음이 성립한다. 
 
@@ -1036,13 +1036,13 @@
 
 - 증명
 
-!!! tldr ""
+!!! def ""
 
     $n \times n$ 행렬 $A$ 에 대하여 행렬의 지수를 다음과 같이 정의한다.
 
     $$ A ^{k} = \begin{cases} A ^{k-1}A & k \geq 2\\ A & k = 1\\ I_n & k = 0\\ \end{cases} $$
 
-!!! tldr ""
+!!! def ""
 
     행렬곱에서 소거법칙이 성립하지 않는다.
 
@@ -1054,7 +1054,7 @@
 
     이다. 이는 모순이다. ■ 
 
-!!! tldr "정리 2.13"
+!!! def "정리 2.13"
 
     $m \times n$ 행렬 $A$ 와 $n \times p$ 행렬 $B$ 와 $j = 1, 2, \dots, p$ 에 대하여 $AB$ 의 $j$ 열을 $u_j$, $B$ 의 $j$ 열을 $v_j$ 이라 하면 다음이 성립한다. 
 
@@ -1070,7 +1070,7 @@
 
     $$ Be_j = \begin{pmatrix} b_{11} & b_{12} & \dots & b_{1p}\\ b_{21} & b_{22} & \dots & b_{2p}\\ \vdots& \vdots& \ddots& \vdots \\ b_{n1} & b_{n2} & \dots & b_{np}\\ \end{pmatrix} \begin{pmatrix} 0\\ 0\\ \vdots \\ 1\\ \vdots \\ 0\\ \end{pmatrix} = \begin{pmatrix} b_{1j}\\ b_{2j}\\ \dots\\ b_{nj}\\ \end{pmatrix} \tag*{■} $$
 
-!!! tldr "정리 2.14"
+!!! def "정리 2.14"
 
     유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 과 각각의 순서기저 $\beta , \gamma$ 에 대한 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 과 $u \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
 
@@ -1092,7 +1092,7 @@
 
 ## Left Multiplication Transformation
 
-!!! tldr "좌측 곱 변환(left multiplication transformation)"
+!!! def "좌측 곱 변환(left multiplication transformation)"
 
     체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 에 대하여 선형변환 
 
@@ -1108,7 +1108,7 @@
 
     $A = \begin{pmatrix} 1&2&1\\ 0&1&2\\ \end{pmatrix}, x= \begin{pmatrix} 1\\ 3\\ -1\\ \end{pmatrix}$ 에 대하여 $\mathbf{L} _A(x) = Ax = \begin{pmatrix} 1&2&1\\ 0&1&2\\ \end{pmatrix}\begin{pmatrix} 1\\ 3\\ -1\\ \end{pmatrix} = \begin{pmatrix} 6\\ 1\\ \end{pmatrix}$ 이다. 
 
-!!! tldr "정리 2.15"
+!!! def "정리 2.15"
 
     체 $\mathbf{F}$ 에서 성분을 가져온 $m \times n$ 행렬 $A$ 에 대하여 좌측 곱 변환 $\mathbf{L} _{A}: \mathbf{F} ^{n} \to  \mathbf{F} ^{m}$ 은 선형이다.
 
@@ -1186,7 +1186,7 @@
     
     $[\mathbf{I} _{\mathbf{F} ^{n}}] _{\beta }$ 의 $j$ 열은 $[\mathbf{I} _{\mathbf{F} ^{n}}(e_j)] _{\beta} = [e_j] _{\beta}$ 이다. 이는 $e_j$ 를 뜻한다. 그러므로 $[\mathbf{I} _{\mathbf{F} ^{n}}] _{\beta } = I_n$ 이다. ■ 
 
-!!! tldr "정리 2.16"
+!!! def "정리 2.16"
 
     $A(BC)$ 가 정의된 행렬 $A, B, C$ 에 대하여 다음이 성립한다.
     
@@ -1212,7 +1212,7 @@
 
 - 이 정리는 지금까지 했던 것처럼 행렬의 성분을 비교하는 방식으로도 증명 가능하다. 그러나 그렇게 번거로운 방법보다 지금까지 정립해온 정리를 사용하면 위와 같이 세련되게 증명할 수 있다. 
 
-!!! tldr "정리 2.16 따름정리"
+!!! def "정리 2.16 따름정리"
 
     행렬곱 연산에서 결합법칙이 성립한다.
 
@@ -1224,7 +1224,7 @@
 
 # Invertibility
 
-!!! tldr "역함수(inverse)"
+!!! def "역함수(inverse)"
 
     벡터공간 $\mathbf{V} ,\mathbf{W}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 
     
@@ -1236,7 +1236,7 @@
 
 - 역함수가 존재하는 선형변환을 가역(invertible)이라 한다.
 
-!!! tldr ""
+!!! def ""
 
     선형변환의 역함수는 유일하다.
 
@@ -1244,7 +1244,7 @@
 
     [함수의 역함수는 유일하다.](../../Set/Set/#41c513e50) 선형변환은 함수이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     선형변환이 가역이기 위한 필요충분조건은 전단사라는 것이다. 
 
@@ -1252,7 +1252,7 @@
 
     [함수의 역함수가 존재하기 위한 필요충분조건은 전단사라는 것이다.](../../Set/Set/#4d4309496) 선형변환은 함수이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     가역인 함수 $\mathbf{T} , \mathbf{U}$ 에 대하여 다음이 성립한다.
 
@@ -1274,7 +1274,7 @@
 
     이다.
 
-!!! tldr "정리 2.17"
+!!! def "정리 2.17"
 
     선형변환의 역함수는 선형이다.
 
@@ -1288,7 +1288,7 @@
 
     이다. ■ 
 
-!!! tldr "정리 2.17 따름정리"
+!!! def "정리 2.17 따름정리"
 
     선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 가 가역이면 다음이 성립한다. 
 
@@ -1312,7 +1312,7 @@
 
     이다. 그러면 [차원정리](#6187a9f9c) 에 의하여 $\dim (\mathbf{W}) = \dim (\mathbf{V} )$ 임을 알 수 있다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 $\dim (\mathbf{V} ) = \dim (\mathbf{W} )$ 이면 다음이 동치이다.
 
@@ -1330,13 +1330,13 @@
 
 ## Invertible matrix
 
-!!! tldr "가역행렬(invertible matrix)"
+!!! def "가역행렬(invertible matrix)"
 
     $n \times n$ 행렬 $A$ 에 대하여 $AB=BA=I$ 인 $n \times n$ 행렬 $B$ 가 존재할 때 $A$ 를 가역이라고 한다.
 
 - 이는 역함수의 정의와 비슷하다. 선형변환을 행렬과 대응시키고 그 연산도 보존해보았듯이 선형변환과 행렬의 역연산도 연결시켜볼 것이다.
 
-!!! tldr ""
+!!! def ""
 
     역행렬(inverse matrix) : $A$ 가 가역일때 $AB = BA = I$ 를 만족하는 행렬 $B$ 이다.
 
@@ -1344,7 +1344,7 @@
 
     $\begin{pmatrix} 5&7\\ 2&3\\ \end{pmatrix}$ 의 역행렬은 $\begin{pmatrix} 3&-7\\ -2&5\\ \end{pmatrix}$ 이다.
 
-!!! tldr ""
+!!! def ""
 
     역행렬은 유일하다.
 
@@ -1358,7 +1358,7 @@
 
 ## Properties of Invertibility
 
-!!! tldr "정리 2.18"
+!!! def "정리 2.18"
 
     유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 각각의 순서기저 $\beta , \gamma$, 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 다음이 성립한다. 
 
@@ -1390,7 +1390,7 @@
 
     이다. 따라서 $\mathbf{U} \mathbf{T} = \mathbf{I} _{\mathbf{V} }$ 이다. 같은 방식으로 $\mathbf{T} \mathbf{U} = \mathbf{I} _{\mathbf{W} }$ 를 보일 수 있다. 그러므로 $[\mathbf{T} ] ^{\gamma}_{\beta}$ 가 가역임을 가정했을 때 $\mathbf{T}$ 도 가역이다. ■ 
 
-!!! tldr "정리 2.18 따름정리 1"
+!!! def "정리 2.18 따름정리 1"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 순서기저 $\beta$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{V}$ 에 대하여 다음이 성립한다. 
 
@@ -1400,7 +1400,7 @@
 
 - 증명
 
-!!! tldr "정리 2.18 따름정리 2"
+!!! def "정리 2.18 따름정리 2"
 
     $n \times n$ 행렬 $A$ 에 대하여 다음이 성립한다.
 
@@ -1410,7 +1410,7 @@
 
 - 증명
 
-!!! tldr "문제 2.4-4"
+!!! def "문제 2.4-4"
 
     $A, B$ 가 $n \times n$ 가역행렬이면 다음이 성립한다.
     
@@ -1428,7 +1428,7 @@
 
     그러므로 $AB$ 는 가역이고, $(AB) ^{-1} = B ^{-1} A ^{-1}$ 이다. ■ 
 
-!!! tldr "문제 2.4-5"
+!!! def "문제 2.4-5"
 
     가역행렬 $A$ 에 대하여 $A ^{t}$ 가 가역이고 $(A ^{t}) ^{-1} = (A ^{-1}) ^{t}$ 이다.
 
@@ -1442,7 +1442,7 @@
 
     따라서 $(A ^{t}) ^{-1} = (A ^{-1}) ^{t}$ 이다.
 
-!!! tldr "문제 2.4-9"
+!!! def "문제 2.4-9"
 
     $n \times n$ 행렬 $A, B$ 에 대하여 $AB$ 가 가역이면 $A, B$ 모두 가역이다.
 
@@ -1452,7 +1452,7 @@
 
     [$\mathbf{L}_{A}\mathbf{L}_{B}$ 가 전단사이므로 $\mathbf{L}_{B}$ 가 단사이고, $\mathbf{L}_{A}$ 는 전사이다](#de2683c1b). 그런데 [$\dim (\mathbf{F} ^{n}) = \dim (\mathbf{F} ^{n})$ 이므로 $\mathbf{L}_{A}$ 와 $\mathbf{L}_{B}$ 는 가역이다](#08a4e4fdc). 그러면 다시 [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $A$ 와 $B$ 도 가역이다. ■ 
 
-!!! tldr "문제 2.4-10"
+!!! def "문제 2.4-10"
 
     $AB = I_n$ 인 $n \times n$ 행렬 $A, B$ 에 대하여 다음이 성립한다. 
 
@@ -1476,7 +1476,7 @@
 
 # Isomorphism
 
-!!! tldr "동형(isomorphic)"
+!!! def "동형(isomorphic)"
 
     벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 가역인 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 가 존재하면 $\mathbf{V}$ 와 $\mathbf{W}$ 는 동형이다.
 
@@ -1484,7 +1484,7 @@
 
     $\mathbf{M}_{2 \times 2}(\mathbf{F} )$ 의 원소 $\begin{pmatrix} a&b\\ c&d\\ \end{pmatrix}$ 를 $\mathbf{F} ^{4}$ 의 원소 $(a,b,c,d)$ 에 대응시키면 벡터 합과 스칼라 곱이 비슷하게 작동한다. 이는 두 벡터공간이 구조적으로 동형임을 뜻한다.
 
-!!! tldr "동형사상(isomorphism)"
+!!! def "동형사상(isomorphism)"
 
     벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 가역인 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 이다.
 
@@ -1496,7 +1496,7 @@
 
     $\mathbf{M}_{2 \times 2}(\mathbf{F} )$ 와 $\mathbf{F} ^{4}$ 사이에 동형사상이 존재하므로 이 두 벡터공간은 동형이다. 즉 말 그대로 생긴 구조가 동일하다.
 
-!!! tldr ""
+!!! def ""
 
     동형은 동치관계이다.
 
@@ -1512,7 +1512,7 @@
 
     (transitivity 는 전단사 합성함수의 성질로 쉽게 증명할 수 있을 듯.)
 
-!!! tldr "정리 2.19"
+!!! def "정리 2.19"
 
     같은 체 위에서 정의된 유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 다음이 성립한다.
     
@@ -1528,7 +1528,7 @@
 
     이므로 $\mathbf{T}$ 는 전사이다. 그러면 [정리 2.5](#dfd4ff297) 에 의하여 $\mathbf{T}$ 는 단사이다. 그러므로 $\mathbf{T}$ 는 동형사상이고 결국 $\mathbf{V} \cong \mathbf{W}$ 이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     두 벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\mathbf{V} \cong \mathbf{W}$ 이면 둘 다 유한차원이거나 둘 다 무한차원이다.
 
@@ -1536,7 +1536,7 @@
 
     [정리 2.17 따름정리](#87bea1c24) 에 의하여 증명이 끝난다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{F} ^{n}$ 에 대하여 다음이 성립한다.
 
@@ -1548,7 +1548,7 @@
 
 ## Linear Map and Matrix are essentially the same
 
-!!! tldr "정리 2.20"
+!!! def "정리 2.20"
 
     차원이 각각 $n, m$ 이고 순서기저가 각각 $\beta , \gamma$ 인 $\mathbf{F}$-벡터공간 $\mathbf{V}, \mathbf{W}$ 에 대하여 다음과 같이 정의된 함수는 동형사상이다.
     
@@ -1570,7 +1570,7 @@
 
     그러면 [선형변환의 행렬표현](#c16bc5e5b) 에 의하여 $A = [\mathbf{T}] ^{\gamma}_{\beta} = \Phi ^{\gamma}_{\beta} (\mathbf{T} )$ 이다. 그러므로 $\Phi ^{\gamma}_{\beta}$ 은 전단사이고, 결국 동형사상이다. ■ 
 
-!!! tldr "정리 2.19 따름정리"
+!!! def "정리 2.19 따름정리"
 
     차원이 각각 $n, m$ 인 $\mathbf{F}$-벡터공간 $\mathbf{V}, \mathbf{W}$ 에 대하여 다음이 성립한다.
 
@@ -1580,7 +1580,7 @@
 
     정리 2.20 에 의하여 주어진 두 벡터공간 사이에 동형사상이 존재한다. ■ 
 
-!!! tldr "정리 2.20 따름정리"
+!!! def "정리 2.20 따름정리"
 
     유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 에 대하여 $\dim (\mathcal{L}(\mathbf{V} , \mathbf{W} )) = \dim (\mathbf{V})\dim (\mathbf{V})$ 이다.
 
@@ -1592,7 +1592,7 @@
 
 ## Standard Representation
 
-!!! tldr "표준표현(standard representation)"
+!!! def "표준표현(standard representation)"
 
     체 $\mathbf{F}$ 위의 $n$차원 벡터공간 $\mathbf{V}$ 의 순서기저를 $\beta$ 라고 하자. $\beta$ 에 대한 $\mathbf{V}$ 의 표준표현은 다음과 같은 함수이다.
 
@@ -1608,7 +1608,7 @@
 
     이다.
 
-!!! tldr ""
+!!! def ""
 
     유한차원 벡터공간 $\mathbf{V}$ 의 순서기저 $\beta$ 에 대하여 $\phi _{\beta }$ 은 선형이다.
 
@@ -1624,7 +1624,7 @@
 
     $$ \therefore [cx + y] _{\beta } = c[x] _{\beta } + [y]_{\beta } \tag*{■} $$
 
-!!! tldr "정리 2.21"
+!!! def "정리 2.21"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 순서기저 $\beta$ 에 대하여 $\phi _{\beta }$ 는 동형사상이다.
 
@@ -1636,7 +1636,7 @@
 
     벡터 $x$ 의 $\beta$ 일차결합 표현은 [정리 1.8](../VectorSpace/#8a514fc5c) 에 의하여 유일하다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     $n$차원 벡터공간은 $\mathbf{F} ^{n}$ 과 동형이다.
 
@@ -1646,7 +1646,7 @@
 
 ## Relation between Linear Map and Matrix
 
-!!! tldr "그림 2.2"
+!!! def "그림 2.2"
 
     차원이 각각 $n, m$ 이고 순서기저가 각각 $\beta, \gamma$ 인 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 와 행렬 $A = [\mathbf{T} ] ^{\gamma}_{\beta}$ 에 대하여 다음이 성립한다. 즉, $\mathbf{L}_{A} \circ \phi _{\beta } = \phi _{\gamma } \circ \mathbf{T}$ 이다.
 
@@ -1674,7 +1674,7 @@
 
     $$ \phi _{\gamma }(T(p(x))) = \phi _{\gamma }(p'(x))= \phi _{\gamma }(1-6x+15x ^{2}) = \begin{pmatrix} 1\\ -6\\ 15\\ \end{pmatrix} $$
 
-!!! tldr ""
+!!! def ""
 
     유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 동형사상 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$, $\mathbf{V}$ 의 부분공간 $\mathbf{V}_0$ 에 대하여 다음이 성립한다. 
 
@@ -1702,7 +1702,7 @@
 
     이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     $n$차원 벡터공간 $\mathbf{V}$ 와 $m$차원 벡터공간 $\mathbf{W}$, 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$, $\mathbf{V}$ 의 순서기저 $\beta$, $\mathbf{W}$ 의 순서기저 $\gamma$, 행렬 $A = [\mathbf{T} ]^{\gamma}_{\beta}$ 에 대하여 다음이 성립한다. 
 
@@ -1744,7 +1744,7 @@
 
 # Change of basis
 
-!!! tldr "정리 2.22"
+!!! def "정리 2.22"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 두 순서기저 $\beta , \beta '$ 에 대하여 $Q = [\mathbf{I} _{\mathbf{V} }] ^{\beta}_{\beta'}$ 라고 하면 다음이 성립한다. 
 
@@ -1762,7 +1762,7 @@
 
     이다. ■ 
 
-!!! tldr "좌표변환 행렬(change of coordinate matrix, change of basis matrix)"
+!!! def "좌표변환 행렬(change of coordinate matrix, change of basis matrix)"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 두 순서기저 $\beta , \beta '$ 에 대하여 $\beta '$ 좌표를 $\beta$ 좌표로 변환하는 행렬 $Q  = [\mathbf{I} _{\mathbf{V} }] ^{\beta}_{\beta'}$ 이다.
 
@@ -1836,7 +1836,7 @@
 
     $$ [(2, 4)] _{\beta } = Q[(2, 4)] _{\beta '} = Q \begin{pmatrix} 1\\ 0\\ \end{pmatrix} = \begin{pmatrix} 3\\ -1\\ \end{pmatrix} $$
 
-!!! tldr ""
+!!! def ""
 
     유한차원 벡터공간 $\mathbf{V}$ 의 두 순서기저 $\beta , \beta '$ 에 대하여 $\beta '$ 좌표를 $\beta$ 좌표로 변환하는 좌표변환 행렬 $Q = [\mathbf{I} _{\mathbf{V} }] ^{\beta}_{\beta'}$ 에 대하여 역행렬 $Q^{-1}$ 는 $\beta$ 의 좌표를 $\beta '$ 으로 변환한다.
 
@@ -1846,11 +1846,11 @@
 
 ## Linear Operator
 
-!!! tldr "선형연산자(linear operator)"
+!!! def "선형연산자(linear operator)"
 
     벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{V}$ 의 선형연산자는 $\mathbf{V} \to \mathbf{V}$ 에서 정의된 선형변환이다.
 
-!!! tldr "정리 2.23"
+!!! def "정리 2.23"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 순서기저 $\beta , \beta '$ 와 $\beta '$ 좌표를 $\beta$ 좌표로 변환하는 좌표변환 행렬 $Q$ 에 대하여 다음이 성립한다. 
 
@@ -1876,7 +1876,7 @@
 
     그러므로 $[\mathbf{T} ] _{\beta '} = Q ^{-1}[\mathbf{T} ] _{\beta }Q$ 이다.
 
-!!! tldr "정리 2.23 따름정리"
+!!! def "정리 2.23 따름정리"
 
     $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 와 $\mathbf{F} ^{n}$ 의 순서기저 $\gamma$ 와 $\gamma$ 의 벡터들을 열로 구성한 행렬 $Q$ 에 대하여 다음이 성립한다. 
 
@@ -1916,7 +1916,7 @@
 
 ## Matrix Similarity
 
-!!! tldr "행렬의 닮음(matrix similarity)"
+!!! def "행렬의 닮음(matrix similarity)"
 
     $A, B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $B = Q ^{-1}AQ$ 인 가역행렬 $Q$ 가 존재하면 $A$ 와 $B$ 는 서로 닮음이다.
 
@@ -1926,7 +1926,7 @@
 
     - 증명
 
-!!! tldr "정리 2.23 의 일반화"
+!!! def "정리 2.23 의 일반화"
 
     유한차원 벡터공간 $\mathbf{V}, \mathbf{W}$ 의 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 와 $\mathbf{V}$ 의 순서기저 $\beta , \beta '$ 와 $\mathbf{W}$ 의 순서기저 $\gamma , \gamma '$ 와 $\beta '$ 좌표를 $\beta$ 좌표로 변환하는 좌표변환 행렬 $Q$ 와 $\gamma '$ 좌표를 $\gamma$ 좌표로 변환하는 좌표변환 행렬 $P$ 에 대하여 다음이 성립한다. 
 
@@ -1936,7 +1936,7 @@
 
 - 이 정리는 서로 다른 벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 정의된 선형변환에서도 성립한다. 이 경우 $\mathbf{V}$ 의 기저를 바꾸듯이 $\mathbf{W}$ 의 기저도 바꿀 수 있다. 
 
-!!! tldr "문제 2.5-13"
+!!! def "문제 2.5-13"
 
     유한차원 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 순서기저 $\beta = \{x_1, x_2, \dots, x_n\}$, 가역행렬 $Q \in \mathbf{M}_{n \times n}(\mathbf{F})$ 와 $j \in \{1, \dots, n\}$ 에 대하여 $x'_j$ 를 다음과 같이 정의하자. 
 
@@ -1974,7 +1974,7 @@
 
 # Dual Space
 
-!!! tldr "선형범함수(linear functional, linear form, one-form, covector)"
+!!! def "선형범함수(linear functional, linear form, one-form, covector)"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에 대하여 $\mathbf{V}\to \mathbf{F}$ 에서 정의된 선형변환이다.
 
@@ -1986,7 +1986,7 @@
 
     $\mathbf{V}= \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 함수 $\mathbf{f}: \mathbf{V}\to \mathbf{F}, A \to \text{tr} (A)$ 는 선형범함수이다.
 
-!!! tldr "푸리에 계수(Fourier coefficient)"
+!!! def "푸리에 계수(Fourier coefficient)"
 
     폐구간 $[0, 2 \pi ]$ 에서 정의된 연속인 실함수로 이루어진 벡터공간 $\mathbf{V}$ 에 대하여 $g \in \mathbf{V}$ 를 고정하여 다음과 같이 정의한 함수 $\mathbf{h}: \mathbf{V}\to \R$ 를 가정하자.
 
@@ -1998,7 +1998,7 @@
 
 ## Coordinate Function
 
-!!! tldr "좌표함수(coordinate function)"
+!!! def "좌표함수(coordinate function)"
 
     순서기저 $\beta = \{x_1, x_2, \dots, x_n\}$ 를 가지는 유한차원 벡터공간 $\mathbf{V}$ 와 $i \in \{1,\dots,n\}$ 에 대하여 다음과 같이 정의된 함수 $\mathbf{f}_i: \mathbf{V}\to \mathbf{F}$ 를 기저 $\beta$ 에 대한 $i$번째 좌표함수라 한다.
 
@@ -2008,13 +2008,13 @@
 
 - $\mathbf{f}_i(x_j) = \delta _{ij}$ 이다.
 
-!!! tldr "쌍대공간(dual space)"
+!!! def "쌍대공간(dual space)"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에 대한 벡터공간 $\mathbf{V}^{*} := \mathcal{L}(\mathbf{V},\mathbf{F})$ 를 $\mathbf{V}$ 의 쌍대공간이라 한다.
 
 - $\mathbf{V}^{*}$ 은 [함수의 합과 스칼라곱](#63a07e35d) 이 정의된 $\mathbf{V}$ 의 모든 선형범함수로 이루어진 벡터공간이다.
 
-!!! tldr ""
+!!! def ""
 
     유한차원 벡터공간 $\mathbf{V}$ 와 쌍대공간 $\mathbf{V}^{*}$ 에 대하여 다음이 성립한다.
 
@@ -2030,11 +2030,11 @@
 
 ## Double Dual
 
-!!! tldr "이중 쌍대공간(double dual)"
+!!! def "이중 쌍대공간(double dual)"
 
     벡터공간 $\mathbf{V}$ 의 쌍대공간 $\mathbf{V}^{*}$ 의 쌍대공간 $\mathbf{V}^{**}$ 을 $\mathbf{V}$ 의 이중 쌍대공간이라 한다.
 
-!!! tldr ""
+!!! def ""
 
     유한차원 벡터공간 $\mathbf{V}$ 에 대하여 다음이 성립한다.
 
@@ -2048,7 +2048,7 @@
 
 - 여기에서 다루는 쌍대공간의 정리들은 이 정리만 제외하고 무한차원에서도 성립한다. 가령 쌍대공간의 존재성 정리나 쌍대기저의 존재성 정리 같은 것들은 무한차원에서도 성립하지만, 무한차원 벡터공간에서는 $\mathbf{V}, \mathbf{V}{}^{*}, \mathbf{V}{}^{*}{}^{*}$ 중 어느 두 공간도 동형이 아니다. 
 
-!!! tldr "정리 2.24"
+!!! def "정리 2.24"
 
     순서기저 $\beta  = \{x_1, x_2, \dots, x_n \}$ 을 가지는 유한차원 벡터공간 $\mathbf{V}$ 와 $\beta$ 의 $i$번째 좌표함수 $\mathbf{f}_i$ 에 대하여 $\beta {}^{*} = \{\mathbf{f}_1, \mathbf{f}_2, \dots, \mathbf{f}_n \}$ 는 $\mathbf{V}^{*}$ 의 순서기저이다. 즉, 다음이 성립한다.
 
@@ -2071,7 +2071,7 @@
 
 ## Dual Basis
 
-!!! tldr "쌍대기저(dual basis)"
+!!! def "쌍대기저(dual basis)"
 
     순서기저 $\beta  = \{x_1, x_2, \dots, x_n \}$ 을 가지는 유한차원 벡터공간 $\mathbf{V}$ 와 $i, j \in \{1,\dots,n\}$ 에 대하여 $\mathbf{f}_i(x_j) = \delta _{ij}$ 를 만족하는 $\mathbf{V}^{*}$ 의 순서기저 $\beta {}^{*} = \{\mathbf{f}_1, \mathbf{f}_2, \dots, \mathbf{f}_n \}$ 를 $\beta$ 의 쌍대기저라고 한다.
 
@@ -2093,7 +2093,7 @@
 
 ## Transpose of Linear Map
 
-!!! tldr "정리 2.25"
+!!! def "정리 2.25"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 의 각각의 순서기저 $\beta , \gamma$ 와 선형변환 $\mathbf{T}: \mathbf{V}\to \mathbf{W}$ 에 대하여 다음을 만족하는 함수 $\mathbf{T}^{t}: \mathbf{W}{}^{*}\to \mathbf{V}{}^{*}$ 를 가정하자.
 
@@ -2129,7 +2129,7 @@
 
     따라서 $[\mathbf{T}^{t}]^{\beta {}^{*}}_{\gamma {}^{*}} = A ^{t}$ 이다. ■ 
 
-!!! tldr "선형변환의 전치(transpose of linear map)"
+!!! def "선형변환의 전치(transpose of linear map)"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 의 각각의 순서기저 $\beta , \gamma$ 와 선형변환 $\mathbf{T}: \mathbf{V}\to \mathbf{W}$ 에 대하여 다음을 만족하는 선형변환 $\mathbf{T}^{t}: \mathbf{W}{}^{*}\to \mathbf{V}{}^{*}$ 를 $\mathbf{T}$ 의 전치라 한다.
 
@@ -2157,7 +2157,7 @@
 
     즉, $a = 1$ 이다. 같은 논리로 $c = 0, b = 1, d = 2$ 를 얻는다. 결국 $[\mathbf{T}^{t}]^{\beta {}^{*}}_{\gamma {}^{*}} = \begin{pmatrix} 1&1\\ 0&2\\ \end{pmatrix} = ([\mathbf{T}]^{\gamma}_{\beta} )^{t}$ 를 직접 계산으로 확인하였다. 이는 본 정리와 같은 결과이다.
 
-!!! tldr "정리 2.25 보조정리"
+!!! def "정리 2.25 보조정리"
 
     유한차원 벡터공간 $\mathbf{V}$ 와 벡터 $x \in \mathbf{V}$ 와 $\mathbf{f}_{}\in \mathbf{V}{}^{*}$ 에 대하여 함수 $\hat{x}: \mathbf{V}{}^{*}\to \mathbf{F}$ 를 $\hat{x}(\mathbf{f}_{}) = \mathbf{f}_{}(x)$ 라 정의하면 다음이 성립한다.
 
@@ -2173,7 +2173,7 @@
 
     - *$x_1 = x$ 인 순서기저 $\beta$ 의 존재성을 보장하는 정리가 존재하지 않는다. 증명을 보완해야 함. 하지만 not now..*
 
-!!! tldr "정리 2.26"
+!!! def "정리 2.26"
 
     유한차원 벡터공간 $\mathbf{V}$ 와 $x \in \mathbf{V}$ 와 $\mathbf{f}_{}\in \mathbf{V}{}^{*}$ 에 대한 함수 $\hat{x}: \mathbf{V}{}^{*}\to \mathbf{F}, \mathbf{f}_{} \to \mathbf{f}_{}(x)$ 에 대하여 함수 $\psi : \mathbf{V}\to \mathbf{V}{}^{*}{}^{*}$ 를 $\psi (x) = \hat{x}$ 으로 정의하면 $\psi$ 는 동형사상이다.
 
@@ -2195,7 +2195,7 @@
 
     $\psi$ 가 단사이므로 [정리 2.5](#dfd4ff297) 에 의하여 [$\psi$ 는 가역](#373708dc7)이다. 또한 [$\dim (\mathbf{V}) = \dim (\mathbf{V}{}^{*}{}^{*})$ 이므로](#f61ee38ab) $\psi$ 는 동형사상이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     유한차원 벡터공간 $\mathbf{V}, \mathbf{W}$ 에 대하여 동형사상 $\psi_1 : \mathbf{V}\to \mathbf{V}{}^{*}{}^{*}, x \mapsto \hat{x}$ 과 동형사상 $\psi _2: \mathbf{W}\to \mathbf{W}{}^{*}{}^{*}, x \mapsto \hat{x}$ 을 정의하고, $\mathbf{T}: \mathbf{V}\to \mathbf{W}$ 가 선형일 때 $\mathbf{T}^{tt}=(\mathbf{T}^{t})^{t}$ 라 정의하면 다음과 같이 $\psi _2 \mathbf{T}= \mathbf{T}^{tt}\psi _1$ 가 성립한다.
 
@@ -2205,7 +2205,7 @@
 
 - 증명
 
-!!! tldr "정리 2.26 따름정리"
+!!! def "정리 2.26 따름정리"
 
     유한차원 벡터공간 $\mathbf{V}$ 와 쌍대공간 $\mathbf{V}^{*}$ 에 대하여 $\mathbf{V}^{*}$ 의 모든 순서기저는 $\mathbf{V}$ 의 어떤 기저의 쌍대기저이다.
 
@@ -2217,7 +2217,7 @@
 
 <!-- # Homogeneous Linear Differential Equations with Constant Coefficients
 
-!!! tldr "선형 미분방정식(linear differential equation)"
+!!! def "선형 미분방정식(linear differential equation)"
 
     $t$ 에 대한 함수 $a_1, a_2, \dots, a_n$ 와 $f$, 그리고 $y$ 의 $k$계도함수 $y ^{(k)}$ 에 대하여 다음 형태의 미분방정식을 선형(linear)라 한다.
 
@@ -2245,7 +2245,7 @@
 
         $$ y''(t) + \frac{k}{m}y(t) = \frac{k}{m}t $$
 
-!!! tldr ""
+!!! def ""
 
     함수공간 $\mathcal{F}(\R, \mathbb{C})$ 에 대한 실변수 $t$ 에 대한 복소함수 $x \in \mathcal{F}(\R, \mathbb{C})$ 에 대하여 다음을 만족하는 실함수 $x_1, x_2$ 가 유일하게 존재한다.
 
@@ -2257,7 +2257,7 @@
 
 - 증명
 
-!!! tldr "실변수 복소함수의 미분가능(differentiable)과 도함수(derivative)"
+!!! def "실변수 복소함수의 미분가능(differentiable)과 도함수(derivative)"
 
     실수부가 $x_1$, 허수부가 $x_2$ 인 실변수 복소함수 $x \in \mathcal{F}(\R, \mathbb{C})$ 가 미분가능하다는 것과 $x_1, x_2$ 가 미분가능하다는 것은 동치이다.
 
@@ -2269,7 +2269,7 @@
 
     $x(t) = \cos 2t + i \sin 2t$ 의 도함수는 $x'(t) = -2 \sin 2t + 2i \cos 2t$ 이다.
 
-!!! tldr "정리 2.27"
+!!! def "정리 2.27"
 
     계수가 상수인 동차 선형 미분방정식의 해는 무한히 미분가능하다. 즉, $x$ 가 방정식의 해이면 $k \in \N$ 에 대한 $x ^{(k)}$ 가 존재한다.
 

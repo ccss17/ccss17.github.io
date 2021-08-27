@@ -68,7 +68,7 @@
 
 # 형식체계 
 
-!!! tldr ""
+!!! def ""
 
     형식 체계(formal system) : 공리로부터 추론규칙을 통해 정리를 이끌어낼 수 있는 논리적 체계이다.
 
@@ -102,7 +102,7 @@
 
         그러나 괴델의 불완전성 정리로 산술을 표현할만큼 강력한 모든 형식체계는 건전하면서 완전하지 못하다. 왜냐하면 참이면서 증명할 수 없는 명제가 반드시 존재하기 때문이다. 
 
-!!! tldr ""
+!!! def ""
 
     공리 체계(axiomatic system) : 명제논리로 공리로부터 정리를 이끌어낼 수 있는 임의의 공리 집합이다.
 
@@ -164,7 +164,7 @@
 
 # 명제논리 
 
-!!! tldr ""
+!!! def ""
 
     명제논리(Propositional logic, zeroth-order logic, Propositional calculus) : 내부 구조가 없는 명제들에 논리 연산을 가하여 구성한 명제들을 다루는 형식 체계이다. 
 
@@ -393,7 +393,7 @@
 
 - 명제 논리에서 어떤 명제의 증명을 찾는 것은 NP 문제이다. 그러나 대부분의 유용한 명제를 자동으로 증명해 수 있는 현실적인 알고리즘들이 존재한다. 가령 [DPLL algorithm (1962)](https://en.wikipedia.org/wiki/DPLL_algorithm) 이나 [Chaff algorithm (2001)](https://en.wikipedia.org/wiki/Chaff_algorithm) 이 있다. 최근에는 [SAT solver](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem#Algorithms_for_solving_SAT) 알고리즘을 산술 연산을 포함하는 명제를 해결할 수 있도록 확장한 [SMT solver](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) 가 제안되었다.
     
-!!! tldr ""
+!!! def ""
 
     건전성(soundness) : 형식 체계의 성질 "임의의 명제가 증명가능하면 참이다" 이다.
 
@@ -423,11 +423,11 @@
     
     a), b) 는 $G$ 의 원소인 명제가 $G$ 에 함의된다는 것을 말해준다. c) 는 $A$ 가 증명가능하면 추론규칙이 적용된 정리, 가령 $A \lor B$ 도 증명가능하다는 것을 말해준다. 그러면 $G$ 를 참으로 만드는 임의의 평가는 $A$ 도 참으로 만든다. 이렇게 증명은 귀납적으로 분석 가능하므로, 일반적으로 모든 추론 규칙이 의미적 함의를 보존한다는 것을 검증함으로써 건전성을 증명할 수 있다. 
 
-!!! tldr ""
+!!! def ""
 
     극대 집합(Maximal Set) : 어떤 조건을 만족하는 가장 큰 집합이다.
 
-!!! tldr ""
+!!! def ""
 
     Order type : 순서 집합 $X, Y$ 이 다음 동치명제를 만족하면 같은 order type 을 갖는다고 한다. 
 
@@ -469,7 +469,7 @@
 
     일반적으로 $\mathbb{Q}$ 의 order type 을 $\eta$ 로 표기한다.
 
-!!! tldr ""
+!!! def ""
 
     완전성(completeness) : 형식 체계의 성질 "임의의 명제가 참이면 증명가능하다" 이다.
 
@@ -555,7 +555,7 @@
 
 # 1차 논리 
 
-!!! tldr ""
+!!! def ""
 
     논의 영역(domain of discourse, universe of discourse, universal set, universe) : 형식적 논의의 대상이 되는 객체의 집합이다.
 
@@ -563,7 +563,7 @@
 
 - 논의 영역은 1차 논리에서의 양화사의 범위로 표현된다. 가령 $\forall x, (x ^{2} \neq 2)$ 는 논의 영역이 명시되지 않아서 모호하다. 논의 영역은 $\R$ 이 될 수도 있고 $\N$ 이 될 수도 있다.
 
-!!! tldr ""
+!!! def ""
 
     1차 논리(first-order logic, predicate logic) : 원소에 한정기호를 사용할 수 있고, 술어에 한정기호를 사용할 수 없는 형식 체계이다.
 
@@ -832,7 +832,7 @@
 
     자동 정리 증명은 어떤 알고리즘의 타당성을 검증하는 [형식 검증](https://en.wikipedia.org/wiki/Formal_verification) 에도 사용될 수 있다. 
 
-!!! tldr ""
+!!! def ""
 
     부호수(signature) : 집합 $S _{\text{func}}, S _{\text{rel}}$ 과 함수 $\text{ar}$ 대하여 
 
@@ -882,7 +882,7 @@
 
     상위 체계로 도약할 수 있는 능력을 부여한다면, 하위 체계에서 상위체계로 도약하는 행위 자체를 추상화시킬 수 있다는 것을 학습시킬 수 있다.
 
-!!! tldr ""
+!!! def ""
 
     1차 이론(first-order theory) : 1차 논리에서 1차 이론이란 부호수의 기호로 구성된 sentence 인 공리들의 집합이다.
 
@@ -900,7 +900,7 @@
 
     순서, 격자, 군, 환, 체, 기하학, 미분 대수, 자연수, 산술, 집합론 등이 1차 이론이다.
 
-!!! tldr ""
+!!! def ""
 
     연역 체계 : 1차 논리에서 연역 체계란 순수하게 추론 규칙만으로 어떤 식이 다른 식의 논리적 귀결임을 보이려하는 형식 체계이다.
 
@@ -950,7 +950,7 @@
 
 # 형식 언어, 이론, 모델
 
-!!! tldr ""
+!!! def ""
 
     형식 언어(formal language) : 알파벳 $\Sigma$ 위의 형식 언어 $L$ 은 $\Sigma ^{*}$ 의 부분집합이다.
 
@@ -1016,7 +1016,7 @@
 
     모델 이론에서는 식의 용어가 수학적 구조의 객체로 해석되고 그것의 진리값을 결정하는 결정 절차가 용어의 진리값을 결정한다. 식(formula) 에 대한 **모델(model) 이란 식을 참으로 만드는 용어에 대한 해석** 을 뜻한다.
 
-!!! tldr ""
+!!! def ""
 
     sentence : 자유변수가 없는 술어 논리의 Boolean-valued 식이다.
 
@@ -1028,7 +1028,7 @@
 
     반면 $\exists x(x ^{2} = y)$ 는 sentence 가 아니다.
 
-!!! tldr ""
+!!! def ""
 
     이론(theory) : 형식 언어의 sentence 집합이다.
 
@@ -1050,13 +1050,13 @@
 
 https://en.wikipedia.org/wiki/Structure_(mathematical_logic)
 
-!!! tldr ""
+!!! def ""
 
     모델 이론(model theory) : 형식 이론과 그것의 모델의 관계에 대한 연구 분야이다. 
 
 - 이때 말하는 모델이란 그 이론의 sentence 들을 참이 되게 하는 해석을 뜻한다.
 
-!!! tldr ""
+!!! def ""
 
     구조(structure) : 논의영역 $A$, 부호수 $\sigma$, 해석 함수 $I$ 에 대하여 
 
@@ -1126,7 +1126,7 @@ https://en.wikipedia.org/wiki/Structure_(mathematical_logic)
 
 # 완전성 정리 
 
-!!! tldr ""
+!!! def ""
 
     완전성 정리(Godel's completeness theorem) : 
 

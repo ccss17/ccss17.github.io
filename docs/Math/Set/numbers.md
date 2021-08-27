@@ -4,7 +4,7 @@
 
 # Natural Numbers
 
-!!! tldr ""
+!!! def ""
 
     집합 $A ^{+}$ : 집합 $A$ 에 대한 집합 $A ^{+}$ 을 다음과 같이 정의한다.
 
@@ -28,7 +28,7 @@
 
     이다.
 
-!!! tldr "자연수 집합(natural number set) "
+!!! def "자연수 집합(natural number set) "
 
     자연수 집합은 다음 성질을 만족하는 집합 $\mathcal{A}$ 에 대한 집합 $\N = \bigcap_{}^{}\mathcal{A}$ 이다.
 
@@ -36,11 +36,11 @@
     
     - $A \in \mathcal{A} \implies A ^{+} \in \mathcal{A}$
 
-!!! tldr "자연수(natural number)"
+!!! def "자연수(natural number)"
 
     자연수 집합 $\N$ 의 원소이다.
 
-!!! tldr "정리 2.1.1"
+!!! def "정리 2.1.1"
 
     집합 $\N$ 은 다음 성질을 만족한다.
 
@@ -90,7 +90,7 @@
 
     이다. 그렇다면 조건 $(1)$ 를 모든 자연수가 만족한다는 것이다. 그러므로 증명이 끝났다. 
 
-!!! tldr ""
+!!! def ""
 
     $$ n \in \N, x \in n \implies x \subset n $$
 
@@ -100,7 +100,7 @@
 
 ## Addition, Multiples of Natural Number
 
-!!! tldr "정리 2.1.2"
+!!! def "정리 2.1.2"
 
     집합 $X$ 의 한 원소 $a \in X$ 와 함수 $f: X \to X$ 에 대하여 다음 성질을 만족하는 함수 $\gamma : \N \to X$ 가 유일하게 존재한다. 
 
@@ -200,7 +200,7 @@
 
     이다. 그러므로 $\forall (n, x) \in \gamma \setminus \{(n ^{+}, y)\}$ 에 대하여 $(1.2)$ 가 성립한다. 이것으로 모든 증명이 끝났다. ■ 
 
-!!! tldr "자연수 덧셈(addition of natural number)"
+!!! def "자연수 덧셈(addition of natural number)"
 
     각 자연수 $n, m \in \N$ 에 대하여 다음을 만족하면서 유일하게 존재하는 함수 $\gamma _m:\N \to \N$ 에 대하여 자연수의 더하기를 $m + n = \gamma _m(n)$ 라고 정의한다. 
 
@@ -216,7 +216,7 @@
 
     - 이 성질들은 아래의 정리 $n ^{+} = 1 + n$ 를 기반으로 한다.
 
-!!! tldr ""
+!!! def ""
 
     $$ n ^{+} = 1 + n $$
 
@@ -232,7 +232,7 @@
 
     그러므로 수학적 귀납법을 적용할 수 있으므로 증명이 끝났다. 
 
-!!! tldr "자연수 곱셈(multiplication of natural number)"
+!!! def "자연수 곱셈(multiplication of natural number)"
 
     각 자연수 $n, m \in \N$ 에 대하여 다음을 만족하면서 유일하게 존재하는 함수 $\delta _m: \N \to \N$ 에 대하여 자연수의 곱하기를 $mn = \delta _m(n)$ 라고 정의한다. 
 
@@ -246,7 +246,7 @@
 
     이 성립한다. 
 
-!!! tldr "정리 2.1.3"
+!!! def "정리 2.1.3"
 
     $\forall m,n,k \in \N$ 에 대하여 다음이 성립한다. 
 
@@ -268,7 +268,7 @@
 
 ## Order of Natural Number
 
-!!! tldr "자연수 순서관계(natural number order)"
+!!! def "자연수 순서관계(natural number order)"
 
     두 자연수 $m, n \in \N$ 에 대하여 다음과 같이 정의한다.
 
@@ -278,7 +278,7 @@
 
 - 이는 자연수 집합에 정의된 순서관계의 핵심적인 성질이다.
 
-!!! tldr ""
+!!! def ""
 
     자연수의 순서의 정의에 따라 다음이 성립한다.
 
@@ -314,7 +314,7 @@
 
     또한 이로써 $\leq$ 는 순서관계가 된다.
     
-!!! tldr ""
+!!! def ""
 
     $$\forall n \in \N : n \not \in n$$
 
@@ -348,7 +348,7 @@
 
     이 성립함을 알 수 있다. 
 
-!!! tldr "정리 2.1.4"
+!!! def "정리 2.1.4"
 
     비어있지 않은 자연수들의 집합은 최소 원소를 가진다. 
 
@@ -402,7 +402,7 @@
 
     이고 이로써 모든 증명이 끝났다. ■ 
 
-!!! tldr "따름정리 2.1.5"
+!!! def "따름정리 2.1.5"
 
     $$\forall m,n \in \N : m \leq n \lor n \leq m$$
 
@@ -414,7 +414,7 @@
 
     이다.
 
-!!! tldr "2.7"
+!!! def "2.7"
 
     $$ n \in \N \implies n = 0 \lor \exists m \in \N \text{ s.t. } n = m ^{+} $$
 
@@ -436,7 +436,7 @@
 
     이다. 이로써 모든 증명이 끝났다. ■ 
 
-!!! tldr "따름정리 2.1.6"
+!!! def "따름정리 2.1.6"
 
     위로 유계이며 비어있지 않은 자연수들의 집합 $A \subset \N$ 는 최대 원소를 가진다. 
 
@@ -458,7 +458,7 @@
 
     이다. 
 
-!!! tldr "정리 2.1.7"
+!!! def "정리 2.1.7"
 
     $n, m, k \in \N$ 에 대하여 다음이 성립한다.
 
@@ -524,7 +524,7 @@
 
     를 얻었으므로 유일성 증명이 끝났다. ■ 
 
-!!! tldr "정리 2.1.8"
+!!! def "정리 2.1.8"
 
     $m,l \in \N$ 에 대하여 $0 < m \leq l$ 이면 다음을 만족하는 자연수 $n,r \in \N$ 이 유일하게 존재한다. 
 
@@ -562,7 +562,7 @@
 
 # Integer
 
-!!! tldr "동치관계 $\sim$ "
+!!! def "동치관계 $\sim$ "
 
     $m, n, m', n' \in \N$ 에 대하여 $\N \times \N$ 위에서 정의된 다음의 관계 $\sim$ 는 동치관계이다.
 
@@ -570,7 +570,7 @@
 
 - 증명
 
-!!! tldr "정수 집합(integer set) "
+!!! def "정수 집합(integer set) "
 
     정수집합은 동치관계 $\sim$ 에 대한 몫집합 $\mathbb{Z} = \N \times \N/ \sim$ 이다.
 
@@ -586,13 +586,13 @@
 
         과 같기 때문이다. 
 
-!!! tldr "정수(integer)"
+!!! def "정수(integer)"
 
     $a, b \in \N$ 에 대한 $\mathbb{Z}$ 의 원소인 동치류 $[(a, b)]$ 이다.
 
 - 동치류 $[(a, b)]$ 를 편하게 $[a, b]$ 로 쓰기로 한다.
 
-!!! tldr "정수 뺄셈(subtraction of integer)"
+!!! def "정수 뺄셈(subtraction of integer)"
 
     $m, n \in \N : n \leq m$ 이면 $m = n + k$ 인 $k \in \N$ 가 유일하게 존재하는데 이 $k$ 를 다음과 같이 정의한다.
 
@@ -600,7 +600,7 @@
 
 - 이 정의는 [정리 2.1.7](#2d730de01) 에 의존한다.
 
-!!! tldr ""
+!!! def ""
 
     $n \in \N$ 에 대한 $[n, 0], [0, 0], [0, n] \in \mathbb{Z}$ 를 다음과 같이 표기한다.
 
@@ -612,7 +612,7 @@
 
 ## Order of Integer
 
-!!! tldr "정수 순서관계(integer order)"
+!!! def "정수 순서관계(integer order)"
 
     정수의 순서관계는 집합 $\mathbb{Z}$ 위의 다음과 같은 관계이다.
 
@@ -634,7 +634,7 @@
 
     이므로(*이해 안되는 부분*) 순서관계가 잘 정의되어 있음을 알 수 있다. 
 
-!!! tldr "정리 2.2.1"
+!!! def "정리 2.2.1"
 
     정수 집합 $\mathbb{Z}$ 에 대하여 다음이 성립한다. 
 
@@ -666,7 +666,7 @@
 
 ## Addition, Multiples of Integer
 
-!!! tldr "정수 덧셈(addition of integer)"
+!!! def "정수 덧셈(addition of integer)"
 
     정수의 덧셈 $+$ 은 다음과 같이 정의된 함수 $+: \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$ 이다.
     
@@ -676,7 +676,7 @@
 
 - 또한 $[0, 0] \in \mathbb{Z}$ 이 항등원의 역할을 하고, $[n, m]$ 의 역원은 $[m, n]$ 이 된다. 
 
-!!! tldr "정수 곱셈(multiple of integer)"
+!!! def "정수 곱셈(multiple of integer)"
 
     정수의 곱셈 $\cdot$ 은 다음과 같이 정의된 함수 $\cdot : \mathbb{Z} \times \mathbb{Z} \to \mathbb{Z}$ 이다.
 
@@ -686,7 +686,7 @@
 
 - $[1, 0]$ 은 곱하기의 항등원이다. 정수 곱하기의 역원은 존재하지 않는다.
 
-!!! tldr ""
+!!! def ""
 
     자연수의 덧셈, 곱셈, 순서관계는 정수의 덧셈, 곱셈, 순서관계에 매장된다. 즉, $\N \subset \mathbb{Z}$ 이다.
 
@@ -708,7 +708,7 @@
 
 # Field
 
-!!! tldr "체(field)"
+!!! def "체(field)"
 
     체 $F$ 는 두 이항연산 합과 곱
     
@@ -746,7 +746,7 @@
 
     정수 집합 $\mathbb{Z}$ 의 세 원소 $a, b, c \in \mathbb{Z}$ 에 대하여 체의 조건 1) - 6) 과 8), 9) 가 성립한다.
 
-!!! tldr ""
+!!! def ""
 
     체에서 더하기의 항등원 $0$ 는 유일하다. 
 
@@ -754,7 +754,7 @@
 
     또 다른 항등원 $0'$ 가 있다면 $0 = 0 + 0' = 0'$ 이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     체에서 더하기의 역원은 유일하다.
 
@@ -766,13 +766,13 @@
 
 # Ordered Field
 
-!!! tldr ""
+!!! def ""
 
     체 $F$ 의 부분집합 $S$ 에 대하여 다음과 같이 정의한다. 
     
     $$ -S = \{-a: a \in S\} $$
 
-!!! tldr "양수(positive number) 집합"
+!!! def "양수(positive number) 집합"
 
     체 $F$ 의 양수집합 $P$ 는 다음을 만족하는 집합이다.
 
@@ -790,7 +790,7 @@
 
 - **체 $F$ 의 양수집합 $P$ 를 보통 $P _{F}$ 라고 표기한다.**
 
-!!! tldr "순서체(ordered field)"
+!!! def "순서체(ordered field)"
 
     순서체는 양수집합이 존재하는 체이다.
 
@@ -800,7 +800,7 @@
 
 ## Order of Ordered Field
 
-!!! tldr "순서체의 순서관계"
+!!! def "순서체의 순서관계"
 
     순서체 $F$ 의 두 원소 $a, b \in F$ 에 대하여 다음과 같이 정의한다. 
     
@@ -812,7 +812,7 @@
 
 ## Absolute Value
 
-!!! tldr "절댓값(absolute value, modulus)"
+!!! def "절댓값(absolute value, modulus)"
 
     순서체 $F$ 의 원소 $a \in F$ 의 절댓값 $|a|$ 를 다음과 같이 정의한다.
 
@@ -820,7 +820,7 @@
 
 - 절댓값은 실수를 구성할 때 중요한 역할을 한다. 
 
-!!! tldr "정리 2.2.2"
+!!! def "정리 2.2.2"
 
     순서체 $F$ 의 임의의 원소 $a,b,c \in F$ 에 대하여 다음이 성립한다. 
 
@@ -878,7 +878,7 @@
 
 # Rational Numbers
 
-!!! tldr "동치관계 $\sim$ "
+!!! def "동치관계 $\sim$ "
 
     $a, b, c, d \in \mathbb{Z}$ 에 대하여 $\mathbb{Z} \times (\mathbb{Z} \setminus \{0\})$ 에서 정의된 다음의 관계 $\sim$ 은 동치관계이다.
 
@@ -886,7 +886,7 @@
 
 - 증명
 
-!!! tldr "유리수 집합(rational number set)"
+!!! def "유리수 집합(rational number set)"
 
     유리수 집합은 동치관계 $\sim$ 에 대한 몫집합 $\mathbb{Q} = \mathbb{Z} \times  (\mathbb{Z} \setminus \{0\})/\sim$ 이다.
 
@@ -894,7 +894,7 @@
 
     즉, 유리수 집합 $\mathbb{Q}$ 부터는 덧셈, 뺄셈, 곱셈, 나눗셈을 자유롭게 할 수 있는 체(field)이다.
 
-!!! tldr "유리수(rational number)"
+!!! def "유리수(rational number)"
 
     $a, b \in \mathbb{Z}$ 에 대한 $\mathbb{Q}$ 의 원소인 동치류 $[(a, b)]$ 이다.
 
@@ -910,13 +910,13 @@
 
 ## Addition, Multiples of Rational Number
 
-!!! tldr "유리수 덧셈(addition of rational number)"
+!!! def "유리수 덧셈(addition of rational number)"
 
     유리수의 덧셈 $+$ 는 다음과 같이 정의된 함수 $+: \mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$ 이다.
 
     $$ [a, b] + [c, d] = [ad + bc, bd] $$
     
-!!! tldr "유리수 곱셈(multiple of rational number)"
+!!! def "유리수 곱셈(multiple of rational number)"
 
     유리수의 곱셈 $\cdot$ 는 다음과 같이 정의된 함수 $\cdot : \mathbb{Q} \times \mathbb{Q} \to \mathbb{Q}$ 이다.
 
@@ -924,13 +924,13 @@
 
 - 유리수의 덧셈의 항등원과 곱셈의 항등원은 각각 $0 ^{*}, 1 ^{*}$ 이다.
 
-!!! tldr ""
+!!! def ""
 
     $a \in \mathbb{Z}$ 에 대하여 다음과 같이 정의한다.
 
     $$ a ^{*} = [a, 1] \in \mathbb{Q} $$
 
-!!! tldr ""
+!!! def ""
 
     정수의 덧셈, 곱셈, 순서관계는 유리수의 덧셈, 곱셈, 순서관계에 매장된다. 즉, $\mathbb{Z} \subset \mathbb{Q}$ 이다. 
 
@@ -952,7 +952,7 @@
 
 ## Rational Number Set is Ordered Field
 
-!!! tldr ""
+!!! def ""
 
     $\mathbb{Q}$ 는 순서체이다.
 
@@ -988,7 +988,7 @@
 
     그러므로 $P _{\mathbb{Q} }$ 는 양수집합이고 이 양수집합이 $\mathbb{Q}$ 에 존재하므로 $\mathbb{Q}$ 는 순서체이다. ■ 
 
-!!! tldr "정리 2.2.3"
+!!! def "정리 2.2.3"
 
     임의의 순서체 $F$ 에 대하여 다음을 만족하는 단사함수 $\gamma : \mathbb{Q} \to  F, r \mapsto r \cdot 1_F$ 가 유일하게 존재한다. 
 
@@ -1076,7 +1076,7 @@
 
     - (*증명이 허술한 것 같다*)
 
-!!! tldr "정리 2.2.4"
+!!! def "정리 2.2.4"
 
     순서체 $F$ 에 대하여 다음은 동치이다.
 
@@ -1092,7 +1092,7 @@
 
 - 증명 
 
-!!! tldr "아르키메데스의 성질(Archimedean property)"
+!!! def "아르키메데스의 성질(Archimedean property)"
 
     전순서를 가지는 군 $G$ 의 양의 원소 $x, y$ 에 대하여 다음을 만족하는 $n \in \N$ 이 존재한다.
 
@@ -1112,7 +1112,7 @@
 
     [초실수체 $^{*}\R$](../../HyperrealNumbers/#6d47b2373) 은 아르키메데스의 체가 아니다.
 
-!!! tldr "정리 2.2.5"
+!!! def "정리 2.2.5"
 
     유리수체는 아르키메데스의 성질을 만족한다. 
 
@@ -1124,7 +1124,7 @@
 
 ## Dedekind cuts
 
-!!! tldr "데데킨트 절단(Dedekind Cut)"
+!!! def "데데킨트 절단(Dedekind Cut)"
 
     유리수의 집합 $\alpha \subset \mathbb{Q}$ 가 다음을 만족하면 데데킨트 절단이라고 한다.
 
@@ -1136,7 +1136,7 @@
 
 - 혹은 더욱 편하게 그냥 절단이라고도 한다. 
 
-!!! tldr ""
+!!! def ""
 
     $\forall r \in \mathbb{Q}$ 에 대하여 $r ^{*} = \{p \in \mathbb{Q} : p < r\}$ 은 절단이다. 
 
@@ -1178,7 +1178,7 @@
 
         인데 이와같은 $r \in \mathbb{Q}$ 는 존재하지 않는다. 왜냐하면 무리수이기 때문이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     절단 $\alpha$ 에 대하여 $\alpha ^{c} = \mathbb{Q} \setminus \alpha$ 라 두면 다음이 성립한다.
 
@@ -1192,7 +1192,7 @@
 
 ## Definition of Real Number
 
-!!! tldr "데데킨트 절단으로 정의하는 실수 집합(real number set)"
+!!! def "데데킨트 절단으로 정의하는 실수 집합(real number set)"
 
     실수 집합은 데데킨트 절단 전체의 집합 $\R$ 이다. 
 
@@ -1200,13 +1200,13 @@
 
     이로써 모든 절단을 곧 모든 유리수와 모든 무리수로 대응시키는 전단사 함수를 만들 수 있다. 그러므로 실수(유리수와 무리수)를 데데킨트 절단으로 구성할 수 있다는 것이다. 
 
-!!! tldr ""
+!!! def ""
 
     양의 실수 집합은 $0 ^{*} = \{p \in \mathbb{Q} : p < 0\}$ 에 대하여 다음의 집합으로 정의된다.
 
     $$ P _{\R} = \{\alpha \in \R : \alpha > 0 ^{*}\} $$
 
-!!! tldr ""
+!!! def ""
 
     실수 집합과 데데킨트 절단 집합 사이에 전단사 사상이 존재한다.
 
@@ -1266,7 +1266,7 @@
 
 ## Order of Real Number
 
-!!! tldr "실수의 순서관계(order of real number)"
+!!! def "실수의 순서관계(order of real number)"
 
     절단 $\alpha , \beta$ 에 대하여 다음과 같이 정의한다.
 
@@ -1274,7 +1274,7 @@
 
     $$ \alpha < \beta \iff \alpha \leq \beta \land \alpha \neq \beta $$
 
-!!! tldr "정리 2.3.1"
+!!! def "정리 2.3.1"
 
     $\forall \alpha , \beta \in \R$ 에 대하여 다음 중 한 명제만 성립한다. 
 
@@ -1294,7 +1294,7 @@
 
 - 그냥, 어떤 절단들이 주어지면 최소상계가 더 오른쪽에 주어진 절단이 왼쪽의 절단을 전부 다 포함한다는 것을 떠올리면 된다. 이것이 아닐 경우 두 절단은 서로 같다.
 
-!!! tldr "정리 2.3.2"
+!!! def "정리 2.3.2"
 
     $A \neq \varnothing$ 인 집합 $A \subset \R$ 가 위로 유계이면 $A$ 는 최소상계를 갖는다. 
 
@@ -1332,13 +1332,13 @@
 
 ## Addition of Real Number
 
-!!! tldr "실수 덧셈(addition of real number)"
+!!! def "실수 덧셈(addition of real number)"
 
     실수의 덧셈 $+$ 는 다음과 같이 정의된 함수 $+: \R \times \R \to \R$ 이다.
 
     $$ \alpha + \beta = \{s + t \in \mathbb{Q} : s \in \alpha , t \in \beta \} $$
 
-!!! tldr ""
+!!! def ""
 
     $$ \alpha + \beta \in \R $$
 
@@ -1362,13 +1362,13 @@
 
     이때 $s < r$ 인 $r \in \alpha$ 를 잡으면 $p < r + t$ 이고 $r+t \in \alpha + \beta$ 이므로 절단의 조건 3) 이 증명되었다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     실수의 덧셈은 결합법칙과 교환법칙을 만족한다.
 
 - 증명
 
-!!! tldr ""
+!!! def ""
 
     $0 ^{*} = \{p \in \mathbb{Q} : p<0\} \in \R$ 은 실수 덧셈의 항등원이다.
 
@@ -1394,7 +1394,7 @@
 
     이다.
 
-!!! tldr ""
+!!! def ""
 
     실수의 더하기의 역원이 존재한다. 
 
@@ -1472,7 +1472,7 @@
 
 ## Multiple of Real Number
 
-!!! tldr "실수 곱셈(multiple of real number)"
+!!! def "실수 곱셈(multiple of real number)"
 
     양의 실수의 곱셈 $\cdot$ 은 다음과 같이 정의된 함수 $\cdot : P_{\R} \times P_{\R} \to P_{\R}$ 이다.
 
@@ -1482,7 +1482,7 @@
 
     $$ \alpha \beta = \begin{cases} 0 ^{*} &\alpha = 0 ^{*} \lor \beta = 0 ^{*}\\ -(-\alpha )\beta  &\alpha \in -P _{\R}, \beta \in P _{\R}\\ -\alpha (-\beta)  &\alpha \in P _{\R}, \beta \in -P _{\R}\\ (-\alpha )(-\beta)  &\alpha \in -P _{\R}, \beta \in -P _{\R}\\ \end{cases} $$
 
-!!! tldr ""
+!!! def ""
 
     $\alpha , \beta \in P _{\R}$ 에 대하여 $\alpha \beta \in \R$ 이다. 
 
@@ -1500,7 +1500,7 @@
 
     특히, 순서체의 조건 1) 의 둘째 명제 "$a,b \in P, ab \in P$ (곱하기에 대하여 닫혀있음)" 도 증명되었다. 
 
-!!! tldr ""
+!!! def ""
 
     실수 곱셈에 대한 역원이 존재한다. 
 
@@ -1518,7 +1518,7 @@
 
     이므로 최종적으로 $\alpha \neq 0$ 인 $\alpha \in \R$ 는 곱하기의 역원을 가진다. 
 
-!!! tldr ""
+!!! def ""
 
     $P_{\R}$ 은 덧셈과 곱셈에 대하여 닫혀있다.
 
@@ -1532,7 +1532,7 @@
 
 ## Real Number Set is Ordered Field
 
-!!! tldr ""
+!!! def ""
 
     $\R$ 은 순서체이다. 
 
@@ -1540,7 +1540,7 @@
 
 ## Properties of Real Number
 
-!!! tldr ""
+!!! def ""
 
     $\forall r, s \in \mathbb{Q}$ 에 대하여 다음이 성립한다.
 
@@ -1558,11 +1558,11 @@
 
 ## Cauchy sequences 
 
-!!! tldr "수열(sequence)"
+!!! def "수열(sequence)"
 
     집합 $X$ 에 대한 함수 $x : \N \to X$ 이다. 
 
-!!! tldr "수렴(convergence)"
+!!! def "수렴(convergence)"
 
     순서체 $F$ 의 수열 $x : \N \to F$ 와 $a \in F$ 가 주어졌을 때 $\forall e \in P _{F}$ 에 대하여 다음을 만족하는 $N \in \N$ 이 존재하면 $x$ 가 $a \in F$ 로 수렴한다고 한다.
 
@@ -1576,7 +1576,7 @@
 
     를 만족시키는 자연수 $N$ 이 존재하여 수열이 $a$ 와 $e$ 보다 가깝다는 것을 보여주는 정의이다. 이로써 이 정의는 수열 $x$ 가 $a$ 와 무한히 가까워지는 형태를 표현할 수 있는 것이다.
 
-!!! tldr "코시 수열(cauchy sequence)"
+!!! def "코시 수열(cauchy sequence)"
 
     체 $F$ 에 대한 $\forall e \in P _{F}$ 와 수열 $x : \N \to F$ 에 대하여 다음을 만족하는 자연수 $N$ 이 존재하면 $x$ 를 코시 수열이라 한다.
 
@@ -1596,29 +1596,29 @@
 
     $$ a _{n+1} - a_n = \sqrt[]{n+1} - \sqrt[]{n} = \dfrac{1}{\sqrt[]{n+1} + \sqrt[]{n}} < \dfrac{1}{2 \sqrt[]{n}} $$
 
-!!! tldr "기본열"
+!!! def "기본열"
 
     기본열은 코시수열 $x : \N \to \mathbb{Q}$ 이다.
 
-!!! tldr ""
+!!! def ""
 
     $r \in \mathbb{Q}, i \in \N$ 에 대하여 기본열 같이 정의된 $r ^{*}$ 은 기본열이다.
 
     $$ r ^{*}(i) = r $$
 
-!!! tldr "유계 수열(bounded sequence)"
+!!! def "유계 수열(bounded sequence)"
 
     순서체 $F$ 의 수열 $x$ 와 $i \in \N$ 에 대하여 다음을 만족하는 $M \in F$ 가 있으면 $x$ 는 유계수열이다.
 
     $$ |x(i)| \leq M $$
 
-!!! tldr ""
+!!! def ""
 
     순서체 $F$ 의 수열 $x : \N \to F$ 가 유계일 필요충분조건은 집합 $\{x(i) \in X : i \in \N\}$ 이 위로 유계이고 동시에 아래로 유계인 것이다. 
 
 - 증명
 
-!!! tldr "정리 2.4.1"
+!!! def "정리 2.4.1"
 
     순서체 $F$ 의 수열 $x : \N \to F$ 가 수렴하면 코시수열이다.
 
@@ -1652,7 +1652,7 @@
 
 ## Definition of Real Number
 
-!!! tldr "기본열의 동치관계 $\sim$"
+!!! def "기본열의 동치관계 $\sim$"
 
     두 기본열 $\alpha , \beta : \N \to \mathbb{Q}$ 와 $\forall e \in P _{\mathbb{Q}}$ 에 대하여 
 
@@ -1680,7 +1680,7 @@
 
     그러므로 관계 $\sim$ 은 기본열 전체의 집합 $\mathcal{F}$ 의 동치관계이다.
 
-!!! tldr "코시 수열로 정의하는 실수 집합(real number set)"
+!!! def "코시 수열로 정의하는 실수 집합(real number set)"
 
     실수 집합은 기본열의 동치관계 $\sim$ 와 기본열 전체의 집합 $\mathcal{F}$ 에 대한 몫집합 $\R = \mathcal{F}/\sim$ 이다.
 
@@ -1730,7 +1730,7 @@
 
 ## Order of Real Number
 
-!!! tldr "실수 순서관계(order of real number)"
+!!! def "실수 순서관계(order of real number)"
 
     $[\alpha ], [\beta ] \in \R$ 에 대하여 
 
@@ -1740,7 +1740,7 @@
     
 - 이 순서관계도 마찬가지로 기본열의 무한항($i$ 가 무한히 커지는 것을 $\exists N \in \N, i \geq N$ 로 표현한 것)이 특정 값으로 근사되었을 때 그 차이값이 양의 유리수 $d > 0$ 보다 크다는 것으로 실수의 순서를 정의한 것으로 이해하면 된다.
 
-!!! tldr "정리 2.4.2"
+!!! def "정리 2.4.2"
 
     $\forall [\alpha ], [\beta ] \in \R$ 에 대하여 다음 중 오직 하나만 성립한다. 
 
@@ -1806,7 +1806,7 @@
 
 ## Addition of Real Number
 
-!!! tldr "실수 덧셈(addition of real number)"
+!!! def "실수 덧셈(addition of real number)"
 
     기본열 $\alpha + \beta: i \mapsto \alpha (i) + \beta (i)$ 와 $[\alpha], [\beta] \in \R$ 에 대하여 다음과 같이 정의한다.
 
@@ -1814,7 +1814,7 @@
 
 - $\alpha + \beta$ 는 기본열이다. 즉, 코시 수열의 덧셈은 닫혀있다.
 
-!!! tldr ""
+!!! def ""
 
     기본열 $\alpha$ 에 대하여 $(-\alpha )(i) = - \alpha (i)$ 로 정의된 유리수열 $-\alpha$ 는 기본열이다. 
     
@@ -1822,13 +1822,13 @@
 
 - 증명 
 
-!!! tldr ""
+!!! def ""
 
     실수의 더하기는 잘 정의되어 있고, 결합법칙과 교환법칙을 만족한다. 
 
 - 증명 
 
-!!! tldr ""
+!!! def ""
 
     $[0 ^{*}]$ 은 실수 덧셈의 항등원이다. 
 
@@ -1842,13 +1842,13 @@
 
 ## Multiple of Real Number
 
-!!! tldr "실수 곱셈(multiple of real number)"
+!!! def "실수 곱셈(multiple of real number)"
 
     기본열 $\alpha \beta: i \mapsto \alpha (i) \beta (i)$ 와 $[\alpha] , [\beta] \in \R$ 에 대하여 다음과 같이 정의한다.
 
     $$ [\alpha ][\beta ]= [\alpha \beta ] $$
 
-!!! tldr ""
+!!! def ""
 
     실수의 곱셈은 닫혀있다. 즉, 기본열 $\alpha , \beta$ 에 대하여 $\alpha \beta$ 도 기본열이다.
 
@@ -1878,19 +1878,19 @@
 
     이다. 그러므로 $\alpha \beta$ 는 기본열이다.
 
-!!! tldr ""
+!!! def ""
 
     실수의 곱셈은 결합법칙, 교환법칙, 분배법칙을 만족한다.
     
 - 증명
 
-!!! tldr ""
+!!! def ""
 
     실수의 곱셈은 항등원 $[1 ^{*}]$ 을 가진다. 
 
 - 증명
     
-!!! tldr ""
+!!! def ""
 
     실수의 곱하기는 역원을 가진다. 
 
@@ -1928,7 +1928,7 @@
 
 ## Real Number Set is Ordered Field
 
-!!! tldr ""
+!!! def ""
 
     $\R$ 은 순서체이다.
 
@@ -1936,7 +1936,7 @@
 
 ## Properties of Real Number
 
-!!! tldr "정리 2.4.3"
+!!! def "정리 2.4.3"
 
     $[\alpha ], [\beta ] \in \R$ 가 $[\alpha ]>[\beta ]$ 이면 다음을 만족하는 유리수 $r \in \mathbb{Q}$ 가 존재한다. 
 
@@ -1976,7 +1976,7 @@
 
     이다. 그러므로 $\alpha (N) - \dfrac{1}{2}d \in \mathbb{Q}$ 가 존재함을 증명하고자 했던 유리수이다. ■ 
 
-!!! tldr "부분 수열(subsequence)"
+!!! def "부분 수열(subsequence)"
 
     $\forall k \in \{0, 1, 2, \dots\}$ 에 대하여 $i(k) < i(k+1)$ 인 함수 $i : \N \to \N$ 와 수열 $x : i \mapsto x(i)$ 의 합성 
 
@@ -1986,7 +1986,7 @@
 
 - 순서체 $F$ 의 수열 $x$ 가 $a \in F$ 로 수렴하면, $x$ 의 모든 부분수열도 $a$ 로 수렴함은 자명하다.
 
-!!! tldr "도움정리 2.4.4"
+!!! def "도움정리 2.4.4"
 
     순서체 $F$ 의 코시 수열 $x$ 의 한 부분수열 $x \circ i$ 가 $a \in F$ 로 수렴하면 $x$ 도 $a \in F$ 로 수렴한다.
 
@@ -2006,7 +2006,7 @@
 
     이 되어 $x$ 가 $a$ 로 수렴함을 알 수 있다. ■ 
 
-!!! tldr "정리 2.4.5"
+!!! def "정리 2.4.5"
 
     $n \in \N, [ \alpha _n] \in \R$ 에 대하여 $n \mapsto [\alpha _n]$ 을 $\R$ 의 코시수열이라고 하면, 이 수열은 $\R$ 에서 수렴한다.
 
@@ -2064,7 +2064,7 @@
 
 # Completeness Ordered Field
 
-!!! tldr "완비순서체(completeness ordered field) 또는 실수의 완비성 공리(completeness axiom of the real numbers)"
+!!! def "완비순서체(completeness ordered field) 또는 실수의 완비성 공리(completeness axiom of the real numbers)"
 
     완비순서체 $F$ 는 다음 동치 조건을 만족하는 순서체이다.
 
@@ -2184,7 +2184,7 @@
 
 ## Real Number Field is Completeness Ordered Field
 
-!!! tldr ""
+!!! def ""
 
     실수체는 완비순서체이다.
 
@@ -2192,7 +2192,7 @@
 
     [정리 2.3.2](#febb2f17d) 는 데데킨트 절단으로 정의된 실수체 $\R$ 이 완비순서체임을 말해준다. 또한 완비순서체의 세 조건이 동치임을 증명하는 과정에서 코시 수열로 구성한 실수체도 완비순서체임이 증명되었다.
 
-!!! tldr "정리 2.5.1"
+!!! def "정리 2.5.1"
 
     완비순서체 $F$ 는 아르키메데스의 성질을 만족한다. 
 
@@ -2214,7 +2214,7 @@
 
     이므로 $\alpha$ 가 $\N$ 의 상계라는 것에 모순이다. 그러므로 $\N$ 은 위로 유계가 아니다. ■ 
 
-!!! tldr "정리 2.5.2"
+!!! def "정리 2.5.2"
 
     완비순서체 $F$ 의 두 원소 $x, y \in F$ 가 $x < y$ 이면 
 
@@ -2270,7 +2270,7 @@
 
     이다. 그러므로 $r-n$ 이 $x$ 와 $y$ 사이에 있는 유리수이다. ■ 
 
-!!! tldr "2.33"
+!!! def "2.33"
 
     순서체 $F$ 의 부분집합 $S, T \subset F$ 에 대하여 
 
@@ -2294,7 +2294,7 @@
 
     인데, 이 $s \in S, t \in T$ 가 존재성을 보이려 했던 것들이므로 증명이 끝났다. ■ 
 
-!!! tldr "2.34"
+!!! def "2.34"
 
     순서체 $F$ 의 부분집합 $S, T \subset P _{F}$ 에 대하여 
 
@@ -2310,7 +2310,7 @@
 
 ## Completeness Ordered Field is Unique
 
-!!! tldr "정리 2.5.3"
+!!! def "정리 2.5.3"
 
     임의의 두 완비순서체 $F, G$ 가 주어지면 전단사 함수 $f: F \to G$ 가 존재하여 다음을 만족한다.
 
@@ -2448,11 +2448,11 @@
 
 # Complex Number
 
-!!! tldr "허수(imaginary number)"
+!!! def "허수(imaginary number)"
 
     허수는 $i = \sqrt[]{-1}$ 이다.
 
-!!! tldr "복소수(Complex Number)"
+!!! def "복소수(Complex Number)"
 
     복소수는 실수 $a, b$ 와 허수 $i$ 에 대하여 $z = a+ bi$ 이다.
 
@@ -2460,7 +2460,7 @@
 
 - **복소수 $z = a+bi$ 의 실수부를 $\Re (z) = \mathcal{Re}(z) = \text{Re}(z) = a$ 로 표기하고, 허수부를 $\Im (z) = \mathcal{Im}(z) = \text{Im}(z) = b$ 로 표기한다.**
 
-!!! tldr "복소수체(Complex number field)"
+!!! def "복소수체(Complex number field)"
 
     복소수체 $\mathbb{C}$ 는 두 복소수 $z = a+bi, w = c+di$ 에 대하여 다음의 합과 곱이 정의된 실수체의 확장체이다.
 
@@ -2470,13 +2470,13 @@
 
 - 복소수체가 체라는 것은 쉽게 증명할 수 있다. 가령 실수 $0$ 은 덧셈의 항등원이고 실수 $1$ 은 곱셈의 항등원이며 $a+bi$ 의 덧셈의 역원은 $(-a)+(-b)i$ 이다. 또한 $0$ 이 아닌 복소수 $a+bi$ 의 곱셈의 역원은 $\dfrac{a}{a ^{2}+b ^{2}}+\bigg (\dfrac{b}{a ^{2}+b ^{2}}\bigg )i$ 이다. 체의 나머지 공리도 쉽게 증명가능하다.
 
-!!! tldr "켤레복소수(complex conjugate)"
+!!! def "켤레복소수(complex conjugate)"
 
     복소수 $a+bi$ 의 켤레복소수는 $\overline{a+bi} = a-bi$ 이다.
 
 ## Properties of Complex Number (1)
 
-!!! tldr "켤레복소수의 성질 (1)"
+!!! def "켤레복소수의 성질 (1)"
 
     복소수 $z, w$ 에 대하여 다음이 성립한다. 
 
@@ -2496,13 +2496,13 @@
 
 ## Absolute Value
 
-!!! tldr "복소수의 절댓값(absolute value) 또는 법(modulus)"
+!!! def "복소수의 절댓값(absolute value) 또는 법(modulus)"
 
     복소수 $z = a + bi$ 의 절댓값은 실수 $|z| = \sqrt[]{a ^{2}+b ^{2}}$ 이다.
 
 - 임의의 복소수 $z = a+bi$ 에 대하여 $z \overline{z}=(a+bi)(a-bi)=a ^{2}+b ^{2} \geq 0$ 이므로 $z \overline{z}$ 는 음이 아닌 실수이다. 
 
-!!! tldr "복소수의 절댓값의 성질"
+!!! def "복소수의 절댓값의 성질"
 
     복소수 $z$ 에 대하여 다음이 성립한다.
 
@@ -2516,7 +2516,7 @@
 
 ## Properties of Complex Number (2)
 
-!!! tldr "켤레복소수의 성질 (2)"
+!!! def "켤레복소수의 성질 (2)"
 
     두 복소수 $z, w$ 에 대하여 다음이 성립한다.
 
@@ -2566,7 +2566,7 @@
 
 ## Complex plane
 
-!!! tldr "복소평면(Complex plane)"
+!!! def "복소평면(Complex plane)"
 
     복소평면은 복소수체 $\mathbb{C}$ 를 $x$축을 실수부, $y$축을 허수부로하는 좌표평면 $\R ^{2}$ 에 대응시킨 좌표평면이다.
 

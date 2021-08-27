@@ -11,6 +11,7 @@ nav:
   #   - 2020: trend/2020.md
   #   - 2021: trend/2021.md
   - Math: 
+    - Math/index.md
     - Foundation of Math: 
       - History of Math: Math/MathHistory.md
       - Formal System: Math/Logic/FormalSystem.md
@@ -76,13 +77,13 @@ nav:
     # - 위상수학: 
     #   - (임시): Math/Topology/topology.md
   - Paper:
-    - "Gödel, Escher, Bach" : paper/GEB.md
+    # - "Gödel, Escher, Bach" : paper/GEB.md
     - "Performance of Python runtimes on a non-numeric scientific code" : paper/1404.6388.md
     - "The NumPy array: a structure for efficient numerical computation": paper/1102.1523.md
     - Facenet (2015): paper/facenet.md
     - Quadruplet (2017): paper/quadruplet.md
     - BlueBorne: paper/blueborne.md
-    - Meltdown: paper/meltdown.md
+    # - Meltdown: paper/meltdown.md
   # - Project:
   #   - ProgrammerBase: project/ProgrammerBase.md
   #   - security-tutorial: project/security-tutorial.md
@@ -182,14 +183,34 @@ nav:
   #     - 시간복잡도: Algorithm/timecomplexity.md
   #     - Leetcode: Algorithm/leetcode.md
 
+plugins: []
+
 theme: 
+  features:
+    - navigation.tabs
+    - navigation.top
+    - header.autohide
   name: material
+  custom_dir: overrides
   palette:
-    primary: white
-    scheme: default
+    # primary: white
+    # scheme: default
+    - scheme: default
+      primary: white
+      toggle:
+        # icon: material/eye-outline
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      # primary: black
+      toggle:
+        # icon: material/eye
+        icon: material/weather-night
+        name: Switch to light mode
   font:
     text: Nanum Gothic
-  language: kr
+  language: en
   logo: assets/images/bolt-solid.svg
   favicon: assets/images/bolt-solid.svg
   # logo: assets/images/snowflake-regular.svg
@@ -210,9 +231,11 @@ extra_css:
   - stylesheets/config.css
 
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/ccss17
+  generator: false
+  # disqus: https-ccss17-github-io
+  # social:
+  #   - icon: fontawesome/brands/github
+  #     link: https://github.com/ccss17
 
 markdown_extensions:
   - toc:
