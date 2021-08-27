@@ -96,7 +96,7 @@
 
 - 증명 
 
-    [$\leq$ 의 정의](#6bffeb4be)에 의하여
+    [$\leq$ 의 정의](#6c5b5ea1c)에 의하여
 
     $$ \lnot \exists x_L \in \varnothing : \{|\} \leq x_L \tag{1.5} $$
 
@@ -126,7 +126,7 @@
 
 - 증명 
 
-    [$\leq$ 의 정의](#6bffeb4be)에 의하여 
+    [$\leq$ 의 정의](#6c5b5ea1c)에 의하여 
 
     $$ \lnot \exists x_L \in \varnothing : \{0 | \} \leq x_L $$
 
@@ -436,7 +436,7 @@
 
     $$ X_R \not \leq X_L. \tag{2.1} $$
 
-    [$\leq$ 의 정의](#6bffeb4be)를 정의하는 $(1.4)$ 도 다음과 같이 나타낼 수 있다.
+    [$\leq$ 의 정의](#6c5b5ea1c)를 정의하는 $(1.4)$ 도 다음과 같이 나타낼 수 있다.
 
     $$ x \leq y \iff y \not \leq X_L \land Y_R \not \leq x $$
 
@@ -490,7 +490,7 @@
 
     $$ \lnot \exists x_L \in X_L : x \leq x_L \land \lnot \exists x_R \in X_R : x_R \leq x \tag{2.6} $$
 
-    $(2.6)$ 의 왼쪽 명제는 $\forall x_L \in X_L : x \not \leq x_L$ 과 같다. 그러면 [$\not \leq$ 의 정의](#19992ce0d) 에 의하여 이는 
+    $(2.6)$ 의 왼쪽 명제는 $\forall x_L \in X_L : x \not \leq x_L$ 과 같다. 그러면 [$\not \leq$ 의 정의](#34f824094) 에 의하여 이는 
 
     $$ \forall x_L \in X_L : ( \exists a \in X_L : x_L \leq a \lor \exists b \in X _{LR} : b \leq x) \tag{2.7} $$
 
@@ -498,7 +498,7 @@
 
     그러면 $X_L$ 의 원소 $x_L$ 에 대하여 $a \equiv x_L$ 로 두면 왼쪽 명제가 참이 된다. $a$ 를 당연히 $x_L$ 로 둘 수 있는데 $a$ 는 $X_L$ 의 원소이기 때문이다. 그러므로 $X_L$ 의 원소 $x_L$ 이 정해질 때마다 $a \equiv x_L$ 로 두면 왼쪽 명제가 참이 되는 것이다. 그러므로 $(2.7)$ 명제 전체가 참이 된다. 이것으로 $(2.6)$ 의 왼쪽 명제를 증명하였다. ▲ 
 
-    이제 $(2.6)$ 의 오른쪽 명제를 증명할 차례이다. $(2.6)$ 의 오른쪽 명제는 $\forall x_R \in X_R : x_R \not \leq x$ 와 같다. [$\not \leq$ 의 정의](#19992ce0d) 에 의하여 이는 
+    이제 $(2.6)$ 의 오른쪽 명제를 증명할 차례이다. $(2.6)$ 의 오른쪽 명제는 $\forall x_R \in X_R : x_R \not \leq x$ 와 같다. [$\not \leq$ 의 정의](#34f824094) 에 의하여 이는 
 
     $$ \forall x_R \in X_R : (\exists c \in X _{RL} : x \leq c \lor \exists d \in X_R : d \leq x_R) \tag{2.8} $$
 
@@ -514,7 +514,7 @@
 
 - 증명 
 
-    이 정리는 [서로 같은 초현실수의 정의](#1b2da2972)에 의하여 곧바로 도출된다. ■ 
+    이 정리는 [서로 같은 초현실수의 정의](#9b1c5b42d)에 의하여 곧바로 도출된다. ■ 
 
 !!! def "정리 3"
 
@@ -562,7 +562,7 @@
 
     $$ \forall a \in A \exists a' \in A' : a = a' \land \forall a' \in A' \exists a \in A : a = a' $$
 
-    을 뜻하고, [서로 같은 초현실수의 정의](#1b2da2972) 에 의하여 $a = a'$ 는
+    을 뜻하고, [서로 같은 초현실수의 정의](#9b1c5b42d) 에 의하여 $a = a'$ 는
 
     $$ a \leq a' \land a' \leq a $$
 
@@ -622,7 +622,7 @@
 
 - 증명 
 
-    $(2.24)$ 의 첫번째 명제를 증명하기 위하여 [$<$ 의 정의](#d9cc5fe30) 에 따라 
+    $(2.24)$ 의 첫번째 명제를 증명하기 위하여 [$<$ 의 정의](#e9c1c7e5b) 에 따라 
 
     $$ \forall a \in A : a \leq \{A|B\} \tag{2.26} $$
 
@@ -630,7 +630,7 @@
 
     를 증명해야 한다. ▲ 
 
-    $(2.26)$ 을 귀납법으로 증명해보자(*$A_L \cup A_R$ 에 대하여 참임을 가정하고 $A$ 에 대하여 참이라는 것을 보이는 것이다*). $A= \varnothing$ 일 경우 자명하게 참이다. $(2.26)$ 은 [$\leq$ 의 정의](#6bffeb4be) 에 의하여 
+    $(2.26)$ 을 귀납법으로 증명해보자(*$A_L \cup A_R$ 에 대하여 참임을 가정하고 $A$ 에 대하여 참이라는 것을 보이는 것이다*). $A= \varnothing$ 일 경우 자명하게 참이다. $(2.26)$ 은 [$\leq$ 의 정의](#6c5b5ea1c) 에 의하여 
 
     $$ \lnot \exists a_L \in A_L : \{A|B\} \leq a_L \land \lnot \exists b \in B : b \leq a \tag{2.28} $$
 
@@ -640,7 +640,7 @@
 
     $$ \forall a_L \in A_L : \{A|B\} \not \leq a_L \tag{2.29} $$
 
-    와 같고, [$\not \leq$ 의 정의](#19992ce0d) 에 의하여 
+    와 같고, [$\not \leq$ 의 정의](#34f824094) 에 의하여 
 
     $$ \forall a_L \in A_L : (\exists a' \in A : a_L \leq a' \lor \exists a _{LR} \in A _{LR} : a _{LR} \leq \{A|B\}) \tag{2.30} $$
 
@@ -650,11 +650,11 @@
 
     로 바꿀 수 있는데, 이 명제의 형태는 이것들의 left set parents 에 의하여 변수가 치환된 것을 제외하고 $(2.26)$ 과 완전히 동일하다. 그런데 우리는 $A_L \cup A_R$ 에 대하여 $(2.26)$ 이 성립함을 가정했다. 그러므로 $(2.26)$ 의 [논의 영역](../Logic/FormalSystem/#5ad54ef60) $A$ 를 $A_L$ 로 치환한 $(2.31)$ 은 참이다. 그러므로 (*$(2.30)$ 도 참이고.. $(2.28)$ 도 참이니까..*) 결국 $(2.26)$ 의 증명이 끝났다. ▲ 
 
-    $(2.27)$ 은 [$\not \leq$ 의 정의](#19992ce0d) 에 의하여 $A$ 의 모든 $a$ 에 대하여 
+    $(2.27)$ 은 [$\not \leq$ 의 정의](#34f824094) 에 의하여 $A$ 의 모든 $a$ 에 대하여 
 
     $$ \exists a' \in A : a \leq a' \lor \exists a_R \in A_R : a_R \leq \{A|B\} \tag{2.32} $$
 
-    이 참임을 증명하면 증명된다. 이것의 왼쪽 명제에서 $a' \equiv a$ 로 설정할 수 있는데, 이렇게 하면 $a \leq a$ 가 되어 [정리 1]() 에 의하여 참이 된다. ▲ 
+    이 참임을 증명하면 증명된다. 이것의 왼쪽 명제에서 $a' \equiv a$ 로 설정할 수 있는데, 이렇게 하면 $a \leq a$ 가 되어 [정리 1](#a65fcbfae) 에 의하여 참이 된다. ▲ 
 
     이로써 $(2.24)$ 의 첫번째 명제가 증명되었는데, 두번째 명제도 비슷한 방식으로 증명할 수 있다. ■ 
 
@@ -676,7 +676,7 @@
 
     $$ p(x,y,z) \iff x \leq y \land y \leq z \land x \not \leq z \tag{2.34} $$
 
-    $(2.33)$ 은 [$\leq$ 의 정의](#6bffeb4be) 와 [$\not \leq$ 의 정의](#19992ce0d) 에 의하여 
+    $(2.33)$ 은 [$\leq$ 의 정의](#6c5b5ea1c) 와 [$\not \leq$ 의 정의](#34f824094) 에 의하여 
 
     $$ \lnot \exists x_L \in X_L : y \leq x_L \tag{2.35} $$
 
@@ -734,7 +734,7 @@
 
 - 증명 
 
-    $x \not \leq y$ 은 [$\not \leq$ 의 정의](#19992ce0d) 에 의하여 
+    $x \not \leq y$ 은 [$\not \leq$ 의 정의](#34f824094) 에 의하여 
 
     $$ \exists x_L \in X_L : y \leq x_L \tag{2.45} $$
 
@@ -742,9 +742,9 @@
 
     중 하나 이상이 반드시 참임을 주장하는 것이다. ▲ 
 
-    $(2.45)$ 가 참이라고 하면 $y \leq x_L$ 을 만족하는 $x_L$ 을 잡을 수 있다. 또한 $(2.26)$ 에 의하여 $x_L \leq x$ 이므로 [The transitive law](#80a2a11d6) 에 의하여 $y \leq x$ 을 얻는다. ▲ 
+    $(2.45)$ 가 참이라고 하면 $y \leq x_L$ 을 만족하는 $x_L$ 을 잡을 수 있다. 또한 $(2.26)$ 에 의하여 $x_L \leq x$ 이므로 [The transitive law](#70892e5fd) 에 의하여 $y \leq x$ 을 얻는다. ▲ 
 
-    $(2.46)$ 가 참이라고 하면 $y_R \leq x$ 을 만족하는 $y_R$ 을 잡을 수 있다. 또한 [정리 5](#c076cc283) 에 의하여 $y \leq y_R$ 이므로 [The transitive law](#80a2a11d6) 에 의하여 $y \leq x$ 을 얻는다. ■ 
+    $(2.46)$ 가 참이라고 하면 $y_R \leq x$ 을 만족하는 $y_R$ 을 잡을 수 있다. 또한 [정리 5](#c076cc283) 에 의하여 $y \leq y_R$ 이므로 [The transitive law](#70892e5fd) 에 의하여 $y \leq x$ 을 얻는다. ■ 
     
 !!! def "단순화된 $<$ "
 
@@ -752,7 +752,7 @@
 
 - 증명
 
-    [정리 7](#630774eb4) 에 의하여 [$<$ 의 정의](#d9cc5fe30) 
+    [정리 7](#630774eb4) 에 의하여 [$<$ 의 정의](#e9c1c7e5b) 
 
     $$ x \leq y \land y \not \leq x \iff x < y \tag{2.47} $$
 
@@ -776,7 +776,7 @@
 
     $$ y \not \leq x \land z \not \leq y \land z \leq x \tag{2.50} $$
 
-    도 참이다. [정리 6](#80a2a11d6) 의 대우 명제는 임의의 초현실수 $b$ 에 대하여 
+    도 참이다. [정리 6](#70892e5fd) 의 대우 명제는 임의의 초현실수 $b$ 에 대하여 
 
     $$ a \not \leq c \implies a \not \leq b \lor b \not \leq c \tag{2.51} $$
 
@@ -812,7 +812,7 @@
 
     이라고 하고 $x_1 < x_2$ 라고 하자. 증명해야 할 것은 $\{x_1,x_2, \dots|X_R\}=\{x_2, \dots|X_R\}$ 이다. ▲ 
 
-    [$=$ 의 정의](#1b2da2972) 에 의하여 
+    [$=$ 의 정의](#9b1c5b42d) 에 의하여 
 
     $$ \{x_1,x_2, \dots|X_R\} \leq \{x_2, \dots|X_R\} \land \{x_1,x_2, \dots|X_R\} \geq \{x_2, \dots|X_R\} $$
 
@@ -846,7 +846,7 @@
 
 - 증명 
 
-    [정리 9](#7575764db) 로부터 바로 도출된다. ■ 
+    [정리 9](#7817bc62f) 로부터 바로 도출된다. ■ 
 
 !!! def "정리 11"
 
@@ -870,7 +870,7 @@
 
     $$x \leq \{X_L, A | X_R, B\} \land \{X_L, A | X_R, B\} \leq x$$ 
     
-    를 증명하는 것이다. 이는 [$\leq$ 의 정의](#6bffeb4be) 에 의하여 다음을 증명하는 것과 같다. 
+    를 증명하는 것이다. 이는 [$\leq$ 의 정의](#6c5b5ea1c) 에 의하여 다음을 증명하는 것과 같다. 
 
     $$ \lnot \exists x_L \in X_L : \{X_L, A | X_R, B\} \leq x_L \tag{2.54} $$
 
@@ -1222,7 +1222,7 @@
 
     $$ x' + y' \not \geq x+Y_R \tag{3.23} $$
 
-    정리 15 가 틀렸다고 가정하면 조건부 $y \leq y'$ 와 부정된 결론부 $x \not \geq x'$ 를 얻는다. $x \not \geq x'$ 는 [$\not \leq$ 의 정의](#19992ce0d) 에 의하여
+    정리 15 가 틀렸다고 가정하면 조건부 $y \leq y'$ 와 부정된 결론부 $x \not \geq x'$ 를 얻는다. $x \not \geq x'$ 는 [$\not \leq$ 의 정의](#34f824094) 에 의하여
 
     $$ \exists x'_L \in X'_L : x \leq x'_L \lor \exists x_R \in X_R : x_R \leq x' \tag{3.24} $$
 
@@ -1296,7 +1296,7 @@
 
 - 증명 
 
-    [$<$ 의 정의](#d9cc5fe30) 에 의하여 $x < x'$ 는 $x \leq x', x \not \geq x'$ 를 뜻한다.
+    [$<$ 의 정의](#e9c1c7e5b) 에 의하여 $x < x'$ 는 $x \leq x', x \not \geq x'$ 를 뜻한다.
     
     (여기서 [단순화된 $<$ 의 정의](#d0af3b928) 도 사용할 수 없는데 이 정리가 초현실수의 well-formed 에 의존하기 때문이다. 우리는 아직 초현실수의 덧셈이 well-formed 초현실수를 생성한다는 것을 증명하지 않았다. )
 
@@ -1312,7 +1312,7 @@
 
     $$ x + y \not \geq x' + y' \tag{3.39} $$
 
-    이다. $(3.37)$ 과 $(3.39)$ 와 [$<$ 의 정의](#d9cc5fe30) 에 의하여 
+    이다. $(3.37)$ 과 $(3.39)$ 와 [$<$ 의 정의](#e9c1c7e5b) 에 의하여 
 
     $$ \therefore x + y < x' + y' $$
 
