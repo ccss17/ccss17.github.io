@@ -1,7 +1,3 @@
-!!! info "ref"
-
-    Stephen H. Friedberg, Linear Algebra, 4th Edition
-
 # Determinants of $2 \times 2$ Matrix
 
 !!! def "$2 \times 2$ 행렬의 행렬식(Determinants of $2 \times 2$ Matrix)"
@@ -884,3 +880,9 @@
     $A, B$ 가 닮음이면 $B = Q ^{-1}AQ$ 를 만족하는 $Q$ 가 존재한다. 그러므로 다음이 성립한다. 
 
     $$ \det(B) = \det(Q ^{-1}AQ)  = \det(Q ^{-1}) \det(A) \det(Q) = \frac{1}{\det(Q) }\det(A) \det(Q) = \det(A) \tag*{■} $$
+
+---
+
+ref:
+
+:    Stephen H. Friedberg, Linear Algebra, 4th Edition

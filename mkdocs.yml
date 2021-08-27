@@ -107,7 +107,7 @@ nav:
     # - base: Computer/base.md
     - Nand to Tetris: Computer/nand2tetris.md
     - Information Theory: Computer/information.md
-    - Technological Singularity: Computer/future.md
+    - Why the future doesn't need us: Computer/future.md
     - Rust Memo: Computer/Rust.md
   - ProgrammerBase: 
     - README: ProgrammerBase/README.md

@@ -1,10 +1,4 @@
 
-!!! info "ref"
-
-    https://sites.math.washington.edu/~morrow/336_15/papers/gianni.pdf
-
-    https://arthasekuritas.com/researchpdf/arthalastcompany.pdf
-
 # 초실수
 
 ## 자유극대필터 $\mathcal{F}$ 
@@ -738,3 +732,11 @@
 # 비표준 해석학
 
 비표준 해석학에서의 수렴, 연속성, 증분, 미분 등등 일단 표준 해석학을 엄밀히 정리한 이후에 봐야 할듯
+
+---
+
+ref:
+
+:    https://sites.math.washington.edu/~morrow/336_15/papers/gianni.pdf
+
+:    https://arthasekuritas.com/researchpdf/arthalastcompany.pdf

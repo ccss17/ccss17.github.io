@@ -1,7 +1,3 @@
-!!! info "ref"
-
-    https://www.tondering.dk/download/sur16.pdf
-
 # 초현실수
 
 !!! def "초현실수(surreal number)"
@@ -2080,3 +2076,9 @@
 !!! def ""
 
     Surcomplex number : 초현실수 $a, b$ 와 $-1$ 의 제곱근 $i$ 에 대하여 $a + bi$ 형태의 수이다.
+
+---
+
+ref:
+
+:    https://www.tondering.dk/download/sur16.pdf

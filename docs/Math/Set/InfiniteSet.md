@@ -1,7 +1,3 @@
-!!! info "ref"
-
-    [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)
-
 !!! note
 
     아래의 논의의 "순서관계" 란 부분순서관계를 뜻한다.
@@ -1709,3 +1705,9 @@
     임의의 기수 $\alpha$ 에 대하여 $\aleph _{\alpha ^{+}} = 2 ^{\aleph _{\alpha }}$ 이다.
 
 - 증명
+
+---
+
+ref:
+
+:   [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)

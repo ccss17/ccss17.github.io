@@ -1,6 +1,5 @@
-!!! info "ref"
 
-    https://www.nand2tetris.org 
+이 책은 H 뉴스에서 사람들이 가장 가치있게 여기는 책 중 하나로 뽑혔다. 링크는..
 
 이 책이 다루는 내용은 다음과 같다.
 
@@ -738,3 +737,9 @@ symbol 은 사실 두 가지 소스로부터 생긴다. 하나는 변수이고 �
 # 12. Operating System
 
 # 13. Postscript
+
+---
+
+ref:
+
+:    https://www.nand2tetris.org 

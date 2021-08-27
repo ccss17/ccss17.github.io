@@ -1,7 +1,3 @@
-!!! info "ref"
-
-    Stephen H. Friedberg, Linear Algebra, 4th Edition
-
 # Linear Transformation
 
 !!! def "선형변환(linear transformation, linear map, vector space homomorphism)"
@@ -2282,3 +2278,9 @@
 - 예시
 
     방정식 $y ^{(2)}+4y=0$ 에서 함수 $y$ 가 해이면 $y ^{(2)} = -4y$ 이다. 즉, $y$ 는 두번 미분가능해야 한다. $y ^{(2)}$ 가 두번 미분가능한 함수 $y$ 의 상수배이므로 $y ^{(2)}$ 는 두 번 이상 미분가능하고 $y ^{(4)}$ 가 존재한다. 즉, $y ^{(4)} = -4y ^{(2)}$ 이다. 그러면 같은 논리로 $y ^{(6)}$ 도 존재하고 무한히 미분가능하다는 것을 알 수 있다.  -->
+
+---
+
+ref:
+
+:    Stephen H. Friedberg, Linear Algebra, 4th Edition

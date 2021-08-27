@@ -1,7 +1,3 @@
-!!! info "ref"
-
-    [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)
-
 # Proposition
 
 !!! def "명제(proposition)"
@@ -1928,3 +1924,9 @@
     $$ (x \lor y) \lor z = x \lor (y \lor z) = x \lor z = z $$
 
     이다. 따라서 $x \lor y \leq z$ 이다. 그러므로 $\sup \{x, y\} = x \lor y$ 이다. ■ 
+
+---
+
+ref:
+
+:   [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)

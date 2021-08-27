@@ -1,71 +1,3 @@
-!!! info "참고 및 출처"
-    
-    https://en.wikipedia.org/wiki/Propositional_calculus
-
-    https://en.wikipedia.org/wiki/Formal_system
-
-    https://en.wikipedia.org/wiki/Axiomatic_system
-
-    https://en.wikipedia.org/wiki/Theory_(mathematical_logic)
-
-    https://en.wikipedia.org/wiki/Formal_proof
-
-    https://en.wikipedia.org/wiki/Mathematical_proof
-
-    https://en.wikipedia.org/wiki/Contradiction
-
-    https://en.wikipedia.org/wiki/Principle_of_explosion
-
-    https://en.wikipedia.org/wiki/Completeness_(logic)
-
-    https://en.wikipedia.org/wiki/Primitive_notion
-
-    https://en.wikipedia.org/wiki/Model_theory
-
-    https://en.wikipedia.org/wiki/Isomorphism
-
-    https://en.wikipedia.org/wiki/Recursive_set
-
-    https://en.wikipedia.org/wiki/Recursively_enumerable_set
-
-    https://en.wikipedia.org/wiki/Interpretation_(logic)
-
-    https://en.wikipedia.org/wiki/Metatheorem
-
-    https://en.wikipedia.org/wiki/Metamathematics
-
-    https://en.wikipedia.org/wiki/Metalanguage
-
-    https://en.wikipedia.org/wiki/Metatheory
-
-    https://en.wikipedia.org/wiki/Arity
-
-    https://en.wikipedia.org/wiki/Hilbert_system
-
-    https://en.wikipedia.org/wiki/Substitution_(logic)
-
-    https://ko.wikipedia.org/wiki/%EC%9E%90%EC%97%B0_%EC%97%B0%EC%97%AD
-
-    https://en.wikipedia.org/wiki/Method_of_analytic_tableaux
-
-    https://en.wikipedia.org/wiki/Mathematical_model
-
-    https://math.stackexchange.com/questions/105575/what-is-the-difference-between-completeness-and-soundness-in-first-order-logic
-
-    https://en.wikipedia.org/wiki/Deduction_theorem
-
-    https://en.wikipedia.org/wiki/Automated_theorem_proving
-
-    https://en.wikipedia.org/wiki/Decidability_(logic)#Semidecidability
-
-    https://en.wikipedia.org/wiki/Metalogic
-
-    https://en.wikipedia.org/wiki/Categorical_theory
-
-    https://en.wikipedia.org/wiki/Type_theory
-
-    https://en.wikipedia.org/wiki/%CE%A9-inconsistent_theories
-
 # 형식체계 
 
 !!! def ""
@@ -1139,3 +1071,73 @@ https://en.wikipedia.org/wiki/Structure_(mathematical_logic)
 !!! note
 
     완전성 정리를 살펴보려 했는데 모델이론의 모델이라는 개념 같이 대수학, 추상대수학, 보편대수학, 모델이론 등에 대한 지식이 있어야 이해가 수월한 이야기들이 많아서 지금 살펴보는 것은 비효율적인 것 같았다. 나중에 기반지식이 좀 쌓였을 때 증명이론, 계산이론, 튜링 머신의 위키에서의 엄밀한 정의 같은 것들을 살펴보는 것이 더 효율적인듯.
+
+---
+
+ref:
+
+:    https://en.wikipedia.org/wiki/Propositional_calculus
+ 
+:    https://en.wikipedia.org/wiki/Formal_system
+ 
+:    https://en.wikipedia.org/wiki/Axiomatic_system
+ 
+:    https://en.wikipedia.org/wiki/Theory_(mathematical_logic)
+ 
+:    https://en.wikipedia.org/wiki/Formal_proof
+ 
+:    https://en.wikipedia.org/wiki/Mathematical_proof
+ 
+:    https://en.wikipedia.org/wiki/Contradiction
+ 
+:    https://en.wikipedia.org/wiki/Principle_of_explosion
+ 
+:    https://en.wikipedia.org/wiki/Completeness_(logic)
+ 
+:    https://en.wikipedia.org/wiki/Primitive_notion
+ 
+:    https://en.wikipedia.org/wiki/Model_theory
+ 
+:    https://en.wikipedia.org/wiki/Isomorphism
+ 
+:    https://en.wikipedia.org/wiki/Recursive_set
+ 
+:    https://en.wikipedia.org/wiki/Recursively_enumerable_set
+ 
+:    https://en.wikipedia.org/wiki/Interpretation_(logic)
+ 
+:    https://en.wikipedia.org/wiki/Metatheorem
+ 
+:    https://en.wikipedia.org/wiki/Metamathematics
+ 
+:    https://en.wikipedia.org/wiki/Metalanguage
+ 
+:    https://en.wikipedia.org/wiki/Metatheory
+ 
+:    https://en.wikipedia.org/wiki/Arity
+ 
+:    https://en.wikipedia.org/wiki/Hilbert_system
+ 
+:    https://en.wikipedia.org/wiki/Substitution_(logic)
+ 
+:    https://ko.wikipedia.org/wiki/%EC%9E%90%EC%97%B0_%EC%97%B0%EC%97%AD
+ 
+:    https://en.wikipedia.org/wiki/Method_of_analytic_tableaux
+ 
+:    https://en.wikipedia.org/wiki/Mathematical_model
+ 
+:    https://math.stackexchange.com/questions/105575/what-is-the-difference-between-completeness-and-soundness-in-first-order-logic
+ 
+:    https://en.wikipedia.org/wiki/Deduction_theorem
+ 
+:    https://en.wikipedia.org/wiki/Automated_theorem_proving
+ 
+:    https://en.wikipedia.org/wiki/Decidability_(logic)#Semidecidability
+ 
+:    https://en.wikipedia.org/wiki/Metalogic
+ 
+:    https://en.wikipedia.org/wiki/Categorical_theory
+ 
+:    https://en.wikipedia.org/wiki/Type_theory
+ 
+:    https://en.wikipedia.org/wiki/%CE%A9-inconsistent_theories

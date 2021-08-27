@@ -1,7 +1,3 @@
-!!! info "ref"
-
-    Stephen H. Friedberg, Linear Algebra, 4th Edition
-
 # Field
 
 !!! def "체(field)"
@@ -1661,3 +1657,9 @@
     By $(1), (2)$:
 
     $$ \therefore \text{span} (S_1) + \text{span} (S_2) = \text{span} (S_1 \cup S_2) \tag*{■} $$
+
+---
+
+ref:
+
+:    Stephen H. Friedberg, Linear Algebra, 4th Edition

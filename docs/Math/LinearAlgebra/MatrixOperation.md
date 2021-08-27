@@ -1,7 +1,3 @@
-!!! info "ref"
-
-    Stephen H. Friedberg, Linear Algebra, 4th Edition
-
 > metadata pass
 
 # Elementary Operation
@@ -813,3 +809,9 @@
     $$ x_1 + x_2 = 1 $$
 
     그러므로 $\text{rank} (A) = 1, \text{rank} (A|b) = 2$ 이다. 정리에 의하여 이 방정식의 해가 없다.
+
+---
+
+ref:
+
+:    Stephen H. Friedberg, Linear Algebra, 4th Edition

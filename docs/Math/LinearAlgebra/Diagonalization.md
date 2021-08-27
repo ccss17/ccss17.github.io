@@ -1,7 +1,3 @@
-!!! info "ref"
-
-    Stephen H. Friedberg, Linear Algebra, 4th Edition
-
 # Diagonalizable
 
 !!! def "선형연산자의 대각화가능(diagonalizable)"
@@ -1164,3 +1160,9 @@
 
     $$ \therefore A = \bigg (\bigoplus_{i=1}^{k-1}B_i\bigg ) \oplus B_k = \bigoplus_{i=1}^{k}B_i \tag*{■} $$
 
+
+---
+
+ref:
+
+:    Stephen H. Friedberg, Linear Algebra, 4th Edition

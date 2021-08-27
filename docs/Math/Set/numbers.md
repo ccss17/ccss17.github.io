@@ -1,7 +1,3 @@
-!!! info "ref"
-
-    [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)
-
 # Natural Numbers
 
 !!! def ""
@@ -2577,3 +2573,9 @@
 - 복소평면에서 복소수 $z = x+iy$ 는 다음과 같이 벡터이다. 
 
     ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Complex_conjugate_picture.svg/330px-Complex_conjugate_picture.svg.png)
+
+---
+
+ref:
+
+:   [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)

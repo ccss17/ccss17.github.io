@@ -161,12 +161,14 @@
  
     이다. 이 양을 엔트로피라고 부르는데, 정보량이란 곧 불확실성을 감소시켜주는 정도를 뜻하기 때문이다. 그러므로 엔트로피가 높으면 어떤 사건의 불확실성이 높다(얻게 되는 정보가 많음)고 볼 수 있고, 엔트로피가 낮으면 어떤 사건이 매우 확실하다(얻는 정보가 거의 없음)고 볼 수 있다.
 
-!!! note "ref"
+---
+
+ref:
         
-    http://www.talkorigins.org/faqs/information/shannon.html
-
-    https://www.google.com/search?q=graph+of+the+shannon+information+theory&newwindow=1&client=firefox-b-d&sxsrf=ALeKk00G-WiMqkGNCSOREMgSJuXoDWF1Uw:1603251812466&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiTwpG24sTsAhWYd94KHZDUC_wQ_AUoAXoECBYQAw#imgrc=eletzN9KCFUBhM
-
-    https://www.britannica.com/science/information-theory/Classical-information-theory
-
-    https://hyunw.kim/blog/2017/10/14/Entropy.html
+:    http://www.talkorigins.org/faqs/information/shannon.html
+ 
+:    https://www.google.com/search?q=graph+of+the+shannon+information+theory&newwindow=1&client=firefox-b-d&sxsrf=ALeKk00G-WiMqkGNCSOREMgSJuXoDWF1Uw:1603251812466&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiTwpG24sTsAhWYd94KHZDUC_wQ_AUoAXoECBYQAw#imgrc=eletzN9KCFUBhM
+ 
+:    https://www.britannica.com/science/information-theory/Classical-information-theory
+ 
+:    https://hyunw.kim/blog/2017/10/14/Entropy.html
