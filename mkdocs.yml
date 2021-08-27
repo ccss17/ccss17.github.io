@@ -198,14 +198,15 @@ theme:
       primary: white
       toggle:
         # icon: material/eye-outline
-        icon: material/weather-sunny
+        # icon: material/weather-sunny
+        icon: material/lightbulb-outline
         name: Switch to dark mode
     - scheme: slate
       primary: deep purple
-      # primary: black
       toggle:
         # icon: material/eye
-        icon: material/weather-night
+        # icon: material/weather-night
+        icon: material/lightbulb
         name: Switch to light mode
   font:
     text: Nanum Gothic
