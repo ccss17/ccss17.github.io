@@ -41,6 +41,19 @@ div.arithmatex {
   font-size: 0.68rem !important;
 }
 
+/* div.md-sidebar:nth-child(2) */
+
+div.md-main__inner.md-grid div.md-sidebar.md-sidebar--secondary {
+  top: 1.4rem !important;
+}
+/* .md-nav__title {
+  display: none;
+} */
+
+/* div.md-sidebar {
+  top: 1.4rem !important;
+} */
+
 .md-nav {
   font-size: .6rem !important;
   line-height: 1.2 !important;

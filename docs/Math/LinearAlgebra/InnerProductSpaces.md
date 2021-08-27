@@ -1830,14 +1830,14 @@
 
     $\dim (\mathbf{V}) = n$
 
-    $\mathbf{V}$ 의 표준순서기저 $\beta$ 에 대하여 다음이 성립한다.
+    $\mathbf{V}$ 의 표준순서기저 $\beta$ 에 대하여 [정리 2.11 따름정리](../LinearTransformation/#143fdacba), [정리 6.10](#515861895) 에 의하여 다음이 성립한다.
 
-    $$ [\mathbf{T}{}^{*}\mathbf{T}]_{\beta }=[\mathbf{I}]_{\beta } = I_n $$
+    $$ [\mathbf{T}{}^{*}\mathbf{T}]_{\beta }=[\mathbf{I}]_{\beta } = I_n \iff [\mathbf{T}{}^{*}]_{\beta }[\mathbf{T}]_{\beta } = I_n \iff [\mathbf{T}]{}^{*}_{\beta }[\mathbf{T}]_{\beta } = I_n $$
 
-    $$ [\mathbf{T}{}^{*}]_{\beta }[\mathbf{T}]_{\beta } = I_n $$
+    [문제 2.4-10](../LinearTransformation/#068bf6124) 에 의하여 $([\mathbf{T}]_{\beta })^{-1} = [\mathbf{T}]{}^{*}_{\beta }$ 이다. [역행렬의 정의](../LinearTransformation/#14b61be86) 에 의하여 $[\mathbf{T}]_{\beta }[\mathbf{T}{}^{*}]_{\beta } = I_n$ 이므로 다음이 성립한다. 
 
-    $$ [\mathbf{T}]{}^{*}_{\beta }[\mathbf{T}]_{\beta } = I_n $$
-
+    $$ [\mathbf{T}\mathbf{T}{}^{*}]_{\beta }=[\mathbf{I}]_{\beta } \iff \mathbf{T}\mathbf{T}{}^{*}=\mathbf{I} $$
+    
 ---
 
 ref:

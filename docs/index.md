@@ -30,7 +30,7 @@
 ├──&nbsp;Computer</p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/nand2tetris>Nand&nbsp;to&nbsp;Tetris</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/information>Information&nbsp;Theory</a></p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/future>Technological&nbsp;Singularity</a></p><p>
+│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/future>Why&nbsp;the&nbsp;future&nbsp;doesn't&nbsp;need&nbsp;us</a></p><p>
 │&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Computer/Rust>Rust&nbsp;Memo</a></p><p>
 ├──&nbsp;ProgrammerBase</p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=ProgrammerBase/README>README</a></p><p>
