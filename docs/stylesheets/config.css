@@ -21,6 +21,7 @@
 
 .md-typeset .def > .admonition-title::before,
 .md-typeset .def > summary::before {
+  -webkit-mask-image: url(../assets/images/bolt-solid.svg) ;
   mask-image: url(../assets/images/bolt-solid.svg) ;
   mask-repeat: no-repeat ;
   mask-size: contain ;
