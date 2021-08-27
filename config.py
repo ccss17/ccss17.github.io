@@ -18,7 +18,7 @@ def create_def_link():
 
         soup = BeautifulSoup(html, 'lxml')
 
-        for defs in soup.select('div.tldr'):
+        for defs in soup.select('div.def'):
             hashed = hash(defs.text)
             defs['id'] = hashed
             defs.wrap(soup.new_tag('a', href='#' + hashed))
@@ -33,7 +33,7 @@ def create_tree_from_dict(tree, data, parent=None):
         child = next(iter(child_data))
         if isinstance(child_data[child], str):
             node = '<a href=' + \
-                   child_data[child].rsplit('.', maxsplit=1)[0]+\
+                   child_data[child].rsplit('.', maxsplit=1)[0] +\
                    '>'+str(child)+'</a>'
             tree.create_node(node, node, parent=parent)
             continue
@@ -73,15 +73,11 @@ def create_category():
         f.write(index)
 
 
-def test():
-    create_category()
-
 if __name__ == '__main__':
-    # import sys
-    # if sys.argv[1] == '-d':
-    #     create_def_link()
-    # elif sys.argv[1] == '-c':
-    #     create_category()
-    # else:
-    #     print('Invalid argument')
-    test()
+    import sys
+    if sys.argv[1] == '-d':
+        create_def_link()
+    elif sys.argv[1] == '-c':
+        create_category()
+    else:
+        print('Invalid argument')

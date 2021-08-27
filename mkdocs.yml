@@ -6,7 +6,7 @@ site_url: https://ccss17.github.io/
 # repo_url: https://github.com/ccss17/ccss17.github.io
 
 nav:
-  - Home: index.md
+  - ccss17: index.md
   # - Trend: 
   #   - 2020: trend/2020.md
   #   - 2021: trend/2021.md
