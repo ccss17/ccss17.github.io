@@ -737,8 +737,6 @@
 
     같은 방식으로 $v_3 = x ^{2} - \frac{1}{3}$ 도 얻는다. 따라서 $\mathbf{P}_{2}(\R)$ 의 직교기저는 $\bigg \{1, x, x ^{2} - \dfrac{1}{3} \bigg \}$ 이다. 이를 정규화하면 $\bigg \{\dfrac{1}{\sqrt[]{2}}, \sqrt[]{\dfrac{3}{2}}x, \sqrt[]{\dfrac{5}{8}}(3x ^{2}-1)\bigg \}$ 을 얻는다. 이는 $\mathbf{P}_{2}(\R)$ 의 정규직교기저이다.
 
-## Legendre Polynomial
-
 !!! def "르장드르 다항식(Legendre polynomial)"
 
     $\mathbf{P}_{}(\R)$ 의 표준순서기저 $\{1,x,x ^{2}, \dots\}$ 에 그람-슈미트 직교화를 적용하여 얻은 직교기저 $\{v_1, v_2, \dots\}$ 에 대한 다항식 $\dfrac{v_k}{v_k(1)}$ 를 $k$차 르장드르 다항식이라 한다.
@@ -1664,8 +1662,6 @@
 
     $\lambda _1 \neq \lambda_2$ 이므로 $\big <x_1,x_2 \big >= 0$ 이다. ■ 
 
-## Fundamental Theorem of Algebra
-
 !!! def "대수학의 기본 정리(fundamental theorem of algebra)"
 
     $\mathbf{P}(\mathbb{C})$ 의 다항식 $p(z) = a_nz ^{n} + \dots + a_1z + a_0$ 의 차수가 $n \geq 1$ 이면 $p(z)$ 는 해가 있다.
@@ -1808,6 +1804,26 @@
 
     유클리드 공간에서 $0 < \theta<\pi$ 에 대하여 각도를 $\theta$ 만큼 회전하는 변환 $\mathbf{T}: \R ^{2}\to \R ^{2}$ 는 유클리드 노름을 보존한다. 즉, $\forall x \in \R ^{2} : \|\mathbf{T}(x)\| = \|x\|$ 이다. 
 
+!!! def "내적 보존 연산자(inner product preservation operator)"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 다음을 만족하면 내적을 보존하는 연산자라 한다. 
+
+    $$ \forall x, y \in \mathbf{V} : \big <\mathbf{T}(x), \mathbf{T}(y) \big > = \big <x,y \big > $$
+
+- 정리 6.18 에 의하여 유니타리 연산자와 직교연산자는 내적 보존 연산자이다.
+
+- 정리 6.18-(3) 을 만족하는 연산자를 내적을 보존하는 연산자라 한다.
+
+!!! def "노름 보존 연산자(norm preservation operator)"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 다음을 만족하면 노름을 보존하는 연산자라 한다. 
+    
+    $$ \forall x \in \mathbf{V} : \|\mathbf{T}(x)\| = \|x\| $$
+
+- 정의에 의하여 유니타리 연산자와 직교연산자는 노름 보존 연산자이다.
+
+- 정리 6.18-(6) 을 만족하는 연산자를 노름을 보존하는 연산자라 한다.
+
 !!! def "보조정리"
 
     내적공간 $\mathbf{V}$ 의 자기수반연산자 $\mathbf{U}$ 에 대하여 다음이 성립한다. 
@@ -1817,6 +1833,8 @@
 - 증명
 
     $\mathbf{U}(x) \in \mathbf{V}$ 이므로 $\big <\mathbf{U}(x), \mathbf{U}(x) \big > = 0$ 이다. 내적의 정의에 의하여 $\mathbf{U}(x) = 0$ 이다. ■ 
+
+## Properties of Unitary and Orthogonal Operators
 
 !!! def "정리 6.18"
 
@@ -1884,28 +1902,6 @@
 
     [정리 6.1](#99baac14a) 은 내적이 두번째 성분에 대한 덧셈의 선형성이 성립함을 말해준다. 따라서 $\big <x,x \big > = \big <x, \mathbf{T}{}^{*}\mathbf{T}(x) \big > \iff \big <x, (\mathbf{I}-\mathbf{T}{}^{*}\mathbf{T})(x) \big > = 0$ 이다. $\mathbf{U}=\mathbf{I}-\mathbf{T}{}^{*}\mathbf{T}$ 로 두면 [정리 6.11](#a9f161221) 에 의하여 $\mathbf{U}$ 가 자기수반연산자임을 쉽게 알 수 있다. 모든 $x$ 에 대하여 $\big <x, \mathbf{U}(x) \big > = 0$ 이므로 보조정리에 의하여 $\mathbf{U}= \mathbf{I}-\mathbf{T}{}^{*}\mathbf{T}=\mathbf{T}_0$ 이다. 그러므로 $\mathbf{T}{}^{*}\mathbf{T}=\mathbf{I}$ 이다. ■ 
 
-## Inner Product Preservation Operator
-
-!!! def "내적 보존 연산자(inner product preservation operator)"
-
-    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 다음을 만족하면 내적을 보존하는 연산자라 한다. 
-
-    $$ \forall x, y \in \mathbf{V} : \big <\mathbf{T}(x), \mathbf{T}(y) \big > = \big <x,y \big > $$
-
-- 정리 6.18-(3) 을 만족하는 연산자를 내적을 보존하는 연산자라 한다.
-
-## Norm Preservation Operator
-
-!!! def "노름 보존 연산자(norm preservation operator)"
-
-    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 다음을 만족하면 노름을 보존하는 연산자라 한다. 
-    
-    $$ \forall x \in \mathbf{V} : \|\mathbf{T}(x)\| = \|x\| $$
-
-- 유니타리 연산자와 직교연산자는 노름 보존 연산자이다.
-
-- 정리 6.18-(6) 을 만족하는 연산자를 노름을 보존하는 연산자라 한다.
-
 !!! def "정리 6.18 따름정리 1"
 
     유한차원 실내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
@@ -1946,7 +1942,72 @@
 
     $$ \|v\| = \|\mathbf{T}(v)\| = \|\lambda v\| = |\lambda | \|v\| \implies |\lambda | = 1 \tag*{■} $$
 
+!!! def "대칭변환(reflection)"
+
+    $\R ^{2}$ 의 1차원 부분공간 $\mathbf{L}_{}$ 에 대하여 다음 선형연산자 $\mathbf{T}$ 를 대칭변환이라 한다. 
+
+    $$ \mathbf{T}(x) = \begin{cases} x & x \in \mathbf{L}_{} \\ -x & x \in \mathbf{L}^{\perp} \\ \end{cases} $$
+
+- $\mathbf{L}_{}$ 은 평면 위 원점을 지나는 직선이다. 
+
+- 예시 
+
+    원점을 지나는 직선 $\mathbf{L}_{}$ 에 대한 $\R ^{2}$ 의 대칭변환 $\mathbf{T}$ 와 $\|v_1\| = \|v_2\| = 1$ 인 $v_1 \in \mathbf{L}_{}, v_2 \in \mathbf{L}_{}^{\perp}$ 에 대하여 $\mathbf{T}(v_1) = v_1, \mathbf{T}(v_2) = -v_2$ 이므로 $v_1, v_2$ 은 고윳값 $1, -1$ 에 대응하는 $\mathbf{T}$ 의 고유벡터이다. 또한 $\{v_1, v_2\}$ 는 $\R ^{2}$ 의 정규직교기저이다. 정리 6.18 따름정리 1 에 의하여 $\mathbf{T}$ 는 직교연산자이며 에르미트 연산자이다.
+
+## Unitary and Orthogonal Matrix
+
+!!! def "직교행렬(orthogonal matrix), 유니타리 행렬(unitary matrix)"
+
+    $A ^{t}A = AA ^{t} = I$ 인 정사각행렬 $A$ 를 직교행렬이라 한다.
+
+    $A {}^{*} A = AA {}^{*}  = I$ 인 정사각행렬 $A$ 를 유니타리 행렬이라 한다.
+
+- 실행렬 $A$ 는 $A {}^{*}=A ^{t}$ 를 만족하므로 실 유니타리 행렬은 직교행렬이다. 
+
+!!! def ""
+
+    정사각행렬 $A$ 에 대하여 다음이 성립한다.
+    
+    1. $AA {}^{*} = I$ 는 $A$ 의 각 행이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 동치이다.
+
+    2. $A {}^{*} A = I$ 는 $A$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 동치이다.
+
+- 증명
+
+    $A$ 의 $i$행 $A_i$, $j$행 $A_j$ 으로 두면 표준내적 $\big <\cdot ,\cdot  \big >$ 에 대하여 $AA {}^{*} = I$ 에 의하여 다음이 성립한다.
+
+    $$ \delta _{ij} = I _{ij} = (AA {}^{*})_{ij} = \sum_{k=1}^{n}A _{ik}(A {}^{*})_{kj} = \sum_{k=1}^{n}A _{ik}\overline{A} _{jk} = \big <A_i, A_j \big > $$
+
+    $\big <A_i,A_j \big > = \delta _{ij}$ 에서 $A$ 의 각 행이 직교하고, 정규벡터임을 알 수 있다. [정리 6.3 따름정리 2](#562252827) 에 의하여 $A$ 의 각 행은 일차독립이다. 따라서 $AA {}^{*}=I$ 가 $A$ 의 각 행이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 동치임을 알 수 있다. ▲ 
+
+    같은 논리로 $A$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 조건 $A {}^{*}A = I$ 이 동치임을 보일 수 있다. ■ 
+
+!!! def ""
+
+    내적공간의 선형연산자 $\mathbf{T}$ 가 유니타리[직교] 연산자인 것과 정규직교기저 $\beta$ 에 대하여 $[\mathbf{T}]_{\beta }$ 가 유니타리[직교] 행렬인 것은 동치이다.
+
+- 증명
+
+    복소내적공간에서 $[\mathbf{T}]_{\beta }$ 가 유니타리행렬이면 다음이 성립한다.
+
+    $$ [\mathbf{T}]_{\beta }[\mathbf{T}]{}^{*}_{\beta } = [\mathbf{T}]_{\beta }{}^{*}[\mathbf{T}]_{\beta } = I $$
+
+    [정리 6.10](#515861895) 에 의하여 다음이 성립한다.
+
+    $$ [\mathbf{T}]_{\beta }[\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}{}^{*}]_{\beta }[\mathbf{T}]_{\beta } = I $$
+
+    [정리 2.11 따름정리](../LinearTransformation/#143fdacba) 에 의하여 다음이 성립한다.
+
+    $$ [\mathbf{T}\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}{}^{*}\mathbf{T}]_{\beta } = [\mathbf{I}]_{\beta } \implies \mathbf{T}\mathbf{T}{}^{*}=\mathbf{T}{}^{*}\mathbf{T}= \mathbf{I} $$
+    
+    [정리 6.18](#aee06829a) 에 의하여 $\|\mathbf{T}(x)\| = \|x\|$ 이다. ▲ 
+
+    $\|\mathbf{T}(x)\| = \|x\|$ 를 가정하면 위의 논리의 역순을 그대로 따라감으로써 유니타리 행렬의 정의에 도달한다. ▲ 
+
+    이제 복소내적공간에서 이루어진 위의 논리를 실내적공간에서 펼치면 하면 직교행렬과 직교연산자가 동치임을 바로 증명할 수 있다. ■ 
+
 ---
+
 
 ref:
 
