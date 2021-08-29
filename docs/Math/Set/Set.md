@@ -670,13 +670,11 @@
 
     을 위배하기 때문이다.
 
+## Function Equality
+
 !!! def "함수의 상등(function equality)"
 
-    함수 $f: X \to Y$ 와 $g: X \to Y$ 가 같은 함수일 필요충분조건은 
-
-    $$ f(x) = g(x), x \in X $$
-
-    이다. 
+    함수 $f: X \to Y$ 와 $g: X \to Y$ 가 같은 함수인 것과 $\forall x \in X : f(x) = g(x)$ 인 것은 동치이다.
 
 - 증명 
 
@@ -684,7 +682,7 @@
 
     $$ y = f(x) \iff (x, y) \in f \iff (x, y) \in g \iff y = g(x) $$
 
-    이므로 $f(x) = g(x)$ 이다.
+    이므로 $f(x) = g(x)$ 이다. ▲ 
 
     반대로 임의의 $x \in X$ 에 대하여 $f(x) = g(x)$ 이면 
 
@@ -1074,11 +1072,7 @@
 
 !!! def "관계(relation)"
 
-    집합족 $\{X_i\}_{i \in I}$ 위의 관계는 곱집합의 부분집합
-
-    $$ R \subseteq \prod_{i \in I}^{}X_i $$
-
-    이다.
+    집합족 $\{X_i\}_{i \in I}$ 위의 관계는 곱집합의 부분집합 $R \subseteq \displaystyle \prod_{i \in I}^{}X_i$ 이다.
 
 - 이를 통해 순서수 $\alpha$ 에 대하여 집합 $X$ 위의 $\alpha$항 관계를 거듭제곱 집합의 부분집합
 
@@ -1116,15 +1110,13 @@
 
 !!! def "동치관계(equivalence relation)"
 
-    집합 $X$ 에 대한 관계 $R \subset X \times X$ 가 
+    집합 $X$ 에 대한 관계 $R \subset X \times X$ 가 다음을 만족하면 $R$ 을 동치관계라 한다.
+
+    1. $\forall x \in X : (x,x)\in R$ (reflexive relation)
     
-    1. 임의의 $x \in X$ 에 대하여 $(x,x)\in R$ 이다.(reflexive relation)
+    2. $(x, y) \in R \implies (y, x) \in R$ (symmetric relation)
     
-    2. $(x, y) \in R$ 이면 $(y, x) \in R$ 이다.(symmetric relation)
-    
-    3. $(x, y) \in R$ 이고 $(y,z)\in R$ 이면 $(x, z) \in R$ 이다.(transitive relation)
-    
-    를 만족하면 $R$ 을 동치관계라 한다.
+    3. $(x, y) \in R \land (y,z)\in R \implies (x, z) \in R$ (transitive relation)
 
 - 동치관계 $R \subset X \times X$ 의 원소 $(x, y) \in R$ 을 
 
@@ -1200,13 +1192,11 @@
 
 !!! def "분할(partition)"
 
-    집합 $X$ 의 공집합이 아닌 부분집합족 $\{A_i : i \in I\}$ 가 
+    집합 $X$ 의 공집합이 아닌 부분집합족 $\{A_i : i \in I\}$ 가 다음을 만족하면 이를 $X$ 의 분할이라 한다. 
 
-    1. $X = \bigcup_{i \in I}^{}A_i$
+    1. $X = \displaystyle \bigcup_{i \in I}^{}A_i$
 
-    2. $\forall i,j \in I, A_i = A_j \lor A_i \cap A_j = \varnothing$
-
-    를 만족하면 이를 $X$ 의 분할이라 한다. 
+    2. $\forall i,j \in I: A_i \neq A_j \implies A_i \cap A_j = \varnothing$
 
 - 집합 $X$ 에 동치관계 $\sim$ 가 주어지면 자동적으로 $X$ 의 분할이 생김을 알 수 있는데, 이러한 분할을 
 
@@ -1288,6 +1278,8 @@
 
     가 성립한다.
 
+- 이 정리는 동치관계와 동치관계로 생성된 분할이 서로 같고, 분할과 분할로 생성된 동치관계가 서로 같음을 말해준다. 즉, 분할과 동치관계가 본질적으로 서로 같다는 것을 말해준다. 
+
 - 첫번째 명제의 증명 
 
     먼저 $x \sim y$ 이면 $x \in [x], y \in [x]$ 이고 $[x] \in X/\sim$ 이므로 $x \sim _{(X/\sim )}y$ 가 성립한다. 역으로 $x \sim _{(X/\sim )}y$ 이면 $x \in [z], y \in [z]$ 인 $[z] \in X/\sim$ 이 존재한다. 그러면 $x \sim z, y \sim z$ 이므로 $x \sim y$ 이다.
@@ -1326,12 +1318,6 @@
 
         동치관계의 정의로부터 도출된 분할과 분할의 정의로부터 도출된 동치관계가 서로 동일함을 보여주고 있는 것이다. 
     
-- 즉, 이 정리는 정의된 동치관계로 구분된 원소들이 갖는 관계가 동치관계로 분할된 집합족의 부분집합들이 갖는 관계와 같고,
-
-    어떤 집합에 임의의 분할 집합을 정의하면 그 분할이 갖는 동치관계로 집합을 분할하여도 결국 분할 집합과 같다는 것을 말해준다.  
-
-    *(솔직히 이 정리 자체가 의미하는 것을 제대로 이해하기가 어렵네 잘아는 사람한테 물어봐야 할듯)*
-
 ## Quotient Set
 
 !!! def "몫집합(quotient set), 상집합"
@@ -1352,39 +1338,33 @@
 
 - 목사상은 전사사상이다.
 
-- 함수 $f:X \to Y$ 가 
-
-    $$ x \sim y \implies f(x) = f(y) \tag{1} $$
-
-    를 만족할 때 함수 
-
-    $$ \tilde{f}:X/ \sim \to Y:[x] \to f(x) $$
-
-    를 정의할 수 있다. 이때 이 정의가 잘 정의되어 있는지 살펴봐야 하는데, 왜냐하면 $[x]$ 의 함수값을 정의하기 위하여 $x$ 를 사용하였는데 $[x]$ 를 대표하는 원소가 $x$ 이외에 더 있을 수 있기 때문이다. 즉, 다른 원소 $y$ 에 대하여 $[x]=[y]$ 라면 $y$ 도 $[x]$ 를 대표하게 되는데 이런 때에도 $f(x)=f(y)$ 가 성립하여야 $\tilde{f}$ 가 함수가 될 수 있다. 이것을 보장하는 조건이 $(1)$ 인 것이다. 
-
-    역으로 $\tilde{f}\circ q = f$ 가 성립하는 함수 $\tilde{f}:X/\sim \to Y$ 가 존재하면 조건 $(1)$ 이 성립하는 것은 자명하다. 
-
 !!! def "정리 1.3.2"
 
-    집합 $X$ 와 동치관계 $\sim$ 와 함수 $f: X \to Y$ 에 대하여 다음 명제들은 서로 동치이다.
+    집합 $X$ 와 동치관계 $\sim$ 와 함수 $f: X \to Y$ 와 목사상 $q: X \to X / \sim : x \mapsto [x]$ 대하여 다음 명제들은 서로 동치이다.
 
     1. $\tilde{f} \circ q = f$ 인 함수 $\tilde{f}: X/\sim \to Y$ 가 유일하게 존재한다. 
 
-    2. $x \sim y \to f(x)=f(y)$
+    2. $x \sim y \implies f(x)=f(y)$
 
-- $\tilde{f}$ 의 유일성 증명
+- 증명
 
-    $\tilde{f} \circ q = f$ 를 만족하는 $\tilde{f}$ 가 존재하면 유일함을 보이자. 두 함수 $\tilde{f}_{1}, \tilde{f}_{2}: X/\sim \to Y$ 가 
+    $2 \implies 1$:
 
-    $$ \tilde{f}_{1} \circ q = f = \tilde{f}_{2} \circ q $$
+    2) 를 가정하면 함수 $\tilde{f}:X/ \sim \to Y:[x] \to f(x)$ 가 존재한다. 이때 이 정의가 잘 정의되어 있는지 살펴봐야 하는데, 왜냐하면 $[x]$ 의 함수값을 정의하기 위하여 $x$ 를 사용하였는데 $[x]$ 를 대표하는 원소가 $x$ 이외에 더 있을 수 있기 때문이다. 즉, 다른 원소 $y$ 에 대하여 $[x]=[y]$ 라면 $y$ 도 $[x]$ 를 대표하게 되는데 이런 때에도 $f(x)=f(y)$ 가 성립하여야 $\tilde{f}$ 가 함수가 될 수 있다. 이것을 2) 가 보장해준다. 
 
-    이라면, 
+    이제 $\tilde{f}$ 의 유일성을 보이면 된다. 즉, 두 함수 $\tilde{f}_{1}, \tilde{f}_{2}: X/\sim \to Y$ 가 $\tilde{f}_{1} \circ q = \tilde{f}_{2} \circ q = f$ 이면 서로 같음을 보이자. 2) 를 가정했으므로 임의의 $A \in X/ \sim$ 에 대하여 다음이 성립한다. 
 
-    $$ \tilde{f} _{1} = \tilde{f} _{2} $$
+    $$ x, y \in A \implies f(x) = f(y) $$
 
-    임을 보이면 된다. 
+    따라서 다음이 성립한다. 
+    
+    $$ \tilde{f}_1(q(x)) = \tilde{f}_2(q(x)) \iff \tilde{f}_1(A) = \tilde{f}_2(A) $$
 
-    (*음.. 어려운데? $q$ 의 정의역을 축소하여 전단사사상으로 바꾸면 $q ^{-1}$ 를 정의할 수 있지만, $q$ 의 정의역을 축소하는 것이 올바른지 검증하는 게 어렵네 일단 시간이 너무 없긴 해서 넘어가야할듯*)
+    즉, 정의역의 임의의 원소에서 $\tilde{f}_1$ 와 $\tilde{f}_2$ 의 상이 같다. [함수의 상등의 정의](#57b118c60)에 의하여 $\tilde{f}_1 = \tilde{f}_2$ 이다. ▲ 
+
+    $1 \implies 2$:
+
+    역으로 $\tilde{f}\circ q = f$ 가 성립하는 함수 $\tilde{f}:X/\sim \to Y$ 가 존재하면 조건 2) 가 성립하는 것은 자명하다. ■ 
 
 - 예시 
 

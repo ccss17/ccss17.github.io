@@ -1118,6 +1118,8 @@
 
     $$ [(\mathbf{L}_{A}){}^{*}]_{\beta } = [\mathbf{L}_{A}]{}^{*}_{\beta } = A {}^{*} = [\mathbf{L}_{A {}^{*}}]_{\beta } \tag*{■} $$
 
+## Properties of Adjoint
+
 !!! def "정리 6.11"
 
     내적공간 $\mathbf{V}$ 와 수반연산자가 존재하는 선형연산자 $\mathbf{T}, \mathbf{U}$ 에 대하여 다음이 성립한다.
@@ -1728,8 +1730,6 @@
 
     $\mathbf{T}$ 가 자기수반연산자임을 가정하면 비슷한 논리로 그 역을 쉽게 증명할 수 있다. ■ 
 
-## Diagonalizable Orthonormal Basis in Real Inner Product Space
-
 !!! def "보조정리"
 
     유한차원 내적공간 $\mathbf{V}$ 의 자기수반연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
@@ -1764,6 +1764,8 @@
 
     [특성다항식의 정의](../Diagonalization/#2f3482489)에 의하여 $\mathbf{U}$ 의 특성다항식은 $A$ 의 특성다항식이다. 다시 특성다항식의 정의에 의하여 $A$ 의 특성다항식은 $\mathbf{T}$ 의 특성다항식이다. 따라서 $\mathbf{T}$ 의 특성다항식은 완전히 인수분해된다. ■ 
 
+## Diagonalizable Orthonormal Basis in Real Inner Product Space
+
 !!! def "정리 6.17"
 
     유한차원 실내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
@@ -1786,7 +1788,7 @@
 
     $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저 $\beta$ 가 존재함을 가정하면 $A = [\mathbf{T}]_{\beta }$ 는 대각행렬이다. 따라서 $A = A ^{t}$ 이다. 또한 실내적공간이므로 $A = A {}^{*}$ 이다. 따라서 $\mathbf{T}$ 는 자기수반연산자이다. ■ 
 
-# Unitary and Orthogonal Operators
+# Unitary[Orthogonal] Operators
 
 !!! def "유니타리 연산자(unitary operator), 직교연산자(orthogonal operator)"
 
@@ -1834,7 +1836,7 @@
 
     $\mathbf{U}(x) \in \mathbf{V}$ 이므로 $\big <\mathbf{U}(x), \mathbf{U}(x) \big > = 0$ 이다. 내적의 정의에 의하여 $\mathbf{U}(x) = 0$ 이다. ■ 
 
-## Properties of Unitary and Orthogonal Operators
+## Properties of Unitary[Orthogonal] Operators
 
 !!! def "정리 6.18"
 
@@ -1954,7 +1956,7 @@
 
     원점을 지나는 직선 $\mathbf{L}_{}$ 에 대한 $\R ^{2}$ 의 대칭변환 $\mathbf{T}$ 와 $\|v_1\| = \|v_2\| = 1$ 인 $v_1 \in \mathbf{L}_{}, v_2 \in \mathbf{L}_{}^{\perp}$ 에 대하여 $\mathbf{T}(v_1) = v_1, \mathbf{T}(v_2) = -v_2$ 이므로 $v_1, v_2$ 은 고윳값 $1, -1$ 에 대응하는 $\mathbf{T}$ 의 고유벡터이다. 또한 $\{v_1, v_2\}$ 는 $\R ^{2}$ 의 정규직교기저이다. 정리 6.18 따름정리 1 에 의하여 $\mathbf{T}$ 는 직교연산자이며 에르미트 연산자이다.
 
-## Unitary and Orthogonal Matrix
+## Unitary[Orthogonal] Matrix
 
 !!! def "직교행렬(orthogonal matrix), 유니타리 행렬(unitary matrix)"
 
@@ -1966,21 +1968,39 @@
 
 !!! def ""
 
-    정사각행렬 $A$ 에 대하여 다음이 성립한다.
-    
-    1. $AA {}^{*} = I$ 는 $A$ 의 각 행이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 동치이다.
+    체 $\mathbf{F}\in \{\R ,\mathbb{C}\}$ 에 대한 정사각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 다음은 동치이다.
 
-    2. $A {}^{*} A = I$ 는 $A$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 동치이다.
+    1. $AA {}^{*} = I$
+
+    2. $A {}^{*} A = I$
+
+    3. $A$ 의 각 행이 표준내적공간 $\mathbf{F}^{n}$ 의 정규직교기저이다.
+
+    4. $A$ 의 각 열이 표준내적공간 $\mathbf{F}^{n}$ 의 정규직교기저이다.
+
+    5. $A$ 는 유니타리[직교] 행렬이다.
 
 - 증명
 
-    $A$ 의 $i$행 $A_i$, $j$행 $A_j$ 으로 두면 표준내적 $\big <\cdot ,\cdot  \big >$ 에 대하여 $AA {}^{*} = I$ 에 의하여 다음이 성립한다.
+    $1 \iff 2$:
+
+    1) 을 가정하면 [문제 2.4-10](../LinearTransformation/#068bf6124) 에 의하여 $A, A {}^{*}$ 는 가역이고, $A ^{-1} = A {}^{*}$ 이다. 따라서 $A {}^{*}A = I$ 이다. 그 역도 같은 논리로 보일 수 있다. ▲ 
+
+    $1 \iff 3$:
+
+    $A$ 의 $i$행 $A_i$, $j$행 $A_j$ 으로 두면 표준내적 $\big <\cdot ,\cdot  \big >$ 에 대하여 $AA {}^{*} = I$ 를 가정하면 다음이 성립한다.
 
     $$ \delta _{ij} = I _{ij} = (AA {}^{*})_{ij} = \sum_{k=1}^{n}A _{ik}(A {}^{*})_{kj} = \sum_{k=1}^{n}A _{ik}\overline{A} _{jk} = \big <A_i, A_j \big > $$
 
-    $\big <A_i,A_j \big > = \delta _{ij}$ 에서 $A$ 의 각 행이 직교하고, 정규벡터임을 알 수 있다. [정리 6.3 따름정리 2](#562252827) 에 의하여 $A$ 의 각 행은 일차독립이다. 따라서 $AA {}^{*}=I$ 가 $A$ 의 각 행이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 동치임을 알 수 있다. ▲ 
+    $\big <A_i,A_j \big > = \delta _{ij}$ 에서 $A$ 의 각 행이 직교하고, 정규벡터임을 알 수 있다. [정리 6.3 따름정리 2](#562252827) 에 의하여 $A$ 의 각 행은 일차독립이다. 그 역도 비슷한 논리로 보일 수 있다. 따라서 $AA {}^{*}=I$ 가 $A$ 의 각 행이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 동치임을 알 수 있다. ▲ 
 
-    같은 논리로 $A$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 조건 $A {}^{*}A = I$ 이 동치임을 보일 수 있다. ■ 
+    $2 \iff 4$:
+
+    $1 \iff 3$ 의 증명과 같은 논리로 $A$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 조건 $A {}^{*}A = I$ 이 동치임을 보일 수 있다. ▲ 
+
+    $1 \iff 5$:
+
+    1) 을 가정하면 2) 도 참이므로 유니타리 행렬의 정의가 바로 나온다. 직교 행렬은 실행렬임을 가정하면 바로 나온다. 역으로, 유니타리[직교] 행렬을 가정하면 1) 과 2) 가 바로 나온다. ■ 
 
 !!! def ""
 
@@ -2006,8 +2026,57 @@
 
     이제 복소내적공간에서 이루어진 위의 논리를 실내적공간에서 펼치면 하면 직교행렬과 직교연산자가 동치임을 바로 증명할 수 있다. ■ 
 
----
+## Unitarily[Orthogonally] Equivalent
 
+!!! def ""
+
+    체 $\mathbf{F}\in \{\R ,\mathbb{C}\}$ 에서 성분을 가져온 $n \times n$ 복소정규[실대칭] 행렬 $A$ 에 대하여 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저가 존재한다. 
+
+- 증명
+
+    정사각행렬 $A$ 가 복소정규행렬이면 [정리 2.15](../LinearTransformation/#c3298a7b3) 에 의하여 $\mathbb{C}^{n}$ 의 표준순서기저 $\beta$ 에 대하여 $[\mathbf{L}_{A}]_{\beta } = A$ 이다. [$A$ 가 정규행렬이므로 $\mathbf{L}_{A}$ 는 정규연산자](#36ed70678)이다. 정규연산자 $\mathbf{L}_{A}$ 에 대하여 [정리 6.16](#a19f2f549) 에 의하여 $\mathbf{L}_{A}$ 의 고유벡터로 이루어진 $\mathbb{C}^{n}$ 의 정규직교기저가 존재한다. [$\mathbf{L}_{A}$ 의 고유벡터는 $A$ 의 고유벡터](../Diagonalization/#5f167c003)이다. ▲ 
+
+    정사각행렬 $A$ 가 실대칭행렬이면 [정리 2.15](../LinearTransformation/#c3298a7b3) 에 의하여 $\R ^{n}$ 의 표준순서기저 $\beta$ 에 대하여 $[\mathbf{L}_{A}]_{\beta } = A$ 이다. [$A$ 가 자기수반행렬이므로 $\mathbf{L}_{A}$ 는 자기수반연산자](#0896eaf2a)이다. 자기수반연산자 $\mathbf{L}_{A}$ 에 대하여 [정리 6.17](#ffecd6249) 에 의하여 $\mathbf{L}_{A}$ 의 고유벡터로 이루어진 $\mathbb{C}^{n}$ 의 정규직교기저가 존재한다. [$\mathbf{L}_{A}$ 의 고유벡터는 $A$ 의 고유벡터](../Diagonalization/#5f167c003)이다. ■ 
+
+!!! def "유니타리 동치(unitarily equivalent), 직교 동치(orthogonally equivalent)"
+
+    두 행렬 $A, B$ 와 유니타리[직교] 행렬 $U$ 에 대하여 $B = U {}^{*}AU$ 가 성립하면 $A, B$ 를 유니타리[직교] 동치라 한다.
+
+!!! def ""
+
+    유니타리 동치는 $\mathbf{M}_{n \times n}(\mathbb{C})$ 에서 동치관계이다. 
+
+    직교 동치는 $\mathbf{M}_{n \times n}(\R )$ 에서 동치관계이다. 
+
+- 증명
+
+!!! def "정리 6.19"
+
+    $n \times n$ 복소행렬 $A$ 가 정규행렬인 것은 $A$ 가 대각행렬과 유니타리 동치인 것과 동치이다.
+
+- 증명
+
+    [$A$ 가 복소정규 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\mathbf{F}^{n}$ 의 순서기저 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 유니타리 행렬](#4d2e69003)이다. 따라서 $A$ 와 $D$ 는 유니타리 동치이다. ▲ 
+
+    $A$ 가 유니타리 행렬 $P$ 와 대각행렬 $D$ 에 대하여 $A = P {}^{*}DP$ 임을 가정하면 다음이 성립한다. 
+
+    $$ AA {}^{*} = (P {}^{*}DP)(P {}^{*}DP) {}^{*} = (P {}^{*}DP)(P {}^{*}D {}^{*}P) = P {}^{*}DID {}^{*}P = P {}^{*}DD {}^{*}P $$
+
+    같은 논리로 $A {}^{*}A = P {}^{*}D {}^{*}DP$ 를 얻는다. $D$ 는 대각행렬이므로 $DD {}^{*} = D {}^{*}D$ 이다. 따라서 $AA {}^{*} = A {}^{*}A$ 이다. ■ 
+
+!!! def "정리 6.20"
+
+    $n \times n$ 실행렬 $A$ 가 대칭행렬인 것은 $A$ 가 실대각행렬과 직교 동치인 것과 동치이다.
+
+- 이 정리는 수학과 통계학의 많은 분야에서 사용된다.
+
+- 증명
+
+    [$A$ 가 실대칭 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\mathbf{F}^{n}$ 의 순서기저 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 직교 행렬](#4d2e69003)이다. 따라서 $A$ 와 $D$ 는 직교 동치이다. ▲ 
+
+    증명의 후반부는 정리 6.19 와 비슷하다. ■ 
+
+---
 
 ref:
 
