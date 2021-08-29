@@ -467,9 +467,11 @@
 
 !!! def "행렬의 고유공간(eigenspace)"
 
-    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{L}_{A}$ 와 고윳값 $\lambda$ 에 대하여 다음 집합 $\mathbf{E}_{\lambda}$ 를 고윳값 $\lambda$ 에 대응하는 $A$ 의 고유공간이라 한다.
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 의 고윳값 $\lambda$ 벡터공간 $\mathbf{F}^{n}$ 의 선형연산자 $\mathbf{L}_{A}$ 에 대하여 다음 집합 $\mathbf{E}_{\lambda}$ 를 고윳값 $\lambda$ 에 대응하는 $A$ 의 고유공간이라 한다.
 
-    $$ \mathbf{E}_{\lambda} = \{x \in \mathbf{V} : \mathbf{L}_{A} (x) = \lambda x\} = \mathbf{N} (\mathbf{L}_{A}-\lambda \mathbf{I} _{\mathbf{V} }) $$
+    $$ \mathbf{E}_{\lambda} = \{x \in \mathbf{F}^{n} : (A - \lambda I_n)x = 0 \} = \mathbf{N} (\mathbf{L}_{A}-\lambda \mathbf{I} _{\mathbf{F}^{n}}) $$
+
+- 고유공간은 고윳값에 대응하는 모든 벡터의 집합인데 [정리 5.4](#2514593f4) 는 고윳값에 대응하는 모든 고유벡터를 찾는 방법을 알려준다. 따라서 고유공간은 정리 5.4 의 방법을 기반으로 정의된다.
 
 !!! def "정리 5.7"
 

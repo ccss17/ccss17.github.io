@@ -117,3 +117,99 @@ $ docker run -it --privileged ccss17/security-tutorial
 - 블루투스 취약점 - 블루본 (Bluetooth vulnerability - Blueborne)
 
 - CPU 취약점 - 멜트다운 (CPU vulnerability - Meltdown)
+
+# Read More
+
+CTF
+
+- https://capturetheflag.withgoogle.com/
+
+- https://captf.com/forsalesClienti/Admin/Login/index.php
+
+- https://www.vulnhub.com/
+
+- http://reversing.kr/challenge.php
+
+- https://xss-game.appspot.com/
+
+- https://github.com/JannisKirschner/Google-XSS-Game
+
+- https://www.vulnhub.com/entry/exploit-exercises-nebula-v5,31/
+
+    - https://forelsec.blogspot.com/2013/03/nebula-solutions-all-levels.html
+
+    - https://leonjza.github.io/blog/2015/05/08/playing-exploit-exercises---nebula/
+
+- http://security.cs.rpi.edu/courses/binexp-spring2015/
+
+    - https://dustri.org/b/defeating-ioli-with-radare2.html
+
+- https://www.hackthissite.org/
+
+- https://www.root-me.org/
+
+- http://pwnable.kr/
+
+- https://webhacking.kr/
+
+- http://wargame.kr
+
+Awesome
+
+- https://github.com/sbilly/awesome-security
+
+- https://github.com/onlurking/awesome-infosec
+
+- https://github.com/guardrailsio/awesome-python-security
+
+- https://github.com/enaqx/awesome-pentest
+
+책추천
+
+- 데프콘 공식 추천도서 : https://github.com/enaqx/awesome-pentest
+
+- https://codecondo.com/8-popular-books-to-learn-ethical-hacking/
+
+- https://bonkersabouttech.com/20-best-hacking-books/
+
+- https://www.quora.com/Which-one-is-the-best-book-to-learn-hacking-from-the-basics
+
+- https://www.fromdev.com/2013/02/Hacking-Books.html
+
+- https://jcubic.wordpress.com/2010/11/15/10-books-every-hacker-should-read/
+
+- https://www.reddit.com/r/hacking/comments/79x4iz/top_20_best_hacking_books_you_need_to_read_if_you/
+
+- https://businessinsights.bitdefender.com/five-security-books-you-should-read
+
+- https://www.compsmag.com/best/hacking-books/
+
+기타
+
+- https://teachyourselfcs.com/
+
+- https://infosecwriteups.com/
+
+- https://www.hackerone.com/
+
+- https://googleprojectzero.blogspot.com/
+
+- https://bugs.chromium.org/
+
+- https://0x00sec.org/
+
+- https://msrc-blog.microsoft.com/
+
+- https://overthewire.org/wargames/
+
+- https://www.lazenca.net/
+
+- https://nets.ec/Main_Page
+
+- https://github.com/Maijin/radare2-workshop-2015
+
+- https://www.bottomupcs.com/
+
+- https://www.hacking-tutorial.com/
+
+- https://www.blackhatworld.com/

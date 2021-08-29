@@ -69,8 +69,8 @@ $ vim +PlugInstall +qall
 **<div align="center"> ⬇ EXECUTE! ⬇ </div>**
 
 ```shell
-$ git clone https://github.com/ccss17/dotfiles-cli
-$ cd dotfiles-cli
+$ git clone https://github.com/ccss17/dotfiles
+$ cd dotfiles
 $ ./updatepkg.sh
 $ ./install.sh
 $ chsh -s /usr/bin/zsh    # 기본 쉘을 bash 에서 zsh 로 바꿉니다. 비밀번호를 물으면 당연히 "a" 를 입력하면 됩니다. 
@@ -274,7 +274,7 @@ $ hexyl lolcat | less
 
 `fd` 의 상세한 설명을 알고 싶다면 공식 레포지토리 https://github.com/sharkdp/fd 를 참고해주세요.
 
-## `top` ➜ `htop` ➜ `gotop`
+## `top` ➜ `htop` ➜ `gotop`, `bpytop`
 
 `top` 명령어는 시스템의 리소스 상태(RAM, CPU 등) 을 출력해주는 좋은 프로그램입니다. 기존의 `top` 은 다음과 같이 약간은 밋밋하게 시스템의 상태를 출력해주었습니다.
 
@@ -288,7 +288,7 @@ $ hexyl lolcat | less
 <img src="https://user-images.githubusercontent.com/16812446/82143686-a3d36f00-9880-11ea-8b4c-941f6b640b1e.gif" width="50%" height="auto">
 </div>
 
-마지막으로 [`gotop`](https://github.com/cjbassi/gotop) 은 다음과 같이 완벽한 그래프로 시스템의 상태를 직관적으로 출력해줍니다.
+[`gotop`](https://github.com/cjbassi/gotop) 은 다음과 같이 완벽한 그래프로 시스템의 상태를 직관적으로 출력해줍니다.
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/16812446/82143720-f3b23600-9880-11ea-9f1b-7a24784cf541.gif" width="70%" height="auto">
@@ -300,6 +300,16 @@ $ hexyl lolcat | less
 
 ```shell
 $ gotop
+```
+
+심플한 `gotop` 과 달리 `bpytop` 은 다음과 같이 화려한듯한 UI 를 보여줍니다.
+
+![bpytop](https://user-images.githubusercontent.com/16812446/131254194-6679394f-1c35-444e-983a-95b70382cb9a.gif)
+
+**<div align="center"> ⬇ EXECUTE! ⬇ </div>**
+
+```shell
+$ bpytop
 ```
 
 시스템 상태를 출력해줄 수 있는 유틸리티는 개인적인 선호에 따라 좋고 나쁨이 결정되므로 확실히 어떤 게 좋다라고 말할 수 없습니다. 따라서 그냥 개인적으로 더 나은 것 같은 CLI 를 사용하면 됩니다. 

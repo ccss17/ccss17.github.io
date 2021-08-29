@@ -1581,7 +1581,7 @@
 
 - 상계 중 가장 작은 원소를 최소상계(least upper bound) 또는 상한(supremum)이라 한다.
 
-!!! def "상한(supremum) 또는 최소상계(least upper bound)"
+!!! def "상한(supremum), 최소상계(least upper bound)"
 
     상계 중 가장 작은 원소 즉, 집합 $X$ 과 부분집합 $S \subset X$ 에 대하여 
     
@@ -1751,7 +1751,7 @@
 
 - 하계 중 가장 작은 원소를 최대하계(greatest lower bound) 또는 하한(infimum)이라 한다.
 
-!!! def "하한(infimum) 또는 최대하계(greatest lower bound)"
+!!! def "하한(infimum), 최대하계(greatest lower bound)"
 
     하계 중 가장 큰 원소 즉, 집합 $X$ 과 부분집합 $S \subset X$ 에 대하여 
     

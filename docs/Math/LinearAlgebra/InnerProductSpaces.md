@@ -161,8 +161,6 @@
 
     $$ \iff \overline{y} = \overline{z} \iff y = z $$
 
-## Antilinear Map
-
 !!! def "Antilinear map, 켤레선형(conjugate-linear)"
 
     체 $\mathbf{F} \in \{\R, \mathbb{C}\}$ 인 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 와 벡터 $x, y \in \mathbf{V}$ 와 스칼라 $a, b \in \mathbf{F}$ 대하여 다음을 만족하는 함수 $f: \mathbf{V}\to \mathbf{W}$ 를 antilinear 또는 켤레 선형이라고 한다.
@@ -549,7 +547,7 @@
 
     $$ \iff \big <u,v \big > = 0 \tag*{■} $$
 
-## Definition of Orthogonal
+## Orthogonal
 
 !!! def "직교(orthogonal), 수직(perpendicular)"
 
@@ -567,15 +565,13 @@
 
     내적공간 $\mathbf{V}$ 에서 $\|x\| = 1$ 인 벡터이다.
 
-## Orthonormal
+## Orthonormal, Normalizing
 
 !!! def "정규직교집합(orthonormal)"
 
     내적공간의 부분집합이 단위벡터로 구성된 직교집합이면 정규직교집합이라 한다.
 
 - 집합 $S = \{v_1, v_2, \dots\}$ 가 정규직교집합인 것과 $\big <v_i,v_j \big > = \delta _{ij}$ 인 것은 동치이다. 
-
-## Normalizing
 
 !!! def "정규화(normalizing)"
 
@@ -817,8 +813,6 @@
 
     ![image](https://user-images.githubusercontent.com/16812446/129469457-b819249c-188d-4258-9537-7c827dd9d579.png)
 
-## Orthogonal Projection
-
 !!! def "문제 6.2-7"
 
     내적공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}$ 의 기저 $\beta$ 와 벡터 $z \in \mathbf{V}$ 에 대하여 다음이 성립한다.
@@ -905,6 +899,8 @@
 
     $\|y-x\| = \|y-u\|$ 로 두면 $\|u-x\|^{2} + \|z\|^{2} = \|z\|^{2}$ 이고 $\|u-x\| = 0 \iff x = u$ 이다. 이것의 역은 자명하다. ■ 
 
+## Orthogonal Projection
+
 !!! def "정사영(orthogonal projection)"
 
     내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 와 $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 에 대하여 다음 벡터 $u$ 를 $y$ 의 $\mathbf{W}$ 에 대한 정사영이라 한다.
@@ -938,8 +934,6 @@
     $$ \big <f(x),u_3 \big >=0 $$
 
     따라서 $f_1(x) = 0 \cdot u_1 + \dfrac{\sqrt[]{6}}{5}u_2 + 0 \cdot u_3 = \dfrac{3}{5}x$ 이다.
-
-## Properties of Orthogonal Complements
 
 !!! def "문제 6.2-8"
 
@@ -1117,8 +1111,6 @@
     $\mathbf{F}^{n}$ 의 표준순서기저를 $\beta$ 로 두면 [정리 2.15](../LinearTransformation/#c3298a7b3) 와 정리 6.10 에 의하여 $[\mathbf{L}_{A}]_{\beta }=A$ 이므로 다음이 성립한다. 
 
     $$ [(\mathbf{L}_{A}){}^{*}]_{\beta } = [\mathbf{L}_{A}]{}^{*}_{\beta } = A {}^{*} = [\mathbf{L}_{A {}^{*}}]_{\beta } \tag*{■} $$
-
-## Properties of Adjoint
 
 !!! def "정리 6.11"
 
@@ -1836,8 +1828,6 @@
 
     $\mathbf{U}(x) \in \mathbf{V}$ 이므로 $\big <\mathbf{U}(x), \mathbf{U}(x) \big > = 0$ 이다. 내적의 정의에 의하여 $\mathbf{U}(x) = 0$ 이다. ■ 
 
-## Properties of Unitary[Orthogonal] Operators
-
 !!! def "정리 6.18"
 
     유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
@@ -2042,7 +2032,7 @@
 
     두 행렬 $A, B$ 와 유니타리[직교] 행렬 $U$ 에 대하여 $B = U {}^{*}AU$ 가 성립하면 $A, B$ 를 유니타리[직교] 동치라 한다.
 
-!!! def ""
+!!! def "문제 6.5-18"
 
     유니타리 동치는 $\mathbf{M}_{n \times n}(\mathbb{C})$ 에서 동치관계이다. 
 
@@ -2050,13 +2040,29 @@
 
 - 증명
 
+    항등행렬은 [정리 6.11 따름정리](#94b43ebc4) 에 의하여 유니타리 행렬이다.  유니타리 행렬로써 항등행렬을 택하면 다시 [정리 6.11 따름정리](#94b43ebc4) 에 의하여 $A \in \mathbf{M}_{n \times n}(\mathbb{C})$ 에 대하여 다음이 성립한다.
+
+    $$ I {}^{*}AI = I {}^{*}A = IA = A \tag*{▲} $$
+
+    $A, B \in \mathbf{M}_{n \times n}(\mathbb{C})$ 에 대하여 $B = U {}^{*}AU$ 를 만족하는 유니타리 행렬 $U$ 의 존재를 가정하면 다음이 성립한다.
+
+    $$ UBU {}^{*} = UU {}^{*}AUU {}^{*} = IAI = A $$
+
+    $U {}^{*}$ 는 유니타리 행렬이다. ▲ 
+
+    마지막으로 $A, B, C \in \mathbf{M}_{n \times n}(\mathbb{C})$ 에 대하여 $B = U {}^{*}AU$ 와 $C = U' {}^{*}BU'$ 를 만족하는 유니타리 행렬 $U, U'$ 의 존재를 가정하면 다음이 성립한다.
+
+    $$ C = U' {}^{*}U {}^{*}AUU' $$
+
+    [정리 6.11 따름정리](#94b43ebc4) 에 의하여 $(UU') {}^{*} = U' {}^{*}U {}^{*}$ 이다. [동치관계의 조건](#61b0328b9) 을 모두 만족하므로 증명이 끝났다. 직교 동치가 동치관계인 것도 실정사각행렬 공간 $\mathbf{M}_{n \times n}(\R )$ 에서 같은 논리로 보일 수 있다. ■ 
+
 !!! def "정리 6.19"
 
     $n \times n$ 복소행렬 $A$ 가 정규행렬인 것은 $A$ 가 대각행렬과 유니타리 동치인 것과 동치이다.
 
 - 증명
 
-    [$A$ 가 복소정규 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\mathbf{F}^{n}$ 의 순서기저 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 유니타리 행렬](#4d2e69003)이다. 따라서 $A$ 와 $D$ 는 유니타리 동치이다. ▲ 
+    [$A$ 가 복소정규 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 유니타리 행렬](#4d2e69003)이다. 따라서 $A$ 와 $D$ 는 유니타리 동치이다. ▲ 
 
     $A$ 가 유니타리 행렬 $P$ 와 대각행렬 $D$ 에 대하여 $A = P {}^{*}DP$ 임을 가정하면 다음이 성립한다. 
 
@@ -2072,9 +2078,71 @@
 
 - 증명
 
-    [$A$ 가 실대칭 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\mathbf{F}^{n}$ 의 순서기저 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 직교 행렬](#4d2e69003)이다. 따라서 $A$ 와 $D$ 는 직교 동치이다. ▲ 
+    [$A$ 가 실대칭 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 직교 행렬](#4d2e69003)이다. 따라서 $A$ 와 $D$ 는 직교 동치이다. ▲ 
 
     증명의 후반부는 정리 6.19 와 비슷하다. ■ 
+
+- 예시 
+
+    실대칭행렬 $A = \begin{pmatrix} 4&2&2\\ 2&4&2\\ 2&2&4\\ \end{pmatrix} \in \mathbf{M}_{3 \times 3}(\R )$ 는 대각행렬과 직교 동치이다. 즉, 직교행렬 $Q$ 와 대각행렬 $D$ 에 대하여 $Q ^{t}AQ = D$ 이다. 이제 이 $Q, D$ 를 구해보자. 
+
+    정리의 증명과정에 따라서 $A$ 의 고유벡터로 이루어진 $\R ^{3}$ 의 정규직교기저 $\beta$ 를 구하면 $\beta$ 의 열로 구성된 $Q$ 를 알 수 있다. 그러면 $D$ 도 계산할 수 있다. 
+
+    $A$ 의 특성다항식은 $f(t) = \det(A - tI_3) = \det \begin{pmatrix} 4-t&2&2\\ 2&4-t&2\\ 2&2&4-t\\ \end{pmatrix}$ 이므로 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} \det \begin{pmatrix} 4-t&2&2\\ 2&4-t&2\\ 2&2&4-t\\ \end{pmatrix} &= (4 - t)\{(4-t) ^{2} - 2 ^{2}\} - 2 \{2(4-t) - 2 ^{2}\} + 2\{2 ^{2}-2(4-t)\}\\ &= (4 - t)(t ^{2} - 8t + 12) + 4 \{2 - (4-t)\} + 4\{2 -(4-t)\}\\ &= (4 - t)(t - 2)(t - 6) + 8(t - 2) \\ &= (t - 2)\{-(t - 4)(t - 6) + 8\} = (t - 2)\{-(t ^{2} - 10t + 24) + 8\} \\ &= (t - 2)(-t ^{2} + 10t - 16) = -(t - 2)(t ^{2} - 10t + 16) \\ &= -(t - 2)(t - 2)(t - 8) = -(t - 2) ^{2}(t - 8)\\ \end{split}\end{equation} \tag*{} $$
+
+    따라서 $A$ 의 고윳값은 $\lambda _1 = 2, \lambda _2 = 8$ 이다. ▲ 
+
+    고윳값을 찾았으니 고유공간을 구할 차례이다. $\lambda _1$ 에 대응하는 고유공간은 다음과 같다. 
+
+    $$ \mathbf{E}_{\lambda_1} = \{x \in \R ^{3} : (A - 2I)x = 0 \} = \bigg \{ \begin{pmatrix} x_{1}\\ x_{2}\\ x_{3}\\ \end{pmatrix} \in \R ^{3} : \begin{pmatrix} 2&2&2\\ 2&2&2\\ 2&2&2\\ \end{pmatrix}\begin{pmatrix} x_{1}\\ x_{2}\\ x_{3}\\ \end{pmatrix} = \begin{pmatrix} 0\\ 0\\ 0\\ \end{pmatrix}\bigg \} $$
+
+    이 고유공간의 기저를 다음 연립방정식의 해집합으로 구해보자.
+
+    $$ x_1 + x_2 + x_3 = 0 \implies x_1 = -x_2 -x_3 $$
+
+    $$ \begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix} = \begin{pmatrix} -x_2 - x_3\\ x_2\\ x_3\\ \end{pmatrix} = \begin{pmatrix} -x_2\\ x_2\\ 0\\ \end{pmatrix} + \begin{pmatrix} -x_3\\ 0\\ x_3\\ \end{pmatrix} = x_2 \begin{pmatrix} -1\\ 1\\ 0\\ \end{pmatrix} + x_3 \begin{pmatrix} -1\\ 0\\ 1\\ \end{pmatrix} $$
+
+    이렇게 고유공간 $\mathbf{E}_{\lambda_1}$ 의 기저 $\{(-1, 1, 0), (-1, 0, 1)\}$ 을 구할 수 있다. 사실은 다음과 같이 또 다른 기저 $\{(1,-1,0), (0, -1, 1)\}$ 도 구할 수 있다. 어쨌든 기저 $\{(-1, 1, 0), (-1, 0, 1)\}$ 를 사용할 것이다.
+
+    $$ \begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix} = \begin{pmatrix} x_1\\ -x_1 - x_3\\ x_3\\ \end{pmatrix} = \begin{pmatrix} x_1\\ -x_1\\ 0\\ \end{pmatrix} + \begin{pmatrix} 0\\ -x_3\\ x_3\\ \end{pmatrix} = x_1 \begin{pmatrix} 1\\ -1\\ 0\\ \end{pmatrix} + x_3 \begin{pmatrix} 0\\ -1\\ 1\\ \end{pmatrix} $$
+
+    $\lambda _2$ 에 대응하는 고유공간은 다음과 같다.
+
+    $$ \mathbf{E}_{\lambda_2} = \{x \in \R ^{3} : (A - 8I)x = 0 \} = \bigg \{ \begin{pmatrix} x_{1}\\ x_{2}\\ x_{3}\\ \end{pmatrix} \in \R ^{3} : \begin{pmatrix} -4&2&2\\ 2&-4&2\\ 2&2&-4\\ \end{pmatrix}\begin{pmatrix} x_{1}\\ x_{2}\\ x_{3}\\ \end{pmatrix} = \begin{pmatrix} 0\\ 0\\ 0\\ \end{pmatrix}\bigg \} $$
+
+    이 고유공간의 기저를 다음 연립방정식의 해집합으로 구해보자.
+
+    $$ \begin{cases} -2x_1 + x_2 + x_3 = 0 &\\ x_1 - 2x_2 + x_3 = 0 &\\ x_1 + x_2 - 2x_3 = 0 &\\ \end{cases} \implies x_1 = x_2 = x_3 $$
+
+    $$ \begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix} = \begin{pmatrix} x_1\\ x_1\\ x_1\\ \end{pmatrix} = x_1 \begin{pmatrix} 1\\ 1\\ 1\\ \end{pmatrix} $$
+
+    따라서 $\mathbf{E}_{\lambda_2}$ 의 기저는 $\{(1,1,1)\}$ 이다. ▲ 
+
+    사실 $A$ 가 대각화가능임을 판정할 필요는 없지만 굳이 판정해보면 [대각화 가능 판정법](../Diagonalization/#e84f8c4af) 에 의하여 고윳값의 중복도가 $2$ 이상인 것들이 고유공간의 차원과 같으므로 $A$ 는 대각화 가능이다. 즉, $\lambda _1 = 2$ 에 대응하는 고유공간의 차원이 $2$ 이고 중복도도 $2$ 이다.
+
+    이제 각 고유공간의 기저를 통해 $A$ 의 고유벡터로 이루어진 $\R ^{3}$ 의 정규직교기저를 얻어보자. 일단 먼저 $\mathbf{E}_{\lambda_1}$ 의 기저 $\{(-1, -1, 0), (-1, 0, 1)\}$ 를 [그람 슈미트 직교화](#0ee45a6c5) 로 직교화하여 $\{(-1, 1, 0), - \frac{1}{2}(1, 1, -2)\}$ 를 얻는다.
+
+    [정리 6.15](#ef3696575) 에 의하여 $(1, 1, 1)$ 은 $\mathbf{E}_{\lambda_1}$ 의 기저의 벡터들과 수직이다. [정리 5.8](../Diagonalization/#7050c2a83) 에 의하여 두 고유공간의 기저의 합집합은 $A$ 의 고유벡터로 이루어진 $\R ^{3}$ 의 직교기저이다. 이제 이 직교기저를 정규화 하면 다음과 같이 $A$ 의 고유벡터로 이루어진 $\R ^{3}$ 의 정규직교기저를 얻는다. 
+
+    $$ \bigg \{\dfrac{1}{\sqrt[]{2}}(-1, 1, 0), \dfrac{1}{\sqrt[]{6}}(1, 1, -2), \dfrac{1}{\sqrt[]{3}}(1, 1, 1) \bigg \} \tag*{▲} $$
+
+    이제 드디어 $P, D$ 를 구해보자. 가능한 $P, D$ 의 한 가지 경우는 다음과 같다. 
+
+    $$ P = \begin{pmatrix} - \dfrac{1}{\sqrt[]{2}}&\dfrac{1}{\sqrt[]{6}}&\dfrac{1}{\sqrt[]{3}}\\ \dfrac{1}{\sqrt[]{2}}&\dfrac{1}{\sqrt[]{6}}&\dfrac{1}{\sqrt[]{3}}\\ 0 &-\dfrac{2}{\sqrt[]{6}}&\dfrac{1}{\sqrt[]{3}}\\ \end{pmatrix}, D = \begin{pmatrix} 2&0&0\\ 0&2&0\\ 0&0&8\\ \end{pmatrix} $$
+
+## Schur's theorem in Matrix
+
+!!! def "정리 6.21 슈어의 정리(Schur's theorem)"
+
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 의 특성다항식이 $\mathbf{F}$ 위에서 완전히 인수분해되면 다음이 성립한다. 
+
+    1. $\mathbf{F}=\mathbb{C}$ 이면 $A$ 는 복소 상삼각행렬과 유니타리 동치이다.
+
+    2. $\mathbf{F}=\R$ 이면 $A$ 는 실 상각행렬과 직교 동치이다.
+
+- 이 정리는 선형연산자의 관점으로 서술된 [정리 6.14 슈어의 정리](#397a3d05d) 를 행렬의 관점으로 바꾼 것 뿐이다. 이 정리 또한 슈어의 정리라고 부른다.
 
 ---
 
