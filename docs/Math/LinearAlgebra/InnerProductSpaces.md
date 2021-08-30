@@ -1112,6 +1112,8 @@
 
     $$ [(\mathbf{L}_{A}){}^{*}]_{\beta } = [\mathbf{L}_{A}]{}^{*}_{\beta } = A {}^{*} = [\mathbf{L}_{A {}^{*}}]_{\beta } \tag*{■} $$
 
+## Properties of Adjoint
+
 !!! def "정리 6.11"
 
     내적공간 $\mathbf{V}$ 와 수반연산자가 존재하는 선형연산자 $\mathbf{T}, \mathbf{U}$ 에 대하여 다음이 성립한다.
@@ -1846,6 +1848,8 @@
 
 - 이 6 가지 명제들은 유니타리 연산자 또는 직교연산자의 정의와 동치이다. 1) 과 2) 는 유니타리 연산자와 직교연산자가 정규연산자임을 말해준다. 
 
+    3) 은 내적 보존 연산자의 정의, 6) 은 노름 보존 연산자의 정의이다.
+
 - 증명
 
     $\dim (\mathbf{V}) = n$ 를 가정하자.
@@ -1934,6 +1938,8 @@
 
     $$ \|v\| = \|\mathbf{T}(v)\| = \|\lambda v\| = |\lambda | \|v\| \implies |\lambda | = 1 \tag*{■} $$
 
+## Reflection
+
 !!! def "대칭변환(reflection)"
 
     $\R ^{2}$ 의 1차원 부분공간 $\mathbf{L}_{}$ 에 대하여 다음 선형연산자 $\mathbf{T}$ 를 대칭변환이라 한다. 
@@ -1956,7 +1962,7 @@
 
 - 실행렬 $A$ 는 $A {}^{*}=A ^{t}$ 를 만족하므로 실 유니타리 행렬은 직교행렬이다. 
 
-!!! def ""
+!!! def "properties of unitary[orthogonal] matrix"
 
     체 $\mathbf{F}\in \{\R ,\mathbb{C}\}$ 에 대한 정사각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 다음은 동치이다.
 
@@ -1969,6 +1975,10 @@
     4. $A$ 의 각 열이 표준내적공간 $\mathbf{F}^{n}$ 의 정규직교기저이다.
 
     5. $A$ 는 유니타리[직교] 행렬이다.
+
+    6. $A ^{-1} = A {}^{*}$
+
+- 여러가지 정리들을 수집하여 내가 만든 정리인데 어쩌다 보니 3) 과 4) 도 동치라고 주장하게 되었네. 논리적인 오류는 일단 아직 안보이는데, 그러면 정규직교기저로 열이 구성된 행렬을 만들면 그 행벡터만 따와서 집합을 만들면 또 다른 정규직교기저를 구할 수 있다는 말이되는데? 
 
 - 증명
 
@@ -1990,7 +2000,11 @@
 
     $1 \iff 5$:
 
-    1) 을 가정하면 2) 도 참이므로 유니타리 행렬의 정의가 바로 나온다. 직교 행렬은 실행렬임을 가정하면 바로 나온다. 역으로, 유니타리[직교] 행렬을 가정하면 1) 과 2) 가 바로 나온다. ■ 
+    1) 을 가정하면 2) 도 참이므로 유니타리 행렬의 정의가 바로 나온다. 직교 행렬은 실행렬임을 가정하면 바로 나온다. 역으로, 유니타리[직교] 행렬을 가정하면 1) 과 2) 가 바로 나온다. ▲  
+
+    $1 \iff 6$:
+
+    6) 을 가정하면 유니타리 행렬의 정의가 바로 나오고 1) 을 가정하면 2) 도 참이므로 6) 이 바로 나온다. ■ 
 
 !!! def ""
 
@@ -2062,7 +2076,7 @@
 
 - 증명
 
-    [$A$ 가 복소정규 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 유니타리 행렬](#4d2e69003)이다. 따라서 $A$ 와 $D$ 는 유니타리 동치이다. ▲ 
+    [$A$ 가 복소정규 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 유니타리 행렬](#2efe0b298)이다. 따라서 $A$ 와 $D$ 는 유니타리 동치이다. ▲ 
 
     $A$ 가 유니타리 행렬 $P$ 와 대각행렬 $D$ 에 대하여 $A = P {}^{*}DP$ 임을 가정하면 다음이 성립한다. 
 
@@ -2078,7 +2092,7 @@
 
 - 증명
 
-    [$A$ 가 실대칭 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 직교 행렬](#4d2e69003)이다. 따라서 $A$ 와 $D$ 는 직교 동치이다. ▲ 
+    [$A$ 가 실대칭 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 직교 행렬](#2efe0b298)이다. 따라서 $A$ 와 $D$ 는 직교 동치이다. ▲ 
 
     증명의 후반부는 정리 6.19 와 비슷하다. ■ 
 
@@ -2142,7 +2156,130 @@
 
     2. $\mathbf{F}=\R$ 이면 $A$ 는 실 상각행렬과 직교 동치이다.
 
-- 이 정리는 선형연산자의 관점으로 서술된 [정리 6.14 슈어의 정리](#397a3d05d) 를 행렬의 관점으로 바꾼 것 뿐이다. 이 정리 또한 슈어의 정리라고 부른다.
+- 이 정리는 선형연산자의 관점으로 서술된 [정리 6.14 슈어의 정리](#397a3d05d) 를 행렬의 관점으로 바꾼 것 뿐이다. 이 정리 또한 슈어의 정리라고 부른다. 먼저 정리 6.14 슈어의 정리를 선형연산자 $\mathbf{L}_{A}$ 의 관점에서 서술해보면 다음과 같다. 
+
+    *유한차원 내적공간 $\mathbf{F}^{n}$ 의 선형연산자 $\mathbf{L}_{A}$ 의 특성다항식이 완전히 인수분해되면 $[\mathbf{L}_{A}]_{\gamma }$ 가 상삼각행렬이 되게 하는 정규직교기저 $\gamma$ 가 존재한다.*
+
+    $\mathbf{F}^{n}$ 의 선형연산자 $\mathbf{L}_{A}$ 의 특성다항식은 $\mathbf{F}^{n}$ 의 순서기저 $\beta$ 에 대하여 $\det([\mathbf{L}_{A}]_{\beta }-tI_n)$ 이다. [문제 5.1-13](../Diagonalization/#b150e4e68) 에 의하여 특성다항식은 벡터공간의 기저의 선택에 관계없으므로 $\beta$ 를 표준순서기저로 두면 [정리 2.15-(1)](../LinearTransformation/#c3298a7b3) 에 의하여 $\det([\mathbf{L}_{A}]_{\beta } - tI_n) = \det(A - tI_n)$ 이다. 그러면 이는 정사각행렬 $A$ 의 특성다항식 $\det(A-tI_n)$ 과 같아진다. 즉, *$\mathbf{L}_{A}$ 의 특성다항식이 완전히 인수분해된다* 는 것은 *$A$ 의 특성다항식이 완전히 인수분해된다* 는 것과 동치이다.
+
+    [정리 2.23 따름정리](../LinearTransformation/#b7acffb79)는 좌측곱변환을 임의의 기저로 표현하는 방법을 말해준다. 즉, $\gamma$ 의 벡터로 열을 구성한 행렬 $Q$ 에 대하여 $[\mathbf{L}_{A}]_{\gamma } = Q ^{-1}AQ$ 이다. $Q$ 는 [정규직교기저를 열로 구성한 행렬이므로 유니타리 행렬](#2efe0b298)이다. 따라서 $A$ 는 복소 상삼각행렬 $[\mathbf{L}_{A}]_{\gamma }$ 와 유니타리 동치이다. 즉, *$[\mathbf{L}_{A}]_{\gamma }$ 가 상삼각행렬이 되게 하는 정규직교기저 $\gamma$ 가 존재한다* 는 것은 *$A$ 가 복소상삼각행렬과 유니타리 동치라는 것* 과 동치이다.
+
+    이상의 논의를 정리하면 $A \in \mathbf{M}_{n \times n}(\mathbb{C})$ 의 특성다항식이 $\mathbb{C}$ 위에서 완전히 인수분해되면 $A$ 가 복소 상삼각행렬과 유니타리 동치라고 말할 수 있다. 
+    
+    한편, $\mathbf{L}_{A}$ 의 특성다항식이 완전히 인수분해되면 $A$ 가 복소상삼각행렬과 유니타리 동치이라고 말할 수도 있고, $A$ 의 특성다항식이 완전히 인수분해되면 $[\mathbf{L}_{A}]_{\gamma }$ 가 상삼각행렬이 되게 하는 정규직교기저 $\gamma$ 가 존재한다고 말할 수도 있다. 
+
+## Isometry
+
+!!! def "등장사상(isometry), 강체운동(rigid motion)"
+
+    실내적공간 $\mathbf{V}$ 와 모든 $x,y \in \mathbf{V}$ 에 대하여 다음을 만족하는 함수 $f: \mathbf{V}\to \mathbf{V}$ 를 등장사상이라 한다.
+
+    $$ \|f(x) - f(y)\| = \|x - y\| $$
+
+- 강체운동은 물리학에서 모든 점 간의 길이가 보존되는 운동을 뜻한다. 이것을 수학에서는 등장사상, 등거리변환이라 한다. 
+
+- 노름 보존 연산자, 즉 직교 연산자는 자동으로 등장사상이 된다. 그러나 등장사상이라고 해서 노름 보존 연산자라는 보장은 없다. [노름공간과 거리공간의 관계](#514576eb0)를 다시 확인해보면 바로 알 수 있다. 
+
+!!! def "평행이동(translation)"
+
+    실내적공간 $\mathbf{V}$ 에서 모든 $x \in \mathbf{V}$ 에 대하여 $g(x) = x + v_0$ 인 벡터 $v_0 \in \mathbf{V}$ 가 존재하는 함수 $g: \mathbf{V}\to \mathbf{V}$ 를 $v_0$ 에 의한 평행이동이라 한다.
+
+- 평행이동은 강체운동의 한 예시이다.
+
+!!! def "정리 6.22"
+
+    유한차원 실내적공간 $\mathbf{V}$ 와 등장사상 $f: \mathbf{V}\to \mathbf{V}$ 에 대하여 $f = g \circ \mathbf{T}$ 를 만족하는 직교연산자 $\mathbf{T}$ 와 평행이동 $g$ 가 유일하게 존재한다.
+
+- 이 정리는 존재하는 모든 등장사상을 직교연산자와 평행이동의 합성으로 표현할 수 있다는 것을 말해준다. 즉, 등장사상 $f$ 에 대하여 다음을 만족하는 직교연산자 $\mathbf{T}$ 와 $v$ 에 의한 평행이동 $g$ 가 유일하게 존재한다. 
+
+    $$ \forall x \in \mathbf{V} : \boxed{f(x) = \mathbf{T}(x) + v} $$ 
+
+    한편, 임의의 직교연산자는 영벡터 $0$ 에 의한 평행이동인 항등사상의 특수한 경우이다. 임의의 평행이동도 직교연산자가 항등변환인 특수한 경우이다. 
+
+- 증명
+
+    함수 $\mathbf{T}:\mathbf{V}\to \mathbf{V}, x \mapsto f(x) - f(0)$ 을 정의하고 평행이동 $g: \mathbf{V}\to \mathbf{V}, x \to x + f(0)$ 을 정의하면 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split}
+    (g \circ \mathbf{T})(x) &= g(\mathbf{T}(x)) = g(f(x) - f(0))  \\
+    &= f(x) - f(0) + f(0) = f(x) \\
+    \end{split}\end{equation} \tag*{} $$
+
+    따라서 $f = g \circ \mathbf{T}$ 이다. ▲ 
+    
+    임의의 $x, y \in \mathbf{V}$ 에 대하여 다음이 성립하므로 $\mathbf{T}$ 는 노름을 보존한다.
+
+    $$ \|\mathbf{T}(x)\| = \|f(x) - f(0)\| = \|x - 0\| = \|x\| $$
+
+    그러면 $\mathbf{T}$ 는 자명하게 거리도 보존한다. 즉, $\mathbf{T}$ 는 등장사상이 되어 다음이 성립한다.
+
+    $$ \|\mathbf{T}(x) - \mathbf{T}(y)\| =  \|x - y\| $$
+
+    그러면 다음이 성립하므로 $\mathbf{T}$ 는 내적도 보존한다.
+
+    $$ \begin{equation}\begin{split} \|x - y\|^{2} = \|\mathbf{T}(x) - \mathbf{T}(y)\| ^{2} &= \|\mathbf{T}(x)\|^{2} - 2 \big <\mathbf{T}(x), \mathbf{T}(y) \big > + \|\mathbf{T}(y)\| ^{2} \\ &= \|x\|^{2} -2 \big <\mathbf{T}(x), \mathbf{T}(y) \big > + \|y\|^{2} \\ \end{split}\end{equation} \tag*{} $$
+
+    $$ \begin{equation}\begin{split} \|x - y\| ^{2} = \|x\|^{2} - 2 \big <\mathbf{T}(x), \mathbf{T}(y) \big > + \|y\|^{2} & \iff \|x\|^{2} -2 \big <x,y \big > + \|y\|^{2} = \|x\|^{2} - 2 \big <\mathbf{T}(x), \mathbf{T}(y) \big > + \|y\|^{2}  \\ & \iff \big <x,y \big > = \big <\mathbf{T}(x), \mathbf{T}(y) \big >\\ \end{split}\end{equation} \tag*{}$$
+
+    이제 $\mathbf{T}$ 가 선형변환임을 보일 준비가 다 되었다. 스칼라 $a \in \R$ 에 대하여 [내적의 정의](#3874b2a1f)에 의하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} \|\mathbf{T}(x + ay) - \mathbf{T}(x) - a \mathbf{T}(y) \|&= \|[\mathbf{T}(x + ay) - \mathbf{T}(x)] - a \mathbf{T}(y)\| ^{2} \\ &= \|\mathbf{T}(x + ay) - \mathbf{T}(x)\| ^{2} + a ^{2}\|\mathbf{T}(y)\| ^{2} -2a \big <\mathbf{T}(x + ay) - \mathbf{T}(x), \mathbf{T}(y) \big > \\ &= \|x + ay - x\| ^{2} + a ^{2} \|y\| ^{2} -2a[ \big <\mathbf{T}(x + ay), \mathbf{T}(y) \big > - \big <\mathbf{T}(x), \mathbf{T}(y) \big >] \\ &= a ^{2}\|y\|^{2} + a ^{2}\|y\|^{2} -2a[ \big <x+ay,y \big >-\big <x,y \big >] \\ &= 2a ^{2}\|y\| ^{2} -2a[\big <x,y \big >a \|y\|^{2} - \big <x,y \big >] = 0 \end{split}\end{equation} \tag*{} $$
+
+    즉, [노름의 정의](#fce1bedd1) 에 의하여 $\|\mathbf{T}(x + ay) - \mathbf{T}(x) - a \mathbf{T}(y)\| = 0 \implies \mathbf{T}(x + ay) = \mathbf{T}(x) + a \mathbf{T}(y)$ 이므로 [선형변환의 충분조건](#841cc7807) 에 의하여 $\mathbf{T}$ 는 선형변환이다. $\mathbf{T}$ 가 선형연산자이고 노름 보존 연산자이므로 직교 연산자이다. ▲ 
+
+    $\mathbf{T}$ 의 존재성을 보였으니 $\mathbf{T}$ 의 유일성과 평행이동 $g$ 의 유일성을 보이면 된다. $v \in \mathbf{V}$ 에 의한 평행이동 $g_1$ 와 $u \in \mathbf{V}$ 에 의한 평행이동 $g_2$ 와 직교연산자 $\mathbf{T}, \mathbf{U}$ 에 대하여 $f = g_1 \circ \mathbf{T} = g_2 \circ \mathbf{U}$ 를 가정하면 다음이 성립한다. 
+
+    $$ f(x) = (g_1 \circ \mathbf{T})(x) = g_1(\mathbf{T}(x)) = \mathbf{T}(x) + v $$
+    
+    $$ f(x) = (g_2 \circ \mathbf{U})(x) = g_2(\mathbf{U}(x)) = \mathbf{U}(x) + u $$
+
+    [선형변환의 $0$ 의 상은 $0$ 이므로](../LinearTransformation/#841cc7807) $x = 0 \implies v = u$ 이다. 따라서 평행이동은 유일하다. 또한 이에 따라 위 두 식의 뺄셈을 하면 $0 = \mathbf{T}(x) - \mathbf{U}(x) \implies \mathbf{T}(x) = \mathbf{U}(x)$ 을 얻는다. 따라서 $\mathbf{T}=\mathbf{U}$ 이다. ■ 
+    
+!!! def "정리 6.23"
+
+    $\R ^{2}$ 의 직교연산자 $\mathbf{T}$ 와 표준순서기저 $\beta$ 에 대한 행렬 $A = [\mathbf{T}]_{\beta }$ 에 대하여 다음 중 하나만 성립한다. 
+
+    1. $\mathbf{T}$ 는 회전변환이고 $\det(A) = 1$ 이다.
+
+    2. $\mathbf{T}$ 는 원점을 지나는 대칭변환이고 $\det(A) = -1$ 이다.
+
+- 정리 6.22 에 의하여 등장사상에 관한 문제는 직교연산자의 문제로 환원된다. 이 정리는 $\R ^{2}$ 의 직교연산자를 분류해줌으로써 직교연산자를 명확하게 규명해준다. 일반적인 공간에 대한 직교연산자 분류 또한 할 수 있다.
+
+- 증명
+
+    $\mathbf{T}$ 가 직교연산자이므로 [정리 6.18](#aee06829a) 에 의하여 $\mathbf{T}(\beta ) = \{\mathbf{T}(e_1), \mathbf{T}(e_2)\}$ 는 정규직교기저이다. $\mathbf{T}$ 가 노름 보존 연산자이므로 $\mathbf{T}(e_1)$ 는 단위벡터이고, $0 \leq \theta < 2 \pi$ 에 대하여 $\mathbf{T}(e_1) = (\cos \theta, \sin \theta)$ 를 만족하는 $\theta$ 가 유일하게 존재한다. $\mathbf{T}(e_2)$ 도 단위벡터이고 $\mathbf{T}(e_1)$ 와 직교하므로 $\mathbf{T}(e_2)$ 는 다음을 만족한다. 
+
+    $$ \mathbf{T}(e_2) = (- \sin \theta, \cos \theta) \lor \mathbf{T}(e_2) = (\sin \theta, - \cos \theta) \tag*{▲} $$
+
+    $\mathbf{T}(e_2) = (- \sin \theta, \cos \theta)$ 를 가정하면 $A = \begin{pmatrix}
+    \cos \theta& - \sin \theta\\
+    \sin \theta& \cos \theta\\
+    \end{pmatrix}$ 이므로 $\mathbf{T}$ 는 각 $\theta$ 에 대한 회전변환이다. 즉, $0 < \theta' < \pi$ 에 대하여 선형연산자 $\mathbf{L}_{A}: \R ^{2} \to \R ^{2}$ 는 벡터를 반시계방향으로 $\theta'$ 만큼 회전시킨다. 또한 다음이 성립한다. 
+
+    $$ \det(A) = \cos ^{2} \theta + \sin ^{2} \theta = 1 \tag*{▲} $$
+
+    $\mathbf{T}(e_2) = (\sin \theta, - \cos \theta)$ 를 가정하면 $A = \begin{pmatrix}
+    \cos \theta& \sin \theta\\
+    \sin \theta& -\cos \theta\\
+    \end{pmatrix}$ 이므로 $\mathbf{T}$ 는 $x$축의 양의 방향과 $\dfrac{\theta}{2}$ 의 각을 이루는 직선 $\mathbf{L}_{}$ 에 대한 대칭변환이다. 또한 다음이 성립한다. 
+
+    $$ \det(A) = - \cos ^{2}\theta-\sin ^{2}\theta=-1 \tag*{■} $$
+
+!!! def "정리 6.23 따름정리"
+
+    $\R ^{2}$ 의 임의의 등장사상은 다음의 둘 중 하나이다.
+
+    1. 회전변환과 평행이동의 합성
+
+    2. 원점을 지나는 직선에 대한 대칭변환과 평행이동의 합성
+
+- 증명
+
+    정리 6.22 와 6.23 에 의하여 본 정리와 같이 $\R ^{2}$ 의 등장사상을 완전히 분류할 수 있다. ■ 
+
+- 예시 
+
+
 
 ---
 
