@@ -655,7 +655,7 @@
     
     2. $\displaystyle \mathbf{W} _j \cap \sum_{i \neq j}^{}\mathbf{W} _i = \{0\}$ 
 
-    또한 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 의 직합 $\mathbf{W}$ 를 다음과 같이 표기한다.
+    $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 의 직합 $\mathbf{W}$ 를 다음과 같이 표기한다.
 
     $$ \boxed{\mathbf{W} := \mathbf{W} _1 \oplus \mathbf{W} _2 \oplus \dots \oplus \mathbf{W} _k = \bigoplus_{i=1}^{k}\mathbf{W} _k} $$ 
 

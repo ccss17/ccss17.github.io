@@ -903,9 +903,11 @@
 
 !!! def "정사영(orthogonal projection)"
 
-    내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 와 $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 에 대하여 다음 벡터 $u$ 를 $y$ 의 $\mathbf{W}$ 에 대한 정사영이라 한다.
+    내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 와 $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 에 대하여 다음 벡터 $u$ 를 $\mathbf{W}$ 위로의 $y$ 의 정사영이라 한다.
 
     $$ u = \sum_{i=1}^{k}\big <y,v_i \big >v_i \in \mathbf{W} $$
+
+- $u$ 를 단순히 $\mathbf{W}$ 로의 ($y$ 의) 사영이라고도 한다.
     
 - 정리 6.6 은 비유적으로 말해서 벡터 $y$ 의 종점에 부분공간 $\mathbf{W}$ 방향으로 빛을 비췄을 때 정사영 $u$ 가 부분공간 $\mathbf{W}$ 에 생기는 그림자이고, 그 그림자가 유일함을 말해준다. 
 
@@ -1678,6 +1680,8 @@
     
     - $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다.
 
+- **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.**
+
 - 이 정리는 복소내적공간에서 정규성과 정규직교기저의 존재성이 동치임을 말해준다. 실내적공간에서는 정규직교기저의 존재성이 보장되면 정규성도 보장되지만, 정규성이 보장된다고 해서 정규직교기저의 존재성이 보장되지는 않는다.
 
 - 증명
@@ -2196,6 +2200,8 @@
 
     한편, 임의의 직교연산자는 영벡터 $0$ 에 의한 평행이동인 항등사상의 특수한 경우이다. 임의의 평행이동도 직교연산자가 항등변환인 특수한 경우이다. 
 
+- 또한 이 정리는 등장사상에 관한 모든 문제를 직교연산자에 관한 문제로 환원시킬 수 있음을 말해준다.
+
 - 증명
 
     함수 $\mathbf{T}:\mathbf{V}\to \mathbf{V}, x \mapsto f(x) - f(0)$ 을 정의하고 평행이동 $g: \mathbf{V}\to \mathbf{V}, x \to x + f(0)$ 을 정의하면 다음이 성립한다.
@@ -2279,7 +2285,249 @@
 
 - 예시 
 
+# Spectral Theorem
 
+!!! def "문제 1.3-23"
+
+    벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 다음이 성립한다. 
+
+    1. $\mathbf{W}_1 + \mathbf{W}_2$ 는 $\mathbf{W}_1$ 와 $\mathbf{W}_2$ 를 포함하는 $\mathbf{V}$ 의 부분공간이다. 
+
+    2. $\mathbf{W}_1$ 과 $\mathbf{W}_2$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\mathbf{W}_1 + \mathbf{W}_2$ 도 포함한다.
+
+- 증명
+
+    1:
+
+    $\mathbf{W}_1 + \mathbf{W}_2$ 이 $\mathbf{W}_1$ 과 $\mathbf{W}_2$ 를 포함하는 것은 자명하니 [정리 1.3](../VectorSpace/#42f9c15c6) 을 기반으로 $\mathbf{V}$ 의 부분공간임을 보이면 된다. $0 \in \mathbf{W}_1, 0 \in \mathbf{W}_2 \implies 0 + 0 = 0 \in \mathbf{W}_1 + \mathbf{W}_2$ 이다. ▲ 
+
+    $x, y \in \mathbf{W}_1 + \mathbf{W}_2$ 에 대하여 $x = x_1 + x_2$, $y = y_1 + y_2$ 를 만족하는 $x_1, y_1 \in \mathbf{W}_1$ 와 $x_2, y_2 \in \mathbf{W}_2$ 가 존재한다. $\mathbf{W}_1$ 와 $\mathbf{W}_2$ 은 부분공간이므로 합에 대하여 닫혀있다. 즉, $x_1+y_1 \in \mathbf{W}_1, x_2 + y_2 \in \mathbf{W}_2$ 이다. 따라서 $(x_1+y_1) + (x_2+y_2) \in \mathbf{W}_1 + \mathbf{W}_2$ 이다. ▲ 
+
+    $x \in \mathbf{W}_1 + \mathbf{W}_2$ 에 대하여 $x = x_1 + x_2$ 를 만족하는 $x_1 \in \mathbf{W}_1$ 와 $x_2 \in \mathbf{W}_2$ 가 존재한다. $\mathbf{W}_1$ 와 $\mathbf{W}_2$ 은 부분공간이므로 스칼라곱에 대하여 닫혀있다. 즉, $cx_1 \in \mathbf{W}_1, cx_2 \in \mathbf{W}_2$ 이다. 따라서 $cx_1+cx_2 = cx \in \mathbf{W}_1 + \mathbf{W}_2$ 이다. ■ 
+
+    2:
+
+    부분공간 $\mathbf{W}$ 가 $\mathbf{W}_1, \mathbf{W}_2$ 을 포함한다고 가정하자. 부분공간은 합과 스칼라 곱에 대하여 닫혀있으므로 $x_1 \in \mathbf{W}_1, x_2 \in \mathbf{W}_2$ 에 대하여 $x_1 + x_2 \in \mathbf{W}_1+\mathbf{W}_2 \implies x_1 + x_2 \in \mathbf{W}$ 이다. 따라서 $\mathbf{W}_1 + \mathbf{W}_2 \subset \mathbf{W}$ 이다. ■ 
+
+!!! def "문제 1.3-24"
+
+    체 $\mathbf{F}$ 와 두 부분공간 
+
+    $$ \mathbf{W}_1 = \{(a_1, a_2, \dots, a_n) \in \mathbf{F}^{n} : a_n = 0\} $$
+
+    $$ \mathbf{W}_2 = \{(a_1, a_2, \dots, a_n) \in \mathbf{F}^{n} : a_1 = a_2 = \dots = a _{n-1} = 0\} $$
+
+    에 대하여 다음이 성립한다.
+
+    $$ \mathbf{F}^{n} = \mathbf{W}_1 \oplus \mathbf{W}_2 $$
+
+- 증명
+
+    $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 은 자명하다. ▲ 
+
+    다음이 성립하므로 $\mathbf{W}_1 \oplus \mathbf{W}_2 = \mathbf{F}^{n}$ 이다. 
+
+    $$ \begin{equation}\begin{split} \mathbf{F}^{n} &= \{(a_1, a_2, \dots, a_n) : a_i \in \mathbf{F} \} \\ &= \{(a_1, a_2, \dots, a _{n-1}, 0) + (0, 0, \dots, a_n) : a_i \in \mathbf{F}\} \\ \end{split}\end{equation} \tag*{} $$
+
+    ■ 
+
+!!! def "문제 1.3-25"
+
+    다항식 공간 $\mathbf{P}(\mathbf{F})$ 에서 짝수 차수의 계수가 $0$ 인 다항식 집합을 $\mathbf{W}_1$ 라 하고 홀수 차수의 계수가 $0$ 인 다항식 집합을 $\mathbf{W}_1$ 라 하면 $\mathbf{P}(\mathbf{F}) = \mathbf{W}_1 \oplus \mathbf{W}_2$ 이다.
+
+- 증명
+
+    정리의 가정은 다음과 같다.
+
+    $$ \mathbf{W}_1 = \bigg \{ \sum_{i=0}^{\infty}a_ix ^{2i+1} : a_i \in \mathbf{F} \bigg \} $$
+
+    $$ \mathbf{W}_2 = \bigg \{ \sum_{i=0}^{\infty}a_ix ^{2i} : a_i \in \mathbf{F} \bigg \} $$
+
+    $\forall a_i \in \mathbf{F} : a_i = 0$ 을 가정하면 $0 \in \mathbf{W}_1, 0 \in \mathbf{W}_2$ 이다. 다음이 성립하므로 $\mathbf{W}_1, \mathbf{W}_2$ 는 덧셈에 대하여 닫혀있다.
+
+    $$ \sum_{i=0}^{\infty}a_ix ^{2i + 1}, \sum_{i=0}^{\infty}b_ix ^{2i + 1} \in \mathbf{W}_1 \implies \sum_{i=0}^{\infty}a_ix ^{2i + 1} + \sum_{i=0}^{\infty}b_ix ^{2i + 1} = \sum_{i=0}^{\infty}(a_i + b_i) x^{2i + 1} \in \mathbf{W}_1 $$
+
+    $$ \sum_{i=0}^{\infty}a_ix ^{2i}, \sum_{i=0}^{\infty}b_ix ^{2i} \in \mathbf{W}_1 \implies \sum_{i=0}^{\infty}a_ix ^{2i} + \sum_{i=0}^{\infty}b_ix ^{2i} = \sum_{i=0}^{\infty}(a_i + b_i) x^{2i} \in \mathbf{W}_1 $$
+
+    [Summation 의 성질](../../ArithmeticOperations/#d2c8a4239) 에 의하여 다음이 성립하므로 $\mathbf{W}_1, \mathbf{W}_2$ 는 스칼라 곱에 대하여 닫혀있다.
+
+    $$ \sum_{i=0}^{\infty}a_ix ^{2i + 1} \in \mathbf{W}_1 \implies c\sum_{i=0}^{\infty}a_ix ^{2i + 1} = \sum_{i=0}^{\infty}ca_i x^{2i + 1} \in \mathbf{W}_1 $$
+
+    $$ \sum_{i=0}^{\infty}a_ix ^{2i} \in \mathbf{W}_2 \implies c\sum_{i=0}^{\infty}a_ix ^{2i} = \sum_{i=0}^{\infty}ca_i x^{2i} \in \mathbf{W}_2 $$
+
+    ▲ 
+
+    자명하게 $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 이다. 다음이 성립하므로 $\mathbf{W}_1 \oplus \mathbf{W}_2 = \mathbf{P}_{}(\mathbf{F})$ 이다. 
+
+    $$ \begin{equation}\begin{split} \mathbf{F}^{n} &= \bigg \{\sum_{i=0}^{\infty}a_ix ^{i} : a_i \in \mathbf{F} \bigg \} \\ &= \bigg \{ \sum_{i=0}^{\infty}a_ix ^{2i+1} + \sum_{i=0}^{\infty}a_ix ^{2i} : a_i \in \mathbf{F} \bigg \} \end{split}\end{equation} \tag*{} $$
+
+    ■ 
+
+!!! def "문제 1.3-26"
+
+    벡터공간 $\mathbf{M}_{m \times n}(\mathbf{F})$ 에 대하여 다음과 같이 정의된 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 $\mathbf{M}_{m \times n}(\mathbf{F}) = \mathbf{W}_1 \oplus \mathbf{W}_2$ 이다.
+     
+    $$ \mathbf{W}_1 = \{A \in \mathbf{M}_{m \times n}(\mathbf{F}) : i > j \implies A _{ij} = 0\} $$
+
+    $$ \mathbf{W}_2 = \{A \in \mathbf{M}_{m \times n}(\mathbf{F}) : i \leq j \implies A _{ij} = 0\} $$
+
+- $\mathbf{W}_1$ 은 상삼각행렬 집합이다.
+
+- 증명
+
+    문제 1.3-24, 문제 1.3-25 의 증명과 비슷하다. $\mathbf{W}_1, \mathbf{W}_2$ 이 부분공간임을 쉽게 보일 수 있고, $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 은 자명하고 $\mathbf{W}_1 + \mathbf{W}_2 = \mathbf{M}_{m \times n}(\mathbf{F})$ 을 쉽게 보일 수 있다. ■ 
+
+!!! def "문제 1.3-27"
+
+    $n \times n$ 상삼각행렬 집합인 벡터공간 $\mathbf{V}$ 와 대각행렬 집합인 부분공간 $\mathbf{W}_1 \subset \mathbf{V}$ 와 $\mathbf{W}_2 = \{A \in \mathbf{V} : i \geq j \implies A _{ij} = 0\}$ 에 대하여 $\mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2$ 이다.
+
+- 증명
+
+    문제 1.3-24, 1.3-25, 1.3-26 의 증명과 비슷하다. $\mathbf{W}_2$ 이 부분공간임을 쉽게 보일 수 있고, $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 은 자명하고 $\mathbf{W}_1 + \mathbf{W}_2 = \mathbf{V}$ 을 쉽게 보일 수 있다. ■ 
+
+!!! def "사영(projection)"
+
+    벡터공간 $\mathbf{V}$ 와 $\mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2$ 인 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 다음과 같이 정의된 함수 $\mathbf{T}:\mathbf{V}\to \mathbf{V}$ 를 $\mathbf{W}_2$ 에 대한 $\mathbf{W}_1$ 위로의 $\mathbf{V}$ 의 사영이라 한다.
+
+    $$ x_1 \in \mathbf{W}_1, x_2 \in \mathbf{W}_2 : x = x_1 + x_2 \implies \mathbf{T}(x) = x_1 $$
+
+- $\mathbf{T}$ 를 단순히 $\mathbf{W}_1$ 으로의 ($\mathbf{V}$ 의) 사영이라고도 한다.
+
+!!! def "문제 2.1-27"
+
+    벡터공간 $\mathbf{V}$ 와 $\mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2$ 인 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 와 $\mathbf{W}_2$ 에 대한 $\mathbf{W}_1$ 위로의 $\mathbf{V}$ 의 사영 $\mathbf{T}:\mathbf{V}\to \mathbf{V}$ 에 대하여 다음이 성립한다. 
+
+    1. $\mathbf{T}$ 는 선형이다.
+    
+    2. $\mathbf{W}_1 = \{x \in \mathbf{V} : \mathbf{T}(x) = x\}$
+
+    3. $\mathbf{W}_1 = \mathbf{R}(\mathbf{T})$
+    
+    4. $\mathbf{W}_2 = \mathbf{N}(\mathbf{T})$
+
+    5. $\mathbf{V} = \mathbf{R}(\mathbf{T}) \oplus \mathbf{N}(\mathbf{T})$
+
+    6. $\mathbf{W}_1 = \mathbf{V} \implies \mathbf{T}(x) = x$
+
+    7. $\mathbf{W}_1 = \{0\} \implies \mathbf{T} = \mathbf{T}_0$
+
+- 증명
+
+    1:
+
+    $x = x_1 + x_2 \in \mathbf{V}$ 를 만족하는 $x_1 \in \mathbf{W}_1, x_2 \in \mathbf{W}_2$ 와 $y = y_1 + y_2 \in \mathbf{V}$ 를 만족하는 $y_1 \in \mathbf{W}_1, y_2 \in \mathbf{W}_2$ 와 스칼라 $a$ 에 대하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} \mathbf{T}(ax + y) &= \mathbf{T}(ax_1 + ax_2 + y_1 + y_2) \\ &= ax_1 + y_1 = a \mathbf{T}(x) + \mathbf{T}(y)\\ \end{split}\end{equation} \tag*{} $$
+
+    따라서 $\mathbf{T}$ 는 선형이다. ▲ 
+
+    2:
+
+    $x \in \mathbf{W}_1$ 이면 $\mathbf{T}(x) = x$ 이므로 $x \in \{x \in \mathbf{V} : \mathbf{T}(x) = x\}$ 이다. $\mathbf{T}(x) = x$ 이면 $x_1 = x$ 이므로 $x \in \mathbf{W}_1$ 이다. ▲ 
+
+    3:
+
+    먼저 $\mathbf{W}_1$ 로의 사영 $\mathbf{T}$ 의 모든 상이 그 정의에 의하여 반드시 $\mathbf{W}_1$ 에 속한다. 즉, $\mathbf{R}(\mathbf{T}) \subset \mathbf{W}_1$ 이다. 
+
+    $x \in \mathbf{W}_1$ 이면 $\mathbf{T}(x) = x$ 이므로 $x \in \mathbf{R}(\mathbf{T})$ 이다. 따라서 $\mathbf{R}(\mathbf{T}) = \mathbf{W}_1$ 이다. ▲ 
+
+    4:
+
+    $x \in \mathbf{W}_2$ 이면 $\mathbf{T}(x) = 0$ 이므로 $x \in \{x \in \mathbf{V}: \mathbf{T}(x) = 0\}$ 이다. $\mathbf{T}(x) = 0$ 이면 $x_2 = x$ 이므로 $x \in \mathbf{W}_2$ 이다. ▲ 
+
+    5:
+
+    3), 4) 에 의하여 바로 증명된다. ▲ 
+
+    6:
+
+    2) 에 의하여 $\mathbf{V} = \mathbf{W}_1 = \{x \in \mathbf{V} : \mathbf{T}(x) = x\}$ 이면 $\mathbf{V}$ 의 모든 원소에 대한 $\mathbf{T}$ 의 대응규칙이 항등이라는 것이므로 $\mathbf{T}$ 는 항등변환이다. ▲ 
+
+    7:
+
+    $\mathbf{W}_1 = \{0\}$ 이면 $\mathbf{T}(x) = 0$ 임이 자명하다. ■ 
+
+!!! def "문제 1.6-29-(a)"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 $\mathbf{W}_1 + \mathbf{W}_2$ 는 유한차원이고, 다음이 성립한다.
+
+    $$ \dim (\mathbf{W}_1 + \mathbf{W}_2) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) - \dim (\mathbf{W}_1 \cap \mathbf{W}_2) $$
+
+- 증명
+
+    $\mathbf{W}_1 \cap \mathbf{W}_2$ 의 기저를 $\alpha = \{v_1, v_2, \dots, v_k\}$ 로 두면 [정리 1.10 따름정리 2](../VectorSpace/#cd7879a47) 에 의하여 $\alpha \subset \mathbf{W}_1$ 이고 $\alpha \subset \mathbf{W}_2$ 이므로 $\alpha$ 를 확장하여 $\mathbf{W}_1$ 의 기저 $\beta$ 와 $\mathbf{W}_2$ 의 기저 $\gamma$ 를 만들 수 있다.
+
+    $$ \beta = \{v_1, v_2, \dots, v_k, u_1, u_2, \dots, u_m\} $$
+
+    $$ \gamma = \{v_1, v_2, \dots, v_k, w_1, w_2, \dots, w_p\} $$
+
+    임의의 $x \in \mathbf{W}_1 + \mathbf{W}_2$ 에 대하여 $x = x_1 + x_2$ 인 $x_1 \in \mathbf{W}_1, x_2 \in \mathbf{W}_2$ 가 존재한다. 따라서 적절한 스칼라에 대하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} x = x_1 + x_2 &= (a_1v_1 + a_2 v_2 + \dots + a_k v_k + b_1 u_1 + b_2 u_2 + \dots + b_m u_m) \\ & \qquad + (c_1v_1 + c_2 v_2 + \dots + c_k v_k + d_1 w_1 + d_2 w_2 + \dots + d_p w_p)\\ & = e_1v_1 + e_2 v_2 + \dots + e_k v_k + b_1 u_1 + b_2 u_2 + \dots + b_m u_m + d_1 w_1 + d_2 w_2 + \dots + d_p w_p + \\ \end{split}\end{equation} \tag*{} $$
+
+    $u_1, u_2, \dots, u_m$ 와 $w_1, w_2, \dots, w_p$ 들은 서로 일차독립이다. 만약 $u_1$ 와 $w_1$ 이 서로의 스칼라곱으로 표현된다면 $u_1$ 로 생성되는 벡터와 $w_1$ 로 생성되는 벡터가 서로 같으므로 $u_1, w_1 \in \mathbf{W}_1 \cap \mathbf{W}_2$ 이다. 그러나 이는 모순이다. 따라서 $\mathbf{W} = \mathbf{W}_1 + \mathbf{W}_2$ 의 기저는 다음과 같다. 
+
+    $$ \{v_1, v_2, \dots, v_k, u_1, u_2, \dots, u_m, w_1, w_2, \dots, w_p\} $$
+
+    이제 각 벡터공간의 기저의 기수를 계산하면 $\mathbf{W}_1+\mathbf{W}_2$ 이 유한차원인 것과 정리의 결론을 얻을 수 있다. ■ 
+
+!!! def "문제 1.6-29-(b)"
+
+    벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 가 유한차원이고 $\mathbf{V}=\mathbf{W}_1 + \mathbf{W}_2$ 이면 다음이 성립한다. 
+
+    $$ \mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2 \iff \dim (\mathbf{V}) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) $$
+
+- 증명
+
+    $\mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2$ 를 가정하는 것은 $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 를 가정하는 것이므로 문제 1.6-29-(a) 에 의하여 다음이 성립한다. 
+
+    $$ \dim (\mathbf{V}) = \dim (\mathbf{W}_1 + \mathbf{W}_2) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) + \dim (\mathbf{W}_1 \cap \mathbf{W}_2) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) \tag*{▲} $$
+
+    $\dim (\mathbf{V}) = \dim (\mathbf{W}_1 + \mathbf{W}_2) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2)$ 를 가정하는 것은 다시 문제 1.6-29-(a) 에 의하여 $\dim (\mathbf{W}_1 \cap \mathbf{W}_2) = 0$ 을 가정하는 것이므로 $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 이다. 따라서 $\mathbf{W}_1 \oplus \mathbf{W}_2 = \mathbf{V}$ 이다. ■ 
+
+!!! def "문제 2.1-36"
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 선형변환 $\mathbf{T}:\mathbf{V}\to \mathbf{V}$ 에 대하여 다음이 성립한다. 
+
+    1. $\mathbf{V}=\mathbf{R}(\mathbf{T}) + \mathbf{N}(\mathbf{T}) \implies \mathbf{V} = \mathbf{R}(\mathbf{T}) \oplus \mathbf{N}(\mathbf{T})$
+
+    2. $\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\} \implies \mathbf{V} = \mathbf{R}(\mathbf{T}) \oplus \mathbf{N}(\mathbf{T})$
+
+- 증명
+
+    1:
+
+    [차원정리](../LinearTransformation/#6187a9f9c)와 문제 1.6-29-(a) 에 의하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}
+    \dim (\mathbf{V}) &= \dim (\mathbf{R}(\mathbf{T}) + \mathbf{N}(\mathbf{T})) \\
+    &= \dim (\mathbf{R}(\mathbf{T})) + \dim (\mathbf{N}(\mathbf{T})) - \dim (\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}))\\
+    &= \dim (\mathbf{V}) - \dim (\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T})) \\
+    \end{split}\end{equation} \tag*{} $$
+
+    따라서 $\dim (\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T})) = 0 \implies \mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\}$ 이다. ▲ 
+
+    2:
+
+    $\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\}$ 을 가정하면 문제 1.6-29-(a), (b) 에 의하여 증명이 바로 끝난다. ■ 
+
+!!! def "문제 2.3-16"
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
+
+    1. $\text{rank} (\mathbf{T}) = \text{rank} (\mathbf{T}^{2}) \implies \mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\}, \mathbf{V} = \mathbf{R}(\mathbf{T}) \oplus \mathbf{N}(\mathbf{T})$
+
+    2. $k \in \N : \mathbf{V} = \mathbf{R}(\mathbf{T}^{k}) \oplus \mathbf{N}(\mathbf{T}^{k})$
+
+- 증명
+
+!!! def "문제 2.3-17"
+
+    벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 $\mathbf{T} = \mathbf{T}^{2}$ 인 것과 $\mathbf{T}$ 가 $\mathbf{N}(\mathbf{T})$ 에 대한 $\mathbf{W}_1 = \{x : \mathbf{T}(x) = x\}$ 로의 사영인 것은 동치이다.
+
+- 이 정리는 $\mathbf{T}$ 가 사영이기 위한 필요충분조건이 $\mathbf{T} = \mathbf{T}^{2}$ 임을 말해준다. 
+
+- 증명
 
 ---
 
