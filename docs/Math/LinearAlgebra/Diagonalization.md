@@ -765,13 +765,27 @@
 
 !!! def "$\mathbf{T}$-불변 부분공간($\mathbf{T}$-invariant subspace)"
 
-    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 부분공간 $\mathbf{W}$ 에 대하여 $\mathbf{T} (\mathbf{W} ) \subseteq \mathbf{W}$ 인 $\mathbf{W}$ 를 $\mathbf{V}$ 의 $\mathbf{T}$-불변 부분공간이라 한다.
+    벡터공간 $\mathbf{V}$ 와 부분공간 $\mathbf{W}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 $\mathbf{T} (\mathbf{W} ) \subseteq \mathbf{W}$ 인 $\mathbf{W}$ 를 $\mathbf{V}$ 의 $\mathbf{T}$-불변 부분공간이라 한다.
 
 - 즉, $\forall v \in \mathbf{W} : \mathbf{T} (v) \in \mathbf{W}$ 이면 $\mathbf{W}$ 가 $\mathbf{V}$ 의 $\mathbf{T}$-불변 부분공간이라는 것이다.
 
     쉽게 말해, 부분공간의 원소가 $\mathbf{T}$ 를 통과해서 나왔는데도 부분공간에 속했으면 $\mathbf{T}$-불변이다.
 
-- 예시 
+!!! def ""
+
+    벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음 부분공간은 $\mathbf{T}$-불변이다.
+
+    1. $\{0\}$
+
+    2. $\mathbf{V}$ 
+
+    3. $\mathbf{R}(\mathbf{T})$
+
+    4. $\mathbf{N}(\mathbf{T})$
+
+    5. $\mathbf{T}$ 의 고윳값 $\lambda$ 에 대한 $\mathbf{E}_{\lambda}$
+
+- 증명
 
     벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음의 부분공간들이 $\mathbf{T}$-불변임을 확인해보자.
 
@@ -794,6 +808,7 @@
     $\mathbf{T}$ 의 고윳값 $\lambda$ 에 대한 $\mathbf{E}_{\lambda}$:
 
     $x \in \mathbf{E}_{\lambda}$ 에 대하여 $\mathbf{T} (x) = \lambda x$ 이다. $\mathbf{T} (\lambda x) = \lambda \mathbf{T} (x) = \lambda \cdot \lambda x$ 이다. 벡터공간은 스칼라곱에 닫혀있으므로 $\lambda x \in \mathbf{V}$ 이다. 따라서 $\lambda x \in \mathbf{V} \implies \lambda x \in \mathbf{E}_{\lambda}$ 이다. 따라서 $\mathbf{T} (\mathbf{E}_{\lambda} ) \subset \mathbf{E}_{\lambda}$ 이다.
+
 
 ## $\mathbf{T}$-cyclic subspace
 
@@ -859,7 +874,7 @@
 
     벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}:\mathbf{V} \to \mathbf{V}$ 와 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 에 대하여 $\mathbf{T}$ 를 $\mathbf{W}$ 로 제한한 $\mathbf{T}_{\mathbf{W}}$ 는 $\mathbf{T}$ 의 정의역과 공역을 $\mathbf{W}$ 로 제한한 함수 $\mathbf{T}_{\mathbf{W}}:\mathbf{W}\to \mathbf{W}$ 이다.
 
-- 함수의 제한은 정의역만 축소시키는 것으로 정의되지만, 이 경우 정의역이 $\mathbf{T}$-불변 부분공간으로 축소되므로 공역도 어차피 $\mathbf{T}$-불변 부분공간으로 축소된다.
+- [함수의 제한](../../Set/Set/#d5708058b)은 정의역만 축소시키는 것으로 정의되지만, 이 경우 정의역이 $\mathbf{T}$-불변 부분공간으로 축소되므로 공역도 어차피 $\mathbf{T}$-불변 부분공간으로 축소된다.
 
 - $\mathbf{T}_{\mathbf{W}}$ 는 선형변환이다.(문제 5.4-7) 즉, $\mathbf{T}_{\mathbf{W}}$ 는 $\mathbf{W}$ 의 선형연산자이다.
 

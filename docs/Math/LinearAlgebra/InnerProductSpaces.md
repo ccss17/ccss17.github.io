@@ -281,7 +281,7 @@
 
     $$ \bigg [\sum_{i=1}^{n}|a_i + b_i|^{2} \bigg ]^{1/2}\leq \bigg [\sum_{i=1}^{n}|a_i|^{2} \bigg ]^{1/2}+\bigg [\sum_{i=1}^{n}|b_i|^{2} \bigg ]^{1/2} $$
 
-## Euclidean Space
+## Euclidean Space and its Norm
 
 !!! def "유클리드 공간(Euclidean vector space)"
 
@@ -299,8 +299,6 @@
 
     $$ \|x\| = 2|x_1| + \sqrt[]{3|x_2| ^{2} + \max (|x_3|, 2|x_4|) ^{2}}
     $$
-
-## Norm of Euclidean Space
 
 !!! def "유클리드 노름(Euclidean norm), $L_2$ 노름($L_2$ norm)"
 
@@ -426,9 +424,7 @@
 
 - 민코프스키 거리에서 $p \to - \infty$ 로 보내면 하한 거리 함수를 얻는다.
 
-# Orthogonal
-
-## Orthogonal in Euclidean Space
+# Orthogonal in Euclidean Space
 
 !!! def "코사인(cosine)"
 
@@ -547,7 +543,7 @@
 
     $$ \iff \big <u,v \big > = 0 \tag*{■} $$
 
-## Orthogonal
+# Orthogonal
 
 !!! def "직교(orthogonal), 수직(perpendicular)"
 
@@ -859,13 +855,15 @@
 
     $y - u' = z' \in \mathbf{W}^{\perp}$ 을 만족하는 $u' \in \mathbf{W}$ 가 존재하면 $y = u + z = u' + z'$ 이다. 부분공간은 합에 대하여 닫혀있으므로 $u - u' = z' - z \in \mathbf{W}\cap \mathbf{W}^{\perp} = \{0\}$ 이다. 즉, $u = u'$ 이다. ■ 
 
-- 프리드버그 선대수에서 서술한 원래의 정리 6.6 는 아래와 같다. 하지만 논리 관계가 이상한 것 같아서 임의로 정리를 수정했다.
+- 프리드버그 선대수에서 서술한 원래의 정리 6.6:
 
     *내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 인 벡터 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다.*
 
     *$\{v_1, v_2, \dots, v_k\}$ 가 $\mathbf{W}$ 의 정규직교기저일 때 다음이 성립한다.*
 
     $$ u = \sum_{i=1}^{k}\big <y,v_i \big >v_i $$
+
+    존재성 정리니까 이렇게 해도 상관없을듯 고쳐
 
 !!! def "문제 6.1-10"
 
@@ -1370,7 +1368,7 @@
 
     $\big <x,y \big >\neq 0$ 을 가정하면 $x \not\in \mathbf{W}$ 은 자명하다. ■ 
 
-- 프리드버그 선대수에서 말하는 원래의 정리는 다음과 같은데 논리관계가 이상한 것 같아서 임의로 고쳤다.
+- 프리드버그 선대수에서 말하는 원래의 정리:
 
     *내적공간 $\mathbf{V}$ 와 유한차원 부분공간 $\mathbf{W}$ 와 $x \in \mathbf{V} \setminus \mathbf{W}$ 에 대하여 $y \in \mathbf{W}^{\perp} \land \big <x,y \big > \neq 0$ 인 벡터 $y \in \mathbf{V}$ 가 존재한다.*
 
@@ -1571,8 +1569,6 @@
     따라서 다시 문제 2.2-12 에 의하여 $[\mathbf{T}]_{\beta '}$ 은 상삼각행렬이다.
 
     이제 $i \in \{1, \dots, n\}$ 에 대하여 $z_i = \dfrac{1}{\left\| v_i \right\| }v_i, \gamma = \{z_1, z_2, \dots, z_n\}$ 를 정의하면 $\gamma$ 는 $\mathbf{V}$ 의 정규직교기저이다. $z_i$ 는 $v_i$ 의 일차결합이므로 결국 $w_i$ 의 일차결합이다. 따라서 위와 같은 논리로 $\mathbf{T}(z_i) \in \text{span} (\{z_1, \dots, z_i\})$ 임을 보일 수 있고, 또 다시 문제 2.2-12 에 의하여 $[\mathbf{T}]_{\gamma }$ 는 상삼각행렬임을 알 수 있다. ■ 
-
-## Normal Operator, Normal Matrix
 
 !!! def "정규연산자(normal operator)"
 
@@ -2385,6 +2381,8 @@
 
     문제 1.3-24, 1.3-25, 1.3-26 의 증명과 비슷하다. $\mathbf{W}_2$ 이 부분공간임을 쉽게 보일 수 있고, $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 은 자명하고 $\mathbf{W}_1 + \mathbf{W}_2 = \mathbf{V}$ 을 쉽게 보일 수 있다. ■ 
 
+## Projection
+
 !!! def "사영(projection)"
 
     벡터공간 $\mathbf{V}$ 와 $\mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2$ 인 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 다음과 같이 정의된 함수 $\mathbf{T}:\mathbf{V}\to \mathbf{V}$ 를 $\mathbf{W}_2$ 에 대한 $\mathbf{W}_1$ 위로의 $\mathbf{V}$ 의 사영이라 한다.
@@ -2511,23 +2509,129 @@
 
     $\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\}$ 을 가정하면 문제 1.6-29-(a), (b) 에 의하여 증명이 바로 끝난다. ■ 
 
+<!-- !!! def ""
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 에 대하여 다음이 성립한다. 
+
+    1. $\mathbf{V}$ 의 영공간이 아닌 부분공간은 $\beta$ 의 부분집합을 기저로 갖는다. 
+
+    2. $\mathbf{V}$ 의 영공간이 아닌 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 와 각각의 기저 $\gamma , \gamma '$ 대하여 $\gamma \cap \gamma ' = \varnothing , \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) = \dim (\mathbf{V})$ 이면 $\mathbf{W}_1 + \mathbf{W}_2 = \mathbf{V}$ 이다.
+
+    3. 선형연산자 $\mathbf{T}$ 가 단사가 아니라는 것은 $\mathbf{T}(v_i) = \mathbf{T}(v_j)$ 인 $v_i, v_j$ 가 존재한다는 것이다. 
+
+    4. 선형연산자가 단사인 것과 기저의 독립성을 보존하는 연산자인 것은 동치이다.
+
+- [정리 2.2](../LinearTransformation/#f380ab529) 에 의하여 $\mathbf{V}$ 의 기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 로 두면 다음이 성립한다.
+
+    $$ \mathbf{R}(\mathbf{T}) = \text{span} (\mathbf{T}(\beta )) = \text{span} (\{\mathbf{T}(v_1), \mathbf{T}(v_2), \dots, \mathbf{T}(v_n)\}) $$
+
+    $$ \mathbf{R}(\mathbf{T}^{2}) = \text{span} (\mathbf{T}^{2}(\beta )) = \text{span} (\{\mathbf{T}^{2}(v_1), \mathbf{T}^{2}(v_2), \dots, \mathbf{T}^{2}(v_n)\}) $$
+
+    $\{w_1, w_2, \dots, w_k\} = \gamma$ 가 $\mathbf{R}(\mathbf{T})$ 의 기저가 된다고 하면 가정에 의하여 다음과 같이 $\{\mathbf{T}(w_1), \mathbf{T}(w_2), \dots, \mathbf{T}(w_k)\}$ 은 일차독립이다. 
+
+    $$ \{\mathbf{T}(v_1), \mathbf{T}(v_2), \dots, \mathbf{T}(v_n)\} = \{w_1, w_2, \dots, w_k\} = \gamma $$
+
+    $$ \{\mathbf{T}^{2}(v_1), \mathbf{T}^{2}(v_2), \dots, \mathbf{T}^{2}(v_n)\} = \{\mathbf{T}(w_1), \mathbf{T}(w_2), \dots, \mathbf{T}(w_k)\} $$
+
+    즉, $\mathbf{T}$ 는 벡터공간 $\mathbf{R}(\mathbf{T})$ 의 기저의 독립성을 보존한다. $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 어떤 부분공간에서 기저의 독립성을 보존한다는 것은 그 부분공간의 한에서는 단사라는 것이다. 그러면 [정리 2.4](../LinearTransformation/#7d40e8276) 에 의하여 $\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\}$ 가 된다. $\mathbf{N}(\mathbf{T})$ 에 $\mathbf{R}(\mathbf{T})$ 의 교집합을 가하는 이유는 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 영공간 $\mathbf{N}(\mathbf{T})$ 을 $\mathbf{R}(\mathbf{T})$ 의 선형연산자의 영공간 $\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T})$ 로 축소하기 위해서이다. -->
+
+!!! def ""
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
+
+    $$ \text{rank} (\mathbf{T}) = \text{rank} (\mathbf{T}^{2}) \iff \text{nullity} (\mathbf{T}) = \text{nullity} (\mathbf{T}^{2}) $$
+
+- 증명
+
+    $\text{nullity} (\mathbf{T}) = \text{nullity} (\mathbf{T}^{2})$ 를 가정하면 [차원정리](../LinearTransformation/#6187a9f9c)에 의하여 다음이 성립한다. 
+
+    $$ \text{nullity} (\mathbf{T}) + \text{rank} (\mathbf{T}) = \dim (\mathbf{V}) $$
+
+    $$ \text{nullity} (\mathbf{T}^{2}) + \text{rank} (\mathbf{T}^{2}) = \dim (\mathbf{V}) $$
+
+    $$ \implies \text{rank} (\mathbf{T}) = \text{rank} (\mathbf{T}^{2}) $$
+
+    ▲ 
+
+    그 역도 같은 논리로 쉽게 증명할 수 있다. ■ 
+
 !!! def "문제 2.3-16"
 
     유한차원 벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
 
     1. $\text{rank} (\mathbf{T}) = \text{rank} (\mathbf{T}^{2}) \implies \mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\}, \mathbf{V} = \mathbf{R}(\mathbf{T}) \oplus \mathbf{N}(\mathbf{T})$
 
-    2. $k \in \N : \mathbf{V} = \mathbf{R}(\mathbf{T}^{k}) \oplus \mathbf{N}(\mathbf{T}^{k})$
+    2. $\exists k \in \N : \mathbf{V} = \mathbf{R}(\mathbf{T}^{k}) \oplus \mathbf{N}(\mathbf{T}^{k})$
 
 - 증명
+
+    1:
+
+    $a \neq 0, a \in \mathbf{V}$ 에 대하여 $a \in \mathbf{N}(\mathbf{T})\cap \mathbf{R}(\mathbf{T})$ 를 가정하면 $\mathbf{T}(a) = 0$ 이고 $b \neq 0, \mathbf{T}(b) = a$ 인 $b \in \mathbf{V}$ 가 존재한다. 따라서 다음이 성립한다.
+
+    $$ \mathbf{T}(\mathbf{T}(b)) = \mathbf{T}(b) \implies \mathbf{T}(a) = a \implies 0 = a $$
+
+    이는 모순이다. 따라서 $\mathbf{N}(\mathbf{T}) \cap \mathbf{R}(\mathbf{T}) = \{0\}$ 이다. 문제 2.1-36 에 의하여 $\mathbf{V}=\mathbf{R}(\mathbf{T})\oplus \mathbf{N}(\mathbf{T})$ 도 유도된다. ▲ 
+
+    2:
+
+    적절한 자연수 $k$ 에 대하여 선형연산자 $\mathbf{T}^{k}$ 가 $\text{rank} (\mathbf{T}^{k}) = \text{rank} (\mathbf{T}^{2k})$ 를 만족함을 보이면 1) 에 의하여 증명이 끝난다. 다음이 성립한다.
+    
+    $$ \forall s \in \N : \mathbf{T}^{s + 1}(\mathbf{V}) = \mathbf{T}^{s}(\mathbf{R}(\mathbf{T})) \subset \mathbf{T}^{s}(\mathbf{V}) \implies \text{rank} (\mathbf{T}^{s+1}) \leq \text{rank} (\mathbf{T}^{s}) $$
+    
+    이때 선형연산자 $\mathbf{T}^{s}:\mathbf{V}\to \mathbf{V}$ 의 상공간의 차원은 반드시 $0 \leq \text{rank} (\mathbf{T}^{s}) \leq \dim (\mathbf{V})$ 를 만족한다. 그러므로 어떤 자연수 $k$ 가 존재하여 $\text{rank} (\mathbf{T}^{k+1}) = \text{rank} (\mathbf{T}^{k})$ 를 만족한다. 왜냐하면 다음과 같이 무한히 늘어져있는 자연수들의 부등식에 하계와 상계가 정해져있기 때문이다.
+
+    $$ \dim (\mathbf{V}) \geq \text{rank} (\mathbf{T}) \geq \dots \geq \text{rank} (\mathbf{T}^{s}) \geq \text{rank} (\mathbf{T}^{s+1}) \geq \dots \geq 0 $$
+    
+    그래서 $\mathbf{T}^{k+1}(\mathbf{V}) \subset \mathbf{T}^{k}(\mathbf{V})$ 인데 이 둘의 차원이 같으므로 $\mathbf{T}^{k+1}(\mathbf{V}) = \mathbf{T}^{k}(\mathbf{V})$ 이다. 따라서 $t \geq k$ 인 자연수 $t$ 에 대하여 다음이 성립한다.
+
+    $$ \mathbf{T}^{t}(\mathbf{V}) = (\mathbf{T} \circ \mathbf{T} \circ \dots \circ \mathbf{T}^{k})(\mathbf{V}) = \mathbf{T}^{k}(\mathbf{V}) $$
+
+    따라서 $2k \geq k$ 인 자연수 $2k$ 에 대하여 $\mathbf{T}^{2k}(\mathbf{V}) = \mathbf{T}^{k}(\mathbf{V})$ 이고, 이에 따라 $\text{rank} (\mathbf{T}^{k}) = \text{rank} (\mathbf{T}^{2k})$ 이다. ■ 
 
 !!! def "문제 2.3-17"
 
-    벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 $\mathbf{T} = \mathbf{T}^{2}$ 인 것과 $\mathbf{T}$ 가 $\mathbf{N}(\mathbf{T})$ 에 대한 $\mathbf{W}_1 = \{x : \mathbf{T}(x) = x\}$ 로의 사영인 것은 동치이다.
+    벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
+    
+    1. $\mathbf{T} = \mathbf{T}^{2}$
+    
+    2. $\mathbf{T}$ 는 $\mathbf{N}(\mathbf{T})$ 에 대한 $\mathbf{W}_1 = \{x : \mathbf{T}(x) = x\}$ 로의 사영이다.
 
-- 이 정리는 $\mathbf{T}$ 가 사영이기 위한 필요충분조건이 $\mathbf{T} = \mathbf{T}^{2}$ 임을 말해준다. 
+- 문제 2.1-27 은 벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 $\mathbf{W}_2$ 에 대한 $\mathbf{W}_1$ 로의 사영 $\mathbf{T}$ 가 정의되면 반드시 $\mathbf{W}_1 = \{x : \mathbf{T}(x) = x\}, \mathbf{W}_2 = \mathbf{N}(\mathbf{T})$ 가 됨을 말해준다. 따라서 조건 2) 가 말하는 사영이란 어떤 특수한 사영이 아니라 임의의 모든 사영을 칭하는 것이다.
+
+    **그러므로 이 정리는 $\mathbf{T}$ 가 사영이기 위한 필요충분조건이 $\mathbf{T} = \mathbf{T}^{2}$ 임을 말해준다.**
 
 - 증명
+
+    1) 을 가정하면 문제 2.3-16 에 의하여 $\mathbf{V} = \mathbf{R}(\mathbf{T}) \oplus \mathbf{N}(\mathbf{T})$ 이고, 다음이 성립한다. 
+
+    $$ x_1 \in \mathbf{W}_1, x_2 \in \mathbf{N}(\mathbf{T}) : x = x_1 + x_2 \implies \mathbf{T}(x) = \mathbf{T}(x_1) + \mathbf{T}(x_2) = x_1 $$
+
+    [사영의 정의](#a616ef1e9) 에 의하여 $\mathbf{T}$ 는 $\mathbf{N}(\mathbf{T})$ 에 대한 $\mathbf{W}_1$ 의 사영이다. ▲ 
+
+    이제 2) 를 가정하고 1) 를 도출해보자. 사영의 정의에 의하여 $\mathbf{V} = \mathbf{N}(\mathbf{T})\oplus \mathbf{W}_1$ 이므로 다음이 성립한다.
+
+    $$ \forall x \in \mathbf{V}, \exists x_1 \in \mathbf{W}_1, \exists \in \mathbf{N}(\mathbf{T}) : x = x_1 + x_2 \implies \mathbf{T}(x) = x_1 \implies \mathbf{T}(\mathbf{T}(x)) = \mathbf{T}(x_1) = x_1 $$
+
+    $\mathbf{V}$ 의 임의의 벡터에서 $\mathbf{T}$ 와 $\mathbf{T}^{2}$ 의 상이 같으므로 $\mathbf{T} = \mathbf{T}^{2}$ 이다. ■ 
+
+## Orthogonal Projection
+
+!!! def "정사영(orthogonal projection)"
+
+    내적공간 $\mathbf{V}$ 에 대한 사영 $\mathbf{T}: \mathbf{V}\to \mathbf{V}$ 가 $\mathbf{R}(\mathbf{T})^{\perp} = \mathbf{N}(\mathbf{T}), \mathbf{N}(\mathbf{T})^{\perp} = \mathbf{R}(\mathbf{T})$ 를 만족하면 정사영이라 한다.
+
+- 문제 2.3-17 은 사영의 필요충분조건이 $\mathbf{T} = \mathbf{T}^{2}$ 임을 말해준다. 또한 그 증명과정은 $\mathbf{T}$ 가 사영이면 문제 2.3-16 에 의하여 $\mathbf{V} = \mathbf{R}(\mathbf{T})\oplus \mathbf{N}(\mathbf{T})$ 가 성립함을 말해준다. 따라서 또 다른 $\mathbf{V}$ 의 사영 $\mathbf{U}$ 가 존재하면 다음이 성립한다. 
+
+    $$ \mathbf{V} = \mathbf{R}(\mathbf{T})\oplus \mathbf{N}(\mathbf{T}) = \mathbf{R}(\mathbf{U}) \oplus \mathbf{N}(\mathbf{U}) $$
+
+    이때 $\mathbf{R}(\mathbf{T}) = \mathbf{R}(\mathbf{U})$ 를 가정해도 $\mathbf{N}(\mathbf{T})$ 와 $\mathbf{N}(\mathbf{U})$ 가 서로 다른 기저를 가지고 있을 수도 있다. 따라서 $\mathbf{N}(\mathbf{T}) = \mathbf{N}(\mathbf{U})$ 는 보장되지 않는다. 쉽게 말해서 사영은 치역에 의하여 유일하게 결정되지 않는다. 치역이 같아도 서로 다른 사영이 존재할 수도 있는 것이다. 
+
+    **그러나 정사영은 치역에 의하여 유일하게 결정된다. 치역이 같으면 반드시 서로 같은 사영이 되는 것이 정사영이다.**
+
+- [문제 6.2-13](#8767bfd4f) 은 $\mathbf{R}(\mathbf{T})^{\perp} = \mathbf{N}(\mathbf{T}) \implies \mathbf{N}(\mathbf{T})^{\perp} = \mathbf{R}(\mathbf{T})$ 을 말해준다. 
+    
+- 위에서 정의한 정사영은 이 정사영의 특수한 경우인가?
 
 ---
 
