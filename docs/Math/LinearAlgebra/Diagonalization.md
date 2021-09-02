@@ -1,10 +1,6 @@
-!!! info "ref"
-
-    Stephen H. Friedberg, Linear Algebra, 4th Edition
-
 # Diagonalizable
 
-!!! tldr "선형연산자의 대각화가능(diagonalizable)"
+!!! def "선형연산자의 대각화가능(diagonalizable)"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $[\mathbf{T} ]_{\beta }$ 가 대각행렬이 되도록 하는 $\mathbf{V}$ 의 순서기저 $\beta$ 가 존재하면 $\mathbf{T}$ 를 대각화가능하다고 한다.
 
@@ -16,13 +12,13 @@
 
     선형연산자 $\mathbf{T}$ 가 대각화가능이면 기저 $\beta$ 의 각 벡터 $v$ 는 적절한 스칼라 $\lambda$ 에 대하여 $\mathbf{T} (v) = \lambda v$ 를 만족한다. $v$ 는 기저의 원소이므로 영벡터가 아니다. 이를 기반으로 고유벡터의 정의를 내릴 수 있다.
 
-!!! tldr "정사각행렬의 대각화가능(diagonalizable)"
+!!! def "정사각행렬의 대각화가능(diagonalizable)"
 
     선형연산자 $\mathbf{L}_{A}$ 가 대각화가능이면 정사각행렬 $A$ 를 대각화가능이라고 한다.
 
 # Eigenvector
 
-!!! tldr "선형연산자의 고유벡터(eigenvector) 와 고윳값(eigenvalue)"
+!!! def "선형연산자의 고유벡터(eigenvector) 와 고윳값(eigenvalue)"
 
     벡터공간 $\mathbf{V}$  의 선형연산자 $\mathbf{T}$ 에 대하여 다음과 같이 정의한다.
     
@@ -32,7 +28,7 @@
 
 - 고유벡터는 특성벡터(characteristic vector, proper vector), 고윳값은 특성값(characteristic value, proper value) 라고도 부른다.
 
-!!! tldr "정사각행렬의 고유벡터(eigenvector) 와 고윳값(eigenvalue)"
+!!! def "정사각행렬의 고유벡터(eigenvector) 와 고윳값(eigenvalue)"
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 다음과 같이 정의한다. 
 
@@ -42,13 +38,13 @@
 
 ## Properties of eigenvector
 
-!!! tldr "정리 5.1"
+!!! def "정리 5.1"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 대각화가능인 것과 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 순서기저 $\beta$ 가 존재하는 것은 동치이다.
 
     즉, $\beta = \{v_1, v_2, \dots, v_n \}$ 가 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 순서기저이면 $D = [\mathbf{T} ] _{\beta}$ 는 대각행렬이며 $D _{jj}$ 는 $v_j$ 에 대응하는 고윳값이다.
 
-!!! tldr "정리 5.1 따름정리"
+!!! def "정리 5.1 따름정리"
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 가 대각화가능인 것과 $A$ 의 고유벡터로 이루어진 $\mathbf{F} ^{n}$ 의 순서기저가 존재하는 것은 동치이다.
 
@@ -72,7 +68,7 @@
 
     또한 정리 5.1 과 따름정리에 의하여 $Q = \begin{pmatrix} 1&3\\ -1&4\\ \end{pmatrix}$ 에 대하여 $Q ^{-1}AQ = [\mathbf{L}_{A}]_{\beta } = \begin{pmatrix} -2&0\\ 0&5\\ \end{pmatrix}$ 이다.
 
-!!! tldr ""
+!!! def ""
 
     고유벡터와 고윳값을 가지지 않는 선형연산자나 행렬이 존재한다.
 
@@ -82,9 +78,9 @@
 
     이는 $\mathbf{T} (v)$ 를 $v$ 의 스칼라배로 표현할 수 없다는 것이다. 따라서 $\mathbf{T}$ 는 고유벡터와 고윳값을 가지지 않으며, 대각화 불가능하다.
 
-## Characteristic polynomial
+## Characteristic polynomial (Finding eigenvalue)
 
-!!! tldr "정리 5.2"
+!!! def "정리 5.2"
 
     행렬 $A \in \mathbf{M}_{n \times n}$ 에 대하여 스칼라 $\lambda$ 가 $A$ 의 고윳값인 것과 $\det(A - \lambda I_n) = 0$ 인 것은 동치이다.
 
@@ -98,7 +94,7 @@
 
     $A - \lambda I_n$ 이 가역이면 $v = 0$ 이므로 모순이다. 즉, $A - \lambda I_n$ 는 가역이 아니다. [정리 4.7 따름정리](../Determinants/#b40051741) 에 의하여 $\det(A - \lambda I_n) = 0$ 이다.
 
-!!! tldr "정사각행렬의 특성다항식(Characteristic polynomial) "
+!!! def "정사각행렬의 특성다항식(Characteristic polynomial) "
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $A$ 의 특성다항식은 다항식 $f(t) = \det(A - tI_n)$ 이다.
 
@@ -116,19 +112,19 @@
 
     정리 5.2 에 의하여 $A$ 의 고윳값은 $3, -1$ 뿐이다.
 
-!!! tldr "선형연산자의 행렬식(determinant)"
+!!! def "선형연산자의 행렬식(determinant)"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 순서기저 $\beta$ 에 대하여 $\mathbf{T}$ 의 행렬식을 다음과 같이 정의한다.
 
     $$ \det(\mathbf{T} ) := \det([\mathbf{T} ]_{\beta }) $$
 
-!!! tldr "선형연산자의 특성다항식(Characteristic polynomial)"
+!!! def "선형연산자의 특성다항식(Characteristic polynomial)"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 순서기저 $\beta$ 에 대하여 $\mathbf{T}$ 의 특성다항식을 다음과 같이 정의한다.
 
     $$ f(t) = \det([\mathbf{T} ]_{\beta } - tI_n) $$
 
-!!! tldr "문제 5.1-13"
+!!! def "문제 5.1-13"
 
     닮은 행렬은 같은 특성다항식을 가진다.
 
@@ -160,13 +156,13 @@
 
     $$ [\mathbf{T} ]_{\beta } = \begin{pmatrix} 1&1&0\\ 0&2&2\\ 0&0&3\\ \end{pmatrix} $$
 
-    선형연산자 $\mathbf{T}$ 의 특성다항식의 정의와 [문제 4.2-23](../Determinants/#aad94de43) 에 의하여 다음이 성립한다.
+    선형연산자 $\mathbf{T}$ 의 특성다항식의 정의와 [문제 4.2-23](../Determinants/#f334dfff7) 에 의하여 다음이 성립한다.
 
     $$ \begin{equation}\begin{split} \det([\mathbf{T} ]_{\beta } - tI_3) &= \det \begin{pmatrix} 1-t&1&0\\ 0&2-t&2\\ 0&0&3-t\\ \end{pmatrix} \\ &= (1-t)(2-t)(3-t)\\ &= -(t-1)(2-t)(3-t)\\ \end{split}\end{equation} \tag*{} $$
 
     정리 5.2 에 의하여 선형연산자 $\mathbf{T}$ 또는 행렬 $[\mathbf{T} ]_{\beta }$ 의 고윳값은 $1,2,3$ 뿐이다.
 
-!!! tldr "정리 5.3"
+!!! def "정리 5.3"
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 다음이 성립한다. 
 
@@ -188,7 +184,9 @@
 
     $\det(\tilde{B}_{1j})$ 는 $(n-1) \times (n-1)$ 행렬의 특성다항식이다. $n - 1$ 에 대하여 정리가 성립하므로 $\det(\tilde{B}_{1j})$ 는 $n-1$ 차 다항식이고, 최고차항의 계수가 $(-1) ^{n-1}$ 이다. $\displaystyle \sum_{j=1}^{n}(-1) ^{1+j}A _{1j}$ 은 스칼라이므로 $-t \cdot \det(\tilde{B}_{11})$ 에 의하여 $\det(B)$ 는 최고차항의 계수가 $(-1) ^{n}$ 인 $n$ 차 다항식이 된다. 또한 정리 5.2 에 의하여 $n$차 다항식이 최대 $n$ 개의 서로 다른 근을 가지기 때문에 $A$ 는 최대 $n$ 개의 서로 다른 고윳값을 가진다. ■ 
 
-!!! tldr "정리 5.4"
+## Finding eigenvector
+
+!!! def "정리 5.4"
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 와 고윳값 $\lambda$ 에 대하여 벡터 $v \in \mathbf{F} ^{n}$ 가 $\lambda$ 에 대응하는 $A$ 의 고유벡터인 것과 $v \neq 0 \land (A-\lambda I)v = 0$ 인 것은 동치이다.
 
@@ -218,7 +216,7 @@
 
     집합 $\bigg \{\begin{pmatrix} 1\\ 2\\ \end{pmatrix}, \begin{pmatrix} 1\\ -2\\ \end{pmatrix}\bigg \}$ 은 일차독립이고 기수가 $2$ 이므로 [정리 1.10 따름정리 2](../VectorSpace/#cd7879a47) 에 의하여 기저이다. 이 기저는 $A$ 의 고유벡터로 이루어진 기저이므로 $A$ 와 $\mathbf{L}_{A}$ 는 대각화가능하다.
 
-!!! tldr ""
+!!! def ""
 
     차원이 각각 $n$ 이고 순서기저가 $\beta$ 인 벡터공간 $\mathbf{V}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{V}$ 와 행렬 $A = [\mathbf{T} ]_{\beta}$ 에 대하여 다음이 성립한다. 즉, $\mathbf{L}_{A} \circ \phi _{\beta } = \phi _{\beta  } \circ \mathbf{T}$ 이다.
 
@@ -270,7 +268,7 @@
 
 ## Geometric Interpretation of Eigenvector of Linear Operator
 
-!!! tldr ""
+!!! def ""
 
     $\R$-벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 고유벡터 $v$, 대응하는 고윳값 $\lambda$ 와 $v$ 에 의해 생성된 $\mathbf{V}$ 의 1차원 부분공간 $\mathbf{W} = \text{span} (\{v\})$ 은 $0$ 과 $v$ 를 지나는 직선이다. 이때 다음이 성립한다. 
 
@@ -296,7 +294,7 @@
 
 # Diagonalizability
 
-!!! tldr "정리 5.5"
+!!! def "정리 5.5"
 
     벡터공간의 선형연산자 $\mathbf{T}$ 와 $\mathbf{T}$ 의 서로 다른 고윳값 $\lambda_1, \lambda_2, \dots, \lambda_k$ 에 대하여 $\lambda_i$ 에 대응하는 $\mathbf{T}$ 의 고유벡터로 이루어진 유한집합을 $S_i$ 라고 하자. 각 $S_i$ 가 일차독립이면 $\displaystyle \bigcup_{i=1}^{k}S_i$ 도 일차독립이다.
 
@@ -321,7 +319,7 @@
 
     그러므로 $(1)$ 은 $\sum_{j=1}^{n_k}a _{kj}v _{kj} = 0$ 이 된다. 가정에 의해 $S_k$ 는 일차독립이므로 $a _{kj} = 0$ 이다. 그러므로 모든 증명이 끝났다. ■ 
 
-!!! tldr "정리 5.5 따름정리"
+!!! def "정리 5.5 따름정리"
 
     $n$차원 벡터공간의 선형연산자 $\mathbf{T}$ 가 서로 다른 $n$개의 고윳값을 가지면 $\mathbf{T}$ 는 대각화가능하다.
 
@@ -343,7 +341,7 @@
 
 ## split over
 
-!!! tldr "체 $\mathbf{F}$ 위에서 완전히 인수분해됨(split over $\mathbf{F}$) 의 정의"
+!!! def "체 $\mathbf{F}$ 위에서 완전히 인수분해됨(split over $\mathbf{F}$) 의 정의"
 
     다항식 $f(t) \in \mathbf{P}_{\mathbf{F} }$ 가 스칼라 $c, a_1, a_2, \dots, a_n \in \mathbf{F}$ 에 대하여 다음을 만족하면 체 $\mathbf{F}$ 위에서 완전히 인수분해된다고 한다.
 
@@ -355,7 +353,7 @@
 
     $g(t) = t ^{2} + 1$ 는 $\R$ 위에서 완전히 인수분해되지 않는다. 그러나 $g(t) = (t + i)(t - i)$ 이므로 $g(t)$ 는 $\mathbb{C}$ 위에서 완전히 인수분해된다.
 
-!!! tldr "정리 5.6"
+!!! def "정리 5.6"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 대각화가능한 선형연산자의 특성다항식은 $\mathbf{F}$ 위에서 완전히 인수분해된다.
 
@@ -375,9 +373,73 @@
      
 - 한편 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되어도 $\mathbf{T}$ 가 대각화 불가능일 수도 있다.
 
+!!! def "문제 5.2-9"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $[\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 순서기저 $\beta$ 가 존재하면 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다.
+
+    상삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 의 특성다항식은 완전히 인수분해된다.
+
+- 증명
+
+    $\dim (\mathbf{V}) = n$ 을 가정하자.
+
+    $\mathbf{T}$ 의 특성다항식 $f(t) = \det([\mathbf{T}]_{\beta } - tI_n)$ 의 $A = [\mathbf{T}]_{\beta }-tI_n$ 은 상삼각행렬이다. [문제 4.2-23](../Determinants/#f334dfff7) 에 의하여 $\det(A) = \prod_{i=1}^{n}A _{ii}$ 이다. 따라서 $\mathbf{T}$ 의 특성방정식은 완전히 인수분해된다. ▲ 
+
+    상삼각행렬의 특성다항식이 완전히 인수분해된다는 것도 같은 논리로 증명 가능하다. ■ 
+
+!!! def "문제 5.2-12"
+
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 의 특성다항식이 완전히 인수분해되면 $A$ 는 상삼각행렬과 닮은 행렬이다.
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되면 $[\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 순서기저 $\beta$ 가 존재한다. 
+
+- 증명
+
+    1:
+
+    $n = 1$ 이면 $A$ 의 특성다항식은 $\det(A _{11} - tI_1) = A _{11} - tI_1$ 으로 완전히 인수분해된다. 또한 $A$ 는 상삼각행렬이다. ▲ 
+
+    $n - 1$ 에서 정리가 성립함을 가정하고 $n$ 에 대하여 증명하자. 가정에 의하여 $A$ 의 특성다항식은 완전히 인수분해된다. 이로써 최소 하나 이상의 고윳값 $\lambda$ 가 존재하고 이 고윳값에 대응하는 최소 하나 이상의 고유벡터 $v_1$ 가 존재한다.
+
+    $\{v_1\}$ 을 확장하여 $\mathbf{F}^{n}$ 의 기저 $\gamma = \{v_1, v_2, \dots, v_n\}$ 를 만들 수 있다. $j$열이 $v_j$ 인 $n \times n$ 행렬을 $P$ 로 두면 $[\mathbf{L}_{A}]_{\gamma } = P ^{-1}AP$ 이다. 
+
+    선형변환의 행렬표현에 의하여 다음이 성립한다.
+
+    $$ \mathbf{L}_{A}(v_1) = Av_1 = \lambda v_1 $$
+
+    $$ \mathbf{L}_{A}(v _{2}) = Av _{2} = \sum_{i=1}^{n} a _{i2}v_i $$
+
+    $$ \vdots $$
+
+    $$ \mathbf{L}_{A}(v _{n}) = Av _{n} = \sum_{i=1}^{n} a _{i,n}v_i $$
+
+    $$ \implies  [\mathbf{L}_{A}]_{\gamma } = \begin{pmatrix} \lambda & u\\ O & B \\ \end{pmatrix} \implies  [\mathbf{L}_{A}]_{\gamma } - tI = \begin{pmatrix} \lambda -t & u\\ O & B - tI \\ \end{pmatrix} $$
+
+    문제 4.3-21 에 의하여 다음이 성립한다.
+
+    $$ \det([\mathbf{L}_{A}]_{\gamma } - tI) = (\lambda - t) \det(B - tI) $$
+
+    $A$ 의 특성다항식이 완전히 인수분해되는데 $[\mathbf{L}_{A}]_{\gamma }$ 는 $A$ 와 닮은 행렬이므로 문제 5.1-13 에 의하여 $[\mathbf{L}_{A}]_{\gamma }$ 의 특성다항식은 완전히 인수분해된다. 따라서 $\det(B-tI)$ 도 완전히 인수분해된다. $B$ 는 $n -1 \times n-1$ 행렬이므로 귀납법의 가정에 의하여 가역행렬 $Q$ 에 대하여 $U = Q ^{-1}BQ$ 인 상삼각행렬이 존재한다.
+
+    $R = \begin{pmatrix} 1&O'\\ O&Q\\ \end{pmatrix}, R ^{-1} = \begin{pmatrix} 1&O'\\ O&Q ^{-1}\\ \end{pmatrix}$ 로 두고 $M = PR$ 로 두면 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} M ^{-1}AM &= R ^{-1}(P ^{-1}AP)R \\ &= \begin{pmatrix} 1&O'\\ O&Q ^{-1}\\ \end{pmatrix}\begin{pmatrix} \lambda & u\\ O&B\\ \end{pmatrix} \begin{pmatrix} 1&O'\\ O&Q\\ \end{pmatrix}\\ &= \begin{pmatrix} \lambda &uQ\\ O&U \\ \end{pmatrix}= U' \end{split}\end{equation} \tag*{} $$
+
+    즉, $A$ 가 상삼각행렬 $U'$ 와 닮음이니 모든 증명이 끝났다. ■ 
+
+    2:
+
+    $\mathbf{V}$ 의 순서기저 $\gamma = \{x_1, x_2, \dots, x_n\}$ 에 대하여 $A = [\mathbf{T}]_{\gamma }$ 로 두자. 정리의 가정에 의하여 $\mathbf{T}$ 의 특성다항식은 완전히 인수분해 되고 특성다항식의 정의에 의하여 $A$ 의 특성다항식도 완전히 인수분해된다. 따라서 이미 증명한 1) 에 의하여 $A$ 는 상삼각행렬 $U$ 와 닮은 행렬이다. 가역행렬 $Q$ 가 $U = Q ^{-1}AQ$ 를 만족한다고 하면 $j \in \{1,\dots,n\}$ 에 대하여 다음이 성립한다. 
+
+    $$ y_j = \sum_{i=1}^{n}Q _{ij}x_i $$
+
+    문제 2.5-13 에 의하여 $\beta = \{y_1, y_2, \dots, y_n\}$ 는 $\mathbf{V}$ 의 기저이고 $Q$ 는 $\beta$ 좌표를 $\gamma$ 좌표로 변환하는 좌표변환행렬이다. [정리 2.23](../LinearTransformation/#acf61b9cb) 에 의하여 다음이 성립한다. 
+
+    $$ \therefore [\mathbf{T}]_{\beta } = Q ^{-1}[\mathbf{T}]_{\gamma }Q = Q ^{-1}AQ = U \tag*{■} $$
+
 ## Algebraic Multiplicity
 
-!!! tldr "대수적 중복도(algebraic multiplicity)"
+!!! def "대수적 중복도(algebraic multiplicity)"
 
     특성다항식이 $f(t)$ 인 선형연산자(또는 행렬)의 고윳값 $\lambda$ 에 대하여 $(t - \lambda )^{k}$ 가 $f(t)$ 의 인수가 되도록 하는 가장 큰 자연수 $k$ 를 $\lambda$ 의 대수적 중복도라고 한다.
 
@@ -389,7 +451,7 @@
 
 ## Eigenspace
 
-!!! tldr "선형연산자의 고유공간(eigenspace)"
+!!! def "선형연산자의 고유공간(eigenspace)"
 
     벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 고윳값 $\lambda$ 에 대하여 다음 집합 $\mathbf{E}_{\lambda}$ 를 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유공간이라 한다.
 
@@ -403,13 +465,15 @@
 
 - 이때 정리 5.4 와 달리 $v \neq 0$ 라는 제한이 없으므로 [정리 2.1](../LinearTransformation/#eb957cbf0) 에 의하여 $\mathbf{E}_{\lambda}$ 는 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터와 영벡터로 이루어진 $\mathbf{V}$ 의 부분공간이다. 즉, $\mathbf{E}_{\lambda}$ 의 차원은 고윳값 $\lambda$ 에 대응하는 일차독립인 $\mathbf{T}$ 의 고유벡터의 최대 개수이다.
 
-!!! tldr "행렬의 고유공간(eigenspace)"
+!!! def "행렬의 고유공간(eigenspace)"
 
-    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{L}_{A}$ 와 고윳값 $\lambda$ 에 대하여 다음 집합 $\mathbf{E}_{\lambda}$ 를 고윳값 $\lambda$ 에 대응하는 $A$ 의 고유공간이라 한다.
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 의 고윳값 $\lambda$ 벡터공간 $\mathbf{F}^{n}$ 의 선형연산자 $\mathbf{L}_{A}$ 에 대하여 다음 집합 $\mathbf{E}_{\lambda}$ 를 고윳값 $\lambda$ 에 대응하는 $A$ 의 고유공간이라 한다.
 
-    $$ \mathbf{E}_{\lambda} = \{x \in \mathbf{V} : \mathbf{L}_{A} (x) = \lambda x\} = \mathbf{N} (\mathbf{L}_{A}-\lambda \mathbf{I} _{\mathbf{V} }) $$
+    $$ \mathbf{E}_{\lambda} = \{x \in \mathbf{F}^{n} : (A - \lambda I_n)x = 0 \} = \mathbf{N} (\mathbf{L}_{A}-\lambda \mathbf{I} _{\mathbf{F}^{n}}) $$
 
-!!! tldr "정리 5.7"
+- 고유공간은 고윳값에 대응하는 모든 벡터의 집합인데 [정리 5.4](#2514593f4) 는 고윳값에 대응하는 모든 고유벡터를 찾는 방법을 알려준다. 따라서 고유공간은 정리 5.4 의 방법을 기반으로 정의된다.
+
+!!! def "정리 5.7"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 중복도가 $m$ 인 $\mathbf{T}$ 의 고윳값 $\lambda$ 에 대하여 $1 \leq \dim (\mathbf{E}_{\lambda} )\leq m$ 이다.
 
@@ -441,7 +505,7 @@
 
     따라서 $\lambda$ 의 중복도 $m$ 에 대하여 $p \leq m$ 이다. 그런데 $\dim (\mathbf{E}_{\lambda} ) = p$ 이므로 $\dim (\mathbf{E}_{\lambda} ) \leq m$ 이다. ■ 
 
-!!! tldr "정리 5.8"
+!!! def "정리 5.8"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되고 $\lambda _1, \dots, \lambda _k$ 가 서로 다른 $\mathbf{T}$ 의 고윳값일 때 다음이 성립한다. 
 
@@ -509,7 +573,7 @@
 
 ## Diagonalizable Determination
 
-!!! tldr "대각화 가능 판정법(Diagonalizable Determination)"
+!!! def "대각화 가능 판정법(Diagonalizable Determination)"
 
     $n$차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 대각화가능한 것과 다음 두 조건이 성립하는 것은 동치이다.
 
@@ -569,7 +633,7 @@
 
 # Direct sum
 
-!!! tldr "집합의 덧셈, 합(sum) "
+!!! def "집합의 덧셈, 합(sum) "
 
     벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 에 대하여 다음 집합을 부분공간의 합이라 한다.
 
@@ -583,7 +647,7 @@
 
     $(a, 0, 0) \in \mathbf{W} _1, (0, b, c) \in \mathbf{W} _2$ 이므로 $\R ^{3} = \mathbf{W} _1 + \mathbf{W} _2$ 이다.
 
-!!! tldr "직합(direct sum)"
+!!! def "직합(direct sum)"
 
     벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 와 $i, j \in \{1,\dots,k\}$ 에 대하여 다음을 만족하는 $\mathbf{W}$ 를 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 의 직합이라 한다.
 
@@ -591,7 +655,7 @@
     
     2. $\displaystyle \mathbf{W} _j \cap \sum_{i \neq j}^{}\mathbf{W} _i = \{0\}$ 
 
-    또한 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 의 직합 $\mathbf{W}$ 를 다음과 같이 표기한다.
+    $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 의 직합 $\mathbf{W}$ 를 다음과 같이 표기한다.
 
     $$ \boxed{\mathbf{W} := \mathbf{W} _1 \oplus \mathbf{W} _2 \oplus \dots \oplus \mathbf{W} _k = \bigoplus_{i=1}^{k}\mathbf{W} _k} $$ 
 
@@ -613,45 +677,7 @@
 
 ## Properties of direct sum
 
-!!! tldr "문제 1.4-14"
-
-    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 부분집합 $S_1, S_2$ 에 대하여 $\text{span} (S_1 \cup S_2) = \text{span} (S_1) + \text{span} (S_2)$ 이다.
-
-- 증명
-
-    Let:
-
-    $$ S_1 = \{x_1, x_2, \dots, x_s\}, S_2 = \{x _{s+1}, x _{s+2}, \dots, x _{t}\} $$
-
-    By definition of span:
-
-    $$ \text{span} (S_1) = \bigg \{\sum_{i=1}^{s}b_ix_i : x_i \in S_1, b_i \in \mathbf{F} \bigg \} $$
-
-    $$ \text{span} (S_2) = \bigg \{\sum_{i=s+1}^{s + t}b_ix_i : x_i \in S_2, b_i \in \mathbf{F} \bigg \} $$
-
-    By definition of sum:
-
-    $$ \begin{equation}\begin{split}
-    \text{span} (S_1) + \text{span} (S_2) &= \bigg \{v + w : v \in \text{span} (S_1) , w \in \text{span} (S_2) \bigg \}\\
-    &= \bigg \{\sum_{i=1}^{t}b_ix_i : x_i \in S_1 \cup S_2, b_i \in \mathbf{F} \bigg \}\\
-    \end{split}\end{equation} \tag{1}
-    $$
-
-    $$ \bigg (\because v = \sum_{i=1}^{s}b_ix_i , w = \sum_{i=s+1}^{s + t}b_ix_i \implies v + w = \sum_{i=1}^{t}b_ix_i \bigg ) $$
-
-    By definition of union:
-
-    $$ S_1 \cup S_2 = \{x_1, x_2, \dots, x _{t}\} $$
-
-    By definition of span:
-
-    $$ \text{span} (S_1 \cup S_2) = \bigg \{\sum_{i=1}^{t}a_ix_i : x_i \in S_1 \cup S_2, a_i \in \mathbf{F} \bigg \} \tag{2} $$
-
-    By $(1), (2)$:
-
-    $$ \therefore \text{span} (S_1) + \text{span} (S_2) = \text{span} (S_1 \cup S_2) \tag*{■} $$
-
-!!! tldr "정리 5.9"
+!!! def "정리 5.9"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k$ 와 $i \in \{1, \dots, k\}$ 에 대하여 다음은 동치이다.
 
@@ -711,7 +737,7 @@
 
     어떤 $j$ 와 영이 아닌 벡터 $v \in \mathbf{V}$ 에 대하여 $v \in \mathbf{W} _j \cap \displaystyle \sum_{i \neq j}^{}\mathbf{W} _i$ 를 가정하면 $v \in \mathbf{W} _j = \text{span} (\gamma _j) \land v \in \displaystyle \sum_{i \neq j}^{}\mathbf{W} _i = \text{span} \bigg (\bigcup_{i \neq j}^{}\gamma i\bigg )$ 이다. 따라서 $v$ 는 $\gamma _j$ 와 $\displaystyle \bigcup_{i \neq j}^{}\gamma _i$ 의 자명하지 않은 일차결합이다. 그러므로 $v$ 를 $\displaystyle \bigcup_{i=1}^{k}\gamma _i$ 의 일차결합으로 표현하는 방식이 유일하지 않다. 이는 [정리 1.8](../VectorSpace/#8a514fc5c) 에 의하여 모순이다. 따라서 $\mathbf{W} _j \cap \displaystyle \sum_{i \neq j}^{}\mathbf{W} _i = \{0\}$ 이다. ■ 
 
-!!! tldr "정리 5.10"
+!!! def "정리 5.10"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 대각화가능인 것과 $\mathbf{V}$ 가 $\mathbf{T}$ 의 고유공간의 직합인 것은 동치이다.
 
@@ -735,17 +761,31 @@
 
     벡터공간 $\R ^{4}$ 의 선형연산자 $\mathbf{T} (a, b, c, d) = (a, b, 2c, 3d)$ 에 대하여 $\mathbf{T}$ 가 대각화가능이고 고윳값 $1, 2, 3$ 을 갖는다는 것을 알 수 있다. 이때 각 고윳값에 대응하는 고유공간들이 각각 $\mathbf{W} _1, \mathbf{W} _2, \mathbf{W} _3$ 와 같음을 알 수 있다. 이때 정리를 사용하면 $\R ^{4} = \mathbf{W} _1 \oplus \mathbf{W} _2 \oplus \mathbf{W} _3$ 임을 알 수 있다.
 
-# Invariant subspace
+# Invariant Subspace
 
-!!! tldr "$\mathbf{T}$-불변 부분공간($\mathbf{T}$-invariant subspace)"
+!!! def "$\mathbf{T}$-불변 부분공간($\mathbf{T}$-invariant subspace)"
 
-    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}$ 의 부분공간 $\mathbf{W}$ 에 대하여 $\mathbf{T} (\mathbf{W} ) \subseteq \mathbf{W}$ 인 $\mathbf{W}$ 를 $\mathbf{V}$ 의 $\mathbf{T}$-불변 부분공간이라 한다.
+    벡터공간 $\mathbf{V}$ 와 부분공간 $\mathbf{W}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 $\mathbf{T} (\mathbf{W} ) \subseteq \mathbf{W}$ 인 $\mathbf{W}$ 를 $\mathbf{V}$ 의 $\mathbf{T}$-불변 부분공간이라 한다.
 
 - 즉, $\forall v \in \mathbf{W} : \mathbf{T} (v) \in \mathbf{W}$ 이면 $\mathbf{W}$ 가 $\mathbf{V}$ 의 $\mathbf{T}$-불변 부분공간이라는 것이다.
 
     쉽게 말해, 부분공간의 원소가 $\mathbf{T}$ 를 통과해서 나왔는데도 부분공간에 속했으면 $\mathbf{T}$-불변이다.
 
-- 예시 
+!!! def ""
+
+    벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음 부분공간은 $\mathbf{T}$-불변이다.
+
+    1. $\{0\}$
+
+    2. $\mathbf{V}$ 
+
+    3. $\mathbf{R}(\mathbf{T})$
+
+    4. $\mathbf{N}(\mathbf{T})$
+
+    5. $\mathbf{T}$ 의 고윳값 $\lambda$ 에 대한 $\mathbf{E}_{\lambda}$
+
+- 증명
 
     벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음의 부분공간들이 $\mathbf{T}$-불변임을 확인해보자.
 
@@ -769,9 +809,10 @@
 
     $x \in \mathbf{E}_{\lambda}$ 에 대하여 $\mathbf{T} (x) = \lambda x$ 이다. $\mathbf{T} (\lambda x) = \lambda \mathbf{T} (x) = \lambda \cdot \lambda x$ 이다. 벡터공간은 스칼라곱에 닫혀있으므로 $\lambda x \in \mathbf{V}$ 이다. 따라서 $\lambda x \in \mathbf{V} \implies \lambda x \in \mathbf{E}_{\lambda}$ 이다. 따라서 $\mathbf{T} (\mathbf{E}_{\lambda} ) \subset \mathbf{E}_{\lambda}$ 이다.
 
+
 ## $\mathbf{T}$-cyclic subspace
 
-!!! tldr "$\mathbf{T}$-순환 부분공간($\mathbf{T}$-cyclic subspace)"
+!!! def "$\mathbf{T}$-순환 부분공간($\mathbf{T}$-cyclic subspace)"
 
     벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 영이 아닌 벡터 $x \in \mathbf{V}$ 에 대하여 다음과 같은 부분공간 $\mathbf{W}$ 를 $x$ 에 의해 생성된 $\mathbf{V}$ 의 $\mathbf{T}$-순환 부분공간이라 한다.
 
@@ -793,7 +834,7 @@
 
     $$ \text{span} (\{e_1, \mathbf{T}(e_1), \mathbf{T}^{2}(e_1), \dots\}) = \text{span} (\{e_1, e_2\}) = \{(s, t, 0) : s, t \in \R\} $$
 
-!!! tldr "문제 5.4-11"
+!!! def "문제 5.4-11"
 
     벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 영이 아닌 벡터 $v \in \mathbf{V}$, $v$ 에 의해 생성된 $\mathbf{V}$ 의 $\mathbf{T}$-순환 부분공간 $\mathbf{W}$ 에 대하여 다음이 성립한다.
 
@@ -827,17 +868,19 @@
 
     그러므로 $\beta \subset  \mathbf{Z}$ 이다. $\mathbf{Z}$ 가 $\mathbf{W}$ 의 기저를 포함하므로 $\mathbf{W}$ 의 모든 벡터는 $\mathbf{Z}$ 에 포함된다. 즉, $\mathbf{W} \subset \mathbf{Z}$ 이다. ■ 
 
-!!! tldr "제한(restriction)"
+## restriction
+
+!!! def "제한(restriction)"
 
     벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}:\mathbf{V} \to \mathbf{V}$ 와 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 에 대하여 $\mathbf{T}$ 를 $\mathbf{W}$ 로 제한한 $\mathbf{T}_{\mathbf{W}}$ 는 $\mathbf{T}$ 의 정의역과 공역을 $\mathbf{W}$ 로 제한한 함수 $\mathbf{T}_{\mathbf{W}}:\mathbf{W}\to \mathbf{W}$ 이다.
 
-- 함수의 제한은 정의역만 축소시키는 것으로 정의되지만, 이 경우 정의역이 $\mathbf{T}$-불변 부분공간으로 축소되므로 공역도 어차피 $\mathbf{T}$-불변 부분공간으로 축소된다.
+- [함수의 제한](../../Set/Set/#d5708058b)은 정의역만 축소시키는 것으로 정의되지만, 이 경우 정의역이 $\mathbf{T}$-불변 부분공간으로 축소되므로 공역도 어차피 $\mathbf{T}$-불변 부분공간으로 축소된다.
 
-- $\mathbf{T}_{\mathbf{W}}$ 는 선형변환이다.(문제 5.4-7)
+- $\mathbf{T}_{\mathbf{W}}$ 는 선형변환이다.(문제 5.4-7) 즉, $\mathbf{T}_{\mathbf{W}}$ 는 $\mathbf{W}$ 의 선형연산자이다.
 
 - $\mathbf{T}_{\mathbf{W}}$ 는 $\mathbf{T}$ 의 성질을 그대로 상속한다.
 
-!!! tldr "문제 5.4-12"
+!!! def "문제 5.4-12"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 에 대한 $\mathbf{T}_{\mathbf{W}}$ 의 순서기저 $\gamma = \{v_1, v_2, \dots, v_k\}$ 를 확장하여 $\mathbf{V}$ 의 순서기저 $\beta = \{v_1, v_2, \dots, v_k, v _{k+1}, \dots, v_n\}$ 을 만들고 $A = [\mathbf{T}]_{\beta }, B_1 = [\mathbf{T}_{\mathbf{W}}]_{\gamma }$ 로 두자.
 
@@ -857,7 +900,7 @@
 
     이로써 모든 증명이 끝났다. ■ 
 
-!!! tldr "정리 5.20"
+!!! def "정리 5.20"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 에 대한 $\mathbf{T}_{\mathbf{W}}$ 의 특성다항식은 $\mathbf{T}$ 의 특성다항식을 나눈다.
 
@@ -875,7 +918,7 @@
 
     따라서 $g(t)$ 는 $f(t)$ 를 나눈다. ■ 
 
-!!! tldr "문제 5.4-19"
+!!! def "문제 5.4-19"
 
     스칼라 $a_0, a_1, \dots, a _{k-1} \in \mathbf{F}$ 와 다음과 같이 정의된 행렬 $A \in \mathbf{M}_{k \times k}(\mathbf{F})$ 의 특성다항식은 $(-1) ^{k}(a_0+ a_1t+ \dots + a _{k-1}t^{k-1} + t ^{k})$ 이다.
 
@@ -897,7 +940,7 @@
 
     단순히 $b_i = a _{i+1}$ 로 선택하면 위와 같은 결론을 얻을 수 있다. 정리가 임의의 스칼라들에 대하여 성립하므로 이렇게 선택해도 괜찮다. ■ 
 
-!!! tldr "정리 5.21"
+!!! def "정리 5.21"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 영이 아닌 벡터 $v \in \mathbf{V}$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간 $\mathbf{W}$ 에 대하여 $k = \dim (\mathbf{W})$ 이면 다음이 성립한다. 
 
@@ -945,7 +988,7 @@
 
 ## Cayley-Hamilton theorem
 
-!!! tldr ""
+!!! def ""
 
     체 $\mathbf{F}$ 의 원소를 계수로 하는 다음과 같은 다항식 $f(x)$ 가 존재한다.
 
@@ -969,7 +1012,7 @@
 
     $$ f(A)=A ^{2}+2A-3I_2=\begin{pmatrix} 5&1\\ 1&2\\ \end{pmatrix}+2 \begin{pmatrix} 2&1\\ 1&-1\\ \end{pmatrix}-3 \begin{pmatrix} 1&0\\ 0&1\\ \end{pmatrix}= \begin{pmatrix} 6&3\\ 3&-3\\ \end{pmatrix} $$
 
-!!! tldr "정리 5.22 케일리-해밀턴 정리(Cayley-Hamilton theorem)"
+!!! def "정리 5.22 케일리-해밀턴 정리(Cayley-Hamilton theorem)"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{T}$ 의 특성다항식 $f(t)$ 에 대하여 $f(\mathbf{T}) = \mathbf{T}_0$ 이다.
 
@@ -1001,7 +1044,7 @@
 
     $\R ^{2}$ 의 선형연산자 $\mathbf{T}(a,b)=(a+2b, -2a+b)$ 와 $\mathbf{T}$ 의 특성다항식 $f(t) = \det([\mathbf{T}]_{\beta }-tI) = \det \begin{pmatrix} 1-t&2\\ -2&1-t\\ \end{pmatrix}=t ^{2}-2t+5$ 에 대하여 $f(\mathbf{T}) = \mathbf{T}^{2}-2 \mathbf{T}+5 \mathbf{I} = \mathbf{T}_0$ 이다.
 
-!!! tldr "정리 5.22 따름정리"
+!!! def "정리 5.22 따름정리"
 
     $n \times n$ 행렬 $A$ 와 그 특성다항식 $f(t)$ 에 대하여 $f(A) = O$ 이다.
 
@@ -1009,7 +1052,7 @@
 
 ## Invariant subspace and Direct sum 
 
-!!! tldr "정리 5.23"
+!!! def "정리 5.23"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $i \in \{1,\dots,k\}$ 에 대하여 $\mathbf{W}_i$ 가 $\mathbf{T}$-불변이고 $\mathbf{V} = \displaystyle \bigoplus_{i=1}^{k}\mathbf{W}_i$ 가 성립함을 가정하자.
 
@@ -1058,7 +1101,7 @@
 
     $$ f(t) = \det(A-tI) =\det(B_1-tI) \det(B_2-tI) =f_1(t) \cdot f_2(t) $$
 
-!!! tldr "두 행렬의 직합(direct sum of two matrices)"
+!!! def "두 행렬의 직합(direct sum of two matrices)"
 
     $B_1 \in \mathbf{M}_{m \times m}(\mathbf{F}), B_2 \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 $B_1, B_2$ 의 직합은 다음과 같은 $(m + n) \times (m + n)$ 행렬 $A$ 로 정의하고 $B_1 \oplus B_2$ 로 표기한다.
 
@@ -1066,7 +1109,7 @@
 
 - **즉, 적절한 영행렬 $O$ 에 대하여 $A = B_1 \oplus B_2 = \begin{pmatrix} B_1&O\\ O&B_2\\ \end{pmatrix}$ 라고 정의하는 것이다.**
 
-!!! tldr "행렬의 직합(direct sum of matrices)"
+!!! def "행렬의 직합(direct sum of matrices)"
 
     정사각행렬 $B_1, B_2, \dots, B_k$ 에 대하여 $B_1, B_2, \dots, B_k$ 의 직합은 재귀적으로 $\displaystyle \bigoplus_{i=1}^{k}B_i = \bigg (\bigoplus_{i=1}^{k-1}B_i\bigg ) \oplus B_k$ 라 정의한다.
     
@@ -1080,7 +1123,7 @@
 
     $$ \bigoplus_{i=1}^{3}B_i = \begin{pmatrix} 1&2&0&0&0&0\\ 1&1&0&0&0&0\\ 0&0&3&0&0&0\\ 0&0&0&1&2&1\\ 0&0&0&1&2&3\\ 0&0&0&1&1&1\\ \end{pmatrix} $$
 
-!!! tldr "정리 5.24"
+!!! def "정리 5.24"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{V}= \displaystyle \bigoplus_{i=1}^{k}\mathbf{W}_i$ 인 $\mathbf{T}$-불변 부분공간 $\mathbf{W}_1, \mathbf{W}_2, \dots, \mathbf{W}_k$ 에 대하여 각 $i$ 에 대한 $\beta _i$ 는 $\mathbf{W}_i$ 의 순서기저이고 $\beta = \displaystyle \bigcup_{i=1}^{k}\beta _i$ 라고 하고 $A = [\mathbf{T}]_{\beta }, B_i = [\mathbf{T}_{\mathbf{W}_i}]_{\beta _{i}}$ 라고 하면 다음이 성립한다.
 
@@ -1134,3 +1177,9 @@
 
     $$ \therefore A = \bigg (\bigoplus_{i=1}^{k-1}B_i\bigg ) \oplus B_k = \bigoplus_{i=1}^{k}B_i \tag*{■} $$
 
+
+---
+
+ref:
+
+:    Stephen H. Friedberg, Linear Algebra, 4th Edition

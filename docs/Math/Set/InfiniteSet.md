@@ -1,14 +1,10 @@
-!!! info "ref"
-
-    [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)
-
 !!! note
 
     아래의 논의의 "순서관계" 란 부분순서관계를 뜻한다.
 
 # Axiom of Choice
 
-!!! tldr "선택 함수(choice function)"
+!!! def "선택 함수(choice function)"
 
     집합족 $\{S_i\} _{i \in I}$ 위의 선택함수 $f: I \to \bigcup_{i \in I}^{}S_i$ 는 다음과 같이 정의된 함수이다.
 
@@ -18,7 +14,7 @@
 
 - 아래의 선택공리에 의하여 공집합을 포함하지 않는 모든 집합족은 선택 함수를 갖는다.
 
-!!! tldr "선택공리(axiom of choice, AC)"
+!!! def "선택공리(axiom of choice, AC)"
 
     선택공리는 공집합이 아닌 집합들의 집합이 주어지면, 각 원소로부터 한 원소를 택할 수 있고, 이를 무한히 반복할 수 있다는 공리
 
@@ -42,7 +38,7 @@
     
 - 아래의 2) 에서 3) 을 도출하는 증명에서 $h(A) \in A$ 를 만족하는 함수 $h$ 를 집합 $X$ 의 선택함수라고 하고, 3) 을 선택공리라고 부른다.
 
-- 선택공리가 수학에서 사용될 때 대부분 순서와 관련된다. 아래에서 살펴볼 [초른 보조정리](#8e7118900)와 [하우스도르프 극대 원리](#4f540f90d)은 선택공리과 동치인 명제인데 수학의 여러 분야에서 널리 쓰인다.
+- 선택공리가 수학에서 사용될 때 대부분 순서와 관련된다. 아래에서 살펴볼 [초른 보조정리](#b78f346ef)와 [하우스도르프 극대 원리](#a85bbef49)은 선택공리과 동치인 명제인데 수학의 여러 분야에서 널리 쓰인다.
 
     선택공리를 사용하는 정리들은 수학의 각 분야에서 매우 중요한 역할을 하는 경우가 많다. 
 
@@ -108,7 +104,7 @@
 
     이다. 그러면 각 $A \in 2 ^{X} \setminus \{\varnothing \}$ 에 대하여 $h(A) \in A$ 이므로 $h$ 는 $X$ 의 선택함수이다. ■ 
 
-!!! tldr "사슬(chain)"
+!!! def "사슬(chain)"
 
     순서집합 $X$ 의 부분집합 $A$ 가 다음을 만족하면 $A$ 를 $X$ 의 사슬이라 한다.
 
@@ -124,13 +120,13 @@
 
     등은 $2 ^{X}$ 의 사슬이고, $X$ 는 사슬의 상계이다.
 
-!!! tldr "반사슬(antichain)"
+!!! def "반사슬(antichain)"
 
     순서집합 $X$ 의 부분집합 $A$ 의 서로 다른 두 원소를 비교할 순서관계가 없을 때 $A$ 를 $X$ 의 반사슬이라 한다.
 
 - 즉 반사슬 속의 서로 다른 두 원소는 비교 불가능하다.
 
-!!! tldr "극대원소(maximal element)"
+!!! def "극대원소(maximal element)"
 
     순서집합 $X$ 의 원소 $m \in X$ 이 다음을 만족하면 $m$ 을 $X$ 의 극대원소라 한다.
 
@@ -142,7 +138,7 @@
 
     한편 $\N$ 이나 $\mathbb{Z}$ 는 그 자체가 사슬이지만, 극대원소가 존재하지 않는다.
 
-!!! tldr "극소원소(minimal element)"
+!!! def "극소원소(minimal element)"
 
     순서집합 $X$ 의 원소 $n \in X$ 이 다음을 만족하면 $n$ 을 $X$ 의 극대원소라 한다.
 
@@ -150,9 +146,7 @@
 
 ## Zorn Lemma
 
-replace 8e7118900
-
-!!! tldr "정리 3.1.1 초른의 보조정리(Zorn lemma)"
+!!! def "정리 3.1.1 초른의 보조정리(Zorn lemma)"
 
     공집합이 아닌 순서집합 $X$ 의 모든 사슬이 상계를 가지면 $X$ 는 극대원소를 가진다.
 
@@ -160,9 +154,7 @@ replace 8e7118900
 
 ## Hausdorff maximal principle
 
-replace 4f540f90d
-
-!!! tldr "정리 3.1.2 하우스도르프 극대 원리(Hausdorff maximal principle)"
+!!! def "정리 3.1.2 하우스도르프 극대 원리(Hausdorff maximal principle)"
 
     임의의 순서집합은 극대 사슬을 가진다.
 
@@ -172,7 +164,7 @@ replace 4f540f90d
 
     포함관계에 의한 순서를 부여받은 순서집합 $X$ 의 모든 사슬을 모은 집합 $\mathcal{C}(X)$ 는 포함관계에 의하여 다시 순서집합이 된다. 이 정리는 순서집합 $\mathcal{C}(X)$ 가 극대원소를 가진다는 것을 말한다. 
 
-!!! tldr ""
+!!! def ""
 
     포함관계에 의하여 순서가 부여된 집합 $X$ 의 사슬의 집합 $\mathcal{C}(X)$ 의 사슬 $\mathcal{C}$ 에 대하여 모든 사슬 $\mathcal{C}$ 의 원소의 합집합 $\bigcup_{}^{}\mathcal{C} (\subset X)$ 은 $X$ 의 사슬이다. 즉, 다음이 성립한다.
 
@@ -186,27 +178,27 @@ replace 4f540f90d
 
     이다. $\mathcal{C}$ 은 사슬이므로 $C_1 \subset C_2 \lor C_2 \subset C_1$ 이다. $C_1 \subset C_2$ 일 경우 $a,b \in C_2$ 인데 $C_2$ 는 $X$ 의 사슬이므로 $a \leq b \lor b \leq a$ 이다. 마찬가지로 $C_2 \subset C_1$ 인 경우에도 $a \leq b \lor b \leq a$ 이다. 이로써 $\bigcup_{}^{}\mathcal{C}$ 의 임의의 두 원소가 서로 비교 가능함을 알 수 있고, 이에따라 $\bigcup_{}^{}\mathcal{C}$ 는 $X$ 의 사슬임이 증명되었다. 즉 $\bigcup_{}^{}\mathcal{C} \in \mathcal{C}(X)$ 이다. ▲
 
-!!! tldr ""
+!!! def ""
 
     초른의 보조정리는 하우스도르프 극대 원리와 동치이다.
 
 - 초른의 보조정리에서 하우스도르프 극대 원리를 도출하는 증명 
 
-    우선 [초른 보조정리](#8e7118900)를 가정하자. 그리고 포함관계에 의한 순서를 부여받은 순서집합 $X$ 의 모든 사슬을 모은 순서집합 $\mathcal{C}(X)$ 에 [초른 보조정리](#8e7118900)를 적용해보고, [하우스도르프 극대 원리](#4f540f90d)가 도출되는지 보자. 
+    우선 [초른 보조정리](#b78f346ef)를 가정하자. 그리고 포함관계에 의한 순서를 부여받은 순서집합 $X$ 의 모든 사슬을 모은 순서집합 $\mathcal{C}(X)$ 에 [초른 보조정리](#b78f346ef)를 적용해보고, [하우스도르프 극대 원리](#a85bbef49)가 도출되는지 보자. 
 
     [정리 "포함관계에 의하여 순서가 부여된 집합 $X$ 의 사슬의 집합 $\mathcal{C}(X)$ 의 사슬 $\mathcal{C}$ 에 대하여 모든 사슬 $\mathcal{C}$ 의 원소의 합집합 $\bigcup_{}^{}\mathcal{C} (\subset X)$ 은 $X$ 의 사슬이다."](#460d5f66d) 에서
 
     $$ C = \bigcup_{}^{}\mathcal{C} $$
 
-    라고 두면 $C$ 는 $\mathcal{C}$ 들의 합집합이므로 $\mathcal{C} \subset \mathcal{C}(X)$ 의 상계임이 자명하다. 그러므로 순서집합 $\mathcal{C}(X)$ 는 [초른 보조정리](#8e7118900)의 가정을 만족하고, $\mathcal{C}(X)$ 는 [초른 보조정리](#8e7118900)의 귀결(극대원소를 가진다) 또한 만족한다. 이처럼 $\mathcal{C}(X)$ 이 [초른 보조정리](#8e7118900)를 만족하는데, 위의 증명이 보인 것은 $\mathcal{C}(X)$ 이 극대 사슬 $C$ 를 가진다는 것이다. 따라서 [초른 보조정리](#8e7118900)를 가정하면 [하우스도르프 극대 원리](#4f540f90d)가 성립한다. ■ 
+    라고 두면 $C$ 는 $\mathcal{C}$ 들의 합집합이므로 $\mathcal{C} \subset \mathcal{C}(X)$ 의 상계임이 자명하다. 그러므로 순서집합 $\mathcal{C}(X)$ 는 [초른 보조정리](#b78f346ef)의 가정을 만족하고, $\mathcal{C}(X)$ 는 [초른 보조정리](#b78f346ef)의 귀결(극대원소를 가진다) 또한 만족한다. 이처럼 $\mathcal{C}(X)$ 이 [초른 보조정리](#b78f346ef)를 만족하는데, 위의 증명이 보인 것은 $\mathcal{C}(X)$ 이 극대 사슬 $C$ 를 가진다는 것이다. 따라서 [초른 보조정리](#b78f346ef)를 가정하면 [하우스도르프 극대 원리](#a85bbef49)가 성립한다. ■ 
 
-- [하우스도르프 극대 원리](#4f540f90d)에서 [초른 보조정리](#8e7118900)를 도출하는 증명 
+- [하우스도르프 극대 원리](#a85bbef49)에서 [초른 보조정리](#b78f346ef)를 도출하는 증명 
 
-    $X$ 의 모든 사슬이 상계를 가진다고 가정하자. 그러면 [하우스도르프 극대 원리](#4f540f90d)에 의하여 $X$ 는 극대 사슬 $C$ 를 가지는데 가정에 의하여 이것의 상계 $m \in X$ 또한 존재한다. 이제 이 $m$ 이 극대원소임을 보이면 된다.
+    $X$ 의 모든 사슬이 상계를 가진다고 가정하자. 그러면 [하우스도르프 극대 원리](#a85bbef49)에 의하여 $X$ 는 극대 사슬 $C$ 를 가지는데 가정에 의하여 이것의 상계 $m \in X$ 또한 존재한다. 이제 이 $m$ 이 극대원소임을 보이면 된다.
 
     먼저 $x \in X, x > m$ 이라고 가정하자. 그러면 $x$ 는 $C$ 의 임의의 원소와 비교 가능하고, 따라서 $C \cup \{x\}$ 도 사슬이다. 그런데 $C \subsetneq C \cup \{x\}$ 이므로 $C$ 가 극대사슬이라는 것에 모순이다. 따라서 $x$ 는 존재하지 않으며 $m$ 이 $X$ 의 극대원소가 된다. ■ 
 
-!!! tldr "도움정리 3.1.3"
+!!! def "도움정리 3.1.3"
 
     순서집합 $X$ 의 부분집합족 $\mathcal{X} \subset 2 ^{X}$ 가 다음을 만족하면 $\mathcal{X}$ 는 극대원소를 가진다. 
 
@@ -284,7 +276,7 @@ replace 4f540f90d
 
 # Well Ordered Set
 
-!!! tldr "정렬 집합(well ordered set)"
+!!! def "정렬 집합(well ordered set)"
 
     순서집합 $X$ 에 대한 임의의 부분집합 $A \in 2 ^{X} \setminus \{\varnothing \}$ 가 최소 원소를 가지면 $X$ 를 정렬집합이라고 한다. 
 
@@ -294,19 +286,17 @@ replace 4f540f90d
 
 - 정렬 집합은 그 자체로서 사슬이 된다.
 
-!!! tldr "정렬 순서(well ordered)"
+!!! def "정렬 순서(well ordered)"
 
     정렬 집합이 갖는 순서관계이다.
 
 ## Zermelo's theorem
 
-replace 0d9cd4880
-
-!!! tldr "정리 3.1.4 체르멜로 정렬정리(Well-ordering theorem, Zermelo's theorem)"
+!!! def "정리 3.1.4 체르멜로 정렬정리(Well-ordering theorem, Zermelo's theorem)"
 
     임의의 집합에는 정렬순서가 존재한다.
 
-- 아래의 증명은 [초른 보조정리](#8e7118900)를 사용하는데 이는 [초른 보조정리](#8e7118900)가 적용되는 대표적인 사례이다.
+- 아래의 증명은 [초른 보조정리](#b78f346ef)를 사용하는데 이는 [초른 보조정리](#b78f346ef)가 적용되는 대표적인 사례이다.
 
 - 증명
 
@@ -316,7 +306,7 @@ replace 0d9cd4880
 
     를 만족할 때 $(A, G) \leq (B, H)$ 라 정의하면 순서관계가 됨을 바로 확인할 수 있다.
 
-    순서집합 $\mathcal{X}$ 에 [초른 보조정리](#8e7118900)를 적용하기 위하여 $\mathcal{C}$ 가 $\mathcal{X}$ 의 사슬이라고 하고 
+    순서집합 $\mathcal{X}$ 에 [초른 보조정리](#b78f346ef)를 적용하기 위하여 $\mathcal{C}$ 가 $\mathcal{X}$ 의 사슬이라고 하고 
 
     $$ A_0 = \bigcup_{}^{}\{A \subset X:(A,G) \in \mathcal{C}\} $$
 
@@ -344,29 +334,29 @@ replace 0d9cd4880
 
     이제 $(A_0, G_0) \in \mathcal{X}$ 가 $\mathcal{C}$ 의 상계임을 보이려 하는데 방금 증명한 방법과 비슷하기에 생략한다. ▲ 
 
-    지금까지 순서집합 $\mathcal{X}$ 가 [초른 보조정리](#8e7118900)의 가정부를 만족함을 보였다. 그러므로 $\mathcal{X}$ 는 극대원소 $(D, L) \in \mathcal{X}$ 을 가진다. 이제 $D=X$ 임을 보일 것이다. $D \subsetneq X$ 이면 $x \in X \setminus D$ 를 잡고 
+    지금까지 순서집합 $\mathcal{X}$ 가 [초른 보조정리](#b78f346ef)의 가정부를 만족함을 보였다. 그러므로 $\mathcal{X}$ 는 극대원소 $(D, L) \in \mathcal{X}$ 을 가진다. 이제 $D=X$ 임을 보일 것이다. $D \subsetneq X$ 이면 $x \in X \setminus D$ 를 잡고 
 
     $$ E = D \cup \{x\}, \quad M = L \cup \{(a,x):a \in D\} \cup \{(x,x)\} $$
 
     라 두자. 그러면 $M$ 은 $E$ 의 순서관계가 되는데 $x$ 는 임의의 $a \in D$ 보다 큰 원소이다. 따라서 $(E,M)$ 은 정렬집합이고 $(E,M) \in \mathcal{X}$ 인데 $(E,M)>(D,L)$ 이다. 이는 $(D,L)$ 이 극대원소라는데 모순이므로 $D=X$ 이고 $L$ 은 $X$ 에 정의된 정렬순서이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     선택공리, 초른 보조정리, 하우스도르프 극대 원리, 체르멜로 정렬정리는 서로 동치이다.
 
 - 증명 
 
-    [체르멜로 정렬정리](#0d9cd4880) 를 가정하면 선택공리를 쉽게 얻을 수 있다. 
+    [체르멜로 정렬정리](#2f7ff02de) 를 가정하면 선택공리를 쉽게 얻을 수 있다. 
 
     집합 $X$ 가 정렬집합일 때 임의의 $A \in 2 ^{X}\setminus \{\varnothing \}$ 에 대하여 $A$ 의 최소원소를 $h(A)$ 라 하면 
 
     $$ h: 2 ^{X}\setminus \{\varnothing \} \to X $$
 
-    는 선택함수이다. 그러므로 선택공리, [초른 보조정리](#8e7118900), [하우스도르프 극대 원리](#4f540f90d), [체르멜로 정렬정리](#0d9cd4880)가 모두 동치임을 알 수 있다. ■ 
+    는 선택함수이다. 그러므로 선택공리, [초른 보조정리](#b78f346ef), [하우스도르프 극대 원리](#a85bbef49), [체르멜로 정렬정리](#2f7ff02de)가 모두 동치임을 알 수 있다. ■ 
 
 ## Segment
 
-!!! tldr "정렬집합의 절편(segment)"
+!!! def "정렬집합의 절편(segment)"
 
     정렬집합 $A$ 와 $x \in A$ 에 대하여 다음을 $x$ 에 의한 $A$ 의 절편이라 한다.
 
@@ -386,7 +376,7 @@ replace 0d9cd4880
 
     $\N$ 의 한 절편은 $S_3 = \{1,2\}$ 이다.
 
-!!! tldr "서로소 집합의 순서 "
+!!! def "서로소 집합의 순서 "
 
     서로소인 두 정렬집합 $A, B$ 에 대하여 합집합 $A \sqcup B$ 에 대하여 다음을 $x \leq y$ 라고 정의한다.
 
@@ -404,7 +394,7 @@ replace 0d9cd4880
 
         $$ \begin{equation}\begin{split} \omega : & 0, 1, 2, 3, \dots\\ \{x\} \sqcup \omega : & x, 0, 1, 2, \dots\\ \omega \sqcup \{x\} : & 0, 1, 2, 3, \dots, x \end{split}\end{equation} \tag*{} $$
 
-!!! tldr "증가함수(increasing function)"
+!!! def "증가함수(increasing function)"
 
     순서집합 $A, B$ 사이에 정의된 함수 $f: A \to B$ 가 다음을 만족하면 증가함수라 한다.
 
@@ -416,7 +406,7 @@ replace 0d9cd4880
 
 ## Order Isomorphism
 
-!!! tldr "순서 동형(order isomorphism)"
+!!! def "순서 동형(order isomorphism)"
 
     순서집합 $A, B$ 에 정의된 전단사 함수 $f: A \to B$ 가 증가함수이고 그 역함수 $f ^{-1}$ 도 증가함수이면 $A$ 와 $B$ 는 순서동형이다. 
 
@@ -432,13 +422,13 @@ replace 0d9cd4880
 
     이로써 $\{x\}\sqcup \omega$ 와 $\omega$ 가 순서동형이고, 본질적으로 서로 같은 집합임을 알 수 있다.
 
-!!! tldr "사전순서(lexicographical order)"
+!!! def "사전순서(lexicographical order)"
 
     순서집합 $A,B$ 의 곱집합 $A \times B$ 의 두 원소 $(a_1, b_1) \in A \times B, (a_2, b_2) \in A \times B$ 에 대하여 다음이 성립할 때 $(a_1, b_1) \leq (a_2, b_2)$ 라고 정의된 순서를 사전순서라 한다.
 
     $$ a_1 < a_2 \lor (a_1 = a_2 \land b_1 \leq b_2) $$
 
-!!! tldr "반사전순서(anti-lexicographical order)"
+!!! def "반사전순서(anti-lexicographical order)"
 
     순서집합 $A,B$ 의 곱집합 $A \times B$ 의 두 원소 $(a_1, b_1) \in A \times B, (a_2, b_2) \in A \times B$ 에 대하여 다음이 성립할 때 $(a_1, b_1) \leq (a_2, b_2)$ 라고 정의된 순서를 사전순서라 한다.
 
@@ -470,7 +460,7 @@ replace 0d9cd4880
 
     이다.
 
-!!! tldr "정리 3.3.1"
+!!! def "정리 3.3.1"
 
     두 정렬집합 $A, B$ 가 주어지면 다음 중 하나가 성립한다. 
 
@@ -560,7 +550,7 @@ replace 0d9cd4880
 
 # Ordinal
 
-!!! tldr "순서수, 서수(ordinal)"
+!!! def "순서수, 서수(ordinal)"
 
     정렬집합 $\alpha$ 가 다음을 만족하면 서수라고 한다. 
 
@@ -582,7 +572,7 @@ replace 0d9cd4880
 
         $\beta \in \alpha$ 이면 $\beta  = S _{\beta } \subset \alpha$ 이다.
 
-!!! tldr ""
+!!! def ""
 
     $$ \text{ord }(\N) = \omega $$
     
@@ -594,7 +584,7 @@ replace 0d9cd4880
     
     각 자연수 $n \in \omega$ 도 서수이다. $m \in n \implies  S_m = m$ 이기 때문이다.
 
-!!! tldr "절대적 무한(Absolute Infinite)"
+!!! def "절대적 무한(Absolute Infinite)"
 
     이것보다 더 큰 수가 존재하지 않는 수이다.
 
@@ -602,7 +592,7 @@ replace 0d9cd4880
 
 - 초한수 수열 $\aleph _0, \alpha _1, \alpha _2, \dots$ 을 극한으로 보낼 수 있고, $\alpha _{\alpha _0}, \alpha _{\alpha _1},\alpha _{\alpha _2},  \dots$ 수열도 극한으로 보낼 수 있는데, 이 과정 자체를 극한으로 보내면 $\Omega$ 에 도달할 수 있다.
 
-!!! tldr "초한수(Transfinite number)"
+!!! def "초한수(Transfinite number)"
 
     절대적 무한이 아닌 무한이다.
 
@@ -612,13 +602,13 @@ replace 0d9cd4880
 
 - 자연수의 초한서수를 $\omega$, 초한기수를 $\aleph_0$ 으로 나타낸다.
 
-!!! tldr "유한서수 "
+!!! def "유한서수 "
 
     자연수 $0,1,2,3,\dots$ 는 서수인데 이들을 유한서수라고 한다.
 
 ## Transfinite Ordinal Number
 
-!!! tldr "초한서수(Transfinite ordinal number)"
+!!! def "초한서수(Transfinite ordinal number)"
 
     무한 정렬 집합에서의 어떤 위치를 나타내는 수이다.
 
@@ -686,13 +676,13 @@ replace 0d9cd4880
     
     그러나 그리스 알파벳은 초한서수들을 모두 나타내기에 부족하므로 초한서수들을 나타내기에 적합한 강력한 표현법인 [Veblen function](https://en.wikipedia.org/wiki/Veblen_function) 이 고안되었다. 이 함수는 $\varphi _{\gamma }(\beta )$ 의 형태로 초한귀납적으로 정의되어 초깃값으로 $\varphi _0(\beta ) = \omega ^{\beta }$ 을 정의한 후 $\varphi _1(\beta ) = \epsilon _{\beta }, \varphi _2(\beta ) = \zeta _{\beta }, \dots$ 와 같이 정의 된다.
 
-!!! tldr "극한서수(limit ordinal)"
+!!! def "극한서수(limit ordinal)"
 
     서수 $\alpha$ 가 $\alpha = \beta ^{+}$ 인 $\beta$ 를 가지지 않으면 $\alpha$ 를 극한서수라고 한다. 
 
 - 가령 $\omega$ 는 $\omega = \alpha ^{+}$ 인 $\alpha$ 가 존재하지 않으므로 극한서수이다.
 
-!!! tldr "서로소 집합 함수"
+!!! def "서로소 집합 함수"
 
     $g: A \to C, h: B \to D$ 에 대하여 함수 $g \sqcup h : A \sqcup B \to C \sqcup D$ 를 다음과 같이 정의한다.
 
@@ -702,7 +692,7 @@ replace 0d9cd4880
 
 ## Addition, Multiples of Ordinal Number
 
-!!! tldr "서수의 더하기(addition of ordinal number)"
+!!! def "서수의 더하기(addition of ordinal number)"
 
     $\text{ord }(A) = \alpha , \text{ord }(B) = \beta$ 인 서로소인 정렬집합 $A, B$ 에 대하여 다음과 같이 정의한다.
 
@@ -724,7 +714,7 @@ replace 0d9cd4880
 
     - 증명
 
-!!! tldr "서수의 곱하기(multiple of ordinal number)"
+!!! def "서수의 곱하기(multiple of ordinal number)"
 
     반사전순서가 부여된 $A \times B$ 에 대하여 다음과 같이 정의한다.
 
@@ -760,7 +750,7 @@ replace 0d9cd4880
 
         은 성립한다.
     
-!!! tldr "서수의 제곱 "
+!!! def "서수의 제곱 "
 
     임의의 서수 $\alpha ,\beta$ 에 대하여 다음과 같이 정의한다.
 
@@ -768,7 +758,7 @@ replace 0d9cd4880
     
 ## Order of Ordinal Number
 
-!!! tldr "서수의 순서(order of ordinal number)"
+!!! def "서수의 순서(order of ordinal number)"
 
     서수 $\alpha , \beta$ 에 대한 $\text{ord }(A) =\alpha ,\text{ord }(B) = \beta$ 인 정렬집합 $A, B$ 에 대하여 $A$ 가 $B$ 의 절편과 순서동형이면 다음과 같이 정의한다.
 
@@ -788,7 +778,7 @@ replace 0d9cd4880
 
     중 하나가 성립함을 말해준다. 
 
-!!! tldr "정리 3.3.2"
+!!! def "정리 3.3.2"
 
     정렬집합 $A$ 의 부분집합 $B$ 가 다음을 만족하면 $B = A$ 이다.
 
@@ -800,7 +790,7 @@ replace 0d9cd4880
 
     $A \setminus B \neq \varnothing$ 이면 최소원소 $a \in A \setminus B$ 를 가진다. 그러면 $S_a \subset B$ 이고 $a \in B$ 가 되어 모순이다. 그러므로 $A \setminus B = \varnothing$ 이다. ■ 
 
-!!! tldr "정리 3.3.3"
+!!! def "정리 3.3.3"
 
     정렬집합에 관한 성질 $P$ 와 임의의 정렬집합 $X$ 에 대하여 다음이 만족되면 임의의 정렬집합이 $P$ 를 만족한다.
 
@@ -820,7 +810,7 @@ replace 0d9cd4880
 
 ## Equinumerous
 
-!!! tldr "집합의 대등(equinumerous)"
+!!! def "집합의 대등(equinumerous)"
 
     두 집합 $X$ 와 $Y$ 사이에 전단사함수가 존재하면 $X$ 와 $Y$ 가 대등하다고 한다.
 
@@ -828,7 +818,7 @@ replace 0d9cd4880
 
 - 이는 집합 $A$ 의 크기 $|A|$ 를 비교하기 위한 정의로써 $A \approx B \iff |A| = |B|$ 가 성립한다.
 
-!!! tldr ""
+!!! def ""
 
     $$ \N \approx \mathbb{Z} \approx \mathbb{Q} $$
 
@@ -874,7 +864,7 @@ replace 0d9cd4880
 
     이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     두 선분 위의 점들의 집합은 선분의 길이에 관계없이 항상 대등하다.
 
@@ -896,7 +886,7 @@ replace 0d9cd4880
 
     는 전단사함수이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     $$\N \not \approx [0, 1]$$
 
@@ -930,7 +920,7 @@ replace 0d9cd4880
 
     이다. 그러므로 $f$ 는 전사함수가 아니다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     $$\N \times \N \approx \N$$
 
@@ -956,7 +946,7 @@ replace 0d9cd4880
 
     라 정의하면된다.
 
-!!! tldr ""
+!!! def ""
 
     $n \in \N$ 에 대하여 다음이 성립한다.
 
@@ -966,7 +956,7 @@ replace 0d9cd4880
 
     $$ \because \N \times \N \approx \N $$
 
-!!! tldr "3.16 무한 집합의 특성"
+!!! def "3.16 무한 집합의 특성"
 
     자기자신과 대등한 진부분집합이 존재한다. 즉, 집합 $X$ 가 무한집합이면 다음이 만족한다.
 
@@ -984,7 +974,7 @@ replace 0d9cd4880
 
         즉, 놀랍게도 $\R \approx (0, 1)$ 이다.
 
-!!! tldr "도움정리 3.4.1"
+!!! def "도움정리 3.4.1"
 
     집합 $X$ 가 무한 집합의 특성을 만족하고 $X \approx Y$ 이면 $Y$ 도 무한 집합의 특성을 만족한다.
 
@@ -1004,7 +994,7 @@ replace 0d9cd4880
 
     이다. ■ 
 
-!!! tldr "도움정리 3.4.2"
+!!! def "도움정리 3.4.2"
 
     집합 $X$ 가 무한 집합의 특성을 만족하고 $X \subset  Y$ 이면 $Y$ 도 무한 집합의 특성을 만족한다.
 
@@ -1024,7 +1014,7 @@ replace 0d9cd4880
 
     이다. ■ 
 
-!!! tldr "비둘기 집 원리(Pigeonhole principle)"
+!!! def "비둘기 집 원리(Pigeonhole principle)"
 
     $n = \{0,1,2, \dots, n-1\} \in \N$ 에 대한 임의의 단사함수 $f: n \to n$ 가 전사이다.
 
@@ -1052,7 +1042,7 @@ replace 0d9cd4880
     
     따라서 $(f \circ g)|_n:n \to n$ 에 귀납법의 가정(*$f$ 가 $n$ 에서 전단사라는 가정*)을 적용하면 $(f \circ g)|_n$ 이 전단사임을 알 수 있다. (*이로써 $(f \circ g)(n) = n \subset n ^{+}$ 이 보장되는 거지. 그래서 이제 함수의 제한을 풀고 $(f \circ g)(n) = n \in n ^{+}$ 만 보이면 전사함수가 되는데 이건 이미 위에서 보였으니까*) 따라서 $f \circ g$ 는 전단사이고, $f = (f \circ g) \circ g ^{-1}$ 도 전단사이다.(*$g$ 가 전단사이므로 $g ^{-1}$ 도 전단사니까*) ■ 
 
-!!! tldr "정리 3.4.3"
+!!! def "정리 3.4.3"
 
     자연수 $n = \{0, 1, 2, \dots, n-1\}$ 의 부분집합 $A$ 에 대하여 다음이 성립한다.
 
@@ -1086,7 +1076,7 @@ replace 0d9cd4880
 
 ## Finite Set
 
-!!! tldr "유한집합(finite set)"
+!!! def "유한집합(finite set)"
 
     집합 $X$ 가 다음을 만족하면 유한집합이라 한다. 
 
@@ -1098,7 +1088,7 @@ replace 0d9cd4880
 
     도움정리 3.4.2 가 있으므로 이미 $\N$ 이 무한집합의 특성을 만족한다는 것을 알게 되었다. 그러므로 다음 정리를 증명하면 된다. 
 
-!!! tldr "도움정리 3.4.4"
+!!! def "도움정리 3.4.4"
 
     집합 $X$ 가 유한집합이 아니면, $\exists A \subset X \text{ s.t. }\ \N \approx A$ 이다.
 
@@ -1146,7 +1136,7 @@ replace 0d9cd4880
 
 ## Definition of Infinite Set
 
-!!! tldr "정리 3.4.5 무한집합(infinite set)"
+!!! def "정리 3.4.5 무한집합(infinite set)"
 
     다음 동치조건을 만족하는 집합 $X$ 를 무한집합이라 한다.
 
@@ -1158,7 +1148,7 @@ replace 0d9cd4880
 
 # Cardinal Number
 
-!!! tldr "기수(cardinal number)"
+!!! def "기수(cardinal number)"
 
     임의의 집합 $X$ 에 대하여 $X$ 와 동등한 서수 전체의 집합의 최소원소
 
@@ -1188,7 +1178,7 @@ replace 0d9cd4880
 
 ## Addition, Multiples of Cardinal Number
 
-!!! tldr "기수의 더하기(addition of cardinal number)"
+!!! def "기수의 더하기(addition of cardinal number)"
 
     서로소 집합 $A, B$ 와 그 기수 $a = |A| ,b = |B|$ 에 대하여 다음과 같이 정의한다.
 
@@ -1214,7 +1204,7 @@ replace 0d9cd4880
 
         집합의 합집합의 결합법칙이 성립하므로 $(a+b)+c=a+(b+c)$ 도 성립한다.
 
-!!! tldr "기수의 곱하기(multiple of cardinal number)"
+!!! def "기수의 곱하기(multiple of cardinal number)"
 
     $|A| =a, |B| = b$ 인 집합 $A, B$ 에 대하여 다음과 같이 정의한다.
 
@@ -1224,13 +1214,13 @@ replace 0d9cd4880
 
     - 증명 
 
-!!! tldr "기수의 제곱 "
+!!! def "기수의 제곱 "
 
     $|A| =a,|B| =b$ 에 대하여 다음과 같이 정의한다.
 
     $$ a ^{b} = |A ^{B}| $$
 
-!!! tldr ""
+!!! def ""
 
     기수의 제곱은 잘 정의되어 있다.
 
@@ -1252,7 +1242,7 @@ replace 0d9cd4880
 
     를 의미한다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     $B \cup C = \varnothing$ 인 집합 $A,B,C$ 에 대한 기수 $a = |A| , b = |B| , c = |C|$ 에 대하여 다음이 성립한다.
 
@@ -1268,7 +1258,7 @@ replace 0d9cd4880
 
 ## Cantor–Bernstein theorem
 
-!!! tldr ""
+!!! def ""
 
     집합 $A, B$ 사이에 단사함수 $f: A \to B$ 가 존재하면 다음과 같이 표기한다.
 
@@ -1282,7 +1272,7 @@ replace 0d9cd4880
 
     이다.
 
-!!! tldr "정리 3.5.1"
+!!! def "정리 3.5.1"
 
     임의의 집합 $A, B$ 에 대하여 다음이 성립한다.
 
@@ -1290,11 +1280,11 @@ replace 0d9cd4880
 
 - 증명
 
-    임의의 집합 $A, B$ 에 대하여 [체르멜로 정렬정리](#0d9cd4880) 를 적용하여 정렬순서를 부여하자. 
+    임의의 집합 $A, B$ 에 대하여 [체르멜로 정렬정리](#2f7ff02de) 를 적용하여 정렬순서를 부여하자. 
 
     그러면 [정리 3.3.1](#90ba9203e) 에 의하여 $A \approx B$ 이거나 적절한 $a \in A, b \in B$ 에 대하여 $A \approx S_b \subset B$ 혹은 $B \approx S_a \subset A$ 가 성립한다.
 
-!!! tldr "정리 3.5.2 베른슈타인의 정리(Cantor–Bernstein theorem)"
+!!! def "정리 3.5.2 베른슈타인의 정리(Cantor–Bernstein theorem)"
 
     집합 $A, B$ 에 대하여 다음이 성립한다. 
     
@@ -1340,7 +1330,7 @@ replace 0d9cd4880
 
 ## Order of Cardinal Number
 
-!!! tldr "기수의 순서(order of cardinal number)"
+!!! def "기수의 순서(order of cardinal number)"
 
     두 기수 $a = |A| , b = |B|$ 에 대하여 다음과 같이 정의한다.
 
@@ -1348,7 +1338,7 @@ replace 0d9cd4880
 
 - 이 순서는 잘 정의되어 있고, 순서관계의 조건을 만족시킨다.
 
-!!! tldr ""
+!!! def ""
 
     기수 $a, b, c$ 에 대하여 $a \leq b \iff \exists c \text{ s.t. }\ b = a + c$ 이다.
 
@@ -1362,7 +1352,7 @@ replace 0d9cd4880
 
 # Transfinite Cardinal Number
 
-!!! tldr ""
+!!! def ""
 
     임의의 무한집합 $X$ 에 대하여 다음이 성립한다.
 
@@ -1374,7 +1364,7 @@ replace 0d9cd4880
 
 ## Size of Natual Number
 
-!!! tldr "자연수의 초한기수"
+!!! def "자연수의 초한기수"
 
     $$\aleph _0 = |\N|$$
 
@@ -1388,7 +1378,7 @@ replace 0d9cd4880
 
 ## Size of Real Number
 
-!!! tldr "실수의 초한기수"
+!!! def "실수의 초한기수"
 
     $$\mathfrak{c} = |\R|$$
 
@@ -1400,7 +1390,7 @@ replace 0d9cd4880
 
 ## Countable Set
 
-!!! tldr "가산 집합(countable set)"
+!!! def "가산 집합(countable set)"
 
     집합 $X$ 의 기수가 다음을 만족하면 $X$ 를 셀 수 있는 집합이라고 한다.
 
@@ -1412,7 +1402,7 @@ replace 0d9cd4880
 
 ## Uncountable Set
 
-!!! tldr "비가산 집합(uncountable set)"
+!!! def "비가산 집합(uncountable set)"
 
     집합 $X$ 의 기수가 다음을 만족하면 $X$ 를 셀 수 없는 집합이라고 한다.
 
@@ -1422,7 +1412,7 @@ replace 0d9cd4880
 
 ## Properties of Transfinite Cardinal Number
 
-!!! tldr ""
+!!! def ""
 
     $$ \aleph _0 \aleph _0 = \aleph _0 $$
 
@@ -1432,7 +1422,7 @@ replace 0d9cd4880
 
     $$ \because \N \times \N \approx \N $$
 
-!!! tldr "정리 3.5.3"
+!!! def "정리 3.5.3"
 
     임의의 무한기수 $a$ 에 대하여 $aa = a$ 이다.
 
@@ -1446,7 +1436,7 @@ replace 0d9cd4880
 
     $$ (B_1, g_1) \leq (B_2, g_2) \iff B_1 \subset B_2, g_2| _{B_1} = g_1 $$
 
-    와 같은 순서를 부여하면 $\mathcal{B}$ 는 순서집합이 된다. 또 이로써 [초른 보조정리](#8e7118900)의 조건부가 만족된다. 그러므로 $\mathcal{B}$ 에는 극대원소 $(C, h)$ 가 존재한다.
+    와 같은 순서를 부여하면 $\mathcal{B}$ 는 순서집합이 된다. 또 이로써 [초른 보조정리](#b78f346ef)의 조건부가 만족된다. 그러므로 $\mathcal{B}$ 에는 극대원소 $(C, h)$ 가 존재한다.
 
     이제 $|C| = c$ 로 두고, $c=a$ 을 보이면 증명이 끝난다. ▲ 
 
@@ -1478,7 +1468,7 @@ replace 0d9cd4880
 
     $c$ 는 조건에 의하여 $cc = c$ 였으므로 결국 $aa=a$ 이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     무한기수 $a, b$ 에 대하여 다음이 성립한다.
 
@@ -1494,7 +1484,7 @@ replace 0d9cd4880
 
     무한 기수 $a = |A|$ 와 $2 ^{a} = |2 ^{A}|$ 에 대하여 $a \leq 2 ^{a}$ 이므로 $a ^{b} \leq (2 ^{a})^{b} = 2 ^{ab} = 2 ^{b}$ 이고, $2 \leq a$ 이므로 $2 ^{b} \leq a ^{b}$ 이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     다음은 동치이다.
 
@@ -1522,9 +1512,7 @@ replace 0d9cd4880
 
 ## Relation between $|\N|$ and $|\R|$
 
-replace d91d642d4
-
-!!! tldr ""
+!!! def ""
 
     $$ 2 ^{\aleph_0} = \mathfrak{c} $$
 
@@ -1560,7 +1548,7 @@ replace d91d642d4
 
 # Properties of Ordinal Number
 
-!!! tldr "도움정리 3.6.1"
+!!! def "도움정리 3.6.1"
 
     서수 $\alpha , \beta$ 에 대하여 $\alpha \approxeq \beta \implies \alpha = \beta$ 이다.
 
@@ -1586,7 +1574,7 @@ replace d91d642d4
 
     이는 어떤 원소가 $\xi$ 에 속하면 $f(\xi)$ 에 속하고, 역으로 $f(\xi)$ 에 속하면 $\xi$ 에도 속함을 뜻한다. 그러므로 $\xi = f(\xi )$ 즉, $\xi \in X$ 이다. 그러면 [정리 3.3.2](#eaed9d1d0) 에 의하여 $X = \alpha$ 이다. ■ 
 
-!!! tldr "도움정리 3.6.2"
+!!! def "도움정리 3.6.2"
 
     서수 $\alpha ,\beta$ 에 대하여 다음이 성립한다.
 
@@ -1602,7 +1590,7 @@ replace d91d642d4
 
 - $A \iff B \iff C$ 를 보이기 위하여 $A \implies B \implies C \implies A$ 를 증명했네. 이러면 $B \implies C \land C \implies A \implies B$ 니까 $B \iff C$ 이고, 결국 $A \iff B \iff C$ 가 증명되는 식인듯.
 
-!!! tldr "정리 3.6.3"
+!!! def "정리 3.6.3"
 
     임의의 정렬집합 $A$ 에 대하여 $A \approxeq \alpha$ 인 서수 $\alpha$ 가 유일하게 존재한다.
 
@@ -1626,7 +1614,7 @@ replace d91d642d4
 
     $a \mapsto \alpha (a)$ 가 $A$ 에서 $S$ 로 가는 순서동형이므로 $A \approxeq S$ 이다. ■ 
 
-!!! tldr "정리 3.6.4"
+!!! def "정리 3.6.4"
 
     비어있지 않은 임의의 서수들의 집합은 최소원소를 가진다. 
 
@@ -1638,7 +1626,7 @@ replace d91d642d4
 
     $\delta \in E$ 라고 하자. $\alpha \leq \delta \implies \gamma < \alpha \leq \delta$ 이고, $\alpha > \delta \implies \delta \in \alpha \cap E$ 이므로 $\gamma \leq \delta$ 이다. 언제나 $\gamma \leq \delta$ 이므로 $\gamma$ 가 $E$ 의 최소원소이다.
 
-!!! tldr ""
+!!! def ""
 
     서수 $\alpha$ 가 집합 $X$ 에 대하여 $\alpha = |X|$ 이면 다음이 성립한다.
 
@@ -1646,7 +1634,7 @@ replace d91d642d4
 
 - 이는 기수의 정의에서 $\xi \approx X$ 인 $\xi$ 중 최소인 $\xi$ 가 $\alpha$ 라는 말이므로 $\beta \leq \alpha$ 가 $\beta \approx \alpha$ 이면 $\beta =\alpha$ 임이 당연하다.
 
-!!! tldr "시작서수"
+!!! def "시작서수"
 
     어떤 기수 $\alpha$ 에 대하여 기수의 정의에 의해 $\alpha$ 보다 작은 서수는 $\alpha$ 와 동등하지 않은데, 이러한 서수 $\alpha$ 를 시작서수라고 한다.
 
@@ -1654,7 +1642,7 @@ replace d91d642d4
 
     역으로, $\alpha$ 가 시작서수이면 $\alpha = |\alpha|$ 이므로 기수가 된다. 즉, 임의의 시작서수는 기수이다.
 
-!!! tldr "정리 3.6.5"
+!!! def "정리 3.6.5"
 
     임의의 서수들의 집합은 최소상계를 가진다.
 
@@ -1672,7 +1660,7 @@ replace d91d642d4
 
 # Continuum Hypothesis
 
-!!! tldr "$\aleph _1$ "
+!!! def "$\aleph _1$ "
 
     $$ \aleph _1 := \min \{\xi : \aleph _0 < |\xi| \leq 2 ^{\aleph _0} \} $$
 
@@ -1682,13 +1670,13 @@ replace d91d642d4
 
     이 성립한다.
 
-!!! tldr ""
+!!! def ""
 
     $$\aleph _1 = \sup \{\xi : \xi \approx \aleph _0\}$$
 
 - 증명
 
-!!! tldr "연속체 가설(Continuum hypothesis)"
+!!! def "연속체 가설(Continuum hypothesis)"
 
     $$\aleph _1 = 2 ^{\aleph _0}$$
 
@@ -1704,7 +1692,7 @@ replace d91d642d4
 
     연속체 가설이 기하학에서의 평행선 공리와 같은 위치에 있다.
 
-!!! tldr "$\aleph _n$ "
+!!! def "$\aleph _n$ "
 
     $$ \aleph _n := \min \{\xi : \aleph _{n-1} < |\xi| \leq 2 ^{\aleph _{n-1}} \} $$
 
@@ -1712,8 +1700,14 @@ replace d91d642d4
 
 - 또한 $\aleph _{\omega } = \sup \{\aleph _n:n < \omega \}$ 라 두면 새로운 기수를 계속해서 얻을 수 있다.
 
-!!! tldr "일반 연속체 가설(generalized continuum hypothesis)"
+!!! def "일반 연속체 가설(generalized continuum hypothesis)"
 
     임의의 기수 $\alpha$ 에 대하여 $\aleph _{\alpha ^{+}} = 2 ^{\aleph _{\alpha }}$ 이다.
 
 - 증명
+
+---
+
+ref:
+
+:   [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)

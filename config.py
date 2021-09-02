@@ -18,7 +18,7 @@ def create_def_link():
 
         soup = BeautifulSoup(html, 'lxml')
 
-        for defs in soup.select('div.tldr'):
+        for defs in soup.select('div.def'):
             hashed = hash(defs.text)
             defs['id'] = hashed
             defs.wrap(soup.new_tag('a', href='#' + hashed))
@@ -33,7 +33,7 @@ def create_tree_from_dict(tree, data, parent=None):
         child = next(iter(child_data))
         if isinstance(child_data[child], str):
             node = '<a href=' + \
-                   child_data[child].rsplit('.', maxsplit=1)[0]+\
+                   child_data[child].rsplit('.', maxsplit=1)[0] +\
                    '>'+str(child)+'</a>'
             tree.create_node(node, node, parent=parent)
             continue
@@ -53,6 +53,7 @@ def create_category():
     root = next(iter(nav))
     tree.create_node(root, root)
     create_tree_from_dict(tree, nav, root)
+    print(tree)
 
     index_path = 'docs/index.md'
     if os.path.isfile(index_path):
@@ -65,8 +66,7 @@ def create_category():
 
     index = index.replace(' ', '&nbsp;') \
                  .replace('<a&nbsp;', '<a ') \
-                 .replace('\n', '</p><p>\n') \
-                 .replace('ccss17', '<i class="fas fa-fire"></i>')
+                 .replace('\n', '</p><p>\n')
     index = '<div class="index"><p>' + index + '</p></div>'
 
     with open(index_path, 'w', encoding='utf-8') as f:

@@ -1,10 +1,6 @@
-!!! info "ref"
-
-    Stephen H. Friedberg, Linear Algebra, 4th Edition
-
 # Determinants of $2 \times 2$ Matrix
 
-!!! tldr "$2 \times 2$ 행렬의 행렬식(Determinants of $2 \times 2$ Matrix)"
+!!! def "$2 \times 2$ 행렬의 행렬식(Determinants of $2 \times 2$ Matrix)"
 
     $2 \times 2$ 행렬 $A = \begin{pmatrix} a&b\\ c&d\\ \end{pmatrix}$ 에 대하여 행렬식 $\det: \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}$ 은 다음과 같이 정의된 함수이다.
 
@@ -12,7 +8,7 @@
 
 ## Properties of Determinants of $2 \times 2$ Matrix
 
-!!! tldr ""
+!!! def ""
 
     함수 $\det : \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}$ 은 선형이 아니다.
 
@@ -28,7 +24,7 @@
 
     그러므로 함수 $\det$ 은 선형이 아니다. ■ 
 
-!!! tldr "정리 4.1"
+!!! def "정리 4.1"
 
     함수 $\det: \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}$ 는 $2 \times 2$ 행렬의 한 행이 고정되었을 때, 나머지 행에 대하여 선형이다. 즉, $u, v, w \in \mathbf{F} ^{2}$ 와 스칼라 $k$ 에 대하여 다음이 성립한다. 
 
@@ -50,7 +46,7 @@
 
     1) 과 비슷하게 증명된다. ■ 
 
-!!! tldr "정리 4.2"
+!!! def "정리 4.2"
 
     행렬 $A \in \mathbf{M}_{2 \times 2}(\mathbf{F} )$ 에 대하여 다음은 동치이다. 
 
@@ -82,7 +78,7 @@
 
 ## Area of a parallelogram
 
-!!! tldr "각(angle)"
+!!! def "각(angle)"
 
     $\R ^{2}$ 의 두 벡터의 각은 같은 크기와 방향을 가지고 시점이 원점인 두 벡터가 이루는 각이다.
 
@@ -92,7 +88,7 @@
 
     ![image](https://user-images.githubusercontent.com/16812446/127306408-3ff07c6f-57a1-4658-a57a-bbde4e5e5878.png)
 
-!!! tldr "향(orientation)"
+!!! def "향(orientation)"
 
     $\beta =\{u,v\}$ 가 $\R ^{2}$ 의 순서기저일 때 $\beta$ 의 향은 다음과 같은 실수이다. 
 
@@ -102,7 +98,7 @@
 
 - [$\{u, v\}$ 가 일차종속(서로 평행)이면 행렬 $\begin{pmatrix} u\\ v\\ \end{pmatrix}$ 가 가역이 아니라서](../MatrixOperation/#c2617fe5d) $\det \begin{pmatrix} u\\ v\\ \end{pmatrix} = 0$ 이지만 편의상 $\{u, v\}$ 가 일차종속이면 $\mathcal{O} \begin{pmatrix} u\\ v\\ \end{pmatrix} = 1$ 으로 정의한다.
 
-!!! tldr ""
+!!! def ""
 
     $$ \mathcal{O} \begin{pmatrix} e_2\\ e_1\\ \end{pmatrix} = -1 $$
 
@@ -110,7 +106,7 @@
 
 - 증명
 
-!!! tldr "오른손 좌표계(right-handed coordinate system)"
+!!! def "오른손 좌표계(right-handed coordinate system)"
 
     $\R ^{2}$ 의 순서기저 $\{u, v\}$ 에 대하여 벡터 $u$ 를 시계 반대방향으로 $\theta (0 < \theta < \pi)$ 만큼 회전하여 벡터 $v$ 에 포갤 수 있으면 좌표계 $\{u, v\}$ 는 오른손 좌표계이다.
 
@@ -118,7 +114,7 @@
 
     ![image](https://user-images.githubusercontent.com/16812446/127310867-dd35e776-5d31-49fd-8df5-b4e8ac3a6b56.png)
 
-!!! tldr "왼손 좌표계(left-handed coordinate system)"
+!!! def "왼손 좌표계(left-handed coordinate system)"
 
     $\R ^{2}$ 의 순서기저 $\{u, v\}$ 에 대하여 벡터 $u$ 를 시계 방향으로 $\theta (0 < \theta < \pi)$ 만큼 회전하여 벡터 $v$ 에 포갤 수 있으면 좌표계 $\{u, v\}$ 는 왼손 좌표계이다.
 
@@ -126,7 +122,7 @@
 
     ![image](https://user-images.githubusercontent.com/16812446/127310881-e48495a7-ae4c-4c4d-a56f-68597d8584c1.png)
 
-!!! tldr ""
+!!! def ""
 
     행렬식 $\det: \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}$ 와 행렬 $A, B \in \mathbf{M}_{2 \times 2}(\mathbf{F} )$ 대하여 다음이 성립한다. 
 
@@ -134,7 +130,7 @@
     
 - 증명
 
-!!! tldr "문제 4.1-11"
+!!! def "문제 4.1-11"
 
     함수 $\delta : \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}$ 는 다음을 만족한다.
 
@@ -176,7 +172,7 @@
 
     > 증명하려 했는데 결국 실패하고 솔루션을 찾아봤다. 솔루션에서는 내가 증명에 있어서 전혀 상관없겠다고 직관적으로 판단한 스칼라에 대한 선형이라는 조건을 증명의 첫걸음으로 삼았었다. 증명에 실패한 원인이 내 직관에 의지하여 이 단서를 더 연구하면 문제가 풀릴 것 같다는 것에 매몰되었고 내 직관에 끌리지 않는 단서는 아무런 연구도 하지 않은 것이었다. 직관에 의지하지 않고 객관적으로 연관된 모든 단서를 충분하고 공평하게 연구했으면 스스로 풀 수도 있었을듯.
 
-!!! tldr "문제 4.1-12"
+!!! def "문제 4.1-12"
 
     문제 4.1-11 의 함수 $\delta$ 와 $A \in \mathbf{M}_{2 \times 2}(\mathbf{F} )$ 에 대하여 $\delta (A) = \det(A)$ 이다.
 
@@ -184,7 +180,7 @@
 
     문제 4.1-11 의 증명에 의하여 증명이 끝난다.
 
-!!! tldr ""
+!!! def ""
 
     $\R ^{2}$ 의 순서기저 $\{u, v\}$ 에 대하여 다음은 동치이다.
 
@@ -192,7 +188,7 @@
 
 - 증명
 
-!!! tldr "평행사변형(parallelogram) "
+!!! def "평행사변형(parallelogram) "
 
     원점을 시점으로 하는 벡터 $u, v \in \R ^{2}$ 에 대하여 이웃한 두 변 $u, v$ 를 가지는 평행사변형을 $u, v$ 의 평행사변형이라 한다.
 
@@ -202,7 +198,7 @@
 
     ![image](https://user-images.githubusercontent.com/16812446/127340680-ef926a8b-8e2b-41be-8a98-d5c00212fb88.png)
 
-!!! tldr ""
+!!! def ""
 
     $u, v$ 의 평행사변형의 넓이는 $\bigg |\det\begin{pmatrix} u\\ v\\ \end{pmatrix} \bigg |$ 이다.
 
@@ -279,7 +275,7 @@
 
 # Determinants
 
-!!! tldr "$\tilde{A}$"
+!!! def "$\tilde{A}$"
 
     $n \geq 2$ 일 때 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $A$ 의 $i$ 행과 $j$ 열을 제거하여 얻은 $(n - 1) \times (n - 1)$ 행렬 $\tilde{A} _{ij}$ 라고 한다.
 
@@ -287,11 +283,11 @@
 
     $$A = \begin{pmatrix} 1&2&3\\ 4&5&6\\ 7&8&9\\ \end{pmatrix} \implies \tilde{A} _{11} = \begin{pmatrix} 5&6\\ 8&9\\ \end{pmatrix}$$
 
-!!! tldr "여인수(cofactor)"
+!!! def "여인수(cofactor)"
 
     스칼라 $(-1) ^{i+j}\det(\tilde{A}_{ij})$ 를 $A$ 의 $i$ 행 $j$ 열 성분에 대한 여인수라고 한다. 
 
-!!! tldr "여인수 전개(cofactor expansion)"
+!!! def "여인수 전개(cofactor expansion)"
 
     $A$ 의 $i$ 행에 대한 여인수 전개를 다음과 같이 정의한다.
 
@@ -299,7 +295,7 @@
 
 - 즉, $A$ 의 $i$ 행에 대한 여인수 전개는 $A$ 의 $i$ 행의 각 성분에 여인수를 곱하여 더한 결과이다.
 
-!!! tldr "행렬식(determinant)"
+!!! def "행렬식(determinant)"
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 행렬식 $\det: \mathbf{M}_{n \times n}(\mathbf{F} ) \to \mathbf{F}$ 은 다음과 같은 함수이다.
 
@@ -321,7 +317,7 @@
 
 ## Determinants of Identity Matrix
 
-!!! tldr ""
+!!! def ""
 
     $$ n \in \N : \det(I_n) = 1 $$
 
@@ -335,7 +331,7 @@
 
 ## Properties of Determinant
 
-!!! tldr "정리 4.3"
+!!! def "정리 4.3"
 
     $n \times n$ 행렬의 행렬식은 어떤 행을 제외한 나머지 행들이 고정되었을 때, 그 행에 대하여 선형함수이다. 즉, $1 \leq r \leq n$, 스칼라 $k$, 벡터 $u, v \in \mathbf{F} ^{n}$ 에 대하여 다음이 성립한다.
 
@@ -381,7 +377,7 @@
 
     그러므로 $n \times n$ 행렬에 대해서도 성립한다. ■ 
 
-!!! tldr "정리 4.3 따름정리"
+!!! def "정리 4.3 따름정리"
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 어느 행의 모든 성분이 $0$ 이면 $\det(A) = 0$ 이다.
 
@@ -393,7 +389,7 @@
 
     $$ \iff  \det(A)  = \det(A)  +k \det(A)  \iff k \det(A)  = 0 \iff \det(A)  = 0 \tag*{■} $$
 
-!!! tldr "정리 4.3 보조정리 1"
+!!! def "정리 4.3 보조정리 1"
 
     $n \geq 2$ 인 행렬 $B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 $i$ 행이 $1 \leq k \leq n$ 인 어떤 $k$ 에 대하여 $e_k$ 이면 다음이 성립한다. 
     
@@ -459,7 +455,7 @@
 
 ## Redefining the Determinant
 
-!!! tldr "정리 4.4"
+!!! def "정리 4.4"
 
     $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 와 $i \in \{1, \dots, n\}$ 에 대하여 다음이 성립한다. 
 
@@ -482,7 +478,7 @@
 
     $$ \det(A) = \sum_{j=1}^{n}(-1)^{i+j}A _{ij} \cdot \det(\tilde{A}_{ij}) \tag*{■} $$
 
-!!! tldr "정리 4.4 따름정리"
+!!! def "정리 4.4 따름정리"
 
     $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 두 행이 같으면 $\det(A) = 0$ 이다.
 
@@ -496,7 +492,7 @@
 
     $\tilde{A}_{ij}$ 는 $(n - 1) \times (n - 1)$ 행렬이고 서로 다른 두 행($r$ 행, $s$ 행)이 같으므로 가정에 의하여 $\det(\tilde{A}_{ij}) = 0$ 이다. 그러므로 $\det(A) = 0$ 이다. ■ 
 
-!!! tldr "정리 4.5"
+!!! def "정리 4.5"
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 두 행을 교환하여 얻은 행렬 $B$ 에 대하여 $\det(B) = - \det(A)$ 이다.
 
@@ -516,7 +512,7 @@
 
     즉, $\det(B) = - \det(A)$ 이다. ■ 
 
-!!! tldr "정리 4.6"
+!!! def "정리 4.6"
 
     행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 와 $A$ 의 한 행에 다른 행의 스칼라 배를 더하여 얻은 행렬 $B$ 에 대하여 $\det(B) = \det(A)$ 이다.
 
@@ -538,7 +534,7 @@
 
     $$ \det(B) = \det(A) +k \det(C) = \det(A) \tag*{■} $$
 
-!!! tldr "정리 4.6 따름정리"
+!!! def "정리 4.6 따름정리"
 
     $$A \in \mathbf{M}_{n \times n}(\mathbf{F} ) : \text{rank} (A) < n \implies \det(A) = 0 $$
 
@@ -554,7 +550,7 @@
 
 ## Relation between Determinant and Elementary Row Operation
 
-!!! tldr "기본행연산과 행렬식의 관계"
+!!! def "기본행연산과 행렬식의 관계"
 
     기본행연산과 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 의 행렬식의 관계는 다음과 같다.
 
@@ -570,19 +566,31 @@
 
 ## Determinant of Upper Triangular Matrix
 
-!!! tldr "문제 4.2-23"
+!!! def "문제 4.2-23"
 
-    상삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(A) = \text{tr} (A)$ 이다.
+    상삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(A) = \displaystyle \prod_{i=1}^{n} A _{ii}$ 이다.
 
 - 정사각행렬은 1형과 3형 기본행연산을 통하여 상삼각행렬이 된다. 그러므로 정사각행렬의 행렬식을 쉽게 구할 수 있다.
 
     지금까지의 정리들은 여인수 전개를 통해 행렬식을 귀납적으로 구하는 것이 매우 번거롭기 때문에 행렬식을 효과적으로 구할 수 있도록 기본연산과 행렬식 간의 관계를 밝히기 위한 것들이었다.
 
-    그리고 이 정리는 상삼각행렬의 행렬식이 대각합으로 매우 쉽게 구해질 수 있다는 것을 말해줌으로써 기본연산의 목표를 상삼각행렬을 만드는 것으로 두는 것이 좋다는 결론을 알려준다.
+    그리고 이 정리는 상삼각행렬의 행렬식이 쉽게 구해질 수 있다는 것을 말해줌으로써 기본연산의 목표를 상삼각행렬을 만드는 것으로 두는 것이 좋다는 결론을 알려준다.
 
     $n \times n$ 행렬의 행렬식을 구하기 위해 여인수 전개를 사용하면 $n!$ 번 이상의 곱셈이 필요한데 비해 기본행연산으로 행렬식을 계산하면 $\frac{1}{3}(n ^{3}+2n-3)$ 번의 곱셈이 필요하다.
 
 - 증명
+
+    $n = 1$ 이면 $1 \times 1$ 행렬은 상삼각행렬이므로 $\det(A _{11}) = A _{11}$ 이다. ■ 
+
+    $n-1$ 에서 성립함을 가정하고 $n$ 에 대하여 성립함을 증명하자. 상삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 의 행렬식은 다음과 같다. 
+
+    $$ \det(A) = \sum_{i=1}^{n}(-1)^{1+i}A _{1i}\det(\tilde{A}_{1i}) $$
+
+    $i \neq 1$ 인 $\tilde{A}_{1i}$ 의 1열은 영열(zero column) 이다. 1열을 다른 열들의 일차결합으로 나타낼 수 있으므로 $\text{rank} (\tilde{A}_{1i}) < n - 1$ 이고, 정리 4.6 따름정리에 의하여 $\det(\tilde{A}_{1i})=0$ 이다. 그러나 $\tilde{A}_{11}$ 은 상삼각행렬이고 $n-1$ 에서 정리가 성립하므로 $\det(\tilde{A}_{11}) = \displaystyle \prod_{i=2}^{n}A _{ii}$ 이다. 따라서 다음이 성립한다. 
+
+    $$ \therefore \det(A) = A _{11}\det(\tilde{A}_{11}) = \prod_{i=1}^{n}A _{ii} \tag*{■} $$
+
+- 안 좋은 증명(이렇게 증명하는 건 대각성분이 $0$ 이 아닐 거라는 가정이 필요하다.)
 
     상삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 는 다음과 같다. 
 
@@ -622,11 +630,11 @@
 
     $A = \begin{pmatrix} 1&3&-3\\ 0&4&-7\\ 0&0&10\\ \end{pmatrix}$  에 대하여 다음이 성립한다.
 
-    $$ \det(A) = \text{tr} (A) = 40 $$
+    $$ \det(A) = \prod_{i=1}^{3}A _{ii} = 40 $$
 
-!!! tldr ""
+!!! def ""
 
-    삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(A) = \text{tr} (A)$ 이다.
+    삼각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(A) = \displaystyle \prod_{i=1}^{n} A _{ii}$ 이다.
 
 - 증명
 
@@ -637,7 +645,7 @@
 ## Determinant of Elementary Matrix
 
 
-!!! tldr "기본행렬의 행렬식(Determinant of Elementary Matrix)"
+!!! def "기본행렬의 행렬식(Determinant of Elementary Matrix)"
 
     1. $I$ 의 두 행의 위치를 바꾸어 얻은 기본행렬 $E$ 에 대하여 $\det(E) = -1$ 이다.
 
@@ -649,7 +657,7 @@
 
     행렬식과 기본행연산의 관계와 $\det(I) = 1$ 에 의하여 바로 증명된다. ■ 
 
-!!! tldr "정리 4.7"
+!!! def "정리 4.7"
 
     $$ A, B \in \mathbf{M}_{n \times n}(\mathbf{F} ) : \det(AB) = \det(A) \det(B) $$
 
@@ -673,7 +681,7 @@
 
     그러므로 $\text{rank} (A) = n$ 일 때 정리가 성립한다. ■ 
 
-!!! tldr "정리 4.7 따름정리"
+!!! def "정리 4.7 따름정리"
 
     $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 다음은 동치이다.
 
@@ -689,7 +697,7 @@
 
     이는 $\det(A) \neq 0, \det(A ^{-1}) = \dfrac{1}{\det(A) }$ 를 뜻한다. ■ 
 
-!!! tldr "문제 4.2-29"
+!!! def "문제 4.2-29"
 
     기본행렬 $E$ 에 대하여 $\det(E ^{t}) = \det(E)$ 이다.
 
@@ -741,7 +749,7 @@
 
     이로써 모든 증명이 끝났다. ■ 
 
-!!! tldr "정리 4.8"
+!!! def "정리 4.8"
 
     $$ A \in \mathbf{M}_{n \times n}(\mathbf{F} ) : \det(A ^{t}) = \det(A) $$
 
@@ -759,7 +767,27 @@
 
     이로써 모든 증명이 끝났다. ■ 
 
-!!! tldr "문제 4.3-21"
+## Determinant of Submatrix
+
+!!! def "문제 4.3-20"
+
+    정사각행렬 $A$ 와 $M= \begin{pmatrix} A&B\\ O&I\\ \end{pmatrix}, M'= \begin{pmatrix} I&B\\ O&A\\ \end{pmatrix}$ 에 대하여 $\det(M) = \det(M') = \det(A)$ 이다.
+
+- 증명
+
+    $s + t = n$ 에 대하여 $A$ 를 $s \times s$ 행렬 $I = I_t$ 라고 하자.
+
+    $s = 1$ 이면 [문제 4.2-23](#f334dfff7) 에 의하여 $\det(M) = \prod_{i=1}^{n}M _{ii} = A _{11}$ 이다. ▲ 
+
+    $s = k - 1$ 에서 성립함을 가정하고 $s = k$ 에서 정리를 증명해보자. $i \in \{k + 1, \dots, n\} : \det(\tilde{M})_{1i} = 0$ 이다. 왜냐하면 $\tilde{M}_{1i}$ 의 $i$ 행이 영행(zero row)이 되므로 정리 4.3 따름정리에 따라 행렬식이 $0$ 이 되기 때문이다. 따라서 다음이 성립한다. 
+
+    $$ \det(M) = \sum_{i=1}^{n}(-1) ^{1+i}M _{1i} \cdot \det(\tilde{M}_{1i}) = \sum_{i=1}^{k}(-1) ^{1+i}A _{1i} \cdot \det(\tilde{M}_{1i}) $$
+
+    $k - 1$ 에서 정리가 성립하므로 $i \in \{1, \dots, k \} : \det(\tilde{M}_{1i}) = \det(\tilde{A}_{1i})$ 이다. 따라서 다음이 성립한다. 
+
+    $$ \therefore \sum_{i=1}^{k}(-1) ^{1+i}A _{1i} \cdot \det(\tilde{M}_{1i}) = \sum_{i=1}^{k}(-1) ^{1+i} A _{1i} \cdot \det(\tilde{A}_{1i}) = \det(A) \tag*{■} $$
+
+!!! def "문제 4.3-21"
 
     정사각행렬 $A, C$ 에 대한 행렬 $M= \begin{pmatrix} A&B\\ O&C\\ \end{pmatrix} \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 에 대하여 $\det(M) = \det(A) \det(C)$ 이다.
 
@@ -773,13 +801,13 @@
 
     $$ \begin{pmatrix} I&O\\ O&C ^{-1}\\ \end{pmatrix} \begin{pmatrix} A&B\\ O&C\\ \end{pmatrix} = \begin{pmatrix} A&B\\ O&I\\ \end{pmatrix} $$
 
-    삼각행렬의 행렬식은 대각합이므로 다음이 성립한다. 
+    문제 4.3-20 과 정리 4.7 따름정리에 의하여 다음이 성립한다. 
 
     $$ \det(C ^{-1}) \det(M) = \det(A) \iff \det(M) = \det(A) \det(C) $$
 
 ## Cramer's Rule
 
-!!! tldr "정리 4.9 Cramer's Rule"
+!!! def "정리 4.9 Cramer's Rule"
 
     $A \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 와 $x = (x_1, x_2, \dots, x_n) ^{t}$ 에 대하여 $Ax = b$ 는 $n$ 개의 미지수를 가진 $n$ 개의 연립일차방정식의 행렬표현이다.
 
@@ -825,7 +853,7 @@
 
 ## $n$-dimensional volume of parallelepiped
 
-!!! tldr "나란히꼴의 $n$차원 부피($n$-dimensional volume of parallelepiped)"
+!!! def "나란히꼴의 $n$차원 부피($n$-dimensional volume of parallelepiped)"
 
     행렬 $A \in \mathbf{M}_{n \times n}(\R)$ 의 행 $a_1, a_2, \dots, a_n$ 에 대하여 벡터 $a_1, a_2, \dots, a_n$ 을 이웃한 변으로 가지는 나란히꼴의 $n$차원 부피는 $|\det(A)|$ 이다.
 
@@ -843,7 +871,7 @@
 
 ## Determinant of Similar Matrices
 
-!!! tldr "문제 4.3-15"
+!!! def "문제 4.3-15"
 
     두 행렬 $A, B \in \mathbf{M}_{n \times n}(\mathbf{F} )$ 가 닮음이면 $\det(A) = \det(B)$ 이다.
 
@@ -853,3 +881,8 @@
 
     $$ \det(B) = \det(Q ^{-1}AQ)  = \det(Q ^{-1}) \det(A) \det(Q) = \frac{1}{\det(Q) }\det(A) \det(Q) = \det(A) \tag*{■} $$
 
+---
+
+ref:
+
+:    Stephen H. Friedberg, Linear Algebra, 4th Edition

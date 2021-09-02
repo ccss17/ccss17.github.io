@@ -1,21 +1,15 @@
 
-!!! info "ref"
-
-    https://sites.math.washington.edu/~morrow/336_15/papers/gianni.pdf
-
-    https://arthasekuritas.com/researchpdf/arthalastcompany.pdf
-
 # 초실수
 
 ## 자유극대필터 $\mathcal{F}$ 
 
-!!! tldr ""
+!!! def ""
 
     Cofinite subset : $Y \subset X$ 인 집합 $X, Y$ 에 대하여 $X \setminus Y$ 가 유한집합일 때 $Y$ 를 cofinite 라고 한다. 
 
 - Cofinite 는 무한집합일 수도 있고 유한집합일 수도 있다. 
 
-!!! tldr ""
+!!! def ""
 
     극대필터(Ultrafilter) : 집합 $X$ 에 대한 극대필터는 다음을 만족하는 $X$ 의 부분집합의 집합 $\mathcal{F}$ 이다. 
 
@@ -31,7 +25,7 @@
 
 - 초실수를 구성하기 위하여 우리는 $\N$ 에 대한 자유 극대필터를 사용한다.
 
-!!! tldr "$\mathcal{F}$ "
+!!! def "$\mathcal{F}$ "
 
     $\N$ 의 자유 극대 필터 $\mathcal{F}$ 가 존재한다. 
 
@@ -47,11 +41,11 @@
 
 - 증명
 
-    [초른의 보조정리](../Set/InfiniteSet/#8e7118900) 를 사용하면 이를 만족하는 많은 $\mathcal{F}$ 가 존재한다는 것을 증명할 수 있다. 
+    [초른의 보조정리](../Set/InfiniteSet/#b78f346ef) 를 사용하면 이를 만족하는 많은 $\mathcal{F}$ 가 존재한다는 것을 증명할 수 있다. 
 
     그러나 이들을 명시적으로 구성하여 보일 수는 없다.
 
-!!! tldr "$\equiv$ "
+!!! def "$\equiv$ "
 
     $\N$ 의 자유극대필터 $\mathcal{F}$ 에 대한 $\R ^{\N}$ 의 동치관계 $\equiv$ 를 다음과 같이 정의한다. 
 
@@ -65,7 +59,7 @@
 
     두 실수 무한 수열 $x = \big < 1,2,3,4, \dots \big >, y = \big < 1,2,2,4, \dots \big >$ 가 오직 $3$ 번째 항에서 다르다면 $x \equiv y$ 라고 정의한다.
 
-!!! tldr ""
+!!! def ""
 
     $\equiv$ 는 동치관계이다.
 
@@ -91,7 +85,7 @@
 
 ## 초실수의 정의
 
-!!! tldr "초실수 집합(Hyperreal Number Set)"
+!!! def "초실수 집합(Hyperreal Number Set)"
 
     초실수 집합은 $\R ^{\N}$ 의 동치관계 $\equiv$ 에 대한 동치류 $[r] = \{s \in \R ^{\N} : r \equiv s\}$ 에 대한 몫집합
 
@@ -123,7 +117,7 @@
 
     [연속체 가설](../Set/InfiniteSet/#90af6e075) 을 가정하면 모든 초실수체는 순서체로써 서로 동형이다. 그러나 [연속체 가설](../Set/InfiniteSet/#90af6e075) 을 부정한다면 서로 동형이 아닌 초실수체가 존재하게 된다. 
 
-!!! tldr "초실수의 기수"
+!!! def "초실수의 기수"
 
     $$ |{}^{*}\R | = 2 ^{\aleph _0} $$
 
@@ -131,7 +125,7 @@
 
     초실수체 ${}^{*}\R$ 이 가산 index 집합 $\N$ 에 대한 실수 $\R$ 의 초거듭제곱(ultrapower) ${}^{*}\R = (\prod_{n \in \N}^{}\R) / \mathcal{F}$ 로 구성되었으므로 자명하게 $|\R| \leq |{}^{*}\R |$ 이다.
 
-    [실수의 기수가 $|\R| = 2 ^{\aleph _0}$](../Set/InfiniteSet/#d91d642d4) 이고, $|{}^{*}\R |$ 이 실수체에 대한 가산 index 집합 $\N$ 의 거듭제곱이므로 
+    [실수의 기수가 $|\R| = 2 ^{\aleph _0}$](../Set/InfiniteSet/#bf64c0903) 이고, $|{}^{*}\R |$ 이 실수체에 대한 가산 index 집합 $\N$ 의 거듭제곱이므로 
 
     $$ 2 ^{\aleph _0} = |\R| \leq | {}^{*}\R | \leq (2 ^{\aleph _0}) ^{\aleph _0} = 2 ^{\aleph _0 \times \aleph _0} $$
 
@@ -141,7 +135,7 @@
 
     이다. ■ 
 
-!!! tldr "실수에서 초실수로"
+!!! def "실수에서 초실수로"
 
     다음과 같이 각 실수를 상수열의 동치류로 대응시키면, 실수체는 초실수체로 표준적으로 매장된다. 
 
@@ -159,13 +153,13 @@
 
 ## 초실수의 순서관계
 
-!!! tldr "$<$ "
+!!! def "$<$ "
 
     $$ [r] < [s] \iff \{n \in \N : r_n < s_n\} \in \mathcal{F} $$
 
 ## 초실수의 덧셈과 곱셈
 
-!!! tldr ""
+!!! def ""
 
     초실수의 덧셈 $+$ 과 곱셈 $\cdot$ 은 다음과 같이 성분 별 연산으로 정의된 함수 $+: {}^{*}\R \times {}^{*}\R \to {}^{*}\R, \cdot : {}^{*}\R \times {}^{*}\R \to {}^{*}\R$ 이다.
 
@@ -177,7 +171,7 @@
 
     $$ (a_0, a_1, a_2, \dots) + (b_0, b_1, b_2, \dots) = (a_0 + b_0, a_1 + b_1, a_2 + b_2, \dots) $$
 
-!!! tldr "$\llbracket \rrbracket$ "
+!!! def "$\llbracket \rrbracket$ "
 
     두 수열 $\big <r_n\big >, \big <s_n\big >$ 에 대하여 다음과 같이 정의한다. 
 
@@ -191,7 +185,7 @@
 
         $$ \llbracket r \in A \rrbracket  = \{n \in \N : r_n \in A\} $$
 
-!!! tldr ""
+!!! def ""
 
     초실수 연산 $+, \cdot$ 과 관계 $<$ 은 잘 정의(well-defined)되었다.
 
@@ -231,7 +225,7 @@
 
 ## 무한소와 무한대 
 
-!!! tldr "무한소(infinitesimal)의 존재 정리"
+!!! def "무한소(infinitesimal)의 존재 정리"
 
     $$ \exists \epsilon \in {}^{*}\R \text{ s.t. }\ \forall r \in \R ^{+} : 0 < \epsilon < r $$
 
@@ -245,7 +239,7 @@
 
     또한 $\{n \in \N : 0 < \frac{1}{n}\} = \N \in \mathcal{F}$ 이므로 $0 < \epsilon$ 이다. ■ 
 
-!!! tldr "무한대(unlimited)의 존재 정리"
+!!! def "무한대(unlimited)의 존재 정리"
 
     $$ \exists \omega \in {}^{*}\R \text{ s.t. }\ \forall x \in \R : \omega > x $$
 
@@ -257,7 +251,7 @@
 
     ![](https://upload.wikimedia.org/wikipedia/commons/5/53/N%C3%BAmeros_hiperreales.png)
 
-!!! tldr ""
+!!! def ""
 
     비표준 초실수(nonstandard hyperreal) : 실수가 아닌 초실수이다.
 
@@ -265,7 +259,7 @@
 
 - 무한대가 아닌 초실수를 유한 초실수(finite hyperreal)라고 한다. 아래 그림에서와 같이 [모든 유한 초실수 ${}^{*} r$ 은 실수 $r$ 과 무한소 초실수 $\epsilon$ 의 합으로 유일하게 나타낼 수 있다](#a07c0135a). 이때 $r$ 을 ${}^{*} r$ 의 표준 부분(standard part) 이라고 하고 $\text{st} ({}^{*} r)$ 이라고 쓴다. 
 
-!!! tldr "초실수의 분류"
+!!! def "초실수의 분류"
 
     지금까지의 논의를 기반으로 초실수를 다음과 같이 분류할 수 있다.
 
@@ -287,7 +281,7 @@
 
 ## hyperreal extension
 
-!!! tldr ""
+!!! def ""
 
     초실수 확대(hyperreal extension), Enlarged set : 집합 $A \subset \R$ 에 대하여 다음 조건이 충족되면 enlarged set $^{*}A \in {}^{*}\R$ 을 정의할 수 있다. 
 
@@ -305,7 +299,7 @@
 
     이다.
 
-!!! tldr ""
+!!! def ""
 
     초자연수(hypernatural) : 자연수 집합 $\N \subset \R$ 의 초실수 확대를 초자연수 ${}^{*} \N$ 라고 한다.
 
@@ -319,7 +313,7 @@
 
     $^{*}\N$ 을 초자연수(hypernatural) 이라고 한다. 
 
-!!! tldr ""
+!!! def ""
 
     초실수 확대는 잘 정의되었다.
 
@@ -333,7 +327,7 @@
 
 ## Extending functions
 
-!!! tldr ""
+!!! def ""
 
     실함수 확대(Extension of real function) : 실함수 $f: \R \to \R$ 를 초현실수를 표현하는 수열의 성분에 
 
@@ -341,7 +335,7 @@
     
     와 같이 적용하여 $^{*}f: {}^{*}\R \to {}^{*}\R$ 를 얻는 것이다.
     
-!!! tldr ""
+!!! def ""
 
     실함수 확대는 잘 정의되었다. 
 
@@ -359,7 +353,7 @@
 
     이다. 그러므로 Funciton extension 은 잘 정의되었다. ■ 
     
-!!! tldr ""
+!!! def ""
 
     실가함수 확대(Extension of real-valued function) : $A \subset \R$ 에 대한 실가함수 $f: A \to \R$ 의 extension $^{*}f: {}^{*}A \to {}^{*}\R$ 를 수열 
     
@@ -373,7 +367,7 @@
 
     따라서 이런 경우에, 즉 $r_i \not\in A$ 일 때는 $f(r_i) = 0$ 로 정의해버리는 것이다.
 
-!!! tldr ""
+!!! def ""
 
     초수열(hypersequence) : 수열 $\big <s_n\big > = \big <s_1,s_2, \dots\big >$ 는 실가함수 $s : \N \to \R$ 인데, 이를 초실수로 확장한 
 
@@ -385,7 +379,7 @@
 
 ## Transfer Principle
 
-!!! tldr ""
+!!! def ""
 
     Transfer Principle : 잘 정의된 $\R$ 에 대한 1차논리 명제 $\phi$ 와 ${}^{*}\R$ 에 대한 $\phi$ 의 $*$-변환 명제 ${}^{*}\phi$ 는 동치이다. 즉, 
 
@@ -455,7 +449,7 @@
     
     또한 이 사실을 [아르키메데스 성질](../Set/numbers/#85de9fd3f)을 1차 논리로 기술할 수 없기 때문이라고도 설명할 수 있다. 1차 논리로 기술할 수 없기에 transfer principle 을 사용할 수 없다. 
 
-!!! tldr ""
+!!! def ""
 
     structure $\big <{}^{*}\R ,+,\cdot ,<\big >$ 은 $+$ 와 $\cdot$ 의 항등원을 갖는 순서체이다. 
 
@@ -485,7 +479,7 @@
 
         개구간 $(0, 1) \in \R$ 은 ${}^{*}\R$ 에서 상한을 갖지 않는다. (*이건 왜 그럴까*)
 
-!!! tldr ""
+!!! def ""
 
     임의의 집합 $A, B \subset \R$ 에 대하여 다음이 성립한다. 
 
@@ -535,7 +529,7 @@
 
 # 초실수의 성질
 
-!!! tldr ""
+!!! def ""
 
     초실수 $b$ 을 다음의 조건들에 따라 다음과 같이 부르기로 한다.
 
@@ -557,7 +551,7 @@
 
 - 개별 숫자를 지칭할 때 유한(limited), 무한대(unlimited) 을 사용한다. 집합을 지칭할 때 finite 와 infinite 를 사용한다.
 
-!!! tldr ""
+!!! def ""
 
     $\forall X \in {}^{*}\R$ 에 대하여 다음과 같이 정의한다.
 
@@ -569,7 +563,7 @@
 
 ## 초실수 연산
 
-!!! tldr "초실수 연산 규칙"
+!!! def "초실수 연산 규칙"
 
     무한소 $\epsilon , \delta$ 과 appreciable $b, c$ 와 무한대 $H, K$ 에 대하여 초실수 연산 규칙은 다음과 같다. 
 
@@ -613,7 +607,7 @@
 
 ## Halos
 
-!!! tldr "$\backsimeq$ "
+!!! def "$\backsimeq$ "
 
     ${}^{*}\R$ 에서의 동치관계 $\backsimeq$ 를 다음과 같이 정의한다. 
 
@@ -623,7 +617,7 @@
 
 - $\epsilon \backsimeq 0$ 에서 "무한히 가까운" 이라는 개념이 나온다. 이것에 해석학의 증명의 핵심이 있기 때문에 잘 이해해야 한다.
 
-!!! tldr ""
+!!! def ""
 
     halo, monad : $b \in {}^{*}\R$ 의 halo 는 동치관계 $\backsimeq$ 의 동치류
 
@@ -635,7 +629,7 @@
 
 - $b$ 가 유한 초실수일 때 $b$ 의 halo 중에서 유일한 실수 $a$ 가 존재하는데, $a$ 를 $b$ 의 표준 부분(standard part)이라고 한다.
 
-!!! tldr "정리 3.1"
+!!! def "정리 3.1"
 
     $$ \forall b, c \in \R : b \backsimeq c \implies b = c $$
 
@@ -643,7 +637,7 @@
 
     $b \backsimeq c \land b \neq c$ 를 가정하자. 그러면 $b - c = r \neq 0$ 이다. 하지만 $r$ 이 무한소가 아니므로 이는 $b \backsimeq c$ 이라는 가정과 모순이다. ■ 
 
-!!! tldr "정리 3.2"
+!!! def "정리 3.2"
 
     유한 초실수 $b, c$ 에 대하여 다음이 성립한다. 
 
@@ -675,7 +669,7 @@
 
 ## Shadows(Standard part)
 
-!!! tldr "shadow 의 존재 정리, 표준 부분 원리"
+!!! def "shadow 의 존재 정리, 표준 부분 원리"
 
     모든 유한 초실수 $b$ 는 오직 하나의 실수 $s$ 와 무한히 가깝다. 
     
@@ -717,7 +711,7 @@
 
     마지막으로 $b$ 의 shadow 가 유일함을 보여야 한다. $b$ 에 무한히 가까운 실수 $s, s'$ 가 존재한다고 가정하자. 즉, $b \backsimeq s \land b \backsimeq s'$ 이다. 그러면 동치관계의 transitivity 에 의하여 $s \backsimeq s'$ 이다. 그러면 [정리 3.1](#9ae554f7f) 에 의하여 $s = s'$ 이다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     표준 부분 함수(standard part function), 초실수의 shadow : 표준 부분 원리에 의하여 임의의 유한 초실수 $b \in {}^{*}\R$ 에 대하여 $b = b_0 + \epsilon$ 을 만족하는 실수 $b_0$ 와 무한소 $\epsilon$ 이 유일하게 존재하는데, 이때 함수 
 
@@ -738,3 +732,11 @@
 # 비표준 해석학
 
 비표준 해석학에서의 수렴, 연속성, 증분, 미분 등등 일단 표준 해석학을 엄밀히 정리한 이후에 봐야 할듯
+
+---
+
+ref:
+
+:    https://sites.math.washington.edu/~morrow/336_15/papers/gianni.pdf
+
+:    https://arthasekuritas.com/researchpdf/arthalastcompany.pdf

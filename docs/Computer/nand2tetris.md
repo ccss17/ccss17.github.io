@@ -1,6 +1,5 @@
-!!! info "ref"
 
-    https://www.nand2tetris.org 
+이 책은 H 뉴스에서 사람들이 가장 가치있게 여기는 책 중 하나로 뽑혔다. 링크는..
 
 이 책이 다루는 내용은 다음과 같다.
 
@@ -44,7 +43,7 @@ $$f: \{0,1\} ^{n} \to \{0,1\}$$
 
 이다.
 
-!!! tldr ""
+!!! def ""
 
     Boolean function : 함수 
 
@@ -138,13 +137,13 @@ HDL 이 하드웨어 구현 언어이기 때문에 HDL 으로 프로그램을 �
 
 컴퓨터 하드웨어는 bus 라고 부르는 multi-bit array 를 연산하도록 설계된다. 가령 32비트 컴퓨터는 두 개의 32비트 버스 위에서 설계된 And 함수를 동작시킬 수 있다. 32비트 시스템에서는 게이트들이 32비트 입력 버스와 32비스 출력 버스를 갖도록 설계된다.
 
-!!! tldr ""
+!!! def ""
 
     Multi-Bit Boolean 함수 : $n$비트 시스템에서 $m$ 개의 입력을 Boolean 함수는 다음과 같이 정의된다.
 
     $$ f: \{0, 1\} ^{nm} \to \{0, 1\} ^{n} $$
 
-!!! tldr ""
+!!! def ""
 
     Multi-Bit Not : $n$비트 시스템의 $\text{Not}$ 게이트는 함수 
 
@@ -152,19 +151,19 @@ HDL 이 하드웨어 구현 언어이기 때문에 HDL 으로 프로그램을 �
 
     이다.
 
-!!! tldr ""
+!!! def ""
 
     Multi-Bit And : $n$비트 시스템의 $\text{And}$ 게이트는 입력으로 a[n], b[n] 을 받아서 out[n] = And(a[n], b[n]) 의 출력을 낸다. 즉, 다음과 같이 정의된 함수이다.
 
     $$ f: \{0, 1\} ^{n} \times \{0, 1\} ^{n} \to \{0, 1\} ^{n}, (x_1, x_2, \dots, x_n, x _{n+1}, \dots, x _{2n}) \to (x_1 \land x _{n+1}, \dots, x_n \land x _{2n}) $$
 
-!!! tldr ""
+!!! def ""
 
     Multi-Bit Or : $n$비트 시스템의 $\text{Or}$ 게이트는 입력으로 a[n], b[n] 을 받아서 out[n] = Or(a[n], b[n]) 의 출력을 낸다. 즉, 다음과 같이 정의된 함수이다.
 
     $$ f: \{0, 1\} ^{n} \times \{0, 1\} ^{n} \to \{0, 1\} ^{n}, (x_1, x_2, \dots, x_n, x _{n+1}, \dots, x _{2n}) \to (x_1 \lor x _{n+1}, \dots, x_n \lor x _{2n}) $$
 
-!!! tldr ""
+!!! def ""
 
     Multi-Bit Mux : $n$비트 시스템의 $\text{Mux}$ 게이트는 입력으로 a[n], b[n], sel 을 받아서 sel=0 이면 출력 out[n]=a[n] 을 내고 sel=1 이면 출력 out[n]=b[n] 을 낸다. 즉, 다음과 같이 정의된 함수 $f: \{0, 1\} ^{n} \times \{0, 1\} ^{n} \times \{0, 1\}$ 이다.
 
@@ -190,7 +189,7 @@ HDL 이 하드웨어 구현 언어이기 때문에 HDL 으로 프로그램을 �
 
 2개의 입력을 받는 논리 게이트는 임의의 입력을 받도록 일반화될 수 있다.
 
-!!! tldr ""
+!!! def ""
 
     $n$-way Or gate : $n$비트 입력 in[0], in[1], ..., in[n-1] 을 받아서 출력 Or(in[0], in[1], ..., in[n-1]) 을 낸다.
 
@@ -424,7 +423,7 @@ Counter 도 Specification 을 정의해두자. 기본적으로 Clock cycle 마�
 
 ### Machines
 
-!!! tldr ""
+!!! def ""
 
     기계어(machine language) : 프로세서와 레지스터들을 사용하여 메모리를 조작할 수 있도록 설계된 합의된 형식주의 언어이다.
 
@@ -812,3 +811,11 @@ Jack 이라는 high-level 언어를 만들어볼 것이고, 10장 11장에서 �
 # 11. Compiler II: Code Generation
 
 # 12. Operating System
+
+# 13. Postscript
+
+---
+
+ref:
+
+:    https://www.nand2tetris.org 

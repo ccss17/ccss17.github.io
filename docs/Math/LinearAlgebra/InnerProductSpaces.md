@@ -1,142 +1,6 @@
-!!! info "ref"
-
-    Stephen H. Friedberg, Linear Algebra, 4th Edition
-
-# Complex Number
-
-!!! tldr "허수(imaginary number)"
-
-    허수는 $i = \sqrt[]{-1}$ 이다.
-
-!!! tldr "복소수(Complex Number)"
-
-    복소수는 실수 $a, b$ 와 허수 $i$ 에 대하여 $z = a+ bi$ 이다.
-
-- 제곱하여 음수인 $-1$ 이 나오는 실수는 존재하지 않는다. 그러나 대수학을 전개하다보면 실수체만으로는 일반적인 이론을 전개하기가 쉽지 않다. 가령 $x ^{2}+1$ 의 해를 표현할 때 실수체에서 계수를 가져온 다항식의 해는 존재하지 않는다. 따라서 존재하지 않는 수인 허수 $i$ 를 도입하여 실수체를 복소수체로 확장한다.
-
-- **복소수 $z = a+bi$ 의 실수부를 $\Re (z) = \mathcal{Re}(z) = \text{Re}(z) = a$ 로 표기하고, 허수부를 $\Im (z) = \mathcal{Im}(z) = \text{Im}(z) = b$ 로 표기한다.**
-
-!!! tldr "복소수체(Complex number field)"
-
-    복소수체 $\mathbb{C}$ 는 두 복소수 $z = a+bi, w = c+di$ 에 대하여 다음의 합과 곱이 정의된 실수체의 확장체이다.
-
-    1. $z+w = (a+bi) + (c+di) = (a+c) + (b+d)i$
-
-    2. $zw = (a+bi)(c+di) = (ac-bd) + (bc + ad)i$
-
-- 복소수체가 체라는 것은 쉽게 증명할 수 있다. 가령 실수 $0$ 은 덧셈의 항등원이고 실수 $1$ 은 곱셈의 항등원이며 $a+bi$ 의 덧셈의 역원은 $(-a)+(-b)i$ 이다. 또한 $0$ 이 아닌 복소수 $a+bi$ 의 곱셈의 역원은 $\dfrac{a}{a ^{2}+b ^{2}}+\bigg (\dfrac{b}{a ^{2}+b ^{2}}\bigg )i$ 이다. 체의 나머지 공리도 쉽게 증명가능하다.
-
-!!! tldr "켤레복소수(complex conjugate)"
-
-    복소수 $a+bi$ 의 켤레복소수는 $\overline{a+bi} = a-bi$ 이다.
-
-## Properties of Complex Number (1)
-
-!!! tldr "켤레복소수의 성질 (1)"
-
-    복소수 $z, w$ 에 대하여 다음이 성립한다. 
-
-    1. $\overline{\overline{z}} = z$
-
-    2. $\overline{z+w} = \overline{z}+\overline{w}$
-
-    3. $\overline{zw} = \overline{z}\cdot \overline{w}$
-
-    4. $w \neq 0 \implies \overline{\dfrac{z}{w}}= \dfrac{\overline{z}}{\overline{w}}$
-
-    5. $z \in \R \implies z = \overline{z}$
-
-- 증명
-
-    복소수의 정의와 복소수의 합과 곱의 정의, 그리고 켤레복소수의 정의에 의하여 다 매우 쉽게 증명 가능하다.
-
-## Absolute Value
-
-!!! tldr "복소수의 절댓값(absolute value) 또는 법(modulus)"
-
-    복소수 $z = a + bi$ 의 절댓값은 실수 $|z| = \sqrt[]{a ^{2}+b ^{2}}$ 이다.
-
-- 임의의 복소수 $z = a+bi$ 에 대하여 $z \overline{z}=(a+bi)(a-bi)=a ^{2}+b ^{2} \geq 0$ 이므로 $z \overline{z}$ 는 음이 아닌 실수이다. 
-
-!!! tldr "복소수의 절댓값의 성질"
-
-    복소수 $z$ 에 대하여 다음이 성립한다.
-
-    1. $z \overline{z} = |z| ^{2}$
-
-    2. $|z| = |\overline{z}|$
-
-- 증명
-
-    복소수의 정의와 절댓값의 정의에 의하여 쉽게 증명된다.
-
-## Properties of Complex Number (2)
-
-!!! tldr "켤레복소수의 성질 (2)"
-
-    두 복소수 $z, w$ 에 대하여 다음이 성립한다.
-
-    1. $|zw| = |z||w|$
-
-    2. $w \neq 0 \implies \bigg |\dfrac{z}{w} \bigg | = \dfrac{|z|}{|w|}$
-
-    3. $|z+w| \leq |z| + |w|$
-
-    4. $|z| - |w| \leq |z + w|$
-
-- 증명
-
-    1:
-
-    $$ |zw| ^{2} = zw \overline{zw} = zw \overline{z}\cdot \overline{w} = z \overline{z}w \overline{w} = |z|^{2}|w|^{2} \tag*{■}$$
-
-    2:
-
-    $$ |z| = \bigg |  \frac{z}{w}w\bigg | = \bigg |\frac{z}{w} \bigg ||w| = \bigg |\frac{1}{w}z \bigg ||w| = \bigg |\frac{1}{w} \bigg ||z||w| = \frac{1}{|w|}|z||w| $$
-
-    $$ \iff \bigg |\frac{z}{w} \bigg ||w| = \frac{1}{|w|}|z||w| \iff \bigg |\frac{z}{w} \bigg | = \frac{|z|}{|w|} \tag*{■}$$
-
-    3:
-
-    복소수 $x = a + bi$ 에 대하여 다음이 성립한다. 
-
-    $$ x + \overline{x} = (a+bi) +(a-bi) = 2a \leq 2 \sqrt[]{a ^{2} + b ^{2}} = 2|x| $$
-
-    즉, $x + \overline{x} \leq 2|x|$ 가 성립한다. 이 사실과 켤레복소수의 성질 (1) 과 이미 증명한 1) 에 의하여 적당한 복소수 $w, z$ 에 대하여 $x = w \overline{z}$ 를 가정하면 다음이 성립한다. 
-
-    $$ w \overline{z} + \overline{w}z \leq 2|w \overline{z}| = 2|w||\overline{z}| = 2|z||w| $$
-
-    즉, $w \overline{z}+ \overline{w}z \leq 2|z||w|$ 이다. 이 사실과 복소수의 절댓값의 성질과 켤레복소수의 성질 (1) 에 의하여 다음이 성립한다.
-
-    $$ \begin{equation}\begin{split} |z+w| ^{2} &= (z+w)\overline{(z+w)}=(z+w)(\overline{z}+\overline{w}) = z \overline{z} + w \overline{z} + z \overline{w} + w \overline{w}\\ &\leq |z|^{2} + 2|z||w| + |w| ^{2} = (|z| + |w|) ^{2}\\ \end{split}\end{equation} \tag*{} $$
-
-    $$ \iff  |z+w|^{2} \leq (|z| + |w|) ^{2} \iff |z+w| \leq |z|+|w| \tag*{■} $$
-
-    4:
-
-    이미 증명한 1), 3) 에 의하여 다음이 성립한다. 
-
-    $$ |z| = |z+w-w| \leq |z+w| + |-w| = |z+w| + |w| $$
-
-    $$ \iff |z|-|w| \leq |z+w| \tag*{■} $$
-
-## Complex plane
-
-!!! tldr "복소평면(Complex plane)"
-
-    복소평면은 복소수체 $\mathbb{C}$ 를 $x$축을 실수부, $y$축을 허수부로하는 좌표평면 $\R ^{2}$ 에 대응시킨 좌표평면이다.
-
-- 정의에 의하여 $x$축을 실수축(real axis), $y$축을 허수축(imaginary axis)으로 부른다.
-
-- 복소수체 $\mathbb{C}$ 와 벡터공간 $\R ^{2}$ 는 동형사상 $f: \mathbb{C}\to \R ^{2}, x+yi \mapsto (x, y)$ 이 존재함으로 인하여 모든 구조와 성질이 그대로 보존되고, 복소수를 좌표평면의 좌표로 일대일 대응시킬 수 있다.
-
-- 복소평면에서 복소수 $z = x+iy$ 는 다음과 같이 벡터이다. 
-
-    ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Complex_conjugate_picture.svg/330px-Complex_conjugate_picture.svg.png)
-
 # Inner product
 
-!!! tldr "내적(inner product)"
+!!! def "내적(inner product)"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 에서 정의된 내적은 $x, y, z \in \mathbf{V}, c \in \mathbf{F}$ 에 대한 다음의 조건을 만족하는 함수 $\big < \cdot , \cdot \big >: \mathbf{V} \times \mathbf{V}\to \mathbf{F}$ 이다.
 
@@ -172,7 +36,7 @@
 
 ## Standard Inner Product
 
-!!! tldr "표준 내적(standard inner product)"
+!!! def "표준 내적(standard inner product)"
 
     표준 내적은 $\mathbf{F}^{n}$ 의 두 벡터 $x = (a_1, a_2, \dots, a_n), y = (b_1, b_2, \dots, b_n)$ 에 대하여 다음과 같이 정의된 내적 $\big <\cdot , \cdot \big > : \mathbf{F}^{n} \times \mathbf{F}^{n} \to \mathbf{F}$ 이다.
 
@@ -191,7 +55,7 @@
 
 ## Adjoint of Matrix
 
-!!! tldr "켤레 전치행렬(conjugate transpose), 수반행렬(adjoint)"
+!!! def "켤레 전치행렬(conjugate transpose), 수반행렬(adjoint)"
 
     행렬 $A \in \mathbf{M}_{m \times n}(\mathbf{F})$ 와 각 $i, j$ 에 대하여 $(A ^{*}) _{ij} = \overline{A}_{ji}$ 인 $n \times m$ 행렬 $A ^{*}$ 를 $A$ 의 수반행렬이라 한다.
 
@@ -203,7 +67,7 @@
 
 ## Frobenius Inner Product
 
-!!! tldr "프로베니우스 내적(Frobenius inner product)"
+!!! def "프로베니우스 내적(Frobenius inner product)"
 
     프로베니우스 내적은 벡터공간 $\mathbf{V}=\mathbf{M}_{n \times n}(\mathbf{F})$ 와 두 행렬 $A, B \in \mathbf{V}$ 에 대한 내적 $\big <A,B \big >_{\text{F}}=\text{tr} (B {}^{*} A)$ 이다.
 
@@ -219,7 +83,7 @@
 
 ## Inner Product Space
 
-!!! tldr "내적공간(inner product space), 복소내적공간(complex inner product space), 실내적공간(real inner product)"
+!!! def "내적공간(inner product space), 복소내적공간(complex inner product space), 실내적공간(real inner product)"
 
     내적공간은 내적이 주어진 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 이다.
     
@@ -247,7 +111,7 @@
 
 ## Properties of Inner Product
 
-!!! tldr "정리 6.1"
+!!! def "정리 6.1"
 
     내적공간 $\mathbf{V}$ 와 벡터 $x,y,z \in \mathbf{V}$ 와 스칼라 $c \in \mathbf{F}$ 에 대하여 다음이 성립한다.
 
@@ -297,11 +161,9 @@
 
     $$ \iff \overline{y} = \overline{z} \iff y = z $$
 
-## Antilinear Map
+!!! def "Antilinear map, 켤레선형(conjugate-linear)"
 
-!!! tldr "Antilinear map, 켤레선형(conjugate-linear)"
-
-    $\mathbf{F} \in \{\R, \mathbb{C}\}$ 인 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 와 벡터 $x, y \in \mathbf{V}$ 와 스칼라 $a, b \in \mathbf{F}$ 대하여 다음을 만족하는 함수 $f: \mathbf{V}\to \mathbf{W}$ 를 antilinear 또는 켤레 선형이라고 한다.
+    체 $\mathbf{F} \in \{\R, \mathbb{C}\}$ 인 $\mathbf{F}$-벡터공간 $\mathbf{V}$ 와 $\mathbf{W}$ 와 벡터 $x, y \in \mathbf{V}$ 와 스칼라 $a, b \in \mathbf{F}$ 대하여 다음을 만족하는 함수 $f: \mathbf{V}\to \mathbf{W}$ 를 antilinear 또는 켤레 선형이라고 한다.
 
     $$ f(ax + by) = \overline{a}f(x) + \overline{b}f(y) $$
 
@@ -319,7 +181,7 @@
 
 # Norm
 
-!!! tldr "노름(norm), 길이(length)"
+!!! def "노름(norm), 길이(length)"
 
     $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 노름은 $x, y \in \mathbf{V}$ 와 스칼라 $c \in \mathbf{F}$ 에 대하여 다음 조건을 만족하는 실가함수 $\|\cdot \|: \mathbf{V}\to \R ^{\geq 0}$ 이다. 
 
@@ -343,7 +205,7 @@
 
 ## Normed vector space
 
-!!! tldr "노름공간(Normed vector space)"
+!!! def "노름공간(Normed vector space)"
 
     노름이 정의된 벡터공간이다.
 
@@ -365,7 +227,7 @@
 
 ## Properties of Norm
 
-!!! tldr "정리 6.2"
+!!! def "정리 6.2"
 
     $\mathbf{F}$-내적공간 $\mathbf{V}$ 와 임의의 벡터 $x, y \in \mathbf{V}$, 스칼라 $c \in \mathbf{F}$ 와 노름 $\|x\|=\sqrt[]{\big <x,x \big >}$ 에 대하여 다음이 성립한다.
 
@@ -419,9 +281,9 @@
 
     $$ \bigg [\sum_{i=1}^{n}|a_i + b_i|^{2} \bigg ]^{1/2}\leq \bigg [\sum_{i=1}^{n}|a_i|^{2} \bigg ]^{1/2}+\bigg [\sum_{i=1}^{n}|b_i|^{2} \bigg ]^{1/2} $$
 
-## Euclidean Space
+## Euclidean Space and its Norm
 
-!!! tldr "유클리드 공간(Euclidean vector space)"
+!!! def "유클리드 공간(Euclidean vector space)"
 
     n차원 유클리드 공간 $\R ^{n}$ 은 표준내적이 부여된 유한차원 내적공간이다.
 
@@ -438,9 +300,7 @@
     $$ \|x\| = 2|x_1| + \sqrt[]{3|x_2| ^{2} + \max (|x_3|, 2|x_4|) ^{2}}
     $$
 
-## Norm of Euclidean Space
-
-!!! tldr "유클리드 노름(Euclidean norm), $L_2$ 노름($L_2$ norm)"
+!!! def "유클리드 노름(Euclidean norm), $L_2$ 노름($L_2$ norm)"
 
     n차원 유클리드 공간 $\R ^{n}$ 의 벡터 $x = (x_1, x_2, \dots, x_n)$ 의 유클리드 노름은 다음과 같다. 
 
@@ -454,7 +314,7 @@
 
 - 유클리드 노름이 $\R ^{n}$ 에서 가장 자주 사용된다. 그러나 아래에서 볼 수 있듯이 $\R ^{n}$ 에는 다른 노름도 존재한다. 그러나 이 모든 노름들은 그것들이 모두 같은 위상에서 정의되었다는 점에서 본질적으로 같다.
 
-!!! tldr "유클리드 거리(Euclidean distance), $L_2$ 거리($L_2$ distance)"
+!!! def "유클리드 거리(Euclidean distance), $L_2$ 거리($L_2$ distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 유클리드 거리는 다음과 같은 거리함수 $d_2: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
 
@@ -472,7 +332,7 @@
 
     이것이 피타고라스의 정리에 의하여 도출되었으므로 피타고라스 거리(Pythagorean distance)라고도 부른다.
 
-!!! tldr "유클리드 거리 제곱(Squared Euclidean distance)"
+!!! def "유클리드 거리 제곱(Squared Euclidean distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 유클리드 거리 제곱은 다음과 같은 거리함수 $d_2 ^{2}: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
 
@@ -482,7 +342,7 @@
 
 - 유클리드 거리 제곱은 거리 공간(metric space)을 형성하지는 않는다. 삼각 부등식을 만족하지 못하기 때문이다.
 
-!!! tldr "Taxicab norm, 맨하튼 노름(Manhattan norm), $L_1$ 노름($L_1$ norm)"
+!!! def "Taxicab norm, 맨하튼 노름(Manhattan norm), $L_1$ 노름($L_1$ norm)"
 
     n차원 유클리드 공간 $\R ^{n}$ 의 벡터 $x = (x_1, x_2, \dots, x_n)$ 의 $L_1$ 노름은 다음과 같다. 
 
@@ -496,13 +356,13 @@
 
     초록선은 출발지에서 목적지까지 가는 유클리드 노름이다. 빨강, 노랑, 파란선은 $L_1$ 노름이다. 빨강, 노랑, 파란선의 길이가 모두 동일하다는 것에 주목하자.
 
-!!! tldr "Taxicab distance, 맨하튼 거리(Manhattan distance), $L_1$ 거리 ($L_1$ distance)"
+!!! def "Taxicab distance, 맨하튼 거리(Manhattan distance), $L_1$ 거리 ($L_1$ distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 $L_1$ 거리는 다음과 같은 거리함수 $d_1: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
 
     $$ d_1(x, y) = \|x-y\| _{1} = \sum_{i=1}^{n}|x_i-y_i| $$
 
-!!! tldr "p-norm, $L_p$ 노름($L_p$ norm)"
+!!! def "p-norm, $L_p$ 노름($L_p$ norm)"
 
     n차원 유클리드 공간 $\R ^{n}$ 의 벡터 $x = (x_1, x_2, \dots, x_n)$ 의 $L_p$ 노름은 다음과 같다. 
     
@@ -510,7 +370,7 @@
 
 - $p = 1$ 일 때 $L_1$ 노름이 되고 $p = 2$ 일 때 유클리드 노름이 된다.
 
-!!! tldr "민코프스키 거리(Minkowski distance), $L_p$ 거리($L_p$ distance)"
+!!! def "민코프스키 거리(Minkowski distance), $L_p$ 거리($L_p$ distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 민코프스키 거리는 다음과 같은 거리함수 $d_p: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
 
@@ -518,7 +378,7 @@
     
 - 민코프스키 거리는 유클리드 거리와 맨하튼 거리의 일반화이다.
 
-!!! tldr "무한 노름(infinity norm), 최대 노름(maximum norm), 상한 노름(supremum norm), $L _{\infty }$ 노름($L _{\infty }$ norm)"
+!!! def "무한 노름(infinity norm), 최대 노름(maximum norm), 상한 노름(supremum norm), $L _{\infty }$ 노름($L _{\infty }$ norm)"
 
     n차원 유클리드 공간 $\R ^{n}$ 의 벡터 $x = (x_1, x_2, \dots, x_n)$ 의 상한 노름은 다음과 같다. 
 
@@ -534,7 +394,7 @@
 
     ![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Vector_norms.svg/140px-Vector_norms.svg.png)
 
-!!! tldr "체비셰프 거리(Chebyshev distance), 최대 거리(maximum distance), $L _{\infty }$ 거리($L _{\infty }$ 거리)"
+!!! def "체비셰프 거리(Chebyshev distance), 최대 거리(maximum distance), $L _{\infty }$ 거리($L _{\infty }$ distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 체비셰프 거리는 다음과 같은 상한 거리 함수 $d _{\infty }: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
 
@@ -542,7 +402,7 @@
     
 - 체비셰프 거리는 민코프스키 거리에서 $p \to \infty$ 로 보낸 결과이다.
 
-!!! tldr "하한 노름(infimum norm), $L _{- \infty }$ 노름($L _{- \infty }$ norm)"
+!!! def "하한 노름(infimum norm), $L _{- \infty }$ 노름($L _{- \infty }$ norm)"
     
     n차원 유클리드 공간 $\R ^{n}$ 의 벡터 $x = (x_1, x_2, \dots, x_n)$ 의 하한 노름은 다음과 같다. 
 
@@ -556,7 +416,7 @@
 
     ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/2D_unit_balls.svg/1451px-2D_unit_balls.svg.png)
 
-!!! tldr "하한 거리(infimum distance), $L _{- \infty }$ 거리($L _{- \infty }$ distance)"
+!!! def "하한 거리(infimum distance), $L _{- \infty }$ 거리($L _{- \infty }$ distance)"
 
     n차원 유클리드 공간 $\R^{n}$ 과 벡터 $x = (x_1, x_2, \dots, x_n), y = (y_1, y_2, \dots, y_n) \in \R^{n}$ 에 대한 $x$ 와 $y$ 의 하한 거리는 다음과 같은 하한 거리 함수 $d _{-\infty }: \R ^{n} \times \R ^{n} \to \R$ 의 상이다.
     
@@ -564,11 +424,9 @@
 
 - 민코프스키 거리에서 $p \to - \infty$ 로 보내면 하한 거리 함수를 얻는다.
 
-# Orthogonal
+# Orthogonal in Euclidean Space
 
-## Orthogonal in Euclidean Space
-
-!!! tldr "코사인(cosine)"
+!!! def "코사인(cosine)"
 
     $C$ 가 직각인 삼각형 $ABC$ 에서 코사인 $A$ 는 다음과 같은 빗변에 대한 밑변의 비율이다.
 
@@ -578,7 +436,7 @@
 
     ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Trigonometry_triangle.svg/338px-Trigonometry_triangle.svg.png)
 
-!!! tldr "코사인 법칙(Law of cosines)"
+!!! def "코사인 법칙(Law of cosines)"
 
     삼각형 $ABC$ 의 세 각 $A, B, C$ 가 마주하는 변 $a, b, c$ 에 대하여 다음이 성립한다. 
 
@@ -620,7 +478,7 @@
 
     $$ \therefore c ^{2} = a ^{2} + b ^{2} -2ab \cos C \tag*{■} $$
 
-!!! tldr "두 벡터가 이루는 각"
+!!! def "두 벡터가 이루는 각"
 
     2차원 또는 3차원 유클리드 공간 $\mathbb{E} \in \{\R ^{2}, \R ^{3}\}$ 의 벡터 $x, y$ 가 이루는 각은 다음과 같다.
 
@@ -669,7 +527,7 @@
 
     $$ \therefore \theta = \arccos \bigg ( \dfrac{\big <v,u \big >}{\|v\|\|u\|}\bigg ) \tag*{■} $$
 
-!!! tldr "유클리드 공간에서의 직교"
+!!! def "유클리드 공간에서의 직교"
 
     2차원 또는 3차원 유클리드 공간 $\mathbb{E} \in \{\R ^{2}, \R ^{3}\}$ 의 벡터 $x, y$ 가 직교인 것과 $\big <x,y \big > = 0$ 인 것은 동치이다.
 
@@ -685,9 +543,9 @@
 
     $$ \iff \big <u,v \big > = 0 \tag*{■} $$
 
-## Definition of Orthogonal
+# Orthogonal
 
-!!! tldr "직교(orthogonal), 수직(perpendicular)"
+!!! def "직교(orthogonal), 수직(perpendicular)"
 
     내적공간 $\mathbf{V}$ 와 벡터 $x, y \in \mathbf{V}$ 에 대하여 $\big <x,y \big > = 0$ 이면 두 벡터는 직교한다.
 
@@ -695,25 +553,23 @@
 
 - 벡터에 영이 아닌 스칼라를 곱해도 직교성은 불변한다.
 
-!!! tldr "직교집합(orthogonal set)"
+!!! def "직교집합(orthogonal set)"
 
     내적공간 $\mathbf{V}$ 의 부분집합 $S$ 에 대하여 $S$ 에 속하는 서로 다른 임의의 두 벡터가 직교하면 $S$ 를 직교집합이라 한다.
 
-!!! tldr "단위벡터(unit vector)"
+!!! def "단위벡터(unit vector)"
 
     내적공간 $\mathbf{V}$ 에서 $\|x\| = 1$ 인 벡터이다.
 
-## Orthonormal
+## Orthonormal, Normalizing
 
-!!! tldr "정규직교집합(orthonormal)"
+!!! def "정규직교집합(orthonormal)"
 
     내적공간의 부분집합이 단위벡터로 구성된 직교집합이면 정규직교집합이라 한다.
 
 - 집합 $S = \{v_1, v_2, \dots\}$ 가 정규직교집합인 것과 $\big <v_i,v_j \big > = \delta _{ij}$ 인 것은 동치이다. 
 
-## Normalizing
-
-!!! tldr "정규화(normalizing)"
+!!! def "정규화(normalizing)"
 
     내적공간 $\mathbf{V}$ 의 영이 아닌 벡터를 방향을 유지한채 크기만 단위벡터로 바꾸는 함수 $f: \mathbf{V} \setminus \{0\} \to \mathbf{V} \setminus \{0\}$ 로써 다음과 같이 정의된다.
 
@@ -735,7 +591,7 @@
 
     $$ \bigg \{\frac{1}{\sqrt[]{2}}(1,1,0), \frac{1}{\sqrt[]{3}}(1, -1, 1), \frac{1}{\sqrt[]{6}}(-1, 1, 2) \bigg \} $$
 
-<!-- !!! tldr "복소함수(function of a complex variable)"
+<!-- !!! def "복소함수(function of a complex variable)"
 
     복소함수는 정의역과 공역이 모두 복소수인 함수이다. 
 
@@ -747,11 +603,11 @@
 
     함수 $e ^{x+iy} = e ^{x}(\cos y + i \sin y)$ 는 복소함수이다.
 
-!!! tldr ""
+!!! def ""
 
     폐구간 $[0, 2 \pi ]$ 에서 연속인 복소함수들로 이루어진 집합에 내적 $\big <f,g \big >=\displaystyle \dfrac{1}{2 \pi }\int_{0}^{2 \pi }f(t)\overline{g(t)}dt$ 가 주어진 내적공간을 $\mathbf{H}$ 라 정의한다.
 
-!!! tldr ""
+!!! def ""
 
     복소함수 $f = f_1 + if_2$ 의 적분에 대하여 다음이 성립한다.
 
@@ -761,7 +617,7 @@
 
 - 복소해석학에 대한 자세한 증명과 설명은 생략한다. 복소함수의 적분에서는 허수 $i$ 가 상수취급되므로 위 정리가 성립한다.
 
-!!! tldr "오일러 식(Euler's formula)"
+!!! def "오일러 식(Euler's formula)"
 
     복소수 $c = a+ib$ 와 자연상수 $e$ 에 대하여 다음과 같이 정의한다.
 
@@ -771,7 +627,7 @@
 
 ## Orthonormal Basis
 
-!!! tldr "정규직교기저(orthonormal basis)"
+!!! def "정규직교기저(orthonormal basis)"
 
     내적공간의 부분집합이 정규직교집합이고 순서기저이면 정규직교기저라 한다.
 
@@ -783,7 +639,7 @@
 
 # Gram–Schmidt Process
 
-!!! tldr "정리 6.3"
+!!! def "정리 6.3"
 
     내적공간 $\mathbf{V}$ 와 영이 아닌 벡터로 이루어진 직교집합 $S = \{v_1, v_2, \dots, v_k\}$ 와 $y \in \text{span} (S)$ 에 대하여 다음이 성립한다. 
 
@@ -797,7 +653,7 @@
 
     즉, $a_j = \dfrac{\big <y,v_j \big >}{\|v_j\|^{2}}$ 이다. ■ 
 
-!!! tldr "정리 6.3 따름정리 1"
+!!! def "정리 6.3 따름정리 1"
 
     내적공간 $\mathbf{V}$ 와 영이 아닌 벡터로 이루어진 정규직교집합 $S = \{v_1, v_2, \dots, v_k\}$ 와 $y \in \text{span} (S)$ 에 대하여 다음이 성립한다. 
 
@@ -807,7 +663,7 @@
 
     $S$ 가 정규직교집합이므로 정리 6.3 에서 바로 증명된다. ■ 
 
-!!! tldr "정리 6.3 따름정리 2"
+!!! def "정리 6.3 따름정리 2"
     
     내적공간에서 영이 아닌 벡터로 이루어진 직교집합은 일차독립이다.
 
@@ -825,9 +681,9 @@
 
 <!-- > p366 벡터공간 H 관련 데이터 -->
 
-!!! tldr "정리 6.4 그람-슈미트 직교화(Gram-Schmidt process)"
+!!! def "정리 6.4 그람-슈미트 직교화(Gram-Schmidt process)"
 
-    내적공간 $\mathbf{V}$ 의 일차독립인 부분집합 $S = \{w_1, w_2, \dots, w_n\}$ 에 대하여 집합 $S' = \{v_1, v_2, \dots, v_n\}$ 을 다음과 같이 정의하면 $S'$ 는 $\text{span} (S') = \text{span} (S)$ 이고 영이 아닌 벡터로 이루어진 직교 집합이다.
+    내적공간 $\mathbf{V}$ 의 일차독립인 부분집합 $S = \{w_1, w_2, \dots, w_n\}$ 에 대하여 집합 $S' = \{v_1, v_2, \dots, v_n\}$ 을 다음과 같이 정의하면 $S'$ 는 영이 아닌 벡터로 이루어진 직교 집합이고 $\text{span} (S') = \text{span} (S)$ 를 만족한다.
 
     $$ v_k = \begin{cases} w_1 & k = 1\\ w_k - \displaystyle \sum_{j=1}^{k-1}\dfrac{\big <w_k,v_j \big >}{\|v_j\|^{2}}v_j & 2 \leq k \leq n\\ \end{cases} \tag{6.1} $$
 
@@ -873,9 +729,7 @@
 
     같은 방식으로 $v_3 = x ^{2} - \frac{1}{3}$ 도 얻는다. 따라서 $\mathbf{P}_{2}(\R)$ 의 직교기저는 $\bigg \{1, x, x ^{2} - \dfrac{1}{3} \bigg \}$ 이다. 이를 정규화하면 $\bigg \{\dfrac{1}{\sqrt[]{2}}, \sqrt[]{\dfrac{3}{2}}x, \sqrt[]{\dfrac{5}{8}}(3x ^{2}-1)\bigg \}$ 을 얻는다. 이는 $\mathbf{P}_{2}(\R)$ 의 정규직교기저이다.
 
-## Legendre Polynomial
-
-!!! tldr "르장드르 다항식(Legendre polynomial)"
+!!! def "르장드르 다항식(Legendre polynomial)"
 
     $\mathbf{P}_{}(\R)$ 의 표준순서기저 $\{1,x,x ^{2}, \dots\}$ 에 그람-슈미트 직교화를 적용하여 얻은 직교기저 $\{v_1, v_2, \dots\}$ 에 대한 다항식 $\dfrac{v_k}{v_k(1)}$ 를 $k$차 르장드르 다항식이라 한다.
 
@@ -883,13 +737,15 @@
 
 ## Inner Product Space has an Orthonormal Basis
 
-!!! tldr "정리 6.5"
+!!! def "정리 6.5"
 
     점공간이 아닌 유한차원 내적공간에는 정규직교기저가 존재한다.
 
     점공간이 아닌 유한차원 내적공간 $\mathbf{V}$ 의 정규직교기저 $\beta= \{v_1, v_2, \dots, v_n\}$ 에 대하여 다음이 성립한다.
     
     $$x \in \mathbf{V} : x = \sum_{i=1}^{n}\big <x,v_i \big >v_i $$
+
+- **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.**
 
 - 이 정리는 내적공간은 정규직교기저를 가진다는 중요한 사실을 말해준다. 또한 임의의 벡터를 정규직교기저의 일차결합으로 나타내는 방법을 말해준다.
 
@@ -899,7 +755,7 @@
     
     정규직교기저 $\beta$ 의 존재성 증명이 끝났으니 나머지 증명은 정리 6.3 따름정리 1 에서 바로 나온다. ■ 
 
-!!! tldr "정리 6.5 따름정리"
+!!! def "정리 6.5 따름정리"
 
     정규직교기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 를 갖는 유한차원 내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 $A = [\mathbf{T}]_{\beta }$ 로 두면 임의의 $i, j$ 에 대하여 $A _{ij} = \big <\mathbf{T}(v_j), v_i \big >$ 이다.
 
@@ -909,7 +765,7 @@
 
     정리 6.5 에 의해 $\mathbf{T}(v_j) = \displaystyle \sum_{i=1}^{n}\big <\mathbf{T}(v_j), v_i \big >v_i$ 이다. 즉, $A _{ij} = \big <\mathbf{T}(v_j), v_i \big >$ 이다.
 
-<!-- !!! tldr "푸리에 계수(Fourier coefficient)"
+<!-- !!! def "푸리에 계수(Fourier coefficient)"
 
     내적공간 $\mathbf{V}$ 의 정규직교 부분집합 $\beta$ 와 $x \in \mathbf{V}$ 와 $y \in \beta$ 에 대하여 $\big <x,y \big >$ 를 $\beta$ 에 대한 $x$ 의 푸리에 계수라 한다.
 
@@ -917,7 +773,7 @@
 
 # Orthogonal Complements
 
-!!! tldr "직교여공간(Orthogonal complement)"
+!!! def "직교여공간(Orthogonal complement)"
 
     내적공간 $\mathbf{V}$ 의 공집합이 아닌 부분집합 $S$ 에 대하여 다음과 같이 정의된 집합 $S^{\perp}$ 을 $S$ 의 직교여공간이라 한다.
 
@@ -925,7 +781,7 @@
 
 - 즉, 직교여공간은 $S$ 의 모든 벡터와 수직인 벡터 집합이다.
 
-!!! tldr ""
+!!! def ""
 
     직교여공간은 부분공간이다.
 
@@ -953,9 +809,7 @@
 
     ![image](https://user-images.githubusercontent.com/16812446/129469457-b819249c-188d-4258-9537-7c827dd9d579.png)
 
-## Orthogonal Projection
-
-!!! tldr "문제 6.2-7"
+!!! def "문제 6.2-7"
 
     내적공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}$ 의 기저 $\beta$ 와 벡터 $z \in \mathbf{V}$ 에 대하여 다음이 성립한다.
     
@@ -971,15 +825,15 @@
 
     $$ \big <y,z \big > = \big <\sum_{i=1}^{n}a_iw_i, z \big > = \sum_{i=1}^{n}a_i \big <w_i,z \big > = 0 \tag*{■} $$
 
-!!! tldr "정리 6.6"
+## Orthogonal Projection
 
-    내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 다음이 성립한다.
-    
-    1. $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 와 벡터 $u = \displaystyle \sum_{i=1}^{k}\big <y,v_i \big >v_i \in \mathbf{W}$ 에 대하여 $y - u \in \mathbf{W}^{\perp}$ 이다.
+!!! def "정리 6.6"
 
-    2. $y - u \in \mathbf{W}^{\perp}$ 을 만족하게 하는 벡터 $u \in \mathbf{W}$ 가 유일하게 존재한다. 
+    내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 인 벡터 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다.
 
-- **이 정리는 내적공간 $\mathbf{V}$ 의 임의의 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 를 만족하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재함을 말해준다. 즉, [집합의 합](../Diagonalization/#f68ccee5d) 에 대하여 $\mathbf{V} = \mathbf{W}+\mathbf{W}^{\perp}$ 라는 것이다. 앞으로 이 정리는 이러한 형태의 명제로 자주 사용될 것이다.**  1) 이 $y = u + z$ 을 말해주고 2) 가 $u$ 의 유일성을 말해주는데 $u$ 의 유일성이 $z$ 의 유일성을 함의하므로 정리에서는 생략되었다. 
+    $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 에 대하여 $\displaystyle u = \sum_{i=1}^{k}\big <y,v_i \big >v_i$ 이다.
+
+- **이 정리는 $\mathbf{V} = \mathbf{W}+\mathbf{W}^{\perp}$ 임을 말해준다.**
 
 - 가령 다음과 같이 내적공간 $\R ^{3}$ 에서 점 $P$ 와 평면 $\mathbf{W}$ 사이의 거리를 구하는 문제가 존재한다.
 
@@ -993,23 +847,17 @@
 
     1:
 
-    $y \in \mathbf{V}, u \in \mathbf{W}$ 에 대하여 $z = y - u$ 라고 두고 $z \in \mathbf{W}^{\perp}$ 임을 보이자. 문제 6.2-7 에 의하여 $z$ 가 각 $v_j$ 에 수직임을 보이면 된다. $v_j$ 가 정규화된 기저이므로 $\big <v_j,v_j \big > = \|v_j\|^{2} = 1 ^{2} = 1$ 이고, 다음이 성립한다.
+    $y \in \mathbf{V}, u \displaystyle = \sum_{i=1}^{k}\big <y,v_i \big >v_i \in \mathbf{W}$ 에 대하여 $z = y - u$ 라고 두고 $z \in \mathbf{W}^{\perp}$ 임을 보이자. 문제 6.2-7 에 의하여 $z$ 가 각 $v_j$ 에 수직임을 보이면 된다. $v_j$ 가 정규화된 기저이므로 $\big <v_j,v_j \big > = \|v_j\|^{2} = 1 ^{2} = 1$ 이고, 다음이 성립한다.
 
     $$ \begin{equation}\begin{split} \big <z,v_j \big >&= \bigg <\bigg ( y - \sum_{i=1}^{k}\big <y,v_i \big >v_i\bigg ), v_j \bigg > = \big <y,v_j \big >- \sum_{i=1}^{k}\big <y,v_i \big >\big <v_i,v_j \big > \\ &= \big <y,v_j \big >- \big <y,v_j \big > = 0\\ \end{split}\end{equation} \tag*{} $$
 
+    이로써 임의의 벡터 $y \in \mathbf{V}$ 를 합으로 표현하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 존재한다는 것을 증명했다. ▲ 
+
     2:
 
-    $y - u' = z' \in \mathbf{W}^{\perp}$ 을 만족하는 $u' \in \mathbf{W}$ 가 존재하면 $y = u + z = u' + z'$ 이다. 부분공간은 합에 대하여 닫혀있으므로 $u - u' = z' - z \in \mathbf{W}\cap \mathbf{W}^{\perp} = \{0\}$ 이다. 즉, $u = u'$ 이다. ■ 
+    이제 $u, z$ 의 유일성을 증명하자. $y$ 를 합으로 표현하는 또 다른 벡터 $u' \in \mathbf{W}, z' \in \mathbf{W}^{\perp}$ 가 존재하면 $y = u + z = u' + z'$ 이다. $u - u' = z' - z \in \mathbf{W}\cap \mathbf{W}^{\perp} = \{0\}$ 이다. 즉, $u = u', z = z'$ 이다. ■ 
 
-- 프리드버그 선대수에서 서술한 원래의 정리 6.6 는 아래와 같다. 하지만 논리 관계가 이상한 것 같아서 임의로 정리를 수정했다.
-
-    *내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 인 벡터 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다.*
-
-    *$\{v_1, v_2, \dots, v_k\}$ 가 $\mathbf{W}$ 의 정규직교기저일 때 다음이 성립한다.*
-
-    $$ u = \sum_{i=1}^{k}\big <y,v_i \big >v_i $$
-
-!!! tldr "문제 6.1-10"
+!!! def "문제 6.1-10"
 
     내적공간 $\mathbf{V}$ 와 서로 직교하는 두 벡터 $x, y \in \mathbf{V}$ 에 대하여 $\|x+y\|^{2} = \|x\|^{2} + \|y\|^{2}$ 이다.
 
@@ -1019,7 +867,7 @@
 
     $$ \|x+y\|^{2} = \big <x+y,x+y \big > = \big <x,x \big > + \big <x,y \big > + \big <y,x \big > + \big <y,y \big > = \|x\|^{2} + 0 + \overline{\big <x,y \big >} + \|y\|^{2} = \|x\|^{2} + \|y\|^{2} $$
 
-!!! tldr "정리 6.6 따름정리"
+!!! def "정리 6.6 따름정리"
     
     내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 와 $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 와 벡터 $u = \displaystyle \sum_{i=1}^{k}\big <y,v_i \big >v_i \in \mathbf{W}$ 에 대하여 다음이 성립한다.
 
@@ -1041,11 +889,13 @@
 
     $\|y-x\| = \|y-u\|$ 로 두면 $\|u-x\|^{2} + \|z\|^{2} = \|z\|^{2}$ 이고 $\|u-x\| = 0 \iff x = u$ 이다. 이것의 역은 자명하다. ■ 
 
-!!! tldr "정사영(orthogonal projection)"
+!!! def "정사영(orthogonal projection)"
 
-    내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 와 $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 에 대하여 다음 벡터 $u$ 를 $y$ 의 $\mathbf{W}$ 에 대한 정사영이라 한다.
+    내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 와 $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 에 대하여 다음 벡터 $u$ 를 $\mathbf{W}$ 위로의 $y$ 의 정사영이라 한다.
 
     $$ u = \sum_{i=1}^{k}\big <y,v_i \big >v_i \in \mathbf{W} $$
+
+- $u$ 를 단순히 $\mathbf{W}$ 로의 ($y$ 의) 사영이라고도 한다.
     
 - 정리 6.6 은 비유적으로 말해서 벡터 $y$ 의 종점에 부분공간 $\mathbf{W}$ 방향으로 빛을 비췄을 때 정사영 $u$ 가 부분공간 $\mathbf{W}$ 에 생기는 그림자이고, 그 그림자가 유일함을 말해준다. 
 
@@ -1055,7 +905,7 @@
 
     $$ \dfrac{a \cdot b}{a \cdot a}a = \dfrac{\big <a,b \big >}{\big <a,a \big >}a = \dfrac{\big <a,b \big >}{\|a\|^{2}}a $$
 
-    직선을 이루는 부분공간 $y$ 는 1차원이므로 $k = 1$ 이다. 또한 $y$ 의 기저는 $\{a\}$ 이고 이것을 [그람-슈미트 직교화](#2135d3f87)를 해도 $\{a\}$ 이다. 따라서 [정규화](#ed05bfed9)로 정규직교기저를 만들면 $\bigg \{\dfrac{a}{\|a\|} \bigg \}$ 가 된다. 따라서 이 정리를 사용하여 정사영을 구해보면 [내적의 정의](#3874b2a1f) 와 [내적의 성질](#99baac14a) 에 의하여 다음과 같다. 
+    직선을 이루는 부분공간 $y$ 는 1차원이므로 $k = 1$ 이다. 또한 $y$ 의 기저는 $\{a\}$ 이고 이것을 [그람-슈미트 직교화](#0ee45a6c5)를 해도 $\{a\}$ 이다. 따라서 [정규화](#ed05bfed9)로 정규직교기저를 만들면 $\bigg \{\dfrac{a}{\|a\|} \bigg \}$ 가 된다. 따라서 이 정리를 사용하여 정사영을 구해보면 [내적의 정의](#3874b2a1f) 와 [내적의 성질](#99baac14a) 에 의하여 다음과 같다. 
 
     $$ \bigg <b, \dfrac{a}{\|a\|}\bigg > \dfrac{a}{\|a\|} = \overline{\dfrac{1}{\|a\|}} \overline{\big <a,b \big >}\dfrac{a}{\|a\|} = \dfrac{\big <a,b \big >}{\|a\|^{2}}a $$
     
@@ -1075,9 +925,7 @@
 
     따라서 $f_1(x) = 0 \cdot u_1 + \dfrac{\sqrt[]{6}}{5}u_2 + 0 \cdot u_3 = \dfrac{3}{5}x$ 이다.
 
-## Properties of Orthogonal Complements
-
-!!! tldr "문제 6.2-8"
+!!! def "문제 6.2-8"
 
     영이 아닌 벡터로 이루어진 직교집합에 그람-슈미트 직교화를 하면 동일한 집합이 나온다.
 
@@ -1087,7 +935,7 @@
 
     $k = 1$ 을 가정하면 자명하게 성립한다. ▲ 
 
-    $k = n - 1$ 에서 정리가 성립함을 가정하면 [그람-슈미트 직교화](#2135d3f87) 에 의하여 다음이 성립한다.
+    $k = n - 1$ 에서 정리가 성립함을 가정하면 [그람-슈미트 직교화](#0ee45a6c5) 에 의하여 다음이 성립한다.
 
     $$ 
     \begin{equation}\begin{split}
@@ -1098,7 +946,7 @@
 
     이로써 증명이 끝났다. ■ 
 
-!!! tldr "정리 6.7"
+!!! def "정리 6.7"
 
     유한차원 내적공간 $\mathbf{V}$ 의 정규직교집합 $S$ 에 대하여 다음이 성립한다. 
 
@@ -1138,13 +986,13 @@
 
 # Adjoint of Linear Operator
 
-!!! tldr "수반연산자(adjoint)"
+!!! def "수반연산자(adjoint)"
 
     내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 정규직교기저 $\beta$ 에 대하여 다음을 만족하는 선형연산자 $\mathbf{T}{}^{*}$ 를 $\mathbf{T}$ 의 수반연산자라고 한다.
 
     $$ [\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}]{}^{*}_{\beta } $$
     
-!!! tldr "정리 6.8"
+!!! def "정리 6.8"
 
     유한차원 내적공간 $\mathbf{V}$ 와 정규직교기저 $\{v_1, v_2, \dots, v_n\}$ 와 $\mathbf{g}_{} \in \mathbf{V}{}^{*}$ 와 $y = \displaystyle \sum_{i=1}^{n}\overline{\mathbf{g}_{}(v_i)}v_i \in \mathbf{V}$ 와 $x \in \mathbf{V}$ 에 대하여 다음이 성립한다.
 
@@ -1162,7 +1010,7 @@
 
     이제 $\mathbf{g}_{}(x) = \big <x,y \big >$ 를 가정할 수 있다.  $\mathbf{g}_{}(x) = \big <x,y' \big >$ 를 만족하는 $y'$ 가 존재하면 모든 $x$ 에 대하여 $\big <x,y \big >=\big <x,y' \big > \implies y=y'$ 이다. ■ 
 
-!!! tldr "정리 6.9"
+!!! def "정리 6.9"
 
     유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $x, y \in \mathbf{V}$ 에 대하여 $\big <\mathbf{T}(x),y \big > = \big <x,\mathbf{T}{}^{*}(y) \big >$ 인 수반연산자 $\mathbf{T}{}^{*}$ 가 유일하게 존재한다.
 
@@ -1196,7 +1044,7 @@
 
     $\mathbf{U} :\mathbf{V}\to \mathbf{V}$ 가 선형이고 $\forall  x, y \in \mathbf{V}: \big <\mathbf{T}(x), y \big > = \big <x,\mathbf{U} (y) \big >$ 를 만족하면 $\big <x,\mathbf{T}{}^{*}(y) \big > = \big <x,\mathbf{U} (y) \big >$ 이다. 따라서 $\mathbf{T}{}^{*}$ 는 유일하다. ■ 
 
-!!! tldr ""
+!!! def ""
 
     유한차원 내적공간의 선형연산자 $\mathbf{T}$ 에 대한 수반연산자 $\mathbf{T}{}^{*}$ 는 다음을 만족하는 유일한 $\mathbf{V}$ 의 연산자이다.
 
@@ -1212,7 +1060,7 @@
 
     $$ \big <x,\mathbf{T}(y) \big > = \overline{\big <\mathbf{T}(y),x \big >} = \overline{\big <y, \mathbf{T}{}^{*}(x) \big >} = \big <\mathbf{T}{}^{*}(x),y \big > $$
 
-!!! tldr "정리 6.10"
+!!! def "정리 6.10"
 
     유한차원 벡터공간 $\mathbf{V}$ 와 정규직교기저 $\beta$, 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
 
@@ -1244,7 +1092,7 @@
 
     - $\R$-벡터공간 $\mathbb{C}^{2}$ 의 표준순서기저는 $\{(1,0),(0,1),(i,0),(0,i)\}$ 이며 선형변환의 행렬표현이 $4 \times 4$ 행렬이 된다.
 
-!!! tldr "정리 6.10 따름정리"
+!!! def "정리 6.10 따름정리"
 
     $$ A \in \mathbf{M}_{n \times n}(\mathbf{F}) : \mathbf{L}_{A {}^{*}} = (\mathbf{L}_{A}){}^{*} $$
 
@@ -1254,7 +1102,9 @@
 
     $$ [(\mathbf{L}_{A}){}^{*}]_{\beta } = [\mathbf{L}_{A}]{}^{*}_{\beta } = A {}^{*} = [\mathbf{L}_{A {}^{*}}]_{\beta } \tag*{■} $$
 
-!!! tldr "정리 6.11"
+## Properties of Adjoint
+
+!!! def "정리 6.11"
 
     내적공간 $\mathbf{V}$ 와 수반연산자가 존재하는 선형연산자 $\mathbf{T}, \mathbf{U}$ 에 대하여 다음이 성립한다.
 
@@ -1302,7 +1152,7 @@
 
     $$ [\mathbf{I}{}^{*}]_{\beta } = [\mathbf{I}]{}^{*}_{\beta } = I {}^{*} = \overline{I^{t}} = I = [\mathbf{I}]_{\beta } $$
 
-!!! tldr "정리 6.11 따름정리"
+!!! def "정리 6.11 따름정리"
 
     $A, B \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 다음이 성립한다. 
 
@@ -1342,7 +1192,7 @@
 
 - 편의상 정리 6.10 으로 증명이 이루어졌지만 수반행렬의 정의를 직접 사용하여 증명할 수도 있다.
 
-!!! tldr "문제 6.3-5-(b)"
+!!! def "문제 6.3-5-(b)"
 
     적절한 형상을 갖는 임의의 행렬 $A, B$ 에 대하여 다음이 성립한다. 
 
@@ -1363,7 +1213,7 @@
 
 ## Least Squares Approximation
 
-!!! tldr ""
+!!! def ""
 
     $x, y \in \mathbf{F}^{n}$ 의 표준내적을 $\big <x,y \big >_{n}$ 라 표기하면 열벡터 $x, y$ 에 대하여 $\big <x,y \big >_{n} = y {}^{*}x$ 이다.
 
@@ -1371,7 +1221,7 @@
 
     [표준 내적](#755926539) 과 [켤레 전치행렬](#8f2c193aa) 의 정의에 의하여 자명하게 성립한다. ■ 
 
-!!! tldr "보조정리 1"
+!!! def "보조정리 1"
 
     $A \in \mathbf{M}_{m \times n}(\mathbf{F}), x \in \mathbf{F}^{n}, y \in \mathbf{F}^{m}$ 에 대하여 다음이 성립한다.
 
@@ -1383,7 +1233,7 @@
 
     $$ \big <Ax, y \big >_{m} = y {}^{*}(Ax) = (y {}^{*}A)x = (A {}^{*}y){}^{*}x = \big <x, A {}^{*}y \big >_{n} \tag*{■} $$
 
-!!! tldr "보조정리 2"
+!!! def "보조정리 2"
 
     $$ A \in \mathbf{M}_{m \times n}(\mathbf{F}) : \text{rank} (A {}^{*}A) = \text{rank} (A) $$
 
@@ -1404,7 +1254,7 @@
 
     그러므로 내적의 성질에 의하여 $Ax = 0$ 이다. ■ 
 
-!!! tldr "따름정리"
+!!! def "따름정리"
 
     $\text{rank} (A) = n$ 인 행렬 $A \in \mathbf{M}_{m \times n}(\mathbf{F})$ 에 대하여 $A {}^{*}A$ 는 가역이다.
 
@@ -1412,7 +1262,7 @@
 
     [$n \times n$ 행렬의 랭크가 $n$ 이면 가역이다](../MatrixOperation/#8252ffa8b). 보조정리 2 에 의하여 $A {}^{*}A$ 의 랭크는 $n$ 이다. ■ 
 
-!!! tldr "정리 6.12 최소제곱법(least squares approximation)"
+!!! def "정리 6.12 최소제곱법(least squares approximation)"
 
     $A \in \mathbf{M}_{m \times n}(\mathbf{F}), y \in \mathbf{F}^{m}$ 에 대하여 다음을 만족하는 $x_0 \in \mathbf{F}^{n}$ 이 존재한다. 
 
@@ -1482,11 +1332,11 @@
 
 ## Minimal Solutions to Systems of Linear Equations
 
-!!! tldr "최소해(minimal solution)"
+!!! def "최소해(minimal solution)"
 
     모순이 없는 연립일차방정식 $Ax = b$ 의 해가 유일하지 않을 때 방정식의 임의의 해 $u$ 에 대하여 $\|s\| \leq \|u\|$ 를 만족하는 $s$ 를 최소해라 한다.
 
-!!! tldr "문제 6.2-6"
+!!! def "문제 6.2-6"
 
     내적공간 $\mathbf{V}$ 와 유한차원 부분공간 $\mathbf{W}$ 에 대하여 다음이 성립한다.
     
@@ -1508,11 +1358,11 @@
 
     $\big <x,y \big >\neq 0$ 을 가정하면 $x \not\in \mathbf{W}$ 은 자명하다. ■ 
 
-- 프리드버그 선대수에서 말하는 원래의 정리는 다음과 같은데 논리관계가 이상한 것 같아서 임의로 고쳤다.
+- 프리드버그 선대수에서 말하는 원래의 정리:
 
     *내적공간 $\mathbf{V}$ 와 유한차원 부분공간 $\mathbf{W}$ 와 $x \in \mathbf{V} \setminus \mathbf{W}$ 에 대하여 $y \in \mathbf{W}^{\perp} \land \big <x,y \big > \neq 0$ 인 벡터 $y \in \mathbf{V}$ 가 존재한다.*
 
-!!! tldr "문제 6.2-13"
+!!! def "문제 6.2-13"
 
     내적공간 $\mathbf{V}$ 의 두 부분집합 $S$ 와 $S_0$ 와 유한차원 부분공간 $\mathbf{W}$ 에 대하여 다음이 성립한다.
 
@@ -1552,7 +1402,7 @@
 
     정리 6.6 은 $\mathbf{V}=\mathbf{W}+\mathbf{W}^{\perp}$ 임을 말해준다. $\mathbf{W}\cap \mathbf{W}^{\perp}=\{0\}$ 이므로 $\mathbf{V}=\mathbf{W}\oplus \mathbf{W}^{\perp}$ 이다.
 
-!!! tldr ""
+!!! def ""
 
     내적공간 $\mathbf{V}$ 에 대하여 $\big <x, y \big > = 0$ 인 벡터 $x, y \in \mathbf{V}\setminus \{0\}$ 가 존재한다.
 
@@ -1564,9 +1414,9 @@
 
     $$ e_1 \neq 0, e_2 \neq 0, \big <e_1,e_2 \big > = 1 \cdot 0 + 0 \cdot 1 = 0 $$
 
-!!! tldr ""
+!!! def ""
 
-    내적공간 $\mathbf{V}$ 와 벡터 $v \in \mathbf{V}$ 에 대하여 다음은 동치이다.
+    내적공간 $\mathbf{V}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 다음은 동치이다.
 
     1. $\forall x \in \mathbf{V} : \big <x, y \big > = 0$
     
@@ -1580,7 +1430,7 @@
 
     1) 을 가정하고 $y \neq 0$ 로 두자. 내적의 정의에 의하여 $\big <y,y \big > \neq 0$ 이다. 따라서 $y = 0$ 이다. ■ 
 
-!!! tldr "문제 6.3-12"
+!!! def "문제 6.3-12"
 
     내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
 
@@ -1612,7 +1462,7 @@
 
     $$ \therefore \mathbf{R}(\mathbf{T}{}^{*}) = (\mathbf{N}(\mathbf{T}))^{\perp} \tag*{■}$$
 
-!!! tldr "정리 6.13"
+!!! def "정리 6.13"
 
     $A \in \mathbf{M}_{m \times n}(\mathbf{F}), b \in \mathbf{F}^{m}$ 와 모순이 없는 연립일차방정식 $Ax = b$ 에 대하여 다음이 성립한다. 
 
@@ -1676,11 +1526,11 @@
 
     $AA {}^{*}x = b$ 의 해는 $x \in \Bigg \{ \begin{pmatrix} 1 - 2t\\ t - 2\\ t\\ \end{pmatrix} : t \in \R \Bigg \}$ 이다.  $t = 0$ 일 때 $u = \begin{pmatrix} 1\\ -2\\ 0\\ \end{pmatrix}$ 이다. 정리에 의하여 $s = A {}^{*}u = \begin{pmatrix} -1\\ 4\\ -3\\ \end{pmatrix}$ 는 최소해가 된다. 다른 $u$ 를 택해도 상관 없다.
 
-# Normal and Self-Adjoint Operators
+# Normal Operators, Normal Matrix
 
-!!! tldr "보조정리"
+!!! def "보조정리"
 
-    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 고유벡터를 포함하면 $\mathbf{T}{}^{*}$ 도 고유벡터를 포함한다.
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 고유벡터를 가지면 $\mathbf{T}{}^{*}$ 도 고유벡터를 가진다.
 
 - 증명
 
@@ -1690,3 +1540,1103 @@
 
     따라서 $v$ 는 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}$ 의 치역과 직교한다. 만약 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I} = \mathbf{V}$ 가 되면 $\mathbf{V}$ 의 모든 벡터와 직교하는 벡터는 $0$ 밖에 없으므로 $v = 0$ 인데 이는 모순이다. 따라서 $\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}$ 는 전사가 아니다. 그러므로 단사도 아니고, $\mathbf{N}(\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I}) \neq \{0\}$ 이다. 이 영공간이 속하는 벡터는 고윳값 $\overline{\lambda }$ 에 대응하는 $\mathbf{T}{}^{*}$ 의 고유벡터이다. ■ 
 
+## Schur's theorem
+
+!!! def "정리 6.14 슈어의 정리(Schur's theorem)"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되면 $[\mathbf{T}]_{\gamma }$ 가 상삼각행렬이 되게 하는 정규직교기저 $\gamma$ 가 존재한다.
+
+- 증명
+
+    [문제 5.2-12](../Diagonalization/#bd84c1d47) 에 의하여 $[\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 순서기저 $\beta = \{w_1, w_2, \dots, w_n\}$ 이 존재한다. 그람-슈미트 직교화를 통하여 $\beta$ 를 직교기저 $\beta ' = \{v_1, v_2, \dots, v_n\}$ 로 변환할 수 있다. $k \in \{1, \dots, n\}$ 에 대하여 $S_k, S'_k$ 를 다음과 같이 정의하자.
+
+    $$ S_k = \{w_1, w_2, \dots, w_k\}, S'_k = \{v_1, v_2, \dots, v_k\} $$
+
+    [정리 6.4](#0ee45a6c5) 에 의하여 $\text{span} (S_k) = \text{span} (S'_k)$ 이다. $[\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되므로 [문제 2.2-12](../LinearTransformation/#be8fe9c58) 에 의하여 $\mathbf{T}(w_k) \in \text{span} (S_k)$ 이다. [정리 6.4](#0ee45a6c5) 는 $v_k$ 가 $w_1, \dots, w_k$ 의 일차결합으로 표현됨을 말해준다. 따라서 스칼라 $a_1, \dots, a _{k-1}$ 에 대하여 $v_k = w_k + a _{k-1}w _{k-1} + \dots + a_1w_1$ 이다. 그러므로 다음이 성립한다. 
+
+    $$ \mathbf{T}(v_k) = \mathbf{T}(w_k + a _{k-1}w _{k-1} + \dots + a_1w_1) = \mathbf{T}(w_k) + a _{k-1}\mathbf{T}(w _{k-1}) + \dots + a_1 \mathbf{T}(w_1) \in \text{span} (S_k) = \text{span} (S'_k) $$
+
+    따라서 다시 문제 2.2-12 에 의하여 $[\mathbf{T}]_{\beta '}$ 은 상삼각행렬이다.
+
+    이제 $i \in \{1, \dots, n\}$ 에 대하여 $z_i = \dfrac{1}{\left\| v_i \right\| }v_i, \gamma = \{z_1, z_2, \dots, z_n\}$ 를 정의하면 $\gamma$ 는 $\mathbf{V}$ 의 정규직교기저이다. $z_i$ 는 $v_i$ 의 일차결합이므로 결국 $w_i$ 의 일차결합이다. 따라서 위와 같은 논리로 $\mathbf{T}(z_i) \in \text{span} (\{z_1, \dots, z_i\})$ 임을 보일 수 있고, 또 다시 문제 2.2-12 에 의하여 $[\mathbf{T}]_{\gamma }$ 는 상삼각행렬임을 알 수 있다. ■ 
+
+!!! def "정규연산자(normal operator)"
+
+    내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 가 $\mathbf{T}\mathbf{T}{}^{*} = \mathbf{T}{}^{*}\mathbf{T}$ 를 만족하면 $\mathbf{T}$ 를 정규연산자라 한다.
+
+- 유한차원 내적공간 $\mathbf{V}$ 에서 선형연산자 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저 $\beta$ 가 존재하면 $[\mathbf{T}]_{\beta }$ 는 대각행렬이고 $[\mathbf{T}]{}^{*}_{\beta } = [\mathbf{T}{}^{*}]_{\beta }$ 도 대각행렬이다. 대각행렬은 가환적이다. 즉, 교환법칙이 성립한다. 따라서 $\mathbf{T}$ 와 $\mathbf{T} {}^{*}$ 도 가환적이고 다음 명제가 성립한다. 
+
+    "$\mathbf{V}$ 가 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저를 가지면 $\mathbf{T}\mathbf{T}{}^{*} = \mathbf{T}{}^{*}\mathbf{T}$ 이다."
+
+    선형연산자의 가환성 $\mathbf{T}\mathbf{T}{}^{*}=\mathbf{T}{}^{*}\mathbf{T}$ 을 정규성(normality) 라고 한다. 이러한 정규성을 갖는 연산자를 정규연산자라고 정의하는 것이다. 
+
+    그러나 위 명제의 역이 항상 성립하는 것은 아니다. 즉, 정규성을 가진다고 해서 고유벡터로 이루어진 정규직교기저가 반드시 존재한다는 보장은 없다. 
+
+!!! def "정규행렬(normal matrix)"
+
+    체 $\mathbf{F}\in \{\R, \mathbb{C}\}$ 에 대한 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 이 $AA {}^{*} = A {}^{*}A$ 를 만족하면 $A$ 를 정규행렬이라 한다. 
+
+!!! def ""
+
+    $\mathbf{T}$ 가 정규연산자인 것과 정규직교기저 $\beta$ 에 대하여 $[\mathbf{T}]_{\beta }$ 가 정규행렬인 것은 동치이다.
+
+- 증명
+
+    $A = [\mathbf{T}]_{\beta }$ 로 두자. $A$ 가 정규행렬이면 $AA {}^{*} = A {}^{*}A$ 이다. 그러면 [정리 6.10](#515861895) 에 의하여 $[\mathbf{T}]_{\beta }[\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}{}^{*}]_{\beta }[\mathbf{T}]_{\beta }$ 이다. [정리 2.11 따름정리](../LinearTransformation/#143fdacba) 에 의하여 $[\mathbf{T}\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}{}^{*}\mathbf{T}]_{\beta }$ 이다. ▲ 
+
+    $\mathbf{T}$ 가 정규연산자임을 가정하면 비슷한 논리로 $[\mathbf{T}] _{\beta }$ 가 정규행렬임이 바로 나온다. ■ 
+    
+- 예시 
+
+    $\mathbf{T}: \R ^{2} \to \R ^{2}$ 를 $0 < \theta < \pi$ 에 대하여 원점을 기준으로 반시계방향으로 $\theta$ 만큼 회전하는 선형변환이라 하자. 표준 순서기저에 대한 $\mathbf{T}$ 의 행렬표현은 다음과 같다. 
+
+    $$ A = \begin{pmatrix} \cos \theta& -\sin \theta\\ \sin \theta& \cos \theta\\ \end{pmatrix} $$
+
+    $AA {}^{*} = I = A {}^{*}A$ 가 성립하므로 $A$ 는 정규행렬이고 $\mathbf{T}$ 는 정규연산자이다.
+
+- 위 예시의 $\mathbf{T}$ 는 고유벡터를 가지지 않는다. 이는 실내적공간에서 정규성(normality)이 고유벡터로 이루어진 정규직교기저의 존재성을 보장해주지는 않는다는 것을 말해준다.
+
+    그러나 정리 6.16 에 의하여 $\mathbf{V}$ 가 복소내적공간이라면 정규성이 고유벡터로 이루어진 정규직교기저의 존재성을 보장해준다. 따라서 정규성과 고유벡터로 이루어진 정규직교의 존재성이 복소내적공간에서는 서로 동치이다. 
+
+!!! def "정리 6.15"
+
+    $\mathbf{F}$-내적공간 $\mathbf{V}$ 와 정규연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다.
+
+    1. $\forall x \in \mathbf{V} : \left\| \mathbf{T}(x) \right\| = \left\| \mathbf{T}{}^{*}(x) \right\|$
+
+    2. 임의의 $c \in \mathbf{F}$ 에 대하여 $\mathbf{T}-c \mathbf{I}$ 는 정규연산자이다. 
+
+    3. $\mathbf{T}(x) = \lambda x \implies \mathbf{T}{}^{*}(x) = \overline{\lambda }x$
+
+    4. 고유벡터 $x_1, x_2$ 에 대응하는 $\mathbf{T}$ 의 고윳값 $\lambda _1, \lambda _2$ 에 대하여 $\lambda _1 \neq \lambda _2$ 이면 $x_1$ 과 $x_2$ 는 직교한다. 
+
+- 3) 은 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터 $x$ 가 고윳값 $\overline{\lambda }$ 에 대응하는 $\mathbf{T}{}^{*}$ 의 고유벡터임을 말해준다. 
+
+- 증명 
+
+    1:
+
+    $$ \left\| \mathbf{T}(x) \right\| ^{2} = \big <\mathbf{T}(x), \mathbf{T}(x) \big > = \big <\mathbf{T}{}^{*}\mathbf{T}(x), x \big > = \big <\mathbf{T}\mathbf{T}{}^{*}(x), x \big > = \big <\mathbf{T}{}^{*}(x), \mathbf{T}{}^{*}(x) \big > = \left\| \mathbf{T}{}^{*}(x) \right\| ^{2} \tag*{▲} $$
+
+    2:
+
+    [정리 6.11](#a9f161221) 에 의하여 다음이 성립한다.
+
+    $$ (\mathbf{T}-c \mathbf{I}) {}^{*} = \mathbf{T}{}^{*} -c \mathbf{I}{}^{*} $$
+
+    [정리 2.10](../LinearTransformation/#273a736ad) 에 의하여 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split} (\mathbf{T} - c \mathbf{I})(\mathbf{T}-c \mathbf{I}){}^{*} &= (\mathbf{T} - c \mathbf{I})(\mathbf{T}{}^{*} -c \mathbf{I}{}^{*}) \\ &= (\mathbf{T} - c \mathbf{I})\mathbf{T}{}^{*} -c (\mathbf{T} - c \mathbf{I})\mathbf{I}{}^{*} \\ &= \mathbf{T}\mathbf{T}{}^{*} -c\mathbf{I}\mathbf{T}{}^{*} -c \mathbf{T}  \mathbf{I}{}^{*} +c^{2} \mathbf{I} \mathbf{I}{}^{*} \\ &= \mathbf{T}{}^{*}\mathbf{T} -c\mathbf{T}{}^{*}\mathbf{I} -c \mathbf{I}{}^{*}\mathbf{T} +c^{2} \mathbf{I}{}^{*}\mathbf{I} \\ &= (\mathbf{T}{}^{*}-c \mathbf{I}{}^{*})\mathbf{T} -c (\mathbf{T}{}^{*}-c \mathbf{I}{}^{*}) \mathbf{I}\\ &= (\mathbf{T}{}^{*}-c \mathbf{I}{}^{*})(\mathbf{T} -c \mathbf{I})\\ &= (\mathbf{T}-c \mathbf{I}){}^{*}(\mathbf{T} -c \mathbf{I})\\ \end{split}\end{equation} \tag*{} $$
+
+    따라서 $\mathbf{T}-c \mathbf{I}$ 는 정규연산자이다. ▲ 
+
+    3:
+
+    어떤 $x \in \mathbf{V}$ 에 대하여 $\mathbf{T}(x) = \lambda x$ 라 하고 $\mathbf{U}=\mathbf{T}-\lambda \mathbf{I}$ 라 하면 $\mathbf{U}(x) = 0$ 이고 2) 에 의하여 $\mathbf{U}$ 는 정규연산자이다. 1) 에 의하여 다음이 성립한다. 
+
+    $$ 0 = \| \mathbf{U}(x) \| = \| \mathbf{U}{}^{*}(x) \| = \| (\mathbf{T}{}^{*}-\overline{\lambda }\mathbf{I})(x) \| = \| \mathbf{T}{}^{*}(x) - \overline{\lambda }x \| $$
+
+    즉, $\mathbf{T}{}^{*}(x) = \overline{\lambda }x$ 이다. ▲ 
+
+    4:
+
+    3) 에 의하여 다음이 성립한다. 
+
+    $$ \lambda _1 \big <x_1,x_2 \big > = \big <\lambda _1x_1, x_2 \big > = \big <\mathbf{T}(x_1), x_2 \big > = \big <x_1, \mathbf{T}{}^{*}(x_2) \big > = \big <x_1, \overline{\lambda _2}x_2 \big > = \lambda _2 \big <x_1,x_2 \big > $$
+
+    $\lambda _1 \neq \lambda_2$ 이므로 $\big <x_1,x_2 \big >= 0$ 이다. ■ 
+
+!!! def "대수학의 기본 정리(fundamental theorem of algebra)"
+
+    $\mathbf{P}(\mathbb{C})$ 의 다항식 $p(z) = a_nz ^{n} + \dots + a_1z + a_0$ 의 차수가 $n \geq 1$ 이면 $p(z)$ 는 해가 있다.
+
+- 17세기부터 수학자들이 옳으리라고 추측했던 유명한 정리이다. 대수학의 기본 정리이지만 순수하게 대수적인 증명은 누구도 해내지 못했고, 훗날 위상수학과 해석학을 도입하여 증명을 할 수 있었다. 그래서 복소해석학에 의한 증명과 위상수학에 의한 증명이 존재한다.
+
+- **대수학의 기본정리는 복소내적공간의 선형연산자의 특성다항식이 반드시 완전히 인수분해됨을 말해준다.**
+
+- 증명
+
+## Diagonalizable Orthonormal Basis in Complex Inner Product Space
+
+!!! def "정리 6.16"
+
+    유한차원 복소내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다.
+    
+    - $\mathbf{T}$ 가 정규연산자이다.
+    
+    - $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다.
+
+- **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.**
+
+- 이 정리는 복소내적공간에서 정규성과 정규직교기저의 존재성이 동치임을 말해준다. 실내적공간에서는 정규직교기저의 존재성이 보장되면 정규성도 보장되지만, 정규성이 보장된다고 해서 정규직교기저의 존재성이 보장되지는 않는다.
+
+- 증명
+
+    $\mathbf{T}$ 를 복소내적공간의 정규연산자라 하자. 대수학의 기본정리에 의하여 $\mathbf{T}$ 의 특성다항식은 완전히 인수분해된다. 슈어의 정리에 의하여 $A = [\mathbf{T}]_{\beta }$ 를 상삼각행렬이 되게 하는 정규직교기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 가 존재한다. $A$ 가 상삼각행렬이므로 $v_1$ 은 $\mathbf{T}$ 의 고유벡터이다. 따라서 $v_1, v_2, \dots, v _{k-1}$ 이 $\mathbf{T}$ 의 고유벡터이면 $v_k$ 도 $\mathbf{T}$ 의 고유벡터라는 것을 보이면 $v_1, v_2, \dots, v_n$ 이 $\mathbf{T}$ 의 고유벡터가 된다. 
+
+    $j < k$ 에 대하여 고유벡터 $v_j$ 에 대응하는 $\mathbf{T}$ 의 고윳값을 $\lambda _j$ 라 하자. $A$ 가 상삼각행렬이므로 $\mathbf{T}(v_k)$ 는 다음과 같다. 
+
+    $$ \mathbf{T}(v_k) = A _{1k}v_1 + A _{2k}v_2 + \dots + A _{kk}v_k $$
+
+    [정리 6.5 따름정리](#a2290266a) 와 [정리 6.9](#01997fcc2) 정리 6.15-(3) 에 의하여 $\mathbf{T}{}^{*}(v_j) = \overline{\lambda}_jv_j$ 인 것에 의하여 다음이 성립한다. 
+
+    $$ A _{jk} = \big <\mathbf{T}(v_k), v_j \big > = \big <v_k, \mathbf{T}{}^{*}(v_j) \big > = \big <v_k, \overline{\lambda }_j v_j \big > = \lambda _j \big <v_k,v_j \big > = 0 $$
+
+    따라서 $\mathbf{T}(v_k) = A _{kk}v_k$ 이고 $\beta$ 는 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저임이 증명되었다. ▲ 
+
+    선형연산자 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저 $\beta$ 가 존재하면 $[\mathbf{T}]_{\beta }$ 는 대각행렬이고 $[\mathbf{T}]{}^{*}_{\beta } = [\mathbf{T}{}^{*}]_{\beta }$ 도 대각행렬이다. 대각행렬은 가환적이다. 즉, 교환법칙이 성립한다. 따라서 $\mathbf{T}$ 와 $\mathbf{T} {}^{*}$ 도 가환적이다. 그러므로 $\mathbf{T}\mathbf{T}{}^{*} = \mathbf{T}{}^{*}\mathbf{T}$ 이다. ■ 
+
+- 그러나 이 정리는 무한차원 복소내적공간에서는 성립하지 않는다. 
+
+    - 예시 
+
+# Hermitian, Hermitian matrix
+
+!!! def "자기수반연산자(self-adjoint), 에르미트 연산자(Hermitian)"
+
+    내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 $\mathbf{T}=\mathbf{T}{}^{*}$ 를 만족하면 자기수반연산자 또는 에르미트 연산자라 한다.
+
+- 정규성이 실내적공간의 고유벡터로 이루어진 정규직교기저가 존재하기 위한 충분조건이 아님을 이미 알아보았다. 그러나 정규성을 더욱 강한 조건인 $\mathbf{T}=\mathbf{T}{}^{*}$ 로 바꾸면 충분조건이 된다. 이를 만족하는 연산자를 에르미트 연산자라 한다. 정리 6.17 을 보자.
+
+!!! def "자기수반행렬(self-adjoint matrix), 에르미트 행렬(Hermitian matrix)"
+
+    체 $\mathbf{F}\in \{\R , \mathbb{C}\}$ 에 대한 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 가 $A = A {}^{*}$ 를 만족하면 자기수반행렬 또는 에르미트 행렬이라 한다.
+
+- 실행렬에서는 자기수반행렬인 조건을 [대칭행렬](../VectorSpace/#96a169304) 로 간소화할 수 있다. 따라서 실대칭행렬은 자기수반행렬이고, 이에 따라 정규행렬이다. 그러나 복소 대칭행렬이 자기수반행렬이고, 정규행렬이라는 보장은 없다. 
+
+!!! def ""
+
+    내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 자기수반연산자인 것과 $[\mathbf{T}]_{\beta }$ 가 자기수반행렬인 것은 동치이다.
+    
+- 증명
+
+    $A = [\mathbf{T}]_{\beta }$ 가 자기수반행렬임을 가정하면 $A = A {}^{*}$ 이다. 그러면 정리 6.10 에 의하여 $[\mathbf{T}]_{\beta } = [\mathbf{T}{}^{*}]_{\beta }$ 이다. ▲ 
+
+    $\mathbf{T}$ 가 자기수반연산자임을 가정하면 비슷한 논리로 그 역을 쉽게 증명할 수 있다. ■ 
+
+!!! def "보조정리"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 자기수반연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
+
+    1. $\mathbf{T}$ 의 모든 고윳값은 실수이다.
+
+    2. $\mathbf{V}$ 가 실내적공간이면 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다.
+
+- 실내적공간의 선형연산자가 실수인 고윳값만 갖다는 것은 당연하다. 복소내적공간의 자기수반연산자의 고윳값은 반드시 실수이다. 이것을 1) 이 말해준다. 
+
+- 대수학의 기본정리에 의하여 복소내적공간의 모든 선형연산자의 특성다항식이 완전히 인수분해됨은 당연하다. 실내적공간의 실자기수반연산자의 특성다항식도 완전히 인수분해된다. 이것을 2) 가 말해준다. 
+
+- 증명
+
+    1:
+
+    $x \neq 0$ 인 $x \in \mathbf{V}$ 에 대하여 $\mathbf{T}(x) = \lambda x$ 를 가정하자. 자기수반연산자는 정규연산자이므로 정리 6.15-(3) 에 의하여 $\lambda x = \mathbf{T}(x) = \mathbf{T}{}^{*}(x) = \overline{\lambda }x$ 가 성립한다. $\lambda = \overline{\lambda }$ 이므로 $\lambda$ 는 실수이다. ▲ 
+
+    2:
+
+    $\dim (\mathbf{V}) = n$ 라 하고 $\mathbf{V}$ 의 정규직교기저 $\beta$ 에 대하여 $A = [\mathbf{T}]_{\beta }$ 로 두자. $\mathbf{T}$ 가 자기수반연산자이므로 $A$ 는 자기수반행렬이다. $\mathbb{C}^{n}$ 의 선형연산자 $\mathbf{U}$ 를 다음과 같이 정의하자. 
+
+    $$ \forall x \in \mathbb{C}^{n} : \mathbf{U}(x) = Ax $$
+
+    $\mathbb{C}$-벡터공간 $\mathbb{C}^{n}$ 의 표준순서 정규직교기저 $\gamma= \{e_1, e_2, \dots, e_n\}$ 에 대하여 다음이 성립한다. 
+
+    $$ \mathbf{U}(e_j) = Ae_j = \sum_{i=1}^{n}A _{ij}e_j $$
+
+    따라서 $[\mathbf{U}]_{\gamma } = A$ 이고, $\mathbf{U}$ 는 자기수반행렬이다. 
+    
+    1) 에 의하여 $\mathbf{U}$ 의 고윳값 $\lambda$ 들은 실수이다. 대수학의 기본정리에 의하여 $\mathbf{U}$ 의 특성다항식은 $t - \lambda$ 의 곱으로 완전히 인수분해된다. 모든 $\lambda$ 가 실수이므로 특성다항식이 $\R$ 에서 완전히 인수분해된다. 
+
+    [특성다항식의 정의](../Diagonalization/#2f3482489)에 의하여 $\mathbf{U}$ 의 특성다항식은 $A$ 의 특성다항식이다. 다시 특성다항식의 정의에 의하여 $A$ 의 특성다항식은 $\mathbf{T}$ 의 특성다항식이다. 따라서 $\mathbf{T}$ 의 특성다항식은 완전히 인수분해된다. ■ 
+
+## Diagonalizable Orthonormal Basis in Real Inner Product Space
+
+!!! def "정리 6.17"
+
+    유한차원 실내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
+    
+    - $\mathbf{T}$ 가 자기수반연산자이다.
+    
+    - $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다.
+
+- **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.**
+
+- 정규성이 실내적공간의 고유벡터로 이루어진 정규직교기저가 존재하기 위한 충분조건이 아니었다. 그러나 복소내적공간에서는 정규성만으로도 고유벡터로 이루어진 정규직교기저의 존재성이 보장된다.
+
+    정규성을 더욱 강한 조건인 $\mathbf{T}=\mathbf{T}{}^{*}$ 로 바꾸면 실내적공간에서도 충분조건이 된다. 이것을 이 정리가 보장해준다. 
+
+- 정리 6.20 은 이 정리를 행렬의 관점에서 말해준다.
+
+- 증명
+
+    $\mathbf{T}$ 가 자기수반연산자임을 가정하자. 그러면 보조정리에 의하여 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다. 그러면 슈어의 정리에 의하여 $A = [\mathbf{T}]_{\beta }$ 가 상삼각행렬이 되게 하는 $\mathbf{V}$ 의 정규직교기저 $\beta$ 가 존재한다. $\mathbf{T}$ 가 자기수반연산자이므로 $A$ 도 자기수반행렬이다. 즉, $A = A {}^{*}$ 이다. $A$ 와 $A {}^{*}$ 가 상삼각행렬이므로 $A$ 는 대각행렬이다. $\beta$ 가 $\mathbf{T}$ 를 대각화했으므로 $\beta$ 는 $\mathbf{T}$ 의 고유벡터로 이루어져있다. ▲ 
+
+    $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저 $\beta$ 가 존재함을 가정하면 $A = [\mathbf{T}]_{\beta }$ 는 대각행렬이다. 따라서 $A = A ^{t}$ 이다. 또한 실내적공간이므로 $A = A {}^{*}$ 이다. 따라서 $\mathbf{T}$ 는 자기수반연산자이다. ■ 
+
+# Unitary[Orthogonal] Operators
+
+!!! def "유니타리 연산자(unitary operator), 직교연산자(orthogonal operator)"
+
+    유한차원 $\mathbf{F}$-내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음과 같이 정의한다.
+
+    - $\mathbf{F}=\mathbb{C}$ 일 때 $\forall x \in \mathbf{V} : \| \mathbf{T}(x) \| = \|x\|$ 인 $\mathbf{T}$ 를 유니타리 연산자라 한다.
+
+    - $\mathbf{F}=\R$ 일 때 $\forall x \in \mathbf{V} : \| \mathbf{T}(x) \| = \|x\|$ 인 $\mathbf{T}$ 를 직교연산자라 한다.
+
+- 지금까지 공간의 구조를 보존하는 여러 함수들을 다루어왔다. 선형연산자는 벡터 합과 스칼라 곱을 보존하고, 동형사상은 벡터공간의 모든 구조를 그대로 보존했다. 이제 내적공간에서 길이(노름)를 보존하는 선형연산자를 생각하는 것은 자연스럽다. 길이를 보존한다는 것은 모든 $x \in \mathbf{V}$ 에 대하여 $\|\mathbf{T}(x)\| = \|x\|$ 가 성립한다는 것이다.
+
+- 무한차원 벡터공간에서 길이를 보존하는 연산자는 단사이고 등장 사상(isometry) 이라 한다. 등장 사상은 두 거리 공간의 거리를 보존하는 함수이다. 만약 전사이기까지 한다면 유니타리 연산자 또는 직교연산자라고 한다. 
+
+- 예시 
+
+    유클리드 공간에서 $0 < \theta<\pi$ 에 대하여 각도를 $\theta$ 만큼 회전하는 변환 $\mathbf{T}: \R ^{2}\to \R ^{2}$ 는 유클리드 노름을 보존한다. 즉, $\forall x \in \R ^{2} : \|\mathbf{T}(x)\| = \|x\|$ 이다. 
+
+!!! def "내적 보존 연산자(inner product preservation operator)"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 다음을 만족하면 내적을 보존하는 연산자라 한다. 
+
+    $$ \forall x, y \in \mathbf{V} : \big <\mathbf{T}(x), \mathbf{T}(y) \big > = \big <x,y \big > $$
+
+- 정리 6.18 에 의하여 유니타리 연산자와 직교연산자는 내적 보존 연산자이다.
+
+- 정리 6.18-(3) 을 만족하는 연산자를 내적을 보존하는 연산자라 한다.
+
+!!! def "노름 보존 연산자(norm preservation operator)"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 다음을 만족하면 노름을 보존하는 연산자라 한다. 
+    
+    $$ \forall x \in \mathbf{V} : \|\mathbf{T}(x)\| = \|x\| $$
+
+- 정의에 의하여 유니타리 연산자와 직교연산자는 노름 보존 연산자이다.
+
+- 정리 6.18-(6) 을 만족하는 연산자를 노름을 보존하는 연산자라 한다.
+
+!!! def "보조정리"
+
+    내적공간 $\mathbf{V}$ 의 자기수반연산자 $\mathbf{U}$ 에 대하여 다음이 성립한다. 
+
+    $$ \forall x \in \mathbf{V} : \big <x, \mathbf{U}(x) \big > = 0 \implies \mathbf{U}=\mathbf{T}_0 $$
+
+- 증명
+
+    $\mathbf{U}(x) \in \mathbf{V}$ 이므로 $\big <\mathbf{U}(x), \mathbf{U}(x) \big > = 0$ 이다. 내적의 정의에 의하여 $\mathbf{U}(x) = 0$ 이다. ■ 
+
+!!! def "정리 6.18"
+
+    유한차원 내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
+
+    1. $\mathbf{T}{}^{*}\mathbf{T} = \mathbf{I}$
+
+    2. $\mathbf{T}\mathbf{T}{}^{*}=\mathbf{I}$
+
+    3. $\forall x, y \in \mathbf{V} : \big <\mathbf{T}(x), \mathbf{T}(y) \big > = \big <x,y \big >$
+
+    4. 정규직교기저 $\beta$ 에 대하여 $\mathbf{T}(\beta )$ 도 정규직교기저이다.
+
+    5. $\mathbf{T}(\beta )$ 가 정규직교기저가 되게 하는 정규직교기저 $\beta$ 가 존재한다. 
+
+    6. $\forall x \in \mathbf{V} : \|\mathbf{T}(x)\| = \|x\|$
+
+- 이 6 가지 명제들은 유니타리 연산자 또는 직교연산자의 정의와 동치이다. 1) 과 2) 는 유니타리 연산자와 직교연산자가 정규연산자임을 말해준다. 
+
+    3) 은 내적 보존 연산자의 정의, 6) 은 노름 보존 연산자의 정의이다.
+
+- 증명
+
+    $\dim (\mathbf{V}) = n$ 를 가정하자.
+
+    $1 \implies 2$:
+
+    $\mathbf{V}$ 의 순서기저 $\beta$ 에 대하여 [정리 2.11 따름정리](../LinearTransformation/#143fdacba), [정리 6.10](#515861895) 에 의하여 다음이 성립한다.
+
+    $$ [\mathbf{T}{}^{*}\mathbf{T}]_{\beta }=[\mathbf{I}]_{\beta } = I_n \iff [\mathbf{T}{}^{*}]_{\beta }[\mathbf{T}]_{\beta } = I_n \iff [\mathbf{T}]{}^{*}_{\beta }[\mathbf{T}]_{\beta } = I_n $$
+
+    [문제 2.4-10](../LinearTransformation/#068bf6124) 에 의하여 $([\mathbf{T}]_{\beta })^{-1} = [\mathbf{T}]{}^{*}_{\beta }$ 이다. [역행렬의 정의](../LinearTransformation/#14b61be86) 에 의하여 $[\mathbf{T}]_{\beta }[\mathbf{T}{}^{*}]_{\beta } = I_n$ 이므로 다음이 성립한다. 
+
+    $$ [\mathbf{T}\mathbf{T}{}^{*}]_{\beta }=[\mathbf{I}]_{\beta } \iff \mathbf{T}\mathbf{T}{}^{*}=\mathbf{I} \tag*{▲} $$
+    
+    $2 \implies 3$:
+
+    이제 2) 를 가정하면 1) 을 가정할 수 있다. 2) 를 가정하고 3) 을 도출하자. 1) 과 [정리 6.9](#01997fcc2) 에 의하여 $x, y \in \mathbf{V}$ 에 대하여 다음이 성립한다.
+
+    $$ \big <x,y \big > = \big <\mathbf{I}(x), y \big > = \big <\mathbf{T}{}^{*}\mathbf{T}(x), y \big > = \big <\mathbf{T}(x), \mathbf{T}(y) \big > \tag*{▲} $$
+
+    $3 \implies 4$:
+
+    $\beta =\{v_1, v_2, \dots, v_n\}$ 에 대하여 $\mathbf{T}(\beta ) = \{\mathbf{T}(v_1), \mathbf{T}(v_2), \dots, \mathbf{T}(v_n)\}$ 이므로 다음이 성립한다.
+
+    $$ \big <\mathbf{T}(v_i), \mathbf{T}(v_j) \big > = \big <v_i, v_j \big > = \delta _{ij} $$
+
+    따라서 $\mathbf{T}(\beta )$ 는 정규직교기저이다. ▲ 
+
+    $4 \implies 5$:
+
+    4) 를 가정하면 [내적공간에는 정규직교기저가 존재](#482029816)하므로 $\mathbf{T}(\beta )$ 가 정규직교기저인 정규직교기저가 당연히 존재한다. ▲ 
+
+    $5 \implies 6$:
+
+    $x \in \mathbf{V}, \beta = \{v_1, v_2, \dots, v_n\}$ 로 두면 적절한 $a_i$ 에 대하여 $\displaystyle x = \sum_{i=1}^{n}a_iv_i$ 가 성립한다. $\beta$ 가 정규직교이므로 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} \|x\|^{2} &= \bigg <\sum_{i=1}^{n}a_iv_i, \sum_{j=1}^{n}a_jv_j \bigg > = \sum_{i=1}^{n}\sum_{j=1}^{n}a_i \overline{a_j}\big <v_i,v_j \big >\\ &= \sum_{i=1}^{n}\sum_{j=1}^{n}a_i \overline{a_j}\delta _{ij} = \sum_{i=1}^{n}|a_i|^{2} \\ \end{split}\end{equation} \tag*{} $$
+
+    위와 같은 계산은 $\displaystyle \mathbf{T}(x) = \sum_{i=1}^{n}a_i \mathbf{T}(v_i)$ 에도 똑같이 적용된다. $\mathbf{T}(\beta )$ 가 정규직교이기 때문이다. 즉, $\displaystyle \|\mathbf{T}(x)\|^{2} = \sum_{i=1}^{n}|a_i|^{2}$ 이다. 따라서 $\|\mathbf{T}(x)\| = \|x\|$ 이다. ▲ 
+
+    $6 \implies 1$:
+
+    임의의 $x \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
+
+    $$ \big <x,x \big > = \|x\| ^{2} = \|\mathbf{T}(x)\| ^{2} = \big <\mathbf{T}(x), \mathbf{T}(x) \big > = \big <x, \mathbf{T}{}^{*}\mathbf{T}(x) \big > $$
+
+    [정리 6.1](#99baac14a) 은 내적이 두번째 성분에 대한 덧셈의 선형성이 성립함을 말해준다. 따라서 $\big <x,x \big > = \big <x, \mathbf{T}{}^{*}\mathbf{T}(x) \big > \iff \big <x, (\mathbf{I}-\mathbf{T}{}^{*}\mathbf{T})(x) \big > = 0$ 이다. $\mathbf{U}=\mathbf{I}-\mathbf{T}{}^{*}\mathbf{T}$ 로 두면 [정리 6.11](#a9f161221) 에 의하여 $\mathbf{U}$ 가 자기수반연산자임을 쉽게 알 수 있다. 모든 $x$ 에 대하여 $\big <x, \mathbf{U}(x) \big > = 0$ 이므로 보조정리에 의하여 $\mathbf{U}= \mathbf{I}-\mathbf{T}{}^{*}\mathbf{T}=\mathbf{T}_0$ 이다. 그러므로 $\mathbf{T}{}^{*}\mathbf{T}=\mathbf{I}$ 이다. ■ 
+
+!!! def "정리 6.18 따름정리 1"
+
+    유한차원 실내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
+
+    - 절댓값이 $1$ 인 고윳값에 대응하는 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저가 $\mathbf{V}$ 에 존재한다.
+
+    - $\mathbf{T}$ 가 자기수반 직교연산자이다.
+
+- 증명
+
+    모든 $i$ 에 대하여 $\mathbf{V}$ 에 $\mathbf{T}(v_i) = \lambda _iv_i , |\lambda _i| = 1$ 인 정규직교기저 $\{v_1, v_2, \dots, v_n\}$ 가 존재함을 가정하면 정리 6.17 에 의하여 $\mathbf{T}$ 는 자기수반이다. 따라서 $(\mathbf{T}\mathbf{T}{}^{*})(v_i) = \mathbf{T}(\lambda _iv_i) = \lambda _i \lambda _iv_i = \lambda _i ^{2}v_i = v_i$ 이고, 이에 따라 $\mathbf{T}\mathbf{T}{}^{*}=\mathbf{I}$ 이다. 정리 6.18-(2) 와 정리 6.18-(6) 은 동치이므로 $\mathbf{T}$ 는 직교연산자이다. ▲ 
+
+    $\mathbf{T}$ 가 자기수반이면 정리 6.17 에 의하여 $\mathbf{V}$ 에 모든 $i$ 에 대하여 $\mathbf{T}(v_i) = \lambda _i v_i$ 인 정규직교기저 $\{v_1, v_2, \dots, v_n\}$ 가 존재한다. 이제 고윳값 $\lambda _i$ 의 절댓값이 $1$ 임을 증명하면 된다. $\mathbf{T}$ 가 직교연산자이므로 [정리 6.2](#618278d66) 에 의하여 다음이 성립한다. 
+
+    $$ |\lambda _i| \|v_i\| = \|\lambda _iv_i\| = \|\mathbf{T}(v_i)\| = \|v_i\| \implies |\lambda _i| = 1 \tag*{■} $$
+
+!!! def "정리 6.18 따름정리 2"
+
+    유한차원 복소내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다.
+    
+    - 절댓값이 $1$ 인 고윳값에 대응하는 $\mathbf{T}$ 의 고유벡터로 이루어진 정규직교기저가 $\mathbf{V}$ 에 존재한다.
+
+    - $\mathbf{T}$ 가 유니타리 연산자이다.
+
+- 증명
+
+    정리 6.18 따름정리 1 의 증명과 같은 논리로 증명 가능하다. 
+    
+    다만, 따름정리 1 에서는 자기수반이라는 조건이 필요한데 실내적공간의 고유벡터로 이루어진 정규직교기저 존재성을 보장해주는 정리 6.17 을 사용하기 위해서이다. 복소내적공간에서 고유벡터로 이루어진 정규직교기저 존재성을 보장해주는 정리 6.16 은 정규성이라는 조건만 있으면 되는데, 정규성은 정리 6.18 에 의하여 노름 보존 연산자의 정의와 동치이다. 즉, 유니타리 연산자의 정의와 정규성이 동치이기 때문에 정규성이라는 조건이 본 정리에서 불필요하다.
+
+!!! def ""
+
+    노름 보존 연산자의 고유벡터의 고윳값의 절댓값은 $1$ 이다.
+
+- 증명
+
+    유한차원 내적공간의 노름 보존 연산자 $\mathbf{T}$ 의 고윳값 $\lambda$ 에 대응하는 고유벡터 $v$ 에 대하여 직교연산자 또는 유니타리 연산자의 정의와 [노름의 성질](#618278d66)에 의하여 다음이 성립한다.
+
+    $$ \|v\| = \|\mathbf{T}(v)\| = \|\lambda v\| = |\lambda | \|v\| \implies |\lambda | = 1 \tag*{■} $$
+
+## Reflection
+
+!!! def "대칭변환(reflection)"
+
+    $\R ^{2}$ 의 1차원 부분공간 $\mathbf{L}_{}$ 에 대하여 다음 선형연산자 $\mathbf{T}$ 를 대칭변환이라 한다. 
+
+    $$ \mathbf{T}(x) = \begin{cases} x & x \in \mathbf{L}_{} \\ -x & x \in \mathbf{L}^{\perp} \\ \end{cases} $$
+
+- $\mathbf{L}_{}$ 은 평면 위 원점을 지나는 직선이다. 
+
+- 예시 
+
+    원점을 지나는 직선 $\mathbf{L}_{}$ 에 대한 $\R ^{2}$ 의 대칭변환 $\mathbf{T}$ 와 $\|v_1\| = \|v_2\| = 1$ 인 $v_1 \in \mathbf{L}_{}, v_2 \in \mathbf{L}_{}^{\perp}$ 에 대하여 $\mathbf{T}(v_1) = v_1, \mathbf{T}(v_2) = -v_2$ 이므로 $v_1, v_2$ 은 고윳값 $1, -1$ 에 대응하는 $\mathbf{T}$ 의 고유벡터이다. 또한 $\{v_1, v_2\}$ 는 $\R ^{2}$ 의 정규직교기저이다. 정리 6.18 따름정리 1 에 의하여 $\mathbf{T}$ 는 직교연산자이며 에르미트 연산자이다.
+
+## Unitary[Orthogonal] Matrix
+
+!!! def "직교행렬(orthogonal matrix), 유니타리 행렬(unitary matrix)"
+
+    $A ^{t}A = AA ^{t} = I$ 인 정사각행렬 $A$ 를 직교행렬이라 한다.
+
+    $A {}^{*} A = AA {}^{*}  = I$ 인 정사각행렬 $A$ 를 유니타리 행렬이라 한다.
+
+- 실행렬 $A$ 는 $A {}^{*}=A ^{t}$ 를 만족하므로 실 유니타리 행렬은 직교행렬이다. 
+
+!!! def "properties of unitary[orthogonal] matrix"
+
+    체 $\mathbf{F}\in \{\R ,\mathbb{C}\}$ 에 대한 정사각행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 다음은 동치이다.
+
+    1. $AA {}^{*} = I$
+
+    2. $A {}^{*} A = I$
+
+    3. $A$ 의 각 행이 표준내적공간 $\mathbf{F}^{n}$ 의 정규직교기저이다.
+
+    4. $A$ 의 각 열이 표준내적공간 $\mathbf{F}^{n}$ 의 정규직교기저이다.
+
+    5. $A$ 는 유니타리[직교] 행렬이다.
+
+    6. $A ^{-1} = A {}^{*}$
+
+- 여러가지 정리들을 수집하여 내가 만든 정리인데 어쩌다 보니 3) 과 4) 도 동치라고 주장하게 되었네. 논리적인 오류는 일단 아직 안보이는데, 그러면 정규직교기저로 열이 구성된 행렬을 만들면 그 행벡터만 따와서 집합을 만들면 또 다른 정규직교기저를 구할 수 있다는 말이되는데? 
+
+- 증명
+
+    $1 \iff 2$:
+
+    1) 을 가정하면 [문제 2.4-10](../LinearTransformation/#068bf6124) 에 의하여 $A, A {}^{*}$ 는 가역이고, $A ^{-1} = A {}^{*}$ 이다. 따라서 $A {}^{*}A = I$ 이다. 그 역도 같은 논리로 보일 수 있다. ▲ 
+
+    $1 \iff 3$:
+
+    $A$ 의 $i$행 $A_i$, $j$행 $A_j$ 으로 두면 표준내적 $\big <\cdot ,\cdot  \big >$ 에 대하여 $AA {}^{*} = I$ 를 가정하면 다음이 성립한다.
+
+    $$ \delta _{ij} = I _{ij} = (AA {}^{*})_{ij} = \sum_{k=1}^{n}A _{ik}(A {}^{*})_{kj} = \sum_{k=1}^{n}A _{ik}\overline{A} _{jk} = \big <A_i, A_j \big > $$
+
+    $\big <A_i,A_j \big > = \delta _{ij}$ 에서 $A$ 의 각 행이 직교하고, 정규벡터임을 알 수 있다. [정리 6.3 따름정리 2](#562252827) 에 의하여 $A$ 의 각 행은 일차독립이다. 그 역도 비슷한 논리로 보일 수 있다. 따라서 $AA {}^{*}=I$ 가 $A$ 의 각 행이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 동치임을 알 수 있다. ▲ 
+
+    $2 \iff 4$:
+
+    $1 \iff 3$ 의 증명과 같은 논리로 $A$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저인 것과 조건 $A {}^{*}A = I$ 이 동치임을 보일 수 있다. ▲ 
+
+    $1 \iff 5$:
+
+    1) 을 가정하면 2) 도 참이므로 유니타리 행렬의 정의가 바로 나온다. 직교 행렬은 실행렬임을 가정하면 바로 나온다. 역으로, 유니타리[직교] 행렬을 가정하면 1) 과 2) 가 바로 나온다. ▲  
+
+    $1 \iff 6$:
+
+    6) 을 가정하면 유니타리 행렬의 정의가 바로 나오고 1) 을 가정하면 2) 도 참이므로 6) 이 바로 나온다. ■ 
+
+!!! def ""
+
+    내적공간의 선형연산자 $\mathbf{T}$ 가 유니타리[직교] 연산자인 것과 정규직교기저 $\beta$ 에 대하여 $[\mathbf{T}]_{\beta }$ 가 유니타리[직교] 행렬인 것은 동치이다.
+
+- 증명
+
+    복소내적공간에서 $[\mathbf{T}]_{\beta }$ 가 유니타리행렬이면 다음이 성립한다.
+
+    $$ [\mathbf{T}]_{\beta }[\mathbf{T}]{}^{*}_{\beta } = [\mathbf{T}]_{\beta }{}^{*}[\mathbf{T}]_{\beta } = I $$
+
+    [정리 6.10](#515861895) 에 의하여 다음이 성립한다.
+
+    $$ [\mathbf{T}]_{\beta }[\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}{}^{*}]_{\beta }[\mathbf{T}]_{\beta } = I $$
+
+    [정리 2.11 따름정리](../LinearTransformation/#143fdacba) 에 의하여 다음이 성립한다.
+
+    $$ [\mathbf{T}\mathbf{T}{}^{*}]_{\beta } = [\mathbf{T}{}^{*}\mathbf{T}]_{\beta } = [\mathbf{I}]_{\beta } \implies \mathbf{T}\mathbf{T}{}^{*}=\mathbf{T}{}^{*}\mathbf{T}= \mathbf{I} $$
+    
+    [정리 6.18](#aee06829a) 에 의하여 $\|\mathbf{T}(x)\| = \|x\|$ 이다. ▲ 
+
+    $\|\mathbf{T}(x)\| = \|x\|$ 를 가정하면 위의 논리의 역순을 그대로 따라감으로써 유니타리 행렬의 정의에 도달한다. ▲ 
+
+    이제 복소내적공간에서 이루어진 위의 논리를 실내적공간에서 펼치면 하면 직교행렬과 직교연산자가 동치임을 바로 증명할 수 있다. ■ 
+
+## Unitarily[Orthogonally] Equivalent
+
+!!! def ""
+
+    체 $\mathbf{F}\in \{\R ,\mathbb{C}\}$ 에서 성분을 가져온 $n \times n$ 복소정규[실대칭] 행렬 $A$ 에 대하여 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저가 존재한다. 
+
+- 증명
+
+    정사각행렬 $A$ 가 복소정규행렬이면 [정리 2.15](../LinearTransformation/#c3298a7b3) 에 의하여 $\mathbb{C}^{n}$ 의 표준순서기저 $\beta$ 에 대하여 $[\mathbf{L}_{A}]_{\beta } = A$ 이다. [$A$ 가 정규행렬이므로 $\mathbf{L}_{A}$ 는 정규연산자](#36ed70678)이다. 정규연산자 $\mathbf{L}_{A}$ 에 대하여 [정리 6.16](#a19f2f549) 에 의하여 $\mathbf{L}_{A}$ 의 고유벡터로 이루어진 $\mathbb{C}^{n}$ 의 정규직교기저가 존재한다. [$\mathbf{L}_{A}$ 의 고유벡터는 $A$ 의 고유벡터](../Diagonalization/#5f167c003)이다. ▲ 
+
+    정사각행렬 $A$ 가 실대칭행렬이면 [정리 2.15](../LinearTransformation/#c3298a7b3) 에 의하여 $\R ^{n}$ 의 표준순서기저 $\beta$ 에 대하여 $[\mathbf{L}_{A}]_{\beta } = A$ 이다. [$A$ 가 자기수반행렬이므로 $\mathbf{L}_{A}$ 는 자기수반연산자](#0896eaf2a)이다. 자기수반연산자 $\mathbf{L}_{A}$ 에 대하여 [정리 6.17](#ffecd6249) 에 의하여 $\mathbf{L}_{A}$ 의 고유벡터로 이루어진 $\mathbb{C}^{n}$ 의 정규직교기저가 존재한다. [$\mathbf{L}_{A}$ 의 고유벡터는 $A$ 의 고유벡터](../Diagonalization/#5f167c003)이다. ■ 
+
+!!! def "유니타리 동치(unitarily equivalent), 직교 동치(orthogonally equivalent)"
+
+    두 행렬 $A, B$ 와 유니타리[직교] 행렬 $U$ 에 대하여 $B = U {}^{*}AU$ 가 성립하면 $A, B$ 를 유니타리[직교] 동치라 한다.
+
+!!! def "문제 6.5-18"
+
+    유니타리 동치는 $\mathbf{M}_{n \times n}(\mathbb{C})$ 에서 동치관계이다. 
+
+    직교 동치는 $\mathbf{M}_{n \times n}(\R )$ 에서 동치관계이다. 
+
+- 증명
+
+    항등행렬은 [정리 6.11 따름정리](#94b43ebc4) 에 의하여 유니타리 행렬이다.  유니타리 행렬로써 항등행렬을 택하면 다시 [정리 6.11 따름정리](#94b43ebc4) 에 의하여 $A \in \mathbf{M}_{n \times n}(\mathbb{C})$ 에 대하여 다음이 성립한다.
+
+    $$ I {}^{*}AI = I {}^{*}A = IA = A \tag*{▲} $$
+
+    $A, B \in \mathbf{M}_{n \times n}(\mathbb{C})$ 에 대하여 $B = U {}^{*}AU$ 를 만족하는 유니타리 행렬 $U$ 의 존재를 가정하면 다음이 성립한다.
+
+    $$ UBU {}^{*} = UU {}^{*}AUU {}^{*} = IAI = A $$
+
+    $U {}^{*}$ 는 유니타리 행렬이다. ▲ 
+
+    마지막으로 $A, B, C \in \mathbf{M}_{n \times n}(\mathbb{C})$ 에 대하여 $B = U {}^{*}AU$ 와 $C = U' {}^{*}BU'$ 를 만족하는 유니타리 행렬 $U, U'$ 의 존재를 가정하면 다음이 성립한다.
+
+    $$ C = U' {}^{*}U {}^{*}AUU' $$
+
+    [정리 6.11 따름정리](#94b43ebc4) 에 의하여 $(UU') {}^{*} = U' {}^{*}U {}^{*}$ 이다. [동치관계의 조건](#61b0328b9) 을 모두 만족하므로 증명이 끝났다. 직교 동치가 동치관계인 것도 실정사각행렬 공간 $\mathbf{M}_{n \times n}(\R )$ 에서 같은 논리로 보일 수 있다. ■ 
+
+!!! def "정리 6.19"
+
+    $n \times n$ 복소행렬 $A$ 가 정규행렬인 것은 $A$ 가 대각행렬과 유니타리 동치인 것과 동치이다.
+
+- 증명
+
+    [$A$ 가 복소정규 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 유니타리 행렬](#2efe0b298)이다. 따라서 $A$ 와 $D$ 는 유니타리 동치이다. ▲ 
+
+    $A$ 가 유니타리 행렬 $P$ 와 대각행렬 $D$ 에 대하여 $A = P {}^{*}DP$ 임을 가정하면 다음이 성립한다. 
+
+    $$ AA {}^{*} = (P {}^{*}DP)(P {}^{*}DP) {}^{*} = (P {}^{*}DP)(P {}^{*}D {}^{*}P) = P {}^{*}DID {}^{*}P = P {}^{*}DD {}^{*}P $$
+
+    같은 논리로 $A {}^{*}A = P {}^{*}D {}^{*}DP$ 를 얻는다. $D$ 는 대각행렬이므로 $DD {}^{*} = D {}^{*}D$ 이다. 따라서 $AA {}^{*} = A {}^{*}A$ 이다. ■ 
+
+!!! def "정리 6.20"
+
+    $n \times n$ 실행렬 $A$ 가 대칭행렬인 것은 $A$ 가 실대각행렬과 직교 동치인 것과 동치이다.
+
+- 이 정리는 수학과 통계학의 많은 분야에서 사용된다.
+
+- 증명
+
+    [$A$ 가 실대칭 행렬이면 $A$ 의 고유벡터로 이루어진 $\mathbf{F}^{n}$ 의 정규직교기저 $\beta$ 가 존재](#5a191e0e4)한다. [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $A$ 는 대각화 가능하다. 다시 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 대각행렬 $D$ 와 $\beta$ 의 벡터를 열로 갖는 행렬 $Q$ 에 대하여 $D = Q ^{-1}AQ$ 이다. [$Q$ 의 각 열이 $\mathbf{F}^{n}$ 의 정규직교기저이므로 $Q$ 는 직교 행렬](#2efe0b298)이다. 따라서 $A$ 와 $D$ 는 직교 동치이다. ▲ 
+
+    증명의 후반부는 정리 6.19 와 비슷하다. ■ 
+
+- 예시 
+
+    실대칭행렬 $A = \begin{pmatrix} 4&2&2\\ 2&4&2\\ 2&2&4\\ \end{pmatrix} \in \mathbf{M}_{3 \times 3}(\R )$ 는 대각행렬과 직교 동치이다. 즉, 직교행렬 $Q$ 와 대각행렬 $D$ 에 대하여 $Q ^{t}AQ = D$ 이다. 이제 이 $Q, D$ 를 구해보자. 
+
+    정리의 증명과정에 따라서 $A$ 의 고유벡터로 이루어진 $\R ^{3}$ 의 정규직교기저 $\beta$ 를 구하면 $\beta$ 의 열로 구성된 $Q$ 를 알 수 있다. 그러면 $D$ 도 계산할 수 있다. 
+
+    $A$ 의 특성다항식은 $f(t) = \det(A - tI_3) = \det \begin{pmatrix} 4-t&2&2\\ 2&4-t&2\\ 2&2&4-t\\ \end{pmatrix}$ 이므로 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} \det \begin{pmatrix} 4-t&2&2\\ 2&4-t&2\\ 2&2&4-t\\ \end{pmatrix} &= (4 - t)\{(4-t) ^{2} - 2 ^{2}\} - 2 \{2(4-t) - 2 ^{2}\} + 2\{2 ^{2}-2(4-t)\}\\ &= (4 - t)(t ^{2} - 8t + 12) + 4 \{2 - (4-t)\} + 4\{2 -(4-t)\}\\ &= (4 - t)(t - 2)(t - 6) + 8(t - 2) \\ &= (t - 2)\{-(t - 4)(t - 6) + 8\} = (t - 2)\{-(t ^{2} - 10t + 24) + 8\} \\ &= (t - 2)(-t ^{2} + 10t - 16) = -(t - 2)(t ^{2} - 10t + 16) \\ &= -(t - 2)(t - 2)(t - 8) = -(t - 2) ^{2}(t - 8)\\ \end{split}\end{equation} \tag*{} $$
+
+    따라서 $A$ 의 고윳값은 $\lambda _1 = 2, \lambda _2 = 8$ 이다. ▲ 
+
+    고윳값을 찾았으니 고유공간을 구할 차례이다. $\lambda _1$ 에 대응하는 고유공간은 다음과 같다. 
+
+    $$ \mathbf{E}_{\lambda_1} = \{x \in \R ^{3} : (A - 2I)x = 0 \} = \bigg \{ \begin{pmatrix} x_{1}\\ x_{2}\\ x_{3}\\ \end{pmatrix} \in \R ^{3} : \begin{pmatrix} 2&2&2\\ 2&2&2\\ 2&2&2\\ \end{pmatrix}\begin{pmatrix} x_{1}\\ x_{2}\\ x_{3}\\ \end{pmatrix} = \begin{pmatrix} 0\\ 0\\ 0\\ \end{pmatrix}\bigg \} $$
+
+    이 고유공간의 기저를 다음 연립방정식의 해집합으로 구해보자.
+
+    $$ x_1 + x_2 + x_3 = 0 \implies x_1 = -x_2 -x_3 $$
+
+    $$ \begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix} = \begin{pmatrix} -x_2 - x_3\\ x_2\\ x_3\\ \end{pmatrix} = \begin{pmatrix} -x_2\\ x_2\\ 0\\ \end{pmatrix} + \begin{pmatrix} -x_3\\ 0\\ x_3\\ \end{pmatrix} = x_2 \begin{pmatrix} -1\\ 1\\ 0\\ \end{pmatrix} + x_3 \begin{pmatrix} -1\\ 0\\ 1\\ \end{pmatrix} $$
+
+    이렇게 고유공간 $\mathbf{E}_{\lambda_1}$ 의 기저 $\{(-1, 1, 0), (-1, 0, 1)\}$ 을 구할 수 있다. 사실은 다음과 같이 또 다른 기저 $\{(1,-1,0), (0, -1, 1)\}$ 도 구할 수 있다. 어쨌든 기저 $\{(-1, 1, 0), (-1, 0, 1)\}$ 를 사용할 것이다.
+
+    $$ \begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix} = \begin{pmatrix} x_1\\ -x_1 - x_3\\ x_3\\ \end{pmatrix} = \begin{pmatrix} x_1\\ -x_1\\ 0\\ \end{pmatrix} + \begin{pmatrix} 0\\ -x_3\\ x_3\\ \end{pmatrix} = x_1 \begin{pmatrix} 1\\ -1\\ 0\\ \end{pmatrix} + x_3 \begin{pmatrix} 0\\ -1\\ 1\\ \end{pmatrix} $$
+
+    $\lambda _2$ 에 대응하는 고유공간은 다음과 같다.
+
+    $$ \mathbf{E}_{\lambda_2} = \{x \in \R ^{3} : (A - 8I)x = 0 \} = \bigg \{ \begin{pmatrix} x_{1}\\ x_{2}\\ x_{3}\\ \end{pmatrix} \in \R ^{3} : \begin{pmatrix} -4&2&2\\ 2&-4&2\\ 2&2&-4\\ \end{pmatrix}\begin{pmatrix} x_{1}\\ x_{2}\\ x_{3}\\ \end{pmatrix} = \begin{pmatrix} 0\\ 0\\ 0\\ \end{pmatrix}\bigg \} $$
+
+    이 고유공간의 기저를 다음 연립방정식의 해집합으로 구해보자.
+
+    $$ \begin{cases} -2x_1 + x_2 + x_3 = 0 &\\ x_1 - 2x_2 + x_3 = 0 &\\ x_1 + x_2 - 2x_3 = 0 &\\ \end{cases} \implies x_1 = x_2 = x_3 $$
+
+    $$ \begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix} = \begin{pmatrix} x_1\\ x_1\\ x_1\\ \end{pmatrix} = x_1 \begin{pmatrix} 1\\ 1\\ 1\\ \end{pmatrix} $$
+
+    따라서 $\mathbf{E}_{\lambda_2}$ 의 기저는 $\{(1,1,1)\}$ 이다. ▲ 
+
+    사실 $A$ 가 대각화가능임을 판정할 필요는 없지만 굳이 판정해보면 [대각화 가능 판정법](../Diagonalization/#e84f8c4af) 에 의하여 고윳값의 중복도가 $2$ 이상인 것들이 고유공간의 차원과 같으므로 $A$ 는 대각화 가능이다. 즉, $\lambda _1 = 2$ 에 대응하는 고유공간의 차원이 $2$ 이고 중복도도 $2$ 이다.
+
+    이제 각 고유공간의 기저를 통해 $A$ 의 고유벡터로 이루어진 $\R ^{3}$ 의 정규직교기저를 얻어보자. 일단 먼저 $\mathbf{E}_{\lambda_1}$ 의 기저 $\{(-1, -1, 0), (-1, 0, 1)\}$ 를 [그람 슈미트 직교화](#0ee45a6c5) 로 직교화하여 $\{(-1, 1, 0), - \frac{1}{2}(1, 1, -2)\}$ 를 얻는다.
+
+    [정리 6.15](#ef3696575) 에 의하여 $(1, 1, 1)$ 은 $\mathbf{E}_{\lambda_1}$ 의 기저의 벡터들과 수직이다. [정리 5.8](../Diagonalization/#7050c2a83) 에 의하여 두 고유공간의 기저의 합집합은 $A$ 의 고유벡터로 이루어진 $\R ^{3}$ 의 직교기저이다. 이제 이 직교기저를 정규화 하면 다음과 같이 $A$ 의 고유벡터로 이루어진 $\R ^{3}$ 의 정규직교기저를 얻는다. 
+
+    $$ \bigg \{\dfrac{1}{\sqrt[]{2}}(-1, 1, 0), \dfrac{1}{\sqrt[]{6}}(1, 1, -2), \dfrac{1}{\sqrt[]{3}}(1, 1, 1) \bigg \} \tag*{▲} $$
+
+    이제 드디어 $P, D$ 를 구해보자. 가능한 $P, D$ 의 한 가지 경우는 다음과 같다. 
+
+    $$ P = \begin{pmatrix} - \dfrac{1}{\sqrt[]{2}}&\dfrac{1}{\sqrt[]{6}}&\dfrac{1}{\sqrt[]{3}}\\ \dfrac{1}{\sqrt[]{2}}&\dfrac{1}{\sqrt[]{6}}&\dfrac{1}{\sqrt[]{3}}\\ 0 &-\dfrac{2}{\sqrt[]{6}}&\dfrac{1}{\sqrt[]{3}}\\ \end{pmatrix}, D = \begin{pmatrix} 2&0&0\\ 0&2&0\\ 0&0&8\\ \end{pmatrix} $$
+
+## Schur's theorem in Matrix
+
+!!! def "정리 6.21 슈어의 정리(Schur's theorem)"
+
+    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 의 특성다항식이 $\mathbf{F}$ 위에서 완전히 인수분해되면 다음이 성립한다. 
+
+    1. $\mathbf{F}=\mathbb{C}$ 이면 $A$ 는 복소 상삼각행렬과 유니타리 동치이다.
+
+    2. $\mathbf{F}=\R$ 이면 $A$ 는 실 상각행렬과 직교 동치이다.
+
+- 이 정리는 선형연산자의 관점으로 서술된 [정리 6.14 슈어의 정리](#397a3d05d) 를 행렬의 관점으로 바꾼 것 뿐이다. 이 정리 또한 슈어의 정리라고 부른다. 먼저 정리 6.14 슈어의 정리를 선형연산자 $\mathbf{L}_{A}$ 의 관점에서 서술해보면 다음과 같다. 
+
+    *유한차원 내적공간 $\mathbf{F}^{n}$ 의 선형연산자 $\mathbf{L}_{A}$ 의 특성다항식이 완전히 인수분해되면 $[\mathbf{L}_{A}]_{\gamma }$ 가 상삼각행렬이 되게 하는 정규직교기저 $\gamma$ 가 존재한다.*
+
+    $\mathbf{F}^{n}$ 의 선형연산자 $\mathbf{L}_{A}$ 의 특성다항식은 $\mathbf{F}^{n}$ 의 순서기저 $\beta$ 에 대하여 $\det([\mathbf{L}_{A}]_{\beta }-tI_n)$ 이다. [문제 5.1-13](../Diagonalization/#b150e4e68) 에 의하여 특성다항식은 벡터공간의 기저의 선택에 관계없으므로 $\beta$ 를 표준순서기저로 두면 [정리 2.15-(1)](../LinearTransformation/#c3298a7b3) 에 의하여 $\det([\mathbf{L}_{A}]_{\beta } - tI_n) = \det(A - tI_n)$ 이다. 그러면 이는 정사각행렬 $A$ 의 특성다항식 $\det(A-tI_n)$ 과 같아진다. 즉, *$\mathbf{L}_{A}$ 의 특성다항식이 완전히 인수분해된다* 는 것은 *$A$ 의 특성다항식이 완전히 인수분해된다* 는 것과 동치이다.
+
+    [정리 2.23 따름정리](../LinearTransformation/#b7acffb79)는 좌측곱변환을 임의의 기저로 표현하는 방법을 말해준다. 즉, $\gamma$ 의 벡터로 열을 구성한 행렬 $Q$ 에 대하여 $[\mathbf{L}_{A}]_{\gamma } = Q ^{-1}AQ$ 이다. $Q$ 는 [정규직교기저를 열로 구성한 행렬이므로 유니타리 행렬](#2efe0b298)이다. 따라서 $A$ 는 복소 상삼각행렬 $[\mathbf{L}_{A}]_{\gamma }$ 와 유니타리 동치이다. 즉, *$[\mathbf{L}_{A}]_{\gamma }$ 가 상삼각행렬이 되게 하는 정규직교기저 $\gamma$ 가 존재한다* 는 것은 *$A$ 가 복소상삼각행렬과 유니타리 동치라는 것* 과 동치이다.
+
+    이상의 논의를 정리하면 $A \in \mathbf{M}_{n \times n}(\mathbb{C})$ 의 특성다항식이 $\mathbb{C}$ 위에서 완전히 인수분해되면 $A$ 가 복소 상삼각행렬과 유니타리 동치라고 말할 수 있다. 
+    
+    한편, $\mathbf{L}_{A}$ 의 특성다항식이 완전히 인수분해되면 $A$ 가 복소상삼각행렬과 유니타리 동치이라고 말할 수도 있고, $A$ 의 특성다항식이 완전히 인수분해되면 $[\mathbf{L}_{A}]_{\gamma }$ 가 상삼각행렬이 되게 하는 정규직교기저 $\gamma$ 가 존재한다고 말할 수도 있다. 
+
+## Isometry
+
+!!! def "등장사상(isometry), 강체운동(rigid motion)"
+
+    실내적공간 $\mathbf{V}$ 와 모든 $x,y \in \mathbf{V}$ 에 대하여 다음을 만족하는 함수 $f: \mathbf{V}\to \mathbf{V}$ 를 등장사상이라 한다.
+
+    $$ \|f(x) - f(y)\| = \|x - y\| $$
+
+- 강체운동은 물리학에서 모든 점 간의 길이가 보존되는 운동을 뜻한다. 이것을 수학에서는 등장사상, 등거리변환이라 한다. 
+
+- 노름 보존 연산자, 즉 직교 연산자는 자동으로 등장사상이 된다. 그러나 등장사상이라고 해서 노름 보존 연산자라는 보장은 없다. [노름공간과 거리공간의 관계](#514576eb0)를 다시 확인해보면 바로 알 수 있다. 
+
+!!! def "평행이동(translation)"
+
+    실내적공간 $\mathbf{V}$ 에서 모든 $x \in \mathbf{V}$ 에 대하여 $g(x) = x + v_0$ 인 벡터 $v_0 \in \mathbf{V}$ 가 존재하는 함수 $g: \mathbf{V}\to \mathbf{V}$ 를 $v_0$ 에 의한 평행이동이라 한다.
+
+- 평행이동은 강체운동의 한 예시이다.
+
+!!! def "정리 6.22"
+
+    유한차원 실내적공간 $\mathbf{V}$ 와 등장사상 $f: \mathbf{V}\to \mathbf{V}$ 에 대하여 $f = g \circ \mathbf{T}$ 를 만족하는 직교연산자 $\mathbf{T}$ 와 평행이동 $g$ 가 유일하게 존재한다.
+
+- 이 정리는 존재하는 모든 등장사상을 직교연산자와 평행이동의 합성으로 표현할 수 있다는 것을 말해준다. 즉, 등장사상 $f$ 에 대하여 다음을 만족하는 직교연산자 $\mathbf{T}$ 와 $v$ 에 의한 평행이동 $g$ 가 유일하게 존재한다. 
+
+    $$ \forall x \in \mathbf{V} : \boxed{f(x) = \mathbf{T}(x) + v} $$ 
+
+    한편, 임의의 직교연산자는 영벡터 $0$ 에 의한 평행이동인 항등사상의 특수한 경우이다. 임의의 평행이동도 직교연산자가 항등변환인 특수한 경우이다. 
+
+- 또한 이 정리는 등장사상에 관한 모든 문제를 직교연산자에 관한 문제로 환원시킬 수 있음을 말해준다.
+
+- 증명
+
+    함수 $\mathbf{T}:\mathbf{V}\to \mathbf{V}, x \mapsto f(x) - f(0)$ 을 정의하고 평행이동 $g: \mathbf{V}\to \mathbf{V}, x \to x + f(0)$ 을 정의하면 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split}
+    (g \circ \mathbf{T})(x) &= g(\mathbf{T}(x)) = g(f(x) - f(0))  \\
+    &= f(x) - f(0) + f(0) = f(x) \\
+    \end{split}\end{equation} \tag*{} $$
+
+    따라서 $f = g \circ \mathbf{T}$ 이다. ▲ 
+    
+    임의의 $x, y \in \mathbf{V}$ 에 대하여 다음이 성립하므로 $\mathbf{T}$ 는 노름을 보존한다.
+
+    $$ \|\mathbf{T}(x)\| = \|f(x) - f(0)\| = \|x - 0\| = \|x\| $$
+
+    그러면 $\mathbf{T}$ 는 자명하게 거리도 보존한다. 즉, $\mathbf{T}$ 는 등장사상이 되어 다음이 성립한다.
+
+    $$ \|\mathbf{T}(x) - \mathbf{T}(y)\| =  \|x - y\| $$
+
+    그러면 다음이 성립하므로 $\mathbf{T}$ 는 내적도 보존한다.
+
+    $$ \begin{equation}\begin{split} \|x - y\|^{2} = \|\mathbf{T}(x) - \mathbf{T}(y)\| ^{2} &= \|\mathbf{T}(x)\|^{2} - 2 \big <\mathbf{T}(x), \mathbf{T}(y) \big > + \|\mathbf{T}(y)\| ^{2} \\ &= \|x\|^{2} -2 \big <\mathbf{T}(x), \mathbf{T}(y) \big > + \|y\|^{2} \\ \end{split}\end{equation} \tag*{} $$
+
+    $$ \begin{equation}\begin{split} \|x - y\| ^{2} = \|x\|^{2} - 2 \big <\mathbf{T}(x), \mathbf{T}(y) \big > + \|y\|^{2} & \iff \|x\|^{2} -2 \big <x,y \big > + \|y\|^{2} = \|x\|^{2} - 2 \big <\mathbf{T}(x), \mathbf{T}(y) \big > + \|y\|^{2}  \\ & \iff \big <x,y \big > = \big <\mathbf{T}(x), \mathbf{T}(y) \big >\\ \end{split}\end{equation} \tag*{}$$
+
+    이제 $\mathbf{T}$ 가 선형변환임을 보일 준비가 다 되었다. 스칼라 $a \in \R$ 에 대하여 [내적의 정의](#3874b2a1f)에 의하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} \|\mathbf{T}(x + ay) - \mathbf{T}(x) - a \mathbf{T}(y) \|&= \|[\mathbf{T}(x + ay) - \mathbf{T}(x)] - a \mathbf{T}(y)\| ^{2} \\ &= \|\mathbf{T}(x + ay) - \mathbf{T}(x)\| ^{2} + a ^{2}\|\mathbf{T}(y)\| ^{2} -2a \big <\mathbf{T}(x + ay) - \mathbf{T}(x), \mathbf{T}(y) \big > \\ &= \|x + ay - x\| ^{2} + a ^{2} \|y\| ^{2} -2a[ \big <\mathbf{T}(x + ay), \mathbf{T}(y) \big > - \big <\mathbf{T}(x), \mathbf{T}(y) \big >] \\ &= a ^{2}\|y\|^{2} + a ^{2}\|y\|^{2} -2a[ \big <x+ay,y \big >-\big <x,y \big >] \\ &= 2a ^{2}\|y\| ^{2} -2a[\big <x,y \big >a \|y\|^{2} - \big <x,y \big >] = 0 \end{split}\end{equation} \tag*{} $$
+
+    즉, [노름의 정의](#fce1bedd1) 에 의하여 $\|\mathbf{T}(x + ay) - \mathbf{T}(x) - a \mathbf{T}(y)\| = 0 \implies \mathbf{T}(x + ay) = \mathbf{T}(x) + a \mathbf{T}(y)$ 이므로 [선형변환의 충분조건](#841cc7807) 에 의하여 $\mathbf{T}$ 는 선형변환이다. $\mathbf{T}$ 가 선형연산자이고 노름 보존 연산자이므로 직교 연산자이다. ▲ 
+
+    $\mathbf{T}$ 의 존재성을 보였으니 $\mathbf{T}$ 의 유일성과 평행이동 $g$ 의 유일성을 보이면 된다. $v \in \mathbf{V}$ 에 의한 평행이동 $g_1$ 와 $u \in \mathbf{V}$ 에 의한 평행이동 $g_2$ 와 직교연산자 $\mathbf{T}, \mathbf{U}$ 에 대하여 $f = g_1 \circ \mathbf{T} = g_2 \circ \mathbf{U}$ 를 가정하면 다음이 성립한다. 
+
+    $$ f(x) = (g_1 \circ \mathbf{T})(x) = g_1(\mathbf{T}(x)) = \mathbf{T}(x) + v $$
+    
+    $$ f(x) = (g_2 \circ \mathbf{U})(x) = g_2(\mathbf{U}(x)) = \mathbf{U}(x) + u $$
+
+    [선형변환의 $0$ 의 상은 $0$ 이므로](../LinearTransformation/#841cc7807) $x = 0 \implies v = u$ 이다. 따라서 평행이동은 유일하다. 또한 이에 따라 위 두 식의 뺄셈을 하면 $0 = \mathbf{T}(x) - \mathbf{U}(x) \implies \mathbf{T}(x) = \mathbf{U}(x)$ 을 얻는다. 따라서 $\mathbf{T}=\mathbf{U}$ 이다. ■ 
+    
+!!! def "정리 6.23"
+
+    $\R ^{2}$ 의 직교연산자 $\mathbf{T}$ 와 표준순서기저 $\beta$ 에 대한 행렬 $A = [\mathbf{T}]_{\beta }$ 에 대하여 다음 중 하나만 성립한다. 
+
+    1. $\mathbf{T}$ 는 회전변환이고 $\det(A) = 1$ 이다.
+
+    2. $\mathbf{T}$ 는 원점을 지나는 대칭변환이고 $\det(A) = -1$ 이다.
+
+- 정리 6.22 에 의하여 등장사상에 관한 문제는 직교연산자의 문제로 환원된다. 이 정리는 $\R ^{2}$ 의 직교연산자를 분류해줌으로써 직교연산자를 명확하게 규명해준다. 일반적인 공간에 대한 직교연산자 분류 또한 할 수 있다.
+
+- 증명
+
+    $\mathbf{T}$ 가 직교연산자이므로 [정리 6.18](#aee06829a) 에 의하여 $\mathbf{T}(\beta ) = \{\mathbf{T}(e_1), \mathbf{T}(e_2)\}$ 는 정규직교기저이다. $\mathbf{T}$ 가 노름 보존 연산자이므로 $\mathbf{T}(e_1)$ 는 단위벡터이고, $0 \leq \theta < 2 \pi$ 에 대하여 $\mathbf{T}(e_1) = (\cos \theta, \sin \theta)$ 를 만족하는 $\theta$ 가 유일하게 존재한다. $\mathbf{T}(e_2)$ 도 단위벡터이고 $\mathbf{T}(e_1)$ 와 직교하므로 $\mathbf{T}(e_2)$ 는 다음을 만족한다. 
+
+    $$ \mathbf{T}(e_2) = (- \sin \theta, \cos \theta) \lor \mathbf{T}(e_2) = (\sin \theta, - \cos \theta) \tag*{▲} $$
+
+    $\mathbf{T}(e_2) = (- \sin \theta, \cos \theta)$ 를 가정하면 $A = \begin{pmatrix}
+    \cos \theta& - \sin \theta\\
+    \sin \theta& \cos \theta\\
+    \end{pmatrix}$ 이므로 $\mathbf{T}$ 는 각 $\theta$ 에 대한 회전변환이다. 즉, $0 < \theta' < \pi$ 에 대하여 선형연산자 $\mathbf{L}_{A}: \R ^{2} \to \R ^{2}$ 는 벡터를 반시계방향으로 $\theta'$ 만큼 회전시킨다. 또한 다음이 성립한다. 
+
+    $$ \det(A) = \cos ^{2} \theta + \sin ^{2} \theta = 1 \tag*{▲} $$
+
+    $\mathbf{T}(e_2) = (\sin \theta, - \cos \theta)$ 를 가정하면 $A = \begin{pmatrix}
+    \cos \theta& \sin \theta\\
+    \sin \theta& -\cos \theta\\
+    \end{pmatrix}$ 이므로 $\mathbf{T}$ 는 $x$축의 양의 방향과 $\dfrac{\theta}{2}$ 의 각을 이루는 직선 $\mathbf{L}_{}$ 에 대한 대칭변환이다. 또한 다음이 성립한다. 
+
+    $$ \det(A) = - \cos ^{2}\theta-\sin ^{2}\theta=-1 \tag*{■} $$
+
+!!! def "정리 6.23 따름정리"
+
+    $\R ^{2}$ 의 임의의 등장사상은 다음의 둘 중 하나이다.
+
+    1. 회전변환과 평행이동의 합성
+
+    2. 원점을 지나는 직선에 대한 대칭변환과 평행이동의 합성
+
+- 증명
+
+    정리 6.22 와 6.23 에 의하여 본 정리와 같이 $\R ^{2}$ 의 등장사상을 완전히 분류할 수 있다. ■ 
+
+- 예시 
+
+# Spectral Theorem
+
+!!! def "문제 1.3-23"
+
+    벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 다음이 성립한다. 
+
+    1. $\mathbf{W}_1 + \mathbf{W}_2$ 는 $\mathbf{W}_1$ 와 $\mathbf{W}_2$ 를 포함하는 $\mathbf{V}$ 의 부분공간이다. 
+
+    2. $\mathbf{W}_1$ 과 $\mathbf{W}_2$ 를 포함하는 $\mathbf{V}$ 의 부분공간은 $\mathbf{W}_1 + \mathbf{W}_2$ 도 포함한다.
+
+- 증명
+
+    1:
+
+    $\mathbf{W}_1 + \mathbf{W}_2$ 이 $\mathbf{W}_1$ 과 $\mathbf{W}_2$ 를 포함하는 것은 자명하니 [정리 1.3](../VectorSpace/#42f9c15c6) 을 기반으로 $\mathbf{V}$ 의 부분공간임을 보이면 된다. $0 \in \mathbf{W}_1, 0 \in \mathbf{W}_2 \implies 0 + 0 = 0 \in \mathbf{W}_1 + \mathbf{W}_2$ 이다. ▲ 
+
+    $x, y \in \mathbf{W}_1 + \mathbf{W}_2$ 에 대하여 $x = x_1 + x_2$, $y = y_1 + y_2$ 를 만족하는 $x_1, y_1 \in \mathbf{W}_1$ 와 $x_2, y_2 \in \mathbf{W}_2$ 가 존재한다. $\mathbf{W}_1$ 와 $\mathbf{W}_2$ 은 부분공간이므로 합에 대하여 닫혀있다. 즉, $x_1+y_1 \in \mathbf{W}_1, x_2 + y_2 \in \mathbf{W}_2$ 이다. 따라서 $(x_1+y_1) + (x_2+y_2) \in \mathbf{W}_1 + \mathbf{W}_2$ 이다. ▲ 
+
+    $x \in \mathbf{W}_1 + \mathbf{W}_2$ 에 대하여 $x = x_1 + x_2$ 를 만족하는 $x_1 \in \mathbf{W}_1$ 와 $x_2 \in \mathbf{W}_2$ 가 존재한다. $\mathbf{W}_1$ 와 $\mathbf{W}_2$ 은 부분공간이므로 스칼라곱에 대하여 닫혀있다. 즉, $cx_1 \in \mathbf{W}_1, cx_2 \in \mathbf{W}_2$ 이다. 따라서 $cx_1+cx_2 = cx \in \mathbf{W}_1 + \mathbf{W}_2$ 이다. ■ 
+
+    2:
+
+    부분공간 $\mathbf{W}$ 가 $\mathbf{W}_1, \mathbf{W}_2$ 을 포함한다고 가정하자. 부분공간은 합과 스칼라 곱에 대하여 닫혀있으므로 $x_1 \in \mathbf{W}_1, x_2 \in \mathbf{W}_2$ 에 대하여 $x_1 + x_2 \in \mathbf{W}_1+\mathbf{W}_2 \implies x_1 + x_2 \in \mathbf{W}$ 이다. 따라서 $\mathbf{W}_1 + \mathbf{W}_2 \subset \mathbf{W}$ 이다. ■ 
+
+!!! def "문제 1.3-24"
+
+    체 $\mathbf{F}$ 와 두 부분공간 
+
+    $$ \mathbf{W}_1 = \{(a_1, a_2, \dots, a_n) \in \mathbf{F}^{n} : a_n = 0\} $$
+
+    $$ \mathbf{W}_2 = \{(a_1, a_2, \dots, a_n) \in \mathbf{F}^{n} : a_1 = a_2 = \dots = a _{n-1} = 0\} $$
+
+    에 대하여 다음이 성립한다.
+
+    $$ \mathbf{F}^{n} = \mathbf{W}_1 \oplus \mathbf{W}_2 $$
+
+- 증명
+
+    $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 은 자명하다. ▲ 
+
+    다음이 성립하므로 $\mathbf{W}_1 \oplus \mathbf{W}_2 = \mathbf{F}^{n}$ 이다. 
+
+    $$ \begin{equation}\begin{split} \mathbf{F}^{n} &= \{(a_1, a_2, \dots, a_n) : a_i \in \mathbf{F} \} \\ &= \{(a_1, a_2, \dots, a _{n-1}, 0) + (0, 0, \dots, a_n) : a_i \in \mathbf{F}\} \\ \end{split}\end{equation} \tag*{} $$
+
+    ■ 
+
+!!! def "문제 1.3-25"
+
+    다항식 공간 $\mathbf{P}(\mathbf{F})$ 에서 짝수 차수의 계수가 $0$ 인 다항식 집합을 $\mathbf{W}_1$ 라 하고 홀수 차수의 계수가 $0$ 인 다항식 집합을 $\mathbf{W}_1$ 라 하면 $\mathbf{P}(\mathbf{F}) = \mathbf{W}_1 \oplus \mathbf{W}_2$ 이다.
+
+- 증명
+
+    정리의 가정은 다음과 같다.
+
+    $$ \mathbf{W}_1 = \bigg \{ \sum_{i=0}^{\infty}a_ix ^{2i+1} : a_i \in \mathbf{F} \bigg \} $$
+
+    $$ \mathbf{W}_2 = \bigg \{ \sum_{i=0}^{\infty}a_ix ^{2i} : a_i \in \mathbf{F} \bigg \} $$
+
+    $\forall a_i \in \mathbf{F} : a_i = 0$ 을 가정하면 $0 \in \mathbf{W}_1, 0 \in \mathbf{W}_2$ 이다. 다음이 성립하므로 $\mathbf{W}_1, \mathbf{W}_2$ 는 덧셈에 대하여 닫혀있다.
+
+    $$ \sum_{i=0}^{\infty}a_ix ^{2i + 1}, \sum_{i=0}^{\infty}b_ix ^{2i + 1} \in \mathbf{W}_1 \implies \sum_{i=0}^{\infty}a_ix ^{2i + 1} + \sum_{i=0}^{\infty}b_ix ^{2i + 1} = \sum_{i=0}^{\infty}(a_i + b_i) x^{2i + 1} \in \mathbf{W}_1 $$
+
+    $$ \sum_{i=0}^{\infty}a_ix ^{2i}, \sum_{i=0}^{\infty}b_ix ^{2i} \in \mathbf{W}_1 \implies \sum_{i=0}^{\infty}a_ix ^{2i} + \sum_{i=0}^{\infty}b_ix ^{2i} = \sum_{i=0}^{\infty}(a_i + b_i) x^{2i} \in \mathbf{W}_1 $$
+
+    [Summation 의 성질](../../ArithmeticOperations/#d2c8a4239) 에 의하여 다음이 성립하므로 $\mathbf{W}_1, \mathbf{W}_2$ 는 스칼라 곱에 대하여 닫혀있다.
+
+    $$ \sum_{i=0}^{\infty}a_ix ^{2i + 1} \in \mathbf{W}_1 \implies c\sum_{i=0}^{\infty}a_ix ^{2i + 1} = \sum_{i=0}^{\infty}ca_i x^{2i + 1} \in \mathbf{W}_1 $$
+
+    $$ \sum_{i=0}^{\infty}a_ix ^{2i} \in \mathbf{W}_2 \implies c\sum_{i=0}^{\infty}a_ix ^{2i} = \sum_{i=0}^{\infty}ca_i x^{2i} \in \mathbf{W}_2 $$
+
+    ▲ 
+
+    자명하게 $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 이다. 다음이 성립하므로 $\mathbf{W}_1 \oplus \mathbf{W}_2 = \mathbf{P}_{}(\mathbf{F})$ 이다. 
+
+    $$ \begin{equation}\begin{split} \mathbf{F}^{n} &= \bigg \{\sum_{i=0}^{\infty}a_ix ^{i} : a_i \in \mathbf{F} \bigg \} \\ &= \bigg \{ \sum_{i=0}^{\infty}a_ix ^{2i+1} + \sum_{i=0}^{\infty}a_ix ^{2i} : a_i \in \mathbf{F} \bigg \} \end{split}\end{equation} \tag*{} $$
+
+    ■ 
+
+!!! def "문제 1.3-26"
+
+    벡터공간 $\mathbf{M}_{m \times n}(\mathbf{F})$ 에 대하여 다음과 같이 정의된 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 $\mathbf{M}_{m \times n}(\mathbf{F}) = \mathbf{W}_1 \oplus \mathbf{W}_2$ 이다.
+     
+    $$ \mathbf{W}_1 = \{A \in \mathbf{M}_{m \times n}(\mathbf{F}) : i > j \implies A _{ij} = 0\} $$
+
+    $$ \mathbf{W}_2 = \{A \in \mathbf{M}_{m \times n}(\mathbf{F}) : i \leq j \implies A _{ij} = 0\} $$
+
+- $\mathbf{W}_1$ 은 상삼각행렬 집합이다.
+
+- 증명
+
+    문제 1.3-24, 문제 1.3-25 의 증명과 비슷하다. $\mathbf{W}_1, \mathbf{W}_2$ 이 부분공간임을 쉽게 보일 수 있고, $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 은 자명하고 $\mathbf{W}_1 + \mathbf{W}_2 = \mathbf{M}_{m \times n}(\mathbf{F})$ 을 쉽게 보일 수 있다. ■ 
+
+!!! def "문제 1.3-27"
+
+    $n \times n$ 상삼각행렬 집합인 벡터공간 $\mathbf{V}$ 와 대각행렬 집합인 부분공간 $\mathbf{W}_1 \subset \mathbf{V}$ 와 $\mathbf{W}_2 = \{A \in \mathbf{V} : i \geq j \implies A _{ij} = 0\}$ 에 대하여 $\mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2$ 이다.
+
+- 증명
+
+    문제 1.3-24, 1.3-25, 1.3-26 의 증명과 비슷하다. $\mathbf{W}_2$ 이 부분공간임을 쉽게 보일 수 있고, $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 은 자명하고 $\mathbf{W}_1 + \mathbf{W}_2 = \mathbf{V}$ 을 쉽게 보일 수 있다. ■ 
+
+## Projection
+
+!!! def "사영(projection)"
+
+    벡터공간 $\mathbf{V}$ 와 $\mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2$ 인 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 다음과 같이 정의된 함수 $\mathbf{T}:\mathbf{V}\to \mathbf{V}$ 를 $\mathbf{W}_2$ 에 대한 $\mathbf{W}_1$ 위로의 $\mathbf{V}$ 의 사영이라 한다.
+
+    $$ x_1 \in \mathbf{W}_1, x_2 \in \mathbf{W}_2 : x = x_1 + x_2 \implies \mathbf{T}(x) = x_1 $$
+
+- $\mathbf{T}$ 를 단순히 $\mathbf{W}_1$ 으로의 ($\mathbf{V}$ 의) 사영이라고도 한다.
+
+!!! def "문제 2.1-27"
+
+    벡터공간 $\mathbf{V}$ 와 $\mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2$ 인 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 와 $\mathbf{W}_2$ 에 대한 $\mathbf{W}_1$ 위로의 $\mathbf{V}$ 의 사영 $\mathbf{T}:\mathbf{V}\to \mathbf{V}$ 에 대하여 다음이 성립한다. 
+
+    1. $\mathbf{T}$ 는 선형이다.
+    
+    2. $\mathbf{W}_1 = \{x \in \mathbf{V} : \mathbf{T}(x) = x\}$
+
+    3. $\mathbf{W}_1 = \mathbf{R}(\mathbf{T})$
+    
+    4. $\mathbf{W}_2 = \mathbf{N}(\mathbf{T})$
+
+    5. $\mathbf{V} = \mathbf{R}(\mathbf{T}) \oplus \mathbf{N}(\mathbf{T})$
+
+    6. $\mathbf{W}_1 = \mathbf{V} \implies \mathbf{T}(x) = x$
+
+    7. $\mathbf{W}_1 = \{0\} \implies \mathbf{T} = \mathbf{T}_0$
+
+- 증명
+
+    1:
+
+    $x = x_1 + x_2 \in \mathbf{V}$ 를 만족하는 $x_1 \in \mathbf{W}_1, x_2 \in \mathbf{W}_2$ 와 $y = y_1 + y_2 \in \mathbf{V}$ 를 만족하는 $y_1 \in \mathbf{W}_1, y_2 \in \mathbf{W}_2$ 와 스칼라 $a$ 에 대하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} \mathbf{T}(ax + y) &= \mathbf{T}(ax_1 + ax_2 + y_1 + y_2) \\ &= ax_1 + y_1 = a \mathbf{T}(x) + \mathbf{T}(y)\\ \end{split}\end{equation} \tag*{} $$
+
+    따라서 $\mathbf{T}$ 는 선형이다. ▲ 
+
+    2:
+
+    $x \in \mathbf{W}_1$ 이면 $\mathbf{T}(x) = x$ 이므로 $x \in \{x \in \mathbf{V} : \mathbf{T}(x) = x\}$ 이다. $\mathbf{T}(x) = x$ 이면 $x_1 = x$ 이므로 $x \in \mathbf{W}_1$ 이다. ▲ 
+
+    3:
+
+    먼저 $\mathbf{W}_1$ 로의 사영 $\mathbf{T}$ 의 모든 상이 그 정의에 의하여 반드시 $\mathbf{W}_1$ 에 속한다. 즉, $\mathbf{R}(\mathbf{T}) \subset \mathbf{W}_1$ 이다. 
+
+    $x \in \mathbf{W}_1$ 이면 $\mathbf{T}(x) = x$ 이므로 $x \in \mathbf{R}(\mathbf{T})$ 이다. 따라서 $\mathbf{R}(\mathbf{T}) = \mathbf{W}_1$ 이다. ▲ 
+
+    4:
+
+    $x \in \mathbf{W}_2$ 이면 $\mathbf{T}(x) = 0$ 이므로 $x \in \{x \in \mathbf{V}: \mathbf{T}(x) = 0\}$ 이다. $\mathbf{T}(x) = 0$ 이면 $x_2 = x$ 이므로 $x \in \mathbf{W}_2$ 이다. ▲ 
+
+    5:
+
+    3), 4) 에 의하여 바로 증명된다. ▲ 
+
+    6:
+
+    2) 에 의하여 $\mathbf{V} = \mathbf{W}_1 = \{x \in \mathbf{V} : \mathbf{T}(x) = x\}$ 이면 $\mathbf{V}$ 의 모든 원소에 대한 $\mathbf{T}$ 의 대응규칙이 항등이라는 것이므로 $\mathbf{T}$ 는 항등변환이다. ▲ 
+
+    7:
+
+    $\mathbf{W}_1 = \{0\}$ 이면 $\mathbf{T}(x) = 0$ 임이 자명하다. ■ 
+
+!!! def "문제 1.6-29-(a)"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 $\mathbf{W}_1 + \mathbf{W}_2$ 는 유한차원이고, 다음이 성립한다.
+
+    $$ \dim (\mathbf{W}_1 + \mathbf{W}_2) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) - \dim (\mathbf{W}_1 \cap \mathbf{W}_2) $$
+
+- 증명
+
+    $\mathbf{W}_1 \cap \mathbf{W}_2$ 의 기저를 $\alpha = \{v_1, v_2, \dots, v_k\}$ 로 두면 [정리 1.10 따름정리 2](../VectorSpace/#cd7879a47) 에 의하여 $\alpha \subset \mathbf{W}_1$ 이고 $\alpha \subset \mathbf{W}_2$ 이므로 $\alpha$ 를 확장하여 $\mathbf{W}_1$ 의 기저 $\beta$ 와 $\mathbf{W}_2$ 의 기저 $\gamma$ 를 만들 수 있다.
+
+    $$ \beta = \{v_1, v_2, \dots, v_k, u_1, u_2, \dots, u_m\} $$
+
+    $$ \gamma = \{v_1, v_2, \dots, v_k, w_1, w_2, \dots, w_p\} $$
+
+    임의의 $x \in \mathbf{W}_1 + \mathbf{W}_2$ 에 대하여 $x = x_1 + x_2$ 인 $x_1 \in \mathbf{W}_1, x_2 \in \mathbf{W}_2$ 가 존재한다. 따라서 적절한 스칼라에 대하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} x = x_1 + x_2 &= (a_1v_1 + a_2 v_2 + \dots + a_k v_k + b_1 u_1 + b_2 u_2 + \dots + b_m u_m) \\ & \qquad + (c_1v_1 + c_2 v_2 + \dots + c_k v_k + d_1 w_1 + d_2 w_2 + \dots + d_p w_p)\\ & = e_1v_1 + e_2 v_2 + \dots + e_k v_k + b_1 u_1 + b_2 u_2 + \dots + b_m u_m + d_1 w_1 + d_2 w_2 + \dots + d_p w_p + \\ \end{split}\end{equation} \tag*{} $$
+
+    $u_1, u_2, \dots, u_m$ 와 $w_1, w_2, \dots, w_p$ 들은 서로 일차독립이다. 만약 $u_1$ 와 $w_1$ 이 서로의 스칼라곱으로 표현된다면 $u_1$ 로 생성되는 벡터와 $w_1$ 로 생성되는 벡터가 서로 같으므로 $u_1, w_1 \in \mathbf{W}_1 \cap \mathbf{W}_2$ 이다. 그러나 이는 모순이다. 따라서 $\mathbf{W} = \mathbf{W}_1 + \mathbf{W}_2$ 의 기저는 다음과 같다. 
+
+    $$ \{v_1, v_2, \dots, v_k, u_1, u_2, \dots, u_m, w_1, w_2, \dots, w_p\} $$
+
+    이제 각 벡터공간의 기저의 기수를 계산하면 $\mathbf{W}_1+\mathbf{W}_2$ 이 유한차원인 것과 정리의 결론을 얻을 수 있다. ■ 
+
+!!! def "문제 1.6-29-(b)"
+
+    벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 가 유한차원이고 $\mathbf{V}=\mathbf{W}_1 + \mathbf{W}_2$ 이면 다음이 성립한다. 
+
+    $$ \mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2 \iff \dim (\mathbf{V}) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) $$
+
+- 증명
+
+    $\mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2$ 를 가정하는 것은 $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 를 가정하는 것이므로 문제 1.6-29-(a) 에 의하여 다음이 성립한다. 
+
+    $$ \dim (\mathbf{V}) = \dim (\mathbf{W}_1 + \mathbf{W}_2) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) + \dim (\mathbf{W}_1 \cap \mathbf{W}_2) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) \tag*{▲} $$
+
+    $\dim (\mathbf{V}) = \dim (\mathbf{W}_1 + \mathbf{W}_2) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2)$ 를 가정하는 것은 다시 문제 1.6-29-(a) 에 의하여 $\dim (\mathbf{W}_1 \cap \mathbf{W}_2) = 0$ 을 가정하는 것이므로 $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 이다. 따라서 $\mathbf{W}_1 \oplus \mathbf{W}_2 = \mathbf{V}$ 이다. ■ 
+
+!!! def "문제 2.1-36"
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 선형변환 $\mathbf{T}:\mathbf{V}\to \mathbf{V}$ 에 대하여 다음이 성립한다. 
+
+    1. $\mathbf{V}=\mathbf{R}(\mathbf{T}) + \mathbf{N}(\mathbf{T}) \implies \mathbf{V} = \mathbf{R}(\mathbf{T}) \oplus \mathbf{N}(\mathbf{T})$
+
+    2. $\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\} \implies \mathbf{V} = \mathbf{R}(\mathbf{T}) \oplus \mathbf{N}(\mathbf{T})$
+
+- 증명
+
+    1:
+
+    [차원정리](../LinearTransformation/#6187a9f9c)와 문제 1.6-29-(a) 에 의하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}
+    \dim (\mathbf{V}) &= \dim (\mathbf{R}(\mathbf{T}) + \mathbf{N}(\mathbf{T})) \\
+    &= \dim (\mathbf{R}(\mathbf{T})) + \dim (\mathbf{N}(\mathbf{T})) - \dim (\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}))\\
+    &= \dim (\mathbf{V}) - \dim (\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T})) \\
+    \end{split}\end{equation} \tag*{} $$
+
+    따라서 $\dim (\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T})) = 0 \implies \mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\}$ 이다. ▲ 
+
+    2:
+
+    $\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\}$ 을 가정하면 문제 1.6-29-(a), (b) 에 의하여 증명이 바로 끝난다. ■ 
+
+<!-- !!! def ""
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 에 대하여 다음이 성립한다. 
+
+    1. $\mathbf{V}$ 의 영공간이 아닌 부분공간은 $\beta$ 의 부분집합을 기저로 갖는다. 
+
+    2. $\mathbf{V}$ 의 영공간이 아닌 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 와 각각의 기저 $\gamma , \gamma '$ 대하여 $\gamma \cap \gamma ' = \varnothing , \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) = \dim (\mathbf{V})$ 이면 $\mathbf{W}_1 + \mathbf{W}_2 = \mathbf{V}$ 이다.
+
+    3. 선형연산자 $\mathbf{T}$ 가 단사가 아니라는 것은 $\mathbf{T}(v_i) = \mathbf{T}(v_j)$ 인 $v_i, v_j$ 가 존재한다는 것이다. 
+
+    4. 선형연산자가 단사인 것과 기저의 독립성을 보존하는 연산자인 것은 동치이다.
+
+- [정리 2.2](../LinearTransformation/#f380ab529) 에 의하여 $\mathbf{V}$ 의 기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 로 두면 다음이 성립한다.
+
+    $$ \mathbf{R}(\mathbf{T}) = \text{span} (\mathbf{T}(\beta )) = \text{span} (\{\mathbf{T}(v_1), \mathbf{T}(v_2), \dots, \mathbf{T}(v_n)\}) $$
+
+    $$ \mathbf{R}(\mathbf{T}^{2}) = \text{span} (\mathbf{T}^{2}(\beta )) = \text{span} (\{\mathbf{T}^{2}(v_1), \mathbf{T}^{2}(v_2), \dots, \mathbf{T}^{2}(v_n)\}) $$
+
+    $\{w_1, w_2, \dots, w_k\} = \gamma$ 가 $\mathbf{R}(\mathbf{T})$ 의 기저가 된다고 하면 가정에 의하여 다음과 같이 $\{\mathbf{T}(w_1), \mathbf{T}(w_2), \dots, \mathbf{T}(w_k)\}$ 은 일차독립이다. 
+
+    $$ \{\mathbf{T}(v_1), \mathbf{T}(v_2), \dots, \mathbf{T}(v_n)\} = \{w_1, w_2, \dots, w_k\} = \gamma $$
+
+    $$ \{\mathbf{T}^{2}(v_1), \mathbf{T}^{2}(v_2), \dots, \mathbf{T}^{2}(v_n)\} = \{\mathbf{T}(w_1), \mathbf{T}(w_2), \dots, \mathbf{T}(w_k)\} $$
+
+    즉, $\mathbf{T}$ 는 벡터공간 $\mathbf{R}(\mathbf{T})$ 의 기저의 독립성을 보존한다. $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 어떤 부분공간에서 기저의 독립성을 보존한다는 것은 그 부분공간의 한에서는 단사라는 것이다. 그러면 [정리 2.4](../LinearTransformation/#7d40e8276) 에 의하여 $\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\}$ 가 된다. $\mathbf{N}(\mathbf{T})$ 에 $\mathbf{R}(\mathbf{T})$ 의 교집합을 가하는 이유는 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 영공간 $\mathbf{N}(\mathbf{T})$ 을 $\mathbf{R}(\mathbf{T})$ 의 선형연산자의 영공간 $\mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T})$ 로 축소하기 위해서이다. -->
+
+!!! def ""
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
+
+    $$ \text{rank} (\mathbf{T}) = \text{rank} (\mathbf{T}^{2}) \iff \text{nullity} (\mathbf{T}) = \text{nullity} (\mathbf{T}^{2}) $$
+
+- 증명
+
+    $\text{nullity} (\mathbf{T}) = \text{nullity} (\mathbf{T}^{2})$ 를 가정하면 [차원정리](../LinearTransformation/#6187a9f9c)에 의하여 다음이 성립한다. 
+
+    $$ \text{nullity} (\mathbf{T}) + \text{rank} (\mathbf{T}) = \dim (\mathbf{V}) $$
+
+    $$ \text{nullity} (\mathbf{T}^{2}) + \text{rank} (\mathbf{T}^{2}) = \dim (\mathbf{V}) $$
+
+    $$ \implies \text{rank} (\mathbf{T}) = \text{rank} (\mathbf{T}^{2}) $$
+
+    ▲ 
+
+    그 역도 같은 논리로 쉽게 증명할 수 있다. ■ 
+
+!!! def "문제 2.3-16"
+
+    유한차원 벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음이 성립한다. 
+
+    1. $\text{rank} (\mathbf{T}) = \text{rank} (\mathbf{T}^{2}) \implies \mathbf{R}(\mathbf{T}) \cap \mathbf{N}(\mathbf{T}) = \{0\}, \mathbf{V} = \mathbf{R}(\mathbf{T}) \oplus \mathbf{N}(\mathbf{T})$
+
+    2. $\exists k \in \N : \mathbf{V} = \mathbf{R}(\mathbf{T}^{k}) \oplus \mathbf{N}(\mathbf{T}^{k})$
+
+- 증명
+
+    1:
+
+    $a \neq 0, a \in \mathbf{V}$ 에 대하여 $a \in \mathbf{N}(\mathbf{T})\cap \mathbf{R}(\mathbf{T})$ 를 가정하면 $\mathbf{T}(a) = 0$ 이고 $b \neq 0, \mathbf{T}(b) = a$ 인 $b \in \mathbf{V}$ 가 존재한다. 따라서 다음이 성립한다.
+
+    $$ \mathbf{T}(\mathbf{T}(b)) = \mathbf{T}(b) \implies \mathbf{T}(a) = a \implies 0 = a $$
+
+    이는 모순이다. 따라서 $\mathbf{N}(\mathbf{T}) \cap \mathbf{R}(\mathbf{T}) = \{0\}$ 이다. 문제 2.1-36 에 의하여 $\mathbf{V}=\mathbf{R}(\mathbf{T})\oplus \mathbf{N}(\mathbf{T})$ 도 유도된다. ▲ 
+
+    2:
+
+    적절한 자연수 $k$ 에 대하여 선형연산자 $\mathbf{T}^{k}$ 가 $\text{rank} (\mathbf{T}^{k}) = \text{rank} (\mathbf{T}^{2k})$ 를 만족함을 보이면 1) 에 의하여 증명이 끝난다. 다음이 성립한다.
+    
+    $$ \forall s \in \N : \mathbf{T}^{s + 1}(\mathbf{V}) = \mathbf{T}^{s}(\mathbf{R}(\mathbf{T})) \subset \mathbf{T}^{s}(\mathbf{V}) \implies \text{rank} (\mathbf{T}^{s+1}) \leq \text{rank} (\mathbf{T}^{s}) $$
+    
+    이때 선형연산자 $\mathbf{T}^{s}:\mathbf{V}\to \mathbf{V}$ 의 상공간의 차원은 반드시 $0 \leq \text{rank} (\mathbf{T}^{s}) \leq \dim (\mathbf{V})$ 를 만족한다. 그러므로 어떤 자연수 $k$ 가 존재하여 $\text{rank} (\mathbf{T}^{k+1}) = \text{rank} (\mathbf{T}^{k})$ 를 만족한다. 왜냐하면 다음과 같이 무한히 늘어져있는 자연수들의 부등식에 하계와 상계가 정해져있기 때문이다.
+
+    $$ \dim (\mathbf{V}) \geq \text{rank} (\mathbf{T}) \geq \dots \geq \text{rank} (\mathbf{T}^{s}) \geq \text{rank} (\mathbf{T}^{s+1}) \geq \dots \geq 0 $$
+    
+    그래서 $\mathbf{T}^{k+1}(\mathbf{V}) \subset \mathbf{T}^{k}(\mathbf{V})$ 인데 이 둘의 차원이 같으므로 $\mathbf{T}^{k+1}(\mathbf{V}) = \mathbf{T}^{k}(\mathbf{V})$ 이다. 따라서 $t \geq k$ 인 자연수 $t$ 에 대하여 다음이 성립한다.
+
+    $$ \mathbf{T}^{t}(\mathbf{V}) = (\mathbf{T} \circ \mathbf{T} \circ \dots \circ \mathbf{T}^{k})(\mathbf{V}) = \mathbf{T}^{k}(\mathbf{V}) $$
+
+    따라서 $2k \geq k$ 인 자연수 $2k$ 에 대하여 $\mathbf{T}^{2k}(\mathbf{V}) = \mathbf{T}^{k}(\mathbf{V})$ 이고, 이에 따라 $\text{rank} (\mathbf{T}^{k}) = \text{rank} (\mathbf{T}^{2k})$ 이다. ■ 
+
+!!! def "문제 2.3-17"
+
+    벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
+    
+    1. $\mathbf{T} = \mathbf{T}^{2}$
+    
+    2. $\mathbf{T}$ 는 $\mathbf{N}(\mathbf{T})$ 에 대한 $\mathbf{W}_1 = \{x : \mathbf{T}(x) = x\}$ 로의 사영이다.
+
+- 문제 2.1-27 은 벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 $\mathbf{W}_2$ 에 대한 $\mathbf{W}_1$ 로의 사영 $\mathbf{T}$ 가 정의되면 반드시 $\mathbf{W}_1 = \{x : \mathbf{T}(x) = x\}, \mathbf{W}_2 = \mathbf{N}(\mathbf{T})$ 가 됨을 말해준다. 따라서 조건 2) 가 말하는 사영이란 어떤 특수한 사영이 아니라 임의의 모든 사영을 칭하는 것이다.
+
+    **그러므로 이 정리는 $\mathbf{T}$ 가 사영이기 위한 필요충분조건이 $\mathbf{T} = \mathbf{T}^{2}$ 임을 말해준다.**
+
+- 증명
+
+    1) 을 가정하면 문제 2.3-16 에 의하여 $\mathbf{V} = \mathbf{R}(\mathbf{T}) \oplus \mathbf{N}(\mathbf{T})$ 이고, 다음이 성립한다. 
+
+    $$ x_1 \in \mathbf{W}_1, x_2 \in \mathbf{N}(\mathbf{T}) : x = x_1 + x_2 \implies \mathbf{T}(x) = \mathbf{T}(x_1) + \mathbf{T}(x_2) = x_1 $$
+
+    [사영의 정의](#a616ef1e9) 에 의하여 $\mathbf{T}$ 는 $\mathbf{N}(\mathbf{T})$ 에 대한 $\mathbf{W}_1$ 의 사영이다. ▲ 
+
+    이제 2) 를 가정하고 1) 를 도출해보자. 사영의 정의에 의하여 $\mathbf{V} = \mathbf{N}(\mathbf{T})\oplus \mathbf{W}_1$ 이므로 다음이 성립한다.
+
+    $$ \forall x \in \mathbf{V}, \exists x_1 \in \mathbf{W}_1, \exists \in \mathbf{N}(\mathbf{T}) : x = x_1 + x_2 \implies \mathbf{T}(x) = x_1 \implies \mathbf{T}(\mathbf{T}(x)) = \mathbf{T}(x_1) = x_1 $$
+
+    $\mathbf{V}$ 의 임의의 벡터에서 $\mathbf{T}$ 와 $\mathbf{T}^{2}$ 의 상이 같으므로 $\mathbf{T} = \mathbf{T}^{2}$ 이다. ■ 
+
+## Orthogonal Projection
+
+!!! def "정사영(orthogonal projection)"
+
+    내적공간 $\mathbf{V}$ 에 대한 사영 $\mathbf{T}: \mathbf{V}\to \mathbf{V}$ 가 $\mathbf{R}(\mathbf{T})^{\perp} = \mathbf{N}(\mathbf{T}), \mathbf{N}(\mathbf{T})^{\perp} = \mathbf{R}(\mathbf{T})$ 를 만족하면 정사영이라 한다.
+
+- 문제 2.3-17 은 사영의 필요충분조건이 $\mathbf{T} = \mathbf{T}^{2}$ 임을 말해준다. 또한 그 증명과정은 $\mathbf{T}$ 가 사영이면 문제 2.3-16 에 의하여 $\mathbf{V} = \mathbf{R}(\mathbf{T})\oplus \mathbf{N}(\mathbf{T})$ 가 성립함을 말해준다. 따라서 또 다른 $\mathbf{V}$ 의 사영 $\mathbf{U}$ 가 존재하면 다음이 성립한다. 
+
+    $$ \mathbf{V} = \mathbf{R}(\mathbf{T})\oplus \mathbf{N}(\mathbf{T}) = \mathbf{R}(\mathbf{U}) \oplus \mathbf{N}(\mathbf{U}) $$
+
+    이때 $\mathbf{R}(\mathbf{T}) = \mathbf{R}(\mathbf{U})$ 를 가정해도 $\mathbf{N}(\mathbf{T})$ 와 $\mathbf{N}(\mathbf{U})$ 가 서로 다른 기저를 가지고 있을 수도 있다. 따라서 $\mathbf{N}(\mathbf{T}) = \mathbf{N}(\mathbf{U})$ 는 보장되지 않는다. 쉽게 말해서 사영은 치역에 의하여 유일하게 결정되지 않는다. 치역이 같아도 서로 다른 사영이 존재할 수도 있는 것이다. 
+
+    **그러나 정사영은 치역에 의하여 유일하게 결정된다. 치역이 같으면 반드시 서로 같은 사영이 되는 것이 정사영이다.**
+
+- [문제 6.2-13](#8767bfd4f) 은 $\mathbf{R}(\mathbf{T})^{\perp} = \mathbf{N}(\mathbf{T}) \iff \mathbf{N}(\mathbf{T})^{\perp} = \mathbf{R}(\mathbf{T})$ 을 말해준다. 
+    
+- 위에서 정의한 정사영은 이 정사영의 특수한 경우인가?
+
+- [정리 6.6](#8cbdc4410) 에 의하여 내적공간 $\mathbf{V}$ 와 부분공간 $\mathbf{W}$ 와 임의의 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 를 만족하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다. 함수 $\mathbf{T}: \mathbf{V}\to \mathbf{V}, y \to u$ 로 정의하면 $\mathbf{T}$ 는 $\mathbf{W}$ 로의 정사영이된다.
+
+!!! def ""
+
+    내적공간에서 유한차원 부분공간로의 정사영은 유일한다.
+
+- 증명
+
+    [정리 6.6](#8cbdc4410) 에 의하여 내적공간 $\mathbf{V}$ 와 부분공간 $\mathbf{W}$ 와 임의의 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 를 만족하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다. 함수 $\mathbf{T}: \mathbf{V}\to \mathbf{V}, y \to u$ 로 정의하면 $\mathbf{T}$ 는 $\mathbf{W}$ 로의 정사영이된다.
+
+    $\mathbf{T}$ 와 $\mathbf{U}$ 가 $\mathbf{W}$ 로의 정사영이면 [문제 2.17-27](#d9b55ab9b) 에 의하여 $\mathbf{R}(\mathbf{T}) = \mathbf{W}=\mathbf{R}(\mathbf{U})$ 이다. 따라서 $\mathbf{N}(\mathbf{T}) = \mathbf{R}(\mathbf{T})^{\perp} = \mathbf{R}(\mathbf{U})^{\perp} = \mathbf{N}(\mathbf{U})$ 이다. 정사영은 치역 또는 영공간에 의하여 유일하게 결정되므로 $\mathbf{T}=\mathbf{U}$ 이다. ■ 
+
+---
+
+ref:
+
+:   Stephen H. Friedberg, Linear Algebra, 4th Edition

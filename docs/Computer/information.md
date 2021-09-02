@@ -1,6 +1,6 @@
 # 정보 이론 
 
-!!! tldr ""
+!!! def ""
 
     정보량 : 그것으로 인하여 감소하는 불확실성의 양이다. 
 
@@ -34,11 +34,11 @@
 
     이 사고 실험을 통하여 표본공간이 지니고 있는 근원사건의 확률이 모두 균등할때 그 사건이 주는 정보가 가장 불확실하고, 이에따라 정보량이 가장 크다는 것을 알 수 있다. 왜냐하면 어느 한 근원사건의 확률이 다른 근원사건보다 1% 라도 커진다면, 그 사건이 일어날 것이 조금 더 확실해지기 때문이다. 
 
-!!! tldr ""
+!!! def ""
 
     1비트 : 확률적으로 동등한 두 가지 선택지 중 하나를 선택한 데서 비롯된 정보량이다. 
 
-!!! tldr ""
+!!! def ""
 
     균등 확률 표본공간의 정보량 : $n \in \mathbb{N}, i \in \{1, 2, \dots, n\}$ 에 대하여 $n$ 개의 근원사건 $s_i$ 을 갖는 표본공간 $S = \{s_1, s_2, \dots, s_n\}$ 에서 모두 동등한 확률 $p\ (=1/n)$ 로 발생한 사건 $s_i$ 를 $0$ 과 $1$ 로 식별하기 위해서는 비트가 최소한 
     
@@ -78,7 +78,7 @@
 
     로 정의할 수 있다.
 
-!!! tldr ""
+!!! def ""
 
     임의 확률 표본공간의 정보량 : $n \in \mathbb{N}, i \in \{1, 2, \dots, n\}$ 에 대하여 $n$ 개의 근원사건 $s_i$ 을 갖는 표본공간 $S = \{s_1, s_2, \dots, s_n\}$ 에서 확률 $p_i = \dfrac{1}{m}$ 로 발생한 사건 $s_i$ 를 $0$ 과 $1$ 로 식별하기 위해서는 비트가 최소한 
     
@@ -142,7 +142,7 @@
 
     > 사상 관계 존재 추론 방식의 좋은 예시이다.
 
-!!! tldr ""
+!!! def ""
 
     엔트로피 : 이산공간인 표본공간 $S$ 의 확률변수 $X = x$ 가 정보량 $x = - \log_{2} p$ 를 뜻할때
 
@@ -161,12 +161,14 @@
  
     이다. 이 양을 엔트로피라고 부르는데, 정보량이란 곧 불확실성을 감소시켜주는 정도를 뜻하기 때문이다. 그러므로 엔트로피가 높으면 어떤 사건의 불확실성이 높다(얻게 되는 정보가 많음)고 볼 수 있고, 엔트로피가 낮으면 어떤 사건이 매우 확실하다(얻는 정보가 거의 없음)고 볼 수 있다.
 
-!!! note "ref"
+---
+
+ref:
         
-    http://www.talkorigins.org/faqs/information/shannon.html
-
-    https://www.google.com/search?q=graph+of+the+shannon+information+theory&newwindow=1&client=firefox-b-d&sxsrf=ALeKk00G-WiMqkGNCSOREMgSJuXoDWF1Uw:1603251812466&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiTwpG24sTsAhWYd94KHZDUC_wQ_AUoAXoECBYQAw#imgrc=eletzN9KCFUBhM
-
-    https://www.britannica.com/science/information-theory/Classical-information-theory
-
-    https://hyunw.kim/blog/2017/10/14/Entropy.html
+:    http://www.talkorigins.org/faqs/information/shannon.html
+ 
+:    https://www.google.com/search?q=graph+of+the+shannon+information+theory&newwindow=1&client=firefox-b-d&sxsrf=ALeKk00G-WiMqkGNCSOREMgSJuXoDWF1Uw:1603251812466&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiTwpG24sTsAhWYd94KHZDUC_wQ_AUoAXoECBYQAw#imgrc=eletzN9KCFUBhM
+ 
+:    https://www.britannica.com/science/information-theory/Classical-information-theory
+ 
+:    https://hyunw.kim/blog/2017/10/14/Entropy.html

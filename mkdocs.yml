@@ -6,7 +6,7 @@ site_url: https://ccss17.github.io/
 # repo_url: https://github.com/ccss17/ccss17.github.io
 
 nav:
-  - Home: index.md
+  - ccss17: index.md
   # - Trend: 
   #   - 2020: trend/2020.md
   #   - 2021: trend/2021.md
@@ -24,6 +24,7 @@ nav:
       - Number Theory: Math/Set/numbers.md
       - Infinite Set: Math/Set/InfiniteSet.md
       - ZFC axiom system: Math/Set/ZFC.md
+    - Arithmetic Operations: Math/ArithmeticOperations.md
     - Hyperreal Numbers: Math/HyperrealNumbers.md
     - Surreal Numbers: Math/SurrealNumbers.md
     - Linear Algebra: 
@@ -75,13 +76,13 @@ nav:
     # - 위상수학: 
     #   - (임시): Math/Topology/topology.md
   - Paper:
-    - "Gödel, Escher, Bach" : paper/GEB.md
+    # - "Gödel, Escher, Bach" : paper/GEB.md
     - "Performance of Python runtimes on a non-numeric scientific code" : paper/1404.6388.md
     - "The NumPy array: a structure for efficient numerical computation": paper/1102.1523.md
     - Facenet (2015): paper/facenet.md
     - Quadruplet (2017): paper/quadruplet.md
     - BlueBorne: paper/blueborne.md
-    - Meltdown: paper/meltdown.md
+    # - Meltdown: paper/meltdown.md
   # - Project:
   #   - ProgrammerBase: project/ProgrammerBase.md
   #   - security-tutorial: project/security-tutorial.md
@@ -106,7 +107,7 @@ nav:
     # - base: Computer/base.md
     - Nand to Tetris: Computer/nand2tetris.md
     - Information Theory: Computer/information.md
-    - Technological Singularity: Computer/future.md
+    - Why the future doesn't need us: Computer/future.md
     - Rust Memo: Computer/Rust.md
   - ProgrammerBase: 
     - README: ProgrammerBase/README.md
@@ -181,14 +182,35 @@ nav:
   #     - 시간복잡도: Algorithm/timecomplexity.md
   #     - Leetcode: Algorithm/leetcode.md
 
+plugins: []
+
 theme: 
+  features:
+    - navigation.tabs
+    - navigation.top
+    - header.autohide
   name: material
+  custom_dir: overrides
   palette:
-    primary: white
-    scheme: default
+    # primary: white
+    # scheme: default
+    - scheme: default
+      primary: white
+      toggle:
+        # icon: material/eye-outline
+        # icon: material/weather-sunny
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      toggle:
+        # icon: material/eye
+        # icon: material/weather-night
+        icon: material/lightbulb
+        name: Switch to light mode
   font:
     text: Nanum Gothic
-  language: kr
+  language: en
   logo: assets/images/bolt-solid.svg
   favicon: assets/images/bolt-solid.svg
   # logo: assets/images/snowflake-regular.svg
@@ -209,9 +231,11 @@ extra_css:
   - stylesheets/config.css
 
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/ccss17
+  generator: false
+  # disqus: https-ccss17-github-io
+  # social:
+  #   - icon: fontawesome/brands/github
+  #     link: https://github.com/ccss17
 
 markdown_extensions:
   - toc:

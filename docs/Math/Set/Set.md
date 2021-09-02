@@ -1,10 +1,6 @@
-!!! info "ref"
-
-    [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)
-
 # Proposition
 
-!!! tldr "명제(proposition)"
+!!! def "명제(proposition)"
 
     문장들 가운데 참 또는 거짓인 것이다.
 
@@ -12,7 +8,7 @@
 
     "$5$ 는 자연수이다." 는 명제이다.
 
-!!! tldr "명제의 부정(negation of proposition)"
+!!! def "명제의 부정(negation of proposition)"
 
     명제 $p$ 에 대한 명제 "$p$가 아니다." 이다.
 
@@ -22,7 +18,7 @@
 
     명제 $p$ "$5$ 는 자연수이다." 의 부정 $\lnot p$ 은 "$5$ 는 자연수가 아니다." 이다.
 
-!!! tldr "진리표(Truth table)"
+!!! def "진리표(Truth table)"
 
     명제 $p$ 에 따른 다른 명제들의 결과를 표로 정리한 것이다.
 
@@ -37,7 +33,7 @@
 
     진리표를 통하여 $p$ 와 $\lnot (\lnot p)$ 의 옳고 그름이 같다는 것을 알 수 있다.
 
-!!! tldr "논리합(Logical disjuntion)"
+!!! def "논리합(Logical disjuntion)"
 
     명제 $p, q$ 에 대하여 명제 $p \lor q$ 이다.
 
@@ -64,7 +60,7 @@
     |$F$|$T$|$T$|$F$|$F$|
     |$F$|$F$|$F$|$T$|$T$|
 
-!!! tldr "논리곱(Logical conjunction)"
+!!! def "논리곱(Logical conjunction)"
 
     명제 $p, q$ 에 대한 명제 $p \land q$ 이다.
 
@@ -79,7 +75,7 @@
     |$F$|$T$|$F$|$T$|$T$|
     |$F$|$F$|$F$|$T$|$T$|
 
-!!! tldr "실질 조건문(material conditional)"
+!!! def "실질 조건문(material conditional)"
 
     명제 $p,q$ 에 대한 명제 $p \to q$ 이다.
 
@@ -106,13 +102,13 @@
 
 - $p \to q$ 이고 $q \to p$ 일때 즉, $(p \to q)\land (q \to p)$ 일 때 $p \iff q$ 라고 한다.
 
-!!! tldr "$p \implies q$"
+!!! def "$p \implies q$"
 
     $p \to q$ 가 참일 때 $p \implies q$ 라고 한다.
 
 - $p \implies q$ 이고 $q \implies p$ 일 때, $p \iff q$ 라고 한다.
 
-!!! tldr "조건(condition)"
+!!! def "조건(condition)"
 
     변수 $x$ 를 포함하는 문장은 변수가 정해짐에 따라 명제가 되는데, 이런 문장을 조건이라고 한다.
 
@@ -122,7 +118,7 @@
 
 # Set
 
-!!! tldr "집합(set)"
+!!! def "집합(set)"
 
     어떤 기준에 부합하는 대상들의 모임이다.
 
@@ -176,7 +172,7 @@
 
         - 공집합은 $\emptyset$ 으로 표시한다.
 
-!!! tldr "진리집합(truth set)"
+!!! def "진리집합(truth set)"
 
     변수 $x$ 를 포함하는 조건을 참이되게 하는 변수 $x$ 의 집합이다.
 
@@ -200,7 +196,7 @@
 
         이 된다.
 
-!!! tldr "집합의 상등(set equality)"
+!!! def "집합의 상등(set equality)"
 
     조건 $p$ 의 진리집합 $A$, 조건 $q$ 의 진리집합 $B$ 에 대하여 다음 동치조건이 성립하면 $A = B$ 라 한다.
 
@@ -214,7 +210,7 @@
 
     그러므로 $x \in A$ 라는 표기는 참과 거짓이 정해졌으므로 더 이상 조건이 아니라 명제를 뜻한다.
 
-!!! tldr "대우명제(Contraposition)"
+!!! def "대우명제(Contraposition)"
 
     $p \to q$ 의 대우는 $\lnot q \to \lnot p$ 이다.
 
@@ -242,7 +238,7 @@
 
         "임의의 $a < 0$ 에 대하여 $x \geq a$ 이다." 는 변수 $x$ 에 관한 조건인데, 이것의 대우명제는 "$x<a$ 인 음수 $a<0$ 이 존재한다." 이다.
 
-!!! tldr "부분집합(subest)"
+!!! def "부분집합(subest)"
 
     조건 $p$ 의 진리집합 $A$, 조건 $q$ 의 진리집합 $B$ 에 대하여 다음 동치조건을 만족하는 $A$ 를 $B$ 의 부분집합이라 한다.
 
@@ -268,11 +264,11 @@
 
     $$ C \not \subset B $$
 
-!!! tldr "진부분집합(proper subset)"
+!!! def "진부분집합(proper subset)"
 
     집합 $A, B$ 에 대하여 $A \neq B \land A \subset B$ 이면 $A$ 를 $B$ 의 진부분집합이라고 한다.
 
-!!! tldr "여집합(complement set)"
+!!! def "여집합(complement set)"
 
     집합 $A$ 에 대하여 $A ^{c}=\{x:x \not \in A\}$ 를 $A$ 의 여집합이라고 한다.
 
@@ -286,7 +282,7 @@
 
         $$ x \in (A ^{c})^{c} \iff \lnot (x \in A ^{c}) \iff \lnot (\lnot x \in A) \iff x \in A $$
 
-!!! tldr "공집합(empty set)"
+!!! def "공집합(empty set)"
 
     원소가 없는 집합 $\emptyset$ 이다.
 
@@ -296,7 +292,7 @@
 
     - $A \cup A ^{c} = U, A \cap A ^{c} = \emptyset$
 
-!!! tldr "집합족(family of sets)"
+!!! def "집합족(family of sets)"
 
     집합을 원소로 하여 구성된 집합이다.
 
@@ -310,7 +306,7 @@
 
     임의의 집합 $X$ 에 대하여 공집합 $\emptyset$ 과 $X$ 의 멱집합 $\mathcal{P}(X)$ 은 $X$ 속의 집합족이다.
 
-!!! tldr "서로소인 집합족(disjoint family of sets)"
+!!! def "서로소인 집합족(disjoint family of sets)"
 
     집합족 $\mathcal{A} = \{A_i : i \in I\}$ 가 다음을 만족하면 서로소인 집합족이라 한다.
 
@@ -324,7 +320,7 @@
 
 ## Union
 
-!!! tldr "합집합(union)"
+!!! def "합집합(union)"
 
     두 집합 $A, B$ 에 대하여 
     
@@ -398,7 +394,7 @@
 
 ## Intersection
 
-!!! tldr "교집합(intersection)"
+!!! def "교집합(intersection)"
 
     두 집합 $A, B$ 에 대하여 
     
@@ -466,7 +462,7 @@
 
 ## Ordered pair
 
-!!! tldr "순서쌍(ordered pair, 2-tuple)"
+!!! def "순서쌍(ordered pair, 2-tuple)"
 
     두 개의 수학적 대상 $a,b$ 를 순서를 정하여 짝지어 나타낸 쌍
     
@@ -496,7 +492,7 @@
 
 - 보통 순서쌍을 $(a,b)$ 로 표현하지만 개구간과 혼동하지 않기 위하여 $\big <a, b\big >$ 로 나타내기도 한다.
 
-!!! tldr "정리 1.1.1"
+!!! def "정리 1.1.1"
 
     $(a,b) = (c,d) \implies a=c, b=d$ 
 
@@ -530,7 +526,7 @@
 
 ## Product Set
 
-!!! tldr "곱집합(product set) 또는 데카르트 곱(cartesian product)"
+!!! def "곱집합(product set) 또는 데카르트 곱(cartesian product)"
 
     임의의 집합족 $\{X_i : i \in I\}$ 에 대한 곱집합 $\prod_{i \in I}^{}X_i$ 를 
 
@@ -614,7 +610,7 @@
 
 ## Power set
 
-!!! tldr "멱집합(power set)"
+!!! def "멱집합(power set)"
 
     주어진 집합의 모든 부분 집합으로 구성된 집합이다.
 
@@ -634,7 +630,7 @@
 
 # Function
 
-!!! tldr "함수(function)"
+!!! def "함수(function)"
 
     두 집합 $X, Y$ 의 곱집합 $X \times Y$ 의 부분집합 $f \subset X \times Y$ 가 
     
@@ -674,13 +670,11 @@
 
     을 위배하기 때문이다.
 
-!!! tldr "함수의 상등(function equality)"
+## Function Equality
 
-    함수 $f: X \to Y$ 와 $g: X \to Y$ 가 같은 함수일 필요충분조건은 
+!!! def "함수의 상등(function equality)"
 
-    $$ f(x) = g(x), x \in X $$
-
-    이다. 
+    함수 $f: X \to Y$ 와 $g: X \to Y$ 가 같은 함수인 것과 $\forall x \in X : f(x) = g(x)$ 인 것은 동치이다.
 
 - 증명 
 
@@ -688,7 +682,7 @@
 
     $$ y = f(x) \iff (x, y) \in f \iff (x, y) \in g \iff y = g(x) $$
 
-    이므로 $f(x) = g(x)$ 이다.
+    이므로 $f(x) = g(x)$ 이다. ▲ 
 
     반대로 임의의 $x \in X$ 에 대하여 $f(x) = g(x)$ 이면 
 
@@ -698,7 +692,7 @@
 
 ## Identity Function
 
-!!! tldr "항등함수(identity function)"
+!!! def "항등함수(identity function)"
 
     집합 $X$ 에 대하여 
     
@@ -718,7 +712,7 @@
 
 - 항등함수를 $1_X$ 로도 표기하고 $\text{ id }_X$ 로도 표기한다. 
 
-!!! tldr "포함함수(inclusion function), 포함사상(inclusion map)"
+!!! def "포함함수(inclusion function), 포함사상(inclusion map)"
 
     $A \subset X$ 일 때 
     
@@ -736,7 +730,7 @@
 
 - 모든 단사 함수는 전단사 함수와 포함 함수의 합성이다.
 
-!!! tldr "정리 1.2.1"
+!!! def "정리 1.2.1"
 
     두 함수 $f: X \to Y$ 와 $g: X \to Y$ 에 대하여 
 
@@ -762,7 +756,7 @@
 
 ## Restriction
 
-!!! tldr "함수의 제한(restriction)"
+!!! def "함수의 제한(restriction)"
 
     함수 $f: X \to Y$ 의 정의역 $X$ 의 부분집합 $A$ 에 대한 합성함수 $f \circ \iota _{A}:A \to Y$ 를 $f$ 의 제한 
     
@@ -774,7 +768,7 @@
 
 ## Composite Function
 
-!!! tldr "합성함수(composite function)"
+!!! def "합성함수(composite function)"
 
     함수 $f: X \to Y$ 와 $g: Y \to Z$ 에 대한 합성함수 $g \circ f : X \to Z$ 는 
     
@@ -790,7 +784,7 @@
 
 ## Composite Function satisfies Associativity
 
-!!! tldr ""
+!!! def ""
 
     함수의 합성은 결합법칙을 만족한다. 즉, 함수 $f: X \to Y, g: Y \to Z, h:Z \to W$ 에 대하여 
 
@@ -812,7 +806,7 @@
 
 ## Injection
 
-!!! tldr "단사함수(injection, one-to-one function)"
+!!! def "단사함수(injection, one-to-one function)"
 
     함수 $f:X \to Y$ 가 
 
@@ -824,7 +818,7 @@
 
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Injection.svg/1024px-Injection.svg.png" width="50%" height="auto">
 
-!!! tldr "정리 1.2.2"
+!!! def "정리 1.2.2"
 
     함수 $f: X \to Y$ 에 대하여 다음은 동치이다. 
 
@@ -860,7 +854,7 @@
 
 ## Surjection
 
-!!! tldr "전사함수(surjection, onto)"
+!!! def "전사함수(surjection, onto)"
 
     함수 $f: X \to Y$ 가 성질
 
@@ -872,7 +866,7 @@
 
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Surjection.svg/200px-Surjection.svg.png" width="50%" height="auto">
 
-!!! tldr "정리 1.2.3"
+!!! def "정리 1.2.3"
 
     함수 $f: X \to Y$ 에 대하여 다음은 동치이다. 
 
@@ -904,7 +898,7 @@
 
 ## Bijection
 
-!!! tldr "전단사함수(bijection, one-to-one correspondence)"
+!!! def "전단사함수(bijection, one-to-one correspondence)"
 
     두 집합 $X, Y$ 사이의 함수 $f: X \to Y$ 에 대하여 성질 
 
@@ -920,7 +914,7 @@
 
 ## Inverse Function
 
-!!! tldr "역함수(inverse function)"
+!!! def "역함수(inverse function)"
 
     함수 $f: X \to Y$ 에 대하여 
     
@@ -942,7 +936,7 @@
 
     가 된다. 
 
-!!! tldr ""
+!!! def ""
 
     역함수는 유일하다. 
 
@@ -954,7 +948,7 @@
 
     가 된다.
 
-!!! tldr ""
+!!! def ""
 
     함수가 역함수를 가지면 그 함수는 전단사함수이다. 
 
@@ -974,7 +968,7 @@
 
     이때 $f$ 가 전사일 필요충분조건은 $f(X)=Y$ 이다.
 
-!!! tldr "정리 1.2.4"
+!!! def "정리 1.2.4"
 
     함수 $f: X \to Y$ 에 대하여 다음은 동치이다. 
 
@@ -984,7 +978,7 @@
 
 - 한편 정의역이나 공역을 축소하여 전단사함수가 되게 한 후 역함수를 정의할 수도 있다. 삼각함수의 역함수가 이런 식으로 정의된다. 
 
-!!! tldr "따름정리 1.2.5"
+!!! def "따름정리 1.2.5"
 
     두 집합 $X, Y$ 에 대하여 다음은 동치이다. 
 
@@ -996,7 +990,7 @@
 
 ## Binary Operation
 
-!!! tldr "이항연산(binary operation)"
+!!! def "이항연산(binary operation)"
 
     함수 $X \times X \to X$ 이다.
 
@@ -1004,7 +998,7 @@
 
 ## Set of All Functions
 
-!!! tldr "함수 전체 집합(set of all functions)"
+!!! def "함수 전체 집합(set of all functions)"
 
     집합 $X$ 에서 $Y$ 로 가는 함수 전체의 집합을 $Y ^{X}$ 라고 한다.
 
@@ -1042,7 +1036,7 @@
 
 ## Characteristic Function
 
-!!! tldr "특성함수(characteristic function) 또는 지시함수(indicator function)"
+!!! def "특성함수(characteristic function) 또는 지시함수(indicator function)"
 
     임의의 $A \in \mathcal{P}(X)$ 에 대하여 $\chi_A \in \{0,1\}^{X}$ 를 
     
@@ -1054,7 +1048,7 @@
 
 ## Projection
 
-!!! tldr "사영(projection)"
+!!! def "사영(projection)"
 
     각 $i \in I$ 에 대하여 함수 
 
@@ -1062,7 +1056,7 @@
 
     이다.
 
-- 이 정의에서 $f$ 란 [곱집합의 정의](#9f10c2d3d) 에서의 $f$ 를 뜻한다.
+- 이 정의에서 $f$ 란 [곱집합의 정의](#e5928333f) 에서의 $f$ 를 뜻한다.
 
 - 즉, $i \in I$ 에 대한 사영은 집합족 $\{X_i : i \in I\}$ 의 곱집합 $\prod_{i \in I}^{}X_i$ 에 존재하는 함수들 중 어느 함수를 입력하면, 그것을 그 함수의 $i$ 번째 사상으로 대응시킨다.
 
@@ -1076,13 +1070,9 @@
 
 # Equivalence Relation
 
-!!! tldr "관계(relation)"
+!!! def "관계(relation)"
 
-    집합족 $\{X_i\}_{i \in I}$ 위의 관계는 곱집합의 부분집합
-
-    $$ R \subseteq \prod_{i \in I}^{}X_i $$
-
-    이다.
+    집합족 $\{X_i\}_{i \in I}$ 위의 관계는 곱집합의 부분집합 $R \subseteq \displaystyle \prod_{i \in I}^{}X_i$ 이다.
 
 - 이를 통해 순서수 $\alpha$ 에 대하여 집합 $X$ 위의 $\alpha$항 관계를 거듭제곱 집합의 부분집합
 
@@ -1118,17 +1108,15 @@
 
     는 관계이다.
 
-!!! tldr "동치관계(equivalence relation)"
+!!! def "동치관계(equivalence relation)"
 
-    집합 $X$ 에 대한 관계 $R \subset X \times X$ 가 
+    집합 $X$ 에 대한 관계 $R \subset X \times X$ 가 다음을 만족하면 $R$ 을 동치관계라 한다.
+
+    1. $\forall x \in X : (x,x)\in R$ (reflexive relation)
     
-    1. 임의의 $x \in X$ 에 대하여 $(x,x)\in R$ 이다.(reflexive relation)
+    2. $(x, y) \in R \implies (y, x) \in R$ (symmetric relation)
     
-    2. $(x, y) \in R$ 이면 $(y, x) \in R$ 이다.(symmetric relation)
-    
-    3. $(x, y) \in R$ 이고 $(y,z)\in R$ 이면 $(x, z) \in R$ 이다.(transitive relation)
-    
-    를 만족하면 $R$ 을 동치관계라 한다.
+    3. $(x, y) \in R \land (y,z)\in R \implies (x, z) \in R$ (transitive relation)
 
 - 동치관계 $R \subset X \times X$ 의 원소 $(x, y) \in R$ 을 
 
@@ -1152,7 +1140,7 @@
 
 ## Equivalence Class
 
-!!! tldr "동치류(equivalence class)"
+!!! def "동치류(equivalence class)"
 
     집합 $X$ 에 동치관계 $\sim$ 가 주어져 있을 때 각 $x \in X$ 에 대하여
     
@@ -1176,7 +1164,7 @@
 
     으로 분할된다. 
 
-!!! tldr ""
+!!! def ""
 
     $$ x \sim y \iff [x]=[y] $$
     
@@ -1202,15 +1190,13 @@
 
 ## Partition
 
-!!! tldr "분할(partition)"
+!!! def "분할(partition)"
 
-    집합 $X$ 의 공집합이 아닌 부분집합족 $\{A_i : i \in I\}$ 가 
+    집합 $X$ 의 공집합이 아닌 부분집합족 $\{A_i : i \in I\}$ 가 다음을 만족하면 이를 $X$ 의 분할이라 한다. 
 
-    1. $X = \bigcup_{i \in I}^{}A_i$
+    1. $X = \displaystyle \bigcup_{i \in I}^{}A_i$
 
-    2. $\forall i,j \in I, A_i = A_j \lor A_i \cap A_j = \varnothing$
-
-    를 만족하면 이를 $X$ 의 분할이라 한다. 
+    2. $\forall i,j \in I: A_i \neq A_j \implies A_i \cap A_j = \varnothing$
 
 - 집합 $X$ 에 동치관계 $\sim$ 가 주어지면 자동적으로 $X$ 의 분할이 생김을 알 수 있는데, 이러한 분할을 
 
@@ -1280,7 +1266,7 @@
 
     로 생각하면 이는 $a \in \N \times \N$ 의 첫번째 원소와 두번째 원소의 차이값이다. 
 
-!!! tldr "정리 1.3.1"
+!!! def "정리 1.3.1"
 
     집합 $X$ 에 정의된 동치관계 $\sim$ 에 대하여 $\sim = \sim _{(X/\sim )}$ 이 성립한다.
 
@@ -1291,6 +1277,8 @@
     $$ x \sim y \iff x \sim _{(X/\sim )}y, \qquad A \in \mathcal{P}\iff A \in X/ \sim _{\mathcal{P}} $$
 
     가 성립한다.
+
+- 이 정리는 동치관계와 동치관계로 생성된 분할이 서로 같고, 분할과 분할로 생성된 동치관계가 서로 같음을 말해준다. 즉, 분할과 동치관계가 본질적으로 서로 같다는 것을 말해준다. 
 
 - 첫번째 명제의 증명 
 
@@ -1330,15 +1318,9 @@
 
         동치관계의 정의로부터 도출된 분할과 분할의 정의로부터 도출된 동치관계가 서로 동일함을 보여주고 있는 것이다. 
     
-- 즉, 이 정리는 정의된 동치관계로 구분된 원소들이 갖는 관계가 동치관계로 분할된 집합족의 부분집합들이 갖는 관계와 같고,
-
-    어떤 집합에 임의의 분할 집합을 정의하면 그 분할이 갖는 동치관계로 집합을 분할하여도 결국 분할 집합과 같다는 것을 말해준다.  
-
-    *(솔직히 이 정리 자체가 의미하는 것을 제대로 이해하기가 어렵네 잘아는 사람한테 물어봐야 할듯)*
-
 ## Quotient Set
 
-!!! tldr "몫집합(quotient set), 상집합"
+!!! def "몫집합(quotient set), 상집합"
 
     집합 $X$ 의 동치관계 $\sim$ 혹은 분할 $\mathcal{P}$ 에 의하여 얻은 집합 
 
@@ -1346,7 +1328,7 @@
 
     을 몫집합이라고 한다. 
 
-!!! tldr "목사상(quotient map)"
+!!! def "목사상(quotient map)"
 
     집합 $X$ 와 그것의 몫집합 $X/ \sim$ 에 대한 함수  
 
@@ -1356,39 +1338,33 @@
 
 - 목사상은 전사사상이다.
 
-- 함수 $f:X \to Y$ 가 
+!!! def "정리 1.3.2"
 
-    $$ x \sim y \implies f(x) = f(y) \tag{1} $$
-
-    를 만족할 때 함수 
-
-    $$ \tilde{f}:X/ \sim \to Y:[x] \to f(x) $$
-
-    를 정의할 수 있다. 이때 이 정의가 잘 정의되어 있는지 살펴봐야 하는데, 왜냐하면 $[x]$ 의 함수값을 정의하기 위하여 $x$ 를 사용하였는데 $[x]$ 를 대표하는 원소가 $x$ 이외에 더 있을 수 있기 때문이다. 즉, 다른 원소 $y$ 에 대하여 $[x]=[y]$ 라면 $y$ 도 $[x]$ 를 대표하게 되는데 이런 때에도 $f(x)=f(y)$ 가 성립하여야 $\tilde{f}$ 가 함수가 될 수 있다. 이것을 보장하는 조건이 $(1)$ 인 것이다. 
-
-    역으로 $\tilde{f}\circ q = f$ 가 성립하는 함수 $\tilde{f}:X/\sim \to Y$ 가 존재하면 조건 $(1)$ 이 성립하는 것은 자명하다. 
-
-!!! tldr "정리 1.3.2"
-
-    집합 $X$ 와 동치관계 $\sim$ 와 함수 $f: X \to Y$ 에 대하여 다음 명제들은 서로 동치이다.
+    집합 $X$ 와 동치관계 $\sim$ 와 함수 $f: X \to Y$ 와 목사상 $q: X \to X / \sim : x \mapsto [x]$ 대하여 다음 명제들은 서로 동치이다.
 
     1. $\tilde{f} \circ q = f$ 인 함수 $\tilde{f}: X/\sim \to Y$ 가 유일하게 존재한다. 
 
-    2. $x \sim y \to f(x)=f(y)$
+    2. $x \sim y \implies f(x)=f(y)$
 
-- $\tilde{f}$ 의 유일성 증명
+- 증명
 
-    $\tilde{f} \circ q = f$ 를 만족하는 $\tilde{f}$ 가 존재하면 유일함을 보이자. 두 함수 $\tilde{f}_{1}, \tilde{f}_{2}: X/\sim \to Y$ 가 
+    $2 \implies 1$:
 
-    $$ \tilde{f}_{1} \circ q = f = \tilde{f}_{2} \circ q $$
+    2) 를 가정하면 함수 $\tilde{f}:X/ \sim \to Y:[x] \to f(x)$ 가 존재한다. 이때 이 정의가 잘 정의되어 있는지 살펴봐야 하는데, 왜냐하면 $[x]$ 의 함수값을 정의하기 위하여 $x$ 를 사용하였는데 $[x]$ 를 대표하는 원소가 $x$ 이외에 더 있을 수 있기 때문이다. 즉, 다른 원소 $y$ 에 대하여 $[x]=[y]$ 라면 $y$ 도 $[x]$ 를 대표하게 되는데 이런 때에도 $f(x)=f(y)$ 가 성립하여야 $\tilde{f}$ 가 함수가 될 수 있다. 이것을 2) 가 보장해준다. 
 
-    이라면, 
+    이제 $\tilde{f}$ 의 유일성을 보이면 된다. 즉, 두 함수 $\tilde{f}_{1}, \tilde{f}_{2}: X/\sim \to Y$ 가 $\tilde{f}_{1} \circ q = \tilde{f}_{2} \circ q = f$ 이면 서로 같음을 보이자. 2) 를 가정했으므로 임의의 $A \in X/ \sim$ 에 대하여 다음이 성립한다. 
 
-    $$ \tilde{f} _{1} = \tilde{f} _{2} $$
+    $$ x, y \in A \implies f(x) = f(y) $$
 
-    임을 보이면 된다. 
+    따라서 다음이 성립한다. 
+    
+    $$ \tilde{f}_1(q(x)) = \tilde{f}_2(q(x)) \iff \tilde{f}_1(A) = \tilde{f}_2(A) $$
 
-    (*음.. 어려운데? $q$ 의 정의역을 축소하여 전단사사상으로 바꾸면 $q ^{-1}$ 를 정의할 수 있지만, $q$ 의 정의역을 축소하는 것이 올바른지 검증하는 게 어렵네 일단 시간이 너무 없긴 해서 넘어가야할듯*)
+    즉, 정의역의 임의의 원소에서 $\tilde{f}_1$ 와 $\tilde{f}_2$ 의 상이 같다. [함수의 상등의 정의](#57b118c60)에 의하여 $\tilde{f}_1 = \tilde{f}_2$ 이다. ▲ 
+
+    $1 \implies 2$:
+
+    역으로 $\tilde{f}\circ q = f$ 가 성립하는 함수 $\tilde{f}:X/\sim \to Y$ 가 존재하면 조건 2) 가 성립하는 것은 자명하다. ■ 
 
 - 예시 
 
@@ -1442,7 +1418,7 @@
 
     이 책은 부분순서를 "순서" 라고 표현하고 있다.
 
-!!! tldr "원순서 관계(preordered relation)"
+!!! def "원순서 관계(preordered relation)"
 
     집합 $X$ 의 관계 $R \subset X \times X$ 이 
 
@@ -1464,14 +1440,14 @@
 
     을 추가하면 부분 순서가 된다.
 
-!!! tldr "원순서 집합(preordered set, proset)"
+!!! def "원순서 집합(preordered set, proset)"
 
     원순서 관계를 만족하는 집합이다. 
 
 - 원순서 집합은 두 원소를 추이적으로 비교할 수 있는 집합이다. 
 
 
-!!! tldr "부분 순서관계(partial ordered relation)"
+!!! def "부분 순서관계(partial ordered relation)"
 
     집합 $X$ 의 관계 $R \subset X \times X$ 이 
     
@@ -1499,7 +1475,7 @@
 
 - ("수체계", "무한집합" 파트에서 말하는 "순서" 라는 용어는 이 부분 순서를 뜻함)
 
-!!! tldr "부분 순서집합(partially ordered set)"
+!!! def "부분 순서집합(partially ordered set)"
 
     부분 순서관계가 정의되어 있는 집합이다.
 
@@ -1515,7 +1491,7 @@
 
     가 있게 된다.
 
-!!! tldr "절대 부분 순서 관계(strict partial order), 순부분 순서"
+!!! def "절대 부분 순서 관계(strict partial order), 순부분 순서"
 
     집합 $X$ 위의 관계 $R \subset X \times X$ 이 
 
@@ -1541,7 +1517,7 @@
 
     를 만족하는 이항 관계 $\leq  \subseteq X ^{2}$ 는 부분순서이다.
 
-!!! tldr "원전순서 집합(pretotally ordered set, totally preordered set, weakly ordered set)"
+!!! def "원전순서 집합(pretotally ordered set, totally preordered set, weakly ordered set)"
 
     원순서 집합 $(X, \lesssim )$ 이 
 
@@ -1551,7 +1527,7 @@
 
 - 원전순서 집합은 두 원소가 항상 비교 가능한 원순서 집합이다.
 
-!!! tldr "전순서 집합(totally ordered set, toset)"
+!!! def "전순서 집합(totally ordered set, toset)"
 
     원전순서 집합인 부분 순서 집합 $(X, \leq )$ 으로써 
 
@@ -1563,7 +1539,7 @@
 
     을 만족하는 집합이다.
 
-!!! tldr "도약(jump)"
+!!! def "도약(jump)"
 
     전순서 집합 $(X, \leq )$ 의 도약 $(a, b) \in X ^{2}$ 은 
 
@@ -1575,7 +1551,7 @@
 
 - 도약이 없는 전순서를 조밀 순서라 한다.
 
-!!! tldr "조밀 순서(dense order)"
+!!! def "조밀 순서(dense order)"
 
     집합 $X$ 의 부분순서 $\leq$ 가 
 
@@ -1585,7 +1561,7 @@
 
 ## Relation of Order Relations
 
-!!! tldr ""
+!!! def ""
 
     순서 관계의 함의 관계는 다음과 같다. 
 
@@ -1595,7 +1571,7 @@
 
 ## Supremum
 
-!!! tldr "상계(upper bound)"
+!!! def "상계(upper bound)"
 
     순서집합 $X$ 의 부분집합 $S \subset X$ 와 한 원소 $a \in X$ 에 대하여 
     
@@ -1605,7 +1581,7 @@
 
 - 상계 중 가장 작은 원소를 최소상계(least upper bound) 또는 상한(supremum)이라 한다.
 
-!!! tldr "상한(supremum) 또는 최소상계(least upper bound)"
+!!! def "상한(supremum), 최소상계(least upper bound)"
 
     상계 중 가장 작은 원소 즉, 집합 $X$ 과 부분집합 $S \subset X$ 에 대하여 
     
@@ -1653,11 +1629,11 @@
 
         이다.
 
-!!! tldr "위로 유계(bounded from above)"
+!!! def "위로 유계(bounded from above)"
 
     순서집합의 부분집합이 상계를 가지면 이 집합을 위로 유계라고 한다.
 
-!!! tldr ""
+!!! def ""
 
     정수집합 $\Z$ 과 $\Z$ 의 순서관계 $\leq$ 에 대하여
     
@@ -1697,11 +1673,11 @@
 
     그러므로 $S$ 의 가장 큰 원소 $g _{S}$ 가 존재한다.
 
-!!! tldr "위로 무계(unbounded from above)"
+!!! def "위로 무계(unbounded from above)"
 
     순서집합 $(S, \leq )$ 의 부분집합 $T \subseteq S$ 이 위로 유계가 아니면 위로 무계이다.
 
-!!! tldr ""
+!!! def ""
     
     $x \in \mathbb{R}$ 이 $x > 1$ 일 때 집합 $S = \{x ^{n}:n \in \mathbb{N}\}$ 은 위로 무계 집합이다.
 
@@ -1721,7 +1697,7 @@
 
     이로써 $S$ 가 위로 유계라는 가정 또한 모순이다. 그러므로 $S$ 는 위로 무계 집합이다.
 
-!!! tldr "역진귀납법(backwards induction)"
+!!! def "역진귀납법(backwards induction)"
 
     자연수 집합 $\mathbb{N}$ 과 명제함수 $P$ 에 대하여 
     
@@ -1765,7 +1741,7 @@
 
 ## Infimum
 
-!!! tldr "하계(lower bound)"
+!!! def "하계(lower bound)"
 
     순서집합 $X$ 의 부분집합 $S \subset X$ 와 한 원소 $a \in X$ 에 대하여 
     
@@ -1775,7 +1751,7 @@
 
 - 하계 중 가장 작은 원소를 최대하계(greatest lower bound) 또는 하한(infimum)이라 한다.
 
-!!! tldr "하한(infimum) 또는 최대하계(greatest lower bound)"
+!!! def "하한(infimum), 최대하계(greatest lower bound)"
 
     하계 중 가장 큰 원소 즉, 집합 $X$ 과 부분집합 $S \subset X$ 에 대하여 
     
@@ -1811,13 +1787,13 @@
 
     이다.
 
-!!! tldr "아래로 유계(bounded from below)"
+!!! def "아래로 유계(bounded from below)"
 
     순서집합의 부분집합이 하계를 가지면 이 집합을 아래로 유계라고 한다.
 
 ## Convex Set
 
-!!! tldr "볼록집합(convex set)"
+!!! def "볼록집합(convex set)"
 
     좌표공간 $\R ^{\mathcal{v}}$ 의 부분집합 $C \subset \R ^{\mathcal{v}}$ 가 
 
@@ -1847,7 +1823,7 @@
 
 ## Lattice
 
-!!! tldr "격자(lattice)"
+!!! def "격자(lattice)"
 
     순서집합 $X$ 에서 $\forall x, y \in X$ 에 대하여 $x \lor y$ 와 $x \land y$ 가 존재하면 $X$ 를 격자라 한다.
 
@@ -1865,11 +1841,11 @@
 
     은 이항연산이다.
 
-!!! tldr "완비격자(complete lattice)"
+!!! def "완비격자(complete lattice)"
 
     임의의 부분집합이 상한과 하한을 가지는 격자이다.
 
-!!! tldr "1.22"
+!!! def "1.22"
 
     $\forall x, y, z \in X$ 에 대하여 다음이 성립한다.
 
@@ -1901,7 +1877,7 @@
 
     를 보이면 되는데 이는 자명하다. ■ 
 
-!!! tldr "정리 1.4.1"
+!!! def "정리 1.4.1"
 
     순서집합 $X$ 의 $\forall x, y \in X$ 에 대하여 $x \lor y$ 와 $x \land y$ 가 존재하면 (1.22) 가 성립한다. 역으로 집합 $X$ 에 이항연산 $\lor , \land$ 가 정의되어 (1.22) 를 만족한다고 할 때 
 
@@ -1928,3 +1904,9 @@
     $$ (x \lor y) \lor z = x \lor (y \lor z) = x \lor z = z $$
 
     이다. 따라서 $x \lor y \leq z$ 이다. 그러므로 $\sup \{x, y\} = x \lor y$ 이다. ■ 
+
+---
+
+ref:
+
+:   [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)

@@ -4,7 +4,7 @@
 
 ## 행렬식 소개
 
-!!! tldr ""
+!!! def ""
 
     $2 \times 2$ 행렬 $A$ 의 행렬식 : 행렬 $A$
     
@@ -22,7 +22,7 @@
 
 ### $3 \times 3$ 행렬의 행렬식
 
-!!! tldr ""
+!!! def ""
 
     $3 \times 3$ 행렬 $A$ 의 행렬식 : 행렬 $A$ 
     
@@ -50,13 +50,13 @@
 
     이렇게 구한 $\Delta$ 가 $3 \times 3$ 행렬의 행렬식이다.
 
-!!! tldr ""
+!!! def ""
 
     $1 \times 1$ 행렬 $A$ 의 행렬식 : $1 \times 1$ 행렬의 행렬식은 $\det A = a_{11}$ 로 정의한다.
 
 
 
-!!! tldr ""
+!!! def ""
 
     $3$ 차 정방행렬의 행렬식을 $2$ 차 정방행렬의 행렬식으로 표현하기 : $3 \times 3$ 행렬 $A$ 의 행렬식 
     
@@ -82,7 +82,7 @@
 
 ### 고차 행렬로의 일반화 - $n$ 차 정방행렬의 행렬식을 $n-1$ 차 정방행렬의 행렬식으로 표현하기
 
-!!! tldr ""
+!!! def ""
 
     $n \times n$ 행렬의 행렬식 : $n \geq 2$ 에 대해서 $n \times n$ 행렬 $A$ 의 행렬식은 양과 음 부호가 번갈아가며 나타나는 $n$ 개의 $\pm a_{1j} \det A_{1j}$ 항으로써 다음과 같이 정의된다. 
     
@@ -114,11 +114,11 @@
 
     $$ \det A = 1 \cdot \begin{vmatrix} 4&-1\\-2&0 \end{vmatrix} -5 \cdot \begin{vmatrix} 2&-1\\0&0 \end{vmatrix} + 0 \cdot \begin{vmatrix} 2&4\\0&-2 \end{vmatrix} = -2 $$
 
-!!! tldr ""
+!!! def ""
 
     행렬식 표기법 : 행렬식 $\det \begin{bmatrix} a&b\\c&d \end{bmatrix}$ 를 두 수직선을 사용하여 $\begin{vmatrix} a&b\\c&d \end{vmatrix}$ 로 축약하여 사용할 수 있다.
 
-!!! tldr ""
+!!! def ""
 
     여인수(cofactor) : 주어진 행렬 $A=[a_{ij}]$ 에 대하여 행렬 $A$ 의 $(i,j)$ 여인수 $C_{ij}$ 는 $(-1)^{i+j} \det A_{ij}$ 이다.
 
@@ -130,7 +130,7 @@
 
     $$\det A = a_{11}C_{11} + a_{12}C_{12} + \dots + a_{1n}C_{1n}$$
 
-!!! tldr ""
+!!! def ""
 
     여인수 전개(cofactor expansion)
 
@@ -140,7 +140,7 @@
 
     $7$ 열에 관한 여인수 전개 : $\det A = a_{17}C_{17} + a_{27}C_{27} + \dots + a_{n7}C_{n7}$
 
-!!! tldr ""
+!!! def ""
 
     **Theorem 1** $n \times n$ 행렬 $A$ 의 행렬식은 임의의 행 $i$ 또는 임의의 열 $j$ 에 대한 여인수 전개로 표현할 수 있다.
 
@@ -166,7 +166,7 @@
 
     그런데 이 예제로써 다음 정리가 성립함을 직관적으로 알 수 있다.
 
-!!! tldr ""
+!!! def ""
 
     **Theorem 2** 행렬 $A$ 가 삼각 행렬이면 행렬식 $\det A$ 는 주 대각요소들의 곱이다.
 
@@ -174,7 +174,7 @@
 
 ## 3.2 행렬식의 성질
 
-!!! tldr ""
+!!! def ""
 
     **Theorem 3** 행연산과 행렬식의 관계 : $A$ 를 정방행렬이라 하자.
 
@@ -188,7 +188,7 @@
 
     **구체화 필요**
 
-!!! tldr ""
+!!! def ""
 
     $\det A$ 의 값 : 행렬 $A$ 를 행 교환과 행 교체에 의하여 사다리꼴 행렬 $U$ 로 변환하였다고 하고 행 교체가 $r$ 번 있었다고 하면 $\det A$ 는 다음과 같다.
 
@@ -208,13 +208,13 @@
 
     $$ \det A = 2 \begin{vmatrix} 1&-4&3&4\\3&-9&5&10\\-3&0&1&-2\\1&-4&0&6 \end{vmatrix} = 2 \begin{vmatrix} 1&-4&3&4\\0&3&-4&-2\\0&-12&10&10\\0&0&-3&2 \end{vmatrix} \sim 2 \begin{vmatrix} 1&-4&3&4\\0&3&-4&-2\\0&0&-6&2\\0&0&0&1 \end{vmatrix} = 2 \cdot (1)(3)(-6)(1) = -36 $$
 
-!!! tldr ""
+!!! def ""
 
     **Theorem 4** 정방행렬 $A$ 의 역행렬이 존재하면 $\det A \neq 0$ 이고 그 역도 성립한다.
 
 ### 열 연산
 
-!!! tldr ""
+!!! def ""
 
     **Theorem 5** 행렬 $A$ 가 $n \times n$ 이면 $\det A^T = \det A$ 이다.
 
@@ -230,7 +230,7 @@
 
 - 그러므로 모든 자연수 $n$ 에 대하여 본 명제는 참이다.
 
-!!! tldr ""
+!!! def ""
 
     **Theorem 6** 행렬식의 곱 : 행렬 $A, B$ 가 $n \times n$ 행렬이면 $\det AB = (\det A)(\det B)$ 이다.
 
@@ -248,7 +248,7 @@ $$ A = \begin{bmatrix} a_1&\dots&a_{j-1}&x&a_{j+1}&\dots&a_n \end{bmatrix} $$
 
 $$ T(x) = \det \begin{bmatrix} a_1&\dots&a_{j-1}&x&a_{j+1}&\dots&a_n \end{bmatrix} $$
 
-!!! tldr ""
+!!! def ""
 
     행렬식 함수의 선형성 : 그러면 다음이 성립한다.
 
@@ -258,7 +258,7 @@ $$ T(x) = \det \begin{bmatrix} a_1&\dots&a_{j-1}&x&a_{j+1}&\dots&a_n \end{bmatri
 
 ## 3.3 크래머의 공식, 부피, 선형변환
 
-!!! tldr ""
+!!! def ""
 
     $A_i(b)$ : 임의의 $n \times n$ 행렬 $A$ 와 $\mathbb{R} ^n$ 에 속한 임의의 $b$ 에 대해서 $A$ 의 $i$ 번째 열을 벡터 $b$ 로 바꾼 행렬이다.
 
@@ -266,7 +266,7 @@ $$ T(x) = \det \begin{bmatrix} a_1&\dots&a_{j-1}&x&a_{j+1}&\dots&a_n \end{bmatri
 
     - $b = col i$
 
-!!! tldr ""
+!!! def ""
 
     크래머의 공식(Cramer's rule) : 역행렬을 가지는 $n \times n$ 행렬 $A$ 와 $\mathbb{R} ^n$ 에 속한 임의의 $b$ 에 대하여 $Ax = b$ 의 유일한 해 $x$ 는 다음과 같다.
 
@@ -276,15 +276,15 @@ $$ T(x) = \det \begin{bmatrix} a_1&\dots&a_{j-1}&x&a_{j+1}&\dots&a_n \end{bmatri
 
     **구체화 필요**
 
-!!! tldr ""
+!!! def ""
 
     $A^-1 를 위한 공식$
 
-!!! tldr ""
+!!! def ""
 
     **Theorem 8**
 
-!!! tldr ""
+!!! def ""
 
     **Theorem 9**
 

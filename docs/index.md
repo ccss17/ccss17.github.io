@@ -1,16 +1,17 @@
 <div class="index"><p>root</p><p>
 ├──&nbsp;Math</p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;Foundation&nbsp;of&nbsp;Foundation&nbsp;of&nbsp;Math</p><p>
+│&nbsp;&nbsp;&nbsp;├──&nbsp;Foundation&nbsp;of&nbsp;Math</p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/MathHistory>History&nbsp;of&nbsp;Math</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Logic/FormalSystem>Formal&nbsp;System</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/incompleteness>Incompleteness&nbsp;theorem</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/turing>Turing's&nbsp;proof</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/gentzen>Consistency&nbsp;proof&nbsp;of&nbsp;Peano&nbsp;arithmetic</a></p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;Foundation&nbsp;of&nbsp;math</p><p>
+│&nbsp;&nbsp;&nbsp;├──&nbsp;Set&nbsp;Theory</p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/Set>Set</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/numbers>Number&nbsp;Theory</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/InfiniteSet>Infinite&nbsp;Set</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/Set/ZFC>ZFC&nbsp;axiom&nbsp;system</a></p><p>
+│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/ArithmeticOperations>Arithmetic&nbsp;Operations</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/HyperrealNumbers>Hyperreal&nbsp;Numbers</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/SurrealNumbers>Surreal&nbsp;Numbers</a></p><p>
 │&nbsp;&nbsp;&nbsp;╰──&nbsp;Linear&nbsp;Algebra</p><p>
@@ -21,17 +22,15 @@
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/Diagonalization>Diagonalization</a></p><p>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/LinearAlgebra/InnerProductSpaces>Inner&nbsp;Product&nbsp;Spaces</a></p><p>
 ├──&nbsp;Paper</p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/GEB>Gödel,&nbsp;Escher,&nbsp;Bach</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/1404.6388>Performance&nbsp;of&nbsp;Python&nbsp;runtimes&nbsp;on&nbsp;a&nbsp;non-numeric&nbsp;scientific&nbsp;code</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/1102.1523>The&nbsp;NumPy&nbsp;array:&nbsp;a&nbsp;structure&nbsp;for&nbsp;efficient&nbsp;numerical&nbsp;computation</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/facenet>Facenet&nbsp;(2015)</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/quadruplet>Quadruplet&nbsp;(2017)</a></p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=paper/blueborne>BlueBorne</a></p><p>
-│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=paper/meltdown>Meltdown</a></p><p>
+│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=paper/blueborne>BlueBorne</a></p><p>
 ├──&nbsp;Computer</p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/nand2tetris>Nand&nbsp;to&nbsp;Tetris</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/information>Information&nbsp;Theory</a></p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/future>Technological&nbsp;Singularity</a></p><p>
+│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/future>Why&nbsp;the&nbsp;future&nbsp;doesn't&nbsp;need&nbsp;us</a></p><p>
 │&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Computer/Rust>Rust&nbsp;Memo</a></p><p>
 ├──&nbsp;ProgrammerBase</p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=ProgrammerBase/README>README</a></p><p>
