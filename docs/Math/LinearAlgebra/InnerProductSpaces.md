@@ -825,15 +825,15 @@
 
     $$ \big <y,z \big > = \big <\sum_{i=1}^{n}a_iw_i, z \big > = \sum_{i=1}^{n}a_i \big <w_i,z \big > = 0 \tag*{■} $$
 
+## Orthogonal Projection
+
 !!! def "정리 6.6"
 
-    내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 다음이 성립한다.
-    
-    1. $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 와 벡터 $u = \displaystyle \sum_{i=1}^{k}\big <y,v_i \big >v_i \in \mathbf{W}$ 에 대하여 $y - u \in \mathbf{W}^{\perp}$ 이다.
+    내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 인 벡터 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다.
 
-    2. $y - u \in \mathbf{W}^{\perp}$ 을 만족하게 하는 벡터 $u \in \mathbf{W}$ 가 유일하게 존재한다. 
+    $\mathbf{W}$ 의 정규직교기저 $\{v_1, v_2, \dots, v_k\}$ 에 대하여 $\displaystyle u = \sum_{i=1}^{k}\big <y,v_i \big >v_i$ 이다.
 
-- **이 정리는 내적공간 $\mathbf{V}$ 의 임의의 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 를 만족하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재함을 말해준다. 즉, [집합의 합](../Diagonalization/#f68ccee5d) 에 대하여 $\mathbf{V} = \mathbf{W}+\mathbf{W}^{\perp}$ 라는 것이다. 앞으로 이 정리는 이러한 형태의 명제로 자주 사용될 것이다.**  1) 이 $y = u + z$ 을 말해주고 2) 가 $u$ 의 유일성을 말해주는데 $u$ 의 유일성이 $z$ 의 유일성을 함의하므로 정리에서는 생략되었다. 
+- **이 정리는 $\mathbf{V} = \mathbf{W}+\mathbf{W}^{\perp}$ 임을 말해준다.**
 
 - 가령 다음과 같이 내적공간 $\R ^{3}$ 에서 점 $P$ 와 평면 $\mathbf{W}$ 사이의 거리를 구하는 문제가 존재한다.
 
@@ -847,23 +847,15 @@
 
     1:
 
-    $y \in \mathbf{V}, u \in \mathbf{W}$ 에 대하여 $z = y - u$ 라고 두고 $z \in \mathbf{W}^{\perp}$ 임을 보이자. 문제 6.2-7 에 의하여 $z$ 가 각 $v_j$ 에 수직임을 보이면 된다. $v_j$ 가 정규화된 기저이므로 $\big <v_j,v_j \big > = \|v_j\|^{2} = 1 ^{2} = 1$ 이고, 다음이 성립한다.
+    $y \in \mathbf{V}, u \displaystyle = \sum_{i=1}^{k}\big <y,v_i \big >v_i \in \mathbf{W}$ 에 대하여 $z = y - u$ 라고 두고 $z \in \mathbf{W}^{\perp}$ 임을 보이자. 문제 6.2-7 에 의하여 $z$ 가 각 $v_j$ 에 수직임을 보이면 된다. $v_j$ 가 정규화된 기저이므로 $\big <v_j,v_j \big > = \|v_j\|^{2} = 1 ^{2} = 1$ 이고, 다음이 성립한다.
 
     $$ \begin{equation}\begin{split} \big <z,v_j \big >&= \bigg <\bigg ( y - \sum_{i=1}^{k}\big <y,v_i \big >v_i\bigg ), v_j \bigg > = \big <y,v_j \big >- \sum_{i=1}^{k}\big <y,v_i \big >\big <v_i,v_j \big > \\ &= \big <y,v_j \big >- \big <y,v_j \big > = 0\\ \end{split}\end{equation} \tag*{} $$
 
+    이로써 임의의 벡터 $y \in \mathbf{V}$ 를 합으로 표현하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 존재한다는 것을 증명했다. ▲ 
+
     2:
 
-    $y - u' = z' \in \mathbf{W}^{\perp}$ 을 만족하는 $u' \in \mathbf{W}$ 가 존재하면 $y = u + z = u' + z'$ 이다. 부분공간은 합에 대하여 닫혀있으므로 $u - u' = z' - z \in \mathbf{W}\cap \mathbf{W}^{\perp} = \{0\}$ 이다. 즉, $u = u'$ 이다. ■ 
-
-- 프리드버그 선대수에서 서술한 원래의 정리 6.6:
-
-    *내적공간 $\mathbf{V}$ 의 유한차원 부분공간 $\mathbf{W}$ 와 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 인 벡터 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다.*
-
-    *$\{v_1, v_2, \dots, v_k\}$ 가 $\mathbf{W}$ 의 정규직교기저일 때 다음이 성립한다.*
-
-    $$ u = \sum_{i=1}^{k}\big <y,v_i \big >v_i $$
-
-    존재성 정리니까 이렇게 해도 상관없을듯 고쳐
+    이제 $u, z$ 의 유일성을 증명하자. $y$ 를 합으로 표현하는 또 다른 벡터 $u' \in \mathbf{W}, z' \in \mathbf{W}^{\perp}$ 가 존재하면 $y = u + z = u' + z'$ 이다. $u - u' = z' - z \in \mathbf{W}\cap \mathbf{W}^{\perp} = \{0\}$ 이다. 즉, $u = u', z = z'$ 이다. ■ 
 
 !!! def "문제 6.1-10"
 
@@ -896,8 +888,6 @@
     $$ \|y-x\|^{2} = \|u+z-x\|^{2} = \|u-x\|^{2} + \|z\|^{2} \geq \|z\|^{2} = \|y-u\|^{2} \tag*{▲} $$
 
     $\|y-x\| = \|y-u\|$ 로 두면 $\|u-x\|^{2} + \|z\|^{2} = \|z\|^{2}$ 이고 $\|u-x\| = 0 \iff x = u$ 이다. 이것의 역은 자명하다. ■ 
-
-## Orthogonal Projection
 
 !!! def "정사영(orthogonal projection)"
 
@@ -2629,9 +2619,21 @@
 
     **그러나 정사영은 치역에 의하여 유일하게 결정된다. 치역이 같으면 반드시 서로 같은 사영이 되는 것이 정사영이다.**
 
-- [문제 6.2-13](#8767bfd4f) 은 $\mathbf{R}(\mathbf{T})^{\perp} = \mathbf{N}(\mathbf{T}) \implies \mathbf{N}(\mathbf{T})^{\perp} = \mathbf{R}(\mathbf{T})$ 을 말해준다. 
+- [문제 6.2-13](#8767bfd4f) 은 $\mathbf{R}(\mathbf{T})^{\perp} = \mathbf{N}(\mathbf{T}) \iff \mathbf{N}(\mathbf{T})^{\perp} = \mathbf{R}(\mathbf{T})$ 을 말해준다. 
     
 - 위에서 정의한 정사영은 이 정사영의 특수한 경우인가?
+
+- [정리 6.6](#8cbdc4410) 에 의하여 내적공간 $\mathbf{V}$ 와 부분공간 $\mathbf{W}$ 와 임의의 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 를 만족하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다. 함수 $\mathbf{T}: \mathbf{V}\to \mathbf{V}, y \to u$ 로 정의하면 $\mathbf{T}$ 는 $\mathbf{W}$ 로의 정사영이된다.
+
+!!! def ""
+
+    내적공간에서 유한차원 부분공간로의 정사영은 유일한다.
+
+- 증명
+
+    [정리 6.6](#8cbdc4410) 에 의하여 내적공간 $\mathbf{V}$ 와 부분공간 $\mathbf{W}$ 와 임의의 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 를 만족하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다. 함수 $\mathbf{T}: \mathbf{V}\to \mathbf{V}, y \to u$ 로 정의하면 $\mathbf{T}$ 는 $\mathbf{W}$ 로의 정사영이된다.
+
+    $\mathbf{T}$ 와 $\mathbf{U}$ 가 $\mathbf{W}$ 로의 정사영이면 [문제 2.17-27](#d9b55ab9b) 에 의하여 $\mathbf{R}(\mathbf{T}) = \mathbf{W}=\mathbf{R}(\mathbf{U})$ 이다. 따라서 $\mathbf{N}(\mathbf{T}) = \mathbf{R}(\mathbf{T})^{\perp} = \mathbf{R}(\mathbf{U})^{\perp} = \mathbf{N}(\mathbf{U})$ 이다. 정사영은 치역 또는 영공간에 의하여 유일하게 결정되므로 $\mathbf{T}=\mathbf{U}$ 이다. ■ 
 
 ---
 
