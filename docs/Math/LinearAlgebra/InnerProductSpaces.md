@@ -1666,7 +1666,7 @@
     
     - $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다.
 
-- **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.**
+- **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.** [정리 5.1](../Diagonalization/#57f0cd776) 은 선형연산자가 대각화가능인 것과 선형연산자의 고유벡터로 이루어진 벡터공간의 기저가 존재하는 것이 동치임을 말해준다. 내적공간에서는 선형연산자의 고유벡터로 이루어진 내적공간의 정규직교기저의 존재성의 조건이 필요하다. 이 정리는 복소내적공간에서 선형연산자가 대각화가능인 조건을 말해준다.
 
 - 이 정리는 복소내적공간에서 정규성과 정규직교기저의 존재성이 동치임을 말해준다. 실내적공간에서는 정규직교기저의 존재성이 보장되면 정규성도 보장되지만, 정규성이 보장된다고 해서 정규직교기저의 존재성이 보장되지는 않는다.
 
@@ -1758,7 +1758,7 @@
     
     - $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다.
 
-- **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.**
+- **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.** [정리 5.1](../Diagonalization/#57f0cd776) 은 선형연산자가 대각화가능인 것과 선형연산자의 고유벡터로 이루어진 벡터공간의 기저가 존재하는 것이 동치임을 말해준다. 내적공간에서는 선형연산자의 고유벡터로 이루어진 내적공간의 정규직교기저의 존재성의 조건이 필요하다. 이 정리는 실내적공간에서 선형연산자가 대각화가능인 조건을 말해준다.
 
 - 정규성이 실내적공간의 고유벡터로 이루어진 정규직교기저가 존재하기 위한 충분조건이 아니었다. 그러나 복소내적공간에서는 정규성만으로도 고유벡터로 이루어진 정규직교기저의 존재성이 보장된다.
 
@@ -2271,9 +2271,9 @@
 
 - 예시 
 
-# Spectral Theorem
+# Projection
 
-!!! def "문제 1.3-23"
+<!-- !!! def "문제 1.3-23"
 
     벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 에 대하여 다음이 성립한다. 
 
@@ -2369,9 +2369,7 @@
 
 - 증명
 
-    문제 1.3-24, 1.3-25, 1.3-26 의 증명과 비슷하다. $\mathbf{W}_2$ 이 부분공간임을 쉽게 보일 수 있고, $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 은 자명하고 $\mathbf{W}_1 + \mathbf{W}_2 = \mathbf{V}$ 을 쉽게 보일 수 있다. ■ 
-
-## Projection
+    문제 1.3-24, 1.3-25, 1.3-26 의 증명과 비슷하다. $\mathbf{W}_2$ 이 부분공간임을 쉽게 보일 수 있고, $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 은 자명하고 $\mathbf{W}_1 + \mathbf{W}_2 = \mathbf{V}$ 을 쉽게 보일 수 있다. ■  -->
 
 !!! def "사영(projection)"
 
@@ -2459,9 +2457,13 @@
 
     이제 각 벡터공간의 기저의 기수를 계산하면 $\mathbf{W}_1+\mathbf{W}_2$ 이 유한차원인 것과 정리의 결론을 얻을 수 있다. ■ 
 
+- 예시 
+
+    $$ \begin{equation}\begin{split} \dim (\mathbf{W}_1 + \mathbf{W}_2 + \mathbf{W}_3)&= \dim (\mathbf{W}_1 + \mathbf{W}_2) + \dim (\mathbf{W}_3) - \dim ((\mathbf{W}_1+\mathbf{W}_2) \cap \mathbf{W}_3) \\ &= \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) - \dim (\mathbf{W}_1 \cap \mathbf{W}_2) + \dim (\mathbf{W}_3) - \dim ((\mathbf{W}_1 \cap \mathbf{W}_3) + (\mathbf{W}_2 + \mathbf{W}_3)) \\ &= \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) + \dim (\mathbf{W}_3) \\ &\qquad - \dim (\mathbf{W}_1 \cap \mathbf{W}_2) - \dim (\mathbf{W}_2 \cap \mathbf{W}_3) - \dim (\mathbf{W}_1 \cap \mathbf{W}_3) \\ &\qquad + \dim (\mathbf{W}_1 \cap \mathbf{W}_2 \cap \mathbf{W}_3) \\ \end{split}\end{equation} \tag*{} $$
+
 !!! def "문제 1.6-29-(b)"
 
-    벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 가 유한차원이고 $\mathbf{V}=\mathbf{W}_1 + \mathbf{W}_2$ 이면 다음이 성립한다. 
+    벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 가 유한차원이면 다음이 성립한다. 
 
     $$ \mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2 \iff \dim (\mathbf{V}) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) $$
 
@@ -2472,6 +2474,26 @@
     $$ \dim (\mathbf{V}) = \dim (\mathbf{W}_1 + \mathbf{W}_2) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) + \dim (\mathbf{W}_1 \cap \mathbf{W}_2) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2) \tag*{▲} $$
 
     $\dim (\mathbf{V}) = \dim (\mathbf{W}_1 + \mathbf{W}_2) = \dim (\mathbf{W}_1) + \dim (\mathbf{W}_2)$ 를 가정하는 것은 다시 문제 1.6-29-(a) 에 의하여 $\dim (\mathbf{W}_1 \cap \mathbf{W}_2) = 0$ 을 가정하는 것이므로 $\mathbf{W}_1 \cap \mathbf{W}_2 = \{0\}$ 이다. 따라서 $\mathbf{W}_1 \oplus \mathbf{W}_2 = \mathbf{V}$ 이다. ■ 
+
+!!! def ""
+
+    벡터공간 $\mathbf{V}$ 의 부분공간 $\mathbf{W}_1, \mathbf{W}_2, \dots, \mathbf{W}_k$ 가 유한차원이면 다음이 성립한다. 
+
+    $$ \mathbf{V} = \bigoplus_{i=1}^{k} \mathbf{W}_i \implies \dim (\mathbf{V}) = \sum_{i=1}^{k}\dim (\mathbf{W}_i) $$
+
+- 증명 
+
+    문제 1.6-29-(b) 에 의하여 다음이 성립한다.
+
+    $$ \begin{equation}\begin{split}
+    \dim (\mathbf{V})&= \dim \bigg (\bigoplus_{i=1}^{k}\mathbf{W}_i \bigg ) = \dim \bigg (\bigoplus_{i=1}^{k-1}\mathbf{W}_i \bigg ) + \dim (\mathbf{W}_k) \\
+    &= \dim \bigg (\bigoplus_{i=1}^{k-2}\mathbf{W}_i \bigg ) + \dim (\mathbf{W} _{k-1}) + \dim (\mathbf{W}_k) \\
+    &\qquad  \vdots \\
+    &= \sum_{i=1}^{k}\dim (\mathbf{W}_i) \\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    ■ 
 
 !!! def "문제 2.1-36"
 
@@ -2623,17 +2645,209 @@
     
 - 위에서 정의한 정사영은 이 정사영의 특수한 경우인가?
 
-- [정리 6.6](#8cbdc4410) 에 의하여 내적공간 $\mathbf{V}$ 와 부분공간 $\mathbf{W}$ 와 임의의 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 를 만족하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다. 함수 $\mathbf{T}: \mathbf{V}\to \mathbf{V}, y \to u$ 로 정의하면 $\mathbf{T}$ 는 $\mathbf{W}$ 로의 정사영이된다.
+- [정리 6.6](#8cbdc4410) 에 의하여 내적공간 $\mathbf{V}$ 와 부분공간 $\mathbf{W}$ 와 임의의 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 를 만족하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다. 함수 $\mathbf{T}: \mathbf{V}\to \mathbf{V}, y \to u$ 로 정의하면 $\mathbf{T}$ 는 $\mathbf{W}$ 로의 $\mathbf{V}$ 의 정사영이된다. 그러면 $\mathbf{W}$ 로의 정사영과 사영은 어떻게 다를까? 정리 6.6 의 그림을 다시 가져와서 보자.
 
-!!! def ""
+    ![](https://user-images.githubusercontent.com/16812446/129475802-dadd142b-071b-4810-b03b-6da575e6f1ae.png)
 
-    내적공간에서 유한차원 부분공간로의 정사영은 유일한다.
+    정리 6.6 은 부분공간 $\mathbf{W}$ 에 대하여 벡터공간 $\mathbf{V}$ 의 임의의 벡터 $y \in \mathbf{V}$ 를 $y = u + z$ 로 표현하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일함을 말해준다. 반면 점 $P$ 와 굳이 수직해야 한다는 조건을 없앤다면 $y = u + z$ 를 만족하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 는 유일하지 않고 무한히 많이 존재할 것이다. 이것이 정사영과 사영의 차이이다. 
+
+- 예시
+
+    ![image](https://user-images.githubusercontent.com/16812446/131776823-e6a91f91-9243-4151-980a-cd9c95018bb2.png)
+
+    이제 $\mathbf{V} = \R ^{2}, \mathbf{W} = \text{span} \{(1, 1)\}$ 로 두고 $\mathbf{W}$ 로의 정사영 $\mathbf{T}$ 와 $\mathbf{W}$ 로의 어떤 사영 $\mathbf{U}$ 를 위와 같이 정의하자. $\mathbf{T}(v)$ 는 $v$ 에서 직선 $y = x$ 에 내린 수선의 발이고 $\mathbf{U}(a_1, a_2) = (a_1, a_1)$ 이다. 이처럼 정사영은 유일하지만, 사영은 무한히 많이 존재한다.
+
+!!! def "정사영의 유일성(uniqueness of orthogonal projection)"
+
+    내적공간에서 유한차원 부분공간으로의 정사영은 유일한다.
 
 - 증명
 
     [정리 6.6](#8cbdc4410) 에 의하여 내적공간 $\mathbf{V}$ 와 부분공간 $\mathbf{W}$ 와 임의의 벡터 $y \in \mathbf{V}$ 에 대하여 $y = u + z$ 를 만족하는 $u \in \mathbf{W}, z \in \mathbf{W}^{\perp}$ 가 유일하게 존재한다. 함수 $\mathbf{T}: \mathbf{V}\to \mathbf{V}, y \to u$ 로 정의하면 $\mathbf{T}$ 는 $\mathbf{W}$ 로의 정사영이된다.
 
     $\mathbf{T}$ 와 $\mathbf{U}$ 가 $\mathbf{W}$ 로의 정사영이면 [문제 2.17-27](#d9b55ab9b) 에 의하여 $\mathbf{R}(\mathbf{T}) = \mathbf{W}=\mathbf{R}(\mathbf{U})$ 이다. 따라서 $\mathbf{N}(\mathbf{T}) = \mathbf{R}(\mathbf{T})^{\perp} = \mathbf{R}(\mathbf{U})^{\perp} = \mathbf{N}(\mathbf{U})$ 이다. 정사영은 치역 또는 영공간에 의하여 유일하게 결정되므로 $\mathbf{T}=\mathbf{U}$ 이다. ■ 
+
+!!! def "정사영의 최적 근사성(approximation property of orthogonal projection)"
+
+    내적공간 $\mathbf{V}$ 에서 유한차원 부분공간 $\mathbf{W}$ 로의 정사영 $\mathbf{T}$ 는 다음을 만족한다.
+
+    $$ \forall v \in \mathbf{V}, \forall w \in \mathbf{W} : \|w - v\| \geq \|\mathbf{T}(v) - v \| $$
+
+- 이 정리는 벡터공간의 벡터를 부분공간으로 사영시키는 함수 중 정사영이 가장 짧은 거리로 사영시킨다는 것을 말해준다. 정사영의 정의에서 보았던 그림들만 보더라도 정사영이 벡터를 가장 짧은 노름으로 사영시킨다는 것을 직관적으로 알 수 있다. 증명은 [정리 6.6 따름정리](#bc913e284) 에 의하여 바로 나온다.
+
+    이 성질을 최적 근사성(approximation property)이라 하며, 이 성질이 정사영의 가장 중요한 성질이다.
+
+> 푸리에 해석 metadata
+
+!!! def "정리 6.24"
+
+    내적공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다. 
+
+    1. $\mathbf{T}$ 가 정사영이다. 
+
+    2. $\mathbf{T}$ 의 수반연산자 $\mathbf{T}{}^{*}$ 가 존재하고, $\mathbf{T}^{2} = \mathbf{T} = \mathbf{T}{}^{*}$ 이다.
+
+- 이 정리는 정사영의 가장 중요한 대수적 성질을 말해준다. $\mathbf{T}$ 가 정사영이면 에르미트 연산자이다.
+
+- [정리 6.9](#01997fcc2) 는 유한차원 내적공간의 선형연산자가 수반연산자를 갖는다는 것을 말해주지만, 무한차원 내적공간에서의 존재성은 보장해주지 않는다. 이 정리는 임의의 내적공간의 정사영이 반드시 수반연산자를 갖는다는 것을 말해준다.
+
+- 증명
+
+    $1 \implies 2$:
+
+    1) 을 가정하면 $\mathbf{T}$ 는 사영이므로 [문제 2.3-17](#0547069b9) 에 의하여 $\mathbf{T}=\mathbf{T}^{2}$ 이다. 따라서 [문제 2.3-16](#a471dc0b1) 에 의하여 $\mathbf{V} = \mathbf{R}(\mathbf{T})\oplus \mathbf{N}(\mathbf{T})$ 이고, $\mathbf{R}(\mathbf{T})^{\perp}=\mathbf{N}(\mathbf{T})$ 이다. 이에 따라 [내적의 정의](#3874b2a1f) 에 의하여 $x_1, x_2 \in \mathbf{R}(\mathbf{T}), x_2, y_2 \in \mathbf{N}(\mathbf{T})$ 에 대한 $x = x_1 + x_2, y = y_1 + y_2 \in \mathbf{V}$ 에 대하여 다음이 성립한다. 
+
+    $$ \big <x, \mathbf{T}(y) \big > = \big <x_1+x_2,y_1 \big >= \big <x_1,y_1 \big > + \big <x_2,y_1 \big > = \big <x_1,y_1 \big > $$
+
+    $$ \big <\mathbf{T}(x), y \big > = \big <x_1,y_1+y_2 \big >= \big <x_1,y_1 \big > + \big <x_1,y_2 \big > = \big <x_1,y_1 \big > $$
+
+    $$ \implies \forall x, y \in \mathbf{V} : \big <x, \mathbf{T}(y) \big > = \big <\mathbf{T}(x), y \big > $$
+
+    [정리 6.9](#01997fcc2) 에 의하여 $\big <\mathbf{T}(x), y \big > = \big <x, \mathbf{U}(y) \big >$ 꼴을 만족하는 $\mathbf{U}$ 는 $\mathbf{T}$ 의 수반연산자 $\mathbf{U} = \mathbf{T}{}^{*}$ 이다. 즉, $\mathbf{T} = \mathbf{T}{}^{*}$ 이다. 이로써 수반연산자 $\mathbf{T}{}^{*}$ 의 존재성도 증명되었다. ▲ 
+
+    $2 \implies 1$:
+
+    $\mathbf{T}^{2}=\mathbf{T}=\mathbf{T}{}^{*}$ 를 가정하면 [문제 2.3-17](#0547069b9) 에 의하여 $\mathbf{T}$ 는 사영이다. $x \in \mathbf{R}(\mathbf{T}), y \in \mathbf{N}(\mathbf{T})$ 에 대하여 $x = \mathbf{T}(x) = \mathbf{T}{}^{*}(x)$ 이므로 다음이 성립한다. 
+
+    $$ \big <x,y \big > = \big <\mathbf{T}{}^{*}(x), y \big > = \big <x, \mathbf{T}(y) \big > = \big <x,0 \big > = 0 $$
+
+    즉, $x \in \mathbf{N}(\mathbf{T})^{\perp}$ 이므로 $\mathbf{R}(\mathbf{T}) \subset \mathbf{N}(\mathbf{T})^{\perp}$ 이다. ▲ 
+
+    $x \in \mathbf{N}(\mathbf{T})^{\perp}$ 을 가정하면 [내적의 정의](#3874b2a1f) 에 의하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}
+    \|x - \mathbf{T}(x)\| ^{2} &= \big <x - \mathbf{T}(x), x - \mathbf{T}(x) \big > \\
+    &= \big <x, x - \mathbf{T}(x) \big > - \big <\mathbf{T}(x), x - \mathbf{T}(x) \big > \\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    $x - \mathbf{T}(x) = x - x = 0 \in \mathbf{N}(\mathbf{T})$ 이므로 $\big <x, x - \mathbf{T}(x) \big > = 0$ 이다. 또한 다음이 성립한다. 
+
+    $$ \big <\mathbf{T}(x), x - \mathbf{T}(x) \big > = \big <x, \mathbf{T}{}^{*}(x - \mathbf{T}(x)) \big > = \big <x, \mathbf{T}(x - \mathbf{T}(x)) \big > = \big <x, 0 \big > = 0 $$
+
+    따라서 다음이 성립한다. 
+
+    $$ \|x - \mathbf{T}(x)\| ^{2} = 0 \implies x = \mathbf{T}(x) \in \mathbf{R}(\mathbf{T}) $$
+
+    즉, $\mathbf{N}(\mathbf{T})^{\perp}\subset \mathbf{R}(\mathbf{T})$ 이다. 그러므로 $\mathbf{R}(\mathbf{T}) = \mathbf{N}(\mathbf{T})^{\perp}$ 이다. [문제 6.2-13](#8767bfd4f) 에 의하여 $\mathbf{R}(\mathbf{T})^{\perp} = \mathbf{N}(\mathbf{T})$ 이다. ■ 
+
+## Spectral Theorem
+
+!!! def "스펙트럼(spectrum)"
+
+    유한차원 내적공간의 선형연산자의 서로 다른 고윳값 집합이다.
+
+!!! def "정리 6.25 스펙트럼 정리(spectral theorem)"
+
+    유한차원 $\mathbf{F}$-내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 스펙트럼을 $\{\lambda _1, \lambda _2, \dots, \lambda _k\}$ 라 하고, $i \in \{1,\dots,k\}$ 에 대하여 고윳값 $\lambda _i$ 의 고유공간 $\mathbf{E}_{\lambda_i}$ 로의 정사영을 $\mathbf{T}_i$ 라 하자. $\mathbf{F}=\mathbb{C}$ 이면 $\mathbf{T}$ 가 정규연산자, $\mathbf{F}=\R$ 이면 $\mathbf{T}$ 가 자기수반연산자라고 가정하면 다음이 성립한다.
+
+    1. $\mathbf{V} = \displaystyle \bigoplus_{i=1}^{k}\mathbf{E}_{\lambda_i}$
+
+    2. $\displaystyle \bigoplus_{j \neq i}\mathbf{E}_{\lambda_j} = \mathbf{E}_{\lambda_i} ^{\perp}$
+
+    3. $i, j \in \{1, \dots, k\} : \mathbf{T}_i \mathbf{T}_j = \delta _{ij}\mathbf{T}_i$
+
+    4. $\mathbf{I} = \displaystyle \sum_{i=1}^{k}\mathbf{T}_i$ (resolution of the identity operator)
+
+    5. $\mathbf{T} = \displaystyle \sum_{i=1}^{k}\lambda _i \mathbf{T}_i$ (spectral decomposition)
+
+- **이 정리는 내적공간의 가장 중요한 결론들 중 하나이다.**
+
+- 4) 의 $\mathbf{I} = \mathbf{T}_1 + \dots + \mathbf{T}_k$ 를 **$\mathbf{T}$ 로 유도된 항등연산자 분해(resolution of the identity operator)** 라 한다. 
+
+    5) 의 $\mathbf{T} = \lambda _1 \mathbf{T}_1 + \dots + \lambda _k \mathbf{T}_k$ 를 **$\mathbf{T}$ 의 스펙트럼 분해(spectral decomposition)** 이라 한다. 고윳값 배열 순서를 무시하면 $\mathbf{T}$ 의 스펙트럼 분해는 유일한다.
+
+- **스펙트럼 정리는 유한차원 내적공간의 선형연산자가 대각화 가능이면 성립하는** 중요한 사실들을 말해준다. 스펙트럼이 가정하는 것은 단지 선형연산자가 복소내적공간이면 정규연산자이고, 실내적공간이면 에르미트 연산자라는 것이다. 이는 [정리 6.16](#a19f2f549) 와 [정리 6.17](#ffecd6249) 에 의하여 대각화 가능이라는 조건과 동치이다.
+
+    $\mathbf{T}$ 를 대각화 해보자. $\mathbf{E}_{\lambda_i}$ 의 정규직교기저의 합집합을 $\beta$, $\mathbf{E}_{\lambda_i}$ 의 차원을 $m_i$ 라 하면 다음이 성립한다. 참고로 $m_i$ 는 고윳값 $\lambda _i$ 의 중복도이다.
+
+    $$ [\mathbf{T}]_{\beta } = \begin{pmatrix} \lambda _1I_{m_1}&O&\dots&O\\ O&\lambda _2I_{m_2}&\dots&O\\ \vdots& \vdots& \ddots& \vdots \\ O&O&\dots&\lambda _kI_{m_k}\\ \end{pmatrix} $$
+
+    문제 6.6-7 은 임의의 다항식 $g$ 와 $\mathbf{T}$ 의 스펙트럼 분해 $\mathbf{T}= \displaystyle \sum_{i=1}^{k}\lambda _i \mathbf{T}_i$ 에 대하여 $g(\mathbf{T}) = \displaystyle \sum_{i=1}^{k}g(\lambda _i)\mathbf{T}_i$ 임을 말해준다. [다항식에 선형연산자가 입력된 형태의 정의](../Diagonalization/#3ccc8e1e0)를 참고하자.
+
+- 증명 
+
+    1:
+
+    [정리 6.16](#a19f2f549) 와 [정리 6.17](#ffecd6249) 에 의하여 $\mathbf{T}$ 는 대각화가능하다. 그러면 [정리 5.10](../Diagonalization/#fbcd60c9f) 에 의하여 $\mathbf{V}$ 는 $\mathbf{T}$ 의 고유공간의 직합이다. ▲ 
+
+    2:
+
+    $\displaystyle \bigoplus_{j \neq i}\mathbf{E}_{\lambda_j} = \mathbf{E}'_i$ 로 두자. $i \neq j$ 에 대하여 $x \in \mathbf{E}_{\lambda_i}, y \in \mathbf{E}_{\lambda_j}$ 라 하면 [정리 6.15-(4)](#ef3696575) 에 의하여 $\big <x,y \big >= 0$ 이다. 그러면 $y_j \in \mathbf{E}_{\lambda_j}$ 에 대한 $v = \displaystyle \sum_{i \neq j}^{}y_j \in \mathbf{E}'_i$ 에 대하여 다음이 성립한다.
+
+    $$ \big <v,x \big > = \bigg < \sum _{i \neq j}y_j, x \bigg > = \sum _{i \neq j}\big <y_j,x \big > = 0 $$
+
+    즉, $v \in \mathbf{E}_{\lambda_i} ^{\perp}$ 이다. 따라서 $\mathbf{E}'_i \subset \mathbf{E}^{\perp} _i$ 이다. ▲ 
+
+    1) 이 성립하므로 [문제 1.6-29-(b) 의 일반화](#a5b6e9f3a) 에 의하여 다음이 성립한다. 
+
+    $$ \dim (\mathbf{V}) = \sum_{i=1}^{k}\mathbf{E}_{\lambda_i} $$
+
+    $$ \iff \dim (\mathbf{E}'_i) = \sum _{j \neq i}\dim (\mathbf{E}_{\lambda_j}) = \dim (\mathbf{V}) - \dim (\mathbf{E}_{\lambda_i}) $$
+
+    [정리 6.7-(3)](#90ce38715) 에 의하여 $\dim (\mathbf{E}^{\perp}_i) + \dim (\mathbf{E}_{\lambda_i}) = \dim (\mathbf{V}) \iff \dim (\mathbf{E}^{\perp}_{i}) = \dim (\mathbf{V}) - \dim (\mathbf{E}_{\lambda_i})$ 이다. 따라서 $\dim (\mathbf{E}'_i) = \dim (\mathbf{E}^{\perp}_{i})$ 이다. 그러므로 $\mathbf{E}'_i = \mathbf{E}^{\perp}_i$ 이다. ▲ 
+
+    3:
+
+    $x_i \in \mathbf{E}_{\lambda_i}$  에 대하여 $x = \displaystyle \sum_{i=1}^{k}x_i$ 을 정사영 $\mathbf{T}_i$ 와 $\mathbf{T}_j$ 에 먹이면 다음과 같다. 
+
+    $$ \mathbf{T}_i(x) = x_i, \mathbf{T}_j(x) = x_j $$
+
+    따라서 다음이 성립한다. 
+
+    $$ (\mathbf{T}_i \circ \mathbf{T}_j)(x) = \mathbf{T}_i(\mathbf{T}_j(x)) = \mathbf{T}_i(x_j) = \begin{cases} x_i & i = j\\ 0 & i \neq j\\ \end{cases} = \delta _{ij}\mathbf{T}_i \tag*{▲} $$
+
+    4:
+
+    1) 에 의하여 $x \in \mathbf{V}, x_i \in \mathbf{E}_{\lambda_i} : x = \displaystyle \sum_{i=1}^{k}x_i$ 이므로 다음이 성립한다. 
+
+    $$ \sum_{i=1}^{k}\mathbf{T}_i(x) = \sum_{i=1}^{k}x_i = x \tag*{▲} $$
+
+    5:
+
+    $x \in \mathbf{V}, x_i \in \mathbf{E}_{\lambda_i} : x = \displaystyle \sum_{i=1}^{k}x_i$ 에 대하여 [함수의 합과 스칼라 곱](../LinearTransformation/#63a07e35d) 에 의하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split} \mathbf{T}(x)&= \sum_{i=1}^{k}\mathbf{T}(x_i) = \sum_{i=1}^{k}\lambda _ix_i = \sum_{i=1}^{k}\lambda _i \mathbf{T}_i(x) \\ &= \lambda _1 \mathbf{T}_1(x) + \dots + \lambda k \mathbf{T}_k(x) \\ &= (\lambda _1 \mathbf{T}_1 + \dots + \lambda_k \mathbf{T}_k)(x) = \bigg (\sum_{i=1}^{k}\lambda _i \mathbf{T}_i \bigg )(x) \end{split}\end{equation} \tag*{} $$
+
+    ■ 
+
+!!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 1"
+
+    유한차원 복소내적공간의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다.
+    
+    - $\mathbf{T}$ 가 정규연산자이다. 
+    
+    - 적절한 다항식 $g$ 에 대하여 $\mathbf{T}{}^{*} = g(\mathbf{T})$ 이다.
+
+- 증명
+
+    $\mathbf{T}$ 가 복소내적공간에서 정규연산자이면 대각화 가능이고, 스펙트럼 정리가 유효하다. $\mathbf{T}$ 의 스펙트럼 분해를 $\mathbf{T} = \displaystyle \sum_{i=1}^{k}\lambda _k \mathbf{T}_k$ 로 두자. 이 식의 양변에 수반연산자를 취하면 정리 6.24 는 정사영이 에르미트 연산자라는 것을 말해주므로 $\mathbf{T}{}^{*}= \displaystyle \sum_{i=1}^{k}\overline{\lambda _k}\mathbf{T}_k$ 이다.
+
+!!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 2"
+
+    유한차원 실내적공간의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다.
+    
+    - $\mathbf{T}$ 가 유니타리이다.
+    
+    - $\mathbf{T}$ 가 정규연산자이고 $\mathbf{T}$ 의 모든 고윳값 $\lambda$ 에 대하여 $|\lambda | = 1$ 이다.
+
+- 증명
+
+!!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 3"
+
+    유한차원 복소내적공간의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다.
+    
+    - $\mathbf{T}$ 가 자기수반연산자이다.
+    
+    - $\mathbf{T}$ 가 정규연산자이고 $\mathbf{T}$ 의 모든 고윳값이 실수이다.
+
+- 증명
+
+!!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 4"
+
+    유한차원 내적공간의 선형연산자 $\mathbf{T}$ 의 스펙트럼 분해가 $\mathbf{T} = \displaystyle \sum_{i=1}^{k}\lambda _k \mathbf{T}_k$ 이면 $\mathbf{T}_j$ 는 $\mathbf{T}$ 에 대한 다항식이다.
+
+- 증명
 
 ---
 

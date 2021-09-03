@@ -1,3 +1,3 @@
 python config.py -c
-mkdocs build
+mkdocs build --dirty
 python config.py -d
