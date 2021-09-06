@@ -1484,7 +1484,7 @@
 
     벡터공간 $\mathbf{V} , \mathbf{W}$ 사이에 가역인 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 이다.
 
-- 동형사상이 정의된 두 대수구조는 본질적으로 서로 같다.
+- 동형사상이 정의된 두 대수구조는 본질적으로 서로 같다. 구체적으로 말하자면 서로 동형인 대상은 완전히 같은 구조와 성질을 가진다. 따라서 구조적으로만 따졌을 때 동형인 두 대상을 구분하기란 불가능하다.
 
 - 일반적으로 동형사상은 전단사인 준동형사상으로 설명된다. 본 정의에서는 전단사라는 조건이 가역으로, 준동형사상이라는 조건이 선형변환으로 설명된 것뿐이다.
 
@@ -1500,13 +1500,13 @@
 
 - 증명
 
-    $\mathbf{F}$-벡터공간을 원소로 가지는 집합족 $\mathcal{V}$ 의 임의의 두 원소 $\mathbf{V}, \mathbf{W}$ 가 동형이라는 것을 관계 $\mathbf{V} \sim \mathbf{W}$ 로 표기하자. $\sim$ 이 동치관계임을 보여야 한다. 
+    $\mathbf{F}$-벡터공간을 원소로 가지는 집합족 $\mathcal{V}$ 의 임의의 두 원소 $\mathbf{V}, \mathbf{W}$ 가 동형이라는 것을 관계 $\mathbf{V} \cong  \mathbf{W}$ 로 표기하자. $\cong $ 이 [동치관계](../Set/Set/#61b0328b9)임을 보여야 한다. 
 
-    $\mathbf{I} _{\mathbf{V} }(x) = x$ 은 $\mathbf{V} \to \mathbf{V}$ 에서 정의된 가역인 선형변환이다. 그러므로 $\mathbf{V} \sim \mathbf{V}$ 이다. ▲ 
+    $\mathbf{I} _{\mathbf{V} }(x) = x$ 은 $\mathbf{V} \to \mathbf{V}$ 에서 정의된 가역인 선형변환이다. 그러므로 $\mathbf{V} \cong  \mathbf{V}$ 이다. ▲ 
 
-    $\mathbf{V} , \mathbf{W} \in \mathcal{V}$ 에 대하여 $\mathbf{V} \to \mathbf{W}$ 에 가역인 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 가 정의되었다고 하자. 그러면 선형역변환 $\mathbf{T} ^{-1} : \mathbf{W} \to \mathbf{V}$ 이 존재한다. $\mathbf{T} ^{-1}$ 는 $\mathbf{W} \to \mathbf{V}$ 에서 정의된 가역인 선형변환이다. 그러므로 $\mathbf{V} \sim \mathbf{W} \implies \mathbf{W} \sim \mathbf{V}$ 이다. ▲ 
+    $\mathbf{V} , \mathbf{W} \in \mathcal{V}$ 에 대하여 가역인 선형변환 $\mathbf{T}: \mathbf{V} \to \mathbf{W}$ 가 정의되었다고 하자. 그러면 가역인 선형역변환 $\mathbf{T} ^{-1} : \mathbf{W} \to \mathbf{V}$ 이 존재한다. 그러므로 $\mathbf{V} \cong  \mathbf{W} \implies \mathbf{W} \cong  \mathbf{V}$ 이다. ▲ 
 
-    (transitivity 는 전단사 합성함수의 성질로 쉽게 증명할 수 있을 듯.)
+    $\mathbf{V},\mathbf{W},\mathbf{Z}\in \mathcal{V}$ 에 대하여 가역인 선형변환 $\mathbf{T}:\mathbf{V}\to \mathbf{W}$ 와 $\mathbf{U}:\mathbf{W}\to \mathbf{Z}$ 가 정의되었다고 하자. 두 변환의 합성 $\mathbf{U}\mathbf{T}: \mathbf{V}\to \mathbf{Z}$ 은 [선형이고](#6ffb392af), [전단사이다](#de2683c1b). 따라서 $\mathbf{V}\cong \mathbf{Z}$ 이다. ■ 
 
 !!! def "정리 2.19"
 
@@ -2283,4 +2283,4 @@
 
 ref:
 
-:    Stephen H. Friedberg, Linear Algebra, 4th Edition
+:    Stephen H. Friedberg, Linear Algebra, 5th Edition

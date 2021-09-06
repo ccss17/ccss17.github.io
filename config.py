@@ -11,8 +11,8 @@ def hash(w):
     return hashlib.md5(w.encode('utf-8')).hexdigest()[:9]
 
 
-def create_def_link():
-    for path in glob.glob('site/**/*.html', recursive=True):
+def create_def_link(path):
+    for path in glob.glob(path + '/**/*.html', recursive=True):
         with open(path, encoding='utf-8') as f:
             html = f.read()
 
@@ -41,21 +41,19 @@ def create_tree_from_dict(tree, data, parent=None):
         create_tree_from_dict(tree, child_data, child)
 
 
-def create_category():
-    with open('mkdocs.yml', encoding='utf-8') as f:
+def create_category(yml_path, index_path, root_name):
+    with open(yml_path, encoding='utf-8') as f:
         index = f.read()
 
     nav = yaml.load(index)['nav']
     del nav[0]
-    nav = {'root': nav}
+    nav = {root_name: nav}
 
     tree = Tree()
     root = next(iter(nav))
     tree.create_node(root, root)
     create_tree_from_dict(tree, nav, root)
-    print(tree)
 
-    index_path = 'docs/index.md'
     if os.path.isfile(index_path):
         os.remove(index_path)
     tree.save2file(index_path, key=lambda x: x.bpointer,
@@ -66,7 +64,10 @@ def create_category():
 
     index = index.replace(' ', '&nbsp;') \
                  .replace('<a&nbsp;', '<a ') \
-                 .replace('\n', '</p><p>\n')
+                 .replace('\n', '</p><p>\n') \
+                 .replace('/README', '')
+    print(index)
+
     index = '<div class="index"><p>' + index + '</p></div>'
 
     with open(index_path, 'w', encoding='utf-8') as f:
@@ -76,8 +77,8 @@ def create_category():
 if __name__ == '__main__':
     import sys
     if sys.argv[1] == '-d':
-        create_def_link()
+        create_def_link('site')
     elif sys.argv[1] == '-c':
-        create_category()
+        create_category('mkdocs.yml', 'docs/index.md', 'root')
     else:
         print('Invalid argument')

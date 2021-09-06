@@ -25,9 +25,11 @@ nav:
       - Infinite Set: Math/Set/InfiniteSet.md
       - ZFC axiom system: Math/Set/ZFC.md
     - Arithmetic Operations: Math/ArithmeticOperations.md
+    - Polynomials: Math/Polynomials.md
     - Hyperreal Numbers: Math/HyperrealNumbers.md
     - Surreal Numbers: Math/SurrealNumbers.md
     - Linear Algebra: 
+      # - README: Math/LinearAlgebra/README.md
       - Vector Space: Math/LinearAlgebra/VectorSpace.md
       - Linear Transformation: Math/LinearAlgebra/LinearTransformation.md
       - Matrix Operation: Math/LinearAlgebra/MatrixOperation.md
@@ -106,7 +108,7 @@ nav:
   - Computer:
     # - base: Computer/base.md
     - Nand to Tetris: Computer/nand2tetris.md
-    - Information Theory: Computer/information.md
+    # - Information Theory: Computer/information.md
     - Why the future doesn't need us: Computer/future.md
     - Rust Memo: Computer/Rust.md
   - ProgrammerBase: 
@@ -192,20 +194,14 @@ theme:
   name: material
   custom_dir: overrides
   palette:
-    # primary: white
-    # scheme: default
     - scheme: default
       primary: white
       toggle:
-        # icon: material/eye-outline
-        # icon: material/weather-sunny
         icon: material/lightbulb-outline
         name: Switch to dark mode
     - scheme: slate
       primary: deep purple
       toggle:
-        # icon: material/eye
-        # icon: material/weather-night
         icon: material/lightbulb
         name: Switch to light mode
   font:
@@ -213,38 +209,31 @@ theme:
   language: en
   logo: assets/images/bolt-solid.svg
   favicon: assets/images/bolt-solid.svg
-  # logo: assets/images/snowflake-regular.svg
-  # favicon: assets/images/snowflake-regular.svg
-  # logo: assets/images/umbrella-beach-solid.svg
-  # favicon: assets/images/umbrella-beach-solid.svg
 
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js
+  - javascripts/highlight.min.js
   - javascripts/config.js
-  - https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.js
-  - https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/contrib/auto-render.min.js
-  - https://kit.fontawesome.com/b27b3e6448.js
+  # - https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js
+  - javascripts/katex.min.js
+  # - https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js
+  - javascripts/auto-render.min.js
+  # - https://kit.fontawesome.com/b27b3e6448.js
+  - javascripts/b27b3e6448.js
 
 extra_css:
-  - https://cdn.jsdelivr.net/npm/katex@0.13.0/dist/katex.min.css
+  - https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css
   # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github-gist.min.css
   - stylesheets/config.css
 
 extra:
   generator: false
-  # disqus: https-ccss17-github-io
-  # social:
-  #   - icon: fontawesome/brands/github
-  #     link: https://github.com/ccss17
 
 markdown_extensions:
   - toc:
       permalink: "&para;"
       baselevel: 2
       toc_depth: 2-4
-  # - pymdownx.emoji:
-      # emoji_index: !!python/name:materialx.emoji.twemoji
-      # emoji_generator: !!python/name:materialx.emoji.to_svg
   - admonition
   - pymdownx.details
   - pymdownx.superfences

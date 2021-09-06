@@ -1909,4 +1909,4 @@
 
 ref:
 
-:   [집합과 수의 체계](http://www.math.snu.ac.kr/~kye/book/set-number.html)
+:   집합과 수의 체계

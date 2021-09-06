@@ -214,36 +214,6 @@
 
     $$ (f+g)(s) = f(s)+g(s), \qquad (cf)(s) = c[f(s)] $$
 
-- 예시 
-
-    다음과 같은 체 $\mathbf{F}$ 에서 계수를 가져온 두 다항식 $f, g$ 에 대하여
-
-    $$ f(x) = a_n x ^{n} + a _{n-1}x ^{n-1} + \dots + a_1x + a_0 $$
-
-    $$ g(x) = b_m x ^{m} + a _{m-1}x ^{m-1} + \dots + b_1x + b_0 $$
-
-    $m \leq n$ 일 때 $b _{m+1} = b _{m+2} = \dots = b_n= 0$ 으로 두면 $g(x)$ 는 다음과 같다.
-
-    $$ g(x) = b_n x ^{n} + a _{n-1}x ^{n-1} + \dots + b_1x + b_0 $$
-
-    이때 두 다항식의 합과 스칼라곱을 다음과 같이 정의하면 $\mathbf{F}$ 에서 계수를 가져온 모든 다항식 집합은 벡터공간이다. 
-
-    $$ f(x) + g(x) = (a_n+b_n) x ^{n} + (a _{n-1}+b _{n-1})x ^{n-1} + \dots+(a_1+b_1)x+(a_0+b_0) $$
-
-    $$ cf(x) = ca_n x ^{n} + ca _{n-1}x ^{n-1} + \dots + ca_1x + ca_0 $$
-
-    이 벡터공간을 $\mathbf{P}(\mathbf{F})$ 라고 표기한다. 
-
-- 위 예시에서 보인 벡터공간 $\mathbf{P}(\mathbf{F})$ 와 다음 예제에서 보이는 벡터공간은 본질적으로 같다. 
-
-- 예시 
-
-    임의의 체 $\mathbf{F}$ 위에서 정의된 수열(sequence)은 $\N \to \mathbf{F}$ 인 함수이다. 보통 수열 $\sigma (n) = a_n$ 을 $(a_n)$ 으로 표기한다. 체 $\mathbf{F}$ 에서 정의된 모든 수열의 집합을 $\mathbf{V}$ 라고 하자. 두 수열 $(a_n),(b_n)$ 을 다음과 같이 합과 스칼라곱으로 정의하면,
-
-    $$ (a_n)+(b_n)=(a_n+b_n), \qquad t(a_n) = (ta_n) $$
-
-    $\mathbf{V}$ 는 벡터공간이다.
-
 - 벡터공간과 체의 차이점
 
     내가 볼 때 벡터공간과 체는 거의 비슷한 대수구조인데, 왜 이렇게 구분하는지 궁금해서 [math stackexchange](https://math.stackexchange.com/questions/969720/what-is-the-main-difference-between-a-vector-space-and-a-field) 에서 찾아보았다. 
@@ -1460,7 +1430,7 @@
 
 !!! def ""
 
-    무한체 $\mathbf{F}$ 의 스칼라 $c_0, c_1, \dots, c_n$ 에 대한 라그랑주 다항식 $f_0, f_1, \dots, f_n$ 의 집합은 $\mathbf{P}_{n}(\mathbf{F})$ 의 기저이다.
+    무한체 $\mathbf{F}$ 의 스칼라 $c_0, c_1, \dots, c_n$ 에 대한 라그랑주 다항식 집합 $\{f_0, f_1, \dots, f_n\}$ 은 $\mathbf{P}_{n}(\mathbf{F})$ 의 기저이다.
     
 - 증명
 
@@ -1474,7 +1444,7 @@
     
 !!! def "라그랑주 보간법(Lagrange interpolation formula)"
 
-    무한체 $\mathbf{F}$ 의 스칼라 $c_0, c_1, \dots, c_n$ 에 대한 라그랑주 다항식 $f_0, f_1, \dots, f_n$ 으로 임의의 다항식 $g \in \mathbf{P}_{n}(\mathbf{F})$ 을 다음과 같이 표현한 식을 라그랑주 보간법이라 한다.
+    무한체 $\mathbf{F}$ 의 스칼라 $c_0, c_1, \dots, c_n$ 에 대한 라그랑주 다항식 $f_0, f_1, \dots, f_n$ 으로 임의의 다항식 $g \in \mathbf{P}_{n}(\mathbf{F})$ 를 다음과 같이 표현한 식을 라그랑주 보간법이라 한다.
 
     $$ g = \sum_{i=0}^{n}g(c_i)f_i $$
 
@@ -1492,7 +1462,7 @@
 
     이 표현식을 사용하면 일차결합의 스칼라 $b_i$ 를 구하지 않아도된다. 이 식을 라그랑주 보간법이라 한다.
 
-- 지금까지의 논의는 스칼라 $b_0, b_1, \dots, b_n$ 가 주어지면 다항식 $\displaystyle g = \sum_{i=0}^{n}b_if_i \in \mathbf{P}_{n}(\mathbf{F})$ 가 $g(c_j) = b_j$ 인 유일한 다항식임을 말해준다. 즉, 입력이 $c_j$ 일 때 출력이 $b_j$ 인 $n$차 다항식이 유일하게 존재한다.
+    이러한 논의는 **임의의 스칼라 $b_0, b_1, \dots, b_n$ 와 $c_0, c_1, \dots, c_n$ 가 주어지면 다항식 $\displaystyle g = \sum_{i=0}^{n}b_if_i \in \mathbf{P}_{n}(\mathbf{F})$ 가 $g(c_j) = b_j$ 인 유일한 다항식임을 말해준다. 즉, 입력이 $c_j$ 일 때 출력이 $b_j$ 인 $n$차 다항식이 유일하게 존재하고, 그것을 라그랑주 보간법으로 쉽게 찾을 수 있다.** 라그랑주 보간법은 이 형태로 많이 사용된다. 즉, **체 $\mathbf{F}$ 에서 가져온 입력 스칼라 집합과 출력 스칼라 집합이 주어졌을 때 그것을 입력과 출력으로 가지는 유일한 다항식을 찾을 수 있다** 는 것이다. 아래의 예시를 참고하자.
 
     애초에 보간법 또는 내삽법이란 이미 알고 있는 값으로 그 사잇값을 추정하는 방법이다. 라그랑주 보간법도 사이사이가 비워져있는 이산적인 데이터를 연속적인 데이터로 보내는 사상이다. 
 
@@ -1732,4 +1702,4 @@
 
 ref:
 
-:    Stephen H. Friedberg, Linear Algebra, 4th Edition
+:    Stephen H. Friedberg, Linear Algebra, 5th Edition

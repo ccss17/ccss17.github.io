@@ -885,4 +885,4 @@
 
 ref:
 
-:    Stephen H. Friedberg, Linear Algebra, 4th Edition
+:    Stephen H. Friedberg, Linear Algebra, 5th Edition

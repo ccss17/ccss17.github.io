@@ -1646,16 +1646,6 @@
 
     $\lambda _1 \neq \lambda_2$ 이므로 $\big <x_1,x_2 \big >= 0$ 이다. ■ 
 
-!!! def "대수학의 기본 정리(fundamental theorem of algebra)"
-
-    $\mathbf{P}(\mathbb{C})$ 의 다항식 $p(z) = a_nz ^{n} + \dots + a_1z + a_0$ 의 차수가 $n \geq 1$ 이면 $p(z)$ 는 해가 있다.
-
-- 17세기부터 수학자들이 옳으리라고 추측했던 유명한 정리이다. 대수학의 기본 정리이지만 순수하게 대수적인 증명은 누구도 해내지 못했고, 훗날 위상수학과 해석학을 도입하여 증명을 할 수 있었다. 그래서 복소해석학에 의한 증명과 위상수학에 의한 증명이 존재한다.
-
-- **대수학의 기본정리는 복소내적공간의 선형연산자의 특성다항식이 반드시 완전히 인수분해됨을 말해준다.**
-
-- 증명
-
 ## Diagonalizable Orthonormal Basis in Complex Inner Product Space
 
 !!! def "정리 6.16"
@@ -2379,6 +2369,8 @@
 
 - $\mathbf{T}$ 를 단순히 $\mathbf{W}_1$ 으로의 ($\mathbf{V}$ 의) 사영이라고도 한다.
 
+- **[문제 2.3-17](#0547069b9) 에 의하여 일반적으로 사영을 $\mathbf{T}=\mathbf{T}^{2}$ 를 만족하는 선형연산자 $\mathbf{T}$ 로 정의한다.** 이러한 정의가 본 정의보다 더 자주, 그리고 널리 쓰이는 듯 하네.
+
 !!! def "문제 2.1-27"
 
     벡터공간 $\mathbf{V}$ 와 $\mathbf{V} = \mathbf{W}_1 \oplus \mathbf{W}_2$ 인 부분공간 $\mathbf{W}_1, \mathbf{W}_2$ 와 $\mathbf{W}_2$ 에 대한 $\mathbf{W}_1$ 위로의 $\mathbf{V}$ 의 사영 $\mathbf{T}:\mathbf{V}\to \mathbf{V}$ 에 대하여 다음이 성립한다. 
@@ -2737,6 +2729,8 @@
 
     유한차원 내적공간의 선형연산자의 서로 다른 고윳값 집합이다.
 
+- 함수해석학에서 유계 선형연산자(또는 더 일반적으로 무계 선형연산자)의 스펙트럼은 그 고윳값 집합을 일반화한 개념이다.
+
 !!! def "정리 6.25 스펙트럼 정리(spectral theorem)"
 
     유한차원 $\mathbf{F}$-내적공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 스펙트럼을 $\{\lambda _1, \lambda _2, \dots, \lambda _k\}$ 라 하고, $i \in \{1,\dots,k\}$ 에 대하여 고윳값 $\lambda _i$ 의 고유공간 $\mathbf{E}_{\lambda_i}$ 로의 정사영을 $\mathbf{T}_i$ 라 하자. $\mathbf{F}=\mathbb{C}$ 이면 $\mathbf{T}$ 가 정규연산자, $\mathbf{F}=\R$ 이면 $\mathbf{T}$ 가 자기수반연산자라고 가정하면 다음이 성립한다.
@@ -2757,7 +2751,7 @@
 
     5) 의 $\mathbf{T} = \lambda _1 \mathbf{T}_1 + \dots + \lambda _k \mathbf{T}_k$ 를 **$\mathbf{T}$ 의 스펙트럼 분해(spectral decomposition)** 이라 한다. 고윳값 배열 순서를 무시하면 $\mathbf{T}$ 의 스펙트럼 분해는 유일한다.
 
-- **스펙트럼 정리는 유한차원 내적공간의 선형연산자가 대각화 가능이면 성립하는** 중요한 사실들을 말해준다. 스펙트럼이 가정하는 것은 단지 선형연산자가 복소내적공간이면 정규연산자이고, 실내적공간이면 에르미트 연산자라는 것이다. 이는 [정리 6.16](#a19f2f549) 와 [정리 6.17](#ffecd6249) 에 의하여 대각화 가능이라는 조건과 동치이다.
+- **스펙트럼 정리는 유한차원 내적공간의 선형연산자가 대각화 가능이면 성립하는** 중요한 사실들을 말해준다. 스펙트럼 정리가 가정하는 것은 단지 선형연산자가 복소내적공간이면 정규연산자이고, 실내적공간이면 에르미트 연산자라는 것이다. 이는 [정리 6.16](#a19f2f549) 와 [정리 6.17](#ffecd6249) 에 의하여 대각화 가능이라는 조건과 동치이다.
 
     $\mathbf{T}$ 를 대각화 해보자. $\mathbf{E}_{\lambda_i}$ 의 정규직교기저의 합집합을 $\beta$, $\mathbf{E}_{\lambda_i}$ 의 차원을 $m_i$ 라 하면 다음이 성립한다. 참고로 $m_i$ 는 고윳값 $\lambda _i$ 의 중복도이다.
 
@@ -2811,6 +2805,23 @@
 
     ■ 
 
+!!! def "문제 6.6-7"
+
+    유한차원 복소내적공간 $\mathbf{V}$ 와 정규연산자 $\mathbf{T}$ 와 $\mathbf{T}$ 의 스펙트럼 분해 $\mathbf{T} = \displaystyle \sum_{i=1}^{k}\lambda _i \mathbf{T}_i$ 에 대하여 다음이 성립한다. 
+
+    1. 다항식 $g$ 에 대하여 $g(\mathbf{T}) = \displaystyle \sum_{i=1}^{k}g(\lambda _i)\mathbf{T}_i$ 이다.
+
+- 증명
+
+    1:
+
+    $$ \begin{equation}\begin{split}
+    g(\mathbf{T})&= g \bigg (\sum_{i=1}^{k}\lambda _i \mathbf{T}_i \bigg ) = \sum_{i=1}^{k}g(\lambda _i \mathbf{T}_i) \\
+    &= \\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+
 !!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 1"
 
     유한차원 복소내적공간의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다.
@@ -2853,4 +2864,4 @@
 
 ref:
 
-:   Stephen H. Friedberg, Linear Algebra, 4th Edition
+:   Stephen H. Friedberg, Linear Algebra, 5th Edition

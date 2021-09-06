@@ -12,9 +12,11 @@
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Set/InfiniteSet>Infinite&nbsp;Set</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Math/Set/ZFC>ZFC&nbsp;axiom&nbsp;system</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/ArithmeticOperations>Arithmetic&nbsp;Operations</a></p><p>
+│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/Polynomials>Polynomials</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/HyperrealNumbers>Hyperreal&nbsp;Numbers</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/SurrealNumbers>Surreal&nbsp;Numbers</a></p><p>
 │&nbsp;&nbsp;&nbsp;╰──&nbsp;Linear&nbsp;Algebra</p><p>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra>README</a></p><p>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/VectorSpace>Vector&nbsp;Space</a></p><p>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/LinearTransformation>Linear&nbsp;Transformation</a></p><p>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/MatrixOperation>Matrix&nbsp;Operation</a></p><p>
@@ -29,11 +31,10 @@
 │&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=paper/blueborne>BlueBorne</a></p><p>
 ├──&nbsp;Computer</p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/nand2tetris>Nand&nbsp;to&nbsp;Tetris</a></p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/information>Information&nbsp;Theory</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Computer/future>Why&nbsp;the&nbsp;future&nbsp;doesn't&nbsp;need&nbsp;us</a></p><p>
 │&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=Computer/Rust>Rust&nbsp;Memo</a></p><p>
 ├──&nbsp;ProgrammerBase</p><p>
-│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=ProgrammerBase/README>README</a></p><p>
+│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=ProgrammerBase>README</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;Contents</p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=ProgrammerBase/01-Day1/readme>Day&nbsp;1</a></p><p>
 │&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=ProgrammerBase/02-Day2/readme>Day&nbsp;2</a></p><p>
@@ -51,15 +52,15 @@
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=ProgrammerBase/vim>Vim</a></p><p>
 │&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=ProgrammerBase/cli>CLI</a></p><p>
 ╰──&nbsp;security&nbsp;tutorial</p><p>
-&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/README>README</a></p><p>
-&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/01-Base/README>Day1&nbsp;Base</a></p><p>
-&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/02-Computer1/README>Day2&nbsp;Computer&nbsp;Principle&nbsp;1</a></p><p>
-&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/03-Computer2/README>Day3&nbsp;Computer&nbsp;Principle&nbsp;2</a></p><p>
-&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/04-Reversing1/README>Day4&nbsp;Reversing&nbsp;1</a></p><p>
-&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/05-Reversing2/README>Day5&nbsp;Reversing&nbsp;2</a></p><p>
-&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/06-Exploit1/README>Day6&nbsp;Exploit&nbsp;1</a></p><p>
-&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/07-Exploit2/README>Day7&nbsp;Exploit&nbsp;2</a></p><p>
-&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/08-Exploit3/README>Day8&nbsp;Exploit&nbsp;3</a></p><p>
-&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/09-Exploit4/README>Day9&nbsp;Exploit&nbsp;4</a></p><p>
-&nbsp;&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=security-tutorial/10-Pentesting/README>Day10&nbsp;Pentesting</a></p><p>
+&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial>README</a></p><p>
+&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/01-Base>Day1&nbsp;Base</a></p><p>
+&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/02-Computer1>Day2&nbsp;Computer&nbsp;Principle&nbsp;1</a></p><p>
+&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/03-Computer2>Day3&nbsp;Computer&nbsp;Principle&nbsp;2</a></p><p>
+&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/04-Reversing1>Day4&nbsp;Reversing&nbsp;1</a></p><p>
+&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/05-Reversing2>Day5&nbsp;Reversing&nbsp;2</a></p><p>
+&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/06-Exploit1>Day6&nbsp;Exploit&nbsp;1</a></p><p>
+&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/07-Exploit2>Day7&nbsp;Exploit&nbsp;2</a></p><p>
+&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/08-Exploit3>Day8&nbsp;Exploit&nbsp;3</a></p><p>
+&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=security-tutorial/09-Exploit4>Day9&nbsp;Exploit&nbsp;4</a></p><p>
+&nbsp;&nbsp;&nbsp;&nbsp;╰──&nbsp;<a href=security-tutorial/10-Pentesting>Day10&nbsp;Pentesting</a></p><p>
 </p></div>
