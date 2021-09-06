@@ -2757,7 +2757,7 @@
 
     $$ [\mathbf{T}]_{\beta } = \begin{pmatrix} \lambda _1I_{m_1}&O&\dots&O\\ O&\lambda _2I_{m_2}&\dots&O\\ \vdots& \vdots& \ddots& \vdots \\ O&O&\dots&\lambda _kI_{m_k}\\ \end{pmatrix} $$
 
-    문제 6.6-7 은 임의의 다항식 $g$ 와 $\mathbf{T}$ 의 스펙트럼 분해 $\mathbf{T}= \displaystyle \sum_{i=1}^{k}\lambda _i \mathbf{T}_i$ 에 대하여 $g(\mathbf{T}) = \displaystyle \sum_{i=1}^{k}g(\lambda _i)\mathbf{T}_i$ 임을 말해준다. [다항식에 선형연산자가 입력된 형태의 정의](../Diagonalization/#3ccc8e1e0)를 참고하자.
+    문제 6.6-7 은 임의의 다항식 $g$ 와 $\mathbf{T}$ 의 스펙트럼 분해 $\mathbf{T}= \displaystyle \sum_{i=1}^{k}\lambda _i \mathbf{T}_i$ 에 대하여 $g(\mathbf{T}) = \displaystyle \sum_{i=1}^{k}g(\lambda _i)\mathbf{T}_i$ 임을 말해준다. [다항식에 선형연산자가 입력된 형태의 정의](../../Polynomials/#2ccc8e1e0)를 참고하자.
 
 - 증명 
 
@@ -2815,12 +2815,7 @@
 
     1:
 
-    $$ \begin{equation}\begin{split}
-    g(\mathbf{T})&= g \bigg (\sum_{i=1}^{k}\lambda _i \mathbf{T}_i \bigg ) = \sum_{i=1}^{k}g(\lambda _i \mathbf{T}_i) \\
-    &= \\
-    \end{split}\end{equation} \tag*{}
-    $$
-
+    $$ g(\mathbf{T})= g \bigg (\sum_{i=1}^{k}\lambda _i \mathbf{T}_i \bigg ) = \sum_{i=1}^{k}g(\lambda _i \mathbf{T}_i) = \sum_{i=1}^{k}g(\lambda _i)\mathbf{T}_i \tag*{■} $$
 
 !!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 1"
 

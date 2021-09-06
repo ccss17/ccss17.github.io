@@ -806,6 +806,8 @@
 
     5. $\forall a \in \mathbf{F} : a(\mathbf{U} _1 \mathbf{U} _2) = (a \mathbf{U} _1)\mathbf{U} _2 = \mathbf{U} _1(a \mathbf{U} _2)$
 
+- 1), 2) 는 선형변환이 분배법칙을 만족한다는 것을, 3) 은 선형변환이 결합법칙을 만족한다는 것을 말해준다.
+
 - 증명
 
     1:

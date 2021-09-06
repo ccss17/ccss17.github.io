@@ -988,33 +988,11 @@
 
 ## Cayley-Hamilton theorem
 
-!!! def ""
-
-    체 $\mathbf{F}$ 의 원소를 계수로 하는 다음과 같은 다항식 $f(x)$ 가 존재한다.
-
-    $$ f(x) = a_0 + a_1x + \dots + a_nx ^{n} $$
-
-    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $f(\mathbf{T})$ 를 다음과 같이 정의한다.
-
-    $$ f(\mathbf{T}) = a_0 \mathbf{I} + a_1 \mathbf{T} + \dots + a_n \mathbf{T}^{n} $$
-
-    행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 $f(A)$ 를 다음과 같이 정의한다.
-
-    $$ f(A) = a_0I_n + a_1A + \dots + a_nA ^{n} $$
-
-- 예시
-
-    $\R ^{2}$ 의 선형연산자 $\mathbf{T}(a, b) = (2a+b,a-b)$  와 $f(x) = x ^{2}+2x-3$ 를 가정하자. $\mathbf{T}^{2}(a,b) = (5a+b,a+2b)$ 이다. 다음이 성립한다.
-
-    $$ \begin{equation}\begin{split} f(\mathbf{T})(a, b)&= (\mathbf{T}^{2}+2 \mathbf{T}-3 \mathbf{I})(a, b)\\ &= (5,a+b,a+2b)+(4a+2b,2a-2b)-3(a,b)\\ &= (6a+3b,3a-3b) \end{split}\end{equation} \tag*{} $$
-
-    행렬 $A = \begin{pmatrix} 2&1\\ 1&-1\\ \end{pmatrix}$ 에 대하여 다음이 성립한다. 
-
-    $$ f(A)=A ^{2}+2A-3I_2=\begin{pmatrix} 5&1\\ 1&2\\ \end{pmatrix}+2 \begin{pmatrix} 2&1\\ 1&-1\\ \end{pmatrix}-3 \begin{pmatrix} 1&0\\ 0&1\\ \end{pmatrix}= \begin{pmatrix} 6&3\\ 3&-3\\ \end{pmatrix} $$
-
 !!! def "정리 5.22 케일리-해밀턴 정리(Cayley-Hamilton theorem)"
 
     유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{T}$ 의 특성다항식 $f(t)$ 에 대하여 $f(\mathbf{T}) = \mathbf{T}_0$ 이다.
+
+- [다항식에 선형연산자가 입력된 형태의 정의](../../Polynomials/#2ccc8e1e0)를 참고하자.
 
 - 이 정리는 정리 5.21 의 중요성을 보여준다. 왜냐하면 이 정리가 널리 사용되기 때문이다.
 

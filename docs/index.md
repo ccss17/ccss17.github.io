@@ -16,7 +16,6 @@
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/HyperrealNumbers>Hyperreal&nbsp;Numbers</a></p><p>
 │&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/SurrealNumbers>Surreal&nbsp;Numbers</a></p><p>
 │&nbsp;&nbsp;&nbsp;╰──&nbsp;Linear&nbsp;Algebra</p><p>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra>README</a></p><p>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/VectorSpace>Vector&nbsp;Space</a></p><p>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/LinearTransformation>Linear&nbsp;Transformation</a></p><p>
 │&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├──&nbsp;<a href=Math/LinearAlgebra/MatrixOperation>Matrix&nbsp;Operation</a></p><p>
