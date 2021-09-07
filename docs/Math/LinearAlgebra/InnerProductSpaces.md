@@ -2815,7 +2815,27 @@
 
     1:
 
-    $$ g(\mathbf{T})= g \bigg (\sum_{i=1}^{k}\lambda _i \mathbf{T}_i \bigg ) = \sum_{i=1}^{k}g(\lambda _i \mathbf{T}_i) = \sum_{i=1}^{k}g(\lambda _i)\mathbf{T}_i \tag*{■} $$
+    $\lambda _1, \dots, \lambda _k$ 에 대한 라그랑주 다항식 $f_1, \dots, f_k$ 에 대하여 라그랑주 보간법에 의하여 다음이 성립한다. 
+
+    $$ g(\mathbf{T}) = \sum_{i=1}^{k}g( \lambda  _i)f_i(\mathbf{T}) $$
+
+    다음이 성립하면 증명이 끝난다. 
+
+    $$ f_i(\mathbf{T}) = \prod_{\substack{j=1\\j \neq i}}^{k}\dfrac{\mathbf{T} - \lambda _j \mathbf{I}}{\lambda _i - \lambda _j} = \mathbf{T}_i $$
+
+    $k = 2$ 이면 다음이 성립한다. 
+
+    $$ \mathbf{T} = \lambda _1 \mathbf{T}_1 + \lambda _2 \mathbf{T}_2 $$
+
+    $$ \mathbf{I} = \mathbf{T}_1 + \mathbf{T}_2 $$
+
+    $$ g(\mathbf{T}) = g(\lambda 1)f_1(\mathbf{T}) + g(\lambda _2)f_2(\mathbf{T}) $$
+
+    $$ f_1(\mathbf{T}) = \dfrac{\mathbf{T} - \lambda _2 \mathbf{I}}{\lambda _1 - \lambda _2} = \dfrac{\lambda _1 \mathbf{T}_1 + \lambda _2 \mathbf{T}_2 - \lambda _2( \mathbf{T}_1 + \mathbf{T}_2 )}{\lambda _1 - \lambda_2} = \dfrac{\lambda _1 \mathbf{T}_1 - \lambda _2 \mathbf{T}_1}{\lambda _1 - \lambda _2} = \mathbf{T}_1 $$
+
+    $$ f_2(\mathbf{T}) = \dfrac{\mathbf{T} - \lambda _1 \mathbf{I}}{\lambda _2 - \lambda _1} = \dfrac{\lambda _1 \mathbf{T}_1 + \lambda _2 \mathbf{T}_2 - \lambda _1( \mathbf{T}_1 + \mathbf{T}_2 )}{\lambda _2 - \lambda_1} = \dfrac{\lambda _2 \mathbf{T}_2 - \lambda _1 \mathbf{T}_2}{\lambda _2 - \lambda _1} = \mathbf{T}_2 $$
+
+    $k - 1$ 에서 정리가 성립함을 가정하고 $k$ 에 대하여 성립함을 보이자.
 
 !!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 1"
 
@@ -2824,7 +2844,7 @@
     - $\mathbf{T}$ 가 정규연산자이다. 
     
     - 적절한 다항식 $g$ 에 대하여 $\mathbf{T}{}^{*} = g(\mathbf{T})$ 이다.
-
+ 
 - 증명
 
     $\mathbf{T}$ 가 복소내적공간에서 정규연산자이면 대각화 가능이고, 스펙트럼 정리가 유효하다. $\mathbf{T}$ 의 스펙트럼 분해를 $\mathbf{T} = \displaystyle \sum_{i=1}^{k}\lambda _k \mathbf{T}_k$ 로 두자. 이 식의 양변에 수반연산자를 취하면 정리 6.24 는 정사영이 에르미트 연산자라는 것을 말해주므로 $\mathbf{T}{}^{*}= \displaystyle \sum_{i=1}^{k}\overline{\lambda _k}\mathbf{T}_k$ 이다.

@@ -226,7 +226,7 @@
 
     $\R ^{2}$ 의 선형연산자 $\mathbf{T}(a, b) = (2a+b,a-b)$  와 $f(x) = x ^{2}+2x-3$ 를 가정하자. $\mathbf{T}^{2}(a,b) = (5a+b,a+2b)$ 이다. 다음이 성립한다.
 
-    $$ \begin{equation}\begin{split} f(\mathbf{T})(a, b)&= (\mathbf{T}^{2}+2 \mathbf{T}-3 \mathbf{I})(a, b)\\ &= (5,a+b,a+2b)+(4a+2b,2a-2b)-3(a,b)\\ &= (6a+3b,3a-3b) \end{split}\end{equation} \tag*{} $$
+    $$ \begin{equation}\begin{split} f(\mathbf{T})(a, b)&= (\mathbf{T}^{2}+2 \mathbf{T}-3 \mathbf{I})(a, b)\\ &= (5a+b,a+2b)+(4a+2b,2a-2b)-3(a,b)\\ &= (6a+3b,3a-3b) \end{split}\end{equation} \tag*{} $$
 
     행렬 $A = \begin{pmatrix} 2&1\\ 1&-1\\ \end{pmatrix}$ 에 대하여 다음이 성립한다. 
 
