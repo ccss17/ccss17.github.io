@@ -2757,8 +2757,6 @@
 
     $$ [\mathbf{T}]_{\beta } = \begin{pmatrix} \lambda _1I_{m_1}&O&\dots&O\\ O&\lambda _2I_{m_2}&\dots&O\\ \vdots& \vdots& \ddots& \vdots \\ O&O&\dots&\lambda _kI_{m_k}\\ \end{pmatrix} $$
 
-    문제 6.6-7 은 임의의 다항식 $g$ 와 $\mathbf{T}$ 의 스펙트럼 분해 $\mathbf{T}= \displaystyle \sum_{i=1}^{k}\lambda _i \mathbf{T}_i$ 에 대하여 $g(\mathbf{T}) = \displaystyle \sum_{i=1}^{k}g(\lambda _i)\mathbf{T}_i$ 임을 말해준다. [다항식에 선형연산자가 입력된 형태의 정의](../../Polynomials/#2ccc8e1e0)를 참고하자.
-
 - 증명 
 
     1:
@@ -2811,31 +2809,25 @@
 
     1. 다항식 $g$ 에 대하여 $g(\mathbf{T}) = \displaystyle \sum_{i=1}^{k}g(\lambda _i)\mathbf{T}_i$ 이다.
 
+- [다항식에 선형연산자가 입력된 형태의 정의](../../Polynomials/#2ccc8e1e0)를 참고하자.
+
 - 증명
 
     1:
 
-    $\lambda _1, \dots, \lambda _k$ 에 대한 라그랑주 다항식 $f_1, \dots, f_k$ 에 대하여 라그랑주 보간법에 의하여 다음이 성립한다. 
+    $\lambda _1, \dots, \lambda _k$ 에 대한 [라그랑주 다항식](../VectorSpace/#001836915) $f_1, \dots, f_k$ 에 대하여 [라그랑주 보간법](../VectorSpace/#ee8bc7a9e)에 의하여 다음이 성립한다. 
 
     $$ g(\mathbf{T}) = \sum_{i=1}^{k}g( \lambda  _i)f_i(\mathbf{T}) $$
 
-    다음이 성립하면 증명이 끝난다. 
+    스펙트럼 정리와 $\mathbf{T}$ 의 스펙트럼 분해와 $\mathbf{T}$ 로 유도된 $\mathbf{I}$ 의 분해와 적당한 상수 $c_i \in \mathbf{F}$ 에 대하여 다음이 성립한다.
 
-    $$ f_i(\mathbf{T}) = \prod_{\substack{j=1\\j \neq i}}^{k}\dfrac{\mathbf{T} - \lambda _j \mathbf{I}}{\lambda _i - \lambda _j} = \mathbf{T}_i $$
+    $$ \begin{equation}\begin{split}
+    f_i(\mathbf{T})  &= \prod_{\substack{j=1\\j \neq i}}^{k}\dfrac{\mathbf{T} - \lambda _j \mathbf{I}}{\lambda _i - \lambda _j} = \prod_{\substack{j=1\\j \neq i}}^{k} \dfrac{\sum_{s=1}^{k}\lambda _s \mathbf{T}_s - \lambda _j\sum_{s=1}^{k}\mathbf{T}_s }{\lambda _i - \lambda _j} \\
+    &= \prod_{\substack{j=1\\j \neq i}}^{k} \dfrac{\sum_{s=1}^{k}(\lambda _s - \lambda _j) \mathbf{T}_s  }{\lambda _i - \lambda _j} = \prod_{\substack{j=1\\j \neq i}}^{k} \dfrac{\sum_{s \neq j}^{}(\lambda _s - \lambda _j) \mathbf{T}_s  }{\lambda _i - \lambda _j} \\
+    &= \prod_{\substack{j=1\\j \neq i}}^{k} \overbrace{(c_1 \mathbf{T}_1 + \dots + \mathbf{T}_i + \dots + c_k \mathbf{T}_k)}^{\text{ no }\mathbf{T}_j} = \mathbf{T}_{i}^{k-1} = \mathbf{T}_i\\
+    \end{split}\end{equation} \tag*{}$$
 
-    $k = 2$ 이면 다음이 성립한다. 
-
-    $$ \mathbf{T} = \lambda _1 \mathbf{T}_1 + \lambda _2 \mathbf{T}_2 $$
-
-    $$ \mathbf{I} = \mathbf{T}_1 + \mathbf{T}_2 $$
-
-    $$ g(\mathbf{T}) = g(\lambda 1)f_1(\mathbf{T}) + g(\lambda _2)f_2(\mathbf{T}) $$
-
-    $$ f_1(\mathbf{T}) = \dfrac{\mathbf{T} - \lambda _2 \mathbf{I}}{\lambda _1 - \lambda _2} = \dfrac{\lambda _1 \mathbf{T}_1 + \lambda _2 \mathbf{T}_2 - \lambda _2( \mathbf{T}_1 + \mathbf{T}_2 )}{\lambda _1 - \lambda_2} = \dfrac{\lambda _1 \mathbf{T}_1 - \lambda _2 \mathbf{T}_1}{\lambda _1 - \lambda _2} = \mathbf{T}_1 $$
-
-    $$ f_2(\mathbf{T}) = \dfrac{\mathbf{T} - \lambda _1 \mathbf{I}}{\lambda _2 - \lambda _1} = \dfrac{\lambda _1 \mathbf{T}_1 + \lambda _2 \mathbf{T}_2 - \lambda _1( \mathbf{T}_1 + \mathbf{T}_2 )}{\lambda _2 - \lambda_1} = \dfrac{\lambda _2 \mathbf{T}_2 - \lambda _1 \mathbf{T}_2}{\lambda _2 - \lambda _1} = \mathbf{T}_2 $$
-
-    $k - 1$ 에서 정리가 성립함을 가정하고 $k$ 에 대하여 성립함을 보이자.
+    마지막 줄에서 연산 결과가 $\mathbf{T}_i ^{k-1}$ 가 되는 $\mathbf{T}_i$ 를 제외한 정사영 $\mathbf{T}_1, \dots, \mathbf{T}_{i-1}, \mathbf{T}_{i+1}, \dots, \mathbf{T}_k$ 들은 반드시 다른 정사영과 곱해지기 때문에 스펙트럼 정리에 의하여 $0$ 이 되기 때문이다. ▲ 
 
 !!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 1"
 
