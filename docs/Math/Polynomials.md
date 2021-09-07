@@ -18,7 +18,7 @@
 
     $$ f(x) = a_nx ^{n} + a _{n-1} x ^{n-1} + \dots + a_1x + a_0 $$
 
-    $$ f(x) = b_mx ^{m} + b _{m-1} x ^{m-1} + \dots + b_1x + b_0 $$
+    $$ g(x) = b_mx ^{m} + b _{m-1} x ^{m-1} + \dots + b_1x + b_0 $$
 
 !!! def ""
 
@@ -28,7 +28,7 @@
 
     $$ f(c) = a_nc ^{n} + a _{n-1} c ^{n-1} + \dots + a_1c + a_0 $$
 
-- 599쪽
+- $\mathbf{F}$ 가 무한집합일 때 $\mathbf{F}$ 에서 계수를 가져온 다항식을 $\mathbf{F}$ 에서 $\mathbf{F}$ 로 가는 함수로 볼 수 있다. 아래에서 정리 10 을 보자.
 
 ## Vector Space $\mathbf{P}_{}(\mathbf{F})$
 
@@ -134,7 +134,7 @@
 
 !!! def "서로소(relatively prime)"
 
-    다항식 $f_1(x), f_2(x), \dots, f_n(x)$ 를 동시에 나누는 다항식이 존재하지 않으면 $f_1(x), f_2(x), \dots, f_n(x)$ 를 서로소라 한다.
+    다항식 $f_1(x), f_2(x), \dots, f_n(x)$ 를 동시에 나누는 다항식이 오직 상수 다항식이면 $f_1(x), f_2(x), \dots, f_n(x)$ 를 서로소라 한다.
 
 - 예시 
 
@@ -304,6 +304,212 @@
 
     [행렬곱의 성질](../LinearAlgebra/LinearTransformation/#e08d1e569) 에 의하여 1) 의 증명과 비슷하게 쉽게 증명 가능하다. ■ 
 
+!!! def "정리 5"
+
+    $\mathbf{F}$-벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 행렬 $A \in \mathbf{M}_{n \times n}(\mathbf{F})$ 와 서로소인 두 다항식 $f_1(x), f_2(x) \in \mathbf{P}_{}(\mathbf{F})$ 에 대하여 다음을 만족하는 다항식 $q_1(x), q_2(x) \in \mathbf{P}_{}(\mathbf{F})$ 가 존재한다.
+
+    1. $q_1(\mathbf{T})f_1(\mathbf{T})+q_2(\mathbf{T})f_2(\mathbf{T}) = \mathbf{I}$
+
+    2. $q_1(A)f_1(A) + q_2(A)f_2(A) = I$
+
+- 증명
+
+    보조정리에 의하여 서로소인 다항식 $f_1, f_2$ 에 대하여 $q_1(x)f_1(x) + q_2(x)f_2(x) = 1$ 를 만족하는 다항식 $q_1, q_2$ 가 존재한다. 따라서 $q_1(\mathbf{T})f_1(\mathbf{T})+q_2(\mathbf{T})f_2(\mathbf{T}) = \mathbf{I}$ 가 성립하고, $q_1(A)f_1(A) + q_2(A)f_2(A) = I$ 가 성립한다. ■ 
+
+# monic, irreducible
+
+!!! def "모닉(monic)"
+
+    다항식 $f(x) \in \mathbf{F}$ 의 최고차항의 계수가 $1$ 이면 모닉이라 한다.
+
+!!! def "기약(irreducible)"
+
+    다항식 $f(x)$ 가 $\deg (f) \geq 1$ 이고 다음을 만족하면 $f(x)$ 를 기약이라 한다.
+
+    $$ f(x) = q(x)r(x) \implies \deg (q) = 0 \lor \deg (r) = 0 $$
+
+- 즉, 상수가 아닌 다항식 $f(x) \in \mathbf{P}_{}(\mathbf{F})$ 가 상수가 아닌 다항식으로 인수분해되지 않으면 $f(x)$ 를 기약이라 한다.
+
+- 차수가 $1$ 인 다항식도 기약이다. 대수적으로 닫힌 체의 원소로 구성된 다항식은 차수가 $1$ 인 다항식만 기약다항식이다. 대수학의 기본정리에 의하여 복소수체에서는 차수가 $1$ 인 다항식만 기약다항식이다.
+
+- 다항식은 그것이 속한 체에 따라 기약인지, 기약이 아닌지가 결정된다.
+
+- 예시
+
+    다항식 $f(x) = x ^{2} + 1$ 은 $\mathbf{P}_{}(\R )$ 위에서 기약이다. 하지만 $\mathbf{P}_{}(\mathbb{C})$ 위에서는 $x ^{2} + 1 = (x + i)(x - i)$ 이 되어 기약이 아니다.
+
+    다항식 $f(x) = x ^{2} - 2$ 는 $\mathbf{P}_{}(\mathbb{Z})$ 위에서 기약이다. 하지만 $f(x) = (x-\sqrt[]{2})(x+\sqrt[]{2})$ 이므로 $\mathbf{P}_{}(\R )$ 위에서 기약이 아니다.
+
+!!! def "정리 6"
+
+    다항식 $\phi (x)$ 와 $f(x)$ 에 대하여 $\phi (x)$ 가 기약이고 $\phi (x)$ 가 $f(x)$ 를 나누지 않으면 $\phi (x)$ 와 $f(x)$ 는 서로소이다.
+
+- 증명
+
+    정리의 가정이 모두 충족되었는데도 두 다항식이 서로소가 아니면 다음을 만족하는 다항식 $g$ 가 존재하고 $\deg (g) \geq 1$ 를 만족한다.
+
+    $$ \phi (x) = g(x)q_1(x) $$
+
+    $$ f(x) = g(x)q_2(x) $$
+
+    $\phi$ 는 기약이므로  $\deg (g) = 0 \lor \deg (q_1) = 0$ 이다. 따라서 $\deg (q_1) = 0$ 이다.  그러면 $c \in \mathbf{F} : q_1(x) = c \implies \phi (x) = c \cdot g(x)$ 이므로 $\phi$ 가 $f$ 를 나누게 되어 모순이다. ■ 
+
+!!! def "정리 7"
+
+    서로 다른 기약 모닉 다항식은 서로소이다.
+
+- 증명
+
+    서로 다른 기약 모닉 다항식 $f, g$ 가 서로소가 아니라고 해보자. 그러면 다음을 만족하는 다항식 $h$ 가 존재하고 $\deg (h) \geq 1$ 를 만족한다.
+
+    $$ f (x) = h(x)q_1(x) $$
+
+    $$ g(x) = h(x)q_2(x) $$
+
+    $f, g$ 가 기약이므로 $\deg (q_1) = 0, \deg (q_2) = 0$ 이다. $f, g$ 가 모닉이므로 $q_1(x) = 1, q_2(x) = 1$ 이다. 따라서 $f(x) = h(x) = g(x)$ 이고, 이는 모순이다. ■ 
+
+!!! def "정리 8"
+
+    다항식 $f(x), g(x), h(x)$ 에 대하여 $h(x)$ 가 기약이고 $h(x)$ 가 $f(x)g(x)$ 를 나누면 $h(x)$ 는 $f(x)$ 를 나누거나 $g(x)$ 를 나눈다.
+
+- 증명
+
+    $\phi$ 가 $f$ 를 나누지 않으면 정리 6 에 의하여 이 둘은 서로소이다. 그러면 보조정리에 의하여 $1 = q_1(x)\phi (x) + q_2(x)f(x)$ 인 다항식 $q_1, q_2$ 가 존재한다. 이 식에 $g(x)$ 를 곱하면 다음을 얻는다. 
+
+    $$ g(x) = q_1(x)\phi (x)g(x) + q_2(x)f(x)g(x) $$
+
+    $\phi(x)$ 는 $f(x)g(x)$ 를 나누므로 $g(x)$ 도 나눈다. ▲ 
+
+    $\phi$ 가 $g$ 를 나누지 않는다고 가정하면 똑같은 논리로 $f$ 를 나누는 것을 보일 수 있다. ■ 
+
+!!! def "정리 8 따름정리"
+
+    기약 모닉 다항식 $\phi (x), \phi _1(x), \dots, \phi _n(x)$ 에 대하여 $\phi (x)$ 가 $\phi_1(x)\phi _2(x)\dots \phi _n(x)$ 를 나누면 $\exists i \in \{1, \dots, n\} : \phi (x) = \phi _i(x)$ 이다.
+
+- 증명
+
+    $n = 1$ 이면 정리 7 에 의하여 성립한다. ▲ 
+
+    $n > 1$ 일 때 $n - 1$ 개의 기약 모닉 다항식에 대하여 정리가 성립함을 가정하자. 정리에 따라 $\phi (x)$ 가 다음 식을 나눈다고 가정하자. 
+
+    $$ \phi _1(x)\dots \phi _{n}(x) = \{\phi _1(x)\dots \phi _{n-1}(x)\}\phi _n(x) $$
+
+    정리 8 에 의하여 $\phi (x)$ 는 $\phi _1(x)\dots \phi _{n-1}(x)$ 를 나누거나 $\phi _n(x)$ 를 나눈다. 전자의 경우 귀납법의 가정에 의하여 $\exists i \in \{1,\dots,n-1\} : \phi (x) = \phi _i(x)$ 이고, 후자의 경우 $\phi (x) = \phi _n(x)$ 이다. ■ 
+
+## Uniqueness of Polynomial Factorization
+
+!!! def "정리 9 다항식 인수분해의 유일성(Unique Factorization Theorem for Polynomials)"
+
+    다항식 $f(x)$ 가 $\deg (f) \geq 1$ 이면 다음을 만족하는 상수 $c$, 서로 다른 기약 모닉 다항식 $\phi _1(x), \phi _2(x), \dots, \phi _k(x)$, 자연수 $n_1, n_2, \dots, n_k$ 가 유일하게 존재한다.
+
+    $$ f(x) = c \prod_{i=1}^{k}\{\phi _i(x)\}^{n_i} = c \{\phi _1(x)\}^{n_1}\{\phi _2(x)\}^{n_2}\dots\{\phi _k(x)\}^{n_k} $$
+
+- **지금까지의 정리들의 결론이 이 정리이다.** 이 정리에 선형대수학의 [특성다항식 이론](../LinearAlgebra/Diagonalization/#characteristic-polynomial-finding-eigenvalue)과 표준형 이론이 많이 의존한다.
+
+- 증명
+
+    인수분해의 존재성:
+
+    $f(x) \in \mathbf{P}_{}(\mathbf{F})$ 의 차수에 대한 수학적 귀납법을 사용하자.
+
+    $n = 1$ 일 때 $\deg (f)=1$ 이면 $f(x) = ax + b$ 를 만족하는 $a \neq 0, b \in \mathbf{F}$ 가 존재한다. $\phi (x) = x + \dfrac{b}{a}$ 로 두면 $f(x)=a \phi (x)$ 이다. ▲ 
+
+    $n > 1$ 일 때 $\deg (f) < n$ 인 다항식 $f$ 에 대하여 인수분해의 존재성을 가정하고 $\deg (f) = n$ 로 두자. 그러면 $f(x) = a_nx ^{n} + \dots + a_1x+a_0$ 을 만족하는 $a_n \neq 0, a _{n-1}, \dots, a_0 \in \mathbf{F}$ 가 존재한다. $f$ 가 기약이면 다음이 성립하므로 인수분해가 존재한다. 
+
+    $$ f(x) = a_n \bigg (x ^{n} + \sum_{i=n-1}^{0}\dfrac{a _{i}}{a_n}x ^{i} \bigg ) \tag*{▲} $$
+
+    $f(x)$ 가 기약이 아니면 $f(x) = g(x)h(x)$ 인 다항식 $g, h$ 가 존재한다. $\deg (g) < n, \deg (h)<n$ 이므로 귀납법의 가정에 의하여 $g, h$ 의 인수분해가 존재한다. 즉, $g, h$ 는 상수와 기약 모닉 다항식의 곱으로 표현된다. 따라서 $f$ 의 인수분해가 존재한다. ▲ 
+
+    인수분해의 유일성:
+
+    다음을 만족하는 상수 $c, d$, 기약 모닉 다항식 $\phi _i(x), \psi _j(x)$, 자연수 $n_i, m_j$ 의 존재를 가정하자. $i \in \{1, \dots, k\}, j \in \{1, \dots, r\}$ 이다.
+
+    $$ \begin{equation}\begin{split}
+    f(x)&= c \{\phi _1(x)\}^{n_1}\{\phi _2(x)\}^{n_2}\dots \{\phi _k(x)\}^{n_k} \\
+    &= d \{\psi _1(x)\}^{m_1}\{\psi _2(x)\}^{m_2}\dots \{\psi _r(x)\}^{m_r} \\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    $c, d$ 는 $f(x)$ 의 최고차항의 계수이므로 $c = d$ 이다. ▲ 
+
+    위 식을 $c$ 로 나누면 다음을 얻는다.
+
+    $$ \{\phi _1(x)\}^{n_1}\{\phi _2(x)\}^{n_2}\dots \{\phi _k(x)\}^{n_k} = \{\psi _1(x)\}^{m_1}\{\psi _2(x)\}^{m_2}\dots \{\psi _r(x)\}^{m_r} \tag{1} $$
+
+    정리 8 따름정리에 의하여 $\forall i \in \{1, \dots, k\}, \exists j \in \{1, \dots, r\} : \phi _i(x) = \psi _j(x)$ 이다. $\phi _i, \psi _j$ 들은 모두 서로 다르므로 $r = k$ 이다. 또한 $\forall i \in \{1, \dots,k\} : \phi _i = \psi_i$ 로 두어도 상관없다. 상수의 유일성, 기약 모닉 다항식의 유일성을 보였으니 거듭제곱을 하는 자연수의 유일성만 마저 보이면 된다. ▲ 
+
+    $\exists i \in \{1,\dots,k\} : n_i \neq m_i$ 를 가정하자. $i = 1, n_1 > m_1$ 이라고 가정해도 일반성이 보존된다. $(1)$ 을 $\{\phi _1(x)\}^{m_1}$ 으로 나누면 다음이 성립한다.
+
+    $$ \{\phi _1(x)\}^{n_1 - m_1}\{\phi _2(x)\}^{n_2}\dots \{\phi _k(x)\}^{n_k} = \{\phi _1(x)\}^{m_2}\dots \{\phi _r(x)\}^{m_r} $$
+
+    따라서 $\phi _1(x)$ 는 좌변도 나누고 우변도 나눈다. 그러면 정리 8 따름정리에 의하여 $\exists i \in \{1, \dots,k\} : \phi _1(x) = \phi _i(x)$ 이다. 이는 모순이다. 따라서 $\forall i \in \{1, \dots, k\} : n_i = m_i$ 이다. ■ 
+
+# Polynomial Function
+
+!!! def "일변수 다항함수(polynomial function of one variable)"
+
+    체 $\mathbf{F}$ 와 $a_0, a_1, \dots, a_n \in \mathbf{F}$ 에 대한 일변수 다항함수 $f:\mathbf{F}\to \mathbf{F}$ 는 다음과 같이 정의된다.
+
+    $$ f(x) = a_nx ^{n} + a _{n-1}x ^{n-1} + \dots + a_1x + a_0 $$
+
+- $\mathbf{P}_{}(\mathbf{F})$ 위의 다항식을 $\mathbf{F}\to \mathbf{F}$ 에서 정의된 함수로 보면 다항함수가 된다. 다항식을 다항함수로 볼 때 편한 상황들이 많이 있다. 
+
+!!! def "이변수 다항함수(polynomial function of two variables)"
+
+    변수 2개를 갖는 다항함수이다.
+
+- 예시
+
+    $$ f(x, y) = 2x ^{3} + 4x ^{2}y +xy ^{5} + y ^{2} -y $$
+
+!!! def "다변수 다항함수(polynomial functions of several variables, multivariate polynomial function)"
+
+    2개 이상의 변수를 갖는 다항함수이다.
+
+!!! def "정리 10"
+
+    무한체 $\mathbf{F}$ 와 $\mathbf{F}\to \mathbf{F}$ 위에서 정의된 모든 함수 집합 $\mathcal{F}(\mathbf{F}, \mathbf{F})$ 에 대하여 다항식을 다항함수로 보내는 대응 $\mathbf{P}_{}(\mathbf{F})\to \mathcal{F}(\mathbf{F},\mathbf{F})$ 은 단사이다.
+
+- 유한체 $\mathbf{F}$ 와 $\mathbf{F}\to \mathbf{F}$ 위에서 정의된 모든 함수 집합 $\mathcal{F}(\mathbf{F}, \mathbf{F})$ 에 대한 대응 $\mathbf{P}_{}(\mathbf{F})\to \mathcal{F}(\mathbf{F},\mathbf{F})$ 은 [단사](../Set/Set/#eadfd845f)가 아닐 수도 있다. 쉽게 말해서 서로 다른 다항식인데도 같은 다항함수가 될 수도 있다는 것이다. 
+
+    - 예시
+
+        유한체 $\mathbb{Z}_{2} = \{0, 1\}$ 를 다음과 같이 정의하자.
+
+        $$ 0 + 0 = 0, \qquad 0+1 = 1+0 = 1, \qquad 1+1 = 0, $$
+
+        $$ 0 \cdot 0 = 0, \qquad 0 \cdot 1 = 1 \cdot 0 = 0, \qquad 1 \cdot 1 = 1 $$
+
+        다항식 $f(x) = x ^{2}, g(x) = x \in \mathbf{P}_{}(\mathbb{Z}_{2})$ 을 다항함수 $f: \mathbb{Z}_{2} \to \mathbb{Z}_{2}, g: \mathbb{Z}_{2} \to \mathbb{Z}_{2}$ 로 만들자. 그러면 다음이 성립한다. 
+
+        $$ f(x) \neq  _{\mathbf{P}_{}(\mathbb{Z}_{2})} g(x) $$
+
+        $$ f(x) = _{\mathcal{F}(\mathbb{Z}_{2},\mathbb{Z}_{2})} g(x) $$
+
+        즉, $f, g$ 가 다항식으로써는 서로 다르지만 다항함수로써는 서로 같다는 것이다. [다항식의 상등](#b3486412c) 의 정의과 [함수의 상등의 정의](../Set/Set/#57b118c60) 를 참고하자.
+
+    그러나 **이 정리는 무한한 원소를 가진 무한체에서는 이러한 이상한 일이 일어나지 않는다는 것을 보장해준다.**
+
+- 증명
+
+    [단사](../Set/Set/#eadfd845f) 의 정의에 의하여 다음이 성립함을 보여야 한다.
+
+    $$ f, g \in \mathcal{F}(\mathbf{F},\mathbf{F}) : f = _{\mathcal{F}(\mathbf{F},\mathbf{F})} g \implies f = _{\mathbf{P}_{}(\mathbf{F})} g $$
+
+    [함수의 상등의 정의](../Set/Set/#57b118c60) 에 의하여 이는 다음을 보이는 것과 같다.
+
+    $$ \forall a \in \mathbf{F} : f(a) = g(a) \implies f =_{\mathbf{P}_{}(\mathbf{F})} g $$
+
+    $f \neq  _{\mathbf{P}_{}(\mathbf{F})} g$ 라고 하고 모순을 이끌어내면 증명이 끝난다. 다항식 $h(x) = f(x) - g(x)$ 을 정의하면 $\deg (h) = -1 \implies f = _{\mathbf{P}_{}(\mathbf{F})} g$ 이므로 $\deg (h) \geq 0$ 이어야 한다.
+
+    $\deg (h) = 0$ 이라 하면 $f, g$ 가 상수항에서 서로 다르다. 따라서 $\forall a \in \mathbf{F}: f(a) = g(a)$ 에 모순이다. [체의 임의의 원소에 $0$ 을 곱하면 $0$ 이 되므로](../LinearAlgebra/VectorSpace/#a822715aa) $f(0) \neq g(0)$ 이기 때문이다. ▲ 
+
+    $\deg (h) \geq 1$ 이라 하자. [정리 1 따름정리 2](#bb1063b23) 에 의하여 $h$ 는 최대 $\deg (h)$ 개의 해를 갖는다. 그런데 $\forall a \in \mathbf{F}:h(a) = 0$ 이므로 $h$ 의 해는 무한히 많다. 따라서 모순이다. ▲ 
+
+    그러니까 반드시 $\deg (h) = -1$ 이어야 하고 이로써 $f \neq _{\mathbf{P}_{}(\mathbf{F})}g$ 라는 가정이 틀렸다는 것을 알 수 있다. ■ 
+
+    <!-- - $\mathbf{F}$ 가 유한체면 $\forall a \in \mathbf{F} :h(a) = 0$ 에서 $h$ 가 무한히 많은 해를 갖는다는 결론이 나오지 않는다. -->
+
 # Fundamental Theorem of Algebra
 
 !!! def "대수학의 기본 정리(fundamental theorem of algebra)"
@@ -340,3 +546,5 @@
 ref:
 
 :   Stephen H. Friedberg, Linear Algebra, 5th Edition
+
+:   https://ko.wikipedia.org/wiki/%EC%84%9C%EB%A1%9C%EC%86%8C_%EC%95%84%EC%9D%B4%EB%94%94%EC%96%BC
