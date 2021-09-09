@@ -3085,6 +3085,8 @@
 
 - 증명 -->
 
+## Spectral Theorem's Corollary
+
 !!! def ""
 
     $n$차원 벡터공간의 선형연산자 $\mathbf{T}$ 가 서로 다른 $n$개의 고윳값을 가지면 $\mathbf{T}$ 와 가환인 선형연산자는 $\mathbf{T}$ 에 대한 다항식이다.
@@ -3095,7 +3097,7 @@
 
 - 증명 (https://math.stackexchange.com/questions/422356/an-operator-that-commutes-with-another-operator-t-with-distinct-characteristic)
 
-    $\mathbf{T}$ 와 $\mathbf{U}$ 가 가환이면 동시에 대각화가능하다. 동시에 대각화하는 기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 에 대하여 $\mathbf{T} = \text{diag} (\lambda _1, \dots, \lambda _n), \mathbf{U} = \text{diag} (\mu _1, \dots, \mu _n)$ 으로 두자. 스칼라 $\lambda _1, \dots, \lambda _n$ 에 대한 라그랑주 다항식 $f$ 에 대한 라그랑주 보간법에 의하여 다음과 같은 $n$차 다항식 $g$ 가 존재한다.
+    [$\mathbf{T}$ 와 $\mathbf{U}$ 가 가환이면 동시에 대각화가능](#9140ee9cd)하다. 동시에 대각화하는 기저 $\beta = \{v_1, v_2, \dots, v_n\}$ 에 대하여 $\mathbf{T} = \text{diag} (\lambda _1, \dots, \lambda _n), \mathbf{U} = \text{diag} (\mu _1, \dots, \mu _n)$ 으로 두자. 스칼라 $\lambda _1, \dots, \lambda _n$ 에 대한 [라그랑주 다항식](../../Polynomials/#001836915) $f$ 에 대한 [라그랑주 보간법](../../Polynomials/#ee8bc7a9e)에 의하여 다음과 같은 $n$차 다항식 $g$ 가 존재한다.
 
     $$ f_j(x) = \prod_{i \neq j}^{}\dfrac{x - \lambda _i}{\lambda _j - \lambda _i} $$
 
@@ -3105,16 +3107,13 @@
 
     $$ \begin{equation}\begin{split}
     f_j(\mathbf{T})(v_k) &= \bigg ( \prod_{i \neq j}^{}\dfrac{\mathbf{T} - \lambda _i \mathbf{I}}{\lambda _j - \lambda _i} \bigg )(v_k) = \bigg ( \prod_{\substack{i=1 \\ i \neq j}}^{n-1}\dfrac{\mathbf{T} - \lambda _i \mathbf{I}}{\lambda _j - \lambda _i}\bigg )\bigg ( \dfrac{\mathbf{T} - \lambda _n \mathbf{I}}{\lambda _j - \lambda _n}\bigg )(v_k)  \\
-    & = \bigg ( \prod_{\substack{i=1 \\ i \neq j}}^{n-1}\dfrac{\mathbf{T} - \lambda _i \mathbf{I}}{\lambda _j - \lambda _i}\bigg )\bigg ( \dfrac{(\lambda _k - \lambda _n)v_k}{\lambda _j - \lambda _n}\bigg ) = \bigg (\prod_{i \neq j}^{}\frac{\lambda _k - \lambda _i}{\lambda _j - \lambda _i} \bigg )v_k \\
+    & = \bigg ( \prod_{\substack{i=1 \\ i \neq j}}^{n-1}\dfrac{\mathbf{T} - \lambda _i \mathbf{I}}{\lambda _j - \lambda _i}\bigg )\bigg ( \dfrac{(\lambda _k - \lambda _n)v_k}{\lambda _j - \lambda _n}\bigg ) = \bigg ( \dfrac{\lambda _k - \lambda _n}{\lambda _j - \lambda _n}\bigg )\bigg ( \prod_{\substack{i=1 \\ i \neq j}}^{n-1}\dfrac{\mathbf{T} - \lambda _i \mathbf{I}}{\lambda _j - \lambda _i}\bigg )(v_k) = \bigg (\prod_{i \neq j}^{}\frac{\lambda _k - \lambda _i}{\lambda _j - \lambda _i} \bigg )v_k \\
     &= \begin{cases} 0 &j \neq k\\ v_k & j = k\\ \end{cases}  =\delta _{jk}v_k \\
     \end{split}\end{equation} \tag*{} $$
 
-    $$ \begin{equation}\begin{split}
-    g(\mathbf{T})(v_k)  &= \sum_{j=1}^{n}\mu _jf_j(\mathbf{T})(v_k)\\
-    &= \sum_{j=1}^{n}\mu _j \delta _{jk}v_k = \mu _kv_k\\
-    \end{split}\end{equation} \tag*{} $$
-
-    따라서 $g(\mathbf{T}) = \text{diag} (\mu _1, \dots, \mu _n) = \mathbf{U}$ 이다. $\mathbf{T}$ 에 대한 다항식이 $\mathbf{T}$ 와 가환이라는 것을 보이는 것은 쉽다.
+    따라서 $\displaystyle g(\mathbf{T})(v_k) = \sum_{j=1}^{n}\mu _jf_j(\mathbf{T})(v_k) = \sum_{j=1}^{n}\mu _j \delta _{jk}v_k = \mu _kv_k$ 이다. 그러므로 $g(\mathbf{T}) = \text{diag} (\mu _1, \dots, \mu _n) = \mathbf{U}$ 이다. 즉, $\mathbf{T}$ 와 가환인 선형연산자 $\mathbf{U}$ 는 $\mathbf{T}$ 에 대한 다항식이다. ▲ 
+    
+    $\mathbf{T}$ 에 대한 다항식이 $\mathbf{T}$ 와 가환인 선형연산자임을 보이는 것은 쉽다. ■
 
 !!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 1"
 
@@ -3136,13 +3135,25 @@
 
 !!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 2"
 
-    유한차원 실내적공간의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다.
+    유한차원 복소내적공간의 선형연산자 $\mathbf{T}$ 에 대하여 다음은 동치이다.
     
     - $\mathbf{T}$ 가 유니타리이다.
     
     - $\mathbf{T}$ 가 정규연산자이고 $\mathbf{T}$ 의 모든 고윳값 $\lambda$ 에 대하여 $|\lambda | = 1$ 이다.
 
 - 증명
+
+    [정리 6.18](#aee06829a) 에 의하여 $\mathbf{T}$ 가 유니타리이면 정규연산자이다. [정리 6.18 따름정리 2](#dd9bff030) 에 의하여 $\mathbf{T}$ 의 모든 고윳값은 $1$ 이다. ▲ 
+
+    $\mathbf{T}$ 가 정규연산자임을 가정하면 스펙트럼 정리가 유효하다. $\mathbf{T}$ 의 스펙트럼 분해를 $\mathbf{T}= \displaystyle \sum_{i=1}^{k}\lambda _i \mathbf{T}_i$ 라 하자. [스펙트럼 정리](#3001117d3) 과 [정리 6.24](#dd9ff7bbd) 와 $|\lambda | = 1$ 인 것에 의하여 다음이 성립한다. 
+
+    $$ \begin{equation}\begin{split}
+    \mathbf{T}\mathbf{T}{}^{*}&=(\lambda _1 \mathbf{T}_1 + \dots + \lambda _k \mathbf{T}_k)(\overline{\lambda _1}\mathbf{T}_1 + \dots + \overline{\lambda _k}\mathbf{T}_k \\
+    &= |\lambda _1|^{2}\mathbf{T}_1 + \dots + |\lambda _k|^{2}\mathbf{T}_k = \sum_{i=1}^{k}\lambda _k = \mathbf{I}\\
+    \end{split}\end{equation} \tag*{}
+    $$
+
+    그러면 [정리 6.18](#aee06829a) 에 의하여 $\mathbf{T}$ 는 유니타리이다. ■ 
 
 !!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 3"
 
@@ -3154,11 +3165,25 @@
 
 - 증명
 
+    $\mathbf{T}$ 가 정규연산자이면 스펙트럼 정리가 유효하다. $\mathbf{T}$ 의 스펙트럼 분해를 $\displaystyle \mathbf{T}=\sum_{i=1}^{k}\lambda _i \mathbf{T}_i$ 라 하면 [정리 6.11](#a9f161221) 와 고윳값들이 실수인 것에 의하여 다음이 성립한다. 
+
+    $$ \mathbf{T}{}^{*} = \sum_{i=1}^{k}\overline{\lambda _i}\mathbf{T}_k = \sum_{i=1}^{k}\lambda _i \mathbf{T}_k = \mathbf{T} $$
+
+    즉, $\mathbf{T}$ 는 에르미트이다. ▲ 
+
+    $\mathbf{T}$ 가 에르미트이면 $\mathbf{T}$ 는 정규연산자이고 [정리 6.17 보조정리](#c05013d56) 에 의하여 모든 고윳값이 실수이다. ■ 
+
 !!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 4"
 
     유한차원 내적공간의 선형연산자 $\mathbf{T}$ 의 스펙트럼 분해가 $\mathbf{T} = \displaystyle \sum_{i=1}^{k}\lambda _k \mathbf{T}_k$ 이면 $\mathbf{T}_j$ 는 $\mathbf{T}$ 에 대한 다항식이다.
 
 - 증명
+
+    [라그랑주 보간법](../../Polynomials/#ee8bc7a9e)에 의하여 $i, j \in \{1, \dots, k\}$ 에 대하여 $g_j(\lambda _i) = \delta _{ij}$ 인 다항식 $g$ 를 찾을 수 있다. [문제 6.6-7-(1)](#ba4c8efe1) 에 의하여 다음이 성립한다. 
+
+    $$ g_j(\mathbf{T}) = \sum_{i=1}^{k}g_j(\lambda _i)\mathbf{T}_i = \sum_{i=1}^{k}\delta _{ij}\mathbf{T}_i = \mathbf{T}_j $$
+
+    ■ 
 
 ---
 
