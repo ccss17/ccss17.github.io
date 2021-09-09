@@ -556,9 +556,11 @@
 
 - 즉, $i \neq j$ 에 대하여 $M _{ij} = 0$ 인 $n \times n$ 행렬 $M$ 이다.
 
+- **대각행렬의 대각성분 $a_1, a_2, \dots, a_n$ 에 대하여 대각행렬을 간단하게 $\text{diag} (a_1, a_2, \dots, a_n)$ 로 나타내기도 한다.**
+
 - 예시 
 
-    $$  \begin{pmatrix} 1 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 3 \\ \end{pmatrix} $$
+    $$  \begin{pmatrix} 1 & 0 & 0 \\ 0 & 5 & 0 \\ 0 & 0 & 3 \\ \end{pmatrix} = \text{diag} (1,5,3) $$
 
 - 예시 
 
