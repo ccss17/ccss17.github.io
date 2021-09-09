@@ -2815,19 +2815,247 @@
 
     1:
 
-    $\lambda _1, \dots, \lambda _k$ 에 대한 [라그랑주 다항식](../VectorSpace/#001836915) $f_1, \dots, f_k$ 에 대하여 [라그랑주 보간법](../VectorSpace/#ee8bc7a9e)에 의하여 다음이 성립한다. 
+    $\lambda _1, \dots, \lambda _k$ 에 대한 [라그랑주 다항식](../../Polynomials/#001836915) $f_1, \dots, f_k$ 에 대하여 [라그랑주 보간법](../../Polynomials/#ee8bc7a9e)에 의하여 다음이 성립한다. 
 
     $$ g(\mathbf{T}) = \sum_{i=1}^{k}g( \lambda  _i)f_i(\mathbf{T}) $$
 
     스펙트럼 정리와 $\mathbf{T}$ 의 스펙트럼 분해와 $\mathbf{T}$ 로 유도된 $\mathbf{I}$ 의 분해와 적당한 상수 $c_i \in \mathbf{F}$ 에 대하여 다음이 성립한다.
 
-    $$ \begin{equation}\begin{split}
-    f_i(\mathbf{T})  &= \prod_{\substack{j=1\\j \neq i}}^{k}\dfrac{\mathbf{T} - \lambda _j \mathbf{I}}{\lambda _i - \lambda _j} = \prod_{\substack{j=1\\j \neq i}}^{k} \dfrac{\sum_{s=1}^{k}\lambda _s \mathbf{T}_s - \lambda _j\sum_{s=1}^{k}\mathbf{T}_s }{\lambda _i - \lambda _j} \\
-    &= \prod_{\substack{j=1\\j \neq i}}^{k} \dfrac{\sum_{s=1}^{k}(\lambda _s - \lambda _j) \mathbf{T}_s  }{\lambda _i - \lambda _j} = \prod_{\substack{j=1\\j \neq i}}^{k} \dfrac{\sum_{s \neq j}^{}(\lambda _s - \lambda _j) \mathbf{T}_s  }{\lambda _i - \lambda _j} \\
-    &= \prod_{\substack{j=1\\j \neq i}}^{k} \overbrace{(c_1 \mathbf{T}_1 + \dots + \mathbf{T}_i + \dots + c_k \mathbf{T}_k)}^{\text{ no }\mathbf{T}_j} = \mathbf{T}_{i}^{k-1} = \mathbf{T}_i\\
-    \end{split}\end{equation} \tag*{}$$
+    $$ \begin{equation}\begin{split} f_i(\mathbf{T})  &= \prod_{\substack{j=1\\j \neq i}}^{k}\dfrac{\mathbf{T} - \lambda _j \mathbf{I}}{\lambda _i - \lambda _j} = \prod_{\substack{j=1\\j \neq i}}^{k} \dfrac{\sum_{s=1}^{k}\lambda _s \mathbf{T}_s - \lambda _j\sum_{s=1}^{k}\mathbf{T}_s }{\lambda _i - \lambda _j} \\ &= \prod_{\substack{j=1\\j \neq i}}^{k} \dfrac{\sum_{s=1}^{k}(\lambda _s - \lambda _j) \mathbf{T}_s  }{\lambda _i - \lambda _j} = \prod_{\substack{j=1\\j \neq i}}^{k} \dfrac{\sum_{s \neq j}^{}(\lambda _s - \lambda _j) \mathbf{T}_s  }{\lambda _i - \lambda _j} \\ &= \prod_{\substack{j=1\\j \neq i}}^{k} \overbrace{(c_1 \mathbf{T}_1 + \dots + \mathbf{T}_i + \dots + c_k \mathbf{T}_k)}^{\text{ no }\mathbf{T}_j} = \mathbf{T}_{i}^{k-1} = \mathbf{T}_i\\ \end{split}\end{equation} \tag*{}$$
 
-    마지막 줄에서 연산 결과가 $\mathbf{T}_i ^{k-1}$ 가 되는 $\mathbf{T}_i$ 를 제외한 정사영 $\mathbf{T}_1, \dots, \mathbf{T}_{i-1}, \mathbf{T}_{i+1}, \dots, \mathbf{T}_k$ 들은 반드시 다른 정사영과 곱해지기 때문에 스펙트럼 정리에 의하여 $0$ 이 되기 때문이다. ▲ 
+    마지막 줄에서 연산 결과가 $\mathbf{T}_i ^{k-1}$ 가 되는 이유는 $\mathbf{T}_i$ 를 제외한 정사영 $\mathbf{T}_1, \dots, \mathbf{T}_{i-1}, \mathbf{T}_{i+1}, \dots, \mathbf{T}_k$ 들은 반드시 다른 정사영과 곱해지기 때문에 스펙트럼 정리에 의하여 $0$ 이 되기 때문이다. 따라서 다음이 성립한다. 
+
+    $$ \therefore g(\mathbf{T}) = \sum_{i=1}^{k}g(\lambda _i)\mathbf{T}_i \tag*{▲} $$
+
+!!! def "문제 5.4-13"
+
+    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 벡터 $v \in \mathbf{V}\setminus \{0\}$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간 $\mathbf{W}$ 와 임의의 $w \in \mathbf{V}$ 에 대하여 다음은 동치이다.
+
+    - $w \in \mathbf{W}$
+
+    - $w = g(\mathbf{T})(v)$ 인 다항식 $g(t)$ 가 존재한다.
+
+- 증명
+
+    $w \in \mathbf{W}$ 이면 $w$ 는 $\{v, \mathbf{T}(v), \mathbf{T}^{2}(v), \dots\}$ 의 일차결합이다. 따라서 $w = g(\mathbf{T})(v)$ 인 다항식 $g$ 가 존재한다. ▲ 
+
+    $w = g(\mathbf{T})(v)$ 인 다항식 $g$ 가 존재하면 $w$ 는 $\{v, \mathbf{T}(v), \mathbf{T}^{2}(v), \dots\}$ 의 일차결합이다. ■ 
+
+!!! def "문제 5.4-20"
+    
+    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 에 대하여 $\mathbf{V}$ 가 $v \in \mathbf{V}$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간이면 $\mathbf{V}$ 의 선형연산자 $\mathbf{U}$ 에 대하여 다음이 동치이다.
+
+    - $\mathbf{U}\mathbf{T}=\mathbf{T}\mathbf{U}$
+
+    - $\mathbf{U}=g(\mathbf{T})$ 인 다항식 $g(t)$ 가 존재한다.
+
+- 증명
+
+    $\mathbf{U}=g(\mathbf{T})$ 을 가정하자. 다음이 성립한다.
+
+    $$ \mathbf{T}(\mathbf{T}^{k}) = (\mathbf{T}^{k})(\mathbf{T}) = \mathbf{T}^{k+1} $$
+
+    $\mathbf{T}$ 는 선형이므로 위 식의 $\mathbf{T}^{k}$ 를 $\mathbf{T}$ 에 대한 다항식 $g(\mathbf{T})$ 로 치환해도 된다. 즉, $\mathbf{T}g(\mathbf{T}) = g(\mathbf{T})\mathbf{T}$ 이다. 따라서 $\mathbf{U}\mathbf{T}=\mathbf{T}\mathbf{U}$ 이다. ▲ 
+
+    $\mathbf{U}\mathbf{T}=\mathbf{T}\mathbf{U}$ 를 가정하자. $\mathbf{V}$ 가 $v$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간이므로 다음과 같은 기저를 갖는다.
+
+    $$ \beta = \{v, \mathbf{T}(v), \mathbf{T}^{2}(v), \dots, \mathbf{T}^{k}(v)\} $$
+
+    따라서 $\mathbf{U}(v)$ 는 $\beta$ 의 일차결합이고, 이는 적절한 다항식 $g$ 에 대하여 $\mathbf{U}(v) = g(\mathbf{T})(v)$ 임을 뜻한다. 이제 [정리 2.6 따름정리](../LinearTransformation/#52dd3d90f) 에 의하여 $\forall w \in \beta : \mathbf{U}(w) = g(\mathbf{T})(w)$ 를 보임으로써 $\mathbf{U} = g(\mathbf{T})$ 를 보이려 한다. 다음이 성립한다. 
+
+    $$ \forall m \in \mathbb{Z}^{+} : \mathbf{U}(\mathbf{T}^{m}(v)) = \mathbf{T}^{m}(\mathbf{U}(v)) = (\mathbf{T}^{m}\circ  g(\mathbf{T}))(v) = g(\mathbf{T})(\mathbf{T}^{m}(v)) $$
+
+    ■ 
+
+## Simultaneously Diagonalizable
+
+!!! def "동시에 대각화가능(simultaneously diagonalizable)"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{U}$ 에 대하여 $[\mathbf{T}]_{\beta }$ 와 $[\mathbf{U}]_{\beta }$ 가 대각행렬이 되게 하는 $\mathbf{V}$ 의 순서기저 $\beta$ 가 존재하면 $\mathbf{T}$ 와 $\mathbf{U}$ 를 동시에 대각화가능하다고 한다.
+
+    두 행렬 $A, B \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 $Q ^{-1}AQ$ 와 $Q ^{-1}BQ$ 가 모두 대각행렬이 되게 하는 가역행렬 $Q \in \mathbf{M}_{n \times n}(\mathbf{F})$ 가 존재하면 $A$ 와 $B$ 를 동시에 대각화가능하다고 한다.
+
+!!! def "문제 5.2-18"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{U}$ 가 동시에 대각화가능하면 임의의 순서기저 $\beta$ 에 대하여 $[\mathbf{T}]_{\beta }$ 와 $[\mathbf{U}]_{\beta }$ 가 동시에 대각화가능하다.
+
+    $A, B$ 가 동시에 대각화가능한 행렬이면 $\mathbf{L}_{A}, \mathbf{L}_{B}$ 는 동시에 대각화가능하다.
+
+- 증명
+
+    $\mathbf{T}$ 와 $\mathbf{U}$ 를 동시에 대각화하는 순서기저를 $\alpha$ 라 하고, $\alpha$ 좌표를 $\beta$ 좌표로 변환하는 행렬을 $Q = [\mathbf{I}_{\mathbf{V}}]^{\beta }_{\alpha }$ 로 두면 [정리 2.23](../LinearTransformation/#acf61b9cb) 에 의하여 다음이 성립한다. 
+
+    $$ [\mathbf{T}]_{\alpha } = Q ^{-1}[\mathbf{T}]_{\beta }Q $$
+
+    $$ [\mathbf{U}]_{\alpha } = Q ^{-1}[\mathbf{U}]_{\beta }Q $$
+
+    ▲ 
+
+    $A, B$ 를 동시에 대각화하는 가역행렬을 $Q$ 로 두면 [정리 5.1 따름정리](../Diagonalization/#4efccd9c0) 에 의하여 $Q$ 의 열벡터로 구성된 기저 $\beta$ 를 만들 수 있다. $\alpha$ 를 표준기저로 두면 $\beta$ 좌표를 $\alpha$ 좌표로 변환하는 행렬 $[\mathbf{I}]^{\alpha }_{\beta }$ 에 대하여 다음이 성립한다. 
+
+    $$ [\mathbf{\mathbf{L}_{A}}]_{\beta } = [\mathbf{I}]^{\beta }_{\alpha }[\mathbf{\mathbf{L}_{A}}]_{\alpha }[\mathbf{I}]^{\alpha }_{\beta } $$
+
+    [선형변환의 행렬표현](../LinearTransformation/#c16bc5e5b) 에 의하여 $[\mathbf{I}]^{\alpha } _{\beta } = Q$ 이다. 또한 $\mathbf{I}^{-1}\mathbf{I} = \mathbf{I} \mathbf{I}^{-1} = \mathbf{I}$ 인 것과 [정리 2.18](../LinearTransformation/#7ab982f5b) 에 의하여 $[\mathbf{I}]^{\beta }_{\alpha } = ([\mathbf{I}]^{\alpha }_{\beta })^{-1}$ 이다. 또한 [정리 2.15](../LinearTransformation/#c3298a7b3) 에 의하여 $[\mathbf{L}_{A}]_{\alpha } = A$ 이다. 따라서 $[\mathbf{I}]^{\beta }_{\alpha }[\mathbf{\mathbf{L}_{A}}]_{\alpha }[\mathbf{I}]^{\alpha }_{\beta } = Q ^{-1}AQ$ 이고, 다음이 성립한다.
+
+    $$ [\mathbf{\mathbf{L}_{A}}]_{\beta } = Q ^{-1}AQ $$
+
+    같은 논리로 다음을 얻을 수 있다. 
+
+    $$ [\mathbf{\mathbf{L}_{B}}]_{\beta } = Q ^{-1}BQ $$
+
+    ■ 
+
+!!! def "문제 5.2-19"
+
+    유한차원 벡터공간의 선형연산자 $\mathbf{T}, \mathbf{U}$ 가 동시에 대각화가능하면 $\mathbf{T}$ 와 $\mathbf{U}$ 는 가환적이다.
+
+    $A, B \in \mathbf{M}_{n \times n}(\mathbf{F})$ 가 동시에 대각화가능하면 $A$ 와 $B$ 는 가환적이다.
+
+- 증명
+
+    $\mathbf{T}$ 와 $\mathbf{U}$ 를 동시에 대각화하는 기저를 $\beta$ 로 두자. 대각행렬은 가환적이므로 다음이 성립한다. 
+
+    $$ [\mathbf{T}]_{\beta }[\mathbf{U}]_{\beta } = [\mathbf{U}]_{\beta }[\mathbf{T}]_{\beta } $$
+
+    [정리 2.11 따름정리](../LinearTransformation/#143fdacba) 에 의하여 다음이 성립한다.
+
+    $$ [\mathbf{T}\mathbf{U}]_{\beta } = [\mathbf{U}\mathbf{T}]_{\beta } \iff \mathbf{T}\mathbf{U}= \mathbf{U}\mathbf{T} $$
+
+    ▲ 
+
+    $A, B$ 를 동시에 대각화하는 가역행렬 $Q$ 가 존재하면 $Q ^{-1}AQ, Q ^{-1}BQ$ 는 대각행렬이다. 대각행렬은 가환적이므로 다음이 성립한다. 
+
+    $$ (Q ^{-1}AQ)(Q ^{-1}BQ) = (Q ^{-1}BQ)(Q ^{-1}AQ) $$
+
+    $$ \iff Q ^{-1}ABQ = Q ^{-1}BAQ $$
+
+    $$ \iff Q Q ^{-1}ABQ Q ^{-1} = Q Q ^{-1}BAQ Q ^{-1}$$
+
+    $$ \iff AB = BA $$
+
+    ■ 
+
+!!! def "문제 5.1-16"
+
+    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 고윳값 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터 $x$ 는 임의의 $m \in \N$ 에 대하여 고윳값 $\lambda ^{m}$ 에 대응하는 $\mathbf{T}^{m}$ 의 고유벡터이다.
+
+    행렬에 대하여 같은 결과가 성립한다.
+
+- 증명
+
+    선형변환의 정의에 의하여 스칼라를 바깥으로 빼낼 수 있고, [정리 2.10](../LinearTransformation/#273a736ad) 에 의하여 스칼라를 합성함수의 바깥으로도 뺴낼 수 있다. 따라서 다음이 성립한다.    
+
+    $$ \mathbf{T}^{m}(x) = \mathbf{T}^{m-1}(\lambda v) = \lambda \mathbf{T}^{m-1}(v) = \dots = \lambda ^{m}v \tag*{▲} $$
+
+    행렬 $A$ 의 고윳값 $\lambda$ 에 대응하는 고유벡터 $x$ 가 존재하면 [정리 2.12](../LinearTransformation/#e08d1e569) 에 의하여 다음이 성립한다. 
+
+    $$ A ^{m}x = A ^{m-1}\lambda x = \lambda A ^{m-1}x = \dots = \lambda ^{m}x \tag*{■}$$
+
+!!! def "문제 5.2-20"
+
+    유한차원 벡터공간의 선형연산자 $\mathbf{T}$ 가 대각화가능하면 임의의 $m \in \N$ 에 대하여 $\mathbf{T}$ 와 $\mathbf{T}^{m}$ 가 동시에 대각화가능하다.
+
+- 증명
+
+    문제 5.1-16 에 의하여 $\mathbf{T}$ 의 고유벡터는 $\mathbf{T}^{m}$  의 고유벡터이다. ■ 
+
+!!! def "문제 5.4-23"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 와 $\mathbf{T}$ 의 서로 다른 고윳값에 대응하는 고유벡터 $v_1, v_2, \dots, v_k$ 에 대하여 $\displaystyle \sum_{i=1}^{k}v_i \in \mathbf{W}$ 이면 $\forall i \in \{1,\dots,k\} : v_i \in \mathbf{W}$ 이다.
+
+- 증명
+
+    $k = 1$ 이면 자명하다. ▲ 
+
+    $k = n -1$ 에서 정리가 성립하면 $k = n$ 에서 정리가 성립한다는 것을 증명하면 증명이 끝난다. $u = \displaystyle \sum_{i=1}^{n}v_i \in \mathbf{W}$ 이면 $\mathbf{W}$ 가 $\mathbf{T}$-불변이므로 다음이 성립한다. 
+
+    $$ \mathbf{T}(u) = \sum_{i=1}^{n}\lambda _iv_i \in \mathbf{W} $$
+
+    $\mathbf{W}$ 는 부분공간이므로 스칼라곱에 대하여 닫혀있고, 따라서 $\lambda _nu \in \mathbf{W}$ 이다. 벡터 합에 대하여서도 닫혀있으므로 다음이 성립한다. 
+
+    $$ \mathbf{T}(u) - \lambda _n u = \sum_{i=1}^{n-1}(\lambda _i - \lambda _n)v_i \in \mathbf{W} $$
+
+    서로 다른 고윳값이라는 가정에 의하여 $\lambda _i - \lambda _n \neq 0$ 이고 귀납법의 가정에 의하여 $i \in \{1, \dots, n-1\} : (\lambda _i - \lambda _n)v_i \in \mathbf{W}$ 이다. 따라서 $i \in \{1, \dots, n-1\} : v_i \in \mathbf{W}$ 이다. 따라서 다음을 얻는다.
+
+    $$ \therefore v_n = u - \sum_{i=1}^{n-1}v_i \in \mathbf{W} \tag*{■} $$
+
+!!! def "문제 5.4-24"
+
+    대각화가능한 선형연산자 $\mathbf{T}$ 를 점공간이 아닌 임의의 $\mathbf{T}$-불변 부분공간으로 제한해도 대각화가능하다.    
+
+- 증명
+
+    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 점공간이 아닌 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 을 가정하자. $\mathbf{T}$ 의 고윳값 $\lambda$ 에 대응하는 고유공간을 $\mathbf{E}_{\lambda}$ 로 두자. $\mathbf{T}_{\mathbf{W}}$ 의 고윳값 $\lambda$ 에 대응하는 고유공간을 $\mathbf{W}_{\lambda } = \mathbf{E}_{\lambda} \cap \mathbf{W}$ 라고 정의한다. 
+
+    $\mathbf{W}_{\lambda }$ 의 기저 $\beta _{\lambda }$ 에 대하여 $\beta = \displaystyle \bigcup_{\lambda }^{}\beta _{\lambda }$ 가 $\mathbf{W}$ 의 기저가 됨을 보이자. [정리 5.5](../Diagonalization/#c5e84c7e0) 에 의하여 $\beta$ 는 일차독립이다. $\mathbf{T}$ 가 대각화가능하므로 [정리 5.8](../Diagonalization/#7050c2a83) 에 의하여 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 기저가 존재하고, 이에따라 모든 벡터를 $\mathbf{T}$ 의 고유벡터의 일차결합으로 표현할 수 있다. $\mathbf{W}$ 의 벡터도 마찬가지로 $\mathbf{T}$ 의 고유벡터의 일차결합으로 표현할 수 있다. 그러면 문제 5.4-23 에 의하여 $\mathbf{W}$ 의 벡터를 일차결합으로 표현하는 $\mathbf{T}$ 의 고유벡터들은 $\mathbf{W}$ 에 속한다. 이는 $\beta$ 의 일차결합으로 표현되는 모든 벡터가 $\mathbf{W}$ 에 속함을 뜻하고, 따라서 $\beta$ 는 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{W}$ 의 기저가 된다.
+
+    [정리 5.1](../Diagonalization/#57f0cd776) 에 의하여 $\beta$ 로 $\mathbf{T}_{\mathbf{W}}$ 를 대각화 할 수 있다. ■ 
+
+!!! def "문제 5.4-25"
+
+    유한차원 벡터공간의 대각화가능한 선형연산자 $\mathbf{T}$ 와 $\mathbf{U}$ 가 가환적이면 $\mathbf{T}$ 와 $\mathbf{U}$ 는 동시에 대각화가능하다.
+
+    $A, B \in \mathbf{M}_{n \times n}(\mathbf{F})$ 가 가환적이면 $A, B$ 를 동시에 대각화가능하다.
+
+- 증명
+
+    $\mathbf{T}$ 의 고윳값 $\lambda$ 에 대응하는 고유공간 $\mathbf{E}_{\lambda}$ 에 대하여 다음이 성립한다. 
+
+    $$ \forall v \in \mathbf{E}_{\lambda} : \mathbf{T}(\mathbf{U}(v)) = \mathbf{U}(\mathbf{T}(v)) = \mathbf{U}(\lambda v) = \lambda \mathbf{U}(v) $$
+
+    즉, $\mathbf{U}(\mathbf{E}_{\lambda})$ 는 $\lambda$ 에 대응하는 $\mathbf{T}$ 의 고유벡터이다. 따라서 $\mathbf{U}(\mathbf{E}_{\lambda} ) \in \mathbf{E}_{\lambda}$ 이고, 이는 $\mathbf{E}_{\lambda}$ 가 $\mathbf{U}$-불변임을 뜻한다. 문제 5.4-24 에 의하여 대각화가능인 $\mathbf{U}$ 를 $\mathbf{U}$-불변 부분공간 $\mathbf{E}_{\lambda}$ 로 제한한 $\mathbf{U}_{\mathbf{E}_{\lambda} }$ 도 대각화가능이다. 즉, $[\mathbf{U}_{\mathbf{E}_{\lambda} }]_{\beta _{\lambda }}$ 가 대각행렬인 $\mathbf{E}_{\lambda}$ 의 기저 $\beta _{\lambda }$ 가 존재한다. 
+
+    $\beta = \displaystyle \bigcup_{\lambda }^{}\beta _{\lambda }$ 로 두면 $\beta$ 에 의하여 $\mathbf{T}$ 와 $\mathbf{U}$ 를 둘 다 대각화 할 수 있다. ▲ 
+
+    위 논리를 선형연산자 $\mathbf{L}_{A}, \mathbf{L}_{B}$ 에 대하여 그대로 펼치면 증명이 끝난다. ■ 
+
+!!! def ""
+
+    유한차원 벡터공간의 선형연산자 $\mathbf{T}$ 와 $\mathbf{U}$ 에 대하여 다음은 동치이다.
+
+    - $\mathbf{T}$ 와 $\mathbf{U}$ 가 가환적이다.
+
+    - $\mathbf{T}$ 와 $\mathbf{U}$ 는 동시에 대각화가능하다.
+
+    행렬 $A, B \in \mathbf{M}_{n \times n}(\mathbf{F})$ 에 대하여 다음은 동치이다.
+
+    - $A, B$ 가 가환적이다.
+
+    - $A, B$ 를 동시에 대각화가능하다.
+
+- 증명
+
+    문제 5.4-25 와 문제 5.2-19 를 결합하면 증명이 바로 끝난다. ■ 
+
+!!! def "문제 5.4-26"
+
+    $n$차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 가 $n$개의 서로 다른 고윳값을 가지면 $\mathbf{V}$ 는 자기 자신에 대한 $\mathbf{T}$-순환 부분공간이다.
+
+- 증명
+
+    $n$개의 고윳값에 대응하는 고유벡터로 이루어진 집합 $\beta = \{v_1, v_2, \dots, v_n\}$ 를 정하면 $v = \displaystyle \sum_{i=1}^{n}v_i$ 를 정의할 수 있다. $\mathbf{W}$ 를 $v$ 에 의해 생성된 $\mathbf{T}$-순환 부분공간이라 하자. 문제 5.4.23 에 의하여 $\forall i \in \{1,\dots,n\} : v_i \in \mathbf{W}$ 이다. [정리 5.5](../Diagonalization/#c5e84c7e0) 에 의하여 $\beta$ 는 일차독립이므로 $\dim (\mathbf{W}) = n$ 이다. 그러면 [정리 5.21](../Diagonalization/#975617f00) 에 의하여 다음은 $\mathbf{W}$ 의 기저이다. 
+
+    $$ \{v, \mathbf{T}(v), \dots, \mathbf{T}^{n-1}(v)\} $$
+
+    부분공간이 원래의 벡터공간과 차원이 같으므로 [정리 1.11](../VectorSpace/#26f9238cb) 에 의하여 $\mathbf{V} = \mathbf{W}$ 이다. 즉, $\mathbf{V}$ 는 자기 자신에 대한 $\mathbf{T}$-순환 부분공간이 된다. ■ 
+
+!!! def "문제 6.4-14 동시에 대각화(simultaneous diagonalization)"
+
+    유한차원 실내적공간 $\mathbf{V}$ 의 자기수반연산자 $\mathbf{U}$ 와 $\mathbf{T}$ 에 대하여 $\mathbf{U}\mathbf{T}=\mathbf{T}\mathbf{U}$ 이면 $\mathbf{U}$ 와 $\mathbf{T}$ 모두의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다.
+
+- 증명
+
+!!! def "문제 6.8"
+
+    유한차원 복소내적공간의 정규연산자 $\mathbf{T}$ 와 선형연산자 $\mathbf{U}$ 가 가환적이면 $\mathbf{U}$ 는 $\mathbf{T}{}^{*}$ 와 가환적이다.
+
+- 증명
+
+!!! def "문제 6.6-10 동시에 대각화(simultaneous diagonalization)"
+
+    유한차원 복소내적공간 $\mathbf{V}$ 의 정규연산자 $\mathbf{U}$ 와 $\mathbf{T}$ 에 대하여 $\mathbf{T}\mathbf{U}=\mathbf{U}\mathbf{T}$ 이면 $\mathbf{T}$ 와 $\mathbf{U}$ 모두의 고유벡터로 이루어진 $\mathbf{V}$ 의 정규직교기저가 존재한다.
+
+- 증명
 
 !!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 1"
 
@@ -2836,10 +3064,16 @@
     - $\mathbf{T}$ 가 정규연산자이다. 
     
     - 적절한 다항식 $g$ 에 대하여 $\mathbf{T}{}^{*} = g(\mathbf{T})$ 이다.
- 
+
 - 증명
 
-    $\mathbf{T}$ 가 복소내적공간에서 정규연산자이면 대각화 가능이고, 스펙트럼 정리가 유효하다. $\mathbf{T}$ 의 스펙트럼 분해를 $\mathbf{T} = \displaystyle \sum_{i=1}^{k}\lambda _k \mathbf{T}_k$ 로 두자. 이 식의 양변에 수반연산자를 취하면 정리 6.24 는 정사영이 에르미트 연산자라는 것을 말해주므로 $\mathbf{T}{}^{*}= \displaystyle \sum_{i=1}^{k}\overline{\lambda _k}\mathbf{T}_k$ 이다.
+    $\mathbf{T}$ 가 복소내적공간에서 정규연산자이면 대각화 가능이고, 스펙트럼 정리가 유효하다. $\mathbf{T}$ 의 스펙트럼 분해를 $\mathbf{T} = \displaystyle \sum_{i=1}^{k}\lambda _k \mathbf{T}_k$ 로 두자. 이 식의 양변에 수반연산자를 취하면 [수반연산자의 성질](#a9f161221) 과 정사영이 에르미트 연산자라는 것을 말해주는 정리 6.24 에 의하여 $\mathbf{T}{}^{*}= \displaystyle \sum_{i=1}^{k}\overline{\lambda _k}\mathbf{T}_k$ 이다.
+
+    [라그랑주 보간법](../Polynomials/#ee8bc7a9e) 에 의하여 $i \in \{1, \dots, k\}$ 에 대하여 $g(\lambda _i) = \overline{\lambda _i}$ 인 다항식 $g$ 를 쉽게 찾을 수 있다. 문제 6.6-7-(1) 에 의하여 다음이 성립한다. 
+
+    $$ g(\mathbf{T}) = \sum_{i=1}^{k}g(\lambda _i)\mathbf{T}_i = \sum_{i=1}^{k}\overline{\lambda _i}\mathbf{T}_i = \mathbf{T}{}^{*} \tag*{▲} $$
+
+    이제 어떤 다항식 $g$ 가 $\mathbf{T}{}^{*} = g(\mathbf{T})$ 를 만족한다고 가정하자. 
 
 !!! def "정리 6.25 스펙트럼 정리(spectral theorem) 따름정리 2"
 
