@@ -66,7 +66,6 @@ def create_category(yml_path, index_path, root_name):
                  .replace('<a&nbsp;', '<a ') \
                  .replace('\n', '</p><p>\n') \
                  .replace('/README', '')
-    print(index)
 
     index = '<div class="index"><p>' + index + '</p></div>'
 

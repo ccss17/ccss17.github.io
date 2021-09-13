@@ -36,6 +36,7 @@ nav:
       - Determinants: Math/LinearAlgebra/Determinants.md
       - Diagonalization: Math/LinearAlgebra/Diagonalization.md
       - Inner Product Spaces: Math/LinearAlgebra/InnerProductSpaces.md
+      - Canonical Forms: Math/LinearAlgebra/CanonicalForms.md
     # - To be deleted(OUTDATED, DEPRECATED):
     #   - 산술/대수학: 
     #     - 기초 산술: Math/Algebra/arithmetic.md

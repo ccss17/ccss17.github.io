@@ -2114,7 +2114,7 @@
 
     따라서 $\mathbf{E}_{\lambda_2}$ 의 기저는 $\{(1,1,1)\}$ 이다. ▲ 
 
-    사실 $A$ 가 대각화가능임을 판정할 필요는 없지만 굳이 판정해보면 [대각화 가능 판정법](../Diagonalization/#e84f8c4af) 에 의하여 고윳값의 중복도가 $2$ 이상인 것들이 고유공간의 차원과 같으므로 $A$ 는 대각화 가능이다. 즉, $\lambda _1 = 2$ 에 대응하는 고유공간의 차원이 $2$ 이고 중복도도 $2$ 이다.
+    사실 $A$ 가 대각화가능임을 판정할 필요는 없지만 굳이 판정해보면 [대각화 가능 판정법](../Diagonalization/#8fb7f3108) 에 의하여 고윳값의 중복도가 $2$ 이상인 것들이 고유공간의 차원과 같으므로 $A$ 는 대각화 가능이다. 즉, $\lambda _1 = 2$ 에 대응하는 고유공간의 차원이 $2$ 이고 중복도도 $2$ 이다.
 
     이제 각 고유공간의 기저를 통해 $A$ 의 고유벡터로 이루어진 $\R ^{3}$ 의 정규직교기저를 얻어보자. 일단 먼저 $\mathbf{E}_{\lambda_1}$ 의 기저 $\{(-1, -1, 0), (-1, 0, 1)\}$ 를 [그람 슈미트 직교화](#0ee45a6c5) 로 직교화하여 $\{(-1, 1, 0), - \frac{1}{2}(1, 1, -2)\}$ 를 얻는다.
 
@@ -3107,7 +3107,8 @@
 
     $$ \begin{equation}\begin{split}
     f_j(\mathbf{T})(v_k) &= \bigg ( \prod_{i \neq j}^{}\dfrac{\mathbf{T} - \lambda _i \mathbf{I}}{\lambda _j - \lambda _i} \bigg )(v_k) = \bigg ( \prod_{\substack{i=1 \\ i \neq j}}^{n-1}\dfrac{\mathbf{T} - \lambda _i \mathbf{I}}{\lambda _j - \lambda _i}\bigg )\bigg ( \dfrac{\mathbf{T} - \lambda _n \mathbf{I}}{\lambda _j - \lambda _n}\bigg )(v_k)  \\
-    & = \bigg ( \prod_{\substack{i=1 \\ i \neq j}}^{n-1}\dfrac{\mathbf{T} - \lambda _i \mathbf{I}}{\lambda _j - \lambda _i}\bigg )\bigg ( \dfrac{(\lambda _k - \lambda _n)v_k}{\lambda _j - \lambda _n}\bigg ) = \bigg ( \dfrac{\lambda _k - \lambda _n}{\lambda _j - \lambda _n}\bigg )\bigg ( \prod_{\substack{i=1 \\ i \neq j}}^{n-1}\dfrac{\mathbf{T} - \lambda _i \mathbf{I}}{\lambda _j - \lambda _i}\bigg )(v_k) = \bigg (\prod_{i \neq j}^{}\frac{\lambda _k - \lambda _i}{\lambda _j - \lambda _i} \bigg )v_k \\
+    & = \bigg ( \prod_{\substack{i=1 \\ i \neq j}}^{n-1}\dfrac{\mathbf{T} - \lambda _i \mathbf{I}}{\lambda _j - \lambda _i}\bigg )\bigg ( \dfrac{(\lambda _k - \lambda _n)v_k}{\lambda _j - \lambda _n}\bigg ) \\
+    & = \bigg ( \dfrac{\lambda _k - \lambda _n}{\lambda _j - \lambda _n}\bigg )\bigg ( \prod_{\substack{i=1 \\ i \neq j}}^{n-1}\dfrac{\mathbf{T} - \lambda _i \mathbf{I}}{\lambda _j - \lambda _i}\bigg )(v_k) = \bigg (\prod_{i \neq j}^{}\frac{\lambda _k - \lambda _i}{\lambda _j - \lambda _i} \bigg )v_k \\
     &= \begin{cases} 0 &j \neq k\\ v_k & j = k\\ \end{cases}  =\delta _{jk}v_k \\
     \end{split}\end{equation} \tag*{} $$
 
@@ -3148,7 +3149,7 @@
     $\mathbf{T}$ 가 정규연산자임을 가정하면 스펙트럼 정리가 유효하다. $\mathbf{T}$ 의 스펙트럼 분해를 $\mathbf{T}= \displaystyle \sum_{i=1}^{k}\lambda _i \mathbf{T}_i$ 라 하자. [스펙트럼 정리](#3001117d3) 과 [정리 6.24](#dd9ff7bbd) 와 $|\lambda | = 1$ 인 것에 의하여 다음이 성립한다. 
 
     $$ \begin{equation}\begin{split}
-    \mathbf{T}\mathbf{T}{}^{*}&=(\lambda _1 \mathbf{T}_1 + \dots + \lambda _k \mathbf{T}_k)(\overline{\lambda _1}\mathbf{T}_1 + \dots + \overline{\lambda _k}\mathbf{T}_k \\
+    \mathbf{T}\mathbf{T}{}^{*}&=(\lambda _1 \mathbf{T}_1 + \dots + \lambda _k \mathbf{T}_k)(\overline{\lambda _1}\mathbf{T}_1 + \dots + \overline{\lambda _k}\mathbf{T}_k) \\
     &= |\lambda _1|^{2}\mathbf{T}_1 + \dots + |\lambda _k|^{2}\mathbf{T}_k = \sum_{i=1}^{k}\lambda _k = \mathbf{I}\\
     \end{split}\end{equation} \tag*{}
     $$

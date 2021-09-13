@@ -254,7 +254,7 @@
 
     [선형변환의 합과 스칼라곱도 선형](../LinearAlgebra/LinearTransformation/#91b876399)이다. 따라서 $f(\mathbf{T})$ 는 선형이다. ▲ 
 
-    [$\mathbf{R}(\mathbf{T})$ 는 $\mathbf{T}$-불변](../LinearAlgebra/Diagonalization/#a55a4420e)이므로 $n \in \N : \mathbf{R}(\mathbf{T}^{n}) \in \mathbf{V}$ 이다. [$\mathbf{R}(\mathbf{T})$ 는 $\mathbf{V}$ 의 부분공간](../LinearAlgebra/LinearTransformation/#eb957cbf0)이므로 덧셈에 대하여 닫혀있다. 따라서 $f(\mathbf{T})\in \mathbf{V}$ 이다. ▲ 
+    [$\mathbf{R}(\mathbf{T})$ 는 $\mathbf{T}$-불변](../LinearAlgebra/Diagonalization/#2561e1047)이므로 $n \in \N : \mathbf{R}(\mathbf{T}^{n}) \in \mathbf{V}$ 이다. [$\mathbf{R}(\mathbf{T})$ 는 $\mathbf{V}$ 의 부분공간](../LinearAlgebra/LinearTransformation/#eb957cbf0)이므로 덧셈에 대하여 닫혀있다. 따라서 $f(\mathbf{T})\in \mathbf{V}$ 이다. ▲ 
 
     2:
 

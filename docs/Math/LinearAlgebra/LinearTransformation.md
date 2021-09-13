@@ -1312,7 +1312,7 @@
 
 !!! def ""
 
-    벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 $\dim (\mathbf{V} ) = \dim (\mathbf{W} )$ 이면 다음이 동치이다.
+    유한차원 벡터공간 $\mathbf{V} , \mathbf{W}$ 와 선형변환 $\mathbf{T} : \mathbf{V} \to \mathbf{W}$ 에 대하여 $\dim (\mathbf{V} ) = \dim (\mathbf{W} )$ 이면 다음이 동치이다.
 
     - $\mathbf{T}$ 가 단사이다.
 
@@ -1448,7 +1448,7 @@
 
     [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $AB$ 가 가역이면 $\mathbf{L}_{AB}$ 도 가역이다. [정리 2.15 - 1](#c3298a7b3) 에 의하여 $\mathbf{L}_{AB}$ 는 $\mathbf{F} ^{n} \to \mathbf{F} ^{n}$ 위에서 정의된 선형변환이다. [정리 2.15 - 6](#c3298a7b3) 에 의하여 $\mathbf{L} _{AB} = \mathbf{L}_{A}\mathbf{L}_{B}$ 이다. 
 
-    [$\mathbf{L}_{A}\mathbf{L}_{B}$ 가 전단사이므로 $\mathbf{L}_{B}$ 가 단사이고, $\mathbf{L}_{A}$ 는 전사이다](#de2683c1b). 그런데 [$\dim (\mathbf{F} ^{n}) = \dim (\mathbf{F} ^{n})$ 이므로 $\mathbf{L}_{A}$ 와 $\mathbf{L}_{B}$ 는 가역이다](#08a4e4fdc). 그러면 다시 [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $A$ 와 $B$ 도 가역이다. ■ 
+    [$\mathbf{L}_{A}\mathbf{L}_{B}$ 가 전단사이므로 $\mathbf{L}_{B}$ 가 단사이고, $\mathbf{L}_{A}$ 는 전사이다](#de2683c1b). 그런데 [$\dim (\mathbf{F} ^{n}) = \dim (\mathbf{F} ^{n})$ 이므로 $\mathbf{L}_{A}$ 와 $\mathbf{L}_{B}$ 는 가역이다](#cef7af2c9). 그러면 다시 [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $A$ 와 $B$ 도 가역이다. ■ 
 
 !!! def "문제 2.4-10"
 
@@ -1462,7 +1462,7 @@
 
     1:
 
-    [정리 2.15 - 1](#c3298a7b3) 에 의하여 $AB = I_n$ 은 $\mathbf{L}_{AB} = \mathbf{L}_{I_n}$ 이다. 이는 [정리 2.15 - 6, 7](#c3298a7b3) 에 의하여 $\mathbf{L}_{A}\mathbf{L}_{B} = \mathbf{I} _{\mathbf{F} ^{n}}$ 가 된다. 그러므로 [$\mathbf{L}_{A}$ 는 전사](../../Set/Set/#5869db153)이고, [$\mathbf{L}_{B}$ 는 단사](../../Set/Set/#d9b0737d6)이다. 그런데 [$\dim (\mathbf{F} ^{n}) = \dim (\mathbf{F} ^{n})$ 이므로 $\mathbf{L}_{A}$ 와 $\mathbf{L}_{B}$ 는 가역이다](#08a4e4fdc). 그러면 [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $A$ 와 $B$ 도 가역이다. ■ 
+    [정리 2.15 - 1](#c3298a7b3) 에 의하여 $AB = I_n$ 은 $\mathbf{L}_{AB} = \mathbf{L}_{I_n}$ 이다. 이는 [정리 2.15 - 6, 7](#c3298a7b3) 에 의하여 $\mathbf{L}_{A}\mathbf{L}_{B} = \mathbf{I} _{\mathbf{F} ^{n}}$ 가 된다. 그러므로 [$\mathbf{L}_{A}$ 는 전사](../../Set/Set/#5869db153)이고, [$\mathbf{L}_{B}$ 는 단사](../../Set/Set/#d9b0737d6)이다. 그런데 [$\dim (\mathbf{F} ^{n}) = \dim (\mathbf{F} ^{n})$ 이므로 $\mathbf{L}_{A}$ 와 $\mathbf{L}_{B}$ 는 가역이다](#cef7af2c9). 그러면 [정리 2.18 따름정리 2](#80bc2f76a) 에 의하여 $A$ 와 $B$ 도 가역이다. ■ 
 
     2:
 

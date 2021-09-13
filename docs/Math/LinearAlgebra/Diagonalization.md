@@ -579,7 +579,7 @@
 
     1. $\mathbf{T}$ 의 특성다항식이 완전히 인수분해된다.
 
-    2. $\mathbf{T}$ 의 고윳값 $\lambda$ 의 중복도가 $2$ 이상인 것들이 $\dim(\mathbf{E}_{\lambda}) = \text{nullity} (\mathbf{T} - \lambda \mathbf{I}) = n - \text{rank} (\mathbf{T} - \lambda \mathbf{I} )$ 와 같다.
+    2. $\mathbf{T}$ 의 고윳값 $\lambda$ 의 중복도 $m$ 이 $2$ 이상이면 $m$ 이 $\dim(\mathbf{E}_{\lambda}) = \text{nullity} (\mathbf{T} - \lambda \mathbf{I}) = n - \text{rank} (\mathbf{T} - \lambda \mathbf{I} )$ 와 같다.
 
 - 이 정리는 정리 5.8 의 첫번째 명제를 되풀어 말한 것 뿐이다.
 
@@ -630,6 +630,38 @@
     $\mathbf{E}_{\lambda_2}$ 의 기저는 $\gamma _2 = \bigg \{\begin{pmatrix} 1\\ 0\\ 1\\ \end{pmatrix}\bigg \}$ 이다. $\gamma = \gamma _1 \cup \gamma _2 = \bigg \{\begin{pmatrix} 1\\ 0\\ 0\\ \end{pmatrix}, \begin{pmatrix} 0\\ -1\\ 1\\ \end{pmatrix}, \begin{pmatrix} 1\\ 1\\ 0\\ \end{pmatrix}\bigg \}$ 은 $B$ 의 고유벡터로 이루어진 $\R ^{3}$ 의 순서기저이다. $\gamma \in \mathbf{F} ^{3}$ 의 각 벡터는 $\beta = \{1, -x+x ^{2}, 1+x ^{2}\} \in \mathbf{P}_{2}(\R)$ 의 $\alpha$ 에 대한 좌표벡터이다. $\beta$ 는 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{P}_{2}(\R)$ 의 순서기저이므로 $\mathbf{T}$ 를 대각화해보면 다음과 같다.
 
     $$ [\mathbf{T} ]_{\beta } = \begin{pmatrix} 1&0&0\\ 0&1&0\\ 0&0&2\\ \end{pmatrix} $$
+
+!!! def "대각화 요약"
+
+    1. $n$차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 를 대각행렬 $[\mathbf{T}]_{\beta}$ 로 표현할 수 있는 기저 $\beta$ 가 존재하면 $\mathbf{T}$ 를 대각화가능하다고 말한다.
+
+    2. $\mathbf{T}$ 를 대각화 할 수 있는 기저를 $\beta = \{v_1, v_2, \dots, v_n\}$ 로 두면 $\mathbf{T}$ 를 대각행렬료 표현하는 과정에서 반드시 $\mathbf{T}(v_i) = \lambda _iv_i$ 꼴의 결과가 나오게 된다. 
+
+        바로 이 형태 $\mathbf{T}(v) = \lambda v$ 를 일반화하여 $v$ 를 고유벡터, $\lambda$ 를 고윳값이라 정의한다. 
+
+    3. 그러면 $\mathbf{T}$ 를 대각화할 수 있다는 것은 $\mathbf{T}$ 의 고유벡터로 이루어진 $\mathbf{V}$ 의 기저가 존재한다는 것이 된다.
+
+    4. 따라서 $\mathbf{T}$ 를 대각화하고 싶다면 $\mathbf{V}$ 안에서 서로 일차독립인 $\mathbf{T}$ 의 고유벡터들을 $n$개 찾기만 하면 장땡이다. 그러면 서로 일차독립인 $\mathbf{T}$ 의 고유벡터 $n$개를 어떻게 찾는가?
+
+    5. (고윳값 구하기) 특성다항식의 근을 구하면 선형연산자가 지니는 모든 고윳값을 하나도 빠짐없이 알 수 있다. 선형연산자의 서로 다른 고윳값은 최대 $n$개이다. 만약 특성다항식의 근이 존재하지 않으면 고윳값도 존재하지 않으며 대각화 불가능하다.
+
+    6. (고유벡터 구하기) 고유공간은 고윳값에 대응하는 모든 고유벡터들의 집합이며 $\mathbf{V}$ 의 부분공간이다. 따라서 고유공간의 기저를 구하면 고윳값에 대응하는 일차독립인 고유벡터들을 구할 수 있다.
+
+    7. 누군가가 각각의 고윳값에 대응하는 일차독립 집합들의 합집합이 일차독립이라는 것을 증명했다. 또한 고유공간의 차원이 항상 고윳값의 중복도와 같거나 작다는 사실이 증명되었다.
+    
+    8. 따라서 만약 특성다항식의 근이 $n$개라면, 각 고유공간은 1차원이고 그것들의 기저를 모으면 선형연산자를 대각화하는 $\mathbf{V}$ 의 기저를 얻고 게임이 끝난다.
+
+        만약 특성다항식의 근이 $n$개 보다 작다면, 어떤 고윳값의 중복도가 2 이상이라는 것이다. 그러한 고윳값의 고유공간의 차원이 중복도보다 작으면, 아무리 모든 고유공간의 기저를 모아도 일차독립인 고유벡터들의 개수가 $n$ 보다 작을 수밖에 없고, 대각화 불가능하다. 즉, 어떤 고유공간이 너무 작으면 대각화 불가능하다.
+        
+        따라서 이 경우 $\mathbf{T}$ 가 대각화 가능하려면 중복도가 2 이상인 고윳값의 고유공간의 차원이 반드시 중복도와 같아야 한다. 그러면 대각화 가능하고, 고유공간의 기저를 모으면 $\mathbf{T}$ 를 대각화하는 $\mathbf{V}$ 의 기저를 얻는다.
+
+        자, 오케이 그러면 이 문장 하나로 모든 것을 요약할 수 있다. $\mathbf{T}$ 의 고유공간의 기저의 합집합이 $\mathbf{V}$ 의 기저가 되면 $\mathbf{T}$ 는 대각화 가능하다. 이 과정이 어떤 이유에서든 실패하면 $\mathbf{T}$ 는 대각화 불가능하다. 
+
+    9. 그러나 $\mathbf{T}$ 를 대각화할 수 없는 경우라고 해도 아직 희망은 남아있다. 물론 대각행렬표현이 $\mathbf{T}$ 를 가장 단순하게 표현할 수 있는 형태이긴 하지만, 이 형태를 대체할 수 있는 여러가지 행렬표현 형태들이 존재한다. 이 행렬표현을 표준형이라 한다.
+
+        대각화 불가능한 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되는 경우 조르당 표준형으로 $\mathbf{T}$ 를 행렬표현하면 된다.
+
+        대각화 불가능한 $\mathbf{T}$ 의 특성다항식이 완전히 인수분해되지 않으면 유리 표준형으로 $\mathbf{T}$ 를 행렬표현한다.
 
 # Direct sum
 
@@ -771,7 +803,7 @@
 
     쉽게 말해, 부분공간의 원소가 $\mathbf{T}$ 를 통과해서 나왔는데도 부분공간에 속했으면 $\mathbf{T}$-불변이다.
 
-!!! def ""
+!!! def "문제 5.4-3"
 
     벡터공간 $\mathbf{V}$ 와 선형연산자 $\mathbf{T}$ 에 대하여 다음 부분공간은 $\mathbf{T}$-불변이다.
 
@@ -809,8 +841,19 @@
 
     $x \in \mathbf{E}_{\lambda}$ 에 대하여 $\mathbf{T} (x) = \lambda x$ 이다. $\mathbf{T} (\lambda x) = \lambda \mathbf{T} (x) = \lambda \cdot \lambda x$ 이다. 벡터공간은 스칼라곱에 닫혀있으므로 $\lambda x \in \mathbf{V}$ 이다. 따라서 $\lambda x \in \mathbf{V} \implies \lambda x \in \mathbf{E}_{\lambda}$ 이다. 따라서 $\mathbf{T} (\mathbf{E}_{\lambda} ) \subset \mathbf{E}_{\lambda}$ 이다.
 
+!!! def "문제 5.4-4"
 
-## $\mathbf{T}$-cyclic subspace
+    벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 와 $\mathbf{T}$-불변 부분공간 $\mathbf{W}$ 와 임의의 다항식 $g(t)$ 에 대하여 $\mathbf{W}$ 는 $g(\mathbf{T})$-불변이다.
+
+- 증명
+
+    $g(\mathbf{T})$ 를 스칼라 $a_0, a_1, \dots, a_n$ 에 대하여 다음과 같이 두자. 
+
+    $$ g(\mathbf{T}) = a_n \mathbf{T}^{n} + \dots + a_1 \mathbf{T} + a_0 \mathbf{I} $$
+
+    $\forall k \in \N, \forall w \in \mathbf{W} : \mathbf{T}^{k}(w) \in \mathbf{W}$ 이다. $\mathbf{W}$ 는 부분공간이므로 합과 스칼라곱에 대하여 닫혀있다. 따라서 $w \in \mathbf{W}$ 에 대하여 $g(\mathbf{T})(w)$ 의 모든 항은 $\mathbf{W}$ 에 속하고 결국 $g(\mathbf{T})(w) \in \mathbf{W}$ 이다. ■ 
+
+## Cyclic subspace
 
 !!! def "$\mathbf{T}$-순환 부분공간($\mathbf{T}$-cyclic subspace)"
 
