@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Set/ZFC/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<title>ZFC axiom system - ccss17</title>
+<link href="../../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              ZFC axiom system
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      ccss17
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../MathHistory/">
+        Math
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../paper/1404.6388/">
+        Paper
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Computer/nand2tetris/">
+        Computer
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../ProgrammerBase/">
+        ProgrammerBase
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../security-tutorial/">
+        security tutorial
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        ccss17
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Set Theory
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Set Theory
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ArithmeticOperations/">
+        Arithmetic Operations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Polynomials/">
+        Polynomials
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/MatrixOperation/">
+        Matrix Operation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/Determinants/">
+        Determinants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/Diagonalization/">
+        Diagonalization
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/InnerProductSpaces/">
+        Inner Product Spaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/CanonicalForms/">
+        Canonical Forms
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Why the future doesn't need us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust Memo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>ZFC axiom system</h1>
+<a href="#96f97ddbe"><div class="admonition def" id="96f97ddbe">
+<p>러셀의 역설 : <span class="arithmatex">\(S = \{x : x \not\in x\}\)</span> 와 같이 정의된 집합은 모순이다. </p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(S \in S\)</span> 이면 정의에 의하여 <span class="arithmatex">\(S \not\in S\)</span> 이다. 한편 <span class="arithmatex">\(S \not\in S\)</span> 이면 <span class="arithmatex">\(S \in S\)</span> 을 얻는다. 이 역설은 기존의 집합론에 모순이 있음을 말해주었고, 수학 학계에 수학의 엄밀한 기초를 세워야한다는 사실을 알려주었다.</p>
+<p>이 역설은 함부로 집합을 만들면 모순이 생긴다는 것을 알려주었고, 수학자들은 다음 공리계를 세워서 어느때 집합을 만들면 올바른지 엄밀하게 정의하였다.</p>
+</li>
+</ul>
+<a href="#2056c7787"><div class="admonition def" id="2056c7787">
+<p class="admonition-title">ZFC 공리계(Zermelo–Fraenkel set theory with the axiom of choice)</p>
+<p>다음 공리를 갖는 공리체계이다.</p>
+<ul>
+<li>
+<p>존재공리(axiom of existence) : <span class="arithmatex">\(\exists X \forall a (\lnot (a \in X))\)</span></p>
+<p>(공집합이 존재한다.)</p>
+</li>
+<li>
+<p>확장공리(axiom of extensionality) : <span class="arithmatex">\(\forall X \forall Y(\forall a(a \in X \iff a \in Y) \iff X = Y)\)</span> </p>
+<p>(집합 <span class="arithmatex">\(x, y\)</span> 가 같을 필요충분조건은 <span class="arithmatex">\(z \in x \iff z \in y\)</span> 이다.)</p>
+</li>
+<li>
+<p>정칙성 공리(axiom of regulatrity), 기초 공리(axiom of foundation) : 다음과 같다.</p>
+<div class="arithmatex">\[\forall X (\exists a(a \in X) \implies \exists b(b \in X \land \lnot \exists c(c \in b \land c \in X)))\]</div>
+<p>(공집합이 아닌 모든 집합은 자신과 서로소인 원소를 포함한다.)</p>
+</li>
+<li>
+<p>분류공리꼴(axiom schema of specification) : <span class="arithmatex">\(a\)</span> 를 자유변수로 갖는 논리식 <span class="arithmatex">\(\phi (a)\)</span> 에 대하여 다음과 같다.</p>
+<div class="arithmatex">\[ \forall X \exists Y \forall a(a \in Y \iff (a \in X \land \phi (a))) \]</div>
+<p>(임의의 집합 <span class="arithmatex">\(X\)</span> 와 성질 <span class="arithmatex">\(P(x)\)</span> 에 대하여 <span class="arithmatex">\(P(x)\)</span> 가 성립하는 모든 <span class="arithmatex">\(x \in X\)</span> 들의 집합이 존재한다.)</p>
+</li>
+<li>
+<p>짝공리(axiom of pairing) : <span class="arithmatex">\(\forall a \forall b \exists X(a \in X \land b \in X)\)</span></p>
+<p>(임의의 집합 <span class="arithmatex">\(X, Y\)</span> 에 대하여 <span class="arithmatex">\(X \cup Y\)</span> 는 집합이다.)</p>
+</li>
+<li>
+<p>합집합공리(axiom of union) : <span class="arithmatex">\(\forall X \exists U \forall a \forall b(b \in X \land a \in b \implies a \in U)\)</span></p>
+<p>(임의의 집합 <span class="arithmatex">\(X\)</span> 에 대하여 <span class="arithmatex">\(\bigcup_{}^{}\{x : x \in X\}\)</span> 는 집합이다.)</p>
+</li>
+<li>
+<p>멱집합공리(axiom of the power set) : <span class="arithmatex">\(\forall X \exists P \forall Y(\forall a (a \in Y \implies a \in X) \implies Y \in P)\)</span></p>
+<p>(임의의 집합 <span class="arithmatex">\(X\)</span> 에 대하여 <span class="arithmatex">\(\mathcal{P}(X)\)</span> 는 집합이다.)</p>
+</li>
+<li>
+<p>무한공리(axiom of infinity) : <span class="arithmatex">\(S(x) = x \cup \{x\}\)</span> 에 대하여 <span class="arithmatex">\(\exists X(\varnothing \in X \land \forall y(y \in X \implies S(y) \in X))\)</span></p>
+</li>
+<li>
+<p>치환공리꼴(axiom schema of replacement) : <span class="arithmatex">\(x, y\)</span> 를 자유변수로 갖는 논리식 <span class="arithmatex">\(\phi (x,y)\)</span> 에 대하여 다음과 같다.</p>
+<div class="arithmatex">\[ \forall X(\forall x \in X \enspace \exists ! y \enspace \phi (x, y) \implies \exists Y \enspace \forall x \in X \enspace \exists y \in Y \enspace \phi (x, y)) \]</div>
+</li>
+<li>
+<p>선택공리(axiom of choice) : <span class="arithmatex">\(\forall X(\varnothing \not\in X \implies \exists f: X \to \bigcup_{}^{}X \quad \forall A \in X(f(A) \in A))\)</span></p>
+<p>(공집합이 아닌 집합들의 집합이 주어지면, 각 원소로부터 하나씩의 원소를 선택하는 선택함수가 존재한다.)</p>
+</li>
+</ul>
+</div></a>
+<ul>
+<li>
+<p>러셀의 역설 외에서 여러가지 역설이 발견되었었는데, 이러한 역설을 해결하기 위하여 먼저 중의적인 뜻을 항상 내포할 수 있는 자연어를 수학에서 배제하고, 다음의 기호만 쓰기로 했다. 실제로 모든 수학 체계의 내용은 다음의 단어들의 조합이다. 즉, 모든 수학을 다음의 단어만으로 전개할 수 있다.</p>
+<div class="arithmatex">\[ \land \quad \lor \quad \lnot \quad \to \quad \iff \quad \exists \quad \forall \]</div>
+<p>또한 "원소", "집합", "<span class="arithmatex">\(x \in X\)</span>" 같은 단어는 무정의 술어로 남겨서, 공리계 내부에서 자연스럽게 의미를 얻도록 했다.</p>
+<ul>
+<li>
+<p>무한공리에서 사용된 비형식적 술어 <span class="arithmatex">\(\varnothing\)</span> 는 공집합을 뜻한다.</p>
+</li>
+<li>
+<p>선택공리에서 <span class="arithmatex">\(\bigcup_{}^{}\)</span> 은 합집합을 뜻하는 비형식적 술어이며, 물론 공리계의 올바른 형식적 술어로 정의된다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>분류공리꼴로 인하여 이미 존재하는 집합에 어떤 조건을 가하여 부분 집합을 취할 수 있다. 이때 어떤 성질 <span class="arithmatex">\(\phi (a)\)</span> 를 만족하는 집합이 바로 존재한다는 것이 아니라 이미 구성된 집합의 부분집합으로써 조건을 만족시키게 하는 것은 러셀의 역설을 피하기 위해서이다.</p>
+</li>
+<li>
+<p>치환공리꼴로 인하여 어떤 논리식이 두 집합의 함수 관계라면, 함수의 상의 집합을 취할 수 있다.</p>
+</li>
+<li>
+<p>무한공리에서 자연수를 정의할 때 쓰이는 성질</p>
+<div class="arithmatex">\[ \varnothing \in \mathcal{A}, A \in \mathcal{A} \implies A ^{+} \in \mathcal{A} \]</div>
+<p>에 의하여 자연수가 정의된다. 그러므로 무한공리는 자연수의 존재성을 말하고 있다.</p>
+</li>
+<li>
+<p>무한공리와 분류공리에 의하여 <span class="arithmatex">\(\varnothing = \{x \in \N : x \neq x\}\)</span> 이므로 존재공리가 유도되어, 존재공리는 공리가 아니게 되지만 그 의미가 너무 커서 그냥 "공리" 라고 부른다. </p>
+<p>또한 짝공리도 합집합공리에서 도출되지만, 관행상 공리라고 부른다.</p>
+</li>
+<li>
+<p>치환공리를 쉽게 말하면 다음과 같다.</p>
+<p>임의의 <span class="arithmatex">\(x\)</span> 에 대하여 성질 <span class="arithmatex">\(P(x, y)\)</span> 가 성립하는 <span class="arithmatex">\(y\)</span> 가 유일하게 존재한다고 하면, 임의의 집합 <span class="arithmatex">\(X\)</span> 에 대하여 </p>
+<p>"임의의 <span class="arithmatex">\(x \in X\)</span> 에 대하여 <span class="arithmatex">\(P(x,y)\)</span> 가 성립하는 <span class="arithmatex">\(y \in Y\)</span> 가 존재한다."</p>
+<p>를 만족하는 집합 <span class="arithmatex">\(Y\)</span> 가 존재한다. </p>
+</li>
+<li>
+<p>수학의 거의 모든 분야가 ZFC 를 표준적인 공리계로 사용한다. 즉, 현대 수학의 표준적인 수학기초론으로써 ZFC 공리계가 사용된다는 것이다.</p>
+<p>굳이 예외를 들자면 카테고리 이론을 들 수 있다.</p>
+<ul>
+<li>선택공리를 제외한 것을 ZF 공리계라고 하는데, ZF 도 표준적인 공리계로 사용된다.</li>
+</ul>
+</li>
+</ul>
+<a href="#cbb47823d"><div class="admonition def" id="cbb47823d">
+<p class="admonition-title">무모순성(consistency)</p>
+<p>어떤 이론을 전개하기 위하여 공리계를 도입할 때 그 공리계에서 모순된 명제가 도출되지 않는다는 성질이다.</p>
+</div></a>
+<a href="#cea018b67"><div class="admonition def" id="cea018b67">
+<p class="admonition-title">독립성(independence)</p>
+<p>공리계의 한 공리가 다른 공리로부터 도출되지 않아야 한다는 성질이다.</p>
+</div></a>
+<ul>
+<li>ZFC 공리계에서 존재공리는 다른 공리로부터 유도되지만 그 중요성 때문에 관례상 공리라고 부른다.</li>
+</ul>
+<a href="#c99d7117c"><div class="admonition def" id="c99d7117c">
+<p class="admonition-title">결정불가능한 명제(undecidable)</p>
+<p>어떤 공리계 안에서 증명하는 것도, 반증하는 것도 불가능한 명제이다.</p>
+</div></a>
+<a href="#72190f07d"><div class="admonition def" id="72190f07d">
+<p class="admonition-title">완전성(completeness)</p>
+<p>어떤 공리계가 결정불가능한 명제를 가지지 않으면 공리계가 완전하다고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>세 개의 명제 <span class="arithmatex">\(P_1, P_2, P_3\)</span> 에 대하여 이 세 명제를 모두 만족하는 모델이 있으면 세 명제 사이에 모순이 없음을 알 수 있다. 이 경우 <span class="arithmatex">\(P_1, P_2\)</span> 로부터 <span class="arithmatex">\(\lnot P_3\)</span> 을 증명하는 것은 불가능하다.</p>
+<p>또한 <span class="arithmatex">\(P_1, P_2, \lnot P_3\)</span> 을 만족하는 모델이 있으면 <span class="arithmatex">\(P_1, P_2\)</span> 로부터 <span class="arithmatex">\(P_3\)</span> 을 증명하는 것은 불가능하다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(X\)</span> 와 이 집합에 정의된 관계 <span class="arithmatex">\(&lt;\)</span> 에 대한 명제 </p>
+<p><span class="arithmatex">\(P_1\)</span>: <span class="arithmatex">\(\forall x, y \in X\)</span> 에 대하여 <span class="arithmatex">\(x&lt;y\)</span> 와 <span class="arithmatex">\(y&lt;x\)</span> 가 동시에 성립하지 않는다.</p>
+<p><span class="arithmatex">\(P_2\)</span>: <span class="arithmatex">\(\forall x, y, z \in X\)</span> 에 대하여 <span class="arithmatex">\(x&lt;y \land y &lt; z \implies x &lt; z\)</span> 이다.</p>
+<p><span class="arithmatex">\(P_3\)</span>: <span class="arithmatex">\(\forall x, y \in X\)</span> 에 대하여 <span class="arithmatex">\(x&lt;y, x=y, y&lt;x\)</span> 중 하나가 성립한다. </p>
+<p>를 생각하자. 모델 <span class="arithmatex">\((2 ^{\{0,1\}}, \subsetneq )\)</span> 은 <span class="arithmatex">\(P_1, P_2\)</span> 을 만족하지만 <span class="arithmatex">\(P_3\)</span> 은 만족하지 않는다. 따라서 <span class="arithmatex">\(P_1, P_2\)</span> 에서 <span class="arithmatex">\(P_3\)</span> 을 증명할 수 없다.</p>
+<p>한편 모델 <span class="arithmatex">\((2 ^{\{0\}}, \subsetneq )\)</span> 은 <span class="arithmatex">\(P_1, P_2\)</span> 을 만족하지만 <span class="arithmatex">\(\lnot P_3\)</span> 을 만족하지 않으므로 <span class="arithmatex">\(P_1, P_2\)</span> 로부터 <span class="arithmatex">\(\lnot P_3\)</span> 을 증명할 수 없다. 따라서 <span class="arithmatex">\(P_3\)</span> 은 공리계 <span class="arithmatex">\(\{P_1, P_2\}\)</span> 안에서 결정불가능한 명제이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#e27312fd9"><div class="admonition def" id="e27312fd9">
+<p class="admonition-title">정리 4.2.1 괴델의 불완전성 정리(Gödel's incompleteness theorems)</p>
+<p>페아노 공리계가 무모순이면 그 공리계 안에서 결정불가능한 명제가 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p>힐베르트는 산술 체계의 무모순성을 묻는 문제를 공표하면서 산술 체계의 무모순성을 증명함으로써 집합론의 무모순성과 더 나아가 수학의 무모순성을 증명할 수 있을 것이라고 믿었다. 하지만 괴델이 이 정리를 발표하여 산술 체계의 무모순성과 완전성이 양립 불가능함을 보였다. </p>
+<p>그렇다면 페아노 공리계에 다른 공리를 추가하여 무모순성을 해결하면 되지 않은가 라고 생각할 수 있으나 그 추가된 공리로 인하여 또 다른 결정불가능 명제가 자동으로 생성된다. 즉, 불완전성 정리란 아무리 공리를 추가하여도 무모순성과 완전성을 동시에 만족시킬 수 없음을 말한다.</p>
+</li>
+</ul>
+<a href="#d7520bbd8"><div class="admonition def" id="d7520bbd8">
+<p class="admonition-title">정리 4.2.2</p>
+<p>ZF 공리계가 무모순이면 ZFC 공리계도 무모순이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리도 괴델이 보였다. </p>
+</li>
+<li>
+<p>이 정리는 ZF 공리계가 선택공리를 받아들이는 것이 안전하다는 것을 말해준다. 또한 괴델은 연속체 가설을 ZF 공리계에 받아들이는 것이 안전함을 보였다. 연속체 가설은 <span class="arithmatex">\(\mathfrak{c} = \aleph _1\)</span> 임을 묻는데, 칸토어는 이를 증명하려고 무던히 노력했지만 실패했다.</p>
+</li>
+</ul>
+<a href="#5855a289f"><div class="admonition def" id="5855a289f">
+<p>ZFC 공리계에 <span class="arithmatex">\(\mathfrak{c} = \aleph _n\)</span> 을 더한 공리계를 </p>
+<div class="arithmatex">\[\text{ZFC} + (c = \aleph _n)\]</div>
+<p>라고 정의한다.</p>
+</div></a>
+<a href="#524dc0166"><div class="admonition def" id="524dc0166">
+<p class="admonition-title">정리 4.2.3</p>
+<p>ZF 공리계가 무모순이면 <span class="arithmatex">\(\text{ZFC} + (\mathfrak{c} = \aleph _1)\)</span> 공리계도 무모순이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리가 연속체 가설이 안전하다는 괴델의 정리이다. </p>
+</li>
+<li>
+<p>지금까지는 ZF 공리계 안에서 <span class="arithmatex">\(\mathfrak{c} = \aleph _1\)</span> 을 증명할 수 있는지 알 수 없었다. 즉, <span class="arithmatex">\(\mathfrak{c} = \aleph _1\)</span> 이 ZF 공리계로부터 독립적인지 알 수 없었다. 그러나 1963년 코헨이 다음의 정리를 증명했다.</p>
+</li>
+</ul>
+<a href="#84da94979"><div class="admonition def" id="84da94979">
+<p class="admonition-title">정리 4.2.4</p>
+<p>ZF 공리계가 무모순이면, <span class="arithmatex">\(\forall n \in \N\)</span> 에 대하여 <span class="arithmatex">\(\text{ZFC} + (\mathfrak{c} = \aleph _n)\)</span> 공리계도 무모순이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 ZF 공리계에서 </p>
+<div class="arithmatex">\[ \mathfrak{c} = \aleph _1, \enspace \mathfrak{c} = \aleph _2, \enspace \mathfrak{c} = \aleph _3, \dots \]</div>
+<p>중 어떤 것을 공리로 택해도 안전함을 말해준다. 또 이는 <span class="arithmatex">\(\mathfrak{c} = \aleph _1\)</span> 이 ZF 공리계에서 증명될 수 없음을 말해주고, <span class="arithmatex">\(\mathfrak{c} \neq \aleph _1\)</span> 도 증명될 수 없음을 말해준다. 즉 <span class="arithmatex">\(\mathfrak{c} = \aleph _1\)</span> 는 ZFC 공리계에서 결정불가능한 명제였다.</p>
+</li>
+<li>
+<p>즉, 괴델은 ZF 공리계가 무모순이라는 가정 하에 연속체 가설의 무모순을 보였고, 코헨은 연속체 가설의 독립성을 보였다.</p>
+</li>
+<li>
+<p>유클리드 기하의 평행선 공리는 역사적으로 수학자들이 다른 공리로부터 도출하여 정리로 만드려고 무단히 노력했지만 실패했다. 그러나 결국 19세기 평행선 공리를 부정하면 비유클리드 기하학이 생성된다는 것이 발견되었다. 이는 평행선 공리가 유클리드 기하학의 다른 공리로부터 독립적임을 뜻했다. </p>
+<p>연속체 가설도 평행선 공리와 같은 위치에 있는 것이다.</p>
+</li>
+</ul>
+<hr/>
+<dl>
+<dt>ref:</dt>
+<dd>
+<p>집합과 수의 체계</p>
+</dd>
+</dl>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<!-- 
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer> -->
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
+<script src="../../../javascripts/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+<script src="../../../javascripts/b27b3e6448.js"></script>
+</body>
+</html>

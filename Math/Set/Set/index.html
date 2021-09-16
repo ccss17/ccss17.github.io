@@ -1,0 +1,2888 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/Set/Set/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<title>Set - ccss17</title>
+<link href="../../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#proposition">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Set
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      ccss17
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../MathHistory/">
+        Math
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../paper/1404.6388/">
+        Paper
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Computer/nand2tetris/">
+        Computer
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../ProgrammerBase/">
+        ProgrammerBase
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../security-tutorial/">
+        security tutorial
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        ccss17
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Set Theory
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Set Theory
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Set
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Set
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proposition">
+    Proposition
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set">
+    Set
+  </a>
+<nav aria-label="Set" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#union">
+    Union
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intersection">
+    Intersection
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ordered-pair">
+    Ordered pair
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#product-set">
+    Product Set
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#power-set">
+    Power set
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function">
+    Function
+  </a>
+<nav aria-label="Function" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-equality">
+    Function Equality
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identity-function">
+    Identity Function
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#restriction">
+    Restriction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-function">
+    Composite Function
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-function-satisfies-associativity">
+    Composite Function satisfies Associativity
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#injection">
+    Injection
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#surjection">
+    Surjection
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bijection">
+    Bijection
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inverse-function">
+    Inverse Function
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#binary-operation">
+    Binary Operation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-of-all-functions">
+    Set of All Functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#characteristic-function">
+    Characteristic Function
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#projection">
+    Projection
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#equivalence-relation">
+    Equivalence Relation
+  </a>
+<nav aria-label="Equivalence Relation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#equivalence-class">
+    Equivalence Class
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#partition">
+    Partition
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quotient-set">
+    Quotient Set
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#order">
+    Order
+  </a>
+<nav aria-label="Order" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relation-of-order-relations">
+    Relation of Order Relations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bounded-set">
+    Bounded Set
+  </a>
+<nav aria-label="Bounded Set" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#supremum">
+    Supremum
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#infimum">
+    Infimum
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convex-set">
+    Convex Set
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lattice">
+    Lattice
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ArithmeticOperations/">
+        Arithmetic Operations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Polynomials/">
+        Polynomials
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/MatrixOperation/">
+        Matrix Operation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/Determinants/">
+        Determinants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/Diagonalization/">
+        Diagonalization
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/InnerProductSpaces/">
+        Inner Product Spaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../LinearAlgebra/CanonicalForms/">
+        Canonical Forms
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Why the future doesn't need us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust Memo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#proposition">
+    Proposition
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set">
+    Set
+  </a>
+<nav aria-label="Set" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#union">
+    Union
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intersection">
+    Intersection
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ordered-pair">
+    Ordered pair
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#product-set">
+    Product Set
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#power-set">
+    Power set
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function">
+    Function
+  </a>
+<nav aria-label="Function" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#function-equality">
+    Function Equality
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identity-function">
+    Identity Function
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#restriction">
+    Restriction
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-function">
+    Composite Function
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#composite-function-satisfies-associativity">
+    Composite Function satisfies Associativity
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#injection">
+    Injection
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#surjection">
+    Surjection
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bijection">
+    Bijection
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inverse-function">
+    Inverse Function
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#binary-operation">
+    Binary Operation
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#set-of-all-functions">
+    Set of All Functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#characteristic-function">
+    Characteristic Function
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#projection">
+    Projection
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#equivalence-relation">
+    Equivalence Relation
+  </a>
+<nav aria-label="Equivalence Relation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#equivalence-class">
+    Equivalence Class
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#partition">
+    Partition
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quotient-set">
+    Quotient Set
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#order">
+    Order
+  </a>
+<nav aria-label="Order" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relation-of-order-relations">
+    Relation of Order Relations
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#bounded-set">
+    Bounded Set
+  </a>
+<nav aria-label="Bounded Set" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#supremum">
+    Supremum
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#infimum">
+    Infimum
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#convex-set">
+    Convex Set
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lattice">
+    Lattice
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Set</h1>
+<h2 id="proposition">Proposition<a class="headerlink" href="#proposition" title="Permanent link">¶</a></h2>
+<a href="#35d3735f9"><div class="admonition def" id="35d3735f9">
+<p class="admonition-title">명제(proposition)</p>
+<p>문장들 가운데 참 또는 거짓인 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>"<span class="arithmatex">\(5\)</span> 는 자연수이다." 는 명제이다.</p>
+</li>
+</ul>
+<a href="#56372f330"><div class="admonition def" id="56372f330">
+<p class="admonition-title">명제의 부정(negation of proposition)</p>
+<p>명제 <span class="arithmatex">\(p\)</span> 에 대한 명제 "<span class="arithmatex">\(p\)</span>가 아니다." 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>명제의 부정을  <span class="arithmatex">\(\lnot p\)</span> 로 표기한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>명제 <span class="arithmatex">\(p\)</span> "<span class="arithmatex">\(5\)</span> 는 자연수이다." 의 부정 <span class="arithmatex">\(\lnot p\)</span> 은 "<span class="arithmatex">\(5\)</span> 는 자연수가 아니다." 이다.</p>
+</li>
+</ul>
+<a href="#70b1e85b8"><div class="admonition def" id="70b1e85b8">
+<p class="admonition-title">진리표(Truth table)</p>
+<p>명제 <span class="arithmatex">\(p\)</span> 에 따른 다른 명제들의 결과를 표로 정리한 것이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>명제 <span class="arithmatex">\(p\)</span> 가 참이면 부정 <span class="arithmatex">\(\lnot p\)</span> 은 거짓이 되고, 거짓이면 참이 되는데 이것을 표로 정리하면 다음과 같다. </p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(p\)</span></th>
+<th align="center"><span class="arithmatex">\(\lnot p\)</span></th>
+<th align="center"><span class="arithmatex">\(\lnot (\lnot p)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>진리표를 통하여 <span class="arithmatex">\(p\)</span> 와 <span class="arithmatex">\(\lnot (\lnot p)\)</span> 의 옳고 그름이 같다는 것을 알 수 있다.</p>
+</li>
+</ul>
+<a href="#e0bbd02d5"><div class="admonition def" id="e0bbd02d5">
+<p class="admonition-title">논리합(Logical disjuntion)</p>
+<p>명제 <span class="arithmatex">\(p, q\)</span> 에 대하여 명제 <span class="arithmatex">\(p \lor q\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>"<span class="arithmatex">\(p \lor q\)</span>" 는 <span class="arithmatex">\(p\)</span>와 <span class="arithmatex">\(q\)</span> 중 하나만 참이어도 <span class="arithmatex">\(p \lor q\)</span> 가 참이 된다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>명제 "<span class="arithmatex">\(18\)</span>은 <span class="arithmatex">\(4\)</span>의 배수이거나 <span class="arithmatex">\(6\)</span>의 배수이다." 는 명제 "[<span class="arithmatex">\(18\)</span>은 <span class="arithmatex">\(4\)</span>의 배수이다.] <span class="arithmatex">\(\lor\)</span> [<span class="arithmatex">\(18\)</span>은 <span class="arithmatex">\(6\)</span> 의 배수이다.]" 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(p \lor q\)</span>, 즉 "<span class="arithmatex">\(p\)</span> 또는 <span class="arithmatex">\(q\)</span>" 의 부정은 "<span class="arithmatex">\(p\)</span>도 아니고 <span class="arithmatex">\(q\)</span>도 아니다.", 즉 <span class="arithmatex">\((\lnot p) \land (\lnot q)\)</span> 이다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>"그곳에 풀이나 나무 중 적어도 한 가지가 있었다." 의 부정은 "그곳에 풀도 없었고 나무도 없었다." 가 된다.</p>
+</li>
+<li>
+<p>위 예시로 <span class="arithmatex">\(\lnot (p \lor q) \equiv (\lnot p) \land (\lnot q)\)</span> 임을 알 수 있다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>그러므로 진리표는 다음과 같다. </p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(p\)</span></th>
+<th align="center"><span class="arithmatex">\(q\)</span></th>
+<th align="center"><span class="arithmatex">\(p \lor q\)</span></th>
+<th align="center"><span class="arithmatex">\(\lnot (p \lor q)\)</span></th>
+<th align="center"><span class="arithmatex">\((\lnot p) \land (\lnot q)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<a href="#e311bf683"><div class="admonition def" id="e311bf683">
+<p class="admonition-title">논리곱(Logical conjunction)</p>
+<p>명제 <span class="arithmatex">\(p, q\)</span> 에 대한 명제 <span class="arithmatex">\(p \land q\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>"<span class="arithmatex">\(p \land q\)</span>" 는 <span class="arithmatex">\(p\)</span>와 <span class="arithmatex">\(q\)</span> 가 둘 다 참이어야 <span class="arithmatex">\(p \land q\)</span> 가 참이 된다.</p>
+</li>
+<li>
+<p>진리표는 다음과 같다. </p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(p\)</span></th>
+<th align="center"><span class="arithmatex">\(q\)</span></th>
+<th align="center"><span class="arithmatex">\(p \land q\)</span></th>
+<th align="center"><span class="arithmatex">\(\lnot (p \land q)\)</span></th>
+<th align="center"><span class="arithmatex">\((\lnot p) \lor (\lnot q)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<a href="#d392a2c9c"><div class="admonition def" id="d392a2c9c">
+<p class="admonition-title">실질 조건문(material conditional)</p>
+<p>명제 <span class="arithmatex">\(p,q\)</span> 에 대한 명제 <span class="arithmatex">\(p \to q\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>"<span class="arithmatex">\(p\)</span> 이면 <span class="arithmatex">\(q\)</span> 이다" 로 읽는다. 이 명제의 부정은 <span class="arithmatex">\(p\)</span>는 성립하지만 <span class="arithmatex">\(q\)</span> 는 성립하지 않는 것이므로 </p>
+<div class="arithmatex">\[ \lnot (p \to q) \equiv p \land (\lnot q) \]</div>
+<p>이다. 이것을 다시 쓰면</p>
+<div class="arithmatex">\[ p \to q \equiv \lnot  p \lor q \]</div>
+<p>이다. 그러므로 진리표는</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(p\)</span></th>
+<th align="center"><span class="arithmatex">\(q\)</span></th>
+<th align="center"><span class="arithmatex">\(\lnot  p \lor q\)</span></th>
+<th align="center"><span class="arithmatex">\(p \to q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(F\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+<td align="center"><span class="arithmatex">\(T\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>이다.</p>
+<p>그러므로 <span class="arithmatex">\(p\)</span> 가 거짓이면 <span class="arithmatex">\(p \to q\)</span> 는 항상 참이다. 이것을 공진리라고 한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(p \to q\)</span> 이고 <span class="arithmatex">\(q \to p\)</span> 일때 즉, <span class="arithmatex">\((p \to q)\land (q \to p)\)</span> 일 때 <span class="arithmatex">\(p \iff q\)</span> 라고 한다.</p>
+</li>
+</ul>
+<a href="#43268ed8b"><div class="admonition def" id="43268ed8b">
+<p class="admonition-title"><span class="arithmatex">\(p \implies q\)</span></p>
+<p><span class="arithmatex">\(p \to q\)</span> 가 참일 때 <span class="arithmatex">\(p \implies q\)</span> 라고 한다.</p>
+</div></a>
+<ul>
+<li><span class="arithmatex">\(p \implies q\)</span> 이고 <span class="arithmatex">\(q \implies p\)</span> 일 때, <span class="arithmatex">\(p \iff q\)</span> 라고 한다.</li>
+</ul>
+<a href="#ce4f820aa"><div class="admonition def" id="ce4f820aa">
+<p class="admonition-title">조건(condition)</p>
+<p>변수 <span class="arithmatex">\(x\)</span> 를 포함하는 문장은 변수가 정해짐에 따라 명제가 되는데, 이런 문장을 조건이라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>변수 <span class="arithmatex">\(x\)</span> 를 포함하는 문장 "<span class="arithmatex">\(x\)</span> 는 <span class="arithmatex">\(6\)</span> 의 약수이다." 는 <span class="arithmatex">\(x\)</span> 가 초기화됨에 따라 명제가 되므로 조건이다.</p>
+</li>
+</ul>
+<h2 id="set">Set<a class="headerlink" href="#set" title="Permanent link">¶</a></h2>
+<a href="#1df7ef5a2"><div class="admonition def" id="1df7ef5a2">
+<p class="admonition-title">집합(set)</p>
+<p>어떤 기준에 부합하는 대상들의 모임이다.</p>
+</div></a>
+<ul>
+<li>
+<p>어떤 대상이 특정 집합에 속해있으면 그 대상을 집합의 원소라고 한다. </p>
+</li>
+<li>
+<p>원소 <span class="arithmatex">\(a\)</span> 가 집합 <span class="arithmatex">\(A\)</span> 에 속해있으면 </p>
+<div class="arithmatex">\[ a \in A \]</div>
+<p>로 표현하고 원소 <span class="arithmatex">\(a\)</span> 가 집합 <span class="arithmatex">\(A\)</span> 에 속해있지 않으면 </p>
+<div class="arithmatex">\[ a \not \in A \]</div>
+<p>로 표현한다.</p>
+</li>
+<li>
+<p>1895년 칸토어가 집합론을 처음 발표했을 때 그가 내린 집합의 정의는 "직관이나 사고를 통해 명확히 구별할 수 있는 대상을 하나의 전체로 묶어 놓은 것"이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<ul>
+<li>
+<p>키가 <span class="arithmatex">\(160\)</span>cm 이상인 학생들의 모임</p>
+</li>
+<li>
+<p>대한민국 국적을 가진 사람들의 모임</p>
+</li>
+</ul>
+</li>
+<li>
+<p>집합은 다음 <span class="arithmatex">\(3\)</span> 가지 방법으로 표현할 수 있다.</p>
+<ol>
+<li>
+<p>원소나열법 : <span class="arithmatex">\(\{ \}\)</span> 안에 집합의 모든 원소를 나열하는 것이다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(A = \{ \text{재석, 명수, 준하, 하하, 세호, 세형}\}\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>조건제시법 : <span class="arithmatex">\(\{x|x \text{의 조건}\}\)</span> 과 같이 모든 원소들의 공통된 성질을 제시하는 방법이다. </p>
+<ul>
+<li>
+<p>원소나열법으로 집합을 나타내기 어려운 경우 자주 사용된다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(A = \{x|x \text{ 는 대한민국 국적을 가진 사람 }\}\)</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>벤다이어그램 : 도형을 통하여 집합을 나타내는 방법이다.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>집합은 다음과 같이 분류된다.</p>
+<ul>
+<li>
+<p>유한집합 : 원소의 개수가 유한한 집합이다. </p>
+<ul>
+<li>유한집합 <span class="arithmatex">\(A\)</span> 의 원소의 개수는 <span class="arithmatex">\(n(A)\)</span> 로 나타낸다. </li>
+</ul>
+</li>
+<li>
+<p>무한집합 : 원소의 개수가 무한한 집합이다. </p>
+</li>
+<li>
+<p>공집합 : 원소가 하나도 없는 집합이다.</p>
+<ul>
+<li>공집합은 <span class="arithmatex">\(\emptyset\)</span> 으로 표시한다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#fb9d0b761"><div class="admonition def" id="fb9d0b761">
+<p class="admonition-title">진리집합(truth set)</p>
+<p>변수 <span class="arithmatex">\(x\)</span> 를 포함하는 조건을 참이되게 하는 변수 <span class="arithmatex">\(x\)</span> 의 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>변수 <span class="arithmatex">\(x\)</span> 에 대한 조건 "<span class="arithmatex">\(x\)</span> 는 <span class="arithmatex">\(6\)</span> 의 약수이다." 의 진리집합은 </p>
+<div class="arithmatex">\[ P = \{x:x\text{는 6 의 약수} \} \]</div>
+<p>이다. 이때 "<span class="arithmatex">\(x \in P\)</span>" 와 "<span class="arithmatex">\(x\)</span> 는 <span class="arithmatex">\(6\)</span> 의 약수" 는 같다.</p>
+</li>
+<li>
+<p>조건은 이미 존재하는 집합을 상정하고 그 집합에 특정 조건을 가하여 얻은 부분집합으로 구성하는 경우가 많다. </p>
+<p>만약 전체집합을 <span class="arithmatex">\(U\)</span> 로 가정하는 경우 조건 <span class="arithmatex">\(p(x)\)</span> 를 집합 <span class="arithmatex">\(U\)</span> 에서 정의했다고 한다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>변수 <span class="arithmatex">\(x\)</span> 에 대한 조건 "<span class="arithmatex">\(x\)</span> 는 <span class="arithmatex">\(6\)</span> 의 약수이다." 은 자연수 집합 <span class="arithmatex">\(\mathbb{N}\)</span> 을 상정하고 정의된 것이므로 진리집합을 더 엄밀하게 쓰면</p>
+<div class="arithmatex">\[ P = \{x \in \mathbb{N}:x\text{는 6 의 약수} \} = \{1,2,3,6\}\]</div>
+<p>이 된다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#6167b33b4"><div class="admonition def" id="6167b33b4">
+<p class="admonition-title">집합의 상등(set equality)</p>
+<p>조건 <span class="arithmatex">\(p\)</span> 의 진리집합 <span class="arithmatex">\(A\)</span>, 조건 <span class="arithmatex">\(q\)</span> 의 진리집합 <span class="arithmatex">\(B\)</span> 에 대하여 다음 동치조건이 성립하면 <span class="arithmatex">\(A = B\)</span> 라 한다.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(p \iff q\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(x \in A \iff x \in B\)</span></p>
+</li>
+</ul>
+</div></a>
+<ul>
+<li>
+<p>두 집합이 서로 같다는 것은 서로가 서로의 부분집합이라는 것이다. 임의의 두 집합 <span class="arithmatex">\(A, B\)</span> 가 서로 같다는 것은 <span class="arithmatex">\(A \subset B\)</span> 와 <span class="arithmatex">\(B \subset A\)</span> 를 만족한다는 것이고 <span class="arithmatex">\(A = B\)</span> 로 표현한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(x \in A\)</span> 는 조건 <span class="arithmatex">\(p\)</span> 를 참이되게 하는 <span class="arithmatex">\(A\)</span> 의 원소 <span class="arithmatex">\(x\)</span> 에 대한 것이므로 참이 된 조건 <span class="arithmatex">\(p\)</span> 를 뜻한다. </p>
+<p>그러므로 <span class="arithmatex">\(x \in A\)</span> 라는 표기는 참과 거짓이 정해졌으므로 더 이상 조건이 아니라 명제를 뜻한다.</p>
+</li>
+</ul>
+<a href="#935c51201"><div class="admonition def" id="935c51201">
+<p class="admonition-title">대우명제(Contraposition)</p>
+<p><span class="arithmatex">\(p \to q\)</span> 의 대우는 <span class="arithmatex">\(\lnot q \to \lnot p\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>조건 <span class="arithmatex">\(p(x)\)</span> 의 진리집합 <span class="arithmatex">\(P\)</span> 에 대하여 명제 "어떤 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(p(x)\)</span> 이다." 는 어떤 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(p(x)\)</span> 가 참이되게 하는 <span class="arithmatex">\(x\)</span> 가 하나 이상 있다는 뜻이다. 그러므로 이 명제는</p>
+<div class="arithmatex">\[ P \neq \emptyset \]</div>
+<p>와 같다. 이것을 부정하면 <span class="arithmatex">\(P = \emptyset\)</span> 인데, 이것은 곧 <span class="arithmatex">\(P ^{c} = U\)</span> 이므로 </p>
+<div class="arithmatex">\[ U = P ^{c} = \{x|\lnot p(x)\} \]</div>
+<p>이고, 이것을 말로 설명하면 "임의의 <span class="arithmatex">\(x\)</span> 에 대하여 <span class="arithmatex">\(\lnot p(x)\)</span> 이다." 이다.</p>
+<p>그러므로 <span class="arithmatex">\(\lnot [\text{어떤 x 에 대하여 p(x)}] \equiv \text{임의의 x 에 대하여} \lnot  \text{p(x)}\)</span> 즉, </p>
+<div class="arithmatex">\[ \lnot [\exists x, p(x)] \equiv [\forall x, \lnot p(x)] \]</div>
+<p>이다. 마찬가지로</p>
+<div class="arithmatex">\[ \lnot [\forall x, p(x)] \equiv [\exists  x, \lnot p(x)] \]</div>
+<p>이다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>"임의의 <span class="arithmatex">\(a &lt; 0\)</span> 에 대하여 <span class="arithmatex">\(x \geq a\)</span> 이다." 는 변수 <span class="arithmatex">\(x\)</span> 에 관한 조건인데, 이것의 대우명제는 "<span class="arithmatex">\(x&lt;a\)</span> 인 음수 <span class="arithmatex">\(a&lt;0\)</span> 이 존재한다." 이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#d8ea9c1ca"><div class="admonition def" id="d8ea9c1ca">
+<p class="admonition-title">부분집합(subest)</p>
+<p>조건 <span class="arithmatex">\(p\)</span> 의 진리집합 <span class="arithmatex">\(A\)</span>, 조건 <span class="arithmatex">\(q\)</span> 의 진리집합 <span class="arithmatex">\(B\)</span> 에 대하여 다음 동치조건을 만족하는 <span class="arithmatex">\(A\)</span> 를 <span class="arithmatex">\(B\)</span> 의 부분집합이라 한다.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(p \to q\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(x \in A \to x \in B\)</span></p>
+</li>
+</ul>
+</div></a>
+<ul>
+<li>
+<p><strong><span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(B\)</span> 의 부분집합이라는 것을 <span class="arithmatex">\(A \subset B\)</span> 라고 표기한다.</strong></p>
+</li>
+<li>
+<p>집합 <span class="arithmatex">\(A\)</span> 의 모든 원소가 집합 <span class="arithmatex">\(B\)</span> 에 속하면 집합 <span class="arithmatex">\(A\)</span> 는 집합 <span class="arithmatex">\(B\)</span> 의 부분집합이다. 따라서 모든 집합은 자기 자신의 부분집합이다. 이것은 <span class="arithmatex">\(A \subset A\)</span> 로 표현된다. </p>
+</li>
+<li>
+<p>공집합은 모든 집합의 부분집합이다. 이것은 <span class="arithmatex">\(\emptyset \subset A\)</span> 로 표현된다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(B\)</span> 의 부분집합이라는 것을 <span class="arithmatex">\(A \subset B\)</span> 이라고 표현한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(B\)</span> 의 부분집합이 아니라는 것을 <span class="arithmatex">\(A \not \subset B\)</span> 이라고 표현한다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>세 집합 <span class="arithmatex">\(A, B, C\)</span> 가 <span class="arithmatex">\(A = \{a, b, c\}, B = \{a, b, c, d, e\}, C = \{d, e, f, g\}\)</span> 일 때 집합 <span class="arithmatex">\(A\)</span> 의 원소가 모두 <span class="arithmatex">\(B\)</span> 에 속하지만 <span class="arithmatex">\(C\)</span> 의 원소가 <span class="arithmatex">\(B\)</span> 에 속하지는 않는다. 따라서 다음이 성립한다. </p>
+<div class="arithmatex">\[ A \subset B \]</div>
+<div class="arithmatex">\[ C \not \subset B \]</div>
+</li>
+</ul>
+<a href="#219bc7d8e"><div class="admonition def" id="219bc7d8e">
+<p class="admonition-title">진부분집합(proper subset)</p>
+<p>집합 <span class="arithmatex">\(A, B\)</span> 에 대하여 <span class="arithmatex">\(A \neq B \land A \subset B\)</span> 이면 <span class="arithmatex">\(A\)</span> 를 <span class="arithmatex">\(B\)</span> 의 진부분집합이라고 한다.</p>
+</div></a>
+<a href="#dfca8db8d"><div class="admonition def" id="dfca8db8d">
+<p class="admonition-title">여집합(complement set)</p>
+<p>집합 <span class="arithmatex">\(A\)</span> 에 대하여 <span class="arithmatex">\(A ^{c}=\{x:x \not \in A\}\)</span> 를 <span class="arithmatex">\(A\)</span> 의 여집합이라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>조건 <span class="arithmatex">\(p\)</span> 의 진리집합이 <span class="arithmatex">\(P\)</span> 이면 그 부정 <span class="arithmatex">\(\lnot p\)</span> 의 진리집합은 <span class="arithmatex">\(P ^{c}\)</span> 이다.</p>
+</li>
+<li>
+<p>집합 <span class="arithmatex">\(A\)</span> 에 대하여 다음이 성립한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\((A ^{c})^{c} = A\)</span></p>
+</li>
+<li>
+<p>증명 </p>
+<div class="arithmatex">\[ x \in (A ^{c})^{c} \iff \lnot (x \in A ^{c}) \iff \lnot (\lnot x \in A) \iff x \in A \]</div>
+</li>
+</ol>
+</li>
+</ul>
+<a href="#af0a70d02"><div class="admonition def" id="af0a70d02">
+<p class="admonition-title">공집합(empty set)</p>
+<p>원소가 없는 집합 <span class="arithmatex">\(\emptyset\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>전체집합 <span class="arithmatex">\(U\)</span> 에 대하여 다음이 성립한다.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\emptyset ^{c} = U, U ^{c} = \emptyset\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(A \cup A ^{c} = U, A \cap A ^{c} = \emptyset\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#b7eb8383f"><div class="admonition def" id="b7eb8383f">
+<p class="admonition-title">집합족(family of sets)</p>
+<p>집합을 원소로 하여 구성된 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>집합 <span class="arithmatex">\(X\)</span> 속의 집합족이란 <span class="arithmatex">\(X\)</span> 의 부분집합으로 이루어진 집합이다. </p>
+<p>즉, <span class="arithmatex">\(X\)</span> 속의 집합족은 <span class="arithmatex">\(X\)</span> 의 멱집합 <span class="arithmatex">\(\mathcal{P}(X)\)</span> 의 부분집합 <span class="arithmatex">\(\mathcal{F} \subseteq  \mathcal{P}(X)\)</span> 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(\{\{2, \{3\}\}, \{1\}, \{5,6\}\}\)</span> 은 모든 원소가 집합이므로 집합족이다.</p>
+<p>임의의 집합 <span class="arithmatex">\(X\)</span> 에 대하여 공집합 <span class="arithmatex">\(\emptyset\)</span> 과 <span class="arithmatex">\(X\)</span> 의 멱집합 <span class="arithmatex">\(\mathcal{P}(X)\)</span> 은 <span class="arithmatex">\(X\)</span> 속의 집합족이다.</p>
+</li>
+</ul>
+<a href="#1d7c72fb8"><div class="admonition def" id="1d7c72fb8">
+<p class="admonition-title">서로소인 집합족(disjoint family of sets)</p>
+<p>집합족 <span class="arithmatex">\(\mathcal{A} = \{A_i : i \in I\}\)</span> 가 다음을 만족하면 서로소인 집합족이라 한다.</p>
+<div class="arithmatex">\[ i,i \in I, i \neq j \implies A_i \cap A_j = \emptyset \]</div>
+</div></a>
+<ul>
+<li>
+<p>서로소인 집합족의 합집합을 </p>
+<div class="arithmatex">\[ \bigsqcup_{i \in I}^{}A_i \]</div>
+<p>로 표현한다.</p>
+</li>
+</ul>
+<h3 id="union">Union<a class="headerlink" href="#union" title="Permanent link">¶</a></h3>
+<a href="#189479e11"><div class="admonition def" id="189479e11">
+<p class="admonition-title">합집합(union)</p>
+<p>두 집합 <span class="arithmatex">\(A, B\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ A \cup B = \{x:x \in A \lor x \in B\} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>정의에 따라 조건 <span class="arithmatex">\(p, q\)</span> 의 진리집합 <span class="arithmatex">\(P, Q\)</span> 에 대하여 조건 <span class="arithmatex">\(p \lor q\)</span> 의 진리집합은 <span class="arithmatex">\(P \cup Q\)</span> 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \{1,2,3\}\cup \{3,4\}=\{1,2,3,4\} \]</div>
+<p>이다.</p>
+<div class="arithmatex">\[ A \cup B \cup C = \{x : x \in A \lor x \in B \lor x \in C\} \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>가산 개의 집합의 합집합</p>
+<p>자연수 개수만큼 무한히 많은 집합을 다음과 같이 일렬로 나열 가능하다면,</p>
+<div class="arithmatex">\[ A, B, C, D , \dots \]</div>
+<p>다음과 같이 이들에게 자연수를 매길 수 있다. </p>
+<div class="arithmatex">\[ A_1, A_2, A_3, A_4, \dots \]</div>
+<p>이때 이것들의 합집합을 다음과 같이 표기한다. </p>
+<div class="arithmatex">\[ A_1 \cup A_2 \cup \dots = \bigcup_{i=0}^{\infty}A_i =\bigcup_{i \in \mathbb{N}}^{}A_i := \{x: \exists i \in \mathbb{N}, x \in A_i\} \]</div>
+</li>
+<li>
+<p>임의의 첨수족의 합집합</p>
+<p>자연수 <span class="arithmatex">\(\mathbb{N}\)</span> 으로 번호를 매기는 것은 과하거나(유한 개의 집합들), 적당하거나(자연수 개수만큼 많은 집합들), 부족(비가산 개의 집합들)할 수 있다. </p>
+<p>그러므로 적당한 첨수 <span class="arithmatex">\(i \in I\)</span> 를 부여받은 집합 <span class="arithmatex">\(A_i\)</span> 들의 합집합(적어도 한 집합의 원소인 대상들의 집합)을 다음과 같이 표기할 수 있다.</p>
+<div class="arithmatex">\[ \bigcup_{i \in I}^{}A_i := \{x : \exists i \in I, x \in A_i\} \]</div>
+<ul>
+<li>
+<p>예시 </p>
+<p>만일 <span class="arithmatex">\(I = \{1,2\}\)</span> 이면 집합족은 <span class="arithmatex">\(\mathcal{A} = \{A_1, A_2\} = \{A_i : i \in \{1,2\}\}\)</span> 이고 합집합은 </p>
+<div class="arithmatex">\[ \bigcup_{i \in I}^{} A_i = \bigcup_{}^{}\{A_i : i \in I\} = \bigcup_{}^{}\mathcal{A} = \bigcup_{}^{}\{A \in \mathcal{A}\} = \bigcup_{}^{}\{X \in \mathcal{A}\} = A_1 \cup A_2 \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>임의의 합집합 </p>
+<p>집합족 <span class="arithmatex">\(\mathcal{M}\)</span> 의 합집합은 그에 속하는 집합들의 모든 원소를 합쳐놓은 집합</p>
+<div class="arithmatex">\[ \bigcup_{}^{}\mathcal{M} = \bigcup_{A \in \mathcal{M}}^{} A := \{x : \exists A \in \mathcal{M}, x \in A\} \]</div>
+<p>이다. 이는 가산 개의 집합의 합집합과 임의의 첨수족의 합집합을 모두 포함하는 일반적인 정의이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>각 양수 <span class="arithmatex">\(r&gt;0\)</span> 에 대하여 <span class="arithmatex">\(A_r = \{x \in \R : x \geq r\}\)</span> 이라 두면 </p>
+<div class="arithmatex">\[ \bigcup_{r&gt;0}^{} A_r = \{x \in \R : x &gt; 0\} \]</div>
+<p>이 된다. <span class="arithmatex">\(A = \{x \in \R : x &gt; 0\}\)</span> 라 두면 각 <span class="arithmatex">\(r&gt;0\)</span> 에 대하여 <span class="arithmatex">\(A_r \subset A\)</span> 이므로 <span class="arithmatex">\(\bigcup_{r&gt;0}^{}A_r \subset A\)</span> 이다. 역으로 <span class="arithmatex">\(A \subset \bigcup_{r&gt;0}^{}A_r\)</span> 을 증명하는 것은 </p>
+<div class="arithmatex">\[ x&gt;0 \implies \exists r &gt; 0 \text{ s.t. } x \geq r \]</div>
+<p>을 증명하는 것이다. <span class="arithmatex">\(r = x\)</span> 라 두면 <span class="arithmatex">\(0 &lt; r \leq x\)</span> 이므로 <span class="arithmatex">\(A \subset \bigcup_{r&gt;0}^{}A_r\)</span> 이 성립하므로 <span class="arithmatex">\(A = \bigcup_{r&gt;0}^{}A_r\)</span> 이다. </p>
+<p>사실 양수 전체의 집합을 <span class="arithmatex">\(P\)</span> 로 두고 <span class="arithmatex">\(\bigcup_{r \in P}^{}A_r\)</span> 와 같이 표현해야 하지만, 관례상 <span class="arithmatex">\(\bigcup_{r&gt;0}^{}A_r\)</span> 와 같이 쓴다.</p>
+</li>
+</ul>
+<h3 id="intersection">Intersection<a class="headerlink" href="#intersection" title="Permanent link">¶</a></h3>
+<a href="#535b4aa05"><div class="admonition def" id="535b4aa05">
+<p class="admonition-title">교집합(intersection)</p>
+<p>두 집합 <span class="arithmatex">\(A, B\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ A \cap B = \{x:x \in A \land x \in B\} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>합집합과 교집합은 다음 성질을 갖는다.</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(A \cup \emptyset  = A, A \cap \emptyset = \emptyset\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(A \cup B  = B \cup  A, A \cap B = B \cap A\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(A \cup (B \cup C)  = (A \cup B) \cup C, A \cap (B \cap C) = (A \cap B) \cap C\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(A \cup A = A, A \cap A =A\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C), A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((A \cup B) ^{c} = A ^{c} \cap B ^{c}, (A \cap B)^{c}=A ^{c}\cup B ^{c}\)</span></p>
+<ul>
+<li>증명 </li>
+</ul>
+<div class="arithmatex">\[ x \in (A \cup B) ^{c} \iff \lnot (x \in A \lor x \in B) \]</div>
+<div class="arithmatex">\[ \iff (x \not \in A) \land (x \not \in B) \iff (x \in A ^{c}) \land (x \in B ^{c}) \]</div>
+<div class="arithmatex">\[ \iff x \in A ^{c} \cap B ^{c} \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>정의에 따라 조건 <span class="arithmatex">\(p, q\)</span> 의 진리집합 <span class="arithmatex">\(P, Q\)</span> 에 대하여 조건 <span class="arithmatex">\(p \land q\)</span> 의 진리집합은 <span class="arithmatex">\(P \cap Q\)</span> 이다.</p>
+</li>
+<li>
+<p>집합 <span class="arithmatex">\(A_1,A_2,A_3,A_4,A_5\)</span> 의 교집합은 <span class="arithmatex">\(A_1 \cap A_2 \cap A_3 \cap A_4 \cap A_5\)</span> 으로 나타낼 수 있는데, 이것을 </p>
+<div class="arithmatex">\[ \bigcap_{i=1}^{5}A_i \]</div>
+<p>로 나타낼 수 있다. 이때 </p>
+<div class="arithmatex">\[ x \in \bigcap_{i \in I}^{}A_i \iff \forall i \in I, x \in A_i \]</div>
+<p>가 성립한다.</p>
+</li>
+<li>
+<p>집합족 <span class="arithmatex">\(\mathcal{A}\)</span> 의 교집합은 <span class="arithmatex">\(\mathcal{A}\)</span> 의 모든 원소에 동시에 속하는 대상으로 이루어진 집합 </p>
+<div class="arithmatex">\[ x \in \bigcap_{}^{}\mathcal{A} \iff \forall A \in \mathcal{A}, x \in A \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>집합족에 대한 합집합과 교집합은 전체집합 <span class="arithmatex">\(U\)</span> 안에 있는 집합 <span class="arithmatex">\(A_i\)</span> 들에 대하여 다음이 성립한다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\displaystyle \bigg (\bigcup_{i \in I}^{}A_i\bigg ) ^{c} = \bigcap_{i \in I}^{} A_i ^{c}\)</span></p>
+<ul>
+<li>증명</li>
+</ul>
+<div class="arithmatex">\[\displaystyle \bigg (\bigcup_{i \in I}^{}A_i\bigg ) ^{c} = \bigcap_{i \in I}^{} A_i ^{c} \iff x \not \in \bigcup_{i \in I}^{} A_i\]</div>
+<div class="arithmatex">\[ \iff \lnot (\exists i \in I, x \in A_i) \iff \forall  i \in I, x  \not \in A_i\]</div>
+<div class="arithmatex">\[ \iff \forall  i \in I, x  \in A_i ^{c} \iff x \in \bigcap_{i \in I}^{} A_i ^{c} \]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle \bigg (\bigcap_{i \in I}^{}A_i\bigg ) ^{c} = \bigcup_{i \in I}^{} A_i ^{c}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle  A \cap \bigg (\bigcup_{i \in I}^{}A_i\bigg ) = \bigcup_{i \in I}^{}(A \cap A_i)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle  A \cup \bigg (\bigcap_{i \in I}^{}A_i\bigg ) = \bigcap_{i \in I}^{}(A \cup A_i)\)</span></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="ordered-pair">Ordered pair<a class="headerlink" href="#ordered-pair" title="Permanent link">¶</a></h3>
+<a href="#6fd258ed7"><div class="admonition def" id="6fd258ed7">
+<p class="admonition-title">순서쌍(ordered pair, 2-tuple)</p>
+<p>두 개의 수학적 대상 <span class="arithmatex">\(a,b\)</span> 를 순서를 정하여 짝지어 나타낸 쌍</p>
+<div class="arithmatex">\[ (a, b) := \{\{a\}, \{a,b\}\} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>두 원소 <span class="arithmatex">\(a,b\)</span> 로 이루어진 집합은 <span class="arithmatex">\(\{a,b\}=\{b,a\}\)</span> 이지만, 순서쌍은 <span class="arithmatex">\(a \neq b\)</span> 인 한</p>
+<div class="arithmatex">\[ (a,b) \neq (b,a) \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>곱집합, 함수, 이항관계 등이 순서쌍을 이용해 정의된다.</p>
+</li>
+<li>
+<p>순서쌍의 성분은 스칼라, 벡터, 다른 순서쌍일 수도 있다.</p>
+</li>
+<li>
+<p>순서쌍으로 n-tuple 을 귀납적으로 정의할 수 있다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(3\)</span>-튜플 순서쌍을 <span class="arithmatex">\((a,b,c) := (a, (b, c))\)</span> 로 정의할 수 있다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>순서쌍의 가장 기본적인 성질은 두 순서쌍이 같을 필요충분조건이 두 성분이 각각 같은 것이라는 것이다. 즉, </p>
+<div class="arithmatex">\[ (a,b) = (c,d) \iff (a = c) \land (b = d) \]</div>
+</li>
+<li>
+<p>보통 순서쌍을 <span class="arithmatex">\((a,b)\)</span> 로 표현하지만 개구간과 혼동하지 않기 위하여 <span class="arithmatex">\(\big &lt;a, b\big &gt;\)</span> 로 나타내기도 한다.</p>
+</li>
+</ul>
+<a href="#4d8a53a66"><div class="admonition def" id="4d8a53a66">
+<p class="admonition-title">정리 1.1.1</p>
+<p><span class="arithmatex">\((a,b) = (c,d) \implies a=c, b=d\)</span> </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(a=b\)</span> 인 경우 </p>
+<div class="arithmatex">\[\{\{a\}\} = (a, b) = (c,d) = \{\{c\},\{c,d\}\}\]</div>
+<p>에서 <span class="arithmatex">\(\{a\}=\{c\}=\{c,d\}\)</span> 이므로 <span class="arithmatex">\(a=b=c=d\)</span> 이다.</p>
+<p><span class="arithmatex">\(a \neq b\)</span> 인 경우 <span class="arithmatex">\(\{a,b\}\)</span> 는 두 원소의 집합이므로 한 원소의 집합이 아니다. 그러므로 </p>
+<div class="arithmatex">\[ \{c\} \in \{\{c\},\{c,d\}\} = \{\{a\}, \{a,b\}\} \]</div>
+<p>에서 명백하게 <span class="arithmatex">\(\{c\} \neq \{a,b\}\)</span> 이다. 그러므로 당연히 </p>
+<div class="arithmatex">\[ \{c\}=\{a\} \implies a = c \]</div>
+<p>이다. 마찬가지로</p>
+<div class="arithmatex">\[ \{a,b\} \in \{\{a\}, \{a,b\}\} = \{\{c\}, \{c,d\}\} \]</div>
+<p>에서 명백하게 <span class="arithmatex">\(\{a,b\}\neq \{c\}\)</span> 이다. 그러므로 당연히 </p>
+<div class="arithmatex">\[ \{a,b\} = \{c,d\} \]</div>
+<p>인데 <span class="arithmatex">\(b \in \{c,d\} = \{a,b\}\)</span> 로부터 <span class="arithmatex">\(b=c\)</span> 또는 <span class="arithmatex">\(b=d\)</span> 이다.</p>
+<p>그런데 <span class="arithmatex">\(b=c\)</span> 이면 <span class="arithmatex">\(a=c=b\)</span> 이므로 모순이다. 그러므로 <span class="arithmatex">\(b=d\)</span> 이다.</p>
+</li>
+</ul>
+<h3 id="product-set">Product Set<a class="headerlink" href="#product-set" title="Permanent link">¶</a></h3>
+<a href="#e5928333f"><div class="admonition def" id="e5928333f">
+<p class="admonition-title">곱집합(product set) 또는 데카르트 곱(cartesian product)</p>
+<p>임의의 집합족 <span class="arithmatex">\(\{X_i : i \in I\}\)</span> 에 대한 곱집합 <span class="arithmatex">\(\prod_{i \in I}^{}X_i\)</span> 를 </p>
+<div class="arithmatex">\[ \prod_{i \in I}^{}X_i = \bigg \{f \in (\bigcup_{i \in I}^{}X_i) ^{I} : f(i) \in X_i, i \in I \bigg \} \]</div>
+<p>와 같이 정의하고, 어느 함수 <span class="arithmatex">\(f \in \prod_{i \in I}^{}X_i\)</span> 를 곱집합의 원소</p>
+<div class="arithmatex">\[ (x_i) _{i \in I} \]</div>
+<p>라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>물론 어느 함수 <span class="arithmatex">\(f\)</span> 는 실제로는 곱집합 <span class="arithmatex">\(I \times \bigcup_{i \in I}^{}X_i\)</span> 의 부분집합으로써</p>
+<div class="arithmatex">\[ \{(i_1, x_1), (i_2, x_2), \dots, (i_n, x_n), \dots\} \]</div>
+<p>와 같은 <span class="arithmatex">\(I\)</span> 에서 <span class="arithmatex">\(\bigcup_{i \in I}^{}X_i\)</span> 로 가는 함수지만, 이것을 </p>
+<div class="arithmatex">\[ (x_1,  x_2, \dots,  x_n, \dots) \]</div>
+<p>으로 표기하자고 약속하는 것이다.</p>
+</li>
+<li>
+<p>위 정의에서 <span class="arithmatex">\((\bigcup_{i \in I}^{}X_i) ^{I}\)</span> 는 <span class="arithmatex">\(I\)</span> 에서 <span class="arithmatex">\(\bigcup_{i \in I}^{}X_i\)</span> 로 가는 함수 전체의 집합을 뜻한다.</p>
+</li>
+<li>
+<p>임의의 <span class="arithmatex">\(i \in I\)</span> 에 대하여 <span class="arithmatex">\(X_i = X\)</span> 이면 <span class="arithmatex">\(\prod_{i \in I}^{}X_i = X ^{I}\)</span> 이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\R\)</span> 을 <span class="arithmatex">\(n \in \N\)</span> 개 곱한 곱집합 <span class="arithmatex">\(\R ^{n}\)</span> 에서 <span class="arithmatex">\(n = \{0,1,2, \dots, n-1\}\)</span> 이므로 <span class="arithmatex">\(\R ^{n}\)</span> 는 <span class="arithmatex">\(n \to \R\)</span> 인 함수 전체의 집합</p>
+<div class="arithmatex">\[ \prod_{i=1}^{n}\R =  \{f \in \R ^{n} : f(i) \in \R, i \in n  \} \]</div>
+<p>이다. 그리고 <span class="arithmatex">\(n = \{0,1,2,\dots,n-1\}\)</span> 을 <span class="arithmatex">\(\R\)</span> 로 대응시키는 어느 함수</p>
+<div class="arithmatex">\[ i \mapsto a_i, \quad i = 0,1,2,\dots,n-1 \]</div>
+<p>는 실제로</p>
+<div class="arithmatex">\[ \{(0, a_0), (1, a_1), (2, a_2), \dots, (n-1, a _{n-1})\} \]</div>
+<p>와 같은 곱집합 <span class="arithmatex">\(n \times X\)</span> 의 부분집합이지만,</p>
+<div class="arithmatex">\[ (a_0, a_1, a_2, \dots, a _{n-1}) \]</div>
+<p>라고 표시한다.</p>
+</li>
+<li>
+<p>두 집합 <span class="arithmatex">\(A,B\)</span> 의 곱집합 <span class="arithmatex">\(A \times B\)</span> 는 </p>
+<div class="arithmatex">\[ A \times B := \{(a,b):a \in A, b \in B\} \]</div>
+<p>이다.</p>
+<ul>
+<li>
+<p>이때 다음이 성립한다. </p>
+<div class="arithmatex">\[ A \times (B \cup C) = (A \times B) \cup (A \times C) \]</div>
+<div class="arithmatex">\[ A \times (B \cap C) = (A \times B) \cap (A \times C) \]</div>
+<div class="arithmatex">\[ (A \times B) \cap (C \times D) = (A \cap C) \times (B \cap D) \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>유한개의 집합 <span class="arithmatex">\(A_1, A_2, \dots, A_n\)</span> 의 곱집합 <span class="arithmatex">\(A_1 \times A_2 \times \dots \times A_n\)</span> 은 </p>
+<div class="arithmatex">\[ A_1 \times A_2 \times \dots \times A_n = \{(a_1, a_2, \dots, a_n) : a_i \in A_i\} \]</div>
+<p>이다. 이것을 간단하게 표기하여 집합 <span class="arithmatex">\(A, I\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(I\)</span> 번 곱집합 <span class="arithmatex">\(A ^{I}\)</span> 는 </p>
+<div class="arithmatex">\[ A ^{I} = \{(a_i) _{i \in I} : a_i \in A\} \]</div>
+<p>이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>우리에게 익숙한 데카르트 공간 <span class="arithmatex">\(\mathbb{R} ^{2}\)</span>, 즉 직교좌표계는 </p>
+<div class="arithmatex">\[ \R ^{2} = \mathbb{R} \times \mathbb{R} = \{(x,y) : x, y \in \R \}\]</div>
+<p>로써 곱집합이다. 또한 공간좌표계는 </p>
+<div class="arithmatex">\[ \R ^{3} = \mathbb{R} \times \mathbb{R} \times \R = \{(x,y, z) : x, y, z \in \R \}\]</div>
+<p>이다.</p>
+</li>
+</ul>
+<h3 id="power-set">Power set<a class="headerlink" href="#power-set" title="Permanent link">¶</a></h3>
+<a href="#27b8fb743"><div class="admonition def" id="27b8fb743">
+<p class="admonition-title">멱집합(power set)</p>
+<p>주어진 집합의 모든 부분 집합으로 구성된 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, 집합 <span class="arithmatex">\(S\)</span> 의 멱집합 <span class="arithmatex">\(\mathcal{P}(S)\)</span> 또는 <span class="arithmatex">\(2 ^{S}\)</span> 는</p>
+<div class="arithmatex">\[ \mathcal{P}(S) := \{A: A \subseteq S\} \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>집합 {x,y,z} 의 멱집합 원소들의 부분 집합 관계는</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Hasse_diagram_of_powerset_of_3.svg"/></p>
+<p>와 같은 헤세 도형으로도 표현할 수 있다.</p>
+</li>
+</ul>
+<h2 id="function">Function<a class="headerlink" href="#function" title="Permanent link">¶</a></h2>
+<a href="#41fca4158"><div class="admonition def" id="41fca4158">
+<p class="admonition-title">함수(function)</p>
+<p>두 집합 <span class="arithmatex">\(X, Y\)</span> 의 곱집합 <span class="arithmatex">\(X \times Y\)</span> 의 부분집합 <span class="arithmatex">\(f \subset X \times Y\)</span> 가 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(x \in X \to (x,y) \in f\)</span> 를 만족하는 <span class="arithmatex">\(y \in Y\)</span> 가 존재한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\((x, y_1) \in f, (x, y_2) \in f \to y_1 = y_2\)</span></p>
+</li>
+</ol>
+<p>을 만족하면 <span class="arithmatex">\(X\)</span> 에서 <span class="arithmatex">\(Y\)</span> 로 가는 함수라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\((x,y) \in f\)</span> 일 때 </p>
+<div class="arithmatex">\[f(x) = y \text{  또는  } f: x \mapsto y\]</div>
+<p>라고 쓴다.</p>
+</li>
+<li>
+<p>집합 <span class="arithmatex">\(X\)</span> 를 <span class="arithmatex">\(f\)</span> 의 정의역, <span class="arithmatex">\(Y\)</span> 를 <span class="arithmatex">\(f\)</span> 의 공역이라고 하고, </p>
+<div class="arithmatex">\[ f: X \to Y \]</div>
+<p>라고 쓴다.</p>
+<ul>
+<li>앞으로 정의역과 공역은 항상 공집합이 아니라고 간주한다.</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(f: x \mapsto x, X \to Y\)</span> 는 <span class="arithmatex">\(f: X \to Y\)</span> 가 함수이고 <span class="arithmatex">\((x, y) \in f\)</span> 라는 뜻이다.</p>
+</li>
+<li>
+<p>상황에 따라 "함수(function)" 를 "사상(mapping)", "변환(transformation)" 으로 부르기도 하는데 다 같은 뜻이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>데카르트 공간 <span class="arithmatex">\(\mathbb{R} ^{2}\)</span>, 즉 직교좌표계의 부분집합 </p>
+<div class="arithmatex">\[ x \in X, y \in Y, x ^{2}+y ^{2} = 4 \]</div>
+<p>는 함수가 아니다. <span class="arithmatex">\((0, -2), (0, +2)\)</span> 가 이 관계에 속하는데 이는 함수의 두번째 조건</p>
+<ol>
+<li><span class="arithmatex">\((x, y_1) \in f, (x, y_2) \in f \to y_1 = y_2\)</span></li>
+</ol>
+<p>을 위배하기 때문이다.</p>
+</li>
+</ul>
+<h3 id="function-equality">Function Equality<a class="headerlink" href="#function-equality" title="Permanent link">¶</a></h3>
+<a href="#57b118c60"><div class="admonition def" id="57b118c60">
+<p class="admonition-title">함수의 상등(function equality)</p>
+<p>함수 <span class="arithmatex">\(f: X \to Y\)</span> 와 <span class="arithmatex">\(g: X \to Y\)</span> 가 같은 함수인 것과 <span class="arithmatex">\(\forall x \in X : f(x) = g(x)\)</span> 인 것은 동치이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(f = g\)</span> 이면 임의의 <span class="arithmatex">\(x \in X\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ y = f(x) \iff (x, y) \in f \iff (x, y) \in g \iff y = g(x) \]</div>
+<p>이므로 <span class="arithmatex">\(f(x) = g(x)\)</span> 이다. ▲ </p>
+<p>반대로 임의의 <span class="arithmatex">\(x \in X\)</span> 에 대하여 <span class="arithmatex">\(f(x) = g(x)\)</span> 이면 </p>
+<div class="arithmatex">\[ (x,y) \in f \iff y = f(x) \iff y = g(x) \iff (x,y) \in g \]</div>
+<p>이므로 <span class="arithmatex">\(f=g\)</span> 이다. ■ </p>
+</li>
+</ul>
+<h3 id="identity-function">Identity Function<a class="headerlink" href="#identity-function" title="Permanent link">¶</a></h3>
+<a href="#c1270ee34"><div class="admonition def" id="c1270ee34">
+<p class="admonition-title">항등함수(identity function)</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \{(x_1, x_2) \in X \times X:x_1 = x_2\} \]</div>
+<p>로 주어진 함수를 <span class="arithmatex">\(X\)</span> 에서 정의된 항등함수</p>
+<div class="arithmatex">\[ 1 _{X} : X \to X, x \mapsto x \]</div>
+<p>라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, 항등함수는 <span class="arithmatex">\(x \in X\)</span> 에 대하여</p>
+<div class="arithmatex">\[ 1 _{X}(x) = x \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>항등함수를 <span class="arithmatex">\(1_X\)</span> 로도 표기하고 <span class="arithmatex">\(\text{ id }_X\)</span> 로도 표기한다. </p>
+</li>
+</ul>
+<a href="#8cad75235"><div class="admonition def" id="8cad75235">
+<p class="admonition-title">포함함수(inclusion function), 포함사상(inclusion map)</p>
+<p><span class="arithmatex">\(A \subset X\)</span> 일 때 </p>
+<div class="arithmatex">\[ \{(a,a) \in A \times X : a \in A\} \]</div>
+<p>로 주어진 함수를 포함함수 </p>
+<div class="arithmatex">\[ \iota _{A}:A \hookrightarrow X, x \mapsto x \]</div>
+<p>라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉 포함 함수란 정의역이 공역의 부분 집합이며, 정의역의 모든 원소를 자신으로 대응시키는 함수이다. </p>
+</li>
+<li>
+<p>모든 포함함수는 단사 함수이다. </p>
+</li>
+<li>
+<p>모든 단사 함수는 전단사 함수와 포함 함수의 합성이다.</p>
+</li>
+</ul>
+<a href="#b34c1aac2"><div class="admonition def" id="b34c1aac2">
+<p class="admonition-title">정리 1.2.1</p>
+<p>두 함수 <span class="arithmatex">\(f: X \to Y\)</span> 와 <span class="arithmatex">\(g: X \to Y\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ f = g \iff x \in X, f(x) = g(x) \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, 두 함수 <span class="arithmatex">\(f,g\)</span> 가 같은 함수일 필요충분조건이 <span class="arithmatex">\(x \in X\)</span> 에 대하여 <span class="arithmatex">\(f(x)=g(x)\)</span> 라는 것이다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(f = g\)</span> 이면 (<em>이는 곱집합의 부분집합으로써의 <span class="arithmatex">\(f\)</span> 와 <span class="arithmatex">\(g\)</span> 가 서로 같다는 것이다. 즉, 단지 두 집합이 서로 같다는 것이다.</em>) <span class="arithmatex">\(\forall x \in X\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ y = f(x) \iff (x,y) \in f \iff (x,y) \in g \iff y = g(x) \]</div>
+<p>이므로 <span class="arithmatex">\(f(x) = g(x)\)</span> 이다. </p>
+<p>역으로 <span class="arithmatex">\(\forall x \in X\)</span> 에 대하여 <span class="arithmatex">\(f(x) = g(x)\)</span> 이면 (<em>이는 두 함수 <span class="arithmatex">\(f, g\)</span> 의 상이 서로 같다는 것이다. 즉, 두 함수의 함숫값이 같다는 거지.</em>)</p>
+<div class="arithmatex">\[ (x, y) \in f \iff y = f(x) \iff y = g(x) \iff (x, y) \in g \]</div>
+<p>이므로 <span class="arithmatex">\(f = g\)</span> 이다. </p>
+</li>
+</ul>
+<h3 id="restriction">Restriction<a class="headerlink" href="#restriction" title="Permanent link">¶</a></h3>
+<a href="#d5708058b"><div class="admonition def" id="d5708058b">
+<p class="admonition-title">함수의 제한(restriction)</p>
+<p>함수 <span class="arithmatex">\(f: X \to Y\)</span> 의 정의역 <span class="arithmatex">\(X\)</span> 의 부분집합 <span class="arithmatex">\(A\)</span> 에 대한 합성함수 <span class="arithmatex">\(f \circ \iota _{A}:A \to Y\)</span> 를 <span class="arithmatex">\(f\)</span> 의 제한 </p>
+<div class="arithmatex">\[ f | _{A} : A \to Y \]</div>
+<p>이라고 한다.</p>
+</div></a>
+<ul>
+<li>그냥 <span class="arithmatex">\(f\)</span> 의 대응 규칙을 유지한 채 정의역만 <span class="arithmatex">\(A\)</span> 로 줄인 함수이다.</li>
+</ul>
+<h3 id="composite-function">Composite Function<a class="headerlink" href="#composite-function" title="Permanent link">¶</a></h3>
+<a href="#1ea755f88"><div class="admonition def" id="1ea755f88">
+<p class="admonition-title">합성함수(composite function)</p>
+<p>함수 <span class="arithmatex">\(f: X \to Y\)</span> 와 <span class="arithmatex">\(g: Y \to Z\)</span> 에 대한 합성함수 <span class="arithmatex">\(g \circ f : X \to Z\)</span> 는 </p>
+<div class="arithmatex">\[ (g \circ f)(x) = g(f(x)), x \in X \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(f\)</span> 와 <span class="arithmatex">\(g\)</span> 는 각각 곱집합 <span class="arithmatex">\(X \in Y\)</span> 와 <span class="arithmatex">\(Y \times Z\)</span> 의 부분집합이므로 </p>
+<div class="arithmatex">\[ g \circ f = \{(x, z) \in X \times Z: (\exists y) ((x, y) \in f, (y, z) \in g)\} \]</div>
+<p>와 같이 정의할 수도 있다. 이는 <span class="arithmatex">\((x, y) \in f, (y, z) \in g\)</span> 인 <span class="arithmatex">\(y\)</span> 가 존재한다는 말이다.</p>
+</li>
+</ul>
+<h3 id="composite-function-satisfies-associativity">Composite Function satisfies Associativity<a class="headerlink" href="#composite-function-satisfies-associativity" title="Permanent link">¶</a></h3>
+<a href="#ede6df07e"><div class="admonition def" id="ede6df07e">
+<p>함수의 합성은 결합법칙을 만족한다. 즉, 함수 <span class="arithmatex">\(f: X \to Y, g: Y \to Z, h:Z \to W\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ h \circ (g \circ f) = (h \circ g) \circ f \]</div>
+<p>이다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>합성함수의 정의에 의하여 각 <span class="arithmatex">\(x \in X\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ h \circ (g \circ f)(x) = h(g \circ f(x)) = h(g(f(x))) = h \circ g(f(x)) = (h \circ g) \circ f(x) \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ h \circ (g \circ f) = (h \circ g) \circ f \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<h3 id="injection">Injection<a class="headerlink" href="#injection" title="Permanent link">¶</a></h3>
+<a href="#eadfd845f"><div class="admonition def" id="eadfd845f">
+<p class="admonition-title">단사함수(injection, one-to-one function)</p>
+<p>함수 <span class="arithmatex">\(f:X \to Y\)</span> 가 </p>
+<div class="arithmatex">\[ x_1, x_2 \in X, f(x_1)=f(x_2) \implies x_1 = x_2 \]</div>
+<p>를 만족하면 단사함수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, 단사 함수는 다음과 같이 정의역의 서로 다른 원소를 공역의 서로 다른 원소로 대응시키는 함수이다. </p>
+<p><img height="auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Injection.svg/1024px-Injection.svg.png" width="50%"/></p>
+</li>
+</ul>
+<a href="#5869db153"><div class="admonition def" id="5869db153">
+<p class="admonition-title">정리 1.2.2</p>
+<p>함수 <span class="arithmatex">\(f: X \to Y\)</span> 에 대하여 다음은 동치이다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(f\)</span> 는 단사함수이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(g \circ f = 1 _{X}\)</span> 를 만족하는 함수 <span class="arithmatex">\(g: Y \to X\)</span> 가 존재한다. </p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>즉, 이 정리는 <span class="arithmatex">\(x\)</span> 를 <span class="arithmatex">\(y\)</span> 로 보내면 그 <span class="arithmatex">\(y\)</span> 를 다시 <span class="arithmatex">\(x\)</span> 로 보낼 수 있음을 말하고 있다. 전사함수라면 이렇게 할 수 없을 수도 있는데, <span class="arithmatex">\(y\)</span> 에 대응되는 <span class="arithmatex">\(x\)</span> 가 유일하지 않을 수도 있기 때문이다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(g \circ f = 1 _{X}\)</span> 를 만족하는 <span class="arithmatex">\(g\)</span> 가 있으면 </p>
+<div class="arithmatex">\[ f(x_1) = f(x_2) \implies x_1 = (g \circ f)(x_1) = (g \circ f)(x_2) = x_2 \]</div>
+<p>이므로 <span class="arithmatex">\(f\)</span> 가 단사함수의 조건을 만족하여 단사함수가 된다.</p>
+<p>이제 역으로 <span class="arithmatex">\(f\)</span> 가 단사함수라면 <span class="arithmatex">\(g \circ f = 1 _{X}\)</span> 인 함수 <span class="arithmatex">\(g: Y \to X\)</span> 가 존재함을 보이기 위하여</p>
+<div class="arithmatex">\[ B = \{y \in Y: f(x) = y \text{ 를 만족하는 } x \in X \text{ 가 존재한다}\} \]</div>
+<p>라고 두자. 즉, <span class="arithmatex">\(B = \text{ran} f\)</span> 이다. <span class="arithmatex">\(y \in B\)</span> 이면 <span class="arithmatex">\(f\)</span> 가 단사함수라는 가정에 의하여 <span class="arithmatex">\(f(x) = y\)</span> 를 만족하는 <span class="arithmatex">\(x \in X\)</span> 가 유일하게 존재하는데, 이때 함수 <span class="arithmatex">\(g\)</span> 를 <span class="arithmatex">\(g(y) = x\)</span> 라고 정의하자. 만약 <span class="arithmatex">\(y \not \in B\)</span> 이면 <span class="arithmatex">\(g(y)\)</span> 는 아무렇게나 정의하자. </p>
+<p>가령 <span class="arithmatex">\(X\)</span> 의 한 원소 <span class="arithmatex">\(x_0 \in X\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ g(y) = \begin{cases} x, &amp;y \in B, y = f(x) \\ x_0,&amp; y \not \in B\\ \end{cases} \]</div>
+<p>라고 정의하는 것이다. 그러면 </p>
+<div class="arithmatex">\[ g \circ f = 1 _{X} \]</div>
+<p>임이 바로 확인된다. 왜냐하면 어차피 정의역의 원소 <span class="arithmatex">\(x_0\)</span> 에 대응되는 치역의 원소 <span class="arithmatex">\(y\)</span> 가 존재하지 않는다면 이 원소 <span class="arithmatex">\(x_0\)</span> 에 대한 함수 <span class="arithmatex">\(f\)</span> 는 정의되지 않기 때문에 결국 우리는 <span class="arithmatex">\(g(y) = x\)</span> 만 생각하면 되기 때문이다. 그렇다면 <span class="arithmatex">\(g(f(x)) = x\)</span> 이므로 <span class="arithmatex">\(g \circ f\)</span> 는 항등함수 <span class="arithmatex">\(1 _{X}\)</span> 가 된다. ■ </p>
+</li>
+</ul>
+<h3 id="surjection">Surjection<a class="headerlink" href="#surjection" title="Permanent link">¶</a></h3>
+<a href="#2b1f78028"><div class="admonition def" id="2b1f78028">
+<p class="admonition-title">전사함수(surjection, onto)</p>
+<p>함수 <span class="arithmatex">\(f: X \to Y\)</span> 가 성질</p>
+<div class="arithmatex">\[ \forall y \in Y, \exists x \in X, f(x) = y \]</div>
+<p>를 만족하면 이를 전사함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><img height="auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Surjection.svg/200px-Surjection.svg.png" width="50%"/></p>
+</li>
+</ul>
+<a href="#d9b0737d6"><div class="admonition def" id="d9b0737d6">
+<p class="admonition-title">정리 1.2.3</p>
+<p>함수 <span class="arithmatex">\(f: X \to Y\)</span> 에 대하여 다음은 동치이다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(f\)</span> 는 전사함수이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(f \circ g = 1 _{Y}\)</span> 를 만족하는 함수 <span class="arithmatex">\(g: Y \to X\)</span> 가 존재한다. </p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>즉, 이 정리는 <span class="arithmatex">\(y\)</span> 를 <span class="arithmatex">\(x\)</span> 로 보내면 그 <span class="arithmatex">\(x\)</span> 를 다시 <span class="arithmatex">\(y\)</span> 로 보낼 수 있음을 말하고 있다. 단사함수라면 이렇게 할 수 없을 수도 있는데, <span class="arithmatex">\(y\)</span> 에 대응되는 <span class="arithmatex">\(x\)</span> 가 존재하지 않을 수도 있기 때문이다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>먼저 <span class="arithmatex">\(f \circ g = 1 _{Y}\)</span> 를 만족하는 함수 <span class="arithmatex">\(g: Y \to X\)</span> 가 존재한다고 가정하자. 각 <span class="arithmatex">\(y \in Y\)</span> 에 대하여 <span class="arithmatex">\(x=g(y)\)</span> 라 두면 <span class="arithmatex">\(f \circ g\)</span> 이 항등함수라고 하였으므로</p>
+<div class="arithmatex">\[ f(x) = f(g(y)) = y \]</div>
+<p>이다. 그러면 이 관계에 의하여 임의의 <span class="arithmatex">\(y \in Y\)</span> 가 함수 <span class="arithmatex">\(g\)</span> 와 <span class="arithmatex">\(f\)</span> 를 통하여, 즉 정의역의 원소 <span class="arithmatex">\(x\)</span> 를 통하여 다시 <span class="arithmatex">\(y\)</span> 로 대응되므로 전사함수의 조건이 성립하여 <span class="arithmatex">\(f\)</span> 가 전사함수가 된다. </p>
+<p>이제 역으로 <span class="arithmatex">\(f\)</span> 가 전사함수이면 <span class="arithmatex">\(f \circ g = 1 _{Y}\)</span> 인 <span class="arithmatex">\(g\)</span> 가 존재함을 보이기 위하여 </p>
+<div class="arithmatex">\[ A_y = \{x \in X: f(x) = y\} \]</div>
+<p>라고 두면 <span class="arithmatex">\(A_y \neq \varnothing\)</span> 이다. 왜냐하면 <span class="arithmatex">\(f\)</span> 가 전사함수이므로 <span class="arithmatex">\(Y\)</span> 의 모든 원소가 <span class="arithmatex">\(X\)</span> 의 적당한 원소로 대응되기 때문이다. 이때 각 <span class="arithmatex">\(y \in Y\)</span> 에 대하여 <span class="arithmatex">\(A_y\)</span> 의 원소 <span class="arithmatex">\(x\)</span> 를 택하여 이 <span class="arithmatex">\(x\)</span> 를 <span class="arithmatex">\(x = g(y) \in X\)</span> 라 두면 </p>
+<div class="arithmatex">\[ f(g(y)) = y \]</div>
+<p>이다. ■ </p>
+</li>
+<li>
+<p>위 증명에서 <span class="arithmatex">\(A_y\)</span> 의 원소를 하나 택한다고 하였는데 이렇게 하나씩 택하는 것이 가능한가에 대한 문제는 좀더 신중한 접근이 필요하다. 한편 이것이 가능하다고 가정하는 것이 선택공리이다. </p>
+</li>
+</ul>
+<h3 id="bijection">Bijection<a class="headerlink" href="#bijection" title="Permanent link">¶</a></h3>
+<a href="#637f0910e"><div class="admonition def" id="637f0910e">
+<p class="admonition-title">전단사함수(bijection, one-to-one correspondence)</p>
+<p>두 집합 <span class="arithmatex">\(X, Y\)</span> 사이의 함수 <span class="arithmatex">\(f: X \to Y\)</span> 에 대하여 성질 </p>
+<div class="arithmatex">\[ \forall y \in Y, \exists ! x \in X, f(x) = y \]</div>
+<p>을 만족하는 함수이다. </p>
+</div></a>
+<ul>
+<li>
+<p>즉, 전사이면서 동시에 단사인 함수를 전단사함수라 한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><img height="auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bijection.svg/220px-Bijection.svg.png" width="50%"/></p>
+</li>
+</ul>
+<h3 id="inverse-function">Inverse Function<a class="headerlink" href="#inverse-function" title="Permanent link">¶</a></h3>
+<a href="#9f7c646db"><div class="admonition def" id="9f7c646db">
+<p class="admonition-title">역함수(inverse function)</p>
+<p>함수 <span class="arithmatex">\(f: X \to Y\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ g \circ f = 1 _{X}, f \circ g = 1 _{Y} \]</div>
+<p>인 <span class="arithmatex">\(g: Y \to X\)</span> 가 존재하면 이를 <span class="arithmatex">\(f\)</span> 의 역함수라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(f\)</span> 의 역함수 <span class="arithmatex">\(g\)</span> 를 <span class="arithmatex">\(f ^{-1} : Y \to X\)</span> 로 표기한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>함수 <span class="arithmatex">\(f: \N \to \mathbb{Z}\)</span> 를</p>
+<div class="arithmatex">\[f(2n) = -n, \qquad f(2n-1) = n\]</div>
+<p>이라 정의하면 그 역함수 <span class="arithmatex">\(g: \mathbb{Z} \to \N\)</span> 는 </p>
+<div class="arithmatex">\[ g(n) = 2n-1, g(-n) = 2n \]</div>
+<p>가 된다. </p>
+</li>
+</ul>
+<a href="#41c513e50"><div class="admonition def" id="41c513e50">
+<p>역함수는 유일하다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(g\)</span> 와 <span class="arithmatex">\(h\)</span> 가 <span class="arithmatex">\(f\)</span> 의 역함수라면 </p>
+<div class="arithmatex">\[ g = 1 _{X} \circ g = (h \circ f) \circ g = h \circ (f \circ g) = h \circ 1 _{Y} = h \tag{1} \]</div>
+<p>가 된다.</p>
+</li>
+</ul>
+<a href="#4d5b1d593"><div class="admonition def" id="4d5b1d593">
+<p>함수가 역함수를 가지면 그 함수는 전단사함수이다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><a href="#5869db153">정리 1.2.2</a> 와 <a href="#d9b0737d6">정리 1.2.3</a> 에 의하여 증명이 된다.</p>
+</li>
+<li>
+<p>함수 <span class="arithmatex">\(f: X \to Y\)</span> 가 전단사 함수이면 <span class="arithmatex">\(h \circ f = 1 _{X}\)</span> 인 <span class="arithmatex">\(h: Y \to X\)</span> 와 <span class="arithmatex">\(f \circ g = 1 _{Y}\)</span> 인 <span class="arithmatex">\(g: Y \to X\)</span> 가 존재하는데, <span class="arithmatex">\((1)\)</span> 에 의하여 <span class="arithmatex">\(g = h\)</span> 가 되어 <span class="arithmatex">\(f\)</span> 의 역함수가 된다. </p>
+</li>
+<li>
+<p>함수 <span class="arithmatex">\(f: X \to Y\)</span> 와 <span class="arithmatex">\(A \subset X, B \subset Y\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ f ^{-1}(B) = \{x \in X:f(x) \in B\} \]</div>
+<div class="arithmatex">\[ f (A) = \{f(x) \in Y:x \in A\} \]</div>
+<p>라 정의하자. 집합 <span class="arithmatex">\(f ^{-1}(B)\)</span> 를 <span class="arithmatex">\(B\)</span> 의 역상이라 하고 <span class="arithmatex">\(f(A)\)</span> 를 <span class="arithmatex">\(A\)</span> 의 상이라 한다.</p>
+<p>이때 <span class="arithmatex">\(f\)</span> 가 전사일 필요충분조건은 <span class="arithmatex">\(f(X)=Y\)</span> 이다.</p>
+</li>
+</ul>
+<a href="#4d4309496"><div class="admonition def" id="4d4309496">
+<p class="admonition-title">정리 1.2.4</p>
+<p>함수 <span class="arithmatex">\(f: X \to Y\)</span> 에 대하여 다음은 동치이다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(f\)</span> 는 전단사 함수이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(f\)</span> 의 역함수가 존재한다. </p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>한편 정의역이나 공역을 축소하여 전단사함수가 되게 한 후 역함수를 정의할 수도 있다. 삼각함수의 역함수가 이런 식으로 정의된다. </li>
+</ul>
+<a href="#ed763953c"><div class="admonition def" id="ed763953c">
+<p class="admonition-title">따름정리 1.2.5</p>
+<p>두 집합 <span class="arithmatex">\(X, Y\)</span> 에 대하여 다음은 동치이다. </p>
+<ol>
+<li>
+<p>단사함수 <span class="arithmatex">\(f: X \to Y\)</span> 가 존재한다. </p>
+</li>
+<li>
+<p>전사함수 <span class="arithmatex">\(g: Y \to X\)</span> 가 존재한다. </p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>증명 </li>
+</ul>
+<h3 id="binary-operation">Binary Operation<a class="headerlink" href="#binary-operation" title="Permanent link">¶</a></h3>
+<a href="#b59e73e39"><div class="admonition def" id="b59e73e39">
+<p class="admonition-title">이항연산(binary operation)</p>
+<p>함수 <span class="arithmatex">\(X \times X \to X\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>자연수의 덧셈이나 곱셈 등은 모두 이항연산이다.</li>
+</ul>
+<h3 id="set-of-all-functions">Set of All Functions<a class="headerlink" href="#set-of-all-functions" title="Permanent link">¶</a></h3>
+<a href="#3ee0109e8"><div class="admonition def" id="3ee0109e8">
+<p class="admonition-title">함수 전체 집합(set of all functions)</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 에서 <span class="arithmatex">\(Y\)</span> 로 가는 함수 전체의 집합을 <span class="arithmatex">\(Y ^{X}\)</span> 라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(X\)</span> 와 <span class="arithmatex">\(\forall A \in 2 ^{X}\)</span> 에 대하여 <span class="arithmatex">\(\Phi (A) \in \{0,1\}^{X}\)</span> 를 </p>
+<div class="arithmatex">\[ \Phi (A)(x) = \begin{cases}
+1 &amp;x \in A\\
+0 &amp;x \not \in A\\
+\end{cases} 
+\]</div>
+<p>로 정의하자. 또 임의의 함수 <span class="arithmatex">\(f \in \{0,1\}^{X}\)</span> 에 대하여 <span class="arithmatex">\(X\)</span> 의 부분집합 <span class="arithmatex">\(\Psi (f) \in 2 ^{X}\)</span> 를 </p>
+<div class="arithmatex">\[ \Psi (f) = \{x \in X : f(x) = 1\} \]</div>
+<p>라 정의하자. ▲ </p>
+<p>그러면 임의의 <span class="arithmatex">\(f: X \to \{0,1\}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \Phi (\Psi (f))(x) = 1 \iff x \in \Psi (f) \iff f(x) = 1 \]</div>
+<p>이므로 <span class="arithmatex">\(\Phi (\Psi (f)) = f\)</span> 이다. 또한 임의의 <span class="arithmatex">\(A \in 2 ^{X}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ x \in \Psi (\Phi (A)) \iff \Phi (A)(x) = 1 \iff x \in A \]</div>
+<p>이므로 <span class="arithmatex">\(\Psi (\Phi (A))=A\)</span> 이다. (<em><span class="arithmatex">\(\Psi(f)\)</span> 는 <span class="arithmatex">\(f\)</span> 가 <span class="arithmatex">\(1\)</span> 이 되게 하는 정의역 집합인데, <span class="arithmatex">\(\Psi (\Phi (A))\)</span> 이므로 <span class="arithmatex">\(\Phi (A)\)</span> 가 <span class="arithmatex">\(1\)</span> 이 되게 하는 정의역 집합이다. 근데 <span class="arithmatex">\(\Phi (A)\)</span> 란 <span class="arithmatex">\(x\)</span> 가 <span class="arithmatex">\(A\)</span> 에 속하면 <span class="arithmatex">\(1\)</span> 이므로 결국 <span class="arithmatex">\(A\)</span> 의 원소들로 구성된다.</em>)</p>
+<p>그러므로 두 함수 </p>
+<div class="arithmatex">\[ \Psi : 2 ^{X} \to \{0,1\} ^{X}, \quad \Psi : \{0,1\}^{X}\to 2 ^{X} \]</div>
+<p>는 서로 역함수이다.</p>
+</li>
+</ul>
+<h3 id="characteristic-function">Characteristic Function<a class="headerlink" href="#characteristic-function" title="Permanent link">¶</a></h3>
+<a href="#40ea94cb0"><div class="admonition def" id="40ea94cb0">
+<p class="admonition-title">특성함수(characteristic function) 또는 지시함수(indicator function)</p>
+<p>임의의 <span class="arithmatex">\(A \in \mathcal{P}(X)\)</span> 에 대하여 <span class="arithmatex">\(\chi_A \in \{0,1\}^{X}\)</span> 를 </p>
+<div class="arithmatex">\[ \chi_A(x) = \begin{cases} 1 &amp;x \in A\\ 0 &amp;x \not \in A\\ \end{cases} \]</div>
+<p>라고 정의하고 특성함수라 한다.</p>
+</div></a>
+<ul>
+<li>특정 집합에 특정 값이 속하는지 표시하는 함수이다. 특정 값이 집합에 속하면 <span class="arithmatex">\(1\)</span>, 속하지 않으면 <span class="arithmatex">\(0\)</span> 의 값을 가진다. </li>
+</ul>
+<h3 id="projection">Projection<a class="headerlink" href="#projection" title="Permanent link">¶</a></h3>
+<a href="#b5f89b5ff"><div class="admonition def" id="b5f89b5ff">
+<p class="admonition-title">사영(projection)</p>
+<p>각 <span class="arithmatex">\(i \in I\)</span> 에 대하여 함수 </p>
+<div class="arithmatex">\[ \pi _i: \prod_{i \in I}^{}X_i \to X_i, f \mapsto f(i) \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정의에서 <span class="arithmatex">\(f\)</span> 란 <a href="#e5928333f">곱집합의 정의</a> 에서의 <span class="arithmatex">\(f\)</span> 를 뜻한다.</p>
+</li>
+<li>
+<p>즉, <span class="arithmatex">\(i \in I\)</span> 에 대한 사영은 집합족 <span class="arithmatex">\(\{X_i : i \in I\}\)</span> 의 곱집합 <span class="arithmatex">\(\prod_{i \in I}^{}X_i\)</span> 에 존재하는 함수들 중 어느 함수를 입력하면, 그것을 그 함수의 <span class="arithmatex">\(i\)</span> 번째 사상으로 대응시킨다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\R ^{n}\)</span> 의 사영 <span class="arithmatex">\(\pi _i\)</span> 는 곱집합 <span class="arithmatex">\(\R ^{n}\)</span> 의 어느 한 원소</p>
+<div class="arithmatex">\[ (a_1, a_2, \dots, a_n), \quad a_i \in \R \]</div>
+<p>를 입력하면 <span class="arithmatex">\(i\)</span> 번째 원소 <span class="arithmatex">\(a_i\)</span> 를 출력하는 함수이다.</p>
+</li>
+</ul>
+<h2 id="equivalence-relation">Equivalence Relation<a class="headerlink" href="#equivalence-relation" title="Permanent link">¶</a></h2>
+<a href="#7fc5ca69b"><div class="admonition def" id="7fc5ca69b">
+<p class="admonition-title">관계(relation)</p>
+<p>집합족 <span class="arithmatex">\(\{X_i\}_{i \in I}\)</span> 위의 관계는 곱집합의 부분집합 <span class="arithmatex">\(R \subseteq \displaystyle \prod_{i \in I}^{}X_i\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이를 통해 순서수 <span class="arithmatex">\(\alpha\)</span> 에 대하여 집합 <span class="arithmatex">\(X\)</span> 위의 <span class="arithmatex">\(\alpha\)</span>항 관계를 거듭제곱 집합의 부분집합</p>
+<div class="arithmatex">\[ R \subseteq X ^{\times \alpha } \]</div>
+<p>로 정의한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(X\)</span> 위의 영항관계(nullary relation) 은 <span class="arithmatex">\(R \subseteq \{\cdot \}\)</span> 즉, <span class="arithmatex">\(R = \emptyset\)</span> 이다.</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 위의 단항관계(unary relation) 은 <span class="arithmatex">\(R \subseteq X\)</span> 이다.</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 위의 이항관계(binary relation) 은 <span class="arithmatex">\(R \subseteq X \times X\)</span> 이다. 특히 이항관계에서 <span class="arithmatex">\((x, y) \in R\)</span> 일 경우 <span class="arithmatex">\(xRy\)</span> 와 같이 자주 표기한다. </p>
+<ul>
+<li>가령 집합 <span class="arithmatex">\(\mathbb{N}\)</span> 위의 이항관계 <span class="arithmatex">\(+ \subseteq \mathbb{N} \times \mathbb{N}\)</span> 에서 <span class="arithmatex">\((1, 2) \in \mathbb{N}\)</span> 을 <span class="arithmatex">\(1 + 2\)</span> 로 표기한다.</li>
+</ul>
+<p>집합 <span class="arithmatex">\(X\)</span> 위의 삼항관계(ternary relation) 은 <span class="arithmatex">\(R \subseteq X \times X \times X\)</span> 이다. </p>
+<ul>
+<li>프로그래밍 언어에서 <span class="arithmatex">\(x = (condition) ? a : b;\)</span> 와 같이 사용되기도 한다.</li>
+</ul>
+<p>집합 <span class="arithmatex">\(X\)</span> 위의 <span class="arithmatex">\(n\)</span>항관계(n-ary relation) 은 <span class="arithmatex">\(R \subseteq X ^{\times n}\)</span> 이다. 이때 <span class="arithmatex">\((x_1, \dots, x_n) \in R\)</span> 을 <span class="arithmatex">\(R(x_1, \dots, x_n)\)</span> 와 같이 표기한다.</p>
+</li>
+<li>
+<p>두 집합 <span class="arithmatex">\(X, Y\)</span> 의 곱집합 <span class="arithmatex">\(X \times Y\)</span> 의 부분집합이다.</p>
+</li>
+<li>
+<p>집합 <span class="arithmatex">\(X\)</span> 에 관계가 주어졌다는 것은 곱집합 <span class="arithmatex">\(X \times X\)</span> 의 부분집합이 주어졌다는 것이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>데카르트 공간 <span class="arithmatex">\(\mathbb{R} ^{2}\)</span>, 즉 직교좌표계의 부분집합 </p>
+<div class="arithmatex">\[ x \in X, y \in Y, x ^{2}+y ^{2} = 4 \]</div>
+<p>는 관계이다.</p>
+</li>
+</ul>
+<a href="#61b0328b9"><div class="admonition def" id="61b0328b9">
+<p class="admonition-title">동치관계(equivalence relation)</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 에 대한 관계 <span class="arithmatex">\(R \subset X \times X\)</span> 가 다음을 만족하면 <span class="arithmatex">\(R\)</span> 을 동치관계라 한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall x \in X : (x,x)\in R\)</span> (reflexive relation)</p>
+</li>
+<li>
+<p><span class="arithmatex">\((x, y) \in R \implies (y, x) \in R\)</span> (symmetric relation)</p>
+</li>
+<li>
+<p><span class="arithmatex">\((x, y) \in R \land (y,z)\in R \implies (x, z) \in R\)</span> (transitive relation)</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>동치관계 <span class="arithmatex">\(R \subset X \times X\)</span> 의 원소 <span class="arithmatex">\((x, y) \in R\)</span> 을 </p>
+<div class="arithmatex">\[ x \sim y \]</div>
+<p>라고 쓴다.</p>
+</li>
+<li>
+<p>동치관계의 조건을 다시 열거하면 다음과 같이 된다.</p>
+<div class="arithmatex">\[ x \in X \to x \sim x \]</div>
+<div class="arithmatex">\[ x \sim y \to y \sim x \]</div>
+<div class="arithmatex">\[ x \sim y, y \sim z \to x \sim z \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p>"같다" 는 동치관계의 예시이다.</p>
+<p>"서로 평행이다", "서로 닮음이다" 도 동치관계의 예시이다.</p>
+</li>
+</ul>
+<h3 id="equivalence-class">Equivalence Class<a class="headerlink" href="#equivalence-class" title="Permanent link">¶</a></h3>
+<a href="#e759e3714"><div class="admonition def" id="e759e3714">
+<p class="admonition-title">동치류(equivalence class)</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 에 동치관계 <span class="arithmatex">\(\sim\)</span> 가 주어져 있을 때 각 <span class="arithmatex">\(x \in X\)</span> 에 대하여</p>
+<div class="arithmatex">\[ [x] = \{z \in X: z \sim x\} \]</div>
+<p>를 <span class="arithmatex">\(x\)</span> 의 동치류라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(X = \{a,b,c\}\)</span> 에 </p>
+<div class="arithmatex">\[ R = \{(a,a), (b,b), (c,c), (a,b), (b,a)\} \]</div>
+<p>와 같은 동치 관계가 주어져있다고 하자. 그러면 </p>
+<div class="arithmatex">\[ [a]=\{a,b\}, \qquad [b]=\{a,b\}, \qquad [c]=\{c\} \]</div>
+<p>이므로 집합 <span class="arithmatex">\(X=\{a,b,c\}\)</span> 가 집합족 </p>
+<div class="arithmatex">\[ \{\{a,b\}, \{c\}\} \]</div>
+<p>으로 분할된다. </p>
+</li>
+</ul>
+<a href="#c4711e24b"><div class="admonition def" id="c4711e24b">
+<div class="arithmatex">\[ x \sim y \iff [x]=[y] \]</div>
+<div class="arithmatex">\[ x \not \sim y \iff [x] \cap [y] = \varnothing \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(x \sim y\)</span> 이면 동치관계의 성질 2), 3) 에 의하여 </p>
+<div class="arithmatex">\[ z \in [x] \iff z \sim x \iff z \sim y \iff z \in [y] \]</div>
+<p>이다. 역으로 <span class="arithmatex">\([x] = [y]\)</span> 이면 <span class="arithmatex">\(x \sim x\)</span> 이므로 <span class="arithmatex">\(x \in [x] = [y]\)</span> 가 되고 따라서 <span class="arithmatex">\(x \sim y\)</span> 임을 알 수 있다. </p>
+<p>두번째 성질을 증명하기 위하여 </p>
+<div class="arithmatex">\[ [x] \cap [y] \neq \varnothing \implies [x] = [y] \]</div>
+<p>임을 보이자. 만약 <span class="arithmatex">\(z \in [x] \cap [y]\)</span> 이면 <span class="arithmatex">\(z \sim x, z \sim y\)</span> 가 성립하고 따라서 <span class="arithmatex">\(x \sim y\)</span> 이다. <span class="arithmatex">\(\forall x \in X, x \in [x]\)</span> 이므로 성질 <span class="arithmatex">\((1)\)</span> 에 의해 집합 <span class="arithmatex">\(X\)</span> 는 집합족</p>
+<div class="arithmatex">\[ \{[x]:x \in X\} \]</div>
+<p>으로 분할됨을 알 수 있다. </p>
+</li>
+</ul>
+<h3 id="partition">Partition<a class="headerlink" href="#partition" title="Permanent link">¶</a></h3>
+<a href="#dcb6dec75"><div class="admonition def" id="dcb6dec75">
+<p class="admonition-title">분할(partition)</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 의 공집합이 아닌 부분집합족 <span class="arithmatex">\(\{A_i : i \in I\}\)</span> 가 다음을 만족하면 이를 <span class="arithmatex">\(X\)</span> 의 분할이라 한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(X = \displaystyle \bigcup_{i \in I}^{}A_i\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall i,j \in I: A_i \neq A_j \implies A_i \cap A_j = \varnothing\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>집합 <span class="arithmatex">\(X\)</span> 에 동치관계 <span class="arithmatex">\(\sim\)</span> 가 주어지면 자동적으로 <span class="arithmatex">\(X\)</span> 의 분할이 생김을 알 수 있는데, 이러한 분할을 </p>
+<div class="arithmatex">\[ X/\sim \]</div>
+<p>라고 표시한다. 이 집합족을 몫집합이라고 한다.</p>
+</li>
+<li>
+<p>만약 각 집합 <span class="arithmatex">\([x]\)</span> 의 원소를 하나 택하여 <span class="arithmatex">\(r_x\)</span> 라 두고 <span class="arithmatex">\(I = \{r_x:x \in X\}\)</span> 라 두면 <span class="arithmatex">\(\{[r]:r \in I\}\)</span> 는 서로소인 집합족이 되고, 따라서 </p>
+<div class="arithmatex">\[ X = \bigcup_{}^{}\{[r]:r \in I\} \]</div>
+<p>임을 알 수 있다. </p>
+</li>
+<li>
+<p>이제 거꾸로 집합 <span class="arithmatex">\(X\)</span> 의 분할 <span class="arithmatex">\(\mathcal{P} = \{X_i : i \in I\}\)</span> 가 주어졌을 때 동치관계를 이끌어내보자. <span class="arithmatex">\(\forall x, y \in X\)</span> 가 "<span class="arithmatex">\(x, y \in X_i\)</span> 인 <span class="arithmatex">\(i \in I\)</span> 가 존재한다" 를 만족할 때 <span class="arithmatex">\(x \sim y\)</span> 라고 정의하자. 그러면 <span class="arithmatex">\(\sim\)</span> 이 동치관계임을 바로 알 수 있다. </p>
+<p>실제로 <span class="arithmatex">\(x \in X\)</span> 이면 분할의 정의 1) <span class="arithmatex">\(X = \bigcup_{i \in I}^{}X_i\)</span> 에 의하여 <span class="arithmatex">\(x \in X_i\)</span> 인 <span class="arithmatex">\(i \in I\)</span> 를 찾을 수 있고, 이에 따라 <span class="arithmatex">\(x \sim x\)</span> 가 성립하며, 이로써 동치관계의 조건 1) reflexive relation 이 성립한다.</p>
+<p>동치관계의 조건 2) symmetric relation 은 <span class="arithmatex">\(x \sim y\)</span> 로부터 <span class="arithmatex">\(y \sim x\)</span> 를 이끌어내면 증명되는데, <span class="arithmatex">\(x, y \in X_i\)</span> 인 <span class="arithmatex">\(i \in I\)</span> 가 존재하면, <span class="arithmatex">\(y, x \in X_i\)</span> 인 <span class="arithmatex">\(i \in I\)</span> 가 존재함은 자명하다. </p>
+<p>그러면 이제 동치관계의 조건 3) transitive relation 을 보이기 위하여 <span class="arithmatex">\(x \sim y, y \sim z\)</span> 라 가정하자. 그러면 <span class="arithmatex">\(x, y \in X_i\)</span> 인 <span class="arithmatex">\(i \in I\)</span> 와 <span class="arithmatex">\(y,z \in X_j\)</span> 인 <span class="arithmatex">\(j \in I\)</span> 가 존재한다. 그런데 <span class="arithmatex">\(y \in X_i \cap X_j\)</span> 이므로 <span class="arithmatex">\(X_i = X_j\)</span> 이고, 이에따라 <span class="arithmatex">\(x \sim z\)</span> 이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 에 관계 </p>
+<div class="arithmatex">\[ m \sim n \iff \exists k \in \N, m - n = 2k \]</div>
+<p>를 정의하면 동치관계가 됨을 바로 알 수 있다. </p>
+<p>이때 <span class="arithmatex">\(m\)</span> 이 짝수면 <span class="arithmatex">\([m] = \{2n \in \N : n \in \N\}\)</span> 가 되고, <span class="arithmatex">\(m\)</span> 이 홀수면 <span class="arithmatex">\([m] = \{2n+1 \in \N : n \in \N\}\)</span> 가 된다. 따라서 </p>
+<div class="arithmatex">\[ \mathbb{Z}/\sim\ = \{[x]:m \in \mathbb{Z}\} = \{[m]:m = 0, 1\} = \{[0], [1]\} \]</div>
+<p>가 되고, <span class="arithmatex">\(\mathbb{Z} = [0] \cup [1]\)</span> 이 된다. 이때 <span class="arithmatex">\(0, 1\)</span> 대신 <span class="arithmatex">\(8, 5\)</span> 를 택하여 <span class="arithmatex">\(\mathbb{Z} = [8] \cup [5]\)</span> 라고 써도 마찬가지이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(\N \times \N = \{(m,n):m,n \in \N\}\)</span> 에 관계 <span class="arithmatex">\(\sim\)</span> 를 </p>
+<div class="arithmatex">\[ (m,n) \sim (m',n') \iff m+n' = n+m' \]</div>
+<p>와 같이 부여하면 동치관계가 된다. reflexive, symmetric 이 성립함은 자명하고, transitive 가 성립함을 보이자. 이는 <span class="arithmatex">\(x \sim y, y \sim z \to x \sim z\)</span> 를 보임으로써 완성된다.</p>
+<p>만약 <span class="arithmatex">\((m,n) \sim (m',n') \land (m', n') \sim (m'', n'')\)</span> 라면 <span class="arithmatex">\(m+n'=n+m' \land m'+n''=n'+m''\)</span> 이므로 </p>
+<div class="arithmatex">\[ (m+n'')+(m'+n') = (m+n')+(m'+n'') \]</div>
+<div class="arithmatex">\[ = (n+m') + (n'+m'')=n+m''+(m'+n') \]</div>
+<p>이 성립한다. 따라서 <span class="arithmatex">\(m+n''=n+m''\)</span> 이고, 이에따라 </p>
+<div class="arithmatex">\[ \therefore (m,n) \sim (m'',n'') \]</div>
+<p>이다. ■ </p>
+<p>한편 이 경우 </p>
+<div class="arithmatex">\[ \N \times \N / \sim = \{[(0, 0)], [(n, 0)], [(0, n)] : n \in \N \setminus \{0\} \} \]</div>
+<p>이 성립함을 금방 알 수 있는데, 이것이 정수 체계의 정의로 곧바로 연결된다. 왜냐하면, 사실 이렇게 이해하는 게 더 편하다. 동치 관계 </p>
+<div class="arithmatex">\[ (m,n) \sim (m',n') \iff m+n' = n+m' \]</div>
+<p>를 </p>
+<div class="arithmatex">\[ (m,n) \sim (m',n') \iff m-n = m'-n' \]</div>
+<p>로 생각하면 이는 <span class="arithmatex">\(a \in \N \times \N\)</span> 의 첫번째 원소와 두번째 원소의 차이값이다. </p>
+</li>
+</ul>
+<a href="#06a85be33"><div class="admonition def" id="06a85be33">
+<p class="admonition-title">정리 1.3.1</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 에 정의된 동치관계 <span class="arithmatex">\(\sim\)</span> 에 대하여 <span class="arithmatex">\(\sim = \sim _{(X/\sim )}\)</span> 이 성립한다.</p>
+<p>역으로, 임의의 분할 <span class="arithmatex">\(\mathcal{P}\)</span> 에 대하여 <span class="arithmatex">\(\mathcal{P} = X/\sim _{\mathcal{P}}\)</span> 가 성립한다. </p>
+<p>즉, <span class="arithmatex">\(\forall  x, y \in X\)</span> 와 <span class="arithmatex">\(A \in 2 ^{X}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ x \sim y \iff x \sim _{(X/\sim )}y, \qquad A \in \mathcal{P}\iff A \in X/ \sim _{\mathcal{P}} \]</div>
+<p>가 성립한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 동치관계와 동치관계로 생성된 분할이 서로 같고, 분할과 분할로 생성된 동치관계가 서로 같음을 말해준다. 즉, 분할과 동치관계가 본질적으로 서로 같다는 것을 말해준다. </p>
+</li>
+<li>
+<p>첫번째 명제의 증명 </p>
+<p>먼저 <span class="arithmatex">\(x \sim y\)</span> 이면 <span class="arithmatex">\(x \in [x], y \in [x]\)</span> 이고 <span class="arithmatex">\([x] \in X/\sim\)</span> 이므로 <span class="arithmatex">\(x \sim _{(X/\sim )}y\)</span> 가 성립한다. 역으로 <span class="arithmatex">\(x \sim _{(X/\sim )}y\)</span> 이면 <span class="arithmatex">\(x \in [z], y \in [z]\)</span> 인 <span class="arithmatex">\([z] \in X/\sim\)</span> 이 존재한다. 그러면 <span class="arithmatex">\(x \sim z, y \sim z\)</span> 이므로 <span class="arithmatex">\(x \sim y\)</span> 이다.</p>
+</li>
+<li>
+<p>두번째 명제의 증명 </p>
+<p><span class="arithmatex">\(A \in \mathcal{P}\)</span> 라고 가정하고, <span class="arithmatex">\(a \in A\)</span> 를 택하자. 만약 <span class="arithmatex">\(x \in A\)</span> 이면 정의에 의하여 <span class="arithmatex">\(x \sim _{\mathcal{P}} a\)</span> 이다. 만약 <span class="arithmatex">\(x \sim _{\mathcal{P}}a\)</span> 이면 <span class="arithmatex">\(x \in B, a \in B\)</span> 인 <span class="arithmatex">\(B \in \mathcal{P}\)</span> 가 존재하는데 <span class="arithmatex">\(a \in A \cap B\)</span> 이므로 <span class="arithmatex">\(A=B\)</span> 이고, 따라서 <span class="arithmatex">\(x \in A\)</span> 이다. 그러므로 </p>
+<div class="arithmatex">\[ A = \{x \in X:x \sim _{\mathcal{P}}a\} \in X/\sim _{\mathcal{P}} \]</div>
+<p>이다. </p>
+<p>역으로 <span class="arithmatex">\(A \in X / \sim _{\mathcal{P}}\)</span> 이면 적절한 <span class="arithmatex">\(a \in X\)</span> 에 대하여 <span class="arithmatex">\(A = \{x \in X:x \sim _{\mathcal{P}}a\}\)</span> 이다. 한편 분할 <span class="arithmatex">\(\mathcal{P}\)</span> 에서 <span class="arithmatex">\(a \in X\)</span> 가 포함되는 것을 <span class="arithmatex">\(B \in \mathcal{P}\)</span> 라 하자. 그러면 방금 증명한 바에 의하여 <span class="arithmatex">\(A=B\)</span> 이고, 따라서 <span class="arithmatex">\(A \in \mathcal{P}\)</span> 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>홀수 전체 집합을 <span class="arithmatex">\(O\)</span>, 짝수 전체 집합을 <span class="arithmatex">\(E\)</span> 라 두면 <span class="arithmatex">\(\mathcal{P} = \{O, E\}\)</span> 는 정수 전체 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 의 분할이다. 그러면 동치관게 <span class="arithmatex">\(\sim _{\mathcal{P}}\)</span> 의 정의에 의하여 </p>
+<div class="arithmatex">\[ m \sim _{\mathcal{P}} n \iff \exists a, b \in \N, (m = 2a-2, n = 2b-2) \lor (m = 2a - 1, n = 2b - 1) \]</div>
+<div class="arithmatex">\[ \iff \exists c \in \N, m - n = 2c \]</div>
+<p>이다. 그러므로 동치관계 <span class="arithmatex">\(\sim _{\mathcal{P}}\)</span> 는 "분할" 의 예시에서 정의한 <span class="arithmatex">\(\mathbb{Z}/\sim\)</span> 과 같은 것이 된다.</p>
+<ul>
+<li>
+<p>"분할" 의 예시에서는 정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 에 관계 </p>
+<div class="arithmatex">\[ m \sim n \iff \exists k \in \N, m - n = 2k \]</div>
+<p>를 정의하여 <span class="arithmatex">\(\mathbb{Z}/\sim\)</span> 가 짝수와 홀수의 집합으로 구성된다는 사실을 이끌어 내었고, </p>
+<p>이 예시는 역으로 정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 를 짝수와 홀수로 분할한 집합 <span class="arithmatex">\(\mathcal{P} = \{O,E\}\)</span> 에 대한 동치관계 <span class="arithmatex">\(m \sim _{\mathcal{P}} n\)</span> 로부터 이 동치관계가 </p>
+<div class="arithmatex">\[ m \sim _{\mathcal{P}} n \iff \exists c \in \N, m - n = 2c \]</div>
+<p>를 뜻함을 이끌어 냄으로써 </p>
+<p>동치관계의 정의로부터 도출된 분할과 분할의 정의로부터 도출된 동치관계가 서로 동일함을 보여주고 있는 것이다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="quotient-set">Quotient Set<a class="headerlink" href="#quotient-set" title="Permanent link">¶</a></h3>
+<a href="#d7676da3e"><div class="admonition def" id="d7676da3e">
+<p class="admonition-title">몫집합(quotient set), 상집합</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 의 동치관계 <span class="arithmatex">\(\sim\)</span> 혹은 분할 <span class="arithmatex">\(\mathcal{P}\)</span> 에 의하여 얻은 집합 </p>
+<div class="arithmatex">\[ X / \sim \]</div>
+<p>을 몫집합이라고 한다. </p>
+</div></a>
+<a href="#70846e206"><div class="admonition def" id="70846e206">
+<p class="admonition-title">목사상(quotient map)</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 와 그것의 몫집합 <span class="arithmatex">\(X/ \sim\)</span> 에 대한 함수  </p>
+<div class="arithmatex">\[ q : X \to X/ \sim : x \mapsto [x] \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>목사상은 전사사상이다.</li>
+</ul>
+<a href="#f376d2b23"><div class="admonition def" id="f376d2b23">
+<p class="admonition-title">정리 1.3.2</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 와 동치관계 <span class="arithmatex">\(\sim\)</span> 와 함수 <span class="arithmatex">\(f: X \to Y\)</span> 와 목사상 <span class="arithmatex">\(q: X \to X / \sim : x \mapsto [x]\)</span> 대하여 다음 명제들은 서로 동치이다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\tilde{f} \circ q = f\)</span> 인 함수 <span class="arithmatex">\(\tilde{f}: X/\sim \to Y\)</span> 가 유일하게 존재한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(x \sim y \implies f(x)=f(y)\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(2 \implies 1\)</span>:</p>
+<p>2) 를 가정하면 함수 <span class="arithmatex">\(\tilde{f}:X/ \sim \to Y:[x] \to f(x)\)</span> 가 존재한다. 이때 이 정의가 잘 정의되어 있는지 살펴봐야 하는데, 왜냐하면 <span class="arithmatex">\([x]\)</span> 의 함수값을 정의하기 위하여 <span class="arithmatex">\(x\)</span> 를 사용하였는데 <span class="arithmatex">\([x]\)</span> 를 대표하는 원소가 <span class="arithmatex">\(x\)</span> 이외에 더 있을 수 있기 때문이다. 즉, 다른 원소 <span class="arithmatex">\(y\)</span> 에 대하여 <span class="arithmatex">\([x]=[y]\)</span> 라면 <span class="arithmatex">\(y\)</span> 도 <span class="arithmatex">\([x]\)</span> 를 대표하게 되는데 이런 때에도 <span class="arithmatex">\(f(x)=f(y)\)</span> 가 성립하여야 <span class="arithmatex">\(\tilde{f}\)</span> 가 함수가 될 수 있다. 이것을 2) 가 보장해준다. </p>
+<p>이제 <span class="arithmatex">\(\tilde{f}\)</span> 의 유일성을 보이면 된다. 즉, 두 함수 <span class="arithmatex">\(\tilde{f}_{1}, \tilde{f}_{2}: X/\sim \to Y\)</span> 가 <span class="arithmatex">\(\tilde{f}_{1} \circ q = \tilde{f}_{2} \circ q = f\)</span> 이면 서로 같음을 보이자. 2) 를 가정했으므로 임의의 <span class="arithmatex">\(A \in X/ \sim\)</span> 에 대하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ x, y \in A \implies f(x) = f(y) \]</div>
+<p>따라서 다음이 성립한다. </p>
+<div class="arithmatex">\[ \tilde{f}_1(q(x)) = \tilde{f}_2(q(x)) \iff \tilde{f}_1(A) = \tilde{f}_2(A) \]</div>
+<p>즉, 정의역의 임의의 원소에서 <span class="arithmatex">\(\tilde{f}_1\)</span> 와 <span class="arithmatex">\(\tilde{f}_2\)</span> 의 상이 같다. <a href="#57b118c60">함수의 상등의 정의</a>에 의하여 <span class="arithmatex">\(\tilde{f}_1 = \tilde{f}_2\)</span> 이다. ▲ </p>
+<p><span class="arithmatex">\(1 \implies 2\)</span>:</p>
+<p>역으로 <span class="arithmatex">\(\tilde{f}\circ q = f\)</span> 가 성립하는 함수 <span class="arithmatex">\(\tilde{f}:X/\sim \to Y\)</span> 가 존재하면 조건 2) 가 성립하는 것은 자명하다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p>좌표평면 <span class="arithmatex">\(\R ^{2}\)</span> 의 한 점 <span class="arithmatex">\(A = (a_1, a_2)\)</span> 에서 출발하여 <span class="arithmatex">\(B = (b_1, b_2)\)</span> 로 가는 화살표 <span class="arithmatex">\(\overrightarrow{AB}\)</span> 전체의 집합을 <span class="arithmatex">\(X\)</span> 라 하고, <span class="arithmatex">\(X\)</span> 에 관계 </p>
+<div class="arithmatex">\[ \overrightarrow{AB} \sim \overrightarrow{CD} \iff B-A = D-C \]</div>
+<p>를 정의하자. 그러면 이 관계는 동치관계가 된다. </p>
+<p>이때 <span class="arithmatex">\(\forall \overrightarrow{AB} \in X\)</span> 에 대하여 <span class="arithmatex">\(A+C=B\)</span> 인 <span class="arithmatex">\(C = \in \R ^{2}\)</span> 를 잡으면 <span class="arithmatex">\(O = (0, 0)\)</span> 에 대하여 <span class="arithmatex">\(\bigg [\overrightarrow{AB}\bigg ] = \bigg [\overrightarrow{OC}\bigg ]\)</span> 이다. 따라서 </p>
+<div class="arithmatex">\[ X/\sim = \bigg \{\bigg [\overrightarrow{OC}\bigg ] : C \in \R ^{2} \bigg \} \]</div>
+<p>이다. 이때 함수 </p>
+<div class="arithmatex">\[ C \mapsto \bigg [\overrightarrow{OC}\bigg ] : \R ^{2} \to X/\sim \]</div>
+<p>은 전단사함수이다. 즉, 좌표평면 위의 모든 벡터는 한 점에 의하여 결정되므로 점 <span class="arithmatex">\((a_1, a_2) \in \R ^{2}\)</span> 을 벡터라 부른다. 이는 원점에서 그 점으로 가는 화살표로 이해하려는 것이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>실수체 <span class="arithmatex">\(\R\)</span> 위의 벡터공간 <span class="arithmatex">\(V\)</span> 와 그 부분공간 <span class="arithmatex">\(W\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ x \sim _{W} y \iff x - y \in W \]</div>
+<p>라고 정의하면 동치관계가 된다. 이때 <span class="arithmatex">\(\forall x \in V\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ [x] = \{y : x-y \in W\} = \{x+z:z \in W\} \]</div>
+<p>가 되는데, <span class="arithmatex">\(V / \sim _{W}\)</span> 에 <span class="arithmatex">\(x, y \in V, a \in \R\)</span> 에 대한 연산 </p>
+<div class="arithmatex">\[ [x]+[y]=[x+y], \qquad a[x]=[ax] \]</div>
+<p>를 정의하자. 그러면 <span class="arithmatex">\(V/ \sim _{W}\)</span> 는 벡터공간이 되는데, 이것을 <span class="arithmatex">\(V/W\)</span> 라고 쓰고 몫공간이라고 한다. </p>
+<p>그런데 <span class="arithmatex">\([x+y]\)</span> 를 정의하기 위하여 <span class="arithmatex">\(x\)</span> 를 사용했는데 <span class="arithmatex">\([x]\)</span> 를 대표하는 원소가 <span class="arithmatex">\(x\)</span> 만 있는 것이 아니기 때문에 이것이 잘 정의되었는가 검증해야 한다. 즉, </p>
+<div class="arithmatex">\[ [x_1] = [x_2], [y_1] = [y_2] \implies [x_1+y_1] = [x_2+y_2], [ax_1] = [ax_2] \]</div>
+<p>임을 증명해야 한다. 먼저 <span class="arithmatex">\([x_1] = [x_2], [y_1] = [y_2]\)</span> 이면 <span class="arithmatex">\(x_1 \sim x_2, y_1 \sim y_2\)</span> 이므로 <span class="arithmatex">\(x_1 - x_2, y_1 - y_2 \in W\)</span> 이고, 이로부터 </p>
+<div class="arithmatex">\[ (x_1+y_1) - (x_2+y_2) = (x_1-x_2)+(y_1-y_2)\in W \]</div>
+<div class="arithmatex">\[ ax_1-ax_2=a(x_1-x_2) \in W \]</div>
+<p>임을 알 수 있다. </p>
+</li>
+</ul>
+<h2 id="order">Order<a class="headerlink" href="#order" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>이 책은 부분순서를 "순서" 라고 표현하고 있다.</p>
+</div>
+<a href="#124636496"><div class="admonition def" id="124636496">
+<p class="admonition-title">원순서 관계(preordered relation)</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 의 관계 <span class="arithmatex">\(R \subset X \times X\)</span> 이 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall  x \in X, (x, x) \in R\)</span> (reflexivity)</p>
+</li>
+<li>
+<p><span class="arithmatex">\((x, y) \in R \land (y, z) \in R \to (x, z) \in R\)</span> (transitivity)</p>
+</li>
+</ol>
+<p>을 만족시키면 원순서 관계라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 관계를 <span class="arithmatex">\(\lesssim\)</span> 으로 표현하면 다음과 같다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall a \in X, a \lesssim a\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall a, b, c \in X, a \lesssim b \lesssim \implies  a \lesssim c\)</span></p>
+</li>
+</ol>
+</li>
+<li>
+<p>원순서 관계에 반대칭성 조건</p>
+<div class="arithmatex">\[ a \lesssim b \land b \lesssim a \implies a = b \]</div>
+<p>을 추가하면 부분 순서가 된다.</p>
+</li>
+</ul>
+<a href="#88642fdb8"><div class="admonition def" id="88642fdb8">
+<p class="admonition-title">원순서 집합(preordered set, proset)</p>
+<p>원순서 관계를 만족하는 집합이다. </p>
+</div></a>
+<ul>
+<li>원순서 집합은 두 원소를 추이적으로 비교할 수 있는 집합이다. </li>
+</ul>
+<a href="#4fae8da5c"><div class="admonition def" id="4fae8da5c">
+<p class="admonition-title">부분 순서관계(partial ordered relation)</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 의 관계 <span class="arithmatex">\(R \subset X \times X\)</span> 이 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall  x \in X, (x, x) \in R\)</span> (reflexivity)</p>
+</li>
+<li>
+<p><span class="arithmatex">\((x, y) \in R, (y, x) \in R \implies  x = y\)</span> (antisymmetry)</p>
+</li>
+<li>
+<p><span class="arithmatex">\((x, y) \in R \land (y, z) \in R \implies  (x, z) \in R\)</span> (transitivity)</p>
+</li>
+</ol>
+<p>를 만족하면 이를 부분 순서관계라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>순서관계는 <span class="arithmatex">\(\leq\)</span> 로 표현한다. </p>
+<p>이를 통해 순서관계의 세 조건을 </p>
+<div class="arithmatex">\[ x \in X \to x \leq x \]</div>
+<div class="arithmatex">\[ x \leq y, y \leq x \implies  x = y \]</div>
+<div class="arithmatex">\[ x \leq y, y \leq z \implies  x \leq z \]</div>
+<p>와 같이 쓸 수 있다.</p>
+</li>
+<li>
+<p>만약 <span class="arithmatex">\(x \leq y\)</span> 이면서 <span class="arithmatex">\(x \neq y\)</span> 이면 <span class="arithmatex">\(x &lt; y\)</span> 라고 쓴다.</p>
+</li>
+<li>
+<p>("수체계", "무한집합" 파트에서 말하는 "순서" 라는 용어는 이 부분 순서를 뜻함)</p>
+</li>
+</ul>
+<a href="#18e337354"><div class="admonition def" id="18e337354">
+<p class="admonition-title">부분 순서집합(partially ordered set)</p>
+<p>부분 순서관계가 정의되어 있는 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(X = \{a,b,c\}\)</span> 에 관계 </p>
+<div class="arithmatex">\[ R = \{(a,a),(b,b),(c,c),(a,b),(a,c)\}\subset X \times X \]</div>
+<p>를 정의하면 <span class="arithmatex">\(R\)</span> 은 순서관계가 된다. 이때 원소 <span class="arithmatex">\(a,b,c\)</span> 사이에 다음의 순서 </p>
+<div class="arithmatex">\[ a \leq a, b \leq b, c \leq c, a \leq b, a \leq c \]</div>
+<p>가 있게 된다.</p>
+</li>
+</ul>
+<a href="#5301d8d8d"><div class="admonition def" id="5301d8d8d">
+<p class="admonition-title">절대 부분 순서 관계(strict partial order), 순부분 순서</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 위의 관계 <span class="arithmatex">\(R \subset X \times X\)</span> 이 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall x \in X, x \not &lt; x\)</span> (irreflexivity)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(a&lt;b \land b &lt; c \implies  a &lt; c\)</span> (transitivity)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(a &lt; b \to y \not &lt; x\)</span> (asymmetry)</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>부분 순서 <span class="arithmatex">\(\leq \subseteq X ^{2}\)</span> 가 존재할 때 <span class="arithmatex">\(x, y \in X\)</span> 에 대하여</p>
+<div class="arithmatex">\[ x &lt; y \iff x \leq y \neq x \]</div>
+<p>를 만족하는 이항 관계 <span class="arithmatex">\(&lt; \subseteq X ^{2}\)</span> 는 절대 부분순서이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>절대 부분 순서 <span class="arithmatex">\(&lt; \subseteq X ^{2}\)</span> 가 존재할 때 <span class="arithmatex">\(x, y \in X\)</span> 에 대하여</p>
+<div class="arithmatex">\[ x &lt; y \iff x &lt; y \lor x = y \]</div>
+<p>를 만족하는 이항 관계 <span class="arithmatex">\(\leq  \subseteq X ^{2}\)</span> 는 부분순서이다.</p>
+</li>
+</ul>
+<a href="#7742b5976"><div class="admonition def" id="7742b5976">
+<p class="admonition-title">원전순서 집합(pretotally ordered set, totally preordered set, weakly ordered set)</p>
+<p>원순서 집합 <span class="arithmatex">\((X, \lesssim )\)</span> 이 </p>
+<div class="arithmatex">\[ \forall x, y \in X, x \lesssim y \lor y \lesssim x \]</div>
+<p>을 만족하면 원전순서 집합이다.</p>
+</div></a>
+<ul>
+<li>원전순서 집합은 두 원소가 항상 비교 가능한 원순서 집합이다.</li>
+</ul>
+<a href="#d700b888e"><div class="admonition def" id="d700b888e">
+<p class="admonition-title">전순서 집합(totally ordered set, toset)</p>
+<p>원전순서 집합인 부분 순서 집합 <span class="arithmatex">\((X, \leq )\)</span> 으로써 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(x \leq y \leq z \implies x \leq z\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall x, y \in X, x \leq y \land y \leq x \implies x = y\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall x, y \in X, x \leq y \lor y \leq x\)</span></p>
+</li>
+</ol>
+<p>을 만족하는 집합이다.</p>
+</div></a>
+<a href="#e13721cbf"><div class="admonition def" id="e13721cbf">
+<p class="admonition-title">도약(jump)</p>
+<p>전순서 집합 <span class="arithmatex">\((X, \leq )\)</span> 의 도약 <span class="arithmatex">\((a, b) \in X ^{2}\)</span> 은 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(a&lt;b\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\not \exists c \in X, a &lt; c &lt; b\)</span></p>
+</li>
+</ol>
+<p>을 만족시키는 순서쌍이다.</p>
+</div></a>
+<ul>
+<li>도약이 없는 전순서를 조밀 순서라 한다.</li>
+</ul>
+<a href="#704634d36"><div class="admonition def" id="704634d36">
+<p class="admonition-title">조밀 순서(dense order)</p>
+<p>집합 <span class="arithmatex">\(X\)</span> 의 부분순서 <span class="arithmatex">\(\leq\)</span> 가 </p>
+<ul>
+<li><span class="arithmatex">\(\forall x, z \in X, x &lt; z \implies \exists y \in X \text{ s.t.  }\  x &lt; y &lt; z\)</span></li>
+</ul>
+</div></a>
+<ul>
+<li>조밀 순서는 비교 가능한 서로 다른 두 원소 사이에 항상 제 3의 원소가 존재하는 부분순서이다.</li>
+</ul>
+<h3 id="relation-of-order-relations">Relation of Order Relations<a class="headerlink" href="#relation-of-order-relations" title="Permanent link">¶</a></h3>
+<a href="#b20b3ebe6"><div class="admonition def" id="b20b3ebe6">
+<p>순서 관계의 함의 관계는 다음과 같다. </p>
+<div class="arithmatex">\[ \begin{CD} \text{전순서 집합} @&gt; &gt;&gt; \text{원전순서 집합} \\ @V VV @VV V \\ \text{부분순서 집합} @&gt; &gt;&gt; \text{원순서 집합} \end{CD} \]</div>
+</div></a>
+<h2 id="bounded-set">Bounded Set<a class="headerlink" href="#bounded-set" title="Permanent link">¶</a></h2>
+<h3 id="supremum">Supremum<a class="headerlink" href="#supremum" title="Permanent link">¶</a></h3>
+<a href="#0bd5d5af9"><div class="admonition def" id="0bd5d5af9">
+<p class="admonition-title">상계(upper bound)</p>
+<p>순서집합 <span class="arithmatex">\(X\)</span> 의 부분집합 <span class="arithmatex">\(S \subset X\)</span> 와 한 원소 <span class="arithmatex">\(a \in X\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ x \in S \to x \leq a \]</div>
+<p>가 성립하면 <span class="arithmatex">\(a\)</span> 를 <span class="arithmatex">\(S\)</span> 의 상계라고 한다.</p>
+</div></a>
+<ul>
+<li>상계 중 가장 작은 원소를 최소상계(least upper bound) 또는 상한(supremum)이라 한다.</li>
+</ul>
+<a href="#3de2905e1"><div class="admonition def" id="3de2905e1">
+<p class="admonition-title">상한(supremum), 최소상계(least upper bound)</p>
+<p>상계 중 가장 작은 원소 즉, 집합 <span class="arithmatex">\(X\)</span> 과 부분집합 <span class="arithmatex">\(S \subset X\)</span> 에 대하여 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\alpha\)</span> 는 <span class="arithmatex">\(S\)</span> 의 상계이다. 즉, <span class="arithmatex">\(x \in S \to x \leq \alpha\)</span> 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\beta\)</span> 가 <span class="arithmatex">\(S\)</span> 의 상계이면 반드시 <span class="arithmatex">\(\alpha \leq \beta\)</span> 이다. 즉, <span class="arithmatex">\(\forall x \in S, x \leq \beta \to \alpha \leq \beta\)</span> 이다.</p>
+</li>
+</ol>
+<p>를 만족하는 원소 <span class="arithmatex">\(\alpha \in X\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>집합 <span class="arithmatex">\(S\)</span> 가 상한을 가지면 두번째 조건에 의하여 상한이 오직 하나밖에 없음을 쉽게 알 수 있다.</p>
+<p>그 상한을 </p>
+<div class="arithmatex">\[ \sup S \]</div>
+<p>라고 쓴다.</p>
+</li>
+<li>
+<p>어느 집합의 상한은 그 집합의 원소일 수도 있고, 아닐 수도 있다.</p>
+<p>만약 <span class="arithmatex">\(\sup A\)</span> 가 <span class="arithmatex">\(A\)</span> 의 원소가 되면, <span class="arithmatex">\(\sup A\)</span> 는 자명하게 <span class="arithmatex">\(A\)</span> 에서 가장 큰 원소이다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>실수집합 <span class="arithmatex">\(\mathbb{R}\)</span> 의 부분집합을 취하고 순서를 부여하여 개구간 </p>
+<div class="arithmatex">\[ (0, 1) = \{x \in \mathbb{R}: 0 &lt; x &lt; 1\} \]</div>
+<p>을 얻으면, 이것의 상계 전체 집합은 </p>
+<div class="arithmatex">\[ \{x \in \mathbb{R} : x \geq 1\} \]</div>
+<p>이다. 이 집합의 최소원소는 <span class="arithmatex">\(1\)</span> 이므로 </p>
+<div class="arithmatex">\[ \sup (0, 1) = 1 \]</div>
+<p>이다.</p>
+<p>마찬가지로 실수집합 <span class="arithmatex">\(\mathbb{R}\)</span> 의 부분집합을 취하고 순서를 부여하여 폐구간 </p>
+<div class="arithmatex">\[ [0, 1] = \{x \in \mathbb{R}: 0 \leq x \leq 1\} \]</div>
+<p>을 얻으면, 이것의 상한은</p>
+<div class="arithmatex">\[ \sup [0, 1] = 1 \]</div>
+<p>이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#db86cf7e2"><div class="admonition def" id="db86cf7e2">
+<p class="admonition-title">위로 유계(bounded from above)</p>
+<p>순서집합의 부분집합이 상계를 가지면 이 집합을 위로 유계라고 한다.</p>
+</div></a>
+<a href="#7dbcc453b"><div class="admonition def" id="7dbcc453b">
+<p>정수집합 <span class="arithmatex">\(\Z\)</span> 과 <span class="arithmatex">\(\Z\)</span> 의 순서관계 <span class="arithmatex">\(\leq\)</span> 에 대하여</p>
+<p><span class="arithmatex">\(\emptyset \subset S \subseteq \Z\)</span> 인 집합 <span class="arithmatex">\(S\)</span> 가 <span class="arithmatex">\((\Z, \leq )\)</span> 에서 위로 유계라면 <span class="arithmatex">\(S\)</span> 는 가장 큰 원소를 갖는다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(S\)</span> 가 위로 유계이므로 <span class="arithmatex">\(\exists M \in \Z: \forall s \in S: s \leq M\)</span> 이다. 즉, 모든 <span class="arithmatex">\(S\)</span> 의 원소 <span class="arithmatex">\(s\)</span> 에 대하여 적당한 정수 <span class="arithmatex">\(M\)</span> 이 존재하여 항상 <span class="arithmatex">\(s \leq M\)</span> 라는 것이다.</p>
+<p>그러므로 <span class="arithmatex">\(\forall s \in S: 0 \leq M - s\)</span> 이다. 그러면 집합 <span class="arithmatex">\(T\)</span> 를 이렇게 정의해보자.</p>
+<div class="arithmatex">\[ T = \{M - s : s \in S\} \subseteq \mathbb{N} \]</div>
+<p>그러면 <a href="https://proofwiki.org/wiki/Well-Ordering_Principle">Well-Ordering Principle</a> 에 의하여 <span class="arithmatex">\(T\)</span> 는 가장 작은 원소를 갖는다. 그것을 <span class="arithmatex">\(b _{T} \in T\)</span> 라고 하자.</p>
+<blockquote>
+<p><strong>Well-Ordering Principle 구체화 필요</strong></p>
+</blockquote>
+<p>그렇다면 </p>
+<div class="arithmatex">\[ (\forall s \in S: b _{T} \leq M - s) \land (\exists g _{S} \in S:b _{T} = M - g _{S}) \]</div>
+<p>이다. 즉, <span class="arithmatex">\(S\)</span> 의 모든 원소 <span class="arithmatex">\(s\)</span> 에 대하여 <span class="arithmatex">\(M-s\)</span> 는 <span class="arithmatex">\(b _{T}\)</span> 와 같거나 크고, <span class="arithmatex">\(S\)</span> 의 원소 <span class="arithmatex">\(g _{S}\)</span> 가 존재하여 <span class="arithmatex">\(b _{T} = M - g _{S}\)</span> 가 된다는 것이다.</p>
+<p>그러므로 </p>
+<div class="arithmatex">\[ \forall s \in S : b _{T} \leq M - s \]</div>
+<div class="arithmatex">\[ \iff  \forall s \in S : M - g _{S} \leq M - s \]</div>
+<div class="arithmatex">\[ \iff  \forall s \in S : - g _{S} \leq - s \]</div>
+<div class="arithmatex">\[ \iff  \forall s \in S : g _{S} \geq s \]</div>
+<div class="arithmatex">\[ \iff g _{S} \in S \land (\forall s \in S : g _{S} \geq s ) \]</div>
+<p>이다. 즉, <span class="arithmatex">\(S\)</span> 의 모든 원소 <span class="arithmatex">\(s\)</span> 보다 큰 원소 <span class="arithmatex">\(g _{S}\)</span> 가 존재한다는 것이다.</p>
+<p>그러므로 <span class="arithmatex">\(S\)</span> 의 가장 큰 원소 <span class="arithmatex">\(g _{S}\)</span> 가 존재한다.</p>
+</li>
+</ul>
+<a href="#c819b3528"><div class="admonition def" id="c819b3528">
+<p class="admonition-title">위로 무계(unbounded from above)</p>
+<p>순서집합 <span class="arithmatex">\((S, \leq )\)</span> 의 부분집합 <span class="arithmatex">\(T \subseteq S\)</span> 이 위로 유계가 아니면 위로 무계이다.</p>
+</div></a>
+<a href="#7005d58de"><div class="admonition def" id="7005d58de">
+<p><span class="arithmatex">\(x \in \mathbb{R}\)</span> 이 <span class="arithmatex">\(x &gt; 1\)</span> 일 때 집합 <span class="arithmatex">\(S = \{x ^{n}:n \in \mathbb{N}\}\)</span> 은 위로 무계 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(S\)</span> 가 위로 유계라고 하자. 그러면 <span class="arithmatex">\(S\)</span> 는 상한 <span class="arithmatex">\(B = \sup S\)</span> 를 갖는다.</p>
+<p><span class="arithmatex">\(x &gt; 1\)</span> 이므로 <span class="arithmatex">\(\dfrac{x}{B} &gt; \dfrac{1}{B}\)</span> 에서 <span class="arithmatex">\(\dfrac{B}{x} &lt; B\)</span> 이다.</p>
+<p><span class="arithmatex">\(B\)</span> 가 최소상계, 즉 상한인데도 <span class="arithmatex">\(\dfrac{B}{x} &lt; B\)</span> 이므로 <span class="arithmatex">\(\dfrac{B}{x}\)</span> 는 상계가 될 수 없다. 그러므로 </p>
+<div class="arithmatex">\[ \exists n \in \mathbb{N}: x ^{n} &gt; \dfrac{B}{x} \implies x ^{n+1} &gt; B \]</div>
+<p>이다. 즉, <span class="arithmatex">\(\dfrac{B}{x}\)</span> 가 상계가 아니므로 와 적당한 자연수 <span class="arithmatex">\(n\)</span> 에 대한 <span class="arithmatex">\(x ^{n}\)</span> 이 존재하여 <span class="arithmatex">\(x ^{n} &gt; \dfrac{B}{x}\)</span> 인데, 이는 곧 <span class="arithmatex">\(x ^{n+1} &gt; B\)</span> 이 된다. 그런데 <span class="arithmatex">\(B\)</span> 를 최소상계라고 했으므로 이는 모순이다.</p>
+<p>그러므로 <span class="arithmatex">\(B\)</span> 는 상계가 아니다. </p>
+<p>이로써 <span class="arithmatex">\(S\)</span> 가 위로 유계라는 가정 또한 모순이다. 그러므로 <span class="arithmatex">\(S\)</span> 는 위로 무계 집합이다.</p>
+</li>
+</ul>
+<a href="#fd65cd583"><div class="admonition def" id="fd65cd583">
+<p class="admonition-title">역진귀납법(backwards induction)</p>
+<p>자연수 집합 <span class="arithmatex">\(\mathbb{N}\)</span> 과 명제함수 <span class="arithmatex">\(P\)</span> 에 대하여 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall n \in \mathbb{N} : P(2 ^{n})\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(P(n) \implies P(n-1)\)</span></p>
+</li>
+</ol>
+<p>이면 <span class="arithmatex">\(P(n)\)</span> 은 <span class="arithmatex">\(\forall n \in N\)</span> 에 대하여 성립한다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>적당한 자연수 <span class="arithmatex">\(\exists k \in \mathbb{N}\)</span> 가 존재하여 <span class="arithmatex">\(P(k)\)</span> 가 거짓이 된다고 하자.</p>
+<p>그러면 정리 "<span class="arithmatex">\(x \in \mathbb{R}\)</span> 이 <span class="arithmatex">\(x &gt; 1\)</span> 일 때 집합 <span class="arithmatex">\(S = \{x ^{n}:n \in \mathbb{N}\}\)</span> 은 위로 무계 집합이다." 에 의하여 <span class="arithmatex">\(\{2 ^{n} : n \in \mathbb{N}\}\)</span> 은 위로 무계이다.</p>
+<p>쉽게 말해서 <span class="arithmatex">\(2\)</span> 의 제곱수는 상계가 없다. 그러므로 <span class="arithmatex">\(k \in \mathbb{N}\)</span> 가 아무리 크더라도 </p>
+<div class="arithmatex">\[ M = 2 ^{N} &gt; k \]</div>
+<p>를 만족하는 <span class="arithmatex">\(N, M \in \mathbb{N}\)</span> 이 존재한다. 그러면 이제 집합 <span class="arithmatex">\(S\)</span> 를 다음과 같이 만들어보자.</p>
+<div class="arithmatex">\[ S = \{n \in \mathbb{N} : n &lt; M, P(n) \text{ is false}\} \]</div>
+<p>쉽게 말해 <span class="arithmatex">\(M\)</span> 보다 작은 자연수 <span class="arithmatex">\(n\)</span> 중에서 명제함수 <span class="arithmatex">\(P(n)\)</span> 가 거짓이 되는 자연수 <span class="arithmatex">\(n\)</span> 의 모임으로 집합 <span class="arithmatex">\(S\)</span> 를 정의하는 것이다. 그러면 <span class="arithmatex">\(k\)</span> 는 반드시 <span class="arithmatex">\(S\)</span> 의 원소이므로 <span class="arithmatex">\(S \neq \emptyset\)</span> 이다. (<span class="arithmatex">\(\because k &lt; M , P(k) \text{ is false}\)</span>)</p>
+<p>그리고 <span class="arithmatex">\(S\)</span> 는 <span class="arithmatex">\(\forall x \in S: x &lt; M\)</span> 이므로 위로 유계이다.</p>
+<p>그렇다면 정리 "정수집합 <span class="arithmatex">\(\Z\)</span> 과 <span class="arithmatex">\(\Z\)</span> 의 순서관계 <span class="arithmatex">\(\leq\)</span> 에 대하여 <span class="arithmatex">\(\emptyset \subset S \subseteq \Z\)</span> 인 집합 <span class="arithmatex">\(S\)</span> 가 <span class="arithmatex">\((\Z, \leq )\)</span> 에서 위로 유계라면 <span class="arithmatex">\(S\)</span> 는 가장 큰 원소를 갖는다." 에 의하여 <span class="arithmatex">\(S\)</span> 는 가장 큰 원소 <span class="arithmatex">\(g _{S}\)</span> 를 갖는다.</p>
+<p>그러면 <span class="arithmatex">\(S\)</span> 의 가장 큰 원소 <span class="arithmatex">\(g _{S}\)</span> 보다 큰 자연수 <span class="arithmatex">\(m\)</span> 에 대하여 <span class="arithmatex">\(m &lt; n \leq M\)</span> 인 자연수 <span class="arithmatex">\(n\)</span> 이 존재하여 <span class="arithmatex">\(P(n)\)</span> 을 참이 되게 한다. 그리고 그러므로 <span class="arithmatex">\(P(m+1)\)</span> 도 참이다.</p>
+<p>그런데 명제함수 <span class="arithmatex">\(P\)</span> 의 두번째 성질</p>
+<ol>
+<li><span class="arithmatex">\(P(n) \implies P(n-1)\)</span></li>
+</ol>
+<p>에 의하여 <span class="arithmatex">\(P(m+1) \implies P(m)\)</span> 이다. 즉, <span class="arithmatex">\(P(m+1)\)</span> 이 참이면 <span class="arithmatex">\(P(m)\)</span> 도 참이다. 이에따라 <span class="arithmatex">\(P(m-1)\)</span> 도 참이고, <span class="arithmatex">\(P(m-2)\)</span> 도 참이고, <span class="arithmatex">\(\dots\)</span>, <span class="arithmatex">\(P(1)\)</span> 도 참이다.</p>
+<p>그러므로 <span class="arithmatex">\(S\)</span> 의 가장 큰 원소 <span class="arithmatex">\(g _{S}\)</span> 가 존재하지 않으며, 이에따라 <span class="arithmatex">\(S = \emptyset\)</span> 이라는 결론을 얻는다. 이는 모순이다. </p>
+<p>그러므로 <span class="arithmatex">\(P(k)\)</span> 가 거짓이 되게 하는 <span class="arithmatex">\(k \in \mathbb{N}\)</span> 는 존재하지 않는다. ■</p>
+</li>
+</ul>
+<h3 id="infimum">Infimum<a class="headerlink" href="#infimum" title="Permanent link">¶</a></h3>
+<a href="#797c6f4fa"><div class="admonition def" id="797c6f4fa">
+<p class="admonition-title">하계(lower bound)</p>
+<p>순서집합 <span class="arithmatex">\(X\)</span> 의 부분집합 <span class="arithmatex">\(S \subset X\)</span> 와 한 원소 <span class="arithmatex">\(a \in X\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ x \in S \to x \geq a \]</div>
+<p>가 성립하면 <span class="arithmatex">\(a\)</span> 를 <span class="arithmatex">\(S\)</span> 의 하계라고 한다.</p>
+</div></a>
+<ul>
+<li>하계 중 가장 작은 원소를 최대하계(greatest lower bound) 또는 하한(infimum)이라 한다.</li>
+</ul>
+<a href="#68c47d9f7"><div class="admonition def" id="68c47d9f7">
+<p class="admonition-title">하한(infimum), 최대하계(greatest lower bound)</p>
+<p>하계 중 가장 큰 원소 즉, 집합 <span class="arithmatex">\(X\)</span> 과 부분집합 <span class="arithmatex">\(S \subset X\)</span> 에 대하여 </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\alpha\)</span> 는 <span class="arithmatex">\(S\)</span> 의 하계이다. 즉, <span class="arithmatex">\(x \in S \to x \geq \alpha\)</span> 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\beta\)</span> 가 <span class="arithmatex">\(S\)</span> 의 하계이면 반드시 <span class="arithmatex">\(\alpha \geq \beta\)</span> 이다. 즉, <span class="arithmatex">\(\forall x \in S, x \geq \beta \to \alpha \geq \beta\)</span> 이다.</p>
+</li>
+</ol>
+<p>를 만족하는 원소 <span class="arithmatex">\(\alpha \in X\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>마찬가지로 하한도 집합 <span class="arithmatex">\(S\)</span> 에 대하여 오직 하나밖에 없는데 그 하한을 </p>
+<div class="arithmatex">\[ \inf S \]</div>
+<p>라고 한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(X\)</span> 의 멱집합 <span class="arithmatex">\(2 ^{X}\)</span> 에 포함관계에 의한 순서를 부여하자. 즉, <span class="arithmatex">\(A \subset B \to A \leq B\)</span> 로 정의한다는 것이다. 이 관계가 순서관계를 만족한다는 것은 자명하다.</p>
+<p>이때 집합족 <span class="arithmatex">\(\mathcal{A} \subset 2 ^{X}\)</span> 이 주어지면 </p>
+<div class="arithmatex">\[ \sup \mathcal{A} = \bigcup_{}^{}\mathcal{A}, \inf \mathcal{A} = \bigcap_{}^{}\mathcal{A} \]</div>
+<p>이다. 이것을 증명해보자.</p>
+<p>먼저 <span class="arithmatex">\(\forall A \in \mathcal{A} \to A \leq \bigcup_{}^{}\mathcal{A}\)</span> 이므로 <span class="arithmatex">\(\bigcup_{}^{}\mathcal{A}\)</span> 은 <span class="arithmatex">\(\mathcal{A}\)</span> 의 상계이다. 만약 <span class="arithmatex">\(S \in 2 ^{X}\)</span> 가 <span class="arithmatex">\(\mathcal{A}\)</span> 의 상계라면, 임의의 <span class="arithmatex">\(A \in \mathcal{A}\)</span> 에 대하여 <span class="arithmatex">\(A \subset S\)</span> 이므로 </p>
+<div class="arithmatex">\[ x \in \bigcup_{}^{}\mathcal{A} \implies \exists A \in \mathcal{A}, x \in A \implies x \in S \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(\bigcup_{}^{}\mathcal{A} \leq S\)</span> 이고, </p>
+<div class="arithmatex">\[ \sup \mathcal{A} = \bigcup_{}^{}\mathcal{A} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#57699132a"><div class="admonition def" id="57699132a">
+<p class="admonition-title">아래로 유계(bounded from below)</p>
+<p>순서집합의 부분집합이 하계를 가지면 이 집합을 아래로 유계라고 한다.</p>
+</div></a>
+<h3 id="convex-set">Convex Set<a class="headerlink" href="#convex-set" title="Permanent link">¶</a></h3>
+<a href="#504d43b70"><div class="admonition def" id="504d43b70">
+<p class="admonition-title">볼록집합(convex set)</p>
+<p>좌표공간 <span class="arithmatex">\(\R ^{\mathcal{v}}\)</span> 의 부분집합 <span class="arithmatex">\(C \subset \R ^{\mathcal{v}}\)</span> 가 </p>
+<div class="arithmatex">\[ x,y \in C, 0 \leq t \leq 1 \to tx + (1-t)y \in C \]</div>
+<p>를 만족하면 이를 볼록집합이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>볼록집합은 쉽게 말해 유클리드 공간 속의 집합에서 임의의 두 점을 골랐을 때 둘을 연결하는 선분이 그 집합에 포함되면 볼록집합이다.</p>
+<p><figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Convex_polygon_illustration1.svg/440px-Convex_polygon_illustration1.svg.png" width="70%"/>
+<figcaption><i>볼록 집합</i></figcaption>
+</figure></p>
+<p><figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Convex_polygon_illustration2.svg/440px-Convex_polygon_illustration2.svg.png" width="70%"/>
+<figcaption><i>볼록 집합이 아닌 예</i></figcaption>
+</figure></p>
+</li>
+<li>
+<p>블록집합 <span class="arithmatex">\(C\)</span> 의 볼록부분집합 <span class="arithmatex">\(F\)</span> 가 </p>
+<p><span class="arithmatex">\(\exists t \in (0, 1) \text{ s.t. } x,y \in C, tx + (1-t)y \in F \implies x,y \in F\)</span> </p>
+<p>를 만족하면 <span class="arithmatex">\(F\)</span> 를 <span class="arithmatex">\(C\)</span> 의 면이라고 한다.</p>
+</li>
+<li>
+<p>한 점으로 이루어진 볼록집합의 면을 꼭지점이라 하다.</p>
+</li>
+</ul>
+<h3 id="lattice">Lattice<a class="headerlink" href="#lattice" title="Permanent link">¶</a></h3>
+<a href="#d9453b89f"><div class="admonition def" id="d9453b89f">
+<p class="admonition-title">격자(lattice)</p>
+<p>순서집합 <span class="arithmatex">\(X\)</span> 에서 <span class="arithmatex">\(\forall x, y \in X\)</span> 에 대하여 <span class="arithmatex">\(x \lor y\)</span> 와 <span class="arithmatex">\(x \land y\)</span> 가 존재하면 <span class="arithmatex">\(X\)</span> 를 격자라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정의에서 주의할 점은 <span class="arithmatex">\(x \lor y = \sup \{x, y\}\)</span> 와 <span class="arithmatex">\(x \land y = \inf \{x, y\}\)</span> 로 정의한다는 것이다.</p>
+</li>
+<li>
+<p>위에서 말한 상한의 정의를 다시 반복하면 <span class="arithmatex">\(x \lor y\)</span> 은 </p>
+<div class="arithmatex">\[ x \leq x \lor y, \quad y \leq x \lor y \]</div>
+<div class="arithmatex">\[ x \leq z, y \leq z \to x \lor y \leq z \]</div>
+<p>를 만족한다. 이때 </p>
+<div class="arithmatex">\[ (x, y) \mapsto x \lor y, \quad (x, y) \mapsto x \land y \]</div>
+<p>은 이항연산이다.</p>
+</li>
+</ul>
+<a href="#54ee62834"><div class="admonition def" id="54ee62834">
+<p class="admonition-title">완비격자(complete lattice)</p>
+<p>임의의 부분집합이 상한과 하한을 가지는 격자이다.</p>
+</div></a>
+<a href="#31e742557"><div class="admonition def" id="31e742557">
+<p class="admonition-title">1.22</p>
+<p><span class="arithmatex">\(\forall x, y, z \in X\)</span> 에 대하여 다음이 성립한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(x \lor x = x, x \land x = x\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(x \lor y = y \lor x, x \land y = y \land x\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((x \lor y) \lor z = x \lor (y \lor z), (x \land y) \land z = x \land (y \land z)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((x \lor y) \land x = x, (x \land y) \lor x = x\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>1), 2) 는 자명하다. <span class="arithmatex">\(\lor\)</span> 의 결합법칙을 보이기 위하여 </p>
+<div class="arithmatex">\[ (x \lor y) \lor z \leq x \lor (y \lor z) \tag{1} \]</div>
+<p>를 보이자. 먼저 <span class="arithmatex">\(x \leq x \lor (y \lor z)\)</span> 와 <span class="arithmatex">\(y \leq y \lor z \leq x \lor (y \lor z)\)</span> 에서 </p>
+<div class="arithmatex">\[ x \lor y \leq x \lor (y \lor z) \]</div>
+<p>가 성립한다. 또한 <span class="arithmatex">\(z \leq y \lor z \leq x \lor (y \lor z)\)</span> 을 함께 생각하면 <span class="arithmatex">\((1)\)</span> 이 성립함을 알 수 있다. 반대 부등식도 같은 방식으로 증명되고 <span class="arithmatex">\(\land\)</span> 의 결합법칙도 같은 방식으로 증명된다.</p>
+<p>마지막 명제 <span class="arithmatex">\((x \lor y) \land x = x\)</span> 를 보이기 위해서 </p>
+<div class="arithmatex">\[ x \leq x, \quad x \leq x \lor y \]</div>
+<div class="arithmatex">\[ z \leq x, z \leq x \lor y \to z \leq x \]</div>
+<p>를 보이면 되는데 이는 자명하다. ■ </p>
+</li>
+</ul>
+<a href="#36d61f4d7"><div class="admonition def" id="36d61f4d7">
+<p class="admonition-title">정리 1.4.1</p>
+<p>순서집합 <span class="arithmatex">\(X\)</span> 의 <span class="arithmatex">\(\forall x, y \in X\)</span> 에 대하여 <span class="arithmatex">\(x \lor y\)</span> 와 <span class="arithmatex">\(x \land y\)</span> 가 존재하면 (1.22) 가 성립한다. 역으로 집합 <span class="arithmatex">\(X\)</span> 에 이항연산 <span class="arithmatex">\(\lor , \land\)</span> 가 정의되어 (1.22) 를 만족한다고 할 때 </p>
+<div class="arithmatex">\[ x \leq y \iff x \lor y = y \]</div>
+<p>라 정의하면 <span class="arithmatex">\(X\)</span> 는 순서집합이 되고 이 순서에 대한 격자가 된다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>첫째 명제는 위에서 이미 증명하였고, <span class="arithmatex">\(x \leq x\)</span> 는 <a href="#9f4b6b716">1.22</a> 의 첫째 성질에서 나온다. <span class="arithmatex">\(x \leq y, y \leq x\)</span> 이면 <span class="arithmatex">\(x \lor y = y\)</span> 이고 <span class="arithmatex">\(y \lor x = x\)</span> 이다. 이때 <span class="arithmatex">\(\lor\)</span> 이 교환법칙을 만족하므로 <span class="arithmatex">\(x=y\)</span> 이다. 만약 <span class="arithmatex">\(x \leq y, y \leq z\)</span> 이면 </p>
+<div class="arithmatex">\[ x \lor z = x \lor (y \lor z) = (x \lor y) \lor z = y \lor z = z \]</div>
+<p>이므로 <span class="arithmatex">\(x \leq z\)</span> 가 성립한다. 이제 <span class="arithmatex">\(\sup \{x, y\} = x \lor y\)</span> 임을 보이자. 먼저 </p>
+<div class="arithmatex">\[ x \lor (x \lor y) = (x \lor x) \lor y = x \lor y \]</div>
+<p>이므로 <span class="arithmatex">\(x \leq x \lor y\)</span> 가 성립하고 <span class="arithmatex">\(x\)</span> 와 <span class="arithmatex">\(y\)</span> 의 역할을 바꾸면 </p>
+<div class="arithmatex">\[ y \leq y \lor x = x \lor y \]</div>
+<p>이다. 마지막으로 <span class="arithmatex">\(x \leq z, y \leq z\)</span> 이면 </p>
+<div class="arithmatex">\[ (x \lor y) \lor z = x \lor (y \lor z) = x \lor z = z \]</div>
+<p>이다. 따라서 <span class="arithmatex">\(x \lor y \leq z\)</span> 이다. 그러므로 <span class="arithmatex">\(\sup \{x, y\} = x \lor y\)</span> 이다. ■ </p>
+</li>
+</ul>
+<hr/>
+<dl>
+<dt>ref:</dt>
+<dd>
+<p>집합과 수의 체계</p>
+</dd>
+</dl>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<!-- 
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer> -->
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
+<script src="../../../javascripts/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+<script src="../../../javascripts/b27b3e6448.js"></script>
+</body>
+</html>

@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/paper/1102.1523/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<title>The NumPy array: a structure for efficient numerical computation - ccss17</title>
+<link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#the-numpy-array-a-structure-for-efficient-numerical-computation">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              The NumPy array: a structure for efficient numerical computation
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      ccss17
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Math/MathHistory/">
+        Math
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../1404.6388/">
+        Paper
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Computer/nand2tetris/">
+        Computer
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../ProgrammerBase/">
+        ProgrammerBase
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../security-tutorial/">
+        security tutorial
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        ccss17
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Set Theory
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Set Theory
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/ArithmeticOperations/">
+        Arithmetic Operations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Polynomials/">
+        Polynomials
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/MatrixOperation/">
+        Matrix Operation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/Determinants/">
+        Determinants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/Diagonalization/">
+        Diagonalization
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/InnerProductSpaces/">
+        Inner Product Spaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/CanonicalForms/">
+        Canonical Forms
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          The NumPy array: a structure for efficient numerical computation
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-numpy-array-a-structure-for-efficient-numerical-computation">
+    The NumPy array: a structure for efficient numerical computation
+  </a>
+<nav aria-label="The NumPy array: a structure for efficient numerical computation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-usage">
+    Basic usage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-structure-of-a-numpy-array-a-view-on-memory">
+    The structure of a Numpy array: a view on memory
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operations-on-arrays-vectorization-and-broadcasting">
+    operations on arrays: vectorization and broadcasting
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#broadcasting-rules">
+    Broadcasting Rules
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vectorization-and-broadcasting-examples">
+    Vectorization and broadcasting examples
+  </a>
+<nav aria-label="Vectorization and broadcasting examples" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#evaluating-functions">
+    Evaluating Functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#finite-differencing">
+    Finite Differencing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-grid-using-broadcasting">
+    Creating a grid using broadcasting
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computer-vision">
+    Computer Vision
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sharing-data">
+    Sharing data
+  </a>
+<nav aria-label="Sharing data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#efficient-io-with-memory-mapping">
+    Efficient I/O with memory mapping
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-array-interface-for-foreign-blocks-of-memory">
+    The array interface for foreign blocks of memory
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structured-data-types-to-expose-complex-data">
+    Structured data-types to expose complex data
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+    Conclusion
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../blueborne/">
+        BlueBorne
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Why the future doesn't need us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust Memo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-numpy-array-a-structure-for-efficient-numerical-computation">
+    The NumPy array: a structure for efficient numerical computation
+  </a>
+<nav aria-label="The NumPy array: a structure for efficient numerical computation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basic-usage">
+    Basic usage
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-structure-of-a-numpy-array-a-view-on-memory">
+    The structure of a Numpy array: a view on memory
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operations-on-arrays-vectorization-and-broadcasting">
+    operations on arrays: vectorization and broadcasting
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#broadcasting-rules">
+    Broadcasting Rules
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vectorization-and-broadcasting-examples">
+    Vectorization and broadcasting examples
+  </a>
+<nav aria-label="Vectorization and broadcasting examples" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#evaluating-functions">
+    Evaluating Functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#finite-differencing">
+    Finite Differencing
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#creating-a-grid-using-broadcasting">
+    Creating a grid using broadcasting
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#computer-vision">
+    Computer Vision
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sharing-data">
+    Sharing data
+  </a>
+<nav aria-label="Sharing data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#efficient-io-with-memory-mapping">
+    Efficient I/O with memory mapping
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-array-interface-for-foreign-blocks-of-memory">
+    The array interface for foreign blocks of memory
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#structured-data-types-to-expose-complex-data">
+    Structured data-types to expose complex data
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#conclusion">
+    Conclusion
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>The NumPy array: a structure for efficient numerical computation</h1>
+<h2 id="the-numpy-array-a-structure-for-efficient-numerical-computation">The NumPy array: a structure for efficient numerical computation<a class="headerlink" href="#the-numpy-array-a-structure-for-efficient-numerical-computation" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>ref : <a href="https://arxiv.org/abs/1102.1523">https://arxiv.org/abs/1102.1523</a></p>
+</blockquote>
+<p>numpy 는 다음 3가지 기법으로 Python 이라는 하이레벨 언어에서 효율적인 행렬 계산을 할 수 있도록 했다. 1) 벡터화 계산, 2) 메모리 복사 피하기, 3) 연산 횟수 줄이기. 먼저 numpy 행렬 구조를 소개하고 이 기법들에 대해서 소개한 후 마지막으로 행렬 데이터를 다른 라이브러리와 어떻게 공유할지 소개한다. </p>
+<p>Python 은 리스트와 딕셔너리를 제공하지만 이 자료구조들은 고성능 수치 계산에는 적합하지 않다. numpy 행렬은 다차원 행렬인데, 이는 원소의 타입과 형상에 의하여 구성된다.</p>
+<h3 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">¶</a></h3>
+<p>(numpy 사용법은 다들 잘 아니까 pass)</p>
+<h3 id="the-structure-of-a-numpy-array-a-view-on-memory">The structure of a Numpy array: a view on memory<a class="headerlink" href="#the-structure-of-a-numpy-array-a-view-on-memory" title="Permanent link">¶</a></h3>
+<p>ndarray 라고 불리우는 numpy 행렬은 다음 성질로 사용하는 메모리를 설명한다. </p>
+<ul>
+<li>
+<p>Data pointer: 행렬의 첫번째 바이트의 메모리 주소이다.</p>
+</li>
+<li>
+<p>Data type description : 행렬의 원소의 타입이다. 가령 부동소수점이라든가 정수라든가.</p>
+</li>
+<li>
+<p>Shape : 행렬의 형상이다. 가령 (10, 10) 이라든가 (5,5,5) 라든가. 특히 (5,5,5) 는 x, y, z 축을 뜻한다.</p>
+</li>
+<li>
+<p>Strides : Strides 는 다음 원소를 지칭하기 위하여 몇 바이트를 넘어가야 하는지 말해준다. 가령 (10, 10) 의 바이트 행렬의 Strides 는 (10, 1) 이다. 이는 1바이트를 지나치면 다음 열로 갈 수 있고, 10바이트를 지나치면 다음 행으로 갈 수 있다는 것이다.</p>
+</li>
+<li>
+<p>Flags : 메모리를 수정할 수 있는지, 메모리 레이아웃이 C 스타일인지 Fortran 스타일인지 등등을 정한다.</p>
+</li>
+</ul>
+<p>numpy 행렬의 stride 는 메모리 복사를 피하게 하여 성능을 높혀준다. 가령 다음을 보자.</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">x</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">x</span><span class="o">.</span><span class="n">strides</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</code></pre></div>
+<p>우리가 현재 대부분 사용하는 컴퓨터는 64비트(8바이트) 아키텍쳐이므로 stride 가 (24, 8) 이라는 것은 다음 행을 지칭하기 위하여 24바이트, 즉 3개의 정수를 건너뛰어야 한다는 것을 의미한다. 이때 다음과 같이 이 행렬의 2번째 원소들만으로 새로운 행렬을 만들어서 stride 를 살펴보자.</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">y</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">y</span><span class="o">.</span><span class="n">strides</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="p">(</span><span class="mi">48</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+</code></pre></div>
+<p>이때 행렬 y 의 stride 는 (48, 16) 이다. 이는 다음 원소를 지칭하기 위하여 정수 2개를 건너뛰어야 하고, 다음 행을 지칭하기 위하여 정수 8개를 건너뛰어야 한다는 말이다. 이것은 행렬을 복사한 것이 아니라 행렬 x 의 메모리 레이아웃에서 stride 만 바뀐 행렬 y 를 만들었기 때문이다. 즉 x 와 y 는 같은 메모리를 지칭하고 있다. 이로써 행렬 복사를 피할 수 있고 성능을 높힐 수 있다는 것이지.</p>
+<p>같은 원리로 행렬의 전치(transpose) 연산이나 형상 변경(reshape)을 할 때도 행렬 복사가 아닌, stride 를 조작함으로써 zero-cost 계산을 할 수 있게 된다. 가령 다음을 보자.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Transpose the array, using the shorthand "T"</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">xT</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">xT</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">],[</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">],[</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="n">xT</span><span class="o">.</span><span class="n">strides</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
+
+<span class="c1"># Change the shape of the array</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">z</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="n">z</span><span class="o">.</span><span class="n">strides</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="c1"># i.e., for the two-dimensional z, 9 * 8 bytes# to skip over a row of 9 uint8 elements,# 8 bytes to skip a single element</span>
+</code></pre></div>
+<p>행렬 z 의 타입을 64비트 정수가 아니라 바이트로 바꾸어도 마찬가지로 stride 만 바꾼다. 다음을 보자.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">z</span><span class="o">.</span><span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">'uint8'</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">uint8</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">72</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span><span class="o">.</span><span class="n">strides</span>
+<span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>대박인데? 이게 가능한 이유가 뭐였고, 이런 방법을 찾을 수 있던 게 뭐였을까. 한 대상을 우리가 원하는 대상으로 사상시키려 할 때 여러가지 방법이 있다는 것을 규명한다. 메모리 복사도 가능할 것이고, 다른 방법도 존재하겠지만, 그 중에서 가장 비용이 낮은 것은 stride 를 바꾸는 것이다.</p>
+<p>근데 stride 라는 개념 자체를 정의해야 이런 아이디어를 얻을 수 있었을 것이다. 이런 개념을 어떻게 정의할 수 있었을까? 그것은 한 대상의 구조를 면밀하고 엄밀하게 분석하여 정의했기 때문인 것 같다. 여기에도 수학의 방식이 사용되었겠지. 시간을 들여서 어떤 대상의 구조를 수학적인 방식으로 심층적으로 분석하는 게 전혀 시간낭비가 아니구나.</p>
+</div>
+<h3 id="operations-on-arrays-vectorization-and-broadcasting">operations on arrays: vectorization and broadcasting<a class="headerlink" href="#operations-on-arrays-vectorization-and-broadcasting" title="Permanent link">¶</a></h3>
+<p>많은 프로그래밍 언어에서 무분별한 for 루프의 사용은 프로그램의 전체 성능을 매우 떨어뜨린다. 이 상황은 단순한 연산을 큰 데이터셋에 적용할 때 발생한다. numpy 는 vectorization 이라고 부르는 grouping element-wise operation 으로 이런 연산을 매우 빠르게 해낸다. </p>
+<p>벡터 a 에 3 을 곱해야 한다고 생각하자. 전통적인 for 루프로는 다음과 같이 해야 한다. </p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span><span class="p">]</span>
+</code></pre></div>
+<p>하지만 벡터화의 접근으로는 다음과 같이 한다. </p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">a</span>
+</code></pre></div>
+<p>numpy 의 벡터화 연산은 C 언어에서 구현되어 있어서 매우 빠른 속도를 낼 수 있다. 이 연산은 스칼라와 행렬 사이에서만 가능한 게 아니다. 다음과 같이 행렬과 행렬 사이의 뺄셈 연산도 가능하다.</p>
+<div class="highlight"><pre><span></span><code><span class="n">b</span> <span class="o">-</span> <span class="n">a</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>벡터화 연산에 대한 구체적인 원리를 설명하지는 않는건가. 그럼 C 에서의 구현을 살펴봐야겠네. 아니면 그냥 C 로 for 문을 구현해서 빠르다는 것일 수도 있고.</p>
+</div>
+<p>numpy 는 두 행렬의 형상이 다를 때 한 행렬을 확장하여 연산을 완료한다. 다음을 보자.</p>
+<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">28</span><span class="p">]:</span> <span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="n">In</span>  <span class="p">[</span><span class="mi">29</span><span class="p">]:</span><span class="n">m</span>
+<span class="n">Out</span> <span class="p">[</span><span class="mi">29</span><span class="p">]:</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">30</span><span class="p">]:</span> <span class="n">b</span> <span class="o">+</span> <span class="n">m</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">30</span><span class="p">]:</span><span class="n">array</span><span class="p">([[</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">17</span><span class="p">],[</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">20</span><span class="p">]])</span>
+</code></pre></div>
+<p>이것을 브로드캐스팅이라 하는데, 이러한 broadcasted 행렬 또한 물리적으로 생성되지 않고, stride 를 사용하여 이루어진다. </p>
+<h3 id="broadcasting-rules">Broadcasting Rules<a class="headerlink" href="#broadcasting-rules" title="Permanent link">¶</a></h3>
+<p>두 행렬을 브로드캐스팅 하기 전에 numpy 는 두 행렬의 형상이 맞춰질 수 있는지 검사한다. 가령 형상 (2, 4, 3) 과 (4, 1) 을 갖는 행렬 x, y 를 생각하면 z = x+y 의 형상을 다음과 같이 정한다. </p>
+<div class="arithmatex">\[ \begin{array}{rl}
+x&amp; (2, 4, 3) \\
+y&amp; ( 4, 1 )\\
+\hline z &amp; (2, 4, 3); 
+\end{array} 
+\]</div>
+<h3 id="vectorization-and-broadcasting-examples">Vectorization and broadcasting examples<a class="headerlink" href="#vectorization-and-broadcasting-examples" title="Permanent link">¶</a></h3>
+<p>함수 f 에 행렬 x 를 입력하여 계산하고 싶다고 하자. 전통적인 for 루프로 짠다면 </p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1e5</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+</code></pre></div>
+<p>와 같이 짤 것이다. 하지만 이는 약 0.5 초가 걸릴정도로 매우 비효율적이다. numpy 는 다음과 같이 벡터화된 루프를 사용하여 연산이 약 0.001 초가 걸릴정도로 매우 효율적으로 적용한다.</p>
+<div class="highlight"><pre><span></span><code><span class="n">y</span><span class="o">=</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</code></pre></div>
+<p>하지만 주의해야 할 점이 있다. 만약 다음과 같이 행렬 연산을 한다고 하자.</p>
+<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+<span class="n">fx</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="mi">4</span>
+</code></pre></div>
+<p>이렇게 하면 매번 임시 행렬이 생성되므로 비효율적이다. 그래서 in-place 연산을 다음과 같이 해야 한다.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1"># Allocate the output array with x-squared</span>
+    <span class="n">fx</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+    <span class="c1"># In-place operations: no new memory allocated</span>
+    <span class="n">fx</span> <span class="o">-=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span>
+    <span class="n">fx</span> <span class="o">+=</span> <span class="mi">4</span>
+    <span class="k">return</span> <span class="n">fx</span>
+</code></pre></div>
+<p>이러면 한 자리에 임시 행렬이 생성되고 계속 연산을 한 다음 반환되서 성능이 2배 이상 효율적이다. 참고로 Cython, Theano, numexpr 같은 걸 쓰면 cache 사용을 극한으로 올려줘서 성능을 더욱 높힐 수 있다.</p>
+<h4 id="evaluating-functions">Evaluating Functions<a class="headerlink" href="#evaluating-functions" title="Permanent link">¶</a></h4>
+<h4 id="finite-differencing">Finite Differencing<a class="headerlink" href="#finite-differencing" title="Permanent link">¶</a></h4>
+<p>pass</p>
+<h4 id="creating-a-grid-using-broadcasting">Creating a grid using broadcasting<a class="headerlink" href="#creating-a-grid-using-broadcasting" title="Permanent link">¶</a></h4>
+<p>pass</p>
+<h4 id="computer-vision">Computer Vision<a class="headerlink" href="#computer-vision" title="Permanent link">¶</a></h4>
+<p>(결국 벡터화를 하면 성능이 많이 좋아지는데, 그것이 어떻게 구현되었는지는 설명하지 않네.)</p>
+<h3 id="sharing-data">Sharing data<a class="headerlink" href="#sharing-data" title="Permanent link">¶</a></h3>
+<p>pass</p>
+<h4 id="efficient-io-with-memory-mapping">Efficient I/O with memory mapping<a class="headerlink" href="#efficient-io-with-memory-mapping" title="Permanent link">¶</a></h4>
+<p>pass</p>
+<h4 id="the-array-interface-for-foreign-blocks-of-memory">The array interface for foreign blocks of memory<a class="headerlink" href="#the-array-interface-for-foreign-blocks-of-memory" title="Permanent link">¶</a></h4>
+<p>pass</p>
+<h4 id="structured-data-types-to-expose-complex-data">Structured data-types to expose complex data<a class="headerlink" href="#structured-data-types-to-expose-complex-data" title="Permanent link">¶</a></h4>
+<p>pass</p>
+<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h3>
+<p>pass</p>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<!-- 
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer> -->
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+<script src="../../javascripts/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+<script src="../../javascripts/b27b3e6448.js"></script>
+</body>
+</html>

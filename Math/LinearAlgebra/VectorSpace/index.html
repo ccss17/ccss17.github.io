@@ -1,0 +1,2443 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/LinearAlgebra/VectorSpace/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<title>Vector Space - ccss17</title>
+<link href="../../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#field">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Vector Space
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      ccss17
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../MathHistory/">
+        Math
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../paper/1404.6388/">
+        Paper
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Computer/nand2tetris/">
+        Computer
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../ProgrammerBase/">
+        ProgrammerBase
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../security-tutorial/">
+        security tutorial
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        ccss17
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Set Theory
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Set Theory
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Set/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Set/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Set/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Set/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ArithmeticOperations/">
+        Arithmetic Operations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Polynomials/">
+        Polynomials
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Vector Space
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Vector Space
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#field">
+    Field
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vector-space">
+    Vector Space
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#matrix">
+    Matrix
+  </a>
+<nav aria-label="Matrix" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zero-matrix-identity-matrix">
+    Zero Matrix, Identity Matrix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zero-vector">
+    Zero Vector
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inverse-vector">
+    Inverse Vector
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#triangular-matrix">
+    Triangular Matrix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diagonal-matrix">
+    Diagonal Matrix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#trace">
+    Trace
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#subspace">
+    Subspace
+  </a>
+<nav aria-label="Subspace" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transpose-matrix">
+    Transpose Matrix
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linear-combination">
+    Linear Combination
+  </a>
+<nav aria-label="Linear Combination" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#span">
+    Span
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linearly-dependent">
+    Linearly Dependent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linearly-independent">
+    Linearly Independent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties-of-linear-combination">
+    Properties of Linear Combination
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basis">
+    Basis
+  </a>
+<nav aria-label="Basis" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-basis">
+    Standard Basis
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#replacement-theorem">
+    Replacement Theorem
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dimension">
+    Dimension
+  </a>
+<nav aria-label="Dimension" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relation-between-linear-dependent-basis-span">
+    Relation between Linear Dependent, Basis, Span
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dimension-and-basis-of-subspace">
+    Dimension and Basis of Subspace
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#infinite-dimension-vector-space">
+    Infinite Dimension Vector Space
+  </a>
+<nav aria-label="Infinite Dimension Vector Space" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vector-space-has-a-basis">
+    Vector Space has a Basis
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercises">
+    Exercises
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MatrixOperation/">
+        Matrix Operation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Determinants/">
+        Determinants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Diagonalization/">
+        Diagonalization
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../InnerProductSpaces/">
+        Inner Product Spaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../CanonicalForms/">
+        Canonical Forms
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Why the future doesn't need us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust Memo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#field">
+    Field
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vector-space">
+    Vector Space
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#matrix">
+    Matrix
+  </a>
+<nav aria-label="Matrix" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zero-matrix-identity-matrix">
+    Zero Matrix, Identity Matrix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zero-vector">
+    Zero Vector
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inverse-vector">
+    Inverse Vector
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#triangular-matrix">
+    Triangular Matrix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#diagonal-matrix">
+    Diagonal Matrix
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#trace">
+    Trace
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#subspace">
+    Subspace
+  </a>
+<nav aria-label="Subspace" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transpose-matrix">
+    Transpose Matrix
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linear-combination">
+    Linear Combination
+  </a>
+<nav aria-label="Linear Combination" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#span">
+    Span
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linearly-dependent">
+    Linearly Dependent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linearly-independent">
+    Linearly Independent
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#properties-of-linear-combination">
+    Properties of Linear Combination
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#basis">
+    Basis
+  </a>
+<nav aria-label="Basis" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#standard-basis">
+    Standard Basis
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#replacement-theorem">
+    Replacement Theorem
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dimension">
+    Dimension
+  </a>
+<nav aria-label="Dimension" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#relation-between-linear-dependent-basis-span">
+    Relation between Linear Dependent, Basis, Span
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dimension-and-basis-of-subspace">
+    Dimension and Basis of Subspace
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#infinite-dimension-vector-space">
+    Infinite Dimension Vector Space
+  </a>
+<nav aria-label="Infinite Dimension Vector Space" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vector-space-has-a-basis">
+    Vector Space has a Basis
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exercises">
+    Exercises
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Vector Space</h1>
+<h2 id="field">Field<a class="headerlink" href="#field" title="Permanent link">¶</a></h2>
+<a href="#e58c0e0fb"><div class="admonition def" id="e58c0e0fb">
+<p class="admonition-title">체(field)</p>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 는 두 이항연산 합과 곱</p>
+<div class="arithmatex">\[ +: \mathbf{F} \times \mathbf{F} \to \mathbf{F}, (a, b) \mapsto a+b \]</div>
+<div class="arithmatex">\[ \cdot: \mathbf{F} \times \mathbf{F} \to \mathbf{F}, (a, b) \mapsto ab \]</div>
+<p>을 가지고, <span class="arithmatex">\(x, y \in \mathbf{F}\)</span> 에 대한 <span class="arithmatex">\(x+y, x \cdot y\)</span> 가 <span class="arithmatex">\(\mathbf{F}\)</span> 에 유일하게 존재하며, <span class="arithmatex">\(\forall a,b,c \in \mathbf{F}\)</span> 에 대하여 다음 공리가 성립하는 집합이다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(a+b=b+a,a \cdot b = b \cdot a\)</span> (Commutativity of addition and multiplication)</p>
+</li>
+<li>
+<p><span class="arithmatex">\((a+b)+c=a+(b+c)\)</span> (Associativity of addition)</p>
+</li>
+<li>
+<p><span class="arithmatex">\((a \cdot b) \cdot c = a \cdot (b \cdot c)\)</span> (Associativity of multiplication)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\exists 0 \in \mathbf{F} \text{ s.t. }\ a + 0 = a\)</span> (Additive identity)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\exists 1 \in \mathbf{F} \text{ s.t. }\ a \cdot 1 = a\)</span> (multiplicative identity)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\exists -a \in \mathbf{F} \text{ s.t. }\ a + (-a) = 0\)</span> (Additive inverses)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\exists a ^{-1} \in \mathbf{F} \setminus \{0\} \text{ s.t. }\ a \cdot a ^{-1} = 1\)</span> (Multiplicative inverses)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(a \cdot (b+c) = a \cdot b + a \cdot c\)</span> (Distributivity of multiplication over addition)</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>체는 쉽게 말해서 원소를 <span class="arithmatex">\(0\)</span> 으로 나누는 것을 제외하면 두 원소의 합, 차, 곱, 나눗셈이 주어진 집합의 원소가 되도록 정의된 집합이다.  즉, 체는 합, 차, 곱, 나눗셈에 대하여 닫혀있도록 정의된 집합이다.</p>
+</li>
+<li>
+<p>예시</p>
+<p>실수 집합 <span class="arithmatex">\(\R\)</span> 과 유리수 집합 <span class="arithmatex">\(\mathbb{Q}\)</span> 은 덧셈과 곱셈에 대한 체이다.</p>
+<p>자연수 집합 <span class="arithmatex">\(\N\)</span> 과 정수 집합 <span class="arithmatex">\(\mathbb{Z}\)</span> 은 덧셈과 곱셈에 대한 체가 아니다. F4) 가 성립하지 않기 때문이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>체 <span class="arithmatex">\(Z_2\)</span> 는 두 원소 <span class="arithmatex">\(0, 1\)</span> 를 가지며 덧셈과 곱셈을 다음과 같이 정의한다. </p>
+<div class="arithmatex">\[ 0+0=0, 0+1=1+0=1, 1+1=0 \]</div>
+<div class="arithmatex">\[ 0 \cdot 0 = 0, 0 \cdot 1 = 1 \cdot 0 = 0, 1 \cdot 1 = 1 \]</div>
+</li>
+</ul>
+<a href="#c35f4d53b"><div class="admonition def" id="c35f4d53b">
+<p class="admonition-title">소거법칙(Cancellation Laws)</p>
+<p>체의 임의의 원소 <span class="arithmatex">\(a, b, c\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(a+b= c+b \implies a=c\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(a \cdot b = c \cdot b, b \neq 0 \implies a=c\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>1:</p>
+<p>체의 성질 F4) 에 따르면 체의 원소는 덧셈에 대한 역원을 갖는다. <span class="arithmatex">\(b\)</span> 의 역원을 <span class="arithmatex">\(d\)</span> 라고 하면 <span class="arithmatex">\(b+d=0\)</span> 이므로 <span class="arithmatex">\(a+b=c+b\)</span> 의 양변에 <span class="arithmatex">\(d\)</span> 를 더한 좌변과 우변은</p>
+<div class="arithmatex">\[ (a + b) + d = a + (b + d) = a \]</div>
+<div class="arithmatex">\[ (c + b) + d = c + (b + d) = c \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore a = c \]</div>
+<p>이다. </p>
+<p>2:</p>
+<p>체의 성질 F4) 에 따르면 <span class="arithmatex">\(b \neq 0\)</span> 이면 <span class="arithmatex">\(b \cdot d = 1\)</span> 인 체의 원소 <span class="arithmatex">\(d\)</span> 가 존재한다. <span class="arithmatex">\(a \cdot b = c \cdot d\)</span> 의 양변에 <span class="arithmatex">\(d\)</span> 를 곱한 좌변과 우변은 </p>
+<div class="arithmatex">\[ (a \cdot b) \cdot d = a \cdot (b \cdot d) = a \cdot 1 = a \]</div>
+<div class="arithmatex">\[ (c \cdot b) \cdot d = c \cdot (b \cdot d) = c \cdot 1 = c \]</div>
+<p>이다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore a = c \]</div>
+<p>이다. </p>
+</li>
+</ul>
+<a href="#6595dc50a"><div class="admonition def" id="6595dc50a">
+<p>체의 덧셈의 항등원과 역원, 곱셈의 항등원과 역원은 유일하다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(\forall a \in \mathbf{F}\)</span> 에 대하여 <span class="arithmatex">\(0'+a=a\)</span> 를 만족하는 <span class="arithmatex">\(0' \in \mathbf{F}\)</span> 가 존재한다면, <span class="arithmatex">\(\forall a \in \mathbf{F}\)</span> 에 대하여 <span class="arithmatex">\(0+a=a\)</span> 이므로 </p>
+<div class="arithmatex">\[ \forall a \in \mathbf{F}, 0'+a=0+a \]</div>
+<p>인데, 소거법칙 <span class="arithmatex">\((1)\)</span> 에 의하여 </p>
+<div class="arithmatex">\[ \therefore 0' = 0 \]</div>
+<p>이다. 덧셈의 역원, 곱셈의 항등원과 역원의 유일성도 쉽게 증명된다.</p>
+</li>
+</ul>
+<a href="#a822715aa"><div class="admonition def" id="a822715aa">
+<p>임의의 체의 임의의 원소 <span class="arithmatex">\(a, b\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(a \cdot 0 = 0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((-a) \cdot b = a \cdot (-b) = -(a \cdot b)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\((-a) \cdot (-b) = a \cdot b\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p>1:</p>
+<p><span class="arithmatex">\(0\)</span> 은 덧셈의 항등원이므로 무엇을 더하든 그것 자체가 연산결과가 된다. 그러므로 </p>
+<div class="arithmatex">\[ 0 + a \cdot 0 = a \cdot 0 \]</div>
+<p>에서 <span class="arithmatex">\(0 + 0 = 0\)</span> 와 체의 성질 F5) 분배법칙에 의하여 </p>
+<div class="arithmatex">\[ = a \cdot (0 + 0) = a \cdot 0 + a \cdot 0 \]</div>
+<p>이다. 이때 소거법칙 <span class="arithmatex">\((1)\)</span> 에 의하여 </p>
+<div class="arithmatex">\[ 0 + a \cdot 0 = a \cdot 0 + a \cdot 0 \iff  0 = a \cdot 0 \]</div>
+<p>이다.</p>
+<p>2:</p>
+<p><span class="arithmatex">\(-(a \cdot b)\)</span> 는 정의에 의하여 <span class="arithmatex">\(a \cdot b + \{-(a \cdot b)\} = 0\)</span> 를 만족하는 유일한 체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 원소이다. 그러므로 <span class="arithmatex">\((-a) \cdot b = -(a \cdot b)\)</span> 를 보이기 위하여 </p>
+<div class="arithmatex">\[ a \cdot b + (-a) \cdot b = 0 \]</div>
+<p>임을 보이면 된다. 그런데 체의 성질 F5) 분배법칙과 소거법칙 <span class="arithmatex">\((1)\)</span> 에 의하여 </p>
+<div class="arithmatex">\[ a \cdot b + (-a) \cdot b = \{a + (-a)\} \cdot b = 0 \cdot b = 0 \]</div>
+<p>이다. 따라서 증명이 끝났다.</p>
+<p>3:</p>
+<p>체의 기본 성질 <span class="arithmatex">\((2)\)</span> 를 두 번 적용하면 </p>
+<div class="arithmatex">\[ (-a) \cdot (-b) = - \{a \cdot (-b)\} = - \{-(a \cdot b)\} = a \cdot b \]</div>
+<p>이다. </p>
+</li>
+</ul>
+<a href="#eb2b00fde"><div class="admonition def" id="eb2b00fde">
+<p class="admonition-title">지표(characteristic)</p>
+<p>임의의 체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 지표는 <span class="arithmatex">\(1\)</span> 을 <span class="arithmatex">\(p\)</span> 번 더했을 때 <span class="arithmatex">\(0\)</span> 이 되게 하는 가장 작은 자연수이다. 즉, 지표 <span class="arithmatex">\(p\)</span> 는 다음과 같다. </p>
+<div class="arithmatex">\[ \overbrace{1 + 1 + \dots + 1}^{p \text{ times }} = 0 \]</div>
+</div></a>
+<ul>
+<li>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 지표가 <span class="arithmatex">\(p \neq 0\)</span> 이면 <span class="arithmatex">\(x \in \mathbf{F}: \overbrace{x+x+\dots+x}^{p \text{ times }} = 0\)</span> 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>합과 곱이 다음과 같이 정의된 유한체 <span class="arithmatex">\(\mathbb{Z}_{2}\)</span> 를 정의하자.</p>
+<div class="arithmatex">\[ 0+0=0, 0+1 = 1+0 = 1, 1+1 = 0 \]</div>
+<div class="arithmatex">\[ 0 \cdot 0 = 0, 0 \cdot 1 = 1 \cdot 0 = 0, 1 \cdot 1 = 1 \]</div>
+<p><span class="arithmatex">\(1+1=0\)</span> 이 성립하기 때문에 <span class="arithmatex">\(\mathbb{Z}_2\)</span> 의 지표는 <span class="arithmatex">\(2\)</span> 이다.</p>
+<p>실수체 <span class="arithmatex">\(\R\)</span> 의 지표는 모두가 알고 있듯이 <span class="arithmatex">\(0\)</span> 이다.</p>
+</li>
+<li>
+<p>체의 지표가 <span class="arithmatex">\(0\)</span> 이 아니면(특히 지표가 <span class="arithmatex">\(2\)</span> 이면) 예상치 못한 일이 발생하기에 이 책이 소개하는 벡터공간에 대한 몇가지 정리는 지표가 <span class="arithmatex">\(0\)</span> 인 경우에만(또는 지표가 <span class="arithmatex">\(2\)</span> 가 아니면) 성립한다.</p>
+</li>
+</ul>
+<h2 id="vector-space">Vector Space<a class="headerlink" href="#vector-space" title="Permanent link">¶</a></h2>
+<a href="#115df4450"><div class="admonition def" id="115df4450">
+<p class="admonition-title">벡터공간(vector space), 선형공간(linear space)</p>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서의 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 는 두 이항연산 합과 스칼라곱 </p>
+<div class="arithmatex">\[ + : \mathbf{V} \times \mathbf{V} \to \mathbf{V}, (x, y) \mapsto x + y \]</div>
+<div class="arithmatex">\[ \cdot : \mathbf{F} \times \mathbf{V} \to \mathbf{V}, (a, x) \mapsto ax \]</div>
+<p>을 가지고, <span class="arithmatex">\(x, y \in \mathbf{V}\)</span> 와 <span class="arithmatex">\(a \in \mathbf{F}\)</span> 에 대한 <span class="arithmatex">\(x+y, ax\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 에 유일하게 존재하며, <span class="arithmatex">\(\forall x,y,z \in \mathbf{V}\)</span> 와 <span class="arithmatex">\(\forall a, b \in \mathbf{F}\)</span> 에 대하여 다음 공리가 성립하는 집합이다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(x + y = y + x\)</span> (Commutativity of vector addition)</p>
+</li>
+<li>
+<p><span class="arithmatex">\((x + y) + z = x + (y + z)\)</span> (Associativity of vector addition)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\exists 0 \in \mathbf{V} \text{ s.t. }\ x + 0 = x\)</span> (Identity element of vector addition)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\exists -x \in \mathbf{V} \text{ s.t. }\ x + -x = 0\)</span> (Inverse elements of vector addition)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\exists 1 \in \mathbf{F} \text{ s.t. }\ 1x = x\)</span> (Identity element of scalar multiplication)</p>
+</li>
+<li>
+<p><span class="arithmatex">\((ab)x = a(bx)\)</span> (Compatibility of scalar multiplication with field multiplication)</p>
+</li>
+<li>
+<p><span class="arithmatex">\(a(x + y) = ax + ay\)</span> (Distributivity of scalar multiplication with respect to vector addition)</p>
+</li>
+<li>
+<p><span class="arithmatex">\((a + b)x = ax + ay\)</span> (Distributivity of scalar multiplication with respect to field addition)</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>벡터공간의 두 연산에 대하여 닫혀있다. 즉 합과 스칼라 곱의 연산 결과가 반드시 벡터공간 내에 포함된다. 두 연산에 대하여 닫혀있다는 조건이 합과 스칼라곱이 이항연산이라는 것에 함축되어 있다.</p>
+</li>
+<li>
+<p>이때 체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 원소를 스칼라, 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 원소를 벡터라고 한다. </p>
+</li>
+<li>
+<p>벡터공간은 체 <span class="arithmatex">\(\mathbf{F}\)</span> 를 기반으로 정의되므로 정확하게 "<span class="arithmatex">\(\mathbf{F}-\)</span>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span>" 라고 표기해야 하지만, 벡터공간을 다룰 때 체는 크게 중요하지 않은 요소라 보통 생략한다. </p>
+</li>
+<li>
+<p>일반적으로 체 <span class="arithmatex">\(\mathbf{F}\)</span> 는 <span class="arithmatex">\(\R\)</span> 또는 <span class="arithmatex">\(\mathbb{C}\)</span> 를 뜻하며, 특별한 언급이 없는한 체의 지표는 <span class="arithmatex">\(0\)</span> 이다.</p>
+</li>
+<li>
+<p>벡터공간을 정의하기 위해서는 단순힌 집합과 원소(벡터)를 정의하는 게 아니라 두 연산(합과 스칼라 곱)까지 정확히 서술해야 한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 부분집합 <span class="arithmatex">\(S\)</span> 에 대하여 <span class="arithmatex">\(\mathcal{F}(S,\mathbf{F})\)</span> 는 <span class="arithmatex">\(S \to \mathbf{F}\)</span> 인 모든 함수의 집합이다. <span class="arithmatex">\(\forall s \in S\)</span> 에 대하여 <span class="arithmatex">\(\mathcal{F}(S,\mathbf{F})\)</span> 에서 <span class="arithmatex">\(f(s)=g(s)\)</span> 일 때 두 함수 <span class="arithmatex">\(f, g\)</span> 를 같다고 한다. </p>
+<div class="arithmatex">\[ f,g \in \mathcal{F}(S,\mathbf{F}), c \in \mathbf{F}, s \in S \]</div>
+<p>일 때 합과 스칼라 곱을 다음과 같이 정의하면 <span class="arithmatex">\(\mathcal{F}(S,\mathbf{F})\)</span> 는 벡터공간이다.</p>
+<div class="arithmatex">\[ (f+g)(s) = f(s)+g(s), \qquad (cf)(s) = c[f(s)] \]</div>
+</li>
+<li>
+<p>벡터공간과 체의 차이점</p>
+<p>내가 볼 때 벡터공간과 체는 거의 비슷한 대수구조인데, 왜 이렇게 구분하는지 궁금해서 <a href="https://math.stackexchange.com/questions/969720/what-is-the-main-difference-between-a-vector-space-and-a-field">math stackexchange</a> 에서 찾아보았다. </p>
+<ol>
+<li>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 와 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대하여 체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 연산은 </p>
+<div class="arithmatex">\[ + : \mathbf{F} \times \mathbf{F} \to \mathbf{F}, \quad \times : \mathbf{F} \times \mathbf{F} \to \mathbf{F} \]</div>
+<p>인데 반해 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 연산은 </p>
+<div class="arithmatex">\[ + : \mathbf{V} \times \mathbf{V} \to \mathbf{V}, \quad \times : \mathbf{F} \times \mathbf{V} \to \mathbf{V} \]</div>
+<p>와 같이 정의된다.</p>
+</li>
+<li>
+<p>체에서는 영이 아닌 원소 <span class="arithmatex">\(c \in \mathbf{F}\)</span> 에 대하여 곱셈의 역원 <span class="arithmatex">\(c ^{-1} \in \mathbf{F}\)</span> 이 존재하여 </p>
+<div class="arithmatex">\[ c \times c ^{-1} = c ^{-1} \times c = 1 \]</div>
+<p>을 만족하는데, 벡터공간에서는 이러한 조건이 없다.</p>
+</li>
+</ol>
+<p>그래서 임의의 체 <span class="arithmatex">\(\mathbf{F}\)</span> 는 자기 자신 위에서 벡터공간이다.</p>
+</li>
+</ul>
+<a href="#6cae50d46"><div class="admonition def" id="6cae50d46">
+<p class="admonition-title">벡터(vector)</p>
+<p>벡터공간의 원소이다. </p>
+</div></a>
+<ul>
+<li>
+<p>벡터는 벡터공간의 원소로 정의되기 전에 기하학과 물리학에서 유래되었다. 그래서 종종 벡터를 벡터공간 없이 논의하기도 한다. 이 경우 보통 벡터를 힘, 속도, 가속도 같은 물리적 개념에서의 크기와 방향도 가지고 있는 물리량을 벡터로 표현한다. 이때 벡터를 화살표로 표현하는데, 화살표의 길이를 물리량의 크기로, 물리량의 방향을 화살표의 방향으로 표현한다.</p>
+<p>이는 벡터의 위치와 관계없이 크기와 방향이 같으면 같은 벡터로 다루겠다는 것이다.</p>
+</li>
+<li>
+<p>한 지점에 두 물리량이 작용했을 때 그 합력을 계산할 때 두 물리량의 크기만 합한다고 끝이 아니다. </p>
+<ul>
+<li>
+<p>예시</p>
+<p>2마일의 속도의 강물을 1마일의 속도로 거슬러서 수영하는 사람의 속도는 3마일이 아니다. 반면 동일한 방향으로 수영한다면 3마일의 속도를 가지게 된다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>위 예시에서 보았듯 두 물리량의 합은 크기와 방향을 고려해야 한다. 두 물리량의 결합은 벡터의 합으로 설명할 수 있는데 이를 다음과 같은 평행사변형의 법칙으로 표현한다.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Vector_addition.svg/375px-Vector_addition.svg.png"/></p>
+<p>위와 같이 벡터 합은 두 벡터로 이루어진 평행사변형의 대각선으로 나타낸다. 벡터의 스칼라곱도 정의할 수 있는데 이는 다음과 같이 벡터의 확대와 축소를 하는 연산이다.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Scalar_multiplication_of_vectors2.svg/375px-Scalar_multiplication_of_vectors2.svg.png"/></p>
+</li>
+<li>
+<p>벡터의 시작점을 시점이라 하고 끝점을 종점이라 하는데, 벡터의 위치는 관계가 없으므로 <span class="arithmatex">\(2\)</span> 차원 평면에서 모든 벡터의 시점을 <span class="arithmatex">\((0, 0)\)</span> 로 고정하면 임의의 벡터를 좌표 <span class="arithmatex">\((a_1, a_2)\)</span> 로 나타낼 수 있다. </p>
+<p>그러면 두 벡터 <span class="arithmatex">\((a_1, a_2), (b_1, b_2)\)</span> 의 합은 <span class="arithmatex">\((a_1 + b_1, a_2 + b_2)\)</span> 로 표현할 수 있고, <span class="arithmatex">\(t\)</span> 에 대한 스칼라곱은 <span class="arithmatex">\((ta_1, ta_2)\)</span> 로 표현할 수 있다. 2차원 평면에서와 비슷하게 3차원 공간에서도 벡터 합과 스칼라 곱을 정의할 수 있다.</p>
+</li>
+</ul>
+<a href="#679853d11"><div class="admonition def" id="679853d11">
+<p class="admonition-title">벡터로 표현하는 직선의 방정식</p>
+<p>시점이 <span class="arithmatex">\(O\)</span> 이고 종점이 각각 <span class="arithmatex">\(A, B\)</span> 인 두 벡터 <span class="arithmatex">\(u, v\)</span> 에 대하여 두 점 <span class="arithmatex">\(A, B\)</span> 를 지나는 직선의 방정식은 다음과 같다.</p>
+<div class="arithmatex">\[ \forall t \in \R: x = u + t(v - u) \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p>공간에서 두 점 <span class="arithmatex">\(A, B\)</span> 를 지나는 직선이 있을 때 이 공간에 좌표를 부여하여 <span class="arithmatex">\(A = (a_1, a_2), B = (b_1, b_2)\)</span> 라고 하고 원점을 <span class="arithmatex">\(O = (0, 0)\)</span> 라고 표현하자. 이때 시점이 <span class="arithmatex">\(O\)</span> 이고 종점이 각각 <span class="arithmatex">\(A, B\)</span> 인 두 벡터 <span class="arithmatex">\(u = (a_1, a_2), v = (b_1, b_2)\)</span> 를 생각할 수 있다. </p>
+<p>또한 시점이 <span class="arithmatex">\(A\)</span> 이고 종점이 <span class="arithmatex">\(B\)</span> 인 벡터를 <span class="arithmatex">\(w\)</span> 라고 했을 때 <span class="arithmatex">\(w\)</span> 의 시점을 원점 <span class="arithmatex">\(O\)</span> 로 옮기면 <span class="arithmatex">\(w = (b_1 - a_1, b_2 - a_2)\)</span> 가 되므로 </p>
+<div class="arithmatex">\[ u + w = v, \enspace w = v - u \]</div>
+<p>가 성립한다. 이때 <span class="arithmatex">\(-u\)</span> 는 <span class="arithmatex">\(-1\)</span> 에 대한 스칼라곱 벡터 <span class="arithmatex">\((-1)u\)</span> 를 의미한다.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/113727560-32b6d780-9730-11eb-92c8-c3d69dd3c680.png"/></p>
+<p>이때 두 점 <span class="arithmatex">\(O, C\)</span> 를 지나는 직선은 벡터 <span class="arithmatex">\(w = v-u\)</span> 와 스칼라 <span class="arithmatex">\(t\)</span> 에 대한 스칼라곱 <span class="arithmatex">\(tw\)</span> 이다. 역으로 <span class="arithmatex">\(O\)</span> 를 시점으로 하는 벡터 <span class="arithmatex">\(tw\)</span> 의 종점은 두 점 <span class="arithmatex">\(O, C\)</span> 를 지나는 직선 위의 점이다. 그러므로 두 점 <span class="arithmatex">\(O, C\)</span> 를 지나는 직선의 방정식을 직선 위의 임의의 점 <span class="arithmatex">\(x\)</span> 에 대하여 다음과 같이 표현할 수 있다.</p>
+<div class="arithmatex">\[ \forall t \in \R: x = tw \]</div>
+<p>이때 <span class="arithmatex">\(w\)</span> 와 <span class="arithmatex">\(v-u\)</span> 가 위치만 다르고 방향과 크기가 같은 벡터라서 결국 같은 벡터로 다루어지듯이 <span class="arithmatex">\(O, C\)</span> 를 지나는 직선은 <span class="arithmatex">\(A, B\)</span> 를 지나는 직선과 평행하다. 따라서 <span class="arithmatex">\(tw\)</span> 에 벡터 <span class="arithmatex">\(u\)</span> 를 더한 벡터의 종점은 반드시 <span class="arithmatex">\(A, B\)</span> 를 지나는 직선에 위치한다. 실제로 <span class="arithmatex">\(1 \cdot w + u = v - u + u = v\)</span> 는 <span class="arithmatex">\(A, B\)</span> 를 지나는 직선 위에 위치한다.</p>
+<p>그러므로 <span class="arithmatex">\(tw\)</span> 에 <span class="arithmatex">\(u\)</span> 를 더하면 다음과 같이 <span class="arithmatex">\(A, B\)</span> 를 지나는 직선의 모든 점으로 직선의 방정식을 세울 수 있다.</p>
+<div class="arithmatex">\[ \therefore \forall  t \in \R : x = u + tw = u + t(v - u) \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p>3차원 공간좌표에서도 동일하게 성립하는데, 두 점 <span class="arithmatex">\(A(-2, 0, 1), B(4, 5, 3)\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 가 시점이고 <span class="arithmatex">\(B\)</span> 가 종점인 벡터 <span class="arithmatex">\(C\)</span> 는 <span class="arithmatex">\((6,5,2)\)</span> 이므로 두 점 <span class="arithmatex">\(A,B\)</span> 를 지나는 직선의 방정식은 </p>
+<div class="arithmatex">\[ \forall t \in \R, x = (-2, 0, 1) + t(6, 5, 2) \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#ca282a564"><div class="admonition def" id="ca282a564">
+<p class="admonition-title">벡터로 표현하는 공간의 방정식</p>
+<p>시점이 <span class="arithmatex">\(A\)</span> 이고 종점이 <span class="arithmatex">\(B, C\)</span> 인 벡터 <span class="arithmatex">\(u, v\)</span> 에 대하여 공간의 세 점 <span class="arithmatex">\(A, B, C\)</span> 으로 형성되는 공간의 방정식은 다음과 같다.</p>
+<div class="arithmatex">\[ \forall s, t \in \R : x = A + su + tv \]</div>
+</div></a>
+<ul>
+<li>
+<p>시점이 <span class="arithmatex">\(A\)</span> 이고 종점이 <span class="arithmatex">\(B, C\)</span> 인 두 벡터 <span class="arithmatex">\(u, v\)</span> 에 대하여 세 점 <span class="arithmatex">\(A,B,C\)</span> 로 이루어진 평면 위의 점 <span class="arithmatex">\(S\)</span> 는 <span class="arithmatex">\(A\)</span> 를 시점으로 하고 <span class="arithmatex">\(s, t \in \R\)</span> 에 대한 <span class="arithmatex">\(su + tv\)</span> 형태의 벡터의 종점이다. 다음 그림을 보자.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/113730362-cab5c080-9732-11eb-994c-0497b649eb5a.png"/></p>
+<p>따라서 <span class="arithmatex">\(\forall s, t \in \R\)</span> 에 대하여 벡터 <span class="arithmatex">\(su + tv\)</span> 는 세 점 <span class="arithmatex">\(A, B, C\)</span> 으로 형성되는 평면의 한 점이다. 따라서 평면의 방정식을 </p>
+<div class="arithmatex">\[ \forall s, t \in \R, x = A + su + tv \]</div>
+<p>와 같이 표현할 수 있다. <span class="arithmatex">\(x\)</span> 는 평면 위의 점을 뜻한다. 종점 <span class="arithmatex">\(su+tv\)</span> 의 좌표에 시점 <span class="arithmatex">\(A\)</span> 을 더한 좌표가 <span class="arithmatex">\(x\)</span> 가 되는 것이다.</p>
+</li>
+<li>
+<p>특히 <span class="arithmatex">\(A\)</span> 가 원점이면 평면의 방정식을 더욱 간단하게 </p>
+<div class="arithmatex">\[ \forall s, t \in \R, x = su + tv \]</div>
+<p>로 표현할 수 있다.</p>
+</li>
+</ul>
+<a href="#edaa6f896"><div class="admonition def" id="edaa6f896">
+<p class="admonition-title"><span class="arithmatex">\(n\)</span>순서쌍(<span class="arithmatex">\(n\)</span>-tuple)</p>
+<p><span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 이 체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 원소일때 다음과 같은 수학적 대상을 체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 <span class="arithmatex">\(n\)</span>순서쌍이라 한다.</p>
+<div class="arithmatex">\[(a_1, a_2, \dots, a_n)\]</div>
+</div></a>
+<ul>
+<li>
+<p>순서쌍을 구성하는 원소 <span class="arithmatex">\(a_i\)</span> 를 <span class="arithmatex">\(n\)</span>순서쌍의 성분(entry 또는 component) 라고 한다.</p>
+</li>
+<li>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 두 <span class="arithmatex">\(n\)</span>순서쌍 <span class="arithmatex">\((a_1, a_2, \dots, a_n)\)</span> 과 <span class="arithmatex">\((b_1, b_2, \dots, b_n)\)</span> 이 </p>
+<div class="arithmatex">\[ \forall i \in \{1,2,\dots,n\} , a_i = b_i \]</div>
+<p>일 때 같다고 정의한다.</p>
+</li>
+<li>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 모든 <span class="arithmatex">\(n\)</span>순서쌍 집합을 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 이라 표기한다. </p>
+<div class="arithmatex">\[ u = (a_1, a_2, \dots, a_n) \in \mathbf{F} ^{n}, v = (b_1, b_2, \dots, b_n) \in \mathbf{F} ^{n}, c \in \mathbf{F} \]</div>
+<p>일 때 합과 스칼라 곱을 </p>
+<div class="arithmatex">\[ u+v=(a_1+b_1,  a_2+b_2, \dots, a_n + b_n), cu = (ca_1, \dots, ca_n) \]</div>
+<p>로 정의하면 이 집합은 <span class="arithmatex">\(\mathbf{F}-\)</span>벡터공간이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\R ^{3}\)</span>  은 벡터공간이다. 합과 스칼라곱이 </p>
+<div class="arithmatex">\[ (3, -2, 0) + (-1, 1, 4) = (2, -1, 4) \]</div>
+<div class="arithmatex">\[ -5(1, -2, 0) = (-5, 10, 0) \]</div>
+<p>로 정의되기 때문이다. 마찬가지로 <span class="arithmatex">\(\mathbb{C} ^{2}\)</span> 도 벡터공간이다. 합과 스칼라곱이 </p>
+<div class="arithmatex">\[ (1+i, 2)+(2-3i,4i)=(3-2i, 2+4i) \]</div>
+<div class="arithmatex">\[ i(1+i,2) = (-1+i, 2i) \]</div>
+<p>로 정의되기 때문이다. </p>
+</li>
+</ul>
+<h2 id="matrix">Matrix<a class="headerlink" href="#matrix" title="Permanent link">¶</a></h2>
+<a href="#d33204d82"><div class="admonition def" id="d33204d82">
+<p class="admonition-title">행벡터(row vector)</p>
+<p>행벡터는 다음과 같은 체 <span class="arithmatex">\(\mathbf{F}\)</span> 에 대한 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 벡터이다.</p>
+<div class="arithmatex">\[ \begin{pmatrix} a_1&amp; a_2&amp; \dots&amp; a_n \end{pmatrix} \]</div>
+</div></a>
+<a href="#9a6fb6f0d"><div class="admonition def" id="9a6fb6f0d">
+<p class="admonition-title">열벡터(column vector)</p>
+<p>열벡터는 다음과 같은 체 <span class="arithmatex">\(\mathbf{F}\)</span> 에 대한 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 벡터이다.</p>
+<div class="arithmatex">\[ \begin{pmatrix} a_1\\a_2\\\vdots\\a_n \end{pmatrix} \]</div>
+</div></a>
+<ul>
+<li>보통 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 벡터를 행벡터보다 이러한 열벡터로 표현한다. </li>
+</ul>
+<a href="#48fc2a4c3"><div class="admonition def" id="48fc2a4c3">
+<p class="admonition-title">행렬(matrix)</p>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 성분을 가져온 <span class="arithmatex">\(m \times n\)</span> 행렬은 다음과 같은 <span class="arithmatex">\(\forall a _{ij} \in \mathbf{F} (1 \leq i \leq m, 1 \leq j \leq n)\)</span> 에 대한 수학적 대상이다.</p>
+<div class="arithmatex">\[ \begin{pmatrix} a _{11}&amp; a _{12}&amp; \dots&amp; a _{1n}\\ a _{21}&amp; a _{22}&amp; \dots&amp; a _{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ a _{m1}&amp; a _{m2}&amp; \dots&amp; a _{mn} \end{pmatrix} \]</div>
+</div></a>
+<ul>
+<li>
+<p>성분 <span class="arithmatex">\(a _{i1}, a _{i2}, \dots, a _{in}\)</span> 은 행렬의 <span class="arithmatex">\(i\)</span>번째 행(row), 성분 <span class="arithmatex">\(a _{1j}, a _{2j}, \dots, a _{mj}\)</span> 은 행렬의 <span class="arithmatex">\(j\)</span>번째 열(column) 이라고 한다.</p>
+</li>
+<li>
+<p>행렬의 각 행을 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 벡터로, 각 열을 <span class="arithmatex">\(\mathbf{F} ^{m}\)</span> 의 벡터로 나타낼 수 있다.</p>
+</li>
+<li>
+<p>모든 성분 <span class="arithmatex">\(a _{ij}\)</span> 는 <span class="arithmatex">\(\mathbf{F}\)</span> 의 원소이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(i=j\)</span> 인 성분 <span class="arithmatex">\(a _{ij}\)</span> 는 행렬의 대각성분(diagonal entry) 이다.</p>
+</li>
+<li>
+<p>행렬 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 행 <span class="arithmatex">\(j\)</span> 열 성분을 <span class="arithmatex">\(A _{ij}\)</span> 라고 표기한다. </p>
+</li>
+<li>
+<p>행의 개수와 열의 개수가 같은 행렬을 정사각행렬(square matrix) 라 한다.</p>
+</li>
+<li>
+<p>행렬 <span class="arithmatex">\(A, B\)</span> 의 각 성분이 모두 일치할 때 행렬이 같다고 한다고.</p>
+</li>
+<li>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 원소를 성분으로 갖는 모든 <span class="arithmatex">\(m \times n\)</span> 행렬의 집합을 <span class="arithmatex">\(\mathbf{M} _{m \times n}(\mathbf{F})\)</span> 라 표기한다.</p>
+<p><span class="arithmatex">\(A, B \in \mathbf{M} _{m \times n}(\mathbf{F}), c \in \mathbf{F}\)</span> 에 대하여 합과 스칼라 곱을 다음과 같이 정의하면 <span class="arithmatex">\(\mathbf{M} _{m \times n}(\mathbf{F})\)</span> 은 벡터공간이다.</p>
+<div class="arithmatex">\[ (A+B) _{ij} = A _{ij}+ B _{ij}, \qquad (cA) _{ij} c A _{ij} \]</div>
+<ul>
+<li>
+<p>예시 </p>
+<p>다음은 <span class="arithmatex">\(\mathbf{M} _{2 \times 3}(\R)\)</span> 의 합과 스칼라곱의 예시이다.</p>
+<div class="arithmatex">\[ \begin{pmatrix} 2&amp;0&amp;-1\\ 1&amp;-1&amp;4 \end{pmatrix}+ \begin{pmatrix} -5&amp;-2&amp;6\\ 3&amp;4&amp;-1 \end{pmatrix}= \begin{pmatrix} -3&amp;-2&amp;5\\ 4&amp;1&amp;3 \end{pmatrix} \]</div>
+<div class="arithmatex">\[ -3 \begin{pmatrix} 1&amp;0&amp;-2\\ -3&amp;2&amp;3 \end{pmatrix} = \begin{pmatrix} -3&amp;0&amp;6\\ 9&amp;-6&amp;-9 \end{pmatrix} \]</div>
+</li>
+</ul>
+</li>
+<li>
+<p>행렬의 합과 스칼라 곱 연산은 체 <span class="arithmatex">\(\mathbf{F} ^{n}, \mathbf{F} ^{m}\)</span> 에서 정의한 연산이 확장된 것이다. </p>
+</li>
+</ul>
+<h3 id="zero-matrix-identity-matrix">Zero Matrix, Identity Matrix<a class="headerlink" href="#zero-matrix-identity-matrix" title="Permanent link">¶</a></h3>
+<a href="#b70b3b3a6"><div class="admonition def" id="b70b3b3a6">
+<p class="admonition-title">영행렬(zero matrix)</p>
+<p>모든 성분이 <span class="arithmatex">\(0\)</span> 인 <span class="arithmatex">\(m \times n\)</span> 행렬을 영행렬(zero matrix) 라고 하고 <span class="arithmatex">\(O\)</span> 라고 표기한다.</p>
+</div></a>
+<a href="#be3d29562"><div class="admonition def" id="be3d29562">
+<p class="admonition-title">항등행렬(identity matrix, unit matrix)</p>
+<p>항등행렬은 대각성분이 <span class="arithmatex">\(1\)</span> 이고 나머지 성분이 <span class="arithmatex">\(0\)</span> 인 정사각행렬이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(n \times n\)</span> 항등행렬은</p>
+<div class="arithmatex">\[ I_n = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; \dots &amp; 0\\ 0 &amp; 1 &amp; 0 &amp; \dots &amp; 0\\ 0 &amp; 0 &amp; 1 &amp; \dots &amp; 0\\ \vdots&amp; \vdots&amp; \vdots &amp; \ddots&amp; \vdots \\ 0 &amp; 0 &amp; 0 &amp; \dots &amp; 1\\ \end{pmatrix} \]</div>
+<p>이다. <span class="arithmatex">\(1 \times 1\)</span> 이나 <span class="arithmatex">\(2 \times 2\)</span> 항등행렬은 다음과 같다. </p>
+<div class="arithmatex">\[ I_1 = (1), I_2 = \begin{pmatrix} 1&amp;0\\ 0&amp;1\\ \end{pmatrix} \]</div>
+</li>
+</ul>
+<h3 id="zero-vector">Zero Vector<a class="headerlink" href="#zero-vector" title="Permanent link">¶</a></h3>
+<a href="#23a3cf5d2"><div class="admonition def" id="23a3cf5d2">
+<p class="admonition-title">정리 1.1</p>
+<p>벡터 합의 소거법칙 : 벡터 공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 <span class="arithmatex">\(x, y, z \in \mathbf{V}\)</span> 에 대하여 다음이 성립한다.</p>
+<div class="arithmatex">\[ x + z = y + z \implies x = y\]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>벡터공간의 성질 4) 에 의하여 <span class="arithmatex">\(z + v = 0\)</span> 인 벡터 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 가 존재한다. 이때 벡터공간의 성질 2), 3) 에 의하여 </p>
+<div class="arithmatex">\[ x = x + 0 = x + (z + v) = (x + z) + v \]</div>
+<div class="arithmatex">\[ = (y + z) + v = y + (z + v) = y + 0 = y \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<a href="#257e350f1"><div class="admonition def" id="257e350f1">
+<p class="admonition-title">영벡터(zero vector)</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 임의의 원소 <span class="arithmatex">\(\forall x \in \mathbf{V}\)</span> 에 대하여 벡터공간의 성질 3) </p>
+<div class="arithmatex">\[ x + 0 = x \]</div>
+<p>을 만족하는 벡터 <span class="arithmatex">\(0\)</span> 을 영벡터라고 한다.</p>
+</div></a>
+<ul>
+<li>즉, 벡터공간에서 덧셈에 대한 항등원이 영벡터인 것이다. </li>
+</ul>
+<a href="#ba0c5d5de"><div class="admonition def" id="ba0c5d5de">
+<p>벡터공간의 영벡터는 유일하다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 위의 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 에서 영벡터 <span class="arithmatex">\(0, 0'\)</span> 가 존재한다고 가정하자. 그러면 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 에 대하여</p>
+<div class="arithmatex">\[ v + 0 = v = v + 0' \iff v + 0 = v + 0' \]</div>
+<p>인데, <a href="#23a3cf5d2">정리 1.1</a> 에 의하여 </p>
+<div class="arithmatex">\[ \therefore  0 = 0' \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<h3 id="inverse-vector">Inverse Vector<a class="headerlink" href="#inverse-vector" title="Permanent link">¶</a></h3>
+<a href="#6b7fd4854"><div class="admonition def" id="6b7fd4854">
+<p>덧셈에 대한 역벡터(additive inverse) : 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대한 <span class="arithmatex">\(\forall x \in \mathbf{V}\)</span> 에 대하여 벡터공간의 성질 4) </p>
+<div class="arithmatex">\[ x + y = 0 \]</div>
+<p>을 만족하는 벡터 <span class="arithmatex">\(y\)</span> 를 덧셈에 대한 역벡터 <span class="arithmatex">\(-x\)</span> 라고 한다.</p>
+</div></a>
+<ul>
+<li>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 원소 <span class="arithmatex">\(x \in \mathbf{V}\)</span> 에 대한 덧셈에 대한 역벡터는 <span class="arithmatex">\(-\)</span> 를 붙여서 <span class="arithmatex">\(-x\)</span> 로 표기한다.</li>
+</ul>
+<a href="#ad917792a"><div class="admonition def" id="ad917792a">
+<p>덧셈에 대한 역벡터는 유일하다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 원소 <span class="arithmatex">\(x \in \mathbf{V}\)</span> 의 덧셈에 대한 역벡터 <span class="arithmatex">\(y, y'\)</span> 가 있다면 </p>
+<div class="arithmatex">\[ x + y = 0 = x + y' \iff x + y = x + y' \]</div>
+<p>인데, <a href="#23a3cf5d2">정리 1.1</a> 에 의하여 </p>
+<div class="arithmatex">\[ \therefore  y = y' \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<a href="#8c53f5cdd"><div class="admonition def" id="8c53f5cdd">
+<p class="admonition-title">정리 1.2</p>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 위의 임의의 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall x \in \mathbf{V} : 0x = 0\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall a \in \mathbf{F}, \forall x \in \mathbf{V} : (-a)x = -(ax) = a(-x)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall a \in \mathbf{F} : a0 = 0\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(0x + 0x = (0 + 0)x = 0x = 0x + 0 = 0 + 0x\)</span> 인데 <a href="#23a3cf5d2">정리 1.1</a> 에 의하여 <span class="arithmatex">\(0x = 0\)</span> 이다. ▲ </p>
+<p>벡터 <span class="arithmatex">\(-(ax)\)</span> 는 <span class="arithmatex">\(ax + \{-(ax)\} = 0\)</span> 인 유일한 벡터인데 <span class="arithmatex">\(ax + (-a)x = 0\)</span> 이면 덧셈에 대한 역벡터는 유일하므로 <span class="arithmatex">\((-a)x = -(ax)\)</span> 이다.</p>
+<p><span class="arithmatex">\(ax+(-ax) = \{a+(-a)\}x = 0x = 0\)</span> 이므로 <span class="arithmatex">\((-ax) = -(ax)\)</span> 이다. 특히 <span class="arithmatex">\((-1)x=-x\)</span> 이다. 이제 </p>
+<div class="arithmatex">\[ a(-x) = a \{(-1)x\} = \{a(-1)x\} = (-a)x \]</div>
+<p>이다. ▲ </p>
+<p>3) 의 증명은 2) 와 비슷하다. ■ </p>
+</li>
+</ul>
+<h3 id="triangular-matrix">Triangular Matrix<a class="headerlink" href="#triangular-matrix" title="Permanent link">¶</a></h3>
+<a href="#108cce840"><div class="admonition def" id="108cce840">
+<p class="admonition-title">삼각행렬(triangular matrix)</p>
+<p>삼각행렬은 행렬의 대각성분 위쪽이나 아래쪽 항들이 모두 <span class="arithmatex">\(0\)</span> 인 행렬이다.</p>
+</div></a>
+<a href="#96472c9c4"><div class="admonition def" id="96472c9c4">
+<p class="admonition-title">상삼각행렬, 위삼각행렬(upper triangular matrix)</p>
+<p>상삼각행렬은 행렬의 대각성분 아래의 모든 성분이 <span class="arithmatex">\(0\)</span> 인행렬이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, <span class="arithmatex">\(i&gt;j\)</span> 에 대하여 <span class="arithmatex">\(A _{ij} = 0\)</span> 인 행렬이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[  \begin{pmatrix} 1 &amp; 2 &amp; 3 &amp; 4\\ 0 &amp; 5 &amp; 3 &amp; 4\\ 0 &amp; 0 &amp; 3 &amp; 4\\ \end{pmatrix} \]</div>
+</li>
+</ul>
+<a href="#495d1ac6b"><div class="admonition def" id="495d1ac6b">
+<p class="admonition-title">하삼각행렬(lower triangular matrix)</p>
+<p>하삼각행렬은 행렬의 대각성분 위의 모든 성분이 <span class="arithmatex">\(0\)</span> 인행렬이다.</p>
+</div></a>
+<h3 id="diagonal-matrix">Diagonal Matrix<a class="headerlink" href="#diagonal-matrix" title="Permanent link">¶</a></h3>
+<a href="#f2cebaa10"><div class="admonition def" id="f2cebaa10">
+<p class="admonition-title">대각행렬(diagonal matrix)</p>
+<p>대각행렬은 대각성분을 제외한 모든 성분이 <span class="arithmatex">\(0\)</span> 인 정사각행렬이다. </p>
+</div></a>
+<ul>
+<li>
+<p>즉, <span class="arithmatex">\(i \neq j\)</span> 에 대하여 <span class="arithmatex">\(M _{ij} = 0\)</span> 인 <span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(M\)</span> 이다.</p>
+</li>
+<li>
+<p><strong>대각행렬의 대각성분 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 에 대하여 대각행렬을 간단하게 <span class="arithmatex">\(\text{diag} (a_1, a_2, \dots, a_n)\)</span> 로 나타내기도 한다.</strong></p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[  \begin{pmatrix} 1 &amp; 0 &amp; 0 \\ 0 &amp; 5 &amp; 0 \\ 0 &amp; 0 &amp; 3 \\ \end{pmatrix} = \text{diag} (1,5,3) \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(n \times n\)</span> 영행렬의 모든 성분은 <span class="arithmatex">\(0\)</span> 이므로 영행렬은 대각행렬이다. <span class="arithmatex">\(n \times n\)</span> 대각행렬 <span class="arithmatex">\(A, B\)</span> 는 <span class="arithmatex">\(i \neq j\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ (A+B) _{ij} = A _{ij} + B _{ij} = 0 + 0 = 0, \enspace (cA) _{ij} = c A _{ij} = c0=0 \]</div>
+<p>이므로 대각행렬의 집합은 <span class="arithmatex">\(\mathbf{M} _{n \times n}(\mathbf{F} )\)</span> 의 부분공간이다.</p>
+</li>
+</ul>
+<h3 id="trace">Trace<a class="headerlink" href="#trace" title="Permanent link">¶</a></h3>
+<a href="#a7bb02e16"><div class="admonition def" id="a7bb02e16">
+<p class="admonition-title">대각합(trace)</p>
+<p><span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(M\)</span> 의 대각합은 모든 대각성분의 합 </p>
+<div class="arithmatex">\[ \text{tr}(M) = \sum_{k=1}^{n}M _{kk} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>대각합이 <span class="arithmatex">\(0\)</span> 인 <span class="arithmatex">\(n \times n\)</span> 행렬의 집합은 자명하게 <span class="arithmatex">\(\mathbf{M} _{n \times n}(\mathbf{F} )\)</span> 의 부분공간이다.</li>
+</ul>
+<h2 id="subspace">Subspace<a class="headerlink" href="#subspace" title="Permanent link">¶</a></h2>
+<a href="#29d8f71c3"><div class="admonition def" id="29d8f71c3">
+<p class="admonition-title">부분공간(subspace)</p>
+<p><span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분집합 <span class="arithmatex">\(\mathbf{W}\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 에서 정의한 합과 스칼라 곱을 가진 <span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간일 때 <span class="arithmatex">\(\mathbf{W}\)</span> 를 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>대수학의 주요 관심사는 어떤 집합의 부분집합이 서로 대수적 구조가 같은지 연구하는 것이다. </p>
+</li>
+<li>
+<p>임의의 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{V}\)</span> 와 <span class="arithmatex">\(\{0\}\)</span> 은 부분공간이다. 특히 <span class="arithmatex">\(\{0\}\)</span> 은 점공간인 부분공간(zero subspace)이다.</p>
+</li>
+</ul>
+<a href="#c584bf587"><div class="admonition def" id="c584bf587">
+<p class="admonition-title">점공간(zero vector space)</p>
+<p>점공간은 영벡터 <span class="arithmatex">\(0\)</span> 만을 포함하는 벡터공간 <span class="arithmatex">\(\{0\}\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>이 벡터공간의 기저는 공집합이다. 그러므로 점공간은 <span class="arithmatex">\(0\)</span>차원 벡터공간이다. 모든 벡터공간은 점공간과 동형인 부분공간을 갖는다.</li>
+</ul>
+<a href="#42f9c15c6"><div class="admonition def" id="42f9c15c6">
+<p class="admonition-title">정리 1.3</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 부분집합 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{W}\)</span> 가 다음 조건을 만족하는 것과 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간인 것은 동치이다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(0 \in \mathbf{W}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall x, y \in \mathbf{W} : x + y \in \mathbf{W}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall c \in \mathbf{F}, \forall x \in \mathbf{W} : cx \in \mathbf{W}\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>이때 조건 1), 2), 3) 의 연산은 <span class="arithmatex">\(\mathbf{V}\)</span> 에서 정의된 것과 같다.</p>
+</li>
+<li>
+<p>2), 3) 은 벡터공간의 두 연산이 닫혀있음을 나타내는 조건이다. 두 연산에 대하여 닫혀있다는 조건이 <a href="#115df4450">벡터공간의 정의</a> 에서는 합과 스칼라곱이 이항연산이라는 것에 함축되어 있다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p>벡터공간의 모든 벡터에 대하여 <a href="#115df4450">벡터공간의 조건 1), 2), 5), 6), 7), 8)</a> 이 성립하면 부분집합에서도 자명하게 성립한다. 그러므로 벡터공간의 부분집합이 부분공간임을 확인하기 위하여 <a href="#115df4450">벡터공간의 조건 3), 4)</a> 와 덧셈에 대하여 닫혀있다(조건 2)는 것과 스칼라 곱에 대하여 닫혀있다(조건 3)는 것만 확인하면 된다. </p>
+<p>하지만 3) 에서 <a href="#115df4450">벡터공간의 조건 4)</a> 가 도출되므로 <a href="#115df4450">벡터공간의 조건 4)</a> 도 확인할 필요가 없다. 즉, <span class="arithmatex">\(\mathbf{W}\)</span> 에 속한 모든 벡터의 덧셈에 대한 역벡터는 <span class="arithmatex">\(\mathbf{W}\)</span> 의 원소라는 사실을 확인할 필요가 없다는 것이다. 이것을 먼저 증명해보자.</p>
+<p>1), 2), 3) 이 성립한다고 하자. 3) 에 의하여 <span class="arithmatex">\(x \in \mathbf{W} \implies (-1) x \in \mathbf{W}\)</span> 이다. <a href="#8c53f5cdd">정리 1.2</a> 에 의하여 <span class="arithmatex">\((-1)x = 1(-x) = -x \in \mathbf{W}\)</span> 이다. 그러므로 <span class="arithmatex">\(\mathbf{W}\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이다. ▲ </p>
+<p>이제 역으로 <span class="arithmatex">\(\mathbf{W}\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이면 1), 2), 3) 이 성립하는지 증명하면 된다. <span class="arithmatex">\(\mathbf{W}\)</span> 는 부분공간이므로 <span class="arithmatex">\(\mathbf{V}\)</span> 의 합과 스칼라곱을 상속한다. 따라서 2), 3) 이 자명하게 성립한다. </p>
+<p><span class="arithmatex">\(\mathbf{W}\)</span> 의 영벡터를 <span class="arithmatex">\(0'\)</span> 라 하면 <span class="arithmatex">\(x \in \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(x + 0' = x\)</span> 인데, <span class="arithmatex">\(x \in \mathbf{V}\)</span> 이므로 <span class="arithmatex">\(x + 0 = x\)</span> 이다. 따라서 <a href="23a3cf5d2">정리 1.1</a> 에 의하여 <span class="arithmatex">\(0 = 0'\)</span> 이다. 그러므로 <span class="arithmatex">\(\mathbf{W}\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이다. ■ </p>
+</li>
+<li>
+<p>이 정리는 조건 1), 2), 3) 으로부터 <a href="#115df4450">벡터공간의 조건 4)</a> 이 도출되므로 <a href="#115df4450">벡터공간의 조건 4)</a> 를 굳이 확인할 필요가 없다는 것을 말해준다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p>다음과 같은 체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 계수를 가져온 두 다항식 <span class="arithmatex">\(f, g\)</span> 에 대하여</p>
+<div class="arithmatex">\[ f(x) = a_n x ^{n} + a _{n-1}x ^{n-1} + \dots + a_1x + a_0 \]</div>
+<div class="arithmatex">\[ g(x) = b_n x ^{n} + a _{n-1}x ^{n-1} + \dots + b_1x + b_0 \]</div>
+<p>두 다항식의 합과 스칼라곱을 </p>
+<div class="arithmatex">\[ f(x) + g(x) = (a_n+b_n) x ^{n} + (a _{n-1}+b _{n-1})x ^{n-1} + \dots+(a_1+b_1)x+(a_0+b_0) \]</div>
+<div class="arithmatex">\[ cf(x) = ca_n x ^{n} + ca _{n-1}x ^{n-1} + \dots + ca_1x + ca_0 \]</div>
+<p>와 같이 정의하면 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 계수를 가져온 모든 다항식 집합은 벡터공간인데, 이 벡터공간을 <span class="arithmatex">\(\mathbf{P}(\mathbf{F})\)</span> 라고 표기하자. </p>
+<p>이때 체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 계수를 가져온 모든 다항식 집합 <span class="arithmatex">\(\mathbf{P}(\mathbf{F} )\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{P}_n(\mathbf{F} )\)</span> 를 <span class="arithmatex">\(n\)</span> 이하의 차수를 가진 다항식 집합이라 하면, 부분공간이 됨을 보이자.</p>
+<p>먼저 영 다항식의 차수는 <span class="arithmatex">\(-1\)</span> 이므로 <span class="arithmatex">\(\mathbf{P} _n(\mathbf{F} )\)</span> 에 속한다. ▲ 차수가 <span class="arithmatex">\(n\)</span> 이하인 두 다항식을 더하면 차수가 <span class="arithmatex">\(n\)</span> 이하이다. ▲ 차수가 <span class="arithmatex">\(n\)</span> 이하인 두 다항식을 곱해도 차수가 <span class="arithmatex">\(n\)</span> 이하이다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p>원점과 두 점을 지나는 평면의 방정식은</p>
+<div class="arithmatex">\[ \forall s, t \in \R, x = su + tv \]</div>
+<p>로 표현할 수 있는데, 집합 <span class="arithmatex">\(\mathbf{W} = \{x = su + tv \in \R ^{3} : s, t \in \R \}\)</span> 은 <span class="arithmatex">\(\R ^{3}\)</span> 의 부분공간이다. <span class="arithmatex">\(\exists s, t \in \R \text{ s.t. }  x = su + tv = (0, 0, 0)\)</span> 이므로 <span class="arithmatex">\(0 \in \mathbf{W}\)</span> 이고, <span class="arithmatex">\(x_1, x_2 \in \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(x_1 + x_2 \in \mathbf{W}\)</span> 이고, <span class="arithmatex">\(t \in \R\)</span> 에 대하여 <span class="arithmatex">\(tx_1 \in \mathbf{W}\)</span> 이기 때문이다. </p>
+<ul>
+<li>벡터 <span class="arithmatex">\(u, v\)</span> 와 스칼라 <span class="arithmatex">\(s, t\)</span> 에 대한 표현 <span class="arithmatex">\(su+tv\)</span> 는 벡터공간을 다룰 때 중요하다.</li>
+</ul>
+</li>
+</ul>
+<a href="#c81ecdbdb"><div class="admonition def" id="c81ecdbdb">
+<p class="admonition-title">정리 1.4</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 임의의 교집합은 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이다. </p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 주어진 부분공간으로 새로운 부분공간을 만드는 방법을 제시해준다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\mathbf{V}\)</span> 의 모든 부분공간을 원소로 갖는 집합족 <span class="arithmatex">\(\mathcal{C}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{W} = \bigcap_{}^{}\mathcal{C}\)</span> 를 생각하자. 영벡터는 모든 부분공간에 속하므로 <span class="arithmatex">\(0 \in \mathbf{W}\)</span> 이다. ▲  스칼라 <span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(x, y \in \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(x, y\)</span> 는 <span class="arithmatex">\(\mathcal{C}\)</span> 의 모든 부분공간에 속한다. 부분공간은 스칼라 곱과 합에 대하여 닫혀 있으므로 <span class="arithmatex">\(x+y \in \mathbf{W} , ax \in \mathbf{W}\)</span> 이다. ▲ 그러므로 <span class="arithmatex">\(\mathbf{W}\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이다. ■ </p>
+<ul>
+<li><span class="arithmatex">\(\mathbf{W} = \bigcup_{}^{}\mathcal{C}\)</span> 가 부분공간이 된다는 보장은 없다. 영벡터를 포함하고, 스칼라곱에 대하여 닫혀있음은 쉽게 보일 수 있지만 합에 대하여 닫혀있다고 보장할 수 없기 때문이다. <span class="arithmatex">\(\mathbf{V}\)</span> 의 두 부분공간의 합집합이 부분공간이 되기 위한 필요충분조건은 한 부분공간이 다른 부분공간을 포함하고 있다는 것이다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="transpose-matrix">Transpose Matrix<a class="headerlink" href="#transpose-matrix" title="Permanent link">¶</a></h3>
+<a href="#2d1d7cd4b"><div class="admonition def" id="2d1d7cd4b">
+<p class="admonition-title">전치행렬(transpose matrix)</p>
+<p><span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 에 대한 전치행렬 <span class="arithmatex">\(A ^{\operatorname{T} }\)</span> 는 <span class="arithmatex">\(A\)</span> 의 행과 열을 바꾸어 얻은 <span class="arithmatex">\(n \times m\)</span> 행렬 <span class="arithmatex">\((A ^{\operatorname{T} }) _{ij} = A _{ji}\)</span> 이다. </p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \begin{pmatrix} 1 &amp; -2 &amp;3\\ 0 &amp; 5 &amp;-1 \end{pmatrix} ^{\operatorname{T} } = \begin{pmatrix} 1 &amp; 0\\ -2 &amp; 5\\ 3 &amp; -1\\ \end{pmatrix} \]</div>
+</li>
+</ul>
+<a href="#96a169304"><div class="admonition def" id="96a169304">
+<p class="admonition-title">대칭행렬(symmetric matrix)</p>
+<p>대칭행렬은 <span class="arithmatex">\(A ^{\operatorname{T} } = A\)</span> 인 행렬이다.</p>
+</div></a>
+<ul>
+<li>
+<p>대칭행렬은 정사각행렬이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \begin{pmatrix} 1 &amp; 2\\ 2 &amp; 3 \end{pmatrix} = \begin{pmatrix} 1 &amp; 2\\ 2 &amp; 3 \end{pmatrix} \]</div>
+</li>
+</ul>
+<a href="#ca37deafb"><div class="admonition def" id="ca37deafb">
+<p><span class="arithmatex">\(\mathbf{M} _{n \times n}(\mathbf{F} )\)</span> 의 모든 대칭행렬의 집합 <span class="arithmatex">\(\mathbf{W}\)</span> 은 부분공간이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명  </p>
+<p>먼저 영행렬의 전치행렬은 영행렬이다. ▲  행렬 <span class="arithmatex">\(A, B\)</span> 와 스칼라 <span class="arithmatex">\(a, b\)</span> 에 대하여 <span class="arithmatex">\((aA + bB) ^{\operatorname{T} } = aA ^{\operatorname{T} } + bB ^{\operatorname{T} }\)</span> 을 생각하면 <span class="arithmatex">\(A \in \mathbf{W} , B \in \mathbf{W} \implies (A + B) ^{\operatorname{T} } = A ^{\operatorname{T} } + B ^{\operatorname{T} } = A + B\)</span> 이다. ▲  마지막으로 행렬 <span class="arithmatex">\(A\)</span> 와 스칼라 <span class="arithmatex">\(a\)</span> 에 대하여 <span class="arithmatex">\((aA) ^{\operatorname{T} } = a A ^{\operatorname{T} }\)</span> 이므로 <span class="arithmatex">\(A \in \mathbf{W} \implies (aA) ^{\operatorname{T} } = aA ^{\operatorname{T} } = aA\)</span> 이다. ▲ 그러므로 부분공간의 조건 1), 2), 3) 을 만족하므로 <span class="arithmatex">\(\mathbf{W}\)</span> 은 부분공간이다. </p>
+</li>
+</ul>
+<h2 id="linear-combination">Linear Combination<a class="headerlink" href="#linear-combination" title="Permanent link">¶</a></h2>
+<a href="#781c21cf9"><div class="admonition def" id="781c21cf9">
+<p class="admonition-title">일차결합(linear combination)</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 공집합이 아닌 부분집합 <span class="arithmatex">\(S\)</span> 에 대한 유한개의 벡터 <span class="arithmatex">\(u_1, u_2, \dots, u_n \in S\)</span> 와 스칼라 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 에 대하여 벡터</p>
+<div class="arithmatex">\[ v = a_1u_1 + a_2u_2 + \dots + a_nu_n \in \mathbf{V} \]</div>
+<p>를 <span class="arithmatex">\(S\)</span> 의 일차결합이라 한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(v\)</span> 를 벡터 <span class="arithmatex">\(u_1, u_2, \dots, u_n\)</span> 의 일차결합이라 하고, <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 를 이 일차결합의 계수(coefficient) 라 한다.</p>
+</li>
+<li>
+<p>임의의 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 임의의 벡터 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(0v=0\)</span> 이므로 영벡터는 공집합이 아닌 모든 부분집합의 일차결합이다. </p>
+</li>
+</ul>
+<blockquote>
+<p>p43 연립방정식의 성질 pass </p>
+</blockquote>
+<h3 id="span">Span<a class="headerlink" href="#span" title="Permanent link">¶</a></h3>
+<a href="#3fb21eef8"><div class="admonition def" id="3fb21eef8">
+<p class="admonition-title">생성공간(linear span, linear hull)</p>
+<p>생성공간은 <span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 공집합이 아닌 부분집합 <span class="arithmatex">\(S\)</span> 에 대하여</p>
+<div class="arithmatex">\[ \text{span} (S) = \bigg \{\sum_{i=1}^{|S|}a_iv_i : v_i \in S, a_i \in \mathbf{F} \bigg \} \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>즉, <span class="arithmatex">\(S\)</span> 의 벡터로 만든 모든 일차결합의 집합이 생성공간 <span class="arithmatex">\(\text{span}(S)\)</span> 이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\text{span}(\varnothing ) = \{0\}\)</span> 으로 정의한다. 이 <span class="arithmatex">\(0\)</span> 은 영벡터를 뜻한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\R ^{3}\)</span> 의 원소로 이루어진 집합 <span class="arithmatex">\(A = \{(1,0,0), (0,1,0)\}\)</span> 의 생성공간은 </p>
+<div class="arithmatex">\[ \forall a, b \in \R,  a(1,0,0) + b(0, 1, 0) = (a, b, 0)\]</div>
+<p>형태의 집합 <span class="arithmatex">\(\text{span}(A) = \{(a, b, 0) \in \R ^{3} : a, b \in \R \}\)</span> 이다. 이 생성공간 <span class="arithmatex">\(\text{span}(A)\)</span> 는 <span class="arithmatex">\(xy\)</span>평면이고 <span class="arithmatex">\(\R ^{3}\)</span> 의 부분공간이다.</p>
+</li>
+</ul>
+<a href="#aad599671"><div class="admonition def" id="aad599671">
+<p class="admonition-title">정리 1.5</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 임의의 부분집합 <span class="arithmatex">\(S\)</span> 의 생성공간 <span class="arithmatex">\(\text{span}(S)\)</span> 는 <span class="arithmatex">\(S\)</span> 를 포함하는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이다.</p>
+<p><span class="arithmatex">\(S\)</span> 를 포함하는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간은 <span class="arithmatex">\(\text{span}(S)\)</span> 을 포함한다.</p>
+</div></a>
+<ul>
+<li>
+<p>첫번째 명제의 증명 </p>
+<p><span class="arithmatex">\(S = \varnothing\)</span> 이면 <span class="arithmatex">\(\text{span}(\varnothing ) = \{0\}\)</span> 인데, <span class="arithmatex">\(S = \varnothing \in \{0\}\)</span> 이고 <span class="arithmatex">\(\{0\}\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 모든 부분공간에 포함된다. ▲ </p>
+<p><span class="arithmatex">\(S \neq \varnothing\)</span> 이면 <span class="arithmatex">\(z \in S\)</span> 에 대하여 <span class="arithmatex">\(0z = 0 \in \text{span}(S)\)</span> 이다. <span class="arithmatex">\(x, y \in \text{span}(S)\)</span> 이면 벡터 <span class="arithmatex">\(u_1, u_2, \dots, u_m \in S\)</span> 와 스칼라 <span class="arithmatex">\(a_1, a_2, \dots,a_m \in \R\)</span> 이 존재하여 </p>
+<div class="arithmatex">\[ x = a_1u_1 + a_2u_2 + \dots + a_mu_m \]</div>
+<p>을 만족하고 벡터 <span class="arithmatex">\(v_1, v_2, \dots, v_n \in S\)</span> 와 스칼라 <span class="arithmatex">\(b_1, b_2, \dots,b_n \in \R\)</span> 이 존재하여 </p>
+<div class="arithmatex">\[ y = b_1v_1 + b_2v_2 + \dots + b_nv_n \]</div>
+<p>을 만족한다. 그러므로 </p>
+<div class="arithmatex">\[ x + y = a_1u_1 + a_2u_2 + \dots + a_mu_m  + b_1v_1 + b_2v_2 + \dots + b_nv_n \in \text{span}(S)\]</div>
+<p>이고, 스칼라 <span class="arithmatex">\(c\)</span> 에 대하여</p>
+<div class="arithmatex">\[ cx = ca_1u_1 + ca_2u_2 + \dots + ca_mu_m \in \text{span}(S) \]</div>
+<p>이므로 <span class="arithmatex">\(\text{span}(S)\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이다. 이때 <span class="arithmatex">\(v \in S \implies v = 1 \cdot v \in \text{span}(S)\)</span> 이므로 <span class="arithmatex">\(S \subset \text{span}(S)\)</span> 이다. ■ </p>
+</li>
+<li>
+<p>두번째 명제의 증명 </p>
+<p>가정에 의하여 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 가 <span class="arithmatex">\(S\)</span> 를 포함한다. <span class="arithmatex">\(w \in \text{span}(S)\)</span> 이면 벡터 <span class="arithmatex">\(w_1, w_2, \dots, w_n \in S\)</span> 와 스칼라 <span class="arithmatex">\(c_1, c_2, \dots,c_n \in \R\)</span> 이 존재하여 </p>
+<div class="arithmatex">\[ w = c_1w_1 + c_2w_2 + \dots + c_nw_n \]</div>
+<p>를 만족한다. 이때 가정에 의하여 <span class="arithmatex">\(S \subset \mathbf{W}\)</span> 이므로 <span class="arithmatex">\(w_1, w_2, \dots, w_n \in \mathbf{W}\)</span> 이다. 그런데 <span class="arithmatex">\(w_1, w_2, \dots, w_n \in \mathbf{W}\)</span> 들은 벡터공간의 원소이므로 </p>
+<div class="arithmatex">\[ w = c_1w_1 + c_2w_2 + \dots + c_nw_n \]</div>
+<p>는 자명하게 <span class="arithmatex">\(w \in \mathbf{W}\)</span> 이다. <span class="arithmatex">\(w\)</span> 는 <span class="arithmatex">\(\text{span}(S)\)</span> 의 임의의 원소이므로 </p>
+<div class="arithmatex">\[ \therefore \text{span}(S) \subset \mathbf{W} \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<a href="#e299df979"><div class="admonition def" id="e299df979">
+<p class="admonition-title">벡터공간을 생성하는 집합(generation set)</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분집합 <span class="arithmatex">\(S\)</span> 에 대하여 <span class="arithmatex">\(\text{span}(S)=\mathbf{V}\)</span> 이면 <span class="arithmatex">\(S\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 를 생성한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이것을 <span class="arithmatex">\(S\)</span> 의 벡터가 <span class="arithmatex">\(\mathbf{V}\)</span> 를 생성한다고 하기도 한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(S = \{(1, 1, 0), (1, 0, 1), (0, 1, 1)\}\)</span> 은 <span class="arithmatex">\(\R ^{3}\)</span> 을 생성한다. 다른 말로 세 벡터 <span class="arithmatex">\((1, 1, 0), (1, 0, 1), (0, 1, 1)\)</span> 는 <span class="arithmatex">\(\R ^{3}\)</span> 을 생성한다. 즉, <span class="arithmatex">\(\R ^{3}\)</span> 의 임의의 벡터 <span class="arithmatex">\((r_1, r_2, r_3)\)</span> 는 이 세 벡터의 일차결합이다. 이는 </p>
+<div class="arithmatex">\[ r(1, 1, 0) + s(1, 0, 1) + t(0, 1, 1) = (r_1, r_2, r_3) \]</div>
+<p>을 만족하는 스칼라 <span class="arithmatex">\(r,s,t\)</span> 를 찾는 것으로 보일 수 있다. 그러면 <span class="arithmatex">\(r = \dfrac{1}{2}(a_1+a_2-a_3), s = \dfrac{1}{2}(a_1-a_2+a_3), t = \dfrac{1}{2}(-a_1+a_2+a_3)\)</span> 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>세 다항식 <span class="arithmatex">\(x ^{2} + 3x-2, 2x ^{2} + 5x-3, - x ^{2}-4x+4\)</span> 는 <span class="arithmatex">\(\mathbf{P} _2(\R)\)</span> 을 생성한다. 임의의 다항식 <span class="arithmatex">\(ax ^{2} + bx + c \in \mathbf{P} _2(\R)\)</span> 은 다음과 같이 세 다항식의 일차결합이기 때문이다.</p>
+<div class="arithmatex">\[ (-8a+5b+3c)(x ^{2}+3x-2) + (4a-2b-c)(2x ^{2} +5x-3) + (-a+b+c)(-x ^{2}-4x+4) = ax ^{2} + bx + c \]</div>
+</li>
+<li>
+<p>예시 </p>
+<p>네 행렬 </p>
+<div class="arithmatex">\[ \begin{pmatrix} 1&amp;1\\ 1&amp;0\\ \end{pmatrix}, \begin{pmatrix} 1&amp;1\\ 0&amp;1\\ \end{pmatrix}, \begin{pmatrix} 1&amp;0\\ 1&amp;1\\ \end{pmatrix}, \begin{pmatrix} 0&amp;1\\ 1&amp;1\\ \end{pmatrix} \]</div>
+<p>은 <span class="arithmatex">\(\mathbf{M} _{2 \times 2}(\R)\)</span> 을 생성한다. 즉, 임의의 행렬 <span class="arithmatex">\(A \in \mathbf{M} _{2 \times 2}(\R)\)</span> 은 다음과 같이 네 행렬의 일차 결합이다. </p>
+<div class="arithmatex">\[ \begin{pmatrix} a _{11}&amp;a _{12}\\ a _{21}&amp;a _{22}\\ \end{pmatrix} = \bigg (\dfrac{1}{3}a _{11} + \dfrac{1}{3}a _{12} + \dfrac{1}{3}a _{21} - \dfrac{2}{3}a _{22}\bigg ) \begin{pmatrix} 1&amp;1\\ 1&amp;0\\ \end{pmatrix}+ \bigg (\dfrac{1}{3}a _{11} + \dfrac{1}{3}a _{12} - \dfrac{2}{3}a _{21} + \dfrac{1}{3}a _{22}\bigg ) \begin{pmatrix} 1&amp;1\\ 0&amp;1\\ \end{pmatrix}+ \]</div>
+<div class="arithmatex">\[ \bigg (\dfrac{1}{3}a _{11} - \dfrac{2}{3}a _{12} + \dfrac{1}{3}a _{21} + \dfrac{1}{3}a _{22}\bigg ) \begin{pmatrix} 1&amp;0\\ 1&amp;1\\ \end{pmatrix}+ \bigg (-\dfrac{2}{3}a _{11} + \dfrac{1}{3}a _{12} + \dfrac{1}{3}a _{21} + \dfrac{1}{3}a _{22}\bigg ) \begin{pmatrix} 0&amp;1\\ 1&amp;1\\ \end{pmatrix} \]</div>
+</li>
+</ul>
+<h3 id="linearly-dependent">Linearly Dependent<a class="headerlink" href="#linearly-dependent" title="Permanent link">¶</a></h3>
+<a href="#769613f7e"><div class="admonition def" id="769613f7e">
+<p class="admonition-title">영벡터의 자명한 표현(trivial representation of <span class="arithmatex">\(0\)</span>)</p>
+<p>임의의 벡터 <span class="arithmatex">\(u_1, u_2, \dots, u_n\)</span> 에 대하여 <span class="arithmatex">\(a_1 = a_2 = \dots = a_n = 0\)</span> 이면 <span class="arithmatex">\(a_1u_1 + a_2u_2 + \dots + a_nu_n = 0\)</span> 인데 이것은 너무 자명하므로 영벡터의 자명한 표현이라 한다.</p>
+</div></a>
+<a href="#7d698f850"><div class="admonition def" id="7d698f850">
+<p class="admonition-title">일차종속(linearly dependent) </p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분집합 <span class="arithmatex">\(S\)</span> 에 대하여 </p>
+<div class="arithmatex">\[a_1u_1 + a_2u_2 + \dots + a_nu_n = 0\]</div>
+<p>을 만족하는 임의의 서로 다른 벡터 <span class="arithmatex">\(u_1, u_2, \dots, u_n \in S\)</span> 와 적어도 하나는 <span class="arithmatex">\(0\)</span> 이 아닌 스칼라 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 이 존재하면 집합 <span class="arithmatex">\(S\)</span> 를 일차종속이라 한다. </p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(S\)</span> 의 벡터 또한 일차 종속이다. </p>
+</li>
+<li>
+<p>어떤 집합이 일차 종속이면 적절한 벡터를 택하여 영벡터를 표현하는 자명하지 않은 표현(nontrivial representation)이다.</p>
+</li>
+<li>
+<p>무한체의 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{W}\)</span> 를 생성하는 유한 부분집합 <span class="arithmatex">\(S\)</span> 가 존재한다. 이때 가장 작은 <span class="arithmatex">\(S\)</span> 를 찾는다면 <span class="arithmatex">\(\mathbf{W}\)</span> 의 모든 벡터를 표현할 때 조금이라도 적은 <span class="arithmatex">\(S\)</span> 의 벡터의 일차결합으로 표현할 수 있으므로, 연산의 횟수를 줄일 수 있다. 즉, 이것은 <span class="arithmatex">\(S\)</span> 가 일차종속인지 아닌지 확인하려 하는 것이다. 만약 일차종속이면 <span class="arithmatex">\(\mathbf{W}\)</span> 를 생성하는 <span class="arithmatex">\(S' \subsetneq S\)</span> 가 존재하므로 <span class="arithmatex">\(S'\)</span> 를 사용해야 연산 횟수를 줄일 수 있다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(u_1 = (2, -1, 4), u_2 = (1, -1, 3), u_3 = (1, 1, -1), u_4 = (1, -2, -1)\)</span> 에 대하여 집합 <span class="arithmatex">\(S = \{u_1, u_2, u_3, u_4\}\)</span> 는 <span class="arithmatex">\(\R ^{3}\)</span> 의 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 를 생성한다. 이때 <span class="arithmatex">\(\mathbf{W}\)</span> 를 생성하는 <span class="arithmatex">\(S' \subsetneq S\)</span> 를 찾는 것은 <span class="arithmatex">\(S\)</span> 의 어떤 벡터를 <span class="arithmatex">\(S\)</span> 의 다른 벡터의 일차결합으로 표현할 수 있는지 찾는 것이다.</p>
+<p><span class="arithmatex">\(u_3 = 2u_1 - 3u_2 + 0u_4\)</span> 이므로 <span class="arithmatex">\(u_3\)</span> 은 나머지 세 벡터의 일차결합이다. 이는 </p>
+<div class="arithmatex">\[ -2u_1 + 3u_2 + u_3 -0u_4 = 0 \]</div>
+<p>인데, 이와 같이 <span class="arithmatex">\(S\)</span> 의 어떤 벡터가 다른 벡터의 일차결합이면 영벡터를 <span class="arithmatex">\(S\)</span> 의 일차결합으로 표현할 때 어떤 계수가 <span class="arithmatex">\(0\)</span> 이 아니다. 이것의 역도 성립한다.</p>
+</li>
+</ul>
+<p>위 예시에서 볼 수 있듯이 다음 명제는 동치이다. </p>
+<ul>
+<li>
+<p>영벡터를 <span class="arithmatex">\(S\)</span> 의 벡터의 모든 계수가 <span class="arithmatex">\(0\)</span> 이 아닌 일차결합으로 표현하는 방법이 존재한다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(S\)</span> 의 어떤 벡터는 다른 벡터의 일차결합이다.</p>
+</li>
+</ul>
+<p>위의 예시에서 <span class="arithmatex">\(u_1, u_2, u_3\)</span> 의 계수가 <span class="arithmatex">\(0\)</span> 이 아니므로 <span class="arithmatex">\(u_1 = au_2 + bu_3\)</span> 와 같이 <span class="arithmatex">\(u_1\)</span> 을 나머지 세 벡터의 일차결합으로 표현할 수 있다. <span class="arithmatex">\(u_2, u_3\)</span> 도 마찬가지로 나머지 세 벡터의 일차결합으로 표현된다. </p>
+<p>그러므로 <span class="arithmatex">\(S' \subsetneq  S\)</span> 인 <span class="arithmatex">\(S'\)</span> 를 찾는 방법은 <span class="arithmatex">\(S\)</span> 의 벡터의 모든 계수가 <span class="arithmatex">\(0\)</span> 이 아닌 일차결합으로 영벡터를 표현할 수 있는지 확인하는 것이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\R ^{4}\)</span> 의 부분집합 <span class="arithmatex">\(S = \{(1,3,-4,2), (2,2,-4,0) , (1,-3,2,-4), (-1,0,1,0)\}\)</span> 에 대하여 <span class="arithmatex">\(S\)</span> 가 일차종속인지 확인하려면 어떤 벡터가 나머지 벡터의 일차결합임을 보이는 것이다. 이는 다음을 만족하면서 적어도 하나는 <span class="arithmatex">\(0\)</span> 이 아닌 스칼라 <span class="arithmatex">\(a_1, a_2, a_3, a_4\)</span> 가 존재함을 보이는 것이다. </p>
+<div class="arithmatex">\[ a_1 (1,3,-4,2)+ a_2 (2,2,-4,0) + a_3 (1,-3,2,-4) + a_4 (-1,0,1,0) = 0 \]</div>
+<p>이는 다음 연립일차방정식의 자명하지 않은 해를 찾는 것과 같다. </p>
+<div class="arithmatex">\[ a_1 + 2a_2 + a_3 - a_4 = 0 \]</div>
+<div class="arithmatex">\[ 3a_1 + 2a_2 -3 a_3 + 0 a_4 = 0 \]</div>
+<div class="arithmatex">\[ -4a_1 - 4a_2 +2 a_3 + a_4 = 0 \]</div>
+<div class="arithmatex">\[ 2a_1 + 0a_2 -4 a_3 + 0a_4 = 0 \]</div>
+<p>변수가 4개인데 관계가 4개이므로 해를 찾을 수 있다. 자명하지 않은 해는 <span class="arithmatex">\(a_1 = 4, a_2 = -3, a_3 = 2, a_4 = 0\)</span> 이다. 즉 <span class="arithmatex">\(S\)</span> 는 <span class="arithmatex">\(\R ^{4}\)</span> 의 일차종속인 부분집합이다. </p>
+</li>
+</ul>
+<h3 id="linearly-independent">Linearly Independent<a class="headerlink" href="#linearly-independent" title="Permanent link">¶</a></h3>
+<a href="#535402200"><div class="admonition def" id="535402200">
+<p class="admonition-title">일차독립(linearly independent)</p>
+<p>벡터공간의 부분집합 <span class="arithmatex">\(S\)</span> 가 임의의 서로 다른 벡터 <span class="arithmatex">\(u_1, u_2, \dots, u_n \in S\)</span> 와 스칼라 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 에 대하여 </p>
+<div class="arithmatex">\[a_1u_1 + a_2u_2 + \dots + a_nu_n = 0\]</div>
+<p>이 성립하려면 반드시 </p>
+<div class="arithmatex">\[a_1 = a_2 = \dots = a_n = 0\]</div>
+<p>이어야 한다면 집합 <span class="arithmatex">\(S\)</span> 를 일차독립이라 한다. </p>
+</div></a>
+<ul>
+<li>일차독립은 쉽게 말해 벡터공간의 부분집합 <span class="arithmatex">\(S\)</span> 가 일차종속이 아니면 일차독립이다. 이때 <span class="arithmatex">\(S\)</span> 의 벡터 또한 일차독립이다.</li>
+</ul>
+<h3 id="properties-of-linear-combination">Properties of Linear Combination<a class="headerlink" href="#properties-of-linear-combination" title="Permanent link">¶</a></h3>
+<a href="#9ca85139c"><div class="admonition def" id="9ca85139c">
+<p>다음이 벡터공간에서 성립한다.</p>
+<ol>
+<li>
+<p>공집합 <span class="arithmatex">\(\varnothing\)</span> 은 일차독립이다. 어떤 집합이 일차종속이려면 반드시 공집합이 아니어야 한다. </p>
+</li>
+<li>
+<p>영이 아닌 벡터 하나로 이루어진 집합은 일차독립이다. </p>
+</li>
+<li>
+<p>어떤 집합이 일차독립이기 위한 필요충분조건은 영벡터 <span class="arithmatex">\(0\)</span> 을 주어진 집합에 대한 일차결합으로 표현하는 방법이 자명한 표현뿐인 것이다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>2) 의 증명 </p>
+<p>만약 벡터 <span class="arithmatex">\(u\)</span> 에 대한 집합 <span class="arithmatex">\(\{u\}\)</span> 가 일차종속이면 스칼라 <span class="arithmatex">\(a \neq  0\)</span> 에 대하여 <span class="arithmatex">\(au = 0\)</span> 이므로 <span class="arithmatex">\(u = a ^{-1}au=a ^{-1}0 = 0\)</span> 이므로 <span class="arithmatex">\(u\)</span> 는 영벡터가 된다. 이는 모순이다.</p>
+</li>
+<li>
+<p>3) 은 유한집합이 일차독립인지 판단할 때 유용하게 사용된다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(S = \{(1,0,0,-1), (0,1,0,-1), (0,0,1,-1), (0,0,0,1)\}\)</span> 에 대하여 영벡터 <span class="arithmatex">\(0\)</span> 의 일차결합 표현이 자명한 표현 뿐이라면 <span class="arithmatex">\(S\)</span> 는 일차독립이다. 스칼라 <span class="arithmatex">\(a,b,c,d\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ a(1,0,0,-1) + b (0,1,0,-1) + c (0,0,1,-1) + d (0,0,0,1) = (0, 0, 0, 0) \]</div>
+<p>라고 하면 이는 연립방정식</p>
+<div class="arithmatex">\[ a = 0 , b = 0 , c = 0 \]</div>
+<div class="arithmatex">\[ -a-b-c+d = 0 \]</div>
+<p>와 같다. 따라서 <span class="arithmatex">\(a=b=c=d=0\)</span> 이므로 <span class="arithmatex">\(S\)</span> 는 일차독립이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#01156053b"><div class="admonition def" id="01156053b">
+<p class="admonition-title">정리 1.6</p>
+<p><span class="arithmatex">\(\mathbf{V}\)</span> 가 벡터공간이고 <span class="arithmatex">\(S_1 \subseteq S_2 \subseteq \mathbf{V}\)</span> 일 때 <span class="arithmatex">\(S_1\)</span> 이 일차종속이면 <span class="arithmatex">\(S_2\)</span> 도 일차종속이다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(S_1 = \{v_1, v_2, \dots, v_n\}\)</span> 은 일차종속이므로 적어도 하나는 <span class="arithmatex">\(0\)</span> 이 아닌 스칼라 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ a_1v_1 + a_2v_2 + \dots + a_nv_n = 0 \]</div>
+<p>이 성립한다. 이때 <span class="arithmatex">\(S_2= \{v_1, v_2, \dots, v_n, v _{n+1}, \dots, v_m\}\)</span> 가 일차독립이라고 하면 스칼라 <span class="arithmatex">\(b_1, b_2, \dots, b_m\)</span> 에 대하여 </p>
+<div class="arithmatex">\[b_1v_1 + b_2v_2 + \dots + b_nv_n + b _{n+1}v _{n+1} + \dots + b_mv_m = 0\]</div>
+<p>이 성립하려면 반드시 <span class="arithmatex">\(b_1 = b_2 = \dots = b_m = 0\)</span> 이어야 한다. 따라서</p>
+<div class="arithmatex">\[b_1v_1 + b_2v_2 + \dots + b_nv_n = 0\]</div>
+<p>에서 그 계수들이 반드시 <span class="arithmatex">\(b_1 = b_2 = \dots = b_n = 0\)</span> 을 만족하는데, 이는 가정과 모순이다. 그러므로 <span class="arithmatex">\(S_2\)</span> 는 일차종속이다. ■ </p>
+</li>
+</ul>
+<a href="#b5e42a1b2"><div class="admonition def" id="b5e42a1b2">
+<p class="admonition-title">정리 1.6 따름정리</p>
+<p><span class="arithmatex">\(\mathbf{V}\)</span> 가 벡터공간이고 <span class="arithmatex">\(S_1 \subseteq S_2 \subseteq \mathbf{V}\)</span> 일 때 <span class="arithmatex">\(S_2\)</span> 이 일차독립이면 <span class="arithmatex">\(S_1\)</span> 도 일차독립이다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(S_2 = \{v_1, v_2, \dots, v_n\}\)</span> 은 일차독립이므로 스칼라 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ a_1v_1 + a_2v_2 + \dots + a_nv_n = 0 \]</div>
+<p>이 성립하려면 반드시 <span class="arithmatex">\(a_1 = a_2 = \dots = a_n = 0\)</span> 이다. 이때 <span class="arithmatex">\(m \leq n\)</span> 에 대하여 <span class="arithmatex">\(S_1= \{v_1, v_2, \dots, v_m\}\)</span> 가 일차종속이라고 하면 적어도 하나는 <span class="arithmatex">\(0\)</span> 이 아닌 스칼라 <span class="arithmatex">\(b_1, b_2, \dots, b_m\)</span> 에 대하여 </p>
+<div class="arithmatex">\[b_1v_1 + b_2v_2 + \dots + b_mv_m = 0\]</div>
+<p>이 성립한다. 이때 가정에 의하여</p>
+<div class="arithmatex">\[a_1v_1 + a_2v_2 + \dots + a_mv_m = 0\]</div>
+<p>에서 그 계수들이 반드시 <span class="arithmatex">\(a_1 = a_2 = \dots = a_n = 0\)</span> 을 만족하는데, 이는 모순이다. 그러므로 <span class="arithmatex">\(S_1\)</span> 는 일차독립이다. ■ </p>
+</li>
+</ul>
+<a href="#7084a7b14"><div class="admonition def" id="7084a7b14">
+<p>무한체의 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 를 생성하는 집합 <span class="arithmatex">\(S\)</span> 가 일차독립이면 최소생성집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>위에서 이미 살펴보았던 예시를 다시 살펴보자.</p>
+<p><span class="arithmatex">\(u_1 = (2, -1, 4), u_2 = (1, -1, 3), u_3 = (1, 1, -1), u_4 = (1, -2, -1)\)</span> 에 대하여 집합 <span class="arithmatex">\(S = \{u_1, u_2, u_3, u_4\}\)</span> 는 <span class="arithmatex">\(\R ^{3}\)</span> 의 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 를 생성한다. 이때 <span class="arithmatex">\(u_3 = 2u_1 - 3u_2 + 0u_4\)</span> 이므로 <span class="arithmatex">\(S\)</span> 는 일차 종속이다. 즉 <span class="arithmatex">\(S\)</span> 의 일차결합 <span class="arithmatex">\(a_1u_1 + a_2u_2 + a_3u_3 + a_4u_4\)</span> 은 </p>
+<div class="arithmatex">\[ a_1u_1 + a_2u_2 + a_3u_3 + a_4u_4 = a_1u_1 + a_2u_2 + a_3(2u_1 - 3u_2 + 0u_4) + a_4u_4 \]</div>
+<div class="arithmatex">\[ = (a_1 + 2a_3)u_1 + (a_2 -3a_3)u_2 + a_4u_4 \]</div>
+<p>이므로 <span class="arithmatex">\(S' = \{u_1, u_2, u_4\} \subsetneq S\)</span> 가 <span class="arithmatex">\(S\)</span> 와 같은 공간을 생성한다. 그러므로 <span class="arithmatex">\(S\)</span> 로 벡터공간을 표현하는 것은 비효율적이다.</p>
+</li>
+</ul>
+<a href="#97eff1e4d"><div class="admonition def" id="97eff1e4d">
+<p class="admonition-title">정리 1.7</p>
+<p>집합 <span class="arithmatex">\(S\)</span> 에 대하여 다음 명제들은 동치이다. </p>
+<ol>
+<li>
+<p>두 개 이상의 벡터를 가진 <span class="arithmatex">\(S\)</span> 가 일차종속일 때 <span class="arithmatex">\(v \in S\)</span> 를 다른 벡터의 일차결합으로 표현할 수 있으면 <span class="arithmatex">\(S \setminus \{v\}\)</span> 도 <span class="arithmatex">\(S\)</span> 와 같은 공간을 생성한다.</p>
+</li>
+<li>
+<p>임의의 <span class="arithmatex">\(S' \subsetneq S\)</span> 이 <span class="arithmatex">\(S\)</span> 와 같은 공간을 생성할 수 없으면 <span class="arithmatex">\(S\)</span> 는 일차독립이다.</p>
+</li>
+<li>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 일차독립인 부분집합 <span class="arithmatex">\(S\)</span> 와 벡터 <span class="arithmatex">\(v \in \mathbf{V} \setminus  S\)</span> 에 대하여 <span class="arithmatex">\(S \cup \{v\}\)</span> 가 일차종속이기 위한 필요충분조건은 <span class="arithmatex">\(v \in \text{span}(S)\)</span> 이다. </p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>세번째 명제의 증명 </p>
+<p><span class="arithmatex">\(S \cup \{v\}\)</span> 가 일차종속이므로 벡터 <span class="arithmatex">\(u_1, u_2, \dots, u_n \in S \cup \{v\}\)</span> 와 적어도 하나는 영이 아닌 스칼라 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 이 존재하여 </p>
+<div class="arithmatex">\[ a_1u_1 +a_2u_2 + \dots +a_nu_n = 0 \]</div>
+<p>을 만족한다. <span class="arithmatex">\(S\)</span> 가 일차독립이므로 어떤 벡터 <span class="arithmatex">\(u_i\)</span> 가 <span class="arithmatex">\(v\)</span> 인데, 이것을 그냥 <span class="arithmatex">\(u_1\)</span> 이라고 하면 </p>
+<div class="arithmatex">\[ v = a_1 ^{-1}( - a_2u_2 - \dots - a_nu_n ) = -(a_1 ^{-1}a_2)u_2 - \dots - -(a_1 ^{-1}a_n)u_n \]</div>
+<p>이므로 <span class="arithmatex">\(v \in \text{span}(S)\)</span> 이다. ▲ </p>
+<p>역으로 <span class="arithmatex">\(v \in \text{span}(S)\)</span> 이면 <span class="arithmatex">\(v_1, v_2, \dots, v_m \in S\)</span> 와 스칼라 <span class="arithmatex">\(b_1, b_2, \dots, b_m\)</span> 에 대하여</p>
+<div class="arithmatex">\[ v = b_1v_1 +b_2v_2 + \dots +b_mv_m \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ 0 = b_1v_1 +b_2v_2 + \dots +b_mv_m +(-1)v\]</div>
+<p>이다. 그런데 <span class="arithmatex">\(v \not\in S\)</span> 이고 <span class="arithmatex">\(v\)</span> 의 계수가 <span class="arithmatex">\(0\)</span> 이 아니므로 집합 <span class="arithmatex">\(\{v_1,v_2, \dots,v_m,v\} \subset S \cup \{v\}\)</span> 은 일차종속이다. 그러면 <a href="#01156053b">정리 1.6</a> 에 의하여 <span class="arithmatex">\(S \cup \{v\}\)</span> 도 일차종속이다. ■ </p>
+</li>
+</ul>
+<h2 id="basis">Basis<a class="headerlink" href="#basis" title="Permanent link">¶</a></h2>
+<a href="#891fae57b"><div class="admonition def" id="891fae57b">
+<p class="admonition-title">기저(basis)</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 부분집합 <span class="arithmatex">\(\beta\)</span> 에 대하여 <span class="arithmatex">\(\beta\)</span> 가 일차독립이고 <span class="arithmatex">\(\mathbf{V} = \text{span}(\beta )\)</span> 이면 <span class="arithmatex">\(\beta\)</span> 를 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>지금까지 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 의 생성집합 <span class="arithmatex">\(S\)</span> 에 대한 임의의 <span class="arithmatex">\(S' \subsetneq S\)</span> 가 <span class="arithmatex">\(\mathbf{W}\)</span> 를 생성하지 못하면 <span class="arithmatex">\(S\)</span> 가 일차독립임을 살펴보았다. 또한 아래의 정리로부터 기저에 의한 해당 벡터공간의 벡터의 표현은 유일함을 알 수 있다. 이로써 일차독립인 생성집합은 그 벡터공간을 생성하는 가장 기본적인 레고 블록임을 알 수 있다. 따라서 일차독립인 생성집합을 "기저(basis)" 라고 부른다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\text{span}(\varnothing ) = \{0\}\)</span> 이고 <span class="arithmatex">\(\varnothing\)</span> 은 일차독립이므로 <span class="arithmatex">\(\varnothing\)</span> 은 점공간의 기저이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\{x ^{n} : n \in \N\} = \{1, x, x ^{2}, x ^{3}, \dots\}\)</span> 은 <span class="arithmatex">\(\mathbf{P} (\mathbf{F} )\)</span> 의 기저이다.</p>
+<ul>
+<li>이 예시는 기저가 무한집합일 수도 있다는 것을 말해준다. 심지어 어떤 벡터공간의 기저는 유한집합일 수 없다. 대표적으로 위 예시의 벡터공간 <span class="arithmatex">\(\mathbf{P} (\mathbf{F} )\)</span> 의 기저는 반드시 무한집합이다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="standard-basis">Standard Basis<a class="headerlink" href="#standard-basis" title="Permanent link">¶</a></h3>
+<a href="#3ee055d66"><div class="admonition def" id="3ee055d66">
+<p class="admonition-title">표준기저(Standard basis, Natural basis, Canonical basis)</p>
+<p>벡터공간의 표준기저는 단 하나의 성분이 <span class="arithmatex">\(1\)</span> 이고 나머지 성분이 <span class="arithmatex">\(0\)</span> 인 벡터들의 집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>3차원 공간의 표준 기저를 <span class="arithmatex">\(i,j,k\)</span> 로 나타낸 그림 </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/3D_Vector.svg/450px-3D_Vector.svg.png"/></p>
+</li>
+<li>
+<p>예시 </p>
+<p>유클리드 평면 <span class="arithmatex">\(\R ^{2}\)</span> 의 표준기저는 </p>
+<div class="arithmatex">\[ e_x = (1, 0), e_y = (0, 1) \]</div>
+<p>이다. 3차원 공간 <span class="arithmatex">\(\R ^{3}\)</span> 의 표준기저는 </p>
+<div class="arithmatex">\[ e_x = (1, 0, 0), e_y = (0, 1, 0), e_z = (0, 0, 1) \]</div>
+<p>이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 에 대한 벡터 </p>
+<div class="arithmatex">\[ e_1 = (1, 0, 0, \dots, 0) , e_2 = (0, 1, 0, \dots, 0) , \enspace  \dots \enspace , e_n = (0, 0, 0, \dots, 1) \]</div>
+<p>의 집합 <span class="arithmatex">\(\{e_1, e_2, \dots, e_n\}\)</span> 은 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 표준기저이다. </p>
+</li>
+<li>
+<p>표준기저는 위와 같은 좌표 벡터공간에서만 정의되는 것이 아니라 다항식 벡터공간이나 행렬 벡터공간에서도 정의된다. </p>
+<p>다항식 벡터공간 같은 경우 하나의 coefficient 가 <span class="arithmatex">\(1\)</span> 이고 나머지 coefficient 가 <span class="arithmatex">\(0\)</span> 인 다항식들의 집합으로 구성된다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(\{1, x, x ^{2}, x ^{3}, \dots, x ^{n}\}\)</span> 은 <span class="arithmatex">\(\mathbf{P}_n (\mathbf{F} )\)</span> 의 표준기저이다.</p>
+</li>
+</ul>
+<p>행렬 벡터공간 <span class="arithmatex">\(\mathbf{M} _{m \times n}\)</span> 같은 경우 단 하나의 성분이 <span class="arithmatex">\(1\)</span> 이고 나머지 성분이 <span class="arithmatex">\(0\)</span> 인 <span class="arithmatex">\(m \times n\)</span> 행렬의 집합으로 구성된다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{M} _{2 \times 2}\)</span> 의 표준기저는 다음과 같다. </p>
+<div class="arithmatex">\[ e _{11} = \begin{pmatrix} 1&amp;0\\ 0&amp;0\\ \end{pmatrix}, e _{12} = \begin{pmatrix} 0&amp;1\\ 0&amp;0\\ \end{pmatrix}, e _{21} = \begin{pmatrix} 0 &amp; 0\\ 1 &amp; 0\\ \end{pmatrix}, e _{22} = \begin{pmatrix} 0 &amp; 0\\ 0 &amp; 1\\ \end{pmatrix} \]</div>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#114a67cd9"><div class="admonition def" id="114a67cd9">
+<p><span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 에서 성분을 가져온 <span class="arithmatex">\(n \times n\)</span> 항등행렬 <span class="arithmatex">\(I_n\)</span> 과 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 표준기저 <span class="arithmatex">\(e_1, e_2, \dots, e_n\)</span> 에 대하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ I_n = (e_1, e_2, \dots, e_n) \]</div>
+</div></a>
+<a href="#8a514fc5c"><div class="admonition def" id="8a514fc5c">
+<p class="admonition-title">정리 1.8</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 서로 다른 벡터 <span class="arithmatex">\(u_1, u_2, \dots, u_n \in \mathbf{V}\)</span> 에 대한 집합 <span class="arithmatex">\(\beta = \{u_1, u_2, \dots, u_n\}\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대하여 다음은 동치이다.</p>
+<ol>
+<li>
+<p>집합 <span class="arithmatex">\(\beta = \{u_1, u_2, \dots, u_n\}\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저이다.</p>
+</li>
+<li>
+<p>임의의 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 를 유일한 스칼라 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 에 대한 <span class="arithmatex">\(\beta\)</span> 의 일차결합으로 나타낼 수 있다. </p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 가 주어지면 <span class="arithmatex">\(\beta\)</span> 의 일차결합에 대한 스칼라 <span class="arithmatex">\(n\)</span>순서쌍 <span class="arithmatex">\((a_1, a_2, \dots, a_n)\)</span> 이 유일하게 결정되고, 반대로 <span class="arithmatex">\((a_1, a_2, \dots, a_n)\)</span> 이 주어지면 이것을 <span class="arithmatex">\(\beta\)</span> 의 일차결합 계수로 가지는 유일한 벡터 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 가 결정됨을 말해준다. (<span class="arithmatex">\(n\)</span> 은 기저에 존재하는 벡터의 갯수이다.)</p>
+</li>
+<li>
+<p>1 에서 2 를 도출하는 증명 </p>
+<p><span class="arithmatex">\(\beta\)</span> 가 기저이므로 <span class="arithmatex">\(\text{span}(\beta ) = \mathbf{V}\)</span> 이므로 <span class="arithmatex">\(v \in \mathbf{V} = \text{span}(\beta )\)</span> 이다. </p>
+<div class="arithmatex">\[ v = a_1u_1 + a_2u_2 + \dots + a_nu_n, \enspace v = b_1u_1 + b_2u_2 + \dots + b_nu_n \]</div>
+<p>라고 하면 </p>
+<div class="arithmatex">\[ v - v = 0 = (a_1 - b_1)u_1 + (a_2 - b_2)u_2 + \dots + (a_n - b_n)u_n \]</div>
+<p>인데 <span class="arithmatex">\(\beta\)</span> 가 일차독립이므로 </p>
+<div class="arithmatex">\[ a_1 - b_1 = 0, a_2 - b_2 = 0, \dots, a_n - b_n = 0 \iff a_1  = b_1 , a_2  = b_2 , \dots, a_n  = b_n  \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<a href="#2d3716e93"><div class="admonition def" id="2d3716e93">
+<p class="admonition-title">정리 1.9</p>
+<p>유한집합 <span class="arithmatex">\(S\)</span> 가 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 를 생성하면 <span class="arithmatex">\(S\)</span> 의 부분집합 중에 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저가 존재한다. </p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 유한집합이 벡터공간을 생성하면 그 벡터공간이 유한집합인 기저를 포함함을 말해준다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(S = \varnothing \lor S = \{0\}\)</span> 이면 <span class="arithmatex">\(\text{span}(S)= \mathbf{V} = \{0\}\)</span> 이다. <span class="arithmatex">\(\varnothing\)</span> 은 <span class="arithmatex">\(S\)</span> 의 부분집합이면서 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저이다. ▲ </p>
+<p>영이 아닌 벡터 <span class="arithmatex">\(u_1\)</span> 에 대하여 <span class="arithmatex">\(u_1 \in  S\)</span> 이라고 하면 영이 아닌 벡터 하나로 이루어진 집합은 일차독립이므로 <span class="arithmatex">\(\beta = \{u_1\}\)</span> 은 일차독립이다. 이때 <span class="arithmatex">\(\beta\)</span> 가 일차독립이 되도록 <span class="arithmatex">\(S\)</span> 에서 벡터 <span class="arithmatex">\(u_2, \dots, u_n\)</span> 들을 꺼내서 <span class="arithmatex">\(\beta\)</span> 에 속하게 하면 <span class="arithmatex">\(\beta  = \{u_1, \dots, u_n\}\)</span> 이 된다. </p>
+<p><span class="arithmatex">\(\beta = S\)</span> 라면 <span class="arithmatex">\(S\)</span> 는 일차독립이고 <span class="arithmatex">\(\mathbf{V}\)</span> 의 생성집합이므로 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저이다. ▲ </p>
+<p><span class="arithmatex">\(\beta \subsetneq S\)</span> 라면 <a href="#aad599671">정리 1.5</a> 에서 <span class="arithmatex">\(\text{span}(S) = \mathbf{V}\)</span> 이므로 <span class="arithmatex">\(S \subset \text{span}(\beta )\)</span> 를 보이면 <span class="arithmatex">\(\text{span}(S) = \mathbf{V} \subset \text{span}(\beta )\)</span> 인데, <span class="arithmatex">\(\text{span}(\beta ) \subset \text{span}(S)\)</span> 임은 자명하므로 <span class="arithmatex">\(\text{span}(\beta ) = \mathbf{V}\)</span> 이 되어 <span class="arithmatex">\(\beta\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저임이 증명된다.</p>
+<p>먼저 <span class="arithmatex">\(v \in S\)</span> 에 대하여 <span class="arithmatex">\(v \in \beta \implies v \in \text{span}(\beta )\)</span> 이다. <span class="arithmatex">\(v \not\in \beta\)</span> 이면 <span class="arithmatex">\(\beta \cup \{v\}\)</span> 는 <span class="arithmatex">\(\beta\)</span> 의 정의에 의하여 일차종속이므로 <a href="#97eff1e4d">정리 1.7</a> 에 의하여 <span class="arithmatex">\(v \in \text{span}(\beta )\)</span> 이다. 그러므로 어느 경우에나 <span class="arithmatex">\(\forall v \in S, v \in \text{span}(\beta )\)</span> 이므로 <span class="arithmatex">\(S \subset \text{span}(\beta )\)</span> 이다. ■ </p>
+</li>
+<li>
+<p>위 증명과정은 <span class="arithmatex">\(\mathbf{V}\)</span> 의 유한 생성집합을 축소하여 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저를 얻는 방법을 말해준다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(S = \{(2, -3, 5), (8, -12, 20), (1, 0, -2), (0, 2, -1), (7, 2, 0)\}\)</span> 에 대하여 <span class="arithmatex">\(\text{span}(S) = \R ^{3}\)</span> 인데 <span class="arithmatex">\(S\)</span> 를 축소하여 <span class="arithmatex">\(\R ^{3}\)</span> 의 최소 기저를 얻자.</p>
+<p><span class="arithmatex">\(S\)</span> 에서 영이 아닌 벡터를 아무거나 택하자. 일단 <span class="arithmatex">\((2, -3, 5)\)</span> 를 택하여 <span class="arithmatex">\(\beta = \{(2, -3, 5)\}\)</span> 를 만든다. 이후 <span class="arithmatex">\((8, -12, 20)\)</span> 이 기저 집합에 속할 수 있는지 검증하는데 </p>
+<div class="arithmatex">\[ 4(2, -3, 5) - (8, -12, 20) = 0 \]</div>
+<p>에서 집합 <span class="arithmatex">\(\{(2, -3, 5) , (8, -12, 20)\}\)</span> 은 일차종속이므로 <span class="arithmatex">\((8, -12, 20)\)</span> 은 택하지 않는다. ▲ </p>
+<p><span class="arithmatex">\((2, -3, 5)\)</span> 와 <span class="arithmatex">\((1, 0, -2)\)</span> 을 <span class="arithmatex">\(\beta\)</span> 에 집어넣어도 일차독립이므로 <span class="arithmatex">\(\beta\)</span> 에 넣는다. ▲ </p>
+<p>이때 <span class="arithmatex">\((7, 2, 0)\)</span> 를 <span class="arithmatex">\(\beta\)</span> 에 넣어서 <span class="arithmatex">\(\{(2, -3, 5), (1, 0, -2), (0, 2, -1), (7, 2, 0)\}\)</span> 를 만들었는데 일차종속이라면 <span class="arithmatex">\((7, 2, 0)\)</span> 를 <span class="arithmatex">\(\beta\)</span> 에 넣으면 안된다. </p>
+<div class="arithmatex">\[ 2(2, -3, 5) + 3(1, 0, -2) + 4(0, 2, -1) - (7, 2, 0) = 0 \]</div>
+<p>이므로 일차종속이므로 <span class="arithmatex">\(\beta\)</span> 에 넣으면 안된다. 그러므로 <span class="arithmatex">\(\beta\)</span> 는 최종적으로 </p>
+<div class="arithmatex">\[ \beta = \{ (2, -3, 5) , (1, 0, -2) , (0, 2, -1) \} \]</div>
+<p>가 된다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="replacement-theorem">Replacement Theorem<a class="headerlink" href="#replacement-theorem" title="Permanent link">¶</a></h3>
+<a href="#6cf7acf90"><div class="admonition def" id="6cf7acf90">
+<p class="admonition-title">정리 1.10 대체정리(replacement theorem)</p>
+<p>집합 <span class="arithmatex">\(G\)</span> 가 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(\text{span}(G) = \mathbf{V}\)</span> 이고, <span class="arithmatex">\(L \subset \mathbf{V}\)</span> 이 일차독립이면 다음이 성립한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(|L| \leq |G|\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land |H| = |G| - |L|\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>이 정리의 따름정리들은 벡터공간에 관한 모든 사실 중 가장 중요하다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(|L| = 0\)</span> 즉, <span class="arithmatex">\(L = \varnothing\)</span> 일 때 <span class="arithmatex">\(H = G\)</span> 이면 성립한다. ▲ </p>
+<p><span class="arithmatex">\(|L'| = m \geq 0\)</span> 에 대하여 성립한다고 가정하고 <span class="arithmatex">\(|L| = m + 1\)</span> 에 대하여 성립함을 보이자. 이때 편의상 <span class="arithmatex">\(|G| = n\)</span> 이라고 하자. </p>
+<p><span class="arithmatex">\(L = \{v_1, v_2, \dots, v _{m+1}\}\)</span> 에 대하여 <a href="#01156053b">정리 1.6 따름정리</a> 에 의하여 <span class="arithmatex">\(L' = \{v_1, v_2, \dots, v _{m}\}\)</span> 은 일차독립이다.</p>
+<p><span class="arithmatex">\(m\)</span> 에 대해서는 성립한다고 가정했으므로 집합 <span class="arithmatex">\(H' = \{u_1, u_2, \dots, u _{n-m}\} \subset G\)</span> 이 존재하여 </p>
+<div class="arithmatex">\[\text{span}(L' \cup H') = \mathbf{V} \tag{1} \]</div>
+<p>을 만족한다. 그러므로 스칼라 <span class="arithmatex">\(a_1, \dots, a_m\)</span> 와 스칼라 <span class="arithmatex">\(b_1, \dots, b _{n-m}\)</span> 이 존재하여 다음과 같이 벡터 <span class="arithmatex">\(v _{m+1}\)</span> 도 생성한다. </p>
+<div class="arithmatex">\[ a_1v_1 + \dots +a_mv_m + b_1u_1 + \dots + b _{n-m}u _{n-m} = v _{m+1} \]</div>
+<p><span class="arithmatex">\(|L'| \leq |G| \iff m \leq n\)</span> 인데 <span class="arithmatex">\(n = m\)</span> 이면 <span class="arithmatex">\(v _{m+1}\)</span> 이 <span class="arithmatex">\(v_1, \dots, v_m\)</span> 의 일차결합이 되므로 <a href="#97eff1e4d">정리 1.7</a> 에 의하여 <span class="arithmatex">\(v _{m+1} \in \text{span}(L')\)</span> 에서 <span class="arithmatex">\(L = L' \cup \{v _{m+1}\}\)</span> 이 일차종속이 되어버린다. 하지만 <span class="arithmatex">\(L\)</span> 은 일차독립이라고 하였으므로 모순이다. 그러므로 <span class="arithmatex">\(m \neq n\)</span> 이고 <span class="arithmatex">\(m &lt; n \iff m + 1 \leq n\)</span> 이다. 즉, <span class="arithmatex">\(|L'| + 1 = |L| \leq |G|\)</span> 이 성립한다. ▲ </p>
+<p>만약 <span class="arithmatex">\(b_i\)</span> 들이 모두 <span class="arithmatex">\(0\)</span> 이면 위와 같은 모순이 또 발생하므로 <span class="arithmatex">\(b_i\)</span> 중 하나는 반드시 <span class="arithmatex">\(0\)</span> 이 아니다. 그것을 <span class="arithmatex">\(b_1\)</span> 이라 하면 </p>
+<div class="arithmatex">\[ u_1 = (-b_1 ^{-1}a_1) v_1 + \dots + (-b_1 ^{-1}a_m) v_m + (b_1 ^{-1})v _{m+1} \]</div>
+<div class="arithmatex">\[ + (-b_1 ^{-1}b_2) u_2 + \dots + (-b_1 ^{-1}b _{n-m}) u _{n-m} \]</div>
+<p>이다. <span class="arithmatex">\(H = \{u_2, \dots, u _{n-m}\}\)</span> 이라 하면 <span class="arithmatex">\(u_1 \in \text{span}(L \cup H)\)</span> 이다. 그러면 <span class="arithmatex">\(v_1, \dots, v_m, u_2, \dots, u _{n-m} \in \text{span}(L \cup H)\)</span> 이므로 </p>
+<div class="arithmatex">\[ \{v_1, \dots, v_m, u_1, \dots, u _{n-m}\} \subseteq \text{span}(L \cup H) \]</div>
+<p>이다. <span class="arithmatex">\((1)\)</span> 에서 <span class="arithmatex">\(\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbf{V}\)</span> 인데, <a href="#aad599671">정리 1.5</a> 에 의하여 <span class="arithmatex">\(\text{span}(\{v_1, \dots, v_m, u_1, \dots, u _{n-m}\}) = \mathbf{V} \subset \text{span}(L \cup H)\)</span> 이다. <span class="arithmatex">\(\text{span}(L \cup H) \subset \mathbf{V}\)</span> 은 자명하므로 결국 <span class="arithmatex">\(\text{span}(L \cup H)= \mathbf{V}\)</span> 이다. ▲ </p>
+<p>그러면 집합 <span class="arithmatex">\(H \subset \{u_1, u_2, \dots, u _{n-m}\} \subset G\)</span> 이고 <span class="arithmatex">\(|H| = n - (m + 1) = |G| - |L|\)</span> 이다. 그러면 수학적 귀납법에 의하여 모든 증명이 끝났다. ■ </p>
+</li>
+<li>
+<p>이 정리에서 집합 <span class="arithmatex">\(G\)</span> 를 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 를 생성하는 극소 생성집합, 즉 기저라고 생각하는 것이 편하다. 왜냐하면 <span class="arithmatex">\(\mathbf{V}\)</span> 를 생성하는 임의의 생성집합 <span class="arithmatex">\(G\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ |L| \leq |G| \]</div>
+<p>라는 부등식이 성립해야 하는데, 이 부등식은 어차피 극소 생성집합(기저)인 <span class="arithmatex">\(G'\)</span> 에 의하여 </p>
+<div class="arithmatex">\[ |L| \leq |G'| = \dim(\mathbf{V} ) \]</div>
+<p>로 스케일링되기 때문이다. 그러니까 <span class="arithmatex">\(\mathbf{V}\)</span> 를 생성하는 집합 <span class="arithmatex">\(G\)</span> 와 일차독립 <span class="arithmatex">\(L\)</span> 이 주어졌다고 하자. 그러면 위의 1) 를 만족하므로 </p>
+<div class="arithmatex">\[ |L| \leq |G| \]</div>
+<p>인데 이 1) 는 <span class="arithmatex">\(\mathbf{V}\)</span> 를 생성하는 <span class="arithmatex">\(G' \subset G\)</span> 에서도 성립하므로</p>
+<div class="arithmatex">\[ |L| \leq |G'| = \dim(\mathbf{V} ) \leq |G| \]</div>
+<p>가 된다. 음.. 하지만 2) 의 경우 <span class="arithmatex">\(G\)</span> 에서 성립하므로</p>
+<div class="arithmatex">\[\exists H \subset G \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land |H| = |G| - |L|\]</div>
+<p>인데 <span class="arithmatex">\(G' \subset G\)</span> 에서도 성립하므로</p>
+<div class="arithmatex">\[\exists H' \subset G' \text{ s.t. } \text{span}(L \cup H') = \mathbf{V} \land |H'| = |G'| - |L|\]</div>
+<p>가 되겠구나. 그러면 <span class="arithmatex">\(H\)</span> 가 존재한다는 것과 전혀 다른 <span class="arithmatex">\(H'\)</span> 가 존재한다는 것이니까 연관성을 주장할 수 없어 보이네. 그러면 이 정리의 <span class="arithmatex">\(G\)</span> 가 기저여야만 한다고 주장하는 것도 타당해보이지는 않고.</p>
+<p>하지만 1) 의 경우에서는 <span class="arithmatex">\(G\)</span> 보다 더 작은 생성집합에 대하여 부등식이 스케일링되기 때문에 <span class="arithmatex">\(G\)</span> 를 기저라고 생각하는 게 편하다. 그러면 1) 을 통하여 </p>
+<div class="arithmatex">\[ \exists S \subset \mathbf{V}, |S| &gt; \dim(\mathbf{V} ) \implies S \text{ is not linearly independent } \]</div>
+<p>라고 말할 수 있다.</p>
+</li>
+</ul>
+<a href="#2f5eb1649"><div class="admonition def" id="2f5eb1649">
+<p class="admonition-title">정리 1.10 따름정리 1</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 가 유한집합인 기저를 포함하면 <span class="arithmatex">\(\mathbf{V}\)</span> 의 모든 기저는 유한집합이며, 기수가 같다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 벡터공간의 기저의 기수가 벡터공간의 본질적인 성질임을 말해준다. 그래서 이 정리 덕분에 아래와 같은 차원, 유한차원, 무한차원을 정의할 수 있다.</p>
+</li>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(\beta\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저이고, <span class="arithmatex">\(\gamma\)</span> 가 <span class="arithmatex">\(|\gamma| &gt; |\beta|\)</span> 인 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저라고 하면, <span class="arithmatex">\(\exists S \subset \gamma \text{ s.t. } |S| = |\beta|+1\)</span> 이다. <span class="arithmatex">\(S\)</span> 는 일차독립이고 <span class="arithmatex">\(\text{span}(\beta) = \mathbf{V}\)</span> 이므로 <a href="#6cf7acf90">대체정리</a> 에 의하여 <span class="arithmatex">\(|S| = |\beta| + 1 \leq |\beta|\)</span> 인데, 이는 모순이다. 그러므로 <span class="arithmatex">\(|\gamma| \leq |\beta|\)</span> 이다. ▲ </p>
+<p>같은 논리로 <span class="arithmatex">\(|\beta| \leq |\gamma|\)</span> 를 도출할 수 있다. ▲ </p>
+<p>그러므로 <span class="arithmatex">\(|\beta| = |\gamma|\)</span> 이다. ■ </p>
+</li>
+</ul>
+<h2 id="dimension">Dimension<a class="headerlink" href="#dimension" title="Permanent link">¶</a></h2>
+<a href="#3d3ebd5a4"><div class="admonition def" id="3d3ebd5a4">
+<p class="admonition-title">차원(dimension)</p>
+<p>벡터공간의 기저의 기수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 차원을 <span class="arithmatex">\(\dim(\mathbf{V} )\)</span> 으로 표기한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>지금까지 살펴본 여러가지 벡터공간의 차원은 다음과 같다. </p>
+<div class="arithmatex">\[ \dim(\{0\}) = 0 , \enspace \dim(\mathbf{F} ^{n}) = n , \enspace \dim(\mathbf{M} _{m \times n}(\mathbf{F} )) = mn , \enspace \dim(\mathbf{P} _n(\mathbf{F} )) = n+1 \]</div>
+</li>
+<li>
+<p>동일한 벡터공간이라도 어떤 체 위에 존재하는지에 따라 차원이 달라진다.</p>
+<ul>
+<li>
+<p>예시</p>
+<p>복소수체 <span class="arithmatex">\(\mathbb{C}\)</span> 에서 복소수 벡터공간의 차원은 <span class="arithmatex">\(1\)</span> 이고 기저는 <span class="arithmatex">\(\{1\}\)</span> 이다.</p>
+<p>실수체 <span class="arithmatex">\(\R\)</span> 에서 복소수 벡터공간의 차원은 <span class="arithmatex">\(2\)</span> 이고 기저는 <span class="arithmatex">\(\{1, i\}\)</span> 이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>예시 </p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{F} ^{5}\)</span> 의 부분공간 </p>
+<div class="arithmatex">\[ \mathbf{W} = \{(a_1, a_2, a_3, a_4, a_5) \in \mathbf{F} ^{5} : a_1 + a_3 + a_5 = 0, a_2 = a_4 \} \]</div>
+<p>의 기저는 <span class="arithmatex">\(\{(-1, 0, 1, 0, 0,), (-1, 0, 0, 0, 1), (0, 1, 0, 1, 0)\}\)</span> 이므로 <span class="arithmatex">\(\dim(\mathbf{W} ) = 3\)</span> 이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(n \times n\)</span> 대각행렬 집합 <span class="arithmatex">\(\mathbf{W}\)</span> 은 <span class="arithmatex">\(\mathbf{M} _{n \times n}(\mathbf{F} )\)</span> 의 부분공간인데 <span class="arithmatex">\(\mathbf{W}\)</span> 의 기저는 <span class="arithmatex">\(\{E ^{11}, E ^{22}, \dots, E ^{nn}\}\)</span> 이다. <span class="arithmatex">\(E ^{ij}\)</span> 란 <span class="arithmatex">\(i\)</span> 행 <span class="arithmatex">\(j\)</span> 열 성분이 <span class="arithmatex">\(1\)</span> 이고 나머지 성분이 모두 <span class="arithmatex">\(0\)</span> 인 행렬이다. </p>
+<p>그러므로 <span class="arithmatex">\(\dim(\mathbf{W} ) = n\)</span> 이다. </p>
+</li>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(n \times n\)</span> 대칭행렬 집합 <span class="arithmatex">\(\mathbf{W}\)</span> 는 <span class="arithmatex">\(\mathbf{M} _{n \times n}(\mathbf{F} )\)</span> 의 부분공간인데, <span class="arithmatex">\(\mathbf{W}\)</span> 의 기저는 <span class="arithmatex">\(i\)</span> 행 <span class="arithmatex">\(j\)</span> 열과 <span class="arithmatex">\(j\)</span> 행 <span class="arithmatex">\(i\)</span> 열의 성분만 <span class="arithmatex">\(1\)</span> 이고 나머지는 <span class="arithmatex">\(0\)</span> 인 <span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(A ^{ij}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \{A ^{ij} : 1 \leq i \leq j \leq n\} \]</div>
+<p>이므로 </p>
+<div class="arithmatex">\[ \dim(\mathbf{W} ) = n + (n-1) + \dots + 1 = \dfrac{n(n+1)}{2} \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#0829c51a9"><div class="admonition def" id="0829c51a9">
+<p class="admonition-title">유한차원(finite dimension)</p>
+<p>기저가 유한집합인 벡터공간이다.</p>
+</div></a>
+<ul>
+<li>
+<p><a href="#6cf7acf90">대체정리</a> 를 차원의 관점에서 다시 말해보면 다음과 같다.</p>
+<div class="arithmatex">\[ \text{유한차원 벡터공간 $\mathbf{V}$ 에서 $\dim(\mathbf{V} )$ 보다 더 많은 개수의 벡터를 가지는 부분집합은 일차독립이 아니다.} \]</div>
+<p>왜냐하면 차원보다 큰 기수를 가지는 부분집합은 반드시 기저의 일차결합으로 표현가능하기 때문이다.</p>
+</li>
+<li>
+<p>즉, 유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 에서 <span class="arithmatex">\(\dim(\mathbf{V} )\)</span> 보다 더 많은 벡터를 가지면서 일차독립인 부분집합이 존재하지 않는다.</p>
+<div class="arithmatex">\[ \not \exists S \subset \mathbf{V} \text{ s.t. } |S| &gt; \dim(\mathbf{V} ) \land S \text{ is linearly independent} \]</div>
+</li>
+</ul>
+<a href="#5b0b0e4c8"><div class="admonition def" id="5b0b0e4c8">
+<p class="admonition-title">무한차원(infinite dimension)</p>
+<p>기저가 무한집합인 벡터공간이다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{P} (\mathbf{F} )\)</span> 는 무한집합 <span class="arithmatex">\(\{x ^{n} : n \in \N\} = \{1, x, x ^{2}, \dots\}\)</span> 을 기저로 가지므로 무한차원이다. </p>
+</li>
+</ul>
+<a href="#cd7879a47"><div class="admonition def" id="cd7879a47">
+<p class="admonition-title">정리 1.10 따름정리 2</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대하여 다음이 성립한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\mathbf{V}\)</span> 의 임의의 유한 생성집합 <span class="arithmatex">\(S\)</span> 는 <span class="arithmatex">\(\dim(\mathbf{V} ) \leq |S|\)</span> 이고, <span class="arithmatex">\(\dim(\mathbf{V} ) = |S|\)</span> 인 생성집합 <span class="arithmatex">\(S\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(S \subset \mathbf{V}\)</span> 가 일차독립이고 <span class="arithmatex">\(|S| = \dim(\mathbf{V} )\)</span> 이면 기저이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(L \subset \mathbf{V}\)</span> 이 일차독립이면 <span class="arithmatex">\(L \subset \beta\)</span> 인 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저 <span class="arithmatex">\(\beta\)</span> 가 존재한다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>명제 3) 은 일차독립인 벡터공간의 부분집합을 확장하여 기저를 만들 수 있음을 말해준다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>우선 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저를 <span class="arithmatex">\(\beta\)</span> 라고 하면 <span class="arithmatex">\(|\beta | = \dim(\mathbf{V})\)</span> 이다.</p>
+<p><span class="arithmatex">\(\mathbf{V}\)</span> 의 유한 생성집합을 <span class="arithmatex">\(G\)</span> 라고 하면 <a href="#2d3716e93">정리 1.9</a> 에 의하여 <span class="arithmatex">\(G\)</span> 의 부분집합이자 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저인 <span class="arithmatex">\(H\)</span> 가 존재한다. <a href="#2f5eb1649">대체정리 따름정리 1</a> 에 의하여 <span class="arithmatex">\(|H| = \dim(\mathbf{V} )\)</span> 이다. 따라서 <span class="arithmatex">\(\dim(\mathbf{V} )\leq |G|\)</span> 이고 만약 <span class="arithmatex">\(\dim(\mathbf{V} ) = |G|\)</span> 이면 <span class="arithmatex">\(G = H\)</span> 으로써 <span class="arithmatex">\(G\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저이다. ▲ </p>
+<p><span class="arithmatex">\(L \subset \mathbf{V}\)</span> 이 일차독립이고 <span class="arithmatex">\(|L| = \dim(\mathbf{V} )\)</span> 라고 하자. <a href="#6cf7acf90">대체정리</a> 에 의하여 </p>
+<div class="arithmatex">\[ \exists H \subset \beta  \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land |H| = |\beta| - |L|  \]</div>
+<p>인데 <span class="arithmatex">\(|H| = |\beta| - |L| = \dim(\mathbf{V} ) - \dim(\mathbf{V} ) = 0\)</span> 이다. <span class="arithmatex">\(|H| = 0 \iff H = \varnothing\)</span> 이므로 <span class="arithmatex">\(\text{span}(L) = \mathbf{V}\)</span> 이고 <span class="arithmatex">\(L\)</span> 은 일차독립이므로 <span class="arithmatex">\(L\)</span> 은 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저이다. ▲ </p>
+<p><span class="arithmatex">\(L \subset \mathbf{V}\)</span> 가 일차독립이면 <a href="#6cf7acf90">대체정리</a> 에 의하여 </p>
+<div class="arithmatex">\[ \exists H \subset \beta  \text{ s.t. } \text{span}(L \cup H) = \mathbf{V} \land |H| = |\beta| - |L|  \]</div>
+<p>이다. <span class="arithmatex">\(|L \cup H| \leq |L| + |H| = |\beta| = \dim(\mathbf{V} )\)</span> 이다. 1) 은 이미 증명되었으므로 1) 을 사용하면</p>
+<div class="arithmatex">\[\dim(\mathbf{V} ) \leq |L \cup H| \leq \dim(\mathbf{V} )\]</div>
+<p>이므로 <span class="arithmatex">\(|L \cup H| = \dim(\mathbf{V} )\)</span> 이고, <span class="arithmatex">\(L \subset L \cup H\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저가 된다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p>집합 </p>
+<div class="arithmatex">\[ \{x ^{2} + 3x-2, 2x ^{2} + 5x - 3, -x ^{2} - 4x + 4\} \]</div>
+<p>는 벡터공간 <span class="arithmatex">\(\mathbf{P} _2(\R)\)</span> 을 생성하는데 이 벡터공간의 차원은 <span class="arithmatex">\(3\)</span> 이므로 1) 에 의하여 이 집합은 <span class="arithmatex">\(\mathbf{P} _2(\R)\)</span> 의 기저이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>집합 </p>
+<div class="arithmatex">\[ \{(1,0,0,-1), (0,1,0,-1), (0,0,1,-1), (0,0,0,1)\} \]</div>
+<p>은 일차독립인데 <span class="arithmatex">\(\dim(\R ^{4}) = 4\)</span> 이므로 2) 에 의하여 이 집합은 <span class="arithmatex">\(\R ^{4}\)</span> 의 기저이다.</p>
+</li>
+</ul>
+<h3 id="relation-between-linear-dependent-basis-span">Relation between Linear Dependent, Basis, Span<a class="headerlink" href="#relation-between-linear-dependent-basis-span" title="Permanent link">¶</a></h3>
+<a href="#1821eb3d2"><div class="admonition def" id="1821eb3d2">
+<p>벡터공간의 모든 일차독립 집합을 <span class="arithmatex">\(D\)</span>, 모든 기저의 집합을 <span class="arithmatex">\(B\)</span>, 모든 생성집합을 <span class="arithmatex">\(S\)</span> 라고 하면 다음이 성립한다. </p>
+<div class="arithmatex">\[ B = D \cap S \]</div>
+</div></a>
+<ul>
+<li>지금까지의 논의를 통하여 이 정리가 성립함을 자명하게 알 수 있다.</li>
+</ul>
+<a href="#6cc9cb96b"><div class="admonition def" id="6cc9cb96b">
+<p>벡터공간의 어떤 일차독립 집합을 <span class="arithmatex">\(D\)</span>, 어떤 기저를 <span class="arithmatex">\(B\)</span>, 어떤 생성집합을 <span class="arithmatex">\(S\)</span> 라고 하면 다음이 성립한다. </p>
+<div class="arithmatex">\[ D \subset B \subset S \]</div>
+</div></a>
+<ul>
+<li>지금까지의 논의를 통하여 이 정리가 성립함을 자명하게 알 수 있다.</li>
+</ul>
+<h3 id="dimension-and-basis-of-subspace">Dimension and Basis of Subspace<a class="headerlink" href="#dimension-and-basis-of-subspace" title="Permanent link">¶</a></h3>
+<a href="#26f9238cb"><div class="admonition def" id="26f9238cb">
+<p class="admonition-title">정리 1.11</p>
+<p>유한차원 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대하여 다음이 성립한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\mathbf{W}\)</span> 는 유한차원이고, <span class="arithmatex">\(\dim(\mathbf{W} ) \leq \dim(\mathbf{V} )\)</span> 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\dim(\mathbf{W} ) = \dim(\mathbf{V} ) \implies \mathbf{W} = \mathbf{V}\)</span> </p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 벡터공간의 부분공간을 차원으로 분류할 수 있다는 것을 말해준다.</p>
+<p>가령 <span class="arithmatex">\(\R ^{2}\)</span> 은 <span class="arithmatex">\(2\)</span> 차원 벡터공간이므로 부분공간의 차원은 <span class="arithmatex">\(0, 1, 2\)</span> 이 될 수 있다. <span class="arithmatex">\(0\)</span>차원 부분공간은 <span class="arithmatex">\(\{0\}\)</span> 이고, <span class="arithmatex">\(2\)</span>차원 부분공간은 <span class="arithmatex">\(\R ^{2}\)</span> 이다. <span class="arithmatex">\(1\)</span>차원 부분공간은 벡터 <span class="arithmatex">\(v \in \R ^{2}\)</span> 와 스칼라 <span class="arithmatex">\(c \in \mathbf{F}\)</span> 에 대한 집합 <span class="arithmatex">\(\{c \cdot v : c \in \mathbf{F} \}\)</span> 이다.</p>
+<p>벡터공간 <span class="arithmatex">\(\R ^{2}\)</span> 의 벡터들을 유클리드 공간의 점으로 대응시키면 이 벡터공간을 기하학적으로 해석할 수 있다. 즉, <span class="arithmatex">\(0\)</span>차원 부분공간을 유클리드 공간의 원점으로, <span class="arithmatex">\(1\)</span>차원 부분공간을 유클리드 공간의 원점을 지나는 직선으로, <span class="arithmatex">\(2\)</span>차원 부분공간을 유클리드 평면 전체로 해석할 수 있다.</p>
+<p>마찬가지로 <span class="arithmatex">\(\R ^{3}\)</span> 의 부분공간의 차원은 <span class="arithmatex">\(0,1,2,3\)</span> 이 될 수 있고 <span class="arithmatex">\(2\)</span>차원인 부분공간은 유클리드 공간에서 평면으로, <span class="arithmatex">\(3\)</span>차원 부분공간을 유클리드 공간 전체로 볼 수 있다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\mathbf{W} = \{0\}\)</span> 이면 <span class="arithmatex">\(\mathbf{W}\)</span> 는 유한차원이고 <span class="arithmatex">\(\dim(\mathbf{W} ) = 0 \leq \dim(\mathbf{V} )\)</span> 이다. ▲ </p>
+<p><span class="arithmatex">\(\mathbf{W} \neq \{0\}\)</span> 이면 영이 아닌 벡터 <span class="arithmatex">\(x_1\)</span> 에 대하여 <span class="arithmatex">\(x_1 \in \mathbf{W}\)</span> 이다. 이때 <span class="arithmatex">\(\{x_1\}\)</span> 은 일차독립인데 이 집합이 일차독립이 되도록 <span class="arithmatex">\(\mathbf{W}\)</span> 에서 <span class="arithmatex">\(x_1, x_2, \dots, x_k\)</span> 를 꺼내서 <span class="arithmatex">\(\{x_1, \dots, x_k\}\)</span> 를 만들자. <span class="arithmatex">\(\mathbf{V}\)</span> 의 일차독립인 집합의 기수는 <span class="arithmatex">\(\dim(\mathbf{V} )\)</span> 와 같거나 작으므로 <span class="arithmatex">\(k \leq \dim(\mathbf{V} )\)</span> 이다. 이제 이 집합에 <span class="arithmatex">\(\mathbf{W}\)</span> 의 임의의 벡터를 하나만 더해도 일차종속이 된다. </p>
+<p>그러면 <a href="#97eff1e4d">정리 1.7</a> 에 의하여 <span class="arithmatex">\(\text{span}(\{x_1, \dots, x_k\}) = \mathbf{W}\)</span> 이므로 이는 <span class="arithmatex">\(\mathbf{W}\)</span> 의 기저이다. 그러므로 <span class="arithmatex">\(k = \dim(\mathbf{W} ) \leq \dim(\mathbf{V} )\)</span> 이다. ▲ </p>
+<p><span class="arithmatex">\(\dim(\mathbf{W} ) = \dim(\mathbf{V} )\)</span> 이면 <span class="arithmatex">\(\mathbf{W}\)</span> 의 기저의 기수는 <span class="arithmatex">\(\dim(\mathbf{V} )\)</span> 이고, 일차독립인 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분집합이다. 그러면 <a href="#cd7879a47">대체정리 따름정리 2</a> 에 의하여 <span class="arithmatex">\(\mathbf{W}\)</span> 의 기저는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저가 되고, 결국 <span class="arithmatex">\(\mathbf{W} = \mathbf{V}\)</span> 가 된다. ■ </p>
+</li>
+</ul>
+<a href="#dd66d2443"><div class="admonition def" id="dd66d2443">
+<p class="admonition-title">정리 1.11 따름정리</p>
+<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{W}\)</span> 의 임의의 기저를 확장하여 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저를 얻을 수 있다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\mathbf{W}\)</span> 의 기저를 <span class="arithmatex">\(S\)</span> 라 하면 <span class="arithmatex">\(S\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 일차독립인 부분집합이므로 <a href="#cd7879a47">대체정리 따름정리 2</a> 에 의하여 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저로 확장할 수 있다. ■ </p>
+</li>
+<li>
+<p>예시 </p>
+<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 스칼라 <span class="arithmatex">\(a _{18}, a _{16}, \dots, a_2, a_0 \in \mathbf{F}\)</span> 에 대한 다항식 </p>
+<div class="arithmatex">\[ a _{18} x ^{18} + a _{16} x ^{16} + \dots + a _{2} x ^{2} + a_0 \]</div>
+<p>을 원소로 갖는 벡터공간 <span class="arithmatex">\(\mathbf{W}\)</span> 은 <span class="arithmatex">\(\mathbf{P} _{18}(\mathbf{F} )\)</span> 의 부분공간이다. <span class="arithmatex">\(\mathbf{W}\)</span> 의 기저는 <span class="arithmatex">\(\{1, x ^{2}, \dots, x ^{16}, x ^{18}\}\)</span> 인데 이는 <span class="arithmatex">\(\mathbf{P} _{18}(\mathbf{F} )\)</span> 의 표준기저 <span class="arithmatex">\(\{1,x,x ^{2}, \dots, x ^{18}\}\)</span> 의 부분집합이다.</p>
+</li>
+</ul>
+<h2 id="infinite-dimension-vector-space">Infinite Dimension Vector Space<a class="headerlink" href="#infinite-dimension-vector-space" title="Permanent link">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>아래의 논의는 순서관계를 포함관계로 상정한다.</p>
+</div>
+<a href="#8491201f1"><div class="admonition def" id="8491201f1">
+<p class="admonition-title">극대(maximal)</p>
+<p>집합족 <span class="arithmatex">\(\mathcal{F}\)</span> 에 대하여 <span class="arithmatex">\(S \in \mathcal{F}, M \subset S \implies S = M\)</span> 이면 <span class="arithmatex">\(M\)</span> 을 포함관계에 의한 극대라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(S\)</span> 에 대하여 집합족 <span class="arithmatex">\(\mathcal{F} = 2 ^{S}\)</span> 을 정의하면 이것의 극대원소는 자명하게 <span class="arithmatex">\(S\)</span> 이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>무한집합 <span class="arithmatex">\(S\)</span> 에 대하여 <span class="arithmatex">\(\mathcal{F} = 2 ^{S}\)</span> 을 정의하면 이것의 극대원소는 존재하지 않는다. </p>
+<div class="arithmatex">\[ \forall M \in \mathcal{F}, \exists s \text{ s.t. } s \in S \land s \not\in M \implies M \cup \{s\} \in 2 ^{S}\]</div>
+<p>이기 때문이다.</p>
+</li>
+</ul>
+<a href="#9337ad051"><div class="admonition def" id="9337ad051">
+<p class="admonition-title">사슬(chain)</p>
+<p>집합족 <span class="arithmatex">\(\mathcal{C}\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \forall A, B \in \mathcal{C}, A \subset B \lor B \subset A \]</div>
+<p>이면 <span class="arithmatex">\(\mathcal{C}\)</span> 를 사슬이라 한다. </p>
+</div></a>
+<ul>
+<li>
+<p>사슬이란 그 속의 원소가 항상 비교가능한 집합을 뜻한다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>집합 <span class="arithmatex">\(A_n = \{1,2,\dots,n\}\)</span> 에 대한 집합족 <span class="arithmatex">\(\mathcal{C} = \{A_n : n = 1,2,3, \dots\}\)</span> 은 사슬이다.</p>
+</li>
+</ul>
+<a href="#ab66656e3"><div class="admonition def" id="ab66656e3">
+<p class="admonition-title">하우스도르프 극대원리(Hausdorff maximal principle)</p>
+<p>집합족 <span class="arithmatex">\(\mathcal{F}\)</span> 의 임의의 사슬 <span class="arithmatex">\(\mathcal{C}\)</span> 에 대하여 <span class="arithmatex">\(\exists U \in \mathcal{F} \text{ s.t. } \mathcal{C} \subset U\)</span> 이면 <span class="arithmatex">\(\mathcal{F}\)</span> 에는 극대원소가 있다. </p>
+</div></a>
+<ul>
+<li>
+<p>(<em>보통 <a href="../../Set/InfiniteSet/#a85bbef49">하우스도르프 극대원리</a>는 부분순서집합은 극대사슬을 가진다고 표현되지만, 이 책에서는 포함관계에 의한 부분순서관계를 표현하려고 집합족 <span class="arithmatex">\(\mathcal{F}\)</span> 의 임의의 사슬 <span class="arithmatex">\(\mathcal{C}\)</span> 에 대하여 <span class="arithmatex">\(\mathcal{C}\)</span> 을 포함하는 사슬 <span class="arithmatex">\(U\)</span> 가 존재한다고 말한 것 같다. 이렇게 말하면 집합족 <span class="arithmatex">\(\mathcal{F}\)</span> 에 포함관계에 의한 부분순서가 부여되고, 하우스도르프 극대원리에 의하여 <span class="arithmatex">\(\mathcal{F}\)</span> 에 극대원소가 있음을 말할 수 있다.</em>)</p>
+</li>
+<li>
+<p>하우스도르프 극대원리는 집합족이 특정 조건을 만족하면 극대원소를 가짐을 말해준다.</p>
+</li>
+</ul>
+<a href="#d4169760c"><div class="admonition def" id="d4169760c">
+<p>벡터공간의 기저는 일차독립인 극대 부분집합이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 그 기저 <span class="arithmatex">\(\beta\)</span> 에 대하여 기저의 정의에 따라 <span class="arithmatex">\(\beta\)</span> 는 일차독립이다. ▲ </p>
+<p><span class="arithmatex">\(v \in \mathbf{V}, v \not\in \beta\)</span> 이면 <span class="arithmatex">\(\text{span}(\beta ) = \mathbf{V}\)</span> 에서 <a href="#97eff1e4d">정리 1.7</a> 에 의하여 <span class="arithmatex">\(\beta \cup \{v\}\)</span> 는 일차종속이므로 <span class="arithmatex">\(\beta\)</span> 가 일차독립인 극대 부분집합이다. ■ </p>
+</li>
+</ul>
+<a href="#9fe6d017f"><div class="admonition def" id="9fe6d017f">
+<p class="admonition-title">정리 1.12</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 <span class="arithmatex">\(\text{span}(S) = \mathbf{V}\)</span> 인 <span class="arithmatex">\(S \subset \mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(\beta\)</span> 가 <span class="arithmatex">\(S\)</span> 의 일차독립인 극대 부분집합이면 <span class="arithmatex">\(\beta\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(S \not \subset \text{span}(\beta )\)</span> 이면 <span class="arithmatex">\(v \in S \setminus  \text{span}(\beta )\)</span> 가 존재하여 <a href="#97eff1e4d">정리 1.7</a> 에 의하여 <span class="arithmatex">\(\beta \cup \{v\}\)</span> 를 일차독립으로 만든다. 이는 <span class="arithmatex">\(\beta\)</span> 가 일차독립인 극대 부분집합이라는 것에 모순이다.</p>
+<p>그러므로 <span class="arithmatex">\(S \subset \text{span}(\beta )\)</span> 이다. 이때 <span class="arithmatex">\(\text{span}(S) = \mathbf{V}\)</span> 이므로 <a href="#aad599671">정리 1.5</a> 에 의하여 <span class="arithmatex">\(\text{span}(S) = \mathbf{V} \subset \text{span}(\beta )\)</span> 이다. <span class="arithmatex">\(\text{span}(\beta ) \subset \mathbf{V}\)</span> 은 자명하므로 <span class="arithmatex">\(\text{span}(\beta ) = \mathbf{V}\)</span> 이다. ■ </p>
+</li>
+</ul>
+<a href="#c298b6300"><div class="admonition def" id="c298b6300">
+<p>일차독립인 극대 부분집합(maximal linearly independent subset) : 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분집합 <span class="arithmatex">\(S\)</span> 에 대하여 <span class="arithmatex">\(S\)</span> 의 부분집합 <span class="arithmatex">\(B\)</span> 가 다음을 만족하면 일차독립인 극대 부분집합이다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(B\)</span> 는 일차독립이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(B\)</span> 를 포함하고 일차독립인 <span class="arithmatex">\(S\)</span> 의 부분집합은 오직 <span class="arithmatex">\(B\)</span> 이다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li><span class="arithmatex">\(S\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 를 생성한다면, 이 정의는 정리 1.12 에 의하여 기저의 정의와 같다. </li>
+</ul>
+<a href="#a437f748d"><div class="admonition def" id="a437f748d">
+<p>벡터공간의 기저와 벡터공간의 일차독립인 극대부분집합은 동치이다. </p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 지금까지의 논의에 의하여 자명하다.</p>
+</li>
+<li>
+<p>이 정리는 모든 벡터공간마다 일차독립인 극대부분집합이 존재함을 보이는 것이 모든 벡터공간이 기저를 가짐을 보이는 것과 같다는 것을 말해준다. 그러므로 지금의 최대 목표인 "모든 벡터공간에 기저가 존재한다" 를 보이기 위하여 바로 다음의 정리를 증명하자.</p>
+</li>
+</ul>
+<a href="#608799181"><div class="admonition def" id="608799181">
+<p class="admonition-title">정리 1.13</p>
+<p>벡터공간은 일차독립인 극대 부분집합을 갖는다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 과 일차독립인 집합 <span class="arithmatex">\(S \subset \mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(S\)</span> 를 포함하는 일차독립인 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분집합을 원소로 갖는 집합족 <span class="arithmatex">\(\mathcal{F}\)</span> 을 정의하자.</p>
+<p>이제 <span class="arithmatex">\(\mathcal{F}\)</span> 의 임의의 사슬 <span class="arithmatex">\(\mathcal{C}\)</span> 에 대하여 <span class="arithmatex">\(\exists U \in \mathcal{F} \text{ s.t. } \mathcal{C} \subset U\)</span> 임을 보일 것이다. 그러면 하우스도르프 극대원리에 의하여 <span class="arithmatex">\(\mathcal{F}\)</span> 가 극대원소를 가짐을 보일 수 있고 모든 증명이 끝난다.</p>
+<p><span class="arithmatex">\(\mathcal{C} = \varnothing\)</span> 일때 <span class="arithmatex">\(U = S\)</span> 로 정의하면 증명이 끝난다. ▲ </p>
+<p><span class="arithmatex">\(\mathcal{C} \neq \varnothing\)</span> 일때 <span class="arithmatex">\(U = \bigcup_{}^{}\mathcal{C}\)</span> 로 정의하면, <span class="arithmatex">\(\mathcal{C} \subset U\)</span> 는 자명하므로 <span class="arithmatex">\(U \in \mathcal{F}\)</span> 임을 보이면 증명이 끝난다. 즉, <span class="arithmatex">\(U\)</span> 가 일차독립인 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분집합이고 <span class="arithmatex">\(S\)</span> 를 포함함을 보이는 것이다. <span class="arithmatex">\(U\)</span> 는 당연히 <span class="arithmatex">\(S\)</span> 를 포함하는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분집합이므로 일차독립인 것만 보이면 된다.</p>
+<p><span class="arithmatex">\(U\)</span> 의 임의의 서로 다른 벡터 <span class="arithmatex">\(u_1, u_2, \dots, u_n \in U\)</span> 와 스칼라 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 에 대하여 <span class="arithmatex">\(a_1u_1 + a_2u_2 +\dots +a_nu_n = 0\)</span> 이라고 하자. 그러면 <span class="arithmatex">\(u_i \in U \implies \exists A_i \in \mathcal{C} \text{ s.t. } u_i \in A_i\)</span> 이다. <span class="arithmatex">\(\mathcal{C}\)</span> 는 포함관계에 의한 사슬이므로 <span class="arithmatex">\(A_i\)</span> 들을 모두 포함하는 <span class="arithmatex">\(A_k\)</span> 가 존재한다. 그러면 <span class="arithmatex">\(\forall u_i, u_i \in A_k\)</span> 이다. <span class="arithmatex">\(A_k \in \mathcal{F}\)</span> 이므로 <span class="arithmatex">\(A_k\)</span> 는 일차독립이고 따라서 <span class="arithmatex">\(a_1u_1 + a_2u_2 +\dots +a_nu_n = 0 \implies a_1 = a_2 = \dots = a_n = 0\)</span> 이다. 그러므로 <span class="arithmatex">\(U\)</span> 는 일차독립이다. ■ </p>
+</li>
+</ul>
+<h3 id="vector-space-has-a-basis">Vector Space has a Basis<a class="headerlink" href="#vector-space-has-a-basis" title="Permanent link">¶</a></h3>
+<a href="#2b881d6d6"><div class="admonition def" id="2b881d6d6">
+<p class="admonition-title">정리 1.13 따름정리</p>
+<p>벡터공간은 기저를 갖는다.</p>
+</div></a>
+<ul>
+<li>
+<p>지금까지의 논의의 최종 결론이 이 정리이다. </p>
+<p>이 장에서는 "기저와 차원" 의 정리들을 무한차원에서 성립하도록 일반화한다. 이것의 최종 목표는 모든 벡터공간에 기저가 존재함을 보이는 것이다. 이 사실은 무한차원을 다룰 때 중요한데, 왜냐하면 무한차원의 기저를 구체적으로 기술하기란 어렵기 때문이다. </p>
+<p>가령 유리수체의 실수 벡터공간의 기저가 어떤 모양인지 상상이 안가지만, 어쨌든 존재하기는 한다. 유한차원에서 성립하는 정리들을 무한차원으로 일반화를 할텐데 수학적 귀납법을 더 이상 사용할 수 없으므로 그 대신 하우스도르프 극대원리를 사용하는 것이다.</p>
+</li>
+<li>
+<p>증명 </p>
+<p><a href="#608799181">정리 1.13</a> 에서 <a href="#a437f748d">벡터공간의 기저와 벡터공간의 일차독립인 극대부분집합은 동치이므로</a> 증명이 끝난다. ■ </p>
+</li>
+</ul>
+<a href="#efdb62ab3"><div class="admonition def" id="efdb62ab3">
+<p>무한차원 벡터공간의 모든 기저는 기수가 같다.</p>
+</div></a>
+<ul>
+<li>
+<p><a href="#2f5eb1649">대체정리 따름정리 1</a> 을 무한차원으로 유추해보면 이 명제를 얻을 수 있다. </p>
+</li>
+<li>
+<p>이때 무한집합의 기수를 비교할 때에는 이미 잘 알고 있듯이 전단사 사상이 존재함을 보이면 기수가 서로 같다고 말할 수 있다.</p>
+</li>
+<li>
+<p>무한차원 벡터공간에 대해서 정리들을 일반화시켜야 되는 이유가 있다. 물론 대부분의 경우 유한차원의 벡터공간에 대한 정리가 적용된다. 그러나 위상수학 같은 심도 깊은 내용을 전개해야 할 경우 유한차원과 무한차원을 포함하는 일반화된 정리들이 필요하다. </p>
+</li>
+<li>
+<p>증명 (<a href="https://math.stackexchange.com/questions/52667/proof-that-two-basis-of-a-vector-space-have-the-same-cardinality-in-the-infinite">https://math.stackexchange.com/questions/52667/proof-that-two-basis-of-a-vector-space-have-the-same-cardinality-in-the-infinite</a>)</p>
+<p>가산무한집합 <span class="arithmatex">\(I, J\)</span> 에 대하여 무한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 두 기저 <span class="arithmatex">\(\{v_i\}_{i \in I}\)</span> 와 <span class="arithmatex">\(\{u_j\}_{j \in J}\)</span> 는 무한집합이다. <span class="arithmatex">\(\forall i \in I : v_i \in \text{span}(\{u_j\} _{j \in J})\)</span> 이므로 <span class="arithmatex">\(v_i\)</span> 가 <span class="arithmatex">\(\{u_j\} _{j \in J_i}\)</span> 의 일차결합이 되게 하는 유한집합 <span class="arithmatex">\(J_j \subset J\)</span> 가 항상 존재한다. 왜냐하면 일차결합은 유한개의 벡터로 정의되기 때문이다. 그러므로 <span class="arithmatex">\(\{v_i\} _{i \in I}\)</span> 의 벡터의 일차결합으로 어떤 벡터를 만들던지 그 벡터들은 모두 <span class="arithmatex">\(\text{span}(\{u_j\} _{j \in \bigcup_{}^{} J_i})\)</span> 에 포함된다. 그러므로 </p>
+<div class="arithmatex">\[ \mathbf{V} = \text{span}(\{v_i\}_{i \in I}) \subseteq \text{span}(\{u_j\}_{j \in \bigcup_{}^{}J_i}) \]</div>
+<p>이다. 이때 <span class="arithmatex">\(\{u_j\}_{j \in J}\)</span> 의 진부분집합은 <span class="arithmatex">\(\mathbf{V}\)</span> 를 생성할 수 없으므로 <span class="arithmatex">\(J = \bigcup_{i \in I}^{}J_i\)</span> 이다. 그러므로</p>
+<div class="arithmatex">\[|J| = \bigg |\bigcup_{i \in I}^{}J_i \bigg | \leq \sum_{i \in I}|J_i|\]</div>
+<p>이다. <span class="arithmatex">\(J_i\)</span> 가 유한집합이므로 <span class="arithmatex">\(|J_i| \leq \aleph _0\)</span> 이다. 따라서 </p>
+<div class="arithmatex">\[ |J| \leq \sum_{i \in I}|J_i| \leq \sum_{i \in I} \aleph _0 = |I|\aleph _0 \]</div>
+<p>이다. 그런데 <a href="../../Set/InfiniteSet/#530ae8378">임의의 무한기수 <span class="arithmatex">\(a\)</span> 에 대하여 <span class="arithmatex">\(aa=a\)</span> 이므로</a> <span class="arithmatex">\(|I| \aleph _0 = |I|\)</span> 이다. 그러므로 <span class="arithmatex">\(|J| \leq |I|\)</span> 을 얻는다. 같은 논리로 <span class="arithmatex">\(|I| \leq |J|\)</span> 를 얻는다. 그러므로 </p>
+<div class="arithmatex">\[ \therefore |I| = |J| \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<a href="#1979407f8"><div class="admonition def" id="1979407f8">
+<p>무한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대하여 다음은 동치이다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\beta (\subset \mathbf{V})\)</span> 가 기저이다. </p>
+</li>
+<li>
+<p>영이 아닌 벡터 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(v = c_1u_1 + c_2u_2 + \dots + c_nu_n\)</span> 을 만족하는 벡터 <span class="arithmatex">\(u_1, u_2, \dots, u_n \in \beta\)</span> 와 영이 아닌 스칼라 <span class="arithmatex">\(c_1, c_2, \dots, c_n\)</span> 이 유일하게 존재한다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 <a href="#8a514fc5c">정리 1.8</a> 을 무한차원으로 일반화한 것이다.</p>
+</li>
+<li>
+<p>증명 </p>
+</li>
+</ul>
+<a href="#f96f90d25"><div class="admonition def" id="f96f90d25">
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분집합 <span class="arithmatex">\(S_1, S_2\)</span> 에 대하여 <span class="arithmatex">\(S_1 \subset S_2\)</span> 이고, <span class="arithmatex">\(S_1\)</span> 이 일차독립이고, <span class="arithmatex">\(\text{span}(S_2) = \mathbf{V}\)</span> 이면 <span class="arithmatex">\(S_1 \subset \beta \subset S_2\)</span> 인 기저 <span class="arithmatex">\(\beta\)</span> 가 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 <a href="#2d3716e93">정리 1.9</a> 를 무한차원으로 일반화한 것이다.</p>
+</li>
+<li>
+<p>증명</p>
+</li>
+</ul>
+<a href="#d37641ea0"><div class="admonition def" id="d37641ea0">
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저 <span class="arithmatex">\(\beta\)</span> 와 <span class="arithmatex">\(\mathbf{V}\)</span> 의 일차독립인 부분집합 <span class="arithmatex">\(S\)</span> 에 대하여 <span class="arithmatex">\(S \cup S_1\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저인 <span class="arithmatex">\(S_1 \subset \beta\)</span> 이 존재한다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 <a href="#6cf7acf90">대체정리</a> 을 무한차원으로 일반화한 것이다. </p>
+</li>
+<li>
+<p>증명</p>
+</li>
+</ul>
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">¶</a></h2>
+<a href="#148b58d55"><div class="admonition def" id="148b58d55">
+<p class="admonition-title">문제 1.4-14</p>
+<p><span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분집합 <span class="arithmatex">\(S_1, S_2\)</span> 에 대하여 <span class="arithmatex">\(\text{span} (S_1 \cup S_2) = \text{span} (S_1) + \text{span} (S_2)\)</span> 이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p>Let:</p>
+<div class="arithmatex">\[ S_1 = \{x_1, x_2, \dots, x_s\}, S_2 = \{x _{s+1}, x _{s+2}, \dots, x _{t}\} \]</div>
+<p>By definition of span:</p>
+<div class="arithmatex">\[ \text{span} (S_1) = \bigg \{\sum_{i=1}^{s}b_ix_i : x_i \in S_1, b_i \in \mathbf{F} \bigg \} \]</div>
+<div class="arithmatex">\[ \text{span} (S_2) = \bigg \{\sum_{i=s+1}^{s + t}b_ix_i : x_i \in S_2, b_i \in \mathbf{F} \bigg \} \]</div>
+<p>By definition of sum:</p>
+<div class="arithmatex">\[ \begin{equation}\begin{split}
+\text{span} (S_1) + \text{span} (S_2) &amp;= \bigg \{v + w : v \in \text{span} (S_1) , w \in \text{span} (S_2) \bigg \}\\
+&amp;= \bigg \{\sum_{i=1}^{t}b_ix_i : x_i \in S_1 \cup S_2, b_i \in \mathbf{F} \bigg \}\\
+\end{split}\end{equation} \tag{1}
+\]</div>
+<div class="arithmatex">\[ \bigg (\because v = \sum_{i=1}^{s}b_ix_i , w = \sum_{i=s+1}^{s + t}b_ix_i \implies v + w = \sum_{i=1}^{t}b_ix_i \bigg ) \]</div>
+<p>By definition of union:</p>
+<div class="arithmatex">\[ S_1 \cup S_2 = \{x_1, x_2, \dots, x _{t}\} \]</div>
+<p>By definition of span:</p>
+<div class="arithmatex">\[ \text{span} (S_1 \cup S_2) = \bigg \{\sum_{i=1}^{t}a_ix_i : x_i \in S_1 \cup S_2, a_i \in \mathbf{F} \bigg \} \tag{2} \]</div>
+<p>By <span class="arithmatex">\((1), (2)\)</span>:</p>
+<div class="arithmatex">\[ \therefore \text{span} (S_1) + \text{span} (S_2) = \text{span} (S_1 \cup S_2) \tag*{■} \]</div>
+</li>
+</ul>
+<hr/>
+<dl>
+<dt>ref:</dt>
+<dd>
+<p>Stephen H. Friedberg, Linear Algebra, 5<sup>th</sup> Edition</p>
+</dd>
+</dl>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<!-- 
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer> -->
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
+<script src="../../../javascripts/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+<script src="../../../javascripts/b27b3e6448.js"></script>
+</body>
+</html>

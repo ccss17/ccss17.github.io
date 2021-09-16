@@ -1,0 +1,2499 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/ProgrammerBase/git/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<title>Git - ccss17</title>
+<link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#day2">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Git
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      ccss17
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Math/MathHistory/">
+        Math
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../paper/1404.6388/">
+        Paper
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Computer/nand2tetris/">
+        Computer
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../">
+        ProgrammerBase
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../security-tutorial/">
+        security tutorial
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        ccss17
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Set Theory
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Set Theory
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/ArithmeticOperations/">
+        Arithmetic Operations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Polynomials/">
+        Polynomials
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/MatrixOperation/">
+        Matrix Operation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/Determinants/">
+        Determinants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/Diagonalization/">
+        Diagonalization
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/InnerProductSpaces/">
+        Inner Product Spaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/CanonicalForms/">
+        Canonical Forms
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Why the future doesn't need us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust Memo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Git
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day2">
+     ☀️ ️여기서부터 Day2   ☀️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git">
+    Git
+  </a>
+<nav aria-label="Git" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git_1">
+    Git 설치
+  </a>
+<nav aria-label="Git 설치" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#windows">
+    Windows 설치
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#macos">
+    MacOS 설치
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git_2">
+    우분투 도커 컨테이너에서 git 초기 설정
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git_3">
+    git 이 파일을 관리하는 상태
+  </a>
+<nav aria-label="git 이 파일을 관리하는 상태" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-untracked">
+    git 레포지토리 생성하기 (untracked 상태)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#untracked-staged">
+    파일 생성하고 스테이징하기 (untracked 상태 → staged 상태)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#staged-committed">
+    커밋해서 하나의 버전으로 만들기 (staged 상태 → committed 상태)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modified-staged-committed">
+    변경된 파일 커밋하기 (modified 상태 → staged 상태 → committed 상태)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    커밋 기록 보기
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github">
+    Github
+  </a>
+<nav aria-label="Github" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github_1">
+    Github 가입
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github_2">
+    Github 레포지토리 생성
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git_4">
+    git 에서 레포지토리 공유
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    원격 레포지토리 가져오고 수정하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    수정된 원격 레포지토리로부터 업데이트하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day2_1">
+     🌜 ️여기까지 Day2     🌜️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4">
+     ☀️ ️여기서부터 Day4   ☀️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git_5">
+    더 빨라진 git
+  </a>
+<nav aria-label="더 빨라진 git" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4_1">
+     🌜 ️여기까지 Day4     🌜️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day5">
+     ☀️ ️여기서부터 Day5   ☀️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-github">
+    Git 과 Github 못다한 이야기
+  </a>
+<nav aria-label="Git 과 Github 못다한 이야기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gitignore">
+    .gitignore
+  </a>
+<nav aria-label=".gitignore" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gitignore_1">
+    .gitignore 의 편리한 기능
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-branching">
+    Git Branching
+  </a>
+<nav aria-label="Git Branching" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    브랜치란?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    브랜치 생성
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    브랜치 이주
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-fast-forward">
+    브랜치 병합 시나리오 (1) - Fast-forward
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-merge-conflict">
+    브랜치 병합 시나리오 (2) - Merge Conflict
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    브랜치 삭제
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usergithubio">
+    user.github.io
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gist">
+    gist
+  </a>
+<nav aria-label="gist" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gist_1">
+    gist 사용법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gist_2">
+    gist 명령어
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pull-request">
+    Pull Request
+  </a>
+<nav aria-label="Pull Request" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-fork-clone">
+    1. fork 하고 clone 하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-push">
+    2. 편집하고 push 하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-pull-request">
+    3. pull request 하기
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-difference">
+    Git Difference
+  </a>
+<nav aria-label="Git Difference" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-show">
+    git show
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-diff">
+    git diff
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-stash">
+    Git Stash
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-reset">
+    Git Reset
+  </a>
+<nav aria-label="Git Reset" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-three-trees">
+    The Three Trees
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-workflow">
+    The Workflow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-role-of-reset">
+    The Role of Reset
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#soft-reset-manipulating-head">
+    soft reset (manipulating HEAD)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mixed-reset-manipulating-head-index">
+    mixed reset (manipulating HEAD, Index)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hard-reset-manipulating-head-index-working-directory">
+    hard reset (manipulating HEAD, Index, Working Directory)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reset-with-a-path">
+    Reset With a Path
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day5_1">
+     🌜 ️여기까지 Day5     🌜️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day2">
+     ☀️ ️여기서부터 Day2   ☀️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git">
+    Git
+  </a>
+<nav aria-label="Git" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git_1">
+    Git 설치
+  </a>
+<nav aria-label="Git 설치" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#windows">
+    Windows 설치
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#macos">
+    MacOS 설치
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git_2">
+    우분투 도커 컨테이너에서 git 초기 설정
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git_3">
+    git 이 파일을 관리하는 상태
+  </a>
+<nav aria-label="git 이 파일을 관리하는 상태" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-untracked">
+    git 레포지토리 생성하기 (untracked 상태)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#untracked-staged">
+    파일 생성하고 스테이징하기 (untracked 상태 → staged 상태)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#staged-committed">
+    커밋해서 하나의 버전으로 만들기 (staged 상태 → committed 상태)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modified-staged-committed">
+    변경된 파일 커밋하기 (modified 상태 → staged 상태 → committed 상태)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    커밋 기록 보기
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github">
+    Github
+  </a>
+<nav aria-label="Github" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github_1">
+    Github 가입
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#github_2">
+    Github 레포지토리 생성
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git_4">
+    git 에서 레포지토리 공유
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    원격 레포지토리 가져오고 수정하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    수정된 원격 레포지토리로부터 업데이트하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day2_1">
+     🌜 ️여기까지 Day2     🌜️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4">
+     ☀️ ️여기서부터 Day4   ☀️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git_5">
+    더 빨라진 git
+  </a>
+<nav aria-label="더 빨라진 git" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4_1">
+     🌜 ️여기까지 Day4     🌜️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day5">
+     ☀️ ️여기서부터 Day5   ☀️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-github">
+    Git 과 Github 못다한 이야기
+  </a>
+<nav aria-label="Git 과 Github 못다한 이야기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gitignore">
+    .gitignore
+  </a>
+<nav aria-label=".gitignore" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gitignore_1">
+    .gitignore 의 편리한 기능
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-branching">
+    Git Branching
+  </a>
+<nav aria-label="Git Branching" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    브랜치란?
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    브랜치 생성
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    브랜치 이주
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-fast-forward">
+    브랜치 병합 시나리오 (1) - Fast-forward
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-merge-conflict">
+    브랜치 병합 시나리오 (2) - Merge Conflict
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    브랜치 삭제
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#usergithubio">
+    user.github.io
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gist">
+    gist
+  </a>
+<nav aria-label="gist" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gist_1">
+    gist 사용법
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gist_2">
+    gist 명령어
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#pull-request">
+    Pull Request
+  </a>
+<nav aria-label="Pull Request" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-fork-clone">
+    1. fork 하고 clone 하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-push">
+    2. 편집하고 push 하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-pull-request">
+    3. pull request 하기
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-difference">
+    Git Difference
+  </a>
+<nav aria-label="Git Difference" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-show">
+    git show
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-diff">
+    git diff
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-stash">
+    Git Stash
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-reset">
+    Git Reset
+  </a>
+<nav aria-label="Git Reset" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-three-trees">
+    The Three Trees
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-workflow">
+    The Workflow
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-role-of-reset">
+    The Role of Reset
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#soft-reset-manipulating-head">
+    soft reset (manipulating HEAD)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mixed-reset-manipulating-head-index">
+    mixed reset (manipulating HEAD, Index)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hard-reset-manipulating-head-index-working-directory">
+    hard reset (manipulating HEAD, Index, Working Directory)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#reset-with-a-path">
+    Reset With a Path
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day5_1">
+     🌜 ️여기까지 Day5     🌜️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Git</h1>
+<h3 id="day2"><strong><div align="center"> ☀️ ️여기서부터 Day2   ☀️ </div></strong><a class="headerlink" href="#day2" title="Permanent link">¶</a></h3>
+<h2 id="git">Git<a class="headerlink" href="#git" title="Permanent link">¶</a></h2>
+<p>코딩을 막 배우기 시작하면 종종 카톡이나 메일에 소스코드를 백업 하곤 합니다. 하지만 이 방식에는 몇 가지 단점이 있습니다. 먼저 소스코드의 저장장소가 매우 산발적이고 일관성이 없어서 매번 찾기가 힘듭니다. 그리고 소스코드의 변화과정을 제대로 이해하기 힘듭니다. 만약 백업하는 것도 잊어버리고 백업을 하지 않았다가 실수로 소스코드를 삭제해버린다면 복구할 수 있는 방법이 전혀 없습니다.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>이런 문제는 규모가 큰 단체 프로젝트에서 더 심각해집니다. 누가 무엇을 고쳤는지, 소스코드 저장소가 어디에 있는지, 만약 누가 실수로 소스코드를 지워버렸을 때 복구를 할 수 없을 때 기업은 실질적인 금전적인 피해를 받게 됩니다. </p>
+</div>
+<p>이 문제를 해결하기 위해 나온 것이 <strong>버전 컨트롤 시스템(Version Control System)</strong> 입니다. 줄여서 <strong>VCS</strong> 는 단어 그대로 <strong>"프로젝트의 버전을 손쉽게 다룰 수 있게 해주는 시스템"</strong> 입니다. VCS 에는 여러 종류가 있지만 이제 우리는 그 중에서 가장 많이 사용되는 VCS 인 <code>git</code> 을 간단하게 알아보겠습니다. <code>git</code> 을 익히면 제가 위에서 설명한 문제들이 다 해결되는 것입니다!</p>
+<p><code>git</code> 의 자세한 설명과 의미를 공부하기 위해서는 </p>
+<p><a href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a></p>
+<p><a href="https://git-scm.com/book/ko/v2">https://git-scm.com/book/ko/v2</a></p>
+<p>를 참고해주세요. </p>
+<ul>
+<li>
+<p><mark><strong><code>git</code> : 가장 인기있고 자주 사용되는 VCS 이다.</strong></mark></p>
+<ul>
+<li><code>git</code> 은 파일을 <strong>untracked 상태, modified 상태, staged 상태, committed 상태</strong> 로 관리한다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="git_1">Git 설치<a class="headerlink" href="#git_1" title="Permanent link">¶</a></h3>
+<p><del>만약  컴퓨터 운영체제로 <strong>Linux</strong> 를 사용하는 분이 있다면 당신은 전세계 컴퓨터 사용자 중 <strong><code>1.63%</code></strong> 의 사용자이기 때문에 스스로 <code>git</code> 를 설치할 수 있다고 믿습니다.</del></p>
+<h4 id="windows">Windows 설치<a class="headerlink" href="#windows" title="Permanent link">¶</a></h4>
+<ol>
+<li>
+<p><a href="https://git-scm.com/download/win">이 링크</a> 에서 <code>git</code> 설치파일을 다운로드 받아서 설치하세요.</p>
+</li>
+<li>
+<p><code>git</code> 을 설치한 후 가장 처음 해야 할 일은 초기 설정입니다. <code>git</code> 이 잘 설치되었다면 <strong>Git Bash</strong> 를 실행한 다음 <code>&lt;NAME&gt;, &lt;EMAIL&gt;</code> 을 본인의 이름과 이메일로 치환하여 다음 명령어를 입력해주세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ git config --global user.name <span class="s2">"&lt;NAME&gt;"</span>
+$ git config --global user.email <span class="s2">"&lt;EMAIL&gt;"</span>
+</code></pre></div>
+</li>
+</ol>
+<h4 id="macos">MacOS 설치<a class="headerlink" href="#macos" title="Permanent link">¶</a></h4>
+<ol>
+<li>
+<p><a href="https://git-scm.com/download/mac">이 링크</a> 에서 <code>git</code> 설치파일을 다운로드 받아서 설치하세요.</p>
+</li>
+<li>
+<p><code>git</code> 을 설치한 후 가장 처음 해야 할 일은 초기 설정입니다. 터미널을 열어서 <code>&lt;NAME&gt;, &lt;EMAIL&gt;</code> 을 본인의 이름과 이메일로 치환하여 다음 명령어를 입력해주세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ git config --global user.name <span class="s2">"&lt;NAME&gt;"</span>
+$ git config --global user.email <span class="s2">"&lt;EMAIL&gt;"</span>
+</code></pre></div>
+</li>
+</ol>
+<h4 id="git_2">우분투 도커 컨테이너에서 git 초기 설정<a class="headerlink" href="#git_2" title="Permanent link">¶</a></h4>
+<p>우분투 도커 컨테이너에서 접속하셔서 마찬가지로 <code>&lt;NAME&gt;, &lt;EMAIL&gt;</code> 을 본인의 이름과 이메일로 치환하여 다음 명령어를 입력해주세요. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>종료된 컨테이너에 다시 접속하는 명령어는 <code>docker ps -a</code> 로 종료된 컨테이너의 아이디를 확인하고 <code>docker start -ai &lt;ID&gt;</code> 를 입력하는 것이었습니다. 그냥 완전히 새로운 컨테이너를 시작하는 명령어는 <code>docker run -it ccss17/ubuntu</code> 였습니다.</p>
+</div>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ git config --global user.name <span class="s2">"&lt;NAME&gt;"</span>
+$ git config --global user.email <span class="s2">"&lt;EMAIL&gt;"</span>
+</code></pre></div>
+<h3 id="git_3">git 이 파일을 관리하는 상태<a class="headerlink" href="#git_3" title="Permanent link">¶</a></h3>
+<p><code>git</code> 은 다음과 같은 상태로 파일들을 관리합니다. 이 상태들의 의미와 원리를 이해하면 <strong><code>git</code> 을 어느정도 이해했다</strong> 고 볼 수 있습니다. </p>
+<ul>
+<li>
+<p><mark><strong>untracked 상태 : <code>git</code> 이 변경사항을 추적하지 않는 파일이다.</strong></mark></p>
+</li>
+<li>
+<p><mark><strong>modified 상태 : 파일을 변경했지만 아직 스테이징되지 않은 상태이다.</strong></mark></p>
+</li>
+<li>
+<p><mark><strong>staged 상태 : 변경된 파일을 커밋이 될 리스트에 포함시킨 상태이다.</strong></mark></p>
+</li>
+<li>
+<p><mark><strong>committed 상태 : <code>git</code> 데이터베이스에 하나의 버전으로 저장된 상태이다.</strong></mark></p>
+</li>
+</ul>
+<p>아직은 이게 뭔 소린지 감이 안오네요. <code>git</code> 을 실제로 실습해보면서 이 상태들이 어떤 건지 알아보겠습니다. 먼저 우분투 컨테이너에 접속한 상태에서 다음 명령어들을 실행하세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ mkdir git-test      <span class="c1"># 디렉토리 생성</span>
+$ <span class="nb">cd</span> git-test
+</code></pre></div>
+<h4 id="git-untracked">git 레포지토리 생성하기 (untracked 상태)<a class="headerlink" href="#git-untracked" title="Permanent link">¶</a></h4>
+<p>그리고 다음 명령어를 실행해보세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ git init
+</code></pre></div>
+<p>이 명령어는 현재 디렉토리를 <code>git</code> 레포지토리로 만들고 <code>git</code> 이 파일의 변경을 추적하게 합니다.</p>
+<ul>
+<li><mark><strong><code>git init</code> : 디렉토리를 <code>git</code> 레포지토리로 만들어 디렉토리 내의 파일을 <code>git</code> 이 추적하게 한다.</strong></mark></li>
+</ul>
+<h4 id="untracked-staged">파일 생성하고 스테이징하기 (untracked 상태 → staged 상태)<a class="headerlink" href="#untracked-staged" title="Permanent link">¶</a></h4>
+<p>이제 프로젝트를 위하여 <code>test.txt</code> 라는 파일을 만들었다고 하고 다음 명령어를 입력하세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ touch test.txt
+$ git status
+...
+Untracked files:
+    test.txt
+...
+</code></pre></div>
+<p><code>git status</code> 로 현재 <code>git</code> 레포지토리의 상태, 즉 디렉토리 내 파일들이 <strong>untracked 상태, modified 상태, staged 상태, committed 상태</strong> 중 어떤 상태인지 알아볼 수 있습니다.</p>
+<ul>
+<li>
+<p><mark><strong><code>git status</code> : <code>git</code> 레포지토리의 상태를 출력한다.</strong></mark></p>
+<ul>
+<li><code>-s</code> 옵션을 붙히면 간단하게 출력한다.</li>
+</ul>
+</li>
+</ul>
+<p>실행 결과가 위와 같은데 금방 만든 <code>test.txt</code> 가 <code>Untracked files</code> 인 걸로 보아 <strong>untracked 상태</strong> 라는 것을 알 수 있습니다. 이 상태에 있는 파일들은 <code>git</code> 이 변경사항을 추적하면서 버전에 포함시키지 않습니다.</p>
+<p><code>git</code> 이 이 파일을 추적하고 버전에 포함시키도록 하기 위해 다음 명령어를 실행해주세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ git add test.txt
+$ git status
+...
+Changes to be committed:
+  ...
+    new file:   test.txt
+</code></pre></div>
+<p>이로써 <code>test.txt</code> 가 <code>Changes to be committed</code>, 즉 <strong>staged 상태</strong> 가 되었습니다. <strong>staged 상태</strong> 는 이렇게 커밋이 되기로 예정된 파일을 의미합니다. 그리고 스테이징한다는 것은 파일을 <strong>staged 상태</strong> 로 만든다는 것이죠.</p>
+<ul>
+<li>
+<p><mark><strong><code>git add &lt;FILE&gt;</code> : <code>&lt;FILE&gt;</code> 을 스테이징한다.</strong></mark></p>
+<ul>
+<li>
+<p>즉, 파일을 커밋 예정 상태(<strong>staged 상태</strong>)로 만든다.</p>
+</li>
+<li>
+<p><code>git add .</code> 로 파일명을 일일이 입력하지 않고 모든 파일을 자동으로 <code>staged</code> 상태로 만들 수 있다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="staged-committed">커밋해서 하나의 버전으로 만들기 (staged 상태 → committed 상태)<a class="headerlink" href="#staged-committed" title="Permanent link">¶</a></h4>
+<p>이제 스테이징된 파일들을 커밋해서 하나의 버전으로 만들기만 하면 됩니다!</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ git commit -m <span class="s2">"my first commit"</span>
+$ git status
+On branch master
+nothing to commit, working tree clean
+</code></pre></div>
+<p>그러면 커밋할 때 당시의 레포지토리의 파일들이 하나의 스냅샷으로 찍혀서 하나의 버전이 되었습니다. </p>
+<ul>
+<li>
+<p><mark><strong><code>git commit</code> : 스테이징된 파일들을 커밋하여 하나의 버전으로 만들어 <code>git</code> 데이터베이스에 저장한다.</strong></mark></p>
+<ul>
+<li><code>git commit -m &lt;MESSAGE&gt;</code> 로 커밋 메시지를 바로 입력할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<p>이렇게 커밋된 스냅샷은 <code>git</code> 데이터베이스에 안전하고 일관되게 보관됩니다. 그래서 언제든지 이 커밋들을 열람할 수 있고 복원도 할 수 있고 그때 당시의 파일들이 어떤 상태였는지도 확인할 수 있습니다.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>다만, 그렇기 때문에 커밋 메시지를 상당히 의미있게 작성하는 것이 중요합니다. 왜냐하면 나중에 커밋들을 살펴볼 때 커밋 메시지에 의존하여 이때 당시의 프로젝트가 어떤 기능이 추가되고 변경되었는지 판단할 수 있기 때문이죠.</p>
+</div>
+<h4 id="modified-staged-committed">변경된 파일 커밋하기 (modified 상태 → staged 상태 → committed 상태)<a class="headerlink" href="#modified-staged-committed" title="Permanent link">¶</a></h4>
+<p>코딩을 하다보면 파일을 변경하지 않을 수 없겠죠? 그렇게 새로운 기능이나 변경사항을 추가하면 또 다시 커밋해서 하나의 버전으로 만들어두세요.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>커밋은 레포지토리에 유의미한 크기의 기능이 추가되었을 때, 또는 레포지토리에 유의미한 변경이 이루어졌을 때 하는 것이 좋지만 처음에는 일단 그냥 "커밋을 많이 하는 것이 좋다" 라는 마인드로 <code>git</code> 을 사용해보세요. 그리고 이후에 배울 <code>Branching</code> 기능도 일부러 자주자주 써서 익숙해져보세요. </p>
+</div>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">echo</span> <span class="s2">"My test memo"</span> &gt; test.txt
+$ cat test.txt
+My <span class="nb">test</span> memo
+$ git add .
+$ git commit -m <span class="s2">"My memo file"</span>
+</code></pre></div>
+<p>위 명령어를 입력함으로써 <code>test.txt</code> 에 데이터를 추가하고 스테이징한 후 커밋하여 또 하나의 버전으로 만들어보세요.</p>
+<h4 id="_1">커밋 기록 보기<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
+<p>프로그램을 개발하면서 무언가 잘못되었을 때, 또는 프로젝트가 어떻게 변경되었는지 이해하고 싶을 때 커밋 기록을 살펴볼 수 있습니다.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ git log
+commit 9a58815ccb87fb516feb22e02a55232cf45da7d5 <span class="o">(</span>HEAD -&gt; master<span class="o">)</span>
+Author: awef &lt;awef@naver.com&gt;
+Date:   Sun May <span class="m">3</span> <span class="m">09</span>:48:23 <span class="m">2020</span> +0000
+
+    My memo file
+</code></pre></div>
+<p>저는 위와 같은 결과가 나오네요. 초기 설정시 입력하였던 이름과 이메일이 커밋 기록에 남기 때문에 누가 변경한 시점부터 프로젝트가 잘못되었는지, 또는 잘되었는지 확인하는 용도로도 사용할 수 있어서 편리합니다.</p>
+<ul>
+<li>
+<p><mark><strong><code>git log</code> : 커밋 기록을 출력한다.</strong></mark></p>
+<ul>
+<li>
+<p><code>git log -2</code> : 최근 커밋 <code>2</code> 개를 보여준다. </p>
+</li>
+<li>
+<p><code>git log -p</code> : 변경 사항도 출력하면서 커밋 기록을 보여준다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="github">Github<a class="headerlink" href="#github" title="Permanent link">¶</a></h2>
+<p>여러분이 지금 보고 있는 웹사이트인 <strong>Github</strong> 는 <code>git</code> 레포지토리를 다른 사람과 공유할 수 있는 플랫폼입니다. 이곳을 통하여 협업을 할 수 있기도 하고 자신이 관심있는 프로그램들이 무엇인지 알려줄 수도 있습니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>최근에는 <strong>Github</strong> 에 있는 그 사람의 레포지토리들을 포트폴리오로 취급하고 능력을 가늠해보기도 한다니까 <strong>Github</strong> 에 레포지토리를 많이 공유하는 것이 좋을 것 같습니다.</p>
+</div>
+<h3 id="github_1">Github 가입<a class="headerlink" href="#github_1" title="Permanent link">¶</a></h3>
+<p><strong>Github</strong> 에 가입되어 있지 않으신 분들은 먼저 <a href="https://github.com/">https://github.com/</a> 에서 가입을 해주세요.</p>
+<h3 id="github_2">Github 레포지토리 생성<a class="headerlink" href="#github_2" title="Permanent link">¶</a></h3>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/80912176-21be5300-8d76-11ea-8098-4ca30a560c4c.PNG"/>
+</div>
+<p>가입한 다음에는 왼쪽 위에서 초록색 <strong>"New"</strong> 버튼을 찾아서 누르면 레포지토리 생성 창으로 넘어갑니다. </p>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/16812446/80912222-706bed00-8d76-11ea-8c25-b90e9bed11a4.PNG"/>
+</div>
+<p>그러고 레포지토리 이름을 그냥 <strong>"git-test"</strong> 라고 하고 테스트용 레포지토리니까 다른 사람들이 못 보게 <strong>"Private"</strong> 에 체크를 하고 아래에 <strong>"Create repository"</strong> 버튼을 눌러 생성을 완료해줍시다.</p>
+<h3 id="git_4">git 에서 레포지토리 공유<a class="headerlink" href="#git_4" title="Permanent link">¶</a></h3>
+<p>이제 좀 전에 우분투 컨테이너에서 만들었던 레포지토리를 여기에 공유해보겠습니다. 먼저 다음 명령어에서 <code>&lt;USER&gt;</code> 를 자신의 아이디로 치환하여 입력함으로써 원격 레포지토리를 추가해주세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ git remote add origin https://github.com/&lt;USER&gt;/git-test
+</code></pre></div>
+<ul>
+<li>
+<p><mark><strong><code>git remote add &lt;NAME&gt; &lt;URL&gt;</code> : <code>&lt;NAME&gt;</code> 이라는 별칭으로 <code>&lt;URL&gt;</code> 의 원격 레포지토리를 등록한다.</strong></mark></p>
+<ul>
+<li>
+<p><code>git remote rm &lt;NAME&gt;</code> 으로 원격 레포지토리를 삭제할 수 있다.</p>
+</li>
+<li>
+<p><code>git remote rename &lt;NAME&gt; &lt;NEW&gt;</code> 으로 원격 레포지토리의 별칭을 수정할 수 있다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>git remote add</code> 가 <code>git add</code> 와 비슷하지만 스테이징하는 게 아니라 다만, 원격 레포지토리 URL 을 등록하는 것일 뿐입니다. <code>git remote add</code> 는 스테이징과 하등 상관없습니다.</p>
+</div>
+<p>그러고 나면 단순히 다음의 <code>git push</code> 명령어를 입력하는 것으로 레포지토리를 공유할 수 있습니다.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ git push -u origin master
+</code></pre></div>
+<ul>
+<li>
+<p><mark><strong><code>git push &lt;NAME&gt; &lt;BRANCH&gt;</code> : <code>&lt;NAME&gt;</code> 의 원격 레포지토리로 변경사항을 업데이트한다.</strong></mark></p>
+<ul>
+<li><code>git push origin master</code> 로도 업데이트 할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<h3 id="_2">원격 레포지토리 가져오고 수정하기<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>이제 다른 컴퓨터에서 원격 레포지토리를 가져와서 작업하거나, 다른 사람의 레포지토리를 가져와서 작업하고 싶은 상황이라고 하겠습니다. 그러면 <code>&lt;USER&gt;</code> 를 자신의 아이디로 치환하여 단순히 다음 명령어를 입력하면 됩니다.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span>        <span class="c1"># 홈 디렉토리로 이동</span>
+$ git clone https://github.com/&lt;USER&gt;/git-test git-test-remote
+$ <span class="nb">cd</span> git-test-remote
+</code></pre></div>
+<p>그러면 홈 디렉토리 밑에 <code>git-test-remote</code> 라는 디렉토리가 생기고 들어가보면 <code>git push</code> 로 공유했던 프로젝트가 그대로 가져와졌다는 것을 알 수 있습니다.</p>
+<ul>
+<li>
+<p><mark><strong><code>git clone &lt;URL&gt; &lt;NAME&gt;</code> : <code>&lt;URL&gt;</code> 의 원격 레포지토리를 가져와서 <code>&lt;NAME&gt;</code> 디렉토리에 복제한다.</strong></mark></p>
+<ul>
+<li>만약 디렉토리 이름 <code>&lt;NAME&gt;</code> 을 생략하고 <code>git clone &lt;URL&gt;</code> 으로 입력하면 원격 레포지토리의 이름으로 디렉토리가 자동 생성된다.</li>
+</ul>
+</li>
+</ul>
+<p>이제 원격 레포지토리가 복제되었으니 작업을 하고 업데이트해보겠습니다. 사실 아까와 다를 것이 없습니다! 다음 명령어를 입력해보세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">echo</span> <span class="s2">"very important message"</span> &gt; test.txt
+$ git add .
+$ git commit -m <span class="s2">"very important file.."</span>
+$ git push origin master
+</code></pre></div>
+<h3 id="_3">수정된 원격 레포지토리로부터 업데이트하기<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>이렇게 원격 레포지토리를 가져와서 수정한 후 다시 업데이트 해보았습니다. 그러면 다시 원래의 레포지토리로 돌아가서 누군가 수정한 것을, 또는 내가 다른 곳에서 수정한 내용을 업데이트해야겠죠? </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span> ~/git-test
+$ cat test.txt
+My <span class="nb">test</span> memo
+$ git pull origin master
+$ cat test.txt
+very important message
+</code></pre></div>
+<p>위 명령어를 입력해보면 <code>test.txt</code> 가 다른 곳에서 수정한 내용으로 업데이트 되었다는 것을 알 수 있습니다.</p>
+<ul>
+<li><mark><strong><code>git pull &lt;REMOTE&gt; &lt;BRANCH&gt;</code> : <code>&lt;REMOTE&gt;</code> 의 원격 레포지토리를 가져온 후 <code>&lt;BRANCH&gt;</code> 에 병합한다.</strong></mark></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>git</code> 은 레포지토리의 변경사항을 평행적으로 관리하기 위하여 여러개의 브랜치 즉, 가지들을 생성합니다. 가령 프로젝트에 새로운 기능을 추가하고 싶은데 그 기능이 프로젝트 전체와 잘 어울리는지 장담할 수가 없으니까 새로운 브랜치를 만들어서 마치 평행세계처럼 완전히 새로운 레포지토리에서 작업하는 것입니다.</p>
+</div>
+<p><code>git init</code> 으로 디렉토리가 <code>git</code> 이 관리하는 레포지토리가 될 때 <code>git</code> 은 자동적으로 현재 브랜치를 <code>master</code> 브랜치로 만들기 때문에, <code>git pull origin master</code> 라고 하면 <strong><code>origin</code> 이라는 원격 레포지토리의 내용을 가져와서 <code>master</code> 브랜치로 병합해라</strong> 는 뜻이 되는 것입니다.</p>
+<p>그래서 방금 말했던 새로운 브랜치에서 시험중이었던 기능이 충분히 검증이 되면 <code>master</code> 브랜치로 병합을 하게 되는 것입니다. </p>
+<h3 id="day2_1"><strong><div align="center"> 🌜 ️여기까지 Day2     🌜️ </div></strong><a class="headerlink" href="#day2_1" title="Permanent link">¶</a></h3>
+<h3 id="day4"><strong><div align="center"> ☀️ ️여기서부터 Day4   ☀️ </div></strong><a class="headerlink" href="#day4" title="Permanent link">¶</a></h3>
+<h2 id="git_5">더 빨라진 git<a class="headerlink" href="#git_5" title="Permanent link">¶</a></h2>
+<p><code>git</code> 은 지원하는 기능이 하도 많다보니 내부적으로 <code>alias</code> 를 지원합니다. 가령 <code>git commit -m</code> 이라는 명령어를 매번 입력하기가 너무 귀찮아서 견딜 수가 없으니까 다음 명령어를 입력하여 <code>alias</code> 를 지정할 수 있습니다. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g config --global alias.cm <span class="s2">"commit -m"</span>
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Speed up!!</p>
+<p><code>zsh</code> 의 <code>alias</code> 에서 <code>alias g=git</code> 으로 <code>git</code> 의 에일리어스 <code>g</code> 를 설정했었기 때문에 <code>git</code> 이 아닌 <code>g</code> 만 입력해도 됩니다. </p>
+</div>
+<p>저의 <code>dotfiles</code> 를 설치하면서 이런 <code>git</code> 의 <code>alias</code> 들이 이미 <code>~/.gitconfig</code> 파일에 많이 설정되었습니다. 이 내용들을 확인하고 싶다면 </p>
+<div class="highlight"><pre><span></span><code>$ bat ~/.gitconfig
+</code></pre></div>
+<p>를 실행해보면 됩니다. </p>
+<div class="admonition danger">
+<p class="admonition-title">Speed up!!</p>
+<p>이제부터 우리는 <code>git commit -m</code> 이 아니라 <code>g cm</code> 만 입력해도 되는 것입니다. 입력 타수 최소화!</p>
+</div>
+<p><code>git</code> 의 <code>alias</code> 가 매우 많이 설정되어 있지만 그중에서 주요한 <code>alias</code> 들은 다음과 같습니다. </p>
+<table>
+<thead>
+<tr>
+<th align="left"><code>alias</code></th>
+<th align="left">원래 명령어</th>
+<th align="left">완성된 명령어</th>
+<th align="left">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>i</code></td>
+<td align="left"><code>init</code></td>
+<td align="left"><code>g i</code></td>
+<td align="left"><code>git</code> 레포지토리 관리를 시작하도록 한다.</td>
+</tr>
+<tr>
+<td align="left"><code>s</code></td>
+<td align="left"><code>status</code></td>
+<td align="left"><code>g s</code></td>
+<td align="left">레포지토리 상태를 본다.</td>
+</tr>
+<tr>
+<td align="left"><code>sb</code></td>
+<td align="left"><code>status -s -b</code></td>
+<td align="left"><code>g sb</code></td>
+<td align="left">레포지토리 상태를 간략하게 본다.</td>
+</tr>
+<tr>
+<td align="left"><code>cm</code></td>
+<td align="left"><code>commit -m</code></td>
+<td align="left"><code>g cm "&lt;MESSAGE&gt;"</code></td>
+<td align="left">커밋을 한다.</td>
+</tr>
+<tr>
+<td align="left"><code>a</code></td>
+<td align="left"><code>add --all</code></td>
+<td align="left"><code>g a</code></td>
+<td align="left">추가되거나 변경된 파일을 스테이징 한다.</td>
+</tr>
+<tr>
+<td align="left"><code>l</code></td>
+<td align="left"><code>log --oneline</code></td>
+<td align="left"><code>g l</code></td>
+<td align="left"><code>git</code> 의 커밋 기록을 한줄씩 출력한다.</td>
+</tr>
+<tr>
+<td align="left"><code>lg</code></td>
+<td align="left"><code>log --oneline --graph --decorate</code></td>
+<td align="left"><code>g lg</code></td>
+<td align="left"><code>git</code> 의 커밋 기록을 그래프로 출력한다.</td>
+</tr>
+<tr>
+<td align="left"><code>rao</code></td>
+<td align="left"><code>remote add origin</code></td>
+<td align="left"><code>g rao &lt;REMOTE&gt;</code></td>
+<td align="left">원격 레포지토리를 추가한다.</td>
+</tr>
+<tr>
+<td align="left"><code>cl</code></td>
+<td align="left"><code>clone</code></td>
+<td align="left"><code>g cl &lt;URL&gt;</code></td>
+<td align="left">원격 레포지토리를 복제해 온다.</td>
+</tr>
+<tr>
+<td align="left"><code>psom</code></td>
+<td align="left"><code>push origin master</code></td>
+<td align="left"><code>g psom</code></td>
+<td align="left">원격 레포지토리로 푸쉬한다.</td>
+</tr>
+<tr>
+<td align="left"><code>plom</code></td>
+<td align="left"><code>pull origin master</code></td>
+<td align="left"><code>g plom</code></td>
+<td align="left">원격 레포지토리를 가져온다.</td>
+</tr>
+<tr>
+<td align="left"><code>b</code></td>
+<td align="left"><code>branch</code></td>
+<td align="left"><code>g b &lt;BRANCH&gt;</code></td>
+<td align="left">브랜치를 생성한다.</td>
+</tr>
+<tr>
+<td align="left"><code>bd</code></td>
+<td align="left"><code>branch -d</code></td>
+<td align="left"><code>g bd &lt;BRANCH&gt;</code></td>
+<td align="left">브랜치를 삭제한다.</td>
+</tr>
+<tr>
+<td align="left"><code>m</code></td>
+<td align="left"><code>merge</code></td>
+<td align="left"><code>g m</code></td>
+<td align="left">작업이 완료된 브랜치를 병합한다.</td>
+</tr>
+<tr>
+<td align="left"><code>o</code></td>
+<td align="left"><code>checkout</code></td>
+<td align="left"><code>g o &lt;BRANCH&gt;</code></td>
+<td align="left">브랜치로 이동한다.</td>
+</tr>
+<tr>
+<td align="left"><code>ob</code></td>
+<td align="left"><code>checkout -b</code></td>
+<td align="left"><code>g ob &lt;BRANCH&gt;</code></td>
+<td align="left">브랜치를 생성함과 동시에 이동한다.</td>
+</tr>
+</tbody>
+</table>
+<p>우리는 <strong>2번째 날</strong> <code>git</code> 을 연습할 때 <code>git-test</code> 디렉토리를 생성하고 그곳에서 여러가지 작업을 했습니다. 그때 입력한 명령어들을 쭉 나열해보면 다음과 같습니다. </p>
+<div class="highlight"><pre><span></span><code>$ mkdir git-test
+$ <span class="nb">cd</span> git-test
+$ git init
+$ touch test.txt
+$ git status
+$ git add test.txt
+$ git status
+$ git commit -m <span class="s2">"my first commit"</span>
+$ git status
+$ <span class="nb">echo</span> <span class="s2">"My test memo"</span> &gt; test.txt
+$ cat test.txt
+My <span class="nb">test</span> memo
+$ git add .
+$ git commit -m <span class="s2">"My memo file"</span>
+$ git log
+$ git remote add origin https://github.com/&lt;USER&gt;/git-test
+$ git push -u origin master
+$ <span class="nb">cd</span>  
+$ git clone https://github.com/&lt;USER&gt;/git-test git-test-remote
+$ <span class="nb">cd</span> git-test-remote
+$ <span class="nb">echo</span> <span class="s2">"very important message"</span> &gt; test.txt
+$ git add .
+$ git commit -m <span class="s2">"very important file.."</span>
+$ git push origin master
+$ <span class="nb">cd</span> ~/git-test
+$ cat test.txt
+$ git pull origin master
+$ cat test.txt
+</code></pre></div>
+<p>이제 새로운 레포지토리 <code>alias-test</code> 를 만들고 위 명령어들을 <code>alias</code> 로 단축해서 다시 입력해보겠습니다. 다음 명령어를 실행해보세요. 하지만 걱정하지마세요. <code>alias</code> 덕분에 생각보다 오래 안걸리니까요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ <span class="nb">cd</span>
+$ mkdir alias-test
+$ <span class="nb">cd</span> alias-test
+$ g i
+$ touch test.txt
+$ g s
+$ g a
+$ g s
+$ g cm <span class="s2">"init"</span>
+$ g s
+$ <span class="nb">echo</span> <span class="s2">"My test memo"</span> &gt; test.txt
+$ bat test.txt
+$ g a
+$ g cm <span class="s2">"memo"</span>
+$ g l
+$ g rao https://github.com/&lt;USER&gt;/alias-test
+$ g psom
+$ <span class="nb">cd</span>  
+$ g cl https://github.com/&lt;USER&gt;/alias-test alias-test-remote
+$ <span class="nb">cd</span> alias-test-remote
+$ <span class="nb">echo</span> <span class="s2">"message"</span> &gt; test.txt
+$ g a
+$ g cm <span class="s2">"important file"</span>
+$ g psom
+$ <span class="nb">cd</span> ~/alias-test
+$ bat test.txt
+$ g plom
+$ bat test.txt
+</code></pre></div>
+<p>이로써 다음과 같이 <code>213</code> 타를 쳐야 했던 것을 <code>79</code> 타만 칠 수 있도록 대폭 절약을 해보았습니다.</p>
+<table>
+<thead>
+<tr>
+<th align="left">원래 명령어</th>
+<th align="left"><code>alias</code> 명령어</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>git init</code></td>
+<td align="left"><code>g i</code></td>
+</tr>
+<tr>
+<td align="left"><code>git status</code></td>
+<td align="left"><code>g s</code></td>
+</tr>
+<tr>
+<td align="left"><code>git add</code></td>
+<td align="left"><code>g a</code></td>
+</tr>
+<tr>
+<td align="left"><code>git status</code></td>
+<td align="left"><code>g s</code></td>
+</tr>
+<tr>
+<td align="left"><code>git commit -m</code></td>
+<td align="left"><code>g cm</code></td>
+</tr>
+<tr>
+<td align="left"><code>git status</code></td>
+<td align="left"><code>g s</code></td>
+</tr>
+<tr>
+<td align="left"><code>git add .</code></td>
+<td align="left"><code>g a</code></td>
+</tr>
+<tr>
+<td align="left"><code>git commit -m</code></td>
+<td align="left"><code>g cm</code></td>
+</tr>
+<tr>
+<td align="left"><code>git log</code></td>
+<td align="left"><code>g l</code></td>
+</tr>
+<tr>
+<td align="left"><code>git remote add</code></td>
+<td align="left"><code>g rao</code></td>
+</tr>
+<tr>
+<td align="left"><code>git push -u origin master</code></td>
+<td align="left"><code>g psom</code></td>
+</tr>
+<tr>
+<td align="left"><code>git clone</code></td>
+<td align="left"><code>g cl</code></td>
+</tr>
+<tr>
+<td align="left"><code>git add .</code></td>
+<td align="left"><code>g a</code></td>
+</tr>
+<tr>
+<td align="left"><code>git commit</code></td>
+<td align="left"><code>g cm</code></td>
+</tr>
+<tr>
+<td align="left"><code>git push origin master</code></td>
+<td align="left"><code>g psom</code></td>
+</tr>
+<tr>
+<td align="left"><code>git pull origin master</code></td>
+<td align="left"><code>g plom</code></td>
+</tr>
+<tr>
+<td align="left"><strong>총합 <code>213</code> 개</strong></td>
+<td align="left"><strong>총합 <code>79</code> 개</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">Speed up!!</p>
+<p>이러한 <code>git</code> 레포지토리 관리 패턴은 코딩을 할 때마다 반복되는데, 이 패턴을 개발자로 살아가면서 적게 잡아서 <strong>10000</strong> 번 반복한다고 한다면, 여러분은 <strong>10000 * 213 = 2백 13만</strong> 번 칠 것을 <strong>10000 * 79 = 79만</strong> 만쳤습니다. </p>
+<p>즉, 똑같은 일을 하는데 <strong>134만</strong> 번의 타자를 안 친것입니다!</p>
+</div>
+<h3 id="day4_1"><strong><div align="center"> 🌜 ️여기까지 Day4     🌜️ </div></strong><a class="headerlink" href="#day4_1" title="Permanent link">¶</a></h3>
+<h3 id="day5"><strong><div align="center"> ☀️ ️여기서부터 Day5   ☀️ </div></strong><a class="headerlink" href="#day5" title="Permanent link">¶</a></h3>
+<h2 id="git-github">Git 과 Github 못다한 이야기<a class="headerlink" href="#git-github" title="Permanent link">¶</a></h2>
+<p>우리는 <strong>Git</strong> 과 <strong>Github</strong> 의 가장 기초적인 부분을 이미 다뤘었는데 여기에서는 <strong>Git</strong> 과 <strong>Github</strong> 에 관하여 아직 하지 못한 이야기를 해보겠습니다. </p>
+<h3 id="gitignore">.gitignore<a class="headerlink" href="#gitignore" title="Permanent link">¶</a></h3>
+<p>프로젝트를 진행하다보면 <strong>Git</strong> 이 추적하지 않았으면 하는 파일이 생깁니다. 가령 <strong>C 언어</strong> 프로그램을 코딩하다보면 컴파일된 바이너리 파일이 생기는데 그런 파일은 레포지토리에 포함시켜서는 안됩니다. 또 프로젝트에 대한 아이디어를 <strong>idea.txt</strong> 라는 파일에 기록해놓았다면 그 파일은 <strong>Git</strong> 이 추적하면서 레포지토리에 포함시키면 안 됩니다.</p>
+<p>이런 파일들의 이름을 <code>.gitignore</code> 파일을 만들어서 기록해두면 <strong>Git</strong> 이 그 파일들을 더 이상 추적하지 않습니다. 즉 블랙리스트입니다.</p>
+<ul>
+<li>
+<p><mark><strong><code>.gitignore</code> : 이 파일에 파일 이름을 넣으면 git 이 변경사항을 더 이상 추적하지 않는다.</strong></mark></p>
+<ul>
+<li>
+<p>가령 <code>idea.txt</code> 파일을 더 이상 추적하고 싶지 않고 싶다고 하겠습니다. 또 <strong>C 언어</strong> 소스가 컴파일된 바이너리 파일들을 <code>bin/</code> 디렉토리에 모아두었다면 이 디렉토리도 <strong>Git</strong> 이 더 이상 추적하면 안됩니다.</p>
+<p>이 경우 레포지토리에 <code>.gitignore</code> 파일을 만들어 다음과 같이 블랙리스트를 작성합니다. </p>
+<div class="highlight"><pre><span></span><code>idea.txt
+bin/
+</code></pre></div>
+<p>이렇게 하면 하위 디렉토리에서 <code>idea.txt</code> 가 생성되어도 <strong>Git</strong> 이 추적하지 않습니다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="gitignore_1">.gitignore 의 편리한 기능<a class="headerlink" href="#gitignore_1" title="Permanent link">¶</a></h4>
+<p>하지만 프로젝트가 조금만 커져도 블랙리스트에 넣고 싶은 파일이 많아져서 <code>.gitignore</code> 에 작성해야할 블랙리스트 파일들이 너무 많아서 귀찮습니다. 그래서 <code>.gitignore</code> 는 특수문자를 통해 다음과 같은 편리한 기능을 제공합니다. </p>
+<table>
+<thead>
+<tr>
+<th align="left">작성 예시</th>
+<th align="left">기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>*.a</code></td>
+<td align="left">모든 <code>.a</code> 파일들을 무시한다.</td>
+</tr>
+<tr>
+<td align="left"><code>!lib.a</code></td>
+<td align="left">모든 <code>.a</code> 파일들을 무시하기로 했으나 <code>lib.a</code> 파일만 예외로 한다.</td>
+</tr>
+<tr>
+<td align="left"><code>/idea.txt</code></td>
+<td align="left">현재 디렉토리의 <code>idea.txt</code> 만 무시한다.</td>
+</tr>
+<tr>
+<td align="left"><code>doc/*.txt</code></td>
+<td align="left"><code>doc/notes.txt</code> 같이 <code>doc/</code> 디렉토리의 모든 <code>.txt</code> 파일을 무시한다.</td>
+</tr>
+<tr>
+<td align="left"><code>doc/**/*.txt</code></td>
+<td align="left"><code>doc/</code> 디렉토리와 모든 하위 디렉토리의 <code>.txt</code> 파일을 무시한다.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-branching">Git Branching<a class="headerlink" href="#git-branching" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>참고/출처 : <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell</a></p>
+</blockquote>
+<p>프로젝트를 진행하면 새로운 기능을 추가할 때 그 기능이 전체 프로젝트와 호환되는지 알 수 없습니다. 개인 프로젝트라면 상관 없지만 함께 하는 프로젝트라면 걱정이 시작됩니다. <strong>Git</strong> 이 없을 때에는 이렇게 했습니다. 프로젝트를 통채로 복사하고 새로운 기능을 추가하고 호환되는지 충분히 검증한 다음에 원래의 레포지토리에 새로운 기능을 옮깁니다.</p>
+<p>하지만 <strong>Git</strong> 은 이러한 과정을 자동화시켜주고 로그 기록으로 남기고 최악의 경우 복원하는 기능까지 제공합니다. 이것이 <strong>Git</strong> 의 <strong>Branching</strong> 기능입니다. 평행세계를 만드는 것입니다. 그리고 원래의 세계에서 평행세계로 넘어가서 그 세계에서 마음껏 실험적인 행동을 자행하는 것이죠. 그 평행세계가 바로 <strong>Branch</strong> 입니다. </p>
+<p><strong>Git</strong> 은 최대한 <strong>Branch</strong> 를 자주만들고 <strong>master</strong> 브랜치로 병합하라고 권장합니다. 저도 <strong>Branch</strong> 를 만들고 <strong>master</strong> 브랜치에 병합하는 <strong>습관</strong> 을 평소에 들이라고 권고하고 싶습니다. 왜냐하면 <strong>Git Branching</strong> 기능으로 여러분의 개발 과정이 매우 매우 안정적으로 바뀔 것이기 때문입니다. </p>
+<h4 id="_4">브랜치란?<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<p>그렇다면 브랜치란 대체 무엇인가요? 브랜치란 포인터입니다. 그러면 그 포인터는 무엇을 포인팅하고 있나요? 바로 커밋들을 포인팅하고 있습니다. <strong>Git</strong> 은 기본 브랜치로 <strong>master</strong> 브랜치를 갖고 있는데 이 <strong>master</strong> 브랜치는 언제나 마지막 커밋을 포인팅하고 있습니다. 실제로 커밋을 할 때마다 <strong>master</strong> 브랜치가 자동으로 마지막 커밋으로 포인팅을 변경해주고 있던 겁니다. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>엄밀히 말하면 <code>HEAD</code> 포인터가 포인팅하고 있는 브랜치는 커밋을 할 때마다 자동으로 마지막 커밋으로 이동하는 것입니다. 아래의 내용을 읽으면 자연히 이해할 수 있을 겁니다. </p>
+</div>
+<h4 id="_5">브랜치 생성<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<p>그러면 이제 말로만 하지말고 직접 몸으로 부딪혀보면서 브랜치를 느껴보겠습니다. 브랜치란 포인터라고 했으므로 브랜치를 생선하는 것은 포인터를 만드는 것입니다. </p>
+<p>다음 명령어로 <strong>Git</strong> 레포지토리를 하나 만들어주세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ mkdir branch-test
+$ <span class="nb">cd</span> branch-test
+$ g i
+$ touch main.c
+$ v main.c
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>여러분의 도커 컨테이너에는 지금까지의 실습이 잘 진행되었다면 최소 3개의 <strong>Git</strong> 레포지토리가 있을 겁니다. </p>
+</div>
+<p>그리고 <code>main.c</code> 에 다음과 같은 코드를 입력하고 저장하고 <code>vim</code> 을 종료하세요. </p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">puts</span><span class="p">(</span><span class="s">"what is branch?"</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>그리고 다음 명령어로 스테이징 후 커밋해주세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g a
+$ g cm <span class="s2">"main.c"</span>
+</code></pre></div>
+<p>이제 실제로 브랜치를 생성해보겠습니다. </p>
+<ul>
+<li>
+<p><mark><strong><code>git branch</code> : 현재 상주하고 있는 브랜치를 출력한다.</strong></mark></p>
+</li>
+<li>
+<p><mark><strong><code>git branch &lt;NAME&gt;</code> : 새로운 브랜치 <code>&lt;NAME&gt;</code> 을 만든다.</strong></mark></p>
+</li>
+</ul>
+<p>다음 명령어를 실행하여 <code>testing</code> 이라는 브랜치를 만드세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g b testing
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>우리는 alias 와 git alias 에서 각각의 단축키를 이미 알아보았습니다. </p>
+</div>
+<p>그러면 다음과 같이 현재 커밋을 두 개의 포인터 <code>master</code> 와 <code>testing</code> 이 포인팅하고 있습니다.</p>
+<div align="center">
+<img height="auto" src="https://git-scm.com/book/en/v2/images/two-branches.png" width="50%"/>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>위 그림은 이전의 커밋이 2개 있다는 것을 보여주지만 실제로 현재 우리의 레포지토리에는 커밋은 하나밖에 없습니다.</p>
+</div>
+<p>아니 그럼 현재 우리가 어떤 브랜치에 상주하고 있는지 대체 어떻게 알 수 있는 것인가요? 그것은 바로 <code>HEAD</code> 라는 특별한 포인터로 알 수 있습니다.</p>
+<ul>
+<li>
+<p><mark><strong><code>HEAD</code> : 현재 상주하고 있는 브랜치를 가르키는 포인터이다.</strong></mark></p>
+<ul>
+<li>
+<p>아니 그럼 또 <code>HEAD</code> 는 어떻게 알 수 있는 것입니까? <strong>zsh</strong> 을 사용하고 있다면 다음과 같이 프롬프트 우측에 <code>HEAD</code> 가 가르키고 있는 브랜치, 즉 현재 상주하고 있는 브랜치를 알 수 있습니다.</p>
+<p><img alt="" src="https://user-images.githubusercontent.com/16812446/82705303-67ee3e80-9cb2-11ea-9a66-096c35c4af92.png"/></p>
+<p>하지만 굳이 현재 상주하고 있는 브랜치를 직접 알아내야 한다면 <code>g b</code> 또는 <code>cat .git/HEAD</code> 를 입력하면 됩니다. <code>git branch</code> 명령이 현재 상주하고 있는 브랜치를 출력하므로 <code>g b</code> 가 <code>HEAD</code> 의 내용을 출력해주는 것입니다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<p>우리는 다음과 같이 아직 <code>master</code> 브랜치에 상주하고 있습니다. </p>
+<div align="center">
+<img height="auto" src="https://git-scm.com/book/en/v2/images/head-to-master.png" width="50%"/>
+</div>
+<h4 id="_6">브랜치 이주<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<p>이제 <code>testing</code> 브랜치로 이주해서 온갖 실험적이고 진취적인 행동을 마음껏 해야겠습니다. 그러려면 <code>testing</code> 브랜치로 이주해야만 합니다. </p>
+<ul>
+<li>
+<p><mark><strong><code>git checkout &lt;NAME&gt;</code> : <code>&lt;NAME&gt;</code> 브랜치로 이주한다.</strong></mark></p>
+</li>
+<li>
+<p><mark><strong><code>git checkout -b &lt;NAME&gt;</code> : <code>&lt;NAME&gt;</code> 브랜치를 생성함과 동시에 이주한다.</strong></mark></p>
+<ul>
+<li>이 형태가 가장 자주 쓰입니다. 즉 <code>g ob &lt;NAME&gt;</code> 이 자주 쓰입니다. </li>
+</ul>
+</li>
+</ul>
+<p>다음 명령을 실행하여 브랜치를 이주하세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g o testing
+</code></pre></div>
+<p>그러면 다음과 같이 <code>HEAD</code> 포인터가 <code>testing</code> 을 가르키게 됩니다.</p>
+<div align="center">
+<img height="auto" src="https://git-scm.com/book/en/v2/images/head-to-testing.png" width="50%"/>
+</div>
+<p>좋습니다! 이제 평행세계로 이동한 것입니다. 마음껏 실험적이고 파괴적인(?) 행동을 할 수 있습니다. <code>main.c</code> 함수의 코드에 매우 실험적이고 새로운 기능을 추가하고 싶다고 하겠습니다. 다음과 같이 코드를 고쳐주세요.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">message</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">puts</span><span class="p">(</span><span class="s">"branch is good"</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">message</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>새로 추가한 함수가 너무 실험적이고 진취적이어서 본래의 레포지토리와 호환되는지 알 수 없을 것만 같습니다. 하지만 이곳은 <code>testing</code> 브랜치니까 아무런 걱정이 안됩니다. 이제 코드를 저장하고 다음 명령을 실행하여 커밋하세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g a 
+$ g cm <span class="s2">"new function"</span>
+</code></pre></div>
+<p>그러면 <code>testing</code> 브랜치는 다음과 같이 마지막 커밋을 포인팅하게 위하여 앞으로 나아갔지만 <code>master</code> 브랜치는 가만히 멈추어 있습니다. </p>
+<div align="center">
+<img height="auto" src="https://git-scm.com/book/en/v2/images/advance-testing.png" width="50%"/>
+</div>
+<p>이제 다음 명령어로 <code>master</code> 브랜치로 되돌아갑니다. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g o master
+</code></pre></div>
+<p>그러면 다음과 같이 <code>HEAD</code> 가 <code>master</code> 로 옮겨갔습니다. </p>
+<div align="center">
+<img height="auto" src="https://git-scm.com/book/en/v2/images/checkout-master.png" width="50%"/>
+</div>
+<p>실제로 다음 명령어로 <code>main.c</code> 파일을 확인해보면 <code>testing</code> 브랜치에서 수정한 파일이 아닌 원래의 파일을 볼 수 있습니다.</p>
+<div class="highlight"><pre><span></span><code>$ bat main.c
+</code></pre></div>
+<h4 id="1-fast-forward">브랜치 병합 시나리오 (1) - Fast-forward<a class="headerlink" href="#1-fast-forward" title="Permanent link">¶</a></h4>
+<p>브랜치 병합은 두 가지 시나리오로 설명하겠습니다. 우선 첫번째 시나리오입니다.</p>
+<p>이제 <code>testing</code> 브랜치에서 작업한 내용이 완전히 검증되었다고 하겠습니다. 그러면 남은 일은 <code>master</code> 브랜치에서 <code>testing</code> 브랜치를 병합하는 것입니다.</p>
+<ul>
+<li><mark><strong><code>git merge &lt;NAME&gt;</code> : <code>&lt;NAME&gt;</code> 브랜치를 현재의 브랜치로 병합한다.</strong></mark></li>
+</ul>
+<p>다음 명령어로 브랜치를 병합해주세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g m testing
+</code></pre></div>
+<p><img alt="powershell_faVuEHeNG7" src="https://user-images.githubusercontent.com/16812446/82707007-22cc0b80-9cb6-11ea-9c25-f82c6d669dad.png"/></p>
+<p>커밋 구조를 보면 <code>master</code> 브랜치가 <code>testing</code> 브랜치 바로 뒤에 있기 때문에 이 경우 <strong>Git</strong> 은 단순히 <code>master</code> 브랜치가 <code>testing</code> 브랜치가 포인팅하고 있는 커밋을 포인팅하게 합니다. 이것을 <strong>Fast-forward</strong> 병합이라고 합니다. </p>
+<h4 id="2-merge-conflict">브랜치 병합 시나리오 (2) - Merge Conflict<a class="headerlink" href="#2-merge-conflict" title="Permanent link">¶</a></h4>
+<p>이제 다시 <code>testing</code> 브랜치에서 <code>master</code> 브랜치로 되돌아온 상황입니다. 이 경우 <code>master</code> 브랜치에서 <code>main.c</code> 를 다음과 같이 고쳤다고 하겠습니다. </p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">puts</span><span class="p">(</span><span class="s">"branch is good"</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>그런 다음 다음 명령어로 스태이징을 하고 커밋을 합니다.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g a  
+$ g cm <span class="s2">"new main"</span>
+</code></pre></div>
+<p>그러면 현재 상황은 다음과 같습니다. </p>
+<div align="center">
+<img height="auto" src="https://git-scm.com/book/en/v2/images/advance-master.png" width="50%"/>
+</div>
+<p><code>master</code> 브랜치도 한 단계 더 나아갔습니다. 이 상황에서 다음의 명령어로 <code>testing</code> 브랜치를 병합합니다. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g m testing
+Auto-merging main.c
+CONFLICT <span class="o">(</span>content<span class="o">)</span>: Merge conflict <span class="k">in</span> main.c
+Recorded preimage <span class="k">for</span> <span class="s1">'main.c'</span>
+Automatic merge failed<span class="p">;</span> fix conflicts and <span class="k">then</span> commit the result.
+</code></pre></div>
+<p>그러면 <code>main.c</code> 에 병합 충돌이 발생했다는 메시지가 발생하면서 자동 병합에 실패하게 됩니다. 이 메시지가 발생하면 정확하게 <code>git status</code> 명령어로 어떤 파일에서 충돌이 발생한 것인지 확인해야 합니다. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g s
+</code></pre></div>
+<p>그러면 다음과 같이 <strong>both modified:</strong> 에 해당하는 파일 목록이 출력되는데 그 목록에는 <code>main.c</code> 가 포함되어 있음을 알 수 있습니다.</p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82708683-d387da00-9cb9-11ea-84a4-35a1a0779b19.png" width="70%"/>
+</div>
+<p>이 경우 <code>main.c</code> 를 열어서 병합 충돌이 발생한 코드를 확인해주어야 합니다. 실제로 <code>main.c</code> 를 열어보면 다음과 같이 되어있습니다. </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82708726-eac6c780-9cb9-11ea-8327-bc41adb9ceba.png" width="70%"/>
+</div>
+<p>병합충돌이 발생하면 <strong>Git</strong> 은 위와 같이 자동으로 충돌 영역을 <code>=======</code> 로 구분해줍니다. 그리고 <code>HEAD</code> 가 가르키는 브랜치(<code>master</code>)의 변경사항과 <code>testing</code> 브랜치의 변경사항을 비교하여 보여줍니다. <code>HEAD</code> 에서 변경된 부분은 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> 에서부터 <code>=======</code> 까지이고 <code>testing</code> 브랜치에서 변경된 부분은 <code>=======</code> 부터 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; testing</code> 까지입니다. 정말 편하죠? </p>
+<p>여러분은 두 변경사항 중 하나를 택하거나 둘 다 택하여 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> 와 <code>=======</code> 그리고 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> 를 없애주어야 합니다. 여기에서는 <code>main.c</code> 를 다음과 같이 고쳐주겠습니다. </p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">message</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">puts</span><span class="p">(</span><span class="s">"branch is good."</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
+<span class="w">  </span><span class="n">message</span><span class="p">();</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>그런 다음 다음 명령어로 다시 커밋해주면 병합이 최종적으로 완성됩니다. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g a
+$ g cm <span class="s2">"merge testing"</span>
+</code></pre></div>
+<h4 id="_7">브랜치 삭제<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
+<p>이제 마지막으로 병합이 완료된 <code>testing</code> 브랜치를 삭제하는 일만 남았습니다. </p>
+<ul>
+<li>
+<p><mark><strong><code>git branch -d &lt;NAME&gt;</code> : 병합이 완료된 <code>&lt;NAME&gt;</code> 브랜치를 삭제한다.</strong></mark></p>
+</li>
+<li>
+<p><mark><strong><code>git branch -D &lt;NAME&gt;</code> : 병합이 완료되지 않은 <code>&lt;NAME&gt;</code> 브랜치를 삭제한다.</strong></mark></p>
+</li>
+</ul>
+<p>다음 명령어로 <code>testing</code> 브랜치를 삭제하세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g bd testing
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>지금까지 <strong>Git Branching</strong> 을 매우 간단하게 알아보았는데, 나중에 <a href="https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell">https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell</a> 을 통하여 <strong>Git Branching</strong> 의 더욱 강력한 기능을 추가 학습하시길 강력하게 추천합니다.</p>
+<p><strong>VSCode</strong> 에서는 왼쪽 하단부의 <strong>Branch</strong> 를 클릭하거나 명령 팔레트에서 <strong>branch</strong> 를 검색하는 것으로 매우 쉽게 <strong>Branch</strong> 를 생성하거나 이주할 수 있습니다.</p>
+</div>
+<h3 id="usergithubio">user.github.io<a class="headerlink" href="#usergithubio" title="Permanent link">¶</a></h3>
+<p>user.github.io 은 <strong>Github</strong> 이 제공하는 개인 블로그 플랫폼입니다. 저의 <strong>Github</strong> 아이디는 <code>ccss17</code> 인데 이 아이디로 user 를 치환하여 <a href="https://ccss17.github.io">https://ccss17.github.io</a> 에 접속해보면 제가 관리하고 있는 블로그가 보입니다. 이 블로그는 <a href="https://github.com/ccss17/ccss17.github.io">https://github.com/ccss17/ccss17.github.io</a> 의 <code>index.html</code> 파일과 각각의 <code>*.html</code> 파일들이 랜더링 된 것입니다. </p>
+<p>이처럼 <strong>Github</strong> 에 아이디만 있다면 자신의 아이디로 user.github.io 라는 이름을 가진 레포지토리를 생성하고 그곳에 <code>index.html</code> 과 메모하거나 게시하고 싶은 정보를 <code>.html</code> 파일로 만들어 레포지토리를 <strong>commit</strong> 하고 <strong>Github</strong> 에 <strong>push</strong> 하면 자동으로 user.github.io 에 게시가 시작됩니다. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a href="https://jekyllrb.com/"><strong>jekyll</strong></a> 을 사용하면 <code>.md</code> 파일만으로도 웹페이지를 생성할 수 있어 매우 편합니다. </p>
+</div>
+<p>개인 블로그에 자신이 공부한 내용이나 알아낸 사실을 게시하면 그것이 모두 다 포트폴리오가 되고 스펙이 되서 자신의 가치를 높이는 일이 됩니다. 그러나 이 블로그 플랫폼을 사용하고 싶지 않은 분들도 있음을 감안해서 더 이상의 상세한 설명과 실습은 하지 않고 유명한 <code>*.github.io</code> 사이트들과 <strong>Github</strong> 의 공식 메뉴얼과 저의 <a href="https://ccss17.github.io">https://ccss17.github.io</a> 를 가볍게 보여드리는 것으로 마무리 하겠습니다. </p>
+<ul>
+<li>
+<p><strong>Github</strong> 페이지 공식 메뉴얼 : <a href="https://pages.github.com/">https://pages.github.com/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/sindresorhus">sindresorhus</a> 의 <a href="https://sindresorhus.com/">블로그</a> : <a href="https://github.com/sindresorhus/sindresorhus.github.com">https://github.com/sindresorhus/sindresorhus.github.com</a></p>
+</li>
+<li>
+<p><a href="https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html">도커 가이드</a> : <a href="https://github.com/subicura/subicura.github.io">https://github.com/subicura/subicura.github.io</a> </p>
+</li>
+</ul>
+<h3 id="gist">gist<a class="headerlink" href="#gist" title="Permanent link">¶</a></h3>
+<p><a href="https://gist.github.com/">gist</a> 는 짤막한 파일을 빠르게 공유할 때 사용되는 <strong>Github</strong> 의 레포지토리 관리 플랫폼입니다. </p>
+<p>실제로 저는 강의평가 설문조사 때 그 수많은 강의에 대한 평가가 약간 귀찮아서 다음과 같은 자동으로 최고 평점을 매길 수 있는 <strong>Javascript</strong> 코드를 짰었습니다. </p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">v</span> <span class="k">of</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'input'</span><span class="p">)){</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'name'</span><span class="p">).</span><span class="nx">includes</span><span class="p">(</span><span class="s1">'ans'</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
+     <span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'value'</span><span class="p">)</span> <span class="o">==</span> <span class="mf">5</span> <span class="o">||</span> 
+     <span class="nx">v</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'value'</span><span class="p">)</span> <span class="o">==</span> <span class="mf">10</span> <span class="o">||</span> 
+     <span class="nx">v</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'value'</span><span class="p">)</span> <span class="o">==</span> <span class="mf">15</span><span class="p">))</span>
+    <span class="nx">v</span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>하지만 이 코드 또한 카톡이나 메일로 관리할 수는 없으니 <strong>Git</strong> 같은 VCS 를 사용해야 할텐데, 레포지토리로 관리하자니 이렇게 짧은 코드를 그렇게까지 관리해야 한다는 것이 억울했습니다. 그래서 <a href="https://gist.github.com/ccss17/ff6944df7e8f3c9ab518629915857d85">gist 로 관리하는 레포지토리</a>를 하나 만들었습니다.</p>
+<h4 id="gist_1">gist 사용법<a class="headerlink" href="#gist_1" title="Permanent link">¶</a></h4>
+<p><a href="https://gist.github.com/">gist</a> 사용법은 매우 간단합니다. <a href="https://gist.github.com/">https://gist.github.com/</a> 에 들어가면 다짜고짜 제목과 파일이름 내용을 입력하는 텍스트 필드가 나오는데 이 3가지 텍스트 필드를 입력하고 <kbd>Create secret gist</kbd> 또는 <kbd>Create public gist</kbd> 버튼을 누르면 그게 다입니다. 그러면 <strong>gist</strong> 가 생성되는데 URL 을 다음과 같이 어디에서든 <strong>clone</strong> 할 수 있습니다. </p>
+<div class="highlight"><pre><span></span><code>$ g cl https://gist.github.com/ccss17/ff6944df7e8f3c9ab518629915857d85
+</code></pre></div>
+<p>이 <strong>gist</strong> 또한 <strong>staging</strong>, <strong>commit</strong>, <strong>push</strong> 등등이 모두 다 가능한 <strong>Git</strong> 레포지토리와 똑같이 다룰 수 있습니다.</p>
+<h4 id="gist_2">gist 명령어<a class="headerlink" href="#gist_2" title="Permanent link">¶</a></h4>
+<p><strong>gist</strong> 를 매우 쉽게 사용할 수 있게 해주는 <a href="https://github.com/defunkt/gist"><code>gist</code></a> 명령어가 있습니다. 이 명령어를 사용하는 방법은 매우 간단합니다. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>여러분의 도커 컨테이너에는 이미 설치되어 있으니 설치할 필요가 없습니다. 설치법은 공식 레포지토리 <a href="https://github.com/defunkt/gist">https://github.com/defunkt/gist</a> 를 참고하세요.</p>
+</div>
+<ol>
+<li>
+<p><code>gist --login</code> 으로 <strong>Github</strong> 아이디와 비밀번호를 입력하여 인증과정을 거친다. 이 과정은 단 한 번만 거치면 된다. </p>
+</li>
+<li>
+<p><code>gist &lt;FILE&gt;</code> 로 <strong>gist</strong> 에 업로드하고 싶은 파일을 업로드한다. </p>
+<ul>
+<li><code>test.py</code> 를 <strong>gist</strong> 에 공유하고 싶다면 <code>gist test.py</code> 를 입력하면 끝이다.</li>
+</ul>
+</li>
+</ol>
+<h3 id="pull-request">Pull Request<a class="headerlink" href="#pull-request" title="Permanent link">¶</a></h3>
+<p><strong>Github</strong> 협업하기의 기본인 <strong>Pull Request</strong> 는 말 그대로 <strong>pull</strong> 해주기를 요청하는 것입니다. 주로 같이 프로젝트를 하는 사람끼리 <strong>Pull Rquest</strong> 를 하지만, <strong>Github</strong> 에서 오픈소스를 많이 찾아다니면서 마음이 드는 오픈소스를 사용하다가 그것을 발전시키고 싶다면 그 레포지토리를 좀 더 낫게 고친 다음 원작자에게 <strong>Pull Request</strong> 를 할 수도 있습니다. 이러한 오픈소스 활동은 전세계에서 수없이 많이 이루어지고 있습니다. 여러분도 이 오픈소스 활동에 참여하여 여러분만의 창의성을 발휘해서 프로그램을 발전시킨 다음 <strong>Pull Request</strong> 를 꾸준히 한다면 여러분의 실력과 명성도 꾸준히 쌓여나갈 것입니다. </p>
+<p><strong>그렇다면 오픈소스를 어떻게 찾는 것일까요? 질문을 좀 더 일반적으로 바꾸어서 최신 정보와 좋은 정보를 어디에서 찾을 수 있는 것일까요. 그리고 이런 오픈소스 프로젝트에 실질적으로 참여하게 해주는 Pull Request 라는 것은 어떻게 하는 것일까요?</strong></p>
+<p>먼저 후자의 질문에 대한 대답을 배워보겠습니다. <strong>Pull Requests</strong> 의 과정은 다음과 같습니다.</p>
+<ol>
+<li>
+<p><strong>fork</strong> 하고 <strong>clone</strong> 하기</p>
+</li>
+<li>
+<p><strong>편집</strong> 하고 <strong>push</strong> 하기</p>
+</li>
+<li>
+<p><strong>pull request</strong> 하기</p>
+</li>
+</ol>
+<p>이제 이 과정을 제가 <strong>Pull Request</strong> 를 마음껏 연습할 수 있도록 만든 레포지토리 <a href="https://github.com/ccss17/pull-request-me">https://github.com/ccss17/pull-request-me</a> 에서 실습해보겠습니다. </p>
+<h4 id="1-fork-clone">1. fork 하고 clone 하기<a class="headerlink" href="#1-fork-clone" title="Permanent link">¶</a></h4>
+<p>그러면 <a href="https://github.com/ccss17/pull-request-me">https://github.com/ccss17/pull-request-me</a> 에 들어가서 오른쪽 상단부를 보세요. 그러면 다음과 같이 <kbd>Fork</kbd> 버튼이 보입니다. </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82676804-eda5c600-9c81-11ea-8089-0668f53c5072.png" width="70%"/>
+</div>
+<p>이 버튼을 시원하게 눌러주세요. 그러면 다음과 같이 </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82677048-5ee57900-9c82-11ea-99f5-3567455581bc.png" width="70%"/>
+</div>
+<p>레포지토리가 자신의 소유의 레포지토리로 복제됩니다. 여기에서는 <strong>hgu-student</strong> 라는 아이디를 갖고 있는 학생이 레포지토리를 <strong>fork</strong> 해왔습니다. <strong>fork</strong> 된 레포지토리의 <strong>URL</strong> 도 원래의 <strong>URL</strong> 인 <a href="https://github.com/ccss17/pull-request-me">https://github.com/ccss17/pull-request-me</a> 에서 <a href="https://github.com/hgu-student/pull-request-me">https://github.com/hgu-student/pull-request-me</a> 로 바뀌었습니다. 이제 이것을 로컬 컴퓨터로 <strong>clone</strong> 합니다. 지금까지 배웠던 <strong>Git</strong> 의 명령어를 다음과 같이 사용하면 됩니다. <strong>hgu-student</strong> 라는 <strong>Github</strong> 아이디를 갖고 있는 학생이라면 다음과 같은 명령어를 입력하면 됩니다.</p>
+<div class="highlight"><pre><span></span><code>$ g cl https://github.com/hgu-student/pull-request-me
+</code></pre></div>
+<p>이제 각자 <strong>fork</strong> 한 자신의 레포지토리를 다음 명령어를 입력해서 <strong>clone</strong> 해주세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g cl https://github.com/&lt;USER&gt;/pull-request-me
+</code></pre></div>
+<p>도커 컨테이너에서 해도 되고 로컬 컴퓨터에서 <strong>VSCode</strong> 로 해도 됩니다.</p>
+<h4 id="2-push">2. 편집하고 push 하기<a class="headerlink" href="#2-push" title="Permanent link">¶</a></h4>
+<p>레포지토리를 <strong>clone</strong> 해보면 <code>readme.md</code> 와 <code>main.c</code> 파일이 보입니다. 여기에서는 여러분이 <code>main.c</code> 를 살펴보다가 코드 포맷이 상당히 마음에 들지 않았다고 가정하겠습니다. 실제로 다음과 같이 <code>main.c</code> 를 여러보니 코드 포맷이 엉망입니다. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>그리고 심지어 함수의 인자를 빈 괄호 <code>()</code> 로 두는 것은 <a href="https://stackoverflow.com/questions/3156423/why-dont-we-use-void-in-main">안정성의 이유 때문에 권고되지 않습니다</a>. </p>
+</div>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82677543-25613d80-9c83-11ea-9123-4bc9d8a8407e.png" width="70%"/>
+</div>
+<p>그래서 여러분은 이 코드를 다음과 같이 고치려고 마음먹었습니다. </p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"main :)</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><code>vim</code> 으로 고치든 <strong>VSCode</strong> 로 고치든 그것은 알아서 선택해주세요. </p>
+</div>
+<p>그런 다음 다음과 같이 지금까지 배웠던 <strong>Git</strong> 명령으로 <strong>staging</strong>, <strong>commit</strong>, <strong>push</strong> 를 합니다.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g a 
+$ g cm <span class="s2">"메인 함수를 고침!"</span>
+$ g psom
+</code></pre></div>
+<h4 id="3-pull-request">3. <strong>pull request</strong> 하기<a class="headerlink" href="#3-pull-request" title="Permanent link">¶</a></h4>
+<p>그런데 여러분의 레포지토리가 업데이트 되었을 뿐 원작자의 레포지토리가 업데이트 된 것은 아닙니다. 그래서 원작자에게 어서 빨리 내 레포지토리를 <strong>pull</strong> 해주세요 라고 말하기 위하여 <strong>Pull Request</strong> 를 합니다. 다음 사진과 같이 자신의 레포지토리의 왼쪽 상당부를 보면 <kbd>Pull requests</kbd> 탭이 있습니다. 이 탭을 눌러 <strong>Pull Request</strong> 페이지로 들어갑니다. </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82678481-a5d46e00-9c84-11ea-8724-2104619a9622.png" width="70%"/>
+</div>
+<p><strong>Pull Request</strong> 페이지의 오른쪽 상단부에는 다음과 같이 <kbd>New</kbd> 버튼이 있습니다. 이 버튼을 눌러 드디어 원작자에게 보낼 <strong>Pull Request</strong> 를 생성해줍니다. </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82678642-e9c77300-9c84-11ea-8e97-9c32244d222a.png" width="70%"/>
+</div>
+<p>그러면 마지막으로 내가 편집한 레포지토리와 원작자의 레포지토리를 비교할 수 있고 어떤 브랜치로 <strong>Pull Request</strong> 를 할 것인지 선택하는 페이지가 보입니다. 지금은 그냥 왼쪽에 보이는 <kbd>Create pull request</kbd> 버튼을 눌러줍시다. </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82678798-2f843b80-9c85-11ea-8fa8-91aa00201baa.png" width="70%"/>
+</div>
+<p>그러면 <strong>Pull Request</strong> 의 제목과 설명을 할 수 있는 텍스트 필드가 나타나는데, 지금은 역시 그냥 텍스트 필드 우측 하단에 있는 <kbd>Create pull request</kbd> 버튼을 한번 더 눌러주세요. </p>
+<p>그러면 이제 정말 <strong>Pull Request</strong> 가 완료되었습니다. 이제 원작자가 여러분이 멋지게 고친 레포지토리를 비교하고 괜찮다고 판단하여 <strong>pull</strong> 을 하기만을 기다리면 됩니다. </p>
+<h2 id="git-difference">Git Difference<a class="headerlink" href="#git-difference" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>참고/출처 : <a href="https://www.atlassian.com/git/tutorials/saving-changes/git-diff">https://www.atlassian.com/git/tutorials/saving-changes/git-diff</a></p>
+<p>참고/출처 : <a href="https://git-scm.com/docs/git-show">https://git-scm.com/docs/git-show</a></p>
+</blockquote>
+<p>Git 으로 프로젝트를 관리하다보면 커밋과 커밋의 차이점, 브랜치와 브랜치의 차이점, 파일과 파일의 차이점 등을 확인해야 하는 경우가 많습니다. 이럴 때 <code>git diff</code> 와 <code>git show</code> 를 사용합니다. <code>git diff</code> 와 <code>git show</code> 는 <code>git status</code> 와 <code>git log</code> 와 함께 Git 레포지토리의 현재 상태를 이해하는데에 유용하게 사용됩니다.</p>
+<p><code>git diff</code> 와 <code>git show</code> 를 익히기 위하여 <code>lolcat</code> 레포지토리를 clone 해주세요.</p>
+<h6 id="execute"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ g cl https://github.com/jaseg/lolcat
+$ <span class="nb">cd</span> lolcat
+</code></pre></div>
+<p><code>lolcat</code> 이 기존에 있고 Vim 을 연습하느라 코드를 좀 수정했다면 레포지토리로 들어가서 다음 명령어를 입력해주세요.</p>
+<div class="highlight"><pre><span></span><code>$ git reset --hard master
+</code></pre></div>
+<h3 id="git-show">git show<a class="headerlink" href="#git-show" title="Permanent link">¶</a></h3>
+<p><code>git show</code> 는 특정 커밋이 어떤 수정사항을 갖는지 이해하기 위하여 사용됩니다. <code>lolcat</code> 레포지토리에서 <code>git show</code> 명령어를 입력해보세요.</p>
+<h6 id="execute_1"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_1" title="Permanent link">¶</a></h6>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/107993974-0bd90080-701f-11eb-8788-8c4a9669b481.png"/></p>
+<p>그러면 위와 같이 <code>Bump version to v1.2</code> 라는 커밋 메시지와 아래에는 어떤 사항이 수정되었는지 보여줍니다. 왼쪽에 <code>-</code> 라고 표시된 코드가 삭제된 코드이고 <code>+</code> 라고 표시된 코드가 추가된 코드입니다.</p>
+<ul>
+<li>
+<p><mark><strong><code>git show &lt;COMMIT&gt;</code> : <code>&lt;COMMIT&gt;</code> 이 어떤 수정사항을 갖는지 보여준다.</strong></mark></p>
+<ul>
+<li>
+<p><code>&lt;COMMIT&gt;</code> 이 전달되지 않으면 디폴트로 HEAD, 즉 마지막 커밋이 전달된다.</p>
+</li>
+<li>
+<p><code>--color-words</code> 옵션을 전달하면 한줄에 빨간색으로 삭제된 코드와 초록색으로 추가된 코드를 보여준다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><code>--color-words</code> 옵션을 사용하면 한 줄의 형태로 빨간색으로 삭제된 코드와 초록색으로 추가된 코드를 보여줍니다.</p>
+<h6 id="execute_2"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_2" title="Permanent link">¶</a></h6>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/107994123-5195c900-701f-11eb-8f1c-fec8a792b42e.png"/></p>
+<p>Tmux 로 <code>git log --oneline</code> 을 한쪽 터미널에 출력하면서 <code>git show 0039b3f</code>, <code>git show a1dfac8</code> 처럼 커밋 해쉬를 전달하여 그 커밋이 어떤 수정사항을 갖는지 확인해보세요.</p>
+<h6 id="execute_3"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_3" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ git show 0039b3f
+$ git show a1dfac8
+$ git show HEAD
+$ git show HEAD~1
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>HEAD 는 마지막 커밋을 뜻하고, HEAD~1 은 1단계 이전 커밋을 뜻합니다. HEAD~n 은 n단계 이전의 커밋을 뜻해요.</p>
+</div>
+<h3 id="git-diff">git diff<a class="headerlink" href="#git-diff" title="Permanent link">¶</a></h3>
+<p>이제 <code>git diff</code> 를 실습하기 위하여 <code>lolcat</code> 의 소스코드 <code>lolcat.c</code> 의 내용을 약간 수정하겠습니다. 다음 명령어를 통하여 <code>lolcat.c</code> 의 헤더 파일 선언 코드 부분의 <code>stdio.h</code> 를 <code>wow</code> 로 변경해주세요. </p>
+<h6 id="execute_4"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_4" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ sed -i <span class="s2">"s/stdio.h/wow/g"</span> lolcat.c
+</code></pre></div>
+<p>이제 <code>git diff</code> 명령어를 입력해보세요. </p>
+<h6 id="execute_5"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_5" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ git diff
+diff --git a/lolcat.c b/lolcat.c
+index c300845..0dfaae4 <span class="m">100644</span>
+--- a/lolcat.c
++++ b/lolcat.c
+@@ -20,7 +20,7 @@
+ <span class="c1">#include &lt;errno.h&gt;</span>
+ <span class="c1">#include &lt;locale.h&gt;</span>
+ <span class="c1">#include &lt;stdint.h&gt;</span>
+-#include &lt;stdio.h&gt;
++#include &lt;wow&gt;
+ <span class="c1">#include &lt;stdlib.h&gt;</span>
+ <span class="c1">#include &lt;string.h&gt;</span>
+ <span class="c1">#include &lt;sys/time.h&gt;</span>
+</code></pre></div>
+<p>그러면 위와 같이 "-" 를 통하여 어떤 부분이 삭제되었고 "+" 를 통하여 어떤 부분이 추가되었는지 볼 수 있습니다. 이번에는 <code>git diff --color-words</code> 라고 입력해보세요.</p>
+<h6 id="execute_6"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_6" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ git diff --color-words
+</code></pre></div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/107900632-e992a480-6f84-11eb-9a8d-fa2cec7cd24b.png"/></p>
+<p>그러면 위와 같이 한줄로 삭제된 부분은 빨간색으로, 추가된 부분은 초록색으로 보여줍니다.</p>
+<ul>
+<li>
+<p><mark><strong><code>git diff &lt;COMMIT&gt; &lt;FILE&gt;</code> : 현재 수정사항과 <code>&lt;COMMIT&gt;</code> 과의 내용을 비교하여 보여준다.</strong></mark></p>
+<ul>
+<li>
+<p><code>&lt;COMMIT&gt;</code> 이 전달되지 않으면 디폴트로 HEAD, 즉 마지막 커밋이 전달된다.</p>
+</li>
+<li>
+<p><code>&lt;FILE&gt;</code> 이 전달되지 않으면 디폴트로 모든 파일의 diff 를 출력한다.</p>
+</li>
+<li>
+<p><code>git diff --color-words</code> 옵션으로 수정사항을 한줄로 한눈에 볼 수 있다.</p>
+</li>
+<li>
+<p><code>git diff --cached</code> 옵션으로 현재 수정사항이 아니라 스테이징된 내용과 비교할 수 있다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><code>git diff</code> 는 현재 수정사항과 특정한 커밋을 비교하게 해줄 뿐만 아니라 커밋과 커밋과의 내용을 비교해주기도 합니다.</p>
+<ul>
+<li><mark><strong><code>git diff &lt;COMMIT1&gt; &lt;COMMIT2&gt; &lt;FILE&gt;</code> : <code>&lt;COMMIT1&gt;</code> 과의 내용과 <code>&lt;COMMIT2&gt;</code> 와의 내용을 비교하여 보여준다.</strong></mark></li>
+</ul>
+<p>이 기능을 통하여 다음과 같이 커밋과 커밋간의 내용을 비교할 수 있습니다.</p>
+<h6 id="execute_7"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_7" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ git diff abe2bac ceb4d66
+$ git diff HEAD HEAD^
+$ git diff HEAD HEAD~2
+$ git diff HEAD~3 HEAD~4
+</code></pre></div>
+<p><code>git diff</code> 는 브랜치와 브랜치 간의 차이점을 비교하여 출력해주기도 합니다.</p>
+<ul>
+<li><mark><strong><code>git diff &lt;BRANCH1&gt; &lt;BRANCH2&gt; &lt;FILE&gt;</code> : <code>&lt;BRANCH1&gt;</code> 과의 내용과 <code>&lt;BRANCH2&gt;</code> 와의 내용을 비교하여 보여준다.</strong></mark></li>
+</ul>
+<h2 id="git-stash">Git Stash<a class="headerlink" href="#git-stash" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>참고/출처 : <a href="https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning">https://git-scm.com/book/en/v2/Git-Tools-Stashing-and-Cleaning</a></p>
+</blockquote>
+<p>깃 브랜치를 여러개 만들어서 작업을 하고 있을 때, 현재 수정 및 추가 중인 파일들이 커밋되지 않은 상태에서 다른 브랜치로 이동해야 할 때가 있습니다. 그러나 커밋되지 않은 파일들이 있을 경우 브랜치를 이동할 수 없죠. 이럴 경우 <code>git stash</code> 를 사용합니다.</p>
+<p>먼저 다음 명령어로 <code>stash-test</code> 디렉토리를 만들어서 <code>git stash</code> 를 연습해볼 공간을 만들어주세요. </p>
+<h6 id="execute_8"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_8" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ mkdir stash-test
+$ <span class="nb">cd</span> stash-test
+$ g i
+$ touch main.c
+$ g a
+$ g cm <span class="s2">"main"</span>
+$ g b <span class="nb">test</span>
+$ touch readme.md
+$ g a
+$ g cm <span class="s2">"readme"</span>
+$ <span class="nb">echo</span> aaaa &gt; readme.md
+$ touch func.c
+</code></pre></div>
+<p>위 명령어를 통해 <code>master</code> 브랜치와 <code>test</code> 브랜치가 생겼습니다. 그리고 <code>func.c</code> 파일이 추가된 상태이고 <code>readme.md</code> 는 스테이징된 상태입니다. 이 상태에서 <code>test</code> 브랜치로 이동해보세요.</p>
+<h6 id="execute_9"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_9" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ g o <span class="nb">test</span>
+error: Your <span class="nb">local</span> changes to the following files would be overwritten by checkout:
+        readme.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+</code></pre></div>
+<p>그러면 에러가 발생하면서 브랜치 이동에 실패하게 됩니다. 이는 커밋되지 않은 파일들이 존재하기 때문이지요. 이런 상황에서 <code>git stash</code> 명령어는 커밋되지 않은 데이터들을 임시적으로 저장해줘서 브랜치 이동이 가능하게끔 해줍니다. </p>
+<ul>
+<li>
+<p><mark><strong><code>git stash</code> : 커밋되지 않은 파일들을 임시 저장소에 저장한다.</strong></mark></p>
+<ul>
+<li><code>git stash -u</code> 으로 untracked 파일들도 저장할 수 있다.</li>
+</ul>
+</li>
+</ul>
+<h6 id="execute_10"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_10" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ g stash -u
+$ g o <span class="nb">test</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>g ss -u</code> 로도 할 수 있어요.</p>
+</div>
+<p>위 명령어를 실행하면 커밋되지 않은 파일들이 임시 저장소에 저장되어서 <code>test</code> 브랜치로 이동할 수 있게 됩니다.</p>
+<ul>
+<li><mark><strong><code>git stash list</code> : stashing 된 임시 저장소의 리스트를 출력한다.</strong></mark></li>
+</ul>
+<h6 id="execute_11"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_11" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ g stash list
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>g sl</code> 로도 할 수 있어요.</p>
+</div>
+<p>위 명령어를 실행하면 stashing 되어온 현재 임시 저장소의 상태를 볼 수 있습니다. 이제 다시 <code>master</code> 브랜치로 돌아가서 임시 저장소에 저장되어 있는 수정 사항들을 되돌려봅시다.</p>
+<h6 id="execute_12"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_12" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ g o master
+</code></pre></div>
+<p>stashing 된 수정사항을 다시 가져오는 방법은 먼저 <code>git stash pop</code> 을 사용하는 것입니다.</p>
+<ul>
+<li><mark><strong><code>git stash pop</code> : 임시 저장소의 스택 맨 위의 수정사항을 복원하고 삭제한다.</strong></mark></li>
+</ul>
+<h6 id="execute_13"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_13" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ g stash pop
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>g sp</code> 로도 할 수 있어요.</p>
+</div>
+<p>위 명령어를 실행하면 수정사항을 복원함과 동시에 stash list 에서 stash 를 삭제합니다. 또 다른 방법은 <code>git stash apply</code> 를 사용하는 것입니다.</p>
+<ul>
+<li><mark><strong><code>git stash apply</code> : 임시 저장소의 스택 맨 위의 수정사항을 복원한다.</strong></mark></li>
+</ul>
+<h6 id="execute_14"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_14" title="Permanent link">¶</a></h6>
+<div class="highlight"><pre><span></span><code>$ g stash apply
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>g sa</code> 로도 할 수 있어요.</p>
+</div>
+<p>위 명령어를 실행하면 stash list 맨 위의 수정사항을 복원합니다. 단, stash 를 삭제하지는 않습니다. 그 stash 를 다른 브랜치에서도 적용할 수 있기 때문이죠.</p>
+<p>해당 stash 가 더 이상 필요 없다면 stash 를 삭제해야 합니다.</p>
+<ul>
+<li><mark><strong><code>git stash drop</code> : 임시 저장소의 스택 맨 위의 수정사항을 삭제한다.</strong></mark></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><code>g sd</code> 로도 할 수 있어요.</p>
+</div>
+<p>그런데 stash 를 많이 했을 경우 특정한 stash 를 복원하거나 삭제해야 합니다. 이럴 경우 <code>git stash list</code> 명령어를 통하여 stash 리스트를 출력한 다음 다음과 같이 stash 번호를 파라미터로 전달하면 됩니다.</p>
+<div class="highlight"><pre><span></span><code>$ g stash apply stash@<span class="o">{</span><span class="m">4</span><span class="o">}</span>   <span class="c1"># 5번째 stash 를 적용한다.</span>
+$ g stash drop stash@<span class="o">{</span><span class="m">2</span><span class="o">}</span>    <span class="c1"># 3번째 stash 를 삭제한다.</span>
+</code></pre></div>
+<h2 id="git-reset">Git Reset<a class="headerlink" href="#git-reset" title="Permanent link">¶</a></h2>
+<blockquote>
+<p>참고/출처 : <a href="https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified">https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified</a></p>
+</blockquote>
+<p><code>git reset</code> 명령어는 직관적으로 알 수 있듯이 레포지토리 복원에 관련된 기능을 제공합니다. 하지만 <strong>"복원"</strong> 은 <strong>"재복원"</strong> 을 지원하지 않는 몇 안되는 <code>git</code> 의 기능 중 하나입니다. 그러므로 <code>git reset</code> 을 사용할 때는 신중해야 하고, 심지어 대부분의 경우 <code>git branch</code> 명령어를 통하여 복원 없이 작업을 진행할 수 있습니다. </p>
+<ul>
+<li>
+<p><mark><strong><code>git branch &lt;BRANCH&gt; &lt;COMMIT&gt;</code> : 특정 커밋으로부터 브랜치를 생성한다.</strong></mark></p>
+<ul>
+<li>
+<p>예시 </p>
+<p><code>git branch test-3 HEAD~3</code> : 최신 커밋으로부터 3번째 이전 커밋을 <code>test-3</code> 브랜치로 만든다. </p>
+</li>
+</ul>
+</li>
+</ul>
+<p>이렇게 특정 커밋에서 에러가 시작되었음을 발견했다면, <code>git reset</code> 을 통하여 레포지토리를 복원하는 것이 아니라 <code>git branch</code> 를 통해 그 커밋에서부터 브랜치를 만들고 에러를 수정하는 작업을 한 뒤 <code>git rebase</code> 명령어를 통하여 커밋 히스토리를 최종적으로 수정하면 됩니다. 이 과정에서 <code>git reset</code> 명령어는 전혀 사용되지 않았죠.</p>
+<p>그러나 이렇게까지 주의깊게 관리해야할 레포지토리가 아닐 경우, 또는 확실하게 복원 기능을 원할 경우 <code>git reset</code> 을 사용하면 좋습니다. </p>
+<h3 id="the-three-trees">The Three Trees<a class="headerlink" href="#the-three-trees" title="Permanent link">¶</a></h3>
+<p><code>git reset</code> 을 이해하기 전에 Git 이 세가지 트리로 레포지토리를 관리한다는 것을 이해해봅시다. 먼저 트리(Tree) 란 단순히 <strong>파일들의 모임</strong> 이라고 생각하면 편합니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Tree</th>
+<th align="center">Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">HEAD</td>
+<td align="center">Last Commit snapshot</td>
+</tr>
+<tr>
+<td align="center">Index</td>
+<td align="center">Proposed next commit snapshot(Staging Area)</td>
+</tr>
+<tr>
+<td align="center">Working Directory</td>
+<td align="center">Current Files</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><mark><strong>HEAD : HEAD 는 현재 브랜치의 마지막 커밋을 포인팅하는 스냅샷입니다.</strong></mark></p>
+</li>
+<li>
+<p><mark><strong>Index : 스테이징된 파일들입니다.</strong></mark></p>
+</li>
+<li>
+<p><mark><strong>Working Directory : <code>.git</code> 에 저장되는 Git 의 데이터베이스가 아니라 디렉토리에 있는 실제 파일들입니다.</strong></mark></p>
+</li>
+</ul>
+<h3 id="the-workflow">The Workflow<a class="headerlink" href="#the-workflow" title="Permanent link">¶</a></h3>
+<p>Git 이 레포지토리를 관리하는 과정은 다음과 같은 3가지 트리를 관리하는 것이었죠.</p>
+<p><img alt="" src="https://git-scm.com/book/en/v2/images/reset-workflow.png"/></p>
+<p>file.txt 라는 파일이 레포지토리에 있었다고 하겠습니다. 이 파일의 버전을 v1 이라고 하죠. 만약 이 파일을 수정하면 다음과 같이 먼저 Working Directory 의 file.txt 가 수정됩니다.</p>
+<p><img alt="" src="https://git-scm.com/book/en/v2/images/reset-ex4.png"/></p>
+<p>그리고 <code>git add</code> 로 파일을 스테이징하면 다음과 같이 Index 트리에 file.txt 의 v2 가 저장되죠.</p>
+<p><img alt="" src="https://git-scm.com/book/en/v2/images/reset-ex5.png"/></p>
+<p>마지막으로 <code>git commit</code> 을 하면 다음과 같이 새로운 커밋이 생성되면서 HEAD 가 새로운 커밋을 포인팅하게 됩니다.</p>
+<p><img alt="" src="https://git-scm.com/book/en/v2/images/reset-ex6.png"/></p>
+<p>이제 <code>file.txt</code> 를 한번 더 수정하고 커밋하여 버전 v3 가 되게 했다고 하겠습니다.</p>
+<p><img alt="" src="https://git-scm.com/book/en/v2/images/reset-start.png"/></p>
+<h3 id="the-role-of-reset">The Role of Reset<a class="headerlink" href="#the-role-of-reset" title="Permanent link">¶</a></h3>
+<p><code>git reset</code> 의 기능은 이 세 가지 트리(HEAD, Index, Working Directory)를 조작하는 것입니다.</p>
+<ul>
+<li><mark><strong><code>git reset</code> : HEAD, Index, Working Directory 를 조작한다.</strong></mark></li>
+</ul>
+<h3 id="soft-reset-manipulating-head">soft reset (manipulating HEAD)<a class="headerlink" href="#soft-reset-manipulating-head" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><mark><strong><code>git reset --soft &lt;COMMIT&gt;</code> : HEAD 를 <code>&lt;COMMIT&gt;</code> 으로 바꾼다.</strong></mark></p>
+<ul>
+<li>
+<p><code>git reset --soft HEAD~</code> : HEAD 를 바로 이전 커밋으로 바꾼다.</p>
+</li>
+<li>
+<p><code>git reset --soft HEAD~3</code> : HEAD 를 HEAD 보다 3번째 이전에 있는 커밋으로 바꾼다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>가령 <code>git reset --soft 9e5e6a4</code> 를 입력하면 다음과 같이 <code>master</code> 브랜치의 HEAD 가 9e5e6a4 를 가르키게 됩니다.</p>
+<p><img alt="" src="https://git-scm.com/book/en/v2/images/reset-soft.png"/></p>
+<p>그런데 이것은 언뜻 보기에 <code>git checkout</code> 과 비슷한 기능을 하는 것 같아 보일 수 있습니다. 왜냐하면 다른 브랜치로 이동하는 <code>git checkout</code> 명령어도 HEAD 를 바꾸는 것이기 때문이죠. 하지만 <code>git reset --soft</code> 는 <code>git checkout</code> 과 달리 단순히 HEAD 를 바꾸는 것이 아니라 <strong>앞선 커밋을 무효화 시킨다</strong> 는 개념으로 이해해야 합니다. 즉, <code>git reset --soft &lt;COMMIT&gt;</code> 에서 <code>&lt;COMMIT&gt;</code> 보다 앞에 있는 모든 커밋들이 무효화됨으로써 HEAD 가 바뀌는 것이죠.</p>
+<h3 id="mixed-reset-manipulating-head-index">mixed reset (manipulating HEAD, Index)<a class="headerlink" href="#mixed-reset-manipulating-head-index" title="Permanent link">¶</a></h3>
+<p>soft reset 으로 HEAD 를 조작해보았지만 이것은 Staging Area, 즉 Index 는 바꾸지 못합니다. mixed reset 은 HEAD 를 바꿈과 동시에 Staging Area 도 바꾸어 줍니다.</p>
+<ul>
+<li>
+<p><mark><strong><code>git reset --mixed &lt;COMMIT&gt;</code> : HEAD, Index 를 <code>&lt;COMMIT&gt;</code> 에 맞게 바꾼다.</strong></mark></p>
+<ul>
+<li>mixed 가 reset 의 디폴트 옵션이다. </li>
+</ul>
+</li>
+</ul>
+<p>가령 <code>git reset --mixed 9e5e6a4</code> 를 입력하면 다음과 같이 HEAD 와 Index 가 9e5e6a4 커밋의 내용에 맞게 바뀝니다. </p>
+<p><img alt="" src="https://git-scm.com/book/en/v2/images/reset-mixed.png"/></p>
+<h3 id="hard-reset-manipulating-head-index-working-directory">hard reset (manipulating HEAD, Index, Working Directory)<a class="headerlink" href="#hard-reset-manipulating-head-index-working-directory" title="Permanent link">¶</a></h3>
+<p>hard reset 은 HEAD, Index 뿐만 아니라 Working Directory 도 해당 커밋에 맞게 바꾸어 줍니다.</p>
+<ul>
+<li><mark><strong><code>git reset --hard &lt;COMMIT&gt;</code> : HEAD, Index, Working Directory 를 <code>&lt;COMMIT&gt;</code> 에 맞게 바꾼다.</strong></mark></li>
+</ul>
+<p>가령 <code>git reset --hard HEAD~</code> 를 입력하면 다음과 같이 HEAD 와 Index 가 9e5e6a4 커밋의 내용에 맞게 바뀝니다. </p>
+<p><img alt="" src="https://git-scm.com/book/en/v2/images/reset-hard.png"/></p>
+<p>이 hard reset 은 Git 이 재복원을 지원하지 않는 몇 안되는 위험한 기능입니다. soft reset 과 mixed reset 은 <code>git reflog</code> 와 <code>git reset</code> 기능을 통하여 재복원을 할 수 있습니다. 그러나 hard reset 의 Working Directory 는 복원할 수 없습니다.</p>
+<h3 id="reset-with-a-path">Reset With a Path<a class="headerlink" href="#reset-with-a-path" title="Permanent link">¶</a></h3>
+<p>전체 레포지토리를 복원하는 것이 아니라 특정 파일이나 몇몇 파일만 복원하고 싶을 경우가 있습니다. 이 경우 파일의 경로를 파라미터로 전달하면 해당 파일만 복원됩니다. 또한 <strong>이 경우 HEAD 가 바뀌지 않습니다.</strong> </p>
+<p><code>git reset file.txt</code> 이라는 명령을 입력했다고 하겠습니다. 이 명령어는 <code>git reset --mixed HEAD file.txt</code> 와 같습니다. 즉, <code>file.txt</code> 를 가장 마지막 커밋의 버전으로 mixed reset 하겠다는 것이죠.</p>
+<p><img alt="" src="https://git-scm.com/book/en/v2/images/reset-path1.png"/></p>
+<p>그러면 위와 같이 <code>file.txt</code> 가 Working Directory 를 제외하고 HEAD 에 맞게 복원됩니다. </p>
+<h3 id="day5_1"><strong><div align="center"> 🌜 ️여기까지 Day5     🌜️ </div></strong><a class="headerlink" href="#day5_1" title="Permanent link">¶</a></h3>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<!-- 
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer> -->
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+<script src="../../javascripts/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+<script src="../../javascripts/b27b3e6448.js"></script>
+</body>
+</html>

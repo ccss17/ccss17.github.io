@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/LinearAlgebra/CanonicalForms/" rel="canonical"/>
+<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<title>Canonical Forms - ccss17</title>
+<link href="../../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#the-jordan-canonical-form-i">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Canonical Forms
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../..">
+      ccss17
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../MathHistory/">
+        Math
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../paper/1404.6388/">
+        Paper
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../Computer/nand2tetris/">
+        Computer
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../ProgrammerBase/">
+        ProgrammerBase
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../security-tutorial/">
+        security tutorial
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
+<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        ccss17
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Set Theory
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Set Theory
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Set/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Set/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Set/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Set/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ArithmeticOperations/">
+        Arithmetic Operations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Polynomials/">
+        Polynomials
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MatrixOperation/">
+        Matrix Operation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Determinants/">
+        Determinants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Diagonalization/">
+        Diagonalization
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../InnerProductSpaces/">
+        Inner Product Spaces
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Canonical Forms
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Canonical Forms
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-jordan-canonical-form-i">
+    The Jordan Canonical Form I
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/future/">
+        Why the future doesn't need us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Computer/Rust/">
+        Rust Memo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-jordan-canonical-form-i">
+    The Jordan Canonical Form I
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Canonical Forms</h1>
+<h2 id="the-jordan-canonical-form-i">The Jordan Canonical Form I<a class="headerlink" href="#the-jordan-canonical-form-i" title="Permanent link">¶</a></h2>
+<a href="#d16eca5a5"><div class="admonition def" id="d16eca5a5">
+<p class="admonition-title">일반화된 고유벡터(generalized eigenvector)</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 스칼라 <span class="arithmatex">\(\lambda\)</span> 와 어떤 양의 정수 <span class="arithmatex">\(p\)</span> 에 대하여 <span class="arithmatex">\((\mathbf{T}-\lambda \mathbf{I})^{p}(x) = 0\)</span> 을 만족하는 <span class="arithmatex">\(x \in \mathbf{V}\setminus \{0\}\)</span> 를 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 일반화된 고유벡터라 한다.</p>
+</div></a>
+<a href="#44fe5ad26"><div class="admonition def" id="44fe5ad26">
+<p class="admonition-title">일반화된 고유공간(generalized eigenspace)</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대하여 다음 집합을 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 일반화된 고유공간이라 한다.</p>
+<div class="arithmatex">\[ \mathbf{K}_{\lambda } = \{x \in \mathbf{V} : \exists p \in \mathbb{Z}^{+} : (\mathbf{T}-\lambda \mathbf{I})^{p}(x) = 0 \} \]</div>
+</div></a>
+<a href="#744719af2"><div class="admonition def" id="744719af2">
+<p class="admonition-title">정리 7.1</p>
+<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p>일반화된 고유공간 <span class="arithmatex">\(\mathbf{K}_{\lambda}\)</span> 는 고유공간 <span class="arithmatex">\(\mathbf{E}_{\lambda}\)</span> 를 포함하는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 임의의 고윳값 <span class="arithmatex">\(\mu\)</span> 가 <span class="arithmatex">\(\mu \neq \lambda\)</span> 이면 <span class="arithmatex">\(\mathbf{K}_{\lambda} \cap \mathbf{K}_{\mu } = \{0\}\)</span> 이다.</p>
+</li>
+<li>
+<p>임의의 스칼라 <span class="arithmatex">\(\mu \neq \lambda\)</span> 에 대하여 <span class="arithmatex">\((\mathbf{T}-\mu \mathbf{I})_{\mathbf{K}_{\lambda}}\)</span> 는 전단사이다.</p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p>1:</p>
+<p><span class="arithmatex">\(0 \in \mathbf{K}_{\lambda}\)</span> 는 자명하자. 일반화된 고유공간의 정의에 의하여 <span class="arithmatex">\(x, y \in \mathbf{K}_{\lambda}\)</span> 에 대하여 다음을 만족하는 양의 정수 <span class="arithmatex">\(p, q\)</span> 가 존재한다. </p>
+<div class="arithmatex">\[ (\mathbf{T}-\lambda \mathbf{I})^{p}(x) = (\mathbf{T}-\lambda \mathbf{I})^{q}(y) = 0 \]</div>
+<p>다음이 성립한다.</p>
+<div class="arithmatex">\[ \begin{equation}\begin{split}
+(\mathbf{T}-\lambda \mathbf{I})^{p+q}(x+y)&amp;=(\mathbf{T}-\lambda \mathbf{I})^{p+q}(x) + (\mathbf{T}-\lambda \mathbf{I})^{p+q}(y) \\
+&amp;= (\mathbf{T}-\lambda \mathbf{I})^{q}(0) + (\mathbf{T}-\lambda \mathbf{I})^{p}(0) = 0\\
+\end{split}\end{equation} \tag*{}
+\]</div>
+<p>따라서 <span class="arithmatex">\(x + y \in \mathbf{K}_{\lambda}\)</span> 이다. 즉, <span class="arithmatex">\(\mathbf{K}_{\lambda}\)</span> 는 벡터합에 대하여 닫혀있다. <span class="arithmatex">\(\mathbf{K}_{\lambda}\)</span> 가 스칼라 곱에 대하여 닫혀있음을 보이는 것은 쉽다. 따라서 <a href="../VectorSpace/#42f9c15c6">정리 1.3</a> 에 의하여 <span class="arithmatex">\(\mathbf{K}_{\lambda}\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이다. ▲ </p>
+<p><span class="arithmatex">\(x \in \mathbf{K}_{\lambda}\)</span> 에 대하여 <span class="arithmatex">\((\mathbf{T}-\lambda \mathbf{I})^{p}(x) = 0\)</span> 인 양의 정수 <span class="arithmatex">\(p\)</span> 가 존재한다. <span class="arithmatex">\(\mathbf{T}\)</span> 에 대한 다항식은 <span class="arithmatex">\(\mathbf{T}\)</span> 와 가환적이다. 즉, <span class="arithmatex">\(\mathbf{T}(\mathbf{T}-\lambda \mathbf{I})=(\mathbf{T}-\lambda \mathbf{I})\mathbf{T}\)</span> 이므로 다음이 성립한다. </p>
+<div class="arithmatex">\[ (\mathbf{T}-\lambda \mathbf{I})^{p}\mathbf{T}(x) = \mathbf{T}(\mathbf{T}-\lambda \mathbf{I})^{p}(x) = \mathbf{T}(0) = 0 \]</div>
+<p>즉, <span class="arithmatex">\(\mathbf{T}(x) \in \mathbf{K}_{\lambda}\)</span> 이다. 따라서 <span class="arithmatex">\(\mathbf{K}_{\lambda}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이다. ▲ </p>
+<p>고유공간 <span class="arithmatex">\(\mathbf{E}_{\lambda}\)</span> 와 일반화된 고유공간 <span class="arithmatex">\(\mathbf{K}_{\lambda}\)</span> 의 정의로부터 <span class="arithmatex">\(\mathbf{E}_{\lambda}\subset \mathbf{K}_{\lambda}\)</span> 는 자명하다. ▲ </p>
+<p>2:</p>
+<p><span class="arithmatex">\(w\in \mathbf{K}_{\lambda}\cap \mathbf{K}_{\mu }\)</span> 이면 다음을 만족하는 자연수 <span class="arithmatex">\(p,q\)</span> 가 존재한다. </p>
+<div class="arithmatex">\[ (\mathbf{T}-\lambda \mathbf{I})^{p}(w) = (\mathbf{T}- \mu \mathbf{I})^{q}(w) = 0 \]</div>
+<p><span class="arithmatex">\(t\)</span> 에 대한 <a href="../../Polynomials/#942fa2533">다항식 <span class="arithmatex">\((t - \lambda )^{p}\)</span> 와 <span class="arithmatex">\((t - \mu )^{q}\)</span> 는 서로소이므로 다음을 만족하는 다항식 <span class="arithmatex">\(q_1,  q_2\)</span> 가 존재</a>한다.</p>
+<div class="arithmatex">\[ q_1(t)(t - \lambda ) ^{p} + q_2(t)(t - \mu )^{q} = 1 \]</div>
+<p>그러면 다음이 성립한다.</p>
+<div class="arithmatex">\[ q_1(\mathbf{T})(\mathbf{T}-\lambda \mathbf{I})^{p} + q_2(\mathbf{T})(\mathbf{T} - \mu \mathbf{I})^{q} = \mathbf{I} \]</div>
+<div class="arithmatex">\[ q_1(\mathbf{T})(\mathbf{T}-\lambda \mathbf{I})^{p}(w) + q_2(\mathbf{T})(\mathbf{T} - \mu \mathbf{I})^{q}(w) = w = 0 \]</div>
+<p>▲ </p>
+<p>3:</p>
+<p>1) 에 의하여 <span class="arithmatex">\(\mathbf{K}_{\lambda}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이므로 <span class="arithmatex">\(\mathbf{K}_{\lambda}\)</span> 는 <span class="arithmatex">\((\mathbf{T}-\mu \mathbf{I})\)</span>-불변이다. <span class="arithmatex">\(x \in \mathbf{K}_{\lambda}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T}(x) - \mu x \in \mathbf{K}_{\lambda}\)</span> 이기 때문이다. </p>
+<p>어떤 <span class="arithmatex">\(w \in \mathbf{K}_{\lambda}\)</span> 에 대하여 <span class="arithmatex">\((\mathbf{T}- \mu \mathbf{I})(w) = 0\)</span> 이면 <span class="arithmatex">\(w \in \mathbf{E}_{\mu } \subset \mathbf{K}_{\mu }\)</span> 이므로 2) 에 의하여 <span class="arithmatex">\(w = 0\)</span> 이다. 따라서 <a href="../LinearTransformation/#7d40e8276">정리 2.4</a> 에 의하여 <span class="arithmatex">\((\mathbf{T}- \mu \mathbf{I})_{\mathbf{K}_{\lambda}}\)</span> 는 단사이다. ▲ </p>
+<p><span class="arithmatex">\(x \in \mathbf{K}_{\lambda}\)</span> 와 <span class="arithmatex">\((\mathbf{T}-\lambda \mathbf{I})^{p}(x) = 0\)</span> 을 만족하는 가장 작은 양의 정수 <span class="arithmatex">\(p\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{W}\)</span> 를 다음과 같이 정의하자. </p>
+<div class="arithmatex">\[ \mathbf{W} = \text{span} \{x, (\mathbf{T}-\lambda \mathbf{I})(x), \dots, (\mathbf{T}-\lambda \mathbf{I})^{p-1}(x)\} \]</div>
+<p><span class="arithmatex">\(w \in \mathbf{W}\)</span> 를 스칼라 <span class="arithmatex">\(a_0, a_1, \dots, a _{p-1}\)</span> 에 대하여 다음과 같이 두자.</p>
+<div class="arithmatex">\[ w = a_0x+ a_1(\mathbf{T}-\lambda \mathbf{I})(x)+ \dots + a _{p-1}(\mathbf{T}-\lambda \mathbf{I})^{p-1}(x) \in \mathbf{W} \]</div>
+<div class="arithmatex">\[ \implies \mathbf{T}(w) = a_0 \mathbf{T}(x)+ a_1(\mathbf{T}-\lambda \mathbf{I})(\mathbf{T}(x))+ \dots + a _{p-1}(\mathbf{T}-\lambda \mathbf{I})^{p-1}(\mathbf{T}(x)) \]</div>
+<p><span class="arithmatex">\(\mathbf{W}\)</span> 의 어떤 원소 <span class="arithmatex">\(\epsilon\)</span> 을 다음과 같이 정의하자.</p>
+<div class="arithmatex">\[ \epsilon = a_0 \lambda \mathbf{I}(x) + a_1(\mathbf{T}-\lambda \mathbf{I})( \lambda \mathbf{I}(x)) + \dots + a _{p-1}(\mathbf{T}-\lambda \mathbf{I})^{p-1}(\lambda \mathbf{I}(x)) \in \mathbf{W} \]</div>
+<p>그러면 <a href="../LinearTransformation/#273a736ad">정리 2.10</a> 에 의하여 다음이 성립한다.</p>
+<div class="arithmatex">\[ \mathbf{T}(w) - \epsilon = a_0 (\mathbf{T} - \lambda \mathbf{I})(x)+ a_1(\mathbf{T}-\lambda \mathbf{I})^{2}(x)+ \dots + a _{p-2}(\mathbf{T}-\lambda \mathbf{I})^{p-1}(x)+ 0 \in \mathbf{W} \]</div>
+<p>부분공간은 선형공간이므로 덧셈에 대하여 선형이다. 따라서 다음이 성립한다.</p>
+<div class="arithmatex">\[ \mathbf{T}(w) \in \mathbf{W} \]</div>
+<p>즉, <span class="arithmatex">\(\mathbf{W}\)</span> 는 <span class="arithmatex">\(\mathbf{K}_{\lambda}\)</span> 의 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간이다. 그러면 <span class="arithmatex">\(\mathbf{W}\)</span> 는 <span class="arithmatex">\((\mathbf{T}-\mu \mathbf{I})\)</span>-불변이다. <span class="arithmatex">\(w \in \mathbf{W} \implies \mathbf{T}(w) - \mu w \in \mathbf{W}\)</span> 이기 때문이다. 즉, <span class="arithmatex">\((\mathbf{T}-\mu \mathbf{I})(\mathbf{W}) \subset \mathbf{W}\)</span> 이다. <span class="arithmatex">\((\mathbf{T}-\mu \mathbf{I})_{\mathbf{K}_{\lambda}}\)</span> 가 단사이므로 <span class="arithmatex">\((\mathbf{T}-\mu \mathbf{I})_{\mathbf{W}}\)</span> 도 단사이다. <span class="arithmatex">\(\mathbf{W}\)</span> 는 유한차원이므로 <a href="../LinearTransformation/#dfd4ff297">정리 2.5</a> 에 의하여 <span class="arithmatex">\((\mathbf{T}-\mu \mathbf{I})_{\mathbf{W}}\)</span> 는 전사이다. <span class="arithmatex">\(x \in \mathbf{W} \subset \mathbf{K}_{\lambda}\)</span> 인데 <span class="arithmatex">\((\mathbf{T}-\mu \mathbf{I})_{\mathbf{W}}\)</span> 가 전단사이므로 <span class="arithmatex">\((\mathbf{T}-\mu \mathbf{I})(y) = x\)</span> 인 <span class="arithmatex">\(y \in \mathbf{W} \subset \mathbf{K}_{\lambda}\)</span> 가 존재한다. </p>
+<p>즉, 위와 같은 논리로 임의의 벡터 <span class="arithmatex">\(v \in \mathbf{K}_{\lambda}\)</span> 에 대하여 <span class="arithmatex">\((\mathbf{T}-\mu \mathbf{I})(y) = v\)</span> 인 <span class="arithmatex">\(y \in \mathbf{K}_{\lambda}\)</span> 가 항상 존재한다는 것을 보일 수 있다. 그러면 <a href="../../Set/Set/#2b1f78028">전사의 정의</a> 에 의하여 <span class="arithmatex">\((\mathbf{T}-\mu \mathbf{I})_{\mathbf{K}_{\lambda}}\)</span> 는 전사이다. ■ </p>
+</li>
+</ul>
+<a href="#59fe8ec7e"><div class="admonition def" id="59fe8ec7e">
+<p class="admonition-title">정리 7.2</p>
+<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 완전히 인수분해되면 중복도가 <span class="arithmatex">\(m\)</span> 인 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대하여 다음이 성립한다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\dim (\mathbf{K}_{\lambda})\leq m\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{K}_{\lambda} = \mathbf{N}((\mathbf{T}-\lambda \mathbf{I})^{m})\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>1) 은 <a href="../Diagonalization/#b5fbbceb6">정리 5.7</a> 이 일반화된 것이다.</p>
+</li>
+<li>
+<p>2) 는 <a href="../Diagonalization/#7ad38c4e6">고유공간의 정의</a> 가 일반화된 것이다.</p>
+</li>
+<li>
+<p>증명</p>
+<p>1:</p>
+<p><span class="arithmatex">\(\mathbf{T}_{\mathbf{K}_{\lambda}}\)</span> 의 특성다항식을 <span class="arithmatex">\(h(t)\)</span> 로 두자. 정리 7.1-(2) 는 일반화된 고유공간에 다른 일반화된 고유공간의 고유벡터가 존재하지 않는다는 것을 보장해준다. 따라서 <span class="arithmatex">\(\mathbf{T}_{\mathbf{K}_{\lambda}}\)</span> 는 유일한 고윳값 <span class="arithmatex">\(\lambda\)</span> 를 갖는다. <span class="arithmatex">\(d = \dim (\mathbf{K}_{\lambda})\)</span> 로 두면 <a href="../Diagonalization/#3cd1e9499">정리 5.3</a> 에 의하여 <span class="arithmatex">\(h(t) = (-1)^{d}(t - \lambda )^{d}\)</span> 이다. <a href="../Diagonalization/#3d097218e">정리 5.20</a> 에 의하여 <span class="arithmatex">\(\mathbf{T}_{\mathbf{K}_{\lambda}}\)</span> 의 특성다항식 <span class="arithmatex">\(h(t)\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식을 나눈다. 따라서 <span class="arithmatex">\(d \leq m\)</span> 이다. ▲ </p>
+<p>2:</p>
+<p><span class="arithmatex">\(\mathbf{N}((\mathbf{T} - \lambda \mathbf{I})^{m})\)</span> 은 일반화된 고유공간 <span class="arithmatex">\(\mathbf{K}_{\lambda}\)</span> 에 포함될 조건을 만족하므로 <span class="arithmatex">\(\mathbf{N}((\mathbf{T} - \lambda \mathbf{I})^{m}) \subset \mathbf{K}_{\lambda}\)</span> 이다. ▲ </p>
+<p><span class="arithmatex">\(\mu \neq \lambda\)</span> 인 고윳값 <span class="arithmatex">\(\mu\)</span> 에 대하여 <span class="arithmatex">\((t - \mu )\)</span> 을 곱한 꼴인 <span class="arithmatex">\(g(t)\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식은 <span class="arithmatex">\(f(t) = (t - \lambda )^{m}g(t)\)</span> 이다. 정리 7.1-(3) 에 의하여 <span class="arithmatex">\(g(\mathbf{T})_{\mathbf{K}_{\lambda}}\)</span> 는 전사이다. 따라서 <span class="arithmatex">\(x \in \mathbf{K}_{\lambda}\)</span> 에 대하여 <span class="arithmatex">\(g(\mathbf{T})(y) = x\)</span> 인 <span class="arithmatex">\(y \in \mathbf{K}_{\lambda}\)</span> 가 항상 존재한다. <a href="../Diagonalization/#a460d1c99">케일리-해밀턴 정리</a> 에 의하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ (\mathbf{T}-\lambda \mathbf{I})^{m}(x) = (\mathbf{T}-\lambda \mathbf{I})^{m}g(\mathbf{T})(y) = f(\mathbf{T})(y) = 0 \]</div>
+<p>따라서 <span class="arithmatex">\(x \in \mathbf{N}((\mathbf{T}-\lambda \mathbf{I})^{m}) \implies \mathbf{K}_{\lambda}\subset \mathbf{N}((\mathbf{T}-\lambda \mathbf{I})^{m})\)</span> 이다. ■ </p>
+</li>
+</ul>
+<a href="#266a81c6b"><div class="admonition def" id="266a81c6b">
+<p class="admonition-title">정리 7.3</p>
+<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 완전히 인수분해되면 <span class="arithmatex">\(\mathbf{T}\)</span> 의 서로 다른 고윳값 <span class="arithmatex">\(\lambda _1, \dots, \lambda _k\)</span> 와 임의의 <span class="arithmatex">\(x \in \mathbf{V}\)</span> 와 <span class="arithmatex">\(i \in \{1, \dots, k\}\)</span> 에 대하여 다음을 만족하는 벡터 <span class="arithmatex">\(v_i \in \mathbf{K}_{\lambda_i}\)</span> 가 유일하게 존재한다.</p>
+<div class="arithmatex">\[ x = v_1 + v_2 + \dots + v_k \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식을 다음과 같이 두자.</p>
+<div class="arithmatex">\[ f(t) = (t - \lambda _1)^{n_1} (t - \lambda _2)^{n_2}\dots  (t - \lambda _k)^{n_k} \]</div>
+<p><span class="arithmatex">\(j \in \{1,\dots,k\}\)</span> 에 대하여 <span class="arithmatex">\(f_j(t)\)</span> 를 다음과 같이 두자.</p>
+<div class="arithmatex">\[ f_j(t) = \prod_{\substack{i \neq j \\ i = 1}}^{k}(t - \lambda _i)^{n_i} \]</div>
+<p>다항식 <span class="arithmatex">\(f_i(t)\)</span> 들은 서로소이므로 <a href="../../Polynomials/#942fa2533">서로소 다항식들의 관계 정리</a>에 대하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ q_1(x)f_1(x) + q_2(x)f_2(x) + \dots + q_k(x)f_k(x) = 1 \]</div>
+<p>따라서 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 에 대하여 다음이 성립한다.</p>
+<div class="arithmatex">\[ q_1(\mathbf{T})f_1(\mathbf{T})(v) + q_2(\mathbf{T})f_2(\mathbf{T})(v) + \dots + q_k(\mathbf{T})f_k(\mathbf{T}) (v) = v \]</div>
+<p>두 다항식은 가환적이다. <span class="arithmatex">\(v_i = q_i(\mathbf{T})f_i(\mathbf{T})(v) = f_i(\mathbf{T})q_i(\mathbf{T})(v)\)</span> 라 하면 <a href="../Diagonalization/#a460d1c99">케일리-해밀턴 정리</a> 에 의하여 다음이 성립한다. </p>
+<div class="arithmatex">\[ (\mathbf{T}-\lambda _i \mathbf{I})^{n_i}(v_i) = (\mathbf{T}-\lambda _i \mathbf{I})^{n_i}f_i(\mathbf{T})q_i(\mathbf{T})(v) = f(\mathbf{T})(q_i(\mathbf{T})(v)) = 0 \]</div>
+<p>즉, <span class="arithmatex">\(v_i \in \mathbf{K}_{\lambda_i}\)</span> 이다. 이로써 <span class="arithmatex">\(v = \displaystyle \sum_{i=1}^{k}v_i\)</span> 를 만족하는 <span class="arithmatex">\(v_i \in \mathbf{K}_{\lambda_i}\)</span> 들의 존재성이 증명되었다. ▲ </p>
+<p>이제 <span class="arithmatex">\(v_i\)</span> 들의 유일성을 증명하자. 정리 7.1-(1) 에 의하여 <span class="arithmatex">\(\mathbf{K}_{\lambda_j}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이다. 따라서 각 <span class="arithmatex">\(\mathbf{K}_{\lambda_j}\)</span> 들은 <span class="arithmatex">\(f_j(\mathbf{T})\)</span>-불변이다. 정리 7.1-(3) 에 의하여 <span class="arithmatex">\(f_j(\mathbf{T})\)</span> 는 <span class="arithmatex">\(\mathbf{K}_{\lambda_j}\)</span> 에서 단사이고 정리 7.2-(2) 에 의하여 <span class="arithmatex">\(i \neq j\)</span> 에 대하여 <span class="arithmatex">\(z \in \mathbf{K}_{\lambda_i} \implies f_j(\mathbf{T})(z) = 0\)</span> 이다. 즉, <span class="arithmatex">\(f_j(\mathbf{T})(\mathbf{K}_{\lambda_i}) = \{0\}\)</span> 이다.</p>
+<p><span class="arithmatex">\(i \in \{1,\dots,k\}\)</span> 에 대한 <span class="arithmatex">\(v_i, w_i \in \mathbf{K}_{\lambda_i}\)</span> 에 대하여 <span class="arithmatex">\(\displaystyle v = \sum_{i=1}^{k}v_i = \sum_{i=1}^{k}w_i\)</span> 라 하면 <span class="arithmatex">\(j \in \{1,\dots,k\}\)</span> 에 대하여 <span class="arithmatex">\(f_j(\mathbf{T})\)</span> 는 선형이므로 다음이 성립한다. </p>
+<div class="arithmatex">\[ f_j(\mathbf{T})(v) = \sum_{i=1}^{k}f_j(\mathbf{T})(v_i) = \sum_{i=1}^{k}f_j(\mathbf{T})(w_i) \]</div>
+<p><span class="arithmatex">\(i \neq j\)</span> 이면 <span class="arithmatex">\(f_j(\mathbf{T})(v_i) = f_j(\mathbf{T})(w_i) = 0\)</span> 이므로 <span class="arithmatex">\(f_j(\mathbf{T})(v_j) = f_j(\mathbf{T})(w_j)\)</span> 이다. <span class="arithmatex">\(f_j(\mathbf{T})\)</span> 는 <span class="arithmatex">\(\mathbf{K}_{\lambda_j}\)</span> 에서 단사이므로 <span class="arithmatex">\(v_j = w_j\)</span> 이다. ■ </p>
+</li>
+</ul>
+<a href="#8e3a6694e"><div class="admonition def" id="8e3a6694e">
+<p class="admonition-title">정리 7.4</p>
+<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 다음과 같이 완전히 인수분해된다고 가정하자. </p>
+<div class="arithmatex">\[ (\lambda _1 - t)^{m_1}(\lambda _2 - t)^{m_2}\dots(\lambda _k - t)^{m_k} \]</div>
+<p><span class="arithmatex">\(i \in \{1,\dots,k\}\)</span> 와 <span class="arithmatex">\(\mathbf{K}_{\lambda_i}\)</span> 의순서기저 <span class="arithmatex">\(\beta _i\)</span> 에 대하여 다음이 성립한다.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(j \neq i \implies \beta _i \cap \beta _j = \varnothing\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle \beta = \bigcup_{i=1}^{k}\beta _i\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\forall i : \dim ((\mathbf{K}_{\lambda_i}) = m_i\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p>1:</p>
+<p><a href="#744719af2">정리 7.1-(2)</a> 에서 바로 나온다. ▲ </p>
+<p>2:</p>
+<p><span class="arithmatex">\(\beta _i\)</span> 의 벡터들의 합을 <span class="arithmatex">\(v_i\)</span> 라 하고 <span class="arithmatex">\(\beta\)</span> 의 일차결합을 <span class="arithmatex">\(0\)</span> 이라 하면 다음이 성립한다. </p>
+<div class="arithmatex">\[ v_1 + v_2 + \dots + v_k = 0 \]</div>
+</li>
+</ul>
+<hr/>
+<dl>
+<dt>ref:</dt>
+<dd>
+<p>Stephen H. Friedberg, Linear Algebra, 5<sup>th</sup> Edition</p>
+</dd>
+</dl>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<!-- 
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer> -->
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
+<script src="../../../javascripts/highlight.min.js"></script>
+<script src="../../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+<script src="../../../javascripts/b27b3e6448.js"></script>
+</body>
+</html>

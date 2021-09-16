@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/turing/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<title>Turing's proof - ccss17</title>
+<link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Turing's proof
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      ccss17
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../MathHistory/">
+        Math
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../paper/1404.6388/">
+        Paper
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Computer/nand2tetris/">
+        Computer
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../ProgrammerBase/">
+        ProgrammerBase
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../security-tutorial/">
+        security tutorial
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        ccss17
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Turing's proof
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Turing's proof
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    튜링의 증명
+  </a>
+<nav aria-label="튜링의 증명" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    배경
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#on-computable-numbers-with-an-application-to-the-entscheidungsproblem">
+    튜링의 논문 《On Computable Numbers, with an Application to the Entscheidungsproblem》
+  </a>
+<nav aria-label="튜링의 논문 《On Computable Numbers, with an Application to the Entscheidungsproblem》" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    튜링의 증명과정
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+    1. 튜링 기계
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    2. 보편만능기계
+  </a>
+<nav aria-label="2. 보편만능기계" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-1">
+    2-(1) 임의의 튜링기계를 보편만능기계의 기호로 구성된 텍스트로 환원하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-2">
+    2-(2) 텍스트로 사상된 튜링기계를 입력받아 실행하는 작동규칙표
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    3. 튜링의 증명
+  </a>
+<nav aria-label="3. 튜링의 증명" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-1">
+    3-(1) 무한의 크기(대각선 논법)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-2">
+    3-(2) 튜링기계의 개수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-3">
+    3-(3) 보편만능기계로도 해결할 수 없는 정지문제
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    튜링의 증명의 의미
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Set Theory
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Set Theory
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Set/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Set/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Set/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Set/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ArithmeticOperations/">
+        Arithmetic Operations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Polynomials/">
+        Polynomials
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/MatrixOperation/">
+        Matrix Operation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/Determinants/">
+        Determinants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/Diagonalization/">
+        Diagonalization
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/InnerProductSpaces/">
+        Inner Product Spaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/CanonicalForms/">
+        Canonical Forms
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Why the future doesn't need us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust Memo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    튜링의 증명
+  </a>
+<nav aria-label="튜링의 증명" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    배경
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#on-computable-numbers-with-an-application-to-the-entscheidungsproblem">
+    튜링의 논문 《On Computable Numbers, with an Application to the Entscheidungsproblem》
+  </a>
+<nav aria-label="튜링의 논문 《On Computable Numbers, with an Application to the Entscheidungsproblem》" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    튜링의 증명과정
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+    1. 튜링 기계
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    2. 보편만능기계
+  </a>
+<nav aria-label="2. 보편만능기계" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-1">
+    2-(1) 임의의 튜링기계를 보편만능기계의 기호로 구성된 텍스트로 환원하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-2">
+    2-(2) 텍스트로 사상된 튜링기계를 입력받아 실행하는 작동규칙표
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    3. 튜링의 증명
+  </a>
+<nav aria-label="3. 튜링의 증명" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-1">
+    3-(1) 무한의 크기(대각선 논법)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-2">
+    3-(2) 튜링기계의 개수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-3">
+    3-(3) 보편만능기계로도 해결할 수 없는 정지문제
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    튜링의 증명의 의미
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Turing's proof</h1>
+<h2 id="_1">튜링의 증명<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h3 id="_2">배경<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<p>1900년대 초 수학자들은 수학의 기초를 위하여 수학의 공리체계를 만들려고 했다는 것을 이미 언급했습니다. 그 중에서 힐베르트도 비유클리드 기하학, 유클리드 기하학, 해석학, 수론 등 모든 수학 체계의 정합성을 결정할 수 있는 규칙 체계를 만들려 했습니다. 힐베르트는 공리 체계가 다음 조건을 만족해야 한다고 말했습니다. 이것이 힐베르트의 프로그램입니다.</p>
+<ol>
+<li>
+<p>정합성 : 어떤 명제가 증명되면 그 명제는 참이다. 그리고 그 명제의 부정문이 증명되서는 안된다.</p>
+</li>
+<li>
+<p>완전성 : 모든 명제는 참이나 거짓으로 증명되어야(공리로부터 연역되어야) 한다.</p>
+</li>
+<li>
+<p>결정성 : 명제가 증명 가능한지(공리로부터 연역 가능한지) 확인하는 일반적인 과정이 존재해야 한다.</p>
+</li>
+</ol>
+<p>이것은 힐베르트가 적절한 공리와 추론규칙을 설정한 다음 그것의 형식적인 조작을 통하여 연역되는 정리들의 집합체(형식적 연역체계)로 수학을 구성한 것입니다. 즉, 힐베르트는 <strong>유한한 공리와 몇가지 추론규칙을 통하여 수학의 모든 사실을 도출해내는 것을 자동으로 할 수 있도록</strong> 만들고 싶었던 것입니다. 그래서 <strong>이러한 자동기계를 만들기만 하면 근의 공식이나 도함수 구하는 공식같은 수학적 사실들이 모두 자동으로 만들어질 수 있을 것</strong> 이라고 생각했습니다. 이 생각들은 <strong>수학적 사고를 순수한 기호 조작의 규칙으로 규명할 수 있다는 믿음</strong> 에 근거하고 있었습니다. </p>
+<p>하지만 이미 살펴보았듯이 괴델의 불완전성 정리로 인하여 자연수를 설명할 수 있을만큼 포괄적인 공리체계가 정합성(무모순성)을 가지면 그 체계는 반드시 불완전 체계라는 것이 밝혀졌습니다. 체계가 불완전하면 올바르지만 공리와 추론규칙으로 증명될 수 없는(연역될 수 없는) 명제가 반드시 존재한다는 것입니다. 괴델은 공리 체계가 자연수를 설명할 수 있기만 하면 반드시 그 수학 체계는 불완전 체계라는 것을 증명했었습니다. 따라서 괴델은 <strong>"공리와 추론규칙의 자동적인(기계적인) 조작으로(연역으로) 수학의 모든 사실들을 만들 수 없다."</strong> 는 것을 증명한 것입니다. 이에 따라 힐베르트 프로그램의 첫번째, 두번째 규칙이 무의미해졌습니다. </p>
+<p>힐베르트 프로그램의 세번째 규칙 "결정성" 은 어떤 계산식을 공리와 정해진 추론규칙으로 계속 풀다보면 언젠가 풀 수 있는지, 풀 수 없는지를 미리 알 수 있느냐 하는 정지문제(halting problem) 과 관련이 있습니다. "결정성" 은 "명제가 증명 가능한지(공리로부터 연역 가능한지) 확인하는 일반적인 과정이 존재한다." 고 주장하는데 이것은 공리로부터 </p>
+<p>그런데 이때 앨런 튜링이 나타나 세번째 규칙 "결정성" 도 무의미하게 만들어버렸습니다. 튜링은 1935년 케임브리지 수학과를 졸업한 대학원생이었는데 이때 막스 뉴먼 교수가 개설한 괴델의 불완전성 정리 강의를 수강 중이었습니다. 뉴먼 교수는 힐베르트 프로그램 중 아직 부정되지 않은 세번째 조건을 소개했는데, 이때 튜링은 괴델의 증명에서 아이디어를 착안하여 불완전성 정리를 다시 증명할 수 있고 세번째 조건 "결정성" 또한 부정할 수 있겠다는 생각을 했습니다. </p>
+<p>몇 주 후, <strong>튜링은 괴델이 증명한 "기계적인 방식(형식적인 방식)으로는 수학의 모든 사실을 만들어낼 수 없다." 를 독창적으로 다시 증명하고 세번째 조건 "결정성" 또한 부정하는 내용을 담은 논문 《On Computable Numbers, with an Application to the Entscheidungsproblem》(계산가능한 수에 대해서, 수리명제 자동생성 문제에 응용하면서) 를 런던 수리학회에 제출</strong> 했습니다.</p>
+<h3 id="on-computable-numbers-with-an-application-to-the-entscheidungsproblem">튜링의 논문 《On Computable Numbers, with an Application to the Entscheidungsproblem》<a class="headerlink" href="#on-computable-numbers-with-an-application-to-the-entscheidungsproblem" title="Permanent link">¶</a></h3>
+<p>튜링은 논문 《On Computable Numbers, with an Application to the Entscheidungsproblem》(계산가능한 수에 대해서, 수리명제 자동생성 문제에 응용하면서) 에서 먼저 매우 근본적인 것들을, 즉 "계산 가능한 것", "기계적인 것" 이 무엇인지 정의합니다.</p>
+<ul>
+<li>
+<p>계산 가능한 수 : <strong>소수 부분을 유한한 자리까지 계산할 수 있는 실수</strong> 이다.</p>
+</li>
+<li>
+<p>자동 기계 : <strong>네모 칸으로 이루어진 테이프에 있는 기호를 읽어서 그 기호에 해당하는 "명령" 을 수행하는 기계</strong> 이다. 여기서 <strong>"명령" 이란 본질적으로 "이것이면 저것을 하라"</strong> 이다. 이 "명령" 이란 <strong>(1) 네모칸 이동, (2) 네모칸 쓰기, (3) 네모칸 읽기</strong> 에 불과하다.</p>
+</li>
+</ul>
+<p>튜링은 자신이 정의내린 <strong>"자동 기계" 의 범주에 상상할 수 있는 모든 자동 기계가 포함된다</strong> 고 충분히 설득합니다. 그리고 자신의 방식대로 정의한 자동 기계를 <strong>튜링기계</strong> 라고 부릅니다. 그리고 <strong>튜링 기계를 텍스트로 사상시키는 방법</strong> 을 보이고 <strong>텍스트로 사상된 기계를 읽어서 기계의 동작을 그대로 흉내내는 보편만능기계(컴퓨터)</strong> 를 만들어서 보여줍니다. 그러므로 이 <strong>보편만능기계는 기계적이고 자동적인 범주 내에 있는 모든 일을 수행할 수 있는 기계</strong> 인 것입니다.</p>
+<blockquote>
+<p>이 보편만능기계를 사람들이 전자회로를 통하여 구현하여 오늘날의 컴퓨터가 된 것입니다. 그러므로 사실 구현 재료가 전기가 아니어도 됩니다. 물로도 보편만능기계를 구현할 수 있고 빛으로도 보편만능기계를 구현할 수 있습니다. 다만 현 시점에서 가장 현실적으로 효율이 높은 재료가 전기일 뿐입니다. 그러나 앞으로 더 효율적인 자연 현상과 재료를 발견한다면 새로운 재료로 보편만능기계를 구현할 수 있을 것입니다. 가령 양자 컴퓨터처럼 말이죠.</p>
+</blockquote>
+<p><strong>기계를 텍스트로 표현(프로그램)하여 보편만능기계(컴퓨터)에 입력하면 보편만능기계가 텍스트로 사상된 기계의 동작(프로그램)을 그대로 흉내내</strong> 줍니다. 그러니 사실 <strong>여러분도 이미 수많은 튜링기계를 텍스트로 사상시켜 보았고(코딩) 그것을 보편만능기계(컴퓨터)에 입력시켜서 실행시켜보았던 것</strong> 입니다. 여러분은 코딩을 하면서 지금까지 많은 튜링 기계를 만들었지만 그것을 물리적으로 구현할 필요가 없었습니다. 단지 보편만능기계에 입력해주기만 하면 되었기 때문입니다.</p>
+<h4 id="_3">튜링의 증명과정<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<p>이 보편만능기계를 중심으로 튜링은 다음과 같은 논증으로 증명을 마무리했습니다.</p>
+<ol>
+<li>
+<p><strong>(튜링 기계의 정의)</strong> 5 가지 부품을 정의한다. <strong>이 5 가지 부품들로 만든 기계로 실행할 수 있는 것이 "기계적이 방식" 이다.</strong> <strong>이 "기계적인 방식" 은 세상 모든 자동 기계를 포괄할 수 있을만큼 충분히 광범위</strong> 하다.</p>
+</li>
+<li>
+<p><strong>(보편만능기계의 정의)</strong> 그런데 이 튜링기계의 정의대로 어떤 특별한 튜링기계를 만들 수 있다. 이 튜링기계를 보편만능기계라고 부른다. 보편만능기계는 다음과 같이 설계된다.</p>
+<ol>
+<li>
+<p><strong>모든 튜링기계를 일관된 기호로 표현할 수 있도록 보편만능기계의 테이프 기호를 정의</strong> 한다.</p>
+</li>
+<li>
+<p>그러면 보편만능기계의 기호를 기반으로 모든 튜링기계를 순수한 텍스트로 사상시킬 수 있는데, <strong>이 텍스트를 입력받아서 튜링기계의 동작을 그대로 흉내낼 수 있도록 작동규칙표를 정의</strong> 한다.</p>
+</li>
+</ol>
+<p>그러므로 이 시점에서 <strong>보편만능기계는 세상에 존재하는 모든 기계적인 동작과 자동 기계를 대표</strong> 한다.</p>
+</li>
+<li>
+<p>핵심 논증 </p>
+<ol>
+<li>
+<p>무한의 크기(대각선 논법) : <strong>(1) 실수의 개수가 자연수의 개수보다 많고</strong> , <strong>(2) 자연수의 부분집합의 개수가 자연수의 개수보다 많다.</strong></p>
+</li>
+<li>
+<p>튜링기계의 개수(튜링기계에 자연수 부여하기) : <strong>튜링기계는 자연수만큼 많다.</strong></p>
+</li>
+<li>
+<p>보편만능기계로도 해결할 수 없는 정지문제 : 만약 모든 참인 명제를 기계적으로 만들어내는 튜링기계 <span class="arithmatex">\(A\)</span> 가 존재하면, <span class="arithmatex">\(A\)</span> 를 보편만능기계 위에 실행시킴으로써 임의의 튜링기계 <span class="arithmatex">\(M\)</span> 이 멈출지 멈추지 않을지 판단하는 튜링기계 <span class="arithmatex">\(H\)</span> 를 만들 수 있다. 그런데 <span class="arithmatex">\(H\)</span> 가 존재한다면 튜링기계의 개수가 자연수보다 많아지므로 모순이다. 그러므로 모든 참인 명제를 만들어내는 기계 <span class="arithmatex">\(A\)</span> 는 존재하지 않는다.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="1">1. 튜링 기계<a class="headerlink" href="#1" title="Permanent link">¶</a></h3>
+<p>튜링은 먼저 다음과 같은 5 가지 부품을 정의합니다.</p>
+<p><img alt="튜링기계" src="https://user-images.githubusercontent.com/16812446/83791074-2dce6500-a6d4-11ea-83e1-e7790ce8ba46.jpg"/></p>
+<ol>
+<li>
+<p><strong>(1번 부품)</strong> 무한히 많은 칸을 가진 테이프 (불변)</p>
+</li>
+<li>
+<p><strong>(2번 부품)</strong> 테이프에 기록되는 유한 개의 기호들 <strong>(튜링기계마다 가변)</strong></p>
+</li>
+<li>
+<p><strong>(3번 부품)</strong> 테이프의 기호를 읽고 쓰는 입출력 장치 (불변)</p>
+</li>
+<li>
+<p><strong>(4번 부품)</strong> 입출력 장치의 상태를 나타내는 유한 개의 기호들 <strong>(튜링기계마다 가변)</strong></p>
+</li>
+<li>
+<p><strong>(5번 부품)</strong> 기계의 작동 규칙표 <strong>(튜링기계마다 가변)</strong></p>
+</li>
+</ol>
+<p>위 그림의 튜링기계가 테이프를 읽고 명령어를 실행하는 세 단계만 보이겠습니다.</p>
+<ul>
+<li>
+<p>현재 상태가 <strong>A</strong> 이고 테이프에서 읽은 기호가 <strong>*</strong> 이므로 테이프에 <strong>*</strong> 를 쓰고, 입출력 장치를 오른쪽 테이프로 한칸 옮기고, 다음 상태 <strong>A</strong> 가 된다.</p>
+</li>
+<li>
+<p>현재 상태가 <strong>A</strong> 이고 읽은 기호가 <strong>$</strong> 이므로 테이프에 <strong>$</strong> 를 쓰고, 입출력 장치를 오른쪽 테이프로 한칸 옮기고, 다음 상태 <strong>B</strong> 가 된다. </p>
+</li>
+<li>
+<p>현재 상태가 <strong>B</strong> 이고 읽은 기호가 <strong>*</strong> 이므로 테이프에 <strong>*</strong> 를 쓰고, 입출력 장치를 왼쪽으로 한칸 옮기고, 다음 상태 <strong>C</strong> 가 된다.</p>
+</li>
+</ul>
+<p>튜링은 이 부품으로 구성된 기계로 0 과 1 을 반복해서 쓰는 기계, 사칙연산을 하는 기계 등 다양한 일을 할 수 있는 기계를 만들어 보여주었습니다. 그리고 <strong>존재할 수 있는 모든 "자동 기계" 가 이렇게 만든 기계로 실행할 수 있는 것의 범주 내에 충분히 들어간다</strong> 고 설득합니다. 그리고 그는 <strong>이 부품들로 만들어진 기계를 튜링 기계</strong> 라고 불렀습니다. </p>
+<h3 id="2">2. 보편만능기계<a class="headerlink" href="#2" title="Permanent link">¶</a></h3>
+<p>그리고 튜링은 이 5 가지 부품들로 <strong>어떤 특별한 튜링기계를 만들어서 보여주었는데, 그것이 바로 보편만능기계(universal machine)</strong> 였습니다. 보편만능기계는 다음 두 가지 아이디어대로 설계됩니다.</p>
+<ol>
+<li>
+<p><strong>(임의의 튜링기계를 보편만능기계의 기호로 구성된 텍스트로 환원하기)</strong> <strong>모든 튜링기계를 일관된 기호로 표현할 수 있도록 보편만능기계의 테이프 기호를 정의</strong> 한다. 그러면 보편만능기계의 기호를 기반으로 <strong>모든 튜링기계가 순수한 텍스트로 사상될 수 있고</strong> , 텍스트로 사상된 튜링기계는 보편만능기계의 테이프 입력으로 전달될 수 있다.</p>
+</li>
+<li>
+<p><strong>(텍스트로 사상된 튜링기계를 입력받아 실행하는 작동규칙표)</strong> 텍스트로 사상된 <strong>튜링기계를 입력받아서 그 튜링기계의 동작을 그대로 따라할 수 있도록 보편만능기계의 작동규칙표를 정의</strong> 한다.</p>
+</li>
+</ol>
+<p>튜링이 이 튜링기계를 보편만능기계라고 부른 것은, <strong>이 하나의 튜링기계로 존재하는 모든 튜링기계의 동작을 수행할 수 있었기 때문</strong> 이었습니다. 즉, 보편만능기계는 모든 기계적인 계산을 수행할 수 있는 기계인 것입니다.</p>
+<p>이제 이 보편만능기계의 두 가지 아이디어가 실제로 어떻게 구현되는지 살펴보겠습니다.</p>
+<h4 id="2-1">2-(1) 임의의 튜링기계를 보편만능기계의 기호로 구성된 텍스트로 환원하기<a class="headerlink" href="#2-1" title="Permanent link">¶</a></h4>
+<p>튜링은 보편만능기계의 유한 개의 기호를 정의하고, <strong>모든 튜링기계를 보편만능기계의 기호로 테이프에 사상시키는 방법</strong> 을 보였습니다. <strong>기호로 사상되어야 하는 튜링기계의 5 가지 부품</strong> 은 다음과 같습니다. </p>
+<ol>
+<li>
+<p>무한히 많은 칸을 가진 테이프 </p>
+</li>
+<li>
+<p>테이프에 기록되는 유한 개의 기호들</p>
+</li>
+<li>
+<p>테이프의 기호를 읽고 쓰는 입출력 장치 </p>
+</li>
+<li>
+<p>입출력 장치의 상태를 나타내는 유한 개의 기호들 </p>
+</li>
+<li>
+<p>기계의 작동 규칙표 </p>
+</li>
+</ol>
+<p>여기에서는 3 개의 테이프에 튜링기계의 5 가지 부품을 사상시켜보겠습니다.</p>
+<ul>
+<li>
+<p><strong>테이프 A : 1 번 부품과 3 번 부품</strong> , 즉 테이프와 입출력 장치가 사상된다.</p>
+</li>
+<li>
+<p><strong>테이프 B : 4 번 부품</strong> , 즉 입출력 장치의 상태를 나타내는 기호가 사상된다.</p>
+</li>
+<li>
+<p><strong>테이프 C : 5 번 부품</strong> , 즉 작동규칙표가 사상된다.</p>
+</li>
+</ul>
+<p><strong>2 번 부품, 즉 유한 개의 상태 기호와 테이프 기호</strong> 는 무수히 많은 튜링기계마다 다양하겠지만, 그것들을 모두 각각 </p>
+<p><strong>(상태기호) S0, S1, S2, ...</strong></p>
+<p><strong>(테이프기호) T0, T1, T3, ...</strong></p>
+<p>로 변환할 수 있기 때문에 이 <strong>일반적인 기호를 사용하는 튜링기계 M 이 모든 튜링기계를 대표한다</strong> 고 하겠습니다.</p>
+<h5 id="a">테이프 A<a class="headerlink" href="#a" title="Permanent link">¶</a></h5>
+<p><strong>테이프 A 에는 튜링기계 M 의 테이프와 입출력 장치</strong> 가 사상됩니다. 사상되는 방법은 다음과 같습니다.</p>
+<ul>
+<li>
+<p>튜링기계 <strong>M</strong> 의 테이프의 네모칸들 왼쪽에 빈칸을 하나 더 추가한다. 그러면 빈칸과 테이프 기호가 반복되어 나타난다. </p>
+</li>
+<li>
+<p><strong>M</strong> 의 입출력 장치가 현재 가르키고 있던 칸의 빈칸에만 위치기호 <strong>*</strong> 를 표시한다.</p>
+</li>
+</ul>
+<p>이 방식대로하면 원래의 튜링기계 <strong>M</strong> 의 테이프가</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>T0</strong></th>
+<th align="center"><strong>T1</strong></th>
+<th align="center"><strong>T3</strong></th>
+<th align="center"><strong>...</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>였고, 입출력 장치가 <strong>T0</strong> 을 가르키고 있었다면 테이프 1 로 사상된 튜링기계는 </p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>*</strong></th>
+<th align="center"><strong>T0</strong></th>
+<th align="center"></th>
+<th align="center"><strong>T1</strong></th>
+<th align="center"></th>
+<th align="center"><strong>T3</strong></th>
+<th align="center"><strong>...</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>가 됩니다. </p>
+<h5 id="b">테이프 B<a class="headerlink" href="#b" title="Permanent link">¶</a></h5>
+<p><strong>테이프 B 에는 튜링기계 M 의 상태기호(S0, S1, S2, ...)</strong> 가 쓰여집니다. 그래서 튜링기계 <strong>M</strong> 의 현재상태가 <strong>S0</strong> 이었다면 테이프 B 는</p>
+<table>
+<thead>
+<tr>
+<th align="center">S0</th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center">...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>가 됩니다. </p>
+<h5 id="c">테이프 C<a class="headerlink" href="#c" title="Permanent link">¶</a></h5>
+<p><strong>테이프 C 에는 5 번 부품, 즉 튜링기계 M 의 작동규칙표</strong> 가 사상됩니다. 튜링은 무수히 많은 튜링기계들이 무수히 많은 작동규칙표를 갖겠지만, 그 <strong>모든 작동규칙표들을 유한한 기호로 표현할 수 있다</strong> 는 것을 보여주었습니다. </p>
+<p>여기에서는 고정된 기호</p>
+<table>
+<thead>
+<tr>
+<th align="center">S</th>
+<th align="center">T</th>
+<th align="center">&gt;</th>
+<th align="center">&lt;</th>
+<th align="center">||</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+<th align="center">X</th>
+<th align="center">*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>를 사용하겠습니다. 이때 기호 <strong>X</strong> 는 각각의 규칙의 경계를 표시하는데 사용됩니다.</p>
+<ul>
+<li>
+<p>튜링기계 <strong>M</strong> 의 작동규칙표가 </p>
+<div align="center">
+<table>
+<thead>
+<tr>
+<th align="center"><strong>S0</strong></th>
+<th align="center"><strong>T0</strong></th>
+<th align="center"><strong>T1</strong></th>
+<th align="center"><strong>&gt;</strong></th>
+<th align="center"><strong>S1</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>S1</strong></td>
+<td align="center"><strong>T2</strong></td>
+<td align="center"><strong>T12</strong></td>
+<td align="center"><strong>&lt;</strong></td>
+<td align="center"><strong>S0</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>와 같았다면, 규칙들을 <strong>X</strong> 로 구분하여 다음과 같은 텍스트로 사상시킬 수 있습니다.</p>
+<div align="center">
+<p><strong>XS0T0T1&gt;S1XS1T2T12&lt;S0X</strong>
+</p></div>
+<p>최종적으로 <strong>이 작동규칙표를 테이프 C 에 사상</strong> 시키면 다음과 같습니다.</p>
+<div align="center">
+<table>
+<thead>
+<tr>
+<th align="center"><strong>X</strong></th>
+<th align="center"><strong>S</strong></th>
+<th align="center"><strong>0</strong></th>
+<th align="center"><strong>T</strong></th>
+<th align="center"><strong>0</strong></th>
+<th align="center"><strong>T</strong></th>
+<th align="center"><strong>1</strong></th>
+<th align="center"><strong>&gt;</strong></th>
+<th align="center"><strong>S</strong></th>
+<th align="center"><strong>1</strong></th>
+<th align="center"><strong>T</strong></th>
+<th align="center"><strong>2</strong></th>
+<th align="center"><strong>T</strong></th>
+<th align="center"><strong>1</strong></th>
+<th align="center"><strong>2</strong></th>
+<th align="center"><strong>&lt;</strong></th>
+<th align="center"><strong>S</strong></th>
+<th align="center"><strong>0</strong></th>
+<th align="center"><strong>X</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+<blockquote>
+<p>지금까지 설명의 간소화를 위하여 <strong>T0</strong> 같은 문자를 테이프 한 칸에 표시했는데, 실제로는 위와 같이 한 문자가 하나의 테이프 칸에 표시되어야 한다.</p>
+</blockquote>
+<p>이 방식으로 존재하는 모든 튜링기계의 작동규칙표를 고정된 기호 <strong>S,T,&gt;,&lt;,||,0,1,2,3,4,5,6,7,8,9,X,*</strong> 를 기반으로 테이프 C 에 사상시킬 수 있습니다.</p>
+<h4 id="2-2">2-(2) 텍스트로 사상된 튜링기계를 입력받아 실행하는 작동규칙표<a class="headerlink" href="#2-2" title="Permanent link">¶</a></h4>
+<p>이로써 <strong>모든 튜링기계를 대표하는 튜링기계 M 이 성공적으로 테이프 A, 테이프 B, 테이프 C 에 사상</strong> 되었습니다. 이제 이 테이프를 입력받아서 원래의 튜링기계의 동작을 그대로 흉내내는 <strong>보편만능기계의 작동규칙표를 설계</strong> 해보겠습니다. 그런데 이 작업은 생각보다 매우 쉬우며 다음과 같이 이루어집니다.</p>
+<ol>
+<li>
+<p><strong>테이프 B 에서 현재 상태 기호 <span class="arithmatex">\(S_i\)</span> 를 읽는다.</strong></p>
+</li>
+<li>
+<p><strong>테이프 A 에서 위치 기호(</strong>*<strong>) 를 찾아 그곳의 테이프 기호 <span class="arithmatex">\(T_j\)</span> 를 읽는다.</strong></p>
+</li>
+<li>
+<p><strong>현재 상태 기호 <span class="arithmatex">\(S_i\)</span> 와 읽은 기호 <span class="arithmatex">\(T_j\)</span> 에 해당하는 명령을 테이프 C 에서 찾아서 수행한다.</strong></p>
+</li>
+</ol>
+<p>이 작업을 반복하면 <strong>테이프로 사상된 임의의 튜링기계를 입력받아서 그 동작을 그대로 똑같이 흉내낼 수 있습니다.</strong> 그리고 이렇게 설계된 <strong>보편만능기계가 컴퓨터의 본질이자 원시 모델인 것</strong> 입니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>그런데 튜링기계란 하나의 테이프를 갖고 있어야 하는데, 여기서 살펴본 방식대로라면 임의의 튜링기계가 3 개의 테이프로 사상되어 보편만능기계의 입력으로 들어옵니다. 이 문제를 해결하는 것은 매우 쉬우며 설명의 간소화를 위하여 미리 언급하지 않았습니다. 가령 한 가지 방법은 3 개의 테이프를 하나씩 번갈아가며 써서 하나의 테이프로 합치는 것입니다. 그래서 만약 테이프 A, 테이프 B, 테이프 C 이 각각 다음과 같았다면</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(A_1\)</span></th>
+<th align="center"><span class="arithmatex">\(A_2\)</span></th>
+<th align="center"><span class="arithmatex">\(A_3\)</span></th>
+<th align="center"><span class="arithmatex">\(\dots\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(B_1\)</span></td>
+<td align="center"><span class="arithmatex">\(B_2\)</span></td>
+<td align="center"><span class="arithmatex">\(B_3\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(C_1\)</span></td>
+<td align="center"><span class="arithmatex">\(C_2\)</span></td>
+<td align="center"><span class="arithmatex">\(C_3\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>이렇게 하나의 테이프로 합칠 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(A_1\)</span></th>
+<th align="center"><span class="arithmatex">\(B_1\)</span></th>
+<th align="center"><span class="arithmatex">\(C_1\)</span></th>
+<th align="center"><span class="arithmatex">\(A_2\)</span></th>
+<th align="center"><span class="arithmatex">\(B_2\)</span></th>
+<th align="center"><span class="arithmatex">\(C_2\)</span></th>
+<th align="center"><span class="arithmatex">\(A_3\)</span></th>
+<th align="center"><span class="arithmatex">\(B_3\)</span></th>
+<th align="center"><span class="arithmatex">\(C_3\)</span></th>
+<th align="center"><span class="arithmatex">\(\dots\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>그러면 각 테이프를 읽기 위하여 일정한 거리를 건너뛰어서 읽기만 하면 되는 것입니다.</p>
+</div>
+<h3 id="3">3. 튜링의 증명<a class="headerlink" href="#3" title="Permanent link">¶</a></h3>
+<p>이제 본격적인 튜링의 증명에 도달했습니다. 튜링의 증명을 이해하기 위해서는 먼저 무한의 크기를 이해해야 합니다.</p>
+<h4 id="3-1">3-(1) 무한의 크기(대각선 논법)<a class="headerlink" href="#3-1" title="Permanent link">¶</a></h4>
+<p><a href="https://ko.wikipedia.org/wiki/%EA%B2%8C%EC%98%A4%EB%A5%B4%ED%81%AC_%EC%B9%B8%ED%86%A0%EC%96%B4">칸토어</a>는 <strong>(1) 실수의 개수가 자연수의 개수보다 훨씬 크다</strong> 는 것과 <strong>(2) 자연수의 부분집합의 개수가 자연수의 개수보다 훨씬 더 크다</strong> 는 것을 증명했습니다. 칸토어는 <strong>무한이 자연수만큼 있으면 셀 수 있을만큼 많다</strong> 고 표현했고 <strong>무한이 실수만큼 있으면 셀 수 없을만큼 많다</strong> 고 표현했습니다.</p>
+<blockquote>
+<p>아래의 칸토어의 증명을 대각선 논법이라고 하는데 이 증명이 너무 직관적이고 아름다워서 에르되시 팔은 이 증명이 "하나님이 갖고 있는 수학책에 있는 증명이다." 라고 말했습니다.</p>
+</blockquote>
+<h5 id="3-1-1">3-(1)-(1) 실수의 개수가 자연수의 개수보다 더 크다.<a class="headerlink" href="#3-1-1" title="Permanent link">¶</a></h5>
+<p>실수의 개수가 자연수의 개수보다 훨씬 크다는 칸토어의 증명은 다음과 같습니다.</p>
+<ol>
+<li>
+<p>먼저 실수집합 전체 대신 구간 <span class="arithmatex">\((0,1)\)</span> 을 상정하자. 다음의 탄젠트 함수 <span class="arithmatex">\(y=\tan\bigg(\pi{}x-\dfrac{\pi}{2}\bigg)\)</span> 을 살펴보면 구간 <span class="arithmatex">\((0,1)\)</span> 의 실수가 모든 실수 전체 집합로 사상(mapping)되기 때문에 구간 <span class="arithmatex">\((0,1)\)</span> 과 실수전체 집합은 서로 크기가 같다는 것을 알 수 있다.</p>
+<div align="center">
+<p><img alt="desmos-graph" src="https://user-images.githubusercontent.com/16812446/83792797-8868c080-a6d6-11ea-8dac-6238abb22dfa.png"/></p>
+</div>
+</li>
+<li>
+<p>그리고 이 구간 <span class="arithmatex">\((0,1)\)</span> 에 존재하는 모든 실수에 다음과 같이 자연수로 번호 매길 수 있다고 하자. </p>
+<p><span class="arithmatex">\(R_1=0.a_{11}a_{12}a_{13}a_{14}a_{15}\dots{}a_{1i}\dots\)</span></p>
+<p><span class="arithmatex">\(R_2=0.a_{21}a_{22}a_{23}a_{24}a_{25}\dots{}a_{2i}\dots\)</span></p>
+<p><span class="arithmatex">\(R_3=0.a_{31}a_{32}a_{33}a_{34}a_{35}\dots{}a_{3i}\dots\)</span></p>
+<p><span class="arithmatex">\(R_4=0.a_{41}a_{42}a_{43}a_{44}a_{45}\dots{}a_{4i}\dots\)</span></p>
+<p><span class="arithmatex">\(R_5=0.a_{51}a_{52}a_{53}a_{54}a_{55}\dots{}a_{5i}\dots\)</span></p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p><span class="arithmatex">\(R_i=0.a_{i1}a_{i2}a_{i3}a_{i4}a_{i5}\dots{}a_{ii}\dots\)</span></p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p>정말로 구간 <span class="arithmatex">\((0,1)\)</span> 에 존재하는 모든 실수에 자연수로 번호매길 수 있다면 실수의 크기와 자연수의 크기는 같은 것이 된다. <span class="arithmatex">\(R_i\)</span> 는 자연수 <span class="arithmatex">\(i\)</span> 로 번호매겨진 실수를 뜻하고, <span class="arithmatex">\(a_{ij}\)</span> 는 <span class="arithmatex">\(0\)</span> 부터 <span class="arithmatex">\(9\)</span> 사이의 자연수이다.</p>
+</li>
+<li>
+<p>이제 어떤 실수 <span class="arithmatex">\(x=0.b_{1}b_{2}b_{3}b_{4}b_{5}\dots{}b_{i}\dots\)</span> 를 이렇게 만들어보자. 실수 <span class="arithmatex">\(x\)</span> 의 소수 <span class="arithmatex">\(i\)</span> 번째 자리수 <span class="arithmatex">\(b_i\)</span> 를 위와 같은 실수 <span class="arithmatex">\(R_i\)</span> 에서 <span class="arithmatex">\(a_{ii}\)</span> 가 <span class="arithmatex">\(9\)</span> 보다 작은 수라면 <span class="arithmatex">\(a_{ii}+1\)</span> 로 정하고, <span class="arithmatex">\(9\)</span> 라면 <span class="arithmatex">\(0\)</span> 으로 정하자.</p>
+<p>그러므로 만약 실수들이 </p>
+<p><span class="arithmatex">\(R_1=0.3a_{12}a_{13}a_{14}a_{15}\dots{}a_{1i}\dots\)</span></p>
+<p><span class="arithmatex">\(R_2=0.a_{21}8a_{23}a_{24}a_{25}\dots{}a_{2i}\dots\)</span></p>
+<p><span class="arithmatex">\(R_3=0.a_{31}a_{32}9a_{34}a_{35}\dots{}a_{3i}\dots\)</span></p>
+<p><span class="arithmatex">\(R_4=0.a_{41}a_{42}a_{43}0a_{45}\dots{}a_{4i}\dots\)</span></p>
+<p><span class="arithmatex">\(R_5=0.a_{51}a_{52}a_{53}a_{54}1\dots{}a_{5i}\dots\)</span></p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p><span class="arithmatex">\(R_i=0.a_{i1}a_{i2}a_{i3}a_{i4}a_{i5}\dots{}5\dots\)</span></p>
+<p><span class="arithmatex">\(\vdots\)</span></p>
+<p>라고 되어 있었다면 <span class="arithmatex">\(x=0.49012\dots{}6 \dots\)</span> 이 될 것이다.</p>
+</li>
+<li>
+<p>그렇다면 이 실수 <span class="arithmatex">\(x\)</span> 는 자연수로 번호 매겨진 모든 실수 <span class="arithmatex">\(R_i\)</span> 들과 <span class="arithmatex">\(i\)</span> 번째 소수 자리수에서 반드시 다르다. 그러므로 이 실수 <span class="arithmatex">\(x\)</span> 는 자연수로 번호 매겨진 모든 실수와 다르다.</p>
+</li>
+<li>
+<p>자연수로 모든 실수에 번호를 매겼다고 가정했지만, 그 이외의 실수 <span class="arithmatex">\(x\)</span> 가 발견되었으므로 <strong>자연수의 개수보다 실수의 개수가 더 크다.</strong></p>
+</li>
+</ol>
+<h5 id="3-1-2">3-(1)-(2) 자연수의 부분집합의 개수가 자연수의 개수보다 더 크다.<a class="headerlink" href="#3-1-2" title="Permanent link">¶</a></h5>
+<p>자연수의 개수보다 자연수의 부분집합의 개수가 훨씬 많다는 칸토어의 증명은 다음과 같습니다.</p>
+<ol>
+<li>
+<p><strong>자연수의 부분집합이 자연수만큼 있다면 그 집합들 모두에 다음과 같이 자연수로 번호를 매길 수 있다.</strong></p>
+<p><span class="arithmatex">\(N_1,N_2,N_3,\dots,N_i,\dots\)</span></p>
+<ul>
+<li>
+<p>자연수의 부분집합이므로 <span class="arithmatex">\(N_1,N_2,N_3,\dots,N_i,\dots\)</span> 은 대강 </p>
+<div class="arithmatex">\[\{2\}, \{42, 882\}, \{1\}, \{5, 8\}, \{\}, \{0\}, \{9, 2, 888\}, \{9292111\}, \dots \]</div>
+<p>와 같은 모습일 것이다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>그러면 자연수를 원소로 갖는 집합 <span class="arithmatex">\(X\)</span> 를 이렇게 만들어보자. <span class="arithmatex">\(N_1\)</span> 에 <span class="arithmatex">\(1\)</span> 이 없다면 <span class="arithmatex">\(X\)</span> 에 <span class="arithmatex">\(1\)</span> 을 넣고, <span class="arithmatex">\(N_2\)</span> 에 <span class="arithmatex">\(2\)</span> 가 없다면 <span class="arithmatex">\(X\)</span> 에 <span class="arithmatex">\(2\)</span> 를 넣는다. 즉, <strong>임의의 자연수 <span class="arithmatex">\(i\)</span> 에 대하여 <span class="arithmatex">\(N_i\)</span> 에 <span class="arithmatex">\(i\)</span> 가 없다면 <span class="arithmatex">\(X\)</span> 에 <span class="arithmatex">\(i\)</span> 를 넣어 보자는 것이다. 반면 <span class="arithmatex">\(N_i\)</span> 에 <span class="arithmatex">\(i\)</span> 가 있다면 <span class="arithmatex">\(X\)</span> 에 <span class="arithmatex">\(i\)</span> 를 넣지 말아보자.</strong></p>
+</li>
+<li>
+<p>그렇다면 <strong><span class="arithmatex">\(X\)</span> 는 자연수의 부분집합이지만 <span class="arithmatex">\(N_1,N_2,N_3,\dots,N_i,\dots\)</span> 들과 다르다.</strong> 왜냐하면 임의의 자연수 <span class="arithmatex">\(i\)</span> 에 대하여 <strong><span class="arithmatex">\(N_i\)</span> 에 <span class="arithmatex">\(i\)</span> 가 없다면 <span class="arithmatex">\(X\)</span> 에는 있고 <span class="arithmatex">\(N_i\)</span> 에 <span class="arithmatex">\(i\)</span> 가 있다면 <span class="arithmatex">\(X\)</span> 에는 없기 때문</strong> 이다. </p>
+</li>
+<li>
+<p>자연수의 부분집합 모두에 자연수로 번호를 매겼다고 가정했지만, 그 이외의 자연수의 부분집합 <span class="arithmatex">\(X\)</span> 가 발견되었으므로 <strong>자연수의 개수보다 자연수의 부분집합의 개수가 더 크다.</strong></p>
+</li>
+</ol>
+<h4 id="3-2">3-(2) 튜링기계의 개수<a class="headerlink" href="#3-2" title="Permanent link">¶</a></h4>
+<p>그렇다면 튜링기계의 개수는 셀 수 있을만큼(자연수만큼) 많을까요, 셀 수 없을만큼(실수만큼) 많을까요? 결론만 말하면 <strong>튜링기계의 개수는 셀 수 있을만큼(자연수만큼) 많습니다.</strong> 즉, <strong>튜링기계의 개수는 자연수의 개수를 넘지 못합니다.</strong> 왜냐하면 <strong>튜링기계를 테이프로 사상시킬 수 있고, 그 테이프를 고유한 자연수로 사상시킬 수 있기 때문</strong> 입니다.</p>
+<p>우리는 튜링기계를 테이프로 사상시킬 때 유한한 기호 </p>
+<table>
+<thead>
+<tr>
+<th align="center">S</th>
+<th align="center">T</th>
+<th align="center">&gt;</th>
+<th align="center">&lt;</th>
+<th align="center">||</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+<th align="center">X</th>
+<th align="center">*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>를 사용했습니다. 그러므로 테이프를 자연수로 표현할 수 있는 한가지 방법은 다음과 같이 테이프를 17진수의 자연수로 사상시키는 것입니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">기호</th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center"><span class="arithmatex">\(\dots\)</span></th>
+<th align="center">9</th>
+<th align="center">S</th>
+<th align="center">T</th>
+<th align="center">&gt;</th>
+<th align="center">&lt;</th>
+<th align="center">||</th>
+<th align="center">X</th>
+<th align="center">*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>자연수</strong></td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center"><span class="arithmatex">\(\dots\)</span></td>
+<td align="center">9</td>
+<td align="center">10</td>
+<td align="center">11</td>
+<td align="center">12</td>
+<td align="center">13</td>
+<td align="center">14</td>
+<td align="center">15</td>
+<td align="center">16</td>
+</tr>
+</tbody>
+</table>
+<p>그런데 존재하는 모든 튜링기계는 이 유한한 기호로 표현될 수 있습니다. 따라서 존재하는 <strong>모든 튜링기계를 고유의 자연수로 사상시킬 수 있습니다.</strong></p>
+<ul>
+<li>
+<p>가령 <strong>XS1T2&gt;*</strong> 와 같이 표현된 매우 간단한 튜링기계를 생각하자. 그러면 이것을 다음과 같이 17진수 자연수로 해석하여 </p>
+<div align="center">
+<table>
+<thead>
+<tr>
+<th align="center">X</th>
+<th align="center">S</th>
+<th align="center">1</th>
+<th align="center">T</th>
+<th align="center">2</th>
+<th align="center">&gt;</th>
+<th align="center">*</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">15</td>
+<td align="center">10</td>
+<td align="center">1</td>
+<td align="center">11</td>
+<td align="center">2</td>
+<td align="center">12</td>
+<td align="center">16</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>고유의 자연수</p>
+<div class="arithmatex">\[15\times{}17^{6}+10\times{}17^{5}+1\times{}17^{4}+11\times{}17^{3}+2\times{}17^{2}+12\times{}17^{1}+16\times{}17^{0}=376400467\]</div>
+<p>를 부여할 수 있다. 이렇게 존재하는 모든 튜링기계에 고유의 자연수를 부여할 수 있기 때문에 튜링기계의 개수는 자연수의 개수를 넘지 못한다.</p>
+</li>
+</ul>
+<p>이로써 우리는 <strong>튜링기계(프로그램)의 개수가 자연수의 개수를 넘지 못한다</strong> 는 결론에도 도달할 수 있습니다. 더 나아가 프로그램에 입력되는 입력 또한 텍스트에 불과하므로 비슷한 방식으로 고유의 자연수로 사상될 수 있습니다. 따라서 <strong>프로그램의 입력도 자연수의 개수를 넘지 못합니다.</strong></p>
+<p><strong>이제 튜링의 증명을 이해할 모든 준비가 끝났습니다.</strong></p>
+<h4 id="3-3">3-(3) 보편만능기계로도 해결할 수 없는 정지문제<a class="headerlink" href="#3-3" title="Permanent link">¶</a></h4>
+<p><strong>튜링의 증명의 목표는 모든 참인 명제를 기계적으로 만들 수 있는 튜링기계가 존재하지 않는다는 것을 보이는 것</strong> 이었습니다. 튜링은 먼저 <strong>모든 참인 명제를 만들어낼 수 있는 튜링기계 <span class="arithmatex">\(A\)</span> 가 존재한다고 가정</strong> 하고 다음과 같은 논증을 펼쳤습니다.</p>
+<ol>
+<li>
+<p>이 튜링기계 <span class="arithmatex">\(A\)</span> 를 사용하여 <strong>어떤 튜링기계가 실행이 종료될지 종료되지 않고 실행이 영원히 계속될지 판단하는 튜링기계 <span class="arithmatex">\(H\)</span> 를 만들 수 있다.</strong></p>
+<blockquote>
+<p><span class="arithmatex">\(H\)</span> 는 정지문제(halting problem) 에서 따왔다.</p>
+</blockquote>
+</li>
+<li>
+<p>보편만능기계는 임의의 튜링기계를 입력받아 흉내낼 수 있으므로 튜링기계 <span class="arithmatex">\(A\)</span> 를 입력시켜서 실행시키자.</p>
+</li>
+<li>
+<p>이때 어떤 튜링기계 <span class="arithmatex">\(M\)</span> 을 보편만능기계 위에서 실행되고 있는 튜링기계 <span class="arithmatex">\(A\)</span> 의 입력으로 넣자.</p>
+</li>
+<li>
+<p>그러면 <span class="arithmatex">\(A\)</span> 는 모든 참인 명제를 만들어낸다고 가정했으므로 언젠가 "튜링기계 <span class="arithmatex">\(M\)</span> 은 멈춘다." 또는 "튜링기계 <span class="arithmatex">\(M\)</span> 은 멈추지 않는다." 라는 명제를 도출할 것이다.</p>
+</li>
+<li>
+<p>이것은 곧 튜링기계 <span class="arithmatex">\(H\)</span> 의 기능이므로 우리는 <strong>"튜링기계 <span class="arithmatex">\(A\)</span> 가 존재한다면 튜링기계 <span class="arithmatex">\(H\)</span> 도 존재한다."(<span class="arithmatex">\(A\to{}H\)</span>)</strong> 는 결론을 얻는다.</p>
+</li>
+</ol>
+<p><strong>그런데 튜링기계 <span class="arithmatex">\(H\)</span> 가 존재한다면 튜링기계의 개수가 자연수의 개수보다 많아집니다.</strong> 그러나 튜링 기계의 개수는 자연수를 넘지 못합니다. 그러므로 <strong>튜링기계 <span class="arithmatex">\(H\)</span> 는 존재할 수 없고 결국 튜링기계 <span class="arithmatex">\(A\)</span> 도 존재해서는 안됩니다.</strong> 다음의 논증을 보겠습니다. 무한의 크기를 증명할 때 사용되었던 대각선 논법이 사용됩니다.</p>
+<ol>
+<li>
+<p>튜링기계의 개수는 자연수의 개수보다 많지 않다. 그러므로 <strong>모든 튜링기계에 자연수로 번호 <span class="arithmatex">\(M_1,M_2,\dots,M_i,\dots\)</span> 를 붙힐 수 있다.</strong></p>
+</li>
+<li>
+<p>그리고 어떤 튜링기계에 입력되는 테이프도 유한개의 기호로 이루어져있으므로 자연수로 사상될 수 있으며, 이에따라 입력 또한 자연수의 개수보다 많지 않다. 따라서 <strong>튜링기계에 입력될 수 있는 모든 입력에도 자연수로 번호 <span class="arithmatex">\(I_1,I_2,I_3,\dots,I_i,\dots\)</span> 를 부여할 수 있다.</strong></p>
+</li>
+<li>
+<p>그런데 <span class="arithmatex">\(H\)</span> 가 존재한다면 모든 입력에 대한 모든 튜링기계를 <span class="arithmatex">\(H\)</span> 에 입력시켜서 멈출지, 멈추지 않을지 판단한 결과를 다음과 같은 표로 만들 수 있다. <span class="arithmatex">\(1\)</span> 이면 실행이 끝난다는 것이고, <span class="arithmatex">\(0\)</span> 이면 실행이 끝나지 않고 영원히 계속된다는 것이다.</p>
+<div align="center">
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"><span class="arithmatex">\(I_{1}\)</span></th>
+<th align="center"><span class="arithmatex">\(I_{2}\)</span></th>
+<th align="center"><span class="arithmatex">\(I_{3}\)</span></th>
+<th align="center"><span class="arithmatex">\(\dots\)</span></th>
+<th align="center"><span class="arithmatex">\(I_{i}\)</span></th>
+<th align="center"><span class="arithmatex">\(\dots\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(M_{1}\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(M_{2}\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(M_{3}\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\ddots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(M_{i}\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(1\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span></td>
+<td align="center"><span class="arithmatex">\(0\)</span></td>
+<td align="center"><span class="arithmatex">\(\dots\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\vdots\)</span></td>
+<td align="center"><span class="arithmatex">\(\ddots\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>위 표에 따르면 튜링기계 <span class="arithmatex">\(M_i\)</span> 에 입력 <span class="arithmatex">\(I_i\)</span> 를 입력시켜서 실행한 결과가 <span class="arithmatex">\(0\)</span> 인데 이것은 <span class="arithmatex">\(H\)</span> 가 입력 <span class="arithmatex">\(I_i\)</span> 를 받은 기계 <span class="arithmatex">\(M_i\)</span> 의 실행이 끝나지 않는다고 판단한 것이다.</p>
+</li>
+<li>
+<p>그러면 튜링기계 <span class="arithmatex">\(B\)</span> 를 이렇게 만들어보자. <span class="arithmatex">\(B\)</span> 는 위 표의 입력 <span class="arithmatex">\(I_k\)</span> 와 기계 <span class="arithmatex">\(M_k\)</span> 를 입력으로 받아서 <span class="arithmatex">\(H\)</span> 의 결과가 <span class="arithmatex">\(0\)</span> 이면 <span class="arithmatex">\(1\)</span> 을 출력하고, <span class="arithmatex">\(H\)</span> 의 결과가 <span class="arithmatex">\(1\)</span> 이면 입력 <span class="arithmatex">\(I_k\)</span> 를 <span class="arithmatex">\(M_k\)</span> 에 넣고 실행한 결과에 <span class="arithmatex">\(1\)</span> 을 더한 것을 출력한다. </p>
+<ul>
+<li>그러므로 <span class="arithmatex">\(A\)</span> 가 존재한다면 <span class="arithmatex">\(H\)</span> 가 존재하고, <span class="arithmatex">\(H\)</span> 가 존재한다면 <span class="arithmatex">\(B\)</span> 가 존재한다는 결론(<span class="arithmatex">\(A\to{}H\to{}B\)</span>)을 얻는다.</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(B\)</span> 도 5 가지 부품으로 정의된 엄연한 튜링기계이다. 그럼에도 불구하고 <span class="arithmatex">\(B\)</span> 는 위 표에 나타난 존재하는 모든 튜링기계와 다르다. 왜냐하면 <span class="arithmatex">\(k\)</span> 번째 입력 <span class="arithmatex">\(I_k\)</span> 에 대하여 <span class="arithmatex">\(k\)</span> 번째 기계 <span class="arithmatex">\(M_k\)</span> 와 다르게 작동하기 때문이다.</p>
+</li>
+<li>
+<p>존재하는 모든 튜링기계에 자연수로 번호 <span class="arithmatex">\(M_1,M_2,\dots,M_i,\dots\)</span> 를 부여했는데도 그 이외의 튜링기계 <span class="arithmatex">\(B\)</span> 가 발견되었다. 튜링기계의 개수는 자연수를 넘지 못하므로 이것은 모순이다.</p>
+</li>
+<li>
+<p>그러므로 튜링기계 <span class="arithmatex">\(B\)</span> 는 존재해서는 안된다. 이에따라 <span class="arithmatex">\(B\)</span> 를 있게한 튜링기계 <span class="arithmatex">\(H\)</span> 도 존재하지 않는다. 그러므로 <span class="arithmatex">\(H\)</span> 를 있게한 튜링기계 <span class="arithmatex">\(A\)</span> 도 존재하지 않는다.</p>
+</li>
+</ol>
+<p>이로써 우리는 <strong>모든 참인 명제를 만들어내는 튜링기계 <span class="arithmatex">\(A\)</span> 는 존재할 수 없다</strong> 는 결론에 도달했습니다. <strong>이로써 튜링의 증명이 완료되었습니다.</strong></p>
+<h3 id="_4">튜링의 증명의 의미<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p>튜링은 아마 괴델이 불완전성 정리에서 괴델이 상위 수학명제를 순수학 수학명제로 사상시키는 것을 보고 튜링기계(상위 수학명제)를 순수한 텍스트로 구성된 테이프(수학명제)로 사상시키자는 생각을 했던 것 같습니다. 그리고 괴델이 수학명제에 고유의 괴델수를 부여한 것처럼 그 테이프에 고유의 자연수를 부여할 수 있다는 것을 깨달은 것 같습니다. 이 관점에서 바라본다면 모든 튜링기계는 <strong>PM</strong> 속으로 사상될 수 있는 상위 수학명제이고, 테이프로 사상된 튜링기계(프로그램의 소스코드)는 <strong>PM</strong> 속의 형식문 모임(증명)과 같습니다. </p>
+<table>
+<thead>
+<tr>
+<th align="center">괴델의 불완전성 정리</th>
+<th align="center">튜링의 증명</th>
+<th align="center">컴퓨터</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">상위 수학명제</td>
+<td align="center">튜링기계</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">수학명제</td>
+<td align="center">테이프로 사상된 튜링기계</td>
+<td align="center">하드웨어와 프로그램</td>
+</tr>
+<tr>
+<td align="center">괴델수</td>
+<td align="center">테이프에 부여된 고유의 자연수</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">힐베르트 프로그램</td>
+<td align="center">튜링기계 <span class="arithmatex">\(A\)</span></td>
+<td align="center">모든 문제를 해결할 수 있는 알고리즘을 자동으로 생성하는 프로그램</td>
+</tr>
+<tr>
+<td align="center">세번째 조건 결정성(명제가 증명가능한지 확인하는 알고리즘이 존재한다)</td>
+<td align="center">튜링기계 <span class="arithmatex">\(H\)</span></td>
+<td align="center">어떤 프로그램이 끝날지 끝나지 않을지 판단하는 프로그램</td>
+</tr>
+</tbody>
+</table>
+<p>증명가능한지 확인한다는 것 자체가 공리로부터 그 결론이 도달 가능한지(연역 가능한지) 검증한다는 것이기 때문에, 프로그램을 구성하는 코드 한 줄 한 줄이 형식문 한 줄 한 줄에 대응되고 그것이 끝날지 끝나지 않을지 결정하는 알고리즘은 공리로부터 결론이 도달 가능한지 도달할 수 없는지 확인하는 방법과 같다?</p>
+<p>물리학 -&gt; 해석학, 기하학 -&gt; 자연수를 설명할 수 만큼 포괄적인 체계(형식적 연역체계) = 프로그램</p>
+<p>튜링기계의 1 번 부품 테이프는 컴퓨터의 <strong>RAM</strong> 으로, 3 번 부품 테이프 입출력 장치는 <strong>RAM</strong> 입출력 장치로, 5 번 부품(보편만능기계) 의 작동규칙표는 컴퓨터의 <strong>CPU</strong> 로 구현되었습니다. 이것으로 우리는 컴퓨터가 튜링기계의 특수한 경우의 보편만능기계의 물리적 구현체이므로 컴퓨터는 튜링기계의 범주내에 속한다는 것을 알 수 있습니다. 컴퓨터가 모든 참인 명제를 만들어낼 수 없고, 세상에 존재하는 모든 문제를 자동적으로 해결할 수 없다는 것을 뜻합니다.</p>
+<p>이로써 컴퓨터(하드웨어)란 튜링기계의 특수한 경우인 보편만능기계를 물리적으로 구현한 것이고, 컴퓨터에 입력되는 프로그램은 보편만능기계에 입력되는 모든 튜링기계라는 것을 알 수 있습니다. 보편만능기계를 비단 물리적으로 구현해야만 하는 것이 아니고 소프트웨어로 구현할 수도 있기 때문에 <strong>Windows</strong> 시스템에서 <strong>Ubuntu Linux</strong> 같은 가상머신을 설치하여 또 다른 보편만능기계를 실행시킬 수 있는 것입니다.</p>
+<p>하지만 튜링기계를 능가하는 기계가 존재하는가에 대한 의문은 아직 풀리지 않았습니다. 지금의 컴퓨터는 튜링의 정의일 뿐입니다. 따라서 튜링 기계를 능가하는 컴퓨터의 탄생은 아직 오지 않았을지도 모릅니다.</p>
+<hr/>
+<p>또한 우리는 괴델이 『수학 원리』의 모든 논증과 명제와 논리 패턴들을 순수한 수로 사상시킨 것처럼, 그 아이디어가 그대로 컴퓨터에 사용된 것을 알 수 있습니다. 즉 <strong>컴퓨터는 수를 다루는 기계이지만 수가 모든 종류의 패턴과 구조를 표현할 수 있는 보편적인 매개 수단이므로 컴퓨터로 세상에 존재하는 모든 종류의 패턴(논리적 패턴, 비논리적 패턴, 정합적인 패턴, 부정합적인 패턴 등)을 자동화시킬 수 있다는 것</strong> 입니다.</p>
+<p>이에 따라 컴퓨터로 인간의 이성을 대체하려는 인공지능 연구자들은 다시 기운을 되찾을 수 있습니다. 왜냐하면 인간의 뇌 속의 뉴런의 구조와 패턴 또한 수로 사상시킬 수 있고, 수로 사상된 것은 무엇이든지간에 컴퓨터 프로그램으로 대체시킬 수 있기 때문입니다. 실제로 우리는 이미 뉴런과 그것이 이루는 신경망을 프로그램으로 구현하는 시대에 살고 있습니다.</p>
+<hr/>
+<p>근데 임의의 튜링기계에 대하여 이 표를 만들 수 있다면, 그 표를 기반으로 자연수 개수를 초월하는 존재해서는 안되는 튜링기계를 만들 수 있는 거 아닌가. 그렇다면 이 표는 절대로 만들어져서는 안된다. 그 말 뜻은 모든 튜링기계는 반드시 어떤 입력에 대하여 출력을 하지 않는다. 즉, 종료되지 않는다.</p>
+<hr/>
+<dl>
+<dt>ref:</dt>
+<dd>
+<p><a href="https://book.naver.com/bookdb/book_detail.nhn?bid=9078133">『컴퓨터과학이 여는 세계』, 이광근</a></p>
+</dd>
+</dl>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<!-- 
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer> -->
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+<script src="../../javascripts/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+<script src="../../javascripts/b27b3e6448.js"></script>
+</body>
+</html>

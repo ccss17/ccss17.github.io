@@ -1,0 +1,2884 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/ProgrammerBase/vim/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<title>Vim - ccss17</title>
+<link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#day3">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Vim
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      ccss17
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Math/MathHistory/">
+        Math
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../paper/1404.6388/">
+        Paper
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Computer/nand2tetris/">
+        Computer
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../">
+        ProgrammerBase
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../security-tutorial/">
+        security tutorial
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        ccss17
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Set Theory
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Set Theory
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/ArithmeticOperations/">
+        Arithmetic Operations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Polynomials/">
+        Polynomials
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/MatrixOperation/">
+        Matrix Operation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/Determinants/">
+        Determinants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/Diagonalization/">
+        Diagonalization
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/InnerProductSpaces/">
+        Inner Product Spaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/CanonicalForms/">
+        Canonical Forms
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Why the future doesn't need us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust Memo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Vim
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Vim
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day3">
+     ☀️ ️여기서부터 Day3   ☀️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim">
+    vim
+  </a>
+<nav aria-label="vim" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    텍스트 편집에서 단축키 개수와 입력 횟수의 관계
+  </a>
+<nav aria-label="텍스트 편집에서 단축키 개수와 입력 횟수의 관계" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    일반 텍스트 에디터의 단축키 개수와 입력 회수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim_1">
+    vim 의 단축키 개수와 입력 회수
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim_2">
+    vim 으로 일반 텍스트 에디터 대체하기
+  </a>
+<nav aria-label="vim 으로 일반 텍스트 에디터 대체하기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    기본 커서 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    기능 반복
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    입력모드로 들어가기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    에디터 종료
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    지우기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    지우고 편집하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    화면 내의 커서 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    취소
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    드래그
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    복사하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    잘라내기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    화면 밖으로의 커서 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    찾기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    화면 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    커서를 기준으로 화면 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    명령 실행
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    대문자, 소문자 변경
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    다중 입력
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    문장 붙히기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    화면 분할
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    코드 포맷팅
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day3_1">
+     🌜 ️여기까지 Day3     🌜️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4">
+     ☀️ ️여기서부터 Day4   ☀️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim_3">
+    더 빨라진 vim
+  </a>
+<nav aria-label="더 빨라진 vim" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alias">
+    더 빨라진 alias
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim-plug">
+    vim-plug
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vimrc">
+    vimrc
+  </a>
+<nav aria-label="vimrc" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_24">
+    더 이뻐진 테마
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim_4">
+    더 빨라진 vim 종료/저장
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nerdtree">
+    NERDTree
+  </a>
+<nav aria-label="NERDTree" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_25">
+    더 빨라진 화면 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim_5">
+    더 빨라진 vim 화면크기조정
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nerdcommentor">
+    NERDCommentor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim-multiple-cursors">
+    vim-multiple-cursors
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vscode-vim">
+    VSCode Vim
+  </a>
+<nav aria-label="VSCode Vim" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_26">
+    단축키
+  </a>
+<nav aria-label="단축키" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_27">
+    주석 처리
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_28">
+    단축키 설정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_29">
+    그외의 단축키
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vscode-vim_1">
+    VSCode Vim 예시
+  </a>
+<nav aria-label="VSCode Vim 예시" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-list-to-dictionary">
+    Python - List to Dictionary
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-copy-paste">
+    Python - copy &amp; paste
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-multi-cursor">
+    Python - multi cursor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-rename-argument">
+    Python - rename argument
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c-">
+    C 언어 - 변수 한 줄로 선언하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-example-1">
+    Markdown - example 1
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-example-2">
+    Markdown - example 2
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-multicursor">
+    Python - multicursor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-example-3">
+    Markdown - example 3
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4_1">
+     🌜 ️여기까지 Day4     🌜️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day3">
+     ☀️ ️여기서부터 Day3   ☀️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim">
+    vim
+  </a>
+<nav aria-label="vim" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    텍스트 편집에서 단축키 개수와 입력 횟수의 관계
+  </a>
+<nav aria-label="텍스트 편집에서 단축키 개수와 입력 횟수의 관계" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    일반 텍스트 에디터의 단축키 개수와 입력 회수
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim_1">
+    vim 의 단축키 개수와 입력 회수
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim_2">
+    vim 으로 일반 텍스트 에디터 대체하기
+  </a>
+<nav aria-label="vim 으로 일반 텍스트 에디터 대체하기" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    기본 커서 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    기능 반복
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    입력모드로 들어가기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    에디터 종료
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    지우기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    지우고 편집하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    화면 내의 커서 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    취소
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    드래그
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    복사하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_13">
+    잘라내기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_14">
+    화면 밖으로의 커서 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    찾기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_16">
+    화면 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_17">
+    커서를 기준으로 화면 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    명령 실행
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_19">
+    대문자, 소문자 변경
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_20">
+    다중 입력
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    문장 붙히기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_22">
+    화면 분할
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_23">
+    코드 포맷팅
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day3_1">
+     🌜 ️여기까지 Day3     🌜️ 
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4">
+     ☀️ ️여기서부터 Day4   ☀️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim_3">
+    더 빨라진 vim
+  </a>
+<nav aria-label="더 빨라진 vim" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#alias">
+    더 빨라진 alias
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim-plug">
+    vim-plug
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vimrc">
+    vimrc
+  </a>
+<nav aria-label="vimrc" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_24">
+    더 이뻐진 테마
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim_4">
+    더 빨라진 vim 종료/저장
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nerdtree">
+    NERDTree
+  </a>
+<nav aria-label="NERDTree" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_25">
+    더 빨라진 화면 이동
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim_5">
+    더 빨라진 vim 화면크기조정
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nerdcommentor">
+    NERDCommentor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vim-multiple-cursors">
+    vim-multiple-cursors
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vscode-vim">
+    VSCode Vim
+  </a>
+<nav aria-label="VSCode Vim" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_26">
+    단축키
+  </a>
+<nav aria-label="단축키" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_27">
+    주석 처리
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_28">
+    단축키 설정
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_29">
+    그외의 단축키
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vscode-vim_1">
+    VSCode Vim 예시
+  </a>
+<nav aria-label="VSCode Vim 예시" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-list-to-dictionary">
+    Python - List to Dictionary
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-copy-paste">
+    Python - copy &amp; paste
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-multi-cursor">
+    Python - multi cursor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-rename-argument">
+    Python - rename argument
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#c-">
+    C 언어 - 변수 한 줄로 선언하기
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-example-1">
+    Markdown - example 1
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-example-2">
+    Markdown - example 2
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#python-multicursor">
+    Python - multicursor
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#markdown-example-3">
+    Markdown - example 3
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#day4_1">
+     🌜 ️여기까지 Day4     🌜️ 
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Vim</h1>
+<h3 id="day3"><strong><div align="center"> ☀️ ️여기서부터 Day3   ☀️ </div></strong><a class="headerlink" href="#day3" title="Permanent link">¶</a></h3>
+<h2 id="vim">vim<a class="headerlink" href="#vim" title="Permanent link">¶</a></h2>
+<h3 id="_1">텍스트 편집에서 단축키 개수와 입력 횟수의 관계<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
+<p>텍스트 편집이란 <strong>커서 이동</strong> 과 <strong>텍스트 수정</strong> 입니다. </p>
+<h4 id="_2">일반 텍스트 에디터의 단축키 개수와 입력 회수<a class="headerlink" href="#_2" title="Permanent link">¶</a></h4>
+<div class="admonition note">
+<p class="admonition-title">단어 수와 표현법의 상관관계</p>
+<p><img alt="" src="https://user-images.githubusercontent.com/16812446/93671505-8c321e80-fade-11ea-80e6-fa7f30f3cabf.jpg"/></p>
+<p>표현할 수 있는 단어가 많으면 표현법이 간단해진다. 빠른 이해를 돕기 위한 재밌는 비유이기 때문에 심각하게 생각하지 말고 넘어가주세용~ <mark>I love France.</mark></p>
+</div>
+<p>기존의 일반 텍스트 에디터로는 단순히 <kbd>←</kbd>, <kbd>→</kbd>, <kbd>↑</kbd>, <kbd>↓</kbd> 와 마우스 스크롤로 <strong>커서 이동</strong> 을 했었고, 단순한 텍스트 입력과 <kbd>Backspace</kbd> 나 <kbd>Delete</kbd> 로 <strong>텍스트 수정</strong> 을 했었습니다. 이 몇 안되는 단축키로써 모든 상황에서의 <strong>커서 이동</strong> 과 <strong>텍스트 수정</strong> 을 할 수 있었지만, 몇 안되는 단축키를 모든 상황에 적용하려다 보니까 조합이 복잡해지고 키보드 입력을 많이 해야만 했습니다. </p>
+<p>이 방식의 장점은 외워야 하는 단축키가 <kbd>←</kbd>, <kbd>→</kbd>, <kbd>↑</kbd>, <kbd>↓</kbd>, <kbd>Backspace</kbd>, <kbd>Delete</kbd> 등으로 매우 적다는 것입니다. 하지만 단점은 단축키가 적으니까 다양한 상황에서의 텍스트 편집(<strong>커서 이동</strong> , <strong>텍스트 수정</strong> ) 에 적용되는 조합이 매우 복잡해진다는 것입니다.</p>
+<h4 id="vim_1"><code>vim</code> 의 단축키 개수와 입력 회수<a class="headerlink" href="#vim_1" title="Permanent link">¶</a></h4>
+<p>하지만 <code>vim</code> 은 단축키가 <strong>매우 많아서</strong> 다양한 상황에 적용되는 단축키의 조합이 단순해집니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">단축키 개수</td>
+<td align="center">적음</td>
+<td align="center">많음</td>
+</tr>
+<tr>
+<td align="center">입력 회수</td>
+<td align="center">많음</td>
+<td align="center">적음</td>
+</tr>
+</tbody>
+</table>
+<p>그래서 <code>vim</code> 을 사용하면 코딩할 때 키보드를 치는 횟수가 압도적으로 줄어듭니다. 다음 그래프와 같이 단축키 개수가 많으면 익혀야 할 단축키가 많은 대신 입력 회수가 줄어들고, 단축키 개수가 적으면 입력 회수가 많아집니다!</p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/81026898-b16b1b00-8eb6-11ea-89fa-3503770b57d4.png" width="50%"/>
+</div>
+<p>하지만 단축키는 한번 습득이 되기만하면 그 다음부터는 전혀 문제가 안됩니다. 이것은 단조로운 단어를 쓰면 문장의 길이가 길어지고 다양한 단어를 쓰면 문장이 짧아지는 것과 같은 이치입니다. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>게다가 <code>vim</code> 에 익숙해지면 텍스트 편집을 할 때 마우스를 사용해야 하는 횟수가 <code>0</code> 에 수렴합니다. 키보드와 마우스의 거리는 생각보다 멀기 때문에 이로써 발생하는 시간절약 효과도 상당합니다. </p>
+<p>개인적으로 개발자로 살아간다면 <code>vim</code> 텍스트 에디터 사용법을 익혀서 불필요한 타자 횟수를 최대한 절약함으로써 시간낭비를 줄이고, 손목건강도 챙기는 것이 합리적이라고 생각합니다. 불필요한 시간이 절약된다면 남는 시간이 많아집니다. </p>
+<p>개인적으로 한동대 학생들 중에서 <code>vim</code> 을 사용하는 학생들이 많아지길 바라고 있네요. </p>
+</div>
+<h3 id="vim_2"><code>vim</code> 으로 일반 텍스트 에디터 대체하기<a class="headerlink" href="#vim_2" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>참고/출처 : <a href="https://github.com/vim/vim/blob/master/runtime/tutor/tutor.ko.utf-8">https://github.com/vim/vim/blob/master/runtime/tutor/tutor.ko.utf-8</a></p>
+</blockquote>
+<p>이제부터 <code>vim</code> 을 사용하면 타수가 얼마나 줄어드는지 보여드림으로써 <code>vim</code> 을 사용하면 좋다는 것을 설득해드리겠습니다. 설득 안되면 어쩔 수 없지만..</p>
+<p>보여드리는 방식은 기존 일반 에디터의 <strong>적은 단축키가 얼마나 많은 타수를 야기하는지</strong>, 그리고 그것이 <strong><code>vim</code> 에서 어떻게 효율적으로 대체될 수 있는지</strong> 비교하는 것으로 하겠습니다. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>또한 모든 키보드에 <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>Insert</kbd>, <kbd>PageDown</kbd>, <kbd>PageUp</kbd> 가 있지 않기 때문에 일관성을 위하여 이 키들은 상정하지 않겠습니다.</p>
+</div>
+<p>그리고 문자와 문자 사이의 커서 이동 횟수가 <strong>1번</strong> 이기 때문에 </p>
+<table>
+<thead>
+<tr>
+<th align="left">이동 거리</th>
+<th align="left">퉁 치는 횟수(typing complexity)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">(문자가 모여있는) 단어를 이동하는 횟수</td>
+<td align="left"><strong>n 번</strong></td>
+</tr>
+<tr>
+<td align="left">(단어가 모여있는) 문장을 이동하는 횟수</td>
+<td align="left"><strong>n<sup>2</sup> 번</strong></td>
+</tr>
+<tr>
+<td align="left">(문장이 모여있는) 전체파일을 이동하는 횟수</td>
+<td align="left"><strong>n<sup>3</sup> 번</strong></td>
+</tr>
+</tbody>
+</table>
+<p>이라고 하겠습니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>typing complexity 라는 개념은 어디에도 없는 개념입니다. 왜냐면 제가 일반 에디터와 VIM 의 입력 횟수를 가늠하기 위하여 방금 만들어낸 개념이기 때문이죠. 그러니 어디가서 typing complexity 라고 언급하시면 아무도 모를거에요..</p>
+<p>또한 앞으로 알게 되겠지만 일반 에디터의 typing complexity 는 <span class="arithmatex">\(O(n)\)</span> 또는 <span class="arithmatex">\(O(n ^{2})\)</span> 가 되지만, VIM 의 typing complexity 는 항상 <span class="arithmatex">\(O(1)\)</span> 이 되는 것을 알 수 있을 겁니다. 그러니까 VIM 이 얼마나 빠른지 알 수 있겠죠. </p>
+</div>
+<p>그러면 먼저 우분투 도커 컨테이너에 접속하고 다음 명령어를 입력하세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong> </p>
+<div class="highlight"><pre><span></span><code>$ git clone https://github.com/jaseg/lolcat
+$ <span class="nb">cd</span> lolcat
+$ make
+</code></pre></div>
+<p><code>lolcat</code> 은 <code>cat</code> 명령어의 출력에 무지개 색깔을 입힙니다. 다음 명령어를 실행해보세요.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ cat /etc/passwd     <span class="c1"># 텍스트 파일이 밋밋한 색깔로 출력된다. </span>
+$ ./lolcat /etc/passwd 
+</code></pre></div>
+<p>실행결과는 다음 그림과 비슷할 겁니다. </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/81272615-a7007b00-9088-11ea-9e2b-bb8ce711ad6b.png" width="70%"/>
+</div>
+<p>이제 <code>lolcat</code> 의 소스코드 <code>lolcat.c</code> 를 <code>vim</code> 으로 열어봅시다.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ vim lolcat.c
+</code></pre></div>
+<p>그러면 <code>vim</code> 텍스트 에디터로 파일이 열리는데 일단 <code>100gg</code> 를 눌러보세요. 그러면 파일의 <code>100</code> 번째 행으로 이동하게 되고 성공적으로 이동하셨다면 </p>
+<div class="highlight"><pre><span></span><code><span class="p">...</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">default_argv</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"-"</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">cc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">wint_t</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">colors</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">isatty</span><span class="p">(</span><span class="n">STDOUT_FILENO</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">force_locale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">random</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">freq_h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.23</span><span class="p">,</span><span class="w"> </span><span class="n">freq_v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">struct</span> <span class="nc">timeval</span><span class="w"> </span><span class="n">tv</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">gettimeofday</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tv</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">offx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">tv</span><span class="p">.</span><span class="n">tv_sec</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">300</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">300.0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">argc</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+</code></pre></div>
+<p>위와 같은 코드가 보일 것입니다. 이제 특별한 언급이 없는 한 이 <code>100</code> 번째 줄에서 실습을 진행하겠습니다. 커서가 <code>100</code> 행에서 이탈되었다면 다시 <code>100gg</code> 를 누르면 <code>100</code> 번째 행으로 이동할 수 있습니다. </p>
+<h4 id="_3">기본 커서 이동<a class="headerlink" href="#_3" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">왼쪽 이동</td>
+<td align="center"><kbd>←</kbd></td>
+<td align="center"><code>h</code></td>
+</tr>
+<tr>
+<td align="center">오른쪽 이동</td>
+<td align="center"><kbd>→</kbd></td>
+<td align="center"><code>l</code></td>
+</tr>
+<tr>
+<td align="center">위쪽 이동</td>
+<td align="center"><kbd>↑</kbd></td>
+<td align="center"><code>k</code></td>
+</tr>
+<tr>
+<td align="center">아래쪽 이동</td>
+<td align="center"><kbd>↓</kbd></td>
+<td align="center"><code>j</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p>위 단축키로 커서를 이동해보세요. </p>
+<p><code>15k</code> 를 눌러 <code>15</code> 줄 위에 있는 행으로 이동하세요. </p>
+<p>다시 <code>15j</code> 를 눌러 되돌아올 수 있습니다. </p>
+<p>이렇게 <code>&lt;N&gt;k</code> 를 누르면 <code>&lt;N&gt;</code> 번 위로 갑니다. 다른 커서 이동 키도 마찬가지!</p>
+</li>
+</ul>
+<h4 id="_4">기능 반복<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">이전에 실행한 편집 기능 반복하기</td>
+<td align="center"></td>
+<td align="center"><code>.</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>.</code> 를 누르면 이전에 실행한 편집 기능이 반복됩니다. </p>
+<h4 id="_5">입력모드로 들어가기<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">입력하기</td>
+<td align="center"></td>
+<td align="center"><code>i</code></td>
+</tr>
+<tr>
+<td align="center">다음 글자에 입력하기</td>
+<td align="center"><kbd>→</kbd></td>
+<td align="center"><code>a</code></td>
+</tr>
+<tr>
+<td align="center">다음 행에 입력하기</td>
+<td align="center"><kbd>→</kbd> × <strong>n<sup>2</sup></strong> + <kbd>Enter</kbd></td>
+<td align="center"><code>o</code></td>
+</tr>
+<tr>
+<td align="center">이전 행에 입력하기</td>
+<td align="center"><kbd>↑</kbd> + <kbd>→</kbd> × <strong>n<sup>2</sup></strong> + <kbd>Enter</kbd></td>
+<td align="center"><code>O</code></td>
+</tr>
+<tr>
+<td align="center">문장 마지막에 입력하기</td>
+<td align="center"><kbd>→</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><code>A</code></td>
+</tr>
+<tr>
+<td align="center">문장 처음에 입력하기</td>
+<td align="center"><kbd>←</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><code>I</code></td>
+</tr>
+</tbody>
+</table>
+<p>일반 텍스트 에디터가 <strong>입력 모드</strong> 만 있는 반면 <code>vim</code> 은 <strong>입력 모드</strong> 와 <strong>명령 모드</strong> 가 있습니다. <code>vim</code> 을 처음 켰을 때는 항상 <strong>명령 모드</strong> 이고 위 표의 입력 단축키 <code>i</code>, <code>a</code>, <code>o</code>, <code>O</code>, <code>A</code>, <code>I</code> 를 입력하면 <strong>입력 모드</strong> 가 됩니다. </p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>에디터의 하단에 <strong><code>-- INSERT --</code></strong> 라는 상태표시가 보이면 지금이 <strong>입력 모드</strong> 인 것입니다. </p>
+</div>
+<p><strong>입력 모드</strong> 에서는 모든 키보드 입력이 단축키가 아닌 입력으로 취급되기 때문에 <strong>명령 모드</strong> 로 되돌아가려면 <kbd>Esc</kbd> 를 누르면 됩니다.</p>
+<ul>
+<li>
+<p>실습 </p>
+<p><code>i</code> 를 눌러서 <strong>입력 모드</strong> 로 들어간 다음</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">test_int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>이라는 코드를 입력하고 <kbd>Esc</kbd> 를 눌러 <strong>명령 모드</strong> 로 되돌아오세요. </p>
+<p>입력모드로 들어갈 수 있는 단축키 <code>i</code>, <code>a</code>, <code>o</code>, <code>O</code>, <code>A</code>, <code>I</code> 들을 실행하고 결과가 어떤지 보세요. </p>
+</li>
+<li>
+<p>실습 </p>
+<p><img alt="render1589352202436" src="https://user-images.githubusercontent.com/16812446/81779941-a0fb1600-9530-11ea-8f28-2076013b2b49.gif"/></p>
+<p>위와 같이 <code>94</code> 행으로 이동하고 <code>I</code> 로 입력모드에 들어간 후 주석처리 <code>//</code> 를 입력해보세요.</p>
+<p>그리고 밑으로 이동해서 기능반복키 <code>.</code> 를 누르며 입력을 반복해보세요.</p>
+</li>
+</ul>
+<h4 id="_6">에디터 종료<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">저장</td>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>s</kbd></td>
+<td align="center"><code>:w</code></td>
+</tr>
+<tr>
+<td align="center">종료</td>
+<td align="center"><kbd>Alt</kbd> + <kbd>F4</kbd></td>
+<td align="center"><code>:q</code></td>
+</tr>
+<tr>
+<td align="center">저장 후 종료</td>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>s</kbd> 🠲 <kbd>Alt</kbd> + <kbd>F4</kbd></td>
+<td align="center"><code>:wq</code> 또는 <code>ZZ</code></td>
+</tr>
+<tr>
+<td align="center">강제 종료</td>
+<td align="center"></td>
+<td align="center"><code>:q!</code></td>
+</tr>
+<tr>
+<td align="center">다른 이름(<code>&lt;NAME&gt;</code>)으로 저장</td>
+<td align="center"></td>
+<td align="center"><code>:w &lt;NAME&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>vim</code> 에서 저장과 종료 단축키입니다. 강제 종료는 저장하지 않은 내용을 사라지게 합니다.</p>
+<ul>
+<li>
+<p>실습 </p>
+<p>단축키들을 실행해서 에디터를 종료해보고 다시 <code>vim lolcat.c</code> 로 켜서 <code>100gg</code> 를 눌러 <code>100</code> 번째 행으로 되돌아오세요. </p>
+</li>
+</ul>
+<h4 id="_7">지우기<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">지우기</td>
+<td align="center"><kbd>Backspace</kbd> 또는 <kbd>Delete</kbd></td>
+<td align="center"><code>x</code></td>
+</tr>
+<tr>
+<td align="center">단어 지우기</td>
+<td align="center"><kbd>Backspace</kbd> × <strong>n</strong></td>
+<td align="center"><code>dw</code></td>
+</tr>
+<tr>
+<td align="center">문장 지우기</td>
+<td align="center"><kbd>Backspace</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><code>dd</code></td>
+</tr>
+<tr>
+<td align="center">커서로부터 문장 끝까지 지우기</td>
+<td align="center"><kbd>Delete</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><code>D</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p>커서를 <code>102</code> 번째 행인</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span> <span class="nc">timeval</span><span class="w"> </span><span class="n">tv</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>로 옮기세요. 이제 <code>x</code> 를 눌러서 문자들을 지워보세요.</p>
+<p>이때 <code>2x</code> 와 <code>3x</code> 를 누르면 각각 <code>2</code> 글자, <code>3</code> 글자가 지워진다는 것을 확인하세요.</p>
+<p><code>&lt;N&gt;x</code> 를 누르면 <code>&lt;N&gt;</code> 개의 문자가 한번에 지워집니다. </p>
+</li>
+<li>
+<p>실습</p>
+<p>단어를 한번에 지우기 위해서 <code>dw</code> 를 눌러도 됩니다. 이것도 <code>struct</code> 나 <code>timeval</code> 같은 변수 위로 커서를 두고 실행해보세요. <code>4dw</code> 를 누르면 <code>4</code> 개의 단어가 <code>3</code> 회의 입력만에 한번에 지워집니다. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>일반 텍스트 에디터에서 <code>4</code> 개의 단어를 지우려면 <code>3</code> 회보다 훨씬 많은 키보드 입력이 필요합니다.</p>
+</div>
+<p><code>4dw</code> 를 누르고 <code>.</code> 을 누르면 <code>4</code> 개의 단어가 지워지는 기능이 반복됩니다. <code>3</code> 회만 누르면 그 다음부터는 <code>.</code> 만 누르면 되니까 <code>1</code> 회만 누르면 됩니다.</p>
+</li>
+<li>
+<p>실습</p>
+<p><code>dd</code> 와 <code>D</code> 도 실행보세요. <code>5dd</code> 를 누르면 <code>5</code> 개의 문장이 <code>3</code> 회의 입력만에 한번에 지워집니다. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>일반 텍스트 에디터에서 <code>5</code> 개의 문장을 지우려면 <code>3</code> 회보다 훨씬 많은 키보드 입력이 필요합니다!</p>
+</div>
+</li>
+<li>
+<p>실습</p>
+<p>다음과 같이 <code>10dd</code> 누르고 <code>.</code> 를 누르면 <code>10</code> 개 문장이 지워지는 기능이 반복됩니다. <code>4</code> 회 입력 이후에 <code>1</code> 회 입력만 하면 되는 것이죠. </p>
+<p><img alt="render1589352378933" src="https://user-images.githubusercontent.com/16812446/81780148-fd5e3580-9530-11ea-919d-e8c473d4482a.gif"/></p>
+</li>
+</ul>
+<h4 id="_8">지우고 편집하기<a class="headerlink" href="#_8" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">한 글자 지우고 편집하기</td>
+<td align="center"><kbd>Backspace</kbd></td>
+<td align="center"><code>r</code></td>
+</tr>
+<tr>
+<td align="center">단어 지우고 편집하기</td>
+<td align="center"><kbd>Backspace</kbd> × <strong>n</strong></td>
+<td align="center"><code>cw</code></td>
+</tr>
+<tr>
+<td align="center">커서로부터 문장 끝까지 지우고 편집하기</td>
+<td align="center"><kbd>Delete</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><code>C</code></td>
+</tr>
+<tr>
+<td align="center">문장에서 <code>&lt;OLD&gt;</code> 를 <code>&lt;NEW&gt;</code> 로 치환하기</td>
+<td align="center"></td>
+<td align="center"><code>:s/&lt;OLD&gt;/&lt;NEW&gt;/g</code></td>
+</tr>
+<tr>
+<td align="center">전체 파일에서 <code>&lt;OLD&gt;</code> 를 <code>&lt;NEW&gt;</code> 로 치환하기</td>
+<td align="center"></td>
+<td align="center"><code>:%s/&lt;OLD&gt;/&lt;NEW&gt;/g</code></td>
+</tr>
+<tr>
+<td align="center">전체 파일에서 하나씩 확인하면서 <code>&lt;OLD&gt;</code> 를 <code>&lt;NEW&gt;</code> 로 치환하기</td>
+<td align="center"></td>
+<td align="center"><code>:%s/&lt;OLD&gt;/&lt;NEW&gt;/gc</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p>커서를 <code>98</code> 번째 행인 </p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">force_locale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>의 <code>1</code> 로 옮겨서 <code>r</code> 을 누르고 <code>0</code> 을 눌러보세요. 그러면 <code>1</code> 이 <code>0</code> 으로 바뀝니다. </p>
+</li>
+<li>
+<p>실습 </p>
+<p>커서를 다른 코드로 옮겨서 <code>cw</code> 와 <code>C</code> 를 실행해보세요. 그러면 단어가 지워지고 <strong>입력 모드</strong> 로 곧장 들어갑니다. <strong>명령 모드</strong> 로 되돌아오기 위하여 <kbd>Esc</kbd> 를 눌러야 합니다. </p>
+</li>
+<li>
+<p>실습 </p>
+<p><code>:%s/int/long long/g</code> 을 실행해보세요. 파일 전체의 <code>int</code> 가 <code>long long</code> 으로 바뀝니다. </p>
+</li>
+</ul>
+<h4 id="_9">화면 내의 커서 이동<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">원하는 문자로 이동</td>
+<td align="center"><kbd>→</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><code>f&lt;C&gt;</code></td>
+</tr>
+<tr>
+<td align="center">오른쪽 단어로 이동</td>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>→</kbd></td>
+<td align="center"><code>e</code></td>
+</tr>
+<tr>
+<td align="center">왼쪽 단어로 이동</td>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>←</kbd></td>
+<td align="center"><code>b</code></td>
+</tr>
+<tr>
+<td align="center">문장의 처음으로 이동</td>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>←</kbd> × <strong>n</strong></td>
+<td align="center"><code>0</code></td>
+</tr>
+<tr>
+<td align="center">문장의 마지막으로 이동</td>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>→</kbd> × <strong>n</strong></td>
+<td align="center"><code>$</code></td>
+</tr>
+<tr>
+<td align="center">화면의 처음으로 이동</td>
+<td align="center"><kbd>↑</kbd> × <strong>n<sup>3</sup></strong></td>
+<td align="center"><code>H</code></td>
+</tr>
+<tr>
+<td align="center">화면의 가운데로 이동</td>
+<td align="center"></td>
+<td align="center"><code>M</code></td>
+</tr>
+<tr>
+<td align="center">화면의 마지막으로 이동</td>
+<td align="center"><kbd>↓</kbd> × <strong>n<sup>3</sup></strong></td>
+<td align="center"><code>L</code></td>
+</tr>
+</tbody>
+</table>
+<p>커서 이동이 <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code> 밖에 없다면 커서를 이동해야 하는 다양한 상황에서 이것들을 똑같이 다양하게 조합해야하기 때문에 일반 텍스트 에디터의 <kbd>←</kbd>, <kbd>→</kbd>, <kbd>↑</kbd>, <kbd>↓</kbd> 를 많이 입력해야 하는 것과 다를 것이 없을 겁니다.</p>
+<p>하지만 위 표에서처럼 다양한 커서 이동이 하나의 단축키로 가능합니다. </p>
+<ul>
+<li>
+<p>실습 </p>
+<p><code>104</code> 행으로 이동하면 </p>
+<div class="highlight"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">offx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">tv</span><span class="p">.</span><span class="n">tv_sec</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">300</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">300.0</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>라는 코드가 있는데 <code>300</code> 이라는 숫자를 조작하고 싶다면 <code>f3</code> 를 누르면 <code>3</code> 이라는 문자로 커서가 바로 이동됩니다. </p>
+<p>마찬가지로 <code>f%</code> 를 누르면 <code>%</code> 라는 문자로 커서가 바로 이동됩니다.</p>
+</li>
+<li>
+<p>실습 </p>
+<p>다음과 같이 커서 이동 단축키를 눌러보면서 실습해보세요.</p>
+<p><img alt="render1589352482808" src="https://user-images.githubusercontent.com/16812446/81780345-575efb00-9531-11ea-9a4b-58237fe1e8ea.gif"/></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>일반 방향키를 엄청 많이 눌러야 갈 수 있는 곳을 <code>vim</code> 에서는 단축키 하나만 누르면 갈 수 있습니다. </p>
+</div>
+</li>
+</ul>
+<h4 id="_10">취소<a class="headerlink" href="#_10" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">취소</td>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>z</kbd></td>
+<td align="center"><code>u</code></td>
+</tr>
+<tr>
+<td align="center">취소한 것을 취소</td>
+<td align="center"></td>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>R</kbd></td>
+</tr>
+<tr>
+<td align="center">문장을 원래대로 복원</td>
+<td align="center"></td>
+<td align="center"><code>U</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p><code>50dd</code> 를 눌러서 문장 <code>50</code> 개를 <code>4</code> 회의 입력만에 삭제해보세요. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>일반 텍스트 에디어테서 문장 <code>50</code> 개를 삭제하기 위해서 얼마나 많은 시간이 걸리는지 상상이 안되네요. </p>
+</div>
+<p>그리고 <code>u</code> 를 눌러서 삭제했던 것을 복구해보세요. </p>
+<p>그리고 다시 <kbd>Ctrl</kbd>+<kbd>R</kbd> 을 눌러서 삭제해보세요. </p>
+<p><code>u</code> 와 <kbd>Ctrl</kbd>+<kbd>R</kbd> 를 번갈아서 계속 눌러보세요. </p>
+</li>
+</ul>
+<h4 id="_11">드래그<a class="headerlink" href="#_11" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">드래그</td>
+<td align="center"><kbd>Shift</kbd> + <kbd>→</kbd> × <strong>n</strong></td>
+<td align="center"><code>v</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p><code>gg</code> 를 누르면 첫행으로 이동합니다. 바로 밑에 있는 <code>3</code> 번째 행으로 커서를 이동하면 </p>
+<div class="highlight"><pre><span></span><code>* DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+</code></pre></div>
+<p>이라는 라이센스가 보입니다. 이 소스코드를 갖고 하고싶은 게 뭐든간에 다 하라는 의미군요. <code>e</code> 또는 <code>b</code> 를 몇번 눌러서 <code>FUCK</code> 의 <code>F</code> 로 커서를 이동하세요.</p>
+<p><code>v</code> 를 누르고 <code>l</code> 을 몇번 누르면 <code>FUCK</code> 이 드래그됩니다. 잘 드래그 되고 있다면 <code>vim</code> 의 하단부에 <code>-- VISUAL --</code> 이라는 상태줄이 뜹니다.</p>
+<p>그러면 <code>r</code> 을 누르고 <code>x</code> 를 누르세요. 그러면 다음과 같이 <code>FUCK</code> 이 <code>xxxx</code> 로 바뀝니다. </p>
+<p><img alt="render1589352581824" src="https://user-images.githubusercontent.com/16812446/81780433-7d849b00-9531-11ea-8c57-9af1900dcf37.gif"/></p>
+<p>이렇게 드래그를 잘 활용하면 여러 문자와 문장에 대하여 기능을 한번에 실행할 수 있습니다. </p>
+</li>
+<li>
+<p>실습 </p>
+<p>다시 <code>FUCK</code> 이 있는 곳으로 커서를 옮겨서 <code>v</code> 를 누르고 이번에는 <code>e</code> 를 한번만 누르세요. 그러면 <code>FUCK</code> 이 단지 <code>2</code> 회의 입력만에 드래그됩니다. </p>
+<p><code>v</code> 를 누르고 <code>e</code> 를 계속 누르거나 <code>j</code> 를 눌러서 밑에 문장까지 드래그하고 <code>x</code> 를 눌러서 삭제해보세요. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>드래그를 하기 위해서 일반 텍스트 에디터에서는 <kbd>Shift</kbd> + <kbd>→</kbd> × <strong>n</strong> 를 얼마나 많이 눌러야 하는지 모르겠네요. </p>
+</div>
+</li>
+</ul>
+<h4 id="_12">복사하기<a class="headerlink" href="#_12" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">단어 복사하기</td>
+<td align="center"><kbd>Shift</kbd> + <kbd>→</kbd> × <strong>n</strong> 🠲 <kbd>Ctrl</kbd> + <kbd>c</kbd> 🠲 <kbd>Ctrl</kbd> + <kbd>v</kbd></td>
+<td align="center"><code>yw</code> 🠲  <code>p</code></td>
+</tr>
+<tr>
+<td align="center">문장 복사하기</td>
+<td align="center"><kbd>Shift</kbd> + <kbd>→</kbd> × <strong>n<sup>2</sup></strong> 🠲 <kbd>Ctrl</kbd> + <kbd>c</kbd> 🠲 <kbd>Ctrl</kbd> + <kbd>v</kbd></td>
+<td align="center"><code>yy</code> 🠲  <code>p</code></td>
+</tr>
+<tr>
+<td align="center">드래그해서 복사하기</td>
+<td align="center"><kbd>Shift</kbd> + <kbd>→</kbd> × <strong>n<sup>2</sup></strong> 🠲 <kbd>Ctrl</kbd> + <kbd>c</kbd> 🠲 <kbd>Ctrl</kbd> + <kbd>v</kbd></td>
+<td align="center"><code>v</code> 🠲 <code>y</code> 🠲 <code>p</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p><code>33gg</code> 를 눌러서 <code>33</code> 행으로 가면 </p>
+<div class="highlight"><pre><span></span><code><span class="p">...</span><span class="w"></span>
+<span class="k">static</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">helpstr</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="w"></span>
+<span class="w">                        </span><span class="s">"Usage: lolcat [-h horizontal_speed] [-v vertical_speed] [--] [FILES...]</span><span class="se">\n</span><span class="s">"</span><span class="w"></span>
+<span class="w">                        </span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+</code></pre></div>
+<p>가 보이는데 <code>yy</code> 를 누르고 <code>5p</code> 를 누르세요. 그러면 복사된 문장이 <code>5</code> 번 붙혀넣어집니다. </p>
+</li>
+<li>
+<p>실습 </p>
+<p><code>55</code> 번째 행으로 이동하고 맨 마지막 "<code>, 33</code>" 을 <code>v</code> 로 드래그하고 <code>y</code> 를 눌러보세요. 그 다음 <code>33</code> 오른쪽으로 커서를 옮겨서 <code>p</code> 를 몇번 눌러보고 <code>10p</code> 를 누르세요. </p>
+<p>그러면 다음과 같이 복사된 것이 단번에 <code>10</code> 번 붙혀넣어집니다. </p>
+<p><img alt="render1589352834937" src="https://user-images.githubusercontent.com/16812446/81780727-fa177980-9531-11ea-88bf-13f08234787d.gif"/></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>이 일을 일반 텍스트 에디터로 하려면 <code>vim</code> 보다 훨씬 많은 키보드 입력을 해야 합니다. </p>
+</div>
+</li>
+</ul>
+<h4 id="_13">잘라내기<a class="headerlink" href="#_13" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">한 글자 잘라내기</td>
+<td align="center"><kbd>Shift</kbd> + <kbd>→</kbd> 🠲 <kbd>Ctrl</kbd> + <kbd>x</kbd> 🠲 <kbd>Ctrl</kbd> + <kbd>v</kbd></td>
+<td align="center"><code>x</code> 🠲  <code>p</code></td>
+</tr>
+<tr>
+<td align="center">단어 잘라내기</td>
+<td align="center"><kbd>Shift</kbd> + <kbd>→</kbd> × <strong>n</strong> 🠲 <kbd>Ctrl</kbd> + <kbd>x</kbd> 🠲 <kbd>Ctrl</kbd> + <kbd>v</kbd></td>
+<td align="center"><code>dw</code> 🠲  <code>p</code></td>
+</tr>
+<tr>
+<td align="center">문장 잘라내기</td>
+<td align="center"><kbd>Shift</kbd> + <kbd>→</kbd> × <strong>n<sup>2</sup></strong> 🠲 <kbd>Ctrl</kbd> + <kbd>x</kbd> 🠲 <kbd>Ctrl</kbd> + <kbd>v</kbd></td>
+<td align="center"><code>dd</code> 🠲  <code>p</code></td>
+</tr>
+<tr>
+<td align="center">특정 영역 잘라내기</td>
+<td align="center"><kbd>Shift</kbd> + <kbd>→</kbd> × <strong>n<sup>2</sup></strong> 🠲 <kbd>Ctrl</kbd> + <kbd>x</kbd> 🠲 <kbd>Ctrl</kbd> + <kbd>v</kbd></td>
+<td align="center"><code>v</code> 🠲 <code>x</code> 🠲 <code>p</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p>다음과 같이 <code>75</code> 행으로 이동하고 <code>zt</code> 로 화면을 올리고나서 <code>6dd</code> 를 로 함수 코드 전체를 잘라내고 <code>10j</code> 로 커서 이동을 한 후 <code>p</code> 를 눌러 붙혀넣으세요. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><code>zt</code> 가 뭔지는 계속되는 내용에서 알아봅니다. </p>
+</div>
+<p><img alt="render1589352948485" src="https://user-images.githubusercontent.com/16812446/81780912-406cd880-9532-11ea-9328-3efe5ba485ee.gif"/></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>이 작업을 키보드 입력 <code>10</code> 번으로 끝냈습니다. </p>
+</div>
+</li>
+</ul>
+<h4 id="_14">화면 밖으로의 커서 이동<a class="headerlink" href="#_14" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">파일의 맨 마지막으로 이동</td>
+<td align="center"><kbd>↓</kbd> × <strong>n<sup>3</sup></strong></td>
+<td align="center"><code>G</code></td>
+</tr>
+<tr>
+<td align="center">파일의 맨 처음으로 이동</td>
+<td align="center"><kbd>↑</kbd> × <strong>n<sup>3</sup></strong></td>
+<td align="center"><code>gg</code></td>
+</tr>
+<tr>
+<td align="center"><code>&lt;N&gt;</code> 번째 행으로 이동</td>
+<td align="center"><kbd>↑</kbd> × <strong>n<sup>3</sup></strong> 또는 <kbd>↓</kbd> × <strong>n<sup>3</sup></strong></td>
+<td align="center"><code>&lt;N&gt;gg</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p><code>G</code> 와 <code>gg</code> 로 커서를 이동해보세요. 그리고 <code>100gg</code> 로 <code>100</code> 번째 행으로 이동해보세요. </p>
+</li>
+</ul>
+<h4 id="_15">찾기<a class="headerlink" href="#_15" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">아랫방향으로 찾기</td>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>f</kbd></td>
+<td align="center"><code>/</code></td>
+</tr>
+<tr>
+<td align="center">윗방향으로 찾기</td>
+<td align="center"></td>
+<td align="center"><code>?</code></td>
+</tr>
+<tr>
+<td align="center">커서가 위치한 단어 아랫방향으로 찾기</td>
+<td align="center"></td>
+<td align="center"><code>*</code></td>
+</tr>
+<tr>
+<td align="center">커서가 위치한 단어 윗방향으로 찾기</td>
+<td align="center"></td>
+<td align="center"><code>#</code></td>
+</tr>
+<tr>
+<td align="center">찾고나서 같은방향으로 단어 찾기</td>
+<td align="center"><kbd>Enter</kbd></td>
+<td align="center"><code>N</code></td>
+</tr>
+<tr>
+<td align="center">찾고나서 반대방향으로 단어 찾기</td>
+<td align="center"><kbd>Shift</kbd> + <kbd>Enter</kbd></td>
+<td align="center"><code>n</code></td>
+</tr>
+<tr>
+<td align="center">괄호의 짝 찾기</td>
+<td align="center"></td>
+<td align="center"><code>%</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p>다음과 같이 <code>/static</code> 으로 <code>static</code> 키워드를 찾고 <code>n</code> 을 누르며 다음 것을 찾아보세요. </p>
+<p><img alt="render1589353002311" src="https://user-images.githubusercontent.com/16812446/81781027-75792b00-9532-11ea-9cad-dab0a5f905f4.gif"/></p>
+</li>
+<li>
+<p>실습 </p>
+<p>매우 긴 문장에서 <code>f</code> 로 원하는 문자 커서로 이동하기.</p>
+<p>(GIF)</p>
+<p>그리고 이것은 보통의 코드에서도 매우 자주 유용하게 사용될 수 있음. </p>
+</li>
+</ul>
+<h4 id="_16">화면 이동<a class="headerlink" href="#_16" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">화면을 한 행만큼 아래로 이동</td>
+<td align="center"><kbd>↓</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><kbd>Ctrl</kbd> + <code>e</code></td>
+</tr>
+<tr>
+<td align="center">화면을 한 행만큼 위로 이동</td>
+<td align="center"><kbd>↑</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><kbd>Ctrl</kbd> + <code>y</code></td>
+</tr>
+<tr>
+<td align="center">화면을 반 페이지만큼 아래로 이동</td>
+<td align="center"><kbd>↓</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><kbd>Ctrl</kbd> + <code>d</code></td>
+</tr>
+<tr>
+<td align="center">화면을 반 페이지만큼 위로 이동</td>
+<td align="center"><kbd>↑</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><kbd>Ctrl</kbd> + <code>u</code></td>
+</tr>
+<tr>
+<td align="center">화면을 한 페이지만큼 아래로 이동</td>
+<td align="center"><kbd>↓</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><kbd>Ctrl</kbd> + <code>f</code></td>
+</tr>
+<tr>
+<td align="center">화면을 한 페이지만큼 위로 이동</td>
+<td align="center"><kbd>↑</kbd> × <strong>n<sup>2</sup></strong></td>
+<td align="center"><kbd>Ctrl</kbd> + <code>b</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p>위 단축키로 화면을 편하게 이동해보세요. </p>
+</li>
+</ul>
+<h4 id="_17">커서를 기준으로 화면 이동<a class="headerlink" href="#_17" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">커서를 기준으로 화면을 최대한 아래로 이동</td>
+<td align="center"></td>
+<td align="center"><code>zt</code></td>
+</tr>
+<tr>
+<td align="center">커서를 기준으로 화면을 최대한 위로 이동</td>
+<td align="center"></td>
+<td align="center"><code>zb</code></td>
+</tr>
+<tr>
+<td align="center">커서를 기준으로 화면을 정중앙으로 이동</td>
+<td align="center"></td>
+<td align="center"><code>zz</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p>다음과 같이 <code>zt</code> 와 <code>L</code> 을 반복해서 눌러서 커서를 아래로 이동하다가 원하는 코드를 찾으면 <code>zz</code> 로 화면을 포커싱 해보세요. </p>
+<p><img alt="render1589353180616" src="https://user-images.githubusercontent.com/16812446/81781253-d0128700-9532-11ea-9c6f-03454fd457a6.gif"/></p>
+</li>
+<li>
+<p>실습 </p>
+<p>반대로 <code>zb</code> 와 <code>H</code> 을 반복해서 눌러서 커서를 위로 이동하다가 원하는 코드를 찾으면 <code>zz</code> 로 화면을 포커싱 해보세요. </p>
+<p>물론 화면을 위 아래로 이동하기 위하여 <kbd>Ctrl</kbd>+<kbd>d</kbd> 또는 <kbd>Ctrl</kbd>+<kbd>u</kbd> 가 더 편할 수도 있습니다. </p>
+</li>
+</ul>
+<h4 id="_18">명령 실행<a class="headerlink" href="#_18" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">파일 위치에서 <code>&lt;CMD&gt;</code> 명령 실행</td>
+<td align="center"></td>
+<td align="center"><code>:!</code> + <code>&lt;CMD&gt;</code></td>
+</tr>
+<tr>
+<td align="center">파일 위치에서 쉘 실행</td>
+<td align="center"></td>
+<td align="center"><code>:shell</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p><code>vim</code> 에디터에서 <code>:!pwd</code> 를 입력해보세요. </p>
+</li>
+<li>
+<p>실습 </p>
+<p><code>:shell</code> 을 입력해서 <code>vim</code> 의 서브 프로세스로써 쉘을 실행시켜보세요. <code>vim</code> 으로 되돌아오기 위해 <code>exit</code> 명령어로 쉘을 종료하면 됩니다. </p>
+<p><code>vim</code> 밑에서 쉘을 실행했다는 것을 잊어버리고 그 쉘에서 계속 작업을 하면 안되요! 현재 쉘이 <code>vim</code> 의 서브 프로세스인지 확인하는 방법은 <code>ps</code> 명령어를 입력하는 것입니다.</p>
+<p>현재 쉘이 <code>vim</code> 의  서브 프로세스도 아니라면 <code>ps</code> 명령 결과는 다음과 같습니다. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ ps
+    PID TTY          TIME CMD
+    <span class="m">1</span> pts/0    <span class="m">00</span>:00:00 bash
+    <span class="m">960</span> pts/0    <span class="m">00</span>:00:00 ps
+</code></pre></div>
+<p>먄약 현재 쉘이 <code>vim</code> 의 서브 프로세스라면 <code>ps</code> 명령어 결과가 다음과 같이 출력됩니다. </p>
+<div class="highlight"><pre><span></span><code>$ ps
+    PID TTY          TIME CMD
+    <span class="m">1</span> pts/0    <span class="m">00</span>:00:00 bash
+    <span class="m">961</span> pts/0    <span class="m">00</span>:00:00 vim
+    <span class="m">962</span> pts/0    <span class="m">00</span>:00:00 sh
+    <span class="m">963</span> pts/0    <span class="m">00</span>:00:00 ps
+</code></pre></div>
+</li>
+</ul>
+<h4 id="_19">대문자, 소문자 변경<a class="headerlink" href="#_19" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">대문자로 변경</td>
+<td align="center"></td>
+<td align="center"><code>v</code> 🠲 <code>U</code></td>
+</tr>
+<tr>
+<td align="center">소문자로 변경</td>
+<td align="center"></td>
+<td align="center"><code>v</code> 🠲 <code>u</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p>다음과 같이 <code>6</code> 행으로 이동해서 <code>v$</code> 으로 문장 전체를 드래그하고 <code>j</code> 로 밑의 문장까지 드래그한 다음 <code>U</code> 를 눌러서 대문자로 바꿔보세요. </p>
+<p><img alt="render1589353271791" src="https://user-images.githubusercontent.com/16812446/81781394-fd5f3500-9532-11ea-8e8c-fa943c63266f.gif"/></p>
+</li>
+</ul>
+<h4 id="_20">다중 입력<a class="headerlink" href="#_20" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">블록 드래그</td>
+<td align="center"></td>
+<td align="center"><kbd>Ctrl</kbd> + <code>v</code></td>
+</tr>
+<tr>
+<td align="center">드래그 상태에서 다중 입력</td>
+<td align="center"></td>
+<td align="center"><kbd>Shift</kbd> + <code>i</code></td>
+</tr>
+</tbody>
+</table>
+<p>블록 드래그는 드래그와 달리 네모 모양으로 드래그를 할 수 있습니다. 이때 다중입력도 가능합니다. </p>
+<ul>
+<li>
+<p>실습 </p>
+<p>코딩을 하다보니 <code>#define</code> 문을 여러번 사용했는데 실수로 <code>#</code> 을 붙히는 걸 까먹었네요. 하지만 괜찮습니다.</p>
+<p>다음과 같이 <code>0</code> 으로 문장 앞으로 이동하고 블록 드래그 <kbd>Ctrl</kbd>+<code>v</code> 를 한 다음 <code>10j</code> 로 커서를 내립니다. 그리고 <kbd>Shfit</kbd>+<code>i</code> 로 다중입력을 하고 <code>#</code> 을 입력한 후 <kbd>Esc</kbd> 를 눌러보세요. </p>
+<p><img alt="render1589353343893" src="https://user-images.githubusercontent.com/16812446/81781545-3c8d8600-9533-11ea-8665-5cf48fe40c60.gif"/></p>
+</li>
+</ul>
+<h4 id="_21">문장 붙히기<a class="headerlink" href="#_21" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">문장 붙히기</td>
+<td align="center"><kbd>→</kbd> × <strong>n<sup>2</sup></strong> + <kbd>Delete</kbd></td>
+<td align="center"><code>J</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>실습 </p>
+<p><code>J</code> 를 누르면 다음과 같이 문장이 연결됩니다. <code>.</code> 를 누르면 기능이 반복됩니다. </p>
+<p><img alt="render1589353396465" src="https://user-images.githubusercontent.com/16812446/81781611-6050cc00-9533-11ea-9e46-d655c5a3a3d3.gif"/></p>
+</li>
+</ul>
+<h4 id="_22">화면 분할<a class="headerlink" href="#_22" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">수평으로 화면분할</td>
+<td align="center"></td>
+<td align="center"><code>:sp &lt;FILE&gt;</code></td>
+</tr>
+<tr>
+<td align="center">수직으로 화면분할</td>
+<td align="center"></td>
+<td align="center"><code>:vsp &lt;FILE&gt;</code></td>
+</tr>
+<tr>
+<td align="center">다음 화면으로 이동</td>
+<td align="center"></td>
+<td align="center"><kbd>Ctrl</kbd>+ <kbd>w</kbd> + <kbd>w</kbd></td>
+</tr>
+<tr>
+<td align="center">왼쪽 화면으로 이동</td>
+<td align="center"></td>
+<td align="center"><kbd>Ctrl</kbd>+ <kbd>w</kbd> + <kbd>h</kbd></td>
+</tr>
+<tr>
+<td align="center">오른쪽 화면으로 이동</td>
+<td align="center"></td>
+<td align="center"><kbd>Ctrl</kbd>+ <kbd>w</kbd> + <kbd>l</kbd></td>
+</tr>
+<tr>
+<td align="center">아래쪽 화면으로 이동</td>
+<td align="center"></td>
+<td align="center"><kbd>Ctrl</kbd>+ <kbd>w</kbd> + <kbd>j</kbd></td>
+</tr>
+<tr>
+<td align="center">위쪽 화면으로 이동</td>
+<td align="center"></td>
+<td align="center"><kbd>Ctrl</kbd>+ <kbd>w</kbd> + <kbd>k</kbd></td>
+</tr>
+</tbody>
+</table>
+<p>코딩을 하다보면 다른 파일을 봐야할 때도 있습니다. 그럴 때 이 화면 분할 기능을 이용할 수 있습니다. </p>
+<ul>
+<li>
+<p><code>vim</code> 으로 <code>lolcat.c</code> 를 연상태에서 <code>:vsp README.md</code> 로 파일을 열어보세요. 그리고 <code>:sp censor.c</code> 로 또 파일을 열어보세요. </p>
+<p>그리고 다음과 같이 화면을 이리저리 이동해보세요. 화면을 끄려면 <code>:q</code> 를 입력하면 되고 모든 화면을 종료하려면 <code>:qa</code> 를 입력하면 됩니다. </p>
+<p><img alt="render1589354268596" src="https://user-images.githubusercontent.com/16812446/81782929-88412f00-9535-11ea-988e-c4f90b29d205.gif"/></p>
+</li>
+</ul>
+<h4 id="_23">코드 포맷팅<a class="headerlink" href="#_23" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">일반 텍스트 에디터</th>
+<th align="center"><code>vim</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">코드 포맷팅</td>
+<td align="center"></td>
+<td align="center"><code>=G</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="day3_1"><strong><div align="center"> 🌜 ️여기까지 Day3     🌜️ </div></strong><a class="headerlink" href="#day3_1" title="Permanent link">¶</a></h3>
+<h3 id="day4"><strong><div align="center"> ☀️ ️여기서부터 Day4   ☀️ </div></strong><a class="headerlink" href="#day4" title="Permanent link">¶</a></h3>
+<h2 id="vim_3">더 빨라진 vim<a class="headerlink" href="#vim_3" title="Permanent link">¶</a></h2>
+<p><code>vim</code> 은 수많은 명령어를 제공하고 그 명령어로 사용자가 함수도 제작할 수 있기 때문에 <code>vim</code> 에는 사용자들이 만든 수많은 플러그인들이 존재합니다. 다음의 링크에서 가장 인기있는 커스터마이징 <code>vim</code> 을 찾아볼 수 있습니다. </p>
+<ul>
+<li>
+<p><a href="https://vimawesome.com/">https://vimawesome.com/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/vim-awesome/vim-awesome">https://github.com/vim-awesome/vim-awesome</a></p>
+</li>
+<li>
+<p><a href="https://github.com/amix/vimrc">https://github.com/amix/vimrc</a></p>
+</li>
+</ul>
+<p>여기에서는 간단하게 제가 <code>vim</code> 을 커스터마이징 한 내용을 살펴보겠습니다. 물론 여러분도 여러분에게 더 편한 커스텀 <code>vim</code> 을 만들 수 있습니다. </p>
+<h3 id="alias">더 빨라진 alias<a class="headerlink" href="#alias" title="Permanent link">¶</a></h3>
+<p>먼저 <code>vim</code> 명령어를 매번 치는 것은 너무 비효율적입니다. 무려 <code>3</code> 번이나 키보드를 쳐야하기 때문이죠. 그래서 <code>~/.zsh_aliases</code> 에 </p>
+<div class="highlight"><pre><span></span><code><span class="nb">alias</span> <span class="nv">v</span><span class="o">=</span>vim
+</code></pre></div>
+<p>를 추가하여 <code>v</code> 만 눌러도 <code>vim</code> 가 켜지도록 합니다. </p>
+<div class="admonition danger">
+<p class="admonition-title">Speed up!!</p>
+<p>입력 타수 최소화!</p>
+</div>
+<ul>
+<li>
+<p>실습 </p>
+<p>다음과 같이 도커 컨테이너에서 <code>vim</code> 를 켜보세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ v
+</code></pre></div>
+</li>
+</ul>
+<h3 id="vim-plug">vim-plug<a class="headerlink" href="#vim-plug" title="Permanent link">¶</a></h3>
+<p><a href="https://github.com/junegunn/vim-plug"><code>vim-plug</code></a> 는 <a href="https://github.com/junegunn">junegunn</a> 님께서 만드신 <code>vim</code> 플러그인을 관리할 수 있는 플러그인입니다. 여러 좋은 기능이 있지만 제가 가장 좋아하는 기능은 플러그인들을 설치할 때 병렬로 설치한다는 것입니다. 이로써 플러그인 설치 시간이 매우 짧아집니다. 다른 플러그인 관리 플러그인들은 플러그인을 설치할 때 직렬로 설치해서 설치 시간이 약간 오래걸립니다.</p>
+<p>저의 <code>dotfiles</code> 를 설치할 때 다음과 같은 화면을 보셨을텐데요.</p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82145156-d468d800-9883-11ea-804f-77728db33733.gif" width="70%"/>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Speed up!!</p>
+<p>병렬 설치로 성능 극대화.</p>
+</div>
+<p>마지막 부분에서 나타나는 <code>vim</code> 화면이 <code>vim</code> 의 플러그인들을 <code>vim-plug</code> 가 병렬로 매우 빠르게 설치하는 장면입니다. 너무 빠르죠? </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>12</code> 개의 플러그인을 설치했는데 다른 "플러그인 관리" 플러그인으로 <code>12</code> 개를 설치하면 인터넷이 안좋은 곳에서는 2분에서 3분까지 걸렸던 걸로 기억합니다. </p>
+</div>
+<p>여기에서는 이렇게 설치된 플러그인들 중에서 핵심적인 플러그인들을 살펴보겠습니다. </p>
+<h3 id="vimrc">vimrc<a class="headerlink" href="#vimrc" title="Permanent link">¶</a></h3>
+<p>하지만 그전에 <code>vim</code> 을 훨씬 더 빠르고 편하게 사용할 수 있도록 제가 개인적으로 설정한 단축키들을 알아보겠습니다. 나중에 여러분이 개인적으로 더 편한 단축키가 있다면 그것으로 바꿀 수 있습니다. </p>
+<p><code>vim</code> 은 에디터를 시작하기 전에 반드시 <code>~/.vimrc</code> 파일을 읽고 그곳에 정의된 설정들을 적용하고나서 시작됩니다. 그래서 개인 설정을 하고 싶을 때 이곳에 <code>vim</code> 의 설정 방법을 <strong>Google</strong> 에 검색하여 알아본 후 설정을 하면 됩니다. </p>
+<p>현재 도커 컨테이너에 설치된 저의 <code>~/.vimrc</code> 의 주요 설정을 추려보면 다음과 같습니다. </p>
+<div class="highlight"><pre><span></span><code><span class="k">colors</span> onedark
+map <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span>s<span class="p">&gt;</span> :<span class="k">w</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+map <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">q</span><span class="p">&gt;</span> :<span class="k">q</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">p</span><span class="p">&gt;</span> :NERDTreeToggle<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Up<span class="p">&gt;</span> :<span class="k">resize</span> <span class="m">-5</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Down<span class="p">&gt;</span> :<span class="k">resize</span> <span class="p">+</span><span class="m">5</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Left<span class="p">&gt;</span> :<span class="k">vertical</span> <span class="k">resize</span> <span class="m">-5</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Right<span class="p">&gt;</span> :<span class="k">vertical</span> <span class="k">resize</span> <span class="p">+</span><span class="m">5</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">k</span><span class="p">&gt;</span> :<span class="k">wincmd</span> <span class="k">k</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">j</span><span class="p">&gt;</span> :<span class="k">wincmd</span> <span class="k">j</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">h</span><span class="p">&gt;</span> :<span class="k">wincmd</span> <span class="k">h</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>C<span class="p">-</span><span class="k">l</span><span class="p">&gt;</span> :<span class="k">wincmd</span> <span class="k">l</span><span class="p">&lt;</span>CR<span class="p">&gt;</span>
+nmap <span class="p">&lt;</span><span class="k">silent</span><span class="p">&gt;</span> <span class="p">&lt;</span>Space<span class="p">&gt;</span> :<span class="k">nohlsearch</span><span class="p">&lt;</span>Bar<span class="p">&gt;</span>:echo<span class="p">&lt;</span>CR<span class="p">&gt;</span>
+</code></pre></div>
+<p>몇 가지 <code>vim</code> 을 매우 빠르고 편하게 사용할 수 있도록 단축키를 설정했습니다. 위에서 볼 수 있듯 <code>map</code> 과 <code>nmap</code> 이 단축키를 설정하는 <code>vim</code> 의 명령어인데 <code>&lt;silent&gt;</code> 는 명령 실행을 상태바에 출력하지 말라는 뜻이니 신경쓸 것 없습니다. 실질적으로 단축키가 설정된 중요한 부분은 <code>&lt;silent&gt;</code> 오른쪽 부분입니다. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>직관적으로 알 수 있듯이 <code>&lt;C-s&gt;</code> 는 <kbd>Ctrl</kbd>+<kbd>s</kbd> 를 뜻하고 <code>&lt;Up&gt;</code> 은 <kbd>↑</kbd> 를 뜻합니다.</p>
+</div>
+<h4 id="_24">더 이뻐진 테마<a class="headerlink" href="#_24" title="Permanent link">¶</a></h4>
+<p>현재 설정된 <code>vim</code> 의 컬러테마는 다음과 같은 <code>onedark</code> 입니다. </p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82150729-ec485800-9893-11ea-828e-7c9b54496fd1.png" width="70%"/>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>하지만 <a href="https://www.slant.co/topics/480/~best-vim-color-schemes">이곳에서</a> <code>vim</code> 의 여러가지 테마를 살펴볼 수 있고 <strong>Google</strong> 에 검색해서 더 많은 <code>vim</code> 테마도 찾을 수 있습니다. 그리고 여러분이 가장 마음이 드는 테마를 설치할 수도 있습니다.</p>
+</div>
+<h4 id="vim_4">더 빨라진 <code>vim</code> 종료/저장<a class="headerlink" href="#vim_4" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">기존 단축키</th>
+<th align="center">새로운 단축키</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">저장</td>
+<td align="center"><code>:w</code></td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>s</kbd></td>
+</tr>
+<tr>
+<td align="center">종료</td>
+<td align="center"><code>:q</code></td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>q</kbd></td>
+</tr>
+</tbody>
+</table>
+<p>가장 먼저 더 빨라진 명령어는 저장과 종료 명령인 <code>:w</code> 와 <code>:q</code> 입니다. 이것은 약간 치기 어렵고 윈도우의 저장 명령어 <kbd>Ctrl</kbd>+<kbd>s</kbd> 를 그대로 사용하고 싶기도 합니다. </p>
+<ul>
+<li>
+<p>실습 </p>
+<p>다음과 같이 <code>v test.txt</code> 로 텍스트 파일을 열고 아무 문장이나 쓴 다음에 <kbd>Ctrl</kbd>+<kbd>s</kbd> 로 저장하고 <kbd>Ctrl</kbd>+<kbd>q</kbd> 로 종료해보세요. </p>
+<p><img alt="render1589720657002" src="https://user-images.githubusercontent.com/16812446/82147434-6f64b080-988a-11ea-995a-f6d2b1c92a9c.gif"/></p>
+<div class="admonition danger">
+<p class="admonition-title">Speed up!!</p>
+<p>너무 빠르고 편하게 저장되고 종료됩니다. </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>리눅스 터미널에서 <kbd>Ctrl</kbd>+<kbd>s</kbd> 와 <kbd>Ctrl</kbd>+<kbd>q</kbd> 를 사용하기 위해서는 반드시 <code>stty -ixon</code> 명령어를 실행해두어야 합니다. 하지만 <code>~/.zshrc</code> 파일에서 이미 자동으로 실행되고 있으니 걱정하지 마세요. 왜 <code>stty -ixon</code> 을 실행해야만 <kbd>Ctrl</kbd>+<kbd>s</kbd> 와 <kbd>Ctrl</kbd>+<kbd>q</kbd> 를 사용할 수 있는지는 상세히 설명하지 않겠습니다. 궁금하신 분들은 <strong>Google</strong> 에 검색해보세요. </p>
+</div>
+</li>
+</ul>
+<h3 id="nerdtree">NERDTree<a class="headerlink" href="#nerdtree" title="Permanent link">¶</a></h3>
+<p><a href="https://github.com/preservim/nerdtree">NERDTree</a> 는 <code>vim</code> 에서 디렉토리와 파일을 너무나도 편하게 다룰 수 있게 해주는 플러그인입니다. NERDTree 는 수많은 좋은 기능들을 갖고 있지만 핵심적인 기능과 단축키는 다음과 같습니다. </p>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">단축키</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">NERDTree 실행</td>
+<td align="center"><code>:NERDTreeToggle</code></td>
+</tr>
+<tr>
+<td align="center">파일 열기</td>
+<td align="center"><kbd>Enter</kbd></td>
+</tr>
+<tr>
+<td align="center">파일을 수직으로 분할하여 열기</td>
+<td align="center"><code>s</code></td>
+</tr>
+<tr>
+<td align="center">파일을 수평으로 분할하여 열기</td>
+<td align="center"><code>i</code></td>
+</tr>
+</tbody>
+</table>
+<p>여기에서는 이 플러그인과 화면 이동을 더 빠르게 할 수 있는 단축키를 함께 알아보겠습니다. </p>
+<h4 id="_25">더 빨라진 화면 이동<a class="headerlink" href="#_25" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">기존 단축키</th>
+<th align="center">새로운 단축키</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">NERDTree 실행</td>
+<td align="center"><code>:NERDTreeToggle</code></td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>p</kbd></td>
+</tr>
+<tr>
+<td align="center">위쪽 화면으로 이동</td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>w</kbd>+<kbd>k</kbd></td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>k</kbd></td>
+</tr>
+<tr>
+<td align="center">아래쪽 화면으로 이동</td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>w</kbd>+<kbd>j</kbd></td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>j</kbd></td>
+</tr>
+<tr>
+<td align="center">왼쪽 화면으로 이동</td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>w</kbd>+<kbd>h</kbd></td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>h</kbd></td>
+</tr>
+<tr>
+<td align="center">오른쪽 화면으로 이동</td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>w</kbd>+<kbd>l</kbd></td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>l</kbd></td>
+</tr>
+</tbody>
+</table>
+<p>말로 설명하는 것보다 눈으로 보고 직접 실습하면서 익혀보도록 하겠습니다. </p>
+<ul>
+<li>
+<p>실습 </p>
+<p>먼저 다음 명령어를 통해 어떤 <code>python</code> 프로젝트를 클론하고 <code>vim</code> 으로 열어봅시다.</p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ g cl https://github.com/ccss17/nonogram
+$ <span class="nb">cd</span> nonogram
+$ v
+</code></pre></div>
+<p>그리고 다음과 같이 <kbd>Ctrl</kbd>+<kbd>p</kbd> 로 NERDTree 를 열어서 <code>j</code> 로 커서를 내려서 <code>nonogram.py</code> 에 커서를 두고 <kbd>Enter</kbd> 를 칩니다.</p>
+<p>그리고 다시 <kbd>Ctrl</kbd>+<kbd>h</kbd> 로 NERDTree 로 이동하여 <code>patterns.py</code> 에 커서를 두고 <code>s</code> 를 눌러 에디터를 수직으로 분할하여 엽니다. 이제 <kbd>Ctrl</kbd>+<kbd>p</kbd> 로 NERDTree 를 닫습니다. </p>
+<p>그리고 <kbd>Ctrl</kbd> 를 누른채 <kbd>h</kbd> 와 <kbd>l</kbd> 를 눌러서 왼쪽/오른쪽 에디터로 편하게 이동해보세요. 그리고 <kbd>Ctrl</kbd> 을 누를 채로 <kbd>q</kbd> 를 <code>2</code> 번 눌러서 <code>vim</code> 을 종료하세요.</p>
+<p><img alt="render1589730688182" src="https://user-images.githubusercontent.com/16812446/82153390-1bfe5c80-98a2-11ea-893b-30ed633cd92d.gif"/></p>
+</li>
+</ul>
+<h4 id="vim_5">더 빨라진 <code>vim</code> 화면크기조정<a class="headerlink" href="#vim_5" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">기존 단축키</th>
+<th align="center">새로운 단축키</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">위쪽으로 화면 조절</td>
+<td align="center"><code>:resize -5</code></td>
+<td align="center"><kbd>↑</kbd></td>
+</tr>
+<tr>
+<td align="center">아래쪽으로 화면 조절</td>
+<td align="center"><code>:resize +5</code></td>
+<td align="center"><kbd>↓</kbd></td>
+</tr>
+<tr>
+<td align="center">오른쪽으로 화면 조절</td>
+<td align="center"><code>:vertical resize -5</code></td>
+<td align="center"><kbd>→</kbd></td>
+</tr>
+<tr>
+<td align="center">왼쪽으로 화면 조절</td>
+<td align="center"><code>:vertical resize +5</code></td>
+<td align="center"><kbd>←</kbd></td>
+</tr>
+</tbody>
+</table>
+<p><code>vim</code> 에서 여러 에디터를 열어두었을 때 크기조정을 할 수 있었습니다. 하지만 그 명령어가 너무 복잡하고 외우기 힘들기 때문에 제가 소개해드리지 않았습니다. 하지만 화면크기조정을 매우 직관적으로 할 수 있도록 위와 같이 단축키를 설정해놓았습니다. </p>
+<ul>
+<li>
+<p>실습 </p>
+<p>다음과 같이 <code>nonogram</code> 레포지토리에서 <code>vim</code> 을 켜고 NERDTree 로 파일 하나를 열고 또 하나의 파일을 수직으로 열고 또 하나의 파일을 수평으로 엽니다. </p>
+<p>그리고 방향키 <kbd>←</kbd>, <kbd>→</kbd>, <kbd>↑</kbd>, <kbd>↓</kbd> 를 눌러서 에디터의 사이즈를 조절해보세요. 그리고 <kbd>Ctrl</kbd>+<kbd>h</kbd>, <kbd>Ctrl</kbd>+<kbd>j</kbd>, <kbd>Ctrl</kbd>+<kbd>k</kbd>, <kbd>Ctrl</kbd>+<kbd>l</kbd> 로 화면을 이동해서 그곳에서도 화면 크기를 조절해보세요. </p>
+<p>그리고 마지막으로 <kbd>Ctrl</kbd> 를 누른채로 <kbd>q</kbd> 를 <code>3</code> 번 눌러서 <code>vim</code> 을 종료해보세요. </p>
+<p><img alt="render1589725541150" src="https://user-images.githubusercontent.com/16812446/82151411-90330300-9896-11ea-8204-7a831f8d86db.gif"/></p>
+</li>
+</ul>
+<h3 id="nerdcommentor">NERDCommentor<a class="headerlink" href="#nerdcommentor" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">기존 단축키</th>
+<th align="center">새로운 단축키</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">주석</td>
+<td align="center"></td>
+<td align="center"><code>\cc</code></td>
+</tr>
+<tr>
+<td align="center">주석 해체</td>
+<td align="center"></td>
+<td align="center"><code>\cu</code></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://github.com/preservim/nerdcommenter">NERDCommentor</a> 는 주석을 쉽게 할 수 있도록 도와주는 플러그인입니다. 이 플러그인을 사용하고 나면 수작업으로 주석을 입력하고 있는 사람들에게 이 플러그인을 알려주고 싶을 마음이 들 정도로 편리함을 느낄 수 있습니다. </p>
+<ul>
+<li>
+<p>실습 </p>
+<p>다음과 같이 <code>main.py</code> 을 <code>vim</code> 으로 열고 <code>/def test(</code> 로 <code>test</code> 함수를 찾으세요. 그런 다음 <code>zt</code> 를 눌러 <code>test</code> 함수 코드가 한 눈에 들어올 수 있도록 화면을 올리고, <code>9\cc</code> 를 눌러 코드 <code>9</code> 줄을 한번에 주석처리하고 <kbd>Ctrl</kbd>+<kbd>s</kbd> 를 눌러 저장하세요.</p>
+<p>그러고 나서 <code>9\cu</code> 를 눌러서 다시 주석을 해제하고 <kbd>Ctrl</kbd>+<kbd>s</kbd> 를 눌러 저장한 다음 <kbd>Ctrl</kbd>+<kbd>q</kbd> 로 에디터를 종료하세요. </p>
+<p><img alt="render1589726356315" src="https://user-images.githubusercontent.com/16812446/82151687-b2795080-9897-11ea-8b56-1458ee019c94.gif"/></p>
+</li>
+</ul>
+<h3 id="vim-multiple-cursors">vim-multiple-cursors<a class="headerlink" href="#vim-multiple-cursors" title="Permanent link">¶</a></h3>
+<p><a href="https://github.com/terryma/vim-multiple-cursors">vim-multiple-cursors</a> 는 <code>vim</code> 에서 커서를 여러개로 늘려서 똑같은 문자들을 한번에 편집할 수 있게 해주는 플러그인입니다. </p>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center">기존 단축키</th>
+<th align="center">새로운 단축키</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">멀티 커서 늘리기</td>
+<td align="center"></td>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>n</kbd></td>
+</tr>
+</tbody>
+</table>
+<p>말로 설명하는 것보다 직접 보고 따라하면서 배워보겠습니다. </p>
+<ul>
+<li>
+<p>실습 </p>
+<p>이번에는 <code>lolcat</code> 레포지토리로 이동하여 <code>vim</code> 으로 <code>lolcat.c</code> 를 여세요. </p>
+<p><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong></p>
+<div class="highlight"><pre><span></span><code>$ z lol
+$ v lolcat.c
+</code></pre></div>
+<p>그리고 다음과 같이 <code>/main(</code> 으로 메인함수로 이동하고 <code>zt</code> 를 눌러 화면을 올리고 <code>95</code> 행의 <code>cc</code> 라는 변수가 정의되어 있는 곳에 커서를 둡니다. </p>
+<p><img alt="render1589727290032" src="https://user-images.githubusercontent.com/16812446/82152075-eeadb080-9899-11ea-970c-d109d97d43fa.gif"/></p>
+<p>개발을 하다 보니 <code>cc</code> 라는 변수 이름이 마음에 들지 않아서 바꾸고 싶습니다. 하지만 이 변수가 <code>main</code> 함수에서 몇번이나 반복되었는지 알 수 없습니다. </p>
+<p>그래서 <code>cc</code> 변수 위에 커서를 두고 <kbd>Ctrl</kbd> 을 누른채로 <kbd>n</kbd> 을 연타하여 상태표시줄에 <strong>No more matches</strong> 라고 뜰 때까지 혹은 더 단순하게 다음 단어로 커서가 이동되지 않을 때까지 변수 <code>cc</code> 들을 포커싱합니다. </p>
+<p>그러고 나서 <strong>지우고 편집</strong> 하기 기능인 <code>c</code> 를 눌러서 <code>my_var</code> 를 입력하고 <kbd>Esc</kbd> 를 연타하여 눌러 입력 모드를 빠져나옵니다. 여러개의 커서들이 다시 없어져야 하기 때문에 <kbd>Esc</kbd> 를 연타해야 합니다. </p>
+<p>그리고 <kbd>Ctrl</kbd>+<kbd>s</kbd> 를 눌러서 저장하고 <kbd>Ctrl</kbd>+<kbd>q</kbd> 를 눌러서 에디터를 종료하세요. </p>
+</li>
+<li>
+<p>실습 </p>
+<p>다음과 같이 <code>include</code> 에 커서를 두고 <kbd>Ctrl</kbd> 를 누른채 <code>n</code> 을 연타하여 모든 <code>include</code> 를 포커싱한 다음 <strong>삭제하기</strong> 기능인 <code>x</code> 를 누르면 모두 다 삭제됩니다. </p>
+<p><img alt="render1589727634891" src="https://user-images.githubusercontent.com/16812446/82152210-ae026700-989a-11ea-877e-cb592dca5a46.gif"/></p>
+<p>그러고나서 <kbd>Esc</kbd> 를 연타하여 멀티 커서를 다 없애고 <kbd>Ctrl</kbd>+<kbd>s</kbd>, <kbd>Ctrl</kbd>+<kbd>q</kbd> 로 저장 후 종료합니다. </p>
+</li>
+</ul>
+<h2 id="vscode-vim">VSCode Vim<a class="headerlink" href="#vscode-vim" title="Permanent link">¶</a></h2>
+<p><a href="https://marketplace.visualstudio.com/items?itemName=vscodevim.vim"><strong>VSCodeVim</strong></a> 은 <strong>VSCode</strong> 에서 <code>vim</code> 키맵을 사용할 수 있도록 해줍니다. 그래서 기존의 CLI 에서의 <code>vim</code> 에서는 사용할 수 없었던 <strong>VSCode</strong> 의 모든 풍부한 디버깅 기능, 확장, <strong>VCS</strong> 등을 <code>vim</code> 과 함께 사용할 수 있게 됩니다. 어차피 나중에라도 <strong>VSCodeVim</strong> 을 비활성화 시킬 수 있기 때문에 한번 설치해보세요. </p>
+<h3 id="_26">단축키<a class="headerlink" href="#_26" title="Permanent link">¶</a></h3>
+<h4 id="_27">주석 처리<a class="headerlink" href="#_27" title="Permanent link">¶</a></h4>
+<p>그에 앞서 <strong>VSCode</strong> 에서의 주석 처리 단축키를 알아보겠습니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">기능</th>
+<th align="center"><code>vim</code> 단축키</th>
+<th align="center"><strong>VSCode</strong> 단축키</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">주석</td>
+<td align="center"><code>\cc</code></td>
+<td align="center"><code>gcc</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>VSCodeVim</strong> 확장이 적용된 <strong>VSCode</strong> 에서 주석처리는 단순히 <code>gcc</code> 를 누르면 됩니다. <code>5gcc</code> 를 누르면 <code>5</code> 줄이 주석처리되는 식입니다.</p>
+<h4 id="_28">단축키 설정<a class="headerlink" href="#_28" title="Permanent link">¶</a></h4>
+<p><strong>VSCodeVim</strong> 확장의 키맵이 <strong>VSCode</strong> 의 강력한 기능을 덮어버리는 경우도 있었기 때문에 개인적으로 다음의 설정을 통해 <strong>VSCodeVim</strong> 확장의 일부 기능을 비활성화시켰습니다. <code>...</code> 에는 또 다른 확장들의 설정이 있는 것입니다. </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">"editor.lineNumbers"</span><span class="p">:</span> <span class="s2">"relative"</span><span class="p">,</span>
+  <span class="nt">"vim.useSystemClipboard"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">"vim.useCtrlKeys"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">"vim.hlsearch"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">"vim.handleKeys"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">"&lt;C-a&gt;"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">"&lt;C-d&gt;"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">"&lt;C-f&gt;"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">"&lt;C-n&gt;"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">"&lt;C-o&gt;"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">"&lt;C-w&gt;"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">"&lt;C-k&gt;"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="err">...</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>이렇게 개인적으로 개발환경 설정을 할 수 있는데 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>p</kbd> 로 명령 팔레트를 열어서 <strong>setting json</strong> 만 검색하면 다음과 같이 <strong>Preferences: Open Settings (JSON)</strong> 이 나옵니다. 이것을 실행하여 설정창이 뜨면 단순히 위의 설정을 복사해서 붙혀넣으면 됩니다. </p>
+<p><img height="auto" src="https://user-images.githubusercontent.com/16812446/82322033-cbf1d800-9a10-11ea-9726-10ef40cff6c5.PNG" width="50%"/></p>
+</div>
+<p>이런 설정을 통해 <strong>VSCodeVim</strong> 확장 단축키를 비활성화시켜서 원래 <strong>VSCode</strong> 단축키로 기능하게 한 단축키는 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th align="center">단축키</th>
+<th align="center"><strong>VSCodeVim</strong> 확장</th>
+<th align="center"><strong>VSCode</strong> 원래 기능</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>d</kbd></td>
+<td align="center">화면 내리기</td>
+<td align="center">멀티 커서</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>n</kbd></td>
+<td align="center"></td>
+<td align="center">새 파일 만들기</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>w</kbd></td>
+<td align="center"></td>
+<td align="center">파일 닫기</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>f</kbd></td>
+<td align="center"></td>
+<td align="center">찾기</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>o</kbd></td>
+<td align="center"></td>
+<td align="center">파일 열기</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd>+<kbd>a</kbd></td>
+<td align="center"></td>
+<td align="center">전체 선택</td>
+</tr>
+</tbody>
+</table>
+<p><kbd>Ctrl</kbd>+<kbd>d</kbd> 는 기본 <strong>VSCode</strong> 에서 멀티 커서 기능인데 <strong>VSCodeVim</strong> 확장을 설치하면 <kbd>Ctrl</kbd>+<kbd>d</kbd> 를 덮어버려서 비활성화시켰고, <kbd>Ctrl</kbd>+<kbd>n</kbd> 은 기본 <strong>VSCode</strong> 에서 새 파일을 만드는 단축키인데 마찬가지로 <strong>VSCodeVim</strong> 확장이 이 단축키를 덮어버렸기 때문에 비활성화시켰습니다. 비슷한 이유로 <kbd>Ctrl</kbd>+<kbd>f</kbd>, <kbd>Ctrl</kbd>+<kbd>o</kbd>, <kbd>Ctrl</kbd>+<kbd>k</kbd>, <kbd>Ctrl</kbd>+<kbd>w</kbd> 등도 기본 <strong>VSCode</strong> 기능을 하도록 <strong>VSCodeVim</strong> 확장을 비활성화시켰습니다. </p>
+<h4 id="_29">그외의 단축키<a class="headerlink" href="#_29" title="Permanent link">¶</a></h4>
+<p>그 외의 단축키는 <code>vim</code> 과 동일합니다.</p>
+<p>여기에서는 이 설정이 적용된 <strong>VSCode</strong> 에서 <code>vim</code> 을 사용하여 어떻게 코드를 효율적으로 편집하는지 몇개의 예시를 보여드리겠습니다. <strong>Python</strong> 으로 예시를 들었지만 <strong>모든 언어에 적용될 수 있는 상황들</strong> 입니다.</p>
+<h2 id="vscode-vim_1">VSCode Vim 예시<a class="headerlink" href="#vscode-vim_1" title="Permanent link">¶</a></h2>
+<p>여기에서는 <strong>VSCode</strong> 에서 <strong>VSCodeVim</strong> 확장으로 어떻게 코드 편집을 편하게 편하게 할 수 있는지 보여드리겠습니다. <strong>VSCodeVim</strong> 을 사용하고 싶지 않은 분들이라도 한번 따라해보면서 코드 편집을 얼마나 더 효율적으로 할 수 있는지 꼭 체험해보세요. </p>
+<h3 id="python-list-to-dictionary">Python - List to Dictionary<a class="headerlink" href="#python-list-to-dictionary" title="Permanent link">¶</a></h3>
+<p><strong>Python</strong> 코딩을 하다가 <code>lst = ['all', 'all2', 'all3', 'all4', 'all5']</code> 라는 리스트를 만들게 되었습니다. 그런데 이 자료구조가 딕셔너리로 사용되면 더 효율적이라는 것을 깨닫고 이 리스트를 딕셔너리로 고치려는 상황입니다. </p>
+<ol>
+<li>
+<p>먼저 다음과 같이 <code>,</code> 에 커서를 두고 <code>v</code> 로 드래그 모드로 들어가서 <code>'</code> 앞까지 드래그합니다. </p>
+</li>
+<li>
+<p>그리고 <strong>VSCode</strong> 의 멀티커서 기능인 <kbd>Ctrl</kbd>+<kbd>d</kbd> 를 꾹 누르고 있으면 매칭되는 모든 코드가 멀티 커서로 포커싱됩니다.</p>
+</li>
+<li>
+<p>그리고 <strong>삭제하고 편집하기</strong> 기능인 <code>c</code> 를 눌러 <kbd>Enter</kbd> 를 칩니다.</p>
+</li>
+<li>
+<p>그러면 멀티커서가 모든 <code>,</code> 를 삭제하고 개행을 합니다. 그런다음 아직 개행되지 않은 <code>'all'</code> 을 개행시키고 <kbd>Ctrl</kbd>+<kbd>v</kbd> 로 블록 드래그 모드로 들어가서 <code>'all5'</code> 까지 커서를 내립니다.</p>
+</li>
+<li>
+<p>그리고 <kbd>Shift</kbd>+<kbd>i</kbd> 를 눌러 입력모드로 들어간다음 키값을 써주고 <kbd>Esc</kbd> 를 눌러 명령모드로 돌아옵니다.</p>
+</li>
+<li>
+<p>그리고 <code>r2</code>, <code>r3</code>, <code>r4</code>, <code>r5</code> 를 눌러 키값을 적절히 바꾸고 <code>5&gt;&gt;</code> 를 눌러 자동으로 탭 인덴트를 해줍니다. </p>
+</li>
+</ol>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82322465-8550ad80-9a11-11ea-9682-a1f291bb6883.gif" width="70%"/>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>0</code> 으로 문장 앞으로 커서를 옮기는 것이나 <code>f'</code> 로 <code>'</code> 로 커서를 옮기는 것 등의 설명까지 하면 너무 장황해져서 생략했습니다. </p>
+</div>
+<h3 id="python-copy-paste">Python - copy &amp; paste<a class="headerlink" href="#python-copy-paste" title="Permanent link">¶</a></h3>
+<p>다음의 상황은 코딩을 하다보니 <code>sub_section('math')</code> 라는 함수를 여러번 사용해야 하는 상황입니다.</p>
+<ol>
+<li>
+<p><code>yy4p</code> 로 코드를 <code>4</code> 번 복사하여 붙혀넣습니다. </p>
+</li>
+<li>
+<p>그리고 <code>'</code> 에 커서를 두고 <kbd>Ctrl</kbd>+<kbd>v</kbd> 로 블록드래그를 한 다음 맨 아래 코드까지 내려서 <kbd>Shift</kbd>+<kbd>i</kbd> 로 입력모드에 들어가서 <code>1</code> 을 입력합니다. </p>
+</li>
+<li>
+<p><code>r2jr3jr4jr5</code> 를 입력해 파라미터를 수정합니다. </p>
+</li>
+<li>
+<p>그런데 코딩하다보니 <code>for</code> 문으로 고치는게 더 적절하다는 것을 깨닫고 <code>for</code> 문으로 대체하려 합니다. 그래서 <code>for</code> 문을 하나 만들고 <code>sub_sectoin('math')</code> 코드를 <code>yy</code> 로 복사하여 가져와서 <code>p</code> 로 붙혀넣습니다. </p>
+</li>
+<li>
+<p>그러고나서 <code>&gt;&gt;</code> 를 눌러 인덴트를 조정합니다. </p>
+</li>
+<li>
+<p>마지막으로 <code>7k</code> 를 눌러 <code>sub_section('math1')</code> 코드로 가서 <code>5dd</code> 를 눌러 필요없어진 코드를 삭제합니다.</p>
+</li>
+</ol>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82323380-ef1d8700-9a12-11ea-97b1-d364f38941c0.gif" width="70%"/>
+</div>
+<h3 id="python-multi-cursor">Python - multi cursor<a class="headerlink" href="#python-multi-cursor" title="Permanent link">¶</a></h3>
+<p>다음의 상황은 코딩을 하면서 <code>sub_section</code> 이라는 함수를 만들었는데 갑자기 이 함수의 이름이 마음에 들지 않아서 바꾸고 싶은 상황입니다.</p>
+<ol>
+<li>
+<p><code>sub_section</code> 함수 이름이 사용된 아무 곳에서나 커서를 두고 <kbd>Ctrl</kbd>+<kbd>d</kbd> 를 꾹 눌러서 모든 <code>sub_section</code> 들이 멀티 커서로 포커싱되게 합니다.</p>
+</li>
+<li>
+<p><strong>삭제하고 편집하기</strong> 기능인 <code>c</code> 를 누르고 고치고 싶은 이름을 입력하면 모든 곳이 자동으로 편집됩니다. </p>
+</li>
+<li>
+<p><kbd>Esc</kbd> 를 연타하여 생성된 멀티커서를 소멸해줍니다. </p>
+</li>
+</ol>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82324002-dc578200-9a13-11ea-987d-bb5282dc8e22.gif" width="70%"/>
+</div>
+<p>하지만 단번에 매칭되는 모든 단어에 멀티커서를 두고 싶다면 다음과 같이 하면 됩니다.</p>
+<ol>
+<li>
+<p><code>subsection</code> 함수 이름에 커서를 둔다. </p>
+</li>
+<li>
+<p><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> 을 누른다.</p>
+</li>
+<li>
+<p><code>b</code> 를 눌러 커서를 단어의 처음으로 옮기고 <code>cw</code> 로 삭제하고 편집하기를 눌러 함수 이름을 마음대로 변경한다. </p>
+</li>
+<li>
+<p><kbd>Esc</kbd> 를 눌러 빠져나온다. </p>
+</li>
+</ol>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82770651-3a50f300-9e74-11ea-8ee7-ca2981cdc3a9.gif" width="70%"/>
+</div>
+<h3 id="python-rename-argument">Python - rename argument<a class="headerlink" href="#python-rename-argument" title="Permanent link">¶</a></h3>
+<p>다음의 상황은 함수와 인자를 정의했는데, 인자의 이름을 바꾸어야 하는 상황입니다. 그런데 인자가 여러군데에서 사용되서 일일이 바꾸기 너무 귀찮을 것 같습니다. 하지만 괜찮습니다.</p>
+<ol>
+<li>
+<p><code>test</code> 위에 커서를 올려두고 <kbd>Ctrl</kbd>+<kbd>d</kbd> 를 <code>3</code> 번 눌러 <code>test</code> 를 멀티커서로 포커싱합니다. </p>
+<ul>
+<li><strong>위에서 보았듯 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> 을 누르면 <kbd>Ctrl</kbd>+<kbd>d</kbd> 를 <code>3</code> 번 누를 필요 없이 단번에 멀티 커서가 생성됩니다.</strong></li>
+</ul>
+</li>
+<li>
+<p><code>c</code> 를 눌러 모든 <code>test</code> 를 지우고 입력하고 싶은 문자열을 입력합니다.</p>
+</li>
+<li>
+<p><kbd>Esc</kbd> 를 연타하여 멀티 커서를 소멸시킵니다. </p>
+</li>
+</ol>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82324486-aff03580-9a14-11ea-991e-fac98ec93be5.gif" width="70%"/>
+</div>
+<h3 id="c-">C 언어 - 변수 한 줄로 선언하기<a class="headerlink" href="#c-" title="Permanent link">¶</a></h3>
+<p>다음의 상황은 <strong>C 언어</strong> 를 코딩하고 있던 중 <code>pthread_t tid</code> 변수들이 여러 줄로 선언되어 있는 것을 한 줄로 만들고 싶은 상황입니다. </p>
+<ol>
+<li>
+<p>가장 처음 선언된 <code>pthread_t tid1</code> 변수에 커서를 두고 <code>J</code> 를 눌러 두번째 문장과 이어붙힙니다.</p>
+</li>
+<li>
+<p>그리고 <code>.</code> 을 연타하여 <code>pthread_t tid6</code> 이 선언된 문장까지 이어붙힙니다.</p>
+</li>
+<li>
+<p>그리고 <code>0f;</code> 를 눌러서 <code>;</code> 에 커서를 두고 <code>v</code> 로 드래그 모드로 들어가서 <code>e</code> 를 눌러서 <code>; pthread_t</code> 를 드래그합니다. </p>
+</li>
+<li>
+<p><kbd>Ctrl</kbd>+<kbd>d</kbd> 를 연타하여 모든 <code>; pthread_t</code> 를 멀티 커서로 포커싱합니다. </p>
+</li>
+<li>
+<p><code>c</code> 를 누르고 <code>,</code> 를 입력하고 <kbd>Esc</kbd> 를 연타하여 멀티 커서를 소멸시킵니다.</p>
+</li>
+</ol>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82325194-c480fd80-9a15-11ea-8552-9c11c996c0ac.gif" width="70%"/>
+</div>
+<h3 id="markdown-example-1">Markdown - example 1<a class="headerlink" href="#markdown-example-1" title="Permanent link">¶</a></h3>
+<p>다음의 상황은 <strong>Markdown</strong> 파일을 작성중 맨 밑에 있는 문장을 맨 위로 올리고 나머지 문장들을 그 문장의 하위 문장이 되게 하고 싶은 상황입니다. </p>
+<ol>
+<li>
+<p><code>gg</code> 로 커서를 맨 위로 올리고 <code>13dd</code> 를 눌러 나머지 문장을 잘라냅니다. </p>
+</li>
+<li>
+<p><code>p</code> 를 눌러 문장을 붙혀넣고 <code>O</code> 로 간편하게 개행을 한 다음 <kbd>Esc</kbd> 로 다시 명령모드로 돌아옵니다. </p>
+</li>
+<li>
+<p><code>13&gt;&gt;</code> 를 눌러 간편하게 탭 인텐트를 조정합니다. 그런데 탭 사이즈가 <code>4</code> 로 설정되어 있어서 너무 많이 뛰어진 것 같아서 탭 사이즈를 <code>2</code> 로 줄이고 싶습니다. </p>
+</li>
+<li>
+<p><kbd>Ctrl</kbd>+<kbd>v</kbd> 를 눌러 블록 드래그 모드로 들어가고 <code>G</code> 를 눌러 커서를 맨 밑으로 내리고 <code>k</code> 를 한번 눌러 커서를 한 줄 위로 올립니다. </p>
+</li>
+<li>
+<p>그리고 <code>l</code> 를 누르고 <code>x</code> 를 눌러 공백 <code>2</code> 개를 삭제합니다.</p>
+</li>
+</ol>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82324933-681dde00-9a15-11ea-9899-b8edb9638b6c.gif" width="70%"/>
+</div>
+<h3 id="markdown-example-2">Markdown - example 2<a class="headerlink" href="#markdown-example-2" title="Permanent link">¶</a></h3>
+<p>다음은 <strong>Markdown</strong> 파일을 작성하던 중 문장들을 아이템으로 분리하고 싶은 상황입니다. </p>
+<ol>
+<li>
+<p><code>0f.</code> 를 눌러 첫번째 문장이 끝나는 지점에 커서를 둡니다. </p>
+</li>
+<li>
+<p><code>a</code> 를 누르고 <kbd>Enter</kbd> 를 쳐서 개행을 시킵니다.</p>
+</li>
+<li>
+<p>이 작업을 다음 문장에도 반복합니다.</p>
+</li>
+</ol>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82325719-a798fa00-9a16-11ea-898d-760c5898a288.gif" width="70%"/>
+</div>
+<h3 id="python-multicursor">Python - multicursor<a class="headerlink" href="#python-multicursor" title="Permanent link">¶</a></h3>
+<p>다음은 파이썬에서 딕셔너리를 만들었는데 값들의 이름이 마음에 안들어서 고치려는 상황입니다.</p>
+<p>하지만 지금까지의 설명을 통하여 어떻게 멀티 커서를 사용하여 한번에 편집할 수 있는지 다 이해하셨을 거라고 믿습니다.</p>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82326020-268e3280-9a17-11ea-92cd-c5261c39047e.gif" width="70%"/>
+</div>
+<h3 id="markdown-example-3">Markdown - example 3<a class="headerlink" href="#markdown-example-3" title="Permanent link">¶</a></h3>
+<p>다음은 <strong>Markdown</strong> 파일을 작성하다가 특정 문장을 헤더로 입력하고 싶은 상황입니다.</p>
+<ol>
+<li>
+<p><code>f(vf)</code> 로 <code>(</code> 부터 <code>)</code> 까지 드래그하고 <code>y</code> 를 눌러 복사합니다.</p>
+</li>
+<li>
+<p>그리고 <code>gg</code> 로 맨 위로 커서를 옮기고 헤더를 입력한 다음 <code>p</code> 로 붙혀넣습니다. </p>
+</li>
+<li>
+<p>하지만 헤더의 <code>(</code>, <code>)</code> 을 없애고 싶습니다. 그래서 <code>f(xf)x</code> 로 삭제합니다. </p>
+</li>
+<li>
+<p>그런데 오타가 있다는 것을 발견하고 <code>toin</code> 을 드래그하고 멀티커서 <kbd>Ctrl</kbd>+<kbd>d</kbd> 로 그것과 똑같은 오타를 포커싱하여 <code>tion</code> 으로 고칩니다. </p>
+</li>
+</ol>
+<div align="center">
+<img height="auto" src="https://user-images.githubusercontent.com/16812446/82326130-563d3a80-9a17-11ea-857f-a6fb7d8db4c8.gif" width="70%"/>
+</div>
+<h3 id="day4_1"><strong><div align="center"> 🌜 ️여기까지 Day4     🌜️ </div></strong><a class="headerlink" href="#day4_1" title="Permanent link">¶</a></h3>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<!-- 
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer> -->
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+<script src="../../javascripts/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+<script src="../../javascripts/b27b3e6448.js"></script>
+</body>
+</html>

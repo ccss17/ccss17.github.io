@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/security-tutorial/05-Reversing2/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<title>Day5 Reversing 2 - ccss17</title>
+<link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#2">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Day5 Reversing 2
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      ccss17
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Math/MathHistory/">
+        Math
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../paper/1404.6388/">
+        Paper
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Computer/nand2tetris/">
+        Computer
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../ProgrammerBase/">
+        ProgrammerBase
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../">
+        security tutorial
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        ccss17
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Set Theory
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Set Theory
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Set/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/ArithmeticOperations/">
+        Arithmetic Operations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/Polynomials/">
+        Polynomials
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+        Hyperreal Numbers
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/MatrixOperation/">
+        Matrix Operation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/Determinants/">
+        Determinants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/Diagonalization/">
+        Diagonalization
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/InnerProductSpaces/">
+        Inner Product Spaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Math/LinearAlgebra/CanonicalForms/">
+        Canonical Forms
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Why the future doesn't need us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust Memo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Day5 Reversing 2
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Day5 Reversing 2
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    리버싱 (2)
+  </a>
+<nav aria-label="리버싱 (2)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crackme0x04-crackme0x05">
+    crackme0x04 ~ crackme0x05 까지 설명
+  </a>
+<nav aria-label="crackme0x04 ~ crackme0x05 까지 설명" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crackme0x04">
+    crackme0x04
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crackme0x05">
+    crackme0x05
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#radare2">
+    radare2 사용법
+  </a>
+<nav aria-label="radare2 사용법" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    기본 명령어
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    간단한 암호화 복호화
+  </a>
+<nav aria-label="간단한 암호화 복호화" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xor">
+    XOR 암호화
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xor_1">
+    XOR 연산 테스트
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xor_2">
+    XOR 암호화 테스트
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    실전
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#easyelf-write-up">
+    easyelf write-up
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    과제
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    리버싱 (2)
+  </a>
+<nav aria-label="리버싱 (2)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crackme0x04-crackme0x05">
+    crackme0x04 ~ crackme0x05 까지 설명
+  </a>
+<nav aria-label="crackme0x04 ~ crackme0x05 까지 설명" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crackme0x04">
+    crackme0x04
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#crackme0x05">
+    crackme0x05
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#radare2">
+    radare2 사용법
+  </a>
+<nav aria-label="radare2 사용법" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    기본 명령어
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    간단한 암호화 복호화
+  </a>
+<nav aria-label="간단한 암호화 복호화" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xor">
+    XOR 암호화
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xor_1">
+    XOR 연산 테스트
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#xor_2">
+    XOR 암호화 테스트
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    실전
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#easyelf-write-up">
+    easyelf write-up
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    과제
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Day5 Reversing 2</h1>
+<h2 id="2">리버싱 (2)<a class="headerlink" href="#2" title="Permanent link">¶</a></h2>
+<h3 id="crackme0x04-crackme0x05">crackme0x04 ~ crackme0x05 까지 설명<a class="headerlink" href="#crackme0x04-crackme0x05" title="Permanent link">¶</a></h3>
+<h4 id="crackme0x04"><strong>crackme0x04</strong><a class="headerlink" href="#crackme0x04" title="Permanent link">¶</a></h4>
+<ol>
+<li>
+<p><code>scanf</code> 의 파라미터가 ("%s", 0xffffd4c0) 임.</p>
+</li>
+<li>
+<p><code>check</code> 라는 함수를 부르는데 파라미터가 (0xffffd4c0, 0xffffd4c0, 0xf7fcf410, 0x1) 임. <code>si</code> 명령어로 <code>test</code> 함수로 들어감</p>
+</li>
+<li>
+<p><code>strlen</code> 함수를 0xffffd4c0 를 대상으로 호출하고 반환값을 [ebp - 0xc] 와 비교함.</p>
+<ul>
+<li>
+<p>0xffffd4c0 는 입력한 문자열임.</p>
+</li>
+<li>
+<p>[ebp - 0xc] 는 0 임. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>만약 0 이 0xffffd4c0 에 저장된 문자열의 길이보다 같거나 크면 <code>jae</code> 가 실행됨.</p>
+</li>
+<li>
+<p>여기서부터 <code>check</code> 함수에 대한 정적분석이 <code>gdb</code> 만으로는 한계가 있어서 <code>radare2</code> 로 정적분석을 함. </p>
+</li>
+<li>
+<p><code>check</code> 함수에서 <code>sscanf</code> 함수를 호출하는데 파라미터가 ("입력한 문자열의 첫번째 문자", "%d", 0xffffd494) 임. </p>
+<ul>
+<li>
+<p><code>sscanf</code> 함수는 첫번째 파라미터의 문자열을 입력으로 하는 <code>scanf</code> 와 동일했음. <code>scanf</code> 가 입력을 키보드로부터 받는다면 <code>sscanf</code> 는 입력을 첫번째 파라미터로 받음. </p>
+</li>
+<li>
+<p><code>%d</code> 포맷 스트링으로 입력을 받기 때문에 정수형이 아닌 데이터가 전달되면 입력이 무시됨. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>입력받은 문자열의 첫번째 문자를 0xf 과 비교함. 그런데 정수형으로만 입력을 받기 때문에 0 부터 9 까지의 입력으로는 0xf 와 같게 만드는 것은 불가능하다. </p>
+</li>
+<li>
+<p>그런데 루프를 한 번 더 돌아보니까 두번째 문자를 첫번째 문자와 더해주더라. 그러고나서 0xf 와 비교하더라. </p>
+</li>
+</ol>
+<h4 id="crackme0x05"><strong>crackme0x05</strong><a class="headerlink" href="#crackme0x05" title="Permanent link">¶</a></h4>
+<ol>
+<li>
+<p><code>scanf</code> 가 ("%s", 0xffffd4c0) 로 호출된다. </p>
+</li>
+<li>
+<p><code>check</code> 함수 내부에서 또 다시 <code>sscanf</code> 가 ('입력받은 문자열의 첫번째 문자', '%d', 0xffffd494) 로 호출된다. </p>
+</li>
+<li>
+<p>[ebp - 8] 과 0x10 을 비교하는데 마찬가지로 입력받은 첫번째 문자는 0 부터 9 까지의 범위이기에 0x10 과 같아지는 것이 불가능하다. 그러므로 루프를 한 번 더 돌아본다. </p>
+<ul>
+<li><code>x/x $ebp - 8</code> : 메모리 값 확인 </li>
+</ul>
+</li>
+<li>
+<p>마찬가지로 이전에 있던 문자를 더해서 0x10 과 비교한다. 하지만 <code>parell</code> 이라는 함수를 한 번 더 거쳐간다. </p>
+<ul>
+<li><code>parell</code> 함수 내부에서 첫번째 문자와 두번째 문자로 숫자를 만들어서 AND 연산을 한 후 0 이 되었는지 확인해서 0 이 아니면 "Incorrect" 로직으로 흘러갔다. </li>
+</ul>
+</li>
+</ol>
+<p>더 많은 write-up:</p>
+<ul>
+<li>
+<p><a href="https://moveax.me/crackme0x04/">https://moveax.me/crackme0x04/</a></p>
+</li>
+<li>
+<p><a href="https://moveax.me/crackme0x05/">https://moveax.me/crackme0x05/</a></p>
+</li>
+</ul>
+<h3 id="radare2">radare2 사용법<a class="headerlink" href="#radare2" title="Permanent link">¶</a></h3>
+<p><code>gdb</code> 로 동적 분석을 편하게 할 수 있다면 <code>radare2</code> 로 정적 분석을 편하게 할 수 있다. 동적 분석이란 프로그램을 실행 중에 분석하는 것이고 정적 분석이란 프로그램을 실행하지 않고 분석하는 것이다. 다음 튜토리얼을 따라하면서 <code>r2</code> 의 사용법을 익힌다. </p>
+<ul>
+<li><a href="https://moveax.me/radare-basics/">https://moveax.me/radare-basics/</a></li>
+</ul>
+<p>다음 링크는 <code>r2</code> 의 레퍼런스 격의 문서들이다. 명령어들을 참고하는 용도로 사용하면 된다. </p>
+<ul>
+<li>
+<p><a href="https://radare.gitbooks.io/radare2book/content/">https://radare.gitbooks.io/radare2book/content/</a> </p>
+</li>
+<li>
+<p><a href="https://github.com/Maijin/Workshop2015/blob/master/slides.pdf">https://github.com/Maijin/Workshop2015/blob/master/slides.pdf</a></p>
+</li>
+</ul>
+<h4 id="_1">기본 명령어<a class="headerlink" href="#_1" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><code>afl</code> : 함수 검색 </p>
+</li>
+<li>
+<p><code>s main</code> : <code>main</code> 으로 이동 </p>
+</li>
+<li>
+<p><code>s sym.check</code> : <code>check</code> 으로 이동 </p>
+</li>
+<li>
+<p><code>VV</code> : 그래프 </p>
+</li>
+<li>
+<p><code>pdd</code> : 함수 디스어셈블. <strong>r2dec-js</strong> 플러그인 설치 시 슈도 코드 생성 </p>
+</li>
+<li>
+<p>TODO</p>
+</li>
+</ul>
+<h3 id="_2">간단한 암호화 복호화<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<h4 id="xor">XOR 암호화<a class="headerlink" href="#xor" title="Permanent link">¶</a></h4>
+<p>XOR 연산에는 같은 key 값으로 데이터에 두 번 연산할 경우 원래의 데이터로 돌아오는 특성이 있기 때문에 암호화에 사용된다. </p>
+<p><img alt="XOR" src="https://electronicsarea.com/wp-content/uploads/xor-truth-table.gif"/></p>
+<p>XOR 은 위와 같이 두 입력 값이 같으면 0 이 출력되고 다르면 1 이 출력된다. 이제 A 를 원본 데이터라고 생각하고 B 를 XOR 키라고 생각하자. </p>
+<table>
+<thead>
+<tr>
+<th align="center">원본 데이터</th>
+<th align="center">XOR 키</th>
+<th align="center">출력</th>
+<th align="center">XOR 키</th>
+<th align="center">원본 데이터</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>위의 표는 XOR 암호화의 진리표이고 XOR 출력에 XOR 키를 다시 적용하면 원본 데이터가 복원된다는 것의 증명이다. </p>
+<h4 id="xor_1">XOR 연산 테스트<a class="headerlink" href="#xor_1" title="Permanent link">¶</a></h4>
+<h5 id="c">C 언어<a class="headerlink" href="#c" title="Permanent link">¶</a></h5>
+<p>C 언어에서 a 와 b 를 xor 연산 하고 싶을 때 <code>a ^ b</code> 라고 하면 XOR 연산 결과가 반환된다. </p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">print_binary</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">while</span><span class="p">((</span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">e</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"0b"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="p">((</span><span class="n">d</span><span class="w"> </span><span class="o">&gt;&gt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"%c"</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="sc">'1'</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="sc">'0'</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">puts</span><span class="p">(</span><span class="s">""</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Binary of 31 : </span><span class="se">\t\t</span><span class="s">"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_binary</span><span class="p">(</span><span class="mi">31</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Binary of 25 : </span><span class="se">\t\t</span><span class="s">"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_binary</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Binary of 31 ^ 25 : </span><span class="se">\t</span><span class="s">"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_binary</span><span class="p">(</span><span class="mi">31</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">25</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Binary of 31 ^ 25 ^ 25 :"</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">print_binary</span><span class="p">(</span><span class="mi">31</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">25</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>출력 결과를 보면 같을 때 0 이 되고 다를 때 1 이 되는 XOR 연산을 확인할 수 있다. 참고로 숫자 앞에 <code>0b</code> 가 있으면 이진법으로 표현하겠다는 뜻이다. <code>0x</code> 가 숫자 앞에 있으면 16 진수로 표현하겠다는 것이고 <code>0o</code> 가 앞에 있으면 8진수로 표현하겠다는 거여. </p>
+<div class="highlight"><pre><span></span><code>Binary of <span class="m">31</span> :          0b11111
+Binary of <span class="m">25</span> :          0b11001
+Binary of <span class="m">31</span> ^ <span class="m">25</span> :     0b110
+Binary of <span class="m">31</span> ^ <span class="m">25</span> ^ <span class="m">25</span> :0b11111
+</code></pre></div>
+<h5 id="python">Python<a class="headerlink" href="#python" title="Permanent link">¶</a></h5>
+<p>C 언어에서도 XOR 연산을 테스트할 수 있지만 이렇게 Python 에서 하는 게 훨씬 쉽고 시간 절약이 된다. </p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">'Binary of 31 : </span><span class="se">\t\t</span><span class="s1">'</span><span class="p">,</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">31</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Binary of 25 : </span><span class="se">\t\t</span><span class="s1">'</span><span class="p">,</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">25</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Binary of 31 ^ 25 : </span><span class="se">\t</span><span class="s1">'</span><span class="p">,</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">31</span> <span class="o">^</span> <span class="mi">25</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Binary of 31 ^ 25 ^ 25 :'</span><span class="p">,</span> <span class="nb">bin</span><span class="p">(</span><span class="mi">31</span> <span class="o">^</span> <span class="mi">25</span> <span class="o">^</span> <span class="mi">25</span><span class="p">))</span>
+</code></pre></div>
+<h4 id="xor_2">XOR 암호화 테스트<a class="headerlink" href="#xor_2" title="Permanent link">¶</a></h4>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">simple_string_xor</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ptr</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">tmp</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="n">tmp</span><span class="o">++</span><span class="w"> </span><span class="o">^=</span><span class="w"> </span><span class="n">key</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>위와 같은 함수를 사용해서 XOR 암호화, 복호화를 실험해보자. </p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">data</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"simple xor encrypt test"</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x30</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"XOR:%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"XOR:%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>위의 C 프로그램은 xor 암호화를 간단하게 실험할 수 있는 코드이다. 0x30 으로 XOR 암호화를 하고 있고 XOR 연산을 동일한 key 로 다시 적용하자 원본 데이터가 복원된다. </p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">data</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"simple xor encrypt test"</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x30</span><span class="p">,</span><span class="w"> </span><span class="mh">0x111</span><span class="p">,</span><span class="w"> </span><span class="mh">0x18</span><span class="p">,</span><span class="w"> </span><span class="mh">0x91</span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"XOR:%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"XOR:%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>위의 C 프로그램은 여러개의 XOR 키를 적용하여 XOR 암호화를 하고 복호화도 해본 실험이다. 데이터가 성공적으로 원본으로 되돌려진다. 그런데 다음의 코드처럼 암호화된 XOR 의 순서와 복호화된 XOR 순서를 바꿔줘도 아무런 문제 없이 원본 데이터가 복원된다. </p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">data</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"simple xor encrypt test"</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">key</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x30</span><span class="p">,</span><span class="w"> </span><span class="mh">0x111</span><span class="p">,</span><span class="w"> </span><span class="mh">0x18</span><span class="p">,</span><span class="w"> </span><span class="mh">0x91</span><span class="p">};</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"XOR:%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">simple_string_xor</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"XOR:%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h5 id="xor-python">XOR 암호화 테스트 Python<a class="headerlink" href="#xor-python" title="Permanent link">¶</a></h5>
+<p>이렇게 C 보다 훨씬 간단하게 Python 으로 XOR 암호화/복호화 테스트를 해볼 수 있다. </p>
+<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="s2">"simple xor encrypt test"</span>
+<span class="n">data_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">keys</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0x30</span><span class="p">,</span> <span class="mh">0x11</span><span class="p">,</span> <span class="mh">0x18</span><span class="p">,</span> <span class="mh">0x91</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data_list</span><span class="p">):</span>
+        <span class="n">data_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">^</span> <span class="n">key</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'XOR:'</span><span class="p">,</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_list</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">keys</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data_list</span><span class="p">):</span>
+        <span class="n">data_list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">^</span> <span class="n">key</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'XOR:'</span><span class="p">,</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_list</span><span class="p">))</span>
+</code></pre></div>
+<p>출력결과</p>
+<div class="highlight"><pre><span></span><code>XOR: ÛÁÅØÄÍÐÇÚÍÆËÚÑØÜÜÍÛÜ
+XOR: simple xor encrypt <span class="nb">test</span>
+</code></pre></div>
+<h3 id="_3">실전<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<p>지금까지 배우고 연습했던 컴퓨터 공학 지식 / 리버싱 도구 / 리버싱 테크닉을 활용해서 실제 리버싱 경쟁 사이트로 가서 리버싱 문제를 해결해봅시다. </p>
+<ol>
+<li>
+<p><a href="http://reversing.kr/">http://reversing.kr/</a> : 회원가입 및 로그인을 한다. </p>
+</li>
+<li>
+<p>다음의 명령어를 참고해서 Easy ELF 리버싱 문제를 다운 받는다. PHPSESSID 에 대입되는 쿠키값은 각자 다르다. </p>
+<ul>
+<li>크롬 쿠키값 확인 법 : <a href="https://dololak.tistory.com/581">https://dololak.tistory.com/581</a></li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>curl http://reversing.kr/download.php<span class="se">\?</span>n<span class="se">\=</span><span class="m">11</span>  -o easyelf --cookie <span class="s2">"PHPSESSID=0347e0d4kofpnmajka34qd1p10"</span>
+chmod +x easyelf
+</code></pre></div>
+<ol>
+<li><code>easyelf</code> 를 스스로 리버싱하여 풀어봅시다. </li>
+</ol>
+<h3 id="easyelf-write-up">easyelf write-up<a class="headerlink" href="#easyelf-write-up" title="Permanent link">¶</a></h3>
+<ol>
+<li>
+<p>main 함수 </p>
+<div class="highlight"><pre><span></span><code>0x0804854a      83f801         cmp eax, 1                  
+0x0804854d      750c           jne 0x804855b
+</code></pre></div>
+<ul>
+<li>위 코드에서 eax 가 0 이면 "Wrong" 이 출력되는 루틴으로 가기 때문에 eax 가 1 이 되어야 한다고 유추할 수 있다. 그러니 이제 eax 를 결정하는 조건이 뭔지 역추적하자. </li>
+</ul>
+</li>
+<li>
+<p>0x8048451 함수에서 eax 를 바꿀지 확신할 수 없지만 eax 를 바꾸지 않는다는 보장도 없기 때문에 분석을 한다. </p>
+<ul>
+<li>
+<p>0x080484f0      mov eax, 1 : 이 코드에서 eax 가 1 이 되고 ret 된다. 그런데 이 코드는 어떤 분기에 의해 결정된다. 그러니 이제 이 분기를 결정하는 조건을 역추적. </p>
+</li>
+<li>
+<p>다음의 코드에서 je 가 실행되어야 eax 가 1 이 되는 코드로 점프하기 때문에 이 시점에서 al 은 0xdd 가 되어야 한다. 그런데 이 코드도 어떤 분기에 의해 결정되기에 그 분기를 결정하는 조건을 역추적하자. </p>
+<div class="highlight"><pre><span></span><code>0x080484de      0fb60523a004.  movzx eax, byte [0x804a023] 
+0x080484e5      3cdd           cmp al, 0xdd
+0x080484e7      7407           je 0x80484f0
+</code></pre></div>
+</li>
+<li>
+<p>다음의 코드에서 je 가 실행되어야 2 번의 코드로 점프한다. 그러니 이 시점에서 al 은 0x78 이 되어야 한다. 그런데 이 코드도 어떤 분기에 의해 결정되기에 그 분기를 결정하는 조건을 역추적하자. </p>
+<div class="highlight"><pre><span></span><code>0x080484cc      0fb60520a004.  movzx eax, byte [0x804a020] ; [0x804a020:1]=0
+0x080484d3      3c78           cmp al, 0x78                ; 'x' ; 120
+0x080484d5      7407           je 0x80484de
+</code></pre></div>
+</li>
+<li>
+<p>다음의 코드에서 je 가 실행되어야 3 번의 코드로 점프한다. 그러니 이 시점에서 al 은 0x7c 가 되어야 한다. 그런데 이 코드도 어떤 분기에 의해 결정되기에 그 분기를 결정하는 조건을 역추적하자. </p>
+<div class="highlight"><pre><span></span><code>0x080484ba      0fb60522a004.  movzx eax, byte [0x804a022] ; [0x804a022:1]=0
+0x080484c1      3c7c           cmp al, 0x7c                ; '|' ; 124
+0x080484c3      7407           je 0x80484cc
+</code></pre></div>
+</li>
+<li>
+<p>다음의 코드에서 je 가 실행되어야 4 번의 코드로 점프하기에 이 시점에서 al 은 0 이 되어야 한다. 그런데 이 코드도 어떤 분기에 의해 결정되기에 그 분기를 결정하는 조건을 역추적하자. </p>
+<div class="highlight"><pre><span></span><code>0x080484a8      0fb60525a004.  movzx eax, byte [0x804a025] ; [0x804a025:1]=0
+0x080484af      84c0           test al, al
+0x080484b1      7407           je 0x80484ba
+</code></pre></div>
+</li>
+<li>
+<p>다음의 코드에서 je 가 실행되어야 5 번의 코드로 점프하기에 이 시점에서 al 은 0x58 이 되어야 한다. 그런데 이 코드도 어떤 분기에 의해 결정되기에 그 분기를 결정하는 조건을 역추적하자. </p>
+<div class="highlight"><pre><span></span><code>0x08048469      0fb60520a004.  movzx eax, byte [0x804a020] 
+0x08048470      83f034         xor eax, 0x34
+0x08048473      a220a00408     mov byte [0x804a020], al    
+0x08048478      0fb60522a004.  movzx eax, byte [0x804a022] 
+0x0804847f      83f032         xor eax, 0x32
+0x08048482      a222a00408     mov byte [0x804a022], al    
+0x08048487      0fb60523a004.  movzx eax, byte [0x804a023] 
+0x0804848e      83f088         xor eax, 0xffffff88
+0x08048491      a223a00408     mov byte [0x804a023], al    
+0x08048496      0fb60524a004.  movzx eax, byte [0x804a024] 
+0x0804849d      3c58           cmp al, 0x58                
+0x0804849f      7407           je 0x80484a8
+</code></pre></div>
+</li>
+<li>
+<p>다음의 코드에서 je 가 실행되어야 6 번의 코드로 점프하기에 이 시점에서 al 은 0x31 이 되어야 한다. 그런데 이 코드는 0x8048451 함수가 실행되면 반드시 실행된다. 그리고 eax 를 초기화하는 0x804a021 의 주소값에는 입력한 문자열의 2번째 문자의 주소값이 들어가 있다. </p>
+<div class="highlight"><pre><span></span><code>0x08048454      0fb60521a004.  movzx eax, byte [0x804a021] ; [0x804a021:1]=0
+0x0804845b      3c31           cmp al, 0x31                ; '1' ; 49
+0x0804845d      740a           je 0x8048469
+</code></pre></div>
+</li>
+<li>
+<p>이제 입력한 값이 몇 가지 조건과 연산을 거쳐서 정답으로 이어지는 과정을 모두 역추적 했으니 필요한 최소한의 리버싱이 끝났다. 역추적 과정을 바탕으로 eax 를 1 이 되는 조건을 복기해보자. </p>
+<div class="highlight"><pre><span></span><code>0x804a020 -&gt; X -&gt; X ^ 0x34 -&gt; 0x78
+0x804a021 -&gt; 0x31
+0x804a022 -&gt; X -&gt; X ^ 0x32 -&gt; 0x7c
+0x804a023 -&gt; X -&gt; X ^ 0xffffff88 -&gt; 0xdd
+0x804a024 -&gt; 0x58
+0x804a025 -&gt; 0x0
+</code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>POC 코드 </p>
+<ul>
+<li>
+<p>그러므로 위와 같은 파이썬 코드를 실행하면 정답을 출력한다.</p>
+<div class="highlight"><pre><span></span><code><span class="n">c0</span> <span class="o">=</span> <span class="mh">0x78</span> <span class="o">^</span> <span class="mh">0x34</span>        <span class="c1"># 0x804a020</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="mh">0x31</span>               <span class="c1"># 0x804a021</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="mh">0x32</span> <span class="o">^</span> <span class="mh">0x7c</span>        <span class="c1"># 0x804a022</span>
+<span class="n">c3</span> <span class="o">=</span> <span class="mh">0xdd</span> <span class="o">^</span> <span class="mh">0xffffff88</span>  <span class="c1"># 0x804a023</span>
+<span class="n">c4</span> <span class="o">=</span> <span class="mh">0x58</span>               <span class="c1"># 0x804a024</span>
+<span class="n">c5</span> <span class="o">=</span> <span class="mh">0x0</span>                <span class="c1"># 0x804a025</span>
+
+<span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="n">c0</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">,</span> <span class="n">c4</span><span class="p">,</span> <span class="n">c5</span><span class="p">]</span>
+<span class="n">key</span> <span class="o">=</span> <span class="p">[</span> <span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">'little'</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">key</span> <span class="p">]</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">key</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+</li>
+<li>
+<p>이제 다음 명령어를 참고해서 문제를 해결하자. Python 2 가 아니라 Python 3 로 실행해야 한다. </p>
+<div class="highlight"><pre><span></span><code>python3 poc.py <span class="p">|</span> ./easyelf
+</code></pre></div>
+</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<h3 id="_4">과제<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<p><a href="HW-5/">HW-5.md</a> 파일의 지시를 따르는 것이 과제이다. (발표를 하며 설명을 할 수 있어야 합니다)</p>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<!-- 
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer> -->
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+<script src="../../javascripts/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+<script src="../../javascripts/b27b3e6448.js"></script>
+</body>
+</html>

@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="ccsss" name="author"/>
+<link href="https://ccss17.github.io/Math/HyperrealNumbers/" rel="canonical"/>
+<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
+<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
+<title>Hyperreal Numbers - ccss17</title>
+<link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
+<link href="../../stylesheets/config.css" rel="stylesheet"/>
+</head>
+<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            ccss17
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Hyperreal Numbers
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
+</label>
+</form>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      ccss17
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../MathHistory/">
+        Math
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../paper/1404.6388/">
+        Paper
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Computer/nand2tetris/">
+        Computer
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../ProgrammerBase/">
+        ProgrammerBase
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../security-tutorial/">
+        security tutorial
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
+<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
+</a>
+    ccss17
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        ccss17
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+        Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Math" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1">
+        Foundation of Math
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          Foundation of Math
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../MathHistory/">
+        History of Math
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Logic/FormalSystem/">
+        Formal System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../incompleteness/">
+        Incompleteness theorem
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../turing/">
+        Turing's proof
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../gentzen/">
+        Consistency proof of Peano arithmetic
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2">
+        Set Theory
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          Set Theory
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Set/Set/">
+        Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Set/numbers/">
+        Number Theory
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Set/InfiniteSet/">
+        Infinite Set
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Set/ZFC/">
+        ZFC axiom system
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../ArithmeticOperations/">
+        Arithmetic Operations
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Polynomials/">
+        Polynomials
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Hyperreal Numbers
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Hyperreal Numbers
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    초실수
+  </a>
+<nav aria-label="초실수" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mathcalf">
+    자유극대필터 \(\mathcal{F}\)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    초실수의 정의
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    초실수의 순서관계
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    초실수의 덧셈과 곱셈
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    무한소와 무한대
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    초실수로의 도약
+  </a>
+<nav aria-label="초실수로의 도약" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hyperreal-extension">
+    hyperreal extension
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extending-functions">
+    Extending functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transfer-principle">
+    Transfer Principle
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    초실수의 성질
+  </a>
+<nav aria-label="초실수의 성질" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    초실수 연산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#halos">
+    Halos
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shadowsstandard-part">
+    Shadows(Standard part)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    비표준 해석학
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../SurrealNumbers/">
+        Surreal Numbers
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_7">
+        Linear Algebra
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_7">
+<span class="md-nav__icon md-icon"></span>
+          Linear Algebra
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/VectorSpace/">
+        Vector Space
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/LinearTransformation/">
+        Linear Transformation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/MatrixOperation/">
+        Matrix Operation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/Determinants/">
+        Determinants
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/Diagonalization/">
+        Diagonalization
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/InnerProductSpaces/">
+        Inner Product Spaces
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../LinearAlgebra/CanonicalForms/">
+        Canonical Forms
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+        Paper
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Paper" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          Paper
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1404.6388/">
+        Performance of Python runtimes on a non-numeric scientific code
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/1102.1523/">
+        The NumPy array: a structure for efficient numerical computation
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/facenet/">
+        Facenet (2015)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/quadruplet/">
+        Quadruplet (2017)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../paper/blueborne/">
+        BlueBorne
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+        Computer
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Computer" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Computer
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        Nand to Tetris
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/future/">
+        Why the future doesn't need us
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Computer/Rust/">
+        Rust Memo
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+        ProgrammerBase
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          ProgrammerBase
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/">
+        README
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+        Contents
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Contents" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Contents
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        Day 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+        Day 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+        Day 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+        Day 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+        Day 5
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+        Docker
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+        Coding Convention
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/build/">
+        Build System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/information/">
+        Information
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/git/">
+        Git
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+        VSCode
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+        Markdown
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+        Tmux
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+        Vim
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+        CLI
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6">
+        security tutorial
+        <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          security tutorial
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/">
+        README
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+        Day1 Base
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+        Day2 Computer Principle 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+        Day3 Computer Principle 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+        Day4 Reversing 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+        Day5 Reversing 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+        Day6 Exploit 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+        Day7 Exploit 2
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+        Day8 Exploit 3
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+        Day9 Exploit 4
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+        Day10 Pentesting
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<!-- <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label> -->
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    초실수
+  </a>
+<nav aria-label="초실수" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mathcalf">
+    자유극대필터 \(\mathcal{F}\)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    초실수의 정의
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    초실수의 순서관계
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    초실수의 덧셈과 곱셈
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    무한소와 무한대
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    초실수로의 도약
+  </a>
+<nav aria-label="초실수로의 도약" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#hyperreal-extension">
+    hyperreal extension
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#extending-functions">
+    Extending functions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#transfer-principle">
+    Transfer Principle
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    초실수의 성질
+  </a>
+<nav aria-label="초실수의 성질" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    초실수 연산
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#halos">
+    Halos
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shadowsstandard-part">
+    Shadows(Standard part)
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    비표준 해석학
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Hyperreal Numbers</h1>
+<h2 id="_1">초실수<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h3 id="mathcalf">자유극대필터 <span class="arithmatex">\(\mathcal{F}\)</span><a class="headerlink" href="#mathcalf" title="Permanent link">¶</a></h3>
+<a href="#d2667485a"><div class="admonition def" id="d2667485a">
+<p>Cofinite subset : <span class="arithmatex">\(Y \subset X\)</span> 인 집합 <span class="arithmatex">\(X, Y\)</span> 에 대하여 <span class="arithmatex">\(X \setminus Y\)</span> 가 유한집합일 때 <span class="arithmatex">\(Y\)</span> 를 cofinite 라고 한다. </p>
+</div></a>
+<ul>
+<li>Cofinite 는 무한집합일 수도 있고 유한집합일 수도 있다. </li>
+</ul>
+<a href="#fa8be02ad"><div class="admonition def" id="fa8be02ad">
+<p>극대필터(Ultrafilter) : 집합 <span class="arithmatex">\(X\)</span> 에 대한 극대필터는 다음을 만족하는 <span class="arithmatex">\(X\)</span> 의 부분집합의 집합 <span class="arithmatex">\(\mathcal{F}\)</span> 이다. </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(X \in \mathcal{F}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\varnothing \not \in \mathcal{F}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(A, B \in \mathcal{F} \implies A \cap B \in \mathcal{F}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(A \subset X \implies A \in \mathcal{F} \nleftrightarrow X \setminus A \in \mathcal{F}\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(A \in \mathcal{F} \land A \subset B \implies B \in \mathcal{F}\)</span></p>
+</li>
+</ol>
+</div></a>
+<ul>
+<li>초실수를 구성하기 위하여 우리는 <span class="arithmatex">\(\N\)</span> 에 대한 자유 극대필터를 사용한다.</li>
+</ul>
+<a href="#356cda668"><div class="admonition def" id="356cda668">
+<p class="admonition-title"><span class="arithmatex">\(\mathcal{F}\)</span> </p>
+<p><span class="arithmatex">\(\N\)</span> 의 자유 극대 필터 <span class="arithmatex">\(\mathcal{F}\)</span> 가 존재한다. </p>
+</div></a>
+<ul>
+<li>
+<p>이때 자유 극대필터라는 것을 극대필터가 <span class="arithmatex">\(\N\)</span> 의 유한 부분집합을 포함하지 않는다는 것으로 정의한다. 그러면 자유 극대필터는 성질 4) 로 인하여 <span class="arithmatex">\(\N\)</span> 의 모든 유한 부분집합에 대한 cofinite 를 포함한다.</p>
+<p>그러므로 우리가 사용할 <span class="arithmatex">\(\N\)</span> 의 자유 극대필터는 무한집합만을 포함한다. 그리고 이 무한집합들은 <span class="arithmatex">\(\N\)</span> 의 유한집합에 대한 cofinite 들인 것이다.</p>
+<p>Ultrafilter 는 무한 실수 수열의 집합에서 그들이 유한번 달라서 동치 관계 <span class="arithmatex">\(\equiv\)</span> 로 묶일 수 있는 원소들을 수집해준다. </p>
+<p>극대필터는 큰 집합이 필요할 때 작은 집합을 걸러내는 체처럼 사용된다.</p>
+</li>
+<li>
+<p>이제부터 <span class="arithmatex">\(\N\)</span> 의 자유 극대필터를 <span class="arithmatex">\(\mathcal{F}\)</span> 로 두고 계속 사용할 것이다. </p>
+</li>
+<li>
+<p>증명</p>
+<p><a href="../Set/InfiniteSet/#b78f346ef">초른의 보조정리</a> 를 사용하면 이를 만족하는 많은 <span class="arithmatex">\(\mathcal{F}\)</span> 가 존재한다는 것을 증명할 수 있다. </p>
+<p>그러나 이들을 명시적으로 구성하여 보일 수는 없다.</p>
+</li>
+</ul>
+<a href="#d990a6a0f"><div class="admonition def" id="d990a6a0f">
+<p class="admonition-title"><span class="arithmatex">\(\equiv\)</span> </p>
+<p><span class="arithmatex">\(\N\)</span> 의 자유극대필터 <span class="arithmatex">\(\mathcal{F}\)</span> 에 대한 <span class="arithmatex">\(\R ^{\N}\)</span> 의 동치관계 <span class="arithmatex">\(\equiv\)</span> 를 다음과 같이 정의한다. </p>
+<div class="arithmatex">\[ \big &lt; r_n \big &gt; \equiv \big &lt; s_n \big &gt; \iff \{n \in \N : r_n = s_n\} \in \mathcal{F} \]</div>
+</div></a>
+<ul>
+<li>
+<p>초실수를 정의하기 위한 <span class="arithmatex">\(\R ^{\N}\)</span> 에서의 이 <a href="../Set/Set/#6a7f4dd92">동치관계</a>는 서로 동치인 집합을 잡아내기 위하여 ultrafilter 를 사용한다. </p>
+</li>
+<li>
+<p>쉽게 말해서 실수 수열이 유한하게 서로 다르다면 두 실수 무한수열(초실수)이 서로 같다고 정의한다는 것이다.</p>
+</li>
+<li>
+<p>예시 </p>
+<p>두 실수 무한 수열 <span class="arithmatex">\(x = \big &lt; 1,2,3,4, \dots \big &gt;, y = \big &lt; 1,2,2,4, \dots \big &gt;\)</span> 가 오직 <span class="arithmatex">\(3\)</span> 번째 항에서 다르다면 <span class="arithmatex">\(x \equiv y\)</span> 라고 정의한다.</p>
+</li>
+</ul>
+<a href="#2860e3497"><div class="admonition def" id="2860e3497">
+<p><span class="arithmatex">\(\equiv\)</span> 는 동치관계이다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(\{n \in \N : r_n = r_n\} = \N\)</span> 이고 <span class="arithmatex">\(\N \in \mathcal{F}\)</span> 이므로 <span class="arithmatex">\(\equiv\)</span> 는 reflexive 하다. ▲ </p>
+<p><span class="arithmatex">\(\{ n \in \N : r_n = s_n\} = \{n \in \N : s_n = r_n\}\)</span> 이므로 어느 한쪽이 <span class="arithmatex">\(\mathcal{F}\)</span> 에 속하면 다른 한쪽도 속한다. 그러므로 <span class="arithmatex">\(\equiv\)</span> 는 symmetric 하다. ▲ </p>
+<p><span class="arithmatex">\(\big &lt; r_n \big &gt; \equiv \big &lt; s_n \big &gt; \land \big &lt; s_n \big &gt; = \big &lt; t_n \big &gt;\)</span> 라고 하면 </p>
+<div class="arithmatex">\[ \{n \in \N : r_n = s_n\}  \in \mathcal{F} \land \{n \in \N : s_n = t_n\} \in \mathcal{F} \]</div>
+<p>이다. </p>
+<div class="arithmatex">\[ \{n \in \N : r_n = s_n\}  \cap  \{n \in \N : s_n = t_n\} \subseteq \{n \in \N : r_n = t_n\} \]</div>
+<p>인데 <span class="arithmatex">\(\mathcal{F}\)</span> 는 극대필터로써 교집합에 대하여 닫혀있고 superset 에 대하여 닫혀있으므로</p>
+<div class="arithmatex">\[  \{n \in \N : r_n = t_n\} \in \mathcal{F} \]</div>
+<p>이다. 그러므로 <span class="arithmatex">\(\big &lt; r_n \big &gt; \equiv \big &lt; t_n \big &gt;\)</span> 이다. 즉, <span class="arithmatex">\(\equiv\)</span> 는 transitive 하다. ■ </p>
+</li>
+</ul>
+<h3 id="_2">초실수의 정의<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
+<a href="#1324c2ca5"><div class="admonition def" id="1324c2ca5">
+<p class="admonition-title">초실수 집합(Hyperreal Number Set)</p>
+<p>초실수 집합은 <span class="arithmatex">\(\R ^{\N}\)</span> 의 동치관계 <span class="arithmatex">\(\equiv\)</span> 에 대한 동치류 <span class="arithmatex">\([r] = \{s \in \R ^{\N} : r \equiv s\}\)</span> 에 대한 몫집합</p>
+<div class="arithmatex">\[ ^{*}\R = \{[r] : r \in \R ^{\N}\} = \R ^{\N} / \equiv \]</div>
+<p>이다. </p>
+</div></a>
+<ul>
+<li>
+<p>초실수는 다음과 같이 정의할 수도 있다. </p>
+<div class="arithmatex">\[ ^{*}\R = (\prod_{n \in N}^{\R}) / \mathcal{F} = \prod_{\mathcal{F}}^{}\R = \{[r] : r \in \R ^{\N}\} = \R ^{\N} /\equiv \]</div>
+</li>
+<li>
+<p>유리수가 실수의 부분체이듯이, 실수는 초실수의 부분체이다. </p>
+</li>
+<li>
+<p>비표준해석학(Non-standard analysis)은 해석학을 연구하기 위하여 <span class="arithmatex">\(\epsilon,\delta\)</span> 와 거리함수를 사용하는 대신 초실수(주로 무한소)를 사용한다.  일반적인 실수체에서는 무한대와 무한소가 존재하지 않는데 초실수체에서는 무한대와 무한소가 존재하여 비표준해석학을 전개할 수 있다.</p>
+</li>
+<li>
+<p>역사적으로 라이프니츠가 미적분에 무한소를 사용했지만 아무도 그것에 이의를 제기하지 않았다. 가령 오일러는 많은 정리를 증명하기 위하여 무한소를 사용했지만 무한소에 대한 이론적 기반은 전무했다. 예를 들어 <span class="arithmatex">\(f(x) = x ^{2}\)</span> 를 미분하여 </p>
+<div class="arithmatex">\[ \dfrac{(x+\epsilon )^{2}-x ^{2}}{\epsilon } = \dfrac{2x \epsilon +\epsilon ^{2}}{\epsilon }=2x+\epsilon \]</div>
+<p>를 얻으면 <span class="arithmatex">\(\epsilon\)</span> 을 무한소로 취급하여 무시하고 <span class="arithmatex">\(2x\)</span> 라는 결과를 얻었다. 하지만 19세기 수학의 엄밀함이 중요하다는 인식이 널리 퍼지면서 무한소가 폐지되고 Weierstrass 이 <span class="arithmatex">\(\epsilon - \delta\)</span> 논법으로 극한을 정의했다. 이후 1960년대 로빈슨이 모델이론을 정립할 때까지 무한소에 대한 이론은 정립되지 않았다. </p>
+</li>
+<li>
+<p>초실수의 구성은 자연수, 정수, 유리수, 실수의 구성 과정과 같은 맥락이다. </p>
+<p>우리는 <a href="../Set/numbers/#7c938e5ea"><span class="arithmatex">\(\N\)</span> 을 공집합으로부터 <span class="arithmatex">\(S(x) = x \cup \{x\}\)</span> 연산으로 구성</a>해내었다. <a href="../Set/numbers/#402b9b429"><span class="arithmatex">\(\N\)</span> 을 기반으로하는 ordered pair 로 <span class="arithmatex">\(\mathbb{Z}\)</span> 를 구성</a>해내었다. <a href="../Set/numbers/#5d305fdb8"><span class="arithmatex">\(\mathbb{Q}\)</span> 는 <span class="arithmatex">\(\mathbb{Z}\)</span> 를 기반으로 하는 동치류로 구성</a>했었다. <span class="arithmatex">\(\R\)</span> 은 <span class="arithmatex">\(\mathbb{Q}\)</span> 를 기반으로 <a href="../Set/numbers/#d93ba1738">데데킨트 절단으로 구성</a>할 수 있고 <a href="../Set/numbers/#41b17cc41">코시 수열의 동치류로도 구성</a>할 수 있었다. </p>
+<p>초실수의 구성, 즉 <span class="arithmatex">\(^{*}\R\)</span> 의 구성은 코시 수열의 동치류로 <span class="arithmatex">\(\R\)</span> 을 구성했던 것과 비슷하다. 초실수의 구성은 무한한 실수 수열의 집합인 <span class="arithmatex">\(\R ^{\N}\)</span> 의 동치류를 기반으로 이루어진다. 이 동치관계를 정의하기 위하여 극대필터라는 수학적 장치가 필요한 것이다. </p>
+</li>
+<li>
+<p>이러한 초실수체 <span class="arithmatex">\({}^{*}\R\)</span> 은 사실 선택하는 자유 극대필터 <span class="arithmatex">\(\mathcal{F}\)</span> 에 따라서 달라진다. </p>
+<p><a href="../Set/InfiniteSet/#90af6e075">연속체 가설</a> 을 가정하면 모든 초실수체는 순서체로써 서로 동형이다. 그러나 <a href="../Set/InfiniteSet/#90af6e075">연속체 가설</a> 을 부정한다면 서로 동형이 아닌 초실수체가 존재하게 된다. </p>
+</li>
+</ul>
+<a href="#ccbacae97"><div class="admonition def" id="ccbacae97">
+<p class="admonition-title">초실수의 기수</p>
+<div class="arithmatex">\[ |{}^{*}\R | = 2 ^{\aleph _0} \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 (<a href="https://math.stackexchange.com/questions/54059/cardinality-of-the-set-of-hyperreal-numbers">https://math.stackexchange.com/questions/54059/cardinality-of-the-set-of-hyperreal-numbers</a>)</p>
+<p>초실수체 <span class="arithmatex">\({}^{*}\R\)</span> 이 가산 index 집합 <span class="arithmatex">\(\N\)</span> 에 대한 실수 <span class="arithmatex">\(\R\)</span> 의 초거듭제곱(ultrapower) <span class="arithmatex">\({}^{*}\R = (\prod_{n \in \N}^{}\R) / \mathcal{F}\)</span> 로 구성되었으므로 자명하게 <span class="arithmatex">\(|\R| \leq |{}^{*}\R |\)</span> 이다.</p>
+<p><a href="../Set/InfiniteSet/#bf64c0903">실수의 기수가 <span class="arithmatex">\(|\R| = 2 ^{\aleph _0}\)</span></a> 이고, <span class="arithmatex">\(|{}^{*}\R |\)</span> 이 실수체에 대한 가산 index 집합 <span class="arithmatex">\(\N\)</span> 의 거듭제곱이므로 </p>
+<div class="arithmatex">\[ 2 ^{\aleph _0} = |\R| \leq | {}^{*}\R | \leq (2 ^{\aleph _0}) ^{\aleph _0} = 2 ^{\aleph _0 \times \aleph _0} \]</div>
+<p>이다. 그런데 <a href="../Set/InfiniteSet/#7713aafcf"><span class="arithmatex">\(\aleph _0 \times \aleph _0 = \aleph _0\)</span></a> 이므로 결국 </p>
+<div class="arithmatex">\[ 2 ^{\aleph _0} \leq | {}^{*}\R | \leq 2 ^{\aleph _0 } \]</div>
+<p>이다. ■ </p>
+</li>
+</ul>
+<a href="#c2a90879d"><div class="admonition def" id="c2a90879d">
+<p class="admonition-title">실수에서 초실수로</p>
+<p>다음과 같이 각 실수를 상수열의 동치류로 대응시키면, 실수체는 초실수체로 표준적으로 매장된다. </p>
+<div class="arithmatex">\[ r \in \R \mapsto [\big &lt; r, r, r, \dots\big &gt;] \in {}^{*}\R \]</div>
+</div></a>
+<ul>
+<li>
+<p>초실수에서의 실수는 그것 자신의 무한 수열이다.</p>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(=\)</span> 좌측은 초실수이고 우측은 실수 무한수열의 동치류이다. </p>
+<div class="arithmatex">\[ 0 = [\big &lt;0, 0, 0, \dots\big &gt;] \]</div>
+<div class="arithmatex">\[ \pi  = [\big &lt;\pi, \pi, \pi, \dots\big &gt;] \]</div>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">초실수의 순서관계<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
+<a href="#b1c8ce41c"><div class="admonition def" id="b1c8ce41c">
+<p class="admonition-title"><span class="arithmatex">\(&lt;\)</span> </p>
+<div class="arithmatex">\[ [r] &lt; [s] \iff \{n \in \N : r_n &lt; s_n\} \in \mathcal{F} \]</div>
+</div></a>
+<h3 id="_4">초실수의 덧셈과 곱셈<a class="headerlink" href="#_4" title="Permanent link">¶</a></h3>
+<a href="#6ce9209ac"><div class="admonition def" id="6ce9209ac">
+<p>초실수의 덧셈 <span class="arithmatex">\(+\)</span> 과 곱셈 <span class="arithmatex">\(\cdot\)</span> 은 다음과 같이 성분 별 연산으로 정의된 함수 <span class="arithmatex">\(+: {}^{*}\R \times {}^{*}\R \to {}^{*}\R, \cdot : {}^{*}\R \times {}^{*}\R \to {}^{*}\R\)</span> 이다.</p>
+<div class="arithmatex">\[ [r] + [s] = [\big &lt;r_n + s_n\big &gt;] \]</div>
+<div class="arithmatex">\[ [r] \cdot [s] = [\big &lt;r_n \cdot s_n\big &gt;] \]</div>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ (a_0, a_1, a_2, \dots) + (b_0, b_1, b_2, \dots) = (a_0 + b_0, a_1 + b_1, a_2 + b_2, \dots) \]</div>
+</li>
+</ul>
+<a href="#af58726c5"><div class="admonition def" id="af58726c5">
+<p class="admonition-title"><span class="arithmatex">\(\llbracket \rrbracket\)</span> </p>
+<p>두 수열 <span class="arithmatex">\(\big &lt;r_n\big &gt;, \big &lt;s_n\big &gt;\)</span> 에 대하여 다음과 같이 정의한다. </p>
+<div class="arithmatex">\[ \llbracket  r = s \rrbracket  := \{n \in \N : r_n = s_n\} \]</div>
+<div class="arithmatex">\[ \llbracket  r &lt; s \rrbracket  := \{n \in \N : r_n &lt; s_n\} \]</div>
+</div></a>
+<ul>
+<li>
+<p>이제부터 <span class="arithmatex">\(\llbracket \rrbracket\)</span> 를 다른 모든 관계기호에도 자유롭게 사용할 것이다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \llbracket r \in A \rrbracket  = \{n \in \N : r_n \in A\} \]</div>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#4291b9438"><div class="admonition def" id="4291b9438">
+<p>초실수 연산 <span class="arithmatex">\(+, \cdot\)</span> 과 관계 <span class="arithmatex">\(&lt;\)</span> 은 잘 정의(well-defined)되었다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(+\)</span> 가 잘 정의되었음을 보이자. <span class="arithmatex">\(\big &lt;r_n\big &gt; \equiv \big &lt;r'_n\big &gt;, \big &lt;s_n\big &gt; \equiv \big &lt;s'_n\big &gt;\)</span> 은 <span class="arithmatex">\(\llbracket r = r' \rrbracket \in \mathcal{F}, \llbracket s = s' \rrbracket \in \mathcal{F}\)</span> 을 뜻한다. 또 이는 <a href="#32297e59a">극대필터의 성질</a>에 의하여 <span class="arithmatex">\(\llbracket r=r' \rrbracket \cap \llbracket s = s' \rrbracket \in \mathcal{F}\)</span> 을 함의한다. </p>
+<p>우리가 보여야 할 것은 <span class="arithmatex">\(\llbracket r + s = r' + s' \rrbracket \in \mathcal{F}\)</span> 이다. 어떤 <span class="arithmatex">\(k \in \N\)</span> 에 대하여 </p>
+<div class="arithmatex">\[r_k = r'_k, s_k = s'_k \implies r_k + s_k = r'_k + s'_k\]</div>
+<p>이므로 만약 <span class="arithmatex">\(k \in \llbracket r=r' \rrbracket \cap \llbracket s = s' \rrbracket\)</span> 이면 <span class="arithmatex">\(k \in \llbracket r+s = r'+s' \rrbracket\)</span> 이다. 이는 </p>
+<div class="arithmatex">\[ \llbracket r = r' \rrbracket \cap \llbracket s = s' \rrbracket \subseteq \llbracket r+s = r'+s' \rrbracket \]</div>
+<p>임을 말해준다. <span class="arithmatex">\(\llbracket r=r' \rrbracket \cap \llbracket s = s' \rrbracket \in \mathcal{F}\)</span> 이므로 <a href="#32297e59a">극대필터의 성질</a>에 의하여 <span class="arithmatex">\(\llbracket r+s = r'+s' \rrbracket\)</span> 이다. 그러므로 </p>
+<div class="arithmatex">\[ r \equiv r' \land s \equiv s' \implies r+s \equiv r'+s' \]</div>
+<p>이다. ▲ </p>
+<p><span class="arithmatex">\(\cdot\)</span> 이 잘 정의되었다는 것도 비슷하게 증명된다. ▲ </p>
+<p><span class="arithmatex">\(&lt;\)</span> 가 잘 정의되었다는 것은 </p>
+<div class="arithmatex">\[ \big &lt;r_n\big &gt; \equiv \big &lt;r'_n\big &gt; \land \big &lt;s_n\big &gt; \equiv \big &lt;s'_n\big &gt; \land \llbracket r&lt;s \rrbracket  \in \mathcal{F} \implies \llbracket r' &lt; s' \rrbracket \in \mathcal{F} \]</div>
+<p>이다. 이것을 증명해야 한다. 먼저 <a href="#32297e59a">극대필터의 성질</a> 과 가정에 의하여 </p>
+<div class="arithmatex">\[ \llbracket r=r' \rrbracket \cap \llbracket s=s' \rrbracket \cap \llbracket r&lt;s \rrbracket \in \mathcal{F} \]</div>
+<p>이다. 만약 <span class="arithmatex">\(k \in \llbracket r=r' \rrbracket \cap \llbracket s=s' \rrbracket \cap \llbracket r&lt;s \rrbracket\)</span> 이면 <span class="arithmatex">\(r_k = r'_k, s_k = s'_k, r_k &lt; s_k\)</span> 이고, 그러므로 <span class="arithmatex">\(r'_k &lt; s'_k\)</span> 이다. 따라서 <span class="arithmatex">\(k \in \llbracket r' &lt; s' \rrbracket\)</span> 이다. 이는 </p>
+<div class="arithmatex">\[ \llbracket r=r' \rrbracket \cap \llbracket s=s' \rrbracket \cap \llbracket r&lt;s \rrbracket \subseteq \llbracket r' &lt; s' \rrbracket \]</div>
+<p>을 뜻하고, <a href="#32297e59a">극대필터의 성질</a> 에 의하여 <span class="arithmatex">\(\llbracket r' &lt; s' \rrbracket \in \mathcal{F}\)</span> 이다. ■ </p>
+</li>
+</ul>
+<h3 id="_5">무한소와 무한대<a class="headerlink" href="#_5" title="Permanent link">¶</a></h3>
+<a href="#edc24402f"><div class="admonition def" id="edc24402f">
+<p class="admonition-title">무한소(infinitesimal)의 존재 정리</p>
+<div class="arithmatex">\[ \exists \epsilon \in {}^{*}\R \text{ s.t. }\ \forall r \in \R ^{+} : 0 &lt; \epsilon &lt; r \]</div>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 무한소를 정의하고 존재성을 증명한다. 무한소의 정의로 인하여 무한소는 양수도 될 수 있고 음수도 될 수 있으나 일단 이 논의에서는 걱정하지 않아도 된다. </p>
+</li>
+<li>
+<p>증명</p>
+<p>우선 <span class="arithmatex">\(r \in \R\)</span> 을 <span class="arithmatex">\({}^{*}\R\)</span> 에서 <span class="arithmatex">\(^{*}r \in {}^{*}\R\)</span> 로 표현해야 하지만 편의상 <span class="arithmatex">\(*\)</span> 를 제거하고 실수 <span class="arithmatex">\(r\)</span> 을 초실수 <span class="arithmatex">\(r\)</span> 로 표현하자. </p>
+<p><span class="arithmatex">\(\epsilon = \bigg [\bigg &lt;1, \dfrac{1}{2}, \dfrac{1}{3}, \dfrac{1}{4}, \dots\bigg &gt;\bigg ] = \bigg [\bigg &lt;\dfrac{1}{n}\bigg &gt;\bigg ]\)</span> 라고 두자. 그러면 임의의 <span class="arithmatex">\(r \in \R\)</span> 에 대하여 <span class="arithmatex">\(\bigg \{n \in \N : \dfrac{1}{n} &gt; r \bigg \}\)</span> 은 유한집합이다. 그러므로 <span class="arithmatex">\(\bigg\{n \in \N : \dfrac{1}{n} &lt; r \bigg \} \in \mathcal{F}\)</span> 이다. 그러므로 <span class="arithmatex">\(\epsilon &lt; r\)</span> 이다. ▲ </p>
+<p>또한 <span class="arithmatex">\(\{n \in \N : 0 &lt; \frac{1}{n}\} = \N \in \mathcal{F}\)</span> 이므로 <span class="arithmatex">\(0 &lt; \epsilon\)</span> 이다. ■ </p>
+</li>
+</ul>
+<a href="#6e44b6764"><div class="admonition def" id="6e44b6764">
+<p class="admonition-title">무한대(unlimited)의 존재 정리</p>
+<div class="arithmatex">\[ \exists \omega \in {}^{*}\R \text{ s.t. }\ \forall x \in \R : \omega &gt; x \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\omega = [\big &lt;1,2,3,\dots\big &gt;] = [\big &lt;n\big &gt;]\)</span> 라고 두자. 임의의 실수 <span class="arithmatex">\(r\)</span> 에 대하여 <span class="arithmatex">\(\{n \in \N : r \geq n\}\)</span> 은 유한집합이므로 <span class="arithmatex">\(\{n \in \N : r &lt; n\} \in \mathcal{F}\)</span> 이다. 이는 <span class="arithmatex">\(\omega &gt; r\)</span> 임을 말해준다. ■ </p>
+</li>
+<li>
+<p>초실수체의 무한소와 무한대</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/5/53/N%C3%BAmeros_hiperreales.png"/></p>
+</li>
+</ul>
+<a href="#543440dbf"><div class="admonition def" id="543440dbf">
+<p>비표준 초실수(nonstandard hyperreal) : 실수가 아닌 초실수이다.</p>
+</div></a>
+<ul>
+<li>
+<p>무한대, 무한소가 비표준 초실수이다. </p>
+</li>
+<li>
+<p>무한대가 아닌 초실수를 유한 초실수(finite hyperreal)라고 한다. 아래 그림에서와 같이 <a href="#a07c0135a">모든 유한 초실수 <span class="arithmatex">\({}^{*} r\)</span> 은 실수 <span class="arithmatex">\(r\)</span> 과 무한소 초실수 <span class="arithmatex">\(\epsilon\)</span> 의 합으로 유일하게 나타낼 수 있다</a>. 이때 <span class="arithmatex">\(r\)</span> 을 <span class="arithmatex">\({}^{*} r\)</span> 의 표준 부분(standard part) 이라고 하고 <span class="arithmatex">\(\text{st} ({}^{*} r)\)</span> 이라고 쓴다. </p>
+</li>
+</ul>
+<a href="#6404f6174"><div class="admonition def" id="6404f6174">
+<p class="admonition-title">초실수의 분류</p>
+<p>지금까지의 논의를 기반으로 초실수를 다음과 같이 분류할 수 있다.</p>
+<ul>
+<li>
+<p>실수 </p>
+</li>
+<li>
+<p>유한 초실수 </p>
+</li>
+<li>
+<p>무한대 초실수 </p>
+</li>
+<li>
+<p>무한소 초실수 </p>
+</li>
+</ul>
+</div></a>
+<ul>
+<li>
+<p><a href="#c2a90879d">초실수체에서의 실수는 이 함수가 표현</a>한다. 유한 초실수는 <a href="#a07c0135a">아래 정리에서 살펴보듯이 실수와 무한소의 합으로 나타내어 진다</a>. <a href="#edc24402f">무한소는 이렇게 구성</a>해보았다. <a href="#6e44b6764">무한대는 이렇게 구성</a>해보았다. </p>
+<p>아래 그림은 초실선을 나타낸다.</p>
+<p><img alt="" src="http://www.vias.org/calculus/img/01_real_and_hyperreal_numbers-83.gif"/></p>
+</li>
+</ul>
+<h2 id="_6">초실수로의 도약<a class="headerlink" href="#_6" title="Permanent link">¶</a></h2>
+<h3 id="hyperreal-extension">hyperreal extension<a class="headerlink" href="#hyperreal-extension" title="Permanent link">¶</a></h3>
+<a href="#ebee0f58c"><div class="admonition def" id="ebee0f58c">
+<p>초실수 확대(hyperreal extension), Enlarged set : 집합 <span class="arithmatex">\(A \subset \R\)</span> 에 대하여 다음 조건이 충족되면 enlarged set <span class="arithmatex">\(^{*}A \in {}^{*}\R\)</span> 을 정의할 수 있다. </p>
+<div class="arithmatex">\[ [r] \in {}^{*}A \iff \{n \in \N : r_n \in A\} \in \mathcal{F} \]</div>
+<p>이는 실수 집합 <span class="arithmatex">\(A \subset \R\)</span> 을 다음과 같이 초실수로 확대할 수 있다는 것이다. </p>
+<div class="arithmatex">\[ {}^{*} A = \{[r] \in {}^{*}\R : \{n \in \N : r_n \in A\} \in \mathcal{F}\} \]</div>
+</div></a>
+<ul>
+<li>
+<p>예시 </p>
+<p><span class="arithmatex">\(A = (0, 1), r = \big &lt;0.9, 0.99, 0.999, \dots\big &gt;\)</span> 로 두자. 그러면 </p>
+<div class="arithmatex">\[ \llbracket r \in (0, 1) \rrbracket  = \N \in \mathcal{F} \implies r \in {}^{*}(0, 1) \]</div>
+<p>이다.</p>
+</li>
+</ul>
+<a href="#82bc0fc41"><div class="admonition def" id="82bc0fc41">
+<p>초자연수(hypernatural) : 자연수 집합 <span class="arithmatex">\(\N \subset \R\)</span> 의 초실수 확대를 초자연수 <span class="arithmatex">\({}^{*} \N\)</span> 라고 한다.</p>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(A = \N, \omega = \big &lt;1,2,3,\dots\big &gt;\)</span> 로 두자. 그러면 </p>
+<div class="arithmatex">\[ \llbracket \omega \in \N \rrbracket  = \N \in \mathcal{F} \implies \omega \in {}^{*}\N \]</div>
+<p>이다. 이는 </p>
+<div class="arithmatex">\[ {}^{*} \N = \{[s] \in {}^{*}\R : \{i \in \N : s_i \in \N\} \in \mathcal{F}\} \]</div>
+<p><span class="arithmatex">\(^{*}\N\)</span> 을 초자연수(hypernatural) 이라고 한다. </p>
+</li>
+</ul>
+<a href="#dd2e28bdf"><div class="admonition def" id="dd2e28bdf">
+<p>초실수 확대는 잘 정의되었다.</p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(\llbracket r \in A \rrbracket = \{n \in \N : r_n \in A\}\)</span> 에서 </p>
+<div class="arithmatex">\[ \llbracket r=r' \rrbracket \cap \llbracket r \in A \rrbracket \subseteq \llbracket r' \in A \rrbracket \]</div>
+<p>이다. <span class="arithmatex">\(r \equiv r' \land \llbracket r \in A \rrbracket \in \mathcal{F}\)</span> 이면 <span class="arithmatex">\(\llbracket r' \in A \rrbracket \in \mathcal{F}\)</span> 이므로 증명이 끝났다. ■ </p>
+</li>
+</ul>
+<h3 id="extending-functions">Extending functions<a class="headerlink" href="#extending-functions" title="Permanent link">¶</a></h3>
+<a href="#332414d89"><div class="admonition def" id="332414d89">
+<p>실함수 확대(Extension of real function) : 실함수 <span class="arithmatex">\(f: \R \to \R\)</span> 를 초현실수를 표현하는 수열의 성분에 </p>
+<div class="arithmatex">\[ {}^{*}f([\big &lt;r_1, r_2, \dots\big &gt;]) = [\big &lt;f(r_1), f(r_2), \dots\big &gt;] \]</div>
+<p>와 같이 적용하여 <span class="arithmatex">\(^{*}f: {}^{*}\R \to {}^{*}\R\)</span> 를 얻는 것이다.</p>
+</div></a>
+<a href="#61bae6022"><div class="admonition def" id="61bae6022">
+<p>실함수 확대는 잘 정의되었다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>먼저 편의상 <span class="arithmatex">\(f \circ r\)</span> 을 초실수 <span class="arithmatex">\(r\)</span> 의 수열을 함수 <span class="arithmatex">\(f\)</span> 에 적용한 수열 </p>
+<div class="arithmatex">\[ f \circ r := \big &lt;f(r_1), f(r_2), \dots\big &gt; \]</div>
+<p>로 정의하자. </p>
+<p>일반적으로 <span class="arithmatex">\(\llbracket r=r' \rrbracket \subseteq \llbracket f \circ r = f \circ r' \rrbracket\)</span> 가 성립한다. 그러므로 </p>
+<div class="arithmatex">\[ r \equiv r' \implies {}^{*}f(r) = f \circ r \equiv f \circ r' = {}^{*}f(r')\]</div>
+<p>이다. 그러므로 Funciton extension 은 잘 정의되었다. ■ </p>
+</li>
+</ul>
+<a href="#0d7226d95"><div class="admonition def" id="0d7226d95">
+<p>실가함수 확대(Extension of real-valued function) : <span class="arithmatex">\(A \subset \R\)</span> 에 대한 실가함수 <span class="arithmatex">\(f: A \to \R\)</span> 의 extension <span class="arithmatex">\(^{*}f: {}^{*}A \to {}^{*}\R\)</span> 를 수열 </p>
+<div class="arithmatex">\[s_n = \begin{cases} f(r_n) &amp; r_n \in A \\ 0 &amp; r_n \not\in A \\ \end{cases}\]</div>
+<p>에 대하여 다음과 같이 정의한다.</p>
+<div class="arithmatex">\[ {}^{*}f([\big &lt;r_n\big &gt;]) = [\big &lt;s_n\big &gt;] \]</div>
+</div></a>
+<ul>
+<li>
+<p>실가함수의 경우 이렇게 정의되는 이유는 <span class="arithmatex">\(r \in {}^{*}A\)</span> 의 모든 성분이 <span class="arithmatex">\(A\)</span> 에 포함되지 않을 수도 있기 때문이다. 즉, <span class="arithmatex">\(f(r_i)\)</span> 가 정의되지 않은 인덱스 <span class="arithmatex">\(i\)</span> 가 존재할 수도 있다. </p>
+<p>따라서 이런 경우에, 즉 <span class="arithmatex">\(r_i \not\in A\)</span> 일 때는 <span class="arithmatex">\(f(r_i) = 0\)</span> 로 정의해버리는 것이다.</p>
+</li>
+</ul>
+<a href="#c1c2a988f"><div class="admonition def" id="c1c2a988f">
+<p>초수열(hypersequence) : 수열 <span class="arithmatex">\(\big &lt;s_n\big &gt; = \big &lt;s_1,s_2, \dots\big &gt;\)</span> 는 실가함수 <span class="arithmatex">\(s : \N \to \R\)</span> 인데, 이를 초실수로 확장한 </p>
+<div class="arithmatex">\[ s : {}^{*}\N \to {}^{*}\R \]</div>
+<p>을 초수열이라 한다.</p>
+</div></a>
+<ul>
+<li>실가함수의 function extension 이 잘 정의되어서 초수열 <span class="arithmatex">\(s: {}^{*}\N \to {}^{*}\R\)</span> 에서 <span class="arithmatex">\(s_n\)</span> 가 <span class="arithmatex">\(n \in {}^{*}\N \setminus  \N\)</span> 일 때도 초수열을 만들 수 있다. </li>
+</ul>
+<h3 id="transfer-principle">Transfer Principle<a class="headerlink" href="#transfer-principle" title="Permanent link">¶</a></h3>
+<a href="#bb9948a05"><div class="admonition def" id="bb9948a05">
+<p>Transfer Principle : 잘 정의된 <span class="arithmatex">\(\R\)</span> 에 대한 1차논리 명제 <span class="arithmatex">\(\phi\)</span> 와 <span class="arithmatex">\({}^{*}\R\)</span> 에 대한 <span class="arithmatex">\(\phi\)</span> 의 <span class="arithmatex">\(*\)</span>-변환 명제 <span class="arithmatex">\({}^{*}\phi\)</span> 는 동치이다. 즉, </p>
+<div class="arithmatex">\[ \phi \iff {}^{*}\phi \]</div>
+<p>이다.</p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 실수에 대하여 잘 정의된 1차논리 명제를 <span class="arithmatex">\(*\)</span>-변환(Set Enlargement, Function extension, etc.)으로 초실수에 대한 명제로 변환하면 두 명제의 진리값이 서로 같다는 것을 말해준다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\phi\)</span> 를 <span class="arithmatex">\({}^{*}\phi\)</span> 로 <span class="arithmatex">\({}^{*}\)</span>-변환을 한 것은 Set Enlargement, Funciton extension 등을 사용하여 일차논리 명제 <span class="arithmatex">\(\phi\)</span> 가 포함하는 관계 <span class="arithmatex">\(P\)</span>, 함수 <span class="arithmatex">\(f\)</span>, 상수 <span class="arithmatex">\(r\)</span> 을 모두 <span class="arithmatex">\({}^{*}P, {}^{*}f, {}^{*}r\)</span> 로 치환한다는 것이다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<div class="arithmatex">\[ \forall n \in \N, \exists m \in \N : m &gt; n \]</div>
+<p>의 <span class="arithmatex">\(*\)</span>-변환은 </p>
+<div class="arithmatex">\[ \forall n \in {}^{*}\N, \exists m \in {}^{*}\N : m {}^{*}&gt; n \]</div>
+<p>이다.</p>
+<div class="arithmatex">\[ \forall x \in \R : \sin (x) &lt; 2 \]</div>
+<p>의 <span class="arithmatex">\(*\)</span>-변환은 </p>
+<div class="arithmatex">\[ \forall x \in {}^{*}\R : {}^{*}\sin (x) {}^{*}&lt; {}^{*}2 \]</div>
+<p>이다. 근데 일반적으로 편의상 상수와 함수와 부등호에 있는 <span class="arithmatex">\(*\)</span> 는 제거한다. 그래서 결국 </p>
+<div class="arithmatex">\[ \forall n \in {}^{*}\N, \exists m \in {}^{*}\N : m&gt;n \]</div>
+<div class="arithmatex">\[ \forall x \in {}^{*}\R : \sin (x) &lt; 2 \]</div>
+<p>가 된다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>이 정리가 비표준 해석학에서 가장 중요한 도구 중 하나이다.</p>
+</li>
+<li>
+<p>이 정리 덕분에 실수에 대한 명제를 그대로 초실수에 대한 명제로써 사용할 수 있다. 이는 모델 이론 덕분에 가능하다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p>실수에 대한 commutativity 를 초실수에서도 사용할 수 있다.</p>
+<p>실수는 순서체이다. 그러므로 초실수도 순서체이다. </p>
+</li>
+</ul>
+</li>
+<li>
+<p>초실수 이론은 1차 논리를 사용한다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\({}^{*}\R \to \R\)</span> 방향으로 이 정리를 사용해야 할 때도 있을 것이다. 이것도 물론 가능하다. 그러나 초실수 명제에서 초실수 상수를 포함하면 안된다는 제약이 있다. </p>
+<p>그러나 초실수 상수를 포함하는 명제를 반드시 실수로 변환해야 하는 상황이라면 초실수 상수를 변수 <span class="arithmatex">\(x\)</span> 로 치환하고 <span class="arithmatex">\(A \subseteq \R\)</span> 에 대한 <span class="arithmatex">\(\exists x \in {}^{*}A\)</span> 라는 양화사를 추가하는 것이 한가지 방법이다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p>이 정리에 대한 엄밀한 증명은 매우 어려운 모델 이론과 공리적 연역을 사용하므로 생략한다.</p>
+<p>이 정리가 왜 성립하는지에 대한 아이디어는 이해하기 쉽다. <span class="arithmatex">\(M_i\)</span> 의 곱집합에 대한 극대필터 <span class="arithmatex">\(\mathcal{U}\)</span> </p>
+<div class="arithmatex">\[ \prod_{i \in \N}^{} M_i /\mathcal{U} \]</div>
+<p>를 생각하자. 만약 1차 논리 명제 <span class="arithmatex">\(\phi\)</span> 가 각각의 <span class="arithmatex">\(M_i\)</span> 에 대하여 성립하고 극대필터에 의하여 captured 된다면 <span class="arithmatex">\(\phi\)</span> 는 ultraproduct <span class="arithmatex">\(\prod_{i \in \N}^{} M_i /\mathcal{U}\)</span> 에서도 성립한다. </p>
+<p>이제 <span class="arithmatex">\(M_i = \R, \mathcal{U} = \mathcal{F}\)</span> 로 두고, 초실수의 정의 <span class="arithmatex">\(^{*}\R = (\prod_{n \in N})\R / \mathcal{F}\)</span> 를 생각하자. 그러면 위 논증에 의하여 1차 논리 명제 <span class="arithmatex">\(\phi\)</span> 가 <span class="arithmatex">\(\R\)</span>에 서 성립하면 <span class="arithmatex">\({}^{*}\R\)</span> 에서도 성립한다는 것이 조금은 이해될 것이다. </p>
+</li>
+<li>
+<p>하지만 이 정리로 인하여 초실수체가 실수체와 완전히 동일하게 작동한다고 볼 수 있는 것은 아니다. </p>
+<p>가령 초실수체에서는 <a href="../Set/numbers/#85de9fd3f">아르키메데스 성질</a>가 성립하지 않는다. 왜냐하면 양의 무한대는 <span class="arithmatex">\(1\)</span> 을 유한번 더한 값보다 항상 크기 때문이다. </p>
+<p>또한 이 사실을 <a href="../Set/numbers/#85de9fd3f">아르키메데스 성질</a>을 1차 논리로 기술할 수 없기 때문이라고도 설명할 수 있다. 1차 논리로 기술할 수 없기에 transfer principle 을 사용할 수 없다. </p>
+</li>
+</ul>
+<a href="#ae0fefe36"><div class="admonition def" id="ae0fefe36">
+<p>structure <span class="arithmatex">\(\big &lt;{}^{*}\R ,+,\cdot ,&lt;\big &gt;\)</span> 은 <span class="arithmatex">\(+\)</span> 와 <span class="arithmatex">\(\cdot\)</span> 의 항등원을 갖는 순서체이다. </p>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p><a href="../Set/numbers/#e53c4f1e1">절단에 의한 정리</a>와 <a href="../Set/numbers/#765b33eaf">코시 수열에 의한 정리</a>에 의하여 <span class="arithmatex">\(\R\)</span> 은 순서체이다. 이는 일차논리에 의한 명제로 표현가능하다. </p>
+<p><span class="arithmatex">\(\R\)</span> 의 commutativity 에 대한 정리를 transfer principle 로 다음과 같이 변환할 수 있다. </p>
+<div class="arithmatex">\[ \forall x, y \in \R : x+y=y+x \]</div>
+<div class="arithmatex">\[ \forall x,y \in {}^{*}\R : x + y = y + x \]</div>
+<p>마찬가지로 <a href="../Set/numbers/#2ce70158c">순서체의 조건</a>들은 1차 논리 명제이므로 transfer principle 로 초실수의 명제로 변환시킬 수 있다. </p>
+<p>그러므로 <span class="arithmatex">\(\big &lt;{}^{*}\R , +, \cdot , &lt;\big &gt;\)</span> 은 순서체이다. ■ </p>
+</li>
+<li>
+<p>물론 <a href="../Set/numbers/#45dd9d81f"><span class="arithmatex">\(\R\)</span> 의 중요한 성질 중 하나는 실수체가 완비적</a>이라는 것이다. 그러므로 <span class="arithmatex">\(\R\)</span> 의 공집합이 아니고 위로 유계인 부분집합은 상한을 가진다.</p>
+<p>그러면 이상하다. <a href="../Set/numbers/#7b48c89b6">완비순서체는 오로지 실수체라는 것</a>을 우리는 이미 알고 있다. 그런데 Transfer principle 로 실수의 완비성에 대한 명제를 초실수로 변환할 수 있지 않을까?</p>
+<p>하지만 실수의 완비명제를 초실수로 변환하는 것은 불가능하다. 실수의 완비성이 초실수의 완비성으로 변환될 수 없는 이유는 초실수의 완비성이 오로지 2차 논리 명제로만 표현되기 때문이다. 왜냐하면 단순히 <span class="arithmatex">\(\R\)</span> 의 성분을 언급하는 것이 아니라 <span class="arithmatex">\(\R\)</span> 의 부분집합을 언급해야만 하기 때문이다. </p>
+<p>사실은 그래서 초실수체 <span class="arithmatex">\({}^{*}\R\)</span> 는 완비적이지 않다. </p>
+<ul>
+<li>
+<p>예시 </p>
+<p>개구간 <span class="arithmatex">\((0, 1) \in \R\)</span> 은 <span class="arithmatex">\({}^{*}\R\)</span> 에서 상한을 갖지 않는다. (<em>이건 왜 그럴까</em>)</p>
+</li>
+</ul>
+</li>
+</ul>
+<a href="#69e2a94a2"><div class="admonition def" id="69e2a94a2">
+<p>임의의 집합 <span class="arithmatex">\(A, B \subset \R\)</span> 에 대하여 다음이 성립한다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\({}^{*}(A \cup B) = {}^{*}A \cup {}^{*}B\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\({}^{*}(A \cap B) = {}^{*}A \cap {}^{*}B\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\({}^{*}(A \setminus   B) = {}^{*}A \setminus   {}^{*}B\)</span></p>
+</li>
+</ul>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+<p>임의의 집합 <span class="arithmatex">\(A, B \subset \R\)</span> 에 대하여 <a href="../Set/Set/#063667813">합집합의 정의</a> 에 의하여 </p>
+<div class="arithmatex">\[ \forall x \in \R : ( x \in A \cup B  \iff x \in A \lor x \in B) \]</div>
+<p>가 성립한다. transfer principle 에 의하여 이 명제를 변환한 명제</p>
+<div class="arithmatex">\[ \forall x \in {}^{*} \R : ( x \in {}^{*}(A \cup B)  \iff x \in {}^{*} A \lor x \in {}^{*} B) \tag{1} \]</div>
+<p>도 성립한다. 또한 임의의 집합 <span class="arithmatex">\(X,Y \in {}^{*}\R\)</span> 에 대하여 </p>
+<div class="arithmatex">\[ \forall x \in {}^{*} \R : ( x \in (X \cup Y)  \iff x \in  X \lor x \in  Y) \tag{2} \]</div>
+<p>가 성립한다. <span class="arithmatex">\((1), (2)\)</span> 를 결합하여 </p>
+<div class="arithmatex">\[ \forall \in {}^{*}\R : x \in {}^{*}(A \cup B) \iff x \in ({}^{*}A \cup {}^{*}B) \]</div>
+<p>가 성립한다. 그러므로 </p>
+<div class="arithmatex">\[ {}^{*}(A \cup B) = {}^{*}A \cup {}^{*}B \]</div>
+<p>이다. ▲ </p>
+<p>나머지 명제도 비슷하게 증명가능하다. ■ </p>
+</li>
+<li>
+<p><span class="arithmatex">\({}^{*}(\bigcup_{n \in \N}^{}) A_n\)</span> 이 <span class="arithmatex">\((\bigcup_{n \in \N}^{} {}^{*}A_n)\)</span> 과 같을 필요는 없다. </p>
+<p>가령 <span class="arithmatex">\(A_n = \{n\}\)</span> 이면 </p>
+<div class="arithmatex">\[ {}^{*}\bigg (\bigcup_{n \in \N}^{} A_n\bigg ) = {}^{*}\N \]</div>
+<p>이지만 </p>
+<div class="arithmatex">\[ \bigg (\bigcup_{n \in \N}^{} {}^{*} A_n\bigg ) = \N \]</div>
+<p>이 된다. </p>
+</li>
+</ul>
+<h2 id="_7">초실수의 성질<a class="headerlink" href="#_7" title="Permanent link">¶</a></h2>
+<a href="#031c97606"><div class="admonition def" id="031c97606">
+<p>초실수 <span class="arithmatex">\(b\)</span> 을 다음의 조건들에 따라 다음과 같이 부르기로 한다.</p>
+<ul>
+<li>
+<p>유한(limited) : <span class="arithmatex">\(\exists r,s \in \R : r &lt; b &lt; s\)</span></p>
+</li>
+<li>
+<p>양의 무한대(positive unlimited) : <span class="arithmatex">\(\forall r \in \R : r &lt; b\)</span></p>
+</li>
+<li>
+<p>음의 무한대(negative unlimited) : <span class="arithmatex">\(\forall r \in \R : b &lt; r\)</span></p>
+</li>
+<li>
+<p>무한대(unlimited) : 양의 무한대이거나 음의 무한대일 때.</p>
+</li>
+<li>
+<p>양의 무한소(positive infinitesimal) : <span class="arithmatex">\(\forall r \in \R ^{+} : 0 &lt; b &lt; r\)</span></p>
+</li>
+<li>
+<p>음의 무한소(negative infinitesimal) : <span class="arithmatex">\(\forall r \in \R ^{-} : r &lt; b &lt; 0\)</span></p>
+</li>
+<li>
+<p>무한소(infinitesimal) : 양의 무한대이거나 음의 무한대일 때.</p>
+</li>
+<li>
+<p>appreciable : 유한이지만 무한소가 아닐 때.</p>
+</li>
+</ul>
+</div></a>
+<ul>
+<li>개별 숫자를 지칭할 때 유한(limited), 무한대(unlimited) 을 사용한다. 집합을 지칭할 때 finite 와 infinite 를 사용한다.</li>
+</ul>
+<a href="#576c5aeb1"><div class="admonition def" id="576c5aeb1">
+<p><span class="arithmatex">\(\forall X \in {}^{*}\R\)</span> 에 대하여 다음과 같이 정의한다.</p>
+<div class="arithmatex">\[ X _{\infty} = \{x \in X | x \text{ is unlimited }\} \]</div>
+<div class="arithmatex">\[ X^{+} = \{x \in X | x &gt; 0 \} \]</div>
+</div></a>
+<ul>
+<li><span class="arithmatex">\(X ^{+} _{\infty}\)</span> 는 <span class="arithmatex">\(X\)</span> 의 모든 양의 무한대 집합을 뜻한다. </li>
+</ul>
+<h3 id="_8">초실수 연산<a class="headerlink" href="#_8" title="Permanent link">¶</a></h3>
+<a href="#ee0ef370f"><div class="admonition def" id="ee0ef370f">
+<p class="admonition-title">초실수 연산 규칙</p>
+<p>무한소 <span class="arithmatex">\(\epsilon , \delta\)</span> 과 appreciable <span class="arithmatex">\(b, c\)</span> 와 무한대 <span class="arithmatex">\(H, K\)</span> 에 대하여 초실수 연산 규칙은 다음과 같다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\epsilon + \delta\)</span> 는 무한소이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(b + \epsilon\)</span> 는 apprecable 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(H + \epsilon\)</span>, <span class="arithmatex">\(H + b\)</span> 는 무한대이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(b+c\)</span> 는 유한이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(-\epsilon\)</span> 은 무한소이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(-b\)</span> 는 apprecable 이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(-H\)</span> 는 무한대이다.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\epsilon \cdot \delta\)</span>, <span class="arithmatex">\(\epsilon \cdot b\)</span> 는 무한소이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(b \cdot c\)</span> 는 appreciable 이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(b \cdot H\)</span>, <span class="arithmatex">\(H \cdot K\)</span> 는 무한대이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{1}{\epsilon }\)</span> 은 <span class="arithmatex">\(\epsilon \neq 0\)</span> 이면 무한대이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{1}{b }\)</span> 은 appreciable 이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{1}{H }\)</span> 은 무한소이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{\epsilon }{b }\)</span>, <span class="arithmatex">\(\frac{\epsilon }{H }\)</span>, <span class="arithmatex">\(\frac{b }{H }\)</span> 은 무한소이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{b}{c }\)</span> 은 appreciable 이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{b }{\epsilon  }\)</span>, <span class="arithmatex">\(\frac{H }{\epsilon  }\)</span>, <span class="arithmatex">\(\frac{H }{b }\)</span> 은  <span class="arithmatex">\(\epsilon \neq 0\)</span> 이면 무한대이다. </p>
+</li>
+</ul>
+</div></a>
+<ul>
+<li>
+<p>증명 </p>
+</li>
+<li>
+<p>이 논의에서는 이 연산 규칙을 증명하지 않는다. 그러나 transfer principle 이나 실수 수열에 대한 논의를 전개하면 쉽게 증명할 수 있다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\frac{\epsilon }{\delta }, \frac{H}{K}, \epsilon \cdot H, H + K\)</span> 를 따로 정의하지는 않는다. 이들은 무한소, 무한대, appreciable 의 값을 모두 가질 수 있다. </p>
+</li>
+</ul>
+<h3 id="halos">Halos<a class="headerlink" href="#halos" title="Permanent link">¶</a></h3>
+<a href="#a505f0901"><div class="admonition def" id="a505f0901">
+<p class="admonition-title"><span class="arithmatex">\(\backsimeq\)</span> </p>
+<p><span class="arithmatex">\({}^{*}\R\)</span> 에서의 동치관계 <span class="arithmatex">\(\backsimeq\)</span> 를 다음과 같이 정의한다. </p>
+<div class="arithmatex">\[ x \backsimeq y \iff x - y \text{ is infinitesimal } \]</div>
+</div></a>
+<ul>
+<li>
+<p>이 동치관계가 잘 정의되었음을 증명하는 것은 쉽다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\epsilon \backsimeq 0\)</span> 에서 "무한히 가까운" 이라는 개념이 나온다. 이것에 해석학의 증명의 핵심이 있기 때문에 잘 이해해야 한다.</p>
+</li>
+</ul>
+<a href="#20a5acffb"><div class="admonition def" id="20a5acffb">
+<p>halo, monad : <span class="arithmatex">\(b \in {}^{*}\R\)</span> 의 halo 는 동치관계 <span class="arithmatex">\(\backsimeq\)</span> 의 동치류</p>
+<div class="arithmatex">\[ \text{hal}(b) = \text{monad} (b) = \{c \in {}^{*}\R : b \backsimeq c\} \]</div>
+<p>이다. </p>
+</div></a>
+<ul>
+<li>
+<p>쉽게 말해 초실수 <span class="arithmatex">\(b\)</span> 의 halo 는 <span class="arithmatex">\(b\)</span> 와 무한히 가까운 모든 초실수의 집합이라는 것이다. </p>
+</li>
+<li>
+<p><span class="arithmatex">\(b\)</span> 가 유한 초실수일 때 <span class="arithmatex">\(b\)</span> 의 halo 중에서 유일한 실수 <span class="arithmatex">\(a\)</span> 가 존재하는데, <span class="arithmatex">\(a\)</span> 를 <span class="arithmatex">\(b\)</span> 의 표준 부분(standard part)이라고 한다.</p>
+</li>
+</ul>
+<a href="#9ae554f7f"><div class="admonition def" id="9ae554f7f">
+<p class="admonition-title">정리 3.1</p>
+<div class="arithmatex">\[ \forall b, c \in \R : b \backsimeq c \implies b = c \]</div>
+</div></a>
+<ul>
+<li>
+<p>증명</p>
+<p><span class="arithmatex">\(b \backsimeq c \land b \neq c\)</span> 를 가정하자. 그러면 <span class="arithmatex">\(b - c = r \neq 0\)</span> 이다. 하지만 <span class="arithmatex">\(r\)</span> 이 무한소가 아니므로 이는 <span class="arithmatex">\(b \backsimeq c\)</span> 이라는 가정과 모순이다. ■ </p>
+</li>
+</ul>
+<a href="#0280ad2bd"><div class="admonition def" id="0280ad2bd">
+<p class="admonition-title">정리 3.2</p>
+<p>유한 초실수 <span class="arithmatex">\(b, c\)</span> 에 대하여 다음이 성립한다. </p>
+<ul>
+<li>
+<p><span class="arithmatex">\(b \backsimeq b' \land c \backsimeq c' \implies b \pm c \backsimeq b' \pm c' \land b \cdot c \backsimeq b' \cdot c'\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(b \backsimeq b' \land c \backsimeq c' \land c \not \backsimeq 0 \implies \frac{b}{c} \backsimeq \frac{b'}{c'}\)</span></p>
+</li>
+</ul>
+</div></a>
+<ul>
+<li>
+<p><span class="arithmatex">\(b \backsimeq b' \land c \backsimeq c' \implies b \pm c \backsimeq b' \pm c'\)</span> 은 <span class="arithmatex">\(b,c\)</span> 가 무한대일 때도 성립한다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(b \pm c \backsimeq b' \pm c'\)</span> 를 보이는 것은 <span class="arithmatex">\((b \pm c) - (b' \pm c')\)</span> 이 무한소임을 보이는 것이다. 가정에 의하여 <span class="arithmatex">\(b-b' = \epsilon _b, c-c' = \epsilon _c\)</span> 이므로 </p>
+<div class="arithmatex">\[ (b \pm c) - (b' \pm c') = (b-b') \pm (c-c') = \epsilon _b \pm \epsilon _c\]</div>
+<p>이다. <a href="#ee0ef370f">초실수 연산 규칙</a> 에 의하여 이것은 무한소이다. 그러므로 증명이 끝났다. ▲ </p>
+<p><span class="arithmatex">\(b \cdot c \backsimeq b' \cdot c'\)</span> 를 보이는 것도 비슷하다. </p>
+<div class="arithmatex">\[ \begin{equation}\begin{split}   b \cdot c - b' \cdot c'&amp;= b \cdot c - b \cdot c' + b \cdot c' - b' \cdot c' \\ &amp;= b \cdot (c-c') + (b-b') \cdot c' \\ &amp;= b \cdot \epsilon _c + \epsilon _b \cdot c' \\ \end{split}\end{equation}\tag*{} \]</div>
+<p>이다. <a href="#ee0ef370f">초실수 연산 규칙</a> 에 의하여 이것은 무한소이다. 그러므로 증명이 끝났다. ▲ </p>
+<p>마지막으로 </p>
+<div class="arithmatex">\[ \begin{equation}\begin{split}   \frac{b}{c} - \frac{b'}{c'}&amp;= \frac{b \cdot c' - b' \cdot c}{c \cdot c'}  \\ &amp;= \frac{b \cdot c' - b \cdot c + b \cdot c - b' \cdot c}{c \cdot c'}  \\ &amp;= \frac{b \cdot (c' - c) + c \cdot (b - b')}{c \cdot c'}  \\ &amp;= \frac{b \cdot \epsilon _c + c \cdot \epsilon _b}{c \cdot c'}  \\ \end{split}\end{equation}\tag*{} \]</div>
+<p>이다. <a href="#ee0ef370f">초실수 연산 규칙</a> 에 의하여 이것은 무한소이다. 그러므로 증명이 끝났다. ■  </p>
+</li>
+</ul>
+<h3 id="shadowsstandard-part">Shadows(Standard part)<a class="headerlink" href="#shadowsstandard-part" title="Permanent link">¶</a></h3>
+<a href="#a07c0135a"><div class="admonition def" id="a07c0135a">
+<p class="admonition-title">shadow 의 존재 정리, 표준 부분 원리</p>
+<p>모든 유한 초실수 <span class="arithmatex">\(b\)</span> 는 오직 하나의 실수 <span class="arithmatex">\(s\)</span> 와 무한히 가깝다. </p>
+</div></a>
+<ul>
+<li>
+<p>이 정리는 쉽게 말해 임의의 유한 초실수 <span class="arithmatex">\(b \in {}^{*}\R\)</span> 에 대하여 <span class="arithmatex">\(b = b_0 + \epsilon\)</span> 을 만족하는 실수 <span class="arithmatex">\(b_0\)</span> 와 무한소 <span class="arithmatex">\(\epsilon\)</span> 이 유일하게 존재한다는 것이다.</p>
+</li>
+<li>
+<p>유한 초실수 <span class="arithmatex">\(x\)</span> 의 halo </p>
+<div class="arithmatex">\[ \text{hal}(x) = \text{monad} (x) = \{y \in {}^{*}\R : x \backsimeq y\} \]</div>
+<p>중에 존재하는 유일한 실수가 <span class="arithmatex">\(x\)</span> 의 표준부분인 것이다. </p>
+</li>
+<li>
+<p>이 표준 부분을 통하여 페르마가 직관적으로 사용한 "거의 같음(adequality)" 이라는 개념을 엄밀하게 정의할 수 있다. 즉, 같은 표준 부분을 갖는 두 초실수가 거의 같다라고 말하면 되는 것이다. </p>
+</li>
+<li>
+<p>증명 </p>
+<p><span class="arithmatex">\(A = \{r \in \R : r &lt; b\}\)</span> 로 두자. <span class="arithmatex">\(A\)</span> 는 공집합이 아니므로 상계를 가지고 <a href="../Set/numbers/#45dd9d81f">실수의 완비성 공리</a>에 의하여 상한 <span class="arithmatex">\(s\)</span> 를 가진다. </p>
+<p><span class="arithmatex">\(b \backsimeq s\)</span> 를 보여야 한다. 이는 <span class="arithmatex">\(\forall \epsilon \in \R ^{+} : |b-s| &lt; \epsilon\)</span> 을 보이는 것이다. 임의의 실수로 <span class="arithmatex">\(\epsilon\)</span> 을 잡자. 그러면 <span class="arithmatex">\(|b-s|&lt;\epsilon\)</span> 을 보이는 것은 <span class="arithmatex">\(s - \epsilon &lt; b &lt; s + \epsilon\)</span> 을 증명하는 것이다. ▲ </p>
+<p>먼저 <span class="arithmatex">\(b &lt; s + \epsilon\)</span> 을 보이자. <span class="arithmatex">\(s + \epsilon \leq b\)</span> 라고 가정하자. 그러면 </p>
+<div class="arithmatex">\[ s &lt; s + \frac{\epsilon }{2} &lt; s + \epsilon \leq b \]</div>
+<p>이다. <span class="arithmatex">\(s, \epsilon \in \R \implies  s + \frac{\epsilon }{s} \in \R\)</span> 이고 <span class="arithmatex">\(s + \frac{\epsilon }{2} &lt; b\)</span> 이므로 </p>
+<div class="arithmatex">\[ s + \frac{\epsilon }{2} \in A \]</div>
+<p>이다. 그런데 <span class="arithmatex">\(s + \frac{\epsilon }{2} &gt; s\)</span> 이므로 <span class="arithmatex">\(s\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상한이 될 수 없다. 하지만 이는 모순이다. ▲ </p>
+<p><span class="arithmatex">\(s - \epsilon &lt; b\)</span> 을 보이자. <span class="arithmatex">\(b \leq  s - \epsilon\)</span> 라고 가정하자. 그러면 </p>
+<div class="arithmatex">\[ b \leq s - \epsilon &lt; s - \frac{\epsilon }{2} &lt; s  \]</div>
+<p>이다. <span class="arithmatex">\(s - \frac{\epsilon }{2} \geq  b\)</span> 이므로 <span class="arithmatex">\(s - \frac{\epsilon }{2}\)</span> 는 <span class="arithmatex">\(A\)</span> 의 상계이다. 그러나 </p>
+<div class="arithmatex">\[ s - \frac{\epsilon }{2} &lt; s \]</div>
+<p>이므로 <span class="arithmatex">\(s\)</span> 가 <span class="arithmatex">\(A\)</span> 의 상한이라는 것에 모순이다. ▲ </p>
+<p>마지막으로 <span class="arithmatex">\(b\)</span> 의 shadow 가 유일함을 보여야 한다. <span class="arithmatex">\(b\)</span> 에 무한히 가까운 실수 <span class="arithmatex">\(s, s'\)</span> 가 존재한다고 가정하자. 즉, <span class="arithmatex">\(b \backsimeq s \land b \backsimeq s'\)</span> 이다. 그러면 동치관계의 transitivity 에 의하여 <span class="arithmatex">\(s \backsimeq s'\)</span> 이다. 그러면 <a href="#9ae554f7f">정리 3.1</a> 에 의하여 <span class="arithmatex">\(s = s'\)</span> 이다. ■ </p>
+</li>
+</ul>
+<a href="#cb2419266"><div class="admonition def" id="cb2419266">
+<p>표준 부분 함수(standard part function), 초실수의 shadow : 표준 부분 원리에 의하여 임의의 유한 초실수 <span class="arithmatex">\(b \in {}^{*}\R\)</span> 에 대하여 <span class="arithmatex">\(b = b_0 + \epsilon\)</span> 을 만족하는 실수 <span class="arithmatex">\(b_0\)</span> 와 무한소 <span class="arithmatex">\(\epsilon\)</span> 이 유일하게 존재하는데, 이때 함수 </p>
+<div class="arithmatex">\[ \text{st} : b \mapsto b_0 \]</div>
+<p>를 표준 부분 함수라고 한다. </p>
+</div></a>
+<ul>
+<li>
+<p>이 함수는 자주 <span class="arithmatex">\(\text{sh}(b)\)</span> 라고도 표기되는데 이때 이것을 <span class="arithmatex">\(b\)</span> 의 shadow 라고 한다.</p>
+</li>
+<li>
+<p>이 함수에 의하여 다음 동치관계에 대한 동치류로써 halo 를 정의할 수도 있다.</p>
+<div class="arithmatex">\[ \text{st} (a) = \text{st} (b) \implies a \backsimeq b \]</div>
+</li>
+<li>
+<p>아래 그림은 표준 부분함수를 표현한다. </p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Standard_part_function_with_two_continua.svg"/></p>
+</li>
+</ul>
+<h2 id="_9">비표준 해석학<a class="headerlink" href="#_9" title="Permanent link">¶</a></h2>
+<p>비표준 해석학에서의 수렴, 연속성, 증분, 미분 등등 일단 표준 해석학을 엄밀히 정리한 이후에 봐야 할듯</p>
+<hr/>
+<dl>
+<dt>ref:</dt>
+<dd>
+<p><a href="https://sites.math.washington.edu/~morrow/336_15/papers/gianni.pdf">https://sites.math.washington.edu/~morrow/336_15/papers/gianni.pdf</a></p>
+</dd>
+<dd>
+<p><a href="https://arthasekuritas.com/researchpdf/arthalastcompany.pdf">https://arthasekuritas.com/researchpdf/arthalastcompany.pdf</a></p>
+</dd>
+</dl>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+            Back to top
+          </a>
+</main>
+<!-- 
+<footer class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer> -->
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+<script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+<script src="../../javascripts/highlight.min.js"></script>
+<script src="../../javascripts/config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+<script src="../../javascripts/b27b3e6448.js"></script>
+</body>
+</html>
