@@ -1,1830 +1,2161 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="ccsss" name="author"/>
-<link href="https://ccss17.github.io/Computer/nand2tetris/" rel="canonical"/>
-<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>Nand to Tetris - ccss17</title>
-<link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
-<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
-<link href="../../stylesheets/config.css" rel="stylesheet"/>
-</head>
-<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
-<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#1-boolean-logic">
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="ccsss">
+      
+      
+        <link rel="canonical" href="https://ccss17.github.io/Computer/nand2tetris/">
+      
+      <link rel="icon" href="../../assets/images/bolt-solid.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+  <title>Lorem ipsum dolor sit amet</title>
+
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/config.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-boolean-logic" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
-<header class="md-header" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
-<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ccss17" class="md-header__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             ccss17
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Nand to Tetris
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
-</label>
-</form>
-</nav>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
       ccss17
     </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Math/MathHistory/">
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Math/MathHistory/" class="md-tabs__link">
         Math
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../paper/1404.6388/">
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../paper/1404.6388/" class="md-tabs__link">
         Paper
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="./">
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Computer
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../ProgrammerBase/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ProgrammerBase/" class="md-tabs__link">
         ProgrammerBase
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../security-tutorial/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../security-tutorial/" class="md-tabs__link">
         security tutorial
       </a>
-</li>
-</ul>
-</div>
+    </li>
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
-<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
-</a>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ccss17" class="md-nav__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
     ccss17
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../..">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         ccss17
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
         Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Math" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
           Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
         Foundation of Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_1">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Foundation of Math" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
           Foundation of Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/MathHistory/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/MathHistory/" class="md-nav__link">
         History of Math
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Logic/FormalSystem/" class="md-nav__link">
         Formal System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/incompleteness/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/incompleteness/" class="md-nav__link">
         Incompleteness theorem
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/turing/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/turing/" class="md-nav__link">
         Turing's proof
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/gentzen/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/gentzen/" class="md-nav__link">
         Consistency proof of Peano arithmetic
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Set Theory
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Set Theory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
           Set Theory
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/Set/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/Set/" class="md-nav__link">
         Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/numbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/numbers/" class="md-nav__link">
         Number Theory
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/InfiniteSet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/InfiniteSet/" class="md-nav__link">
         Infinite Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/ZFC/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/ZFC/" class="md-nav__link">
         ZFC axiom system
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/ArithmeticOperations/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/ArithmeticOperations/" class="md-nav__link">
         Arithmetic Operations
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Polynomials/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Polynomials/" class="md-nav__link">
         Polynomials
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/HyperrealNumbers/" class="md-nav__link">
         Hyperreal Numbers
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/SurrealNumbers/" class="md-nav__link">
         Surreal Numbers
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      <label class="md-nav__link" for="__nav_2_7">
         Linear Algebra
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_7">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linear Algebra" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
           Linear Algebra
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/VectorSpace/" class="md-nav__link">
         Vector Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/LinearTransformation/" class="md-nav__link">
         Linear Transformation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/MatrixOperation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/MatrixOperation/" class="md-nav__link">
         Matrix Operation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/Determinants/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/Determinants/" class="md-nav__link">
         Determinants
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/Diagonalization/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/Diagonalization/" class="md-nav__link">
         Diagonalization
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/InnerProductSpaces/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/InnerProductSpaces/" class="md-nav__link">
         Inner Product Spaces
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/CanonicalForms/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/CanonicalForms/" class="md-nav__link">
         Canonical Forms
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
         Paper
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Paper" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Paper" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
           Paper
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/1404.6388/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/1404.6388/" class="md-nav__link">
         Performance of Python runtimes on a non-numeric scientific code
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/1102.1523/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/1102.1523/" class="md-nav__link">
         The NumPy array: a structure for efficient numerical computation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/facenet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/facenet/" class="md-nav__link">
         Facenet (2015)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/quadruplet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/quadruplet/" class="md-nav__link">
         Quadruplet (2017)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/blueborne/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/blueborne/" class="md-nav__link">
         BlueBorne
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
         Computer
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Computer" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Computer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
           Computer
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           Nand to Tetris
           <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Nand to Tetris
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-boolean-logic">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-boolean-logic" class="md-nav__link">
     1. Boolean Logic
   </a>
-<nav aria-label="1. Boolean Logic" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#truth-table-representation">
+  
+    <nav class="md-nav" aria-label="1. Boolean Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truth-table-representation" class="md-nav__link">
     Truth Table Representation
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#boolean-expressions">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-expressions" class="md-nav__link">
     Boolean Expressions
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#logic-gate">
+        
+          <li class="md-nav__item">
+  <a href="#logic-gate" class="md-nav__link">
     Logic Gate
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#primitive-and-composite-gates">
+        
+          <li class="md-nav__item">
+  <a href="#primitive-and-composite-gates" class="md-nav__link">
     Primitive and Composite Gates
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hardware-description-language-hdl">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-description-language-hdl" class="md-nav__link">
     Hardware Description Language (HDL)
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#multi-bit-versions-of-basic-gates">
+        
+          <li class="md-nav__item">
+  <a href="#multi-bit-versions-of-basic-gates" class="md-nav__link">
     Multi-Bit Versions of Basic Gates
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#implementation">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
     Implementation
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-boolean-arithmetic">
+      
+        <li class="md-nav__item">
+  <a href="#2-boolean-arithmetic" class="md-nav__link">
     2. Boolean Arithmetic
   </a>
-<nav aria-label="2. Boolean Arithmetic" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#adders">
+  
+    <nav class="md-nav" aria-label="2. Boolean Arithmetic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adders" class="md-nav__link">
     Adders
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#alu">
+        
+          <li class="md-nav__item">
+  <a href="#alu" class="md-nav__link">
     ALU
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#perspective">
+        
+          <li class="md-nav__item">
+  <a href="#perspective" class="md-nav__link">
     Perspective
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-sequential-logic">
+      
+        <li class="md-nav__item">
+  <a href="#3-sequential-logic" class="md-nav__link">
     3. Sequential Logic
   </a>
-<nav aria-label="3. Sequential Logic" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#specification">
+  
+    <nav class="md-nav" aria-label="3. Sequential Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
     Specification
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#implementation_1">
+        
+          <li class="md-nav__item">
+  <a href="#implementation_1" class="md-nav__link">
     Implementation
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-machine-language">
+      
+        <li class="md-nav__item">
+  <a href="#4-machine-language" class="md-nav__link">
     4. Machine Language
   </a>
-<nav aria-label="4. Machine Language" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#background">
+  
+    <nav class="md-nav" aria-label="4. Machine Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
     Background
   </a>
-<nav aria-label="Background" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#machines">
+  
+    <nav class="md-nav" aria-label="Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#machines" class="md-nav__link">
     Machines
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#language">
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
     Language
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#commands">
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
     Commands
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hack-machine-language-specification">
+        
+          <li class="md-nav__item">
+  <a href="#hack-machine-language-specification" class="md-nav__link">
     Hack Machine Language Specification
   </a>
-<nav aria-label="Hack Machine Language Specification" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#memory-address-spaces">
+  
+    <nav class="md-nav" aria-label="Hack Machine Language Specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-address-spaces" class="md-nav__link">
     Memory Address Spaces
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#registers">
+        
+          <li class="md-nav__item">
+  <a href="#registers" class="md-nav__link">
     Registers
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#a-instruction">
+        
+          <li class="md-nav__item">
+  <a href="#a-instruction" class="md-nav__link">
     A-instruction
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#c-instruction">
+        
+          <li class="md-nav__item">
+  <a href="#c-instruction" class="md-nav__link">
     C-instruction
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#symbols">
+        
+          <li class="md-nav__item">
+  <a href="#symbols" class="md-nav__link">
     Symbols
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#inputoutput-handling">
+        
+          <li class="md-nav__item">
+  <a href="#inputoutput-handling" class="md-nav__link">
     Input/Output Handling
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#syntax-conventions-and-file-format">
+        
+          <li class="md-nav__item">
+  <a href="#syntax-conventions-and-file-format" class="md-nav__link">
     Syntax Conventions and File Format
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#perspective_1">
+        
+          <li class="md-nav__item">
+  <a href="#perspective_1" class="md-nav__link">
     Perspective
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#5-computer-architecture">
+      
+        <li class="md-nav__item">
+  <a href="#5-computer-architecture" class="md-nav__link">
     5. Computer Architecture
   </a>
-<nav aria-label="5. Computer Architecture" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#computer-architecture-fundamentals">
+  
+    <nav class="md-nav" aria-label="5. Computer Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computer-architecture-fundamentals" class="md-nav__link">
     Computer Architecture Fundamentals
   </a>
-<nav aria-label="Computer Architecture Fundamentals" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-stored-program-concept">
+  
+    <nav class="md-nav" aria-label="Computer Architecture Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-stored-program-concept" class="md-nav__link">
     The Stored Program Concept
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-von-neumann-architecture">
+        
+          <li class="md-nav__item">
+  <a href="#the-von-neumann-architecture" class="md-nav__link">
     The von Neumann Architecture
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#memory">
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
     Memory
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cpu">
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
     CPU
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#registers_1">
+        
+          <li class="md-nav__item">
+  <a href="#registers_1" class="md-nav__link">
     Registers
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#io">
+        
+          <li class="md-nav__item">
+  <a href="#io" class="md-nav__link">
     I/O
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hack-hardware-platform-specification">
+        
+          <li class="md-nav__item">
+  <a href="#hack-hardware-platform-specification" class="md-nav__link">
     Hack Hardware Platform: Specification
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cpu_1">
+        
+          <li class="md-nav__item">
+  <a href="#cpu_1" class="md-nav__link">
     CPU
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#6-assembler">
+      
+        <li class="md-nav__item">
+  <a href="#6-assembler" class="md-nav__link">
     6. Assembler
   </a>
-<nav aria-label="6. Assembler" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#symbol-resolution">
+  
+    <nav class="md-nav" aria-label="6. Assembler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbol-resolution" class="md-nav__link">
     Symbol Resolution
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#assembler">
+        
+          <li class="md-nav__item">
+  <a href="#assembler" class="md-nav__link">
     Assembler
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#7-virtual-machine-i-stack-arithmetic">
+      
+        <li class="md-nav__item">
+  <a href="#7-virtual-machine-i-stack-arithmetic" class="md-nav__link">
     7. Virtual Machine I: Stack Arithmetic
   </a>
-<nav aria-label="7. Virtual Machine I: Stack Arithmetic" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#virtual-machine-paradigm">
+  
+    <nav class="md-nav" aria-label="7. Virtual Machine I: Stack Arithmetic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine-paradigm" class="md-nav__link">
     Virtual Machine Paradigm
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#stack-macine-model">
+        
+          <li class="md-nav__item">
+  <a href="#stack-macine-model" class="md-nav__link">
     Stack Macine Model
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#8-virtual-machine-ii-program-control">
+      
+        <li class="md-nav__item">
+  <a href="#8-virtual-machine-ii-program-control" class="md-nav__link">
     8. Virtual Machine II: Program Control
   </a>
-<nav aria-label="8. Virtual Machine II: Program Control" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#program-flow">
+  
+    <nav class="md-nav" aria-label="8. Virtual Machine II: Program Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-flow" class="md-nav__link">
     Program Flow
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#9-high-level-language">
+      
+        <li class="md-nav__item">
+  <a href="#9-high-level-language" class="md-nav__link">
     9. High-Level Language
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#10-compiler-i-syntax-analysis">
+      
+        <li class="md-nav__item">
+  <a href="#10-compiler-i-syntax-analysis" class="md-nav__link">
     10. Compiler I: Syntax Analysis
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#11-compiler-ii-code-generation">
+      
+        <li class="md-nav__item">
+  <a href="#11-compiler-ii-code-generation" class="md-nav__link">
     11. Compiler II: Code Generation
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#12-operating-system">
+      
+        <li class="md-nav__item">
+  <a href="#12-operating-system" class="md-nav__link">
     12. Operating System
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#13-postscript">
+      
+        <li class="md-nav__item">
+  <a href="#13-postscript" class="md-nav__link">
     13. Postscript
   </a>
+  
 </li>
-</ul>
+      
+    </ul>
+  
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../future/">
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../future/" class="md-nav__link">
         Why the future doesn't need us
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Rust/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rust/" class="md-nav__link">
         Rust Memo
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         ProgrammerBase
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ProgrammerBase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
           ProgrammerBase
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_2">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      <label class="md-nav__link" for="__nav_5_2">
         Contents
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Contents" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_5_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contents" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
           Contents
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/01-Day1/readme/" class="md-nav__link">
         Day 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/02-Day2/readme/" class="md-nav__link">
         Day 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/03-Day3/readme/" class="md-nav__link">
         Day 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/04-Day4/readme/" class="md-nav__link">
         Day 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/05-Day5/readme/" class="md-nav__link">
         Day 5
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/docker/" class="md-nav__link">
         Docker
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/codingconvention/" class="md-nav__link">
         Coding Convention
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/build/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/build/" class="md-nav__link">
         Build System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/information/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/information/" class="md-nav__link">
         Information
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/git/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/git/" class="md-nav__link">
         Git
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/vscode/" class="md-nav__link">
         VSCode
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/markdown/" class="md-nav__link">
         Markdown
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/tmux/" class="md-nav__link">
         Tmux
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/vim/" class="md-nav__link">
         Vim
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/cli/" class="md-nav__link">
         CLI
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
         security tutorial
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="security tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
           security tutorial
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/01-Base/" class="md-nav__link">
         Day1 Base
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/02-Computer1/" class="md-nav__link">
         Day2 Computer Principle 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/03-Computer2/" class="md-nav__link">
         Day3 Computer Principle 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/04-Reversing1/" class="md-nav__link">
         Day4 Reversing 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/05-Reversing2/" class="md-nav__link">
         Day5 Reversing 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/06-Exploit1/" class="md-nav__link">
         Day6 Exploit 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/07-Exploit2/" class="md-nav__link">
         Day7 Exploit 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/08-Exploit3/" class="md-nav__link">
         Day8 Exploit 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/09-Exploit4/" class="md-nav__link">
         Day9 Exploit 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/10-Pentesting/" class="md-nav__link">
         Day10 Pentesting
       </a>
-</li>
-</ul>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-boolean-logic">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-boolean-logic" class="md-nav__link">
     1. Boolean Logic
   </a>
-<nav aria-label="1. Boolean Logic" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#truth-table-representation">
+  
+    <nav class="md-nav" aria-label="1. Boolean Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truth-table-representation" class="md-nav__link">
     Truth Table Representation
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#boolean-expressions">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-expressions" class="md-nav__link">
     Boolean Expressions
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#logic-gate">
+        
+          <li class="md-nav__item">
+  <a href="#logic-gate" class="md-nav__link">
     Logic Gate
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#primitive-and-composite-gates">
+        
+          <li class="md-nav__item">
+  <a href="#primitive-and-composite-gates" class="md-nav__link">
     Primitive and Composite Gates
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hardware-description-language-hdl">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-description-language-hdl" class="md-nav__link">
     Hardware Description Language (HDL)
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#multi-bit-versions-of-basic-gates">
+        
+          <li class="md-nav__item">
+  <a href="#multi-bit-versions-of-basic-gates" class="md-nav__link">
     Multi-Bit Versions of Basic Gates
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#implementation">
+        
+          <li class="md-nav__item">
+  <a href="#implementation" class="md-nav__link">
     Implementation
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-boolean-arithmetic">
+      
+        <li class="md-nav__item">
+  <a href="#2-boolean-arithmetic" class="md-nav__link">
     2. Boolean Arithmetic
   </a>
-<nav aria-label="2. Boolean Arithmetic" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#adders">
+  
+    <nav class="md-nav" aria-label="2. Boolean Arithmetic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adders" class="md-nav__link">
     Adders
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#alu">
+        
+          <li class="md-nav__item">
+  <a href="#alu" class="md-nav__link">
     ALU
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#perspective">
+        
+          <li class="md-nav__item">
+  <a href="#perspective" class="md-nav__link">
     Perspective
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-sequential-logic">
+      
+        <li class="md-nav__item">
+  <a href="#3-sequential-logic" class="md-nav__link">
     3. Sequential Logic
   </a>
-<nav aria-label="3. Sequential Logic" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#specification">
+  
+    <nav class="md-nav" aria-label="3. Sequential Logic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specification" class="md-nav__link">
     Specification
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#implementation_1">
+        
+          <li class="md-nav__item">
+  <a href="#implementation_1" class="md-nav__link">
     Implementation
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#4-machine-language">
+      
+        <li class="md-nav__item">
+  <a href="#4-machine-language" class="md-nav__link">
     4. Machine Language
   </a>
-<nav aria-label="4. Machine Language" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#background">
+  
+    <nav class="md-nav" aria-label="4. Machine Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
     Background
   </a>
-<nav aria-label="Background" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#machines">
+  
+    <nav class="md-nav" aria-label="Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#machines" class="md-nav__link">
     Machines
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#language">
+        
+          <li class="md-nav__item">
+  <a href="#language" class="md-nav__link">
     Language
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#commands">
+        
+          <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
     Commands
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hack-machine-language-specification">
+        
+          <li class="md-nav__item">
+  <a href="#hack-machine-language-specification" class="md-nav__link">
     Hack Machine Language Specification
   </a>
-<nav aria-label="Hack Machine Language Specification" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#memory-address-spaces">
+  
+    <nav class="md-nav" aria-label="Hack Machine Language Specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#memory-address-spaces" class="md-nav__link">
     Memory Address Spaces
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#registers">
+        
+          <li class="md-nav__item">
+  <a href="#registers" class="md-nav__link">
     Registers
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#a-instruction">
+        
+          <li class="md-nav__item">
+  <a href="#a-instruction" class="md-nav__link">
     A-instruction
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#c-instruction">
+        
+          <li class="md-nav__item">
+  <a href="#c-instruction" class="md-nav__link">
     C-instruction
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#symbols">
+        
+          <li class="md-nav__item">
+  <a href="#symbols" class="md-nav__link">
     Symbols
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#inputoutput-handling">
+        
+          <li class="md-nav__item">
+  <a href="#inputoutput-handling" class="md-nav__link">
     Input/Output Handling
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#syntax-conventions-and-file-format">
+        
+          <li class="md-nav__item">
+  <a href="#syntax-conventions-and-file-format" class="md-nav__link">
     Syntax Conventions and File Format
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#perspective_1">
+        
+          <li class="md-nav__item">
+  <a href="#perspective_1" class="md-nav__link">
     Perspective
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#5-computer-architecture">
+      
+        <li class="md-nav__item">
+  <a href="#5-computer-architecture" class="md-nav__link">
     5. Computer Architecture
   </a>
-<nav aria-label="5. Computer Architecture" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#computer-architecture-fundamentals">
+  
+    <nav class="md-nav" aria-label="5. Computer Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#computer-architecture-fundamentals" class="md-nav__link">
     Computer Architecture Fundamentals
   </a>
-<nav aria-label="Computer Architecture Fundamentals" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-stored-program-concept">
+  
+    <nav class="md-nav" aria-label="Computer Architecture Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-stored-program-concept" class="md-nav__link">
     The Stored Program Concept
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-von-neumann-architecture">
+        
+          <li class="md-nav__item">
+  <a href="#the-von-neumann-architecture" class="md-nav__link">
     The von Neumann Architecture
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#memory">
+        
+          <li class="md-nav__item">
+  <a href="#memory" class="md-nav__link">
     Memory
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cpu">
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
     CPU
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#registers_1">
+        
+          <li class="md-nav__item">
+  <a href="#registers_1" class="md-nav__link">
     Registers
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#io">
+        
+          <li class="md-nav__item">
+  <a href="#io" class="md-nav__link">
     I/O
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hack-hardware-platform-specification">
+        
+          <li class="md-nav__item">
+  <a href="#hack-hardware-platform-specification" class="md-nav__link">
     Hack Hardware Platform: Specification
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cpu_1">
+        
+          <li class="md-nav__item">
+  <a href="#cpu_1" class="md-nav__link">
     CPU
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#6-assembler">
+      
+        <li class="md-nav__item">
+  <a href="#6-assembler" class="md-nav__link">
     6. Assembler
   </a>
-<nav aria-label="6. Assembler" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#symbol-resolution">
+  
+    <nav class="md-nav" aria-label="6. Assembler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#symbol-resolution" class="md-nav__link">
     Symbol Resolution
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#assembler">
+        
+          <li class="md-nav__item">
+  <a href="#assembler" class="md-nav__link">
     Assembler
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#7-virtual-machine-i-stack-arithmetic">
+      
+        <li class="md-nav__item">
+  <a href="#7-virtual-machine-i-stack-arithmetic" class="md-nav__link">
     7. Virtual Machine I: Stack Arithmetic
   </a>
-<nav aria-label="7. Virtual Machine I: Stack Arithmetic" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#virtual-machine-paradigm">
+  
+    <nav class="md-nav" aria-label="7. Virtual Machine I: Stack Arithmetic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine-paradigm" class="md-nav__link">
     Virtual Machine Paradigm
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#stack-macine-model">
+        
+          <li class="md-nav__item">
+  <a href="#stack-macine-model" class="md-nav__link">
     Stack Macine Model
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#8-virtual-machine-ii-program-control">
+      
+        <li class="md-nav__item">
+  <a href="#8-virtual-machine-ii-program-control" class="md-nav__link">
     8. Virtual Machine II: Program Control
   </a>
-<nav aria-label="8. Virtual Machine II: Program Control" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#program-flow">
+  
+    <nav class="md-nav" aria-label="8. Virtual Machine II: Program Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-flow" class="md-nav__link">
     Program Flow
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#9-high-level-language">
+      
+        <li class="md-nav__item">
+  <a href="#9-high-level-language" class="md-nav__link">
     9. High-Level Language
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#10-compiler-i-syntax-analysis">
+      
+        <li class="md-nav__item">
+  <a href="#10-compiler-i-syntax-analysis" class="md-nav__link">
     10. Compiler I: Syntax Analysis
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#11-compiler-ii-code-generation">
+      
+        <li class="md-nav__item">
+  <a href="#11-compiler-ii-code-generation" class="md-nav__link">
     11. Compiler II: Code Generation
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#12-operating-system">
+      
+        <li class="md-nav__item">
+  <a href="#12-operating-system" class="md-nav__link">
     12. Operating System
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#13-postscript">
+      
+        <li class="md-nav__item">
+  <a href="#13-postscript" class="md-nav__link">
     13. Postscript
   </a>
+  
 </li>
-</ul>
+      
+    </ul>
+  
 </nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>Nand to Tetris</h1>
-<p>이 책은 H 뉴스에서 사람들이 가장 가치있게 여기는 책 중 하나로 뽑혔다. 링크는..</p>
-<p>이 책이 다루는 내용은 다음과 같다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111190384-5dfb4a80-85fa-11eb-999a-26a14fc22e25.png"/></p>
-<p>컴퓨팅 시스템이 설계되는 추상적 계층은 다음과 같다. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111191133-188b4d00-85fb-11eb-978b-6cb5f79eb81b.png"/></p>
-<p>이 책을 통하여 어떻게 컴퓨터가 작동하는지, 어떻게 복잡한 문제를 작은 모듈로 나누어 관리할 수 있는지, 어떻게 대규모 하드웨어와 소프트웨어를 개발할 수 있는지 배우게 될 것이다. </p>
-<p>프로그래밍을 배울 때 보통 "Hello Wolrd" 를 출력하는 것을 배웠을 것이다. 하지만 그것이 실제로 어떻게 작동하는지 알아보자. 먼저 알아야 할 것은 프로그램이란 텍스트 파일에 저장된 무의미한 기호들의 모임이라는 것이다. 그러므로 이것을 파싱하고 문법을 해석하고 컴퓨터가 이해할 수 있는 저수준 언어로 재해석해야 한다. 이 과정이 컴파일이다. </p>
-<p>그러한 저수준 언어가 기계어인데 기계어는 하드웨어 구조, 즉 레지스터, 메모리 유닛, ALU 같은 것들에 의하여 다루어진다. 또 이 모든 하드웨어는 논리 게이트의 모임으로 구성된다. 또한 이 논리 게이트는 Nand 와 Nor 게이트로 구성가능하다. 물론 이 논리 게이트들은 트랜지스터로 구현되는 몇몇의 스위칭 기기로 구성되지만, 이 영역부터는 컴퓨터가 아니라 물리학이므로 이곳까지 다루지는 않을 것이다. </p>
-<p>이제 컴퓨터의 끝자락 속에 살았던 여러분에게 컴퓨터의 뿌리부터 이해시켜줄텐데 그것을 컴퓨터를 밑바닥부터 만들어봄으로써 성취시켜줄 것이다.</p>
-<p>이때 중요한 것은 추상화이다. 우리는 컴퓨터를 만들 때 컴퓨터를 이루는 계층을 추상화시켜서 만들게 된다. 이 추상화가 주는 효용은 각각의 계층을 독립적으로 다룰 수 있게 된다는 것이다. 이로써 하드웨어 → 소프트웨어 라는 순서로 컴퓨터를 설계하지 않아도 된다. 임의의 순서로 각각의 계층을 설계할 수 있고 이해할 수 있다. 이로써 우리는 다른 계층을 전혀 걱정하지 않고 독립적으로 우리가 신경쓰고 있는 계층의 설계에만 집중할 수 있게 된다. 하지만 추상적 계층을 잘 분리시켜서 시스템을 설계하는 것은 전적으로 경험 학문이라서, 많은 예시를 봐야 하고 많은 경험을 직접 해보아야 한다. 하지만 독자는 본 책을 읽음으로써 추상 계층을 나누어 시스템을 설계하는 것에 대한 아이디어를 흡수할 수 있다.</p>
-<blockquote>
-<p>실제로 이러한 추상적 계층을 독립적으로 설계하는 것은 매우 중요한 아이디어인 것 같다. WW 는 설계가 많이 종속적. 어쨌든 설계 계층과 모듈이 추상적 계층으로 나뉘어서 독립성이 유지된다면, 그 모듈과 계층만 분리시켜서 따로 다룰 수 있게 되고 테스트도 따로 할 수 있게 된다.</p>
-</blockquote>
-<h2 id="1-boolean-logic">1. Boolean Logic<a class="headerlink" href="#1-boolean-logic" title="Permanent link">¶</a></h2>
-<p>컴퓨터, 스마트폰, 라우터 같은 디지털 기기가 서로 다르게 설계되었지만 본질적으로 모두 논리 게이트에 의하여 만들어졌다. 이 논리 게이트를 물이나 흙이나 나무로도 설계할 수 있지만, 현재로써 가장 효율적인 것이 전자공학으로 논리 게이트를 설계하는 것이므로 논리 게이트의 밑에는 전자 공학 기술이 있다. </p>
-<p>이 장에서는 Nand 게이트만 살펴보고, 다른 게이트를 이것을 기반으로 만든다.</p>
-<p>먼저 Boolean 게이트를 살펴볼 것인데 이것은 Boolean 함수의 물리적 구현체이므로 Boolean 대수에 대하여 가볍게 알아보자. Boolean 대수는 binary 라고도 부르는 Boolean 을 다루는데, 이 값은 true/false 이다. 이것을 1/0 으로도 나타낼 수 있으므로 1/0 을 사용하자.</p>
-<p>Boolean 함수는 binary 입력을 받아서 binary 출력을 낸다. 컴퓨터 하드웨어가 binary 값을 다루기 때문에 Boolean 함수는 하드웨어 설계에서 중요한 역할을 한다. 그러므로 Boolean 함수를 설계하는 것이 하드웨어 설계의 시작이다.</p>
-<h3 id="truth-table-representation">Truth Table Representation<a class="headerlink" href="#truth-table-representation" title="Permanent link">¶</a></h3>
-<p>Boolean 함수의 정의의 시작은 모든 가능한 binary 입력과 그에 대응되는 출력을 다음과 같은 진리표로 나열해보는 것이다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111748694-2f1ff580-88d4-11eb-92f1-971302163aa7.png"/></p>
-<p>Boolean 함수는 위와 같이 입력 벡터 <span class="arithmatex">\((v_1, v_2, \dots, v_n)\)</span> 를 출력 <span class="arithmatex">\(f(v_1, v_2, \dots, v_n)\)</span> 에 대응시키는 함수 </p>
-<div class="arithmatex">\[f: \{0,1\} ^{n} \to \{0,1\}\]</div>
-<p>이다.</p>
-<a href="#050b6d047"><div class="admonition def" id="050b6d047">
-<p>Boolean function : 함수 </p>
-<div class="arithmatex">\[f: \{0,1\} ^{n} \to \{0,1\}\]</div>
-<p>이다.</p>
-</div></a>
-<h3 id="boolean-expressions">Boolean Expressions<a class="headerlink" href="#boolean-expressions" title="Permanent link">¶</a></h3>
-<p>이와 같은 Boolean 함수는 Boolean 연산에 의하여 표현 가능하다. 그것은 And 와 Or 과 Not 인데, 각각 <span class="arithmatex">\(x \cdot y\)</span>, <span class="arithmatex">\(x+y\)</span>, <span class="arithmatex">\(\bar{x}\)</span> 로 표현한다. 이 표현법으로 위의 함수 <span class="arithmatex">\(f\)</span> 는 </p>
-<div class="arithmatex">\[ f(x, y, z) = (x + y) \cdot \bar{z} \]</div>
-<p>로 표현할 수 있게 된다. 이 공식화는 다음과 같은 과정으로 이루어진다. </p>
-<ol>
-<li>
-<p>함숫값이 <span class="arithmatex">\(1\)</span> 인 경우를 따져본다.</p>
-<p><span class="arithmatex">\((0, 1, 0) \mapsto 1\)</span>, <span class="arithmatex">\((1, 0, 0) \mapsto 1\)</span>, <span class="arithmatex">\((1, 1, 0) \mapsto 1\)</span> 일 때 <span class="arithmatex">\(1\)</span> 이므로 각각 <span class="arithmatex">\(\bar{x}y \bar{z}, x \bar{y}\bar{z}, xy \bar{z}\)</span> 로 표현할 수 있다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(1\)</span> 인 경우를 Or 로 묶는다.</p>
-<p>그러면 <span class="arithmatex">\(f(x, y, z) = \bar{x}y \bar{z} + x \bar{y}\bar{z} + xy \bar{z}\)</span> 을 얻는다. </p>
-</li>
-<li>
-<p>최소의 연산만 사용하도록 최적화한다.</p>
-<p><span class="arithmatex">\(f(x, y, z) = \bar{x}y \bar{z} + x \bar{y}\bar{z} + xy \bar{z}\)</span> 의 진리표는 <span class="arithmatex">\(f(x, y, z) = (x + y) \cdot \bar{z}\)</span> 와 같다. 그러므로 최종적으로 함수 <span class="arithmatex">\(f\)</span> 을 </p>
-<div class="arithmatex">\[ f(x, y, z) = (x + y) \cdot \bar{z} \]</div>
-<p>로 정의한다. </p>
-</li>
-</ol>
-<p>이러한 구성을 얻을 수 있는 중요한 결론은 Boolean 함수가 아무리 복잡하든지 And, Or, Not 으로 표현가능하다는 것이다. </p>
-<p>함수 <span class="arithmatex">\(f: \{0,1\} ^{2} \to \{0, 1\}\)</span> 중에서 대표적인 것들이 있는데, 다음과 같다. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111748740-40690200-88d4-11eb-8e31-43260b30df7f.png"/></p>
-<div class="arithmatex">\[ p \bar{\cdot } q , p \bar{+} q\]</div>
-<p>"If x then y" 함수는 <span class="arithmatex">\(x \to y\)</span> 를 뜻한다. 이중에서 Nand 함수(그리고 Nor 함수)는 이론적으로 재미있는 성질을 갖는데, 그것은 And, Or, Not 을 Nand 로부터 구성할 수 있다는 것이다. 가령 <span class="arithmatex">\(x + y = (x \bar{\cdot} y) \bar{\cdot} (y \bar{\cdot} y)\)</span> 이다. 모든 Boolean 함수가 And, Or, Not 으로 구성될 수 있으므로 이는 곧 Nand 만으로 모든 Boolean 함수를 구성할 수 있다는 말이다. </p>
-<h3 id="logic-gate">Logic Gate<a class="headerlink" href="#logic-gate" title="Permanent link">¶</a></h3>
-<p>게이트는 Boolean 함수의 물리적 구현체이다. Boolean 함수가 <span class="arithmatex">\(f: \{0,1\} ^{n} \to \{0,1\} ^{m}\)</span> 로 정의되었다면 게이트는 <span class="arithmatex">\(n\)</span> 개의 입력 핀과 <span class="arithmatex">\(m\)</span> 개의 출력 핀으로 구현된다. </p>
-<p>이것을 어떻게 구현할지는 현재로써 전자공학이 최선이지만 연구자들은 자기장으로, 광학적으로, 생물학적으로, 수력학적으로, 공기 등으로 구현하면 더 효율적인지 연구하고 있다. 한편, 이 말은 컴퓨터 공학이 그 물리적 기반에 대하여 전혀 걱정할 필요가 없다는 것을 의미한다. 컴퓨터 공학자들은 그 물리적 계층이 구현한 Boolean 대수와 논리 게이트의 추상 계층만 생각하면 된다. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111748798-54146880-88d4-11eb-8835-e471bb5c2cef.png"/></p>
-<p>그러므로 본질과 원류를 추적하는 공부는 좋지만 컴퓨터 공학에서는 위와 같은 논리 게이트의 내부를 블랙박스로 표현하고 그 내부는 물리학자와 전자공학자들이 잘 설계했다고 믿는 것이다. 그러므로 이것이 컴퓨터 공학의 밑바닥이다. 더 이상 내려가면 컴퓨터 공학의 영역이 아니다.</p>
-<h3 id="primitive-and-composite-gates">Primitive and Composite Gates<a class="headerlink" href="#primitive-and-composite-gates" title="Permanent link">¶</a></h3>
-<p>모든 논리 게이트가 And, Or, Not 으로 구성되지만, 이것을 합성하여 좀 더 복잡한 다변수 함수를 만들어낼 수 있다. 가령 <span class="arithmatex">\(\text{And} : \{0, 1\} ^{2} \to \{0, 1\}\)</span> 이지만 </p>
-<div class="arithmatex">\[ \text{And} (a, b, c) = \text{And} (\text{And} (a, b), c) = (a \cdot b) \cdot c = a \cdot b \cdot c \]</div>
-<p>와 같은 합성함수를 만들어낼 수 있다. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>이것은 결합법칙이 성립하기 때문에 가능하다. 그렇다면 컴퓨터 공학이 성립하게 된 대수구조를 규명할 수 있다. 마그마? 반군? 모노이드? 군? 환? 가환환? 체? 순서체? 완비순서체? 완비순서체는 실수체니까.. 컴퓨터는 이산적이니까 아닐 것 같다. 컴퓨터가 세워져있는 대수구조는 뭘까?</p>
-<p>컴퓨터의 대수구조를 정의하면, 컴퓨터 위에 설계된 모든 것을 대수구조를 기반으로 형식화할 수 있다. 이것이 이루어지면 좋은 점은, 컴퓨터의 모든 것을 통일된 하나의 추상적 표현으로 표현가능하다는 것이다. </p>
-<p>그렇게 되면 <a href="../../vul/memo">취약점에 관하여</a> 에서 했던 이야기를 좀 더 현실화시킬 수 있다.</p>
-<p>어쩌면 추상대수학 보다는 카테고리 이론으로 좀 더 손쉽게 컴퓨터를 추상적 표현으로 형식화시킬 수도 있을 것 같다.</p>
-</div>
-<p>한 가지 예시만 더 들면 Xor 게이트는 다음과 같은 합성함수로 정의된다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \text{Xor} (a, b) &amp;= \text{Or} (\text{And} (a, \text{Not}(b)), \text{And} (\text{Not} (a), b))\\ &amp; = (a \cdot \bar{b}) + (\bar{a} \cdot b) \end{split}\end{equation} \tag*{} \]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>그런데 이 논리 게이트를 통하여 튜링기계의 universal machine 의 모든 부품이 구현 가능했던 것이지.</p>
-</div>
-<h3 id="hardware-description-language-hdl">Hardware Description Language (HDL)<a class="headerlink" href="#hardware-description-language-hdl" title="Permanent link">¶</a></h3>
-<p>실제로 하드웨어를 설계할 때에는 위에서 했던 것처럼 수작업을 하지 않고 HDL 이라는 언어를 사용한다. 이 언어로 프로그램을 짜고 테스트를 해보는 것이지.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111748900-68586580-88d4-11eb-908a-ca95244d1dbe.png"/></p>
-<p>위와 같이 HDL 을 사용하여 Xor 게이트를 설계하고 테스트하는 것이다.</p>
-<p>HDL 이 하드웨어 구현 언어이기 때문에 HDL 으로 프로그램을 짜고 디버깅하는 것은 소프트웨어에서 하던 그것과 매우 유사하다. 다만 차이점은 컴파일러를 사용하지 않고 하드웨어 시뮬레이터를 사용하여 디버깅하게 된다는 것이다. </p>
-<blockquote>
-<p>p 34</p>
-</blockquote>
-<h3 id="multi-bit-versions-of-basic-gates">Multi-Bit Versions of Basic Gates<a class="headerlink" href="#multi-bit-versions-of-basic-gates" title="Permanent link">¶</a></h3>
-<p>컴퓨터 하드웨어는 bus 라고 부르는 multi-bit array 를 연산하도록 설계된다. 가령 32비트 컴퓨터는 두 개의 32비트 버스 위에서 설계된 And 함수를 동작시킬 수 있다. 32비트 시스템에서는 게이트들이 32비트 입력 버스와 32비스 출력 버스를 갖도록 설계된다.</p>
-<a href="#24022a1ff"><div class="admonition def" id="24022a1ff">
-<p>Multi-Bit Boolean 함수 : <span class="arithmatex">\(n\)</span>비트 시스템에서 <span class="arithmatex">\(m\)</span> 개의 입력을 Boolean 함수는 다음과 같이 정의된다.</p>
-<div class="arithmatex">\[ f: \{0, 1\} ^{nm} \to \{0, 1\} ^{n} \]</div>
-</div></a>
-<a href="#d39a952e6"><div class="admonition def" id="d39a952e6">
-<p>Multi-Bit Not : <span class="arithmatex">\(n\)</span>비트 시스템의 <span class="arithmatex">\(\text{Not}\)</span> 게이트는 함수 </p>
-<div class="arithmatex">\[ f: \{0, 1\} ^{n} \to \{0, 1\} ^{n}, (x_1, \dots, x _{n}) \mapsto (\lnot x_1, \dots, \lnot x _{n})\]</div>
-<p>이다.</p>
-</div></a>
-<a href="#4c51901be"><div class="admonition def" id="4c51901be">
-<p>Multi-Bit And : <span class="arithmatex">\(n\)</span>비트 시스템의 <span class="arithmatex">\(\text{And}\)</span> 게이트는 입력으로 a[n], b[n] 을 받아서 out[n] = And(a[n], b[n]) 의 출력을 낸다. 즉, 다음과 같이 정의된 함수이다.</p>
-<div class="arithmatex">\[ f: \{0, 1\} ^{n} \times \{0, 1\} ^{n} \to \{0, 1\} ^{n}, (x_1, x_2, \dots, x_n, x _{n+1}, \dots, x _{2n}) \to (x_1 \land x _{n+1}, \dots, x_n \land x _{2n}) \]</div>
-</div></a>
-<a href="#3072bdd8b"><div class="admonition def" id="3072bdd8b">
-<p>Multi-Bit Or : <span class="arithmatex">\(n\)</span>비트 시스템의 <span class="arithmatex">\(\text{Or}\)</span> 게이트는 입력으로 a[n], b[n] 을 받아서 out[n] = Or(a[n], b[n]) 의 출력을 낸다. 즉, 다음과 같이 정의된 함수이다.</p>
-<div class="arithmatex">\[ f: \{0, 1\} ^{n} \times \{0, 1\} ^{n} \to \{0, 1\} ^{n}, (x_1, x_2, \dots, x_n, x _{n+1}, \dots, x _{2n}) \to (x_1 \lor x _{n+1}, \dots, x_n \lor x _{2n}) \]</div>
-</div></a>
-<a href="#e401c7b3d"><div class="admonition def" id="e401c7b3d">
-<p>Multi-Bit Mux : <span class="arithmatex">\(n\)</span>비트 시스템의 <span class="arithmatex">\(\text{Mux}\)</span> 게이트는 입력으로 a[n], b[n], sel 을 받아서 sel=0 이면 출력 out[n]=a[n] 을 내고 sel=1 이면 출력 out[n]=b[n] 을 낸다. 즉, 다음과 같이 정의된 함수 <span class="arithmatex">\(f: \{0, 1\} ^{n} \times \{0, 1\} ^{n} \times \{0, 1\}\)</span> 이다.</p>
-<div class="arithmatex">\[ f(\mathbf{x}_1, \mathbf{x}_2, s) = \begin{cases} \mathbf{x}_1 &amp; s = 0\\ \mathbf{x}_2 &amp; s = 1\\ \end{cases} \]</div>
-</div></a>
-<ul>
-<li>다변수 함수도 소수의 특성을 사용하여 유일한 정수로 대응시켜 일변수 함수로 만들 수 있다.</li>
-</ul>
-<p>다음은 1비트 Mux 의 설계이다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/112252863-25fea200-8ca1-11eb-96a5-73c7b93e2b31.png"/></p>
-<p>다음은 1비트 DMux 의 설계이다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/112252911-3c0c6280-8ca1-11eb-9389-36ed5342ebb0.png"/></p>
-<p>다음은 m-way n-bit Mux 의 설계이다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/112253036-69f1a700-8ca1-11eb-900a-fc36850f5409.png"/></p>
-<p>다음은 m-way n-bit demultiplexor 의 설계이다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/112253206-9b6a7280-8ca1-11eb-9e09-bd0cbfa4efa4.png"/></p>
-<p>2개의 입력을 받는 논리 게이트는 임의의 입력을 받도록 일반화될 수 있다.</p>
-<a href="#0ba09b396"><div class="admonition def" id="0ba09b396">
-<p><span class="arithmatex">\(n\)</span>-way Or gate : <span class="arithmatex">\(n\)</span>비트 입력 in[0], in[1], ..., in[n-1] 을 받아서 출력 Or(in[0], in[1], ..., in[n-1]) 을 낸다.</p>
-</div></a>
-<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">¶</a></h3>
-<p>수학에서의 공리처럼 기초 게이트들은 그것으로부터 만들어질 수 있는 모든 것의 기반이 된다. 지금은 기초 게이트(공리)로써 Nand 만을 채택한다.</p>
-<p>이 Nand 로 다음과 같은 게이트를 구현할 것이다. 물론 게이트의 구현 방법은 어떤 정리를 증명하는 방법이 유일하지 않듯이 유일하지 않다. 더 간단할수록 좋은 구현(좋은 증명)이다. </p>
-<ul>
-<li>Not, And, Or/Xor, Multiplexor/Demultiplexor, Multi-Bit Not/And/Or, Multi-Bit Multiplextor, Multi-Way Gates</li>
-</ul>
-<p>물론 우리가 공리로 Nand 를 채택한 것처럼 다른 공리체계를 기반으로 컴퓨터를 설계할 수도 있다. 가령 Nor 게이트만으로도 완전한 컴퓨터를 구성해낼 수 있다. 이것은 기하학에서 다른 공리를 채택하여 기하학 체계의 정리들을 도출해내는 것과 이론적으로 동치이다.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>그러면 우리가 어떤 프로그램을 만들고자 했을 때 그 프로그램을 "증명 대상" 라고 할 수 있겠고 우리가 사용할 수 있는 레고 블럭들을 "공리" 와 "정리" 라고 할 수 있다. 대상을 증명하기 위한 방법이 유일하지는 않지만 가장 단순하고 효율적으로 공리와 정리로 대상을 증명하는 것이 좋겠지.</p>
-<p>그리고 증명된 대상(우리가 만든 프로그램)은 또 하나의 정리가 되므로, 이 정리를 나중에 다시 사용할 수 있도록 형식화하는 것도 중요할테고.</p>
-<p>한편 이로써 애초에 컴퓨터 프로그램을 만드는 것은 하드웨어 설계자가 제공하는 공리와 정리들을 사용하는 것임을 알 수 있다. 그런데도 우리는 하드웨어가 제공하는 공리와 정리를 사용하는 것이 아니라 이미 그 위에 많이, 그리고 높이 쌓여있는 잘 마련된 정리를 사용한다. 즉, syscall 을 사용하여 프로그래밍을 하는 것이 아니라 print 함수를 사용하여 프로그래밍을 한다는 말이다. </p>
-<p>이로써 <a href="../../vul/memo">취약점에 관하여</a> 에서 했던 이야기를 좀 더 설득시킬 수 있다. 즉, 컴퓨터는 완전 체계이고, 어떤 프로그램에 정의한 대상이 유일하다고 잘못 가정한 곳이 있다면 그 잘못 가정한 것에 대한 증명, 즉 완전 체계 내에서의 증명 시도 및 증명 가능성을 곧 "취약점" 으로 정의할 수 있고, 그것을 익스플로잇 하는 것을 "해킹" 으로 정의할 수 있다. </p>
-<p>이것은 상당한 효용을 가져다 주는데 섀넌이 정보를 수학으로 형식화했었듯 해킹이나 취약점 같은 게 수학적으로 형식화되기 때문이다. 수학적으로 형식화된 대상은 기계적으로 다룰 수도 있다. 모든 수학적 대상을 완전 체계로 사상시킬 수는 없기 때문에.. 불완전 체계에 속하거나 메타수학에만 존재하는 수학적 대상은 컴퓨터로 표현할 수 없으니까.</p>
-</div>
-<h2 id="2-boolean-arithmetic">2. Boolean Arithmetic<a class="headerlink" href="#2-boolean-arithmetic" title="Permanent link">¶</a></h2>
-<p>이 장에서는 산술 연산을 할 수 있는 논리 설계를 할 것이다. 시작점은 이전 장의 논리 게이트이고, 마무리는 ALU 가 될 것이다. 먼저 바이너리 코드와 Boolean 연산을 살펴보고 덧셈 회로를 만들어볼 것이다. </p>
-<p>바이너리 덧셈은 LSB 부터 시작하여 carry bit 가 발생하면 윗 자리로 넘겨서 MSB 가 더해질 때까지 더한다. 이때 다음과 같이 overflow 가 발생할 수도 있다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111749777-9a1dfc00-88d5-11eb-952e-285264e2ad0a.png"/></p>
-<p>바이너리로 음수를 표현하기 위해서는 양수와 음수를 더해서 <span class="arithmatex">\(0\)</span> 가 나오도록 하기 위하여 2's complement 를 사용한다. 어떤 수 <span class="arithmatex">\(x\)</span> 의 2's complement 는 </p>
-<div class="arithmatex">\[ \bar{x} = \begin{cases} 2 ^{n} - x &amp; x \neq 0\\ 0  &amp; x = 0\\ \end{cases} \]</div>
-<p>으로 정의된다. 가령 <span class="arithmatex">\(4\)</span> 비트 시스템에서 양수와 음수를 다음과 같이 표현한다. 맨 앞의 비트가 MSB 라는 건 모두들 너무 잘 아니까, 이게 signed 형식으로 숫자를 표현한다는 건 자명하겠지요.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111751016-4f04e880-88d7-11eb-8113-1ba20cc18cf9.png"/></p>
-<p>2's complement 로 숫자를 표현하는 것의 특징은 놀랍게도 음수에서 그냥 덧셈을 그대로 적용해도 잘 더해진다는 것이다. 이러한 덧셈을 기반으로 뺄셈은 양수에 음수를 더하는 것으로 쉽게 정의된다. </p>
-<p>이러한 이론적 기반으로 ALU 는 산술 연산과 논리 연산을 모두 지원하도록 설계되어있다. 이제 ALU 를 만들어볼텐데 가장 기본적인 adder 칩부터 만들어보자.</p>
-<h3 id="adders">Adders<a class="headerlink" href="#adders" title="Permanent link">¶</a></h3>
-<p>이제 multi-bit adder 를 만들기 위하여 다음과 같은 adder 를 먼저 설계하자. </p>
-<ul>
-<li>
-<p>Half-adder : 2bits adder </p>
-</li>
-<li>
-<p>Full-adder : 3bits adder </p>
-</li>
-<li>
-<p>Adder(multi-bit adder) : n-bit adder</p>
-</li>
-</ul>
-<p>또 incrementer 라는 특별한 adder 도 설계할 텐데 주어진 숫자에 1 을 더하는 칩이다.</p>
-<p>Half-adder 를 다음과 같이 설계한다. MSB 를 carry 비트라고 표현했다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111752902-968c7400-88d9-11eb-9341-b42a94fd97bc.png"/></p>
-<p>Full-adder 를 다음과 같이 설게한다. Half-adder 에서처럼 덧셈 결과의 LSB 와 carry 비트 두 개만 출력한다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111753335-16b2d980-88da-11eb-9e52-30893799ebd1.png"/></p>
-<p>n 비트 덧셈을 위한 Adder 를 다음과 같이 설계한다. n 은 16, 32, 64 등이 될 수 있다. 이 adder 를 multi-bit adder 라고도 하고 그냥 adder 라고도 한다. 다음 사진으 16 비트 adder 를 표현한다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111753295-0bf84480-88da-11eb-89bc-911ddf46dd85.png"/></p>
-<p>다음은 incrementer 의 설계이다. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111753578-609bbf80-88da-11eb-94c1-ba137ade86d9.png"/></p>
-<h3 id="alu">ALU<a class="headerlink" href="#alu" title="Permanent link">¶</a></h3>
-<p>위에서 소개한 adder 는 상당히 범용적이라 어떤 컴퓨터에서도 사용될 수 있다. 그에 반해 이 섹션에서는 Hack 이라는 컴퓨터 플랫폼에서 사용하는 ALU 를 소개한다. 또 이 ALU 의 설계 원리가 상당히 범용적이라는 것도 설명한다.</p>
-<p>Hack 플랫폼의 ALU 는 함수 16 비트 입력 <span class="arithmatex">\(x, y\)</span> 와 16 비트 출력 <span class="arithmatex">\(o\)</span> 에 대하여</p>
-<div class="arithmatex">\[ o = f_i(x, y) \]</div>
-<p>를 계산한다. 이 함수 <span class="arithmatex">\(f_i\)</span> 는 18 가지 경우의 정해진 함수이며, 산술 연산이나 논리 연산을 수행하게 된다. 함수 선택은 control 비트라고 불리는 6 비트의 입력을 통해 정해진다. 입출력의 상세는 슈도코드로 다음과 같이 정의된다. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111755848-e4ef4200-88dc-11eb-80ee-2007fb43b20c.png"/></p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111755878-ee78aa00-88dc-11eb-8f40-ee2dd28c79fe.png"/></p>
-<p>ALU 는 6 비트의 control 비트로 연산을 정의하는데 6 비트니까 <span class="arithmatex">\(2 ^{6}=64\)</span> 가지의 기능을 표현할 수 있긴하다. 어쨌든 ALU 의 18 가지 기능은 다음과 같다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111760927-9fce0e80-88e2-11eb-9990-05728a38f600.png"/></p>
-<p>가령 12번째 줄에서 <span class="arithmatex">\(x-1\)</span> 을 계산할 때 <span class="arithmatex">\(zx = nx = 0\)</span> 이어서 입력 <span class="arithmatex">\(x\)</span> 가 zero 가 되지도 않고 반전되지도 않는다. <span class="arithmatex">\(zy = ny = 1\)</span> 인데 이로써 입력 <span class="arithmatex">\(y\)</span> 가 zero 가 된 다음 반전된다. 그래서 <span class="arithmatex">\(y\)</span> 은 처음에 <span class="arithmatex">\(000 \dots 00\)</span> 이 되었다가 <span class="arithmatex">\(-1\)</span> 을 뜻하는 <span class="arithmatex">\(111 \dots 11\)</span> 이 된다. 이때 <span class="arithmatex">\(f = 1\)</span> 이므로 산술 덧셈이 연산으로써 선택되어 <span class="arithmatex">\(x+(-1)\)</span> 연산을 하게 된다. 이로써 <span class="arithmatex">\(x-1\)</span> 연산이 수행되는 것이다. </p>
-<h3 id="perspective">Perspective<a class="headerlink" href="#perspective" title="Permanent link">¶</a></h3>
-<p>이렇게 ALU 를 설계해보았었는데 이는 최적화가 전혀 고려되지 않은 설계이긴 한다. 가령 carry 비트를 LSB 에서 MSB 까지 전달하는데 많은 시간이 걸린다. 이는 carry look-ahead 기술이라는 최적화 기술로 해결된다.</p>
-<p>어떤 컴퓨터든 하드웨어와 소프트웨어 플랫폼의 전반적인 기능성은 ALU 와 OS 를 기반으로 한다. 그러므로 얼마나 많은 기능을 ALU 에 넣을지는 비용/성능의 문제에 달려있다. 일반적으로 산술/논리 연산을 많이 구현하면 비용이 더 들지만, 성능은 높아진다. </p>
-<p>이러한 trade-off 가 있는데 우리는 기능을 덜 구현하고 소프트웨어 레벨에서 더 많은 기능을 구현하도록 한 것이다. 가령 우리의 ALU 에는 곱셈이나 나눗셈 floating point 연산이 없다. 우리는 이 기능과 여타 수학적인 기능을 OS 레벨에서 구현해볼 것이다.</p>
-<p>참고로 ALU 의 상세한 설계에 대해서는 대부분의 컴퓨터 구조 전공서적에 자세히 나와있으니 한번 봐라.</p>
-<h2 id="3-sequential-logic">3. Sequential Logic<a class="headerlink" href="#3-sequential-logic" title="Permanent link">¶</a></h2>
-<p>지금까지 만든 Boolean, 산술 칩들은 combinational 하다. combinational 칩은 오직 입력의 조합에 의하여 기능이 결정된다. 이들은 ALU 같은 연산 칩에 중요한 기능을 제공하지만 어떤 상태를 관리할 수는 없다. 이제 메모리를 관리할 수 있는 칩을 만들텐데 이런 것들을 sequential 칩이라고 한다.</p>
-<p>이것의 구현은 동기화, 클럭킹, 피드백 루프 등이 관련된 복잡한 설계가 필요한데, 그것의 기반에는 플립플롭이 있다. 플립플롭으로 binary cell 에서부터 레지스터까지 만들어볼 거야.</p>
-<p>어떤 것을 기억하는 것은 시간 의존적이다. 그러므로 시간의 흐름을 표현할 수 있는 표준적인 수단을 만들어보자.</p>
-<ul>
-<li>
-<p>Clock : 컴퓨터는 교류신호(0-1, low-high, tick-tack, etc.) 를 번갈아 전송하는 oscillator 에 의하여 시간을 구현한다. "tick" 이 시작되고 "tock" 으로 끝나는 하나의 주기를 cycle 이라고 한다. 이 신호가 회로에 의하여 컴퓨터의 모든 sequential 칩으로 전달된다.</p>
-</li>
-<li>
-<p>Filp-Flops : 컴퓨터의 sequential 칩은 filp-flop 을 기반으로 설계된다. flip-flop 은 여러가지 variant 들이 있는데, 우리는 1 비트 입력과 1 비트 출력을 내는 DFF 라고 부르는 data flip-flop 을 살펴볼 것이다. DFF 는 Clock 의 입력을 받아서 시간 기반의 기능 <span class="arithmatex">\(\text{ out }(t) = \text{ in }(t-1)\)</span> 을 구현한다. 이것을 기반으로 컴퓨터가 상태를 관리할 수 있도록 하여 단순한 binary cell 부터 RAM 까지 구현할 수 있다.</p>
-</li>
-<li>
-<p>Register : 레지스터는 어떤 값을 기억하는 기능을 한다. 즉, <span class="arithmatex">\(\text{ out }(t) = \text{ out }(t-1)\)</span> 의 기능을 한다. 반면 DFF 는 오직 이전 입력에 의하여 기능한다. 즉, <span class="arithmatex">\(\text{ out }(t) = \text{ in }(t-1)\)</span> 이다. 레지스터는 다음과 같이 DFF 에서 단순히 출력을 그 입력으로 리다이렉트 시킴으로써 구현될 수 있다. 즉, 단순히 임의의 시간 <span class="arithmatex">\(t\)</span> 에 대하여 시간 <span class="arithmatex">\(t-1\)</span> 의 출력을 다시 출력해준다는 것이다.</p>
-</li>
-</ul>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111954277-30972b00-8b2b-11eb-825d-9aa2253a9494.png"/></p>
-<p>위 그림에서 가운데 설계는 모호하다. 두 입력 중 어느 것을 사용할지 명확하게 지시하지 않기 때문이다. 이 모호함을 multiplexor 하나를 붙여서 해결할 수 있다. 이 Mux 의 select bit 를 load bit 라고 하는데 레지스터의 새로운 값을 저장하고 싶을 때 load bit 를 1 로 두면 되고, 기존의 값을 유지한채 그 안의 값을 가져오고 싶을 때 load bit 를 0 으로 두면 된다.</p>
-<p>이것을 기반으로 다음과 같은 multi-bit 레지스터도 쉽게 구현가능하다. 이 설계의 파라미터는 레지스터의 width 이다. width 는 레지스터가 몇 비트를 저장할 것인지 결정한다. 보통 16, 32, 64 비트가 된다. multi-bit 레지스터 내부의 데이터를 보통 words 라고 부른다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111954864-114ccd80-8b2c-11eb-843a-a2c7acd168b2.png"/></p>
-<ul>
-<li>Memory : multi-bit 레지스터를 한번 구현해놓으면, 임의의 길이의 memory 도 쉽게 구현가능하다. 다음과 같이 레지스터들을 단지 쌓아놓은 것이 RAM 이 되는 것이다. random accses memory 라는 이름은 임의의 위치의 데이터를 위치에 관계없는 동일한 속도로 읽거나 쓸 수 있게끔 구현했다는 말이다.</li>
-</ul>
-<p>이런 개쩌는 구현은 다음과 같이 이루어진다.</p>
-<ol>
-<li>
-<p>n 개의 레지스터로 구현된 RAM 의 각각의 word 에 주소값(0 부터 n-1)을 부여한다. </p>
-</li>
-<li>
-<p>n 레지스터의 배열을 만들뿐 아니라 주소값 j 가 주어지면 주소값 j 를 갖는 레지스터를 선택할 수 있는 논리 게이트 설계를 만든다. 이 주소값은 물리적으로 대응되지 않고, 논리적으로 대응된다. </p>
-</li>
-</ol>
-<p>RAM 은 입력 데이터, 주소값, load bit 라는 3가지 입력을 받는다. load=0 이면 읽기이고 load=1 이면 쓰기이다. RAM 의 설계 파라미터는 width 와 size 이다. width 는 레지스터가 저장할 비트(word)이고, size 는 word 들의 갯수이다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111955228-97691400-8b2c-11eb-8621-687e4138b4ff.png"/></p>
-<ul>
-<li>Counters : 카운터는 매 시간 단위마다 상태값을 증가시키는 sequential 칩이다. 즉, <span class="arithmatex">\(\text{ out }(t) = \text{ out }(t-1) + c\)</span> 의 기능을 한다. <span class="arithmatex">\(c\)</span> 는 보통 1 이다. </li>
-</ul>
-<p>카운터는 컴퓨터에서 중요한 역할을 한다. 가령 program counter 는 다음에 실행할 명령어의 주소값을 저장하는데, 이때 카운터가 사용된다.</p>
-<p>카운터는 adder 와 0 으로 세팅할 수 있는 논리 게이트와 새로운 base 를 세팅할 수 있는 기능과 증가 대신 감소를 할 수 있게 하는 기능으로 설계된다.</p>
-<ul>
-<li>Time Matters : 이 장에서 소개한 모든 칩은 sequential 이고, sequential 은 DFF 를 하나 이상 갖고 있는 칩이다. DFF 는 메모리 유닛에 상태를 유지할 수 있는 기능을 제공하거나, counter 처럼 상태를 조작할 수 있는 기능을 제공한다.</li>
-</ul>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111963878-5fb39980-8b37-11eb-836d-7b0b5df1f72d.png"/></p>
-<p>기술적으로 말하면 이 기능은 위와 같은 피드백 루프를 통하여 이루어진다. 시간 t 에서의 출력은 t-1 에서의 출력에 의존적이다. 이것을 기반으로 sequential 칩은 중요한 능력을 얻는다. 그것은 컴퓨터의 전반적인 구조를 동기화시킬 수 있다는 것이다. </p>
-<p>가령, ALU 에 x+y 연산을 하려 하는데 x 의 데이터는 레지스터에 있고 y 의 데이터는 RAM 에 있다고 하자. 그러면 여러가지 물리적 제한(거리, 저항, 간섭, 노이즈 등등) 때문에 x 와 y 의 데이터가 동일한 시간에 ALU 에 도착할 수 없다. 그러나 ALU 는 시간에 독립적인 combinational 칩이므로, x 와 y 의 데이터가 도착할 때까지 쓰레기값을 출력하게 된다. 하지만 ALU 의 출력이 항상 sequential 칩의 통제를 받기 때문에, 우리는 실제로 ALU 의 출력이 쓰레기값인지 아닌지 걱정한 적이 없다.</p>
-<p>우리가 해야 할 일은 Clock 을 설계할 때 cycle 을 컴퓨터 구조 내에서 어떤 칩에서 다른 칩으로 비트가 이동하는 가장 먼 거리에 대한 시간보다 살짝 더 길게 만드는 것이다. 이로써 우리는 sequential 칩이 그 상태를 cycle 이 다 되어서 업데이트 할 때 ALU 가 받은 입력이 쓰레기 값이 아니라는 보장을 얻을 수 있다. </p>
-<h3 id="specification">Specification<a class="headerlink" href="#specification" title="Permanent link">¶</a></h3>
-<p>이제 다음과 같은 sequential 칩을 설계해보자. </p>
-<ul>
-<li>
-<p>Data-flip-flops (DFFs)</p>
-</li>
-<li>
-<p>Registers (based on DFF)</p>
-</li>
-<li>
-<p>Memory banks (based on registers)</p>
-</li>
-<li>
-<p>Counter 칩 (based on registers)</p>
-</li>
-</ul>
-<p>DFF 게이트는 다음과 같이 비트를 입력받아서 비트를 출력한다. Nand 게이트처럼 DFF 게이트는 컴퓨터의 가장 맨 밑바닥에 존재하여 레지스터, 메모리, 카운터의 기반이된다. 모든 DFF 는 하나의 Clock 과 연결된다. Clock cycle 이 시작될 때 DFF 의 모든 출력은 이전 시간 단위 동안 입력에 커밋된다. 다른 때에는 DFF 가 잠금상태가 되어 입력을 바꾸는 것이 출력에 즉각적인 영향을 미치지 않게 된다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111976095-9b089500-8b44-11eb-834c-1b21419ef754.png"/></p>
-<p>싱글비트 레지스터, 혹은 Bit, 혹은 binary cell 은 1 비트 정보를 저장하도록 다음과 같이 설계된다. load 비트가 1 이면 write 라서 내부 내용이 바뀐 후 출력되고, 0 이면 read 라서 내부 내용이 그냥 출력된다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111978073-defc9980-8b46-11eb-8035-4ee95479dedf.png"/></p>
-<p>멀티비트 레지스터는 다음과 같이 16비트 width 로 설계된다. 물론 현재의 컴퓨터는 보통 64비트 레지스터이다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111978133-ef147900-8b46-11eb-9403-c3f09452c50b.png"/></p>
-<p>RAM 은 레지스터의 배열이다. w-비트 레지스터가 n 개의 배열로 쌓인 것이다. 우리는 다음과 같은 16비트 width 를 갖는 RAM 을 만들어 볼 것이다. RAM 의 Read 와 Write 기능은 다음과 같다.</p>
-<ul>
-<li>
-<p>Read : m 번째 레지스터의 값을 읽고 싶다면, address 에 m 이라고 입력하면 된다. 그러면 출력이 곧바로 나오는데 이는 combinational 기능이라 Clock 에 독립적이다.</p>
-</li>
-<li>
-<p>Write : m 번째 레지스터에 값을 쓰고 싶을 때, address 에 m 이라고 입력하고 데이터 d 를 in 에 입력한다. Write 를 사용하려면 load 비트가 활성화되어 있어야 한다. 다음 Clock cycle 부터 해당 레지스터는 새로운 값 d 를 갖게 된다.</p>
-</li>
-</ul>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/111978605-7104a200-8b47-11eb-98d8-58db68d661cd.png"/></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Meltdown 은 소프트웨어 설계가 모순적으로 되었을 때 발생하는 취약점만이 취약점이 아니라 하드웨어 설계가 모순되었을 때도 취약점이 발생한다는 것을 말해준다. </p>
-</div>
-<p>Counter 도 Specification 을 정의해두자. 기본적으로 Clock cycle 마다 1 을 증가시킬 수 있어야 하고, 주소값 n 에 있는 명령어로 점프했을 시 카운터의 값을 n 으로 수정한 후 다시 1 씩 증가시켜야 한다. 그러므로 Counter 도 레지스터와 상당히 비슷한 기능을 한다. 다만 Counter 는 reset 과 inc 라는 control 비트를 가질 뿐이다.</p>
-<ul>
-<li>
-<p>inc=1 이라면 매 Clock cycle 마다 증가연산을 하게 되고, out(t)=out(t-1)+1 을 출력한다. </p>
-</li>
-<li>
-<p>reset 비트가 활성화되면 Counter 의 값이 0 이 된다. </p>
-</li>
-<li>
-<p>Counter 의 내용을 d 로 바꾸고 싶다면 in 입력에 d 를 넣고 load 비트를 활성화시킨다.</p>
-</li>
-</ul>
-<p>다음 그림은 컨트롤 비트(reset, load, inc) 가 0 으로 설정되어 있는 상태에서 시작된 Counter 의 예시이다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/112243814-93a2d200-8c91-11eb-9414-988fef4627d4.png"/></p>
-<h3 id="implementation_1">Implementation<a class="headerlink" href="#implementation_1" title="Permanent link">¶</a></h3>
-<ul>
-<li>
-<p>Flip-Flop : DFF 게이트는 논리 게이트로부터 완성될 수 있지만, 이 책은 DFF 를 built-in 으로 다루어 구현하지 않는다.</p>
-</li>
-<li>
-<p>1-Bit Register (Bit) : 1비트 레지스터의 구현은 위 사진에서 자세히 설명되어있다.</p>
-</li>
-<li>
-<p>Register : 멀티비트 레지스터는 1비트 레지스터를 쌓아놓은 것이다. 우리가 할 일은 load 입력을 모든 레지스터에 뿌려주는 것이다.</p>
-</li>
-<li>
-<p>8-Register Memory(RAM8) : 8 개의 레지스터 배열을 쌓아서 만들면 된다. 그리고 address 입력을 받아서 해당 레지스터에 입력 in 와 load 를 전달하면 되고, 해당 레지스터의 out 을 출력하면 된다.</p>
-</li>
-<li>
-<p>n-Register Memory(RAM8) : 임의의 길이의 메모리는 작은 메모리 유닛으로부터 재귀적으로 구성할 수 있다. 가령 아래 그림의 오른쪽 부분과 같이 64-레지스터는 8-레지스터로 재귀적으로 구성할 수 있다. 64-레지스터의 주소값은 6비트로 구성하여 xxxyyy 의 형태를 띈다. MSB 인 xxx 부분은 RAM8 의 칩을 선택하고 LSB 인 yyy 는 RAM8 중 하나의 레지스터를 선택한다.</p>
-</li>
-</ul>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/112251726-21d18500-8c9f-11eb-8254-f12febd4b378.png"/></p>
-<ul>
-<li>Counter : w 비트 카운터는 w 비트 레지스터와 combinational 논리 게이트로 설계된다. combinational 칩은 카운팅과 카운터의 상태를 설정하게 된다.</li>
-</ul>
-<h2 id="4-machine-language">4. Machine Language<a class="headerlink" href="#4-machine-language" title="Permanent link">¶</a></h2>
-<p>컴퓨터는 하드웨어 플랫폼이 어떤 칩으로 설계되었는지 설명할 수 있다는 점에서 constructive 하다. 한편 컴퓨터를 기계어로 설명할 수 있다는 점에서 abstract 하다. 새로운 컴퓨터를 마주했을 때 그것의 기계어를 익히는 것이 컴퓨터와 친해질 수 있는 편리한 방법이다. 이 방법으로써 어떻게 컴퓨터의 프로그램을 유용하게 짤 수 있는지 알 수 있고, 왜 하드웨어가 그렇게 설계되었는지 알 수 있다. 이 챕터와 다음 챕터 Computer Architecture 를 기반으로 범용 컴퓨터를 완성할 것인데, 이는 챕터 1-3 에서의 칩을 기반으로 설계된다.</p>
-<p>기계어는 합의된 형식주의라서, 일련의 기계어 수열로 프로그램을 짤 수 있다. </p>
-<p>고수준 언어의 설계 목표가 일반성과 표현의 강력성이라면, 저수준 기계어의 설계 목표는 주어진 하드웨어 플랫폼에 대한 직접 실행과 완전한 통제이다.</p>
-<p>기계어는 하드웨어와 소프트웨어가 처음으로 만나는 심오한 인터페이스이다. 왜냐하면 기계어는 프로그래머의 추상적 생각이 형식적 기호로 표현되어 하드웨어에서 실행되는 지점이기 때문이다.</p>
-<p>기계어가 하드웨어를 완전히 제어할 수 있도록 설계되었다고 했지만, 하드웨어는 마찬가지로 주어진 기계어를 실행할 수 있도록 설계되었다.</p>
-<h3 id="background">Background<a class="headerlink" href="#background" title="Permanent link">¶</a></h3>
-<h4 id="machines">Machines<a class="headerlink" href="#machines" title="Permanent link">¶</a></h4>
-<a href="#069d45f7d"><div class="admonition def" id="069d45f7d">
-<p>기계어(machine language) : 프로세서와 레지스터들을 사용하여 메모리를 조작할 수 있도록 설계된 합의된 형식주의 언어이다.</p>
-</div></a>
-<ul>
-<li>
-<p>Memory : 메모리는 데이터와 기계어를 저장할 수 있는 연속적인 기억장치 배열이다.</p>
-</li>
-<li>
-<p>Processeor : 프로세서는 Central Processing Unit(CPU) 로써 일련의 기계어를 실행할 수 있는 장치이다. 산술연산이나 논리연산을 할 수 있다.</p>
-</li>
-<li>
-<p>Register : CPU 가 메모리에 접근하려면 시간이 오래걸려서 CPU 가 빠르게 접근할 수 있도록 단일 값을 저장할 수 있는 저장장치이다. 레지스터의 목적은 프로그래머가 메모리 접근 명령어의 사용을 최소화하여 프로그램 실행 속도를 높이도록 하는 것이다.</p>
-</li>
-</ul>
-<h4 id="language">Language<a class="headerlink" href="#language" title="Permanent link">¶</a></h4>
-<p>기계어 프로그램은 16비트 명령어(16자리 이진법 수)의 수열이다. 가령 16 비트 시스템의 어느 한 명령어는 <span class="arithmatex">\(1010001100011001 _{2}\)</span> 와 같이 표현된다. 이러한 16자리 이진법 수가 어떤 의미인지 알기 위하여 하드웨어 플랫폼의 규칙을 이해해야 한다. 가령 이런 명령어는 4비트 필드로 구성되어 있는데, 첫 4비트 필드는 CPU 의 어떤 기능을 지시하고, 나머지 4비트 필드들은 파라미터를 명시하게 된다. 이런 규칙은 전적으로 하드웨어 설계과 기계어 문법에 의해 결정된다.</p>
-<p>한편 이러한 이진법 수가 사람이 알아보기 쉽지 않으므로 일대일 대응되는 기호가 제공된다. 가령 <span class="arithmatex">\(1010\)</span> 이 add 를 나타내고 이후의 4비트 필드들이 R3, R1, R9 레지스터를 나타내는 것이라면 <code>add R3 R1 R9</code> 와 같은 형식문으로 사상되는 것이다. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>이는 전단사 사상이다. 만약 전단사 사상이 아니면 실수인 것이다. 왜냐하면 기호적인 형식문으로 컴파일된 바이너리 이외의 이진수 명령어가 존재한다면, 그것으로 인하여 발생하는 영향을 예측할 수 없기 때문이다. 이런 경우는 전사 사상일 것이다.</p>
-<p>만약 단사 사상이면 아키텍처 메뉴얼을 잘못 작성한 것이 될 것이다. 그렇게 심각한 문제는 아니다.</p>
-</div>
-<p>우리는 이진수 명령어가 아니라 기호적인 형식문으로 기계어 프로그램을 작성한다. 왜냐하면 이진수들로 코딩을 하기에는 너무 어렵기 때문이다. 그러나 형식문과 실제 기계어 코드에는 전단사 사상이 있으므로 형식문으로 프로그램을 짜두면, 그것을 이진수 기계어 코드로 일대일 대응시킬 수 있다. 이 이진수 기계어 코드가 비로소 CPU 에 입력되어야 하기 때문이다. </p>
-<p>형식문으로 된 그러한 프로그램을 assembly language 라고 하고, 그것을 기계어로 전단사시키는 사상을 assembler 라고 한다.</p>
-<p>컴퓨터들은 CPU 기능, 레지스터 개수와 타입, 어셈블리 형식문의 문법이 다르지만, 다음과 같이 모든 기계어가 공통적으로 제공하는 명령어들이 존재한다.</p>
-<h4 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">¶</a></h4>
-<ul>
-<li>
-<p>산술/논리 연산 : 모든 컴퓨터는 덧셈과 뺄셈같은 기본적인 산술 연산을 지원하고, bit-wise negation 이나 bit shift 같은 기본적인 Boolean 연산을 지원한다.</p>
-</li>
-<li>
-<p>Memory Access : 모든 메모리 접근 명령어는 두 종류이다. 하나는, 레지스터와 메모리의 데이터에 작동하는 산술연산과 논리연산이다. 두번째는, 레지스터와 메모리 사이의 데이터를 이동하도록 하는 load, store 명령이다.</p>
-<p>메모리 접근 명령어를 사용하기 위해서는 주소값을 표현해야 하는데, 컴퓨터에 따라 주소값 표현 방식이 달라진다. 그러나 모든 컴퓨터는 다음과 같은 주소 표현식을 지원한다. </p>
-<ul>
-<li>
-<p>Direct addressing : 해당 주소값의 절대값으로 표현하는 것이다. 가령 <code>load r1, 67</code> 은 Memory[67] 의 값을 r1 에 옮기겠다는 것이다.</p>
-</li>
-<li>
-<p>Immediate addressing : 해당 값을 바로 표현하는 것이다. 가령 <code>loadi r1, 67</code> 은 Memory[67] 가 아닌 67 을 그대로 r1 에 옮기겠다는 것이다.</p>
-</li>
-<li>
-<p>Indirect addressing : 해당 주소값을 상대값으로 표현하는 것이다. 이것이 필요한 경우는 어떤 주소값이 하드코딩되어 있지 않은 경우이다. 가령 <code>x=foo[j]</code> 라는 코드는 <code>foo</code> 라는 배열의 <code>j</code> 번째 word 단위 이후의 데이터를 가져와서 <code>x</code> 에 저장하겠다는 것인데 <code>foo</code> 의 주소값이 어디에 할당될지 아직 알 수 있기 때문에 <code>foo</code> 의 베이스 주소값에 <code>j</code> 만큼만 더하는 것이다. 그러면 이후에 프로그램이 실제로 실행될 때 <code>foo</code> 의 실제 주소값이 구체화될 것이다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Flow of Control : 선형적인 흐름으로 끝나지 않는 프로그램의 경우 여러가지 실행흐름이 생기고, 반복문도 생긴다. 이때 필요한 것이 conditional execution 이다. 이는 술어 <span class="arithmatex">\(\phi (...)\)</span> 를 만족할 때와 만족하지 않을 때 어떤 함수를 계산할 것인지 정하는 것과 같다. 이를 위하여 기계어는 jump 명령어를 제공하고, conditional 과 unconditional 명령어를 제공한다. 가령 unconditional jump 는 무조건 분기이고, conditional jump 는 조건 분기이다.</p>
-<p>Flow of Control 기계어는 다음과 같이 High-level language 로 사상된다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/112981072-a3408000-9195-11eb-8765-c3a66468043a.png"/></p>
-</li>
-</ul>
-<h3 id="hack-machine-language-specification">Hack Machine Language Specification<a class="headerlink" href="#hack-machine-language-specification" title="Permanent link">¶</a></h3>
-<p>Hack 아키텍처는 다음 조건을 만족한다. </p>
-<ul>
-<li>
-<p>폰 노이만 구조이다. </p>
-</li>
-<li>
-<p>16비트 시스템이다.</p>
-</li>
-<li>
-<p>instruction 메모리, data 메모리의 두 가지로 구분된 메모리 모듈을 갖는다.</p>
-</li>
-<li>
-<p>screen, keyboard 의 두 I/O 디바이스를 갖는다.</p>
-</li>
-</ul>
-<h4 id="memory-address-spaces">Memory Address Spaces<a class="headerlink" href="#memory-address-spaces" title="Permanent link">¶</a></h4>
-<p>Hack 시스템은 instruction 메모리와 data 메모리로 구분되어 있다. 두 메모리는 16비트 wide 에 15비트 주소 공간을 갖는다. 즉 16bit word 의 최대 32K 메모리 주소가 존재할 수 있다. </p>
-<p>instruction 메모리는 read-only ROM 메모리와 같다. 즉, 프로그램을 로드하는 것은 ROM 을 갈아치우는 것을 뜻한다. 따라서 Hack 플랫폼은 기계어 프로그램을 instruction 메모리로 로드하는 기능을 제공해야 한다.</p>
-<h4 id="registers">Registers<a class="headerlink" href="#registers" title="Permanent link">¶</a></h4>
-<p>Hack 시스템은 16비트 레지스터 D, A 를 갖는다. 이 레지스터는 A=D-1 이나 D=!A 와 같이 산술연산과 논리연산을 수행할 때 사용된다. D 가 데이터를 저장할 때 사용되는데, A 는 데이터와 주소값 둘 다 저장하는데 사용된다. 즉, 상황에 따라 A 의 값이 주소나 데이터로 해석될 수 있다.</p>
-<p>Hack instruction 이 16비트인데, 주소값은 15비트를 사용하므로 두 값을 하나의 instruction 에 표현하기란 불가능하다. 따라서 메모리 주소를 뜻하는 라벨 M 을 사용하는데, 이 M 은 항상 A 의 값을 가르킨다. 가령 D=Memory[516]-1 의 instruction 을 표현하기 위하여 516 을 A 에 저장하고 D=M-1 와 같이 표현한다. </p>
-<p>마찬가지로 jump 명령어를 사용할 때에도 instruction 에서 주소값을 직접 표현하지 않고, A 의 값을 참조한다. 가령 <code>goto 35</code> 를 위하여 먼저 A 에 35 를 저장하는 명령어를 사용하고, <code>goto</code> 명령어를 사용한다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/113295408-20edc280-9333-11eb-8066-b98ee8814140.png"/></p>
-<p>위의 예시는 1 부터 100 까지 더하는 예시이다. 보는 것과 같이 Hack 기계어는 원하는 주소값을 선택한 후, 원하는 명령어를 실행하는 식으로 기능하다. 전자의 address instruction 을 A-instruction 이라 하고 compute instruction 을 C-instruction 이라 한다. </p>
-<p>이때 <code>@value</code> 라는 특이한 문법이 있는데 <code>value</code> 는 어떤 값이나 값을 나타내는 기호가 될 수 있다. 이 명령어는 특정한 값을 A 레지스터에 저장한다. 가령 <code>sum</code> 이 메모리 주소 17 을 나타낸다면 <code>@17</code> 과 <code>@sum</code> 둘 다 <code>A</code> 에 17 을 저장한다는 뜻이다.</p>
-<h4 id="a-instruction">A-instruction<a class="headerlink" href="#a-instruction" title="Permanent link">¶</a></h4>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/113296711-ca818380-9334-11eb-8725-843c1f8ea0cc.png"/></p>
-<p>A-instruction 이란 <code>@value</code> 이다. <code>value</code> 는 음이 아닌 정수이다. A-instruction 은 위와 같이 레지스터 A 를 15 비트 값으로 초기화한다. 가령 <code>@5</code> 명령어는 A 를 <code>0000000000000101</code> 로 초기화한다.</p>
-<h4 id="c-instruction">C-instruction<a class="headerlink" href="#c-instruction" title="Permanent link">¶</a></h4>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/113297028-1cc2a480-9335-11eb-8dbf-bd41b45f14b6.png"/></p>
-<p>C-instruction 은 1) 무엇을 계산할지, 2) 계산된 값을 어디에 저장할지, 3) 그 이후에 뭘할지 라는 세 가지 질문으로 기계어 코드가 구성된다. 위와 같이 MSB 의 1 은 C-instruction 임을 의미한다. 그 다음 2 비트는 사용되지 않는다. </p>
-<p>C-instruction 의 문법은 <code>dest = comp;jump</code> 이다. <code>comp</code> 는 ALU 에게 무엇을 계산할지 지정하고, <code>dest</code> 는 계산된 ALU 출력을 어디에 저장할지 지정하고, <code>jump</code> 는 다음에 실행할 명령에 대한 점프 조건을 명시한다. 각각의 필드를 자세히 살펴보자. </p>
-<ul>
-<li>
-<p>The Computation Specification : Hack ALU 는 D, A, M 레지스터를 계산하도록 설계되었다. M 은 Memory[A] 를 뜻한다. <code>comp</code> 필드는 7 비트로 구성되었는데, 이로써 128 개의 기능을 구별할 수 있다. 하지만 다음과 같은 28 개의 기능만 사용한다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/113298696-0e758800-9337-11eb-9645-ff40f4ed334e.png"/></p>
-</li>
-<li>
-<p>The Destination Specification : C-instruction 으로 계산된 값은 <code>dest</code> 필드의 3 비트가 지정하는 곳에 저장된다. 첫번째, 두번째 d 비트는 A 레지스터에 저장할지, D 레지스터에 저장할지 구별한다. 세번째 d 비트는 Memory[A] 와 같은 M 에 저장할지 결정한다. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/113299118-7e840e00-9337-11eb-8e7c-bb254ab110ca.png"/></p>
-<p>가령 Memory[7] 의 값을 증가시키고 D 레지스터에 저장하려면 다음과 같은 기계어 코드를 입력하면 된다.</p>
-<p>0000 0000 0000 0111 // @7</p>
-<p>1111 1101 1101 1000 // MD=M+1</p>
-</li>
-<li>
-<p>The Jump Specification : <code>jump</code> 필드는 이후에 무엇을 할지 지정한다. 두 가지 가능성이 있는데 다음 명령어를 실행하거나, 다른 위치에 있는 명령어를 실행하는 것이다. 후자의 경우 A 레지스터가 위치 주소값을 지니고 있다고 가정한다. </p>
-<p><code>jump</code> 필드의 세 비트는 다음과 같이 ALU 출력이 특정 조건을 만족할 때 점프를 할지 결정한다. <code>out</code> 이 ALU 의 출력을 뜻하고, j1 이 활성화되면 양수 조건이 추가되고 j2 가 활성화되면 <span class="arithmatex">\(= 0\)</span> 조건이 추가되고 j3 가 활성화되면 음수 조건이 추가된다. 활성화된 조건 중 ALU 의 출력인 <code>out</code> 이 하나만 만족해도 점프를 하게 된다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/114166916-48fba800-9969-11eb-8ea5-352bfe6e6998.png"/></p>
-<p>마지막 <code>JMP</code> 는 무조건 분기를 뜻한다.</p>
-</li>
-</ul>
-<h4 id="symbols">Symbols<a class="headerlink" href="#symbols" title="Permanent link">¶</a></h4>
-<p>어셈블리 명령어는 상수나 기호(Symbols)를 사용하여 메모리 주소를 표현할 수 있다. 기호는 다음과 같은 3가지 방법으로 표현된다. </p>
-<ol>
-<li>
-<p>Predefined symbols: RAM 주소의 특별한 부분집합은 다음과 같은 Predefined symbols 로 표현된다. </p>
-<ul>
-<li>
-<p>Virtual registers: 어셈블리 프로그래밍을 단순화하기 위하여 <code>R0</code> 부터 <code>R15</code> 는 각각 RAM 주소의 0 부터 15 를 표현하기 위해 사용된다.</p>
-</li>
-<li>
-<p>Predefined pointers: <code>SP, LCL, ARG, THIS, THAT</code> 은 각각 RAM 주소의 <code>0</code> 부터 <code>5</code> 을 표현한다. 가령 주소 2 는 <code>R2</code> 로도 지칭할 수 있고 <code>ARG</code> 로도 지칭할 수 있다.</p>
-</li>
-<li>
-<p>I/O pointers: <code>SCREEN, KBD</code> 는 각각 RAM 주소의 16384(0x4000) 과 24576(0x6000) 을 지칭한다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Label symbols: <code>goto</code> 명령의 label 목적지를 표현하기 위한 사용자정의 기호이다. 이 기호는 <code>Xxx</code> 로 정의된다.</p>
-</li>
-<li>
-<p>Variable symbols: <code>Xxx</code> 로 정의된 사용자정의 기호는 variable 로 여겨지며 어셈블러가 RAM 주소 16(0x0010) 로 시작되는 주소값을 부여한다.</p>
-</li>
-</ol>
-<h4 id="inputoutput-handling">Input/Output Handling<a class="headerlink" href="#inputoutput-handling" title="Permanent link">¶</a></h4>
-<p>Hack 플랫폼은 screen 과 keyboard 에 연결된다. 이 두 IO 장비는 memory map 을 통하여 컴퓨터와 상호작용한다. 가령 스크린에 픽셀을 그리기 위하여 스크린과 연관된 메모리에 바이너리 값을 써야한다는 것이다. 또 키보드의 입력을 받는 것은 키보드와 연관된 메모리의 값을 읽는 것이다. IO 장비와 연관된 메모리 맵은 refresh loop 에 의하여 동기화된다.</p>
-<ul>
-<li>
-<p>Screen: Hack 컴퓨터는 512 픽셀을 갖는 256 행으로 구성되고 각 픽셀은 검정이나 흰색을 가진다. 스크린의 내용은 8K 메모리 맵으로 이루어지고, 이 맵은 RAM 주소 16384(0x4000) 에서 시작한다. 물리적 스크린의 각 행은 왼쪽 위에서부터 시작하고 이는 32개의 16비트 word 들로 표현된다. </p>
-<p>즉, 한 행이 512 픽셀로 구성되었지만, 이것이 16비트 word 의 32개 블록으로 구성되었으므로 <span class="arithmatex">\(r\)</span> 행을 선택하기 위하여 <span class="arithmatex">\(16384 + r \cdot 32\)</span> 의 주소를 택한다. 그리고 512 픽셀의 열을 택하기 위하여 32개의 블록 중 <span class="arithmatex">\(c/16\)</span> 을 더하여 해당 블록을 택한다. 따라서 <span class="arithmatex">\(16384 + r \cdot 32 + c / 16\)</span> 으로 16비트 블록을 택할 수 있다. 이 블록 중에서 16비트 중 한 픽셀을 읽거나 쓰기 위하여 <span class="arithmatex">\(c\%16\)</span> 비트를 택하면 된다.</p>
-<p>따라서 r 행의 c 열은 <span class="arithmatex">\(16384+r \cdot 32 + c/16\)</span> 주소의 <span class="arithmatex">\(c\%16\)</span> 비트로 매핑된다. 스크린에 흑백을 쓰거나 읽기 위하여 이 메모리에 비트를 다음과 같이 쓰면된다. 1 을 쓰면 흑이고 0 을 쓰면 백이다.</p>
-<div class="highlight"><pre><span></span><code>@SCREEN
-M=1
-</code></pre></div>
-<p>예를 들어서 0 행의 400 열을 읽거나 쓰기 위하여 <span class="arithmatex">\(16384 + 0 \cdot 32 + 400 / 16 = 16384 + 0 + 25 = 16409\)</span> 의 블록을 택하고, 이 블록은 16비트로 이루어져있으므로 이 블록 중에서 <span class="arithmatex">\(400 \% 16 = 0\)</span> 번째 픽셀이 비로소 0 행 400 열의 픽셀이 된다.</p>
-</li>
-<li>
-<p>Keyboard: Hack 컴퓨터의 키보드는 RAM 의 24576(0x6000) 의 한 word 에 매핑이된다. 키보드의 키를 누르면 이것은 16 비트 ascii 코드가 RAM[24576] 의 16비트 블록에 배핑이된다. 키보드를 누르지 않으면 이 블록에 0 이라는 값이 존재한다. 대표적인 ascii 코드는 다음과 같다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/114293822-52edea00-9ad4-11eb-96cd-c05813e5e4ff.png"/></p>
-</li>
-</ul>
-<h4 id="syntax-conventions-and-file-format">Syntax Conventions and File Format<a class="headerlink" href="#syntax-conventions-and-file-format" title="Permanent link">¶</a></h4>
-<ul>
-<li>
-<p>Binary Code Files: 이 파일은 텍스트 라인들로 구성된다. 각 라인은 16 개의 0 또는 1 의 아스키 캐릭터 수열이다. 이 수열이 하나의 기계어를 나타낸다. 전체의 라인은 기계어 프로그램을 나타낸다. n 번째 라인이 n 번째 기계어 코드를 나타낸다. Hack 플랫폼의 기계어 프로그램은 <code>hack</code> 이라는 확장자를 가진다. 가령 <code>Prog.hack</code> 처럼.</p>
-</li>
-<li>
-<p>Assembly Language Files: 어셈블리 프로그램은 <code>asm</code> 확장자에 저장된다. 가령 <code>Prog.asm</code>. 어셈브릴 프로그램은 instruction 또는 symbol 을 나타내는 텍스트 라인으로 구성된다. instruction 은 A-instruction 혹은 C-instruction 을 뜻한다. symbol 은 label <code>Symbol</code> 에 메모리 주소값을 부여한다.</p>
-</li>
-</ul>
-<p>아래의 컨벤션은 어셈블리 프로그램에 적용되는 것들이다.</p>
-<ul>
-<li>
-<p>Constants and Symbols: Constants 는 음이 아닌 수이다. 사용자 정의 symbol 은 글자, 숫자, "_", ".", "$", ":" 이 될 수 있다.</p>
-</li>
-<li>
-<p>Comments: // 은 주석이다.</p>
-</li>
-<li>
-<p>White Space: 공백문자는 무시된다.</p>
-</li>
-<li>
-<p>Case Conventions: 모든 assembly mnemonics 은 대문자이다. 다른 것들, 즉 사용자 정의 label 과 변수이름같은 것들은 case sensitive 하다. label 에는 대문자를 사용하고 변수 이름에는 lowercase 를 사용한다.</p>
-</li>
-</ul>
-<h3 id="perspective_1">Perspective<a class="headerlink" href="#perspective_1" title="Permanent link">¶</a></h3>
-<p>Hack 기계어는 정말 단순한 기계어이다. 다른 컴퓨터들은 더 많은 instruction, 더 많은 데이터 타입, 더 많은 registers, 더 많은 instruction format, 더 많은 주소값 지칭 모드를 가진다. 하지만 Hack 플랫폼에서 지원하지 않는 기능들은 소프트웨어에서 구현될 것이다. 가령 Hack 은 곱셈과 나눗셈을 지원하지 않는데 이는 OS 수준에서 구현될 것이다.</p>
-<p>Hack 은 <code>@xxx</code> 뒤에 나오는 <code>D=D+M</code> 같은 기계어를 지원하는데 이것이 귀찮으므로 <code>D=D+M[xxx]</code> 으로 쓸 수 있고 <code>@yyy</code> 뒤에 나오는 <code>GOTO</code> 대신 <code>GOTO yyy</code> 로 쓸 수 있다.</p>
-<h2 id="5-computer-architecture">5. Computer Architecture<a class="headerlink" href="#5-computer-architecture" title="Permanent link">¶</a></h2>
-<p>이 장이 하드웨어 파트의 마지막이다. 1~3장에서 모든 칩들을 설계하였고 4장에서 기계어를 설계하였고, 이로써 Hack 플랫폼을 만들었다.</p>
-<p>이 장에서는 먼저 폰 노이만 구조를 살펴보고, Hack 플랫폼은 폰 노이만 구조의 변형임을 알아본다. 이후 Hack 플랫폼의 하드웨어 스펙을 정의하고, 지금까지 만든 칩으로 Hack 플랫폼을 만든다. </p>
-<p>Hack 플랫폼을 가능한 한 최대한 단순하게 만들어볼텐데, 필요이상으로 단순하게 만들지는 않을 것이다.</p>
-<h3 id="computer-architecture-fundamentals">Computer Architecture Fundamentals<a class="headerlink" href="#computer-architecture-fundamentals" title="Permanent link">¶</a></h3>
-<h4 id="the-stored-program-concept">The Stored Program Concept<a class="headerlink" href="#the-stored-program-concept" title="Permanent link">¶</a></h4>
-<p>다른 기계와 비교했을 때 컴퓨터는 매우 다재다능하다. 이는 컴퓨터의 stored program 특징 때문이다. 컴퓨터는 고정된 하드웨어이다. 컴퓨터 프로그램은 하드웨어를 조립하여 제작된 것이 아니다. 프로그램은 데이터처럼 메모리에 저장되고 조작되며 실행된다. 기존의 기계는 그 기계의 목적을 달성하기 위한 프로그램을 직접 하드웨어로 만들었었다. 그러나 컴퓨터는 프로그램을 데이터로 추상화시켜 메모리에 저장했고, 이것들을 실행하기 위한 매우 매우 추상적인 연산들만을 하드웨어로 고정시켰다. </p>
-<p><strong>그래서 컴퓨터가 할 수 있는 일들은 그것의 공리가 되는 논리 게이트들을 조합하여 할 수 있는 모든 일이 된다. 논리 게이트는 결국 논리 기호가 되고 이 게이트들이 기계어가 되었다. 우리가 실질적으로 사용할 수 있는 것은 논리 게이트가 아니라 기계어이기 때문에 기계어를 공리로 보고, 그것들의 모든 정리들을 프로그램으로 보아야 한다. 또 이 모든 정리 집합, 즉 프로그램 집합이 바로 컴퓨터가 할 수 있는 일들의 범위가 된다.</strong></p>
-<p>그러나 또 다시 "실질적으로" 컴퓨터에 대하여 할 수 있는 행동들이 정의된다. 키보드를 두드릴 수 있을 때, 하드웨어에 직접 접근할 수 있을 때, USB 만 꽂을 수 있을 때, 외부 컴퓨터에 네트워크로만 접근할 수 있을 때, 보안이 강한 서버와 통신해야 할 때 등등 각각의 상황에서 우리가 실질적으로 해당 컴퓨터에 할 수 있는 밑바닥을 규명할 수 있다. 이 행동 집합이 정의되면 그 집합을 구분하여 정상적인 행위, 비정상적인 행위(해킹) 같은 부분집합을 분할할 수 있다. </p>
-<h4 id="the-von-neumann-architecture">The von Neumann Architecture<a class="headerlink" href="#the-von-neumann-architecture" title="Permanent link">¶</a></h4>
-<p>stored program 은 많은 컴퓨터 모델의 핵심 개념이다. 가장 대표적으로 universal Turing machine(1936) 과 von Neumann machine(1945)가 있다. 튜링 머신은 매우 단순한 모델로써 컴퓨팅에 관한 근본적인 논리적 분석을 위하여 주로 이론적으로만 다루어진다. 반면 폰 노이만 구조는 실질적으로 컴퓨터를 만들기 위하여 사용되는 구조이다. </p>
-<p>폰 노이만 구조는 다음 그림과 같이 CPU 를 기반으로 memory 와 상호작용한다. 이 상호작용이란 input 장치에서 데이터를 받아서 output 장치로 데이터를 내보내는 상호작용이다. 이 구조의 핵심이 stored program 개념이다. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/129323452-79c54a83-813a-47ed-834b-e011e0bf44e5.png"/></p>
-<h4 id="memory">Memory<a class="headerlink" href="#memory" title="Permanent link">¶</a></h4>
-<p>메모리란 물리적 관점에서, 그리고 논리적 관점에서 정의할 수 있다. 물리적으로 메모리란 주소가 부여된 register 의 선형 배열이다. 논리적으로 메모리란 두 영역으로 나뉜다. 한 영역은 데이터를 저장하며 다른 영역은 프로그램을 저장한다. </p>
-<blockquote>
-<p>사실 이 특징 때문에 취약점이나 해킹같은 것이 생겨나는거구나. "자전거를 해킹한다." 라는 말은 어불성설이다. 왜냐하면 자전거의 프로그램은 물리적 구현체로 완성되었기 때문에 자전거의 동작을 해커가 조작한다는 것은 어불성설이다. 반면 컴퓨터 프로그램의 동작은 물레적 구현체로 fix 되어버린 것이 아니라 메모리에 저장되어서 조작 가능하다. 컴퓨터라는 기계를 해킹 가능한 것은 컴퓨터의 동작은 메모리에 있는 데이터가 결정짓기에 이런 일이 가능하고, 자전거라는 기계를 해킹하는 게 불가능한 이유는 자전거의 동작이 물리적으로 고정되었기 때문에 불가능한 것이다.</p>
-<p>이 차이점이 컴퓨터라는 기계와 다른 기계들 사이에 존재하는 구조 사이에서 갖는 의미를 밝혀내면 해킹이 무엇인지 정의할 수도 있고 그 보다 더욱 일반화되거나 특수화된 구조를 갖는 기계 또한 정의할 수 있다. </p>
-</blockquote>
-<p>폰 노이만 구조의 어떤 변형은 데이터 메모리와 instruction 메모리를 같은 메모리에 저장하지만, 어떤 변형은 다른 물리적 메모리에 저장한다. 후자의 구조를 하버드 구조라고 한다. </p>
-<p>그러나 메모리는 그 역할과 관계 없이 같은 방법으로 접근 가능하다. 특정 메모리를 조작하기 위하여 주소값을 통해 레지스터를 선택해야 한다. </p>
-<p>high-level 언어가 다루는 변수, 배열, 객체등은 모두 메모리에 저장되는 이진 코드로 변환되어 메모리에 저장된다. 마찬가지로 high-level 언어의 프로그램들 또한 기계어의 이진 코드로 변환되어 메모리에 저장된다. 따라서 프로그램이 컴퓨터에서 실행될 때는 프로그램의 코드가 instruction 메모리에 로드되어야 한다.</p>
-<h4 id="cpu">CPU<a class="headerlink" href="#cpu" title="Permanent link">¶</a></h4>
-<p>CPU 는 instruction 메모리에 있는 프로그램의 동작을 정의한 instruction 을 실행하는 장치이다. instruction 이 CPU 에게 명령하는 것은 어떤 계산을 수행할지이다. 즉, 어떤 레지스터에게 무엇을 읽거나 쓸지, 어떤 instruction 을 다음이 실행할지를 가르쳐준다. CPU 는 이 계산을 ALU, 레지스터들, control unit 을 통해 수행한다. </p>
-<ul>
-<li>
-<p>ALU(Arithmetic Logic Unit) : ALU 는 low-level 산술연산과 논리연산을 수행하는 장치이다. 두 숫자의 덧셈과 And 연산 같은 것들은 기본적으로 할 수 있다. ALU 의 하드웨어에 곱셈이나 나눗셈 Or 연산이나 Xor 연산 같은 추가적인 기능을 탑재하는 것은 필요성, 예산, 물리적 조건 등에 따라 결정된다. 만약 ALU 에 추가적인 기능을 물리적으로 구현하지 않는다면 OS 레벨에서 소프트웨어적으로 구현해야 하는데 물리적 구현보다 성능이 느려진다.</p>
-</li>
-<li>
-<p>Registers : CPU 의 성능을 높이기 위하여 ALU 의 결과를 매번 멀리 있는 RAM 에 저장하는 게 아라  밀접한 곳에 있는 Register 에 저장한다. </p>
-</li>
-<li>
-<p>Control Unit : 컴퓨터의 instruction 은 16, 32, 64 비트의 이진코드로 되어있다. 이 instruction 이 실행되기 위하여 디코딩 되어야 하며 이 이진코드의 동작은 ALU, register, memory 의 하드웨어에 의해 결정된다. instruction 디코딩을 하는 장치를 control unit 이라고 부른다.</p>
-</li>
-</ul>
-<p>이제 CPU 의 동작을 다음의 무한 루프로 볼 수 있다. 이 싸이클을 fetch-execute cycle 이라 한다.</p>
-<p>1) instruction 디코딩 2) 실행 3) 다음 instruction 정하기 4) 그 instruction 을 가져오기 </p>
-<h4 id="registers_1">Registers<a class="headerlink" href="#registers_1" title="Permanent link">¶</a></h4>
-<p>사실 register 는 변수, instruction, 주소값 등의 bit 뭉치를 저장할 수 있는 장치에 자유롭게 사용되는 단어이다. 여기에서는 CPU register 를 다뤄보자.</p>
-<p>CPU register 가 없으면 매 연산마다 멀리 있는 RAM 을 사용해야 한다. Data register 에는 CPU 의 임시 결과값이 저장된다. Address register 에는 각종 읽기 주소, 쓰기 주소, instruction 주소 등이 저장된다. Program counter 라는 특별한 레지스터에는 다음에 실행될 instruction 의 주소값이 저장된다. </p>
-<h4 id="io">I/O<a class="headerlink" href="#io" title="Permanent link">¶</a></h4>
-<p>컴퓨터는 다양한 Input, Output 기기와 상호작용한다. 모니터, 키보드, 디스크, 프린터, 스캐너, 네트워크 카트 등등이 있고 자동차, 카메라, 의료기기 등등도 I/O 기기이다.</p>
-<p>그런데 프로그래머는 이렇게 다양한 I/O 기기들의 상세한 구조를 몰라도 된다. 왜냐하면 컴퓨터 과학자들이 이들 I/O 기기들에 정교한 스키마를 만들어서 컴퓨터가 이들 모두를 동일한 방식으로 대할 수 있게 되었기 때문이다. 이 기술을 memory-mapped I/O 라고 한다.</p>
-<p>memory-mapped I/O 란 I/O 장치가 CPU 에게 마치 하나의 정식 memory segment 처럼 보이게 하는 것이다. 이는 각각의 I/O 장치를 컴퓨터 메모리에 할당하는 것이다. 가령 키보드의 경우 사용자가 키보드를 누르면 해당 키의 이진코드가 키보드의 memory map 에 write 되고, 이것이 끊임없이 반영된다. 모니터의 경우 모니터에 할당된 memory map 이 픽셀로 변환되어 끊임없이 모니터로 반영된다. 따라서 컴퓨터는 단순히 I/O 기기에 할당된 메모리를 조작함으로써 I/O 기기를 통제할 수 있다. 이것이 memory-mapped I/O 이다.</p>
-<p>이를 위하여 I/O 장치는 할당된 메모리의 값에 의하여 초당 몇번씩 갱신된다. </p>
-<p>이러한 memory-mapped I/O 를 이루기 위하여 필요한 조건이 있다. </p>
-<ol>
-<li>
-<p>I/O 장치의 데이터가 컴퓨터의 메모리에 매핑되어야 한다. 가령 모니터의 2차원 픽셀이 컴퓨터 메모리의 1차원 벡터로 변환되어야 한다.</p>
-</li>
-<li>
-<p>I/O 장치는 컴퓨터 프로그램이 일관된 상호작용을 할 수 있는 프로토콜을 가져야 한다. 가령 어떤 이진코드가 키보드에서 "A" 를 뜻할지 일관된 규칙이 있어야 한다. </p>
-</li>
-</ol>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/129824286-dc864d4c-54ab-4ddd-ae54-cc01b8dd12e6.png"/></p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/129824339-f9f6dd8f-0405-4854-913c-88d259591ade.png"/></p>
-<p><strong>이로써 다양한 기계의 물리적 구현체들이 컴퓨터 메모리 안의 이진수 벡터로 추상화된다. 이는 자연수로 표현가능한 존재하는 모든 기계를 컴퓨터로 통제할 수 있다는 것이다. 만약 인간의 뇌를 자연수로 표현할 수 있다고 하면, 이론적으로 인간의 뇌를 컴퓨터로 통제할 수 있다. 또 다른 예를 들어보면 컴퓨터 또한 자연수로 표현가능하므로 컴퓨터 또한 컴퓨터로 통제할 수 있다.</strong> 따라서 컴퓨터는 어떤 대상이 지니는 정보량보다 더 큰 메모리 공간을 가져야만 그 대상을 통제할 수 있다.</p>
-<h3 id="hack-hardware-platform-specification">Hack Hardware Platform: Specification<a class="headerlink" href="#hack-hardware-platform-specification" title="Permanent link">¶</a></h3>
-<p>Hack 플랫폼은 16비트 폰 노이만 구조를 갖는다. Hack 플랫폼의 CPU 는 data memory 와 instruction memory 와 상호작용하고 모니터와 키보드라는 2개의 I/O 장치를 갖는다. </p>
-<p>Hack CPU 는 ALU 와 data register D, address register A, program counter PC 레지스터를 갖는다. D 레지스터가 데이터만 저장하는 반면 A 레지스터는 데이터를 저장할 수도, instruction memory 의 주소를 포인팅할 수도, data memory 의 주소를 포인팅할 수도 있다. </p>
-<p>instruction 은 <code>ixxaccccccdddjjj</code> 라는 16비트 형식을 가진다. <code>i</code>비트는 instruction type 을 결정한다. <code>0</code> 은 A-instruction 이고 <code>1</code> 은 C-instruction 이다. A-instruction 은 A 레지스터에 로드될 16비트 이진값으로 여겨진다. C-instruction 은 ALU 컨트롤 비트로 여겨진다. </p>
-<h3 id="cpu_1">CPU<a class="headerlink" href="#cpu_1" title="Permanent link">¶</a></h3>
-<p>Hack CPU 는 16비트 instruction 을 실행하도록 설계되었다. Hack CPU 는 data memory, 그리고 instruction memory 와 연결되어 있다. Hack CPU 는 다음과 같이 instruction memory 에서 instruction 을 읽어와서 data memory 와 상호작용한다. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/129702883-e65a5d36-0a96-49d1-912a-1cd21cd2d085.png"/></p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/129824059-9d3c2354-28f7-4dd5-ab5c-a615796f2e31.png"/></p>
-<p><code>inM</code>, <code>outM</code> 은 M-레지스터를 뜻하며 <code>addressM</code> 은 <code>outM</code> 이 쓰여질 주솔르 뜻한다.</p>
-<p><code>instruction</code> 이 A-instruction 이면 A 레지스터에 저장될 16비트를 로드한다. C-instruction 이면 instruction 에 따라 ALU 연산을 진행하고 연산결과를 A, D, M 레지스터에 적절히 저장한다. M 레지스터에 저장하는 상황에 <code>writeM</code> 비트가 활성화된다. </p>
-<p><code>reset</code> 이 <code>0</code> 이면 CPU 가 ALU 의 결과를 사용하며 PC 레지스의 다음 instruction 을 실행한다. <code>1</code> 이면 PC 를 <code>0</code> 으로 초기화한다. </p>
-<p><code>outM</code> 과 <code>writeM</code> 은 combinational 하며 instruction 의 실행결과에 영향을 받는다. <code>addressM</code> 과 <code>PC</code> 의 결과는 clock 에 영향을 받으며 다음 time 의 instruction 의 결과에 영향을 받는다. </p>
-<h2 id="6-assembler">6. Assembler<a class="headerlink" href="#6-assembler" title="Permanent link">¶</a></h2>
-<p>ch 1-5 에서 하드웨어 플랫폼을 구성했다면 6-12 에서 소프트웨어 플랫폼을 구축해본다. 소프트웨어 플랫폼 구성의 끝은 운영체제와 컴파일러를 만드는 것이다. 하지만 그 시작은 어셈블러를 만드는 것이다. 우리는 기계어라는 이진코드를 어셈블리어라고도 불렀다. Hack assembler 는 프로그램을 이진코드로 변환하여 하드웨어 플랫폼에서 실행가능하도록 만들어준다. </p>
-<p>사실 어셈블리언어 문법을 이진코드로 변환하는 것은 매우 쉬운 일이다. 어려운 일이 뭐냐면 어셈블리 프로그램에서 사용하는 기호 reference 를 물리 메모리 주소에 대응하는 것이다. 이 일은 symbol table 을 사용하여 이루어진다. symbol table 은 소프트웨어 변환 프로젝트에서 자주 사용되는 데이터 구조이다. </p>
-<p>기계어는 symbolic 하게, binary 하게 표현된다. binary 하게, 즉 이진코드로 표현된다고 함은 가령 <code>1000011110110000000</code> 로 표현된다는 것이다. 이것은 각각의 하드웨어 플랫폼의 논리회로 설계에 따라 기능하게 된다. 가령 왼쪽 8비트가 CPU 의 <code>load</code> 명령을 뜻할 수도 있고 오른쪽 8비트가 <code>R3</code> 를 뜻할 수도 있다. 따라서 하드웨어 플랫폼은 CPU 에 입력되는 비트 수의 경우의 수만큼의 명령어를 지닐 수 있다. 가령 32비트 시스템은 <span class="arithmatex">\(2 ^{32}\)</span> 개의 명령어를 포함할 수 있다. </p>
-<p>그러나 많은 경우 몇백개의 기계어를 마련한 후 나머지 이진코드들은 exception 으로 처리한다. (따라서 CPU 회사가 명시하지 않은 기계어인데 exception 으로 처리되지 않은 기계어는 에러이고 취약점을 유발한다.) 이 기계어들의 이진코드를 사람들이 기억하기에 쉽지 않으니 symbolic 대응을 만든다. 가령 이진코드 <code>10001010111111</code> 를 <code>LOAD R3, 7</code> 로 대응시키는 것이다. </p>
-<p>symbolic 언어를 assembly 라 부르고 이 언어를 이진코드로 변환하는 프로그램을 assembler 라고 부른다. </p>
-<p>또한 가령 <code>LOAD R3, apple</code> 이나 <code>goto loop</code> 처럼 <code>apple</code> 이나 <code>loop</code> 라는 기호 reference 를 사용하면 이것을 각 reference 의 주소값으로 대체해주어야 한다. <code>LOAD R3, 7</code> 이나 <code>goto 259</code> 처럼 말이다. </p>
-<blockquote>
-<p>7 이나 259 같은 것들은 무의미한 기호이므로 사람이 잘 기억할 수 없고 잘 다룰 수 없기 때문이다. 이것은 무의미한 기호에 의미를 붙여가는 과정이다. 만약 기계적으로 7 이나 259 를 그대로 다룬다면 이를 통해 추상적인 작업을 구상할 수 있는 생각 공간이 줄어든다. 이것들에 의미를 부여하여 추상화시킴으로써 무의미한 기호로 구성도니 기계 공간이 아니라 인간이 부여한 의미 공간에서 작업을 할 수 있다. </p>
-<p>한편 하드웨어 플랫폼 구성, 소프트웨어 플랫폼 구성, 프로그램 위계 구성 등등의 일들은 점점 더 무의미한 기호 체계에서 인간이 사용하는 유의미한 추상적인 대상들로 나아가는 방향으로 이루어지고 있다. 아무런 의미를 찾을 수 없었던 튜링 머신과 On/Off 의 1/0 신호들과 기계어와 이진코드 위에서 인간은 사랑을 나누고 재미를 느끼고 전투를 하고 일상적인 대화를 하고 업무를 하며 금전거래를 한다. 이 방향성은 점점 더 추상적인 인간의 행동과 마음을 무의미한 기호로 구성해내려 하는 방향성이다. 이렇게 하는 이유는 컴퓨터 내부로 인간의 행동이나 자연적 대상이나 인간의 생각이 사상되면 편리한점이 한 두가지가 아니기 때문이다. 이 흐름의 최종 목표는 모든 인간이 동의하나 동의하지 않으나 어쩔 수 없이 일반 지능을 컴퓨터 내부의 무의미한 기호로 구성하는 것이다. 이 시점은 "인간이 자연 대상을 컴퓨터 내부로 사상시키는 행위" 자체를 컴퓨터 내부로 사상시키는 시점이다. 이 시점부터 인간은 불필요한 존재가 되며, 기술적 특이점으로 가는 시작점이 된다. </p>
-</blockquote>
-<p>symbol 은 사실 두 가지 소스로부터 생긴다. 하나는 변수이고 하나는 라벨이다. 프로그래머가 변수를 만들면 컴파일러가 변수에 자동으로 주소값을 부여해준다. 프로그래머가 프로그램 상의 어떤 위치에 라벨을 만들면 컴파일러가 주소값으로 변환해준다. </p>
-<h3 id="symbol-resolution">Symbol Resolution<a class="headerlink" href="#symbol-resolution" title="Permanent link">¶</a></h3>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/129835753-3f8b6195-7cb1-4801-8ee3-4cf2530e0440.png"/></p>
-<p>위 그림은 symbol 을 물리적 주소로 대응시키는 과정을 보여준다. 어떻게 이 과정을 설계할 수 있을까? 먼저 프로그램의 코드가 주소 0 부터 할당된다고 가정하고, 변수들은 주소 1024 부터 할당되어야 한다고 가정하자. 이 시작점 주소는 하드웨어 플랫폼에 따라 달라진다. 메모리 주소값 영역의 시작 주소를 알았다면 symbol table 을 만든다. 이는 <code>xxx</code> 라는 심볼에 대응하는 주소 <span class="arithmatex">\(n\)</span> 에 대한 튜플 <span class="arithmatex">\((xxx, n)\)</span> 의 집합이다. </p>
-<p>위 그림은 변수 <code>i</code> 와 <code>sum</code> 은 각각 1024, 1025 에 할당한다. </p>
-<h3 id="assembler">Assembler<a class="headerlink" href="#assembler" title="Permanent link">¶</a></h3>
-<p>어셈블러는 어셈블리어를 이진코드로 변환한다. 이진코드는 instruction memory 에 로드되어 CPU 에 의해 실행된다.</p>
-<ol>
-<li>
-<p>symbolic 명령어를 field 로 파싱한다. </p>
-</li>
-<li>
-<p>각 field 를 이진코드로 변환한다.</p>
-</li>
-<li>
-<p>symbolic reference 를 물리적 주소로 변환한다. </p>
-</li>
-<li>
-<p>이진코드를 종합하여 실행될 최종 프로그램을 만든다. </p>
-</li>
-</ol>
-<p>1, 2, 4 번 task 는 매우 쉽다. 3번 task 가 어렵다. </p>
-<h2 id="7-virtual-machine-i-stack-arithmetic">7. Virtual Machine I: Stack Arithmetic<a class="headerlink" href="#7-virtual-machine-i-stack-arithmetic" title="Permanent link">¶</a></h2>
-<p>High-level 언어를 컴파일하는 컴파일러를 만들어 볼텐데 ch 10-11 에서 high-level 프로그램을 바이트코드로 변환해보고 ch 7-8 에서 바이트코드를 기계어로 변환해볼 것이다. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/130202083-ff3a6b04-bd07-4b58-9632-e1a5ed471ea7.png"/></p>
-<p>이러한 프로그래밍 언어 모델이 개발된 이유는 이식성 때문이다. 이런 언어는 실제 하드웨어 플랫폼에서 직접 실행되는 것이 아니라 VM 위에서 실행된다. 각 하드웨어 플랫폼에 따른 컴파일러를 만드는 것이 아니라 VM 을 만들면 다양한 플랫폼에서 원본 소스코드를 실행할 수 있다. </p>
-<p>이 챕터는 JVM 모델 패러다임을 기반으로 VM 구조를 소개한다. 가상머신(VM) 은 언어를 갖는데 VM 은 VM 코드를 받아서 Hack 어셈블리어로 변환하여 실행해준다. </p>
-<p>다음 장에서는 기본적인 변환기를 확장해본다. </p>
-<h3 id="virtual-machine-paradigm">Virtual Machine Paradigm<a class="headerlink" href="#virtual-machine-paradigm" title="Permanent link">¶</a></h3>
-<p>고수준 언어는 반드시 해당 플랫폼의 기계어로 변환되어야 하는데 이 변환 과정을 컴파일이라 한다. 이는 고수준 언어가 기계어에 의존하기 되기 때문이다. 이 의존성 떄문에 다양한 플랫폼이 갖는 다양한 기계어를 위하여 고수준 언어의 컴파일러가 각각 개발되어야 한다.</p>
-<p>이 의존성을 분리하기 위하여 고수준 언어를 중간 언어로 변환시키고 그것을 해당 플랫폼의 기계어로 변환시킬 수 있다. VM 이 중간 언어를 받으면 그것을 실행시켜준다. </p>
-<p>이렇게 하면 각 플랫폼마다 VM 의 구현만 수정하면 된다. </p>
-<h3 id="stack-macine-model">Stack Macine Model<a class="headerlink" href="#stack-macine-model" title="Permanent link">¶</a></h3>
-<p>다른 프로그래밍 언어처럼 VM 언어도 산술연산, 메모리접근, 흐름통제, 서브루틴으로 구성된다. </p>
-<blockquote>
-<p>pass</p>
-</blockquote>
-<h2 id="8-virtual-machine-ii-program-control">8. Virtual Machine II: Program Control<a class="headerlink" href="#8-virtual-machine-ii-program-control" title="Permanent link">¶</a></h2>
-<p>프로그래머들은 서브루틴 호출, 파라미터 전달, 재귀, 메모리 할당 같은 기술을 컴파일러에게 맡기고 당연시하지만 이 블랙박스를 열어보자.</p>
-<p>기계어를 추상화시켜서 의미를 부여하면 <span class="arithmatex">\(x = -b + \sqrt[]{b ^{2} -4ac}\)</span> 같은 코드도 작성할 수 있어서 우리가 생각하는 알고리즘적인 생각을 코드로 표현할 수 있게 된다. 가령 <code>print</code> 라는 함수가 수많은 바이너리로 구성되었지만 그 바이너리에 "print" 라는 이름을 붙이고 print 함수가 하는 기능을 하도록 만들면 무의미한 이진수 배열들이 의미 있는 출력기능을 하는 함수가 되는 것이다. </p>
-<p>의미를 찾기 힘든 기계어를 의미가 훤히 보이는 high-level 언어로 추상화시키기 위한 대표적인 기술은 다음과 같다. </p>
-<ul>
-<li>
-<p>서브루틴에 파라미터 전달</p>
-</li>
-<li>
-<p>서브루틴 호출 전 caller 함수 상태 저장</p>
-</li>
-<li>
-<p>서브루틴의 변수를 위한 공간 할당 </p>
-</li>
-<li>
-<p>서브루틴으로의 실행 흐름 변경</p>
-</li>
-<li>
-<p>서브루틴으로부터 caller 함수로 실행 흐름 변경 </p>
-</li>
-<li>
-<p>할당된 메모리 해제 </p>
-</li>
-<li>
-<p>caller 함수 상태 복원 </p>
-</li>
-</ul>
-<h3 id="program-flow">Program Flow<a class="headerlink" href="#program-flow" title="Permanent link">¶</a></h3>
-<p>컴퓨터 프로그램의 실행 흐름은 기본적으로 선형적이라 한 명령어를 실행하고 다음 명령어를 실행한다. 이 선형성은 분기 명령어에 의하여 깨진다. </p>
-<blockquote>
-<p>나머지 pass 새로운 내용이 없네. 다 알고 있는 것들</p>
-</blockquote>
-<h2 id="9-high-level-language">9. High-Level Language<a class="headerlink" href="#9-high-level-language" title="Permanent link">¶</a></h2>
-<p>지금까지의 것들은 모든 low-level 이었다. 인간은 low-level 로 생각할 수 없다. 인간의 생각은 high-level 로 추상화된 언어로 표현 가능하다.</p>
-<p>Jack 이라는 high-level 언어를 만들어볼 것이고, 10장 11장에서 이 언어의 컴파일러를 만들어 볼 것이다. 그리고 Jack 으로 쓰여진 운영체제를 12장에서 만들어봄으로써 이 여행을 끝낼 것이다. </p>
-<h2 id="10-compiler-i-syntax-analysis">10. Compiler I: Syntax Analysis<a class="headerlink" href="#10-compiler-i-syntax-analysis" title="Permanent link">¶</a></h2>
-<h2 id="11-compiler-ii-code-generation">11. Compiler II: Code Generation<a class="headerlink" href="#11-compiler-ii-code-generation" title="Permanent link">¶</a></h2>
-<h2 id="12-operating-system">12. Operating System<a class="headerlink" href="#12-operating-system" title="Permanent link">¶</a></h2>
-<h2 id="13-postscript">13. Postscript<a class="headerlink" href="#13-postscript" title="Permanent link">¶</a></h2>
-<hr/>
-<dl>
-<dt>ref:</dt>
-<dd>
-<p><a href="https://www.nand2tetris.org">https://www.nand2tetris.org</a> </p>
-</dd>
-</dl>
-</article>
-</div>
-</div>
-<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+<h1>Redirect to Netlify</h1>
+<script> 
+setTimeout(function () {
+window.location.href = "https://ccss17.netlify.app/" + window.location.pathname;}, 3000);
+</script>
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
             Back to top
           </a>
-</main>
-<!-- 
+        
+      </main>
+      
+        <!-- 
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1836,16 +2167,26 @@ M=1
     </div>
   </div>
 </footer> -->
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
-<script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
-<script src="../../javascripts/highlight.min.js"></script>
-<script src="../../javascripts/config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
-<script src="../../javascripts/b27b3e6448.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="../../javascripts/highlight.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/b27b3e6448.js"></script>
+      
+    
+  </body>
 </html>

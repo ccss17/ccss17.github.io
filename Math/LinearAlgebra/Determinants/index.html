@@ -1,1522 +1,1523 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="ccsss" name="author"/>
-<link href="https://ccss17.github.io/Math/LinearAlgebra/Determinants/" rel="canonical"/>
-<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>Determinants - ccss17</title>
-<link href="../../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
-<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
-<link href="../../../stylesheets/config.css" rel="stylesheet"/>
-</head>
-<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
-<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#determinants-of-2-times-2-matrix">
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="ccsss">
+      
+      
+        <link rel="canonical" href="https://ccss17.github.io/Math/LinearAlgebra/Determinants/">
+      
+      <link rel="icon" href="../../../assets/images/bolt-solid.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+  <title>Lorem ipsum dolor sit amet</title>
+
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/config.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#determinants-of-2-times-2-matrix" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
-<header class="md-header" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
-<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ccss17" class="md-header__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             ccss17
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Determinants
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
-</label>
-</form>
-</nav>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
       ccss17
     </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../MathHistory/">
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../MathHistory/" class="md-tabs__link md-tabs__link--active">
         Math
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../paper/1404.6388/">
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../paper/1404.6388/" class="md-tabs__link">
         Paper
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Computer/nand2tetris/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Computer/nand2tetris/" class="md-tabs__link">
         Computer
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../ProgrammerBase/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ProgrammerBase/" class="md-tabs__link">
         ProgrammerBase
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../security-tutorial/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../security-tutorial/" class="md-tabs__link">
         security tutorial
       </a>
-</li>
-</ul>
-</div>
+    </li>
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
-<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
-</a>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ccss17" class="md-nav__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
     ccss17
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         ccss17
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
         Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Math" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
           Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
         Foundation of Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_1">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Foundation of Math" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
           Foundation of Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../MathHistory/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MathHistory/" class="md-nav__link">
         History of Math
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Logic/FormalSystem/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Logic/FormalSystem/" class="md-nav__link">
         Formal System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../incompleteness/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../incompleteness/" class="md-nav__link">
         Incompleteness theorem
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../turing/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turing/" class="md-nav__link">
         Turing's proof
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../gentzen/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gentzen/" class="md-nav__link">
         Consistency proof of Peano arithmetic
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Set Theory
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Set Theory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
           Set Theory
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/Set/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/Set/" class="md-nav__link">
         Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/numbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/numbers/" class="md-nav__link">
         Number Theory
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/InfiniteSet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/InfiniteSet/" class="md-nav__link">
         Infinite Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/ZFC/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/ZFC/" class="md-nav__link">
         ZFC axiom system
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ArithmeticOperations/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArithmeticOperations/" class="md-nav__link">
         Arithmetic Operations
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Polynomials/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Polynomials/" class="md-nav__link">
         Polynomials
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../HyperrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HyperrealNumbers/" class="md-nav__link">
         Hyperreal Numbers
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../SurrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SurrealNumbers/" class="md-nav__link">
         Surreal Numbers
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7">
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" checked>
+      
+      <label class="md-nav__link" for="__nav_2_7">
         Linear Algebra
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_7">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linear Algebra" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
           Linear Algebra
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../VectorSpace/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VectorSpace/" class="md-nav__link">
         Vector Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../LinearTransformation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinearTransformation/" class="md-nav__link">
         Linear Transformation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../MatrixOperation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MatrixOperation/" class="md-nav__link">
         Matrix Operation
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           Determinants
           <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Determinants
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinants-of-2-times-2-matrix">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#determinants-of-2-times-2-matrix" class="md-nav__link">
     Determinants of \(2 \times 2\) Matrix
   </a>
-<nav aria-label="Determinants of \(2 \times 2\) Matrix" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-determinants-of-2-times-2-matrix">
+  
+    <nav class="md-nav" aria-label="Determinants of \(2 \times 2\) Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-determinants-of-2-times-2-matrix" class="md-nav__link">
     Properties of Determinants of \(2 \times 2\) Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#area-of-a-parallelogram">
+        
+          <li class="md-nav__item">
+  <a href="#area-of-a-parallelogram" class="md-nav__link">
     Area of a parallelogram
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinants">
+      
+        <li class="md-nav__item">
+  <a href="#determinants" class="md-nav__link">
     Determinants
   </a>
-<nav aria-label="Determinants" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinants-of-identity-matrix">
+  
+    <nav class="md-nav" aria-label="Determinants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#determinants-of-identity-matrix" class="md-nav__link">
     Determinants of Identity Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-determinant">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-determinant" class="md-nav__link">
     Properties of Determinant
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#redefining-the-determinant">
+        
+          <li class="md-nav__item">
+  <a href="#redefining-the-determinant" class="md-nav__link">
     Redefining the Determinant
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#relation-between-determinant-and-elementary-row-operation">
+        
+          <li class="md-nav__item">
+  <a href="#relation-between-determinant-and-elementary-row-operation" class="md-nav__link">
     Relation between Determinant and Elementary Row Operation
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinant-of-upper-triangular-matrix">
+        
+          <li class="md-nav__item">
+  <a href="#determinant-of-upper-triangular-matrix" class="md-nav__link">
     Determinant of Upper Triangular Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinant-of-elementary-matrix">
+        
+          <li class="md-nav__item">
+  <a href="#determinant-of-elementary-matrix" class="md-nav__link">
     Determinant of Elementary Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinant-of-submatrix">
+        
+          <li class="md-nav__item">
+  <a href="#determinant-of-submatrix" class="md-nav__link">
     Determinant of Submatrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cramers-rule">
+        
+          <li class="md-nav__item">
+  <a href="#cramers-rule" class="md-nav__link">
     Cramer's Rule
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#n-dimensional-volume-of-parallelepiped">
+        
+          <li class="md-nav__item">
+  <a href="#n-dimensional-volume-of-parallelepiped" class="md-nav__link">
     \(n\)-dimensional volume of parallelepiped
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinant-of-similar-matrices">
+        
+          <li class="md-nav__item">
+  <a href="#determinant-of-similar-matrices" class="md-nav__link">
     Determinant of Similar Matrices
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Diagonalization/">
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Diagonalization/" class="md-nav__link">
         Diagonalization
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../InnerProductSpaces/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InnerProductSpaces/" class="md-nav__link">
         Inner Product Spaces
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CanonicalForms/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CanonicalForms/" class="md-nav__link">
         Canonical Forms
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
         Paper
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Paper" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Paper" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
           Paper
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/1404.6388/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/1404.6388/" class="md-nav__link">
         Performance of Python runtimes on a non-numeric scientific code
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/1102.1523/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/1102.1523/" class="md-nav__link">
         The NumPy array: a structure for efficient numerical computation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/facenet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/facenet/" class="md-nav__link">
         Facenet (2015)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/quadruplet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/quadruplet/" class="md-nav__link">
         Quadruplet (2017)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/blueborne/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/blueborne/" class="md-nav__link">
         BlueBorne
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
         Computer
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Computer" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Computer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
           Computer
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Computer/nand2tetris/" class="md-nav__link">
         Nand to Tetris
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Computer/future/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Computer/future/" class="md-nav__link">
         Why the future doesn't need us
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Computer/Rust/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Computer/Rust/" class="md-nav__link">
         Rust Memo
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         ProgrammerBase
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ProgrammerBase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
           ProgrammerBase
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_2">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      <label class="md-nav__link" for="__nav_5_2">
         Contents
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Contents" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_5_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contents" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
           Contents
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/01-Day1/readme/" class="md-nav__link">
         Day 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/02-Day2/readme/" class="md-nav__link">
         Day 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/03-Day3/readme/" class="md-nav__link">
         Day 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/04-Day4/readme/" class="md-nav__link">
         Day 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/05-Day5/readme/" class="md-nav__link">
         Day 5
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/docker/" class="md-nav__link">
         Docker
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/codingconvention/" class="md-nav__link">
         Coding Convention
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/build/" class="md-nav__link">
         Build System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/information/" class="md-nav__link">
         Information
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/git/" class="md-nav__link">
         Git
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/vscode/" class="md-nav__link">
         VSCode
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/markdown/" class="md-nav__link">
         Markdown
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/tmux/" class="md-nav__link">
         Tmux
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/vim/" class="md-nav__link">
         Vim
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/cli/" class="md-nav__link">
         CLI
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
         security tutorial
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="security tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
           security tutorial
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/01-Base/" class="md-nav__link">
         Day1 Base
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/02-Computer1/" class="md-nav__link">
         Day2 Computer Principle 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/03-Computer2/" class="md-nav__link">
         Day3 Computer Principle 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/04-Reversing1/" class="md-nav__link">
         Day4 Reversing 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/05-Reversing2/" class="md-nav__link">
         Day5 Reversing 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/06-Exploit1/" class="md-nav__link">
         Day6 Exploit 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/07-Exploit2/" class="md-nav__link">
         Day7 Exploit 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/08-Exploit3/" class="md-nav__link">
         Day8 Exploit 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/09-Exploit4/" class="md-nav__link">
         Day9 Exploit 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/10-Pentesting/" class="md-nav__link">
         Day10 Pentesting
       </a>
-</li>
-</ul>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinants-of-2-times-2-matrix">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#determinants-of-2-times-2-matrix" class="md-nav__link">
     Determinants of \(2 \times 2\) Matrix
   </a>
-<nav aria-label="Determinants of \(2 \times 2\) Matrix" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-determinants-of-2-times-2-matrix">
+  
+    <nav class="md-nav" aria-label="Determinants of \(2 \times 2\) Matrix">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-determinants-of-2-times-2-matrix" class="md-nav__link">
     Properties of Determinants of \(2 \times 2\) Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#area-of-a-parallelogram">
+        
+          <li class="md-nav__item">
+  <a href="#area-of-a-parallelogram" class="md-nav__link">
     Area of a parallelogram
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinants">
+      
+        <li class="md-nav__item">
+  <a href="#determinants" class="md-nav__link">
     Determinants
   </a>
-<nav aria-label="Determinants" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinants-of-identity-matrix">
+  
+    <nav class="md-nav" aria-label="Determinants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#determinants-of-identity-matrix" class="md-nav__link">
     Determinants of Identity Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-determinant">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-determinant" class="md-nav__link">
     Properties of Determinant
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#redefining-the-determinant">
+        
+          <li class="md-nav__item">
+  <a href="#redefining-the-determinant" class="md-nav__link">
     Redefining the Determinant
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#relation-between-determinant-and-elementary-row-operation">
+        
+          <li class="md-nav__item">
+  <a href="#relation-between-determinant-and-elementary-row-operation" class="md-nav__link">
     Relation between Determinant and Elementary Row Operation
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinant-of-upper-triangular-matrix">
+        
+          <li class="md-nav__item">
+  <a href="#determinant-of-upper-triangular-matrix" class="md-nav__link">
     Determinant of Upper Triangular Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinant-of-elementary-matrix">
+        
+          <li class="md-nav__item">
+  <a href="#determinant-of-elementary-matrix" class="md-nav__link">
     Determinant of Elementary Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinant-of-submatrix">
+        
+          <li class="md-nav__item">
+  <a href="#determinant-of-submatrix" class="md-nav__link">
     Determinant of Submatrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cramers-rule">
+        
+          <li class="md-nav__item">
+  <a href="#cramers-rule" class="md-nav__link">
     Cramer's Rule
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#n-dimensional-volume-of-parallelepiped">
+        
+          <li class="md-nav__item">
+  <a href="#n-dimensional-volume-of-parallelepiped" class="md-nav__link">
     \(n\)-dimensional volume of parallelepiped
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#determinant-of-similar-matrices">
+        
+          <li class="md-nav__item">
+  <a href="#determinant-of-similar-matrices" class="md-nav__link">
     Determinant of Similar Matrices
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>Determinants</h1>
-<h2 id="determinants-of-2-times-2-matrix">Determinants of <span class="arithmatex">\(2 \times 2\)</span> Matrix<a class="headerlink" href="#determinants-of-2-times-2-matrix" title="Permanent link">¶</a></h2>
-<a href="#bb06f1ec9"><div class="admonition def" id="bb06f1ec9">
-<p class="admonition-title"><span class="arithmatex">\(2 \times 2\)</span> 행렬의 행렬식(Determinants of <span class="arithmatex">\(2 \times 2\)</span> Matrix)</p>
-<p><span class="arithmatex">\(2 \times 2\)</span> 행렬 <span class="arithmatex">\(A = \begin{pmatrix} a&amp;b\\ c&amp;d\\ \end{pmatrix}\)</span> 에 대하여 행렬식 <span class="arithmatex">\(\det: \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}\)</span> 은 다음과 같이 정의된 함수이다.</p>
-<div class="arithmatex">\[ \det (A) = ad - bc \]</div>
-</div></a>
-<h3 id="properties-of-determinants-of-2-times-2-matrix">Properties of Determinants of <span class="arithmatex">\(2 \times 2\)</span> Matrix<a class="headerlink" href="#properties-of-determinants-of-2-times-2-matrix" title="Permanent link">¶</a></h3>
-<a href="#98782e388"><div class="admonition def" id="98782e388">
-<p>함수 <span class="arithmatex">\(\det : \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}\)</span> 은 선형이 아니다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;2\\ 3&amp;4\\ \end{pmatrix}, B = \begin{pmatrix} 3&amp;2\\ 6&amp;4\\ \end{pmatrix}, A+B = \begin{pmatrix} 4&amp;4\\ 9&amp;8\\ \end{pmatrix}\)</span> 에 대하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \det(A) = -2, \det(B) = 0 , \det(A+B) = -4\]</div>
-<p>따라서 다음이 성립한다.</p>
-<div class="arithmatex">\[\det (A+B) \neq \det (A) + \det (B)\]</div>
-<p>그러므로 함수 <span class="arithmatex">\(\det\)</span> 은 선형이 아니다. ■ </p>
-</li>
-</ul>
-<a href="#49f33d729"><div class="admonition def" id="49f33d729">
-<p class="admonition-title">정리 4.1</p>
-<p>함수 <span class="arithmatex">\(\det: \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}\)</span> 는 <span class="arithmatex">\(2 \times 2\)</span> 행렬의 한 행이 고정되었을 때, 나머지 행에 대하여 선형이다. 즉, <span class="arithmatex">\(u, v, w \in \mathbf{F} ^{2}\)</span> 와 스칼라 <span class="arithmatex">\(k\)</span> 에 대하여 다음이 성립한다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\det \begin{pmatrix} u+kv\\ w\\ \end{pmatrix} = \det \begin{pmatrix} u\\ w\\ \end{pmatrix} + k \det \begin{pmatrix} v\\ w\\ \end{pmatrix}\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\det \begin{pmatrix} w\\ u+kv\\ \end{pmatrix} = \det \begin{pmatrix} w\\ u\\ \end{pmatrix} + k \det \begin{pmatrix} w\\ v\\ \end{pmatrix}\)</span></p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 함수 <span class="arithmatex">\(\det: \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}\)</span> 가 선형이 아니지만, 그래도 선형적 성질을 갖는다는 것을 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p>1:</p>
-<p><span class="arithmatex">\(u = (a_1, a_2), v = (b_1, b_2), w = (c_1, c_2) \in \mathbf{F} ^{2}\)</span> 와 스칼라 <span class="arithmatex">\(k\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \det \begin{pmatrix} u\\ w\\ \end{pmatrix} + k \det \begin{pmatrix} v\\ w\\ \end{pmatrix} &amp;= \det \begin{pmatrix} a_1&amp;a_2\\ c_1&amp;c_2\\ \end{pmatrix} + k \det \begin{pmatrix} b_1&amp;b_2\\ c_1&amp;c_2\\ \end{pmatrix}   \\ &amp;= (a_1 + kb_1)c_2 - (a_2 + kb_2)c_1 \\ &amp;= \det \begin{pmatrix} a_1+kb_1&amp;a_2+kb_2\\ c_1&amp;c_2\\ \end{pmatrix} \\ &amp;= \det \begin{pmatrix} u+kv\\ w\\ \end{pmatrix} \end{split}\end{equation} \tag*{} \]</div>
-<p>2:</p>
-<p>1) 과 비슷하게 증명된다. ■ </p>
-</li>
-</ul>
-<a href="#16d997576"><div class="admonition def" id="16d997576">
-<p class="admonition-title">정리 4.2</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{2 \times 2}(\mathbf{F} )\)</span> 에 대하여 다음은 동치이다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\det(A) \neq 0\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(A\)</span> 는 가역이고, <span class="arithmatex">\(A ^{-1} = \dfrac{1}{\det(A) }\begin{pmatrix} A_{22}&amp;-A_{12}\\ -A_{21}&amp;A_{11}\\ \end{pmatrix}\)</span> 이다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\det(A) \neq 0\)</span> 이면 다음과 같이 정의된 행렬 <span class="arithmatex">\(M\)</span> 에 대하여 <span class="arithmatex">\(AM=MA=I\)</span> 가 성립함을 쉽게 확인할 수 있다. </p>
-<div class="arithmatex">\[ M = \frac{1}{\det(A) } \begin{pmatrix} A_{22}&amp;-A _{12}\\ -A_{21}&amp;A _{11}\\ \end{pmatrix} \]</div>
-<p>이는 <span class="arithmatex">\(A\)</span> 가 가역이고 <span class="arithmatex">\(M = A ^{-1}\)</span> 임을 뜻한다. ▲ </p>
-<p>역으로 다음과 같은 가역행렬 <span class="arithmatex">\(A\)</span> 의 존재를 가정하자.</p>
-<div class="arithmatex">\[ A = \begin{pmatrix} A _{11}&amp;A _{12}\\ A _{21}&amp;A _{22}\\ \end{pmatrix} \]</div>
-<p><a href="../MatrixOperation/#8252ffa8b"><span class="arithmatex">\(2 \times 2\)</span> 행렬 <span class="arithmatex">\(A\)</span> 가 가역이면 <span class="arithmatex">\(\text{rank} (A) = 2\)</span></a> 이다. 이는 <span class="arithmatex">\(A _{11} \neq 0 \lor A _{21} \neq 0\)</span> 을 뜻한다. <span class="arithmatex">\(A _{11} \neq 0\)</span> 를 가정하면 <span class="arithmatex">\(A\)</span> 에 기본연산을 적용하여 다음 행렬을 얻는다.</p>
-<div class="arithmatex">\[ \begin{pmatrix} A _{11}&amp; A _{12}\\ 0&amp; A _{22} - \dfrac{A _{12} A _{21}}{A _{11}}\\ \end{pmatrix}\]</div>
-<p><a href="../MatrixOperation/#108500177">정리 3.4 따름정리</a> 에 의하여 기본연산은 행렬의 랭크를 보존한다. 이는 다음을 뜻한다.</p>
-<div class="arithmatex">\[A _{22} - \dfrac{A _{12} A _{21}}{A _{11}} \neq 0\]</div>
-<p>즉, <span class="arithmatex">\(\det(A) = A _{11}A _{22} - A _{12}A _{21} \neq 0\)</span>  이다. <span class="arithmatex">\(A _{21} \neq 0\)</span> 를 가정해도 비슷한 논리로 <span class="arithmatex">\(\det(A) \neq 0\)</span> 를 얻는다. ■ </p>
-</li>
-</ul>
-<h3 id="area-of-a-parallelogram">Area of a parallelogram<a class="headerlink" href="#area-of-a-parallelogram" title="Permanent link">¶</a></h3>
-<a href="#399e8413d"><div class="admonition def" id="399e8413d">
-<p class="admonition-title">각(angle)</p>
-<p><span class="arithmatex">\(\R ^{2}\)</span> 의 두 벡터의 각은 같은 크기와 방향을 가지고 시점이 원점인 두 벡터가 이루는 각이다.</p>
-</div></a>
-<ul>
-<li>
-<p>예시 </p>
-<p>다음과 그림에서 왼쪽 두 벡터가 이루는 각은 같은 크기와 방향을 가지고 시점이 원점인 두 벡터가 이루는 각이다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/127306408-3ff07c6f-57a1-4658-a57a-bbde4e5e5878.png"/></p>
-</li>
-</ul>
-<a href="#867bf6e6c"><div class="admonition def" id="867bf6e6c">
-<p class="admonition-title">향(orientation)</p>
-<p><span class="arithmatex">\(\beta =\{u,v\}\)</span> 가 <span class="arithmatex">\(\R ^{2}\)</span> 의 순서기저일 때 <span class="arithmatex">\(\beta\)</span> 의 향은 다음과 같은 실수이다. </p>
-<div class="arithmatex">\[ \mathcal{O} \begin{pmatrix} u\\ v\\ \end{pmatrix} = \dfrac{\det \begin{pmatrix} u\\ v\\ \end{pmatrix} }{\bigg |\det \begin{pmatrix} u\\ v\\ \end{pmatrix} \bigg |} = \pm 1 \]</div>
-</div></a>
-<ul>
-<li>
-<p><a href="../MatrixOperation/#c2617fe5d">이 정리</a>와 정리 4.2 에 의하여 위 식의 분모는 <span class="arithmatex">\(0\)</span> 이 아니다. 그러므로 <span class="arithmatex">\(\mathcal{O} \begin{pmatrix} u\\ v\\ \end{pmatrix} = \pm 1\)</span> 이다.</p>
-</li>
-<li>
-<p><a href="../MatrixOperation/#c2617fe5d"><span class="arithmatex">\(\{u, v\}\)</span> 가 일차종속(서로 평행)이면 행렬 <span class="arithmatex">\(\begin{pmatrix} u\\ v\\ \end{pmatrix}\)</span> 가 가역이 아니라서</a> <span class="arithmatex">\(\det \begin{pmatrix} u\\ v\\ \end{pmatrix} = 0\)</span> 이지만 편의상 <span class="arithmatex">\(\{u, v\}\)</span> 가 일차종속이면 <span class="arithmatex">\(\mathcal{O} \begin{pmatrix} u\\ v\\ \end{pmatrix} = 1\)</span> 으로 정의한다.</p>
-</li>
-</ul>
-<a href="#d45a4bd35"><div class="admonition def" id="d45a4bd35">
-<div class="arithmatex">\[ \mathcal{O} \begin{pmatrix} e_2\\ e_1\\ \end{pmatrix} = -1 \]</div>
-<div class="arithmatex">\[ \mathcal{O} \begin{pmatrix} e_1\\ e_2\\ \end{pmatrix} = 1 \]</div>
-</div></a>
-<ul>
-<li>증명</li>
-</ul>
-<a href="#d2f73b80d"><div class="admonition def" id="d2f73b80d">
-<p class="admonition-title">오른손 좌표계(right-handed coordinate system)</p>
-<p><span class="arithmatex">\(\R ^{2}\)</span> 의 순서기저 <span class="arithmatex">\(\{u, v\}\)</span> 에 대하여 벡터 <span class="arithmatex">\(u\)</span> 를 시계 반대방향으로 <span class="arithmatex">\(\theta (0 &lt; \theta &lt; \pi)\)</span> 만큼 회전하여 벡터 <span class="arithmatex">\(v\)</span> 에 포갤 수 있으면 좌표계 <span class="arithmatex">\(\{u, v\}\)</span> 는 오른손 좌표계이다.</p>
-</div></a>
-<ul>
-<li>
-<p>예시</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/127310867-dd35e776-5d31-49fd-8df5-b4e8ac3a6b56.png"/></p>
-</li>
-</ul>
-<a href="#71e295bfb"><div class="admonition def" id="71e295bfb">
-<p class="admonition-title">왼손 좌표계(left-handed coordinate system)</p>
-<p><span class="arithmatex">\(\R ^{2}\)</span> 의 순서기저 <span class="arithmatex">\(\{u, v\}\)</span> 에 대하여 벡터 <span class="arithmatex">\(u\)</span> 를 시계 방향으로 <span class="arithmatex">\(\theta (0 &lt; \theta &lt; \pi)\)</span> 만큼 회전하여 벡터 <span class="arithmatex">\(v\)</span> 에 포갤 수 있으면 좌표계 <span class="arithmatex">\(\{u, v\}\)</span> 는 왼손 좌표계이다.</p>
-</div></a>
-<ul>
-<li>
-<p>예시 </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/127310881-e48495a7-ae4c-4c4d-a56f-68597d8584c1.png"/></p>
-</li>
-</ul>
-<a href="#786d37bc6"><div class="admonition def" id="786d37bc6">
-<p>행렬식 <span class="arithmatex">\(\det: \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}\)</span> 와 행렬 <span class="arithmatex">\(A, B \in \mathbf{M}_{2 \times 2}(\mathbf{F} )\)</span> 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(AB) = \det(A) \det(B) \]</div>
-</div></a>
-<ul>
-<li>증명</li>
-</ul>
-<a href="#394be7290"><div class="admonition def" id="394be7290">
-<p class="admonition-title">문제 4.1-11</p>
-<p>함수 <span class="arithmatex">\(\delta : \mathbf{M}_{2 \times 2}(\mathbf{F} ) \to \mathbf{F}\)</span> 는 다음을 만족한다.</p>
-<ol>
-<li>
-<p>행렬의 한 행이 고정되어 있을 때, 나머지 행에 대하여 <span class="arithmatex">\(\delta\)</span> 는 선형함수이다.</p>
-</li>
-<li>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{2 \times 2}(\mathbf{F} )\)</span> 의 두 행이 같으면 <span class="arithmatex">\(\delta (A) = 0\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\delta (I_2) = 1\)</span></p>
-</li>
-</ol>
-<p>함수 <span class="arithmatex">\(\delta\)</span> 에 대하여 다음이 성립한다.</p>
-<ol>
-<li>
-<p>기본행렬 <span class="arithmatex">\(E \in \mathbf{M}_{2 \times 2}(\mathbf{F} )\)</span> 에 대하여 <span class="arithmatex">\(\delta (E) = \det(E)\)</span> 이다.</p>
-</li>
-<li>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{2 \times 2}(\mathbf{F} )\)</span>, 기본행렬 <span class="arithmatex">\(E \in \mathbf{M}_{2 \times 2}(\mathbf{F} )\)</span> 에 대하여 <span class="arithmatex">\(\delta (EA) = \delta (E) \delta (A)\)</span> 이다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>성질 1) 로부터 다음이 성립한다.</p>
-<div class="arithmatex">\[ \delta \begin{pmatrix} a&amp;b\\ c&amp;d\\ \end{pmatrix} = \delta \begin{pmatrix} a&amp;0\\ c&amp;d\\ \end{pmatrix} + \delta \begin{pmatrix} 0&amp;b\\ c&amp;d\\ \end{pmatrix} = a\delta \begin{pmatrix} 1&amp;0\\ c&amp;d\\ \end{pmatrix} + b\delta \begin{pmatrix} 0&amp;1\\ c&amp;d\\ \end{pmatrix} \]</div>
-<p>이때 성질 1), 2), 3) 으로부터 다음이 성립한다.</p>
-<div class="arithmatex">\[ a\delta \begin{pmatrix} 1&amp;0\\ c&amp;d\\ \end{pmatrix} = a\delta \begin{pmatrix} 1&amp;0\\ c&amp;0\\ \end{pmatrix} + a\delta \begin{pmatrix} 1&amp;0\\ 0&amp;d\\ \end{pmatrix} = ac\delta \begin{pmatrix} 1&amp;0\\ 1&amp;0\\ \end{pmatrix} + ad\delta \begin{pmatrix} 1&amp;0\\ 0&amp;1\\ \end{pmatrix} = 0 + ad \]</div>
-<div class="arithmatex">\[ b\delta \begin{pmatrix} 0&amp;1\\ c&amp;d\\ \end{pmatrix} = b\delta \begin{pmatrix} 0&amp;1\\ c&amp;0\\ \end{pmatrix} + b\delta \begin{pmatrix} 0&amp;1\\ 0&amp;d\\ \end{pmatrix} = bc\delta \begin{pmatrix} 0&amp;1\\ 1&amp;0\\ \end{pmatrix} + bd\delta \begin{pmatrix} 0&amp;1\\ 0&amp;1\\ \end{pmatrix} = bc \delta \begin{pmatrix} 0&amp;1\\ 1&amp;0\\ \end{pmatrix} + 0 \]</div>
-<p>또한 성질 1), 2), 3) 으로부터 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{pmatrix} 1&amp;1\\ 1&amp;1\\ \end{pmatrix} = \begin{pmatrix} 1&amp;0\\ 1&amp;1\\ \end{pmatrix}+ \begin{pmatrix} 0&amp;1\\ 1&amp;1\\ \end{pmatrix} = \begin{pmatrix} 1&amp;0\\ 0&amp;1\\ \end{pmatrix}+ \begin{pmatrix} 1&amp;0\\ 1&amp;0\\ \end{pmatrix}+ \begin{pmatrix} 0&amp;1\\ 1&amp;0\\ \end{pmatrix} + \begin{pmatrix} 0&amp;1\\ 0&amp;1\\ \end{pmatrix}  = 1 + 0 + \begin{pmatrix} 0&amp;1\\ 1&amp;0\\ \end{pmatrix} + 0 = 0 \]</div>
-<p>그러므로 다음을 얻는다. </p>
-<div class="arithmatex">\[ \delta \begin{pmatrix} a&amp;b\\ c&amp;d\\ \end{pmatrix} = ad - bc \]</div>
-<p>그러므로 <span class="arithmatex">\(\delta = \det\)</span> 이다. 그러므로 <span class="arithmatex">\(A \in \mathbf{M}_{2 \times 2}(\mathbf{F}) : \delta (A) = \det(A)\)</span> 이다. 조건 1) 은 이것의 특수한 경우이다. ▲ </p>
-<p>조건 2) 는 <span class="arithmatex">\(\det(AB) = \det(A) \det(B)\)</span> 에서 바로 나온다. ■ </p>
-<blockquote>
-<p>증명하려 했는데 결국 실패하고 솔루션을 찾아봤다. 솔루션에서는 내가 증명에 있어서 전혀 상관없겠다고 직관적으로 판단한 스칼라에 대한 선형이라는 조건을 증명의 첫걸음으로 삼았었다. 증명에 실패한 원인이 내 직관에 의지하여 이 단서를 더 연구하면 문제가 풀릴 것 같다는 것에 매몰되었고 내 직관에 끌리지 않는 단서는 아무런 연구도 하지 않은 것이었다. 직관에 의지하지 않고 객관적으로 연관된 모든 단서를 충분하고 공평하게 연구했으면 스스로 풀 수도 있었을듯.</p>
-</blockquote>
-</li>
-</ul>
-<a href="#53bcb6858"><div class="admonition def" id="53bcb6858">
-<p class="admonition-title">문제 4.1-12</p>
-<p>문제 4.1-11 의 함수 <span class="arithmatex">\(\delta\)</span> 와 <span class="arithmatex">\(A \in \mathbf{M}_{2 \times 2}(\mathbf{F} )\)</span> 에 대하여 <span class="arithmatex">\(\delta (A) = \det(A)\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>문제 4.1-11 의 증명에 의하여 증명이 끝난다.</p>
-</li>
-</ul>
-<a href="#bd17f7a59"><div class="admonition def" id="bd17f7a59">
-<p><span class="arithmatex">\(\R ^{2}\)</span> 의 순서기저 <span class="arithmatex">\(\{u, v\}\)</span> 에 대하여 다음은 동치이다.</p>
-<div class="arithmatex">\[ \mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix} = 1\iff \{u, v\} \text{ is right-handed coordinate system } \]</div>
-</div></a>
-<ul>
-<li>증명</li>
-</ul>
-<a href="#d47c12d29"><div class="admonition def" id="d47c12d29">
-<p class="admonition-title">평행사변형(parallelogram) </p>
-<p>원점을 시점으로 하는 벡터 <span class="arithmatex">\(u, v \in \R ^{2}\)</span> 에 대하여 이웃한 두 변 <span class="arithmatex">\(u, v\)</span> 를 가지는 평행사변형을 <span class="arithmatex">\(u, v\)</span> 의 평행사변형이라 한다.</p>
-</div></a>
-<ul>
-<li>
-<p><span class="arithmatex">\(\{u, v\}\)</span> 가 일차종속(서로 평행)이면 <span class="arithmatex">\(u, v\)</span> 의 평행사변형은 선분이 된다.</p>
-</li>
-<li>
-<p>예시</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/127340680-ef926a8b-8e2b-41be-8a98-d5c00212fb88.png"/></p>
-</li>
-</ul>
-<a href="#5009c38a2"><div class="admonition def" id="5009c38a2">
-<p><span class="arithmatex">\(u, v\)</span> 의 평행사변형의 넓이는 <span class="arithmatex">\(\bigg |\det\begin{pmatrix} u\\ v\\ \end{pmatrix} \bigg |\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(u = (-1, 5), v = (4, -2)\)</span> 의 평행사변형의 넓이는 다음과 같다. </p>
-<div class="arithmatex">\[ \bigg |\det \begin{pmatrix} u\\ v\\ \end{pmatrix}\bigg | = \bigg |\det \begin{pmatrix} -1&amp;5\\ 4&amp;-2\\ \end{pmatrix} \bigg | = 18 \]</div>
-</li>
-<li>
-<p>다음 증명은 이 정리가 <span class="arithmatex">\(\R ^{n}\)</span> 에서도 성립함을 유추할 수 있게 해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(u, v\)</span> 의 평행사변형의 넓이를 <span class="arithmatex">\(\mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix}\)</span> 라고 두면 향(orientation)의 정의에 의하여 본 정리는 다음과 같다.</p>
-<div class="arithmatex">\[ \mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix} = \bigg |\det\begin{pmatrix} u\\ v\\ \end{pmatrix} \bigg | = \mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix} \cdot \det\begin{pmatrix} u\\ v\\ \end{pmatrix} \]</div>
-<p><span class="arithmatex">\(\mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix} = \pm 1\)</span> 이므로 이것을 곱한 식인 다음을 증명해도 된다.</p>
-<div class="arithmatex">\[ \mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix} \mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix} = \det \begin{pmatrix} u\\ v\\ \end{pmatrix} \]</div>
-<p>이때 <span class="arithmatex">\(\delta \begin{pmatrix} u\\ v\\ \end{pmatrix} =\mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix} \mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix}\)</span> 라고 정의한 다음 <span class="arithmatex">\(\delta\)</span> 가 문제 4.1-11 에서의 3 가지 성질을 만족함을 보이면 문제 4.1-12 에 의하여 <span class="arithmatex">\(\delta = \det\)</span> 이 증명되어 모든 증명이 끝난다. ▲ </p>
-<p>먼저 벡터 <span class="arithmatex">\(u, v\)</span> 와 스칼라 <span class="arithmatex">\(c\)</span> 에 대하여 성질 1) 의 스칼라 곱이 보존됨을 성립함을 보이자. 즉, 다음을 보이자.</p>
-<div class="arithmatex">\[ \delta \begin{pmatrix} u\\ cv\\ \end{pmatrix} = c \delta \begin{pmatrix} u\\ v\\ \end{pmatrix} \]</div>
-<p><span class="arithmatex">\(c = 0\)</span> 이면 <span class="arithmatex">\(\delta \begin{pmatrix} u\\ cv\\ \end{pmatrix} = \mathcal{O}\begin{pmatrix} u\\ 0\\ \end{pmatrix} \mathcal{A}\begin{pmatrix} u\\ 0\\ \end{pmatrix} = 1 \cdot 0 = 0\)</span> 이므로 성립한다. <span class="arithmatex">\(\begin{pmatrix} u\\ 0\\ \end{pmatrix}\)</span> 가 일차종속이므로 <span class="arithmatex">\(\mathcal{O}\)</span> 가 <span class="arithmatex">\(1\)</span> 로 정의되고, <span class="arithmatex">\(u, 0\)</span> 의 평행사변형의 넓이는 <span class="arithmatex">\(0\)</span> 이기 때문이다.</p>
-<p><span class="arithmatex">\(c \neq 0\)</span> 인 경우를 살펴보자. <span class="arithmatex">\(u, v\)</span> 의 평행사변형의 넓이와 <span class="arithmatex">\(u, cv\)</span> 의 평행사변형의 넓이의 관계는 이렇다. 두 벡터 <span class="arithmatex">\(u, v\)</span> 가 이루는 각 <span class="arithmatex">\(\theta = \arccos \bigg (\dfrac{a \cdot b}{\|a\|\|b\|}\bigg )\)</span> 에 대하여 평행사변형의 높이는 <span class="arithmatex">\(\|u\| \sin \theta\)</span> 이다. 그러므로 평행사변형의 넓이는 밑변 <span class="arithmatex">\(\|v\|\)</span> 과 높이를 곱하여 <span class="arithmatex">\(\mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix} = \|v\|\|u\| \sin \theta\)</span> 이다. 반면 <span class="arithmatex">\(u, cv\)</span> 의 평행사변형의 넓이는 밑변 <span class="arithmatex">\(v\)</span> 가 <span class="arithmatex">\(cv\)</span> 로 변형된 것이므로 <span class="arithmatex">\(\|cv\|\|u\| \sin \theta = |c|\|v\|\|u\| \sin \theta= |c| \mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix}\)</span> 이다. 그러므로 <span class="arithmatex">\(\mathcal{A}\begin{pmatrix} u\\ cv\\ \end{pmatrix} = |c| \mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix}\)</span> 이다. </p>
-<p><span class="arithmatex">\(u, v\)</span> 의 평행사변형의 향과 <span class="arithmatex">\(u, cv\)</span> 의 평행사변형의 향의 관계는 이렇다. <span class="arithmatex">\(u = (a_1, a_2), v = (b_1, b_2)\)</span> 로 두면 <span class="arithmatex">\(\det \begin{pmatrix} u\\ v\\ \end{pmatrix} = a_1b_2 - a_2b_1\)</span> 이므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix} = \dfrac{a_1b_2 - a_2b_1}{|a_1b_2 - a_2b_1|}
-\]</div>
-<div class="arithmatex">\[ \mathcal{O}\begin{pmatrix} u\\ cv\\ \end{pmatrix} = \dfrac{ca_1b_2 - ca_2b_1}{|ca_1b_2 - ca_2b_1|} = \frac{c}{|c|}\dfrac{a_1b_2 - a_2b_1}{|a_1b_2 - a_2b_1|} \]</div>
-<p>그러므로 <span class="arithmatex">\(\mathcal{O}\begin{pmatrix} u\\ cv\\ \end{pmatrix} = \dfrac{c}{|c|}\mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix}\)</span> 이다. 따라서 다음이 성립한다. </p>
-<div class="arithmatex">\[ \delta \begin{pmatrix} u\\ cv\\ \end{pmatrix} = \mathcal{O}\begin{pmatrix} u\\ cv\\ \end{pmatrix}\mathcal{A}\begin{pmatrix} u\\ cv\\ \end{pmatrix} = \frac{c}{|c|}\mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix}|c| \mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix} = c \cdot  \mathcal{O}\begin{pmatrix} u\\ v\\ \end{pmatrix}\mathcal{A}\begin{pmatrix} u\\ v\\ \end{pmatrix} = c \cdot  \delta \begin{pmatrix} u\\ v\\ \end{pmatrix} \]</div>
-<p>이로써 <span class="arithmatex">\(\delta\)</span> 가 성질 1) 의 스칼라 곱에 대한 선형성을 만족한다는 것이 증명되었다. ▲ </p>
-<p>같은 변으로 구성된 평행사변형은 선분이 되어 넓이가 <span class="arithmatex">\(0\)</span> 이 된다. 즉, <span class="arithmatex">\(\mathcal{A}\begin{pmatrix} u\\ u\\ \end{pmatrix} = 0\)</span> 이다. 그러므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \delta \begin{pmatrix} u\\ u\\ \end{pmatrix} = \mathcal{O}\begin{pmatrix} u\\ u\\ \end{pmatrix} \mathcal{A}\begin{pmatrix} u\\ u\\ \end{pmatrix} = 0 \]</div>
-<p>이로써 <span class="arithmatex">\(\delta\)</span> 가 성질 2) 를 만족한다는 것이 증명되었다.  ▲ </p>
-<p>이제 성질 1) 의 벡터합을 증명하자. 즉 <span class="arithmatex">\(u, v_1, v_2 \in \R ^{2}\)</span> 에 대하여 다음이 성립함을 보이자. </p>
-<div class="arithmatex">\[ \delta \begin{pmatrix} u\\ v_1 + v_2\\ \end{pmatrix} = \delta \begin{pmatrix} u\\ v_1\\ \end{pmatrix} + \delta \begin{pmatrix} u\\ v_2\\ \end{pmatrix} \]</div>
-<p><span class="arithmatex">\(u = 0\)</span> 이면 평행사변형의 넓이가 <span class="arithmatex">\(0\)</span> 이 되므로 자명하게 성립한다. <span class="arithmatex">\(u \neq 0\)</span> 를 가정하자. <span class="arithmatex">\(u\)</span> 와 일차독립인 벡터 <span class="arithmatex">\(w \in \R ^{2}\)</span> 를 아무거나 선정하면 <span class="arithmatex">\(\dim (\R ^{2}) = 2\)</span> 이므로 <a href="../VectorSpace/#cd7879a47">정리 1.10 따름정리 2</a> 에 의하여 <span class="arithmatex">\(\{u, w\}\)</span> 는 <span class="arithmatex">\(\R ^{2}\)</span> 의 기저가 된다. 그러므로 <span class="arithmatex">\(i \in \{1, 2\}\)</span> 에 대하여 다음을 만족하는 스칼라 <span class="arithmatex">\(a_i, b_i\)</span> 가 존재한다.</p>
-<div class="arithmatex">\[ v_i = a_iu + b_iw \]</div>
-<p>그러므로 성질 2) 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \delta \begin{pmatrix} u\\ v_1 + v_2\\ \end{pmatrix} &amp;= \delta \begin{pmatrix} u\\ (a_1+a_2)u + (b_1+b_2)w\\ \end{pmatrix} = (b_1 + b_2) \begin{pmatrix} u\\ w\\ \end{pmatrix}\\ &amp;= \delta \begin{pmatrix} u\\ a_1u + b_1w\\ \end{pmatrix} + \delta \begin{pmatrix} u\\ a_2u + b_2w\\ \end{pmatrix} = \delta \begin{pmatrix} u\\ v_1\\ \end{pmatrix} + \delta \begin{pmatrix} u\\ v_2\\ \end{pmatrix} \end{split}\end{equation} \tag*{} \]</div>
-<p>같은 논리로 다음을 증명할 수 있다.</p>
-<div class="arithmatex">\[ \delta \begin{pmatrix} v_1 + v_2\\ u\\ \end{pmatrix} = \delta \begin{pmatrix} v_1\\ u\\ \end{pmatrix} + \delta \begin{pmatrix} v_2\\ u\\ \end{pmatrix} \tag*{} \]</div>
-<p>이로써 <span class="arithmatex">\(\delta\)</span> 가 성질 1) 의 벡터합을 만족한다는 것이 증명되었다. ▲ </p>
-<p>마지막으로 성질 3) 을 증명하자. <span class="arithmatex">\(e_1, e_2\)</span> 의 평행사변형은 정사각형이므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \delta \begin{pmatrix} e_1\\ e_2\\ \end{pmatrix} = \mathcal{O}\begin{pmatrix} e_1\\ e_2\\ \end{pmatrix}\mathcal{A}\begin{pmatrix} e_1\\ e_2\\ \end{pmatrix}= 1 \cdot 1 = 1 \]</div>
-<p>즉, <span class="arithmatex">\(\delta (I_2) = 1\)</span> 이다. 이로써 모든 증명이 끝났다. ■ </p>
-</li>
-</ul>
-<h2 id="determinants">Determinants<a class="headerlink" href="#determinants" title="Permanent link">¶</a></h2>
-<a href="#074905eda"><div class="admonition def" id="074905eda">
-<p class="admonition-title"><span class="arithmatex">\(\tilde{A}\)</span></p>
-<p><span class="arithmatex">\(n \geq 2\)</span> 일 때 행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 행과 <span class="arithmatex">\(j\)</span> 열을 제거하여 얻은 <span class="arithmatex">\((n - 1) \times (n - 1)\)</span> 행렬 <span class="arithmatex">\(\tilde{A} _{ij}\)</span> 라고 한다.</p>
-</div></a>
-<ul>
-<li>
-<p>예시 </p>
-<div class="arithmatex">\[A = \begin{pmatrix} 1&amp;2&amp;3\\ 4&amp;5&amp;6\\ 7&amp;8&amp;9\\ \end{pmatrix} \implies \tilde{A} _{11} = \begin{pmatrix} 5&amp;6\\ 8&amp;9\\ \end{pmatrix}\]</div>
-</li>
-</ul>
-<a href="#1e20f66d5"><div class="admonition def" id="1e20f66d5">
-<p class="admonition-title">여인수(cofactor)</p>
-<p>스칼라 <span class="arithmatex">\((-1) ^{i+j}\det(\tilde{A}_{ij})\)</span> 를 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 행 <span class="arithmatex">\(j\)</span> 열 성분에 대한 여인수라고 한다. </p>
-</div></a>
-<a href="#4748aca65"><div class="admonition def" id="4748aca65">
-<p class="admonition-title">여인수 전개(cofactor expansion)</p>
-<p><span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 행에 대한 여인수 전개를 다음과 같이 정의한다.</p>
-<div class="arithmatex">\[ \det(A) = \sum_{j=1}^{n}(-1) ^{i + j}A _{ij} \cdot \det(\tilde{A}_{ij}) \]</div>
-</div></a>
-<ul>
-<li>즉, <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 행에 대한 여인수 전개는 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 행의 각 성분에 여인수를 곱하여 더한 결과이다.</li>
-</ul>
-<a href="#84c39bce0"><div class="admonition def" id="84c39bce0">
-<p class="admonition-title">행렬식(determinant)</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 에 대하여 행렬식 <span class="arithmatex">\(\det: \mathbf{M}_{n \times n}(\mathbf{F} ) \to \mathbf{F}\)</span> 은 다음과 같은 함수이다.</p>
-<div class="arithmatex">\[ \det(A) = \begin{cases} A _{11} &amp; n = 1\\ \displaystyle \sum_{j=1}^{n}(-1) ^{1+j}A _{1j} \cdot \det(\tilde{A}_{1j}) &amp;n \geq 2\\ \end{cases} \]</div>
-</div></a>
-<ul>
-<li>
-<p><span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 행 <span class="arithmatex">\(j\)</span> 열에 대한 여인수를 <span class="arithmatex">\(c _{ij} = (-1) ^{i + j}\det(\tilde{A}_{ij})\)</span> 로 표기하면 <span class="arithmatex">\(A\)</span> 의 행렬식을 다음과 같이 표현할 수 있다. </p>
-<div class="arithmatex">\[ \det(A) = \sum_{j=1}^{n}A _{1j}c _{1j} \]</div>
-<p>즉, <span class="arithmatex">\(A\)</span> 의 행렬식은 <span class="arithmatex">\(A\)</span> 의 1행의 각 성분에 여인수를 곱하여 더한 결과이다. 이는 행렬의 행렬식이란 1행에 대한 여인수 전개라는 것을 말해준다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(A \in \mathbf{M}_{2 \times 2}(\mathbf{F} )\)</span> 에 대한 1행의 여인수 전개는 다음과 같다. </p>
-<div class="arithmatex">\[ \det(A) = A _{11}(-1) ^{1 + 1}\det(\tilde{A}_{11}) + A _{12}(-1) ^{1 + 2}\det(\tilde{A}_{12}) = A _{11}A _{22} - A _{12}A _{21} \]</div>
-<p><span class="arithmatex">\(2 \times 2\)</span> 행렬의 행렬식 정의와 같다는 것을 알 수 있다.</p>
-</li>
-</ul>
-<h3 id="determinants-of-identity-matrix">Determinants of Identity Matrix<a class="headerlink" href="#determinants-of-identity-matrix" title="Permanent link">¶</a></h3>
-<a href="#277b86cb2"><div class="admonition def" id="277b86cb2">
-<div class="arithmatex">\[ n \in \N : \det(I_n) = 1 \]</div>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(n = 1\)</span> 일 때 <span class="arithmatex">\(I_n = (1) \implies \det(I_n) = 1\)</span> 이다.</p>
-<p><span class="arithmatex">\(n \geq 2\)</span> 일 때 <span class="arithmatex">\(\det(I _{n-1}) = 1\)</span> 을 가정하자. <span class="arithmatex">\(I\)</span> 를 <span class="arithmatex">\(n \times n\)</span> 항등행렬이라고 하자. 그러면 <span class="arithmatex">\(\tilde{I} _{11} = I _{n-1}\)</span> 이다. 그러므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(I) = (-1) ^{2}(1) \det(\tilde{I}_{11}) + (-1) ^{3}(0) \det(\tilde{I}_{12}) + \dots + (-1) ^{1+n}(0) \det(\tilde{I}_{1n}) = 1 + 0 + \dots + 0 = 1 \tag*{■} \]</div>
-</li>
-</ul>
-<h3 id="properties-of-determinant">Properties of Determinant<a class="headerlink" href="#properties-of-determinant" title="Permanent link">¶</a></h3>
-<a href="#e013b5962"><div class="admonition def" id="e013b5962">
-<p class="admonition-title">정리 4.3</p>
-<p><span class="arithmatex">\(n \times n\)</span> 행렬의 행렬식은 어떤 행을 제외한 나머지 행들이 고정되었을 때, 그 행에 대하여 선형함수이다. 즉, <span class="arithmatex">\(1 \leq r \leq n\)</span>, 스칼라 <span class="arithmatex">\(k\)</span>, 벡터 <span class="arithmatex">\(u, v \in \mathbf{F} ^{n}\)</span> 에 대하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ u+kv\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} = \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ u\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} + k \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ v\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} \]</div>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 2형 기본행연산과 행렬식 사이의 관계를 말해준다. 즉, 위 정리에서 <span class="arithmatex">\(u=0\)</span> 으로 두면 <a href="#e337b8376">정리 4.3 따름정리</a>에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ kv\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} = k \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ v\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} \]</div>
-<p>이는 행렬 <span class="arithmatex">\(A\)</span> 의 한 행에 스칼라 <span class="arithmatex">\(k\)</span> 를 곱하여 얻은 행렬 <span class="arithmatex">\(B\)</span> 에 대하여 다음이 성립함을 의미한다.</p>
-<div class="arithmatex">\[ \det(A) = k \det(B) \]</div>
-</li>
-<li>
-<p>증명 </p>
-<p><span class="arithmatex">\(n = 1\)</span> 일 때 자명하게 성립한다. ▲ </p>
-<p><span class="arithmatex">\(n \geq 2\)</span> 와 <span class="arithmatex">\((n - 1) \times (n - 1)\)</span> 행렬에 대하여 성립함을 가정하자. </p>
-<p><span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 의 각 행 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 과 <span class="arithmatex">\(1 \leq r \leq n\)</span> 인 <span class="arithmatex">\(r\)</span> 과 <span class="arithmatex">\(u = (b_1, b_2, \dots, b_n), v = (c_1, c_2, \dots, c_n)\)</span> 와 스칼라 <span class="arithmatex">\(k\)</span> 에 대하여 <span class="arithmatex">\(a_r = u + kv\)</span> 로 두자. <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(r\)</span> 행을 <span class="arithmatex">\(u, v\)</span> 로 바꾼 행렬을 각각 <span class="arithmatex">\(B, C\)</span> 로 두면 <span class="arithmatex">\(\det(A) = \det(B) + k \det(C)\)</span> 를 보이면 증명이 끝난다. </p>
-<p><span class="arithmatex">\(r = 1\)</span> 일 경우를 증명해보자. <span class="arithmatex">\(A\)</span> 의 1행은 다음과 같다.</p>
-<div class="arithmatex">\[ a_1 = u + kv = (b_1+kc_1, b_2+kc_2, \dots, b_n+kc_n)  \]</div>
-<p>이는 <span class="arithmatex">\(A _{1j} = b_j + kc_j = B _{1j} + k C _{1j}\)</span> 임을 뜻한다. 또한 <span class="arithmatex">\(A, B, C\)</span> 는 <span class="arithmatex">\(1\)</span> 행을 제외하고 서로 같으므로 <span class="arithmatex">\(\tilde{A}_{1j} = \tilde{B}_{1j} = \tilde{C}_{1j} \iff \det(\tilde{A}_{1j}) = \det(\tilde{B}_{1j}) = \det(\tilde{C}_{1j})\)</span> 이다. 그러므로 <span class="arithmatex">\(\det(A)\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \det(A) &amp;= \sum_{j=1}^{n}(-1)^{1+j}A _{1j} \cdot \det(\tilde{A}_{1j})  \\ &amp;= \sum_{j=1}^{n}(-1)^{1+j}(B _{1j} + k C _{1j}) \cdot \det(\tilde{A}_{1j})  \\ &amp;= \sum_{j=1}^{n}(-1)^{1+j}B _{1j} \cdot \det(\tilde{A}_{1j}) +  k\sum_{j=1}^{n}(-1)^{1+j}C _{1j} \cdot \det(\tilde{A}_{1j}) \\ &amp;= \sum_{j=1}^{n}(-1)^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j}) +  k\sum_{j=1}^{n}(-1)^{1+j}C _{1j} \cdot \det(\tilde{C}_{1j}) \\ &amp;= \det(B) + k \det(C) \end{split}\end{equation} \tag*{} \]</div>
-<p>그러므로 <span class="arithmatex">\(n \geq 2, r = 1\)</span> 일 때 <span class="arithmatex">\(n \times n\)</span> 행렬에 대하여 본 정리가 성립한다. ▲ </p>
-<p><span class="arithmatex">\(r &gt; 1\)</span> 인 경우 <span class="arithmatex">\(1 \leq j \leq n\)</span> 에 대하여 <span class="arithmatex">\(\tilde{A}_{1j},\tilde{B}_{1j},\tilde{C}_{1j}\)</span> 는 <span class="arithmatex">\(r - 1\)</span> 행을 제외한 나머지 행이 서로 같다. <span class="arithmatex">\(\tilde{A}_{1j}\)</span> 의 <span class="arithmatex">\(r-1\)</span> 행은 다음과 같다. </p>
-<div class="arithmatex">\[ (b_1+kc_1, \dots, b _{j-1}+kc _{j-1}, b _{j+1} + kc _{j+1}, \dots, b_n + kc_n) \]</div>
-<p>이는 <span class="arithmatex">\(\tilde{B}_{1j}\)</span> 의 <span class="arithmatex">\(r-1\)</span> 행과 <span class="arithmatex">\(\tilde{C}_{1j}\)</span> 의 <span class="arithmatex">\(r-1\)</span> 행의 <span class="arithmatex">\(k\)</span> 배와의 합이다. <span class="arithmatex">\(\tilde{B}_{1j}, \tilde{C}_{1j}\)</span> 는 <span class="arithmatex">\((n - 1) \times (n - 1)\)</span> 행렬이므로 가정에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(\tilde{A}_{1j}) = \det(\tilde{B}_{1j}) + k \det(\tilde{C}_{1j}) \]</div>
-<p><span class="arithmatex">\(r-1\)</span> 행을 제외하면 <span class="arithmatex">\(A, B, C\)</span> 는 서로 같으므로 <span class="arithmatex">\(A _{1j} = B _{1j} = C _{1j}\)</span> 이다. 따라서 <span class="arithmatex">\(\det(A)\)</span> 는 다음과 같다. </p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \det(A) &amp;= \sum_{j=1}^{n}(-1) ^{1+j}A _{1j} \cdot \det(\tilde{A}_{1j})  \\ &amp;= \sum_{j=1}^{n}(-1) ^{1+j}A _{1j} \cdot ( \det(\tilde{B}_{1j}) + k\det(\tilde{C}_{1j})) \\ &amp;= \sum_{j=1}^{n}(-1) ^{1+j}A _{1j} \cdot \det(\tilde{B}_{1j}) + k\sum_{j=1}^{n}(-1) ^{1+j} A _{1j} \cdot  \det(\tilde{C}_{1j}) \\ &amp;= \sum_{j=1}^{n}(-1) ^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j}) + k\sum_{j=1}^{n}(-1) ^{1+j} C _{1j} \cdot  \det(\tilde{C}_{1j}) \\ &amp;= \det(B) + k \det(C) \end{split}\end{equation} \tag*{} \]</div>
-<p>그러므로 <span class="arithmatex">\(n \times n\)</span> 행렬에 대해서도 성립한다. ■ </p>
-</li>
-</ul>
-<a href="#e337b8376"><div class="admonition def" id="e337b8376">
-<p class="admonition-title">정리 4.3 따름정리</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 의 어느 행의 모든 성분이 <span class="arithmatex">\(0\)</span> 이면 <span class="arithmatex">\(\det(A) = 0\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>스칼라 <span class="arithmatex">\(k \neq 0\)</span> 에 대하여 정리 4.3 에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \det(A) = \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ 0+k \cdot 0\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} = \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ 0\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} + k \cdot \det \begin{pmatrix} a_1\\ \vdots \\ a _{r-1}\\ 0\\ a _{r+1}\\ \vdots \\ a_n \\ \end{pmatrix} \]</div>
-<div class="arithmatex">\[ \iff  \det(A)  = \det(A)  +k \det(A)  \iff k \det(A)  = 0 \iff \det(A)  = 0 \tag*{■} \]</div>
-</li>
-</ul>
-<a href="#defa38ec2"><div class="admonition def" id="defa38ec2">
-<p class="admonition-title">정리 4.3 보조정리 1</p>
-<p><span class="arithmatex">\(n \geq 2\)</span> 인 행렬 <span class="arithmatex">\(B \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 의 <span class="arithmatex">\(i\)</span> 행이 <span class="arithmatex">\(1 \leq k \leq n\)</span> 인 어떤 <span class="arithmatex">\(k\)</span> 에 대하여 <span class="arithmatex">\(e_k\)</span> 이면 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(B) = (-1)^{i+k}\det(\tilde{B}_{ik}) \]</div>
-</div></a>
-<ul>
-<li>
-<p>행렬식은 정사각행렬의 1행에 대한 여인수 전개로 정의되었지만, 이 정리는 정사각행렬이 특정 조건을 만족할 경우 임의의 행에 대한 여인수 전개로도 행렬식을 구할 수 있다는 것을 말해준다. </p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(n = 2\)</span> 일 때를 살펴보자. 행렬 <span class="arithmatex">\(B \in \mathbf{M}_{2 \times 2}(\mathbf{F} )\)</span> 의 <span class="arithmatex">\(i\)</span> 행이 <span class="arithmatex">\(1 \leq k \leq 2\)</span> 인 어떤 <span class="arithmatex">\(k\)</span> 에 대하여 <span class="arithmatex">\(e_k\)</span> 이면 <span class="arithmatex">\(\det(B) = (-1)^{i+k}\det(\tilde{B}_{ik})\)</span> 임을 보이면 된다. </p>
-<p><span class="arithmatex">\(1\)</span> 행이 <span class="arithmatex">\(e_1\)</span> 일 경우, <span class="arithmatex">\(1\)</span> 행이 <span class="arithmatex">\(e_2\)</span> 일 경우, <span class="arithmatex">\(2\)</span> 행이 <span class="arithmatex">\(e_1\)</span> 일 경우, <span class="arithmatex">\(2\)</span> 행이 <span class="arithmatex">\(e_2\)</span> 일 경우에 각각 다음과 같이 성립한다.</p>
-<div class="arithmatex">\[ B = \begin{pmatrix} 1&amp;0\\ c&amp;d\\ \end{pmatrix} \implies \det(B) = (-1) ^{1 + 1} \det(\tilde{B}_{11}) = d \]</div>
-<div class="arithmatex">\[ B = \begin{pmatrix} 0&amp;1\\ c&amp;d\\ \end{pmatrix} \implies \det(B) = (-1) ^{1 + 2} \det(\tilde{B}_{12}) = -c \]</div>
-<div class="arithmatex">\[ B = \begin{pmatrix} a&amp;b\\ 1&amp;0\\ \end{pmatrix} \implies \det(B) = (-1) ^{2 + 1} \det(\tilde{B}_{21}) = -b \]</div>
-<div class="arithmatex">\[ B = \begin{pmatrix} a&amp;b\\ 0&amp;1\\ \end{pmatrix} \implies \det(B) = (-1) ^{2 + 2} \det(\tilde{B}_{22}) = a \]</div>
-<p>그러므로 <span class="arithmatex">\(n = 2\)</span> 일 때 성립한다. ▲ </p>
-<p><span class="arithmatex">\(n &gt; 2\)</span> 일 때 <span class="arithmatex">\((n - 1) \times (n - 1)\)</span> 행렬에 대하여 성립함을 가정하자.</p>
-<p>행렬 <span class="arithmatex">\(B \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 의 <span class="arithmatex">\(i\)</span> 행이 <span class="arithmatex">\(1 \leq k \leq n\)</span> 인 어떤 <span class="arithmatex">\(k\)</span> 에 대하여 <span class="arithmatex">\(e_k\)</span> 이면 <span class="arithmatex">\(\det(B) = (-1)^{i+k}\det(\tilde{B}_{ik})\)</span> 임을 보이면 된다.</p>
-<p><span class="arithmatex">\(i = 1\)</span> 이면 <span class="arithmatex">\(B _{1k} = 1\)</span> 이고 <span class="arithmatex">\(B\)</span> 의 나머지 1행의 성분들은 모두 <span class="arithmatex">\(0\)</span> 이다. 그러므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(B) = \sum_{j=1}^{n}(-1) ^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j}) = (-1) ^{1+k}\det(\tilde{B}_{1k}) \]</div>
-<p>그러므로 <span class="arithmatex">\(n &gt; 2, i = 1\)</span> 일 때 성립한다. ▲ </p>
-<p><span class="arithmatex">\(n &gt; 2, 1 &lt; i \leq n\)</span> 을 가정하자. </p>
-<p><span class="arithmatex">\((n - 2) \times (n - 2)\)</span> 행렬 <span class="arithmatex">\(C _{ij}\)</span> 를 <span class="arithmatex">\(B\)</span> 의 <span class="arithmatex">\(1\)</span>행, <span class="arithmatex">\(i\)</span>행, <span class="arithmatex">\(j\)</span>열, <span class="arithmatex">\(k\)</span>열을 제거하여 얻은 행렬이라고 하자.</p>
-<p>각 <span class="arithmatex">\(j\)</span> 에 대하여 <span class="arithmatex">\(\tilde{B}_{1j}\)</span> 의 <span class="arithmatex">\(i - 1\)</span> 행은 다음과 같은 벡터이다. </p>
-<div class="arithmatex">\[ \begin{cases} e _{k-1} \in \mathbf{F} ^{n-1} &amp;j &lt; k\\ 0 \in \mathbf{F} ^{n-1} &amp;j = k\\ e _{k} \in \mathbf{F} ^{n-1} &amp;j &gt; k\\ \end{cases} \]</div>
-<p><span class="arithmatex">\(\tilde{B}_{1j}\)</span> 는 위 벡터가 <span class="arithmatex">\(i-1\)</span> 행에 있는 <span class="arithmatex">\((n-1) \times (n-1)\)</span> 행렬이다. 행렬 <span class="arithmatex">\(\tilde{B}_{1j}\)</span> 에서 <span class="arithmatex">\(i-1\)</span> 을 제거하는 것은 <span class="arithmatex">\(B\)</span> 의 <span class="arithmatex">\(i\)</span> 행을 제거하는 것이다. <span class="arithmatex">\(j &lt; k\)</span> 의 경우 행렬 <span class="arithmatex">\(\tilde{B}_{1j}\)</span> 에서 <span class="arithmatex">\(k-1\)</span> 을 제거하는 것은 <span class="arithmatex">\(B\)</span> 에서 <span class="arithmatex">\(k\)</span> 를 제거하는 것인데 반해 <span class="arithmatex">\(j &gt; k\)</span> 의 경우 행렬 <span class="arithmatex">\(\tilde{B}_{1j}\)</span> 에서 <span class="arithmatex">\(k\)</span> 을 제거하는 것은 <span class="arithmatex">\(B\)</span> 에서 <span class="arithmatex">\(k\)</span> 를 제거하는 것이다. 그러므로 정리 4.3 따름정리와 가정에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \det(\tilde{B}_{1j})  = \begin{cases} (-1) ^{(i-1)+(k-1)}\det(C _{ij})  &amp; j &lt; k\\ 0  &amp; j = k\\ (-1) ^{(i-1)+k}\det(C _{ij})  &amp; j &gt; k\\ \end{cases} \]</div>
-<p><span class="arithmatex">\(n \in \N : (-1) ^{n-1} = (-1) ^{n+1}\)</span> 이다. 다음이 성립한다. </p>
-<div class="arithmatex">\[ \begin{equation}\begin{split}
-\det(B) &amp;= \sum_{j=1}^{n}(-1) ^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j})  \\
-&amp;= \sum_{j&lt;k}(-1) ^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j}) +\sum_{j&gt;k}(-1) ^{1+j}B _{1j} \cdot \det(\tilde{B}_{1j})  \\
-&amp;= \sum_{j&lt;k}(-1) ^{1+j}B _{1j} \cdot \{(-1) ^{(i-1)+(k-1)}\det(C _{ij}) \}  \\
-&amp;\qquad + \sum_{j&gt;k}(-1) ^{1+j}B _{1j} \cdot \{(-1) ^{(i-1)+k}\det(C _{ij})\}  \\
-&amp;= (-1) ^{i+k} \bigg \{\sum_{j&lt;k}(-1) ^{1+j}B _{1j} \cdot \det(C _{ij}) + \sum_{j&gt;k}(-1) ^{1+(j-1)}B _{1j} \cdot \det(C _{ij}) \bigg \} \\
-&amp;= (-1) ^{i+k} \bigg \{\sum_{j&lt;k}(-1) ^{1+j}B _{1j} \cdot \det(C _{ij}) + \sum_{j=k+1}^{n}(-1) ^{1+(j-1)}B _{1j} \cdot \det(C _{ij}) \bigg \} \\
-\end{split}\end{equation} \tag*{}
-\]</div>
-<p>중괄호 안의 식은 <span class="arithmatex">\(\tilde{B}_{ik}\)</span> 의 1행에 대한 여인수 전개이므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(B) = (-1) ^{i+k}\det(\tilde{B}_{ik}) \]</div>
-<p>그러므로 <span class="arithmatex">\(n &gt; 2, 1 &lt; i \leq n\)</span> 일 때 성립한다. ■ </p>
-</li>
-</ul>
-<h3 id="redefining-the-determinant">Redefining the Determinant<a class="headerlink" href="#redefining-the-determinant" title="Permanent link">¶</a></h3>
-<a href="#5b079d2f4"><div class="admonition def" id="5b079d2f4">
-<p class="admonition-title">정리 4.4</p>
-<p><span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 와 <span class="arithmatex">\(i \in \{1, \dots, n\}\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(A) = \sum_{j=1}^{n}(-1)^{i+j}A _{ij} \cdot \det(\tilde{A}_{ij}) \]</div>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 행렬식을 1행에 대한 여인수 전개로 얻을 수 있을 뿐만 아니라 임의의 행에 대한 여인수 전개로 구할 수 있음을 말해준다. </p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(i = 1\)</span> 일 때 행렬식의 정의와 같으므로 증명할 것이 없다. ▲ </p>
-<p><span class="arithmatex">\(i &gt; 1\)</span> 일 때를 증명해보자.</p>
-<p><span class="arithmatex">\(1 \leq j \leq n\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 행을 <span class="arithmatex">\(e_j\)</span> 로 대체한 행렬을 <span class="arithmatex">\(B_j\)</span> 라고 하자. 정리 4.3 은 행렬식의 덧셈과 스칼라곱 대한 선형성을 보장해주므로 다음이 성립한다.</p>
-<div class="arithmatex">\[ \det(A) = \sum_{j=1}^{n}A _{ij} \cdot \det(B_j) \]</div>
-<p>정리 4.3 보조정리 1 은 <span class="arithmatex">\(i\)</span> 행이 <span class="arithmatex">\(e_j\)</span> 인 <span class="arithmatex">\(B_j\)</span> 에 대하여 <span class="arithmatex">\(\det(B_j) = (-1) ^{i+j}\det(\tilde{B}_{ij})\)</span> 임을 말해준다. <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(B_j\)</span> 는 <span class="arithmatex">\(i\)</span> 행을 제외하고 서로 같기 때문에 <span class="arithmatex">\(\tilde{B}_{ij}=\tilde{A}_{ij}\)</span> 이다. 그러므로 <span class="arithmatex">\(\det(B_j) = (-1) ^{i+j}\det(\tilde{A}_{ij})\)</span> 이고, 이에 따라 다음이 성립한다.</p>
-<div class="arithmatex">\[ \det(A) = \sum_{j=1}^{n}(-1)^{i+j}A _{ij} \cdot \det(\tilde{A}_{ij}) \tag*{■} \]</div>
-</li>
-</ul>
-<a href="#a00606b91"><div class="admonition def" id="a00606b91">
-<p class="admonition-title">정리 4.4 따름정리</p>
-<p><span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 의 두 행이 같으면 <span class="arithmatex">\(\det(A) = 0\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(n = 2\)</span> 일 때 자명하게 성립한다. ▲ </p>
-<p><span class="arithmatex">\(n \geq 3\)</span> 일 때 <span class="arithmatex">\((n - 1) \times (n - 1)\)</span> 행렬에 대하여 정리가 성립함을 가정하자. 서로 같은 두 행을 <span class="arithmatex">\(r\)</span>행, <span class="arithmatex">\(s\)</span>행이라 하자. <span class="arithmatex">\(r, s\)</span> 가 아니고 <span class="arithmatex">\(1 \leq i \leq n\)</span> 인 <span class="arithmatex">\(i\)</span> 에 대하여 정리 4.4 에 의하여 다음과 같이 <span class="arithmatex">\(i\)</span>행에 대한 여인수 전개를 할 수 있다.</p>
-<div class="arithmatex">\[ \det(A) = \sum_{j=1}^{n}(-1)^{i+j}A _{ij} \cdot \det(\tilde{A}_{ij}) \]</div>
-<p><span class="arithmatex">\(\tilde{A}_{ij}\)</span> 는 <span class="arithmatex">\((n - 1) \times (n - 1)\)</span> 행렬이고 서로 다른 두 행(<span class="arithmatex">\(r\)</span> 행, <span class="arithmatex">\(s\)</span> 행)이 같으므로 가정에 의하여 <span class="arithmatex">\(\det(\tilde{A}_{ij}) = 0\)</span> 이다. 그러므로 <span class="arithmatex">\(\det(A) = 0\)</span> 이다. ■ </p>
-</li>
-</ul>
-<a href="#f4dc3fe35"><div class="admonition def" id="f4dc3fe35">
-<p class="admonition-title">정리 4.5</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 의 두 행을 교환하여 얻은 행렬 <span class="arithmatex">\(B\)</span> 에 대하여 <span class="arithmatex">\(\det(B) = - \det(A)\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 1형 기본행연산과 행렬식 사이의 관계를 말해준다. </p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(A\)</span> 의 행 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 에 대하여 <span class="arithmatex">\(r &lt; s\)</span> 인 <span class="arithmatex">\(r\)</span>행과 <span class="arithmatex">\(s\)</span> 행을 교환하여 얻은 <span class="arithmatex">\(B\)</span> 행은 다음과 같다. </p>
-<div class="arithmatex">\[ A = \begin{pmatrix} a_1\\ \vdots \\ a_r\\ \vdots \\ a_s\\ \vdots \\ a_n \\ \end{pmatrix}, B = \begin{pmatrix} a_1\\ \vdots \\ a_s\\ \vdots \\ a_r\\ \vdots \\ a_n \\ \end{pmatrix} \]</div>
-<p><span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(r\)</span>행, <span class="arithmatex">\(s\)</span>행을 <span class="arithmatex">\(a_r+a_s\)</span> 로 바꾼 행렬은 정리 4.4 따름정리에 의하여 행렬식이 <span class="arithmatex">\(0\)</span> 이 된다. 또한 <a href="#e013b5962">정리 4.3</a> 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ 0 = \begin{pmatrix} a_1\\ \vdots \\ a_r+a_s\\ \vdots \\ a_r+a_s\\ \vdots \\ a_n \\ \end{pmatrix}= \begin{pmatrix} a_1\\ \vdots \\ a_r\\ \vdots \\ a_r+a_s\\ \vdots \\ a_n \\ \end{pmatrix}+ \begin{pmatrix} a_1\\ \vdots \\ a_s\\ \vdots \\ a_r+a_s\\ \vdots \\ a_n \\ \end{pmatrix} \]</div>
-<div class="arithmatex">\[ = \begin{pmatrix} a_1\\ \vdots \\ a_r\\ \vdots \\ a_r\\ \vdots \\ a_n \\ \end{pmatrix}+ \begin{pmatrix} a_1\\ \vdots \\ a_r\\ \vdots \\ a_s\\ \vdots \\ a_n \\ \end{pmatrix}+ \begin{pmatrix} a_1\\ \vdots \\ a_s\\ \vdots \\ a_r\\ \vdots \\ a_n \\ \end{pmatrix}+ \begin{pmatrix} a_1\\ \vdots \\ a_s\\ \vdots \\ a_s\\ \vdots \\ a_n \\ \end{pmatrix} = 0 + \det(A) + \det(B) + 0 \]</div>
-<p>즉, <span class="arithmatex">\(\det(B) = - \det(A)\)</span> 이다. ■ </p>
-</li>
-</ul>
-<a href="#031b9b6c8"><div class="admonition def" id="031b9b6c8">
-<p class="admonition-title">정리 4.6</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 와 <span class="arithmatex">\(A\)</span> 의 한 행에 다른 행의 스칼라 배를 더하여 얻은 행렬 <span class="arithmatex">\(B\)</span> 에 대하여 <span class="arithmatex">\(\det(B) = \det(A)\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 3형 기본행연산과 행렬식 사이의 관계를 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(s\)</span>행에 <span class="arithmatex">\(r\)</span>행의 <span class="arithmatex">\(k\)</span>배를 더하여 얻은 행렬을 <span class="arithmatex">\(B\)</span> 라 하자.</p>
-<p><span class="arithmatex">\(A\)</span> 의 행을 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span>, <span class="arithmatex">\(B\)</span> 의 행을 <span class="arithmatex">\(b_1, b_2, \dots, b_n\)</span> 이라 하자. 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{cases}
-a_i = b_i &amp; i \neq s\\
-b_s = a_s + ka_r &amp; i = s\\
-\end{cases} 
-\]</div>
-<p><span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(s\)</span> 행을 <span class="arithmatex">\(a_r\)</span> 로 바꾼 행렬을 <span class="arithmatex">\(C\)</span> 라 하면 <span class="arithmatex">\(\det(C) = 0\)</span> 이다. <span class="arithmatex">\(B\)</span> 의 <span class="arithmatex">\(s\)</span>행에 <a href="#e013b5962">정리 4.3</a> 을 적용하면 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(B) = \det(A) +k \det(C) = \det(A) \tag*{■} \]</div>
-</li>
-</ul>
-<a href="#e9f88afe6"><div class="admonition def" id="e9f88afe6">
-<p class="admonition-title">정리 4.6 따름정리</p>
-<div class="arithmatex">\[A \in \mathbf{M}_{n \times n}(\mathbf{F} ) : \text{rank} (A) &lt; n \implies \det(A) = 0 \]</div>
-</div></a>
-<ul>
-<li>
-<p><a href="#16d997576">정리 4.2</a> 는 <span class="arithmatex">\(2 \times 2\)</span> 행렬이 가역인 것과 행렬식이 <span class="arithmatex">\(0\)</span> 이 아닌 것은 동치임을 말해준다. 이는 <span class="arithmatex">\(n \times n\)</span> 행렬에 일반화된다. 이 정리는 <span class="arithmatex">\(n \times n\)</span> 행렬이 가역이면 행렬식이 <span class="arithmatex">\(0\)</span> 이 아님을 말해준다. 정리 4.7 의 따름정리는 그 역을 증명해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\text{rank} (A) &lt; n\)</span> 이면 <span class="arithmatex">\(A\)</span> 의 행 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 은 일차종속이다. 그러므로 어떤 행 <span class="arithmatex">\(a_r\)</span> 을 다음과 같이 다른 행들의 일차결합으로 나타낼 수 있다.</p>
-<div class="arithmatex">\[ a_r = c_1a_1 + \dots + c _{r-1}a _{r-1} + c _{r+1}a _{r+1} + \dots + c_na_n \]</div>
-<p><span class="arithmatex">\(i \neq r\)</span> 인 <span class="arithmatex">\(i\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(r\)</span>행에 <span class="arithmatex">\(i\)</span>행의 <span class="arithmatex">\(-c_i\)</span> 배를 더하여 얻은 행렬 <span class="arithmatex">\(B\)</span> 는 <span class="arithmatex">\(b_r = 0\)</span> 이므로 <a href="#e337b8376">정리 4.3 따름정리</a>에 의하여 <span class="arithmatex">\(\det(B) = 0\)</span> 이다. 정리 4.6 에 의하여 <span class="arithmatex">\(\det(B) = \det(A) = 0\)</span> 이다. ■ </p>
-</li>
-</ul>
-<h3 id="relation-between-determinant-and-elementary-row-operation">Relation between Determinant and Elementary Row Operation<a class="headerlink" href="#relation-between-determinant-and-elementary-row-operation" title="Permanent link">¶</a></h3>
-<a href="#4d86b6b67"><div class="admonition def" id="4d86b6b67">
-<p class="admonition-title">기본행연산과 행렬식의 관계</p>
-<p>기본행연산과 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 의 행렬식의 관계는 다음과 같다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(A\)</span> 의 두 행을 교환하여 얻은 행렬 <span class="arithmatex">\(B\)</span> 에 대하여 <span class="arithmatex">\(\det(B) = -\det(A)\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(A\)</span> 의 한 행에 영이 아닌 스칼라 <span class="arithmatex">\(k\)</span> 를 곱하여 얻은 행렬 <span class="arithmatex">\(B\)</span> 에 대하여 <span class="arithmatex">\(\det(B) = k \det(A)\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(A\)</span> 의 한 행에 다른 행의 스칼라 배를 더하여 얻은 행렬 <span class="arithmatex">\(B\)</span> 에 대하여 <span class="arithmatex">\(\det(B) = \det(A)\)</span> 이다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><a href="#e013b5962">정리 4.3(2형 기본행연산과 행렬식의 관계)</a>, <a href="#f4dc3fe35">정리 4.5(1형 기본행연산과 행렬식의 관계)</a>, <a href="#031b9b6c8">정리 4.6(3형 기본행연산과 행렬식의 관계)</a> 에 의하여 증명된다.</p>
-</li>
-</ul>
-<h3 id="determinant-of-upper-triangular-matrix">Determinant of Upper Triangular Matrix<a class="headerlink" href="#determinant-of-upper-triangular-matrix" title="Permanent link">¶</a></h3>
-<a href="#f334dfff7"><div class="admonition def" id="f334dfff7">
-<p class="admonition-title">문제 4.2-23</p>
-<p>상삼각행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 에 대하여 <span class="arithmatex">\(\det(A) = \displaystyle \prod_{i=1}^{n} A _{ii}\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>정사각행렬은 1형과 3형 기본행연산을 통하여 상삼각행렬이 된다. 그러므로 정사각행렬의 행렬식을 쉽게 구할 수 있다.</p>
-<p>지금까지의 정리들은 여인수 전개를 통해 행렬식을 귀납적으로 구하는 것이 매우 번거롭기 때문에 행렬식을 효과적으로 구할 수 있도록 기본연산과 행렬식 간의 관계를 밝히기 위한 것들이었다.</p>
-<p>그리고 이 정리는 상삼각행렬의 행렬식이 쉽게 구해질 수 있다는 것을 말해줌으로써 기본연산의 목표를 상삼각행렬을 만드는 것으로 두는 것이 좋다는 결론을 알려준다.</p>
-<p><span class="arithmatex">\(n \times n\)</span> 행렬의 행렬식을 구하기 위해 여인수 전개를 사용하면 <span class="arithmatex">\(n!\)</span> 번 이상의 곱셈이 필요한데 비해 기본행연산으로 행렬식을 계산하면 <span class="arithmatex">\(\frac{1}{3}(n ^{3}+2n-3)\)</span> 번의 곱셈이 필요하다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(n = 1\)</span> 이면 <span class="arithmatex">\(1 \times 1\)</span> 행렬은 상삼각행렬이므로 <span class="arithmatex">\(\det(A _{11}) = A _{11}\)</span> 이다. ■ </p>
-<p><span class="arithmatex">\(n-1\)</span> 에서 성립함을 가정하고 <span class="arithmatex">\(n\)</span> 에 대하여 성립함을 증명하자. 상삼각행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F})\)</span> 의 행렬식은 다음과 같다. </p>
-<div class="arithmatex">\[ \det(A) = \sum_{i=1}^{n}(-1)^{1+i}A _{1i}\det(\tilde{A}_{1i}) \]</div>
-<p><span class="arithmatex">\(i \neq 1\)</span> 인 <span class="arithmatex">\(\tilde{A}_{1i}\)</span> 의 1열은 영열(zero column) 이다. 1열을 다른 열들의 일차결합으로 나타낼 수 있으므로 <span class="arithmatex">\(\text{rank} (\tilde{A}_{1i}) &lt; n - 1\)</span> 이고, 정리 4.6 따름정리에 의하여 <span class="arithmatex">\(\det(\tilde{A}_{1i})=0\)</span> 이다. 그러나 <span class="arithmatex">\(\tilde{A}_{11}\)</span> 은 상삼각행렬이고 <span class="arithmatex">\(n-1\)</span> 에서 정리가 성립하므로 <span class="arithmatex">\(\det(\tilde{A}_{11}) = \displaystyle \prod_{i=2}^{n}A _{ii}\)</span> 이다. 따라서 다음이 성립한다. </p>
-<div class="arithmatex">\[ \therefore \det(A) = A _{11}\det(\tilde{A}_{11}) = \prod_{i=1}^{n}A _{ii} \tag*{■} \]</div>
-</li>
-<li>
-<p>안 좋은 증명(이렇게 증명하는 건 대각성분이 <span class="arithmatex">\(0\)</span> 이 아닐 거라는 가정이 필요하다.)</p>
-<p>상삼각행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 는 다음과 같다. </p>
-<div class="arithmatex">\[ A = \begin{pmatrix} A_{11}&amp;A_{12}&amp;\dots&amp;A_{1n}\\ 0&amp;A_{22}&amp;\dots&amp;A_{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;A_{nn}\\ \end{pmatrix} \]</div>
-<p><span class="arithmatex">\(A\)</span> 에 기본행연산을 적용하여 <span class="arithmatex">\(A\)</span> 를 항등행렬로 바꿀 수 있다.</p>
-<div class="arithmatex">\[ \begin{pmatrix} A_{11}&amp;A_{12}&amp;\dots&amp;A_{1n}\\ 0&amp;A_{22}&amp;\dots&amp;A_{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;A_{nn}\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;?&amp;\dots&amp;?\\ 0&amp;A_{22}&amp;\dots&amp;A_{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;A_{nn}\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;0&amp;\dots&amp;?\\ 0&amp;A_{22}&amp;\dots&amp;A_{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;A_{nn}\\ \end{pmatrix} \to \]</div>
-<div class="arithmatex">\[ \begin{pmatrix} 1&amp;0&amp;\dots&amp;?\\ 0&amp;1&amp;\dots&amp;?\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;A_{nn}\\ \end{pmatrix} \to \dots \to \begin{pmatrix} 1&amp;0&amp;\dots&amp;0\\ 0&amp;1&amp;\dots&amp;0\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;A_{nn}\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;0&amp;\dots&amp;0\\ 0&amp;1&amp;\dots&amp;0\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;1\\ \end{pmatrix} \]</div>
-<p>위 과정은 다음 연산을 반복한 것에 불과하다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(i\)</span> 행에 스칼라를 곱한 것을 <span class="arithmatex">\(i-1\)</span> 행에 더하여 <span class="arithmatex">\(A _{ii}\)</span> 를 제외한 <span class="arithmatex">\(i\)</span> 열의 성분들을 <span class="arithmatex">\(0\)</span> 으로 만든다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(i\)</span> 행에 스칼라를 곱하여 <span class="arithmatex">\(A _{ii}\)</span> 를 <span class="arithmatex">\(1\)</span> 로 만든다.</p>
-</li>
-</ol>
-<p><span class="arithmatex">\(\det(I_n) = 1\)</span> 이므로 기본행연산이 어떻게 적용되었는지 역추적을 해보자. <span class="arithmatex">\(A _{j}\)</span> 를 <span class="arithmatex">\(A\)</span> 에 기본행연산을 <span class="arithmatex">\(j\)</span> 번 적용한 행렬이라고 하자.</p>
-<ol>
-<li>
-<p>먼저 <span class="arithmatex">\(1\)</span> 행에 스칼라 <span class="arithmatex">\(\frac{1}{A _{11}}\)</span> 를 곱했다. <span class="arithmatex">\(\det(A_1) = \frac{1}{A _{11}}\det(A)\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(2\)</span> 행의 스칼라배를 <span class="arithmatex">\(1\)</span> 행에 더하여 1행 2열의 성분을 <span class="arithmatex">\(0\)</span> 으로 만들었다. <span class="arithmatex">\(\det(A_2) = \det(A_1)\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(2\)</span> 행에 스칼라 <span class="arithmatex">\(\frac{1}{A _{22}}\)</span> 를 곱했다. <span class="arithmatex">\(\det(A_3) = \frac{1}{A _{22}}\det(A_2)\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\dots\)</span></p>
-</li>
-</ol>
-<p>이를 통하여 행렬식 <span class="arithmatex">\(\det(A)\)</span> 에 대각 성분의 곱셈의 역원이 계속해서 곱해졌음을 알 수 있다. 따라서 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(I_n) = \dfrac{1}{A _{11} A _{22} \dots A _{nn}} \det(A) = 1 \]</div>
-<p>그러므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \therefore \det(A) = A _{11} A _{22} \dots A _{nn} \tag*{■} \]</div>
-</li>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(A = \begin{pmatrix} 1&amp;3&amp;-3\\ 0&amp;4&amp;-7\\ 0&amp;0&amp;10\\ \end{pmatrix}\)</span>  에 대하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \det(A) = \prod_{i=1}^{3}A _{ii} = 40 \]</div>
-</li>
-</ul>
-<a href="#72b599a8e"><div class="admonition def" id="72b599a8e">
-<p>삼각행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 에 대하여 <span class="arithmatex">\(\det(A) = \displaystyle \prod_{i=1}^{n} A _{ii}\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>상삼각행렬일 경우 문제 4.2-23 에서 증명이 끝났다. ▲ </p>
-<p>하삼각행렬일 경우 문제 4.2-23 의 증명과정과 거의 비슷하게 증명 가능하다. ■ </p>
-</li>
-</ul>
-<h3 id="determinant-of-elementary-matrix">Determinant of Elementary Matrix<a class="headerlink" href="#determinant-of-elementary-matrix" title="Permanent link">¶</a></h3>
-<a href="#edd741e29"><div class="admonition def" id="edd741e29">
-<p class="admonition-title">기본행렬의 행렬식(Determinant of Elementary Matrix)</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(I\)</span> 의 두 행의 위치를 바꾸어 얻은 기본행렬 <span class="arithmatex">\(E\)</span> 에 대하여 <span class="arithmatex">\(\det(E) = -1\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(I\)</span> 의 한 행에 영이 아닌 스칼라 <span class="arithmatex">\(k\)</span> 를 곱하여 얻은 기본행렬 <span class="arithmatex">\(E\)</span> 에 대하여 <span class="arithmatex">\(\det(E) = k\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(I\)</span> 의 한 행에 다른 행의 스칼라 배를 더하여 얻은 기본행렬 <span class="arithmatex">\(E\)</span> 에 대하여 <span class="arithmatex">\(\det(E) = 1\)</span> 이다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>행렬식과 기본행연산의 관계와 <span class="arithmatex">\(\det(I) = 1\)</span> 에 의하여 바로 증명된다. ■ </p>
-</li>
-</ul>
-<a href="#78275d0e3"><div class="admonition def" id="78275d0e3">
-<p class="admonition-title">정리 4.7</p>
-<div class="arithmatex">\[ A, B \in \mathbf{M}_{n \times n}(\mathbf{F} ) : \det(AB) = \det(A) \det(B) \]</div>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 행렬식이 곱을 보존하는 함수임을 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(I\)</span> 의 두 행의 위치를 바꾸어 얻은 기본행렬이면 <span class="arithmatex">\(\det(A) = -1\)</span> 인데, <a href="../MatrixOperation/#1c860f354">정리 3.1</a> 에 의하여 행렬 <span class="arithmatex">\(AB\)</span> 는 <span class="arithmatex">\(B\)</span> 의 두 행을 바꾼 것이다. 그러면 <a href="#f4dc3fe35">정리 4.5</a> 에 의하여 <span class="arithmatex">\(\det(AB) = - \det(B) = \det(A) \det(B)\)</span> 이다.</p>
-<p><span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(I\)</span> 의 한 행에 영이 아닌 스칼라 <span class="arithmatex">\(k\)</span> 를 곱하여 얻은 기본행렬이면 <span class="arithmatex">\(\det(A) = k\)</span> 이다. <a href="../MatrixOperation/#1c860f354">정리 3.1</a> 에 의하여 행렬 <span class="arithmatex">\(AB\)</span> 는 <span class="arithmatex">\(B\)</span> 의 한 행에 스칼라 <span class="arithmatex">\(k\)</span> 를 곱한 것이다. 그러면 <a href="#e013b5962">정리 4.3</a> 에 의하여 <span class="arithmatex">\(\det(AB) = k \det(B) = \det(A) \det(B)\)</span> 이다.</p>
-<p><span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(I\)</span> 의 한 행에 다른 행의 스칼라 배를 더하여 얻은 기본행렬 기본행렬이면 <span class="arithmatex">\(\det(A) = 1\)</span> 이다. <a href="../MatrixOperation/#1c860f354">정리 3.1</a> 에 의하여 행렬 <span class="arithmatex">\(AB\)</span> 는 <span class="arithmatex">\(B\)</span> 의 한 행에 다른 행의 스칼라 <span class="arithmatex">\(k\)</span>배 를 곱한 것을 더하여 얻은 것이다. 그러면 <a href="#031b9b6c8">정리 4.6</a> 에 의하여 <span class="arithmatex">\(\det(AB) = \det(B) = \det(A) \det(B)\)</span> 이다. </p>
-<p>이렇게 <span class="arithmatex">\(A\)</span> 가 기본행렬일 경우 정리가 성립한다. ▲ </p>
-<p><a href="#e9f88afe6">정리 4.6 따름정리</a> 에 의하여 <span class="arithmatex">\(\text{rank} (A) &lt; n\)</span> 이면 <span class="arithmatex">\(\det(A) = 0\)</span> 이다. <a href="../MatrixOperation/#68242c9ae">정리 3.7</a> 에 의하여 <span class="arithmatex">\(\text{rank} (AB) \leq \text{rank} (A) &lt; n\)</span> 이므로 <span class="arithmatex">\(\det(AB) = 0\)</span> 이다. 따라서 <span class="arithmatex">\(\det(AB) = \det(A) \det(B)\)</span> 이다. ▲ </p>
-<p><a href="../MatrixOperation/#8252ffa8b"><span class="arithmatex">\(\text{rank} (A) = n\)</span> 이면 <span class="arithmatex">\(A\)</span> 는 가역이다</a>. 그러므로 <a href="../MatrixOperation/#18150efeb"><span class="arithmatex">\(A\)</span> 는 기본행렬의 곱이다</a>. <span class="arithmatex">\(A = E_m \dots E_1\)</span> 로 두자. 기본행렬에 대하여 본 정리를 가정할 수 있으므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \det(AB) &amp;= \det(E_m \dots E_1B)  \\ &amp;= \det(E_m) \det(E _{m-1} \dots E_1B)  \\ &amp;= \det(E_m) \det(E _{m-1}) \det(E _{m-2} \dots E_1B)  \\ &amp; \qquad \vdots  \\ &amp;= \det(E_m) \dots \det(E _1)\det(B)  \\ &amp;= \det(E_m \dots E _1)\det(B)  \\ &amp;= \det(A)\det(B)  \\ \end{split}\end{equation} \tag*{} \]</div>
-<p>그러므로 <span class="arithmatex">\(\text{rank} (A) = n\)</span> 일 때 정리가 성립한다. ■ </p>
-</li>
-</ul>
-<a href="#b40051741"><div class="admonition def" id="b40051741">
-<p class="admonition-title">정리 4.7 따름정리</p>
-<p><span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 에 대하여 다음은 동치이다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(A\)</span> 는 가역이다. 이 경우 <span class="arithmatex">\(\det(A ^{-1})  = \dfrac{1}{\det(A) }\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\det(A) \neq 0\)</span></p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(A\)</span> 가 가역이 아니면 <span class="arithmatex">\(\text{rank} (A) &lt; n\)</span> 이므로 <span class="arithmatex">\(\det(A) = 0\)</span> 이다. <span class="arithmatex">\(A\)</span> 가 가역이면 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(A) \det(A ^{-1}) = \det(AA ^{-1}) = \det(I) = 1 \]</div>
-<p>이는 <span class="arithmatex">\(\det(A) \neq 0, \det(A ^{-1}) = \dfrac{1}{\det(A) }\)</span> 를 뜻한다. ■ </p>
-</li>
-</ul>
-<a href="#130d44678"><div class="admonition def" id="130d44678">
-<p class="admonition-title">문제 4.2-29</p>
-<p>기본행렬 <span class="arithmatex">\(E\)</span> 에 대하여 <span class="arithmatex">\(\det(E ^{t}) = \det(E)\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(I_n\)</span> 의 <span class="arithmatex">\(i\)</span> 행과 <span class="arithmatex">\(j\)</span> 행을 교환하여 얻은 행렬 <span class="arithmatex">\(E\)</span> 는 <span class="arithmatex">\(E\)</span> 의 행 <span class="arithmatex">\(E_1, E_2, \dots, E_n\)</span> 에 대하여 다음과 같이 정의된다.</p>
-<div class="arithmatex">\[ \begin{cases} E_k = e_k &amp; k \neq i, k \neq j\\ E_i = e_j &amp;\\ E_j = e_i &amp;\\ \end{cases} \]</div>
-<p><span class="arithmatex">\(E ^{t}\)</span> 의 <span class="arithmatex">\(k\)</span> 행 <span class="arithmatex">\(E'_k\)</span> 은 벡터 <span class="arithmatex">\(E_1, E_2, \dots, E_n\)</span> 의 <span class="arithmatex">\(k\)</span> 번째 성분으로 구성되므로 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{cases} E'_k = e_k &amp; k \neq i, k \neq j\\ E'_i = e_j &amp; \\ E'_j = e_i &amp; \\ \end{cases} \]</div>
-<p>모든 행이 서로 같으므로 <span class="arithmatex">\(E = E ^{t}\)</span> 이다. 그러므로 기본행연산 1형을 한 번 적용한 기본행렬의 경우 정리가 자명하게 성립한다. ▲ </p>
-<p><span class="arithmatex">\(I_n\)</span> 의 <span class="arithmatex">\(i\)</span> 행에 스칼라 <span class="arithmatex">\(c\)</span> 를 곱하여 얻은 행렬 <span class="arithmatex">\(E\)</span> 는 <span class="arithmatex">\(E\)</span> 의 행 <span class="arithmatex">\(E_1, E_2, \dots, E_n\)</span> 에 대하여 다음과 같이 정의된다.</p>
-<div class="arithmatex">\[ \begin{cases} E_k = e_k &amp; k \neq i\\ E_i = ce_i &amp;\\ \end{cases} \]</div>
-<p><span class="arithmatex">\(E ^{t}\)</span> 의 <span class="arithmatex">\(k\)</span> 행 <span class="arithmatex">\(E'_k\)</span> 은 벡터 <span class="arithmatex">\(E_1, E_2, \dots, E_n\)</span> 의 <span class="arithmatex">\(k\)</span> 번째 성분으로 구성되므로 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{cases} E'_k = e_k &amp; k \neq i\\ E'_i = ce_i &amp; \\ \end{cases} \]</div>
-<p>모든 행이 서로 같으므로 <span class="arithmatex">\(E = E ^{t}\)</span> 이다. 그러므로 기본행연산 2형을 한 번 적용한 기본행렬의 경우 정리가 자명하게 성립한다. ▲ </p>
-<p><span class="arithmatex">\(I_n\)</span> 의 <span class="arithmatex">\(i\)</span> 행에 스칼라 <span class="arithmatex">\(c\)</span> 를 곱하여 <span class="arithmatex">\(j\)</span> 행에 더하여 얻은 행렬 <span class="arithmatex">\(E\)</span> 는 <span class="arithmatex">\(E\)</span> 의 행 <span class="arithmatex">\(E_1, E_2, \dots, E_n\)</span> 에 대하여 다음과 같이 정의된다.</p>
-<div class="arithmatex">\[ \begin{cases} E_k = e_k &amp; k \neq j\\ E_j = ce_i + e_j &amp;\\ \end{cases} \]</div>
-<p><span class="arithmatex">\(E ^{t}\)</span> 의 <span class="arithmatex">\(k\)</span> 행 <span class="arithmatex">\(E'_k\)</span> 은 벡터 <span class="arithmatex">\(E_1, E_2, \dots, E_n\)</span> 의 <span class="arithmatex">\(k\)</span> 번째 성분으로 구성되므로 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{cases} E'_k = e_k &amp; k \neq i\\ E'_i = e_i + ce_j &amp; \\ \end{cases} \]</div>
-<p><span class="arithmatex">\(E\)</span> 가 <span class="arithmatex">\(I_n\)</span> 의 <span class="arithmatex">\(i\)</span> 행에 스칼라 <span class="arithmatex">\(c\)</span> 를 곱하여 <span class="arithmatex">\(j\)</span> 행에 더한 행렬인데 비해 <span class="arithmatex">\(E ^{t}\)</span> 는 <span class="arithmatex">\(j\)</span> 행에 스칼라 <span class="arithmatex">\(c\)</span> 를 곱해 <span class="arithmatex">\(i\)</span> 행에 더한 행렬임을 알 수 있다. </p>
-<p><span class="arithmatex">\(E\)</span> 가 상삼각행렬임을 가정하면 <span class="arithmatex">\(\det(E) = \text{tr} (E) = 1\)</span> 이다. <span class="arithmatex">\(E ^{t}\)</span> 는 하삼각행렬이므로 <span class="arithmatex">\(\det(E ^{t}) = \text{tr} (E ^{t}) = 1\)</span> 이다. <span class="arithmatex">\(E\)</span> 가 하삼각행렬이고 <span class="arithmatex">\(E ^{t}\)</span> 가 상삼각행렬일 경우도 마찬가지이다. 그러므로 기본행연산 3형을 한 번 적용한 기본행렬의 경우 정리가 성립한다. ▲ </p>
-<p>이제 기본행연산을 한번 적용한 기본행렬의 행렬식이 전치행렬의 행렬식과 같다는 것을 가정할 수 있다.</p>
-<p>이제 임의의 기본행렬 <span class="arithmatex">\(E\)</span> 를 생각하자. <a href="../MatrixOperation/#c576bf96c">기본행렬은 가역</a>이고 <a href="../MatrixOperation/#18150efeb">가역은 기본행렬의 곱</a>이다. 그러므로 다음을 만족하는 <span class="arithmatex">\(I\)</span> 에 기본행연산을 한번 적용한 기본행렬 <span class="arithmatex">\(E_1, E_2, \dots, E_k\)</span> 가 존재하여 다음을 만족시킨다.</p>
-<div class="arithmatex">\[ E = E_1 E_2 \dots E_k \]</div>
-<div class="arithmatex">\[ E ^{t} = E_k ^{t} E _{k-1} ^{t} \dots E_1 ^{t} \]</div>
-<p>기본행연산을 한번만 적용한 기본행렬의 행렬식이 전치행렬의 행렬식이 같다는 것과 정리 4.7 에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \det(E)&amp;= \det(E_1 E_2 \dots E_k) \\ &amp;= \det(E_1) \det(E_2) \dots \det(E_k) \\ &amp;= \det(E_1^{t}) \det(E_2^{t}) \dots \det(E_k^{t}) \\ &amp;= \det(E_k^{t}) \det(E _{k-1}^{t}) \dots \det(E_1^{t}) \\ &amp;= \det(E_k^{t}E _{k-1}^{t}\dots E_1^{t}) \\ &amp;= \det(E^{t}) \\ \end{split}\end{equation} \tag*{} \]</div>
-<p>이로써 모든 증명이 끝났다. ■ </p>
-</li>
-</ul>
-<a href="#4e99da8b4"><div class="admonition def" id="4e99da8b4">
-<p class="admonition-title">정리 4.8</p>
-<div class="arithmatex">\[ A \in \mathbf{M}_{n \times n}(\mathbf{F} ) : \det(A ^{t}) = \det(A) \]</div>
-</div></a>
-<ul>
-<li>
-<p>지금까지의 정리들은 행에 대한 여인수 전개, 기본행연산과 행렬식의 관계 등등 행의 관점에서 행렬식을 연구한 결과이다. 그러나 이 정리는 지금까지의 정리들이 열의 관점에서도 그대로 성립함을 말해준다. <span class="arithmatex">\(A\)</span> 의 행이 <span class="arithmatex">\(A ^{t}\)</span> 에서는 열이기 때문이다.</p>
-<p>즉, 열에 대한 여인수 전개로도 행렬식을 구할 수 있다. 또한 기본행연산 대신 기본열연산을 사용할 수도 있다. 기본열연산에 따른 행렬식의 변화는 기본행연산에 따른 행렬식의 변화와 같기 때문이다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(A\)</span> 가 가역이 아니면 <span class="arithmatex">\(\text{rank} (A) &lt; n\)</span> 이다. <a href="../MatrixOperation/#a2df8a4e7">정리 3.6 따름정리 2</a> 에 의하여 <span class="arithmatex">\(\text{rank} (A) = \text{rank} (A ^{t})\)</span> 이므로 <span class="arithmatex">\(A ^{t}\)</span> 도 가역이 아니다. <a href="#e9f88afe6">정리 4.6 따름정리</a> 에 의하여 <span class="arithmatex">\(\det(A) = 0 = \det(A ^{t})\)</span> 이다. ▲ </p>
-<p><a href="../MatrixOperation/#18150efeb"><span class="arithmatex">\(A\)</span> 가 가역이면 <span class="arithmatex">\(A\)</span> 는 기본행렬의 곱</a>이다. <span class="arithmatex">\(A = E_m \dots E_1\)</span> 으로 두면 <a href="../#130d44678">문제 4.2-29</a> 와 <a href="../#78275d0e3">정리 4.7</a> 에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \det(A)&amp;= \det(E_m \dots E_1) \\ &amp;= \det(E_m) \dots \det(E_1) \\ &amp;= \det(E_m^{t}) \dots \det(E_1^{t}) \\ &amp;= \det(E_1^{t}) \dots \det(E_m^{t}) \\ &amp;= \det(E_1^{t}\dots E_m^{t}) \\ &amp;= \det(A^{t}) \\ \end{split}\end{equation} \tag*{} \]</div>
-<p>이로써 모든 증명이 끝났다. ■ </p>
-</li>
-</ul>
-<h3 id="determinant-of-submatrix">Determinant of Submatrix<a class="headerlink" href="#determinant-of-submatrix" title="Permanent link">¶</a></h3>
-<a href="#b45e566a3"><div class="admonition def" id="b45e566a3">
-<p class="admonition-title">문제 4.3-20</p>
-<p>정사각행렬 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(M= \begin{pmatrix} A&amp;B\\ O&amp;I\\ \end{pmatrix}, M'= \begin{pmatrix} I&amp;B\\ O&amp;A\\ \end{pmatrix}\)</span> 에 대하여 <span class="arithmatex">\(\det(M) = \det(M') = \det(A)\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(s + t = n\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 를 <span class="arithmatex">\(s \times s\)</span> 행렬 <span class="arithmatex">\(I = I_t\)</span> 라고 하자.</p>
-<p><span class="arithmatex">\(s = 1\)</span> 이면 <a href="#f334dfff7">문제 4.2-23</a> 에 의하여 <span class="arithmatex">\(\det(M) = \prod_{i=1}^{n}M _{ii} = A _{11}\)</span> 이다. ▲ </p>
-<p><span class="arithmatex">\(s = k - 1\)</span> 에서 성립함을 가정하고 <span class="arithmatex">\(s = k\)</span> 에서 정리를 증명해보자. <span class="arithmatex">\(i \in \{k + 1, \dots, n\} : \det(\tilde{M})_{1i} = 0\)</span> 이다. 왜냐하면 <span class="arithmatex">\(\tilde{M}_{1i}\)</span> 의 <span class="arithmatex">\(i\)</span> 행이 영행(zero row)이 되므로 정리 4.3 따름정리에 따라 행렬식이 <span class="arithmatex">\(0\)</span> 이 되기 때문이다. 따라서 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(M) = \sum_{i=1}^{n}(-1) ^{1+i}M _{1i} \cdot \det(\tilde{M}_{1i}) = \sum_{i=1}^{k}(-1) ^{1+i}A _{1i} \cdot \det(\tilde{M}_{1i}) \]</div>
-<p><span class="arithmatex">\(k - 1\)</span> 에서 정리가 성립하므로 <span class="arithmatex">\(i \in \{1, \dots, k \} : \det(\tilde{M}_{1i}) = \det(\tilde{A}_{1i})\)</span> 이다. 따라서 다음이 성립한다. </p>
-<div class="arithmatex">\[ \therefore \sum_{i=1}^{k}(-1) ^{1+i}A _{1i} \cdot \det(\tilde{M}_{1i}) = \sum_{i=1}^{k}(-1) ^{1+i} A _{1i} \cdot \det(\tilde{A}_{1i}) = \det(A) \tag*{■} \]</div>
-</li>
-</ul>
-<a href="#48155e536"><div class="admonition def" id="48155e536">
-<p class="admonition-title">문제 4.3-21</p>
-<p>정사각행렬 <span class="arithmatex">\(A, C\)</span> 에 대한 행렬 <span class="arithmatex">\(M= \begin{pmatrix} A&amp;B\\ O&amp;C\\ \end{pmatrix} \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 에 대하여 <span class="arithmatex">\(\det(M) = \det(A) \det(C)\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(C\)</span> 가 가역이 아니면 <span class="arithmatex">\(C\)</span> 의 행집합은 일차종속이다. 이는 <span class="arithmatex">\((O C)\)</span> 의 행집합이 일차종속임을 뜻하고 결국 <span class="arithmatex">\(M\)</span> 이 가역이 아님을 뜻한다. 따라서 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(A) \det(C) = \det(A) \cdot 0 = 0 = \det(M) \]</div>
-<p><span class="arithmatex">\(C\)</span> 가 가역이면 다음이 성립한다. </p>
-<div class="arithmatex">\[ \begin{pmatrix} I&amp;O\\ O&amp;C ^{-1}\\ \end{pmatrix} \begin{pmatrix} A&amp;B\\ O&amp;C\\ \end{pmatrix} = \begin{pmatrix} A&amp;B\\ O&amp;I\\ \end{pmatrix} \]</div>
-<p>문제 4.3-20 과 정리 4.7 따름정리에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(C ^{-1}) \det(M) = \det(A) \iff \det(M) = \det(A) \det(C) \]</div>
-</li>
-</ul>
-<h3 id="cramers-rule">Cramer's Rule<a class="headerlink" href="#cramers-rule" title="Permanent link">¶</a></h3>
-<a href="#f3099d19e"><div class="admonition def" id="f3099d19e">
-<p class="admonition-title">정리 4.9 Cramer's Rule</p>
-<p><span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 와 <span class="arithmatex">\(x = (x_1, x_2, \dots, x_n) ^{t}\)</span> 에 대하여 <span class="arithmatex">\(Ax = b\)</span> 는 <span class="arithmatex">\(n\)</span> 개의 미지수를 가진 <span class="arithmatex">\(n\)</span> 개의 연립일차방정식의 행렬표현이다.</p>
-<p><span class="arithmatex">\(\det(A) \neq 0\)</span> 이면 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(k\)</span>열을 <span class="arithmatex">\(b\)</span> 로 바꾼 행렬 <span class="arithmatex">\(M_k\)</span> 에 대하여 이 연립방정식은 다음과 같은 유일한 해를 가진다.</p>
-<div class="arithmatex">\[ x_k = \dfrac{\det(M_k)}{\det(A)} \]</div>
-</div></a>
-<ul>
-<li>
-<p>이 정리를 <span class="arithmatex">\(\text{Cramer}: \mathbf{M}_{n \times n}(\mathbf{F} ) \times \mathbf{F} ^{n} \times \mathbf{F} ^{n} \to \mathbf{F} ^{n}\)</span> 와 같이 정의된 함수로 표현할 수 있나?</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\det(A) \neq 0\)</span> 이면 <a href="#b40051741">정리 4.7 따름정리</a> 에 의하여 <span class="arithmatex">\(A\)</span> 는 가역이다. 그러면 <a href="../MatrixOperation/#7fc4520a6">정리 3.10</a> 에 의하여 <span class="arithmatex">\(Ax = b\)</span> 는 유일한 해를 가진다. </p>
-<p><span class="arithmatex">\(1 \leq k \leq n\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(k\)</span>열을 <span class="arithmatex">\(a_k\)</span> 라고 하고 <span class="arithmatex">\(X_k\)</span> 는 <span class="arithmatex">\(I_n\)</span> 의 <span class="arithmatex">\(k\)</span> 열을 <span class="arithmatex">\(x\)</span> 로 바꾼 행렬이라 하자. 그러면 <span class="arithmatex">\(AX_k\)</span> 의 <span class="arithmatex">\(i\)</span> 열은 <span class="arithmatex">\(i \neq k\)</span> 일 때 <span class="arithmatex">\(A\)</span> 를 <span class="arithmatex">\(I_n\)</span> 에 곱하는 것과 같으므로 <span class="arithmatex">\(Ae_i = a_i\)</span> 이다. 반면 <span class="arithmatex">\(i = k\)</span> 이면 <span class="arithmatex">\(Ax = b\)</span> 이다. 그러므로 <span class="arithmatex">\(AX_k = M_k\)</span> 이다.</p>
-<p><span class="arithmatex">\(X_k\)</span> 의 <span class="arithmatex">\(k\)</span> 행은 <span class="arithmatex">\(k\)</span> 번째 성분이 <span class="arithmatex">\(x_k\)</span> 이고 나머지는 <span class="arithmatex">\(0\)</span> 이다. 그러므로 <span class="arithmatex">\(X_k\)</span> 의 <span class="arithmatex">\(k\)</span> 행에 대한 여인수 전개에 의한 행렬식은 다음과 같다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split}
-\det(X_k)&amp;= \sum_{j=1}^{n}(-1) ^{k + j} (X_k) _{kj} \cdot \det((\tilde{X_k})_{kj}) \\
-&amp;= (-1) ^{k+k}(X_k) _{kk} \cdot \det((\tilde{X_k})_{kk}) \\
-&amp;= x_k \cdot \det(I _{n-1}) = x_k \\
-\end{split}\end{equation} \tag*{} \]</div>
-<p><a href="#78275d0e3">정리 4.7</a> 은 행렬식의 곱의 보존을 보장한다. 그러므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(M_k) = \det(AX_k) = \det(A) \det(X_k) = \det(A) \cdot x_k \]</div>
-<p>그러므로 <span class="arithmatex">\(x_k = \dfrac{\det(M_k) }{\det(A) }\)</span> 이다. ■ </p>
-</li>
-<li>
-<p>예시</p>
-<p>다음과 같이 행렬표현으로 나타낸 연립일차방정식 <span class="arithmatex">\(Ax = b\)</span> 을 풀어보자.</p>
-<div class="arithmatex">\[ \begin{pmatrix} 1&amp;2&amp;3\\ 1&amp;0&amp;1\\ 1&amp;1&amp;-1\\ \end{pmatrix}\begin{pmatrix} x_{1}\\ x_{2}\\ x_{3}\\ \end{pmatrix} = \begin{pmatrix} 2\\ 3\\ 1\\ \end{pmatrix} \]</div>
-<p><span class="arithmatex">\(\det(A) = 6 \neq 0\)</span> 이므로 정리를 사용할 수 있다. 정리에 의하여 다음과 같은 유일한 해가 존재한다.</p>
-<div class="arithmatex">\[ x_1 = \dfrac{\det(M_1) }{\det(A) } = \dfrac{\det \begin{pmatrix} 2&amp;2&amp;3\\ 3&amp;0&amp;1\\ 1&amp;1&amp;-1\\ \end{pmatrix} }{\det(A) } = \frac{15}{6} = \frac{5}{2} \]</div>
-<div class="arithmatex">\[ x_2 = \dfrac{\det(M_2) }{\det(A) } = \dfrac{\det \begin{pmatrix} 1&amp;2&amp;3\\ 1&amp;3&amp;1\\ 1&amp;1&amp;-1\\ \end{pmatrix} }{\det(A) } = -\frac{6}{6} = -1 \]</div>
-<div class="arithmatex">\[ x_3 = \dfrac{\det(M_3) }{\det(A) } = \dfrac{\det \begin{pmatrix} 1&amp;2&amp;2\\ 1&amp;0&amp;3\\ 1&amp;1&amp;1\\ \end{pmatrix} }{\det(A) } = \frac{3}{6} = \frac{1}{2} \]</div>
-</li>
-</ul>
-<h3 id="n-dimensional-volume-of-parallelepiped"><span class="arithmatex">\(n\)</span>-dimensional volume of parallelepiped<a class="headerlink" href="#n-dimensional-volume-of-parallelepiped" title="Permanent link">¶</a></h3>
-<a href="#362d0c889"><div class="admonition def" id="362d0c889">
-<p class="admonition-title">나란히꼴의 <span class="arithmatex">\(n\)</span>차원 부피(<span class="arithmatex">\(n\)</span>-dimensional volume of parallelepiped)</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\R)\)</span> 의 행 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 에 대하여 벡터 <span class="arithmatex">\(a_1, a_2, \dots, a_n\)</span> 을 이웃한 변으로 가지는 나란히꼴의 <span class="arithmatex">\(n\)</span>차원 부피는 <span class="arithmatex">\(|\det(A)|\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p><span class="arithmatex">\(2 \times 2\)</span> 정사각행렬의 행렬식이 기하학에서 평행사변형의 넓이로 해석되었듯이 <span class="arithmatex">\(n \times n\)</span> 정사각행렬의 행렬식은 <span class="arithmatex">\(n\)</span>차원 나란히꼴의 부피로 해석된다.</p>
-</li>
-<li>
-<p>증명</p>
-</li>
-<li>
-<p>예시</p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;-2&amp;1\\ 1&amp;0&amp;-1\\ 1&amp;1&amp;1\\ \end{pmatrix}\)</span> 의 행렬식의 절댓값은 <span class="arithmatex">\(|\det(A)| = 6\)</span> 이다. 따라서 벡터 <span class="arithmatex">\((1,-2,1), (1, 0, -1), (1,1,1)\)</span> 을 이웃한 변으로 가지는 직육면체의 부피는 <span class="arithmatex">\(6\)</span> 이다.</p>
-<p>실제로 다음 그림을 보면 해당 평행육면체의 세 변의 길이는 <span class="arithmatex">\(\sqrt[]{6}, \sqrt[]{2}, \sqrt[]{3}\)</span> 이므로 부피는 <span class="arithmatex">\(6\)</span> 이다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/127725720-c3260b99-7cc4-4801-852f-20f727794890.png"/></p>
-</li>
-</ul>
-<h3 id="determinant-of-similar-matrices">Determinant of Similar Matrices<a class="headerlink" href="#determinant-of-similar-matrices" title="Permanent link">¶</a></h3>
-<a href="#f21707098"><div class="admonition def" id="f21707098">
-<p class="admonition-title">문제 4.3-15</p>
-<p>두 행렬 <span class="arithmatex">\(A, B \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 가 닮음이면 <span class="arithmatex">\(\det(A) = \det(B)\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(A, B\)</span> 가 닮음이면 <span class="arithmatex">\(B = Q ^{-1}AQ\)</span> 를 만족하는 <span class="arithmatex">\(Q\)</span> 가 존재한다. 그러므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \det(B) = \det(Q ^{-1}AQ)  = \det(Q ^{-1}) \det(A) \det(Q) = \frac{1}{\det(Q) }\det(A) \det(Q) = \det(A) \tag*{■} \]</div>
-</li>
-</ul>
-<hr/>
-<dl>
-<dt>ref:</dt>
-<dd>
-<p>Stephen H. Friedberg, Linear Algebra, 5<sup>th</sup> Edition</p>
-</dd>
-</dl>
-</article>
-</div>
-</div>
-<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+<h1>Redirect to Netlify</h1>
+<script> 
+setTimeout(function () {
+window.location.href = "https://ccss17.netlify.app/" + window.location.pathname;}, 3000);
+</script>
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
             Back to top
           </a>
-</main>
-<!-- 
+        
+      </main>
+      
+        <!-- 
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1528,16 +1529,26 @@ b_s = a_s + ka_r &amp; i = s\\
     </div>
   </div>
 </footer> -->
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
-<script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
-<script src="../../../javascripts/highlight.min.js"></script>
-<script src="../../../javascripts/config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
-<script src="../../../javascripts/b27b3e6448.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="../../../javascripts/highlight.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../javascripts/b27b3e6448.js"></script>
+      
+    
+  </body>
 </html>

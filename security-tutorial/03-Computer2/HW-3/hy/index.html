@@ -1,682 +1,1301 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="ccsss" name="author"/>
-<link href="https://ccss17.github.io/security-tutorial/03-Computer2/HW-3/hy/" rel="canonical"/>
-<link href="../../../../assets/images/bolt-solid.svg" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>GBC Security_03 - ccss17</title>
-<link href="../../../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
-<link href="../../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
-<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
-<link href="../../../../stylesheets/config.css" rel="stylesheet"/>
-</head>
-<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
-<script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#gbc-security_03">
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="ccsss">
+      
+      
+        <link rel="canonical" href="https://ccss17.github.io/security-tutorial/03-Computer2/HW-3/hy/">
+      
+      <link rel="icon" href="../../../../assets/images/bolt-solid.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+  <title>Lorem ipsum dolor sit amet</title>
+
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/config.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gbc-security_03" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
-<header class="md-header" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="ccss17">
-<img alt="logo" src="../../../../assets/images/bolt-solid.svg"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="ccss17" class="md-header__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             ccss17
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               GBC Security_03
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
-</label>
-</form>
-</nav>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
       ccss17
     </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../Math/MathHistory/">
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Math/MathHistory/" class="md-tabs__link">
         Math
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../paper/1404.6388/">
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../paper/1404.6388/" class="md-tabs__link">
         Paper
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../Computer/nand2tetris/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Computer/nand2tetris/" class="md-tabs__link">
         Computer
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../../ProgrammerBase/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ProgrammerBase/" class="md-tabs__link">
         ProgrammerBase
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
         security tutorial
       </a>
-</li>
-</ul>
-</div>
+    </li>
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="ccss17">
-<img alt="logo" src="../../../../assets/images/bolt-solid.svg"/>
-</a>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ccss17" class="md-nav__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
     ccss17
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../..">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
         ccss17
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
         Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Math" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
           Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
         Foundation of Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_1">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Foundation of Math" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
           Foundation of Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/MathHistory/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/MathHistory/" class="md-nav__link">
         History of Math
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Logic/FormalSystem/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/Logic/FormalSystem/" class="md-nav__link">
         Formal System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/incompleteness/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/incompleteness/" class="md-nav__link">
         Incompleteness theorem
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/turing/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/turing/" class="md-nav__link">
         Turing's proof
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/gentzen/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/gentzen/" class="md-nav__link">
         Consistency proof of Peano arithmetic
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Set Theory
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Set Theory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
           Set Theory
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Set/Set/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/Set/Set/" class="md-nav__link">
         Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Set/numbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/Set/numbers/" class="md-nav__link">
         Number Theory
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Set/InfiniteSet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/Set/InfiniteSet/" class="md-nav__link">
         Infinite Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Set/ZFC/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/Set/ZFC/" class="md-nav__link">
         ZFC axiom system
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/ArithmeticOperations/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/ArithmeticOperations/" class="md-nav__link">
         Arithmetic Operations
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/Polynomials/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/Polynomials/" class="md-nav__link">
         Polynomials
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/HyperrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/HyperrealNumbers/" class="md-nav__link">
         Hyperreal Numbers
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/SurrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/SurrealNumbers/" class="md-nav__link">
         Surreal Numbers
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      <label class="md-nav__link" for="__nav_2_7">
         Linear Algebra
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_7">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linear Algebra" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
           Linear Algebra
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/LinearAlgebra/VectorSpace/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/LinearAlgebra/VectorSpace/" class="md-nav__link">
         Vector Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/LinearAlgebra/LinearTransformation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/LinearAlgebra/LinearTransformation/" class="md-nav__link">
         Linear Transformation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/LinearAlgebra/MatrixOperation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/LinearAlgebra/MatrixOperation/" class="md-nav__link">
         Matrix Operation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/LinearAlgebra/Determinants/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/LinearAlgebra/Determinants/" class="md-nav__link">
         Determinants
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/LinearAlgebra/Diagonalization/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/LinearAlgebra/Diagonalization/" class="md-nav__link">
         Diagonalization
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/LinearAlgebra/InnerProductSpaces/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/LinearAlgebra/InnerProductSpaces/" class="md-nav__link">
         Inner Product Spaces
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Math/LinearAlgebra/CanonicalForms/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Math/LinearAlgebra/CanonicalForms/" class="md-nav__link">
         Canonical Forms
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
         Paper
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Paper" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Paper" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
           Paper
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../paper/1404.6388/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../paper/1404.6388/" class="md-nav__link">
         Performance of Python runtimes on a non-numeric scientific code
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../paper/1102.1523/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../paper/1102.1523/" class="md-nav__link">
         The NumPy array: a structure for efficient numerical computation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../paper/facenet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../paper/facenet/" class="md-nav__link">
         Facenet (2015)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../paper/quadruplet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../paper/quadruplet/" class="md-nav__link">
         Quadruplet (2017)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../paper/blueborne/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../paper/blueborne/" class="md-nav__link">
         BlueBorne
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
         Computer
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Computer" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Computer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
           Computer
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Computer/nand2tetris/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Computer/nand2tetris/" class="md-nav__link">
         Nand to Tetris
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Computer/future/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Computer/future/" class="md-nav__link">
         Why the future doesn't need us
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../Computer/Rust/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Computer/Rust/" class="md-nav__link">
         Rust Memo
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         ProgrammerBase
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ProgrammerBase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
           ProgrammerBase
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_2">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      <label class="md-nav__link" for="__nav_5_2">
         Contents
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Contents" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_5_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contents" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
           Contents
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/01-Day1/readme/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/01-Day1/readme/" class="md-nav__link">
         Day 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/02-Day2/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/02-Day2/readme/" class="md-nav__link">
         Day 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/03-Day3/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/03-Day3/readme/" class="md-nav__link">
         Day 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/04-Day4/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/04-Day4/readme/" class="md-nav__link">
         Day 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/05-Day5/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/05-Day5/readme/" class="md-nav__link">
         Day 5
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/docker/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/docker/" class="md-nav__link">
         Docker
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/codingconvention/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/codingconvention/" class="md-nav__link">
         Coding Convention
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/build/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/build/" class="md-nav__link">
         Build System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/information/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/information/" class="md-nav__link">
         Information
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/git/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/git/" class="md-nav__link">
         Git
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/vscode/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/vscode/" class="md-nav__link">
         VSCode
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/markdown/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/markdown/" class="md-nav__link">
         Markdown
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/tmux/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/tmux/" class="md-nav__link">
         Tmux
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/vim/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/vim/" class="md-nav__link">
         Vim
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../../ProgrammerBase/cli/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ProgrammerBase/cli/" class="md-nav__link">
         CLI
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
         security tutorial
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="security tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
           security tutorial
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../01-Base/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01-Base/" class="md-nav__link">
         Day1 Base
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../02-Computer1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02-Computer1/" class="md-nav__link">
         Day2 Computer Principle 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
         Day3 Computer Principle 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../04-Reversing1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04-Reversing1/" class="md-nav__link">
         Day4 Reversing 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../05-Reversing2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05-Reversing2/" class="md-nav__link">
         Day5 Reversing 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../06-Exploit1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06-Exploit1/" class="md-nav__link">
         Day6 Exploit 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../07-Exploit2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07-Exploit2/" class="md-nav__link">
         Day7 Exploit 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../08-Exploit3/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08-Exploit3/" class="md-nav__link">
         Day8 Exploit 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../09-Exploit4/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../09-Exploit4/" class="md-nav__link">
         Day9 Exploit 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../10-Pentesting/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10-Pentesting/" class="md-nav__link">
         Day10 Pentesting
       </a>
-</li>
-</ul>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gbc-security_03">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gbc-security_03" class="md-nav__link">
     GBC Security_03
   </a>
-<nav aria-label="GBC Security_03" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#hw-3">
+  
+    <nav class="md-nav" aria-label="GBC Security_03">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hw-3" class="md-nav__link">
     HW #3
   </a>
-<nav aria-label="HW #3" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1-write-up">
+  
+    <nav class="md-nav" aria-label="HW #3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-write-up" class="md-nav__link">
     1. 자신의 실험 결과에 대한 write-up
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-</ul>
+      
+    </ul>
+  
 </nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>GBC Security_03</h1>
-<h2 id="gbc-security_03">GBC Security_03<a class="headerlink" href="#gbc-security_03" title="Permanent link">¶</a></h2>
-<h3 id="hw-3">HW #3<a class="headerlink" href="#hw-3" title="Permanent link">¶</a></h3>
-<h4 id="1-write-up">1. 자신의 실험 결과에 대한 write-up<a class="headerlink" href="#1-write-up" title="Permanent link">¶</a></h4>
-<hr/>
-<h5 id="1-review">1. Review<a class="headerlink" href="#1-review" title="Permanent link">¶</a></h5>
-<ul>
-<li>가상메모리는 커널 영역과 사용자 영역으로 나뉜다.</li>
-<li>커널 영역 : 커널 관련 메모리 로드, 시스템 콜을 통해서만 접근 가능</li>
-<li>사용자 영역 : stack(함수의 인자, 함수의 리턴 주소값, 지역 변수), heap(동적 할당 메모리), BSS(초기화x, 0으로 초기화된 전역, static변수), data(초기화된 전역, static 변수), text(실행될 어셈블리어들이 저장됨)</li>
-</ul>
-<h5 id="2-wirte-up-1">2. wirte-up (1)<a class="headerlink" href="#2-wirte-up-1" title="Permanent link">¶</a></h5>
-<ul>
-<li>스택 영역에 메모리가 저장되는 과정을 정확히 이해하지 못해서 다시 공부해보았다.  </li>
-<li>c코드로는 메모리 사용을 알 수 없는데, 어셈블리 코드로 보면 그 과정이 전부 나와있는 것을 알았다. </li>
-<li>함수 호출 시와 함수 인자 전달 시에, 스택에서 어떤 일들이 일어나는지 알아보고 싶어서 간단한 c코드를 gdb로 디버깅하여 어셈블리어 코드를 살펴보았다.</li>
-</ul>
-<blockquote>
-<p>다음과 같은 c코드를 gdb로 디버깅한다.</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+<h1>Redirect to Netlify</h1>
+<script> 
+setTimeout(function () {
+window.location.href = "https://ccss17.netlify.app/" + window.location.pathname;}, 3000);
+</script>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"result = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">){</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<blockquote>
-<p>컴파일 시, 디버그 모드로 컴파일하면 소스코드를 같이 볼 수 있다.</p>
-</blockquote>
-<p><img alt="hw0" src="https://user-images.githubusercontent.com/47182864/61030788-22f24e00-a3f9-11e9-893c-39468370e0c9.png"/></p>
-<blockquote>
-<p>c코드에서 int형 변수 x와 y를 각각 5와 10으로 초기화했는데, 어셈블리 코드에서는 *main+4의 sub rsp, 0x10으로 스택에 0x10만큼의 공간을 할당한 후, mov 명령어로 스택의 공간 [rbp-0xc]에 5를, [rbp-8]에 10을 넣어주고 있다. <em>변수를 2개 선언하면 스택의 2개의 공간에 저장된다.</em>
-0x10만큼의 공간에는 int형 변수를 4개까지 담을 수 있으며, 변수 선언을 5개 할 경우에는 스택에 할당하는 크기 또한 증가한다. (0x20)</p>
-</blockquote>
-<p><img alt="hw1" src="https://user-images.githubusercontent.com/47182864/61030790-238ae480-a3f9-11e9-8f07-b34bab8359a4.png"/></p>
-<p>??? 함수 호출 시, 스택의 이용을 보고 싶어서 해봤는데 지역변수 저장하는 것밖에 볼 수 없었다. 너무 간단한 함수라 그런가 호홓호ㅎ?ㅜㅜ</p>
-<blockquote>
-<p><code>ret</code>: CPU가 함수를 호출해서 프로그램의 흐름을 바꿀 때 <code>call</code>을 사용하고, 원래 있던 곳으로 되돌아 갈 때 <code>ret</code> 명령어를 사용한다. call 명령어가 스택에 저장해놓은 return 주소값을 Pop해서 rip레지스터에 저장해준다고 어제 찬솔님이 설명하셨다.</p>
-</blockquote>
-<p><img alt="hw1-2" src="https://user-images.githubusercontent.com/47182864/61031122-d4917f00-a3f9-11e9-9f35-121dcf0798d3.png"/></p>
-<ul>
-<li>찾다보다 보니 이거 c배울때 배웠던 것 같다ㅎㅎㅎ. 다시 보자!</li>
-</ul>
-<blockquote>
-<p>스택 프레임 : 함수 호출시 할당되는 메모리 블록
-함수 호출이 완료되면, 기존에 선언된 지역변수에 접근이 불가능하다. (할당된 메모리 반환되므로)
-아래 그림에서, fct2() 함수가 호출되면서 함수 내부에 선언된 변수 e, h가 스택에 할당 -&gt; 이 메모리 블록이 fct2()의 스택 프레임이라 한다.</p>
-</blockquote>
-<p><img alt="hw5" src="https://user-images.githubusercontent.com/47182864/61034071-88493d80-a3ff-11e9-9fe1-295ec58af534.png"/></p>
-<blockquote>
-<p>sp register : 스택 프레임을 가리키는 레지스터 (32bit : esp , 64bit : rsp)
-sp는 변수가 할당될 때마다 증가하면서, 다음 변수가 할당될 메모리 위치를 가리킨다.</p>
-</blockquote>
-<p><img alt="hw5-1" src="https://user-images.githubusercontent.com/47182864/61034067-87b0a700-a3ff-11e9-8bf2-809101316307.png"/></p>
-<ul>
-<li>breakpoint를 add()함수로 걸고 다시 어셈블리 코드를 살펴보면 스택 현황을 볼 수 있었다!!!</li>
-</ul>
-<p><img alt="add" src="https://user-images.githubusercontent.com/47182864/61036160-7ff30180-a403-11e9-975c-163ea1088c86.png"/></p>
-<h5 id="3-write-up-2">3. write-up (2)<a class="headerlink" href="#3-write-up-2" title="Permanent link">¶</a></h5>
-<ul>
-<li>malloc으로 할당한 메모리는 정말 힙 영역으로 구분되어 있을까 ?! 이것도 어셈블리 코드로 확인해보기로 했다!  </li>
-</ul>
-<blockquote>
-<p>이번에도 간단한 코드를 작성해서...</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+              
+                
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="mi">20</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span><span class="w"></span>
 
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
-<span class="w">        </span><span class="n">m</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span><span class="w"></span>
-<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">m</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<blockquote>
-<p>debug 모드로 컴파일하여 gdb로 열어본다. for문을 돌면서 malloc을 이용한 배열 m[i]에 값을 할당해줄때, heap영역이 이용되는 것을 볼 수 있다. 파란색으로 표시된 것이 heap영역, 노란색으로 표시된 것이 stack영역이다.</p>
-</blockquote>
-<p><img alt="heap" src="https://user-images.githubusercontent.com/47182864/61032802-1b34a880-a3fd-11e9-9727-35e75fa48181.png"/></p>
-</article>
-</div>
-</div>
-<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
             Back to top
           </a>
-</main>
-<!-- 
+        
+      </main>
+      
+        <!-- 
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -688,16 +1307,26 @@ sp는 변수가 할당될 때마다 증가하면서, 다음 변수가 할당될 
     </div>
   </div>
 </footer> -->
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
-<script src="../../../../assets/javascripts/bundle.756773cc.min.js"></script>
-<script src="../../../../javascripts/highlight.min.js"></script>
-<script src="../../../../javascripts/config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
-<script src="../../../../javascripts/b27b3e6448.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="../../../../javascripts/highlight.min.js"></script>
+      
+        <script src="../../../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../../javascripts/b27b3e6448.js"></script>
+      
+    
+  </body>
 </html>

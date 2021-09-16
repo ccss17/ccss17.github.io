@@ -1,1889 +1,1603 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="ccsss" name="author"/>
-<link href="https://ccss17.github.io/Math/LinearAlgebra/Diagonalization/" rel="canonical"/>
-<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>Diagonalization - ccss17</title>
-<link href="../../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
-<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
-<link href="../../../stylesheets/config.css" rel="stylesheet"/>
-</head>
-<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
-<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#diagonalizable">
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="ccsss">
+      
+      
+        <link rel="canonical" href="https://ccss17.github.io/Math/LinearAlgebra/Diagonalization/">
+      
+      <link rel="icon" href="../../../assets/images/bolt-solid.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+  <title>Lorem ipsum dolor sit amet</title>
+
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/config.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#diagonalizable" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
-<header class="md-header" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
-<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ccss17" class="md-header__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             ccss17
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Diagonalization
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
-</label>
-</form>
-</nav>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
       ccss17
     </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../MathHistory/">
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../MathHistory/" class="md-tabs__link md-tabs__link--active">
         Math
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../paper/1404.6388/">
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../paper/1404.6388/" class="md-tabs__link">
         Paper
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Computer/nand2tetris/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Computer/nand2tetris/" class="md-tabs__link">
         Computer
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../ProgrammerBase/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ProgrammerBase/" class="md-tabs__link">
         ProgrammerBase
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../security-tutorial/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../security-tutorial/" class="md-tabs__link">
         security tutorial
       </a>
-</li>
-</ul>
-</div>
+    </li>
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
-<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
-</a>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ccss17" class="md-nav__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
     ccss17
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         ccss17
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
         Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Math" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
           Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
         Foundation of Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_1">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Foundation of Math" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
           Foundation of Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../MathHistory/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MathHistory/" class="md-nav__link">
         History of Math
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Logic/FormalSystem/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Logic/FormalSystem/" class="md-nav__link">
         Formal System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../incompleteness/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../incompleteness/" class="md-nav__link">
         Incompleteness theorem
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../turing/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turing/" class="md-nav__link">
         Turing's proof
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../gentzen/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gentzen/" class="md-nav__link">
         Consistency proof of Peano arithmetic
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Set Theory
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Set Theory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
           Set Theory
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/Set/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/Set/" class="md-nav__link">
         Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/numbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/numbers/" class="md-nav__link">
         Number Theory
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/InfiniteSet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/InfiniteSet/" class="md-nav__link">
         Infinite Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/ZFC/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/ZFC/" class="md-nav__link">
         ZFC axiom system
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ArithmeticOperations/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArithmeticOperations/" class="md-nav__link">
         Arithmetic Operations
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Polynomials/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Polynomials/" class="md-nav__link">
         Polynomials
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../HyperrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HyperrealNumbers/" class="md-nav__link">
         Hyperreal Numbers
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../SurrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SurrealNumbers/" class="md-nav__link">
         Surreal Numbers
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7">
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" checked>
+      
+      <label class="md-nav__link" for="__nav_2_7">
         Linear Algebra
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_7">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linear Algebra" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
           Linear Algebra
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../VectorSpace/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VectorSpace/" class="md-nav__link">
         Vector Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../LinearTransformation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinearTransformation/" class="md-nav__link">
         Linear Transformation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../MatrixOperation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MatrixOperation/" class="md-nav__link">
         Matrix Operation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Determinants/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Determinants/" class="md-nav__link">
         Determinants
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           Diagonalization
           <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Diagonalization
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#diagonalizable">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diagonalizable" class="md-nav__link">
     Diagonalizable
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#eigenvector">
+      
+        <li class="md-nav__item">
+  <a href="#eigenvector" class="md-nav__link">
     Eigenvector
   </a>
-<nav aria-label="Eigenvector" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-eigenvector">
+  
+    <nav class="md-nav" aria-label="Eigenvector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-eigenvector" class="md-nav__link">
     Properties of eigenvector
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#characteristic-polynomial-finding-eigenvalue">
+        
+          <li class="md-nav__item">
+  <a href="#characteristic-polynomial-finding-eigenvalue" class="md-nav__link">
     Characteristic polynomial (Finding eigenvalue)
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#finding-eigenvector">
+        
+          <li class="md-nav__item">
+  <a href="#finding-eigenvector" class="md-nav__link">
     Finding eigenvector
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#geometric-interpretation-of-eigenvector-of-linear-operator">
+        
+          <li class="md-nav__item">
+  <a href="#geometric-interpretation-of-eigenvector-of-linear-operator" class="md-nav__link">
     Geometric Interpretation of Eigenvector of Linear Operator
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#diagonalizability">
+      
+        <li class="md-nav__item">
+  <a href="#diagonalizability" class="md-nav__link">
     Diagonalizability
   </a>
-<nav aria-label="Diagonalizability" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#split-over">
+  
+    <nav class="md-nav" aria-label="Diagonalizability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#split-over" class="md-nav__link">
     split over
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#algebraic-multiplicity">
+        
+          <li class="md-nav__item">
+  <a href="#algebraic-multiplicity" class="md-nav__link">
     Algebraic Multiplicity
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#eigenspace">
+        
+          <li class="md-nav__item">
+  <a href="#eigenspace" class="md-nav__link">
     Eigenspace
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#diagonalizable-determination">
+        
+          <li class="md-nav__item">
+  <a href="#diagonalizable-determination" class="md-nav__link">
     Diagonalizable Determination
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#direct-sum">
+      
+        <li class="md-nav__item">
+  <a href="#direct-sum" class="md-nav__link">
     Direct sum
   </a>
-<nav aria-label="Direct sum" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-direct-sum">
+  
+    <nav class="md-nav" aria-label="Direct sum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-direct-sum" class="md-nav__link">
     Properties of direct sum
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#invariant-subspace">
+      
+        <li class="md-nav__item">
+  <a href="#invariant-subspace" class="md-nav__link">
     Invariant Subspace
   </a>
-<nav aria-label="Invariant Subspace" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cyclic-subspace">
+  
+    <nav class="md-nav" aria-label="Invariant Subspace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cyclic-subspace" class="md-nav__link">
     Cyclic subspace
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#restriction">
+        
+          <li class="md-nav__item">
+  <a href="#restriction" class="md-nav__link">
     restriction
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cayley-hamilton-theorem">
+        
+          <li class="md-nav__item">
+  <a href="#cayley-hamilton-theorem" class="md-nav__link">
     Cayley-Hamilton theorem
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#invariant-subspace-and-direct-sum">
+        
+          <li class="md-nav__item">
+  <a href="#invariant-subspace-and-direct-sum" class="md-nav__link">
     Invariant subspace and Direct sum
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../InnerProductSpaces/">
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InnerProductSpaces/" class="md-nav__link">
         Inner Product Spaces
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CanonicalForms/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CanonicalForms/" class="md-nav__link">
         Canonical Forms
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
         Paper
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Paper" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Paper" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
           Paper
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/1404.6388/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/1404.6388/" class="md-nav__link">
         Performance of Python runtimes on a non-numeric scientific code
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/1102.1523/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/1102.1523/" class="md-nav__link">
         The NumPy array: a structure for efficient numerical computation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/facenet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/facenet/" class="md-nav__link">
         Facenet (2015)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/quadruplet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/quadruplet/" class="md-nav__link">
         Quadruplet (2017)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/blueborne/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/blueborne/" class="md-nav__link">
         BlueBorne
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
         Computer
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Computer" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Computer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
           Computer
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Computer/nand2tetris/" class="md-nav__link">
         Nand to Tetris
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Computer/future/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Computer/future/" class="md-nav__link">
         Why the future doesn't need us
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Computer/Rust/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Computer/Rust/" class="md-nav__link">
         Rust Memo
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         ProgrammerBase
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ProgrammerBase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
           ProgrammerBase
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_2">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      <label class="md-nav__link" for="__nav_5_2">
         Contents
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Contents" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_5_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contents" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
           Contents
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/01-Day1/readme/" class="md-nav__link">
         Day 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/02-Day2/readme/" class="md-nav__link">
         Day 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/03-Day3/readme/" class="md-nav__link">
         Day 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/04-Day4/readme/" class="md-nav__link">
         Day 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/05-Day5/readme/" class="md-nav__link">
         Day 5
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/docker/" class="md-nav__link">
         Docker
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/codingconvention/" class="md-nav__link">
         Coding Convention
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/build/" class="md-nav__link">
         Build System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/information/" class="md-nav__link">
         Information
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/git/" class="md-nav__link">
         Git
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/vscode/" class="md-nav__link">
         VSCode
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/markdown/" class="md-nav__link">
         Markdown
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/tmux/" class="md-nav__link">
         Tmux
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/vim/" class="md-nav__link">
         Vim
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/cli/" class="md-nav__link">
         CLI
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
         security tutorial
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="security tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
           security tutorial
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/01-Base/" class="md-nav__link">
         Day1 Base
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/02-Computer1/" class="md-nav__link">
         Day2 Computer Principle 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/03-Computer2/" class="md-nav__link">
         Day3 Computer Principle 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/04-Reversing1/" class="md-nav__link">
         Day4 Reversing 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/05-Reversing2/" class="md-nav__link">
         Day5 Reversing 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/06-Exploit1/" class="md-nav__link">
         Day6 Exploit 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/07-Exploit2/" class="md-nav__link">
         Day7 Exploit 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/08-Exploit3/" class="md-nav__link">
         Day8 Exploit 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/09-Exploit4/" class="md-nav__link">
         Day9 Exploit 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/10-Pentesting/" class="md-nav__link">
         Day10 Pentesting
       </a>
-</li>
-</ul>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#diagonalizable">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#diagonalizable" class="md-nav__link">
     Diagonalizable
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#eigenvector">
+      
+        <li class="md-nav__item">
+  <a href="#eigenvector" class="md-nav__link">
     Eigenvector
   </a>
-<nav aria-label="Eigenvector" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-eigenvector">
+  
+    <nav class="md-nav" aria-label="Eigenvector">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-eigenvector" class="md-nav__link">
     Properties of eigenvector
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#characteristic-polynomial-finding-eigenvalue">
+        
+          <li class="md-nav__item">
+  <a href="#characteristic-polynomial-finding-eigenvalue" class="md-nav__link">
     Characteristic polynomial (Finding eigenvalue)
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#finding-eigenvector">
+        
+          <li class="md-nav__item">
+  <a href="#finding-eigenvector" class="md-nav__link">
     Finding eigenvector
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#geometric-interpretation-of-eigenvector-of-linear-operator">
+        
+          <li class="md-nav__item">
+  <a href="#geometric-interpretation-of-eigenvector-of-linear-operator" class="md-nav__link">
     Geometric Interpretation of Eigenvector of Linear Operator
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#diagonalizability">
+      
+        <li class="md-nav__item">
+  <a href="#diagonalizability" class="md-nav__link">
     Diagonalizability
   </a>
-<nav aria-label="Diagonalizability" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#split-over">
+  
+    <nav class="md-nav" aria-label="Diagonalizability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#split-over" class="md-nav__link">
     split over
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#algebraic-multiplicity">
+        
+          <li class="md-nav__item">
+  <a href="#algebraic-multiplicity" class="md-nav__link">
     Algebraic Multiplicity
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#eigenspace">
+        
+          <li class="md-nav__item">
+  <a href="#eigenspace" class="md-nav__link">
     Eigenspace
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#diagonalizable-determination">
+        
+          <li class="md-nav__item">
+  <a href="#diagonalizable-determination" class="md-nav__link">
     Diagonalizable Determination
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#direct-sum">
+      
+        <li class="md-nav__item">
+  <a href="#direct-sum" class="md-nav__link">
     Direct sum
   </a>
-<nav aria-label="Direct sum" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-direct-sum">
+  
+    <nav class="md-nav" aria-label="Direct sum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-direct-sum" class="md-nav__link">
     Properties of direct sum
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#invariant-subspace">
+      
+        <li class="md-nav__item">
+  <a href="#invariant-subspace" class="md-nav__link">
     Invariant Subspace
   </a>
-<nav aria-label="Invariant Subspace" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cyclic-subspace">
+  
+    <nav class="md-nav" aria-label="Invariant Subspace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cyclic-subspace" class="md-nav__link">
     Cyclic subspace
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#restriction">
+        
+          <li class="md-nav__item">
+  <a href="#restriction" class="md-nav__link">
     restriction
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cayley-hamilton-theorem">
+        
+          <li class="md-nav__item">
+  <a href="#cayley-hamilton-theorem" class="md-nav__link">
     Cayley-Hamilton theorem
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#invariant-subspace-and-direct-sum">
+        
+          <li class="md-nav__item">
+  <a href="#invariant-subspace-and-direct-sum" class="md-nav__link">
     Invariant subspace and Direct sum
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>Diagonalization</h1>
-<h2 id="diagonalizable">Diagonalizable<a class="headerlink" href="#diagonalizable" title="Permanent link">¶</a></h2>
-<a href="#d6288ce2a"><div class="admonition def" id="d6288ce2a">
-<p class="admonition-title">선형연산자의 대각화가능(diagonalizable)</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 에 대하여 <span class="arithmatex">\([\mathbf{T} ]_{\beta }\)</span> 가 대각행렬이 되도록 하는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저 <span class="arithmatex">\(\beta\)</span> 가 존재하면 <span class="arithmatex">\(\mathbf{T}\)</span> 를 대각화가능하다고 한다.</p>
-</div></a>
-<ul>
-<li>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 를 대각화가능하게 만드는, 즉 <span class="arithmatex">\([\mathbf{T} ]_{\beta}\)</span> 가 대각행렬이 되게 하는 순서기저 <span class="arithmatex">\(\beta = \{v_1, v_2, \dots, v_n \}\)</span> 를 찾아보자. <span class="arithmatex">\(D = [\mathbf{T} ] _{\beta }\)</span> 가 대각행렬이면 <a href="../LinearTransformation/#c16bc5e5b">선형변환의 행렬표현</a> 에 의하여 <span class="arithmatex">\(v_j \in \beta\)</span> 와 <span class="arithmatex">\(\lambda _j = D _{jj}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T} (v_j) = \displaystyle \sum_{i=1}^{n}D _{ij}v_j = \lambda _jv_j\)</span> 이다. </p>
-<p>역으로 스칼라 <span class="arithmatex">\(\lambda _1, \lambda _2, \dots, \lambda _n\)</span> 에 대하여 <span class="arithmatex">\(\beta\)</span> 가 <span class="arithmatex">\(\mathbf{T} (v_j) = \lambda _jv_j\)</span> 를 만족하면 다음이 성립한다. </p>
-<div class="arithmatex">\[ [\mathbf{T} ]_{\beta } = \begin{pmatrix} \lambda _{1}&amp;0&amp;\dots&amp;0\\ 0&amp;\lambda _2&amp;\dots&amp;0\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;\lambda _n\\ \end{pmatrix} \]</div>
-<p>선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능이면 기저 <span class="arithmatex">\(\beta\)</span> 의 각 벡터 <span class="arithmatex">\(v\)</span> 는 적절한 스칼라 <span class="arithmatex">\(\lambda\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T} (v) = \lambda v\)</span> 를 만족한다. <span class="arithmatex">\(v\)</span> 는 기저의 원소이므로 영벡터가 아니다. 이를 기반으로 고유벡터의 정의를 내릴 수 있다.</p>
-</li>
-</ul>
-<a href="#4c3653420"><div class="admonition def" id="4c3653420">
-<p class="admonition-title">정사각행렬의 대각화가능(diagonalizable)</p>
-<p>선형연산자 <span class="arithmatex">\(\mathbf{L}_{A}\)</span> 가 대각화가능이면 정사각행렬 <span class="arithmatex">\(A\)</span> 를 대각화가능이라고 한다.</p>
-</div></a>
-<h2 id="eigenvector">Eigenvector<a class="headerlink" href="#eigenvector" title="Permanent link">¶</a></h2>
-<a href="#799f750d9"><div class="admonition def" id="799f750d9">
-<p class="admonition-title">선형연산자의 고유벡터(eigenvector) 와 고윳값(eigenvalue)</p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span>  의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 에 대하여 다음과 같이 정의한다.</p>
-<ul>
-<li>
-<p>영벡터가 아닌 벡터 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 와 스칼라 <span class="arithmatex">\(\lambda\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T} (v) = \lambda v\)</span> 이면 벡터 <span class="arithmatex">\(v\)</span> 를 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터라 한다.</p>
-</li>
-<li>
-<p>스칼라 <span class="arithmatex">\(\lambda\)</span> 를 고유벡터 <span class="arithmatex">\(v\)</span> 에 대응하는 고윳값이라 한다.</p>
-</li>
-</ul>
-</div></a>
-<ul>
-<li>고유벡터는 특성벡터(characteristic vector, proper vector), 고윳값은 특성값(characteristic value, proper value) 라고도 부른다.</li>
-</ul>
-<a href="#5f167c003"><div class="admonition def" id="5f167c003">
-<p class="admonition-title">정사각행렬의 고유벡터(eigenvector) 와 고윳값(eigenvalue)</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 에 대하여 다음과 같이 정의한다. </p>
-<ul>
-<li>
-<p><span class="arithmatex">\(\mathbf{L}_{A}\)</span> 의 고유벡터, 즉 스칼라 <span class="arithmatex">\(\lambda\)</span> 에 대하여 <span class="arithmatex">\(Av = \lambda v\)</span> 를 만족하는 영벡터가 아닌 벡터 <span class="arithmatex">\(v \in \mathbf{F} ^{n}\)</span> 을 <span class="arithmatex">\(A\)</span> 의 고유벡터라 한다.</p>
-</li>
-<li>
-<p>스칼라 <span class="arithmatex">\(\lambda\)</span> 를 고유벡터 <span class="arithmatex">\(v\)</span> 에 대응하는 행렬 <span class="arithmatex">\(A\)</span> 의 고윳값이라 한다.</p>
-</li>
-</ul>
-</div></a>
-<h3 id="properties-of-eigenvector">Properties of eigenvector<a class="headerlink" href="#properties-of-eigenvector" title="Permanent link">¶</a></h3>
-<a href="#57f0cd776"><div class="admonition def" id="57f0cd776">
-<p class="admonition-title">정리 5.1</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능인 것과 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저 <span class="arithmatex">\(\beta\)</span> 가 존재하는 것은 동치이다.</p>
-<p>즉, <span class="arithmatex">\(\beta = \{v_1, v_2, \dots, v_n \}\)</span> 가 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저이면 <span class="arithmatex">\(D = [\mathbf{T} ] _{\beta}\)</span> 는 대각행렬이며 <span class="arithmatex">\(D _{jj}\)</span> 는 <span class="arithmatex">\(v_j\)</span> 에 대응하는 고윳값이다.</p>
-</div></a>
-<a href="#4efccd9c0"><div class="admonition def" id="4efccd9c0">
-<p class="admonition-title">정리 5.1 따름정리</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 가 대각화가능인 것과 <span class="arithmatex">\(A\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 순서기저가 존재하는 것은 동치이다.</p>
-<p><span class="arithmatex">\(\{v_1, v_2, \dots, v_n\}\)</span> 를 <span class="arithmatex">\(A\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 순서기저라고 하면 <span class="arithmatex">\(j\)</span> 열이 벡터 <span class="arithmatex">\(v_j\)</span> 인 <span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(Q\)</span> 에 대하여 <span class="arithmatex">\(D = Q ^{-1}AQ\)</span> 는 대각행렬이며 <span class="arithmatex">\(D _{jj}\)</span> 는 <span class="arithmatex">\(v_j\)</span> 에 대응하는 <span class="arithmatex">\(A\)</span> 의 교윳값이다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 행렬 <span class="arithmatex">\(A\)</span> 가 대각화가능인 것과 대각행렬과 닮음인 것이 동치임을 말해준다. </p>
-</li>
-<li>
-<p>선형연산자를 대각화한 행렬이 <span class="arithmatex">\(D = [\mathbf{T} ]_{\beta }\)</span> 인데, 정사각행렬을 대각화한 행렬이 <span class="arithmatex">\(D = Q ^{-1}AQ\)</span> 인 이유는 <a href="../LinearTransformation/#b7acffb79">정리 2.23 따름정리</a> 에서 바로 나온다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;3\\ 4&amp;2\\ \end{pmatrix}\)</span> 와 벡터 <span class="arithmatex">\(v_1 = \begin{pmatrix} 1\\ -1\\ \end{pmatrix}, v_2 = \begin{pmatrix} 3\\ 4\\ \end{pmatrix}\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \mathbf{L}_{A}(v_1) = \begin{pmatrix} -2\\ 2\\ \end{pmatrix} = -2v_1 \]</div>
-<div class="arithmatex">\[ \mathbf{L}_{A}(v_2) = \begin{pmatrix} 15\\ 20\\ \end{pmatrix} = 5v_2 \]</div>
-<p>그러므로 <span class="arithmatex">\(v_1, v_2\)</span> 는 <span class="arithmatex">\(\mathbf{L}_{A}\)</span> 와 <span class="arithmatex">\(A\)</span> 의 고유벡터이다. <span class="arithmatex">\(v_1, v_2\)</span> 에 대응하는 고윳값은 <span class="arithmatex">\(\lambda _1 = -2, \lambda _2 = 5\)</span> 이다.</p>
-<p>이때 <span class="arithmatex">\(\beta = \{v_1, v_2\}\)</span> 는 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(\mathbf{L}_{A}\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\R ^{2}\)</span> 의 순서기저이다. 따라서 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(\mathbf{L}_{A}\)</span> 는 대각화가능이다. </p>
-<p>또한 정리 5.1 과 따름정리에 의하여 <span class="arithmatex">\(Q = \begin{pmatrix} 1&amp;3\\ -1&amp;4\\ \end{pmatrix}\)</span> 에 대하여 <span class="arithmatex">\(Q ^{-1}AQ = [\mathbf{L}_{A}]_{\beta } = \begin{pmatrix} -2&amp;0\\ 0&amp;5\\ \end{pmatrix}\)</span> 이다.</p>
-</li>
-</ul>
-<a href="#0843f6d93"><div class="admonition def" id="0843f6d93">
-<p>고유벡터와 고윳값을 가지지 않는 선형연산자나 행렬이 존재한다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\R ^{2}\)</span> 의 벡터를 <span class="arithmatex">\(\dfrac{\pi }{2}\)</span> 만큼 회전시키는 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 영이 아닌 벡터 <span class="arithmatex">\(v \in \R ^{2}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T} (v)\)</span> 는 <span class="arithmatex">\(0\)</span> 과 <span class="arithmatex">\(v\)</span> 를 지나는 직선 위에 있지 않다. </p>
-<p>이는 <span class="arithmatex">\(\mathbf{T} (v)\)</span> 를 <span class="arithmatex">\(v\)</span> 의 스칼라배로 표현할 수 없다는 것이다. 따라서 <span class="arithmatex">\(\mathbf{T}\)</span> 는 고유벡터와 고윳값을 가지지 않으며, 대각화 불가능하다.</p>
-</li>
-</ul>
-<h3 id="characteristic-polynomial-finding-eigenvalue">Characteristic polynomial (Finding eigenvalue)<a class="headerlink" href="#characteristic-polynomial-finding-eigenvalue" title="Permanent link">¶</a></h3>
-<a href="#d54ad8e97"><div class="admonition def" id="d54ad8e97">
-<p class="admonition-title">정리 5.2</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}\)</span> 에 대하여 스칼라 <span class="arithmatex">\(\lambda\)</span> 가 <span class="arithmatex">\(A\)</span> 의 고윳값인 것과 <span class="arithmatex">\(\det(A - \lambda I_n) = 0\)</span> 인 것은 동치이다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 고윳값을 계산하는 방법을 제시한다.</p>
-</li>
-<li>
-<p>이 정리는 특성다항식의 근을 찾으면 유한차원 벡터공간의 행렬 또는 선형연산자의 고윳값을 모두 밝힐 수 있음을 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p>스칼라 <span class="arithmatex">\(\lambda\)</span> 가 <span class="arithmatex">\(A\)</span> 의 고윳값임을 가정하자.  스칼라 <span class="arithmatex">\(\lambda\)</span> 가 <span class="arithmatex">\(A\)</span> 의 고윳값인 것과 <span class="arithmatex">\(Av = \lambda v\)</span> 인 영이 아닌 벡터 <span class="arithmatex">\(v \in \mathbf{F} ^{n}\)</span> 가 존재하는 것은 동치이다. 그러므로 <span class="arithmatex">\((A - \lambda I_n) (v) = 0\)</span> 이다.</p>
-<p><span class="arithmatex">\(A - \lambda I_n\)</span> 이 가역이면 <span class="arithmatex">\(v = 0\)</span> 이므로 모순이다. 즉, <span class="arithmatex">\(A - \lambda I_n\)</span> 는 가역이 아니다. <a href="../Determinants/#b40051741">정리 4.7 따름정리</a> 에 의하여 <span class="arithmatex">\(\det(A - \lambda I_n) = 0\)</span> 이다.</p>
-</li>
-</ul>
-<a href="#505d63b57"><div class="admonition def" id="505d63b57">
-<p class="admonition-title">정사각행렬의 특성다항식(Characteristic polynomial) </p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 의 특성다항식은 다항식 <span class="arithmatex">\(f(t) = \det(A - tI_n)\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>정리 5.2 는 행렬의 고윳값이 특성다항식의 근임을 말해준다. 이는 특성다항식의 계산을 통하여 행렬 또는 선형연산자의 모든 고윳값을 얻을 수 있음을 뜻한다. </p>
-</li>
-<li>
-<p>이때 <span class="arithmatex">\(A - tI_n \not\in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 이다. 행렬 <span class="arithmatex">\(A - tI_n\)</span> 는 <span class="arithmatex">\(\mathbf{F}\)</span> 를 계수로 가지는 <span class="arithmatex">\(t\)</span> 에 대한 유리식으로 이루어진 체 <span class="arithmatex">\(\mathbf{F} (t)\)</span> 에 속해있다. 즉, <span class="arithmatex">\(A - tI_n \in \mathbf{M}_{n \times n}(\mathbf{F}(t) )\)</span> 이다.</p>
-<p>행렬식에 대한 정리들을 <span class="arithmatex">\(\mathbf{F} (t)\)</span> 에서도 사용할 수 있다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;1\\ 4&amp;1\\ \end{pmatrix} \in \mathbf{M}_{2 \times 2}(\R )\)</span> 의 고윳값을 구하기 위하여 다음 특성다항식을 풀어보자. </p>
-<div class="arithmatex">\[ \det(A - tI_2) = \det \begin{pmatrix} 1-t&amp;1\\ 4&amp;1-t\\ \end{pmatrix} = t ^{2} - 2t - 3 = (t - 3)(t + 1) \]</div>
-<p>정리 5.2 에 의하여 <span class="arithmatex">\(A\)</span> 의 고윳값은 <span class="arithmatex">\(3, -1\)</span> 뿐이다.</p>
-</li>
-</ul>
-<a href="#409edc8c4"><div class="admonition def" id="409edc8c4">
-<p class="admonition-title">선형연산자의 행렬식(determinant)</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저 <span class="arithmatex">\(\beta\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T}\)</span> 의 행렬식을 다음과 같이 정의한다.</p>
-<div class="arithmatex">\[ \det(\mathbf{T} ) := \det([\mathbf{T} ]_{\beta }) \]</div>
-</div></a>
-<a href="#2f3482489"><div class="admonition def" id="2f3482489">
-<p class="admonition-title">선형연산자의 특성다항식(Characteristic polynomial)</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저 <span class="arithmatex">\(\beta\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식을 다음과 같이 정의한다.</p>
-<div class="arithmatex">\[ f(t) = \det([\mathbf{T} ]_{\beta } - tI_n) \]</div>
-</div></a>
-<a href="#b150e4e68"><div class="admonition def" id="b150e4e68">
-<p class="admonition-title">문제 5.1-13</p>
-<p>닮은 행렬은 같은 특성다항식을 가진다.</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자의 행렬식과 특성다항식의 정의는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저의 선택에 관계없다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 선형연산자의 행렬식과 특성다항식의 정의의 기저로 어떤 기저를 선택하든 관계없다는 것을 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(A, B\)</span> 가 닮음이면 가역행렬 <span class="arithmatex">\(Q\)</span> 에 대하여 <span class="arithmatex">\(B = Q ^{-1}AQ\)</span> 이다. 그러므로 다음이 성립한다.</p>
-<div class="arithmatex">\[ Q ^{-1}(A-tI_n)Q = Q ^{-1}AQ - t Q ^{-1}I_nQ = B - tI_n \]</div>
-<p>그러므로 <span class="arithmatex">\(A-tI_n\)</span> 과 <span class="arithmatex">\(B-tI_n\)</span> 은 닮음이다. 따라서 <a href="../Determinants/#f21707098">문제 4.3-15</a> 에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \det(A -tI_n) = \det(B-tI_n) \]</div>
-<p>한편 <a href="../LinearTransformation/#acf61b9cb">정리 2.23</a> 은 선형연산자의 서로 다른 순서기저에 의한 행렬표현이 서로 닮음임을 말해준다. 그러므로 모든 증명이 끝났다. ■ </p>
-</li>
-<li>
-<p>예시 </p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{P}_{2}(\R)\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T} (f(x)) = f(x) + (x+1) f'(x)\)</span> 의 고윳값을 <span class="arithmatex">\(\mathbf{P}_{2}(\R)\)</span> 의 표준순서기저 <span class="arithmatex">\(\beta\)</span> 로 구해보자. 다음이 성립한다.</p>
-<div class="arithmatex">\[ \mathbf{T} (1) = 1 + (x + 1) \cdot 0 = 1 \]</div>
-<div class="arithmatex">\[ \mathbf{T} (x) = x + (x + 1) \cdot 1 = 1 + 2x \]</div>
-<div class="arithmatex">\[ \mathbf{T} (x ^{2}) = x ^{2} + (x + 1) \cdot 2x = 0 + 2x + 3x ^{2}\]</div>
-<div class="arithmatex">\[ [\mathbf{T} ]_{\beta } = \begin{pmatrix} 1&amp;1&amp;0\\ 0&amp;2&amp;2\\ 0&amp;0&amp;3\\ \end{pmatrix} \]</div>
-<p>선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식의 정의와 <a href="../Determinants/#f334dfff7">문제 4.2-23</a> 에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \det([\mathbf{T} ]_{\beta } - tI_3) &amp;= \det \begin{pmatrix} 1-t&amp;1&amp;0\\ 0&amp;2-t&amp;2\\ 0&amp;0&amp;3-t\\ \end{pmatrix} \\ &amp;= (1-t)(2-t)(3-t)\\ &amp;= -(t-1)(2-t)(3-t)\\ \end{split}\end{equation} \tag*{} \]</div>
-<p>정리 5.2 에 의하여 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 또는 행렬 <span class="arithmatex">\([\mathbf{T} ]_{\beta }\)</span> 의 고윳값은 <span class="arithmatex">\(1,2,3\)</span> 뿐이다.</p>
-</li>
-</ul>
-<a href="#3cd1e9499"><div class="admonition def" id="3cd1e9499">
-<p class="admonition-title">정리 5.3</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 에 대하여 다음이 성립한다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(A\)</span> 의 특성다항식은 <span class="arithmatex">\(n\)</span>차 다항식이고, 최고차항의 계수는 <span class="arithmatex">\((-1) ^{n}\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(A\)</span> 에는 최대 <span class="arithmatex">\(n\)</span> 개의 서로 다른 고윳값이 있다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(n = 1\)</span> 을 가정하자. <span class="arithmatex">\(A = (A _{11}) \in \mathbf{M}_{1 \times 1}(\mathbf{F} )\)</span> 의 특성다항식은 다음과 같다.</p>
-<div class="arithmatex">\[ \det(A - tI_1) = \det((A _{11} - t)) = A _{11} - t \]</div>
-<p><span class="arithmatex">\(n = 1\)</span> 일 때 <span class="arithmatex">\(A\)</span> 의 특성다항식은 <span class="arithmatex">\(1\)</span>차 다항식이고, 최고차항의 계수가 <span class="arithmatex">\((-1) ^{1} = -1\)</span> 이다. 또한 정리 5.2 에 의하여 <span class="arithmatex">\(1\)</span>차 다항식이 최대 <span class="arithmatex">\(1\)</span> 개의 서로 다른 근을 가지기 때문에 <span class="arithmatex">\(A\)</span> 는 최대 <span class="arithmatex">\(1\)</span> 개의 서로 다른 고윳값을 가진다. ▲ </p>
-<p><span class="arithmatex">\(n - 1\)</span> 에 대하여 정리가 성립함을 가정하고 <span class="arithmatex">\(n\)</span> 에 대하여 정리가 성립함을 보이면 증명이 끝난다. <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 에 대하여 <span class="arithmatex">\(B = A - tI_n\)</span> 로 두면 <span class="arithmatex">\(A\)</span> 의 특성다항식은 다음과 같다. </p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \det(B) &amp;= (-1) ^{1 + 1} (A _{11} - t) \cdot \det(\tilde{B}_{11}) + \sum_{j=2}^{n}(-1) ^{1+j} A _{1j} \cdot \det(\tilde{B}_{1j}) \\ &amp;= (-1) ^{1+1}(-t)\det(\tilde{B}_{11}) + (-1) ^{1+1}(A _{11})\det(\tilde{B}_{11}) + \sum_{j=2}^{n}(-1) ^{1+j} A _{1j} \cdot \det(\tilde{B}_{1j}) \\ &amp;= -t \cdot \det(\tilde{B}_{11}) + \sum_{j=1}^{n}(-1) ^{1+j} A _{1j} \cdot \det(\tilde{B}_{1j}) \\ \end{split}\end{equation} \tag*{} \]</div>
-<p><span class="arithmatex">\(\det(\tilde{B}_{1j})\)</span> 는 <span class="arithmatex">\((n-1) \times (n-1)\)</span> 행렬의 특성다항식이다. <span class="arithmatex">\(n - 1\)</span> 에 대하여 정리가 성립하므로 <span class="arithmatex">\(\det(\tilde{B}_{1j})\)</span> 는 <span class="arithmatex">\(n-1\)</span> 차 다항식이고, 최고차항의 계수가 <span class="arithmatex">\((-1) ^{n-1}\)</span> 이다. <span class="arithmatex">\(\displaystyle \sum_{j=1}^{n}(-1) ^{1+j}A _{1j}\)</span> 은 스칼라이므로 <span class="arithmatex">\(-t \cdot \det(\tilde{B}_{11})\)</span> 에 의하여 <span class="arithmatex">\(\det(B)\)</span> 는 최고차항의 계수가 <span class="arithmatex">\((-1) ^{n}\)</span> 인 <span class="arithmatex">\(n\)</span> 차 다항식이 된다. 또한 정리 5.2 에 의하여 <span class="arithmatex">\(n\)</span>차 다항식이 최대 <span class="arithmatex">\(n\)</span> 개의 서로 다른 근을 가지기 때문에 <span class="arithmatex">\(A\)</span> 는 최대 <span class="arithmatex">\(n\)</span> 개의 서로 다른 고윳값을 가진다. ■ </p>
-</li>
-</ul>
-<h3 id="finding-eigenvector">Finding eigenvector<a class="headerlink" href="#finding-eigenvector" title="Permanent link">¶</a></h3>
-<a href="#2514593f4"><div class="admonition def" id="2514593f4">
-<p class="admonition-title">정리 5.4</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 와 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대하여 벡터 <span class="arithmatex">\(v \in \mathbf{F} ^{n}\)</span> 가 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(A\)</span> 의 고유벡터인 것과 <span class="arithmatex">\(v \neq 0 \land (A-\lambda I)v = 0\)</span> 인 것은 동치이다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 고윳값에 대응하는 고유벡터를 찾는 방법을 알려준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(v\)</span> 가 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(A\)</span> 의 고유벡터이면 고유벡터의 정의에 의하여 <span class="arithmatex">\(Av = \lambda v \implies (A - \lambda I)v = 0\)</span> 와 <span class="arithmatex">\(v \neq 0\)</span> 이 성립한다. </p>
-<p>역으로 영벡터가 아닌 벡터 <span class="arithmatex">\(v\)</span> 에 대하여 <span class="arithmatex">\((A - \lambda I)v = 0 \implies Av = \lambda v\)</span> 가 성립하면 고유벡터의 정의에 의하여 <span class="arithmatex">\(v\)</span> 는 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 고유벡터이다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;1\\ 4&amp;1\\ \end{pmatrix}\)</span> 의 모든 고유벡터를 구해보자. <span class="arithmatex">\(A\)</span> 의 고윳값은 <span class="arithmatex">\(\lambda _1 = 3, \lambda _2 = -1\)</span> 이다. </p>
-<p><span class="arithmatex">\(B_1 = A - \lambda _1I = \begin{pmatrix} -2&amp;1\\ 4&amp;-2\\ \end{pmatrix}\)</span> 를 정의하면 <span class="arithmatex">\(\lambda _1\)</span> 에 대응하는 고유벡터 <span class="arithmatex">\(x = \begin{pmatrix} x_1\\ x_2\\ \end{pmatrix} \in \R ^{2}\)</span> 는 <span class="arithmatex">\(x \neq 0 \land x \in \mathbf{N} (\mathbf{L} _{B_1})\)</span> 을 만족한다. 즉, 다음이 성립해야 한다. </p>
-<div class="arithmatex">\[ \begin{pmatrix} -2&amp;1\\ 4&amp;-2\\ \end{pmatrix}\begin{pmatrix} x_1\\ x_2\\ \end{pmatrix}= \begin{pmatrix} -2x_1+x_2\\ 4x_1-2x_2\\ \end{pmatrix}= \begin{pmatrix} 0\\ 0\\ \end{pmatrix} \]</div>
-<p>이 방정식의 해집합은 <span class="arithmatex">\(t \in \R\)</span> 에 대하여 <span class="arithmatex">\(t \begin{pmatrix} 1\\ 2\\ \end{pmatrix}\)</span> 이므로 <span class="arithmatex">\(t \neq 0\)</span> 에 대하여 <span class="arithmatex">\(x = t \begin{pmatrix} 1\\ 2\\ \end{pmatrix}\)</span> 는 <span class="arithmatex">\(\lambda _1\)</span> 에 대응하는 고유벡터이다. ▲ </p>
-<p><span class="arithmatex">\(B_2 = A - \lambda _2I = \begin{pmatrix} 2&amp;1\\ 4&amp;2\\ \end{pmatrix}\)</span> 를 정의하면 <span class="arithmatex">\(\lambda _2\)</span> 에 대응하는 고유벡터 <span class="arithmatex">\(x = \begin{pmatrix} x_1\\ x_2\\ \end{pmatrix} \in \R ^{2}\)</span> 는 <span class="arithmatex">\(x \neq 0 \land x \in \mathbf{N} (\mathbf{L} _{B_2})\)</span> 을 만족한다. 즉, 다음이 성립해야 한다. </p>
-<div class="arithmatex">\[ \begin{pmatrix} 2&amp;1\\ 4&amp;2\\ \end{pmatrix}\begin{pmatrix} x_1\\ x_2\\ \end{pmatrix}= \begin{pmatrix} 2x_1+x_2\\ 4x_1+2x_2\\ \end{pmatrix}= \begin{pmatrix} 0\\ 0\\ \end{pmatrix} \]</div>
-<p>이 방정식의 해집합은 <span class="arithmatex">\(t \in \R\)</span> 에 대하여 <span class="arithmatex">\(t \begin{pmatrix} 1\\ -2\\ \end{pmatrix}\)</span> 이므로 <span class="arithmatex">\(t \neq 0\)</span> 에 대하여 <span class="arithmatex">\(x = t \begin{pmatrix} 1\\ -2\\ \end{pmatrix}\)</span> 는 <span class="arithmatex">\(\lambda _2\)</span> 에 대응하는 고유벡터이다. ▲ </p>
-<p>집합 <span class="arithmatex">\(\bigg \{\begin{pmatrix} 1\\ 2\\ \end{pmatrix}, \begin{pmatrix} 1\\ -2\\ \end{pmatrix}\bigg \}\)</span> 은 일차독립이고 기수가 <span class="arithmatex">\(2\)</span> 이므로 <a href="../VectorSpace/#cd7879a47">정리 1.10 따름정리 2</a> 에 의하여 기저이다. 이 기저는 <span class="arithmatex">\(A\)</span> 의 고유벡터로 이루어진 기저이므로 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(\mathbf{L}_{A}\)</span> 는 대각화가능하다.</p>
-</li>
-</ul>
-<a href="#7e32b5d25"><div class="admonition def" id="7e32b5d25">
-<p>차원이 각각 <span class="arithmatex">\(n\)</span> 이고 순서기저가 <span class="arithmatex">\(\beta\)</span> 인 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{V}\)</span> 와 행렬 <span class="arithmatex">\(A = [\mathbf{T} ]_{\beta}\)</span> 에 대하여 다음이 성립한다. 즉, <span class="arithmatex">\(\mathbf{L}_{A} \circ \phi _{\beta } = \phi _{\beta  } \circ \mathbf{T}\)</span> 이다.</p>
-<div class="arithmatex">\[ \begin{CD} \mathbf{V} @&gt; \mathbf{T}  &gt;&gt; \mathbf{V}  \\ @V \phi _{\beta } VV @VV \phi _{\beta } V \\ \mathbf{F} ^{n} @&gt; \mathbf{L}_{A} &gt;&gt; \mathbf{F} ^{n} \end{CD} \]</div>
-<p>이때 다음이 성립한다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(v \in \mathbf{V}\)</span> 가 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터인 것과 <span class="arithmatex">\(\phi _{\beta }(v)\)</span> 가 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(A\)</span> 의 고유벡터인 것은 동치이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대하여 벡터 <span class="arithmatex">\(y \in \mathbf{F} ^{n}\)</span> 가 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(A\)</span> 의 고유벡터인 것과 <span class="arithmatex">\(\phi _{\beta } ^{-1}(y)\)</span> 가 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터인 것은 동치이다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 유한차원 벡터공간에서 정의된 선형연산자의 고유벡터를 찾는 것을 행렬의 고유벡터를 찾는 것으로 귀결시킬 수 있음을 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p>첫번째 명제는 <a href="../LinearTransformation/#ea96f31c4">그림 2.2</a> 에서 <span class="arithmatex">\(\mathbf{V} = \mathbf{W}, \gamma = \beta\)</span> 인 경우이다. ▲ </p>
-<p>두번째 명제를 보이자. <span class="arithmatex">\(v\)</span> 가 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터임을 가정하자. 그러면 <span class="arithmatex">\(\mathbf{T} (v) = \lambda v\)</span> 이고 첫번째 명제에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ A \phi _{\beta }(v) = \mathbf{L}_{A}\phi _{\beta }(v) = \phi _{\beta }\mathbf{T} (v) = \phi _{\beta }(\lambda v) = \lambda \phi _{\beta }(v) \]</div>
-<p><span class="arithmatex">\(\phi _{\beta }\)</span> 는 동형사상이므로 단사이고 <span class="arithmatex">\(v = 0\)</span> 일 때에만 <span class="arithmatex">\(\phi _{\beta }(v) = 0\)</span> 이다. <span class="arithmatex">\(v\)</span> 가 고유벡터임을 가정했으므로 <span class="arithmatex">\(v \neq 0\)</span> 이므로 <span class="arithmatex">\(\phi _{\beta }(v) \neq 0\)</span> 이다. 따라서 <span class="arithmatex">\(\phi _{\beta }(v)\)</span> 는 <span class="arithmatex">\(A\)</span> 의 고유벡터이다.</p>
-<p>역으로 <span class="arithmatex">\(\phi _{\beta }(v)\)</span> 가 <span class="arithmatex">\(A\)</span> 의 고유벡터이면 <span class="arithmatex">\(v\)</span> 가 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터임을 비슷한 논리로 쉽게 보일 수 있다. ▲ </p>
-<p>세번째 명제는 두번째 명제에서 바로 나온다. ■ </p>
-</li>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(\mathbf{P}_{2}(\R)\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T} (f(x)) = f(x) + (x+1)f'(x)\)</span> 의 고윳값은 <span class="arithmatex">\(1, 2, 3\)</span> 이다. </p>
-<p><span class="arithmatex">\(\lambda _1 = 1\)</span> 에 대응하는 <span class="arithmatex">\(A\)</span> 의 고유벡터는 <span class="arithmatex">\(a \neq 0\)</span> 에 대하여 <span class="arithmatex">\(a \begin{pmatrix} 1\\ 0\\ 0\\ \end{pmatrix}=ae_1\)</span> 이다. <span class="arithmatex">\(\beta\)</span> 를 <span class="arithmatex">\(\mathbf{P}_{2}(\R)\)</span> 의 표준순서기저로 두었을 때 <span class="arithmatex">\(\lambda _1 = 1\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터는 다음과 같다. </p>
-<div class="arithmatex">\[ \phi ^{-1} _{\beta } (ae_1) = a \phi ^{-1}_{\beta } = a \cdot 1 = a \]</div>
-<p><span class="arithmatex">\(\lambda _2 = 2\)</span> 에 대하여 정리 5.4 를 통하여 고유벡터를 찾기 위해 다음과 같은 행렬 <span class="arithmatex">\(B_2\)</span> 를 정의하면 <span class="arithmatex">\(\mathbf{N} (\mathbf{L}_{B_2}) = \bigg \{a \begin{pmatrix} 1\\ 1\\ 0\\ \end{pmatrix}:a \in \R\bigg \}\)</span> 이다.</p>
-<div class="arithmatex">\[ B_2 = A - \lambda _2I=\begin{pmatrix} -1&amp;1&amp;0\\ 0&amp;0&amp;2\\ 0&amp;0&amp;1\\ \end{pmatrix} \]</div>
-<p>따라서 <span class="arithmatex">\(\lambda _2 = 2\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터는 <span class="arithmatex">\(a \neq 0\)</span> 에 대하여 다음과 같다. </p>
-<div class="arithmatex">\[ \phi _{\beta }^{-1}\bigg (a \begin{pmatrix} 1\\ 1\\ 0\\ \end{pmatrix}\bigg ) = a \phi _{\beta }^{-1}(e_1+e_2) = a(1+x) \]</div>
-<p><span class="arithmatex">\(\lambda _3 = 3\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터는 <span class="arithmatex">\(a \neq 0\)</span> 에 대하여 <span class="arithmatex">\(a(1+2x+x ^{2})\)</span> 이다.</p>
-<p><span class="arithmatex">\(a = 1\)</span> 인 고유벡터 집합 <span class="arithmatex">\(\gamma = \{1, 1+x, 1+2x+x ^{2}\}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{P}_{2}(\R)\)</span> 의 순서기저이므로 <span class="arithmatex">\(\mathbf{T}\)</span> 를 다음과 같이 대각화할 수 있다.</p>
-<div class="arithmatex">\[ [\mathbf{T} ]_{\gamma } = \begin{pmatrix} 1&amp;0&amp;0\\ 0&amp;2&amp;0\\ 0&amp;0&amp;3\\ \end{pmatrix} \]</div>
-</li>
-</ul>
-<h3 id="geometric-interpretation-of-eigenvector-of-linear-operator">Geometric Interpretation of Eigenvector of Linear Operator<a class="headerlink" href="#geometric-interpretation-of-eigenvector-of-linear-operator" title="Permanent link">¶</a></h3>
-<a href="#36f822152"><div class="admonition def" id="36f822152">
-<p><span class="arithmatex">\(\R\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터 <span class="arithmatex">\(v\)</span>, 대응하는 고윳값 <span class="arithmatex">\(\lambda\)</span> 와 <span class="arithmatex">\(v\)</span> 에 의해 생성된 <span class="arithmatex">\(\mathbf{V}\)</span> 의 1차원 부분공간 <span class="arithmatex">\(\mathbf{W} = \text{span} (\{v\})\)</span> 은 <span class="arithmatex">\(0\)</span> 과 <span class="arithmatex">\(v\)</span> 를 지나는 직선이다. 이때 다음이 성립한다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\lambda &gt; 1\)</span> 일 때 <span class="arithmatex">\(\mathbf{T}\)</span> 는 <span class="arithmatex">\(\mathbf{W}\)</span> 의 벡터를 <span class="arithmatex">\(0\)</span> 에서 밀어낸다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\lambda = 1\)</span> 일 때 <span class="arithmatex">\(\mathbf{T}\)</span> 는 <span class="arithmatex">\(\mathbf{W}\)</span> 에서 항등연산자이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(0 &lt; \lambda &lt; 1\)</span> 일 때 <span class="arithmatex">\(\mathbf{T}\)</span> 는 <span class="arithmatex">\(\mathbf{W}\)</span> 의 벡터를 <span class="arithmatex">\(0\)</span> 방향으로 당긴다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\lambda = 0\)</span> 일 때 <span class="arithmatex">\(\mathbf{T}\)</span> 는 <span class="arithmatex">\(\mathbf{W}\)</span> 에서 영 연산자이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\lambda &lt; 0\)</span> 일 때 <span class="arithmatex">\(\mathbf{T}\)</span> 는 <span class="arithmatex">\(\mathbf{W}\)</span> 의 벡터를 <span class="arithmatex">\(0\)</span> 의 반대 방향으로 옮긴다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>다음 그림이 이 정리를 설명해준다.</p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/127796880-bf7e7a64-1189-4c4c-a5ca-969ac825e29f.png"/></p>
-</li>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(\R ^{2}\)</span> 의 <span class="arithmatex">\(x\)</span> 축 대칭 <span class="arithmatex">\(\mathbf{T} (a_1, a_2) = (a_1, -a_2)\)</span> 은 고유벡터 <span class="arithmatex">\(e_1, e_2\)</span> 를 갖는다. 이는 각각 고윳값 <span class="arithmatex">\(1, -1\)</span> 에 대응한다. </p>
-<p><span class="arithmatex">\(e_1\)</span> 과 <span class="arithmatex">\(e_2\)</span> 는 각각 1차원 벡터공간 <span class="arithmatex">\(x\)</span> 축과 <span class="arithmatex">\(y\)</span> 축을 생성한다. <span class="arithmatex">\(\mathbf{T}\)</span> 는 <span class="arithmatex">\(x\)</span>축에서 항등변환, <span class="arithmatex">\(y\)</span>축에서 방향을 바꾸는 변환이다.</p>
-</li>
-</ul>
-<h2 id="diagonalizability">Diagonalizability<a class="headerlink" href="#diagonalizability" title="Permanent link">¶</a></h2>
-<a href="#c5e84c7e0"><div class="admonition def" id="c5e84c7e0">
-<p class="admonition-title">정리 5.5</p>
-<p>벡터공간의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span> 의 서로 다른 고윳값 <span class="arithmatex">\(\lambda_1, \lambda_2, \dots, \lambda_k\)</span> 에 대하여 <span class="arithmatex">\(\lambda_i\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터로 이루어진 유한집합을 <span class="arithmatex">\(S_i\)</span> 라고 하자. 각 <span class="arithmatex">\(S_i\)</span> 가 일차독립이면 <span class="arithmatex">\(\displaystyle \bigcup_{i=1}^{k}S_i\)</span> 도 일차독립이다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 각 고윳값에 대응하는 고유벡터를 하나씩 선택하여 형성한 집합은 반드시 일차독립인 집합을 이룬다는 것을 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(k = 1\)</span> 인 경우 증명할 것이 없다. ▲ </p>
-<p><span class="arithmatex">\(k &gt; 1\)</span> 을 가정하고 <span class="arithmatex">\(k - 1\)</span> 에 대하여 정리가 성립함을 가정하자. 또한 서로 다른 <span class="arithmatex">\(k\)</span> 개의 고윳값 <span class="arithmatex">\(\lambda_1, \lambda_2, \dots, \lambda_k\)</span> 에 대하여 <span class="arithmatex">\(S_i = \{v _{i1},v _{i1},\dots,v _{in _{i}}\}\)</span> 가 <span class="arithmatex">\(\lambda _i\)</span> 에 대응하는 일차독립인 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터 집합임을 가정하자.</p>
-<p><span class="arithmatex">\(i \in \{1,2,\dots,k\}, j \in \{1,2,\dots,n_i\}\)</span> 에 대하여 다음을 만족하는 스칼라 <span class="arithmatex">\(a _{ij}\)</span> 가 존재한다.</p>
-<div class="arithmatex">\[ \sum_{i=1}^{k}\sum_{j=1}^{n_i}a _{ij}v _{ij} = 0 \tag{1} \]</div>
-<p><span class="arithmatex">\(v _{ij}\)</span> 는 <span class="arithmatex">\(\lambda _i\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터이므로
-양 변에 <span class="arithmatex">\(\mathbf{T} - \lambda _k \mathbf{I}\)</span> 를 적용하면 다음이 성립한다.</p>
-<div class="arithmatex">\[ \sum_{i=1}^{k}\sum_{j=1}^{n_i}a _{ij}(\lambda _i - \lambda _k)v _{ij} = 0 \iff  \sum_{i=1}^{k-1}\sum_{j=1}^{n_i}a _{ij}(\lambda _i - \lambda _k)v _{ij} = 0 \]</div>
-<p>가정에 의하여 <span class="arithmatex">\(\displaystyle \bigcup_{i=1}^{k-1}S_i\)</span> 가 일차독립이므로 <span class="arithmatex">\(i \in \{1,2,\dots,k-1\}\)</span> 에 대하여 <span class="arithmatex">\(a _{ij}(\lambda _i- \lambda _k) = 0\)</span> 이다. <span class="arithmatex">\(\lambda_1, \lambda_2, \dots, \lambda_k\)</span> 는 같지 않으므로 <span class="arithmatex">\(i \in \{1,2,\dots,k-1\}\)</span> 에 대하여 <span class="arithmatex">\(a _{ij} = 0\)</span> 이다.</p>
-<p>그러므로 <span class="arithmatex">\((1)\)</span> 은 <span class="arithmatex">\(\sum_{j=1}^{n_k}a _{kj}v _{kj} = 0\)</span> 이 된다. 가정에 의해 <span class="arithmatex">\(S_k\)</span> 는 일차독립이므로 <span class="arithmatex">\(a _{kj} = 0\)</span> 이다. 그러므로 모든 증명이 끝났다. ■ </p>
-</li>
-</ul>
-<a href="#4356a35cb"><div class="admonition def" id="4356a35cb">
-<p class="admonition-title">정리 5.5 따름정리</p>
-<p><span class="arithmatex">\(n\)</span>차원 벡터공간의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 가 서로 다른 <span class="arithmatex">\(n\)</span>개의 고윳값을 가지면 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화가능하다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(n\)</span>차원 벡터공간을 <span class="arithmatex">\(\mathbf{V}\)</span> 라 하자. <span class="arithmatex">\(\mathbf{T}\)</span> 에서 서로 다른 <span class="arithmatex">\(n\)</span>개의 고윳값 <span class="arithmatex">\(\lambda _1,\dots,\lambda _n\)</span> 이 존재함을 가정하자. 각 <span class="arithmatex">\(i\)</span> 에 대하여 <span class="arithmatex">\(\lambda _i\)</span> 에 대응하는 고유벡터 <span class="arithmatex">\(v_i\)</span> 를 선택한다. 정리 5.5 에 의하여 <span class="arithmatex">\(\{v_1, v_2, \dots, v_n \}\)</span> 는 일차독립이고 <span class="arithmatex">\(\dim (\mathbf{V} ) = n\)</span> 이므로 <a href="../VectorSpace/#cd7879a47">정리 1.10 따름정리 2</a> 에 의하여 이 집합은 기저이다.</p>
-<p><a href="#57f0cd776">정리 5.1</a> 에 의하여 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화가능하다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;1\\ 1&amp;1\\ \end{pmatrix}\)</span> 의(<span class="arithmatex">\(\mathbf{L}_{A}\)</span> 의) 특성다항식은 다음과 같다. </p>
-<div class="arithmatex">\[ \det(A-tI) \det \begin{pmatrix} 1-t&amp;1\\ 1&amp;1-t\\ \end{pmatrix} = t(t-2) \]</div>
-<p><span class="arithmatex">\(\mathbf{L}_{A}\)</span> 의 고윳값은 <span class="arithmatex">\(0, 2\)</span> 이고 <span class="arithmatex">\(\dim (\R ^{2}) = 2\)</span> 이므로 <span class="arithmatex">\(\mathbf{L}_{A}\)</span> (와 <span class="arithmatex">\(A\)</span>) 는 대각화 가능하다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화 가능하면 서로 다른 <span class="arithmatex">\(n\)</span> 개의 고윳값을 가지는 것은 아니다. 가령 항등연산자는 하나의 고윳값 <span class="arithmatex">\(\lambda =1\)</span> 을 가지지만 대각화가능하다.</p>
-</li>
-</ul>
-<h3 id="split-over">split over<a class="headerlink" href="#split-over" title="Permanent link">¶</a></h3>
-<a href="#12bf9c352"><div class="admonition def" id="12bf9c352">
-<p class="admonition-title">체 <span class="arithmatex">\(\mathbf{F}\)</span> 위에서 완전히 인수분해됨(split over <span class="arithmatex">\(\mathbf{F}\)</span>) 의 정의</p>
-<p>다항식 <span class="arithmatex">\(f(t) \in \mathbf{P}_{\mathbf{F} }\)</span> 가 스칼라 <span class="arithmatex">\(c, a_1, a_2, \dots, a_n \in \mathbf{F}\)</span> 에 대하여 다음을 만족하면 체 <span class="arithmatex">\(\mathbf{F}\)</span> 위에서 완전히 인수분해된다고 한다.</p>
-<div class="arithmatex">\[ f(t) = c(t-a_1)(t-a_2)\dots(t-a_n) \]</div>
-</div></a>
-<ul>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(f(t) = t ^{2} - 1 = (t+1)(t-1)\)</span> 이므로 <span class="arithmatex">\(f(t)\)</span> 는 <span class="arithmatex">\(\R\)</span> 위에서 완전히 인수분해된다.</p>
-<p><span class="arithmatex">\(g(t) = t ^{2} + 1\)</span> 는 <span class="arithmatex">\(\R\)</span> 위에서 완전히 인수분해되지 않는다. 그러나 <span class="arithmatex">\(g(t) = (t + i)(t - i)\)</span> 이므로 <span class="arithmatex">\(g(t)\)</span> 는 <span class="arithmatex">\(\mathbb{C}\)</span> 위에서 완전히 인수분해된다.</p>
-</li>
-</ul>
-<a href="#867268fd3"><div class="admonition def" id="867268fd3">
-<p class="admonition-title">정리 5.6</p>
-<p><span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 대각화가능한 선형연산자의 특성다항식은 <span class="arithmatex">\(\mathbf{F}\)</span> 위에서 완전히 인수분해된다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 중근을 가질 수도 있으므로 대각화가능하기 위하여 서로 다른 <span class="arithmatex">\(n\)</span> 개의 고윳값을 가질 필요가 없음을 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(n\)</span>차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 대각화가능한 선형연산자를 <span class="arithmatex">\(\mathbf{T}\)</span> 라 하고 <span class="arithmatex">\([\mathbf{T} ]_{\beta } = D\)</span> 가 대각행렬이 되도록 하는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저를 <span class="arithmatex">\(\beta\)</span> 라 하면 <span class="arithmatex">\(D\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ D = \begin{pmatrix} \lambda _{1}&amp;0&amp;\dots&amp;0\\ 0&amp;\lambda _2&amp;\dots&amp;0\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;\lambda _n\\ \end{pmatrix} \]</div>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식 <span class="arithmatex">\(f(t)\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} f(t) &amp;= \det(D-tI) = \begin{pmatrix} \lambda _{1}-t&amp;0&amp;\dots&amp;0\\ 0&amp;\lambda _2-t&amp;\dots&amp;0\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;\lambda _n-t\\ \end{pmatrix} \\ &amp;= (\lambda _1-t)(\lambda _2-t)\dots(\lambda _n-t)=(-1)^{n}(t-\lambda _1)(t-\lambda _2)\dots(t-\lambda _n) \end{split}\end{equation} \tag*{} \]</div>
-<p>■ </p>
-</li>
-<li>
-<p>한편 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 완전히 인수분해되어도 <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화 불가능일 수도 있다.</p>
-</li>
-</ul>
-<a href="#604281a27"><div class="admonition def" id="604281a27">
-<p class="admonition-title">문제 5.2-9</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 에 대하여 <span class="arithmatex">\([\mathbf{T}]_{\beta }\)</span> 가 상삼각행렬이 되게 하는 순서기저 <span class="arithmatex">\(\beta\)</span> 가 존재하면 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 완전히 인수분해된다.</p>
-<p>상삼각행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F})\)</span> 의 특성다항식은 완전히 인수분해된다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\dim (\mathbf{V}) = n\)</span> 을 가정하자.</p>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식 <span class="arithmatex">\(f(t) = \det([\mathbf{T}]_{\beta } - tI_n)\)</span> 의 <span class="arithmatex">\(A = [\mathbf{T}]_{\beta }-tI_n\)</span> 은 상삼각행렬이다. <a href="../Determinants/#f334dfff7">문제 4.2-23</a> 에 의하여 <span class="arithmatex">\(\det(A) = \prod_{i=1}^{n}A _{ii}\)</span> 이다. 따라서 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성방정식은 완전히 인수분해된다. ▲ </p>
-<p>상삼각행렬의 특성다항식이 완전히 인수분해된다는 것도 같은 논리로 증명 가능하다. ■ </p>
-</li>
-</ul>
-<a href="#bd84c1d47"><div class="admonition def" id="bd84c1d47">
-<p class="admonition-title">문제 5.2-12</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F})\)</span> 의 특성다항식이 완전히 인수분해되면 <span class="arithmatex">\(A\)</span> 는 상삼각행렬과 닮은 행렬이다.</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 완전히 인수분해되면 <span class="arithmatex">\([\mathbf{T}]_{\beta }\)</span> 가 상삼각행렬이 되게 하는 순서기저 <span class="arithmatex">\(\beta\)</span> 가 존재한다. </p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>1:</p>
-<p><span class="arithmatex">\(n = 1\)</span> 이면 <span class="arithmatex">\(A\)</span> 의 특성다항식은 <span class="arithmatex">\(\det(A _{11} - tI_1) = A _{11} - tI_1\)</span> 으로 완전히 인수분해된다. 또한 <span class="arithmatex">\(A\)</span> 는 상삼각행렬이다. ▲ </p>
-<p><span class="arithmatex">\(n - 1\)</span> 에서 정리가 성립함을 가정하고 <span class="arithmatex">\(n\)</span> 에 대하여 증명하자. 가정에 의하여 <span class="arithmatex">\(A\)</span> 의 특성다항식은 완전히 인수분해된다. 이로써 최소 하나 이상의 고윳값 <span class="arithmatex">\(\lambda\)</span> 가 존재하고 이 고윳값에 대응하는 최소 하나 이상의 고유벡터 <span class="arithmatex">\(v_1\)</span> 가 존재한다.</p>
-<p><span class="arithmatex">\(\{v_1\}\)</span> 을 확장하여 <span class="arithmatex">\(\mathbf{F}^{n}\)</span> 의 기저 <span class="arithmatex">\(\gamma = \{v_1, v_2, \dots, v_n\}\)</span> 를 만들 수 있다. <span class="arithmatex">\(j\)</span>열이 <span class="arithmatex">\(v_j\)</span> 인 <span class="arithmatex">\(n \times n\)</span> 행렬을 <span class="arithmatex">\(P\)</span> 로 두면 <span class="arithmatex">\([\mathbf{L}_{A}]_{\gamma } = P ^{-1}AP\)</span> 이다. </p>
-<p>선형변환의 행렬표현에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \mathbf{L}_{A}(v_1) = Av_1 = \lambda v_1 \]</div>
-<div class="arithmatex">\[ \mathbf{L}_{A}(v _{2}) = Av _{2} = \sum_{i=1}^{n} a _{i2}v_i \]</div>
-<div class="arithmatex">\[ \vdots \]</div>
-<div class="arithmatex">\[ \mathbf{L}_{A}(v _{n}) = Av _{n} = \sum_{i=1}^{n} a _{i,n}v_i \]</div>
-<div class="arithmatex">\[ \implies  [\mathbf{L}_{A}]_{\gamma } = \begin{pmatrix} \lambda &amp; u\\ O &amp; B \\ \end{pmatrix} \implies  [\mathbf{L}_{A}]_{\gamma } - tI = \begin{pmatrix} \lambda -t &amp; u\\ O &amp; B - tI \\ \end{pmatrix} \]</div>
-<p>문제 4.3-21 에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \det([\mathbf{L}_{A}]_{\gamma } - tI) = (\lambda - t) \det(B - tI) \]</div>
-<p><span class="arithmatex">\(A\)</span> 의 특성다항식이 완전히 인수분해되는데 <span class="arithmatex">\([\mathbf{L}_{A}]_{\gamma }\)</span> 는 <span class="arithmatex">\(A\)</span> 와 닮은 행렬이므로 문제 5.1-13 에 의하여 <span class="arithmatex">\([\mathbf{L}_{A}]_{\gamma }\)</span> 의 특성다항식은 완전히 인수분해된다. 따라서 <span class="arithmatex">\(\det(B-tI)\)</span> 도 완전히 인수분해된다. <span class="arithmatex">\(B\)</span> 는 <span class="arithmatex">\(n -1 \times n-1\)</span> 행렬이므로 귀납법의 가정에 의하여 가역행렬 <span class="arithmatex">\(Q\)</span> 에 대하여 <span class="arithmatex">\(U = Q ^{-1}BQ\)</span> 인 상삼각행렬이 존재한다.</p>
-<p><span class="arithmatex">\(R = \begin{pmatrix} 1&amp;O'\\ O&amp;Q\\ \end{pmatrix}, R ^{-1} = \begin{pmatrix} 1&amp;O'\\ O&amp;Q ^{-1}\\ \end{pmatrix}\)</span> 로 두고 <span class="arithmatex">\(M = PR\)</span> 로 두면 다음이 성립한다. </p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} M ^{-1}AM &amp;= R ^{-1}(P ^{-1}AP)R \\ &amp;= \begin{pmatrix} 1&amp;O'\\ O&amp;Q ^{-1}\\ \end{pmatrix}\begin{pmatrix} \lambda &amp; u\\ O&amp;B\\ \end{pmatrix} \begin{pmatrix} 1&amp;O'\\ O&amp;Q\\ \end{pmatrix}\\ &amp;= \begin{pmatrix} \lambda &amp;uQ\\ O&amp;U \\ \end{pmatrix}= U' \end{split}\end{equation} \tag*{} \]</div>
-<p>즉, <span class="arithmatex">\(A\)</span> 가 상삼각행렬 <span class="arithmatex">\(U'\)</span> 와 닮음이니 모든 증명이 끝났다. ■ </p>
-<p>2:</p>
-<p><span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저 <span class="arithmatex">\(\gamma = \{x_1, x_2, \dots, x_n\}\)</span> 에 대하여 <span class="arithmatex">\(A = [\mathbf{T}]_{\gamma }\)</span> 로 두자. 정리의 가정에 의하여 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식은 완전히 인수분해 되고 특성다항식의 정의에 의하여 <span class="arithmatex">\(A\)</span> 의 특성다항식도 완전히 인수분해된다. 따라서 이미 증명한 1) 에 의하여 <span class="arithmatex">\(A\)</span> 는 상삼각행렬 <span class="arithmatex">\(U\)</span> 와 닮은 행렬이다. 가역행렬 <span class="arithmatex">\(Q\)</span> 가 <span class="arithmatex">\(U = Q ^{-1}AQ\)</span> 를 만족한다고 하면 <span class="arithmatex">\(j \in \{1,\dots,n\}\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ y_j = \sum_{i=1}^{n}Q _{ij}x_i \]</div>
-<p>문제 2.5-13 에 의하여 <span class="arithmatex">\(\beta = \{y_1, y_2, \dots, y_n\}\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저이고 <span class="arithmatex">\(Q\)</span> 는 <span class="arithmatex">\(\beta\)</span> 좌표를 <span class="arithmatex">\(\gamma\)</span> 좌표로 변환하는 좌표변환행렬이다. <a href="../LinearTransformation/#acf61b9cb">정리 2.23</a> 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \therefore [\mathbf{T}]_{\beta } = Q ^{-1}[\mathbf{T}]_{\gamma }Q = Q ^{-1}AQ = U \tag*{■} \]</div>
-</li>
-</ul>
-<h3 id="algebraic-multiplicity">Algebraic Multiplicity<a class="headerlink" href="#algebraic-multiplicity" title="Permanent link">¶</a></h3>
-<a href="#060dc8934"><div class="admonition def" id="060dc8934">
-<p class="admonition-title">대수적 중복도(algebraic multiplicity)</p>
-<p>특성다항식이 <span class="arithmatex">\(f(t)\)</span> 인 선형연산자(또는 행렬)의 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대하여 <span class="arithmatex">\((t - \lambda )^{k}\)</span> 가 <span class="arithmatex">\(f(t)\)</span> 의 인수가 되도록 하는 가장 큰 자연수 <span class="arithmatex">\(k\)</span> 를 <span class="arithmatex">\(\lambda\)</span> 의 대수적 중복도라고 한다.</p>
-</div></a>
-<ul>
-<li>
-<p>단순하게 중복도라고도 한다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(A = \begin{pmatrix} 3&amp;1&amp;0\\ 0&amp;3&amp;4\\ 0&amp;0&amp;4\\ \end{pmatrix}\)</span> 의 특성다항식은 <span class="arithmatex">\(f(t) = -(t-3)^{2}(t-4)\)</span> 이므로 <span class="arithmatex">\(\lambda =3\)</span> 의 중복도는 <span class="arithmatex">\(2\)</span>, <span class="arithmatex">\(\lambda =4\)</span> 의 중복도는 <span class="arithmatex">\(1\)</span> 이다.</p>
-</li>
-</ul>
-<h3 id="eigenspace">Eigenspace<a class="headerlink" href="#eigenspace" title="Permanent link">¶</a></h3>
-<a href="#7ad38c4e6"><div class="admonition def" id="7ad38c4e6">
-<p class="admonition-title">선형연산자의 고유공간(eigenspace)</p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대하여 다음 집합 <span class="arithmatex">\(\mathbf{E}_{\lambda}\)</span> 를 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유공간이라 한다.</p>
-<div class="arithmatex">\[ \mathbf{E}_{\lambda} = \{x \in \mathbf{V} : \mathbf{T} (x) = \lambda x\} = \mathbf{N} (\mathbf{T}-\lambda \mathbf{I} _{\mathbf{V} }) \]</div>
-</div></a>
-<ul>
-<li>
-<p>즉, 고유공간은 특정 고윳값에 대응하는 모든 고유벡터를 모아둔 집합이다.</p>
-</li>
-<li>
-<p>고유공간은 고윳값에 대응하는 모든 벡터의 집합인데 <a href="#2514593f4">정리 5.4</a> 는 고윳값에 대응하는 모든 고유벡터를 찾는 방법을 알려준다. 따라서 고유공간은 정리 5.4 의 방법을 기반으로 정의된다.</p>
-<p>정리 5.4 는 행렬에 대하여 고윳값에 대응하는 모든 벡터를 구하는 방법을 서술하지만, 동형사상인 표준표현 <span class="arithmatex">\(\phi _{\beta }\)</span> 로 인하여 이 정리를 동일하게 선형연산자에서 사용할 수 있다. 다시 말해 정리 5.4 가 <span class="arithmatex">\((A - \lambda I)v=0\)</span> 을 풀어서 고윳값에 대응하는 모든 고유벡터를 구하라고 말하는데, 이것은 동형사상인 표준표현에 의하여 영공간 <span class="arithmatex">\(\mathbf{N} (\mathbf{T} - \lambda \mathbf{I} _{\mathbf{V}})\)</span> 을 구하는 것과 동치가 된다.</p>
-</li>
-<li>
-<p>이때 정리 5.4 와 달리 <span class="arithmatex">\(v \neq 0\)</span> 라는 제한이 없으므로 <a href="../LinearTransformation/#eb957cbf0">정리 2.1</a> 에 의하여 <span class="arithmatex">\(\mathbf{E}_{\lambda}\)</span> 는 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터와 영벡터로 이루어진 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이다. 즉, <span class="arithmatex">\(\mathbf{E}_{\lambda}\)</span> 의 차원은 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 일차독립인 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터의 최대 개수이다.</p>
-</li>
-</ul>
-<a href="#642fddbf2"><div class="admonition def" id="642fddbf2">
-<p class="admonition-title">행렬의 고유공간(eigenspace)</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F})\)</span> 의 고윳값 <span class="arithmatex">\(\lambda\)</span> 벡터공간 <span class="arithmatex">\(\mathbf{F}^{n}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{L}_{A}\)</span> 에 대하여 다음 집합 <span class="arithmatex">\(\mathbf{E}_{\lambda}\)</span> 를 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대응하는 <span class="arithmatex">\(A\)</span> 의 고유공간이라 한다.</p>
-<div class="arithmatex">\[ \mathbf{E}_{\lambda} = \{x \in \mathbf{F}^{n} : (A - \lambda I_n)x = 0 \} = \mathbf{N} (\mathbf{L}_{A}-\lambda \mathbf{I} _{\mathbf{F}^{n}}) \]</div>
-</div></a>
-<ul>
-<li>고유공간은 고윳값에 대응하는 모든 벡터의 집합인데 <a href="#2514593f4">정리 5.4</a> 는 고윳값에 대응하는 모든 고유벡터를 찾는 방법을 알려준다. 따라서 고유공간은 정리 5.4 의 방법을 기반으로 정의된다.</li>
-</ul>
-<a href="#b5fbbceb6"><div class="admonition def" id="b5fbbceb6">
-<p class="admonition-title">정리 5.7</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 중복도가 <span class="arithmatex">\(m\)</span> 인 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대하여 <span class="arithmatex">\(1 \leq \dim (\mathbf{E}_{\lambda} )\leq m\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 <span class="arithmatex">\(\mathbf{E}_{\lambda}\)</span> 의 차원과 <span class="arithmatex">\(\lambda\)</span> 의 중복도의 관계를 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><a href="../VectorSpace/#dd66d2443">정리 1.11 따름정리</a> 에 의하여 <span class="arithmatex">\(\mathbf{E}_{\lambda}\)</span> 의 순서기저 <span class="arithmatex">\(\{v_1, v_2, \dots, v_p\}\)</span> 를 확장하여 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저 <span class="arithmatex">\(\beta = \{v_1, v_2, \dots, v_p, v _{p+1}, \dots, v_n\}\)</span> 를 만들 수 있다. <a href="../LinearTransformation/#c16bc5e5b">선형변환의 행렬표현</a> 에 의하여 <span class="arithmatex">\([\mathbf{T} ]_{\beta }=A\)</span> 을 <span class="arithmatex">\(1\)</span> 열부터 <span class="arithmatex">\(n\)</span> 열까지는 다음과 같다. </p>
-<div class="arithmatex">\[ \mathbf{T} (v_1) = a _{11}v_1 = \lambda _1v_1 \]</div>
-<div class="arithmatex">\[ \vdots \]</div>
-<div class="arithmatex">\[ \mathbf{T} (v_p) = a _{pp}v_p = \lambda _pv_p \]</div>
-<div class="arithmatex">\[ \mathbf{T} (v _{p+1}) = \sum_{i=1}^{n} a _{i,p+1} v _{p+1} \]</div>
-<div class="arithmatex">\[ \vdots \]</div>
-<div class="arithmatex">\[ \mathbf{T} (v _{n}) = \sum_{i=1}^{n} a _{in} v _{n} \]</div>
-<p>그러므로 어떤 행렬 <span class="arithmatex">\(B, C\)</span> 와 영행렬 <span class="arithmatex">\(O\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ A = \begin{pmatrix} \lambda I_p&amp;B\\ O&amp;C\\ \end{pmatrix} \]</div>
-<p>문제 4.3-21 에 의하여 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식은 다음과 같다. </p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} f(t)&amp;= \det(A - tI_n) = \det \begin{pmatrix} (\lambda -t)I_p&amp;B\\ O&amp;C - tI _{n-p}\\ \end{pmatrix}  \\ &amp;= \det((\lambda -t)I_p)  \det(C-tI _{n-p}) \\ &amp;= (\lambda -t)^{p}g(t) \end{split}\end{equation} \tag*{} \]</div>
-<p>따라서 <span class="arithmatex">\(\lambda\)</span> 의 중복도 <span class="arithmatex">\(m\)</span> 에 대하여 <span class="arithmatex">\(p \leq m\)</span> 이다. 그런데 <span class="arithmatex">\(\dim (\mathbf{E}_{\lambda} ) = p\)</span> 이므로 <span class="arithmatex">\(\dim (\mathbf{E}_{\lambda} ) \leq m\)</span> 이다. ■ </p>
-</li>
-</ul>
-<a href="#7050c2a83"><div class="admonition def" id="7050c2a83">
-<p class="admonition-title">정리 5.8</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 완전히 인수분해되고 <span class="arithmatex">\(\lambda _1, \dots, \lambda _k\)</span> 가 서로 다른 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고윳값일 때 다음이 성립한다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능한 것과 모든 <span class="arithmatex">\(i\)</span> 에 대하여 <span class="arithmatex">\(\lambda _i\)</span> 의 중복도가 <span class="arithmatex">\(\dim (\mathbf{E}_{\lambda_i})\)</span> 인 것은 동치이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능하고 각각의 <span class="arithmatex">\(i\)</span> 에 대하여 <span class="arithmatex">\(\beta _{i}\)</span> 가 <span class="arithmatex">\(\mathbf{E}_{\lambda_i}\)</span> 의 순서기저일 때 <span class="arithmatex">\(\beta = \displaystyle \bigcup_{i=1}^{k}\beta _{i}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저이다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>순서기저 <span class="arithmatex">\(\beta = \displaystyle \bigcup_{i=1}^{k}\beta _{i}\)</span> 의 순서는 <span class="arithmatex">\(\beta_1, \dots, \beta_k\)</span> 의 벡터를 나열하는 순서 그대로이다.</p>
-</li>
-<li>
-<p>증명</p>
-<p>각각의 <span class="arithmatex">\(i\)</span> 에 대하여 <span class="arithmatex">\(m_i\)</span> 는 <span class="arithmatex">\(\lambda _i\)</span> 의 중복도, <span class="arithmatex">\(d_i = \dim (\mathbf{E}_{\lambda_i})\)</span>, <span class="arithmatex">\(n = \dim (\mathbf{V} )\)</span> 라고 하자.</p>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능함을 가정하면 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저 <span class="arithmatex">\(\beta\)</span> 가 존재한다. 각 <span class="arithmatex">\(i\)</span> 에 대하여 <span class="arithmatex">\(\beta _i = \beta \cap \mathbf{E}_{\lambda_i}\)</span> 의 기수를 <span class="arithmatex">\(|\beta _i| = n_i\)</span> 라 하면 <span class="arithmatex">\(n_i \leq d_i\)</span> 이다. <a href="../VectorSpace/#cd7879a47">정리 1.10 따름정리 2</a> 에 의하여 일차독립인 집합은 벡터공간의 차원보다 기수가 작기 때문이다. 또한 정리 5.7 에 의하여 <span class="arithmatex">\(d_i \leq m_i\)</span> 이다. </p>
-<p><span class="arithmatex">\(\lambda _i\)</span> 에 대응하는 <span class="arithmatex">\(v_i\)</span> 들은 모두 서로 다르다. 만약 같은 <span class="arithmatex">\(v\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T} (v) = \lambda _iv = \lambda _jv\)</span> 가 성립하면 <span class="arithmatex">\((\lambda _i-\lambda _j)v = 0 \implies \lambda _i = \lambda _j\)</span> 가 된다. 그러므로 <span class="arithmatex">\(|\beta| = n \implies \sum_{i=1}^{k}n_i = n\)</span> 이다.</p>
-<p>중복도는 그 정의에 의하여 모든 중복도의 합이 곧 특성다항식의 차수가 된다. <span class="arithmatex">\([\mathbf{T}]_{\beta} \in \mathbf{M}_{n \times n}(\mathbf{F} )\)</span> 의 특성다항식의 차수 <span class="arithmatex">\(n\)</span> 이므로 <span class="arithmatex">\(\sum_{i=1}^{k}m_i = n\)</span> 이다. 정리 5.5 는 <span class="arithmatex">\(\beta _i\)</span> 가 일차독립 집합임을 말해준다. </p>
-<p>일차독립 집합은 <a href="../VectorSpace/#6cf7acf90">정리 1.10</a> 에 의하여 반드시 <span class="arithmatex">\(\mathbf{E}_{\lambda_i}\)</span> 의 차원과 기수가 같거나 작다. 또한 정리 5.7 에 의하여 <span class="arithmatex">\(\mathbf{E}_{\lambda_i}\)</span> 의 차원은 <span class="arithmatex">\(\lambda _i\)</span> 의 중복도 <span class="arithmatex">\(m_i\)</span> 와 같거나 작다. 따라서 다음이 성립한다. </p>
-<div class="arithmatex">\[ n = \sum_{i=1}^{k}n_i \leq \sum_{i=1}^{k}d_i \leq \sum_{i=1}^{k}m_i = n \]</div>
-<p>그러므로 <span class="arithmatex">\(\displaystyle \sum_{i=1}^{k}(m_i - d_i) = 0\)</span> 이다. 정리 5.7 에 의하여 <span class="arithmatex">\(m_i - d_i \geq 0\)</span> 이므로 각 <span class="arithmatex">\(i\)</span> 에 대하여 <span class="arithmatex">\(m_i = d_i\)</span> 이다. ▲ </p>
-<p>이제 모든 <span class="arithmatex">\(i\)</span> 에 대하여 <span class="arithmatex">\(m_i = d_i\)</span> 를 가정하고, <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능인 것과 2) 를 증명하자.</p>
-<p>각 <span class="arithmatex">\(i\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{E}_{\lambda_i}\)</span> 의 순서기저를 <span class="arithmatex">\(\beta _i\)</span> 라 하고 <span class="arithmatex">\(\beta = \bigcup_{i=1}^{k}\beta _i\)</span> 를 정의하자. 그러면 정리 5.5 에 의해 <span class="arithmatex">\(\beta\)</span> 는 일차독립이다. 또한 <span class="arithmatex">\(|\beta | = \sum_{i=1}^{k}d_i = \sum_{i=1}^{k}m_i = n\)</span> 이다. 중복도의 합이 특성다항식의 차수 <span class="arithmatex">\(n\)</span> 이 되기 때문이다. <a href="../VectorSpace/#cd7879a47">정리 1.10 따름정리 2</a> 에 의하여 <span class="arithmatex">\(\beta\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저이다. 그러므로 <a href="#57f0cd776">정리 5.1</a> 에 의하여 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화가능하다. ■ </p>
-</li>
-<li>
-<p>예시</p>
-<p><span class="arithmatex">\(\R ^{3}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 를 다음과 같이 정의하자. </p>
-<div class="arithmatex">\[ \mathbf{T} \begin{pmatrix} a_1\\ a_2\\ a_3\\ \end{pmatrix} = \begin{pmatrix} 4a_1+a_3\\ 2a_1+3a_2+2a_3\\ a_1+4a_3\\ \end{pmatrix} \]</div>
-<p>표준순서기저 <span class="arithmatex">\(\beta\)</span> 에 대한 <span class="arithmatex">\(\mathbf{T}\)</span> 의 행렬표현은 다음과 같다. </p>
-<div class="arithmatex">\[ [\mathbf{T} ]_{\beta }=\begin{pmatrix} 4&amp;0&amp;1\\ 2&amp;3&amp;2\\ 1&amp;0&amp;4\\ \end{pmatrix} \]</div>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식으로 모든 고윳값을 구해보자.</p>
-<div class="arithmatex">\[ \det([\mathbf{T} ]_{\beta }-tI) = \det \begin{pmatrix} 4-t&amp;0&amp;1\\ 2&amp;3-t&amp;2\\ 1&amp;0&amp;4-t\\ \end{pmatrix} = -(t-5)(t-3)^{2} \]</div>
-<p>고윳값 <span class="arithmatex">\(\lambda _1 = 5\)</span> 와 <span class="arithmatex">\(\lambda _2 = 3\)</span> 중복도는 각각 <span class="arithmatex">\(1, 2\)</span> 이므로 <span class="arithmatex">\(\mathbf{E}_{\lambda_1}\)</span> 와 <span class="arithmatex">\(\mathbf{E}_{\lambda_2}\)</span> 기저가 각각 <span class="arithmatex">\(1, 2\)</span> 이면 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화 가능하다.</p>
-<p><span class="arithmatex">\(\mathbf{E}_{\lambda_1}\)</span> 는 다음과 같다. </p>
-<div class="arithmatex">\[ \mathbf{E}_{\lambda_1} = \mathbf{N} (\mathbf{T}-\lambda _1 \mathbf{I})  = \Bigg \{\begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix}\in \R ^{3} : \begin{pmatrix} -1&amp;0&amp;1\\ 2&amp;-2&amp;2\\ 1&amp;0&amp;-1\\ \end{pmatrix}\begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix}=\begin{pmatrix} 0\\ 0\\ 0\\ \end{pmatrix}\Bigg \} \]</div>
-<p>따라서 <span class="arithmatex">\(\mathbf{E}_{\lambda_1}\)</span> 은 다음 연립방정식의 해공간 <span class="arithmatex">\(\mathbf{K} = \mathbf{E}_{\lambda_1}\)</span> 이다.</p>
-<div class="arithmatex">\[ -x_1+x_3=0 \]</div>
-<div class="arithmatex">\[ 2x_1-2x_2+2x_3=0 \]</div>
-<div class="arithmatex">\[ x_1-x_3=0 \]</div>
-<p>계수행렬 <span class="arithmatex">\(A\)</span> 의 3행은 1행에 대하여 일차종속이므로 <span class="arithmatex">\(\text{rank} (A) = 2\)</span> 이다. <a href="../MatrixOperation/#b7b9c78d0">정리 3.8</a> 에 의하여 <span class="arithmatex">\(\dim (\mathbf{K} ) = \dim (\mathbf{E}_{\lambda_1}) = 3 - \text{rank} (A) = 3 - 2 = 1\)</span> 이다. 기저를 구해보면 <span class="arithmatex">\(\bigg \{\begin{pmatrix} 1\\ 2\\ 1\\ \end{pmatrix}\bigg \}\)</span> 이다.</p>
-<p>같은 방법으로 <span class="arithmatex">\(\dim (\mathbf{E}_{\lambda_2}) = 2\)</span> 를 알 수 있다. 기저를 구해보면 <span class="arithmatex">\(\bigg \{\begin{pmatrix} 0\\ 1\\ 0\\ \end{pmatrix}, \begin{pmatrix} -1\\ 0\\ 1\\ \end{pmatrix}\bigg \}\)</span> 이다.</p>
-<p>그러면 각 고윳값 <span class="arithmatex">\(\lambda _i\)</span> 의 중복도가 고유공간 <span class="arithmatex">\(\mathbf{E}_{\lambda_i}\)</span> 의 차원과 같으므로 정리의 1) 에 의하여 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화가능하다.</p>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능이므로 <span class="arithmatex">\(\mathbf{E}_{\lambda_1}, \mathbf{E}_{\lambda_2}\)</span> 의 순서기저의 합집합 <span class="arithmatex">\(\bigg \{\begin{pmatrix} 1\\ 2\\ 1\\ \end{pmatrix}, \begin{pmatrix} 0\\ 1\\ 0\\ \end{pmatrix}, \begin{pmatrix} -1\\ 0\\ 1\\ \end{pmatrix}\bigg \}\)</span> 은 정리의 2) 에 의하여 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저이다.</p>
-</li>
-</ul>
-<h3 id="diagonalizable-determination">Diagonalizable Determination<a class="headerlink" href="#diagonalizable-determination" title="Permanent link">¶</a></h3>
-<a href="#8fb7f3108"><div class="admonition def" id="8fb7f3108">
-<p class="admonition-title">대각화 가능 판정법(Diagonalizable Determination)</p>
-<p><span class="arithmatex">\(n\)</span>차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능한 것과 다음 두 조건이 성립하는 것은 동치이다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 완전히 인수분해된다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 고윳값 <span class="arithmatex">\(\lambda\)</span> 의 중복도 <span class="arithmatex">\(m\)</span> 이 <span class="arithmatex">\(2\)</span> 이상이면 <span class="arithmatex">\(m\)</span> 이 <span class="arithmatex">\(\dim(\mathbf{E}_{\lambda}) = \text{nullity} (\mathbf{T} - \lambda \mathbf{I}) = n - \text{rank} (\mathbf{T} - \lambda \mathbf{I} )\)</span> 와 같다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 정리 5.8 의 첫번째 명제를 되풀어 말한 것 뿐이다.</p>
-</li>
-<li>
-<p>정사각행렬 <span class="arithmatex">\(A\)</span> 가 대각화가능한지 판정할 때도 이 방법을 사용한다. <span class="arithmatex">\(A\)</span> 의 대각화 가능성과 <span class="arithmatex">\(\mathbf{L}_{A}\)</span> 의 대각화 가능성이 동치이기 때문이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능한 연산자이고 <span class="arithmatex">\(\beta _1, \dots, \beta _k\)</span> 가 <span class="arithmatex">\(\mathbf{T}\)</span> 의 각각의 고유공간 <span class="arithmatex">\(\mathbf{E}_{\lambda_i}\)</span> 의 순서기저이면 <a href="#7050c2a83">정리 5.8</a> 에 의해 <span class="arithmatex">\(\beta = \bigcup_{}^{}\beta _i\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저이고, <span class="arithmatex">\([\mathbf{T} ]_{\beta }\)</span> 는 대각행렬이다.</p>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능한지 판정하려면 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저 <span class="arithmatex">\(\alpha\)</span> 에 대한 <span class="arithmatex">\(B = [\mathbf{T} ]_{\alpha}\)</span> 를 다룬다. <span class="arithmatex">\(B\)</span> 의 특성다항식이 완전히 인수분해되면 중복도가 <span class="arithmatex">\(2\)</span> 이상인 고윳값들이 <span class="arithmatex">\(n - \text{rank} (B - \lambda I)\)</span> 와 같은지 확인한다. 모두 같으면 <span class="arithmatex">\(B\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화 가능이다. (중복도가 <span class="arithmatex">\(1\)</span> 인 고윳값들은 <a href="#b5fbbceb6">정리 5.7</a> 에 의하여 자동으로 조건 2) 를 만족하게 된다.)</p>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 대각화가능이 확인되었다면 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저 <span class="arithmatex">\(\beta\)</span> 를 찾아야 한다. 이를 위해 <span class="arithmatex">\(B\)</span> 의 각 고유공간에 대한 기저를 찾는다. 그러면 정리 5.8 에 의해 이 기저들의 합집합을 <span class="arithmatex">\(B\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 기저 <span class="arithmatex">\(\gamma\)</span> 로 둘 수 있다. </p>
-<p><span class="arithmatex">\(\gamma\)</span> 의 각 벡터는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\alpha\)</span> 에 대한 좌표벡터이다. 따라서 <span class="arithmatex">\(\gamma\)</span> 를 통해 <span class="arithmatex">\(\beta\)</span> 를 구할 수 있다. 이 <span class="arithmatex">\(\beta\)</span> 를 통해 최종적으로 <span class="arithmatex">\(\mathbf{T}\)</span> 를 <span class="arithmatex">\([\mathbf{T} ]_{\beta }\)</span> 로 대각화할 수 있다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><a href="#867268fd3">정리 5.6</a> 은 <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능이면 특성다항식이 완전히 인수분해됨을 말해준다. 그러나 완전히 인수분해된다고 해서 <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능인 것은 아니다. 하지만 완전히 인수분해된다는 조건은 <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능하기 위한 필요조건이다. </p>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 완전히 인수분해되면 각각의 고윳값에 따른 중복도를 구할 수 있다. 이때 각 고윳값 <span class="arithmatex">\(\lambda\)</span> 의 중복도가 <span class="arithmatex">\(\dim (\mathbf{E}_{\lambda})\)</span> 와 같으면 <a href="#7050c2a83">정리 5.8</a> 에 의하여 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화가능이 된다.</p>
-<p>중복도가 <span class="arithmatex">\(1\)</span> 인 고윳값들은 <a href="#b5fbbceb6">정리 5.7</a> 에 의하여 자동으로 조건 2) 를 만족하게 된다.</p>
-<p><span class="arithmatex">\(\dim (\mathbf{E}_{\lambda})\)</span> 는 특성다항식 <span class="arithmatex">\(\mathbf{T} - \lambda \mathbf{I} _{\mathbf{V} }\)</span> 의 영공간의 차원이다. 또한 <a href="../MatrixOperation/#b7b9c78d0">정리 3.8</a> 에 의하여 계수행렬 <span class="arithmatex">\(\mathbf{T} - \lambda \mathbf{I}\)</span> 를 가지는 일차연립방정식의 해공간이기도 하다. ■ </p>
-</li>
-<li>
-<p>예시 </p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 3&amp;1&amp;0\\ 0&amp;3&amp;0\\ 0&amp;0&amp;4\\ \end{pmatrix} \in \mathbf{M}_{3 \times 3}(\R)\)</span> 의 대각화 가능성을 판정하자. <span class="arithmatex">\(\det(A - tI) = -(t-4)(t-3)^{2}\)</span> 이므로 <span class="arithmatex">\(\lambda _1 = 4\)</span> 는 조건 2) 를 자동으로 만족한다. <span class="arithmatex">\(\lambda _2 = 3\)</span> 에 대한 조건 2) 의 성립만 확인하면 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화가능하다.</p>
-<p>행렬 <span class="arithmatex">\(A - \lambda _2I = \begin{pmatrix} 0&amp;1&amp;0\\ 0&amp;0&amp;0\\ 0&amp;0&amp;1\\ \end{pmatrix}\)</span> 의 랭크가 <span class="arithmatex">\(2\)</span> 이므로 <span class="arithmatex">\(3 - \text{rank} (A - \lambda _2I) = 1\)</span> 은 <span class="arithmatex">\(\lambda _2\)</span> 의 중복도와 다르다. 따라서 <span class="arithmatex">\(A\)</span> 는 대각화 불가능이다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p>다음과 같은 벡터공간 <span class="arithmatex">\(\mathbf{P}_{2}(\R)\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 가 존재한다. </p>
-<div class="arithmatex">\[ \mathbf{T} (f(x)) = f(1) + f'(0)x + (f'(0)+f''(0))x ^{2} \]</div>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 대각화 가능성을 판정해보자. 표준순서기저 <span class="arithmatex">\(\alpha\)</span> 에 대하여 <span class="arithmatex">\(B = [\mathbf{T} ]_{\alpha }= \begin{pmatrix} 1&amp;1&amp;1\\ 0&amp;1&amp;0\\ 0&amp;1&amp;2\\ \end{pmatrix}\)</span> 이다. <span class="arithmatex">\(B\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식은 <span class="arithmatex">\(-(t-1)^{2}(t-2)\)</span> 으로써 완전히 인수분해된다. <span class="arithmatex">\(\lambda _1=1\)</span> 의 중복도는 <span class="arithmatex">\(2\)</span>, <span class="arithmatex">\(\lambda _2 = 2\)</span> 의 중복도는 <span class="arithmatex">\(1\)</span> 이다. <span class="arithmatex">\(\lambda _1=1\)</span> 이 조건 2) 를 만족하는지 살펴보자. </p>
-<div class="arithmatex">\[ 3 - \text{rank} (B - \lambda _1I)  = 3 - \text{rank} \begin{pmatrix} 0&amp;1&amp;1\\ 0&amp;0&amp;0\\ 0&amp;1&amp;1\\ \end{pmatrix}=3-1=2 \]</div>
-<p>따라서 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화 가능하다.</p>
-<p>이제 <span class="arithmatex">\(\mathbf{T}\)</span> 를 대각화해보자. <span class="arithmatex">\(\lambda _1 = 1\)</span> 의 고유공간 <span class="arithmatex">\(\mathbf{E}_{\lambda_1}\)</span> 는 다음과 같다. </p>
-<div class="arithmatex">\[ \mathbf{E}_{\lambda_1} = \bigg \{\begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix} \in \R ^{3} : \begin{pmatrix} 0&amp;1&amp;1\\ 0&amp;0&amp;0\\ 0&amp;1&amp;1\\ \end{pmatrix}\begin{pmatrix} x_1\\ x_2\\ x_3\\ \end{pmatrix} = 0\bigg \} \]</div>
-<p>이 고유공간의 기저는 <span class="arithmatex">\(\gamma _1 = \bigg \{\begin{pmatrix} 1\\ 0\\ 0\\ \end{pmatrix}, \begin{pmatrix} 0\\ -1\\ 1\\ \end{pmatrix}\bigg \}\)</span> 이다.</p>
-<p><span class="arithmatex">\(\mathbf{E}_{\lambda_2}\)</span> 의 기저는 <span class="arithmatex">\(\gamma _2 = \bigg \{\begin{pmatrix} 1\\ 0\\ 1\\ \end{pmatrix}\bigg \}\)</span> 이다. <span class="arithmatex">\(\gamma = \gamma _1 \cup \gamma _2 = \bigg \{\begin{pmatrix} 1\\ 0\\ 0\\ \end{pmatrix}, \begin{pmatrix} 0\\ -1\\ 1\\ \end{pmatrix}, \begin{pmatrix} 1\\ 1\\ 0\\ \end{pmatrix}\bigg \}\)</span> 은 <span class="arithmatex">\(B\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\R ^{3}\)</span> 의 순서기저이다. <span class="arithmatex">\(\gamma \in \mathbf{F} ^{3}\)</span> 의 각 벡터는 <span class="arithmatex">\(\beta = \{1, -x+x ^{2}, 1+x ^{2}\} \in \mathbf{P}_{2}(\R)\)</span> 의 <span class="arithmatex">\(\alpha\)</span> 에 대한 좌표벡터이다. <span class="arithmatex">\(\beta\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{P}_{2}(\R)\)</span> 의 순서기저이므로 <span class="arithmatex">\(\mathbf{T}\)</span> 를 대각화해보면 다음과 같다.</p>
-<div class="arithmatex">\[ [\mathbf{T} ]_{\beta } = \begin{pmatrix} 1&amp;0&amp;0\\ 0&amp;1&amp;0\\ 0&amp;0&amp;2\\ \end{pmatrix} \]</div>
-</li>
-</ul>
-<a href="#1f6d4fc5a"><div class="admonition def" id="1f6d4fc5a">
-<p class="admonition-title">대각화 요약</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(n\)</span>차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 를 대각행렬 <span class="arithmatex">\([\mathbf{T}]_{\beta}\)</span> 로 표현할 수 있는 기저 <span class="arithmatex">\(\beta\)</span> 가 존재하면 <span class="arithmatex">\(\mathbf{T}\)</span> 를 대각화가능하다고 말한다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 를 대각화 할 수 있는 기저를 <span class="arithmatex">\(\beta = \{v_1, v_2, \dots, v_n\}\)</span> 로 두면 <span class="arithmatex">\(\mathbf{T}\)</span> 를 대각행렬료 표현하는 과정에서 반드시 <span class="arithmatex">\(\mathbf{T}(v_i) = \lambda _iv_i\)</span> 꼴의 결과가 나오게 된다. </p>
-<p>바로 이 형태 <span class="arithmatex">\(\mathbf{T}(v) = \lambda v\)</span> 를 일반화하여 <span class="arithmatex">\(v\)</span> 를 고유벡터, <span class="arithmatex">\(\lambda\)</span> 를 고윳값이라 정의한다. </p>
-</li>
-<li>
-<p>그러면 <span class="arithmatex">\(\mathbf{T}\)</span> 를 대각화할 수 있다는 것은 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터로 이루어진 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저가 존재한다는 것이 된다.</p>
-</li>
-<li>
-<p>따라서 <span class="arithmatex">\(\mathbf{T}\)</span> 를 대각화하고 싶다면 <span class="arithmatex">\(\mathbf{V}\)</span> 안에서 서로 일차독립인 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터들을 <span class="arithmatex">\(n\)</span>개 찾기만 하면 장땡이다. 그러면 서로 일차독립인 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터 <span class="arithmatex">\(n\)</span>개를 어떻게 찾는가?</p>
-</li>
-<li>
-<p>(고윳값 구하기) 특성다항식의 근을 구하면 선형연산자가 지니는 모든 고윳값을 하나도 빠짐없이 알 수 있다. 선형연산자의 서로 다른 고윳값은 최대 <span class="arithmatex">\(n\)</span>개이다. 만약 특성다항식의 근이 존재하지 않으면 고윳값도 존재하지 않으며 대각화 불가능하다.</p>
-</li>
-<li>
-<p>(고유벡터 구하기) 고유공간은 고윳값에 대응하는 모든 고유벡터들의 집합이며 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간이다. 따라서 고유공간의 기저를 구하면 고윳값에 대응하는 일차독립인 고유벡터들을 구할 수 있다.</p>
-</li>
-<li>
-<p>누군가가 각각의 고윳값에 대응하는 일차독립 집합들의 합집합이 일차독립이라는 것을 증명했다. 또한 고유공간의 차원이 항상 고윳값의 중복도와 같거나 작다는 사실이 증명되었다.</p>
-</li>
-<li>
-<p>따라서 만약 특성다항식의 근이 <span class="arithmatex">\(n\)</span>개라면, 각 고유공간은 1차원이고 그것들의 기저를 모으면 선형연산자를 대각화하는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저를 얻고 게임이 끝난다.</p>
-<p>만약 특성다항식의 근이 <span class="arithmatex">\(n\)</span>개 보다 작다면, 어떤 고윳값의 중복도가 2 이상이라는 것이다. 그러한 고윳값의 고유공간의 차원이 중복도보다 작으면, 아무리 모든 고유공간의 기저를 모아도 일차독립인 고유벡터들의 개수가 <span class="arithmatex">\(n\)</span> 보다 작을 수밖에 없고, 대각화 불가능하다. 즉, 어떤 고유공간이 너무 작으면 대각화 불가능하다.</p>
-<p>따라서 이 경우 <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화 가능하려면 중복도가 2 이상인 고윳값의 고유공간의 차원이 반드시 중복도와 같아야 한다. 그러면 대각화 가능하고, 고유공간의 기저를 모으면 <span class="arithmatex">\(\mathbf{T}\)</span> 를 대각화하는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저를 얻는다.</p>
-<p>자, 오케이 그러면 이 문장 하나로 모든 것을 요약할 수 있다. <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유공간의 기저의 합집합이 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저가 되면 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화 가능하다. 이 과정이 어떤 이유에서든 실패하면 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화 불가능하다. </p>
-</li>
-<li>
-<p>그러나 <span class="arithmatex">\(\mathbf{T}\)</span> 를 대각화할 수 없는 경우라고 해도 아직 희망은 남아있다. 물론 대각행렬표현이 <span class="arithmatex">\(\mathbf{T}\)</span> 를 가장 단순하게 표현할 수 있는 형태이긴 하지만, 이 형태를 대체할 수 있는 여러가지 행렬표현 형태들이 존재한다. 이 행렬표현을 표준형이라 한다.</p>
-<p>대각화 불가능한 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 완전히 인수분해되는 경우 조르당 표준형으로 <span class="arithmatex">\(\mathbf{T}\)</span> 를 행렬표현하면 된다.</p>
-<p>대각화 불가능한 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이 완전히 인수분해되지 않으면 유리 표준형으로 <span class="arithmatex">\(\mathbf{T}\)</span> 를 행렬표현한다.</p>
-</li>
-</ol>
-</div></a>
-<h2 id="direct-sum">Direct sum<a class="headerlink" href="#direct-sum" title="Permanent link">¶</a></h2>
-<a href="#f68ccee5d"><div class="admonition def" id="f68ccee5d">
-<p class="admonition-title">집합의 덧셈, 합(sum) </p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간 <span class="arithmatex">\(\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k\)</span> 에 대하여 다음 집합을 부분공간의 합이라 한다.</p>
-<div class="arithmatex">\[ \sum_{i=1}^{k}\mathbf{W} _i := \bigg \{\sum_{i=1}^{k}v_i : v_i \in \mathbf{W} _i \bigg \} \]</div>
-</div></a>
-<ul>
-<li>
-<p>예시</p>
-<p><span class="arithmatex">\(\R ^{3}\)</span> 의 부분공간 <span class="arithmatex">\(xy\)</span> 평면 <span class="arithmatex">\(\mathbf{W} _1\)</span>, <span class="arithmatex">\(yz\)</span> 평면 <span class="arithmatex">\(\mathbf{W} _2\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ (a, b, c) = (a, 0, 0) + (0, b, c) \in \R ^{3} \]</div>
-<p><span class="arithmatex">\((a, 0, 0) \in \mathbf{W} _1, (0, b, c) \in \mathbf{W} _2\)</span> 이므로 <span class="arithmatex">\(\R ^{3} = \mathbf{W} _1 + \mathbf{W} _2\)</span> 이다.</p>
-</li>
-</ul>
-<a href="#bf34d5525"><div class="admonition def" id="bf34d5525">
-<p class="admonition-title">직합(direct sum)</p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간 <span class="arithmatex">\(\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k\)</span> 와 <span class="arithmatex">\(i, j \in \{1,\dots,k\}\)</span> 에 대하여 다음을 만족하는 <span class="arithmatex">\(\mathbf{W}\)</span> 를 <span class="arithmatex">\(\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k\)</span> 의 직합이라 한다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\displaystyle \mathbf{W} = \sum_{i=1}^{k}\mathbf{W} _i\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\displaystyle \mathbf{W} _j \cap \sum_{i \neq j}^{}\mathbf{W} _i = \{0\}\)</span> </p>
-</li>
-</ol>
-<p><span class="arithmatex">\(\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k\)</span> 의 직합 <span class="arithmatex">\(\mathbf{W}\)</span> 를 다음과 같이 표기한다.</p>
-<div class="arithmatex">\[ \boxed{\mathbf{W} := \mathbf{W} _1 \oplus \mathbf{W} _2 \oplus \dots \oplus \mathbf{W} _k = \bigoplus_{i=1}^{k}\mathbf{W} _k} \]</div>
-</div></a>
-<ul>
-<li>
-<p>직합은 <span class="arithmatex">\(\mathbf{V}\)</span> 를 간단한 부분공간으로 분해하는 방법을 제공한다. 이는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 에 어떻게 작용하는지 파악할 수 있게 해준다.</p>
-<p>또한 직합은 대각화 불가능한 선형연산자를 다룰 때 유용하게 사용된다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(\R ^{5}\)</span> 의 <span class="arithmatex">\(\mathbf{W} = \{(x_1, x_2, x_3, x_4, x_5) : x_5 = 0\}, \mathbf{W}_1 = \{(a, b, c, 0, 0) : a, b, c \in \R \}, \mathbf{W}_2 = \{(0, 0, 0, d, 0) : d \in \R \}\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ (a, b, c, d, 0) = (a, b, c, 0, 0) + (0, 0, 0, d, 0) \in \mathbf{W} _1 + \mathbf{W} 2 \]</div>
-<p>따라서 <span class="arithmatex">\(\mathbf{W} = \sum_{i=1}^{2}\mathbf{W} _i\)</span> 이다.</p>
-<p>또한 <span class="arithmatex">\(\mathbf{W} _1 \cap \mathbf{W} _2 = \{0\}\)</span> 이다. 따라서 <span class="arithmatex">\(\displaystyle \mathbf{W} _1 \oplus \mathbf{W} _2 = \mathbf{W}\)</span> 이다.</p>
-</li>
-<li>
-<p>책에는 직합에 <span class="arithmatex">\(\mathbf{W} _i \subseteq \mathbf{W}\)</span> 라는 조건이 있다. 근데 내 생각에 이 조건은 1) 이 함의한다. 왜냐하면 영벡터 <span class="arithmatex">\(0\)</span> 이 다른 부분공간들을 대표하면 특정 <span class="arithmatex">\(k\)</span> 에 대하여 <span class="arithmatex">\(\sum \mathbf{W}_i = \mathbf{W}_k \subset \mathbf{W}\)</span> 가 되기 때문이다.</p>
-</li>
-</ul>
-<h3 id="properties-of-direct-sum">Properties of direct sum<a class="headerlink" href="#properties-of-direct-sum" title="Permanent link">¶</a></h3>
-<a href="#748907edc"><div class="admonition def" id="748907edc">
-<p class="admonition-title">정리 5.9</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간 <span class="arithmatex">\(\mathbf{W} _1, \mathbf{W} _2, \dots, \mathbf{W} _k\)</span> 와 <span class="arithmatex">\(i \in \{1, \dots, k\}\)</span> 에 대하여 다음은 동치이다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\displaystyle \mathbf{V} = \bigoplus_{i=1}^{k}\mathbf{W} _i\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\displaystyle \mathbf{V} = \sum_{i=1}^{k}\mathbf{W} _i\)</span> 이고 <span class="arithmatex">\(v_i \in \mathbf{W} _i\)</span> 에 대하여 <span class="arithmatex">\(\displaystyle \sum_{i=1}^{k}v_i = 0\)</span> 이면 <span class="arithmatex">\(v_i = 0\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(v \in \mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(v = \displaystyle \sum_{i=1}^{k}v_i\)</span> 를 만족하는 <span class="arithmatex">\(v_i \in \mathbf{W} _i\)</span> 가 유일하게 존재한다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{W} _i\)</span> 의 순서기저 <span class="arithmatex">\(\gamma _i\)</span> 에 대하여 <span class="arithmatex">\(\displaystyle \bigcup_{i=1}^{k}\gamma _i\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\displaystyle \bigcup_{i=1}^{k}\gamma _i\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저가 되게 하는 <span class="arithmatex">\(\mathbf{W} _i\)</span> 의 순서기저 <span class="arithmatex">\(\gamma _i\)</span> 가 존재한다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 직합의 정의와 동치인 명제들을 말해준다.</p>
-</li>
-<li>
-<p>1 에서 2 를 도출하는 증명</p>
-<p>직합의 정의에 의하여 <span class="arithmatex">\(\mathbf{V} = \displaystyle \sum_{i=1}^{k}\mathbf{W} _i\)</span> 이고 가정에 의하여 <span class="arithmatex">\(v_i \in \mathbf{W} _i\)</span> 에 대하여 <span class="arithmatex">\(\displaystyle \sum_{i=1}^{k}v_i = 0\)</span> 이다. 임의의 <span class="arithmatex">\(j\)</span> 에 대하여 합의 정의에 의하여 <span class="arithmatex">\(-v_j = \displaystyle \sum_{i\neq j}^{} v_i \in \displaystyle \sum_{i\neq j}^{}\mathbf{W} _i\)</span> 이다. 부분공간은 스칼라곱에 대하여 닫혀있으므로 <span class="arithmatex">\(-v_j \in \mathbf{W} _j\)</span> 이고, 직합의 정의에 의하여 <span class="arithmatex">\(-v_j \in \mathbf{W} _j \cap \displaystyle \sum_{i\neq j}^{}\mathbf{W} _i = \{0\}\)</span> 이다. 이는 <span class="arithmatex">\(v_j = 0\)</span> 임을 뜻한다. ■ </p>
-</li>
-<li>
-<p>2 에서 3 를 도출하는 증명</p>
-<p>2) 는 부분공간의 합이 곧 원래의 벡터공간이 됨을 말하므로 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 와 <span class="arithmatex">\(v_i \in \mathbf{W} _i\)</span> 에 대하여 <span class="arithmatex">\(v = v_1 + v_2 + \dots + v_k\)</span> 인 벡터 <span class="arithmatex">\(v_1, v_2, \dots, v_k\)</span> 가 존재한다. </p>
-<p>존재성 증명이 되었으니 유일성을 증명하자. <span class="arithmatex">\(v_i \neq w_i \in \mathbf{W} _i\)</span> 에 대하여 <span class="arithmatex">\(v = w_1 + w_2 + \dots + w_k\)</span> 가 성립한다고 하면 다음이 성립한다. </p>
-<div class="arithmatex">\[ (v_1 - w_1) + (v_2 - w_2) + \dots + (v_k - w_k) = v - v = 0 \]</div>
-<p><span class="arithmatex">\(v_i - w_i \in \mathbf{W} _i\)</span> 인데 2) 를 가정했으므로 <span class="arithmatex">\(v_i - w_i = 0 \implies v_i = w_i\)</span> 이다. 이는 모순이다. ■ </p>
-</li>
-<li>
-<p>3 에서 4 를 도출하는 증명</p>
-<p>3) 을 가정했으므로 <span class="arithmatex">\(\mathbf{V} = \displaystyle \sum_{i=1}^{k}\mathbf{W} _i\)</span> 이다. 집합 <span class="arithmatex">\(\gamma _i\)</span> 는 모든 <span class="arithmatex">\(v_i \in \mathbf{W} _i\)</span> 를 생성한다. 따라서 집합 <span class="arithmatex">\(\displaystyle \bigcup_{}^{}\gamma _i\)</span> 로 모든 <span class="arithmatex">\(\displaystyle \sum_{i=1}^{k}v_i \in \mathbf{V}\)</span> 를 생성할 수 있다.</p>
-<p>이 생성집합이 일차독립임을 보이면 기저이므로 증명이 끝난다. <span class="arithmatex">\(j \in \{1,2, \dots, |\gamma _i|\}\)</span> 에 대한 <span class="arithmatex">\(\displaystyle \sum_{i=1}^{k}\displaystyle \sum_{j=1}^{|\gamma _i|}a _{ij} v _{ij} = 0\)</span> 인 벡터 <span class="arithmatex">\(v _{ij} \in \gamma _i\)</span> 와 스칼라 <span class="arithmatex">\(a _{ij}\)</span> 가 존재한다. <span class="arithmatex">\(w_i = \displaystyle \sum_{j=1}^{|\gamma _i|}a _{ij}v _{ij}\)</span> 로 두면 <span class="arithmatex">\(w_i \in \text{span} (\gamma _i) = \mathbf{W} _i\)</span> 이고 다음이 성립한다. </p>
-<div class="arithmatex">\[ w_1 + w_2 + \dots + w_k = \sum_{i=1}^{k}\sum_{j=1}^{|\gamma _i|}a _{ij}v _{ij} = 0 \]</div>
-<p>부분공간은 벡터공간이므로 <span class="arithmatex">\(0 \in \mathbf{W} _i\)</span> 이다. 따라서 <span class="arithmatex">\(w_1 = 0, w_2 = 0, \dots, w_k = 0\)</span> 을 가정할 경우 <span class="arithmatex">\(w_1 + w_2 + \dots + w_k = 0+0+\dots+0 = 0\)</span> 이다. 3) 을 가정했는데 3) 에 따르면 이 표현은 유일하다. 즉, <span class="arithmatex">\(w_i \neq 0\)</span> 일 경우 <span class="arithmatex">\(w_1 + w_2 + \dots + w_k = 0\)</span> 는 성립하지 않는다. 그러므로 <span class="arithmatex">\(w_i = 0\)</span> 이다. 이는 다음이 성립함을 뜻한다. </p>
-<div class="arithmatex">\[  0 = w_i = \sum_{j=1}^{|\gamma _i|} a _{ij}v _{ij} \]</div>
-<p><span class="arithmatex">\(\gamma _i\)</span> 는 일차독립이므로 위 식이 성립하기 위한 스칼라는 영벡터의 자명한 표현 뿐이다. 즉, <span class="arithmatex">\(a _{ij} = 0\)</span> 이다. 이는 <span class="arithmatex">\(\displaystyle \bigcup_{}^{}\gamma _i\)</span> 가 일차독립임을 뜻한다. ■ </p>
-</li>
-<li>
-<p>4 에서 5 를 도출하는 증명</p>
-<p>4) 를 가정하면 5) 가 바로 나온다.</p>
-</li>
-<li>
-<p>5 에서 1 을 도출하는 증명</p>
-<p>문제 1.4-14 에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split}
-\mathbf{V} &amp;= \text{span} (\gamma _1 \cup \gamma _2 \cup \dots \cup \gamma _k) \\
-&amp;= \text{span} (\gamma _1) + \text{span} (\gamma _2) + \dots + \text{span} (\gamma _k) = \sum_{i=1}^{k}\mathbf{W} _i\\
-\end{split}\end{equation} \tag*{}
-\]</div>
-<p>어떤 <span class="arithmatex">\(j\)</span> 와 영이 아닌 벡터 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(v \in \mathbf{W} _j \cap \displaystyle \sum_{i \neq j}^{}\mathbf{W} _i\)</span> 를 가정하면 <span class="arithmatex">\(v \in \mathbf{W} _j = \text{span} (\gamma _j) \land v \in \displaystyle \sum_{i \neq j}^{}\mathbf{W} _i = \text{span} \bigg (\bigcup_{i \neq j}^{}\gamma i\bigg )\)</span> 이다. 따라서 <span class="arithmatex">\(v\)</span> 는 <span class="arithmatex">\(\gamma _j\)</span> 와 <span class="arithmatex">\(\displaystyle \bigcup_{i \neq j}^{}\gamma _i\)</span> 의 자명하지 않은 일차결합이다. 그러므로 <span class="arithmatex">\(v\)</span> 를 <span class="arithmatex">\(\displaystyle \bigcup_{i=1}^{k}\gamma _i\)</span> 의 일차결합으로 표현하는 방식이 유일하지 않다. 이는 <a href="../VectorSpace/#8a514fc5c">정리 1.8</a> 에 의하여 모순이다. 따라서 <span class="arithmatex">\(\mathbf{W} _j \cap \displaystyle \sum_{i \neq j}^{}\mathbf{W} _i = \{0\}\)</span> 이다. ■ </p>
-</li>
-</ul>
-<a href="#fbcd60c9f"><div class="admonition def" id="fbcd60c9f">
-<p class="admonition-title">정리 5.10</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능인 것과 <span class="arithmatex">\(\mathbf{V}\)</span> 가 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유공간의 직합인 것은 동치이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 서로 다른 고윳값을 <span class="arithmatex">\(\lambda _1, \lambda _2, \dots , \lambda _k\)</span> 라 하자. </p>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능임을 가정하자. 각 <span class="arithmatex">\(i\)</span> 에 대한 고유공간 <span class="arithmatex">\(\mathbf{E}_{\lambda_i}\)</span> 의 순서기저를 <span class="arithmatex">\(\gamma _i\)</span> 라 하자. <a href="#7050c2a83">정리 5.8</a> 은 <span class="arithmatex">\(\bigcup_{}^{}\gamma _i\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저임을 말해준다. 이로써 정리 5.9 의 4) 가 충족된다. 정리 5.9 의 1) 은 4) 와 진리값이 같으므로 <span class="arithmatex">\(\mathbf{V} = \bigoplus_{}^{}\mathbf{E}_{\lambda_i}\)</span> 이다. ▲ </p>
-<p><span class="arithmatex">\(\mathbf{V}\)</span> 가 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유공간의 직합임을 가정하자. 각 <span class="arithmatex">\(i\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{E}_{\lambda_i}\)</span> 의 순서기저 <span class="arithmatex">\(\gamma _i\)</span> 가 존재한다. 정리 5.9 의 1) 이 참이므로 4) 도 참이 되어 <span class="arithmatex">\(\bigcup_{}^{}\gamma _i\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저가 된다. 이 기저는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유벡터로 이루어진 기저이므로 <span class="arithmatex">\(\mathbf{T}\)</span> 는 대각화가능하다. ■ </p>
-</li>
-<li>
-<p>예시 </p>
-<p>벡터공간 <span class="arithmatex">\(\R ^{5}\)</span> 에 부분공간 <span class="arithmatex">\(\mathbf{W} = \{(x_1, x_2, x_3, x_4, x_5) : x_5 = 0\}, \mathbf{W}_1 = \{(a, b, 0, 0, 0) : a, b \in \R\}, \mathbf{W}_2 = \{(0, 0, c, 0, 0) : c \in \R\}, \mathbf{W}_3 = \{(0, 0, 0, d, 0) : d \in \R\}\)</span> 이 존재한다. <span class="arithmatex">\((a, b, c, d, 0) \in \mathbf{W}\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ (a, b, c, d, 0) = (a, b, 0, 0, 0) + (0, 0, c, 0, 0) + (0, 0, 0, d, 0) \in \mathbf{W} _1 +\mathbf{W} _2 +\mathbf{W} _3 \]</div>
-<div class="arithmatex">\[ \mathbf{W} _1 \cap (\mathbf{W} _2 + \mathbf{W} _3) = \mathbf{W} _2 \cap (\mathbf{W} _1 + \mathbf{W} _3) = \mathbf{W} _3 \cap (\mathbf{W} _1 + \mathbf{W} _2) =\{0\} \]</div>
-<p>그러므로 <span class="arithmatex">\(\mathbf{W} = \displaystyle \bigoplus_{i=1}^{3}\mathbf{W} _i\)</span> 이다.</p>
-<p>벡터공간 <span class="arithmatex">\(\R ^{4}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T} (a, b, c, d) = (a, b, 2c, 3d)\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능이고 고윳값 <span class="arithmatex">\(1, 2, 3\)</span> 을 갖는다는 것을 알 수 있다. 이때 각 고윳값에 대응하는 고유공간들이 각각 <span class="arithmatex">\(\mathbf{W} _1, \mathbf{W} _2, \mathbf{W} _3\)</span> 와 같음을 알 수 있다. 이때 정리를 사용하면 <span class="arithmatex">\(\R ^{4} = \mathbf{W} _1 \oplus \mathbf{W} _2 \oplus \mathbf{W} _3\)</span> 임을 알 수 있다.</p>
-</li>
-</ul>
-<h2 id="invariant-subspace">Invariant Subspace<a class="headerlink" href="#invariant-subspace" title="Permanent link">¶</a></h2>
-<a href="#46ba27298"><div class="admonition def" id="46ba27298">
-<p class="admonition-title"><span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간(<span class="arithmatex">\(\mathbf{T}\)</span>-invariant subspace)</p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 와 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T} (\mathbf{W} ) \subseteq \mathbf{W}\)</span> 인 <span class="arithmatex">\(\mathbf{W}\)</span> 를 <span class="arithmatex">\(\mathbf{V}\)</span> 의 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간이라 한다.</p>
-</div></a>
-<ul>
-<li>
-<p>즉, <span class="arithmatex">\(\forall v \in \mathbf{W} : \mathbf{T} (v) \in \mathbf{W}\)</span> 이면 <span class="arithmatex">\(\mathbf{W}\)</span> 가 <span class="arithmatex">\(\mathbf{V}\)</span> 의 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간이라는 것이다.</p>
-<p>쉽게 말해, 부분공간의 원소가 <span class="arithmatex">\(\mathbf{T}\)</span> 를 통과해서 나왔는데도 부분공간에 속했으면 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이다.</p>
-</li>
-</ul>
-<a href="#2561e1047"><div class="admonition def" id="2561e1047">
-<p class="admonition-title">문제 5.4-3</p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 와 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 에 대하여 다음 부분공간은 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\{0\}\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{V}\)</span> </p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{R}(\mathbf{T})\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{N}(\mathbf{T})\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대한 <span class="arithmatex">\(\mathbf{E}_{\lambda}\)</span></p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 에 대하여 다음의 부분공간들이 <span class="arithmatex">\(\mathbf{T}\)</span>-불변임을 확인해보자.</p>
-<p><span class="arithmatex">\(\{0\}\)</span>:</p>
-<p><a href="../LinearTransformation/#841cc7807">선형변환의 성질</a> 에 의하여 <span class="arithmatex">\(\mathbf{T} (0) = 0 \in \{0\}\)</span> 이므로 <span class="arithmatex">\(\{0\}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이다.</p>
-<p><span class="arithmatex">\(\mathbf{V}\)</span>:</p>
-<p>선형연산자 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{V}\)</span> 의 공역이 <span class="arithmatex">\(\mathbf{V}\)</span> 이므로 <span class="arithmatex">\(\mathbf{T} (\mathbf{V} ) \subset \mathbf{V}\)</span> 이다. 따라서 <span class="arithmatex">\(\mathbf{V}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이다.</p>
-<p><span class="arithmatex">\(\mathbf{R} (\mathbf{T})\)</span>:</p>
-<p><span class="arithmatex">\(\mathbf{R} (\mathbf{T}) \subset \mathbf{V}\)</span> 인 <span class="arithmatex">\(\mathbf{V}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T} (\mathbf{V} ) = \mathbf{R} (\mathbf{T})\)</span> 이다. 따라서 <span class="arithmatex">\(\mathbf{T} (\mathbf{R} (\mathbf{T}) ) \subset \mathbf{T} (\mathbf{V} ) = \mathbf{R} (\mathbf{T})\)</span> 이다.</p>
-<p><span class="arithmatex">\(\mathbf{N} (\mathbf{T})\)</span>:</p>
-<p><span class="arithmatex">\(\mathbf{T} (\mathbf{N} (\mathbf{T}) ) = \{0\}\)</span> 이므로 <span class="arithmatex">\(\mathbf{T} (\mathbf{N} (\mathbf{T}) ) = \{0\} \subset \mathbf{N} (\mathbf{T})\)</span> 이다.</p>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 고윳값 <span class="arithmatex">\(\lambda\)</span> 에 대한 <span class="arithmatex">\(\mathbf{E}_{\lambda}\)</span>:</p>
-<p><span class="arithmatex">\(x \in \mathbf{E}_{\lambda}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T} (x) = \lambda x\)</span> 이다. <span class="arithmatex">\(\mathbf{T} (\lambda x) = \lambda \mathbf{T} (x) = \lambda \cdot \lambda x\)</span> 이다. 벡터공간은 스칼라곱에 닫혀있으므로 <span class="arithmatex">\(\lambda x \in \mathbf{V}\)</span> 이다. 따라서 <span class="arithmatex">\(\lambda x \in \mathbf{V} \implies \lambda x \in \mathbf{E}_{\lambda}\)</span> 이다. 따라서 <span class="arithmatex">\(\mathbf{T} (\mathbf{E}_{\lambda} ) \subset \mathbf{E}_{\lambda}\)</span> 이다.</p>
-</li>
-</ul>
-<a href="#79ee322d1"><div class="admonition def" id="79ee322d1">
-<p class="admonition-title">문제 5.4-4</p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 와 임의의 다항식 <span class="arithmatex">\(g(t)\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{W}\)</span> 는 <span class="arithmatex">\(g(\mathbf{T})\)</span>-불변이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(g(\mathbf{T})\)</span> 를 스칼라 <span class="arithmatex">\(a_0, a_1, \dots, a_n\)</span> 에 대하여 다음과 같이 두자. </p>
-<div class="arithmatex">\[ g(\mathbf{T}) = a_n \mathbf{T}^{n} + \dots + a_1 \mathbf{T} + a_0 \mathbf{I} \]</div>
-<p><span class="arithmatex">\(\forall k \in \N, \forall w \in \mathbf{W} : \mathbf{T}^{k}(w) \in \mathbf{W}\)</span> 이다. <span class="arithmatex">\(\mathbf{W}\)</span> 는 부분공간이므로 합과 스칼라곱에 대하여 닫혀있다. 따라서 <span class="arithmatex">\(w \in \mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(g(\mathbf{T})(w)\)</span> 의 모든 항은 <span class="arithmatex">\(\mathbf{W}\)</span> 에 속하고 결국 <span class="arithmatex">\(g(\mathbf{T})(w) \in \mathbf{W}\)</span> 이다. ■ </p>
-</li>
-</ul>
-<h3 id="cyclic-subspace">Cyclic subspace<a class="headerlink" href="#cyclic-subspace" title="Permanent link">¶</a></h3>
-<a href="#ca25daea0"><div class="admonition def" id="ca25daea0">
-<p class="admonition-title"><span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간(<span class="arithmatex">\(\mathbf{T}\)</span>-cyclic subspace)</p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 영이 아닌 벡터 <span class="arithmatex">\(x \in \mathbf{V}\)</span> 에 대하여 다음과 같은 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 를 <span class="arithmatex">\(x\)</span> 에 의해 생성된 <span class="arithmatex">\(\mathbf{V}\)</span> 의 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간이라 한다.</p>
-<div class="arithmatex">\[ \mathbf{W} = \text{span} (\{x, \mathbf{T} (x), \mathbf{T} ^{2}(x), \dots \}) \]</div>
-</div></a>
-<ul>
-<li>
-<p>문제 5.4-31 은 순환 부분공간으로 행렬식 없이 선형연산자의 특성다항식을 구하는 방법을 말해준다.</p>
-</li>
-<li>
-<p>순환 부분공간은 대각화 불가능한 선형연산자의 행렬표현을 다룰 때 매우 중요한 역할을 한다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(\R ^{3}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 를 <span class="arithmatex">\(\mathbf{T}(a,b,c)=(-b+c,a+c,3c)\)</span> 라고 정의하고 <span class="arithmatex">\(e_1 = (1, 0, 0)\)</span> 에 의해 생성된 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간을 구해보자. 다음이 성립한다.</p>
-<div class="arithmatex">\[\mathbf{T}(e_1) = \mathbf{T}(1,0,0) = (0, 1,0) = e_2\]</div>
-<div class="arithmatex">\[\mathbf{T}^{2}(e_1) = \mathbf{T}(\mathbf{T}(e_1)) = \mathbf{T}(e_2) = (-1,0,0) = -e_1 \]</div>
-<p>그러므로 <span class="arithmatex">\(e_1\)</span> 에 의해 생성된 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간은 다음과 같다.</p>
-<div class="arithmatex">\[ \text{span} (\{e_1, \mathbf{T}(e_1), \mathbf{T}^{2}(e_1), \dots\}) = \text{span} (\{e_1, e_2\}) = \{(s, t, 0) : s, t \in \R\} \]</div>
-</li>
-</ul>
-<a href="#6efd4f326"><div class="admonition def" id="6efd4f326">
-<p class="admonition-title">문제 5.4-11</p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 영이 아닌 벡터 <span class="arithmatex">\(v \in \mathbf{V}\)</span>, <span class="arithmatex">\(v\)</span> 에 의해 생성된 <span class="arithmatex">\(\mathbf{V}\)</span> 의 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대하여 다음이 성립한다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\mathbf{W}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(v\)</span> 를 포함하는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 임의의 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간은 <span class="arithmatex">\(\mathbf{W}\)</span> 를 포함한다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간이 <span class="arithmatex">\(\mathbf{T}\)</span>-불변임을 말해준다.</p>
-</li>
-<li>
-<p>이 정리는 <span class="arithmatex">\(x\)</span> 를 포함하는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간이 반드시 <span class="arithmatex">\(x\)</span> 에 의해 생성된 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간을 포함함을 말해준다. 즉, <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간은 <span class="arithmatex">\(x\)</span> 를 포함하는 가장 작은 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간이다.</p>
-<p>가령 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 <span class="arithmatex">\(x\)</span> 를 포함하는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간 <span class="arithmatex">\(\mathbf{W}_1, \mathbf{W}_2, \dots, \mathbf{W}_n\)</span> 과 <span class="arithmatex">\(x\)</span> 에 의해 생성된 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간 <span class="arithmatex">\(\mathbf{Z}\)</span> 를 가정하면 다음이 성립한다. </p>
-<div class="arithmatex">\[ \mathbf{Z} \subset \mathbf{W}_1, \mathbf{Z} \subset \mathbf{W}_2, \dots, \mathbf{Z} \subset \mathbf{W}_n \]</div>
-<p>이는 <a href="../VectorSpace/#26f9238cb">정리 1.11</a> 와 그 따름정리에 의해 <span class="arithmatex">\(\mathbf{Z}\)</span> 의 기저가 다른 모든 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간의 기저에 포함됨을 뜻한다. 따라서 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간은 가장 작은 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간이 된다.</p>
-</li>
-<li>
-<p>증명</p>
-<p>집합 <span class="arithmatex">\(\beta = \{v, \mathbf{T}(v), \mathbf{T}^{2}(v), \dots\}\)</span> 가 <span class="arithmatex">\(\mathbf{W}\)</span> 를 생성한다. 다음을 만족하는 무한한 스칼라 <span class="arithmatex">\(a_0, a_1, a_2, \dots\)</span> 가 존재한다.</p>
-<div class="arithmatex">\[ x \in \mathbf{W} \implies x = a_0v + a_1 \mathbf{T}(v) + a_2 \mathbf{T}^{2}(v) + \dots \]</div>
-<div class="arithmatex">\[ \implies \mathbf{T}(x) = a_0 \mathbf{T}(v) + a_1 \mathbf{T}^{2}(v) + a_2 \mathbf{T}^{3}(v) + \dots \]</div>
-<p><span class="arithmatex">\(\mathbf{T}(x)\)</span> 는 <span class="arithmatex">\(\beta\)</span> 에 의한 일차결합이므로 <span class="arithmatex">\(\mathbf{T}(x) \in \mathbf{W}\)</span> 이다. 따라서 <span class="arithmatex">\(\mathbf{W}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이다. ▲ </p>
-<p><span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간 <span class="arithmatex">\(\mathbf{Z}\)</span> 가 <span class="arithmatex">\(v \in \mathbf{Z}\)</span> 를 만족하면 다음이 성립한다.</p>
-<div class="arithmatex">\[ v \in \mathbf{Z} \implies \mathbf{T}(v) \in \mathbf{Z} \implies \mathbf{T}^{2}(v) \in \mathbf{Z} \implies \dots \]</div>
-<p>그러므로 <span class="arithmatex">\(\beta \subset  \mathbf{Z}\)</span> 이다. <span class="arithmatex">\(\mathbf{Z}\)</span> 가 <span class="arithmatex">\(\mathbf{W}\)</span> 의 기저를 포함하므로 <span class="arithmatex">\(\mathbf{W}\)</span> 의 모든 벡터는 <span class="arithmatex">\(\mathbf{Z}\)</span> 에 포함된다. 즉, <span class="arithmatex">\(\mathbf{W} \subset \mathbf{Z}\)</span> 이다. ■ </p>
-</li>
-</ul>
-<h3 id="restriction">restriction<a class="headerlink" href="#restriction" title="Permanent link">¶</a></h3>
-<a href="#aa5fb5efd"><div class="admonition def" id="aa5fb5efd">
-<p class="admonition-title">제한(restriction)</p>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}:\mathbf{V} \to \mathbf{V}\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{T}\)</span> 를 <span class="arithmatex">\(\mathbf{W}\)</span> 로 제한한 <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 정의역과 공역을 <span class="arithmatex">\(\mathbf{W}\)</span> 로 제한한 함수 <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}:\mathbf{W}\to \mathbf{W}\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p><a href="../../Set/Set/#d5708058b">함수의 제한</a>은 정의역만 축소시키는 것으로 정의되지만, 이 경우 정의역이 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간으로 축소되므로 공역도 어차피 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간으로 축소된다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 는 선형변환이다.(문제 5.4-7) 즉, <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 는 <span class="arithmatex">\(\mathbf{W}\)</span> 의 선형연산자이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 성질을 그대로 상속한다.</p>
-</li>
-</ul>
-<a href="#d5371600a"><div class="admonition def" id="d5371600a">
-<p class="admonition-title">문제 5.4-12</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대한 <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 의 순서기저 <span class="arithmatex">\(\gamma = \{v_1, v_2, \dots, v_k\}\)</span> 를 확장하여 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저 <span class="arithmatex">\(\beta = \{v_1, v_2, \dots, v_k, v _{k+1}, \dots, v_n\}\)</span> 을 만들고 <span class="arithmatex">\(A = [\mathbf{T}]_{\beta }, B_1 = [\mathbf{T}_{\mathbf{W}}]_{\gamma }\)</span> 로 두자.</p>
-<p>영행렬 <span class="arithmatex">\(O\)</span> 에 대하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ A = \begin{pmatrix} B_1&amp;B_2\\ O&amp;B_3\\ \end{pmatrix} \]</div>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(i \in \{1, \dots, k\}\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 열은 다음과 같다. </p>
-<div class="arithmatex">\[ \mathbf{T}(v_i) = \sum_{i=1}^{n}a _{ij}v_i \in \mathbf{W} \]</div>
-<p><span class="arithmatex">\(v_i \in \mathbf{W}\)</span> 이므로 <span class="arithmatex">\(\mathbf{T}(v_i) \in \mathbf{W}\)</span> 이다. 만약 <span class="arithmatex">\(\sum_{i=k+1}^{n}a _{ij}v_i \neq 0\)</span> 이면 <span class="arithmatex">\(\mathbf{T}(v_i)\)</span> 를 <span class="arithmatex">\(\mathbf{W}\)</span> 의 기저로 표현하는 것이 불가능하므로 <span class="arithmatex">\(\mathbf{T}(v_i) \not\in \mathbf{W}\)</span> 이다. 이는 모순이다. 따라서 <span class="arithmatex">\(\sum_{i=k+1}^{n}v_i = 0\)</span> 이다. 그러므로 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(i\)</span> 열은 다음과 같다.</p>
-<div class="arithmatex">\[ \mathbf{T}(v_i) = \sum_{i=1}^{k}a _{ij}v_i \]</div>
-<p>이로써 모든 증명이 끝났다. ■ </p>
-</li>
-</ul>
-<a href="#3d097218e"><div class="admonition def" id="3d097218e">
-<p class="admonition-title">정리 5.20</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대한 <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 의 특성다항식은 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식을 나눈다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 선형연산자와 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간에 의한 제한과의 관계를 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\mathbf{W}\)</span> 의 순서기저를 <span class="arithmatex">\(\gamma = \{v_1, v_2, \dots, v_k\}\)</span> 라 하면 <span class="arithmatex">\(\gamma\)</span> 를 확장하여 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저 <span class="arithmatex">\(\beta = \{v_1, v_2, \dots, v_k, v _{k+1}, \dots, v_n\}\)</span> 을 만들 수 있다. <span class="arithmatex">\(A = [\mathbf{T}]_{\beta }, B_1 = \{\mathbf{T}_{\mathbf{W}}\}_{\gamma }\)</span> 라 하면 문제 5.4-12 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ A = \begin{pmatrix} B_1&amp;B_2\\ O&amp;B_3\\ \end{pmatrix} \]</div>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식 <span class="arithmatex">\(f(t)\)</span>, <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 의 특성다항식 <span class="arithmatex">\(g(t)\)</span> 에 대하여 <a href="../Determinants/#48155e536">문제 4.3-21</a> 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ f(t) = \det(A - tI_n) = \det \begin{pmatrix} B_1-tI_k&amp;B_2\\ O&amp;B_3-tI _{n-k}\\ \end{pmatrix} = g(t) \det(B_3-tI _{n-k}) \]</div>
-<p>따라서 <span class="arithmatex">\(g(t)\)</span> 는 <span class="arithmatex">\(f(t)\)</span> 를 나눈다. ■ </p>
-</li>
-</ul>
-<a href="#8a8091e39"><div class="admonition def" id="8a8091e39">
-<p class="admonition-title">문제 5.4-19</p>
-<p>스칼라 <span class="arithmatex">\(a_0, a_1, \dots, a _{k-1} \in \mathbf{F}\)</span> 와 다음과 같이 정의된 행렬 <span class="arithmatex">\(A \in \mathbf{M}_{k \times k}(\mathbf{F})\)</span> 의 특성다항식은 <span class="arithmatex">\((-1) ^{k}(a_0+ a_1t+ \dots + a _{k-1}t^{k-1} + t ^{k})\)</span> 이다.</p>
-<div class="arithmatex">\[ A= \begin{pmatrix} 0&amp;0&amp;\dots&amp;0&amp;-a_0\\ 1&amp;0&amp;\dots&amp;0&amp;-a_1\\ 0&amp;1&amp;\dots&amp;0&amp;-a_2\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;1&amp;-a _{k-1}\\ \end{pmatrix} \]</div>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(k = 2\)</span> 을 가정하면 <span class="arithmatex">\(A = \begin{pmatrix} 0&amp;-a_0\\ 1&amp;-a_1\\ \end{pmatrix}\)</span> 이다. 다음이 성립한다. </p>
-<div class="arithmatex">\[f(t) = \det(A - tI_2) = \det \begin{pmatrix} -t&amp;-a_0\\ 1&amp;-a_1-t\\ \end{pmatrix} = t(a_1+t) + a_0 = (-1) ^{2}(a_0 + a_1t + t ^{2}) \tag*{▲} \]</div>
-<p><span class="arithmatex">\(k-1\)</span> 에서 정리가 성립함을 가정하고 <span class="arithmatex">\(k\)</span> 에서 정리가 성립함을 증명하자. <span class="arithmatex">\(B = A - tI_k\)</span> 로 두면 <span class="arithmatex">\(A \in \mathbf{M}_{k \times k}(\mathbf{F})\)</span> 의 특성다항식은 다음과 같다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \det(B) &amp;= \det \begin{pmatrix} -t&amp;0&amp;\dots&amp;0&amp;-a_0\\ 1&amp;-t&amp;\dots&amp;0&amp;-a_1\\ 0&amp;1&amp;\dots&amp;0&amp;-a_2\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots&amp; \vdots \\ 0&amp;0&amp;\dots&amp;1&amp;-a _{k-1}-t\\ \end{pmatrix} \\ &amp;= (-1)^{1 + 1}B _{11} \det(\tilde{B}_{11})  + (-1) ^{1 + k}B _{1k}\det(\tilde{B}_{1k}) \\ &amp;= -t \det(\tilde{B}_{11})  + (-1) ^{1 + k}\cdot (-a_0) \cdot 1 \\ \end{split}\end{equation} \tag*{} \]</div>
-<p><span class="arithmatex">\(\tilde{B}_{11}\)</span> 은 <span class="arithmatex">\(\tilde{A}_{11}\)</span> 의 특성다항식이다.  <span class="arithmatex">\(k-1\)</span> 에서 정리가 성립하므로 <span class="arithmatex">\(\det(\tilde{B}_{11})\)</span> 은 적절한 스칼라 <span class="arithmatex">\(b_0, b_1, \dots, b_{k-1} \in \mathbf{F}\)</span> 에 대하여 <span class="arithmatex">\((-1) ^{k-1}(b_0+ b_1t+ \dots + b_{k-2}t^{k-2} + t ^{k-1})\)</span> 이다. 따라서 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} \det(A - tI_k) &amp;= -t \cdot (-1) ^{k-1}(b_0+ b_1t+ \dots + b_{k-2}t^{k-2} + t ^{k-1}) + (-1) ^{k}\cdot a_0 \\ &amp;= (-1) ^{k}(b_0t+ b_1t ^{2}+ \dots + b_{k-2}t^{k-1} + t ^{k}) + (-1) ^{k}\cdot a_0 \\ &amp;= (-1) ^{k}(a_0 + b_0t+ b_1t ^{2}+ \dots + b_{k-2}t^{k-1} + t ^{k}) \\ &amp;= (-1) ^{k}(a_0 + a_1t+ a_2t ^{2}+ \dots + a_{k-1}t^{k-1} + t ^{k}) \\ \end{split}\end{equation} \tag*{} \]</div>
-<p>단순히 <span class="arithmatex">\(b_i = a _{i+1}\)</span> 로 선택하면 위와 같은 결론을 얻을 수 있다. 정리가 임의의 스칼라들에 대하여 성립하므로 이렇게 선택해도 괜찮다. ■ </p>
-</li>
-</ul>
-<a href="#975617f00"><div class="admonition def" id="975617f00">
-<p class="admonition-title">정리 5.21</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 영이 아닌 벡터 <span class="arithmatex">\(v \in \mathbf{V}\)</span> 에 의해 생성된 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 에 대하여 <span class="arithmatex">\(k = \dim (\mathbf{W})\)</span> 이면 다음이 성립한다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\{v, \mathbf{T}(v), \dots, \mathbf{T}^{k-1}(v)\}\)</span> 는 <span class="arithmatex">\(\mathbf{W}\)</span> 의 기저이다. </p>
-</li>
-<li>
-<p>스칼라 <span class="arithmatex">\(a_0, a_1, \dots, a _{k-1}\)</span> 에 대하여 <span class="arithmatex">\(a_0v + a_1 \mathbf{T}(v) + \dots + a _{k-1}\mathbf{T}^{k-1}(v)+\mathbf{T}^{k}(v) = 0\)</span> 이면 <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 의 특성다항식은 <span class="arithmatex">\(f(t) = (-1)^{k}(a_0+a_1t+\dots+a _{k-1}t ^{k-1}+t ^{k})\)</span> 이다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>정리 5.20 은 <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 의 특성다항식으로 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식의 정보를 얻게 해준다. 이 정리는 <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 의 특성다항식을 쉽게 얻게 해준다는 관점에서 순환 부분공간의 유용함을 증명해준다.</p>
-<ul>
-<li>
-<p>1) 는 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간을 정의하기 위하여 사용된 생성집합</p>
-<div class="arithmatex">\[ \text{span} (\{v, \mathbf{T} (v), \mathbf{T} ^{2}(v), \dots \}) \]</div>
-<p>에서 <span class="arithmatex">\(\mathbf{T}^{k}(v)\)</span> 이상의 것들은 불필요함을 알려준다. 또한 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간의 기저를 쉽게 알 수 있는 방법을 알려준다.</p>
-</li>
-<li>
-<p>2) 는 <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 의 특성다항식을 쉽게 구하는 방법을 알려준다. 즉 <span class="arithmatex">\(\mathbf{T}^{k}(v)\)</span> 를 기저로 표현하는 일차결합의 계수만 알아내면 특성다항식을 바로 구할 수 있다는 것이다. 너무 자명하지만, 이 일차결합 표현은 반드시 존재한다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(v \neq 0\)</span> 이므로 <span class="arithmatex">\(\{v\}\)</span> 는 일차독립이다. <span class="arithmatex">\(\beta = \{v, \mathbf{T}(v), \dots, \mathbf{T}^{j-1}(v)\}\)</span> 가 일차독립이 되게 하는 가장 큰 자연수 <span class="arithmatex">\(j\)</span> 가 존재한다. <span class="arithmatex">\(\mathbf{V}\)</span> 가 유한차원이므로 유한한 기저보다 기수가 작은 일차독립 집합들이 존재하기 때문이다. </p>
-<p><span class="arithmatex">\(\mathbf{Z}=\text{span} (\beta )\)</span> 로 두면 <span class="arithmatex">\(\beta\)</span> 는 <span class="arithmatex">\(\mathbf{Z}\)</span> 의 기저이다. <span class="arithmatex">\(j\)</span> 가 <span class="arithmatex">\(\beta\)</span> 를 일차독립이 되게 하기 위한 마지막 자연수이므로 <span class="arithmatex">\(j+1\)</span> 에 대하여 일차종속이 되므로 <span class="arithmatex">\(\beta\)</span> 의 일차결합으로 <span class="arithmatex">\(\mathbf{T}^{j}(v)\)</span> 를 표현할 수 있다. 따라서 <a href="VectorSpace/#97eff1e4d">정리 1.7</a> 의 세번째 명제에 의하여 <span class="arithmatex">\(\mathbf{T}^{j}(v) \in \mathbf{Z}\)</span> 이다.</p>
-<p><span class="arithmatex">\(w \in \mathbf{Z}\)</span> 이면 <span class="arithmatex">\(w = b_0v + b_1 \mathbf{T}(v) + \dots + b_{j-1}\mathbf{T}^{j-1}(v)\)</span> 인 스칼라 <span class="arithmatex">\(b_0, b_1, \dots, b _{j-1}\)</span> 가 존재한다. 이 식에 <span class="arithmatex">\(\mathbf{T}\)</span> 를 씌우면 다음과 같다. </p>
-<div class="arithmatex">\[ \mathbf{T}(w) = b_0 \mathbf{T}(v) + b_1 \mathbf{T}^{2}(v) + \dots + b _{j-1} \mathbf{T}^{j}(v) \]</div>
-<p><span class="arithmatex">\(\mathbf{T}(w)\)</span> 는 <span class="arithmatex">\(\mathbf{Z}\)</span> 의 기저의 일차결합이므로 <span class="arithmatex">\(\mathbf{T}(w) \in \mathbf{Z}\)</span> 이다. 따라서 <span class="arithmatex">\(\mathbf{Z}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이다. 문제 5.4-11 에 의하여 <span class="arithmatex">\(\mathbf{W}\)</span> 는 <span class="arithmatex">\(v\)</span> 를 포함하는 가장 작은 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간이므로 <span class="arithmatex">\(\mathbf{W}\subset \mathbf{Z}\)</span> 이다.</p>
-<p>그런데 <span class="arithmatex">\(\mathbf{Z}\)</span> 의 생성집합 <span class="arithmatex">\(\beta\)</span> 가 <span class="arithmatex">\(\mathbf{W}\)</span> 의 생성집합에 포함되므로 자명하게 <span class="arithmatex">\(\mathbf{Z}\subset \mathbf{W}\)</span> 이다. 따라서 <span class="arithmatex">\(\mathbf{Z} = \mathbf{W}\)</span> 이다. 그러므로 <span class="arithmatex">\(\beta\)</span> 는 <span class="arithmatex">\(\mathbf{W}\)</span> 의 기저이고 <span class="arithmatex">\(\dim (\mathbf{W})=j=k\)</span> 이다. ▲ </p>
-<p>이제 <span class="arithmatex">\(\beta = \{v, \mathbf{T}_{\mathbf{W}}(v), \dots, \mathbf{T}_{\mathbf{W}}^{k-1}(v)\}\)</span> 가 <span class="arithmatex">\(\mathbf{W}\)</span> 의 순서기저임을 가정할 수 있다. <span class="arithmatex">\([\mathbf{T}_{\mathbf{W}}]_{\beta }\)</span> 는 다음과 같다. </p>
-<div class="arithmatex">\[ \mathbf{T}_{\mathbf{W}}(v) = 1 \cdot \mathbf{T}_{\mathbf{W}}(v) \]</div>
-<div class="arithmatex">\[ \mathbf{T}_{\mathbf{W}}(\mathbf{T}_{\mathbf{W}}(v)) = 1 \cdot \mathbf{T}_{\mathbf{W}}^{2}(v) \]</div>
-<div class="arithmatex">\[ \mathbf{T}_{\mathbf{W}}(\mathbf{T}_{\mathbf{W}}^{k-2}(v)) = 1 \cdot \mathbf{T}_{\mathbf{W}}^{k-1}(v) \]</div>
-<div class="arithmatex">\[ \mathbf{T}_{\mathbf{W}}(\mathbf{T}_{\mathbf{W}}^{k-1}(v)) = \mathbf{T}_{\mathbf{W}}^{k}(v) = -a_0v - a_1 \mathbf{T}(v) - \dots - a _{k-1}\mathbf{T}^{k-1}(v) \]</div>
-<div class="arithmatex">\[ \implies [\mathbf{T}_{\mathbf{W}}]_{\beta } = \begin{pmatrix} 0&amp;0&amp;\dots&amp;0&amp;-a_0\\ 1&amp;0&amp;\dots&amp;0&amp;-a_1\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots&amp;\vdots  \\ 0&amp;0&amp;\dots&amp;1&amp;-a _{k-1}\\ \end{pmatrix} \]</div>
-<p>문제 5.4-19 에 의하여 <span class="arithmatex">\([\mathbf{T}_{\mathbf{W}}]_{\beta }\)</span> 의 특성다항식은 <span class="arithmatex">\(f(t) = (-1)^{k}(a_0+a_1t+\dots+a _{k-1}t ^{k-1}+t ^{k})\)</span> 이다. 선형연산자의 특성다항식은 선형연산자의 행렬표현의 특성다항식으로 정의되므로 증명이 끝났다. ■ </p>
-</li>
-</ul>
-<h3 id="cayley-hamilton-theorem">Cayley-Hamilton theorem<a class="headerlink" href="#cayley-hamilton-theorem" title="Permanent link">¶</a></h3>
-<a href="#a460d1c99"><div class="admonition def" id="a460d1c99">
-<p class="admonition-title">정리 5.22 케일리-해밀턴 정리(Cayley-Hamilton theorem)</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식 <span class="arithmatex">\(f(t)\)</span> 에 대하여 <span class="arithmatex">\(f(\mathbf{T}) = \mathbf{T}_0\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p><a href="../../Polynomials/#2ccc8e1e0">다항식에 선형연산자가 입력된 형태의 정의</a>를 참고하자.</p>
-</li>
-<li>
-<p>이 정리는 정리 5.21 의 중요성을 보여준다. 왜냐하면 이 정리가 널리 사용되기 때문이다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\forall v \in \mathbf{V}: f(\mathbf{T})(v) = 0\)</span> 을 보이면 된다. <span class="arithmatex">\(v = 0\)</span> 를 가정하면 <span class="arithmatex">\(f(\mathbf{T})\)</span> 가 선형이므로 증명할 것이 없다. ▲ </p>
-<p><span class="arithmatex">\(v \neq 0\)</span> 을 가정하자. <span class="arithmatex">\(v\)</span> 에 의해 생성된 <span class="arithmatex">\(\mathbf{T}\)</span>-순환 부분공간 <span class="arithmatex">\(\mathbf{W}\)</span> 를 가정하고 <span class="arithmatex">\(\dim (\mathbf{W}) = k\)</span> 로 두면 정리 5.21 의 첫번째 명제에 의하여 다음을 만족하는 스칼라 <span class="arithmatex">\(a_0, a_1, a_2, \dots, a _{k-1}\)</span> 가 존재한다. </p>
-<div class="arithmatex">\[ a_0v + a_1 \mathbf{T}(v) + \dots + a _{k-1}\mathbf{T}^{k-1}(v) + \mathbf{T}^{k}(v) = 0 \]</div>
-<p>정리 5.21 의 두번째 명제에 의하여 <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 의 특성다항식은 다음과 같다. </p>
-<div class="arithmatex">\[ g(t) = (-1)^{k}(a_0 + a_1t+ \dots+ a _{k-1}t ^{k-1}+t ^{k}) \]</div>
-<p>따라서 다음이 성립한다. </p>
-<div class="arithmatex">\[ g(\mathbf{T})(t) = (-1)^{k}(a_0 \mathbf{I} + a_1 \mathbf{T}+ \dots+ a _{k-1} \mathbf{T} ^{k-1}+\mathbf{T}^{k})(v) = 0 \]</div>
-<p><a href="#3d097218e">정리 5.20</a> 은 <span class="arithmatex">\(g(t)\)</span> 가 <span class="arithmatex">\(f(t)\)</span> 나눈다는 것을 알려준다. 즉, 다음이 성립한다. </p>
-<div class="arithmatex">\[ f(\mathbf{T})(v) = q(\mathbf{T})g(\mathbf{T})(v) = q(\mathbf{T})(g(\mathbf{T})(v)) = q(\mathbf{T})(0)=0 \]</div>
-<p>따라서 <span class="arithmatex">\(f(\mathbf{T}) = \mathbf{T}_0\)</span> 이다. ■ </p>
-</li>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(\R ^{2}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}(a,b)=(a+2b, -2a+b)\)</span> 와 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식 <span class="arithmatex">\(f(t) = \det([\mathbf{T}]_{\beta }-tI) = \det \begin{pmatrix} 1-t&amp;2\\ -2&amp;1-t\\ \end{pmatrix}=t ^{2}-2t+5\)</span> 에 대하여 <span class="arithmatex">\(f(\mathbf{T}) = \mathbf{T}^{2}-2 \mathbf{T}+5 \mathbf{I} = \mathbf{T}_0\)</span> 이다.</p>
-</li>
-</ul>
-<a href="#f3a13346f"><div class="admonition def" id="f3a13346f">
-<p class="admonition-title">정리 5.22 따름정리</p>
-<p><span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 그 특성다항식 <span class="arithmatex">\(f(t)\)</span> 에 대하여 <span class="arithmatex">\(f(A) = O\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>증명</li>
-</ul>
-<h3 id="invariant-subspace-and-direct-sum">Invariant subspace and Direct sum<a class="headerlink" href="#invariant-subspace-and-direct-sum" title="Permanent link">¶</a></h3>
-<a href="#65fe15e2e"><div class="admonition def" id="65fe15e2e">
-<p class="admonition-title">정리 5.23</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(i \in \{1,\dots,k\}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{W}_i\)</span> 가 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이고 <span class="arithmatex">\(\mathbf{V} = \displaystyle \bigoplus_{i=1}^{k}\mathbf{W}_i\)</span> 가 성립함을 가정하자.</p>
-<p><span class="arithmatex">\(\mathbf{T}_{\mathbf{W}_i}\)</span> 의 특성다항식 <span class="arithmatex">\(f_i(t)\)</span> 에 대하여 <span class="arithmatex">\(f_1(t) \cdot f_2(t) \cdot \dots \cdot f_k(t)\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식이다.</p>
-</div></a>
-<ul>
-<li>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 가 주어지면 이 공간을 가능한 많은 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간의 직합으로 분해하는 것이 좋다. <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 의 행동을 직합을 구성하는 각각의 부분공간에서 추론할 수 있기 때문이다. 가령 <span class="arithmatex">\(\mathbf{T}\)</span> 가 대각화가능한 것과 <span class="arithmatex">\(\mathbf{V}\)</span> 가 1차원 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간의 직합으로 완전히 분해되는 것은 동치이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 가 유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 대각화가능한 선형연산자이고 서로 다른 고윳값을 <span class="arithmatex">\(\lambda _1, \lambda _2, \dots, \lambda _k\)</span> 로 두면 <a href="#fbcd60c9f">정리 5.10</a> 에 의하여 <span class="arithmatex">\(\mathbf{V}\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span> 의 고유공간의 직합이다. 즉, <span class="arithmatex">\(\mathbf{V}= \displaystyle \bigoplus_{i=1}^{k}\mathbf{E}_{\lambda_i}\)</span> 이다. <a href="#2fec2004a">불변 부분공간</a> 의 예시에서 고유공간은 <span class="arithmatex">\(\mathbf{T}\)</span>-불변임을 증명했었다. 따라서 각 고유공간들은 정리 5.23 의 가정을 충족시킨다.</p>
-<p><a href="#7050c2a83">정리 5.8</a> 에 의하여 <span class="arithmatex">\(\dim (\mathbf{E}_{\lambda_i} ) = m_i\)</span> 는 <span class="arithmatex">\(\lambda _i\)</span> 의 중복도와 같다는 사실과 <a href="#867268fd3">정리 5.6</a> 에 의하여 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식 <span class="arithmatex">\(f(t)\)</span> 은 스칼라 <span class="arithmatex">\(a\)</span> 에 대하여 다음과 같이 완전히 인수분해된다. </p>
-<div class="arithmatex">\[ f(t) = a \prod_{i=1}^{k}(t - \lambda _i) ^{m_i} \]</div>
-<p>우리가 이미 잘 알고 있었던 이 결과를 본 정리를 통하여 다시 도출해보자.  각 고윳값 <span class="arithmatex">\(\lambda _i\)</span> 에 대하여 제한 <span class="arithmatex">\(\mathbf{T}_{\mathbf{E}_{\lambda_i} }\)</span> 을 만들면 이것의 특성다항식은 <span class="arithmatex">\((\lambda _i -t) ^{m_i}\)</span> 이다. 본 정리에 의하여 <span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식은 다음과 같다.</p>
-<div class="arithmatex">\[ f(t) = (\lambda _1 - t) ^{m_1} (\lambda _2 - t) ^{m_2} \dots (\lambda _k - t) ^{m_k} \]</div>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> 의 특성다항식을 <span class="arithmatex">\(f(t)\)</span> 라고 하자. </p>
-<p><span class="arithmatex">\(k = 2\)</span> 일 때 <span class="arithmatex">\(\mathbf{W}_1\)</span> 의 순서기저를 <span class="arithmatex">\(\beta _1\)</span>, <span class="arithmatex">\(\mathbf{W}_2\)</span> 의 순서기저를 <span class="arithmatex">\(\beta _2\)</span> 라 하고 <span class="arithmatex">\(\beta = b_1 \cup b_2\)</span> 로 두자. <a href="#748907edc">정리 5.9(4)</a> 에 의하여 <span class="arithmatex">\(\beta\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저이다. <span class="arithmatex">\(A = [\mathbf{T}]_{\beta }, B_1 = [\mathbf{T}_{\mathbf{W}_1}]_{\beta _1}, B_2 = [\mathbf{T}_{\mathbf{W}_2}]_{\beta _2}\)</span> 로 두면 정리 5.24 에 의하여 <span class="arithmatex">\(A = \begin{pmatrix}
-B_1&amp;O\\
-O'&amp;B_2\\
-\end{pmatrix}\)</span> 이다. <a href="#3d097218e">정리 5.20</a> 의 증명과정에서처럼 <span class="arithmatex">\(f(t)\)</span> 를 다음과 같이 전개할 수 있다.</p>
-<div class="arithmatex">\[ f(t) = \det(A - tI) = \det(B_1-tI) \det(B_2-tI) = f_1(t) \cdot f_2(t) \]</div>
-<p>따라서 <span class="arithmatex">\(k=2\)</span> 일 때 정리가 참이다. ▲ </p>
-<p><span class="arithmatex">\(k-1 \geq 2\)</span> 인 <span class="arithmatex">\(k-1\)</span> 에 대하여 정리가 성립함을 가정하고 <span class="arithmatex">\(k\)</span> 에 대하여 성립함을 보이자. <span class="arithmatex">\(\mathbf{W} = \displaystyle \bigoplus_{i=1}^{k}\mathbf{W}_i\)</span> 로 두면 <span class="arithmatex">\(\mathbf{W}\)</span> 가 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이고 <span class="arithmatex">\(\mathbf{V}= \mathbf{W}\oplus \mathbf{W}_k\)</span> 임은 자명하다. <span class="arithmatex">\(k = 2\)</span> 일 때를 가정할 수 있으므로 <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}}\)</span> 의 특성다항식 <span class="arithmatex">\(g(t)\)</span> 에 대하여 <span class="arithmatex">\(f(t) = g(t) \cdot f_k(t)\)</span> 이다. <span class="arithmatex">\(k-1\)</span> 에서 정리가 성립하므로 <span class="arithmatex">\(g(t) = f_1(t) \cdot f_2(t) \cdot \dots \cdot f _{k-1}(t)\)</span> 이다. 그러므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \therefore f(t) = g(t) \cdot f_k(t) = f_1(t) \cdot f_2(t) \cdot \dots \cdot f_k(t) \tag*{■} \]</div>
-<ul>
-<li>
-<p>정리 5.23 은 드물게 이후의 정리인 5.24 를 기반으로 증명되는데, 5.24 가 5.23 을 가정하지 않으므로 순환논리가 되지는 않는다. 즉, 논리적으로 문제는 없다.</p>
-</li>
-<li>
-<p>원래 증명에서는 <span class="arithmatex">\(\mathbf{W} = \displaystyle \sum_{i=1}^{k-1}\mathbf{W}_i\)</span> 로 두는데 <span class="arithmatex">\(\mathbf{V}= \displaystyle \bigoplus_{i=1}^{k}\mathbf{W}_i\)</span> 라는 가정이 <span class="arithmatex">\(i, j \in \{1, \dots, k-1\}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{W}_j \cap \displaystyle \sum_{i \neq j}\mathbf{W}_i = \{0\}\)</span> 를 함의한다고 생각해서 그냥 <span class="arithmatex">\(\mathbf{W} = \displaystyle \bigoplus_{i=1}^{k-1}\mathbf{W}_i\)</span> 로 바꿨다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(\R ^{4}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}(a,b,c,d,) = (2a-b,a+b,c-d,c+d)\)</span>  와 <span class="arithmatex">\(\mathbf{W}_1=\{(s,t,0,0) : s,t \in \R\}, \mathbf{W}_2=\{(0,0,s,t) : s,t \in \R\}\)</span> 를 정의하면 <span class="arithmatex">\(\mathbf{W}_1, \mathbf{W}_2\)</span>  는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변이고 <span class="arithmatex">\(\R ^{4}= \mathbf{W}_1 \oplus \mathbf{W}_2\)</span> 이다. <span class="arithmatex">\(\beta _1=\{e_1,e_2\},\beta _2=\{e_3,e_4\},\beta =\beta_1 \cup \beta _2\)</span> 로 두고 각각을 <span class="arithmatex">\(\mathbf{W}_1, \mathbf{W}_2, \R ^{4}\)</span> 의 순서기저로 두자. <span class="arithmatex">\(A = [\mathbf{T}]_{\beta }, B_1 = [\mathbf{T}_{\mathbf{W}_1}]_{\beta _1}, B_2= [\mathbf{T}_{\mathbf{W}_2}]_{\beta _2}\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ B_1 = \begin{pmatrix} 2&amp;-1\\ 1&amp;1\\ \end{pmatrix}, B_2 = \begin{pmatrix} 1&amp;-1\\ 1&amp;1\\ \end{pmatrix}, A = \begin{pmatrix} B_1&amp;O\\ O&amp;B_2\\ \end{pmatrix} = \begin{pmatrix} 2&amp;-1&amp;0&amp;0\\ 1&amp;1&amp;0&amp;0\\ 0&amp;0&amp;1&amp;-1\\ 0&amp;0&amp;1&amp;1\\ \end{pmatrix} \]</div>
-<p><span class="arithmatex">\(\mathbf{T}\)</span> , <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}_1}\)</span> , <span class="arithmatex">\(\mathbf{T}_{\mathbf{W}_2}\)</span> 의 특성다항식을 <span class="arithmatex">\(f(t),f_1(t),f_2(t)\)</span> 로 두면 다음이 성립한다.</p>
-<div class="arithmatex">\[ f(t) = \det(A-tI) =\det(B_1-tI) \det(B_2-tI) =f_1(t) \cdot f_2(t) \]</div>
-</li>
-</ul>
-<a href="#dc16131a1"><div class="admonition def" id="dc16131a1">
-<p class="admonition-title">두 행렬의 직합(direct sum of two matrices)</p>
-<p><span class="arithmatex">\(B_1 \in \mathbf{M}_{m \times m}(\mathbf{F}), B_2 \in \mathbf{M}_{n \times n}(\mathbf{F})\)</span> 에 대하여 <span class="arithmatex">\(B_1, B_2\)</span> 의 직합은 다음과 같은 <span class="arithmatex">\((m + n) \times (m + n)\)</span> 행렬 <span class="arithmatex">\(A\)</span> 로 정의하고 <span class="arithmatex">\(B_1 \oplus B_2\)</span> 로 표기한다.</p>
-<div class="arithmatex">\[ A _{ij} = \begin{cases} (B_1) _{ij} &amp; 1 \leq i, j \leq m\\ (B_2) _{(i-m),(j-m)} &amp; m+1 \leq i, j \leq n+m\\ 0 &amp; \text{ otherwise }\\ \end{cases} \]</div>
-</div></a>
-<ul>
-<li><strong>즉, 적절한 영행렬 <span class="arithmatex">\(O\)</span> 에 대하여 <span class="arithmatex">\(A = B_1 \oplus B_2 = \begin{pmatrix} B_1&amp;O\\ O&amp;B_2\\ \end{pmatrix}\)</span> 라고 정의하는 것이다.</strong></li>
-</ul>
-<a href="#2c0fb09ed"><div class="admonition def" id="2c0fb09ed">
-<p class="admonition-title">행렬의 직합(direct sum of matrices)</p>
-<p>정사각행렬 <span class="arithmatex">\(B_1, B_2, \dots, B_k\)</span> 에 대하여 <span class="arithmatex">\(B_1, B_2, \dots, B_k\)</span> 의 직합은 재귀적으로 <span class="arithmatex">\(\displaystyle \bigoplus_{i=1}^{k}B_i = \bigg (\bigoplus_{i=1}^{k-1}B_i\bigg ) \oplus B_k\)</span> 라 정의한다.</p>
-</div></a>
-<ul>
-<li>
-<p><strong>즉, 적절한 영행렬 <span class="arithmatex">\(O\)</span> 에 대하여 <span class="arithmatex">\(A = \displaystyle \bigoplus_{i=1}^{k}B_i\)</span> 를 다음과 같이 정의하는 것이다.</strong></p>
-<div class="arithmatex">\[ A = \displaystyle \bigoplus_{i=1}^{k}B_i = \begin{pmatrix} B_1&amp;O&amp;\dots&amp;O\\ O&amp;B_2&amp;\dots&amp;O\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ O&amp;O&amp;\dots&amp;B_k\\ \end{pmatrix} \]</div>
-</li>
-<li>
-<p>예시 </p>
-<p>정사각행렬 <span class="arithmatex">\(B_1 = \begin{pmatrix} 1&amp;2\\ 1&amp;1\\ \end{pmatrix}, B_2 = (3), B_3 = \begin{pmatrix} 1&amp;2&amp;1\\ 1&amp;2&amp;3\\ 1&amp;1&amp;1\\ \end{pmatrix}\)</span> 에 대하여 <span class="arithmatex">\(B_1 \oplus B_2 \oplus B_3\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ \bigoplus_{i=1}^{3}B_i = \begin{pmatrix} 1&amp;2&amp;0&amp;0&amp;0&amp;0\\ 1&amp;1&amp;0&amp;0&amp;0&amp;0\\ 0&amp;0&amp;3&amp;0&amp;0&amp;0\\ 0&amp;0&amp;0&amp;1&amp;2&amp;1\\ 0&amp;0&amp;0&amp;1&amp;2&amp;3\\ 0&amp;0&amp;0&amp;1&amp;1&amp;1\\ \end{pmatrix} \]</div>
-</li>
-</ul>
-<a href="#b60d5fe74"><div class="admonition def" id="b60d5fe74">
-<p class="admonition-title">정리 5.24</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(\mathbf{V}= \displaystyle \bigoplus_{i=1}^{k}\mathbf{W}_i\)</span> 인 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간 <span class="arithmatex">\(\mathbf{W}_1, \mathbf{W}_2, \dots, \mathbf{W}_k\)</span> 에 대하여 각 <span class="arithmatex">\(i\)</span> 에 대한 <span class="arithmatex">\(\beta _i\)</span> 는 <span class="arithmatex">\(\mathbf{W}_i\)</span> 의 순서기저이고 <span class="arithmatex">\(\beta = \displaystyle \bigcup_{i=1}^{k}\beta _i\)</span> 라고 하고 <span class="arithmatex">\(A = [\mathbf{T}]_{\beta }, B_i = [\mathbf{T}_{\mathbf{W}_i}]_{\beta _{i}}\)</span> 라고 하면 다음이 성립한다.</p>
-<div class="arithmatex">\[ A = \bigoplus_{i=1}^{k} B_i \]</div>
-</div></a>
-<ul>
-<li>
-<p>이 정리가 하는 역할은 행렬의 직합을 불변 부분공간의 직합과 연관짓는것이다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(k = 2\)</span> 를 가정하자. </p>
-<p><a href="#d5371600a">문제 5.4-12</a> 의 증명과정은 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간의 순서기저로 이루어진 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저로 <span class="arithmatex">\(\mathbf{T}\)</span> 를 행렬표현하면 <span class="arithmatex">\(\mathbf{T}\)</span>-불변의 기저로 표현된 열들이 반드시 <span class="arithmatex">\(\mathbf{T}\)</span>-불변의 기저로만 표현되어야 함을 말해준다. 즉, <span class="arithmatex">\(\beta _1 = \{v_1, \dots, v_s\}, \beta _2 = \{v _{s+1}, \dots, v_t\}\)</span> 를 가정하면 <span class="arithmatex">\(\beta = \beta _1 \cup \beta _2\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저가 되고 <span class="arithmatex">\(A = [\mathbf{T}]_{\beta }\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ \mathbf{T}(v_1) = \sum_{i=1}^{s}a _{i1}v_1 \]</div>
-<div class="arithmatex">\[ \vdots \]</div>
-<div class="arithmatex">\[ \mathbf{T}(v_s) = \sum_{i=1}^{s}a _{is}v_s \]</div>
-<div class="arithmatex">\[ \mathbf{T}(v _{s+1}) = \sum_{i=s+1}^{t}a _{i,s+1}v _{s+1} \]</div>
-<div class="arithmatex">\[ \vdots \]</div>
-<div class="arithmatex">\[ \mathbf{T}(v _{t}) = \sum_{i=t}^{t}a _{it}v _{t} \]</div>
-<div class="arithmatex">\[ \implies A = \begin{pmatrix} B_1&amp;O\\ O&amp;B_2\\ \end{pmatrix} \]</div>
-<p>이는 <span class="arithmatex">\(A = B_1 \oplus B_2\)</span> 을 뜻한다. ▲ </p>
-<p><span class="arithmatex">\(k-1\)</span> 에서 정리가 성립함을 가정하고 <span class="arithmatex">\(k\)</span> 에 대하여 성립함을 보이자. <span class="arithmatex">\(\mathbf{W}=\displaystyle \bigoplus_{i=1}^{k-1}\mathbf{W}_i\)</span> 에 대하여 <span class="arithmatex">\(\beta ' = \displaystyle  \bigcup_{i=1}^{k-1}\beta _i\)</span> 로 두면 다음이 성립한다.</p>
-<div class="arithmatex">\[ [\mathbf{T}_{\mathbf{W}}]_{\beta '} = \bigoplus_{i=1}^{k-1}B_i = B' \]</div>
-<p><a href="#d5371600a">문제 5.4-12</a> 의 증명과정은 <span class="arithmatex">\(\mathbf{T}\)</span>-불변 부분공간의 순서기저로 이루어진 <span class="arithmatex">\(\mathbf{V}\)</span> 의 기저로 <span class="arithmatex">\(\mathbf{T}\)</span> 를 행렬표현하면 <span class="arithmatex">\(\mathbf{T}\)</span>-불변의 기저로 표현된 열들이 반드시 <span class="arithmatex">\(\mathbf{T}\)</span>-불변의 기저로만 표현되어야 함을 말해준다. 즉, <span class="arithmatex">\(\beta ' = \{v_1, \dots, v_s\}, \beta _k = \{v _{s+1}, \dots, v_t\}\)</span> 를 가정하면 <span class="arithmatex">\(\beta = \beta ' \cup \beta _k\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 순서기저가 되고 <span class="arithmatex">\(A = [\mathbf{T}]_{\beta }\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ \mathbf{T}(v_1) = \sum_{i=1}^{s}a _{i1}v_1 \]</div>
-<div class="arithmatex">\[ \vdots \]</div>
-<div class="arithmatex">\[ \mathbf{T}(v_s) = \sum_{i=1}^{s}a _{is}v_s \]</div>
-<div class="arithmatex">\[ \mathbf{T}(v _{s+1}) = \sum_{i=s+1}^{t}a _{i,s+1}v _{s+1} \]</div>
-<div class="arithmatex">\[ \vdots \]</div>
-<div class="arithmatex">\[ \mathbf{T}(v _{t}) = \sum_{i=t}^{t}a _{it}v _{t} \]</div>
-<div class="arithmatex">\[ \implies A = \begin{pmatrix} B'&amp;O\\ O&amp;B_k\\ \end{pmatrix} \]</div>
-<p>이는 <span class="arithmatex">\(A = B' \oplus B_k\)</span> 을 뜻한다. <span class="arithmatex">\(\displaystyle  B' = \bigoplus_{i=1}^{k-1}B_i\)</span> 이므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \therefore A = \bigg (\bigoplus_{i=1}^{k-1}B_i\bigg ) \oplus B_k = \bigoplus_{i=1}^{k}B_i \tag*{■} \]</div>
-</li>
-</ul>
-<hr/>
-<dl>
-<dt>ref:</dt>
-<dd>
-<p>Stephen H. Friedberg, Linear Algebra, 5<sup>th</sup> Edition</p>
-</dd>
-</dl>
-</article>
-</div>
-</div>
-<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+<h1>Redirect to Netlify</h1>
+<script> 
+setTimeout(function () {
+window.location.href = "https://ccss17.netlify.app/" + window.location.pathname;}, 3000);
+</script>
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
             Back to top
           </a>
-</main>
-<!-- 
+        
+      </main>
+      
+        <!-- 
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1895,16 +1609,26 @@ O'&amp;B_2\\
     </div>
   </div>
 </footer> -->
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
-<script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
-<script src="../../../javascripts/highlight.min.js"></script>
-<script src="../../../javascripts/config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
-<script src="../../../javascripts/b27b3e6448.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="../../../javascripts/highlight.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../javascripts/b27b3e6448.js"></script>
+      
+    
+  </body>
 </html>

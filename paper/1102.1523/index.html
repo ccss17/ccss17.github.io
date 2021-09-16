@@ -1,914 +1,1547 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="ccsss" name="author"/>
-<link href="https://ccss17.github.io/paper/1102.1523/" rel="canonical"/>
-<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>The NumPy array: a structure for efficient numerical computation - ccss17</title>
-<link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
-<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
-<link href="../../stylesheets/config.css" rel="stylesheet"/>
-</head>
-<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
-<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#the-numpy-array-a-structure-for-efficient-numerical-computation">
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="ccsss">
+      
+      
+        <link rel="canonical" href="https://ccss17.github.io/paper/1102.1523/">
+      
+      <link rel="icon" href="../../assets/images/bolt-solid.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+  <title>Lorem ipsum dolor sit amet</title>
+
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/config.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-numpy-array-a-structure-for-efficient-numerical-computation" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
-<header class="md-header" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
-<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ccss17" class="md-header__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             ccss17
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               The NumPy array: a structure for efficient numerical computation
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
-</label>
-</form>
-</nav>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
       ccss17
     </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Math/MathHistory/">
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Math/MathHistory/" class="md-tabs__link">
         Math
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../1404.6388/">
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../1404.6388/" class="md-tabs__link md-tabs__link--active">
         Paper
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Computer/nand2tetris/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Computer/nand2tetris/" class="md-tabs__link">
         Computer
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../ProgrammerBase/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ProgrammerBase/" class="md-tabs__link">
         ProgrammerBase
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../security-tutorial/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../security-tutorial/" class="md-tabs__link">
         security tutorial
       </a>
-</li>
-</ul>
-</div>
+    </li>
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
-<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
-</a>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ccss17" class="md-nav__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
     ccss17
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../..">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         ccss17
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
         Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Math" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
           Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
         Foundation of Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_1">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Foundation of Math" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
           Foundation of Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/MathHistory/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/MathHistory/" class="md-nav__link">
         History of Math
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Logic/FormalSystem/" class="md-nav__link">
         Formal System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/incompleteness/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/incompleteness/" class="md-nav__link">
         Incompleteness theorem
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/turing/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/turing/" class="md-nav__link">
         Turing's proof
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/gentzen/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/gentzen/" class="md-nav__link">
         Consistency proof of Peano arithmetic
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Set Theory
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Set Theory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
           Set Theory
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/Set/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/Set/" class="md-nav__link">
         Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/numbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/numbers/" class="md-nav__link">
         Number Theory
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/InfiniteSet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/InfiniteSet/" class="md-nav__link">
         Infinite Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/ZFC/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/ZFC/" class="md-nav__link">
         ZFC axiom system
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/ArithmeticOperations/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/ArithmeticOperations/" class="md-nav__link">
         Arithmetic Operations
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Polynomials/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Polynomials/" class="md-nav__link">
         Polynomials
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/HyperrealNumbers/" class="md-nav__link">
         Hyperreal Numbers
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/SurrealNumbers/" class="md-nav__link">
         Surreal Numbers
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      <label class="md-nav__link" for="__nav_2_7">
         Linear Algebra
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_7">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linear Algebra" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
           Linear Algebra
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/VectorSpace/" class="md-nav__link">
         Vector Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/LinearTransformation/" class="md-nav__link">
         Linear Transformation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/MatrixOperation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/MatrixOperation/" class="md-nav__link">
         Matrix Operation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/Determinants/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/Determinants/" class="md-nav__link">
         Determinants
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/Diagonalization/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/Diagonalization/" class="md-nav__link">
         Diagonalization
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/InnerProductSpaces/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/InnerProductSpaces/" class="md-nav__link">
         Inner Product Spaces
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/CanonicalForms/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/CanonicalForms/" class="md-nav__link">
         Canonical Forms
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
         Paper
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Paper" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Paper" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
           Paper
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../1404.6388/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1404.6388/" class="md-nav__link">
         Performance of Python runtimes on a non-numeric scientific code
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           The NumPy array: a structure for efficient numerical computation
           <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         The NumPy array: a structure for efficient numerical computation
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-numpy-array-a-structure-for-efficient-numerical-computation">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-numpy-array-a-structure-for-efficient-numerical-computation" class="md-nav__link">
     The NumPy array: a structure for efficient numerical computation
   </a>
-<nav aria-label="The NumPy array: a structure for efficient numerical computation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#basic-usage">
+  
+    <nav class="md-nav" aria-label="The NumPy array: a structure for efficient numerical computation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
     Basic usage
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-structure-of-a-numpy-array-a-view-on-memory">
+        
+          <li class="md-nav__item">
+  <a href="#the-structure-of-a-numpy-array-a-view-on-memory" class="md-nav__link">
     The structure of a Numpy array: a view on memory
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#operations-on-arrays-vectorization-and-broadcasting">
+        
+          <li class="md-nav__item">
+  <a href="#operations-on-arrays-vectorization-and-broadcasting" class="md-nav__link">
     operations on arrays: vectorization and broadcasting
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#broadcasting-rules">
+        
+          <li class="md-nav__item">
+  <a href="#broadcasting-rules" class="md-nav__link">
     Broadcasting Rules
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vectorization-and-broadcasting-examples">
+        
+          <li class="md-nav__item">
+  <a href="#vectorization-and-broadcasting-examples" class="md-nav__link">
     Vectorization and broadcasting examples
   </a>
-<nav aria-label="Vectorization and broadcasting examples" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#evaluating-functions">
+  
+    <nav class="md-nav" aria-label="Vectorization and broadcasting examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluating-functions" class="md-nav__link">
     Evaluating Functions
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#finite-differencing">
+        
+          <li class="md-nav__item">
+  <a href="#finite-differencing" class="md-nav__link">
     Finite Differencing
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creating-a-grid-using-broadcasting">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-grid-using-broadcasting" class="md-nav__link">
     Creating a grid using broadcasting
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#computer-vision">
+        
+          <li class="md-nav__item">
+  <a href="#computer-vision" class="md-nav__link">
     Computer Vision
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sharing-data">
+        
+          <li class="md-nav__item">
+  <a href="#sharing-data" class="md-nav__link">
     Sharing data
   </a>
-<nav aria-label="Sharing data" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#efficient-io-with-memory-mapping">
+  
+    <nav class="md-nav" aria-label="Sharing data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#efficient-io-with-memory-mapping" class="md-nav__link">
     Efficient I/O with memory mapping
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-array-interface-for-foreign-blocks-of-memory">
+        
+          <li class="md-nav__item">
+  <a href="#the-array-interface-for-foreign-blocks-of-memory" class="md-nav__link">
     The array interface for foreign blocks of memory
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#structured-data-types-to-expose-complex-data">
+        
+          <li class="md-nav__item">
+  <a href="#structured-data-types-to-expose-complex-data" class="md-nav__link">
     Structured data-types to expose complex data
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion">
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
     Conclusion
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../facenet/">
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../facenet/" class="md-nav__link">
         Facenet (2015)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../quadruplet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quadruplet/" class="md-nav__link">
         Quadruplet (2017)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../blueborne/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blueborne/" class="md-nav__link">
         BlueBorne
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
         Computer
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Computer" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Computer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
           Computer
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/nand2tetris/" class="md-nav__link">
         Nand to Tetris
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/future/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/future/" class="md-nav__link">
         Why the future doesn't need us
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/Rust/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/Rust/" class="md-nav__link">
         Rust Memo
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         ProgrammerBase
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ProgrammerBase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
           ProgrammerBase
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_2">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      <label class="md-nav__link" for="__nav_5_2">
         Contents
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Contents" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_5_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contents" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
           Contents
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/01-Day1/readme/" class="md-nav__link">
         Day 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/02-Day2/readme/" class="md-nav__link">
         Day 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/03-Day3/readme/" class="md-nav__link">
         Day 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/04-Day4/readme/" class="md-nav__link">
         Day 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/05-Day5/readme/" class="md-nav__link">
         Day 5
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/docker/" class="md-nav__link">
         Docker
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/codingconvention/" class="md-nav__link">
         Coding Convention
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/build/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/build/" class="md-nav__link">
         Build System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/information/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/information/" class="md-nav__link">
         Information
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/git/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/git/" class="md-nav__link">
         Git
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/vscode/" class="md-nav__link">
         VSCode
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/markdown/" class="md-nav__link">
         Markdown
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/tmux/" class="md-nav__link">
         Tmux
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/vim/" class="md-nav__link">
         Vim
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/cli/" class="md-nav__link">
         CLI
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
         security tutorial
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="security tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
           security tutorial
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/01-Base/" class="md-nav__link">
         Day1 Base
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/02-Computer1/" class="md-nav__link">
         Day2 Computer Principle 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/03-Computer2/" class="md-nav__link">
         Day3 Computer Principle 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/04-Reversing1/" class="md-nav__link">
         Day4 Reversing 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/05-Reversing2/" class="md-nav__link">
         Day5 Reversing 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/06-Exploit1/" class="md-nav__link">
         Day6 Exploit 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/07-Exploit2/" class="md-nav__link">
         Day7 Exploit 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/08-Exploit3/" class="md-nav__link">
         Day8 Exploit 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/09-Exploit4/" class="md-nav__link">
         Day9 Exploit 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/10-Pentesting/" class="md-nav__link">
         Day10 Pentesting
       </a>
-</li>
-</ul>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-numpy-array-a-structure-for-efficient-numerical-computation">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-numpy-array-a-structure-for-efficient-numerical-computation" class="md-nav__link">
     The NumPy array: a structure for efficient numerical computation
   </a>
-<nav aria-label="The NumPy array: a structure for efficient numerical computation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#basic-usage">
+  
+    <nav class="md-nav" aria-label="The NumPy array: a structure for efficient numerical computation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
     Basic usage
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-structure-of-a-numpy-array-a-view-on-memory">
+        
+          <li class="md-nav__item">
+  <a href="#the-structure-of-a-numpy-array-a-view-on-memory" class="md-nav__link">
     The structure of a Numpy array: a view on memory
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#operations-on-arrays-vectorization-and-broadcasting">
+        
+          <li class="md-nav__item">
+  <a href="#operations-on-arrays-vectorization-and-broadcasting" class="md-nav__link">
     operations on arrays: vectorization and broadcasting
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#broadcasting-rules">
+        
+          <li class="md-nav__item">
+  <a href="#broadcasting-rules" class="md-nav__link">
     Broadcasting Rules
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vectorization-and-broadcasting-examples">
+        
+          <li class="md-nav__item">
+  <a href="#vectorization-and-broadcasting-examples" class="md-nav__link">
     Vectorization and broadcasting examples
   </a>
-<nav aria-label="Vectorization and broadcasting examples" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#evaluating-functions">
+  
+    <nav class="md-nav" aria-label="Vectorization and broadcasting examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluating-functions" class="md-nav__link">
     Evaluating Functions
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#finite-differencing">
+        
+          <li class="md-nav__item">
+  <a href="#finite-differencing" class="md-nav__link">
     Finite Differencing
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#creating-a-grid-using-broadcasting">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-grid-using-broadcasting" class="md-nav__link">
     Creating a grid using broadcasting
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#computer-vision">
+        
+          <li class="md-nav__item">
+  <a href="#computer-vision" class="md-nav__link">
     Computer Vision
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sharing-data">
+        
+          <li class="md-nav__item">
+  <a href="#sharing-data" class="md-nav__link">
     Sharing data
   </a>
-<nav aria-label="Sharing data" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#efficient-io-with-memory-mapping">
+  
+    <nav class="md-nav" aria-label="Sharing data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#efficient-io-with-memory-mapping" class="md-nav__link">
     Efficient I/O with memory mapping
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#the-array-interface-for-foreign-blocks-of-memory">
+        
+          <li class="md-nav__item">
+  <a href="#the-array-interface-for-foreign-blocks-of-memory" class="md-nav__link">
     The array interface for foreign blocks of memory
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#structured-data-types-to-expose-complex-data">
+        
+          <li class="md-nav__item">
+  <a href="#structured-data-types-to-expose-complex-data" class="md-nav__link">
     Structured data-types to expose complex data
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#conclusion">
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
     Conclusion
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>The NumPy array: a structure for efficient numerical computation</h1>
-<h2 id="the-numpy-array-a-structure-for-efficient-numerical-computation">The NumPy array: a structure for efficient numerical computation<a class="headerlink" href="#the-numpy-array-a-structure-for-efficient-numerical-computation" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>ref : <a href="https://arxiv.org/abs/1102.1523">https://arxiv.org/abs/1102.1523</a></p>
-</blockquote>
-<p>numpy 는 다음 3가지 기법으로 Python 이라는 하이레벨 언어에서 효율적인 행렬 계산을 할 수 있도록 했다. 1) 벡터화 계산, 2) 메모리 복사 피하기, 3) 연산 횟수 줄이기. 먼저 numpy 행렬 구조를 소개하고 이 기법들에 대해서 소개한 후 마지막으로 행렬 데이터를 다른 라이브러리와 어떻게 공유할지 소개한다. </p>
-<p>Python 은 리스트와 딕셔너리를 제공하지만 이 자료구조들은 고성능 수치 계산에는 적합하지 않다. numpy 행렬은 다차원 행렬인데, 이는 원소의 타입과 형상에 의하여 구성된다.</p>
-<h3 id="basic-usage">Basic usage<a class="headerlink" href="#basic-usage" title="Permanent link">¶</a></h3>
-<p>(numpy 사용법은 다들 잘 아니까 pass)</p>
-<h3 id="the-structure-of-a-numpy-array-a-view-on-memory">The structure of a Numpy array: a view on memory<a class="headerlink" href="#the-structure-of-a-numpy-array-a-view-on-memory" title="Permanent link">¶</a></h3>
-<p>ndarray 라고 불리우는 numpy 행렬은 다음 성질로 사용하는 메모리를 설명한다. </p>
-<ul>
-<li>
-<p>Data pointer: 행렬의 첫번째 바이트의 메모리 주소이다.</p>
-</li>
-<li>
-<p>Data type description : 행렬의 원소의 타입이다. 가령 부동소수점이라든가 정수라든가.</p>
-</li>
-<li>
-<p>Shape : 행렬의 형상이다. 가령 (10, 10) 이라든가 (5,5,5) 라든가. 특히 (5,5,5) 는 x, y, z 축을 뜻한다.</p>
-</li>
-<li>
-<p>Strides : Strides 는 다음 원소를 지칭하기 위하여 몇 바이트를 넘어가야 하는지 말해준다. 가령 (10, 10) 의 바이트 행렬의 Strides 는 (10, 1) 이다. 이는 1바이트를 지나치면 다음 열로 갈 수 있고, 10바이트를 지나치면 다음 행으로 갈 수 있다는 것이다.</p>
-</li>
-<li>
-<p>Flags : 메모리를 수정할 수 있는지, 메모리 레이아웃이 C 스타일인지 Fortran 스타일인지 등등을 정한다.</p>
-</li>
-</ul>
-<p>numpy 행렬의 stride 는 메모리 복사를 피하게 하여 성능을 높혀준다. 가령 다음을 보자.</p>
-<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+<h1>Redirect to Netlify</h1>
+<script> 
+setTimeout(function () {
+window.location.href = "https://ccss17.netlify.app/" + window.location.pathname;}, 3000);
+</script>
 
-<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">x</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+              
+                
 
-<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">x</span><span class="o">.</span><span class="n">strides</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-</code></pre></div>
-<p>우리가 현재 대부분 사용하는 컴퓨터는 64비트(8바이트) 아키텍쳐이므로 stride 가 (24, 8) 이라는 것은 다음 행을 지칭하기 위하여 24바이트, 즉 3개의 정수를 건너뛰어야 한다는 것을 의미한다. 이때 다음과 같이 이 행렬의 2번째 원소들만으로 새로운 행렬을 만들어서 stride 를 살펴보자.</p>
-<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span>
 
-<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">y</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
-
-<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="n">y</span><span class="o">.</span><span class="n">strides</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="p">(</span><span class="mi">48</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
-</code></pre></div>
-<p>이때 행렬 y 의 stride 는 (48, 16) 이다. 이는 다음 원소를 지칭하기 위하여 정수 2개를 건너뛰어야 하고, 다음 행을 지칭하기 위하여 정수 8개를 건너뛰어야 한다는 말이다. 이것은 행렬을 복사한 것이 아니라 행렬 x 의 메모리 레이아웃에서 stride 만 바뀐 행렬 y 를 만들었기 때문이다. 즉 x 와 y 는 같은 메모리를 지칭하고 있다. 이로써 행렬 복사를 피할 수 있고 성능을 높힐 수 있다는 것이지.</p>
-<p>같은 원리로 행렬의 전치(transpose) 연산이나 형상 변경(reshape)을 할 때도 행렬 복사가 아닌, stride 를 조작함으로써 zero-cost 계산을 할 수 있게 된다. 가령 다음을 보자.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Transpose the array, using the shorthand "T"</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">xT</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">T</span>
-
-<span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">xT</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">],[</span>  <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">],[</span>  <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
-
-<span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="n">xT</span><span class="o">.</span><span class="n">strides</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
-
-<span class="c1"># Change the shape of the array</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">]:</span> <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
-<span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">z</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
-
-<span class="n">In</span> <span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="n">z</span><span class="o">.</span><span class="n">strides</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">14</span><span class="p">]:</span> <span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
-<span class="c1"># i.e., for the two-dimensional z, 9 * 8 bytes# to skip over a row of 9 uint8 elements,# 8 bytes to skip a single element</span>
-</code></pre></div>
-<p>행렬 z 의 타입을 64비트 정수가 아니라 바이트로 바꾸어도 마찬가지로 stride 만 바꾼다. 다음을 보자.</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">z</span><span class="o">.</span><span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="s1">'uint8'</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span>
-<span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">uint8</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span><span class="o">.</span><span class="n">shape</span>
-<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">72</span><span class="p">)</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">z</span><span class="o">.</span><span class="n">strides</span>
-<span class="p">(</span><span class="mi">72</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>대박인데? 이게 가능한 이유가 뭐였고, 이런 방법을 찾을 수 있던 게 뭐였을까. 한 대상을 우리가 원하는 대상으로 사상시키려 할 때 여러가지 방법이 있다는 것을 규명한다. 메모리 복사도 가능할 것이고, 다른 방법도 존재하겠지만, 그 중에서 가장 비용이 낮은 것은 stride 를 바꾸는 것이다.</p>
-<p>근데 stride 라는 개념 자체를 정의해야 이런 아이디어를 얻을 수 있었을 것이다. 이런 개념을 어떻게 정의할 수 있었을까? 그것은 한 대상의 구조를 면밀하고 엄밀하게 분석하여 정의했기 때문인 것 같다. 여기에도 수학의 방식이 사용되었겠지. 시간을 들여서 어떤 대상의 구조를 수학적인 방식으로 심층적으로 분석하는 게 전혀 시간낭비가 아니구나.</p>
-</div>
-<h3 id="operations-on-arrays-vectorization-and-broadcasting">operations on arrays: vectorization and broadcasting<a class="headerlink" href="#operations-on-arrays-vectorization-and-broadcasting" title="Permanent link">¶</a></h3>
-<p>많은 프로그래밍 언어에서 무분별한 for 루프의 사용은 프로그램의 전체 성능을 매우 떨어뜨린다. 이 상황은 단순한 연산을 큰 데이터셋에 적용할 때 발생한다. numpy 는 vectorization 이라고 부르는 grouping element-wise operation 으로 이런 연산을 매우 빠르게 해낸다. </p>
-<p>벡터 a 에 3 을 곱해야 한다고 생각하자. 전통적인 for 루프로는 다음과 같이 해야 한다. </p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span><span class="p">]</span>
-</code></pre></div>
-<p>하지만 벡터화의 접근으로는 다음과 같이 한다. </p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">a</span>
-</code></pre></div>
-<p>numpy 의 벡터화 연산은 C 언어에서 구현되어 있어서 매우 빠른 속도를 낼 수 있다. 이 연산은 스칼라와 행렬 사이에서만 가능한 게 아니다. 다음과 같이 행렬과 행렬 사이의 뺄셈 연산도 가능하다.</p>
-<div class="highlight"><pre><span></span><code><span class="n">b</span> <span class="o">-</span> <span class="n">a</span>
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>벡터화 연산에 대한 구체적인 원리를 설명하지는 않는건가. 그럼 C 에서의 구현을 살펴봐야겠네. 아니면 그냥 C 로 for 문을 구현해서 빠르다는 것일 수도 있고.</p>
-</div>
-<p>numpy 는 두 행렬의 형상이 다를 때 한 행렬을 확장하여 연산을 완료한다. 다음을 보자.</p>
-<div class="highlight"><pre><span></span><code><span class="n">In</span> <span class="p">[</span><span class="mi">28</span><span class="p">]:</span> <span class="n">m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-
-<span class="n">In</span>  <span class="p">[</span><span class="mi">29</span><span class="p">]:</span><span class="n">m</span>
-<span class="n">Out</span> <span class="p">[</span><span class="mi">29</span><span class="p">]:</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]])</span>
-
-<span class="n">In</span> <span class="p">[</span><span class="mi">30</span><span class="p">]:</span> <span class="n">b</span> <span class="o">+</span> <span class="n">m</span>
-<span class="n">Out</span><span class="p">[</span><span class="mi">30</span><span class="p">]:</span><span class="n">array</span><span class="p">([[</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">17</span><span class="p">],[</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">20</span><span class="p">]])</span>
-</code></pre></div>
-<p>이것을 브로드캐스팅이라 하는데, 이러한 broadcasted 행렬 또한 물리적으로 생성되지 않고, stride 를 사용하여 이루어진다. </p>
-<h3 id="broadcasting-rules">Broadcasting Rules<a class="headerlink" href="#broadcasting-rules" title="Permanent link">¶</a></h3>
-<p>두 행렬을 브로드캐스팅 하기 전에 numpy 는 두 행렬의 형상이 맞춰질 수 있는지 검사한다. 가령 형상 (2, 4, 3) 과 (4, 1) 을 갖는 행렬 x, y 를 생각하면 z = x+y 의 형상을 다음과 같이 정한다. </p>
-<div class="arithmatex">\[ \begin{array}{rl}
-x&amp; (2, 4, 3) \\
-y&amp; ( 4, 1 )\\
-\hline z &amp; (2, 4, 3); 
-\end{array} 
-\]</div>
-<h3 id="vectorization-and-broadcasting-examples">Vectorization and broadcasting examples<a class="headerlink" href="#vectorization-and-broadcasting-examples" title="Permanent link">¶</a></h3>
-<p>함수 f 에 행렬 x 를 입력하여 계산하고 싶다고 하자. 전통적인 for 루프로 짠다면 </p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="mi">1</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">1e5</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
-</code></pre></div>
-<p>와 같이 짤 것이다. 하지만 이는 약 0.5 초가 걸릴정도로 매우 비효율적이다. numpy 는 다음과 같이 벡터화된 루프를 사용하여 연산이 약 0.001 초가 걸릴정도로 매우 효율적으로 적용한다.</p>
-<div class="highlight"><pre><span></span><code><span class="n">y</span><span class="o">=</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</code></pre></div>
-<p>하지만 주의해야 할 점이 있다. 만약 다음과 같이 행렬 연산을 한다고 하자.</p>
-<div class="highlight"><pre><span></span><code><span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
-<span class="n">fx</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="mi">4</span>
-</code></pre></div>
-<p>이렇게 하면 매번 임시 행렬이 생성되므로 비효율적이다. 그래서 in-place 연산을 다음과 같이 해야 한다.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="c1"># Allocate the output array with x-squared</span>
-    <span class="n">fx</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
-    <span class="c1"># In-place operations: no new memory allocated</span>
-    <span class="n">fx</span> <span class="o">-=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span>
-    <span class="n">fx</span> <span class="o">+=</span> <span class="mi">4</span>
-    <span class="k">return</span> <span class="n">fx</span>
-</code></pre></div>
-<p>이러면 한 자리에 임시 행렬이 생성되고 계속 연산을 한 다음 반환되서 성능이 2배 이상 효율적이다. 참고로 Cython, Theano, numexpr 같은 걸 쓰면 cache 사용을 극한으로 올려줘서 성능을 더욱 높힐 수 있다.</p>
-<h4 id="evaluating-functions">Evaluating Functions<a class="headerlink" href="#evaluating-functions" title="Permanent link">¶</a></h4>
-<h4 id="finite-differencing">Finite Differencing<a class="headerlink" href="#finite-differencing" title="Permanent link">¶</a></h4>
-<p>pass</p>
-<h4 id="creating-a-grid-using-broadcasting">Creating a grid using broadcasting<a class="headerlink" href="#creating-a-grid-using-broadcasting" title="Permanent link">¶</a></h4>
-<p>pass</p>
-<h4 id="computer-vision">Computer Vision<a class="headerlink" href="#computer-vision" title="Permanent link">¶</a></h4>
-<p>(결국 벡터화를 하면 성능이 많이 좋아지는데, 그것이 어떻게 구현되었는지는 설명하지 않네.)</p>
-<h3 id="sharing-data">Sharing data<a class="headerlink" href="#sharing-data" title="Permanent link">¶</a></h3>
-<p>pass</p>
-<h4 id="efficient-io-with-memory-mapping">Efficient I/O with memory mapping<a class="headerlink" href="#efficient-io-with-memory-mapping" title="Permanent link">¶</a></h4>
-<p>pass</p>
-<h4 id="the-array-interface-for-foreign-blocks-of-memory">The array interface for foreign blocks of memory<a class="headerlink" href="#the-array-interface-for-foreign-blocks-of-memory" title="Permanent link">¶</a></h4>
-<p>pass</p>
-<h4 id="structured-data-types-to-expose-complex-data">Structured data-types to expose complex data<a class="headerlink" href="#structured-data-types-to-expose-complex-data" title="Permanent link">¶</a></h4>
-<p>pass</p>
-<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">¶</a></h3>
-<p>pass</p>
-</article>
-</div>
-</div>
-<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
             Back to top
           </a>
-</main>
-<!-- 
+        
+      </main>
+      
+        <!-- 
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -920,16 +1553,26 @@ y&amp; ( 4, 1 )\\
     </div>
   </div>
 </footer> -->
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
-<script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
-<script src="../../javascripts/highlight.min.js"></script>
-<script src="../../javascripts/config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
-<script src="../../javascripts/b27b3e6448.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="../../javascripts/highlight.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/b27b3e6448.js"></script>
+      
+    
+  </body>
 </html>

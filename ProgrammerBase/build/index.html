@@ -1,949 +1,1477 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="ccsss" name="author"/>
-<link href="https://ccss17.github.io/ProgrammerBase/build/" rel="canonical"/>
-<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>Build System - ccss17</title>
-<link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
-<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
-<link href="../../stylesheets/config.css" rel="stylesheet"/>
-</head>
-<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
-<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#day5">
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="ccsss">
+      
+      
+        <link rel="canonical" href="https://ccss17.github.io/ProgrammerBase/build/">
+      
+      <link rel="icon" href="../../assets/images/bolt-solid.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+  <title>Lorem ipsum dolor sit amet</title>
+
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/config.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#day5" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
-<header class="md-header" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
-<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ccss17" class="md-header__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             ccss17
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Build System
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
-</label>
-</form>
-</nav>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
       ccss17
     </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Math/MathHistory/">
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Math/MathHistory/" class="md-tabs__link">
         Math
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../paper/1404.6388/">
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../paper/1404.6388/" class="md-tabs__link">
         Paper
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Computer/nand2tetris/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Computer/nand2tetris/" class="md-tabs__link">
         Computer
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../">
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         ProgrammerBase
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../security-tutorial/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../security-tutorial/" class="md-tabs__link">
         security tutorial
       </a>
-</li>
-</ul>
-</div>
+    </li>
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
-<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
-</a>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ccss17" class="md-nav__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
     ccss17
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../..">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         ccss17
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
         Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Math" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
           Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
         Foundation of Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_1">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Foundation of Math" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
           Foundation of Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/MathHistory/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/MathHistory/" class="md-nav__link">
         History of Math
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Logic/FormalSystem/" class="md-nav__link">
         Formal System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/incompleteness/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/incompleteness/" class="md-nav__link">
         Incompleteness theorem
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/turing/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/turing/" class="md-nav__link">
         Turing's proof
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/gentzen/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/gentzen/" class="md-nav__link">
         Consistency proof of Peano arithmetic
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Set Theory
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Set Theory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
           Set Theory
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/Set/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/Set/" class="md-nav__link">
         Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/numbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/numbers/" class="md-nav__link">
         Number Theory
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/InfiniteSet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/InfiniteSet/" class="md-nav__link">
         Infinite Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/ZFC/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/ZFC/" class="md-nav__link">
         ZFC axiom system
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/ArithmeticOperations/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/ArithmeticOperations/" class="md-nav__link">
         Arithmetic Operations
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Polynomials/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Polynomials/" class="md-nav__link">
         Polynomials
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/HyperrealNumbers/" class="md-nav__link">
         Hyperreal Numbers
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/SurrealNumbers/" class="md-nav__link">
         Surreal Numbers
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      <label class="md-nav__link" for="__nav_2_7">
         Linear Algebra
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_7">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linear Algebra" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
           Linear Algebra
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/VectorSpace/" class="md-nav__link">
         Vector Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/LinearTransformation/" class="md-nav__link">
         Linear Transformation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/MatrixOperation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/MatrixOperation/" class="md-nav__link">
         Matrix Operation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/Determinants/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/Determinants/" class="md-nav__link">
         Determinants
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/Diagonalization/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/Diagonalization/" class="md-nav__link">
         Diagonalization
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/InnerProductSpaces/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/InnerProductSpaces/" class="md-nav__link">
         Inner Product Spaces
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/CanonicalForms/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/CanonicalForms/" class="md-nav__link">
         Canonical Forms
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
         Paper
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Paper" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Paper" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
           Paper
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/1404.6388/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/1404.6388/" class="md-nav__link">
         Performance of Python runtimes on a non-numeric scientific code
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/1102.1523/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/1102.1523/" class="md-nav__link">
         The NumPy array: a structure for efficient numerical computation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/facenet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/facenet/" class="md-nav__link">
         Facenet (2015)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/quadruplet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/quadruplet/" class="md-nav__link">
         Quadruplet (2017)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/blueborne/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/blueborne/" class="md-nav__link">
         BlueBorne
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
         Computer
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Computer" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Computer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
           Computer
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/nand2tetris/" class="md-nav__link">
         Nand to Tetris
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/future/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/future/" class="md-nav__link">
         Why the future doesn't need us
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/Rust/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/Rust/" class="md-nav__link">
         Rust Memo
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
         ProgrammerBase
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ProgrammerBase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
           ProgrammerBase
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_2">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      <label class="md-nav__link" for="__nav_5_2">
         Contents
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Contents" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_5_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contents" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
           Contents
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../01-Day1/readme/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-Day1/readme/" class="md-nav__link">
         Day 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../02-Day2/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-Day2/readme/" class="md-nav__link">
         Day 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../03-Day3/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-Day3/readme/" class="md-nav__link">
         Day 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../04-Day4/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-Day4/readme/" class="md-nav__link">
         Day 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../05-Day5/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Day5/readme/" class="md-nav__link">
         Day 5
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../docker/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker/" class="md-nav__link">
         Docker
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../codingconvention/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codingconvention/" class="md-nav__link">
         Coding Convention
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           Build System
           <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Build System
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#day5">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#day5" class="md-nav__link">
      ☀️ ️여기서부터 Day5   ☀️ 
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#build-system">
+      
+        <li class="md-nav__item">
+  <a href="#build-system" class="md-nav__link">
     Build System
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#make">
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
     Make
   </a>
-<nav aria-label="Make" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+  
+    <nav class="md-nav" aria-label="Make">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
     일반 규칙
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#phony">
+        
+          <li class="md-nav__item">
+  <a href="#phony" class="md-nav__link">
     PHONY
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bazel">
+      
+        <li class="md-nav__item">
+  <a href="#bazel" class="md-nav__link">
     Bazel
   </a>
-<nav aria-label="Bazel" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bazel-tutorial">
+  
+    <nav class="md-nav" aria-label="Bazel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bazel-tutorial" class="md-nav__link">
     Bazel Tutorial
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#make-with-vscode">
+      
+        <li class="md-nav__item">
+  <a href="#make-with-vscode" class="md-nav__link">
     make with VSCode
   </a>
-<nav aria-label="make with VSCode" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rust-with-vscode">
+  
+    <nav class="md-nav" aria-label="make with VSCode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rust-with-vscode" class="md-nav__link">
     rust with VSCode
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#day5_1">
+        
+          <li class="md-nav__item">
+  <a href="#day5_1" class="md-nav__link">
      🌜 ️여기까지 Day5     🌜️ 
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../information/">
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../information/" class="md-nav__link">
         Information
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../git/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
         Git
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../vscode/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vscode/" class="md-nav__link">
         VSCode
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../markdown/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../markdown/" class="md-nav__link">
         Markdown
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../tmux/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tmux/" class="md-nav__link">
         Tmux
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../vim/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vim/" class="md-nav__link">
         Vim
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../cli/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli/" class="md-nav__link">
         CLI
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
         security tutorial
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="security tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
           security tutorial
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/01-Base/" class="md-nav__link">
         Day1 Base
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/02-Computer1/" class="md-nav__link">
         Day2 Computer Principle 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/03-Computer2/" class="md-nav__link">
         Day3 Computer Principle 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/04-Reversing1/" class="md-nav__link">
         Day4 Reversing 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/05-Reversing2/" class="md-nav__link">
         Day5 Reversing 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/06-Exploit1/" class="md-nav__link">
         Day6 Exploit 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/07-Exploit2/" class="md-nav__link">
         Day7 Exploit 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/08-Exploit3/" class="md-nav__link">
         Day8 Exploit 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/09-Exploit4/" class="md-nav__link">
         Day9 Exploit 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/10-Pentesting/" class="md-nav__link">
         Day10 Pentesting
       </a>
-</li>
-</ul>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#day5">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#day5" class="md-nav__link">
      ☀️ ️여기서부터 Day5   ☀️ 
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#build-system">
+      
+        <li class="md-nav__item">
+  <a href="#build-system" class="md-nav__link">
     Build System
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#make">
+      
+        <li class="md-nav__item">
+  <a href="#make" class="md-nav__link">
     Make
   </a>
-<nav aria-label="Make" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+  
+    <nav class="md-nav" aria-label="Make">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
     일반 규칙
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#phony">
+        
+          <li class="md-nav__item">
+  <a href="#phony" class="md-nav__link">
     PHONY
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bazel">
+      
+        <li class="md-nav__item">
+  <a href="#bazel" class="md-nav__link">
     Bazel
   </a>
-<nav aria-label="Bazel" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#bazel-tutorial">
+  
+    <nav class="md-nav" aria-label="Bazel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bazel-tutorial" class="md-nav__link">
     Bazel Tutorial
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#make-with-vscode">
+      
+        <li class="md-nav__item">
+  <a href="#make-with-vscode" class="md-nav__link">
     make with VSCode
   </a>
-<nav aria-label="make with VSCode" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rust-with-vscode">
+  
+    <nav class="md-nav" aria-label="make with VSCode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rust-with-vscode" class="md-nav__link">
     rust with VSCode
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#day5_1">
+        
+          <li class="md-nav__item">
+  <a href="#day5_1" class="md-nav__link">
      🌜 ️여기까지 Day5     🌜️ 
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>Build System</h1>
-<h3 id="day5"><strong><div align="center"> ☀️ ️여기서부터 Day5   ☀️ </div></strong><a class="headerlink" href="#day5" title="Permanent link">¶</a></h3>
-<h2 id="build-system">Build System<a class="headerlink" href="#build-system" title="Permanent link">¶</a></h2>
-<p>C/C++ 소스코드를 컴파일하기 위해서는 </p>
-<div class="highlight"><pre><span></span><code>$ gcc main.c -o main
-</code></pre></div>
-<p>와 같은 명령어를 실행해야 합니다. 하지만 컴파일할 파일이 많아질 경우 이러한 컴파일 명령어가 매우 복잡해지는데, 이러한 고잡한 빌드 과정 자체를 관리하기 위하여 빌드 시스템이 개발되었죠.</p>
-<p>기본적으로 Make 가 가장 기초적인 빌드 시스템인데, 이 빌드 시스템의 여러 단점을 보완하기 위하여 CMake, Maven, Bazel 같은 새로운 빌드 시스템들이 나왔습니다. 여기에서는 Make 의 기본적인 사용방법과 새로운 빌드 시스템 중 Bazel 의 사용법만 간단하게 살펴보겠습니다. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>여러 빌드 시스템이 많지만 각자 장단점이 있기 때문에 여러분의 프로젝트에 적절한 빌드 시스템을 선정하여서 사용하면 됩니다.</p>
-</div>
-<h2 id="make">Make<a class="headerlink" href="#make" title="Permanent link">¶</a></h2>
-<blockquote>
-<p>참고/출처 : <a href="https://makefiletutorial.com/">https://makefiletutorial.com/</a></p>
-</blockquote>
-<p>먼저 도커 컨테이너에서 다음 명령어를 통하여 빌드 시스템을 연습할 공간을 만들어 주세요.</p>
-<h6 id="execute"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute" title="Permanent link">¶</a></h6>
-<div class="highlight"><pre><span></span><code>$ mkdir build-test
-$ <span class="nb">cd</span> build-test
-$ touch main.c
-$ touch Makefile
-</code></pre></div>
-<p>그리고 <code>main.c</code> 의 내용을 다음과 같이 채워넣으시면 됩니다. </p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+<h1>Redirect to Netlify</h1>
+<script> 
+setTimeout(function () {
+window.location.href = "https://ccss17.netlify.app/" + window.location.pathname;}, 3000);
+</script>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Build system test</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p>그리고 <code>Makefile</code> 의 내용을 다음과 같이 채워넣어 주세요. </p>
-<div class="highlight"><pre><span></span><code><span class="nf">all</span><span class="o">:</span>
-    gcc main.c -o main
-</code></pre></div>
-<p>그리고 다음 명령어를 실행해봅시다. </p>
-<h6 id="execute_1"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_1" title="Permanent link">¶</a></h6>
-<div class="highlight"><pre><span></span><code>$ make
-</code></pre></div>
-<p>그러면 컴파일이 완료되어서 <code>main</code> 이라는 실행파일이 생깁니다. </p>
-<h6 id="execute_2"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_2" title="Permanent link">¶</a></h6>
-<div class="highlight"><pre><span></span><code>$ ./main
-</code></pre></div>
-<p>실행까지 해보죠. 이제 Makefile 에 대하여 알아보겠습니다.</p>
-<h3 id="_1">일반 규칙<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<p><code>Makefile</code> 은 수 개의 규칙으로 구성되는데 규칙의 일반적 문법은 다음과 같습니다.</p>
-<div class="highlight"><pre><span></span><code><span class="nf">targets </span><span class="o">:</span> <span class="n">prerequisites</span> 
-    <span class="nb">command</span>
-    <span class="nb">command</span>
-    <span class="nb">command</span>
-    ...
-</code></pre></div>
-<ul>
-<li>
-<p><mark><strong><code>targets</code> : 규칙 이름으로써 공백으로 구분되는 파일 이름들이다. 만들어질 파일 이름을 뜻한다. 보통 규칙 당 하나의 파일만 있다.</strong></mark></p>
-</li>
-<li>
-<p><mark><strong><code>commands</code> : <code>targets</code> 을 만드는 일련의 명령어들이다.</strong></mark></p>
-<ul>
-<li>이 부분은 공백이 아닌 탭으로 시작되어야만 한다.</li>
-</ul>
-</li>
-<li>
-<p><mark><strong><code>prerequisites</code> : 공백으로 구분되는 파일 이름들로써 <code>commands</code> 가 실행되기 위하여 필요한 의존성 파일 리스트를 뜻한다.</strong></mark></p>
-</li>
-</ul>
-<p>만약 이 <code>prerequisites</code> 의 파일들 중 하나가 존재하지 않는다면 먼저 그 파일 이름의 규칙을 찾아서 그 규칙을 실행하여 파일을 만들게 됩니다.</p>
-<div class="highlight"><pre><span></span><code><span class="nf">blah</span><span class="o">:</span> <span class="n">blah</span>.<span class="n">o</span>
-<span class="err">cc</span> <span class="err">blah.o</span> <span class="err">-o</span> <span class="err">blah</span>
+              
+                
 
-<span class="nf">blah.o</span><span class="o">:</span> <span class="n">blah</span>.<span class="n">c</span>
-    cc -c blah.c -o blah.o
 
-<span class="nf">blah.c</span><span class="o">:</span>
-    <span class="nb">echo</span> <span class="s2">"int main() { return 0; }"</span> &gt; blah.c
-
-<span class="nf">clean</span><span class="o">:</span>
-    rm -f blah.o blah
-</code></pre></div>
-<p>이러한 <code>Makefile</code> 의 경우 <code>blah</code> 가 첫번째 규칙이므로 디폴트 규칙이 되죠. <code>make</code> 명령을 인자 없이 실행하면 <code>Makefile</code> 의 첫번째 규칙이 실행됩니다. 일반적으로 첫번째 규칙을 <code>all</code> 로 정하는 국룰이 있죠. </p>
-<p>또한 통상적으로 Makefile 에 있는 <code>clean</code> 규칙은 컴파일된 바이너리를 삭제하는 용도로 사용됩니다. 이 <code>clean</code> 규칙을 실행하기 위해서는 </p>
-<div class="highlight"><pre><span></span><code>$ make clean
-</code></pre></div>
-<p>와 같이 규칙 이름(<code>clean</code>) 을 <code>make</code> 의 파라미터로 전달하여 실행하면 됩니다. 반면 파라미터를 전달하지 않고 단지 <code>make</code> 로 실행하면 가장 첫번째 규칙이 실행되는 것이죠.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code>cc</code> 도 <code>gcc</code> 같은 컴파일러입니다.</p>
-</div>
-<p><code>make</code> 는 규칙의 파일이 이미 존재할 경우 <code>"up to date"</code> 메시지를 출력하고 규칙을 실행하지 않습니다. </p>
-<h3 id="phony">PHONY<a class="headerlink" href="#phony" title="Permanent link">¶</a></h3>
-<p><code>make</code> 는 효율성을 위하여 <code>targets</code> 파일이 이미 존재하면 규칙을 실행하지 않습니다. 그런데 <code>clean</code> 이나 <code>all</code> 같은 규칙은 실제 파일 이름을 지칭하지 않죠. 만약 실수로 <code>all</code> 파일이나 <code>clean</code> 파일을 생성하였을 경우 <code>all</code> 이나 <code>clean</code> 규칙이 실행되지 않을 수도 있습니다. 이것을 방지하기 위하여 <code>.PHONY</code> 에 <code>targets</code> 을 명시하면 <code>make</code> 는 파일이 존재하는지 검사하지 않고 규칙을 무조건 실행합니다. </p>
-<ul>
-<li>
-<p><mark><strong><code>.PHONY</code> : <code>targets</code> 이 실제 파일 이름이 아니라는 것을 명시한다.</strong></mark></p>
-<ul>
-<li>또한 파일 존재 검사를 하지 않기 때문에 <code>.PHONY</code> 를 사용하면 <code>make</code> 의 성능이 향상된다. </li>
-</ul>
-</li>
-</ul>
-<p>다음과 같이 <code>.PHONY</code> 규칙에 <code>clean</code> 을 명시하여 실제 파일 이름이 아니라는 것을 알려주세요. 그러면 <code>clean</code> 파일이 있어도 규칙이 항상 실행됩니다. </p>
-<div class="highlight"><pre><span></span><code><span class="nf">one</span><span class="o">:</span>
-    touch one
-<span class="nf">clean</span><span class="o">:</span>
-    rm -f one
-<span class="nf">.PHONY</span><span class="o">:</span> 
-    clean
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>이렇게 매우 간단하게 Makefile 에 대하여 알아보았습니다. 더 많은 Makefile 정보를 알고 싶다면 다음 링크들을 참고해주세요.</p>
-<p><a href="https://makefiletutorial.com/">https://makefiletutorial.com/</a></p>
-<p><a href="https://ccss17.github.io/Computer/makefile/">https://ccss17.github.io/Computer/makefile/</a></p>
-</div>
-<h2 id="bazel">Bazel<a class="headerlink" href="#bazel" title="Permanent link">¶</a></h2>
-<p>Bazel 은 Google 에서 만든 빌드 시스템입니다. Bazel 의 특징은 매우 큰 프로젝트에 적합하다는 것이죠. 왜냐하면 Bazel 은 프로젝트에서 수정된 일부분만 컴파일하는 기능을 제공하기 때문입니다. 이 기능은 조금만 더 큰 프로젝트를 다루다보면 매우 큰 장점이라는 것을 알 수 있습니다. 디버깅을 위해서는 프로젝트를 빌드하고 프로그램이 잘 돌아가나 확인해야 하는데, 이 과정에서 컴파일을 매번 해야 합니다. 이때 컴파일 속도가 빨라지면 작업 효율이 매우 올라가고 시간 절약이 많이 되죠. </p>
-<p>그리고 Bazel 은 C/C++ 뿐만 아니라 Java, Android, iOS, Go 같은 다양한 언어도 컴파일할 수 있게 해주고, Linux/Windows/MacOS 와 같은 모든 플랫폼에서 사용가능합니다. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>하지만 Bazel 빌드 시스템에 대한 단점과 비판도 있기 때문에 무조건 Bazel 로 프로젝트를 빌드해야겠다고 생각할 필요는 없습니다. 여러 빌드 시스템의 장단점을 미루어보고 자신의 프로젝트에 적절한 빌드 시스템을 선정해야 합니다.</p>
-</div>
-<h3 id="bazel-tutorial">Bazel Tutorial<a class="headerlink" href="#bazel-tutorial" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>참고/출처 : <a href="https://docs.bazel.build/versions/4.0.0/tutorial/cpp.html">https://docs.bazel.build/versions/4.0.0/tutorial/cpp.html</a></p>
-</blockquote>
-<p>먼저 도커 컨테이너에서 Bazel Tutorial 레포지토리를 클론합니다.</p>
-<h6 id="execute_3"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_3" title="Permanent link">¶</a></h6>
-<div class="highlight"><pre><span></span><code>$ git clone https://github.com/bazelbuild/examples
-</code></pre></div>
-<p>이 레포지토리를 보면 여러가지 튜토리얼들이 많은데 C++ 프로젝트를 Bazel 로 빌드하는 튜토리얼을 따라해보겠습니다. <code>examples/cpp-tutorial/stage1</code> 으로 이동해주세요.</p>
-<p>이곳은 Bazel 빌드 시스템을 연습해볼 수 있는 간단한 프로젝트가 있는 레포지토리입니다. <code>ls</code> 명령어로 디렉토리를 확인해보면 <code>WORKSPACE</code> 라는 파일과 <code>main</code> 이라는 C++ 소스코드를 담고 있는 디렉토리가 있습니다. 그리고 <code>main</code> 디렉토리 안에는 <code>BUILD</code> 라는 파일도 있죠. 다음 명령어로 C++ 소스코드를 가볍게 살펴보세요. </p>
-<h6 id="execute_4"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_4" title="Permanent link">¶</a></h6>
-<div class="highlight"><pre><span></span><code>$ cat main/hello-world.cc
-</code></pre></div>
-<p>그러면 이제 Bazel 로 C++ 프로젝트를 빌드하고 실행해봅시다. </p>
-<h6 id="execute_5"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_5" title="Permanent link">¶</a></h6>
-<div class="highlight"><pre><span></span><code>$ bazel build //main:hello-world
-</code></pre></div>
-<p>이 명령어가 Bazel 을 통해서 C++ 프로젝트를 빌드한 것입니다. 컴파일된 실행 파일은 <code>bazel-bin/main</code> 에 저장됩니다. 이제 컴파일된 실행 파일을 실행해보죠.</p>
-<h6 id="execute_6"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_6" title="Permanent link">¶</a></h6>
-<div class="highlight"><pre><span></span><code>$ ./bazel-bin/main/hello-world
-Hello world
-Wed Feb <span class="m">10</span> <span class="m">20</span>:40:12 <span class="m">2021</span>
-</code></pre></div>
-<p>이제 Bazel 에 대하여 알아보겠습니다. </p>
-<ul>
-<li>
-<p><mark><strong><code>WORKSPACE</code> : Bazel 빌드 시스템으로 빌드될 프로젝트임을 알려주는 파일이다.</strong></mark></p>
-<ul>
-<li>이 파일은 프로젝트의 최상층(root)에 위치해야 한다.</li>
-</ul>
-</li>
-<li>
-<p><mark><strong><code>BUILD</code> : Bazel 빌드 시스템이 프로젝트를 어떻게 컴파일해야 하는지 알려주는 파일이다.</strong></mark></p>
-<ul>
-<li>이 파일은 프로젝트의 하위 디렉토리에 하나 이상 존재하며, 이 파일을 갖고 있는 디렉토리가 하나의 package 가 된다.</li>
-</ul>
-</li>
-</ul>
-<p>이 프로젝트의 <code>WORKSPACE</code> 파일은 빈 파일입니다. 이렇게 빈 파일의 <code>WORKSPACE</code> 만 만들어두어도 Bazel 이 Bazel 빌드 시스템으로 빌드될 프로젝트임을 인식할 수 있습니다. </p>
-<p><code>main/BUILD</code> 파일은 <code>main</code> 이라는 package 가 어떻게 컴파일되어야 하는지 Bazel 에게 알려줍니다. </p>
-<h6 id="execute_7"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_7" title="Permanent link">¶</a></h6>
-<div class="highlight"><pre><span></span><code>$ cat main/BUILD
-load<span class="o">(</span><span class="s2">"@rules_cc//cc:defs.bzl"</span>, <span class="s2">"cc_binary"</span><span class="o">)</span>
-
-cc_binary<span class="o">(</span>
-    <span class="nv">name</span> <span class="o">=</span> <span class="s2">"hello-world"</span>,
-    <span class="nv">srcs</span> <span class="o">=</span> <span class="o">[</span><span class="s2">"hello-world.cc"</span><span class="o">]</span>,
-<span class="o">)</span>
-</code></pre></div>
-<p>이 <code>BUILD</code> 파일은 <code>hello-world</code> 라는 타켓을 <code>hello-world.cc</code> 라는 C++ 소스코드로 컴파일 하는 규칙을 명시합니다. <code>cc_binary</code> 는 Bazel 의 내장 규칙인데 이것으로 C++ 프로그램을 컴파일 할 수 있습니다.</p>
-<p>이렇게 <code>BUILD</code> 파일을 가볍게 알아보는 것으로 Bazel 빌드 시스템을 마무리하겠습니다. stage2, stage3 과 더 자세한 Bazel 사용법은 관심 있으신 분들만 </p>
-<p><a href="https://docs.bazel.build/versions/4.0.0/tutorial/cpp.html">https://docs.bazel.build/versions/4.0.0/tutorial/cpp.html</a></p>
-<p>이곳에서 더 알아보시면 됩니다.</p>
-<h2 id="make-with-vscode">make with VSCode<a class="headerlink" href="#make-with-vscode" title="Permanent link">¶</a></h2>
-<p>VSCode 를 사용하면서 make 로 C++ 을 빌드하는 방법을 간단하게 살펴보겠습니다. 새폴더를 만드시고 다음과 같이 파일을 세팅해주세요.</p>
-<h6 id="execute_8"><strong><div align="center"> ⬇ EXECUTE! ⬇ </div></strong><a class="headerlink" href="#execute_8" title="Permanent link">¶</a></h6>
-<div class="highlight"><pre><span></span><code>$ touch main.cc
-$ touch makefile
-$ mkdir .vscode
-$ touch .vscode/tasks.json
-</code></pre></div>
-<p>그리고 <code>main.cc</code> 라는 C++ 프로그램을 다음과 같이 간단하게 채워봅시다.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span><span class="w"></span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">"make with vscode!"</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p><code>makefile</code> 은 다음과 같이 채워주세요.</p>
-<div class="highlight"><pre><span></span><code><span class="nf">all</span><span class="o">:</span>
-    g++ main.cc
-<span class="nf">clean</span><span class="o">:</span>
-    rm a.out
-</code></pre></div>
-<p>마지막으로 <code>.vscode/tasks.json</code> 을 다음과 같이 채워주세요.</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">"tasks"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">"label"</span><span class="p">:</span> <span class="s2">"make and run"</span><span class="p">,</span>
-            <span class="nt">"type"</span><span class="p">:</span> <span class="s2">"shell"</span><span class="p">,</span>
-            <span class="nt">"command"</span><span class="p">:</span> <span class="s2">"make clean ; make &amp;&amp; ./a.out"</span><span class="p">,</span>
-            <span class="nt">"args"</span><span class="p">:</span> <span class="p">[</span>
-                <span class="err">//</span> <span class="s2">"arg1"</span>
-            <span class="p">],</span>
-            <span class="nt">"group"</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">"kind"</span><span class="p">:</span> <span class="s2">"build"</span><span class="p">,</span>
-                <span class="nt">"isDefault"</span><span class="p">:</span> <span class="kc">true</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>그리고 VSCode 에서 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> 를 누르면 빌드가 됩니다. 빌드 스크립트가 지금</p>
-<div class="highlight"><pre><span></span><code>$ make clean <span class="p">;</span> make <span class="o">&amp;&amp;</span> ./a.out
-</code></pre></div>
-<p>이렇게 되어있습니다. 먼저 기존에 컴파일된 바이너리를 <code>make clean</code> 으로 삭제하고 <code>make</code> 를 통해 빌드를 한 후 컴파일된 바이너리를 <code>./a.out</code> 으로 실행합니다. <code>make clean</code> 과 <code>make</code> 를 <code>;</code> 으로 이어준 이유는 컴파일된 바이너리가 없을 경우 <code>make clean</code> 명령이 실패하기 때문입니다. 만약 <code>&amp;&amp;</code> 로 이어졌다면 <code>&amp;&amp;</code> 는 이전 명령어가 성공적으로 종료되어야만 다음 명령어를 실행하기 때문에 빌드에 실패하게 되죠. 그렇기 때문에 <code>;</code> 으로 이어준 것입니다.</p>
-<p>Make 뿐만 아니라 Grunt, Gulp, MSBuild, Rake, Bazel, Flutter, Android, iOS 등등 다양한 Task 들을 VSCode 와 연동하여 사용할 수 있습니다. 더 자세한 내용은 </p>
-<p><a href="https://code.visualstudio.com/docs/editor/tasks#vscode">https://code.visualstudio.com/docs/editor/tasks#vscode</a></p>
-<p>이 링크를 참고해주시면 됩니다. 이 가이드의 목적은 이런 것들이 있다 정도만 가볍게 알려드리는 것이고, 여러분이 앞으로 각자의 분야에서 필요한 것들을 찾아서 이런 식으로 사용할 수 있겠다는 아이디어만 전달해드릴 수 있다면 저는 충분하다고 생각합니다.</p>
-<h3 id="rust-with-vscode">rust with VSCode<a class="headerlink" href="#rust-with-vscode" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>참고/출처 : <a href="https://stackoverflow.com/a/46885479/15266921">https://stackoverflow.com/a/46885479/15266921</a></p>
-</blockquote>
-<p>아쉬우니까 나중에 Rust 공부하시는 분들을 위하여 Rust 프로젝트를 빌드하고 실행하는 <code>tasks.json</code> 만 알려드리고 마무리하겠습니다. </p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-    <span class="nt">"version"</span><span class="p">:</span> <span class="s2">"2.0.0"</span><span class="p">,</span>
-    <span class="nt">"tasks"</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="nt">"label"</span><span class="p">:</span> <span class="s2">"cargo run"</span><span class="p">,</span>
-            <span class="nt">"type"</span><span class="p">:</span> <span class="s2">"shell"</span><span class="p">,</span>
-            <span class="nt">"command"</span><span class="p">:</span> <span class="s2">"cargo"</span><span class="p">,</span>
-            <span class="nt">"args"</span><span class="p">:</span> <span class="p">[</span>
-                <span class="s2">"run"</span><span class="p">,</span>
-                <span class="err">//</span> <span class="s2">"--release"</span><span class="p">,</span>
-                <span class="err">//</span> <span class="s2">"--"</span><span class="p">,</span>
-                <span class="err">//</span> <span class="s2">"arg1"</span>
-            <span class="p">],</span>
-            <span class="nt">"group"</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">"kind"</span><span class="p">:</span> <span class="s2">"build"</span><span class="p">,</span>
-                <span class="nt">"isDefault"</span><span class="p">:</span> <span class="kc">true</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
-<h3 id="day5_1"><strong><div align="center"> 🌜 ️여기까지 Day5     🌜️ </div></strong><a class="headerlink" href="#day5_1" title="Permanent link">¶</a></h3>
-</article>
-</div>
-</div>
-<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
             Back to top
           </a>
-</main>
-<!-- 
+        
+      </main>
+      
+        <!-- 
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -955,16 +1483,26 @@ $ touch .vscode/tasks.json
     </div>
   </div>
 </footer> -->
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
-<script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
-<script src="../../javascripts/highlight.min.js"></script>
-<script src="../../javascripts/config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
-<script src="../../javascripts/b27b3e6448.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="../../javascripts/highlight.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/b27b3e6448.js"></script>
+      
+    
+  </body>
 </html>

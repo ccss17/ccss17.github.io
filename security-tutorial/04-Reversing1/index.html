@@ -1,1089 +1,1559 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="ccsss" name="author"/>
-<link href="https://ccss17.github.io/security-tutorial/04-Reversing1/" rel="canonical"/>
-<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>Day4 Reversing 1 - ccss17</title>
-<link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
-<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
-<link href="../../stylesheets/config.css" rel="stylesheet"/>
-</head>
-<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
-<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#1">
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="ccsss">
+      
+      
+        <link rel="canonical" href="https://ccss17.github.io/security-tutorial/04-Reversing1/">
+      
+      <link rel="icon" href="../../assets/images/bolt-solid.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+  <title>Lorem ipsum dolor sit amet</title>
+
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/config.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
-<header class="md-header" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
-<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ccss17" class="md-header__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             ccss17
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Day4 Reversing 1
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
-</label>
-</form>
-</nav>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
       ccss17
     </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Math/MathHistory/">
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Math/MathHistory/" class="md-tabs__link">
         Math
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../paper/1404.6388/">
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../paper/1404.6388/" class="md-tabs__link">
         Paper
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Computer/nand2tetris/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Computer/nand2tetris/" class="md-tabs__link">
         Computer
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../ProgrammerBase/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ProgrammerBase/" class="md-tabs__link">
         ProgrammerBase
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../">
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         security tutorial
       </a>
-</li>
-</ul>
-</div>
+    </li>
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
-<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
-</a>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ccss17" class="md-nav__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
     ccss17
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../..">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         ccss17
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
         Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Math" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
           Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
         Foundation of Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_1">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Foundation of Math" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
           Foundation of Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/MathHistory/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/MathHistory/" class="md-nav__link">
         History of Math
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Logic/FormalSystem/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Logic/FormalSystem/" class="md-nav__link">
         Formal System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/incompleteness/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/incompleteness/" class="md-nav__link">
         Incompleteness theorem
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/turing/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/turing/" class="md-nav__link">
         Turing's proof
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/gentzen/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/gentzen/" class="md-nav__link">
         Consistency proof of Peano arithmetic
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Set Theory
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Set Theory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
           Set Theory
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/Set/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/Set/" class="md-nav__link">
         Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/numbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/numbers/" class="md-nav__link">
         Number Theory
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/InfiniteSet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/InfiniteSet/" class="md-nav__link">
         Infinite Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Set/ZFC/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Set/ZFC/" class="md-nav__link">
         ZFC axiom system
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/ArithmeticOperations/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/ArithmeticOperations/" class="md-nav__link">
         Arithmetic Operations
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/Polynomials/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Polynomials/" class="md-nav__link">
         Polynomials
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/HyperrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/HyperrealNumbers/" class="md-nav__link">
         Hyperreal Numbers
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/SurrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/SurrealNumbers/" class="md-nav__link">
         Surreal Numbers
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      <label class="md-nav__link" for="__nav_2_7">
         Linear Algebra
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_7">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linear Algebra" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
           Linear Algebra
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/VectorSpace/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/VectorSpace/" class="md-nav__link">
         Vector Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/LinearTransformation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/LinearTransformation/" class="md-nav__link">
         Linear Transformation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/MatrixOperation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/MatrixOperation/" class="md-nav__link">
         Matrix Operation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/Determinants/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/Determinants/" class="md-nav__link">
         Determinants
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/Diagonalization/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/Diagonalization/" class="md-nav__link">
         Diagonalization
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/InnerProductSpaces/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/InnerProductSpaces/" class="md-nav__link">
         Inner Product Spaces
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Math/LinearAlgebra/CanonicalForms/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/CanonicalForms/" class="md-nav__link">
         Canonical Forms
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
         Paper
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Paper" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Paper" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
           Paper
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/1404.6388/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/1404.6388/" class="md-nav__link">
         Performance of Python runtimes on a non-numeric scientific code
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/1102.1523/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/1102.1523/" class="md-nav__link">
         The NumPy array: a structure for efficient numerical computation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/facenet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/facenet/" class="md-nav__link">
         Facenet (2015)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/quadruplet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/quadruplet/" class="md-nav__link">
         Quadruplet (2017)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/blueborne/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/blueborne/" class="md-nav__link">
         BlueBorne
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
         Computer
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Computer" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Computer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
           Computer
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/nand2tetris/" class="md-nav__link">
         Nand to Tetris
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/future/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/future/" class="md-nav__link">
         Why the future doesn't need us
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/Rust/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/Rust/" class="md-nav__link">
         Rust Memo
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         ProgrammerBase
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ProgrammerBase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
           ProgrammerBase
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_2">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      <label class="md-nav__link" for="__nav_5_2">
         Contents
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Contents" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_5_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contents" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
           Contents
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/01-Day1/readme/" class="md-nav__link">
         Day 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/02-Day2/readme/" class="md-nav__link">
         Day 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/03-Day3/readme/" class="md-nav__link">
         Day 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/04-Day4/readme/" class="md-nav__link">
         Day 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/05-Day5/readme/" class="md-nav__link">
         Day 5
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/docker/" class="md-nav__link">
         Docker
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/codingconvention/" class="md-nav__link">
         Coding Convention
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/build/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/build/" class="md-nav__link">
         Build System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/information/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/information/" class="md-nav__link">
         Information
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/git/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/git/" class="md-nav__link">
         Git
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/vscode/" class="md-nav__link">
         VSCode
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/markdown/" class="md-nav__link">
         Markdown
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/tmux/" class="md-nav__link">
         Tmux
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/vim/" class="md-nav__link">
         Vim
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/cli/" class="md-nav__link">
         CLI
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
         security tutorial
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="security tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
           security tutorial
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../01-Base/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-Base/" class="md-nav__link">
         Day1 Base
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../02-Computer1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-Computer1/" class="md-nav__link">
         Day2 Computer Principle 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../03-Computer2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-Computer2/" class="md-nav__link">
         Day3 Computer Principle 2
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           Day4 Reversing 1
           <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Day4 Reversing 1
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
     리버싱 (1)
   </a>
-<nav aria-label="리버싱 (1)" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+  
+    <nav class="md-nav" aria-label="리버싱 (1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
     해킹의 어원
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     리버싱이란
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     리버싱 도구
   </a>
-<nav aria-label="리버싱 도구" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+  
+    <nav class="md-nav" aria-label="리버싱 도구">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     바이너리 유틸리티
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-2">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-2" class="md-nav__link">
     gdb 사용법 (2)
   </a>
-<nav aria-label="gdb 사용법 (2)" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-2_1">
+  
+    <nav class="md-nav" aria-label="gdb 사용법 (2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-2_1" class="md-nav__link">
     gdb 명령어 (2)
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-3-">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-3-" class="md-nav__link">
     gdb 명령어 (3) - 메모리 보기
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-4-">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-4-" class="md-nav__link">
     gdb 명령어 (4) - 메모리 쓰기
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-5-pwndbg">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-5-pwndbg" class="md-nav__link">
     gdb 명령어 (5) - pwndbg 전용 명령어
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-2-">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-2-" class="md-nav__link">
     gdb 연습 (2) - 어셈블리어  프로그램
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb">
+        
+          <li class="md-nav__item">
+  <a href="#gdb" class="md-nav__link">
     gdb 실습
   </a>
-<nav aria-label="gdb 실습" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
+  
+    <nav class="md-nav" aria-label="gdb 실습">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     리버싱 원칙
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#crackme0x00b-crackme0x03">
+        
+          <li class="md-nav__item">
+  <a href="#crackme0x00b-crackme0x03" class="md-nav__link">
     crackme0x00b ~ crackme0x03 까지 설명
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     과제
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../05-Reversing2/">
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Reversing2/" class="md-nav__link">
         Day5 Reversing 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../06-Exploit1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-Exploit1/" class="md-nav__link">
         Day6 Exploit 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../07-Exploit2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-Exploit2/" class="md-nav__link">
         Day7 Exploit 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../08-Exploit3/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-Exploit3/" class="md-nav__link">
         Day8 Exploit 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../09-Exploit4/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-Exploit4/" class="md-nav__link">
         Day9 Exploit 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../10-Pentesting/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-Pentesting/" class="md-nav__link">
         Day10 Pentesting
       </a>
-</li>
-</ul>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#1">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
     리버싱 (1)
   </a>
-<nav aria-label="리버싱 (1)" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
+  
+    <nav class="md-nav" aria-label="리버싱 (1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
     해킹의 어원
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     리버싱이란
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     리버싱 도구
   </a>
-<nav aria-label="리버싱 도구" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+  
+    <nav class="md-nav" aria-label="리버싱 도구">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     바이너리 유틸리티
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-2">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-2" class="md-nav__link">
     gdb 사용법 (2)
   </a>
-<nav aria-label="gdb 사용법 (2)" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-2_1">
+  
+    <nav class="md-nav" aria-label="gdb 사용법 (2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-2_1" class="md-nav__link">
     gdb 명령어 (2)
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-3-">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-3-" class="md-nav__link">
     gdb 명령어 (3) - 메모리 보기
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-4-">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-4-" class="md-nav__link">
     gdb 명령어 (4) - 메모리 쓰기
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-5-pwndbg">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-5-pwndbg" class="md-nav__link">
     gdb 명령어 (5) - pwndbg 전용 명령어
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb-2-">
+        
+          <li class="md-nav__item">
+  <a href="#gdb-2-" class="md-nav__link">
     gdb 연습 (2) - 어셈블리어  프로그램
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#gdb">
+        
+          <li class="md-nav__item">
+  <a href="#gdb" class="md-nav__link">
     gdb 실습
   </a>
-<nav aria-label="gdb 실습" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_5">
+  
+    <nav class="md-nav" aria-label="gdb 실습">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     리버싱 원칙
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#crackme0x00b-crackme0x03">
+        
+          <li class="md-nav__item">
+  <a href="#crackme0x00b-crackme0x03" class="md-nav__link">
     crackme0x00b ~ crackme0x03 까지 설명
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_6">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     과제
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>Day4 Reversing 1</h1>
-<h2 id="1">리버싱 (1)<a class="headerlink" href="#1" title="Permanent link">¶</a></h2>
-<h3 id="_1">해킹의 어원<a class="headerlink" href="#_1" title="Permanent link">¶</a></h3>
-<div class="admonition info">
-<p class="admonition-title">ref</p>
-<p><a href="https://ko.wikipedia.org/wiki/해킹">https://ko.wikipedia.org/wiki/해킹</a></p>
-<p><a href="http://www.gachonnews.com/news/articleView.html?idxno=4930">http://www.gachonnews.com/news/articleView.html?idxno=4930</a></p>
-</div>
-<p>본래 거칠게 자르거나 헤집는다는 뜻의 hack 이라는 낱말에 지금의 의미를 부여한 것의 유래는 분명하지 않으나 1948년 매사추세츠공과대학의 모형 기차 제작 동아리인 TMRC에서 전기 기차, 트랙, 스위치를 보다 빠르게 조작하다 라는 의미로 시작됐다. 해킹의 정의는 시간에 따라 변화되어 왔는데 초기에는 '컴퓨터와 컴퓨터간의 네트워크를 자유자재로 다루고 조작하는 행위'를 말했다. 이후 악의적인 행동이 늘어나면서 '다른 컴퓨터 시스템을 침입할 때 파괴적인 계획을 갖고 침입하는 행위'라는 부정적 의미를 갖게 되었으며, 일명 크래킹이라 하였다.</p>
-<p>그런데 대상에 대하여 알고 있는 만큼 그것을 "자유자재로 다루고 조작" 할 수 있다. 사실 컴퓨터 뿐만 아니라 어떤 분야든지 알고 있는 만큼 그것을 마음대로 다룰 수 있는 능력이 생긴다. 요리를 할 때도 사람들의 입맛이 무엇이고 그 입맛을 맞추기 위해 재료를 어떻게 손질해야 하는지 알아야 요리를 자유자재로 할 수 있을 것이다. 또 뉴스를 보면 범죄를 저지르면서도 법 망을 요리조리 피해서 속편하게 살아가는 사람들이 있는데 대한민국 법에 대해서 잘 알고 있으니까 그런 식으로 법을 자유자재로 다루면서 법 망을 피해갈 수 있는 것이다. </p>
-<p>컴퓨터에 대해서도 마찬가지인데 컴퓨터가 작동하는 방식과 서로 통신하는 것, 그리고 특정한 프로그램이 어떻게 작동하는지 알고 있는만큼 그것을 "자유자재로 다룰(해킹)" 수 있다. 그래서 해킹의 사전작업은 리버싱으로 컴퓨터의 작동원리와 프로그램의 작동방식을 아는 것이다. 더 많이 알 수록 더 많이 해킹할 수 있다.</p>
-<h3 id="_2">리버싱이란<a class="headerlink" href="#_2" title="Permanent link">¶</a></h3>
-<div class="admonition info">
-<p class="admonition-title">ref</p>
-<p><a href="https://ko.wikipedia.org/wiki/리버스_엔지니어링">https://ko.wikipedia.org/wiki/리버스_엔지니어링</a></p>
-<p><a href="https://www.foo.be/cours/dess-20122013/b/Eldad_Eilam-Reversing__Secrets_of_Reverse_Engineering-Wiley(2005).pdf">https://www.foo.be/cours/dess-20122013/b/Eldad_Eilam-Reversing__Secrets_of_Reverse_Engineering-Wiley(2005).pdf</a></p>
-</div>
-<p>역공학 또는 리버싱reversing 이란 리버스 엔지니어링reverse engineering 의 줄임말이다. 공학이란 아이디어와 개념을 물질(최종 제품)로 구현하는 것이라 할 수 있는데, 역공학이란 공학과 정반대로 물질(최종 제품)에서부터 아이디어와 개념을 이해하는 것이다. </p>
-<p>두번째 링크의 저자가 정의하고 있는 리버싱이란 "어떤 소프트웨어의 모든 것에 대하여 이해할 수 있는 도구와 기술들" 이다. 그리고 저자는 정의를 좀 더 확장해서 자기 자신이 만든 프로그램일지라도 몇 일이 지난 후 어떻게 프로그램이 짜여져있는지 잊어버린 후 코드를 다시 살펴보는 것도 리버싱이라고 말한다. 자신이 코드를 어떻게 짰는지 까먹은 후 다시 살펴보는 것도 물질(최종 제품) 으로부터 아이디어와 개념을 이해하려는 시도로 볼 수 있다. </p>
-<p>또한 <a href="https://www.boannews.com/media/view.asp?idx=80375&amp;kind=">어떤 해커가 메가스터디 서버를 해킹해서 사용자들의 정보를 탈취했는데</a> 해커는 분명히 메가스터디 서버가 어떻게 작동하는지 알기 위해 리버싱을 하였고 그 리버싱으로 알아낸 개념과 아이디어, 원리들을 기반으로 해킹을 할 수 있었을 것이다. 그래서 비단 어셈블리어를 뒤지고 있는 게 리버싱이 아니라 정의에 따라 서버에 대하여 여러가지 테스트를 해보는 것도 리버싱이고 자기 자신의 코드를 자기 살펴보는 것도 리버싱인 것이다. </p>
-<p>대상에 대하여 알고 있는 정도와 대상을 자유자재로 다룰 수 있는 정도는 정비례한다. 그리고 리버싱을 많이 하면 할 수록 대상에 대하여 알고 있는 정도가 늘어날 것이고 해킹 할 수 있는 정도(자유자재로 다룰 수 있는 정도)도 늘어난다. 리버싱에 투자하는 시간이 무한에 가까워질 수록 해킹할 수 있는 범위도 무한히 넓어지지만 주어진 시간은 무한하지 않기 때문에, 해킹의 목적에 따라서 필요한 만큼 리버싱을 하는 것도 중요하다. </p>
-<h3 id="_3">리버싱 도구<a class="headerlink" href="#_3" title="Permanent link">¶</a></h3>
-<p>즉 리버싱이란 "대상(프로그램, 서버, 프로토콜 등등)의 작동방식을 이해하는 행위" 인데 지금부터는 비밀번호를 물어보는 프로그램들을 간단하게 해킹해 볼 것이기 때문에 지금은 "비밀번호를 물어보는 프로그램의 작동방식을 이해하는 것" 을 리버싱이라고 생각하자. 하지만 프로그램의 작동방식을 전부 다 알 필요는 없다. 위에서도 언급했지만 시간이 무한하지 않기 때문에 해킹에 필요한 만큼의 작동방식만 이해하면 된다.</p>
-<p>그래서 결국에 해킹을 위하여 프로그램의 작동방식을 이해하고 싶은데 프로그램은 실질적으로 눈에 보이지 않는 전자기들로 이루어져있으니 그것들을 볼 수 있게 도와주는 도구들이 필요하다. 그중에서 무료이면서 대중적인 리버싱 도구들이 <strong>gdb</strong> 와 <strong>radare2</strong> 이다. </p>
-<blockquote>
-<p><a href="https://github.com/tylerha97/awesome-reversing">https://github.com/tylerha97/awesome-reversing</a> : 여기에서 더 많은 리버싱 정보를 볼 수 있다. </p>
-<p>다른 리버싱 툴에 대해서는 Apple 의 LLVM 슈트에서 제공하는 <a href="https://lldb.llvm.org/use/tutorial.html"><code>lldb</code></a> 도 살펴보시길 바랍니다. 최근에는 <a href="https://rr-project.org/"><code>rr</code></a> 이라는 리버싱 툴도 각광받고 있습니다. </p>
-</blockquote>
-<h4 id="_4">바이너리 유틸리티<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
-<p><code>gdb</code> 나 <code>radare2</code> 같은 디버깅 툴 말고도 여러 바이너리 툴들의 사용법을 알아두면 리버싱할 때 도움이 많이 된다. </p>
-<ul>
-<li>
-<p><a href="https://en.wikipedia.org/wiki/GNU_Binutils">GNU 바이너리 유틸리티</a> : GNU 유틸리티는 Linux 에 기본으로 탑재되어 있으니 설치하지 않아도 쓸 수 있는 툴들이니만큼 대중적이고 중요한 명령어들이다. 메뉴얼이 <a href="https://sourceware.org/binutils/docs/binutils/">이곳에</a> 있다. </p>
-<ul>
-<li>
-<p><a href="https://en.wikipedia.org/wiki/Objdump"><code>objdump</code></a> : 바이너리 실행파일의 내부 내용을 분석하여 볼 수 있게 해주는 명령어. </p>
-</li>
-<li>
-<p><a href="https://www.cs.swarthmore.edu/~newhall/unixhelp/binaryfiles.html"><code>realelf</code></a> : elf 실행파일의 구조를 분석하여 볼 수 있게 해주는 명령어. </p>
-</li>
-<li>
-<p><code>strings</code> : 프로그램에 있는 문자열 출력 </p>
-</li>
-<li>
-<p><code>ltrace</code> : 프로그램이 사용하는 library 출력. 그래서 **l**trace</p>
-</li>
-<li>
-<p><code>strace</code> : 프로그램이 사용하는 syscall 출력. </p>
-</li>
-<li>
-<p><code>ldd</code> </p>
-</li>
-</ul>
-</li>
-<li>
-<p>리눅스 리버싱 툴 : <a href="https://en.wikibooks.org/wiki/X86_Disassembly/Analysis_Tools">https://en.wikibooks.org/wiki/X86_Disassembly/Analysis_Tools</a></p>
-<ul>
-<li>
-<p><code>xxd</code> : 헥스 뷰</p>
-</li>
-<li>
-<p><code>hd</code> : 헥스 뷰</p>
-</li>
-<li>
-<p><code>hexyl</code> : <code>find</code> 대체 명령어 <code>fd</code>, <code>cat</code> 대체 명령어 <code>bat</code> 을 만든 <a href="https://github.com/sharkdp/">sharkdp 라는 프로그래머</a>가 만든 <code>xxd</code> 와 <code>hd</code> 대체 명령어</p>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="gdb-2">gdb 사용법 (2)<a class="headerlink" href="#gdb-2" title="Permanent link">¶</a></h3>
-<h4 id="gdb-2_1">gdb 명령어 (2)<a class="headerlink" href="#gdb-2_1" title="Permanent link">¶</a></h4>
-<ul>
-<li>
-<p><code>print &lt;var or funct&gt;</code> or <code>p &lt;var or func&gt;</code> : 변수 또는 함수의 정보를 볼 수 있음 </p>
-<ul>
-<li>
-<p><code>print num</code> : <code>num</code> 변수 출력 </p>
-</li>
-<li>
-<p><code>print &amp;buf</code> : <code>buf</code> 변수 주소값 출력 </p>
-</li>
-<li>
-<p><code>print system</code> : <code>system</code> 함수 정보 출력 </p>
-</li>
-</ul>
-</li>
-<li>
-<p><code>watch &lt;location&gt;</code> : 해당 메모리가 변하는 것을 볼 수 있음. pwndbg 의 경우 context 가 watch 의 출력을 씹어버려서 context 를 다른 tty 로 리다이렉트 해주어야 함. </p>
-<ul>
-<li>
-<p><code>watch *0x80808080</code> : 0x80808080 의 주소값의 값이 변하는 것을 관찰한다 </p>
-</li>
-<li>
-<p><code>info watchpoint</code> or <code>i wat</code> : 와치포인트 리스트를 본다. </p>
-</li>
-<li>
-<p><code>delete watchpoint &lt;num&gt;</code> or <code>d wat &lt;num&gt;</code> : 와치포인트를 삭제한다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p><code>backtrace</code> or <code>bt</code> : 호출 함수 스택을 볼 수 있음 </p>
-</li>
-<li>
-<p><code>info register</code> or <code>i r</code> : 레지스터 정보</p>
-</li>
-<li>
-<p><code>finish</code> : 자신을 호출한 함수로 리턴할 때까지 실행 </p>
-</li>
-<li>
-<p><code>r &lt;args&gt;</code> : gdb 안에서 프로그램을 실행할 때 <code>&lt;args&gt;</code> 를 main 함수의 인자로 전달함</p>
-<ul>
-<li>
-<p><code>./program &lt;args&gt;</code> 와 같은 효과라는 것임. </p>
-</li>
-<li>
-<p><strong>Example</strong> </p>
-<div class="highlight"><pre><span></span><code>./program <span class="se">\`</span>python -c <span class="s2">"print 'x'*140 + '\x78\x56\x34\x12'"</span><span class="sb">`</span>
-</code></pre></div>
-<p>이 명령어를 <code>gdb</code> 에서 똑같이 실행하고 싶다면 다음과 같이 실행한다. </p>
-<div class="highlight"><pre><span></span><code><span class="o">(</span>gdb<span class="o">)</span> r <span class="sb">`</span>python -c <span class="s2">"print 'x'*140 + '\x78\x56\x34\x12`</span>
-</code></pre></div>
-</li>
-</ul>
-</li>
-<li>
-<p><code>r &lt;&lt;&lt; $(command)</code> : gdb 안에서 프로그램에 <code>command</code> 의 결과를 입력으로 전달함 </p>
-<ul>
-<li>
-<p><code>command | ./program</code> : 과 같은 효과임.</p>
-</li>
-<li>
-<p><strong>Example</strong> </p>
-<div class="highlight"><pre><span></span><code>python -c <span class="s2">"print 'x'*140 + '\x78\x56\x34\x12'"</span> <span class="p">|</span> ./program
-</code></pre></div>
-<p>이 명령어를 <code>gdb</code> 에서 똑같이 실행하고 싶다면 다음과 같이 실행한다. </p>
-<div class="highlight"><pre><span></span><code><span class="o">(</span>gdb<span class="o">)</span> r <span class="o">&lt;&lt;&lt;</span> <span class="k">$(</span>python -c <span class="s2">"print 'x'*140 + '\x78\x56\x34\x12'"</span><span class="k">)</span>
-</code></pre></div>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="gdb-3-">gdb 명령어 (3) - 메모리 보기<a class="headerlink" href="#gdb-3-" title="Permanent link">¶</a></h4>
-<ul>
-<li>
-<p><code>x/b 0x80808080</code> : <code>0x80808080</code> 에 있는 값을 <code>1</code> 바이트 만큼 하나 본다. </p>
-</li>
-<li>
-<p><code>x/w 0x80808080</code> : <code>0x80808080</code> 에 있는 값을 <code>4</code> 바이트 만큼 하나 본다. </p>
-</li>
-<li>
-<p><code>x/g $esp</code> : <code>esp</code> 주소값에 있는 값을 <code>8</code> 바이트 만큼 하나 본다. </p>
-</li>
-<li>
-<p><code>x/x 0x80808080</code> : <code>0x80808080</code> 메모리에 있는 값을 이전에 본 형식(디폴트: <code>4</code> 바이트)으로 하나 본다. </p>
-</li>
-<li>
-<p><code>x/x $esp</code> : <code>esp</code> 주소값에 있는 값을 이전에 본 형식으로 하나 본다. </p>
-</li>
-<li>
-<p><code>x/10x 0x80808080</code> : 0x80808080 메모리에 있는 값을 <code>10</code> 개 본다. </p>
-</li>
-<li>
-<p><code>x/c 0x80808080</code> : 0x80808080 메모리에 있는 값을 <code>char</code> 형식으로 본다. </p>
-</li>
-<li>
-<p><code>x/s 0x80808080</code> : 0x80808080 메모리에 있는 값을 <code>string</code> 형식으로 본다. </p>
-</li>
-<li>
-<p><code>x/i 0x80808080</code> : 0x80808080 메모리에 있는 값을 <code>instruction</code> 형식으로(어셈블리어) 로 본다. </p>
-</li>
-</ul>
-<h4 id="gdb-4-">gdb 명령어 (4) - 메모리 쓰기<a class="headerlink" href="#gdb-4-" title="Permanent link">¶</a></h4>
-<ul>
-<li>
-<p><code>set $esp = 0x4444</code> : esp 레지스터의 값을 0x4444 로 쓴다. </p>
-</li>
-<li>
-<p><code>set $rip = 0x80808080</code> : rip 레지스터의 값을 0x80808080 으로 쓴다. 다음에 실행할 명령어를 바꾸는 의미. </p>
-</li>
-<li>
-<p><code>set *0xffffce00 = 0</code> : 0xffffce00 메모리 주소에 있는 값을 0 으로 바꾼다. </p>
-</li>
-<li>
-<p><code>set *0xffffce00 = 0x41414141</code> : 0xffffce00 메모리 주소에 있는 값을 0x41414141 으로 바꾼다. </p>
-</li>
-</ul>
-<h4 id="gdb-5-pwndbg">gdb 명령어 (5) - pwndbg 전용 명령어<a class="headerlink" href="#gdb-5-pwndbg" title="Permanent link">¶</a></h4>
-<p>일반 <code>gdb</code> 에서는 실행할 수 없고 <code>pwndbg</code> 을 설치해야만 실행할 수 있는 명령어들입니다. </p>
-<ul>
-<li>
-<p><code>nextcall</code> : 다음 <code>call</code> 까지 진행. </p>
-</li>
-<li>
-<p><code>nextjmp</code> : 다음 <code>jmp</code> 까지 진행.</p>
-</li>
-<li>
-<p><code>pdisas &lt;function&gt;</code> : 함수의 어셈블리어를 이쁘게 보여줌 </p>
-</li>
-<li>
-<p><code>set context-output &lt;tty&gt;</code> : <code>context</code> 화면을 다른 tty 세션으로 리다이렉트 시켜서 볼 수 있게 해줌. 보통 <code>tmux</code> 와 같이 사용된다. </p>
-</li>
-</ul>
-<h3 id="gdb-2-">gdb 연습 (2) - 어셈블리어  프로그램<a class="headerlink" href="#gdb-2-" title="Permanent link">¶</a></h3>
-<p>이번에는 여러분이 과제로 자신의 이름을 출력하는 어셈블리어 프로그램을 <code>gdb</code> 로 디버깅해봅시다.</p>
-<div class="highlight"><pre><span></span><code>global    _start
-section   .text
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+<h1>Redirect to Netlify</h1>
+<script> 
+setTimeout(function () {
+window.location.href = "https://ccss17.netlify.app/" + window.location.pathname;}, 3000);
+</script>
 
-_start:
-  mov       rax, 1
-  mov       rdi, 1
-  mov       rsi, message
-  mov       rdx, 13
-  syscall
-  mov       rax, 1
-  mov       rdi, 1
-  mov       rsi, message2
-  mov       rdx, 17
-  syscall
-  mov       rax, 60
-  xor       rdi, rdi
-  syscall
-section   .data
-  message db        "Hello, World", 10
-  message2 db        "My name is Sujin", 10
-</code></pre></div>
-<p>위와 같은 어셈블리어 프로그램을 짜고 <code>hello_sujin</code> 으로 컴파일 했다고 하자. 그러면 <code>gdb hello_sujin</code> 으로 디버깅을 시작할 수 있다.</p>
-<p><img alt="gdb2" src="https://user-images.githubusercontent.com/16812446/72771351-fd65bd00-3c43-11ea-9739-72a734119639.png"/></p>
-<p>하지만 위와 같이 어셈블리어 파일은 <code>main</code> 함수가 없어서 <code>i file</code> 명령어로 엔트리 포인트를 확인하고 브레이크 포인트를 걸어주어야 한다. <code>text</code> 섹션에 브레이크 포인트를 걸었다. </p>
-<p>그리고 <code>r</code> 명령어로 실행해보고 다양한 <code>gdb</code> 명령어들을 실행해보자. </p>
-<h3 id="gdb">gdb 실습<a class="headerlink" href="#gdb" title="Permanent link">¶</a></h3>
-<p>먼저 다음의 명령어를 참고해서 리버싱 문제를 내려받자.</p>
-<div class="highlight"><pre><span></span><code>$ wget http://security.cs.rpi.edu/courses/binexp-spring2015/lectures/2/challenges.zip
-$ unzip challenges.zip
-$ <span class="nb">cd</span> challenges
-$ ls
-</code></pre></div>
-<p>그러면 crackme 라는 프로그램들이 보인다. 이 프로그램들은 실행하면 비밀번호를 묻는다. 즉 비밀번호를 아는 권한이 있는 사용자만이 이 프로그램을 사용할 수 있는 것이다. 하지만 gdb 로 리버싱을 해서 비밀번호를 알아낸 후 프로그램을 크래킹해보자. 만약 비밀번호가 틀렸다면 <code>Wrong!</code> 같은 문장이 보일 것이고 비밀번호를 맞췄다면 <code>Congrats!</code> 같은 문장이 출력될 것이다.</p>
-<ul>
-<li>
-<p>프로그램들은 crackme0x0N 의 형식으로 되어있는데 N 의 숫자가 클 수록 어려운 문제이다. </p>
-</li>
-<li>
-<p><code>crackme0x00a</code>, <code>crackme0x00b</code>, <code>crackme0x01</code>, <code>crackme0x02</code>, <code>crackme0x03</code> 을 풀어봅시다. (과제가 아니니까 조금 풀어보다가 못풀겠다 싶으면 그냥 아래의 설명을 읽으세요.)</p>
-</li>
-</ul>
-<h4 id="_5">리버싱 원칙<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
-<ol>
-<li>
-<p>"Correct" 가 출력되는 로직과 "Incorrect" 가 출력되는 로직이 있다는 것을 확인하고 "Correct" 가 출력될 수 있는 분기점을 확인한다.</p>
-<ul>
-<li>
-<p>가령 게임 월핵을 만들고 싶다고 가정하면 게임 속 벽이 캐릭터를 가리는 로직의 분기점을 먼저 리버싱을 통해 이해하는 것이다.  </p>
-</li>
-<li>
-<p>일반적으로 말하면 프로그램에서 작동하길 바라는 어떤 동작이 실행되는 분기 및 조건을 이해하는 것이다. </p>
-</li>
-</ul>
-</li>
-<li>
-<p>어떻게 하면 프로그램 실행흐름이 그 분기로 넘어갈 수 있는지 조사한 후 프로그램의 실행 흐름을 조작한다. 분기가 어떻게 결정되는지 이해하면 분기를 조작할 수 있다(→해킹 할 수 있다). </p>
-</li>
-</ol>
-<h4 id="crackme0x00b-crackme0x03">crackme0x00b ~ crackme0x03 까지 설명<a class="headerlink" href="#crackme0x00b-crackme0x03" title="Permanent link">¶</a></h4>
-<h5 id="crackme0x00b"><strong>crackme0x00b</strong><a class="headerlink" href="#crackme0x00b" title="Permanent link">¶</a></h5>
-<ol>
-<li>
-<p>scanf 가 <code>%ls</code> 의 형식으로 입력을 받음. <code>%ls</code> 에 대해서 검색해보니 와이드 스트링을 받는 용도로 <code>%s</code> 와는 구별이 됨. </p>
-</li>
-<li>
-<p>또한 비밀번호를 비교할 때 wcscmp 함수를 사용.</p>
-</li>
-<li>
-<p>wcscmp 함수에 대하여 알아보니 와이드 캐릭터에 대한 비교 함수임.</p>
-</li>
-<li>
-<p>그래서 와이드 캐릭터를 알아보니 일반적인 8 비트 캐릭터가 아닌 유니코드 같은 16 비트 캐릭터를 저장하기 위한 캐릭터. </p>
-</li>
-</ol>
-<h5 id="crackme0x01"><strong>crackme0x01</strong><a class="headerlink" href="#crackme0x01" title="Permanent link">¶</a></h5>
-<ol>
-<li>
-<p><code>scanf</code> 의 파라미터가 ("%d", 0xffffd543) 임.</p>
-</li>
-<li>
-<p><code>cmp</code> 로 <code>[ebp - 4]</code> 를 0x149a 와 비교함. 그리고 같이 않으면 "Incorrect" 를 출력하는 로직으로 흘러감. </p>
-<ul>
-<li><code>p $ebp - 4</code> 로 $ebp - 4 의 주소값을 확인해보니 0xffffd543 임. </li>
-</ul>
-</li>
-<li>
-<p>그래서 입력한 값이 0x149a, 즉 5274 이면 <code>cmp</code> 문이 같다는 결과를 FLAG 레지스터에 씀.  </p>
-</li>
-</ol>
-<h5 id="crackme0x02"><strong>crackme0x02</strong><a class="headerlink" href="#crackme0x02" title="Permanent link">¶</a></h5>
-<ol>
-<li>
-<p><code>scanf</code> 의 파라미터가 ("%d", 0xffffd534) 이고 0xffffd534 는 ebp - 4 임.</p>
-</li>
-<li>
-<p>ebp - 4 주소값에 있는 값을 eax 에 저장하고 이 값을 ebp - 0xc 주소값에 있는 값과 비교함. </p>
-</li>
-<li>
-<p>그런데 ebp - 0xc 에는 0x52b24 가 저장되어 있음.</p>
-<ul>
-<li>
-<p><code>p $ebp - 0xc</code> 로 주소값 확인</p>
-</li>
-<li>
-<p><code>x/x $ebp - 0xc</code> 로 메모리값 확인 </p>
-</li>
-</ul>
-</li>
-</ol>
-<h5 id="crackme0x03"><strong>crackme0x03</strong><a class="headerlink" href="#crackme0x03" title="Permanent link">¶</a></h5>
-<ol>
-<li>
-<p><code>scanf</code> 의 파라미터가 ("%d", 0xffffd534) 이고 0xffffd534 는 ebp - 4 임.</p>
-</li>
-<li>
-<p><code>test</code> 라는 함수의 파라미터가 ("입력한 값", 0x52b24, 0xf7ffd000, 0xf7e166a5) 임. <code>si</code> 로 <code>test</code> 함수로 들어감</p>
-</li>
-<li>
-<p><code>test</code> 함수에서 입력한 값과 0x52b24 (338724) 를 비교함. 같지 않으면 "Invalid" 를 출력하는 로직으로 흘러감. </p>
-</li>
-</ol>
-<hr/>
-<h3 id="_6">과제<a class="headerlink" href="#_6" title="Permanent link">¶</a></h3>
-<p><a href="HW-4/">HW-4.md</a> 파일의 지시를 따르는 것이 과제이다. (발표를 하며 설명을 할 수 있어야 합니다)</p>
-</article>
-</div>
-</div>
-<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
             Back to top
           </a>
-</main>
-<!-- 
+        
+      </main>
+      
+        <!-- 
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1095,16 +1565,26 @@ $ ls
     </div>
   </div>
 </footer> -->
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
-<script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
-<script src="../../javascripts/highlight.min.js"></script>
-<script src="../../javascripts/config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
-<script src="../../javascripts/b27b3e6448.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="../../javascripts/highlight.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/b27b3e6448.js"></script>
+      
+    
+  </body>
 </html>

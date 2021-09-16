@@ -1,1437 +1,1493 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="ccsss" name="author"/>
-<link href="https://ccss17.github.io/Math/LinearAlgebra/MatrixOperation/" rel="canonical"/>
-<link href="../../../assets/images/bolt-solid.svg" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>Matrix Operation - ccss17</title>
-<link href="../../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
-<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
-<link href="../../../stylesheets/config.css" rel="stylesheet"/>
-</head>
-<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
-<script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#elementary-operation">
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="ccsss">
+      
+      
+        <link rel="canonical" href="https://ccss17.github.io/Math/LinearAlgebra/MatrixOperation/">
+      
+      <link rel="icon" href="../../../assets/images/bolt-solid.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+  <title>Lorem ipsum dolor sit amet</title>
+
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/config.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elementary-operation" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
-<header class="md-header" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
-<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ccss17" class="md-header__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             ccss17
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Matrix Operation
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
-</label>
-</form>
-</nav>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
       ccss17
     </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../../MathHistory/">
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../MathHistory/" class="md-tabs__link md-tabs__link--active">
         Math
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../paper/1404.6388/">
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../paper/1404.6388/" class="md-tabs__link">
         Paper
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../Computer/nand2tetris/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../Computer/nand2tetris/" class="md-tabs__link">
         Computer
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../ProgrammerBase/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ProgrammerBase/" class="md-tabs__link">
         ProgrammerBase
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../security-tutorial/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../security-tutorial/" class="md-tabs__link">
         security tutorial
       </a>
-</li>
-</ul>
-</div>
+    </li>
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="ccss17">
-<img alt="logo" src="../../../assets/images/bolt-solid.svg"/>
-</a>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ccss17" class="md-nav__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
     ccss17
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
         ccss17
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
         Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Math" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
           Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
         Foundation of Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_1">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Foundation of Math" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
           Foundation of Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../MathHistory/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MathHistory/" class="md-nav__link">
         History of Math
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Logic/FormalSystem/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Logic/FormalSystem/" class="md-nav__link">
         Formal System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../incompleteness/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../incompleteness/" class="md-nav__link">
         Incompleteness theorem
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../turing/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turing/" class="md-nav__link">
         Turing's proof
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../gentzen/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gentzen/" class="md-nav__link">
         Consistency proof of Peano arithmetic
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Set Theory
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Set Theory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
           Set Theory
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/Set/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/Set/" class="md-nav__link">
         Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/numbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/numbers/" class="md-nav__link">
         Number Theory
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/InfiniteSet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/InfiniteSet/" class="md-nav__link">
         Infinite Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Set/ZFC/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Set/ZFC/" class="md-nav__link">
         ZFC axiom system
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ArithmeticOperations/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ArithmeticOperations/" class="md-nav__link">
         Arithmetic Operations
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Polynomials/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Polynomials/" class="md-nav__link">
         Polynomials
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../HyperrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HyperrealNumbers/" class="md-nav__link">
         Hyperreal Numbers
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../SurrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SurrealNumbers/" class="md-nav__link">
         Surreal Numbers
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7">
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" checked>
+      
+      <label class="md-nav__link" for="__nav_2_7">
         Linear Algebra
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_7">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linear Algebra" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
           Linear Algebra
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../VectorSpace/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VectorSpace/" class="md-nav__link">
         Vector Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../LinearTransformation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinearTransformation/" class="md-nav__link">
         Linear Transformation
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           Matrix Operation
           <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Matrix Operation
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#elementary-operation">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elementary-operation" class="md-nav__link">
     Elementary Operation
   </a>
-<nav aria-label="Elementary Operation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#elementary-matrix">
+  
+    <nav class="md-nav" aria-label="Elementary Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elementary-matrix" class="md-nav__link">
     Elementary Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-elementary-operation-elementary-matrix">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-elementary-operation-elementary-matrix" class="md-nav__link">
     Properties of Elementary Operation, Elementary Matrix
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#matrix-rank">
+      
+        <li class="md-nav__item">
+  <a href="#matrix-rank" class="md-nav__link">
     Matrix Rank
   </a>
-<nav aria-label="Matrix Rank" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-matrix-rank">
+  
+    <nav class="md-nav" aria-label="Matrix Rank">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-matrix-rank" class="md-nav__link">
     Properties of Matrix Rank
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#finding-matrix-rank">
+        
+          <li class="md-nav__item">
+  <a href="#finding-matrix-rank" class="md-nav__link">
     Finding Matrix Rank
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rank-of-matrix-multiplication">
+        
+          <li class="md-nav__item">
+  <a href="#rank-of-matrix-multiplication" class="md-nav__link">
     Rank of Matrix Multiplication
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#finding-inverse-matrix">
+      
+        <li class="md-nav__item">
+  <a href="#finding-inverse-matrix" class="md-nav__link">
     Finding Inverse Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#system-of-linear-equation">
+      
+        <li class="md-nav__item">
+  <a href="#system-of-linear-equation" class="md-nav__link">
     System of Linear Equation
   </a>
-<nav aria-label="System of Linear Equation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-system-of-linear-equation">
+  
+    <nav class="md-nav" aria-label="System of Linear Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-system-of-linear-equation" class="md-nav__link">
     Properties of System of Linear Equation
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#existence-of-solution-of-linear-equation-system">
+        
+          <li class="md-nav__item">
+  <a href="#existence-of-solution-of-linear-equation-system" class="md-nav__link">
     Existence of Solution of Linear Equation System
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Determinants/">
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Determinants/" class="md-nav__link">
         Determinants
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Diagonalization/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Diagonalization/" class="md-nav__link">
         Diagonalization
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../InnerProductSpaces/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InnerProductSpaces/" class="md-nav__link">
         Inner Product Spaces
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../CanonicalForms/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CanonicalForms/" class="md-nav__link">
         Canonical Forms
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
         Paper
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Paper" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Paper" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
           Paper
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/1404.6388/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/1404.6388/" class="md-nav__link">
         Performance of Python runtimes on a non-numeric scientific code
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/1102.1523/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/1102.1523/" class="md-nav__link">
         The NumPy array: a structure for efficient numerical computation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/facenet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/facenet/" class="md-nav__link">
         Facenet (2015)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/quadruplet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/quadruplet/" class="md-nav__link">
         Quadruplet (2017)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../paper/blueborne/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../paper/blueborne/" class="md-nav__link">
         BlueBorne
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
         Computer
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Computer" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Computer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
           Computer
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Computer/nand2tetris/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Computer/nand2tetris/" class="md-nav__link">
         Nand to Tetris
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Computer/future/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Computer/future/" class="md-nav__link">
         Why the future doesn't need us
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../Computer/Rust/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Computer/Rust/" class="md-nav__link">
         Rust Memo
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         ProgrammerBase
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ProgrammerBase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
           ProgrammerBase
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_2">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      <label class="md-nav__link" for="__nav_5_2">
         Contents
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Contents" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_5_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contents" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
           Contents
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/01-Day1/readme/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/01-Day1/readme/" class="md-nav__link">
         Day 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/02-Day2/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/02-Day2/readme/" class="md-nav__link">
         Day 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/03-Day3/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/03-Day3/readme/" class="md-nav__link">
         Day 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/04-Day4/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/04-Day4/readme/" class="md-nav__link">
         Day 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/05-Day5/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/05-Day5/readme/" class="md-nav__link">
         Day 5
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/docker/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/docker/" class="md-nav__link">
         Docker
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/codingconvention/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/codingconvention/" class="md-nav__link">
         Coding Convention
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/build/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/build/" class="md-nav__link">
         Build System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/information/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/information/" class="md-nav__link">
         Information
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/git/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/git/" class="md-nav__link">
         Git
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/vscode/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/vscode/" class="md-nav__link">
         VSCode
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/markdown/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/markdown/" class="md-nav__link">
         Markdown
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/tmux/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/tmux/" class="md-nav__link">
         Tmux
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/vim/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/vim/" class="md-nav__link">
         Vim
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../ProgrammerBase/cli/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ProgrammerBase/cli/" class="md-nav__link">
         CLI
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
         security tutorial
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="security tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
           security tutorial
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/01-Base/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/01-Base/" class="md-nav__link">
         Day1 Base
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/02-Computer1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/02-Computer1/" class="md-nav__link">
         Day2 Computer Principle 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/03-Computer2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/03-Computer2/" class="md-nav__link">
         Day3 Computer Principle 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/04-Reversing1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/04-Reversing1/" class="md-nav__link">
         Day4 Reversing 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/05-Reversing2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/05-Reversing2/" class="md-nav__link">
         Day5 Reversing 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/06-Exploit1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/06-Exploit1/" class="md-nav__link">
         Day6 Exploit 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/07-Exploit2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/07-Exploit2/" class="md-nav__link">
         Day7 Exploit 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/08-Exploit3/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/08-Exploit3/" class="md-nav__link">
         Day8 Exploit 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/09-Exploit4/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/09-Exploit4/" class="md-nav__link">
         Day9 Exploit 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../security-tutorial/10-Pentesting/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security-tutorial/10-Pentesting/" class="md-nav__link">
         Day10 Pentesting
       </a>
-</li>
-</ul>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#elementary-operation">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elementary-operation" class="md-nav__link">
     Elementary Operation
   </a>
-<nav aria-label="Elementary Operation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#elementary-matrix">
+  
+    <nav class="md-nav" aria-label="Elementary Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elementary-matrix" class="md-nav__link">
     Elementary Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-elementary-operation-elementary-matrix">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-elementary-operation-elementary-matrix" class="md-nav__link">
     Properties of Elementary Operation, Elementary Matrix
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#matrix-rank">
+      
+        <li class="md-nav__item">
+  <a href="#matrix-rank" class="md-nav__link">
     Matrix Rank
   </a>
-<nav aria-label="Matrix Rank" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-matrix-rank">
+  
+    <nav class="md-nav" aria-label="Matrix Rank">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-matrix-rank" class="md-nav__link">
     Properties of Matrix Rank
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#finding-matrix-rank">
+        
+          <li class="md-nav__item">
+  <a href="#finding-matrix-rank" class="md-nav__link">
     Finding Matrix Rank
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#rank-of-matrix-multiplication">
+        
+          <li class="md-nav__item">
+  <a href="#rank-of-matrix-multiplication" class="md-nav__link">
     Rank of Matrix Multiplication
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#finding-inverse-matrix">
+      
+        <li class="md-nav__item">
+  <a href="#finding-inverse-matrix" class="md-nav__link">
     Finding Inverse Matrix
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#system-of-linear-equation">
+      
+        <li class="md-nav__item">
+  <a href="#system-of-linear-equation" class="md-nav__link">
     System of Linear Equation
   </a>
-<nav aria-label="System of Linear Equation" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#properties-of-system-of-linear-equation">
+  
+    <nav class="md-nav" aria-label="System of Linear Equation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#properties-of-system-of-linear-equation" class="md-nav__link">
     Properties of System of Linear Equation
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#existence-of-solution-of-linear-equation-system">
+        
+          <li class="md-nav__item">
+  <a href="#existence-of-solution-of-linear-equation-system" class="md-nav__link">
     Existence of Solution of Linear Equation System
   </a>
+  
 </li>
-</ul>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>Matrix Operation</h1>
-<blockquote>
-<p>metadata pass</p>
-</blockquote>
-<h2 id="elementary-operation">Elementary Operation<a class="headerlink" href="#elementary-operation" title="Permanent link">¶</a></h2>
-<a href="#0336ee1e4"><div class="admonition def" id="0336ee1e4">
-<p class="admonition-title">기본행[열]연산(elementary row[column] operation)</p>
-<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 성분을 가져온 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 스칼라 <span class="arithmatex">\(a \in \mathbf{F}\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 의 행[열] 에 대한 다음 세 연산이다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(A\)</span> 의 두 행[열]을 교환하는 것</p>
-</li>
-<li>
-<p><span class="arithmatex">\(A\)</span> 의 한 행[열]에 영이 아닌 스칼라 <span class="arithmatex">\(a\)</span> 를 곱하는 것</p>
-</li>
-<li>
-<p><span class="arithmatex">\(A\)</span> 의 한 행[열]에 다른 행[열]의 스칼라 <span class="arithmatex">\(a\)</span> 배를 더하는 것</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>행연산과 열연산을 기본연산(elementary operation)이라 한다. 또한 기본연산 1), 2), 3) 을 1형(type), 2형, 3형이라 한다.</li>
-</ul>
-<h3 id="elementary-matrix">Elementary Matrix<a class="headerlink" href="#elementary-matrix" title="Permanent link">¶</a></h3>
-<a href="#67eb8b0e6"><div class="admonition def" id="67eb8b0e6">
-<p class="admonition-title">기본행렬(elementary matrix)</p>
-<p>항등행렬에 기본연산을 적용하여 얻은 행렬이다.</p>
-</div></a>
-<ul>
-<li>
-<p><span class="arithmatex">\(I_n\)</span> 에 1형, 2형, 3형 연산을 하여 얻은 행렬을 각각 1형, 2형, 3형이라 한다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p><span class="arithmatex">\(I_3\)</span> 의 1행, 2행을 교환하여 다음 기본행렬을 얻는다.</p>
-<div class="arithmatex">\[ E = \begin{pmatrix} 0&amp;1&amp;0\\ 1&amp;0&amp;0\\ 0&amp;0&amp;1\\ \end{pmatrix} \]</div>
-</li>
-</ul>
-<a href="#9bdf58c93"><div class="admonition def" id="9bdf58c93">
-<p class="admonition-title">기본행[열]역연산(elementary row[column] inverse operation)</p>
-<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 성분을 가져온 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 스칼라 <span class="arithmatex">\(a \in \mathbf{F}\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 의 기본행[열]연산 에 대한 다음 세 연산이다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(A\)</span> 의 두 행[열]을 교환하는 것</p>
-</li>
-<li>
-<p><span class="arithmatex">\(A\)</span> 의 한 행[열]에 영이 아닌 스칼라 <span class="arithmatex">\(\dfrac{1}{a}\)</span> 를 곱하는 것</p>
-</li>
-<li>
-<p><span class="arithmatex">\(A\)</span> 의 한 행[열]에 다른 행[열]의 스칼라 <span class="arithmatex">\(-a\)</span> 배를 더하는 것</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>교환연산은 역연산이 동일하다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(I_n\)</span> 에 기본연산을 적용하여 기본행렬 <span class="arithmatex">\(E\)</span> 를 얻었다면, <span class="arithmatex">\(E\)</span> 에 기본역연산을 적용하여 다시 <span class="arithmatex">\(I_n\)</span> 을 얻을 수 있다.</p>
-</li>
-</ul>
-<h3 id="properties-of-elementary-operation-elementary-matrix">Properties of Elementary Operation, Elementary Matrix<a class="headerlink" href="#properties-of-elementary-operation-elementary-matrix" title="Permanent link">¶</a></h3>
-<a href="#1c860f354"><div class="admonition def" id="1c860f354">
-<p class="admonition-title">정리 3.1</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{m \times n}(\mathbf{F} )\)</span> 에 기본행[열]연산을 하여 행렬 <span class="arithmatex">\(B\)</span> 를 얻었다면, <span class="arithmatex">\(B = EA[B = AE]\)</span> 가 되는 <span class="arithmatex">\(m \times m[n \times n]\)</span> 기본행렬 <span class="arithmatex">\(E\)</span> 가 존재한다. 이때 <span class="arithmatex">\(A\)</span> 에서 <span class="arithmatex">\(B\)</span> 를 얻은 기본행[열]연산을 <span class="arithmatex">\(I_m[I_n]\)</span> 에 똑같이 적용하면 행렬 <span class="arithmatex">\(E\)</span> 가 된다. </p>
-<p>역으로 <span class="arithmatex">\(E\)</span> 가 <span class="arithmatex">\(m \times m[n \times n]\)</span> 기본행렬일 때, <span class="arithmatex">\(I_m[I_n]\)</span> 에서 <span class="arithmatex">\(E\)</span> 를 얻은 기본행[열]연산을 <span class="arithmatex">\(A\)</span> 에 똑같이 적용하면 <span class="arithmatex">\(EA[AE]\)</span> 가 된다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 어떤 행렬에 기본행연산을 가하는 것이 그 행렬에 적절한 기본행렬을 곱하는 것과 같다는 것을 말해준다.</p>
-<p>첫번째, 두번째 명제는 기본연산에 대응되는 기본행렬이 항상 존재한다는 것과 그 기본행렬을 구하는 방법을 말해준다. 세번째 명제는 기본행렬이 존재할 때 그것이 기본연산과 대응된다는 것을 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p>1형, 2형, 3형 기본행연산에 대하여 정리가 참임을 증명한 다음 전치행렬으로 열연산을 행연산으로 바꾸면 기본열연산에 대한 증명도 끝난다.</p>
-</li>
-</ul>
-<a href="#c576bf96c"><div class="admonition def" id="c576bf96c">
-<p class="admonition-title">정리 3.2</p>
-<p>기본행렬은 가역이다.</p>
-<p>기본행렬의 역행렬도 같은 형(type)의 기본행렬이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(E\)</span> 를 <span class="arithmatex">\(n \times n\)</span> 기본행렬이라 하면 기본행렬의 정의에 의하여 <span class="arithmatex">\(I_n\)</span> 에 기본행연산을 적용하여 <span class="arithmatex">\(E\)</span> 를 얻을 수 있다. </p>
-<p>이 기본행연산에 대한 기본행역연산을 적용하여 <span class="arithmatex">\(E\)</span> 로부터 <span class="arithmatex">\(I_n\)</span> 을 얻을 수 있다. 이는 동일한 형(type) 의 행연산에 의하여 <span class="arithmatex">\(E\)</span> 를 <span class="arithmatex">\(I_n\)</span> 로 변환할 수 있다는 것이다.</p>
-<p><span class="arithmatex">\(E\)</span> 를 <span class="arithmatex">\(I_n\)</span> 으로 바꾸는 기본행연산은 정리 3.1 에 의하여 행렬 <span class="arithmatex">\(\bar{E}\)</span> 로 표현할 수 있다. 그러므로 <span class="arithmatex">\(\bar{E}E = I_n\)</span> 인 기본행렬 <span class="arithmatex">\(\bar{E}\)</span> 가 존재한다. </p>
-<p><a href="../LinearTransformation/#068bf6124">행렬곱 결과가 항등행렬인 두 정사각행렬은 모두 가역</a>이므로 <span class="arithmatex">\(E\)</span> 는 가역이고, <span class="arithmatex">\(E ^{-1} = \bar{E}\)</span> 이다. ■ </p>
-</li>
-</ul>
-<h2 id="matrix-rank">Matrix Rank<a class="headerlink" href="#matrix-rank" title="Permanent link">¶</a></h2>
-<a href="#cc28dbfde"><div class="admonition def" id="cc28dbfde">
-<p class="admonition-title">행렬의 랭크(matrix rank)</p>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{m \times n}(\mathbf{F} )\)</span> 와 <span class="arithmatex">\(\mathbf{L}_{A} : \mathbf{F} ^{n} \to \mathbf{F} ^{m}\)</span> 에 대하여 다음과 같이 정의한다.</p>
-<div class="arithmatex">\[ \text{rank} (A) := \text{rank} (\mathbf{L}_{A}) \]</div>
-</div></a>
-<ul>
-<li>선형변환의 랭크에 대한 성질을 기반으로 행렬의 랭크에 대한 많은 정보를 얻을 수 있다. </li>
-</ul>
-<h3 id="properties-of-matrix-rank">Properties of Matrix Rank<a class="headerlink" href="#properties-of-matrix-rank" title="Permanent link">¶</a></h3>
-<a href="#8252ffa8b"><div class="admonition def" id="8252ffa8b">
-<div class="arithmatex">\[ A \in \mathbf{M}_{n \times n}(\mathbf{F}) : A \text{ is invertible } \iff \text{rank} (A) = n \]</div>
-</div></a>
-<ul>
-<li>
-<p>증명 </p>
-<p><span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(\mathbf{L}_{A}: \mathbf{F} ^{n} \to \mathbf{F} ^{n}\)</span> 는 <a href="../LinearTransformation/#80bc2f76a">정리 2.18 따름정리 2</a> 에 의하여 <span class="arithmatex">\(A\)</span> 가 가역인 것과 <span class="arithmatex">\(\mathbf{L}_{A}\)</span> 가 가역인 것은 동치이다. <a href="../LinearTransformation/#87356d7a4"><span class="arithmatex">\(\mathbf{L}_{A}\)</span> 가 가역인 것과 <span class="arithmatex">\(\text{rank} (\mathbf{L}_{A}) = \dim (\mathbf{F} ^{n}) = n\)</span> 인 것은 동치이다</a>. 그러므로 행렬의 랭크의 정의에 의하여 <span class="arithmatex">\(\text{rank} (A) = n\)</span> 인 것과 <span class="arithmatex">\(A\)</span> 가 가역인 것은 동치이다. ■ </p>
-</li>
-<li>
-<p>"<span class="arithmatex">\(n \times n\)</span> 가역행렬의 랭크는 <span class="arithmatex">\(n\)</span> 이다" 의 증명</p>
-<p><span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(n \times n\)</span> 가역행렬이면 다음이 성립한다. </p>
-<div class="arithmatex">\[ A ^{-1}A = A ^{-1}A = I_n \]</div>
-<p><a href="#802aee216">정리 3.4</a> 는 임의의 행렬에 가역행렬을 곱하는 것이 행렬의 랭크를 보존한다는 것을 말해준다. 이는 역으로 가역행렬이 곱해진 행렬곱에 가역행렬을 제거해도 행렬의 랭크가 보존됨을 뜻한다. 따라서 다음이 성립한다.</p>
-<div class="arithmatex">\[ \text{rank} (I_n) = \text{rank} (A ^{-1}A) = \text{rank} (A) \]</div>
-<p>항등행렬 <span class="arithmatex">\(I_n\)</span> 의 랭크는 <span class="arithmatex">\(n\)</span> 이다. ■ </p>
-</li>
-</ul>
-<a href="#af5c5b8cd"><div class="admonition def" id="af5c5b8cd">
-<p class="admonition-title">정리 3.3</p>
-<p>유한차원 벡터공간 사이에서 정의된 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W}\)</span> 와 <span class="arithmatex">\(\mathbf{V} , \mathbf{W}\)</span> 의 순서기저 <span class="arithmatex">\(\beta , \gamma\)</span> 에 대하여 <span class="arithmatex">\(\text{rank} (\mathbf{T} ) = \text{rank} ([\mathbf{T} ]^{\gamma}_{\beta} )\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><a href="../LinearTransformation/#cf9e1b36c">이 정리</a> 에 의하여 증명이 끝난다. ■ </p>
-</li>
-</ul>
-<a href="#802aee216"><div class="admonition def" id="802aee216">
-<p class="admonition-title">정리 3.4</p>
-<p><span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(m \times m\)</span> 가역행렬 <span class="arithmatex">\(P\)</span>, <span class="arithmatex">\(n \times n\)</span> 가역행렬 <span class="arithmatex">\(Q\)</span> 에 대하여 다음이 성립한다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\text{rank} (AQ)  = \text{rank} (A)\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\text{rank} (PA)  = \text{rank} (A)\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\text{rank} (PAQ)  = \text{rank} (A)\)</span></p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 가역행렬에 대한 행렬곱 연산이 행렬의 랭크를 보존한다는 것을 말해준다.</p>
-<p>선형변환의 랭크를 찾는 문제는 행렬의 랭크를 찾는 문제로 귀결되는데, 이 정리가 유용한 도구를 제공해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p>1:</p>
-<p><a href="../LinearTransformation/#80bc2f76a"><span class="arithmatex">\(Q\)</span> 가 가역이므로 <span class="arithmatex">\(\mathbf{L}_{Q}\)</span> 는 동형사상</a>이다. 따라서 다음을 얻는다.</p>
-<div class="arithmatex">\[ \mathbf{R} (\mathbf{L}_{AQ})  = \mathbf{R} (\mathbf{L}_A \mathbf{L}_{Q}) = \mathbf{L}_{A}\mathbf{L}_{Q}(\mathbf{F} ^{n}) = \mathbf{L}_{A}(\mathbf{L}_{Q}(\mathbf{F} ^{n})) = \mathbf{L}_{A}(\mathbf{F} ^{n}) = \mathbf{R} (\mathbf{L}_A) \]</div>
-<p>그러므로 <span class="arithmatex">\(AQ\)</span> 의 랭크는 행렬의 랭크의 정의에 의하여 다음과 같다.</p>
-<div class="arithmatex">\[ \text{rank} (AQ) = \text{rank} (A) \tag*{▲} \]</div>
-<p>2: </p>
-<p><span class="arithmatex">\(\mathbf{L}_{PA} = \mathbf{L}_{P}\mathbf{L}_{A}\)</span> 에서 <span class="arithmatex">\(\mathbf{R} (\mathbf{L}_A)\)</span> 은 <span class="arithmatex">\(\mathbf{F} ^{m}\)</span> 의 부분공간이므로 <a href="../LinearTransformation/#1e331034c">이 정리</a> 에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \dim (\mathbf{R} (\mathbf{L}_A) ) = \dim (\mathbf{L}_{P}(\mathbf{R} (\mathbf{L}_A) )) = \dim (\mathbf{R} (\mathbf{L}_{P}\mathbf{L}_{A}) ) = \dim (\mathbf{R} (\mathbf{L}_{PA})) \]</div>
-<p>그러므로 <span class="arithmatex">\(\text{rank} (A) = \text{rank} (PA)\)</span> 이다. ▲ </p>
-<p>3:</p>
-<div class="arithmatex">\[ \text{rank} (PAQ) = \text{rank} (AQ) = \text{rank} (A) \tag*{■} \]</div>
-</li>
-</ul>
-<a href="#108500177"><div class="admonition def" id="108500177">
-<p class="admonition-title">정리 3.4 따름정리</p>
-<p>행렬의 기본행[열]연산은 랭크를 보존한다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>행렬에 기본행[열]연산을 적용하는 것은 정리 3.2 에 의하여 기본행렬에 대한 행렬곱을 취하는 것이다. 기본행렬은 가역이므로 정리 3.4 에 의하여 랭크가 보존된다. ■ </p>
-</li>
-<li>
-<p>우리는 행렬의 랭크를 보존하는 행렬연산 하나를 밝혀내었다. 따라서 랭크를 구하기 쉽게 변형된 행렬을 알아본다. </p>
-</li>
-</ul>
-<a href="#0ce821e3f"><div class="admonition def" id="0ce821e3f">
-<p class="admonition-title">정리 3.5</p>
-<p>임의의 행렬의 랭크는 열들로 구성된 극대 일차독립 집합의 기수이다.</p>
-<p>행렬의 랭크는 그 열들에 의해 생성된 부분공간의 차원이다.</p>
-</div></a>
-<ul>
-<li>
-<p>보통 행렬 <span class="arithmatex">\(A\)</span> 의 랭크를 구할 때 <span class="arithmatex">\(A\)</span> 에 기본행[열]연산을 적용하여 일차독립인 열의 개수를 구할 수 있도록 만든 다음 이 정리를 사용한다.</p>
-<p>기본연산을 적용하여 일차독립인 열을 어떻게 구할 수 있게 하냐면, 그냥 <span class="arithmatex">\(0\)</span> 인 성분이 최대한 많이 나오게 하면 된다.</p>
-<ul>
-<li>
-<p>예시 </p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;2&amp;1\\ 1&amp;0&amp;3\\ 1&amp;1&amp;2\\ \end{pmatrix} \implies \begin{pmatrix} 1&amp;0&amp;0\\ 0&amp;-2&amp;2\\ 0&amp;-1&amp;1\\ \end{pmatrix}\)</span> 이므로 <span class="arithmatex">\(\text{rank} (A) = 2\)</span> 이다.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(A \in \mathbf{M}_{m \times n}(\mathbf{F} )\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \text{rank} (A) = \text{rank} (\mathbf{L}_{A})  = \dim (\mathbf{R} (\mathbf{L}_A) ) \]</div>
-<p><span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 표준 순서기저 <span class="arithmatex">\(\beta\)</span> 는 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 를 생성한다. <a href="../LinearTransformation/#f380ab529">정리 2.2</a> 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \mathbf{R} (\mathbf{L}_A) = \text{span} (\mathbf{L}_{A}(\beta ))  = \text{span} (\{\mathbf{L}_{A}(e_1), \mathbf{L}_{A}(e_2), \dots, \mathbf{L}_{A}(e_n)\}) \]</div>
-<p><a href="../LinearTransformation/#546d2897f">정리 2.13 - 2</a> 에 의하여 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(j\)</span> 열 <span class="arithmatex">\(a_j\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{L}_{A}(e_j) = Ae_j = a_j\)</span> 이다. 따라서 다음이 성립한다.</p>
-<div class="arithmatex">\[ \text{rank} (A) = \dim (\mathbf{R} (\mathbf{L}_A)) = \dim (\text{span} (\{a_1, a_2, \dots, a_n \})) \tag*{■} \]</div>
-</li>
-<li>
-<p>예시 </p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;0&amp;1\\ 0&amp;1&amp;1\\ 1&amp;0&amp;1\\ \end{pmatrix}\)</span> 의 1열과 2열은 일차독립이고 3열은 두 열의 일차결합이다. 그러므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \text{rank} (A) = \dim \Bigg (\text{span} \Bigg (\Bigg \{\begin{pmatrix} 1\\ 0\\ 1\\ \end {pmatrix}, \begin{pmatrix} 0\\ 1\\ 0\\ \end{pmatrix}, \begin{pmatrix} 1\\ 1\\ 1\\ \end{pmatrix} \Bigg \}\Bigg ) \Bigg ) = 2 \]</div>
-</li>
-</ul>
-<a href="#4f37a0785"><div class="admonition def" id="4f37a0785">
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{m \times n}(\mathbf{F})\)</span> 에 대하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \text{rank} (A) = 0 \iff A = O \]</div>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\text{rank} (A) = 0\)</span> 을 가정하자. <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(j\)</span> 번째 열벡터 <span class="arithmatex">\(a_j\)</span> 에 대하여 <span class="arithmatex">\(a_j \neq 0\)</span> 이면 스칼라 <span class="arithmatex">\(c\)</span> 에 대하여 <span class="arithmatex">\(ca_j = 0\)</span> 가 되기 위해서는 반드시 <span class="arithmatex">\(c = 0\)</span> 이어야 한다. 그러면 일차독립의 정의에 의하여 집합 <span class="arithmatex">\(\{a_j\}\)</span> 은 일차독립이다. 그러나 정리 3.5 에 의하여 <a href="../VectorSpace/#c298b6300">극대 일차독립 집합의 기수</a>가 <span class="arithmatex">\(0\)</span> 이므로 이는 모순이다. 따라서 <span class="arithmatex">\(a_j = 0\)</span> 이다. 이는 <span class="arithmatex">\(A = O\)</span> 임을 뜻한다. ▲  </p>
-<p><span class="arithmatex">\(A = O\)</span> 을 가정하면 극대 일차독립 집합이 공집합이므로 <span class="arithmatex">\(\text{rank} (A) = 0\)</span> 이 바로 나온다. ■ </p>
-</li>
-</ul>
-<h3 id="finding-matrix-rank">Finding Matrix Rank<a class="headerlink" href="#finding-matrix-rank" title="Permanent link">¶</a></h3>
-<a href="#fa846233d"><div class="admonition def" id="fa846233d">
-<p>다음 행렬 <span class="arithmatex">\(B\)</span> 에 대하여 <span class="arithmatex">\(\text{rank} (B) = r \implies \text{rank} (B') = r-1\)</span> 이다.</p>
-<div class="arithmatex">\[ B = \left(\begin{array}{c|ccc} 1 &amp; 0 &amp; \dots &amp; 0 \\ \hline 0 &amp; &amp; &amp; \\ \vdots  &amp; &amp; B' &amp; \\ 0 &amp; &amp; &amp; \\ \end{array}\right) \]</div>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>다음과 같은 행렬 <span class="arithmatex">\(B\)</span> 의 1열은 다른 1열의 일차결합으로 표현될 수 없으므로 극대 일차독립 집합에 포함된다. </p>
-<div class="arithmatex">\[ B = \begin{pmatrix} 1&amp;0&amp;\dots&amp;0\\ 0&amp;B_{22}&amp;\dots&amp;B_{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ 0&amp;B_{n2}&amp;\dots&amp;B_{nn}\\ \end{pmatrix} \]</div>
-<p>따라서 행렬 <span class="arithmatex">\(B\)</span> 의 랭크는 다음 행렬 <span class="arithmatex">\(B'\)</span> 의 극대 일차독립 집합의 기수에 <span class="arithmatex">\(1\)</span> 을 더한 것이다. 즉, <span class="arithmatex">\(1 + \text{rank} (B') = \text{rank} (B)\)</span> 이다.</p>
-<div class="arithmatex">\[ B' = \begin{pmatrix} B_{22}&amp;\dots&amp;B_{2n}\\ \vdots&amp; \ddots&amp; \vdots \\ B_{n2}&amp;\dots&amp;B_{nn}\\ \end{pmatrix} \]</div>
-<p>그러므로 <span class="arithmatex">\(\text{rank} (B) = r \implies \text{rank} (B') = r-1\)</span> 이다.</p>
-</li>
-</ul>
-<a href="#bb65cc453"><div class="admonition def" id="bb65cc453">
-<p>다음과 같은 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(B'\)</span> 와 <span class="arithmatex">\(D\)</span>, 그리고 <span class="arithmatex">\((m + 1) \times (n + 1)\)</span> 행렬 <span class="arithmatex">\(B\)</span> 와 <span class="arithmatex">\(D\)</span> 에 대하여 <span class="arithmatex">\(B'\)</span> 에 기본연산을 유한 번 적용하여 그것을 <span class="arithmatex">\(D'\)</span> 로 변환할 수 있으면, <span class="arithmatex">\(B\)</span> 에 기본연산을 유한 번 적용하여 그것을 <span class="arithmatex">\(D\)</span> 로 변환할 수 있다.</p>
-<div class="arithmatex">\[ B = \left(\begin{array}{c|ccc} 1 &amp; 0 &amp; \dots &amp; 0 \\ \hline 0 &amp; &amp; &amp; \\ \vdots &amp; &amp; B' &amp; \\ 0 &amp; &amp; &amp; \\ \end{array}\right), D = \left(\begin{array}{c|ccc} 1 &amp; 0 &amp; \dots &amp; 0 \\ \hline 0 &amp; &amp; &amp; \\ \vdots &amp; &amp; D' &amp; \\ 0 &amp; &amp; &amp; \\ \end{array}\right) \]</div>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(B'\)</span> 를 <span class="arithmatex">\(D'\)</span> 로 바꾸는 기본연산을 <span class="arithmatex">\(B\)</span> 에 동일하게 적용해도 <span class="arithmatex">\(B\)</span> 의 1행과 1열은 각각 보존된다. 그러므로 <span class="arithmatex">\(B\)</span> 에 기본연산을 유한번 적용하여 <span class="arithmatex">\(D\)</span> 로 변환할 수 있다.</p>
-<p>더 나아가서 그 기본연산은 <span class="arithmatex">\(B'\)</span> 을 <span class="arithmatex">\(D'\)</span> 으로 변환시키는 기본연산과 같다.</p>
-</li>
-</ul>
-<a href="#71b0f55b7"><div class="admonition def" id="71b0f55b7">
-<p class="admonition-title">정리 3.6</p>
-<p><span class="arithmatex">\(A \in \mathbf{M}_{m \times n}\)</span> 에 대하여 <span class="arithmatex">\(\text{rank} (A) = r\)</span> 이면 다음이 성립한다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(r \leq m, r \leq n\)</span></p>
-</li>
-<li>
-<p>유한 번의 기본행[열]연산으로 항등행렬 <span class="arithmatex">\(I_r\)</span> 영행렬 <span class="arithmatex">\(O_1, O_2, O_3\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 를 행렬 <span class="arithmatex">\(D = \begin{pmatrix} I_r&amp;O_1\\ O_2&amp;O_3\\ \end{pmatrix}\)</span> 로 바꿀 수 있다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\text{rank} (A) = \text{rank} (D)\)</span></p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>지금 정리 3.5 로부터 계속 하고 있는 일은 행렬의 랭크를 쉽게 구할 수 있도록 행렬의 랭크를 보존하면서 변형시킬 수 있는 방법들을 정리하는 것이다.</p>
-</li>
-<li>
-<p>다음 예시는 <span class="arithmatex">\(A\)</span> 를 <span class="arithmatex">\(D\)</span> 로 변형시키는 과정이 먼저 1행을 항등행렬의 1행과 같이 만들고, 2행을 항등행렬의 2행과 같이 만들기를 반복하는 것임을 말해준다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p>다음과 같은 행렬 <span class="arithmatex">\(A\)</span> 를 <span class="arithmatex">\(D\)</span> 로 변형시켜보자. </p>
-<div class="arithmatex">\[ A = \begin{pmatrix} 0&amp;2&amp;4&amp;2&amp;2\\ 4&amp;4&amp;4&amp;8&amp;2\\ 8&amp;2&amp;0&amp;10&amp;2\\ 6&amp;3&amp;2&amp;9&amp;1\\ \end{pmatrix} \]</div>
-<p>다음은 <span class="arithmatex">\(A\)</span> 에 기본행[열]연산을 계속 적용하여 <span class="arithmatex">\(D\)</span> 를 얻는 과정을 보여준다.</p>
-<div class="arithmatex">\[ \begin{pmatrix} 0&amp;2&amp;4&amp;2&amp;2\\ 4&amp;4&amp;4&amp;8&amp;2\\ 8&amp;2&amp;0&amp;10&amp;2\\ 6&amp;3&amp;2&amp;9&amp;1\\ \end{pmatrix} \to \begin{pmatrix} 4&amp;4&amp;4&amp;8&amp;2\\ 0&amp;2&amp;4&amp;2&amp;2\\ 8&amp;2&amp;0&amp;10&amp;2\\ 6&amp;3&amp;2&amp;9&amp;1\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;1&amp;1&amp;2&amp;0\\ 0&amp;2&amp;4&amp;2&amp;2\\ 8&amp;2&amp;0&amp;10&amp;2\\ 6&amp;3&amp;2&amp;9&amp;1\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;1&amp;1&amp;2&amp;0\\ 0&amp;2&amp;4&amp;2&amp;2\\ 0&amp;-6&amp;-8&amp;-6&amp;2\\ 0&amp;-3&amp;-4&amp;-3&amp;1\\ \end{pmatrix} \to \]</div>
-<div class="arithmatex">\[ \begin{pmatrix} 1&amp;0&amp;0&amp;0&amp;0\\ 0&amp;2&amp;4&amp;2&amp;2\\ 0&amp;-6&amp;-8&amp;-6&amp;2\\ 0&amp;-3&amp;-4&amp;-3&amp;1\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;0&amp;0&amp;0&amp;0\\ 0&amp;1&amp;2&amp;1&amp;1\\ 0&amp;-6&amp;-8&amp;-6&amp;2\\ 0&amp;-3&amp;-4&amp;-3&amp;1\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;0&amp;0&amp;0&amp;0\\ 0&amp;1&amp;2&amp;1&amp;1\\ 0&amp;0&amp;4&amp;0&amp;8\\ 0&amp;0&amp;2&amp;0&amp;4\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;0&amp;0&amp;0&amp;0\\ 0&amp;1&amp;0&amp;0&amp;0\\ 0&amp;0&amp;4&amp;0&amp;8\\ 0&amp;0&amp;2&amp;0&amp;4\\ \end{pmatrix} \to \]</div>
-<div class="arithmatex">\[ \begin{pmatrix} 1&amp;0&amp;0&amp;0&amp;0\\ 0&amp;1&amp;0&amp;0&amp;0\\ 0&amp;0&amp;1&amp;0&amp;2\\ 0&amp;0&amp;2&amp;0&amp;4\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;0&amp;0&amp;0&amp;0\\ 0&amp;1&amp;0&amp;0&amp;0\\ 0&amp;0&amp;1&amp;0&amp;2\\ 0&amp;0&amp;0&amp;0&amp;0\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;0&amp;0&amp;0&amp;0\\ 0&amp;1&amp;0&amp;0&amp;0\\ 0&amp;0&amp;1&amp;0&amp;0\\ 0&amp;0&amp;0&amp;0&amp;0\\ \end{pmatrix} = D \]</div>
-<p>그러면 <a href="#108500177">정리 3.4 따름정리</a>로부터 <span class="arithmatex">\(\text{rank} (A) = \text{rank} (D) = 3\)</span> 이다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><a href="#4f37a0785"><span class="arithmatex">\(A = O\)</span> 이면 <span class="arithmatex">\(r = 0\)</span></a> 이므로 <span class="arithmatex">\(D = A\)</span> 가 되고 더 이상 증명할 것이없다. ▲ </p>
-<p><span class="arithmatex">\(A \neq O\)</span> 일 때 <span class="arithmatex">\(r = \text{rank} (A) &gt; 0\)</span> 이다. <span class="arithmatex">\(A\)</span> 의 행의 개수 <span class="arithmatex">\(m\)</span> 에 대하여 수학적 귀납법을 사용하자. </p>
-<p><span class="arithmatex">\(m = 1\)</span> 일 때 <span class="arithmatex">\(A_{11} \neq 0\)</span> 일 경우 기본열연산 2형으로 <span class="arithmatex">\(A_{11} \to 1\)</span> 로 만들 수 있다. <span class="arithmatex">\(A_{11} = 0\)</span> 일 경우 기본열연산 1형과 2형으로 <span class="arithmatex">\(A_{11} \to 1\)</span> 로 만들 수 있다. 그러면 기본열연산 3형을 통하여 <span class="arithmatex">\(A\)</span> 를 다음과 같이 만들 수 있다.</p>
-<div class="arithmatex">\[ A \to \begin{pmatrix} 1&amp;0&amp;\dots&amp;0\\ \end{pmatrix} = D = \begin{pmatrix} I_1&amp;O_1\\ \end{pmatrix} \]</div>
-<p><a href="#108500177">정리 3.4 따름정리</a> 와 <a href="#0ce821e3f">정리 3.5</a> 에 의하여 <span class="arithmatex">\(\text{rank} (A) = 1\)</span> 이다. ▲ </p>
-<p><span class="arithmatex">\(m &gt; 1\)</span> 일 때 <span class="arithmatex">\(m - 1\)</span> 에 대하여 성립한다는 것을 가정하자. <span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(m \times  m\)</span> 행렬이라고 하자. <span class="arithmatex">\(n = 1\)</span> 이면 <span class="arithmatex">\(m = 1\)</span> 일 때의 증명과 비슷하게 증명이 끝난다. ▲ </p>
-<p><span class="arithmatex">\(n &gt; 1\)</span> 을 가정하자. <span class="arithmatex">\(A \neq O\)</span> 이므로 어떤 <span class="arithmatex">\(i, j\)</span> 에 대하여 <span class="arithmatex">\(A _{ij} \neq 0\)</span> 이다. 따라서 기본행연산 1형과 기본열연산 1형을 최대 한 번 적용하여 1행 1열을 <span class="arithmatex">\(0\)</span> 이 아닌 성분으로 만들 수 있다. 그러므로 기본연산 2형을 통하여 1행 1열의 성분을 <span class="arithmatex">\(1\)</span> 로 만들 수 있다. </p>
-<p>그러면 기본행연산 3형과 기본열연산 3형을 통하여 1행과 1열에서 1행 1열 성분을 제외하고 모두 다 <span class="arithmatex">\(0\)</span> 으로 만들 수 있다. 즉, <span class="arithmatex">\(A \neq O\)</span> 에 기본연산을 유한번 적용하여 다음 행렬 <span class="arithmatex">\(B\)</span> 를 얻는다. </p>
-<div class="arithmatex">\[ B = \left(\begin{array}{c|ccc} 1 &amp; 0 &amp; \dots &amp; 0 \\ \hline 0 &amp;   &amp; &amp; \\ \vdots  &amp; &amp; B' &amp; \\ 0 &amp; &amp; &amp; \\ \end{array}\right) \]</div>
-<p>그러면 <a href="#fa846233d"><span class="arithmatex">\(\text{rank} (B') = \text{rank} (B) - 1 = \text{rank} (A) - 1 = r - 1\)</span> 이다</a>. </p>
-<p><span class="arithmatex">\(m - 1\)</span> 에 대하여 본 정리가 성립한다는 가정에 의하여 <span class="arithmatex">\(r - 1 \leq m - 1, r - 1 \leq n - 1\)</span> 이므로 <span class="arithmatex">\(r \leq m, r \leq n\)</span> 이다.</p>
-<p><span class="arithmatex">\(m - 1\)</span> 에 대하여 본 정리가 성립한다는 가정에 의하여 <span class="arithmatex">\((m - 1) \times (n - 1)\)</span> 행렬인 <span class="arithmatex">\(B'\)</span> 에 대하여 본 정리가 성립하므로 <span class="arithmatex">\(B'\)</span> 를 영행령 <span class="arithmatex">\(O_4, O_5, O_6\)</span> 에 대하여 다음과 같은 행렬로 바꿀 수 있다. </p>
-<div class="arithmatex">\[ D' = \begin{pmatrix} I _{r-1} &amp; O_4\\ O_5 &amp; O_6\\ \end{pmatrix} \]</div>
-<p>이때 행렬 <span class="arithmatex">\(D\)</span> 를 다음과 같이 두자. </p>
-<div class="arithmatex">\[ D = \left(\begin{array}{c|ccc} 1 &amp; 0 &amp; \dots &amp; 0 \\ \hline 0 &amp; &amp; &amp; \\ \vdots &amp; &amp; D' &amp; \\ 0 &amp; &amp; &amp; \\ \end{array}\right) \]</div>
-<p><span class="arithmatex">\(B\)</span> 에 기본연산을 유한번 적용하여 <span class="arithmatex">\(D\)</span> 를 얻을 수 있다면 증명이 끝난다. 본 정리가 <span class="arithmatex">\(m - 1\)</span> 에 대해서는 성립하므로 <a href="#bb65cc453"><span class="arithmatex">\(B'\)</span> 에 기본연산을 유한 번 적용하여 그것을 <span class="arithmatex">\(D'\)</span> 으로 바꿀 수 있다. 그러므로 <span class="arithmatex">\(B\)</span> 에 기본연산을 유한번 적용하여 <span class="arithmatex">\(D\)</span> 로 바꿀 수 있다</a>.</p>
-<p><span class="arithmatex">\(A\)</span> 에 기본연산을 적용하여 그것을 <span class="arithmatex">\(B\)</span> 로 변환할 수 있으므로 결국 <span class="arithmatex">\(A\)</span> 에 기본연산을 적용하여 그것을 <span class="arithmatex">\(D\)</span> 로 바꿀 수 있다. ▲ </p>
-<p>3) 은 <a href="#108500177">정리 3.4 따름정리</a> 에서 바로 나온다. ■ </p>
-</li>
-</ul>
-<a href="#126a7bd28"><div class="admonition def" id="126a7bd28">
-<p class="admonition-title">정리 3.6 따름정리 1</p>
-<p><span class="arithmatex">\(A \in \mathbf{M}_{m \times n}, \text{rank} (A) = r\)</span> 인 행렬 <span class="arithmatex">\(A\)</span> 에 대하여 다음을 만족하는 <span class="arithmatex">\(m \times m\)</span> 가역행렬 <span class="arithmatex">\(B\)</span> 와 <span class="arithmatex">\(n \times n\)</span> 가역행렬 <span class="arithmatex">\(C\)</span> 가 존재한다. </p>
-<div class="arithmatex">\[ D = \begin{pmatrix} I_r&amp;O_1\\ O_2&amp;O_3\\ \end{pmatrix} = BAC \]</div>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>정리 3.6 은 <span class="arithmatex">\(A\)</span> 에 기본연산을 적용하여 그것을 <span class="arithmatex">\(D\)</span> 로 변환시킬 수 있음을 말해준다. 이때 <a href="#1c860f354">정리 3.1</a> 에 의하여 기본행연산은 <span class="arithmatex">\(A\)</span> 의 우측에 곱해지는 행렬곱으로, 기본열연산은 <span class="arithmatex">\(A\)</span> 의 좌측에 곱해지는 행렬곱으로 표현가능하다. 즉, <span class="arithmatex">\(m \times m\)</span> 기본행렬 <span class="arithmatex">\(E_1, E_2, \dots, E_p\)</span> 와 <span class="arithmatex">\(n \times n\)</span> 기본행렬 <span class="arithmatex">\(G_1, G_2, \dots, G_q\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ D = E_p E _{p-1} \dots E_2 E_1 A G_1 G_2 \dots G_q \]</div>
-<p><a href="../LinearTransformation/#843e52544">문제 2.4 - 4</a> 에 의하여 다음과 같은 행렬 <span class="arithmatex">\(B, C\)</span> 는 가역이다.</p>
-<div class="arithmatex">\[ B = E_p E _{p-1} \dots E_2 E_1 \]</div>
-<div class="arithmatex">\[ C = G_1 G_2 \dots G_q \]</div>
-<p>또한 <span class="arithmatex">\(D = BAC\)</span> 이다. ■ </p>
-</li>
-</ul>
-<a href="#a2df8a4e7"><div class="admonition def" id="a2df8a4e7">
-<p class="admonition-title">정리 3.6 따름정리 2</p>
-<p><span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 에 대하여 다음이 성립한다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\text{rank} (A ^{t}) = \text{rank} (A)\)</span></p>
-</li>
-<li>
-<p>임의의 행렬의 랭크는 행들로 구성된 극대 일차독립 집합의 기수이다. 행렬의 랭크는 그 행에 의해 생성된 부분공간의 차원이다.</p>
-</li>
-<li>
-<p>임의의 행렬의 행과 열은 차원이 같은 부분공간을 생성한다. 차원은 행렬의 랭크와 같다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>정리 3.6 따름정리 1 에 의하여 <span class="arithmatex">\(D = BAC\)</span> 인 가역행렬 <span class="arithmatex">\(B, C\)</span> 가 존재한다. 이 행렬의 전치는 다음과 같다. </p>
-<div class="arithmatex">\[ D ^{t} = (BAC) ^{t} = C ^{t}A ^{t}B ^{t} \]</div>
-<p><a href="../LinearTransformation/#a3809d4dc">문제 2.4-5</a> 에 의하여 <span class="arithmatex">\(B ^{t}, C ^{t}\)</span> 는 가역이다. <a href="#802aee216">정리 3.4</a> 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \text{rank} (A ^{t}) = \text{rank} (C ^{t}A ^{t}B ^{t}) = \text{rank} (D ^{t}) \]</div>
-<p><span class="arithmatex">\(\text{rank} (A) = r\)</span> 이라고 하자. <span class="arithmatex">\(D ^{t}\)</span> 는 <span class="arithmatex">\(n \times m\)</span> 행렬로써 <span class="arithmatex">\(D\)</span> 의 전치이므로 영행렬 <span class="arithmatex">\(O, O', O''\)</span> 에 대하여 다음의 꼴이다.</p>
-<div class="arithmatex">\[ D ^{t} = \begin{pmatrix} I_r&amp;O\\ O'&amp;O''\\ \end{pmatrix} \]</div>
-<p>정리 3.6 에 의하여 <span class="arithmatex">\(\text{rank} (A) = r = \text{rank} (D)\)</span> 인데 <span class="arithmatex">\(D\)</span> 의 전치는 <span class="arithmatex">\(I_r\)</span> 을 보존하므로 <a href="#0ce821e3f">정리 3.5</a> 에 의하여 <span class="arithmatex">\(\text{rank} (D) = \text{rank} (D ^{t})\)</span> 이다. 따라서 다음이 성립한다. </p>
-<div class="arithmatex">\[ \text{rank} (A ^{t}) = \text{rank} (D ^{t}) = r = \text{rank} (A) \]</div>
-<p>이로써 1) 이 증명되었다. ▲ </p>
-<p>2) 는 행렬의 열에 대한 극대 일차독립 집합에 대한 <a href="#0ce821e3f">정리 3.5</a> 를 단지 행에 대한 극대 일차독립 집합에 대한 명제로 바꾼 것이다. 정리 3.5 와 1) 이 참이라면 2) 는 1) 에서 바로 나온다. ▲ </p>
-<p>3) 은 정리 3.5 와 2) 에서 바로 나온다. ■ </p>
-</li>
-</ul>
-<a href="#18150efeb"><div class="admonition def" id="18150efeb">
-<p class="admonition-title">정리 3.6 따름정리 3</p>
-<p>가역행렬은 기본행렬의 곱이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(n \times n\)</span> 가역행렬 <span class="arithmatex">\(A\)</span> 의 랭크는 <span class="arithmatex">\(n\)</span> 이다. 정리 3.6 따름정리 1 은 <span class="arithmatex">\(A\)</span> 를 <span class="arithmatex">\(D\)</span> 로 변환했을 때 <span class="arithmatex">\(D = I_n\)</span> 임을 말해준다. 그러면 <span class="arithmatex">\(I_n = BAC\)</span> 인 가역행렬 <span class="arithmatex">\(B, C\)</span> 가 존재한다.</p>
-<p>정리 3.6 따름정리 1 의 증명과정에 의하면 가역행렬 <span class="arithmatex">\(B, C\)</span> 은 다음과 같은 기본행렬의 곱이다.</p>
-<div class="arithmatex">\[ B = E_p E _{p-1} \dots E_2 E_1 \]</div>
-<div class="arithmatex">\[ C = G_1 G_2 \dots G_q \]</div>
-<p>따라서 <span class="arithmatex">\(A = B ^{-1}I_n C ^{-1} = B ^{-1}C ^{-1}\)</span> 이고, <a href="../LinearTransformation/#e53147e37">문제 2.4-4</a> 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ A = E_1 ^{-1} E _2  ^{-1}\dots E_p  ^{-1} G_q ^{-1} G _{q-1}  ^{-1}\dots G_1  ^{-1} \]</div>
-<p><a href="#c576bf96c">정리 3.2</a> 에 의하여 기본행렬의 역행렬도 기본행렬이다. 그러므로 <span class="arithmatex">\(A\)</span> 는 기본행렬의 곱이다. ■ </p>
-</li>
-</ul>
-<h3 id="rank-of-matrix-multiplication">Rank of Matrix Multiplication<a class="headerlink" href="#rank-of-matrix-multiplication" title="Permanent link">¶</a></h3>
-<a href="#68242c9ae"><div class="admonition def" id="68242c9ae">
-<p class="admonition-title">정리 3.7</p>
-<p>유한차원 벡터공간 <span class="arithmatex">\(\mathbf{V} , \mathbf{W} , \mathbf{Z}\)</span> 사이에 정의 된 선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{V} \to \mathbf{W} , \mathbf{U} : \mathbf{W} \to \mathbf{Z}\)</span> 와 행렬곱 <span class="arithmatex">\(AB\)</span> 이 정의된 두 행렬 <span class="arithmatex">\(A, B\)</span> 에 대하여 다음이 성립한다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\text{rank} (\mathbf{U} \mathbf{T} ) \leq \text{rank} (\mathbf{U} )\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\text{rank} (\mathbf{U} \mathbf{T} ) \leq \text{rank} (\mathbf{T} )\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\text{rank} (AB ) \leq \text{rank} (A)\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(\text{rank} (AB ) \leq \text{rank} (B)\)</span></p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>이제 <a href="#108500177">정리 3.4 따름정리</a>, <a href="#0ce821e3f">정리 3.5</a>, <a href="#71b0f55b7">정리 3.6</a>, <a href="#a2df8a4e7">정리 3.6 따름정리 2</a> 을 기반으로 임의의 행렬의 랭크를 쉽게 구할 수 있는 많은 도구들이 마련되었다.</p>
-<p>이 도구들을 통하여 기본연산을 행렬에 적용하여 <span class="arithmatex">\(0\)</span> 을 최대한 많이 가지도록 변형시키고 그 행렬의 극대 일차독립 집합의 기수를 파악하면 랭크를 쉽게 구할 수 있다. </p>
-<ul>
-<li>
-<p>예시 </p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;2&amp;1&amp;1\\ 1&amp;1&amp;-1&amp;1\\ \end{pmatrix}\)</span> 의 1행과 2행의 집합은 일차독립이므로 <span class="arithmatex">\(\text{rank} (A) = 2\)</span> 이다.</p>
-</li>
-<li>
-<p>예시 </p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix}
-1&amp;2&amp;3&amp;1\\
-2&amp;1&amp;1&amp;1\\
-1&amp;-1&amp;1&amp;0\\
-\end{pmatrix}\)</span> 에 기본연산을 적용하여 다음과 같이 변형할 수 있다.</p>
-<div class="arithmatex">\[ A \to \begin{pmatrix} 1&amp;2&amp;3&amp;1\\ 0&amp;-3&amp;-5&amp;-1\\ 0&amp;-3&amp;-2&amp;-1\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;2&amp;3&amp;1\\ 0&amp;-3&amp;-5&amp;-1\\ 0&amp;0&amp;3&amp;0\\ \end{pmatrix} \]</div>
-<p>3개의 행이 일차독립이므로 <span class="arithmatex">\(\text{rank} (A) = 3\)</span> 이다.</p>
-</li>
-</ul>
-<p>위 예시에서 알 수 있듯이 굳이 <a href="#71b0f55b7">정리 3.6</a> 이 말하는 <span class="arithmatex">\(D = \begin{pmatrix} I&amp;O\\ O&amp;O\\ \end{pmatrix}\)</span> 을 얻을 때까지 기본연산을 하는 것이 아니라 일차독립인 행 또는 열들의 최대 갯수가 명확히 보일 때까지 기본연산을 해도 된다.</p>
-</li>
-<li>
-<p>증명</p>
-<p>1:</p>
-<p><span class="arithmatex">\(\mathbf{R} (\mathbf{T}) \subseteq \mathbf{W}\)</span> 이므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \mathbf{R} (\mathbf{U}\mathbf{T} ) = \mathbf{U} \mathbf{T} (\mathbf{V} ) = \mathbf{U} (\mathbf{T} (\mathbf{V} )) = \mathbf{U} (\mathbf{R} (\mathbf{T}) ) \subseteq \mathbf{U} (\mathbf{W} ) = \mathbf{R} (\mathbf{U}) \]</div>
-<p>따라서 <span class="arithmatex">\(\text{rank} (\mathbf{U} \mathbf{T} )\)</span> 는 다음과 같다. </p>
-<div class="arithmatex">\[ \text{rank} (\mathbf{U} \mathbf{T} )  = \dim (\mathbf{R} (\mathbf{U}\mathbf{T} ) )\leq \dim (\mathbf{R} (\mathbf{U}) ) = \text{rank} (\mathbf{U} ) \]</div>
-<p>3:</p>
-<p>이제 1) 을 가정할 수 있으므로 <span class="arithmatex">\(\text{rank} (AB)\)</span> 는 다음과 같다. </p>
-<div class="arithmatex">\[ \text{rank} (AB) = \text{rank} (\mathbf{L}_{AB})  = \text{rank} (\mathbf{L}_{A}\mathbf{L}_{B})  \leq \text{rank} (\mathbf{L}_{A}) = \text{rank} (A) \]</div>
-<p>4:</p>
-<p>이제 3) 을 가정할 수 있으므로 3) 과 <a href="#a2df8a4e7">정리 3.6 따름정리 2</a> 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \text{rank} (AB) = \text{rank} ((AB)^{t})  = \text{rank} (B ^{t}A ^{t})  \leq \text{rank} (B ^{t})  = \text{rank} (B) \]</div>
-<p>2:</p>
-<p>이제 4) 를 가정할 수 있다.</p>
-<p><span class="arithmatex">\(\mathbf{V} , \mathbf{W} , \mathbf{Z}\)</span> 의 순서기저 <span class="arithmatex">\(\alpha , \beta , \gamma\)</span> 에 대하여 <span class="arithmatex">\(A' = [\mathbf{U} ]^{\gamma}_{\beta} , B' = [\mathbf{T} ] ^{\beta }_{\alpha }\)</span> 라 하면 <a href="../LinearTransformation/#2fc8f26aa">정리 2.11</a> 에 의하여 <span class="arithmatex">\(A'B' = [\mathbf{U} \mathbf{T} ] ^{\gamma}_{\alpha }\)</span> 이다. </p>
-<p><a href="#af5c5b8cd">정리 3.3</a> 과 4) 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \text{rank} (\mathbf{U} \mathbf{T} )  = \text{rank} (A'B')  \leq \text{rank} (B') = \text{rank} (\mathbf{T} ) \tag*{■} \]</div>
-</li>
-</ul>
-<h2 id="finding-inverse-matrix">Finding Inverse Matrix<a class="headerlink" href="#finding-inverse-matrix" title="Permanent link">¶</a></h2>
-<a href="#ba76fc027"><div class="admonition def" id="ba76fc027">
-<p class="admonition-title">첨가행렬(augmented matrix)</p>
-<p><span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(m \times p\)</span> 행렬 <span class="arithmatex">\(B\)</span> 에 대한 첨가행렬 <span class="arithmatex">\((A|B)\)</span> 는 <span class="arithmatex">\(m \times (n + p)\)</span> 행렬 <span class="arithmatex">\((AB)\)</span> 이다.</p>
-<p><span class="arithmatex">\((AB)\)</span> 는 처음 <span class="arithmatex">\(n\)</span> 개 열이 <span class="arithmatex">\(A\)</span> 의 열이고, 나머지 <span class="arithmatex">\(p\)</span> 개 열이 <span class="arithmatex">\(B\)</span> 의 열인 행렬이다.</p>
-</div></a>
-<a href="#7f2830052"><div class="admonition def" id="7f2830052">
-<p class="admonition-title">문제 3.2-15</p>
-<p><span class="arithmatex">\(n\)</span> 개의 행을 가지는 행렬 <span class="arithmatex">\(A, B\)</span> 와 <span class="arithmatex">\(m \times n\)</span> 행렬 <span class="arithmatex">\(M\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ M(A|B) = (MA|MB) \]</div>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(A\)</span> 의 열을 <span class="arithmatex">\(p\)</span>, <span class="arithmatex">\(B\)</span> 의 열을 <span class="arithmatex">\(q\)</span> 라고 하면 <span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(n \times p\)</span> 행렬, <span class="arithmatex">\(B\)</span> 는 <span class="arithmatex">\(n \times q\)</span> 행렬이다. </p>
-<p>또한 <span class="arithmatex">\((A|B)\)</span> 는 <span class="arithmatex">\(n \times (p + q)\)</span> 행렬, <span class="arithmatex">\(M(A|B)\)</span> 는 <span class="arithmatex">\(m \times (p + q)\)</span> 행렬이다. 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} M(A|B)&amp;= \begin{pmatrix} M_{11}&amp;M_{12}&amp;\dots&amp;M_{1n}\\ M_{21}&amp;M_{22}&amp;\dots&amp;M_{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ M_{m1}&amp;M_{m2}&amp;\dots&amp;M_{mn}\\ \end{pmatrix} \left(\begin{array}{cccc|cccc} A_{11} &amp; A_{12} &amp; \dots &amp; A_{1p} &amp; B_{11} &amp; B_{12} &amp; \dots &amp; B_{1q} \\ A_{21} &amp; A_{22} &amp; \dots &amp; A_{2p} &amp; B_{21} &amp; B_{22} &amp; \dots &amp; B_{2q} \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ A_{n1} &amp; A_{n2} &amp; \dots &amp; A_{np} &amp; B_{n1} &amp; B_{n2} &amp; \dots &amp; B_{nq} \\ \end{array}\right) \\ &amp;= \begin{pmatrix} \sum_{i=1}^{n}M_{1i}A_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{1i}A_{ip}&amp; \sum_{i=1}^{n}M_{1i}B_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{1i}B_{iq}&amp; \\ \sum_{i=1}^{n}M_{2i}A_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{2i}A_{ip}&amp; \sum_{i=1}^{n}M_{2i}B_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{2i}B_{iq}&amp; \\ \vdots&amp; \ddots&amp; \vdots&amp; \vdots &amp; \ddots &amp; \vdots&amp; \\ \sum_{i=1}^{n}M_{mi}A_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{mi}A_{ip}&amp; \sum_{i=1}^{n}M_{mi}B_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{mi}B_{iq}&amp; \\ \end{pmatrix} \end{split}\end{equation} \tag*{} \]</div>
-<p><span class="arithmatex">\(m \times p\)</span> 행렬 <span class="arithmatex">\(MA\)</span> 와 <span class="arithmatex">\(m \times q\)</span> 행렬 <span class="arithmatex">\(MB\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} MA &amp;= \begin{pmatrix} M_{11}&amp;M_{12}&amp;\dots&amp;M_{1n}\\ M_{21}&amp;M_{22}&amp;\dots&amp;M_{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ M_{m1}&amp;M_{m2}&amp;\dots&amp;M_{mn}\\ \end{pmatrix} \begin{pmatrix} A_{11}&amp;A_{12}&amp;\dots&amp;A_{1p}\\ A_{21}&amp;A_{22}&amp;\dots&amp;A_{2p}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ A_{n1}&amp;A_{n2}&amp;\dots&amp;A_{np}\\ \end{pmatrix} \\ &amp;= \begin{pmatrix} \sum_{i=1}^{n}M_{1i}A_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{1i}A_{ip} \\ \sum_{i=1}^{n}M_{2i}A_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{2i}A_{ip} \\ \vdots&amp; \ddots&amp; \vdots&amp; \\ \sum_{i=1}^{n}M_{mi}A_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{mi}A_{ip}\\ \end{pmatrix} \end{split}\end{equation} \tag*{} \]</div>
-<div class="arithmatex">\[ \begin{equation}\begin{split} MB &amp;=  \begin{pmatrix} M_{11}&amp;M_{12}&amp;\dots&amp;M_{1n}\\ M_{21}&amp;M_{22}&amp;\dots&amp;M_{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ M_{m1}&amp;M_{m2}&amp;\dots&amp;M_{mn}\\ \end{pmatrix} \begin{pmatrix} B_{11}&amp;B_{12}&amp;\dots&amp;B_{1q}\\ B_{21}&amp;B_{22}&amp;\dots&amp;B_{2q}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ B_{n1}&amp;B_{n2}&amp;\dots&amp;B_{nq}\\ \end{pmatrix} \\ &amp;= \begin{pmatrix} \sum_{i=1}^{n}M_{1i}B_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{1i}B_{iq} \\ \sum_{i=1}^{n}M_{2i}B_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{2i}B_{iq} \\ \vdots&amp; \ddots&amp; \vdots&amp; \\ \sum_{i=1}^{n}M_{mi}B_{i1}&amp; \dots&amp; \sum_{i=1}^{n}M_{mi}B_{iq}\\ \end{pmatrix} \end{split}\end{equation} \tag*{} \]</div>
-<p>따라서 다음이 성립한다.</p>
-<div class="arithmatex">\[ M(A|B) = (MA|MB) \tag*{■} \]</div>
-</li>
-</ul>
-<a href="#01cc5fcfe"><div class="admonition def" id="01cc5fcfe">
-<p><span class="arithmatex">\(n \times n\)</span> 가역행렬 <span class="arithmatex">\(A\)</span> 와 첨가행렬 <span class="arithmatex">\((A|I_n)\)</span> 에 대하여 다음이 성립한다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\((A|I_n)\)</span> 에 유한 번의 기본행연산을 적용하여 첨가행렬 <span class="arithmatex">\((I_n|B)\)</span> 을 얻을 수 있다면, <span class="arithmatex">\(A\)</span> 의 역행렬이 존재하고 <span class="arithmatex">\(B = A ^{-1}\)</span> 이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\((A|I_n)\)</span> 에 유한 번의 기본행연산을 적용하여 첨가행렬 <span class="arithmatex">\((I_n|B)\)</span> 을 얻을 수 없다면, <span class="arithmatex">\(A\)</span> 의 역행렬이 존재하지 않고 처음 <span class="arithmatex">\(n\)</span> 개의 성분이 모두 <span class="arithmatex">\(0\)</span> 인 행을 가진 행렬을 얻는다. </p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>1:</p>
-<p><span class="arithmatex">\(n \times n\)</span> 가역행렬 <span class="arithmatex">\(A\)</span> 에 대하여 <span class="arithmatex">\(n \times 2n\)</span> 첨가행렬 <span class="arithmatex">\(C = (A|I_n)\)</span> 을 가정하자. <a href="">문제 3.2-15</a> 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ A ^{-1}C = (A ^{-1}A|A ^{-1}I_n) = (I_n | A ^{-1}) \]</div>
-<p><a href="#18150efeb">정리 3.6 따름정리 3</a> 에 의하여 <span class="arithmatex">\(A ^{-1}\)</span> 은 기본행렬의 곱이다. <span class="arithmatex">\(A ^{-1} = E_p \dots E_1\)</span> 으로 두면 다음이 성립한다. </p>
-<div class="arithmatex">\[ A ^{-1}C = E_p \dots E_1 C = E_p \dots E_1 (A|I_n) = (I_n | A ^{-1}) \]</div>
-<p>기본행렬을 좌측에 곱하는 것은 기본행연산을 적용하는 것이므로 이 결과를 다음과 같이 정리할 수 있다. </p>
-<p><strong><span class="arithmatex">\(A\)</span> 가 <span class="arithmatex">\(n \times n\)</span> 가역행렬이면 행렬 <span class="arithmatex">\((A|I_n)\)</span> 에 기본행연산을 유한 번 적용하여 <span class="arithmatex">\((I_n|A ^{-1})\)</span> 으로 변형할 수 있다.</strong> ▲ </p>
-<p>역으로 가역행렬 <span class="arithmatex">\(A\)</span> 에 대하여 <span class="arithmatex">\((A|I_n)\)</span> 에 기본행연산을 유한 번 적용하여 <span class="arithmatex">\((I_n|B)\)</span> 로 변형할 수 있는 <span class="arithmatex">\(n \times n\)</span> 행렬 <span class="arithmatex">\(B\)</span> 가 존재한다고 하면, <a href="#1c860f354">정리 3.1</a> 에 의하여 기본행연산들을 기본행렬 <span class="arithmatex">\(E_1, \dots, E_p\)</span> 로 나타낼 수 있으므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ E_p \dots E_1 (A|I_n) = (I_n | B) \]</div>
-<p><span class="arithmatex">\(M = E_p \dots E_1\)</span> 로 두면 <a href="">문제 3.2-15</a> 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ M(A|I_n) = (MA|M) = (I_n | B) \]</div>
-<p>따라서 <a href="../LinearTransformation/#068bf6124"><span class="arithmatex">\(MA = I_n, M = B\)</span> 이므로 <span class="arithmatex">\(M = B = A ^{-1}\)</span></a> 이다. 이 결과를 다음과 같이 정리할 수 있다. </p>
-<p><strong><span class="arithmatex">\(n \times n\)</span> 가역행렬 <span class="arithmatex">\(A\)</span> 에 대하여 첨가행렬 <span class="arithmatex">\((A|I_n)\)</span> 에 기본행연산을 유한번 적용하여 <span class="arithmatex">\((I_n|B)\)</span> 로 변형할 수 있으면 <span class="arithmatex">\(B = A ^{-1}\)</span> 이다.</strong> ■ </p>
-<p>2:</p>
-<p><a href="#f94f2d598"><span class="arithmatex">\(A\)</span> 가 가역이 아니면 <span class="arithmatex">\(\text{rank} (A) &lt; n\)</span> 이다</a>. 또한 기본행연산으로 <span class="arithmatex">\((A|I_n)\)</span> 을 <span class="arithmatex">\((I_n|B)\)</span> 로 변형할 수 없다. <a href="#108500177">기본행연산은 행렬의 랭크를 보존하므로</a> <span class="arithmatex">\(\text{rank} (A) = n\)</span> 이 되는데 이는 모순이기 때문이다. 이때 <span class="arithmatex">\(A\)</span> 를 변형하면 모든 성분이 <span class="arithmatex">\(0\)</span> 인 행을 포함하는 행렬을 얻는다. </p>
-<p>아래의 예시를 살펴보자. </p>
-</li>
-<li>
-<p>예시 </p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 0&amp;2&amp;4\\ 2&amp;4&amp;2\\ 3&amp;3&amp;1\\ \end{pmatrix}\)</span> 에 대하여 <span class="arithmatex">\((A|I_n)\)</span> 을 <span class="arithmatex">\((I_n|A ^{-1})\)</span> 로 변형시켜보자. </p>
-<div class="arithmatex">\[ \begin{pmatrix} 0&amp;2&amp;4&amp;1&amp;0&amp;0\\ 2&amp;4&amp;2&amp;0&amp;1&amp;0\\ 3&amp;3&amp;1&amp;0&amp;0&amp;1\\ \end{pmatrix} \to \begin{pmatrix} 2&amp;4&amp;2&amp;0&amp;1&amp;0\\ 0&amp;2&amp;4&amp;1&amp;0&amp;0\\ 3&amp;3&amp;1&amp;0&amp;0&amp;1\\ \end{pmatrix} \to \begin{pmatrix} 1&amp;2&amp;1&amp;0&amp;\frac{1}{2}&amp;0\\ 0&amp;2&amp;4&amp;1&amp;0&amp;0\\ 3&amp;3&amp;1&amp;0&amp;0&amp;1\\ \end{pmatrix} \to \]</div>
-<div class="arithmatex">\[ \begin{pmatrix} 1&amp;2&amp;1&amp;0&amp;\frac{1}{2}&amp;0\\ 0&amp;2&amp;4&amp;1&amp;0&amp;0\\ 0&amp;-3&amp;-2&amp;0&amp;-\frac{3}{2}&amp;1\\ \end{pmatrix} \to \dots \to \begin{pmatrix} 1&amp;0&amp;0&amp;\frac{1}{8}&amp;-\frac{1}{8}&amp;\frac{3}{4}\\ 0&amp;1&amp;0&amp;-\frac{1}{4}&amp;\frac{3}{4}&amp;-\frac{1}{2}\\ 0&amp;0&amp;1&amp;\frac{3}{8}&amp;-\frac{3}{8}&amp;\frac{1}{4}\\ \end{pmatrix} \]</div>
-<p>따라서 <span class="arithmatex">\(A\)</span> 의 역행렬은 다음과 같다. </p>
-<div class="arithmatex">\[ A ^{-1} = \begin{pmatrix} \frac{1}{8}&amp;-\frac{1}{8}&amp;\frac{3}{4}\\ -\frac{1}{4}&amp;\frac{3}{4}&amp;-\frac{1}{2}\\ \frac{3}{8}&amp;-\frac{3}{8}&amp;\frac{1}{4}\\ \end{pmatrix} \]</div>
-</li>
-<li>
-<p>예시 </p>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;2&amp;1\\ 2&amp;1&amp;-1\\ 1&amp;5&amp;4\\ \end{pmatrix}\)</span> 에 대하여 <span class="arithmatex">\((A|I_n)\)</span> 을 <span class="arithmatex">\((I_n|A ^{-1})\)</span> 로 변형시켜보자. </p>
-<div class="arithmatex">\[ \begin{pmatrix} 1&amp;2&amp;1&amp;1&amp;0&amp;0\\ 2&amp;1&amp;-1&amp;0&amp;1&amp;0\\ 1&amp;5&amp;4&amp;0&amp;0&amp;1\\ \end{pmatrix} \to \dots \to \begin{pmatrix} 1&amp;2&amp;1&amp;1&amp;0&amp;0\\ 0&amp;-3&amp;-3&amp;-2&amp;1&amp;0\\ 0&amp;0&amp;0&amp;-3&amp;1&amp;1\\ \end{pmatrix} \]</div>
-<p>마지막 행렬의 3행의 앞쪽 <span class="arithmatex">\(n = 3\)</span> 개의 성분이 모두 <span class="arithmatex">\(0\)</span> 인 행을 가진 행렬을 얻었다. 따라서 <span class="arithmatex">\(A\)</span> 의 역행렬은 존재하지 않는다.</p>
-</li>
-<li>
-<p>이 정리로써 행렬이 가역인지 판단하고, 가역이면 역행렬을 구할 수 있다. 그런데 <a href="../LinearTransformation/#b7bc62d0d">정리 2.18</a> 로써 선형변환의 가역성과 행렬의 가역성이 연결되었었다. 따라서 이 정리를 기반으로 선형변환의 가역성과 역변환도 밝힐 수 있다.</p>
-<ul>
-<li>
-<p>예시 </p>
-<p>선형변환 <span class="arithmatex">\(\mathbf{T} : \mathbf{P}_{2}(\R) \to \mathbf{P}_{2}(\R)\)</span> 이 다음과 같이 정의되었다고 하자. </p>
-<div class="arithmatex">\[ \mathbf{T} (f(x)) = f(x) + f'(x) + f''(x) \]</div>
-<p><span class="arithmatex">\(\mathbf{P}_{2}(\R)\)</span> 의 표준 순서기저를 <span class="arithmatex">\(\beta = \{1, x, x ^{2}\}\)</span> 라고 하면 <a href="../LinearTransformation/#c16bc5e5b">선형변환의 행렬표현</a> 에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ f(1) = 1 = 1 \cdot 1 + 0 \cdot x + 0 \cdot x ^{2} \]</div>
-<div class="arithmatex">\[ f(x) = 1 = 1 \cdot 1 + 1 \cdot x + 0 \cdot x ^{2} \]</div>
-<div class="arithmatex">\[ f(x ^{2}) = 1 = 2 \cdot 1 + 2 \cdot x + 1 \cdot x ^{2} \]</div>
-<div class="arithmatex">\[ [\mathbf{T} ]_{\beta } = \begin{pmatrix} 1&amp;1&amp;2\\ 0&amp;1&amp;2\\ 0&amp;0&amp;1\\ \end{pmatrix} \]</div>
-<p>본 정리의 방법을 사용하여 <span class="arithmatex">\(([\mathbf{T} ] _{\beta }|I_3)\)</span> 를 <span class="arithmatex">\((I_3 | ([\mathbf{T} ]_{\beta } )^{-1})\)</span> 으로 변형하면 다음을 얻는다.</p>
-<div class="arithmatex">\[ ([\mathbf{T} ]_{\beta }) ^{-1} = \begin{pmatrix} 1&amp;-1&amp;0\\ 0&amp;1&amp;-2\\ 0&amp;0&amp;1\\ \end{pmatrix} \]</div>
-<p>즉, <span class="arithmatex">\(([\mathbf{T} ]_{\beta }) ^{-1}\)</span> 는 가역이다. 그러면 <a href="../LinearTransformation/#b7bc62d0d">정리 2.18 따름정리 1</a> 에 의하여 <span class="arithmatex">\(\mathbf{T}\)</span> 도 가역이고 <span class="arithmatex">\(([\mathbf{T} ]_{\beta }) ^{-1} = [\mathbf{T} ^{-1}] _{\beta }\)</span> 이다.</p>
-<p>그러면 스칼라 <span class="arithmatex">\(a_0, a_1, a_2\)</span> 와 <a href="../LinearTransformation/#93b3bc7a2">정리 2.14</a> 에 의하여 다음을 얻는다. </p>
-<div class="arithmatex">\[ [\mathbf{T} ^{-1}(a_0 + a_1x + a_2 x ^{2})] _{\beta } = \begin{pmatrix} 1&amp;-1&amp;0\\ 0&amp;1&amp;-2\\ 0&amp;0&amp;1\\ \end{pmatrix} \begin{pmatrix} a_0\\ a_1\\ a_2\\ \end{pmatrix} = \begin{pmatrix} a_0-a_1\\ a_1-2a_2\\ a_2\\ \end{pmatrix} \]</div>
-<p>따라서 다음과 같이 <span class="arithmatex">\(\mathbf{T}\)</span> 의 역변환까지 알 수 있다.</p>
-<div class="arithmatex">\[ \mathbf{T} ^{-1}(a_0 + a_1x + a_2x ^{2}) = (a_0 - a_1) + (a_1 - 2a_2)x + a_2 x ^{2} \]</div>
-</li>
-</ul>
-</li>
-</ul>
-<a href="#c2617fe5d"><div class="admonition def" id="c2617fe5d">
-<p><span class="arithmatex">\(u, v \in \mathbf{F} ^{2}\)</span> 에 대한 <span class="arithmatex">\(\{u, v\}\)</span> 와 행렬 <span class="arithmatex">\(\begin{pmatrix} u\\ v\\ \end{pmatrix}\)</span> 에 대하여 다음이 성립한다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\{u, v\}\)</span> 가 일차독립이면 행렬 <span class="arithmatex">\(\begin{pmatrix} u\\ v\\ \end{pmatrix}\)</span> 은 가역이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\{u, v\}\)</span> 가 일차종속이면 행렬 <span class="arithmatex">\(\begin{pmatrix} u\\ v\\ \end{pmatrix}\)</span> 은 가역이 아니다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>1:</p>
-<p><span class="arithmatex">\(u = (a_1, a_2), v = (b_1, b_2), A = \begin{pmatrix} a_1&amp;a_2\\ b_1&amp;b_2\\ \end{pmatrix}\)</span> 라고 하자. <span class="arithmatex">\(\{u, v\}\)</span> 가 일차독립이라는 가정으로부터 다음이 성립한다.</p>
-<div class="arithmatex">\[ c_1(a_1, a_2) + c_2(b_1, b_2) = 0 \implies c_1 = c_2 = 0 \]</div>
-<p>이는 다음이 성립함을 뜻한다. </p>
-<div class="arithmatex">\[a_1 \neq 0 \land b_1 \neq 0\]</div>
-<div class="arithmatex">\[a_2 \neq 0 \land b_2 \neq 0\]</div>
-<p>그러므로 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{pmatrix} a_1&amp;a_2\\ b_1&amp;b_2\\ \end{pmatrix} \to \begin{pmatrix} a_1b_1&amp;a_2b_1\\ a_1b_1&amp;a_1b_2\\ \end{pmatrix} \to \begin{pmatrix} a_1b_1&amp;a_2b_1\\ 0&amp;a_1b_2 - a_1b_1\\ \end{pmatrix} \to \begin{pmatrix} 1&amp; \frac{a_2b_1}{a_1b_1} \\ 0&amp;1\\ \end{pmatrix} \to I_2 \]</div>
-<p><a href="MatrixOperation/#01cc5fcfe">유한번의 기본행연산으로 <span class="arithmatex">\(A\)</span> 를 항등행렬로 변환하였으므로 <span class="arithmatex">\(A\)</span> 는 가역이다</a>. </p>
-<p>2:</p>
-<p><span class="arithmatex">\(\{u, v\}\)</span> 가 일차종속이라는 가정으로부터 다음이 성립한다.</p>
-<div class="arithmatex">\[ v = cu \]</div>
-<p>그러므로 다음이 성립한다.</p>
-<div class="arithmatex">\[ A = \begin{pmatrix} a_1&amp;a_2\\ b_1&amp;b_2\\ \end{pmatrix}  =\begin{pmatrix} a_1&amp;a_2\\ ca_1&amp;ca_2\\ \end{pmatrix} \to \begin{pmatrix} a_1&amp;a_2\\ 0&amp;0\\ \end{pmatrix} \]</div>
-<p><a href="MatrixOperation/#01cc5fcfe"><span class="arithmatex">\(A\)</span> 를 항등행렬로 변환할 수 없으므로 <span class="arithmatex">\(A\)</span> 는 가역이 아니다</a>. </p>
-</li>
-</ul>
-<h2 id="system-of-linear-equation">System of Linear Equation<a class="headerlink" href="#system-of-linear-equation" title="Permanent link">¶</a></h2>
-<a href="#01739521e"><div class="admonition def" id="01739521e">
-<p class="admonition-title">연립일차방정식(system of linear equation)</p>
-<p><span class="arithmatex">\(1 \leq i \leq m, 1 \leq j \leq n\)</span> 에 대하여 스칼라 <span class="arithmatex">\(a _{ij}, b_i \in \mathbf{F}\)</span> 와 변수 <span class="arithmatex">\(x_j \in \mathbf{F}\)</span> 에 대한 다음의 연립방정식을 체 <span class="arithmatex">\(\mathbf{F}\)</span> 위 <span class="arithmatex">\(n\)</span> 개의 미지수와 <span class="arithmatex">\(m\)</span> 개의 일차방정식으로 이루어진 연립일차방정식으로 정의한다. </p>
-<div class="arithmatex">\[ a _{11}x_1 + a _{12}x_2 + \dots + a _{1n}x_n = b_1 \]</div>
-<div class="arithmatex">\[ a _{21}x_1 + a _{22}x_2 + \dots + a _{2n}x_n = b_2 \]</div>
-<div class="arithmatex">\[ \vdots \]</div>
-<div class="arithmatex">\[ a _{m1}x_1 + a _{m2}x_2 + \dots + a _{mn}x_n = b_m \]</div>
-</div></a>
-<a href="#ed5c73da7"><div class="admonition def" id="ed5c73da7">
-<p class="admonition-title">계수행렬(coefficient matrix)</p>
-<p><span class="arithmatex">\(n\)</span> 개의 미지수와 <span class="arithmatex">\(m\)</span> 개의 일차방정식으로 이루어진 연립일차방정식의 계수로 구성된 다음의 <span class="arithmatex">\(m \times n\)</span> 행렬이다.</p>
-<div class="arithmatex">\[ A = \begin{pmatrix} a_{11}&amp;a_{12}&amp;\dots&amp;a_{1n}\\ a_{21}&amp;a_{22}&amp;\dots&amp;a_{2n}\\ \vdots&amp; \vdots&amp; \ddots&amp; \vdots \\ a_{m1}&amp;a_{m2}&amp;\dots&amp;a_{mn}\\ \end{pmatrix} \]</div>
-</div></a>
-<ul>
-<li><span class="arithmatex">\(n\)</span> 개의 미지수와 <span class="arithmatex">\(m\)</span> 개의 일차방정식에 대한 계수행렬은 <span class="arithmatex">\(m \times n\)</span> 행렬이다. 이는 선형변환 <span class="arithmatex">\(\mathbf{L}_{A}: \mathbf{F} ^{n} \to \mathbf{F} ^{m}\)</span> 에 대응된다. </li>
-</ul>
-<a href="#79584dc25"><div class="admonition def" id="79584dc25">
-<p class="admonition-title">연립일차방정식의 행렬표현</p>
-<p>계수행렬 <span class="arithmatex">\(A\)</span> 와 <span class="arithmatex">\(x = \begin{pmatrix} x_{1}\\ x_{2}\\ \vdots\\ x_{n}\\ \end{pmatrix}, b = \begin{pmatrix} b_{1}\\ b_{2}\\ \vdots\\ b_{n}\\ \end{pmatrix}\)</span> 에 대한 연립일차방정식의 행렬표현은 다음과 같다. </p>
-<div class="arithmatex">\[ Ax = b \]</div>
-</div></a>
-<a href="#9ee640ab7"><div class="admonition def" id="9ee640ab7">
-<p class="admonition-title">해(solution) </p>
-<p>연립일차방정식의 해는 <span class="arithmatex">\(Ax = b\)</span> 에 대하여 <span class="arithmatex">\(As = b\)</span> 를 만족하는 <span class="arithmatex">\(n\)</span>순서쌍 <span class="arithmatex">\(s = \begin{pmatrix} s_{1}\\ s_{2}\\ \vdots\\ s_{n}\\ \end{pmatrix} \in \mathbf{F} ^{n}\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>해는 존재할 수도 있고 존재하지 않을 수도 있다. 해가 존재한다면 유일할 수도 있고 유일하지 않을 수도 있다.</li>
-</ul>
-<a href="#f4179edbf"><div class="admonition def" id="f4179edbf">
-<p class="admonition-title">해집합(solution set) </p>
-<p>연립일차방정식의 모든 해들의 집합이다.</p>
-</div></a>
-<a href="#d3c44b9fd"><div class="admonition def" id="d3c44b9fd">
-<p class="admonition-title">연립일차방정식의 무모순성</p>
-<p>연립일차방정식의 해집합이 공집합이면 모순이 있다(inconsistent) 또는 해가 존재하지 않는다고 한다. 반면 해집합이 공집합이 아니면 모순이 없다(consistent) 또는 해가 존재한다고 한다.</p>
-</div></a>
-<ul>
-<li>그러므로 연립일차방정식을 풀기 위하여 해가 존재하는지 살펴보고, 존재하는 모든 해를 구할 수 있어야 한다.</li>
-</ul>
-<a href="#59d6467b6"><div class="admonition def" id="59d6467b6">
-<p class="admonition-title">동차(homogeneouse) 와 비동차(nonhomogeneouse) </p>
-<p><span class="arithmatex">\(n\)</span> 개의 미지수와 <span class="arithmatex">\(m\)</span> 개의 일차방정식으로 이루어진 연립일차방정식 <span class="arithmatex">\(Ax = b\)</span> 는 <span class="arithmatex">\(b = 0\)</span> 일 때 동차라고 하고, <span class="arithmatex">\(b \neq 0\)</span> 이면 비동차라고 한다.</p>
-</div></a>
-<h3 id="properties-of-system-of-linear-equation">Properties of System of Linear Equation<a class="headerlink" href="#properties-of-system-of-linear-equation" title="Permanent link">¶</a></h3>
-<a href="#b7b9c78d0"><div class="admonition def" id="b7b9c78d0">
-<p class="admonition-title">정리 3.8</p>
-<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 <span class="arithmatex">\(n\)</span> 개의 미지수와 <span class="arithmatex">\(m\)</span> 개의 일차방정식으로 이루어진 동차 연립일차방정식 <span class="arithmatex">\(Ax = 0\)</span> 와 해집합 <span class="arithmatex">\(\mathbf{K}\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{K} = \mathbf{N} (\mathbf{L}_A)\)</span> 이다. 즉, 다음이 성립한다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(\mathbf{K}\)</span> 는 <span class="arithmatex">\(\mathbf{F} ^{n}\)</span> 의 부분공간이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\dim (\mathbf{K} ) = n - \text{rank} (\mathbf{L}_{A}) = n - \text{rank} (A)\)</span></p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\mathbf{K} = \{s \in \mathbf{F} ^{n} : As = 0\} = \mathbf{N} (\mathbf{L}_A)\)</span> 인 것과 <a href="../LinearTransformation/#6187a9f9c">차원정리</a> 와 <a href="#50228784b">행렬의 랭크의 정의</a> 의하여 증명이 끝난다. ■ </p>
-</li>
-<li>
-<p>예시 </p>
-<p>다음과 같은 연립일차방정식이 존재한다. </p>
-<div class="arithmatex">\[ x_1 + 2x_2 + x_3 = 0 \]</div>
-<div class="arithmatex">\[ x_1 - x_2 - x_3 = 0 \]</div>
-<p>계수행렬 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;2&amp;1\\ 1&amp;-1&amp;-1\\ \end{pmatrix}\)</span> 에 대하여 <span class="arithmatex">\(\text{rank} (A)  = 2\)</span> 이다. 해집합 <span class="arithmatex">\(\mathbf{K}\)</span> 에 대하여 <span class="arithmatex">\(\dim (\mathbf{K} ) = 3 - 2 = 1\)</span> 이므로 영벡터가 아닌 임의의 해가 <span class="arithmatex">\(\mathbf{K}\)</span> 의 기저가 된다. 가령 <span class="arithmatex">\(\begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix}\)</span> 이 해이므로 <span class="arithmatex">\(\text{span} \Bigg \{\begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix}\Bigg \} = \mathbf{K}\)</span> 이다.</p>
-</li>
-</ul>
-<a href="#86789c7cb"><div class="admonition def" id="86789c7cb">
-<p class="admonition-title">정리 3.8 따름정리</p>
-<p><span class="arithmatex">\(m &lt; n\)</span> 이면 연립방정식 <span class="arithmatex">\(Ax = 0\)</span> 은 영벡터가 아닌 해가 있다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 일차방정식보다 미지수가 많으면 영이 아닌 벡터가 해로 존재한다는 것을 말해준다. </p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(m &lt; n\)</span> 을 가정하고 <span class="arithmatex">\(\mathbf{K} = \mathbf{N} (\mathbf{L}_A)\)</span> 으로 두자.</p>
-<p>연립일차방정식이 <span class="arithmatex">\(n\)</span> 개의 미지수와 <span class="arithmatex">\(m\)</span> 개의 일차방정식을 가지므로 <span class="arithmatex">\(A\)</span> 는 <span class="arithmatex">\(m \times n\)</span> 계수행렬이다. 그러므로 <a href="../LinearTransformation/#78c54c688"><span class="arithmatex">\(\mathbf{L}_{A}\)</span> 는 <span class="arithmatex">\(\mathbf{F} ^{n} \to \mathbf{F} ^{m}\)</span> 위에서 정의된 좌측 곱 변환</a>이다. <a href="../LinearTransformation/#eb957cbf0"><span class="arithmatex">\(\mathbf{L}_{A}\)</span> 의 상공간은 <span class="arithmatex">\(\mathbf{F} ^{m}\)</span> 의 부분공간</a>이다. <a href="../VectorSpace/#26f9238cb">정리 1.11</a> 와 <a href="#50228784b">행렬의 랭크의 정의</a> 에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \text{rank} (A) = \text{rank} (\mathbf{L}_{A}) \leq m \]</div>
-<p>정리 3.8 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \dim (\mathbf{K} ) = n - \text{rank} (\mathbf{L}_{A})  \geq n - m &gt; 0 \]</div>
-<p>이는 <span class="arithmatex">\(\mathbf{K} \neq \{0\}\)</span> 임을 뜻하고, 이에따라 영이 아닌 벡터 <span class="arithmatex">\(s \in \mathbf{K}\)</span> 가 존재한다. ■ </p>
-</li>
-</ul>
-<a href="#f2597b21a"><div class="admonition def" id="f2597b21a">
-<p><span class="arithmatex">\(Ax = 0\)</span> 을 <span class="arithmatex">\(Ax = b\)</span> 에 대응하는 동차 연립일차방정식이라 한다.</p>
-</div></a>
-<a href="#932b55b12"><div class="admonition def" id="932b55b12">
-<p class="admonition-title">정리 3.9</p>
-<p>모순이 없는 연립일차방정식 <span class="arithmatex">\(Ax = b\)</span> 의 해집합 <span class="arithmatex">\(\mathbf{K}\)</span>, 대응하는 연립일차방정식 <span class="arithmatex">\(Ax = 0\)</span> 의 해집합 <span class="arithmatex">\(\mathbf{K} _{\mathbf{H} }\)</span>, <span class="arithmatex">\(Ax = b\)</span> 의 임의의 해 <span class="arithmatex">\(s \in \mathbf{K}\)</span> 에 대하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \mathbf{K} = \{s\} + \mathbf{K} _{\mathbf{H} } = \{s + k : k \in \mathbf{K} _{\mathbf{H} }\} \]</div>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 비동차 연립일차방정식의 해집합을 동차 연립일차방정식의 해집합과 연결시켜준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(Ax + b\)</span> 의 임의의 해 <span class="arithmatex">\(s \in \mathbf{K}\)</span> 를 택하자.</p>
-<p><span class="arithmatex">\(w \in \mathbf{K}\)</span> 를 가정하면 <span class="arithmatex">\(Aw = b\)</span> 이다. 그러면 <span class="arithmatex">\(A(w-s) = Aw-As = b-b = 0 \implies w-s \in \mathbf{K} _{\mathbf{H} }\)</span> 이다. <span class="arithmatex">\(w - s = k \in \mathbf{K} _{\mathbf{H} }\)</span> 로 두자. 그러면 <span class="arithmatex">\(w = s + k \in \{s\} + \mathbf{K} _{\mathbf{H} }\)</span> 이다. 이는 어떤 원소가 <span class="arithmatex">\(\mathbf{K}\)</span> 에 속하면 반드시 <span class="arithmatex">\(\{s\} + \mathbf{K} _{\mathbf{H} }\)</span> 에 속함을 뜻한다. 그러므로 다음이 성립한다.</p>
-<div class="arithmatex">\[ \mathbf{K} \subseteq \{s\} + \mathbf{K} _{\mathbf{H} } \tag*{▲} \]</div>
-<p><span class="arithmatex">\(w \in \{s\} + \mathbf{K} _{\mathbf{H} }\)</span> 를 가정하면 <span class="arithmatex">\(w = s + k\)</span> 를 만족하는 <span class="arithmatex">\(k \in \mathbf{K} _{\mathbf{H} }\)</span> 가 존재한다. 그러므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ Aw = A(s+k) = As + Ak = b + 0 = b \]</div>
-<p>즉, <span class="arithmatex">\(w \in \mathbf{K}\)</span> 이므로 <span class="arithmatex">\(\{s\} + \mathbf{K} _{\mathbf{H} } \subseteq \mathbf{K}\)</span> 이다. ▲ </p>
-<p>따라서 <span class="arithmatex">\(\mathbf{K} = \{s\} + \mathbf{K} _{\mathbf{H}}\)</span> 이다. ■ </p>
-</li>
-<li>
-<p>예시 </p>
-<p>다음 연립일차방정식의 해는 <span class="arithmatex">\(s = \begin{pmatrix} 1\\ 1\\ 4\\ \end{pmatrix} \in \mathbf{K}\)</span> 이다.</p>
-<div class="arithmatex">\[ x_1 + 2x_2 + x_3 = 7 \]</div>
-<div class="arithmatex">\[ x_1 - x_2 - x_3 = -4 \]</div>
-<p>대응하는 동차 연립일차방정식의 해는 <span class="arithmatex">\(k = \begin{pmatrix} 1\\ -2\\ 3\\ \end{pmatrix} \in \mathbf{K} _{\mathbf{H} }\)</span> 이고 <span class="arithmatex">\(\dim (\mathbf{K} _{\mathbf{H} }) = 1\)</span> 이므로 <span class="arithmatex">\(\mathbf{K} _{\mathbf{H} }= \{tk : t \in \R\}\)</span> 이다. 그러므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \mathbf{K} = \{s + tk : t \in \R\} \]</div>
-</li>
-</ul>
-<a href="#7fc4520a6"><div class="admonition def" id="7fc4520a6">
-<p class="admonition-title">정리 3.10</p>
-<p><span class="arithmatex">\(n\)</span> 개의 미지수와 <span class="arithmatex">\(n\)</span> 개의 일차방정식으로 이루어진 연립일차방정식 <span class="arithmatex">\(Ax = b\)</span> 에 대하여 <span class="arithmatex">\(A\)</span> 가 가역이면 이 방정식은 유일한 해 <span class="arithmatex">\(A ^{-1}b\)</span> 를 가진다.</p>
-<p>역으로 연립일차방정식의 해가 유일하면 계수행렬은 가역이다.</p>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 가역인 정사각행렬을 계수행렬로 가지는 연립일차방정식의 해를 쉽게 구할 수 있는 방법을 알려준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(A\)</span> 가 가역이면 역행렬 <span class="arithmatex">\(A ^{-1}\)</span> 가 존재하므로 <span class="arithmatex">\(A(A ^{-1}b) = (AA ^{-1})b = b\)</span> 가 성립한다. 그러므로 <span class="arithmatex">\(A ^{-1}b\)</span> 는 해이다. 이로써 존재성 증명이 끝났다. </p>
-<p>이제 유일성을 증명하기 위하여 임의의 해 <span class="arithmatex">\(s\)</span> 에 대하여 <span class="arithmatex">\(As = b\)</span> 로 두면 <span class="arithmatex">\(A ^{-1}As = A ^{-1}b \iff s = A ^{-1}b\)</span> 가 성립한다. ▲ </p>
-<p>방정식의 유일한 해를 <span class="arithmatex">\(s\)</span> 로 두면 대응하는 동차 연립일차방정식 <span class="arithmatex">\(Ax = 0\)</span> 의 해집합 <span class="arithmatex">\(\mathbf{K} _{\mathbf{H} }\)</span> 에 대하여 <a href="#932b55b12">정리 3.9</a> 에 의하여 <span class="arithmatex">\(\mathbf{K} = \{s\} = \{s\} + \mathbf{K} _{\mathbf{H}} \iff \mathbf{K} _{\mathbf{H} } = \{0\}\)</span> 이다. <a href="#b7b9c78d0">정리 3.8</a> 에 의하여 <span class="arithmatex">\(\mathbf{K} _{\mathbf{H} } = \{0\} = \mathbf{L}_{A}\)</span> 이고, <span class="arithmatex">\(\dim (\mathbf{K} _{\mathbf{H} }) = n - \text{rank} (\mathbf{L}_{A}) = 0 \iff \text{rank} (\mathbf{L}_{A}) = n\)</span> 이므로 <a href="#8252ffa8b"><span class="arithmatex">\(\text{rank} (A) = n\)</span> 이다. 그러므로 <span class="arithmatex">\(A\)</span> 는 가역이다</a>.</p>
-</li>
-</ul>
-<h3 id="existence-of-solution-of-linear-equation-system">Existence of Solution of Linear Equation System<a class="headerlink" href="#existence-of-solution-of-linear-equation-system" title="Permanent link">¶</a></h3>
-<a href="#a503c2598"><div class="admonition def" id="a503c2598">
-<p class="admonition-title">연립일차방정식의 첨가행렬</p>
-<p>연립일차방정식 <span class="arithmatex">\(Ax = b\)</span> 의 첨가행렬은 <span class="arithmatex">\((A|b)\)</span> 이다.</p>
-</div></a>
-<a href="#f05606b25"><div class="admonition def" id="f05606b25">
-<p class="admonition-title">문제 3.3-9</p>
-<p>연립일차방정식 <span class="arithmatex">\(Ax = b\)</span> 의 해가 있는 것과 <span class="arithmatex">\(b \in \mathbf{R} (\mathbf{L}_A)\)</span> 인 것은 동치이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>해가 존재하면 <span class="arithmatex">\(As = b\)</span> 를 만족하는 <span class="arithmatex">\(s\)</span> 가 존재한다. 그러므로 <span class="arithmatex">\(\mathbf{L}_{A}(s) = b \in \mathbf{R} (\mathbf{L}_A)\)</span> 이다. ▲ </p>
-<p><span class="arithmatex">\(b \in \mathbf{R} (\mathbf{L}_A)\)</span> 이면 <span class="arithmatex">\(\mathbf{L}_{A}(s) = As = b\)</span> 를 만족하는 <span class="arithmatex">\(s\)</span> 가 존재한다. 그러므로 연립일차방정식의 해가 존재한다. ■ </p>
-</li>
-</ul>
-<a href="#65d523495"><div class="admonition def" id="65d523495">
-<p class="admonition-title">정리 3.11</p>
-<p>연립일차방정식 <span class="arithmatex">\(Ax = b\)</span> 에 모순이 없는 것과 <span class="arithmatex">\(\text{rank} (A) = \text{rank} (A|b)\)</span> 인 것은 동치이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><a href="#0ce821e3f">정리 3.5</a> 의 증명과정은 행렬 <span class="arithmatex">\(A\)</span> 의 <span class="arithmatex">\(j\)</span>열 <span class="arithmatex">\(a_j\)</span> 에 대하여 <span class="arithmatex">\(\mathbf{R} (\mathbf{L}_A)=\text{span} (\{a_1, a_2, \dots, a_n \})\)</span> 임을 말해준다. 문제 3.3-9 에 의하여 <span class="arithmatex">\(Ax = b\)</span> 가 해가 있는 것은 <span class="arithmatex">\(b \in \mathbf{R} (\mathbf{L}_A)\)</span> 와 동치이다. 그러므로 <span class="arithmatex">\(Ax = b\)</span> 의 해가 있기 위하여 다음이 성립해야 한다. </p>
-<div class="arithmatex">\[ b \in \text{span} (\{a_1, a_2, \dots, a_n \}) \]</div>
-<p>그러므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \text{span} (\{a_1, a_2, \dots, a_n \}) = \text{span} (\{a_1, a_2, \dots, a_n, b \}) \]</div>
-<p>따라서 <span class="arithmatex">\(\dim (\text{span} (\{a_1, a_2, \dots, a_n \}) )= \dim (\text{span} (\{a_1, a_2, \dots, a_n, b \}))\)</span> 이다. <a href="#0ce821e3f">정리 3.5</a> 에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \text{rank} (A) = \text{rank} (A|b) \tag*{■} \]</div>
-</li>
-<li>
-<p>예시 </p>
-<p>다음 연립방정식에 대하여 <span class="arithmatex">\(A = \begin{pmatrix} 1&amp;1\\ 1&amp;1\\ \end{pmatrix}, (A|b) = \begin{pmatrix} 1&amp;1&amp;0\\ 1&amp;1&amp;1\\ \end{pmatrix}\)</span> 이다.</p>
-<div class="arithmatex">\[ x_1 + x_2 = 0 \]</div>
-<div class="arithmatex">\[ x_1 + x_2 = 1 \]</div>
-<p>그러므로 <span class="arithmatex">\(\text{rank} (A) = 1, \text{rank} (A|b) = 2\)</span> 이다. 정리에 의하여 이 방정식의 해가 없다.</p>
-</li>
-</ul>
-<hr/>
-<dl>
-<dt>ref:</dt>
-<dd>
-<p>Stephen H. Friedberg, Linear Algebra, 5<sup>th</sup> Edition</p>
-</dd>
-</dl>
-</article>
-</div>
-</div>
-<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+<h1>Redirect to Netlify</h1>
+<script> 
+setTimeout(function () {
+window.location.href = "https://ccss17.netlify.app/" + window.location.pathname;}, 3000);
+</script>
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
             Back to top
           </a>
-</main>
-<!-- 
+        
+      </main>
+      
+        <!-- 
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1443,16 +1499,26 @@
     </div>
   </div>
 </footer> -->
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
-<script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
-<script src="../../../javascripts/highlight.min.js"></script>
-<script src="../../../javascripts/config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
-<script src="../../../javascripts/b27b3e6448.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="../../../javascripts/highlight.min.js"></script>
+      
+        <script src="../../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../javascripts/b27b3e6448.js"></script>
+      
+    
+  </body>
 </html>

@@ -1,1255 +1,1477 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="ccsss" name="author"/>
-<link href="https://ccss17.github.io/Math/Polynomials/" rel="canonical"/>
-<link href="../../assets/images/bolt-solid.svg" rel="icon"/>
-<meta content="mkdocs-1.2.2, mkdocs-material-7.2.6" name="generator"/>
-<title>Polynomials - ccss17</title>
-<link href="../../assets/stylesheets/main.802231af.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&amp;display=fallback" rel="stylesheet"/>
-<style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
-<link href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" rel="stylesheet"/>
-<link href="../../stylesheets/config.css" rel="stylesheet"/>
-</head>
-<body data-md-color-accent="" data-md-color-primary="white" data-md-color-scheme="default" dir="ltr">
-<script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
-<script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
-<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
-<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
-<label class="md-overlay" for="__drawer"></label>
-<div data-md-component="skip">
-<a class="md-skip" href="#polynomial">
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <meta name="author" content="ccsss">
+      
+      
+        <link rel="canonical" href="https://ccss17.github.io/Math/Polynomials/">
+      
+      <link rel="icon" href="../../assets/images/bolt-solid.svg">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+  <title>Lorem ipsum dolor sit amet</title>
+
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nanum+Gothic:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Nanum Gothic";--md-code-font-family:""}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/config.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#polynomial" class="md-skip">
           Skip to content
         </a>
-</div>
-<div data-md-component="announce">
-</div>
-<header class="md-header" data-md-component="header">
-<nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="ccss17" class="md-header__button md-logo" data-md-component="logo" href="../.." title="ccss17">
-<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
-</a>
-<label class="md-header__button md-icon" for="__drawer">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
-</label>
-<div class="md-header__title" data-md-component="header-title">
-<div class="md-header__ellipsis">
-<div class="md-header__topic">
-<span class="md-ellipsis">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ccss17" class="md-header__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             ccss17
           </span>
-</div>
-<div class="md-header__topic" data-md-component="header-topic">
-<span class="md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Polynomials
             
           </span>
-</div>
-</div>
-</div>
-<form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="white" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"></path></svg>
-</label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="deep-purple" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
-<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"></path></svg>
-</label>
-</form>
-</nav>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+    
+  </nav>
 </header>
-<div class="md-container" data-md-component="container">
-<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
-<div class="md-tabs__inner md-grid">
-<ul class="md-tabs__list">
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
       ccss17
     </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../MathHistory/">
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../MathHistory/" class="md-tabs__link md-tabs__link--active">
         Math
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../paper/1404.6388/">
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../paper/1404.6388/" class="md-tabs__link">
         Paper
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Computer/nand2tetris/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Computer/nand2tetris/" class="md-tabs__link">
         Computer
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../ProgrammerBase/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ProgrammerBase/" class="md-tabs__link">
         ProgrammerBase
       </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../security-tutorial/">
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../security-tutorial/" class="md-tabs__link">
         security tutorial
       </a>
-</li>
-</ul>
-</div>
+    </li>
+  
+
+      
+    </ul>
+  </div>
 </nav>
-<main class="md-main" data-md-component="main">
-<div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
-<label class="md-nav__title" for="__drawer">
-<a aria-label="ccss17" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="ccss17">
-<img alt="logo" src="../../assets/images/bolt-solid.svg"/>
-</a>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ccss17" class="md-nav__button md-logo" aria-label="ccss17" data-md-component="logo">
+      
+  <img src="../../assets/images/bolt-solid.svg" alt="logo">
+
+    </a>
     ccss17
   </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../..">
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         ccss17
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2">
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
         Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Math" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Math" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
           Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" id="__nav_2_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_1">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
         Foundation of Math
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Foundation of Math" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_1">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Foundation of Math" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
           Foundation of Math
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../MathHistory/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathHistory/" class="md-nav__link">
         History of Math
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Logic/FormalSystem/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Logic/FormalSystem/" class="md-nav__link">
         Formal System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../incompleteness/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../incompleteness/" class="md-nav__link">
         Incompleteness theorem
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../turing/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../turing/" class="md-nav__link">
         Turing's proof
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../gentzen/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gentzen/" class="md-nav__link">
         Consistency proof of Peano arithmetic
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Set Theory
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Set Theory" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Set Theory" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
           Set Theory
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Set/Set/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set/Set/" class="md-nav__link">
         Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Set/numbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set/numbers/" class="md-nav__link">
         Number Theory
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Set/InfiniteSet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set/InfiniteSet/" class="md-nav__link">
         Infinite Set
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Set/ZFC/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Set/ZFC/" class="md-nav__link">
         ZFC axiom system
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../ArithmeticOperations/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ArithmeticOperations/" class="md-nav__link">
         Arithmetic Operations
       </a>
-</li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           Polynomials
           <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Polynomials
       </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#polynomial">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#polynomial" class="md-nav__link">
     Polynomial
   </a>
-<nav aria-label="Polynomial" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vector-space-mathbfp_mathbff">
+  
+    <nav class="md-nav" aria-label="Polynomial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector-space-mathbfp_mathbff" class="md-nav__link">
     Vector Space \(\mathbf{P}_{}(\mathbf{F})\)
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#division-of-polynomial">
+      
+        <li class="md-nav__item">
+  <a href="#division-of-polynomial" class="md-nav__link">
     Division of Polynomial
   </a>
-<nav aria-label="Division of Polynomial" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#relatively-prime">
+  
+    <nav class="md-nav" aria-label="Division of Polynomial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relatively-prime" class="md-nav__link">
     relatively prime
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#polynomial-and-linearity">
+      
+        <li class="md-nav__item">
+  <a href="#polynomial-and-linearity" class="md-nav__link">
     Polynomial and Linearity
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#monic-irreducible">
+      
+        <li class="md-nav__item">
+  <a href="#monic-irreducible" class="md-nav__link">
     monic, irreducible
   </a>
-<nav aria-label="monic, irreducible" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uniqueness-of-polynomial-factorization">
+  
+    <nav class="md-nav" aria-label="monic, irreducible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uniqueness-of-polynomial-factorization" class="md-nav__link">
     Uniqueness of Polynomial Factorization
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#polynomial-function">
+      
+        <li class="md-nav__item">
+  <a href="#polynomial-function" class="md-nav__link">
     Polynomial Function
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lagrange-interpolation-formula">
+      
+        <li class="md-nav__item">
+  <a href="#lagrange-interpolation-formula" class="md-nav__link">
     Lagrange Interpolation Formula
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fundamental-theorem-of-algebra">
+      
+        <li class="md-nav__item">
+  <a href="#fundamental-theorem-of-algebra" class="md-nav__link">
     Fundamental Theorem of Algebra
   </a>
+  
 </li>
-</ul>
+      
+    </ul>
+  
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../HyperrealNumbers/">
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HyperrealNumbers/" class="md-nav__link">
         Hyperreal Numbers
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../SurrealNumbers/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SurrealNumbers/" class="md-nav__link">
         Surreal Numbers
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" id="__nav_2_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_7">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_7" type="checkbox" id="__nav_2_7" >
+      
+      <label class="md-nav__link" for="__nav_2_7">
         Linear Algebra
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Linear Algebra" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_7">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linear Algebra" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_7">
+          <span class="md-nav__icon md-icon"></span>
           Linear Algebra
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../LinearAlgebra/VectorSpace/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinearAlgebra/VectorSpace/" class="md-nav__link">
         Vector Space
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../LinearAlgebra/LinearTransformation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinearAlgebra/LinearTransformation/" class="md-nav__link">
         Linear Transformation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../LinearAlgebra/MatrixOperation/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinearAlgebra/MatrixOperation/" class="md-nav__link">
         Matrix Operation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../LinearAlgebra/Determinants/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinearAlgebra/Determinants/" class="md-nav__link">
         Determinants
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../LinearAlgebra/Diagonalization/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinearAlgebra/Diagonalization/" class="md-nav__link">
         Diagonalization
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../LinearAlgebra/InnerProductSpaces/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinearAlgebra/InnerProductSpaces/" class="md-nav__link">
         Inner Product Spaces
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../LinearAlgebra/CanonicalForms/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LinearAlgebra/CanonicalForms/" class="md-nav__link">
         Canonical Forms
       </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
         Paper
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Paper" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Paper" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
           Paper
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/1404.6388/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/1404.6388/" class="md-nav__link">
         Performance of Python runtimes on a non-numeric scientific code
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/1102.1523/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/1102.1523/" class="md-nav__link">
         The NumPy array: a structure for efficient numerical computation
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/facenet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/facenet/" class="md-nav__link">
         Facenet (2015)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/quadruplet/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/quadruplet/" class="md-nav__link">
         Quadruplet (2017)
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../paper/blueborne/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/blueborne/" class="md-nav__link">
         BlueBorne
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
         Computer
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Computer" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Computer" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
           Computer
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/nand2tetris/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/nand2tetris/" class="md-nav__link">
         Nand to Tetris
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/future/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/future/" class="md-nav__link">
         Why the future doesn't need us
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Computer/Rust/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Computer/Rust/" class="md-nav__link">
         Rust Memo
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
         ProgrammerBase
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="ProgrammerBase" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ProgrammerBase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
           ProgrammerBase
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5_2">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      <label class="md-nav__link" for="__nav_5_2">
         Contents
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="Contents" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_5_2">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Contents" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
           Contents
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/01-Day1/readme/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/01-Day1/readme/" class="md-nav__link">
         Day 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/02-Day2/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/02-Day2/readme/" class="md-nav__link">
         Day 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/03-Day3/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/03-Day3/readme/" class="md-nav__link">
         Day 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/04-Day4/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/04-Day4/readme/" class="md-nav__link">
         Day 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/05-Day5/readme/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/05-Day5/readme/" class="md-nav__link">
         Day 5
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/docker/">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/docker/" class="md-nav__link">
         Docker
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/codingconvention/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/codingconvention/" class="md-nav__link">
         Coding Convention
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/build/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/build/" class="md-nav__link">
         Build System
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/information/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/information/" class="md-nav__link">
         Information
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/git/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/git/" class="md-nav__link">
         Git
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/vscode/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/vscode/" class="md-nav__link">
         VSCode
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/markdown/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/markdown/" class="md-nav__link">
         Markdown
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/tmux/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/tmux/" class="md-nav__link">
         Tmux
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/vim/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/vim/" class="md-nav__link">
         Vim
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../ProgrammerBase/cli/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ProgrammerBase/cli/" class="md-nav__link">
         CLI
       </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6">
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
         security tutorial
         <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-label="security tutorial" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
-<span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="security tutorial" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
           security tutorial
         </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/">
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/" class="md-nav__link">
         README
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/01-Base/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/01-Base/" class="md-nav__link">
         Day1 Base
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/02-Computer1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/02-Computer1/" class="md-nav__link">
         Day2 Computer Principle 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/03-Computer2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/03-Computer2/" class="md-nav__link">
         Day3 Computer Principle 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/04-Reversing1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/04-Reversing1/" class="md-nav__link">
         Day4 Reversing 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/05-Reversing2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/05-Reversing2/" class="md-nav__link">
         Day5 Reversing 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/06-Exploit1/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/06-Exploit1/" class="md-nav__link">
         Day6 Exploit 1
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/07-Exploit2/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/07-Exploit2/" class="md-nav__link">
         Day7 Exploit 2
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/08-Exploit3/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/08-Exploit3/" class="md-nav__link">
         Day8 Exploit 3
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/09-Exploit4/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/09-Exploit4/" class="md-nav__link">
         Day9 Exploit 4
       </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../security-tutorial/10-Pentesting/">
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security-tutorial/10-Pentesting/" class="md-nav__link">
         Day10 Pentesting
       </a>
-</li>
-</ul>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
 </nav>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-<div class="md-sidebar__scrollwrap">
-<div class="md-sidebar__inner">
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<!-- <label class="md-nav__title" for="__toc">
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <!-- <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label> -->
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#polynomial">
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#polynomial" class="md-nav__link">
     Polynomial
   </a>
-<nav aria-label="Polynomial" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#vector-space-mathbfp_mathbff">
+  
+    <nav class="md-nav" aria-label="Polynomial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vector-space-mathbfp_mathbff" class="md-nav__link">
     Vector Space \(\mathbf{P}_{}(\mathbf{F})\)
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#division-of-polynomial">
+      
+        <li class="md-nav__item">
+  <a href="#division-of-polynomial" class="md-nav__link">
     Division of Polynomial
   </a>
-<nav aria-label="Division of Polynomial" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#relatively-prime">
+  
+    <nav class="md-nav" aria-label="Division of Polynomial">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relatively-prime" class="md-nav__link">
     relatively prime
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#polynomial-and-linearity">
+      
+        <li class="md-nav__item">
+  <a href="#polynomial-and-linearity" class="md-nav__link">
     Polynomial and Linearity
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#monic-irreducible">
+      
+        <li class="md-nav__item">
+  <a href="#monic-irreducible" class="md-nav__link">
     monic, irreducible
   </a>
-<nav aria-label="monic, irreducible" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#uniqueness-of-polynomial-factorization">
+  
+    <nav class="md-nav" aria-label="monic, irreducible">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uniqueness-of-polynomial-factorization" class="md-nav__link">
     Uniqueness of Polynomial Factorization
   </a>
+  
 </li>
-</ul>
-</nav>
+        
+      </ul>
+    </nav>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#polynomial-function">
+      
+        <li class="md-nav__item">
+  <a href="#polynomial-function" class="md-nav__link">
     Polynomial Function
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lagrange-interpolation-formula">
+      
+        <li class="md-nav__item">
+  <a href="#lagrange-interpolation-formula" class="md-nav__link">
     Lagrange Interpolation Formula
   </a>
+  
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#fundamental-theorem-of-algebra">
+      
+        <li class="md-nav__item">
+  <a href="#fundamental-theorem-of-algebra" class="md-nav__link">
     Fundamental Theorem of Algebra
   </a>
+  
 </li>
-</ul>
+      
+    </ul>
+  
 </nav>
-</div>
-</div>
-</div>
-<div class="md-content" data-md-component="content">
-<article class="md-content__inner md-typeset">
-<h1>Polynomials</h1>
-<h2 id="polynomial">Polynomial<a class="headerlink" href="#polynomial" title="Permanent link">¶</a></h2>
-<a href="#bfefdb74e"><div class="admonition def" id="bfefdb74e">
-<p class="admonition-title">다항식(polynomial)</p>
-<p>계수가 체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 원소인 다항식은 다음과 같다. </p>
-<div class="arithmatex">\[ f(x) = a_nx ^{n} + a _{n-1} x ^{n-1} + \dots + a_1x + a_0 \]</div>
-</div></a>
-<ul>
-<li>
-<p><span class="arithmatex">\(n\)</span> 을 차수(degree)라 하고 <span class="arithmatex">\(\deg (f) = n\)</span> 이라 표기한다. 차수는 음이 아닌 정수이다. 차수는 계수가 <span class="arithmatex">\(0\)</span> 이 아닌 항의 <span class="arithmatex">\(x\)</span> 의 지수 중 가장 큰 값으로 정의된다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(a_k\)</span> 를 <span class="arithmatex">\(x ^{k}\)</span> 의 계수(coefficient)라 한다. 계수는 <span class="arithmatex">\(\mathbf{F}\)</span> 의 원소이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(f(x) = 0\)</span>, 즉 <span class="arithmatex">\(a_n = a _{n-1} = \dots = a_0 = 0\)</span> 이면 <span class="arithmatex">\(f(x)\)</span> 를 영 다항식(zero polynomial)이라 한다. 영 다항식의 차수는 <span class="arithmatex">\(-1\)</span> 로 정의한다.</p>
-</li>
-</ul>
-<a href="#b3486412c"><div class="admonition def" id="b3486412c">
-<p class="admonition-title">다항식의 상등(equality of polynomial)</p>
-<p>다음 두 다항식 <span class="arithmatex">\(f, g\)</span> 에 대하여 <span class="arithmatex">\(m = n \land \forall i \in \{0, \dots, n\} : a_i = b_i\)</span> 이면 <span class="arithmatex">\(f, g\)</span> 를 같다고 한다.</p>
-<div class="arithmatex">\[ f(x) = a_nx ^{n} + a _{n-1} x ^{n-1} + \dots + a_1x + a_0 \]</div>
-<div class="arithmatex">\[ g(x) = b_mx ^{m} + b _{m-1} x ^{m-1} + \dots + b_1x + b_0 \]</div>
-</div></a>
-<a href="#e9446ce77"><div class="admonition def" id="e9446ce77">
-<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 가 무한집합이면 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 계수를 가져온 다항식은 <span class="arithmatex">\(\mathbf{F}\to \mathbf{F}\)</span> 위에서 정의된 함수이다.</p>
-</div></a>
-<ul>
-<li>
-<p>함수 <span class="arithmatex">\(f(x) = a_nx ^{n} + a _{n-1} x ^{n-1} + \dots + a_1x + a_0\)</span> 의 <span class="arithmatex">\(c \in \mathbf{F}\)</span> 에서의 함숫값은 다음 스칼라이다.</p>
-<div class="arithmatex">\[ f(c) = a_nc ^{n} + a _{n-1} c ^{n-1} + \dots + a_1c + a_0 \]</div>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{F}\)</span> 가 무한집합일 때 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 계수를 가져온 다항식을 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 <span class="arithmatex">\(\mathbf{F}\)</span> 로 가는 함수로 볼 수 있다. 아래에서 정리 10 을 보자.</p>
-</li>
-</ul>
-<h3 id="vector-space-mathbfp_mathbff">Vector Space <span class="arithmatex">\(\mathbf{P}_{}(\mathbf{F})\)</span><a class="headerlink" href="#vector-space-mathbfp_mathbff" title="Permanent link">¶</a></h3>
-<a href="#3283b6373"><div class="admonition def" id="3283b6373">
-<p class="admonition-title">벡터공간 <span class="arithmatex">\(\mathbf{P}_{}(\mathbf{F})\)</span></p>
-<p>다음과 같은 체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 계수를 가져온 두 다항식 <span class="arithmatex">\(f, g\)</span> 에 대하여 <span class="arithmatex">\(m \leq n\)</span> 일 때 <span class="arithmatex">\(b _{m+1} = b _{m+2} = \dots = b_n= 0\)</span> 으로 정의하자.</p>
-<div class="arithmatex">\[ f(x) = a_n x ^{n} + a _{n-1}x ^{n-1} + \dots + a_1x + a_0 \]</div>
-<div class="arithmatex">\[ g(x) = b_m x ^{m} + a _{m-1}x ^{m-1} + \dots + b_1x + b_0 \]</div>
-<p>두 다항식의 합과 스칼라곱을 다음과 같이 정의한 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 계수를 가져온 모든 다항식 집합을 벡터공간 <span class="arithmatex">\(\mathbf{P}(\mathbf{F})\)</span> 이라 정의한다.</p>
-<div class="arithmatex">\[ f(x) + g(x) = (a_n+b_n) x ^{n} + (a _{n-1}+b _{n-1})x ^{n-1} + \dots+(a_1+b_1)x+(a_0+b_0) \]</div>
-<div class="arithmatex">\[ cf(x) = ca_n x ^{n} + ca _{n-1}x ^{n-1} + \dots + ca_1x + ca_0 \]</div>
-</div></a>
-<ul>
-<li>
-<p><span class="arithmatex">\(\mathbf{P}_{}(\mathbf{F})\)</span> 에서 <a href="../LinearAlgebra/VectorSpace/#115df4450">벡터공간</a>의 공리가 모두 성립한다.</p>
-</li>
-<li>
-<p>차수가 <span class="arithmatex">\(n\)</span> 인 다항식 집합을 <span class="arithmatex">\(\mathbf{P}_{n}(\mathbf{F}) (\subset \mathbf{P}_{}(\mathbf{F}))\)</span> 라 한다.</p>
-</li>
-<li>
-<p>벡터공간 <span class="arithmatex">\(\mathbf{P}(\mathbf{F})\)</span> 와 다음 예제에서 보이는 벡터공간은 <a href="../LinearAlgebra/LinearTransformation/#28bdb2c98">본질적으로 같다.</a> </p>
-</li>
-<li>
-<p>예시 </p>
-<p>임의의 체 <span class="arithmatex">\(\mathbf{F}\)</span> 위에서 정의된 수열(sequence)은 <span class="arithmatex">\(\N \to \mathbf{F}\)</span> 인 함수이다. 보통 수열 <span class="arithmatex">\(\sigma (n) = a_n\)</span> 을 <span class="arithmatex">\((a_n)\)</span> 으로 표기한다. 체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 정의된 모든 수열의 집합을 <span class="arithmatex">\(\mathbf{V}\)</span> 라고 하자. 두 수열 <span class="arithmatex">\((a_n),(b_n)\)</span> 을 다음과 같이 합과 스칼라곱으로 정의하면 <span class="arithmatex">\(\mathbf{V}\)</span> 는 벡터공간이다.</p>
-<div class="arithmatex">\[ (a_n)+(b_n)=(a_n+b_n) \qquad t(a_n) = (ta_n) \]</div>
-</li>
-</ul>
-<h2 id="division-of-polynomial">Division of Polynomial<a class="headerlink" href="#division-of-polynomial" title="Permanent link">¶</a></h2>
-<a href="#5925b038f"><div class="admonition def" id="5925b038f">
-<p class="admonition-title">다항식의 나눗셈(division of polynomial)</p>
-<p>두 다항식 <span class="arithmatex">\(f, g\)</span> 에 대하여 <span class="arithmatex">\(g(x) = f(x)q(x)\)</span> 인 다항식 <span class="arithmatex">\(q\)</span> 가 존재하면 다항식 <span class="arithmatex">\(f\)</span> 가 다항식 <span class="arithmatex">\(g\)</span> 를 나눈다고 정의한다.</p>
-</div></a>
-<a href="#0ebf3215c"><div class="admonition def" id="0ebf3215c">
-<p class="admonition-title">정리 1 다항식의 나눗셈 정리(division algorithm for polynomials)</p>
-<p>다항식 <span class="arithmatex">\(f(x)\)</span> 와 다항식 <span class="arithmatex">\(g(x)\)</span> 에 대하여 <span class="arithmatex">\(\deg (g) \geq 0\)</span> 이면 다음을 만족하는 다항식 <span class="arithmatex">\(q(x), r(x)\)</span> 가 유일하게 존재하고, <span class="arithmatex">\(\deg (r) &lt; \deg (g)\)</span> 이다.</p>
-<div class="arithmatex">\[ f(x) = q(x)g(x) + r(x) \]</div>
-</div></a>
-<ul>
-<li>
-<p><strong><span class="arithmatex">\(q(x), r(x)\)</span> 를 각각 <span class="arithmatex">\(f(x)\)</span> 를 <span class="arithmatex">\(g(x)\)</span> 로 나누었을 때의 몫(quotient) 과 나머지(remainder) 라 한다.</strong></p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\deg (f) &lt; \deg (g)\)</span> 일 때 <span class="arithmatex">\(q(x) = 0, r(x) = f(x)\)</span> 로 두면 정리가 성립한다. ▲ </p>
-<p><span class="arithmatex">\(0 \leq \deg (g) &lt; \deg (f) \land \deg (f) = 0\)</span> 이면 <span class="arithmatex">\(f, g\)</span> 는 상수 다항식이므로 <span class="arithmatex">\(q(x) = \dfrac{f(x)}{g(x)}, r(x) = 0\)</span> 으로 두면 정리가 성립한다. ▲ </p>
-<p><span class="arithmatex">\(0 \leq \deg (g) &lt; \deg (f) \land \deg (f) &gt; 0\)</span> 일 때 <span class="arithmatex">\(\deg (f) = n, \deg (g) = m\)</span> 으로 두자.  <span class="arithmatex">\(n\)</span> 미만의 차수를 갖는 다항식에서 정리가 성립함을 가정하자. <span class="arithmatex">\(n\)</span>차 다항식 <span class="arithmatex">\(f\)</span> 와 <span class="arithmatex">\(m\)</span>차 다항식 <span class="arithmatex">\(g\)</span> 와 또 다른 다항식 <span class="arithmatex">\(h\)</span> 를 다음과 같이 정의하자.</p>
-<div class="arithmatex">\[ f(x) = a_n x ^{n} + a _{n-1}x ^{n-1} + \dots + a_1x + a_0 \]</div>
-<div class="arithmatex">\[ g(x) = b_m x ^{m} + a _{m-1}x ^{m-1} + \dots + b_1x + b_0 \]</div>
-<div class="arithmatex">\[ h(x) = f(x) - \frac{a_n}{b_m}x ^{n-m}g(x) \tag{1} \]</div>
-<p><span class="arithmatex">\(h\)</span> 는 <span class="arithmatex">\(\deg (h) &lt; \deg (f)\)</span> 인 다항식이다. 귀납법의 가정에 의하여 <span class="arithmatex">\(g, h\)</span> 에 대하여 정리가 성립하므로 다음을 만족하는 다항식 <span class="arithmatex">\(q_1, r\)</span> 이 유일하게 존재하고, <span class="arithmatex">\(\deg (r) &lt; \deg (m)\)</span> 이다.</p>
-<div class="arithmatex">\[ h(x) = q_1(x)g(x) + r(x) \tag{2} \]</div>
-<p><span class="arithmatex">\((1), (2)\)</span> 를 <span class="arithmatex">\(f(x)\)</span> 에 대하여 풀면 <span class="arithmatex">\(q(x) = a_nb_m ^{-1}x ^{n-m} + q_1(x)\)</span> 에 대하여 <span class="arithmatex">\(f(x) = q(x)g(x) + r(x)\)</span> 이다. 존재성 증명이 끝났으므로 유일성 증명만 하면 모든 증명이 끝난다. ▲ </p>
-<p>이제 본 정리의 존재성을 가정할 수 있으므로 다음을 만족하는 다항식 <span class="arithmatex">\(q_1,q_2,r_1,r_2\)</span> 가 존재하고, <span class="arithmatex">\(\deg (r_1) &lt; \deg (g), \deg (r_2) &lt; \deg (g)\)</span> 이다.</p>
-<div class="arithmatex">\[ f(x) = q_1(x)g(x) + r_1(x) = q_2(x)g(x) + r_2(x) \]</div>
-<p>식을 정리하면 다음이 성립한다.</p>
-<div class="arithmatex">\[ \{q_1(x) - q_2(x)\}g(x) = r_2(x) - r_1(x) \]</div>
-<p><span class="arithmatex">\(\deg (r_2(x) - r_1(x))&lt;\deg (g)\)</span> 이므로 만약 <span class="arithmatex">\(\deg (q_1(x) - q_2(x))\geq 0\)</span> 이면 모순이다. 따라서 <span class="arithmatex">\(\deg (q_1(x) - q_2(x)) = -1\)</span> 이다. 따라서 <span class="arithmatex">\(q_1(x) - q_2(x) = 0 \implies q_1 = q_2\)</span> 이다. 그러면 <span class="arithmatex">\(0 = r_2(x) - r_1(x) \implies r_1 = r_2\)</span> 도 성립한다. ■ </p>
-</li>
-</ul>
-<a href="#e8de0d079"><div class="admonition def" id="e8de0d079">
-<p class="admonition-title">정리 1 다항식의 나눗셈 정리(division algorithm for polynomials) 따름정리 1</p>
-<p><span class="arithmatex">\(a \in \mathbf{F}\)</span> 에 대하여 다항식 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(\deg (f) \geq 1\)</span> 이면 다음은 동치이다. </p>
-<ul>
-<li>
-<p><span class="arithmatex">\(f(a) = 0\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(x-a\)</span> 가 <span class="arithmatex">\(f(x)\)</span> 를 나눈다.</p>
-</li>
-</ul>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 다항식이 해를 가지면 <a href="../LinearAlgebra/Diagonalization/#12bf9c352">완전히 인수분해</a>됨을 말해준다.</p>
-</li>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(x-a\)</span> 가 <span class="arithmatex">\(f(x)\)</span> 를 나눈다고 하면 <span class="arithmatex">\(f(x) = (x-a)q(x)\)</span> 인 다항식 <span class="arithmatex">\(q(x)\)</span> 가 존재하므로 <span class="arithmatex">\(f(a) = 0\)</span> 이다. ▲ </p>
-<p><span class="arithmatex">\(f(a) = 0\)</span> 을 가정하자. 다항식의 나눗셈 정리에 의하여 <span class="arithmatex">\(f(x) = q(x)(x-a) + r(x)\)</span> 를 만족하는 다항식 <span class="arithmatex">\(q,r\)</span> 이 존재한다. <span class="arithmatex">\(\deg (r) &lt; 1\)</span> 이다. 즉, <span class="arithmatex">\(c \in \mathbf{F} : r(x) = c\)</span> 이다. 그러면 <span class="arithmatex">\(f(a) = 0 + r(a) = 0\)</span> 이 성립하므로 <span class="arithmatex">\(c = 0\)</span> 을 얻는다. ■ </p>
-</li>
-</ul>
-<a href="#bb1063b23"><div class="admonition def" id="bb1063b23">
-<p class="admonition-title">정리 1 다항식의 나눗셈 정리(division algorithm for polynomials) 따름정리 2</p>
-<p><span class="arithmatex">\(n (\geq 1)\)</span>차 다항식은 최대 <span class="arithmatex">\(n\)</span> 개의 서로 다른 근이 있다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(n = 1\)</span> 인 경우는 자명하다. ▲ </p>
-<p><span class="arithmatex">\(n\)</span> 에 대하여 성립함을 가정하고 <span class="arithmatex">\(n + 1\)</span> 의 경우를 증명하자. <span class="arithmatex">\(\deg (f) = n+1\)</span> 인 <span class="arithmatex">\(f(x)\)</span> 의 해가 없다면 정리가 자동으로 성립한다. ▲ </p>
-<p><span class="arithmatex">\(f(x)\)</span> 의 해가 있다고 가정하면 정리 1 따름정리 1 에 의하여 <span class="arithmatex">\(a \in \mathbf{F}\)</span> 에 대하여 <span class="arithmatex">\(f(x) = (x - a)q(x)\)</span> 가 성립한다. <span class="arithmatex">\(\deg (q) &lt; n+1\)</span> 이다. 귀납법의 가정에 의하여 <span class="arithmatex">\(q\)</span> 는 최대 <span class="arithmatex">\(n\)</span> 개의 해를 가진다. <span class="arithmatex">\(f\)</span> 의 해는 <span class="arithmatex">\(a\)</span> 와 <span class="arithmatex">\(q\)</span> 의 해이므로 <span class="arithmatex">\(f\)</span> 는 최대 <span class="arithmatex">\(n+1\)</span> 개의 해를 가진다. ■ </p>
-</li>
-</ul>
-<h3 id="relatively-prime">relatively prime<a class="headerlink" href="#relatively-prime" title="Permanent link">¶</a></h3>
-<a href="#c7b1c37b3"><div class="admonition def" id="c7b1c37b3">
-<p class="admonition-title">서로소(relatively prime)</p>
-<p>다항식 <span class="arithmatex">\(f_1(x), f_2(x), \dots, f_n(x)\)</span> 를 동시에 나누는 다항식이 오직 상수 다항식이면 <span class="arithmatex">\(f_1(x), f_2(x), \dots, f_n(x)\)</span> 를 서로소라 한다.</p>
-</div></a>
-<ul>
-<li>
-<p>예시 </p>
-<p>다항식 <span class="arithmatex">\(f(x) = x(x-1)\)</span> 와 <span class="arithmatex">\(h(x) = (x-1)(x-2)\)</span> 은 서로소가 아니다. 다항식 <span class="arithmatex">\(f(x)\)</span> 와 <span class="arithmatex">\(g(x) = (x-2)(x-3)\)</span> 은 서로소이다. </p>
-</li>
-<li>
-<p>아래의 정리 9 는 다항식의 인수분해가 유일함을 말해준다. 즉, 위 예시에서 다항식 <span class="arithmatex">\(f, g\)</span> 가 또 다른 형태로 인수분해되어 서로소가 아니게 될 가능성이 없다는 것이다.</p>
-</li>
-</ul>
-<a href="#383a6eb2e"><div class="admonition def" id="383a6eb2e">
-<p class="admonition-title">보조정리</p>
-<p>서로소인 두 다항식 <span class="arithmatex">\(f_1(x), f_2(x)\)</span> 에 대하여 <span class="arithmatex">\(q_1(x)f_1(x) + q_2(x)f_2(x) = 1\)</span> 을 만족하는 다항식 <span class="arithmatex">\(q_1(x), q_2(x)\)</span> 가 존재한다. </p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\deg (f_1) \geq \deg (f_2)\)</span> 를 가정해도 일반성이 보존된다.</p>
-<p><span class="arithmatex">\(\deg (f_2) = 0\)</span> 이면 <span class="arithmatex">\(c \in  \mathbf{F}\setminus \{0\} : f_2(x) = c\)</span> 이므로 <span class="arithmatex">\(q_1(x) = 0, q_2(x) = \dfrac{1}{c}\)</span> 로 두면 정리가 성립한다. ▲ </p>
-<p>자연수 <span class="arithmatex">\(n\)</span> 미만의 차수 다항식에서 정리가 성립함을 가정하고 <span class="arithmatex">\(n\)</span> 에 대하여 증명하자. <span class="arithmatex">\(\deg (f_2) = n &gt; 0\)</span> 으로 두자. 다항식의 나눗셈 정리에 의하여 다음을 만족하는 다항식 <span class="arithmatex">\(q,r\)</span> 이 유일하게 존재하고, <span class="arithmatex">\(\deg (r) &lt; \deg (f_2) = n\)</span> 이다.</p>
-<div class="arithmatex">\[ f_1(x) = q(x)f_2(x) + r(x) \tag{1} \]</div>
-<p><span class="arithmatex">\(f_1, f_2\)</span> 가 서로소이므로 <span class="arithmatex">\(\deg (r) \geq 0\)</span> 이다. 즉, <span class="arithmatex">\(0 \leq \deg (r) &lt; \deg (f_2)\)</span> 이다.</p>
-<p><span class="arithmatex">\(f_2(x)\)</span> 와 <span class="arithmatex">\(r(x)\)</span> 가 서로소가 아니면 이 둘을 나누는 다항식 <span class="arithmatex">\(g(x)\)</span> 가 존재하므로 <span class="arithmatex">\((1)\)</span> 에 의하여 <span class="arithmatex">\(g\)</span> 는 <span class="arithmatex">\(f_1\)</span> 도 나눈다. <span class="arithmatex">\(g\)</span> 가 <span class="arithmatex">\(f_1, f_2\)</span> 를 동시에 나누므로 <span class="arithmatex">\(f_1, f_2\)</span> 가 서로소라는 가정에 모순이다. 따라서 <span class="arithmatex">\(f_2, r\)</span> 은 서로소이다.</p>
-<p><span class="arithmatex">\(\deg (r) &lt; n\)</span> 이므로 귀납법의 가정에 의하여 <span class="arithmatex">\(f_2, r\)</span> 에 대하여 다음을 만족하는 다항식 <span class="arithmatex">\(g_1, g_2\)</span> 가 존재한다. </p>
-<div class="arithmatex">\[ g_1(x)f_2(x) + g_2(x)r(x) = 1 \tag{2} \]</div>
-<p><span class="arithmatex">\((1), (2)\)</span> 에 의하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} 1&amp;= g_1(x)f_2(x) + g_2(x) \{f_1(x) - q(x)f_2(x)\} \\ &amp;= g_2(x)f_1(x) + \{g_1(x) - g_2(x)q(x)\}f_2(x) \\ \end{split}\end{equation} \tag*{} \]</div>
-<p>■ </p>
-</li>
-</ul>
-<a href="#942fa2533"><div class="admonition def" id="942fa2533">
-<p class="admonition-title">정리 2</p>
-<p>서로소인 다항식 <span class="arithmatex">\(f_1(x), f_2(x), \dots, f_n(x)\)</span> 에 대하여 다음을 만족하는 다항식 <span class="arithmatex">\(q_1(x), q_2(x), \dots, q_n(x)\)</span> 가 존재한다. </p>
-<div class="arithmatex">\[ q_1(x)f_1(x) + q_2(x)f_2(x) + \dots + q_n(x)f_n(x) = 1 \]</div>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>다항식의 개수를 <span class="arithmatex">\(n\)</span> 으로 두고 수학적 귀납법을 사용하자.</p>
-<p><span class="arithmatex">\(n = 2\)</span> 의 경우는 보조정리에서 증명되었다. ▲ </p>
-<p><span class="arithmatex">\(n \geq 3\)</span> 일 때 <span class="arithmatex">\(n-1\)</span> 개의 다항식에 대하여 정리가 성립함을 가정하고 <span class="arithmatex">\(n\)</span>개의 다항식에서 정리를 증명하자. 처음 <span class="arithmatex">\(n-1\)</span>개의 다항식이 서로소라고 가정하면 귀납법의 가정에 의하여 다음을 만족하는 다항식 <span class="arithmatex">\(q_1, q_2, \dots, q _{n-1}\)</span> 이 존재한다. </p>
-<div class="arithmatex">\[ q_1(x)f_1(x) + q_2(x)f_2(x) + \dots + q _{n-1}(x)f _{n-1}(x) = 1 \]</div>
-<p><span class="arithmatex">\(q_n(x) = 0\)</span> 으로 두면 <span class="arithmatex">\(q_1(x)f_1(x) + q_2(x)f_2(x) + \dots + q _{n}(x)f _{n}(x) = 1\)</span> 이므로 증명이 끝난다. ▲ </p>
-<p>처음 <span class="arithmatex">\(n-1\)</span>개의 다항식이 서로소가 아니라고 가정하면 이들을 모두 나누고 가장 큰 차수를 가지고 최고차항의 계수가 <span class="arithmatex">\(1\)</span>인 다항식 <span class="arithmatex">\(g(x)\)</span> 가 존재한다. 따라서 <span class="arithmatex">\(k \in \{1,\dots,n-1\}\)</span> 에 대하여 <span class="arithmatex">\(f_k(x) = g(x)h_k(x)\)</span> 인 다항식 <span class="arithmatex">\(h_k\)</span> 가 존재하고, <span class="arithmatex">\(h_1, h_2, \dots, h _{n-1}\)</span> 은 서로소이다. 귀납법의 가정에 의하여 다음을 만족하는 다항식 <span class="arithmatex">\(\phi _1, \phi _2, \dots, \phi _{n-1}\)</span> 이 존재한다.</p>
-<div class="arithmatex">\[ \phi _1(x)h_1(x) + \phi _2(x)h_2(x) + \dots + \phi  _{n-1}(x)h _{n-1}(x) = 1 \]</div>
-<p>이 식에 <span class="arithmatex">\(g(x)\)</span> 를 곱하면 다음이 성립한다.</p>
-<div class="arithmatex">\[ \phi _1(x)f_1(x) + \phi _2(x)f_2(x) + \dots + \phi  _{n-1}(x)f _{n-1}(x) = g(x) \]</div>
-<p>정리의 가정에 의하여 <span class="arithmatex">\(g(x)\)</span> 는 <span class="arithmatex">\(f_n(x)\)</span> 과 서로소이다. 서로소가 아니면 정리의 가정에 위배된다. 보조정리에 의하여 <span class="arithmatex">\(p(x)g(x) + q_n(x)f_n(x) = 1\)</span> 인 다항식 <span class="arithmatex">\(p(x), q_n(x)\)</span> 이 존재한다. <span class="arithmatex">\(i \in \{1, \dots, n-1\}\)</span> 에 대하여 <span class="arithmatex">\(q_i(x) = p(x)\phi _i(x)\)</span> 라 하면 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split}
-1 &amp;= p(x)g(x) + q_n(x)f_n(x) \\
-&amp;= p(x)\{\phi _1(x)f_1(x) + \phi _2(x)f_2(x) + \dots + \phi  _{n-1}(x)f _{n-1}(x)\} + q_n(x)f_n(x)\\
-&amp;=q_1(x)f_1(x) + q_2(x)f_2(x) + \dots + q _{n}(x)f _{n}(x) 
-\end{split}\end{equation} \tag*{} \]</div>
-<p>■ </p>
-</li>
-</ul>
-<h2 id="polynomial-and-linearity">Polynomial and Linearity<a class="headerlink" href="#polynomial-and-linearity" title="Permanent link">¶</a></h2>
-<a href="#3ccc8e1e0"><div class="admonition def" id="3ccc8e1e0">
-<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 원소를 계수로 하는 다음과 같은 다항식 <span class="arithmatex">\(f(x)\)</span> 가 존재한다.</p>
-<div class="arithmatex">\[ f(x) = a_0 + a_1x + \dots + a_nx ^{n} \]</div>
-<p><span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 에 대하여 <span class="arithmatex">\(f(\mathbf{T})\)</span> 를 다음과 같이 정의한다.</p>
-<div class="arithmatex">\[ f(\mathbf{T}) = a_0 \mathbf{I} + a_1 \mathbf{T} + \dots + a_n \mathbf{T}^{n} \]</div>
-<p>행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F})\)</span> 에 대하여 <span class="arithmatex">\(f(A)\)</span> 를 다음과 같이 정의한다.</p>
-<div class="arithmatex">\[ f(A) = a_0I_n + a_1A + \dots + a_nA ^{n} \]</div>
-</div></a>
-<ul>
-<li>
-<p>예시</p>
-<p><span class="arithmatex">\(\R ^{2}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}(a, b) = (2a+b,a-b)\)</span>  와 <span class="arithmatex">\(f(x) = x ^{2}+2x-3\)</span> 를 가정하자. <span class="arithmatex">\(\mathbf{T}^{2}(a,b) = (5a+b,a+2b)\)</span> 이다. 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} f(\mathbf{T})(a, b)&amp;= (\mathbf{T}^{2}+2 \mathbf{T}-3 \mathbf{I})(a, b)\\ &amp;= (5a+b,a+2b)+(4a+2b,2a-2b)-3(a,b)\\ &amp;= (6a+3b,3a-3b) \end{split}\end{equation} \tag*{} \]</div>
-<p>행렬 <span class="arithmatex">\(A = \begin{pmatrix} 2&amp;1\\ 1&amp;-1\\ \end{pmatrix}\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ f(A)=A ^{2}+2A-3I_2=\begin{pmatrix} 5&amp;1\\ 1&amp;2\\ \end{pmatrix}+2 \begin{pmatrix} 2&amp;1\\ 1&amp;-1\\ \end{pmatrix}-3 \begin{pmatrix} 1&amp;0\\ 0&amp;1\\ \end{pmatrix}= \begin{pmatrix} 6&amp;3\\ 3&amp;-3\\ \end{pmatrix} \]</div>
-</li>
-</ul>
-<a href="#5edb99553"><div class="admonition def" id="5edb99553">
-<p class="admonition-title">정리 3</p>
-<p>다항식 <span class="arithmatex">\(f(x) \in \mathbf{P}_{}(\mathbf{F})\)</span> 와 <span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 에 대하여 다음이 성립한다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(f(\mathbf{T})\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자이다.</p>
-</li>
-<li>
-<p><span class="arithmatex">\(\mathbf{V}\)</span> 의 유한순서기저 <span class="arithmatex">\(\beta\)</span> 와 <span class="arithmatex">\(A = [\mathbf{T}]_{\beta }\)</span> 에 대하여 <span class="arithmatex">\([f(\mathbf{T})]_{\beta } = f(A)\)</span> 이다.</p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>1:</p>
-<p><a href="../LinearAlgebra/LinearTransformation/#c96eea3c8">선형연산자</a> 의 정의가 충족되는지 살펴보자. <span class="arithmatex">\(f\)</span> 를 다음과 같이 정의하자.</p>
-<div class="arithmatex">\[ f(x) = a_0 + a_1x + \dots + a_nx ^{n} \]</div>
-<p><span class="arithmatex">\(f(\mathbf{T})\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ f(\mathbf{T}) = a_0 \mathbf{I} + a_1 \mathbf{T} + \dots + a_n \mathbf{T}^{n} \]</div>
-<p><a href="../LinearAlgebra/LinearTransformation/#91b876399">선형변환의 합과 스칼라곱도 선형</a>이다. 따라서 <span class="arithmatex">\(f(\mathbf{T})\)</span> 는 선형이다. ▲ </p>
-<p><a href="../LinearAlgebra/Diagonalization/#2561e1047"><span class="arithmatex">\(\mathbf{R}(\mathbf{T})\)</span> 는 <span class="arithmatex">\(\mathbf{T}\)</span>-불변</a>이므로 <span class="arithmatex">\(n \in \N : \mathbf{R}(\mathbf{T}^{n}) \in \mathbf{V}\)</span> 이다. <a href="../LinearAlgebra/LinearTransformation/#eb957cbf0"><span class="arithmatex">\(\mathbf{R}(\mathbf{T})\)</span> 는 <span class="arithmatex">\(\mathbf{V}\)</span> 의 부분공간</a>이므로 덧셈에 대하여 닫혀있다. 따라서 <span class="arithmatex">\(f(\mathbf{T})\in \mathbf{V}\)</span> 이다. ▲ </p>
-<p>2:</p>
-<p><a href="../LinearAlgebra/LinearTransformation/#aa431d8ac">선형변환의 행렬표현은 덧셈과 스칼라곱에 대하여 선형적</a>이므로 다음이 성립한다. </p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} [f(\mathbf{T})]_{\beta } &amp;= [a_0 \mathbf{I} + a_1 \mathbf{T} + \dots + a_n \mathbf{T}^{n} ]_{\beta }\\ &amp;= a_0[ \mathbf{I}]_{\beta } + a_1[ \mathbf{T}]_{\beta } + \dots + a_n[ \mathbf{T}^{n} ]_{\beta }\\ \end{split}\end{equation} \tag*{} \]</div>
-<p><a href="../LinearAlgebra/LinearTransformation/#143fdacba">선형변환의 행렬표현은 선형변환의 합성을 보존하여 행렬곱으로 표현할 수 있게 해주므로</a> <span class="arithmatex">\([\mathbf{T}^{2}]_{\beta }=[\mathbf{T}]_{\beta }[\mathbf{T}]_{\beta }\)</span> 이다. 즉, 다음이 성립한다. </p>
-<div class="arithmatex">\[ [f(\mathbf{T})]_{\beta } = a_0I + a_1A + \dots + a_nA^{n} = f(A) \tag*{■} \]</div>
-</li>
-</ul>
-<a href="#e3c3063bd"><div class="admonition def" id="e3c3063bd">
-<p class="admonition-title">정리 4</p>
-<p><span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 <span class="arithmatex">\(\mathbf{F}\)</span> 의 원소를 성분으로 하는 정사각행렬 <span class="arithmatex">\(A\)</span> 임의의 다항식 <span class="arithmatex">\(f_1(x), f_2(x) \in \mathbf{P}_{}(\mathbf{F})\)</span> 에 대하여 다음이 성립한다. </p>
-<ol>
-<li>
-<p><span class="arithmatex">\(f_1(\mathbf{T})f_2(\mathbf{T}) = f_2(\mathbf{T})f_1(\mathbf{T})\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(f_1(A)f_2(A) = f_2(A)f_1(A)\)</span></p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>1:</p>
-<p><span class="arithmatex">\(f_1, f_2\)</span> 를 다음과 같이 정의하자.</p>
-<div class="arithmatex">\[ f_1(x) = a_0 + a_1x + \dots + a_nx ^{n} \]</div>
-<div class="arithmatex">\[ f_2(x) = b_0 + b_1x + \dots + b_mx ^{m} \]</div>
-<p><span class="arithmatex">\(n \geq m\)</span> 을 가정하고 <span class="arithmatex">\(b_n = b _{n-1} = \dots = b _{m+1} = 0\)</span> 으로 정의하면 <span class="arithmatex">\(f_2\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ f_2(x) = b_0 + b_1x + \dots + b_nx ^{n} \]</div>
-<p><span class="arithmatex">\(f_1(\mathbf{T}), f_2(\mathbf{T})\)</span> 는 다음과 같다.</p>
-<div class="arithmatex">\[ f_1(\mathbf{T}) = a_0 \mathbf{I} + a_1 \mathbf{T} + \dots + a_n \mathbf{T}^{n} \]</div>
-<div class="arithmatex">\[ f_2(\mathbf{T}) = b_0 \mathbf{I} + b_1 \mathbf{T} + \dots + b_n \mathbf{T}^{n} \]</div>
-<p><a href="../LinearAlgebra/LinearTransformation/#273a736ad">선형변환의 합성의 성질</a>에 의하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} f_1(\mathbf{T})f_2(\mathbf{T})&amp;=(a_0 \mathbf{I} + a_1 \mathbf{T} + \dots + a_n \mathbf{T}^{n})(b_0 \mathbf{I} + b_1 \mathbf{T} + \dots + b_n \mathbf{T}^{n}) \\ &amp;=(b_0 \mathbf{I} + b_1 \mathbf{T} + \dots + b_n \mathbf{T}^{n})(a_0 \mathbf{I} + a_1 \mathbf{T} + \dots + a_n \mathbf{T}^{n}) = f_2(\mathbf{T})f_1(\mathbf{T})\\ \end{split}\end{equation} \tag*{} \]</div>
-<p>▲ </p>
-<p>2:</p>
-<p><a href="../LinearAlgebra/LinearTransformation/#e08d1e569">행렬곱의 성질</a> 에 의하여 1) 의 증명과 비슷하게 쉽게 증명 가능하다. ■ </p>
-</li>
-</ul>
-<a href="#1002936c5"><div class="admonition def" id="1002936c5">
-<p class="admonition-title">정리 5</p>
-<p><span class="arithmatex">\(\mathbf{F}\)</span>-벡터공간 <span class="arithmatex">\(\mathbf{V}\)</span> 의 선형연산자 <span class="arithmatex">\(\mathbf{T}\)</span> 와 행렬 <span class="arithmatex">\(A \in \mathbf{M}_{n \times n}(\mathbf{F})\)</span> 와 서로소인 두 다항식 <span class="arithmatex">\(f_1(x), f_2(x) \in \mathbf{P}_{}(\mathbf{F})\)</span> 에 대하여 다음을 만족하는 다항식 <span class="arithmatex">\(q_1(x), q_2(x) \in \mathbf{P}_{}(\mathbf{F})\)</span> 가 존재한다.</p>
-<ol>
-<li>
-<p><span class="arithmatex">\(q_1(\mathbf{T})f_1(\mathbf{T})+q_2(\mathbf{T})f_2(\mathbf{T}) = \mathbf{I}\)</span></p>
-</li>
-<li>
-<p><span class="arithmatex">\(q_1(A)f_1(A) + q_2(A)f_2(A) = I\)</span></p>
-</li>
-</ol>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>보조정리에 의하여 서로소인 다항식 <span class="arithmatex">\(f_1, f_2\)</span> 에 대하여 <span class="arithmatex">\(q_1(x)f_1(x) + q_2(x)f_2(x) = 1\)</span> 를 만족하는 다항식 <span class="arithmatex">\(q_1, q_2\)</span> 가 존재한다. 따라서 <span class="arithmatex">\(q_1(\mathbf{T})f_1(\mathbf{T})+q_2(\mathbf{T})f_2(\mathbf{T}) = \mathbf{I}\)</span> 가 성립하고, <span class="arithmatex">\(q_1(A)f_1(A) + q_2(A)f_2(A) = I\)</span> 가 성립한다. ■ </p>
-</li>
-</ul>
-<h2 id="monic-irreducible">monic, irreducible<a class="headerlink" href="#monic-irreducible" title="Permanent link">¶</a></h2>
-<a href="#38c34bd28"><div class="admonition def" id="38c34bd28">
-<p class="admonition-title">모닉(monic)</p>
-<p>다항식 <span class="arithmatex">\(f(x) \in \mathbf{F}\)</span> 의 최고차항의 계수가 <span class="arithmatex">\(1\)</span> 이면 모닉이라 한다.</p>
-</div></a>
-<a href="#bd246ff28"><div class="admonition def" id="bd246ff28">
-<p class="admonition-title">기약(irreducible)</p>
-<p>다항식 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(\deg (f) \geq 1\)</span> 이고 다음을 만족하면 <span class="arithmatex">\(f(x)\)</span> 를 기약이라 한다.</p>
-<div class="arithmatex">\[ f(x) = q(x)r(x) \implies \deg (q) = 0 \lor \deg (r) = 0 \]</div>
-</div></a>
-<ul>
-<li>
-<p>즉, 상수가 아닌 다항식 <span class="arithmatex">\(f(x) \in \mathbf{P}_{}(\mathbf{F})\)</span> 가 상수가 아닌 다항식으로 인수분해되지 않으면 <span class="arithmatex">\(f(x)\)</span> 를 기약이라 한다.</p>
-</li>
-<li>
-<p>차수가 <span class="arithmatex">\(1\)</span> 인 다항식도 기약이다. 대수적으로 닫힌 체의 원소로 구성된 다항식은 차수가 <span class="arithmatex">\(1\)</span> 인 다항식만 기약다항식이다. 대수학의 기본정리에 의하여 복소수체에서는 차수가 <span class="arithmatex">\(1\)</span> 인 다항식만 기약다항식이다.</p>
-</li>
-<li>
-<p>다항식은 그것이 속한 체에 따라 기약인지, 기약이 아닌지가 결정된다.</p>
-</li>
-<li>
-<p>예시</p>
-<p>다항식 <span class="arithmatex">\(f(x) = x ^{2} + 1\)</span> 은 <span class="arithmatex">\(\mathbf{P}_{}(\R )\)</span> 위에서 기약이다. 하지만 <span class="arithmatex">\(\mathbf{P}_{}(\mathbb{C})\)</span> 위에서는 <span class="arithmatex">\(x ^{2} + 1 = (x + i)(x - i)\)</span> 이 되어 기약이 아니다.</p>
-<p>다항식 <span class="arithmatex">\(f(x) = x ^{2} - 2\)</span> 는 <span class="arithmatex">\(\mathbf{P}_{}(\mathbb{Z})\)</span> 위에서 기약이다. 하지만 <span class="arithmatex">\(f(x) = (x-\sqrt[]{2})(x+\sqrt[]{2})\)</span> 이므로 <span class="arithmatex">\(\mathbf{P}_{}(\R )\)</span> 위에서 기약이 아니다.</p>
-</li>
-</ul>
-<a href="#5ee4f182f"><div class="admonition def" id="5ee4f182f">
-<p class="admonition-title">정리 6</p>
-<p>다항식 <span class="arithmatex">\(\phi (x)\)</span> 와 <span class="arithmatex">\(f(x)\)</span> 에 대하여 <span class="arithmatex">\(\phi (x)\)</span> 가 기약이고 <span class="arithmatex">\(\phi (x)\)</span> 가 <span class="arithmatex">\(f(x)\)</span> 를 나누지 않으면 <span class="arithmatex">\(\phi (x)\)</span> 와 <span class="arithmatex">\(f(x)\)</span> 는 서로소이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>정리의 가정이 모두 충족되었는데도 두 다항식이 서로소가 아니면 다음을 만족하는 다항식 <span class="arithmatex">\(g\)</span> 가 존재하고 <span class="arithmatex">\(\deg (g) \geq 1\)</span> 를 만족한다.</p>
-<div class="arithmatex">\[ \phi (x) = g(x)q_1(x) \]</div>
-<div class="arithmatex">\[ f(x) = g(x)q_2(x) \]</div>
-<p><span class="arithmatex">\(\phi\)</span> 는 기약이므로  <span class="arithmatex">\(\deg (g) = 0 \lor \deg (q_1) = 0\)</span> 이다. 따라서 <span class="arithmatex">\(\deg (q_1) = 0\)</span> 이다.  그러면 <span class="arithmatex">\(c \in \mathbf{F} : q_1(x) = c \implies \phi (x) = c \cdot g(x)\)</span> 이므로 <span class="arithmatex">\(\phi\)</span> 가 <span class="arithmatex">\(f\)</span> 를 나누게 되어 모순이다. ■ </p>
-</li>
-</ul>
-<a href="#9ecaf97bc"><div class="admonition def" id="9ecaf97bc">
-<p class="admonition-title">정리 7</p>
-<p>서로 다른 기약 모닉 다항식은 서로소이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p>서로 다른 기약 모닉 다항식 <span class="arithmatex">\(f, g\)</span> 가 서로소가 아니라고 해보자. 그러면 다음을 만족하는 다항식 <span class="arithmatex">\(h\)</span> 가 존재하고 <span class="arithmatex">\(\deg (h) \geq 1\)</span> 를 만족한다.</p>
-<div class="arithmatex">\[ f (x) = h(x)q_1(x) \]</div>
-<div class="arithmatex">\[ g(x) = h(x)q_2(x) \]</div>
-<p><span class="arithmatex">\(f, g\)</span> 가 기약이므로 <span class="arithmatex">\(\deg (q_1) = 0, \deg (q_2) = 0\)</span> 이다. <span class="arithmatex">\(f, g\)</span> 가 모닉이므로 <span class="arithmatex">\(q_1(x) = 1, q_2(x) = 1\)</span> 이다. 따라서 <span class="arithmatex">\(f(x) = h(x) = g(x)\)</span> 이고, 이는 모순이다. ■ </p>
-</li>
-</ul>
-<a href="#7ea5bb4c2"><div class="admonition def" id="7ea5bb4c2">
-<p class="admonition-title">정리 8</p>
-<p>다항식 <span class="arithmatex">\(f(x), g(x), h(x)\)</span> 에 대하여 <span class="arithmatex">\(h(x)\)</span> 가 기약이고 <span class="arithmatex">\(h(x)\)</span> 가 <span class="arithmatex">\(f(x)g(x)\)</span> 를 나누면 <span class="arithmatex">\(h(x)\)</span> 는 <span class="arithmatex">\(f(x)\)</span> 를 나누거나 <span class="arithmatex">\(g(x)\)</span> 를 나눈다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(\phi\)</span> 가 <span class="arithmatex">\(f\)</span> 를 나누지 않으면 정리 6 에 의하여 이 둘은 서로소이다. 그러면 보조정리에 의하여 <span class="arithmatex">\(1 = q_1(x)\phi (x) + q_2(x)f(x)\)</span> 인 다항식 <span class="arithmatex">\(q_1, q_2\)</span> 가 존재한다. 이 식에 <span class="arithmatex">\(g(x)\)</span> 를 곱하면 다음을 얻는다. </p>
-<div class="arithmatex">\[ g(x) = q_1(x)\phi (x)g(x) + q_2(x)f(x)g(x) \]</div>
-<p><span class="arithmatex">\(\phi(x)\)</span> 는 <span class="arithmatex">\(f(x)g(x)\)</span> 를 나누므로 <span class="arithmatex">\(g(x)\)</span> 도 나눈다. ▲ </p>
-<p><span class="arithmatex">\(\phi\)</span> 가 <span class="arithmatex">\(g\)</span> 를 나누지 않는다고 가정하면 똑같은 논리로 <span class="arithmatex">\(f\)</span> 를 나누는 것을 보일 수 있다. ■ </p>
-</li>
-</ul>
-<a href="#edb8639c7"><div class="admonition def" id="edb8639c7">
-<p class="admonition-title">정리 8 따름정리</p>
-<p>기약 모닉 다항식 <span class="arithmatex">\(\phi (x), \phi _1(x), \dots, \phi _n(x)\)</span> 에 대하여 <span class="arithmatex">\(\phi (x)\)</span> 가 <span class="arithmatex">\(\phi_1(x)\phi _2(x)\dots \phi _n(x)\)</span> 를 나누면 <span class="arithmatex">\(\exists i \in \{1, \dots, n\} : \phi (x) = \phi _i(x)\)</span> 이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(n = 1\)</span> 이면 정리 7 에 의하여 성립한다. ▲ </p>
-<p><span class="arithmatex">\(n &gt; 1\)</span> 일 때 <span class="arithmatex">\(n - 1\)</span> 개의 기약 모닉 다항식에 대하여 정리가 성립함을 가정하자. 정리에 따라 <span class="arithmatex">\(\phi (x)\)</span> 가 다음 식을 나눈다고 가정하자. </p>
-<div class="arithmatex">\[ \phi _1(x)\dots \phi _{n}(x) = \{\phi _1(x)\dots \phi _{n-1}(x)\}\phi _n(x) \]</div>
-<p>정리 8 에 의하여 <span class="arithmatex">\(\phi (x)\)</span> 는 <span class="arithmatex">\(\phi _1(x)\dots \phi _{n-1}(x)\)</span> 를 나누거나 <span class="arithmatex">\(\phi _n(x)\)</span> 를 나눈다. 전자의 경우 귀납법의 가정에 의하여 <span class="arithmatex">\(\exists i \in \{1,\dots,n-1\} : \phi (x) = \phi _i(x)\)</span> 이고, 후자의 경우 <span class="arithmatex">\(\phi (x) = \phi _n(x)\)</span> 이다. ■ </p>
-</li>
-</ul>
-<h3 id="uniqueness-of-polynomial-factorization">Uniqueness of Polynomial Factorization<a class="headerlink" href="#uniqueness-of-polynomial-factorization" title="Permanent link">¶</a></h3>
-<a href="#9adb3bd73"><div class="admonition def" id="9adb3bd73">
-<p class="admonition-title">정리 9 다항식 인수분해의 유일성(Unique Factorization Theorem for Polynomials)</p>
-<p>다항식 <span class="arithmatex">\(f(x)\)</span> 가 <span class="arithmatex">\(\deg (f) \geq 1\)</span> 이면 다음을 만족하는 상수 <span class="arithmatex">\(c\)</span>, 서로 다른 기약 모닉 다항식 <span class="arithmatex">\(\phi _1(x), \phi _2(x), \dots, \phi _k(x)\)</span>, 자연수 <span class="arithmatex">\(n_1, n_2, \dots, n_k\)</span> 가 유일하게 존재한다.</p>
-<div class="arithmatex">\[ f(x) = c \prod_{i=1}^{k}\{\phi _i(x)\}^{n_i} = c \{\phi _1(x)\}^{n_1}\{\phi _2(x)\}^{n_2}\dots\{\phi _k(x)\}^{n_k} \]</div>
-</div></a>
-<ul>
-<li>
-<p><strong>지금까지의 정리들의 결론이 이 정리이다.</strong> 이 정리에 선형대수학의 <a href="../LinearAlgebra/Diagonalization/#characteristic-polynomial-finding-eigenvalue">특성다항식 이론</a>과 표준형 이론이 많이 의존한다.</p>
-</li>
-<li>
-<p>증명</p>
-<p>인수분해의 존재성:</p>
-<p><span class="arithmatex">\(f(x) \in \mathbf{P}_{}(\mathbf{F})\)</span> 의 차수에 대한 수학적 귀납법을 사용하자.</p>
-<p><span class="arithmatex">\(n = 1\)</span> 일 때 <span class="arithmatex">\(\deg (f)=1\)</span> 이면 <span class="arithmatex">\(f(x) = ax + b\)</span> 를 만족하는 <span class="arithmatex">\(a \neq 0, b \in \mathbf{F}\)</span> 가 존재한다. <span class="arithmatex">\(\phi (x) = x + \dfrac{b}{a}\)</span> 로 두면 <span class="arithmatex">\(f(x)=a \phi (x)\)</span> 이다. ▲ </p>
-<p><span class="arithmatex">\(n &gt; 1\)</span> 일 때 <span class="arithmatex">\(\deg (f) &lt; n\)</span> 인 다항식 <span class="arithmatex">\(f\)</span> 에 대하여 인수분해의 존재성을 가정하고 <span class="arithmatex">\(\deg (f) = n\)</span> 로 두자. 그러면 <span class="arithmatex">\(f(x) = a_nx ^{n} + \dots + a_1x+a_0\)</span> 을 만족하는 <span class="arithmatex">\(a_n \neq 0, a _{n-1}, \dots, a_0 \in \mathbf{F}\)</span> 가 존재한다. <span class="arithmatex">\(f\)</span> 가 기약이면 다음이 성립하므로 인수분해가 존재한다. </p>
-<div class="arithmatex">\[ f(x) = a_n \bigg (x ^{n} + \sum_{i=n-1}^{0}\dfrac{a _{i}}{a_n}x ^{i} \bigg ) \tag*{▲} \]</div>
-<p><span class="arithmatex">\(f(x)\)</span> 가 기약이 아니면 <span class="arithmatex">\(f(x) = g(x)h(x)\)</span> 인 다항식 <span class="arithmatex">\(g, h\)</span> 가 존재한다. <span class="arithmatex">\(\deg (g) &lt; n, \deg (h)&lt;n\)</span> 이므로 귀납법의 가정에 의하여 <span class="arithmatex">\(g, h\)</span> 의 인수분해가 존재한다. 즉, <span class="arithmatex">\(g, h\)</span> 는 상수와 기약 모닉 다항식의 곱으로 표현된다. 따라서 <span class="arithmatex">\(f\)</span> 의 인수분해가 존재한다. ▲ </p>
-<p>인수분해의 유일성:</p>
-<p>다음을 만족하는 상수 <span class="arithmatex">\(c, d\)</span>, 기약 모닉 다항식 <span class="arithmatex">\(\phi _i(x), \psi _j(x)\)</span>, 자연수 <span class="arithmatex">\(n_i, m_j\)</span> 의 존재를 가정하자. <span class="arithmatex">\(i \in \{1, \dots, k\}, j \in \{1, \dots, r\}\)</span> 이다.</p>
-<div class="arithmatex">\[ \begin{equation}\begin{split}
-f(x)&amp;= c \{\phi _1(x)\}^{n_1}\{\phi _2(x)\}^{n_2}\dots \{\phi _k(x)\}^{n_k} \\
-&amp;= d \{\psi _1(x)\}^{m_1}\{\psi _2(x)\}^{m_2}\dots \{\psi _r(x)\}^{m_r} \\
-\end{split}\end{equation} \tag*{}
-\]</div>
-<p><span class="arithmatex">\(c, d\)</span> 는 <span class="arithmatex">\(f(x)\)</span> 의 최고차항의 계수이므로 <span class="arithmatex">\(c = d\)</span> 이다. ▲ </p>
-<p>위 식을 <span class="arithmatex">\(c\)</span> 로 나누면 다음을 얻는다.</p>
-<div class="arithmatex">\[ \{\phi _1(x)\}^{n_1}\{\phi _2(x)\}^{n_2}\dots \{\phi _k(x)\}^{n_k} = \{\psi _1(x)\}^{m_1}\{\psi _2(x)\}^{m_2}\dots \{\psi _r(x)\}^{m_r} \tag{1} \]</div>
-<p>정리 8 따름정리에 의하여 <span class="arithmatex">\(\forall i \in \{1, \dots, k\}, \exists j \in \{1, \dots, r\} : \phi _i(x) = \psi _j(x)\)</span> 이다. <span class="arithmatex">\(\phi _i, \psi _j\)</span> 들은 모두 서로 다르므로 <span class="arithmatex">\(r = k\)</span> 이다. 또한 <span class="arithmatex">\(\forall i \in \{1, \dots,k\} : \phi _i = \psi_i\)</span> 로 두어도 상관없다. 상수의 유일성, 기약 모닉 다항식의 유일성을 보였으니 거듭제곱을 하는 자연수의 유일성만 마저 보이면 된다. ▲ </p>
-<p><span class="arithmatex">\(\exists i \in \{1,\dots,k\} : n_i \neq m_i\)</span> 를 가정하자. <span class="arithmatex">\(i = 1, n_1 &gt; m_1\)</span> 이라고 가정해도 일반성이 보존된다. <span class="arithmatex">\((1)\)</span> 을 <span class="arithmatex">\(\{\phi _1(x)\}^{m_1}\)</span> 으로 나누면 다음이 성립한다.</p>
-<div class="arithmatex">\[ \{\phi _1(x)\}^{n_1 - m_1}\{\phi _2(x)\}^{n_2}\dots \{\phi _k(x)\}^{n_k} = \{\phi _1(x)\}^{m_2}\dots \{\phi _r(x)\}^{m_r} \]</div>
-<p>따라서 <span class="arithmatex">\(\phi _1(x)\)</span> 는 좌변도 나누고 우변도 나눈다. 그러면 정리 8 따름정리에 의하여 <span class="arithmatex">\(\exists i \in \{1, \dots,k\} : \phi _1(x) = \phi _i(x)\)</span> 이다. 이는 모순이다. 따라서 <span class="arithmatex">\(\forall i \in \{1, \dots, k\} : n_i = m_i\)</span> 이다. ■ </p>
-</li>
-</ul>
-<h2 id="polynomial-function">Polynomial Function<a class="headerlink" href="#polynomial-function" title="Permanent link">¶</a></h2>
-<a href="#160f58bfa"><div class="admonition def" id="160f58bfa">
-<p class="admonition-title">일변수 다항함수(polynomial function of one variable)</p>
-<p>체 <span class="arithmatex">\(\mathbf{F}\)</span> 와 <span class="arithmatex">\(a_0, a_1, \dots, a_n \in \mathbf{F}\)</span> 에 대한 일변수 다항함수 <span class="arithmatex">\(f:\mathbf{F}\to \mathbf{F}\)</span> 는 다음과 같이 정의된다.</p>
-<div class="arithmatex">\[ f(x) = a_nx ^{n} + a _{n-1}x ^{n-1} + \dots + a_1x + a_0 \]</div>
-</div></a>
-<ul>
-<li><span class="arithmatex">\(\mathbf{P}_{}(\mathbf{F})\)</span> 위의 다항식을 <span class="arithmatex">\(\mathbf{F}\to \mathbf{F}\)</span> 에서 정의된 함수로 보면 다항함수가 된다. 다항식을 다항함수로 볼 때 편한 상황들이 많이 있다. </li>
-</ul>
-<a href="#d89f1a5ce"><div class="admonition def" id="d89f1a5ce">
-<p class="admonition-title">이변수 다항함수(polynomial function of two variables)</p>
-<p>변수 2개를 갖는 다항함수이다.</p>
-</div></a>
-<ul>
-<li>
-<p>예시</p>
-<div class="arithmatex">\[ f(x, y) = 2x ^{3} + 4x ^{2}y +xy ^{5} + y ^{2} -y \]</div>
-</li>
-</ul>
-<a href="#13a444467"><div class="admonition def" id="13a444467">
-<p class="admonition-title">다변수 다항함수(polynomial functions of several variables, multivariate polynomial function)</p>
-<p>2개 이상의 변수를 갖는 다항함수이다.</p>
-</div></a>
-<a href="#734c8c2c6"><div class="admonition def" id="734c8c2c6">
-<p class="admonition-title">정리 10</p>
-<p>무한체 <span class="arithmatex">\(\mathbf{F}\)</span> 와 <span class="arithmatex">\(\mathbf{F}\to \mathbf{F}\)</span> 위에서 정의된 모든 함수 집합 <span class="arithmatex">\(\mathcal{F}(\mathbf{F}, \mathbf{F})\)</span> 에 대하여 다항식을 다항함수로 보내는 대응 <span class="arithmatex">\(\mathbf{P}_{}(\mathbf{F})\to \mathcal{F}(\mathbf{F},\mathbf{F})\)</span> 은 단사이다.</p>
-</div></a>
-<ul>
-<li>
-<p>유한체 <span class="arithmatex">\(\mathbf{F}\)</span> 와 <span class="arithmatex">\(\mathbf{F}\to \mathbf{F}\)</span> 위에서 정의된 모든 함수 집합 <span class="arithmatex">\(\mathcal{F}(\mathbf{F}, \mathbf{F})\)</span> 에 대한 대응 <span class="arithmatex">\(\mathbf{P}_{}(\mathbf{F})\to \mathcal{F}(\mathbf{F},\mathbf{F})\)</span> 은 <a href="../Set/Set/#eadfd845f">단사</a>가 아닐 수도 있다. 쉽게 말해서 서로 다른 다항식인데도 같은 다항함수가 될 수도 있다는 것이다. </p>
-<ul>
-<li>
-<p>예시</p>
-<p>유한체 <span class="arithmatex">\(\mathbb{Z}_{2} = \{0, 1\}\)</span> 를 다음과 같이 정의하자.</p>
-<div class="arithmatex">\[ 0 + 0 = 0, \qquad 0+1 = 1+0 = 1, \qquad 1+1 = 0, \]</div>
-<div class="arithmatex">\[ 0 \cdot 0 = 0, \qquad 0 \cdot 1 = 1 \cdot 0 = 0, \qquad 1 \cdot 1 = 1 \]</div>
-<p>다항식 <span class="arithmatex">\(f(x) = x ^{2}, g(x) = x \in \mathbf{P}_{}(\mathbb{Z}_{2})\)</span> 을 다항함수 <span class="arithmatex">\(f: \mathbb{Z}_{2} \to \mathbb{Z}_{2}, g: \mathbb{Z}_{2} \to \mathbb{Z}_{2}\)</span> 로 만들자. 그러면 다음이 성립한다. </p>
-<div class="arithmatex">\[ f(x) \neq  _{\mathbf{P}_{}(\mathbb{Z}_{2})} g(x) \]</div>
-<div class="arithmatex">\[ f(x) = _{\mathcal{F}(\mathbb{Z}_{2},\mathbb{Z}_{2})} g(x) \]</div>
-<p>즉, <span class="arithmatex">\(f, g\)</span> 가 다항식으로써는 서로 다르지만 다항함수로써는 서로 같다는 것이다. <a href="#b3486412c">다항식의 상등</a> 의 정의과 <a href="../Set/Set/#57b118c60">함수의 상등의 정의</a> 를 참고하자.</p>
-</li>
-</ul>
-<p>그러나 <strong>이 정리는 무한한 원소를 가진 무한체에서는 이러한 이상한 일이 일어나지 않는다는 것을 보장해준다.</strong></p>
-</li>
-<li>
-<p>증명</p>
-<p><a href="../Set/Set/#eadfd845f">단사</a> 의 정의에 의하여 다음이 성립함을 보여야 한다.</p>
-<div class="arithmatex">\[ f, g \in \mathcal{F}(\mathbf{F},\mathbf{F}) : f = _{\mathcal{F}(\mathbf{F},\mathbf{F})} g \implies f = _{\mathbf{P}_{}(\mathbf{F})} g \]</div>
-<p><a href="../Set/Set/#57b118c60">함수의 상등의 정의</a> 에 의하여 이는 다음을 보이는 것과 같다.</p>
-<div class="arithmatex">\[ \forall a \in \mathbf{F} : f(a) = g(a) \implies f =_{\mathbf{P}_{}(\mathbf{F})} g \]</div>
-<p><span class="arithmatex">\(f \neq  _{\mathbf{P}_{}(\mathbf{F})} g\)</span> 라고 하고 모순을 이끌어내면 증명이 끝난다. 다항식 <span class="arithmatex">\(h(x) = f(x) - g(x)\)</span> 을 정의하면 <span class="arithmatex">\(\deg (h) = -1 \implies f = _{\mathbf{P}_{}(\mathbf{F})} g\)</span> 이므로 <span class="arithmatex">\(\deg (h) \geq 0\)</span> 이어야 한다.</p>
-<p><span class="arithmatex">\(\deg (h) = 0\)</span> 이라 하면 <span class="arithmatex">\(f, g\)</span> 가 상수항에서 서로 다르다. 따라서 <span class="arithmatex">\(\forall a \in \mathbf{F}: f(a) = g(a)\)</span> 에 모순이다. <a href="../LinearAlgebra/VectorSpace/#a822715aa">체의 임의의 원소에 <span class="arithmatex">\(0\)</span> 을 곱하면 <span class="arithmatex">\(0\)</span> 이 되므로</a> <span class="arithmatex">\(f(0) \neq g(0)\)</span> 이기 때문이다. ▲ </p>
-<p><span class="arithmatex">\(\deg (h) \geq 1\)</span> 이라 하자. <a href="#bb1063b23">정리 1 따름정리 2</a> 에 의하여 <span class="arithmatex">\(h\)</span> 는 최대 <span class="arithmatex">\(\deg (h)\)</span> 개의 해를 갖는다. 그런데 <span class="arithmatex">\(\forall a \in \mathbf{F}:h(a) = 0\)</span> 이므로 <span class="arithmatex">\(h\)</span> 의 해는 무한히 많다. 따라서 모순이다. ▲ </p>
-<p>그러니까 반드시 <span class="arithmatex">\(\deg (h) = -1\)</span> 이어야 하고 이로써 <span class="arithmatex">\(f \neq _{\mathbf{P}_{}(\mathbf{F})}g\)</span> 라는 가정이 틀렸다는 것을 알 수 있다. ■ </p>
-<!-- - <span class="arithmatex">\(\mathbf{F}\)</span> 가 유한체면 <span class="arithmatex">\(\forall a \in \mathbf{F} :h(a) = 0\)</span> 에서 <span class="arithmatex">\(h\)</span> 가 무한히 많은 해를 갖는다는 결론이 나오지 않는다. -->
-</li>
-</ul>
-<h2 id="lagrange-interpolation-formula">Lagrange Interpolation Formula<a class="headerlink" href="#lagrange-interpolation-formula" title="Permanent link">¶</a></h2>
-<a href="#001836915"><div class="admonition def" id="001836915">
-<p class="admonition-title">라그랑주 다항식(Lagrange polynomial)</p>
-<p>무한체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 스칼라 <span class="arithmatex">\(c_0, c_1, \dots, c_n\)</span> 에 대하여 다음과 같이 정의한 다항식 <span class="arithmatex">\(f_0, f_1, \dots, f_n\)</span> 을 <span class="arithmatex">\(c_0, c_1, \dots, c_n\)</span> 에 대한 라그랑주 다항식이라 한다. </p>
-<div class="arithmatex">\[ f_i(x) = \dfrac{(x - c_0) \dots (x-c _{i-1})(x - c _{i+1}) \dots (x - c_n)}{(c_i - c_0) \dots (c_i-c _{i-1})(c_i - c _{i+1}) \dots (c_i - c_n)} = \prod_{\substack{k=0\\k \neq i}}^{n} \dfrac{x - c_k}{c_i - c_k} \]</div>
-</div></a>
-<a href="#db2c63517"><div class="admonition def" id="db2c63517">
-<p>무한체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 스칼라 <span class="arithmatex">\(c_0, c_1, \dots, c_n\)</span> 에 대한 라그랑주 다항식 <span class="arithmatex">\(f_0, f_1, \dots, f_n\)</span> 에 대하여 다음이 성립한다.</p>
-<div class="arithmatex">\[ f_i(c_j) = \delta _{ij} \]</div>
-</div></a>
-<ul>
-<li>라그랑주 다항식의 정의에 의하여 자명하게 성립한다. <a href="../LinearAlgebra/LinearTransformation/#059400286">크로네터 델타의 정의</a>를 참고하자.</li>
-</ul>
-<a href="#3c5010b8b"><div class="admonition def" id="3c5010b8b">
-<p>무한체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 스칼라 <span class="arithmatex">\(c_0, c_1, \dots, c_n\)</span> 에 대한 라그랑주 다항식 집합 <span class="arithmatex">\(\{f_0, f_1, \dots, f_n\}\)</span> 은 <span class="arithmatex">\(\mathbf{P}_{n}(\mathbf{F})\)</span> 의 기저이다.</p>
-</div></a>
-<ul>
-<li>
-<p>증명</p>
-<p><span class="arithmatex">\(i\)</span>번째 라그랑주 다항식 <span class="arithmatex">\(f_i\)</span> 에 대하여 <span class="arithmatex">\(f_i(x) \in \mathbf{P}_{n}(\mathbf{F})\)</span> 이다. 즉, <span class="arithmatex">\(f_i\)</span> 는 차수가 <span class="arithmatex">\(n\)</span>인 다항식이다. </p>
-<p>집합 <span class="arithmatex">\(\beta = \{f_0, f_1, \dots, f_n\}\)</span> 가 <span class="arithmatex">\(\mathbf{P}_{n}(\mathbf{F})\)</span> 의 일차독립인 부분집합임을 증명하기 위해 다음 함수가 스칼라 <span class="arithmatex">\(a_0, a_1, \dots, a_n\)</span> 에 대하여 영함수라 가정하고 <span class="arithmatex">\(a_0 = a_1 = \dots = a_n = 0\)</span> 임을 보이자.</p>
-<div class="arithmatex">\[ \sum_{i=1}^{n}a_if_i = 0 \]</div>
-<p>스칼라 <span class="arithmatex">\(c_0, c_1, \dots, c_n\)</span> 에 대하여 <span class="arithmatex">\(\displaystyle \bigg (\sum_{i=0}^{n} a_if_i\bigg )(c_j) = \sum_{i=0}^{n}a_if_i(c_j) = 0\)</span> 이다. 한편 <span class="arithmatex">\(f_i(c_j) = \delta _{ij}\)</span> 이므로 <span class="arithmatex">\(\displaystyle \sum_{i=0}^{n}a_if_i(c_j) = a_j\)</span> 이다. 따라서 모든 <span class="arithmatex">\(a_i\)</span> 들은 <span class="arithmatex">\(a_i = 0\)</span> 이고 <span class="arithmatex">\(\beta\)</span> 는 일차독립이다. <span class="arithmatex">\(\dim (\mathbf{P}_{n}(\mathbf{F})) = n + 1\)</span> 이므로 <a href="../LinearAlgebra/VectorSpace/#cd7879a47">대체정리 따름정리 2</a> 에 의하여 <span class="arithmatex">\(\beta\)</span> 는 <span class="arithmatex">\(\mathbf{P}_{n}(\mathbf{F})\)</span> 의 기저이다. ■ </p>
-</li>
-</ul>
-<a href="#ee8bc7a9e"><div class="admonition def" id="ee8bc7a9e">
-<p class="admonition-title">라그랑주 보간법(Lagrange interpolation formula)</p>
-<p>무한체 <span class="arithmatex">\(\mathbf{F}\)</span> 의 스칼라 <span class="arithmatex">\(c_0, c_1, \dots, c_n\)</span> 에 대한 라그랑주 다항식 <span class="arithmatex">\(f_0, f_1, \dots, f_n\)</span> 으로 임의의 다항식 <span class="arithmatex">\(g \in \mathbf{P}_{n}(\mathbf{F})\)</span> 를 다음과 같이 표현한 식을 라그랑주 보간법이라 한다.</p>
-<div class="arithmatex">\[ g = \sum_{i=0}^{n}g(c_i)f_i \]</div>
-</div></a>
-<ul>
-<li>
-<p>집합 <span class="arithmatex">\(\beta = \{f_0, f_1, \dots, f_n\}\)</span> 가 <span class="arithmatex">\(\mathbf{P}_{n}(\mathbf{F})\)</span> 의 기저이므로 <span class="arithmatex">\(\mathbf{P}_{n}(\mathbf{F})\)</span> 의 모든 다항식 <span class="arithmatex">\(g\)</span> 를 <a href="../LinearAlgebra/VectorSpace/#8a514fc5c">정리 1.8</a> 에 의하여 다음과 같이 유일한 스칼라 <span class="arithmatex">\(b_0, b_1, \dots, b_n\)</span> 에 대한 <span class="arithmatex">\(\beta\)</span> 의 일차결합으로 표현할 수 있다.</p>
-<div class="arithmatex">\[ g = \sum_{i=0}^{n}b_if_i \]</div>
-<p>이 식의 양변에 <span class="arithmatex">\(c_j\)</span> 를 입력하면 다음을 얻는다. </p>
-<div class="arithmatex">\[ g(c_j) = \sum_{i=0}^{n}b_if_i(c_j) = \sum_{i=0}^{n}b_i \delta _{ij} = b_j \]</div>
-<p>따라서 <span class="arithmatex">\(b_i\)</span> 를 소거하여 다음과 같이 임의의 다항식 <span class="arithmatex">\(g\)</span> 를 순수하게 라그랑주 다항식으로 표현할 수 있다. </p>
-<div class="arithmatex">\[ g = \sum_{i=0}^{n}g(c_i)f_i \]</div>
-<p>이 표현식을 사용하면 일차결합의 스칼라 <span class="arithmatex">\(b_i\)</span> 를 구하지 않아도된다. 이 식을 라그랑주 보간법이라 한다.</p>
-<p>이러한 논의는 <strong>임의의 스칼라 <span class="arithmatex">\(b_0, b_1, \dots, b_n\)</span> 와 <span class="arithmatex">\(c_0, c_1, \dots, c_n\)</span> 가 주어지면 다항식 <span class="arithmatex">\(\displaystyle g = \sum_{i=0}^{n}b_if_i \in \mathbf{P}_{n}(\mathbf{F})\)</span> 가 <span class="arithmatex">\(g(c_j) = b_j\)</span> 인 유일한 다항식임을 말해준다. 즉, 입력이 <span class="arithmatex">\(c_j\)</span> 일 때 출력이 <span class="arithmatex">\(b_j\)</span> 인 <span class="arithmatex">\(n\)</span>차 다항식이 유일하게 존재하고, 그것을 라그랑주 보간법으로 쉽게 찾을 수 있다.</strong> 라그랑주 보간법은 이 형태로 많이 사용된다. 즉, <strong>체 <span class="arithmatex">\(\mathbf{F}\)</span> 에서 가져온 입력 스칼라 집합과 출력 스칼라 집합이 주어졌을 때 그것을 입력과 출력으로 가지는 유일한 다항식을 찾을 수 있다</strong> 는 것이다. 아래의 예시를 참고하자.</p>
-<p>애초에 보간법 또는 내삽법이란 이미 알고 있는 값으로 그 사잇값을 추정하는 방법이다. 라그랑주 보간법도 사이사이가 비워져있는 이산적인 데이터를 연속적인 데이터로 보내는 사상이다. </p>
-</li>
-<li>
-<p>예시 </p>
-<p>세 점 <span class="arithmatex">\(A = (1, 8), B= (2, 5), C= (3, -4)\)</span> 을 지나는 이차 이하의 다항함수 <span class="arithmatex">\(g\)</span> 를 찾는 문제에 라그랑주 보간법을 적용해보면 <span class="arithmatex">\(c_0 = 1, c_1 = 2, c_2 = 3, b_0 = 8, b_1 = 5, b_2 = -4\)</span> 이고, <span class="arithmatex">\(c_1, c_2 ,c_3\)</span> 에 대한 라그랑주 다항식은 다음과 같다. </p>
-<div class="arithmatex">\[ f_0(x) = \dfrac{(x - 2)(x - 3)}{(1 - 2)(1 - 3)} = \frac{1}{2}(x ^{2}- 5x + 6) \]</div>
-<div class="arithmatex">\[ f_1(x) = \dfrac{(x - 1)(x - 3)}{(2 - 1)(2 - 3)} = -1(x ^{2}- 4x + 3) \]</div>
-<div class="arithmatex">\[ f_2(x) = \dfrac{(x - 1)(x - 2)}{(3 - 1)(3 - 2)} = \frac{1}{2}(x ^{2}- 3x + 2) \]</div>
-<p>라그랑주 보간법에 의하여 <span class="arithmatex">\(g(x)\)</span> 는 다음과 같다. </p>
-<div class="arithmatex">\[ \begin{equation}\begin{split} g(x) &amp;= \sum_{i=0}^{2}g(c_i)f_i(x) = 8f_0(x) + 5f_1(x) -4f_2(x) \\ &amp;= -3x ^{2}+6x+5 \end{split}\end{equation} \tag*{} \]</div>
-<p>세 점 <span class="arithmatex">\(A, B, C\)</span> 와 라그랑주 보간법으로 추정한 <span class="arithmatex">\(g\)</span> 를 기하학적으로 나타내보면 다음과 같다. </p>
-<p><img alt="image" src="https://user-images.githubusercontent.com/16812446/131964624-1648bf27-fcba-42de-a186-455fea5e8a7f.png"/></p>
-</li>
-<li>
-<p>현실적인 예시는 가령 비행기의 특정 시간과 특정 위치로 이루어진 이산적인 데이터가 있을 때 비행기의 연속적인 시간에 따른 이동 경로를 추정할 때 쓰일 수 있다.</p>
-</li>
-</ul>
-<h2 id="fundamental-theorem-of-algebra">Fundamental Theorem of Algebra<a class="headerlink" href="#fundamental-theorem-of-algebra" title="Permanent link">¶</a></h2>
-<a href="#44d3b6ad1"><div class="admonition def" id="44d3b6ad1">
-<p class="admonition-title">대수학의 기본 정리(fundamental theorem of algebra)</p>
-<p><span class="arithmatex">\(\mathbf{P}(\mathbb{C})\)</span> 의 다항식 <span class="arithmatex">\(p(z) = a_nz ^{n} + \dots + a_1z + a_0\)</span> 의 차수가 <span class="arithmatex">\(n \geq 1\)</span> 이면 <span class="arithmatex">\(p(z)\)</span> 는 해가 있다.</p>
-</div></a>
-<ul>
-<li>
-<p>17세기부터 수학자들이 옳으리라고 추측했던 유명한 정리이다. 대수학의 기본 정리이지만 순수하게 대수적인 증명은 누구도 해내지 못했고, 훗날 위상수학과 해석학을 도입하여 증명을 할 수 있었다. 그래서 복소해석학에 의한 증명과 위상수학에 의한 증명이 존재한다.</p>
-</li>
-<li>
-<p>증명</p>
-</li>
-</ul>
-<a href="#e412c21ab"><div class="admonition def" id="e412c21ab">
-<p class="admonition-title">대수학의 기본 정리(fundamental theorem of algebra) 따름정리</p>
-<p>차수가 <span class="arithmatex">\(n \geq 1\)</span> 이고 복소계수를 포함한 다항식 <span class="arithmatex">\(p(z) = a_nz ^{n} + \dots + a_1z + a_0\)</span> 에 대하여 다음을 만족하는 복소수 <span class="arithmatex">\(c_1, c_2, \dots, c_n\)</span> 이 존재한다. </p>
-<div class="arithmatex">\[ p(z) = a_n(z-c_1)(z-c_2)\dots(z-c_n) \]</div>
-</div></a>
-<ul>
-<li>
-<p>이 정리는 <strong><a href="../LinearAlgebra/InnerProductSpaces/#653ace4b3">복소내적공간</a>의 선형연산자의 <a href="../LinearAlgebra/Diagonalization/#2f3482489">특성다항식</a>이 반드시 <a href="../LinearAlgebra/Diagonalization/#12bf9c352">완전히 인수분해</a>됨을 말해준다.</strong> </p>
-</li>
-<li>
-<p>체의 원소를 계수로 가지고 차수가 자연수인 다항식이 일차식의 곱으로 표현되는 체를 대수적으로 닫힌(algebraically closed) 체라 한다. 이 정리는 복소수체가 대수적으로 닫혀있음을 말해준다. </p>
-</li>
-<li>
-<p>증명</p>
-<p>대수학의 기본정리에 의하여 <span class="arithmatex">\(p(z) \in \mathbf{P}_{}(\mathbb{C})\)</span> 는 해 <span class="arithmatex">\(c_1 \in \mathbb{C}\)</span> 를 가진다. 정리 1 따름정리 1 에 의하여 <span class="arithmatex">\(z - c_1\)</span> 가 <span class="arithmatex">\(p(z)\)</span> 를 나누므로 차수가 <span class="arithmatex">\(n-1\)</span> 이고 최고차항의 계수가 <span class="arithmatex">\(1\)</span> 인 다항식 <span class="arithmatex">\(f(z)\)</span> 에 대하여 다음이 성립한다. </p>
-<div class="arithmatex">\[ p(z) = a_n(z - c_1)f(z) \]</div>
-<p><span class="arithmatex">\(f(z)\)</span> 처럼 <span class="arithmatex">\(p(z)\)</span> 를 나누는 다항식의 차수가 <span class="arithmatex">\(1\)</span> 이상인 한 대수학의 기본정리에 의하여 항상 해가 존재하여 위와 같은 일차식 <span class="arithmatex">\(z - c_1\)</span> 으로 <span class="arithmatex">\(p(z)\)</span> 를 나눌 수 있다. 따라서 다음이 성립한다.</p>
-<div class="arithmatex">\[ p(z) = a_n(z - c_1)\dots(z-c_n) \tag*{■} \]</div>
-</li>
-</ul>
-<hr/>
-<dl>
-<dt>ref:</dt>
-<dd>
-<p>Stephen H. Friedberg, Linear Algebra, 5<sup>th</sup> Edition</p>
-</dd>
-<dd>
-<p><a href="https://ko.wikipedia.org/wiki/%EC%84%9C%EB%A1%9C%EC%86%8C_%EC%95%84%EC%9D%B4%EB%94%94%EC%96%BC">https://ko.wikipedia.org/wiki/%EC%84%9C%EB%A1%9C%EC%86%8C_%EC%95%84%EC%9D%B4%EB%94%94%EC%96%BC</a></p>
-</dd>
-</dl>
-</article>
-</div>
-</div>
-<a class="md-top md-icon" data-md-component="top" data-md-state="hidden" href="#">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path></svg>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+<h1>Redirect to Netlify</h1>
+<script> 
+setTimeout(function () {
+window.location.href = "https://ccss17.netlify.app/" + window.location.pathname;}, 3000);
+</script>
+
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
             Back to top
           </a>
-</main>
-<!-- 
+        
+      </main>
+      
+        <!-- 
 <footer class="md-footer">
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1261,16 +1483,26 @@ f(x)&amp;= c \{\phi _1(x)\}^{n_1}\{\phi _2(x)\}^{n_2}\dots \{\phi _k(x)\}^{n_k} 
     </div>
   </div>
 </footer> -->
-</div>
-<div class="md-dialog" data-md-component="dialog">
-<div class="md-dialog__inner md-typeset"></div>
-</div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
-<script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
-<script src="../../javascripts/highlight.min.js"></script>
-<script src="../../javascripts/config.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
-<script src="../../javascripts/b27b3e6448.js"></script>
-</body>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+        <script src="../../javascripts/highlight.min.js"></script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="../../javascripts/b27b3e6448.js"></script>
+      
+    
+  </body>
 </html>
