@@ -1,5 +1,0 @@
-site/
-.vscode/
-*.exe
-a.out
-__pycache__/
