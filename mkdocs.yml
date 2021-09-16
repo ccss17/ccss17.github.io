@@ -215,15 +215,13 @@ extra_javascript:
   # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js
   - javascripts/highlight.min.js
   - javascripts/config.js
-  # - https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js
-  - javascripts/katex.min.js
-  # - https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js
-  - javascripts/auto-render.min.js
+  - https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js
   # - https://kit.fontawesome.com/b27b3e6448.js
   - javascripts/b27b3e6448.js
 
 extra_css:
-  - https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css
+  - https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css
   # - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github-gist.min.css
   - stylesheets/config.css
 

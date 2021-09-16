@@ -104,6 +104,10 @@
 
     2. $\mathbf{K}_{\lambda} = \mathbf{N}((\mathbf{T}-\lambda \mathbf{I})^{m})$
 
+- 1) 은 [정리 5.7](../Diagonalization/#b5fbbceb6) 이 일반화된 것이다.
+
+- 2) 는 [고유공간의 정의](../Diagonalization/#7ad38c4e6) 가 일반화된 것이다.
+
 - 증명
 
     1:
@@ -157,6 +161,32 @@
     $$ f_j(\mathbf{T})(v) = \sum_{i=1}^{k}f_j(\mathbf{T})(v_i) = \sum_{i=1}^{k}f_j(\mathbf{T})(w_i) $$
 
     $i \neq j$ 이면 $f_j(\mathbf{T})(v_i) = f_j(\mathbf{T})(w_i) = 0$ 이므로 $f_j(\mathbf{T})(v_j) = f_j(\mathbf{T})(w_j)$ 이다. $f_j(\mathbf{T})$ 는 $\mathbf{K}_{\lambda_j}$ 에서 단사이므로 $v_j = w_j$ 이다. ■ 
+
+!!! def "정리 7.4"
+
+    유한차원 벡터공간 $\mathbf{V}$ 의 선형연산자 $\mathbf{T}$ 의 특성다항식이 다음과 같이 완전히 인수분해된다고 가정하자. 
+
+    $$ (\lambda _1 - t)^{m_1}(\lambda _2 - t)^{m_2}\dots(\lambda _k - t)^{m_k} $$
+
+    $i \in \{1,\dots,k\}$ 와 $\mathbf{K}_{\lambda_i}$ 의순서기저 $\beta _i$ 에 대하여 다음이 성립한다.
+
+    1. $j \neq i \implies \beta _i \cap \beta _j = \varnothing$
+
+    2. $\displaystyle \beta = \bigcup_{i=1}^{k}\beta _i$ 는 $\mathbf{V}$ 의 순서기저이다.
+
+    3. $\forall i : \dim ((\mathbf{K}_{\lambda_i}) = m_i$
+
+- 증명
+
+    1:
+
+    [정리 7.1-(2)](#744719af2) 에서 바로 나온다. ▲ 
+
+    2:
+
+    $\beta _i$ 의 벡터들의 합을 $v_i$ 라 하고 $\beta$ 의 일차결합을 $0$ 이라 하면 다음이 성립한다. 
+
+    $$ v_1 + v_2 + \dots + v_k = 0 $$
 
 ---
 
