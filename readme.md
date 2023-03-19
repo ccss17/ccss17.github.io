@@ -1,1 +1,1 @@
-Nothing to see here
+go https://ccss17.netlify.app/
